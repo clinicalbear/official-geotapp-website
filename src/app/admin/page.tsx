@@ -1,8 +1,9 @@
 
 "use client";
 
+import React from "react";
 import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, useCallback } from "react";
 import type { IntegrationConfig } from "@/lib/integrationConfigSchema";
 import type { SiteContent } from "@/lib/siteContentSchema";
 
@@ -63,6 +64,9 @@ const INFO_SECTIONS = {
 type InfoModalKey = keyof typeof INFO_SECTIONS | null;
 type TabKey = "content" | "integrations";
 type Toast = { type: "success" | "error" | "info"; message: string } | null;
+type ToastData = Exclude<Toast, null>;
+// nuovo alias che esclude null        // equivalente a NonNullable<Toast>
+type ToastType = ToastData["type"];           // "success" | "error" | "info"
 
 const tourBlueprint = [
   { id: "branding", label: "Branding + SEO pronti" },
@@ -384,7 +388,10 @@ export default function AdminPage() {
     );
   }
 
-  const notify = (message: string, type: Toast["type"] = "info") => setToast({ type, message });
+  const notify = useCallback(
+    (message: string, type: ToastData["type"] = "info") => setToast({ type, message }),
+    [],
+  );
 
   return (
     <div className="min-h-screen bg-slate-950 text-white">
@@ -511,7 +518,7 @@ type ContentTabProps = {
   setContentJson: (value: string) => void;
   applyContentJson: () => void;
   jsonError: string | null;
-  notify: (message: string, type?: Toast["type"]) => void;
+  notify: (message: string, type?: ToastData["type"]) => void;
 };
 
 function ContentTab({
@@ -1107,8 +1114,8 @@ function ContentTab({
 type CopyEditorsProps = {
   content: SiteContent;
   updateContent: (updater: (draft: SiteContent) => void) => void;
-  renderSaveButton: () => JSX.Element;
-  notify: (message: string, type?: Toast["type"]) => void;
+  renderSaveButton: () => React.JSX.Element;
+  notify: (message: string, type?: ToastData["type"]) => void;
 };
 
 function CopyEditors({ content, updateContent, renderSaveButton, notify }: CopyEditorsProps) {
@@ -2075,8 +2082,8 @@ function BlockSaveButton({ onSave, disabled, saving }: BlockSaveButtonProps) {
 type SocialProofEditorProps = {
   content: SiteContent;
   updateContent: (updater: (draft: SiteContent) => void) => void;
-  notify: (message: string, type?: Toast["type"]) => void;
-  renderSaveButton?: () => JSX.Element;
+  notify: (message: string, type?: ToastData["type"]) => void;
+  renderSaveButton?: () => React.JSX.Element;
 };
 
 function SocialProofEditor({ content, updateContent, notify, renderSaveButton }: SocialProofEditorProps) {
@@ -2619,7 +2626,7 @@ type MediaEditorProps = {
   label: string;
   media?: SiteContent["hero"]["media"];
   onChange: (value?: SiteContent["hero"]["media"]) => void;
-  notify: (message: string, type?: Toast["type"]) => void;
+  notify: (message: string, type?: ToastData["type"]) => void;
 };
 
 function MediaEditor({ label, media, onChange, notify }: MediaEditorProps) {
