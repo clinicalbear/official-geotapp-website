@@ -1,7 +1,9 @@
+import type * as React from "react";
+
 type RichTextProps = {
   html?: string | null;
   className?: string;
-  as?: keyof JSX.IntrinsicElements;
+  as?: React.ElementType;
   allowedTags?: string[];
 };
 
@@ -56,7 +58,13 @@ export function RichText({
   allowedTags,
 }: RichTextProps) {
   if (!html) return null;
-  const Component = as as keyof JSX.IntrinsicElements;
+  const Component: React.ElementType = as as React.ElementType;
+
   const sanitizedHtml = sanitizeHtml(html, allowedTags);
-  return <Component className={className} dangerouslySetInnerHTML={{ __html: sanitizedHtml }} />;
+  return (
+    <Component
+      className={className}
+      dangerouslySetInnerHTML={{ __html: sanitizedHtml }}
+    />
+  );
 }
