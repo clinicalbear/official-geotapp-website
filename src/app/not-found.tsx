@@ -1,4 +1,6 @@
 // src/app/not-found.tsx
+export const runtime = 'edge'; // richiesto da CF next-on-pages per /_not-found
+
 import Link from "next/link";
 
 export default function NotFound() {
