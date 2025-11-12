@@ -1,10 +1,11 @@
+import type * as React from "react";
 import { SectionMedia } from "@/components/section-media";
 import { RichText } from "@/components/rich-text";
 import type { SiteContent } from "@/lib/siteContentSchema";
 
 type FeatureCluster = SiteContent["featureCluster"];
 
-const ICONS: Record<string, JSX.Element> = {
+const ICONS: Record<string, React.ReactElement> = {
   calendar: (
     <svg viewBox="0 0 24 24" className="h-6 w-6" aria-hidden="true">
       <path
