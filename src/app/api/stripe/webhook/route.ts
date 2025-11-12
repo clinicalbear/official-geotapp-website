@@ -60,7 +60,10 @@ export async function POST(request: NextRequest) {
       type: event.type,
       created: event.created,
       livemode: event.livemode,
-      payload: (event.data.object ?? null) as Record<string, unknown> | null,
+      payload: event.data.object
+  ? (JSON.parse(JSON.stringify(event.data.object)) as Record<string, unknown>)
+  : null,
+
       receivedAt: new Date().toISOString(),
       status: "received",
     });
