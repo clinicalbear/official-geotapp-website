@@ -2,8 +2,6 @@
 // This function handles POST /auth-login and is intended to be bundled as an isolated edge function.
 
 import { verifyCredentials, createSessionToken } from "@/lib/auth";
-import type { NextRequest } from "next/server";
-import { NextResponse } from "next/server";
 
 export const runtime = "edge";
 
