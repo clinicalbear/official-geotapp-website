@@ -3,7 +3,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { useEffect, useMemo, useState, useCallback } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type { IntegrationConfig } from "@/lib/integrationConfigSchema";
 import type { SiteContent } from "@/lib/siteContentSchema";
 
@@ -23,7 +23,7 @@ const INFO_SECTIONS = {
     title: "Backend Django su Render",
     bullets: [
       "Deploya il backend su Render/Web Service impostando `DJANGO_SECRET_KEY`, `ADMIN_TOKEN`, `CMS_ADMIN_TOKEN` e `DATABASE_URL`.",
-      "Usa l'URL pubblico come Base URL e imposta il token servizio con permessi completi.",
+      "Usa l&apos;URL pubblico come Base URL e imposta il token servizio con permessi completi.",
       "Configura un endpoint webhook che punti a Cloudflare/Pages per ricevere eventi (ad es. /api/django/webhooks).",
     ],
   },
@@ -38,7 +38,7 @@ const INFO_SECTIONS = {
   flutter: {
     title: "Login Flutter",
     bullets: [
-      "Definisci un OAuth Client (anche custom) con redirect verso il valore indicato e uno schema deep link coerente con l'app Flutter.",
+      "Definisci un OAuth Client (anche custom) con redirect verso il valore indicato e uno schema deep link coerente con l&apos;app Flutter.",
       "Gli scope (uno per riga) vengono riusati anche nel pacchetto mobile per Firebase/Auth.",
       "Ricordati di aggiornare eventuali file di configurazione in `goetap_flutter` con gli stessi valori.",
     ],
@@ -46,7 +46,7 @@ const INFO_SECTIONS = {
   firebase: {
     title: "Allineamento Firebase",
     bullets: [
-      "Dal progetto Firebase copia `projectId`, `apiKey` e l'URL del database (Realtime / Firestore REST).",
+      "Dal progetto Firebase copia `projectId`, `apiKey` e l&apos;URL del database (Realtime / Firestore REST).",
       "Elenca le collection che vuoi sincronizzare (una per riga) così i job su Render sanno cosa trattare.",
       "Controlla le regole di sicurezza per permettere a Django di leggere/scrivere i dati richiesti.",
     ],
@@ -55,7 +55,7 @@ const INFO_SECTIONS = {
     title: "Caricare media e loghi",
     bullets: [
       `Puoi incollare un URL esterno oppure caricare un file (max ${MEDIA_LIMIT_COPY}).`,
-      "Le immagini/video vengono salvati in base64 all'interno del JSON per evitare hosting aggiuntivo.",
+      "Le immagini/video vengono salvati in base64 all&apos;interno del JSON per evitare hosting aggiuntivo.",
       "Ottimizza sempre dimensioni e peso (immagini entro 1600px, video compressi).",
     ],
   },
@@ -64,9 +64,8 @@ const INFO_SECTIONS = {
 type InfoModalKey = keyof typeof INFO_SECTIONS | null;
 type TabKey = "content" | "integrations";
 type Toast = { type: "success" | "error" | "info"; message: string } | null;
-type ToastData = Exclude<Toast, null>;
-// nuovo alias che esclude null        // equivalente a NonNullable<Toast>
-type ToastType = ToastData["type"];           // "success" | "error" | "info"
+
+type ToastType = NonNullable<Toast>["type"];
 
 const tourBlueprint = [
   { id: "branding", label: "Branding + SEO pronti" },
@@ -388,10 +387,7 @@ export default function AdminPage() {
     );
   }
 
-  const notify = useCallback(
-    (message: string, type: ToastData["type"] = "info") => setToast({ type, message }),
-    [],
-  );
+  const notify = (message: string, type: ToastType = "info") => setToast({ type, message });
 
   return (
     <div className="min-h-screen bg-slate-950 text-white">
@@ -518,7 +514,7 @@ type ContentTabProps = {
   setContentJson: (value: string) => void;
   applyContentJson: () => void;
   jsonError: string | null;
-  notify: (message: string, type?: ToastData["type"]) => void;
+  notify: (message: string, type?: ToastType) => void;
 };
 
 function ContentTab({
@@ -1115,7 +1111,7 @@ type CopyEditorsProps = {
   content: SiteContent;
   updateContent: (updater: (draft: SiteContent) => void) => void;
   renderSaveButton: () => React.JSX.Element;
-  notify: (message: string, type?: ToastData["type"]) => void;
+  notify: (message: string, type?: ToastType) => void;
 };
 
 function CopyEditors({ content, updateContent, renderSaveButton, notify }: CopyEditorsProps) {
@@ -2082,7 +2078,7 @@ function BlockSaveButton({ onSave, disabled, saving }: BlockSaveButtonProps) {
 type SocialProofEditorProps = {
   content: SiteContent;
   updateContent: (updater: (draft: SiteContent) => void) => void;
-  notify: (message: string, type?: ToastData["type"]) => void;
+  notify: (message: string, type?: ToastType) => void;
   renderSaveButton?: () => React.JSX.Element;
 };
 
@@ -2272,7 +2268,7 @@ function SocialProofEditor({ content, updateContent, notify, renderSaveButton }:
                     });
                     notify("Avatar aggiornato");
                   } catch {
-                    notify("Errore caricando l'avatar", "error");
+                    notify("Errore caricando l&apos;avatar", "error");
                   }
                 }}
               />
@@ -2626,7 +2622,7 @@ type MediaEditorProps = {
   label: string;
   media?: SiteContent["hero"]["media"];
   onChange: (value?: SiteContent["hero"]["media"]) => void;
-  notify: (message: string, type?: ToastData["type"]) => void;
+  notify: (message: string, type?: ToastType) => void;
 };
 
 function MediaEditor({ label, media, onChange, notify }: MediaEditorProps) {
@@ -2781,5 +2777,4 @@ function InfoModal({ infoKey, onClose }: { infoKey: InfoModalKey; onClose: () =>
     </div>
   );
 }
-
 
