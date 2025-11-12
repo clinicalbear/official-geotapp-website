@@ -1,54 +1,45 @@
-import nodemailer from "nodemailer";
-
 export type ContactPayload = {
   name: string;
   email: string;
-  company?: string;
-  plan?: string;
   message: string;
 };
 
-function getTransport() {
-  const host = process.env.CONTACT_SMTP_HOST;
-  const port = Number(process.env.CONTACT_SMTP_PORT ?? 587);
-  const user = process.env.CONTACT_SMTP_USER;
-  const pass = process.env.CONTACT_SMTP_PASS;
-
-  if (!host || !user || !pass) {
-    throw new Error("SMTP environment variables non configurate.");
-  }
-
-  const secure = process.env.CONTACT_SMTP_SECURE === "true" || port === 465;
-
-  return nodemailer.createTransport({
-    host,
-    port,
-    secure,
-    auth: { user, pass },
-  });
-}
+type ResendRequest = {
+  from: string;
+  to: string[];
+  subject: string;
+  text?: string;
+  html?: string;
+  reply_to?: string;
+};
 
 export async function sendContactEmail(payload: ContactPayload) {
-  const to = process.env.CONTACT_TO_EMAIL ?? "info@geotapp.com";
-  const from = process.env.CONTACT_FROM_EMAIL ?? "noreply@geotapp.com";
+  const apiKey = process.env.RESEND_API_KEY;
+  const to = process.env.CONTACT_TO || "support@geotapp.com";
+  const from = process.env.CONTACT_FROM || "GeoTapp <no-reply@geotapp.com>";
 
-  const transporter = getTransport();
-
-  const subject = `Nuova richiesta dal sito GeoTapp: ${payload.name}`;
-  const text = [
-    `Nome: ${payload.name}`,
-    `Email: ${payload.email}`,
-    `Azienda: ${payload.company ?? "n/d"}`,
-    `Piano di interesse: ${payload.plan ?? "n/d"}`,
-    "",
-    payload.message,
-  ].join("\n");
-
-  await transporter.sendMail({
+  if (!apiKey) throw new Error("Missing RESEND_API_KEY");
+  const body: ResendRequest = {
     from,
-    to,
-    replyTo: payload.email,
-    subject,
-    text,
+    to: [to],
+    subject: `Nuovo messaggio dal sito: ${payload.name}`,
+    text: `Da: ${payload.name} <${payload.email}>\n\n${payload.message}`,
+    reply_to: payload.email,
+  };
+
+  const res = await fetch("https://api.resend.com/emails", {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${apiKey}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(body),
   });
+
+  if (!res.ok) {
+    const txt = await res.text().catch(() => "");
+    throw new Error(`Resend error ${res.status}: ${txt}`);
+  }
+
+  return (await res.json()) as unknown;
 }
