@@ -1,5 +1,4 @@
 // src/lib/integrationConfigStore.ts
-export const runtime = "edge";
 
 import { defaultIntegrationConfig } from "./defaultIntegrationConfig";
 import {

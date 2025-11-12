@@ -1,5 +1,4 @@
 // src/lib/contentStore.ts
-export const runtime = "edge";
 
 import { defaultContent } from "./defaultContent";
 import { siteContentSchema, type SiteContent } from "./siteContentSchema";

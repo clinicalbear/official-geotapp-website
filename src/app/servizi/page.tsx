@@ -1,4 +1,3 @@
-export const runtime = 'edge';
 import { RichText } from "@/components/rich-text";
 import { ContactSection } from "@/components/sections/contact";
 import { getSiteContent } from "@/lib/contentStore";

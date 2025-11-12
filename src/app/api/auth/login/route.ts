@@ -1,5 +1,4 @@
 // src/app/api/auth/login/route.ts
-export const runtime = "edge";
 import { cookies } from "next/headers";
 import { verifyCredentials, createSessionToken } from "@/lib/auth";
 

@@ -1,5 +1,4 @@
 // src/lib/auth.ts
-export const runtime = "edge";
 
 const FALLBACK_USERNAME = "MikeAdmin";
 const FALLBACK_PASSWORD = "@@G4bri312020@@";

@@ -1,5 +1,4 @@
 // src/lib/stripeEventsStore.ts
-export const runtime = "edge";
 
 const EVENTS_LIMIT = Number(process.env.STRIPE_EVENT_LOG_LIMIT ?? 50);
 
