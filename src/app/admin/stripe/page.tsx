@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Link from "next/link";
 import { getStripeEvents } from "@/lib/stripeEventsStore";
 
@@ -83,7 +84,7 @@ export default async function StripeEventsPage() {
                 Eventi ricevuti dal webhook
               </h1>
               <p className="mt-2 text-sm text-slate-300">
-                Qui vedi l'ultimo snapshot degli eventi che Stripe ha inviato a
+                Qui vedi l&apos;ultimo snapshot degli eventi che Stripe ha inviato a
                 {` `}
                 <code className="rounded bg-white/10 px-2 py-1 text-xs">
                   /api/stripe/webhook
