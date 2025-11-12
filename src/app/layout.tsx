@@ -8,8 +8,7 @@ import { getSiteContent } from "@/lib/contentStore";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
-// src/app/layout.tsx
-export const runtime = 'edge';
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -50,9 +49,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   const content = await getSiteContent();
   const analyticsSnippet = sanitizeAnalyticsSnippet(content.analytics.headHtml);
 
