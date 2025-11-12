@@ -8,7 +8,8 @@ import { getSiteContent } from "@/lib/contentStore";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
-
+// src/app/layout.tsx
+export const runtime = 'edge';
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],

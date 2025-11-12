@@ -1,51 +1,43 @@
-import { promises as fs } from "fs";
-import path from "path";
+// src/lib/stripeEventsStore.ts
+export const runtime = "edge";
 
 const EVENTS_LIMIT = Number(process.env.STRIPE_EVENT_LOG_LIMIT ?? 50);
 
-export type StripeEventEntry = {
+export type StoredStripeEvent = {
   id: string;
   type: string;
   created: number;
   livemode: boolean;
   payload: Record<string, unknown> | null;
   receivedAt: string;
-  status: "received" | "error";
-  errorMessage?: string;
+  status: "received" | "processed" | "failed";
+  errorMessage?: string; // opzionale: mantiene la compatibilità con la pagina
 };
 
-const fallbackPath = path.join(
-  process.cwd(),
-  "src",
-  "content",
-  "stripeEvents.json",
-);
-const eventsPath = process.env.STRIPE_EVENTS_FILE_PATH ?? fallbackPath;
+const g = globalThis as unknown as {
+  __STRIPE_EVENTS__?: StoredStripeEvent[];
+};
 
-async function ensureFileExists() {
-  try {
-    await fs.access(eventsPath);
-  } catch {
-    await fs.mkdir(path.dirname(eventsPath), { recursive: true });
-    await fs.writeFile(eventsPath, "[]", "utf-8");
-  }
+function bucket(): StoredStripeEvent[] {
+  if (!g.__STRIPE_EVENTS__) g.__STRIPE_EVENTS__ = [];
+  return g.__STRIPE_EVENTS__;
 }
 
-export async function getStripeEvents(limit = 25) {
-  await ensureFileExists();
-  const raw = await fs.readFile(eventsPath, "utf-8");
-  const events: StripeEventEntry[] = JSON.parse(raw);
-  return events.slice(0, limit);
+export async function appendStripeEvent(e: StoredStripeEvent): Promise<void> {
+  const b = bucket();
+  b.unshift(e);
+  if (b.length > EVENTS_LIMIT) b.length = EVENTS_LIMIT;
 }
 
-export async function appendStripeEvent(entry: StripeEventEntry) {
-  await ensureFileExists();
-  const raw = await fs.readFile(eventsPath, "utf-8");
-  const events: StripeEventEntry[] = JSON.parse(raw);
+/** Restituisce gli eventi, con limite opzionale (default: EVENTS_LIMIT) */
+export async function listStripeEvents(limit?: number): Promise<StoredStripeEvent[]> {
+  const max = Math.min(limit ?? EVENTS_LIMIT, EVENTS_LIMIT);
+  return bucket().slice(0, max);
+}
 
-  const filtered = events.filter((event) => event.id !== entry.id);
-  filtered.unshift(entry);
-  const trimmed = filtered.slice(0, EVENTS_LIMIT);
+/** Alias per compatibilità con la pagina admin */
+export { listStripeEvents as getStripeEvents };
 
-  await fs.writeFile(eventsPath, JSON.stringify(trimmed, null, 2), "utf-8");
+export async function clearStripeEvents(): Promise<void> {
+  g.__STRIPE_EVENTS__ = [];
 }

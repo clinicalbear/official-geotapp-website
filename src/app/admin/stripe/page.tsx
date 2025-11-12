@@ -1,3 +1,4 @@
+export const runtime = 'edge';
 /* eslint-disable react/no-unescaped-entities */
 import Link from "next/link";
 import { getStripeEvents } from "@/lib/stripeEventsStore";

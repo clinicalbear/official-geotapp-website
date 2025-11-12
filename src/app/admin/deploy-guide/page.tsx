@@ -1,3 +1,4 @@
+export const runtime = 'edge';
 import Link from "next/link";
 /* eslint-disable react/no-unescaped-entities */
 

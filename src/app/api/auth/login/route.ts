@@ -1,35 +1,24 @@
-import { NextRequest, NextResponse } from "next/server";
-import { z } from "zod";
-import { areValidCredentials, createSessionToken } from "@/lib/auth";
+// src/app/api/auth/login/route.ts
+export const runtime = "edge";
 import { cookies } from "next/headers";
+import { verifyCredentials, createSessionToken } from "@/lib/auth";
 
-const payloadSchema = z.object({
-  username: z.string().min(1),
-  password: z.string().min(1),
-});
+export async function POST(req: Request) {
+  const { username, password } = await req.json();
 
-export async function POST(request: NextRequest) {
-  let body: z.infer<typeof payloadSchema>;
-  try {
-    body = payloadSchema.parse(await request.json());
-  } catch {
-    return NextResponse.json({ message: "Payload non valido" }, { status: 400 });
-  }
+  const ok = await verifyCredentials(username, password);
+  if (!ok) return new Response("Unauthorized", { status: 401 });
 
-  if (!areValidCredentials(body.username, body.password)) {
-    return NextResponse.json({ message: "Credenziali errate" }, { status: 401 });
-  }
+  const token = createSessionToken(); // <-- stringa sync
 
   const cookieStore = await cookies();
-  cookieStore.set({
-    name: "admin_session",
-    value: createSessionToken(),
+  cookieStore.set("admin_session", token, {
     httpOnly: true,
     sameSite: "lax",
     path: "/",
     secure: process.env.NODE_ENV === "production",
-    maxAge: 60 * 60 * 8, // 8 ore
+    maxAge: 60 * 60 * 24 * 7, // 7 giorni
   });
 
-  return NextResponse.json({ message: "Autenticato" });
+  return new Response(null, { status: 204 });
 }

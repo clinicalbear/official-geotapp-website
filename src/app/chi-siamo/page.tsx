@@ -1,3 +1,4 @@
+export const runtime = 'edge';
 import { RichText } from "@/components/rich-text";
 import { ContactSection } from "@/components/sections/contact";
 import { SocialProofSection } from "@/components/sections/social-proof";

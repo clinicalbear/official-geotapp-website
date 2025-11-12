@@ -1,35 +1,39 @@
-import { promises as fs } from "fs";
-import path from "path";
+// src/lib/contentStore.ts
+export const runtime = "edge";
+
 import { defaultContent } from "./defaultContent";
 import { siteContentSchema, type SiteContent } from "./siteContentSchema";
 
-const fallbackPath = path.join(process.cwd(), "src", "content", "siteContent.json");
-const contentPath = process.env.CONTENT_FILE_PATH ?? fallbackPath;
+// cache globale effimera (per istanza)
+const g = globalThis as unknown as {
+  __SITE_CONTENT__?: SiteContent;
+};
 
-async function ensureFileExists() {
-  try {
-    await fs.access(contentPath);
-  } catch {
-    await fs.mkdir(path.dirname(contentPath), { recursive: true });
-    await fs.writeFile(contentPath, JSON.stringify(defaultContent, null, 2), "utf-8");
+function getInitial(): SiteContent {
+  // opzionale: seed da env JSON se presente
+  const seed = process.env.SITE_CONTENT_JSON;
+  if (seed) {
+    try {
+      const parsed = siteContentSchema.parse(JSON.parse(seed));
+      return parsed;
+    } catch {
+      // seed invalido -> ignora e usa default
+    }
   }
+  return siteContentSchema.parse(defaultContent);
 }
 
 export async function getSiteContent(): Promise<SiteContent> {
-  await ensureFileExists();
-  const raw = await fs.readFile(contentPath, "utf-8");
-  try {
-    const parsed = JSON.parse(raw);
-    return siteContentSchema.parse(parsed);
-  } catch (error) {
-    console.error("Invalid content file, falling back to defaults", error);
-    return defaultContent;
-  }
+  if (!g.__SITE_CONTENT__) g.__SITE_CONTENT__ = getInitial();
+  return g.__SITE_CONTENT__;
 }
 
-export async function updateSiteContent(payload: unknown): Promise<SiteContent> {
-  const parsed = siteContentSchema.parse(payload);
-  await fs.mkdir(path.dirname(contentPath), { recursive: true });
-  await fs.writeFile(contentPath, JSON.stringify(parsed, null, 2), "utf-8");
-  return parsed;
+export async function setSiteContent(next: SiteContent): Promise<void> {
+  const parsed = siteContentSchema.parse(next);
+  g.__SITE_CONTENT__ = parsed;
+}
+
+// ✅ alias per compatibilità con le route esistenti
+export async function updateSiteContent(next: SiteContent): Promise<void> {
+  return setSiteContent(next);
 }

@@ -1,47 +1,44 @@
-import { promises as fs } from "fs";
-import path from "path";
+// src/lib/integrationConfigStore.ts
+export const runtime = "edge";
+
 import { defaultIntegrationConfig } from "./defaultIntegrationConfig";
 import {
   integrationConfigSchema,
   type IntegrationConfig,
 } from "./integrationConfigSchema";
 
-const fallbackPath = path.join(
-  process.cwd(),
-  "src",
-  "content",
-  "integrationConfig.json",
-);
-const configPath = process.env.INTEGRATION_FILE_PATH ?? fallbackPath;
+const g = globalThis as unknown as {
+  __INTEGRATION_CONFIG__?: IntegrationConfig;
+};
 
-async function ensureFileExists() {
-  try {
-    await fs.access(configPath);
-  } catch {
-    await fs.mkdir(path.dirname(configPath), { recursive: true });
-    await fs.writeFile(
-      configPath,
-      JSON.stringify(defaultIntegrationConfig, null, 2),
-      "utf-8",
-    );
+function getInitial(): IntegrationConfig {
+  const seed = process.env.INTEGRATION_CONFIG_JSON;
+  if (seed) {
+    try {
+      const parsed = integrationConfigSchema.parse(JSON.parse(seed));
+      return parsed;
+    } catch {
+      // seed invalido -> fallback
+    }
   }
+  return integrationConfigSchema.parse(defaultIntegrationConfig);
 }
 
 export async function getIntegrationConfig(): Promise<IntegrationConfig> {
-  await ensureFileExists();
-  const raw = await fs.readFile(configPath, "utf-8");
-  try {
-    const parsed = JSON.parse(raw);
-    return integrationConfigSchema.parse(parsed);
-  } catch (error) {
-    console.error("Configurazione integrazioni non valida, uso i default", error);
-    return defaultIntegrationConfig;
-  }
+  if (!g.__INTEGRATION_CONFIG__) g.__INTEGRATION_CONFIG__ = getInitial();
+  return g.__INTEGRATION_CONFIG__;
 }
 
-export async function updateIntegrationConfig(payload: unknown) {
-  const parsed = integrationConfigSchema.parse(payload);
-  await fs.mkdir(path.dirname(configPath), { recursive: true });
-  await fs.writeFile(configPath, JSON.stringify(parsed, null, 2), "utf-8");
-  return parsed;
+export async function setIntegrationConfig(
+  next: IntegrationConfig
+): Promise<void> {
+  const parsed = integrationConfigSchema.parse(next);
+  g.__INTEGRATION_CONFIG__ = parsed;
+}
+
+// ✅ Alias per compatibilità con le API esistenti
+export async function updateIntegrationConfig(
+  next: IntegrationConfig
+): Promise<void> {
+  return setIntegrationConfig(next);
 }

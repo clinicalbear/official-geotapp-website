@@ -1,53 +1,48 @@
-import { createHash, timingSafeEqual } from "crypto";
+// src/lib/auth.ts
+export const runtime = "edge";
 
 const FALLBACK_USERNAME = "MikeAdmin";
 const FALLBACK_PASSWORD = "@@G4bri312020@@";
-const FALLBACK_SECRET = "change-this-session-secret";
 
-function getAdminEnv() {
-  return {
-    username: process.env.ADMIN_USERNAME ?? FALLBACK_USERNAME,
-    password: process.env.ADMIN_PASSWORD ?? FALLBACK_PASSWORD,
-    secret: process.env.ADMIN_SESSION_SECRET ?? FALLBACK_SECRET,
-  };
+const encoder = new TextEncoder();
+
+async function hashPassword(password: string): Promise<Uint8Array> {
+  const data = encoder.encode(password);
+  const hashBuffer = await crypto.subtle.digest("SHA-256", data);
+  return new Uint8Array(hashBuffer);
 }
 
-function toBuffer(value: string) {
-  return Buffer.from(value, "utf8");
+function timingSafeEqual(a: Uint8Array, b: Uint8Array): boolean {
+  if (a.length !== b.length) return false;
+  let diff = 0;
+  for (let i = 0; i < a.length; i++) diff |= a[i] ^ b[i];
+  return diff === 0;
 }
 
-export function areValidCredentials(username: string, password: string) {
-  const env = getAdminEnv();
-  const providedUser = toBuffer(username);
-  const targetUser = toBuffer(env.username);
-  const providedPass = toBuffer(password);
-  const targetPass = toBuffer(env.password);
+export async function verifyCredentials(username: string, password: string) {
+  const storedUser = process.env.ADMIN_USERNAME ?? FALLBACK_USERNAME;
+  const storedPass = process.env.ADMIN_PASSWORD ?? FALLBACK_PASSWORD;
 
-  const userMatch =
-    providedUser.length === targetUser.length &&
-    timingSafeEqual(providedUser, targetUser);
-  const passMatch =
-    providedPass.length === targetPass.length &&
-    timingSafeEqual(providedPass, targetPass);
+  const [hash1, hash2] = await Promise.all([
+    hashPassword(password),
+    hashPassword(storedPass),
+  ]);
 
-  return userMatch && passMatch;
+  return username === storedUser && timingSafeEqual(hash1, hash2);
 }
 
-function buildSessionSignature() {
-  const { username, password, secret } = getAdminEnv();
-  return createHash("sha256")
-    .update(`${username}:${password}:${secret}`)
-    .digest("hex");
+// === Token sessione (S I N C) ===
+export function createSessionToken(): string {
+  const bytes = new Uint8Array(32);
+  crypto.getRandomValues(bytes);
+  // base64-url safe
+  const b64 = btoa(String.fromCharCode(...bytes))
+    .replaceAll("+", "-")
+    .replaceAll("/", "_")
+    .replaceAll("=", "");
+  return `ses_${b64}`;
 }
 
-export function createSessionToken() {
-  return buildSessionSignature();
-}
-
-export function verifySessionToken(token: string | undefined) {
-  if (!token) return false;
-  const expected = buildSessionSignature();
-  const provided = toBuffer(token);
-  const target = toBuffer(expected);
-  return provided.length === target.length && timingSafeEqual(provided, target);
+export function verifySessionToken(token: string): boolean {
+  return typeof token === "string" && token.startsWith("ses_") && token.length > 8;
 }

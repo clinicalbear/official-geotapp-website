@@ -1,3 +1,4 @@
+export const runtime = 'edge';
 import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
 import { getIntegrationConfig } from "@/lib/integrationConfigStore";
@@ -11,13 +12,13 @@ function buildStripeClient(secretKey: string) {
 
 function buildErrorEntry(message: string) {
   return {
-    id: `error-${Date.now()}`,
+    id: crypto.randomUUID(),
     type: "webhook.error",
     created: Math.floor(Date.now() / 1000),
     livemode: false,
     payload: null,
     receivedAt: new Date().toISOString(),
-    status: "error" as const,
+    status: "failed" as const,
     errorMessage: message,
   };
 }
