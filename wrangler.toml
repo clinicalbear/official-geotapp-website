@@ -1,3 +1,8 @@
-name = "officialwebsitegeotapp"
-pages_build_output_dir = ".open-next"
-compatibility_date = "2024-01-01"
+name = "official-geotapp-website"
+main = ".open-next/worker.js"
+compatibility_date = "2025-11-13"
+compatibility_flags = ["nodejs_compat", "global_fetch_strictly_public"]
+
+[assets]
+directory = ".open-next/assets"
+binding = "ASSETS"
