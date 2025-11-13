@@ -22,6 +22,12 @@
       "binding": "NEXT_INC_CACHE_R2_BUCKET",
       "bucket_name": "geotapp-next-cache"
     }
+  ],
+  "kv_namespaces": [
+    {
+      "binding": "GEOTAPP_CMS_CONTENT",
+      "id": "4c4383ff945b4a65a2c4546e5d9bf03c"
+    }
   ]
 }
 
