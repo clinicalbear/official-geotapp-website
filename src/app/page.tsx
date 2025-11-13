@@ -1,5 +1,6 @@
 import { ContactSection } from "@/components/sections/contact";
 import { FeatureGrid } from "@/components/sections/feature-grid";
+import { HowItWorks } from "@/components/sections/how-it-works";
 import { HeroSection } from "@/components/sections/hero";
 import { MetricsSection } from "@/components/sections/metrics";
 import { ParallaxShowcase } from "@/components/sections/parallax-showcase";
@@ -18,6 +19,7 @@ export default async function Home() {
       <HeroSection hero={content.hero} />
       <MetricsSection metrics={content.metrics} />
       <FeatureGrid featureCluster={content.featureCluster} />
+      <HowItWorks howItWorks={content.howItWorks} />
       <ParallaxShowcase parallax={content.parallax} />
       <TimelineSection timeline={content.timeline} />
       <PricingSection pricing={content.pricing} />

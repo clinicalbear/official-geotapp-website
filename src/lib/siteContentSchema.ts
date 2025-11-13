@@ -187,6 +187,17 @@ export const siteContentSchema = z.object({
     items: z.array(featureItemSchema).min(3).max(3),
     media: mediaAssetSchema.optional(),
   }),
+  howItWorks: z.object({
+    title: z.string().min(1),
+    intro: z.string().min(1),
+    steps: z.array(
+      z.object({
+        title: z.string().min(1),
+        description: z.string().min(1),
+        media: mediaAssetSchema.optional(),
+      })
+    ).min(3).max(3),
+  }),
   parallax: z.object({
     eyebrow: z.string().min(1),
     title: z.string().min(1),

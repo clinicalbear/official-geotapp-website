@@ -126,6 +126,36 @@ export const defaultContent: SiteContent = {
       alt: "Team in riunione",
     },
   },
+  howItWorks: {
+    title: "Come funziona",
+    intro: "Dalla configurazione iniziale al monitoraggio dei risultati, scopri come GeoTapp semplifica ogni passo del processo.",
+    steps: [
+      {
+        title: "Step 1: Configurazione",
+        description: "Collega i tuoi account, imposta le regole e personalizza le dashboard in pochi minuti.",
+        media: {
+          image: "https://images.unsplash.com/photo-1516321497487-e288fb19713f",
+          alt: "Illustrazione dello step 1"
+        }
+      },
+      {
+        title: "Step 2: Automazione",
+        description: "Lascia che GeoTapp gestisca le attività ripetitive, dagli inviti ai pagamenti, senza intervento manuale.",
+        media: {
+          image: "https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1",
+          alt: "Illustrazione dello step 2"
+        }
+      },
+      {
+        title: "Step 3: Analisi",
+        description: "Monitora le performance con report in tempo reale e ottimizza le strategie sulla base di dati concreti.",
+        media: {
+          image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d",
+          alt: "Illustrazione dello step 3"
+        }
+      }
+    ]
+  },
   parallax: {
     eyebrow: "Blocco sticky demo",
     title: "Evidenzia le sezioni chiave mentre l'utente scorre",
