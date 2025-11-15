@@ -1,4 +1,4 @@
-export const runtime = 'edge';
+// File: src/app/api/content/route.ts
 import { NextRequest, NextResponse } from "next/server";
 import { getSiteContent, updateSiteContent } from "@/lib/contentStore";
 import { ZodError } from "zod";
@@ -21,10 +21,12 @@ export async function PUT(request: NextRequest) {
     const updated = await updateSiteContent(body);
     return NextResponse.json(updated);
   } catch (error) {
+    // Ora questo 'catch' catturerà l'errore che lanciamo da 'setSiteContent'
     if (error instanceof ZodError) {
       return NextResponse.json({ message: error.message }, { status: 400 });
     }
     console.error("Errore aggiornando i contenuti", error);
-    return NextResponse.json({ message: "Errore interno" }, { status: 500 });
+    const fallbackMessage = error instanceof Error ? error.message : "Errore interno";
+    return NextResponse.json({ message: fallbackMessage }, { status: 500 });
   }
 }

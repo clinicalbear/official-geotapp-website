@@ -1,4 +1,4 @@
-export const runtime = 'edge';
+// File: src/app/api/integrations/route.ts
 import { NextRequest, NextResponse } from "next/server";
 import {
   getIntegrationConfig,
@@ -28,6 +28,7 @@ export async function PUT(request: NextRequest) {
       return NextResponse.json({ message: error.message }, { status: 400 });
     }
     console.error("Errore aggiornando integrazioni", error);
-    return NextResponse.json({ message: "Errore interno" }, { status: 500 });
+    const fallbackMessage = error instanceof Error ? error.message : "Errore interno";
+    return NextResponse.json({ message: fallbackMessage }, { status: 500 });
   }
 }

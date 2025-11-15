@@ -5,6 +5,11 @@ import { verifyCredentials, createSessionToken } from "@/lib/auth";
 
 export const runtime = "edge";
 
+type LoginPayload = {
+  username: string;
+  password: string;
+};
+
 export async function onRequest(context: { request: Request }) {
   const req = context.request as Request;
   if (req.method !== "POST") {
@@ -12,7 +17,7 @@ export async function onRequest(context: { request: Request }) {
   }
 
   try {
-    const body = await req.json();
+    const body = (await req.json()) as LoginPayload;
     const username = body.username;
     const password = body.password;
 

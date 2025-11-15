@@ -3,7 +3,7 @@ import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
 import { verifySessionToken } from "@/lib/auth";
 
-const PROTECTED_API_PREFIXES = ["/api/content", "/api/integrations"];
+const PROTECTED_API_PREFIXES = ["/api/content", "/api/integrations", "/api/admin"];
 const PROTECTED_PAGES = ["/admin", "/admin/stripe", "/admin/deploy-guide"];
 
 export const config = {

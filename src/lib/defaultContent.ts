@@ -39,17 +39,24 @@ export const defaultContent: SiteContent = {
     testimonials: [
       {
         quote:
-          "“Testo riempitivo: racconta come GeoTapp ha velocizzato i processi e migliorato la visibilità sui pagamenti.”",
+          "\"Testo riempitivo: racconta come GeoTapp ha velocizzato i processi e migliorato la visibilità sui pagamenti.\"",
         author: "Maria Rossi",
         role: "COO, Azienda Demo",
         avatar: "https://images.unsplash.com/photo-1544723795-3fb6469f5b39",
       },
       {
         quote:
-          "“Placeholder per la seconda testimonianza. Puoi sostituirla da CMS con una citazione reale.”",
+          "\"Placeholder per la seconda testimonianza. Puoi sostituirla da CMS con una citazione reale.\"",
         author: "Luca Bianchi",
         role: "Head of Operations",
         avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d",
+      },
+      {
+        quote:
+          "\"Blocchetto numero tre: usa questo spazio per un feedback più tecnico, magari citando l'onboarding o le automazioni Stripe.\"",
+        author: "Chiara Verdi",
+        role: "Product Lead, Startup Beta",
+        avatar: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1",
       },
     ],
   },
@@ -197,6 +204,8 @@ export const defaultContent: SiteContent = {
       video: "https://storage.googleapis.com/gt-app/videos/control-center.mp4",
       caption: "Video dimostrativo da sostituire con un asset reale",
     },
+    postMediaCopy:
+      "Testo di esempio sotto il video parallax: usa questo blocco per contestualizzare la clip o inserire una call-to-action alternativa.",
   },
   timeline: {
     title: "Roadmap provvisoria",
@@ -229,6 +238,8 @@ export const defaultContent: SiteContent = {
   pricing: {
     title: "Sezione prezzi di esempio",
     subtitle: "I valori economici sono placeholder e possono essere aggiornati dal CMS",
+    highlightBackgroundColor: "#0f172a",
+    highlightTextColor: "#ffffff",
     tiers: [
       {
         name: "Piano Base",
@@ -381,6 +392,16 @@ export const defaultContent: SiteContent = {
       },
     ],
     note: "IVA esclusa. Sconti e condizioni custom disponibili per contratti annuali.",
+    simulator: {
+      eyebrow: "Simulatore dinamico",
+      title: "Scegli i tuoi collaboratori",
+      description: "Trascina il cursore o digita i dipendenti per ottenere una stima annuale.",
+      sliderLabel: "Collaboratori",
+      sliderHint: "Per oltre {max} collaboratori compila il campo manuale e completa il checkout.",
+      manualPlaceholder: "Inserisci il numero manualmente",
+      emptyState: "Al momento non riusciamo a calcolare il preventivo. Riprova oppure contattaci.",
+      buttonLabel: "Procedi al checkout sicuro",
+    },
   },
   aboutPage: {
     hero: {

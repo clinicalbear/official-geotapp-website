@@ -29,7 +29,12 @@ CONTACT_SMTP_USER=username
 CONTACT_SMTP_PASS=password
 CONTACT_FROM_EMAIL=noreply@geotapp.com
 CONTACT_TO_EMAIL=info@geotapp.com
+NEXT_PUBLIC_DJANGO_API_BASE_URL=https://api.geotapp.com/api
+NEXT_PUBLIC_SITE_URL=https://www.geotapp.com
 ```
+
+`NEXT_PUBLIC_DJANGO_API_BASE_URL` deve puntare al backend Django (incluso il prefisso `/api`). `NEXT_PUBLIC_SITE_URL`
+viene riutilizzato per generare gli URL di successo/annullamento del checkout Stripe.
 
 ### Area admin e sicurezza
 - Login su `/admin/login` (credenziali configurabili via `ADMIN_*`). In fase di salvataggio serve anche il token `CMS_ADMIN_TOKEN`.
@@ -94,3 +99,8 @@ npm run start      # serve build
 1. Collegare prezzi reali da Django/Stripe e popolare `priceIds`.
 2. Automatizzare il sync Firebase (Cloud Functions o scheduler) usando le collezioni impostate nel configuratore.
 3. Abilitare analytics/conversion tracking (Vercel Analytics, Plausible, ecc.) e integrare sistemi di alert per i webhook.
+
+### Simulatore prezzi + Checkout Stripe
+- La pagina `/prezzi` include ora uno slider dinamico per scegliere il numero di collaboratori e vedere il costo annuale calcolato con le fasce provenienti da Django (`/api/pricing/tiers/`).
+- Il form raccoglie ragione sociale ed email e chiama `/api/pricing/checkout`, che a sua volta delega il backend Django per creare la sessione Stripe e reindirizzare il cliente.
+- Gli URL di successo/annullamento si basano su `NEXT_PUBLIC_SITE_URL` e vengono mostrati nelle pagine `prezzi/checkout-success` e `prezzi/checkout-annullato`.

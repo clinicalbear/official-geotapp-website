@@ -64,9 +64,15 @@ export function ParallaxShowcase({ parallax }: { parallax: SiteContent["parallax
             ))}
           </div>
         </div>
-        {parallax.media && (
-          <div className="mt-10">
-            <SectionMedia media={parallax.media} variant="dark" />
+        {(parallax.media || parallax.postMediaCopy) && (
+          <div className="mt-10 space-y-4">
+            {parallax.media && <SectionMedia media={parallax.media} variant="dark" />}
+            {parallax.postMediaCopy && (
+              <RichText
+                html={parallax.postMediaCopy}
+                className="text-base text-slate-200 space-y-2"
+              />
+            )}
           </div>
         )}
       </div>

@@ -1,6 +1,15 @@
 "use client";
 
 import { useState } from "react";
+import {
+  Alert,
+  Button,
+  Grid,
+  MenuItem,
+  Stack,
+  TextField,
+  Typography,
+} from "@mui/material";
 
 type FormState = "idle" | "loading" | "success" | "error";
 
@@ -32,8 +41,8 @@ export function ContactForm() {
       });
 
       if (!response.ok) {
-        const payload = await response.json();
-        throw new Error(payload.message ?? "Errore durante l'invio");
+        const payload = (await response.json().catch(() => null)) as { message?: string } | null;
+        throw new Error(payload?.message ?? "Errore durante l'invio");
       }
 
       setState("success");
@@ -46,84 +55,82 @@ export function ContactForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
-      <div className="grid gap-4 md:grid-cols-2">
-        <label className="text-sm font-medium text-slate-700">
-          Nome e cognome
-          <input
-            type="text"
-            required
+    <Stack component="form" spacing={3} onSubmit={handleSubmit}>
+      <Grid container spacing={2}>
+        <Grid item xs={12} md={6}>
+          <TextField
+            label="Nome e cognome"
             value={form.name}
             onChange={(event) => handleChange("name", event.target.value)}
-            className="mt-2 w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm focus:border-slate-900 focus:outline-none"
-            placeholder="Mario Rossi"
-          />
-        </label>
-        <label className="text-sm font-medium text-slate-700">
-          Email di lavoro
-          <input
-            type="email"
             required
+            fullWidth
+          />
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <TextField
+            label="Email di lavoro"
+            type="email"
             value={form.email}
             onChange={(event) => handleChange("email", event.target.value)}
-            className="mt-2 w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm focus:border-slate-900 focus:outline-none"
-            placeholder="tuonome@azienda.com"
+            required
+            fullWidth
           />
-        </label>
-      </div>
-      <div className="grid gap-4 md:grid-cols-2">
-        <label className="text-sm font-medium text-slate-700">
-          Azienda
-          <input
-            type="text"
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <TextField
+            label="Azienda"
             value={form.company}
             onChange={(event) => handleChange("company", event.target.value)}
-            className="mt-2 w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm focus:border-slate-900 focus:outline-none"
-            placeholder="GeoTapp"
+            fullWidth
           />
-        </label>
-        <label className="text-sm font-medium text-slate-700">
-          Piano di interesse
-          <select
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <TextField
+            label="Piano di interesse"
             value={form.plan}
             onChange={(event) => handleChange("plan", event.target.value)}
-            className="mt-2 w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm focus:border-slate-900 focus:outline-none"
+            select
+            fullWidth
           >
-            <option value="">Seleziona</option>
-            <option value="Starter">Starter</option>
-            <option value="Growth">Growth</option>
-            <option value="Enterprise">Enterprise</option>
-          </select>
-        </label>
-      </div>
-      <label className="text-sm font-medium text-slate-700">
-        Dicci di cosa hai bisogno
-        <textarea
-          required
-          value={form.message}
-          onChange={(event) => handleChange("message", event.target.value)}
-          className="mt-2 h-32 w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm focus:border-slate-900 focus:outline-none"
-          placeholder="Richiedici informazioni ..."
-        />
-      </label>
-      <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+            <MenuItem value="">Seleziona</MenuItem>
+            <MenuItem value="Starter">Starter</MenuItem>
+            <MenuItem value="Growth">Growth</MenuItem>
+            <MenuItem value="Enterprise">Enterprise</MenuItem>
+          </TextField>
+        </Grid>
+        <Grid item xs={12}>
+          <TextField
+            label="Dicci di cosa hai bisogno"
+            value={form.message}
+            onChange={(event) => handleChange("message", event.target.value)}
+            required
+            fullWidth
+            multiline
+            minRows={4}
+          />
+        </Grid>
+      </Grid>
+      <Stack spacing={2} direction={{ xs: "column", md: "row" }} alignItems={{ md: "center" }}>
         {statusMessage && (
-          <p
-            className={`text-sm ${
-              state === "success" ? "text-emerald-600" : "text-red-600"
-            }`}
-          >
+          <Alert severity={state === "success" ? "success" : "error"} sx={{ flex: 1 }}>
             {statusMessage}
-          </p>
+          </Alert>
         )}
-        <button
+        <Button
           type="submit"
+          variant="contained"
+          color="primary"
           disabled={state === "loading"}
-          className="rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-slate-800 disabled:cursor-not-allowed disabled:opacity-50"
+          sx={{ minWidth: 200 }}
         >
           {state === "loading" ? "Invio in corso..." : "Invia la richiesta"}
-        </button>
-      </div>
-    </form>
+        </Button>
+      </Stack>
+      {!statusMessage && (
+        <Typography variant="caption" color="text.secondary">
+          Compilando il form accetti i termini del trattamento dati secondo la privacy policy.
+        </Typography>
+      )}
+    </Stack>
   );
 }

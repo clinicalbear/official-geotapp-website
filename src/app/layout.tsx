@@ -5,9 +5,10 @@ import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { getSiteContent } from "@/lib/contentStore";
+import ThemeProviderClient from "./theme-provider";
+import { IubendaScripts } from "@/components/iubenda-scripts";
 
-export const dynamic = "force-dynamic";
-export const revalidate = 0;
+export const revalidate = 86400;
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -68,16 +69,19 @@ export default async function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         style={{ ["--brand-accent" as string]: content.branding.accentColor }}
       >
-        {analyticsSnippet && (
-          <Script id="custom-analytics" strategy="afterInteractive">
-            {analyticsSnippet}
-          </Script>
-        )}
-        <div className="min-h-screen bg-white text-slate-900">
-          <SiteHeader branding={content.branding} />
-          <main>{children}</main>
-          <SiteFooter branding={content.branding} />
-        </div>
+        <ThemeProviderClient>
+          <IubendaScripts />
+          {analyticsSnippet && (
+            <Script id="custom-analytics" strategy="afterInteractive">
+              {analyticsSnippet}
+            </Script>
+          )}
+          <div className="min-h-screen bg-white text-slate-900">
+            <SiteHeader branding={content.branding} />
+            <main>{children}</main>
+            <SiteFooter branding={content.branding} />
+          </div>
+        </ThemeProviderClient>
       </body>
     </html>
   );

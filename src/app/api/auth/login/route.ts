@@ -2,8 +2,13 @@
 import { cookies } from "next/headers";
 import { verifyCredentials, createSessionToken } from "@/lib/auth";
 
+type LoginPayload = {
+  username: string;
+  password: string;
+};
+
 export async function POST(req: Request) {
-  const { username, password } = await req.json();
+  const { username, password } = (await req.json()) as LoginPayload;
 
   const ok = await verifyCredentials(username, password);
   if (!ok) return new Response("Unauthorized", { status: 401 });

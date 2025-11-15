@@ -44,6 +44,28 @@ const pricingTierSchema = z.object({
   emphasized: z.boolean().optional(),
 });
 
+export const pricingSimulatorDefaults = {
+  eyebrow: "Simulatore dinamico",
+  title: "Scegli i tuoi collaboratori",
+  description: "Trascina il cursore o digita i dipendenti per ottenere una stima annuale.",
+  sliderLabel: "Collaboratori",
+  sliderHint: "Per oltre {max} collaboratori compila il campo manuale e completa il checkout.",
+  manualPlaceholder: "Inserisci il numero manualmente",
+  emptyState: "Al momento non riusciamo a calcolare il preventivo. Riprova oppure contattaci.",
+  buttonLabel: "Procedi al checkout sicuro",
+} as const;
+
+const pricingSimulatorSchema = z.object({
+  eyebrow: z.string().min(1),
+  title: z.string().min(1),
+  description: z.string().min(1),
+  sliderLabel: z.string().min(1),
+  sliderHint: z.string().min(1),
+  manualPlaceholder: z.string().min(1),
+  emptyState: z.string().min(1),
+  buttonLabel: z.string().min(1),
+});
+
 const mediaAssetSchema = z.object({
   image: z.string().min(1).optional(),
   video: z.string().min(1).optional(),
@@ -139,6 +161,7 @@ const pricingPageSchema = z.object({
   tiers: z.array(pricingTierSchema).min(2),
   faqs: z.array(faqSchema).min(2),
   note: z.string().min(1),
+  simulator: pricingSimulatorSchema.default(pricingSimulatorDefaults),
 });
 
 const aboutPageSchema = z.object({
@@ -206,6 +229,7 @@ export const siteContentSchema = z.object({
     cards: z.array(parallaxHighlightSchema.extend({ pill: z.string().optional() })).min(3).max(3),
     texture: z.string().min(1),
     media: mediaAssetSchema.optional(),
+    postMediaCopy: z.string().optional(),
   }),
   timeline: z.object({
     title: z.string().min(1),
@@ -216,6 +240,8 @@ export const siteContentSchema = z.object({
   pricing: z.object({
     title: z.string().min(1),
     subtitle: z.string().min(1),
+    highlightBackgroundColor: z.string().min(1).default("#0f172a"),
+    highlightTextColor: z.string().min(1).default("#ffffff"),
     tiers: z.array(pricingTierSchema).min(2).max(3),
     media: mediaAssetSchema.optional(),
   }),

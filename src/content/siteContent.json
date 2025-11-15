@@ -185,6 +185,8 @@
   "pricing": {
     "title": "I nostri pacchetti più richiesti",
     "subtitle": "Se avete bisogno di assistenza e di richieste particolari, non esitate a contattarci!",
+    "highlightBackgroundColor": "#0f172a",
+    "highlightTextColor": "#ffffff",
     "tiers": [
       {
         "name": "Piano Base",

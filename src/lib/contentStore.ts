@@ -1,73 +1,102 @@
 // src/lib/contentStore.ts
+import { getCloudflareContext } from "@opennextjs/cloudflare";
 import { defaultContent } from "./defaultContent";
-import { siteContentSchema, type SiteContent } from "./siteContentSchema";
+import { siteContentSchema, pricingSimulatorDefaults, type SiteContent } from "./siteContentSchema";
 
 const SITE_CONTENT_KEY = "site_content_v1";
+const KV_BINDING_NAME = "GEOTAPP_CMS_CONTENT";
 
-// Type-safe access to Cloudflare KV binding
-function getKVBinding(): KVNamespace | null {
-  // @ts-ignore
-  if (process.env.GEOTAPP_CMS_CONTENT) {
-    // @ts-ignore
-    return process.env.GEOTAPP_CMS_CONTENT as KVNamespace;
-  }
-  // @ts-ignore
-  if (typeof globalThis !== 'undefined' && 'GEOTAPP_CMS_CONTENT' in globalThis) {
-     // @ts-ignore
-    return (globalThis as any).GEOTAPP_CMS_CONTENT as KVNamespace;
-  }
-  return null;
-}
-
-// --- Fallback cache for local development ---
-const g = globalThis as unknown as {
+const g = globalThis as typeof globalThis & {
   __SITE_CONTENT__?: SiteContent;
 };
 
-function getInitial(): SiteContent {
-  const seed = process.env.SITE_CONTENT_JSON;
-  if (seed) {
-    try {
-      return siteContentSchema.parse(JSON.parse(seed));
-    } catch {}
+let cloudflareContextWarningLogged = false;
+
+function getKVBinding(): KVNamespace | null {
+  try {
+    const context = getCloudflareContext();
+    const kvFromContext = (context?.env as Record<string, KVNamespace | undefined>)?.[
+      KV_BINDING_NAME
+    ];
+    if (kvFromContext) {
+      return kvFromContext as KVNamespace;
+    }
+  } catch (error) {
+    if (!cloudflareContextWarningLogged) {
+      console.warn(
+        "Cloudflare context not available while resolving GEOTAPP_CMS_CONTENT. Falling back to global binding."
+      );
+      if (process.env.NODE_ENV !== "production") {
+        console.warn(error);
+      }
+      cloudflareContextWarningLogged = true;
+    }
   }
-  return siteContentSchema.parse(defaultContent);
+
+  if (KV_BINDING_NAME in globalThis) {
+    return (globalThis as Record<string, unknown>)[KV_BINDING_NAME] as KVNamespace;
+  }
+
+  return null;
+}
+
+function normalizeContent(content: SiteContent): SiteContent {
+  return {
+    ...content,
+    pricingPage: {
+      ...content.pricingPage,
+      simulator: {
+        ...pricingSimulatorDefaults,
+        ...(content.pricingPage?.simulator ?? {}),
+      },
+    },
+  };
+}
+
+function getInitial(): SiteContent {
+  return normalizeContent(siteContentSchema.parse(defaultContent));
 }
 // --- End Fallback ---
 
 
+// --- LETTURA SICURA (Questa rimane invariata) ---
 export async function getSiteContent(): Promise<SiteContent> {
   const kv = getKVBinding();
   if (kv) {
-    const content = await kv.get<SiteContent>(SITE_CONTENT_KEY, "json");
-    return content ? siteContentSchema.parse(content) : siteContentSchema.parse(defaultContent);
+    const contentString = await kv.get(SITE_CONTENT_KEY, "text");
+    if (!contentString || contentString.length < 2) {
+      return getInitial();
+    }
+    try {
+      const content = JSON.parse(contentString);
+      const parsed = siteContentSchema.parse(content);
+      return normalizeContent(parsed);
+    } catch (e) {
+      console.error("Dati KV (content) corrotti o non validi, carico default.", e);
+      return getInitial();
+    }
   }
-
-  console.log("KV binding not found. Using local in-memory store.");
+  console.warn("KV binding not found. Using local in-memory store.");
   if (!g.__SITE_CONTENT__) g.__SITE_CONTENT__ = getInitial();
   return g.__SITE_CONTENT__;
 }
 
 
-// MODIFICA: 'next' ora è 'unknown' per accettare il body dell'API
+// --- SCRITTURA FORZATA (QUI È LA MODIFICA) ---
 export async function setSiteContent(next: unknown): Promise<SiteContent> {
-  // La validazione Zod avviene qui, e se fallisce 
-  // viene catturata dal try/catch in route.ts
-  const parsed = siteContentSchema.parse(next);
+  const parsedData = normalizeContent(siteContentSchema.parse(next));
 
   const kv = getKVBinding();
   if (kv) {
-    await kv.put(SITE_CONTENT_KEY, JSON.stringify(parsed));
-    return parsed; 
+    await kv.put(SITE_CONTENT_KEY, JSON.stringify(parsedData));
+    return parsedData;
   }
 
-  console.log("KV binding not found. Saving to local in-memory store.");
-  g.__SITE_CONTENT__ = parsed;
-  return parsed; 
+  console.warn("KV binding not found. Saving to local in-memory store.");
+  g.__SITE_CONTENT__ = parsedData;
+  return parsedData;
 }
 
-
-// MODIFICA: Anche 'next' qui è 'unknown'
 export async function updateSiteContent(next: unknown): Promise<SiteContent> {
   return setSiteContent(next);
 }

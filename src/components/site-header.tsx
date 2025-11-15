@@ -5,6 +5,7 @@ const navigation = [
   { label: "Servizi", href: "/servizi" },
   { label: "Prezzi", href: "/prezzi" },
   { label: "Chi siamo", href: "/chi-siamo" },
+  { label: "Blog", href: "https://blog.geotapp.com" },
 ];
 
 type Branding = SiteContent["branding"];
@@ -69,7 +70,11 @@ export function SiteHeader({ branding }: { branding?: Branding }) {
         </a>
         <nav className="ml-auto hidden items-center gap-6 text-sm font-medium text-slate-200 md:flex">
           {navigation.map((item) => (
-            <a key={item.href} href={item.href} className="transition hover:text-white">
+            <a
+              key={item.href}
+              href={item.href}
+              className="transition hover:text-[#8FC436]"
+            >
               {item.label}
             </a>
           ))}
