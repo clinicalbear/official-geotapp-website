@@ -64,6 +64,7 @@ export default async function RootLayout({
           crossOrigin="anonymous"
           referrerPolicy="no-referrer"
         />
+        <meta name="google-adsense-account" content="ca-pub-2775957071584785" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
