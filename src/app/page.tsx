@@ -23,12 +23,15 @@ function HtmlTypography({ html, ...props }: HtmlTypographyProps) {
   return <Typography {...props} dangerouslySetInnerHTML={{ __html: html }} />;
 }
 
-const PLACEHOLDER_MARKERS = ["lorem ipsum dolor sit amet"];
+const PLACEHOLDER_MARKERS = ["lorem ipsum"];
 function cleanHtml(html?: string | null): string {
   if (!html) return "";
   const lower = html.toLowerCase();
   if (PLACEHOLDER_MARKERS.some((marker) => lower.includes(marker))) {
-    const cutAt = lower.indexOf("lorem ipsum dolor sit amet");
+    const cutAt = PLACEHOLDER_MARKERS.reduce((idx, marker) => {
+      const found = lower.indexOf(marker);
+      return found >= 0 ? (idx === -1 ? found : Math.min(idx, found)) : idx;
+    }, -1);
     return cutAt > 0 ? html.slice(0, cutAt).trim() : "";
   }
   return html;
@@ -385,7 +388,7 @@ function ParallaxShowcaseBlock({ parallax }: ParallaxProps) {
                 {parallax.eyebrow}
               </Typography>
               <HtmlTypography variant="h2" sx={{ fontSize: { xs: "2.4rem", md: "2.8rem" } }} html={parallax.title} />
-              <HtmlTypography variant="body1" color="text.secondary" html={parallax.description} />
+              <HtmlTypography variant="body1" color="text.secondary" html={cleanHtml(parallax.description)} />
               <Stack spacing={2} mt={2}>
                 {parallax.stickyHighlights.map((highlight) => (
                   <Stack key={highlight.title} direction="row" spacing={2}>
@@ -404,7 +407,7 @@ function ParallaxShowcaseBlock({ parallax }: ParallaxProps) {
                     </Box>
                     <Stack spacing={0.5}>
                       <Typography variant="subtitle1">{highlight.title}</Typography>
-                      <HtmlTypography variant="body2" color="text.secondary" html={highlight.detail} />
+                      <HtmlTypography variant="body2" color="text.secondary" html={cleanHtml(highlight.detail)} />
                     </Stack>
                   </Stack>
                 ))}
