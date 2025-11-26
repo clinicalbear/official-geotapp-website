@@ -167,9 +167,7 @@ function SocialProofBlock({ socialProof }: SocialProofBlockProps) {
                   p: 2,
                 }}
               >
-                <Typography variant="subtitle2" color="common.white">
-                  {logo}
-                </Typography>
+                <HtmlTypography variant="subtitle2" color="common.white" html={logo} />
               </Box>
             </Box>
           </Grid>
@@ -180,11 +178,9 @@ function SocialProofBlock({ socialProof }: SocialProofBlockProps) {
         {socialProof.testimonials.map((testimonial) => (
           <Grid key={testimonial.quote} item xs={12} md={4}>
             <Stack spacing={1.5}>
-              <Typography variant="body1">&ldquo;{testimonial.quote}&rdquo;</Typography>
-              <Typography variant="subtitle1">{testimonial.author}</Typography>
-              <Typography variant="caption" color="text.secondary">
-                {testimonial.role}
-              </Typography>
+              <HtmlTypography variant="body1" html={`&ldquo;${testimonial.quote}&rdquo;`} />
+              <HtmlTypography variant="subtitle1" html={testimonial.author} />
+              <HtmlTypography variant="caption" color="text.secondary" html={testimonial.role} />
             </Stack>
           </Grid>
         ))}
@@ -207,14 +203,16 @@ function ContactBlock({ contact }: ContactBlockProps) {
               <Typography variant="overline" color="text.secondary" sx={{ letterSpacing: 4 }}>
                 {contact.title}
               </Typography>
-              <Typography variant="h3" sx={{ fontSize: { xs: "2rem", md: "2.6rem" }, fontWeight: 600 }}>
-                {contact.description}
-              </Typography>
+              <HtmlTypography
+                variant="h3"
+                sx={{ fontSize: { xs: "2rem", md: "2.6rem" }, fontWeight: 600 }}
+                html={contact.description}
+              />
               <Stack spacing={1.5} alignItems="center" mt={1}>
                 {contact.details.map((detail) => (
                   <Stack key={detail} direction="row" spacing={1} alignItems="center" color="text.secondary">
                     <i className="fa-solid fa-circle-check" aria-hidden="true" />
-                    <Typography variant="body1">{detail}</Typography>
+                    <HtmlTypography variant="body1" html={detail} />
                   </Stack>
                 ))}
               </Stack>
@@ -244,13 +242,9 @@ function SectionHeading({ eyebrow, title, description }: SectionHeadingProps) {
       <Typography variant="overline" color="text.secondary" sx={{ letterSpacing: 4 }}>
         {eyebrow}
       </Typography>
-      <Typography variant="h3" sx={{ fontSize: { xs: "2.2rem", md: "2.6rem" } }}>
-        {title}
-      </Typography>
+      <HtmlTypography variant="h3" sx={{ fontSize: { xs: "2.2rem", md: "2.6rem" } }} html={title} />
       {description && (
-        <Typography variant="body1" color="text.secondary" sx={{ maxWidth: 640 }}>
-          {description}
-        </Typography>
+        <HtmlTypography variant="body1" color="text.secondary" sx={{ maxWidth: 640 }} html={description} />
       )}
     </Stack>
   );

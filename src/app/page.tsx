@@ -13,7 +13,15 @@ import {
   Paper,
   Stack,
   Typography,
+  type TypographyProps,
 } from "@mui/material";
+
+type HtmlTypographyProps = TypographyProps & { html?: string | null };
+
+function HtmlTypography({ html, ...props }: HtmlTypographyProps) {
+  if (!html) return null;
+  return <Typography {...props} dangerouslySetInnerHTML={{ __html: html }} />;
+}
 
 export const dynamic = "force-dynamic";
 
@@ -176,10 +184,8 @@ function ContentSections({
               <Grid key={item.title} item xs={12} md={4}>
                 <Stack spacing={1.5}>
                   <Chip label={item.pill} color="primary" variant="outlined" />
-                  <Typography variant="h5">{item.title}</Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    {item.description}
-                  </Typography>
+                  <HtmlTypography variant="h5" html={item.title} />
+                  <HtmlTypography variant="body2" color="text.secondary" html={item.description} />
                 </Stack>
               </Grid>
             ))}
@@ -192,10 +198,8 @@ function ContentSections({
               <Grid key={step.title} item xs={12} md={4}>
                 <Stack spacing={1.5}>
                   <Chip label={`Step ${index + 1}`} color="secondary" variant="outlined" />
-                  <Typography variant="h6">{step.title}</Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    {step.description}
-                  </Typography>
+                  <HtmlTypography variant="h6" html={step.title} />
+                  <HtmlTypography variant="body2" color="text.secondary" html={step.description} />
                 </Stack>
               </Grid>
             ))}
@@ -212,10 +216,8 @@ function ContentSections({
                   {step.duration}
                 </Typography>
                 <Stack spacing={0.5}>
-                  <Typography variant="subtitle1">{step.title}</Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    {step.description}
-                  </Typography>
+                  <HtmlTypography variant="subtitle1" html={step.title} />
+                  <HtmlTypography variant="body2" color="text.secondary" html={step.description} />
                 </Stack>
               </Stack>
             ))}
@@ -266,7 +268,7 @@ function ContentSections({
               {socialProof.testimonials.map((testimonial) => (
                 <Grid key={testimonial.quote} item xs={12} md={4}>
                   <Stack spacing={1.5}>
-                    <Typography variant="body1">&ldquo;{testimonial.quote}&rdquo;</Typography>
+                    <HtmlTypography variant="body1" html={`&ldquo;${testimonial.quote}&rdquo;`} />
                     <Typography variant="subtitle2">{testimonial.author}</Typography>
                     <Typography variant="caption" color="text.secondary">
                       {testimonial.role}
@@ -292,17 +294,16 @@ function ContentSections({
                 <Typography variant="overline" color="text.secondary">
                   {contact.title}
                 </Typography>
-                <Typography
+                <HtmlTypography
                   variant="h3"
                   sx={{ fontSize: { xs: "2rem", md: "2.6rem" }, fontWeight: 600 }}
-                >
-                  {contact.description}
-                </Typography>
+                  html={contact.description}
+                />
                 <Stack spacing={1.5} alignItems="center" mt={1}>
                   {contact.details.map((detail, index) => (
                     <Stack key={detail} direction="row" spacing={1} alignItems="center" color="text.secondary">
                       <i className="fa-solid fa-circle-check" aria-hidden="true" />
-                      <Typography variant="body1">{detail}</Typography>
+                      <HtmlTypography variant="body1" html={detail} />
                     </Stack>
                   ))}
                 </Stack>
@@ -341,14 +342,8 @@ function SectionCard({ eyebrow, title, description, children }: SectionCardProps
         <Typography variant="overline" color="text.secondary" sx={{ letterSpacing: 4 }}>
           {eyebrow}
         </Typography>
-        <Typography variant="h2" sx={{ fontSize: { xs: "2.2rem", md: "2.6rem" } }}>
-          {title}
-        </Typography>
-        {description && (
-          <Typography variant="body1" color="text.secondary">
-            {description}
-          </Typography>
-        )}
+        <HtmlTypography variant="h2" sx={{ fontSize: { xs: "2.2rem", md: "2.6rem" } }} html={title} />
+        {description && <HtmlTypography variant="body1" color="text.secondary" html={description} />}
       </Stack>
       <Divider />
       {children}
@@ -381,12 +376,8 @@ function ParallaxShowcaseBlock({ parallax }: ParallaxProps) {
               <Typography variant="overline" color="text.secondary" sx={{ letterSpacing: 4 }}>
                 {parallax.eyebrow}
               </Typography>
-              <Typography variant="h2" sx={{ fontSize: { xs: "2.4rem", md: "2.8rem" } }}>
-                {parallax.title}
-              </Typography>
-              <Typography variant="body1" color="text.secondary">
-                {parallax.description}
-              </Typography>
+              <HtmlTypography variant="h2" sx={{ fontSize: { xs: "2.4rem", md: "2.8rem" } }} html={parallax.title} />
+              <HtmlTypography variant="body1" color="text.secondary" html={parallax.description} />
               <Stack spacing={2} mt={2}>
                 {parallax.stickyHighlights.map((highlight) => (
                   <Stack key={highlight.title} direction="row" spacing={2}>
@@ -405,9 +396,7 @@ function ParallaxShowcaseBlock({ parallax }: ParallaxProps) {
                     </Box>
                     <Stack spacing={0.5}>
                       <Typography variant="subtitle1">{highlight.title}</Typography>
-                      <Typography variant="body2" color="text.secondary">
-                        {highlight.detail}
-                      </Typography>
+                      <HtmlTypography variant="body2" color="text.secondary" html={highlight.detail} />
                     </Stack>
                   </Stack>
                 ))}
@@ -435,10 +424,13 @@ function ParallaxShowcaseBlock({ parallax }: ParallaxProps) {
                     />
                   )}
                   <Stack spacing={1}>
-                    <Typography variant="h5">{card.title}</Typography>
-                    <Typography variant="body2" color="text.secondary" sx={{ textAlign: "justify" }}>
-                      {[card.detail, Array.from({ length: 6 }).map(() => FILLER_SNIPPET).join(" ")].join(" ")}
-                    </Typography>
+                    <HtmlTypography variant="h5" html={card.title} />
+                    <HtmlTypography
+                      variant="body2"
+                      color="text.secondary"
+                      sx={{ textAlign: "justify" }}
+                      html={[card.detail, Array.from({ length: 6 }).map(() => FILLER_SNIPPET).join(" ")].join(" ")}
+                    />
                   </Stack>
                 </Box>
               ))}
