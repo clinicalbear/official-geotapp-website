@@ -23,6 +23,17 @@ function HtmlTypography({ html, ...props }: HtmlTypographyProps) {
   return <Typography {...props} dangerouslySetInnerHTML={{ __html: html }} />;
 }
 
+const PLACEHOLDER_MARKERS = ["lorem ipsum dolor sit amet"];
+function cleanHtml(html?: string | null): string {
+  if (!html) return "";
+  const lower = html.toLowerCase();
+  if (PLACEHOLDER_MARKERS.some((marker) => lower.includes(marker))) {
+    const cutAt = lower.indexOf("lorem ipsum dolor sit amet");
+    return cutAt > 0 ? html.slice(0, cutAt).trim() : "";
+  }
+  return html;
+}
+
 export const dynamic = "force-dynamic";
 
 export default async function Home() {
@@ -355,9 +366,6 @@ type ParallaxProps = {
   parallax: SiteContent["parallax"];
 };
 
-const FILLER_SNIPPET =
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet dignissim nibh. Integer sodales leo sed nisi faucibus, sed suscipit nulla iaculis. Vivamus ut lacus sodales, tincidunt ligula vitae, faucibus nibh. Morbi sit amet lobortis elit. Pellentesque at dictum eros. Proin egestas orci auctor, finibus lorem eu, accumsan sapien. Suspendisse non leo tempor, porttitor risus et, semper odio. Sed nec dolor tincidunt, iaculis orci sed, tempus velit. Curabitur luctus posuere ipsum, vel posuere tellus.";
-
 function ParallaxShowcaseBlock({ parallax }: ParallaxProps) {
   return (
     <Box
@@ -429,7 +437,7 @@ function ParallaxShowcaseBlock({ parallax }: ParallaxProps) {
                       variant="body2"
                       color="text.secondary"
                       sx={{ textAlign: "justify" }}
-                      html={card.detail ?? ""}
+                      html={cleanHtml(card.detail)}
                     />
                   </Stack>
                 </Box>
