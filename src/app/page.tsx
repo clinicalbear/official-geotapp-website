@@ -429,7 +429,7 @@ function ParallaxShowcaseBlock({ parallax }: ParallaxProps) {
                       variant="body2"
                       color="text.secondary"
                       sx={{ textAlign: "justify" }}
-                      html={[card.detail, Array.from({ length: 6 }).map(() => FILLER_SNIPPET).join(" ")].join(" ")}
+                      html={card.detail ?? ""}
                     />
                   </Stack>
                 </Box>
