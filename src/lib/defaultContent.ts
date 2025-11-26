@@ -108,7 +108,7 @@ export const defaultContent: SiteContent = {
       {
         title: "Feature uno",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae ligula vel eros egestas placerat.",
+          "Descrizione della prima funzionalità. Personalizza questo testo dal CMS.",
         icon: "calendar",
         pill: "Modulo A",
       },
@@ -214,7 +214,7 @@ export const defaultContent: SiteContent = {
       {
         title: "Fase 1",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet consequat lectus.",
+          "Descrizione della prima fase. Aggiorna questo testo riempitivo dal CMS.",
         duration: "Settimana 1",
       },
       {
