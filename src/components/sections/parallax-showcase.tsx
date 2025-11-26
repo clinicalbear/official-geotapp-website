@@ -2,6 +2,20 @@ import { SectionMedia } from "@/components/section-media";
 import { RichText } from "@/components/rich-text";
 import type { SiteContent } from "@/lib/siteContentSchema";
 
+const PLACEHOLDER_MARKERS = ["lorem ipsum"];
+function cleanHtml(html?: string | null): string {
+  if (!html) return "";
+  const lower = html.toLowerCase();
+  if (PLACEHOLDER_MARKERS.some((marker) => lower.includes(marker))) {
+    const cutAt = PLACEHOLDER_MARKERS.reduce((idx, marker) => {
+      const found = lower.indexOf(marker);
+      return found >= 0 ? (idx === -1 ? found : Math.min(idx, found)) : idx;
+    }, -1);
+    return cutAt > 0 ? html.slice(0, cutAt).trim() : "";
+  }
+  return html;
+}
+
 export function ParallaxShowcase({ parallax }: { parallax: SiteContent["parallax"] }) {
   return (
     <section className="relative isolate bg-slate-950 text-white" id="parallax">
@@ -19,24 +33,24 @@ export function ParallaxShowcase({ parallax }: { parallax: SiteContent["parallax
           <div className="space-y-6 rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur lg:sticky lg:top-48 lg:bg-white/10">
             <RichText
               as="p"
-              html={parallax.eyebrow}
+              html={cleanHtml(parallax.eyebrow)}
               className="text-sm font-semibold uppercase tracking-[0.4em] text-sky-300"
             />
             <RichText
               as="h2"
-              html={parallax.title}
+              html={cleanHtml(parallax.title)}
               className="text-3xl font-semibold text-white space-y-1"
             />
-            <RichText html={parallax.description} className="text-base text-slate-200 space-y-2" />
+            <RichText html={cleanHtml(parallax.description)} className="text-base text-slate-200 space-y-2" />
             <div className="space-y-4 rounded-3xl border border-white/10 bg-white/5 p-6">
               {parallax.stickyHighlights.map((highlight) => (
                 <div key={highlight.title}>
                   <RichText
                     as="p"
-                    html={highlight.title}
+                    html={cleanHtml(highlight.title)}
                     className="text-lg font-semibold text-white"
                   />
-                  <RichText html={highlight.detail} className="text-sm text-slate-300 space-y-1" />
+                  <RichText html={cleanHtml(highlight.detail)} className="text-sm text-slate-300 space-y-1" />
                 </div>
               ))}
             </div>
@@ -50,16 +64,16 @@ export function ParallaxShowcase({ parallax }: { parallax: SiteContent["parallax
                 {card.pill && (
                   <RichText
                     as="span"
-                    html={card.pill}
+                    html={cleanHtml(card.pill)}
                     className="text-xs font-semibold uppercase tracking-[0.3em] text-sky-300"
                   />
                 )}
                 <RichText
                   as="h3"
-                  html={card.title}
+                  html={cleanHtml(card.title)}
                   className="mt-2 text-2xl font-semibold text-white space-y-1"
                 />
-                <RichText html={card.detail} className="mt-3 text-base text-slate-200 space-y-2" />
+                <RichText html={cleanHtml(card.detail)} className="mt-3 text-base text-slate-200 space-y-2" />
               </article>
             ))}
           </div>
@@ -69,7 +83,7 @@ export function ParallaxShowcase({ parallax }: { parallax: SiteContent["parallax
             {parallax.media && <SectionMedia media={parallax.media} variant="dark" />}
             {parallax.postMediaCopy && (
               <RichText
-                html={parallax.postMediaCopy}
+                html={cleanHtml(parallax.postMediaCopy)}
                 className="text-base text-slate-200 space-y-2"
               />
             )}

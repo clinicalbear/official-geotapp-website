@@ -11,11 +11,14 @@ const EVENT_ATTR_REGEX = /^on/i;
 const ATTRIBUTE_REGEX = /\s+([a-z0-9-:]+)(?:=("(?:[^"]*)"|'(?:[^']*)'|[^\s>]+))?/gi;
 const TAG_REGEX = /<\/?([a-z0-9-]+)([^>]*)>/gi;
 
+const DEFAULT_ALLOWED_TAGS = ["p", "br", "strong", "b", "em", "i", "u", "span", "div", "a", "ul", "ol", "li", "h1", "h2", "h3", "h4", "h5", "h6"];
+
 function sanitizeHtml(html: string, allowedTags?: string[]) {
-  if (!allowedTags || allowedTags.length === 0) {
+  const tagsToAllow = allowedTags && allowedTags.length > 0 ? allowedTags : DEFAULT_ALLOWED_TAGS;
+  if (!tagsToAllow || tagsToAllow.length === 0) {
     return html;
   }
-  const allowed = new Set(allowedTags.map((tag) => tag.toLowerCase()));
+  const allowed = new Set(tagsToAllow.map((tag) => tag.toLowerCase()));
   return html.replace(TAG_REGEX, (match, rawTag: string, rawAttrs: string) => {
     const tag = rawTag.toLowerCase();
     const isClosing = match.startsWith("</");
