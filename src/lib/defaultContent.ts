@@ -101,30 +101,30 @@ export const defaultContent: SiteContent = {
     },
   ],
   featureCluster: {
-    title: "Sezione funzionalità dimostrative",
+    title: "Funzionalità Principali di GeoTapp",
     intro:
-      "Ogni scheda contiene testo di prova. Dal CMS puoi cambiare icona, pill, titolo e descrizione in pochi clic.",
+      "Scopri gli strumenti che rendono GeoTapp la scelta ideale per la gestione efficiente delle tue operazioni aziendali.",
     items: [
       {
-        title: "Feature uno",
+        title: "Gestione Appuntamenti",
         description:
-          "Descrizione della prima funzionalità. Personalizza questo testo dal CMS.",
+          "Automatizza la pianificazione e il follow-up degli appuntamenti per migliorare l'esperienza cliente.",
         icon: "calendar",
-        pill: "Modulo A",
+        pill: "Appuntamenti",
       },
       {
-        title: "Feature due",
+        title: "Elaborazione Pagamenti",
         description:
-          "Suspendisse potenti. Donec at felis nec velit condimentum gravida in vitae nisl.",
+          "Integra pagamenti sicuri con Stripe, monitorando entrate e uscite in tempo reale.",
         icon: "payments",
-        pill: "Modulo B",
+        pill: "Pagamenti",
       },
       {
-        title: "Feature tre",
+        title: "Automazioni Personalizzate",
         description:
-          "Phasellus vitae venenatis metus. Cras eget turpis sit amet mauris vulputate consequat.",
+          "Crea workflow automatizzati per sincronizzare dati e notifiche tra le tue piattaforme.",
         icon: "automation",
-        pill: "Modulo C",
+        pill: "Automazioni",
       },
     ],
     media: {
@@ -164,39 +164,39 @@ export const defaultContent: SiteContent = {
     ]
   },
   parallax: {
-    eyebrow: "Blocco sticky demo",
-    title: "Evidenzia le sezioni chiave mentre l'utente scorre",
+    eyebrow: "Automazioni Intelligenti",
+    title: "Trasforma il tuo workflow con GeoTapp",
     description:
-      "Questi testi sono riempitivi: descrivi qui messaggi chiave e aggiungi card per raccontare i plus principali.",
+      "GeoTapp offre una suite completa di strumenti per automatizzare i processi aziendali, dalla gestione degli appuntamenti alla sincronizzazione dei pagamenti, garantendo efficienza e scalabilità.",
     stickyHighlights: [
       {
-        title: "Highlight A",
-        detail: "Descrizione breve dedicata al primo beneficio della piattaforma.",
+        title: "Automazione Completa",
+        detail: "Integra tutti i tuoi strumenti in un'unica piattaforma per eliminare i task manuali e aumentare la produttività.",
       },
       {
-        title: "Highlight B",
-        detail: "Altro messaggio di esempio per mantenere l'attenzione sul valore.",
+        title: "Sicurezza Avanzata",
+        detail: "Proteggi i tuoi dati con crittografia end-to-end e compliance GDPR per una tranquillità totale.",
       },
       {
-        title: "Highlight C",
-        detail: "Testo sostituibile dal CMS per completare il racconto.",
+        title: "Supporto 24/7",
+        detail: "Il nostro team di esperti è sempre disponibile per assisterti in ogni fase del tuo percorso.",
       },
     ],
     cards: [
       {
-        title: "Card 1",
-        detail: "Contenuto fittizio per spiegare una funzionalità.",
-        pill: "Focus",
+        title: "Gestione Appuntamenti",
+        detail: "Automatizza inviti, reminder e follow-up per i tuoi clienti, riducendo il tempo dedicato alle attività amministrative.",
+        pill: "Automazione",
       },
       {
-        title: "Card 2",
-        detail: "Ulteriore esempio di testo riempitivo che puoi personalizzare.",
-        pill: "Insight",
+        title: "Integrazione Pagamenti",
+        detail: "Collega Stripe per processare pagamenti sicuri e veloci, con report dettagliati sulle transazioni.",
+        pill: "Pagamenti",
       },
       {
-        title: "Card 3",
-        detail: "Ancora un paragrafo dimostrativo per testare la resa grafica.",
-        pill: "Operatività",
+        title: "Analisi in Tempo Reale",
+        detail: "Monitora le performance con dashboard interattive e ottieni insights per ottimizzare le tue strategie.",
+        pill: "Analytics",
       },
     ],
     texture: "/textures/grid.svg",
@@ -208,25 +208,25 @@ export const defaultContent: SiteContent = {
       "Testo di esempio sotto il video parallax: usa questo blocco per contestualizzare la clip o inserire una call-to-action alternativa.",
   },
   timeline: {
-    title: "Roadmap provvisoria",
-    helper: "Fasi di progetto da personalizzare",
+    title: "Il nostro Percorso",
+    helper: "Le fasi chiave per implementare GeoTapp nella tua azienda",
     steps: [
       {
-        title: "Fase 1",
+        title: "Configurazione",
         description:
-          "Descrizione della prima fase. Aggiorna questo testo riempitivo dal CMS.",
+          "Imposta il tuo account, collega le integrazioni e personalizza le impostazioni iniziali.",
         duration: "Settimana 1",
       },
       {
-        title: "Fase 2",
+        title: "Formazione e Test",
         description:
-          "Integer gravida, nibh non sodales pharetra, ipsum eros lobortis purus, sed cursus arcu lorem ut nulla.",
+          "Il nostro team ti guida attraverso l'uso della piattaforma con sessioni di formazione dedicate.",
         duration: "Settimana 2",
       },
       {
-        title: "Fase 3",
+        title: "Lancio e Ottimizzazione",
         description:
-          "Vivamus eget pretium arcu. Proin fringilla dolor vel lacus iaculis, id lobortis libero porta.",
+          "Vai live con GeoTapp e monitora le performance per continui miglioramenti.",
         duration: "Settimana 3",
       },
     ],

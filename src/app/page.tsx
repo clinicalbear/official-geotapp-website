@@ -24,17 +24,22 @@ function HtmlTypography({ html, ...props }: HtmlTypographyProps) {
 }
 
 const PLACEHOLDER_MARKERS = ["lorem ipsum"];
+const PLACEHOLDER_REGEX = /lorem(?:\s|&nbsp;|<[^>]+>)+ipsum/i;
 function cleanHtml(html?: string | null): string {
   if (!html) return "";
   const lower = html.toLowerCase();
-  if (PLACEHOLDER_MARKERS.some((marker) => lower.includes(marker))) {
-    const cutAt = PLACEHOLDER_MARKERS.reduce((idx, marker) => {
-      const found = lower.indexOf(marker);
-      return found >= 0 ? (idx === -1 ? found : Math.min(idx, found)) : idx;
-    }, -1);
-    return cutAt > 0 ? html.slice(0, cutAt).trim() : "";
-  }
-  return html;
+
+  const cutAt = PLACEHOLDER_MARKERS.reduce((idx, marker) => {
+    const found = lower.indexOf(marker);
+    return found >= 0 ? (idx === -1 ? found : Math.min(idx, found)) : idx;
+  }, -1);
+
+  const regexMatch = cutAt === -1 ? lower.match(PLACEHOLDER_REGEX) : null;
+  const placeholderIndex = cutAt >= 0 ? cutAt : regexMatch?.index ?? -1;
+
+  if (placeholderIndex === -1) return html;
+
+  return placeholderIndex > 0 ? html.slice(0, placeholderIndex).trim() : "";
 }
 
 export const dynamic = "force-dynamic";
@@ -314,7 +319,7 @@ function ContentSections({
                   html={contact.description}
                 />
                 <Stack spacing={1.5} alignItems="center" mt={1}>
-                  {contact.details.map((detail, index) => (
+                  {contact.details.map((detail) => (
                     <Stack key={detail} direction="row" spacing={1} alignItems="center" color="text.secondary">
                       <i className="fa-solid fa-circle-check" aria-hidden="true" />
                       <HtmlTypography variant="body1" html={detail} />
