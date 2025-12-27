@@ -116,3 +116,4 @@ npm run deploy
 ## Support
 
 Per problemi o domande: info@geotapp.com
+# Dynamic promo counters
