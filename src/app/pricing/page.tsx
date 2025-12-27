@@ -157,7 +157,7 @@ export default function Pricing() {
   const [promoStats, setPromoStats] = useState<Record<string, { used: number, remaining: number, maxUses: number }>>({});
   const [isLoadingStats, setIsLoadingStats] = useState(true);
 
-  // Fetch delle statistiche promo code al mount
+  // Fetch delle statistiche promo code al mount - v2
   useEffect(() => {
     const fetchPromoStats = async () => {
       try {
