@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "pages:build": "next build",
     "build:worker": "npx opennextjs-cloudflare build",
     "postbuild:worker": "node nuclear_patch_v3.js",
     "start": "next start",
