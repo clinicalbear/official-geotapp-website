@@ -1,0 +1,13 @@
+[2025-12-08 02:19:25.306] [34mdebug[39m: Ôøö´©Å Server wasn't able to start properly.
+[2025-12-08 02:19:25.308] [31merror[39m: Cannot create proxy with a non-object as target or handler
+TypeError: Cannot create proxy with a non-object as target or handler
+    at getContentTypeProxy (D:\xampp\htdocs\goetap\official-v2\strapi-backend\node_modules\@strapi\strapi\dist\factories.js:11:10)
+    at D:\xampp\htdocs\goetap\official-v2\strapi-backend\node_modules\@strapi\strapi\dist\factories.js:22:66
+    at Object.get (D:\xampp\htdocs\goetap\official-v2\strapi-backend\node_modules\@strapi\strapi\dist\core\registries\controllers.js:23:61)
+    at Object.get [as api::homepage.homepage] (D:\xampp\htdocs\goetap\official-v2\strapi-backend\node_modules\@strapi\strapi\dist\core\registries\controllers.js:37:25)
+    at D:\xampp\htdocs\goetap\official-v2\strapi-backend\node_modules\lodash\lodash.js:4967:32
+    at baseForOwn (D:\xampp\htdocs\goetap\official-v2\strapi-backend\node_modules\lodash\lodash.js:3032:24)
+    at Function.mapKeys (D:\xampp\htdocs\goetap\official-v2\strapi-backend\node_modules\lodash\lodash.js:13430:7)
+    at removeNamespacedKeys (D:\xampp\htdocs\goetap\official-v2\strapi-backend\node_modules\@strapi\strapi\dist\core\domain\module\index.js:11:29)
+    at get controllers [as controllers] (D:\xampp\htdocs\goetap\official-v2\strapi-backend\node_modules\@strapi\strapi\dist\core\domain\module\index.js:102:14)
+    at D:\xampp\htdocs\goetap\official-v2\strapi-backend\node_modules\@strapi\strapi\dist\services\content-api\permissions\index.js:35:15

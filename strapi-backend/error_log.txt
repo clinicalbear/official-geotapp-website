@@ -1,0 +1,55 @@
+[2025-12-08 02:12:22.406] [34mdebug[39m: Ôøö´©Å Server wasn't able to start properly.
+[2025-12-08 02:12:22.407] [31merror[39m: Could not load js config file D:\xampp\htdocs\goetap\official-v2\strapi-backend\node_modules\@strapi\plugin-upload\strapi-server.js: 
+Something went wrong installing the "sharp" module
+
+Cannot find module '../build/Release/sharp-win32-x64.node'
+Require stack:
+- D:\xampp\htdocs\goetap\official-v2\strapi-backend\node_modules\sharp\lib\sharp.js
+- D:\xampp\htdocs\goetap\official-v2\strapi-backend\node_modules\sharp\lib\constructor.js
+- D:\xampp\htdocs\goetap\official-v2\strapi-backend\node_modules\sharp\lib\index.js
+- D:\xampp\htdocs\goetap\official-v2\strapi-backend\node_modules\@strapi\plugin-upload\server\services\image-manipulation.js
+- D:\xampp\htdocs\goetap\official-v2\strapi-backend\node_modules\@strapi\plugin-upload\server\services\index.js
+- D:\xampp\htdocs\goetap\official-v2\strapi-backend\node_modules\@strapi\plugin-upload\server\index.js
+- D:\xampp\htdocs\goetap\official-v2\strapi-backend\node_modules\@strapi\plugin-upload\strapi-server.js
+- D:\xampp\htdocs\goetap\official-v2\strapi-backend\node_modules\@strapi\utils\dist\index.js
+- D:\xampp\htdocs\goetap\official-v2\strapi-backend\node_modules\@strapi\strapi\dist\commands\actions\admin\create-user\action.js
+- D:\xampp\htdocs\goetap\official-v2\strapi-backend\node_modules\@strapi\strapi\dist\commands\actions\admin\create-user\command.js
+- D:\xampp\htdocs\goetap\official-v2\strapi-backend\node_modules\@strapi\strapi\dist\commands\index.js
+- D:\xampp\htdocs\goetap\official-v2\strapi-backend\node_modules\@strapi\strapi\dist\cli.js
+- D:\xampp\htdocs\goetap\official-v2\strapi-backend\node_modules\@strapi\strapi\bin\strapi.js
+
+Possible solutions:
+- Install with verbose logging and look for errors: "npm install --ignore-scripts=false --foreground-scripts --verbose sharp"
+- Install for the current win32-x64 runtime: "npm install --platform=win32 --arch=x64 sharp"
+- Consult the installation documentation: https://sharp.pixelplumbing.com/install
+Error: Could not load js config file D:\xampp\htdocs\goetap\official-v2\strapi-backend\node_modules\@strapi\plugin-upload\strapi-server.js: 
+Something went wrong installing the "sharp" module
+
+Cannot find module '../build/Release/sharp-win32-x64.node'
+Require stack:
+- D:\xampp\htdocs\goetap\official-v2\strapi-backend\node_modules\sharp\lib\sharp.js
+- D:\xampp\htdocs\goetap\official-v2\strapi-backend\node_modules\sharp\lib\constructor.js
+- D:\xampp\htdocs\goetap\official-v2\strapi-backend\node_modules\sharp\lib\index.js
+- D:\xampp\htdocs\goetap\official-v2\strapi-backend\node_modules\@strapi\plugin-upload\server\services\image-manipulation.js
+- D:\xampp\htdocs\goetap\official-v2\strapi-backend\node_modules\@strapi\plugin-upload\server\services\index.js
+- D:\xampp\htdocs\goetap\official-v2\strapi-backend\node_modules\@strapi\plugin-upload\server\index.js
+- D:\xampp\htdocs\goetap\official-v2\strapi-backend\node_modules\@strapi\plugin-upload\strapi-server.js
+- D:\xampp\htdocs\goetap\official-v2\strapi-backend\node_modules\@strapi\utils\dist\index.js
+- D:\xampp\htdocs\goetap\official-v2\strapi-backend\node_modules\@strapi\strapi\dist\commands\actions\admin\create-user\action.js
+- D:\xampp\htdocs\goetap\official-v2\strapi-backend\node_modules\@strapi\strapi\dist\commands\actions\admin\create-user\command.js
+- D:\xampp\htdocs\goetap\official-v2\strapi-backend\node_modules\@strapi\strapi\dist\commands\index.js
+- D:\xampp\htdocs\goetap\official-v2\strapi-backend\node_modules\@strapi\strapi\dist\cli.js
+- D:\xampp\htdocs\goetap\official-v2\strapi-backend\node_modules\@strapi\strapi\bin\strapi.js
+
+Possible solutions:
+- Install with verbose logging and look for errors: "npm install --ignore-scripts=false --foreground-scripts --verbose sharp"
+- Install for the current win32-x64 runtime: "npm install --platform=win32 --arch=x64 sharp"
+- Consult the installation documentation: https://sharp.pixelplumbing.com/install
+    at loadJsFile (D:\xampp\htdocs\goetap\official-v2\strapi-backend\node_modules\@strapi\strapi\dist\core\app-configuration\load-config-file.js:18:13)
+    at Module.loadFile (D:\xampp\htdocs\goetap\official-v2\strapi-backend\node_modules\@strapi\strapi\dist\core\app-configuration\load-config-file.js:37:14)
+    at Object.loadPlugins (D:\xampp\htdocs\goetap\official-v2\strapi-backend\node_modules\@strapi\strapi\dist\core\loaders\plugins\index.js:90:41)
+    at async Strapi.loadPlugins (D:\xampp\htdocs\goetap\official-v2\strapi-backend\node_modules\@strapi\strapi\dist\Strapi.js:311:5)
+    at async Promise.all (index 3)
+    at async Strapi.register (D:\xampp\htdocs\goetap\official-v2\strapi-backend\node_modules\@strapi\strapi\dist\Strapi.js:341:5)
+    at async Strapi.load (D:\xampp\htdocs\goetap\official-v2\strapi-backend\node_modules\@strapi\strapi\dist\Strapi.js:425:5)
+    at async Strapi.start (D:\xampp\htdocs\goetap\official-v2\strapi-backend\node_modules\@strapi\strapi\dist\Strapi.js:216:9)

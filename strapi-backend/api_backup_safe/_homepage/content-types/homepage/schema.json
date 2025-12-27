@@ -1,0 +1,76 @@
+{
+  "kind": "singleType",
+  "collectionName": "homepages",
+  "info": {
+    "singularName": "homepage",
+    "pluralName": "homepages",
+    "displayName": "Homepage",
+    "description": "Content for the homepage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero_badge": {
+      "type": "string",
+      "default": "✨ Timbratura Geolocalizzata per PMI"
+    },
+    "hero_title": {
+      "type": "string",
+      "required": true,
+      "default": "Tracciamento Presenze che Funziona Davvero"
+    },
+    "hero_subtitle": {
+      "type": "text",
+      "required": true,
+      "default": "GeoTapp nasce dalla frustrazione di chi lavora sul campo. Niente complicazioni, solo semplicità. Due tap: entrata e uscita. Il resto è automatico."
+    },
+    "hero_cta_primary_text": {
+      "type": "string",
+      "default": "Inizia Subito (Gratis per 14 giorni)"
+    },
+    "hero_cta_primary_link": {
+      "type": "string",
+      "default": "/pricing"
+    },
+    "hero_cta_secondary_text": {
+      "type": "string",
+      "default": "Scopri di Più"
+    },
+    "hero_cta_secondary_link": {
+      "type": "string",
+      "default": "#features"
+    },
+    "features_title": {
+      "type": "string",
+      "default": "Tre Pilastri"
+    },
+    "features_subtitle": {
+      "type": "string",
+      "default": "Tutto quello di cui hai bisogno in tre principi semplici"
+    },
+    "features": {
+      "type": "component",
+      "repeatable": true,
+      "component": "sections.feature",
+      "required": true
+    },
+    "cta_title": {
+      "type": "string",
+      "default": "Pronto a Migliorare il Tracciamento?"
+    },
+    "cta_subtitle": {
+      "type": "text",
+      "default": "Prova GeoTapp gratuitamente per 14 giorni. Nessuna carta di credito richiesta."
+    },
+    "cta_button_text": {
+      "type": "string",
+      "default": "Inizia la Prova Gratuita"
+    },
+    "cta_button_link": {
+      "type": "string",
+      "default": "/pricing"
+    }
+  }
+}

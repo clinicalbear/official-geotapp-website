@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_sections_features",
+  "info": {
+    "displayName": "Feature",
+    "icon": "star",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

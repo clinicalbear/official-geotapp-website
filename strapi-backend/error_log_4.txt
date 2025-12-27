@@ -1,0 +1,13 @@
+[2025-12-08 02:21:14.065] [34mdebug[39m: Ôøö´©Å Server wasn't able to start properly.
+[2025-12-08 02:21:14.067] [31merror[39m: Cannot read properties of undefined (reading 'kind')
+TypeError: Cannot read properties of undefined (reading 'kind')
+    at Module.isSingleType (D:\xampp\htdocs\goetap\official-v2\strapi-backend\node_modules\@strapi\utils\dist\index.js:771:25)
+    at Module.createRoutes (D:\xampp\htdocs\goetap\official-v2\strapi-backend\node_modules\@strapi\strapi\dist\core-api\routes\index.js:5:32)
+    at get routes [as routes] (D:\xampp\htdocs\goetap\official-v2\strapi-backend\node_modules\@strapi\strapi\dist\factories.js:63:39)
+    at D:\xampp\htdocs\goetap\official-v2\strapi-backend\node_modules\@strapi\strapi\dist\services\server\register-routes.js:67:14
+    at D:\xampp\htdocs\goetap\official-v2\strapi-backend\node_modules\lodash\lodash.js:4967:15
+    at baseForOwn (D:\xampp\htdocs\goetap\official-v2\strapi-backend\node_modules\lodash\lodash.js:3032:24)
+    at D:\xampp\htdocs\goetap\official-v2\strapi-backend\node_modules\lodash\lodash.js:4936:18
+    at Function.forEach (D:\xampp\htdocs\goetap\official-v2\strapi-backend\node_modules\lodash\lodash.js:9410:14)
+    at registerAPIRoutes (D:\xampp\htdocs\goetap\official-v2\strapi-backend\node_modules\@strapi\strapi\dist\services\server\register-routes.js:65:24)
+    at registerAllRoutes (D:\xampp\htdocs\goetap\official-v2\strapi-backend\node_modules\@strapi\strapi\dist\services\server\register-routes.js:19:3)

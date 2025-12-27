@@ -1,0 +1,566 @@
+{
+    "navbar": {
+        "products": "Prodotti",
+        "pricing": "Prezzi",
+        "blog": "Blog",
+        "contact": "Contattaci",
+        "cta": "Inizia Ora"
+    },
+    "footer": {
+        "tagline": "Empowering Business with AI Automation.",
+        "privacy": "Privacy Policy",
+        "terms": "Termini di Servizio",
+        "rights": "Tutti i diritti riservati."
+    },
+    "landing": {
+        "hero_badge": "Nuova Release 2.0",
+        "hero_title": "Il Tuo Business,<br />Guidato dall'Intelligenza.",
+        "hero_subtitle": "GeoTapp unifica gestione forza lavoro, ottimizzazione processi e SEO in un'unica suite potenziata dall'IA.",
+        "hero_cta_primary": "Inizia Ora",
+        "hero_cta_secondary": "Scopri i Prodotti",
+        "features_title": "Tutto ciò di cui hai bisogno",
+        "features_subtitle": "Una suite completa di strumenti per far crescere la tua azienda.",
+        "cta_title": "Pronto a scalare?",
+        "cta_subtitle": "Unisciti a centinaia di aziende che usano GeoTapp oggi.",
+        "cta_button": "Richiedi Demo"
+    },
+    "home_sections": {
+        "flow": {
+            "badge": "GeoTapp FLOW",
+            "title": "Fattura Mentre Sei Ancora dal Cliente.",
+            "subtitle": "Esempio reale: Un nostro cliente idraulico perdeva circa €400 al mese in piccoli interventi non segnati. Con Flow, converte il rapportino in fattura con un click. <strong class=\"text-slate-900\">Risultato: +€4.800/anno di utile netto.</strong>",
+            "features": {
+                "crm": "<strong>CRM Sincronizzato:</strong> Se aggiorni un contatto, si aggiorna ovunque.",
+                "pipeline": "<strong>Pipeline Visiva:</strong> Sposta le card da \"Da Fare\" a \"Pagato\". Soddisfacente."
+            },
+            "link": "Scopri i dettagli"
+        },
+        "app": {
+            "badge": "GeoTapp App",
+            "title": "La Tua Squadra in Tasca.",
+            "subtitle": "Basta dubbi sulla presenza in cantiere. L'App certifica la posizione <strong>solo</strong> al momento della timbratura (Start/Stop). Pieno rispetto della Privacy, zero contestazioni.",
+            "card_gps": {
+                "title": "Check-in GPS",
+                "desc": "Validazione Puntuale"
+            },
+            "card_gdpr": {
+                "title": "GDPR Safe",
+                "desc": "No Tracking Continuo"
+            },
+            "link": "Vedi la Demo"
+        },
+        "zenith": {
+            "badge": "Zenith SEO",
+            "title": "Non Scrivere per i Robot. Scrivi per Vincere.",
+            "subtitle": "Tutti sanno usare le keyword. Pochi sanno usare l'Intento Semantico. Zenith analizza i primi 10 risultati su Google, capisce cosa manca al tuo articolo e ti dice esattamente come colmare il gap.",
+            "roi": "ROI Medio: +40% Traffico",
+            "setup": "Setup: 2 Minuti",
+            "link": "Analizza il tuo sito"
+        },
+        "superwp": {
+            "badge": "Super WP",
+            "title": "800ms. O sei fuori.",
+            "subtitle": "Amazon ha calcolato che 100ms di ritardo costano l'1% delle vendite. Quanto ti sta costando il tuo sito lento? Super WP non mette solo una cache. Riscrive il modo in cui il server consegna le pagine.",
+            "speed_label": "Risultato medio dopo l'installazione",
+            "link": "Ottimizza ora"
+        },
+        "core": {
+            "badge": "GeoTapp Core",
+            "title": "Potenza Sotto il Cofano.",
+            "subtitle": "Non costruiamo giocattoli. GeoTapp è una piattaforma enterprise concepita per scalare verticalmente. Ecco le tecnologie che rendono possibile la magia, spiegate senza filtri.",
+            "features": [
+                {
+                    "title": "Offline-First Engine (CRDT)",
+                    "desc": "La connessione cade, il lavoro no. Abbiamo integrato un database <strong>SQLite criptato</strong> direttamente dentro l'App. Usiamo algoritmi CRDT per la sincronizzazione."
+                },
+                {
+                    "title": "Zero-Knowledge Encryption",
+                    "desc": "La privacy non è una checkbox legale, è matematica. Utilizziamo crittografia <strong>AES-256</strong> per i dati a riposo e <strong>TLS 1.3</strong> per i dati in transito."
+                },
+                {
+                    "title": "Real-Time WebSocket",
+                    "desc": "Basta premere F5. Grazie ai WebSocket bidirezionali, le informazioni viaggiano istantaneamente. Se un tecnico chiude un ticket a Roma, il manager a Milano vede il pallino diventare verde."
+                },
+                {
+                    "title": "Scalable Data Lake",
+                    "desc": "Da 100 a 100 milioni di record senza battere ciglio. Utilizziamo <strong>PostgreSQL partizionato</strong> per gestire volumi di dati massicci."
+                }
+            ]
+        },
+        "footer_cta": {
+            "title": "Smetti di giocare.<br />Inizia a fatturare.",
+            "subtitle": "Migliaia di professionisti usano GeoTapp ogni giorno. Unisciti a chi ha deciso di riprendersi il proprio tempo.",
+            "button": "Parla con noi"
+        }
+    },
+    "pricing": {
+        "badge": "Catalogo Completo",
+        "title": "Scegli il Tuo Arsenale.",
+        "subtitle": "Soluzioni flessibili per ogni fase della tua crescita.",
+        "vat_note": "Tutti i prezzi sono IVA esclusa. Fatturazione secondo termini di servizio.",
+        "categories": {
+            "app": {
+                "title": "GeoTapp APP",
+                "description": "Gestione Forza Lavoro in Mobilità",
+                "products": [
+                    {
+                        "name": "GeoTapp APP",
+                        "tagline": "A partire da",
+                        "desc": "La soluzione completa per tracciare presenze, lavori e spese. Prezzo per utente/anno.",
+                        "features": [
+                            "App Android/iOS",
+                            "Timbratura GPS",
+                            "Report Excel"
+                        ],
+                        "button": "Vedi Calcolatore"
+                    }
+                ]
+            },
+            "flow": {
+                "title": "GeoTapp FLOW",
+                "description": "Automazione e Gestione Processi",
+                "products": [
+                    {
+                        "name": "GeoTapp FLOW Lifetime",
+                        "tagline": "Licenza a Vita",
+                        "desc": "Paga una volta, usa per sempre. Accesso completo a GeoTapp Flow senza abbonamenti ricorrenti. Include aggiornamenti futuri.",
+                        "features": [
+                            "Accesso Completo a Flow",
+                            "Nessun canone mensile",
+                            "Aggiornamenti a vita inclusi"
+                        ]
+                    },
+                    {
+                        "name": "GeoTapp FLOW Business",
+                        "tagline": "Per Aziende Strutturate",
+                        "desc": "Gestione avanzata dei flussi di lavoro, automazioni illimitate e supporto prioritario.",
+                        "features": [
+                            "Automazioni Illimitate",
+                            "API Access",
+                            "Supporto Prioritario"
+                        ]
+                    },
+                    {
+                        "name": "GeoTapp FLOW Team",
+                        "tagline": "Per Piccoli Team",
+                        "desc": "Ideale per gruppi di lavoro che necessitano di coordinamento e processi condivisi.",
+                        "features": [
+                            "5 Utenti Inclusi",
+                            "Processi Standard",
+                            "Integrazioni Base"
+                        ]
+                    },
+                    {
+                        "name": "GeoTapp FLOW Solo",
+                        "tagline": "Per Freelance",
+                        "desc": "Tutta la potenza di Flow per il singolo professionista.",
+                        "features": [
+                            "1 Utente",
+                            "Gestione Task",
+                            "Automazione Base"
+                        ]
+                    }
+                ]
+            },
+            "superwp": {
+                "title": "Super WP Commander",
+                "description": "Ottimizzazione e Gestione WordPress IA",
+                "products": [
+                    {
+                        "name": "Super WP Commander AI (Yearly)",
+                        "tagline": "Full AI Suite",
+                        "desc": "Il massimo controllo con l'assistente IA J.A.R.V.I.S. integrato per gestione e ottimizzazione automatica.",
+                        "features": [
+                            "J.A.R.V.I.S. AI Full",
+                            "Ottimizzazione Auto",
+                            "Sicurezza Avanzata"
+                        ]
+                    },
+                    {
+                        "name": "Super WP Commander (Yearly)",
+                        "tagline": "Gestione Manuale",
+                        "desc": "Tutti gli strumenti di Commander senza l'assistente IA.",
+                        "features": [
+                            "Gestione Plugin",
+                            "Backup Cloud",
+                            "Monitoraggio Uptime"
+                        ]
+                    },
+                    {
+                        "name": "Super WP Hero AI (Yearly)",
+                        "tagline": "Ottimizzazione Smart",
+                        "desc": "Performance al top con l'aiuto dell'Intelligenza Artificiale per siti veloci.",
+                        "features": [
+                            "AI Caching",
+                            "Image Optimizer",
+                            "Database Clean"
+                        ]
+                    },
+                    {
+                        "name": "Super WP Soldier (Yearly)",
+                        "tagline": "Essenziale",
+                        "desc": "Le basi per mantenere il tuo sito WordPress sicuro e veloce.",
+                        "features": [
+                            "Caching Base",
+                            "Security Check",
+                            "Aggiornamenti Auto"
+                        ]
+                    }
+                ]
+            },
+            "zenith": {
+                "title": "Zenith SEO",
+                "description": "Dominio dei Motori di Ricerca con IA",
+                "products": [
+                    {
+                        "name": "Zenith SEO Agency AI (Yearly)",
+                        "tagline": "Potenza Agenzia",
+                        "desc": "Strumenti IA avanzati per gestire clienti multipli e dominare le SERP.",
+                        "features": [
+                            "Multi-Site",
+                            "White Label Reports",
+                            "AI Content Gen Illimitato"
+                        ]
+                    },
+                    {
+                        "name": "Zenith SEO Agency (Yearly)",
+                        "tagline": "Agenzia Standard",
+                        "desc": "Gestione clienti e reporting avanzato senza generazione contenuti IA.",
+                        "features": [
+                            "Multi-Site",
+                            "Reporting Avanzato",
+                            "Keyword Tracking"
+                        ]
+                    },
+                    {
+                        "name": "Zenith SEO AI Pro (Yearly)",
+                        "tagline": "Per Pro",
+                        "desc": "L'equilibrio perfetto tra potenza IA e costo per il professionista SEO.",
+                        "features": [
+                            "Analisi Competitor",
+                            "AI Suggestions",
+                            "Rank Tracking"
+                        ]
+                    },
+                    {
+                        "name": "Zenith SEO Starter (Yearly)",
+                        "tagline": "Per Iniziare",
+                        "desc": "Tutto ciò che serve per ottimizzare il tuo primo sito web.",
+                        "features": [
+                            "1 Sito",
+                            "Analisi Base",
+                            "Suggerimenti On-Page"
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "contact": {
+        "title": "Parliamo di <span class=\"text-primary\">Business</span>.",
+        "subtitle": "Non hai bisogno di un altro ticket aperto nel nulla. Hai bisogno di risposte.",
+        "guarantee_title": "Garanzia di Risposta",
+        "guarantee_text": "I nostri clienti Enterprise hanno un tempo di prima risposta medio di 12 minuti.",
+        "form": {
+            "name": "Nome",
+            "company": "Azienda",
+            "email": "Email Lavorativa",
+            "reason": "Motivo del Contatto",
+            "message": "Messaggio",
+            "send": "Invia"
+        }
+    },
+    "product_pages": {
+        "flow": {
+            "hero_badge": "FLOW MAINFRAME v2.0 READY",
+            "hero_title": "GeoTapp Flow.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600\">Sistema Operativo.</span>",
+            "hero_subtitle": "Non usiamo fogli Excel. Non usiamo post-it. GeoTapp Flow è l'architettura fluida che connette ogni aspetto della tua azienda, dal primo lead all'ultima fattura.",
+            "visual_placeholder": "COMMAND CENTER",
+            "grid_title": "Architettura Modulare",
+            "grid_subtitle": "Ogni modulo è un sistema indipendente ma interconnesso. Clicca per accedere ai codici sorgente.",
+            "sectors": {
+                "1": "Sector 1: Revenue Engine",
+                "2": "Sector 2: Supply & Operations",
+                "3": "Sector 3: Control & Expansion"
+            },
+            "cta_title": "Prendi il Controllo Totale.",
+            "cta_button": "Acquista Licenza Flow",
+            "modal": {
+                "status": "SYSTEM STATUS: <span class=\"text-green-600\">OPERATIONAL</span>",
+                "encryption": "ENCRYPTION: <span class=\"text-slate-400\">AES-256</span>",
+                "access": "ACCESS LEVEL: <span class=\"text-blue-600\">COMMANDER</span>",
+                "close": "Chiudi Sessione"
+            },
+            "systems": {
+                "nexus-core": {
+                    "name": "Nexus CRM",
+                    "short": "Pipeline di Vendita Sovrana. Gestisci Lead, Opportunità e Trattative per chiudere contratti alla velocità della luce.",
+                    "full": "### La Tua Macchina da Guerra Commerciale.<br/><br/>Vendere non è fortuna. È ingegneria.<br/>**Nexus Core** struttura il tuo caos commerciale in una pipeline militare.<br/><br/>#### Pipeline Management<br/><br/>Visualizza ogni trattativa. Sai esattamente dove si bloccano i soldi.<br/>- Lead (Contatto Freddo)<br/>- Meeting (In Negoziazione)<br/>- Proposal (Preventivo Inviato)<br/>- Won (Soldi in Banca)<br/><br/>#### Intelligenza Predittiva<br/><br/>Nexus non ti dice solo \"chi\" chiamare, ma \"quando\".<br/>Traccia le aperture delle e-mail.<br/>Se un Lead apre il tuo preventivo 5 volte in un'ora, Nexus ti avvisa: \"CHIAMA ORA\".<br/>Trasforma i venditori in cecchini."
+                },
+                "titan-flow": {
+                    "name": "Titan Flow",
+                    "short": "Il Cliente firma, il sistema lavora. Generazione automatica di portali clienti, richiesta documenti e task di benvenuto.",
+                    "full": "### L'Inizio Perfetto. Senza Sforzo.<br/><br/>Hai chiuso il contratto. Ottimo. Ora inizia l'incubo burocratico: \"Mandami il logo\", \"Compila il form\", \"Dov'è il contratto firmato?\".<br/>**Titan Flow** automatizza la burocrazia.<br/><br/>#### Zero-Touch Onboarding<br/><br/>Appena lo stato passa a \"Deals Won\", Titan si sveglia.<br/>1. Invia una mail di benvenuto al cliente.<br/>2. Genera un **Portale Cliente** sicuro.<br/>3. Assegna task al cliente: \"Carica Visura\", \"Firma NDA\", \"Carica Brand Assets\".<br/><br/>#### Il \"Cane da Guardia\" Gentile<br/><br/>Il cliente non carica i file? Tu non devi fare nulla.<br/>Titan gli manda solleciti automatici (e gentili) ogni 48 ore.<br/>Tu ricevi una notifica solo quando tutto è pronto per lavorare.<br/>Parti con il progetto solo quando hai tutti i pezzi. Mai più ritardi per colpa dei \"materiali mancanti\"."
+                },
+                "ledger-prime": {
+                    "name": "Ledger Prime",
+                    "short": "Il Denaro non dorme mai. Generazione automatica di fatture, incassi via Stripe e riconciliazione bancaria in tempo reale.",
+                    "full": "### Il Tuo CFO Digitale che Lavora 24/7.<br/><br/>La contabilità è noiosa. È pericolosa (se sbagli). Ed è lenta.<br/>**Ledger Prime** è la fine della contabilità manuale.<br/><br/>#### Quote-to-Cash (La Velocità del Soldo)<br/><br/>Il ciclo è chiuso e blindato.<br/>1. Crei un Preventivo (Quote) in 30 secondi selezionando prodotti dal listino.<br/>2. Il cliente riceve un link sicuro. Firma digitalmente dal telefono.<br/>3. **BAM**. Ledger Prime converte istantaneamente il Preventivo in una Fattura Pro-forma o Definitiva.<br/>4. Se hai Stripe collegato, il cliente paga con carta di credito nello stesso istante.<br/><br/>I soldi arrivano sul conto mentre tu stai ancora stringendo la mano."
+                },
+                "quantum-logistics": {
+                    "name": "Quantum Logistics",
+                    "short": "Ogni atomo tracciato. Gestione Magazzino multi-sede con tracciamento movimenti e riordino predittivo.",
+                    "full": "### L'Onniscienza del Magazzino.<br/><br/>\"Non so se ce l'ho in casa\". Questa frase costa miliardi alle aziende ogni anno.<br/>Con **Quantum Logistics**, tu sai. Sempre.<br/><br/>#### Live Stock Tracking<br/><br/>Ogni prodotto ha un'anima digitale.<br/>Quando crei una fattura di vendita, il magazzino scala automaticamente.<br/>Gestisci movimenti manuali, scarti, resi e trasferimenti tra sedi diverse.<br/><br/>#### Riordino Predittivo (The Oracle)<br/><br/>Quantum non si limita a contare. Prevede.<br/>Imposta una \"Scorta Minima\" (Min Stock Level).<br/>Quando scendi sotto la soglia, il sistema ti avvisa e prepara già l'ordine al fornitore.<br/>Mai più vendite perse per \"prodotto non disponibile\"."
+                },
+                "supply-command": {
+                    "name": "Supply Command",
+                    "short": "Controllo Fornitori Totale. Genera Ordini di Acquisto, traccia le consegne e gestisce i costi in ingresso.",
+                    "full": "### Tu Compri. Tu Comandi.<br/><br/>Per vendere devi comprare. Ma gli acquisti sono spesso caotici: email perse, prezzi sbagliati, consegne in ritardo.<br/>**Supply Command** mette il guinzaglio ai tuoi fornitori.<br/><br/>#### Purchase Orders (L'Ordine Perfetto)<br/><br/>Crea Ordini di Acquisto (PO) professionali in pochi clic.<br/>Inviali via mail direttamente dal sistema.<br/>Quando la merce arriva, la trasformi in un \"Carico di Magazzino\" con un tasto.<br/>Niente più \"Ho ordinato 10, ne sono arrivati 9\". Il sistema traccia le discrepanze.<br/><br/>#### Supplier Intelligence<br/><br/>Chi è il fornitore più puntuale? Chi ti ha alzato i prezzi di nascosto?<br/>Supply Command storicizza ogni transazione e ti dà il potere negoziale sui costi."
+                },
+                "the-architect": {
+                    "name": "The Architect",
+                    "short": "Il tempo è la risorsa più scarsa. Gestisci Progetti, Task e Time Tracking per sapere esattamente quanto ti costa ogni lavoro.",
+                    "full": "### Costruisci Cattedrali, Non Castelli di Sabbia.<br/><br/>Gestire progetti complessi via email o WhatsApp è suicidio professionale.<br/>**The Architect** porta ordine nel caos creativo.<br/><br/>#### Struttura Frattale<br/><br/>Ogni Cliente ha dei Progetti. Ogni Progetto ha dei Task. Ogni Task ha delle Scadenze.<br/>Tutto è nidificato. Tutto è visibile.<br/>Assegna compiti al team con un click. Definisci le priorità (Urgent, High, Low).<br/>Visualizza l'avanzamento su diagrammi di Gantt o Board Kanban.<br/><br/>#### Profitability X-Ray (Raggi X della Redditività)<br/><br/>Questa è la funzione che le agenzie temono e amano.<br/>I tuoi dipendenti tracciano il tempo (Time Logs) sui task.<br/>Tu hai impostato un costo orario per dipendente e un prezzo di vendita per il cliente.<br/>The Architect calcola in tempo reale il **Margine Reale** del progetto.<br/>Stai lavorando in perdita? Lo saprai *mentre* accade."
+                },
+                "the-auditor": {
+                    "name": "The Auditor",
+                    "short": "La fine dei foglietti smarriti. I dipendenti fotografano gli scontrini, l'AI li digitalizza e li assegna ai progetti.",
+                    "full": "### Zero Carta. Zero Frodi.<br/><br/>Le note spese sono l'incubo di ogni amministrazione. Scontrini sbiaditi, persi, o peggio, \"creativi\".<br/>**The Auditor** è il revisore contabile spietato che vive nel cloud.<br/><br/>#### Snap & Forget<br/><br/>Il tuo tecnico invita un cliente a pranzo.<br/>1. Paga.<br/>2. Apre l'app GeoTapp.<br/>3. Fotografa lo scontrino.<br/>Finito. Può buttare la carta.<br/><br/>#### Project Allocation<br/><br/>Il sistema chiede: \"Per quale Progetto?\".<br/>Il tecnico seleziona \"Cliente X\".<br/>La spesa viene immediatamente caricata sui costi di quel progetto (abbattendo il margine in tempo reale su The Architect).<br/>A fine mese, l'amministrazione ha un report PDF perfetto."
+                },
+                "the-uplink": {
+                    "name": "The Uplink",
+                    "short": "L'ufficio è ovunque. App mobile nativa per i tecnici sul campo: foto, firme, rapportini e note spese in tempo reale.",
+                    "full": "### La Realtà è Fuori dall'Ufficio.<br/><br/>Le aziende vere hanno persone sul campo. Tecnici, venditori, installatori.<br/>Se devono aspettare di tornare in ufficio per inserire i dati, hai perso mezza giornata di produttività.<br/>**The Uplink** è l'estensione neurale del sistema nel mondo fisico.<br/><br/>#### Native Power (Flutter Engine)<br/><br/>Non è un \"sito responsive\". È un'app mobile potente, veloce, che usa la fotocamera, il GPS e le notifiche push.<br/>Un tecnico finisce l'intervento:<br/>1. Apre l'app.<br/>2. Scatta foto del lavoro finito.<br/>3. Registra le ore (Time Log).<br/>4. Fa firmare il cliente col dito sullo schermo.<br/>5. Invia.<br/><br/>#### Sync Istantaneo<br/><br/>Nello stesso secondo, in ufficio, The Architect riceve il time log. Ledger Prime prepara la fattura.<br/>Il ciclo è istantaneo."
+                },
+                "the-oracle": {
+                    "name": "The Oracle",
+                    "short": "Guardare il passato per predire il futuro. Dashboard analitiche in tempo reale per Cash Flow, Churn Rate e Performance.",
+                    "full": "### Dati, Non Opinioni.<br/><br/>\"Penso che stiamo andando bene\". \"Mi sembra che le vendite salgano\".<br/>Queste frasi sono proibite.<br/>**The Oracle** non ha opinioni. Ha grafici.<br/><br/>#### La Dashboard Esecutiva<br/><br/>Appena fai login, vedi la verità nuda e cruda:<br/>1. **MRR (Monthly Recurring Revenue)**: Quanto fatturi automaticamente ogni mese.<br/>2. **Churn Rate**: Quanti clienti stai perdendo.<br/>3. **Cash Flow Forecast**: Quanti soldi avrai in banca tra 30 giorni basandosi sulle scadenze delle fatture.<br/><br/>Nessun foglio Excel da aggiornare. I dati sgorgano vivi dalle operazioni quotidiane.<br/>Guida la tua azienda guardando il cruscotto, non lo specchietto retrovisore."
+                }
+            }
+        },
+        "app": {
+            "hero_badge": "MOBILE LINK ESTABLISHED",
+            "hero_title": "GeoTapp App.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600\">L'Ufficio in Tasca.</span>",
+            "hero_subtitle": "Dai ai tuoi tecnici superpoteri. Rapportini, foto, firme e note spese direttamente dal cantiere. Sincronizzazione istantanea con il quartier generale.",
+            "visual_placeholder": "FIELD INTERFACE WIDGET",
+            "grid_title": "Toolkit da Cantiere",
+            "grid_subtitle": "Ogni strumento è progettato per chi lavora con le mani e non ha tempo da perdere.",
+            "sectors": {
+                "1": "Sector 1: Core Operations",
+                "2": "Sector 2: Logistics & Comms",
+                "3": "Sector 3: Data & Identity"
+            },
+            "cta_title": "Potenzia i tuoi Collaboratori Fuori Sede.",
+            "cta_button": "Acquista GeoTapp App",
+            "modal": {
+                "status": "SYSTEM STATUS: <span class=\"text-green-600\">OPERATIONAL</span>",
+                "encryption": "ENCRYPTION: <span class=\"text-slate-400\">AES-256</span>",
+                "device": "DEVICE: <span class=\"text-blue-600\">MOBILE / TABLET</span>",
+                "close": "Chiudi Sessione"
+            },
+            "systems": {
+                "timelock-alpha": {
+                    "name": "Timelock Alpha",
+                    "short": "Timbrature smart geolocalizzate. Start/Stop su commessa precisi al secondo con verifica GPS.",
+                    "full": "### Il Tempo è Denaro. Proteggilo.<br/><br/>Basta fogli ore cartacei imprecisi. **Timelock Alpha** è il sistema definitivo per il tracciamento del lavoro su commessa.<br/><br/>#### Smart Geofencing<br/>Il sistema permette l'inizio attività solo se il tecnico è effettivamente dal cliente. Niente più \"Sono arrivato\" dal bar.<br/><br/>#### Session History<br/>Ogni sessione è un record immutabile: Orario Inizio, Orario Fine, Posizione GPS, Durata. Tutto assegnato alla commessa specifica."
+                },
+                "event-horizon": {
+                    "name": "Event Horizon",
+                    "short": "Pianificazione turni e interventi. Visualizzazione mensile e settimanale con gestione disponibilità.",
+                    "full": "### Sincronizzazione Totale.<br/><br/>Gestire il personale in movimento richiede precisione. **Event Horizon** offre una visione chiara di chi fa cosa, e quando.<br/><br/>#### Meeting Points<br/>Definisci punti di ritrovo e orari di partenza. L'app notifica alla squadra dove farsi trovare.<br/><br/>#### Disponibilità Live<br/>I dipendenti confermano la presenza o segnalano ferie direttamente dall'app. Il manager vede i buchi nella griglia prima che diventino problemi."
+                },
+                "unit-matrix": {
+                    "name": "Unit Matrix",
+                    "short": "Anagrafica digitale completa. Gestione ruoli, certificazioni e inviti rapidi via WhatsApp.",
+                    "full": "### Conosci la Tua Squadra.<br/><br/>Ogni operatore è un nodo della rete. **Unit Matrix** centralizza tutte le informazioni vitali.<br/><br/>#### Gestione Certificazioni<br/>Visualizza a colpo d'occhio chi ha il patentino aggiornato o l'abilitazione alla sicurezza necessaria per entrare in cantiere.<br/><br/>#### Onboarding Rapido<br/>Devi aggiungere un nuovo tecnico? Invia un link magico via WhatsApp. In 30 secondi è operativo."
+                },
+                "sector-grid": {
+                    "name": "Sector Grid",
+                    "short": "Mappatura sedi e cantieri. Assegna le squadre alle zone operative corrette.",
+                    "full": "### Domina il Territorio.<br/><br/>Non lasciare le squadre allo sbaraglio. **Sector Grid** definisce i confini operativi.<br/><br/>#### Sedi & Cantieri<br/>Crea un database dei tuoi clienti e cantieri. Il sistema sa se un operatore sta lavorando nel posto giusto.<br/><br/>#### Gruppi di Lavoro<br/>Organizza i tecnici in squadre (Alpha, Bravo, Charlie). Assegna compiti al gruppo, non al singolo. Massima efficienza."
+                },
+                "energy-logistics": {
+                    "name": "Energy Logistics",
+                    "short": "Controllo spese carburante e rimborsi km. Gestione smart delle auto in uso al personale.",
+                    "full": "### Spese Sotto Controllo.<br/><br/>Le spese di trasferta sono una voce critica. **Energy Logistics** monitora ogni centesimo.<br/><br/>#### Digital Fuel Log<br/>Il dipendente registra rifornimenti e costi direttamente alla pompa. Scatta una foto allo scontrino per l'archivio digitale.<br/><br/>#### Gestione Auto in Uso<br/>Assegna temporaneamente un'auto a un dipendente per la trasferta. Saprai sempre chi la sta usando e per quale commessa."
+                },
+                "neural-link": {
+                    "name": "Neural Link",
+                    "short": "Bacheca aziendale interna. Invia comunicazioni mirate a singoli gruppi o a tutta l'azienda.",
+                    "full": "### Silenzio Radio? Mai Più.<br/><br/>WhatsApp è caotico e si mischia con la vita privata. **Neural Link** è il canale ufficiale per le comunicazioni operative.<br/><br/>#### Comunicazioni Mirate<br/>Devi avvisare solo la squadra di Roma di un cambio turno? Fallo con un click. Nessun rumore di fondo per gli altri.<br/><br/>#### Read Receipts<br/>Saprai sempre chi ha letto l'avviso e chi no. Responsabilità chiara e trasparente."
+                },
+                "payroll-bridge": {
+                    "name": "Payroll Bridge",
+                    "short": "Collegamento diretto con il consulente del lavoro. Export presenze compatibile Zucchetti/TeamSystem.",
+                    "full": "### Buste Paga Senza Mal di Testa.<br/><br/>La fine del mese non deve essere un incubo. **Payroll Bridge** collega l'operatività all'amministrazione.<br/><br/>#### Export Multi-Formato<br/>Genera file presenze pronti per l'importazione nei software paghe più diffusi (Zucchetti, INAZ, TeamSystem).<br/><br/>#### Accesso Consulente<br/>Dai un accesso limitato al tuo studio paghe. Possono scaricare i dati che servono in autonomia, senza telefonarti."
+                },
+                "data-core": {
+                    "name": "Data Core",
+                    "short": "Report settimanali dettagliati in CSV/Excel. Analisi ore lavorate per commessa.",
+                    "full": "### I Dati Non Mentono.<br/><br/>Prendi decisioni basate sui fatti, non sulle sensazioni. **Data Core** estrae valore dalle operazioni quotidiane.<br/><br/>#### Weekly Reports<br/>Ogni venerdì, un report completo sulla scrivania (digitale). Chi ha lavorato, dove e quanto.<br/><br/>#### Totale Trasparenza<br/>Dipendenti e Titolari scaricano lo stesso report mensile. Le ore contate sono identiche per tutti. Niente più contestazioni a fine mese."
+                },
+                "identity-forge": {
+                    "name": "Identity Forge",
+                    "short": "La TUA app. Carica il tuo logo e scegli il tema colori aziendale per un'esperienza brandizzata.",
+                    "full": "### Il Tuo Brand. La Tua App.<br/><br/>Non usare un'app generica. Fai sentire i tuoi dipendenti parte della TUA azienda.<br/><br/>#### Upload Logo<br/>Il tuo logo troneggia nella schermata di login e nella dashboard.<br/><br/>#### Color Themes<br/>Scegli tra i temi predefiniti (Classic Blue, Emerald, Sunset, Slate, Violet) quello che più si adatta alla tua immagine coordinata."
+                }
+            }
+        },
+        "superwp": {
+            "hero_title": "Non è un Plugin.<br /><span class=\"text-superwp\">È un'Alleanza.</span>",
+            "hero_subtitle": "Abbiamo preso ispirazione dai più grandi eroi della terra. Ogni modulo di Super WP ha un'identità, un superpotere e una missione: proteggere il tuo sito a ogni costo.",
+            "grid_title": "Theme-Driven Development",
+            "grid_subtitle": "Non abbiamo scritto codice anonimo. Abbiamo assegnato a ogni file una personalità. Quando il server è sotto attacco, non attiviamo il firewall. Ispiriamo lo scudo di <strong>Vibranium</strong>. Clicca sui loro nomi per conoscere la loro storia.",
+            "classes": {
+                "S": "Classe S: Velocità Pura",
+                "A": "Classe A: Difesa Assoluta",
+                "B": "Classe B: Intelligenza",
+                "C": "Classe C: Controllo Realtà"
+            },
+            "cta_title": "Il Tuo Sito ha Bisogno di Eroi.",
+            "cta_button": "Schiera la Squadra",
+            "modal": {
+                "db_header": "S.H.I.E.L.D. DATABASE<br />CLEARANCE: LEVEL 7<br />STATUS: ACTIVE",
+                "close": "Chiudi Fascicolo"
+            },
+            "heroes": {
+                "quicksilver": {
+                    "name": "Quicksilver",
+                    "short": "Genera copie HTML statiche delle tue pagine. Serve i contenuti in meno di 50ms, più veloce di quanto l'occhio umano possa percepire.",
+                    "full": "### Tu Non L'hai Visto. Lui Ha Già Finito.<br/><br/>La velocità non è solo una feature. È sopravvivenza. Nel web moderno, un ritardo di 100ms ti costa l'1% delle conversioni.<br/>**Quicksilver** non \"ottimizza\" il caricamento. Lo elimina.<br/><br/>Quando un utente richiede una pagina, WordPress deve normalmente:<br/>1. Avviare il core PHP.<br/>2. Connettersi al Database MySQL.<br/>3. Eseguire le query.<br/>4. Assemblare il tema.<br/>5. Restituire l'HTML.<br/>Tempo totale: 600ms - 2 secondi. Troppo lento.<br/><br/>#### La Zona a Tempo Zero<br/><br/>Quicksilver intercetta questo processo. Prima che l'utente clicchi, lui ha già generato una copia **HTML Statica** pura della pagina e l'ha salvata nella memoria del server.<br/>Quando arriva la richiesta, Quicksilver serve questo file statico istantaneamente.<br/>Nessun PHP. Nessun Database. Solo pura velocità di trasferimento dati.<br/><br/>**Risultato**: Time To First Byte (TTFB) sotto i 50ms.<br/>Il tuo sito non si \"carica\". Appare. È istantaneo. È come se il tempo si fermasse per tutti tranne che per il tuo server."
+                },
+                "mjolnir": {
+                    "name": "Mjolnir",
+                    "short": "Brandisce il potere della compressione. Schiaccia JPG e PNG trasformandoli in WebP ultraleggeri al momento dell'upload.",
+                    "full": "### Chiunque Sia Degno, Possederà il Potere della Compressione.<br/><br/>Le immagini sono il nemico numero uno delle prestazioni. Pesanti, goffe, lente.<br/>Mjolnir è il martello che le disciplina.<br/>Non chiediamo agli utenti di \"ottimizzare le foto prima di caricarle\". Sappiamo che non lo faranno.<br/>Ci pensa Mjolnir.<br/><br/>#### Il Colpo del Tuono (WebP Conversion)<br/><br/>Appena carichi un'immagine (JPG, PNG) nella Media Library, Mjolnir la colpisce con una scarica di energia.<br/>La converte istantaneamente nel formato **WebP** di nuova generazione.<br/>- Qualità visiva: Identica (Lossless perception).<br/>- Peso file: Ridotto del 40-70%."
+                },
+                "ant-man": {
+                    "name": "Ant-Man",
+                    "short": "Si rimpicciolisce a livello subatomico. Minifica l'HTML rimuovendo ogni spazio bianco superfluo per ridurre il payload.",
+                    "full": "### Piccolo. Potente. Invisibile.<br/><br/>Quanto spazio sprecato c'è nel codice del tuo sito? Spazi vuoti, ritorni a capo, commenti degli sviluppatori (\"// todo: fix this\").<br/>Al browser non servono. All'utente non servono. Sono solo peso morto che viaggia sui cavi.<br/><br/>Ant-Man porta il tuo codice nel **Regno Quantico**.<br/><br/>#### Compressione Subatomica<br/><br/>Ant-Man analizza il codice HTML, CSS e JavaScript in uscita.<br/>Rimuove:<br/>1. Spazi bianchi (Whitespace).<br/>2. Interruzioni di riga (Newlines).<br/>3. Commenti HTML/CSS.<br/><br/>Compatta tutto in una singola, densissima stringa di codice.<br/>Un file da 100KB diventa 85KB."
+                },
+                "vibranium": {
+                    "name": "Vibranium",
+                    "short": "Inietta header di sicurezza militari (X-XSS, Strict-Transport). Respinge gli attacchi XML-RPC come proiettili su uno scudo.",
+                    "full": "### Indistruttibile.<br/><br/>Il tuo sito è sotto attacco. Ora. Mentre leggi. Bot russi, scanner cinesi, script kiddies.<br/>Cercano porte aperte. Cercano header mancanti. Cercano di iniettare codice malevolo.<br/>Vibranium non combatte. **Assorbe**.<br/><br/>#### Header Hardening (Lega Metallica)<br/><br/>Vibranium inietta negli header HTTP del tuo server una lega di direttive di sicurezza impenetrabile:<br/>- **X-XSS-Protection**: Blocca i tentativi di Cross-Site Scripting.<br/>- **X-Frame-Options: SAMEORIGIN**: Impedisce che il tuo sito venga caricato in un iframe (Clickjacking).<br/>- **Strict-Transport-Security (HSTS)**: Forza i browser a usare SOLO HTTPS.<br/>- **Referrer-Policy: strict-origin**: Nasconde i dati dei tuoi utenti quando cliccano su link esterni."
+                },
+                "loki": {
+                    "name": "Loki",
+                    "short": "Il Dio dell'Inganno. Crea campi 'Honeypot' invisibili nei form che attirano e intrappolano i bot prima che possano fare spam.",
+                    "full": "### Non Puoi Combattere Ciò Che È Reale. E Ciò Che Non Lo È.<br/><br/>I firewall tradizionali usano la forza bruta: bloccano gli IP. Ma gli IP cambiano. I bot evolvono.<br/>Loki usa qualcosa di più potente: **l'Inganno**.<br/><br/>#### The Honeypot Trap (Illusione)<br/><br/>In ogni form di contatto e commento del tuo sito, Loki inserisce un campo input nascosto.<br/>- Un utente umano non lo vede mai (è nascosto via CSS/JS).<br/>- Un bot, che legge solo il codice HTML grezzo, lo vede. E, essendo un programma stupido programmato per \"riempire tutto\", lo compila.<br/><br/>Appena quel campo viene compilato, Loki ride.<br/>Il bot crede di aver avuto successo, quindi non riprova. Ma il tuo database rimane pulito."
+                },
+                "hawkeye": {
+                    "name": "Hawkeye",
+                    "short": "Non sbaglia mai un colpo. Individua script inutili (Emoji, Embeds) e li elimina chirurgicamente dal caricamento.",
+                    "full": "### Un Solo Colpo. Niente Sprechi.<br/><br/>WordPress è obeso. Carica decine di script su ogni pagina \"nel caso servano\".<br/>Carica le Emoji (40KB di JS). Carica gli Embed (oEmbed).<br/>Hawkeye odia gli sprechi. Hawkeye ha una mira perfetta.<br/><br/>#### Dequeue Chirurgico<br/><br/>Hawkeye scansiona la coda di caricamento (Enqueues).<br/>Vede lo script delle Emoji? Lo abbatte.<br/>Vede l'oEmbed sula Home? Lo abbatte.<br/>Vede il CSS di Contact Form 7 su una pagina dove non c'è il form? Lo abbatte.<br/><br/>#### Smart Loading<br/><br/>Carica solo ciò che serve alla missione.<br/>Niente frecce sprecate."
+                },
+                "jarvis": {
+                    "name": "J.A.R.V.I.S.",
+                    "short": "Il cervello del sistema. Usa l'AI per ottimizzare i titoli SEO e gestisce l'ordine di caricamento degli script (Defer/Async).",
+                    "full": "### \"Just A Rather Very Intelligent System\".<br/><br/>Non è solo un plugin. È un sistema operativo per il tuo sito.<br/>Jarvis è il maggiordomo invisibile che orchestra tutto. Mentre gli altri moduli combattono o difendono, Jarvis pianifica.<br/><br/>#### Asset Orchestration (Defer & Async)<br/><br/>Il JavaScript blocca il rendering (Render Blocking). Se il browser incontra uno script, ferma tutto finché non lo ha scaricato ed eseguito.<br/>Jarvis riscrive i tag `<script>` al volo.<br/>Applica l'attributo `defer`.<br/>Dice al browser: \"Continua a dipingere la pagina. Scarica questo script in background ed eseguilo solo alla fine\".<br/>L'utente vede il contenuto subito."
+                },
+                "vision": {
+                    "name": "Vision",
+                    "short": "Vede il futuro. Inserisce Resource Hints (DNS Prefetch) per connettersi ai server esterni prima ancora che l'utente clicchi.",
+                    "full": "### Calcolo delle Probabilità: 100%.<br/><br/>Vision non reagisce. Anticipa.<br/>Grazie alla Gemma della Mente, Vision comprende le dipendenze esterne del tuo sito (Google Fonts, Analytics, Facebook Pixel) e stabilisce le connessioni *prima* che siano necessarie.<br/><br/>#### DNS Prefetch & Preconnect<br/><br/>Vision inserisce nell'header della pagina dei tag `<link rel=\"dns-prefetch\">` e `<link rel=\"preconnect\">`.<br/>Dice al browser: \"Ehi, tra poco ci servirà Google Fonts. Inizia a connetterti ADESSO, mentre stai ancora scaricando l'HTML\".<br/>Quando arriva il momento di scaricare il font, il \"tubo\" è già aperto. Il download è istantaneo."
+                },
+                "iron-man": {
+                    "name": "Iron Man",
+                    "short": "L'armatura finale. Attiva il 'Fury Mode' per ritardare l'esecuzione di script pesanti (come GTM o AdSense) fino all'interazione utente.",
+                    "full": "### Io Sono Iron Man. E Questo è il Fury Mode.<br/><br/>A volte, l'ottimizzazione normale non basta. A volte hai script pesanti, scritti male, impossibili da rimuovere perché servono al Marketing (HubSpot, Facebook Chat, AdSense).<br/>Questi script distruggono il punteggio Lighthouse.<br/>Iron Man indossa la Hulkbuster e attiva il **FURY MODE**.<br/><br/>#### Interazione, Non Caricamento<br/><br/>In Fury Mode, Iron Man prende questi script pesanti e li congela.<br/>Non li carica con `defer`. Non li carica affatto.<br/>Mostra una \"immagine fantasma\" (placeholder) o nulla.<br/>Poi, l'utente muove il mouse. O tocca lo schermo.<br/>In quel preciso millisecondo, Iron Man inietta gli script.<br/>L'utente non nota nulla. Ma per il bot di Google, il tuo sito è un razzo leggerissimo."
+                },
+                "hulk": {
+                    "name": "Hulk",
+                    "short": "Spacca tutto ciò che è inutile. Cancella revisioni vecchie, commenti spam e transienti scaduti con pura forza bruta.",
+                    "full": "### HULK... PULISCE!<br/><br/>Il Database di WordPress è un accumulatore seriale.<br/>Ogni volta che salvi una bozza, crea una copia (Revisione). Dopo un anno hai 50 copie *per ogni articolo*.<br/>I plugin salvano dati temporanei (Transienti) e \"dimenticano\" di cancellarli.<br/>Il DB diventa grasso, lento.<br/><br/>#### Brute Force Cleanup<br/><br/>Hulk non ha pazienza. Hulk entra nel Database e spacca tutto ciò che non serve.<br/>Esegue query `DELETE` massicce:<br/>- Via tutte le revisioni tranne le ultime 5.<br/>- Via tutti i commenti spam e cestinati.<br/>- Via tutti i transienti scaduti (orphaned options).<br/><br/>Non ottimizza le tabelle con piume di struzzo. Le deframmenta a pugni."
+                },
+                "thanos": {
+                    "name": "Thanos",
+                    "short": "L'equilibrio perfetto. Elimina i metadati orfani e le relazioni interrotte. Un semplice schiocco di dita e il database è pulito.",
+                    "full": "### Il Destino Attende.<br/><br/>Hulk pulisce lo sporco visibile. Thanos si occupa dell'esistenziale.<br/>Nel database esistono \"Orfani\".<br/>- Un post cancellato che ha lasciato dietro di sé 20 righe di meta-dati (post_meta).<br/>- Un tag che non è associato a nessun articolo (term_relationships).<br/>Questi dati \"zombie\" non servono a nulla ma rallentano ogni singola ricerca SQL.<br/><br/>#### The Snap<br/><br/>Thanos esegue lo schiocco di dita (The Snap).<br/>Scansiona le relazioni tra le tabelle.<br/>Cancella con fredda logica matematica tutto ciò che non ha uno scopo.<br/>Crea il perfetto equilibrio."
+                },
+                "doctor-strange": {
+                    "name": "Dr. Strange",
+                    "short": "Manipola il tempo. Controlla quante revisioni vengono salvate e ogni quanto avviene l'autosave, prevenendo il caos temporale nel DB.",
+                    "full": "### Dormammu, Sono Venuto a Patteggiare.<br/><br/>Il tempo è relativo in WordPress.<br/>Ogni 60 secondi, l'editor salva una copia (Autosave).<br/>Ogni volta che clicchi \"Aggiorna\", crea una Revisione.<br/>Se non controlli il tempo, il tempo distruggerà il tuo sito.<br/><br/>#### Cronocinesi (Time Manipulation)<br/><br/>Dr. Strange usa l'Occhio di Agamotto per riscrivere le costanti del tempo.<br/>1. **Revision Limit**: Inserisce un loop temporale. Le revisioni non possono superare il numero 5.<br/>2. **Autosave Interval**: Dilatare il tempo. Invece di 60 secondi, l'autosave avviene ogni 300 secondi (5 minuti).<br/><br/>Controllare il tempo significa controllare la stabilità della realtà (del tuo hosting)."
+                }
+            }
+        },
+        "zenith": {
+            "dashboard": {
+                "exe": "zenith_core_v2.exe",
+                "scan": "&gt; Scanning 'geotapp.com'...",
+                "complete": "COMPLETE",
+                "kd": "Keyword Difficulty",
+                "high": "High (84/100)",
+                "opp": "Semantic Opportunity",
+                "massive": "Massive"
+            },
+            "hero_title": "Non è SEO.<br /><span class=\"text-zenith\">È Guerra Digitale.</span>",
+            "hero_subtitle": "Zenith non si limita a \"ottimizzare\". Spia, attacca, difende e conquista. Una suite completa di strumenti tattici per dominare la SERP con precisione militare.",
+            "system_online": "SYSTEM ONLINE: DEATH STAR PROTOCOL",
+            "grid_title": "Arsenale Aggiornato",
+            "grid_subtitle": "Clicca su ogni modulo per accedere al dossier tattico completo.",
+            "sections": {
+                "warfare": "Warfare Zone",
+                "defense": "Defense & Expansion",
+                "logistics": "Logistics"
+            },
+            "cta_badge": "VERIFICATO E AGGIORNATO: v1.5.6",
+            "cta_title": "Il Tuo Sito è Pronto per la Guerra?",
+            "cta_button": "Acquista Zenith SEO",
+            "modal": {
+                "classification": "CLASSIFIED INFORMATION<br />LEVEL 5 CLEARANCE<br />DEATH STAR PROTOCOL",
+                "close": "Chiudi Dossier"
+            },
+            "features": {
+                "vader-console": {
+                    "title": "Vader Console (Competitor Spy)",
+                    "short": "Inserisci l'URL di un nemico. Zenith estrae brutalmente Titolo, H1, Struttura e Keyword Strategy.",
+                    "full": "### Il Vantaggio Ingiusto: Conoscere le Mosse del Nemico Prima che le Facciano.<br/><br/>Immagina di poter camminare negli uffici dei tuoi concorrenti, aprire i loro archivi segreti e leggere esattamente la strategia che stanno usando per batterti. **Vader Console** ti dà esattamente questo potere, ma legalmente e in tempo reale.<br/><br/>Nel mondo della SEO, l'informazione è munizione. Chi sa, vince. Chi indovina, perde.<br/><br/>#### Cosa Vedrai (Che Loro Vogliono Nascondere):<br/><br/>1. **La Struttura Scheletrica (H-Tags Blueprint)**:<br/>Vedrai la logica psicologica con cui hanno strutturato il discorso.<br/><br/>2. **Densità e Frequenza (The Signal)**:<br/>Quanto spesso usano la keyword principale? Zenith te lo dice.<br/><br/>3. **Il \"Gap\" di Contenuto**:<br/>Vader confronta il loro conteggio parole con il tuo.<br/><br/>#### Psicologia del Dominio<br/><br/>Usare Vader Console cambia il tuo mindset. Non sei più un creatore di contenuti che \"spera\" di piacere a Google. Sei un generale che osserva il campo di battaglia dall'alto."
+                },
+                "neural-graph": {
+                    "title": "Neural Link Graph",
+                    "short": "Visualizza la struttura del tuo sito come una rete neurale. Individua i 'nodi rossi' (pagine deboli).",
+                    "full": "### La Tua Vista si Espande: Vedi l'Invisibile.<br/><br/>Il tuo sito web non è una lista di pagine. È un organismo vivente. È una rete di sinapsi dove l'autorità (Link Juice) scorre come elettricità.<br/>**Neural Link Graph** accende la luce.<br/><br/>#### Diagnostica Visiva Immediata<br/><br/>1. **I Nodi Rossi (Zone Morte)**:<br/>Punto rossi isolati? Pagine morenti senza link. Salvale.<br/><br/>2. **I Nodi Giganti (Centri di Potere)**:<br/>Pilastri che sorreggono tutto. Distribuisci il potere.<br/><br/>#### Il Flusso del Potere<br/><br/>La SEO tecnica è idraulica. Con Neural Link Graph, diventi un ingegnere idraulico di livello divino."
+                },
+                "orphan-scanner": {
+                    "title": "Orphan Scanner",
+                    "short": "Trova i contenuti 'Orfani' invisibili a Google. Applica la 'Nuclear Option' forzando link da post correlati.",
+                    "full": "### Nessun Soldato Viene Lasciato Indietro.<br/><br/>Nel vasto oceano del tuo database, ci sono naufraghi. Articoli senza link.<br/>Questi sono i **Contenuti Orfani**. E sono una tragedia.<br/><br/>**Orphan Scanner** è la tua squadra di ricerca e salvataggio.<br/><br/>#### La Missione di Recupero<br/><br/>1. **Scansione Profonda**.<br/>2. **Analisi di Rilevanza**.<br/>3. **The Nuclear Option**: Forza la creazione di un ponte se non trova genitori naturali.<br/><br/>Recuperare un orfano ha un ROI infinito."
+                },
+                "protocol-droid": {
+                    "title": "Protocol Droid (Auto-Defense)",
+                    "short": "Blocca automaticamente i bot AI parassiti (GPTBot, Claude, CCBot) tramite robots.txt. I tuoi dati sono sovrani.",
+                    "full": "### I Tuoi Contenuti Sono Tuoi. Non di un'AI Californiana.<br/><br/>Mentre dormi, centinaia di bot silenziosi stanno \"raschiando\" il tuo sito. GPTBot, CCBot, Claude-Web.<br/>**Protocol Droid** è il tuo scudo.<br/><br/>#### La Sovranità dei Dati<br/><br/>1. **Identificazione Istantanea**: Kill-list aggiornata.<br/>2. **Permessi Selettivi**: Blocca i ladri, lascia passare Googlebot.<br/>3. **Risparmio Risorse**: -30% carico server.<br/><br/>Non regalare il tuo lavoro. Alza il ponte levatoio."
+                },
+                "project-starlight": {
+                    "title": "Project Starlight (Voice Search)",
+                    "short": "Inietta lo schema 'Speakable' (Beta) nel codice. Parla direttamente agli assistenti vocali.",
+                    "full": "### Fatti Ascoltare da Milioni di Voci.<br/><br/>Il futuro della ricerca non è digitato. È parlato.<br/>**Project Starlight** è un megafono diretto verso gli assistenti virtuali.<br/><br/>#### Schema.org \"Speakable\"<br/><br/>Starlight inietta silenziosamente la direttiva `SpeakableSpecification`.<br/>1. **Il \"Passo\" da Leggere**: Indichiamo a Google esattamente cosa leggere.<br/>2. **Autorità Vocale**: Diventi la *Fonte* citata.<br/>3. **Future-Proofing**: Sei pronto per la ricerca Screenless."
+                },
+                "network-hub": {
+                    "title": "Network Hub (Distribution)",
+                    "short": "Ping automatico ai motori. Pubblica su Reddit e protegge il feed RSS.",
+                    "full": "### Omnipresenza Automatizzata.<br/><br/>Scrivere è solo metà del lavoro. La distribuzione è l'altra metà.<br/><br/>#### Il Segnale Subspaziale (Ping)<br/>Invia un impulso a tutti i servizi di indicizzazione appena pubblichi.<br/><br/>#### L'Agente Infiltrato (Reddit)<br/>Posta automaticamente sul Subreddit target formattando il post come condivisione di valore.<br/><br/>#### RSS Armor<br/>Ritarda l'uscita nel feed di 60 minuti per garantire che Google indicizzi TE come fonte originale."
+                },
+                "drive-importer": {
+                    "title": "Drive Importer (Hyperdrive)",
+                    "short": "Sincronizza cartelle Google Drive. Converte WebP, pulisce HTML, pubblica.",
+                    "full": "### Dal Pensiero alla Pubblicazione alla Velocità della Luce.<br/><br/>Scrivi su Google Docs. Pubblica su WordPress.<br/>**Drive Importer** elimina l'attrito.<br/><br/>#### Sincronizzazione Quantistica<br/><br/>1. **Sanificazione del Codice**: Pulisce l'HTML sporco di Docs.<br/>2. **Gestione Immagini**: Scarica le immagini, le converte in WebP e le imposta come Featured.<br/>3. **Workflow Perfetto**: Scrivi ovunque, ritrova la bozza pronta sul sito."
+                },
+                "tractor-beam": {
+                    "title": "Tractor Beam (Redirect Core)",
+                    "short": "Monitora errori 404 e reindirizza automaticamente verso contenuti simili.",
+                    "full": "### Non Perdere Mai Più un Visitatore.<br/><br/>Un errore 404 è un cliente perso.<br/>Zenith ha il **Raggio Traente**.<br/><br/>#### Intelligenza di Recupero<br/><br/>Quando un utente sbaglia URL, il Tractor Beam si attiva.<br/>1. **Analisi dell'Intento**.<br/>2. **Fuzzy Matching Search**: Cerca contenuti simili > 80%.<br/>3. **Reindirizzamento Chirurgico (301)**: Trasporta l'utente alla pagina giusta.<br/><br/>L'utente non vede mai l'errore."
+                },
+                "auto-linker": {
+                    "title": "Auto-Linker (Internal Mesh)",
+                    "short": "Definisci una keyword, Zenith crea link in tutto l'archivio storico.",
+                    "full": "### Tessi la Tua Ragnatela di Autorità.<br/><br/>Vuoi linkare la parola \"SEO\" in 500 vecchi articoli alla tua nuova guida?<br/>Con Zenith basta un click.<br/><br/>#### La Maglia Interna (Internal Mesh)<br/><br/>Zenith applica retroattivamente la tua strategia di link building.<br/>1. **Controllo di Frequenza**: Linka solo la prima occorrenza.<br/>2. **Priorità dei Termini**: Evita conflitti.<br/>3. **Boost Istantaneo**: Inonda la tua nuova pagina di link interni all'istante."
+                }
+            }
+        }
+    }
+}

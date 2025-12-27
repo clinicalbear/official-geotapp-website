@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* GSAP UI Demo Range Slider (Exact Replica Style) */
+.ui-demo--range {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.ui-demo--range:focus {
+    outline: none;
+}
+
+/* TRACK STYLING */
+/* The track background is handled dynamically via inline styles for the progress fill, 
+   so we set a base style here that allows the gradient to show through. */
+
+.ui-demo--range::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    background: transparent;
+    border-radius: 3px;
+}
+
+.ui-demo--range::-moz-range-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    background: transparent;
+    border-radius: 3px;
+}
+
+/* THUMB STYLING (THE PIN) */
+/* GSAP Style: White circle with Green Border */
+
+.ui-demo--range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 2px solid #8FC436;
+    /* GSAP/GeoTapp Green */
+    cursor: pointer;
+    margin-top: -9px;
+    /* (ThumbHeight 24 - TrackHeight 6) / 2 * -1 = -9 */
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.ui-demo--range::-moz-range-thumb {
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 2px solid #8FC436;
+    cursor: pointer;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Active State (Pressing) */
+.ui-demo--range:active::-webkit-slider-thumb {
+    transform: scale(1.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.ui-demo--range:active::-moz-range-thumb {
+    transform: scale(1.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+/* @import './gsap-slider.css'; */
+/* Removed, including inline to guarantee load */
+
+/* VARIABLES */
+:root {
+  --slider-track-height: 1.5rem;
+  --slider-thumb-size: 1.5rem;
+  --geotapp-primary: #8FC436;
+  --geotapp-primary-dark: #7ab325;
+  --geotapp-track-bg: #e5e7eb;
+}
+
+/* GLOBAL SLIDER STYLES (Moved from SAP slider css to guarantee loading) */
+
+/* The wrapper */
+.ui-range {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+/* HIDDEN INPUT STYLING - CRITICAL FOR DRAG */
+.native-range-input {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  z-index: 100;
+  /* Ensure on top */
+  cursor: pointer;
+}
+
+/* Webkit Thumb (Chrome, Safari, Edge) */
+.native-range-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 40px;
+  /* Large hit target */
+  height: 40px;
+  border-radius: 50%;
+  background: red;
+  /* Debug color, kept for verification at opacity 0 */
+  cursor: pointer;
+  margin-top: -8px;
+}
+
+/* Mozilla Thumb (Firefox) */
+.native-range-input::-moz-range-thumb {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: red;
+  cursor: pointer;
+}
+
+/* IE/Edge Thumb */
+.native-range-input::-ms-thumb {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: red;
+  cursor: pointer;
+}
+
+/* ========== TRACK STYLING ========== */
+/* Without these, some browsers may not register interactions correctly */
+
+/* Webkit Track (Chrome, Safari, Edge) */
+.native-range-input::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 24px;
+  /* Match the visual track height */
+  cursor: pointer;
+  background: transparent;
+  border-radius: 12px;
+}
+
+/* Mozilla Track (Firefox) */
+.native-range-input::-moz-range-track {
+  width: 100%;
+  height: 24px;
+  cursor: pointer;
+  background: transparent;
+  border-radius: 12px;
+}
+
+/* IE/Edge Track */
+.native-range-input::-ms-track {
+  width: 100%;
+  height: 24px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+.ui-range__track {
+  background-color: var(--geotapp-track-bg);
+  border-radius: 1rem;
+  height: var(--slider-track-height);
+  width: 100%;
+  position: relative;
+}
+
+/* The colored progress fill */
+.ui-range__progress {
+  border-radius: 1rem;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* The thumb (visual only, follows drag) */
+.ui-range__thumb {
+  height: var(--slider-thumb-size);
+  width: var(--slider-thumb-size);
+  position: absolute;
+  top: 0;
+  /* Center exactly relative to x position */
+  margin-left: calc(var(--slider-thumb-size) / -2);
+  cursor: grab;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  touch-action: none;
+}
+
+.ui-range__thumb:active {
+  cursor: grabbing;
+}
+
+
+/* The Pin/Marker that grows */
+.ui-range__marker-container {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translate(-50%, 0) scale(0);
+  transform-origin: 50% 100%;
+  padding-bottom: 10px;
+  pointer-events: none;
+  z-index: 100;
+}
+
+/* The actual "Goccia" (Drop) Shape */
+.ui-range__marker {
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: var(--geotapp-primary);
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* The Text inside (Counter-Rotated) */
+.ui-range__marker-text {
+  transform: rotate(45deg);
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.ui-range__marker::after {
+  display: none;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', 'Inter', system-ui, -apple-system, sans-serif;
+  color: #212529;
+  background-color: #f8f9fa;
+  background: radial-gradient(circle at 20% 20%, rgba(143, 196, 54, 0.08), transparent 35%),
+    radial-gradient(circle at 80% 0%, rgba(143, 196, 54, 0.05), transparent 40%),
+    #f8f9fa;
+  line-height: 1.7;
+  margin: 0;
+  min-height: 100vh;
+}
+
+a {
+  color: #6a7dfc;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #49e2d6;
+}
+
+/* jQuery Reveal Animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Parallax backgrounds */
+.parallax-bg {
+  will-change: transform;
+}
