@@ -228,12 +228,12 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <div className="p-2 bg-superwp/10 rounded-lg text-superwp"><Zap size={24} /></div>
-                <h2 className="text-superwp font-bold uppercase tracking-widest text-sm">{dict.home_sections.superwp.badge}</h2>
+                <div className="p-2 bg-fortyx/10 rounded-lg text-fortyx"><Zap size={24} /></div>
+                <h2 className="text-fortyx font-bold uppercase tracking-widest text-sm">{dict.home_sections.fortyx.badge}</h2>
               </div>
-              <h3 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">{dict.home_sections.superwp.title}</h3>
+              <h3 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">{dict.home_sections.fortyx.title}</h3>
               <p className="text-lg text-text-secondary leading-relaxed mb-8">
-                {dict.home_sections.superwp.subtitle}
+                {dict.home_sections.fortyx.subtitle}
               </p>
               <div className="p-6 bg-white rounded-2xl border border-border shadow-sm">
                 <div className="flex justify-between items-end mb-2">
@@ -243,10 +243,10 @@ export default function Home() {
                 <div className="w-full bg-slate-100 h-3 rounded-full overflow-hidden">
                   <div className="bg-green-500 h-full w-[99%]"></div>
                 </div>
-                <p className="text-xs text-slate-400 mt-2">{dict.home_sections.superwp.speed_label}</p>
+                <p className="text-xs text-slate-400 mt-2">{dict.home_sections.fortyx.speed_label}</p>
               </div>
               <div className="mt-8">
-                <Link href={getLink("/products/super-wp")} className="text-superwp font-bold hover:underline flex items-center gap-2">{dict.home_sections.superwp.link} <ArrowRight size={18} /></Link>
+                <Link href={getLink("/products/fortyx")} className="text-fortyx font-bold hover:underline flex items-center gap-2">{dict.home_sections.fortyx.link} <ArrowRight size={18} /></Link>
               </div>
             </div>
             <div className="relative">

@@ -57,10 +57,10 @@
             "setup": "Setup: 2 Minuti",
             "link": "Analizza il tuo sito"
         },
-        "superwp": {
-            "badge": "Super WP",
+        "fortyx": {
+            "badge": "FortyX",
             "title": "800ms. O sei fuori.",
-            "subtitle": "Amazon ha calcolato che 100ms di ritardo costano l'1% delle vendite. Quanto ti sta costando il tuo sito lento? Super WP non mette solo una cache. Riscrive il modo in cui il server consegna le pagine.",
+            "subtitle": "Amazon ha calcolato che 100ms di ritardo costano l'1% delle vendite. Quanto ti sta costando il tuo sito lento? FortyX non mette solo una cache. Riscrive il modo in cui il server consegna le pagine.",
             "speed_label": "Risultato medio dopo l'installazione",
             "link": "Ottimizza ora"
         },
@@ -162,12 +162,12 @@
                     }
                 ]
             },
-            "superwp": {
-                "title": "Super WP Commander",
+            "fortyx": {
+                "title": "FortyX Commander",
                 "description": "Ottimizzazione e Gestione WordPress IA",
                 "products": [
                     {
-                        "name": "Super WP Commander AI (Yearly)",
+                        "name": "FortyX Commander AI (Yearly)",
                         "tagline": "Full AI Suite",
                         "desc": "Il massimo controllo con l'assistente IA J.A.R.V.I.S. integrato per gestione e ottimizzazione automatica.",
                         "features": [
@@ -177,7 +177,7 @@
                         ]
                     },
                     {
-                        "name": "Super WP Commander (Yearly)",
+                        "name": "FortyX Commander (Yearly)",
                         "tagline": "Gestione Manuale",
                         "desc": "Tutti gli strumenti di Commander senza l'assistente IA.",
                         "features": [
@@ -187,7 +187,7 @@
                         ]
                     },
                     {
-                        "name": "Super WP Hero AI (Yearly)",
+                        "name": "FortyX Hero AI (Yearly)",
                         "tagline": "Ottimizzazione Smart",
                         "desc": "Performance al top con l'aiuto dell'Intelligenza Artificiale per siti veloci.",
                         "features": [
@@ -197,7 +197,7 @@
                         ]
                     },
                     {
-                        "name": "Super WP Soldier (Yearly)",
+                        "name": "FortyX Soldier (Yearly)",
                         "tagline": "Essenziale",
                         "desc": "Le basi per mantenere il tuo sito WordPress sicuro e veloce.",
                         "features": [
@@ -407,9 +407,9 @@
                 }
             }
         },
-        "superwp": {
-            "hero_title": "Non è un Plugin.<br /><span class=\"text-superwp\">È un'Alleanza.</span>",
-            "hero_subtitle": "Abbiamo preso ispirazione dai più grandi eroi della terra. Ogni modulo di Super WP ha un'identità, un superpotere e una missione: proteggere il tuo sito a ogni costo.",
+        "fortyx": {
+            "hero_title": "Non è un Plugin.<br /><span class=\"text-fortyx\">È un'Alleanza.</span>",
+            "hero_subtitle": "Abbiamo preso ispirazione dai più grandi eroi della terra. Ogni modulo di FortyX ha un'identità, un superpotere e una missione: proteggere il tuo sito a ogni costo.",
             "grid_title": "Theme-Driven Development",
             "grid_subtitle": "Non abbiamo scritto codice anonimo. Abbiamo assegnato a ogni file una personalità. Quando il server è sotto attacco, non attiviamo il firewall. Ispiriamo lo scudo di <strong>Vibranium</strong>. Clicca sui loro nomi per conoscere la loro storia.",
             "classes": {

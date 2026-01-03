@@ -1,30 +1,5 @@
 {
     "$schema": "node_modules/wrangler/config-schema.json",
     "name": "official-geotapp-website",
-    "pages_build_output_dir": "out",
-    "compatibility_date": "2024-12-05",
-    "compatibility_flags": [
-        "nodejs_compat"
-    ],
-    "vars": {
-        "NEXT_PUBLIC_SITE_URL": "https://geotapp.com"
-    },
-    "services": [
-        {
-            "binding": "WORKER_SELF_REFERENCE",
-            "service": "official-geotapp-website"
-        }
-    ],
-    "r2_buckets": [
-        {
-            "binding": "NEXT_INC_CACHE_R2_BUCKET",
-            "bucket_name": "geotapp-next-cache"
-        }
-    ],
-    "kv_namespaces": [
-        {
-            "binding": "GEOTAPP_CMS_CONTENT",
-            "id": "4c4383ff945b4a65a2c4546e5d9bf03c"
-        }
-    ]
+    "pages_build_output_dir": "out"
 }

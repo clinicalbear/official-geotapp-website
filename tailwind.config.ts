@@ -22,7 +22,7 @@ const config: Config = {
           DEFAULT: "#00b5af", // Darker Cyan for white bg
           glow: "rgba(0, 181, 175, 0.2)"
         },
-        superwp: {
+        fortyx: {
           DEFAULT: "#c026d3", // Fuchsia-600
           glow: "rgba(192, 38, 211, 0.2)"
         },
