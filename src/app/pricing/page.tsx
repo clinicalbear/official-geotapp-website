@@ -196,7 +196,7 @@ export default function Pricing() {
         ...catDict.products[i]
       }))
     };
-  }).filter(Boolean);
+  }).filter((cat): cat is NonNullable<typeof cat> => cat !== null);
 
   const handleAddToCart = (product: any) => {
     addItem({
