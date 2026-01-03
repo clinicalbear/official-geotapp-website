@@ -40,7 +40,7 @@ export default function PricingCalculator() {
         if (!price) return;
         addItem({
             id: 'prod_TZxemMJkQrWryr',
-            name: 'GeoTapp App License',
+            name: 'GeoTapp Timetracker License',
             price: price.annualTotal, // Currently storing the FULL annual amount as the price
             period: 'year',
             quantity: 1, // Represents 1 bundle of X employees

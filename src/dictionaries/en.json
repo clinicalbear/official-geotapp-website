@@ -36,7 +36,7 @@
             "link": "Discover Details"
         },
         "app": {
-            "badge": "GeoTapp App",
+            "badge": "GeoTapp Timetracker",
             "title": "Your Team in Your Pocket.",
             "subtitle": "No more doubts about on-site presence. The App certifies location <strong>only</strong> at clock-in/out. Full Privacy respect, zero disputes.",
             "card_gps": {
@@ -100,11 +100,11 @@
         "vat_note": "All prices exclude VAT. Billing according to terms of service.",
         "categories": {
             "app": {
-                "title": "GeoTapp APP",
+                "title": "GeoTapp Timetracker",
                 "description": "Mobile Workforce Management",
                 "products": [
                     {
-                        "name": "GeoTapp APP",
+                        "name": "GeoTapp Timetracker",
                         "tagline": "Starting at",
                         "desc": "The complete solution to track attendance, jobs, and expenses. Price per user/year.",
                         "features": [
@@ -341,7 +341,7 @@
         },
         "app": {
             "hero_badge": "MOBILE LINK ESTABLISHED",
-            "hero_title": "GeoTapp App.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600\">Your Office in Pocket.</span>",
+            "hero_title": "GeoTapp Timetracker.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600\">Your Office in Pocket.</span>",
             "hero_subtitle": "Give your technicians superpowers. Reports, photos, signatures, and expenses directly from the site. Instant synchronization with HQ.",
             "visual_placeholder": "FIELD INTERFACE WIDGET",
             "grid_title": "Field Toolkit",
@@ -352,7 +352,7 @@
                 "3": "Sector 3: Data & Identity"
             },
             "cta_title": "Empower your Field Staff.",
-            "cta_button": "Buy GeoTapp App",
+            "cta_button": "Buy GeoTapp Timetracker",
             "modal": {
                 "status": "SYSTEM STATUS: <span class=\"text-green-600\">OPERATIONAL</span>",
                 "encryption": "ENCRYPTION: <span class=\"text-slate-400\">AES-256</span>",

@@ -12,7 +12,7 @@ const unbounded = Unbounded({ subsets: ['latin'], variable: '--font-unbounded' }
 
 export const metadata: Metadata = {
   title: 'GeoTapp - The Future of Automation',
-  description: 'AI-Powered Tools for WordPress and Business Automation. Zenith SEO, Super WP, GeoTapp FLOW.',
+  description: 'AI-Powered Tools for WordPress and Business Automation. Zenith SEO, FortyX, GeoTapp FLOW.',
 }
 
 export default function RootLayout({

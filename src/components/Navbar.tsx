@@ -25,7 +25,7 @@ function CartButton() {
 }
 
 const products = [
-  { name: 'GeoTapp App', href: '/products/geotapp-app', icon: Smartphone, color: 'text-app', desc: 'Mobile Workforce Management' },
+  { name: 'GeoTapp Timetracker', href: '/products/geotapp-app', icon: Smartphone, color: 'text-app', desc: 'Mobile Workforce Management' },
   { name: 'GeoTapp FLOW', href: '/products/geotapp-flow', icon: Database, color: 'text-flow', desc: 'All-in-One SaaS CRM & ERP' },
   { name: 'Zenith SEO', href: '/products/zenith-seo', icon: Rocket, color: 'text-zenith', desc: 'AI-Powered SEO Intelligence' },
   { name: 'FortyX', href: '/products/fortyx', icon: Zap, color: 'text-fortyx', desc: 'Wordpress Performance Booster' },
@@ -43,7 +43,7 @@ export default function Navbar() {
   const getLink = (path: string) => isEn ? `/en${path}` : path;
 
   const products = [
-    { name: 'GeoTapp App', href: getLink('/products/geotapp-app'), icon: Smartphone, color: 'text-app', desc: 'Mobile Workforce Management' },
+    { name: 'GeoTapp Timetracker', href: getLink('/products/geotapp-app'), icon: Smartphone, color: 'text-app', desc: 'Mobile Workforce Management' },
     { name: 'GeoTapp FLOW', href: getLink('/products/geotapp-flow'), icon: Database, color: 'text-flow', desc: 'All-in-One SaaS CRM & ERP' },
     { name: 'Zenith SEO', href: getLink('/products/zenith-seo'), icon: Rocket, color: 'text-zenith', desc: 'AI-Powered SEO Intelligence' },
     { name: 'FortyX', href: getLink('/products/fortyx'), icon: Zap, color: 'text-fortyx', desc: 'Wordpress Performance Booster' },

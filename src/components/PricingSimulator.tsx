@@ -139,7 +139,7 @@ export default function PricingSimulator() {
 
             const items = [
                 {
-                    name: "GeoTapp App License",
+                    name: "GeoTapp Timetracker License",
                     price: quote.unitAnnual,
                     period: "year",
                     quantity: seatCount,
@@ -155,7 +155,7 @@ export default function PricingSimulator() {
                 body: JSON.stringify({
                     items: [
                         {
-                            name: "GeoTapp App License",
+                            name: "GeoTapp Timetracker License",
                             price: quote.unitAnnual,
                             period: "year",
                             quantity: seatCount,
