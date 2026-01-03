@@ -78,10 +78,10 @@ const baseCategories = [
     ]
   },
   {
-    id: 'superwp',
+    id: 'fortyx',
     color: 'text-orange-600',
     bg: 'bg-orange-50',
-    promoCode: 'SUPER25',
+    promoCode: 'FORTYX25',
     maxCoupons: 200,
     products: [
       {
@@ -182,7 +182,11 @@ export default function Pricing() {
   // Merge base data with dictionary translations
   const categories = baseCategories.map(cat => {
     // @ts-ignore
-    const catDict = dict.pricing.categories[cat.id];
+    const catDict = dict.pricing?.categories?.[cat.id];
+    if (!catDict) {
+      console.error(`Missing category in dictionary: ${cat.id}`);
+      return null;
+    }
     return {
       ...cat,
       title: catDict.title,
@@ -192,7 +196,7 @@ export default function Pricing() {
         ...catDict.products[i]
       }))
     };
-  });
+  }).filter(Boolean);
 
   const handleAddToCart = (product: any) => {
     addItem({
