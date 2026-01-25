@@ -14,6 +14,7 @@ import { GEOTAPP_SYSTEMS, SystemDetail } from './systems-data';
 import { usePathname } from 'next/navigation';
 import itDict from '@/dictionaries/it.json';
 import enDict from '@/dictionaries/en.json';
+import TrialButton from '@/components/TrialButton';
 
 // --- SYSTEM CARD COMPONENT (LIGHT THEME) ---
 const SystemCard = ({ system, onClick }: { system: SystemDetail & { label_open?: string }, onClick: (s: SystemDetail) => void }) => {
@@ -248,9 +249,19 @@ export default function GeoTappApp() {
                 {/* CTA */}
                 <div className="text-center py-32">
                     <h2 className="text-4xl md:text-6xl font-bold mb-12 text-slate-900">{flowDict.cta_title}</h2>
-                    <Link href={getLink("/pricing")} className="inline-flex items-center gap-4 px-12 py-6 bg-blue-600 text-white font-bold rounded-xl text-xl hover:bg-blue-700 transition-all shadow-lg hover:shadow-blue-500/30 hover:-translate-y-2 group">
-                        <Globe className="group-hover:animate-spin-slow" /> {flowDict.cta_button}
-                    </Link>
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <TrialButton
+                            priceId={process.env.NEXT_PUBLIC_STRIPE_PRICE_FLOW_START_MONTHLY!}
+                            productName="GeoTapp FLOW"
+                            productKey="GEOTAPP_FLOW"
+                            className="inline-flex items-center gap-4 px-12 py-6 bg-blue-600 text-white font-bold rounded-xl text-xl hover:bg-blue-700 transition-all shadow-lg hover:shadow-blue-500/30 hover:-translate-y-2 group"
+                        >
+                            <Zap size={24} /> {isEn ? '🚀 Try Free for 7 Days' : '🚀 Prova Gratis per 7 Giorni'}
+                        </TrialButton>
+                        <Link href={getLink("/pricing")} className="inline-flex items-center gap-4 px-12 py-6 bg-slate-100 text-slate-900 font-bold rounded-xl text-xl hover:bg-slate-200 transition-all group">
+                            <Globe className="group-hover:rotate-12 transition-transform" size={24} /> {flowDict.cta_button}
+                        </Link>
+                    </div>
                 </div>
 
             </section>

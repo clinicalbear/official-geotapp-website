@@ -47,33 +47,33 @@ const baseCategories = [
     maxCoupons: 200,
     products: [
       {
-        id: 'prod_TbtJpp4yQw10gT',
-        price: '€499',
+        id: process.env.NEXT_PUBLIC_STRIPE_PRICE_FLOW_FOUNDER_ONETIME!,
+        price: '1.299 €',
         period: '/once',
         button: 'bg-slate-900 text-white hover:bg-slate-800',
         isBestValue: true,
-        metadata: { license_type: 'LIFETIME', seats: 1000, product_key: 'GEOTAPP_FLOW' }
+        metadata: { license_type: 'FOUNDER', seats: 1000, product_key: 'GEOTAPP_FLOW' }
       },
       {
-        id: 'prod_TbtISY2Ii2IhNU',
-        price: '€149',
+        id: process.env.NEXT_PUBLIC_STRIPE_PRICE_FLOW_ELITE_ANNUAL!,
+        price: '699 €',
         period: '/year',
         button: 'bg-blue-600 text-white hover:bg-blue-700',
-        metadata: { license_type: 'BUSINESS', seats: 1000, product_key: 'GEOTAPP_FLOW' }
+        metadata: { license_type: 'ELITE', seats: 1000, product_key: 'GEOTAPP_FLOW' }
       },
       {
-        id: 'prod_TbtIfl070qUQbp',
-        price: '€99',
+        id: process.env.NEXT_PUBLIC_STRIPE_PRICE_FLOW_PRO_ANNUAL!,
+        price: '379 €',
         period: '/year',
         button: 'bg-blue-500 text-white hover:bg-blue-600',
-        metadata: { license_type: 'TEAM', seats: 5, product_key: 'GEOTAPP_FLOW' }
+        metadata: { license_type: 'PRO', seats: 5, product_key: 'GEOTAPP_FLOW' }
       },
       {
-        id: 'prod_TbtHtkt70FHRs2',
-        price: '€69',
+        id: process.env.NEXT_PUBLIC_STRIPE_PRICE_FLOW_START_ANNUAL!,
+        price: '189 €',
         period: '/year',
         button: 'bg-blue-400 text-white hover:bg-blue-500',
-        metadata: { license_type: 'SOLO', seats: 1, product_key: 'GEOTAPP_FLOW' }
+        metadata: { license_type: 'START', seats: 1, product_key: 'GEOTAPP_FLOW' }
       }
     ]
   },
@@ -161,7 +161,7 @@ export default function Pricing() {
   useEffect(() => {
     const fetchPromoStats = async () => {
       try {
-        const response = await fetch('https://crm.geotapp.com/api/public/promo-stats');
+        const response = await fetch(`${process.env.NEXT_PUBLIC_SAAS_URL || 'https://crm.geotapp.com'}/api/public/promo-stats`);
         if (response.ok) {
           const data = await response.json();
           setPromoStats(data);
@@ -230,6 +230,59 @@ export default function Pricing() {
           </p>
         </motion.div>
       </div>
+
+      {/* Bundle Promotion Banner */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.3 }}
+        className="container mx-auto max-w-6xl mb-16"
+      >
+        <Link href="/pricing/bundle" className="block">
+          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-purple-600 via-blue-600 to-purple-600 p-8 md:p-12 shadow-2xl hover:shadow-3xl transition-all duration-300 group">
+            {/* Animated background pattern */}
+            <div className="absolute inset-0 opacity-20">
+              <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
+            </div>
+
+            <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
+              <div className="flex-1 text-white">
+                <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold mb-4">
+                  <Star className="w-4 h-4" />
+                  Offerta Speciale
+                </div>
+                <h2 className="text-3xl md:text-4xl font-bold mb-3">
+                  Bundle Flow + TimeTracker
+                </h2>
+                <p className="text-lg text-white/90 mb-4">
+                  Risparmia il <span className="font-bold text-2xl">15%</span> sul primo anno acquistando insieme Flow e TimeTracker
+                </p>
+                <div className="flex flex-wrap gap-3 text-sm">
+                  <div className="flex items-center gap-2">
+                    <Check className="w-5 h-5" />
+                    <span>CRM & ERP Completo</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Check className="w-5 h-5" />
+                    <span>Tracciamento Ore</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Check className="w-5 h-5" />
+                    <span>7 Giorni Gratis</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex-shrink-0">
+                <div className="bg-white text-purple-600 px-8 py-4 rounded-xl font-bold text-lg shadow-lg group-hover:scale-105 transition-transform duration-300 flex items-center gap-2">
+                  Scopri il Bundle
+                  <ArrowRight className="w-5 h-5" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </Link>
+      </motion.div>
 
       {categories.map((category) => (
         <section key={category.id} className="container mx-auto max-w-7xl mb-32">
