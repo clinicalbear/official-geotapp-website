@@ -56,21 +56,30 @@ const baseCategories = [
       },
       {
         id: process.env.NEXT_PUBLIC_STRIPE_PRICE_FLOW_ELITE_ANNUAL!,
+        idMonthly: process.env.NEXT_PUBLIC_STRIPE_PRICE_FLOW_ELITE_MONTHLY!,
         price: '699 €',
+        monthlyPrice: '69,90 €',
+        savings: '140 €',
         period: '/year',
         button: 'bg-blue-600 text-white hover:bg-blue-700',
         metadata: { license_type: 'ELITE', seats: 1000, product_key: 'GEOTAPP_FLOW' }
       },
       {
         id: process.env.NEXT_PUBLIC_STRIPE_PRICE_FLOW_PRO_ANNUAL!,
+        idMonthly: process.env.NEXT_PUBLIC_STRIPE_PRICE_FLOW_PRO_MONTHLY!,
         price: '379 €',
+        monthlyPrice: '37,90 €',
+        savings: '76 €',
         period: '/year',
         button: 'bg-blue-500 text-white hover:bg-blue-600',
         metadata: { license_type: 'PRO', seats: 5, product_key: 'GEOTAPP_FLOW' }
       },
       {
         id: process.env.NEXT_PUBLIC_STRIPE_PRICE_FLOW_START_ANNUAL!,
+        idMonthly: process.env.NEXT_PUBLIC_STRIPE_PRICE_FLOW_START_MONTHLY!,
         price: '189 €',
+        monthlyPrice: '18,90 €',
+        savings: '38 €',
         period: '/year',
         button: 'bg-blue-400 text-white hover:bg-blue-500',
         metadata: { license_type: 'START', seats: 1, product_key: 'GEOTAPP_FLOW' }
@@ -337,9 +346,25 @@ export default function Pricing() {
                   <h3 className="text-xl font-bold text-slate-900 leading-tight">{product.name}</h3>
                 </div>
 
-                <div className="mb-6 flex items-baseline gap-1">
-                  <span className="text-3xl font-bold text-slate-900">{product.price}</span>
-                  <span className="text-xs text-slate-500 font-medium">{product.period}</span>
+                <div className="mb-6">
+                  <div className="flex items-baseline gap-1 mb-2">
+                    <span className="text-3xl font-bold text-slate-900">{product.price}</span>
+                    <span className="text-xs text-slate-500 font-medium">{product.period}</span>
+                  </div>
+                  {(product as any).monthlyPrice && (
+                    <div className="space-y-1">
+                      <div className="text-sm text-slate-600">
+                        oppure <span className="font-semibold text-slate-700">{(product as any).monthlyPrice}/mese</span>
+                      </div>
+                      {(product as any).savings && (
+                        <div className="inline-flex items-center gap-1 px-2 py-1 bg-green-50 border border-green-200 rounded-full">
+                          <span className="text-[10px] font-bold text-green-700 uppercase tracking-wider">
+                            Risparmio annuale: {(product as any).savings}
+                          </span>
+                        </div>
+                      )}
+                    </div>
+                  )}
                 </div>
 
                 <p className="text-sm text-slate-600 mb-6 flex-1 leading-relaxed border-b border-slate-100 pb-6">
