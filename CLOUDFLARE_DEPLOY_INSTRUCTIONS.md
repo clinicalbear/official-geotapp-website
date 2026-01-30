@@ -173,9 +173,12 @@ Dopo il deploy, verifica che tutto funzioni:
 ### geotapp-site (Cloudflare)
 - [x] Price_id aggiornati in `.env.local` (locale)
 - [x] Price_id documentati in `.env.local.example`
-- [ ] **TODO**: Env vars aggiornate su Cloudflare Pages Dashboard
-- [ ] **TODO**: Redeploy su Cloudflare Pages
-- [ ] **TODO**: Verifica che il sito usi i nuovi price_id
+- [x] **DONE**: Env vars aggiornate su Cloudflare Pages via Wrangler CLI
+- [x] **DONE**: Commit env vars e deploy scripts (cf21ce3)
+- [x] **DONE**: Aggiornato pricing/page.tsx con nuovi prezzi (a5a177f)
+- [x] **DONE**: Aggiornato products/geotapp-flow/page.tsx (a5a177f)
+- [x] **DONE**: Push su GitHub - deployment automatico in corso
+- [ ] **TODO**: Verifica che il sito usi i nuovi price_id dopo deploy (~5-10 min)
 
 ### geotapp-flow (Firebase)
 - [x] Cloud Function `syncSubscriptionToFirestore` deployata
@@ -194,6 +197,10 @@ Dopo il deploy, verifica che tutto funzioni:
 
 ---
 
-**Ultima modifica**: 25 Gennaio 2026
+**Ultima modifica**: 25 Gennaio 2026 - 21:15
 **Deploy geotapp-saas completato**: ✅
-**Deploy geotapp-site**: ⏳ Pending
+**Deploy geotapp-site**: 🔄 In Progress (Cloudflare auto-deploy triggerato)
+**Project Name Cloudflare**: official-geotapp-website
+**Commit Hash**:
+  - cf21ce3 (env vars + deployment scripts)
+  - a5a177f (pricing updates + new price IDs in code)

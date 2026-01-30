@@ -66,7 +66,8 @@ export async function getHomepageData() {
 }
 
 export async function submitContact(formData: any) {
-  const res = await fetch('/api/contact', {
+  const baseUrl = process.env.NEXT_PUBLIC_SAAS_URL || 'https://crm.geotapp.com';
+  const res = await fetch(`${baseUrl}/api/v1/public/contact`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(formData)

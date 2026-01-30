@@ -4,6 +4,7 @@
         "pricing": "Prezzi",
         "blog": "Blog",
         "contact": "Contattaci",
+        "login": "Accedi",
         "cta": "Inizia Ora"
     },
     "footer": {
@@ -268,6 +269,18 @@
             "reason": "Motivo del Contatto",
             "message": "Messaggio",
             "send": "Invia"
+        }
+    },
+    "login_hub": {
+        "title": "Accedi al tuo <span class=\"text-primary\">Ecosistema</span>.",
+        "subtitle": "Seleziona l'applicazione a cui vuoi connetterti.",
+        "flow": {
+            "desc": "Gestione Aziendale, CRM, Fatturazione e Automazioni.",
+            "btn": "Accedi a Flow"
+        },
+        "timetracker": {
+            "desc": "Rilevazione Presenze, Cantieri e Note Spese.",
+            "btn": "Accedi a TimeTracker"
         }
     },
     "product_pages": {

@@ -185,7 +185,7 @@ export default function ZenithSEO() {
           transition={{ duration: 1 }}
         >
           <div className="mb-4 flex justify-center">
-            <Image src="/logo.png" width={180} height={50} alt="GeoTapp Logo" className="drop-shadow-xl" />
+            <Image src="/LogoGeoTapp.png" width={180} height={50} alt="GeoTapp Logo" className="drop-shadow-xl p-2 bg-white/10 rounded-lg backdrop-blur-sm" />
           </div>
 
           <div className="flex justify-center items-center gap-2 mb-8 text-zenith font-mono text-sm tracking-widest">

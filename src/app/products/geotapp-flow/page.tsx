@@ -85,6 +85,15 @@ export default function GeoTappApp() {
     const isEn = pathname?.startsWith('/en');
     const dict = isEn ? enDict : itDict;
     const flowDict = dict.product_pages.flow;
+    const splitHeroTitle = (title: string) => {
+        const parts = title.split(/<br\s*\/?>/i);
+        return {
+            main: parts[0] || '',
+            rest: parts.slice(1).join('<br />').trim()
+        };
+    };
+    const { main: heroTitleMain, rest: heroTitleRest } = splitHeroTitle(flowDict.hero_title);
+    const heroTitlePlain = heroTitleMain.replace(/<[^>]*>/g, '').trim();
 
 
     // Merge systems with dictionary
@@ -188,8 +197,22 @@ export default function GeoTappApp() {
 
                     <h1
                         className="text-5xl md:text-8xl font-display font-bold text-slate-900 mb-8 leading-tight tracking-tight"
-                        dangerouslySetInnerHTML={{ __html: flowDict.hero_title }}
                     >
+                        <span className="sr-only">{heroTitlePlain || 'GeoTapp Flow'}</span>
+                        <Image
+                            src="/FlowTrasparente.png"
+                            alt="GeoTapp Flow"
+                            width={520}
+                            height={260}
+                            priority
+                            className="mx-auto h-20 w-auto md:h-28"
+                        />
+                        {heroTitleRest && (
+                            <span
+                                className="block mt-4 text-3xl md:text-5xl font-display font-bold"
+                                dangerouslySetInnerHTML={{ __html: heroTitleRest }}
+                            />
+                        )}
                     </h1>
 
                     <p className="text-xl md:text-2xl text-slate-500 font-light leading-relaxed max-w-4xl mx-auto mb-16">

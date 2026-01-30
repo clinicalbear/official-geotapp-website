@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import Image from 'next/image';
 import itDict from '@/dictionaries/it.json';
 import enDict from '@/dictionaries/en.json';
 
@@ -17,7 +18,15 @@ export default function Footer() {
     <footer className="bg-surface border-t border-border py-12 mt-20">
       <div className="container mx-auto px-6 text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-8">
         <div>
-          <h2 className="text-2xl font-display font-bold text-white mb-2">GeoTapp<span className="text-primary">.</span></h2>
+          <div className="mb-2 flex justify-center md:justify-start">
+            <Image
+              src="/LogoGeoTapp.png"
+              alt="GeoTapp"
+              width={220}
+              height={96}
+              className="h-auto w-[280px] max-w-none"
+            />
+          </div>
           <p className="text-text-muted text-sm">{dict.tagline}</p>
         </div>
         <div className="flex gap-8 text-sm text-text-secondary">

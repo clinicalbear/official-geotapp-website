@@ -14,6 +14,7 @@ import { GEOTAPP_SYSTEMS, SystemDetail } from './systems-data';
 import { usePathname } from 'next/navigation';
 import itDict from '@/dictionaries/it.json';
 import enDict from '@/dictionaries/en.json';
+import TrialButton from '@/components/TrialButton';
 
 // --- SYSTEM CARD COMPONENT (LIGHT THEME) ---
 const SystemCard = ({ system, onClick }: { system: SystemDetail & { label_open?: string }, onClick: (s: SystemDetail) => void }) => {
@@ -85,6 +86,15 @@ export default function GeoTappApp() {
     const isEn = pathname?.startsWith('/en');
     const dict = isEn ? enDict : itDict;
     const appDict = dict.product_pages.app;
+    const splitHeroTitle = (title: string) => {
+        const parts = title.split(/<br\s*\/?>/i);
+        return {
+            main: parts[0] || '',
+            rest: parts.slice(1).join('<br />').trim()
+        };
+    };
+    const { main: heroTitleMain, rest: heroTitleRest } = splitHeroTitle(appDict.hero_title);
+    const heroTitlePlain = heroTitleMain.replace(/<[^>]*>/g, '').trim();
 
     // Helper to find system by ID
     // Merge systems with dictionary
@@ -187,8 +197,22 @@ export default function GeoTappApp() {
 
                     <h1
                         className="text-5xl md:text-8xl font-display font-bold text-slate-900 mb-8 leading-tight tracking-tight"
-                        dangerouslySetInnerHTML={{ __html: appDict.hero_title }}
                     >
+                        <span className="sr-only">{heroTitlePlain || 'GeoTapp Timetracker'}</span>
+                        <Image
+                            src="/TimeTrackerTrasparente.png"
+                            alt="GeoTapp TimeTracker"
+                            width={520}
+                            height={260}
+                            priority
+                            className="mx-auto h-20 w-auto md:h-28"
+                        />
+                        {heroTitleRest && (
+                            <span
+                                className="block mt-4 text-3xl md:text-5xl font-display font-bold"
+                                dangerouslySetInnerHTML={{ __html: heroTitleRest }}
+                            />
+                        )}
                     </h1>
 
                     <p className="text-xl md:text-2xl text-slate-500 font-light leading-relaxed max-w-4xl mx-auto mb-16">
@@ -248,9 +272,19 @@ export default function GeoTappApp() {
                 {/* CTA */}
                 <div className="text-center py-32">
                     <h2 className="text-4xl md:text-6xl font-bold mb-12 text-slate-900">{appDict.cta_title}</h2>
-                    <Link href={getLink("/pricing")} className="inline-flex items-center gap-4 px-12 py-6 bg-blue-600 text-white font-bold rounded-xl text-xl hover:bg-blue-700 transition-all shadow-lg hover:shadow-blue-500/30 hover:-translate-y-2 group">
-                        <Smartphone className="group-hover:animate-bounce" /> {appDict.cta_button}
-                    </Link>
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <TrialButton
+                            priceId={process.env.NEXT_PUBLIC_STRIPE_PRICE_TIMETRACKER_MONTHLY!}
+                            productName="GeoTapp Timetracker"
+                            productKey="GEOTAPP_APP"
+                            className="inline-flex items-center gap-4 px-12 py-6 bg-blue-600 text-white font-bold rounded-xl text-xl hover:bg-blue-700 transition-all shadow-lg hover:shadow-blue-500/30 hover:-translate-y-2 group"
+                        >
+                            <Clock size={24} /> {isEn ? '🚀 Try Free for 7 Days' : '🚀 Prova Gratis per 7 Giorni'}
+                        </TrialButton>
+                        <Link href={getLink("/pricing")} className="inline-flex items-center gap-4 px-12 py-6 bg-slate-100 text-slate-900 font-bold rounded-xl text-xl hover:bg-slate-200 transition-all group">
+                            <Smartphone className="group-hover:rotate-12 transition-transform" size={24} /> {appDict.cta_button}
+                        </Link>
+                    </div>
                 </div>
 
             </section>

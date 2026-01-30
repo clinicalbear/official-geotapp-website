@@ -4,7 +4,8 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ChevronDown, Rocket, Zap, Database, Smartphone, ShoppingCart } from 'lucide-react';
+import { Menu, X, ChevronDown, Rocket, Zap, Database, Smartphone, ShoppingCart, Hammer, ShieldCheck, Sparkles } from 'lucide-react';
+import Image from 'next/image';
 import { clsx } from 'clsx';
 import { useCart } from '@/store/cart';
 import itDict from '@/dictionaries/it.json';
@@ -62,8 +63,16 @@ export default function Navbar() {
     )}>
       <div className="container mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
-        <Link href={isEn ? "/en" : "/"} className="font-display font-bold text-2xl tracking-tighter text-slate-900 flex items-center gap-2">
-          <span className="text-primary">Geo</span>Tapp<span className="text-primary">.</span>
+        {/* Logo */}
+        <Link href={isEn ? "/en" : "/"} className="flex items-center">
+          <Image
+            src="/LogoGeoTapp.png"
+            alt="GeoTapp Logo"
+            width={160}
+            height={45}
+            className="h-10 w-auto object-contain"
+            priority
+          />
         </Link>
 
         {/* Desktop Menu */}
@@ -101,9 +110,20 @@ export default function Navbar() {
             </AnimatePresence>
           </div>
 
+          {/* Settori - Direct Links */}
+          <Link href={getLink("/settori/installatori")} className="text-sm font-bold text-text-secondary hover:text-slate-900 transition-colors">Installatori</Link>
+          <Link href={getLink("/settori/sicurezza")} className="text-sm font-bold text-text-secondary hover:text-slate-900 transition-colors">Sicurezza</Link>
+          <Link href={getLink("/settori/pulizie")} className="text-sm font-bold text-text-secondary hover:text-slate-900 transition-colors">Pulizie</Link>
+
           <Link href={getLink("/pricing")} className="text-sm font-bold text-text-secondary hover:text-slate-900 transition-colors">{dict.pricing}</Link>
-          <a href="/blog" className="text-sm font-bold text-text-secondary hover:text-slate-900 transition-colors">{dict.blog}</a>
+          <a href="https://blog.geotapp.com" target="_blank" rel="noopener noreferrer" className="text-sm font-bold text-text-secondary hover:text-slate-900 transition-colors">{dict.blog}</a>
           <Link href={getLink("/contact")} className="text-sm font-bold text-text-secondary hover:text-slate-900 transition-colors">{dict.contact}</Link>
+
+          <div className="h-6 w-px bg-slate-200 mx-2"></div>
+
+          <Link href={getLink("/login")} className="text-sm font-bold text-text-secondary hover:text-slate-900 transition-colors">
+            {dict.login}
+          </Link>
 
           <div className="h-6 w-px bg-slate-200 mx-2"></div>
 
@@ -136,9 +156,17 @@ export default function Navbar() {
                 </Link>
               ))}
               <hr className="border-slate-100" />
+
+              {/* Settori - Direct Links Mobile */}
+              <Link href={getLink("/settori/installatori")} onClick={() => setIsOpen(false)} className="text-lg font-bold text-text-secondary">Installatori</Link>
+              <Link href={getLink("/settori/sicurezza")} onClick={() => setIsOpen(false)} className="text-lg font-bold text-text-secondary">Sicurezza</Link>
+              <Link href={getLink("/settori/pulizie")} onClick={() => setIsOpen(false)} className="text-lg font-bold text-text-secondary">Pulizie</Link>
+
+              <hr className="border-slate-100" />
               <Link href={getLink("/pricing")} onClick={() => setIsOpen(false)} className="text-lg font-bold text-text-secondary">{dict.pricing}</Link>
-              <Link href="/blog" onClick={() => setIsOpen(false)} className="text-lg font-bold text-text-secondary">{dict.blog}</Link>
+              <a href="https://blog.geotapp.com" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)} className="text-lg font-bold text-text-secondary">{dict.blog}</a>
               <Link href={getLink("/contact")} onClick={() => setIsOpen(false)} className="text-lg font-bold text-text-secondary">{dict.contact}</Link>
+              <Link href={getLink("/login")} onClick={() => setIsOpen(false)} className="text-lg font-bold text-text-secondary">{dict.login}</Link>
               <Link href={getLink("/contact")} onClick={() => setIsOpen(false)} className="w-full py-4 text-center text-white font-bold bg-slate-900 rounded-xl shadow-lg">
                 {dict.cta}
               </Link>

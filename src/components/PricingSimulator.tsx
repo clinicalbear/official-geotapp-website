@@ -123,12 +123,13 @@ export default function PricingSimulator() {
             // Check for Enterprise
             if (quote?.isCustom) {
                 // Submit as contact/lead instead of stripe checkout
-                const res = await fetch("/api/contact", {
+                const res = await fetch(`${process.env.NEXT_PUBLIC_SAAS_URL || 'https://crm.geotapp.com'}/api/v1/public/contact`, {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({
                         name: companyName,
                         email: contactEmail,
+                        company: companyName,
                         message: `Richiesta Enterprise per ${seatCount} dipendenti.`
                     })
                 });
@@ -149,7 +150,7 @@ export default function PricingSimulator() {
                 }
             ];
 
-            const res = await fetch("https://crm.geotapp.com/api/v1/checkout", {
+            const res = await fetch(`${process.env.NEXT_PUBLIC_SAAS_URL || 'https://crm.geotapp.com'}/api/v1/checkout`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({

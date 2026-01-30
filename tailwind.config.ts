@@ -43,7 +43,7 @@ const config: Config = {
       },
       fontFamily: {
         sans: ["Inter", "sans-serif"],
-        display: ["Unbounded", "Inter", "sans-serif"],
+        display: ["Poppins", "Inter", "sans-serif"],
       },
       animation: {
         "float": "float 6s ease-in-out infinite",

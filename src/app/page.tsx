@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { ArrowRight, CheckCircle2, TrendingUp, ShieldCheck, Zap, BarChart3, Map, Smartphone, Database } from 'lucide-react';
+import { ArrowRight, CheckCircle2, TrendingUp, ShieldCheck, Zap, BarChart3, Map, Smartphone, Database, Hammer, Sparkles } from 'lucide-react';
 import Image from 'next/image';
 
 // UI MOCKUP COMPONENTS (Built with Tailwind for "Real Example" feel)
@@ -100,6 +100,60 @@ export default function Home() {
 
         {/* Abstract Bg Decoration */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[1000px] bg-gradient-to-b from-slate-100/50 to-transparent rounded-full blur-3xl -z-0 pointer-events-none" />
+      </section>
+
+      {/* SEGMENTATOR SECTION (NEW) */}
+      <section className="py-12 bg-white border-b border-slate-100">
+        <div className="container mx-auto px-6 max-w-6xl">
+          <div className="text-center mb-10">
+            <h2 className="text-2xl font-bold text-slate-800">Di cosa ti occupi?</h2>
+            <p className="text-slate-500">Seleziona il tuo settore per scoprire come GeoTapp ti aiuta.</p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {/* Installatori */}
+            <Link href="/settori/installatori" className="group p-6 rounded-2xl border border-slate-200 hover:border-amber-400 hover:shadow-lg hover:shadow-amber-100 transition-all bg-slate-50 hover:bg-white">
+              <div className="flex items-center gap-4 mb-3">
+                <div className="p-3 bg-amber-100 text-amber-600 rounded-lg group-hover:bg-amber-500 group-hover:text-white transition-colors">
+                  <Hammer size={24} />
+                </div>
+                <h3 className="font-bold text-lg text-slate-900">Installatori</h3>
+              </div>
+              <p className="text-sm text-slate-600 mb-4">Elettricisti, Idraulici, Termoidraulici. Gestione cantiere e rapportini.</p>
+              <div className="text-amber-600 font-bold text-sm flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                Scopri di più <ArrowRight size={16} />
+              </div>
+            </Link>
+
+            {/* Sicurezza */}
+            <Link href="/settori/sicurezza" className="group p-6 rounded-2xl border border-slate-200 hover:border-indigo-400 hover:shadow-lg hover:shadow-indigo-100 transition-all bg-slate-50 hover:bg-white">
+              <div className="flex items-center gap-4 mb-3">
+                <div className="p-3 bg-indigo-100 text-indigo-600 rounded-lg group-hover:bg-indigo-500 group-hover:text-white transition-colors">
+                  <ShieldCheck size={24} />
+                </div>
+                <h3 className="font-bold text-lg text-slate-900">Sicurezza</h3>
+              </div>
+              <p className="text-sm text-slate-600 mb-4">Vigilanza, Steward, Servizi Fiduciari. Tracciamento ore semplice.</p>
+              <div className="text-indigo-600 font-bold text-sm flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                Scopri di più <ArrowRight size={16} />
+              </div>
+            </Link>
+
+            {/* Pulizie */}
+            <Link href="/settori/pulizie" className="group p-6 rounded-2xl border border-slate-200 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-100 transition-all bg-slate-50 hover:bg-white">
+              <div className="flex items-center gap-4 mb-3">
+                <div className="p-3 bg-cyan-100 text-cyan-600 rounded-lg group-hover:bg-cyan-500 group-hover:text-white transition-colors">
+                  <Sparkles size={24} />
+                </div>
+                <h3 className="font-bold text-lg text-slate-900">Pulizie</h3>
+              </div>
+              <p className="text-sm text-slate-600 mb-4">Imprese di pulizia, Facility, Multiservizi. Prova interventi certa.</p>
+              <div className="text-cyan-600 font-bold text-sm flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                Scopri di più <ArrowRight size={16} />
+              </div>
+            </Link>
+          </div>
+        </div>
       </section>
 
       {/* PRODUCT SECTION: FLOW */}

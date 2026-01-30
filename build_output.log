@@ -1,0 +1,63 @@
+
+> geotapp-official@0.1.0 build
+> next build
+
+▲ Next.js 16.1.0 (Turbopack)
+- Environments: .env.local
+
+⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+  Creating an optimized production build ...
+✓ Compiled successfully in 33.0s
+  Running TypeScript ...
+  Collecting page data using 11 workers ...
+  Generating static pages using 11 workers (0/33) ...
+  Generating static pages using 11 workers (8/33) 
+  Generating static pages using 11 workers (16/33) 
+  Generating static pages using 11 workers (24/33) 
+✓ Generating static pages using 11 workers (33/33) in 1580.2ms
+  Finalizing page optimization ...
+⚠ Statically exporting a Next.js application via `next export` disables API routes and middleware.
+This command is meant for static-only hosts, and is not necessary to make your application static.
+Pages in your application without server-side data dependencies will be automatically statically exported by `next build`, including pages powered by `getStaticProps`.
+Learn more: https://nextjs.org/docs/messages/api-routes-static-export
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ○ /admin/dashboard
+├ ○ /admin/login
+├ ○ /admin/verify-2fa
+├ ƒ /api/create-checkout-session
+├ ○ /blog
+├ ○ /chi-siamo
+├ ○ /contact
+├ ○ /download
+├ ○ /en
+├ ○ /en/contact
+├ ○ /en/pricing
+├ ○ /en/products/fortyx
+├ ○ /en/products/geotapp-app
+├ ○ /en/products/geotapp-flow
+├ ○ /en/products/zenith-seo
+├ ○ /features
+├ ○ /guida
+├ ○ /icon.png
+├ ○ /pricing
+├ ○ /privacy
+├ ○ /products/fortyx
+├ ○ /products/geotapp-app
+├ ○ /products/geotapp-flow
+├ ○ /products/zenith-seo
+├ ○ /settori
+├ ○ /settori/installatori
+├ ○ /settori/pulizie
+├ ○ /settori/sicurezza
+├ ○ /success
+└ ○ /terms
+
+
+ƒ Proxy (Middleware)
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+

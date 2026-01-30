@@ -27,7 +27,7 @@ function SuccessContent() {
     clearCart();
 
     // Call our internal API to get the magic link from SaaS
-    fetch('/api/invite', {
+    fetch('/api/purchase/activate', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ session_id: sessionId })

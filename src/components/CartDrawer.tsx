@@ -44,7 +44,7 @@ export default function CartDrawer() {
         }
         setLoading(true);
         try {
-            const response = await fetch('https://crm.geotapp.com/api/v1/checkout', {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_SAAS_URL || 'https://crm.geotapp.com'}/api/v1/checkout`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ items, email: email.trim() }),

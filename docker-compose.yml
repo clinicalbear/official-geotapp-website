@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  geotapp-site:
+    container_name: geotapp_site
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    # Load environment variables from .env.local if present
+    env_file:
+      - .env.local
+    volumes:
+      # Optional: Persist logs
+      - ./logs:/app/logs

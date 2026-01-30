@@ -1,0 +1,293 @@
+
+> geotapp-official@0.1.2 deploy
+> wsl -e bash -lc "npm run build:worker && npx wrangler deploy -c wrangler.jsonc"
+
+
+> geotapp-official@0.1.2 build:worker
+> npx opennextjs-cloudflare build
+
+
+ÔöîÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÉ
+Ôöé OpenNext ÔÇö Cloudflare build Ôöé
+ÔööÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÿ
+
+App directory: /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site
+Next.js version : 16.1.0
+WARN Next.js 16 is not fully supported yet! Some features may not work as expected.
+@opennextjs/cloudflare version: 1.14.4
+@opennextjs/aws version: 3.9.4
+
+ÔöîÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÉ
+Ôöé OpenNext ÔÇö Building Next.js app Ôöé
+ÔööÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÿ
+
+
+> geotapp-official@0.1.2 build
+> next build
+
+Ôû▓ Next.js 16.1.0 (Turbopack)
+- Environments: .env.local
+
+ÔÜá The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+  Creating an optimized production build ...
+Ô£ô Compiled successfully in 32.9s
+  Running TypeScript ...
+  Collecting page data using 11 workers ...
+  Generating static pages using 11 workers (0/37) ...
+  Generating static pages using 11 workers (9/37) 
+  Generating static pages using 11 workers (18/37) 
+  Generating static pages using 11 workers (27/37) 
+Ô£ô Generating static pages using 11 workers (37/37) in 2.4s
+  Finalizing page optimization ...
+
+Route (app)
+Ôöî Ôùï /
+Ôö£ Ôùï /_not-found
+Ôö£ Ôùï /admin/dashboard
+Ôö£ Ôùï /admin/login
+Ôö£ Ôùï /admin/verify-2fa
+Ôö£ ãÆ /api/contact
+Ôö£ ãÆ /api/create-bundle-checkout
+Ôö£ ãÆ /api/create-checkout-session
+Ôö£ Ôùï /blog
+Ôö£ Ôùï /chi-siamo
+Ôö£ Ôùï /contact
+Ôö£ Ôùï /download
+Ôö£ Ôùï /en
+Ôö£ Ôùï /en/contact
+Ôö£ Ôùï /en/pricing
+Ôö£ Ôùï /en/products/fortyx
+Ôö£ Ôùï /en/products/geotapp-app
+Ôö£ Ôùï /en/products/geotapp-flow
+Ôö£ Ôùï /en/products/zenith-seo
+Ôö£ Ôùï /features
+Ôö£ Ôùï /guida
+Ôö£ Ôùï /icon.png
+Ôö£ Ôùï /login
+Ôö£ Ôùï /pricing
+Ôö£ Ôùï /pricing/bundle
+Ôö£ Ôùï /privacy
+Ôö£ Ôùï /products/fortyx
+Ôö£ Ôùï /products/geotapp-app
+Ôö£ Ôùï /products/geotapp-flow
+Ôö£ Ôùï /products/zenith-seo
+Ôö£ Ôùï /settori
+Ôö£ Ôùï /settori/installatori
+Ôö£ Ôùï /settori/pulizie
+Ôö£ Ôùï /settori/sicurezza
+Ôö£ Ôùï /success
+Ôöö Ôùï /terms
+
+
+ãÆ Proxy (Middleware)
+
+Ôùï  (Static)   prerendered as static content
+ãÆ  (Dynamic)  server-rendered on demand
+
+
+ÔöîÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÉ
+Ôöé OpenNext ÔÇö Generating bundle Ôöé
+ÔööÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÿ
+
+Bundling middleware function...
+Bundling static assets...
+Bundling cache assets...
+Building server function: default...
+Applying code patches: 3.424s
+# copyPackageTemplateFiles
+[35mÔÜÖ´©Å Bundling the OpenNext server...
+[0m
+[35mWorker saved in `.open-next/worker.js` ­ƒÜÇ
+[0m
+OpenNext build complete.
+
+> geotapp-official@0.1.2 postbuild:worker
+> node nuclear_patch_v3.js
+
+Starting Nuclear Patch V3...
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/.next/server/chunks/[root-of-the-server]__3d09e0e5._.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/.next/server/chunks/[turbopack]_runtime.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/.next/server/chunks/ssr/[turbopack]_runtime.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/handler.mjs
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/handler.mjs.meta.json
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/index.mjs
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/@next/env/dist/index.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/@opentelemetry/api/build/src/internal/global-utils.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/detect-libc/lib/detect-libc.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/detect-libc/lib/filesystem.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/build/adapter/build-complete.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/build/analysis/get-page-static-info.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/build/analyze/index.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/build/babel/loader/get-config.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/build/collect-build-traces.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/build/get-babel-config-file.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/build/get-static-info-including-layouts.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/build/index.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/build/is-writeable.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/build/load-entrypoint.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/build/load-jsconfig.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/build/next-config-ts/require-hook.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/build/next-config-ts/transpile-config.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/build/preview-key-utils.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/build/swc/index.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/build/swc/jest-transformer.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/build/turbopack-build/impl.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/build/turborepo-access-trace/helpers.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/build/turborepo-access-trace/tcp.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/build/utils.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/build/webpack/cache-invalidation.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/build/webpack/loaders/next-app-loader/index.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/build/webpack/loaders/next-metadata-image-loader.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/build/webpack/loaders/next-metadata-route-loader.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/build/webpack/loaders/next-root-params-loader.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/build/webpack/loaders/resolve-url-loader/lib/join-function.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/build/webpack/plugins/copy-file-plugin.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/build/webpack/plugins/next-types-plugin/index.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/build/webpack/plugins/pages-manifest-plugin.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/build/webpack/plugins/wellknown-errors-plugin/webpackModuleError.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/build/webpack-config.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/build/write-build-id.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/cli/next-test.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/compiled/@edge-runtime/primitives/load.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/compiled/@mswjs/interceptors/ClientRequest/index.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/compiled/commander/index.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/compiled/conf/index.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/compiled/cross-spawn/index.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/compiled/debug/index.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/compiled/edge-runtime/index.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/compiled/find-up/index.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/compiled/http-proxy/index.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/compiled/image-detector/detector.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/compiled/image-size/index.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/compiled/is-docker/index.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/compiled/is-wsl/index.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/compiled/next-server/app-page-turbo-experimental.runtime.prod.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/compiled/next-server/app-page-turbo.runtime.prod.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.prod.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/compiled/next-server/pages-turbo.runtime.prod.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/compiled/send/index.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/compiled/tar/index.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/compiled/watchpack/watchpack.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/compiled/ws/index.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/lib/download-swc.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/lib/file-exists.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/lib/find-config.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/lib/find-pages-dir.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/lib/fs/rename.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/lib/fs/write-atomic.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/lib/get-files-in-dir.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/lib/get-network-host.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/lib/get-package-version.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/lib/has-necessary-dependencies.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/lib/helpers/get-cache-directory.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/lib/helpers/get-npx-command.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/lib/helpers/get-online.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/lib/helpers/get-pkg-manager.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/lib/helpers/get-registry.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/lib/inline-static-env.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/lib/mkcert.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/lib/patch-incorrect-lockfile.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/lib/realpath.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/lib/recursive-copy.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/lib/recursive-delete.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/lib/recursive-readdir.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/lib/resolve-build-paths.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/lib/typescript/getTypeScriptConfiguration.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/lib/typescript/getTypeScriptIntent.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/lib/typescript/writeAppTypeDeclarations.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/lib/typescript/writeConfigurationDefaults.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/lib/verify-partytown-setup.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/lib/verify-root-layout.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/server/app-render/encryption-utils-server.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/server/app-render/manifests-singleton.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/server/config-shared.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/server/config.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/server/dev/browser-logs/file-logger.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/server/dev/get-source-map-from-file.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/server/dev/hot-reloader-rspack.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/server/dev/hot-reloader-turbopack.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/server/image-optimizer.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/server/lib/chrome-devtools-workspace.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/server/lib/cpu-profile.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/server/lib/experimental/create-env-definitions.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/server/lib/find-page-file.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/server/lib/node-fs-methods.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/server/lib/router-utils/cache-life-type-utils.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/server/lib/router-utils/filesystem.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/server/lib/router-utils/instrumentation-globals.external.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/server/lib/router-utils/route-types-utils.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/server/lib/start-server.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/server/lib/worker-utils.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/server/load-manifest.external.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/server/mcp/tools/get-logs.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/server/mcp/tools/get-server-action-by-id.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/server/next-server.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/server/node-environment-extensions/fast-set-immediate.external.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/server/require.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/server/setup-http-agent-env.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/server/typescript/rules/entry.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/server/web/sandbox/context.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/server/web/sandbox/fetch-inline-assets.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/telemetry/anonymous-meta.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/telemetry/detached-flush.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/telemetry/project-id.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/telemetry/storage.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/trace/report/to-json-build.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/next/dist/trace/report/to-json.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/source-map-support/browser-source-map-support.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/node_modules/source-map-support/source-map-support.js
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/.next/server/chunks/ssr/[turbopack]_runtime.js (chunk map)
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/.next/server/chunks/[turbopack]_runtime.js (chunk map)
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/handler.mjs (error logging)
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/handler.mjs (render error logging)
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/handler.mjs (render error response logging)
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/handler.mjs (process request debug)
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/worker.js (error logging)
+P3: Patched /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/server-functions/default/handler.mjs (chunk map x2)
+Nuclear Patch V3 Complete.
+
+ Ôøà´©Å wrangler 4.53.0 (update available 4.59.3)
+ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+­ƒîÇ Building list of assets...
+Ô£¿ Read 89 files from the assets directory /mnt/d/xampp/htdocs/GeoTapp EcoSystem/geotapp-site/.open-next/assets
+­ƒîÇ Starting asset upload...
+­ƒîÇ Found 1 new or modified static asset to upload. Proceeding with upload...
++ /BUILD_ID
+Uploaded 1 of 1 asset
+Ô£¿ Success! Uploaded 1 file (82 already uploaded) (1.31 sec)
+
+Total Upload: 40558.11 KiB / gzip: 3988.54 KiB
+Your Worker has access to the following bindings:
+Binding            Resource      
+env.ASSETS         Assets        
+
+Ô£ÿ [ERROR] Your Worker failed validation because it exceeded size limits.
+
+  
+  A request to the Cloudflare API (/accounts/34a3e90dabdb6c10eb33f37259fafca4/workers/scripts/official-geotapp-website/versions) failed.
+   - Your Worker exceeded the size limit of 3 MiB. Please upgrade to a paid plan to deploy Workers up to 10 MiB. https://dash.cloudflare.com/34a3e90dabdb6c10eb33f37259fafca4/workers/plans [code: 10027]
+  To learn more about this error, visit: https://developers.cloudflare.com/workers/platform/limits/#worker-size
+  Here are the 5 largest dependencies included in your script:
+  
+  - .open-next/server-functions/default/handler.mjs - 29592.06 KiB
+  - .open-next/server-functions/default/node_modules/next/dist/compiled/next-server/app-page-turbo.runtime.prod.js - 1865.83 KiB
+  - node_modules/next/dist/compiled/@vercel/og/resvg.wasm - 1346.05 KiB
+  - .open-next/server-functions/default/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.prod.js - 1246.28 KiB
+  - .open-next/server-functions/default/node_modules/next/dist/server/node-environment-extensions/fast-set-immediate.external.js - 1017.45 KiB
+  
+  If these are unnecessary, consider removing them
+  
+
+
+
+Ô£ÿ [ERROR] A request to the Cloudflare API (/accounts/34a3e90dabdb6c10eb33f37259fafca4/workers/scripts/official-geotapp-website/versions) failed.
+
+  Your Worker exceeded the size limit of 3 MiB. Please upgrade to a paid plan to deploy Workers up to 10 MiB. https://dash.cloudflare.com/34a3e90dabdb6c10eb33f37259fafca4/workers/plans [code: 10027]
+  To learn more about this error, visit: https://developers.cloudflare.com/workers/platform/limits/#worker-size
+
+  
+  If you think this is a bug, please open an issue at: https://github.com/cloudflare/workers-sdk/issues/new/choose
+
+
+­ƒ¬Á  Logs were written to "/home/mike/.config/.wrangler/logs/wrangler-2026-01-22_08-39-49_435.log"

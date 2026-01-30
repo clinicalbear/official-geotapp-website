@@ -154,7 +154,7 @@ export default function FortyX() {
           transition={{ duration: 0.8 }}
         >
           <div className="mb-8 flex justify-center">
-            <Image src="/logo.png" width={180} height={50} alt="GeoTapp Logo" className="drop-shadow-xl" />
+            <Image src="/LogoGeoTapp.png" width={180} height={50} alt="GeoTapp Logo" className="drop-shadow-xl p-2 bg-white/10 rounded-lg backdrop-blur-sm" />
           </div>
 
           <h1

@@ -4,6 +4,7 @@
         "pricing": "Pricing",
         "blog": "Blog",
         "contact": "Contact",
+        "login": "Login",
         "cta": "Start Now"
     },
     "footer": {
@@ -268,6 +269,18 @@
             "reason": "Reason for Contact",
             "message": "Message",
             "send": "Send"
+        }
+    },
+    "login_hub": {
+        "title": "Access your <span class=\"text-primary\">Ecosystem</span>.",
+        "subtitle": "Select the application you want to connect to.",
+        "flow": {
+            "desc": "Business Management, CRM, Invoicing, and Automations.",
+            "btn": "Login to Flow"
+        },
+        "timetracker": {
+            "desc": "Attendance Tracking, Jobs, and Expense Reports.",
+            "btn": "Login to TimeTracker"
         }
     },
     "product_pages": {
