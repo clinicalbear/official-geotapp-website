@@ -1,7 +1,8 @@
 'use client';
 
-import { Check, ArrowRight, Star } from 'lucide-react';
+import { Check, ArrowRight, Star, Heart } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import PricingCalculator from '@/components/PricingCalculator';
 import { useCart } from '@/store/cart';
@@ -21,6 +22,10 @@ interface Product {
   button: string;
   isBestValue?: boolean;
   isCalculator?: boolean;
+  idMonthly?: string;
+  monthlyPrice?: string;
+  savings?: string;
+  metadata?: Record<string, unknown>;
 }
 
 // Base configuration for products (Ids, Prices, Colors, Logic)
@@ -211,7 +216,8 @@ export default function Pricing() {
     addItem({
       id: product.id,
       name: product.name,
-      price: parseFloat(product.price.replace('€', '').replace(',', '.')),
+      // Handle Italian number format: remove € and spaces, remove thousands separator (.), replace decimal separator (,) with .
+      price: parseFloat(product.price.replace('€', '').replace(/\s/g, '').replace(/\./g, '').replace(',', '.')),
       period: product.period?.includes('year') ? 'year' : (product.period?.includes('once') ? undefined : 'mo'),
       quantity: 1,
       metadata: { details: product.desc, ...(product.metadata || {}) }
@@ -247,7 +253,7 @@ export default function Pricing() {
         transition={{ duration: 0.8, delay: 0.3 }}
         className="container mx-auto max-w-6xl mb-16"
       >
-        <Link href="/pricing/bundle" className="block">
+        <Link href="/pricing/bundle/" className="block">
           <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-purple-600 via-blue-600 to-purple-600 p-8 md:p-12 shadow-2xl hover:shadow-3xl transition-all duration-300 group">
             {/* Animated background pattern */}
             <div className="absolute inset-0 opacity-20">
@@ -296,7 +302,33 @@ export default function Pricing() {
       {categories.map((category) => (
         <section key={category.id} className="container mx-auto max-w-7xl mb-32">
           <div className="flex items-center gap-4 mb-12 border-b border-slate-100 pb-4">
-            <h2 className={`text-3xl font-display font-bold ${category.color}`}>{category.title}</h2>
+            <h2 className={`text-3xl font-display font-bold ${category.color} flex items-center`}>
+              {category.id === 'flow' && (
+                <>
+                  <Image
+                    src="/FlowTrasparente.png"
+                    alt="GeoTapp Flow"
+                    width={200}
+                    height={100}
+                    className="h-10 w-auto"
+                  />
+                  <span className="sr-only">{category.title}</span>
+                </>
+              )}
+              {category.id === 'app' && (
+                <>
+                  <Image
+                    src="/TimeTrackerTrasparente.png"
+                    alt="GeoTapp TimeTracker"
+                    width={200}
+                    height={100}
+                    className="h-10 w-auto"
+                  />
+                  <span className="sr-only">{category.title}</span>
+                </>
+              )}
+              {category.id !== 'flow' && category.id !== 'app' && category.title}
+            </h2>
             <span className="text-slate-400 text-sm font-light hidden md:inline-block border-l border-slate-200 pl-4">{category.description}</span>
           </div>
 
@@ -347,24 +379,47 @@ export default function Pricing() {
                 </div>
 
                 <div className="mb-6">
-                  <div className="flex items-baseline gap-1 mb-2">
-                    <span className="text-3xl font-bold text-slate-900">{product.price}</span>
-                    <span className="text-xs text-slate-500 font-medium">{product.period}</span>
-                  </div>
-                  {(product as any).monthlyPrice && (
-                    <div className="space-y-1">
-                      <div className="text-sm text-slate-600">
-                        oppure <span className="font-semibold text-slate-700">{(product as any).monthlyPrice}/mese</span>
-                      </div>
-                      {(product as any).savings && (
-                        <div className="inline-flex items-center gap-1 px-2 py-1 bg-green-50 border border-green-200 rounded-full">
-                          <span className="text-[10px] font-bold text-green-700 uppercase tracking-wider">
-                            Risparmio annuale: {(product as any).savings}
+                  {(() => {
+                    const hasMonthly = Boolean((product as Product).monthlyPrice);
+                    const isOnce = product.period === '/once';
+                    const annualPrice = product.price.replace(/\s/g, '');
+                    const monthlyPrice = (product as Product).monthlyPrice?.replace(/\s/g, '');
+                    const periodLabel = isOnce
+                      ? 'one-time (lifetime)'
+                      : hasMonthly
+                        ? '/anno'
+                        : product.period;
+                    const savings = (product as Product).savings;
+
+                    return (
+                      <>
+                        <div className="flex items-baseline gap-2 mb-2">
+                          <span className={`text-slate-900 ${hasMonthly ? 'text-4xl' : 'text-3xl'} font-bold`}>
+                            {annualPrice}
                           </span>
+                          <span className="text-xs text-slate-500 font-medium">{periodLabel}</span>
                         </div>
-                      )}
-                    </div>
-                  )}
+                        {hasMonthly && (
+                          <div className="space-y-1">
+                            <div className="text-sm text-slate-600">
+                              oppure <span className="font-semibold text-slate-700">{monthlyPrice}/mese</span>
+                            </div>
+                            {savings && (
+                              <div className="inline-flex items-center gap-2 px-2 py-1 bg-green-50 border border-green-200 rounded-full">
+                                <Heart className="h-3 w-3 text-green-600" />
+                                <span className="text-[10px] font-bold text-green-700 uppercase tracking-wider">
+                                  Risparmio annuale: {savings}
+                                </span>
+                              </div>
+                            )}
+                          </div>
+                        )}
+                        {isOnce && !hasMonthly && (
+                          <div className="text-xs text-slate-500">Nessuna opzione mensile</div>
+                        )}
+                      </>
+                    );
+                  })()}
                 </div>
 
                 <p className="text-sm text-slate-600 mb-6 flex-1 leading-relaxed border-b border-slate-100 pb-6">
