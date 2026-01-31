@@ -26,10 +26,14 @@ function SuccessContent() {
     // Clear cart on successful entry
     clearCart();
 
-    // Call our internal API to get the magic link from SaaS
-    fetch('/api/purchase/activate', {
+    // Call SaaS backend directly (frontend is static, no API routes)
+    const saasUrl = process.env.NEXT_PUBLIC_SAAS_URL || 'https://crm.geotapp.com';
+    fetch(`${saasUrl}/api/v1/purchase/activate`, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        'Content-Type': 'application/json',
+        'Origin': 'https://geotapp.com'
+      },
       body: JSON.stringify({ session_id: sessionId })
     })
       .then(res => res.json())
