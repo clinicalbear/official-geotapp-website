@@ -123,6 +123,27 @@ function gtmsa_get_target_languages($settings = null) {
     return array_values($langs);
 }
 
+/**
+ * Returns only those target languages that are registered in Polylang.
+ * Pure function — accepts the lists rather than calling Polylang directly,
+ * making it unit-testable.
+ *
+ * @param string[] $targets    Language slugs we want to translate to.
+ * @param string[] $registered Language slugs registered in Polylang.
+ * @return string[]
+ */
+function gtmsa_filter_target_languages(array $targets, array $registered): array {
+    $filtered = [];
+    foreach ($targets as $lang) {
+        if (in_array($lang, $registered, true)) {
+            $filtered[] = $lang;
+        } else {
+            error_log('GTMSA: skipping lang ' . $lang . ' — not registered in Polylang');
+        }
+    }
+    return $filtered;
+}
+
 function gtmsa_is_polylang_ready() {
     return function_exists('pll_languages_list')
         && function_exists('pll_get_post_language')
@@ -430,6 +451,15 @@ function gtmsa_translate_one_post($source_post_id, $settings) {
     }
 
     $target_languages = gtmsa_get_target_languages($settings);
+    if (!$target_languages) {
+        return true;
+    }
+
+    // Filter to only languages registered in Polylang
+    $registered_langs = pll_languages_list(['fields' => 'slug']);
+    if (is_array($registered_langs)) {
+        $target_languages = gtmsa_filter_target_languages($target_languages, $registered_langs);
+    }
     if (!$target_languages) {
         return true;
     }
