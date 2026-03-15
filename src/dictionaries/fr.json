@@ -1,0 +1,319 @@
+{
+  "navbar": {
+    "products": "Produits",
+    "pricing": "Tarifs",
+    "blog": "Blog",
+    "contact": "Contact",
+    "login": "Connexion",
+    "cta": "Demander une démo"
+  },
+  "footer": {
+    "tagline": "Activité terrain enregistrée. Opérations organisées. Rapports vérifiables.",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation",
+    "rights": "Tous droits réservés."
+  },
+  "landing": {
+    "hero_badge": "GeoTapp — Contrôle des interventions terrain",
+    "hero_title": "Contrôlez ce qui se passe<br />sur le terrain.",
+    "hero_subtitle": "GeoTapp donne aux entreprises disposant de techniciens et d'opérateurs terrain un contrôle réel sur le travail effectué : activité enregistrée, opérations organisées, rapports vérifiables.",
+    "hero_cta_primary": "Demander une démo",
+    "hero_cta_secondary": "Découvrir les produits",
+    "features_title": "Ce dont vous avez vraiment besoin",
+    "features_subtitle": "Trois outils intégrés pour contrôler les interventions terrain depuis le bureau.",
+    "cta_title": "Prêt à contrôler vos opérations terrain ?",
+    "cta_subtitle": "Rejoignez les entreprises qui utilisent GeoTapp pour organiser les interventions et produire des rapports de travail vérifiables.",
+    "cta_button": "Demander une démo"
+  },
+  "home_sections": {
+    "flow": {
+      "badge": "GeoTapp Flow",
+      "title": "Coordonnez le terrain depuis un hub opérationnel unique.",
+      "subtitle": "Flow est le système utilisé par le bureau pour gérer les missions, affecter les activités, suivre l'avancement et générer des rapports de travail structurés. <strong class=\"text-slate-900\">Moins de friction interne, plus de contrôle réel.</strong>",
+      "features": {
+        "crm": "<strong>Gestion des missions :</strong> Créez des interventions, affectez les techniciens et suivez l'avancement en temps réel.",
+        "pipeline": "<strong>Rapports structurés :</strong> Chaque intervention terminée génère une documentation traçable prête pour le client."
+      },
+      "link": "Découvrir GeoTapp Flow"
+    },
+    "app": {
+      "badge": "GeoTapp TimeTracker",
+      "title": "Le technicien enregistre. Le bureau contrôle.",
+      "subtitle": "TimeTracker est l'application mobile utilisée par les techniciens pour enregistrer l'activité terrain. Pointage entrée/sortie, photos et notes liés à chaque intervention. <strong>Disponible sur Android et iOS.</strong>",
+      "card_gps": {
+        "title": "Pointage GPS",
+        "desc": "Localisation vérifiée"
+      },
+      "card_gdpr": {
+        "title": "Conforme RGPD",
+        "desc": "Sans traçage continu"
+      },
+      "link": "Découvrir GeoTapp TimeTracker"
+    },
+    "verifier": {
+      "badge": "GeoTapp Verifier",
+      "title": "Des rapports de travail que tout le monde peut vérifier.",
+      "subtitle": "Verifier vous permet de contrôler qu'un rapport de travail correspond aux données opérationnelles enregistrées et n'a pas été modifié. Plus de transparence pour le client, moins de litiges.",
+      "features": {
+        "integrity": "<strong>Intégrité vérifiée :</strong> Le système compare le rapport aux données réelles de session enregistrées sur le terrain.",
+        "independent": "<strong>Vérification indépendante :</strong> N'importe qui peut vérifier un rapport sans accéder à la plateforme."
+      },
+      "link": "Découvrir GeoTapp Verifier"
+    },
+    "core": {
+      "badge": "Plateforme GeoTapp",
+      "title": "Conçu pour le travail terrain.",
+      "subtitle": "Trois produits intégrés, un seul objectif : donner aux entreprises avec des opérateurs terrain la visibilité et la documentation opérationnelle dont elles ont besoin.",
+      "features": [
+        {
+          "title": "Opérabilité mobile réelle",
+          "desc": "TimeTracker fonctionne sans connexion et se synchronise dès que le technicien retrouve le réseau. Le travail ne s'arrête jamais."
+        },
+        {
+          "title": "Protection de la vie privée par conception",
+          "desc": "La localisation est enregistrée <strong>uniquement</strong> au pointage entrée et sortie. Aucun traçage continu. Pleinement conforme au RGPD."
+        },
+        {
+          "title": "Synchronisation en temps réel",
+          "desc": "L'activité enregistrée sur le terrain arrive dans Flow immédiatement, de sorte que le bureau dispose toujours d'une vue opérationnelle à jour."
+        },
+        {
+          "title": "Rapports vérifiables dans le temps",
+          "desc": "Avec GeoTapp Verifier, tout rapport peut être validé de manière indépendante. Les données collectées restent fiables et incontestables."
+        }
+      ]
+    },
+    "footer_cta": {
+      "title": "Prenez le contrôle réel<br />de votre terrain.",
+      "subtitle": "GeoTapp Flow, TimeTracker et Verifier fonctionnent ensemble pour donner à votre entreprise une visibilité réelle et une documentation fiable du travail effectué.",
+      "button": "Contactez-nous"
+    }
+  },
+  "pricing": {
+    "badge": "Solutions GeoTapp",
+    "title": "Choisissez le bon produit.",
+    "subtitle": "Des solutions concrètes pour les entreprises disposant de techniciens et d'opérateurs terrain.",
+    "vat_note": "Tous les prix s'entendent hors TVA. Facturation selon les conditions d'utilisation.",
+    "categories": {
+      "app": {
+        "title": "GeoTapp TimeTracker",
+        "description": "Application mobile pour techniciens terrain",
+        "products": [
+          {
+            "name": "GeoTapp TimeTracker",
+            "tagline": "À partir de",
+            "desc": "La solution complète pour suivre les présences, l'activité terrain et les preuves de travail. Prix par utilisateur/an.",
+            "features": ["Application Android/iOS", "Pointage GPS", "Rapports hebdomadaires"],
+            "button": "Voir le calculateur"
+          }
+        ]
+      },
+      "flow": {
+        "title": "GeoTapp Flow",
+        "description": "Gestion des opérations terrain et des équipes",
+        "products": [
+          {
+            "name": "GeoTapp Flow Lifetime",
+            "tagline": "Licence à vie",
+            "desc": "Payez une fois, utilisez pour toujours. Accès complet à GeoTapp Flow sans abonnement récurrent. Inclut les futures mises à jour.",
+            "features": [
+              "Accès complet à Flow",
+              "Sans frais mensuels",
+              "Mises à jour à vie incluses"
+            ]
+          },
+          {
+            "name": "GeoTapp Flow Business",
+            "tagline": "Pour les entreprises structurées",
+            "desc": "Gestion opérationnelle avancée, équipes illimitées et assistance prioritaire.",
+            "features": [
+              "Équipes illimitées",
+              "Accès API",
+              "Assistance prioritaire"
+            ]
+          },
+          {
+            "name": "GeoTapp Flow Team",
+            "tagline": "Pour les petites équipes",
+            "desc": "Idéal pour les groupes de travail qui ont besoin de coordination et d'une visibilité opérationnelle partagée.",
+            "features": [
+              "5 utilisateurs inclus",
+              "Gestion des missions",
+              "Intégrations de base"
+            ]
+          },
+          {
+            "name": "GeoTapp Flow Solo",
+            "tagline": "Pour les opérateurs individuels",
+            "desc": "Toute la puissance de Flow pour le professionnel qui travaille en indépendant.",
+            "features": ["1 utilisateur", "Gestion des activités", "Rapports de base"]
+          }
+        ]
+      }
+    }
+  },
+  "contact": {
+    "title": "Parlons <span class=\"text-primary\">Business</span>.",
+    "subtitle": "Vous devez comprendre si GeoTapp convient à votre entreprise. Nous sommes là pour répondre concrètement.",
+    "guarantee_title": "Garantie de réponse",
+    "guarantee_text": "Première réponse moyenne en 12 heures ouvrées. Aucune demande perdue dans le vide.",
+    "form": {
+      "name": "Nom",
+      "company": "Entreprise",
+      "email": "E-mail professionnel",
+      "reason": "Motif du contact",
+      "message": "Message",
+      "send": "Envoyer"
+    }
+  },
+  "login_hub": {
+    "title": "Accédez à votre <span class=\"text-primary\">Compte</span>.",
+    "subtitle": "Sélectionnez le produit auquel vous souhaitez vous connecter.",
+    "flow": {
+      "desc": "Gestion opérationnelle, missions, coordination et rapports.",
+      "btn": "Connexion à Flow"
+    },
+    "timetracker": {
+      "desc": "Présences, activité terrain et preuves de travail.",
+      "btn": "Connexion à TimeTracker"
+    }
+  },
+  "product_pages": {
+    "flow": {
+      "hero_badge": "GeoTapp Flow — Gestion des opérations terrain",
+      "hero_title": "GeoTapp Flow.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600\">Hub opérationnel.</span>",
+      "hero_subtitle": "Le centre opérationnel pour les entreprises disposant de techniciens et d'opérateurs terrain. Gérez les missions, coordonnez les équipes et produisez des rapports de travail structurés et vérifiables.",
+      "visual_placeholder": "PANNEAU OPÉRATIONS",
+      "grid_title": "Capacités opérationnelles",
+      "grid_subtitle": "Chaque module est conçu pour un contrôle réel des interventions terrain. Cliquez pour explorer.",
+      "sectors": {
+        "1": "Missions et Clients",
+        "2": "Planification et Ressources",
+        "3": "Contrôle et Visibilité"
+      },
+      "cta_title": "Prenez le contrôle réel de votre terrain.",
+      "cta_button": "Voir les tarifs",
+      "modal": {
+        "status": "ÉTAT DU SYSTÈME : <span class=\"text-green-600\">OPÉRATIONNEL</span>",
+        "encryption": "DONNÉES : <span class=\"text-slate-400\">PROTÉGÉES</span>",
+        "access": "ACCÈS : <span class=\"text-blue-600\">SÉCURISÉ</span>",
+        "close": "Fermer"
+      },
+      "systems": {
+        "nexus-core": {
+          "name": "Gestion des missions",
+          "short": "Créez et gérez les interventions techniques. Affectez les tâches aux techniciens, suivez l'avancement et gardez tout tracé par mission.",
+          "full": "### Contrôle central des missions.\n\nChaque intervention commence comme une mission structurée.\nLa **Gestion des missions** vous donne une vue claire de tout le travail en cours.\n\n#### Gestion des interventions\n\nCréez une mission, affectez le technicien, définissez le site et la date.\nSuivez le statut : Ouverte, En cours, Terminée.\n\n#### Historique opérationnel\n\nChaque mission dispose d'une archive complète des activités, preuves photos, notes et horodatages.\nLe client demande ce qui a été fait ? Vous avez les données. Toujours."
+        },
+        "titan-flow": {
+          "name": "Affectation des tâches",
+          "short": "Distribuez le travail aux techniciens avec précision. Communiquez les instructions, les délais et les priorités opérationnelles de manière structurée.",
+          "full": "### La bonne mission au bon technicien.\n\nUne affectation confuse génère des retards et des litiges.\nL'**Affectation des tâches** apporte la clarté opérationnelle.\n\n#### Distribution précise\n\nDès qu'une mission est ouverte, affectez un ou plusieurs techniciens.\nChaque technicien voit son travail sur GeoTapp TimeTracker.\n\n#### Communication opérationnelle\n\nInstructions, notes, pièces jointes techniques : tout parvient au technicien avant qu'il parte sur le terrain.\nMoins d'appels, moins de malentendus, moins de retards."
+        },
+        "ledger-prime": {
+          "name": "Rapports et facturation",
+          "short": "Générez des rapports structurés à partir de chaque mission. Exportez la documentation et facilitez la facturation avec des données terrain réelles.",
+          "full": "### De l'intervention au rapport, de manière ordonnée.\n\nLa facturation manuelle est lente et souvent incomplète.\nLes **Rapports et la facturation** ferment le cycle opérationnel.\n\n#### Rapports structurés\n\nChaque intervention terminée génère une documentation en collectant les horodatages, photos et notes du terrain.\nAucune donnée à saisir manuellement — tout provient de TimeTracker.\n\n#### Aide à la facturation\n\nLes données réelles des missions facilitent des devis et factures plus précis.\nMoins d'erreurs, moins de litiges, cycle administratif plus rapide."
+        },
+        "quantum-logistics": {
+          "name": "Calendrier des interventions",
+          "short": "Planifiez les interventions, visualisez le calendrier opérationnel et gérez la disponibilité des équipes sans chevauchements.",
+          "full": "### Vue complète des interventions planifiées.\n\nSans calendrier partagé, la planification devient chaotique.\nLe **Calendrier des interventions** vous donne une visibilité opérationnelle claire.\n\n#### Planification avancée\n\nVisualisez toutes les interventions en vues journalière, hebdomadaire et mensuelle.\nIdentifiez les chevauchements et optimisez la distribution de la charge de travail.\n\n#### Disponibilité des équipes\n\nVoyez qui est disponible, qui est en congé et qui est déjà surchargé.\nAffectez de nouvelles interventions sans créer de conflits opérationnels."
+        },
+        "supply-command": {
+          "name": "Gestion des ressources",
+          "short": "Contrôlez les matériaux, équipements et ressources opérationnelles nécessaires pour chaque intervention terrain. Aucune mauvaise surprise.",
+          "full": "### Aucune intervention à court de ressources.\n\nEnvoyer un technicien sur le terrain sans les bons matériaux est une erreur coûteuse.\nLa **Gestion des ressources** prévient les mauvaises surprises opérationnelles.\n\n#### Matériaux par mission\n\nAssociez les ressources nécessaires à chaque mission.\nLe responsable voit à l'avance ce qui est nécessaire et quand.\n\n#### Fournisseurs et approvisionnement\n\nEnregistrez les coordonnées et les conditions de vos fournisseurs habituels.\nRéduisez les délais d'approvisionnement et maîtrisez les coûts."
+        },
+        "the-architect": {
+          "name": "Planification du travail",
+          "short": "Organisez le travail en phases, tâches et délais. Gardez le projet sous contrôle sans tableurs ni messages WhatsApp.",
+          "full": "### Structurez le travail. Contrôlez l'avancement.\n\nLes missions complexes nécessitent de la structure.\nLa **Planification du travail** apporte l'ordre opérationnel.\n\n#### Phases et délais\n\nStructurez les interventions complexes en phases opérationnelles avec des délais clairs.\nAttribuez les responsabilités à chaque membre de l'équipe.\n\n#### Suivi de l'avancement\n\nVisualisez l'avancement en temps réel.\nSachez toujours ce qui a été fait et ce qui reste ouvert.\nAgissez avant qu'un retard ne devienne un problème client."
+        },
+        "the-auditor": {
+          "name": "Documentation des interventions",
+          "short": "Collectez des preuves photos, notes opérationnelles et documents signés pour chaque intervention. Le travail effectué reste vérifiable.",
+          "full": "### Preuve réelle pour chaque intervention.\n\nSans documentation, le travail accompli est contestable.\nLa **Documentation des interventions** rend chaque mission vérifiable.\n\n#### Preuves photos\n\nLes techniciens prennent des photos directement depuis GeoTapp TimeTracker sur le terrain.\nLes images sont automatiquement liées à la mission avec horodatage et localisation.\n\n#### Signature numérique du client\n\nLe client peut signer le rapport de travail directement sur l'écran du technicien.\nLa signature numérique est incluse dans le rapport et constitue la preuve du service rendu."
+        },
+        "the-uplink": {
+          "name": "Liaison terrain-bureau",
+          "short": "Les données collectées par TimeTracker arrivent dans Flow en temps réel. Le terrain et le bureau travaillent sur les mêmes données opérationnelles.",
+          "full": "### Bureau et terrain, enfin connectés.\n\nLa déconnexion entre terrain et bureau génère des erreurs évitables, des retards et des litiges.\nLa **Liaison terrain-bureau** comble le fossé.\n\n#### Synchronisation en temps réel\n\nChaque pointage, photo et note enregistré sur TimeTracker arrive dans Flow immédiatement.\nLe responsable dispose d'une vue en direct sans avoir à appeler le technicien.\n\n#### Historique fiable\n\nTout ce que le technicien enregistre sur le terrain est archivé et lié à la mission.\nAucune donnée n'est perdue. Aucune information ne manque au moment de faire le rapport."
+        },
+        "the-oracle": {
+          "name": "Visibilité opérationnelle",
+          "short": "Tableau de bord opérationnel en temps réel. Sachez toujours combien d'interventions sont ouvertes, en cours ou terminées aujourd'hui.",
+          "full": "### Données opérationnelles, pas des suppositions.\n\nDécider sans données fiables est dangereux.\nLa **Visibilité opérationnelle** transforme les données terrain en informations concrètes.\n\n#### Tableau de bord opérationnel\n\nVoyez en temps réel :\n- Interventions ouvertes et en cours\n- Techniciens actifs\n- Interventions terminées aujourd'hui et cette semaine\n\n#### Rapports périodiques\n\nRecevez des résumés d'activité automatisés.\nComparez les périodes, identifiez les goulots d'étranglement et optimisez les opérations."
+        }
+      }
+    },
+    "app": {
+      "hero_badge": "GeoTapp TimeTracker — Application pour techniciens terrain",
+      "hero_title": "GeoTapp TimeTracker.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600\">Le terrain dans votre poche.</span>",
+      "hero_subtitle": "L'application mobile utilisée par les techniciens pour enregistrer l'activité, collecter les preuves et maintenir le fil opérationnel directement depuis le terrain. Disponible sur Android et iOS.",
+      "visual_placeholder": "INTERFACE TERRAIN",
+      "grid_title": "Outils pour le travail terrain",
+      "grid_subtitle": "Chaque fonctionnalité est conçue pour ceux qui travaillent hors bureau et n'ont pas de temps à perdre. Cliquez pour explorer.",
+      "sectors": {
+        "1": "Opérations essentielles",
+        "2": "Logistique et Communications",
+        "3": "Données et Administration"
+      },
+      "cta_title": "Donnez à vos techniciens le bon outil.",
+      "cta_button": "Voir les tarifs",
+      "modal": {
+        "status": "ÉTAT DU SYSTÈME : <span class=\"text-green-600\">OPÉRATIONNEL</span>",
+        "encryption": "DONNÉES : <span class=\"text-slate-400\">PROTÉGÉES</span>",
+        "device": "APPAREIL : <span class=\"text-blue-600\">MOBILE / TABLETTE</span>",
+        "close": "Fermer"
+      },
+      "systems": {
+        "timelock-alpha": {
+          "name": "Pointage GPS",
+          "short": "Pointage entrée et sortie lié à la position GPS et à un horodatage précis. Chaque session de travail devient un événement opérationnel vérifiable.",
+          "full": "### L'heure est vérifiable.\n\nLes horodatages sans vérification génèrent des litiges.\nLe **Pointage GPS** fait de chaque session de travail un enregistrement fiable et incontestable.\n\n#### Pointage géolocalisé entrée et sortie\n\nLe technicien enregistre l'entrée et la sortie du terrain.\nLa localisation, l'adresse et l'heure sont enregistrées automatiquement.\n\n#### Historique immuable\n\nChaque session est un enregistrement vérifiable : heure d'entrée, heure de sortie, position, durée et mission associée.\nLe client demande quand vous êtes arrivé ? Les données sont là, toujours."
+        },
+        "event-horizon": {
+          "name": "Planification des équipes",
+          "short": "Gérez les équipes et la disponibilité du personnel. Vues hebdomadaires et mensuelles pour une coordination sans confusion ni chevauchements.",
+          "full": "### Aucun conflit de planning.\n\nOrganiser du personnel mobile exige de la clarté.\nLa **Planification des équipes** donne au responsable une vue précise et à jour.\n\n#### Vue calendrier\n\nVoyez qui travaille quand.\nIdentifiez les absences, congés et chevauchements avant qu'ils ne deviennent des problèmes opérationnels.\n\n#### Disponibilité en temps réel\n\nLes employés confirment leur présence ou signalent leurs absences directement depuis l'application.\nLe responsable voit les lacunes du planning avant d'affecter de nouvelles missions."
+        },
+        "unit-matrix": {
+          "name": "Registre des opérateurs",
+          "short": "Gérez un registre complet de vos opérateurs : rôles, contacts, certifications et accès à la plateforme.",
+          "full": "### Connaissez votre équipe.\n\nChaque opérateur est une ressource opérationnelle clé.\nLe **Registre des opérateurs** centralise toutes les informations essentielles.\n\n#### Gestion des certifications\n\nVoyez en un coup d'œil qui possède les qualifications requises pour une intervention ou un site spécifique.\n\n#### Intégration rapide\n\nAjouter un nouveau technicien est simple.\nEnvoyez un lien d'invitation : en quelques minutes, il est opérationnel sur GeoTapp TimeTracker."
+        },
+        "sector-grid": {
+          "name": "Sites et chantiers",
+          "short": "Créez une base de données de sites opérationnels et de chantiers. Liez chaque intervention au bon emplacement et organisez les équipes par zone.",
+          "full": "### Chaque intervention au bon endroit.\n\nTravailler sans référence géographique génère de la confusion.\nLes **Sites et chantiers** apportent la clarté opérationnelle.\n\n#### Base de données des sites\n\nCréez un catalogue de sites clients, chantiers et emplacements opérationnels.\nLe système lie automatiquement l'activité du technicien au site d'intervention.\n\n#### Équipes par zone\n\nOrganisez les techniciens en équipes par site ou zone géographique.\nAffectez les interventions à la bonne équipe, pas seulement à l'individu."
+        },
+        "energy-logistics": {
+          "name": "Gestion des véhicules et des frais",
+          "short": "Suivez l'utilisation des véhicules de société, le carburant consommé et les frais de déplacement du personnel terrain.",
+          "full": "### Chaque déplacement documenté.\n\nLes frais de déplacement sont un poste critique pour toute entreprise avec du personnel mobile.\nLa **Gestion des véhicules** surveille chaque coût sortant.\n\n#### Utilisation des véhicules\n\nAffectez temporairement un véhicule à un employé pour une intervention.\nSachez toujours qui utilise quel véhicule et pour quelle mission.\n\n#### Frais de carburant\n\nL'employé enregistre le plein directement depuis l'application avec une photo du reçu et le montant.\nTout archivé, tout lié à la mission."
+        },
+        "neural-link": {
+          "name": "Communications opérationnelles",
+          "short": "Canal interne pour les communications d'entreprise. Messages ciblés vers des groupes spécifiques avec confirmation de lecture.",
+          "full": "### Communications claires. Pas de bruit de fond.\n\nWhatsApp mélange vie privée et professionnelle et n'offre aucun contrôle sur l'état de lecture.\nLes **Communications opérationnelles** constituent le canal officiel de l'entreprise.\n\n#### Messages ciblés\n\nNotifiez uniquement l'équipe qui doit savoir.\nChangement d'équipe sur le site de Lyon ? Seuls les techniciens affectés reçoivent le message.\n\n#### Confirmations de lecture\n\nSachez toujours qui a lu la communication et qui ne l'a pas fait.\nUne responsabilité claire et transparente pour tous."
+        },
+        "payroll-bridge": {
+          "name": "Export des présences",
+          "short": "Exportez les présences mensuelles dans des formats compatibles avec les principaux logiciels de paie. Moins de travail manuel, moins d'erreurs.",
+          "full": "### La paie sans maux de tête.\n\nLa fin du mois n'a pas à être un cauchemar administratif.\nL'**Export des présences** connecte les opérations terrain à l'administration RH.\n\n#### Multi-formats\n\nGénérez des fichiers de présences prêts à être importés dans les principaux logiciels de paie français (Silae, PayFit, ADP, Cegid).\n\n#### Accès pour le cabinet social\n\nDonnez un accès limité à votre cabinet de paie.\nIl télécharge les données dont il a besoin de manière autonome, sans vous appeler à chaque fin de mois."
+        },
+        "data-core": {
+          "name": "Rapports hebdomadaires",
+          "short": "Rapports détaillés sur les heures travaillées par mission et par opérateur. Données fiables pour le contrôle interne et la facturation.",
+          "full": "### Les données ne mentent pas.\n\nPrenez des décisions sur la base des faits, pas des impressions.\nLes **Rapports hebdomadaires** extraient de la valeur des opérations quotidiennes.\n\n#### Rapports détaillés\n\nChaque semaine, une image complète : qui a travaillé, où, sur quelle mission et pendant combien de temps.\n\n#### Transparence totale\n\nLes employés et les responsables consultent le même rapport mensuel.\nLes heures comptabilisées sont identiques pour tous.\nAucun litige en fin de mois."
+        },
+        "identity-forge": {
+          "name": "Application aux couleurs de l'entreprise",
+          "short": "Importez votre logo et choisissez vos couleurs d'entreprise. Vos opérateurs utilisent une application qui reflète votre identité visuelle.",
+          "full": "### Votre entreprise, votre application.\n\nN'utilisez pas une application générique.\nFaites en sorte que vos employés se sentent membres de VOTRE entreprise grâce à une expérience visuelle cohérente.\n\n#### Logo de l'entreprise\n\nVotre logo affiché en évidence sur l'écran de connexion et le tableau de bord principal.\n\n#### Couleurs de l'entreprise\n\nChoisissez le thème de couleurs qui correspond à votre image d'entreprise.\nProfessionnel, cohérent, reconnaissable."
+        }
+      }
+    }
+  }
+}

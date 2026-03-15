@@ -1,0 +1,319 @@
+{
+  "navbar": {
+    "products": "Productos",
+    "pricing": "Precios",
+    "blog": "Blog",
+    "contact": "Contacto",
+    "login": "Acceder",
+    "cta": "Solicitar demo"
+  },
+  "footer": {
+    "tagline": "Actividad de campo registrada. Operaciones organizadas. Informes verificables.",
+    "privacy": "Política de privacidad",
+    "terms": "Términos de servicio",
+    "rights": "Todos los derechos reservados."
+  },
+  "landing": {
+    "hero_badge": "GeoTapp — Control de trabajo de campo",
+    "hero_title": "Controla lo que ocurre<br />en el campo.",
+    "hero_subtitle": "GeoTapp da a las empresas con técnicos y operadores de campo un control real sobre el trabajo realizado: actividad registrada, operaciones organizadas, informes verificables.",
+    "hero_cta_primary": "Solicitar una demo",
+    "hero_cta_secondary": "Explorar productos",
+    "features_title": "Lo que realmente necesitas",
+    "features_subtitle": "Tres herramientas integradas para controlar el trabajo de campo desde la oficina.",
+    "cta_title": "¿Listo para controlar tus operaciones de campo?",
+    "cta_subtitle": "Únete a las empresas que usan GeoTapp para organizar intervenciones y producir informes de trabajo verificables.",
+    "cta_button": "Solicitar una demo"
+  },
+  "home_sections": {
+    "flow": {
+      "badge": "GeoTapp Flow",
+      "title": "Coordina el campo desde un hub operativo único.",
+      "subtitle": "Flow es el sistema utilizado por la oficina para gestionar trabajos, asignar actividades, hacer seguimiento del progreso y generar informes de trabajo estructurados. <strong class=\"text-slate-900\">Menos fricción interna, más control real.</strong>",
+      "features": {
+        "crm": "<strong>Gestión de trabajos:</strong> Crea intervenciones, asigna técnicos y monitoriza el progreso en tiempo real.",
+        "pipeline": "<strong>Informes estructurados:</strong> Cada trabajo completado genera documentación trazable lista para el cliente."
+      },
+      "link": "Explorar GeoTapp Flow"
+    },
+    "app": {
+      "badge": "GeoTapp TimeTracker",
+      "title": "El técnico registra. La oficina controla.",
+      "subtitle": "TimeTracker es la aplicación móvil utilizada por los técnicos para registrar la actividad de campo. Entrada, salida, fotos y notas vinculadas a cada trabajo. <strong>Disponible en Android e iOS.</strong>",
+      "card_gps": {
+        "title": "Control de presencia GPS",
+        "desc": "Ubicación verificada"
+      },
+      "card_gdpr": {
+        "title": "Conforme al RGPD",
+        "desc": "Sin rastreo continuo"
+      },
+      "link": "Explorar GeoTapp TimeTracker"
+    },
+    "verifier": {
+      "badge": "GeoTapp Verifier",
+      "title": "Informes de trabajo que cualquiera puede verificar.",
+      "subtitle": "Verifier te permite comprobar si un informe de trabajo coincide con los datos operativos registrados y no ha sido modificado. Más transparencia para el cliente, menos disputas.",
+      "features": {
+        "integrity": "<strong>Integridad verificada:</strong> El sistema compara el informe con los datos reales de sesión registrados en el campo.",
+        "independent": "<strong>Verificación independiente:</strong> Cualquiera puede verificar un informe sin acceder a la plataforma."
+      },
+      "link": "Explorar GeoTapp Verifier"
+    },
+    "core": {
+      "badge": "Plataforma GeoTapp",
+      "title": "Diseñado para el trabajo de campo.",
+      "subtitle": "Tres productos integrados, un único objetivo: dar a las empresas con operadores de campo la visibilidad y la documentación operativa que necesitan.",
+      "features": [
+        {
+          "title": "Operatividad móvil real",
+          "desc": "TimeTracker funciona sin conexión y se sincroniza en cuanto el técnico recupera la red. El trabajo nunca se detiene."
+        },
+        {
+          "title": "Privacidad por diseño",
+          "desc": "La ubicación se registra <strong>únicamente</strong> al marcar la entrada y la salida. Sin rastreo continuo. Totalmente conforme al RGPD."
+        },
+        {
+          "title": "Sincronización en tiempo real",
+          "desc": "La actividad registrada en el campo llega a Flow de inmediato, de modo que la oficina siempre dispone de una imagen operativa actualizada."
+        },
+        {
+          "title": "Informes verificables a lo largo del tiempo",
+          "desc": "Con GeoTapp Verifier, cualquier informe puede validarse de forma independiente. Los datos recopilados siguen siendo fiables e incontestables."
+        }
+      ]
+    },
+    "footer_cta": {
+      "title": "Toma el control real<br />de tu campo.",
+      "subtitle": "GeoTapp Flow, TimeTracker y Verifier trabajan juntos para dar a tu empresa visibilidad real y documentación fiable del trabajo realizado.",
+      "button": "Habla con nosotros"
+    }
+  },
+  "pricing": {
+    "badge": "Soluciones GeoTapp",
+    "title": "Elige el producto adecuado.",
+    "subtitle": "Soluciones prácticas para empresas con técnicos y operadores de campo.",
+    "vat_note": "Todos los precios excluyen IVA. Facturación según los términos de servicio.",
+    "categories": {
+      "app": {
+        "title": "GeoTapp TimeTracker",
+        "description": "Aplicación móvil para técnicos de campo",
+        "products": [
+          {
+            "name": "GeoTapp TimeTracker",
+            "tagline": "Desde",
+            "desc": "La solución completa para registrar presencias, actividad de campo y pruebas de trabajo. Precio por usuario/año.",
+            "features": ["App Android/iOS", "Fichaje GPS", "Informes semanales"],
+            "button": "Ver calculadora"
+          }
+        ]
+      },
+      "flow": {
+        "title": "GeoTapp Flow",
+        "description": "Gestión de operaciones de campo y equipos",
+        "products": [
+          {
+            "name": "GeoTapp Flow Lifetime",
+            "tagline": "Licencia de por vida",
+            "desc": "Paga una vez, usa para siempre. Acceso completo a GeoTapp Flow sin cuotas recurrentes. Incluye actualizaciones futuras.",
+            "features": [
+              "Acceso completo a Flow",
+              "Sin cuotas mensuales",
+              "Actualizaciones de por vida incluidas"
+            ]
+          },
+          {
+            "name": "GeoTapp Flow Business",
+            "tagline": "Para empresas estructuradas",
+            "desc": "Gestión operativa avanzada, equipos ilimitados y soporte prioritario.",
+            "features": [
+              "Equipos ilimitados",
+              "Acceso API",
+              "Soporte prioritario"
+            ]
+          },
+          {
+            "name": "GeoTapp Flow Team",
+            "tagline": "Para equipos pequeños",
+            "desc": "Ideal para grupos de trabajo que necesitan coordinación y visibilidad operativa compartida.",
+            "features": [
+              "5 usuarios incluidos",
+              "Gestión de trabajos",
+              "Integraciones básicas"
+            ]
+          },
+          {
+            "name": "GeoTapp Flow Solo",
+            "tagline": "Para operadores individuales",
+            "desc": "Todo el potencial de Flow para el profesional que trabaja de forma independiente.",
+            "features": ["1 usuario", "Gestión de actividades", "Informes básicos"]
+          }
+        ]
+      }
+    }
+  },
+  "contact": {
+    "title": "Hablemos de <span class=\"text-primary\">Negocio</span>.",
+    "subtitle": "Necesitas entender si GeoTapp encaja en tu empresa. Estamos aquí para responder de forma concreta.",
+    "guarantee_title": "Garantía de respuesta",
+    "guarantee_text": "Primera respuesta media en 12 horas hábiles. Ninguna consulta perdida en el vacío.",
+    "form": {
+      "name": "Nombre",
+      "company": "Empresa",
+      "email": "Correo corporativo",
+      "reason": "Motivo del contacto",
+      "message": "Mensaje",
+      "send": "Enviar"
+    }
+  },
+  "login_hub": {
+    "title": "Accede a tu <span class=\"text-primary\">Cuenta</span>.",
+    "subtitle": "Selecciona el producto al que deseas conectarte.",
+    "flow": {
+      "desc": "Gestión operativa, trabajos, coordinación e informes.",
+      "btn": "Acceder a Flow"
+    },
+    "timetracker": {
+      "desc": "Presencias, actividad de campo y pruebas de trabajo.",
+      "btn": "Acceder a TimeTracker"
+    }
+  },
+  "product_pages": {
+    "flow": {
+      "hero_badge": "GeoTapp Flow — Gestión de operaciones de campo",
+      "hero_title": "GeoTapp Flow.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600\">Hub operativo.</span>",
+      "hero_subtitle": "El centro operativo para empresas con técnicos y operadores de campo. Gestiona trabajos, coordina equipos y produce informes de trabajo estructurados y verificables.",
+      "visual_placeholder": "PANEL DE OPERACIONES",
+      "grid_title": "Capacidades operativas",
+      "grid_subtitle": "Cada módulo está diseñado para el control real del trabajo de campo. Haz clic para explorar.",
+      "sectors": {
+        "1": "Trabajos y Clientes",
+        "2": "Planificación y Recursos",
+        "3": "Control y Visibilidad"
+      },
+      "cta_title": "Toma el control real de tu campo.",
+      "cta_button": "Ver precios",
+      "modal": {
+        "status": "ESTADO DEL SISTEMA: <span class=\"text-green-600\">OPERATIVO</span>",
+        "encryption": "DATOS: <span class=\"text-slate-400\">PROTEGIDOS</span>",
+        "access": "ACCESO: <span class=\"text-blue-600\">SEGURO</span>",
+        "close": "Cerrar"
+      },
+      "systems": {
+        "nexus-core": {
+          "name": "Gestión de trabajos",
+          "short": "Crea y gestiona intervenciones técnicas. Asigna tareas a los técnicos, monitoriza el progreso y mantén todo registrado por trabajo.",
+          "full": "### Control central de trabajos.\n\nCada intervención comienza como un trabajo estructurado.\nLa **Gestión de trabajos** te ofrece una vista clara de todo el trabajo en curso.\n\n#### Gestión de intervenciones\n\nCrea un trabajo, asigna el técnico, define el emplazamiento y la fecha.\nMonitoriza el estado: Abierto, En curso, Completado.\n\n#### Historial operativo\n\nCada trabajo tiene un archivo completo de actividades, pruebas fotográficas, notas y marcas de tiempo.\n¿El cliente pregunta qué se hizo? Tienes los datos. Siempre."
+        },
+        "titan-flow": {
+          "name": "Asignación de tareas",
+          "short": "Distribuye el trabajo a los técnicos con precisión. Comunica instrucciones, plazos y prioridades operativas de forma estructurada.",
+          "full": "### El trabajo adecuado al técnico adecuado.\n\nUna asignación confusa genera retrasos y disputas.\nLa **Asignación de tareas** aporta claridad operativa.\n\n#### Distribución precisa\n\nEn cuanto se abre un trabajo, asigna uno o varios técnicos.\nCada técnico ve su trabajo en GeoTapp TimeTracker.\n\n#### Comunicación operativa\n\nInstrucciones, notas, adjuntos técnicos: todo llega al técnico antes de que salga al campo.\nMenos llamadas, menos malentendidos, menos retrasos."
+        },
+        "ledger-prime": {
+          "name": "Informes y facturación",
+          "short": "Genera informes estructurados a partir de cada trabajo. Exporta documentación y apoya la facturación con datos reales de campo.",
+          "full": "### Del trabajo al informe, de forma ordenada.\n\nLa facturación manual es lenta y suele estar incompleta.\nLos **Informes y la facturación** cierran el ciclo operativo.\n\n#### Informes estructurados\n\nCada intervención completada genera documentación recopilando marcas de tiempo, fotos y notas del campo.\nSin datos que introducir manualmente: todo proviene de TimeTracker.\n\n#### Apoyo a la facturación\n\nLos datos reales de los trabajos facilitan presupuestos y facturas más precisos.\nMenos errores, menos disputas, ciclo administrativo más ágil."
+        },
+        "quantum-logistics": {
+          "name": "Calendario de intervenciones",
+          "short": "Planifica intervenciones, visualiza el calendario operativo y gestiona la disponibilidad del equipo sin solapamientos.",
+          "full": "### Vista completa del trabajo planificado.\n\nSin un calendario compartido, la planificación se vuelve caótica.\nEl **Calendario de intervenciones** te proporciona visibilidad operativa clara.\n\n#### Planificación avanzada\n\nVisualiza todas las intervenciones en vistas de calendario diario, semanal y mensual.\nIdentifica solapamientos y optimiza la distribución de la carga de trabajo.\n\n#### Disponibilidad del equipo\n\nVe quién está disponible, quién está de baja y quién ya está sobrecargado.\nAsigna nuevas intervenciones sin crear conflictos operativos."
+        },
+        "supply-command": {
+          "name": "Gestión de recursos",
+          "short": "Controla materiales, equipos y recursos operativos necesarios para cada intervención de campo. Sin sorpresas.",
+          "full": "### Ninguna intervención sin los recursos necesarios.\n\nEnviar a un técnico al campo sin los materiales adecuados es un error costoso.\nLa **Gestión de recursos** previene las sorpresas operativas.\n\n#### Materiales por trabajo\n\nVincula los recursos necesarios a cada trabajo.\nEl responsable ve con antelación qué se necesita y cuándo.\n\n#### Proveedores y aprovisionamiento\n\nGuarda los datos de contacto y las condiciones de tus proveedores habituales.\nReduce los tiempos de aprovisionamiento y mantén los costes bajo control."
+        },
+        "the-architect": {
+          "name": "Planificación del trabajo",
+          "short": "Organiza el trabajo en fases, tareas y plazos. Mantén el proyecto bajo control sin hojas de cálculo ni mensajes de WhatsApp.",
+          "full": "### Estructura el trabajo. Controla el progreso.\n\nLos trabajos complejos requieren estructura.\nLa **Planificación del trabajo** aporta orden operativo.\n\n#### Fases y plazos\n\nEstructura las intervenciones complejas en fases operativas con plazos claros.\nAsigna responsabilidades a cada miembro del equipo.\n\n#### Seguimiento del progreso\n\nVisualiza el progreso en tiempo real.\nSabe siempre qué se ha hecho y qué sigue abierto.\nActúa antes de que un retraso se convierta en un problema para el cliente."
+        },
+        "the-auditor": {
+          "name": "Documentación de intervenciones",
+          "short": "Recopila evidencias fotográficas, notas operativas y documentos firmados para cada intervención. El trabajo realizado queda verificable.",
+          "full": "### Prueba real para cada intervención.\n\nSin documentación, el trabajo realizado es impugnable.\nLa **Documentación de intervenciones** hace que cada trabajo sea verificable.\n\n#### Evidencia fotográfica\n\nLos técnicos toman fotos directamente desde GeoTapp TimeTracker en el campo.\nLas imágenes se vinculan automáticamente al trabajo con marca de tiempo y ubicación.\n\n#### Firma digital del cliente\n\nEl cliente puede firmar el informe de trabajo directamente en la pantalla del técnico.\nLa firma digital queda incluida en el informe y constituye prueba del servicio prestado."
+        },
+        "the-uplink": {
+          "name": "Enlace campo-oficina",
+          "short": "Los datos recopilados por TimeTracker llegan a Flow en tiempo real. El campo y la oficina trabajan sobre los mismos datos operativos.",
+          "full": "### Oficina y campo, por fin conectados.\n\nLa desconexión entre campo y oficina genera errores evitables, retrasos y disputas.\nEl **Enlace campo-oficina** cierra la brecha.\n\n#### Sincronización en tiempo real\n\nCada fichaje, foto y nota registrado en TimeTracker llega a Flow de inmediato.\nEl responsable tiene una vista en vivo sin necesidad de llamar al técnico.\n\n#### Historial fiable\n\nTodo lo que el técnico registra en el campo se archiva y se vincula al trabajo.\nNo se pierde ningún dato. No falta ninguna información cuando llega el momento de elaborar el informe."
+        },
+        "the-oracle": {
+          "name": "Visibilidad operativa",
+          "short": "Panel operativo en tiempo real. Sabe siempre cuántas intervenciones están abiertas, en curso o completadas hoy.",
+          "full": "### Datos operativos, no suposiciones.\n\nDecidir sin datos fiables es peligroso.\nLa **Visibilidad operativa** convierte los datos de campo en información concreta.\n\n#### Panel operativo\n\nVe en tiempo real:\n- Intervenciones abiertas y en curso\n- Técnicos activos\n- Intervenciones completadas hoy y esta semana\n\n#### Informes periódicos\n\nRecibe resúmenes de actividad automatizados.\nCompara períodos, identifica cuellos de botella y optimiza las operaciones."
+        }
+      }
+    },
+    "app": {
+      "hero_badge": "GeoTapp TimeTracker — App para técnicos de campo",
+      "hero_title": "GeoTapp TimeTracker.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600\">El campo en tu bolsillo.</span>",
+      "hero_subtitle": "La aplicación móvil utilizada por los técnicos para registrar la actividad, recopilar pruebas y mantener el hilo operativo directamente desde el campo. Disponible en Android e iOS.",
+      "visual_placeholder": "INTERFAZ DE CAMPO",
+      "grid_title": "Herramientas para el trabajo de campo",
+      "grid_subtitle": "Cada función está diseñada para quienes trabajan fuera de la oficina y no tienen tiempo que perder. Haz clic para explorar.",
+      "sectors": {
+        "1": "Operaciones esenciales",
+        "2": "Logística y Comunicaciones",
+        "3": "Datos y Administración"
+      },
+      "cta_title": "Da a tus técnicos la herramienta adecuada.",
+      "cta_button": "Ver precios",
+      "modal": {
+        "status": "ESTADO DEL SISTEMA: <span class=\"text-green-600\">OPERATIVO</span>",
+        "encryption": "DATOS: <span class=\"text-slate-400\">PROTEGIDOS</span>",
+        "device": "DISPOSITIVO: <span class=\"text-blue-600\">MÓVIL / TABLETA</span>",
+        "close": "Cerrar"
+      },
+      "systems": {
+        "timelock-alpha": {
+          "name": "Fichaje GPS",
+          "short": "Fichaje de entrada y salida vinculado a la posición GPS y a una marca de tiempo precisa. Cada sesión de trabajo se convierte en un evento operativo verificable.",
+          "full": "### El tiempo es verificable.\n\nLas marcas de tiempo sin verificación generan disputas.\nEl **Fichaje GPS** convierte cada sesión de trabajo en un registro fiable e incontestable.\n\n#### Fichaje geolocalizado de entrada y salida\n\nEl técnico registra la entrada y salida del campo.\nUbicación, dirección y hora se registran automáticamente.\n\n#### Historial inmutable\n\nCada sesión es un registro verificable: hora de entrada, hora de salida, posición, duración y trabajo asociado.\n¿El cliente pregunta cuándo llegaste? Los datos están ahí, siempre."
+        },
+        "event-horizon": {
+          "name": "Planificación de turnos",
+          "short": "Gestiona turnos y disponibilidad del personal. Vistas semanales y mensuales para la coordinación sin confusión ni solapamientos.",
+          "full": "### Sin conflictos de turnos.\n\nOrganizar personal móvil requiere claridad.\nLa **Planificación de turnos** proporciona al responsable una vista precisa y actualizada.\n\n#### Vista de calendario\n\nVe quién trabaja cuándo.\nIdentifica ausencias, vacaciones y solapamientos antes de que se conviertan en problemas operativos.\n\n#### Disponibilidad en tiempo real\n\nLos empleados confirman su asistencia o reportan ausencias directamente desde la aplicación.\nEl responsable ve los huecos en el horario antes de asignar nuevos trabajos."
+        },
+        "unit-matrix": {
+          "name": "Registro de operadores",
+          "short": "Gestiona un registro completo de tus operadores: roles, contactos, certificaciones y acceso a la plataforma.",
+          "full": "### Conoce a tu equipo.\n\nCada operador es un recurso operativo clave.\nEl **Registro de operadores** centraliza toda la información vital.\n\n#### Gestión de certificaciones\n\nVe de un vistazo quién posee las cualificaciones requeridas para una intervención o emplazamiento específico.\n\n#### Incorporación rápida\n\nAñadir un nuevo técnico es sencillo.\nEnvía un enlace de invitación: en minutos está operativo en GeoTapp TimeTracker."
+        },
+        "sector-grid": {
+          "name": "Emplazamientos y obras",
+          "short": "Crea una base de datos de emplazamientos operativos y obras. Vincula cada intervención a la ubicación correcta y organiza los equipos por zona.",
+          "full": "### Cada intervención en el lugar correcto.\n\nTrabajar sin referencia geográfica genera confusión.\nLos **Emplazamientos y obras** aportan claridad operativa.\n\n#### Base de datos de emplazamientos\n\nCrea un catálogo de emplazamientos de clientes, obras y ubicaciones operativas.\nEl sistema vincula automáticamente la actividad del técnico al emplazamiento de la intervención.\n\n#### Equipos por zona\n\nOrganiza los técnicos en equipos por emplazamiento o área geográfica.\nAsigna intervenciones al equipo correcto, no solo al individuo."
+        },
+        "energy-logistics": {
+          "name": "Gestión de vehículos y gastos",
+          "short": "Registra el uso de vehículos de empresa, el combustible consumido y los gastos de desplazamiento del personal de campo.",
+          "full": "### Cada desplazamiento documentado.\n\nLos gastos de desplazamiento son una partida crítica para cualquier empresa con personal móvil.\nLa **Gestión de vehículos** monitoriza cada coste saliente.\n\n#### Uso de vehículos\n\nAsigna temporalmente un vehículo a un empleado para una intervención.\nSabe siempre quién usa qué vehículo y para qué trabajo.\n\n#### Gastos de combustible\n\nEl empleado registra la repostada directamente desde la aplicación con foto del recibo e importe.\nTodo archivado, todo vinculado al trabajo."
+        },
+        "neural-link": {
+          "name": "Comunicaciones operativas",
+          "short": "Canal interno para las comunicaciones de la empresa. Mensajes dirigidos a grupos específicos con confirmaciones de lectura.",
+          "full": "### Comunicaciones claras. Sin ruido de fondo.\n\nWhatsApp mezcla vida privada y profesional y no ofrece control sobre el estado de lectura.\nLas **Comunicaciones operativas** son el canal oficial de la empresa.\n\n#### Mensajes dirigidos\n\nNotifica solo al equipo que necesita saberlo.\n¿Cambio de turno en la obra de Madrid? Solo los técnicos asignados reciben el mensaje.\n\n#### Confirmaciones de lectura\n\nSabe siempre quién leyó la comunicación y quién no.\nResponsabilidad clara y transparente para todos."
+        },
+        "payroll-bridge": {
+          "name": "Exportación de presencias",
+          "short": "Exporta las presencias mensuales en formatos compatibles con los principales programas de nóminas. Menos trabajo manual, menos errores.",
+          "full": "### Las nóminas sin quebraderos de cabeza.\n\nEl cierre de mes no tiene por qué ser una pesadilla administrativa.\nLa **Exportación de presencias** conecta las operaciones de campo con la administración de RRHH.\n\n#### Multi-formato\n\nGenera ficheros de presencias listos para importar en los principales programas de nóminas (A3nómina, Sage, Nominasol).\n\n#### Acceso para la gestoría\n\nOtorga acceso limitado a tu gestoría laboral.\nDescarga los datos que necesita de forma autónoma, sin llamarte al cierre de cada mes."
+        },
+        "data-core": {
+          "name": "Informes semanales",
+          "short": "Informes detallados sobre las horas trabajadas por trabajo y por operador. Datos fiables para el control interno y la facturación.",
+          "full": "### Los datos no mienten.\n\nToma decisiones basadas en hechos, no en impresiones.\nLos **Informes semanales** extraen valor de las operaciones diarias.\n\n#### Informes detallados\n\nCada semana, una imagen completa: quién trabajó, dónde, en qué trabajo y durante cuánto tiempo.\n\n#### Transparencia total\n\nEmpleados y responsables consultan el mismo informe mensual.\nLas horas contabilizadas son idénticas para todos.\nSin disputas al cierre del mes."
+        },
+        "identity-forge": {
+          "name": "App con tu marca",
+          "short": "Sube tu logotipo y elige los colores de tu empresa. Tus operadores usan una aplicación que refleja tu identidad de marca.",
+          "full": "### Tu empresa, tu aplicación.\n\nNo uses una aplicación genérica.\nHaz que tus empleados se sientan parte de TU empresa con una experiencia visual coherente.\n\n#### Logotipo de la empresa\n\nTu logotipo destacado en la pantalla de inicio de sesión y el panel principal.\n\n#### Colores corporativos\n\nElige el tema de color que se adapte a tu imagen corporativa.\nProfesional, coherente, reconocible."
+        }
+      }
+    }
+  }
+}
