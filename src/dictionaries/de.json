@@ -1,0 +1,307 @@
+{
+  "navbar": {
+    "products": "Produkte",
+    "pricing": "Preise",
+    "blog": "Blog",
+    "contact": "Kontakt",
+    "login": "Anmelden",
+    "cta": "Demo anfragen"
+  },
+  "footer": {
+    "tagline": "Außendienst erfasst. Einsätze organisiert. Berichte prüfbar.",
+    "privacy": "Datenschutz",
+    "terms": "Nutzungsbedingungen",
+    "rights": "Alle Rechte vorbehalten."
+  },
+  "landing": {
+    "hero_badge": "GeoTapp — Außendienst im Griff",
+    "hero_title": "Kontrolle über den<br />Außendienst.",
+    "hero_subtitle": "GeoTapp gibt Unternehmen mit Technikern und Außendienstmitarbeitern echte Kontrolle über geleistete Arbeit: Tätigkeiten erfasst, Einsätze organisiert, Berichte prüfbar.",
+    "hero_cta_primary": "Demo anfragen",
+    "hero_cta_secondary": "Produkte entdecken",
+    "features_title": "Was Sie wirklich brauchen",
+    "features_subtitle": "Drei integrierte Werkzeuge zur Kontrolle des Außendienstes vom Büro aus.",
+    "cta_title": "Bereit, den Außendienst zu kontrollieren?",
+    "cta_subtitle": "Schließen Sie sich Unternehmen an, die GeoTapp nutzen, um Einsätze zu organisieren und prüfbare Arbeitsberichte zu erstellen.",
+    "cta_button": "Demo anfragen"
+  },
+  "home_sections": {
+    "flow": {
+      "badge": "GeoTapp Flow",
+      "title": "Außendienst aus einer Zentrale koordinieren.",
+      "subtitle": "Flow ist das System, das das Büro nutzt, um Aufträge zu verwalten, Tätigkeiten zuzuweisen, Fortschritte zu überwachen und strukturierte Arbeitsberichte zu erstellen. <strong class=\"text-slate-900\">Weniger interne Reibung, mehr echte Kontrolle.</strong>",
+      "features": {
+        "crm": "<strong>Auftragsverwaltung:</strong> Einsätze erstellen, Techniker zuweisen und Fortschritte in Echtzeit überwachen.",
+        "pipeline": "<strong>Strukturierte Berichte:</strong> Jeder abgeschlossene Auftrag erzeugt rückverfolgbare Dokumentation für den Kunden."
+      },
+      "link": "GeoTapp Flow entdecken"
+    },
+    "app": {
+      "badge": "GeoTapp TimeTracker",
+      "title": "Der Techniker erfasst. Das Büro kontrolliert.",
+      "subtitle": "TimeTracker ist die mobile App für Techniker zur Erfassung von Außendiensttätigkeiten. Ein- und Ausstempeln, Fotos und Notizen zum jeweiligen Auftrag. <strong>Verfügbar für Android und iOS.</strong>",
+      "card_gps": {
+        "title": "GPS-Zeiterfassung",
+        "desc": "Verifizierter Standort"
+      },
+      "card_gdpr": {
+        "title": "DSGVO-konform",
+        "desc": "Kein kontinuierliches Tracking"
+      },
+      "link": "GeoTapp TimeTracker entdecken"
+    },
+    "verifier": {
+      "badge": "GeoTapp Verifier",
+      "title": "Arbeitsberichte, die jeder prüfen kann.",
+      "subtitle": "Verifier prüft, ob ein Arbeitsbericht mit den erfassten Betriebsdaten übereinstimmt und nicht verändert wurde. Mehr Transparenz für den Kunden, weniger Streitigkeiten.",
+      "features": {
+        "integrity": "<strong>Geprüfte Integrität:</strong> Das System gleicht den Bericht mit den tatsächlichen Sitzungsdaten aus dem Außendienst ab.",
+        "independent": "<strong>Unabhängige Prüfung:</strong> Jeder kann einen Bericht prüfen, ohne Zugang zur Plattform zu haben."
+      },
+      "link": "GeoTapp Verifier entdecken"
+    },
+    "core": {
+      "badge": "GeoTapp Plattform",
+      "title": "Gebaut für den Außendienst.",
+      "subtitle": "Drei integrierte Produkte, ein Ziel: Unternehmen mit Außendienstmitarbeitern die Sichtbarkeit und betriebliche Dokumentation geben, die sie brauchen.",
+      "features": [
+        {
+          "title": "Echte mobile Einsatzfähigkeit",
+          "desc": "TimeTracker funktioniert ohne Verbindung und synchronisiert, sobald das Feld wieder online ist. Die Arbeit stoppt nie."
+        },
+        {
+          "title": "Datenschutz by Design",
+          "desc": "Der Standort wird <strong>nur</strong> beim Ein- und Ausstempeln erfasst. Kein kontinuierliches Tracking. Vollständig DSGVO-konform."
+        },
+        {
+          "title": "Echtzeitsynchronisation",
+          "desc": "Im Außendienst erfasste Tätigkeiten gelangen sofort in Flow, damit das Büro immer ein aktuelles Bild hat."
+        },
+        {
+          "title": "Langfristig prüfbare Berichte",
+          "desc": "Mit GeoTapp Verifier kann jeder Bericht unabhängig validiert werden. Erfasste Daten bleiben zuverlässig und verteidigbar."
+        }
+      ]
+    },
+    "footer_cta": {
+      "title": "Echte Kontrolle über<br />Ihren Außendienst.",
+      "subtitle": "GeoTapp Flow, TimeTracker und Verifier arbeiten zusammen, um Ihrem Unternehmen echte Sichtbarkeit und zuverlässige Dokumentation der geleisteten Arbeit zu geben.",
+      "button": "Kontakt aufnehmen"
+    }
+  },
+  "pricing": {
+    "badge": "GeoTapp Lösungen",
+    "title": "Das richtige Produkt wählen.",
+    "subtitle": "Praxisnahe Lösungen für Unternehmen mit Technikern und Außendienstmitarbeitern.",
+    "vat_note": "Alle Preise zzgl. MwSt. Abrechnung gemäß Nutzungsbedingungen.",
+    "categories": {
+      "app": {
+        "title": "GeoTapp TimeTracker",
+        "description": "Mobile App für Außendiensttechniker",
+        "products": [
+          {
+            "name": "GeoTapp TimeTracker",
+            "tagline": "Ab",
+            "desc": "Die komplette Lösung zur Erfassung von Anwesenheit, Außendiensttätigkeit und Arbeitsnachweisen. Preis pro Nutzer/Jahr.",
+            "features": ["Android/iOS App", "GPS-Stempeluhr", "Wochenberichte"],
+            "button": "Kalkulator ansehen"
+          }
+        ]
+      },
+      "flow": {
+        "title": "GeoTapp Flow",
+        "description": "Außendienststeuerung und Teamverwaltung",
+        "products": [
+          {
+            "name": "GeoTapp Flow Lifetime",
+            "tagline": "Lifetime-Lizenz",
+            "desc": "Einmal zahlen, unbegrenzt nutzen. Vollzugang zu GeoTapp Flow ohne laufende Gebühren. Inkl. zukünftiger Updates.",
+            "features": ["Vollzugang zu Flow", "Keine monatlichen Gebühren", "Lifetime-Updates inklusive"]
+          },
+          {
+            "name": "GeoTapp Flow Business",
+            "tagline": "Für strukturierte Unternehmen",
+            "desc": "Erweitertes Einsatzmanagement, unbegrenzte Teams und vorrangiger Support.",
+            "features": ["Unbegrenzte Teams", "API-Zugang", "Vorrangiger Support"]
+          },
+          {
+            "name": "GeoTapp Flow Team",
+            "tagline": "Für kleine Teams",
+            "desc": "Ideal für Arbeitsgruppen, die Koordination und gemeinsame Einsatzsicht benötigen.",
+            "features": ["5 Nutzer inklusive", "Auftragsverwaltung", "Basisintegrationen"]
+          },
+          {
+            "name": "GeoTapp Flow Solo",
+            "tagline": "Für Einzelunternehmer",
+            "desc": "Die volle Leistung von Flow für den selbständig arbeitenden Profi.",
+            "features": ["1 Nutzer", "Tätigkeitsverwaltung", "Basisberichte"]
+          }
+        ]
+      }
+    }
+  },
+  "contact": {
+    "title": "Sprechen wir über <span class=\"text-primary\">Ihr Geschäft</span>.",
+    "subtitle": "Sie möchten wissen, ob GeoTapp zu Ihrem Unternehmen passt. Wir antworten konkret.",
+    "guarantee_title": "Antwortgarantie",
+    "guarantee_text": "Durchschnittliche Erstantwort innerhalb von 12 Geschäftsstunden. Keine verlorenen Anfragen.",
+    "form": {
+      "name": "Name",
+      "company": "Unternehmen",
+      "email": "Geschäftliche E-Mail",
+      "reason": "Anfragegrund",
+      "message": "Nachricht",
+      "send": "Senden"
+    }
+  },
+  "login_hub": {
+    "title": "Zugang zu Ihrem <span class=\"text-primary\">Konto</span>.",
+    "subtitle": "Wählen Sie das Produkt, mit dem Sie sich verbinden möchten.",
+    "flow": {
+      "desc": "Einsatzmanagement, Aufträge, Koordination und Berichte.",
+      "btn": "In Flow einloggen"
+    },
+    "timetracker": {
+      "desc": "Anwesenheit, Außendiensttätigkeit und Arbeitsnachweise.",
+      "btn": "In TimeTracker einloggen"
+    }
+  },
+  "product_pages": {
+    "flow": {
+      "hero_badge": "GeoTapp Flow — Außendienststeuerung",
+      "hero_title": "GeoTapp Flow.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600\">Operatives Zentrum.</span>",
+      "hero_subtitle": "Die Schaltzentrale für Unternehmen mit Außendiensttechnikern und -mitarbeitern. Aufträge verwalten, Teams koordinieren und strukturierte, prüfbare Arbeitsberichte erstellen.",
+      "visual_placeholder": "BEDIENFELD",
+      "grid_title": "Operative Funktionen",
+      "grid_subtitle": "Jedes Modul ist auf echte Außendienstkontrolle ausgelegt. Klicken Sie zum Erkunden.",
+      "sectors": {
+        "1": "Aufträge und Kunden",
+        "2": "Planung und Ressourcen",
+        "3": "Kontrolle und Sichtbarkeit"
+      },
+      "cta_title": "Echte Kontrolle über Ihren Außendienst.",
+      "cta_button": "Preise ansehen",
+      "modal": {
+        "status": "SYSTEMSTATUS: <span class=\"text-green-600\">BETRIEBSBEREIT</span>",
+        "encryption": "DATEN: <span class=\"text-slate-400\">GESCHÜTZT</span>",
+        "access": "ZUGANG: <span class=\"text-blue-600\">SICHER</span>",
+        "close": "Schließen"
+      },
+      "systems": {
+        "nexus-core": {
+          "name": "Auftragsverwaltung",
+          "short": "Technische Einsätze erstellen und verwalten. Aufgaben zuweisen, Fortschritte überwachen und alles auftragsbezogen verfolgen.",
+          "full": "### Zentrale Auftragskontrolle.\n\nJeder Einsatz beginnt als strukturierter Auftrag.\n**Auftragsverwaltung** gibt Ihnen einen klaren Überblick über alle laufenden Arbeiten.\n\n#### Einsatzverwaltung\n\nAuftrag anlegen, Techniker zuweisen, Standort und Datum festlegen.\nStatus überwachen: Offen, In Bearbeitung, Abgeschlossen.\n\n#### Betriebshistorie\n\nJeder Auftrag hat ein vollständiges Archiv mit Tätigkeiten, Fotobeweisen, Notizen und Zeitstempeln.\nDer Kunde fragt, was gemacht wurde? Die Daten sind da. Immer."
+        },
+        "titan-flow": {
+          "name": "Aufgabenzuweisung",
+          "short": "Arbeit präzise an Techniker verteilen. Anweisungen, Fristen und operative Prioritäten strukturiert übermitteln.",
+          "full": "### Der richtige Auftrag zum richtigen Techniker.\n\nUnklare Aufgabenverteilung erzeugt Verzögerungen und Streitigkeiten.\n**Aufgabenzuweisung** schafft operative Klarheit.\n\n#### Präzise Verteilung\n\nSobald ein Auftrag eröffnet ist, einen oder mehrere Techniker zuweisen.\nJeder Techniker sieht seine Arbeit auf GeoTapp TimeTracker.\n\n#### Operative Kommunikation\n\nAnweisungen, Notizen, technische Anhänge: alles erreicht den Techniker, bevor er zum Außendienst aufbricht.\nWeniger Anrufe, weniger Missverständnisse, weniger Verzögerungen."
+        },
+        "ledger-prime": {
+          "name": "Berichte und Abrechnung",
+          "short": "Strukturierte Berichte aus jedem Auftrag erstellen. Dokumentation exportieren und Abrechnung mit echten Außendienstdaten unterstützen.",
+          "full": "### Von der Arbeit zum Bericht — geordnet.\n\nManuelle Abrechnung ist langsam und oft unvollständig.\n**Berichte und Abrechnung** schließt den operativen Kreislauf.\n\n#### Strukturierte Berichte\n\nJeder abgeschlossene Einsatz erzeugt Dokumentation durch Zusammenführung von Zeitstempeln, Fotos und Notizen aus dem Außendienst.\nKeine manuelle Dateneingabe — alles kommt aus TimeTracker.\n\n#### Abrechnungsunterstützung\n\nEchte Auftragsdaten unterstützen genauere Angebote und Rechnungen.\nWeniger Fehler, weniger Streitigkeiten, schnellerer Verwaltungszyklus."
+        },
+        "quantum-logistics": {
+          "name": "Einsatzkalender",
+          "short": "Einsätze planen, Betriebskalender visualisieren und Teamverfügbarkeit ohne Überschneidungen verwalten.",
+          "full": "### Vollständiger Überblick über geplante Arbeiten.\n\nOhne gemeinsamen Kalender wird die Planung chaotisch.\n**Einsatzkalender** gibt Ihnen klare operative Sichtbarkeit.\n\n#### Erweiterte Planung\n\nAlle Einsätze in täglicher, wöchentlicher und monatlicher Kalenderansicht sehen.\nÜberschneidungen erkennen und Arbeitslasten optimieren.\n\n#### Teamverfügbarkeit\n\nSehen Sie, wer verfügbar ist, wer im Urlaub ist und wer bereits überlastet ist.\nNeue Einsätze zuweisen, ohne operative Konflikte zu erzeugen."
+        },
+        "supply-command": {
+          "name": "Ressourcenverwaltung",
+          "short": "Materialien, Ausrüstung und operative Ressourcen für jeden Außeneinsatz kontrollieren. Keine Überraschungen.",
+          "full": "### Kein Einsatz ohne Ressourcen.\n\nEinen Techniker ohne das richtige Material ins Feld zu schicken ist ein kostspieliger Fehler.\n**Ressourcenverwaltung** verhindert operative Überraschungen.\n\n#### Materialien pro Auftrag\n\nBenötigte Ressourcen mit jedem Auftrag verknüpfen.\nDer Manager sieht im Voraus, was wann benötigt wird.\n\n#### Lieferanten und Beschaffung\n\nKontaktdaten und Konditionen Ihrer Stammlieferanten speichern.\nBeschaffungszeit reduzieren und Kosten kontrollieren."
+        },
+        "the-architect": {
+          "name": "Arbeitsplanung",
+          "short": "Arbeit in Phasen, Aufgaben und Fristen strukturieren. Projekte ohne Tabellen oder Messenger-Nachrichten unter Kontrolle halten.",
+          "full": "### Arbeit strukturieren. Fortschritt kontrollieren.\n\nKomplexe Aufträge erfordern Struktur.\n**Arbeitsplanung** schafft operative Ordnung.\n\n#### Phasen und Fristen\n\nKomplexe Einsätze in operative Phasen mit klaren Fristen strukturieren.\nVerantwortlichkeiten jedem Teammitglied zuweisen.\n\n#### Fortschrittsüberwachung\n\nFortschritt in Echtzeit visualisieren.\nImmer wissen, was erledigt wurde und was noch offen ist.\nHandeln, bevor eine Verzögerung zum Kundenproblem wird."
+        },
+        "the-auditor": {
+          "name": "Einsatzdokumentation",
+          "short": "Fotodokumentation, operative Notizen und unterschriebene Dokumente für jeden Einsatz sammeln. Geleistete Arbeit bleibt prüfbar.",
+          "full": "### Echter Nachweis für jeden Einsatz.\n\nOhne Dokumentation ist geleistete Arbeit anfechtbar.\n**Einsatzdokumentation** macht jeden Auftrag prüfbar.\n\n#### Fotodokumentation\n\nTechniker machen Fotos direkt über GeoTapp TimeTracker im Außendienst.\nBilder werden automatisch mit Zeitstempel und Standort mit dem Auftrag verknüpft.\n\n#### Digitale Kundenunterschrift\n\nDer Kunde kann den Arbeitsbericht direkt auf dem Bildschirm des Technikers unterschreiben.\nDie digitale Unterschrift ist im Bericht enthalten und gilt als Beweis der erbrachten Leistung."
+        },
+        "the-uplink": {
+          "name": "Außendienst-Büro-Verbindung",
+          "short": "Von TimeTracker erfasste Daten gelangen in Echtzeit in Flow. Außendienst und Büro arbeiten mit denselben operativen Daten.",
+          "full": "### Büro und Außendienst — endlich verbunden.\n\nDie Trennung zwischen Außendienst und Büro erzeugt vermeidbare Fehler, Verzögerungen und Streitigkeiten.\n**Außendienst-Büro-Verbindung** schließt die Lücke.\n\n#### Echtzeitsynchronisation\n\nJedes Ein-/Ausstempeln, jedes Foto und jede Notiz in TimeTracker gelangt sofort in Flow.\nDer Manager hat eine Live-Ansicht, ohne den Techniker anrufen zu müssen.\n\n#### Zuverlässige Historie\n\nAlles, was der Techniker im Außendienst erfasst, wird archiviert und mit dem Auftrag verknüpft.\nKeine Daten gehen verloren. Keine Information fehlt, wenn es Zeit ist, Bericht zu erstatten."
+        },
+        "the-oracle": {
+          "name": "Operative Sichtbarkeit",
+          "short": "Echtzeit-Betriebsdashboard. Immer wissen, wie viele Einsätze heute offen, in Bearbeitung oder abgeschlossen sind.",
+          "full": "### Operative Daten, keine Annahmen.\n\nEntscheidungen ohne verlässliche Daten zu treffen ist gefährlich.\n**Operative Sichtbarkeit** wandelt Außendienstdaten in konkrete Informationen um.\n\n#### Betriebsdashboard\n\nIn Echtzeit sehen:\n- Offene und laufende Einsätze\n- Aktive Techniker\n- Heute und diese Woche abgeschlossene Einsätze\n\n#### Periodische Berichte\n\nAutomatisierte Aktivitätszusammenfassungen erhalten.\nZeiträume vergleichen, Engpässe erkennen und Abläufe optimieren."
+        }
+      }
+    },
+    "app": {
+      "hero_badge": "GeoTapp TimeTracker — Außendienst-App",
+      "hero_title": "GeoTapp TimeTracker.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600\">Der Außendienst in Ihrer Tasche.</span>",
+      "hero_subtitle": "Die mobile App für Techniker zur Erfassung von Tätigkeiten, Sammlung von Nachweisen und Aufrechterhaltung des operativen Fadens direkt aus dem Außendienst. Verfügbar für Android und iOS.",
+      "visual_placeholder": "AUSSENDIENST-INTERFACE",
+      "grid_title": "Werkzeuge für die Außenarbeit",
+      "grid_subtitle": "Jede Funktion ist für Menschen konzipiert, die außerhalb des Büros arbeiten und keine Zeit zu verlieren haben. Klicken Sie zum Erkunden.",
+      "sectors": {
+        "1": "Kernfunktionen",
+        "2": "Logistik und Kommunikation",
+        "3": "Daten und Administration"
+      },
+      "cta_title": "Geben Sie Ihren Technikern das richtige Werkzeug.",
+      "cta_button": "Preise ansehen",
+      "modal": {
+        "status": "SYSTEMSTATUS: <span class=\"text-green-600\">BETRIEBSBEREIT</span>",
+        "encryption": "DATEN: <span class=\"text-slate-400\">GESCHÜTZT</span>",
+        "device": "GERÄT: <span class=\"text-blue-600\">MOBIL / TABLET</span>",
+        "close": "Schließen"
+      },
+      "systems": {
+        "timelock-alpha": {
+          "name": "GPS-Zeiterfassung",
+          "short": "Ein- und Ausstempeln verknüpft mit GPS-Position und präzisem Zeitstempel. Jede Arbeitssitzung wird zu einem prüfbaren operativen Ereignis.",
+          "full": "### Zeit ist prüfbar.\n\nZeitstempel ohne Verifikation erzeugen Streitigkeiten.\n**GPS-Zeiterfassung** macht jede Arbeitssitzung zu einem zuverlässigen, verteidigbaren Datensatz.\n\n#### Geolokaliertes Ein- und Ausstempeln\n\nDer Techniker erfasst Beginn und Ende des Außeneinsatzes.\nStandort, Adresse und Zeit werden automatisch registriert.\n\n#### Unveränderliche Historie\n\nJede Sitzung ist ein prüfbarer Datensatz: Startzeit, Endzeit, Position, Dauer und zugehöriger Auftrag.\nDer Kunde fragt, wann Sie ankamen? Die Daten sind da, immer."
+        },
+        "event-horizon": {
+          "name": "Schichtplanung",
+          "short": "Schichten und Personalverfügbarkeit verwalten. Wochen- und Monatsansichten für Koordination ohne Verwirrung oder Überschneidungen.",
+          "full": "### Keine Schichtkonflikte.\n\nMobiles Personal zu organisieren erfordert Klarheit.\n**Schichtplanung** gibt dem Manager eine präzise, aktuelle Übersicht.\n\n#### Kalenderansicht\n\nSehen, wer wann arbeitet.\nFehlzeiten, Urlaub und Überschneidungen erkennen, bevor sie zu operativen Problemen werden.\n\n#### Echtzeitverfügbarkeit\n\nMitarbeiter bestätigen Anwesenheit oder melden Abwesenheiten direkt aus der App.\nDer Manager sieht Lücken im Dienstplan, bevor neue Aufträge vergeben werden."
+        },
+        "unit-matrix": {
+          "name": "Mitarbeiterregister",
+          "short": "Ein vollständiges Register Ihrer Mitarbeiter führen: Rollen, Kontakte, Zertifizierungen und Plattformzugang.",
+          "full": "### Ihr Team kennen.\n\nJeder Mitarbeiter ist eine wichtige operative Ressource.\n**Mitarbeiterregister** zentralisiert alle wichtigen Informationen.\n\n#### Zertifizierungsverwaltung\n\nAuf einen Blick sehen, wer die erforderlichen Qualifikationen für einen bestimmten Einsatz oder Standort besitzt.\n\n#### Schnelles Onboarding\n\nEinen neuen Techniker hinzufügen ist einfach.\nEinladungslink senden: innerhalb von Minuten ist er auf GeoTapp TimeTracker einsatzbereit."
+        },
+        "sector-grid": {
+          "name": "Standorte und Baustellen",
+          "short": "Eine Datenbank mit Einsatzstandorten und Baustellen anlegen. Jeden Einsatz dem richtigen Standort zuordnen und Teams nach Zone organisieren.",
+          "full": "### Jeder Einsatz am richtigen Ort.\n\nArbeiten ohne geografischen Bezug erzeugt Verwirrung.\n**Standorte und Baustellen** schafft operative Klarheit.\n\n#### Standortdatenbank\n\nEinen Katalog von Kundenstandorten, Baustellen und Betriebsorten erstellen.\nDas System verknüpft Technikertätigkeiten automatisch mit dem Einsatzstandort.\n\n#### Zonenbasierte Teams\n\nTechniker in Teams nach Standort oder geografischem Gebiet organisieren.\nEinsätze dem richtigen Team zuweisen, nicht nur dem Einzelnen."
+        },
+        "energy-logistics": {
+          "name": "Fahrzeug- und Spesenmanagement",
+          "short": "Firmenfahrzeugnutzung, Kraftstoffverbrauch und Reisespesen für Außendienstmitarbeiter nachverfolgen.",
+          "full": "### Jede Fahrt dokumentiert.\n\nReisespesen sind ein kritischer Posten für jedes Unternehmen mit mobilem Personal.\n**Fahrzeugverwaltung** überwacht jeden anfallenden Kostenpunkt.\n\n#### Fahrzeugnutzung\n\nEinem Mitarbeiter vorübergehend ein Fahrzeug für einen Einsatz zuweisen.\nImmer wissen, wer welches Fahrzeug für welchen Auftrag verwendet.\n\n#### Kraftstoffkosten\n\nMitarbeiter erfassen Tankvorgänge direkt aus der App mit Quittungsfoto und Betrag.\nAlles archiviert, alles mit dem Auftrag verknüpft."
+        },
+        "neural-link": {
+          "name": "Operative Kommunikation",
+          "short": "Interner Kanal für Unternehmenskommunikation. Gezielte Nachrichten an bestimmte Gruppen mit Lesebestätigungen.",
+          "full": "### Klare Kommunikation. Kein Hintergrundrauschen.\n\nWhatsApp vermischt Privat- und Berufsleben und bietet keine Kontrolle über Lesestatus.\n**Operative Kommunikation** ist der offizielle Unternehmenskanal.\n\n#### Gezielte Nachrichten\n\nNur das Team benachrichtigen, das es wissen muss.\nSchichtwechsel am Standort Berlin? Nur die zugewiesenen Techniker erhalten die Nachricht.\n\n#### Lesebestätigungen\n\nImmer wissen, wer die Mitteilung gelesen hat und wer nicht.\nKlare und transparente Verantwortlichkeit für alle."
+        },
+        "payroll-bridge": {
+          "name": "Anwesenheitsexport",
+          "short": "Monatliche Anwesenheiten in Formaten exportieren, die mit führenden Lohnbuchhaltungssystemen kompatibel sind. Weniger manuelle Arbeit, weniger Fehler.",
+          "full": "### Lohnbuchhaltung ohne Kopfschmerzen.\n\nMonatsende muss kein administrativer Albtraum sein.\n**Anwesenheitsexport** verbindet Außendienstbetrieb mit der Personalverwaltung.\n\n#### Multi-Format\n\nAnwesenheitsdateien für den Import in führende Lohnbuchhaltungssysteme erstellen (DATEV, Lexware, Personio, LODAS).\n\n#### Steuerberaterzugang\n\nIhrem Lohnbüro eingeschränkten Zugang gewähren.\nEs lädt die benötigten Daten selbständig herunter, ohne Sie jeden Monatsabschluss anrufen zu müssen."
+        },
+        "data-core": {
+          "name": "Wochenberichte",
+          "short": "Detaillierte Berichte über geleistete Stunden pro Auftrag und Mitarbeiter. Zuverlässige Daten für interne Kontrolle und Abrechnung.",
+          "full": "### Daten lügen nicht.\n\nEntscheidungen auf Fakten statt auf Gefühl basieren.\n**Wochenberichte** extrahiert Wert aus dem täglichen Betrieb.\n\n#### Detaillierte Berichte\n\nJede Woche ein vollständiges Bild: Wer hat wo, an welchem Auftrag und wie lange gearbeitet.\n\n#### Vollständige Transparenz\n\nMitarbeiter und Manager konsultieren denselben Monatsbericht.\nGezählte Stunden sind für alle identisch.\nKeine Streitigkeiten am Monatsende."
+        },
+        "identity-forge": {
+          "name": "Marken-App",
+          "short": "Ihr Logo hochladen und Unternehmensfarben wählen. Ihre Mitarbeiter nutzen eine App, die Ihre Markenidentität widerspiegelt.",
+          "full": "### Ihr Unternehmen, Ihre App.\n\nKeine generische App verwenden.\nLassen Sie Ihre Mitarbeiter Teil IHRES Unternehmens fühlen — mit einem konsistenten Markenerlebnis.\n\n#### Firmenlogo\n\nIhr Logo prominent auf dem Login-Bildschirm und dem Hauptdashboard.\n\n#### Unternehmensfarben\n\nDas Farbthema wählen, das zu Ihrem Unternehmensauftritt passt.\nProfessionell, konsistent, wiedererkennbar."
+        }
+      }
+    }
+  }
+}
