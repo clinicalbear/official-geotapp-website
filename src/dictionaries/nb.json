@@ -1,0 +1,319 @@
+{
+  "navbar": {
+    "products": "Produkter",
+    "pricing": "Priser",
+    "blog": "Blogg",
+    "contact": "Kontakt",
+    "login": "Logg inn",
+    "cta": "Be om demo"
+  },
+  "footer": {
+    "tagline": "Feltaktivitet registrert. Operasjoner organisert. Rapporter verifiserbare.",
+    "privacy": "Personvernpolicy",
+    "terms": "Tjenestevilkår",
+    "rights": "Alle rettigheter forbeholdt."
+  },
+  "landing": {
+    "hero_badge": "GeoTapp — Kontroll av feltarbeid",
+    "hero_title": "Kontroller hva som skjer<br />i felt.",
+    "hero_subtitle": "GeoTapp gir bedrifter med feltteknikere og feltoperatører reell kontroll over utført arbeid: aktivitet registrert, operasjoner organisert, arbeidsrapporter verifiserbare.",
+    "hero_cta_primary": "Be om en demo",
+    "hero_cta_secondary": "Utforsk produkter",
+    "features_title": "Det du faktisk trenger",
+    "features_subtitle": "Tre integrerte verktøy for å kontrollere feltarbeid fra kontoret.",
+    "cta_title": "Klar til å kontrollere feltoperasjonene dine?",
+    "cta_subtitle": "Bli med bedriftene som bruker GeoTapp til å organisere arbeidsordrer og produsere verifiserbare arbeidsrapporter.",
+    "cta_button": "Be om en demo"
+  },
+  "home_sections": {
+    "flow": {
+      "badge": "GeoTapp Flow",
+      "title": "Koordiner feltet fra ett operasjonelt knutepunkt.",
+      "subtitle": "Flow er systemet kontoret bruker for å administrere arbeidsordrer, tildele aktiviteter, spore fremgang og generere strukturerte arbeidsrapporter. <strong class=\"text-slate-900\">Mindre intern friksjon, mer reell kontroll.</strong>",
+      "features": {
+        "crm": "<strong>Håndtering av arbeidsordrer:</strong> Opprett arbeidsordrer, tildel feltteknikere og overvåk fremdriften i sanntid.",
+        "pipeline": "<strong>Strukturerte rapporter:</strong> Hvert fullført oppdrag genererer sporbar dokumentasjon klar for kunden."
+      },
+      "link": "Utforsk GeoTapp Flow"
+    },
+    "app": {
+      "badge": "GeoTapp TimeTracker",
+      "title": "Felttekniker registrerer. Kontoret kontrollerer.",
+      "subtitle": "TimeTracker er mobilappen som brukes av feltteknikere for å registrere feltaktivitet. Innsjekk, utsjekk, bilder og notater knyttet til hvert oppdrag. <strong>Tilgjengelig på Android og iOS.</strong>",
+      "card_gps": {
+        "title": "GPS-tidssporing",
+        "desc": "Verifisert posisjon"
+      },
+      "card_gdpr": {
+        "title": "GDPR-kompatibel",
+        "desc": "Ingen kontinuerlig sporing"
+      },
+      "link": "Utforsk GeoTapp TimeTracker"
+    },
+    "verifier": {
+      "badge": "GeoTapp Verifier",
+      "title": "Arbeidsrapporter som alle kan verifisere.",
+      "subtitle": "Verifier lar deg kontrollere om en arbeidsrapport samsvarer med de registrerte operasjonsdataene og ikke er blitt endret. Mer transparens for kunden, færre tvister.",
+      "features": {
+        "integrity": "<strong>Verifisert integritet:</strong> Systemet kryssjekker arbeidsrapporten mot faktiske øktdata registrert i felt.",
+        "independent": "<strong>Uavhengig verifisering:</strong> Alle kan verifisere en rapport uten tilgang til plattformen."
+      },
+      "link": "Utforsk GeoTapp Verifier"
+    },
+    "core": {
+      "badge": "GeoTapp-plattformen",
+      "title": "Bygget for feltarbeid.",
+      "subtitle": "Tre integrerte produkter, ett formål: gi bedrifter med feltoperatører den synligheten og operative dokumentasjonen de trenger.",
+      "features": [
+        {
+          "title": "Reell mobil operativitet",
+          "desc": "TimeTracker fungerer uten tilkobling og synkroniserer så snart feltet er tilkoblet igjen. Arbeidet stopper aldri."
+        },
+        {
+          "title": "Personvern som standard",
+          "desc": "Posisjon registreres <strong>kun</strong> ved innsjekk og utsjekk. Ingen kontinuerlig sporing. Fullt GDPR-kompatibel."
+        },
+        {
+          "title": "Sanntidssynkronisering",
+          "desc": "Aktivitet registrert i felt ankommer Flow umiddelbart, slik at kontoret alltid har et oppdatert operasjonelt bilde."
+        },
+        {
+          "title": "Rapporter verifiserbare over tid",
+          "desc": "Med GeoTapp Verifier kan enhver arbeidsrapport valideres uavhengig. Innsamlede data forblir pålitelige og forsvarbare."
+        }
+      ]
+    },
+    "footer_cta": {
+      "title": "Ta reell kontroll<br />over feltet ditt.",
+      "subtitle": "GeoTapp Flow, TimeTracker og Verifier samarbeider for å gi bedriften din reell synlighet og pålitelig dokumentasjon av utført arbeid.",
+      "button": "Snakk med oss"
+    }
+  },
+  "pricing": {
+    "badge": "GeoTapp-løsninger",
+    "title": "Velg riktig produkt.",
+    "subtitle": "Praktiske løsninger for bedrifter med feltteknikere og feltoperatører.",
+    "vat_note": "Alle priser er ekskl. mva. Fakturering i henhold til tjenestevilkårene.",
+    "categories": {
+      "app": {
+        "title": "GeoTapp TimeTracker",
+        "description": "Mobilapp for feltteknikere",
+        "products": [
+          {
+            "name": "GeoTapp TimeTracker",
+            "tagline": "Fra",
+            "desc": "Den komplette løsningen for å spore oppmøte, feltaktivitet og arbeidsbevis. Pris per bruker/år.",
+            "features": ["Android/iOS-app", "GPS-innsjekk", "Ukentlige rapporter"],
+            "button": "Se kalkulator"
+          }
+        ]
+      },
+      "flow": {
+        "title": "GeoTapp Flow",
+        "description": "Feltoperasjoner og teamledelse",
+        "products": [
+          {
+            "name": "GeoTapp Flow Lifetime",
+            "tagline": "Lisensiering for alltid",
+            "desc": "Betal én gang, bruk for alltid. Full tilgang til GeoTapp Flow uten løpende avgifter. Inkluderer fremtidige oppdateringer.",
+            "features": [
+              "Full tilgang til Flow",
+              "Ingen månedlige avgifter",
+              "Livstidsoppdateringer inkludert"
+            ]
+          },
+          {
+            "name": "GeoTapp Flow Business",
+            "tagline": "For strukturerte bedrifter",
+            "desc": "Avansert driftsstyring, ubegrensede team og prioritert støtte.",
+            "features": [
+              "Ubegrensede team",
+              "API-tilgang",
+              "Prioritert support"
+            ]
+          },
+          {
+            "name": "GeoTapp Flow Team",
+            "tagline": "For små team",
+            "desc": "Ideelt for arbeidsgrupper som trenger koordinering og delt operasjonell synlighet.",
+            "features": [
+              "5 brukere inkludert",
+              "Håndtering av arbeidsordrer",
+              "Grunnleggende integrasjoner"
+            ]
+          },
+          {
+            "name": "GeoTapp Flow Solo",
+            "tagline": "For individuelle operatører",
+            "desc": "All kraften til Flow for den profesjonelle som arbeider selvstendig.",
+            "features": ["1 bruker", "Aktivitetsstyring", "Grunnleggende rapporter"]
+          }
+        ]
+      }
+    }
+  },
+  "contact": {
+    "title": "La oss snakke <span class=\"text-primary\">forretninger</span>.",
+    "subtitle": "Du trenger å forstå om GeoTapp passer for din bedrift. Vi er her for å svare konkret.",
+    "guarantee_title": "Responsgaranti",
+    "guarantee_text": "Gjennomsnittlig første respons innen 12 arbeidstimer. Ingen henvendelser går tapt i det tomme.",
+    "form": {
+      "name": "Navn",
+      "company": "Bedrift",
+      "email": "Jobb-e-post",
+      "reason": "Kontaktårsak",
+      "message": "Melding",
+      "send": "Send"
+    }
+  },
+  "login_hub": {
+    "title": "Tilgang til din <span class=\"text-primary\">konto</span>.",
+    "subtitle": "Velg produktet du vil koble til.",
+    "flow": {
+      "desc": "Driftsstyring, arbeidsordrer, koordinering og rapporter.",
+      "btn": "Logg inn på Flow"
+    },
+    "timetracker": {
+      "desc": "Oppmøte, feltaktivitet og arbeidsbevis.",
+      "btn": "Logg inn på TimeTracker"
+    }
+  },
+  "product_pages": {
+    "flow": {
+      "hero_badge": "GeoTapp Flow — Styring av feltoperasjoner",
+      "hero_title": "GeoTapp Flow.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600\">Operasjonelt knutepunkt.</span>",
+      "hero_subtitle": "Det operative senteret for bedrifter med feltteknikere og operatører. Administrer arbeidsordrer, koordiner team og produser strukturerte, verifiserbare arbeidsrapporter.",
+      "visual_placeholder": "OPERASJONSPANEL",
+      "grid_title": "Operative funksjoner",
+      "grid_subtitle": "Hvert modul er designet for reell kontroll av feltarbeid. Klikk for å utforske.",
+      "sectors": {
+        "1": "Arbeidsordrer og kunder",
+        "2": "Planlegging og ressurser",
+        "3": "Kontroll og synlighet"
+      },
+      "cta_title": "Ta reell kontroll over feltet ditt.",
+      "cta_button": "Se priser",
+      "modal": {
+        "status": "SYSTEMSTATUS: <span class=\"text-green-600\">OPERATIVT</span>",
+        "encryption": "DATA: <span class=\"text-slate-400\">BESKYTTET</span>",
+        "access": "TILGANG: <span class=\"text-blue-600\">SIKRET</span>",
+        "close": "Lukk"
+      },
+      "systems": {
+        "nexus-core": {
+          "name": "Håndtering av arbeidsordrer",
+          "short": "Opprett og administrer tekniske intervensjoner. Tildel oppgaver til feltteknikere, overvåk fremgang og hold alt sporet per arbeidsordre.",
+          "full": "### Sentral kontroll av arbeidsordrer.\n\nHver intervensjon starter som en strukturert arbeidsordre.\n**Håndtering av arbeidsordrer** gir deg et klart overblikk over alt pågående arbeid.\n\n#### Intervensjonshåndtering\n\nOpprett en arbeidsordre, tildel felttekniker, definer sted og dato.\nOvevåk status: Åpen, Pågår, Fullført.\n\n#### Operasjonshistorikk\n\nHver arbeidsordre har et komplett arkiv av aktiviteter, fotobevis, notater og tidsstempler.\nKunden spør hva som ble gjort? Du har dataene. Alltid."
+        },
+        "titan-flow": {
+          "name": "Oppgavetildeling",
+          "short": "Fordel arbeid til feltteknikere med presisjon. Kommuniser instruksjoner, frister og operative prioriteringer på en strukturert måte.",
+          "full": "### Riktig arbeidsordre til riktig felttekniker.\n\nForvirret oppgavetildeling genererer forsinkelser og tvister.\n**Oppgavetildeling** bringer operasjonell klarhet.\n\n#### Presis fordeling\n\nSå snart en arbeidsordre åpnes, tildel én eller flere feltteknikere.\nHver felttekniker ser sitt arbeid på GeoTapp TimeTracker.\n\n#### Operasjonell kommunikasjon\n\nInstruksjoner, notater, tekniske vedlegg: alt når felttekniker før de drar ut i felt.\nFærre samtaler, færre misforståelser, færre forsinkelser."
+        },
+        "ledger-prime": {
+          "name": "Rapporter og fakturering",
+          "short": "Generer strukturerte arbeidsrapporter fra hver arbeidsordre. Eksporter dokumentasjon og støtt fakturering med reelle feltdata.",
+          "full": "### Fra arbeid til arbeidsrapport, på en ryddig måte.\n\nManuell fakturering er treg og ofte ufullstendig.\n**Rapporter og fakturering** lukker den operative syklusen.\n\n#### Strukturerte arbeidsrapporter\n\nHver fullført intervensjon genererer dokumentasjon ved å samle tidsstempler, bilder og notater fra felt.\nIngen data å legge inn manuelt — alt kommer fra TimeTracker.\n\n#### Fakturastøtte\n\nReelle arbeidsordredata støtter mer nøyaktige tilbud og fakturaer.\nFærre feil, færre tvister, raskere administrativ syklus."
+        },
+        "quantum-logistics": {
+          "name": "Intervensjonskalender",
+          "short": "Planlegg intervensjoner, visualiser den operative kalenderen og administrer teamtilgjengelighet uten overlapper.",
+          "full": "### Full oversikt over planlagt arbeid.\n\nUten en delt kalender blir planleggingen kaotisk.\n**Intervensjonskalender** gir deg klar operasjonell synlighet.\n\n#### Avansert planlegging\n\nVis alle intervensjoner i daglige, ukentlige og månedlige kalendervisninger.\nIdentifiser overlapper og optimaliser arbeidsbelastningsfordelingen.\n\n#### Teamtilgjengelighet\n\nSe hvem som er tilgjengelig, hvem som er på ferie og hvem som allerede er overbelastet.\nTildel nye intervensjoner uten å skape operative konflikter."
+        },
+        "supply-command": {
+          "name": "Ressursstyring",
+          "short": "Kontroller materialer, utstyr og operative ressurser som trengs for hver feltintervensjon. Ingen overraskelser.",
+          "full": "### Ingen intervensjon uten ressurser.\n\nÅ sende en felttekniker ut i felt uten riktige materialer er en kostbar feil.\n**Ressursstyring** forhindrer operative overraskelser.\n\n#### Materialer per arbeidsordre\n\nKoble nødvendige ressurser til hver arbeidsordre.\nLederen ser på forhånd hva som trengs og når.\n\n#### Leverandører og innkjøp\n\nLagre kontaktinformasjon og betingelser for dine faste leverandører.\nReduser innkjøpstid og hold kostnadene under kontroll."
+        },
+        "the-architect": {
+          "name": "Arbeidsplanlegging",
+          "short": "Organiser arbeid i faser, oppgaver og frister. Hold prosjektet under kontroll uten regneark eller WhatsApp-meldinger.",
+          "full": "### Strukturer arbeidet. Kontroller fremdriften.\n\nKomplekse arbeidsordrer krever struktur.\n**Arbeidsplanlegging** bringer operasjonell orden.\n\n#### Faser og frister\n\nStrukturér komplekse intervensjoner i operative faser med klare frister.\nTildel ansvar til hvert teammedlem.\n\n#### Fremdriftsovervåking\n\nVisualisér fremdriften i sanntid.\nVit alltid hva som er gjort og hva som fortsatt er åpent.\nHandle før en forsinkelse blir et kundeproblem."
+        },
+        "the-auditor": {
+          "name": "Intervensjonsdokumentasjon",
+          "short": "Samle fotodokumentasjon, operative notater og signerte dokumenter for hver intervensjon. Utført arbeid forblir verifiserbart.",
+          "full": "### Reelt bevis for hver intervensjon.\n\nUten dokumentasjon kan utført arbeid bestrides.\n**Intervensjonsdokumentasjon** gjør hver arbeidsordre verifiserbar.\n\n#### Fotodokumentasjon\n\nFeltteknikere tar bilder direkte fra GeoTapp TimeTracker i felt.\nBilder kobles automatisk til arbeidsordren med tidsstempel og posisjon.\n\n#### Digital kundesignatur\n\nKunden kan signere arbeidsrapporten direkte på felttekniker-skjermen.\nDigital signatur er inkludert i rapporten og utgjør bevis for levert tjeneste."
+        },
+        "the-uplink": {
+          "name": "Felt-til-kontor-kobling",
+          "short": "Data samlet av TimeTracker ankommer Flow i sanntid. Felt og kontor arbeider på de samme operative dataene.",
+          "full": "### Kontor og felt, endelig forbundet.\n\nKløften mellom felt og kontor genererer unødvendige feil, forsinkelser og tvister.\n**Felt-til-kontor-kobling** lukker gapet.\n\n#### Sanntidssynkronisering\n\nHver innsjekk, hvert bilde og hvert notat registrert på TimeTracker ankommer Flow umiddelbart.\nLederen har en live-visning uten å måtte ringe felttekniker.\n\n#### Pålitelig historikk\n\nAlt felttekniker registrerer i felt arkiveres og kobles til arbeidsordren.\nIngen data går tapt. Ingen informasjon mangler når det er tid for å rapportere."
+        },
+        "the-oracle": {
+          "name": "Operasjonell synlighet",
+          "short": "Operasjonelt sanntidsdashbord. Vit alltid hvor mange arbeidsordrer som er åpne, pågår eller er fullført i dag.",
+          "full": "### Operative data, ikke antagelser.\n\nÅ bestemme uten pålitelige data er farlig.\n**Operasjonell synlighet** gjør feltdata om til konkret informasjon.\n\n#### Operasjonelt dashbord\n\nSe i sanntid:\n- Åpne og pågående intervensjoner\n- Aktive feltteknikere\n- Intervensjoner fullført i dag og denne uken\n\n#### Periodiske rapporter\n\nMotta automatiserte aktivitetsoppsummeringer.\nSammenlign perioder, identifiser flaskehalser og optimaliser driften."
+        }
+      }
+    },
+    "app": {
+      "hero_badge": "GeoTapp TimeTracker — App for feltteknikere",
+      "hero_title": "GeoTapp TimeTracker.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600\">Feltet i lommen din.</span>",
+      "hero_subtitle": "Mobilappen som brukes av feltteknikere for å registrere aktivitet, samle bevis og opprettholde den operative tråden direkte fra felt. Tilgjengelig på Android og iOS.",
+      "visual_placeholder": "FELTGRENSESNITT",
+      "grid_title": "Verktøy for feltarbeid",
+      "grid_subtitle": "Hver funksjon er designet for de som jobber utenfor kontoret og ikke har tid å kaste bort. Klikk for å utforske.",
+      "sectors": {
+        "1": "Kjerneoperasjoner",
+        "2": "Logistikk og kommunikasjon",
+        "3": "Data og administrasjon"
+      },
+      "cta_title": "Gi feltteknikerne dine det rette verktøyet.",
+      "cta_button": "Se priser",
+      "modal": {
+        "status": "SYSTEMSTATUS: <span class=\"text-green-600\">OPERATIVT</span>",
+        "encryption": "DATA: <span class=\"text-slate-400\">BESKYTTET</span>",
+        "device": "ENHET: <span class=\"text-blue-600\">MOBIL / NETTBRETT</span>",
+        "close": "Lukk"
+      },
+      "systems": {
+        "timelock-alpha": {
+          "name": "GPS-tidssporing",
+          "short": "Innsjekk og utsjekk knyttet til GPS-posisjon og presist tidsstempel. Hver arbeidsøkt blir en verifiserbar operasjonell hendelse.",
+          "full": "### Tid er verifiserbar.\n\nTidsstempler uten verifisering genererer tvister.\n**GPS-tidssporing** gjør hver arbeidsøkt til et pålitelig, forsvarbart utlegg.\n\n#### Geolosert innsjekk og utsjekk\n\nFelttekniker registrerer inn- og utgang fra felt.\nPosisjon, adresse og tid registreres automatisk.\n\n#### Uforanderlig historikk\n\nHver økt er en verifiserbar post: starttid, sluttid, posisjon, varighet og tilknyttet arbeidsordre.\nKunden spør når du ankom? Dataene er der, alltid."
+        },
+        "event-horizon": {
+          "name": "Skiftplanlegging",
+          "short": "Administrer skift og personelltilgjengelighet. Ukentlige og månedlige visninger for koordinering uten forvirring eller overlapper.",
+          "full": "### Ingen skiftkonflikter.\n\nOrganisering av mobilt personell krever klarhet.\n**Skiftplanlegging** gir lederen en presis, oppdatert oversikt.\n\n#### Kalendervisning\n\nSe hvem som jobber når.\nIdentifiser fravær, ferier og overlapper før de blir operative problemer.\n\n#### Sanntidstilgjengelighet\n\nAnsatte bekrefter oppmøte eller rapporterer fravær direkte fra appen.\nLederen ser hull i planen før nye arbeidsordrer tildeles."
+        },
+        "unit-matrix": {
+          "name": "Operatørregister",
+          "short": "Administrer et komplett register over operatørene dine: roller, kontakter, sertifiseringer og plattformtilgang.",
+          "full": "### Kjenn teamet ditt.\n\nHver operatør er en viktig operasjonell ressurs.\n**Operatørregister** sentraliserer all viktig informasjon.\n\n#### Sertifiseringsstyring\n\nSe med ett blikk hvem som har nødvendige kvalifikasjoner for en spesifikk intervensjon eller et bestemt sted.\n\n#### Rask onboarding\n\nÅ legge til en ny felttekniker er enkelt.\nSend en invitasjonslenke: innen minutter er de operative på GeoTapp TimeTracker."
+        },
+        "sector-grid": {
+          "name": "Steder og arbeidsplasser",
+          "short": "Opprett en database med operative steder og arbeidsplasser. Koble hver intervensjon til riktig posisjon og organiser team etter sone.",
+          "full": "### Hver intervensjon på riktig sted.\n\nÅ arbeide uten geografisk referanse genererer forvirring.\n**Steder og arbeidsplasser** bringer operasjonell klarhet.\n\n#### Stedsdatabase\n\nOpprett en katalog over kundelokasjoner, arbeidsplasser og operative steder.\nSystemet kobler automatisk felttekniker-aktivitet til intervensjonsstedet.\n\n#### Sonebaserte team\n\nOrganiser feltteknikere i team etter sted eller geografisk sone.\nTildel intervensjoner til riktig team, ikke bare enkeltpersonen."
+        },
+        "energy-logistics": {
+          "name": "Kjøretøy- og utleggsadministrasjon",
+          "short": "Spor bruk av firmabiler, drivstofforbruk og reiseutlegg for feltpersonell.",
+          "full": "### Hvert oppdrag dokumentert.\n\nReiseutlegg er en kritisk post for enhver bedrift med mobilt personell.\n**Kjøretøyadministrasjon** overvåker hver utgående kostnad.\n\n#### Kjøretøybruk\n\nTildel midlertidig et kjøretøy til en ansatt for en intervensjon.\nVit alltid hvem som bruker hvilket kjøretøy og til hvilken arbeidsordre.\n\n#### Drivstoffutlegg\n\nDen ansatte registrerer tanking direkte fra appen med kvitteringsfoto og beløp.\nAlt arkivert, alt koblet til arbeidsordren."
+        },
+        "neural-link": {
+          "name": "Operasjonell kommunikasjon",
+          "short": "Intern kanal for bedriftskommunikasjon. Målrettede meldinger til spesifikke grupper med lesebekreftelser.",
+          "full": "### Klar kommunikasjon. Ingen bakgrunnsstøy.\n\nWhatsApp blander privatliv og profesjonelt liv og gir ingen kontroll over lesestatus.\n**Operasjonell kommunikasjon** er den offisielle bedriftskanalen.\n\n#### Målrettede meldinger\n\nVarsle kun det teamet som trenger å vite.\nSkiftbytte på Oslo-stedet? Kun de tildelte feltteknikerne mottar meldingen.\n\n#### Lesebekreftelser\n\nVit alltid hvem som leste kommunikasjonen og hvem som ikke gjorde det.\nKlar og transparent ansvarliggjøring for alle."
+        },
+        "payroll-bridge": {
+          "name": "Oppmøteeksport",
+          "short": "Eksporter månedlig oppmøte i formater kompatible med de viktigste lønnssystemene. Mindre manuelt arbeid, færre feil.",
+          "full": "### Lønn uten hodepine.\n\nMånedsavslutning trenger ikke å være et administrativt mareritt.\n**Oppmøteeksport** kobler feltoperasjoner til HR-administrasjon.\n\n#### Flerformat\n\nGenerer oppmøtefiler klare for import til de ledende norske lønnssystemene (Visma Lønn, Tripletex, Datakraft).\n\n#### Regnskapsførertilgang\n\nGi begrenset tilgang til lønnsfirmaet ditt.\nDe laster ned dataene de trenger selvstendig, uten å ringe deg ved hver månedsavslutning."
+        },
+        "data-core": {
+          "name": "Ukentlige rapporter",
+          "short": "Detaljerte rapporter over arbeidede timer per arbeidsordre og per operatør. Pålitelige data for intern kontroll og fakturering.",
+          "full": "### Data lyver ikke.\n\nTa beslutninger basert på fakta, ikke inntrykk.\n**Ukentlige rapporter** henter verdi ut av den daglige driften.\n\n#### Detaljerte rapporter\n\nHver uke, et komplett bilde: hvem som jobbet, hvor, på hvilken arbeidsordre og i hvor lang tid.\n\n#### Full transparens\n\nAnsatte og ledere konsulterer den samme månedlige rapporten.\nTimer talt er identiske for alle.\nIngen tvister ved månedsavslutning."
+        },
+        "identity-forge": {
+          "name": "Merkevaretilpasset app",
+          "short": "Last opp logoen din og velg bedriftens farger. Operatørene dine bruker en app som gjenspeiler din merkevareidentitet.",
+          "full": "### Din bedrift, din app.\n\nBruk ikke en generisk app.\nFå ansatte til å føle seg som en del av DIN bedrift med en konsistent visuell opplevelse.\n\n#### Bedriftslogo\n\nLogoen din fremtredende vist på innloggingsskjermen og hoveddashbordet.\n\n#### Bedriftsfarger\n\nVelg fargetemaet som passer til bedriftens profil.\nProfesjonell, konsistent, gjenkjennelig."
+        }
+      }
+    }
+  }
+}
