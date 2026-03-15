@@ -509,9 +509,11 @@ function gtmsa_translate_one_post($source_post_id, $settings) {
 
     // Filter to only languages registered in Polylang
     $registered_langs = pll_languages_list(['fields' => 'slug']);
-    if (is_array($registered_langs)) {
-        $target_languages = gtmsa_filter_target_languages($target_languages, $registered_langs);
+    if (!is_array($registered_langs) || empty($registered_langs)) {
+        error_log('GTMSA: pll_languages_list returned no langs — skipping translation for post ' . $source_post->ID);
+        return true;
     }
+    $target_languages = gtmsa_filter_target_languages($target_languages, $registered_langs);
     if (!$target_languages) {
         return true;
     }
