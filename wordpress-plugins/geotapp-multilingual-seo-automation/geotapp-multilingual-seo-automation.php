@@ -3,7 +3,7 @@
  * Plugin Name: GeoTapp Multilingual SEO Automation
  * Plugin URI: https://geotapp.com
  * Description: Auto-translates historical and new posts with Polylang + DeepL, links translations, and adds reverse-proxy-safe SEO signals.
- * Version: 1.0.3
+ * Version: 1.1.0
  * Author: GeoTapp
  * License: GPL2
  */
