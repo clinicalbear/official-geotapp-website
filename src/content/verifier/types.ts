@@ -1,0 +1,50 @@
+export interface VerifierCopy {
+  hero_badge: string;
+  hero_title: string;
+  hero_subtitle: string;
+  hero_cta_primary: string;
+  hero_cta_secondary: string;
+  // terminal mock strings
+  terminal_integrity: string;
+  terminal_timestamps: string;
+  terminal_gps: string;
+  terminal_not_modified: string;
+  terminal_operator: string;
+  terminal_summary_title: string;
+  terminal_technician_label: string;
+  terminal_date_label: string;
+  terminal_site_label: string;
+  terminal_verified_line: string;
+  // ecosystem section inline strings
+  ecosystem_timetracker_desc: string;
+  ecosystem_timetracker_link: string;
+  ecosystem_flow_desc: string;
+  ecosystem_flow_link: string;
+  ecosystem_verifier_desc: string;
+  problem_badge: string;
+  problem_title: string;
+  problem_items: Array<{ title: string; desc: string }>;
+  what_badge: string;
+  what_title: string;
+  what_desc: string;
+  how_badge: string;
+  how_title: string;
+  how_steps: Array<{ num: string; title: string; desc: string }>;
+  features_badge: string;
+  features_title: string;
+  features: Array<{ title: string; desc: string }>;
+  who_badge: string;
+  who_title: string;
+  who_items: string[];
+  ecosystem_badge: string;
+  ecosystem_title: string;
+  ecosystem_desc: string;
+  cta_title: string;
+  cta_subtitle: string;
+  cta_primary: string;
+  cta_flow: string;
+  cta_timetracker: string;
+  faq_badge: string;
+  faq_title: string;
+  faqs: Array<{ q: string; a: string }>;
+}
