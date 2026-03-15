@@ -1,0 +1,319 @@
+{
+  "navbar": {
+    "products": "Produkter",
+    "pricing": "Priser",
+    "blog": "Blogg",
+    "contact": "Kontakt",
+    "login": "Logga in",
+    "cta": "Begär demo"
+  },
+  "footer": {
+    "tagline": "Fältaktivitet registrerad. Verksamhet organiserad. Rapporter verifierbara.",
+    "privacy": "Integritetspolicy",
+    "terms": "Användarvillkor",
+    "rights": "Alla rättigheter förbehållna."
+  },
+  "landing": {
+    "hero_badge": "GeoTapp — Kontroll över fältarbete",
+    "hero_title": "Kontrollera vad som händer<br />i fält.",
+    "hero_subtitle": "GeoTapp ger företag med fälttekniker och operatörer verklig kontroll över utfört arbete: aktivitet registrerad, verksamhet organiserad, arbetsrapporter verifierbara.",
+    "hero_cta_primary": "Begär en demo",
+    "hero_cta_secondary": "Utforska produkter",
+    "features_title": "Vad du faktiskt behöver",
+    "features_subtitle": "Tre integrerade verktyg för att styra fältarbete från kontoret.",
+    "cta_title": "Redo att kontrollera din fältverksamhet?",
+    "cta_subtitle": "Gå med de företag som använder GeoTapp för att organisera arbetsorder och producera verifierbara arbetsrapporter.",
+    "cta_button": "Begär en demo"
+  },
+  "home_sections": {
+    "flow": {
+      "badge": "GeoTapp Flow",
+      "title": "Koordinera fältet från ett operativt nav.",
+      "subtitle": "Flow är systemet som kontoret använder för att hantera arbetsorder, tilldela aktiviteter, följa framsteg och generera strukturerade arbetsrapporter. <strong class=\"text-slate-900\">Mindre intern friktion, mer verklig kontroll.</strong>",
+      "features": {
+        "crm": "<strong>Arbetsorderhantering:</strong> Skapa arbetsorder, tilldela fälttekniker och följ framsteg i realtid.",
+        "pipeline": "<strong>Strukturerade arbetsrapporter:</strong> Varje slutförd arbetsorder genererar spårbar dokumentation redo för kunden."
+      },
+      "link": "Utforska GeoTapp Flow"
+    },
+    "app": {
+      "badge": "GeoTapp TimeTracker",
+      "title": "Teknikern registrerar. Kontoret kontrollerar.",
+      "subtitle": "TimeTracker är mobilappen som fälttekniker använder för att registrera fältaktivitet. Instämpling, utstämpling, foton och anteckningar kopplade till varje arbetsorder. <strong>Tillgänglig på Android och iOS.</strong>",
+      "card_gps": {
+        "title": "GPS-tidregistrering",
+        "desc": "Verifierad position"
+      },
+      "card_gdpr": {
+        "title": "GDPR-kompatibel",
+        "desc": "Ingen kontinuerlig spårning"
+      },
+      "link": "Utforska GeoTapp TimeTracker"
+    },
+    "verifier": {
+      "badge": "GeoTapp Verifier",
+      "title": "Arbetsrapporter som vem som helst kan verifiera.",
+      "subtitle": "Verifier låter dig kontrollera om en arbetsrapport stämmer överens med de registrerade operativa uppgifterna och inte har ändrats. Mer transparens för kunden, färre tvister.",
+      "features": {
+        "integrity": "<strong>Verifierad integritet:</strong> Systemet korskontrollerar rapporten mot de faktiska sessionsdata registrerade i fält.",
+        "independent": "<strong>Oberoende verifiering:</strong> Vem som helst kan verifiera en rapport utan att ha tillgång till plattformen."
+      },
+      "link": "Utforska GeoTapp Verifier"
+    },
+    "core": {
+      "badge": "GeoTapp Platform",
+      "title": "Byggt för fältarbete.",
+      "subtitle": "Tre integrerade produkter, ett syfte: ge företag med fältoperatörer den synlighet och operativa dokumentation de behöver.",
+      "features": [
+        {
+          "title": "Verklig mobil operabilitet",
+          "desc": "TimeTracker fungerar utan anslutning och synkroniserar så snart fältet är online igen. Arbetet stannar aldrig."
+        },
+        {
+          "title": "Privacy by design",
+          "desc": "Platsen registreras <strong>endast</strong> vid instämpling och utstämpling. Ingen kontinuerlig spårning. Helt GDPR-kompatibel."
+        },
+        {
+          "title": "Synkronisering i realtid",
+          "desc": "Aktivitet registrerad i fält anländer omedelbart till Flow, så att kontoret alltid har en aktuell operativ bild."
+        },
+        {
+          "title": "Arbetsrapporter verifierbara över tid",
+          "desc": "Med GeoTapp Verifier kan vilken rapport som helst valideras oberoende. Insamlade data förblir tillförlitliga och försvarbara."
+        }
+      ]
+    },
+    "footer_cta": {
+      "title": "Ta verklig kontroll<br />över ditt fält.",
+      "subtitle": "GeoTapp Flow, TimeTracker och Verifier samarbetar för att ge ditt företag verklig synlighet och tillförlitlig dokumentation av utfört arbete.",
+      "button": "Kontakta oss"
+    }
+  },
+  "pricing": {
+    "badge": "GeoTapp Lösningar",
+    "title": "Välj rätt produkt.",
+    "subtitle": "Praktiska lösningar för företag med fälttekniker och operatörer.",
+    "vat_note": "Alla priser exklusive moms. Fakturering enligt användarvillkoren.",
+    "categories": {
+      "app": {
+        "title": "GeoTapp TimeTracker",
+        "description": "Mobilapp för fälttekniker",
+        "products": [
+          {
+            "name": "GeoTapp TimeTracker",
+            "tagline": "Från och med",
+            "desc": "Den kompletta lösningen för att spåra närvaro, fältaktivitet och arbetsbevis. Pris per användare/år.",
+            "features": ["Android/iOS-app", "GPS-instämpling", "Veckoapporter"],
+            "button": "Visa kalkylator"
+          }
+        ]
+      },
+      "flow": {
+        "title": "GeoTapp Flow",
+        "description": "Fältverksamhet och teamhantering",
+        "products": [
+          {
+            "name": "GeoTapp Flow Lifetime",
+            "tagline": "Livstidslicens",
+            "desc": "Betala en gång, använd för alltid. Full tillgång till GeoTapp Flow utan återkommande avgifter. Inkluderar framtida uppdateringar.",
+            "features": [
+              "Full tillgång till Flow",
+              "Inga månatliga avgifter",
+              "Livstidsuppdateringar inkluderade"
+            ]
+          },
+          {
+            "name": "GeoTapp Flow Business",
+            "tagline": "För strukturerade företag",
+            "desc": "Avancerad verksamhetsstyrning, obegränsade team och prioritetssupport.",
+            "features": [
+              "Obegränsade team",
+              "API-åtkomst",
+              "Prioritetssupport"
+            ]
+          },
+          {
+            "name": "GeoTapp Flow Team",
+            "tagline": "För små team",
+            "desc": "Idealiskt för arbetsgrupper som behöver koordinering och delad operativ synlighet.",
+            "features": [
+              "5 användare inkluderade",
+              "Arbetsorderhantering",
+              "Grundläggande integrationer"
+            ]
+          },
+          {
+            "name": "GeoTapp Flow Solo",
+            "tagline": "För enskilda operatörer",
+            "desc": "All kraft i Flow för den professionella som arbetar självständigt.",
+            "features": ["1 användare", "Aktivitetshantering", "Grundläggande rapporter"]
+          }
+        ]
+      }
+    }
+  },
+  "contact": {
+    "title": "Låt oss prata <span class=\"text-primary\">affärer</span>.",
+    "subtitle": "Du behöver förstå om GeoTapp passar ditt företag. Vi finns här för att svara konkret.",
+    "guarantee_title": "Svarsgaranti",
+    "guarantee_text": "Genomsnittligt första svar inom 12 arbetstimmar. Inga ärenden förlorade i tomma intet.",
+    "form": {
+      "name": "Namn",
+      "company": "Företag",
+      "email": "Jobbmail",
+      "reason": "Anledning till kontakt",
+      "message": "Meddelande",
+      "send": "Skicka"
+    }
+  },
+  "login_hub": {
+    "title": "Åtkomst till ditt <span class=\"text-primary\">konto</span>.",
+    "subtitle": "Välj den produkt du vill ansluta till.",
+    "flow": {
+      "desc": "Verksamhetsstyrning, arbetsorder, koordinering och rapporter.",
+      "btn": "Logga in på Flow"
+    },
+    "timetracker": {
+      "desc": "Närvaro, fältaktivitet och arbetsbevis.",
+      "btn": "Logga in på TimeTracker"
+    }
+  },
+  "product_pages": {
+    "flow": {
+      "hero_badge": "GeoTapp Flow — Hantering av fältverksamhet",
+      "hero_title": "GeoTapp Flow.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600\">Operativt nav.</span>",
+      "hero_subtitle": "Det operativa centret för företag med fälttekniker och operatörer. Hantera arbetsorder, koordinera team och producera strukturerade, verifierbara arbetsrapporter.",
+      "visual_placeholder": "DRIFTSPANEL",
+      "grid_title": "Operativa funktioner",
+      "grid_subtitle": "Varje modul är utformad för verklig kontroll av fältarbete. Klicka för att utforska.",
+      "sectors": {
+        "1": "Arbetsorder och kunder",
+        "2": "Planering och resurser",
+        "3": "Kontroll och synlighet"
+      },
+      "cta_title": "Ta verklig kontroll över ditt fält.",
+      "cta_button": "Visa priser",
+      "modal": {
+        "status": "SYSTEMSTATUS: <span class=\"text-green-600\">OPERATIVT</span>",
+        "encryption": "DATA: <span class=\"text-slate-400\">SKYDDAD</span>",
+        "access": "ÅTKOMST: <span class=\"text-blue-600\">SÄKER</span>",
+        "close": "Stäng"
+      },
+      "systems": {
+        "nexus-core": {
+          "name": "Arbetsorderhantering",
+          "short": "Skapa och hantera tekniska arbetsorder. Tilldela uppgifter till fälttekniker, följ framsteg och håll allt spårat per arbetsorder.",
+          "full": "### Central arbetsorderkontroll.\n\nVarje arbetsorder börjar som ett strukturerat uppdrag.\n**Arbetsorderhantering** ger dig en tydlig överblick av allt pågående arbete.\n\n#### Orderhantering\n\nSkapa en arbetsorder, tilldela teknikern, definiera platsen och datumet.\nÖvervaka status: Öppen, Pågående, Avslutad.\n\n#### Operativ historik\n\nVarje arbetsorder har ett komplett arkiv av aktiviteter, fotobevis, anteckningar och tidsstämplar.\nKunden frågar vad som gjordes? Du har uppgifterna. Alltid."
+        },
+        "titan-flow": {
+          "name": "Uppgiftstilldelning",
+          "short": "Fördela arbete till fälttekniker med precision. Kommunicera instruktioner, deadlines och operativa prioriteringar på ett strukturerat sätt.",
+          "full": "### Rätt arbetsorder till rätt tekniker.\n\nFörvirrad uppgiftstilldelning skapar förseningar och tvister.\n**Uppgiftstilldelning** ger operativ tydlighet.\n\n#### Precis fördelning\n\nSå snart en arbetsorder öppnas, tilldela en eller flera fälttekniker.\nVarje tekniker ser sitt arbete på GeoTapp TimeTracker.\n\n#### Operativ kommunikation\n\nInstruktioner, anteckningar, tekniska bilagor: allt når teknikern innan de åker ut i fält.\nFärre samtal, färre missförstånd, färre förseningar."
+        },
+        "ledger-prime": {
+          "name": "Arbetsrapporter och fakturering",
+          "short": "Generera strukturerade arbetsrapporter från varje arbetsorder. Exportera dokumentation och stöd fakturering med verkliga fältdata.",
+          "full": "### Från arbete till arbetsrapport, på ett ordnat sätt.\n\nManuell fakturering är långsam och ofta ofullständig.\n**Arbetsrapporter och fakturering** avslutar den operativa cykeln.\n\n#### Strukturerade arbetsrapporter\n\nVarje slutförd arbetsorder genererar dokumentation genom att samla in tidsstämplar, foton och anteckningar från fält.\nInga uppgifter att ange manuellt — allt kommer från TimeTracker.\n\n#### Faktureringsstöd\n\nVerkliga arbetsorderdata stöder mer exakta offerter och fakturor.\nFärre fel, färre tvister, snabbare administrativ cykel."
+        },
+        "quantum-logistics": {
+          "name": "Arbetsorderskalender",
+          "short": "Planera arbetsorder, visualisera den operativa kalendern och hantera teamtillgänglighet utan överlappningar.",
+          "full": "### Full översikt av planerat arbete.\n\nUtan en delad kalender blir planering kaotisk.\n**Arbetsorderskalender** ger dig tydlig operativ synlighet.\n\n#### Avancerad planering\n\nVisa alla arbetsorder i dagliga, veckovisa och månatliga kalendervyer.\nIdentifiera överlappningar och optimera arbetsbelastningsfördelningen.\n\n#### Teamtillgänglighet\n\nSe vem som är tillgänglig, vem som är på ledighet och vem som redan är överbelastad.\nTilldela nya arbetsorder utan att skapa operativa konflikter."
+        },
+        "supply-command": {
+          "name": "Resurshantering",
+          "short": "Kontrollera material, utrustning och operativa resurser som behövs för varje fältarbetsorder. Inga överraskningar.",
+          "full": "### Ingen arbetsorder utan resurser.\n\nAtt skicka en fälttekniker ut i fält utan rätt material är ett kostsamt misstag.\n**Resurshantering** förhindrar operativa överraskningar.\n\n#### Material per arbetsorder\n\nKoppla nödvändiga resurser till varje arbetsorder.\nChefen ser i förväg vad som behövs och när.\n\n#### Leverantörer och inköp\n\nLagra kontaktuppgifter och villkor för dina fasta leverantörer.\nMinska inköpstid och håll kostnaderna under kontroll."
+        },
+        "the-architect": {
+          "name": "Arbetsplanering",
+          "short": "Organisera arbete i faser, uppgifter och deadlines. Håll projektet under kontroll utan kalkylark eller WhatsApp-meddelanden.",
+          "full": "### Strukturera arbetet. Kontrollera framstegen.\n\nKomplexa arbetsorder kräver struktur.\n**Arbetsplanering** ger operativ ordning.\n\n#### Faser och deadlines\n\nStrukturera komplexa arbetsorder i operativa faser med tydliga deadlines.\nTilldela ansvar till varje teammedlem.\n\n#### Framstegsövervakning\n\nVisualisera framsteg i realtid.\nVet alltid vad som har gjorts och vad som återstår.\nAgera innan en försening blir ett kundproblem."
+        },
+        "the-auditor": {
+          "name": "Arbetsorderdokumentation",
+          "short": "Samla fotobevis, operativa anteckningar och signerade dokument för varje arbetsorder. Utfört arbete förblir verifierbart.",
+          "full": "### Verkligt bevis för varje arbetsorder.\n\nUtan dokumentation är utfört arbete möjligt att ifrågasätta.\n**Arbetsorderdokumentation** gör varje uppdrag verifierbart.\n\n#### Fotobevis\n\nTekniker tar foton direkt från GeoTapp TimeTracker i fält.\nBilder kopplas automatiskt till arbetsordern med tidsstämpel och position.\n\n#### Digital kundsignatur\n\nKunden kan signera arbetsrapporten direkt på teknikerns skärm.\nDen digitala signaturen ingår i rapporten och utgör bevis på levererad tjänst."
+        },
+        "the-uplink": {
+          "name": "Fält-till-kontor-länk",
+          "short": "Data som samlats in av TimeTracker anländer till Flow i realtid. Fält och kontor arbetar med samma operativa data.",
+          "full": "### Kontor och fält, äntligen sammankopplade.\n\nKlyftan mellan fält och kontor skapar undvikbara fel, förseningar och tvister.\n**Fält-till-kontor-länk** sluter gapet.\n\n#### Synkronisering i realtid\n\nVarje instämpling, foto och anteckning registrerad på TimeTracker anländer omedelbart till Flow.\nChefen har en livevy utan att behöva ringa teknikern.\n\n#### Tillförlitlig historik\n\nAllt teknikern registrerar i fält arkiveras och kopplas till arbetsordern.\nIngen data förloras. Ingen information saknas när det är dags att rapportera."
+        },
+        "the-oracle": {
+          "name": "Operativ synlighet",
+          "short": "Operativt dashboard i realtid. Vet alltid hur många arbetsorder som är öppna, pågående eller avslutade idag.",
+          "full": "### Operativa data, inte antaganden.\n\nAtt fatta beslut utan tillförlitliga data är farligt.\n**Operativ synlighet** omvandlar fältdata till konkret information.\n\n#### Operativt dashboard\n\nSe i realtid:\n- Öppna och pågående arbetsorder\n- Aktiva fälttekniker\n- Arbetsorder avslutade idag och denna vecka\n\n#### Periodiska rapporter\n\nFå automatiserade aktivitetssammanfattningar.\nJämför perioder, identifiera flaskhalsar och optimera verksamheten."
+        }
+      }
+    },
+    "app": {
+      "hero_badge": "GeoTapp TimeTracker — App för fälttekniker",
+      "hero_title": "GeoTapp TimeTracker.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600\">Fältet i din ficka.</span>",
+      "hero_subtitle": "Mobilappen som fälttekniker använder för att registrera aktivitet, samla bevis och upprätthålla den operativa tråden direkt från fält. Tillgänglig på Android och iOS.",
+      "visual_placeholder": "FÄLTGRÄNSSNITT",
+      "grid_title": "Verktyg för fältarbete",
+      "grid_subtitle": "Varje funktion är utformad för dem som arbetar utanför kontoret och inte har tid att slösa. Klicka för att utforska.",
+      "sectors": {
+        "1": "Kärnverksamhet",
+        "2": "Logistik och kommunikation",
+        "3": "Data och administration"
+      },
+      "cta_title": "Ge dina fälttekniker rätt verktyg.",
+      "cta_button": "Visa priser",
+      "modal": {
+        "status": "SYSTEMSTATUS: <span class=\"text-green-600\">OPERATIVT</span>",
+        "encryption": "DATA: <span class=\"text-slate-400\">SKYDDAD</span>",
+        "device": "ENHET: <span class=\"text-blue-600\">MOBIL / SURFPLATTA</span>",
+        "close": "Stäng"
+      },
+      "systems": {
+        "timelock-alpha": {
+          "name": "GPS-tidregistrering",
+          "short": "Instämpling och utstämpling kopplade till GPS-position och exakt tidsstämpel. Varje arbetspass blir en verifierbar operativ händelse.",
+          "full": "### Tid är verifierbar.\n\nTidsstämplar utan verifiering skapar tvister.\n**GPS-tidregistrering** gör varje arbetspass till ett tillförlitligt, försvarsbart register.\n\n#### Geolokaliserad instämpling och utstämpling\n\nTeknikern registrerar ankomst och avfärd från fält.\nPosition, adress och tid registreras automatiskt.\n\n#### Oföränderlig historik\n\nVarje pass är ett verifierbart register: starttid, sluttid, position, varaktighet och kopplad arbetsorder.\nKunden frågar när du anlände? Uppgifterna finns där, alltid."
+        },
+        "event-horizon": {
+          "name": "Schemaläggning",
+          "short": "Hantera scheman och personaltillgänglighet. Vecko- och månadsvisningar för koordinering utan förvirring eller överlappningar.",
+          "full": "### Inga schemakonfliker.\n\nAtt organisera mobil personal kräver tydlighet.\n**Schemaläggning** ger chefen en exakt, aktuell översikt.\n\n#### Kalendervy\n\nSe vem som arbetar när.\nIdentifiera frånvaro, semestrar och överlappningar innan de blir operativa problem.\n\n#### Realtidstillgänglighet\n\nAnställda bekräftar närvaro eller rapporterar frånvaro direkt från appen.\nChefen ser luckor i schemat innan nya arbetsorder tilldelas."
+        },
+        "unit-matrix": {
+          "name": "Operatörsregister",
+          "short": "Hantera ett fullständigt register över dina operatörer: roller, kontakter, certifieringar och plattformsåtkomst.",
+          "full": "### Känn ditt team.\n\nVarje operatör är en viktig operativ resurs.\n**Operatörsregister** centraliserar all vital information.\n\n#### Certifieringshantering\n\nSe på ett ögonkast vem som har de nödvändiga kvalifikationerna för ett specifikt uppdrag eller en plats.\n\n#### Snabb introduktion\n\nAtt lägga till en ny fälttekniker är enkelt.\nSkicka en inbjudningslänk: inom minuter är de operativa på GeoTapp TimeTracker."
+        },
+        "sector-grid": {
+          "name": "Platser och arbetsplatser",
+          "short": "Skapa en databas med operativa platser och arbetsplatser. Koppla varje arbetsorder till rätt plats och organisera team per zon.",
+          "full": "### Varje arbetsorder på rätt plats.\n\nAtt arbeta utan geografisk referens skapar förvirring.\n**Platser och arbetsplatser** ger operativ tydlighet.\n\n#### Platsdatabas\n\nSkapa en katalog med kundplatser, arbetsplatser och operativa platser.\nSystemet kopplar automatiskt teknikerns aktivitet till arbetsorderns plats.\n\n#### Zonbaserade team\n\nOrganisera fälttekniker i team per plats eller geografiskt område.\nTilldela arbetsorder till rätt team, inte bara individen."
+        },
+        "energy-logistics": {
+          "name": "Fordons- och kostnadshantering",
+          "short": "Spåra företagsfordonanvändning, förbrukat bränsle och resekostnader för fältpersonal.",
+          "full": "### Varje resa dokumenterad.\n\nResekostnader är en kritisk post för alla företag med mobil personal.\n**Fordonshantering** övervakar varje utgående kostnad.\n\n#### Fordonsanvändning\n\nTilldela tillfälligt ett fordon till en anställd för en arbetsorder.\nVet alltid vem som använder vilket fordon och för vilket uppdrag.\n\n#### Bränslekostnader\n\nDen anställde registrerar tankning direkt från appen med ett kvittofoto och belopp.\nAllt arkiverat, allt kopplat till arbetsordern."
+        },
+        "neural-link": {
+          "name": "Operativ kommunikation",
+          "short": "Intern kanal för företagskommunikation. Riktade meddelanden till specifika grupper med läsbekräftelser.",
+          "full": "### Tydlig kommunikation. Inget bakgrundsbrus.\n\nWhatsApp blandar privat- och yrkesliv och erbjuder ingen kontroll över lässtatus.\n**Operativ kommunikation** är den officiella företagskanalen.\n\n#### Riktade meddelanden\n\nAvisera bara det team som behöver veta.\nSkiftbyte på Göteborgsplatsen? Bara de tilldelade teknikerna tar emot meddelandet.\n\n#### Läsbekräftelser\n\nVet alltid vem som läste kommunikationen och vem som inte gjorde det.\nTydligt och transparent ansvar för alla."
+        },
+        "payroll-bridge": {
+          "name": "Närvароexport",
+          "short": "Exportera månadsvis närvaro i format kompatibla med de viktigaste lönesystemen. Mindre manuellt arbete, färre fel.",
+          "full": "### Lönehantering utan huvudvärk.\n\nMånadsslut behöver inte vara en administrativ mardröm.\n**Närvаrоexport** kopplar samman fältverksamhet med HR-administration.\n\n#### Flerformat\n\nGenerera närvarofiler redo för import till de ledande svenska lönesystemen (Visma, Fortnox, Hogia).\n\n#### Åtkomst för lönekonsult\n\nGe begränsad åtkomst till din lönebyrå.\nDe laddar ned de uppgifter de behöver självständigt, utan att ringa dig vid varje månadsslut."
+        },
+        "data-core": {
+          "name": "Veckоrapporter",
+          "short": "Detaljerade rapporter om arbetade timmar per arbetsorder och per operatör. Tillförlitliga data för intern kontroll och fakturering.",
+          "full": "### Data ljuger inte.\n\nFatta beslut baserade på fakta, inte intryck.\n**Veckоrapporter** extraherar värde ur den dagliga verksamheten.\n\n#### Detaljerade rapporter\n\nVarje vecka en fullständig bild: vem som arbetade, var, på vilken arbetsorder och hur länge.\n\n#### Full transparens\n\nAnställda och chefer konsulterar samma månadsrapport.\nRäknade timmar är identiska för alla.\nInga tvister vid månadsslut."
+        },
+        "identity-forge": {
+          "name": "Varumärkesapp",
+          "short": "Ladda upp din logotyp och välj dina företagsfärger. Dina operatörer använder en app som speglar din varumärkesidentitet.",
+          "full": "### Ditt företag, din app.\n\nAnvänd inte en generisk app.\nLåt dina anställda känna sig som en del av DITT företag med en konsekvent visuell upplevelse.\n\n#### Företagslogotyp\n\nDin logotyp framträdande visad på inloggningsskärmen och huvuddashboarden.\n\n#### Företagsfärger\n\nVälj färgtemat som passar din företagsprofil.\nProfessionell, konsekvent, igenkännbar."
+        }
+      }
+    }
+  }
+}

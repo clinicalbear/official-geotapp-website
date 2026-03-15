@@ -1,0 +1,319 @@
+{
+  "navbar": {
+    "products": "Producten",
+    "pricing": "Tarieven",
+    "blog": "Blog",
+    "contact": "Contact",
+    "login": "Inloggen",
+    "cta": "Demo aanvragen"
+  },
+  "footer": {
+    "tagline": "Buitendienstactiviteit geregistreerd. Operaties georganiseerd. Rapporten verifieerbaar.",
+    "privacy": "Privacybeleid",
+    "terms": "Gebruiksvoorwaarden",
+    "rights": "Alle rechten voorbehouden."
+  },
+  "landing": {
+    "hero_badge": "GeoTapp — Controle over buitendienst",
+    "hero_title": "Beheers wat er gebeurt<br />in het veld.",
+    "hero_subtitle": "GeoTapp geeft bedrijven met monteurs en buitendienstmedewerkers echte controle over uitgevoerd werk: activiteit geregistreerd, operaties georganiseerd, werkbonnen verifieerbaar.",
+    "hero_cta_primary": "Demo aanvragen",
+    "hero_cta_secondary": "Ontdek de producten",
+    "features_title": "Wat u echt nodig heeft",
+    "features_subtitle": "Drie geïntegreerde tools om buitendienstwerk vanuit kantoor te beheren.",
+    "cta_title": "Klaar om uw buitendienst te beheersen?",
+    "cta_subtitle": "Sluit u aan bij bedrijven die GeoTapp gebruiken om interventies te organiseren en verifieerbare werkbonnen te produceren.",
+    "cta_button": "Demo aanvragen"
+  },
+  "home_sections": {
+    "flow": {
+      "badge": "GeoTapp Flow",
+      "title": "Coördineer de buitendienst vanuit één operationeel centrum.",
+      "subtitle": "Flow is het systeem dat kantoor gebruikt om werkbeurten te beheren, activiteiten toe te wijzen, voortgang bij te houden en gestructureerde werkbonnen te genereren. <strong class=\"text-slate-900\">Minder interne wrijving, meer echte controle.</strong>",
+      "features": {
+        "crm": "<strong>Werkbeurtbeheer:</strong> Maak interventies aan, wijs monteurs toe en volg de voortgang in realtime.",
+        "pipeline": "<strong>Gestructureerde werkbonnen:</strong> Elke voltooide werkbeurt genereert traceerbare documentatie klaar voor de klant."
+      },
+      "link": "Ontdek GeoTapp Flow"
+    },
+    "app": {
+      "badge": "GeoTapp TimeTracker",
+      "title": "De monteur registreert. Het kantoor controleert.",
+      "subtitle": "TimeTracker is de mobiele app die monteurs gebruiken om buitendienstactiviteit te registreren. In- en uitklokken, foto's en notities gekoppeld aan elke werkbeurt. <strong>Beschikbaar op Android en iOS.</strong>",
+      "card_gps": {
+        "title": "GPS-tijdregistratie",
+        "desc": "Geverifieerde locatie"
+      },
+      "card_gdpr": {
+        "title": "AVG-conform",
+        "desc": "Geen continue tracking"
+      },
+      "link": "Ontdek GeoTapp TimeTracker"
+    },
+    "verifier": {
+      "badge": "GeoTapp Verifier",
+      "title": "Werkbonnen die iedereen kan verifiëren.",
+      "subtitle": "Met Verifier controleert u of een werkbon overeenkomt met de geregistreerde operationele gegevens en niet is gewijzigd. Meer transparantie voor de klant, minder geschillen.",
+      "features": {
+        "integrity": "<strong>Geverifieerde integriteit:</strong> Het systeem vergelijkt de werkbon met de werkelijke sessiegegevens geregistreerd in het veld.",
+        "independent": "<strong>Onafhankelijke verificatie:</strong> Iedereen kan een werkbon verifiëren zonder toegang tot het platform."
+      },
+      "link": "Ontdek GeoTapp Verifier"
+    },
+    "core": {
+      "badge": "GeoTapp Platform",
+      "title": "Gebouwd voor buitendienstwerk.",
+      "subtitle": "Drie geïntegreerde producten, één doel: bedrijven met buitendienstmedewerkers de zichtbaarheid en operationele documentatie geven die ze nodig hebben.",
+      "features": [
+        {
+          "title": "Echte mobiele operabiliteit",
+          "desc": "TimeTracker werkt zonder verbinding en synchroniseert zodra het veld weer online is. Het werk staat nooit stil."
+        },
+        {
+          "title": "Privacy by design",
+          "desc": "Locatie wordt <strong>uitsluitend</strong> geregistreerd bij in- en uitklokken. Geen continue tracking. Volledig AVG-conform."
+        },
+        {
+          "title": "Realtime synchronisatie",
+          "desc": "Activiteit geregistreerd in het veld komt direct in Flow aan, zodat het kantoor altijd een actueel operationeel beeld heeft."
+        },
+        {
+          "title": "Werkbonnen in de loop van de tijd verifieerbaar",
+          "desc": "Met GeoTapp Verifier kan elk rapport onafhankelijk worden gevalideerd. Verzamelde gegevens blijven betrouwbaar en verdedigbaar."
+        }
+      ]
+    },
+    "footer_cta": {
+      "title": "Neem echte controle<br />over uw buitendienst.",
+      "subtitle": "GeoTapp Flow, TimeTracker en Verifier werken samen om uw bedrijf echte zichtbaarheid en betrouwbare documentatie van uitgevoerd werk te geven.",
+      "button": "Neem contact op"
+    }
+  },
+  "pricing": {
+    "badge": "GeoTapp Oplossingen",
+    "title": "Kies het juiste product.",
+    "subtitle": "Praktische oplossingen voor bedrijven met monteurs en buitendienstmedewerkers.",
+    "vat_note": "Alle prijzen zijn exclusief btw. Facturering volgens de gebruiksvoorwaarden.",
+    "categories": {
+      "app": {
+        "title": "GeoTapp TimeTracker",
+        "description": "Mobiele app voor buitendienstmonteurs",
+        "products": [
+          {
+            "name": "GeoTapp TimeTracker",
+            "tagline": "Vanaf",
+            "desc": "De complete oplossing voor het bijhouden van aanwezigheid, buitendienstactiviteit en werkbewijs. Prijs per gebruiker/jaar.",
+            "features": ["Android/iOS-app", "GPS-inklokken", "Weekrapporten"],
+            "button": "Bekijk calculator"
+          }
+        ]
+      },
+      "flow": {
+        "title": "GeoTapp Flow",
+        "description": "Buitendienstbeheer en teambeheer",
+        "products": [
+          {
+            "name": "GeoTapp Flow Lifetime",
+            "tagline": "Levenslange licentie",
+            "desc": "Eenmalig betalen, voor altijd gebruiken. Volledige toegang tot GeoTapp Flow zonder terugkerende kosten. Inclusief toekomstige updates.",
+            "features": [
+              "Volledige toegang tot Flow",
+              "Geen maandelijkse kosten",
+              "Levenslange updates inbegrepen"
+            ]
+          },
+          {
+            "name": "GeoTapp Flow Business",
+            "tagline": "Voor gestructureerde bedrijven",
+            "desc": "Geavanceerd operationeel beheer, onbeperkte teams en prioriteitsondersteuning.",
+            "features": [
+              "Onbeperkte teams",
+              "API-toegang",
+              "Prioriteitsondersteuning"
+            ]
+          },
+          {
+            "name": "GeoTapp Flow Team",
+            "tagline": "Voor kleine teams",
+            "desc": "Ideaal voor werkgroepen die coördinatie en gedeelde operationele zichtbaarheid nodig hebben.",
+            "features": [
+              "5 gebruikers inbegrepen",
+              "Werkbeurtbeheer",
+              "Basisintegraties"
+            ]
+          },
+          {
+            "name": "GeoTapp Flow Solo",
+            "tagline": "Voor individuele operators",
+            "desc": "Alle kracht van Flow voor de professional die zelfstandig werkt.",
+            "features": ["1 gebruiker", "Activiteitenbeheer", "Basisrapporten"]
+          }
+        ]
+      }
+    }
+  },
+  "contact": {
+    "title": "Laten we praten over <span class=\"text-primary\">zaken</span>.",
+    "subtitle": "U wilt weten of GeoTapp bij uw bedrijf past. Wij zijn er om concreet te antwoorden.",
+    "guarantee_title": "Reactiegarantie",
+    "guarantee_text": "Gemiddeld eerste reactie binnen 12 werkuren. Geen tickets die verloren gaan.",
+    "form": {
+      "name": "Naam",
+      "company": "Bedrijf",
+      "email": "Zakelijk e-mailadres",
+      "reason": "Reden van contact",
+      "message": "Bericht",
+      "send": "Versturen"
+    }
+  },
+  "login_hub": {
+    "title": "Toegang tot uw <span class=\"text-primary\">account</span>.",
+    "subtitle": "Selecteer het product waarmee u verbinding wilt maken.",
+    "flow": {
+      "desc": "Operationeel beheer, werkbeurten, coördinatie en werkbonnen.",
+      "btn": "Inloggen bij Flow"
+    },
+    "timetracker": {
+      "desc": "Aanwezigheid, buitendienstactiviteit en werkbewijs.",
+      "btn": "Inloggen bij TimeTracker"
+    }
+  },
+  "product_pages": {
+    "flow": {
+      "hero_badge": "GeoTapp Flow — Beheer van buitendienstoperaties",
+      "hero_title": "GeoTapp Flow.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600\">Operationeel centrum.</span>",
+      "hero_subtitle": "Het operationele centrum voor bedrijven met buitendienstmonteurs en -medewerkers. Beheer werkbeurten, coördineer teams en produceer gestructureerde, verifieerbare werkbonnen.",
+      "visual_placeholder": "OPERATIEPANEEL",
+      "grid_title": "Operationele mogelijkheden",
+      "grid_subtitle": "Elke module is ontworpen voor echte controle over buitendienstwerk. Klik om te verkennen.",
+      "sectors": {
+        "1": "Werkbeurten en klanten",
+        "2": "Planning en middelen",
+        "3": "Controle en zichtbaarheid"
+      },
+      "cta_title": "Neem echte controle over uw buitendienst.",
+      "cta_button": "Bekijk tarieven",
+      "modal": {
+        "status": "SYSTEEMSTATUS: <span class=\"text-green-600\">OPERATIONEEL</span>",
+        "encryption": "GEGEVENS: <span class=\"text-slate-400\">BEVEILIGD</span>",
+        "access": "TOEGANG: <span class=\"text-blue-600\">VEILIG</span>",
+        "close": "Sluiten"
+      },
+      "systems": {
+        "nexus-core": {
+          "name": "Werkbeurtbeheer",
+          "short": "Maak en beheer technische interventies. Wijs taken toe aan monteurs, volg de voortgang en houd alles bijgehouden per werkbeurt.",
+          "full": "### Centraal werkbeurtbeheer.\n\nElke interventie begint als een gestructureerde werkbeurt.\n**Werkbeurtbeheer** geeft u een duidelijk overzicht van al het lopende werk.\n\n#### Interventiebeheer\n\nMaak een werkbeurt aan, wijs de monteur toe, definieer de locatie en datum.\nMonitor de status: Open, In uitvoering, Voltooid.\n\n#### Operationele geschiedenis\n\nElke werkbeurt heeft een volledig archief van activiteiten, fotobewijs, notities en tijdstempels.\nDe klant vraagt wat er is gedaan? U heeft de gegevens. Altijd."
+        },
+        "titan-flow": {
+          "name": "Taakverdeling",
+          "short": "Verdeel werkbeurten aan monteurs met precisie. Communiceer instructies, deadlines en operationele prioriteiten op een gestructureerde manier.",
+          "full": "### De juiste werkbeurt aan de juiste monteur.\n\nVerwarring bij taakverdeling leidt tot vertragingen en geschillen.\n**Taakverdeling** brengt operationele duidelijkheid.\n\n#### Precieze verdeling\n\nZodra een werkbeurt is geopend, wijs één of meerdere monteurs toe.\nElke monteur ziet zijn werk op GeoTapp TimeTracker.\n\n#### Operationele communicatie\n\nInstructies, notities, technische bijlagen: alles bereikt de monteur voordat hij het veld ingaat.\nMinder telefoontjes, minder misverstanden, minder vertragingen."
+        },
+        "ledger-prime": {
+          "name": "Werkbonnen en facturering",
+          "short": "Genereer gestructureerde werkbonnen van elke werkbeurt. Exporteer documentatie en ondersteun facturering met echte veldgegevens.",
+          "full": "### Van werk naar werkbon, op een ordelijke manier.\n\nHandmatige facturering is traag en vaak onvolledig.\n**Werkbonnen en facturering** sluit de operationele cyclus.\n\n#### Gestructureerde werkbonnen\n\nElke voltooide interventie genereert documentatie door tijdstempels, foto's en notities uit het veld te verzamelen.\nGeen gegevens handmatig invoeren — alles komt van TimeTracker.\n\n#### Ondersteuning bij facturering\n\nEchte werkbeurtgegevens ondersteunen nauwkeurigere offertes en facturen.\nMinder fouten, minder geschillen, snellere administratieve cyclus."
+        },
+        "quantum-logistics": {
+          "name": "Interventiekalender",
+          "short": "Plan interventies, visualiseer de operationele kalender en beheer teambeschikbaarheid zonder overlappingen.",
+          "full": "### Volledig overzicht van gepland werk.\n\nZonder gedeelde kalender wordt planning chaotisch.\n**Interventiekalender** geeft u duidelijke operationele zichtbaarheid.\n\n#### Geavanceerde planning\n\nBekijk alle interventies in dagelijkse, wekelijkse en maandelijkse kalenderweergaven.\nIdentificeer overlappingen en optimaliseer de werkverdeling.\n\n#### Teambeschikbaarheid\n\nZie wie beschikbaar is, wie verlof heeft en wie al overbelast is.\nWijs nieuwe interventies toe zonder operationele conflicten te creëren."
+        },
+        "supply-command": {
+          "name": "Middelenbeheer",
+          "short": "Beheers materialen, uitrusting en operationele middelen die nodig zijn voor elke buitendienstinterventie. Geen verrassingen.",
+          "full": "### Geen interventie zonder middelen.\n\nEen monteur het veld insturen zonder de juiste materialen is een kostbare fout.\n**Middelenbeheer** voorkomt operationele verrassingen.\n\n#### Materialen per werkbeurt\n\nKoppel benodigde middelen aan elke werkbeurt.\nDe manager ziet van tevoren wat nodig is en wanneer.\n\n#### Leveranciers en inkoop\n\nSla contactgegevens en voorwaarden op van uw vaste leveranciers.\nVerkort de inkooptijd en houd kosten onder controle."
+        },
+        "the-architect": {
+          "name": "Werkplanning",
+          "short": "Organiseer werk in fasen, taken en deadlines. Houd het project onder controle zonder spreadsheets of WhatsApp-berichten.",
+          "full": "### Structureer het werk. Beheer de voortgang.\n\nComplexe werkbeurten vereisen structuur.\n**Werkplanning** brengt operationele orde.\n\n#### Fasen en deadlines\n\nStructureer complexe interventies in operationele fasen met duidelijke deadlines.\nWijs verantwoordelijkheden toe aan elk teamlid.\n\n#### Voortgangsmonitoring\n\nVisualiseer de voortgang in realtime.\nWeet altijd wat er is gedaan en wat nog openstaat.\nGrijp in voordat een vertraging een klantprobleem wordt."
+        },
+        "the-auditor": {
+          "name": "Interventiedocumentatie",
+          "short": "Verzamel fotobewijs, operationele notities en ondertekende documenten voor elke interventie. Uitgevoerd werk blijft verifieerbaar.",
+          "full": "### Echt bewijs voor elke interventie.\n\nZonder documentatie is voltooid werk aanvechtbaar.\n**Interventiedocumentatie** maakt elke werkbeurt verifieerbaar.\n\n#### Fotobewijs\n\nMonteurs maken foto's rechtstreeks vanuit GeoTapp TimeTracker in het veld.\nAfbeeldingen worden automatisch gekoppeld aan de werkbeurt met tijdstempel en locatie.\n\n#### Digitale handtekening van de klant\n\nDe klant kan de werkbon rechtstreeks op het scherm van de monteur ondertekenen.\nDe digitale handtekening wordt opgenomen in de werkbon en vormt bewijs van geleverde dienst."
+        },
+        "the-uplink": {
+          "name": "Koppeling veld-kantoor",
+          "short": "Gegevens verzameld door TimeTracker komen in realtime aan in Flow. Buitendienst en kantoor werken op dezelfde operationele gegevens.",
+          "full": "### Kantoor en buitendienst, eindelijk verbonden.\n\nDe kloof tussen buitendienst en kantoor genereert vermijdbare fouten, vertragingen en geschillen.\n**Koppeling veld-kantoor** sluit de kloof.\n\n#### Realtime synchronisatie\n\nElk in- en uitklokken, elke foto en notitie geregistreerd op TimeTracker komt direct in Flow aan.\nDe manager heeft een live overzicht zonder de monteur te hoeven bellen.\n\n#### Betrouwbare geschiedenis\n\nAlles wat de monteur in het veld registreert, wordt gearchiveerd en gekoppeld aan de werkbeurt.\nGeen gegevens gaan verloren. Geen informatie ontbreekt wanneer het tijd is om te rapporteren."
+        },
+        "the-oracle": {
+          "name": "Operationele zichtbaarheid",
+          "short": "Operationeel dashboard in realtime. Altijd weten hoeveel interventies open, in uitvoering of vandaag voltooid zijn.",
+          "full": "### Operationele data, geen aannames.\n\nBeslissen zonder betrouwbare gegevens is gevaarlijk.\n**Operationele zichtbaarheid** zet veldgegevens om in concrete informatie.\n\n#### Operationeel dashboard\n\nZie in realtime:\n- Open en lopende interventies\n- Actieve monteurs\n- Vandaag en deze week voltooide interventies\n\n#### Periodieke rapporten\n\nOntvang geautomatiseerde activiteitensamenvattingen.\nVergelijk perioden, identificeer knelpunten en optimaliseer operaties."
+        }
+      }
+    },
+    "app": {
+      "hero_badge": "GeoTapp TimeTracker — App voor buitendienstmonteurs",
+      "hero_title": "GeoTapp TimeTracker.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600\">De buitendienst in uw zak.</span>",
+      "hero_subtitle": "De mobiele app die monteurs gebruiken om activiteit te registreren, bewijs te verzamelen en de operationele lijn te bewaken rechtstreeks vanuit het veld. Beschikbaar op Android en iOS.",
+      "visual_placeholder": "VELDINTERFACE",
+      "grid_title": "Tools voor buitendienstwerk",
+      "grid_subtitle": "Elke functie is ontworpen voor degenen die buiten kantoor werken en geen tijd te verliezen hebben. Klik om te verkennen.",
+      "sectors": {
+        "1": "Kernoperaties",
+        "2": "Logistiek en communicatie",
+        "3": "Gegevens en administratie"
+      },
+      "cta_title": "Geef uw monteurs het juiste gereedschap.",
+      "cta_button": "Bekijk tarieven",
+      "modal": {
+        "status": "SYSTEEMSTATUS: <span class=\"text-green-600\">OPERATIONEEL</span>",
+        "encryption": "GEGEVENS: <span class=\"text-slate-400\">BEVEILIGD</span>",
+        "device": "APPARAAT: <span class=\"text-blue-600\">MOBIEL / TABLET</span>",
+        "close": "Sluiten"
+      },
+      "systems": {
+        "timelock-alpha": {
+          "name": "GPS-tijdregistratie",
+          "short": "In- en uitklokken gekoppeld aan GPS-positie en nauwkeurig tijdstempel. Elke werksessie wordt een verifieerbare operationele gebeurtenis.",
+          "full": "### Tijd is verifieerbaar.\n\nTijdstempels zonder verificatie leiden tot geschillen.\n**GPS-tijdregistratie** maakt elke werksessie een betrouwbaar, verdedigbaar register.\n\n#### Geogelokaliseerd in- en uitklokken\n\nDe monteur registreert binnenkomst en vertrek vanuit het veld.\nLocatie, adres en tijd worden automatisch vastgelegd.\n\n#### Onveranderlijke geschiedenis\n\nElke sessie is een verifieerbaar register: begintijd, eindtijd, positie, duur en gekoppelde werkbeurt.\nDe klant vraagt wanneer u aankwam? De gegevens zijn er, altijd."
+        },
+        "event-horizon": {
+          "name": "Dienstroosters",
+          "short": "Beheer dienstroosters en personeelsbeschikbaarheid. Wekelijkse en maandelijkse weergaven voor coördinatie zonder verwarring of overlappingen.",
+          "full": "### Geen roosterconflicten.\n\nHet organiseren van mobiel personeel vereist duidelijkheid.\n**Dienstroosters** geeft de manager een nauwkeurig, actueel overzicht.\n\n#### Kalenderweergave\n\nZie wie wanneer werkt.\nIdentificeer afwezigheden, vakanties en overlappingen voordat ze operationele problemen worden.\n\n#### Beschikbaarheid in realtime\n\nMedewerkers bevestigen aanwezigheid of melden afwezigheid rechtstreeks vanuit de app.\nDe manager ziet leemten in het rooster voordat hij nieuwe werkbeurten toewijst."
+        },
+        "unit-matrix": {
+          "name": "Medewerkerregister",
+          "short": "Beheer een volledig register van uw medewerkers: rollen, contactgegevens, certificeringen en platformtoegang.",
+          "full": "### Ken uw team.\n\nElke medewerker is een essentiële operationele bron.\n**Medewerkerregister** centraliseert alle vitale informatie.\n\n#### Certificeringsbeheer\n\nZie in één oogopslag wie de vereiste kwalificaties heeft voor een specifieke interventie of locatie.\n\n#### Snelle onboarding\n\nEen nieuwe monteur toevoegen is eenvoudig.\nStuur een uitnodigingslink: binnen minuten is hij operationeel op GeoTapp TimeTracker."
+        },
+        "sector-grid": {
+          "name": "Locaties en werkplekken",
+          "short": "Maak een database van operationele locaties en werkplekken. Koppel elke interventie aan de juiste locatie en organiseer teams per zone.",
+          "full": "### Elke interventie op de juiste plaats.\n\nWerken zonder geografische referentie leidt tot verwarring.\n**Locaties en werkplekken** brengt operationele duidelijkheid.\n\n#### Locatiedatabase\n\nMaak een catalogus van klantlocaties, werkplekken en operationele locaties.\nHet systeem koppelt automatisch de activiteit van de monteur aan de interventielocatie.\n\n#### Teams per zone\n\nOrganiseer monteurs in teams per locatie of geografisch gebied.\nWijs interventies toe aan het juiste team, niet alleen aan de persoon."
+        },
+        "energy-logistics": {
+          "name": "Voertuig- en onkostenbeheer",
+          "short": "Volg het gebruik van bedrijfsvoertuigen, verbruikte brandstof en reiskosten voor buitendienstmedewerkers.",
+          "full": "### Elke rit gedocumenteerd.\n\nReiskosten zijn een kritieke post voor elk bedrijf met mobiel personeel.\n**Voertuigbeheer** bewaakt elke uitgaande kosten.\n\n#### Voertuiggebruik\n\nWijs tijdelijk een voertuig toe aan een medewerker voor een interventie.\nWeet altijd wie welk voertuig gebruikt en voor welke werkbeurt.\n\n#### Brandstofkosten\n\nDe medewerker registreert het tanken rechtstreeks vanuit de app met een foto van het bonnetje en het bedrag.\nAlles gearchiveerd, alles gekoppeld aan de werkbeurt."
+        },
+        "neural-link": {
+          "name": "Operationele communicatie",
+          "short": "Intern kanaal voor bedrijfscommunicatie. Gerichte berichten aan specifieke groepen met leesbevestigingen.",
+          "full": "### Duidelijke communicatie. Geen achtergrondlawaai.\n\nWhatsApp vermengt privé- en professioneel leven en biedt geen controle over leesstatus.\n**Operationele communicatie** is het officiële bedrijfskanaal.\n\n#### Gerichte berichten\n\nStel alleen het team op de hoogte dat het moet weten.\nDienstwijziging op de Rotterdam-locatie? Alleen de toegewezen monteurs ontvangen het bericht.\n\n#### Leesbevestigingen\n\nWeet altijd wie de communicatie heeft gelezen en wie niet.\nDuidelijke en transparante verantwoordelijkheid voor iedereen."
+        },
+        "payroll-bridge": {
+          "name": "Aanwezigheidsexport",
+          "short": "Exporteer maandelijkse aanwezigheid in formaten die compatibel zijn met de belangrijkste salarissoftware. Minder handmatig werk, minder fouten.",
+          "full": "### Salarisadministratie zonder hoofdpijn.\n\nEinde van de maand hoeft geen administratieve nachtmerrie te zijn.\n**Aanwezigheidsexport** verbindt buitendienstoperaties met HR-administratie.\n\n#### Multi-formaat\n\nGenereer aanwezigheidsbestanden klaar voor import in de belangrijkste Nederlandse salarissoftware (AFAS, NMBRS, Exact).\n\n#### Toegang voor de loonadministrateur\n\nGeef beperkte toegang aan uw salariskantoor.\nZij downloaden de gegevens die ze nodig hebben zelfstandig, zonder u elke maandafsluiting te bellen."
+        },
+        "data-core": {
+          "name": "Weekrapporten",
+          "short": "Gedetailleerde rapporten over gewerkte uren per werkbeurt en per medewerker. Betrouwbare gegevens voor interne controle en facturering.",
+          "full": "### Gegevens liegen niet.\n\nNeem beslissingen op basis van feiten, niet op indrukken.\n**Weekrapporten** haalt waarde uit dagelijkse operaties.\n\n#### Gedetailleerde rapporten\n\nElke week een volledig beeld: wie heeft gewerkt, waar, op welke werkbeurt en hoe lang.\n\n#### Volledige transparantie\n\nMedewerkers en managers raadplegen hetzelfde maandrapport.\nGetelde uren zijn voor iedereen identiek.\nGeen geschillen aan het einde van de maand."
+        },
+        "identity-forge": {
+          "name": "Branded app",
+          "short": "Upload uw logo en kies uw bedrijfskleuren. Uw medewerkers gebruiken een app die uw merkidentiteit weerspiegelt.",
+          "full": "### Uw bedrijf, uw app.\n\nGebruik geen generieke app.\nLaat uw medewerkers deel uitmaken van UW bedrijf met een consistente visuele ervaring.\n\n#### Bedrijfslogo\n\nUw logo prominent weergegeven op het inlogscherm en het hoofddashboard.\n\n#### Bedrijfskleuren\n\nKies het kleurthema dat past bij uw bedrijfsimago.\nProfessioneel, consistent, herkenbaar."
+        }
+      }
+    }
+  }
+}
