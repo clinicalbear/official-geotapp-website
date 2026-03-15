@@ -200,14 +200,65 @@ function gtmsa_deactivate() {
 }
 register_deactivation_hook(__FILE__, 'gtmsa_deactivate');
 
-function gtmsa_get_queue() {
-    $queue = get_option(GTMSA_QUEUE_OPTION_KEY, []);
-    return is_array($queue) ? array_values(array_unique(array_map('intval', $queue))) : [];
+function gtmsa_get_queue(): array {
+    $raw = get_option(GTMSA_QUEUE_OPTION_KEY, []);
+    if (!is_array($raw)) {
+        return [];
+    }
+    $entries = [];
+    $seen    = [];
+    foreach ($raw as $item) {
+        $entry = gtmsa_normalize_queue_entry($item);
+        if ($entry['id'] <= 0 || isset($seen[$entry['id']])) {
+            continue;
+        }
+        $seen[$entry['id']] = true;
+        $entries[]          = $entry;
+    }
+    return $entries;
 }
 
-function gtmsa_save_queue($queue) {
-    $normalized = array_values(array_unique(array_filter(array_map('intval', (array) $queue))));
+function gtmsa_save_queue(array $queue): void {
+    $normalized = [];
+    $seen       = [];
+    foreach ($queue as $entry) {
+        $e = gtmsa_normalize_queue_entry($entry);
+        if ($e['id'] <= 0 || isset($seen[$e['id']])) {
+            continue;
+        }
+        $seen[$e['id']] = true;
+        $normalized[]   = $e;
+    }
     update_option(GTMSA_QUEUE_OPTION_KEY, $normalized, false);
+}
+
+const GTMSA_MAX_RETRIES = 5;
+
+/**
+ * Normalise a raw queue entry to ['id' => int, 'retries' => int].
+ * Handles legacy format (plain int) for backwards compatibility.
+ */
+function gtmsa_normalize_queue_entry($entry): array {
+    if (is_int($entry) || (is_string($entry) && ctype_digit($entry))) {
+        return ['id' => (int) $entry, 'retries' => 0];
+    }
+    if (is_array($entry)) {
+        return [
+            'id'      => (int) ($entry['id'] ?? 0),
+            'retries' => (int) ($entry['retries'] ?? 0),
+        ];
+    }
+    return ['id' => 0, 'retries' => 0];
+}
+
+/** Returns true when the entry has exhausted all retry attempts. */
+function gtmsa_should_drop_entry(array $entry): bool {
+    return (int) ($entry['retries'] ?? 0) >= GTMSA_MAX_RETRIES;
+}
+
+/** Returns a new entry with retries incremented by one. */
+function gtmsa_increment_retries(array $entry): array {
+    return ['id' => $entry['id'], 'retries' => (int) ($entry['retries'] ?? 0) + 1];
 }
 
 function gtmsa_set_last_error($message) {
@@ -230,17 +281,18 @@ function gtmsa_clear_last_error() {
     delete_option(GTMSA_LAST_ERROR_OPTION_KEY);
 }
 
-function gtmsa_enqueue_post_id($post_id) {
-    $queue = gtmsa_get_queue();
-    $post_id = (int) $post_id;
+function gtmsa_enqueue_post_id(int $post_id): void {
     if ($post_id <= 0) {
         return;
     }
-
-    if (!in_array($post_id, $queue, true)) {
-        $queue[] = $post_id;
-        gtmsa_save_queue($queue);
+    $queue = gtmsa_get_queue();
+    foreach ($queue as $entry) {
+        if ((int) $entry['id'] === $post_id) {
+            return; // already queued
+        }
     }
+    $queue[] = ['id' => $post_id, 'retries' => 0];
+    gtmsa_save_queue($queue);
 }
 
 function gtmsa_get_post_language_safe($post_id, $settings = null) {
@@ -564,10 +616,15 @@ function gtmsa_process_translation_queue() {
     $current_batch = array_slice($queue, 0, $batch_size);
     $remaining = array_slice($queue, $batch_size);
 
-    foreach ($current_batch as $post_id) {
-        $ok = gtmsa_translate_one_post((int) $post_id, $settings);
+    foreach ($current_batch as $entry) {
+        $post_id = (int) $entry['id'];
+        $ok      = gtmsa_translate_one_post($post_id, $settings);
         if (!$ok) {
-            $remaining[] = (int) $post_id;
+            if (gtmsa_should_drop_entry($entry)) {
+                error_log('GTMSA: post ' . $post_id . ' dropped from queue after ' . GTMSA_MAX_RETRIES . ' retries');
+            } else {
+                $remaining[] = gtmsa_increment_retries($entry);
+            }
         }
     }
 
