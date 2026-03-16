@@ -5,7 +5,12 @@
     "blog": "Blog",
     "contact": "Contact",
     "login": "Inloggen",
-    "cta": "Demo aanvragen"
+    "cta": "Demo aanvragen",
+    "sectors": {
+      "installatori": "Installateurs",
+      "sicurezza": "Beveiliging",
+      "pulizie": "Schoonmaak"
+    }
   },
   "footer": {
     "tagline": "Buitendienstactiviteit geregistreerd. Operaties georganiseerd. Rapporten verifieerbaar.",
@@ -103,7 +108,11 @@
             "name": "GeoTapp TimeTracker",
             "tagline": "Vanaf",
             "desc": "De complete oplossing voor het bijhouden van aanwezigheid, buitendienstactiviteit en werkbewijs. Prijs per gebruiker/jaar.",
-            "features": ["Android/iOS-app", "GPS-inklokken", "Weekrapporten"],
+            "features": [
+              "Android/iOS-app",
+              "GPS-inklokken",
+              "Weekrapporten"
+            ],
             "button": "Bekijk calculator"
           }
         ]
@@ -113,40 +122,39 @@
         "description": "Buitendienstbeheer en teambeheer",
         "products": [
           {
-            "name": "GeoTapp Flow Lifetime",
-            "tagline": "Levenslange licentie",
-            "desc": "Eenmalig betalen, voor altijd gebruiken. Volledige toegang tot GeoTapp Flow zonder terugkerende kosten. Inclusief toekomstige updates.",
-            "features": [
-              "Volledige toegang tot Flow",
-              "Geen maandelijkse kosten",
-              "Levenslange updates inbegrepen"
-            ]
-          },
-          {
             "name": "GeoTapp Flow Business",
-            "tagline": "Voor gestructureerde bedrijven",
-            "desc": "Geavanceerd operationeel beheer, onbeperkte teams en prioriteitsondersteuning.",
+            "tagline": "Per aziende strutturate.",
+            "desc": "La soluzione completa per aziende strutturate e organizzazioni complesse.",
             "features": [
-              "Onbeperkte teams",
-              "API-toegang",
-              "Prioriteitsondersteuning"
+              "Squadre illimitate",
+              "API",
+              "Supporto prioritario",
+              "Automazioni",
+              "Report avanzati"
             ]
           },
           {
             "name": "GeoTapp Flow Team",
-            "tagline": "Voor kleine teams",
-            "desc": "Ideaal voor werkgroepen die coördinatie en gedeelde operationele zichtbaarheid nodig hebben.",
+            "tagline": "Per piccoli team operativi.",
+            "desc": "Coordina e gestisci il tuo team operativo in tempo reale.",
             "features": [
-              "5 gebruikers inbegrepen",
-              "Werkbeurtbeheer",
-              "Basisintegraties"
+              "5 utenti Flow inclusi (non timetracker)",
+              "Gestione commesse",
+              "Timbrature campo",
+              "Report operativi",
+              "Integrazioni"
             ]
           },
           {
             "name": "GeoTapp Flow Solo",
-            "tagline": "Voor individuele operators",
-            "desc": "Alle kracht van Flow voor de professional die zelfstandig werkt.",
-            "features": ["1 gebruiker", "Activiteitenbeheer", "Basisrapporten"]
+            "tagline": "Per professionisti e microimprese.",
+            "desc": "Tutto quello che serve a chi gestisce gli interventi in autonomia.",
+            "features": [
+              "1 utente",
+              "Gestione attività",
+              "Report base",
+              "Integrazioni essenziali"
+            ]
           }
         ]
       }

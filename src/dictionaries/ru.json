@@ -5,7 +5,12 @@
     "blog": "Блог",
     "contact": "Контакт",
     "login": "Войти",
-    "cta": "Запросить демо"
+    "cta": "Запросить демо",
+    "sectors": {
+      "installatori": "Монтажники",
+      "sicurezza": "Охрана",
+      "pulizie": "Клининг"
+    }
   },
   "footer": {
     "tagline": "Полевая активность зафиксирована. Операции организованы. Отчёты верифицируемы.",
@@ -103,7 +108,11 @@
             "name": "GeoTapp TimeTracker",
             "tagline": "От",
             "desc": "Комплексное решение для учёта явки, полевой активности и подтверждения выполненных работ. Цена за пользователя/год.",
-            "features": ["Android/iOS приложение", "GPS-отметка прихода", "Еженедельные отчёты"],
+            "features": [
+              "Android/iOS приложение",
+              "GPS-отметка прихода",
+              "Еженедельные отчёты"
+            ],
             "button": "Смотреть калькулятор"
           }
         ]
@@ -113,40 +122,39 @@
         "description": "Полевые операции и управление командой",
         "products": [
           {
-            "name": "GeoTapp Flow Lifetime",
-            "tagline": "Бессрочная лицензия",
-            "desc": "Платите один раз, используйте бессрочно. Полный доступ к GeoTapp Flow без повторяющихся платежей. Включает будущие обновления.",
-            "features": [
-              "Полный доступ к Flow",
-              "Без ежемесячных платежей",
-              "Пожизненные обновления включены"
-            ]
-          },
-          {
             "name": "GeoTapp Flow Business",
-            "tagline": "Для структурированных компаний",
-            "desc": "Расширенное управление операциями, неограниченные команды и приоритетная поддержка.",
+            "tagline": "Per aziende strutturate.",
+            "desc": "La soluzione completa per aziende strutturate e organizzazioni complesse.",
             "features": [
-              "Неограниченные команды",
-              "Доступ к API",
-              "Приоритетная поддержка"
+              "Squadre illimitate",
+              "API",
+              "Supporto prioritario",
+              "Automazioni",
+              "Report avanzati"
             ]
           },
           {
             "name": "GeoTapp Flow Team",
-            "tagline": "Для небольших команд",
-            "desc": "Идеально для рабочих групп, которым нужна координация и общая операционная видимость.",
+            "tagline": "Per piccoli team operativi.",
+            "desc": "Coordina e gestisci il tuo team operativo in tempo reale.",
             "features": [
-              "5 пользователей в комплекте",
-              "Управление нарядами",
-              "Базовые интеграции"
+              "5 utenti Flow inclusi (non timetracker)",
+              "Gestione commesse",
+              "Timbrature campo",
+              "Report operativi",
+              "Integrazioni"
             ]
           },
           {
             "name": "GeoTapp Flow Solo",
-            "tagline": "Для индивидуальных операторов",
-            "desc": "Вся мощь Flow для профессионала, работающего самостоятельно.",
-            "features": ["1 пользователь", "Управление активностью", "Базовые отчёты"]
+            "tagline": "Per professionisti e microimprese.",
+            "desc": "Tutto quello che serve a chi gestisce gli interventi in autonomia.",
+            "features": [
+              "1 utente",
+              "Gestione attività",
+              "Report base",
+              "Integrazioni essenziali"
+            ]
           }
         ]
       }

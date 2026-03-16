@@ -5,7 +5,12 @@
     "blog": "Blogg",
     "contact": "Kontakt",
     "login": "Logg inn",
-    "cta": "Be om demo"
+    "cta": "Be om demo",
+    "sectors": {
+      "installatori": "Installatører",
+      "sicurezza": "Sikkerhet",
+      "pulizie": "Renhold"
+    }
   },
   "footer": {
     "tagline": "Feltaktivitet registrert. Operasjoner organisert. Rapporter verifiserbare.",
@@ -103,7 +108,11 @@
             "name": "GeoTapp TimeTracker",
             "tagline": "Fra",
             "desc": "Den komplette løsningen for å spore oppmøte, feltaktivitet og arbeidsbevis. Pris per bruker/år.",
-            "features": ["Android/iOS-app", "GPS-innsjekk", "Ukentlige rapporter"],
+            "features": [
+              "Android/iOS-app",
+              "GPS-innsjekk",
+              "Ukentlige rapporter"
+            ],
             "button": "Se kalkulator"
           }
         ]
@@ -113,40 +122,39 @@
         "description": "Feltoperasjoner og teamledelse",
         "products": [
           {
-            "name": "GeoTapp Flow Lifetime",
-            "tagline": "Lisensiering for alltid",
-            "desc": "Betal én gang, bruk for alltid. Full tilgang til GeoTapp Flow uten løpende avgifter. Inkluderer fremtidige oppdateringer.",
-            "features": [
-              "Full tilgang til Flow",
-              "Ingen månedlige avgifter",
-              "Livstidsoppdateringer inkludert"
-            ]
-          },
-          {
             "name": "GeoTapp Flow Business",
-            "tagline": "For strukturerte bedrifter",
-            "desc": "Avansert driftsstyring, ubegrensede team og prioritert støtte.",
+            "tagline": "Per aziende strutturate.",
+            "desc": "La soluzione completa per aziende strutturate e organizzazioni complesse.",
             "features": [
-              "Ubegrensede team",
-              "API-tilgang",
-              "Prioritert support"
+              "Squadre illimitate",
+              "API",
+              "Supporto prioritario",
+              "Automazioni",
+              "Report avanzati"
             ]
           },
           {
             "name": "GeoTapp Flow Team",
-            "tagline": "For små team",
-            "desc": "Ideelt for arbeidsgrupper som trenger koordinering og delt operasjonell synlighet.",
+            "tagline": "Per piccoli team operativi.",
+            "desc": "Coordina e gestisci il tuo team operativo in tempo reale.",
             "features": [
-              "5 brukere inkludert",
-              "Håndtering av arbeidsordrer",
-              "Grunnleggende integrasjoner"
+              "5 utenti Flow inclusi (non timetracker)",
+              "Gestione commesse",
+              "Timbrature campo",
+              "Report operativi",
+              "Integrazioni"
             ]
           },
           {
             "name": "GeoTapp Flow Solo",
-            "tagline": "For individuelle operatører",
-            "desc": "All kraften til Flow for den profesjonelle som arbeider selvstendig.",
-            "features": ["1 bruker", "Aktivitetsstyring", "Grunnleggende rapporter"]
+            "tagline": "Per professionisti e microimprese.",
+            "desc": "Tutto quello che serve a chi gestisce gli interventi in autonomia.",
+            "features": [
+              "1 utente",
+              "Gestione attività",
+              "Report base",
+              "Integrazioni essenziali"
+            ]
           }
         ]
       }

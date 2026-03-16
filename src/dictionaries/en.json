@@ -1,579 +1,327 @@
 {
-    "navbar": {
-        "products": "Products",
-        "pricing": "Pricing",
-        "blog": "Blog",
-        "contact": "Contact",
-        "login": "Login",
-        "cta": "Start Now"
-    },
-    "footer": {
-        "tagline": "Empowering Business with AI Automation.",
-        "privacy": "Privacy Policy",
-        "terms": "Terms of Service",
-        "rights": "All rights reserved."
-    },
-    "landing": {
-        "hero_badge": "New Release 2.0",
-        "hero_title": "Your Business,<br />Driven by Intelligence.",
-        "hero_subtitle": "GeoTapp unifies workforce management, process optimization, and SEO in a single AI-powered suite.",
-        "hero_cta_primary": "Start Now",
-        "hero_cta_secondary": "Explore Products",
-        "features_title": "Everything you need",
-        "features_subtitle": "A complete suite of tools to grow your company.",
-        "cta_title": "Ready to scale?",
-        "cta_subtitle": "Join hundreds of companies using GeoTapp today.",
-        "cta_button": "Request Demo"
-    },
-    "home_sections": {
-        "flow": {
-            "badge": "GeoTapp FLOW",
-            "title": "Invoice While Still at the Client.",
-            "subtitle": "Real example: A plumber client was losing about €400/mo in unmarked small jobs. With Flow, he converts the report into an invoice with one click. <strong class=\"text-slate-900\">Result: +€4,800/year net profit.</strong>",
-            "features": {
-                "crm": "<strong>Synced CRM:</strong> Update a contact once, it updates everywhere.",
-                "pipeline": "<strong>Visual Pipeline:</strong> Move cards from \"To Do\" to \"Paid\". Satisfying."
-            },
-            "link": "Discover Details"
-        },
-        "app": {
-            "badge": "GeoTapp Timetracker",
-            "title": "Your Team in Your Pocket.",
-            "subtitle": "No more doubts about on-site presence. The App certifies location <strong>only</strong> at clock-in/out. Full Privacy respect, zero disputes.",
-            "card_gps": {
-                "title": "GPS Check-in",
-                "desc": "Precise Validation"
-            },
-            "card_gdpr": {
-                "title": "GDPR Safe",
-                "desc": "No Continuous Tracking"
-            },
-            "link": "View Demo"
-        },
-        "zenith": {
-            "badge": "Zenith SEO",
-            "title": "Don't Write for Robots. Write to Win.",
-            "subtitle": "Everyone knows keywords. Few know Semantic Intent. Zenith analyzes top 10 Google results, understands what your article lacks, and tells you exactly how to fill the gap.",
-            "roi": "Avg ROI: +40% Traffic",
-            "setup": "Setup: 2 Minutes",
-            "link": "Analyze Your Site"
-        },
-        "fortyx": {
-            "badge": "FortyX",
-            "title": "800ms. Or You're Out.",
-            "subtitle": "Amazon calculated that 100ms delay costs 1% of sales. How much is your slow site costing you? FortyX isn't just a cache. It rewrites how the server delivers pages.",
-            "speed_label": "Avg Result After Install",
-            "link": "Optimize Now"
-        },
-        "core": {
-            "badge": "GeoTapp Core",
-            "title": "Power Under the Hood.",
-            "subtitle": "We don't build toys. GeoTapp is an enterprise platform designed to scale vertically. Here are the technologies making the magic happen, explained without filters.",
-            "features": [
-                {
-                    "title": "Offline-First Engine (CRDT)",
-                    "desc": "Connection drops, work doesn't. We embedded an <strong>encrypted SQLite</strong> DB directly in the App. We use CRDT algorithms for sync."
-                },
-                {
-                    "title": "Zero-Knowledge Encryption",
-                    "desc": "Privacy isn't a legal checkbox, it's math. We use <strong>AES-256</strong> for data at rest and <strong>TLS 1.3</strong> for transit."
-                },
-                {
-                    "title": "Real-Time WebSocket",
-                    "desc": "Stop hitting F5. Thanks to bidirectional WebSockets, info travels instantly. If a tech closes a ticket in Rome, the manager in Milan sees the green dot."
-                },
-                {
-                    "title": "Scalable Data Lake",
-                    "desc": "From 100 to 100M records without blinking. We use <strong>partitioned PostgreSQL</strong> to handle massive data volumes."
-                }
-            ]
-        },
-        "footer_cta": {
-            "title": "Stop Playing.<br />Start Billing.",
-            "subtitle": "Thousands of pros use GeoTapp every day. Join those who decided to reclaim their time.",
-            "button": "Talk to Us"
-        }
-    },
-    "pricing": {
-        "badge": "Full Catalog",
-        "title": "Choose Your Arsenal.",
-        "subtitle": "Flexible solutions for every stage of your growth.",
-        "vat_note": "All prices exclude VAT. Billing according to terms of service.",
-        "categories": {
-            "app": {
-                "title": "GeoTapp Timetracker",
-                "description": "Mobile Workforce Management",
-                "products": [
-                    {
-                        "name": "GeoTapp Timetracker",
-                        "tagline": "Starting at",
-                        "desc": "The complete solution to track attendance, jobs, and expenses. Price per user/year.",
-                        "features": [
-                            "Android/iOS App",
-                            "GPS Clock-in",
-                            "Excel Reports"
-                        ],
-                        "button": "View Calculator"
-                    }
-                ]
-            },
-            "flow": {
-                "title": "GeoTapp FLOW",
-                "description": "Process Automation & Management",
-                "products": [
-                    {
-                        "name": "GeoTapp FLOW Lifetime",
-                        "tagline": "Lifetime License",
-                        "desc": "Pay once, use forever. Full access to GeoTapp Flow with no recurring fees. Includes future updates.",
-                        "features": [
-                            "Full Access to Flow",
-                            "No monthly fees",
-                            "Lifetime updates included"
-                        ]
-                    },
-                    {
-                        "name": "GeoTapp FLOW Business",
-                        "tagline": "For Structured Companies",
-                        "desc": "Advanced workflow management, unlimited automation, and priority support.",
-                        "features": [
-                            "Unlimited Automation",
-                            "API Access",
-                            "Priority Support"
-                        ]
-                    },
-                    {
-                        "name": "GeoTapp FLOW Team",
-                        "tagline": "For Small Teams",
-                        "desc": "Ideal for workgroups needing coordination and shared processes.",
-                        "features": [
-                            "5 Users Included",
-                            "Standard Processes",
-                            "Basic Integrations"
-                        ]
-                    },
-                    {
-                        "name": "GeoTapp FLOW Solo",
-                        "tagline": "For Freelancers",
-                        "desc": "All the power of Flow for the single professional.",
-                        "features": [
-                            "1 User",
-                            "Task Management",
-                            "Basic Automation"
-                        ]
-                    }
-                ]
-            },
-            "fortyx": {
-                "title": "FortyX Commander",
-                "description": "AI WordPress Optimization & Management",
-                "products": [
-                    {
-                        "name": "FortyX Commander AI (Yearly)",
-                        "tagline": "Full AI Suite",
-                        "desc": "Maximum control with integrated J.A.R.V.I.S. AI assistant for auto management & optimization.",
-                        "features": [
-                            "J.A.R.V.I.S. AI Full",
-                            "Auto Optimization",
-                            "Advanced Security"
-                        ]
-                    },
-                    {
-                        "name": "FortyX Commander (Yearly)",
-                        "tagline": "Manual Management",
-                        "desc": "All Commander tools without the AI assistant.",
-                        "features": [
-                            "Plugin Management",
-                            "Cloud Backups",
-                            "Uptime Monitoring"
-                        ]
-                    },
-                    {
-                        "name": "FortyX Hero AI (Yearly)",
-                        "tagline": "Smart Optimization",
-                        "desc": "Top performance with Artificial Intelligence help for fast sites.",
-                        "features": [
-                            "AI Caching",
-                            "Image Optimizer",
-                            "Database Clean"
-                        ]
-                    },
-                    {
-                        "name": "FortyX Soldier (Yearly)",
-                        "tagline": "Essential",
-                        "desc": "The basics to keep your WordPress site secure and fast.",
-                        "features": [
-                            "Basic Caching",
-                            "Security Check",
-                            "Auto Updates"
-                        ]
-                    }
-                ]
-            },
-            "zenith": {
-                "title": "Zenith SEO",
-                "description": "Search Engine Domination with AI",
-                "products": [
-                    {
-                        "name": "Zenith SEO Agency AI (Yearly)",
-                        "tagline": "Agency Power",
-                        "desc": "Advanced AI tools to manage multiple clients and dominate SERPs.",
-                        "features": [
-                            "Multi-Site",
-                            "White Label Reports",
-                            "Unlimited AI Content Gen"
-                        ]
-                    },
-                    {
-                        "name": "Zenith SEO Agency (Yearly)",
-                        "tagline": "Standard Agency",
-                        "desc": "Client management and advanced reporting without AI content generation.",
-                        "features": [
-                            "Multi-Site",
-                            "Advanced Reporting",
-                            "Keyword Tracking"
-                        ]
-                    },
-                    {
-                        "name": "Zenith SEO AI Pro (Yearly)",
-                        "tagline": "For Pros",
-                        "desc": "The perfect balance between AI power and cost for the SEO professional.",
-                        "features": [
-                            "Competitor Analysis",
-                            "AI Suggestions",
-                            "Rank Tracking"
-                        ]
-                    },
-                    {
-                        "name": "Zenith SEO Starter (Yearly)",
-                        "tagline": "To Start",
-                        "desc": "Everything you need to optimize your first website.",
-                        "features": [
-                            "1 Site",
-                            "Basic Analysis",
-                            "On-Page Suggestions"
-                        ]
-                    }
-                ]
-            }
-        }
-    },
-    "contact": {
-        "title": "Let's Talk <span class=\"text-primary\">Business</span>.",
-        "subtitle": "You don't need another ticket opened into the void. You need answers.",
-        "guarantee_title": "Response Guarantee",
-        "guarantee_text": "Our Enterprise clients have an average first response time of 12 minutes.",
-        "form": {
-            "name": "Name",
-            "company": "Company",
-            "email": "Work Email",
-            "reason": "Reason for Contact",
-            "message": "Message",
-            "send": "Send"
-        }
-    },
-    "login_hub": {
-        "title": "Access your <span class=\"text-primary\">Ecosystem</span>.",
-        "subtitle": "Select the application you want to connect to.",
-        "flow": {
-            "desc": "Business Management, CRM, Invoicing, and Automations.",
-            "btn": "Login to Flow"
-        },
-        "timetracker": {
-            "desc": "Attendance Tracking, Jobs, and Expense Reports.",
-            "btn": "Login to TimeTracker"
-        }
-    },
-    "product_pages": {
-        "flow": {
-            "hero_badge": "FLOW MAINFRAME v2.0 READY",
-            "hero_title": "GeoTapp Flow.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600\">Operating System.</span>",
-            "hero_subtitle": "We don't use Excel sheets. We don't use post-its. GeoTapp Flow is the fluid architecture connecting every aspect of your company, from the first lead to the last invoice.",
-            "visual_placeholder": "COMMAND CENTER",
-            "grid_title": "Modular Architecture",
-            "grid_subtitle": "Each module is an independent but interconnected system. Click to access source codes.",
-            "sectors": {
-                "1": "Sector 1: Revenue Engine",
-                "2": "Sector 2: Supply & Operations",
-                "3": "Sector 3: Control & Expansion"
-            },
-            "cta_title": "Take Full Control.",
-            "cta_button": "Buy Flow License",
-            "modal": {
-                "status": "SYSTEM STATUS: <span class=\"text-green-600\">OPERATIONAL</span>",
-                "encryption": "ENCRYPTION: <span class=\"text-slate-400\">AES-256</span>",
-                "access": "ACCESS LEVEL: <span class=\"text-blue-600\">COMMANDER</span>",
-                "close": "Close Session"
-            },
-            "systems": {
-                "nexus-core": {
-                    "name": "Nexus CRM",
-                    "short": "Sovereign Sales Pipeline. Manage Leads, Opportunities, and Deals to close contracts at light speed.",
-                    "full": "### Your Commercial War Machine.<br/><br/>Selling isn't luck. It's engineering.<br/>**Nexus Core** structures your commercial chaos into a military pipeline.<br/><br/>#### Pipeline Management<br/><br/>Visualize every deal. Know exactly where the money is stuck.<br/>- Lead (Cold Contact)<br/>- Meeting (Negotiating)<br/>- Proposal (Quote Sent)<br/>- Won (Money in the Bank)<br/><br/>#### Predictive Intelligence<br/><br/>Nexus doesn't just tell you \"who\" to call, but \"when\".<br/>It tracks email opens.<br/>If a Lead opens your quote 5 times in an hour, Nexus alerts you: \"CALL NOW\".<br/>Transform salespeople into snipers."
-                },
-                "titan-flow": {
-                    "name": "Titan Flow",
-                    "short": "The Client signs, the system works. Automatic generation of client portals, document requests, and welcome tasks.",
-                    "full": "### The Perfect Start. Effortless.<br/><br/>You closed the deal. Great. Now the bureaucratic nightmare begins: \"Send me the logo\", \"Fill out the form\", \"Where is the signed contract?\".<br/>**Titan Flow** automates bureaucracy.<br/><br/>#### Zero-Touch Onboarding<br/><br/>As soon as the status moves to \"Deals Won\", Titan wakes up.<br/>1. Sends a welcome email to the client.<br/>2. Generates a secure **Client Portal**.<br/>3. Assigns tasks to the client: \"Upload Certificate\", \"Sign NDA\", \"Upload Brand Assets\".<br/><br/>#### The Gentle \"Watchdog\"<br/><br/>Client doesn't upload files? You do nothing.<br/>Titan sends automatic (and gentle) reminders every 48 hours.<br/>You get notified only when everything is ready to work.<br/>Start the project only when you have all the pieces. No more delays due to \"missing materials\"."
-                },
-                "ledger-prime": {
-                    "name": "Ledger Prime",
-                    "short": "Money never sleeps. Automatic invoice generation, Stripe collections, and real-time bank reconciliation.",
-                    "full": "### Your Digital CFO Working 24/7.<br/><br/>Accounting is boring. It's dangerous (if you make mistakes). And it's slow.<br/>**Ledger Prime** is the end of manual accounting.<br/><br/>#### Quote-to-Cash (The Speed of Money)<br/><br/>The cycle is closed and armored.<br/>1. Create a Quote in 30 seconds selecting products from the list.<br/>2. The client receives a secure link. Signs digitally from their phone.<br/>3. **BAM**. Ledger Prime instantly converts the Quote into a Pro-forma or Final Invoice.<br/>4. If you have Stripe connected, the client pays by credit card instantly.<br/><br/>Money hits the account while you are still shaking hands."
-                },
-                "quantum-logistics": {
-                    "name": "Quantum Logistics",
-                    "short": "Every atom tracked. Multi-site Warehouse Management with movement tracking and predictive reordering.",
-                    "full": "### Warehouse Omniscience.<br/><br/>\"I don't know if I have it in stock\". This phrase costs billions to companies every year.<br/>With **Quantum Logistics**, you know. Always.<br/><br/>#### Live Stock Tracking<br/><br/>Every product has a digital soul.<br/>When you create a sales invoice, the warehouse decrements automatically.<br/>Manage manual movements, scrap, returns, and transfers between different sites.<br/><br/>#### Predictive Reordering (The Oracle)<br/><br/>Quantum doesn't just count. It predicts.<br/>Set a \"Min Stock Level\".<br/>When you drop below the threshold, the system alerts you and prepares the order for the supplier.<br/>Never lose sales again for \"product not available\"."
-                },
-                "supply-command": {
-                    "name": "Supply Command",
-                    "short": "Total Supplier Control. Generate Purchase Orders, track deliveries, and manage incoming costs.",
-                    "full": "### You Buy. You Command.<br/><br/>To sell you must buy. But purchasing is often chaotic: lost emails, wrong prices, late deliveries.<br/>**Supply Command** puts a leash on your suppliers.<br/><br/>#### Purchase Orders (The Perfect Order)<br/><br/>Create professional Purchase Orders (PO) in few clicks.<br/>Send them via email directly from the system.<br/>When goods arrive, transform them into a \"Warehouse Receipt\" with one button.<br/>No more \"I ordered 10, 9 arrived\". The system tracks discrepancies.<br/><br/>#### Supplier Intelligence<br/><br/>Who is the most punctual supplier? Who raised prices silently?<br/>Supply Command historicizes every transaction and gives you negotiating power on costs."
-                },
-                "the-architect": {
-                    "name": "The Architect",
-                    "short": "Time is the scarcest resource. Manage Projects, Tasks, and Time Tracking to know exactly how much every job costs you.",
-                    "full": "### Build Cathedrals, Not Sandcastles.<br/><br/>Managing complex projects via email or WhatsApp is professional suicide.<br/>**The Architect** brings order to creative chaos.<br/><br/>#### Fractal Structure<br/><br/>Every Client has Projects. Every Project has Tasks. Every Task has Deadlines.<br/>Everything is nested. Everything is visible.<br/>Assign tasks to the team with a click. Define priorities (Urgent, High, Low).<br/>Visualize progress on Gantt charts or Kanban Boards.<br/><br/>#### Profitability X-Ray<br/><br/>This is the feature agencies fear and love.<br/>Your employees track time (Time Logs) on tasks.<br/>You set an hourly cost per employee and a sales price for the client.<br/>The Architect calculates in real-time the **Real Margin** of the project.<br/>Working at a loss? You'll know *while* it happens."
-                },
-                "the-auditor": {
-                    "name": "The Auditor",
-                    "short": "The end of lost receipts. Employees photograph receipts, AI digitizes them and assigns them to projects.",
-                    "full": "### Zero Paper. Zero Fraud.<br/><br/>Expense reports are every administration's nightmare. Faded receipts, lost, or worse, \"creative\".<br/>**The Auditor** is the ruthless accountant living in the cloud.<br/><br/>#### Snap & Forget<br/><br/>Your technician takes a client to lunch.<br/>1. Pays.<br/>2. Opens GeoTapp app.<br/>3. Photographs receipt.<br/>Done. Can throw away the paper.<br/><br/>#### Project Allocation<br/><br/>The system asks: \"For which Project?\".<br/>The technician selects \"Client X\".<br/>The expense is immediately charged to that project's costs (reducing margin in real-time on The Architect).<br/>At month end, administration has a perfect PDF report."
-                },
-                "the-uplink": {
-                    "name": "The Uplink",
-                    "short": "The office is everywhere. Native mobile app for field technicians: photos, signatures, reports, and expenses in real-time.",
-                    "full": "### Reality is Out of Office.<br/><br/>Real companies have people in the field. Technicians, salespeople, installers.<br/>If they must wait to return to office to enter data, you lost half a day of productivity.<br/>**The Uplink** is the neural extension of the system in the physical world.<br/><br/>#### Native Power (Flutter Engine)<br/><br/>Not a \"responsive site\". It's a powerful, fast mobile app using camera, GPS, and push notifications.<br/>A technician finishes the job:<br/>1. Opens app.<br/>2. Takes photos of finished work.<br/>3. Logs hours (Time Log).<br/>4. Gets client signature on screen.<br/>5. Sends.<br/><br/>#### Instant Sync<br/><br/>In the same second, in office, The Architect receives time log. Ledger Prime prepares invoice.<br/>The cycle is instant."
-                },
-                "the-oracle": {
-                    "name": "The Oracle",
-                    "short": "Look at the past to predict the future. Real-time analytic dashboards for Cash Flow, Churn Rate, and Performance.",
-                    "full": "### Data, Not Opinions.<br/><br/>\"I think we are doing well\". \"It seems sales are rising\".<br/>These phrases are forbidden.<br/>**The Oracle** has no opinions. It has charts.<br/><br/>#### The Executive Dashboard<br/><br/>As soon as you login, you see the naked truth:<br/>1. **MRR (Monthly Recurring Revenue)**: How much you bill automatically every month.<br/>2. **Churn Rate**: How many clients you are losing.<br/>3. **Cash Flow Forecast**: How much money you will have in bank in 30 days based on invoice due dates.<br/><br/>No Excel sheet to update. Data flows alive from daily operations.<br/>Drive your company looking at the dashboard, not the rearview mirror."
-                }
-            }
-        },
-        "app": {
-            "hero_badge": "MOBILE LINK ESTABLISHED",
-            "hero_title": "GeoTapp Timetracker.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600\">Your Office in Pocket.</span>",
-            "hero_subtitle": "Give your technicians superpowers. Reports, photos, signatures, and expenses directly from the site. Instant synchronization with HQ.",
-            "visual_placeholder": "FIELD INTERFACE WIDGET",
-            "grid_title": "Field Toolkit",
-            "grid_subtitle": "Every tool is designed for those who work with their hands and have no time to lose.",
-            "sectors": {
-                "1": "Sector 1: Core Operations",
-                "2": "Sector 2: Logistics & Comms",
-                "3": "Sector 3: Data & Identity"
-            },
-            "cta_title": "Empower your Field Staff.",
-            "cta_button": "Buy GeoTapp Timetracker",
-            "modal": {
-                "status": "SYSTEM STATUS: <span class=\"text-green-600\">OPERATIONAL</span>",
-                "encryption": "ENCRYPTION: <span class=\"text-slate-400\">AES-256</span>",
-                "device": "DEVICE: <span class=\"text-blue-600\">MOBILE / TABLET</span>",
-                "close": "Close Session"
-            },
-            "systems": {
-                "timelock-alpha": {
-                    "name": "Timelock Alpha",
-                    "short": "Smart geolocated clock-ins. Start/Stop on job precise to the second with GPS verification.",
-                    "full": "### Time is Money. Protect it.<br/><br/>No more inaccurate paper timesheets. **Timelock Alpha** is the definitive system for job tracking.<br/><br/>#### Smart Geofencing<br/>The system allows starting activity only if the technician is actually at the client's. No more \"I arrived\" from the bar.<br/><br/>#### Session History<br/>Every session is an immutable record: Start Time, End Time, GPS Position, Duration. Everything assigned to the specific job."
-                },
-                "event-horizon": {
-                    "name": "Event Horizon",
-                    "short": "Shift and intervention planning. Monthly and weekly view with availability management.",
-                    "full": "### Total Synchronization.<br/><br/>Managing moving personnel requires precision. **Event Horizon** offers a clear view of who does what, and when.<br/><br/>#### Meeting Points<br/>Define meeting points and departure times. The app notifies the team where to meet.<br/><br/>#### Live Availability<br/>Employees confirm presence or report leave directly from the app. The manager sees gaps in the grid before they become problems."
-                },
-                "unit-matrix": {
-                    "name": "Unit Matrix",
-                    "short": "Complete digital registry. Role management, certifications, and quick invites via WhatsApp.",
-                    "full": "### Know Your Team.<br/><br/>Every operator is a node in the network. **Unit Matrix** centralizes all vital information.<br/><br/>#### Certification Management<br/>See at a glance who has an updated license or safety clearance necessary to enter the site.<br/><br/>#### Rapid Onboarding<br/>Need to add a new technician? Send a magic link via WhatsApp. In 30 seconds they are operational."
-                },
-                "sector-grid": {
-                    "name": "Sector Grid",
-                    "short": "Site and worksite mapping. Assign teams to correct operational zones.",
-                    "full": "### Dominate the Territory.<br/><br/>Don't leave teams in the dark. **Sector Grid** defines operational boundaries.<br/><br/>#### Sites & Worksites<br/>Create a database of your clients and worksites. The system knows if an operator is working in the right place.<br/><br/>#### Work Groups<br/>Organize technicians into teams (Alpha, Bravo, Charlie). Assign tasks to the group, not the individual. Maximum efficiency."
-                },
-                "energy-logistics": {
-                    "name": "Energy Logistics",
-                    "short": "Fuel expense control and mileage reimbursement. Smart management of cars in use by personnel.",
-                    "full": "### Expenses Under Control.<br/><br/>Travel expenses are a critical item. **Energy Logistics** monitors every cent.<br/><br/>#### Digital Fuel Log<br/>The employee records refueling and costs directly at the pump. Takes a photo of the receipt for the digital archive.<br/><br/>#### Car Management<br/>Temporarily assign a car to an employee for the trip. You will always know who is using it and for which job."
-                },
-                "neural-link": {
-                    "name": "Neural Link",
-                    "short": "Internal company board. Send targeted communications to single groups or the whole company.",
-                    "full": "### Radio Silence? Never Again.<br/><br/>WhatsApp is chaotic and mixes with private life. **Neural Link** is the official channel for operational communications.<br/><br/>#### Targeted Communications<br/>Need to notify only the Rome team of a shift change? Do it with a click. No background noise for others.<br/><br/>#### Read Receipts<br/>You will always know who read the notice and who didn't. Clear and transparent responsibility."
-                },
-                "payroll-bridge": {
-                    "name": "Payroll Bridge",
-                    "short": "Direct link with the labor consultant. Attendance export compatible with Zucchetti/TeamSystem.",
-                    "full": "### Payroll Without Headaches.<br/><br/>Month end doesn't have to be a nightmare. **Payroll Bridge** connects operations to administration.<br/><br/>#### Multi-Format Export<br/>Generate attendance files ready for import into most popular payroll software (Zucchetti, INAZ, TeamSystem).<br/><br/>#### Consultant Access<br/>Give limited access to your payroll firm. They can download needed data autonomously, without calling you."
-                },
-                "data-core": {
-                    "name": "Data Core",
-                    "short": "Detailed weekly reports in CSV/Excel. Analysis of hours worked per job.",
-                    "full": "### Data Don't Lie.<br/><br/>Make decisions based on facts, not feelings. **Data Core** extracts value from daily operations.<br/><br/>#### Weekly Reports<br/>Every Friday, a complete report on the (digital) desk. Who worked, where, and how much.<br/><br/>#### Total Transparency<br/>Employees and Owners download the same monthly report. Counted hours are identical for everyone. No more disputes at month end."
-                },
-                "identity-forge": {
-                    "name": "Identity Forge",
-                    "short": "YOUR app. Upload your logo and choose the company color theme for a branded experience.",
-                    "full": "### Your Brand. Your App.<br/><br/>Don't use a generic app. Make your employees feel part of YOUR company.<br/><br/>#### Upload Logo<br/>Your logo stands tall on the login screen and dashboard.<br/><br/>#### Color Themes<br/>Choose from predefined themes (Classic Blue, Emerald, Sunset, Slate, Violet) the one that best fits your corporate image."
-                }
-            }
-        },
-        "fortyx": {
-            "hero_title": "Not a Plugin.<br /><span class=\"text-fortyx\">It's an Alliance.</span>",
-            "hero_subtitle": "We took inspiration from Earth's mightiest heroes. Each module of FortyX has an identity, a superpower, and a mission: protect your site at all costs.",
-            "grid_title": "Theme-Driven Development",
-            "grid_subtitle": "We didn't write anonymous code. We gave every file a personality. When the server is under attack, we don't activate a firewall. We inspire the <strong>Vibranium</strong> shield. Click their names to know their story.",
-            "classes": {
-                "S": "Class S: Pure Speed",
-                "A": "Class A: Absolute Defense",
-                "B": "Class B: Intelligence",
-                "C": "Class C: Reality Control"
-            },
-            "cta_title": "Your Site Needs Heroes.",
-            "cta_button": "Assemble the Team",
-            "modal": {
-                "db_header": "S.H.I.E.L.D. DATABASE<br />CLEARANCE: LEVEL 7<br />STATUS: ACTIVE",
-                "close": "Close File"
-            },
-            "heroes": {
-                "quicksilver": {
-                    "name": "Quicksilver",
-                    "short": "Generates static HTML copies. Serves content in under 50ms, faster than the human eye can perceive.",
-                    "full": "### You Didn't See Him. He's Already Done.<br/><br/>Speed is not just a feature. It's survival.<br/>**Quicksilver** doesn't \"optimize\" loading. It eliminates it.<br/><br/>When a user requests a page, Quicksilver intercepts the process. Before the user clicks, he has already generated a pure **Static HTML** copy.<br/>No PHP. No Database. Just pure data transfer speed.<br/><br/>**Result**: Time To First Byte (TTFB) under 50ms.<br/>Your site doesn't \"load\". It appears. It's like time stopped for everyone but your server."
-                },
-                "mjolnir": {
-                    "name": "Mjolnir",
-                    "short": "Wields the power of compression. Smashes JPG and PNG into ultralight WebP upon upload.",
-                    "full": "### Whoever is Worthy, Shall Possess the Power of Compression.<br/><br/>Images are the number one enemy of performance. Heavy, clumsy, slow.<br/>Mjolnir is the hammer that disciplines them.<br/><br/>#### The Thunder Strike (WebP Conversion)<br/><br/>As soon as you upload an image, Mjolnir hits it with an energy blast.<br/>It instantly converts it to the next-gen **WebP** format.<br/>- Visual quality: Identical.<br/>- File weight: Reduced by 40-70%."
-                },
-                "ant-man": {
-                    "name": "Ant-Man",
-                    "short": "Shrinks to subatomic level. Minifies HTML removing superfluos whitespace to reduce payload.",
-                    "full": "### Small. Powerful. Invisible.<br/><br/>How much wasted space is in your site code? Whitespace, newlines, comments.<br/>The browser doesn't need them. The user doesn't need them.<br/><br/>Ant-Man takes your code to the **Quantum Realm**.<br/><br/>#### Subatomic Compression<br/><br/>Ant-Man analyzes outgoing HTML, CSS and JavaScript code.<br/>Removes whitespace and comments.<br/>Compacts everything into a single, dense string of code.<br/>A 100KB file becomes 85KB."
-                },
-                "vibranium": {
-                    "name": "Vibranium",
-                    "short": "Injects military-grade security headers (X-XSS, Strict-Transport). Repels XML-RPC attacks like bullets on a shield.",
-                    "full": "### Indestructible.<br/><br/>Your site is under attack. Now.<br/>Vibranium doesn't fight. **It absorbs**.<br/><br/>#### Header Hardening<br/><br/>Vibranium injects an impenetrable alloy of security directives into your HTTP headers:<br/>- **X-XSS-Protection**<br/>- **X-Frame-Options**<br/>- **Strict-Transport-Security (HSTS)**<br/><br/>It also shuts down XML-RPC hermetically. Any request is rejected immediately."
-                },
-                "loki": {
-                    "name": "Loki",
-                    "short": "God of Deception. Creates invisible Honeypot fields in forms that trap bots before they can spam.",
-                    "full": "### You Cannot Fight What Is Real. And What Is Not.<br/><br/>Firewalls block IPs. IPs change. Bots evolve.<br/>Loki uses **Deception**.<br/><br/>#### The Honeypot Trap<br/><br/>In every form, Loki inserts a hidden input field.<br/>- A human never sees it.<br/>- A bot sees it and fills it.<br/><br/>As soon as that field is filled, Loki laughs.<br/>The submission is silently discarded. The bot thinks it succeeded, so it doesn't retry. Your database stays clean."
-                },
-                "hawkeye": {
-                    "name": "Hawkeye",
-                    "short": "Never misses a shot. Identifies useless scripts (Emoji, Embeds) and surgically eliminates them from loading.",
-                    "full": "### One Shot. No Waste.<br/><br/>WordPress is obese. It loads dozens of scripts \"just in case\".<br/>Hawkeye hates waste. Hawkeye has perfect aim.<br/><br/>#### Surgical Dequeue<br/><br/>Hawkeye scans the loading queue.<br/>Sees Emoji script? Shoots it.<br/>Sees Contact Form 7 CSS where there is no form? Shoots it.<br/><br/>Result: Your pages weigh 30% less."
-                },
-                "jarvis": {
-                    "name": "J.A.R.V.I.S.",
-                    "short": "The system brain. Uses AI to optimize SEO titles and manages script loading order (Defer/Async).",
-                    "full": "### \"Just A Rather Very Intelligent System\".<br/><br/>Jarvis is the invisible butler orchestrating everything.<br/><br/>#### Asset Orchestration (Defer & Async)<br/><br/>JavaScript blocks rendering. Jarvis rewrites `<script>` tags on the fly.<br/>Applies `defer` attribute.<br/>Tells the browser: \"Keep painting the page. Download this script in background\".<br/>The user sees content immediately."
-                },
-                "vision": {
-                    "name": "Vision",
-                    "short": "Sees the future. Injects Resource Hints (DNS Prefetch) to connect to external servers before the user even clicks.",
-                    "full": "### Probability Calculation: 100%.<br/><br/>Vision anticipates.<br/>Vision understands dependencies (Google Fonts, Analytics) and establishes connections *before* they are needed.<br/><br/>#### DNS Prefetch & Preconnect<br/><br/>Vision inserts `<link rel=\"preconnect\">` tags.<br/>Tells the browser: \"Hey, we'll need Google Fonts soon. Connect NOW\".<br/>When download time comes, the pipe is already open. It's instant."
-                },
-                "iron-man": {
-                    "name": "Iron Man",
-                    "short": "The final armor. Activates 'Fury Mode' to delay heavy scripts (like GTM or AdSense) until user interaction.",
-                    "full": "### I Am Iron Man. And This is Fury Mode.<br/><br/>Sometimes, normal optimization isn't enough. You have heavy marketing scripts.<br/>Iron Man activates **FURY MODE**.<br/><br/>In Fury Mode, Iron Man freezes these scripts.<br/>He doesn't load them at all.<br/>Then, the user moves the mouse.<br/>In that precise millisecond, Iron Man injects the scripts.<br/>The user notices nothing. But to Google, your site is a lightweight rocket."
-                },
-                "hulk": {
-                    "name": "Hulk",
-                    "short": "Smash. Deletes old revisions, spam comments and expired transients with pure brute force.",
-                    "full": "### HULK... CLEANS!<br/><br/>The WordPress Database is a hoarder.<br/>Revisions, transients, spam.<br/><br/>#### Brute Force Cleanup<br/><br/>Hulk has no patience. Hulk enters the Database and smashes everything useless.<br/>Executes massive `DELETE` queries.<br/>- Revisions gone.<br/>- Spam gone.<br/>- Transients gone.<br/><br/>He doesn't optimize tables with a feather. He defragments them with punches."
-                },
-                "thanos": {
-                    "name": "Thanos",
-                    "short": "Perfect balance. Deletes orphan metadata and broken relationships. A simple snap and the database is clean.",
-                    "full": "### Destiny Awaits.<br/><br/>Thanos deals with the existential.<br/>Orphan data. Zombie data.<br/><br/>#### The Snap<br/><br/>Thanos executes The Snap.<br/>Scans table relationships.<br/>Deletes with cold mathematical logic everything without a purpose.<br/>Creates perfect balance."
-                },
-                "doctor-strange": {
-                    "name": "Dr. Strange",
-                    "short": "Manipulates time. Controls how many revisions are saved and autosave interval, preventing temporal chaos in DB.",
-                    "full": "### Dormammu, I've Come To Bargain.<br/><br/>Time is relative in WordPress.<br/>Revisions pile up.<br/><br/>#### Chronokinesis<br/><br/>Dr. Strange rewrites time constants.<br/>1. **Revision Limit**: Loop set to max 5 revisions.<br/>2. **Autosave Interval**: Dilates time to 300 seconds (5 minutes).<br/><br/>Controlling time means controlling stability."
-                }
-            }
-        },
-        "zenith": {
-            "dashboard": {
-                "exe": "zenith_core_v2.exe",
-                "scan": "&gt; Scanning 'geotapp.com'...",
-                "complete": "COMPLETE",
-                "kd": "Keyword Difficulty",
-                "high": "High (84/100)",
-                "opp": "Semantic Opportunity",
-                "massive": "Massive"
-            },
-            "hero_title": "Not SEO.<br /><span class=\"text-zenith\">It's Digital Warfare.</span>",
-            "hero_subtitle": "Zenith doesn't just \"optimize\". It spies, attacks, defends, and conquers. A complete suite of tactical tools to dominate SERPs with military precision.",
-            "system_online": "SYSTEM ONLINE: DEATH STAR PROTOCOL",
-            "grid_title": "Updated Arsenal",
-            "grid_subtitle": "Click each module to access the full tactical dossier.",
-            "sections": {
-                "warfare": "Warfare Zone",
-                "defense": "Defense & Expansion",
-                "logistics": "Logistics"
-            },
-            "cta_badge": "VERIFIED & UPDATED: v1.5.6",
-            "cta_title": "Is Your Site Ready for War?",
-            "cta_button": "Buy Zenith SEO",
-            "modal": {
-                "classification": "CLASSIFIED INFORMATION<br />LEVEL 5 CLEARANCE<br />DEATH STAR PROTOCOL",
-                "close": "Close Dossier"
-            },
-            "features": {
-                "vader-console": {
-                    "title": "Vader Console (Competitor Spy)",
-                    "short": "Enter an enemy URL. Zenith brutally extracts Title, H1, Structure, and Keyword Strategy.",
-                    "full": "### Unfair Advantage: Know Enemy Moves Before They Make Them.<br/><br/>Imagine walking into your competitors' offices and reading their secret files. **Vader Console** gives you this power.<br/><br/>In SEO, information is ammunition.<br/><br/>#### What You Will See:<br/><br/>1. **Skeletal Structure**: The psychological logic behind their headings.<br/>2. **Density and Frequency**: How often they use the keyword.<br/>3. **Content Gap**: Where you can win.<br/><br/>You aren't just creating content. You are a general."
-                },
-                "neural-graph": {
-                    "title": "Neural Link Graph",
-                    "short": "Visualize your site structure as a neural network. Spot 'red nodes' (weak pages).",
-                    "full": "### Your Sight Expands: See The Invisible.<br/><br/>Your website is a living organism. A synapse network where authority flows.<br/>**Neural Link Graph** turns the lights on.<br/><br/>#### Immediate Visual Diagnostics<br/>1. **Red Nodes**: Dead pages. Save them.<br/>2. **Giant Nodes**: Power centers. Distribute the power.<br/><br/>Technical SEO is plumbing. Become a divine plumber."
-                },
-                "orphan-scanner": {
-                    "title": "Orphan Scanner",
-                    "short": "Finds invisible 'Orphan' content. Applies 'Nuclear Option' forcing links from related posts.",
-                    "full": "### No Soldier Left Behind.<br/><br/>Orphan content is a tragedy.<br/>**Orphan Scanner** is your rescue team.<br/><br/>1. **Deep Scan**.<br/>2. **Relevance Analysis**.<br/>3. **The Nuclear Option**: Forces a bridge if no natural parent is found.<br/><br/>Recovering an orphan has infinite ROI."
-                },
-                "protocol-droid": {
-                    "title": "Protocol Droid (Auto-Defense)",
-                    "short": "Automatically blocks parasitic AI bots (GPTBot, Claude) via robots.txt. Your data is sovereign.",
-                    "full": "### Your Content Is Yours. Not Some Californian AI's.<br/><br/>Silent bots are scraping your site right now.<br/>**Protocol Droid** is your shield.<br/><br/>1. **Instant ID**: Updated kill-list.<br/>2. **Selective Permissions**: Block thieves, let Googlebot pass.<br/>3. **Resource Saving**: -30% server load.<br/><br/>Don't give away your work."
-                },
-                "project-starlight": {
-                    "title": "Project Starlight (Voice Search)",
-                    "short": "Injects 'Speakable' schema (Beta). Speak directly to voice assistants.",
-                    "full": "### Be Heard By Millions.<br/><br/>Future of search is spoken.<br/>**Project Starlight** is a megaphone.<br/><br/>Injects 'SpeakableSpecification'.<br/>1. **Passage to Read**: Tell Google exactly what to read.<br/>2. **Voice Authority**: Be the cited Source.<br/>3. **Future-Proofing**."
-                },
-                "network-hub": {
-                    "title": "Network Hub (Distribution)",
-                    "short": "Automatic ping to engines. Posts to Reddit and protects RSS feed.",
-                    "full": "### Automated Omnipresence.<br/><br/>Writing is half the job. Distribution is the other.<br/><br/>#### Subspace Signal (Ping)<br/>Send a pulse to indexers instantly.<br/><br/>#### Infiltrator Agent (Reddit)<br/>Auto-posts to target Subreddit.<br/><br/>#### RSS Armor<br/>Delays feed output by 60 mins to ensure Google indexes YOU first."
-                },
-                "drive-importer": {
-                    "title": "Drive Importer (Hyperdrive)",
-                    "short": "Syncs Google Drive folders. Converts WebP, cleans HTML, publishes.",
-                    "full": "### From Thought to Publish at Light Speed.<br/><br/>Write on Docs. Publish on WP.<br/>**Drive Importer** removes friction.<br/><br/>1. **Code Sanitization**: Cleans dirty HTML.<br/>2. **Image Management**: Downloads and converts to WebP.<br/>3. **Perfect Workflow**."
-                },
-                "tractor-beam": {
-                    "title": "Tractor Beam (Redirect Core)",
-                    "short": "Monitors 404 errors and auto-redirects to similar content.",
-                    "full": "### Never Lose a Visitor Again.<br/><br/>A 404 is a lost customer.<br/>**Tractor Beam** activates.<br/><br/>1. **Intent Analysis**.<br/>2. **Fuzzy Matching**: finds > 80% similar content.<br/>3. **Surgical Redirect**: Transports user to the right page.<br/><br/>User never sees the error."
-                },
-                "auto-linker": {
-                    "title": "Auto-Linker (Internal Mesh)",
-                    "short": "Define a keyword, Zenith creates links in entire historical archive.",
-                    "full": "### Weave Your Web of Authority.<br/><br/>Want to link \"SEO\" in 500 old posts?<br/>Zenith does it in a click.<br/><br/>#### Internal Mesh<br/>Retroactively applies link building.<br/>1. **Frequency Control**: Only first occurrence.<br/>2. **Instant Boost**."
-                }
-            }
-        }
+  "navbar": {
+    "products": "Products",
+    "pricing": "Pricing",
+    "blog": "Blog",
+    "contact": "Contact",
+    "login": "Login",
+    "cta": "Request Demo",
+    "sectors": {
+      "installatori": "Installers",
+      "sicurezza": "Security",
+      "pulizie": "Cleaning"
     }
+  },
+  "footer": {
+    "tagline": "Field activity recorded. Operations organised. Reports verifiable.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "rights": "All rights reserved."
+  },
+  "landing": {
+    "hero_badge": "GeoTapp — Field Work Control",
+    "hero_title": "Control what happens<br />in the field.",
+    "hero_subtitle": "GeoTapp gives companies with technicians and field operators real control over work performed: activity recorded, operations organised, reports verifiable.",
+    "hero_cta_primary": "Request a Demo",
+    "hero_cta_secondary": "Explore Products",
+    "features_title": "What you actually need",
+    "features_subtitle": "Three integrated tools to control field work from the office.",
+    "cta_title": "Ready to control your field operations?",
+    "cta_subtitle": "Join companies using GeoTapp to organise interventions and produce verifiable work reports.",
+    "cta_button": "Request a Demo"
+  },
+  "home_sections": {
+    "flow": {
+      "badge": "GeoTapp Flow",
+      "title": "Coordinate the field from one operational hub.",
+      "subtitle": "Flow is the system used by the office to manage jobs, assign activities, track progress and generate structured work reports. <strong class=\"text-slate-900\">Less internal friction, more real control.</strong>",
+      "features": {
+        "crm": "<strong>Job Management:</strong> Create interventions, assign technicians and monitor progress in real time.",
+        "pipeline": "<strong>Structured Reports:</strong> Every completed job generates traceable documentation ready for the client."
+      },
+      "link": "Explore GeoTapp Flow"
+    },
+    "app": {
+      "badge": "GeoTapp TimeTracker",
+      "title": "The technician records. The office controls.",
+      "subtitle": "TimeTracker is the mobile app used by technicians to record field activity. Clock-in, clock-out, photos and notes linked to each job. <strong>Available on Android and iOS.</strong>",
+      "card_gps": {
+        "title": "GPS Time Tracking",
+        "desc": "Verified location"
+      },
+      "card_gdpr": {
+        "title": "GDPR Compliant",
+        "desc": "No continuous tracking"
+      },
+      "link": "Explore GeoTapp TimeTracker"
+    },
+    "verifier": {
+      "badge": "GeoTapp Verifier",
+      "title": "Work reports anyone can verify.",
+      "subtitle": "Verifier lets you check whether a work report matches the recorded operational data and has not been modified. More transparency for the client, fewer disputes.",
+      "features": {
+        "integrity": "<strong>Verified integrity:</strong> The system cross-checks the report against the actual session data recorded on the field.",
+        "independent": "<strong>Independent verification:</strong> Anyone can verify a report without accessing the platform."
+      },
+      "link": "Explore GeoTapp Verifier"
+    },
+    "core": {
+      "badge": "GeoTapp Platform",
+      "title": "Built for field work.",
+      "subtitle": "Three integrated products, one purpose: give companies with field operators the visibility and operational documentation they need.",
+      "features": [
+        {
+          "title": "Real mobile operability",
+          "desc": "TimeTracker works without a connection and syncs as soon as the field comes back online. Work never stops."
+        },
+        {
+          "title": "Privacy by design",
+          "desc": "Location is recorded <strong>only</strong> at clock-in and clock-out. No continuous tracking. Fully GDPR compliant."
+        },
+        {
+          "title": "Real-time synchronisation",
+          "desc": "Activity recorded on the field arrives in Flow immediately, so the office always has an up-to-date operational picture."
+        },
+        {
+          "title": "Reports verifiable over time",
+          "desc": "With GeoTapp Verifier, any report can be validated independently. Data collected remains reliable and defensible."
+        }
+      ]
+    },
+    "footer_cta": {
+      "title": "Take real control<br />of your field.",
+      "subtitle": "GeoTapp Flow, TimeTracker and Verifier work together to give your company genuine visibility and reliable documentation of work performed.",
+      "button": "Talk to Us"
+    }
+  },
+  "pricing": {
+    "badge": "GeoTapp Solutions",
+    "title": "Choose the right product.",
+    "subtitle": "Practical solutions for companies with technicians and field operators.",
+    "vat_note": "All prices exclude VAT. Billing according to terms of service.",
+    "categories": {
+      "app": {
+        "title": "GeoTapp TimeTracker",
+        "description": "Mobile app for field technicians",
+        "products": [
+          {
+            "name": "GeoTapp TimeTracker",
+            "tagline": "Starting at",
+            "desc": "The complete solution to track attendance, field activity and work proof. Price per user/year.",
+            "features": [
+              "Android/iOS App",
+              "GPS Clock-in",
+              "Weekly Reports"
+            ],
+            "button": "View Calculator"
+          }
+        ]
+      },
+      "flow": {
+        "title": "GeoTapp Flow",
+        "description": "Field operations and team management",
+        "products": [
+          {
+            "name": "GeoTapp Flow Business",
+            "tagline": "Per aziende strutturate.",
+            "desc": "La soluzione completa per aziende strutturate e organizzazioni complesse.",
+            "features": [
+              "Squadre illimitate",
+              "API",
+              "Supporto prioritario",
+              "Automazioni",
+              "Report avanzati"
+            ]
+          },
+          {
+            "name": "GeoTapp Flow Team",
+            "tagline": "Per piccoli team operativi.",
+            "desc": "Coordina e gestisci il tuo team operativo in tempo reale.",
+            "features": [
+              "5 utenti Flow inclusi (non timetracker)",
+              "Gestione commesse",
+              "Timbrature campo",
+              "Report operativi",
+              "Integrazioni"
+            ]
+          },
+          {
+            "name": "GeoTapp Flow Solo",
+            "tagline": "Per professionisti e microimprese.",
+            "desc": "Tutto quello che serve a chi gestisce gli interventi in autonomia.",
+            "features": [
+              "1 utente",
+              "Gestione attività",
+              "Report base",
+              "Integrazioni essenziali"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "contact": {
+    "title": "Let's Talk <span class=\"text-primary\">Business</span>.",
+    "subtitle": "You need to understand whether GeoTapp fits your company. We are here to answer concretely.",
+    "guarantee_title": "Response Guarantee",
+    "guarantee_text": "Average first response within 12 business hours. No tickets lost in the void.",
+    "form": {
+      "name": "Name",
+      "company": "Company",
+      "email": "Work Email",
+      "reason": "Reason for Contact",
+      "message": "Message",
+      "send": "Send"
+    }
+  },
+  "login_hub": {
+    "title": "Access your <span class=\"text-primary\">Account</span>.",
+    "subtitle": "Select the product you want to connect to.",
+    "flow": {
+      "desc": "Operational management, jobs, coordination and reports.",
+      "btn": "Login to Flow"
+    },
+    "timetracker": {
+      "desc": "Attendance, field activity and work proof.",
+      "btn": "Login to TimeTracker"
+    }
+  },
+  "product_pages": {
+    "flow": {
+      "hero_badge": "GeoTapp Flow — Field Operations Management",
+      "hero_title": "GeoTapp Flow.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600\">Operational Hub.</span>",
+      "hero_subtitle": "The operational centre for companies with field technicians and operators. Manage jobs, coordinate teams and produce structured, verifiable work reports.",
+      "visual_placeholder": "OPERATIONS PANEL",
+      "grid_title": "Operational capabilities",
+      "grid_subtitle": "Every module is designed for real control of field work. Click to explore.",
+      "sectors": {
+        "1": "Jobs and Clients",
+        "2": "Planning and Resources",
+        "3": "Control and Visibility"
+      },
+      "cta_title": "Take real control of your field.",
+      "cta_button": "View Pricing",
+      "modal": {
+        "status": "SYSTEM STATUS: <span class=\"text-green-600\">OPERATIONAL</span>",
+        "encryption": "DATA: <span class=\"text-slate-400\">PROTECTED</span>",
+        "access": "ACCESS: <span class=\"text-blue-600\">SECURE</span>",
+        "close": "Close"
+      },
+      "systems": {
+        "nexus-core": {
+          "name": "Job Management",
+          "short": "Create and manage technical interventions. Assign tasks to technicians, monitor progress and keep everything tracked per job.",
+          "full": "### Central Job Control.\n\nEvery intervention starts as a structured job.\n**Job Management** gives you a clear view of all work in progress.\n\n#### Intervention Management\n\nCreate a job, assign the technician, define the site and date.\nMonitor status: Open, In Progress, Completed.\n\n#### Operational History\n\nEvery job has a complete archive of activities, photo proofs, notes and timestamps.\nThe client asks what was done? You have the data. Always."
+        },
+        "titan-flow": {
+          "name": "Task Assignment",
+          "short": "Distribute work to technicians with precision. Communicate instructions, deadlines and operational priorities in a structured way.",
+          "full": "### The Right Job to the Right Technician.\n\nConfused task assignment generates delays and disputes.\n**Task Assignment** brings operational clarity.\n\n#### Precise Distribution\n\nAs soon as a job is opened, assign one or more technicians.\nEach technician sees their work on GeoTapp TimeTracker.\n\n#### Operational Communication\n\nInstructions, notes, technical attachments: everything reaches the technician before they leave for the field.\nFewer calls, fewer misunderstandings, fewer delays."
+        },
+        "ledger-prime": {
+          "name": "Reports and Billing",
+          "short": "Generate structured reports from every job. Export documentation and support billing with real field data.",
+          "full": "### From Work to Report, in an Orderly Way.\n\nManual billing is slow and often incomplete.\n**Reports and Billing** closes the operational cycle.\n\n#### Structured Reports\n\nEvery completed intervention generates documentation by collecting timestamps, photos and notes from the field.\nNo data to enter manually — it all comes from TimeTracker.\n\n#### Billing Support\n\nReal job data supports more accurate quotes and invoices.\nFewer errors, fewer disputes, faster administrative cycle."
+        },
+        "quantum-logistics": {
+          "name": "Intervention Calendar",
+          "short": "Plan interventions, visualise the operational calendar and manage team availability without overlaps.",
+          "full": "### Full View of Planned Work.\n\nWithout a shared calendar, planning becomes chaotic.\n**Intervention Calendar** gives you clear operational visibility.\n\n#### Advanced Planning\n\nView all interventions on daily, weekly and monthly calendar views.\nIdentify overlaps and optimise workload distribution.\n\n#### Team Availability\n\nSee who is available, who is on leave and who is already overloaded.\nAssign new interventions without creating operational conflicts."
+        },
+        "supply-command": {
+          "name": "Resource Management",
+          "short": "Control materials, equipment and operational resources needed for each field intervention. No surprises.",
+          "full": "### No Intervention Short of Resources.\n\nSending a technician to the field without the right materials is a costly mistake.\n**Resource Management** prevents operational surprises.\n\n#### Materials per Job\n\nLink required resources to each job.\nThe manager sees in advance what is needed and when.\n\n#### Suppliers and Procurement\n\nStore contact details and terms for your regular suppliers.\nReduce procurement time and keep costs under control."
+        },
+        "the-architect": {
+          "name": "Work Planning",
+          "short": "Organise work into phases, tasks and deadlines. Keep the project under control without spreadsheets or WhatsApp messages.",
+          "full": "### Structure the Work. Control the Progress.\n\nComplex jobs require structure.\n**Work Planning** brings operational order.\n\n#### Phases and Deadlines\n\nStructure complex interventions into operational phases with clear deadlines.\nAssign responsibilities to each team member.\n\n#### Progress Monitoring\n\nVisualize progress in real time.\nAlways know what has been done and what remains open.\nAct before a delay becomes a client problem."
+        },
+        "the-auditor": {
+          "name": "Intervention Documentation",
+          "short": "Collect photo evidence, operational notes and signed documents for every intervention. Work performed stays verifiable.",
+          "full": "### Real Proof for Every Intervention.\n\nWithout documentation, completed work is contestable.\n**Intervention Documentation** makes every job verifiable.\n\n#### Photo Evidence\n\nTechnicians take photos directly from GeoTapp TimeTracker on the field.\nImages are automatically linked to the job with timestamp and location.\n\n#### Digital Client Signature\n\nThe client can sign the work report directly on the technician's screen.\nThe digital signature is included in the report and constitutes proof of service delivered."
+        },
+        "the-uplink": {
+          "name": "Field-to-Office Link",
+          "short": "Data collected by TimeTracker arrives in Flow in real time. Field and office work on the same operational data.",
+          "full": "### Office and Field, Finally Connected.\n\nThe disconnect between field and office generates avoidable errors, delays and disputes.\n**Field-to-Office Link** closes the gap.\n\n#### Real-time Synchronisation\n\nEvery clock-in, photo and note recorded on TimeTracker arrives in Flow immediately.\nThe manager has a live view without having to call the technician.\n\n#### Reliable History\n\nEverything the technician records on the field is archived and linked to the job.\nNo data is lost. No information is missing when it is time to report."
+        },
+        "the-oracle": {
+          "name": "Operational Visibility",
+          "short": "Real-time operational dashboard. Always know how many interventions are open, in progress or completed today.",
+          "full": "### Operational Data, Not Assumptions.\n\nDeciding without reliable data is dangerous.\n**Operational Visibility** turns field data into concrete information.\n\n#### Operational Dashboard\n\nSee in real time:\n- Open and in-progress interventions\n- Active technicians\n- Interventions completed today and this week\n\n#### Periodic Reports\n\nReceive automated activity summaries.\nCompare periods, identify bottlenecks and optimise operations."
+        }
+      }
+    },
+    "app": {
+      "hero_badge": "GeoTapp TimeTracker — Field Technician App",
+      "hero_title": "GeoTapp TimeTracker.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600\">The Field in Your Pocket.</span>",
+      "hero_subtitle": "The mobile app used by technicians to record activity, collect proof and maintain the operational thread directly from the field. Available on Android and iOS.",
+      "visual_placeholder": "FIELD INTERFACE",
+      "grid_title": "Tools for field work",
+      "grid_subtitle": "Every feature is designed for those who work outside the office and have no time to waste. Click to explore.",
+      "sectors": {
+        "1": "Core Operations",
+        "2": "Logistics and Communications",
+        "3": "Data and Administration"
+      },
+      "cta_title": "Give your technicians the right tool.",
+      "cta_button": "View Pricing",
+      "modal": {
+        "status": "SYSTEM STATUS: <span class=\"text-green-600\">OPERATIONAL</span>",
+        "encryption": "DATA: <span class=\"text-slate-400\">PROTECTED</span>",
+        "device": "DEVICE: <span class=\"text-blue-600\">MOBILE / TABLET</span>",
+        "close": "Close"
+      },
+      "systems": {
+        "timelock-alpha": {
+          "name": "GPS Time Tracking",
+          "short": "Clock-in and clock-out linked to GPS position and precise timestamp. Every work session becomes a verifiable operational event.",
+          "full": "### Time is Verifiable.\n\nTimestamps without verification generate disputes.\n**GPS Time Tracking** makes every work session a reliable, defensible record.\n\n#### Geolocated Clock-in and Clock-out\n\nThe technician records entry and exit from the field.\nLocation, address and time are registered automatically.\n\n#### Immutable History\n\nEvery session is a verifiable record: start time, end time, position, duration and associated job.\nThe client asks when you arrived? The data is there, always."
+        },
+        "event-horizon": {
+          "name": "Shift Planning",
+          "short": "Manage shifts and staff availability. Weekly and monthly views for coordination without confusion or overlaps.",
+          "full": "### No Shift Conflicts.\n\nOrganising mobile personnel requires clarity.\n**Shift Planning** gives the manager a precise, up-to-date view.\n\n#### Calendar View\n\nSee who works when.\nIdentify absences, holidays and overlaps before they become operational problems.\n\n#### Real-time Availability\n\nEmployees confirm attendance or report absences directly from the app.\nThe manager sees gaps in the schedule before assigning new jobs."
+        },
+        "unit-matrix": {
+          "name": "Operator Registry",
+          "short": "Manage a complete record of your operators: roles, contacts, certifications and platform access.",
+          "full": "### Know Your Team.\n\nEvery operator is a key operational resource.\n**Operator Registry** centralises all vital information.\n\n#### Certification Management\n\nSee at a glance who holds the required qualifications for a specific intervention or site.\n\n#### Rapid Onboarding\n\nAdding a new technician is simple.\nSend an invite link: within minutes they are operational on GeoTapp TimeTracker."
+        },
+        "sector-grid": {
+          "name": "Sites and Worksites",
+          "short": "Create a database of operational sites and worksites. Link each intervention to the correct location and organise teams by zone.",
+          "full": "### Every Intervention in the Right Place.\n\nWorking without geographic reference generates confusion.\n**Sites and Worksites** brings operational clarity.\n\n#### Site Database\n\nCreate a catalogue of client sites, worksites and operational locations.\nThe system automatically links technician activity to the intervention site.\n\n#### Zone-based Teams\n\nOrganise technicians into teams by site or geographic area.\nAssign interventions to the correct team, not just the individual."
+        },
+        "energy-logistics": {
+          "name": "Vehicle and Expense Management",
+          "short": "Track company vehicle usage, fuel consumed and travel expenses for field staff.",
+          "full": "### Every Trip Documented.\n\nTravel expenses are a critical item for any company with mobile staff.\n**Vehicle Management** monitors every outgoing cost.\n\n#### Vehicle Usage\n\nTemporarily assign a vehicle to an employee for an intervention.\nAlways know who is using which vehicle and for which job.\n\n#### Fuel Expenses\n\nThe employee records refuelling directly from the app with a receipt photo and amount.\nEverything archived, everything linked to the job."
+        },
+        "neural-link": {
+          "name": "Operational Communications",
+          "short": "Internal channel for company communications. Targeted messages to specific groups with read confirmations.",
+          "full": "### Clear Communications. No Background Noise.\n\nWhatsApp mixes private and professional life and offers no control over read status.\n**Operational Communications** is the official company channel.\n\n#### Targeted Messages\n\nNotify only the team that needs to know.\nShift change at the Rome site? Only the assigned technicians receive the message.\n\n#### Read Confirmations\n\nAlways know who read the communication and who did not.\nClear and transparent accountability for everyone."
+        },
+        "payroll-bridge": {
+          "name": "Attendance Export",
+          "short": "Export monthly attendance in formats compatible with the main payroll software. Less manual work, fewer errors.",
+          "full": "### Payroll Without Headaches.\n\nMonth end does not have to be an administrative nightmare.\n**Attendance Export** connects field operations to HR administration.\n\n#### Multi-Format\n\nGenerate attendance files ready for import into the main payroll software (Zucchetti, INAZ, TeamSystem).\n\n#### Consultant Access\n\nGive limited access to your payroll firm.\nThey download the data they need independently, without calling you every month end."
+        },
+        "data-core": {
+          "name": "Weekly Reports",
+          "short": "Detailed reports on hours worked per job and per operator. Reliable data for internal control and billing.",
+          "full": "### Data Does Not Lie.\n\nMake decisions based on facts, not impressions.\n**Weekly Reports** extracts value from daily operations.\n\n#### Detailed Reports\n\nEvery week, a complete picture: who worked, where, on which job and for how long.\n\n#### Full Transparency\n\nEmployees and managers consult the same monthly report.\nHours counted are identical for everyone.\nNo disputes at month end."
+        },
+        "identity-forge": {
+          "name": "Branded App",
+          "short": "Upload your logo and choose your company colours. Your operators use an app that reflects your brand identity.",
+          "full": "### Your Company, Your App.\n\nDo not use a generic app.\nMake your employees feel part of YOUR company with a consistent visual experience.\n\n#### Company Logo\n\nYour logo prominently displayed on the login screen and main dashboard.\n\n#### Company Colours\n\nChoose the colour theme that fits your corporate image.\nProfessional, consistent, recognisable."
+        }
+      }
+    }
+  }
 }
