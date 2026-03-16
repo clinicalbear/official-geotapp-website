@@ -131,6 +131,16 @@ const es: VerifierCopy = {
       a: 'GeoTapp Verifier está integrado en el ecosistema GeoTapp. Contáctenos para determinar qué plan se adapta mejor a las necesidades de su empresa.',
     },
   ],
+  hero_cta_download: 'Descargar gratis — v0.1.0',
+  cta_download: 'Descargar Verifier gratis',
+  download_badge: 'Descarga gratuita',
+  download_title: 'Descargar GeoTapp Verifier.',
+  download_desc: 'Herramienta CLI abierta para verificar sin conexión la integridad de los informes GeoTapp. Sin cuenta requerida. Funciona desde terminal o como librería Node.js.',
+  download_btn: 'Descargar report-verifier-0.1.0.zip',
+  download_version: 'v0.1.0 — ~40 KB — Requiere Node.js ≥ 18',
+  download_requirements: 'Requiere Node.js ≥ 18',
+  download_cli_title: 'Desde terminal',
+  download_api_title: 'Como librería Node.js',
 };
 
 export default es;

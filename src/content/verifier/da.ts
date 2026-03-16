@@ -131,6 +131,16 @@ const da: VerifierCopy = {
       a: 'GeoTapp Verifier er integreret i GeoTapp-økosystemet. Kontakt os for at finde ud af, hvilken plan der passer bedst til din virksomheds behov.',
     },
   ],
+  hero_cta_download: 'Download gratis — v0.1.0',
+  cta_download: 'Download Verifier gratis',
+  download_badge: 'Gratis download',
+  download_title: 'Download GeoTapp Verifier.',
+  download_desc: 'Åbent CLI-værktøj til offline verifikation af GeoTapp-rapportintegritet. Ingen konto nødvendig. Virker fra terminal eller som Node.js-bibliotek.',
+  download_btn: 'Download report-verifier-0.1.0.zip',
+  download_version: 'v0.1.0 — ~40 KB — Kræver Node.js ≥ 18',
+  download_requirements: 'Kræver Node.js ≥ 18',
+  download_cli_title: 'Fra terminal',
+  download_api_title: 'Som Node.js-bibliotek',
 };
 
 export default da;

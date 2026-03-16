@@ -47,4 +47,17 @@ export interface VerifierCopy {
   faq_badge: string;
   faq_title: string;
   faqs: Array<{ q: string; a: string }>;
+  // download section
+  download_badge: string;
+  download_title: string;
+  download_desc: string;
+  download_btn: string;
+  download_version: string;
+  download_requirements: string;
+  download_cli_title: string;
+  download_api_title: string;
+  // hero download CTA
+  hero_cta_download: string;
+  // final CTA download button
+  cta_download: string;
 }
