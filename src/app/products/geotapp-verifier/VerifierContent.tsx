@@ -14,7 +14,9 @@ import {
   FileText,
   Lock,
   Users,
+  Download,
 } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { localizePath } from '@/lib/i18n/locale-routing';
 import type { AppLocale } from '@/lib/i18n/config';
@@ -42,6 +44,18 @@ export default function VerifierContent({ copy, locale }: VerifierContentProps) 
           transition={{ duration: 0.8 }}
           className="text-center"
         >
+          {/* Logo */}
+          <div className="mb-10 flex justify-center">
+            <Image
+              src="/logoVerifier.png"
+              alt="GeoTapp Verifier"
+              width={320}
+              height={80}
+              priority
+              className="h-16 w-auto"
+            />
+          </div>
+
           <div className="mb-8 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50 border border-emerald-100 text-emerald-700 font-mono text-xs tracking-widest">
             <FileCheck2 size={14} className="animate-pulse" />
             {copy.hero_badge}
@@ -56,9 +70,17 @@ export default function VerifierContent({ copy, locale }: VerifierContentProps) 
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/downloads/report-verifier-0.1.0.zip"
+              download
+              className="px-8 py-4 bg-emerald-600 text-white font-bold rounded-xl text-lg hover:bg-emerald-700 transition-all shadow-lg hover:shadow-emerald-500/30 transform hover:-translate-y-1 flex items-center gap-2 justify-center"
+            >
+              <Download size={20} />
+              {copy.hero_cta_download}
+            </a>
             <Link
               href={getLink('/contact')}
-              className="px-8 py-4 bg-emerald-600 text-white font-bold rounded-xl text-lg hover:bg-emerald-700 transition-all shadow-lg hover:shadow-emerald-500/30 transform hover:-translate-y-1"
+              className="px-8 py-4 bg-white text-slate-700 border border-slate-200 font-bold rounded-xl text-lg hover:border-slate-400 transition-all"
             >
               {copy.hero_cta_primary}
             </Link>
@@ -186,6 +208,73 @@ export default function VerifierContent({ copy, locale }: VerifierContentProps) 
                 )}
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* DOWNLOAD SDK */}
+      <section id="download" className="py-24 bg-slate-900 text-white">
+        <div className="container mx-auto px-6 max-w-5xl">
+          <div className="text-center mb-16">
+            <span className="text-emerald-400 font-bold tracking-widest uppercase text-sm">
+              {copy.download_badge}
+            </span>
+            <h2 className="text-3xl md:text-5xl font-bold text-white mt-4 mb-6">
+              {copy.download_title}
+            </h2>
+            <p className="text-xl text-slate-400 max-w-2xl mx-auto mb-10">
+              {copy.download_desc}
+            </p>
+            <a
+              href="/downloads/report-verifier-0.1.0.zip"
+              download
+              className="inline-flex items-center gap-3 px-10 py-5 bg-emerald-500 text-white font-bold rounded-xl text-xl hover:bg-emerald-400 transition-all shadow-lg shadow-emerald-500/25"
+            >
+              <Download size={24} />
+              {copy.download_btn}
+            </a>
+            <p className="mt-4 text-sm text-slate-500 font-mono">
+              {copy.download_version}
+            </p>
+          </div>
+
+          {/* Code snippets */}
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* CLI */}
+            <div className="rounded-2xl bg-slate-800 border border-slate-700 overflow-hidden">
+              <div className="flex items-center gap-2 px-4 py-3 bg-slate-700/50 border-b border-slate-700">
+                <div className="w-3 h-3 rounded-full bg-red-500/70"></div>
+                <div className="w-3 h-3 rounded-full bg-yellow-500/70"></div>
+                <div className="w-3 h-3 rounded-full bg-green-500/70"></div>
+                <span className="ml-2 text-xs text-slate-400 font-mono">{copy.download_cli_title}</span>
+              </div>
+              <pre className="p-6 text-sm text-emerald-300 font-mono leading-relaxed overflow-x-auto">
+{`# Verifica un report ZIP
+npx geotapp-report-verify report.zip
+
+# Output JSON per integrazione
+npx geotapp-report-verify report.zip --json`}
+              </pre>
+            </div>
+
+            {/* API */}
+            <div className="rounded-2xl bg-slate-800 border border-slate-700 overflow-hidden">
+              <div className="flex items-center gap-2 px-4 py-3 bg-slate-700/50 border-b border-slate-700">
+                <div className="w-3 h-3 rounded-full bg-red-500/70"></div>
+                <div className="w-3 h-3 rounded-full bg-yellow-500/70"></div>
+                <div className="w-3 h-3 rounded-full bg-green-500/70"></div>
+                <span className="ml-2 text-xs text-slate-400 font-mono">{copy.download_api_title}</span>
+              </div>
+              <pre className="p-6 text-sm text-blue-300 font-mono leading-relaxed overflow-x-auto">
+{`import { verifyZipFile } from
+  '@geotapp/report-verifier';
+
+const result = await verifyZipFile('./report.zip');
+// 'valid' | 'degraded' | 'invalid'
+console.log(result.status);
+console.log(result.integrityLevel);`}
+              </pre>
+            </div>
           </div>
         </div>
       </section>
@@ -348,6 +437,14 @@ export default function VerifierContent({ copy, locale }: VerifierContentProps) 
             {copy.cta_subtitle}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/downloads/report-verifier-0.1.0.zip"
+              download
+              className="px-10 py-5 bg-emerald-500 text-white font-bold rounded-xl text-xl hover:bg-emerald-400 transition-all shadow-lg flex items-center gap-2 justify-center"
+            >
+              <Download size={20} />
+              {copy.cta_download}
+            </a>
             <Link
               href={getLink('/contact')}
               className="px-10 py-5 bg-emerald-500 text-white font-bold rounded-xl text-xl hover:bg-emerald-400 transition-all shadow-lg"
