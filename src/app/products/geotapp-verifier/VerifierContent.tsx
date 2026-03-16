@@ -447,7 +447,7 @@ console.log(result.integrityLevel);`}
             </a>
             <Link
               href={getLink('/contact')}
-              className="px-10 py-5 bg-emerald-500 text-white font-bold rounded-xl text-xl hover:bg-emerald-400 transition-all shadow-lg"
+              className="px-10 py-5 bg-white/10 text-white border border-white/20 font-bold rounded-xl text-xl hover:bg-white/20 transition-all flex items-center gap-2 justify-center"
             >
               {copy.cta_primary}
             </Link>
