@@ -22,6 +22,8 @@ import { localizePath } from '@/lib/i18n/locale-routing';
 import type { AppLocale } from '@/lib/i18n/config';
 import type { VerifierCopy } from '@/content/verifier/types';
 
+const VERIFIER_DOWNLOAD_URL = '/downloads/report-verifier-0.1.0.zip';
+
 const PROBLEM_ICONS = [AlertTriangle, Clock, FileText];
 const FEATURE_ICONS = [Clock, MapPin, FileText, Lock, Users, ShieldCheck];
 
@@ -71,7 +73,7 @@ export default function VerifierContent({ copy, locale }: VerifierContentProps) 
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="/downloads/report-verifier-0.1.0.zip"
+              href={VERIFIER_DOWNLOAD_URL}
               download
               className="px-8 py-4 bg-emerald-600 text-white font-bold rounded-xl text-lg hover:bg-emerald-700 transition-all shadow-lg hover:shadow-emerald-500/30 transform hover:-translate-y-1 flex items-center gap-2 justify-center"
             >
@@ -226,7 +228,7 @@ export default function VerifierContent({ copy, locale }: VerifierContentProps) 
               {copy.download_desc}
             </p>
             <a
-              href="/downloads/report-verifier-0.1.0.zip"
+              href={VERIFIER_DOWNLOAD_URL}
               download
               className="inline-flex items-center gap-3 px-10 py-5 bg-emerald-500 text-white font-bold rounded-xl text-xl hover:bg-emerald-400 transition-all shadow-lg shadow-emerald-500/25"
             >
@@ -438,7 +440,7 @@ console.log(result.integrityLevel);`}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="/downloads/report-verifier-0.1.0.zip"
+              href={VERIFIER_DOWNLOAD_URL}
               download
               className="px-10 py-5 bg-emerald-500 text-white font-bold rounded-xl text-xl hover:bg-emerald-400 transition-all shadow-lg flex items-center gap-2 justify-center"
             >
