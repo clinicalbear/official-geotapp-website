@@ -25,7 +25,7 @@ import { localizePath } from '@/lib/i18n/locale-routing';
 import type { AppLocale } from '@/lib/i18n/config';
 import type { VerifierCopy } from '@/content/verifier/types';
 
-const VERIFIER_DOWNLOAD_URL = '/downloads/report-verifier-0.1.0.zip';
+const VERIFIER_DOWNLOAD_URL = '/downloads/report-verifier-0.2.0.zip';
 
 const PROBLEM_ICONS = [AlertTriangle, Clock, FileText];
 const FEATURE_ICONS = [Clock, MapPin, FileText, Lock, Users, ShieldCheck];
