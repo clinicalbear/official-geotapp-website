@@ -141,6 +141,42 @@ const it: VerifierCopy = {
   download_requirements: 'Richiede Node.js ≥ 18',
   download_cli_title: 'Da terminale',
   download_api_title: 'Come libreria Node.js',
+
+  online_verify_badge: 'Verifica istantanea',
+  online_verify_title: 'Verifica un report online',
+  online_verify_desc: 'Carica il file ZIP del report. La verifica avviene sul server e il file non viene salvato.',
+  online_verify_upload_label: 'Trascina il report ZIP qui, oppure clicca per selezionarlo',
+  online_verify_upload_hint: 'Solo file .zip — dimensione massima 25MB',
+  online_verify_btn: 'Verifica ora',
+  online_verify_privacy_note: 'Il file viene analizzato in memoria e non viene salvato o trasmesso a terzi.',
+  online_verify_size_limit: 'Dimensione massima: 25MB',
+  online_verify_result_valid_sealed: 'Report valido — sigillato e firmato',
+  online_verify_result_valid_unsigned: 'Report valido — contenuto integro, sigillo non firmato',
+  online_verify_result_legacy: 'Report legacy — leggibile, senza sigillo forte',
+  online_verify_result_invalid: 'Report non valido — contenuto potenzialmente alterato',
+  online_verify_error_too_large: 'File troppo grande. Dimensione massima: 25MB.',
+  online_verify_error_not_zip: 'Il file deve essere un archivio ZIP.',
+  online_verify_error_generic: 'Errore durante la verifica. Il file potrebbe essere danneggiato.',
+
+  compare_badge: 'Due modi di verificare',
+  compare_title: 'Verifica locale o online?',
+  compare_local_title: 'Locale (CLI / SDK)',
+  compare_local_items: [
+    'Il file resta sul tuo dispositivo',
+    'Funziona senza connessione internet',
+    'Nessun limite pratico di dimensione',
+    'Ideale per audit, legale, consulenti',
+    'Richiede Node.js installato',
+  ],
+  compare_online_title: 'Online (questo sito)',
+  compare_online_items: [
+    'Nessun tool da installare',
+    'Risultato immediato nel browser',
+    'Il file transita sul server (dichiarato)',
+    'Limite 25MB per file',
+    'Ideale per controlli rapidi',
+  ],
+  compare_same_engine_note: 'Stesso motore di verifica in entrambi i casi. La differenza è dove gira.',
 };
 
 export default it;

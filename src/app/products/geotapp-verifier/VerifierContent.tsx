@@ -1,5 +1,6 @@
 'use client';
 
+import { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import {
   FileCheck2,
@@ -15,6 +16,8 @@ import {
   Lock,
   Users,
   Download,
+  Upload,
+  XCircle,
 } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -30,6 +33,112 @@ const FEATURE_ICONS = [Clock, MapPin, FileText, Lock, Users, ShieldCheck];
 interface VerifierContentProps {
   copy: VerifierCopy;
   locale: AppLocale;
+}
+
+function OnlineVerifier({ copy }: { copy: VerifierCopy }) {
+  const [status, setStatus] = useState<'idle' | 'loading' | 'done' | 'error'>('idle');
+  const [result, setResult] = useState<Record<string, unknown> | null>(null);
+  const [errorMsg, setErrorMsg] = useState('');
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  async function handleFile(file: File) {
+    if (!file.name.endsWith('.zip')) {
+      setStatus('error');
+      setErrorMsg(copy.online_verify_error_not_zip);
+      return;
+    }
+    if (file.size > 25 * 1024 * 1024) {
+      setStatus('error');
+      setErrorMsg(copy.online_verify_error_too_large);
+      return;
+    }
+    setStatus('loading');
+    setResult(null);
+    setErrorMsg('');
+    try {
+      const fd = new FormData();
+      fd.append('file', file);
+      const res = await fetch('/api/verify-report', { method: 'POST', body: fd });
+      const json = await res.json();
+      if (!res.ok) {
+        setStatus('error');
+        setErrorMsg(json.error ?? copy.online_verify_error_generic);
+        return;
+      }
+      setResult(json);
+      setStatus('done');
+    } catch {
+      setStatus('error');
+      setErrorMsg(copy.online_verify_error_generic);
+    }
+  }
+
+  function getResultLabel(r: Record<string, unknown>): { label: string; color: string } {
+    if (r.status === 'invalid') return { label: copy.online_verify_result_invalid, color: 'text-red-600' };
+    if (r.integrityLevel === 'legacy') return { label: copy.online_verify_result_legacy, color: 'text-yellow-600' };
+    if (r.signatureStatus === 'verified') return { label: copy.online_verify_result_valid_sealed, color: 'text-emerald-600' };
+    return { label: copy.online_verify_result_valid_unsigned, color: 'text-blue-600' };
+  }
+
+  return (
+    <div className="bg-slate-50 rounded-2xl border border-slate-200 p-8">
+      {/* Upload area */}
+      <div
+        className="border-2 border-dashed border-slate-300 rounded-xl p-10 text-center cursor-pointer hover:border-emerald-400 transition-colors"
+        onClick={() => inputRef.current?.click()}
+        onDragOver={(e) => e.preventDefault()}
+        onDrop={(e) => { e.preventDefault(); const f = e.dataTransfer.files[0]; if (f) handleFile(f); }}
+      >
+        <Upload size={36} className="mx-auto mb-3 text-slate-400" />
+        <p className="font-medium text-slate-700">{copy.online_verify_upload_label}</p>
+        <p className="text-sm text-slate-400 mt-1">{copy.online_verify_upload_hint}</p>
+        <input ref={inputRef} type="file" accept=".zip" className="hidden" onChange={(e) => { const f = e.target.files?.[0]; if (f) handleFile(f); }} />
+      </div>
+
+      {/* Privacy note */}
+      <p className="text-xs text-slate-400 text-center mt-3">{copy.online_verify_privacy_note}</p>
+
+      {/* Loading */}
+      {status === 'loading' && (
+        <div className="mt-6 text-center text-slate-600 animate-pulse">Verifica in corso…</div>
+      )}
+
+      {/* Error */}
+      {status === 'error' && (
+        <div className="mt-6 flex items-center gap-3 bg-red-50 border border-red-200 rounded-xl p-4 text-red-700">
+          <XCircle size={20} className="shrink-0" />
+          {errorMsg}
+        </div>
+      )}
+
+      {/* Result */}
+      {status === 'done' && result && (() => {
+        const { label, color } = getResultLabel(result);
+        const isValid = result.status !== 'invalid';
+        const Icon = isValid ? CheckCircle2 : XCircle;
+        return (
+          <div className={`mt-6 rounded-xl border p-6 ${isValid ? 'bg-emerald-50 border-emerald-200' : 'bg-red-50 border-red-200'}`}>
+            <div className={`flex items-center gap-3 font-bold text-lg mb-4 ${color}`}>
+              <Icon size={22} className="shrink-0" />
+              {label}
+            </div>
+            <div className="grid grid-cols-2 gap-2 text-sm text-slate-700 font-mono">
+              {!!(result.companyIdentity && (result.companyIdentity as Record<string,unknown>).companyId) && (
+                <><span className="text-slate-400">Azienda</span><span>{String((result.companyIdentity as Record<string,unknown>).companyName ?? (result.companyIdentity as Record<string,unknown>).companyId)}</span></>
+              )}
+              {!!(result.companyIdentity && (result.companyIdentity as Record<string,unknown>).reportId) && (
+                <><span className="text-slate-400">Report ID</span><span className="truncate">{String((result.companyIdentity as Record<string,unknown>).reportId)}</span></>
+              )}
+              <span className="text-slate-400">Integrità</span>
+              <span>{String(result.integrityLevel).toUpperCase()}</span>
+              <span className="text-slate-400">Firma</span>
+              <span>{String(result.signatureStatus ?? 'absent')}</span>
+            </div>
+          </div>
+        );
+      })()}
+    </div>
+  );
 }
 
 export default function VerifierContent({ copy, locale }: VerifierContentProps) {
@@ -278,6 +387,53 @@ console.log(result.integrityLevel);`}
               </pre>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ONLINE VERIFY */}
+      <section id="verify-online" className="py-24 bg-white border-t border-slate-100">
+        <div className="container mx-auto px-6 max-w-4xl">
+          <div className="text-center mb-12">
+            <span className="text-emerald-600 font-bold tracking-widest uppercase text-sm">{copy.online_verify_badge}</span>
+            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-4 mb-6">{copy.online_verify_title}</h2>
+            <p className="text-xl text-slate-600 max-w-2xl mx-auto">{copy.online_verify_desc}</p>
+          </div>
+          <OnlineVerifier copy={copy} />
+        </div>
+      </section>
+
+      {/* LOCAL VS ONLINE */}
+      <section className="py-24 bg-slate-50 border-t border-slate-100">
+        <div className="container mx-auto px-6 max-w-5xl">
+          <div className="text-center mb-12">
+            <span className="text-slate-500 font-bold tracking-widest uppercase text-sm">{copy.compare_badge}</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mt-4">{copy.compare_title}</h2>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm">
+              <h3 className="text-xl font-bold text-slate-900 mb-5">{copy.compare_local_title}</h3>
+              <ul className="space-y-3">
+                {copy.compare_local_items.map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-slate-700">
+                    <CheckCircle2 size={18} className="text-emerald-500 shrink-0 mt-0.5" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm">
+              <h3 className="text-xl font-bold text-slate-900 mb-5">{copy.compare_online_title}</h3>
+              <ul className="space-y-3">
+                {copy.compare_online_items.map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-slate-700">
+                    <CheckCircle2 size={18} className="text-blue-500 shrink-0 mt-0.5" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+          <p className="text-center text-slate-500 text-sm mt-6 font-mono">{copy.compare_same_engine_note}</p>
         </div>
       </section>
 

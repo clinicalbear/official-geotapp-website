@@ -60,4 +60,30 @@ export interface VerifierCopy {
   hero_cta_download: string;
   // final CTA download button
   cta_download: string;
+
+  // Online verification section
+  online_verify_badge: string;
+  online_verify_title: string;
+  online_verify_desc: string;
+  online_verify_upload_label: string;
+  online_verify_upload_hint: string;
+  online_verify_btn: string;
+  online_verify_privacy_note: string;
+  online_verify_size_limit: string;
+  online_verify_result_valid_sealed: string;
+  online_verify_result_valid_unsigned: string;
+  online_verify_result_legacy: string;
+  online_verify_result_invalid: string;
+  online_verify_error_too_large: string;
+  online_verify_error_not_zip: string;
+  online_verify_error_generic: string;
+
+  // Local vs Online section
+  compare_badge: string;
+  compare_title: string;
+  compare_local_title: string;
+  compare_local_items: string[];
+  compare_online_title: string;
+  compare_online_items: string[];
+  compare_same_engine_note: string;
 }
