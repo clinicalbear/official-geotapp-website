@@ -141,9 +141,15 @@ export default function RootLayout({
               ],
               publisher: {
                 '@type': 'Organization',
+                '@id': 'https://geotapp.com/#organization',
                 name: 'GeoTapp',
                 url: 'https://geotapp.com',
-                logo: 'https://geotapp.com/FaviconGeoTapp.png',
+                telephone: '+393520140978',
+                email: 'info@geotapp.com',
+                logo: {
+                  '@type': 'ImageObject',
+                  url: 'https://geotapp.com/FaviconGeoTapp.png',
+                },
               },
             }),
           }}
