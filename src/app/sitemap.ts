@@ -41,7 +41,7 @@ const ROUTES: RouteEntry[] = [
   { path: '/products/fortyx', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/products/zenith-seo', priority: 0.75, changeFrequency: 'monthly' },
 
-  // Pricing
+  // Pricing (pagine di conversione — priorità alta)
   { path: '/pricing', priority: 0.9, changeFrequency: 'weekly' },
   { path: '/pricing/bundle', priority: 0.85, changeFrequency: 'weekly' },
 
@@ -63,7 +63,21 @@ const ROUTES: RouteEntry[] = [
   // Legale (bassa priorità)
   { path: '/privacy', priority: 0.3, changeFrequency: 'yearly' },
   { path: '/terms', priority: 0.3, changeFrequency: 'yearly' },
+
+  // /success è esclusa: pagina Stripe post-pagamento, noindex, non va in sitemap
 ];
+
+// Genera alternates hreflang per una path che esiste in tutti i locale.
+// x-default punta alla root senza prefisso locale.
+function buildAlternates(path: string): MetadataRoute.Sitemap[number]['alternates'] {
+  const trailing = path === '/' ? '/' : path;
+  const languages: Record<string, string> = {};
+  for (const locale of SUPPORTED_LOCALES) {
+    languages[locale] = `${BASE_URL}/${locale}${trailing}`;
+  }
+  languages['x-default'] = `${BASE_URL}${path}`;
+  return { languages };
+}
 
 type WpPost = { slug: string; modified: string; link?: string };
 
@@ -154,6 +168,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
           lastModified: now,
           changeFrequency,
           priority: Math.round(priority * 0.85 * 100) / 100,
+          alternates: buildAlternates(path),
         }),
       ),
   );

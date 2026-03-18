@@ -9,8 +9,9 @@
     "pages:build": "npm run build:web",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "npm run build && wrangler deploy -c wrangler.jsonc",
-    "deploy:linux": "npm run build && wrangler deploy -c wrangler.jsonc"
+    "deploy": "npm run build && wrangler deploy -c wrangler.jsonc && node scripts/ping-search-engines.mjs",
+    "deploy:linux": "npm run build && wrangler deploy -c wrangler.jsonc && node scripts/ping-search-engines.mjs",
+    "ping": "node scripts/ping-search-engines.mjs"
   },
   "dependencies": {
     "@geotapp/report-verifier": "file:geotapp-report-verifier-0.2.1.tgz",
