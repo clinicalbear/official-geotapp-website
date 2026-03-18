@@ -103,6 +103,28 @@ export default function RootLayout({
 }) {
   return (
     <html lang={DEFAULT_LOCALE}>
+      <head>
+        {/* ── Critical preconnects ───────────────────────────────────────────
+            Establish TCP+TLS handshake early for domains GeoTapp fetches on
+            every page load. Saves 100-300ms per domain on first request. */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        {/* gstatic serves the actual font files — crossOrigin required */}
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* Stripe JS is loaded on pricing/checkout pages */}
+        <link rel="preconnect" href="https://js.stripe.com" />
+
+        {/* ── DNS prefetch ───────────────────────────────────────────────────
+            Resolve DNS early for domains we WILL navigate to or call,
+            without paying the TCP handshake cost upfront. */}
+        <link rel="dns-prefetch" href="https://api.stripe.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com" />
+        {/* The Flutter app — CTAs link here; prefetch DNS so click is instant */}
+        <link rel="dns-prefetch" href="https://app.geotapp.com" />
+        {/* Blog WP origin — sitemap + API calls */}
+        <link rel="dns-prefetch" href="https://blog.geotapp.com" />
+      </head>
       <body
         className={clsx(
           inter.variable,
@@ -110,6 +132,42 @@ export default function RootLayout({
           'bg-background text-text-primary font-sans antialiased selection:bg-primary selection:text-black',
         )}
       >
+        {/* ── Organization schema ───────────────────────────────────────────
+            Standalone entity for Google Knowledge Graph. @id anchors all
+            other schemas (SoftwareApplication.publisher) to this entity.
+            sameAs: aggiungere URL LinkedIn/social verificati quando disponibili. */}
+        <script
+          id="schema-organization"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Organization',
+              '@id': 'https://geotapp.com/#organization',
+              name: 'GeoTapp',
+              url: 'https://geotapp.com',
+              telephone: '+393520140978',
+              email: 'info@geotapp.com',
+              logo: {
+                '@type': 'ImageObject',
+                url: 'https://geotapp.com/FaviconGeoTapp.png',
+                width: 512,
+                height: 512,
+              },
+              sameAs: [
+                // Aggiungere URL social verificati (LinkedIn, Crunchbase, ecc.)
+                // 'https://www.linkedin.com/company/geotapp',
+              ],
+              contactPoint: {
+                '@type': 'ContactPoint',
+                telephone: '+393520140978',
+                email: 'info@geotapp.com',
+                contactType: 'customer support',
+                availableLanguage: ['Italian', 'English'],
+              },
+            }),
+          }}
+        />
         <script
           id="schema-software-application"
           type="application/ld+json"
