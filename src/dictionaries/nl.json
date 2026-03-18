@@ -20,7 +20,7 @@
   },
   "landing": {
     "hero_badge": "GeoTapp — Controle over buitendienst",
-    "hero_title": "Beheers wat er gebeurt<br />in het veld.",
+    "hero_title": "Aanwezigheid op het werk verifiëren met GPS-tijdregistratie",
     "hero_subtitle": "GeoTapp geeft bedrijven met monteurs en buitendienstmedewerkers echte controle over uitgevoerd werk: activiteit geregistreerd, operaties georganiseerd, werkbonnen verifieerbaar.",
     "hero_cta_primary": "Demo aanvragen",
     "hero_cta_secondary": "Ontdek de producten",
@@ -67,7 +67,7 @@
     },
     "core": {
       "badge": "GeoTapp Platform",
-      "title": "Gebouwd voor buitendienstwerk.",
+      "title": "Beheer van mobiele medewerkers en buitendienstrooster",
       "subtitle": "Drie geïntegreerde producten, één doel: bedrijven met buitendienstmedewerkers de zichtbaarheid en operationele documentatie geven die ze nodig hebben.",
       "features": [
         {
@@ -89,7 +89,7 @@
       ]
     },
     "footer_cta": {
-      "title": "Neem echte controle<br />over uw buitendienst.",
+      "title": "SaaS-plannen en prijzen voor beheer van mobiele medewerkers",
       "subtitle": "GeoTapp Flow, TimeTracker en Verifier werken samen om uw bedrijf echte zichtbaarheid en betrouwbare documentatie van uitgevoerd werk te geven.",
       "button": "Neem contact op"
     }
@@ -126,7 +126,7 @@
             "tagline": "Per aziende strutturate.",
             "desc": "La soluzione completa per aziende strutturate e organizzazioni complesse.",
             "features": [
-              "Squadre illimitate",
+              "Squadre illimitate (non utenti timetracker)",
               "API",
               "Supporto prioritario",
               "Automazioni",

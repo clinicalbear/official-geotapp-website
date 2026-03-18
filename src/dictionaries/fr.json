@@ -20,7 +20,7 @@
   },
   "landing": {
     "hero_badge": "GeoTapp — Contrôle des interventions terrain",
-    "hero_title": "Contrôlez ce qui se passe<br />sur le terrain.",
+    "hero_title": "Vérifiez la présence au travail avec le pointage géolocalisé",
     "hero_subtitle": "GeoTapp donne aux entreprises disposant de techniciens et d'opérateurs terrain un contrôle réel sur le travail effectué : activité enregistrée, opérations organisées, rapports vérifiables.",
     "hero_cta_primary": "Demander une démo",
     "hero_cta_secondary": "Découvrir les produits",
@@ -67,7 +67,7 @@
     },
     "core": {
       "badge": "Plateforme GeoTapp",
-      "title": "Conçu pour le travail terrain.",
+      "title": "Gestion du personnel mobile et des horaires hors site",
       "subtitle": "Trois produits intégrés, un seul objectif : donner aux entreprises avec des opérateurs terrain la visibilité et la documentation opérationnelle dont elles ont besoin.",
       "features": [
         {
@@ -89,7 +89,7 @@
       ]
     },
     "footer_cta": {
-      "title": "Prenez le contrôle réel<br />de votre terrain.",
+      "title": "Plans et tarifs SaaS pour la gestion du personnel mobile",
       "subtitle": "GeoTapp Flow, TimeTracker et Verifier fonctionnent ensemble pour donner à votre entreprise une visibilité réelle et une documentation fiable du travail effectué.",
       "button": "Contactez-nous"
     }
@@ -126,7 +126,7 @@
             "tagline": "Per aziende strutturate.",
             "desc": "La soluzione completa per aziende strutturate e organizzazioni complesse.",
             "features": [
-              "Squadre illimitate",
+              "Squadre illimitate (non utenti timetracker)",
               "API",
               "Supporto prioritario",
               "Automazioni",

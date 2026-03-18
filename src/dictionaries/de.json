@@ -20,7 +20,7 @@
   },
   "landing": {
     "hero_badge": "GeoTapp — Außendienst im Griff",
-    "hero_title": "Kontrolle über den<br />Außendienst.",
+    "hero_title": "Anwesenheit am Arbeitsplatz mit GPS-Zeiterfassung verifizieren",
     "hero_subtitle": "GeoTapp gibt Unternehmen mit Technikern und Außendienstmitarbeitern echte Kontrolle über geleistete Arbeit: Tätigkeiten erfasst, Einsätze organisiert, Berichte prüfbar.",
     "hero_cta_primary": "Demo anfragen",
     "hero_cta_secondary": "Produkte entdecken",
@@ -67,7 +67,7 @@
     },
     "core": {
       "badge": "GeoTapp Plattform",
-      "title": "Gebaut für den Außendienst.",
+      "title": "Verwaltung mobiler Mitarbeiter und Außendienstschichten",
       "subtitle": "Drei integrierte Produkte, ein Ziel: Unternehmen mit Außendienstmitarbeitern die Sichtbarkeit und betriebliche Dokumentation geben, die sie brauchen.",
       "features": [
         {
@@ -89,7 +89,7 @@
       ]
     },
     "footer_cta": {
-      "title": "Echte Kontrolle über<br />Ihren Außendienst.",
+      "title": "SaaS-Pläne und Preise für das mobile Personalmanagement",
       "subtitle": "GeoTapp Flow, TimeTracker und Verifier arbeiten zusammen, um Ihrem Unternehmen echte Sichtbarkeit und zuverlässige Dokumentation der geleisteten Arbeit zu geben.",
       "button": "Kontakt aufnehmen"
     }
@@ -126,7 +126,7 @@
             "tagline": "Per aziende strutturate.",
             "desc": "La soluzione completa per aziende strutturate e organizzazioni complesse.",
             "features": [
-              "Squadre illimitate",
+              "Squadre illimitate (non utenti timetracker)",
               "API",
               "Supporto prioritario",
               "Automazioni",

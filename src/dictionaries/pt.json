@@ -20,7 +20,7 @@
   },
   "landing": {
     "hero_badge": "GeoTapp — Controlo do trabalho de campo",
-    "hero_title": "Controle o que acontece<br />no campo.",
+    "hero_title": "Verifique a presença no trabalho com marcação de ponto geolocalizada",
     "hero_subtitle": "O GeoTapp dá às empresas com técnicos e operadores de campo um controlo real sobre o trabalho realizado: actividade registada, operações organizadas, relatórios verificáveis.",
     "hero_cta_primary": "Pedir uma demo",
     "hero_cta_secondary": "Explorar produtos",
@@ -67,7 +67,7 @@
     },
     "core": {
       "badge": "Plataforma GeoTapp",
-      "title": "Construído para o trabalho de campo.",
+      "title": "Gestão de pessoal móvel e turnos fora da sede",
       "subtitle": "Três produtos integrados, um único objectivo: dar às empresas com operadores de campo a visibilidade e a documentação operacional de que precisam.",
       "features": [
         {
@@ -89,7 +89,7 @@
       ]
     },
     "footer_cta": {
-      "title": "Tome o controlo real<br />do seu campo.",
+      "title": "Planos e preços SaaS para gestão de pessoal em mobilidade",
       "subtitle": "O GeoTapp Flow, TimeTracker e Verifier trabalham em conjunto para dar à sua empresa visibilidade real e documentação fiável do trabalho realizado.",
       "button": "Fale connosco"
     }
@@ -126,7 +126,7 @@
             "tagline": "Per aziende strutturate.",
             "desc": "La soluzione completa per aziende strutturate e organizzazioni complesse.",
             "features": [
-              "Squadre illimitate",
+              "Squadre illimitate (non utenti timetracker)",
               "API",
               "Supporto prioritario",
               "Automazioni",

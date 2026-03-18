@@ -20,7 +20,7 @@
   },
   "landing": {
     "hero_badge": "GeoTapp — Field Work Control",
-    "hero_title": "Control what happens<br />in the field.",
+    "hero_title": "Verify workforce attendance with GPS time tracking",
     "hero_subtitle": "GeoTapp gives companies with technicians and field operators real control over work performed: activity recorded, operations organised, reports verifiable.",
     "hero_cta_primary": "Request a Demo",
     "hero_cta_secondary": "Explore Products",
@@ -67,7 +67,7 @@
     },
     "core": {
       "badge": "GeoTapp Platform",
-      "title": "Built for field work.",
+      "title": "Mobile Workforce Management and Shift Scheduling for Remote Teams",
       "subtitle": "Three integrated products, one purpose: give companies with field operators the visibility and operational documentation they need.",
       "features": [
         {
@@ -89,7 +89,7 @@
       ]
     },
     "footer_cta": {
-      "title": "Take real control<br />of your field.",
+      "title": "SaaS Plans and Pricing for Mobile Workforce Management",
       "subtitle": "GeoTapp Flow, TimeTracker and Verifier work together to give your company genuine visibility and reliable documentation of work performed.",
       "button": "Talk to Us"
     }
@@ -126,7 +126,7 @@
             "tagline": "Per aziende strutturate.",
             "desc": "La soluzione completa per aziende strutturate e organizzazioni complesse.",
             "features": [
-              "Squadre illimitate",
+              "Squadre illimitate (non utenti timetracker)",
               "API",
               "Supporto prioritario",
               "Automazioni",

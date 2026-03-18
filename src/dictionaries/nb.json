@@ -20,7 +20,7 @@
   },
   "landing": {
     "hero_badge": "GeoTapp — Kontroll av feltarbeid",
-    "hero_title": "Kontroller hva som skjer<br />i felt.",
+    "hero_title": "Verifiser oppmøte på jobb med GPS-tidsregistrering",
     "hero_subtitle": "GeoTapp gir bedrifter med feltteknikere og feltoperatører reell kontroll over utført arbeid: aktivitet registrert, operasjoner organisert, arbeidsrapporter verifiserbare.",
     "hero_cta_primary": "Be om en demo",
     "hero_cta_secondary": "Utforsk produkter",
@@ -67,7 +67,7 @@
     },
     "core": {
       "badge": "GeoTapp-plattformen",
-      "title": "Bygget for feltarbeid.",
+      "title": "Administrasjon av mobilt personale og vakter utenfor kontoret",
       "subtitle": "Tre integrerte produkter, ett formål: gi bedrifter med feltoperatører den synligheten og operative dokumentasjonen de trenger.",
       "features": [
         {
@@ -89,7 +89,7 @@
       ]
     },
     "footer_cta": {
-      "title": "Ta reell kontroll<br />over feltet ditt.",
+      "title": "SaaS-planer og priser for administrasjon av mobilt personale",
       "subtitle": "GeoTapp Flow, TimeTracker og Verifier samarbeider for å gi bedriften din reell synlighet og pålitelig dokumentasjon av utført arbeid.",
       "button": "Snakk med oss"
     }
@@ -126,7 +126,7 @@
             "tagline": "Per aziende strutturate.",
             "desc": "La soluzione completa per aziende strutturate e organizzazioni complesse.",
             "features": [
-              "Squadre illimitate",
+              "Squadre illimitate (non utenti timetracker)",
               "API",
               "Supporto prioritario",
               "Automazioni",
