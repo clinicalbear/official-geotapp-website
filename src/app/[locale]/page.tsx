@@ -17,9 +17,12 @@
 
 
 import type { Metadata } from 'next';
+import { SUPPORTED_LOCALES } from '@/lib/i18n/config';
 
 export { generateLocaleStaticParams as generateStaticParams } from '@/lib/i18n/static-params';
 export { default } from '../page';
+
+const BASE_URL = 'https://geotapp.com';
 
 // Locale-specific titles and descriptions for the home page.
 // Each title expresses the "verifiable work" concept in the target language —
@@ -27,64 +30,49 @@ export { default } from '../page';
 const LOCALE_META: Record<string, { title: string; description: string }> = {
   it: {
     title: 'GeoTapp | La piattaforma che rende il lavoro verificabile',
-    description: 'Automatizza le timbrature, verifica la presenza sul posto e gestisci il personale in mobilità con GeoTapp. Prova la piattaforma SaaS sicura e integrata con Stripe.',
+    description: 'GeoTapp trasforma ogni intervento in prova verificabile: report sigillati con dati GPS reali, prove fotografiche e documentazione che chiunque può verificare. Zero contestazioni.',
   },
   en: {
     title: 'GeoTapp | The platform that makes work verifiable',
-    description: 'Automate time tracking, verify on-site attendance and manage your mobile workforce with GeoTapp. Try the secure SaaS platform integrated with Stripe.',
+    description: 'GeoTapp turns every field job into verifiable proof: tamper-proof reports with real GPS data, photo evidence and documentation anyone can verify independently. Zero disputes.',
   },
   de: {
     title: 'GeoTapp | Die Plattform, die Arbeit verifizierbar macht',
-    description: 'Automatisieren Sie die Zeiterfassung, verifizieren Sie die Anwesenheit vor Ort und verwalten Sie mobile Mitarbeiter mit GeoTapp — SaaS-Plattform mit Stripe.',
+    description: 'GeoTapp macht jeden Außendiensteinsatz zu verifizierbarem Nachweis: manipulationssichere Berichte mit echten GPS-Daten, Fotobelege und Dokumentation, die jeder prüfen kann.',
   },
   fr: {
     title: 'GeoTapp | La plateforme qui rend le travail vérifiable',
-    description: 'Automatisez le pointage, vérifiez la présence sur site et gérez votre personnel mobile avec GeoTapp. Essayez la plateforme SaaS sécurisée intégrée à Stripe.',
+    description: 'GeoTapp transforme chaque intervention en preuve vérifiable : rapports scellés avec données GPS réelles, preuves photographiques et documentation que n\'importe qui peut vérifier.',
   },
   es: {
     title: 'GeoTapp | La plataforma que hace el trabajo verificable',
-    description: 'Automatiza el fichaje, verifica la presencia en el trabajo y gestiona tu personal móvil con GeoTapp. Prueba la plataforma SaaS segura integrada con Stripe.',
+    description: 'GeoTapp convierte cada intervención en prueba verificable: informes sellados con datos GPS reales, evidencias fotográficas y documentación que cualquiera puede verificar. Cero disputas.',
   },
   pt: {
     title: 'GeoTapp | A plataforma que torna o trabalho verificável',
-    description: 'Automatize a marcação de ponto, verifique a presença no local e gira o pessoal móvel com GeoTapp. Experimente a plataforma SaaS segura integrada com Stripe.',
+    description: 'GeoTapp transforma cada intervenção em prova verificável: relatórios selados com dados GPS reais, provas fotográficas e documentação que qualquer pessoa pode verificar.',
   },
   nl: {
     title: 'GeoTapp | Het platform dat werk verifieerbaar maakt',
-    description: 'Automatiseer tijdregistratie, verifieer aanwezigheid op locatie en beheer mobiele medewerkers met GeoTapp. Veilig SaaS-platform geïntegreerd met Stripe.',
+    description: 'GeoTapp maakt elke velddienst tot verifieerbaar bewijs: verzegelde rapporten met echte GPS-gegevens, fotobewijs en documentatie die iedereen onafhankelijk kan controleren.',
   },
   ru: {
     title: 'GeoTapp | Платформа, делающая работу верифицируемой',
-    description: 'Автоматизируйте учёт рабочего времени, верифицируйте присутствие на объекте и управляйте мобильным персоналом с GeoTapp. SaaS-платформа с интеграцией Stripe.',
+    description: 'GeoTapp превращает каждый выезд в верифицируемое доказательство: запечатанные отчёты с реальными GPS-данными, фотодоказательства и документация, проверяемая кем угодно.',
   },
   da: {
     title: 'GeoTapp | Platformen der gør arbejdet verificerbart',
-    description: 'Automatiser tidsregistrering, verificér fremmøde på stedet og administrer mobilt personale med GeoTapp. Sikker SaaS-platform integreret med Stripe.',
+    description: 'GeoTapp gør hvert feltebesøg til verificerbart bevis: forseglede rapporter med echte GPS-data, fotodokumentation og dokumentation, som enhver kan verificere uafhængigt.',
   },
   sv: {
     title: 'GeoTapp | Plattformen som gör arbetet verifierbart',
-    description: 'Automatisera tidregistrering, verifiera närvaro på plats och hantera mobil personal med GeoTapp. Säker SaaS-plattform integrerad med Stripe.',
+    description: 'GeoTapp förvandlar varje fältuppdrag till verifierbart bevis: förseglade rapporter med verkliga GPS-data, fotobevis och dokumentation som vem som helst kan verifiera.',
   },
   nb: {
     title: 'GeoTapp | Plattformen som gjør arbeidet verifiserbart',
-    description: 'Automatiser tidsregistrering, verifiser oppmøte på stedet og administrer mobilt personale med GeoTapp. Sikker SaaS-plattform integrert med Stripe.',
+    description: 'GeoTapp gjør hvert feltoppdrag til verifiserbart bevis: forseglede rapporter med ekte GPS-data, fotobevis og dokumentasjon som hvem som helst kan verifisere uavhengig.',
   },
 };
-
-const HREFLANG_LANGUAGES = {
-  it: '/it',
-  en: '/en',
-  de: '/de',
-  fr: '/fr',
-  es: '/es',
-  pt: '/pt',
-  nl: '/nl',
-  ru: '/ru',
-  da: '/da',
-  sv: '/sv',
-  nb: '/nb',
-  'x-default': '/',
-} as const;
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -92,17 +80,33 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const meta = LOCALE_META[locale] ?? LOCALE_META.en;
 
+  // Build hreflang alternates dynamically from SUPPORTED_LOCALES.
+  // All locale homepages use trailing slash (trailingSlash:true in next.config.mjs).
+  // x-default → /en/ because:
+  //   - /en/ is a real page served by app/[locale]/page.tsx with locale="en"
+  //   - bare / triggers a 308 geo-redirect in middleware → invalid x-default per Google spec
+  const languages = Object.fromEntries(
+    SUPPORTED_LOCALES.map((l) => [l, `${BASE_URL}/${l}/`]),
+  ) as Record<string, string>;
+  languages['x-default'] = `${BASE_URL}/en/`;
+
   return {
-    title: meta.title,
+    // Use absolute title to bypass the root layout template ("%s | GeoTapp").
+    // Home page titles already include the brand name at the start
+    // (e.g. "GeoTapp | La piattaforma..."); without absolute the template
+    // would append "| GeoTapp" again → "GeoTapp | La piattaforma | GeoTapp".
+    title: { absolute: meta.title },
     description: meta.description,
     alternates: {
-      canonical: `/${locale}`,
-      languages: HREFLANG_LANGUAGES,
+      // Absolute canonical required here — homepage path is just "/" per locale,
+      // relative "/${locale}" without trailing slash would resolve to a redirect URL.
+      canonical: `${BASE_URL}/${locale}/`,
+      languages,
     },
     openGraph: {
       title: meta.title,
       description: meta.description,
-      url: `https://geotapp.com/${locale}`,
+      url: `${BASE_URL}/${locale}/`,
     },
     twitter: {
       title: meta.title,

@@ -19,16 +19,46 @@
     "rights": "Alle Rechte vorbehalten."
   },
   "landing": {
-    "hero_badge": "GeoTapp — Außendienst im Griff",
-    "hero_title": "Machen Sie Ihre Arbeit verifizierbar",
-    "hero_subtitle": "GeoTapp gibt Unternehmen mit Technikern und Außendienstmitarbeitern echte Kontrolle über geleistete Arbeit: Tätigkeiten erfasst, Einsätze organisiert, Berichte prüfbar.",
-    "hero_cta_primary": "Demo anfragen",
-    "hero_cta_secondary": "Produkte entdecken",
-    "features_title": "Was Sie wirklich brauchen",
-    "features_subtitle": "Drei integrierte Werkzeuge zur Kontrolle des Außendienstes vom Büro aus.",
-    "cta_title": "Bereit, den Außendienst zu kontrollieren?",
-    "cta_subtitle": "Schließen Sie sich Unternehmen an, die GeoTapp nutzen, um Einsätze zu organisieren und prüfbare Arbeitsberichte zu erstellen.",
-    "cta_button": "Demo anfragen"
+    "hero_badge": "Die Arbeit war da. Jetzt machen Sie sie beweisbar.",
+    "hero_title": "Wenn Sie es nicht beweisen können, sagt der Kunde: Es ist nie passiert.",
+    "hero_subtitle": "GeoTapp verwandelt jeden Außendiensteinsatz in objektive Beweise: versiegelte Berichte mit echten GPS-Daten, zeitgestempelte Fotonachweise und Dokumentation, die jeder unabhängig prüfen kann — ohne Vertrauen, ohne Streit.",
+    "hero_cta_primary": "30-Minuten-Demo buchen",
+    "hero_cta_secondary": "Branchen entdecken",
+    "trust_gdpr": "DSGVO-konform",
+    "trust_gdpr_desc": "Zeitstempel nur bei An- und Abmeldung",
+    "trust_gps": "GPS-Nachweis",
+    "trust_gps_desc": "Jeder Einsatz mit Standort und Zeitstempel zertifiziert",
+    "trust_offline": "Offline-fähig",
+    "trust_offline_desc": "Automatische Synchronisation bei Verbindung",
+    "features_title": "Vom Einsatz zum verifizierbaren Nachweis",
+    "features_subtitle": "Drei integrierte Werkzeuge: Das Feld erfasst, das Büro kontrolliert, der Kunde verifiziert.",
+    "cta_title": "Die Arbeit war da. Jetzt beweisen Sie es.",
+    "cta_subtitle": "Unternehmen, die GeoTapp nutzen, verlieren keine undokumentierten Einsätze mehr. Jede Stunde ist verifizierbar. Jeder Bericht ist verteidigbar.",
+    "cta_button": "30-Minuten-Demo buchen",
+    "problem_title": "Das Problem, das du schon kennst",
+    "problem_subtitle": "Es ist kein Organisationsproblem. Es ist ein Beweisproblem.",
+    "problem_items": [
+      {
+        "title": "Der Kunde bestreitet es. Du hast keine Beweise.",
+        "desc": "Die Arbeit hat stattgefunden. Ohne verifizierbaren Nachweis steht dein Wort gegen seines. Und meistens gewinnt er."
+      },
+      {
+        "title": "Der Bericht kommt unvollständig, zu spät oder gar nicht.",
+        "desc": "Papierformulare, WhatsApp, E-Mails. Daten gehen verloren, werden verändert, vergessen. Die nachträgliche Rekonstruktion ist teuer und unzuverlässig."
+      },
+      {
+        "title": "Nicht dokumentierte Arbeit existiert nicht.",
+        "desc": "Jede nicht erfasste Stunde ist eine unbezahlte Stunde. Jeder Einsatz ohne Nachweis ist ein Einsatz, den der Kunde anfechten kann."
+      }
+    ],
+    "report_section_title": "Der Bericht. Nicht eine Zusammenfassung. Ein Beweis.",
+    "report_section_subtitle": "Jeder GeoTapp-Bericht wird automatisch aus echten Felddaten generiert.",
+    "report_section_body": "GPS-Zeitstempel, Fotos mit Zeitstempel, Betriebsnotizen. Das System versiegelt jeden Bericht kryptografisch, sodass jede Änderung erkennbar ist. Das Ergebnis ist kein Dokument zum Weiterleiten — es ist ein Nachweis, den der Kunde selbst prüfen kann.",
+    "report_feature_1": "ECDSA-Siegel — jede Änderung macht das Dokument ungültig",
+    "report_feature_2": "Prüfbar ohne Konto — von jedem, unabhängig",
+    "report_feature_3": "GPS- und Fotodaten integriert und nicht trennbar",
+    "report_feature_4": "Automatisch generiert — keine manuelle Erfassung",
+    "report_cta": "Verifier in Aktion sehen"
   },
   "home_sections": {
     "flow": {
@@ -57,18 +87,18 @@
     },
     "verifier": {
       "badge": "GeoTapp Verifier",
-      "title": "Arbeitsberichte, die jeder prüfen kann.",
-      "subtitle": "Verifier prüft, ob ein Arbeitsbericht mit den erfassten Betriebsdaten übereinstimmt und nicht verändert wurde. Mehr Transparenz für den Kunden, weniger Streitigkeiten.",
+      "title": "Sie brauchen kein Vertrauen.",
+      "subtitle": "Der Kunde hat den Bericht. Er prüft ihn selbst, ohne GeoTapp zu öffnen. Wenn die Daten der realen Arbeit entsprechen, hält das Siegel. Wenn jemand das Dokument geändert hat, bricht das Siegel. Kein Einspruch.",
       "features": {
-        "integrity": "<strong>Geprüfte Integrität:</strong> Das System gleicht den Bericht mit den tatsächlichen Sitzungsdaten aus dem Außendienst ab.",
-        "independent": "<strong>Unabhängige Prüfung:</strong> Jeder kann einen Bericht prüfen, ohne Zugang zur Plattform zu haben."
+        "integrity": "<strong>ECDSA-Siegel:</strong> Der Bericht ist digital mit echten Felddaten signiert. Jede Änderung macht das Siegel ungültig.",
+        "independent": "<strong>Autonome Prüfung:</strong> Jeder mit dem Bericht kann die Echtheit überprüfen — kein Konto, kein Plattformzugang."
       },
       "link": "GeoTapp Verifier entdecken"
     },
     "core": {
       "badge": "GeoTapp Plattform",
-      "title": "Verwaltung mobiler Mitarbeiter und Außendienstschichten",
-      "subtitle": "Drei integrierte Produkte, ein Ziel: Unternehmen mit Außendienstmitarbeitern die Sichtbarkeit und betriebliche Dokumentation geben, die sie brauchen.",
+      "title": "Ein System, drei Sicherheitsstufen",
+      "subtitle": "TimeTracker erfasst im Außendienst. Flow organisiert im Büro. Verifier bestätigt, dass alles übereinstimmt.",
       "features": [
         {
           "title": "Echte mobile Einsatzfähigkeit",
@@ -79,18 +109,18 @@
           "desc": "Der Standort wird <strong>nur</strong> beim Ein- und Ausstempeln erfasst. Kein kontinuierliches Tracking. Vollständig DSGVO-konform."
         },
         {
-          "title": "Echtzeitsynchronisation",
-          "desc": "Im Außendienst erfasste Tätigkeiten gelangen sofort in Flow, damit das Büro immer ein aktuelles Bild hat."
+          "title": "Echtzeit-Betriebskontrolle",
+          "desc": "Felddaten kommen sofort in Flow an. Das Büro hat Live-Transparenz ohne jemanden anzurufen."
         },
         {
-          "title": "Langfristig prüfbare Berichte",
-          "desc": "Mit GeoTapp Verifier kann jeder Bericht unabhängig validiert werden. Erfasste Daten bleiben zuverlässig und verteidigbar."
+          "title": "Verteidigbarer Nachweis über Zeit",
+          "desc": "Jeder Bericht trägt ein ECDSA-Siegel auf echten Felddaten. Streit? Die Daten sind da. Verifizierbar. Immer."
         }
       ]
     },
     "footer_cta": {
-      "title": "SaaS-Pläne und Preise für das mobile Personalmanagement",
-      "subtitle": "GeoTapp Flow, TimeTracker und Verifier arbeiten zusammen, um Ihrem Unternehmen echte Sichtbarkeit und zuverlässige Dokumentation der geleisteten Arbeit zu geben.",
+      "title": "Hören Sie auf, undokumentierte Arbeit zu verlieren.",
+      "subtitle": "Jeder Einsatz ohne verifizierbaren Nachweis ist ein angreifbarer Einsatz. GeoTapp schließt diese Lücke.",
       "button": "Kontakt aufnehmen"
     }
   },
@@ -171,8 +201,27 @@
       "email": "Geschäftliche E-Mail",
       "reason": "Anfragegrund",
       "message": "Nachricht",
-      "send": "Senden"
-    }
+      "send": "Senden",
+      "reason_options": [
+        "Ich möchte eine GeoTapp Demo",
+        "Allgemeine Informationsanfrage",
+        "Partnerschaft",
+        "Sonstiges"
+      ]
+    },
+    "hours": "Mo-Fr 9:00 - 18:00",
+    "location_city": "Brescia, IT",
+    "channels_title": "Direkte Kontaktwege",
+    "email_label": "Allgemeine E-Mail",
+    "email_desc": "Für Informationen, Angebote und Support.",
+    "hq_label": "Hauptsitz",
+    "hq_city": "Brescia, Italien",
+    "hq_note": "Besuche nach Vereinbarung.",
+    "privacy_note": "Mit dem Absenden dieses Formulars stimmen Sie unserer Datenschutzerklärung zu.",
+    "map_title": "Wo wir sind — Trenzano (BS), Italien",
+    "success": "Nachricht erfolgreich gesendet. Wir melden uns so schnell wie möglich.",
+    "error": "Fehler beim Senden. Bitte versuchen Sie es später erneut.",
+    "sending": "Wird gesendet..."
   },
   "login_hub": {
     "title": "Zugang zu Ihrem <span class=\"text-primary\">Konto</span>.",

@@ -19,16 +19,46 @@
     "rights": "Alle rechten voorbehouden."
   },
   "landing": {
-    "hero_badge": "GeoTapp — Controle over buitendienst",
-    "hero_title": "Maak werk verifieerbaar",
-    "hero_subtitle": "GeoTapp geeft bedrijven met monteurs en buitendienstmedewerkers echte controle over uitgevoerd werk: activiteit geregistreerd, operaties georganiseerd, werkbonnen verifieerbaar.",
-    "hero_cta_primary": "Demo aanvragen",
-    "hero_cta_secondary": "Ontdek de producten",
-    "features_title": "Wat u echt nodig heeft",
-    "features_subtitle": "Drie geïntegreerde tools om buitendienstwerk vanuit kantoor te beheren.",
-    "cta_title": "Klaar om uw buitendienst te beheersen?",
-    "cta_subtitle": "Sluit u aan bij bedrijven die GeoTapp gebruiken om interventies te organiseren en verifieerbare werkbonnen te produceren.",
-    "cta_button": "Demo aanvragen"
+    "hero_badge": "Het werk is gedaan. Maak het nu bewijsbaar.",
+    "hero_title": "Als u het niet kunt bewijzen, zegt de klant dat het nooit is gebeurd.",
+    "hero_subtitle": "GeoTapp verandert elke velddienst in objectief bewijs: verzegelde rapporten met echte GPS-gegevens, tijdgestempeld fotobewijs en documentatie die iedereen onafhankelijk kan verifiëren — zonder vertrouwen, zonder geschillen.",
+    "hero_cta_primary": "30-minuten demo boeken",
+    "hero_cta_secondary": "Sectoren ontdekken",
+    "trust_gdpr": "AVG-conform",
+    "trust_gdpr_desc": "Alleen tijdstempel bij in- en uitklokken",
+    "trust_gps": "GPS-bewijs",
+    "trust_gps_desc": "Elke interventie gecertificeerd met locatie en tijdstempel",
+    "trust_offline": "Werkt offline",
+    "trust_offline_desc": "Automatisch synchroniseren bij verbinding",
+    "features_title": "Van interventie naar verifieerbaar bewijs",
+    "features_subtitle": "Drie geïntegreerde tools: het veld registreert, het kantoor controleert, de klant verifieert.",
+    "cta_title": "Het werk is gedaan. Bewijs het nu.",
+    "cta_subtitle": "Bedrijven die GeoTapp gebruiken verliezen geen ongedocumenteerde opdrachten meer. Elk uur is verifieerbaar. Elk rapport is verdedigbaar.",
+    "cta_button": "30-minuten demo boeken",
+    "problem_title": "Het probleem dat je al kent",
+    "problem_subtitle": "Het is geen organisatieprobleem. Het is een bewijsprobleem.",
+    "problem_items": [
+      {
+        "title": "De klant ontkent het. Jij hebt geen bewijs.",
+        "desc": "De werkzaamheid heeft plaatsgevonden. Maar zonder verifieerbare documentatie staat jouw woord tegen het zijne. En vaak wint hij."
+      },
+      {
+        "title": "Het rapport komt onvolledig, te laat of helemaal niet.",
+        "desc": "Papieren formulieren, WhatsApp, e-mails. Gegevens gaan verloren, worden aangepast, vergeten. Reconstructie achteraf is duur en onbetrouwbaar."
+      },
+      {
+        "title": "Niet-gedocumenteerd werk bestaat niet.",
+        "desc": "Elk niet-geregistreerd uur is een onbetaald uur. Elke werkzaamheid zonder bewijs is een werkzaamheid die de klant kan betwisten."
+      }
+    ],
+    "report_section_title": "Het rapport. Geen samenvatting. Een bewijs.",
+    "report_section_subtitle": "Elk GeoTapp-rapport wordt automatisch gegenereerd uit echte veldgegevens.",
+    "report_section_body": "GPS-tijdregistraties, foto's met tijdstempel, operationele notities. Het systeem brengt een cryptografisch zegel aan waardoor elke wijziging detecteerbaar is. Het resultaat is geen document om naar de klant te sturen — het is een bewijs dat de klant zelf kan verifiëren.",
+    "report_feature_1": "ECDSA-zegel — elke wijziging maakt het document ongeldig",
+    "report_feature_2": "Verifieerbaar zonder account — door iedereen, zelfstandig",
+    "report_feature_3": "GPS- en fotogegevens geïntegreerd en onscheidbaar",
+    "report_feature_4": "Automatisch gegenereerd — geen handmatige invulling",
+    "report_cta": "Zie hoe Verifier werkt"
   },
   "home_sections": {
     "flow": {
@@ -57,18 +87,18 @@
     },
     "verifier": {
       "badge": "GeoTapp Verifier",
-      "title": "Werkbonnen die iedereen kan verifiëren.",
-      "subtitle": "Met Verifier controleert u of een werkbon overeenkomt met de geregistreerde operationele gegevens en niet is gewijzigd. Meer transparantie voor de klant, minder geschillen.",
+      "title": "U hoeft niet dat ze u vertrouwen.",
+      "subtitle": "De klant heeft het rapport. Hij verifieert het zelf, zonder GeoTapp te openen. Als de gegevens overeenkomen met het echte werk, houdt het zegel stand. Als iemand het document heeft gewijzigd, breekt het zegel. Geen beroep.",
       "features": {
-        "integrity": "<strong>Geverifieerde integriteit:</strong> Het systeem vergelijkt de werkbon met de werkelijke sessiegegevens geregistreerd in het veld.",
-        "independent": "<strong>Onafhankelijke verificatie:</strong> Iedereen kan een werkbon verifiëren zonder toegang tot het platform."
+        "integrity": "<strong>ECDSA-zegel:</strong> Het rapport is digitaal ondertekend met echte veldgegevens. Elke wijziging maakt het zegel ongeldig.",
+        "independent": "<strong>Autonome verificatie:</strong> Iedereen met het rapport kan de authenticiteit controleren — geen account, geen platformtoegang."
       },
       "link": "Ontdek GeoTapp Verifier"
     },
     "core": {
       "badge": "GeoTapp Platform",
-      "title": "Beheer van mobiele medewerkers en buitendienstrooster",
-      "subtitle": "Drie geïntegreerde producten, één doel: bedrijven met buitendienstmedewerkers de zichtbaarheid en operationele documentatie geven die ze nodig hebben.",
+      "title": "Eén systeem, drie niveaus van zekerheid",
+      "subtitle": "TimeTracker registreert in het veld. Flow organiseert op kantoor. Verifier bevestigt dat alles overeenkomt.",
       "features": [
         {
           "title": "Echte mobiele operabiliteit",
@@ -79,18 +109,18 @@
           "desc": "Locatie wordt <strong>uitsluitend</strong> geregistreerd bij in- en uitklokken. Geen continue tracking. Volledig AVG-conform."
         },
         {
-          "title": "Realtime synchronisatie",
-          "desc": "Activiteit geregistreerd in het veld komt direct in Flow aan, zodat het kantoor altijd een actueel operationeel beeld heeft."
+          "title": "Realtime operationele controle",
+          "desc": "Veldgegevens komen direct in Flow aan. Het kantoor heeft live zichtbaarheid zonder iemand te bellen."
         },
         {
-          "title": "Werkbonnen in de loop van de tijd verifieerbaar",
-          "desc": "Met GeoTapp Verifier kan elk rapport onafhankelijk worden gevalideerd. Verzamelde gegevens blijven betrouwbaar en verdedigbaar."
+          "title": "Verdedigbaar bewijs over tijd",
+          "desc": "Elk rapport draagt een ECDSA-zegel op echte veldgegevens. Geschil? De data zijn er. Verifieerbaar. Altijd."
         }
       ]
     },
     "footer_cta": {
-      "title": "SaaS-plannen en prijzen voor beheer van mobiele medewerkers",
-      "subtitle": "GeoTapp Flow, TimeTracker en Verifier werken samen om uw bedrijf echte zichtbaarheid en betrouwbare documentatie van uitgevoerd werk te geven.",
+      "title": "Stop met het verliezen van ongedocumenteerd werk.",
+      "subtitle": "Elke opdracht zonder verifieerbaar bewijs is een aanvechtbare opdracht. GeoTapp sluit deze kloof.",
       "button": "Neem contact op"
     }
   },
@@ -171,8 +201,27 @@
       "email": "Zakelijk e-mailadres",
       "reason": "Reden van contact",
       "message": "Bericht",
-      "send": "Versturen"
-    }
+      "send": "Versturen",
+      "reason_options": [
+        "Ik wil een GeoTapp Demo",
+        "Algemene informatie aanvragen",
+        "Samenwerking",
+        "Overig"
+      ]
+    },
+    "hours": "Ma-Vr 9:00 - 18:00",
+    "location_city": "Brescia, IT",
+    "channels_title": "Directe Kanalen",
+    "email_label": "Algemeen E-mailadres",
+    "email_desc": "Voor informatie, offertes en ondersteuning.",
+    "hq_label": "Hoofdkantoor",
+    "hq_city": "Brescia, Italië",
+    "hq_note": "Bezoek op afspraak.",
+    "privacy_note": "Door dit formulier te verzenden gaat u akkoord met ons Privacybeleid.",
+    "map_title": "Onze locatie — Trenzano (BS), Italië",
+    "success": "Bericht succesvol verzonden. We nemen zo snel mogelijk contact met u op.",
+    "error": "Fout bij verzenden. Probeer het later opnieuw.",
+    "sending": "Verzenden..."
   },
   "login_hub": {
     "title": "Toegang tot uw <span class=\"text-primary\">account</span>.",

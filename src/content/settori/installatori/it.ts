@@ -2,8 +2,8 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'Software per Installatori e Manutentori | Gestione Interventi e Rapportini | GeoTapp',
-    description: 'Software per installatori, elettricisti, idraulici e manutentori: gestione interventi, rapportini, timbrature verificabili e prove fotografiche.',
+    title: 'Prova Verificabile degli Interventi per Installatori e Manutentori | GeoTapp',
+    description: 'GeoTapp trasforma ogni intervento in prova verificabile per installatori, elettricisti e manutentori. Report sigillati con GPS, foto e sigillo ECDSA — zero contestazioni su ore e lavori svolti.',
   },
   hero: {
     badge: 'Software per Installatori, Elettricisti, Idraulici e Manutentori',
@@ -43,8 +43,8 @@ const content: SettoreContent = {
         desc: 'Flow riceve i dati istantaneamente. Il responsabile vede commessa, avanzamento, tecnico assegnato e prove fotografiche senza chiamare.',
       },
       {
-        title: 'Il report è già pronto',
-        desc: 'A fine intervento il rapportino è già strutturato con dati reali. Nessuna ricostruzione manuale. Nessuna contestazione senza risposta.',
+        title: 'Il report è una prova verificabile',
+        desc: 'A fine intervento il report è sigillato con dati GPS reali e prove fotografiche. Il sigillo ECDSA rende qualsiasi modifica rilevabile. Il cliente può verificare l\'autenticità da solo — nessuna contestazione possibile.',
       },
     ],
   },
@@ -56,8 +56,8 @@ const content: SettoreContent = {
         desc: 'Ogni ingresso e uscita è collegato a posizione, timestamp e commessa. Difendibile davanti al cliente e all\'ispettorato.',
       },
       {
-        title: 'Prove fotografiche sul campo',
-        desc: 'Il tecnico scatta foto direttamente dall\'app. Immagini collegate all\'intervento, con data e ora. Zero possibilità di contestazione.',
+        title: 'Prove fotografiche sigillate',
+        desc: 'Il tecnico scatta foto dall\'app. Ogni immagine è collegata all\'intervento con GPS e timestamp, poi inclusa nel sigillo crittografico del report. Nessuno può alterarle senza che il sistema lo rilevi.',
       },
       {
         title: 'Export per la paga',
@@ -89,8 +89,8 @@ const content: SettoreContent = {
     ],
   },
   cta: {
-    title: 'Smetti di rincorrere il campo.',
-    subtitle: 'GeoTapp Flow e TimeTracker danno alla tua azienda il controllo operativo che ti serve davvero.',
+    title: 'Il lavoro c\'è stato. Ora dimostralo.',
+    subtitle: 'GeoTapp genera prove verificabili di ogni intervento — report sigillati che il cliente può controllare da solo.',
     primary: 'Richiedi una Demo',
     secondary: 'Vedi i Prezzi',
   },

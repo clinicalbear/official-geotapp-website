@@ -32,6 +32,8 @@ import {
   Hammer,
   Sparkles,
   FileCheck2,
+  MapPin,
+  WifiOff,
 } from 'lucide-react';
 
 // UI MOCKUP COMPONENTS (Built with Tailwind for "Real Example" feel)
@@ -103,25 +105,42 @@ export default function Home() {
               {dict.landing.hero_badge}
             </span>
             <h1
-              className="text-6xl md:text-8xl font-display font-bold text-slate-900 leading-[1.05] tracking-tight mb-8"
+              className="text-4xl md:text-6xl font-display font-bold text-slate-900 leading-[1.1] tracking-tight mb-8"
               dangerouslySetInnerHTML={{ __html: dict.landing.hero_title }}
             ></h1>
-            <p className="text-2xl text-text-secondary leading-relaxed max-w-2xl mx-auto mb-12 font-light">
+            <p className="text-xl text-text-secondary leading-relaxed max-w-2xl mx-auto mb-10 font-light">
               {dict.landing.hero_subtitle}
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
               <Link
-                href={getLink('/pricing')}
+                href={getLink('/demo')}
                 className="px-8 py-4 bg-primary text-white font-bold rounded-xl text-lg hover:bg-primary/90 transition-all shadow-lg hover:shadow-primary/30 transform hover:-translate-y-1"
               >
                 {dict.landing.hero_cta_primary}
               </Link>
               <Link
-                href="#core"
-                className="px-8 py-4 bg-white text-slate-900 border border-slate-200 font-bold rounded-xl text-lg hover:border-slate-400 transition-all scroll-smooth"
+                href={getLink('/settori')}
+                className="px-8 py-4 bg-white text-slate-900 border border-slate-200 font-bold rounded-xl text-lg hover:border-slate-400 transition-all"
               >
                 {dict.landing.hero_cta_secondary}
               </Link>
+            </div>
+            {/* TrustBlock: 3 micro-signals below CTAs */}
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center text-sm text-slate-500">
+              <div className="flex items-center gap-2">
+                <ShieldCheck size={16} className="text-emerald-500 shrink-0" />
+                <span><strong className="text-slate-700">{dict.landing.trust_gdpr}</strong> — {dict.landing.trust_gdpr_desc}</span>
+              </div>
+              <div className="hidden sm:block w-1 h-1 rounded-full bg-slate-300" />
+              <div className="flex items-center gap-2">
+                <MapPin size={16} className="text-blue-500 shrink-0" />
+                <span><strong className="text-slate-700">{dict.landing.trust_gps}</strong> — {dict.landing.trust_gps_desc}</span>
+              </div>
+              <div className="hidden sm:block w-1 h-1 rounded-full bg-slate-300" />
+              <div className="flex items-center gap-2">
+                <WifiOff size={16} className="text-amber-500 shrink-0" />
+                <span><strong className="text-slate-700">{dict.landing.trust_offline}</strong> — {dict.landing.trust_offline_desc}</span>
+              </div>
             </div>
           </motion.div>
         </div>
@@ -130,16 +149,41 @@ export default function Home() {
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[1000px] bg-gradient-to-b from-slate-100/50 to-transparent rounded-full blur-3xl -z-0 pointer-events-none" />
       </section>
 
+      {/* PROBLEM SECTION */}
+      <section className="py-20 bg-slate-50 border-b border-slate-100">
+        <div className="container mx-auto px-6 max-w-5xl">
+          <div className="text-center max-w-3xl mx-auto mb-14">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              {dict.landing.problem_title}
+            </h2>
+            <p className="text-xl text-text-secondary font-light">
+              {dict.landing.problem_subtitle}
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {(dict.landing.problem_items as { title: string; desc: string }[]).map((item, i) => (
+              <div key={i} className="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm">
+                <div className="w-8 h-8 rounded-full bg-red-100 text-red-500 flex items-center justify-center font-bold text-sm mb-4">
+                  {i + 1}
+                </div>
+                <h3 className="font-bold text-slate-900 text-lg mb-2">{item.title}</h3>
+                <p className="text-slate-600 leading-relaxed text-sm">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Segment switch drives the verticalized entry pages. */}
-      {/* SEGMENTATOR SECTION (NEW) */}
+      {/* SETTORI SECTION */}
       <section className="py-12 bg-white border-b border-slate-100">
         <div className="container mx-auto px-6 max-w-6xl">
           <div className="text-center mb-10">
             <h2 className="text-2xl font-bold text-slate-800">
-              Gestione Turni per Dipendenti Fuori Sede — Soluzioni per Settore
+              Documentazione verificabile per ogni settore — Soluzioni GeoTapp
             </h2>
             <p className="text-slate-500">
-              Seleziona il tuo settore per scoprire come GeoTapp automatizza la timbratura e la gestione operativa.
+              Scegli il tuo settore per vedere come GeoTapp trasforma ogni intervento in prova verificabile.
             </p>
           </div>
 
@@ -158,8 +202,7 @@ export default function Home() {
                 </h3>
               </div>
               <p className="text-sm text-slate-600 mb-4">
-                Elettricisti, Idraulici, Termoidraulici. Gestione cantiere e
-                rapportini.
+                Elettricisti, Idraulici, Impiantisti. Ogni intervento documentato con GPS, foto e sigillo crittografico.
               </p>
               <div className="text-amber-600 font-bold text-sm flex items-center gap-1 group-hover:translate-x-1 transition-transform">
                 Scopri di più <ArrowRight size={16} />
@@ -178,8 +221,7 @@ export default function Home() {
                 <h3 className="font-bold text-lg text-slate-900">Sicurezza</h3>
               </div>
               <p className="text-sm text-slate-600 mb-4">
-                Vigilanza, Steward, Servizi Fiduciari. Tracciamento ore
-                semplice.
+                Vigilanza, Steward, Servizi Fiduciari. Presenze verificabili, turni documentati con prova oggettiva.
               </p>
               <div className="text-indigo-600 font-bold text-sm flex items-center gap-1 group-hover:translate-x-1 transition-transform">
                 Scopri di più <ArrowRight size={16} />
@@ -198,8 +240,7 @@ export default function Home() {
                 <h3 className="font-bold text-lg text-slate-900">Pulizie</h3>
               </div>
               <p className="text-sm text-slate-600 mb-4">
-                Imprese di pulizia, Facility, Multiservizi. Prova interventi
-                certa.
+                Imprese di pulizia, Facility, Multiservizi. Ogni pulizia con prova verificabile e sigillata.
               </p>
               <div className="text-cyan-600 font-bold text-sm flex items-center gap-1 group-hover:translate-x-1 transition-transform">
                 Scopri di più <ArrowRight size={16} />
@@ -209,7 +250,130 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Product blocks split office and field narratives with dedicated CTAs. */}
+      {/* Product blocks: Verifier leads as the unique trust mechanism, then office (Flow), then field (App). */}
+      {/* PRODUCT SECTION: VERIFIER */}
+      <section className="py-24 border-t border-slate-100 bg-white">
+        <div className="container mx-auto px-6 max-w-6xl">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            <div className="order-2 md:order-1">
+              {/* Verifier visual mockup */}
+              <div className="bg-slate-900 rounded-2xl p-6 shadow-2xl font-mono text-sm">
+                <div className="flex items-center gap-2 mb-4 pb-4 border-b border-slate-700">
+                  <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                  <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                  <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                  <span className="ml-2 text-slate-400 text-xs tracking-wider">geotapp-verifier</span>
+                </div>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <CheckCircle2 size={16} className="text-green-400 shrink-0" />
+                    <span className="text-green-400">Report integrity: VERIFIED</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <CheckCircle2 size={16} className="text-green-400 shrink-0" />
+                    <span className="text-green-400">Timestamp match: OK</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <CheckCircle2 size={16} className="text-green-400 shrink-0" />
+                    <span className="text-green-400">GPS data: CONSISTENT</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <CheckCircle2 size={16} className="text-green-400 shrink-0" />
+                    <span className="text-green-400">Document not modified: CONFIRMED</span>
+                  </div>
+                  <div className="mt-4 pt-4 border-t border-slate-700 text-slate-400 text-xs">
+                    Verified by GeoTapp Verifier — {new Date().toLocaleDateString('it-IT')}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="order-1 md:order-2">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-2 bg-emerald-50 rounded-lg text-emerald-600">
+                  <FileCheck2 size={24} />
+                </div>
+                <h2 className="text-emerald-600 font-bold uppercase tracking-widest text-sm">
+                  {dict.home_sections.verifier.badge}
+                </h2>
+              </div>
+              <h3 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
+                {dict.home_sections.verifier.title}
+              </h3>
+              <p
+                className="text-lg text-text-secondary leading-relaxed mb-8"
+                dangerouslySetInnerHTML={{
+                  __html: dict.home_sections.verifier.subtitle,
+                }}
+              ></p>
+              <ul className="space-y-4 mb-8">
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="text-emerald-600 shrink-0 mt-1" size={20} />
+                  <span
+                    className="text-slate-700"
+                    dangerouslySetInnerHTML={{
+                      __html: dict.home_sections.verifier.features.integrity,
+                    }}
+                  ></span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="text-emerald-600 shrink-0 mt-1" size={20} />
+                  <span
+                    className="text-slate-700"
+                    dangerouslySetInnerHTML={{
+                      __html: dict.home_sections.verifier.features.independent,
+                    }}
+                  ></span>
+                </li>
+              </ul>
+              <Link
+                href={getLink('/products/geotapp-verifier')}
+                className="text-emerald-600 font-bold hover:underline flex items-center gap-2"
+              >
+                {dict.home_sections.verifier.link} <ArrowRight size={18} />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* REPORT SECTION */}
+      <section className="py-24 border-t border-slate-100 bg-slate-50">
+        <div className="container mx-auto px-6 max-w-5xl">
+          <div className="text-center max-w-3xl mx-auto mb-14">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              {dict.landing.report_section_title}
+            </h2>
+            <p className="text-xl text-text-secondary font-light mb-4">
+              {dict.landing.report_section_subtitle}
+            </p>
+            <p className="text-slate-600 leading-relaxed">
+              {dict.landing.report_section_body}
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-5 mb-12 max-w-2xl mx-auto">
+            {[
+              dict.landing.report_feature_1,
+              dict.landing.report_feature_2,
+              dict.landing.report_feature_3,
+              dict.landing.report_feature_4,
+            ].map((feat, i) => (
+              <div key={i} className="flex items-start gap-3 bg-white rounded-xl p-5 border border-slate-200 shadow-sm">
+                <CheckCircle2 className="text-emerald-500 shrink-0 mt-0.5" size={18} />
+                <span className="text-slate-700 text-sm">{feat}</span>
+              </div>
+            ))}
+          </div>
+          <div className="text-center">
+            <Link
+              href={getLink('/products/geotapp-verifier')}
+              className="inline-flex items-center gap-2 px-8 py-4 bg-emerald-600 text-white font-bold rounded-xl text-lg hover:bg-emerald-700 transition-all shadow-lg"
+            >
+              {dict.landing.report_cta} <ArrowRight size={18} />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* PRODUCT SECTION: FLOW */}
       <section className="py-24 border-t border-slate-100 bg-white">
         <div className="container mx-auto px-6 max-w-6xl">
@@ -349,91 +513,6 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* PRODUCT SECTION: VERIFIER */}
-      <section className="py-24 border-t border-slate-100 bg-white">
-        <div className="container mx-auto px-6 max-w-6xl">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div className="order-2 md:order-1">
-              {/* Verifier visual mockup */}
-              <div className="bg-slate-900 rounded-2xl p-6 shadow-2xl font-mono text-sm">
-                <div className="flex items-center gap-2 mb-4 pb-4 border-b border-slate-700">
-                  <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                  <span className="ml-2 text-slate-400 text-xs tracking-wider">geotapp-verifier</span>
-                </div>
-                <div className="space-y-3">
-                  <div className="flex items-center gap-3">
-                    <CheckCircle2 size={16} className="text-green-400 shrink-0" />
-                    <span className="text-green-400">Report integrity: VERIFIED</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <CheckCircle2 size={16} className="text-green-400 shrink-0" />
-                    <span className="text-green-400">Timestamp match: OK</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <CheckCircle2 size={16} className="text-green-400 shrink-0" />
-                    <span className="text-green-400">GPS data: CONSISTENT</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <CheckCircle2 size={16} className="text-green-400 shrink-0" />
-                    <span className="text-green-400">Document not modified: CONFIRMED</span>
-                  </div>
-                  <div className="mt-4 pt-4 border-t border-slate-700 text-slate-400 text-xs">
-                    Verified by GeoTapp Verifier — {new Date().toLocaleDateString('it-IT')}
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="order-1 md:order-2">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="p-2 bg-emerald-50 rounded-lg text-emerald-600">
-                  <FileCheck2 size={24} />
-                </div>
-                <h2 className="text-emerald-600 font-bold uppercase tracking-widest text-sm">
-                  {dict.home_sections.verifier.badge}
-                </h2>
-              </div>
-              <h3 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-                {dict.home_sections.verifier.title}
-              </h3>
-              <p
-                className="text-lg text-text-secondary leading-relaxed mb-8"
-                dangerouslySetInnerHTML={{
-                  __html: dict.home_sections.verifier.subtitle,
-                }}
-              ></p>
-              <ul className="space-y-4 mb-8">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="text-emerald-600 shrink-0 mt-1" size={20} />
-                  <span
-                    className="text-slate-700"
-                    dangerouslySetInnerHTML={{
-                      __html: dict.home_sections.verifier.features.integrity,
-                    }}
-                  ></span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="text-emerald-600 shrink-0 mt-1" size={20} />
-                  <span
-                    className="text-slate-700"
-                    dangerouslySetInnerHTML={{
-                      __html: dict.home_sections.verifier.features.independent,
-                    }}
-                  ></span>
-                </li>
-              </ul>
-              <Link
-                href={getLink('/products/geotapp-verifier')}
-                className="text-emerald-600 font-bold hover:underline flex items-center gap-2"
-              >
-                {dict.home_sections.verifier.link} <ArrowRight size={18} />
-              </Link>
             </div>
           </div>
         </div>

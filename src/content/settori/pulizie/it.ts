@@ -2,8 +2,8 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'Software per Imprese di Pulizie e Facility Management | Gestione Turni e Prove | GeoTapp',
-    description: 'GeoTapp per imprese di pulizie e facility management: timbrature GPS verificabili, prove fotografiche degli ambienti, gestione turni distribuiti su più edifici e conformità CCNL Multiservizi.',
+    title: 'Prova Verificabile degli Interventi per Imprese di Pulizie e Facility | GeoTapp',
+    description: 'GeoTapp trasforma ogni pulizia in prova verificabile per imprese di pulizie e facility management. Report sigillati con GPS, foto e sigillo ECDSA — il committente verifica da solo, zero contestazioni.',
   },
   hero: {
     badge: 'Software per Imprese di Pulizie, Facility Management e Multiservizi',
@@ -43,8 +43,8 @@ const content: SettoreContent = {
         desc: 'Flow riceve i dati istantaneamente. Il responsabile vede quale edificio è stato servito, da chi, a che ora e con quali prove fotografiche — senza chiamare nessuno.',
       },
       {
-        title: 'Il report è già pronto',
-        desc: 'A fine turno il verbale di consegna è già strutturato con dati reali: ore lavorate, pause, aree coperte e foto. Nessuna ricostruzione manuale, nessuna contestazione senza risposta.',
+        title: 'Il report è una prova verificabile',
+        desc: 'A fine turno il verbale è sigillato con dati GPS, foto degli ambienti e sigillo ECDSA. Il committente può verificare l\'autenticità di ogni intervento in autonomia — senza bisogno di fidarsi della tua parola.',
       },
     ],
   },
@@ -89,8 +89,8 @@ const content: SettoreContent = {
     ],
   },
   cta: {
-    title: 'Stop alle contestazioni. Inizia a dimostrare.',
-    subtitle: 'GeoTapp Flow e TimeTracker danno alla tua impresa di pulizie il controllo operativo e le prove che ti servono davvero.',
+    title: 'La pulizia c\'è stata. Ora dimostralo.',
+    subtitle: 'GeoTapp genera prove verificabili di ogni intervento — report sigillati che il committente può controllare da solo.',
     primary: 'Richiedi una Demo',
     secondary: 'Vedi i Prezzi',
   },

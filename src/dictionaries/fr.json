@@ -19,16 +19,46 @@
     "rights": "Tous droits réservés."
   },
   "landing": {
-    "hero_badge": "GeoTapp — Contrôle des interventions terrain",
-    "hero_title": "Rendez le travail vérifiable",
-    "hero_subtitle": "GeoTapp donne aux entreprises disposant de techniciens et d'opérateurs terrain un contrôle réel sur le travail effectué : activité enregistrée, opérations organisées, rapports vérifiables.",
-    "hero_cta_primary": "Demander une démo",
-    "hero_cta_secondary": "Découvrir les produits",
-    "features_title": "Ce dont vous avez vraiment besoin",
-    "features_subtitle": "Trois outils intégrés pour contrôler les interventions terrain depuis le bureau.",
-    "cta_title": "Prêt à contrôler vos opérations terrain ?",
-    "cta_subtitle": "Rejoignez les entreprises qui utilisent GeoTapp pour organiser les interventions et produire des rapports de travail vérifiables.",
-    "cta_button": "Demander une démo"
+    "hero_badge": "Le travail a eu lieu. Rendez-le maintenant prouvable.",
+    "hero_title": "Si vous ne pouvez pas le prouver, le client dit que ça n'a jamais eu lieu.",
+    "hero_subtitle": "GeoTapp transforme chaque intervention terrain en preuve objective : rapports scellés avec de vraies données GPS, preuves photographiques horodatées et documentation vérifiable par n'importe qui — sans faire confiance, sans contestations.",
+    "hero_cta_primary": "Réserver une démo 30 min",
+    "hero_cta_secondary": "Explorer les secteurs",
+    "trust_gdpr": "Conforme RGPD",
+    "trust_gdpr_desc": "Horodatage uniquement à l'entrée et la sortie",
+    "trust_gps": "Preuve GPS",
+    "trust_gps_desc": "Chaque intervention certifiée avec position et horodatage",
+    "trust_offline": "Fonctionne hors ligne",
+    "trust_offline_desc": "Synchronisation automatique à la reconnexion",
+    "features_title": "De l'intervention à la preuve vérifiable",
+    "features_subtitle": "Trois outils intégrés : le terrain enregistre, le bureau contrôle, le client vérifie.",
+    "cta_title": "Le travail a eu lieu. Prouvez-le maintenant.",
+    "cta_subtitle": "Les entreprises utilisant GeoTapp ne perdent plus d'interventions non documentées. Chaque heure est vérifiable. Chaque rapport est défendable.",
+    "cta_button": "Réserver une démo 30 min",
+    "problem_title": "Le problème que vous connaissez déjà",
+    "problem_subtitle": "Ce n'est pas un problème d'organisation. C'est un problème de preuve.",
+    "problem_items": [
+      {
+        "title": "Le client nie. Vous n'avez pas de preuves.",
+        "desc": "L'intervention a bien eu lieu. Mais sans documentation vérifiable, c'est votre parole contre la sienne. Et souvent, c'est lui qui gagne."
+      },
+      {
+        "title": "Le rapport arrive incomplet, en retard ou pas du tout.",
+        "desc": "Formulaires papier, WhatsApp, e-mails. Les données se perdent, s'altèrent, s'oublient. La reconstruction a posteriori est coûteuse et peu fiable."
+      },
+      {
+        "title": "Le travail non documenté n'existe pas.",
+        "desc": "Chaque heure non enregistrée est une heure non payée. Chaque intervention sans preuve est une intervention que le client peut contester."
+      }
+    ],
+    "report_section_title": "Le rapport. Pas un résumé. Une preuve.",
+    "report_section_subtitle": "Chaque rapport GeoTapp est généré automatiquement à partir des données réelles du terrain.",
+    "report_section_body": "Pointages GPS, photos horodatées, notes opérationnelles. Le système appose un sceau cryptographique qui rend toute modification détectable. Le résultat n'est pas un document à envoyer au client — c'est une preuve que le client peut vérifier lui-même.",
+    "report_feature_1": "Sceau ECDSA — toute modification invalide le document",
+    "report_feature_2": "Vérifiable sans compte — par n'importe qui, en autonomie",
+    "report_feature_3": "Données GPS et photographiques intégrées et inséparables",
+    "report_feature_4": "Généré automatiquement — aucune saisie manuelle",
+    "report_cta": "Voir le Verifier en action"
   },
   "home_sections": {
     "flow": {
@@ -57,18 +87,18 @@
     },
     "verifier": {
       "badge": "GeoTapp Verifier",
-      "title": "Des rapports de travail que tout le monde peut vérifier.",
-      "subtitle": "Verifier vous permet de contrôler qu'un rapport de travail correspond aux données opérationnelles enregistrées et n'a pas été modifié. Plus de transparence pour le client, moins de litiges.",
+      "title": "Vous n'avez pas besoin qu'ils vous fassent confiance.",
+      "subtitle": "Le client a le rapport. Il le vérifie lui-même, sans accéder à GeoTapp. Si les données correspondent au travail réel, le sceau tient. Si quelqu'un a modifié le document, le sceau se brise. Sans appel.",
       "features": {
-        "integrity": "<strong>Intégrité vérifiée :</strong> Le système compare le rapport aux données réelles de session enregistrées sur le terrain.",
-        "independent": "<strong>Vérification indépendante :</strong> N'importe qui peut vérifier un rapport sans accéder à la plateforme."
+        "integrity": "<strong>Sceau ECDSA :</strong> Le rapport est signé numériquement sur les données terrain réelles. Toute modification invalide le sceau.",
+        "independent": "<strong>Vérification autonome :</strong> Toute personne possédant le rapport peut vérifier son authenticité — sans compte, sans accès à la plateforme."
       },
       "link": "Découvrir GeoTapp Verifier"
     },
     "core": {
       "badge": "Plateforme GeoTapp",
-      "title": "Gestion du personnel mobile et des horaires hors site",
-      "subtitle": "Trois produits intégrés, un seul objectif : donner aux entreprises avec des opérateurs terrain la visibilité et la documentation opérationnelle dont elles ont besoin.",
+      "title": "Un système, trois niveaux de certitude",
+      "subtitle": "TimeTracker enregistre sur le terrain. Flow organise au bureau. Verifier certifie que tout correspond.",
       "features": [
         {
           "title": "Opérabilité mobile réelle",
@@ -79,18 +109,18 @@
           "desc": "La localisation est enregistrée <strong>uniquement</strong> au pointage entrée et sortie. Aucun traçage continu. Pleinement conforme au RGPD."
         },
         {
-          "title": "Synchronisation en temps réel",
-          "desc": "L'activité enregistrée sur le terrain arrive dans Flow immédiatement, de sorte que le bureau dispose toujours d'une vue opérationnelle à jour."
+          "title": "Contrôle opérationnel en temps réel",
+          "desc": "Les données terrain arrivent dans Flow immédiatement. Le bureau a une visibilité en direct sans appeler personne."
         },
         {
-          "title": "Rapports vérifiables dans le temps",
-          "desc": "Avec GeoTapp Verifier, tout rapport peut être validé de manière indépendante. Les données collectées restent fiables et incontestables."
+          "title": "Preuve défendable dans le temps",
+          "desc": "Chaque rapport porte un sceau ECDSA sur les données terrain réelles. Contestation ? La donnée est là. Vérifiable. Toujours."
         }
       ]
     },
     "footer_cta": {
-      "title": "Plans et tarifs SaaS pour la gestion du personnel mobile",
-      "subtitle": "GeoTapp Flow, TimeTracker et Verifier fonctionnent ensemble pour donner à votre entreprise une visibilité réelle et une documentation fiable du travail effectué.",
+      "title": "Arrêtez de perdre du travail non documenté.",
+      "subtitle": "Chaque intervention sans preuve vérifiable est une intervention contestable. GeoTapp comble cette faille.",
       "button": "Contactez-nous"
     }
   },
@@ -171,8 +201,27 @@
       "email": "E-mail professionnel",
       "reason": "Motif du contact",
       "message": "Message",
-      "send": "Envoyer"
-    }
+      "send": "Envoyer",
+      "reason_options": [
+        "Je veux une Démo GeoTapp",
+        "Demande d'informations générales",
+        "Partenariat",
+        "Autre"
+      ]
+    },
+    "hours": "Lun-Ven 9:00 - 18:00",
+    "location_city": "Brescia, IT",
+    "channels_title": "Canaux Directs",
+    "email_label": "E-mail Général",
+    "email_desc": "Pour informations, devis et support.",
+    "hq_label": "Siège Social",
+    "hq_city": "Brescia, Italie",
+    "hq_note": "Visites sur rendez-vous.",
+    "privacy_note": "En soumettant ce formulaire, vous acceptez notre Politique de Confidentialité.",
+    "map_title": "Où nous sommes — Trenzano (BS), Italie",
+    "success": "Message envoyé avec succès. Nous vous répondrons dans les plus brefs délais.",
+    "error": "Erreur lors de l'envoi. Veuillez réessayer plus tard.",
+    "sending": "Envoi en cours..."
   },
   "login_hub": {
     "title": "Accédez à votre <span class=\"text-primary\">Compte</span>.",

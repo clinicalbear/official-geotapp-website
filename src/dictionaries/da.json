@@ -19,16 +19,46 @@
     "rights": "Alle rettigheder forbeholdes."
   },
   "landing": {
-    "hero_badge": "GeoTapp — Feltarbejdskontrol",
-    "hero_title": "Gør arbejdet verificerbart",
-    "hero_subtitle": "GeoTapp giver virksomheder med feltteknikere og feltoperatører reel kontrol over udført arbejde: aktivitet registreret, drift organiseret, arbejdsrapporter verificerbare.",
-    "hero_cta_primary": "Anmod om en demo",
-    "hero_cta_secondary": "Udforsk produkter",
-    "features_title": "Hvad du faktisk har brug for",
-    "features_subtitle": "Tre integrerede værktøjer til at styre feltarbejde fra kontoret.",
-    "cta_title": "Klar til at kontrollere din feltdrift?",
-    "cta_subtitle": "Slut dig til de virksomheder, der bruger GeoTapp til at organisere arbejdsordrer og producere verificerbare arbejdsrapporter.",
-    "cta_button": "Anmod om en demo"
+    "hero_badge": "Arbejdet skete. Gør det nu bevisbart.",
+    "hero_title": "Hvis du ikke kan bevise det, siger kunden, at det aldrig skete.",
+    "hero_subtitle": "GeoTapp omdanner hvert feltebesøg til objektive beviser: forseglede rapporter med rigtige GPS-data, tidsstemplede fotobeviser og dokumentation, som enhver kan verificere uafhængigt — uden tillid, uden tvister.",
+    "hero_cta_primary": "Book 30-minutters demo",
+    "hero_cta_secondary": "Udforsk sektorer",
+    "trust_gdpr": "GDPR-overensstemmelse",
+    "trust_gdpr_desc": "Kun tidsstempler ved ind- og udtjekning",
+    "trust_gps": "GPS-bevis",
+    "trust_gps_desc": "Hvert besøg certificeret med placering og tidsstempel",
+    "trust_offline": "Virker offline",
+    "trust_offline_desc": "Automatisk synkronisering ved forbindelsen",
+    "features_title": "Fra intervention til verificerbart bevis",
+    "features_subtitle": "Tre integrerede værktøjer: marken registrerer, kontoret kontrollerer, kunden verificerer.",
+    "cta_title": "Arbejdet skete. Bevis det nu.",
+    "cta_subtitle": "Virksomheder, der bruger GeoTapp, mister ikke længere udokumenterede opgaver. Hver time er verificerbar. Hver rapport er forsvarlig.",
+    "cta_button": "Book 30-minutters demo",
+    "problem_title": "Det problem, du allerede kender",
+    "problem_subtitle": "Det er ikke et organiseringsproblem. Det er et bevisproblem.",
+    "problem_items": [
+      {
+        "title": "Kunden benægter det. Du har ingen beviser.",
+        "desc": "Arbejdet fandt sted. Men uden verificerbar dokumentation er det dit ord mod hans. Og ofte vinder han."
+      },
+      {
+        "title": "Rapporten ankommer ufuldstændig, for sent eller slet ikke.",
+        "desc": "Papirformularer, WhatsApp, e-mails. Data går tabt, ændres, glemmes. Rekonstruktion i bagklog er dyr og upålidelig."
+      },
+      {
+        "title": "Udokumenteret arbejde eksisterer ikke.",
+        "desc": "Hver ikke-registreret time er en ubetalt time. Hvert besøg uden bevis er et besøg, som kunden kan bestride."
+      }
+    ],
+    "report_section_title": "Rapporten. Ikke et resumé. Et bevis.",
+    "report_section_subtitle": "Hver GeoTapp-rapport genereres automatisk fra reelle feltdata.",
+    "report_section_body": "GPS-stempling, tidsstemplede fotos, operationelle noter. Systemet anvender et kryptografisk segl, der gør enhver ændring sporbar. Resultatet er ikke et dokument til kunden — det er et bevis, som kunden selv kan verificere.",
+    "report_feature_1": "ECDSA-segl — enhver ændring ugyldiggør dokumentet",
+    "report_feature_2": "Verificerbar uden konto — af hvem som helst, selvstændigt",
+    "report_feature_3": "GPS- og fotodata integreret og uadskillelige",
+    "report_feature_4": "Automatisk genereret — ingen manuel udfyldelse",
+    "report_cta": "Se, hvordan Verifier fungerer"
   },
   "home_sections": {
     "flow": {
@@ -57,18 +87,18 @@
     },
     "verifier": {
       "badge": "GeoTapp Verifier",
-      "title": "Arbejdsrapporter, som alle kan verificere.",
-      "subtitle": "Verifier lader dig kontrollere, om en arbejdsrapport stemmer overens med de registrerede operationelle data og ikke er blevet ændret. Mere gennemsigtighed for kunden, færre tvister.",
+      "title": "Du behøver ikke, at de stoler på dig.",
+      "subtitle": "Kunden har rapporten. Han verificerer den selv uden at åbne GeoTapp. Hvis dataene svarer til det virkelige arbejde, holder seglet. Hvis nogen har ændret dokumentet, bryder seglet. Ingen appel.",
       "features": {
-        "integrity": "<strong>Verificeret integritet:</strong> Systemet krydsrefererer rapporten med de faktiske sessionsdata registreret i feltet.",
-        "independent": "<strong>Uafhængig verificering:</strong> Alle kan verificere en rapport uden adgang til platformen."
+        "integrity": "<strong>ECDSA-segl:</strong> Rapporten er digitalt signeret på echte feltdata. Enhver ændring gør seglet ugyldigt.",
+        "independent": "<strong>Autonom verifikation:</strong> Enhver med rapporten kan verificere dens ægthed — ingen konto, ingen platformsadgang."
       },
       "link": "Udforsk GeoTapp Verifier"
     },
     "core": {
       "badge": "GeoTapp Platform",
-      "title": "Styring af mobilt personale og vagter uden for kontoret",
-      "subtitle": "Tre integrerede produkter, ét formål: give virksomheder med feltoperatører den synlighed og operationelle dokumentation, de har brug for.",
+      "title": "Ét system, tre niveauer af sikkerhed",
+      "subtitle": "TimeTracker registrerer i marken. Flow organiserer på kontoret. Verifier bekræfter, at alt stemmer.",
       "features": [
         {
           "title": "Reel mobil operabilitet",
@@ -79,18 +109,18 @@
           "desc": "Placering registreres <strong>kun</strong> ved ind- og udstempling. Ingen kontinuerlig sporing. Fuldt GDPR-kompatibel."
         },
         {
-          "title": "Synkronisering i realtid",
-          "desc": "Aktivitet registreret i feltet ankommer øjeblikkeligt til Flow, så kontoret altid har et opdateret operationelt billede."
+          "title": "Operationel kontrol i realtid",
+          "desc": "Feltdata ankommer til Flow med det samme. Kontoret har live synlighed uden at ringe til nogen."
         },
         {
-          "title": "Arbejdsrapporter verificerbare over tid",
-          "desc": "Med GeoTapp Verifier kan enhver rapport valideres uafhængigt. Indsamlede data forbliver pålidelige og forsvarlige."
+          "title": "Forsvarligt bevis over tid",
+          "desc": "Hver rapport bærer et ECDSA-segl på echte feltdata. Tvist? Dataene er der. Verificerbare. Altid."
         }
       ]
     },
     "footer_cta": {
-      "title": "SaaS-planer og priser til styring af mobilt personale",
-      "subtitle": "GeoTapp Flow, TimeTracker og Verifier arbejder sammen om at give din virksomhed ægte synlighed og pålidelig dokumentation af udført arbejde.",
+      "title": "Hold op med at miste udokumenteret arbejde.",
+      "subtitle": "Hvert arbejde uden verificerbart bevis er et anfægtbart arbejde. GeoTapp lukker dette hul.",
       "button": "Kontakt os"
     }
   },
@@ -171,8 +201,27 @@
       "email": "Arbejdsmailadresse",
       "reason": "Årsag til kontakt",
       "message": "Besked",
-      "send": "Send"
-    }
+      "send": "Send",
+      "reason_options": [
+        "Jeg vil have en GeoTapp Demo",
+        "Anmodning om generel information",
+        "Partnerskab",
+        "Andet"
+      ]
+    },
+    "hours": "Man-Fre 9:00 - 18:00",
+    "location_city": "Brescia, IT",
+    "channels_title": "Direkte Kanaler",
+    "email_label": "Generel E-mail",
+    "email_desc": "For information, tilbud og support.",
+    "hq_label": "Hovedkvarter",
+    "hq_city": "Brescia, Italien",
+    "hq_note": "Besøg efter aftale.",
+    "privacy_note": "Ved at indsende denne formular accepterer du vores Privatlivspolitik.",
+    "map_title": "Hvor vi er — Trenzano (BS), Italien",
+    "success": "Besked sendt. Vi vender tilbage hurtigst muligt.",
+    "error": "Fejl ved afsendelse. Prøv igen senere.",
+    "sending": "Sender..."
   },
   "login_hub": {
     "title": "Adgang til din <span class=\"text-primary\">konto</span>.",

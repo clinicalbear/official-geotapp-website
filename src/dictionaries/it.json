@@ -19,35 +19,65 @@
     "rights": "Tutti i diritti riservati."
   },
   "landing": {
-    "hero_badge": "GeoTapp — Controllo Campo",
-    "hero_title": "Rendi il lavoro verificabile",
-    "hero_subtitle": "GeoTapp dà alle aziende con tecnici e operatori il controllo sul lavoro svolto: attività registrate, interventi organizzati, report verificabili.",
-    "hero_cta_primary": "Richiedi una Demo",
-    "hero_cta_secondary": "Scopri i Prodotti",
-    "features_title": "Quello che ti serve davvero",
-    "features_subtitle": "Tre strumenti integrati per controllare il lavoro sul campo.",
-    "cta_title": "Pronto a controllare le tue operazioni?",
-    "cta_subtitle": "Unisciti alle aziende che usano GeoTapp per organizzare interventi e produrre report verificabili.",
-    "cta_button": "Richiedi una Demo"
+    "hero_badge": "Il lavoro c'è stato. Ora rendilo dimostrabile.",
+    "hero_title": "Se non puoi dimostrarlo, per il cliente non è mai successo.",
+    "hero_subtitle": "GeoTapp trasforma ogni intervento in evidenza oggettiva: report sigillati con dati GPS reali, prove fotografiche con timestamp e documentazione verificabile da chiunque — senza fidarsi, senza contestazioni.",
+    "hero_cta_primary": "Prenota Demo 30 Minuti",
+    "hero_cta_secondary": "Scopri i Settori",
+    "trust_gdpr": "GDPR Compliant",
+    "trust_gdpr_desc": "Solo timestamp all'ingresso e uscita",
+    "trust_gps": "Prova GPS",
+    "trust_gps_desc": "Ogni intervento certificato con posizione e timestamp",
+    "trust_offline": "Funziona Offline",
+    "trust_offline_desc": "Sincronizzazione automatica alla riconnessione",
+    "features_title": "Da intervento a prova verificabile",
+    "features_subtitle": "Tre strumenti integrati: il campo registra, l'ufficio controlla, il cliente verifica.",
+    "cta_title": "Il lavoro c'è stato. Ora dimostralo.",
+    "cta_subtitle": "Le aziende che usano GeoTapp non perdono più interventi non documentati. Ogni ora è verificabile, ogni report è difendibile.",
+    "cta_button": "Prenota Demo 30 Minuti",
+    "problem_title": "Il problema che conosci già",
+    "problem_subtitle": "Non è un problema di organizzazione. È un problema di prova.",
+    "problem_items": [
+      {
+        "title": "Il cliente nega. Tu non hai prove.",
+        "desc": "L'intervento c'è stato. Ma senza documentazione verificabile, è la tua parola contro la sua. E spesso vince lui."
+      },
+      {
+        "title": "Il report arriva incompleto, in ritardo o non arriva.",
+        "desc": "Fogli di carta, WhatsApp, email. I dati si perdono, si alterano, si dimenticano. La ricostruzione a posteriori è costosa e inaffidabile."
+      },
+      {
+        "title": "Il lavoro non fatturato non esiste.",
+        "desc": "Ogni ora non documentata è un'ora non pagata. Ogni intervento senza prova è un intervento che il cliente può contestare."
+      }
+    ],
+    "report_section_title": "Il report. Non un riepilogo. Una prova.",
+    "report_section_subtitle": "Ogni report GeoTapp è generato automaticamente dai dati reali del campo.",
+    "report_section_body": "Timbrature GPS, foto con timestamp, note operative. Il sistema applica un sigillo crittografico che rende ogni modifica rilevabile. Il risultato non è un documento da mandare al cliente. È una prova che il cliente può verificare da solo.",
+    "report_feature_1": "Sigillo ECDSA — qualsiasi modifica invalida il documento",
+    "report_feature_2": "Verificabile senza account — da chiunque, in autonomia",
+    "report_feature_3": "Dati GPS e fotografici integrati e non separabili",
+    "report_feature_4": "Generato automaticamente — nessuna compilazione manuale",
+    "report_cta": "Vedi come funziona il Verifier"
   },
   "home_sections": {
     "flow": {
       "badge": "GeoTapp Flow",
-      "title": "Coordina il campo dal centro operativo.",
-      "subtitle": "Flow è il sistema usato dall'ufficio per gestire commesse, assegnare attività, monitorare l'avanzamento e produrre report strutturati. <strong class=\"text-slate-900\">Meno discussioni interne, più controllo reale.</strong>",
+      "title": "L'ufficio vede tutto. In tempo reale.",
+      "subtitle": "Flow è il centro operativo dell'ufficio: commesse, attività, avanzamento e report strutturati. <strong class=\"text-slate-900\">Il campo lavora. L'ufficio sa.</strong>",
       "features": {
-        "crm": "<strong>Gestione Commesse:</strong> Crea interventi, assegna tecnici e monitora l'avanzamento in tempo reale.",
-        "pipeline": "<strong>Report Strutturati:</strong> Ogni intervento genera documentazione tracciabile e pronta all'uso."
+        "crm": "<strong>Gestione Commesse:</strong> Ogni intervento nasce strutturato, con tecnico assegnato, sede e stato aggiornato in tempo reale.",
+        "pipeline": "<strong>Documentazione automatica:</strong> Ogni intervento completato genera un report pronto — senza compilazione manuale, senza errori."
       },
       "link": "Scopri GeoTapp Flow"
     },
     "app": {
       "badge": "GeoTapp TimeTracker",
-      "title": "Il tecnico registra. L'ufficio controlla.",
-      "subtitle": "TimeTracker è l'app mobile usata dai tecnici per registrare attività dal campo. Ingresso, uscita, prove fotografiche e note collegate all'intervento. <strong>Disponibile su Android e iOS.</strong>",
+      "title": "Il tecnico registra. La prova si forma.",
+      "subtitle": "TimeTracker è l'app mobile che raccoglie l'evidenza dal campo: ingresso, uscita, prove fotografiche, note. Tutto collegato all'intervento, tutto sigillato. <strong>Disponibile su Android e iOS.</strong>",
       "card_gps": {
-        "title": "Timbratura GPS",
-        "desc": "Posizione verificata"
+        "title": "Prova GPS",
+        "desc": "Posizione e timestamp verificati"
       },
       "card_gdpr": {
         "title": "GDPR Compliant",
@@ -57,40 +87,40 @@
     },
     "verifier": {
       "badge": "GeoTapp Verifier",
-      "title": "I report sono verificabili da chiunque.",
-      "subtitle": "Verifier permette di controllare che un report di lavoro corrisponda ai dati operativi registrati e non sia stato modificato. Più trasparenza verso il cliente, meno contestazioni.",
+      "title": "Non hai bisogno che si fidino di te.",
+      "subtitle": "Il cliente ha il report. Lo verifica da solo, senza accedere a GeoTapp. Se i dati corrispondono al lavoro reale, il sigillo regge. Se qualcuno ha modificato il documento, il sigillo non regge più. Senza appello.",
       "features": {
-        "integrity": "<strong>Integrità verificata:</strong> Il sistema confronta il report con i dati reali della sessione di lavoro.",
-        "independent": "<strong>Verifica indipendente:</strong> Chiunque può controllare un report senza accedere alla piattaforma."
+        "integrity": "<strong>Sigillo ECDSA:</strong> Il report è firmato digitalmente sui dati reali di campo. Qualsiasi modifica invalida il sigillo.",
+        "independent": "<strong>Verifica autonoma:</strong> Chiunque abbia il report può verificarne l'autenticità — senza account, senza accesso alla piattaforma."
       },
       "link": "Scopri GeoTapp Verifier"
     },
     "core": {
       "badge": "Piattaforma GeoTapp",
-      "title": "Gestione del Personale in Mobilità e dei Turni Fuori Sede",
-      "subtitle": "Tre prodotti integrati, un unico obiettivo: dare alle aziende con operatori sul campo la visibilità e la documentazione operativa che meritano.",
+      "title": "Un sistema, tre livelli di certezza",
+      "subtitle": "TimeTracker registra sul campo. Flow organizza in ufficio. Verifier certifica che tutto corrisponda. Un ciclo chiuso, senza falle.",
       "features": [
         {
-          "title": "Operatività mobile reale",
-          "desc": "TimeTracker funziona anche in assenza di connessione e si sincronizza non appena il campo torna online. Il lavoro non si ferma mai."
+          "title": "Input reale dal campo",
+          "desc": "TimeTracker funziona anche offline e si sincronizza automaticamente. Ogni dato registrato sul campo è autentico, con posizione e timestamp."
         },
         {
           "title": "Privacy rispettata",
-          "desc": "La posizione viene rilevata <strong>solo</strong> all'ingresso e all'uscita dal lavoro. Nessun tracciamento continuo. Conforme al GDPR."
+          "desc": "La posizione viene rilevata <strong>solo</strong> all'ingresso e all'uscita. Nessun tracciamento continuo. Conforme al GDPR."
         },
         {
-          "title": "Sincronizzazione in tempo reale",
-          "desc": "Le attività registrate sul campo arrivano in Flow immediatamente, per un controllo operativo sempre aggiornato e senza ritardi."
+          "title": "Controllo operativo in tempo reale",
+          "desc": "I dati del campo arrivano in Flow immediatamente. Il responsabile ha visibilità live senza dover chiamare nessuno."
         },
         {
-          "title": "Report verificabili nel tempo",
-          "desc": "Con GeoTapp Verifier, ogni report può essere validato indipendentemente. I dati raccolti restano affidabili e difendibili."
+          "title": "Prova difendibile nel tempo",
+          "desc": "Ogni report porta un sigillo ECDSA sui dati reali di campo. Contestazione? Il dato c'è. Verificabile. Sempre."
         }
       ]
     },
     "footer_cta": {
-      "title": "Piani e Prezzi SaaS per la Gestione del Personale in Mobilità",
-      "subtitle": "GeoTapp Flow, TimeTracker e Verifier lavorano insieme per dare alla tua azienda visibilità reale e documentazione affidabile sul lavoro svolto.",
+      "title": "Smetti di perdere lavoro non documentato.",
+      "subtitle": "Ogni intervento senza prova verificabile è un intervento contestabile. GeoTapp chiude questa falla.",
       "button": "Parla con noi"
     }
   },
@@ -171,8 +201,27 @@
       "email": "Email aziendale",
       "reason": "Motivo del contatto",
       "message": "Messaggio",
-      "send": "Invia"
-    }
+      "send": "Invia",
+      "reason_options": [
+        "Voglio una Demo di GeoTapp",
+        "Richiesta Informazioni Generali",
+        "Partnership",
+        "Altro"
+      ]
+    },
+    "hours": "Lun-Ven 9:00 - 18:00",
+    "location_city": "Brescia, IT",
+    "channels_title": "Canali Diretti",
+    "email_label": "Email Generale",
+    "email_desc": "Per informazioni, preventivi e supporto.",
+    "hq_label": "Sede",
+    "hq_city": "Brescia, Italia",
+    "hq_note": "Riceviamo su appuntamento.",
+    "privacy_note": "Inviando questo modulo accetti la nostra Privacy Policy.",
+    "map_title": "Dove siamo — Trenzano (BS), Italia",
+    "success": "Messaggio inviato con successo. Ti risponderemo al più presto.",
+    "error": "Errore durante l'invio. Riprova più tardi.",
+    "sending": "Invio in corso..."
   },
   "login_hub": {
     "title": "Accedi al tuo <span class=\"text-primary\">Account</span>.",

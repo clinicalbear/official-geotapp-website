@@ -19,16 +19,46 @@
     "rights": "Todos os direitos reservados."
   },
   "landing": {
-    "hero_badge": "GeoTapp — Controlo do trabalho de campo",
-    "hero_title": "Torne o trabalho verificável",
-    "hero_subtitle": "O GeoTapp dá às empresas com técnicos e operadores de campo um controlo real sobre o trabalho realizado: actividade registada, operações organizadas, relatórios verificáveis.",
-    "hero_cta_primary": "Pedir uma demo",
-    "hero_cta_secondary": "Explorar produtos",
-    "features_title": "O que realmente precisa",
-    "features_subtitle": "Três ferramentas integradas para controlar o trabalho de campo a partir do escritório.",
-    "cta_title": "Pronto para controlar as suas operações de campo?",
-    "cta_subtitle": "Junte-se às empresas que usam o GeoTapp para organizar intervenções e produzir relatórios de trabalho verificáveis.",
-    "cta_button": "Pedir uma demo"
+    "hero_badge": "O trabalho aconteceu. Agora torne-o demonstrável.",
+    "hero_title": "Se não puder provar, o cliente diz que nunca aconteceu.",
+    "hero_subtitle": "GeoTapp transforma cada intervenção em campo em evidência objectiva: relatórios selados com dados GPS reais, provas fotográficas com marca de tempo e documentação verificável por qualquer pessoa — sem confiar, sem contestações.",
+    "hero_cta_primary": "Agendar demo de 30 minutos",
+    "hero_cta_secondary": "Explorar setores",
+    "trust_gdpr": "Conforme RGPD",
+    "trust_gdpr_desc": "Só registo de entrada e saída",
+    "trust_gps": "Prova GPS",
+    "trust_gps_desc": "Cada intervenção certificada com localização e marca de tempo",
+    "trust_offline": "Funciona offline",
+    "trust_offline_desc": "Sincronização automática ao reconectar",
+    "features_title": "Do trabalho à prova verificável",
+    "features_subtitle": "Três ferramentas integradas: o campo regista, o escritório controla, o cliente verifica.",
+    "cta_title": "O trabalho aconteceu. Agora prove-o.",
+    "cta_subtitle": "As empresas que usam GeoTapp não perdem mais trabalhos não documentados. Cada hora é verificável. Cada relatório é defensável.",
+    "cta_button": "Agendar demo de 30 minutos",
+    "problem_title": "O problema que você já conhece",
+    "problem_subtitle": "Não é um problema de organização. É um problema de prova.",
+    "problem_items": [
+      {
+        "title": "O cliente nega. Você não tem provas.",
+        "desc": "A intervenção aconteceu. Mas sem documentação verificável, é a sua palavra contra a dele. E muitas vezes ele ganha."
+      },
+      {
+        "title": "O relatório chega incompleto, atrasado ou não chega.",
+        "desc": "Formulários em papel, WhatsApp, e-mails. Os dados se perdem, alteram-se, são esquecidos. A reconstrução a posteriori é cara e pouco confiável."
+      },
+      {
+        "title": "O trabalho não documentado não existe.",
+        "desc": "Cada hora não registrada é uma hora não paga. Cada intervenção sem prova é uma intervenção que o cliente pode contestar."
+      }
+    ],
+    "report_section_title": "O relatório. Não um resumo. Uma prova.",
+    "report_section_subtitle": "Cada relatório GeoTapp é gerado automaticamente a partir de dados reais do campo.",
+    "report_section_body": "Registros GPS, fotos com carimbo de data/hora, notas operacionais. O sistema aplica um selo criptográfico que torna qualquer modificação detectável. O resultado não é um documento para enviar ao cliente — é uma prova que o cliente pode verificar por conta própria.",
+    "report_feature_1": "Selo ECDSA — qualquer modificação invalida o documento",
+    "report_feature_2": "Verificável sem conta — por qualquer pessoa, de forma autônoma",
+    "report_feature_3": "Dados GPS e fotográficos integrados e inseparáveis",
+    "report_feature_4": "Gerado automaticamente — sem preenchimento manual",
+    "report_cta": "Ver como o Verifier funciona"
   },
   "home_sections": {
     "flow": {
@@ -57,18 +87,18 @@
     },
     "verifier": {
       "badge": "GeoTapp Verifier",
-      "title": "Relatórios de trabalho que qualquer pessoa pode verificar.",
-      "subtitle": "O Verifier permite verificar se um relatório de trabalho corresponde aos dados operacionais registados e não foi modificado. Mais transparência para o cliente, menos disputas.",
+      "title": "Não precisa que confiem em si.",
+      "subtitle": "O cliente tem o relatório. Verifica-o por si mesmo, sem aceder ao GeoTapp. Se os dados correspondem ao trabalho real, o selo aguenta. Se alguém modificou o documento, o selo parte-se. Sem recurso.",
       "features": {
-        "integrity": "<strong>Integridade verificada:</strong> O sistema compara o relatório com os dados reais de sessão registados no campo.",
-        "independent": "<strong>Verificação independente:</strong> Qualquer pessoa pode verificar um relatório sem aceder à plataforma."
+        "integrity": "<strong>Selo ECDSA:</strong> O relatório é assinado digitalmente sobre os dados reais de campo. Qualquer modificação invalida o selo.",
+        "independent": "<strong>Verificação autónoma:</strong> Qualquer pessoa com o relatório pode verificar a sua autenticidade — sem conta, sem acesso à plataforma."
       },
       "link": "Explorar GeoTapp Verifier"
     },
     "core": {
       "badge": "Plataforma GeoTapp",
-      "title": "Gestão de pessoal móvel e turnos fora da sede",
-      "subtitle": "Três produtos integrados, um único objectivo: dar às empresas com operadores de campo a visibilidade e a documentação operacional de que precisam.",
+      "title": "Um sistema, três níveis de certeza",
+      "subtitle": "TimeTracker regista no campo. Flow organiza no escritório. Verifier certifica que tudo corresponde.",
       "features": [
         {
           "title": "Operabilidade móvel real",
@@ -79,18 +109,18 @@
           "desc": "A localização é registada <strong>apenas</strong> no registo de entrada e saída. Sem rastreio contínuo. Totalmente conforme com o RGPD."
         },
         {
-          "title": "Sincronização em tempo real",
-          "desc": "A actividade registada no campo chega ao Flow de imediato, para que o escritório disponha sempre de uma visão operacional actualizada."
+          "title": "Controlo operacional em tempo real",
+          "desc": "Os dados de campo chegam ao Flow imediatamente. O escritório tem visibilidade em directo sem ligar para ninguém."
         },
         {
-          "title": "Relatórios verificáveis ao longo do tempo",
-          "desc": "Com o GeoTapp Verifier, qualquer relatório pode ser validado de forma independente. Os dados recolhidos mantêm-se fiáveis e incontestáveis."
+          "title": "Prova defensável ao longo do tempo",
+          "desc": "Cada relatório tem um selo ECDSA sobre dados reais de campo. Contestação? O dado está lá. Verificável. Sempre."
         }
       ]
     },
     "footer_cta": {
-      "title": "Planos e preços SaaS para gestão de pessoal em mobilidade",
-      "subtitle": "O GeoTapp Flow, TimeTracker e Verifier trabalham em conjunto para dar à sua empresa visibilidade real e documentação fiável do trabalho realizado.",
+      "title": "Pare de perder trabalho não documentado.",
+      "subtitle": "Cada trabalho sem prova verificável é um trabalho contestável. GeoTapp fecha esta falha.",
       "button": "Fale connosco"
     }
   },
@@ -171,8 +201,27 @@
       "email": "E-mail profissional",
       "reason": "Motivo do contacto",
       "message": "Mensagem",
-      "send": "Enviar"
-    }
+      "send": "Enviar",
+      "reason_options": [
+        "Quero uma Demo do GeoTapp",
+        "Pedido de Informação Geral",
+        "Parceria",
+        "Outro"
+      ]
+    },
+    "hours": "Seg-Sex 9:00 - 18:00",
+    "location_city": "Brescia, IT",
+    "channels_title": "Canais Diretos",
+    "email_label": "E-mail Geral",
+    "email_desc": "Para informações, orçamentos e suporte.",
+    "hq_label": "Sede",
+    "hq_city": "Brescia, Itália",
+    "hq_note": "Visitas por marcação.",
+    "privacy_note": "Ao enviar este formulário aceita a nossa Política de Privacidade.",
+    "map_title": "Onde estamos — Trenzano (BS), Itália",
+    "success": "Mensagem enviada com sucesso. Responderemos o mais brevemente possível.",
+    "error": "Erro ao enviar. Tente novamente mais tarde.",
+    "sending": "A enviar..."
   },
   "login_hub": {
     "title": "Aceda à sua <span class=\"text-primary\">Conta</span>.",

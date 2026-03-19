@@ -19,35 +19,65 @@
     "rights": "All rights reserved."
   },
   "landing": {
-    "hero_badge": "GeoTapp — Field Work Control",
-    "hero_title": "Make work verifiable",
-    "hero_subtitle": "GeoTapp gives companies with technicians and field operators real control over work performed: activity recorded, operations organised, reports verifiable.",
-    "hero_cta_primary": "Request a Demo",
-    "hero_cta_secondary": "Explore Products",
-    "features_title": "What you actually need",
-    "features_subtitle": "Three integrated tools to control field work from the office.",
-    "cta_title": "Ready to control your field operations?",
-    "cta_subtitle": "Join companies using GeoTapp to organise interventions and produce verifiable work reports.",
-    "cta_button": "Request a Demo"
+    "hero_badge": "The work happened. Now make it provable.",
+    "hero_title": "If you can't prove it, the client says it never happened.",
+    "hero_subtitle": "GeoTapp turns every field job into objective evidence: sealed reports with real GPS data, timestamped photo proof and documentation anyone can verify — without trusting you, without disputes.",
+    "hero_cta_primary": "Book a 30-Minute Demo",
+    "hero_cta_secondary": "Explore Sectors",
+    "trust_gdpr": "GDPR Compliant",
+    "trust_gdpr_desc": "Timestamps only at clock-in/out",
+    "trust_gps": "GPS Proof",
+    "trust_gps_desc": "Every job certified with location and timestamp",
+    "trust_offline": "Works Offline",
+    "trust_offline_desc": "Auto-sync when connection returns",
+    "features_title": "From job to verifiable proof",
+    "features_subtitle": "Three integrated tools: the field records, the office controls, the client verifies.",
+    "cta_title": "The work happened. Now prove it.",
+    "cta_subtitle": "Companies using GeoTapp no longer lose undocumented jobs. Every hour is verifiable. Every report is defensible.",
+    "cta_button": "Book a 30-Minute Demo",
+    "problem_title": "The problem you already know",
+    "problem_subtitle": "It's not an organisation problem. It's a proof problem.",
+    "problem_items": [
+      {
+        "title": "The client denies it. You have no proof.",
+        "desc": "The job happened. But without verifiable documentation, it's your word against theirs. And often they win."
+      },
+      {
+        "title": "Reports arrive incomplete, late or not at all.",
+        "desc": "Paper forms, WhatsApp, email. Data gets lost, altered, forgotten. Reconstructing it afterwards is costly and unreliable."
+      },
+      {
+        "title": "Undocumented work is unbillable work.",
+        "desc": "Every undocumented hour is an unpaid hour. Every job without proof is a job the client can dispute."
+      }
+    ],
+    "report_section_title": "The report. Not a summary. A proof.",
+    "report_section_subtitle": "Every GeoTapp report is generated automatically from real field data.",
+    "report_section_body": "GPS clock-ins, timestamped photos, operational notes. The system applies a cryptographic seal that makes any modification detectable. The result is not a document to send to the client. It's proof the client can verify independently.",
+    "report_feature_1": "ECDSA seal — any modification invalidates the document",
+    "report_feature_2": "Verifiable without an account — by anyone, independently",
+    "report_feature_3": "GPS and photo data integrated and inseparable",
+    "report_feature_4": "Generated automatically — no manual form-filling",
+    "report_cta": "See how Verifier works"
   },
   "home_sections": {
     "flow": {
       "badge": "GeoTapp Flow",
-      "title": "Coordinate the field from one operational hub.",
-      "subtitle": "Flow is the system used by the office to manage jobs, assign activities, track progress and generate structured work reports. <strong class=\"text-slate-900\">Less internal friction, more real control.</strong>",
+      "title": "The office sees everything. In real time.",
+      "subtitle": "Flow is the operational hub: jobs, tasks, progress and structured reports. <strong class=\"text-slate-900\">The field works. The office knows.</strong>",
       "features": {
-        "crm": "<strong>Job Management:</strong> Create interventions, assign technicians and monitor progress in real time.",
-        "pipeline": "<strong>Structured Reports:</strong> Every completed job generates traceable documentation ready for the client."
+        "crm": "<strong>Job Management:</strong> Every intervention is structured from the start, with assigned technician, location and live status.",
+        "pipeline": "<strong>Automatic documentation:</strong> Every completed job generates a ready report — no manual entry, no errors."
       },
       "link": "Explore GeoTapp Flow"
     },
     "app": {
       "badge": "GeoTapp TimeTracker",
-      "title": "The technician records. The office controls.",
-      "subtitle": "TimeTracker is the mobile app used by technicians to record field activity. Clock-in, clock-out, photos and notes linked to each job. <strong>Available on Android and iOS.</strong>",
+      "title": "The technician records. The proof forms.",
+      "subtitle": "TimeTracker is the mobile app that collects evidence from the field: clock-in, clock-out, photo proof, notes. All linked to the job, all sealed. <strong>Available on Android and iOS.</strong>",
       "card_gps": {
-        "title": "GPS Time Tracking",
-        "desc": "Verified location"
+        "title": "GPS Proof",
+        "desc": "Verified location and timestamp"
       },
       "card_gdpr": {
         "title": "GDPR Compliant",
@@ -57,40 +87,40 @@
     },
     "verifier": {
       "badge": "GeoTapp Verifier",
-      "title": "Work reports anyone can verify.",
-      "subtitle": "Verifier lets you check whether a work report matches the recorded operational data and has not been modified. More transparency for the client, fewer disputes.",
+      "title": "You don't need them to trust you.",
+      "subtitle": "The client has the report. They verify it themselves, without accessing GeoTapp. If the data matches the real work, the seal holds. If anyone has modified the document, the seal breaks. No appeal.",
       "features": {
-        "integrity": "<strong>Verified integrity:</strong> The system cross-checks the report against the actual session data recorded on the field.",
-        "independent": "<strong>Independent verification:</strong> Anyone can verify a report without accessing the platform."
+        "integrity": "<strong>ECDSA seal:</strong> The report is digitally signed against the real field data. Any modification invalidates the seal.",
+        "independent": "<strong>Autonomous verification:</strong> Anyone with the report can verify its authenticity — no account, no platform access needed."
       },
       "link": "Explore GeoTapp Verifier"
     },
     "core": {
       "badge": "GeoTapp Platform",
-      "title": "Mobile Workforce Management and Shift Scheduling for Remote Teams",
-      "subtitle": "Three integrated products, one purpose: give companies with field operators the visibility and operational documentation they need.",
+      "title": "One system, three levels of certainty",
+      "subtitle": "TimeTracker records on the field. Flow organises in the office. Verifier certifies everything matches. A closed loop, no gaps.",
       "features": [
         {
-          "title": "Real mobile operability",
-          "desc": "TimeTracker works without a connection and syncs as soon as the field comes back online. Work never stops."
+          "title": "Real input from the field",
+          "desc": "TimeTracker works offline and syncs automatically. Every recorded data point is authentic, with location and timestamp."
         },
         {
           "title": "Privacy by design",
           "desc": "Location is recorded <strong>only</strong> at clock-in and clock-out. No continuous tracking. Fully GDPR compliant."
         },
         {
-          "title": "Real-time synchronisation",
-          "desc": "Activity recorded on the field arrives in Flow immediately, so the office always has an up-to-date operational picture."
+          "title": "Real-time operational control",
+          "desc": "Field data arrives in Flow immediately. The office has live visibility without calling anyone."
         },
         {
-          "title": "Reports verifiable over time",
-          "desc": "With GeoTapp Verifier, any report can be validated independently. Data collected remains reliable and defensible."
+          "title": "Defensible proof over time",
+          "desc": "Every report carries an ECDSA seal on real field data. Dispute? The data is there. Verifiable. Always."
         }
       ]
     },
     "footer_cta": {
-      "title": "SaaS Plans and Pricing for Mobile Workforce Management",
-      "subtitle": "GeoTapp Flow, TimeTracker and Verifier work together to give your company genuine visibility and reliable documentation of work performed.",
+      "title": "Stop losing undocumented work.",
+      "subtitle": "Every job without verifiable proof is a job that can be disputed. GeoTapp closes this gap.",
       "button": "Talk to Us"
     }
   },
@@ -171,8 +201,27 @@
       "email": "Work Email",
       "reason": "Reason for Contact",
       "message": "Message",
-      "send": "Send"
-    }
+      "send": "Send",
+      "reason_options": [
+        "I want a GeoTapp Demo",
+        "General Information Request",
+        "Partnership",
+        "Other"
+      ]
+    },
+    "hours": "Mon-Fri 9:00 - 18:00",
+    "location_city": "Brescia, IT",
+    "channels_title": "Direct Channels",
+    "email_label": "General Email",
+    "email_desc": "For information, quotes and support.",
+    "hq_label": "Headquarters",
+    "hq_city": "Brescia, Italy",
+    "hq_note": "Visits by appointment.",
+    "privacy_note": "By submitting this form you agree to our Privacy Policy.",
+    "map_title": "Where we are — Trenzano (BS), Italy",
+    "success": "Message sent successfully. We will get back to you shortly.",
+    "error": "Error while sending. Please try again later.",
+    "sending": "Sending..."
   },
   "login_hub": {
     "title": "Access your <span class=\"text-primary\">Account</span>.",

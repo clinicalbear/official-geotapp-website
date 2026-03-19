@@ -2,8 +2,8 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'Software per Vigilanza e Guardie Giurate | Timbrature Verificabili e Report Turni | GeoTapp',
-    description: 'Software per vigilanza privata, guardie giurate e steward: timbrature GPS verificabili, report incidenti geolocalizzati e tracciamento qualifiche per conformità CCNL Vigilanza Privata.',
+    title: 'Prova Verificabile dei Turni per Vigilanza Privata e Guardie Giurate | GeoTapp',
+    description: 'GeoTapp trasforma ogni turno in prova verificabile per vigilanza privata, guardie giurate e steward. Report sigillati con GPS verificato e sigillo ECDSA — difendibili davanti al cliente e in audit.',
   },
   hero: {
     badge: 'Software per Vigilanza Privata, Guardie Giurate e Steward',
@@ -43,8 +43,8 @@ const content: SettoreContent = {
         desc: 'Flow riceve i dati istantaneamente. Il responsabile operativo verifica la copertura di tutti i posti, i cambi turno e gli eventuali scostamenti senza chiamare il campo.',
       },
       {
-        title: 'Il report è già pronto per il cliente',
-        desc: 'A fine turno il registro presenze è strutturato con dati GPS reali, pronto per l\'audit del cliente o per l\'ispezione della Prefettura.',
+        title: 'Il report è una prova verificabile',
+        desc: 'A fine turno il registro presenze è sigillato con dati GPS reali e sigillo ECDSA. Il cliente o la Prefettura possono verificarne l\'autenticità in autonomia — l\'audit diventa una formalità.',
       },
     ],
   },
@@ -89,8 +89,8 @@ const content: SettoreContent = {
     ],
   },
   cta: {
-    title: 'Stop alle contestazioni sui turni.',
-    subtitle: 'GeoTapp Flow e TimeTracker danno alla tua agenzia di vigilanza le prove verificabili che i clienti richiedono.',
+    title: 'Il turno c\'è stato. Ora dimostralo.',
+    subtitle: 'GeoTapp genera prove verificabili di ogni presidiamento — report sigillati che il cliente e la Prefettura possono controllare da soli.',
     primary: 'Richiedi una Demo',
     secondary: 'Vedi i Prezzi',
   },
