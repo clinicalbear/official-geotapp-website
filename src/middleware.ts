@@ -347,6 +347,21 @@ export async function middleware(req: NextRequest) {
     return NextResponse.next();
   }
 
+  // 0c. Force trailing slash — prevent duplicate URLs in GSC
+  // 308 (Permanent Redirect) preserves the HTTP method (unlike 301).
+  // Exclusions: static files (have a file extension), API routes, blog proxy,
+  // and paths that already end with '/'.
+  const isStaticFile = /\.(.+)$/.test(pathname);
+  const hasTrailingSlash = pathname.endsWith('/');
+  const isApiRoute = pathname.startsWith('/api/');
+  const isBlogProxy = pathname.startsWith('/blog');
+
+  if (!isStaticFile && !hasTrailingSlash && !isApiRoute && !isBlogProxy && pathname !== '') {
+    const trailingSlashUrl = req.nextUrl.clone();
+    trailingSlashUrl.pathname = pathname + '/';
+    return NextResponse.redirect(trailingSlashUrl, { status: 308 });
+  }
+
   // 1. Blog proxy — serve blog.geotapp.com WordPress content at geotapp.com/blog/
   if (pathname.startsWith('/blog')) {
     const wpPath = pathname.slice(BLOG_BASE.length) || '/';
