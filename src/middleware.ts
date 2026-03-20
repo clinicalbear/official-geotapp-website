@@ -312,7 +312,7 @@ export async function middleware(req: NextRequest) {
   const host = req.headers.get('host');
 
   // 0a. www → non-www redirect (301 permanent)
-  // Whitelist explicit per evitare host header injection / open redirect.
+  // Explicit allowlist to prevent host header injection / open redirect.
   if (host !== null && host.startsWith('www.')) {
     const bareHost = host.slice(4); // removes "www." prefix
     if (bareHost === 'geotapp.com') {
