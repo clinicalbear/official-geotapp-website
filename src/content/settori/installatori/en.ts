@@ -2,8 +2,8 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'Software for Electricians and Plumbers | Job Management and Work Reports | GeoTapp',
-    description: 'GeoTapp for electricians, plumbers and maintenance contractors: job management, GPS time tracking, verifiable work reports and photo evidence.',
+    title: 'App for Electricians & Installers | GeoTapp — Certify Every Job',
+    description: 'GeoTapp is the field service app for electricians, plumbers and installers that certifies every job: GPS-verified reports and photo evidence. Try free.',
   },
   hero: {
     badge: 'Software for Electricians, Plumbers and Field Maintenance Teams',

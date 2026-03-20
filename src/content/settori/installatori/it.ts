@@ -2,8 +2,8 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'Prova Verificabile degli Interventi per Installatori e Manutentori | GeoTapp',
-    description: 'GeoTapp trasforma ogni intervento in prova verificabile per installatori, elettricisti e manutentori. Report sigillati con GPS, foto e sigillo ECDSA — zero contestazioni su ore e lavori svolti.',
+    title: 'App per Installatori ed Elettricisti | GeoTapp — Certifica ogni intervento',
+    description: 'GeoTapp è l\'app per installatori, elettricisti e idraulici che certifica ogni intervento: report con GPS e foto, prove difendibili verso il cliente. Prova gratis.',
   },
   hero: {
     badge: 'Software per Installatori, Elettricisti, Idraulici e Manutentori',
@@ -43,8 +43,8 @@ const content: SettoreContent = {
         desc: 'Flow riceve i dati istantaneamente. Il responsabile vede commessa, avanzamento, tecnico assegnato e prove fotografiche senza chiamare.',
       },
       {
-        title: 'Il report è una prova verificabile',
-        desc: 'A fine intervento il report è sigillato con dati GPS reali e prove fotografiche. Il sigillo ECDSA rende qualsiasi modifica rilevabile. Il cliente può verificare l\'autenticità da solo — nessuna contestazione possibile.',
+        title: 'Il report è la tua prova — da mostrare al cliente',
+        desc: 'A fine intervento il report è generato con dati GPS reali e prove fotografiche — non alterabile. Qualsiasi modifica è rilevabile. Il cliente può verificare l\'autenticità da solo. Quando nasce un dubbio, non devi spiegare. Devi mostrare.',
       },
     ],
   },
@@ -57,7 +57,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Prove fotografiche sigillate',
-        desc: 'Il tecnico scatta foto dall\'app. Ogni immagine è collegata all\'intervento con GPS e timestamp, poi inclusa nel sigillo crittografico del report. Nessuno può alterarle senza che il sistema lo rilevi.',
+        desc: 'Il tecnico scatta foto dall\'app. Ogni immagine è collegata all\'intervento con GPS e timestamp, poi inclusa nel report — non alterabile dopo la generazione. Nessuno può modificarle senza che il sistema lo rilevi.',
       },
       {
         title: 'Export per la paga',
@@ -95,6 +95,28 @@ const content: SettoreContent = {
     secondary: 'Vedi i Prezzi',
   },
   schema_sector_name: 'Installatori',
+  schema_faq: [
+    {
+      question: 'GeoTapp funziona per elettricisti e idraulici in mobilità?',
+      answer: 'Sì. L\'app mobile GeoTapp TimeTracker è pensata per tecnici e installatori che lavorano su cantieri e abitazioni private. Registrano interventi, foto e ore direttamente dallo smartphone, senza tornare in ufficio.',
+    },
+    {
+      question: 'Come certifico un intervento di manutenzione o installazione?',
+      answer: 'Al termine di ogni intervento, il tecnico registra su GeoTapp: orario di inizio e fine con GPS verificato, foto del lavoro eseguito e note tecniche. Il sistema produce un report sigillato che il cliente può verificare autonomamente.',
+    },
+    {
+      question: 'Posso usare GeoTapp per gestire più squadre di installatori su cantieri diversi?',
+      answer: 'Sì. GeoTapp Flow permette al titolare di coordinare più squadre in tempo reale, assegnare commesse, seguire lo stato degli interventi e raccogliere prove fotografiche da tutti i cantieri attivi.',
+    },
+    {
+      question: 'I report sono accettati in caso di contestazione con il cliente?',
+      answer: 'I report GeoTapp sono sigillati digitalmente con GPS, timestamp e prove fotografiche. Sono stati usati con successo per risolvere contestazioni su interventi non riconosciuti dal cliente finale.',
+    },
+    {
+      question: 'È conforme al GDPR per la geolocalizzazione dei tecnici?',
+      answer: 'Sì. GeoTapp gestisce la geolocalizzazione dei dipendenti in modo conforme al GDPR e alle linee guida del Garante Privacy italiano. Fornisce la modulistica per l\'informativa ai dipendenti.',
+    },
+  ],
 };
 
 export default content;
