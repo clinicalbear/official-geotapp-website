@@ -10,7 +10,7 @@ import { JsonLd } from '@/components/seo/JsonLd';
 export const metadata: Metadata = {
   title: 'Blog | GeoTapp — Certificazione del lavoro sul campo',
   description: 'Guide, approfondimenti e risorse su gestione squadre, certificazione interventi, GDPR e geolocalizzazione. Dal team GeoTapp.',
-  alternates: { canonical: '/blog/' },
+  alternates: { canonical: 'https://geotapp.com/blog/' },
 };
 
 type WpPost = {
