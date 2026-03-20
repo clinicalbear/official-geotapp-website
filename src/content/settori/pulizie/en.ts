@@ -2,8 +2,8 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'Software for Cleaning Companies & Facility Management | Shift Tracking & Proof | GeoTapp',
-    description: 'GeoTapp for cleaning companies and facility management: verifiable GPS clock-ins, photo evidence of cleaned areas, multi-site team supervision and compliance with Agency Workers Regulations and NMW records.',
+    title: 'Cleaning Company Software | GeoTapp — Certify Every Job',
+    description: 'GeoTapp is the cleaning company management software that certifies every job: tamper-proof reports with GPS and photos, zero disputes. GDPR compliant. Try free.',
   },
   hero: {
     badge: 'Software for Cleaning Companies, Facility Services and FM Contractors',

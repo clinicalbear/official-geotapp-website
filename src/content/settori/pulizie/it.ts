@@ -2,8 +2,8 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'Prova Verificabile degli Interventi per Imprese di Pulizie e Facility | GeoTapp',
-    description: 'GeoTapp trasforma ogni pulizia in prova verificabile per imprese di pulizie e facility management. Report sigillati con GPS e foto — il committente verifica da solo, zero contestazioni.',
+    title: 'App per Imprese di Pulizie | GeoTapp — Certifica ogni intervento',
+    description: 'GeoTapp è l\'app per imprese di pulizie che certifica ogni intervento: report sigillati con GPS e foto, zero contestazioni. Conforme CCNL Multiservizi e GDPR. Prova gratis.',
   },
   hero: {
     badge: 'Software per Imprese di Pulizie, Facility Management e Multiservizi',
