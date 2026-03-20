@@ -42,6 +42,16 @@ export interface SettoreContent {
     primary: string;
     secondary: string;
   };
+  differenza?: {
+    title: string;
+    subtitle: string;
+    rows: Array<{ label: string; competitor: string; geotapp: string }>;
+  };
+  trust?: {
+    title: string;
+    body: string;
+    badge: string;
+  };
   schema_sector_name: string;
   schema_faq?: Array<{
     question: string;
