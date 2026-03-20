@@ -2,7 +2,7 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App per Installatori ed Elettricisti | GeoTapp — Certifica ogni intervento',
+    title: 'App Installatori ed Elettricisti | GeoTapp — Certifica',
     description: 'GeoTapp è l\'app per installatori, elettricisti e idraulici che certifica ogni intervento: report con GPS e foto, prove difendibili verso il cliente. Prova gratis.',
   },
   hero: {

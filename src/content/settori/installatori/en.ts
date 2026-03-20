@@ -2,7 +2,7 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App for Electricians & Installers | GeoTapp — Certify Every Job',
+    title: 'GeoTapp for Electricians & Installers — Certify Every Job',
     description: 'GeoTapp is the field service app for electricians, plumbers and installers that certifies every job: GPS-verified reports and photo evidence. Try free.',
   },
   hero: {
