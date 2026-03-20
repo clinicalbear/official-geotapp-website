@@ -55,13 +55,15 @@ export default function SettorePageLayout({ content, locale, settore }: Props) {
       <Script
         id={`${settore}-breadcrumb-schema`}
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema).replace(/</g, '\\u003c') }}
       />
-      <Script
-        id={`${settore}-faq-schema`}
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+      {!(content.schema_faq && content.schema_faq.length > 0) && (
+        <Script
+          id={`${settore}-faq-schema`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema).replace(/</g, '\\u003c') }}
+        />
+      )}
 
       {content.schema_faq && content.schema_faq.length > 0 && (
         <>
