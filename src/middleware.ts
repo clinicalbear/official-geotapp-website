@@ -311,11 +311,15 @@ export async function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
   const host = req.headers.get('host');
 
-  // Redirect www → non-www (301 permanent)
+  // 0a. www → non-www redirect (301 permanent)
+  // Whitelist explicit per evitare host header injection / open redirect.
   if (host !== null && host.startsWith('www.')) {
-    const url = req.nextUrl.clone();
-    url.host = host.slice(4); // rimuove "www."
-    return NextResponse.redirect(url, { status: 301 });
+    const bareHost = host.slice(4); // removes "www." prefix
+    if (bareHost === 'geotapp.com') {
+      const url = req.nextUrl.clone();
+      url.host = bareHost;
+      return NextResponse.redirect(url, { status: 301 });
+    }
   }
 
   // 0. Sitemap — serve complete XML directly from middleware.
