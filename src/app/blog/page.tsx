@@ -44,7 +44,18 @@ async function fetchBlogPosts(): Promise<WpPost[]> {
 }
 
 function stripHtml(html: string): string {
-  return html.replace(/<[^>]*>/g, '').trim();
+  return html
+    .replace(/<[^>]*>/g, '')
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&#8216;/g, '\u2018')
+    .replace(/&#8217;/g, '\u2019')
+    .replace(/&#8220;/g, '\u201C')
+    .replace(/&#8221;/g, '\u201D')
+    .replace(/&nbsp;/g, ' ')
+    .trim();
 }
 
 function normalizePostUrl(link: string, slug: string): string {
@@ -90,7 +101,7 @@ export default async function BlogPage() {
 
       <section className="container mx-auto max-w-4xl space-y-12">
         {posts.length === 0 ? (
-          <p className="text-text-secondary text-center py-20">Caricamento articoli in corso…</p>
+          <p className="text-text-secondary text-center py-20">Nessun articolo disponibile al momento.</p>
         ) : (
           posts.map((post) => {
             const postUrl = normalizePostUrl(post.link, post.slug);
