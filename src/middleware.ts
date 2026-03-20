@@ -351,7 +351,7 @@ export async function middleware(req: NextRequest) {
   // 308 (Permanent Redirect) preserves the HTTP method (unlike 301).
   // Exclusions: static files (have a file extension), API routes, blog proxy,
   // and paths that already end with '/'.
-  const isStaticFile = /\.(.+)$/.test(pathname);
+  const isStaticFile = /\/[^/]*\.[^/]+$/.test(pathname);
   const hasTrailingSlash = pathname.endsWith('/');
   const isApiRoute = pathname.startsWith('/api/');
   const isBlogProxy = pathname.startsWith('/blog');
