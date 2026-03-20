@@ -2,8 +2,8 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'Software for Security Guards & Stewarding | Verified Attendance & Incident Reports | GeoTapp',
-    description: 'Workforce management software for security companies, SIA-licensed guards and stewarding teams: GPS-verified attendance, incident reports with location proof, and licence tracking for BS 7858 compliance.',
+    title: 'Security Company Software | GeoTapp — Certify Every Shift',
+    description: 'GeoTapp is the security company management software that certifies every shift: GPS-verified attendance, documented rounds and photo evidence. GDPR compliant. Try free.',
   },
   hero: {
     badge: 'Software for Security Guards, Stewarding & Events Security',

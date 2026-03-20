@@ -2,8 +2,8 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'Prova Verificabile dei Turni per Vigilanza Privata e Guardie Giurate | GeoTapp',
-    description: 'GeoTapp trasforma ogni turno in prova verificabile per vigilanza privata, guardie giurate e steward. Report sigillati con GPS verificato e sigillo ECDSA — difendibili davanti al cliente e in audit.',
+    title: 'Software per Aziende di Sicurezza | GeoTapp — Certifica ogni turno',
+    description: 'GeoTapp è il software per aziende di sicurezza che certifica ogni turno: presenze GPS verificate, ronde documentate e prove fotografiche. Conforme GDPR. Prova gratis.',
   },
   hero: {
     badge: 'Software per Vigilanza Privata, Guardie Giurate e Steward',
@@ -43,8 +43,8 @@ const content: SettoreContent = {
         desc: 'Flow riceve i dati istantaneamente. Il responsabile operativo verifica la copertura di tutti i posti, i cambi turno e gli eventuali scostamenti senza chiamare il campo.',
       },
       {
-        title: 'Il report è una prova verificabile',
-        desc: 'A fine turno il registro presenze è sigillato con dati GPS reali e sigillo ECDSA. Il cliente o la Prefettura possono verificarne l\'autenticità in autonomia — l\'audit diventa una formalità.',
+        title: 'Il report è la tua prova — difendibile in audit',
+        desc: 'A fine turno il registro presenze è generato con dati GPS reali — non alterabile. Il cliente o la Prefettura possono verificarne l\'autenticità in autonomia — l\'audit diventa una formalità.',
       },
     ],
   },
@@ -95,6 +95,28 @@ const content: SettoreContent = {
     secondary: 'Vedi i Prezzi',
   },
   schema_sector_name: 'Vigilanza Privata',
+  schema_faq: [
+    {
+      question: 'GeoTapp funziona per la gestione di guardie giurate e ronde di sicurezza?',
+      answer: 'Sì. GeoTapp permette alle aziende di sicurezza di certificare ogni turno e ogni ronda: le guardie timbrano con GPS verificato dallo smartphone, producendo prove documentabili del servizio svolto.',
+    },
+    {
+      question: 'Come documento le ronde e i controlli periodici?',
+      answer: 'Ogni controllo viene registrato con GeoTapp TimeTracker: orario, posizione GPS verificata, foto del sito e note. Il report sigillato è disponibile per il committente in tempo reale o al termine del turno.',
+    },
+    {
+      question: 'Posso dimostrare al cliente che le ronde sono state effettuate regolarmente?',
+      answer: 'Sì. I report GeoTapp sono sigillati digitalmente e includono GPS, timestamp e prove fotografiche. Il committente può verificare autonomamente che ogni ronda sia stata eseguita nell\'orario e nel luogo previsti.',
+    },
+    {
+      question: 'Il sistema è conforme alle normative sul lavoro notturno e ai CCNL della vigilanza?',
+      answer: 'GeoTapp traccia orari, straordinari e presenze in modo conforme ai principali CCNL del settore vigilanza e sicurezza, rispettando le normative GDPR sulla geolocalizzazione dei dipendenti.',
+    },
+    {
+      question: 'Funziona anche per coordinare più squadre su siti diversi?',
+      answer: 'Sì. Con GeoTapp Flow, il responsabile vede in tempo reale dove sono tutte le guardie, assegna i turni, gestisce le sostituzioni urgenti e raccoglie i report da tutti i siti in un\'unica dashboard.',
+    },
+  ],
 };
 
 export default content;
