@@ -43,6 +43,10 @@ export interface SettoreContent {
     secondary: string;
   };
   schema_sector_name: string;
+  schema_faq?: Array<{
+    question: string;
+    answer: string;
+  }>;
 }
 
 export type SettoreSlug = 'installatori' | 'pulizie' | 'sicurezza';

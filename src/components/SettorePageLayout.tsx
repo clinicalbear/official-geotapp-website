@@ -1,9 +1,10 @@
 import Link from 'next/link';
 import Script from 'next/script';
-import { ArrowRight, CheckCircle2, Clock, FileText } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Clock } from 'lucide-react';
 import { localizePath } from '@/lib/i18n/locale-routing';
 import type { AppLocale } from '@/lib/i18n/config';
 import type { SettoreContent, SettoreSlug } from '@/content/settori/types';
+import { JsonLd } from '@/components/seo/JsonLd';
 
 interface Props {
   content: SettoreContent;
@@ -13,16 +14,16 @@ interface Props {
 
 const SETTORE_COLORS: Record<
   SettoreSlug,
-  { badge: string; h1: string }
+  { badge: string; h1: string; btn: string; step: string }
 > = {
-  installatori: { badge: 'bg-indigo-100 text-indigo-700', h1: 'text-indigo-600' },
-  pulizie:      { badge: 'bg-cyan-100 text-cyan-700',    h1: 'text-cyan-600'   },
-  sicurezza:    { badge: 'bg-amber-100 text-amber-700',  h1: 'text-amber-600'  },
+  installatori: { badge: 'bg-indigo-100 text-indigo-700', h1: 'text-indigo-600', btn: 'bg-indigo-600 hover:bg-indigo-700', step: 'bg-indigo-600' },
+  pulizie:      { badge: 'bg-cyan-100 text-cyan-700',    h1: 'text-cyan-600',   btn: 'bg-cyan-600 hover:bg-cyan-700',     step: 'bg-cyan-600'   },
+  sicurezza:    { badge: 'bg-amber-100 text-amber-700',  h1: 'text-amber-600',  btn: 'bg-amber-600 hover:bg-amber-700',   step: 'bg-amber-600'  },
 };
 
 export default function SettorePageLayout({ content, locale, settore }: Props) {
   const colors = SETTORE_COLORS[settore];
-  const contactLink = localizePath('/contact', locale);
+  const demoLink = localizePath('/demo', locale);
   const pricingLink = localizePath('/pricing', locale);
 
   const breadcrumbSchema = {
@@ -62,6 +63,35 @@ export default function SettorePageLayout({ content, locale, settore }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
+      {content.schema_faq && content.schema_faq.length > 0 && (
+        <>
+          <JsonLd data={{
+            '@context': 'https://schema.org',
+            '@type': 'Service',
+            name: content.meta.title,
+            description: content.meta.description,
+            provider: {
+              '@type': 'Organization',
+              name: 'GeoTapp',
+              url: 'https://geotapp.com',
+            },
+            url: `https://geotapp.com/settori/${settore}/`,
+          }} />
+          <JsonLd data={{
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: content.schema_faq.map(({ question, answer }) => ({
+              '@type': 'Question',
+              name: question,
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: answer,
+              },
+            })),
+          }} />
+        </>
+      )}
+
       {/* Hero */}
       <section className="relative overflow-hidden bg-slate-50 px-6 pb-24 pt-32">
         <div className="container relative z-10 mx-auto max-w-6xl">
@@ -81,8 +111,8 @@ export default function SettorePageLayout({ content, locale, settore }: Props) {
               </p>
               <div className="flex flex-col gap-4 sm:flex-row">
                 <Link
-                  href={contactLink}
-                  className="inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-8 py-4 font-bold text-white shadow-lg hover:bg-indigo-700 transition-colors"
+                  href={demoLink}
+                  className={`inline-flex items-center gap-2 rounded-xl px-8 py-4 font-bold text-white shadow-lg transition-colors ${colors.btn}`}
                 >
                   {content.hero.cta_primary} <ArrowRight size={18} />
                 </Link>
@@ -113,25 +143,7 @@ export default function SettorePageLayout({ content, locale, settore }: Props) {
         </div>
       </section>
 
-      {/* Pain section */}
-      <section className="px-6 py-24 bg-white">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">
-            {content.pain.title}
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {content.pain.items.map((item, i) => (
-              <div key={i} className="p-6 rounded-2xl border border-slate-200 bg-slate-50">
-                <FileText className="text-red-400 mb-4" size={28} />
-                <h3 className="font-bold text-slate-900 mb-2">{item.title}</h3>
-                <p className="text-slate-600 text-sm leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Workflow */}
+      {/* Come funziona */}
       <section className="px-6 py-24 bg-slate-50">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-3xl font-bold text-slate-900 mb-4">
@@ -141,7 +153,7 @@ export default function SettorePageLayout({ content, locale, settore }: Props) {
           <div className="grid md:grid-cols-3 gap-8">
             {content.workflow.steps.map((step, i) => (
               <div key={i}>
-                <div className="w-12 h-12 rounded-full bg-indigo-600 text-white font-bold text-lg flex items-center justify-center mx-auto mb-4">
+                <div className={`w-12 h-12 rounded-full ${colors.step} text-white font-bold text-lg flex items-center justify-center mx-auto mb-4`}>
                   {i + 1}
                 </div>
                 <h3 className="font-bold text-slate-900 mb-2">{step.title}</h3>
@@ -206,8 +218,8 @@ export default function SettorePageLayout({ content, locale, settore }: Props) {
           <p className="text-slate-300 text-xl mb-10">{content.cta.subtitle}</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href={contactLink}
-              className="inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-8 py-4 font-bold text-white hover:bg-indigo-700 transition-colors"
+              href={demoLink}
+              className={`inline-flex items-center gap-2 rounded-xl px-8 py-4 font-bold text-white transition-colors ${colors.btn}`}
             >
               {content.cta.primary} <ArrowRight size={18} />
             </Link>

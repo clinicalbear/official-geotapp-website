@@ -3,7 +3,7 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'Prova Verificabile degli Interventi per Imprese di Pulizie e Facility | GeoTapp',
-    description: 'GeoTapp trasforma ogni pulizia in prova verificabile per imprese di pulizie e facility management. Report sigillati con GPS, foto e sigillo ECDSA — il committente verifica da solo, zero contestazioni.',
+    description: 'GeoTapp trasforma ogni pulizia in prova verificabile per imprese di pulizie e facility management. Report sigillati con GPS e foto — il committente verifica da solo, zero contestazioni.',
   },
   hero: {
     badge: 'Software per Imprese di Pulizie, Facility Management e Multiservizi',
@@ -43,8 +43,8 @@ const content: SettoreContent = {
         desc: 'Flow riceve i dati istantaneamente. Il responsabile vede quale edificio è stato servito, da chi, a che ora e con quali prove fotografiche — senza chiamare nessuno.',
       },
       {
-        title: 'Il report è una prova verificabile',
-        desc: 'A fine turno il verbale è sigillato con dati GPS, foto degli ambienti e sigillo ECDSA. Il committente può verificare l\'autenticità di ogni intervento in autonomia — senza bisogno di fidarsi della tua parola.',
+        title: 'Il report è la tua prova — il committente lo verifica da solo',
+        desc: 'A fine turno il verbale è generato con dati GPS e foto degli ambienti — non alterabile. Il committente può verificare l\'autenticità di ogni intervento in autonomia — senza bisogno di fidarsi della tua parola.',
       },
     ],
   },
@@ -95,6 +95,28 @@ const content: SettoreContent = {
     secondary: 'Vedi i Prezzi',
   },
   schema_sector_name: 'Imprese di Pulizie',
+  schema_faq: [
+    {
+      question: 'GeoTapp è solo un\'app di timbratura?',
+      answer: 'No. GeoTapp è un sistema di certificazione del lavoro: ogni intervento produce un report sigillato con GPS verificato, foto e timestamp che il committente può verificare autonomamente. Va oltre la semplice timbratura.',
+    },
+    {
+      question: 'Come funziona per le imprese di pulizie con più edifici?',
+      answer: 'Gli operatori timbrano dall\'app mobile su ogni edificio. Il gestore vede in tempo reale chi ha pulito dove e quando, con foto dell\'ambiente allegate. Nessuna contestazione da parte del committente.',
+    },
+    {
+      question: 'È conforme al CCNL Multiservizi?',
+      answer: 'Sì. GeoTapp traccia pause, straordinari e presenze in modo conforme al CCNL Multiservizi e rispetta le normative GDPR sulla geolocalizzazione dei dipendenti.',
+    },
+    {
+      question: 'Quanto costa?',
+      answer: 'I piani partono da pochi euro per operatore al mese. Puoi richiedere una demo gratuita per vedere il sistema in funzione sulla tua realtà.',
+    },
+    {
+      question: 'Funziona anche per il facility management e il multiservizi?',
+      answer: 'Sì. GeoTapp è usato da imprese di pulizie, multiservizi, facility management e ogni realtà con operatori distribuiti su più siti.',
+    },
+  ],
 };
 
 export default content;
