@@ -354,7 +354,11 @@ export async function middleware(req: NextRequest) {
   const isStaticFile = /\/[^/]*\.[^/]+$/.test(pathname);
   const hasTrailingSlash = pathname.endsWith('/');
   const isApiRoute = pathname.startsWith('/api/');
-  const isBlogProxy = pathname.startsWith('/blog');
+  // Exclude deep blog paths (/blog/slug, /blog/wp-admin, etc.) from trailing slash redirect.
+  // /blog and /blog/ are NOT excluded: /blog gets trailing slash → /blog/, then locale routing
+  // handles it correctly. Excluding /blog (without slash) here caused a loop because it skipped
+  // trailing-slash redirect but also skipped the proxy, falling into locale routing indefinitely.
+  const isBlogProxy = pathname.startsWith('/blog/');
 
   if (!isStaticFile && !hasTrailingSlash && !isApiRoute && !isBlogProxy && pathname !== '') {
     const trailingSlashUrl = req.nextUrl.clone();
@@ -363,7 +367,10 @@ export async function middleware(req: NextRequest) {
   }
 
   // 1. Blog proxy — serve blog.geotapp.com WordPress content at geotapp.com/blog/
-  if (pathname.startsWith('/blog')) {
+  // Exception: /blog and /blog/ (index) are served by Next.js, not proxied.
+  // Proxying the WP root (/) causes a redirect loop: WP responds with a redirect
+  // to geotapp.com/blog/ which the middleware re-intercepts indefinitely.
+  if (pathname.startsWith('/blog') && pathname !== '/blog' && pathname !== '/blog/') {
     const wpPath = pathname.slice(BLOG_BASE.length) || '/';
     const normalizedWpPath =
       wpPath === '/wp-sitemap.xml' ? '/wp-sitemap.xml/' : wpPath;
