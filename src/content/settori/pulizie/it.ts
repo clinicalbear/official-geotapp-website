@@ -2,7 +2,7 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App per Imprese di Pulizie | GeoTapp — Certifica ogni intervento',
+    title: 'GeoTapp per Imprese di Pulizie — Certifica ogni intervento',
     description: 'GeoTapp è l\'app per imprese di pulizie che certifica ogni intervento: report sigillati con GPS e foto, zero contestazioni. Conforme CCNL Multiservizi e GDPR. Prova gratis.',
   },
   hero: {
