@@ -53,12 +53,12 @@
     ],
     "report_section_title": "Il report. Non un riepilogo. Una prova.",
     "report_section_subtitle": "Ogni report GeoTapp è generato automaticamente dai dati reali del campo.",
-    "report_section_body": "Timbrature GPS, foto con timestamp, note operative. Il sistema applica un sigillo crittografico che rende ogni modifica rilevabile. Il risultato non è un documento da mandare al cliente. È una prova che il cliente può verificare da solo.",
-    "report_feature_1": "Sigillo ECDSA — qualsiasi modifica invalida il documento",
+    "report_section_body": "Timbrature GPS, foto con timestamp, note operative. I dati sono bloccati: non alterabili dopo la generazione. Quando nasce un dubbio, non devi spiegare. Devi mostrare. Il risultato non è un documento da mandare al cliente. È una prova che chiude la discussione.",
+    "report_feature_1": "Non modificabile dopo la generazione — qualsiasi alterazione è rilevabile",
     "report_feature_2": "Verificabile senza account — da chiunque, in autonomia",
     "report_feature_3": "Dati GPS e fotografici integrati e non separabili",
     "report_feature_4": "Generato automaticamente — nessuna compilazione manuale",
-    "report_cta": "Vedi come funziona il Verifier"
+    "report_cta": "Scopri come il cliente lo verifica da solo"
   },
   "home_sections": {
     "flow": {
@@ -88,9 +88,9 @@
     "verifier": {
       "badge": "GeoTapp Verifier",
       "title": "Non hai bisogno che si fidino di te.",
-      "subtitle": "Il cliente ha il report. Lo verifica da solo, senza accedere a GeoTapp. Se i dati corrispondono al lavoro reale, il sigillo regge. Se qualcuno ha modificato il documento, il sigillo non regge più. Senza appello.",
+      "subtitle": "Non sei tu a dire che il lavoro è stato fatto. È il report che lo dimostra. Il cliente lo verifica da solo, senza accedere a GeoTapp. Se i dati corrispondono al lavoro reale, il report regge. Se qualcuno ha modificato il documento, non regge più. Senza appello.",
       "features": {
-        "integrity": "<strong>Sigillo ECDSA:</strong> Il report è firmato digitalmente sui dati reali di campo. Qualsiasi modifica invalida il sigillo.",
+        "integrity": "<strong>Dati non alterabili:</strong> Il report è generato sui dati reali di campo e bloccato. Qualsiasi modifica lo rende non valido — senza appello.",
         "independent": "<strong>Verifica autonoma:</strong> Chiunque abbia il report può verificarne l'autenticità — senza account, senza accesso alla piattaforma."
       },
       "link": "Scopri GeoTapp Verifier"
@@ -114,14 +114,41 @@
         },
         {
           "title": "Prova difendibile nel tempo",
-          "desc": "Ogni report porta un sigillo ECDSA sui dati reali di campo. Contestazione? Il dato c'è. Verificabile. Sempre."
+          "desc": "Ogni report è sigillato sui dati reali di campo. Contestazione? Il dato c'è. Verificabile da chiunque. Sempre."
         }
       ]
     },
     "footer_cta": {
       "title": "Smetti di perdere lavoro non documentato.",
       "subtitle": "Ogni intervento senza prova verificabile è un intervento contestabile. GeoTapp chiude questa falla.",
-      "button": "Parla con noi"
+      "button": "Dimostra il tuo lavoro",
+      "pricing_link": "Vedi i piani e prezzi →"
+    },
+    "settori": {
+      "title": "Documentazione verificabile per ogni settore — Soluzioni GeoTapp",
+      "subtitle": "Scegli il tuo settore per vedere come GeoTapp genera prove del lavoro svolto — da mostrare al cliente in caso di contestazione.",
+      "see_all": "Vedi tutti i settori supportati",
+      "installatori": {
+        "name": "Installatori",
+        "desc": "Elettricisti, Idraulici, Impiantisti. Ogni intervento documentato con GPS e foto — dati non alterabili, verificabili dal cliente.",
+        "cta": "Dimostra ogni intervento"
+      },
+      "sicurezza": {
+        "name": "Sicurezza",
+        "desc": "Vigilanza, Steward, Servizi Fiduciari. Presenze verificabili, turni documentati con prova oggettiva.",
+        "cta": "Prova presenze al cliente"
+      },
+      "pulizie": {
+        "name": "Pulizie",
+        "desc": "Imprese di pulizia, Facility, Multiservizi. Ogni passaggio documentato e verificabile dal committente — zero contestazioni.",
+        "cta": "Evita contestazioni"
+      }
+    },
+    "app_mockup": {
+      "greeting": "Buongiorno,",
+      "status": "🟢 In Servizio",
+      "next_job_label": "Prossimo Intervento",
+      "next_job_time": "Tra 15 min"
     }
   },
   "pricing": {

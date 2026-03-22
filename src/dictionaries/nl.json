@@ -54,11 +54,11 @@
     "report_section_title": "Het rapport. Geen samenvatting. Een bewijs.",
     "report_section_subtitle": "Elk GeoTapp-rapport wordt automatisch gegenereerd uit echte veldgegevens.",
     "report_section_body": "GPS-tijdregistraties, foto's met tijdstempel, operationele notities. Het systeem brengt een cryptografisch zegel aan waardoor elke wijziging detecteerbaar is. Het resultaat is geen document om naar de klant te sturen — het is een bewijs dat de klant zelf kan verifiëren.",
-    "report_feature_1": "ECDSA-zegel — elke wijziging maakt het document ongeldig",
+    "report_feature_1": "Niet wijzigbaar na aanmaak — elke wijziging is detecteerbaar",
     "report_feature_2": "Verifieerbaar zonder account — door iedereen, zelfstandig",
     "report_feature_3": "GPS- en fotogegevens geïntegreerd en onscheidbaar",
     "report_feature_4": "Automatisch gegenereerd — geen handmatige invulling",
-    "report_cta": "Zie hoe Verifier werkt"
+    "report_cta": "Zie hoe uw klant zelf verifieert"
   },
   "home_sections": {
     "flow": {
@@ -90,7 +90,7 @@
       "title": "U hoeft niet dat ze u vertrouwen.",
       "subtitle": "De klant heeft het rapport. Hij verifieert het zelf, zonder GeoTapp te openen. Als de gegevens overeenkomen met het echte werk, houdt het zegel stand. Als iemand het document heeft gewijzigd, breekt het zegel. Geen beroep.",
       "features": {
-        "integrity": "<strong>ECDSA-zegel:</strong> Het rapport is digitaal ondertekend met echte veldgegevens. Elke wijziging maakt het zegel ongeldig.",
+        "integrity": "<strong>Niet-aanpasbare gegevens:</strong> Het rapport wordt gegenereerd op echte veldgegevens en vergrendeld. Elke wijziging maakt het ongeldig — zonder beroep.",
         "independent": "<strong>Autonome verificatie:</strong> Iedereen met het rapport kan de authenticiteit controleren — geen account, geen platformtoegang."
       },
       "link": "Ontdek GeoTapp Verifier"
@@ -114,14 +114,41 @@
         },
         {
           "title": "Verdedigbaar bewijs over tijd",
-          "desc": "Elk rapport draagt een ECDSA-zegel op echte veldgegevens. Geschil? De data zijn er. Verifieerbaar. Altijd."
+          "desc": "Elk rapport wordt vergrendeld op echte veldgegevens — niet wijzigbaar na aanmaak. Geschil? De data zijn er. Door iedereen verifieerbaar. Altijd."
         }
       ]
     },
     "footer_cta": {
       "title": "Stop met het verliezen van ongedocumenteerd werk.",
       "subtitle": "Elke opdracht zonder verifieerbaar bewijs is een aanvechtbare opdracht. GeoTapp sluit deze kloof.",
-      "button": "Neem contact op"
+      "button": "Neem contact op",
+      "pricing_link": "Zie plannen en prijzen →"
+    },
+    "settori": {
+      "title": "Verifieerbare documentatie voor elke sector — GeoTapp-oplossingen",
+      "subtitle": "Kies uw sector om te zien hoe GeoTapp werkbewijzen genereert — te tonen aan de klant bij een geschil.",
+      "see_all": "Alle ondersteunde sectoren bekijken",
+      "installatori": {
+        "name": "Installateurs",
+        "desc": "Elektriciens, Loodgieters, Installateurs. Elke opdracht gedocumenteerd met GPS en foto's — onvervalsbare data, controleerbaar door de klant.",
+        "cta": "Elke opdracht bewijzen"
+      },
+      "sicurezza": {
+        "name": "Beveiliging",
+        "desc": "Bewakers, Stewards, Fiduciaire diensten. Controleerbare aanwezigheid, gedocumenteerde diensten met objectief bewijs.",
+        "cta": "Aanwezigheid bewijzen"
+      },
+      "pulizie": {
+        "name": "Schoonmaak",
+        "desc": "Schoonmaakbedrijven, Facility, Multiservice. Elke ronde gedocumenteerd en controleerbaar door de opdrachtgever — nul geschillen.",
+        "cta": "Geschillen vermijden"
+      }
+    },
+    "app_mockup": {
+      "greeting": "Goedemorgen,",
+      "status": "🟢 In dienst",
+      "next_job_label": "Volgende opdracht",
+      "next_job_time": "Over 15 min"
     }
   },
   "pricing": {

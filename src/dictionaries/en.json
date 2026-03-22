@@ -54,11 +54,11 @@
     "report_section_title": "The report. Not a summary. A proof.",
     "report_section_subtitle": "Every GeoTapp report is generated automatically from real field data.",
     "report_section_body": "GPS clock-ins, timestamped photos, operational notes. The system applies a cryptographic seal that makes any modification detectable. The result is not a document to send to the client. It's proof the client can verify independently.",
-    "report_feature_1": "ECDSA seal — any modification invalidates the document",
+    "report_feature_1": "Tamper-proof after generation — any modification is detectable",
     "report_feature_2": "Verifiable without an account — by anyone, independently",
     "report_feature_3": "GPS and photo data integrated and inseparable",
     "report_feature_4": "Generated automatically — no manual form-filling",
-    "report_cta": "See how Verifier works"
+    "report_cta": "See how your client verifies it independently"
   },
   "home_sections": {
     "flow": {
@@ -90,7 +90,7 @@
       "title": "You don't need them to trust you.",
       "subtitle": "The client has the report. They verify it themselves, without accessing GeoTapp. If the data matches the real work, the seal holds. If anyone has modified the document, the seal breaks. No appeal.",
       "features": {
-        "integrity": "<strong>ECDSA seal:</strong> The report is digitally signed against the real field data. Any modification invalidates the seal.",
+        "integrity": "<strong>Tamper-proof data:</strong> The report is generated from real field data and locked. Any modification makes it invalid — no appeal.",
         "independent": "<strong>Autonomous verification:</strong> Anyone with the report can verify its authenticity — no account, no platform access needed."
       },
       "link": "Explore GeoTapp Verifier"
@@ -114,14 +114,41 @@
         },
         {
           "title": "Defensible proof over time",
-          "desc": "Every report carries an ECDSA seal on real field data. Dispute? The data is there. Verifiable. Always."
+          "desc": "Every report is locked on real field data — not alterable after generation. Dispute? The data is there. Verifiable by anyone. Always."
         }
       ]
     },
     "footer_cta": {
       "title": "Stop losing undocumented work.",
       "subtitle": "Every job without verifiable proof is a job that can be disputed. GeoTapp closes this gap.",
-      "button": "Talk to Us"
+      "button": "Talk to Us",
+      "pricing_link": "See plans and pricing →"
+    },
+    "settori": {
+      "title": "Verifiable documentation for every sector — GeoTapp Solutions",
+      "subtitle": "Choose your sector to see how GeoTapp generates work proof — to show your client when disputes arise.",
+      "see_all": "See all supported sectors",
+      "installatori": {
+        "name": "Installers",
+        "desc": "Electricians, Plumbers, System Installers. Every job documented with GPS and photos — tamper-proof data, verifiable by the client.",
+        "cta": "Prove every job"
+      },
+      "sicurezza": {
+        "name": "Security",
+        "desc": "Guards, Stewards, Trust Services. Verifiable attendance, documented shifts with objective proof.",
+        "cta": "Prove attendance to clients"
+      },
+      "pulizie": {
+        "name": "Cleaning",
+        "desc": "Cleaning companies, Facility, Multiservice. Every round documented and verifiable by the client — zero disputes.",
+        "cta": "Avoid disputes"
+      }
+    },
+    "app_mockup": {
+      "greeting": "Good morning,",
+      "status": "🟢 On Duty",
+      "next_job_label": "Next Job",
+      "next_job_time": "In 15 min"
     }
   },
   "pricing": {

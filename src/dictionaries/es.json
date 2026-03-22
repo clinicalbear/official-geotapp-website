@@ -54,11 +54,11 @@
     "report_section_title": "El informe. No un resumen. Una prueba.",
     "report_section_subtitle": "Cada informe GeoTapp se genera automáticamente a partir de datos reales del campo.",
     "report_section_body": "Registros GPS, fotos con marca de tiempo, notas operativas. El sistema aplica un sello criptográfico que hace detectable cualquier modificación. El resultado no es un documento para enviar al cliente — es una prueba que el cliente puede verificar por sí mismo.",
-    "report_feature_1": "Sello ECDSA — cualquier modificación invalida el documento",
+    "report_feature_1": "No modificable tras la generación — cualquier alteración es detectable",
     "report_feature_2": "Verificable sin cuenta — por cualquiera, de forma autónoma",
     "report_feature_3": "Datos GPS y fotográficos integrados e inseparables",
     "report_feature_4": "Generado automáticamente — sin compilación manual",
-    "report_cta": "Ver cómo funciona el Verifier"
+    "report_cta": "Ver cómo el cliente lo verifica por sí solo"
   },
   "home_sections": {
     "flow": {
@@ -90,7 +90,7 @@
       "title": "No necesitas que confíen en ti.",
       "subtitle": "El cliente tiene el informe. Lo verifica él mismo, sin acceder a GeoTapp. Si los datos corresponden al trabajo real, el sello aguanta. Si alguien ha modificado el documento, el sello se rompe. Sin apelación.",
       "features": {
-        "integrity": "<strong>Sello ECDSA:</strong> El informe está firmado digitalmente sobre los datos reales de campo. Cualquier modificación invalida el sello.",
+        "integrity": "<strong>Datos no alterables:</strong> El informe se genera sobre los datos reales de campo y queda bloqueado. Cualquier modificación lo invalida — sin apelación.",
         "independent": "<strong>Verificación autónoma:</strong> Cualquiera con el informe puede verificar su autenticidad — sin cuenta, sin acceso a la plataforma."
       },
       "link": "Explorar GeoTapp Verifier"
@@ -114,14 +114,41 @@
         },
         {
           "title": "Prueba defendible en el tiempo",
-          "desc": "Cada informe lleva un sello ECDSA sobre los datos reales de campo. ¿Disputa? El dato está. Verificable. Siempre."
+          "desc": "Cada informe queda bloqueado sobre datos reales de campo — no alterable tras la generación. ¿Disputa? El dato está. Verificable por cualquiera. Siempre."
         }
       ]
     },
     "footer_cta": {
       "title": "Deja de perder trabajo no documentado.",
       "subtitle": "Cada trabajo sin prueba verificable es un trabajo impugnable. GeoTapp cierra esta brecha.",
-      "button": "Habla con nosotros"
+      "button": "Habla con nosotros",
+      "pricing_link": "Ver planes y precios →"
+    },
+    "settori": {
+      "title": "Documentación verificable para cada sector — Soluciones GeoTapp",
+      "subtitle": "Elige tu sector para ver cómo GeoTapp genera pruebas del trabajo realizado — para mostrar al cliente en caso de disputa.",
+      "see_all": "Ver todos los sectores compatibles",
+      "installatori": {
+        "name": "Instaladores",
+        "desc": "Electricistas, Fontaneros, Técnicos. Cada intervención documentada con GPS y fotos — datos inalterables, verificables por el cliente.",
+        "cta": "Demostrar cada intervención"
+      },
+      "sicurezza": {
+        "name": "Seguridad",
+        "desc": "Vigilancia, Stewards, Servicios Fiduciarios. Presencias verificables, turnos documentados con prueba objetiva.",
+        "cta": "Probar presencias al cliente"
+      },
+      "pulizie": {
+        "name": "Limpieza",
+        "desc": "Empresas de limpieza, Facility, Multiservicios. Cada ronda documentada y verificable por el cliente — cero disputas.",
+        "cta": "Evitar disputas"
+      }
+    },
+    "app_mockup": {
+      "greeting": "Buenos días,",
+      "status": "🟢 En servicio",
+      "next_job_label": "Próxima intervención",
+      "next_job_time": "En 15 min"
     }
   },
   "pricing": {

@@ -181,10 +181,10 @@ export default function Home() {
         <div className="container mx-auto px-6 max-w-6xl">
           <div className="text-center mb-10">
             <h2 className="text-2xl font-bold text-slate-800">
-              Documentazione verificabile per ogni settore — Soluzioni GeoTapp
+              {dict.home_sections.settori.title}
             </h2>
             <p className="text-slate-500">
-              Scegli il tuo settore per vedere come GeoTapp genera prove del lavoro svolto — da mostrare al cliente in caso di contestazione.
+              {dict.home_sections.settori.subtitle}
             </p>
           </div>
 
@@ -199,14 +199,14 @@ export default function Home() {
                   <Hammer size={24} />
                 </div>
                 <h3 className="font-bold text-lg text-slate-900">
-                  Installatori
+                  {dict.home_sections.settori.installatori.name}
                 </h3>
               </div>
               <p className="text-sm text-slate-600 mb-4">
-                Elettricisti, Idraulici, Impiantisti. Ogni intervento documentato con GPS e foto — dati non alterabili, verificabili dal cliente.
+                {dict.home_sections.settori.installatori.desc}
               </p>
               <div className="text-amber-600 font-bold text-sm flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                Dimostra ogni intervento <ArrowRight size={16} />
+                {dict.home_sections.settori.installatori.cta} <ArrowRight size={16} />
               </div>
             </Link>
 
@@ -219,13 +219,13 @@ export default function Home() {
                 <div className="p-3 bg-indigo-100 text-indigo-600 rounded-lg group-hover:bg-indigo-500 group-hover:text-white transition-colors">
                   <ShieldCheck size={24} />
                 </div>
-                <h3 className="font-bold text-lg text-slate-900">Sicurezza</h3>
+                <h3 className="font-bold text-lg text-slate-900">{dict.home_sections.settori.sicurezza.name}</h3>
               </div>
               <p className="text-sm text-slate-600 mb-4">
-                Vigilanza, Steward, Servizi Fiduciari. Presenze verificabili, turni documentati con prova oggettiva.
+                {dict.home_sections.settori.sicurezza.desc}
               </p>
               <div className="text-indigo-600 font-bold text-sm flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                Prova presenze al cliente <ArrowRight size={16} />
+                {dict.home_sections.settori.sicurezza.cta} <ArrowRight size={16} />
               </div>
             </Link>
 
@@ -238,13 +238,13 @@ export default function Home() {
                 <div className="p-3 bg-cyan-100 text-cyan-600 rounded-lg group-hover:bg-cyan-500 group-hover:text-white transition-colors">
                   <Sparkles size={24} />
                 </div>
-                <h3 className="font-bold text-lg text-slate-900">Pulizie</h3>
+                <h3 className="font-bold text-lg text-slate-900">{dict.home_sections.settori.pulizie.name}</h3>
               </div>
               <p className="text-sm text-slate-600 mb-4">
-                Imprese di pulizia, Facility, Multiservizi. Ogni passaggio documentato e verificabile dal committente — zero contestazioni.
+                {dict.home_sections.settori.pulizie.desc}
               </p>
               <div className="text-cyan-600 font-bold text-sm flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                Evita contestazioni <ArrowRight size={16} />
+                {dict.home_sections.settori.pulizie.cta} <ArrowRight size={16} />
               </div>
             </Link>
           </div>
@@ -253,7 +253,7 @@ export default function Home() {
               href={getLink('/settori')}
               className="inline-flex items-center gap-2 text-slate-600 font-semibold hover:text-slate-900 transition-colors text-sm"
             >
-              Vedi tutti i settori supportati <ArrowRight size={16} />
+              {dict.home_sections.settori.see_all} <ArrowRight size={16} />
             </Link>
           </div>
         </div>
@@ -508,20 +508,20 @@ export default function Home() {
                 <div className="w-full h-full bg-slate-800 rounded-[2rem] overflow-hidden relative">
                   {/* Fake App UI */}
                   <div className="absolute top-0 left-0 w-full h-40 bg-app p-6 text-white">
-                    <div className="text-xs opacity-80 mt-8">Buongiorno,</div>
+                    <div className="text-xs opacity-80 mt-8">{dict.home_sections.app_mockup.greeting}</div>
                     <div className="text-2xl font-bold">Marco</div>
                     <div className="mt-4 px-3 py-1 bg-white/20 rounded-full text-xs inline-block">
-                      🟢 In Servizio
+                      {dict.home_sections.app_mockup.status}
                     </div>
                   </div>
                   <div className="absolute top-44 left-4 right-4 bg-white rounded-xl p-4 shadow-lg">
                     <div className="text-xs text-slate-400 uppercase font-bold mb-2">
-                      Prossimo Intervento
+                      {dict.home_sections.app_mockup.next_job_label}
                     </div>
                     <div className="text-slate-900 font-bold text-lg">
                       Via Roma 45, Milano
                     </div>
-                    <div className="text-app text-sm mt-1">Tra 15 min</div>
+                    <div className="text-app text-sm mt-1">{dict.home_sections.app_mockup.next_job_time}</div>
                   </div>
                 </div>
               </div>
@@ -640,7 +640,7 @@ export default function Home() {
               href={getLink('/pricing')}
               className="text-slate-400 hover:text-slate-200 text-sm underline underline-offset-4 transition-colors"
             >
-              Vedi i piani e prezzi →
+              {dict.home_sections.footer_cta.pricing_link}
             </Link>
           </div>
         </div>

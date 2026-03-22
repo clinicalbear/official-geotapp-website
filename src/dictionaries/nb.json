@@ -54,11 +54,11 @@
     "report_section_title": "Rapporten. Ikke et sammendrag. Et bevis.",
     "report_section_subtitle": "Hver GeoTapp-rapport genereres automatisk fra reelle feltdata.",
     "report_section_body": "GPS-stempling, tidsstemplede bilder, operative notater. Systemet påfører et kryptografisk segl som gjør enhver endring sporbar. Resultatet er ikke et dokument å sende til kunden — det er et bevis kunden kan verifisere selv.",
-    "report_feature_1": "ECDSA-segl — enhver endring ugyldiggjør dokumentet",
+    "report_feature_1": "Ikke redigerbar etter generering — enhver endring oppdages",
     "report_feature_2": "Verifiserbar uten konto — av hvem som helst, selvstendig",
     "report_feature_3": "GPS- og fotodata integrert og uadskillelige",
     "report_feature_4": "Automatisk generert — ingen manuell utfylling",
-    "report_cta": "Se hvordan Verifier fungerer"
+    "report_cta": "Se hvordan kunden din verifiserer selv"
   },
   "home_sections": {
     "flow": {
@@ -90,7 +90,7 @@
       "title": "Du trenger ikke at de stoler på deg.",
       "subtitle": "Kunden har rapporten. Han verifiserer den selv uten å åpne GeoTapp. Hvis dataene stemmer med det virkelige arbeidet, holder seglet. Hvis noen har endret dokumentet, brytes seglet. Ingen anke.",
       "features": {
-        "integrity": "<strong>ECDSA-segl:</strong> Rapporten er digitalt signert på ekte feltdata. Enhver endring ugyldiggjør seglet.",
+        "integrity": "<strong>Uforanderlige data:</strong> Rapporten genereres på ekte feltdata og låses. Enhver endring gjør den ugyldig — uten unntak.",
         "independent": "<strong>Autonom verifikasjon:</strong> Hvem som helst med rapporten kan verifisere dens autentisitet — ingen konto, ingen plattformtilgang."
       },
       "link": "Utforsk GeoTapp Verifier"
@@ -114,14 +114,41 @@
         },
         {
           "title": "Forsvarbart bevis over tid",
-          "desc": "Hver rapport bærer et ECDSA-segl på ekte feltdata. Tvist? Dataene er der. Verifiserbare. Alltid."
+          "desc": "Hver rapport låses på ekte feltdata — ikke redigerbar etter generering. Tvist? Dataene er der. Verifiserbare av hvem som helst. Alltid."
         }
       ]
     },
     "footer_cta": {
       "title": "Slutt å miste udokumentert arbeid.",
       "subtitle": "Hvert oppdrag uten verifiserbart bevis er et anfektbart oppdrag. GeoTapp lukker dette hullet.",
-      "button": "Snakk med oss"
+      "button": "Bevis arbeidet ditt",
+      "pricing_link": "Se planer og priser →"
+    },
+    "settori": {
+      "title": "Verifiserbar dokumentasjon for hver sektor — GeoTapp-løsninger",
+      "subtitle": "Velg din sektor for å se hvordan GeoTapp genererer arbeidsbeviser — for å vise kunden ved tvister.",
+      "see_all": "Se alle støttede sektorer",
+      "installatori": {
+        "name": "Installatører",
+        "desc": "Elektrikere, Rørleggere, Teknikere. Hvert oppdrag dokumentert med GPS og bilder — uforanderlige data, verifiserbare av kunden.",
+        "cta": "Bevis hvert oppdrag"
+      },
+      "sicurezza": {
+        "name": "Sikkerhet",
+        "desc": "Vakter, Stewards, Tillitsbaserte tjenester. Verifiserbar tilstedeværelse, dokumenterte vakter med objektive beviser.",
+        "cta": "Bevis tilstedeværelse"
+      },
+      "pulizie": {
+        "name": "Rengjøring",
+        "desc": "Rengjøringsselskaper, Facility, Multiservice. Hvert gjennomgang dokumentert og verifiserbart av kunden — null tvister.",
+        "cta": "Unngå tvister"
+      }
+    },
+    "app_mockup": {
+      "greeting": "God morgen,",
+      "status": "🟢 På vakt",
+      "next_job_label": "Neste oppdrag",
+      "next_job_time": "Om 15 min"
     }
   },
   "pricing": {

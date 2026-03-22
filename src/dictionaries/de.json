@@ -54,11 +54,11 @@
     "report_section_title": "Der Bericht. Nicht eine Zusammenfassung. Ein Beweis.",
     "report_section_subtitle": "Jeder GeoTapp-Bericht wird automatisch aus echten Felddaten generiert.",
     "report_section_body": "GPS-Zeitstempel, Fotos mit Zeitstempel, Betriebsnotizen. Das System versiegelt jeden Bericht kryptografisch, sodass jede Änderung erkennbar ist. Das Ergebnis ist kein Dokument zum Weiterleiten — es ist ein Nachweis, den der Kunde selbst prüfen kann.",
-    "report_feature_1": "ECDSA-Siegel — jede Änderung macht das Dokument ungültig",
+    "report_feature_1": "Nicht veränderbar nach Erstellung — jede Änderung ist erkennbar",
     "report_feature_2": "Prüfbar ohne Konto — von jedem, unabhängig",
     "report_feature_3": "GPS- und Fotodaten integriert und nicht trennbar",
     "report_feature_4": "Automatisch generiert — keine manuelle Erfassung",
-    "report_cta": "Verifier in Aktion sehen"
+    "report_cta": "So verifiziert Ihr Kunde selbst"
   },
   "home_sections": {
     "flow": {
@@ -90,7 +90,7 @@
       "title": "Sie brauchen kein Vertrauen.",
       "subtitle": "Der Kunde hat den Bericht. Er prüft ihn selbst, ohne GeoTapp zu öffnen. Wenn die Daten der realen Arbeit entsprechen, hält das Siegel. Wenn jemand das Dokument geändert hat, bricht das Siegel. Kein Einspruch.",
       "features": {
-        "integrity": "<strong>ECDSA-Siegel:</strong> Der Bericht ist digital mit echten Felddaten signiert. Jede Änderung macht das Siegel ungültig.",
+        "integrity": "<strong>Nicht veränderbare Daten:</strong> Der Bericht wird auf echten Felddaten generiert und gesperrt. Jede Änderung macht ihn ungültig — ohne Ausnahme.",
         "independent": "<strong>Autonome Prüfung:</strong> Jeder mit dem Bericht kann die Echtheit überprüfen — kein Konto, kein Plattformzugang."
       },
       "link": "GeoTapp Verifier entdecken"
@@ -114,14 +114,41 @@
         },
         {
           "title": "Verteidigbarer Nachweis über Zeit",
-          "desc": "Jeder Bericht trägt ein ECDSA-Siegel auf echten Felddaten. Streit? Die Daten sind da. Verifizierbar. Immer."
+          "desc": "Jeder Bericht ist auf echten Felddaten gesperrt und nicht veränderbar. Streit? Die Daten sind da. Von jedem verifizierbar. Immer."
         }
       ]
     },
     "footer_cta": {
       "title": "Hören Sie auf, undokumentierte Arbeit zu verlieren.",
       "subtitle": "Jeder Einsatz ohne verifizierbaren Nachweis ist ein angreifbarer Einsatz. GeoTapp schließt diese Lücke.",
-      "button": "Kontakt aufnehmen"
+      "button": "Kontakt aufnehmen",
+      "pricing_link": "Pläne und Preise ansehen →"
+    },
+    "settori": {
+      "title": "Nachweisbare Dokumentation für jeden Sektor — GeoTapp-Lösungen",
+      "subtitle": "Wählen Sie Ihren Sektor und sehen Sie, wie GeoTapp Arbeitsnachweise erstellt — zum Vorzeigen beim Kunden bei Konflikten.",
+      "see_all": "Alle unterstützten Sektoren anzeigen",
+      "installatori": {
+        "name": "Installateure",
+        "desc": "Elektriker, Installateure, Anlagentechniker. Jeder Einsatz mit GPS und Fotos dokumentiert — unveränderliche Daten, vom Kunden prüfbar.",
+        "cta": "Jeden Einsatz nachweisen"
+      },
+      "sicurezza": {
+        "name": "Sicherheit",
+        "desc": "Wachdienst, Stewards, Sicherheitsdienste. Nachweisbare Anwesenheit, dokumentierte Schichten mit objektivem Nachweis.",
+        "cta": "Anwesenheit belegen"
+      },
+      "pulizie": {
+        "name": "Reinigung",
+        "desc": "Reinigungsunternehmen, Facility, Multiservice. Jeder Durchgang dokumentiert und vom Auftraggeber prüfbar — null Beschwerden.",
+        "cta": "Beschwerden vermeiden"
+      }
+    },
+    "app_mockup": {
+      "greeting": "Guten Morgen,",
+      "status": "🟢 Im Dienst",
+      "next_job_label": "Nächster Einsatz",
+      "next_job_time": "In 15 Min"
     }
   },
   "pricing": {

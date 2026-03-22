@@ -54,11 +54,11 @@
     "report_section_title": "Le rapport. Pas un résumé. Une preuve.",
     "report_section_subtitle": "Chaque rapport GeoTapp est généré automatiquement à partir des données réelles du terrain.",
     "report_section_body": "Pointages GPS, photos horodatées, notes opérationnelles. Le système appose un sceau cryptographique qui rend toute modification détectable. Le résultat n'est pas un document à envoyer au client — c'est une preuve que le client peut vérifier lui-même.",
-    "report_feature_1": "Sceau ECDSA — toute modification invalide le document",
+    "report_feature_1": "Non modifiable après génération — toute modification est détectable",
     "report_feature_2": "Vérifiable sans compte — par n'importe qui, en autonomie",
     "report_feature_3": "Données GPS et photographiques intégrées et inséparables",
     "report_feature_4": "Généré automatiquement — aucune saisie manuelle",
-    "report_cta": "Voir le Verifier en action"
+    "report_cta": "Voir comment votre client vérifie seul"
   },
   "home_sections": {
     "flow": {
@@ -90,7 +90,7 @@
       "title": "Vous n'avez pas besoin qu'ils vous fassent confiance.",
       "subtitle": "Le client a le rapport. Il le vérifie lui-même, sans accéder à GeoTapp. Si les données correspondent au travail réel, le sceau tient. Si quelqu'un a modifié le document, le sceau se brise. Sans appel.",
       "features": {
-        "integrity": "<strong>Sceau ECDSA :</strong> Le rapport est signé numériquement sur les données terrain réelles. Toute modification invalide le sceau.",
+        "integrity": "<strong>Données non modifiables :</strong> Le rapport est généré sur les données terrain réelles et verrouillé. Toute modification le rend invalide — sans appel.",
         "independent": "<strong>Vérification autonome :</strong> Toute personne possédant le rapport peut vérifier son authenticité — sans compte, sans accès à la plateforme."
       },
       "link": "Découvrir GeoTapp Verifier"
@@ -114,14 +114,41 @@
         },
         {
           "title": "Preuve défendable dans le temps",
-          "desc": "Chaque rapport porte un sceau ECDSA sur les données terrain réelles. Contestation ? La donnée est là. Vérifiable. Toujours."
+          "desc": "Chaque rapport est verrouillé sur les données terrain réelles — non modifiable après génération. Contestation ? La donnée est là. Vérifiable par n'importe qui. Toujours."
         }
       ]
     },
     "footer_cta": {
       "title": "Arrêtez de perdre du travail non documenté.",
       "subtitle": "Chaque intervention sans preuve vérifiable est une intervention contestable. GeoTapp comble cette faille.",
-      "button": "Contactez-nous"
+      "button": "Contactez-nous",
+      "pricing_link": "Voir les plans et tarifs →"
+    },
+    "settori": {
+      "title": "Documentation vérifiable pour chaque secteur — Solutions GeoTapp",
+      "subtitle": "Choisissez votre secteur pour voir comment GeoTapp génère des preuves de travail — à montrer au client en cas de litige.",
+      "see_all": "Voir tous les secteurs supportés",
+      "installatori": {
+        "name": "Installateurs",
+        "desc": "Électriciens, Plombiers, Techniciens. Chaque intervention documentée avec GPS et photos — données inaltérables, vérifiables par le client.",
+        "cta": "Prouver chaque intervention"
+      },
+      "sicurezza": {
+        "name": "Sécurité",
+        "desc": "Gardiennage, Agents de sécurité, Services fiduciaires. Présences vérifiables, équipes documentées avec preuve objective.",
+        "cta": "Prouver les présences"
+      },
+      "pulizie": {
+        "name": "Nettoyage",
+        "desc": "Entreprises de nettoyage, Facility, Multiservices. Chaque passage documenté et vérifiable par le donneur d'ordre — zéro contestation.",
+        "cta": "Éviter les contestations"
+      }
+    },
+    "app_mockup": {
+      "greeting": "Bonjour,",
+      "status": "🟢 En service",
+      "next_job_label": "Prochaine intervention",
+      "next_job_time": "Dans 15 min"
     }
   },
   "pricing": {
