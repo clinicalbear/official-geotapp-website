@@ -226,8 +226,12 @@ async function buildFullSitemap(): Promise<string> {
     for (const { path, priority, changeFrequency } of SITEMAP_ROUTES) {
       const url = `${SITEMAP_BASE_URL}/${locale}${path}`;
       const p = Math.round(priority * 0.85 * 100) / 100;
+      const HREFLANG_MAP: Record<string, string> = {
+        it: 'it-IT', en: 'en', de: 'de-DE', fr: 'fr-FR', es: 'es-ES',
+        pt: 'pt-PT', nl: 'nl-NL', da: 'da-DK', nb: 'nb-NO', sv: 'sv-SE', ru: 'ru-RU',
+      };
       const hreflangLines = [
-        ...locales.map((l) => `    <xhtml:link rel="alternate" hreflang="${l}" href="${SITEMAP_BASE_URL}/${l}${path}"/>`),
+        ...locales.map((l) => `    <xhtml:link rel="alternate" hreflang="${HREFLANG_MAP[l] ?? l}" href="${SITEMAP_BASE_URL}/${l}${path}"/>`),
         `    <xhtml:link rel="alternate" hreflang="x-default" href="${SITEMAP_BASE_URL}${path}"/>`,
       ].join('\n');
       localeEntries.push(

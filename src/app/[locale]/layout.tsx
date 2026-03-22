@@ -34,7 +34,7 @@ const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
     description:
       'GeoTapp genera prove verificabili del lavoro svolto sul campo: report sigillati con dati GPS reali, prove fotografiche con timestamp e documentazione non modificabile verificabile da chiunque. SaaS GDPR-compliant per aziende con operatori in mobilità.',
     featureList: [
-      'Report di lavoro verificabili indipendentemente con sigillo ECDSA',
+      'Report di lavoro non modificabili — verificabili indipendentemente da chiunque',
       'Prove fotografiche collegate a timestamp GPS e commessa',
       'Documentazione interventi non modificabile — ogni alterazione è rilevabile',
       'Prova del lavoro svolto: evidenza oggettiva per ogni intervento sul campo',
@@ -49,7 +49,7 @@ const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
     description:
       'GeoTapp generates verifiable proof of field work: sealed reports with real GPS data, timestamped photo evidence and tamper-proof documentation anyone can verify independently. GDPR-compliant SaaS for companies with mobile operators.',
     featureList: [
-      'Independently verifiable work reports with ECDSA seal',
+      'Tamper-proof work reports — independently verifiable by anyone',
       'Photo evidence linked to GPS timestamp and job',
       'Tamper-proof job documentation — any modification is detectable',
       'Work proof: objective evidence for every field intervention',
@@ -64,7 +64,7 @@ const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
     description:
       'GeoTapp erzeugt verifizierbare Nachweise für geleistete Außendienstarbeit: versiegelte Berichte mit echten GPS-Daten, zeitgestempelte Fotobelege und manipulationssichere Dokumentation, die jeder unabhängig prüfen kann.',
     featureList: [
-      'Unabhängig verifizierbare Arbeitsberichte mit ECDSA-Siegel',
+      'Nicht veränderbare Arbeitsberichte — unabhängig verifizierbar',
       'Fotobelege verknüpft mit GPS-Zeitstempel und Auftrag',
       'Manipulationssichere Auftragsdokumentation — jede Änderung ist erkennbar',
       'Arbeitsnachweis: objektive Beweise für jeden Außendiensteinsatz',
@@ -79,7 +79,7 @@ const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
     description:
       'GeoTapp génère des preuves vérifiables du travail effectué sur le terrain : rapports scellés avec données GPS réelles, preuves photographiques horodatées et documentation inviolable vérifiable par n\'importe qui.',
     featureList: [
-      'Rapports de travail vérifiables indépendamment avec sceau ECDSA',
+      'Rapports de travail non modifiables — vérifiables indépendamment par n\'importe qui',
       'Preuves photographiques liées au timestamp GPS et à l\'intervention',
       'Documentation d\'intervention inviolable — toute modification est détectable',
       'Preuve du travail : evidence objective pour chaque intervention terrain',
@@ -94,7 +94,7 @@ const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
     description:
       'GeoTapp genera pruebas verificables del trabajo realizado en campo: informes sellados con datos GPS reales, evidencias fotográficas con marca de tiempo y documentación a prueba de manipulaciones que cualquiera puede verificar.',
     featureList: [
-      'Informes de trabajo verificables independientemente con sello ECDSA',
+      'Informes de trabajo no modificables — verificables independientemente por cualquiera',
       'Evidencias fotográficas vinculadas a timestamp GPS y trabajo',
       'Documentación de intervenciones a prueba de manipulaciones — cualquier cambio es detectable',
       'Prueba del trabajo: evidencia objetiva para cada intervención en campo',
@@ -109,7 +109,7 @@ const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
     description:
       'GeoTapp gera provas verificáveis do trabalho realizado em campo: relatórios selados com dados GPS reais, provas fotográficas com marca de tempo e documentação inviolável que qualquer pessoa pode verificar.',
     featureList: [
-      'Relatórios de trabalho verificáveis independentemente com selo ECDSA',
+      'Relatórios de trabalho não modificáveis — verificáveis independentemente por qualquer pessoa',
       'Provas fotográficas ligadas a timestamp GPS e intervenção',
       'Documentação de intervenções inviolável — qualquer alteração é detectável',
       'Prova do trabalho: evidência objectiva para cada intervenção em campo',
@@ -124,7 +124,7 @@ const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
     description:
       'GeoTapp genereert verifieerbaar bewijs van uitgevoerd veldwerk: verzegelde rapporten met echte GPS-gegevens, tijdgestempeld fotobewijs en onvervalsbare documentatie die iedereen onafhankelijk kan controleren.',
     featureList: [
-      'Onafhankelijk verifieerbare werkrapporten met ECDSA-zegel',
+      'Niet wijzigbare werkrapporten — onafhankelijk verifieerbaar door iedereen',
       'Fotobewijs gekoppeld aan GPS-tijdstempel en opdracht',
       'Onvervalsbare opdrachtdocumentatie — elke wijziging is detecteerbaar',
       'Werkbewijs: objectief bewijs voor elke velddienst',
@@ -139,7 +139,7 @@ const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
     description:
       'GeoTapp генерирует верифицируемые доказательства выполненной полевой работы: запечатанные отчёты с реальными GPS-данными, фотодоказательства с временными метками и защищённая от изменений документация, проверяемая кем угодно.',
     featureList: [
-      'Независимо верифицируемые рабочие отчёты с ECDSA-печатью',
+      'Неизменяемые рабочие отчёты — независимо верифицируемые кем угодно',
       'Фотодоказательства привязаны к GPS-временной метке и заявке',
       'Неизменяемая документация выездов — любая модификация обнаруживается',
       'Доказательство работы: объективные свидетельства каждого выезда',
@@ -154,7 +154,7 @@ const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
     description:
       'GeoTapp genererer verificerbare beviser for udført feltarbejde: forseglede rapporter med reelle GPS-data, tidsstemplede fotobeviser og uforanderlig dokumentation, som enhver kan verificere uafhængigt.',
     featureList: [
-      'Uafhængigt verificerbare arbejdsrapporter med ECDSA-segl',
+      'Ikke-redigerbare arbejdsrapporter — uafhængigt verificerbare af enhver',
       'Fotobeviser bundet til GPS-tidsstempel og arbejdsordre',
       'Uforanderlig dokumentation af udkald — enhver ændring opdages',
       'Arbejdsbevis: objektive beviser for hvert feltbesøg',
@@ -169,7 +169,7 @@ const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
     description:
       'GeoTapp genererar verifierbara bevis för utfört fältarbete: förseglade rapporter med verkliga GPS-data, tidsstämplade fotobevis och oföränderlig dokumentation som vem som helst kan verifiera oberoende.',
     featureList: [
-      'Oberoende verifierbara arbetsrapporter med ECDSA-sigill',
+      'Oföränderliga arbetsrapporter — oberoende verifierbara av vem som helst',
       'Fotobevis kopplade till GPS-tidsstämpel och arbetsorder',
       'Oföränderlig dokumentation av utryckningar — varje ändring upptäcks',
       'Arbetsproof: objektiva bevis för varje fältuppdrag',
@@ -184,7 +184,7 @@ const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
     description:
       'GeoTapp genererer verifiserbare bevis for utført feltarbeid: forseglede rapporter med ekte GPS-data, tidsstemplede fotobevis og uforanderlig dokumentasjon som hvem som helst kan verifisere uavhengig.',
     featureList: [
-      'Uavhengig verifiserbare arbeidsrapporter med ECDSA-segl',
+      'Ikke-redigerbare arbeidsrapporter — uavhengig verifiserbare av hvem som helst',
       'Fotobevis bundet til GPS-tidsstempel og arbeidsordre',
       'Uforanderlig dokumentasjon av utrykning — enhver endring oppdages',
       'Arbeidsbevis: objektive beviser for hvert feltoppdrag',
@@ -302,7 +302,10 @@ export default async function LocaleLayout({ children, params }: Props) {
                 telephone: '+393520140978',
                 email: 'info@geotapp.com',
                 contactType: 'customer support',
-                availableLanguage: ['Italian', 'English'],
+                availableLanguage: [
+                  'Italian', 'English', 'German', 'French', 'Spanish',
+                  'Portuguese', 'Dutch', 'Russian', 'Danish', 'Swedish', 'Norwegian',
+                ],
               },
             }),
           }}
@@ -316,32 +319,24 @@ export default async function LocaleLayout({ children, params }: Props) {
               '@type': 'SoftwareApplication',
               // @id anchors this as the canonical software entity.
               // Without @id, Google KG cannot link/merge this with the
-              // locale-specific SoftwareApplication (@id: locale URL) from [locale]/layout.tsx,
+              // locale-specific SoftwareApplication (@id: locale URL),
               // creating two anonymous "GeoTapp" software entities in the knowledge graph.
+              // description/featureList use locale data so every language version
+              // shows structured data in the page language, not always Italian.
               '@id': 'https://geotapp.com/#software',
               name: 'GeoTapp',
               applicationCategory: 'BusinessApplication',
               applicationSubCategory: 'Field Service Management',
               operatingSystem: 'Android, iOS, Web',
               url: 'https://geotapp.com',
-              description:
-                'GeoTapp genera prove verificabili del lavoro svolto sul campo: report sigillati con dati GPS reali, prove fotografiche con timestamp e documentazione non modificabile. Ogni alterazione è rilevabile. SaaS GDPR-compliant per aziende con operatori in mobilità.',
+              description: data.description,
               offers: {
                 '@type': 'Offer',
                 price: '0',
                 priceCurrency: 'EUR',
-                description: 'Piano base gratuito, piani premium con abbonamento Stripe',
+                description: data.offersDescription,
               },
-              featureList: [
-                'Report di lavoro verificabili indipendentemente con sigillo ECDSA',
-                'Prove fotografiche collegate a timestamp GPS e commessa',
-                'Documentazione interventi non modificabile — ogni alterazione è rilevabile',
-                'Prova del lavoro svolto: evidenza oggettiva per ogni intervento',
-                'Timbratura GPS geolocalizzata',
-                'Gestione commesse e interventi tecnici',
-                'GDPR compliant — nessun tracciamento continuo',
-                'App mobile Android e iOS (Flutter)',
-              ],
+              featureList: data.featureList,
               publisher: {
                 '@type': 'Organization',
                 '@id': 'https://geotapp.com/#organization',
@@ -365,6 +360,43 @@ export default async function LocaleLayout({ children, params }: Props) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localeSchema) }}
         />
+        {locale === 'it' && (
+          <script
+            id="schema-faq-it"
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'FAQPage',
+              mainEntity: [
+                {
+                  '@type': 'Question',
+                  name: 'Come funziona la rilevazione presenze GPS di GeoTapp?',
+                  acceptedAnswer: { '@type': 'Answer', text: 'L\'operatore apre e chiude il turno dall\'app mobile. GeoTapp registra le coordinate GPS reali in quel momento — non inserite a mano. Ogni timbratura è certificata con timestamp e posizione verificabile da chiunque.' },
+                },
+                {
+                  '@type': 'Question',
+                  name: 'GeoTapp è conforme al GDPR per la geolocalizzazione dei dipendenti?',
+                  acceptedAnswer: { '@type': 'Answer', text: 'Sì. GeoTapp traccia la posizione solo durante l\'orario di lavoro attivo, include modulistica per l\'informativa ai dipendenti e non raccoglie dati non necessari. Conforme alle linee guida del Garante Privacy italiano.' },
+                },
+                {
+                  '@type': 'Question',
+                  name: 'Cosa contiene un report GeoTapp?',
+                  acceptedAnswer: { '@type': 'Answer', text: 'Ogni report include: timestamp di inizio e fine intervento, coordinate GPS verificate, prove fotografiche con hash crittografico, dati dell\'operatore e sigillo digitale. Il report non è modificabile dopo la chiusura.' },
+                },
+                {
+                  '@type': 'Question',
+                  name: 'GeoTapp funziona per imprese di pulizie, installatori e sicurezza?',
+                  acceptedAnswer: { '@type': 'Answer', text: 'Sì. GeoTapp è usato da imprese di pulizie, multiservizi, installatori e servizi di vigilanza. La piattaforma scala da 3 a 300 operatori e gestisce più siti contemporaneamente.' },
+                },
+                {
+                  '@type': 'Question',
+                  name: 'Come si verifica un report GeoTapp?',
+                  acceptedAnswer: { '@type': 'Answer', text: 'Il committente riceve un link univoco e può verificare il report su geotapp.com/verifica/ senza accesso al tuo account. Il sistema confronta il sigillo crittografico e conferma che i dati non sono stati modificati.' },
+                },
+              ],
+            }) }}
+          />
+        )}
         <Script
           strategy="afterInteractive"
           src="https://www.googletagmanager.com/gtag/js?id=G-87PN0GEMW4"

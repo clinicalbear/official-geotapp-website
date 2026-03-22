@@ -29,12 +29,12 @@ const BASE_URL = 'https://geotapp.com';
 // this is the SEO anchor keyword for all locale variants.
 const LOCALE_META: Record<string, { title: string; description: string }> = {
   it: {
-    title: 'GeoTapp | La piattaforma che rende il lavoro verificabile',
-    description: 'GeoTapp trasforma ogni intervento in prova verificabile: report sigillati con dati GPS reali, prove fotografiche e documentazione che chiunque può verificare. Zero contestazioni.',
+    title: 'App Presenze GPS e Certificazione Interventi | GeoTapp',
+    description: 'GeoTapp: rilevazione presenze GPS verificabile, report sigillati e prove fotografiche per imprese di pulizie, installatori e sicurezza. GDPR. Nessuna contestazione.',
   },
   en: {
-    title: 'GeoTapp | The platform that makes work verifiable',
-    description: 'GeoTapp turns every field job into verifiable proof: tamper-proof reports with real GPS data, photo evidence and documentation anyone can verify independently. Zero disputes.',
+    title: 'GPS Field Work Verification App | GeoTapp',
+    description: 'GeoTapp: GPS-verified attendance, tamper-proof reports and photo evidence for cleaning companies, installers and security services. GDPR compliant. Zero disputes.',
   },
   de: {
     title: 'GeoTapp | Die Plattform, die Arbeit verifizierbar macht',
@@ -85,10 +85,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   // x-default → /en/ because:
   //   - /en/ is a real page served by app/[locale]/page.tsx with locale="en"
   //   - bare / triggers a 308 geo-redirect in middleware → invalid x-default per Google spec
+  const HREFLANG_MAP: Record<string, string> = {
+    it: 'it-IT', en: 'en', de: 'de-DE', fr: 'fr-FR', es: 'es-ES',
+    pt: 'pt-PT', nl: 'nl-NL', da: 'da-DK', nb: 'nb-NO', sv: 'sv-SE', ru: 'ru-RU',
+  };
   const languages = Object.fromEntries(
-    SUPPORTED_LOCALES.map((l) => [l, `${BASE_URL}/${l}/`]),
+    SUPPORTED_LOCALES.map((l) => [HREFLANG_MAP[l] ?? l, `${BASE_URL}/${l}/`]),
   ) as Record<string, string>;
-  languages['x-default'] = `${BASE_URL}/en/`;
+  languages['x-default'] = `${BASE_URL}/`;
 
   return {
     // Use absolute title to bypass the root layout template ("%s | GeoTapp").
