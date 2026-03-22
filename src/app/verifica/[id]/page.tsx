@@ -75,7 +75,6 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   return {
     title: `Verifica Report ${id} | GeoTapp`,
     description: 'Verifica l\'autenticità e l\'integrità di un report di intervento certificato da GeoTapp.',
-    robots: { index: false },
   };
 }
 

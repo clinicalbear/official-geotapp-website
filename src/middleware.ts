@@ -228,7 +228,7 @@ async function buildFullSitemap(): Promise<string> {
       const p = Math.round(priority * 0.85 * 100) / 100;
       const hreflangLines = [
         ...locales.map((l) => `    <xhtml:link rel="alternate" hreflang="${l}" href="${SITEMAP_BASE_URL}/${l}${path}"/>`),
-        `    <xhtml:link rel="alternate" hreflang="x-default" href="${SITEMAP_BASE_URL}/en${path}"/>`,
+        `    <xhtml:link rel="alternate" hreflang="x-default" href="${SITEMAP_BASE_URL}${path}"/>`,
       ].join('\n');
       localeEntries.push(
         `  <url>\n` +
