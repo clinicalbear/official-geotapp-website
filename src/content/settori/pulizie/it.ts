@@ -2,34 +2,34 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'GeoTapp per Imprese di Pulizie — Certifica ogni intervento',
-    description: 'GeoTapp certifica ogni intervento di pulizia con report sigillati, GPS verificato e prove fotografiche. Zero contestazioni. Conforme CCNL Multiservizi e GDPR. Prova gratis.',
+    title: 'App per imprese di pulizie | GeoTapp — Certifica ogni intervento',
+    description: 'Contestazioni, operatori non verificabili, report che non bastano. GeoTapp certifica ogni intervento con GPS reale, foto e report non alterabili. Conforme CCNL e GDPR.',
   },
 
   hero: {
     badge: 'Per Imprese di Pulizie, Facility Management e Multiservizi',
-    h1_line1: 'Il tuo personale ha pulito.',
+    h1_line1: 'La tua impresa di pulizie ha lavorato.',
     h1_line2: 'Adesso dimostralo.',
     subtitle:
-      'GeoTapp non registra il lavoro — lo certifica. Report sigillati con GPS reale, foto e timestamp: prove che il committente verifica da solo e che reggono a qualsiasi contestazione.',
+      'I clienti contestano. Gli operatori non sono verificabili. I report non bastano mai. GeoTapp certifica ogni intervento con GPS reale, prove fotografiche e report non alterabili — che il committente può verificare da solo.',
     cta_primary: 'Richiedi una Demo Gratuita',
     cta_note: 'Nessun vincolo. Risposta entro 12 ore lavorative.',
   },
 
   pain: {
-    title: "Il problema non è sapere chi ha timbrato. È non poterlo dimostrare.",
+    title: "Se non puoi dimostrarlo, per il cliente non è mai successo.",
     items: [
       {
         title: "Il cliente nega l'intervento",
         desc: "Dice che l'area non è stata pulita o che l'operatore non era presente. Tu hai un orario sul gestionale. Lui ha un avvocato. Senza prove difendibili, perdi il contratto.",
       },
       {
-        title: "L'ispettorato chiede documentazione reale",
-        desc: "Orari, presenze, straordinari, pause — il foglio presenze non basta. Il CCNL Multiservizi richiede tracciabilità reale. \"C'è scritto sul telefono\" non è documentazione.",
+        title: "Operatori sul campo che non puoi verificare",
+        desc: "Non puoi essere su tutti i siti. Non sai se il lavoro è stato fatto finché il cliente non si lamenta — e a quel punto è già tardi per ricostruire qualcosa.",
       },
       {
-        title: 'I turni non si passano mai davvero',
-        desc: 'Il turno di mattina non sa cosa ha fatto quello di sera. I fogli carta si perdono, i WhatsApp restano ignorati. I reclami arrivano a fine mese quando non c\'è più modo di ricostruire niente.',
+        title: "L'ispettorato chiede documentazione reale",
+        desc: "Orari, presenze, straordinari, pause — il foglio presenze non basta. Il CCNL Multiservizi richiede tracciabilità reale. \"C'è scritto sul telefono\" non è documentazione.",
       },
     ],
   },
@@ -91,7 +91,7 @@ const content: SettoreContent = {
   },
 
   features: {
-    title: 'Cosa cambia concretamente, dal primo mese.',
+    title: 'Meno contestazioni. Più controllo. Report difendibili.',
     items: [
       {
         title: 'Zero contestazioni scritte',
@@ -102,22 +102,28 @@ const content: SettoreContent = {
         desc: 'Non devi più sperare che i tuoi operatori siano dove devono essere. Lo vedi in tempo reale. Su tutti gli edifici contemporaneamente, da qualsiasi dispositivo.',
       },
       {
-        title: 'Fatturazione più rapida e difendibile',
-        desc: 'Ogni ora fatturata ha una prova reale. Il cliente non contesta perché ha già visto il report. I tempi di pagamento si accorciano.',
+        title: 'Report difendibili in qualsiasi sede',
+        desc: 'Ogni report è firmato digitalmente e non alterabile. Vale davanti a un cliente, un ispettore o un avvocato — senza che tu debba spiegare niente.',
       },
       {
         title: "Pronto per l'ispettorato",
         desc: 'Orari, pause, straordinari, notturni — tutto tracciato e conforme al CCNL Multiservizi. In caso di controllo hai tutta la documentazione in ordine in tre clic.',
       },
       {
-        title: 'Passaggi di turno documentati',
-        desc: "Il turno di mattina lascia lo stato dell'edificio. Quello di sera sa esattamente cosa trova. Zero ambiguità, zero reclami interni.",
+        title: 'Gestione multi-sito senza chiamate',
+        desc: "Decine di sedi, un'unica dashboard. Assegni commesse, vedi chi è attivo dove e ricevi alert automatici se un intervento non viene aperto o chiuso nei tempi.",
       },
       {
         title: 'Il tuo personale è protetto',
         desc: 'Un report verificabile protegge anche l\'operatore da accuse infondate. Chi lavora bene lo dimostra. Nessuna zona grigia.',
       },
     ],
+  },
+
+  cta_mid: {
+    title: 'Smetti di perdere contratti per mancanza di prove.',
+    body: 'GeoTapp si installa in un giorno, funziona su qualsiasi smartphone e non richiede formazione tecnica. Il primo report verificabile lo generi il giorno stesso.',
+    cta: 'Vedi come funziona',
   },
 
   testimonial: {
@@ -140,39 +146,39 @@ const content: SettoreContent = {
     items: [
       {
         q: "GeoTapp è solo un'app di timbratura per imprese di pulizie?",
-        a: "No. GeoTapp è un sistema di certificazione del lavoro. Le app di timbratura registrano un orario. GeoTapp produce un report sigillato con GPS verificato, prove fotografiche e timestamp — che il committente può verificare autonomamente. La differenza tra \"c'è scritto\" e \"si può dimostrare\".",
+        a: "No. GeoTapp è un sistema di certificazione del lavoro, non un'app di timbratura. Le app di timbratura registrano un orario. GeoTapp produce un report sigillato con GPS verificato, prove fotografiche e timestamp — che il committente può verificare autonomamente. La differenza tra \"c'è scritto\" e \"si può dimostrare\".",
       },
       {
-        q: 'Come gestisco squadre distribuite su più edifici contemporaneamente?',
-        a: "Con GeoTapp Flow vedi in tempo reale tutti gli operatori attivi, su tutti gli edifici. Puoi assegnare commesse, monitorare gli interventi e ricevere alert automatici in caso di anomalie — da un'unica dashboard, senza telefonate.",
+        q: 'È compatibile con il CCNL Multiservizi?',
+        a: 'Sì. GeoTapp traccia orari, pause e straordinari in modo conforme al CCNL Multiservizi, inclusi notturni e festivi. I dati sono esportabili in formato compatibile con Zucchetti e INAZ per l\'elaborazione paghe. In caso di controllo ispettivo, hai tutta la documentazione pronta.',
       },
       {
-        q: 'Qual è la differenza tra tracciamento e certificazione del lavoro?',
-        a: 'Il tracciamento registra dati: dove era il dipendente, a che ora. La certificazione trasforma quei dati in una prova strutturata, firmata e non alterabile — che vale in caso di contestazione con un cliente, un controllo ispettivo o una disputa legale. GeoTapp fa la seconda cosa.',
+        q: 'Come gestisco squadre distribuite su più siti contemporaneamente?',
+        a: "Con GeoTapp Flow hai un'unica dashboard per tutti i siti. Vedi in tempo reale chi è attivo dove, puoi assegnare commesse e ricevere alert automatici se un intervento non viene aperto o chiuso nei tempi. Nessuna telefonata, nessuna email.",
+      },
+      {
+        q: 'Come controllo che gli operatori abbiano eseguito il lavoro?',
+        a: 'Ogni intervento viene aperto e chiuso con GPS verificato dallo smartphone dell\'operatore. Puoi richiedere foto georeferenziate obbligatorie come prova dell\'esecuzione. Il report viene generato in automatico e non si può modificare dopo la chiusura.',
       },
       {
         q: 'GeoTapp è conforme al GDPR per la geolocalizzazione dei dipendenti?',
-        a: "Sì. GeoTapp gestisce la geolocalizzazione in modo conforme al GDPR e alle linee guida del Garante Privacy italiano. Include la modulistica per l'informativa ai dipendenti e non traccia la posizione fuori dall'orario di lavoro.",
-      },
-      {
-        q: 'È conforme al CCNL Multiservizi?',
-        a: 'Sì. GeoTapp traccia orari, pause e straordinari in modo conforme al CCNL Multiservizi, con esportazione compatibile con Zucchetti e INAZ per l\'elaborazione paghe.',
+        a: "Sì. GeoTapp gestisce la geolocalizzazione in modo conforme al GDPR e alle linee guida del Garante Privacy italiano. Traccia la posizione solo durante l'orario di lavoro attivo, include la modulistica per l'informativa ai dipendenti e non raccoglie dati non necessari.",
       },
       {
         q: 'Funziona anche per il facility management e il multiservizi?',
-        a: 'Sì. GeoTapp è usato da imprese di pulizie, multiservizi, facility management e ogni realtà con operatori distribuiti su più siti. La piattaforma scala da 3 a 300 operatori.',
+        a: 'Sì. GeoTapp è usato da imprese di pulizie, multiservizi, facility management e ogni realtà con operatori distribuiti su più siti. La piattaforma scala da 3 a 300 operatori senza configurazioni complesse.',
       },
       {
         q: "Quanto costa GeoTapp per un'impresa di pulizie?",
-        a: 'I piani partono da pochi euro per operatore al mese. Il modo migliore è richiedere una demo: configuriamo il piano sul tuo numero di operatori e siti, senza impegno.',
+        a: 'I piani partono da pochi euro per operatore al mese. Il modo migliore è richiedere una demo: configuriamo il piano sul tuo numero di operatori e siti reali, senza impegno.',
       },
     ],
   },
 
   cta: {
-    title: "La pulizia c'è stata. Adesso dimostralo.",
+    title: "Smetti di perdere contratti per mancanza di prove.",
     subtitle:
-      'Ogni giorno i tuoi operatori lavorano bene. Il problema è che senza le prove giuste, devi solo sperare che il cliente ti creda. GeoTapp cambia questa dinamica — con documentazione reale.',
+      'Ogni giorno i tuoi operatori lavorano bene. Il problema è che senza documentazione verificabile, devi sperare che il cliente ti creda. GeoTapp cambia questa dinamica.',
     primary: 'Richiedi una Demo Gratuita',
     secondary: 'Vedi i Prezzi',
   },
@@ -182,26 +188,26 @@ const content: SettoreContent = {
   schema_faq: [
     {
       question: "GeoTapp è solo un'app di timbratura per imprese di pulizie?",
-      answer: 'No. GeoTapp è un sistema di certificazione del lavoro: report sigillati con GPS verificato, foto e timestamp verificabili autonomamente dal committente.',
+      answer: 'No. GeoTapp è un sistema di certificazione del lavoro: report sigillati con GPS verificato, foto e timestamp verificabili autonomamente dal committente. Non un\'app di timbratura.',
     },
     {
-      question: 'Come funziona per le imprese di pulizie con più edifici?',
-      answer: 'Gli operatori timbrano su ogni edificio. Il gestore vede in tempo reale chi ha pulito dove e quando. Il committente riceve un report verificabile ad ogni intervento.',
+      question: 'È compatibile con il CCNL Multiservizi?',
+      answer: 'Sì. Traccia orari, pause e straordinari in modo conforme al CCNL Multiservizi con export compatibile Zucchetti/INAZ per l\'elaborazione paghe.',
     },
     {
-      question: 'Qual è la differenza tra tracciamento e certificazione del lavoro?',
-      answer: 'Il tracciamento registra dati. La certificazione produce prove difendibili — firmate, non alterabili, verificabili da terzi. GeoTapp fa la seconda cosa.',
+      question: 'Come gestisco più siti contemporaneamente?',
+      answer: 'Dashboard unica per tutti i siti. Vedi in tempo reale chi è attivo dove, assegni commesse e ricevi alert automatici su anomalie — senza telefonate.',
+    },
+    {
+      question: 'Come controllo che gli operatori abbiano davvero eseguito il lavoro?',
+      answer: 'Ogni intervento viene aperto e chiuso con GPS verificato. Puoi richiedere foto georeferenziate obbligatorie. Il report viene generato automaticamente e non si può modificare dopo la chiusura.',
     },
     {
       question: 'GeoTapp è conforme al GDPR per la geolocalizzazione dei dipendenti?',
-      answer: "Sì. Conforme al GDPR e alle linee guida del Garante Privacy italiano. Include modulistica per l'informativa ai dipendenti e non traccia fuori dall'orario di lavoro.",
+      answer: "Sì. Conforme al GDPR e alle linee guida del Garante Privacy italiano. Traccia solo durante l'orario di lavoro attivo e include modulistica per l'informativa ai dipendenti.",
     },
     {
-      question: 'È conforme al CCNL Multiservizi?',
-      answer: 'Sì. Traccia pause, straordinari e presenze in modo conforme al CCNL Multiservizi con export compatibile Zucchetti/INAZ.',
-    },
-    {
-      question: 'Funziona anche per il facility management?',
+      question: 'Funziona anche per il facility management e il multiservizi?',
       answer: 'Sì. GeoTapp scala da imprese di pulizie a multiservizi e facility management, da 3 a 300 operatori.',
     },
     {

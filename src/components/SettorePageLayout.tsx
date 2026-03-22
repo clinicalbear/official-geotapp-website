@@ -188,6 +188,26 @@ export default function SettorePageLayout({ content, locale, settore }: Props) {
         </section>
       )}
 
+      {/* ── CTA MID-PAGE ── */}
+      {content.cta_mid && (
+        <section className={`px-6 py-16 ${colors.light}`}>
+          <div className="container mx-auto max-w-3xl text-center">
+            <h2 className="text-2xl font-bold text-slate-900 mb-4 md:text-3xl">
+              {content.cta_mid.title}
+            </h2>
+            <p className="text-lg text-slate-600 mb-8 leading-relaxed">
+              {content.cta_mid.body}
+            </p>
+            <Link
+              href={demoLink}
+              className={`inline-flex items-center gap-2 rounded-xl px-8 py-4 font-bold text-white shadow-lg transition-colors ${colors.btn}`}
+            >
+              {content.cta_mid.cta} <ArrowRight size={18} />
+            </Link>
+          </div>
+        </section>
+      )}
+
       {/* ── COME FUNZIONA ── */}
       <section className="px-6 py-24 bg-white">
         <div className="container mx-auto max-w-4xl text-center">

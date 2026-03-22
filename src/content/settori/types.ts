@@ -52,6 +52,11 @@ export interface SettoreContent {
     body: string;
     badge: string;
   };
+  cta_mid?: {
+    title: string;
+    body: string;
+    cta: string;
+  };
   schema_sector_name: string;
   schema_faq?: Array<{
     question: string;
