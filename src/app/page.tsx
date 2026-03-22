@@ -191,7 +191,7 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-6">
             {/* Installatori */}
             <Link
-              href="/settori/installatori"
+              href={getLink('/settori/installatori')}
               className="group p-6 rounded-2xl border border-slate-200 hover:border-amber-400 hover:shadow-lg hover:shadow-amber-100 transition-all bg-slate-50 hover:bg-white"
             >
               <div className="flex items-center gap-4 mb-3">
@@ -212,7 +212,7 @@ export default function Home() {
 
             {/* Sicurezza */}
             <Link
-              href="/settori/sicurezza"
+              href={getLink('/settori/sicurezza')}
               className="group p-6 rounded-2xl border border-slate-200 hover:border-indigo-400 hover:shadow-lg hover:shadow-indigo-100 transition-all bg-slate-50 hover:bg-white"
             >
               <div className="flex items-center gap-4 mb-3">
@@ -231,7 +231,7 @@ export default function Home() {
 
             {/* Pulizie */}
             <Link
-              href="/settori/pulizie"
+              href={getLink('/settori/pulizie')}
               className="group p-6 rounded-2xl border border-slate-200 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-100 transition-all bg-slate-50 hover:bg-white"
             >
               <div className="flex items-center gap-4 mb-3">
@@ -246,6 +246,14 @@ export default function Home() {
               <div className="text-cyan-600 font-bold text-sm flex items-center gap-1 group-hover:translate-x-1 transition-transform">
                 Evita contestazioni <ArrowRight size={16} />
               </div>
+            </Link>
+          </div>
+          <div className="text-center mt-8">
+            <Link
+              href={getLink('/settori')}
+              className="inline-flex items-center gap-2 text-slate-600 font-semibold hover:text-slate-900 transition-colors text-sm"
+            >
+              Vedi tutti i settori supportati <ArrowRight size={16} />
             </Link>
           </div>
         </div>
@@ -627,6 +635,14 @@ export default function Home() {
           >
             {dict.home_sections.footer_cta.button}
           </Link>
+          <div className="mt-6">
+            <Link
+              href={getLink('/pricing')}
+              className="text-slate-400 hover:text-slate-200 text-sm underline underline-offset-4 transition-colors"
+            >
+              Vedi i piani e prezzi →
+            </Link>
+          </div>
         </div>
       </section>
     </div>
