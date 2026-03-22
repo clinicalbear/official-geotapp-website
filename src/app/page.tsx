@@ -282,8 +282,8 @@ export default function Home() {
                     <CheckCircle2 size={16} className="text-green-400 shrink-0" />
                     <span className="text-green-400">Document not modified: CONFIRMED</span>
                   </div>
-                  <div className="mt-4 pt-4 border-t border-slate-700 text-slate-400 text-xs" suppressHydrationWarning>
-                    Verified by GeoTapp Verifier — {new Date().toLocaleDateString('it-IT')}
+                  <div className="mt-4 pt-4 border-t border-slate-700 text-slate-400 text-xs">
+                    Verified by GeoTapp Verifier — 22/03/2026
                   </div>
                 </div>
               </div>

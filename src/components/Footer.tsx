@@ -42,7 +42,7 @@ export default function Footer() {
           <div className="mb-2 flex justify-center md:justify-start">
             <Image
               src="/LogoGeoTapp.png"
-              alt="GeoTapp"
+              alt="GeoTapp - La piattaforma che rende il lavoro verificabile"
               width={220}
               height={96}
               className="h-auto w-[280px] max-w-none"
@@ -71,7 +71,7 @@ export default function Footer() {
           </Link>
         </div>
         <div className="text-text-muted text-xs">
-          &copy; {new Date().getFullYear()} GeoTapp. {dict.rights}
+          &copy; 2026 GeoTapp. {dict.rights}
         </div>
       </div>
       <div className="container mx-auto px-6 pt-6 border-t border-border/40 flex flex-wrap justify-center gap-x-4 gap-y-1">
