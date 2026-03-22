@@ -22,6 +22,7 @@ import {
 import Image from 'next/image';
 import Link from 'next/link';
 import { localizePath } from '@/lib/i18n/locale-routing';
+import DemoReportBanner from '@/components/DemoReportBanner';
 import type { AppLocale } from '@/lib/i18n/config';
 import type { VerifierCopy } from '@/content/verifier/types';
 
@@ -399,6 +400,10 @@ console.log(result.integrityLevel);`}
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">{copy.online_verify_desc}</p>
           </div>
           <OnlineVerifier copy={copy} />
+          <div className="mt-10">
+            <p className="text-center text-sm text-slate-500 mb-4">Non hai un report? Scarica questo esempio reale e prova subito il verificatore.</p>
+            <DemoReportBanner />
+          </div>
         </div>
       </section>
 

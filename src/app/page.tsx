@@ -78,6 +78,7 @@ import {
   getLocaleFromPathname,
   localizePath,
 } from '@/lib/i18n/locale-routing';
+import DemoReportBanner from '@/components/DemoReportBanner';
 
 export default function Home() {
   // Locale resolution is path-based so all internal links stay language-aware.
@@ -183,7 +184,7 @@ export default function Home() {
               Documentazione verificabile per ogni settore — Soluzioni GeoTapp
             </h2>
             <p className="text-slate-500">
-              Scegli il tuo settore per vedere come GeoTapp trasforma ogni intervento in prova verificabile.
+              Scegli il tuo settore per vedere come GeoTapp genera prove del lavoro svolto — da mostrare al cliente in caso di contestazione.
             </p>
           </div>
 
@@ -202,10 +203,10 @@ export default function Home() {
                 </h3>
               </div>
               <p className="text-sm text-slate-600 mb-4">
-                Elettricisti, Idraulici, Impiantisti. Ogni intervento documentato con GPS, foto e sigillo crittografico.
+                Elettricisti, Idraulici, Impiantisti. Ogni intervento documentato con GPS e foto — dati non alterabili, verificabili dal cliente.
               </p>
               <div className="text-amber-600 font-bold text-sm flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                Scopri di più <ArrowRight size={16} />
+                Dimostra ogni intervento <ArrowRight size={16} />
               </div>
             </Link>
 
@@ -224,7 +225,7 @@ export default function Home() {
                 Vigilanza, Steward, Servizi Fiduciari. Presenze verificabili, turni documentati con prova oggettiva.
               </p>
               <div className="text-indigo-600 font-bold text-sm flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                Scopri di più <ArrowRight size={16} />
+                Prova presenze al cliente <ArrowRight size={16} />
               </div>
             </Link>
 
@@ -240,10 +241,10 @@ export default function Home() {
                 <h3 className="font-bold text-lg text-slate-900">Pulizie</h3>
               </div>
               <p className="text-sm text-slate-600 mb-4">
-                Imprese di pulizia, Facility, Multiservizi. Ogni pulizia con prova verificabile e sigillata.
+                Imprese di pulizia, Facility, Multiservizi. Ogni passaggio documentato e verificabile dal committente — zero contestazioni.
               </p>
               <div className="text-cyan-600 font-bold text-sm flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                Scopri di più <ArrowRight size={16} />
+                Evita contestazioni <ArrowRight size={16} />
               </div>
             </Link>
           </div>
@@ -363,13 +364,16 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <div className="text-center">
+          <div className="text-center mb-10">
             <Link
               href={getLink('/products/geotapp-verifier')}
               className="inline-flex items-center gap-2 px-8 py-4 bg-emerald-600 text-white font-bold rounded-xl text-lg hover:bg-emerald-700 transition-all shadow-lg"
             >
               {dict.landing.report_cta} <ArrowRight size={18} />
             </Link>
+          </div>
+          <div className="max-w-2xl mx-auto">
+            <DemoReportBanner />
           </div>
         </div>
       </section>

@@ -5,6 +5,7 @@ import { localizePath } from '@/lib/i18n/locale-routing';
 import type { AppLocale } from '@/lib/i18n/config';
 import type { SettoreContent, SettoreSlug } from '@/content/settori/types';
 import { JsonLd } from '@/components/seo/JsonLd';
+import DemoReportBanner from '@/components/DemoReportBanner';
 
 interface Props {
   content: SettoreContent;
@@ -524,6 +525,14 @@ export default function SettorePageLayout({ content, locale, settore }: Props) {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ── DEMO REPORT ── */}
+      <section className="px-6 py-16 bg-slate-50 border-t border-slate-200">
+        <div className="container mx-auto max-w-2xl">
+          <p className="text-center text-sm font-semibold text-slate-500 uppercase tracking-widest mb-5">Guarda un report reale</p>
+          <DemoReportBanner />
         </div>
       </section>
 
