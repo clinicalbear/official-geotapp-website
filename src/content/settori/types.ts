@@ -57,6 +57,29 @@ export interface SettoreContent {
     body: string;
     cta: string;
   };
+  prima_dopo?: {
+    title: string;
+    prima: string[];
+    dopo: string[];
+  };
+  scenario?: {
+    title: string;
+    body: string;
+    resolution: string;
+  };
+  non_gestionale?: {
+    title: string;
+    subtitle: string;
+    items: Array<{ label: string; gestionale: string; geotapp: string }>;
+  };
+  cosa_cambia?: {
+    title: string;
+    items: Array<{ title: string; desc: string }>;
+  };
+  prova_visiva?: {
+    title: string;
+    subtitle: string;
+  };
   schema_sector_name: string;
   schema_faq?: Array<{
     question: string;

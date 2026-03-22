@@ -12,7 +12,7 @@ const content: SettoreContent = {
     h1_line2: 'Adesso dimostralo.',
     subtitle:
       'I clienti contestano. Gli operatori non sono verificabili. I report non bastano mai. GeoTapp certifica ogni intervento con GPS reale, prove fotografiche e report non alterabili — che il committente può verificare da solo.',
-    cta_primary: 'Richiedi una Demo Gratuita',
+    cta_primary: 'Vedi come funziona su un caso reale',
     cta_note: 'Nessun vincolo. Risposta entro 12 ore lavorative.',
   },
 
@@ -32,6 +32,28 @@ const content: SettoreContent = {
         desc: "Orari, presenze, straordinari, pause — il foglio presenze non basta. Il CCNL Multiservizi richiede tracciabilità reale. \"C'è scritto sul telefono\" non è documentazione.",
       },
     ],
+  },
+
+  prima_dopo: {
+    title: 'Cosa succede adesso. Cosa succede con GeoTapp.',
+    prima: [
+      'Il cliente chiama e dice che il bagno non è stato pulito.',
+      'L\'operatore dice "l\'ho fatto". Il cliente dice "non l\'ha fatto".',
+      'Non hai niente in mano per dimostrare nulla.',
+      'La discussione va avanti per giorni. A volte perdi il contratto.',
+    ],
+    dopo: [
+      'Il cliente chiama e dice che il bagno non è stato pulito.',
+      'Apri il report dell\'intervento: foto del bagno pulito, ora, GPS.',
+      'Glielo mandi. La discussione finisce in trenta secondi.',
+      'Il contratto è al sicuro. L\'operatore è tutelato.',
+    ],
+  },
+
+  scenario: {
+    title: 'Caso reale',
+    body: 'Il cliente dice che il bagno non è stato pulito. Con GeoTapp apri il report e mostri la foto dell\'ambiente, l\'ora di scatto e la posizione GPS — tutto generato automaticamente dall\'app dell\'operatore al momento dell\'intervento.',
+    resolution: 'La discussione finisce lì.',
   },
 
   differenza: {
@@ -67,6 +89,38 @@ const content: SettoreContent = {
         label: 'Controllo in tempo reale',
         competitor: 'No',
         geotapp: 'Sì — tutti i siti, tutti gli operatori',
+      },
+    ],
+  },
+
+  non_gestionale: {
+    title: 'Non è un gestionale.',
+    subtitle: 'I gestionali organizzano il lavoro. GeoTapp lo certifica.',
+    items: [
+      {
+        label: 'Scopo principale',
+        gestionale: 'Pianificare e organizzare',
+        geotapp: 'Generare prove verificabili',
+      },
+      {
+        label: 'Cosa produce',
+        gestionale: 'Dati interni al tuo sistema',
+        geotapp: 'Report sigillati verificabili da terzi',
+      },
+      {
+        label: 'In caso di contestazione',
+        gestionale: 'Mostri dati che solo tu puoi leggere',
+        geotapp: 'Mandi un report che il cliente verifica da solo',
+      },
+      {
+        label: 'Valore verso il cliente',
+        gestionale: 'Nessuno — è uno strumento interno',
+        geotapp: 'Massimo — è una prova indipendente',
+      },
+      {
+        label: 'Prova fotografica',
+        gestionale: 'Non prevista o separata',
+        geotapp: 'Integrata nel report con GPS e timestamp',
       },
     ],
   },
@@ -120,10 +174,33 @@ const content: SettoreContent = {
     ],
   },
 
+  cosa_cambia: {
+    title: 'Cosa cambia davvero.',
+    items: [
+      {
+        title: 'Non devi più fidarti degli operatori.',
+        desc: 'Non perché non siano affidabili — ma perché non devi farlo. Il sistema genera la prova al momento dell\'intervento, indipendentemente da quello che ti dicono. Il dato è quello.',
+      },
+      {
+        title: 'Non devi più difenderti a voce.',
+        desc: 'Smetti di spiegare, giustificare, ricordare. Quando un cliente contesta, apri il report e lo mandi. Non è una tua parola contro la sua. È un documento verificabile.',
+      },
+      {
+        title: 'Hai prove verificabili. Sempre.',
+        desc: 'Ogni intervento chiuso diventa automaticamente un\'evidenza strutturata — GPS, foto, timestamp, firma. Non devi fare niente di extra. Il sistema lo fa mentre i tuoi operatori lavorano.',
+      },
+    ],
+  },
+
+  prova_visiva: {
+    title: 'Cosa vedi tu, cosa vede il cliente.',
+    subtitle: 'L\'app per chi lavora sul campo. Il report per chi deve rispondere.',
+  },
+
   cta_mid: {
-    title: 'Smetti di perdere contratti per mancanza di prove.',
-    body: 'GeoTapp si installa in un giorno, funziona su qualsiasi smartphone e non richiede formazione tecnica. Il primo report verificabile lo generi il giorno stesso.',
-    cta: 'Vedi come funziona',
+    title: 'Vuoi vedere come funziona su un caso reale?',
+    body: 'Ti mostriamo il flusso completo: dall\'operatore che apre l\'intervento al report che riceve il cliente. In 20 minuti capisci se fa per te — senza impegno.',
+    cta: 'Vedi come funziona su un caso reale',
   },
 
   testimonial: {
@@ -176,10 +253,10 @@ const content: SettoreContent = {
   },
 
   cta: {
-    title: "Smetti di perdere contratti per mancanza di prove.",
+    title: "I tuoi operatori lavorano bene. Fai in modo che si veda.",
     subtitle:
-      'Ogni giorno i tuoi operatori lavorano bene. Il problema è che senza documentazione verificabile, devi sperare che il cliente ti creda. GeoTapp cambia questa dinamica.',
-    primary: 'Richiedi una Demo Gratuita',
+      'Ogni giorno il lavoro viene fatto. Il problema è che senza prove verificabili, non vale niente quando qualcuno contesta. GeoTapp trasforma ogni intervento in documentazione difendibile.',
+    primary: 'Vedi come funziona su un caso reale',
     secondary: 'Vedi i Prezzi',
   },
 
