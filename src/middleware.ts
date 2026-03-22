@@ -525,9 +525,15 @@ export async function middleware(req: NextRequest) {
 
   const pathnameLocale = getLocaleFromPathname(pathname);
   if (pathnameLocale) {
-    // Locale-prefixed blog paths → strip locale and redirect to /blog/* for WordPress proxy
+    // Locale-prefixed blog paths → strip locale and redirect to /blog/* for WordPress proxy.
+    // Exception: /blog/ and /blog (index) are served by Next.js — do NOT redirect them or
+    // the middleware creates an infinite loop (/it/blog/ → /blog/ → /it/blog/ → …).
     const strippedPath = stripLocaleFromPathname(pathname);
-    if (strippedPath.startsWith(BLOG_BASE)) {
+    if (
+      strippedPath.startsWith(BLOG_BASE) &&
+      strippedPath !== BLOG_BASE &&
+      strippedPath !== `${BLOG_BASE}/`
+    ) {
       const redirectUrl = req.nextUrl.clone();
       redirectUrl.pathname = strippedPath;
       return NextResponse.redirect(redirectUrl, 308);
