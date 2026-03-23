@@ -42,19 +42,36 @@ function isLocalePost(link: string, locale: string): boolean {
   }
 }
 
+function extractImage(post: any): string | null {
+  const media = post._embedded?.['wp:featuredmedia']?.[0];
+  if (!media) return null;
+  const sizes = media.media_details?.sizes ?? {};
+  const src = (sizes.medium_large ?? sizes.large ?? sizes.medium ?? sizes.full)?.source_url;
+  return src ?? media.source_url ?? null;
+}
+
+async function fetchPage(page: number): Promise<{ posts: any[]; totalPages: number }> {
+  const res = await fetch(
+    `https://blog.geotapp.com/wp-json/wp/v2/posts/?per_page=100&page=${page}&_fields=id,slug,title,excerpt,date,link,featured_media,_links&status=publish&_embed=1`,
+    {
+      headers: { host: 'blog.geotapp.com', 'x-geotapp-proxy': '1', 'x-forwarded-proto': 'https' },
+      next: { revalidate: 3600 },
+    },
+  );
+  if (!res.ok) return { posts: [], totalPages: 0 };
+  const totalPages = parseInt(res.headers.get('x-wp-totalpages') ?? '1', 10);
+  const posts = await res.json();
+  return { posts: Array.isArray(posts) ? posts : [], totalPages };
+}
+
 async function fetchPosts(locale: string): Promise<Post[]> {
   try {
-    const res = await fetch(
-      `https://blog.geotapp.com/wp-json/wp/v2/posts/?per_page=100&_fields=id,slug,title,excerpt,date,link&status=publish`,
-      {
-        headers: { host: 'blog.geotapp.com', 'x-geotapp-proxy': '1', 'x-forwarded-proto': 'https' },
-        next: { revalidate: 3600 },
-      },
-    );
-    if (!res.ok) return [];
-    const data = await res.json();
-    if (!Array.isArray(data)) return [];
-    return data
+    const first = await fetchPage(1);
+    const remaining = first.totalPages > 1
+      ? await Promise.all(Array.from({ length: first.totalPages - 1 }, (_, i) => fetchPage(i + 2)))
+      : [];
+    const all = [first, ...remaining].flatMap((r) => r.posts);
+    return all
       .filter((p: any) => isLocalePost(p.link ?? '', locale))
       .map((p: any) => ({
         id: p.id,
@@ -63,6 +80,7 @@ async function fetchPosts(locale: string): Promise<Post[]> {
         excerpt: stripHtml(p.excerpt?.rendered ?? '').slice(0, 160),
         date: p.date,
         url: normalizeUrl(p.link, p.slug),
+        image: extractImage(p),
       }));
   } catch {
     return [];

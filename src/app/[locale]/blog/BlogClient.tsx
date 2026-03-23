@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import type { AppLocale } from '@/lib/i18n/config';
 
@@ -14,6 +15,7 @@ export type Post = {
   excerpt: string;
   date: string;
   url: string;
+  image: string | null;
 };
 
 export default function BlogClient({ locale, posts }: { locale: AppLocale; posts: Post[] }) {
@@ -47,19 +49,32 @@ export default function BlogClient({ locale, posts }: { locale: AppLocale; posts
                 return (
                   <article key={post.id} className="group flex flex-col">
                     <Link href={post.url} className="flex flex-col h-full">
-                      <div className="flex flex-col h-full bg-white/[0.03] border border-white/10 rounded-2xl p-6 hover:border-white/25 hover:bg-white/[0.06] transition-all">
-                        <span className="text-text-muted text-xs font-mono mb-3 block">{date}</span>
-                        <h2 className="text-lg font-display font-bold text-white mb-3 group-hover:text-primary transition-colors leading-snug flex-1">
-                          {post.title}
-                        </h2>
-                        {post.excerpt && (
-                          <p className="text-text-secondary text-sm leading-relaxed mb-4 line-clamp-3">
-                            {post.excerpt}{post.excerpt.length === 160 ? '…' : ''}
-                          </p>
+                      <div className="flex flex-col h-full bg-white/[0.03] border border-white/10 rounded-2xl overflow-hidden hover:border-white/25 hover:bg-white/[0.06] transition-all border border-white/10">
+                        {post.image && (
+                          <div className="relative w-full h-44 shrink-0">
+                            <Image
+                              src={post.image}
+                              alt={post.title}
+                              fill
+                              className="object-cover"
+                              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                            />
+                          </div>
                         )}
-                        <span className="text-primary text-sm font-bold mt-auto">
-                          {b.read_article}
-                        </span>
+                        <div className="flex flex-col flex-1 p-6">
+                          <span className="text-text-muted text-xs font-mono mb-3 block">{date}</span>
+                          <h2 className="text-lg font-display font-bold text-white mb-3 group-hover:text-primary transition-colors leading-snug flex-1">
+                            {post.title}
+                          </h2>
+                          {post.excerpt && (
+                            <p className="text-text-secondary text-sm leading-relaxed mb-4 line-clamp-3">
+                              {post.excerpt}{post.excerpt.length === 160 ? '…' : ''}
+                            </p>
+                          )}
+                          <span className="text-primary text-sm font-bold mt-auto">
+                            {b.read_article}
+                          </span>
+                        </div>
                       </div>
                     </Link>
                   </article>
