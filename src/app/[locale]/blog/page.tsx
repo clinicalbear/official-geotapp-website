@@ -5,6 +5,10 @@ import { generateLocaleStaticParams as generateStaticParams } from '@/lib/i18n/s
 import type { AppLocale } from '@/lib/i18n/config';
 import BlogClient, { type Post } from './BlogClient';
 
+const WP = 'https://blog.geotapp.com';
+const HEADERS = { host: 'blog.geotapp.com', 'x-geotapp-proxy': '1', 'x-forwarded-proto': 'https' };
+const CACHE = { next: { revalidate: 3600 } };
+
 function stripHtml(html: string): string {
   return html
     .replace(/<[^>]*>/g, '')
@@ -25,63 +29,76 @@ function normalizeUrl(link: string, slug: string): string {
 }
 
 // Polylang's lang= param doesn't filter via REST API.
-// We detect language from the WP permalink structure:
-//   IT posts: geotapp.com/blog/2026/...       (no locale prefix)
-//   Others:   geotapp.com/blog/{locale}/2026/... (locale prefix)
+// Detect language from WP permalink: IT → /blog/YEAR/..., others → /blog/{locale}/YEAR/...
 function isLocalePost(link: string, locale: string): boolean {
   try {
-    const path = new URL(link).pathname; // e.g. /blog/en/2026/... or /blog/2026/...
-    const afterBlog = path.replace(/^\/blog\//, '');
-    if (locale === 'it') {
-      // Italian posts don't have a 2-letter locale segment
-      return !/^[a-z]{2}\//.test(afterBlog);
-    }
+    const afterBlog = new URL(link).pathname.replace(/^\/blog\//, '');
+    if (locale === 'it') return !/^[a-z]{2}\//.test(afterBlog);
     return afterBlog.startsWith(`${locale}/`);
   } catch {
     return false;
   }
 }
 
-function extractImage(post: any): string | null {
-  const media = post._embedded?.['wp:featuredmedia']?.[0];
-  if (!media) return null;
-  const sizes = media.media_details?.sizes ?? {};
-  const src = (sizes.medium_large ?? sizes.large ?? sizes.medium ?? sizes.full)?.source_url;
-  return src ?? media.source_url ?? null;
+async function fetchAllPosts(): Promise<{ id: number; slug: string; title: any; excerpt: any; date: string; link: string; featured_media: number }[]> {
+  const first = await fetch(
+    `${WP}/wp-json/wp/v2/posts/?per_page=100&page=1&_fields=id,slug,title,excerpt,date,link,featured_media&status=publish`,
+    { headers: HEADERS, ...CACHE },
+  );
+  if (!first.ok) return [];
+  const totalPages = parseInt(first.headers.get('x-wp-totalpages') ?? '1', 10);
+  const firstData = await first.json();
+
+  const rest = totalPages > 1
+    ? await Promise.all(
+        Array.from({ length: totalPages - 1 }, (_, i) =>
+          fetch(`${WP}/wp-json/wp/v2/posts/?per_page=100&page=${i + 2}&_fields=id,slug,title,excerpt,date,link,featured_media&status=publish`,
+            { headers: HEADERS, ...CACHE })
+            .then((r) => r.ok ? r.json() : [])
+        )
+      )
+    : [];
+
+  return [firstData, ...rest].flat().filter(Array.isArray(firstData) ? Boolean : Boolean);
 }
 
-async function fetchPage(page: number): Promise<{ posts: any[]; totalPages: number }> {
-  const res = await fetch(
-    `https://blog.geotapp.com/wp-json/wp/v2/posts/?per_page=100&page=${page}&_fields=id,slug,title,excerpt,date,link,featured_media,_links&status=publish&_embed=1`,
-    {
-      headers: { host: 'blog.geotapp.com', 'x-geotapp-proxy': '1', 'x-forwarded-proto': 'https' },
-      next: { revalidate: 3600 },
-    },
-  );
-  if (!res.ok) return { posts: [], totalPages: 0 };
-  const totalPages = parseInt(res.headers.get('x-wp-totalpages') ?? '1', 10);
-  const posts = await res.json();
-  return { posts: Array.isArray(posts) ? posts : [], totalPages };
+async function fetchMediaMap(ids: number[]): Promise<Map<number, string>> {
+  if (ids.length === 0) return new Map();
+  try {
+    const res = await fetch(
+      `${WP}/wp-json/wp/v2/media?include=${ids.join(',')}&per_page=${ids.length}&_fields=id,source_url,media_details`,
+      { headers: HEADERS, ...CACHE },
+    );
+    if (!res.ok) return new Map();
+    const data: any[] = await res.json();
+    const map = new Map<number, string>();
+    for (const m of data) {
+      const sizes = m.media_details?.sizes ?? {};
+      const url = (sizes.medium_large ?? sizes.large ?? sizes.medium ?? sizes.full)?.source_url ?? m.source_url;
+      if (url) map.set(m.id, url);
+    }
+    return map;
+  } catch {
+    return new Map();
+  }
 }
 
 async function fetchPosts(locale: string): Promise<Post[]> {
   try {
-    const first = await fetchPage(1);
-    const remaining = first.totalPages > 1
-      ? await Promise.all(Array.from({ length: first.totalPages - 1 }, (_, i) => fetchPage(i + 2)))
-      : [];
-    const all = [first, ...remaining].flatMap((r) => r.posts);
-    return all
-      .filter((p: any) => isLocalePost(p.link ?? '', locale))
-      .map((p: any) => ({
-        id: p.id,
-        slug: p.slug,
-        title: stripHtml(p.title?.rendered ?? ''),
-        excerpt: stripHtml(p.excerpt?.rendered ?? '').slice(0, 160),
-        date: p.date,
-        url: normalizeUrl(p.link, p.slug),
-        image: extractImage(p),
-      }));
+    const all = await fetchAllPosts();
+    const filtered = all.filter((p) => isLocalePost(p.link ?? '', locale));
+    const mediaIds = [...new Set(filtered.map((p) => p.featured_media).filter((id) => id > 0))];
+    const mediaMap = await fetchMediaMap(mediaIds);
+
+    return filtered.map((p) => ({
+      id: p.id,
+      slug: p.slug,
+      title: stripHtml(p.title?.rendered ?? ''),
+      excerpt: stripHtml(p.excerpt?.rendered ?? '').slice(0, 160),
+      date: p.date,
+      url: normalizeUrl(p.link, p.slug),
+      image: mediaMap.get(p.featured_media) ?? null,
+    }));
   } catch {
     return [];
   }
