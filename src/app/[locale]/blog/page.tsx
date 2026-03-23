@@ -24,10 +24,28 @@ function normalizeUrl(link: string, slug: string): string {
   return `/blog/${slug}/`;
 }
 
+// Polylang's lang= param doesn't filter via REST API.
+// We detect language from the WP permalink structure:
+//   IT posts: geotapp.com/blog/2026/...       (no locale prefix)
+//   Others:   geotapp.com/blog/{locale}/2026/... (locale prefix)
+function isLocalePost(link: string, locale: string): boolean {
+  try {
+    const path = new URL(link).pathname; // e.g. /blog/en/2026/... or /blog/2026/...
+    const afterBlog = path.replace(/^\/blog\//, '');
+    if (locale === 'it') {
+      // Italian posts don't have a 2-letter locale segment
+      return !/^[a-z]{2}\//.test(afterBlog);
+    }
+    return afterBlog.startsWith(`${locale}/`);
+  } catch {
+    return false;
+  }
+}
+
 async function fetchPosts(locale: string): Promise<Post[]> {
   try {
     const res = await fetch(
-      `https://blog.geotapp.com/wp-json/wp/v2/posts/?per_page=100&_fields=id,slug,title,excerpt,date,link&lang=${locale}&status=publish`,
+      `https://blog.geotapp.com/wp-json/wp/v2/posts/?per_page=100&_fields=id,slug,title,excerpt,date,link&status=publish`,
       {
         headers: { host: 'blog.geotapp.com', 'x-geotapp-proxy': '1', 'x-forwarded-proto': 'https' },
         next: { revalidate: 3600 },
@@ -36,14 +54,16 @@ async function fetchPosts(locale: string): Promise<Post[]> {
     if (!res.ok) return [];
     const data = await res.json();
     if (!Array.isArray(data)) return [];
-    return data.map((p: any) => ({
-      id: p.id,
-      slug: p.slug,
-      title: stripHtml(p.title?.rendered ?? ''),
-      excerpt: stripHtml(p.excerpt?.rendered ?? '').slice(0, 160),
-      date: p.date,
-      url: normalizeUrl(p.link, p.slug),
-    }));
+    return data
+      .filter((p: any) => isLocalePost(p.link ?? '', locale))
+      .map((p: any) => ({
+        id: p.id,
+        slug: p.slug,
+        title: stripHtml(p.title?.rendered ?? ''),
+        excerpt: stripHtml(p.excerpt?.rendered ?? '').slice(0, 160),
+        date: p.date,
+        url: normalizeUrl(p.link, p.slug),
+      }));
   } catch {
     return [];
   }
