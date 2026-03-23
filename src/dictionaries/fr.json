@@ -198,37 +198,37 @@
         "products": [
           {
             "name": "GeoTapp Flow Business",
-            "tagline": "Per aziende strutturate.",
-            "desc": "La soluzione completa per aziende strutturate e organizzazioni complesse.",
+            "tagline": "Pour les entreprises structurées.",
+            "desc": "La solution complète pour les entreprises structurées et les organisations complexes.",
             "features": [
-              "Squadre illimitate (non utenti timetracker)",
+              "Équipes illimitées (pas utilisateurs timetracker)",
               "API",
-              "Supporto prioritario",
-              "Automazioni",
-              "Report avanzati"
+              "Support prioritaire",
+              "Automatisations",
+              "Rapports avancés"
             ]
           },
           {
             "name": "GeoTapp Flow Team",
-            "tagline": "Per piccoli team operativi.",
-            "desc": "Coordina e gestisci il tuo team operativo in tempo reale.",
+            "tagline": "Pour les petites équipes opérationnelles.",
+            "desc": "Coordonnez et gérez votre équipe opérationnelle en temps réel.",
             "features": [
-              "5 utenti Flow inclusi (non timetracker)",
-              "Gestione commesse",
-              "Timbrature campo",
-              "Report operativi",
-              "Integrazioni"
+              "5 utilisateurs Flow inclus (pas timetracker)",
+              "Gestion des chantiers",
+              "Pointages terrain",
+              "Rapports opérationnels",
+              "Intégrations"
             ]
           },
           {
             "name": "GeoTapp Flow Solo",
-            "tagline": "Per professionisti e microimprese.",
-            "desc": "Tutto quello che serve a chi gestisce gli interventi in autonomia.",
+            "tagline": "Pour les indépendants et micro-entreprises.",
+            "desc": "Tout ce qu'il faut pour gérer les interventions en autonomie.",
             "features": [
-              "1 utente",
-              "Gestione attività",
-              "Report base",
-              "Integrazioni essenziali"
+              "1 utilisateur",
+              "Gestion des tâches",
+              "Rapports de base",
+              "Intégrations essentielles"
             ]
           }
         ]

@@ -198,37 +198,37 @@
         "products": [
           {
             "name": "GeoTapp Flow Business",
-            "tagline": "Per aziende strutturate.",
-            "desc": "La soluzione completa per aziende strutturate e organizzazioni complesse.",
+            "tagline": "Voor gestructureerde bedrijven.",
+            "desc": "De complete oplossing voor gestructureerde bedrijven en complexe organisaties.",
             "features": [
-              "Squadre illimitate (non utenti timetracker)",
+              "Onbeperkte teams (geen timetracker-gebruikers)",
               "API",
-              "Supporto prioritario",
-              "Automazioni",
-              "Report avanzati"
+              "Prioriteitssupport",
+              "Automatiseringen",
+              "Geavanceerde rapporten"
             ]
           },
           {
             "name": "GeoTapp Flow Team",
-            "tagline": "Per piccoli team operativi.",
-            "desc": "Coordina e gestisci il tuo team operativo in tempo reale.",
+            "tagline": "Voor kleine operationele teams.",
+            "desc": "Coördineer en beheer uw operationele team in realtime.",
             "features": [
-              "5 utenti Flow inclusi (non timetracker)",
-              "Gestione commesse",
-              "Timbrature campo",
-              "Report operativi",
-              "Integrazioni"
+              "5 Flow-gebruikers inbegrepen (geen timetracker)",
+              "Werkbeheer",
+              "Veldregistraties",
+              "Operationele rapporten",
+              "Integraties"
             ]
           },
           {
             "name": "GeoTapp Flow Solo",
-            "tagline": "Per professionisti e microimprese.",
-            "desc": "Tutto quello che serve a chi gestisce gli interventi in autonomia.",
+            "tagline": "Voor freelancers en micro-bedrijven.",
+            "desc": "Alles wat u nodig hebt om veldopdrachten zelfstandig te beheren.",
             "features": [
-              "1 utente",
-              "Gestione attività",
-              "Report base",
-              "Integrazioni essenziali"
+              "1 gebruiker",
+              "Taakbeheer",
+              "Basisrapporten",
+              "Essentiële integraties"
             ]
           }
         ]

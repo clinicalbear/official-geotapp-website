@@ -198,37 +198,37 @@
         "products": [
           {
             "name": "GeoTapp Flow Business",
-            "tagline": "Per aziende strutturate.",
-            "desc": "La soluzione completa per aziende strutturate e organizzazioni complesse.",
+            "tagline": "Для структурированных компаний.",
+            "desc": "Комплексное решение для структурированных компаний и сложных организаций.",
             "features": [
-              "Squadre illimitate (non utenti timetracker)",
+              "Неограниченные команды (не пользователи таймтрекера)",
               "API",
-              "Supporto prioritario",
-              "Automazioni",
-              "Report avanzati"
+              "Приоритетная поддержка",
+              "Автоматизации",
+              "Расширенные отчёты"
             ]
           },
           {
             "name": "GeoTapp Flow Team",
-            "tagline": "Per piccoli team operativi.",
-            "desc": "Coordina e gestisci il tuo team operativo in tempo reale.",
+            "tagline": "Для небольших операционных команд.",
+            "desc": "Координируйте и управляйте своей операционной командой в реальном времени.",
             "features": [
-              "5 utenti Flow inclusi (non timetracker)",
-              "Gestione commesse",
-              "Timbrature campo",
-              "Report operativi",
-              "Integrazioni"
+              "5 пользователей Flow (не таймтрекер)",
+              "Управление заданиями",
+              "Отметки на объекте",
+              "Операционные отчёты",
+              "Интеграции"
             ]
           },
           {
             "name": "GeoTapp Flow Solo",
-            "tagline": "Per professionisti e microimprese.",
-            "desc": "Tutto quello che serve a chi gestisce gli interventi in autonomia.",
+            "tagline": "Для фрилансеров и микробизнеса.",
+            "desc": "Всё необходимое для самостоятельного управления выездами.",
             "features": [
-              "1 utente",
-              "Gestione attività",
-              "Report base",
-              "Integrazioni essenziali"
+              "1 пользователь",
+              "Управление задачами",
+              "Базовые отчёты",
+              "Основные интеграции"
             ]
           }
         ]

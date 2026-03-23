@@ -198,37 +198,37 @@
         "products": [
           {
             "name": "GeoTapp Flow Business",
-            "tagline": "Per aziende strutturate.",
-            "desc": "La soluzione completa per aziende strutturate e organizzazioni complesse.",
+            "tagline": "För strukturerade företag.",
+            "desc": "Den kompletta lösningen för strukturerade företag och komplexa organisationer.",
             "features": [
-              "Squadre illimitate (non utenti timetracker)",
+              "Obegränsade team (inte timetracker-användare)",
               "API",
-              "Supporto prioritario",
-              "Automazioni",
-              "Report avanzati"
+              "Prioritetssupport",
+              "Automatiseringar",
+              "Avancerade rapporter"
             ]
           },
           {
             "name": "GeoTapp Flow Team",
-            "tagline": "Per piccoli team operativi.",
-            "desc": "Coordina e gestisci il tuo team operativo in tempo reale.",
+            "tagline": "För små operativa team.",
+            "desc": "Koordinera och hantera ditt operativa team i realtid.",
             "features": [
-              "5 utenti Flow inclusi (non timetracker)",
-              "Gestione commesse",
-              "Timbrature campo",
-              "Report operativi",
-              "Integrazioni"
+              "5 Flow-användare inkluderade (inte timetracker)",
+              "Jobbhantering",
+              "Fältregistreringar",
+              "Operativa rapporter",
+              "Integrationer"
             ]
           },
           {
             "name": "GeoTapp Flow Solo",
-            "tagline": "Per professionisti e microimprese.",
-            "desc": "Tutto quello che serve a chi gestisce gli interventi in autonomia.",
+            "tagline": "För frilansare och mikroföretag.",
+            "desc": "Allt du behöver för att hantera fältuppdrag självständigt.",
             "features": [
-              "1 utente",
-              "Gestione attività",
-              "Report base",
-              "Integrazioni essenziali"
+              "1 användare",
+              "Uppgiftshantering",
+              "Grundrapporter",
+              "Grundläggande integrationer"
             ]
           }
         ]
