@@ -10,7 +10,11 @@
       "installatori": "Installateurs",
       "sicurezza": "Beveiliging",
       "pulizie": "Schoonmaak"
-    }
+    },
+    "logo_alt": "GeoTapp — Het platform dat werk verifieerbaar maakt",
+    "product_flow_desc": "Operationeel beheer van interventies en teams",
+    "product_app_desc": "Mobiele app voor buitendiensttechnici",
+    "product_verifier_desc": "Integriteitsverificatie van werkrapporten"
   },
   "footer": {
     "tagline": "Buitendienstactiviteit geregistreerd. Operaties georganiseerd. Rapporten verifieerbaar.",
@@ -149,6 +153,20 @@
       "status": "🟢 In dienst",
       "next_job_label": "Volgende opdracht",
       "next_job_time": "Over 15 min"
+    },
+    "demo_banner": {
+      "badge": "Echt voorbeeld",
+      "title": "Gecertificeerd rapport — download en verifieer",
+      "field_operator": "Medewerker",
+      "field_intervention": "Interventie",
+      "btn_download": "Rapport downloaden (.zip)",
+      "btn_verify": "Authenticiteit verifiëren →"
+    },
+    "flow_mockup": {
+      "pipeline_title": "Verkooppijplijn",
+      "month": "December 2025",
+      "quote_name": "Offerte A. Jansen",
+      "quote_approved": "Vandaag om 09:30 goedgekeurd"
     }
   },
   "pricing": {
@@ -215,6 +233,82 @@
           }
         ]
       }
+    },
+    "calculator": {
+      "title": "TimeTracker Licentiecalculator",
+      "subtitle": "Schat uw jaarlijkse personeelsinvestering.",
+      "active_users": "Actieve gebruikers",
+      "discount_threshold": "Kortingsdrempel",
+      "cost_per_user": "Gemiddelde kosten per gebruiker",
+      "per_month": "/maand",
+      "standard_rate": "Standaardtarief (1–25 @ €2)",
+      "mixed_rate": "Gemengd tarief (volumekorting toegepast)",
+      "annual_total": "Jaartotaal (+BTW)",
+      "annual_billing_note": "Eenmalige jaarfacturering",
+      "enterprise_plan": "Enterprise-plan",
+      "enterprise_desc": "Voor teams van meer dan 150 gebruikers bieden wij aangepaste SLA's en toegewijde accountbeheer.",
+      "request_quote": "Offerte aanvragen",
+      "add_to_cart": "App-licentie aan winkelwagen toevoegen",
+      "secure_payment": "Veilige betaling via Stripe. BTW berekend bij afrekenen."
+    },
+    "simulator": {
+      "section_title": "Bereken uw offerte",
+      "employees_label": "Aantal medewerkers:",
+      "one_employee": "1 Medewerker",
+      "many_employees": "150+ Medewerkers",
+      "price_per_user": "Prijs per gebruiker",
+      "annual_total": "Jaartotaal",
+      "per_month": "/maand",
+      "per_user_annual": "per gebruiker, jaarfacturering",
+      "selected_badge": "Geselecteerd",
+      "enterprise_plan": "Enterprise-plan",
+      "enterprise_desc": "Voor grote organisaties bieden wij op maat gemaakte oplossingen.",
+      "enterprise_cta": "Neem contact op voor een offerte",
+      "company_placeholder": "Bedrijfsnaam",
+      "email_placeholder": "Beheerders-e-mail",
+      "email_error_format": "Voer een geldig e-mailadres in (bijv. naam@bedrijf.nl)",
+      "email_error_placeholder": "Voer een echt zakelijk e-mailadres in.",
+      "terms_alert": "Om door te gaan moet u de Algemene voorwaarden accepteren en bevestigen dat u het Privacybeleid heeft gelezen.",
+      "processing": "Verwerken...",
+      "request_info": "Informatie aanvragen",
+      "buy_now": "Nu kopen",
+      "payment_note": "Veilige betaling via Stripe. Op elk moment opzegbaar.",
+      "success_sent": "Aanvraag succesvol verzonden! We nemen binnenkort contact met u op.",
+      "error_request": "Fout bij verzenden aanvraag",
+      "plus_vat": "+ BTW"
+    },
+    "bundle": {
+      "title": "Bundle Calculator",
+      "subtitle": "Bereken uw besparing met het Flow + TimeTracker Bundle",
+      "employees": "Aantal medewerkers",
+      "billingCycle": "Factureringscyclus",
+      "monthly": "Maandelijks",
+      "yearly": "Jaarlijks",
+      "flowPlan": "Flow-plan",
+      "solo": "Solo (1 gebruiker)",
+      "team": "Team (tot 5 gebruikers)",
+      "business": "Business (onbeperkt)",
+      "priceBreakdown": "Prijsoverzicht",
+      "flowPrice": "GeoTapp Flow",
+      "trackerPrice": "TimeTracker",
+      "subtotal": "Subtotaal",
+      "bundleDiscount": "Bundle-korting (15% eerste jaar)",
+      "totalPrice": "Totaalprijs",
+      "savings": "U bespaart",
+      "perMonth": "/maand",
+      "perYear": "/jaar",
+      "cta": "Bundle nu halen",
+      "notes": "Opmerking: Korting geldt voor de eerste 12 maanden",
+      "employees_unit": "medewerkers",
+      "first_year_savings": "in het eerste jaar!",
+      "loading": "Laden...",
+      "modal_title": "Voer uw e-mail in",
+      "modal_desc": "We hebben uw e-mail nodig om uw afrekenssessie aan te maken en u het ontvangstbewijs te sturen.",
+      "email_placeholder": "uw@email.com",
+      "btn_cancel": "Annuleren",
+      "btn_continue": "Doorgaan",
+      "error_checkout": "Fout bij het aanmaken van de sessie. Probeer opnieuw.",
+      "error_connection": "Verbindingsfout. Probeer opnieuw."
     }
   },
   "contact": {
@@ -234,7 +328,13 @@
         "Algemene informatie aanvragen",
         "Samenwerking",
         "Overig"
-      ]
+      ],
+      "name_placeholder": "Uw naam",
+      "email_placeholder": "u@email.com",
+      "company_placeholder": "Bedrijfsnaam",
+      "message_placeholder": "Uw bericht...",
+      "submit": "Bericht versturen",
+      "submitting": "Versturen..."
     },
     "hours": "Ma-Vr 9:00 - 18:00",
     "location_city": "Brescia, IT",
@@ -248,7 +348,9 @@
     "map_title": "Onze locatie — Trenzano (BS), Italië",
     "success": "Bericht succesvol verzonden. We nemen zo snel mogelijk contact met u op.",
     "error": "Fout bij verzenden. Probeer het later opnieuw.",
-    "sending": "Verzenden..."
+    "sending": "Verzenden...",
+    "map_unavailable": "Kaart niet beschikbaar",
+    "open_maps": "Openen in Google Maps ↗"
   },
   "login_hub": {
     "title": "Toegang tot uw <span class=\"text-primary\">account</span>.",
@@ -399,5 +501,155 @@
         }
       }
     }
+  },
+  "cart": {
+    "title": "Winkelwagen",
+    "empty": "Uw winkelwagen is leeg.",
+    "license_default": "Standaardlicentie",
+    "quantity": "Aantal",
+    "per_month": "maand",
+    "per_year": "jaar",
+    "total_monthly": "Maandelijks totaal",
+    "total_yearly": "Jaarlijks totaal",
+    "vat_note": "BTW (berekend bij afrekenen)",
+    "email_label": "E-mail voor licenties en SaaS-toegang",
+    "email_placeholder": "naam@bedrijf.com",
+    "email_hint": "Wij sturen hier uw licentiesleutels en toegangsgegevens naartoe.",
+    "email_error_empty": "Vul een geldig e-mailadres in.",
+    "email_error_invalid": "Vul een geldig e-mailadres in (bijv. naam@bedrijf.com).",
+    "terms_alert": "Om door te gaan moet u de Algemene Voorwaarden accepteren en bevestigen dat u het Privacybeleid heeft gelezen.",
+    "checkout_loading": "Verwerken...",
+    "checkout_button": "Doorgaan naar Afrekenen",
+    "checkout_error": "Er is een fout opgetreden. Probeer het opnieuw.",
+    "policy_terms_prefix": "Ik heb de",
+    "policy_terms_link": "Algemene Servicevoorwaarden",
+    "policy_terms_suffix": "van GeoTapp gelezen en ga ermee akkoord.",
+    "policy_privacy_prefix": "Ik heb het",
+    "policy_privacy_link": "Privacybeleid",
+    "policy_privacy_suffix": "van GeoTapp gelezen."
+  },
+  "guida": {
+    "page_title": "Gebruikershandleiding",
+    "download_pdf": "Downloaden / Afdrukken als PDF"
+  },
+  "demo": {
+    "page_title": "Boek uw persoonlijke demo",
+    "settori": [
+      "Schoonmaak / Facility / Multiservice",
+      "Beveiliging / Bewaking / Steward",
+      "Installateurs / Elektriciens / Loodgieters",
+      "Logistiek / Transport",
+      "Bouw / Onderhoud",
+      "Overige"
+    ],
+    "cosa_vedrai": [
+      {
+        "title": "GPS inklokken in actie",
+        "desc": "Hoe de technicus incheckt via de mobiele app en hoe het kantoor de geverifieerde locatie ziet — zonder continue tracking."
+      },
+      {
+        "title": "Verifieerbare rapporten",
+        "desc": "Hoe elke opdracht een rapport genereert met fotobewijs, digitale handtekening en onveranderlijke hash die u aan de klant kunt tonen."
+      },
+      {
+        "title": "Teambeheer via Flow",
+        "desc": "Hoe u taken toewijst, de voortgang bewaakt en wekelijkse rapporten produceert zonder Excel-sheets of telefoontjes."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Hoe lang duurt de demo?",
+        "a": "Precies 30 minuten. We tonen u het platform in echt gebruik en beantwoorden uw branchespecifieke vragen."
+      },
+      {
+        "q": "Is voorbereiding nodig?",
+        "a": "Nee. Breng gewoon uw concrete situatie mee — hoeveel medewerkers u heeft en welke problemen u vandaag ervaart met uren of rapporten."
+      },
+      {
+        "q": "Is de demo gratis?",
+        "a": "Ja, volledig gratis en vrijblijvend. Aan het einde kunt u direct een proefperiode starten."
+      },
+      {
+        "q": "Kan ik een collega uitnodigen?",
+        "a": "Absoluut. Vaak nemen de operationeel manager en de admin of HR samen deel."
+      }
+    ],
+    "form_name": "Volledige naam",
+    "form_name_placeholder": "Jan de Vries",
+    "form_company": "Bedrijf",
+    "form_company_placeholder": "Bedrijfsnaam",
+    "form_sector": "Sector",
+    "form_email": "E-mail",
+    "form_email_placeholder": "jan@bedrijf.nl",
+    "form_phone": "Telefoon (optioneel)",
+    "form_phone_placeholder": "+31 6 12345678",
+    "form_submit": "Gratis demo boeken",
+    "form_submitting": "Versturen...",
+    "success_title": "Aanvraag ontvangen!",
+    "success_desc": "We nemen binnen 1 werkdag contact met u op om de demo in te plannen.",
+    "error_message": "Fout bij verzenden. Probeer het later opnieuw."
+  },
+  "download_page": {
+    "title": "GeoTapp downloaden",
+    "subtitle": "Kies de versie die bij uw behoeften past.",
+    "demo_report_badge": "Echt voorbeeld",
+    "demo_report_title": "Gecertificeerd taakrapport",
+    "demo_report_desc": "Download een echt rapport gegenereerd door GeoTapp. Bevat geverifieerde GPS, fotobewijs, operator-hashketen en cryptografische verzegeling.",
+    "demo_report_btn_download": "Voorbeeldrapport downloaden (.zip)",
+    "demo_report_btn_verify": "Authenticiteit verifiëren",
+    "demo_report_field_operator": "Operator",
+    "demo_report_field_type": "Taaktype",
+    "windows_title": "GeoTapp voor Windows",
+    "windows_desc": "De complete desktopapplicatie voor bedrijfsbeheer. Ideaal voor administratie en volledige controle.",
+    "windows_features": [
+      "Volledig wagenparkbeheer",
+      "Dienstroosters",
+      "Salarisexport",
+      "Bureaubladmeldingen"
+    ],
+    "windows_btn": "Downloaden voor Windows",
+    "wp_title": "WordPress-plugin",
+    "wp_desc": "Integreer GeoTapp in uw bedrijfswebsite. Laat medewerkers direct toegang krijgen via uw intranet.",
+    "wp_features": [
+      "Veilige Iframe-integratie",
+      "Shortcode [geotap_app]",
+      "Automatisch inloggen",
+      "Compatibel met alle thema's"
+    ],
+    "wp_btn": "Plugin downloaden"
+  },
+  "chi_siamo": {
+    "badge": "Ons verhaal",
+    "hero_title_line1": "Geboren in het veld,",
+    "hero_title_line2": "niet op kantoor.",
+    "hero_desc": "GeoTapp is niet uitgevonden door investeerders of analisten. Het is ontstaan uit de echte frustratie van iemand die elke dag werkt tussen deadlines, bouwplaatsen en veeleisende klanten.",
+    "story": [
+      "Het was 2024. Mike Petraroli, onze oprichter, werkte als werknemer en had een schijnbaar triviaal maar ongelooflijk kostbaar probleem: <strong>zijn eigen werk bewijzen.</strong>",
+      "Aan het einde van de maand klopten de urencijfers nooit. Klussen die onderweg tussen klanten waren gedaan werden vergeten. Papier raakte kwijt, WhatsApp-berichten raakten begraven. Het was een stille ader van verspild tijd en geld.",
+      "Hij zocht een oplossing. Hij vond alleen complexe, dure software vol nutteloze grafieken en weinig inhoud. Software gemaakt door mensen die nooit een prikkaart hadden gestempeld of een factuur hadden uitgeschreven vanuit een bestelbus.",
+      "Dus besloot Mike zelf het gereedschap te bouwen dat hij had gewild: eenvoudig, mobiel, met verifieerbaar bewijs. Niet voor investeerders — voor bedrijven zoals het zijne."
+    ],
+    "values_title": "Onze waarden",
+    "values": [
+      {
+        "title": "Duidelijke missie",
+        "desc": "Elke opdracht meetbaar en verifieerbaar maken. Veldwerk verdient dezelfde transparantie-instrumenten als een kantoor."
+      },
+      {
+        "title": "Toegewijd team",
+        "desc": "We zijn een klein team dat geobsedeerd is door het probleem dat we oplossen. Elke functie komt voort uit echte feedback, niet uit marketingroadmaps."
+      },
+      {
+        "title": "Privacy by Design",
+        "desc": "We verkopen geen gegevens, we tracken niet continu. GPS alleen op het moment van inklokken, nul surveillance."
+      },
+      {
+        "title": "Made in Italy",
+        "desc": "Ontwikkeld in Italië voor de Italiaanse en Europese markt. AVG-regels, werkcultuur en lokale regelgeving zitten in het DNA van het product."
+      }
+    ],
+    "cta_title": "Sluit je aan bij de Eenvoudige Revolutie",
+    "cta_desc": "We zijn geen onbereikbaar Big Tech-bedrijf. We zijn echte mensen die software bouwen voor echte mensen.",
+    "cta_btn": "Stuur ons een Bericht"
   }
 }

@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return {
     title: { absolute: meta.title },
     description: meta.description,
-    alternates: buildLocaleAlternates(locale, '/guida'),
+    alternates: buildLocaleAlternates(locale, '/guida/'),
   };
 }
 export { generateLocaleStaticParams as generateStaticParams } from '@/lib/i18n/static-params';

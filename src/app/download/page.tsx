@@ -17,18 +17,25 @@
 // - Operations: changes touching auth/rules/functions must stay aligned across apps.
 // - Maintainability: keep additive changes whenever possible to reduce rollback risk.
 
+import { usePathname } from 'next/navigation';
+import { getDictionary } from '@/lib/i18n/dictionaries';
+import { getLocaleFromPathname } from '@/lib/i18n/locale-routing';
 
 export default function DownloadPage() {
+  const pathname = usePathname();
+  const locale = getLocaleFromPathname(pathname);
+  const dp = getDictionary(locale).download_page;
+
   return (
     <div className="min-h-screen bg-gray-50">
       <main className="pt-24 pb-16">
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-16">
             <h1 className="text-4xl font-bold font-display text-gray-900 mb-4">
-              Download GeoTap
+              {dp.title}
             </h1>
             <p className="text-xl text-gray-600">
-              Scegli la versione adatta alle tue esigenze.
+              {dp.subtitle}
             </p>
           </div>
 
@@ -43,20 +50,18 @@ export default function DownloadPage() {
                     </svg>
                   </div>
                   <div>
-                    <div className="text-xs font-bold text-cyan-400 uppercase tracking-widest mb-0.5">Esempio reale</div>
-                    <h2 className="text-2xl font-bold text-white">Report di intervento certificato</h2>
+                    <div className="text-xs font-bold text-cyan-400 uppercase tracking-widest mb-0.5">{dp.demo_report_badge}</div>
+                    <h2 className="text-2xl font-bold text-white">{dp.demo_report_title}</h2>
                   </div>
                 </div>
                 <p className="text-slate-300 mb-6 leading-relaxed">
-                  Scarica un report reale generato da GeoTapp. Contiene GPS verificato, prove fotografiche,
-                  catena hash degli operatori e sigillatura crittografica. Puoi verificarne l&apos;autenticità
-                  direttamente su geotapp.com.
+                  {dp.demo_report_desc}
                 </p>
                 <div className="grid sm:grid-cols-3 gap-3 mb-6">
                   {[
                     ['Report ID', 'GT-2026-0322-4472'],
-                    ['Operatore', 'Mario Bianchi'],
-                    ['Tipo intervento', 'Sostituzione quadro elettrico'],
+                    [dp.demo_report_field_operator, 'Mario Bianchi'],
+                    [dp.demo_report_field_type, 'Sostituzione quadro elettrico'],
                   ].map(([label, value]) => (
                     <div key={label} className="bg-white/10 rounded-xl px-4 py-3">
                       <div className="text-xs text-slate-400 uppercase tracking-wide mb-1">{label}</div>
@@ -75,13 +80,13 @@ export default function DownloadPage() {
                   className="flex-1 block text-center px-6 py-3 bg-cyan-500 text-white font-semibold rounded-xl shadow hover:bg-cyan-400 transition"
                   download
                 >
-                  Scarica Report di esempio (.zip)
+                  {dp.demo_report_btn_download}
                 </a>
                 <a
                   href="/verifica/GT-2026-0322-4472"
                   className="flex-1 block text-center px-6 py-3 bg-white/10 text-white font-semibold rounded-xl border border-white/20 hover:bg-white/20 transition"
                 >
-                  Verifica autenticità →
+                  {dp.demo_report_btn_verify} →
                 </a>
               </div>
             </div>
@@ -99,19 +104,13 @@ export default function DownloadPage() {
                   />
                 </div>
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                  GeoTap per Windows
+                  {dp.windows_title}
                 </h2>
                 <p className="text-gray-600 mb-6">
-                  L'applicazione desktop completa per la gestione aziendale.
-                  Ideale per l'amministrazione e il controllo completo.
+                  {dp.windows_desc}
                 </p>
                 <ul className="space-y-3 mb-8">
-                  {[
-                    'Gestione completa flotta',
-                    'Pianificazione turni',
-                    'Export paghe',
-                    'Notifiche desktop',
-                  ].map((item, i) => (
+                  {dp.windows_features.map((item: string, i: number) => (
                     <li
                       key={i}
                       className="flex items-center gap-3 text-gray-700 text-sm"
@@ -139,7 +138,7 @@ export default function DownloadPage() {
                   href="/geotap-windows-setup.zip"
                   className="block w-full text-center px-6 py-3 bg-geotapp-primary text-white font-semibold rounded-xl shadow hover:bg-geotapp-600 transition"
                 >
-                  Scarica per Windows
+                  {dp.windows_btn}
                 </a>
                 <p className="mt-3 text-xs text-center text-gray-400">
                   v1.0.0 • 64-bit • .zip
@@ -158,19 +157,13 @@ export default function DownloadPage() {
                   />
                 </div>
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                  Plugin WordPress
+                  {dp.wp_title}
                 </h2>
                 <p className="text-gray-600 mb-6">
-                  Integra GeoTap nel tuo sito aziendale. Permetti ai dipendenti
-                  di accedere direttamente dalla tua intranet.
+                  {dp.wp_desc}
                 </p>
                 <ul className="space-y-3 mb-8">
-                  {[
-                    'Integrazione Iframe sicura',
-                    'Shortcode [geotap_app]',
-                    'Login automatico',
-                    'Compatibile con tutti i temi',
-                  ].map((item, i) => (
+                  {dp.wp_features.map((item: string, i: number) => (
                     <li
                       key={i}
                       className="flex items-center gap-3 text-gray-700 text-sm"
@@ -198,7 +191,7 @@ export default function DownloadPage() {
                   href="/geotap_wordpress_plugin.zip"
                   className="block w-full text-center px-6 py-3 bg-blue-900 text-white font-semibold rounded-xl shadow hover:bg-blue-800 transition"
                 >
-                  Scarica Plugin
+                  {dp.wp_btn}
                 </a>
                 <p className="mt-3 text-xs text-center text-gray-400">
                   v1.0.0 • .zip

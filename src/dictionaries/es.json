@@ -10,7 +10,11 @@
       "installatori": "Instaladores",
       "sicurezza": "Seguridad",
       "pulizie": "Limpieza"
-    }
+    },
+    "logo_alt": "GeoTapp — La plataforma que hace el trabajo verificable",
+    "product_flow_desc": "Gestión operativa de intervenciones y equipos",
+    "product_app_desc": "App móvil para técnicos de campo",
+    "product_verifier_desc": "Verificación de integridad de informes de trabajo"
   },
   "footer": {
     "tagline": "Actividad de campo registrada. Operaciones organizadas. Informes verificables.",
@@ -149,6 +153,20 @@
       "status": "🟢 En servicio",
       "next_job_label": "Próxima intervención",
       "next_job_time": "En 15 min"
+    },
+    "demo_banner": {
+      "badge": "Ejemplo real",
+      "title": "Informe certificado — descargar y verificar",
+      "field_operator": "Operario",
+      "field_intervention": "Intervención",
+      "btn_download": "Descargar informe (.zip)",
+      "btn_verify": "Verificar autenticidad →"
+    },
+    "flow_mockup": {
+      "pipeline_title": "Pipeline Ventas",
+      "month": "Diciembre 2025",
+      "quote_name": "Presupuesto A. García",
+      "quote_approved": "Aprobado hoy a las 09:30"
     }
   },
   "pricing": {
@@ -215,6 +233,82 @@
           }
         ]
       }
+    },
+    "calculator": {
+      "title": "Calculadora de licencias TimeTracker",
+      "subtitle": "Estima tu inversión anual en plantilla.",
+      "active_users": "Usuarios activos",
+      "discount_threshold": "Umbral de descuento",
+      "cost_per_user": "Coste medio por usuario",
+      "per_month": "/mes",
+      "standard_rate": "Tarifa estándar (1–25 @ €2)",
+      "mixed_rate": "Tarifa mixta (descuento por volumen aplicado)",
+      "annual_total": "Total anual (+IVA)",
+      "annual_billing_note": "Facturación anual única",
+      "enterprise_plan": "Plan Enterprise",
+      "enterprise_desc": "Para equipos de más de 150 usuarios ofrecemos SLAs personalizados y gestión de cuenta dedicada.",
+      "request_quote": "Solicitar presupuesto",
+      "add_to_cart": "Añadir licencia App al carrito",
+      "secure_payment": "Pago seguro vía Stripe. IVA calculado en el checkout."
+    },
+    "simulator": {
+      "section_title": "Calcula tu presupuesto",
+      "employees_label": "Número de empleados:",
+      "one_employee": "1 Empleado",
+      "many_employees": "150+ Empleados",
+      "price_per_user": "Precio por usuario",
+      "annual_total": "Total anual",
+      "per_month": "/mes",
+      "per_user_annual": "por usuario, facturación anual",
+      "selected_badge": "Seleccionado",
+      "enterprise_plan": "Plan Enterprise",
+      "enterprise_desc": "Para grandes organizaciones ofrecemos soluciones personalizadas.",
+      "enterprise_cta": "Contáctanos para un presupuesto",
+      "company_placeholder": "Nombre de empresa",
+      "email_placeholder": "Email administrador",
+      "email_error_format": "Introduce un email válido (ej. nombre@empresa.com)",
+      "email_error_placeholder": "Introduce un email empresarial real.",
+      "terms_alert": "Para continuar debes aceptar los Términos y confirmar que has leído la Política de privacidad.",
+      "processing": "Procesando...",
+      "request_info": "Solicitar información",
+      "buy_now": "Comprar ahora",
+      "payment_note": "Pago seguro vía Stripe. Cancela cuando quieras.",
+      "success_sent": "¡Solicitud enviada con éxito! Te contactaremos pronto.",
+      "error_request": "Error al enviar la solicitud",
+      "plus_vat": "+ IVA"
+    },
+    "bundle": {
+      "title": "Calculadora Bundle",
+      "subtitle": "Calcula tu ahorro con el Bundle Flow + TimeTracker",
+      "employees": "Número de empleados",
+      "billingCycle": "Ciclo de facturación",
+      "monthly": "Mensual",
+      "yearly": "Anual",
+      "flowPlan": "Plan Flow",
+      "solo": "Solo (1 usuario)",
+      "team": "Team (hasta 5 usuarios)",
+      "business": "Business (ilimitado)",
+      "priceBreakdown": "Desglose de precios",
+      "flowPrice": "GeoTapp Flow",
+      "trackerPrice": "TimeTracker",
+      "subtotal": "Subtotal",
+      "bundleDiscount": "Descuento Bundle (15% primer año)",
+      "totalPrice": "Precio total",
+      "savings": "Ahorras",
+      "perMonth": "/mes",
+      "perYear": "/año",
+      "cta": "Conseguir el Bundle",
+      "notes": "Nota: El descuento se aplica durante los primeros 12 meses",
+      "employees_unit": "empleados",
+      "first_year_savings": "¡en el primer año!",
+      "loading": "Cargando...",
+      "modal_title": "Introduce tu email",
+      "modal_desc": "Necesitamos tu email para crear tu sesión de pago y enviarte el recibo.",
+      "email_placeholder": "tu@email.com",
+      "btn_cancel": "Cancelar",
+      "btn_continue": "Continuar",
+      "error_checkout": "Error al crear la sesión. Por favor, inténtalo de nuevo.",
+      "error_connection": "Error de conexión. Por favor, inténtalo de nuevo."
     }
   },
   "contact": {
@@ -234,7 +328,13 @@
         "Solicitud de Información General",
         "Colaboración",
         "Otro"
-      ]
+      ],
+      "name_placeholder": "Tu nombre",
+      "email_placeholder": "tu@email.com",
+      "company_placeholder": "Nombre de empresa",
+      "message_placeholder": "Tu mensaje...",
+      "submit": "Enviar mensaje",
+      "submitting": "Enviando..."
     },
     "hours": "Lun-Vie 9:00 - 18:00",
     "location_city": "Brescia, IT",
@@ -248,7 +348,9 @@
     "map_title": "Dónde estamos — Trenzano (BS), Italia",
     "success": "Mensaje enviado con éxito. Te responderemos lo antes posible.",
     "error": "Error al enviar. Inténtalo de nuevo más tarde.",
-    "sending": "Enviando..."
+    "sending": "Enviando...",
+    "map_unavailable": "Mapa no disponible",
+    "open_maps": "Abrir en Google Maps ↗"
   },
   "login_hub": {
     "title": "Accede a tu <span class=\"text-primary\">Cuenta</span>.",
@@ -399,5 +501,155 @@
         }
       }
     }
+  },
+  "cart": {
+    "title": "Carrito",
+    "empty": "El carrito está vacío.",
+    "license_default": "Licencia Estándar",
+    "quantity": "Cantidad",
+    "per_month": "mes",
+    "per_year": "año",
+    "total_monthly": "Total Mensual",
+    "total_yearly": "Total Anual",
+    "vat_note": "IVA (calculado en el checkout)",
+    "email_label": "Email para recibir licencias y acceso SaaS",
+    "email_placeholder": "nombre@empresa.com",
+    "email_hint": "Le enviaremos aquí las claves de licencia y los detalles de acceso.",
+    "email_error_empty": "Por favor, introduce una dirección de email válida.",
+    "email_error_invalid": "Por favor, introduce una dirección de email válida (p.ej. nombre@empresa.com).",
+    "terms_alert": "Para continuar debes aceptar los Términos y confirmar que has leído la Política de Privacidad.",
+    "checkout_loading": "Procesando...",
+    "checkout_button": "Proceder al Checkout",
+    "checkout_error": "Se ha producido un error. Por favor, inténtalo de nuevo.",
+    "policy_terms_prefix": "He leído y acepto las",
+    "policy_terms_link": "Condiciones Generales de Servicio",
+    "policy_terms_suffix": "GeoTapp.",
+    "policy_privacy_prefix": "He leído la",
+    "policy_privacy_link": "Política de Privacidad",
+    "policy_privacy_suffix": "GeoTapp."
+  },
+  "guida": {
+    "page_title": "Guía del usuario",
+    "download_pdf": "Descargar / Imprimir PDF"
+  },
+  "demo": {
+    "page_title": "Reserva tu demo personalizada",
+    "settori": [
+      "Limpieza / Facility / Multiservicio",
+      "Seguridad / Vigilancia / Steward",
+      "Instaladores / Electricistas / Fontaneros",
+      "Logística / Transporte",
+      "Construcción / Mantenimiento",
+      "Otro"
+    ],
+    "cosa_vedrai": [
+      {
+        "title": "Fichaje GPS en acción",
+        "desc": "Cómo el técnico ficha desde la app móvil y cómo la oficina ve la ubicación verificada — sin seguimiento continuo."
+      },
+      {
+        "title": "Informes verificables",
+        "desc": "Cómo cada intervención genera un informe con pruebas fotográficas, firma digital y hash inmutable que puedes mostrar al cliente."
+      },
+      {
+        "title": "Gestión de equipos desde Flow",
+        "desc": "Cómo asignar tareas, monitorear el avance y producir informes semanales sin hojas Excel ni llamadas telefónicas."
+      }
+    ],
+    "faq": [
+      {
+        "q": "¿Cuánto dura la demo?",
+        "a": "30 minutos exactos. Te mostramos la plataforma en uso real y respondemos tus preguntas específicas del sector."
+      },
+      {
+        "q": "¿Es necesaria preparación?",
+        "a": "No. Solo trae tu caso concreto — cuántos operadores tienes y qué problemas tienes hoy con las horas o los informes."
+      },
+      {
+        "q": "¿La demo es gratuita?",
+        "a": "Sí, completamente gratuita y sin compromiso. Al final puedes iniciar un período de prueba directamente."
+      },
+      {
+        "q": "¿Puedo invitar a un colega?",
+        "a": "Absolutamente. A menudo participan juntos el responsable operativo y el administrador o RRHH."
+      }
+    ],
+    "form_name": "Nombre completo",
+    "form_name_placeholder": "Juan García",
+    "form_company": "Empresa",
+    "form_company_placeholder": "Nombre de empresa",
+    "form_sector": "Sector",
+    "form_email": "Email",
+    "form_email_placeholder": "juan@empresa.es",
+    "form_phone": "Teléfono (opcional)",
+    "form_phone_placeholder": "+34 612 345 678",
+    "form_submit": "Reservar la demo gratuita",
+    "form_submitting": "Enviando...",
+    "success_title": "¡Solicitud recibida!",
+    "success_desc": "Nos pondremos en contacto contigo en 1 día hábil para programar la demo.",
+    "error_message": "Error al enviar. Por favor inténtalo más tarde."
+  },
+  "download_page": {
+    "title": "Descargar GeoTapp",
+    "subtitle": "Elige la versión adecuada a tus necesidades.",
+    "demo_report_badge": "Ejemplo real",
+    "demo_report_title": "Informe de intervención certificado",
+    "demo_report_desc": "Descarga un informe real generado por GeoTapp. Contiene GPS verificado, pruebas fotográficas, cadena hash de operadores y sellado criptográfico.",
+    "demo_report_btn_download": "Descargar informe de ejemplo (.zip)",
+    "demo_report_btn_verify": "Verificar autenticidad",
+    "demo_report_field_operator": "Operador",
+    "demo_report_field_type": "Tipo de intervención",
+    "windows_title": "GeoTapp para Windows",
+    "windows_desc": "La aplicación de escritorio completa para la gestión empresarial. Ideal para la administración y el control total.",
+    "windows_features": [
+      "Gestión completa de flota",
+      "Planificación de turnos",
+      "Exportación de nóminas",
+      "Notificaciones de escritorio"
+    ],
+    "windows_btn": "Descargar para Windows",
+    "wp_title": "Plugin de WordPress",
+    "wp_desc": "Integra GeoTapp en tu sitio web corporativo. Permite a los empleados acceder directamente desde tu intranet.",
+    "wp_features": [
+      "Integración segura con Iframe",
+      "Shortcode [geotap_app]",
+      "Login automático",
+      "Compatible con todos los temas"
+    ],
+    "wp_btn": "Descargar Plugin"
+  },
+  "chi_siamo": {
+    "badge": "Nuestra historia",
+    "hero_title_line1": "Nacidos en el campo,",
+    "hero_title_line2": "no en una oficina.",
+    "hero_desc": "GeoTapp no fue inventada por inversores o analistas. Nació de la frustración real de alguien que trabaja cada día entre plazos, obras y clientes exigentes.",
+    "story": [
+      "Era 2024. Mike Petraroli, nuestro fundador, trabajaba como empleado y tenía un problema aparentemente trivial pero increíblemente costoso: <strong>demostrar su propio trabajo.</strong>",
+      "A fin de mes, las cuentas de horas nunca cuadraban. Las intervenciones hechas corriendo entre clientes se olvidaban. El papel se perdía, los mensajes de WhatsApp quedaban enterrados. Era una hemorragia silenciosa de tiempo y dinero.",
+      "Buscó una solución. Solo encontró software complejos, caros, llenos de gráficos inútiles y pobres en sustancia. Software hecho por personas que nunca habían fichado o emitido una factura de emergencia desde la furgoneta.",
+      "Así que Mike decidió construir él mismo la herramienta que hubiera querido tener: simple, móvil, con pruebas verificables. No para inversores — para empresas como la suya."
+    ],
+    "values_title": "Nuestros valores",
+    "values": [
+      {
+        "title": "Misión clara",
+        "desc": "Hacer cada intervención medible y verificable. El trabajo de campo merece las mismas herramientas de transparencia que una oficina."
+      },
+      {
+        "title": "Equipo dedicado",
+        "desc": "Somos un equipo pequeño obsesionado con el problema que resolvemos. Cada funcionalidad viene de feedback real, no de roadmaps de marketing."
+      },
+      {
+        "title": "Privacy by Design",
+        "desc": "No vendemos datos, no rastreamos continuamente. GPS solo en el momento del fichaje, cero vigilancia."
+      },
+      {
+        "title": "Hecho en Italia",
+        "desc": "Desarrollado en Italia para el mercado italiano y europeo. Las normas GDPR, la cultura laboral y las regulaciones locales están en el ADN del producto."
+      }
+    ],
+    "cta_title": "Únete a la Revolución Simple",
+    "cta_desc": "No somos una gran empresa tecnológica inalcanzable. Somos personas reales que construyen software para personas reales.",
+    "cta_btn": "Escríbenos un Mensaje"
   }
 }

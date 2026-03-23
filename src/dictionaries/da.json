@@ -10,7 +10,11 @@
       "installatori": "Installatører",
       "sicurezza": "Sikkerhed",
       "pulizie": "Rengøring"
-    }
+    },
+    "logo_alt": "GeoTapp — Platformen der gør arbejde verificerbart",
+    "product_flow_desc": "Operationel styring af interventioner og teams",
+    "product_app_desc": "Mobilapp til serviceteknikere",
+    "product_verifier_desc": "Integritetskontrol af arbejdsrapporter"
   },
   "footer": {
     "tagline": "Feltaktivitet registreret. Drift organiseret. Arbejdsrapporter verificerbare.",
@@ -149,6 +153,20 @@
       "status": "🟢 På vagt",
       "next_job_label": "Næste job",
       "next_job_time": "Om 15 min"
+    },
+    "demo_banner": {
+      "badge": "Rigtigt eksempel",
+      "title": "Certificeret rapport — download og verificer",
+      "field_operator": "Operatør",
+      "field_intervention": "Indsats",
+      "btn_download": "Download rapport (.zip)",
+      "btn_verify": "Verificer ægthed →"
+    },
+    "flow_mockup": {
+      "pipeline_title": "Salgspipeline",
+      "month": "December 2025",
+      "quote_name": "Tilbud A. Nielsen",
+      "quote_approved": "Godkendt i dag kl. 09:30"
     }
   },
   "pricing": {
@@ -215,6 +233,82 @@
           }
         ]
       }
+    },
+    "calculator": {
+      "title": "TimeTracker licensberegner",
+      "subtitle": "Estimér din årlige arbejdsstyrkeinvestering.",
+      "active_users": "Aktive brugere",
+      "discount_threshold": "Rabatgrænse",
+      "cost_per_user": "Gennemsnitlig pris pr. bruger",
+      "per_month": "/md",
+      "standard_rate": "Standardtakst (1–25 @ €2)",
+      "mixed_rate": "Blandet takst (mængderabat anvendt)",
+      "annual_total": "Årstotal (+moms)",
+      "annual_billing_note": "Enkelt årlig fakturering",
+      "enterprise_plan": "Enterprise-plan",
+      "enterprise_desc": "Til teams over 150 brugere tilbyder vi tilpassede SLA'er og dedikeret kontostyring.",
+      "request_quote": "Anmod om tilbud",
+      "add_to_cart": "Tilføj App-licens til kurv",
+      "secure_payment": "Sikker betaling via Stripe. Moms beregnes ved checkout."
+    },
+    "simulator": {
+      "section_title": "Beregn dit tilbud",
+      "employees_label": "Antal medarbejdere:",
+      "one_employee": "1 Medarbejder",
+      "many_employees": "150+ Medarbejdere",
+      "price_per_user": "Pris pr. bruger",
+      "annual_total": "Årstotal",
+      "per_month": "/md",
+      "per_user_annual": "pr. bruger, årlig fakturering",
+      "selected_badge": "Valgt",
+      "enterprise_plan": "Enterprise-plan",
+      "enterprise_desc": "Til store organisationer tilbyder vi skræddersyede løsninger.",
+      "enterprise_cta": "Kontakt os for et tilbud",
+      "company_placeholder": "Virksomhedsnavn",
+      "email_placeholder": "Administrator-e-mail",
+      "email_error_format": "Indtast en gyldig e-mailadresse (f.eks. navn@virksomhed.dk)",
+      "email_error_placeholder": "Indtast en ægte erhvervs-e-mail.",
+      "terms_alert": "For at fortsætte skal du acceptere vilkårene og bekræfte at du har læst privatlivspolitikken.",
+      "processing": "Behandler...",
+      "request_info": "Anmod om information",
+      "buy_now": "Køb nu",
+      "payment_note": "Sikker betaling via Stripe. Annuller når som helst.",
+      "success_sent": "Anmodning sendt! Vi kontakter dig snart.",
+      "error_request": "Fejl ved afsendelse af anmodning",
+      "plus_vat": "+ moms"
+    },
+    "bundle": {
+      "title": "Bundle Beregner",
+      "subtitle": "Beregn din besparelse med Flow + TimeTracker Bundle",
+      "employees": "Antal medarbejdere",
+      "billingCycle": "Faktureringscyklus",
+      "monthly": "Månedlig",
+      "yearly": "Årlig",
+      "flowPlan": "Flow-plan",
+      "solo": "Solo (1 bruger)",
+      "team": "Team (op til 5 brugere)",
+      "business": "Business (ubegrænset)",
+      "priceBreakdown": "Prisoversigt",
+      "flowPrice": "GeoTapp Flow",
+      "trackerPrice": "TimeTracker",
+      "subtotal": "Subtotal",
+      "bundleDiscount": "Bundle-rabat (15% første år)",
+      "totalPrice": "Samlet pris",
+      "savings": "Du sparer",
+      "perMonth": "/md",
+      "perYear": "/år",
+      "cta": "Hent Bundle nu",
+      "notes": "Bemærk: Rabatten gælder for de første 12 måneder",
+      "employees_unit": "medarbejdere",
+      "first_year_savings": "i det første år!",
+      "loading": "Indlæser...",
+      "modal_title": "Indtast din email",
+      "modal_desc": "Vi har brug for din email for at oprette din betalingssession og sende dig kvitteringen.",
+      "email_placeholder": "din@email.com",
+      "btn_cancel": "Annuller",
+      "btn_continue": "Fortsæt",
+      "error_checkout": "Fejl ved oprettelse af session. Prøv igen.",
+      "error_connection": "Forbindelsesfejl. Prøv igen."
     }
   },
   "contact": {
@@ -234,7 +328,13 @@
         "Anmodning om generel information",
         "Partnerskab",
         "Andet"
-      ]
+      ],
+      "name_placeholder": "Dit navn",
+      "email_placeholder": "dig@email.com",
+      "company_placeholder": "Virksomhedsnavn",
+      "message_placeholder": "Din besked...",
+      "submit": "Send besked",
+      "submitting": "Sender..."
     },
     "hours": "Man-Fre 9:00 - 18:00",
     "location_city": "Brescia, IT",
@@ -248,7 +348,9 @@
     "map_title": "Hvor vi er — Trenzano (BS), Italien",
     "success": "Besked sendt. Vi vender tilbage hurtigst muligt.",
     "error": "Fejl ved afsendelse. Prøv igen senere.",
-    "sending": "Sender..."
+    "sending": "Sender...",
+    "map_unavailable": "Kort ikke tilgængeligt",
+    "open_maps": "Åbn i Google Maps ↗"
   },
   "login_hub": {
     "title": "Adgang til din <span class=\"text-primary\">konto</span>.",
@@ -399,5 +501,155 @@
         }
       }
     }
+  },
+  "cart": {
+    "title": "Indkøbskurv",
+    "empty": "Din kurv er tom.",
+    "license_default": "Standardlicens",
+    "quantity": "Antal",
+    "per_month": "måned",
+    "per_year": "år",
+    "total_monthly": "Månedligt i alt",
+    "total_yearly": "Årligt i alt",
+    "vat_note": "Moms (beregnes ved betaling)",
+    "email_label": "E-mail til modtagelse af licenser og SaaS-adgang",
+    "email_placeholder": "navn@virksomhed.com",
+    "email_hint": "Vi sender licensnøgler og adgangsoplysninger hertil.",
+    "email_error_empty": "Indtast venligst en gyldig e-mailadresse.",
+    "email_error_invalid": "Indtast venligst en gyldig e-mailadresse (f.eks. navn@virksomhed.com).",
+    "terms_alert": "For at fortsætte skal du acceptere Vilkårene og bekræfte, at du har læst Privatlivspolitikken.",
+    "checkout_loading": "Behandler...",
+    "checkout_button": "Fortsæt til betaling",
+    "checkout_error": "Der opstod en fejl. Prøv venligst igen.",
+    "policy_terms_prefix": "Jeg har læst og accepterer",
+    "policy_terms_link": "Generelle Servicevilkår",
+    "policy_terms_suffix": "GeoTapp.",
+    "policy_privacy_prefix": "Jeg har læst",
+    "policy_privacy_link": "Privatlivspolitikken",
+    "policy_privacy_suffix": "for GeoTapp."
+  },
+  "guida": {
+    "page_title": "Brugervejledning",
+    "download_pdf": "Download / Udskriv PDF"
+  },
+  "demo": {
+    "page_title": "Book din personlige demo",
+    "settori": [
+      "Rengøring / Facility / Multiservice",
+      "Sikkerhed / Vagt / Steward",
+      "Installatører / Elektrikere / VVS",
+      "Logistik / Transport",
+      "Byggeri / Vedligeholdelse",
+      "Andet"
+    ],
+    "cosa_vedrai": [
+      {
+        "title": "GPS-tidsstempel i aktion",
+        "desc": "Hvordan teknikeren stempler ind via mobilappen og hvordan kontoret ser den verificerede position — uden kontinuerlig sporing."
+      },
+      {
+        "title": "Verificerbare rapporter",
+        "desc": "Hvordan hvert job genererer en rapport med fotodokumentation, digital signatur og uforanderlig hash, som du kan vise kunden."
+      },
+      {
+        "title": "Teamstyring via Flow",
+        "desc": "Hvordan du tildeler opgaver, overvåger fremdrift og producerer ugentlige rapporter uden Excel-ark eller telefonopkald."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Hvor lang tid varer demoen?",
+        "a": "Præcis 30 minutter. Vi viser dig platformen i reel brug og besvarer dine branchespecifikke spørgsmål."
+      },
+      {
+        "q": "Er forberedelse nødvendig?",
+        "a": "Nej. Bring blot dit konkrete tilfælde — hvor mange operatører du har, og hvilke problemer du i dag har med timer eller rapporter."
+      },
+      {
+        "q": "Er demoen gratis?",
+        "a": "Ja, fuldstændig gratis og uden forpligtelse. Til sidst kan du starte en prøveperiode direkte."
+      },
+      {
+        "q": "Kan jeg invitere en kollega?",
+        "a": "Absolut. Ofte deltager driftschefen og administratoren eller HR sammen."
+      }
+    ],
+    "form_name": "Fulde navn",
+    "form_name_placeholder": "Lars Jensen",
+    "form_company": "Virksomhed",
+    "form_company_placeholder": "Virksomhedsnavn",
+    "form_sector": "Branche",
+    "form_email": "E-mail",
+    "form_email_placeholder": "lars@virksomhed.dk",
+    "form_phone": "Telefon (valgfri)",
+    "form_phone_placeholder": "+45 12 34 56 78",
+    "form_submit": "Book den gratis demo",
+    "form_submitting": "Sender...",
+    "success_title": "Anmodning modtaget!",
+    "success_desc": "Vi kontakter dig inden for 1 arbejdsdag for at planlægge demoen.",
+    "error_message": "Fejl ved afsendelse. Prøv igen senere."
+  },
+  "download_page": {
+    "title": "Download GeoTapp",
+    "subtitle": "Vælg den version der passer til dine behov.",
+    "demo_report_badge": "Rigtigt eksempel",
+    "demo_report_title": "Certificeret jobrapport",
+    "demo_report_desc": "Download en rigtig rapport genereret af GeoTapp. Indeholder verificeret GPS, fotodokumentation, operatør-hashkæde og kryptografisk forsegling.",
+    "demo_report_btn_download": "Download eksempelrapport (.zip)",
+    "demo_report_btn_verify": "Verificer autenticitet",
+    "demo_report_field_operator": "Operatør",
+    "demo_report_field_type": "Jobtype",
+    "windows_title": "GeoTapp til Windows",
+    "windows_desc": "Den komplette desktopapplikation til virksomhedsstyring. Ideel til administration og fuld kontrol.",
+    "windows_features": [
+      "Komplet flådestyring",
+      "Vagtplanlægning",
+      "Løneksport",
+      "Desktopnotifikationer"
+    ],
+    "windows_btn": "Download til Windows",
+    "wp_title": "WordPress-plugin",
+    "wp_desc": "Integrer GeoTapp på din virksomhedshjemmeside. Lad medarbejderne få adgang direkte fra dit intranet.",
+    "wp_features": [
+      "Sikker Iframe-integration",
+      "Shortcode [geotap_app]",
+      "Automatisk login",
+      "Kompatibel med alle temaer"
+    ],
+    "wp_btn": "Download Plugin"
+  },
+  "chi_siamo": {
+    "badge": "Vores historie",
+    "hero_title_line1": "Født i marken,",
+    "hero_title_line2": "ikke på kontoret.",
+    "hero_desc": "GeoTapp blev ikke opfundet af investorer eller analytikere. Det opstod fra den virkelige frustration hos en person, der arbejder hver dag mellem frister, byggepladser og krævende kunder.",
+    "story": [
+      "Det var 2024. Mike Petraroli, vores stifter, arbejdede som lønmodtager og havde et tilsyneladende trivielt, men utroligt dyrt problem: <strong>at bevise sit eget arbejde.</strong>",
+      "Sidst på måneden stemte timetallene aldrig. Jobs lavet i farten mellem kunder blev glemt. Papir gik tabt, WhatsApp-beskeder blev begravet. Det var et stille spild af tid og penge.",
+      "Han søgte en løsning. Han fandt kun komplekse, dyre programmer fyldt med ubrugelige grafer og fattige på substans. Programmer lavet af folk, der aldrig havde stemplet et ur eller udstedt en faktura i en nødsituation fra en varebil.",
+      "Så besluttede Mike at bygge det værktøj selv, som han havde ønsket sig: enkelt, mobilt, med verificerbare beviser. Ikke for investorer — for virksomheder som hans."
+    ],
+    "values_title": "Vores værdier",
+    "values": [
+      {
+        "title": "Klar mission",
+        "desc": "Gøre hvert job målbart og verificerbart. Feltarbejde fortjener de samme transparensværktøjer som et kontor."
+      },
+      {
+        "title": "Dedikeret team",
+        "desc": "Vi er et lille team, der er besat af det problem, vi løser. Hver funktion kommer fra reel feedback, ikke fra marketingkøreplaner."
+      },
+      {
+        "title": "Privacy by Design",
+        "desc": "Vi sælger ikke data, vi sporer ikke kontinuerligt. GPS kun ved stempling, nul overvågning."
+      },
+      {
+        "title": "Made in Italy",
+        "desc": "Udviklet i Italien til det italienske og europæiske marked. GDPR-regler, arbejdskultur og lokale regler er i produktets DNA."
+      }
+    ],
+    "cta_title": "Deltag i den enkle revolution",
+    "cta_desc": "Vi er ikke et utilgængeligt Big Tech-selskab. Vi er rigtige mennesker, der bygger software til rigtige mennesker.",
+    "cta_btn": "Send os en besked"
   }
 }

@@ -10,7 +10,11 @@
       "installatori": "Installatörer",
       "sicurezza": "Säkerhet",
       "pulizie": "Städning"
-    }
+    },
+    "logo_alt": "GeoTapp — Plattformen som gör arbete verifierbart",
+    "product_flow_desc": "Operativ hantering av uppdrag och team",
+    "product_app_desc": "Mobilapp för fälttekniker",
+    "product_verifier_desc": "Integritetskontroll av arbetsrapporter"
   },
   "footer": {
     "tagline": "Fältaktivitet registrerad. Verksamhet organiserad. Rapporter verifierbara.",
@@ -149,6 +153,20 @@
       "status": "🟢 I tjänst",
       "next_job_label": "Nästa uppdrag",
       "next_job_time": "Om 15 min"
+    },
+    "demo_banner": {
+      "badge": "Riktigt exempel",
+      "title": "Certifierad rapport — ladda ned och verifiera",
+      "field_operator": "Operatör",
+      "field_intervention": "Insats",
+      "btn_download": "Ladda ned rapport (.zip)",
+      "btn_verify": "Verifiera äkthet →"
+    },
+    "flow_mockup": {
+      "pipeline_title": "Försäljningspipeline",
+      "month": "December 2025",
+      "quote_name": "Offert A. Lindqvist",
+      "quote_approved": "Godkänd idag kl. 09:30"
     }
   },
   "pricing": {
@@ -215,6 +233,82 @@
           }
         ]
       }
+    },
+    "calculator": {
+      "title": "TimeTracker licensräknare",
+      "subtitle": "Uppskatta din årliga personalinvestering.",
+      "active_users": "Aktiva användare",
+      "discount_threshold": "Rabattgräns",
+      "cost_per_user": "Genomsnittlig kostnad per användare",
+      "per_month": "/mån",
+      "standard_rate": "Standardtaxa (1–25 @ €2)",
+      "mixed_rate": "Blandad taxa (volymrabatt tillämpad)",
+      "annual_total": "Årstotal (+moms)",
+      "annual_billing_note": "Enskild årsfakturering",
+      "enterprise_plan": "Enterprise-plan",
+      "enterprise_desc": "För team med fler än 150 användare erbjuder vi anpassade SLA och dedikerad kontohantering.",
+      "request_quote": "Begär offert",
+      "add_to_cart": "Lägg App-licens i varukorg",
+      "secure_payment": "Säker betalning via Stripe. Moms beräknas vid utcheckning."
+    },
+    "simulator": {
+      "section_title": "Beräkna din offert",
+      "employees_label": "Antal anställda:",
+      "one_employee": "1 Anställd",
+      "many_employees": "150+ Anställda",
+      "price_per_user": "Pris per användare",
+      "annual_total": "Årstotal",
+      "per_month": "/mån",
+      "per_user_annual": "per användare, årsfakturering",
+      "selected_badge": "Vald",
+      "enterprise_plan": "Enterprise-plan",
+      "enterprise_desc": "För stora organisationer erbjuder vi skräddarsydda lösningar.",
+      "enterprise_cta": "Kontakta oss för en offert",
+      "company_placeholder": "Företagsnamn",
+      "email_placeholder": "Admin-e-post",
+      "email_error_format": "Ange en giltig e-postadress (t.ex. namn@foretag.se)",
+      "email_error_placeholder": "Ange en riktig företags-e-post.",
+      "terms_alert": "För att fortsätta måste du acceptera Villkoren och bekräfta att du har läst Integritetspolicyn.",
+      "processing": "Bearbetar...",
+      "request_info": "Begär information",
+      "buy_now": "Köp nu",
+      "payment_note": "Säker betalning via Stripe. Avsluta när som helst.",
+      "success_sent": "Förfrågan skickad! Vi kontaktar dig snart.",
+      "error_request": "Fel vid sändning av förfrågan",
+      "plus_vat": "+ moms"
+    },
+    "bundle": {
+      "title": "Bundle Kalkylator",
+      "subtitle": "Beräkna din besparing med Flow + TimeTracker Bundle",
+      "employees": "Antal anställda",
+      "billingCycle": "Faktureringscykel",
+      "monthly": "Månadsvis",
+      "yearly": "Årsvis",
+      "flowPlan": "Flow-plan",
+      "solo": "Solo (1 användare)",
+      "team": "Team (upp till 5 användare)",
+      "business": "Business (obegränsat)",
+      "priceBreakdown": "Prisöversikt",
+      "flowPrice": "GeoTapp Flow",
+      "trackerPrice": "TimeTracker",
+      "subtotal": "Delsumma",
+      "bundleDiscount": "Bundle-rabatt (15% första året)",
+      "totalPrice": "Totalpris",
+      "savings": "Du sparar",
+      "perMonth": "/mån",
+      "perYear": "/år",
+      "cta": "Skaffa Bundle nu",
+      "notes": "Obs: Rabatten gäller de första 12 månaderna",
+      "employees_unit": "anställda",
+      "first_year_savings": "det första året!",
+      "loading": "Laddar...",
+      "modal_title": "Ange din e-post",
+      "modal_desc": "Vi behöver din e-post för att skapa din utcheckningssession och skicka kvittot.",
+      "email_placeholder": "din@email.com",
+      "btn_cancel": "Avbryt",
+      "btn_continue": "Fortsätt",
+      "error_checkout": "Fel vid skapande av session. Försök igen.",
+      "error_connection": "Anslutningsfel. Försök igen."
     }
   },
   "contact": {
@@ -234,7 +328,13 @@
         "Allmän informationsförfrågan",
         "Partnerskap",
         "Övrigt"
-      ]
+      ],
+      "name_placeholder": "Ditt namn",
+      "email_placeholder": "du@email.com",
+      "company_placeholder": "Företagsnamn",
+      "message_placeholder": "Ditt meddelande...",
+      "submit": "Skicka meddelande",
+      "submitting": "Skickar..."
     },
     "hours": "Mån-Fre 9:00 - 18:00",
     "location_city": "Brescia, IT",
@@ -248,7 +348,9 @@
     "map_title": "Var vi finns — Trenzano (BS), Italien",
     "success": "Meddelande skickat. Vi återkommer så snart som möjligt.",
     "error": "Fel vid sändning. Försök igen senare.",
-    "sending": "Skickar..."
+    "sending": "Skickar...",
+    "map_unavailable": "Karta ej tillgänglig",
+    "open_maps": "Öppna i Google Maps ↗"
   },
   "login_hub": {
     "title": "Åtkomst till ditt <span class=\"text-primary\">konto</span>.",
@@ -399,5 +501,155 @@
         }
       }
     }
+  },
+  "cart": {
+    "title": "Varukorg",
+    "empty": "Din varukorg är tom.",
+    "license_default": "Standardlicens",
+    "quantity": "Antal",
+    "per_month": "månad",
+    "per_year": "år",
+    "total_monthly": "Månadsvis totalt",
+    "total_yearly": "Årsvis totalt",
+    "vat_note": "Moms (beräknas vid kassan)",
+    "email_label": "E-post för att ta emot licenser och SaaS-åtkomst",
+    "email_placeholder": "namn@foretag.com",
+    "email_hint": "Vi skickar licensnycklar och åtkomstuppgifter hit.",
+    "email_error_empty": "Ange en giltig e-postadress.",
+    "email_error_invalid": "Ange en giltig e-postadress (t.ex. namn@foretag.com).",
+    "terms_alert": "För att fortsätta måste du acceptera Villkoren och bekräfta att du har läst Integritetspolicyn.",
+    "checkout_loading": "Behandlar...",
+    "checkout_button": "Gå till kassan",
+    "checkout_error": "Ett fel uppstod. Försök igen.",
+    "policy_terms_prefix": "Jag har läst och accepterar",
+    "policy_terms_link": "Allmänna Tjänstevillkor",
+    "policy_terms_suffix": "GeoTapp.",
+    "policy_privacy_prefix": "Jag har läst",
+    "policy_privacy_link": "Integritetspolicyn",
+    "policy_privacy_suffix": "för GeoTapp."
+  },
+  "guida": {
+    "page_title": "Användarhandbok",
+    "download_pdf": "Ladda ner / Skriv ut PDF"
+  },
+  "demo": {
+    "page_title": "Boka din personliga demo",
+    "settori": [
+      "Städning / Facility / Multiservice",
+      "Säkerhet / Bevakning / Steward",
+      "Installatörer / Elektriker / VVS",
+      "Logistik / Transport",
+      "Bygg / Underhåll",
+      "Annat"
+    ],
+    "cosa_vedrai": [
+      {
+        "title": "GPS-instämpling i aktion",
+        "desc": "Hur teknikern stämplar in via mobilappen och hur kontoret ser den verifierade positionen — utan kontinuerlig spårning."
+      },
+      {
+        "title": "Verifierbara rapporter",
+        "desc": "Hur varje uppdrag genererar en rapport med fotodokumentation, digital signatur och oföränderlig hash som du kan visa kunden."
+      },
+      {
+        "title": "Teamhantering via Flow",
+        "desc": "Hur du tilldelar uppgifter, övervakar framsteg och producerar veckorapporter utan Excel-ark eller telefonsamtal."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Hur lång är demon?",
+        "a": "Exakt 30 minuter. Vi visar dig plattformen i verklig användning och svarar på dina branschspecifika frågor."
+      },
+      {
+        "q": "Behövs förberedelse?",
+        "a": "Nej. Ta bara med ditt konkreta fall — hur många operatörer du har och vilka problem du har idag med timmar eller rapporter."
+      },
+      {
+        "q": "Är demon gratis?",
+        "a": "Ja, helt gratis och utan åtaganden. I slutet kan du starta en testperiod direkt."
+      },
+      {
+        "q": "Kan jag bjuda in en kollega?",
+        "a": "Absolut. Ofta deltar driftschefen och administratören eller HR tillsammans."
+      }
+    ],
+    "form_name": "Fullständigt namn",
+    "form_name_placeholder": "Erik Svensson",
+    "form_company": "Företag",
+    "form_company_placeholder": "Företagsnamn",
+    "form_sector": "Bransch",
+    "form_email": "E-post",
+    "form_email_placeholder": "erik@foretag.se",
+    "form_phone": "Telefon (valfritt)",
+    "form_phone_placeholder": "+46 70 123 45 67",
+    "form_submit": "Boka gratis demo",
+    "form_submitting": "Skickar...",
+    "success_title": "Förfrågan mottagen!",
+    "success_desc": "Vi kontaktar dig inom 1 arbetsdag för att schemalägga demon.",
+    "error_message": "Fel vid sändning. Försök igen senare."
+  },
+  "download_page": {
+    "title": "Ladda ner GeoTapp",
+    "subtitle": "Välj den version som passar dina behov.",
+    "demo_report_badge": "Riktigt exempel",
+    "demo_report_title": "Certifierad jobbrapport",
+    "demo_report_desc": "Ladda ner en riktig rapport genererad av GeoTapp. Innehåller verifierad GPS, fotodokumentation, operatörs-hashkedja och kryptografisk sigillering.",
+    "demo_report_btn_download": "Ladda ner exempelrapport (.zip)",
+    "demo_report_btn_verify": "Verifiera äkthet",
+    "demo_report_field_operator": "Operatör",
+    "demo_report_field_type": "Jobbtyp",
+    "windows_title": "GeoTapp för Windows",
+    "windows_desc": "Den kompletta skrivbordsapplikationen för företagsstyrning. Idealisk för administration och full kontroll.",
+    "windows_features": [
+      "Komplett flottstyrning",
+      "Skiftplanering",
+      "Löneexport",
+      "Skrivbordsaviseringar"
+    ],
+    "windows_btn": "Ladda ned för Windows",
+    "wp_title": "WordPress-plugin",
+    "wp_desc": "Integrera GeoTapp på din företagswebbplats. Låt anställda komma åt direkt från ert intranät.",
+    "wp_features": [
+      "Säker Iframe-integration",
+      "Shortcode [geotap_app]",
+      "Automatisk inloggning",
+      "Kompatibel med alla teman"
+    ],
+    "wp_btn": "Ladda ned plugin"
+  },
+  "chi_siamo": {
+    "badge": "Vår historia",
+    "hero_title_line1": "Födda i fält,",
+    "hero_title_line2": "inte på kontor.",
+    "hero_desc": "GeoTapp uppfanns inte av investerare eller analytiker. Det föddes ur den verkliga frustrationen hos någon som arbetar varje dag bland deadlines, byggarbetsplatser och krävande kunder.",
+    "story": [
+      "Det var 2024. Mike Petraroli, vår grundare, arbetade som anställd och hade ett till synes trivialt men otroligt kostsamt problem: <strong>att bevisa sitt eget arbete.</strong>",
+      "I slutet av månaden stämde timregistreringen aldrig. Jobb gjorda i farten mellan kunder glömdes bort. Papper gick förlorade, WhatsApp-meddelanden grävdes ner. Det var en tyst källa till bortkastade tid och pengar.",
+      "Han sökte en lösning. Han hittade bara komplexa, dyra program fulla av onödiga grafer och fattiga på substans. Program gjorda av folk som aldrig hade stämplat in eller utfärdat en faktura i nödsituation från en skåpbil.",
+      "Så beslöt Mike att bygga verktyget själv som han hade velat ha: enkelt, mobilt, med verifierbara bevis. Inte för investerare — för företag som hans."
+    ],
+    "values_title": "Våra värderingar",
+    "values": [
+      {
+        "title": "Tydlig mission",
+        "desc": "Göra varje uppdrag mätbart och verifierbart. Fältarbete förtjänar samma transparensverktyg som ett kontor."
+      },
+      {
+        "title": "Dedikerat team",
+        "desc": "Vi är ett litet team som är besatta av problemet vi löser. Varje funktion kommer från verklig feedback, inte från marknadsföringsplaner."
+      },
+      {
+        "title": "Privacy by Design",
+        "desc": "Vi säljer inte data, vi spårar inte kontinuerligt. GPS bara vid instämpling, noll övervakning."
+      },
+      {
+        "title": "Made in Italy",
+        "desc": "Utvecklat i Italien för den italienska och europeiska marknaden. GDPR-regler, arbetskultur och lokala regler finns i produktens DNA."
+      }
+    ],
+    "cta_title": "Gå med i den enkla revolutionen",
+    "cta_desc": "Vi är inte ett otillgängligt Big Tech-företag. Vi är riktiga människor som bygger mjukvara för riktiga människor.",
+    "cta_btn": "Skicka oss ett meddelande"
   }
 }
