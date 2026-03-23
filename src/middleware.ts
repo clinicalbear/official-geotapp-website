@@ -533,10 +533,13 @@ export async function middleware(req: NextRequest) {
     // Exception: /blog/ and /blog (index) are served by Next.js — do NOT redirect them or
     // the middleware creates an infinite loop (/it/blog/ → /blog/ → /it/blog/ → …).
     const strippedPath = stripLocaleFromPathname(pathname);
+    // Next.js-served sub-paths of /blog/ — do NOT redirect to WP proxy.
+    const BLOG_NEXTJS_PATHS = [`${BLOG_BASE}/feed/`];
     if (
       strippedPath.startsWith(BLOG_BASE) &&
       strippedPath !== BLOG_BASE &&
-      strippedPath !== `${BLOG_BASE}/`
+      strippedPath !== `${BLOG_BASE}/` &&
+      !BLOG_NEXTJS_PATHS.includes(strippedPath)
     ) {
       const redirectUrl = req.nextUrl.clone();
       redirectUrl.pathname = strippedPath;
