@@ -651,5 +651,17 @@
     "cta_title": "Unisciti alla Rivoluzione Semplice",
     "cta_desc": "Non siamo una Big Tech irraggiungibile. Siamo persone reali che costruiscono software per persone reali.",
     "cta_btn": "Scrivici un Messaggio"
+  },
+  "blog": {
+    "hero_title": "Pensieri e Scintille.",
+    "hero_desc": "Non scriviamo per riempire pagine. Scriviamo per condividere ciò che impariamo costruendo il futuro del lavoro certificabile.",
+    "no_posts": "Nessun articolo disponibile al momento.",
+    "read_article": "Leggi l'articolo →",
+    "cta_title": "Rimani nel loop",
+    "cta_desc": "Niente spam, solo aggiornamenti di valore sul prodotto e sul settore.",
+    "cta_btn": "Contattaci",
+    "schema_desc": "Guide e approfondimenti su certificazione del lavoro sul campo, gestione squadre, GDPR e geolocalizzazione.",
+    "meta_title": "Blog | GeoTapp — Certificazione del lavoro sul campo",
+    "meta_desc": "Guide, approfondimenti e risorse su gestione squadre, certificazione interventi, GDPR e geolocalizzazione. Dal team GeoTapp."
   }
 }

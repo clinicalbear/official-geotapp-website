@@ -156,21 +156,21 @@ export default function VerifierContent({ copy, locale }: VerifierContentProps) 
           transition={{ duration: 0.8 }}
           className="text-center"
         >
+          <div className="mb-8 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50 border border-emerald-100 text-emerald-700 font-mono text-xs tracking-widest">
+            <FileCheck2 size={14} className="animate-pulse" />
+            {copy.hero_badge}
+          </div>
+
           {/* Logo */}
           <div className="mb-10 flex justify-center">
             <Image
               src="/logoVerifier.png"
               alt="GeoTapp Verifier"
-              width={320}
-              height={80}
+              width={520}
+              height={260}
               priority
-              className="h-16 w-auto"
+              className="mx-auto h-20 w-auto md:h-28"
             />
-          </div>
-
-          <div className="mb-8 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50 border border-emerald-100 text-emerald-700 font-mono text-xs tracking-widest">
-            <FileCheck2 size={14} className="animate-pulse" />
-            {copy.hero_badge}
           </div>
 
           <h1 className="text-5xl md:text-7xl font-display font-bold text-slate-900 mb-8 leading-tight tracking-tight whitespace-pre-line">

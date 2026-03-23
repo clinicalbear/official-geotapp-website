@@ -651,5 +651,17 @@
     "cta_title": "Bli med i den enkle revolusjonen",
     "cta_desc": "Vi er ikke et utilgjengelig Big Tech-selskap. Vi er ekte mennesker som bygger programvare for ekte mennesker.",
     "cta_btn": "Send oss en melding"
+  },
+  "blog": {
+    "hero_title": "Tanker og Gnister.",
+    "hero_desc": "Vi skriver ikke for å fylle sider. Vi skriver for å dele det vi lærer mens vi bygger fremtiden for verifiserbart arbeid.",
+    "no_posts": "Ingen artikler tilgjengelige for øyeblikket.",
+    "read_article": "Les artikkel →",
+    "cta_title": "Hold deg oppdatert",
+    "cta_desc": "Ingen spam, bare verdifulle oppdateringer om produktet og bransjen.",
+    "cta_btn": "Kontakt oss",
+    "schema_desc": "Veiledninger og innsikt om sertifisering av feltarbeid, teamledelse, GDPR og geolokalisering.",
+    "meta_title": "Blogg | GeoTapp — Verifisering av feltarbeid",
+    "meta_desc": "Veiledninger, innsikt og ressurser om teamledelse, sertifisering av oppdrag, GDPR og geolokalisering. Fra GeoTapp-teamet."
   }
 }

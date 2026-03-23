@@ -651,5 +651,17 @@
     "cta_title": "Mach mit bei der einfachen Revolution",
     "cta_desc": "Wir sind kein unerreichbares Big-Tech-Unternehmen. Wir sind echte Menschen, die Software für echte Menschen bauen.",
     "cta_btn": "Schreib uns"
+  },
+  "blog": {
+    "hero_title": "Gedanken & Funken.",
+    "hero_desc": "Wir schreiben nicht um Seiten zu füllen. Wir schreiben, um zu teilen, was wir beim Aufbau der Zukunft der verifizierbaren Arbeit lernen.",
+    "no_posts": "Derzeit keine Artikel verfügbar.",
+    "read_article": "Artikel lesen →",
+    "cta_title": "Bleib auf dem Laufenden",
+    "cta_desc": "Kein Spam, nur wertvolle Updates zu Produkt und Branche.",
+    "cta_btn": "Kontakt aufnehmen",
+    "schema_desc": "Anleitungen und Einblicke zur Außendienst-Zertifizierung, Teamverwaltung, DSGVO und Geolokalisierung.",
+    "meta_title": "Blog | GeoTapp — Außendienst-Verifikation",
+    "meta_desc": "Anleitungen, Einblicke und Ressourcen zu Teamverwaltung, Außendienst-Zertifizierung, DSGVO und Geolokalisierung. Vom GeoTapp-Team."
   }
 }

@@ -651,5 +651,17 @@
     "cta_title": "Join the Simple Revolution",
     "cta_desc": "We're not an unreachable Big Tech company. We're real people building software for real people.",
     "cta_btn": "Send Us a Message"
+  },
+  "blog": {
+    "hero_title": "Thoughts & Sparks.",
+    "hero_desc": "We don't write to fill pages. We write to share what we learn building the future of verifiable work.",
+    "no_posts": "No articles available at the moment.",
+    "read_article": "Read article →",
+    "cta_title": "Stay in the loop",
+    "cta_desc": "No spam, only valuable updates on the product and the industry.",
+    "cta_btn": "Contact us",
+    "schema_desc": "Guides and insights on field work certification, team management, GDPR and geolocation.",
+    "meta_title": "Blog | GeoTapp — Field Work Verification",
+    "meta_desc": "Guides, insights and resources on team management, field work certification, GDPR and geolocation. From the GeoTapp team."
   }
 }

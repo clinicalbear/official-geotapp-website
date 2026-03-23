@@ -651,5 +651,17 @@
     "cta_title": "Junte-se à Revolução Simples",
     "cta_desc": "Não somos uma Big Tech inalcançável. Somos pessoas reais construindo software para pessoas reais.",
     "cta_btn": "Envie-nos uma Mensagem"
+  },
+  "blog": {
+    "hero_title": "Pensamentos e Centelhas.",
+    "hero_desc": "Não escrevemos para preencher páginas. Escrevemos para partilhar o que aprendemos construindo o futuro do trabalho verificável.",
+    "no_posts": "Nenhum artigo disponível de momento.",
+    "read_article": "Ler artigo →",
+    "cta_title": "Fique a par",
+    "cta_desc": "Sem spam, apenas atualizações de valor sobre o produto e o sector.",
+    "cta_btn": "Contacte-nos",
+    "schema_desc": "Guias e análises sobre certificação de trabalho em campo, gestão de equipas, RGPD e geolocalização.",
+    "meta_title": "Blog | GeoTapp — Verificação do trabalho em campo",
+    "meta_desc": "Guias, análises e recursos sobre gestão de equipas, certificação de intervenções, RGPD e geolocalização. Da equipa GeoTapp."
   }
 }

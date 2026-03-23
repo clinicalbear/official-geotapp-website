@@ -651,5 +651,17 @@
     "cta_title": "Sluit je aan bij de Eenvoudige Revolutie",
     "cta_desc": "We zijn geen onbereikbaar Big Tech-bedrijf. We zijn echte mensen die software bouwen voor echte mensen.",
     "cta_btn": "Stuur ons een Bericht"
+  },
+  "blog": {
+    "hero_title": "Gedachten & Vonken.",
+    "hero_desc": "We schrijven niet om pagina's te vullen. We schrijven om te delen wat we leren bij het bouwen van de toekomst van verifieerbaar werk.",
+    "no_posts": "Momenteel geen artikelen beschikbaar.",
+    "read_article": "Artikel lezen →",
+    "cta_title": "Blijf op de hoogte",
+    "cta_desc": "Geen spam, alleen waardevolle updates over het product en de sector.",
+    "cta_btn": "Neem contact op",
+    "schema_desc": "Gidsen en inzichten over certificering van veldwerk, teambeheer, AVG en geolocatie.",
+    "meta_title": "Blog | GeoTapp — Verificatie van veldwerk",
+    "meta_desc": "Gidsen, inzichten en bronnen over teambeheer, certificering van interventies, AVG en geolocatie. Van het GeoTapp-team."
   }
 }
