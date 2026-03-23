@@ -6,11 +6,14 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { JsonLd } from '@/components/seo/JsonLd';
+import { getDictionary } from '@/lib/i18n/dictionaries';
+
+const b = getDictionary('it').blog;
 
 export const metadata: Metadata = {
-  title: 'Blog | GeoTapp — Certificazione del lavoro sul campo',
-  description: 'Guide, approfondimenti e risorse su gestione squadre, certificazione interventi, GDPR e geolocalizzazione. Dal team GeoTapp.',
-  alternates: { canonical: 'https://geotapp.com/blog/' },
+  title: b.meta_title,
+  description: b.meta_desc,
+  alternates: { canonical: 'https://geotapp.com/it/blog/' },
 };
 
 type WpPost = {
@@ -80,8 +83,8 @@ export default async function BlogPage() {
         '@context': 'https://schema.org',
         '@type': 'Blog',
         name: 'GeoTapp Blog',
-        url: 'https://geotapp.com/blog/',
-        description: 'Guide e approfondimenti su certificazione del lavoro sul campo, gestione squadre, GDPR e geolocalizzazione.',
+        url: 'https://geotapp.com/it/blog/',
+        description: b.schema_desc,
         publisher: {
           '@type': 'Organization',
           name: 'GeoTapp',
@@ -91,22 +94,21 @@ export default async function BlogPage() {
 
       <section className="container mx-auto max-w-4xl text-center mb-20">
         <h1 className="text-5xl md:text-6xl font-display font-bold text-white mb-6">
-          Pensieri e Scintille.
+          {b.hero_title}
         </h1>
         <p className="text-xl text-text-secondary font-light">
-          Non scriviamo per riempire pagine. Scriviamo per condividere ciò che
-          impariamo costruendo il futuro del lavoro certificabile.
+          {b.hero_desc}
         </p>
       </section>
 
       <section className="container mx-auto max-w-4xl space-y-12">
         {posts.length === 0 ? (
-          <p className="text-text-secondary text-center py-20">Nessun articolo disponibile al momento.</p>
+          <p className="text-text-secondary text-center py-20">{b.no_posts}</p>
         ) : (
           posts.map((post) => {
             const postUrl = normalizePostUrl(post.link, post.slug);
             const excerpt = stripHtml(post.excerpt.rendered).slice(0, 200);
-            const date = new Date(post.date).toLocaleDateString('it-IT', {
+            const date = new Date(post.date).toLocaleDateString('it', {
               day: 'numeric', month: 'long', year: 'numeric',
             });
 
@@ -126,7 +128,7 @@ export default async function BlogPage() {
                         {excerpt}{excerpt.length === 200 ? '…' : ''}
                       </p>
                       <span className="flex items-center gap-2 text-white font-bold">
-                        Leggi l&apos;articolo →
+                        {b.read_article}
                       </span>
                     </div>
                   </div>
@@ -138,15 +140,13 @@ export default async function BlogPage() {
       </section>
 
       <section className="container mx-auto max-w-2xl text-center mt-32 pt-20 border-t border-white/5">
-        <h2 className="text-2xl font-bold text-white mb-4">Rimani nel loop</h2>
-        <p className="text-text-secondary mb-8 font-light">
-          Niente spam, solo aggiornamenti di valore sul prodotto e sul settore.
-        </p>
+        <h2 className="text-2xl font-bold text-white mb-4">{b.cta_title}</h2>
+        <p className="text-text-secondary mb-8 font-light">{b.cta_desc}</p>
         <Link
-          href="/contact/"
+          href="/it/contact/"
           className="inline-block px-6 py-3 bg-white text-black font-bold rounded-xl hover:bg-primary transition-colors"
         >
-          Contattaci
+          {b.cta_btn}
         </Link>
       </section>
     </div>
