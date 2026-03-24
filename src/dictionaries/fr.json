@@ -650,7 +650,22 @@
     ],
     "cta_title": "Rejoignez la Révolution Simple",
     "cta_desc": "Nous ne sommes pas une grande entreprise tech inaccessible. Nous sommes de vraies personnes qui construisent des logiciels pour de vraies personnes.",
-    "cta_btn": "Envoyez-nous un Message"
+    "cta_btn": "Envoyez-nous un Message",
+    "stats": [
+      {
+        "number": "2024",
+        "label": "Fondée"
+      },
+      {
+        "number": "100%",
+        "label": "Pensé pour le terrain"
+      },
+      {
+        "number": "GDPR",
+        "label": "Confidentialité certifiée"
+      }
+    ],
+    "mission_quote": "Le travail sur le terrain mérite les mêmes outils de transparence qu'un bureau."
   },
   "blog": {
     "hero_title": "Pensées & Étincelles.",

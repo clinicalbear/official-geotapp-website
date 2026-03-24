@@ -650,7 +650,22 @@
     ],
     "cta_title": "Sluit je aan bij de Eenvoudige Revolutie",
     "cta_desc": "We zijn geen onbereikbaar Big Tech-bedrijf. We zijn echte mensen die software bouwen voor echte mensen.",
-    "cta_btn": "Stuur ons een Bericht"
+    "cta_btn": "Stuur ons een Bericht",
+    "stats": [
+      {
+        "number": "2024",
+        "label": "Opgericht"
+      },
+      {
+        "number": "100%",
+        "label": "Gebouwd voor het veld"
+      },
+      {
+        "number": "GDPR",
+        "label": "Gecertificeerde privacy"
+      }
+    ],
+    "mission_quote": "Veldwerk verdient dezelfde transparantie-tools als een kantoor."
   },
   "blog": {
     "hero_title": "Gedachten & Vonken.",

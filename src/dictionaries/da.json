@@ -650,7 +650,22 @@
     ],
     "cta_title": "Deltag i den enkle revolution",
     "cta_desc": "Vi er ikke et utilgængeligt Big Tech-selskab. Vi er rigtige mennesker, der bygger software til rigtige mennesker.",
-    "cta_btn": "Send os en besked"
+    "cta_btn": "Send os en besked",
+    "stats": [
+      {
+        "number": "2024",
+        "label": "Grundlagt"
+      },
+      {
+        "number": "100%",
+        "label": "Bygget til feltet"
+      },
+      {
+        "number": "GDPR",
+        "label": "Certificeret privatliv"
+      }
+    ],
+    "mission_quote": "Feltarbejde fortjener de samme transparensværktøjer som et kontor."
   },
   "blog": {
     "hero_title": "Tanker og Gnister.",

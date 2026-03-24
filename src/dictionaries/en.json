@@ -650,7 +650,22 @@
     ],
     "cta_title": "Join the Simple Revolution",
     "cta_desc": "We're not an unreachable Big Tech company. We're real people building software for real people.",
-    "cta_btn": "Send Us a Message"
+    "cta_btn": "Send Us a Message",
+    "stats": [
+      {
+        "number": "2024",
+        "label": "Founded"
+      },
+      {
+        "number": "100%",
+        "label": "Built for the field"
+      },
+      {
+        "number": "GDPR",
+        "label": "Certified privacy"
+      }
+    ],
+    "mission_quote": "Field work deserves the same transparency tools as an office."
   },
   "blog": {
     "hero_title": "Thoughts & Sparks.",

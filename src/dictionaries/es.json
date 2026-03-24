@@ -650,7 +650,22 @@
     ],
     "cta_title": "Únete a la Revolución Simple",
     "cta_desc": "No somos una gran empresa tecnológica inalcanzable. Somos personas reales que construyen software para personas reales.",
-    "cta_btn": "Escríbenos un Mensaje"
+    "cta_btn": "Escríbenos un Mensaje",
+    "stats": [
+      {
+        "number": "2024",
+        "label": "Fundada"
+      },
+      {
+        "number": "100%",
+        "label": "Diseñado para el campo"
+      },
+      {
+        "number": "GDPR",
+        "label": "Privacidad certificada"
+      }
+    ],
+    "mission_quote": "El trabajo en campo merece las mismas herramientas de transparencia que una oficina."
   },
   "blog": {
     "hero_title": "Pensamientos y Destellos.",

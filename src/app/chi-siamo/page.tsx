@@ -1,26 +1,7 @@
 'use client';
 
-// Overview: page.tsx
-// Module: src > app > chi-siamo
-// Purpose: documents intent and boundaries to speed up maintenance and reviews.
-// Safety: keep permissions, tenancy isolation, and API/data compatibility unchanged unless explicitly required.
-
-// Documentation Contract:
-// - Boundaries: this file may orchestrate UI/data flow, but it must keep business invariants intact.
-// - Security: preserve role/tenant checks and never broaden access scope implicitly.
-// - Data Integrity: keep field names and payload schemas stable unless a migration is planned.
-// - Compatibility: companyId/tenantId fallbacks may still be required for legacy records.
-// - Performance: avoid extra roundtrips in hot paths and prefer incremental updates.
-// - Error Handling: prefer graceful degradation over hard-fail in non-critical rendering paths.
-// - UX Stability: keep deterministic ordering/filtering to avoid visual flicker/regressions.
-// - Testing: update module tests when changing control flow, query composition, or serialization.
-// - Operations: changes touching auth/rules/functions must stay aligned across apps.
-// - Maintainability: keep additive changes whenever possible to reduce rollback risk.
-
-
 import { motion } from 'framer-motion';
-import { Target, Users, Lock, Heart } from 'lucide-react';
-import Image from 'next/image';
+import { Target, Users, Lock, Heart, Quote } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import { getLocaleFromPathname } from '@/lib/i18n/locale-routing';
@@ -33,188 +14,153 @@ export default function AboutPage() {
   const cs = getDictionary(locale).chi_siamo;
 
   return (
-    <div className="bg-background min-h-screen pt-40 pb-24">
+    <div className="bg-background min-h-screen pt-40 pb-24 overflow-hidden">
+
       {/* Hero */}
-      <section className="px-6 text-center mb-32">
+      <section className="relative px-6 text-center mb-24">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] rounded-full bg-primary/10 blur-[120px]" />
+        </div>
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="container mx-auto max-w-4xl"
+          className="container mx-auto max-w-4xl relative"
         >
           <span className="text-primary text-sm font-bold uppercase tracking-widest mb-6 inline-block">
             {cs.badge}
           </span>
-          <h1 className="text-5xl md:text-7xl font-display font-bold text-white mb-8">
+          <h1 className="text-5xl md:text-7xl font-display font-bold text-white mb-8 leading-tight">
             {cs.hero_title_line1}
             <br />
-            {cs.hero_title_line2}
+            <span className="text-primary">{cs.hero_title_line2}</span>
           </h1>
-          <p className="text-xl md:text-2xl text-text-secondary leading-relaxed font-light text-balance mx-auto">
+          <p className="text-xl md:text-2xl text-text-secondary leading-relaxed font-light text-balance mx-auto max-w-3xl">
             {cs.hero_desc}
           </p>
         </motion.div>
       </section>
 
-      {/* Story Section */}
-      <section className="container mx-auto px-6 max-w-3xl mb-32">
+      {/* Stats Bar */}
+      <section className="container mx-auto px-6 max-w-3xl mb-24">
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="space-y-8 text-lg md:text-xl text-text-secondary leading-loose font-light border-l border-white/10 pl-8 md:pl-12"
+          className="grid grid-cols-3 gap-4 p-8 rounded-2xl border border-white/10 bg-white/[0.02]"
         >
-          {cs.story.map((para: string, i: number) => (
-            <p key={i} dangerouslySetInnerHTML={{ __html: para }} />
+          {cs.stats.map((stat: { number: string; label: string }, i: number) => (
+            <div key={i} className="text-center">
+              <div className="text-3xl md:text-4xl font-display font-bold text-primary mb-2">{stat.number}</div>
+              <div className="text-xs md:text-sm text-text-secondary uppercase tracking-widest">{stat.label}</div>
+            </div>
           ))}
         </motion.div>
       </section>
 
+      {/* Story Timeline */}
+      <section className="container mx-auto px-6 max-w-3xl mb-24">
+        <div className="relative pl-14">
+          <div className="absolute left-4 top-3 bottom-3 w-px bg-gradient-to-b from-primary/60 via-primary/20 to-transparent" />
+          <div className="space-y-12">
+            {cs.story.map((para: string, i: number) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, x: -16 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.12 }}
+                className="relative"
+              >
+                <div className="absolute -left-10 top-1.5 w-8 h-8 rounded-full bg-primary/10 border border-primary/40 flex items-center justify-center">
+                  <div className="w-2 h-2 rounded-full bg-primary" />
+                </div>
+                <p
+                  className="text-lg md:text-xl text-text-secondary leading-loose font-light"
+                  dangerouslySetInnerHTML={{ __html: para }}
+                />
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Mission Quote */}
+      <section className="container mx-auto px-6 max-w-4xl mb-24">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.97 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          className="relative p-10 md:p-14 rounded-2xl bg-primary/10 border border-primary/25 overflow-hidden text-center"
+        >
+          <div className="absolute top-4 left-6 text-primary/15 select-none pointer-events-none">
+            <Quote size={80} />
+          </div>
+          <p className="relative text-2xl md:text-3xl font-display font-bold text-white leading-snug">
+            {cs.mission_quote}
+          </p>
+        </motion.div>
+      </section>
+
       {/* Values Grid */}
-      <section className="container mx-auto px-6 max-w-6xl mb-32">
+      <section className="container mx-auto px-6 max-w-6xl mb-24">
         <h2 className="text-3xl font-bold text-white font-display mb-12 text-center">
           {cs.values_title}
         </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {cs.values.map((item: { title: string; desc: string }, i: number) => {
             const Icon = VALUES_ICONS[i] ?? Target;
             return (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.2 }}
-              className="space-y-4"
-            >
-              <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-primary mb-4">
-                <Icon size={24} />
-              </div>
-              <h3 className="text-2xl font-bold text-white font-display">
-                {item.title}
-              </h3>
-              <p className="text-text-secondary leading-relaxed font-light">
-                {item.desc}
-              </p>
-            </motion.div>
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="p-6 rounded-2xl border border-white/10 bg-white/[0.02] hover:border-primary/30 hover:bg-primary/5 transition-all duration-300 group"
+              >
+                <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary mb-5 group-hover:scale-110 transition-transform duration-300">
+                  <Icon size={22} />
+                </div>
+                <h3 className="text-lg font-bold text-white font-display mb-3">
+                  {item.title}
+                </h3>
+                <p className="text-text-secondary leading-relaxed font-light text-sm">
+                  {item.desc}
+                </p>
+              </motion.div>
             );
           })}
         </div>
       </section>
 
-      {/* Team CTA */}
-      <section className="container mx-auto px-6 text-center">
-        <div className="p-12 md:p-24 rounded-3xl bg-white/[0.02] border border-white/5">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 font-display">
-            {cs.cta_title}
-          </h2>
-          <p className="text-xl text-text-secondary max-w-2xl mx-auto mb-12 font-light">
-            {cs.cta_desc}
-          </p>
-          <a
-            href="/contact"
-            className="px-8 py-4 bg-white text-black font-bold rounded-xl hover:bg-primary transition-colors inline-block text-lg"
-          >
-            {cs.cta_btn}
-          </a>
-        </div>
+      {/* CTA */}
+      <section className="container mx-auto px-6 max-w-4xl">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="relative p-12 md:p-20 rounded-3xl overflow-hidden text-center"
+        >
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-primary/10 to-transparent" />
+          <div className="absolute inset-0 border border-primary/20 rounded-3xl" />
+          <div className="relative">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 font-display">
+              {cs.cta_title}
+            </h2>
+            <p className="text-xl text-text-secondary max-w-2xl mx-auto mb-10 font-light">
+              {cs.cta_desc}
+            </p>
+            <a
+              href="/contact"
+              className="px-8 py-4 bg-primary text-white font-bold rounded-xl hover:bg-primary/90 transition-colors inline-block text-lg shadow-lg shadow-primary/25"
+            >
+              {cs.cta_btn}
+            </a>
+          </div>
+        </motion.div>
       </section>
+
     </div>
   );
 }
-
-// Documentation continuity notes:
-// maintenance-note-1: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-2: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-3: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-4: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-5: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-6: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-7: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-8: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-9: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-10: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-11: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-12: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-13: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-14: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-15: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-16: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-17: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-18: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-19: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-20: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-21: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-22: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-23: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-24: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-25: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-26: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-27: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-28: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-29: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-30: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-31: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-32: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-33: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-34: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-35: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-36: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-37: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-38: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-39: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-40: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-41: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-42: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-43: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-44: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-45: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-46: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-47: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-48: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-49: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-50: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-51: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-52: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-53: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-54: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-55: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-56: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-57: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-58: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-59: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-60: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-61: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-62: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-63: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-64: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-65: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-66: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-67: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-68: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-69: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-70: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-71: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-72: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-73: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-74: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-75: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-76: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-77: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-78: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-79: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-80: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-81: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-82: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-83: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-84: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-85: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-86: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-87: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-88: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-89: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-90: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-91: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-92: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-93: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-94: preserve deterministic behavior and additive-only compatibility guarantees.

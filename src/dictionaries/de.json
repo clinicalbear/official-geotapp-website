@@ -650,7 +650,22 @@
     ],
     "cta_title": "Mach mit bei der einfachen Revolution",
     "cta_desc": "Wir sind kein unerreichbares Big-Tech-Unternehmen. Wir sind echte Menschen, die Software für echte Menschen bauen.",
-    "cta_btn": "Schreib uns"
+    "cta_btn": "Schreib uns",
+    "stats": [
+      {
+        "number": "2024",
+        "label": "Gegründet"
+      },
+      {
+        "number": "100%",
+        "label": "Für den Außendienst"
+      },
+      {
+        "number": "GDPR",
+        "label": "Zertifizierter Datenschutz"
+      }
+    ],
+    "mission_quote": "Außendienstarbeit verdient dieselben Transparenz-Tools wie ein Büro."
   },
   "blog": {
     "hero_title": "Gedanken & Funken.",

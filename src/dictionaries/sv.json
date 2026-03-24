@@ -650,7 +650,22 @@
     ],
     "cta_title": "Gå med i den enkla revolutionen",
     "cta_desc": "Vi är inte ett otillgängligt Big Tech-företag. Vi är riktiga människor som bygger mjukvara för riktiga människor.",
-    "cta_btn": "Skicka oss ett meddelande"
+    "cta_btn": "Skicka oss ett meddelande",
+    "stats": [
+      {
+        "number": "2024",
+        "label": "Grundat"
+      },
+      {
+        "number": "100%",
+        "label": "Byggt för fältet"
+      },
+      {
+        "number": "GDPR",
+        "label": "Certifierad integritet"
+      }
+    ],
+    "mission_quote": "Fältarbete förtjänar samma transparensverktyg som ett kontor."
   },
   "blog": {
     "hero_title": "Tankar och Gnistor.",

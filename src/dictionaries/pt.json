@@ -650,7 +650,22 @@
     ],
     "cta_title": "Junte-se à Revolução Simples",
     "cta_desc": "Não somos uma Big Tech inalcançável. Somos pessoas reais construindo software para pessoas reais.",
-    "cta_btn": "Envie-nos uma Mensagem"
+    "cta_btn": "Envie-nos uma Mensagem",
+    "stats": [
+      {
+        "number": "2024",
+        "label": "Fundada"
+      },
+      {
+        "number": "100%",
+        "label": "Feito para o campo"
+      },
+      {
+        "number": "GDPR",
+        "label": "Privacidade certificada"
+      }
+    ],
+    "mission_quote": "O trabalho em campo merece as mesmas ferramentas de transparência que um escritório."
   },
   "blog": {
     "hero_title": "Pensamentos e Centelhas.",

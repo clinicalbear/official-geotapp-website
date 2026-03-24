@@ -650,7 +650,22 @@
     ],
     "cta_title": "Unisciti alla Rivoluzione Semplice",
     "cta_desc": "Non siamo una Big Tech irraggiungibile. Siamo persone reali che costruiscono software per persone reali.",
-    "cta_btn": "Scrivici un Messaggio"
+    "cta_btn": "Scrivici un Messaggio",
+    "stats": [
+      {
+        "number": "2024",
+        "label": "Anno di fondazione"
+      },
+      {
+        "number": "100%",
+        "label": "Pensato per il campo"
+      },
+      {
+        "number": "GDPR",
+        "label": "Privacy certificata"
+      }
+    ],
+    "mission_quote": "Il lavoro sul campo merita gli stessi strumenti di trasparenza di un ufficio."
   },
   "blog": {
     "hero_title": "Pensieri e Scintille.",
