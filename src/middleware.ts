@@ -33,16 +33,16 @@ const PUBLIC_FILE = /\.(.*)$/;
  * Applied only to non-blog, non-proxy responses (Next.js pages + API).
  *
  * Notes:
- * - COEP: credentialless (not require-corp) — cross-origin iframes such as the
- *   Google Maps embed on /contact load correctly; require-corp would block them
- *   because Google's embed server does not send Cross-Origin-Resource-Policy headers.
+ * - COEP is intentionally omitted: Firefox treats COEP:credentialless as
+ *   require-corp for cross-origin iframe navigations, which blocks Google Maps
+ *   and other third-party embeds. This site has no SharedArrayBuffer or
+ *   high-precision timing needs, so COEP provides no benefit here.
  * - Permissions-Policy: geolocation blocked at document level — the GeoTapp
  *   marketing site doesn't need JS geolocation; the mobile app handles that.
  */
 function applySecurityHeaders(response: NextResponse): void {
   response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
   response.headers.set('Permissions-Policy', 'geolocation=(), camera=(), microphone=()');
-  response.headers.set('Cross-Origin-Embedder-Policy', 'credentialless');
 }
 
 const WP_ORIGIN = 'https://blog.geotapp.com';
@@ -214,6 +214,7 @@ const SITEMAP_ROUTES: SitemapRouteEntry[] = [
   { path: '/chi-siamo/', priority: 0.55, changeFrequency: 'monthly' },
   { path: '/privacy/', priority: 0.3, changeFrequency: 'yearly' },
   { path: '/terms/', priority: 0.3, changeFrequency: 'yearly' },
+  { path: '/cookies/', priority: 0.3, changeFrequency: 'yearly' },
 ];
 
 async function buildFullSitemap(): Promise<string> {
@@ -232,7 +233,7 @@ async function buildFullSitemap(): Promise<string> {
       };
       const hreflangLines = [
         ...locales.map((l) => `    <xhtml:link rel="alternate" hreflang="${HREFLANG_MAP[l] ?? l}" href="${SITEMAP_BASE_URL}/${l}${path}"/>`),
-        `    <xhtml:link rel="alternate" hreflang="x-default" href="${SITEMAP_BASE_URL}${path}"/>`,
+        `    <xhtml:link rel="alternate" hreflang="x-default" href="${SITEMAP_BASE_URL}/en${path}"/>`,
       ].join('\n');
       localeEntries.push(
         `  <url>\n` +

@@ -294,9 +294,18 @@ export default async function LocaleLayout({ children, params }: Props) {
                 height: 512,
               },
               sameAs: [
-                // Aggiungere URL social verificati (LinkedIn, Crunchbase, ecc.)
-                // 'https://www.linkedin.com/company/geotapp',
+                'https://www.linkedin.com/company/110850300/',
+                'https://www.facebook.com/profile.php?id=61583303732388',
+                'https://www.instagram.com/geotapp_official/',
+                'https://x.com/MPetraroli39547',
               ],
+              address: {
+                '@type': 'PostalAddress',
+                streetAddress: 'Via Guglielmo Marconi 4',
+                addressLocality: 'Trenzano',
+                postalCode: '25030',
+                addressCountry: 'IT',
+              },
               contactPoint: {
                 '@type': 'ContactPoint',
                 telephone: '+393520140978',
@@ -359,6 +368,48 @@ export default async function LocaleLayout({ children, params }: Props) {
           id="schema-locale-software-application"
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localeSchema) }}
+        />
+        {/* ── LocalBusiness schema ───────────────────────────────────────────
+            Signals physical presence to Google Maps and local search. */}
+        <script
+          id="schema-local-business"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'ProfessionalService',
+              '@id': 'https://geotapp.com/#localbusiness',
+              name: 'GeoTapp',
+              url: 'https://geotapp.com',
+              telephone: '+393520140978',
+              email: 'info@geotapp.com',
+              priceRange: '€€',
+              address: {
+                '@type': 'PostalAddress',
+                streetAddress: 'Via Guglielmo Marconi 4',
+                addressLocality: 'Trenzano',
+                postalCode: '25030',
+                addressCountry: 'IT',
+              },
+              geo: {
+                '@type': 'GeoCoordinates',
+                latitude: 45.4771587,
+                longitude: 10.0041003,
+              },
+              openingHoursSpecification: {
+                '@type': 'OpeningHoursSpecification',
+                dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+                opens: '09:00',
+                closes: '18:00',
+              },
+              sameAs: [
+                'https://www.linkedin.com/company/110850300/',
+                'https://www.facebook.com/profile.php?id=61583303732388',
+                'https://www.instagram.com/geotapp_official/',
+                'https://x.com/MPetraroli39547',
+              ],
+            }),
+          }}
         />
         {/* FAQPage schema moved to [locale]/page.tsx (server component) so it
             renders only on the homepage, not on every sub-page under [locale]/.
