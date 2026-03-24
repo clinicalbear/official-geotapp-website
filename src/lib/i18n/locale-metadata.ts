@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import { SUPPORTED_LOCALES } from './config';
+import { translateSlug } from './slug-map';
+import type { AppLocale } from './config';
 
 const BASE = 'https://geotapp.com';
 
@@ -33,18 +35,33 @@ export function buildLocaleAlternates(
   locale: string,
   path: string,
 ): Metadata['alternates'] {
+  // path e.g. '/chi-siamo/' — extract the canonical slug (first segment)
+  const segments = path.split('/').filter(Boolean);
+  const canonicalSlug = segments[0] ?? '';
+  const restPath = segments.slice(1).join('/');
+
   const languages = Object.fromEntries(
-    SUPPORTED_LOCALES.map((l) => [HREFLANG[l] ?? l, `${BASE}/${l}${path}`]),
+    SUPPORTED_LOCALES.map((l) => {
+      const translatedSlug = translateSlug(canonicalSlug, l as AppLocale);
+      const localizedPath = restPath
+        ? `/${translatedSlug}/${restPath}/`
+        : `/${translatedSlug}/`;
+      return [HREFLANG[l] ?? l, `${BASE}/${l}${localizedPath}`];
+    }),
   ) as Record<string, string>;
 
-  // x-default points to the root non-locale path (e.g. /pricing/).
-  // Google uses x-default for users whose language doesn't match any hreflang.
-  // The middleware 308-redirects these paths to the user's resolved locale —
-  // 308 is a permanent redirect and Google consolidates link equity correctly.
-  languages['x-default'] = `${BASE}${path}`;
+  // x-default: root Italian path (no locale prefix), with translated canonical slug
+  const itSlug = translateSlug(canonicalSlug, 'it');
+  const itPath = restPath ? `/${itSlug}/${restPath}/` : `/${itSlug}/`;
+  languages['x-default'] = `${BASE}${itPath}`;
+
+  const currentTranslatedSlug = translateSlug(canonicalSlug, locale as AppLocale);
+  const currentPath = restPath
+    ? `/${currentTranslatedSlug}/${restPath}/`
+    : `/${currentTranslatedSlug}/`;
 
   return {
-    canonical: `${BASE}/${locale}${path}`,
+    canonical: `${BASE}/${locale}${currentPath}`,
     languages,
   };
 }
