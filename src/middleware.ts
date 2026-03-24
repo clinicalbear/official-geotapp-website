@@ -43,6 +43,15 @@ const PUBLIC_FILE = /\.(.*)$/;
 function applySecurityHeaders(response: NextResponse): void {
   response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
   response.headers.set('Permissions-Policy', 'geolocation=(), camera=(), microphone=()');
+  // HSTS: force HTTPS for 1 year, include subdomains, allow preload list submission
+  response.headers.set('Strict-Transport-Security', 'max-age=31536000; includeSubDomains; preload');
+  // Clickjacking protection: deny framing from other origins
+  response.headers.set('X-Frame-Options', 'SAMEORIGIN');
+  // COOP: isolate browsing context — prevents opener-based attacks
+  // Use 'same-origin-allow-popups' to keep OAuth/Stripe popup flows working
+  response.headers.set('Cross-Origin-Opener-Policy', 'same-origin-allow-popups');
+  // X-Content-Type-Options: prevent MIME sniffing
+  response.headers.set('X-Content-Type-Options', 'nosniff');
 }
 
 const WP_ORIGIN = 'https://blog.geotapp.com';

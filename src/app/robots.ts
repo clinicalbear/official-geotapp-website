@@ -40,6 +40,5 @@ export default function robots(): MetadataRoute.Robots {
       },
     ],
     sitemap: 'https://geotapp.com/sitemap.xml',
-    host: 'https://geotapp.com',
   };
 }

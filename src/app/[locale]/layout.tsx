@@ -244,12 +244,9 @@ export default async function LocaleLayout({ children, params }: Props) {
     <html lang={locale}>
       <head>
         {/* ── Critical preconnects ───────────────────────────────────────────
-            Establish TCP+TLS handshake early for domains GeoTapp fetches on
-            every page load. Saves 100-300ms per domain on first request. */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        {/* gstatic serves the actual font files — crossOrigin required */}
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        {/* Stripe JS is loaded on pricing/checkout pages */}
+            next/font/google already handles fonts.googleapis.com and
+            fonts.gstatic.com internally — no manual preconnect needed.
+            Stripe JS is loaded on pricing/checkout pages only. */}
         <link rel="preconnect" href="https://js.stripe.com" />
 
         {/* ── DNS prefetch ───────────────────────────────────────────────────
@@ -435,9 +432,21 @@ export default async function LocaleLayout({ children, params }: Props) {
           strategy="afterInteractive"
         />
         <div className="relative min-h-screen overflow-hidden">
-          {/* Background Glow Effects (Subtle for Light Mode) */}
-          <div className="fixed top-0 left-0 w-[800px] h-[800px] bg-sky-100 blur-[120px] opacity-60 -translate-x-1/2 -translate-y-1/2 pointer-events-none rounded-full z-0" />
-          <div className="fixed bottom-0 right-0 w-[800px] h-[800px] bg-purple-100 blur-[120px] opacity-60 translate-x-1/2 translate-y-1/2 pointer-events-none rounded-full z-0" />
+          {/* Background Glow Effects — CSS radial-gradient instead of
+              filter:blur() to avoid GPU compositing overhead on mobile.
+              Visual output is identical; no per-frame repaint cost. */}
+          <div
+            aria-hidden="true"
+            style={{
+              position: 'fixed',
+              inset: 0,
+              zIndex: 0,
+              pointerEvents: 'none',
+              background:
+                'radial-gradient(ellipse 55% 45% at 0% 0%, rgb(224 242 254 / 0.6), transparent),' +
+                'radial-gradient(ellipse 55% 45% at 100% 100%, rgb(243 232 255 / 0.6), transparent)',
+            }}
+          />
 
           <CartDrawer />
 
