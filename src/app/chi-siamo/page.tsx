@@ -30,7 +30,7 @@ export default function AboutPage() {
           <span className="text-primary text-sm font-bold uppercase tracking-widest mb-6 inline-block">
             {cs.badge}
           </span>
-          <h1 className="text-5xl md:text-7xl font-display font-bold text-white mb-8 leading-tight">
+          <h1 className="text-5xl md:text-7xl font-display font-bold text-foreground mb-8 leading-tight">
             {cs.hero_title_line1}
             <br />
             <span className="text-primary">{cs.hero_title_line2}</span>
@@ -96,7 +96,7 @@ export default function AboutPage() {
           <div className="absolute top-4 left-6 text-primary/15 select-none pointer-events-none">
             <Quote size={80} />
           </div>
-          <p className="relative text-2xl md:text-3xl font-display font-bold text-white leading-snug">
+          <p className="relative text-2xl md:text-3xl font-display font-bold text-foreground leading-snug">
             {cs.mission_quote}
           </p>
         </motion.div>
@@ -104,7 +104,7 @@ export default function AboutPage() {
 
       {/* Values Grid */}
       <section className="container mx-auto px-6 max-w-6xl mb-24">
-        <h2 className="text-3xl font-bold text-white font-display mb-12 text-center">
+        <h2 className="text-3xl font-bold text-foreground font-display mb-12 text-center">
           {cs.values_title}
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -122,7 +122,7 @@ export default function AboutPage() {
                 <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary mb-5 group-hover:scale-110 transition-transform duration-300">
                   <Icon size={22} />
                 </div>
-                <h3 className="text-lg font-bold text-white font-display mb-3">
+                <h3 className="text-lg font-bold text-foreground font-display mb-3">
                   {item.title}
                 </h3>
                 <p className="text-text-secondary leading-relaxed font-light text-sm">
@@ -145,7 +145,7 @@ export default function AboutPage() {
           <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-primary/10 to-transparent" />
           <div className="absolute inset-0 border border-primary/20 rounded-3xl" />
           <div className="relative">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 font-display">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 font-display">
               {cs.cta_title}
             </h2>
             <p className="text-xl text-text-secondary max-w-2xl mx-auto mb-10 font-light">
