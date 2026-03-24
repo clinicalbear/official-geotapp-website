@@ -37,7 +37,7 @@ import {
 } from 'lucide-react';
 
 // UI MOCKUP COMPONENTS (Built with Tailwind for "Real Example" feel)
-const MockupFlow = () => (
+const MockupFlow = ({ m }: { m: { pipeline_title: string; month: string; quote_name: string; quote_approved: string } }) => (
   <div className="bg-white rounded-xl border border-border shadow-xl overflow-hidden font-sans text-xs">
     <div className="bg-slate-50 border-b border-border p-3 flex gap-2">
       <div className="w-3 h-3 rounded-full bg-red-400"></div>
@@ -46,8 +46,8 @@ const MockupFlow = () => (
     </div>
     <div className="p-4 space-y-3">
       <div className="flex justify-between items-center text-text-secondary">
-        <span className="font-bold text-text-primary">Pipeline Vendite</span>
-        <span>Dicembre 2025</span>
+        <span className="font-bold text-text-primary">{m.pipeline_title}</span>
+        <span>{m.month}</span>
       </div>
       <div className="space-y-2">
         <div className="flex items-center gap-3 p-2 bg-green-50 rounded border border-green-100">
@@ -55,9 +55,9 @@ const MockupFlow = () => (
             €
           </div>
           <div className="flex-1">
-            <div className="font-bold text-slate-800">Preventivo A. Rossi</div>
+            <div className="font-bold text-slate-800">{m.quote_name}</div>
             <div className="text-[10px] text-slate-500">
-              Approvato oggi alle 09:30
+              {m.quote_approved}
             </div>
           </div>
           <span className="font-bold text-green-600">+€12.500</span>
@@ -98,9 +98,9 @@ export default function Home() {
       <section className="relative pt-40 pb-32 px-6">
         <div className="container mx-auto max-w-5xl text-center z-10 relative">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 1, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.6 }}
           >
             <span className="inline-block px-4 py-1.5 rounded-full bg-slate-100 border border-slate-200 text-slate-600 text-sm font-bold tracking-wide mb-8">
               {dict.landing.hero_badge}
@@ -146,8 +146,8 @@ export default function Home() {
           </motion.div>
         </div>
 
-        {/* Abstract Bg Decoration */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[1000px] bg-gradient-to-b from-slate-100/50 to-transparent rounded-full blur-3xl -z-0 pointer-events-none" />
+        {/* Abstract Bg Decoration — CSS gradient, no filter:blur to avoid GPU layer cost */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[1000px] bg-gradient-to-b from-slate-100/50 to-transparent rounded-full -z-0 pointer-events-none" />
       </section>
 
       {/* PROBLEM SECTION */}
@@ -399,7 +399,7 @@ export default function Home() {
               >
                 {/* Visual Artifact */}
                 <div className="relative z-10 transform md:rotate-[-2deg] hover:rotate-0 transition-transform duration-500">
-                  <MockupFlow />
+                  <MockupFlow m={dict.home_sections.flow_mockup} />
                 </div>
                 <div className="absolute inset-0 bg-flow/10 rounded-xl transform rotate-3 scale-105 -z-0 blur-xl"></div>
               </motion.div>
