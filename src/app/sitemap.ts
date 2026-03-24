@@ -60,8 +60,7 @@ const ROUTES: RouteEntry[] = [
   { path: '/products/geotapp-flow/', priority: 0.95, changeFrequency: 'weekly' },
   { path: '/products/geotapp-app/', priority: 0.95, changeFrequency: 'weekly' },
   { path: '/products/geotapp-verifier/', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/products/fortyx/', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/products/zenith-seo/', priority: 0.75, changeFrequency: 'monthly' },
+
 
   // Pricing (pagine di conversione — priorità alta)
   { path: '/pricing/', priority: 0.9, changeFrequency: 'weekly' },
