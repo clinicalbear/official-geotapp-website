@@ -16,7 +16,7 @@
 // - Maintainability: keep additive changes whenever possible to reduce rollback risk.
 
 
-import { redirect, RedirectType } from 'next/navigation';
+import { permanentRedirect } from 'next/navigation';
 import type { AppLocale } from '@/lib/i18n/config';
 import { localizePath } from '@/lib/i18n/locale-routing';
 
@@ -27,5 +27,5 @@ export default async function DeprecatedFortyxLocalePage({
 }) {
   const resolvedParams = await params;
 
-  redirect(localizePath('/pricing', resolvedParams.locale as AppLocale), RedirectType.permanent);
+  permanentRedirect(localizePath('/pricing', resolvedParams.locale as AppLocale));
 }
