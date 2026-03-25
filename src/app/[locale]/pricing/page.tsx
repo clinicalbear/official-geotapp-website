@@ -133,6 +133,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       title: meta.title,
       description: meta.description,
     },
+    twitter: {
+      card: 'summary_large_image',
+      title: meta.title,
+      description: meta.description,
+    },
   };
 }
 export { generateLocaleStaticParams as generateStaticParams } from '@/lib/i18n/static-params';
