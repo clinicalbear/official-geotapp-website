@@ -367,7 +367,7 @@
   "product_pages": {
     "flow": {
       "hero_badge": "GeoTapp Flow — Управление полевыми операциями",
-      "hero_title": "GeoTapp Flow.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600\">Операционный центр.</span>",
+      "hero_title": "GeoTapp Flow.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600\">Управление Операциями.</span>",
       "hero_subtitle": "Операционный центр для компаний с полевыми техниками и операторами. Управляйте нарядами-допусками, координируйте команды и создавайте структурированные, верифицируемые акты выполненных работ.",
       "visual_placeholder": "ПАНЕЛЬ ОПЕРАЦИЙ",
       "grid_title": "Операционные возможности",

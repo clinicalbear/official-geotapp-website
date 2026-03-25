@@ -285,10 +285,6 @@ export default function Pricing() {
                     <Check className="w-5 h-5" />
                     <span>Tracciamento Ore</span>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <Check className="w-5 h-5" />
-                    <span>7 Giorni Gratis</span>
-                  </div>
                 </div>
               </div>
 
@@ -315,7 +311,7 @@ export default function Pricing() {
               {category.id === 'flow' && (
                 <>
                   <Image
-                    src="/logoFlow.png"
+                    src="/logoFlow.webp"
                     alt="GeoTapp Flow"
                     width={200}
                     height={100}
@@ -327,11 +323,11 @@ export default function Pricing() {
               {category.id === 'app' && (
                 <>
                   <Image
-                    src="/logoTT.png"
+                    src="/logoTT.webp"
                     alt="GeoTapp TimeTracker"
-                    width={200}
+                    width={260}
                     height={100}
-                    className="h-[7.5rem] w-auto"
+                    className="h-auto w-[15.6rem]"
                   />
                   <span className="sr-only">{category.title}</span>
                 </>
@@ -345,7 +341,7 @@ export default function Pricing() {
             </span>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {category.products.map((product, i) => (
               <motion.div
                 key={product.name}
@@ -353,7 +349,7 @@ export default function Pricing() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1, duration: 0.4 }}
-                className={`relative p-6 rounded-2xl border border-slate-200 bg-white hover:shadow-xl hover:border-slate-300 transition-all duration-300 flex flex-col`}
+                className={`relative p-6 rounded-2xl border border-slate-200 bg-white hover:shadow-xl hover:border-slate-300 transition-all duration-300 flex flex-col h-full ${category.id === 'app' ? 'lg:col-span-1' : ''}`}
               >
                 {/* Best Value Decoration */}
                 {(product as any).isBestValue && (
@@ -498,7 +494,7 @@ export default function Pricing() {
               </motion.div>
             ))}
             {category.id === 'app' && (
-              <div className="col-span-1 md:col-span-1 lg:col-span-3 h-full">
+              <div className="col-span-1 md:col-span-1 lg:col-span-2 h-full">
                 <PricingCalculator />
               </div>
             )}

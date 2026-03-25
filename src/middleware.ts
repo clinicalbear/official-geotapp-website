@@ -207,8 +207,6 @@ const SITEMAP_ROUTES: SitemapRouteEntry[] = [
   { path: '/products/geotapp-flow/', priority: 0.95, changeFrequency: 'weekly' },
   { path: '/products/geotapp-app/', priority: 0.95, changeFrequency: 'weekly' },
   { path: '/products/geotapp-verifier/', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/products/fortyx/', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/products/zenith-seo/', priority: 0.75, changeFrequency: 'monthly' },
   { path: '/pricing/', priority: 0.9, changeFrequency: 'weekly' },
   { path: '/pricing/bundle/', priority: 0.85, changeFrequency: 'weekly' },
   { path: '/settori/', priority: 0.9, changeFrequency: 'weekly' },
@@ -217,7 +215,6 @@ const SITEMAP_ROUTES: SitemapRouteEntry[] = [
   { path: '/settori/sicurezza/', priority: 0.9, changeFrequency: 'weekly' },
   { path: '/blog/', priority: 0.85, changeFrequency: 'daily' },
   { path: '/demo/', priority: 0.9, changeFrequency: 'monthly' },
-  { path: '/download/', priority: 0.7, changeFrequency: 'monthly' },
   { path: '/guida/', priority: 0.7, changeFrequency: 'monthly' },
   { path: '/contact/', priority: 0.65, changeFrequency: 'monthly' },
   { path: '/chi-siamo/', priority: 0.55, changeFrequency: 'monthly' },
@@ -225,6 +222,14 @@ const SITEMAP_ROUTES: SitemapRouteEntry[] = [
   { path: '/terms/', priority: 0.3, changeFrequency: 'yearly' },
   { path: '/cookies/', priority: 0.3, changeFrequency: 'yearly' },
 ];
+
+function isDepublishedDownloadPath(pathname: string): boolean {
+  const normalized = pathname.endsWith('/') ? pathname : `${pathname}/`;
+  if (normalized === '/download/') return true;
+  const locale = getLocaleFromPathname(normalized);
+  if (!locale) return false;
+  return stripLocaleFromPathname(normalized) === '/download/';
+}
 
 async function buildFullSitemap(): Promise<string> {
   const locales = SUPPORTED_LOCALES as readonly string[];
@@ -361,6 +366,19 @@ export async function middleware(req: NextRequest) {
     return NextResponse.next();
   }
 
+  // 0b2. Download pages are intentionally de-published:
+  // return 410 Gone (root + all locale variants) and noindex to accelerate deindexing.
+  if (isDepublishedDownloadPath(pathname)) {
+    return new NextResponse('Gone', {
+      status: 410,
+      headers: {
+        'Content-Type': 'text/plain; charset=utf-8',
+        'Cache-Control': 'public, max-age=300',
+        'X-Robots-Tag': 'noindex, nofollow, noarchive',
+      },
+    });
+  }
+
   // 0c. Force trailing slash — prevent duplicate URLs in GSC
   // 308 (Permanent Redirect) preserves the HTTP method (unlike 301).
   // Exclusions: static files (have a file extension), API routes, blog proxy,
@@ -380,6 +398,20 @@ export async function middleware(req: NextRequest) {
     return NextResponse.redirect(trailingSlashUrl, { status: 308 });
   }
 
+  // 1a. /blog/robots.txt — serve directly to break the proxy redirect loop.
+  // blog.geotapp.com/robots.txt → 301 → geotapp.com/blog/robots.txt → proxy →
+  // blog.geotapp.com/robots.txt → loop (500 in Cloudflare monitoring panel).
+  // Serving inline avoids the round-trip entirely.
+  if (pathname === '/blog/robots.txt') {
+    return new NextResponse(
+      'User-agent: *\nAllow: /\n\nSitemap: https://geotapp.com/blog/sitemap_index.xml\n',
+      {
+        status: 200,
+        headers: { 'Content-Type': 'text/plain; charset=utf-8', 'Cache-Control': 'public, max-age=86400' },
+      },
+    );
+  }
+
   // 1. Blog proxy — serve blog.geotapp.com WordPress content at geotapp.com/blog/
   // Exception: /blog and /blog/ (index) are served by Next.js, not proxied.
   // Proxying the WP root (/) causes a redirect loop: WP responds with a redirect
@@ -394,6 +426,11 @@ export async function middleware(req: NextRequest) {
     const upstreamHeaders = new Headers(req.headers);
     upstreamHeaders.set('host', new URL(WP_ORIGIN).host);
     upstreamHeaders.set('x-forwarded-proto', 'https');
+    // Tell WordPress the public-facing hostname so noindex guards based on
+    // HTTP_HOST correctly identify proxied requests as geotapp.com traffic.
+    // Without this, gtmsa_get_effective_request_host() falls back to
+    // HTTP_HOST='blog.geotapp.com' and adds X-Robots-Tag: noindex.
+    upstreamHeaders.set('x-forwarded-host', new URL(SITE_ORIGIN).host);
     // Proxy identification header — Apache .htaccess uses this to bypass the
     // 301 redirect from blog.geotapp.com → geotapp.com/blog/ for direct-fetch
     // requests. Without this, the proxy would receive the 301 and forward it

@@ -41,7 +41,7 @@ export default function Footer() {
         <div>
           <div className="mb-2 flex justify-center md:justify-start">
             <Image
-              src="/LogoGeoTapp.png"
+              src="/LogoGeoTapp.webp"
               alt="GeoTapp - La piattaforma che rende il lavoro verificabile"
               width={220}
               height={96}

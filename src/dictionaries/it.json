@@ -367,7 +367,7 @@
   "product_pages": {
     "flow": {
       "hero_badge": "GeoTapp Flow — Gestione Operativa",
-      "hero_title": "GeoTapp Flow.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600\">Sistema Operativo.</span>",
+      "hero_title": "GeoTapp Flow.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600\">Gestione Interventi e Squadre.</span>",
       "hero_subtitle": "Il centro operativo per aziende con tecnici e operatori sul campo. Gestisci commesse, coordina squadre e produci report strutturati e verificabili.",
       "visual_placeholder": "PANNELLO OPERATIVO",
       "grid_title": "Funzionalità operative",

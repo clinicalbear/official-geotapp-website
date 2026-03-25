@@ -164,7 +164,7 @@ export default function VerifierContent({ copy, locale }: VerifierContentProps) 
           {/* Logo */}
           <div className="mb-10 flex justify-center">
             <Image
-              src="/logoVerifier.png"
+              src="/logoVerifier.webp"
               alt="GeoTapp Verifier"
               width={520}
               height={260}

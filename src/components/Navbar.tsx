@@ -135,7 +135,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link href={getLink('/')} className="flex items-center">
           <Image
-            src="/LogoGeoTapp.png"
+            src="/LogoGeoTapp.webp"
             alt={dict.logo_alt}
             width={160}
             height={45}

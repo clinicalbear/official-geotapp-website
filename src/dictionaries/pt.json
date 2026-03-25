@@ -367,7 +367,7 @@
   "product_pages": {
     "flow": {
       "hero_badge": "GeoTapp Flow — Gestão de operações de campo",
-      "hero_title": "GeoTapp Flow.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600\">Hub operacional.</span>",
+      "hero_title": "GeoTapp Flow.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600\">Gestão Operacional.</span>",
       "hero_subtitle": "O centro operacional para empresas com técnicos e operadores de campo. Gira trabalhos, coordene equipas e produza relatórios de trabalho estruturados e verificáveis.",
       "visual_placeholder": "PAINEL DE OPERAÇÕES",
       "grid_title": "Capacidades operacionais",
