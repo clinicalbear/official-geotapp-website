@@ -194,6 +194,20 @@ const READ_LABELS: Record<string, string> = {
   sv: 'Läs →', nb: 'Les →', ru: 'Читать →',
 };
 
+const PRODUCT_PAGE_LABELS: Record<string, string> = {
+  it: 'Strumento consigliato per questo settore',
+  en: 'Recommended tool for this sector',
+  de: 'Empfohlenes Tool für diesen Sektor',
+  fr: 'Outil recommandé pour ce secteur',
+  es: 'Herramienta recomendada para este sector',
+  pt: 'Ferramenta recomendada para este setor',
+  nl: 'Aanbevolen tool voor deze sector',
+  da: 'Anbefalet værktøj til denne sektor',
+  sv: 'Rekommenderat verktyg för denna sektor',
+  nb: 'Anbefalt verktøy for denne sektoren',
+  ru: 'Рекомендуемый инструмент для этого сектора',
+};
+
 export default async function RisorseSettorePage({ params }: { params: Promise<Params> }) {
   const { locale, settore } = await params;
   const config = SETTORE_CONFIG[settore];
@@ -204,34 +218,105 @@ export default async function RisorseSettorePage({ params }: { params: Promise<P
   const posts = await fetchAllPostsForCategory(resolvedLocale, config.categoryId);
   const backLabel = BACK_LABELS[resolvedLocale] ?? BACK_LABELS['en'];
   const readLabel = READ_LABELS[resolvedLocale] ?? READ_LABELS['en'];
+  const intro = config.intro[resolvedLocale] ?? config.intro['en'];
+  const ctaLabel = config.product.ctaLabel[resolvedLocale] ?? config.product.ctaLabel['en'];
+  const productPageLabel = PRODUCT_PAGE_LABELS[resolvedLocale] ?? PRODUCT_PAGE_LABELS['en'];
+  const productHref = `/${resolvedLocale}/products/${config.product.slug}/`;
+  const pageUrl = `https://geotapp.com/${resolvedLocale}/settori/${settore}/risorse/`;
+
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'GeoTapp', item: 'https://geotapp.com' },
+      { '@type': 'ListItem', position: 2, name: label.heading, item: pageUrl },
+    ],
+  };
+
+  const itemListJsonLd = posts.length > 0
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: label.heading,
+        url: pageUrl,
+        numberOfItems: posts.length,
+        itemListElement: posts.map((post, index) => ({
+          '@type': 'ListItem',
+          position: index + 1,
+          url: `https://geotapp.com${post.url}`,
+          name: post.title,
+        })),
+      }
+    : null;
 
   return (
-    <div className="bg-white min-h-screen text-slate-900 font-sans">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
-        <Link href={`/${resolvedLocale}/settori/${settore}/`} className="text-sm text-blue-600 hover:underline">
-          {backLabel}
-        </Link>
-        <h1 className="text-3xl font-bold text-slate-900 mt-4 mb-2">{label.heading}</h1>
-        <p className="text-slate-500 mb-8">{label.description}</p>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      {itemListJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
+        />
+      )}
 
-        {posts.length === 0 ? (
-          <p className="text-slate-400 text-sm">Nessun articolo disponibile al momento.</p>
-        ) : (
-          <ul className="space-y-6">
-            {posts.map((post) => (
-              <li key={post.id} className="border-b border-slate-100 pb-6">
-                <Link href={post.url} className="group">
-                  <h2 className="text-lg font-semibold text-slate-800 group-hover:text-blue-600 transition-colors mb-1">
-                    {post.title}
-                  </h2>
-                  <p className="text-sm text-slate-500 mb-2">{post.excerpt}</p>
-                  <span className="text-xs font-medium text-blue-600">{readLabel}</span>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        )}
+      <div className="bg-white min-h-screen text-slate-900 font-sans">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
+
+          <Link
+            href={`/${resolvedLocale}/settori/${settore}/`}
+            className="text-sm text-blue-600 hover:underline"
+          >
+            {backLabel}
+          </Link>
+
+          <h1 className="text-3xl font-bold text-slate-900 mt-4 mb-4">
+            {label.heading}
+          </h1>
+
+          <p className="text-slate-700 leading-relaxed mb-8 max-w-3xl">
+            {intro}
+          </p>
+
+          <div className="bg-blue-50 border border-blue-100 rounded-xl p-6 mb-10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+            <div>
+              <p className="text-xs font-semibold text-blue-500 uppercase tracking-wide mb-1">
+                {productPageLabel}
+              </p>
+              <p className="text-lg font-bold text-slate-900">
+                {ctaLabel.discover} {config.product.name}
+              </p>
+            </div>
+            <Link
+              href={productHref}
+              className="inline-flex items-center justify-center rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-blue-700 transition-colors whitespace-nowrap"
+            >
+              {ctaLabel.cta}
+            </Link>
+          </div>
+
+          {posts.length === 0 ? (
+            <p className="text-slate-400 text-sm">Nessun articolo disponibile al momento.</p>
+          ) : (
+            <ul className="space-y-6">
+              {posts.map((post) => (
+                <li key={post.id} className="border-b border-slate-100 pb-6">
+                  <Link href={post.url} className="group">
+                    <h2 className="text-lg font-semibold text-slate-800 group-hover:text-blue-600 transition-colors mb-1">
+                      {post.title}
+                    </h2>
+                    <p className="text-sm text-slate-500 mb-2">{post.excerpt}</p>
+                    <span className="text-xs font-medium text-blue-600">{readLabel}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          )}
+
+        </div>
       </div>
-    </div>
+    </>
   );
 }
