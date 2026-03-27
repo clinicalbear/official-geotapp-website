@@ -6,6 +6,17 @@ import type { AppLocale } from '@/lib/i18n/config';
 import type { SettoreContent, SettoreSlug } from '@/content/settori/types';
 import { JsonLd } from '@/components/seo/JsonLd';
 import DemoReportBanner from '@/components/DemoReportBanner';
+import BlogHighlights from '@/components/BlogHighlights';
+
+// WP category IDs per settore — used for BlogHighlights
+// pulizie     → gestione-presenze (9)   — cleaning companies need attendance
+// installatori → geotapp-flow (65)      — field operations
+// sicurezza   → gestione-presenze (9)   — security services need attendance
+const SETTORE_CATEGORY: Record<SettoreSlug, number> = {
+  pulizie: 9,
+  installatori: 65,
+  sicurezza: 9,
+};
 
 interface Props {
   content: SettoreContent;
@@ -558,6 +569,8 @@ export default function SettorePageLayout({ content, locale, settore }: Props) {
           <p className="mt-6 text-slate-500 text-sm">Nessun vincolo. Nessun contratto. Configuriamo sul tuo caso reale.</p>
         </div>
       </section>
+
+      <BlogHighlights locale={locale} categoryId={SETTORE_CATEGORY[settore]} />
     </div>
   );
 }
