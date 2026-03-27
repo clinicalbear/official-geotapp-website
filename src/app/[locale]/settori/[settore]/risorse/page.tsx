@@ -123,7 +123,7 @@ const READ_LABELS: Record<string, string> = {
 export default async function RisorseSettorePage({ params }: { params: Promise<Params> }) {
   const { locale, settore } = await params;
   const config = SETTORE_CONFIG[settore];
-  if (!config) notFound();
+  if (!config) return notFound();
 
   const resolvedLocale = (locale ?? DEFAULT_LOCALE) as AppLocale;
   const label = config.labels[resolvedLocale] ?? config.labels['en'];
