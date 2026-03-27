@@ -19,6 +19,7 @@
 import type { Metadata } from 'next';
 import { SUPPORTED_LOCALES } from '@/lib/i18n/config';
 import HomeClient from '../page';
+import BlogHighlights from '@/components/BlogHighlights';
 
 export { generateLocaleStaticParams as generateStaticParams } from '@/lib/i18n/static-params';
 
@@ -67,48 +68,48 @@ const BASE_URL = 'https://geotapp.com';
 // this is the SEO anchor keyword for all locale variants.
 const LOCALE_META: Record<string, { title: string; description: string }> = {
   it: {
-    title: 'App Presenze GPS e Certificazione Interventi | GeoTapp',
-    description: 'GeoTapp: rilevazione presenze GPS verificabile, report sigillati e prove fotografiche per imprese di pulizie, installatori e sicurezza. GDPR. Nessuna contestazione.',
+    title: 'Cliente contesta? Prova interventi o perdi il pagamento',
+    description: 'Cliente contesta? GeoTapp registra GPS, ora, foto e report non alterabile. Dimostri il lavoro svolto e incassi senza discussioni.',
   },
   en: {
-    title: 'GPS Field Work Verification App | GeoTapp',
-    description: 'GeoTapp: GPS-verified attendance, tamper-proof reports and photo evidence for cleaning companies, installers and security services. GDPR compliant. Zero disputes.',
+    title: 'Client disputes? Prove jobs or lose the payment',
+    description: 'Client disputes your work? GeoTapp logs GPS, time, photos and a tamper-proof report. Prove what was done and get paid without arguments.',
   },
   de: {
-    title: 'GeoTapp | Die Plattform, die Arbeit verifizierbar macht',
-    description: 'GeoTapp macht jeden Außendiensteinsatz zu verifizierbarem Nachweis: manipulationssichere Berichte mit echten GPS-Daten, Fotobelege und Dokumentation, die jeder prüfen kann.',
+    title: 'Kunde bestreitet? Einsaetze belegen oder Zahlung verlieren',
+    description: 'Kunde bestreitet den Einsatz? GeoTapp erfasst GPS, Uhrzeit, Fotos und manipulationssichere Berichte. Arbeit belegen und ohne Diskussion bezahlt werden.',
   },
   fr: {
-    title: 'GeoTapp | La plateforme qui rend le travail vérifiable',
-    description: 'GeoTapp transforme chaque intervention en preuve vérifiable : rapports scellés avec données GPS réelles, preuves photographiques et documentation que n\'importe qui peut vérifier.',
+    title: 'Client conteste ? Prouvez le travail ou perdez le paiement',
+    description: 'Client conteste ? GeoTapp enregistre GPS, heure, photos et rapport non modifiable. Prouvez le travail effectué et soyez payé sans discussion.',
   },
   es: {
-    title: 'GeoTapp | La plataforma que hace el trabajo verificable',
-    description: 'GeoTapp convierte cada intervención en prueba verificable: informes sellados con datos GPS reales, evidencias fotográficas y documentación que cualquiera puede verificar. Cero disputas.',
+    title: '¿Cliente reclama? Prueba el trabajo o pierde el pago',
+    description: '¿Cliente reclama? GeoTapp registra GPS, hora, fotos e informe no alterable. Demuestra el trabajo hecho y cobra sin discusiones.',
   },
   pt: {
-    title: 'GeoTapp | A plataforma que torna o trabalho verificável',
-    description: 'GeoTapp transforma cada intervenção em prova verificável: relatórios selados com dados GPS reais, provas fotográficas e documentação que qualquer pessoa pode verificar.',
+    title: 'Cliente contesta? Prove o serviço ou perca o pagamento',
+    description: 'Cliente contesta? GeoTapp registra GPS, hora, fotos e relatório não alterável. Prove o serviço feito e receba sem discussões.',
   },
   nl: {
-    title: 'GeoTapp | Het platform dat werk verifieerbaar maakt',
-    description: 'GeoTapp maakt elke velddienst tot verifieerbaar bewijs: verzegelde rapporten met echte GPS-gegevens, fotobewijs en documentatie die iedereen onafhankelijk kan controleren.',
+    title: 'Klant betwist? Bewijs werk of mis de betaling',
+    description: 'Betwist de klant je werk? GeoTapp registreert GPS, tijd, foto\'s en een niet-wijzigbaar rapport. Bewijs wat gedaan is en word betaald zonder discussie.',
   },
   ru: {
-    title: 'GeoTapp | Платформа, делающая работу верифицируемой',
-    description: 'GeoTapp превращает каждый выезд в верифицируемое доказательство: запечатанные отчёты с реальными GPS-данными, фотодоказательства и документация, проверяемая кем угодно.',
+    title: 'Клиент оспаривает? Докажите работы или теряете оплату',
+    description: 'Клиент оспаривает работу? GeoTapp фиксирует GPS, время, фото и неизменяемый отчёт. Докажите выполненное и получите оплату без споров.',
   },
   da: {
-    title: 'GeoTapp | Platformen der gør arbejdet verificerbart',
-    description: 'GeoTapp gør hvert feltebesøg til verificerbart bevis: forseglede rapporter med echte GPS-data, fotodokumentation og dokumentation, som enhver kan verificere uafhængigt.',
+    title: 'Kunde bestrider? Bevis arbejdet eller mist betalingen',
+    description: 'Kunden bestrider arbejdet? GeoTapp registrerer GPS, tid, fotos og en ikke-redigerbar rapport. Bevis opgaven og få betaling uden diskussion.',
   },
   sv: {
-    title: 'GeoTapp | Plattformen som gör arbetet verifierbart',
-    description: 'GeoTapp förvandlar varje fältuppdrag till verifierbart bevis: förseglade rapporter med verkliga GPS-data, fotobevis och dokumentation som vem som helst kan verifiera.',
+    title: 'Kund ifrågasätter? Bevisa jobbet eller förlora betalning',
+    description: 'Kunden ifrågasätter jobbet? GeoTapp loggar GPS, tid, foton och en ej ändringsbar rapport. Bevisa arbetet och få betalt utan diskussion.',
   },
   nb: {
-    title: 'GeoTapp | Plattformen som gjør arbeidet verifiserbart',
-    description: 'GeoTapp gjør hvert feltoppdrag til verifiserbart bevis: forseglede rapporter med ekte GPS-data, fotobevis og dokumentasjon som hvem som helst kan verifisere uavhengig.',
+    title: 'Kunden bestrider? Bevis jobben eller mist betalingen',
+    description: 'Kunden bestrider jobben? GeoTapp registrerer GPS, tid, bilder og en ikke-endringsbar rapport. Bevis arbeidet og få betalt uten diskusjon.',
   },
 };
 
@@ -126,6 +127,8 @@ export default async function LocalePage({ params }: Props) {
         />
       )}
       <HomeClient />
+      {/* Category 54 = "digitalizzazione-aziendale" — broad, relevant to all visitors */}
+      <BlogHighlights locale={locale} categoryId={54} />
     </>
   );
 }
