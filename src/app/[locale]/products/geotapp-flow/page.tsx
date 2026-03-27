@@ -19,6 +19,8 @@
 import type { Metadata } from 'next';
 import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
 import FlowPage from '../../../products/geotapp-flow/page';
+import BlogHighlights from '@/components/BlogHighlights';
+import { type AppLocale } from '@/lib/i18n/config';
 
 const flowMeta: Record<string, { title: string; description: string }> = {
   it: { title: 'GeoTapp Flow — Gestione Operativa Interventi e Squadre', description: 'GeoTapp Flow è il sistema operativo per aziende con tecnici sul campo. Gestisci commesse, assegna attività, monitora l\'avanzamento e produci report verificabili in tempo reale.' },
@@ -105,6 +107,7 @@ export default async function LocaleFlowPage({ params }: Props) {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       )}
       <FlowPage />
+      <BlogHighlights locale={locale as AppLocale} categoryId={65} />
     </>
   );
 }

@@ -19,6 +19,8 @@
 import type { Metadata } from 'next';
 import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
 import AppPage from '../../../products/geotapp-app/page';
+import BlogHighlights from '@/components/BlogHighlights';
+import { type AppLocale } from '@/lib/i18n/config';
 
 const appMeta: Record<string, { title: string; description: string }> = {
   it: { title: 'GeoTapp TimeTracker — App Timbratura GPS per Tecnici sul Campo', description: 'GeoTapp TimeTracker è l\'app mobile per tecnici che registra presenze, attività e prove fotografiche dal campo. Timbratura GPS, report settimanali e sincronizzazione in tempo reale con Flow.' },
@@ -105,6 +107,7 @@ export default async function LocaleAppPage({ params }: Props) {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       )}
       <AppPage />
+      <BlogHighlights locale={locale as AppLocale} categoryId={108} />
     </>
   );
 }

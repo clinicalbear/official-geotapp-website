@@ -2,6 +2,8 @@
 import type { Metadata } from 'next';
 import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
 import VerifierPage from '../../../products/geotapp-verifier/page';
+import BlogHighlights from '@/components/BlogHighlights';
+import { type AppLocale } from '@/lib/i18n/config';
 
 const verifierMeta: Record<string, { title: string; description: string }> = {
   it: { title: 'GeoTapp Verifier — Verifica Indipendente dei Report di Lavoro', description: 'GeoTapp Verifier certifica ogni intervento con dati GPS sigillati, prove fotografiche con timestamp e report non alterabili. Verifica indipendente per aziende che devono difendere il lavoro svolto.' },
@@ -87,6 +89,7 @@ export default async function LocaleVerifierPage({ params }: Props) {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       )}
       <VerifierPage params={params} />
+      <BlogHighlights locale={locale as AppLocale} categoryId={9} />
     </>
   );
 }
