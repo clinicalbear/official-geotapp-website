@@ -194,6 +194,20 @@ const READ_LABELS: Record<string, string> = {
   sv: 'Läs →', nb: 'Les →', ru: 'Читать →',
 };
 
+const EMPTY_LABELS: Record<string, string> = {
+  it: 'Nessun articolo disponibile al momento.',
+  en: 'No articles available at the moment.',
+  de: 'Derzeit keine Artikel verfügbar.',
+  fr: 'Aucun article disponible pour le moment.',
+  es: 'No hay artículos disponibles por el momento.',
+  pt: 'Nenhum artigo disponível no momento.',
+  nl: 'Momenteel geen artikelen beschikbaar.',
+  da: 'Ingen artikler tilgængelige i øjeblikket.',
+  sv: 'Inga artiklar tillgängliga för tillfället.',
+  nb: 'Ingen artikler tilgjengelige for øyeblikket.',
+  ru: 'Статьи временно отсутствуют.',
+};
+
 const PRODUCT_PAGE_LABELS: Record<string, string> = {
   it: 'Strumento consigliato per questo settore',
   en: 'Recommended tool for this sector',
@@ -221,6 +235,7 @@ export default async function RisorseSettorePage({ params }: { params: Promise<P
   const intro = config.intro[resolvedLocale] ?? config.intro['en'];
   const ctaLabel = config.product.ctaLabel[resolvedLocale] ?? config.product.ctaLabel['en'];
   const productPageLabel = PRODUCT_PAGE_LABELS[resolvedLocale] ?? PRODUCT_PAGE_LABELS['en'];
+  const emptyLabel = EMPTY_LABELS[resolvedLocale] ?? EMPTY_LABELS['en'];
   const productHref = `/${resolvedLocale}/products/${config.product.slug}/`;
   const pageUrl = `https://geotapp.com/${resolvedLocale}/settori/${settore}/risorse/`;
 
@@ -238,7 +253,7 @@ export default async function RisorseSettorePage({ params }: { params: Promise<P
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         name: label.heading,
-        url: pageUrl,
+        mainEntityOfPage: pageUrl,
         numberOfItems: posts.length,
         itemListElement: posts.map((post, index) => ({
           '@type': 'ListItem',
@@ -298,7 +313,7 @@ export default async function RisorseSettorePage({ params }: { params: Promise<P
           </div>
 
           {posts.length === 0 ? (
-            <p className="text-slate-400 text-sm">Nessun articolo disponibile al momento.</p>
+            <p className="text-slate-400 text-sm">{emptyLabel}</p>
           ) : (
             <ul className="space-y-6">
               {posts.map((post) => (
