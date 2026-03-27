@@ -18,6 +18,7 @@
 
 import type { Metadata } from 'next';
 import { SUPPORTED_LOCALES } from '@/lib/i18n/config';
+import type { AppLocale } from '@/lib/i18n/config';
 import HomeClient from '../page';
 import BlogHighlights from '@/components/BlogHighlights';
 
@@ -128,7 +129,7 @@ export default async function LocalePage({ params }: Props) {
       )}
       <HomeClient />
       {/* Category 54 = "digitalizzazione-aziendale" — broad, relevant to all visitors */}
-      <BlogHighlights locale={locale} categoryId={54} />
+      <BlogHighlights locale={locale as AppLocale} categoryId={54} />
     </>
   );
 }

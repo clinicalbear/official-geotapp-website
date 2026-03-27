@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import type { AppLocale } from '@/lib/i18n/config';
 
 const WP = 'https://blog.geotapp.com';
 const HEADERS = { host: 'blog.geotapp.com', 'x-geotapp-proxy': '1', 'x-forwarded-proto': 'https' };
@@ -40,14 +41,21 @@ function normalizeUrl(link: string, slug: string): string {
   return `/blog/${slug}/`;
 }
 
-async function fetchBlogPosts(locale: string, categoryId: number, limit = 3): Promise<BlogPost[]> {
+async function fetchBlogPosts(locale: AppLocale, categoryId: number, limit = 3): Promise<BlogPost[]> {
   try {
     const res = await fetch(
+      // per_page=20 intentionally larger than limit=3 — locale filtering happens after fetch
+      // (WP REST API does not support per-language filtering via query param)
       `${WP}/wp-json/wp/v2/posts?categories=${categoryId}&per_page=20&_fields=id,slug,title,excerpt,date,link&status=publish`,
-      { headers: HEADERS, next: { revalidate: 3600 }, signal: AbortSignal.timeout(5000) },
+      {
+        headers: HEADERS,
+        next: { revalidate: 3600 },
+        // AbortSignal.timeout is available in CF Workers (compatibility date >= 2022-01-31)
+        signal: AbortSignal.timeout(5000),
+      },
     );
     if (!res.ok) return [];
-    const raw = await res.json() as Array<{ id: number; slug: string; title: any; excerpt: any; date: string; link: string }>;
+    const raw = await res.json() as Array<{ id: number; slug: string; title: { rendered: string }; excerpt: { rendered: string }; date: string; link: string }>;
     return raw
       .filter((p) => isLocalePost(p.link ?? '', locale))
       .slice(0, limit)
@@ -63,20 +71,20 @@ async function fetchBlogPosts(locale: string, categoryId: number, limit = 3): Pr
   }
 }
 
-const SECTION_LABELS: Record<string, string> = {
+const SECTION_LABELS: Record<AppLocale, string> = {
   it: 'Dal blog', en: 'From the blog', de: 'Aus dem Blog', fr: 'Du blog',
   es: 'Del blog', pt: 'Do blog', nl: 'Van de blog', da: 'Fra bloggen',
   sv: 'Från bloggen', nb: 'Fra bloggen', ru: 'Из блога',
 };
 
-const READ_MORE_LABELS: Record<string, string> = {
+const READ_MORE_LABELS: Record<AppLocale, string> = {
   it: 'Leggi →', en: 'Read →', de: 'Lesen →', fr: 'Lire →',
   es: 'Leer →', pt: 'Ler →', nl: 'Lees →', da: 'Læs →',
   sv: 'Läs →', nb: 'Les →', ru: 'Читать →',
 };
 
 interface Props {
-  locale: string;
+  locale: AppLocale;
   categoryId: number;
   className?: string;
 }
