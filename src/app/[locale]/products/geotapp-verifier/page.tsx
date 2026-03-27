@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
 import VerifierPage from '../../../products/geotapp-verifier/page';
 import BlogHighlights from '@/components/BlogHighlights';
+import SettoriLinks from '@/components/SettoriLinks';
 import { type AppLocale } from '@/lib/i18n/config';
 
 const verifierMeta: Record<string, { title: string; description: string }> = {
@@ -90,6 +91,7 @@ export default async function LocaleVerifierPage({ params }: Props) {
       )}
       <VerifierPage params={params} />
       <BlogHighlights locale={locale as AppLocale} categoryId={9} />
+      <SettoriLinks locale={locale as AppLocale} settori={['pulizie', 'installatori', 'sicurezza']} />
     </>
   );
 }

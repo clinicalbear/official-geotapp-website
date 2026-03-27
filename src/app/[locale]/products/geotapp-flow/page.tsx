@@ -20,6 +20,7 @@ import type { Metadata } from 'next';
 import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
 import FlowPage from '../../../products/geotapp-flow/page';
 import BlogHighlights from '@/components/BlogHighlights';
+import SettoriLinks from '@/components/SettoriLinks';
 import { type AppLocale } from '@/lib/i18n/config';
 
 const flowMeta: Record<string, { title: string; description: string }> = {
@@ -108,6 +109,7 @@ export default async function LocaleFlowPage({ params }: Props) {
       )}
       <FlowPage />
       <BlogHighlights locale={locale as AppLocale} categoryId={65} />
+      <SettoriLinks locale={locale as AppLocale} settori={['installatori']} />
     </>
   );
 }

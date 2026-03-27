@@ -20,6 +20,7 @@ import type { Metadata } from 'next';
 import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
 import AppPage from '../../../products/geotapp-app/page';
 import BlogHighlights from '@/components/BlogHighlights';
+import SettoriLinks from '@/components/SettoriLinks';
 import { type AppLocale } from '@/lib/i18n/config';
 
 const appMeta: Record<string, { title: string; description: string }> = {
@@ -108,6 +109,7 @@ export default async function LocaleAppPage({ params }: Props) {
       )}
       <AppPage />
       <BlogHighlights locale={locale as AppLocale} categoryId={108} />
+      <SettoriLinks locale={locale as AppLocale} settori={['pulizie', 'sicurezza']} />
     </>
   );
 }
