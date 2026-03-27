@@ -33,6 +33,13 @@ const SETTORE_COLORS: Record<
   sicurezza:    { badge: 'bg-amber-100 text-amber-700',  h1: 'text-amber-600',  btn: 'bg-amber-600 hover:bg-amber-700',   step: 'bg-amber-600',  accent: 'text-amber-600',  light: 'bg-amber-50'  },
 };
 
+const RISORSE_LABELS: Record<string, string> = {
+  it: 'Guide e articoli →', en: 'Guides & articles →', de: 'Leitfäden & Artikel →',
+  fr: 'Guides & articles →', es: 'Guías y artículos →', pt: 'Guias & artigos →',
+  nl: 'Gidsen & artikelen →', da: 'Vejledninger & artikler →',
+  sv: 'Guider & artiklar →', nb: 'Guider & artikler →', ru: 'Руководства & статьи →',
+};
+
 export default function SettorePageLayout({ content, locale, settore }: Props) {
   const colors = SETTORE_COLORS[settore];
   const demoLink = localizePath('/demo', locale);
@@ -123,6 +130,12 @@ export default function SettorePageLayout({ content, locale, settore }: Props) {
                 </Link>
               </div>
               <p className="mt-4 text-sm text-slate-400">{content.hero.cta_note}</p>
+              <Link
+                href={`/${locale}/settori/${settore}/risorse/`}
+                className="text-sm text-slate-500 hover:text-slate-700 underline underline-offset-2"
+              >
+                {RISORSE_LABELS[locale] ?? RISORSE_LABELS['en']}
+              </Link>
             </div>
 
             {/* Feature preview card */}
