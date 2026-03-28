@@ -226,6 +226,7 @@ const SITEMAP_ROUTES: SitemapRouteEntry[] = [
   { path: '/cookies/', priority: 0.3, changeFrequency: 'yearly' },
 ];
 
+// SYNC: identical copy also in src/app/sitemap.ts — remove from both files when posts are fully purged.
 const DEPUBLISHED_BLOG_TEST_PATHS = new Set([
   '/blog/da/2026/03/23/test/',
   '/blog/da/2026/03/23/test-2/',

@@ -41,11 +41,8 @@ export const dynamic = 'force-dynamic';
 
 const BASE_URL = 'https://geotapp.com';
 const WP_DIRECT = 'https://blog.geotapp.com';
-// Test blog posts published in the Danish locale on 2026-03-23 that have been
-// de-published in WordPress but are still returned by the WP REST API (published → private
-// does not remove them from per-page caches until the cache expires).
-// These entries are excluded here to prevent them from appearing in the sitemap
-// during the cache expiry window. Remove this list when the posts are fully purged.
+// Test blog posts de-published in WordPress but still returned by WP REST API (cache lag).
+// SYNC: identical copy also in src/middleware.ts — remove from both files when posts are fully purged.
 const DEPUBLISHED_BLOG_TEST_PATHS = new Set([
   '/blog/da/2026/03/23/test/',
   '/blog/da/2026/03/23/test-2/',
