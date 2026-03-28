@@ -9,19 +9,19 @@ import type { AppLocale } from '@/lib/i18n/config';
 const POSTS_PER_PAGE = 12;
 
 const CATEGORY_COLORS: Record<string, string> = {
-  'gps':               'rgba(59,174,224,0.35)',
-  'tracking':          'rgba(59,174,224,0.35)',
-  'geolocalizzazione': 'rgba(59,174,224,0.35)',
-  'sicurezza':         'rgba(99,102,241,0.35)',
-  'security':          'rgba(99,102,241,0.35)',
-  'gestione':          'rgba(82,192,101,0.35)',
-  'operazioni':        'rgba(82,192,101,0.35)',
-  'business':          'rgba(82,192,101,0.35)',
-  'tecnologia':        'rgba(217,119,6,0.35)',
-  'app':               'rgba(217,119,6,0.35)',
-  'software':          'rgba(217,119,6,0.35)',
+  'gps':               'rgba(59,174,224,0.50)',
+  'tracking':          'rgba(59,174,224,0.50)',
+  'geolocalizzazione': 'rgba(59,174,224,0.50)',
+  'sicurezza':         'rgba(99,102,241,0.50)',
+  'security':          'rgba(99,102,241,0.50)',
+  'gestione':          'rgba(82,192,101,0.50)',
+  'operazioni':        'rgba(82,192,101,0.50)',
+  'business':          'rgba(82,192,101,0.50)',
+  'tecnologia':        'rgba(217,119,6,0.50)',
+  'app':               'rgba(217,119,6,0.50)',
+  'software':          'rgba(217,119,6,0.50)',
 };
-const DEFAULT_COLOR = 'rgba(143,196,54,0.35)';
+const DEFAULT_COLOR = 'rgba(143,196,54,0.50)';
 
 function getCategoryColor(categories: Array<{ slug: string; name: string }>): string {
   for (const cat of categories) {
