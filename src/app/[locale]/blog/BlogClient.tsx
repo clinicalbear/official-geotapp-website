@@ -189,15 +189,19 @@ export default function BlogClient({ locale, posts }: { locale: AppLocale; posts
         </>
       )}
 
-      <section className="container mx-auto max-w-2xl text-center mt-24 pt-16 border-t border-border">
-        <h2 className="text-2xl font-bold text-text-primary mb-4">{b.cta_title}</h2>
-        <p className="text-text-secondary mb-8 font-light">{b.cta_desc}</p>
-        <Link
-          href={`/${locale}/contact/`}
-          className="inline-block px-6 py-3 bg-primary text-white font-bold rounded-xl hover:opacity-90 transition-opacity"
-        >
-          {b.cta_btn}
-        </Link>
+      <section className="container mx-auto max-w-6xl mt-24">
+        <div className="rounded-3xl bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 px-10 py-14 flex flex-col md:flex-row items-center justify-between gap-8">
+          <div className="text-center md:text-left">
+            <span className="text-primary font-bold uppercase tracking-widest text-xs block mb-3">{b.cta_title}</span>
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-3 max-w-lg">{b.cta_desc}</h2>
+          </div>
+          <Link
+            href={`/${locale}/contact/`}
+            className="shrink-0 inline-block px-8 py-4 bg-primary text-white font-bold rounded-xl hover:opacity-90 transition-opacity text-lg"
+          >
+            {b.cta_btn}
+          </Link>
+        </div>
       </section>
     </div>
   );
