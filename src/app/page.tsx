@@ -117,7 +117,7 @@ export default function Home() {
               </div>
               <div className="hidden sm:block w-1 h-1 rounded-full bg-slate-300" />
               <div className="flex items-center gap-2">
-                <MapPin size={16} className="text-blue-500 shrink-0" />
+                <MapPin size={16} className="text-brand-blue shrink-0" />
                 <span><strong className="text-slate-700">{dict.landing.trust_gps}</strong> — {dict.landing.trust_gps_desc}</span>
               </div>
               <div className="hidden sm:block w-1 h-1 rounded-full bg-slate-300" />
@@ -132,6 +132,9 @@ export default function Home() {
         {/* Abstract Bg Decoration — CSS gradient, no filter:blur to avoid GPU layer cost */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[1000px] bg-gradient-to-b from-slate-100/50 to-transparent rounded-full -z-0 pointer-events-none" />
       </section>
+
+      {/* TRUST BAR — social proof immediately after hero */}
+      <TrustBar locale={currentLocale} />
 
       {/* PROBLEM SECTION */}
       <section className="py-20 bg-slate-50 border-b border-slate-100">
@@ -599,9 +602,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* TRUST BAR — social proof stats before final CTA */}
-      <TrustBar locale={currentLocale} />
 
       {/* CTA FOOTER */}
       <section className="py-32 bg-slate-900 text-white text-center px-6">
