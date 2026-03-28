@@ -7,7 +7,12 @@ import BlogClient, { type Post } from './BlogClient';
 
 const WP = 'https://blog.geotapp.com';
 const HEADERS = { host: 'blog.geotapp.com', 'x-geotapp-proxy': '1', 'x-forwarded-proto': 'https' };
-const CACHE = { next: { revalidate: 3600 } };
+// 8 s timeout per le fetch WP — evita che il build SSG si blocchi se il server è lento.
+// cache: 'no-store' previene il deadlock Next.js 16 tra next.revalidate e AbortSignal:
+// con next.revalidate i worker deduplicano il fetch e il signal non si propaga, bloccando il build.
+function wpFetch(url: string): Promise<Response> {
+  return fetch(url, { headers: HEADERS, cache: 'no-store', signal: AbortSignal.timeout(8000) });
+}
 
 function stripHtml(html: string): string {
   return html
@@ -41,9 +46,8 @@ function isLocalePost(link: string, locale: string): boolean {
 }
 
 async function fetchAllPosts(): Promise<{ id: number; slug: string; title: any; excerpt: any; date: string; link: string; featured_media: number }[]> {
-  const first = await fetch(
+  const first = await wpFetch(
     `${WP}/wp-json/wp/v2/posts/?per_page=100&page=1&_fields=id,slug,title,excerpt,date,link,featured_media&status=publish`,
-    { headers: HEADERS, ...CACHE },
   );
   if (!first.ok) return [];
   const totalPages = parseInt(first.headers.get('x-wp-totalpages') ?? '1', 10);
@@ -52,25 +56,28 @@ async function fetchAllPosts(): Promise<{ id: number; slug: string; title: any; 
   const rest = totalPages > 1
     ? await Promise.all(
         Array.from({ length: totalPages - 1 }, (_, i) =>
-          fetch(`${WP}/wp-json/wp/v2/posts/?per_page=100&page=${i + 2}&_fields=id,slug,title,excerpt,date,link,featured_media&status=publish`,
-            { headers: HEADERS, ...CACHE })
+          wpFetch(`${WP}/wp-json/wp/v2/posts/?per_page=100&page=${i + 2}&_fields=id,slug,title,excerpt,date,link,featured_media&status=publish`)
             .then((r) => r.ok ? r.json() : [])
+            .catch(() => [])
         )
       )
     : [];
 
-  return [firstData, ...rest].flat().filter(Array.isArray(firstData) ? Boolean : Boolean);
+  return [firstData, ...rest].flat().filter(Boolean);
 }
 
 async function fetchMediaMap(ids: number[]): Promise<Map<number, string>> {
   if (ids.length === 0) return new Map();
+  // WP caps per_page at 100; batch into chunks of 100
+  const chunks: number[][] = [];
+  for (let i = 0; i < ids.length; i += 100) chunks.push(ids.slice(i, i + 100));
   try {
-    const res = await fetch(
-      `${WP}/wp-json/wp/v2/media?include=${ids.join(',')}&per_page=${ids.length}&_fields=id,source_url,media_details`,
-      { headers: HEADERS, ...CACHE },
-    );
-    if (!res.ok) return new Map();
-    const data: any[] = await res.json();
+    const results = await Promise.all(chunks.map((chunk) =>
+      wpFetch(`${WP}/wp-json/wp/v2/media?include=${chunk.join(',')}&per_page=100&_fields=id,source_url,media_details`)
+        .then((r) => r.ok ? r.json() : [])
+        .catch(() => [])
+    ));
+    const data: any[] = results.flat();
     const map = new Map<number, string>();
     for (const m of data) {
       const sizes = m.media_details?.sizes ?? {};
@@ -82,6 +89,7 @@ async function fetchMediaMap(ids: number[]): Promise<Map<number, string>> {
     return new Map();
   }
 }
+
 
 async function fetchPosts(locale: string): Promise<Post[]> {
   try {
@@ -105,6 +113,10 @@ async function fetchPosts(locale: string): Promise<Post[]> {
 }
 
 export { generateStaticParams };
+
+// Fetch real posts from WP at request time — Cloudflare Worker renders on demand.
+// force-dynamic skips SSG for this route so the build doesn't hang on WP API calls.
+export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;

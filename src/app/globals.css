@@ -6,17 +6,17 @@
 
 /* GSAP UI Demo Range Slider (Exact Replica Style) */
 .ui-demo--range {
-    -webkit-appearance: none;
-    appearance: none;
-    background: transparent;
-    cursor: pointer;
-    width: 100%;
-    margin: 0;
-    padding: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .ui-demo--range:focus {
-    outline: none;
+  outline: none;
 }
 
 /* TRACK STYLING */
@@ -24,59 +24,59 @@
    so we set a base style here that allows the gradient to show through. */
 
 .ui-demo--range::-webkit-slider-runnable-track {
-    width: 100%;
-    height: 6px;
-    cursor: pointer;
-    background: transparent;
-    border-radius: 3px;
+  width: 100%;
+  height: 6px;
+  cursor: pointer;
+  background: transparent;
+  border-radius: 3px;
 }
 
 .ui-demo--range::-moz-range-track {
-    width: 100%;
-    height: 6px;
-    cursor: pointer;
-    background: transparent;
-    border-radius: 3px;
+  width: 100%;
+  height: 6px;
+  cursor: pointer;
+  background: transparent;
+  border-radius: 3px;
 }
 
 /* THUMB STYLING (THE PIN) */
 /* GSAP Style: White circle with Green Border */
 
 .ui-demo--range::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    height: 24px;
-    width: 24px;
-    border-radius: 50%;
-    background: #ffffff;
-    border: 2px solid #8FC436;
-    /* GSAP/GeoTapp Green */
-    cursor: pointer;
-    margin-top: -9px;
-    /* (ThumbHeight 24 - TrackHeight 6) / 2 * -1 = -9 */
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -webkit-appearance: none;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid #8fc436;
+  /* GSAP/GeoTapp Green */
+  cursor: pointer;
+  margin-top: -9px;
+  /* (ThumbHeight 24 - TrackHeight 6) / 2 * -1 = -9 */
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .ui-demo--range::-moz-range-thumb {
-    height: 24px;
-    width: 24px;
-    border-radius: 50%;
-    background: #ffffff;
-    border: 2px solid #8FC436;
-    cursor: pointer;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid #8fc436;
+  cursor: pointer;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 /* Active State (Pressing) */
 .ui-demo--range:active::-webkit-slider-thumb {
-    transform: scale(1.1);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transform: scale(1.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .ui-demo--range:active::-moz-range-thumb {
-    transform: scale(1.1);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transform: scale(1.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 /* @import './gsap-slider.css'; */
 /* Removed, including inline to guarantee load */
@@ -85,7 +85,7 @@
 :root {
   --slider-track-height: 1.5rem;
   --slider-thumb-size: 1.5rem;
-  --geotapp-primary: #8FC436;
+  --geotapp-primary: #8fc436;
   --geotapp-primary-dark: #7ab325;
   --geotapp-track-bg: #e5e7eb;
 }
@@ -225,7 +225,6 @@
   cursor: grabbing;
 }
 
-
 /* The Pin/Marker that grows */
 .ui-range__marker-container {
   position: absolute;
@@ -264,17 +263,31 @@
   display: none;
 }
 
-
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: var(--font-poppins), 'Poppins', 'Inter', system-ui, -apple-system, sans-serif;
+  font-family:
+    var(--font-poppins),
+    'Poppins',
+    'Inter',
+    system-ui,
+    -apple-system,
+    sans-serif;
   color: #212529;
   background-color: #f8f9fa;
-  background: radial-gradient(circle at 20% 20%, rgba(143, 196, 54, 0.08), transparent 35%),
-    radial-gradient(circle at 80% 0%, rgba(143, 196, 54, 0.05), transparent 40%),
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(143, 196, 54, 0.08),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 80% 0%,
+      rgba(143, 196, 54, 0.05),
+      transparent 40%
+    ),
     #f8f9fa;
   line-height: 1.7;
   margin: 0;
@@ -288,7 +301,13 @@ h4,
 h5,
 h6,
 .font-display {
-  font-family: var(--font-poppins), 'Poppins', 'Inter', system-ui, -apple-system, sans-serif;
+  font-family:
+    var(--font-poppins),
+    'Poppins',
+    'Inter',
+    system-ui,
+    -apple-system,
+    sans-serif;
 }
 
 a {
@@ -304,7 +323,9 @@ a:hover {
 .reveal {
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
 }
 
 .reveal.is-visible {

@@ -6,7 +6,10 @@ import toast from 'react-hot-toast';
 
 export default function AdminLoginPage() {
   const router = useRouter();
-  const [credentials, setCredentials] = useState({ username: '', password: '' });
+  const [credentials, setCredentials] = useState({
+    username: '',
+    password: '',
+  });
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -60,7 +63,9 @@ export default function AdminLoginPage() {
               type="text"
               required
               value={credentials.username}
-              onChange={(e) => setCredentials({ ...credentials, username: e.target.value })}
+              onChange={(e) =>
+                setCredentials({ ...credentials, username: e.target.value })
+              }
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-geotapp-500"
             />
           </div>
@@ -73,7 +78,9 @@ export default function AdminLoginPage() {
               type="password"
               required
               value={credentials.password}
-              onChange={(e) => setCredentials({ ...credentials, password: e.target.value })}
+              onChange={(e) =>
+                setCredentials({ ...credentials, password: e.target.value })
+              }
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-geotapp-500"
             />
           </div>

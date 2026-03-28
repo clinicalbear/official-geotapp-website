@@ -1,6 +1,3 @@
-// Overview: layout.tsx
-// Module: src > app
-// Purpose: Root layout — exports site-wide metadata only.
 //          html/body rendering (including <html lang={locale}>) is handled by
 //          [locale]/layout.tsx, which has access to the locale route parameter.
 //          This separation is required so each locale page gets the correct lang attribute.

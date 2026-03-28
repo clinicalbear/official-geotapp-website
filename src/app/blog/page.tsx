@@ -1,12 +1,12 @@
-// Overview: page.tsx
-// Module: src > app > blog
-// Purpose: Blog index — Server Component che fetcha articoli reali da WP REST API
 //          e li mostra con link cliccabili e Blog Schema JSON-LD.
 
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { getDictionary } from '@/lib/i18n/dictionaries';
+
+// Rendered on-demand by Cloudflare Worker — avoids SSG hang on WP API fetch.
+export const dynamic = 'force-dynamic';
 
 const b = getDictionary('it').blog;
 
@@ -35,7 +35,8 @@ async function fetchBlogPosts(): Promise<WpPost[]> {
           'x-geotapp-proxy': '1',
           'x-forwarded-proto': 'https',
         },
-        next: { revalidate: 3600 },
+        cache: 'no-store',
+        signal: AbortSignal.timeout(8000),
       }
     );
     if (!res.ok) return [];

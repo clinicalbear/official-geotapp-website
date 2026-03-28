@@ -1,0 +1,10 @@
+import { permanentRedirect } from 'next/navigation';
+
+type Props = {
+  params: Promise<{ slug: string[] }>;
+};
+
+export default async function BlogPostRedirect({ params }: Props) {
+  const { slug } = await params;
+  permanentRedirect(`https://blog.geotapp.com/${slug.join('/')}/`);
+}

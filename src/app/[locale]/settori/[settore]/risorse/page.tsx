@@ -68,7 +68,7 @@ const SETTORE_CONFIG: Record<string, {
         },
         {
           h2: 'Come funziona la timbratura GPS per le imprese di pulizie',
-          body: 'La timbratura GPS permette ai collaboratori di registrare entrata e uscita direttamente dallo smartphone, con posizione verificata in tempo reale. Non richiede hardware fisso e funziona su qualsiasi cantiere. Il responsabile vede le presenze in diretta dalla dashboard, con la possibilità di esportare report per il cliente a fine mese. GeoTapp App aggiunge la possibilità di inviare foto dei lavori completati e comunicare con il coordinatore dallo stesso dispositivo.',
+          body: 'La timbratura GPS permette ai collaboratori di registrare entrata e uscita direttamente dallo smartphone, con posizione verificata in tempo reale. Non richiede hardware fisso e funziona su qualsiasi cantiere. Il responsabile vede le presenze in diretta dalla dashboard, con la possibilità di esportare report per il cliente a fine mese. GeoTapp TimeTracker aggiunge la possibilità di inviare foto dei lavori completati e comunicare con il coordinatore dallo stesso dispositivo.',
           productLink: true,
         },
         {
@@ -90,7 +90,7 @@ const SETTORE_CONFIG: Record<string, {
         },
         {
           h2: 'How GPS time tracking works for cleaning companies',
-          body: 'GPS time tracking lets staff clock in and out directly from their smartphone, with verified location. No fixed hardware needed — it works on any site. Managers see attendance in real time from a dashboard and can export client reports at month end. GeoTapp App adds the ability to send photos of completed work and communicate with the coordinator from the same device.',
+          body: 'GPS time tracking lets staff clock in and out directly from their smartphone, with verified location. No fixed hardware needed — it works on any site. Managers see attendance in real time from a dashboard and can export client reports at month end. GeoTapp TimeTracker adds the ability to send photos of completed work and communicate with the coordinator from the same device.',
           productLink: true,
         },
         {
@@ -107,7 +107,7 @@ const SETTORE_CONFIG: Record<string, {
       ],
     },
     product: {
-      name: 'GeoTapp App',
+      name: 'GeoTapp TimeTracker',
       slug: 'geotapp-app',
       ctaLabel: CTA_LABELS,
     },
@@ -228,7 +228,7 @@ const SETTORE_CONFIG: Record<string, {
         },
         {
           h2: 'Come funziona la tracciabilità degli agenti di sicurezza',
-          body: 'Un sistema di tracciabilità GPS permette alla centrale di vedere in tempo reale la posizione di ogni agente, le ronde completate e le anomalie segnalate. Gli agenti registrano presenze, eventi e note direttamente dallo smartphone — con foto, timestamp e posizione verificata. GeoTapp App è progettata per questo: registrazione presenze con GPS, documentazione ronde e comunicazione istantanea con la centrale.',
+          body: 'Un sistema di tracciabilità GPS permette alla centrale di vedere in tempo reale la posizione di ogni agente, le ronde completate e le anomalie segnalate. Gli agenti registrano presenze, eventi e note direttamente dallo smartphone — con foto, timestamp e posizione verificata. GeoTapp TimeTracker è progettata per questo: registrazione presenze con GPS, documentazione ronde e comunicazione istantanea con la centrale.',
           productLink: true,
         },
         {
@@ -250,7 +250,7 @@ const SETTORE_CONFIG: Record<string, {
         },
         {
           h2: 'How agent tracking works in security services',
-          body: 'A GPS tracking system lets the control center see the real-time position of every agent, completed patrols, and reported incidents. Agents log attendance, events, and notes directly from their smartphone — with photos, timestamps, and verified location. GeoTapp App is built for this: GPS attendance logging, patrol documentation, and instant communication with the control center.',
+          body: 'A GPS tracking system lets the control center see the real-time position of every agent, completed patrols, and reported incidents. Agents log attendance, events, and notes directly from their smartphone — with photos, timestamps, and verified location. GeoTapp TimeTracker is built for this: GPS attendance logging, patrol documentation, and instant communication with the control center.',
           productLink: true,
         },
         {
@@ -267,7 +267,7 @@ const SETTORE_CONFIG: Record<string, {
       ],
     },
     product: {
-      name: 'GeoTapp App',
+      name: 'GeoTapp TimeTracker',
       slug: 'geotapp-app',
       ctaLabel: CTA_LABELS,
     },

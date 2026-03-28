@@ -36,7 +36,7 @@ export default function AdminDashboard() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}`,
+          Authorization: `Bearer ${token}`,
         },
         body: JSON.stringify(settings),
       });
@@ -69,7 +69,9 @@ export default function AdminDashboard() {
         <div className="grid md:grid-cols-2 gap-8">
           {/* Settings */}
           <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-200">
-            <h2 className="text-2xl font-bold text-dark-900 mb-6">Impostazioni Tracking</h2>
+            <h2 className="text-2xl font-bold text-dark-900 mb-6">
+              Impostazioni Tracking
+            </h2>
 
             <div className="space-y-6">
               <div>
@@ -79,7 +81,12 @@ export default function AdminDashboard() {
                 <input
                   type="text"
                   value={settings.googleAnalyticsId}
-                  onChange={(e) => setSettings({ ...settings, googleAnalyticsId: e.target.value })}
+                  onChange={(e) =>
+                    setSettings({
+                      ...settings,
+                      googleAnalyticsId: e.target.value,
+                    })
+                  }
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg"
                   placeholder="G-XXXXXXXXXX"
                 />
@@ -92,7 +99,9 @@ export default function AdminDashboard() {
                 <input
                   type="text"
                   value={settings.googleAdsId}
-                  onChange={(e) => setSettings({ ...settings, googleAdsId: e.target.value })}
+                  onChange={(e) =>
+                    setSettings({ ...settings, googleAdsId: e.target.value })
+                  }
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg"
                   placeholder="AW-XXXXXXXXXX"
                 />
@@ -105,7 +114,12 @@ export default function AdminDashboard() {
                 <input
                   type="password"
                   value={settings.microsoftAzureKey}
-                  onChange={(e) => setSettings({ ...settings, microsoftAzureKey: e.target.value })}
+                  onChange={(e) =>
+                    setSettings({
+                      ...settings,
+                      microsoftAzureKey: e.target.value,
+                    })
+                  }
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg"
                   placeholder="Chiave Azure"
                 />
@@ -118,7 +132,9 @@ export default function AdminDashboard() {
                 <input
                   type="text"
                   value={settings.adSenseId}
-                  onChange={(e) => setSettings({ ...settings, adSenseId: e.target.value })}
+                  onChange={(e) =>
+                    setSettings({ ...settings, adSenseId: e.target.value })
+                  }
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg"
                   placeholder="ca-pub-xxxxxxxxxxxxxxxx"
                 />
@@ -136,15 +152,19 @@ export default function AdminDashboard() {
 
           {/* Pages Management */}
           <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-200">
-            <h2 className="text-2xl font-bold text-dark-900 mb-6">Gestione Pagine</h2>
+            <h2 className="text-2xl font-bold text-dark-900 mb-6">
+              Gestione Pagine
+            </h2>
 
             <p className="text-dark-600 mb-6">
-              Gestisci le pagine del sito tramite il CMS Strapi integrato. 
-              Le modifiche saranno visibili immediatamente.
+              Gestisci le pagine del sito tramite il CMS Strapi integrato. Le
+              modifiche saranno visibili immediatamente.
             </p>
 
             <a
-              href={process.env.NEXT_PUBLIC_STRAPI_URL || 'http://localhost:1337'}
+              href={
+                process.env.NEXT_PUBLIC_STRAPI_URL || 'http://localhost:1337'
+              }
               target="_blank"
               rel="noopener noreferrer"
               className="block w-full text-center px-6 py-3 bg-blue-500 text-white font-medium rounded-lg hover:bg-blue-600 transition"
@@ -153,7 +173,9 @@ export default function AdminDashboard() {
             </a>
 
             <div className="mt-6 pt-6 border-t border-gray-200">
-              <h3 className="font-semibold text-dark-900 mb-4">Pagine Disponibili</h3>
+              <h3 className="font-semibold text-dark-900 mb-4">
+                Pagine Disponibili
+              </h3>
               <ul className="space-y-2 text-sm text-dark-600">
                 <li>✓ Home</li>
                 <li>✓ Pricing</li>

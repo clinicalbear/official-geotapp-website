@@ -21,7 +21,7 @@ const it: VerifierCopy = {
     'Raccoglie i dati operativi sul campo: timbrature GPS, foto, note e firma del cliente.',
   ecosystem_timetracker_link: 'Scopri TimeTracker',
   ecosystem_flow_desc:
-    'Organizza commesse, squadre e genera i report strutturati con identificatore crittografico.',
+    'Organizza commesse, squadre e genera i report strutturati e sigillati — pronti per la verifica.',
   ecosystem_flow_link: 'Scopri Flow',
   ecosystem_verifier_desc:
     "Verifica l'integrità di ogni report. Confronta il documento con i dati originali e certifica l'autenticità.",
@@ -56,7 +56,7 @@ const it: VerifierCopy = {
     {
       num: '02',
       title: 'Flow genera il report strutturato',
-      desc: 'GeoTapp Flow raccoglie tutti i dati di commessa e produce un report di intervento strutturato. Il report include un identificatore crittografico che collega il documento ai dati originali.',
+      desc: 'GeoTapp Flow raccoglie tutti i dati di commessa e produce un report di intervento strutturato. Il report è sigillato sui dati originali — qualsiasi modifica risulta immediatamente rilevabile.',
     },
     {
       num: '03',

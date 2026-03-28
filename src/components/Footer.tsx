@@ -1,23 +1,5 @@
 'use client';
 
-// Overview: Footer.tsx
-// Module: src > components
-// Purpose: documents intent and boundaries to speed up maintenance and reviews.
-// Safety: keep permissions, tenancy isolation, and API/data compatibility unchanged unless explicitly required.
-
-// Documentation Contract:
-// - Boundaries: this file may orchestrate UI/data flow, but it must keep business invariants intact.
-// - Security: preserve role/tenant checks and never broaden access scope implicitly.
-// - Data Integrity: keep field names and payload schemas stable unless a migration is planned.
-// - Compatibility: companyId/tenantId fallbacks may still be required for legacy records.
-// - Performance: avoid extra roundtrips in hot paths and prefer incremental updates.
-// - Error Handling: prefer graceful degradation over hard-fail in non-critical rendering paths.
-// - UX Stability: keep deterministic ordering/filtering to avoid visual flicker/regressions.
-// - Testing: update module tests when changing control flow, query composition, or serialization.
-// - Operations: changes touching auth/rules/functions must stay aligned across apps.
-// - Maintainability: keep additive changes whenever possible to reduce rollback risk.
-
-
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
@@ -28,6 +10,7 @@ import {
   getLocaleFromPathname,
   localizePath,
 } from '@/lib/i18n/locale-routing';
+import NewsletterForm from '@/components/NewsletterForm';
 
 export default function Footer() {
   const pathname = usePathname();
@@ -36,8 +19,15 @@ export default function Footer() {
   const getLink = (path: string) => localizePath(path, currentLocale);
 
   return (
-    <footer className="bg-surface border-t border-border py-12 mt-20">
-      <div className="container mx-auto px-6 text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-8">
+    <footer className="bg-surface border-t border-border pt-12 mt-20">
+      {/* Newsletter section */}
+      <div className="container mx-auto px-6 pb-10 mb-10 border-b border-border/40">
+        <div style={{ maxWidth: '480px', margin: '0 auto' }}>
+          <NewsletterForm locale={currentLocale} />
+        </div>
+      </div>
+
+      <div className="container mx-auto px-6 pb-12 text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-8">
         <div>
           <div className="mb-2 flex justify-center md:justify-start">
             <Image
@@ -88,23 +78,3 @@ export default function Footer() {
     </footer>
   );
 }
-
-// Documentation continuity notes:
-// maintenance-note-1: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-2: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-3: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-4: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-5: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-6: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-7: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-8: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-9: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-10: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-11: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-12: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-13: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-14: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-15: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-16: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-17: preserve deterministic behavior and additive-only compatibility guarantees.
-// maintenance-note-18: preserve deterministic behavior and additive-only compatibility guarantees.

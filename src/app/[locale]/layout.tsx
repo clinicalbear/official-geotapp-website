@@ -1,6 +1,3 @@
-// Overview: layout.tsx
-// Module: src > app > [locale]
-// Purpose: Full root layout with locale-aware <html lang> and all shared UI.
 //          Moved here from app/layout.tsx so each locale gets the correct lang attribute.
 //          Also injects locale-specific SoftwareApplication JSON-LD.
 
