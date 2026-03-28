@@ -13,6 +13,8 @@ import Footer from '@/components/Footer';
 import { Toaster } from 'react-hot-toast';
 import CartDrawer from '@/components/CartDrawer';
 import Script from 'next/script';
+import CookieConsentBanner from '@/components/CookieConsentBanner';
+import NewsletterModal from '@/components/NewsletterModal';
 
 const BASE_URL = 'https://geotapp.com';
 
@@ -403,7 +405,6 @@ export default async function LocaleLayout({ children, params }: Props) {
                 'https://www.linkedin.com/company/110850300/',
                 'https://www.facebook.com/profile.php?id=61583303732388',
                 'https://www.instagram.com/geotapp_official/',
-                'https://x.com/MPetraroli39547',
               ],
             }),
           }}
@@ -412,6 +413,22 @@ export default async function LocaleLayout({ children, params }: Props) {
             renders only on the homepage, not on every sub-page under [locale]/.
             Previously injected here it bled to settori pages causing duplicate
             FAQPage errors in Google's Rich Results validator. */}
+        {/* ── Google Consent Mode v2 — must run BEFORE GA loads ─────────────
+            Default: all storage denied. Updated by CookieConsentBanner
+            when the user accepts analytics/ads cookies. */}
+        <Script id="google-consent-default" strategy="beforeInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('consent', 'default', {
+              analytics_storage: 'denied',
+              ad_storage: 'denied',
+              ad_user_data: 'denied',
+              ad_personalization: 'denied',
+              wait_for_update: 500,
+            });
+          `}
+        </Script>
         <Script
           strategy="afterInteractive"
           src="https://www.googletagmanager.com/gtag/js?id=G-87PN0GEMW4"
@@ -421,7 +438,6 @@ export default async function LocaleLayout({ children, params }: Props) {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-
             gtag('config', 'G-87PN0GEMW4');
           `}
         </Script>
@@ -467,6 +483,8 @@ export default async function LocaleLayout({ children, params }: Props) {
             },
           }}
         />
+        <CookieConsentBanner locale={locale} />
+        <NewsletterModal locale={locale} />
       </body>
     </html>
   );
