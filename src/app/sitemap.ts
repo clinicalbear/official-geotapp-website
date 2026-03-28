@@ -41,6 +41,10 @@ export const dynamic = 'force-dynamic';
 
 const BASE_URL = 'https://geotapp.com';
 const WP_DIRECT = 'https://blog.geotapp.com';
+const DEPUBLISHED_BLOG_TEST_PATHS = new Set([
+  '/blog/da/2026/03/23/test/',
+  '/blog/da/2026/03/23/test-2/',
+]);
 
 type RouteEntry = {
   path: string;
@@ -72,6 +76,11 @@ const ROUTES: RouteEntry[] = [
   { path: '/settori/installatori/', priority: 0.9, changeFrequency: 'weekly' },
   { path: '/settori/sicurezza/', priority: 0.9, changeFrequency: 'weekly' },
 
+  // Settori risorse (pillar SEO — pagine long-tail per settore)
+  { path: '/settori/pulizie/risorse/', priority: 0.85, changeFrequency: 'monthly' },
+  { path: '/settori/installatori/risorse/', priority: 0.85, changeFrequency: 'monthly' },
+  { path: '/settori/sicurezza/risorse/', priority: 0.85, changeFrequency: 'monthly' },
+
   // Blog index
   { path: '/blog/', priority: 0.85, changeFrequency: 'daily' },
 
@@ -86,6 +95,9 @@ const ROUTES: RouteEntry[] = [
   // Legale (bassa priorità)
   { path: '/privacy/', priority: 0.3, changeFrequency: 'yearly' },
   { path: '/terms/', priority: 0.3, changeFrequency: 'yearly' },
+
+  // Cookies (legale — bassa priorità)
+  { path: '/cookies/', priority: 0.3, changeFrequency: 'yearly' },
 
   // /success esclusa: pagina Stripe post-pagamento, noindex
 ];
@@ -108,6 +120,18 @@ function buildAlternates(canonicalPath: string): MetadataRoute.Sitemap[number]['
 
 type WpPost = { slug: string; modified: string; link?: string };
 type WpPostResponse = { slug?: string; modified?: string; link?: string };
+
+function isDepublishedBlogTestUrl(url: string): boolean {
+  try {
+    const parsed = new URL(url, BASE_URL);
+    const normalized = parsed.pathname.endsWith('/')
+      ? parsed.pathname
+      : `${parsed.pathname}/`;
+    return DEPUBLISHED_BLOG_TEST_PATHS.has(normalized);
+  } catch {
+    return false;
+  }
+}
 
 function normalizeWpPublicUrl(rawUrl: string | undefined, slug: string): string {
   if (rawUrl) {
@@ -195,6 +219,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   wpPostsByLocale.flat().forEach(({ slug, modified, link }) => {
     const url = link || `${BASE_URL}/blog/${slug}/`;
+    if (isDepublishedBlogTestUrl(url)) return;
     if (seenUrls.has(url)) return;
     seenUrls.add(url);
     blogEntries.push({
