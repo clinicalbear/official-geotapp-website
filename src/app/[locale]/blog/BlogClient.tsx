@@ -8,6 +8,29 @@ import type { AppLocale } from '@/lib/i18n/config';
 
 const POSTS_PER_PAGE = 12;
 
+const CATEGORY_COLORS: Record<string, string> = {
+  'gps':               'rgba(59,174,224,0.55)',
+  'tracking':          'rgba(59,174,224,0.55)',
+  'geolocalizzazione': 'rgba(59,174,224,0.55)',
+  'sicurezza':         'rgba(99,102,241,0.55)',
+  'security':          'rgba(99,102,241,0.55)',
+  'gestione':          'rgba(82,192,101,0.55)',
+  'operazioni':        'rgba(82,192,101,0.55)',
+  'business':          'rgba(82,192,101,0.55)',
+  'tecnologia':        'rgba(217,119,6,0.55)',
+  'app':               'rgba(217,119,6,0.55)',
+  'software':          'rgba(217,119,6,0.55)',
+};
+const DEFAULT_COLOR = 'rgba(143,196,54,0.55)';
+
+function getCategoryColor(categories: Array<{ slug: string; name: string }>): string {
+  for (const cat of categories) {
+    const slug = cat.slug.toLowerCase().replace(/-[a-z]{2}$/, '');
+    if (CATEGORY_COLORS[slug]) return CATEGORY_COLORS[slug];
+  }
+  return DEFAULT_COLOR;
+}
+
 export type Post = {
   id: number;
   slug: string;
@@ -101,14 +124,19 @@ export default function BlogClient({ locale, posts }: { locale: AppLocale; posts
                   <article key={post.id} id={`post-${post.id}`} className="group flex flex-col">
                     <Link href={post.url} className="flex flex-col h-full">
                       <div className="flex flex-col h-full bg-surface border border-border rounded-2xl overflow-hidden hover:border-primary/40 hover:shadow-md transition-all">
+                        {/* Card cover with category color overlay */}
                         {post.image && (
-                          <div className="relative w-full h-44 shrink-0">
+                          <div className="relative w-full h-44 shrink-0 overflow-hidden">
                             <Image
                               src={post.image}
                               alt={post.title}
                               fill
                               className="object-cover"
                               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                            />
+                            <div
+                              className="absolute inset-0 mix-blend-multiply"
+                              style={{ backgroundColor: getCategoryColor(post.categories ?? []) }}
                             />
                           </div>
                         )}
