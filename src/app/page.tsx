@@ -249,10 +249,10 @@ export default function Home() {
       {/* PRODUCT SECTION: VERIFIER */}
       <section className="py-24 border-t border-slate-100 bg-white">
         <div className="container mx-auto px-6 max-w-6xl">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
+          <div className="grid md:grid-cols-[3fr_2fr] gap-16 items-center">
             <div className="order-2 md:order-1">
               {/* Verifier visual mockup */}
-              <div className="bg-slate-900 rounded-2xl p-6 shadow-2xl font-mono text-sm">
+              <div className="bg-slate-900 rounded-2xl p-6 shadow-2xl shadow-slate-900/40 transform md:-rotate-1 hover:rotate-0 transition-transform duration-500 font-mono text-sm">
                 <div className="flex items-center gap-2 mb-4 pb-4 border-b border-slate-700">
                   <div className="w-3 h-3 rounded-full bg-red-500"></div>
                   <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
@@ -375,7 +375,7 @@ export default function Home() {
       {/* PRODUCT SECTION: FLOW */}
       <section className="py-24 border-t border-slate-100 bg-white">
         <div className="container mx-auto px-6 max-w-6xl">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
+          <div className="grid md:grid-cols-[3fr_2fr] gap-16 items-center">
             <div className="order-2 md:order-1">
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
@@ -384,7 +384,7 @@ export default function Home() {
                 className="relative"
               >
                 {/* Visual Artifact */}
-                <div className="relative z-10 transform md:rotate-[-2deg] hover:rotate-0 transition-transform duration-500">
+                <div className="relative z-10 transform md:rotate-[-2deg] hover:rotate-0 transition-transform duration-500 shadow-2xl shadow-flow/20">
                   <MockupFlow m={dict.home_sections.flow_mockup} />
                 </div>
                 <div className="absolute inset-0 bg-flow/10 rounded-xl transform rotate-3 scale-105 -z-0 blur-xl"></div>
@@ -490,7 +490,9 @@ export default function Home() {
             </div>
             <div className="relative">
               {/* Placeholder for App Screen - using a styled box for now to represent "Phone" */}
-              <div className="mx-auto w-[280px] h-[560px] bg-slate-900 rounded-[3rem] p-4 shadow-2xl relative border-8 border-slate-800">
+              <div className="relative flex justify-center">
+                <div className="absolute inset-0 bg-app/20 rounded-[3rem] blur-3xl scale-110 -z-10 pointer-events-none"></div>
+                <div className="mx-auto w-[280px] h-[560px] bg-slate-900 rounded-[3rem] p-4 shadow-2xl shadow-app/30 relative border-8 border-slate-800">
                 <div className="w-full h-full bg-slate-800 rounded-[2rem] overflow-hidden relative">
                   {/* Fake App UI */}
                   <div className="absolute top-0 left-0 w-full h-40 bg-app p-6 text-white">
@@ -509,6 +511,7 @@ export default function Home() {
                     </div>
                     <div className="text-app text-sm mt-1">{dict.home_sections.app_mockup.next_job_time}</div>
                   </div>
+                </div>
                 </div>
               </div>
             </div>
