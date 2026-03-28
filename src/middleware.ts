@@ -57,6 +57,7 @@ function applySecurityHeaders(response: NextResponse): void {
 const WP_ORIGIN = 'https://blog.geotapp.com';
 const SITE_ORIGIN = 'https://geotapp.com';
 const BLOG_BASE = '/blog';
+const BLOG_NOINDEX_LOCALES = new Set(['pt', 'nl', 'da', 'sv', 'nb', 'ru']);
 const WP_NO_CACHE_PREFIXES = [
   '/wp-admin',
   '/wp-login.php',
@@ -223,12 +224,49 @@ const SITEMAP_ROUTES: SitemapRouteEntry[] = [
   { path: '/cookies/', priority: 0.3, changeFrequency: 'yearly' },
 ];
 
+const DEPUBLISHED_BLOG_TEST_PATHS = new Set([
+  '/blog/da/2026/03/23/test/',
+  '/blog/da/2026/03/23/test-2/',
+]);
+
+function normalizePathWithTrailingSlash(pathname: string): string {
+  if (!pathname) return '/';
+  return pathname.endsWith('/') ? pathname : `${pathname}/`;
+}
+
+// All canonical and translated download slugs — must stay in sync with next.config.mjs
+const DOWNLOAD_SLUGS = new Set([
+  'download',
+  'herunterladen', // de
+  'telecharger',   // fr
+  'descargar',     // es
+  'downloaden',    // nl
+  'hent',          // da
+  'ladda-ned',     // sv
+  'last-ned',      // nb
+  'skachat',       // ru
+]);
+
 function isDepublishedDownloadPath(pathname: string): boolean {
-  const normalized = pathname.endsWith('/') ? pathname : `${pathname}/`;
-  if (normalized === '/download/') return true;
-  const locale = getLocaleFromPathname(normalized);
-  if (!locale) return false;
-  return stripLocaleFromPathname(normalized) === '/download/';
+  const normalized = normalizePathWithTrailingSlash(pathname);
+  // Extract the first path segment after the optional locale prefix.
+  const stripped = stripLocaleFromPathname(normalized); // e.g. '/download/' or '/herunterladen/'
+  const slug = stripped.replace(/^\/+|\/+$/g, '');     // e.g. 'download' or 'herunterladen'
+  return DOWNLOAD_SLUGS.has(slug);
+}
+
+function isDepublishedBlogTestPath(pathname: string): boolean {
+  const normalized = normalizePathWithTrailingSlash(pathname);
+  return DEPUBLISHED_BLOG_TEST_PATHS.has(normalized);
+}
+
+function isDepublishedBlogTestUrl(url: string): boolean {
+  try {
+    const parsed = new URL(url, SITE_ORIGIN);
+    return isDepublishedBlogTestPath(parsed.pathname);
+  } catch {
+    return false;
+  }
 }
 
 async function buildFullSitemap(): Promise<string> {
@@ -303,6 +341,7 @@ async function buildFullSitemap(): Promise<string> {
           }
         } catch { /* keep default */ }
       }
+      if (isDepublishedBlogTestUrl(url)) continue;
       if (seen.has(url)) continue;
       seen.add(url);
       const lastmod = (row.modified as string).split('T')[0];
@@ -369,6 +408,19 @@ export async function middleware(req: NextRequest) {
   // 0b2. Download pages are intentionally de-published:
   // return 410 Gone (root + all locale variants) and noindex to accelerate deindexing.
   if (isDepublishedDownloadPath(pathname)) {
+    return new NextResponse('Gone', {
+      status: 410,
+      headers: {
+        'Content-Type': 'text/plain; charset=utf-8',
+        'Cache-Control': 'public, max-age=300',
+        'X-Robots-Tag': 'noindex, nofollow, noarchive',
+      },
+    });
+  }
+
+  // 0b3. Known test blog posts are permanently de-published.
+  // Return 410 + noindex to stop crawl loops and remove them from Search quickly.
+  if (isDepublishedBlogTestPath(pathname)) {
     return new NextResponse('Gone', {
       status: 410,
       headers: {
@@ -542,6 +594,13 @@ export async function middleware(req: NextRequest) {
 
       if (!isNoCachePath && isHtml) {
         headers.set('cache-control', 'public, max-age=3600');
+      }
+
+      // Noindex blog content for Phase-3 locales (no translated content yet).
+      // Blog locale URLs follow /blog/{locale}/ pattern. IT has no prefix.
+      const blogLocaleMatch = pathname.match(/^\/blog\/([a-z]{2})\//);
+      if (blogLocaleMatch && BLOG_NOINDEX_LOCALES.has(blogLocaleMatch[1])) {
+        headers.set('X-Robots-Tag', 'noindex, follow');
       }
 
       if (!isNoCachePath && isXml) {
