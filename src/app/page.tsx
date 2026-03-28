@@ -79,6 +79,7 @@ import {
   localizePath,
 } from '@/lib/i18n/locale-routing';
 import DemoReportBanner from '@/components/DemoReportBanner';
+import TrustBar from '@/components/TrustBar';
 
 export default function Home() {
   // Locale resolution is path-based so all internal links stay language-aware.
@@ -616,6 +617,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* TRUST BAR — social proof stats before final CTA */}
+      <TrustBar locale={currentLocale} />
 
       {/* CTA FOOTER */}
       <section className="py-32 bg-slate-900 text-white text-center px-6">
