@@ -149,9 +149,9 @@ export default function Home() {
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {(dict.landing.problem_items as { title: string; desc: string }[]).map((item, i) => (
-              <div key={i} className="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm">
-                <div className="w-8 h-8 rounded-full bg-red-100 text-red-500 flex items-center justify-center font-bold text-sm mb-4">
-                  {i + 1}
+              <div key={i} className="bg-white rounded-2xl p-8 border-l-4 border-brand-blue shadow-sm">
+                <div className="text-6xl font-display font-black text-brand-blue/20 leading-none mb-3 select-none">
+                  {String(i + 1).padStart(2, '0')}
                 </div>
                 <h3 className="font-bold text-slate-900 text-lg mb-2">{item.title}</h3>
                 <p className="text-slate-600 leading-relaxed text-sm">{item.desc}</p>
