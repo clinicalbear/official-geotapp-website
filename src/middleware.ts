@@ -57,7 +57,6 @@ function applySecurityHeaders(response: NextResponse): void {
 const WP_ORIGIN = 'https://blog.geotapp.com';
 const SITE_ORIGIN = 'https://geotapp.com';
 const BLOG_BASE = '/blog';
-const BLOG_NOINDEX_LOCALES = new Set(['pt', 'nl', 'da', 'sv', 'nb', 'ru']);
 const WP_NO_CACHE_PREFIXES = [
   '/wp-admin',
   '/wp-login.php',
@@ -596,12 +595,6 @@ export async function middleware(req: NextRequest) {
         headers.set('cache-control', 'public, max-age=3600');
       }
 
-      // Noindex blog content for Phase-3 locales (no translated content yet).
-      // Blog locale URLs follow /blog/{locale}/ pattern. IT has no prefix.
-      const blogLocaleMatch = pathname.match(/^\/blog\/([a-z]{2})\//);
-      if (blogLocaleMatch && BLOG_NOINDEX_LOCALES.has(blogLocaleMatch[1])) {
-        headers.set('X-Robots-Tag', 'noindex, follow');
-      }
 
       if (!isNoCachePath && isXml) {
         headers.set('cache-control', 'public, max-age=86400');
