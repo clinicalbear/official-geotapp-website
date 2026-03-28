@@ -39,6 +39,12 @@ const SETTORE_CONFIG: Record<string, {
       de: { title: 'Ressourcen für Reinigungsunternehmen — GeoTapp', description: 'Artikel, Leitfäden und Ressourcen für Reinigungsunternehmen.', heading: 'Ressourcen für Reinigungsunternehmen' },
       fr: { title: 'Ressources pour les entreprises de nettoyage — GeoTapp', description: 'Articles, guides et ressources pour les entreprises de nettoyage.', heading: 'Ressources pour les entreprises de nettoyage' },
       es: { title: 'Recursos para empresas de limpieza — GeoTapp', description: 'Artículos, guías y recursos para empresas de limpieza.', heading: 'Recursos para empresas de limpieza' },
+      pt: { title: 'Recursos para empresas de limpeza — GeoTapp', description: 'Artigos e guias para gerir presenças e intervenções em empresas de limpeza.', heading: 'Recursos para empresas de limpeza' },
+      nl: { title: 'Bronnen voor schoonmaakbedrijven — GeoTapp', description: 'Artikelen en gidsen voor het beheer van aanwezigheid en opdrachten bij schoonmaakbedrijven.', heading: 'Bronnen voor schoonmaakbedrijven' },
+      da: { title: 'Ressourcer til rengøringsvirksomheder — GeoTapp', description: 'Artikler og guides til styring af fremmøde og opgaver i rengøringsvirksomheder.', heading: 'Ressourcer til rengøringsvirksomheder' },
+      sv: { title: 'Resurser för städföretag — GeoTapp', description: 'Artiklar och guider för hantering av närvaro och uppdrag i städföretag.', heading: 'Resurser för städföretag' },
+      nb: { title: 'Ressurser for rengjøringsbedrifter — GeoTapp', description: 'Artikler og veiledninger for administrasjon av fremmøte og oppdrag i rengjøringsbedrifter.', heading: 'Ressurser for rengjøringsbedrifter' },
+      ru: { title: 'Ресурсы для клининговых компаний — GeoTapp', description: 'Статьи и руководства по управлению присутствием и заявками в клининговых компаниях.', heading: 'Ресурсы для клининговых компаний' },
     },
     intro: {
       it: 'La gestione delle imprese di pulizia presenta sfide operative che la maggior parte dei software gestionali ignora: squadre distribuite su più cantieri, timbrature difficili da verificare, clienti che chiedono report documentati. Queste guide raccolgono tutto quello che serve sapere per organizzare presenze, interventi e comunicazione interna in modo efficiente — senza sprechi di tempo in telefonate o fogli Excel. Gli articoli coprono temi pratici come la gestione dei turni, il controllo delle presenze GPS, la documentazione dei lavori svolti e la segnalazione di anomalie sul campo. Ogni guida è pensata per responsabili operativi e titolari di imprese di pulizia che vogliono ridurre i problemi quotidiani e aumentare la trasparenza verso i clienti. GeoTapp App è la soluzione pensata per questo settore: permette ai collaboratori di timbrare entrata e uscita dal cantiere tramite GPS, inviare foto dei lavori completati e comunicare in tempo reale con il coordinatore.',
@@ -67,6 +73,12 @@ const SETTORE_CONFIG: Record<string, {
       de: { title: 'Ressourcen für Installateure — GeoTapp', description: 'Artikel und Leitfäden für Installateure und Außendienstunternehmen.', heading: 'Ressourcen für Installateure' },
       fr: { title: 'Ressources pour installateurs — GeoTapp', description: 'Articles et guides pour installateurs et entreprises de terrain.', heading: 'Ressources pour installateurs' },
       es: { title: 'Recursos para instaladores — GeoTapp', description: 'Artículos y guías para instaladores y empresas con técnicos de campo.', heading: 'Recursos para instaladores' },
+      pt: { title: 'Recursos para instaladores — GeoTapp', description: 'Artigos e guias para instaladores e empresas com técnicos de campo.', heading: 'Recursos para instaladores' },
+      nl: { title: 'Bronnen voor installateurs — GeoTapp', description: 'Artikelen en gidsen voor installateurs en bedrijven met buitendiensttechnici.', heading: 'Bronnen voor installateurs' },
+      da: { title: 'Ressourcer til installatører — GeoTapp', description: 'Artikler og guides til installatører og virksomheder med serviceteknikere.', heading: 'Ressourcer til installatører' },
+      sv: { title: 'Resurser för installatörer — GeoTapp', description: 'Artiklar och guider för installatörer och företag med fälttekniker.', heading: 'Resurser för installatörer' },
+      nb: { title: 'Ressurser for installatører — GeoTapp', description: 'Artikler og veiledninger for installatører og bedrifter med feltservice.', heading: 'Ressurser for installatører' },
+      ru: { title: 'Ресурсы для монтажников — GeoTapp', description: 'Статьи и руководства для монтажников и выездных технических служб.', heading: 'Ресурсы для монтажников' },
     },
     intro: {
       it: "Gli installatori e le aziende con tecnici sul campo affrontano ogni giorno il problema del coordinamento: sapere dove sono i tecnici, quali interventi sono stati chiusi, cosa è rimasto in sospeso e come documentare il lavoro per il cliente finale. Questi articoli raccolgono le pratiche operative più efficaci per aziende che gestiscono da 3 a 50 tecnici in campo — dall'organizzazione degli ordini di lavoro alla gestione delle emergenze, dalla reportistica automatica all'integrazione con i processi aziendali esistenti. I temi trattati vanno dalla pianificazione degli interventi alla comunicazione con i clienti, passando per la gestione dei ricambi sul campo e il monitoraggio dei KPI operativi. GeoTapp Flow è la piattaforma pensata per questo tipo di aziende: permette di assegnare interventi, seguire lo stato di avanzamento in tempo reale, raccogliere le firme del cliente al termine del lavoro e generare report automatici.",
@@ -95,6 +107,12 @@ const SETTORE_CONFIG: Record<string, {
       de: { title: 'Ressourcen für Sicherheitsdienste — GeoTapp', description: 'Artikel und Leitfäden für Sicherheitsdienste.', heading: 'Ressourcen für Sicherheitsdienste' },
       fr: { title: 'Ressources pour services de sécurité — GeoTapp', description: 'Articles et guides pour entreprises de sécurité.', heading: 'Ressources pour services de sécurité' },
       es: { title: 'Recursos para servicios de seguridad — GeoTapp', description: 'Artículos y guías para empresas de seguridad.', heading: 'Recursos para servicios de seguridad' },
+      pt: { title: 'Recursos para serviços de segurança — GeoTapp', description: 'Artigos e guias para empresas de segurança e vigilância.', heading: 'Recursos para serviços de segurança' },
+      nl: { title: 'Bronnen voor beveiligingsdiensten — GeoTapp', description: 'Artikelen en gidsen voor beveiligings- en bewakingsbedrijven.', heading: 'Bronnen voor beveiligingsdiensten' },
+      da: { title: 'Ressourcer til sikkerhedstjenester — GeoTapp', description: 'Artikler og guides til sikkerheds- og overvågningsvirksomheder.', heading: 'Ressourcer til sikkerhedstjenester' },
+      sv: { title: 'Resurser för säkerhetstjänster — GeoTapp', description: 'Artiklar och guider för säkerhets- och bevakningsföretag.', heading: 'Resurser för säkerhetstjänster' },
+      nb: { title: 'Ressurser for sikkerhetstjenester — GeoTapp', description: 'Artikler og veiledninger for sikkerhets- og overvåkingsbedrifter.', heading: 'Ressurser for sikkerhetstjenester' },
+      ru: { title: 'Ресурсы для служб безопасности — GeoTapp', description: 'Статьи и руководства для охранных предприятий и служб наблюдения.', heading: 'Ресурсы для служб безопасности' },
     },
     intro: {
       it: "Le aziende di sicurezza e vigilanza operano in ambienti dove la tracciabilità non è un'opzione ma un requisito: ogni ronda deve essere documentata, ogni agente deve essere localizzabile, ogni anomalia deve essere segnalata in tempo reale. Questi articoli affrontano i temi operativi più rilevanti per responsabili di servizi di sicurezza — dalla gestione dei turni e delle presenze alla documentazione degli interventi, dalla comunicazione con la centrale operativa alla reportistica per i clienti finali. La gestione delle squadre di sicurezza richiede strumenti che bilancino controllo operativo e privacy dei lavoratori, con prove concrete di servizio per i clienti e alert automatici in caso di anomalie. GeoTapp App è progettata per rispondere a queste esigenze: permette agli agenti di registrare presenze con geolocalizzazione, documentare ronde ed eventi con foto e note, e comunicare istantaneamente con la centrale.",
@@ -278,7 +296,7 @@ export default async function RisorseSettorePage({ params }: { params: Promise<P
       )}
 
       <div className="bg-white min-h-screen text-slate-900 font-sans">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 pt-32 pb-12">
 
           <Link
             href={`/${resolvedLocale}/settori/${settore}/`}
