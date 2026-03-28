@@ -150,7 +150,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const languages = Object.fromEntries(
     SUPPORTED_LOCALES.map((l) => [HREFLANG_MAP[l] ?? l, `${BASE_URL}/${l}/`]),
   ) as Record<string, string>;
-  languages['x-default'] = `${BASE_URL}/`;
+  languages['x-default'] = `${BASE_URL}/en/`;
 
   return {
     // Use absolute title to bypass the root layout template ("%s | GeoTapp").

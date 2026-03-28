@@ -50,10 +50,11 @@ export function buildLocaleAlternates(
     }),
   ) as Record<string, string>;
 
-  // x-default: root Italian path (no locale prefix), with translated canonical slug
-  const itSlug = translateSlug(canonicalSlug, 'it');
-  const itPath = restPath ? `/${itSlug}/${restPath}/` : `/${itSlug}/`;
-  languages['x-default'] = `${BASE}${itPath}`;
+  // x-default: English path — /en/ is a real page with no redirect.
+  // The bare canonical path (e.g. /chi-siamo/) triggers a 308 → /it/ leaking link equity.
+  const enSlug = translateSlug(canonicalSlug, 'en');
+  const enPath = restPath ? `/${enSlug}/${restPath}/` : `/${enSlug}/`;
+  languages['x-default'] = `${BASE}/en${enPath}`;
 
   const currentTranslatedSlug = translateSlug(canonicalSlug, locale as AppLocale);
   const currentPath = restPath
