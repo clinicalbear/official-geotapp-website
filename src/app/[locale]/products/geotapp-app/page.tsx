@@ -102,8 +102,17 @@ type Props = { params: Promise<{ locale: string }> };
 export default async function LocaleAppPage({ params }: Props) {
   const { locale } = await params;
   const faq = APP_FAQ[locale] ?? APP_FAQ['en'];
+  const breadcrumb = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'GeoTapp', item: 'https://geotapp.com' },
+      { '@type': 'ListItem', position: 2, name: 'GeoTapp App', item: `https://geotapp.com/${locale}/products/geotapp-app/` },
+    ],
+  };
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       {faq && (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       )}

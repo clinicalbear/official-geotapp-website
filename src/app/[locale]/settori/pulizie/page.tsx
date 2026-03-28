@@ -46,9 +46,18 @@ export default async function PulizieLocalePage({
   const { locale } = await params;
   const resolvedLocale = (locale ?? DEFAULT_LOCALE) as AppLocale;
   const content = await getPulizieContent(resolvedLocale);
+  const breadcrumb = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'GeoTapp', item: 'https://geotapp.com' },
+      { '@type': 'ListItem', position: 2, name: content.meta.title.replace(/ [|—].*$/, '').trim(), item: `https://geotapp.com/${resolvedLocale}/settori/pulizie/` },
+    ],
+  };
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <SettorePageLayout content={content} locale={resolvedLocale} settore="pulizie" />
     </>
   );

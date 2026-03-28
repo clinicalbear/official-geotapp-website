@@ -102,8 +102,17 @@ type Props = { params: Promise<{ locale: string }> };
 export default async function LocaleFlowPage({ params }: Props) {
   const { locale } = await params;
   const faq = FLOW_FAQ[locale] ?? FLOW_FAQ['en'];
+  const breadcrumb = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'GeoTapp', item: 'https://geotapp.com' },
+      { '@type': 'ListItem', position: 2, name: 'GeoTapp Flow', item: `https://geotapp.com/${locale}/products/geotapp-flow/` },
+    ],
+  };
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       {faq && (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       )}

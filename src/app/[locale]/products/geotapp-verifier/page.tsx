@@ -84,8 +84,17 @@ type Props = { params: Promise<{ locale: string }> };
 export default async function LocaleVerifierPage({ params }: Props) {
   const { locale } = await params;
   const faq = VERIFIER_FAQ[locale] ?? VERIFIER_FAQ['en'];
+  const breadcrumb = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'GeoTapp', item: 'https://geotapp.com' },
+      { '@type': 'ListItem', position: 2, name: 'GeoTapp Verifier', item: `https://geotapp.com/${locale}/products/geotapp-verifier/` },
+    ],
+  };
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       {faq && (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       )}
