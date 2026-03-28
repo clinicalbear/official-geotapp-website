@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { getDictionary } from '@/lib/i18n/dictionaries';
@@ -16,14 +16,42 @@ export type Post = {
   date: string;
   url: string;
   image: string | null;
+  categories: Array<{ slug: string; name: string }>;
+  readingTime: number;
 };
 
 export default function BlogClient({ locale, posts }: { locale: AppLocale; posts: Post[] }) {
   const b = getDictionary(locale).blog;
   const [page, setPage] = useState(0);
+  const [activeCat, setActiveCat] = useState<string>('all');
 
-  const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE);
-  const visible = posts.slice(page * POSTS_PER_PAGE, (page + 1) * POSTS_PER_PAGE);
+  // Build sorted category list from posts (by frequency)
+  const categories = useMemo(() => {
+    const freq = new Map<string, { name: string; count: number }>();
+    for (const p of posts) {
+      for (const c of p.categories ?? []) {
+        const prev = freq.get(c.slug);
+        freq.set(c.slug, { name: c.name, count: (prev?.count ?? 0) + 1 });
+      }
+    }
+    return Array.from(freq.entries())
+      .map(([slug, { name, count }]) => ({ slug, name, count }))
+      .sort((a, b) => b.count - a.count);
+  }, [posts]);
+
+  // Filter posts by selected category
+  const filtered = useMemo(() => {
+    if (activeCat === 'all') return posts;
+    return posts.filter((p) => (p.categories ?? []).some((c) => c.slug === activeCat));
+  }, [posts, activeCat]);
+
+  const totalPages = Math.ceil(filtered.length / POSTS_PER_PAGE);
+  const visible = filtered.slice(page * POSTS_PER_PAGE, (page + 1) * POSTS_PER_PAGE);
+
+  function handleCatClick(slug: string) {
+    setActiveCat(slug);
+    setPage(0);
+  }
 
   return (
     <div className="bg-background min-h-screen pt-40 pb-20 px-6">
@@ -40,6 +68,29 @@ export default function BlogClient({ locale, posts }: { locale: AppLocale; posts
         <p className="text-text-secondary text-center py-20">{b.no_posts}</p>
       ) : (
         <>
+          {/* Category filter bar */}
+          {categories.length > 0 && (
+            <div className="container mx-auto max-w-6xl mb-8">
+              <div className="gt-category-filter" id="gt-cat-filter">
+                <button
+                  className={activeCat === 'all' ? 'active' : ''}
+                  onClick={() => handleCatClick('all')}
+                >
+                  Tutti
+                </button>
+                {categories.map((cat) => (
+                  <button
+                    key={cat.slug}
+                    className={activeCat === cat.slug ? 'active' : ''}
+                    onClick={() => handleCatClick(cat.slug)}
+                  >
+                    {cat.name}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+
           <section className="container mx-auto max-w-6xl">
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {visible.map((post) => {
@@ -47,7 +98,7 @@ export default function BlogClient({ locale, posts }: { locale: AppLocale; posts
                   day: 'numeric', month: 'long', year: 'numeric',
                 });
                 return (
-                  <article key={post.id} className="group flex flex-col">
+                  <article key={post.id} id={`post-${post.id}`} className="group flex flex-col">
                     <Link href={post.url} className="flex flex-col h-full">
                       <div className="flex flex-col h-full bg-surface border border-border rounded-2xl overflow-hidden hover:border-primary/40 hover:shadow-md transition-all">
                         {post.image && (
@@ -62,7 +113,14 @@ export default function BlogClient({ locale, posts }: { locale: AppLocale; posts
                           </div>
                         )}
                         <div className="flex flex-col flex-1 p-6">
-                          <span className="text-text-muted text-xs font-mono mb-3 block">{date}</span>
+                          <div className="flex items-center gap-3 mb-3">
+                            <span className="text-text-muted text-xs font-mono">{date}</span>
+                            {post.readingTime > 0 && (
+                              <span className="card-reading-time">
+                                &#9201; {post.readingTime} min
+                              </span>
+                            )}
+                          </div>
                           <h2 className="text-lg font-display font-bold text-text-primary mb-3 group-hover:text-primary transition-colors leading-snug flex-1">
                             {post.title}
                           </h2>

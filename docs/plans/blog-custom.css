@@ -124,3 +124,13 @@ footer.bg-white.border-t {
 [class*="geotapp-ad-banner"] {
   display: none !important;
 }
+
+/* --- Hide cookie consent bar (inline-styled, no class) --- */
+[role="dialog"][aria-label="Utilizziamo i cookie"] {
+  display: none !important;
+}
+
+/* --- Hide newsletter popup modal (inline-styled, no class) --- */
+[role="dialog"][aria-modal="true"][aria-labelledby="nl-modal-title"] {
+  display: none !important;
+}

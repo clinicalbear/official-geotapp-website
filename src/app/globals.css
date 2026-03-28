@@ -352,3 +352,42 @@ a:hover {
 .bg-brand-blue    { background-color: #3BAEE0; }
 .text-brand-green { color: #52C065; }
 .bg-brand-green   { background-color: #52C065; }
+
+/* ===== BLOG — CATEGORY FILTER BAR ===== */
+.gt-category-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+.gt-category-filter button {
+  padding: 0.35rem 1rem;
+  border-radius: 999px;
+  border: 2px solid #e2e8f0;
+  background: white;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #475569;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.gt-category-filter button:hover {
+  border-color: #3BAEE0;
+  color: #3BAEE0;
+}
+.gt-category-filter button.active {
+  border-color: #3BAEE0;
+  background: #3BAEE0;
+  color: white;
+}
+
+/* ===== BLOG — READING TIME BADGE ===== */
+.card-reading-time {
+  font-size: 0.72rem;
+  color: #94a3b8;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-variant-numeric: tabular-nums;
+}

@@ -45,9 +45,9 @@ function isLocalePost(link: string, locale: string): boolean {
   }
 }
 
-async function fetchAllPosts(): Promise<{ id: number; slug: string; title: any; excerpt: any; date: string; link: string; featured_media: number }[]> {
+async function fetchAllPosts(): Promise<{ id: number; slug: string; title: any; excerpt: any; date: string; link: string; featured_media: number; categories: number[]; content?: any }[]> {
   const first = await wpFetch(
-    `${WP}/wp-json/wp/v2/posts/?per_page=100&page=1&_fields=id,slug,title,excerpt,date,link,featured_media&status=publish`,
+    `${WP}/wp-json/wp/v2/posts/?per_page=100&page=1&_fields=id,slug,title,excerpt,content,date,link,featured_media,categories&status=publish`,
   );
   if (!first.ok) return [];
   const totalPages = parseInt(first.headers.get('x-wp-totalpages') ?? '1', 10);
@@ -56,7 +56,7 @@ async function fetchAllPosts(): Promise<{ id: number; slug: string; title: any; 
   const rest = totalPages > 1
     ? await Promise.all(
         Array.from({ length: totalPages - 1 }, (_, i) =>
-          wpFetch(`${WP}/wp-json/wp/v2/posts/?per_page=100&page=${i + 2}&_fields=id,slug,title,excerpt,date,link,featured_media&status=publish`)
+          wpFetch(`${WP}/wp-json/wp/v2/posts/?per_page=100&page=${i + 2}&_fields=id,slug,title,excerpt,content,date,link,featured_media,categories&status=publish`)
             .then((r) => r.ok ? r.json() : [])
             .catch(() => [])
         )
@@ -64,6 +64,30 @@ async function fetchAllPosts(): Promise<{ id: number; slug: string; title: any; 
     : [];
 
   return [firstData, ...rest].flat().filter(Boolean);
+}
+
+async function fetchCategoryMap(locale: string): Promise<Map<number, { slug: string; name: string }>> {
+  try {
+    const r = await wpFetch(`${WP}/wp-json/wp/v2/categories?per_page=100&hide_empty=true&_fields=id,slug,name,count`);
+    if (!r.ok) return new Map();
+    const data: Array<{ id: number; slug: string; name: string; count: number }> = await r.json();
+    // Keep only categories relevant to the current locale:
+    // IT → slugs without a language suffix (e.g. "gestione-presenze")
+    // Other locales → slugs ending in "-{locale}" (e.g. "gestione-presenze-en")
+    const OTHER_LANGS = ['en','de','fr','es','pt','da','sv','nb','nl','ru'];
+    const map = new Map<number, { slug: string; name: string }>();
+    for (const cat of data) {
+      const hasLangSuffix = OTHER_LANGS.some((l) => cat.slug.endsWith(`-${l}`));
+      if (locale === 'it') {
+        if (!hasLangSuffix) map.set(cat.id, { slug: cat.slug, name: cat.name });
+      } else {
+        if (cat.slug.endsWith(`-${locale}`)) map.set(cat.id, { slug: cat.slug, name: cat.name });
+      }
+    }
+    return map;
+  } catch {
+    return new Map();
+  }
 }
 
 async function fetchMediaMap(ids: number[]): Promise<Map<number, string>> {
@@ -93,20 +117,34 @@ async function fetchMediaMap(ids: number[]): Promise<Map<number, string>> {
 
 async function fetchPosts(locale: string): Promise<Post[]> {
   try {
-    const all = await fetchAllPosts();
+    const [all, catMap] = await Promise.all([fetchAllPosts(), fetchCategoryMap(locale)]);
     const filtered = all.filter((p) => isLocalePost(p.link ?? '', locale));
     const mediaIds = [...new Set(filtered.map((p) => p.featured_media).filter((id) => id > 0))];
     const mediaMap = await fetchMediaMap(mediaIds);
 
-    return filtered.map((p) => ({
-      id: p.id,
-      slug: p.slug,
-      title: stripHtml(p.title?.rendered ?? ''),
-      excerpt: stripHtml(p.excerpt?.rendered ?? '').slice(0, 160),
-      date: p.date,
-      url: normalizeUrl(p.link, p.slug),
-      image: mediaMap.get(p.featured_media) ?? null,
-    }));
+    return filtered.map((p) => {
+      // Reading time: word count of full post content ÷ 200 wpm
+      const contentText = stripHtml(p.content?.rendered ?? '');
+      const wordCount = contentText.trim() ? contentText.trim().split(/\s+/).length : 0;
+      const readingTime = Math.max(1, Math.ceil(wordCount / 200));
+
+      // Map category IDs → slugs for the current locale
+      const cats = (p.categories ?? [])
+        .map((id: number) => catMap.get(id))
+        .filter(Boolean) as Array<{ slug: string; name: string }>;
+
+      return {
+        id: p.id,
+        slug: p.slug,
+        title: stripHtml(p.title?.rendered ?? ''),
+        excerpt: stripHtml(p.excerpt?.rendered ?? '').slice(0, 160),
+        date: p.date,
+        url: normalizeUrl(p.link, p.slug),
+        image: mediaMap.get(p.featured_media) ?? null,
+        categories: cats,
+        readingTime,
+      };
+    });
   } catch {
     return [];
   }
