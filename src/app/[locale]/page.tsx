@@ -69,47 +69,47 @@ const BASE_URL = 'https://geotapp.com';
 // this is the SEO anchor keyword for all locale variants.
 const LOCALE_META: Record<string, { title: string; description: string }> = {
   it: {
-    title: 'Cliente contesta? Prova interventi o perdi il pagamento',
-    description: 'Cliente contesta? GeoTapp registra GPS, ora, foto e report non alterabile. Dimostri il lavoro svolto e incassi senza discussioni.',
+    title: 'Cliente contesta? Prova interventi | App timbratura GPS operai',
+    description: 'Cliente contesta? GeoTapp registra GPS, ora, foto e report non alterabile per ogni intervento. Prova il lavoro svolto, incassa senza discussioni. GDPR compliant.',
   },
   en: {
-    title: 'Client disputes? Prove jobs or lose the payment',
-    description: 'Client disputes your work? GeoTapp logs GPS, time, photos and a tamper-proof report. Prove what was done and get paid without arguments.',
+    title: 'Client disputes? Prove jobs | GPS Field Service Software',
+    description: 'Client disputes your work? GeoTapp logs GPS, time, photos and a tamper-proof report for every job. Prove what was done and get paid without arguments. GDPR compliant.',
   },
   de: {
-    title: 'Kunde bestreitet? Einsaetze belegen oder Zahlung verlieren',
+    title: 'Kunde bestreitet? Einsätze belegen | GPS-Software Außendienst',
     description: 'Kunde bestreitet den Einsatz? GeoTapp erfasst GPS, Uhrzeit, Fotos und manipulationssichere Berichte. Arbeit belegen und ohne Diskussion bezahlt werden.',
   },
   fr: {
-    title: 'Client conteste ? Prouvez le travail ou perdez le paiement',
+    title: 'Client conteste ? Prouvez le travail | Logiciel GPS terrain',
     description: 'Client conteste ? GeoTapp enregistre GPS, heure, photos et rapport non modifiable. Prouvez le travail effectué et soyez payé sans discussion.',
   },
   es: {
-    title: '¿Cliente reclama? Prueba el trabajo o pierde el pago',
+    title: '¿Cliente reclama? Prueba el trabajo | Software GPS operarios',
     description: '¿Cliente reclama? GeoTapp registra GPS, hora, fotos e informe no alterable. Demuestra el trabajo hecho y cobra sin discusiones.',
   },
   pt: {
-    title: 'Cliente contesta? Prove o serviço ou perca o pagamento',
+    title: 'Cliente contesta? Prove o serviço | Software GPS campo',
     description: 'Cliente contesta? GeoTapp registra GPS, hora, fotos e relatório não alterável. Prove o serviço feito e receba sem discussões.',
   },
   nl: {
-    title: 'Klant betwist? Bewijs werk of mis de betaling',
+    title: 'Klant betwist? Bewijs werk | GPS-software buitendienst',
     description: 'Betwist de klant je werk? GeoTapp registreert GPS, tijd, foto\'s en een niet-wijzigbaar rapport. Bewijs wat gedaan is en word betaald zonder discussie.',
   },
   ru: {
-    title: 'Клиент оспаривает? Докажите работы или теряете оплату',
+    title: 'Клиент оспаривает? Докажите работы | GPS-программа выезда',
     description: 'Клиент оспаривает работу? GeoTapp фиксирует GPS, время, фото и неизменяемый отчёт. Докажите выполненное и получите оплату без споров.',
   },
   da: {
-    title: 'Kunde bestrider? Bevis arbejdet eller mist betalingen',
+    title: 'Kunde bestrider? Bevis arbejdet | GPS-software feltservice',
     description: 'Kunden bestrider arbejdet? GeoTapp registrerer GPS, tid, fotos og en ikke-redigerbar rapport. Bevis opgaven og få betaling uden diskussion.',
   },
   sv: {
-    title: 'Kund ifrågasätter? Bevisa jobbet eller förlora betalning',
+    title: 'Kund ifrågasätter? Bevisa jobbet | GPS-mjukvara fältservice',
     description: 'Kunden ifrågasätter jobbet? GeoTapp loggar GPS, tid, foton och en ej ändringsbar rapport. Bevisa arbetet och få betalt utan diskussion.',
   },
   nb: {
-    title: 'Kunden bestrider? Bevis jobben eller mist betalingen',
+    title: 'Kunden bestrider? Bevis jobben | GPS-programvare feltservice',
     description: 'Kunden bestrider jobben? GeoTapp registrerer GPS, tid, bilder og en ikke-endringsbar rapport. Bevis arbeidet og få betalt uten diskusjon.',
   },
 };
