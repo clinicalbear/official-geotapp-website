@@ -53,6 +53,7 @@ const MockupFlow = ({ m }: { m: { pipeline_title: string; month: string; quote_n
   </div>
 );
 
+import { useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import {
@@ -73,6 +74,20 @@ export default function Home() {
   const getLink = (path: string) => localizePath(path, currentLocale);
   // Localized link helper prevents accidental fallback to default-language paths.
   // Landing composition below intentionally alternates narrative and proof blocks.
+
+  useEffect(() => {
+    const bar = document.getElementById('sticky-mobile-cta');
+    if (!bar) return;
+    const targets = document.querySelectorAll('section.py-24');
+    if (!targets.length) return;
+    const lastTarget = targets[targets.length - 1];
+    const observer = new IntersectionObserver(
+      ([entry]) => { bar.style.display = entry.isIntersecting ? 'none' : ''; },
+      { threshold: 0.3 }
+    );
+    observer.observe(lastTarget);
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <div className="bg-background min-h-screen text-text-primary overflow-hidden">
@@ -634,6 +649,19 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* STICKY MOBILE CTA */}
+      <div
+        id="sticky-mobile-cta"
+        className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-white/95 backdrop-blur-sm border-t border-slate-200 px-4 py-3 shadow-2xl"
+      >
+        <Link
+          href={getLink('/demo')}
+          className="block w-full text-center py-3 bg-primary text-white font-bold rounded-xl text-base"
+        >
+          {dict.landing.hero_cta_primary}
+        </Link>
+      </div>
     </div>
   );
 }
