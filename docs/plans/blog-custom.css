@@ -1,0 +1,126 @@
+/* ===================================================
+   GeoTapp Blog — Custom Design Refresh 2026-03-28
+   GeoTappTemplate-child / custom.css
+   =================================================== */
+
+/* --- CSS Variables (logo colors) --- */
+:root {
+  --gt-primary:     #8FC436;
+  --gt-brand-green: #52C065;
+  --gt-brand-blue:  #3BAEE0;
+  --gt-flow:        #059669;
+  --gt-amber:       #d97706;
+  --gt-indigo:      #6366f1;
+}
+
+/* --- BLOG GRID: 3 columns on lg desktop --- */
+@media (min-width: 1024px) {
+  .grid.grid-cols-1.md\:grid-cols-2 {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 1.5rem !important;
+  }
+}
+
+/* --- ARTICLE CARDS --- */
+article.group {
+  border-radius: 1rem !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06) !important;
+  transition: box-shadow 0.3s ease, transform 0.3s ease !important;
+}
+article.group:hover {
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Card cover: uniform 56% aspect ratio */
+article.group .relative.h-48 {
+  height: 0 !important;
+  padding-bottom: 56% !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+article.group .relative.h-48 a,
+article.group .relative.h-48 img {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+article.group .relative.h-48 img {
+  object-fit: cover !important;
+}
+
+/* Card title */
+article.group h2.text-xl {
+  font-size: 1.05rem !important;
+  line-height: 1.4 !important;
+  font-weight: 700 !important;
+}
+
+/* Reading time + date line */
+.card-reading-time {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 0.5rem;
+}
+
+/* --- CATEGORY FILTER BAR --- */
+.gt-category-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+.gt-category-filter button {
+  padding: 0.35rem 1rem;
+  border-radius: 999px;
+  border: 2px solid #e2e8f0;
+  background: white;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #475569;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.gt-category-filter button:hover {
+  border-color: var(--gt-brand-blue);
+  color: var(--gt-brand-blue);
+}
+.gt-category-filter button.active {
+  border-color: var(--gt-brand-blue);
+  background: var(--gt-brand-blue);
+  color: white;
+}
+
+/* --- BLOG PAGE TITLE gradient --- */
+h1.bg-clip-text {
+  background: linear-gradient(135deg, #0f172a 0%, var(--gt-brand-blue) 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+/* --- BODY TEXT in single post --- */
+.entry-content p,
+.entry-content li {
+  font-size: 1.0625rem !important;
+  line-height: 1.85 !important;
+}
+
+/* --- FOOTER: clean up + align with homepage --- */
+footer.bg-white.border-t {
+  background: #f8fafc !important;
+}
+
+/* --- REMOVE mid-page fullwidth banner --- */
+.geotapp-banner-fullwidth,
+.wp-block-geotapp-banner,
+[class*="geotapp-ad-banner"] {
+  display: none !important;
+}
