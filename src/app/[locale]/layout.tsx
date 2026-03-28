@@ -296,7 +296,6 @@ export default async function LocaleLayout({ children, params }: Props) {
                 'https://www.linkedin.com/company/110850300/',
                 'https://www.facebook.com/profile.php?id=61583303732388',
                 'https://www.instagram.com/geotapp_official/',
-                'https://x.com/MPetraroli39547',
               ],
               address: {
                 '@type': 'PostalAddress',
