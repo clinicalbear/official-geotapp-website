@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import { getDictionary } from '@/lib/i18n/dictionaries';
-import { SUPPORTED_LOCALES, LOCALE_LABELS } from '@/lib/i18n/config';
 import {
   DEFAULT_LOCALE,
   getLocaleFromPathname,
@@ -20,60 +19,43 @@ export default function Footer() {
 
   return (
     <footer className="bg-surface border-t border-border pt-12 mt-20">
-      {/* Newsletter section */}
+      {/* Newsletter */}
       <div className="container mx-auto px-6 pb-10 mb-10 border-b border-border/40">
         <div style={{ maxWidth: '480px', margin: '0 auto' }}>
           <NewsletterForm locale={currentLocale} />
         </div>
       </div>
 
-      <div className="container mx-auto px-6 pb-12 text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-8">
-        <div>
-          <div className="mb-2 flex justify-center md:justify-start">
+      {/* 3-column layout */}
+      <div className="container mx-auto px-6 pb-12">
+        <div className="flex flex-col md:flex-row justify-between items-start gap-10">
+          {/* Logo + tagline */}
+          <div className="flex-shrink-0">
             <Image
               src="/LogoGeoTapp.webp"
-              alt="GeoTapp - La piattaforma che rende il lavoro verificabile"
-              width={220}
-              height={96}
-              className="h-auto w-[280px] max-w-none"
+              alt="GeoTapp"
+              width={160}
+              height={70}
+              className="h-auto w-[160px] mb-3"
             />
+            <p className="text-text-muted text-sm max-w-[220px]">{dict.tagline}</p>
           </div>
-          <p className="text-text-muted text-sm">{dict.tagline}</p>
+
+          {/* Nav links */}
+          <div className="flex gap-8 text-sm text-text-secondary flex-wrap">
+            <Link href={getLink('/privacy')} className="hover:text-text-primary transition-colors">{dict.privacy}</Link>
+            <Link href={getLink('/terms')} className="hover:text-text-primary transition-colors">{dict.terms}</Link>
+            <Link href={getLink('/blog')} className="hover:text-text-primary transition-colors">Blog</Link>
+            <Link href={getLink('/settori')} className="hover:text-text-primary transition-colors">Settori</Link>
+            <Link href={getLink('/contact')} className="hover:text-text-primary transition-colors">Contatti</Link>
+          </div>
+
+          {/* Copyright */}
+          <div className="text-text-muted text-xs text-right shrink-0">
+            <div className="mb-1">&copy; 2026 GeoTapp.</div>
+            <div>{dict.rights}</div>
+          </div>
         </div>
-        <div className="flex gap-8 text-sm text-text-secondary">
-          <Link
-            href={getLink('/privacy')}
-            className="hover:text-white transition-colors"
-          >
-            {dict.privacy}
-          </Link>
-          <Link
-            href={getLink('/terms')}
-            className="hover:text-white transition-colors"
-          >
-            {dict.terms}
-          </Link>
-          <Link
-            href={getLink('/blog')}
-            className="hover:text-white transition-colors"
-          >
-            Blog
-          </Link>
-        </div>
-        <div className="text-text-muted text-xs">
-          &copy; 2026 GeoTapp. {dict.rights}
-        </div>
-      </div>
-      <div className="container mx-auto px-6 pt-6 border-t border-border/40 flex flex-wrap justify-center gap-x-4 gap-y-1">
-        {SUPPORTED_LOCALES.map((locale) => (
-          <a
-            key={locale}
-            href={`/${locale}/`}
-            className="text-text-muted text-xs hover:text-white transition-colors"
-          >
-            {LOCALE_LABELS[locale]}
-          </a>
-        ))}
       </div>
     </footer>
   );
