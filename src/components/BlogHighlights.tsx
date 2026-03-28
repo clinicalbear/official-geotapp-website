@@ -97,22 +97,37 @@ export default async function BlogHighlights({ locale, categoryId, className = '
   const readMore = READ_MORE_LABELS[locale] ?? READ_MORE_LABELS['en'];
 
   return (
-    <section className={`py-12 border-t border-slate-100 ${className}`}>
-      <div className="max-w-5xl mx-auto px-4 sm:px-6">
-        <h2 className="text-xl font-semibold text-slate-700 mb-6">{label}</h2>
+    <section className={`py-20 border-t border-slate-100 ${className}`}>
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="flex items-center justify-between mb-10">
+          <div>
+            <span className="text-primary font-bold uppercase tracking-widest text-sm block mb-2">{label}</span>
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900">Risorse utili per il tuo settore</h2>
+          </div>
+          <Link
+            href={`/${locale}/blog/`}
+            className="hidden md:flex items-center gap-2 text-slate-500 hover:text-slate-900 font-semibold text-sm transition-colors"
+          >
+            {readMore} tutti
+          </Link>
+        </div>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
           {posts.map((post) => (
             <Link
               key={post.id}
               href={post.url}
-              className="group block rounded-xl border border-slate-100 bg-white p-5 shadow-sm hover:shadow-md hover:border-slate-200 transition-all"
+              className="group flex flex-col rounded-2xl border border-slate-200 bg-white p-7 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
             >
-              <p className="text-xs text-slate-400 mb-2">{new Date(post.date).toLocaleDateString(locale)}</p>
-              <h3 className="text-sm font-semibold text-slate-800 group-hover:text-blue-600 transition-colors line-clamp-2 mb-2">
+              <p className="text-sm text-slate-400 mb-3 font-medium">
+                {new Date(post.date).toLocaleDateString(locale, { day: 'numeric', month: 'long', year: 'numeric' })}
+              </p>
+              <h3 className="text-lg font-bold text-slate-900 group-hover:text-primary transition-colors line-clamp-2 mb-3 leading-snug">
                 {post.title}
               </h3>
-              <p className="text-xs text-slate-500 line-clamp-3 mb-3">{post.excerpt}</p>
-              <span className="text-xs font-medium text-blue-600">{readMore}</span>
+              <p className="text-sm text-slate-500 line-clamp-3 mb-5 leading-relaxed flex-grow">{post.excerpt}</p>
+              <span className="text-sm font-bold text-primary flex items-center gap-1 group-hover:gap-2 transition-all">
+                {readMore}
+              </span>
             </Link>
           ))}
         </div>
