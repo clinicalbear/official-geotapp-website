@@ -341,3 +341,14 @@ a:hover {
 .h-10 {
   height: 4.5rem;
 }
+
+/* ===== SECTION SPACING UTILITIES ===== */
+.section-sm  { padding-top: 4rem;  padding-bottom: 4rem;  }
+.section-md  { padding-top: 6rem;  padding-bottom: 6rem;  }
+.section-lg  { padding-top: 8rem;  padding-bottom: 8rem;  }
+
+/* ===== BRAND COLOR UTILITIES ===== */
+.text-brand-blue  { color: #3BAEE0; }
+.bg-brand-blue    { background-color: #3BAEE0; }
+.text-brand-green { color: #52C065; }
+.bg-brand-green   { background-color: #52C065; }

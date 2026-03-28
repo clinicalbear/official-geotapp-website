@@ -20,6 +20,8 @@ const config: Config = {
           DEFAULT: '#8FC436', // GeoTapp Green
           glow: 'rgba(143, 196, 54, 0.2)', // Lighter glow
         },
+        'brand-green': '#52C065', // Logo icon green (gradient top of G)
+        'brand-blue': '#3BAEE0',  // Logo text blue ("GeoTapp")
         flow: {
           DEFAULT: '#059669', // Emerald-600
           glow: 'rgba(5, 150, 105, 0.2)',
