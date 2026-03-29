@@ -425,16 +425,27 @@ export default function GeoTappApp() {
             viewport={{ once: true }}
             className="relative mx-auto mt-16 max-w-6xl"
           >
-            {/* Visual Placeholder for Dashboard */}
-            <div className="relative bg-slate-50 rounded-2xl shadow-2xl border border-slate-200 aspect-[16/9] flex items-center justify-center overflow-hidden">
-              <div className="text-center z-10">
-                <Smartphone
-                  size={80}
-                  className="text-blue-500 mx-auto mb-6 opacity-50"
+            {/* TimeTracker app screenshots — side by side, cropped to 16/9 */}
+            <div className="relative rounded-2xl shadow-2xl border border-slate-200 aspect-[16/9] overflow-hidden flex">
+              <div className="relative w-1/2 h-full">
+                <Image
+                  src="/TT1.webp"
+                  alt="GeoTapp TimeTracker — Dashboard"
+                  fill
+                  className="object-cover object-top"
+                  sizes="50vw"
+                  priority
                 />
-                <div className="text-slate-300 font-mono text-3xl font-bold tracking-widest">
-                  {appDict.visual_placeholder}
-                </div>
+              </div>
+              <div className="relative w-1/2 h-full border-l border-slate-200">
+                <Image
+                  src="/TT2.webp"
+                  alt="GeoTapp TimeTracker — Menu"
+                  fill
+                  className="object-cover object-top"
+                  sizes="50vw"
+                  priority
+                />
               </div>
             </div>
           </motion.div>
