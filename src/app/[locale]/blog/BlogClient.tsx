@@ -121,10 +121,14 @@ export default function BlogClient({ locale, posts }: { locale: AppLocale; posts
                   day: 'numeric', month: 'long', year: 'numeric',
                 });
                 return (
-                  <article key={post.id} id={`post-${post.id}`} className="group flex flex-col">
+                  <article
+                    key={post.id}
+                    id={`post-${post.id}`}
+                    className="group flex flex-col"
+                    style={{ '--cat-shadow': getCategoryColor(post.categories ?? []) } as React.CSSProperties}
+                  >
                     <Link href={post.url} className="flex flex-col h-full">
-                      <div className="flex flex-col h-full bg-surface border border-border rounded-2xl overflow-hidden hover:border-primary/40 hover:shadow-md transition-all">
-                        {/* Card cover with category color overlay */}
+                      <div className="cat-card flex flex-col h-full bg-surface border border-border rounded-2xl overflow-hidden transition-all duration-300">
                         {post.image && (
                           <div className="relative w-full h-44 shrink-0 overflow-hidden">
                             <Image
@@ -133,10 +137,6 @@ export default function BlogClient({ locale, posts }: { locale: AppLocale; posts
                               fill
                               className="object-cover"
                               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                            />
-                            <div
-                              className="absolute inset-0 mix-blend-multiply"
-                              style={{ backgroundColor: getCategoryColor(post.categories ?? []) }}
                             />
                           </div>
                         )}

@@ -382,6 +382,15 @@ a:hover {
   color: white;
 }
 
+/* ===== BLOG — CARD CATEGORY SHADOW ===== */
+.cat-card {
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.group:hover .cat-card {
+  box-shadow: 0 8px 32px var(--cat-shadow, rgba(143,196,54,0.3));
+  border-color: transparent;
+}
+
 /* ===== BLOG — READING TIME BADGE ===== */
 .card-reading-time {
   font-size: 0.72rem;
