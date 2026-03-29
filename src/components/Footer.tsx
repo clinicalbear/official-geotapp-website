@@ -40,8 +40,8 @@ export default function Footer() {
       </div>
 
       {/* 3-column layout */}
-      <div className="container mx-auto px-6 pb-12">
-        <div className="flex flex-col md:flex-row justify-between items-start gap-10">
+      <div className="container mx-auto px-6 py-12">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-10">
           {/* Logo + tagline */}
           <div className="flex-shrink-0">
             <Image
