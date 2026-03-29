@@ -80,7 +80,7 @@ export default function Navbar() {
     },
     {
       name: 'GeoTapp TimeTracker',
-      href: getLink('/products/geotapp-app'),
+      href: getLink('/products/geotapp-timetracker'),
       icon: Smartphone,
       color: 'text-app',
       desc: dict.product_app_desc,

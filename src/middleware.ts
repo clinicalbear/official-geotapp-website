@@ -189,7 +189,7 @@ type SitemapRouteEntry = { path: string; priority: number; changeFrequency: stri
 const SITEMAP_ROUTES: SitemapRouteEntry[] = [
   { path: '/', priority: 1.0, changeFrequency: 'weekly' },
   { path: '/products/geotapp-flow/', priority: 0.95, changeFrequency: 'weekly' },
-  { path: '/products/geotapp-app/', priority: 0.95, changeFrequency: 'weekly' },
+  { path: '/products/geotapp-timetracker/', priority: 0.95, changeFrequency: 'weekly' },
   { path: '/products/geotapp-verifier/', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/pricing/', priority: 0.9, changeFrequency: 'weekly' },
   { path: '/pricing/bundle/', priority: 0.85, changeFrequency: 'weekly' },

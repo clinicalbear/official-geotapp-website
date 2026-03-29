@@ -7,7 +7,6 @@ const SLUG_TRANSLATIONS = {
   'pricing':   { de: 'preise', fr: 'tarifs', es: 'precios', pt: 'precos', nl: 'prijzen', da: 'priser', sv: 'priser', nb: 'priser', ru: 'ceny' },
   'features':  { de: 'funktionen', fr: 'fonctionnalites', es: 'caracteristicas', pt: 'funcionalidades', nl: 'functies', da: 'funktioner', sv: 'funktioner', nb: 'funksjoner', ru: 'vozmozhnosti' },
   'products':  { de: 'produkte', fr: 'produits', es: 'productos', pt: 'produtos', nl: 'producten', da: 'produkter', sv: 'produkter', nb: 'produkter', ru: 'produkty' },
-  'download':  { de: 'herunterladen', fr: 'telecharger', es: 'descargar', nl: 'downloaden', da: 'hent', sv: 'ladda-ned', nb: 'last-ned', ru: 'skachat' },
 };
 
 function buildRewrites() {
@@ -56,7 +55,17 @@ const nextConfig = {
     return buildRewrites();
   },
   async redirects() {
-    return buildRedirects();
+    const localeRedirects = buildRedirects();
+    // Permanent redirect: old geotapp-app slug → geotapp-timetracker (all locales)
+    const appRenames = [
+      { source: '/products/geotapp-app/', destination: '/products/geotapp-timetracker/', permanent: true },
+      { source: '/products/geotapp-app/:path*/', destination: '/products/geotapp-timetracker/:path*/', permanent: true },
+      ...['it','en','de','fr','es','pt','nl','da','sv','nb','ru'].flatMap((l) => [
+        { source: `/${l}/products/geotapp-app/`, destination: `/${l}/products/geotapp-timetracker/`, permanent: true },
+        { source: `/${l}/products/geotapp-app/:path*/`, destination: `/${l}/products/geotapp-timetracker/:path*/`, permanent: true },
+      ]),
+    ];
+    return [...localeRedirects, ...appRenames];
   },
   async headers() {
     return [

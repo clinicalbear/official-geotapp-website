@@ -49,7 +49,7 @@ const ROUTES: RouteEntry[] = [
 
   // Prodotti (money pages — alta priorità)
   { path: '/products/geotapp-flow/', priority: 0.95, changeFrequency: 'weekly' },
-  { path: '/products/geotapp-app/', priority: 0.95, changeFrequency: 'weekly' },
+  { path: '/products/geotapp-timetracker/', priority: 0.95, changeFrequency: 'weekly' },
   { path: '/products/geotapp-verifier/', priority: 0.8, changeFrequency: 'monthly' },
 
   // Pricing (pagine di conversione — priorità alta)

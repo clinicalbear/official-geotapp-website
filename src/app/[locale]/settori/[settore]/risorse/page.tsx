@@ -28,7 +28,7 @@ const SETTORE_CONFIG: Record<string, {
   sections: Record<string, Array<{ h2: string; body: string; listItems?: string[]; productLink?: boolean }>>;
   product: {
     name: string;
-    slug: 'geotapp-app' | 'geotapp-flow' | 'geotapp-verifier';
+    slug: 'geotapp-timetracker' | 'geotapp-flow' | 'geotapp-verifier';
     ctaLabel: Record<string, { discover: string; cta: string }>;
   };
 }> = {
@@ -108,7 +108,7 @@ const SETTORE_CONFIG: Record<string, {
     },
     product: {
       name: 'GeoTapp TimeTracker',
-      slug: 'geotapp-app',
+      slug: 'geotapp-timetracker',
       ctaLabel: CTA_LABELS,
     },
   },
@@ -268,7 +268,7 @@ const SETTORE_CONFIG: Record<string, {
     },
     product: {
       name: 'GeoTapp TimeTracker',
-      slug: 'geotapp-app',
+      slug: 'geotapp-timetracker',
       ctaLabel: CTA_LABELS,
     },
   },

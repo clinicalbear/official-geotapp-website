@@ -497,7 +497,7 @@ export default function Home() {
                 </div>
               </div>
               <Link
-                href={getLink('/products/geotapp-app')}
+                href={getLink('/products/geotapp-timetracker')}
                 className="text-app font-bold hover:underline flex items-center gap-2"
               >
                 {dict.home_sections.app.link} <ArrowRight size={18} />

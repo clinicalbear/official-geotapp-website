@@ -504,7 +504,7 @@ console.log(result.integrityLevel);`}
           <div className="grid md:grid-cols-3 gap-6 mt-12">
             {/* TimeTracker */}
             <Link
-              href={getLink('/products/geotapp-app')}
+              href={getLink('/products/geotapp-timetracker')}
               className="group rounded-2xl border border-slate-200 bg-slate-50 p-8 hover:border-blue-300 hover:shadow-lg transition-all"
             >
               <div className="mb-4 inline-flex rounded-xl bg-blue-50 p-3 text-blue-600">
@@ -621,7 +621,7 @@ console.log(result.integrityLevel);`}
               <Database size={20} /> {copy.cta_flow}
             </Link>
             <Link
-              href={getLink('/products/geotapp-app')}
+              href={getLink('/products/geotapp-timetracker')}
               className="px-8 py-5 bg-white/10 text-white border border-white/20 font-bold rounded-xl text-lg hover:bg-white/20 transition-all flex items-center gap-2 justify-center"
             >
               <Smartphone size={20} /> {copy.cta_timetracker}
