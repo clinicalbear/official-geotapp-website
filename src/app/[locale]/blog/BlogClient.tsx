@@ -13,25 +13,25 @@ const POSTS_PER_PAGE = 12;
 // Verifier    → verde (#22C55E)
 const CATEGORY_COLORS: Record<string, string> = {
   // TimeTracker
-  'gps':               'rgba(249,115,22,0.50)',
-  'tracking':          'rgba(249,115,22,0.50)',
-  'geolocalizzazione': 'rgba(249,115,22,0.50)',
-  'timbrature':        'rgba(249,115,22,0.50)',
-  'presenze':          'rgba(249,115,22,0.50)',
-  'app':               'rgba(249,115,22,0.50)',
+  'gps':               'rgba(249,115,22,0.70)',
+  'tracking':          'rgba(249,115,22,0.70)',
+  'geolocalizzazione': 'rgba(249,115,22,0.70)',
+  'timbrature':        'rgba(249,115,22,0.70)',
+  'presenze':          'rgba(249,115,22,0.70)',
+  'app':               'rgba(249,115,22,0.70)',
   // Flow
-  'gestione':          'rgba(139,92,246,0.50)',
-  'operazioni':        'rgba(139,92,246,0.50)',
-  'business':          'rgba(139,92,246,0.50)',
-  'tecnologia':        'rgba(139,92,246,0.50)',
-  'software':          'rgba(139,92,246,0.50)',
+  'gestione':          'rgba(139,92,246,0.70)',
+  'operazioni':        'rgba(139,92,246,0.70)',
+  'business':          'rgba(139,92,246,0.70)',
+  'tecnologia':        'rgba(139,92,246,0.70)',
+  'software':          'rgba(139,92,246,0.70)',
   // Verifier
-  'sicurezza':         'rgba(34,197,94,0.50)',
-  'security':          'rgba(34,197,94,0.50)',
-  'verifica':          'rgba(34,197,94,0.50)',
-  'prove':             'rgba(34,197,94,0.50)',
+  'sicurezza':         'rgba(34,197,94,0.70)',
+  'security':          'rgba(34,197,94,0.70)',
+  'verifica':          'rgba(34,197,94,0.70)',
+  'prove':             'rgba(34,197,94,0.70)',
 };
-const DEFAULT_COLOR = 'rgba(143,196,54,0.50)';
+const DEFAULT_COLOR = 'rgba(143,196,54,0.70)';
 
 function getCategoryColor(categories: Array<{ slug: string; name: string }>): string {
   for (const cat of categories) {
