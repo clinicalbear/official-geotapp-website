@@ -212,47 +212,22 @@ export default function VerifierContent({ copy, locale }: VerifierContentProps) 
           transition={{ duration: 0.8, delay: 0.3 }}
           className="mt-20 max-w-3xl mx-auto"
         >
-          <div className="bg-slate-900 rounded-2xl p-8 shadow-2xl font-mono text-sm">
-            <div className="flex items-center gap-2 mb-6 pb-6 border-b border-slate-700">
+          <div className="bg-slate-900 rounded-2xl overflow-hidden shadow-2xl">
+            {/* Browser chrome */}
+            <div className="flex items-center gap-2 px-5 py-3 border-b border-slate-700">
               <div className="w-3 h-3 rounded-full bg-red-500"></div>
               <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
               <div className="w-3 h-3 rounded-full bg-green-500"></div>
-              <span className="ml-3 text-slate-400 text-xs tracking-widest uppercase">GeoTapp Verifier — Report Integrity Check</span>
+              <span className="ml-3 text-slate-400 text-xs tracking-widest uppercase">GeoTapp Verifier — Storico Commessa</span>
             </div>
-            <div className="grid md:grid-cols-2 gap-4">
-              <div className="space-y-3">
-                <div className="flex items-center gap-3">
-                  <CheckCircle2 size={16} className="text-emerald-400 shrink-0" />
-                  <span className="text-emerald-400 text-xs">{copy.terminal_integrity}</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <CheckCircle2 size={16} className="text-emerald-400 shrink-0" />
-                  <span className="text-emerald-400 text-xs">{copy.terminal_timestamps}</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <CheckCircle2 size={16} className="text-emerald-400 shrink-0" />
-                  <span className="text-emerald-400 text-xs">{copy.terminal_gps}</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <CheckCircle2 size={16} className="text-emerald-400 shrink-0" />
-                  <span className="text-emerald-400 text-xs">{copy.terminal_not_modified}</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <CheckCircle2 size={16} className="text-emerald-400 shrink-0" />
-                  <span className="text-emerald-400 text-xs">{copy.terminal_operator}</span>
-                </div>
-              </div>
-              <div className="bg-slate-800 rounded-xl p-4 text-xs text-slate-400 space-y-2">
-                <div className="text-slate-300 font-bold mb-3">{copy.terminal_summary_title}</div>
-                <div>Report ID: <span className="text-slate-200">RPT-2024-0847</span></div>
-                <div>{copy.terminal_technician_label} <span className="text-slate-200">M. Rossi</span></div>
-                <div>{copy.terminal_date_label} <span className="text-slate-200">14/03/2024</span></div>
-                <div>{copy.terminal_site_label} <span className="text-slate-200">Via Roma 45, Milano</span></div>
-                <div className="pt-2 border-t border-slate-700 text-emerald-400 font-bold">
-                  ✓ {copy.terminal_verified_line}
-                </div>
-              </div>
-            </div>
+            <Image
+              src="/verifier-report.webp"
+              alt="GeoTapp Verifier — report storico commessa con integrity check"
+              width={1280}
+              height={900}
+              className="w-full h-auto"
+              priority
+            />
           </div>
         </motion.div>
       </section>
