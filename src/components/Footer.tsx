@@ -55,7 +55,7 @@ export default function Footer() {
           </div>
 
           {/* Nav links */}
-          <div className="flex gap-8 text-sm text-text-secondary flex-wrap">
+          <div className="flex flex-col gap-3 text-sm text-text-secondary">
             <Link href={getLink('/privacy')} className="hover:text-text-primary transition-colors">{dict.privacy}</Link>
             <Link href={getLink('/terms')} className="hover:text-text-primary transition-colors">{dict.terms}</Link>
             <Link href={getLink('/blog')} className="hover:text-text-primary transition-colors">Blog</Link>
@@ -64,7 +64,7 @@ export default function Footer() {
           </div>
 
           {/* Copyright */}
-          <div className="text-text-muted text-xs text-right shrink-0">
+          <div className="text-text-muted text-xs md:text-right shrink-0">
             <div className="mb-1">&copy; 2026 GeoTapp.</div>
             <div>{dict.rights}</div>
           </div>
