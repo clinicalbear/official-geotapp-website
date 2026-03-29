@@ -8,13 +8,7 @@ import {
   Menu,
   X,
   ChevronDown,
-  Database,
-  Smartphone,
   ShoppingCart,
-  Hammer,
-  ShieldCheck,
-  Sparkles,
-  FileCheck2,
 } from 'lucide-react';
 import Image from 'next/image';
 import { clsx } from 'clsx';
@@ -74,22 +68,19 @@ export default function Navbar() {
     {
       name: 'GeoTapp Flow',
       href: getLink('/products/geotapp-flow'),
-      icon: Database,
-      color: 'text-flow',
+      iconSrc: '/iconaFlow.webp',
       desc: dict.product_flow_desc,
     },
     {
       name: 'GeoTapp TimeTracker',
       href: getLink('/products/geotapp-timetracker'),
-      icon: Smartphone,
-      color: 'text-app',
+      iconSrc: '/iconaTT.webp',
       desc: dict.product_app_desc,
     },
     {
       name: 'GeoTapp Verifier',
       href: getLink('/products/geotapp-verifier'),
-      icon: FileCheck2,
-      color: 'text-emerald-600',
+      iconSrc: '/iconaVerifier.webp',
       desc: dict.product_verifier_desc,
     },
   ];
@@ -152,13 +143,8 @@ export default function Navbar() {
                         href={p.href}
                         className="flex items-start gap-4 p-3 rounded-lg hover:bg-slate-50 transition-colors group/item"
                       >
-                        <div
-                          className={clsx(
-                            'p-2 rounded-md bg-slate-100 group-hover/item:bg-white transition-colors border border-transparent group-hover/item:border-slate-200 shadow-sm',
-                            p.color,
-                          )}
-                        >
-                          <p.icon size={20} />
+                        <div className="w-10 h-10 rounded-md bg-slate-50 border border-slate-200 flex items-center justify-center shadow-sm shrink-0 group-hover/item:bg-white transition-colors">
+                          <Image src={p.iconSrc} alt={p.name} width={28} height={28} className="object-contain" />
                         </div>
                         <div>
                           <div className="text-sm font-bold text-slate-900 group-hover/item:text-primary transition-colors">
@@ -257,7 +243,8 @@ export default function Navbar() {
                   onClick={() => setIsOpen(false)}
                   className="flex items-center gap-3 text-lg font-bold text-slate-900"
                 >
-                  <p.icon size={20} className={p.color} /> {p.name}
+                  <Image src={p.iconSrc} alt={p.name} width={24} height={24} className="object-contain" />
+                  {p.name}
                 </Link>
               ))}
               <hr className="border-slate-100" />
