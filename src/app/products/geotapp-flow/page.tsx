@@ -420,17 +420,16 @@ export default function GeoTappApp() {
             viewport={{ once: true }}
             className="relative mx-auto mt-16 max-w-6xl"
           >
-            {/* Visual Placeholder for Dashboard */}
-            <div className="relative bg-slate-50 rounded-2xl shadow-2xl border border-slate-200 aspect-[16/9] flex items-center justify-center overflow-hidden">
-              <div className="text-center z-10">
-                <Cpu
-                  size={80}
-                  className="text-blue-500 mx-auto mb-6 opacity-50"
-                />
-                <div className="text-slate-300 font-mono text-3xl font-bold tracking-widest">
-                  {flowDict.visual_placeholder}
-                </div>
-              </div>
+            {/* Flow dashboard screenshot */}
+            <div className="relative rounded-2xl shadow-2xl border border-slate-200 overflow-hidden">
+              <Image
+                src="/schermataFlow.webp"
+                alt="GeoTapp Flow — pannello operativo"
+                width={1512}
+                height={756}
+                className="w-full h-auto"
+                priority
+              />
             </div>
           </motion.div>
         </motion.div>
