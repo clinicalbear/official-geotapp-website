@@ -8,18 +8,28 @@ import type { AppLocale } from '@/lib/i18n/config';
 
 const POSTS_PER_PAGE = 12;
 
+// TimeTracker → arancione logo (#F97316)
+// Flow        → viola/lilla (#8B5CF6)
+// Verifier    → verde (#22C55E)
 const CATEGORY_COLORS: Record<string, string> = {
-  'gps':               'rgba(59,174,224,0.50)',
-  'tracking':          'rgba(59,174,224,0.50)',
-  'geolocalizzazione': 'rgba(59,174,224,0.50)',
-  'sicurezza':         'rgba(99,102,241,0.50)',
-  'security':          'rgba(99,102,241,0.50)',
-  'gestione':          'rgba(82,192,101,0.50)',
-  'operazioni':        'rgba(82,192,101,0.50)',
-  'business':          'rgba(82,192,101,0.50)',
-  'tecnologia':        'rgba(217,119,6,0.50)',
-  'app':               'rgba(217,119,6,0.50)',
-  'software':          'rgba(217,119,6,0.50)',
+  // TimeTracker
+  'gps':               'rgba(249,115,22,0.50)',
+  'tracking':          'rgba(249,115,22,0.50)',
+  'geolocalizzazione': 'rgba(249,115,22,0.50)',
+  'timbrature':        'rgba(249,115,22,0.50)',
+  'presenze':          'rgba(249,115,22,0.50)',
+  'app':               'rgba(249,115,22,0.50)',
+  // Flow
+  'gestione':          'rgba(139,92,246,0.50)',
+  'operazioni':        'rgba(139,92,246,0.50)',
+  'business':          'rgba(139,92,246,0.50)',
+  'tecnologia':        'rgba(139,92,246,0.50)',
+  'software':          'rgba(139,92,246,0.50)',
+  // Verifier
+  'sicurezza':         'rgba(34,197,94,0.50)',
+  'security':          'rgba(34,197,94,0.50)',
+  'verifica':          'rgba(34,197,94,0.50)',
+  'prove':             'rgba(34,197,94,0.50)',
 };
 const DEFAULT_COLOR = 'rgba(143,196,54,0.50)';
 
