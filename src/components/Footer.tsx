@@ -55,7 +55,7 @@ export default function Footer() {
           </div>
 
           {/* Nav links */}
-          <div className="flex flex-col gap-3 text-sm text-text-secondary">
+          <div className="flex flex-row flex-wrap gap-x-6 gap-y-2 text-sm text-text-secondary">
             <Link href={getLink('/privacy')} className="hover:text-text-primary transition-colors">{dict.privacy}</Link>
             <Link href={getLink('/terms')} className="hover:text-text-primary transition-colors">{dict.terms}</Link>
             <Link href={getLink('/blog')} className="hover:text-text-primary transition-colors">Blog</Link>
