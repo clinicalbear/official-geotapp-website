@@ -9,12 +9,14 @@
     "sectors": {
       "installatori": "Installers",
       "sicurezza": "Security",
-      "pulizie": "Cleaning"
+      "pulizie": "Cleaning",
+      "label": "Sectors"
     },
     "logo_alt": "GeoTapp — The platform that makes work verifiable",
     "product_flow_desc": "Field operations and team management",
     "product_app_desc": "Mobile app for field technicians",
-    "product_verifier_desc": "Work report integrity verification"
+    "product_verifier_desc": "Work report integrity verification",
+    "compare": "Compare"
   },
   "footer": {
     "tagline": "Field activity recorded. Operations organised. Reports verifiable.",

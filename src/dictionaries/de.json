@@ -9,12 +9,14 @@
     "sectors": {
       "installatori": "Installateure",
       "sicurezza": "Sicherheitsdienst",
-      "pulizie": "Gebäudereinigung"
+      "pulizie": "Gebäudereinigung",
+      "label": "Branchen"
     },
     "logo_alt": "GeoTapp — Die Plattform, die Arbeit verifizierbar macht",
     "product_flow_desc": "Operative Einsatzverwaltung und Teamplanung",
     "product_app_desc": "Mobile App für Außendiensttechniker",
-    "product_verifier_desc": "Integritätsprüfung von Arbeitsberichten"
+    "product_verifier_desc": "Integritätsprüfung von Arbeitsberichten",
+    "compare": "Vergleich"
   },
   "footer": {
     "tagline": "Außendienst erfasst. Einsätze organisiert. Berichte prüfbar.",

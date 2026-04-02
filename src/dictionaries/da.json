@@ -9,12 +9,14 @@
     "sectors": {
       "installatori": "Installatører",
       "sicurezza": "Sikkerhed",
-      "pulizie": "Rengøring"
+      "pulizie": "Rengøring",
+      "label": "Brancher"
     },
     "logo_alt": "GeoTapp — Platformen der gør arbejde verificerbart",
     "product_flow_desc": "Operationel styring af interventioner og teams",
     "product_app_desc": "Mobilapp til serviceteknikere",
-    "product_verifier_desc": "Integritetskontrol af arbejdsrapporter"
+    "product_verifier_desc": "Integritetskontrol af arbejdsrapporter",
+    "compare": "Sammenligning"
   },
   "footer": {
     "tagline": "Feltaktivitet registreret. Drift organiseret. Arbejdsrapporter verificerbare.",

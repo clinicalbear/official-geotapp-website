@@ -9,12 +9,14 @@
     "sectors": {
       "installatori": "Installateurs",
       "sicurezza": "Beveiliging",
-      "pulizie": "Schoonmaak"
+      "pulizie": "Schoonmaak",
+      "label": "Sectoren"
     },
     "logo_alt": "GeoTapp — Het platform dat werk verifieerbaar maakt",
     "product_flow_desc": "Operationeel beheer van interventies en teams",
     "product_app_desc": "Mobiele app voor buitendiensttechnici",
-    "product_verifier_desc": "Integriteitsverificatie van werkrapporten"
+    "product_verifier_desc": "Integriteitsverificatie van werkrapporten",
+    "compare": "Vergelijking"
   },
   "footer": {
     "tagline": "Buitendienstactiviteit geregistreerd. Operaties georganiseerd. Rapporten verifieerbaar.",

@@ -9,12 +9,14 @@
     "sectors": {
       "installatori": "Installatörer",
       "sicurezza": "Säkerhet",
-      "pulizie": "Städning"
+      "pulizie": "Städning",
+      "label": "Sektorer"
     },
     "logo_alt": "GeoTapp — Plattformen som gör arbete verifierbart",
     "product_flow_desc": "Operativ hantering av uppdrag och team",
     "product_app_desc": "Mobilapp för fälttekniker",
-    "product_verifier_desc": "Integritetskontroll av arbetsrapporter"
+    "product_verifier_desc": "Integritetskontroll av arbetsrapporter",
+    "compare": "Jämförelse"
   },
   "footer": {
     "tagline": "Fältaktivitet registrerad. Verksamhet organiserad. Rapporter verifierbara.",

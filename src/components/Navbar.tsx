@@ -42,6 +42,8 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [productMenuOpen, setProductMenuOpen] = useState(false);
+  const [sectorMenuOpen, setSectorMenuOpen] = useState(false);
+  const [sectorMobileOpen, setSectorMobileOpen] = useState(false);
   const pathname = usePathname();
   const currentLocale = getLocaleFromPathname(pathname) ?? DEFAULT_LOCALE;
   const dict = getDictionary(currentLocale).navbar;
@@ -162,16 +164,38 @@ export default function Navbar() {
             </AnimatePresence>
           </div>
 
-          {/* Settori - Direct Links */}
-          {sectorLinks.map((sector) => (
-            <Link
-              key={sector.href}
-              href={sector.href}
-              className="text-sm font-bold text-text-secondary hover:text-slate-900 transition-colors"
-            >
-              {sector.label}
-            </Link>
-          ))}
+          {/* Settori Dropdown */}
+          <div
+            className="relative group"
+            onMouseEnter={() => setSectorMenuOpen(true)}
+            onMouseLeave={() => setSectorMenuOpen(false)}
+          >
+            <button className="flex items-center gap-1 text-sm font-bold text-text-secondary hover:text-slate-900 transition-colors">
+              {dict.sectors.label} <ChevronDown size={14} />
+            </button>
+            <AnimatePresence>
+              {sectorMenuOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 10 }}
+                  className="absolute top-full left-0 mt-4 w-44 bg-white border border-border rounded-xl p-2 shadow-2xl"
+                >
+                  <div className="grid gap-0.5">
+                    {sectorLinks.map((sector) => (
+                      <Link
+                        key={sector.href}
+                        href={sector.href}
+                        className="block px-4 py-2.5 text-sm font-bold text-slate-700 hover:bg-slate-50 hover:text-slate-900 rounded-lg transition-colors"
+                      >
+                        {sector.label}
+                      </Link>
+                    ))}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
 
           <Link
             href={getLink('/pricing')}
@@ -255,17 +279,29 @@ export default function Navbar() {
               ))}
               <hr className="border-slate-100" />
 
-              {/* Settori - Direct Links Mobile */}
-              {sectorLinks.map((sector) => (
-                <Link
-                  key={`mobile-${sector.href}`}
-                  href={sector.href}
-                  onClick={() => setIsOpen(false)}
-                  className="text-lg font-bold text-text-secondary"
+              {/* Settori Mobile Dropdown */}
+              <div>
+                <button
+                  className="flex items-center gap-2 text-lg font-bold text-text-secondary w-full"
+                  onClick={() => setSectorMobileOpen(!sectorMobileOpen)}
                 >
-                  {sector.label}
-                </Link>
-              ))}
+                  {dict.sectors.label} <ChevronDown size={16} className={sectorMobileOpen ? 'rotate-180 transition-transform' : 'transition-transform'} />
+                </button>
+                {sectorMobileOpen && (
+                  <div className="pl-4 mt-3 flex flex-col gap-3">
+                    {sectorLinks.map((sector) => (
+                      <Link
+                        key={`mobile-${sector.href}`}
+                        href={sector.href}
+                        onClick={() => { setIsOpen(false); setSectorMobileOpen(false); }}
+                        className="text-base font-medium text-text-muted hover:text-slate-900"
+                      >
+                        {sector.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
 
               <hr className="border-slate-100" />
               <Link

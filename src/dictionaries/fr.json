@@ -9,12 +9,14 @@
     "sectors": {
       "installatori": "Installateurs",
       "sicurezza": "Sécurité",
-      "pulizie": "Nettoyage"
+      "pulizie": "Nettoyage",
+      "label": "Secteurs"
     },
     "logo_alt": "GeoTapp — La plateforme qui rend le travail vérifiable",
     "product_flow_desc": "Gestion opérationnelle des interventions et équipes",
     "product_app_desc": "Application mobile pour techniciens terrain",
-    "product_verifier_desc": "Vérification de l'intégrité des rapports de travail"
+    "product_verifier_desc": "Vérification de l'intégrité des rapports de travail",
+    "compare": "Comparaison"
   },
   "footer": {
     "tagline": "Activité terrain enregistrée. Opérations organisées. Rapports vérifiables.",
