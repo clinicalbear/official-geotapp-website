@@ -180,10 +180,10 @@ export default function Navbar() {
             {dict.pricing}
           </Link>
           <Link
-            href="/blog"
+            href={getLink('/confronto')}
             className="text-sm font-bold text-text-secondary hover:text-slate-900 transition-colors"
           >
-            {dict.blog}
+            {dict.compare}
           </Link>
           <Link
             href={getLink('/contact')}
@@ -191,17 +191,23 @@ export default function Navbar() {
           >
             {dict.contact}
           </Link>
+          <Link
+            href="/blog"
+            className="text-sm font-bold text-text-secondary hover:text-slate-900 transition-colors"
+          >
+            {dict.blog}
+          </Link>
 
-          <div className="h-6 w-px bg-slate-200 mx-2"></div>
+          <div className="h-6 w-px bg-slate-200 mx-1"></div>
 
           <Link
-            href={getLink('/login')}
+            href="https://flow.geotapp.com"
             className="text-sm font-bold text-text-secondary hover:text-slate-900 transition-colors"
           >
             {dict.login}
           </Link>
 
-          <div className="h-6 w-px bg-slate-200 mx-2"></div>
+          <div className="h-6 w-px bg-slate-200 mx-1"></div>
 
           <LanguageSwitcher />
 
@@ -270,11 +276,11 @@ export default function Navbar() {
                 {dict.pricing}
               </Link>
               <Link
-                href="/blog"
+                href={getLink('/confronto')}
                 onClick={() => setIsOpen(false)}
                 className="text-lg font-bold text-text-secondary"
               >
-                {dict.blog}
+                {dict.compare}
               </Link>
               <Link
                 href={getLink('/contact')}
@@ -284,7 +290,14 @@ export default function Navbar() {
                 {dict.contact}
               </Link>
               <Link
-                href={getLink('/login')}
+                href="/blog"
+                onClick={() => setIsOpen(false)}
+                className="text-lg font-bold text-text-secondary"
+              >
+                {dict.blog}
+              </Link>
+              <Link
+                href="https://flow.geotapp.com"
                 onClick={() => setIsOpen(false)}
                 className="text-lg font-bold text-text-secondary"
                   >
