@@ -226,6 +226,8 @@ export default function Navbar() {
 
           <Link
             href="https://flow.geotapp.com"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-sm font-bold text-text-secondary hover:text-slate-900 transition-colors"
           >
             {dict.login}
@@ -334,11 +336,13 @@ export default function Navbar() {
               </Link>
               <Link
                 href="https://flow.geotapp.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setIsOpen(false)}
                 className="text-lg font-bold text-text-secondary"
-                  >
-                    {dict.login}
-                  </Link>
+              >
+                {dict.login}
+              </Link>
                   <LanguageSwitcher className="justify-start" />
                   <Link
                     href={getLink('/contact')}
