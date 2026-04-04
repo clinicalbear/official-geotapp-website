@@ -1,13 +1,30 @@
 {
-    "$schema": "node_modules/wrangler/config-schema.json",
-    "name": "official-geotapp-website",
-    "main": ".open-next/worker.js",
-    "compatibility_date": "2024-09-23",
-    "compatibility_flags": [
-        "nodejs_compat"
-    ],
-    "assets": {
-        "directory": ".open-next/assets",
-        "binding": "ASSETS"
-    }
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "official-geotapp-website",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2024-09-23",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS",
+  },
+  "vars": {
+    "NEXT_PUBLIC_GOOGLE_MAPS_API_KEY": "AIzaSyAE65Qw9pzVKGfHf_XPAYB1oDWl6GxFee4",
+  },
+  // Cron trigger — keeps the Worker warm every 15 minutes.
+  // The scheduled handler is injected into .open-next/worker.js post-build
+  // by scripts/inject-scheduled-handler.mjs (called automatically by npm run deploy).
+  "triggers": {
+    "crons": ["*/15 * * * *"],
+  },
+  "routes": [
+    {
+      "pattern": "geotapp.com/*",
+      "zone_name": "geotapp.com",
+    },
+    {
+      "pattern": "www.geotapp.com/*",
+      "zone_name": "geotapp.com",
+    },
+  ],
 }

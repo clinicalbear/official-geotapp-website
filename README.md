@@ -20,18 +20,21 @@ official-v2/
 ### Frontend
 
 1. **Installare dipendenze:**
+
 ```bash
 cd official-v2
 npm install
 ```
 
 2. **Configurare variabili di ambiente:**
+
 ```bash
 cp .env.local.example .env.local
 # Editare .env.local con le tue credenziali
 ```
 
 3. **Avviare il dev server:**
+
 ```bash
 npm run dev
 ```
@@ -41,18 +44,21 @@ Il sito sarà disponibile su `http://localhost:3000`
 ### Backend (Strapi CMS)
 
 1. **Installare dipendenze:**
+
 ```bash
 cd strapi-backend
 npm install
 ```
 
 2. **Configurare database:**
-Strapi usa SQLite di default. Se vuoi usare PostgreSQL:
+   Strapi usa SQLite di default. Se vuoi usare PostgreSQL:
+
 ```bash
 npm install pg
 ```
 
 3. **Avviare Strapi:**
+
 ```bash
 npm run develop
 ```
@@ -62,18 +68,22 @@ Strapi admin: `http://localhost:1337/admin`
 ## Integrazioni
 
 ### Firebase
+
 - **Database Realtime**: Per dati utenti e licenze
 - **Authentication**: Magic links per signup
 - **Storage**: Per file e documenti
 
 ### Stripe
+
 - **Checkout**: Per pagamenti abbonamenti
 - **Webhooks**: Per gestire eventi pagamenti
 
 ### Email (Nodemailer)
+
 - **Gmail SMTP**: Invio email di contatto
 
 ### Admin 2FA
+
 - **Google Authenticator**: Protezione accesso admin
 - **Speakeasy**: Generazione QR code e verifica codici
 
@@ -89,11 +99,13 @@ Strapi admin: `http://localhost:1337/admin`
 ## Deploy su Cloudflare Workers
 
 1. **Build:**
+
 ```bash
 npm run build
 ```
 
 2. **Deploy (richiede autenticazione Cloudflare):**
+
 ```bash
 npm run deploy
 ```
@@ -116,5 +128,5 @@ npm run deploy
 ## Support
 
 Per problemi o domande: info@geotapp.com
-# Dynamic promo counters
 
+# Dynamic promo counters

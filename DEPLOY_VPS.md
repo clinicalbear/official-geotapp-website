@@ -1,10 +1,11 @@
-
 # Guida al Deploy su VPS (Docker)
 
 Ho preparato i file necessari per deployare **GeoTapp Site** su una VPS utilizzando Docker.
 
 ## Prerequisiti su VPS
+
 Assicurati che sulla VPS siano installati:
+
 - **Docker**
 - **Docker Compose**
 
@@ -39,6 +40,7 @@ Assicurati che sulla VPS siano installati:
     - `http://localhost:3000`
 
 ## Aggiornamenti Futuri
+
 Per aggiornare il sito dopo aver modificato il codice:
 
 ```bash

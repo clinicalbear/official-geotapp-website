@@ -72,15 +72,11 @@ async function fetchBlogPosts(locale: AppLocale, categoryId: number, limit = 3):
 }
 
 const SECTION_LABELS: Record<AppLocale, string> = {
-  it: 'Dal blog', en: 'From the blog', de: 'Aus dem Blog', fr: 'Du blog',
-  es: 'Del blog', pt: 'Do blog', nl: 'Van de blog', da: 'Fra bloggen',
-  sv: 'Från bloggen', nb: 'Fra bloggen', ru: 'Из блога',
+  it: 'Dal blog', en: 'From the blog', de: 'Aus dem Blog',
 };
 
 const READ_MORE_LABELS: Record<AppLocale, string> = {
-  it: 'Leggi →', en: 'Read →', de: 'Lesen →', fr: 'Lire →',
-  es: 'Leer →', pt: 'Ler →', nl: 'Lees →', da: 'Læs →',
-  sv: 'Läs →', nb: 'Les →', ru: 'Читать →',
+  it: 'Leggi →', en: 'Read →', de: 'Lesen →',
 };
 
 interface Props {

@@ -3,11 +3,13 @@
 ## ✅ Deploy Completato: geotapp-saas (VPS)
 
 Tutte le variabili d'ambiente sono state aggiornate e deployate con successo su:
+
 - **URL**: https://crm.geotapp.com
 - **Server**: VPS 82.165.15.122
 - **Status**: 🟢 Online con nuovi price_id
 
 ### Variabili Verificate sul VPS:
+
 ```bash
 ✅ STRIPE_PRICE_FLOW_START_MONTHLY=price_1StVkdCgA44aD4AuyTLDeZwE
 ✅ STRIPE_PRICE_FLOW_START_ANNUAL=price_1StVlrCgA44aD4AunKfs9lb7
@@ -106,6 +108,7 @@ wrangler pages deploy
 Se il progetto è connesso a un repo Git (GitHub/GitLab):
 
 1. **Commit locale** (già fatto):
+
    ```bash
    cd "d:\xampp\htdocs\GeoTapp EcoSystem\geotapp-site"
    git add .env.local.example
@@ -115,6 +118,7 @@ Se il progetto è connesso a un repo Git (GitHub/GitLab):
 2. **Aggiorna env vars su Cloudflare** (come Opzione 1)
 
 3. **Push su repository**:
+
    ```bash
    git push origin main
    ```
@@ -137,8 +141,9 @@ Dopo il deploy, verifica che tutto funzioni:
 3. **Apri DevTools** (F12) → Console
 
 4. **Verifica le variabili d'ambiente**:
+
    ```javascript
-   console.log(process.env.NEXT_PUBLIC_STRIPE_PRICE_FLOW_START_MONTHLY)
+   console.log(process.env.NEXT_PUBLIC_STRIPE_PRICE_FLOW_START_MONTHLY);
    // Dovrebbe mostrare: price_1StVkdCgA44aD4AuyTLDeZwE
    ```
 
@@ -150,20 +155,20 @@ Dopo il deploy, verifica che tutto funzioni:
 
 ## 📊 Riepilogo Price_ID
 
-| Piano | Mensile | Annuale | One-time |
-|-------|---------|---------|----------|
-| **START** | 18,90€ (`price_1StVkdCgA44aD4AuyTLDeZwE`) | 189€ (`price_1StVlrCgA44aD4AunKfs9lb7`) | - |
-| **PRO** | 37,90€ (`price_1StVvsCgA44aD4Au3c8ZJpyg`) | 379€ (`price_1StW2pCgA44aD4AudAJ2ZLlD`) | - |
-| **ELITE** | 69,90€ (`price_1StW4NCgA44aD4AuoaCg40qZ`) | 699€ (`price_1StW5GCgA44aD4AuftXBOMSb`) | - |
-| **FOUNDER** | - | - | 1.299€ (`price_1StW6YCgA44aD4Au09sY1UH2`) |
-| **Flow Extra User** | 6,00€ (`price_1StW6yCgA44aD4AuvAjSWGt1`) | - | - |
-| **TT Extra User** | 1,50€ (`price_1StW7LCgA44aD4Au9VAr3k1l`) | - | - |
+| Piano               | Mensile                                   | Annuale                                 | One-time                                  |
+| ------------------- | ----------------------------------------- | --------------------------------------- | ----------------------------------------- |
+| **START / SOLO**    | 29€ (`price_1TBecoCgA44aD4Au7kB7PSbu`) | 290€ (`price_1TBecpCgA44aD4AuX2P6DwMs`) | -                                         |
+| **PRO / TEAM**      | 79€ (`price_1TBecqCgA44aD4AuWrq9cKQ5`) | 790€ (`price_1TBecqCgA44aD4AuRa128057`) | -                                         |
+| **ELITE / BIZ**     | 149€ (`price_1TBecrCgA44aD4AujIPLUCMZ`) | 1490€ (`price_1TBecsCgA44aD4AuSa14XBBG`) | -                                         |
+| **Flow Extra User** | 6,00€ (`price_1StW6yCgA44aD4AuvAjSWGt1`)  | -                                       | -                                         |
+| **TT Extra User**   | 1,50€ (`price_1StW7LCgA44aD4Au9VAr3k1l`)  | -                                       | -                                         |
 
 ---
 
 ## ✅ Checklist Completa
 
 ### geotapp-saas (VPS)
+
 - [x] Price_id aggiornati in `env.production`
 - [x] File caricato sul VPS
 - [x] Container riavviati completamente (`docker compose down && up -d`)
@@ -171,6 +176,7 @@ Dopo il deploy, verifica che tutto funzioni:
 - [x] App online e funzionante su https://crm.geotapp.com
 
 ### geotapp-site (Cloudflare)
+
 - [x] Price_id aggiornati in `.env.local` (locale)
 - [x] Price_id documentati in `.env.local.example`
 - [x] **DONE**: Env vars aggiornate su Cloudflare Pages via Wrangler CLI
@@ -181,6 +187,7 @@ Dopo il deploy, verifica che tutto funzioni:
 - [ ] **TODO**: Verifica che il sito usi i nuovi price_id dopo deploy (~5-10 min)
 
 ### geotapp-flow (Firebase)
+
 - [x] Cloud Function `syncSubscriptionToFirestore` deployata
 - [x] `COMMUNICATION_SECRET` configurato
 - [x] Pronto per ricevere webhook da geotapp-saas
@@ -202,5 +209,6 @@ Dopo il deploy, verifica che tutto funzioni:
 **Deploy geotapp-site**: 🔄 In Progress (Cloudflare auto-deploy triggerato)
 **Project Name Cloudflare**: official-geotapp-website
 **Commit Hash**:
-  - cf21ce3 (env vars + deployment scripts)
-  - a5a177f (pricing updates + new price IDs in code)
+
+- cf21ce3 (env vars + deployment scripts)
+- a5a177f (pricing updates + new price IDs in code)

@@ -79,11 +79,17 @@ const VERIFIER_FAQ: Record<string, object> = {
   },
 };
 
+const VERIFIER_SOFTWARE: Record<string, object> = {
+  it: { '@context': 'https://schema.org', '@type': 'SoftwareApplication', name: 'GeoTapp Verifier', operatingSystem: 'Web', applicationCategory: 'BusinessApplication', offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR', description: 'Incluso nei piani GeoTapp. Verifica gratuita per i destinatari dei report.' }, url: 'https://geotapp.com/it/products/geotapp-verifier/' },
+  en: { '@context': 'https://schema.org', '@type': 'SoftwareApplication', name: 'GeoTapp Verifier', operatingSystem: 'Web', applicationCategory: 'BusinessApplication', offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR', description: 'Included in GeoTapp plans. Free verification for report recipients.' }, url: 'https://geotapp.com/en/products/geotapp-verifier/' },
+};
+
 type Props = { params: Promise<{ locale: string }> };
 
 export default async function LocaleVerifierPage({ params }: Props) {
   const { locale } = await params;
   const faq = VERIFIER_FAQ[locale] ?? VERIFIER_FAQ['en'];
+  const software = VERIFIER_SOFTWARE[locale] ?? VERIFIER_SOFTWARE['en'];
   const breadcrumb = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -98,6 +104,7 @@ export default async function LocaleVerifierPage({ params }: Props) {
       {faq && (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       )}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(software) }} />
       <VerifierPage params={params} />
       <BlogHighlights locale={locale as AppLocale} categoryId={9} />
       <SettoriLinks locale={locale as AppLocale} settori={['pulizie', 'installatori', 'sicurezza']} />

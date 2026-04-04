@@ -48,8 +48,62 @@ const content: SettoreContent = {
       },
     ],
   },
+  differenza: {
+    title: 'Software per aziende di sicurezza: registro presenze o prove verificabili?',
+    subtitle: 'La maggior parte dei software registra i turni. GeoTapp certifica ogni presenza con prove difendibili.',
+    rows: [
+      {
+        label: 'Cosa registra',
+        competitor: 'Orario di inizio/fine turno',
+        geotapp: 'Orario + GPS verificato + foto + posizione al posto assegnato',
+      },
+      {
+        label: 'Chi può verificare',
+        competitor: 'Solo il tuo ufficio',
+        geotapp: 'Tu, il committente, la Prefettura — in autonomia',
+      },
+      {
+        label: 'In caso di contestazione',
+        competitor: 'Dato non difendibile',
+        geotapp: 'Report sigillato, verificabile da terzi',
+      },
+      {
+        label: 'Prova di ronda',
+        competitor: 'Assente o su carta',
+        geotapp: 'GPS + timestamp + foto al checkpoint',
+      },
+      {
+        label: 'Conformità GDPR',
+        competitor: 'Spesso da verificare',
+        geotapp: 'Conforme per design, modulistica inclusa',
+      },
+    ],
+  },
+
+  prima_dopo: {
+    title: 'Cosa succede adesso. Cosa succede con GeoTapp.',
+    prima: [
+      'Il cliente contesta la presenza della guardia in un orario specifico.',
+      'La guardia dice "ero lì". Il cliente dice "non risulta".',
+      'Non hai nulla per dimostrarlo. La disputa si trascina.',
+      'Rischi di perdere il contratto.',
+    ],
+    dopo: [
+      'Il cliente contesta la presenza della guardia in un orario specifico.',
+      'Apri il report: GPS al posto assegnato, timestamp, foto del sito.',
+      'Glielo mandi. La contestazione si chiude in trenta secondi.',
+      'Il contratto è al sicuro.',
+    ],
+  },
+
+  scenario: {
+    title: 'Caso reale',
+    body: 'Il committente afferma che la guardia non era al suo posto in un orario critico. Con GeoTapp apri il report di turno: GPS verificato al checkpoint, timestamp immutabile, foto del sito — tutto generato automaticamente dallo smartphone della guardia durante il servizio.',
+    resolution: 'La contestazione cade. Il contratto rimane.',
+  },
+
   features: {
-    title: 'Quello che ottieni',
+    title: 'Software per aziende di sicurezza: turni certificati, ronde documentate.',
     items: [
       {
         title: 'Timbratura GPS verificabile per ogni guardia',
@@ -63,7 +117,31 @@ const content: SettoreContent = {
         title: 'Export compatibile con Zucchetti e TeamSystem',
         desc: 'Esporta le presenze mensili nel formato richiesto dai principali software paghe. L\'elaborazione paghe diventa un\'operazione rapida e senza errori di ricopiatura.',
       },
+      {
+        title: 'Passaggio di consegne digitale',
+        desc: 'Il cambio turno viene registrato digitalmente: note operative, stato dei posti e responsabilità. Informazioni critiche non si perdono più tra un turno e l\'altro.',
+      },
+      {
+        title: 'Dashboard multi-sito in tempo reale',
+        desc: 'Il responsabile vede dove sono tutte le guardie, lo stato di ogni posto e i cambi turno attivi — da qualsiasi dispositivo, senza telefonate.',
+      },
+      {
+        title: 'Report difendibili in audit e in Prefettura',
+        desc: 'Ogni turno genera un report sigillato con GPS, timestamp e prove fotografiche. Difendibile davanti al cliente, alla Prefettura e in qualsiasi sede di verifica contrattuale.',
+      },
     ],
+  },
+
+  cta_mid: {
+    title: 'Vuoi vedere come funziona su un caso reale di contestazione?',
+    body: 'Ti mostriamo il flusso completo: dalla guardia che timbra al posto assegnato al report che riceve il committente. In 20 minuti capisci se fa per te — senza impegno.',
+    cta: 'Richiedi una Demo',
+  },
+
+  trust: {
+    title: 'I nostri report non si possono alterare. Non da te. Non da noi.',
+    body: 'I report GeoTapp sono generati dal sistema nel momento del turno. Non esiste un pannello dove "correggere" un orario o spostare una foto. Il dato è quello — firmato digitalmente, con GPS reale. Quando lo mostri al committente o alla Prefettura, regge.',
+    badge: 'Verificabile da chiunque — senza accesso al tuo account',
   },
   testimonial: {
     quote: 'Con GeoTapp abbiamo eliminato le contestazioni sui turni. I clienti ricevono il registro presenze firmato digitalmente con coordinate GPS. Non c\'è niente da discutere.',

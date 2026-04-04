@@ -3,12 +3,14 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 import { LOCALE_COOKIE_NAME, SUPPORTED_LOCALES } from '@/lib/i18n/config';
+import type { AppLocale } from '@/lib/i18n/config';
 import {
   getLocaleFromPathname,
   localizePath,
   resolveLocale,
   stripLocaleFromPathname,
 } from '@/lib/i18n/locale-routing';
+import { translatePath } from '@/lib/i18n/slug-map';
 
 const PUBLIC_FILE = /\.(.*)$/;
 
@@ -261,18 +263,23 @@ async function buildFullSitemap(): Promise<string> {
   const today = new Date().toISOString().split('T')[0];
 
   // 1. Locale pages: all locales × all routes with hreflang alternates.
+  // URLs use translated slugs per locale (e.g. /de/preise/ not /de/pricing/).
+  const HREFLANG_MAP: Record<string, string> = {
+    it: 'it-IT', en: 'en', de: 'de-DE', fr: 'fr-FR', es: 'es-ES',
+    pt: 'pt-PT', nl: 'nl-NL', da: 'da-DK', nb: 'nb-NO', sv: 'sv-SE', ru: 'ru-RU',
+  };
   const localeEntries: string[] = [];
   for (const locale of locales) {
     for (const { path, priority, changeFrequency } of SITEMAP_ROUTES) {
-      const url = `${SITEMAP_BASE_URL}/${locale}${path}`;
+      const localePath = translatePath(path, locale as AppLocale);
+      const url = `${SITEMAP_BASE_URL}/${locale}${localePath}`;
       const p = Math.round(priority * 0.85 * 100) / 100;
-      const HREFLANG_MAP: Record<string, string> = {
-        it: 'it-IT', en: 'en', de: 'de-DE', fr: 'fr-FR', es: 'es-ES',
-        pt: 'pt-PT', nl: 'nl-NL', da: 'da-DK', nb: 'nb-NO', sv: 'sv-SE', ru: 'ru-RU',
-      };
       const hreflangLines = [
-        ...locales.map((l) => `    <xhtml:link rel="alternate" hreflang="${HREFLANG_MAP[l] ?? l}" href="${SITEMAP_BASE_URL}/${l}${path}"/>`),
-        `    <xhtml:link rel="alternate" hreflang="x-default" href="${SITEMAP_BASE_URL}/en${path}"/>`,
+        ...locales.map((l) => {
+          const lPath = translatePath(path, l as AppLocale);
+          return `    <xhtml:link rel="alternate" hreflang="${HREFLANG_MAP[l] ?? l}" href="${SITEMAP_BASE_URL}/${l}${lPath}"/>`;
+        }),
+        `    <xhtml:link rel="alternate" hreflang="x-default" href="${SITEMAP_BASE_URL}/en${translatePath(path, 'en')}"/>`,
       ].join('\n');
       localeEntries.push(
         `  <url>\n` +
@@ -443,7 +450,7 @@ export async function middleware(req: NextRequest) {
   // Serving inline avoids the round-trip entirely.
   if (pathname === '/blog/robots.txt') {
     return new NextResponse(
-      'User-agent: *\nAllow: /\n\nSitemap: https://geotapp.com/blog/sitemap_index.xml\n',
+      'User-agent: *\nAllow: /\nDisallow: /blog/*/feed/\nDisallow: /blog/*/feed\n\nSitemap: https://geotapp.com/blog/sitemap_index.xml\n',
       {
         status: 200,
         headers: { 'Content-Type': 'text/plain; charset=utf-8', 'Cache-Control': 'public, max-age=86400' },
@@ -475,6 +482,16 @@ export async function middleware(req: NextRequest) {
     // requests. Without this, the proxy would receive the 301 and forward it
     // to the already-at-geotapp.com/blog/ browser → redirect loop.
     upstreamHeaders.set('x-geotapp-proxy', '1');
+    // Bypass Cloudflare CDN cache on blog.geotapp.com.
+    // blog.geotapp.com is itself behind Cloudflare. Its CDN can have stale 301
+    // redirects cached (e.g. blog.geotapp.com/* → geotapp.com/blog/*) from
+    // before x-geotapp-proxy was respected by Apache. Those cached redirects
+    // are served by CF edge *before* Apache sees the request, so the proxy
+    // header is ignored and the Worker receives a 301 that rewrites to the
+    // same geotapp.com/blog/* URL → infinite redirect loop for Googlebot.
+    // Cache-Control: no-cache forces CF to validate with origin on every
+    // Worker-to-blog fetch, ensuring Apache always handles the request.
+    upstreamHeaders.set('cache-control', 'no-cache');
     if (!upstreamHeaders.has('cf-visitor')) {
       upstreamHeaders.set('cf-visitor', '{"scheme":"https"}');
     }

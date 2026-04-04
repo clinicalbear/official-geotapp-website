@@ -81,11 +81,17 @@ const APP_FAQ: Record<string, object> = {
   },
 };
 
+const APP_SOFTWARE: Record<string, object> = {
+  it: { '@context': 'https://schema.org', '@type': 'SoftwareApplication', name: 'GeoTapp TimeTracker', operatingSystem: 'Android, iOS', applicationCategory: 'BusinessApplication', offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR', description: 'Piano gratuito disponibile. Piani a pagamento da pochi euro per operatore/mese.' }, url: 'https://geotapp.com/it/products/geotapp-timetracker/' },
+  en: { '@context': 'https://schema.org', '@type': 'SoftwareApplication', name: 'GeoTapp TimeTracker', operatingSystem: 'Android, iOS', applicationCategory: 'BusinessApplication', offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR', description: 'Free plan available. Paid plans from a few euros per operator/month.' }, url: 'https://geotapp.com/en/products/geotapp-timetracker/' },
+};
+
 type Props = { params: Promise<{ locale: string }> };
 
 export default async function LocaleAppPage({ params }: Props) {
   const { locale } = await params;
   const faq = APP_FAQ[locale] ?? APP_FAQ['en'];
+  const software = APP_SOFTWARE[locale] ?? APP_SOFTWARE['en'];
   const breadcrumb = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -100,6 +106,7 @@ export default async function LocaleAppPage({ params }: Props) {
       {faq && (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       )}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(software) }} />
       <AppPage />
       <BlogHighlights locale={locale as AppLocale} categoryId={108} />
       <SettoriLinks locale={locale as AppLocale} settori={['pulizie', 'sicurezza']} />

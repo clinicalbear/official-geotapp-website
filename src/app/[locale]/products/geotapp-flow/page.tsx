@@ -81,11 +81,17 @@ const FLOW_FAQ: Record<string, object> = {
   },
 };
 
+const FLOW_SOFTWARE: Record<string, object> = {
+  it: { '@context': 'https://schema.org', '@type': 'SoftwareApplication', name: 'GeoTapp Flow', operatingSystem: 'Web', applicationCategory: 'BusinessApplication', offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR', description: 'Piano gratuito disponibile. Piani a pagamento da pochi euro per operatore/mese.' }, url: 'https://geotapp.com/it/products/geotapp-flow/' },
+  en: { '@context': 'https://schema.org', '@type': 'SoftwareApplication', name: 'GeoTapp Flow', operatingSystem: 'Web', applicationCategory: 'BusinessApplication', offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR', description: 'Free plan available. Paid plans from a few euros per operator/month.' }, url: 'https://geotapp.com/en/products/geotapp-flow/' },
+};
+
 type Props = { params: Promise<{ locale: string }> };
 
 export default async function LocaleFlowPage({ params }: Props) {
   const { locale } = await params;
   const faq = FLOW_FAQ[locale] ?? FLOW_FAQ['en'];
+  const software = FLOW_SOFTWARE[locale] ?? FLOW_SOFTWARE['en'];
   const breadcrumb = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -100,6 +106,7 @@ export default async function LocaleFlowPage({ params }: Props) {
       {faq && (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       )}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(software) }} />
       <FlowPage />
       <BlogHighlights locale={locale as AppLocale} categoryId={65} />
       <SettoriLinks locale={locale as AppLocale} settori={['installatori']} />

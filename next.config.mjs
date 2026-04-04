@@ -1,27 +1,80 @@
-// Slug translations (mirrors src/lib/i18n/slug-map.ts — kept in sync manually)
+// Slug translations — only IT canonical → EN and DE translated slugs
 const SLUG_TRANSLATIONS = {
-  'chi-siamo': { en: 'about-us', de: 'uber-uns', fr: 'qui-sommes-nous', es: 'quienes-somos', pt: 'quem-somos', nl: 'over-ons', da: 'om-os', sv: 'om-oss', nb: 'om-oss', ru: 'o-nas' },
-  'guida':     { en: 'guide', de: 'anleitung', fr: 'guide', es: 'guia', pt: 'guia', nl: 'handleiding', da: 'vejledning', sv: 'guide', nb: 'guide', ru: 'rukovodstvo' },
-  'settori':   { en: 'sectors', de: 'branchen', fr: 'secteurs', es: 'sectores', pt: 'setores', nl: 'sectoren', da: 'sektorer', sv: 'sektorer', nb: 'sektorer', ru: 'otrasli' },
-  'contact':   { de: 'kontakt', es: 'contacto', pt: 'contato', da: 'kontakt', sv: 'kontakt', nb: 'kontakt', ru: 'kontakt' },
-  'pricing':   { de: 'preise', fr: 'tarifs', es: 'precios', pt: 'precos', nl: 'prijzen', da: 'priser', sv: 'priser', nb: 'priser', ru: 'ceny' },
-  'features':  { de: 'funktionen', fr: 'fonctionnalites', es: 'caracteristicas', pt: 'funcionalidades', nl: 'functies', da: 'funktioner', sv: 'funktioner', nb: 'funksjoner', ru: 'vozmozhnosti' },
-  'products':  { de: 'produkte', fr: 'produits', es: 'productos', pt: 'produtos', nl: 'producten', da: 'produkter', sv: 'produkter', nb: 'produkter', ru: 'produkty' },
+  'chi-siamo':    { en: 'about-us',   de: 'uber-uns' },
+  'guida':        { en: 'guide',      de: 'anleitung' },
+  'settori':      { en: 'sectors',    de: 'branchen' },
+  'contact':      {                   de: 'kontakt' },
+  'pricing':      {                   de: 'preise' },
+  'features':     {                   de: 'funktionen' },
+  'products':     {                   de: 'produkte' },
+  // Sector sub-pages
+  'pulizie':      { en: 'cleaning',   de: 'reinigung' },
+  'installatori': { en: 'installers', de: 'installateure' },
+  'sicurezza':    { en: 'security',   de: 'sicherheit' },
+  'risorse':      { en: 'resources',  de: 'ressourcen' },
+  // Competitor comparison pages
+  'confronto':    { en: 'compare',    de: 'vergleich' },
 };
+
+// Removed locales and their slug translations → redirect to English equivalent
+const REMOVED_LOCALE_SLUGS = {
+  fr: { 'qui-sommes-nous': 'about-us', 'guide': 'guide', 'secteurs': 'sectors', 'tarifs': 'pricing', 'fonctionnalites': 'features', 'produits': 'products', 'nettoyage': 'cleaning', 'installateurs': 'installers', 'securite': 'security', 'ressources': 'resources', 'comparaison': 'compare', 'kontakt': 'contact', },
+  es: { 'quienes-somos': 'about-us', 'guia': 'guide', 'sectores': 'sectors', 'precios': 'pricing', 'caracteristicas': 'features', 'productos': 'products', 'limpieza': 'cleaning', 'instaladores': 'installers', 'seguridad': 'security', 'recursos': 'resources', 'comparacion': 'compare', 'contacto': 'contact', },
+  pt: { 'quem-somos': 'about-us', 'guia': 'guide', 'setores': 'sectors', 'precos': 'pricing', 'funcionalidades': 'features', 'produtos': 'products', 'limpeza': 'cleaning', 'instaladores': 'installers', 'seguranca': 'security', 'recursos': 'resources', 'comparacao': 'compare', 'contato': 'contact', },
+  nl: { 'over-ons': 'about-us', 'handleiding': 'guide', 'sectoren': 'sectors', 'prijzen': 'pricing', 'functies': 'features', 'producten': 'products', 'schoonmaak': 'cleaning', 'installateurs': 'installers', 'beveiliging': 'security', 'bronnen': 'resources', 'vergelijking': 'compare', },
+  da: { 'om-os': 'about-us', 'vejledning': 'guide', 'sektorer': 'sectors', 'priser': 'pricing', 'funktioner': 'features', 'produkter': 'products', 'rengoring': 'cleaning', 'installatorer': 'installers', 'sikkerhed': 'security', 'ressourcer': 'resources', 'sammenligning': 'compare', 'kontakt': 'contact', },
+  sv: { 'om-oss': 'about-us', 'guide': 'guide', 'sektorer': 'sectors', 'priser': 'pricing', 'funktioner': 'features', 'produkter': 'products', 'stadning': 'cleaning', 'installatorer': 'installers', 'sakerhet': 'security', 'resurser': 'resources', 'jamforelse': 'compare', 'kontakt': 'contact', },
+  nb: { 'om-oss': 'about-us', 'guide': 'guide', 'sektorer': 'sectors', 'priser': 'pricing', 'funksjoner': 'features', 'produkter': 'products', 'rengjoring': 'cleaning', 'installatorer': 'installers', 'sikkerhet': 'security', 'ressurser': 'resources', 'sammenligning': 'compare', 'kontakt': 'contact', },
+  ru: { 'o-nas': 'about-us', 'rukovodstvo': 'guide', 'otrasli': 'sectors', 'ceny': 'pricing', 'vozmozhnosti': 'features', 'produkty': 'products', 'uborka': 'cleaning', 'montazhniki': 'installers', 'bezopasnost': 'security', 'resursy': 'resources', 'sravnenie': 'compare', 'kontakt': 'contact', },
+};
+
+const REMOVED_LOCALES = Object.keys(REMOVED_LOCALE_SLUGS);
+
+const COMPOUND_CANONICAL_PARTS = [
+  ['settori', 'pulizie'],
+  ['settori', 'installatori'],
+  ['settori', 'sicurezza'],
+  ['settori', 'pulizie',      'risorse'],
+  ['settori', 'installatori', 'risorse'],
+  ['settori', 'sicurezza',    'risorse'],
+];
+
+function buildCompoundRewrites() {
+  const rewrites = [];
+  for (const parts of COMPOUND_CANONICAL_PARTS) {
+    const canonicalPath = parts.join('/');
+    const locales = Object.keys(SLUG_TRANSLATIONS[parts[0]] || {});
+    for (const locale of locales) {
+      const translatedPath = parts.map((p) => SLUG_TRANSLATIONS[p]?.[locale] ?? p).join('/');
+      if (translatedPath === canonicalPath) continue;
+      rewrites.push({ source: `/${locale}/${translatedPath}/`,       destination: `/${locale}/${canonicalPath}/` });
+      rewrites.push({ source: `/${locale}/${translatedPath}/:path*/`, destination: `/${locale}/${canonicalPath}/:path*/` });
+    }
+  }
+  return rewrites;
+}
+
+function buildCompoundRedirects() {
+  const redirects = [];
+  for (const parts of COMPOUND_CANONICAL_PARTS) {
+    const parentTranslations = SLUG_TRANSLATIONS[parts[0]] || {};
+    for (const [locale, translatedParent] of Object.entries(parentTranslations)) {
+      const italianSub    = parts.slice(1).join('/');
+      const translatedSub = parts.slice(1).map((p) => SLUG_TRANSLATIONS[p]?.[locale] ?? p).join('/');
+      if (italianSub === translatedSub) continue;
+      redirects.push({ source: `/${locale}/${translatedParent}/${italianSub}/`,  destination: `/${locale}/${translatedParent}/${translatedSub}/`, permanent: true });
+      redirects.push({ source: `/${locale}/${translatedParent}/${italianSub}`,   destination: `/${locale}/${translatedParent}/${translatedSub}/`, permanent: true });
+    }
+  }
+  return redirects;
+}
 
 function buildRewrites() {
   const rewrites = [];
   for (const [canonical, translations] of Object.entries(SLUG_TRANSLATIONS)) {
     for (const [locale, translated] of Object.entries(translations)) {
-      // Translated URL → canonical file path (with sub-paths support)
-      rewrites.push({
-        source: `/${locale}/${translated}/`,
-        destination: `/${locale}/${canonical}/`,
-      });
-      rewrites.push({
-        source: `/${locale}/${translated}/:path*/`,
-        destination: `/${locale}/${canonical}/:path*/`,
-      });
+      rewrites.push({ source: `/${locale}/${translated}/`,        destination: `/${locale}/${canonical}/` });
+      rewrites.push({ source: `/${locale}/${translated}/:path*/`, destination: `/${locale}/${canonical}/:path*/` });
     }
   }
   return rewrites;
@@ -31,18 +84,31 @@ function buildRedirects() {
   const redirects = [];
   for (const [canonical, translations] of Object.entries(SLUG_TRANSLATIONS)) {
     for (const [locale, translated] of Object.entries(translations)) {
-      // Old canonical URL → new translated URL (permanent redirect)
-      redirects.push({
-        source: `/${locale}/${canonical}/`,
-        destination: `/${locale}/${translated}/`,
-        permanent: true,
-      });
-      redirects.push({
-        source: `/${locale}/${canonical}/:path*/`,
-        destination: `/${locale}/${translated}/:path*/`,
-        permanent: true,
-      });
+      redirects.push({ source: `/${locale}/${canonical}`,          destination: `/${locale}/${translated}/`, permanent: true });
+      redirects.push({ source: `/${locale}/${canonical}/`,         destination: `/${locale}/${translated}/`, permanent: true });
+      redirects.push({ source: `/${locale}/${canonical}/:path*`,   destination: `/${locale}/${translated}/:path*/`, permanent: true });
+      redirects.push({ source: `/${locale}/${canonical}/:path*/`,  destination: `/${locale}/${translated}/:path*/`, permanent: true });
     }
+  }
+  return redirects;
+}
+
+// Redirects for removed locales → English equivalent
+function buildRemovedLocaleRedirects() {
+  const redirects = [];
+  for (const [locale, slugMap] of Object.entries(REMOVED_LOCALE_SLUGS)) {
+    // Specific slug redirects (translated slug → English equivalent)
+    for (const [translatedSlug, enSlug] of Object.entries(slugMap)) {
+      redirects.push({ source: `/${locale}/${translatedSlug}`,          destination: `/en/${enSlug}/`, permanent: true });
+      redirects.push({ source: `/${locale}/${translatedSlug}/`,         destination: `/en/${enSlug}/`, permanent: true });
+      redirects.push({ source: `/${locale}/${translatedSlug}/:path*`,   destination: `/en/${enSlug}/:path*/`, permanent: true });
+      redirects.push({ source: `/${locale}/${translatedSlug}/:path*/`,  destination: `/en/${enSlug}/:path*/`, permanent: true });
+    }
+    // Catch-all: /{locale}/:path* → /en/:path*
+    redirects.push({ source: `/${locale}/:path*/`, destination: `/en/:path*/`, permanent: true });
+    redirects.push({ source: `/${locale}/:path*`,  destination: `/en/:path*/`, permanent: true });
+    redirects.push({ source: `/${locale}/`,        destination: `/en/`,        permanent: true });
+    redirects.push({ source: `/${locale}`,         destination: `/en/`,        permanent: true });
   }
   return redirects;
 }
@@ -52,60 +118,60 @@ const nextConfig = {
   images: { unoptimized: true },
   trailingSlash: true,
   async rewrites() {
-    return buildRewrites();
+    return [...buildCompoundRewrites(), ...buildRewrites()];
   },
   async redirects() {
-    const localeRedirects = buildRedirects();
-    // Permanent redirect: old geotapp-app slug → geotapp-timetracker (all locales)
+    const ACTIVE_LOCALES = ['it', 'en', 'de'];
+
     const appRenames = [
-      { source: '/products/geotapp-app/', destination: '/products/geotapp-timetracker/', permanent: true },
+      { source: '/products/geotapp-app',        destination: '/products/geotapp-timetracker/', permanent: true },
+      { source: '/products/geotapp-app/',        destination: '/products/geotapp-timetracker/', permanent: true },
+      { source: '/products/geotapp-app/:path*',  destination: '/products/geotapp-timetracker/:path*/', permanent: true },
       { source: '/products/geotapp-app/:path*/', destination: '/products/geotapp-timetracker/:path*/', permanent: true },
-      ...['it','en','de','fr','es','pt','nl','da','sv','nb','ru'].flatMap((l) => [
-        { source: `/${l}/products/geotapp-app/`, destination: `/${l}/products/geotapp-timetracker/`, permanent: true },
+      ...ACTIVE_LOCALES.flatMap((l) => [
+        { source: `/${l}/products/geotapp-app`,        destination: `/${l}/products/geotapp-timetracker/`, permanent: true },
+        { source: `/${l}/products/geotapp-app/`,        destination: `/${l}/products/geotapp-timetracker/`, permanent: true },
+        { source: `/${l}/products/geotapp-app/:path*`,  destination: `/${l}/products/geotapp-timetracker/:path*/`, permanent: true },
         { source: `/${l}/products/geotapp-app/:path*/`, destination: `/${l}/products/geotapp-timetracker/:path*/`, permanent: true },
       ]),
     ];
-    return [...localeRedirects, ...appRenames];
+
+    const legacyRedirects = [
+      { source: '/contatti',  destination: '/it/contact/', permanent: true },
+      { source: '/contatti/', destination: '/it/contact/', permanent: true },
+      { source: '/integrations',  destination: '/', permanent: true },
+      { source: '/integrations/', destination: '/', permanent: true },
+      ...ACTIVE_LOCALES.map((l) => ({ source: `/${l}/integrations`,  destination: `/${l}/`, permanent: true })),
+      ...ACTIVE_LOCALES.map((l) => ({ source: `/${l}/integrations/`, destination: `/${l}/`, permanent: true })),
+    ];
+
+    return [
+      ...buildCompoundRedirects(),
+      ...buildRedirects(),
+      ...buildRemovedLocaleRedirects(),
+      ...appRenames,
+      ...legacyRedirects,
+    ];
   },
   async headers() {
     return [
       {
-        // Static assets: cache 1 year (immutable, content-hashed by Next.js)
         source: '/_next/static/(.*)',
-        headers: [
-          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
-        ],
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
       },
       {
-        // Images and fonts
         source: '/(.*\\.(?:png|jpg|jpeg|gif|webp|svg|ico|woff|woff2))',
-        headers: [
-          { key: 'Cache-Control', value: 'public, max-age=86400, stale-while-revalidate=604800' },
-        ],
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=86400, stale-while-revalidate=604800' }],
       },
       {
-        // HTML pages: short TTL with stale-while-revalidate for TTFB
         source: '/((?!api|_next).*)',
-        headers: [
-          { key: 'Cache-Control', value: 'public, max-age=3600, s-maxage=86400, stale-while-revalidate=86400' },
-        ],
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=3600, s-maxage=86400, stale-while-revalidate=86400' }],
       },
-      // Sitemap and robots: must come AFTER the general rule to override it.
-      // Next.js applies all matching header rules in order — last match wins.
-      //
-      // SWR strategy: Cloudflare edge caches sitemaps for 1 h (s-maxage=3600).
-      // After expiry, serves stale while asynchronously re-fetching in background
-      // (stale-while-revalidate=86400). Keeps crawler TTFB <50 ms on all shards.
-      //
-      // NOTE: named path-to-regexp groups (":id(...)") do NOT match "/" by default,
-      // so "/:path(sitemap.xml|sitemap/0.xml)" would NOT match /sitemap/0.xml.
-      // Three separate source rules avoid this limitation entirely.
       {
         source: '/sitemap.xml',
         headers: [{ key: 'Cache-Control', value: 'public, s-maxage=3600, stale-while-revalidate=86400' }],
       },
       {
-        // Sharded sitemap sub-pages: /sitemap/0.xml … /sitemap/11.xml
         source: '/sitemap/:id',
         headers: [{ key: 'Cache-Control', value: 'public, s-maxage=3600, stale-while-revalidate=86400' }],
       },

@@ -463,6 +463,62 @@ export default function GeoTappApp() {
         </div>
       </section>
 
+      {/* DOWNLOAD SECTION */}
+      <section className="container mx-auto mb-24 max-w-4xl px-6">
+        <div className="rounded-[2rem] border border-slate-200 bg-white p-10 text-center shadow-sm">
+          <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-slate-100 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-slate-500">
+            <Smartphone size={12} />
+            {isItalian ? 'App Mobile' : 'Mobile App'}
+          </div>
+          <h2 className="mt-4 text-3xl font-bold text-slate-900">
+            {isItalian ? 'Scarica GeoTapp TimeTracker' : currentLocale === 'de' ? 'GeoTapp TimeTracker herunterladen' : 'Download GeoTapp TimeTracker'}
+          </h2>
+          <p className="mx-auto mt-3 max-w-xl text-lg text-slate-500">
+            {isItalian
+              ? 'Disponibile presto su Google Play e App Store.'
+              : currentLocale === 'de'
+              ? 'Bald verfügbar auf Google Play und dem App Store.'
+              : 'Coming soon on Google Play and the App Store.'}
+          </p>
+          <div className="mt-10 flex flex-col items-center justify-center gap-5 sm:flex-row">
+            {/* Google Play badge */}
+            <div className="flex cursor-not-allowed items-center gap-4 rounded-2xl border-2 border-slate-200 bg-slate-50 px-7 py-4 opacity-60 transition-opacity hover:opacity-75">
+              <svg viewBox="0 0 24 24" className="h-8 w-8 shrink-0" aria-hidden="true">
+                <path d="M3.18 23.76c.3.17.64.24.99.21l13.1-7.57-2.83-2.83-11.26 10.19z" fill="#EA4335"/>
+                <path d="M22.35 10.56l-3.17-1.83-3.18 3.18 3.18 3.18 3.19-1.84a1.83 1.83 0 0 0 0-2.69z" fill="#FBBC04"/>
+                <path d="M3.18.24A1.83 1.83 0 0 0 2.3 1.9v20.2c0 .67.37 1.26.88 1.66L14.17 12 3.18.24z" fill="#4285F4"/>
+                <path d="M4.17 0 16.1 11.93l-2.83 2.83L3.18.24A1.83 1.83 0 0 1 4.17 0z" fill="#34A853"/>
+              </svg>
+              <div className="text-left">
+                <div className="text-xs font-semibold text-slate-500">
+                  {isItalian ? 'Disponibile su' : currentLocale === 'de' ? 'Verfügbar auf' : 'Available on'}
+                </div>
+                <div className="text-lg font-bold text-slate-900 leading-tight">Google Play</div>
+              </div>
+              <span className="ml-2 rounded-full bg-amber-100 px-3 py-1 text-xs font-bold text-amber-700">
+                {isItalian ? 'Presto' : currentLocale === 'de' ? 'Bald' : 'Soon'}
+              </span>
+            </div>
+
+            {/* App Store badge */}
+            <div className="flex cursor-not-allowed items-center gap-4 rounded-2xl border-2 border-slate-200 bg-slate-50 px-7 py-4 opacity-60 transition-opacity hover:opacity-75">
+              <svg viewBox="0 0 24 24" className="h-8 w-8 shrink-0 text-slate-900" fill="currentColor" aria-hidden="true">
+                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98l-.09.06c-.22.15-2.19 1.28-2.17 3.81.03 3.02 2.65 4.03 2.68 4.04l-.06.27zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+              </svg>
+              <div className="text-left">
+                <div className="text-xs font-semibold text-slate-500">
+                  {isItalian ? 'Disponibile su' : currentLocale === 'de' ? 'Verfügbar auf' : 'Available on'}
+                </div>
+                <div className="text-lg font-bold text-slate-900 leading-tight">App Store</div>
+              </div>
+              <span className="ml-2 rounded-full bg-amber-100 px-3 py-1 text-xs font-bold text-amber-700">
+                {isItalian ? 'Presto' : currentLocale === 'de' ? 'Bald' : 'Soon'}
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="container mx-auto mb-24 max-w-7xl px-6">
         <div className="mx-auto mb-14 max-w-3xl text-center">
           <h2 className="text-3xl font-display font-bold text-slate-900 md:text-5xl">

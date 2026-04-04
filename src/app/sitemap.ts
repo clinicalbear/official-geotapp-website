@@ -67,6 +67,12 @@ const ROUTES: RouteEntry[] = [
   { path: '/settori/installatori/risorse/', priority: 0.85, changeFrequency: 'monthly' },
   { path: '/settori/sicurezza/risorse/', priority: 0.85, changeFrequency: 'monthly' },
 
+  // Confronto competitor (BOFU — pagine comparazione ad alta intenzione d'acquisto)
+  { path: '/confronto/', priority: 0.75, changeFrequency: 'monthly' },
+  { path: '/confronto/geotapp-vs-connecteam/', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/confronto/geotapp-vs-clockify/', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/confronto/geotapp-vs-hubstaff/', priority: 0.8, changeFrequency: 'monthly' },
+
   // Blog index
   { path: '/blog/', priority: 0.85, changeFrequency: 'daily' },
 

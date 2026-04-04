@@ -32,6 +32,10 @@ const PRIORITY_URLS = [
   `${BASE_URL}/settori/pulizie`,
   `${BASE_URL}/settori/installatori`,
   `${BASE_URL}/settori/sicurezza`,
+  // Competitor comparison pages (BOFU)
+  ...SUPPORTED_LOCALES.map((l) => `${BASE_URL}/${l}/confronto/geotapp-vs-connecteam/`),
+  ...SUPPORTED_LOCALES.map((l) => `${BASE_URL}/${l}/confronto/geotapp-vs-clockify/`),
+  ...SUPPORTED_LOCALES.map((l) => `${BASE_URL}/${l}/confronto/geotapp-vs-hubstaff/`),
 ];
 
 async function pingGoogle() {

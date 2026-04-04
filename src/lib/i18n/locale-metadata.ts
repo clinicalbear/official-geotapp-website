@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { SUPPORTED_LOCALES } from './config';
-import { translateSlug } from './slug-map';
+import { translatePath } from './slug-map';
 import type { AppLocale } from './config';
 
 const BASE = 'https://geotapp.com';
@@ -14,14 +14,6 @@ const HREFLANG: Record<string, string> = {
   it: 'it-IT',
   en: 'en',
   de: 'de-DE',
-  fr: 'fr-FR',
-  es: 'es-ES',
-  pt: 'pt-PT',
-  nl: 'nl-NL',
-  da: 'da-DK',
-  nb: 'nb-NO',
-  sv: 'sv-SE',
-  ru: 'ru-RU',
 };
 
 /**
@@ -29,40 +21,30 @@ const HREFLANG: Record<string, string> = {
  * Use inside generateMetadata({ params }) in every [locale]/* wrapper page.
  *
  * @param locale  The resolved locale (e.g. 'da', 'it', 'en')
- * @param path    The path WITHOUT locale prefix (e.g. '/contact', '/pricing')
+ * @param path    The path WITHOUT locale prefix (e.g. '/contact/', '/settori/pulizie/')
+ *
+ * All path segments are translated independently using translatePath(), so
+ * compound paths like '/settori/pulizie/' produce fully-localised hreflang URLs
+ * (e.g. /en/sectors/cleaning/, /de/branchen/reinigung/) instead of partially-
+ * translated ones (e.g. /en/sectors/pulizie/) that trigger a redirect chain.
  */
 export function buildLocaleAlternates(
   locale: string,
   path: string,
 ): Metadata['alternates'] {
-  // path e.g. '/chi-siamo/' — extract the canonical slug (first segment)
-  const segments = path.split('/').filter(Boolean);
-  const canonicalSlug = segments[0] ?? '';
-  const restPath = segments.slice(1).join('/');
-
   const languages = Object.fromEntries(
     SUPPORTED_LOCALES.map((l) => {
-      const translatedSlug = translateSlug(canonicalSlug, l as AppLocale);
-      const localizedPath = restPath
-        ? `/${translatedSlug}/${restPath}/`
-        : `/${translatedSlug}/`;
+      const localizedPath = translatePath(path, l as AppLocale);
       return [HREFLANG[l] ?? l, `${BASE}/${l}${localizedPath}`];
     }),
   ) as Record<string, string>;
 
   // x-default: English path — /en/ is a real page with no redirect.
   // The bare canonical path (e.g. /chi-siamo/) triggers a 308 → /it/ leaking link equity.
-  const enSlug = translateSlug(canonicalSlug, 'en');
-  const enPath = restPath ? `/${enSlug}/${restPath}/` : `/${enSlug}/`;
-  languages['x-default'] = `${BASE}/en${enPath}`;
-
-  const currentTranslatedSlug = translateSlug(canonicalSlug, locale as AppLocale);
-  const currentPath = restPath
-    ? `/${currentTranslatedSlug}/${restPath}/`
-    : `/${currentTranslatedSlug}/`;
+  languages['x-default'] = `${BASE}/en${translatePath(path, 'en')}`;
 
   return {
-    canonical: `${BASE}/${locale}${currentPath}`,
+    canonical: `${BASE}/${locale}${translatePath(path, locale as AppLocale)}`,
     languages,
   };
 }

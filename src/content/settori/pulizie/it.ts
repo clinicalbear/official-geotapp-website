@@ -145,7 +145,7 @@ const content: SettoreContent = {
   },
 
   features: {
-    title: 'Meno contestazioni. Più controllo. Report difendibili.',
+    title: 'App per imprese di pulizie: meno contestazioni, più controllo.',
     items: [
       {
         title: 'Zero contestazioni scritte',

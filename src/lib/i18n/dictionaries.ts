@@ -2,15 +2,7 @@
 
 import enDict from '@/dictionaries/en.json';
 import itDict from '@/dictionaries/it.json';
-import frDict from '@/dictionaries/fr.json';
 import deDict from '@/dictionaries/de.json';
-import esDict from '@/dictionaries/es.json';
-import ptDict from '@/dictionaries/pt.json';
-import nlDict from '@/dictionaries/nl.json';
-import svDict from '@/dictionaries/sv.json';
-import daDict from '@/dictionaries/da.json';
-import nbDict from '@/dictionaries/nb.json';
-import ruDict from '@/dictionaries/ru.json';
 import { DEFAULT_LOCALE, type AppLocale } from './config';
 
 export type SiteDictionary = typeof enDict;
@@ -56,15 +48,7 @@ const DICTIONARIES: Record<AppLocale, SiteDictionary> = {
   // Keep all locales explicit to ensure compile-time key coverage.
   it: itDict,
   en: enDict,
-  fr: frDict,
   de: deDict,
-  es: esDict,
-  pt: ptDict,
-  nl: nlDict,
-  sv: svDict,
-  da: daDict,
-  nb: nbDict,
-  ru: ruDict,
 };
 
 export function getDictionary(locale?: AppLocale | null): SiteDictionary {

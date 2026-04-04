@@ -48,8 +48,62 @@ const content: SettoreContent = {
       },
     ],
   },
+  differenza: {
+    title: 'App per installatori: timbratura o certificazione?',
+    subtitle: 'La maggior parte delle app registra l\'orario. GeoTapp produce prove verificabili.',
+    rows: [
+      {
+        label: 'Cosa registra',
+        competitor: 'Orario di entrata/uscita',
+        geotapp: 'Orario + GPS verificato + foto + attività svolta',
+      },
+      {
+        label: 'Chi può verificare',
+        competitor: 'Solo il tuo ufficio',
+        geotapp: 'Tu, il committente, un ente terzo — in autonomia',
+      },
+      {
+        label: 'In caso di contestazione',
+        competitor: 'Dato non difendibile',
+        geotapp: 'Report sigillato, non alterabile',
+      },
+      {
+        label: 'Rapportino intervento',
+        competitor: 'Manuale o assente',
+        geotapp: 'Generato automaticamente con GPS e foto',
+      },
+      {
+        label: 'Conformità GDPR',
+        competitor: 'Spesso da verificare',
+        geotapp: 'Conforme per design, modulistica inclusa',
+      },
+    ],
+  },
+
+  prima_dopo: {
+    title: 'Cosa succede adesso. Cosa succede con GeoTapp.',
+    prima: [
+      'Il cliente nega l\'ora o l\'intervento eseguito.',
+      'Il tecnico dice "l\'ho fatto". Il cliente dice "non risulta".',
+      'Non hai nulla in mano. La discussione dura giorni.',
+      'A volte perdi il pagamento. Sempre perdi tempo.',
+    ],
+    dopo: [
+      'Il cliente nega l\'ora o l\'intervento eseguito.',
+      'Apri il report: foto, GPS, orario, firma digitale.',
+      'Glielo mandi. La discussione finisce in un minuto.',
+      'Il pagamento è al sicuro. Il tecnico è tutelato.',
+    ],
+  },
+
+  scenario: {
+    title: 'Caso reale',
+    body: 'Il cliente contesta l\'ora di fine lavoro e chiede uno sconto sulla fattura. Con GeoTapp apri il report dell\'intervento: foto dell\'impianto completato, orario GPS verificato, durata calcolata automaticamente — tutto generato dallo smartphone del tecnico al momento del lavoro.',
+    resolution: 'La contestazione cade. La fattura viene pagata per intero.',
+  },
+
   features: {
-    title: 'Quello che ottieni',
+    title: 'App per installatori ed elettricisti: rapportini GPS e prove fotografiche.',
     items: [
       {
         title: 'Timbratura GPS verificabile',
@@ -63,7 +117,31 @@ const content: SettoreContent = {
         title: 'Export per la paga',
         desc: 'Esporta presenze mensili compatibili con Zucchetti, INAZ, TeamSystem. L\'elaborazione paghe diventa un\'operazione di 10 minuti.',
       },
+      {
+        title: 'Gestione commesse multi-cantiere',
+        desc: 'Assegna commesse, monitora l\'avanzamento di ogni cantiere e ricevi alert automatici se un intervento non viene aperto o chiuso nei tempi previsti.',
+      },
+      {
+        title: 'Rapportini digitali automatici',
+        desc: 'A fine intervento il rapportino è già pronto: ore, foto, note e firma. Niente carta, niente chiamate. Il tecnico lo invia al cliente direttamente dall\'app.',
+      },
+      {
+        title: 'I tuoi tecnici sono protetti',
+        desc: 'Un report verificabile protegge il tecnico da accuse infondate. Chi lavora bene lo dimostra con i dati. Nessuna zona grigia tra campo e ufficio.',
+      },
     ],
+  },
+
+  cta_mid: {
+    title: 'Vuoi vedere come funziona su un intervento reale?',
+    body: 'Ti mostriamo il flusso completo: dall\'apertura commessa al rapportino che riceve il cliente. In 20 minuti capisci se fa per te — senza impegno.',
+    cta: 'Richiedi una Demo',
+  },
+
+  trust: {
+    title: 'I nostri report non si possono alterare. Non da te. Non da noi.',
+    body: 'I report GeoTapp sono generati dal sistema nel momento dell\'intervento. Non esiste un pannello dove "correggere" un orario o spostare una foto. Il dato è quello — firmato digitalmente, con GPS reale. Quando lo mostri a un cliente o a un avvocato, regge.',
+    badge: 'Verificabile da chiunque — senza accesso al tuo account',
   },
   testimonial: {
     quote: 'Prima passavamo ore a raccogliere i fogli dal campo. Ora il rapportino è già pronto quando il tecnico torna al furgone.',

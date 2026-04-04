@@ -9,8 +9,8 @@
     "pages:build": "npm run build:web",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "npm run build && wrangler deploy -c wrangler.jsonc && node scripts/ping-search-engines.mjs",
-    "deploy:linux": "npm run build && wrangler deploy -c wrangler.jsonc && node scripts/ping-search-engines.mjs",
+    "deploy": "npm run build && node scripts/inject-scheduled-handler.mjs && wrangler deploy -c wrangler.jsonc && node scripts/ping-search-engines.mjs",
+    "deploy:linux": "npm run build && node scripts/inject-scheduled-handler.mjs && wrangler deploy -c wrangler.jsonc && node scripts/ping-search-engines.mjs",
     "ping": "node scripts/ping-search-engines.mjs"
   },
   "dependencies": {

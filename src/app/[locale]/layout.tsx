@@ -405,6 +405,30 @@ export default async function LocaleLayout({ children, params }: Props) {
             }),
           }}
         />
+        {/* ── WebSite schema ────────────────────────────────────────────────
+            Enables Sitelinks Search Box in SERP. target points to the blog
+            WP search endpoint which is the only working search on the site. */}
+        <script
+          id="schema-website"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'WebSite',
+              '@id': 'https://geotapp.com/#website',
+              name: 'GeoTapp',
+              url: 'https://geotapp.com',
+              potentialAction: {
+                '@type': 'SearchAction',
+                target: {
+                  '@type': 'EntryPoint',
+                  urlTemplate: 'https://geotapp.com/blog/?s={search_term_string}',
+                },
+                'query-input': 'required name=search_term_string',
+              },
+            }),
+          }}
+        />
         {/* FAQPage schema moved to [locale]/page.tsx (server component) so it
             renders only on the homepage, not on every sub-page under [locale]/.
             Previously injected here it bled to settori pages causing duplicate

@@ -18,6 +18,7 @@ L'admin sarà disponibile su: **http://localhost:1337/admin**
 ## 3️⃣ Primo Accesso - Crea Admin User
 
 Strapi chiederà di creare un primo utente admin:
+
 - **Email**: admin@geotapp.com
 - **Password**: (crea una password forte e memorizzala!)
 - **Nome**: Admin GeoTapp
@@ -27,6 +28,7 @@ Strapi chiederà di creare un primo utente admin:
 Nel Strapi Admin, crea i seguenti content types:
 
 ### Page
+
 - **title** (String, required)
 - **slug** (String, unique, required)
 - **description** (String)
@@ -36,6 +38,7 @@ Nel Strapi Admin, crea i seguenti content types:
 - **seoDescription** (String)
 
 ### BlogPost
+
 - **title** (String, required)
 - **slug** (String, unique, required)
 - **excerpt** (Text)
@@ -46,6 +49,7 @@ Nel Strapi Admin, crea i seguenti content types:
 - **featuredImage** (Media)
 
 ### Settings
+
 - **siteName** (String)
 - **siteDescription** (String)
 - **googleAnalyticsId** (String)
@@ -75,6 +79,7 @@ GET  /api/settings
 ## 6️⃣ Configurare Permessi Pubblici
 
 Nel Strapi Admin:
+
 1. Vai a **Settings → Roles & Permissions**
 2. Seleziona **Public** role
 3. Abilita:
@@ -85,6 +90,7 @@ Nel Strapi Admin:
 ## 7️⃣ Aggiungere Dati di Esempio
 
 Nel Strapi Admin, crea:
+
 - 3-4 Pages (Home, Features, Chi Siamo, etc)
 - 3-5 Blog Posts
 - 1 Settings entry con dati sito
