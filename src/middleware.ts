@@ -630,6 +630,14 @@ export async function middleware(req: NextRequest) {
     return staticResponse;
   }
 
+  // 2b. /links — Instagram link-in-bio utility page. Locale-agnostic: bypass
+  // locale detection and serve the page directly without locale prefix redirect.
+  if (pathname === '/links' || pathname === '/links/') {
+    const response = NextResponse.next();
+    applySecurityHeaders(response);
+    return response;
+  }
+
   const pathnameLocale = getLocaleFromPathname(pathname);
   if (pathnameLocale) {
     // Locale-prefixed blog paths → strip locale and redirect to /blog/* for WordPress proxy.
