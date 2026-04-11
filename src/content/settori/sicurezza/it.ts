@@ -3,7 +3,7 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'Software per Aziende di Sicurezza | GeoTapp — Certifica ogni turno',
-    description: 'GeoTapp è il software per aziende di sicurezza e vigilanza privata: turni certificati con GPS, ronde documentate e prove fotografiche non alterabili. Conforme GDPR. Prova gratis.',
+    description: 'GeoTapp è il software per aziende di sicurezza e vigilanza privata: turni GPS certificati, ronde documentate e prove fotografiche non alterabili. Conforme GDPR. Prova gratis.',
   },
   hero: {
     badge: 'Software per Vigilanza Privata, Guardie Giurate e Steward',
