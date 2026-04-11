@@ -103,6 +103,20 @@ export default function SettorePageLayout({ content, locale, settore }: Props) {
               acceptedAnswer: { '@type': 'Answer', text: answer },
             })),
           }} />
+          <JsonLd data={{
+            '@context': 'https://schema.org',
+            '@type': 'SoftwareApplication',
+            name: 'GeoTapp',
+            operatingSystem: 'Android, iOS, Web',
+            applicationCategory: 'BusinessApplication',
+            offers: {
+              '@type': 'Offer',
+              price: '2',
+              priceCurrency: 'EUR',
+              description: 'Piano TimeTracker da 2 €/operatore/mese. Piano gratuito disponibile.',
+            },
+            url: `https://geotapp.com/${locale}/settori/${settore}/`,
+          }} />
         </>
       )}
 
