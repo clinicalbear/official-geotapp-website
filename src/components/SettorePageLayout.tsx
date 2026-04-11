@@ -150,6 +150,15 @@ export default function SettorePageLayout({ content, locale, settore }: Props) {
               >
                 {RISORSE_LABELS[locale] ?? RISORSE_LABELS['en']}
               </Link>
+              {content.pricing_hint && (
+                <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm text-slate-700 shadow-sm">
+                  <span className="text-slate-500">{content.pricing_hint.label}</span>
+                  <span className={`font-bold ${colors.accent}`}>{content.pricing_hint.price}</span>
+                  <span className="text-slate-500">{content.pricing_hint.per}</span>
+                  <span className="mx-1 text-slate-300">·</span>
+                  <span className="text-slate-400">{content.pricing_hint.note}</span>
+                </div>
+              )}
             </div>
 
             {/* Feature preview card */}
