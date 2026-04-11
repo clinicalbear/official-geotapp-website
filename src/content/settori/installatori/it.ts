@@ -2,14 +2,14 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App Installatori ed Elettricisti | GeoTapp — Certifica',
-    description: 'GeoTapp è l\'app per installatori, elettricisti e idraulici che certifica ogni intervento: report con GPS e foto, prove difendibili verso il cliente. Prova gratis.',
+    title: 'App per Installatori ed Elettricisti | GeoTapp — Rapportini GPS',
+    description: 'GeoTapp è l\'app e software per installatori, elettricisti e idraulici: rapportini GPS, prove fotografiche e report non alterabili. Prova gratis.',
   },
   hero: {
     badge: 'Software per Installatori, Elettricisti, Idraulici e Manutentori',
     h1_line1: 'Software per installatori e manutentori:',
     h1_line2: 'interventi, rapportini e ore più chiare',
-    subtitle: 'GeoTapp unisce Flow + TimeTracker per chi lavora tra furgoni, cantieri e clienti finali. Le app Android e iOS aiutano il tecnico sul campo; l\'ufficio vede commessa, tempi, prove fotografiche e note senza rincorrere nessuno.',
+    subtitle: 'GeoTapp unisce Flow + TimeTracker per chi lavora tra furgoni, cantieri e clienti finali. Le app Android e iOS aiutano il tecnico sul campo; l\'ufficio vede commessa, tempi, prove fotografiche e note senza rincorrere nessuno. Il software di gestione interventi per installatori che lavora mentre sei sul campo.',
     cta_primary: 'Richiedi una Demo',
     cta_note: 'Nessun vincolo. Risposta entro 12 ore lavorative.',
   },
@@ -172,11 +172,18 @@ const content: SettoreContent = {
     primary: 'Richiedi una Demo',
     secondary: 'Vedi i Prezzi',
   },
+  pricing_hint: {
+    label: 'A partire da',
+    price: '2 €',
+    per: 'operatore/mese',
+    note: 'Piano gratuito disponibile',
+  },
+
   schema_sector_name: 'Installatori',
   schema_faq: [
     {
       question: 'GeoTapp funziona per elettricisti e idraulici in mobilità?',
-      answer: 'Sì. L\'app mobile GeoTapp TimeTracker è pensata per tecnici e installatori che lavorano su cantieri e abitazioni private. Registrano interventi, foto e ore direttamente dallo smartphone, senza tornare in ufficio.',
+      answer: 'Sì. GeoTapp è l\'app per installatori ed elettricisti pensata per chi lavora su cantieri e abitazioni private. Con il software per gestione rapportini integrato, i tecnici registrano interventi, foto e ore direttamente dallo smartphone — senza tornare in ufficio.',
     },
     {
       question: 'Come certifico un intervento di manutenzione o installazione?',

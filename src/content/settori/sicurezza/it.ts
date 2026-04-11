@@ -3,13 +3,13 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'Software per Aziende di Sicurezza | GeoTapp — Certifica ogni turno',
-    description: 'GeoTapp è il software per aziende di sicurezza che certifica ogni turno: presenze GPS verificate, ronde documentate e prove fotografiche. Conforme GDPR. Prova gratis.',
+    description: 'GeoTapp è il software per aziende di sicurezza e vigilanza privata: turni certificati con GPS, ronde documentate e prove fotografiche non alterabili. Conforme GDPR. Prova gratis.',
   },
   hero: {
     badge: 'Software per Vigilanza Privata, Guardie Giurate e Steward',
     h1_line1: 'Presenze e turni verificabili',
     h1_line2: 'per vigilanza e sicurezza privata',
-    subtitle: 'GeoTapp Flow e TimeTracker documentano la presenza delle guardie giurate ai posti assegnati con GPS verificato e timestamp immutabili. Conformità al CCNL Vigilanza Privata GPG, passaggio di consegne digitale e tracciamento qualifiche: tutto in un\'unica piattaforma.',
+    subtitle: 'GeoTapp Flow e TimeTracker documentano la presenza delle guardie giurate ai posti assegnati con GPS verificato e timestamp immutabili. Conformità al CCNL Vigilanza Privata GPG, passaggio di consegne digitale e tracciamento qualifiche: tutto in un\'unica piattaforma. L\'app per vigilanza privata che certifica ogni turno, ogni ronda, ogni presenza.',
     cta_primary: 'Richiedi una Demo',
     cta_note: 'Nessun vincolo. Risposta entro 12 ore lavorative.',
   },
@@ -172,6 +172,13 @@ const content: SettoreContent = {
     primary: 'Richiedi una Demo',
     secondary: 'Vedi i Prezzi',
   },
+  pricing_hint: {
+    label: 'A partire da',
+    price: '2 €',
+    per: 'operatore/mese',
+    note: 'Piano gratuito disponibile',
+  },
+
   schema_sector_name: 'Vigilanza Privata',
   schema_faq: [
     {

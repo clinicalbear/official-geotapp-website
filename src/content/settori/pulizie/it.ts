@@ -2,8 +2,8 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App per imprese di pulizie | GeoTapp — Certifica ogni intervento',
-    description: 'Contestazioni, operatori non verificabili, report che non bastano. GeoTapp certifica ogni intervento con GPS reale, foto e report non alterabili. Conforme CCNL e GDPR.',
+    title: 'App e software per imprese di pulizie | GeoTapp — Certifica ogni intervento',
+    description: 'GeoTapp è l\'app e il software per la gestione delle imprese di pulizie: GPS, presenze, report non alterabili. Conforme CCNL e GDPR. Prova gratis.',
   },
 
   hero: {
@@ -11,7 +11,7 @@ const content: SettoreContent = {
     h1_line1: 'La tua impresa di pulizie ha lavorato.',
     h1_line2: 'Adesso dimostralo.',
     subtitle:
-      'I clienti contestano. Gli operatori non sono verificabili. I report non bastano mai. GeoTapp certifica ogni intervento con GPS reale, prove fotografiche e report non alterabili — che il committente può verificare da solo.',
+      'I clienti contestano. Gli operatori non sono verificabili. I report non bastano mai. GeoTapp certifica ogni intervento con GPS reale, prove fotografiche e report non alterabili — che il committente può verificare da solo. Il software di gestione pulizie che fa il lavoro sporco per te.',
     cta_primary: 'Vedi come funziona su un caso reale',
     cta_note: 'Nessun vincolo. Risposta entro 12 ore lavorative.',
   },
@@ -260,12 +260,19 @@ const content: SettoreContent = {
     secondary: 'Vedi i Prezzi',
   },
 
+  pricing_hint: {
+    label: 'A partire da',
+    price: '2 €',
+    per: 'operatore/mese',
+    note: 'Piano gratuito disponibile',
+  },
+
   schema_sector_name: 'Imprese di Pulizie',
 
   schema_faq: [
     {
       question: "GeoTapp è solo un'app di timbratura per imprese di pulizie?",
-      answer: 'No. GeoTapp è un sistema di certificazione del lavoro: report sigillati con GPS verificato, foto e timestamp verificabili autonomamente dal committente. Non un\'app di timbratura.',
+      answer: 'No. GeoTapp è l\'app e software per imprese di pulizie e multiservizi che va oltre la timbratura: produce report sigillati con GPS verificato, foto e timestamp verificabili autonomamente dal committente — non un semplice registro orari.',
     },
     {
       question: 'È compatibile con il CCNL Multiservizi?',
