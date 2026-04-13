@@ -82,8 +82,8 @@ const FLOW_FAQ: Record<string, object> = {
 };
 
 const FLOW_SOFTWARE: Record<string, object> = {
-  it: { '@context': 'https://schema.org', '@type': 'SoftwareApplication', name: 'GeoTapp Flow', operatingSystem: 'Web', applicationCategory: 'BusinessApplication', offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR', description: 'Piano gratuito disponibile. Piani a pagamento da pochi euro per operatore/mese.' }, url: 'https://geotapp.com/it/products/geotapp-flow/' },
-  en: { '@context': 'https://schema.org', '@type': 'SoftwareApplication', name: 'GeoTapp Flow', operatingSystem: 'Web', applicationCategory: 'BusinessApplication', offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR', description: 'Free plan available. Paid plans from a few euros per operator/month.' }, url: 'https://geotapp.com/en/products/geotapp-flow/' },
+  it: { '@context': 'https://schema.org', '@type': 'SoftwareApplication', name: 'GeoTapp Flow', operatingSystem: 'Web', applicationCategory: 'BusinessApplication', offers: { '@type': 'Offer', price: '39', priceCurrency: 'EUR', description: 'Prova gratuita 14 giorni. Piani a pagamento da 39€/mese (Flow Start).' }, url: 'https://geotapp.com/it/products/geotapp-flow/' },
+  en: { '@context': 'https://schema.org', '@type': 'SoftwareApplication', name: 'GeoTapp Flow', operatingSystem: 'Web', applicationCategory: 'BusinessApplication', offers: { '@type': 'Offer', price: '39', priceCurrency: 'EUR', description: '14-day free trial. Paid plans from €39/month (Flow Start).' }, url: 'https://geotapp.com/en/products/geotapp-flow/' },
 };
 
 type Props = { params: Promise<{ locale: string }> };

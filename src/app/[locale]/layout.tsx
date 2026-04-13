@@ -42,7 +42,7 @@ const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
       'GDPR compliant — nessun tracciamento continuo',
       'App mobile Android e iOS (Flutter)',
     ],
-    offersDescription: 'Piano base gratuito, piani premium con abbonamento mensile via Stripe',
+    offersDescription: 'Prova gratuita 14 giorni, piani a pagamento da 3€/operatore/mese via Stripe',
   },
   en: {
     description:
@@ -57,7 +57,7 @@ const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
       'GDPR compliant — no continuous tracking',
       'Mobile app for Android and iOS (Flutter)',
     ],
-    offersDescription: 'Free basic plan, premium plans with monthly subscription via Stripe',
+    offersDescription: '14-day free trial, paid plans from €3/operator/month via Stripe',
   },
   de: {
     description:
@@ -72,7 +72,7 @@ const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
       'DSGVO-konform — keine kontinuierliche Verfolgung',
       'Mobile App für Android und iOS (Flutter)',
     ],
-    offersDescription: 'Kostenloser Basisplan, Premium-Pläne mit monatlichem Abonnement via Stripe',
+    offersDescription: '14-tägige kostenlose Testphase, kostenpflichtige Pläne ab 3€/Nutzer/Monat via Stripe',
   },
   fr: {
     description:
@@ -87,7 +87,7 @@ const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
       'Conforme RGPD — pas de suivi continu',
       'Application mobile Android et iOS (Flutter)',
     ],
-    offersDescription: 'Plan de base gratuit, plans premium avec abonnement mensuel via Stripe',
+    offersDescription: 'Essai gratuit 14 jours, plans payants à partir de 3€/opérateur/mois via Stripe',
   },
   es: {
     description:
@@ -102,7 +102,7 @@ const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
       'Conforme RGPD — sin seguimiento continuo',
       'App móvil para Android e iOS (Flutter)',
     ],
-    offersDescription: 'Plan básico gratuito, planes premium con suscripción mensual via Stripe',
+    offersDescription: 'Prueba gratuita 14 días, planes de pago desde 3€/operador/mes via Stripe',
   },
   pt: {
     description:
@@ -117,7 +117,7 @@ const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
       'Conforme RGPD — sem rastreamento contínuo',
       'App móvel para Android e iOS (Flutter)',
     ],
-    offersDescription: 'Plano básico gratuito, planos premium com subscrição mensal via Stripe',
+    offersDescription: 'Avaliação gratuita 14 dias, planos pagos a partir de 3€/operador/mês via Stripe',
   },
   nl: {
     description:
@@ -132,7 +132,7 @@ const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
       'AVG-conform — geen continue tracking',
       'Mobiele app voor Android en iOS (Flutter)',
     ],
-    offersDescription: 'Gratis basisplan, premium plannen met maandelijks abonnement via Stripe',
+    offersDescription: '14 dagen gratis proberen, betaalde plannen vanaf 3€/gebruiker/maand via Stripe',
   },
   ru: {
     description:
@@ -147,7 +147,7 @@ const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
       'Соответствие GDPR — без непрерывного отслеживания',
       'Мобильное приложение для Android и iOS (Flutter)',
     ],
-    offersDescription: 'Бесплатный базовый план, премиум-планы с ежемесячной подпиской через Stripe',
+    offersDescription: 'Бесплатный пробный период 14 дней, платные планы от 3€/оператор/месяц через Stripe',
   },
   da: {
     description:
@@ -162,7 +162,7 @@ const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
       'GDPR-kompatibel — ingen kontinuerlig sporing',
       'Mobilapp til Android og iOS (Flutter)',
     ],
-    offersDescription: 'Gratis basisplan, premium-planer med månedligt abonnement via Stripe',
+    offersDescription: '14 dages gratis prøveperiode, betalte planer fra 3€/bruger/måned via Stripe',
   },
   sv: {
     description:
@@ -177,7 +177,7 @@ const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
       'GDPR-kompatibel — ingen kontinuerlig spårning',
       'Mobilapp för Android och iOS (Flutter)',
     ],
-    offersDescription: 'Gratis basplan, premiumplaner med månadsabonnemang via Stripe',
+    offersDescription: '14 dagars gratis provperiod, betalda planer från 3€/användare/månad via Stripe',
   },
   nb: {
     description:
@@ -192,7 +192,7 @@ const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
       'GDPR-kompatibel — ingen kontinuerlig sporing',
       'Mobilapp for Android og iOS (Flutter)',
     ],
-    offersDescription: 'Gratis basisplan, premiumplaner med månedlig abonnement via Stripe',
+    offersDescription: '14 dagers gratis prøveperiode, betalte planer fra 3€/bruker/måned via Stripe',
   },
 };
 
@@ -293,6 +293,7 @@ export default async function LocaleLayout({ children, params }: Props) {
                 'https://www.linkedin.com/company/110850300/',
                 'https://www.facebook.com/profile.php?id=61583303732388',
                 'https://www.instagram.com/geotapp_official/',
+                'https://t.me/geotapp',
               ],
               address: {
                 '@type': 'PostalAddress',
@@ -401,6 +402,7 @@ export default async function LocaleLayout({ children, params }: Props) {
                 'https://www.linkedin.com/company/110850300/',
                 'https://www.facebook.com/profile.php?id=61583303732388',
                 'https://www.instagram.com/geotapp_official/',
+                'https://t.me/geotapp',
               ],
             }),
           }}

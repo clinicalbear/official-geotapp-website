@@ -262,9 +262,9 @@ const content: SettoreContent = {
 
   pricing_hint: {
     label: 'A partire da',
-    price: '2 €',
+    price: '3 €',
     per: 'operatore/mese',
-    note: 'Piano gratuito disponibile',
+    note: 'Prova gratuita 14 giorni',
   },
 
   schema_sector_name: 'Imprese di Pulizie',

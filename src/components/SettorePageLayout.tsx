@@ -111,9 +111,9 @@ export default function SettorePageLayout({ content, locale, settore }: Props) {
             applicationCategory: 'BusinessApplication',
             offers: {
               '@type': 'Offer',
-              price: '2',
+              price: '3',
               priceCurrency: 'EUR',
-              description: 'Piano TimeTracker da 2 €/operatore/mese. Piano gratuito disponibile.',
+              description: 'Piano TimeTracker da 3 €/operatore/mese. Prova gratuita 14 giorni.',
             },
             url: `https://geotapp.com/${locale}/settori/${settore}/`,
           }} />

@@ -163,13 +163,13 @@ export default async function GeoTappVsClockifyPage({ params }: { params: Promis
                       <td className="py-3 px-4 text-sm text-text-secondary">{row.feature}</td>
                       <td className="py-3 px-4 text-center">
                         {row.geotapp
-                          ? <span className="text-green-400 font-bold text-lg">✓</span>
-                          : <span className="text-text-secondary/40 text-lg">—</span>}
+                          ? <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-green-500 text-white font-black text-base">✓</span>
+                          : <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-slate-600/40 text-slate-400 font-bold text-base">✕</span>}
                       </td>
                       <td className="py-3 px-4 text-center">
                         {row.competitor
-                          ? <span className="text-green-400 font-bold text-lg">✓</span>
-                          : <span className="text-text-secondary/40 text-lg">—</span>}
+                          ? <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-green-500 text-white font-black text-base">✓</span>
+                          : <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-slate-600/40 text-slate-400 font-bold text-base">✕</span>}
                       </td>
                     </tr>
                   ))}

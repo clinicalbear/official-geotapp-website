@@ -82,9 +82,9 @@ export interface SettoreContent {
   };
   pricing_hint?: {
     label: string;     // e.g. "A partire da"
-    price: string;     // e.g. "2 €"
+    price: string;     // e.g. "3 €"
     per: string;       // e.g. "operatore/mese"
-    note: string;      // e.g. "Piano gratuito disponibile"
+    note: string;      // e.g. "Prova gratuita 14 giorni"
   };
   schema_sector_name: string;
   schema_faq?: Array<{

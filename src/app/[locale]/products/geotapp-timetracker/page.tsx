@@ -82,8 +82,8 @@ const APP_FAQ: Record<string, object> = {
 };
 
 const APP_SOFTWARE: Record<string, object> = {
-  it: { '@context': 'https://schema.org', '@type': 'SoftwareApplication', name: 'GeoTapp TimeTracker', operatingSystem: 'Android, iOS', applicationCategory: 'BusinessApplication', offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR', description: 'Piano gratuito disponibile. Piani a pagamento da pochi euro per operatore/mese.' }, url: 'https://geotapp.com/it/products/geotapp-timetracker/' },
-  en: { '@context': 'https://schema.org', '@type': 'SoftwareApplication', name: 'GeoTapp TimeTracker', operatingSystem: 'Android, iOS', applicationCategory: 'BusinessApplication', offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR', description: 'Free plan available. Paid plans from a few euros per operator/month.' }, url: 'https://geotapp.com/en/products/geotapp-timetracker/' },
+  it: { '@context': 'https://schema.org', '@type': 'SoftwareApplication', name: 'GeoTapp TimeTracker', operatingSystem: 'Android, iOS', applicationCategory: 'BusinessApplication', offers: { '@type': 'Offer', price: '3', priceCurrency: 'EUR', description: 'Prova gratuita 14 giorni. Piani a pagamento da 3€/operatore/mese.' }, url: 'https://geotapp.com/it/products/geotapp-timetracker/' },
+  en: { '@context': 'https://schema.org', '@type': 'SoftwareApplication', name: 'GeoTapp TimeTracker', operatingSystem: 'Android, iOS', applicationCategory: 'BusinessApplication', offers: { '@type': 'Offer', price: '3', priceCurrency: 'EUR', description: '14-day free trial. Paid plans from €3/operator/month.' }, url: 'https://geotapp.com/en/products/geotapp-timetracker/' },
 };
 
 type Props = { params: Promise<{ locale: string }> };
