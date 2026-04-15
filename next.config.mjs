@@ -123,6 +123,15 @@ const nextConfig = {
   async redirects() {
     const ACTIVE_LOCALES = ['it', 'en', 'de'];
 
+    const demoToTrialRedirects = [
+      { source: '/demo',   destination: '/trial/', permanent: true },
+      { source: '/demo/',  destination: '/trial/', permanent: true },
+      ...['it', 'en', 'de'].flatMap(locale => [
+        { source: `/${locale}/demo`,   destination: `/${locale}/trial/`, permanent: true },
+        { source: `/${locale}/demo/`,  destination: `/${locale}/trial/`, permanent: true },
+      ]),
+    ];
+
     const appRenames = [
       { source: '/products/geotapp-app',        destination: '/products/geotapp-timetracker/', permanent: true },
       { source: '/products/geotapp-app/',        destination: '/products/geotapp-timetracker/', permanent: true },
@@ -146,6 +155,7 @@ const nextConfig = {
     ];
 
     return [
+      ...demoToTrialRedirects,
       ...buildCompoundRedirects(),
       ...buildRedirects(),
       ...buildRemovedLocaleRedirects(),
