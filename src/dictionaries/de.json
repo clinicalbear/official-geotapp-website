@@ -5,7 +5,7 @@
     "blog": "Blog",
     "contact": "Kontakt",
     "login": "Anmelden",
-    "cta": "Demo anfragen",
+    "cta": "Kostenlos testen",
     "sectors": {
       "installatori": "Installateure",
       "sicurezza": "Sicherheitsdienst",
@@ -28,7 +28,7 @@
     "hero_badge": "Die Arbeit war da. Jetzt machen Sie sie beweisbar.",
     "hero_title": "Wenn Sie es nicht beweisen können, sagt der Kunde: Es ist nie passiert.",
     "hero_subtitle": "GeoTapp verwandelt jeden Außendiensteinsatz in objektive Beweise: versiegelte Berichte mit echten GPS-Daten, zeitgestempelte Fotonachweise und Dokumentation, die jeder unabhängig prüfen kann — ohne Vertrauen, ohne Streit.",
-    "hero_cta_primary": "30-Minuten-Demo buchen",
+    "hero_cta_primary": "Kostenlos testen",
     "hero_cta_secondary": "Branchen entdecken",
     "trust_gdpr": "DSGVO-konform",
     "trust_gdpr_desc": "Zeitstempel nur bei An- und Abmeldung",
@@ -40,7 +40,7 @@
     "features_subtitle": "Drei integrierte Werkzeuge: Das Feld erfasst, das Büro kontrolliert, der Kunde verifiziert.",
     "cta_title": "Die Arbeit war da. Jetzt beweisen Sie es.",
     "cta_subtitle": "Unternehmen, die GeoTapp nutzen, verlieren keine undokumentierten Einsätze mehr. Jede Stunde ist verifizierbar. Jeder Bericht ist verteidigbar.",
-    "cta_button": "30-Minuten-Demo buchen",
+    "cta_button": "Kostenlos testen",
     "problem_title": "Das Problem, das du schon kennst",
     "problem_subtitle": "Es ist kein Organisationsproblem. Es ist ein Beweisproblem.",
     "problem_items": [
@@ -207,7 +207,8 @@
               "API",
               "Prioritätssupport",
               "Automatisierungen",
-              "Erweiterte Berichte"
+              "Erweiterte Berichte",
+              "TimeTracker: unbegrenzt*"
             ]
           },
           {
@@ -219,7 +220,8 @@
               "Auftragsverwaltung",
               "Feld-Zeiterfassungen",
               "Operative Berichte",
-              "Integrationen"
+              "Integrationen",
+              "TimeTracker: max. 5 Nutzer*"
             ]
           },
           {
@@ -230,7 +232,8 @@
               "1 Nutzer",
               "Aufgabenverwaltung",
               "Basisberichte",
-              "Grundlegende Integrationen"
+              "Grundlegende Integrationen",
+              "TimeTracker: max. 2 Nutzer*"
             ]
           }
         ]
@@ -311,7 +314,9 @@
       "btn_continue": "Weiter",
       "error_checkout": "Fehler beim Erstellen der Sitzung. Bitte erneut versuchen.",
       "error_connection": "Verbindungsfehler. Bitte erneut versuchen."
-    }
+    },
+    "intro_label": "Einführungspreis 2026",
+    "tracker_footnote": "* Maximale Anzahl gleichzeitig aktivierbarer TimeTracker-Nutzer im Flow-Plan. Das Entfernen des Mitarbeiterzugangs gibt den Platz sofort frei."
   },
   "contact": {
     "title": "Sprechen wir über <span class=\"text-primary\">Ihr Geschäft</span>.",
@@ -533,6 +538,48 @@
   "guida": {
     "page_title": "Benutzerhandbuch",
     "download_pdf": "Herunterladen / Als PDF drucken"
+  },
+  "trial": {
+    "page_title": "14 Tage kostenlos. Keine Kreditkarte.",
+    "page_subtitle": "Vollständiger Zugang zu allen GeoTapp Flow-Modulen für 14 Tage. Keine Kreditkarte, keine Verpflichtung. Jederzeit kündbar.",
+    "badge": "Kostenlose Testphase — 14 Tage",
+    "form_title": "Konto erstellen",
+    "form_company": "Firmenname",
+    "form_company_placeholder": "Z.B. Rossi Installationen GmbH",
+    "form_vat": "Europäische USt-IdNr.",
+    "form_vat_placeholder": "Z.B. DE123456789",
+    "form_email": "Geschäftliche E-Mail",
+    "form_email_placeholder": "Z.B. mario@firma.de",
+    "form_fullname": "Vollständiger Name",
+    "form_fullname_placeholder": "Z.B. Mario Rossi",
+    "form_plan": "Tarif",
+    "plan_solo": "Solo (1 Nutzer)",
+    "plan_team": "Team (bis 5 Nutzer)",
+    "plan_business": "Business (unbegrenzte Nutzer)",
+    "form_seats": "Timetracker-Lizenzen",
+    "form_seats_hint": "Wie viele Außendienstmitarbeiter nutzen die mobile App?",
+    "form_submit": "Kostenlos testen",
+    "form_submitting": "Wird eingerichtet...",
+    "form_privacy": "Ihre Daten werden gemäß unserer",
+    "form_privacy_link": "Datenschutzerklärung",
+    "form_email_hint": "Bitte geschäftliche E-Mail verwenden (kein Gmail, Yahoo usw.)",
+    "success_title": "E-Mail prüfen!",
+    "success_desc": "Wir haben den Aktivierungslink an ",
+    "success_desc2": "Klicken Sie auf den Link, um Ihr Passwort festzulegen und auf Ihren Test zuzugreifen.",
+    "success_spam": "Nicht gefunden? Spam-Ordner prüfen.",
+    "error_message": "Aktivierungsfehler. Bitte erneut versuchen oder an info@geotapp.com schreiben.",
+    "benefits_title": "Was enthalten ist",
+    "benefits": [
+      { "title": "Vollständiger Zugang", "desc": "Alle Module aktiv: CRM, Rechnungsstellung, Teamverwaltung, Kundensupport." },
+      { "title": "Keine Karte erforderlich", "desc": "Nur Firmendaten eingeben. Karte nur hinzufügen, wenn Sie weitermachen möchten." },
+      { "title": "Ihre Daten sind sicher", "desc": "Ihre Daten gehören Ihnen. Sie können sie jederzeit exportieren." }
+    ],
+    "faq": [
+      { "q": "Was passiert nach 14 Tagen?", "a": "Sie erhalten eine E-Mail mit einem Link zur Aktivierung des Abonnements. Wenn Sie nichts tun, wird das Konto ohne Kosten gesperrt." },
+      { "q": "Muss ich eine Kreditkarte angeben?", "a": "Nein. Der Test ist völlig kostenlos ohne Kreditkarte. Sie fügen diese nur hinzu, wenn Sie weitermachen möchten." },
+      { "q": "Kann ich mein Team einladen?", "a": "Ja, Sie können während des Tests Nutzer über die Einstellungen hinzufügen." },
+      { "q": "Wie lange dauert der Einstieg?", "a": "Weniger als 2 Minuten: Formular ausfüllen, E-Mail empfangen, Passwort festlegen – fertig." }
+    ]
   },
   "demo": {
     "page_title": "Buchen Sie Ihre persönliche Demo",

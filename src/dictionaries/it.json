@@ -5,7 +5,7 @@
     "blog": "Blog",
     "contact": "Contatti",
     "login": "Accedi",
-    "cta": "Richiedi Demo",
+    "cta": "Inizia trial gratuito",
     "sectors": {
       "installatori": "Installatori",
       "sicurezza": "Sicurezza",
@@ -28,7 +28,7 @@
     "hero_badge": "Il lavoro c'è stato. Ora rendilo dimostrabile.",
     "hero_title": "Se non puoi dimostrarlo, per il cliente non è mai successo.",
     "hero_subtitle": "GeoTapp trasforma ogni intervento in evidenza oggettiva: report sigillati con dati GPS reali, prove fotografiche con timestamp e documentazione verificabile da chiunque — senza fidarsi, senza contestazioni.",
-    "hero_cta_primary": "Prenota Demo 30 Minuti",
+    "hero_cta_primary": "Inizia trial gratuito",
     "hero_cta_secondary": "Scopri i Settori",
     "trust_gdpr": "GDPR Compliant",
     "trust_gdpr_desc": "Solo timestamp all'ingresso e uscita",
@@ -40,7 +40,7 @@
     "features_subtitle": "Tre strumenti integrati: il campo registra, l'ufficio controlla, il cliente verifica.",
     "cta_title": "Il lavoro c'è stato. Ora dimostralo.",
     "cta_subtitle": "Le aziende che usano GeoTapp non perdono più interventi non documentati. Ogni ora è verificabile, ogni report è difendibile.",
-    "cta_button": "Prenota Demo 30 Minuti",
+    "cta_button": "Inizia trial gratuito",
     "problem_title": "Il problema che conosci già",
     "problem_subtitle": "Non è un problema di organizzazione. È un problema di prova.",
     "problem_items": [
@@ -207,7 +207,8 @@
               "API",
               "Supporto prioritario",
               "Automazioni",
-              "Report avanzati"
+              "Report avanzati",
+              "TimeTracker: illimitati*"
             ]
           },
           {
@@ -219,7 +220,8 @@
               "Gestione commesse",
               "Timbrature campo",
               "Report operativi",
-              "Integrazioni"
+              "Integrazioni",
+              "TimeTracker: max 5 utenti*"
             ]
           },
           {
@@ -230,7 +232,8 @@
               "1 utente",
               "Gestione attività",
               "Report base",
-              "Integrazioni essenziali"
+              "Integrazioni essenziali",
+              "TimeTracker: max 2 utenti*"
             ]
           }
         ]
@@ -311,7 +314,9 @@
       "btn_continue": "Continua",
       "error_checkout": "Errore durante la creazione della sessione. Riprova.",
       "error_connection": "Errore di connessione. Riprova."
-    }
+    },
+    "intro_label": "Tariffa introduttiva 2026",
+    "tracker_footnote": "* Numero massimo di utenti TimeTracker attivabili contemporaneamente nel piano Flow. Rimuovendo l'accesso a un dipendente il posto si libera subito."
   },
   "contact": {
     "title": "Parliamo di <span class=\"text-primary\">Business</span>.",
@@ -533,6 +538,48 @@
   "guida": {
     "page_title": "Guida Utente",
     "download_pdf": "Scarica / Stampa PDF"
+  },
+  "trial": {
+    "page_title": "14 giorni gratis. Nessuna carta.",
+    "page_subtitle": "Accesso completo a tutti i moduli GeoTapp Flow per 14 giorni. Nessuna carta di credito, nessun impegno. Annulli quando vuole.",
+    "badge": "Trial gratuito — 14 giorni",
+    "form_title": "Crea il tuo account",
+    "form_company": "Nome azienda",
+    "form_company_placeholder": "Es. Impianti Rossi Srl",
+    "form_vat": "Partita IVA europea",
+    "form_vat_placeholder": "Es. IT12345678901",
+    "form_email": "Email aziendale",
+    "form_email_placeholder": "Es. mario@azienda.it",
+    "form_fullname": "Nome completo",
+    "form_fullname_placeholder": "Es. Mario Rossi",
+    "form_plan": "Piano",
+    "plan_solo": "Solo (1 utente)",
+    "plan_team": "Team (fino a 5 utenti)",
+    "plan_business": "Business (utenti illimitati)",
+    "form_seats": "Licenze Timetracker",
+    "form_seats_hint": "Quanti operatori useranno l'app mobile?",
+    "form_submit": "Inizia trial gratuito",
+    "form_submitting": "Attivazione in corso...",
+    "form_privacy": "I tuoi dati sono trattati secondo la nostra",
+    "form_privacy_link": "Privacy Policy",
+    "form_email_hint": "Usa un'email aziendale (no Gmail, Yahoo, ecc.)",
+    "success_title": "Controlla la tua email!",
+    "success_desc": "Abbiamo inviato il link di attivazione a ",
+    "success_desc2": "Clicca il link per impostare la password e accedere al tuo trial.",
+    "success_spam": "Non lo trovi? Controlla la cartella spam.",
+    "error_message": "Errore durante l'attivazione. Riprova o scrivi a info@geotapp.com.",
+    "benefits_title": "Cosa include il trial",
+    "benefits": [
+      { "title": "Accesso completo", "desc": "Tutti i moduli attivi: CRM, fatturazione, gestione squadre, supporto clienti." },
+      { "title": "Nessuna carta richiesta", "desc": "Inserisci solo i dati aziendali. La carta si aggiunge solo se decidi di continuare." },
+      { "title": "Dati al sicuro", "desc": "I tuoi dati rimangono tuoi. Puoi esportarli in qualsiasi momento." }
+    ],
+    "faq": [
+      { "q": "Cosa succede dopo 14 giorni?", "a": "Riceverai un'email con il link per attivare l'abbonamento. Se non fai nulla, l'account viene sospeso senza addebiti." },
+      { "q": "Devo inserire la carta di credito?", "a": "No. Il trial è completamente gratuito e senza carta. La inserisci solo se scegli di continuare." },
+      { "q": "Posso invitare il mio team?", "a": "Sì, puoi aggiungere utenti dal pannello impostazioni durante il trial." },
+      { "q": "Quanto tempo ci vuole per iniziare?", "a": "Meno di 2 minuti: compila il form, ricevi l'email, imposta la password e sei dentro." }
+    ]
   },
   "demo": {
     "page_title": "Prenota la tua Demo Personalizzata",
