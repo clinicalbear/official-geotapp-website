@@ -112,7 +112,7 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
               <Link
-                href={getLink('/demo')}
+                href={getLink('/trial')}
                 className="px-8 py-4 bg-primary text-white font-bold rounded-xl text-lg hover:bg-primary/90 transition-all shadow-lg hover:shadow-primary/30 transform hover:-translate-y-1"
               >
                 {dict.landing.hero_cta_primary}
@@ -656,7 +656,7 @@ export default function Home() {
         className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-white/95 backdrop-blur-sm border-t border-slate-200 px-4 py-3 shadow-2xl"
       >
         <Link
-          href={getLink('/demo')}
+          href={getLink('/trial')}
           className="block w-full text-center py-3 bg-primary text-white font-bold rounded-xl text-base"
         >
           {dict.landing.hero_cta_primary}
