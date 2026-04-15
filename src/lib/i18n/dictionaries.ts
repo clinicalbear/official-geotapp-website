@@ -3,6 +3,7 @@
 import enDict from '@/dictionaries/en.json';
 import itDict from '@/dictionaries/it.json';
 import deDict from '@/dictionaries/de.json';
+import nlDict from '@/dictionaries/nl.json';
 import { DEFAULT_LOCALE, type AppLocale } from './config';
 
 export type SiteDictionary = typeof enDict;
@@ -49,6 +50,7 @@ const DICTIONARIES: Record<AppLocale, SiteDictionary> = {
   it: itDict,
   en: enDict,
   de: deDict,
+  nl: withOverrides(nlDict),
 };
 
 export function getDictionary(locale?: AppLocale | null): SiteDictionary {
