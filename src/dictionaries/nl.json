@@ -207,7 +207,8 @@
               "API",
               "Prioriteitssupport",
               "Automatiseringen",
-              "Geavanceerde rapporten"
+              "Geavanceerde rapporten",
+              "TimeTracker: onbeperkt*"
             ]
           },
           {
@@ -219,7 +220,8 @@
               "Werkbeheer",
               "Veldregistraties",
               "Operationele rapporten",
-              "Integraties"
+              "Integraties",
+              "TimeTracker: max 5 gebruikers*"
             ]
           },
           {
@@ -230,7 +232,8 @@
               "1 gebruiker",
               "Taakbeheer",
               "Basisrapporten",
-              "Essentiële integraties"
+              "Essentiële integraties",
+              "TimeTracker: max 2 gebruikers*"
             ]
           }
         ]
@@ -311,7 +314,9 @@
       "btn_continue": "Doorgaan",
       "error_checkout": "Fout bij het aanmaken van de sessie. Probeer opnieuw.",
       "error_connection": "Verbindingsfout. Probeer opnieuw."
-    }
+    },
+    "intro_label": "Introductieprijs 2026",
+    "tracker_footnote": "* Maximum aantal TimeTracker-gebruikers dat gelijktijdig actief kan zijn in het Flow-plan. Het verwijderen van toegang voor een medewerker maakt de plek direct vrij."
   },
   "contact": {
     "title": "Laten we praten over <span class=\"text-primary\">zaken</span>.",
@@ -680,5 +685,48 @@
     "schema_desc": "Gidsen en inzichten over certificering van veldwerk, teambeheer, AVG en geolocatie.",
     "meta_title": "Blog | GeoTapp — Verificatie van veldwerk",
     "meta_desc": "Gidsen, inzichten en bronnen over teambeheer, certificering van interventies, AVG en geolocatie. Van het GeoTapp-team."
+  },
+  "roi": {
+    "meta_title": "GeoTapp ROI-Calculator — Ontdek uw echte besparingen",
+    "meta_desc": "Bereken in 2 minuten hoeveel u bespaart met GeoTapp: minder administratie, nul geschillen, productievere medewerkers.",
+    "hero_title": "Bereken uw ROI met GeoTapp",
+    "hero_subtitle": "Voer uw bedrijfsgegevens in en ontdek hoeveel u jaarlijks kunt besparen.",
+    "step1_title": "Uw bedrijf",
+    "step1_subtitle": "Vertel ons iets over uzelf",
+    "field_settore": "Sector",
+    "field_operatori": "Aantal medewerkers",
+    "settore_installatori": "Installatie & Onderhoud",
+    "settore_pulizie": "Schoonmaak & Desinfectie",
+    "settore_sicurezza": "Beveiliging & Bewaking",
+    "settore_altro": "Andere sector",
+    "step2_title": "Uw huidige situatie",
+    "step2_subtitle": "Wees precies: hoe nauwkeuriger de gegevens, hoe nauwkeuriger de berekening",
+    "field_siti": "Dagelijks bezochte locaties (per medewerker)",
+    "field_ore_admin": "Uur/week besteed aan administratie en rapportage",
+    "field_contestazioni": "Klantgeschillen per maand (onbetaald, claims, enz.)",
+    "field_costo_orario": "Gemiddelde uurkosten van een medewerker (€)",
+    "step3_title": "Waar sturen we uw rapport naartoe?",
+    "step3_subtitle": "Uw gepersonaliseerde resultaten komen direct. Geen spam.",
+    "field_nome": "Voor- en achternaam",
+    "field_email": "Zakelijk e-mailadres",
+    "field_telefono": "Telefoon (optioneel)",
+    "cta_calcola": "Bereken mijn ROI",
+    "consent_text": "Door op 'Bereken mijn ROI' te klikken stemt u ermee in commerciële communicatie van GeoTapp te ontvangen. U kunt zich op elk moment afmelden.",
+    "next": "Volgende",
+    "back": "Terug",
+    "results_title": "Uw geschatte besparingen met GeoTapp",
+    "results_subtitle": "Gebaseerd op de door u ingevoerde gegevens",
+    "results_admin": "Besparingen op administratie & rapportage",
+    "results_dispute": "Besparingen op geschillen & claims",
+    "results_coord": "Besparingen op teamcoördinatie",
+    "results_total": "Totale jaarlijkse besparingen",
+    "results_payback": "Geschatte terugverdientijd",
+    "results_payback_unit": "maanden",
+    "results_roi": "Geschatte ROI",
+    "results_cta": "Start uw gratis 14-daagse proefperiode",
+    "results_disclaimer": "Indicatieve schatting op basis van sectorgemiddelden. Werkelijke resultaten kunnen variëren.",
+    "per_anno": "/ jaar",
+    "label_operators": "medewerkers",
+    "embed_title": "GeoTapp ROI-Calculator"
   }
 }
