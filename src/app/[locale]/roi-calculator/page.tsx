@@ -1,12 +1,11 @@
 import type { Metadata } from 'next';
 import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
-import { generateLocaleStaticParams } from '@/lib/i18n/static-params';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import { SUPPORTED_LOCALES } from '@/lib/i18n/config';
 import type { AppLocale } from '@/lib/i18n/config';
 import RoiCalculatorClient from '@/components/roi-calculator/RoiCalculatorClient';
 
-export { generateLocaleStaticParams as generateStaticParams };
+export { generateLocaleStaticParams as generateStaticParams } from '@/lib/i18n/static-params';
 
 export async function generateMetadata({
   params,
@@ -14,7 +13,10 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const dict = getDictionary(locale as AppLocale);
+  const safeLocale = (SUPPORTED_LOCALES as readonly string[]).includes(locale)
+    ? (locale as AppLocale)
+    : ('it' as AppLocale);
+  const dict = getDictionary(safeLocale);
   return {
     title: { absolute: dict.roi.meta_title },
     description: dict.roi.meta_desc,
