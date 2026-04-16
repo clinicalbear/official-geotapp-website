@@ -30,13 +30,25 @@ function calcRoi(p: RoiPayload): RoiResult {
   const risparmio_coord = p.operatori * 1.0 * p.costo_orario * 52;
   const risparmio_totale = risparmio_admin + risparmio_dispute + risparmio_coord;
   const costo_geotapp_annuo = p.operatori * 25 * 12;
-  const payback_mesi = Math.ceil(costo_geotapp_annuo / (risparmio_totale / 12));
-  const roi_pct = Math.round((risparmio_totale - costo_geotapp_annuo) / costo_geotapp_annuo * 100);
+  const payback_mesi = risparmio_totale > 0
+    ? Math.ceil(costo_geotapp_annuo / (risparmio_totale / 12))
+    : 0;
+  const roi_pct = costo_geotapp_annuo > 0
+    ? Math.round((risparmio_totale - costo_geotapp_annuo) / costo_geotapp_annuo * 100)
+    : 0;
   return { risparmio_admin, risparmio_dispute, risparmio_coord, risparmio_totale, costo_geotapp_annuo, payback_mesi, roi_pct };
 }
 
 function fmt(n: number) {
   return new Intl.NumberFormat('it-IT', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(n);
+}
+
+function escHtml(s: string | number): string {
+  return String(s)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
 }
 
 export async function POST(req: NextRequest) {
@@ -55,7 +67,10 @@ export async function POST(req: NextRequest) {
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     return NextResponse.json({ error: 'Invalid email' }, { status: 400 });
   }
-  if ([operatori, siti, ore_admin, contestazioni, costo_orario].some(v => typeof v !== 'number' || v < 0)) {
+  if (typeof operatori !== 'number' || operatori < 1) {
+    return NextResponse.json({ error: 'operatori must be >= 1' }, { status: 400 });
+  }
+  if ([siti, ore_admin, contestazioni, costo_orario].some(v => typeof v !== 'number' || v < 0)) {
     return NextResponse.json({ error: 'Invalid numeric fields' }, { status: 400 });
   }
 
@@ -76,16 +91,16 @@ export async function POST(req: NextRequest) {
     <h2>Nuovo lead ROI Calculator — GeoTapp</h2>
     <table style="border-collapse:collapse;width:100%;max-width:600px">
       <tr><th style="text-align:left;padding:8px;background:#f5f5f5">Campo</th><th style="text-align:left;padding:8px;background:#f5f5f5">Valore</th></tr>
-      <tr><td style="padding:8px;border-top:1px solid #eee">Nome</td><td style="padding:8px;border-top:1px solid #eee">${nome}</td></tr>
-      <tr><td style="padding:8px;border-top:1px solid #eee">Email</td><td style="padding:8px;border-top:1px solid #eee">${email}</td></tr>
-      <tr><td style="padding:8px;border-top:1px solid #eee">Telefono</td><td style="padding:8px;border-top:1px solid #eee">${body.telefono ?? '—'}</td></tr>
-      <tr><td style="padding:8px;border-top:1px solid #eee">Settore</td><td style="padding:8px;border-top:1px solid #eee">${settore}</td></tr>
-      <tr><td style="padding:8px;border-top:1px solid #eee">Operatori</td><td style="padding:8px;border-top:1px solid #eee">${operatori}</td></tr>
-      <tr><td style="padding:8px;border-top:1px solid #eee">Siti/giorno</td><td style="padding:8px;border-top:1px solid #eee">${siti}</td></tr>
-      <tr><td style="padding:8px;border-top:1px solid #eee">Ore admin/settimana</td><td style="padding:8px;border-top:1px solid #eee">${ore_admin}</td></tr>
-      <tr><td style="padding:8px;border-top:1px solid #eee">Contestazioni/mese</td><td style="padding:8px;border-top:1px solid #eee">${contestazioni}</td></tr>
-      <tr><td style="padding:8px;border-top:1px solid #eee">Costo orario</td><td style="padding:8px;border-top:1px solid #eee">€${costo_orario}</td></tr>
-      <tr><td style="padding:8px;border-top:1px solid #eee">Lingua</td><td style="padding:8px;border-top:1px solid #eee">${body.locale}</td></tr>
+      <tr><td style="padding:8px;border-top:1px solid #eee">Nome</td><td style="padding:8px;border-top:1px solid #eee">${escHtml(nome)}</td></tr>
+      <tr><td style="padding:8px;border-top:1px solid #eee">Email</td><td style="padding:8px;border-top:1px solid #eee">${escHtml(email)}</td></tr>
+      <tr><td style="padding:8px;border-top:1px solid #eee">Telefono</td><td style="padding:8px;border-top:1px solid #eee">${escHtml(body.telefono ?? '—')}</td></tr>
+      <tr><td style="padding:8px;border-top:1px solid #eee">Settore</td><td style="padding:8px;border-top:1px solid #eee">${escHtml(settore)}</td></tr>
+      <tr><td style="padding:8px;border-top:1px solid #eee">Operatori</td><td style="padding:8px;border-top:1px solid #eee">${escHtml(operatori)}</td></tr>
+      <tr><td style="padding:8px;border-top:1px solid #eee">Siti/giorno</td><td style="padding:8px;border-top:1px solid #eee">${escHtml(siti)}</td></tr>
+      <tr><td style="padding:8px;border-top:1px solid #eee">Ore admin/settimana</td><td style="padding:8px;border-top:1px solid #eee">${escHtml(ore_admin)}</td></tr>
+      <tr><td style="padding:8px;border-top:1px solid #eee">Contestazioni/mese</td><td style="padding:8px;border-top:1px solid #eee">${escHtml(contestazioni)}</td></tr>
+      <tr><td style="padding:8px;border-top:1px solid #eee">Costo orario</td><td style="padding:8px;border-top:1px solid #eee">€${escHtml(costo_orario)}</td></tr>
+      <tr><td style="padding:8px;border-top:1px solid #eee">Lingua</td><td style="padding:8px;border-top:1px solid #eee">${escHtml(body.locale ?? '')}</td></tr>
     </table>
     <h3 style="margin-top:24px">Risultati ROI</h3>
     <table style="border-collapse:collapse;width:100%;max-width:600px">
