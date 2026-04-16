@@ -7,7 +7,6 @@ import type { SettoreContent, SettoreSlug } from '@/content/settori/types';
 import { JsonLd } from '@/components/seo/JsonLd';
 import DemoReportBanner from '@/components/DemoReportBanner';
 import BlogHighlights from '@/components/BlogHighlights';
-import RoiEmbedFrame from '@/components/RoiEmbedFrame';
 
 // WP category IDs per settore — used for BlogHighlights
 // pulizie     → gestione-presenze (9)   — cleaning companies need attendance
@@ -337,23 +336,30 @@ export default function SettorePageLayout({ content, locale, settore }: Props) {
         </section>
       )}
 
-      {/* ── ROI CALCULATOR ── */}
-      <section className="px-6 py-20 bg-white">
-        <div className="container mx-auto max-w-4xl">
-          <div className="text-center mb-10">
-            <p className={`text-sm font-bold uppercase tracking-widest ${colors.accent} mb-3`}>
-              {locale === 'it' ? 'Calcola il tuo ROI' : locale === 'de' ? 'ROI berechnen' : locale === 'nl' ? 'Bereken je ROI' : 'Calculate your ROI'}
-            </p>
-            <h2 className="text-3xl font-bold text-slate-900 mb-4 md:text-4xl">
-              {locale === 'it' ? 'Quanto risparmieresti con GeoTapp?' : locale === 'de' ? 'Wie viel würdest du mit GeoTapp sparen?' : locale === 'nl' ? 'Hoeveel bespaar je met GeoTapp?' : 'How much would you save with GeoTapp?'}
-            </h2>
-          </div>
-          <div className="rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
-            <RoiEmbedFrame
-              src={`/${locale}/roi-calculator/?embed=1`}
-              title={locale === 'it' ? 'Calcolatore ROI GeoTapp' : 'GeoTapp ROI Calculator'}
-            />
-          </div>
+      {/* ── ROI CALCULATOR CTA ── */}
+      <section className="px-6 py-20 bg-slate-50">
+        <div className="container mx-auto max-w-3xl text-center">
+          <p className={`text-sm font-bold uppercase tracking-widest ${colors.accent} mb-3`}>
+            {locale === 'it' ? 'Calcola il tuo ROI' : locale === 'de' ? 'ROI berechnen' : locale === 'nl' ? 'Bereken je ROI' : 'Calculate your ROI'}
+          </p>
+          <h2 className="text-3xl font-bold text-slate-900 mb-4 md:text-4xl">
+            {locale === 'it' ? 'Quanto risparmieresti con GeoTapp?' : locale === 'de' ? 'Wie viel würdest du mit GeoTapp sparen?' : locale === 'nl' ? 'Hoeveel bespaar je met GeoTapp?' : 'How much would you save with GeoTapp?'}
+          </h2>
+          <p className="text-lg text-slate-600 mb-8 leading-relaxed">
+            {locale === 'it'
+              ? 'Inserisci i dati della tua azienda e scopri in 2 minuti quanto puoi risparmiare su contestazioni, ore admin e coordinamento.'
+              : locale === 'de'
+              ? 'Gib deine Unternehmensdaten ein und entdecke in 2 Minuten, wie viel du einsparen kannst.'
+              : locale === 'nl'
+              ? 'Voer je bedrijfsgegevens in en ontdek in 2 minuten hoeveel je kunt besparen.'
+              : 'Enter your company data and find out in 2 minutes how much you can save.'}
+          </p>
+          <Link
+            href={`/${locale}/roi-calculator/`}
+            className={`inline-flex items-center gap-2 rounded-xl px-8 py-4 font-bold text-white shadow-lg transition-colors ${colors.btn}`}
+          >
+            {locale === 'it' ? 'Calcola il tuo ROI' : locale === 'de' ? 'Meinen ROI berechnen' : locale === 'nl' ? 'Bereken mijn ROI' : 'Calculate my ROI'} <ArrowRight size={18} />
+          </Link>
         </div>
       </section>
 
