@@ -187,7 +187,7 @@ export default function RoiCalculatorClient({ dict, locale, trialUrl, embed = fa
 
   const wrapperClass = embed
     ? 'min-h-screen bg-white'
-    : 'min-h-screen bg-gradient-to-br from-blue-50 to-white py-16 px-4';
+    : 'min-h-screen bg-gradient-to-br from-blue-50 to-white pt-28 pb-16 px-4';
 
   return (
     <div ref={containerRef} className={wrapperClass}>
