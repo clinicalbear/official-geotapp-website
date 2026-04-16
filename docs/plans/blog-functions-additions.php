@@ -99,3 +99,35 @@ add_filter( 'the_excerpt', function( $excerpt ) {
     $min = max( 1, (int) ceil( $wc / 200 ) );
     return '<span class="card-reading-time">&#9201; ' . $min . ' min</span>' . $excerpt;
 } );
+
+// ============================================================
+// ROI Calculator — iframe shortcode for WordPress
+// Usage: [geotapp_roi locale="it"]
+// Embeds the GeoTapp ROI calculator from geotapp.com as an
+// auto-resizing iframe using postMessage height negotiation.
+// ============================================================
+function geotapp_roi_calculator_shortcode( $atts ) {
+    $atts = shortcode_atts(
+        array(
+            'locale' => 'it',
+            'height' => '700',
+        ),
+        $atts
+    );
+    $locale = sanitize_text_field( $atts['locale'] );
+    $height = intval( $atts['height'] );
+    $url    = 'https://geotapp.com/' . $locale . '/roi-calculator/?embed=1';
+
+    return '<iframe id="geotapp-roi-calc" src="' . esc_url( $url ) . '" width="100%" height="' . $height . '" frameborder="0" style="border:none;width:100%;display:block;"></iframe>
+<script>
+(function(){
+  window.addEventListener("message", function(e) {
+    if (e.data && e.data.type === "roi-height") {
+      var f = document.getElementById("geotapp-roi-calc");
+      if (f) f.style.height = (e.data.height + 40) + "px";
+    }
+  });
+}());
+</script>';
+}
+add_shortcode( 'geotapp_roi', 'geotapp_roi_calculator_shortcode' );
