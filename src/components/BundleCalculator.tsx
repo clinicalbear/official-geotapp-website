@@ -26,11 +26,11 @@ export default function BundleCalculator({
   const [email, setEmail] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
-  // Flow Pricing
+  // Flow Pricing (annual = 10 months)
   const flowPricesYearly = {
-    solo: 99,
-    team: 179,
-    business: 299,
+    solo: 390,
+    team: 990,
+    business: 1990,
   };
 
   // TimeTracker Pricing
@@ -40,13 +40,13 @@ export default function BundleCalculator({
       return employeeCount * 2.5;
     } else {
       // Yearly: Tiered pricing
-      // 1-25: €2.00/month (€24/year)
-      // 26+: €1.50/month (€18/year)
+      // 1-25: €3/mese (€36/anno)
+      // 26+: €2.50/mese (€30/anno)
       let total = 0;
       if (employeeCount <= 25) {
-        total = employeeCount * 24; // €2/month * 12 months
+        total = employeeCount * 36;
       } else {
-        total = 25 * 24 + (employeeCount - 25) * 18;
+        total = 25 * 36 + (employeeCount - 25) * 30;
       }
       return total;
     }

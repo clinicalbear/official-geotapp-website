@@ -3,6 +3,7 @@ export const SUPPORTED_LOCALES = [
   'it',
   'en',
   'de',
+  'nl',
 ] as const;
 
 export type AppLocale = (typeof SUPPORTED_LOCALES)[number];
@@ -15,6 +16,7 @@ export const LOCALE_LABELS: Record<AppLocale, string> = {
   it: '🇮🇹 Italiano',
   en: '🇬🇧 English',
   de: '🇩🇪 Deutsch',
+  nl: '🇳🇱 Nederlands',
 };
 
 export const COUNTRY_TO_LOCALE: Partial<Record<string, AppLocale>> = {
@@ -29,4 +31,7 @@ export const COUNTRY_TO_LOCALE: Partial<Record<string, AppLocale>> = {
   CA: 'en',
   AU: 'en',
   NZ: 'en',
+  NL: 'nl',
+  BE: 'nl',
+  SR: 'nl',
 };

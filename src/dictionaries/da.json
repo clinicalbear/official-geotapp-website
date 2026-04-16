@@ -207,7 +207,8 @@
               "API",
               "Prioritetssupport",
               "Automatiseringer",
-              "Avancerede rapporter"
+              "Avancerede rapporter",
+              "TimeTracker: ubegrænset*"
             ]
           },
           {
@@ -219,7 +220,8 @@
               "Jobstyring",
               "Feltregistreringer",
               "Operative rapporter",
-              "Integrationer"
+              "Integrationer",
+              "TimeTracker: maks 5 brugere*"
             ]
           },
           {
@@ -230,7 +232,8 @@
               "1 bruger",
               "Opgavestyring",
               "Basisrapporter",
-              "Grundlæggende integrationer"
+              "Grundlæggende integrationer",
+              "TimeTracker: maks 2 brugere*"
             ]
           }
         ]
@@ -311,7 +314,8 @@
       "btn_continue": "Fortsæt",
       "error_checkout": "Fejl ved oprettelse af session. Prøv igen.",
       "error_connection": "Forbindelsesfejl. Prøv igen."
-    }
+    },
+    "tracker_footnote": "* Maksimalt antal TimeTracker-brugere der kan aktiveres samtidigt i Flow-planen. Fjernelse af adgang for en medarbejder frigiver pladsen straks."
   },
   "contact": {
     "title": "Lad os tale <span class=\"text-primary\">forretning</span>.",

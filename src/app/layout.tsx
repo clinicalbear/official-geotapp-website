@@ -21,8 +21,11 @@ export const metadata: Metadata = {
   keywords: [
     'field service management',
     'GPS time tracking',
+    'time tracking field workers',
     'verifiable work reports',
     'timbratura GPS',
+    'app timbrature geolocalizzate',
+    'app per impresa di pulizie',
     'app presenze GPS',
     'GPS Zeiterfassung',
     'suivi GPS terrain',

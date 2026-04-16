@@ -62,7 +62,7 @@ const baseCategories: BaseCategoryConfig[] = [
     products: [
       {
         id: 'prod_TZxemMJkQrWryr',
-        price: '€24',
+        price: '€36',
         period: '/year',
         button: 'bg-emerald-600 text-white hover:bg-emerald-700',
         isCalculator: true,
@@ -81,9 +81,9 @@ const baseCategories: BaseCategoryConfig[] = [
       {
         id: process.env.NEXT_PUBLIC_STRIPE_PRICE_FLOW_ELITE_ANNUAL!,
         idMonthly: process.env.NEXT_PUBLIC_STRIPE_PRICE_FLOW_ELITE_MONTHLY!,
-        price: '1.490 €',
-        monthlyPrice: '149 €',
-        savings: '298 €',
+        price: '1.990 €',
+        monthlyPrice: '199 €',
+        savings: '398 €',
         period: '/year',
         button: 'bg-blue-600 text-white hover:bg-blue-700',
         metadata: {
@@ -95,9 +95,9 @@ const baseCategories: BaseCategoryConfig[] = [
       {
         id: process.env.NEXT_PUBLIC_STRIPE_PRICE_FLOW_PRO_ANNUAL!,
         idMonthly: process.env.NEXT_PUBLIC_STRIPE_PRICE_FLOW_PRO_MONTHLY!,
-        price: '790 €',
-        monthlyPrice: '79 €',
-        savings: '158 €',
+        price: '990 €',
+        monthlyPrice: '99 €',
+        savings: '198 €',
         period: '/year',
         button: 'bg-blue-500 text-white hover:bg-blue-600',
         metadata: {
@@ -109,9 +109,9 @@ const baseCategories: BaseCategoryConfig[] = [
       {
         id: process.env.NEXT_PUBLIC_STRIPE_PRICE_FLOW_START_ANNUAL!,
         idMonthly: process.env.NEXT_PUBLIC_STRIPE_PRICE_FLOW_START_MONTHLY!,
-        price: '290 €',
-        monthlyPrice: '29 €',
-        savings: '58 €',
+        price: '390 €',
+        monthlyPrice: '39 €',
+        savings: '78 €',
         period: '/year',
         button: 'bg-blue-400 text-white hover:bg-blue-500',
         metadata: {
@@ -402,7 +402,7 @@ export default function Pricing() {
 
                     return (
                       <>
-                        <div className="flex items-baseline gap-2 mb-2">
+                        <div className="flex items-baseline gap-2 mb-1">
                           <span
                             className={`text-slate-900 ${hasMonthly ? 'text-4xl' : 'text-3xl'} font-bold`}
                           >
@@ -412,6 +412,13 @@ export default function Pricing() {
                             {periodLabel}
                           </span>
                         </div>
+                        {!isOnce && (
+                          <div className="mb-2">
+                            <span className="inline-block text-[9px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full bg-amber-50 border border-amber-200 text-amber-700">
+                              {dict.pricing.intro_label}
+                            </span>
+                          </div>
+                        )}
                         {hasMonthly && (
                           <div className="space-y-1">
                             <div className="text-sm text-slate-600">
@@ -481,6 +488,13 @@ export default function Pricing() {
               </div>
             )}
           </div>
+
+          {/* TimeTracker footnote — only for Flow section */}
+          {category.id === 'flow' && (dict.pricing as any).tracker_footnote && (
+            <p className="text-xs text-slate-400 mt-4 leading-relaxed">
+              {(dict.pricing as any).tracker_footnote}
+            </p>
+          )}
         </section>
       ))}
 

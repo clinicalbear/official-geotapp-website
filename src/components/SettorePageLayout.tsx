@@ -7,6 +7,7 @@ import type { SettoreContent, SettoreSlug } from '@/content/settori/types';
 import { JsonLd } from '@/components/seo/JsonLd';
 import DemoReportBanner from '@/components/DemoReportBanner';
 import BlogHighlights from '@/components/BlogHighlights';
+import RoiEmbedFrame from '@/components/RoiEmbedFrame';
 
 // WP category IDs per settore — used for BlogHighlights
 // pulizie     → gestione-presenze (9)   — cleaning companies need attendance
@@ -42,7 +43,7 @@ const RISORSE_LABELS: Record<string, string> = {
 
 export default function SettorePageLayout({ content, locale, settore }: Props) {
   const colors = SETTORE_COLORS[settore];
-  const demoLink = localizePath('/demo', locale);
+  const trialLink = localizePath('/trial', locale);
   const pricingLink = localizePath('/pricing', locale);
 
   const breadcrumbSchema = {
@@ -137,7 +138,7 @@ export default function SettorePageLayout({ content, locale, settore }: Props) {
               </p>
               <div className="flex flex-col gap-4 sm:flex-row">
                 <Link
-                  href={demoLink}
+                  href={trialLink}
                   className={`inline-flex items-center gap-2 rounded-xl px-8 py-4 font-bold text-white shadow-lg transition-colors ${colors.btn}`}
                 >
                   {content.hero.cta_primary} <ArrowRight size={18} />
@@ -336,6 +337,26 @@ export default function SettorePageLayout({ content, locale, settore }: Props) {
         </section>
       )}
 
+      {/* ── ROI CALCULATOR ── */}
+      <section className="px-6 py-20 bg-white">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center mb-10">
+            <p className={`text-sm font-bold uppercase tracking-widest ${colors.accent} mb-3`}>
+              {locale === 'it' ? 'Calcola il tuo ROI' : locale === 'de' ? 'ROI berechnen' : locale === 'nl' ? 'Bereken je ROI' : 'Calculate your ROI'}
+            </p>
+            <h2 className="text-3xl font-bold text-slate-900 mb-4 md:text-4xl">
+              {locale === 'it' ? 'Quanto risparmieresti con GeoTapp?' : locale === 'de' ? 'Wie viel würdest du mit GeoTapp sparen?' : locale === 'nl' ? 'Hoeveel bespaar je met GeoTapp?' : 'How much would you save with GeoTapp?'}
+            </h2>
+          </div>
+          <div className="rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+            <RoiEmbedFrame
+              src={`/${locale}/roi-calculator/?embed=1`}
+              title={locale === 'it' ? 'Calcolatore ROI GeoTapp' : 'GeoTapp ROI Calculator'}
+            />
+          </div>
+        </div>
+      </section>
+
       {/* ── CTA MID-PAGE ── */}
       {content.cta_mid && (
         <section className={`px-6 py-16 ${colors.light}`}>
@@ -347,7 +368,7 @@ export default function SettorePageLayout({ content, locale, settore }: Props) {
               {content.cta_mid.body}
             </p>
             <Link
-              href={demoLink}
+              href={trialLink}
               className={`inline-flex items-center gap-2 rounded-xl px-8 py-4 font-bold text-white shadow-lg transition-colors ${colors.btn}`}
             >
               {content.cta_mid.cta} <ArrowRight size={18} />
@@ -590,7 +611,7 @@ export default function SettorePageLayout({ content, locale, settore }: Props) {
           <p className="text-slate-300 text-xl mb-10 leading-relaxed">{content.cta.subtitle}</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href={demoLink}
+              href={trialLink}
               className={`inline-flex items-center gap-2 rounded-xl px-8 py-4 font-bold text-white shadow-lg transition-colors ${colors.btn}`}
             >
               {content.cta.primary} <ArrowRight size={18} />

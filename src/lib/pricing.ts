@@ -18,8 +18,8 @@ export const PRICING_TIERS: PricingTier[] = [
     description: 'Per piccoli team',
     minSeats: 1,
     maxSeats: 25,
-    priceMonthlyPerSeat: 2.5, // Illustrative
-    priceAnnualPerSeat: 24.0, // 2€ * 12 months
+    priceMonthlyPerSeat: 3.0,
+    priceAnnualPerSeat: 36.0, // 3€ * 12 months
     features: ['Geolocalizzazione', 'Export PDF/Excel', 'Supporto Email'],
   },
   {
@@ -28,8 +28,8 @@ export const PRICING_TIERS: PricingTier[] = [
     description: 'Per aziende in crescita',
     minSeats: 26,
     maxSeats: 150,
-    priceMonthlyPerSeat: 2.0, // Illustrative
-    priceAnnualPerSeat: 18.0, // 1.5€ * 12 months
+    priceMonthlyPerSeat: 2.5,
+    priceAnnualPerSeat: 30.0, // 2.50€ * 12 months
     features: [
       'Tutto in Base',
       'Gestione calendario commesse',
@@ -89,16 +89,14 @@ export function calculatePricing(seats: number): Quote | null {
   // Cumulative Pricing Calculation
   let totalAnnual = 0;
 
-  // First 25 seats cost 24€/year
+  // First 25 seats: €3/mese = €36/anno
   const firstTierCount = Math.min(seats, 25);
-  totalAnnual += firstTierCount * 24;
+  totalAnnual += firstTierCount * 36;
 
-  // Next seats (26-150) cost 18€/year
+  // Next seats (26-150): €2.50/mese = €30/anno
   if (seats > 25) {
     const secondTierCount = seats - 25;
-    // We know max is 150 for this logic to hold before enterprise
-    // But the check "tier.code === enterprise" above handles > 150
-    totalAnnual += secondTierCount * 18;
+    totalAnnual += secondTierCount * 30;
   }
 
   const totalMonthly = totalAnnual / 12;

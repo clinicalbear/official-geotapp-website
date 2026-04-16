@@ -36,6 +36,12 @@ export default function TrialPage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const SEATS_MAX: Record<typeof PLANS[number], number> = {
+    SOLO: 2,
+    TEAM: 5,
+    BUSINESS: 999,
+  };
+
   const [formData, setFormData] = useState({
     companyName: '',
     vatNumber: '',
@@ -199,7 +205,11 @@ export default function TrialPage() {
                       <select
                         required
                         value={formData.plan}
-                        onChange={(e) => setFormData({ ...formData, plan: e.target.value as typeof PLANS[number] })}
+                        onChange={(e) => {
+                          const newPlan = e.target.value as typeof PLANS[number];
+                          const maxSeats = SEATS_MAX[newPlan];
+                          setFormData({ ...formData, plan: newPlan, timetrackerSeats: Math.min(formData.timetrackerSeats, maxSeats) });
+                        }}
                         className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all appearance-none pr-10"
                       >
                         <option value="SOLO">{d.plan_solo}</option>
@@ -208,6 +218,7 @@ export default function TrialPage() {
                       </select>
                       <ChevronDown size={16} className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none" />
                     </div>
+                    <p className="mt-1.5 text-xs text-slate-400 leading-relaxed">{d.form_plan_note}</p>
                   </div>
 
                   {formData.plan !== 'SOLO' && (
@@ -217,10 +228,10 @@ export default function TrialPage() {
                       </label>
                       <input
                         type="number"
-                        min={1}
-                        max={formData.plan === 'TEAM' ? 5 : 999}
+                        min={0}
+                        max={SEATS_MAX[formData.plan]}
                         value={formData.timetrackerSeats}
-                        onChange={(e) => setFormData({ ...formData, timetrackerSeats: Number(e.target.value) })}
+                        onChange={(e) => setFormData({ ...formData, timetrackerSeats: Math.min(Number(e.target.value), SEATS_MAX[formData.plan]) })}
                         className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
                       />
                       <p className="mt-1 text-xs text-slate-400">{d.form_seats_hint}</p>
@@ -262,7 +273,7 @@ export default function TrialPage() {
                 <MapPin size={14} className="text-blue-500" /> Timbratura GPS verificata
               </span>
               <span className="flex items-center gap-1.5">
-                <WifiOff size={14} className="text-amber-500" /> Funziona offline
+                <WifiOff size={14} className="text-amber-500" /> TimeTracker: registrazione offline, sync alla connessione
               </span>
               <span className="flex items-center gap-1.5">
                 <Users size={14} className="text-slate-400" /> Nessuna carta richiesta

@@ -5,6 +5,7 @@ const map: Record<AppLocale, () => Promise<{ default: SettoreContent }>> = {
   it: () => import('./it'),
   en: () => import('./en'),
   de: () => import('./de'),
+  nl: () => import('./nl'),
 };
 
 export async function getSicurezzaContent(locale: AppLocale): Promise<SettoreContent> {

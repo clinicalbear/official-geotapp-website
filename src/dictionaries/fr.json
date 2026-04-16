@@ -207,7 +207,8 @@
               "API",
               "Support prioritaire",
               "Automatisations",
-              "Rapports avancés"
+              "Rapports avancés",
+              "TimeTracker: illimité*"
             ]
           },
           {
@@ -219,7 +220,8 @@
               "Gestion des chantiers",
               "Pointages terrain",
               "Rapports opérationnels",
-              "Intégrations"
+              "Intégrations",
+              "TimeTracker: max 5 utilisateurs*"
             ]
           },
           {
@@ -230,7 +232,8 @@
               "1 utilisateur",
               "Gestion des tâches",
               "Rapports de base",
-              "Intégrations essentielles"
+              "Intégrations essentielles",
+              "TimeTracker: max 2 utilisateurs*"
             ]
           }
         ]
@@ -311,7 +314,8 @@
       "btn_continue": "Continuer",
       "error_checkout": "Erreur lors de la création de la session. Veuillez réessayer.",
       "error_connection": "Erreur de connexion. Veuillez réessayer."
-    }
+    },
+    "tracker_footnote": "* Nombre maximum d'utilisateurs TimeTracker activables simultanément dans le plan Flow. Supprimer l'accès d'un employé libère immédiatement la place."
   },
   "contact": {
     "title": "Parlons <span class=\"text-primary\">Business</span>.",

@@ -72,11 +72,11 @@ async function fetchBlogPosts(locale: AppLocale, categoryId: number, limit = 3):
 }
 
 const SECTION_LABELS: Record<AppLocale, string> = {
-  it: 'Dal blog', en: 'From the blog', de: 'Aus dem Blog',
+  it: 'Dal blog', en: 'From the blog', de: 'Aus dem Blog', nl: 'Van de blog',
 };
 
 const READ_MORE_LABELS: Record<AppLocale, string> = {
-  it: 'Leggi →', en: 'Read →', de: 'Lesen →',
+  it: 'Leggi →', en: 'Read →', de: 'Lesen →', nl: 'Lezen →',
 };
 
 interface Props {

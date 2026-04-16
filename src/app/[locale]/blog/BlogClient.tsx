@@ -206,7 +206,7 @@ export default function BlogClient({ locale, posts }: { locale: AppLocale; posts
             <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-3 max-w-lg">{b.cta_desc}</h2>
           </div>
           <Link
-            href={`/${locale}/contact/`}
+            href={`/${locale}/trial/`}
             className="shrink-0 inline-block px-8 py-4 bg-primary text-white font-bold rounded-xl hover:opacity-90 transition-opacity text-lg"
           >
             {b.cta_btn}

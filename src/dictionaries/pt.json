@@ -207,7 +207,8 @@
               "API",
               "Suporte prioritário",
               "Automatizações",
-              "Relatórios avançados"
+              "Relatórios avançados",
+              "TimeTracker: ilimitado*"
             ]
           },
           {
@@ -219,7 +220,8 @@
               "Gestão de trabalhos",
               "Registos em campo",
               "Relatórios operacionais",
-              "Integrações"
+              "Integrações",
+              "TimeTracker: máx. 5 utilizadores*"
             ]
           },
           {
@@ -230,7 +232,8 @@
               "1 utilizador",
               "Gestão de tarefas",
               "Relatórios básicos",
-              "Integrações essenciais"
+              "Integrações essenciais",
+              "TimeTracker: máx. 2 utilizadores*"
             ]
           }
         ]
@@ -311,7 +314,8 @@
       "btn_continue": "Continuar",
       "error_checkout": "Erro ao criar a sessão. Por favor, tente novamente.",
       "error_connection": "Erro de conexão. Por favor, tente novamente."
-    }
+    },
+    "tracker_footnote": "* Número máximo de utilizadores TimeTracker que podem ser ativados simultaneamente no plano Flow. Ao remover o acesso de um funcionário, a vaga fica disponível de imediato."
   },
   "contact": {
     "title": "Vamos falar de <span class=\"text-primary\">Negócio</span>.",

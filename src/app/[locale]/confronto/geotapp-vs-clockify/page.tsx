@@ -282,10 +282,10 @@ export default async function GeoTappVsClockifyPage({ params }: { params: Promis
                 : 'We show you how a job becomes verifiable proof — in 20 minutes, no commitment.'}
             </p>
             <a
-              href={`https://geotapp.com/${locale}/demo/`}
+              href={`https://geotapp.com/${locale}/trial/`}
               className="inline-block bg-primary text-black font-semibold px-8 py-3 rounded-full hover:bg-primary/90 transition-colors"
             >
-              {isIt ? 'Richiedi una Demo' : 'Request a Demo'}
+              {isIt ? 'Inizia subito gratuitamente!' : 'Start for free!'}
             </a>
           </div>
 

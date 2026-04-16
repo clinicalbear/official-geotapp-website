@@ -131,10 +131,10 @@ export default async function ConfrontoIndexPage({ params }: { params: Promise<{
                 : 'We show you how a job becomes verifiable proof — in 20 minutes, no commitment.'}
             </p>
             <Link
-              href={`/${locale}/demo/`}
+              href={`/${locale}/trial/`}
               className="inline-block bg-primary text-black font-semibold px-8 py-3 rounded-full hover:bg-primary/90 transition-colors"
             >
-              {isIt ? 'Richiedi una Demo' : 'Request a Demo'}
+              {isIt ? 'Inizia subito gratuitamente!' : 'Start for free!'}
             </Link>
           </div>
 

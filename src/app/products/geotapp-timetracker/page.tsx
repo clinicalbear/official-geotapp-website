@@ -31,8 +31,6 @@ import {
   getLocaleFromPathname,
   localizePath,
 } from '@/lib/i18n/locale-routing';
-import TrialButton from '@/components/TrialButton';
-
 // --- SYSTEM CARD COMPONENT (LIGHT THEME) ---
 const SystemCard = ({
   system,
@@ -641,19 +639,17 @@ export default function GeoTappApp() {
             {appDict.cta_title}
           </h2>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <TrialButton
-              priceId={
-                process.env.NEXT_PUBLIC_STRIPE_PRICE_TIMETRACKER_MONTHLY!
-              }
-              productName="GeoTapp Timetracker"
-              productKey="GEOTAPP_APP"
+            <Link
+              href={getLink('/trial')}
               className="inline-flex items-center gap-4 px-12 py-6 bg-blue-600 text-white font-bold rounded-xl text-xl hover:bg-blue-700 transition-all shadow-lg hover:shadow-blue-500/30 hover:-translate-y-2 group"
-                >
-                  <Clock size={24} />{' '}
-                  {isItalian
-                    ? 'Prova TimeTracker gratis per 7 giorni'
-                    : 'Try TimeTracker free for 7 days'}
-                </TrialButton>
+            >
+              <Clock size={24} />{' '}
+              {isItalian
+                ? 'Inizia trial gratuito di 14 giorni'
+                : currentLocale === 'de'
+                ? '14 Tage kostenlos testen'
+                : 'Start 14-day free trial'}
+            </Link>
             <Link
               href={getLink('/pricing')}
               className="inline-flex items-center gap-4 px-12 py-6 bg-slate-100 text-slate-900 font-bold rounded-xl text-xl hover:bg-slate-200 transition-all group"

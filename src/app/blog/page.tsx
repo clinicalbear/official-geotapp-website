@@ -144,7 +144,7 @@ export default async function BlogPage() {
         <h2 className="text-2xl font-bold text-white mb-4">{b.cta_title}</h2>
         <p className="text-text-secondary mb-8 font-light">{b.cta_desc}</p>
         <Link
-          href="/it/contact/"
+          href="/it/trial/"
           className="inline-block px-6 py-3 bg-white text-black font-bold rounded-xl hover:bg-primary transition-colors"
         >
           {b.cta_btn}

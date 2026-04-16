@@ -10,76 +10,84 @@ export const SLUG_MAP: Record<string, Record<AppLocale, string>> = {
     it: 'chi-siamo',
     en: 'about-us',
     de: 'uber-uns',
+    nl: 'over-ons',
   },
   'guida': {
     it: 'guida',
     en: 'guide',
     de: 'anleitung',
+    nl: 'gids',
   },
   'settori': {
     it: 'settori',
     en: 'sectors',
     de: 'branchen',
+    nl: 'sectoren',
   },
   'contact': {
     it: 'contact',
     en: 'contact',
     de: 'kontakt',
+    nl: 'contact',
   },
   'pricing': {
     it: 'pricing',
     en: 'pricing',
     de: 'preise',
+    nl: 'tarieven',
   },
   'features': {
     it: 'features',
     en: 'features',
     de: 'funktionen',
+    nl: 'functies',
   },
   'products': {
     it: 'products',
     en: 'products',
     de: 'produkte',
+    nl: 'producten',
   },
   // ── Sector sub-pages ────────────────────────────────────────────────────────
   'pulizie': {
-    it: 'pulizie', en: 'cleaning', de: 'reinigung',
+    it: 'pulizie', en: 'cleaning', de: 'reinigung', nl: 'schoonmaak',
   },
   'installatori': {
-    it: 'installatori', en: 'installers', de: 'installateure',
+    it: 'installatori', en: 'installers', de: 'installateure', nl: 'installateurs',
   },
   'sicurezza': {
-    it: 'sicurezza', en: 'security', de: 'sicherheit',
+    it: 'sicurezza', en: 'security', de: 'sicherheit', nl: 'beveiliging',
   },
   'risorse': {
-    it: 'risorse', en: 'resources', de: 'ressourcen',
+    it: 'risorse', en: 'resources', de: 'ressourcen', nl: 'bronnen',
   },
   // ────────────────────────────────────────────────────────────────────────────
   'download': {
     it: 'download',
     en: 'download',
     de: 'herunterladen',
+    nl: 'downloaden',
   },
   'demo': {
-    it: 'demo', en: 'demo', de: 'demo',
+    it: 'demo', en: 'demo', de: 'demo', nl: 'demo',
   },
   'blog': {
-    it: 'blog', en: 'blog', de: 'blog',
+    it: 'blog', en: 'blog', de: 'blog', nl: 'blog',
   },
   'confronto': {
-    it: 'confronto', en: 'compare', de: 'vergleich',
+    it: 'confronto', en: 'compare', de: 'vergleich', nl: 'vergelijking',
   },
   'login': {
-    it: 'login', en: 'login', de: 'login',
+    it: 'login', en: 'login', de: 'login', nl: 'login',
   },
   'privacy': {
-    it: 'privacy', en: 'privacy', de: 'privacy',
+    it: 'privacy', en: 'privacy', de: 'privacy', nl: 'privacy',
   },
   'terms': {
-    it: 'terms', en: 'terms', de: 'terms',
+    it: 'terms', en: 'terms', de: 'terms', nl: 'voorwaarden',
   },
   'cookies': {
-    it: 'cookies', en: 'cookies', de: 'cookies',
+    it: 'cookies', en: 'cookies', de: 'cookies', nl: 'cookies',
   },
 };
 

@@ -5,6 +5,7 @@ const map: Record<AppLocale, () => Promise<{ default: VerifierCopy }>> = {
   it: () => import('./it'),
   en: () => import('./en'),
   de: () => import('./de'),
+  nl: () => import('./nl'),
 };
 
 export async function getVerifierCopy(locale: AppLocale): Promise<VerifierCopy> {

@@ -2,17 +2,17 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App per imprese di pulizie | GeoTapp — GPS e Software',
-    description: 'GeoTapp è l\'app e il software per la gestione delle imprese di pulizie: GPS, presenze, report non alterabili. Conforme CCNL e GDPR. Prova gratis.',
+    title: 'App per impresa di pulizie | GeoTapp — GPS, Presenze e Certificazione',
+    description: 'Smetti di rincorrere le squadre per telefono. GeoTapp è l\'app per impresa di pulizie che certifica presenze e interventi con GPS reale e prove fotografiche, in conformità al GDPR e al CCNL Multiservizi. Prova gratis.',
   },
 
   hero: {
-    badge: 'Per Imprese di Pulizie, Facility Management e Multiservizi',
-    h1_line1: 'La tua impresa di pulizie ha lavorato.',
-    h1_line2: 'Adesso dimostralo.',
+    badge: 'App per imprese di pulizie, Facility Management e Multiservizi',
+    h1_line1: 'L\'app per impresa di pulizie',
+    h1_line2: 'che certifica ogni intervento.',
     subtitle:
-      'I clienti contestano. Gli operatori non sono verificabili. I report non bastano mai. GeoTapp certifica ogni intervento con GPS reale, prove fotografiche e report non alterabili — che il committente può verificare da solo. Il software di gestione pulizie che fa il lavoro sporco per te.',
-    cta_primary: 'Vedi come funziona su un caso reale',
+      'GeoTapp è l\'app per impresa di pulizie che trasforma ogni intervento in prova difendibile. I clienti contestano. Gli operatori non sono verificabili. I report non bastano mai. GeoTapp risolve tutto con GPS reale, prove fotografiche e report non alterabili — che il committente può verificare da solo.',
+    cta_primary: 'Inizia subito gratuitamente!',
     cta_note: 'Nessun vincolo. Risposta entro 12 ore lavorative.',
   },
 
@@ -200,7 +200,7 @@ const content: SettoreContent = {
   cta_mid: {
     title: 'Vuoi vedere come funziona su un caso reale?',
     body: 'Ti mostriamo il flusso completo: dall\'operatore che apre l\'intervento al report che riceve il cliente. In 20 minuti capisci se fa per te — senza impegno.',
-    cta: 'Vedi come funziona su un caso reale',
+    cta: 'Inizia subito gratuitamente!',
   },
 
   testimonial: {
@@ -256,7 +256,7 @@ const content: SettoreContent = {
     title: "I tuoi operatori lavorano bene. Fai in modo che si veda.",
     subtitle:
       'Ogni giorno il lavoro viene fatto. Il problema è che senza prove verificabili, non vale niente quando qualcuno contesta. GeoTapp trasforma ogni intervento in documentazione difendibile.',
-    primary: 'Vedi come funziona su un caso reale',
+    primary: 'Inizia subito gratuitamente!',
     secondary: 'Vedi i Prezzi',
   },
 

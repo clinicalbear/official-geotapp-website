@@ -10,7 +10,7 @@ const content: SettoreContent = {
     h1_line1: 'Presenze e turni verificabili',
     h1_line2: 'per vigilanza e sicurezza privata',
     subtitle: 'GeoTapp Flow e TimeTracker documentano la presenza delle guardie giurate ai posti assegnati con GPS verificato e timestamp immutabili. Conformità al CCNL Vigilanza Privata GPG, passaggio di consegne digitale e tracciamento qualifiche: tutto in un\'unica piattaforma. L\'app per vigilanza privata che certifica ogni turno, ogni ronda, ogni presenza.',
-    cta_primary: 'Richiedi una Demo',
+    cta_primary: 'Inizia subito gratuitamente!',
     cta_note: 'Nessun vincolo. Risposta entro 12 ore lavorative.',
   },
   pain: {
@@ -135,7 +135,7 @@ const content: SettoreContent = {
   cta_mid: {
     title: 'Vuoi vedere come funziona su un caso reale di contestazione?',
     body: 'Ti mostriamo il flusso completo: dalla guardia che timbra al posto assegnato al report che riceve il committente. In 20 minuti capisci se fa per te — senza impegno.',
-    cta: 'Richiedi una Demo',
+    cta: 'Inizia subito gratuitamente!',
   },
 
   trust: {
@@ -169,7 +169,7 @@ const content: SettoreContent = {
   cta: {
     title: 'Il turno c\'è stato. Ora dimostralo.',
     subtitle: 'GeoTapp genera prove verificabili di ogni presidiamento — report sigillati che il cliente e la Prefettura possono controllare da soli.',
-    primary: 'Richiedi una Demo',
+    primary: 'Inizia subito gratuitamente!',
     secondary: 'Vedi i Prezzi',
   },
   pricing_hint: {

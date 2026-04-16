@@ -19,18 +19,18 @@ const calculatePrice = (count: number) => {
   if (count > 150) return null; // Custom Quote
 
   const tier1Limit = 25;
-  const tier1Rate = 2.0;
-  const tier2Rate = 1.5;
+  const tier1Annual = 36; // €3/mese = €36/anno per utente (1-25)
+  const tier2Annual = 30; // €2.50/mese = €30/anno per utente (26-150)
 
   let annualTotal = 0;
 
   if (count <= tier1Limit) {
-    annualTotal = count * tier1Rate * 12;
+    annualTotal = count * tier1Annual;
   } else {
-    // First 25 at €2
-    annualTotal += tier1Limit * tier1Rate * 12;
-    // Remainder at €1.5
-    annualTotal += (count - tier1Limit) * tier2Rate * 12;
+    // First 25 at €32/year
+    annualTotal += tier1Limit * tier1Annual;
+    // Remainder at €24/year
+    annualTotal += (count - tier1Limit) * tier2Annual;
   }
 
   const monthlyAverage = annualTotal / 12;

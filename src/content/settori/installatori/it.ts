@@ -10,7 +10,7 @@ const content: SettoreContent = {
     h1_line1: 'Software per installatori e manutentori:',
     h1_line2: 'interventi, rapportini e ore più chiare',
     subtitle: 'GeoTapp unisce Flow + TimeTracker per chi lavora tra furgoni, cantieri e clienti finali. Le app Android e iOS aiutano il tecnico sul campo; l\'ufficio vede commessa, tempi, prove fotografiche e note senza rincorrere nessuno. Il software di gestione interventi per installatori che lavora mentre sei sul campo.',
-    cta_primary: 'Richiedi una Demo',
+    cta_primary: 'Inizia subito gratuitamente!',
     cta_note: 'Nessun vincolo. Risposta entro 12 ore lavorative.',
   },
   pain: {
@@ -135,7 +135,7 @@ const content: SettoreContent = {
   cta_mid: {
     title: 'Vuoi vedere come funziona su un intervento reale?',
     body: 'Ti mostriamo il flusso completo: dall\'apertura commessa al rapportino che riceve il cliente. In 20 minuti capisci se fa per te — senza impegno.',
-    cta: 'Richiedi una Demo',
+    cta: 'Inizia subito gratuitamente!',
   },
 
   trust: {
@@ -169,7 +169,7 @@ const content: SettoreContent = {
   cta: {
     title: 'Il lavoro c\'è stato. Ora dimostralo.',
     subtitle: 'GeoTapp genera prove verificabili di ogni intervento — report sigillati che il cliente può controllare da solo.',
-    primary: 'Richiedi una Demo',
+    primary: 'Inizia subito gratuitamente!',
     secondary: 'Vedi i Prezzi',
   },
   pricing_hint: {
