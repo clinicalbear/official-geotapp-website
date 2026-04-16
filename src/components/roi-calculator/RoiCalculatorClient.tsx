@@ -3,51 +3,8 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import type { AppLocale } from '@/lib/i18n/config';
-
-// Dictionary type — matches the "roi" section of the locale JSON files
-interface RoiDict {
-  meta_title: string;
-  meta_desc: string;
-  hero_title: string;
-  hero_subtitle: string;
-  step1_title: string;
-  step1_subtitle: string;
-  field_settore: string;
-  field_operatori: string;
-  settore_installatori: string;
-  settore_pulizie: string;
-  settore_sicurezza: string;
-  settore_altro: string;
-  step2_title: string;
-  step2_subtitle: string;
-  field_siti: string;
-  field_ore_admin: string;
-  field_contestazioni: string;
-  field_costo_orario: string;
-  step3_title: string;
-  step3_subtitle: string;
-  field_nome: string;
-  field_email: string;
-  field_telefono: string;
-  cta_calcola: string;
-  consent_text: string;
-  next: string;
-  back: string;
-  results_title: string;
-  results_subtitle: string;
-  results_admin: string;
-  results_dispute: string;
-  results_coord: string;
-  results_total: string;
-  results_payback: string;
-  results_payback_unit: string;
-  results_roi: string;
-  results_cta: string;
-  results_disclaimer: string;
-  per_anno: string;
-  label_operators: string;
-  embed_title: string;
-}
+import { getDictionary } from '@/lib/i18n/dictionaries';
+type RoiDict = ReturnType<typeof getDictionary>['roi'];
 
 interface Props {
   dict: RoiDict;
@@ -84,8 +41,10 @@ function useCountUp(target: number, duration = 1200, active = false): number {
   const [value, setValue] = useState(0);
   useEffect(() => {
     if (!active || target === 0) { setValue(target); return; }
+    let cancelled = false;
     const start = Date.now();
     const tick = () => {
+      if (cancelled) return;
       const elapsed = Date.now() - start;
       const progress = Math.min(elapsed / duration, 1);
       const eased = 1 - Math.pow(1 - progress, 3);
@@ -93,6 +52,7 @@ function useCountUp(target: number, duration = 1200, active = false): number {
       if (progress < 1) requestAnimationFrame(tick);
     };
     requestAnimationFrame(tick);
+    return () => { cancelled = true; };
   }, [target, active, duration]);
   return value;
 }
@@ -161,6 +121,13 @@ const variants = {
   exit: (dir: number) => ({ x: dir > 0 ? -60 : 60, opacity: 0 }),
 };
 
+const ERROR_MSGS: Record<string, { required: string; network: string }> = {
+  it: { required: 'Compila nome e email', network: 'Errore di rete. Riprova.' },
+  en: { required: 'Please fill in name and email', network: 'Network error. Please try again.' },
+  de: { required: 'Bitte Name und E-Mail ausfüllen', network: 'Netzwerkfehler. Bitte erneut versuchen.' },
+  nl: { required: 'Vul naam en e-mail in', network: 'Netwerkfout. Probeer opnieuw.' },
+};
+
 export default function RoiCalculatorClient({ dict, locale, trialUrl, embed = false }: Props) {
   const [step, setStep] = useState(0);
   const [dir, setDir] = useState(1);
@@ -194,7 +161,7 @@ export default function RoiCalculatorClient({ dict, locale, trialUrl, embed = fa
 
   const handleSubmit = async () => {
     if (!form.nome.trim() || !form.email.trim()) {
-      setError('Compila nome e email');
+      setError((ERROR_MSGS[locale] ?? ERROR_MSGS.it).required);
       return;
     }
     setLoading(true);
@@ -212,7 +179,7 @@ export default function RoiCalculatorClient({ dict, locale, trialUrl, embed = fa
       setStep(3);
       setTimeout(() => setCountActive(true), 300);
     } catch {
-      setError('Errore di rete. Riprova.');
+      setError((ERROR_MSGS[locale] ?? ERROR_MSGS.it).network);
     } finally {
       setLoading(false);
     }
