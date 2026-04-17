@@ -1,1 +1,802 @@
-{"navbar":{"products":"Produkte","pricing":"Preise","blog":"Blog","contact":"Kontakt","login":"Anmelden","cta":"Kostenlos testen","sectors":{"installatori":"Installateure","sicurezza":"Sicherheitsdienst","pulizie":"Gebäudereinigung","label":"Branchen"},"logo_alt":"GeoTapp — Die Plattform, die Arbeit verifizierbar macht","product_flow_desc":"Operative Einsatzverwaltung und Teamplanung","product_app_desc":"Mobile App für Außendiensttechniker","product_verifier_desc":"Integritätsprüfung von Arbeitsberichten","compare":"Vergleich"},"footer":{"tagline":"Außendienst erfasst. Einsätze organisiert. Berichte prüfbar.","privacy":"Datenschutz","terms":"Nutzungsbedingungen","rights":"Alle Rechte vorbehalten."},"landing":{"hero_badge":"Die Arbeit war da. Jetzt machen Sie sie beweisbar.","hero_title":"Wenn Sie es nicht beweisen können, sagt der Kunde: Es ist nie passiert.","hero_subtitle":"GeoTapp verwandelt jeden Außendiensteinsatz in objektive Beweise: versiegelte Berichte mit echten GPS-Daten, zeitgestempelte Fotonachweise und Dokumentation, die jeder unabhängig prüfen kann — ohne Vertrauen, ohne Streit.","hero_cta_primary":"Kostenlos testen","hero_cta_secondary":"Branchen entdecken","trust_gdpr":"DSGVO-konform","trust_gdpr_desc":"Zeitstempel nur bei An- und Abmeldung","trust_gps":"GPS-Nachweis","trust_gps_desc":"Jeder Einsatz mit Standort und Zeitstempel zertifiziert","trust_offline":"Offline-fähig","trust_offline_desc":"Automatische Synchronisation bei Verbindung","features_title":"Vom Einsatz zum verifizierbaren Nachweis","features_subtitle":"Drei integrierte Werkzeuge: Das Feld erfasst, das Büro kontrolliert, der Kunde verifiziert.","cta_title":"Die Arbeit war da. Jetzt beweisen Sie es.","cta_subtitle":"Unternehmen, die GeoTapp nutzen, verlieren keine undokumentierten Einsätze mehr. Jede Stunde ist verifizierbar. Jeder Bericht ist verteidigbar.","cta_button":"Kostenlos testen","problem_title":"Das Problem, das du schon kennst","problem_subtitle":"Es ist kein Organisationsproblem. Es ist ein Beweisproblem.","problem_items":[{"title":"Der Kunde bestreitet es. Du hast keine Beweise.","desc":"Die Arbeit hat stattgefunden. Ohne verifizierbaren Nachweis steht dein Wort gegen seines. Und meistens gewinnt er."},{"title":"Der Bericht kommt unvollständig, zu spät oder gar nicht.","desc":"Papierformulare, WhatsApp, E-Mails. Daten gehen verloren, werden verändert, vergessen. Die nachträgliche Rekonstruktion ist teuer und unzuverlässig."},{"title":"Nicht dokumentierte Arbeit existiert nicht.","desc":"Jede nicht erfasste Stunde ist eine unbezahlte Stunde. Jeder Einsatz ohne Nachweis ist ein Einsatz, den der Kunde anfechten kann."}],"report_section_title":"Der Bericht. Nicht eine Zusammenfassung. Ein Beweis.","report_section_subtitle":"Jeder GeoTapp-Bericht wird automatisch aus echten Felddaten generiert.","report_section_body":"GPS-Zeitstempel, Fotos mit Zeitstempel, Betriebsnotizen. Das System versiegelt jeden Bericht kryptografisch, sodass jede Änderung erkennbar ist. Das Ergebnis ist kein Dokument zum Weiterleiten — es ist ein Nachweis, den der Kunde selbst prüfen kann.","report_feature_1":"Nicht veränderbar nach Erstellung — jede Änderung ist erkennbar","report_feature_2":"Prüfbar ohne Konto — von jedem, unabhängig","report_feature_3":"GPS- und Fotodaten integriert und nicht trennbar","report_feature_4":"Automatisch generiert — keine manuelle Erfassung","report_cta":"So verifiziert Ihr Kunde selbst"},"home_sections":{"flow":{"badge":"GeoTapp Flow","title":"Außendienst aus einer Zentrale koordinieren.","subtitle":"Flow ist das System, das das Büro nutzt, um Aufträge zu verwalten, Tätigkeiten zuzuweisen, Fortschritte zu überwachen und strukturierte Arbeitsberichte zu erstellen. <strong class=\"text-slate-900\">Weniger interne Reibung, mehr echte Kontrolle.</strong>","features":{"crm":"<strong>Auftragsverwaltung:</strong> Einsätze erstellen, Techniker zuweisen und Fortschritte in Echtzeit überwachen.","pipeline":"<strong>Strukturierte Berichte:</strong> Jeder abgeschlossene Auftrag erzeugt rückverfolgbare Dokumentation für den Kunden."},"link":"GeoTapp Flow entdecken"},"app":{"badge":"GeoTapp TimeTracker","title":"Der Techniker erfasst. Das Büro kontrolliert.","subtitle":"TimeTracker ist die mobile App für Techniker zur Erfassung von Außendiensttätigkeiten. Ein- und Ausstempeln, Fotos und Notizen zum jeweiligen Auftrag. <strong>Verfügbar für Android und iOS.</strong>","card_gps":{"title":"GPS-Zeiterfassung","desc":"Verifizierter Standort"},"card_gdpr":{"title":"DSGVO-konform","desc":"Kein kontinuierliches Tracking"},"link":"GeoTapp TimeTracker entdecken"},"verifier":{"badge":"GeoTapp Verifier","title":"Sie brauchen kein Vertrauen.","subtitle":"Der Kunde hat den Bericht. Er prüft ihn selbst, ohne GeoTapp zu öffnen. Wenn die Daten der realen Arbeit entsprechen, hält das Siegel. Wenn jemand das Dokument geändert hat, bricht das Siegel. Kein Einspruch.","features":{"integrity":"<strong>Nicht veränderbare Daten:</strong> Der Bericht wird auf echten Felddaten generiert und gesperrt. Jede Änderung macht ihn ungültig — ohne Ausnahme.","independent":"<strong>Autonome Prüfung:</strong> Jeder mit dem Bericht kann die Echtheit überprüfen — kein Konto, kein Plattformzugang."},"link":"GeoTapp Verifier entdecken"},"core":{"badge":"GeoTapp Plattform","title":"Ein System, drei Sicherheitsstufen","subtitle":"TimeTracker erfasst im Außendienst. Flow organisiert im Büro. Verifier bestätigt, dass alles übereinstimmt.","features":[{"title":"Echte mobile Einsatzfähigkeit","desc":"TimeTracker funktioniert ohne Verbindung und synchronisiert, sobald das Feld wieder online ist. Die Arbeit stoppt nie."},{"title":"Datenschutz by Design","desc":"Der Standort wird <strong>nur</strong> beim Ein- und Ausstempeln erfasst. Kein kontinuierliches Tracking. Vollständig DSGVO-konform."},{"title":"Echtzeit-Betriebskontrolle","desc":"Felddaten kommen sofort in Flow an. Das Büro hat Live-Transparenz ohne jemanden anzurufen."},{"title":"Verteidigbarer Nachweis über Zeit","desc":"Jeder Bericht ist auf echten Felddaten gesperrt und nicht veränderbar. Streit? Die Daten sind da. Von jedem verifizierbar. Immer."}]},"footer_cta":{"title":"Hören Sie auf, undokumentierte Arbeit zu verlieren.","subtitle":"Jeder Einsatz ohne verifizierbaren Nachweis ist ein angreifbarer Einsatz. GeoTapp schließt diese Lücke.","button":"Kontakt aufnehmen","pricing_link":"Pläne und Preise ansehen →"},"settori":{"title":"Nachweisbare Dokumentation für jeden Sektor — GeoTapp-Lösungen","subtitle":"Wählen Sie Ihren Sektor und sehen Sie, wie GeoTapp Arbeitsnachweise erstellt — zum Vorzeigen beim Kunden bei Konflikten.","see_all":"Alle unterstützten Sektoren anzeigen","installatori":{"name":"Installateure","desc":"Elektriker, Installateure, Anlagentechniker. Jeder Einsatz mit GPS und Fotos dokumentiert — unveränderliche Daten, vom Kunden prüfbar.","cta":"Jeden Einsatz nachweisen"},"sicurezza":{"name":"Sicherheit","desc":"Wachdienst, Stewards, Sicherheitsdienste. Nachweisbare Anwesenheit, dokumentierte Schichten mit objektivem Nachweis.","cta":"Anwesenheit belegen"},"pulizie":{"name":"Reinigung","desc":"Reinigungsunternehmen, Facility, Multiservice. Jeder Durchgang dokumentiert und vom Auftraggeber prüfbar — null Beschwerden.","cta":"Beschwerden vermeiden"}},"app_mockup":{"greeting":"Guten Morgen,","status":"🟢 Im Dienst","next_job_label":"Nächster Einsatz","next_job_time":"In 15 Min"},"demo_banner":{"badge":"Echtes Beispiel","title":"Zertifizierter Bericht — herunterladen und verifizieren","field_operator":"Mitarbeiter","field_intervention":"Einsatz","btn_download":"Bericht herunterladen (.zip)","btn_verify":"Authentizität prüfen →"},"flow_mockup":{"pipeline_title":"Verkaufspipeline","month":"Dezember 2025","quote_name":"Angebot A. Müller","quote_approved":"Heute um 09:30 genehmigt"}},"pricing":{"badge":"GeoTapp Lösungen","title":"Das richtige Produkt wählen.","subtitle":"Praxisnahe Lösungen für Unternehmen mit Technikern und Außendienstmitarbeitern.","vat_note":"Alle Preise zzgl. MwSt. Abrechnung gemäß Nutzungsbedingungen.","categories":{"app":{"title":"GeoTapp TimeTracker","description":"Mobile App für Außendiensttechniker","products":[{"name":"GeoTapp TimeTracker","tagline":"Ab","desc":"Die komplette Lösung zur Erfassung von Anwesenheit, Außendiensttätigkeit und Arbeitsnachweisen. Preis pro Nutzer/Jahr.","features":["Android/iOS App","GPS-Stempeluhr","Wochenberichte"],"button":"Kalkulator ansehen"}]},"flow":{"title":"GeoTapp Flow","description":"Außendienststeuerung und Teamverwaltung","products":[{"name":"GeoTapp Flow Business","tagline":"Für strukturierte Unternehmen.","desc":"Die Komplettlösung für strukturierte Unternehmen und komplexe Organisationen.","features":["Unbegrenzte Teams (keine Timetracker-Nutzer)","API","Prioritätssupport","Automatisierungen","Erweiterte Berichte","TimeTracker: unbegrenzt*"]},{"name":"GeoTapp Flow Team","tagline":"Für kleine operative Teams.","desc":"Koordinieren und verwalten Sie Ihr operatives Team in Echtzeit.","features":["5 Flow-Nutzer inklusive (keine Timetracker)","Auftragsverwaltung","Feld-Zeiterfassungen","Operative Berichte","Integrationen","TimeTracker: max. 5 Nutzer*"]},{"name":"GeoTapp Flow Solo","tagline":"Für Freiberufler und Kleinstunternehmen.","desc":"Alles was Sie brauchen, um Außendiensteinsätze selbstständig zu verwalten.","features":["1 Nutzer","Aufgabenverwaltung","Basisberichte","Grundlegende Integrationen","TimeTracker: max. 2 Nutzer*"]}]}},"calculator":{"title":"TimeTracker Lizenzrechner","subtitle":"Schätzen Sie Ihre jährliche Arbeitsinvestition.","active_users":"Aktive Benutzer","discount_threshold":"Rabattschwelle","cost_per_user":"Durchschnittliche Kosten pro Benutzer","per_month":"/Monat","standard_rate":"Standardtarif (1–25 @ €2)","mixed_rate":"Mischtarif (Mengenrabatt angewendet)","annual_total":"Jahresgesamt (+MwSt.)","annual_billing_note":"Einmalige Jahresabrechnung","enterprise_plan":"Enterprise-Plan","enterprise_desc":"Für Teams über 150 Benutzer bieten wir individuelle SLAs und dedizierten Account-Management.","request_quote":"Angebot anfordern","add_to_cart":"App-Lizenz in den Warenkorb","secure_payment":"Sichere Zahlung über Stripe. MwSt. wird beim Checkout berechnet."},"simulator":{"section_title":"Berechnen Sie Ihr Angebot","employees_label":"Anzahl Mitarbeiter:","one_employee":"1 Mitarbeiter","many_employees":"150+ Mitarbeiter","price_per_user":"Preis pro Benutzer","annual_total":"Jahresgesamt","per_month":"/Monat","per_user_annual":"pro Benutzer, Jahresabrechnung","selected_badge":"Ausgewählt","enterprise_plan":"Enterprise-Plan","enterprise_desc":"Für große Organisationen bieten wir maßgeschneiderte Lösungen.","enterprise_cta":"Kontaktieren Sie uns für ein Angebot","company_placeholder":"Firmenname","email_placeholder":"Admin-E-Mail","email_error_format":"Bitte geben Sie eine gültige E-Mail-Adresse ein (z.B. name@firma.de)","email_error_placeholder":"Bitte geben Sie eine echte Geschäfts-E-Mail ein.","terms_alert":"Um fortzufahren müssen Sie die Nutzungsbedingungen akzeptieren und bestätigen, dass Sie die Datenschutzrichtlinie gelesen haben.","processing":"Verarbeitung...","request_info":"Informationen anfordern","buy_now":"Jetzt kaufen","payment_note":"Sichere Zahlung über Stripe. Jederzeit kündbar.","success_sent":"Anfrage erfolgreich gesendet! Wir werden Sie in Kürze kontaktieren.","error_request":"Fehler beim Senden der Anfrage","plus_vat":"+ MwSt."},"bundle":{"title":"Bundle-Rechner","subtitle":"Berechnen Sie Ihre Ersparnis mit dem Flow + TimeTracker Bundle","employees":"Anzahl Mitarbeiter","billingCycle":"Abrechnungszeitraum","monthly":"Monatlich","yearly":"Jährlich","flowPlan":"Flow-Plan","solo":"Solo (1 Nutzer)","team":"Team (bis 5 Nutzer)","business":"Business (unbegrenzt)","priceBreakdown":"Preisübersicht","flowPrice":"GeoTapp Flow","trackerPrice":"TimeTracker","subtotal":"Zwischensumme","bundleDiscount":"Bundle-Rabatt (15% erstes Jahr)","totalPrice":"Gesamtpreis","savings":"Sie sparen","perMonth":"/Monat","perYear":"/Jahr","cta":"Bundle jetzt holen","notes":"Hinweis: Rabatt gilt für die ersten 12 Monate","employees_unit":"Mitarbeiter","first_year_savings":"im ersten Jahr!","loading":"Laden...","modal_title":"E-Mail eingeben","modal_desc":"Wir benötigen Ihre E-Mail, um die Checkout-Sitzung zu erstellen und Ihnen die Quittung zu senden.","email_placeholder":"ihre@email.com","btn_cancel":"Abbrechen","btn_continue":"Weiter","error_checkout":"Fehler beim Erstellen der Sitzung. Bitte erneut versuchen.","error_connection":"Verbindungsfehler. Bitte erneut versuchen."},"intro_label":"Einführungspreis 2026","tracker_footnote":"* Maximale Anzahl gleichzeitig aktivierbarer TimeTracker-Nutzer im Flow-Plan. Das Entfernen des Mitarbeiterzugangs gibt den Platz sofort frei."},"contact":{"title":"Sprechen wir über <span class=\"text-primary\">Ihr Geschäft</span>.","subtitle":"Sie möchten wissen, ob GeoTapp zu Ihrem Unternehmen passt. Wir antworten konkret.","guarantee_title":"Antwortgarantie","guarantee_text":"Durchschnittliche Erstantwort innerhalb von 12 Geschäftsstunden. Keine verlorenen Anfragen.","form":{"name":"Name","company":"Unternehmen","email":"Geschäftliche E-Mail","reason":"Anfragegrund","message":"Nachricht","send":"Senden","reason_options":["Ich möchte eine GeoTapp Demo","Allgemeine Informationsanfrage","Partnerschaft","Sonstiges"],"name_placeholder":"Ihr Name","email_placeholder":"sie@email.com","company_placeholder":"Firmenname","message_placeholder":"Ihre Nachricht...","submit":"Nachricht senden","submitting":"Wird gesendet..."},"hours":"Mo-Fr 9:00 - 18:00","location_city":"Brescia, IT","channels_title":"Direkte Kontaktwege","email_label":"Allgemeine E-Mail","email_desc":"Für Informationen, Angebote und Support.","hq_label":"Hauptsitz","hq_city":"Brescia, Italien","hq_note":"Besuche nach Vereinbarung.","privacy_note":"Mit dem Absenden dieses Formulars stimmen Sie unserer Datenschutzerklärung zu.","map_title":"Wo wir sind — Trenzano (BS), Italien","success":"Nachricht erfolgreich gesendet. Wir melden uns so schnell wie möglich.","error":"Fehler beim Senden. Bitte versuchen Sie es später erneut.","sending":"Wird gesendet...","map_unavailable":"Karte nicht verfügbar","open_maps":"In Google Maps öffnen ↗"},"login_hub":{"title":"Zugang zu Ihrem <span class=\"text-primary\">Konto</span>.","subtitle":"Wählen Sie das Produkt, mit dem Sie sich verbinden möchten.","flow":{"desc":"Einsatzmanagement, Aufträge, Koordination und Berichte.","btn":"In Flow einloggen"},"timetracker":{"desc":"Anwesenheit, Außendiensttätigkeit und Arbeitsnachweise.","btn":"In TimeTracker einloggen"}},"product_pages":{"flow":{"hero_badge":"GeoTapp Flow — Außendienststeuerung","hero_title":"GeoTapp Flow.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600\">Einsatzverwaltung.</span>","hero_subtitle":"Die Schaltzentrale für Unternehmen mit Außendiensttechnikern und -mitarbeitern. Aufträge verwalten, Teams koordinieren und strukturierte, prüfbare Arbeitsberichte erstellen.","visual_placeholder":"BEDIENFELD","grid_title":"Operative Funktionen","grid_subtitle":"Jedes Modul ist auf echte Außendienstkontrolle ausgelegt. Klicken Sie zum Erkunden.","sectors":{"1":"Aufträge und Kunden","2":"Planung und Ressourcen","3":"Kontrolle und Sichtbarkeit"},"cta_title":"Echte Kontrolle über Ihren Außendienst.","cta_button":"Preise ansehen","modal":{"status":"SYSTEMSTATUS: <span class=\"text-green-600\">BETRIEBSBEREIT</span>","encryption":"DATEN: <span class=\"text-slate-400\">GESCHÜTZT</span>","access":"ZUGANG: <span class=\"text-blue-600\">SICHER</span>","close":"Schließen"},"systems":{"nexus-core":{"name":"Auftragsverwaltung","short":"Technische Einsätze erstellen und verwalten. Aufgaben zuweisen, Fortschritte überwachen und alles auftragsbezogen verfolgen.","full":"### Zentrale Auftragskontrolle.\n\nJeder Einsatz beginnt als strukturierter Auftrag.\n**Auftragsverwaltung** gibt Ihnen einen klaren Überblick über alle laufenden Arbeiten.\n\n#### Einsatzverwaltung\n\nAuftrag anlegen, Techniker zuweisen, Standort und Datum festlegen.\nStatus überwachen: Offen, In Bearbeitung, Abgeschlossen.\n\n#### Betriebshistorie\n\nJeder Auftrag hat ein vollständiges Archiv mit Tätigkeiten, Fotobeweisen, Notizen und Zeitstempeln.\nDer Kunde fragt, was gemacht wurde? Die Daten sind da. Immer."},"titan-flow":{"name":"Aufgabenzuweisung","short":"Arbeit präzise an Techniker verteilen. Anweisungen, Fristen und operative Prioritäten strukturiert übermitteln.","full":"### Der richtige Auftrag zum richtigen Techniker.\n\nUnklare Aufgabenverteilung erzeugt Verzögerungen und Streitigkeiten.\n**Aufgabenzuweisung** schafft operative Klarheit.\n\n#### Präzise Verteilung\n\nSobald ein Auftrag eröffnet ist, einen oder mehrere Techniker zuweisen.\nJeder Techniker sieht seine Arbeit auf GeoTapp TimeTracker.\n\n#### Operative Kommunikation\n\nAnweisungen, Notizen, technische Anhänge: alles erreicht den Techniker, bevor er zum Außendienst aufbricht.\nWeniger Anrufe, weniger Missverständnisse, weniger Verzögerungen."},"ledger-prime":{"name":"Berichte und Abrechnung","short":"Strukturierte Berichte aus jedem Auftrag erstellen. Dokumentation exportieren und Abrechnung mit echten Außendienstdaten unterstützen.","full":"### Von der Arbeit zum Bericht — geordnet.\n\nManuelle Abrechnung ist langsam und oft unvollständig.\n**Berichte und Abrechnung** schließt den operativen Kreislauf.\n\n#### Strukturierte Berichte\n\nJeder abgeschlossene Einsatz erzeugt Dokumentation durch Zusammenführung von Zeitstempeln, Fotos und Notizen aus dem Außendienst.\nKeine manuelle Dateneingabe — alles kommt aus TimeTracker.\n\n#### Abrechnungsunterstützung\n\nEchte Auftragsdaten unterstützen genauere Angebote und Rechnungen.\nWeniger Fehler, weniger Streitigkeiten, schnellerer Verwaltungszyklus."},"quantum-logistics":{"name":"Einsatzkalender","short":"Einsätze planen, Betriebskalender visualisieren und Teamverfügbarkeit ohne Überschneidungen verwalten.","full":"### Vollständiger Überblick über geplante Arbeiten.\n\nOhne gemeinsamen Kalender wird die Planung chaotisch.\n**Einsatzkalender** gibt Ihnen klare operative Sichtbarkeit.\n\n#### Erweiterte Planung\n\nAlle Einsätze in täglicher, wöchentlicher und monatlicher Kalenderansicht sehen.\nÜberschneidungen erkennen und Arbeitslasten optimieren.\n\n#### Teamverfügbarkeit\n\nSehen Sie, wer verfügbar ist, wer im Urlaub ist und wer bereits überlastet ist.\nNeue Einsätze zuweisen, ohne operative Konflikte zu erzeugen."},"supply-command":{"name":"Ressourcenverwaltung","short":"Materialien, Ausrüstung und operative Ressourcen für jeden Außeneinsatz kontrollieren. Keine Überraschungen.","full":"### Kein Einsatz ohne Ressourcen.\n\nEinen Techniker ohne das richtige Material ins Feld zu schicken ist ein kostspieliger Fehler.\n**Ressourcenverwaltung** verhindert operative Überraschungen.\n\n#### Materialien pro Auftrag\n\nBenötigte Ressourcen mit jedem Auftrag verknüpfen.\nDer Manager sieht im Voraus, was wann benötigt wird.\n\n#### Lieferanten und Beschaffung\n\nKontaktdaten und Konditionen Ihrer Stammlieferanten speichern.\nBeschaffungszeit reduzieren und Kosten kontrollieren."},"the-architect":{"name":"Arbeitsplanung","short":"Arbeit in Phasen, Aufgaben und Fristen strukturieren. Projekte ohne Tabellen oder Messenger-Nachrichten unter Kontrolle halten.","full":"### Arbeit strukturieren. Fortschritt kontrollieren.\n\nKomplexe Aufträge erfordern Struktur.\n**Arbeitsplanung** schafft operative Ordnung.\n\n#### Phasen und Fristen\n\nKomplexe Einsätze in operative Phasen mit klaren Fristen strukturieren.\nVerantwortlichkeiten jedem Teammitglied zuweisen.\n\n#### Fortschrittsüberwachung\n\nFortschritt in Echtzeit visualisieren.\nImmer wissen, was erledigt wurde und was noch offen ist.\nHandeln, bevor eine Verzögerung zum Kundenproblem wird."},"the-auditor":{"name":"Einsatzdokumentation","short":"Fotodokumentation, operative Notizen und unterschriebene Dokumente für jeden Einsatz sammeln. Geleistete Arbeit bleibt prüfbar.","full":"### Echter Nachweis für jeden Einsatz.\n\nOhne Dokumentation ist geleistete Arbeit anfechtbar.\n**Einsatzdokumentation** macht jeden Auftrag prüfbar.\n\n#### Fotodokumentation\n\nTechniker machen Fotos direkt über GeoTapp TimeTracker im Außendienst.\nBilder werden automatisch mit Zeitstempel und Standort mit dem Auftrag verknüpft.\n\n#### Digitale Kundenunterschrift\n\nDer Kunde kann den Arbeitsbericht direkt auf dem Bildschirm des Technikers unterschreiben.\nDie digitale Unterschrift ist im Bericht enthalten und gilt als Beweis der erbrachten Leistung."},"the-uplink":{"name":"Außendienst-Büro-Verbindung","short":"Von TimeTracker erfasste Daten gelangen in Echtzeit in Flow. Außendienst und Büro arbeiten mit denselben operativen Daten.","full":"### Büro und Außendienst — endlich verbunden.\n\nDie Trennung zwischen Außendienst und Büro erzeugt vermeidbare Fehler, Verzögerungen und Streitigkeiten.\n**Außendienst-Büro-Verbindung** schließt die Lücke.\n\n#### Echtzeitsynchronisation\n\nJedes Ein-/Ausstempeln, jedes Foto und jede Notiz in TimeTracker gelangt sofort in Flow.\nDer Manager hat eine Live-Ansicht, ohne den Techniker anrufen zu müssen.\n\n#### Zuverlässige Historie\n\nAlles, was der Techniker im Außendienst erfasst, wird archiviert und mit dem Auftrag verknüpft.\nKeine Daten gehen verloren. Keine Information fehlt, wenn es Zeit ist, Bericht zu erstatten."},"the-oracle":{"name":"Operative Sichtbarkeit","short":"Echtzeit-Betriebsdashboard. Immer wissen, wie viele Einsätze heute offen, in Bearbeitung oder abgeschlossen sind.","full":"### Operative Daten, keine Annahmen.\n\nEntscheidungen ohne verlässliche Daten zu treffen ist gefährlich.\n**Operative Sichtbarkeit** wandelt Außendienstdaten in konkrete Informationen um.\n\n#### Betriebsdashboard\n\nIn Echtzeit sehen:\n- Offene und laufende Einsätze\n- Aktive Techniker\n- Heute und diese Woche abgeschlossene Einsätze\n\n#### Periodische Berichte\n\nAutomatisierte Aktivitätszusammenfassungen erhalten.\nZeiträume vergleichen, Engpässe erkennen und Abläufe optimieren."}}},"app":{"hero_badge":"GeoTapp TimeTracker — Außendienst-App","hero_title":"GeoTapp TimeTracker.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600\">Der Außendienst in Ihrer Tasche.</span>","hero_subtitle":"Die mobile App für Techniker zur Erfassung von Tätigkeiten, Sammlung von Nachweisen und Aufrechterhaltung des operativen Fadens direkt aus dem Außendienst. Verfügbar für Android und iOS.","visual_placeholder":"AUSSENDIENST-INTERFACE","grid_title":"Werkzeuge für die Außenarbeit","grid_subtitle":"Jede Funktion ist für Menschen konzipiert, die außerhalb des Büros arbeiten und keine Zeit zu verlieren haben. Klicken Sie zum Erkunden.","sectors":{"1":"Kernfunktionen","2":"Logistik und Kommunikation","3":"Daten und Administration"},"cta_title":"Geben Sie Ihren Technikern das richtige Werkzeug.","cta_button":"Preise ansehen","modal":{"status":"SYSTEMSTATUS: <span class=\"text-green-600\">BETRIEBSBEREIT</span>","encryption":"DATEN: <span class=\"text-slate-400\">GESCHÜTZT</span>","device":"GERÄT: <span class=\"text-blue-600\">MOBIL / TABLET</span>","close":"Schließen"},"systems":{"timelock-alpha":{"name":"GPS-Zeiterfassung","short":"Ein- und Ausstempeln verknüpft mit GPS-Position und präzisem Zeitstempel. Jede Arbeitssitzung wird zu einem prüfbaren operativen Ereignis.","full":"### Zeit ist prüfbar.\n\nZeitstempel ohne Verifikation erzeugen Streitigkeiten.\n**GPS-Zeiterfassung** macht jede Arbeitssitzung zu einem zuverlässigen, verteidigbaren Datensatz.\n\n#### Geolokaliertes Ein- und Ausstempeln\n\nDer Techniker erfasst Beginn und Ende des Außeneinsatzes.\nStandort, Adresse und Zeit werden automatisch registriert.\n\n#### Unveränderliche Historie\n\nJede Sitzung ist ein prüfbarer Datensatz: Startzeit, Endzeit, Position, Dauer und zugehöriger Auftrag.\nDer Kunde fragt, wann Sie ankamen? Die Daten sind da, immer."},"event-horizon":{"name":"Schichtplanung","short":"Schichten und Personalverfügbarkeit verwalten. Wochen- und Monatsansichten für Koordination ohne Verwirrung oder Überschneidungen.","full":"### Keine Schichtkonflikte.\n\nMobiles Personal zu organisieren erfordert Klarheit.\n**Schichtplanung** gibt dem Manager eine präzise, aktuelle Übersicht.\n\n#### Kalenderansicht\n\nSehen, wer wann arbeitet.\nFehlzeiten, Urlaub und Überschneidungen erkennen, bevor sie zu operativen Problemen werden.\n\n#### Echtzeitverfügbarkeit\n\nMitarbeiter bestätigen Anwesenheit oder melden Abwesenheiten direkt aus der App.\nDer Manager sieht Lücken im Dienstplan, bevor neue Aufträge vergeben werden."},"unit-matrix":{"name":"Mitarbeiterregister","short":"Ein vollständiges Register Ihrer Mitarbeiter führen: Rollen, Kontakte, Zertifizierungen und Plattformzugang.","full":"### Ihr Team kennen.\n\nJeder Mitarbeiter ist eine wichtige operative Ressource.\n**Mitarbeiterregister** zentralisiert alle wichtigen Informationen.\n\n#### Zertifizierungsverwaltung\n\nAuf einen Blick sehen, wer die erforderlichen Qualifikationen für einen bestimmten Einsatz oder Standort besitzt.\n\n#### Schnelles Onboarding\n\nEinen neuen Techniker hinzufügen ist einfach.\nEinladungslink senden: innerhalb von Minuten ist er auf GeoTapp TimeTracker einsatzbereit."},"sector-grid":{"name":"Standorte und Baustellen","short":"Eine Datenbank mit Einsatzstandorten und Baustellen anlegen. Jeden Einsatz dem richtigen Standort zuordnen und Teams nach Zone organisieren.","full":"### Jeder Einsatz am richtigen Ort.\n\nArbeiten ohne geografischen Bezug erzeugt Verwirrung.\n**Standorte und Baustellen** schafft operative Klarheit.\n\n#### Standortdatenbank\n\nEinen Katalog von Kundenstandorten, Baustellen und Betriebsorten erstellen.\nDas System verknüpft Technikertätigkeiten automatisch mit dem Einsatzstandort.\n\n#### Zonenbasierte Teams\n\nTechniker in Teams nach Standort oder geografischem Gebiet organisieren.\nEinsätze dem richtigen Team zuweisen, nicht nur dem Einzelnen."},"energy-logistics":{"name":"Fahrzeug- und Spesenmanagement","short":"Firmenfahrzeugnutzung, Kraftstoffverbrauch und Reisespesen für Außendienstmitarbeiter nachverfolgen.","full":"### Jede Fahrt dokumentiert.\n\nReisespesen sind ein kritischer Posten für jedes Unternehmen mit mobilem Personal.\n**Fahrzeugverwaltung** überwacht jeden anfallenden Kostenpunkt.\n\n#### Fahrzeugnutzung\n\nEinem Mitarbeiter vorübergehend ein Fahrzeug für einen Einsatz zuweisen.\nImmer wissen, wer welches Fahrzeug für welchen Auftrag verwendet.\n\n#### Kraftstoffkosten\n\nMitarbeiter erfassen Tankvorgänge direkt aus der App mit Quittungsfoto und Betrag.\nAlles archiviert, alles mit dem Auftrag verknüpft."},"neural-link":{"name":"Operative Kommunikation","short":"Interner Kanal für Unternehmenskommunikation. Gezielte Nachrichten an bestimmte Gruppen mit Lesebestätigungen.","full":"### Klare Kommunikation. Kein Hintergrundrauschen.\n\nWhatsApp vermischt Privat- und Berufsleben und bietet keine Kontrolle über Lesestatus.\n**Operative Kommunikation** ist der offizielle Unternehmenskanal.\n\n#### Gezielte Nachrichten\n\nNur das Team benachrichtigen, das es wissen muss.\nSchichtwechsel am Standort Berlin? Nur die zugewiesenen Techniker erhalten die Nachricht.\n\n#### Lesebestätigungen\n\nImmer wissen, wer die Mitteilung gelesen hat und wer nicht.\nKlare und transparente Verantwortlichkeit für alle."},"payroll-bridge":{"name":"Anwesenheitsexport","short":"Monatliche Anwesenheiten in Formaten exportieren, die mit führenden Lohnbuchhaltungssystemen kompatibel sind. Weniger manuelle Arbeit, weniger Fehler.","full":"### Lohnbuchhaltung ohne Kopfschmerzen.\n\nMonatsende muss kein administrativer Albtraum sein.\n**Anwesenheitsexport** verbindet Außendienstbetrieb mit der Personalverwaltung.\n\n#### Multi-Format\n\nAnwesenheitsdateien für den Import in führende Lohnbuchhaltungssysteme erstellen (DATEV, Lexware, Personio, LODAS).\n\n#### Steuerberaterzugang\n\nIhrem Lohnbüro eingeschränkten Zugang gewähren.\nEs lädt die benötigten Daten selbständig herunter, ohne Sie jeden Monatsabschluss anrufen zu müssen."},"data-core":{"name":"Wochenberichte","short":"Detaillierte Berichte über geleistete Stunden pro Auftrag und Mitarbeiter. Zuverlässige Daten für interne Kontrolle und Abrechnung.","full":"### Daten lügen nicht.\n\nEntscheidungen auf Fakten statt auf Gefühl basieren.\n**Wochenberichte** extrahiert Wert aus dem täglichen Betrieb.\n\n#### Detaillierte Berichte\n\nJede Woche ein vollständiges Bild: Wer hat wo, an welchem Auftrag und wie lange gearbeitet.\n\n#### Vollständige Transparenz\n\nMitarbeiter und Manager konsultieren denselben Monatsbericht.\nGezählte Stunden sind für alle identisch.\nKeine Streitigkeiten am Monatsende."},"identity-forge":{"name":"Marken-App","short":"Ihr Logo hochladen und Unternehmensfarben wählen. Ihre Mitarbeiter nutzen eine App, die Ihre Markenidentität widerspiegelt.","full":"### Ihr Unternehmen, Ihre App.\n\nKeine generische App verwenden.\nLassen Sie Ihre Mitarbeiter Teil IHRES Unternehmens fühlen — mit einem konsistenten Markenerlebnis.\n\n#### Firmenlogo\n\nIhr Logo prominent auf dem Login-Bildschirm und dem Hauptdashboard.\n\n#### Unternehmensfarben\n\nDas Farbthema wählen, das zu Ihrem Unternehmensauftritt passt.\nProfessionell, konsistent, wiedererkennbar."}}}},"cart":{"title":"Warenkorb","empty":"Ihr Warenkorb ist leer.","license_default":"Standardlizenz","quantity":"Menge","per_month":"Monat","per_year":"Jahr","total_monthly":"Monatliche Summe","total_yearly":"Jährliche Summe","vat_note":"MwSt. (beim Checkout berechnet)","email_label":"E-Mail für Lizenzen und SaaS-Zugang","email_placeholder":"name@unternehmen.com","email_hint":"Wir senden Ihnen hier die Lizenzschlüssel und Zugangsdaten.","email_error_empty":"Bitte geben Sie eine gültige E-Mail-Adresse ein.","email_error_invalid":"Bitte geben Sie eine gültige E-Mail-Adresse ein (z.B. name@unternehmen.com).","terms_alert":"Um fortzufahren müssen Sie die Nutzungsbedingungen akzeptieren und bestätigen, dass Sie die Datenschutzerklärung gelesen haben.","checkout_loading":"Verarbeitung...","checkout_button":"Zur Kasse","checkout_error":"Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.","policy_terms_prefix":"Ich habe die","policy_terms_link":"Allgemeinen Nutzungsbedingungen","policy_terms_suffix":"von GeoTapp gelesen und akzeptiere sie.","policy_privacy_prefix":"Ich habe die","policy_privacy_link":"Datenschutzerklärung","policy_privacy_suffix":"von GeoTapp gelesen."},"guida":{"page_title":"Benutzerhandbuch","download_pdf":"Herunterladen / Als PDF drucken"},"trial":{"page_title":"14 Tage kostenlos. Keine Kreditkarte.","page_subtitle":"Vollständiger Zugang zu allen GeoTapp Flow-Modulen für 14 Tage. Keine Kreditkarte, keine Verpflichtung. Jederzeit kündbar.","badge":"Kostenlose Testphase — 14 Tage","form_title":"Konto erstellen","form_company":"Firmenname","form_company_placeholder":"Z.B. Rossi Installationen GmbH","form_vat":"Europäische USt-IdNr.","form_vat_placeholder":"Z.B. DE123456789","form_email":"Geschäftliche E-Mail","form_email_placeholder":"Z.B. mario@firma.de","form_fullname":"Vollständiger Name","form_fullname_placeholder":"Z.B. Mario Rossi","form_plan":"GeoTapp Flow-Tarif","form_plan_note":"Die Nutzeranzahl des Tarifs bezieht sich auf GeoTapp Flow (Büroverwaltung / CRM). GeoTapp Timetracker-Lizenzen für Außendienstmitarbeiter sind ein separates Abonnement, mit einer im gewählten Tarif enthaltenen Höchstanzahl.","plan_solo":"Solo — 1 Flow-Nutzer","plan_team":"Team — bis 5 Flow-Nutzer","plan_business":"Business — unbegrenzte Flow-Nutzer","form_seats":"Timetracker-Lizenzen (optional)","form_seats_hint":"Separates Abonnement für Außendienstmitarbeiter (mobile App). Im Tarif enthaltenes Limit: Solo max. 2, Team max. 5, Business unbegrenzt. Lizenzen können nach der Aktivierung angepasst werden.","form_submit":"Kostenlos testen","form_submitting":"Wird eingerichtet...","form_privacy":"Ihre Daten werden gemäß unserer","form_privacy_link":"Datenschutzerklärung","form_email_hint":"Bitte geschäftliche E-Mail verwenden (kein Gmail, Yahoo usw.)","success_title":"E-Mail prüfen!","success_desc":"Wir haben den Aktivierungslink an ","success_desc2":"Klicken Sie auf den Link, um Ihr Passwort festzulegen und auf Ihren Test zuzugreifen.","success_spam":"Nicht gefunden? Spam-Ordner prüfen.","error_message":"Aktivierungsfehler. Bitte erneut versuchen oder an info@geotapp.com schreiben.","benefits_title":"Was enthalten ist","benefits":[{"title":"Vollständiger Zugang","desc":"Alle Module aktiv: CRM, Rechnungsstellung, Teamverwaltung, Kundensupport."},{"title":"Keine Karte erforderlich","desc":"Nur Firmendaten eingeben. Karte nur hinzufügen, wenn Sie weitermachen möchten."},{"title":"Ihre Daten sind sicher","desc":"Ihre Daten gehören Ihnen. Sie können sie jederzeit exportieren."}],"faq":[{"q":"Was passiert nach 14 Tagen?","a":"Sie erhalten eine E-Mail mit einem Link zur Aktivierung des Abonnements. Wenn Sie nichts tun, wird das Konto ohne Kosten gesperrt."},{"q":"Muss ich eine Kreditkarte angeben?","a":"Nein. Der Test ist völlig kostenlos ohne Kreditkarte. Sie fügen diese nur hinzu, wenn Sie weitermachen möchten."},{"q":"Kann ich mein Team einladen?","a":"Ja, Sie können während des Tests Nutzer über die Einstellungen hinzufügen."},{"q":"Wie lange dauert der Einstieg?","a":"Weniger als 2 Minuten: Formular ausfüllen, E-Mail empfangen, Passwort festlegen – fertig."}]},"demo":{"page_title":"Buchen Sie Ihre persönliche Demo","settori":["Reinigung / Facility / Multiservice","Sicherheit / Wachschutz / Steward","Installateure / Elektriker / Klempner","Logistik / Transport","Bau / Wartung","Sonstiges"],"cosa_vedrai":[{"title":"GPS-Zeiterfassung in Aktion","desc":"Wie der Techniker sich über die mobile App einbucht und wie das Büro den verifizierten Standort sieht — ohne Dauerüberwachung."},{"title":"Verifizierbare Berichte","desc":"Wie jeder Einsatz einen Bericht mit Fotobeweis, digitaler Signatur und unveränderlichem Hash erzeugt, den Sie dem Kunden zeigen können."},{"title":"Teamverwaltung über Flow","desc":"Wie Sie Aufgaben zuweisen, den Fortschritt überwachen und Wochenberichte ohne Excel-Tabellen oder Telefonanrufe erstellen."}],"faq":[{"q":"Wie lange dauert die Demo?","a":"Genau 30 Minuten. Wir zeigen Ihnen die Plattform im echten Einsatz und beantworten Ihre branchenspezifischen Fragen."},{"q":"Ist Vorbereitung erforderlich?","a":"Nein. Bringen Sie einfach Ihren konkreten Fall mit — wie viele Mitarbeiter Sie haben und welche Probleme Sie heute mit Stunden oder Berichten haben."},{"q":"Ist die Demo kostenlos?","a":"Ja, vollständig kostenlos und unverbindlich. Am Ende können Sie direkt eine Testphase starten."},{"q":"Kann ich einen Kollegen einladen?","a":"Absolut. Oft nehmen der Betriebsleiter und der Administrator oder HR gemeinsam teil."}],"form_name":"Vollständiger Name","form_name_placeholder":"Max Mustermann","form_company":"Unternehmen","form_company_placeholder":"Firmenname","form_sector":"Branche","form_email":"E-Mail","form_email_placeholder":"max@firma.de","form_phone":"Telefon (optional)","form_phone_placeholder":"+49 151 12345678","form_submit":"Kostenlose Demo buchen","form_submitting":"Wird gesendet...","success_title":"Anfrage erhalten!","success_desc":"Wir werden Sie innerhalb von 1 Werktag kontaktieren, um die Demo zu vereinbaren.","error_message":"Fehler beim Senden. Bitte versuchen Sie es später erneut."},"download_page":{"title":"GeoTapp herunterladen","subtitle":"Wählen Sie die Version, die Ihren Anforderungen entspricht.","demo_report_badge":"Echtes Beispiel","demo_report_title":"Zertifizierter Einsatzbericht","demo_report_desc":"Laden Sie einen echten von GeoTapp generierten Bericht herunter. Er enthält verifizierten GPS, Fotobeweise, Operator-Hash-Kette und kryptografische Siegelung.","demo_report_btn_download":"Beispielbericht herunterladen (.zip)","demo_report_btn_verify":"Authentizität prüfen","demo_report_field_operator":"Techniker","demo_report_field_type":"Einsatztyp","windows_title":"GeoTapp für Windows","windows_desc":"Die vollständige Desktop-Anwendung für die Betriebsverwaltung. Ideal für Administration und vollständige Kontrolle.","windows_features":["Vollständige Flottenverw altung","Schichtplanung","Gehaltsexport","Desktop-Benachrichtigungen"],"windows_btn":"Für Windows herunterladen","wp_title":"WordPress-Plugin","wp_desc":"Integrieren Sie GeoTapp in Ihre Unternehmenswebsite. Ermöglichen Sie Mitarbeitern den direkten Zugriff aus Ihrem Intranet.","wp_features":["Sichere Iframe-Integration","Shortcode [geotap_app]","Automatisches Login","Kompatibel mit allen Themes"],"wp_btn":"Plugin herunterladen"},"chi_siamo":{"badge":"Unsere Geschichte","hero_title_line1":"Im Feld geboren,","hero_title_line2":"nicht im Büro.","hero_desc":"GeoTapp wurde nicht von Investoren oder Analysten erfunden. Es entstand aus der echten Frustration von jemandem, der täglich zwischen Fristen, Baustellen und anspruchsvollen Kunden arbeitet.","story":["Es war 2024. Mike Petraroli, unser Gründer, arbeitete als Angestellter und hatte ein scheinbar triviales, aber unglaublich kostspieliges Problem: <strong>seine eigene Arbeit zu beweisen.</strong>","Am Monatsende stimmten die Stunden nie. Einsätze im Laufen zwischen Kunden wurden vergessen. Papier ging verloren, WhatsApp-Nachrichten wurden begraben. Es war eine stille Quelle von Zeitverlust und Geldabfluss.","Er suchte eine Lösung. Er fand nur komplexe, teure Software voller nutzloser Grafiken und wenig Substanz. Software von Leuten, die noch nie einen Stempel gedrückt oder eine Rechnung im Notfall aus dem Lieferwagen ausgestellt hatten.","Also beschloss Mike, das Werkzeug selbst zu bauen, das er gehabt haben wollte: einfach, mobil, mit überprüfbaren Beweisen. Nicht für Investoren — für Unternehmen wie seines."],"values_title":"Unsere Werte","values":[{"title":"Klare Mission","desc":"Jeden Einsatz messbar und nachweisbar machen. Außendienstarbeit verdient dieselben Transparenzwerkzeuge wie ein Büro."},{"title":"Engagiertes Team","desc":"Wir sind ein kleines Team, das von dem Problem besessen ist, das wir lösen. Jede Funktion entsteht aus echtem Feedback, nicht aus Marketing-Roadmaps."},{"title":"Privacy by Design","desc":"Wir verkaufen keine Daten, wir überwachen nicht kontinuierlich. GPS nur zum Zeitpunkt des Einstempelns, null Überwachung."},{"title":"Made in Italy","desc":"Entwickelt in Italien für den italienischen und europäischen Markt. DSGVO-Regeln, Arbeitskultur und lokale Vorschriften sind in der DNA des Produkts."}],"cta_title":"Mach mit bei der einfachen Revolution","cta_desc":"Wir sind kein unerreichbares Big-Tech-Unternehmen. Wir sind echte Menschen, die Software für echte Menschen bauen.","cta_btn":"Schreib uns","stats":[{"number":"2024","label":"Gegründet"},{"number":"100%","label":"Für den Außendienst"},{"number":"GDPR","label":"Zertifizierter Datenschutz"}],"mission_quote":"Außendienstarbeit verdient dieselben Transparenz-Tools wie ein Büro."},"blog":{"hero_title":"Gedanken & Funken.","hero_desc":"Wir schreiben nicht um Seiten zu füllen. Wir schreiben, um zu teilen, was wir beim Aufbau der Zukunft der verifizierbaren Arbeit lernen.","no_posts":"Derzeit keine Artikel verfügbar.","read_article":"Artikel lesen →","cta_title":"GeoTapp 14 Tage kostenlos testen","cta_desc":"Vollständiger Zugang zu allen Modulen. Keine Kreditkarte, keine Verpflichtung.","cta_btn":"Kostenlos testen","schema_desc":"Anleitungen und Einblicke zur Außendienst-Zertifizierung, Teamverwaltung, DSGVO und Geolokalisierung.","meta_title":"Blog | GeoTapp — Außendienst-Verifikation","meta_desc":"Anleitungen, Einblicke und Ressourcen zu Teamverwaltung, Außendienst-Zertifizierung, DSGVO und Geolokalisierung. Vom GeoTapp-Team.","cat_all":"Alle"},"roi":{"meta_title":"GeoTapp ROI-Rechner — Entdecken Sie Ihre echten Einsparungen","meta_desc":"Berechnen Sie in 2 Minuten, wie viel Sie mit GeoTapp sparen: weniger Verwaltung, null Streitigkeiten, produktivere Mitarbeiter.","hero_title":"Berechnen Sie Ihren ROI mit GeoTapp","hero_subtitle":"Geben Sie Ihre Unternehmensdaten ein und entdecken Sie, wie viel Sie jährlich sparen können.","step1_title":"Ihr Unternehmen","step1_subtitle":"Erzählen Sie uns ein bisschen über sich","field_settore":"Branche","field_operatori":"Anzahl der Mitarbeiter","settore_installatori":"Installation & Wartung","settore_pulizie":"Reinigung & Desinfektion","settore_sicurezza":"Sicherheit & Bewachung","settore_altro":"Andere Branche","step2_title":"Ihre aktuelle Situation","step2_subtitle":"Seien Sie präzise: Je genauer die Daten, desto genauer die Berechnung","field_siti":"Täglich besuchte Standorte (pro Mitarbeiter)","field_ore_admin":"Stunden/Woche für Verwaltung und Berichte","field_contestazioni":"Kundenstreitigkeiten pro Monat (unbezahlt, Ansprüche usw.)","field_costo_orario":"Durchschnittliche Stundenkosten eines Mitarbeiters (€)","step3_title":"Wohin sollen wir Ihren Bericht senden?","step3_subtitle":"Ihre personalisierten Ergebnisse kommen sofort. Kein Spam.","field_nome":"Vor- und Nachname","field_email":"Geschäftliche E-Mail","field_telefono":"Telefon (optional)","cta_calcola":"Meinen ROI berechnen","consent_text":"Mit dem Klick auf 'Meinen ROI berechnen' stimmen Sie zu, kommerzielle Mitteilungen von GeoTapp zu erhalten. Sie können sich jederzeit abmelden.","next":"Weiter","back":"Zurück","results_title":"Ihre geschätzten Einsparungen mit GeoTapp","results_subtitle":"Basierend auf den von Ihnen eingegebenen Daten","results_admin":"Einsparungen bei Verwaltung & Berichten","results_dispute":"Einsparungen bei Streitigkeiten & Ansprüchen","results_coord":"Einsparungen bei der Teamkoordination","results_total":"Gesamte jährliche Einsparungen","results_payback":"Geschätzte Amortisationszeit","results_payback_unit":"Monate","results_roi":"Geschätzter ROI","results_cta":"Starten Sie die kostenlose 14-Tage-Testphase","results_disclaimer":"Indikative Schätzung basierend auf Branchendurchschnittswerten. Tatsächliche Ergebnisse können abweichen.","per_anno":"/ Jahr","label_operators":"Mitarbeiter","embed_title":"GeoTapp ROI-Rechner"}}
+{
+  "navbar": {
+    "products": "Produkte",
+    "pricing": "Preise",
+    "blog": "Blog",
+    "contact": "Kontakt",
+    "login": "Anmelden",
+    "cta": "Kostenlos testen",
+    "sectors": {
+      "installatori": "Installateure",
+      "sicurezza": "Sicherheitsdienst",
+      "pulizie": "Gebäudereinigung",
+      "label": "Branchen"
+    },
+    "logo_alt": "GeoTapp — Die Plattform, die Arbeit verifizierbar macht",
+    "product_flow_desc": "Operative Einsatzverwaltung und Teamplanung",
+    "product_app_desc": "Mobile App für Außendiensttechniker",
+    "product_verifier_desc": "Integritätsprüfung von Arbeitsberichten",
+    "compare": "Vergleich"
+  },
+  "footer": {
+    "tagline": "Außendienst erfasst. Einsätze organisiert. Berichte prüfbar.",
+    "privacy": "Datenschutz",
+    "terms": "Nutzungsbedingungen",
+    "rights": "Alle Rechte vorbehalten."
+  },
+  "landing": {
+    "hero_badge": "Die Arbeit war da. Jetzt machen Sie sie beweisbar.",
+    "hero_title": "Wenn Sie es nicht beweisen können, sagt der Kunde: Es ist nie passiert.",
+    "hero_subtitle": "GeoTapp verwandelt jeden Außendiensteinsatz in objektive Beweise: versiegelte Berichte mit echten GPS-Daten, zeitgestempelte Fotonachweise und Dokumentation, die jeder unabhängig prüfen kann — ohne Vertrauen, ohne Streit.",
+    "hero_cta_primary": "Kostenlos testen",
+    "hero_cta_secondary": "Branchen entdecken",
+    "trust_gdpr": "DSGVO-konform",
+    "trust_gdpr_desc": "Zeitstempel nur bei An- und Abmeldung",
+    "trust_gps": "GPS-Nachweis",
+    "trust_gps_desc": "Jeder Einsatz mit Standort und Zeitstempel zertifiziert",
+    "trust_offline": "Offline-fähig",
+    "trust_offline_desc": "Automatische Synchronisation bei Verbindung",
+    "features_title": "Vom Einsatz zum verifizierbaren Nachweis",
+    "features_subtitle": "Drei integrierte Werkzeuge: Das Feld erfasst, das Büro kontrolliert, der Kunde verifiziert.",
+    "cta_title": "Die Arbeit war da. Jetzt beweisen Sie es.",
+    "cta_subtitle": "Unternehmen, die GeoTapp nutzen, verlieren keine undokumentierten Einsätze mehr. Jede Stunde ist verifizierbar. Jeder Bericht ist verteidigbar.",
+    "cta_button": "Kostenlos testen",
+    "problem_title": "Das Problem, das du schon kennst",
+    "problem_subtitle": "Es ist kein Organisationsproblem. Es ist ein Beweisproblem.",
+    "problem_items": [
+      {
+        "title": "Der Kunde bestreitet es. Du hast keine Beweise.",
+        "desc": "Die Arbeit hat stattgefunden. Ohne verifizierbaren Nachweis steht dein Wort gegen seines. Und meistens gewinnt er."
+      },
+      {
+        "title": "Der Bericht kommt unvollständig, zu spät oder gar nicht.",
+        "desc": "Papierformulare, WhatsApp, E-Mails. Daten gehen verloren, werden verändert, vergessen. Die nachträgliche Rekonstruktion ist teuer und unzuverlässig."
+      },
+      {
+        "title": "Nicht dokumentierte Arbeit existiert nicht.",
+        "desc": "Jede nicht erfasste Stunde ist eine unbezahlte Stunde. Jeder Einsatz ohne Nachweis ist ein Einsatz, den der Kunde anfechten kann."
+      }
+    ],
+    "report_section_title": "Der Bericht. Nicht eine Zusammenfassung. Ein Beweis.",
+    "report_section_subtitle": "Jeder GeoTapp-Bericht wird automatisch aus echten Felddaten generiert.",
+    "report_section_body": "GPS-Zeitstempel, Fotos mit Zeitstempel, Betriebsnotizen. Das System versiegelt jeden Bericht kryptografisch, sodass jede Änderung erkennbar ist. Das Ergebnis ist kein Dokument zum Weiterleiten — es ist ein Nachweis, den der Kunde selbst prüfen kann.",
+    "report_feature_1": "Nicht veränderbar nach Erstellung — jede Änderung ist erkennbar",
+    "report_feature_2": "Prüfbar ohne Konto — von jedem, unabhängig",
+    "report_feature_3": "GPS- und Fotodaten integriert und nicht trennbar",
+    "report_feature_4": "Automatisch generiert — keine manuelle Erfassung",
+    "report_cta": "So verifiziert Ihr Kunde selbst",
+    "hero_sectors_prefix": "Ideal für",
+    "hero_sectors_pulizie": "Reinigungsunternehmen",
+    "hero_sectors_installatori": "Installateure",
+    "hero_sectors_sicurezza": "Sicherheitsdienste",
+    "hero_sectors_and": "und"
+  },
+  "home_sections": {
+    "flow": {
+      "badge": "GeoTapp Flow",
+      "title": "Außendienst aus einer Zentrale koordinieren.",
+      "subtitle": "Flow ist das System, das das Büro nutzt, um Aufträge zu verwalten, Tätigkeiten zuzuweisen, Fortschritte zu überwachen und strukturierte Arbeitsberichte zu erstellen. <strong class=\"text-slate-900\">Weniger interne Reibung, mehr echte Kontrolle.</strong>",
+      "features": {
+        "crm": "<strong>Auftragsverwaltung:</strong> Einsätze erstellen, Techniker zuweisen und Fortschritte in Echtzeit überwachen.",
+        "pipeline": "<strong>Strukturierte Berichte:</strong> Jeder abgeschlossene Auftrag erzeugt rückverfolgbare Dokumentation für den Kunden."
+      },
+      "link": "GeoTapp Flow entdecken"
+    },
+    "app": {
+      "badge": "GeoTapp TimeTracker",
+      "title": "Der Techniker erfasst. Das Büro kontrolliert.",
+      "subtitle": "TimeTracker ist die mobile App für Techniker zur Erfassung von Außendiensttätigkeiten. Ein- und Ausstempeln, Fotos und Notizen zum jeweiligen Auftrag. <strong>Verfügbar für Android und iOS.</strong>",
+      "card_gps": {
+        "title": "GPS-Zeiterfassung",
+        "desc": "Verifizierter Standort"
+      },
+      "card_gdpr": {
+        "title": "DSGVO-konform",
+        "desc": "Kein kontinuierliches Tracking"
+      },
+      "link": "GeoTapp TimeTracker entdecken"
+    },
+    "verifier": {
+      "badge": "GeoTapp Verifier",
+      "title": "Sie brauchen kein Vertrauen.",
+      "subtitle": "Der Kunde hat den Bericht. Er prüft ihn selbst, ohne GeoTapp zu öffnen. Wenn die Daten der realen Arbeit entsprechen, hält das Siegel. Wenn jemand das Dokument geändert hat, bricht das Siegel. Kein Einspruch.",
+      "features": {
+        "integrity": "<strong>Nicht veränderbare Daten:</strong> Der Bericht wird auf echten Felddaten generiert und gesperrt. Jede Änderung macht ihn ungültig — ohne Ausnahme.",
+        "independent": "<strong>Autonome Prüfung:</strong> Jeder mit dem Bericht kann die Echtheit überprüfen — kein Konto, kein Plattformzugang."
+      },
+      "link": "GeoTapp Verifier entdecken"
+    },
+    "core": {
+      "badge": "GeoTapp Plattform",
+      "title": "Ein System, drei Sicherheitsstufen",
+      "subtitle": "TimeTracker erfasst im Außendienst. Flow organisiert im Büro. Verifier bestätigt, dass alles übereinstimmt.",
+      "features": [
+        {
+          "title": "Echte mobile Einsatzfähigkeit",
+          "desc": "TimeTracker funktioniert ohne Verbindung und synchronisiert, sobald das Feld wieder online ist. Die Arbeit stoppt nie."
+        },
+        {
+          "title": "Datenschutz by Design",
+          "desc": "Der Standort wird <strong>nur</strong> beim Ein- und Ausstempeln erfasst. Kein kontinuierliches Tracking. Vollständig DSGVO-konform."
+        },
+        {
+          "title": "Echtzeit-Betriebskontrolle",
+          "desc": "Felddaten kommen sofort in Flow an. Das Büro hat Live-Transparenz ohne jemanden anzurufen."
+        },
+        {
+          "title": "Verteidigbarer Nachweis über Zeit",
+          "desc": "Jeder Bericht ist auf echten Felddaten gesperrt und nicht veränderbar. Streit? Die Daten sind da. Von jedem verifizierbar. Immer."
+        }
+      ]
+    },
+    "footer_cta": {
+      "title": "Hören Sie auf, undokumentierte Arbeit zu verlieren.",
+      "subtitle": "Jeder Einsatz ohne verifizierbaren Nachweis ist ein angreifbarer Einsatz. GeoTapp schließt diese Lücke.",
+      "button": "Kontakt aufnehmen",
+      "pricing_link": "Pläne und Preise ansehen →"
+    },
+    "settori": {
+      "title": "Nachweisbare Dokumentation für jeden Sektor — GeoTapp-Lösungen",
+      "subtitle": "Wählen Sie Ihren Sektor und sehen Sie, wie GeoTapp Arbeitsnachweise erstellt — zum Vorzeigen beim Kunden bei Konflikten.",
+      "see_all": "Alle unterstützten Sektoren anzeigen",
+      "installatori": {
+        "name": "Installateure",
+        "desc": "Elektriker, Installateure, Anlagentechniker. Jeder Einsatz mit GPS und Fotos dokumentiert — unveränderliche Daten, vom Kunden prüfbar.",
+        "cta": "Jeden Einsatz nachweisen"
+      },
+      "sicurezza": {
+        "name": "Sicherheit",
+        "desc": "Wachdienst, Stewards, Sicherheitsdienste. Nachweisbare Anwesenheit, dokumentierte Schichten mit objektivem Nachweis.",
+        "cta": "Anwesenheit belegen"
+      },
+      "pulizie": {
+        "name": "Reinigung",
+        "desc": "Reinigungsunternehmen, Facility, Multiservice. Jeder Durchgang dokumentiert und vom Auftraggeber prüfbar — null Beschwerden.",
+        "cta": "Beschwerden vermeiden"
+      }
+    },
+    "app_mockup": {
+      "greeting": "Guten Morgen,",
+      "status": "🟢 Im Dienst",
+      "next_job_label": "Nächster Einsatz",
+      "next_job_time": "In 15 Min"
+    },
+    "demo_banner": {
+      "badge": "Echtes Beispiel",
+      "title": "Zertifizierter Bericht — herunterladen und verifizieren",
+      "field_operator": "Mitarbeiter",
+      "field_intervention": "Einsatz",
+      "btn_download": "Bericht herunterladen (.zip)",
+      "btn_verify": "Authentizität prüfen →"
+    },
+    "flow_mockup": {
+      "pipeline_title": "Verkaufspipeline",
+      "month": "Dezember 2025",
+      "quote_name": "Angebot A. Müller",
+      "quote_approved": "Heute um 09:30 genehmigt"
+    }
+  },
+  "pricing": {
+    "badge": "GeoTapp Lösungen",
+    "title": "Das richtige Produkt wählen.",
+    "subtitle": "Praxisnahe Lösungen für Unternehmen mit Technikern und Außendienstmitarbeitern.",
+    "vat_note": "Alle Preise zzgl. MwSt. Abrechnung gemäß Nutzungsbedingungen.",
+    "categories": {
+      "app": {
+        "title": "GeoTapp TimeTracker",
+        "description": "Mobile App für Außendiensttechniker",
+        "products": [
+          {
+            "name": "GeoTapp TimeTracker",
+            "tagline": "Ab",
+            "desc": "Die komplette Lösung zur Erfassung von Anwesenheit, Außendiensttätigkeit und Arbeitsnachweisen. Preis pro Nutzer/Jahr.",
+            "features": [
+              "Android/iOS App",
+              "GPS-Stempeluhr",
+              "Wochenberichte"
+            ],
+            "button": "Kalkulator ansehen"
+          }
+        ]
+      },
+      "flow": {
+        "title": "GeoTapp Flow",
+        "description": "Außendienststeuerung und Teamverwaltung",
+        "products": [
+          {
+            "name": "GeoTapp Flow Business",
+            "tagline": "Für strukturierte Unternehmen.",
+            "desc": "Die Komplettlösung für strukturierte Unternehmen und komplexe Organisationen.",
+            "features": [
+              "Unbegrenzte Teams (keine Timetracker-Nutzer)",
+              "API",
+              "Prioritätssupport",
+              "Automatisierungen",
+              "Erweiterte Berichte",
+              "TimeTracker: unbegrenzt*"
+            ]
+          },
+          {
+            "name": "GeoTapp Flow Team",
+            "tagline": "Für kleine operative Teams.",
+            "desc": "Koordinieren und verwalten Sie Ihr operatives Team in Echtzeit.",
+            "features": [
+              "5 Flow-Nutzer inklusive (keine Timetracker)",
+              "Auftragsverwaltung",
+              "Feld-Zeiterfassungen",
+              "Operative Berichte",
+              "Integrationen",
+              "TimeTracker: max. 5 Nutzer*"
+            ]
+          },
+          {
+            "name": "GeoTapp Flow Solo",
+            "tagline": "Für Freiberufler und Kleinstunternehmen.",
+            "desc": "Alles was Sie brauchen, um Außendiensteinsätze selbstständig zu verwalten.",
+            "features": [
+              "1 Nutzer",
+              "Aufgabenverwaltung",
+              "Basisberichte",
+              "Grundlegende Integrationen",
+              "TimeTracker: max. 2 Nutzer*"
+            ]
+          }
+        ]
+      }
+    },
+    "calculator": {
+      "title": "TimeTracker Lizenzrechner",
+      "subtitle": "Schätzen Sie Ihre jährliche Arbeitsinvestition.",
+      "active_users": "Aktive Benutzer",
+      "discount_threshold": "Rabattschwelle",
+      "cost_per_user": "Durchschnittliche Kosten pro Benutzer",
+      "per_month": "/Monat",
+      "standard_rate": "Standardtarif (1–25 @ €2)",
+      "mixed_rate": "Mischtarif (Mengenrabatt angewendet)",
+      "annual_total": "Jahresgesamt (+MwSt.)",
+      "annual_billing_note": "Einmalige Jahresabrechnung",
+      "enterprise_plan": "Enterprise-Plan",
+      "enterprise_desc": "Für Teams über 150 Benutzer bieten wir individuelle SLAs und dedizierten Account-Management.",
+      "request_quote": "Angebot anfordern",
+      "add_to_cart": "App-Lizenz in den Warenkorb",
+      "secure_payment": "Sichere Zahlung über Stripe. MwSt. wird beim Checkout berechnet."
+    },
+    "simulator": {
+      "section_title": "Berechnen Sie Ihr Angebot",
+      "employees_label": "Anzahl Mitarbeiter:",
+      "one_employee": "1 Mitarbeiter",
+      "many_employees": "150+ Mitarbeiter",
+      "price_per_user": "Preis pro Benutzer",
+      "annual_total": "Jahresgesamt",
+      "per_month": "/Monat",
+      "per_user_annual": "pro Benutzer, Jahresabrechnung",
+      "selected_badge": "Ausgewählt",
+      "enterprise_plan": "Enterprise-Plan",
+      "enterprise_desc": "Für große Organisationen bieten wir maßgeschneiderte Lösungen.",
+      "enterprise_cta": "Kontaktieren Sie uns für ein Angebot",
+      "company_placeholder": "Firmenname",
+      "email_placeholder": "Admin-E-Mail",
+      "email_error_format": "Bitte geben Sie eine gültige E-Mail-Adresse ein (z.B. name@firma.de)",
+      "email_error_placeholder": "Bitte geben Sie eine echte Geschäfts-E-Mail ein.",
+      "terms_alert": "Um fortzufahren müssen Sie die Nutzungsbedingungen akzeptieren und bestätigen, dass Sie die Datenschutzrichtlinie gelesen haben.",
+      "processing": "Verarbeitung...",
+      "request_info": "Informationen anfordern",
+      "buy_now": "Jetzt kaufen",
+      "payment_note": "Sichere Zahlung über Stripe. Jederzeit kündbar.",
+      "success_sent": "Anfrage erfolgreich gesendet! Wir werden Sie in Kürze kontaktieren.",
+      "error_request": "Fehler beim Senden der Anfrage",
+      "plus_vat": "+ MwSt."
+    },
+    "bundle": {
+      "title": "Bundle-Rechner",
+      "subtitle": "Berechnen Sie Ihre Ersparnis mit dem Flow + TimeTracker Bundle",
+      "employees": "Anzahl Mitarbeiter",
+      "billingCycle": "Abrechnungszeitraum",
+      "monthly": "Monatlich",
+      "yearly": "Jährlich",
+      "flowPlan": "Flow-Plan",
+      "solo": "Solo (1 Nutzer)",
+      "team": "Team (bis 5 Nutzer)",
+      "business": "Business (unbegrenzt)",
+      "priceBreakdown": "Preisübersicht",
+      "flowPrice": "GeoTapp Flow",
+      "trackerPrice": "TimeTracker",
+      "subtotal": "Zwischensumme",
+      "bundleDiscount": "Bundle-Rabatt (15% erstes Jahr)",
+      "totalPrice": "Gesamtpreis",
+      "savings": "Sie sparen",
+      "perMonth": "/Monat",
+      "perYear": "/Jahr",
+      "cta": "Bundle jetzt holen",
+      "notes": "Hinweis: Rabatt gilt für die ersten 12 Monate",
+      "employees_unit": "Mitarbeiter",
+      "first_year_savings": "im ersten Jahr!",
+      "loading": "Laden...",
+      "modal_title": "E-Mail eingeben",
+      "modal_desc": "Wir benötigen Ihre E-Mail, um die Checkout-Sitzung zu erstellen und Ihnen die Quittung zu senden.",
+      "email_placeholder": "ihre@email.com",
+      "btn_cancel": "Abbrechen",
+      "btn_continue": "Weiter",
+      "error_checkout": "Fehler beim Erstellen der Sitzung. Bitte erneut versuchen.",
+      "error_connection": "Verbindungsfehler. Bitte erneut versuchen."
+    },
+    "intro_label": "Einführungspreis 2026",
+    "tracker_footnote": "* Maximale Anzahl gleichzeitig aktivierbarer TimeTracker-Nutzer im Flow-Plan. Das Entfernen des Mitarbeiterzugangs gibt den Platz sofort frei."
+  },
+  "contact": {
+    "title": "Sprechen wir über <span class=\"text-primary\">Ihr Geschäft</span>.",
+    "subtitle": "Sie möchten wissen, ob GeoTapp zu Ihrem Unternehmen passt. Wir antworten konkret.",
+    "guarantee_title": "Antwortgarantie",
+    "guarantee_text": "Durchschnittliche Erstantwort innerhalb von 12 Geschäftsstunden. Keine verlorenen Anfragen.",
+    "form": {
+      "name": "Name",
+      "company": "Unternehmen",
+      "email": "Geschäftliche E-Mail",
+      "reason": "Anfragegrund",
+      "message": "Nachricht",
+      "send": "Senden",
+      "reason_options": [
+        "Ich möchte eine GeoTapp Demo",
+        "Allgemeine Informationsanfrage",
+        "Partnerschaft",
+        "Sonstiges"
+      ],
+      "name_placeholder": "Ihr Name",
+      "email_placeholder": "sie@email.com",
+      "company_placeholder": "Firmenname",
+      "message_placeholder": "Ihre Nachricht...",
+      "submit": "Nachricht senden",
+      "submitting": "Wird gesendet..."
+    },
+    "hours": "Mo-Fr 9:00 - 18:00",
+    "location_city": "Brescia, IT",
+    "channels_title": "Direkte Kontaktwege",
+    "email_label": "Allgemeine E-Mail",
+    "email_desc": "Für Informationen, Angebote und Support.",
+    "hq_label": "Hauptsitz",
+    "hq_city": "Brescia, Italien",
+    "hq_note": "Besuche nach Vereinbarung.",
+    "privacy_note": "Mit dem Absenden dieses Formulars stimmen Sie unserer Datenschutzerklärung zu.",
+    "map_title": "Wo wir sind — Trenzano (BS), Italien",
+    "success": "Nachricht erfolgreich gesendet. Wir melden uns so schnell wie möglich.",
+    "error": "Fehler beim Senden. Bitte versuchen Sie es später erneut.",
+    "sending": "Wird gesendet...",
+    "map_unavailable": "Karte nicht verfügbar",
+    "open_maps": "In Google Maps öffnen ↗"
+  },
+  "login_hub": {
+    "title": "Zugang zu Ihrem <span class=\"text-primary\">Konto</span>.",
+    "subtitle": "Wählen Sie das Produkt, mit dem Sie sich verbinden möchten.",
+    "flow": {
+      "desc": "Einsatzmanagement, Aufträge, Koordination und Berichte.",
+      "btn": "In Flow einloggen"
+    },
+    "timetracker": {
+      "desc": "Anwesenheit, Außendiensttätigkeit und Arbeitsnachweise.",
+      "btn": "In TimeTracker einloggen"
+    }
+  },
+  "product_pages": {
+    "flow": {
+      "hero_badge": "GeoTapp Flow — Außendienststeuerung",
+      "hero_title": "GeoTapp Flow.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600\">Einsatzverwaltung.</span>",
+      "hero_subtitle": "Die Schaltzentrale für Unternehmen mit Außendiensttechnikern und -mitarbeitern. Aufträge verwalten, Teams koordinieren und strukturierte, prüfbare Arbeitsberichte erstellen.",
+      "visual_placeholder": "BEDIENFELD",
+      "grid_title": "Operative Funktionen",
+      "grid_subtitle": "Jedes Modul ist auf echte Außendienstkontrolle ausgelegt. Klicken Sie zum Erkunden.",
+      "sectors": {
+        "1": "Aufträge und Kunden",
+        "2": "Planung und Ressourcen",
+        "3": "Kontrolle und Sichtbarkeit"
+      },
+      "cta_title": "Echte Kontrolle über Ihren Außendienst.",
+      "cta_button": "Preise ansehen",
+      "modal": {
+        "status": "SYSTEMSTATUS: <span class=\"text-green-600\">BETRIEBSBEREIT</span>",
+        "encryption": "DATEN: <span class=\"text-slate-400\">GESCHÜTZT</span>",
+        "access": "ZUGANG: <span class=\"text-blue-600\">SICHER</span>",
+        "close": "Schließen"
+      },
+      "systems": {
+        "nexus-core": {
+          "name": "Auftragsverwaltung",
+          "short": "Technische Einsätze erstellen und verwalten. Aufgaben zuweisen, Fortschritte überwachen und alles auftragsbezogen verfolgen.",
+          "full": "### Zentrale Auftragskontrolle.\n\nJeder Einsatz beginnt als strukturierter Auftrag.\n**Auftragsverwaltung** gibt Ihnen einen klaren Überblick über alle laufenden Arbeiten.\n\n#### Einsatzverwaltung\n\nAuftrag anlegen, Techniker zuweisen, Standort und Datum festlegen.\nStatus überwachen: Offen, In Bearbeitung, Abgeschlossen.\n\n#### Betriebshistorie\n\nJeder Auftrag hat ein vollständiges Archiv mit Tätigkeiten, Fotobeweisen, Notizen und Zeitstempeln.\nDer Kunde fragt, was gemacht wurde? Die Daten sind da. Immer."
+        },
+        "titan-flow": {
+          "name": "Aufgabenzuweisung",
+          "short": "Arbeit präzise an Techniker verteilen. Anweisungen, Fristen und operative Prioritäten strukturiert übermitteln.",
+          "full": "### Der richtige Auftrag zum richtigen Techniker.\n\nUnklare Aufgabenverteilung erzeugt Verzögerungen und Streitigkeiten.\n**Aufgabenzuweisung** schafft operative Klarheit.\n\n#### Präzise Verteilung\n\nSobald ein Auftrag eröffnet ist, einen oder mehrere Techniker zuweisen.\nJeder Techniker sieht seine Arbeit auf GeoTapp TimeTracker.\n\n#### Operative Kommunikation\n\nAnweisungen, Notizen, technische Anhänge: alles erreicht den Techniker, bevor er zum Außendienst aufbricht.\nWeniger Anrufe, weniger Missverständnisse, weniger Verzögerungen."
+        },
+        "ledger-prime": {
+          "name": "Berichte und Abrechnung",
+          "short": "Strukturierte Berichte aus jedem Auftrag erstellen. Dokumentation exportieren und Abrechnung mit echten Außendienstdaten unterstützen.",
+          "full": "### Von der Arbeit zum Bericht — geordnet.\n\nManuelle Abrechnung ist langsam und oft unvollständig.\n**Berichte und Abrechnung** schließt den operativen Kreislauf.\n\n#### Strukturierte Berichte\n\nJeder abgeschlossene Einsatz erzeugt Dokumentation durch Zusammenführung von Zeitstempeln, Fotos und Notizen aus dem Außendienst.\nKeine manuelle Dateneingabe — alles kommt aus TimeTracker.\n\n#### Abrechnungsunterstützung\n\nEchte Auftragsdaten unterstützen genauere Angebote und Rechnungen.\nWeniger Fehler, weniger Streitigkeiten, schnellerer Verwaltungszyklus."
+        },
+        "quantum-logistics": {
+          "name": "Einsatzkalender",
+          "short": "Einsätze planen, Betriebskalender visualisieren und Teamverfügbarkeit ohne Überschneidungen verwalten.",
+          "full": "### Vollständiger Überblick über geplante Arbeiten.\n\nOhne gemeinsamen Kalender wird die Planung chaotisch.\n**Einsatzkalender** gibt Ihnen klare operative Sichtbarkeit.\n\n#### Erweiterte Planung\n\nAlle Einsätze in täglicher, wöchentlicher und monatlicher Kalenderansicht sehen.\nÜberschneidungen erkennen und Arbeitslasten optimieren.\n\n#### Teamverfügbarkeit\n\nSehen Sie, wer verfügbar ist, wer im Urlaub ist und wer bereits überlastet ist.\nNeue Einsätze zuweisen, ohne operative Konflikte zu erzeugen."
+        },
+        "supply-command": {
+          "name": "Ressourcenverwaltung",
+          "short": "Materialien, Ausrüstung und operative Ressourcen für jeden Außeneinsatz kontrollieren. Keine Überraschungen.",
+          "full": "### Kein Einsatz ohne Ressourcen.\n\nEinen Techniker ohne das richtige Material ins Feld zu schicken ist ein kostspieliger Fehler.\n**Ressourcenverwaltung** verhindert operative Überraschungen.\n\n#### Materialien pro Auftrag\n\nBenötigte Ressourcen mit jedem Auftrag verknüpfen.\nDer Manager sieht im Voraus, was wann benötigt wird.\n\n#### Lieferanten und Beschaffung\n\nKontaktdaten und Konditionen Ihrer Stammlieferanten speichern.\nBeschaffungszeit reduzieren und Kosten kontrollieren."
+        },
+        "the-architect": {
+          "name": "Arbeitsplanung",
+          "short": "Arbeit in Phasen, Aufgaben und Fristen strukturieren. Projekte ohne Tabellen oder Messenger-Nachrichten unter Kontrolle halten.",
+          "full": "### Arbeit strukturieren. Fortschritt kontrollieren.\n\nKomplexe Aufträge erfordern Struktur.\n**Arbeitsplanung** schafft operative Ordnung.\n\n#### Phasen und Fristen\n\nKomplexe Einsätze in operative Phasen mit klaren Fristen strukturieren.\nVerantwortlichkeiten jedem Teammitglied zuweisen.\n\n#### Fortschrittsüberwachung\n\nFortschritt in Echtzeit visualisieren.\nImmer wissen, was erledigt wurde und was noch offen ist.\nHandeln, bevor eine Verzögerung zum Kundenproblem wird."
+        },
+        "the-auditor": {
+          "name": "Einsatzdokumentation",
+          "short": "Fotodokumentation, operative Notizen und unterschriebene Dokumente für jeden Einsatz sammeln. Geleistete Arbeit bleibt prüfbar.",
+          "full": "### Echter Nachweis für jeden Einsatz.\n\nOhne Dokumentation ist geleistete Arbeit anfechtbar.\n**Einsatzdokumentation** macht jeden Auftrag prüfbar.\n\n#### Fotodokumentation\n\nTechniker machen Fotos direkt über GeoTapp TimeTracker im Außendienst.\nBilder werden automatisch mit Zeitstempel und Standort mit dem Auftrag verknüpft.\n\n#### Digitale Kundenunterschrift\n\nDer Kunde kann den Arbeitsbericht direkt auf dem Bildschirm des Technikers unterschreiben.\nDie digitale Unterschrift ist im Bericht enthalten und gilt als Beweis der erbrachten Leistung."
+        },
+        "the-uplink": {
+          "name": "Außendienst-Büro-Verbindung",
+          "short": "Von TimeTracker erfasste Daten gelangen in Echtzeit in Flow. Außendienst und Büro arbeiten mit denselben operativen Daten.",
+          "full": "### Büro und Außendienst — endlich verbunden.\n\nDie Trennung zwischen Außendienst und Büro erzeugt vermeidbare Fehler, Verzögerungen und Streitigkeiten.\n**Außendienst-Büro-Verbindung** schließt die Lücke.\n\n#### Echtzeitsynchronisation\n\nJedes Ein-/Ausstempeln, jedes Foto und jede Notiz in TimeTracker gelangt sofort in Flow.\nDer Manager hat eine Live-Ansicht, ohne den Techniker anrufen zu müssen.\n\n#### Zuverlässige Historie\n\nAlles, was der Techniker im Außendienst erfasst, wird archiviert und mit dem Auftrag verknüpft.\nKeine Daten gehen verloren. Keine Information fehlt, wenn es Zeit ist, Bericht zu erstatten."
+        },
+        "the-oracle": {
+          "name": "Operative Sichtbarkeit",
+          "short": "Echtzeit-Betriebsdashboard. Immer wissen, wie viele Einsätze heute offen, in Bearbeitung oder abgeschlossen sind.",
+          "full": "### Operative Daten, keine Annahmen.\n\nEntscheidungen ohne verlässliche Daten zu treffen ist gefährlich.\n**Operative Sichtbarkeit** wandelt Außendienstdaten in konkrete Informationen um.\n\n#### Betriebsdashboard\n\nIn Echtzeit sehen:\n- Offene und laufende Einsätze\n- Aktive Techniker\n- Heute und diese Woche abgeschlossene Einsätze\n\n#### Periodische Berichte\n\nAutomatisierte Aktivitätszusammenfassungen erhalten.\nZeiträume vergleichen, Engpässe erkennen und Abläufe optimieren."
+        }
+      }
+    },
+    "app": {
+      "hero_badge": "GeoTapp TimeTracker — Außendienst-App",
+      "hero_title": "GeoTapp TimeTracker.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600\">Der Außendienst in Ihrer Tasche.</span>",
+      "hero_subtitle": "Die mobile App für Techniker zur Erfassung von Tätigkeiten, Sammlung von Nachweisen und Aufrechterhaltung des operativen Fadens direkt aus dem Außendienst. Verfügbar für Android und iOS.",
+      "visual_placeholder": "AUSSENDIENST-INTERFACE",
+      "grid_title": "Werkzeuge für die Außenarbeit",
+      "grid_subtitle": "Jede Funktion ist für Menschen konzipiert, die außerhalb des Büros arbeiten und keine Zeit zu verlieren haben. Klicken Sie zum Erkunden.",
+      "sectors": {
+        "1": "Kernfunktionen",
+        "2": "Logistik und Kommunikation",
+        "3": "Daten und Administration"
+      },
+      "cta_title": "Geben Sie Ihren Technikern das richtige Werkzeug.",
+      "cta_button": "Preise ansehen",
+      "modal": {
+        "status": "SYSTEMSTATUS: <span class=\"text-green-600\">BETRIEBSBEREIT</span>",
+        "encryption": "DATEN: <span class=\"text-slate-400\">GESCHÜTZT</span>",
+        "device": "GERÄT: <span class=\"text-blue-600\">MOBIL / TABLET</span>",
+        "close": "Schließen"
+      },
+      "systems": {
+        "timelock-alpha": {
+          "name": "GPS-Zeiterfassung",
+          "short": "Ein- und Ausstempeln verknüpft mit GPS-Position und präzisem Zeitstempel. Jede Arbeitssitzung wird zu einem prüfbaren operativen Ereignis.",
+          "full": "### Zeit ist prüfbar.\n\nZeitstempel ohne Verifikation erzeugen Streitigkeiten.\n**GPS-Zeiterfassung** macht jede Arbeitssitzung zu einem zuverlässigen, verteidigbaren Datensatz.\n\n#### Geolokaliertes Ein- und Ausstempeln\n\nDer Techniker erfasst Beginn und Ende des Außeneinsatzes.\nStandort, Adresse und Zeit werden automatisch registriert.\n\n#### Unveränderliche Historie\n\nJede Sitzung ist ein prüfbarer Datensatz: Startzeit, Endzeit, Position, Dauer und zugehöriger Auftrag.\nDer Kunde fragt, wann Sie ankamen? Die Daten sind da, immer."
+        },
+        "event-horizon": {
+          "name": "Schichtplanung",
+          "short": "Schichten und Personalverfügbarkeit verwalten. Wochen- und Monatsansichten für Koordination ohne Verwirrung oder Überschneidungen.",
+          "full": "### Keine Schichtkonflikte.\n\nMobiles Personal zu organisieren erfordert Klarheit.\n**Schichtplanung** gibt dem Manager eine präzise, aktuelle Übersicht.\n\n#### Kalenderansicht\n\nSehen, wer wann arbeitet.\nFehlzeiten, Urlaub und Überschneidungen erkennen, bevor sie zu operativen Problemen werden.\n\n#### Echtzeitverfügbarkeit\n\nMitarbeiter bestätigen Anwesenheit oder melden Abwesenheiten direkt aus der App.\nDer Manager sieht Lücken im Dienstplan, bevor neue Aufträge vergeben werden."
+        },
+        "unit-matrix": {
+          "name": "Mitarbeiterregister",
+          "short": "Ein vollständiges Register Ihrer Mitarbeiter führen: Rollen, Kontakte, Zertifizierungen und Plattformzugang.",
+          "full": "### Ihr Team kennen.\n\nJeder Mitarbeiter ist eine wichtige operative Ressource.\n**Mitarbeiterregister** zentralisiert alle wichtigen Informationen.\n\n#### Zertifizierungsverwaltung\n\nAuf einen Blick sehen, wer die erforderlichen Qualifikationen für einen bestimmten Einsatz oder Standort besitzt.\n\n#### Schnelles Onboarding\n\nEinen neuen Techniker hinzufügen ist einfach.\nEinladungslink senden: innerhalb von Minuten ist er auf GeoTapp TimeTracker einsatzbereit."
+        },
+        "sector-grid": {
+          "name": "Standorte und Baustellen",
+          "short": "Eine Datenbank mit Einsatzstandorten und Baustellen anlegen. Jeden Einsatz dem richtigen Standort zuordnen und Teams nach Zone organisieren.",
+          "full": "### Jeder Einsatz am richtigen Ort.\n\nArbeiten ohne geografischen Bezug erzeugt Verwirrung.\n**Standorte und Baustellen** schafft operative Klarheit.\n\n#### Standortdatenbank\n\nEinen Katalog von Kundenstandorten, Baustellen und Betriebsorten erstellen.\nDas System verknüpft Technikertätigkeiten automatisch mit dem Einsatzstandort.\n\n#### Zonenbasierte Teams\n\nTechniker in Teams nach Standort oder geografischem Gebiet organisieren.\nEinsätze dem richtigen Team zuweisen, nicht nur dem Einzelnen."
+        },
+        "energy-logistics": {
+          "name": "Fahrzeug- und Spesenmanagement",
+          "short": "Firmenfahrzeugnutzung, Kraftstoffverbrauch und Reisespesen für Außendienstmitarbeiter nachverfolgen.",
+          "full": "### Jede Fahrt dokumentiert.\n\nReisespesen sind ein kritischer Posten für jedes Unternehmen mit mobilem Personal.\n**Fahrzeugverwaltung** überwacht jeden anfallenden Kostenpunkt.\n\n#### Fahrzeugnutzung\n\nEinem Mitarbeiter vorübergehend ein Fahrzeug für einen Einsatz zuweisen.\nImmer wissen, wer welches Fahrzeug für welchen Auftrag verwendet.\n\n#### Kraftstoffkosten\n\nMitarbeiter erfassen Tankvorgänge direkt aus der App mit Quittungsfoto und Betrag.\nAlles archiviert, alles mit dem Auftrag verknüpft."
+        },
+        "neural-link": {
+          "name": "Operative Kommunikation",
+          "short": "Interner Kanal für Unternehmenskommunikation. Gezielte Nachrichten an bestimmte Gruppen mit Lesebestätigungen.",
+          "full": "### Klare Kommunikation. Kein Hintergrundrauschen.\n\nWhatsApp vermischt Privat- und Berufsleben und bietet keine Kontrolle über Lesestatus.\n**Operative Kommunikation** ist der offizielle Unternehmenskanal.\n\n#### Gezielte Nachrichten\n\nNur das Team benachrichtigen, das es wissen muss.\nSchichtwechsel am Standort Berlin? Nur die zugewiesenen Techniker erhalten die Nachricht.\n\n#### Lesebestätigungen\n\nImmer wissen, wer die Mitteilung gelesen hat und wer nicht.\nKlare und transparente Verantwortlichkeit für alle."
+        },
+        "payroll-bridge": {
+          "name": "Anwesenheitsexport",
+          "short": "Monatliche Anwesenheiten in Formaten exportieren, die mit führenden Lohnbuchhaltungssystemen kompatibel sind. Weniger manuelle Arbeit, weniger Fehler.",
+          "full": "### Lohnbuchhaltung ohne Kopfschmerzen.\n\nMonatsende muss kein administrativer Albtraum sein.\n**Anwesenheitsexport** verbindet Außendienstbetrieb mit der Personalverwaltung.\n\n#### Multi-Format\n\nAnwesenheitsdateien für den Import in führende Lohnbuchhaltungssysteme erstellen (DATEV, Lexware, Personio, LODAS).\n\n#### Steuerberaterzugang\n\nIhrem Lohnbüro eingeschränkten Zugang gewähren.\nEs lädt die benötigten Daten selbständig herunter, ohne Sie jeden Monatsabschluss anrufen zu müssen."
+        },
+        "data-core": {
+          "name": "Wochenberichte",
+          "short": "Detaillierte Berichte über geleistete Stunden pro Auftrag und Mitarbeiter. Zuverlässige Daten für interne Kontrolle und Abrechnung.",
+          "full": "### Daten lügen nicht.\n\nEntscheidungen auf Fakten statt auf Gefühl basieren.\n**Wochenberichte** extrahiert Wert aus dem täglichen Betrieb.\n\n#### Detaillierte Berichte\n\nJede Woche ein vollständiges Bild: Wer hat wo, an welchem Auftrag und wie lange gearbeitet.\n\n#### Vollständige Transparenz\n\nMitarbeiter und Manager konsultieren denselben Monatsbericht.\nGezählte Stunden sind für alle identisch.\nKeine Streitigkeiten am Monatsende."
+        },
+        "identity-forge": {
+          "name": "Marken-App",
+          "short": "Ihr Logo hochladen und Unternehmensfarben wählen. Ihre Mitarbeiter nutzen eine App, die Ihre Markenidentität widerspiegelt.",
+          "full": "### Ihr Unternehmen, Ihre App.\n\nKeine generische App verwenden.\nLassen Sie Ihre Mitarbeiter Teil IHRES Unternehmens fühlen — mit einem konsistenten Markenerlebnis.\n\n#### Firmenlogo\n\nIhr Logo prominent auf dem Login-Bildschirm und dem Hauptdashboard.\n\n#### Unternehmensfarben\n\nDas Farbthema wählen, das zu Ihrem Unternehmensauftritt passt.\nProfessionell, konsistent, wiedererkennbar."
+        }
+      }
+    }
+  },
+  "cart": {
+    "title": "Warenkorb",
+    "empty": "Ihr Warenkorb ist leer.",
+    "license_default": "Standardlizenz",
+    "quantity": "Menge",
+    "per_month": "Monat",
+    "per_year": "Jahr",
+    "total_monthly": "Monatliche Summe",
+    "total_yearly": "Jährliche Summe",
+    "vat_note": "MwSt. (beim Checkout berechnet)",
+    "email_label": "E-Mail für Lizenzen und SaaS-Zugang",
+    "email_placeholder": "name@unternehmen.com",
+    "email_hint": "Wir senden Ihnen hier die Lizenzschlüssel und Zugangsdaten.",
+    "email_error_empty": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+    "email_error_invalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein (z.B. name@unternehmen.com).",
+    "terms_alert": "Um fortzufahren müssen Sie die Nutzungsbedingungen akzeptieren und bestätigen, dass Sie die Datenschutzerklärung gelesen haben.",
+    "checkout_loading": "Verarbeitung...",
+    "checkout_button": "Zur Kasse",
+    "checkout_error": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.",
+    "policy_terms_prefix": "Ich habe die",
+    "policy_terms_link": "Allgemeinen Nutzungsbedingungen",
+    "policy_terms_suffix": "von GeoTapp gelesen und akzeptiere sie.",
+    "policy_privacy_prefix": "Ich habe die",
+    "policy_privacy_link": "Datenschutzerklärung",
+    "policy_privacy_suffix": "von GeoTapp gelesen."
+  },
+  "guida": {
+    "page_title": "Benutzerhandbuch",
+    "download_pdf": "Herunterladen / Als PDF drucken"
+  },
+  "trial": {
+    "page_title": "14 Tage kostenlos. Keine Kreditkarte.",
+    "page_subtitle": "Vollständiger Zugang zu allen GeoTapp Flow-Modulen für 14 Tage. Keine Kreditkarte, keine Verpflichtung. Jederzeit kündbar.",
+    "badge": "Kostenlose Testphase — 14 Tage",
+    "form_title": "Konto erstellen",
+    "form_company": "Firmenname",
+    "form_company_placeholder": "Z.B. Rossi Installationen GmbH",
+    "form_vat": "Europäische USt-IdNr.",
+    "form_vat_placeholder": "Z.B. DE123456789",
+    "form_email": "Geschäftliche E-Mail",
+    "form_email_placeholder": "Z.B. mario@firma.de",
+    "form_fullname": "Vollständiger Name",
+    "form_fullname_placeholder": "Z.B. Mario Rossi",
+    "form_plan": "GeoTapp Flow-Tarif",
+    "form_plan_note": "Die Nutzeranzahl des Tarifs bezieht sich auf GeoTapp Flow (Büroverwaltung / CRM). GeoTapp Timetracker-Lizenzen für Außendienstmitarbeiter sind ein separates Abonnement, mit einer im gewählten Tarif enthaltenen Höchstanzahl.",
+    "plan_solo": "Solo — 1 Flow-Nutzer",
+    "plan_team": "Team — bis 5 Flow-Nutzer",
+    "plan_business": "Business — unbegrenzte Flow-Nutzer",
+    "form_seats": "Timetracker-Lizenzen (optional)",
+    "form_seats_hint": "Separates Abonnement für Außendienstmitarbeiter (mobile App). Im Tarif enthaltenes Limit: Solo max. 2, Team max. 5, Business unbegrenzt. Lizenzen können nach der Aktivierung angepasst werden.",
+    "form_submit": "Kostenlos testen",
+    "form_submitting": "Wird eingerichtet...",
+    "form_privacy": "Ihre Daten werden gemäß unserer",
+    "form_privacy_link": "Datenschutzerklärung",
+    "form_email_hint": "Bitte geschäftliche E-Mail verwenden (kein Gmail, Yahoo usw.)",
+    "success_title": "E-Mail prüfen!",
+    "success_desc": "Wir haben den Aktivierungslink an ",
+    "success_desc2": "Klicken Sie auf den Link, um Ihr Passwort festzulegen und auf Ihren Test zuzugreifen.",
+    "success_spam": "Nicht gefunden? Spam-Ordner prüfen.",
+    "error_message": "Aktivierungsfehler. Bitte erneut versuchen oder an info@geotapp.com schreiben.",
+    "benefits_title": "Was enthalten ist",
+    "benefits": [
+      {
+        "title": "Vollständiger Zugang",
+        "desc": "Alle Module aktiv: CRM, Rechnungsstellung, Teamverwaltung, Kundensupport."
+      },
+      {
+        "title": "Keine Karte erforderlich",
+        "desc": "Nur Firmendaten eingeben. Karte nur hinzufügen, wenn Sie weitermachen möchten."
+      },
+      {
+        "title": "Ihre Daten sind sicher",
+        "desc": "Ihre Daten gehören Ihnen. Sie können sie jederzeit exportieren."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Was passiert nach 14 Tagen?",
+        "a": "Sie erhalten eine E-Mail mit einem Link zur Aktivierung des Abonnements. Wenn Sie nichts tun, wird das Konto ohne Kosten gesperrt."
+      },
+      {
+        "q": "Muss ich eine Kreditkarte angeben?",
+        "a": "Nein. Der Test ist völlig kostenlos ohne Kreditkarte. Sie fügen diese nur hinzu, wenn Sie weitermachen möchten."
+      },
+      {
+        "q": "Kann ich mein Team einladen?",
+        "a": "Ja, Sie können während des Tests Nutzer über die Einstellungen hinzufügen."
+      },
+      {
+        "q": "Wie lange dauert der Einstieg?",
+        "a": "Weniger als 2 Minuten: Formular ausfüllen, E-Mail empfangen, Passwort festlegen – fertig."
+      }
+    ]
+  },
+  "demo": {
+    "page_title": "Buchen Sie Ihre persönliche Demo",
+    "settori": [
+      "Reinigung / Facility / Multiservice",
+      "Sicherheit / Wachschutz / Steward",
+      "Installateure / Elektriker / Klempner",
+      "Logistik / Transport",
+      "Bau / Wartung",
+      "Sonstiges"
+    ],
+    "cosa_vedrai": [
+      {
+        "title": "GPS-Zeiterfassung in Aktion",
+        "desc": "Wie der Techniker sich über die mobile App einbucht und wie das Büro den verifizierten Standort sieht — ohne Dauerüberwachung."
+      },
+      {
+        "title": "Verifizierbare Berichte",
+        "desc": "Wie jeder Einsatz einen Bericht mit Fotobeweis, digitaler Signatur und unveränderlichem Hash erzeugt, den Sie dem Kunden zeigen können."
+      },
+      {
+        "title": "Teamverwaltung über Flow",
+        "desc": "Wie Sie Aufgaben zuweisen, den Fortschritt überwachen und Wochenberichte ohne Excel-Tabellen oder Telefonanrufe erstellen."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Wie lange dauert die Demo?",
+        "a": "Genau 30 Minuten. Wir zeigen Ihnen die Plattform im echten Einsatz und beantworten Ihre branchenspezifischen Fragen."
+      },
+      {
+        "q": "Ist Vorbereitung erforderlich?",
+        "a": "Nein. Bringen Sie einfach Ihren konkreten Fall mit — wie viele Mitarbeiter Sie haben und welche Probleme Sie heute mit Stunden oder Berichten haben."
+      },
+      {
+        "q": "Ist die Demo kostenlos?",
+        "a": "Ja, vollständig kostenlos und unverbindlich. Am Ende können Sie direkt eine Testphase starten."
+      },
+      {
+        "q": "Kann ich einen Kollegen einladen?",
+        "a": "Absolut. Oft nehmen der Betriebsleiter und der Administrator oder HR gemeinsam teil."
+      }
+    ],
+    "form_name": "Vollständiger Name",
+    "form_name_placeholder": "Max Mustermann",
+    "form_company": "Unternehmen",
+    "form_company_placeholder": "Firmenname",
+    "form_sector": "Branche",
+    "form_email": "E-Mail",
+    "form_email_placeholder": "max@firma.de",
+    "form_phone": "Telefon (optional)",
+    "form_phone_placeholder": "+49 151 12345678",
+    "form_submit": "Kostenlose Demo buchen",
+    "form_submitting": "Wird gesendet...",
+    "success_title": "Anfrage erhalten!",
+    "success_desc": "Wir werden Sie innerhalb von 1 Werktag kontaktieren, um die Demo zu vereinbaren.",
+    "error_message": "Fehler beim Senden. Bitte versuchen Sie es später erneut."
+  },
+  "download_page": {
+    "title": "GeoTapp herunterladen",
+    "subtitle": "Wählen Sie die Version, die Ihren Anforderungen entspricht.",
+    "demo_report_badge": "Echtes Beispiel",
+    "demo_report_title": "Zertifizierter Einsatzbericht",
+    "demo_report_desc": "Laden Sie einen echten von GeoTapp generierten Bericht herunter. Er enthält verifizierten GPS, Fotobeweise, Operator-Hash-Kette und kryptografische Siegelung.",
+    "demo_report_btn_download": "Beispielbericht herunterladen (.zip)",
+    "demo_report_btn_verify": "Authentizität prüfen",
+    "demo_report_field_operator": "Techniker",
+    "demo_report_field_type": "Einsatztyp",
+    "windows_title": "GeoTapp für Windows",
+    "windows_desc": "Die vollständige Desktop-Anwendung für die Betriebsverwaltung. Ideal für Administration und vollständige Kontrolle.",
+    "windows_features": [
+      "Vollständige Flottenverw altung",
+      "Schichtplanung",
+      "Gehaltsexport",
+      "Desktop-Benachrichtigungen"
+    ],
+    "windows_btn": "Für Windows herunterladen",
+    "wp_title": "WordPress-Plugin",
+    "wp_desc": "Integrieren Sie GeoTapp in Ihre Unternehmenswebsite. Ermöglichen Sie Mitarbeitern den direkten Zugriff aus Ihrem Intranet.",
+    "wp_features": [
+      "Sichere Iframe-Integration",
+      "Shortcode [geotap_app]",
+      "Automatisches Login",
+      "Kompatibel mit allen Themes"
+    ],
+    "wp_btn": "Plugin herunterladen"
+  },
+  "chi_siamo": {
+    "badge": "Unsere Geschichte",
+    "hero_title_line1": "Im Feld geboren,",
+    "hero_title_line2": "nicht im Büro.",
+    "hero_desc": "GeoTapp wurde nicht von Investoren oder Analysten erfunden. Es entstand aus der echten Frustration von jemandem, der täglich zwischen Fristen, Baustellen und anspruchsvollen Kunden arbeitet.",
+    "story": [
+      "Es war 2024. Mike Petraroli, unser Gründer, arbeitete als Angestellter und hatte ein scheinbar triviales, aber unglaublich kostspieliges Problem: <strong>seine eigene Arbeit zu beweisen.</strong>",
+      "Am Monatsende stimmten die Stunden nie. Einsätze im Laufen zwischen Kunden wurden vergessen. Papier ging verloren, WhatsApp-Nachrichten wurden begraben. Es war eine stille Quelle von Zeitverlust und Geldabfluss.",
+      "Er suchte eine Lösung. Er fand nur komplexe, teure Software voller nutzloser Grafiken und wenig Substanz. Software von Leuten, die noch nie einen Stempel gedrückt oder eine Rechnung im Notfall aus dem Lieferwagen ausgestellt hatten.",
+      "Also beschloss Mike, das Werkzeug selbst zu bauen, das er gehabt haben wollte: einfach, mobil, mit überprüfbaren Beweisen. Nicht für Investoren — für Unternehmen wie seines."
+    ],
+    "values_title": "Unsere Werte",
+    "values": [
+      {
+        "title": "Klare Mission",
+        "desc": "Jeden Einsatz messbar und nachweisbar machen. Außendienstarbeit verdient dieselben Transparenzwerkzeuge wie ein Büro."
+      },
+      {
+        "title": "Engagiertes Team",
+        "desc": "Wir sind ein kleines Team, das von dem Problem besessen ist, das wir lösen. Jede Funktion entsteht aus echtem Feedback, nicht aus Marketing-Roadmaps."
+      },
+      {
+        "title": "Privacy by Design",
+        "desc": "Wir verkaufen keine Daten, wir überwachen nicht kontinuierlich. GPS nur zum Zeitpunkt des Einstempelns, null Überwachung."
+      },
+      {
+        "title": "Made in Italy",
+        "desc": "Entwickelt in Italien für den italienischen und europäischen Markt. DSGVO-Regeln, Arbeitskultur und lokale Vorschriften sind in der DNA des Produkts."
+      }
+    ],
+    "cta_title": "Mach mit bei der einfachen Revolution",
+    "cta_desc": "Wir sind kein unerreichbares Big-Tech-Unternehmen. Wir sind echte Menschen, die Software für echte Menschen bauen.",
+    "cta_btn": "Schreib uns",
+    "stats": [
+      {
+        "number": "2024",
+        "label": "Gegründet"
+      },
+      {
+        "number": "100%",
+        "label": "Für den Außendienst"
+      },
+      {
+        "number": "GDPR",
+        "label": "Zertifizierter Datenschutz"
+      }
+    ],
+    "mission_quote": "Außendienstarbeit verdient dieselben Transparenz-Tools wie ein Büro."
+  },
+  "blog": {
+    "hero_title": "Gedanken & Funken.",
+    "hero_desc": "Wir schreiben nicht um Seiten zu füllen. Wir schreiben, um zu teilen, was wir beim Aufbau der Zukunft der verifizierbaren Arbeit lernen.",
+    "no_posts": "Derzeit keine Artikel verfügbar.",
+    "read_article": "Artikel lesen →",
+    "cta_title": "GeoTapp 14 Tage kostenlos testen",
+    "cta_desc": "Vollständiger Zugang zu allen Modulen. Keine Kreditkarte, keine Verpflichtung.",
+    "cta_btn": "Kostenlos testen",
+    "schema_desc": "Anleitungen und Einblicke zur Außendienst-Zertifizierung, Teamverwaltung, DSGVO und Geolokalisierung.",
+    "meta_title": "Blog | GeoTapp — Außendienst-Verifikation",
+    "meta_desc": "Anleitungen, Einblicke und Ressourcen zu Teamverwaltung, Außendienst-Zertifizierung, DSGVO und Geolokalisierung. Vom GeoTapp-Team.",
+    "cat_all": "Alle"
+  },
+  "roi": {
+    "meta_title": "GeoTapp ROI-Rechner — Entdecken Sie Ihre echten Einsparungen",
+    "meta_desc": "Berechnen Sie in 2 Minuten, wie viel Sie mit GeoTapp sparen: weniger Verwaltung, null Streitigkeiten, produktivere Mitarbeiter.",
+    "hero_title": "Berechnen Sie Ihren ROI mit GeoTapp",
+    "hero_subtitle": "Geben Sie Ihre Unternehmensdaten ein und entdecken Sie, wie viel Sie jährlich sparen können.",
+    "step1_title": "Ihr Unternehmen",
+    "step1_subtitle": "Erzählen Sie uns ein bisschen über sich",
+    "field_settore": "Branche",
+    "field_operatori": "Anzahl der Mitarbeiter",
+    "settore_installatori": "Installation & Wartung",
+    "settore_pulizie": "Reinigung & Desinfektion",
+    "settore_sicurezza": "Sicherheit & Bewachung",
+    "settore_altro": "Andere Branche",
+    "step2_title": "Ihre aktuelle Situation",
+    "step2_subtitle": "Seien Sie präzise: Je genauer die Daten, desto genauer die Berechnung",
+    "field_siti": "Täglich besuchte Standorte (pro Mitarbeiter)",
+    "field_ore_admin": "Stunden/Woche für Verwaltung und Berichte",
+    "field_contestazioni": "Kundenstreitigkeiten pro Monat (unbezahlt, Ansprüche usw.)",
+    "field_costo_orario": "Durchschnittliche Stundenkosten eines Mitarbeiters (€)",
+    "step3_title": "Wohin sollen wir Ihren Bericht senden?",
+    "step3_subtitle": "Ihre personalisierten Ergebnisse kommen sofort. Kein Spam.",
+    "field_nome": "Vor- und Nachname",
+    "field_email": "Geschäftliche E-Mail",
+    "field_telefono": "Telefon (optional)",
+    "cta_calcola": "Meinen ROI berechnen",
+    "consent_text": "Mit dem Klick auf 'Meinen ROI berechnen' stimmen Sie zu, kommerzielle Mitteilungen von GeoTapp zu erhalten. Sie können sich jederzeit abmelden.",
+    "next": "Weiter",
+    "back": "Zurück",
+    "results_title": "Ihre geschätzten Einsparungen mit GeoTapp",
+    "results_subtitle": "Basierend auf den von Ihnen eingegebenen Daten",
+    "results_admin": "Einsparungen bei Verwaltung & Berichten",
+    "results_dispute": "Einsparungen bei Streitigkeiten & Ansprüchen",
+    "results_coord": "Einsparungen bei der Teamkoordination",
+    "results_total": "Gesamte jährliche Einsparungen",
+    "results_payback": "Geschätzte Amortisationszeit",
+    "results_payback_unit": "Monate",
+    "results_roi": "Geschätzter ROI",
+    "results_cta": "Starten Sie die kostenlose 14-Tage-Testphase",
+    "results_disclaimer": "Indikative Schätzung basierend auf Branchendurchschnittswerten. Tatsächliche Ergebnisse können abweichen.",
+    "per_anno": "/ Jahr",
+    "label_operators": "Mitarbeiter",
+    "embed_title": "GeoTapp ROI-Rechner"
+  }
+}

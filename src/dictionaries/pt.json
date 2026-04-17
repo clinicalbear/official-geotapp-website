@@ -1,1 +1,801 @@
-{"navbar":{"products":"Produtos","pricing":"Preços","blog":"Blog","contact":"Contacto","login":"Entrar","cta":"Pedir demo","sectors":{"installatori":"Instaladores","sicurezza":"Segurança","pulizie":"Limpeza","label":"Setores"},"logo_alt":"GeoTapp — A plataforma que torna o trabalho verificável","product_flow_desc":"Gestão operacional de intervenções e equipas","product_app_desc":"App móvel para técnicos de campo","product_verifier_desc":"Verificação de integridade de relatórios de trabalho","compare":"Comparação"},"footer":{"tagline":"Actividade de campo registada. Operações organizadas. Relatórios verificáveis.","privacy":"Política de privacidade","terms":"Termos de serviço","rights":"Todos os direitos reservados."},"landing":{"hero_badge":"O trabalho aconteceu. Agora torne-o demonstrável.","hero_title":"Se não puder provar, o cliente diz que nunca aconteceu.","hero_subtitle":"GeoTapp transforma cada intervenção em campo em evidência objectiva: relatórios selados com dados GPS reais, provas fotográficas com marca de tempo e documentação verificável por qualquer pessoa — sem confiar, sem contestações.","hero_cta_primary":"Agendar demo de 30 minutos","hero_cta_secondary":"Explorar setores","trust_gdpr":"Conforme RGPD","trust_gdpr_desc":"Só registo de entrada e saída","trust_gps":"Prova GPS","trust_gps_desc":"Cada intervenção certificada com localização e marca de tempo","trust_offline":"Funciona offline","trust_offline_desc":"Sincronização automática ao reconectar","features_title":"Do trabalho à prova verificável","features_subtitle":"Três ferramentas integradas: o campo regista, o escritório controla, o cliente verifica.","cta_title":"O trabalho aconteceu. Agora prove-o.","cta_subtitle":"As empresas que usam GeoTapp não perdem mais trabalhos não documentados. Cada hora é verificável. Cada relatório é defensável.","cta_button":"Agendar demo de 30 minutos","problem_title":"O problema que você já conhece","problem_subtitle":"Não é um problema de organização. É um problema de prova.","problem_items":[{"title":"O cliente nega. Você não tem provas.","desc":"A intervenção aconteceu. Mas sem documentação verificável, é a sua palavra contra a dele. E muitas vezes ele ganha."},{"title":"O relatório chega incompleto, atrasado ou não chega.","desc":"Formulários em papel, WhatsApp, e-mails. Os dados se perdem, alteram-se, são esquecidos. A reconstrução a posteriori é cara e pouco confiável."},{"title":"O trabalho não documentado não existe.","desc":"Cada hora não registrada é uma hora não paga. Cada intervenção sem prova é uma intervenção que o cliente pode contestar."}],"report_section_title":"O relatório. Não um resumo. Uma prova.","report_section_subtitle":"Cada relatório GeoTapp é gerado automaticamente a partir de dados reais do campo.","report_section_body":"Registros GPS, fotos com carimbo de data/hora, notas operacionais. O sistema aplica um selo criptográfico que torna qualquer modificação detectável. O resultado não é um documento para enviar ao cliente — é uma prova que o cliente pode verificar por conta própria.","report_feature_1":"Não modificável após geração — qualquer alteração é detetável","report_feature_2":"Verificável sem conta — por qualquer pessoa, de forma autônoma","report_feature_3":"Dados GPS e fotográficos integrados e inseparáveis","report_feature_4":"Gerado automaticamente — sem preenchimento manual","report_cta":"Ver como o cliente verifica por conta própria"},"home_sections":{"flow":{"badge":"GeoTapp Flow","title":"Coordene o campo a partir de um hub operacional único.","subtitle":"O Flow é o sistema utilizado pelo escritório para gerir trabalhos, atribuir actividades, acompanhar o progresso e gerar relatórios de trabalho estruturados. <strong class=\"text-slate-900\">Menos fricção interna, mais controlo real.</strong>","features":{"crm":"<strong>Gestão de trabalhos:</strong> Crie intervenções, atribua técnicos e monitorize o progresso em tempo real.","pipeline":"<strong>Relatórios estruturados:</strong> Cada trabalho concluído gera documentação rastreável pronta para o cliente."},"link":"Explorar GeoTapp Flow"},"app":{"badge":"GeoTapp TimeTracker","title":"O técnico regista. O escritório controla.","subtitle":"O TimeTracker é a aplicação móvel utilizada pelos técnicos para registar a actividade de campo. Entrada, saída, fotos e notas ligadas a cada trabalho. <strong>Disponível em Android e iOS.</strong>","card_gps":{"title":"Registo de presença GPS","desc":"Localização verificada"},"card_gdpr":{"title":"Conforme com o RGPD","desc":"Sem rastreio contínuo"},"link":"Explorar GeoTapp TimeTracker"},"verifier":{"badge":"GeoTapp Verifier","title":"Não precisa que confiem em si.","subtitle":"O cliente tem o relatório. Verifica-o por si mesmo, sem aceder ao GeoTapp. Se os dados correspondem ao trabalho real, o selo aguenta. Se alguém modificou o documento, o selo parte-se. Sem recurso.","features":{"integrity":"<strong>Dados não alteráveis:</strong> O relatório é gerado sobre os dados reais de campo e bloqueado. Qualquer modificação torna-o inválido — sem recurso.","independent":"<strong>Verificação autónoma:</strong> Qualquer pessoa com o relatório pode verificar a sua autenticidade — sem conta, sem acesso à plataforma."},"link":"Explorar GeoTapp Verifier"},"core":{"badge":"Plataforma GeoTapp","title":"Um sistema, três níveis de certeza","subtitle":"TimeTracker regista no campo. Flow organiza no escritório. Verifier certifica que tudo corresponde.","features":[{"title":"Operabilidade móvel real","desc":"O TimeTracker funciona sem ligação e sincroniza assim que o técnico recupera a rede. O trabalho nunca para."},{"title":"Privacidade por concepção","desc":"A localização é registada <strong>apenas</strong> no registo de entrada e saída. Sem rastreio contínuo. Totalmente conforme com o RGPD."},{"title":"Controlo operacional em tempo real","desc":"Os dados de campo chegam ao Flow imediatamente. O escritório tem visibilidade em directo sem ligar para ninguém."},{"title":"Prova defensável ao longo do tempo","desc":"Cada relatório fica bloqueado sobre dados reais de campo — não alterável após a geração. Contestação? O dado está lá. Verificável por qualquer pessoa. Sempre."}]},"footer_cta":{"title":"Pare de perder trabalho não documentado.","subtitle":"Cada trabalho sem prova verificável é um trabalho contestável. GeoTapp fecha esta falha.","button":"Prove o seu trabalho","pricing_link":"Ver planos e preços →"},"settori":{"title":"Documentação verificável para cada setor — Soluções GeoTapp","subtitle":"Escolha o seu setor para ver como o GeoTapp gera provas do trabalho realizado — para mostrar ao cliente em caso de disputa.","see_all":"Ver todos os setores suportados","installatori":{"name":"Instaladores","desc":"Eletricistas, Canalizadores, Técnicos. Cada intervenção documentada com GPS e fotos — dados inalteráveis, verificáveis pelo cliente.","cta":"Comprovar cada intervenção"},"sicurezza":{"name":"Segurança","desc":"Vigilância, Seguranças, Serviços Fiduciários. Presenças verificáveis, turnos documentados com prova objetiva.","cta":"Provar presenças ao cliente"},"pulizie":{"name":"Limpeza","desc":"Empresas de limpeza, Facility, Multisserviços. Cada ronda documentada e verificável pelo cliente — zero disputas.","cta":"Evitar disputas"}},"app_mockup":{"greeting":"Bom dia,","status":"🟢 Em serviço","next_job_label":"Próxima intervenção","next_job_time":"Em 15 min"},"demo_banner":{"badge":"Exemplo real","title":"Relatório certificado — descarregar e verificar","field_operator":"Operador","field_intervention":"Intervenção","btn_download":"Descarregar relatório (.zip)","btn_verify":"Verificar autenticidade →"},"flow_mockup":{"pipeline_title":"Pipeline Vendas","month":"Dezembro 2025","quote_name":"Orçamento A. Silva","quote_approved":"Aprovado hoje às 09:30"}},"pricing":{"badge":"Soluções GeoTapp","title":"Escolha o produto certo.","subtitle":"Soluções práticas para empresas com técnicos e operadores de campo.","vat_note":"Todos os preços excluem IVA. Facturação de acordo com os termos de serviço.","categories":{"app":{"title":"GeoTapp TimeTracker","description":"Aplicação móvel para técnicos de campo","products":[{"name":"GeoTapp TimeTracker","tagline":"A partir de","desc":"A solução completa para registar presenças, actividade de campo e comprovativos de trabalho. Preço por utilizador/ano.","features":["App Android/iOS","Registo de presença GPS","Relatórios semanais"],"button":"Ver calculadora"}]},"flow":{"title":"GeoTapp Flow","description":"Gestão de operações de campo e equipas","products":[{"name":"GeoTapp Flow Business","tagline":"Para empresas estruturadas.","desc":"A solução completa para empresas estruturadas e organizações complexas.","features":["Equipas ilimitadas (não utilizadores timetracker)","API","Suporte prioritário","Automatizações","Relatórios avançados","TimeTracker: ilimitado*"]},{"name":"GeoTapp Flow Team","tagline":"Para pequenas equipas operacionais.","desc":"Coordene e gira a sua equipa operacional em tempo real.","features":["5 utilizadores Flow incluídos (não timetracker)","Gestão de trabalhos","Registos em campo","Relatórios operacionais","Integrações","TimeTracker: máx. 5 utilizadores*"]},{"name":"GeoTapp Flow Solo","tagline":"Para freelancers e microempresas.","desc":"Tudo o que precisa para gerir intervenções de forma autónoma.","features":["1 utilizador","Gestão de tarefas","Relatórios básicos","Integrações essenciais","TimeTracker: máx. 2 utilizadores*"]}]}},"calculator":{"title":"Calculadora de licenças TimeTracker","subtitle":"Estime o seu investimento anual em força de trabalho.","active_users":"Utilizadores ativos","discount_threshold":"Limiar de desconto","cost_per_user":"Custo médio por utilizador","per_month":"/mês","standard_rate":"Tarifa padrão (1–25 @ €2)","mixed_rate":"Tarifa mista (desconto por volume aplicado)","annual_total":"Total anual (+IVA)","annual_billing_note":"Faturação anual única","enterprise_plan":"Plano Enterprise","enterprise_desc":"Para equipas com mais de 150 utilizadores oferecemos SLAs personalizados e gestão de conta dedicada.","request_quote":"Solicitar orçamento","add_to_cart":"Adicionar licença App ao carrinho","secure_payment":"Pagamento seguro via Stripe. IVA calculado no checkout."},"simulator":{"section_title":"Calcule o seu orçamento","employees_label":"Número de colaboradores:","one_employee":"1 Colaborador","many_employees":"150+ Colaboradores","price_per_user":"Preço por utilizador","annual_total":"Total anual","per_month":"/mês","per_user_annual":"por utilizador, faturação anual","selected_badge":"Selecionado","enterprise_plan":"Plano Enterprise","enterprise_desc":"Para grandes organizações oferecemos soluções personalizadas.","enterprise_cta":"Contacte-nos para um orçamento","company_placeholder":"Nome da empresa","email_placeholder":"Email do administrador","email_error_format":"Introduza um endereço de email válido (ex. nome@empresa.pt)","email_error_placeholder":"Introduza um email empresarial real.","terms_alert":"Para continuar deve aceitar os Termos e confirmar que leu a Política de Privacidade.","processing":"A processar...","request_info":"Solicitar informações","buy_now":"Comprar agora","payment_note":"Pagamento seguro via Stripe. Cancele quando quiser.","success_sent":"Pedido enviado com sucesso! Entraremos em contacto em breve.","error_request":"Erro ao enviar pedido","plus_vat":"+ IVA"},"bundle":{"title":"Calculadora Bundle","subtitle":"Calcule a sua poupança com o Bundle Flow + TimeTracker","employees":"Número de colaboradores","billingCycle":"Ciclo de faturação","monthly":"Mensal","yearly":"Anual","flowPlan":"Plano Flow","solo":"Solo (1 utilizador)","team":"Team (até 5 utilizadores)","business":"Business (ilimitado)","priceBreakdown":"Detalhe de preços","flowPrice":"GeoTapp Flow","trackerPrice":"TimeTracker","subtotal":"Subtotal","bundleDiscount":"Desconto Bundle (15% primeiro ano)","totalPrice":"Preço total","savings":"Poupa","perMonth":"/mês","perYear":"/ano","cta":"Obter o Bundle","notes":"Nota: O desconto aplica-se nos primeiros 12 meses","employees_unit":"funcionários","first_year_savings":"no primeiro ano!","loading":"Carregando...","modal_title":"Insira seu email","modal_desc":"Precisamos do seu email para criar sua sessão de checkout e enviar o recibo.","email_placeholder":"seu@email.com","btn_cancel":"Cancelar","btn_continue":"Continuar","error_checkout":"Erro ao criar a sessão. Por favor, tente novamente.","error_connection":"Erro de conexão. Por favor, tente novamente."},"tracker_footnote":"* Número máximo de utilizadores TimeTracker que podem ser ativados simultaneamente no plano Flow. Ao remover o acesso de um funcionário, a vaga fica disponível de imediato."},"contact":{"title":"Vamos falar de <span class=\"text-primary\">Negócio</span>.","subtitle":"Precisa de perceber se o GeoTapp se adequa à sua empresa. Estamos aqui para responder de forma concreta.","guarantee_title":"Garantia de resposta","guarantee_text":"Primeira resposta média em 12 horas úteis. Nenhuma questão perdida no vazio.","form":{"name":"Nome","company":"Empresa","email":"E-mail profissional","reason":"Motivo do contacto","message":"Mensagem","send":"Enviar","reason_options":["Quero uma Demo do GeoTapp","Pedido de Informação Geral","Parceria","Outro"],"name_placeholder":"O seu nome","email_placeholder":"voce@email.com","company_placeholder":"Nome da empresa","message_placeholder":"A sua mensagem...","submit":"Enviar mensagem","submitting":"A enviar..."},"hours":"Seg-Sex 9:00 - 18:00","location_city":"Brescia, IT","channels_title":"Canais Diretos","email_label":"E-mail Geral","email_desc":"Para informações, orçamentos e suporte.","hq_label":"Sede","hq_city":"Brescia, Itália","hq_note":"Visitas por marcação.","privacy_note":"Ao enviar este formulário aceita a nossa Política de Privacidade.","map_title":"Onde estamos — Trenzano (BS), Itália","success":"Mensagem enviada com sucesso. Responderemos o mais brevemente possível.","error":"Erro ao enviar. Tente novamente mais tarde.","sending":"A enviar...","map_unavailable":"Mapa não disponível","open_maps":"Abrir no Google Maps ↗"},"login_hub":{"title":"Aceda à sua <span class=\"text-primary\">Conta</span>.","subtitle":"Seleccione o produto ao qual pretende ligar-se.","flow":{"desc":"Gestão operacional, trabalhos, coordenação e relatórios.","btn":"Entrar no Flow"},"timetracker":{"desc":"Presenças, actividade de campo e comprovativos de trabalho.","btn":"Entrar no TimeTracker"}},"product_pages":{"flow":{"hero_badge":"GeoTapp Flow — Gestão de operações de campo","hero_title":"GeoTapp Flow.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600\">Gestão Operacional.</span>","hero_subtitle":"O centro operacional para empresas com técnicos e operadores de campo. Gira trabalhos, coordene equipas e produza relatórios de trabalho estruturados e verificáveis.","visual_placeholder":"PAINEL DE OPERAÇÕES","grid_title":"Capacidades operacionais","grid_subtitle":"Cada módulo foi concebido para o controlo real do trabalho de campo. Clique para explorar.","sectors":{"1":"Trabalhos e Clientes","2":"Planeamento e Recursos","3":"Controlo e Visibilidade"},"cta_title":"Tome o controlo real do seu campo.","cta_button":"Ver preços","modal":{"status":"ESTADO DO SISTEMA: <span class=\"text-green-600\">OPERACIONAL</span>","encryption":"DADOS: <span class=\"text-slate-400\">PROTEGIDOS</span>","access":"ACESSO: <span class=\"text-blue-600\">SEGURO</span>","close":"Fechar"},"systems":{"nexus-core":{"name":"Gestão de trabalhos","short":"Crie e gira intervenções técnicas. Atribua tarefas aos técnicos, monitorize o progresso e mantenha tudo registado por trabalho.","full":"### Controlo central dos trabalhos.\n\nCada intervenção começa como um trabalho estruturado.\nA **Gestão de trabalhos** dá-lhe uma visão clara de todo o trabalho em curso.\n\n#### Gestão de intervenções\n\nCrie um trabalho, atribua o técnico, defina o local e a data.\nMonitorize o estado: Aberto, Em curso, Concluído.\n\n#### Histórico operacional\n\nCada trabalho tem um arquivo completo de actividades, comprovativos fotográficos, notas e marcas de tempo.\nO cliente pergunta o que foi feito? Tem os dados. Sempre."},"titan-flow":{"name":"Atribuição de tarefas","short":"Distribua o trabalho pelos técnicos com precisão. Comunique instruções, prazos e prioridades operacionais de forma estruturada.","full":"### O trabalho certo para o técnico certo.\n\nUma atribuição confusa gera atrasos e disputas.\nA **Atribuição de tarefas** traz clareza operacional.\n\n#### Distribuição precisa\n\nAssim que um trabalho é aberto, atribua um ou mais técnicos.\nCada técnico vê o seu trabalho no GeoTapp TimeTracker.\n\n#### Comunicação operacional\n\nInstruções, notas, anexos técnicos: tudo chega ao técnico antes de partir para o campo.\nMenos chamadas, menos mal-entendidos, menos atrasos."},"ledger-prime":{"name":"Relatórios e facturação","short":"Gere relatórios estruturados a partir de cada trabalho. Exporte documentação e apoie a facturação com dados reais de campo.","full":"### Do trabalho ao relatório, de forma ordenada.\n\nA facturação manual é lenta e muitas vezes incompleta.\nOs **Relatórios e a facturação** fecham o ciclo operacional.\n\n#### Relatórios estruturados\n\nCada intervenção concluída gera documentação recolhendo marcas de tempo, fotos e notas do campo.\nSem dados a introduzir manualmente — tudo provém do TimeTracker.\n\n#### Apoio à facturação\n\nOs dados reais dos trabalhos facilitam orçamentos e facturas mais precisos.\nMenos erros, menos disputas, ciclo administrativo mais ágil."},"quantum-logistics":{"name":"Calendário de intervenções","short":"Planeie intervenções, visualize o calendário operacional e gira a disponibilidade da equipa sem sobreposições.","full":"### Visão completa do trabalho planeado.\n\nSem um calendário partilhado, o planeamento torna-se caótico.\nO **Calendário de intervenções** dá-lhe visibilidade operacional clara.\n\n#### Planeamento avançado\n\nVisualize todas as intervenções em vistas de calendário diário, semanal e mensal.\nIdentifique sobreposições e optimize a distribuição da carga de trabalho.\n\n#### Disponibilidade da equipa\n\nVeja quem está disponível, quem está de férias e quem já está sobrecarregado.\nAtribua novas intervenções sem criar conflitos operacionais."},"supply-command":{"name":"Gestão de recursos","short":"Controle materiais, equipamentos e recursos operacionais necessários para cada intervenção de campo. Sem surpresas.","full":"### Nenhuma intervenção sem os recursos necessários.\n\nEnviar um técnico para o campo sem os materiais adequados é um erro dispendioso.\nA **Gestão de recursos** previne surpresas operacionais.\n\n#### Materiais por trabalho\n\nAssocie os recursos necessários a cada trabalho.\nO responsável vê antecipadamente o que é necessário e quando.\n\n#### Fornecedores e aprovisionamento\n\nGuarde os contactos e condições dos seus fornecedores habituais.\nReduz os tempos de aprovisionamento e mantenha os custos sob controlo."},"the-architect":{"name":"Planeamento do trabalho","short":"Organize o trabalho em fases, tarefas e prazos. Mantenha o projecto sob controlo sem folhas de cálculo ou mensagens de WhatsApp.","full":"### Estruture o trabalho. Controle o progresso.\n\nOs trabalhos complexos requerem estrutura.\nO **Planeamento do trabalho** traz ordem operacional.\n\n#### Fases e prazos\n\nEstruture intervenções complexas em fases operacionais com prazos claros.\nAtribua responsabilidades a cada membro da equipa.\n\n#### Acompanhamento do progresso\n\nVisualize o progresso em tempo real.\nSaiba sempre o que foi feito e o que está em aberto.\nAja antes que um atraso se torne um problema para o cliente."},"the-auditor":{"name":"Documentação de intervenções","short":"Recolha evidências fotográficas, notas operacionais e documentos assinados para cada intervenção. O trabalho realizado mantém-se verificável.","full":"### Prova real para cada intervenção.\n\nSem documentação, o trabalho realizado é contestável.\nA **Documentação de intervenções** torna cada trabalho verificável.\n\n#### Evidência fotográfica\n\nOs técnicos tiram fotos directamente do GeoTapp TimeTracker no campo.\nAs imagens são automaticamente ligadas ao trabalho com marca de tempo e localização.\n\n#### Assinatura digital do cliente\n\nO cliente pode assinar o relatório de trabalho directamente no ecrã do técnico.\nA assinatura digital fica incluída no relatório e constitui prova do serviço prestado."},"the-uplink":{"name":"Ligação campo-escritório","short":"Os dados recolhidos pelo TimeTracker chegam ao Flow em tempo real. O campo e o escritório trabalham com os mesmos dados operacionais.","full":"### Escritório e campo, finalmente ligados.\n\nA desconexão entre campo e escritório gera erros evitáveis, atrasos e disputas.\nA **Ligação campo-escritório** fecha a lacuna.\n\n#### Sincronização em tempo real\n\nCada registo de presença, foto e nota registada no TimeTracker chega ao Flow de imediato.\nO responsável tem uma visão ao vivo sem ter de ligar ao técnico.\n\n#### Histórico fiável\n\nTudo o que o técnico regista no campo é arquivado e ligado ao trabalho.\nNenhum dado se perde. Nenhuma informação falta quando chega o momento de elaborar o relatório."},"the-oracle":{"name":"Visibilidade operacional","short":"Painel operacional em tempo real. Saiba sempre quantas intervenções estão abertas, em curso ou concluídas hoje.","full":"### Dados operacionais, não suposições.\n\nDecidir sem dados fiáveis é perigoso.\nA **Visibilidade operacional** converte os dados de campo em informação concreta.\n\n#### Painel operacional\n\nVeja em tempo real:\n- Intervenções abertas e em curso\n- Técnicos activos\n- Intervenções concluídas hoje e esta semana\n\n#### Relatórios periódicos\n\nReceba resumos de actividade automatizados.\nCompare períodos, identifique estrangulamentos e optimize as operações."}}},"app":{"hero_badge":"GeoTapp TimeTracker — App para técnicos de campo","hero_title":"GeoTapp TimeTracker.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600\">O campo no seu bolso.</span>","hero_subtitle":"A aplicação móvel utilizada pelos técnicos para registar a actividade, recolher comprovativos e manter o fio operacional directamente do campo. Disponível em Android e iOS.","visual_placeholder":"INTERFACE DE CAMPO","grid_title":"Ferramentas para o trabalho de campo","grid_subtitle":"Cada funcionalidade foi concebida para quem trabalha fora do escritório e não tem tempo a perder. Clique para explorar.","sectors":{"1":"Operações essenciais","2":"Logística e Comunicações","3":"Dados e Administração"},"cta_title":"Dê aos seus técnicos a ferramenta certa.","cta_button":"Ver preços","modal":{"status":"ESTADO DO SISTEMA: <span class=\"text-green-600\">OPERACIONAL</span>","encryption":"DADOS: <span class=\"text-slate-400\">PROTEGIDOS</span>","device":"DISPOSITIVO: <span class=\"text-blue-600\">MÓVEL / TABLET</span>","close":"Fechar"},"systems":{"timelock-alpha":{"name":"Registo de presença GPS","short":"Registo de entrada e saída ligado à posição GPS e a uma marca de tempo precisa. Cada sessão de trabalho torna-se um evento operacional verificável.","full":"### O tempo é verificável.\n\nAs marcas de tempo sem verificação geram disputas.\nO **Registo de presença GPS** torna cada sessão de trabalho num registo fiável e incontestável.\n\n#### Registo geolocalizado de entrada e saída\n\nO técnico regista a entrada e saída do campo.\nLocalização, endereço e hora são registados automaticamente.\n\n#### Histórico imutável\n\nCada sessão é um registo verificável: hora de entrada, hora de saída, posição, duração e trabalho associado.\nO cliente pergunta quando chegou? Os dados estão lá, sempre."},"event-horizon":{"name":"Planeamento de turnos","short":"Gira turnos e disponibilidade do pessoal. Vistas semanais e mensais para coordenação sem confusão ou sobreposições.","full":"### Sem conflitos de turnos.\n\nOrganizar pessoal móvel requer clareza.\nO **Planeamento de turnos** dá ao responsável uma visão precisa e actualizada.\n\n#### Vista de calendário\n\nVeja quem trabalha quando.\nIdentifique ausências, férias e sobreposições antes de se tornarem problemas operacionais.\n\n#### Disponibilidade em tempo real\n\nOs colaboradores confirmam a presença ou reportam ausências directamente da aplicação.\nO responsável vê as lacunas no horário antes de atribuir novos trabalhos."},"unit-matrix":{"name":"Registo de operadores","short":"Gira um registo completo dos seus operadores: funções, contactos, certificações e acesso à plataforma.","full":"### Conheça a sua equipa.\n\nCada operador é um recurso operacional chave.\nO **Registo de operadores** centraliza toda a informação vital.\n\n#### Gestão de certificações\n\nVeja de relance quem possui as qualificações necessárias para uma intervenção ou local específico.\n\n#### Integração rápida\n\nAdicionar um novo técnico é simples.\nEnvie um link de convite: em minutos está operacional no GeoTapp TimeTracker."},"sector-grid":{"name":"Locais e estaleiros","short":"Crie uma base de dados de locais operacionais e estaleiros. Ligue cada intervenção à localização correcta e organize as equipas por zona.","full":"### Cada intervenção no lugar certo.\n\nTrabalhar sem referência geográfica gera confusão.\nOs **Locais e estaleiros** trazem clareza operacional.\n\n#### Base de dados de locais\n\nCrie um catálogo de locais de clientes, estaleiros e localizações operacionais.\nO sistema liga automaticamente a actividade do técnico ao local da intervenção.\n\n#### Equipas por zona\n\nOrganize os técnicos em equipas por local ou área geográfica.\nAtribua intervenções à equipa certa, não apenas ao indivíduo."},"energy-logistics":{"name":"Gestão de viaturas e despesas","short":"Registe a utilização de viaturas da empresa, o combustível consumido e as despesas de deslocação do pessoal de campo.","full":"### Cada deslocação documentada.\n\nAs despesas de deslocação são um item crítico para qualquer empresa com pessoal móvel.\nA **Gestão de viaturas** monitoriza cada custo.\n\n#### Utilização de viaturas\n\nAtribua temporariamente uma viatura a um colaborador para uma intervenção.\nSaiba sempre quem usa que viatura e para que trabalho.\n\n#### Despesas de combustível\n\nO colaborador regista o abastecimento directamente da aplicação com foto do recibo e valor.\nTudo arquivado, tudo ligado ao trabalho."},"neural-link":{"name":"Comunicações operacionais","short":"Canal interno para comunicações da empresa. Mensagens dirigidas a grupos específicos com confirmações de leitura.","full":"### Comunicações claras. Sem ruído de fundo.\n\nO WhatsApp mistura vida privada e profissional e não oferece controlo sobre o estado de leitura.\nAs **Comunicações operacionais** são o canal oficial da empresa.\n\n#### Mensagens dirigidas\n\nNotifique apenas a equipa que precisa de saber.\nMudança de turno no estaleiro do Porto? Apenas os técnicos atribuídos recebem a mensagem.\n\n#### Confirmações de leitura\n\nSaiba sempre quem leu a comunicação e quem não leu.\nResponsabilidade clara e transparente para todos."},"payroll-bridge":{"name":"Exportação de presenças","short":"Exporte as presenças mensais em formatos compatíveis com os principais softwares de processamento salarial. Menos trabalho manual, menos erros.","full":"### O processamento salarial sem dores de cabeça.\n\nO fecho do mês não tem de ser um pesadelo administrativo.\nA **Exportação de presenças** liga as operações de campo à administração de RH.\n\n#### Multi-formato\n\nGere ficheiros de presenças prontos a importar nos principais softwares de processamento salarial portugueses (Primavera, PHC, TOConline).\n\n#### Acesso para o contabilista\n\nAtribua acesso limitado ao seu gabinete de contabilidade.\nDescarrega os dados de que necessita de forma autónoma, sem ligar ao fecho de cada mês."},"data-core":{"name":"Relatórios semanais","short":"Relatórios detalhados sobre as horas trabalhadas por trabalho e por operador. Dados fiáveis para controlo interno e facturação.","full":"### Os dados não mentem.\n\nTome decisões com base em factos, não em impressões.\nOs **Relatórios semanais** extraem valor das operações diárias.\n\n#### Relatórios detalhados\n\nCada semana, uma imagem completa: quem trabalhou, onde, em que trabalho e durante quanto tempo.\n\n#### Transparência total\n\nColaboradores e responsáveis consultam o mesmo relatório mensal.\nAs horas contabilizadas são idênticas para todos.\nSem disputas no fecho do mês."},"identity-forge":{"name":"App com a sua marca","short":"Carregue o seu logótipo e escolha as cores da sua empresa. Os seus operadores usam uma aplicação que reflecte a sua identidade de marca.","full":"### A sua empresa, a sua aplicação.\n\nNão use uma aplicação genérica.\nFaça com que os seus colaboradores se sintam parte da SUA empresa com uma experiência visual coerente.\n\n#### Logótipo da empresa\n\nO seu logótipo em destaque no ecrã de início de sessão e no painel principal.\n\n#### Cores da empresa\n\nEscolha o tema de cores que se adequa à sua imagem corporativa.\nProfissional, coerente, reconhecível."}}}},"cart":{"title":"Carrinho","empty":"O carrinho está vazio.","license_default":"Licença Standard","quantity":"Quantidade","per_month":"mês","per_year":"ano","total_monthly":"Total Mensal","total_yearly":"Total Anual","vat_note":"IVA (calculado no checkout)","email_label":"Email para receber licenças e acesso SaaS","email_placeholder":"nome@empresa.com","email_hint":"Enviaremos aqui as chaves de licença e os detalhes de acesso.","email_error_empty":"Por favor, insira um endereço de email válido.","email_error_invalid":"Por favor, insira um endereço de email válido (ex. nome@empresa.com).","terms_alert":"Para continuar deve aceitar os Termos e confirmar que leu a Política de Privacidade.","checkout_loading":"A processar...","checkout_button":"Prosseguir para o Checkout","checkout_error":"Ocorreu um erro. Por favor, tente novamente.","policy_terms_prefix":"Li e aceito os","policy_terms_link":"Termos Gerais de Serviço","policy_terms_suffix":"GeoTapp.","policy_privacy_prefix":"Li a","policy_privacy_link":"Política de Privacidade","policy_privacy_suffix":"GeoTapp."},"guida":{"page_title":"Guia do utilizador","download_pdf":"Descarregar / Imprimir PDF"},"demo":{"page_title":"Reserve a sua demo personalizada","settori":["Limpeza / Facility / Multiservice","Segurança / Vigilância / Steward","Instaladores / Eletricistas / Canalizadores","Logística / Transportes","Construção / Manutenção","Outro"],"cosa_vedrai":[{"title":"Marcação GPS em ação","desc":"Como o técnico marca ponto na app móvel e como o escritório vê a localização verificada — sem rastreamento contínuo."},{"title":"Relatórios verificáveis","desc":"Como cada intervenção gera um relatório com provas fotográficas, assinatura digital e hash imutável que pode mostrar ao cliente."},{"title":"Gestão de equipas pelo Flow","desc":"Como atribuir tarefas, monitorizar o progresso e produzir relatórios semanais sem folhas Excel ou chamadas telefónicas."}],"faq":[{"q":"Quanto tempo dura a demo?","a":"30 minutos exatos. Mostramos a plataforma em uso real e respondemos às suas perguntas específicas do setor."},{"q":"É necessária preparação?","a":"Não. Basta trazer o seu caso concreto — quantos operadores tem e que problemas tem hoje com as horas ou os relatórios."},{"q":"A demo é gratuita?","a":"Sim, completamente gratuita e sem compromisso. No final pode iniciar um período de teste diretamente."},{"q":"Posso convidar um colega?","a":"Absolutamente. Muitas vezes participam juntos o responsável operacional e o administrador ou RH."}],"form_name":"Nome completo","form_name_placeholder":"João Silva","form_company":"Empresa","form_company_placeholder":"Nome da empresa","form_sector":"Setor","form_email":"Email","form_email_placeholder":"joao@empresa.pt","form_phone":"Telefone (opcional)","form_phone_placeholder":"+351 912 345 678","form_submit":"Reservar a demo gratuita","form_submitting":"A enviar...","success_title":"Pedido recebido!","success_desc":"Entraremos em contacto no prazo de 1 dia útil para agendar a demo.","error_message":"Erro ao enviar. Por favor tente mais tarde."},"download_page":{"title":"Descarregar GeoTapp","subtitle":"Escolha a versão adequada às suas necessidades.","demo_report_badge":"Exemplo real","demo_report_title":"Relatório de intervenção certificado","demo_report_desc":"Descarregue um relatório real gerado pelo GeoTapp. Contém GPS verificado, provas fotográficas, cadeia hash de operadores e selagem criptográfica.","demo_report_btn_download":"Descarregar relatório de exemplo (.zip)","demo_report_btn_verify":"Verificar autenticidade","demo_report_field_operator":"Operador","demo_report_field_type":"Tipo de intervenção","windows_title":"GeoTapp para Windows","windows_desc":"A aplicação de secretária completa para gestão empresarial. Ideal para administração e controlo total.","windows_features":["Gestão completa de frota","Planeamento de turnos","Exportação de salários","Notificações de secretária"],"windows_btn":"Descarregar para Windows","wp_title":"Plugin WordPress","wp_desc":"Integre o GeoTapp no seu site empresarial. Permita que os colaboradores acedam diretamente da sua intranet.","wp_features":["Integração Iframe segura","Shortcode [geotap_app]","Login automático","Compatível com todos os temas"],"wp_btn":"Descarregar Plugin"},"chi_siamo":{"badge":"A nossa história","hero_title_line1":"Nascidos no campo,","hero_title_line2":"não num escritório.","hero_desc":"O GeoTapp não foi inventado por investidores ou analistas. Nasceu da frustração real de quem trabalha todos os dias entre prazos, obras e clientes exigentes.","story":["Era 2024. Mike Petraroli, o nosso fundador, trabalhava como empregado e tinha um problema aparentemente banal mas incrivelmente caro: <strong>provar o seu próprio trabalho.</strong>","No final do mês, as contas das horas nunca batiam certo. As intervenções feitas a correr entre clientes eram esquecidas. O papel perdia-se, as mensagens do WhatsApp ficavam enterradas. Era uma hemorragia silenciosa de tempo e dinheiro.","Procurou uma solução. Só encontrou software complexos, caros, cheios de gráficos inúteis e pobres em substância. Software feito por pessoas que nunca tinham marcado ponto ou emitido uma fatura de emergência da carrinha.","Então Mike decidiu construir ele próprio a ferramenta que teria querido ter: simples, móvel, com provas verificáveis. Não para investidores — para empresas como a sua."],"values_title":"Os nossos valores","values":[{"title":"Missão clara","desc":"Tornar cada intervenção mensurável e verificável. O trabalho de campo merece as mesmas ferramentas de transparência que um escritório."},{"title":"Equipa dedicada","desc":"Somos uma equipa pequena obcecada com o problema que resolvemos. Cada funcionalidade vem de feedback real, não de roteiros de marketing."},{"title":"Privacy by Design","desc":"Não vendemos dados, não rastreamos continuamente. GPS apenas no momento da marcação de ponto, zero vigilância."},{"title":"Feito em Itália","desc":"Desenvolvido em Itália para o mercado italiano e europeu. As regras RGPD, a cultura do trabalho e os regulamentos locais estão no DNA do produto."}],"cta_title":"Junte-se à Revolução Simples","cta_desc":"Não somos uma Big Tech inalcançável. Somos pessoas reais construindo software para pessoas reais.","cta_btn":"Envie-nos uma Mensagem","stats":[{"number":"2024","label":"Fundada"},{"number":"100%","label":"Feito para o campo"},{"number":"GDPR","label":"Privacidade certificada"}],"mission_quote":"O trabalho em campo merece as mesmas ferramentas de transparência que um escritório."},"blog":{"hero_title":"Pensamentos e Centelhas.","hero_desc":"Não escrevemos para preencher páginas. Escrevemos para partilhar o que aprendemos construindo o futuro do trabalho verificável.","no_posts":"Nenhum artigo disponível de momento.","read_article":"Ler artigo →","cta_title":"Fique a par","cta_desc":"Sem spam, apenas atualizações de valor sobre o produto e o sector.","cta_btn":"Contacte-nos","schema_desc":"Guias e análises sobre certificação de trabalho em campo, gestão de equipas, RGPD e geolocalização.","meta_title":"Blog | GeoTapp — Verificação do trabalho em campo","meta_desc":"Guias, análises e recursos sobre gestão de equipas, certificação de intervenções, RGPD e geolocalização. Da equipa GeoTapp.","cat_all":"Todos"},"trial":{"page_title":"14 dias grátis. Sem cartão.","page_subtitle":"Acesso completo a todos os módulos GeoTapp Flow durante 14 dias. Sem cartão de crédito, sem compromisso. Cancele quando quiser.","badge":"Teste gratuito — 14 dias","form_title":"Crie a sua conta","form_company":"Nome da empresa","form_company_placeholder":"Ex. Instalações Silva Lda","form_vat":"NIF europeu","form_vat_placeholder":"Ex. PT123456789","form_email":"Email empresarial","form_email_placeholder":"Ex. silva@empresa.pt","form_fullname":"Nome completo","form_fullname_placeholder":"Ex. João Silva","form_plan":"Plano GeoTapp Flow","form_plan_note":"O número de utilizadores do plano refere-se ao GeoTapp Flow (gestão de escritório/CRM). As licenças GeoTapp Timetracker para operadores de campo são uma subscrição separada, com um número máximo incluído conforme o plano escolhido.","plan_solo":"Solo — 1 utilizador Flow","plan_team":"Team — até 5 utilizadores Flow","plan_business":"Business — utilizadores Flow ilimitados","form_seats":"Licenças Timetracker (opcional)","form_seats_hint":"Subscrição separada para operadores de campo (aplicação móvel). Limite incluído no plano: Solo máx. 2, Team máx. 5, Business ilimitadas. Pode ajustar as licenças após a ativação.","form_submit":"Iniciar teste gratuito","form_submitting":"A ativar...","form_privacy":"Os seus dados são tratados de acordo com a nossa","form_privacy_link":"Política de Privacidade","form_email_hint":"Use um email empresarial (não Gmail, Yahoo, etc.)","success_title":"Verifique o seu email!","success_desc":"Enviámos o link de ativação para ","success_desc2":"Clique no link para definir a sua palavra-passe e aceder ao seu teste.","success_spam":"Não encontra? Verifique a pasta de spam.","error_message":"Erro durante a ativação. Tente novamente ou escreva para info@geotapp.com.","benefits_title":"O que inclui o teste","benefits":[{"title":"Acesso completo","desc":"Todos os módulos ativos: CRM, faturação, gestão de equipas, suporte ao cliente."},{"title":"Sem cartão necessário","desc":"Introduza apenas os dados da empresa. O cartão só é adicionado se decidir continuar."},{"title":"Os seus dados estão seguros","desc":"Os seus dados são seus. Pode exportá-los a qualquer momento."}],"faq":[{"q":"O que acontece após 14 dias?","a":"Receberá um email com o link para ativar a subscrição. Se não fizer nada, a conta é suspensa sem cobranças."},{"q":"Preciso de inserir o cartão de crédito?","a":"Não. O teste é completamente gratuito e sem cartão. Só o adiciona se decidir continuar."},{"q":"Posso convidar a minha equipa?","a":"Sim, pode adicionar utilizadores no painel de definições durante o teste."},{"q":"Quanto tempo demora a começar?","a":"Menos de 2 minutos: preencha o formulário, receba o email, defina a palavra-passe e está dentro."}]},"roi":{"meta_title":"Calculadora ROI GeoTapp — Descubra as suas poupanças reais","meta_desc":"Calcule em 2 minutos quanto pouparia com o GeoTapp: menos burocracia, zero disputas, operadores mais produtivos.","hero_title":"Calcule o seu ROI com o GeoTapp","hero_subtitle":"Introduza os dados da sua empresa e descubra quanto pode poupar por ano.","step1_title":"A sua empresa","step1_subtitle":"Fale-nos um pouco sobre si","field_settore":"Setor","field_operatori":"Número de operadores","settore_installatori":"Instaladores e manutenção","settore_pulizie":"Limpeza e saneamento","settore_sicurezza":"Segurança e vigilância","settore_altro":"Outro setor","step2_title":"A sua situação atual","step2_subtitle":"Seja preciso: quanto mais reais os dados, mais preciso o cálculo","field_siti":"Sites visitados por dia (por operador)","field_ore_admin":"Horas/semana em burocracia e relatórios","field_contestazioni":"Disputas de clientes por mês (não pagos, reclamações, etc.)","field_costo_orario":"Custo horário médio de um operador (€)","step3_title":"Onde enviamos o seu relatório?","step3_subtitle":"Os seus resultados personalizados chegam imediatamente. Sem spam.","field_nome":"Nome completo","field_email":"Email empresarial","field_telefono":"Telefone (opcional)","cta_calcola":"Calcular o meu ROI","consent_text":"Ao clicar em 'Calcular o meu ROI' aceita receber comunicações comerciais da GeoTapp. Pode cancelar a subscrição a qualquer momento.","next":"Seguinte","back":"Voltar","results_title":"A sua poupança estimada com o GeoTapp","results_subtitle":"Com base nos dados que introduziu","results_admin":"Poupança em burocracia e relatórios","results_dispute":"Poupança em disputas e reclamações","results_coord":"Poupança na coordenação de equipas","results_total":"Poupança anual total","results_payback":"Retorno estimado","results_payback_unit":"meses","results_roi":"ROI estimado","results_cta":"Inicie o seu teste gratuito de 14 dias","results_disclaimer":"Estimativa indicativa baseada em médias do setor. Os resultados reais podem variar.","per_anno":"/ ano","label_operators":"operadores","embed_title":"Calculadora ROI GeoTapp"}}
+{
+  "navbar": {
+    "products": "Produtos",
+    "pricing": "Preços",
+    "blog": "Blog",
+    "contact": "Contacto",
+    "login": "Entrar",
+    "cta": "Pedir demo",
+    "sectors": {
+      "installatori": "Instaladores",
+      "sicurezza": "Segurança",
+      "pulizie": "Limpeza",
+      "label": "Setores"
+    },
+    "logo_alt": "GeoTapp — A plataforma que torna o trabalho verificável",
+    "product_flow_desc": "Gestão operacional de intervenções e equipas",
+    "product_app_desc": "App móvel para técnicos de campo",
+    "product_verifier_desc": "Verificação de integridade de relatórios de trabalho",
+    "compare": "Comparação"
+  },
+  "footer": {
+    "tagline": "Actividade de campo registada. Operações organizadas. Relatórios verificáveis.",
+    "privacy": "Política de privacidade",
+    "terms": "Termos de serviço",
+    "rights": "Todos os direitos reservados."
+  },
+  "landing": {
+    "hero_badge": "O trabalho aconteceu. Agora torne-o demonstrável.",
+    "hero_title": "Se não puder provar, o cliente diz que nunca aconteceu.",
+    "hero_subtitle": "GeoTapp transforma cada intervenção em campo em evidência objectiva: relatórios selados com dados GPS reais, provas fotográficas com marca de tempo e documentação verificável por qualquer pessoa — sem confiar, sem contestações.",
+    "hero_cta_primary": "Agendar demo de 30 minutos",
+    "hero_cta_secondary": "Explorar setores",
+    "trust_gdpr": "Conforme RGPD",
+    "trust_gdpr_desc": "Só registo de entrada e saída",
+    "trust_gps": "Prova GPS",
+    "trust_gps_desc": "Cada intervenção certificada com localização e marca de tempo",
+    "trust_offline": "Funciona offline",
+    "trust_offline_desc": "Sincronização automática ao reconectar",
+    "features_title": "Do trabalho à prova verificável",
+    "features_subtitle": "Três ferramentas integradas: o campo regista, o escritório controla, o cliente verifica.",
+    "cta_title": "O trabalho aconteceu. Agora prove-o.",
+    "cta_subtitle": "As empresas que usam GeoTapp não perdem mais trabalhos não documentados. Cada hora é verificável. Cada relatório é defensável.",
+    "cta_button": "Agendar demo de 30 minutos",
+    "problem_title": "O problema que você já conhece",
+    "problem_subtitle": "Não é um problema de organização. É um problema de prova.",
+    "problem_items": [
+      {
+        "title": "O cliente nega. Você não tem provas.",
+        "desc": "A intervenção aconteceu. Mas sem documentação verificável, é a sua palavra contra a dele. E muitas vezes ele ganha."
+      },
+      {
+        "title": "O relatório chega incompleto, atrasado ou não chega.",
+        "desc": "Formulários em papel, WhatsApp, e-mails. Os dados se perdem, alteram-se, são esquecidos. A reconstrução a posteriori é cara e pouco confiável."
+      },
+      {
+        "title": "O trabalho não documentado não existe.",
+        "desc": "Cada hora não registrada é uma hora não paga. Cada intervenção sem prova é uma intervenção que o cliente pode contestar."
+      }
+    ],
+    "report_section_title": "O relatório. Não um resumo. Uma prova.",
+    "report_section_subtitle": "Cada relatório GeoTapp é gerado automaticamente a partir de dados reais do campo.",
+    "report_section_body": "Registros GPS, fotos com carimbo de data/hora, notas operacionais. O sistema aplica um selo criptográfico que torna qualquer modificação detectável. O resultado não é um documento para enviar ao cliente — é uma prova que o cliente pode verificar por conta própria.",
+    "report_feature_1": "Não modificável após geração — qualquer alteração é detetável",
+    "report_feature_2": "Verificável sem conta — por qualquer pessoa, de forma autônoma",
+    "report_feature_3": "Dados GPS e fotográficos integrados e inseparáveis",
+    "report_feature_4": "Gerado automaticamente — sem preenchimento manual",
+    "report_cta": "Ver como o cliente verifica por conta própria",
+    "hero_sectors_prefix": "Ideal para",
+    "hero_sectors_pulizie": "empresas de limpeza",
+    "hero_sectors_installatori": "instaladores",
+    "hero_sectors_sicurezza": "serviços de segurança",
+    "hero_sectors_and": "e"
+  },
+  "home_sections": {
+    "flow": {
+      "badge": "GeoTapp Flow",
+      "title": "Coordene o campo a partir de um hub operacional único.",
+      "subtitle": "O Flow é o sistema utilizado pelo escritório para gerir trabalhos, atribuir actividades, acompanhar o progresso e gerar relatórios de trabalho estruturados. <strong class=\"text-slate-900\">Menos fricção interna, mais controlo real.</strong>",
+      "features": {
+        "crm": "<strong>Gestão de trabalhos:</strong> Crie intervenções, atribua técnicos e monitorize o progresso em tempo real.",
+        "pipeline": "<strong>Relatórios estruturados:</strong> Cada trabalho concluído gera documentação rastreável pronta para o cliente."
+      },
+      "link": "Explorar GeoTapp Flow"
+    },
+    "app": {
+      "badge": "GeoTapp TimeTracker",
+      "title": "O técnico regista. O escritório controla.",
+      "subtitle": "O TimeTracker é a aplicação móvel utilizada pelos técnicos para registar a actividade de campo. Entrada, saída, fotos e notas ligadas a cada trabalho. <strong>Disponível em Android e iOS.</strong>",
+      "card_gps": {
+        "title": "Registo de presença GPS",
+        "desc": "Localização verificada"
+      },
+      "card_gdpr": {
+        "title": "Conforme com o RGPD",
+        "desc": "Sem rastreio contínuo"
+      },
+      "link": "Explorar GeoTapp TimeTracker"
+    },
+    "verifier": {
+      "badge": "GeoTapp Verifier",
+      "title": "Não precisa que confiem em si.",
+      "subtitle": "O cliente tem o relatório. Verifica-o por si mesmo, sem aceder ao GeoTapp. Se os dados correspondem ao trabalho real, o selo aguenta. Se alguém modificou o documento, o selo parte-se. Sem recurso.",
+      "features": {
+        "integrity": "<strong>Dados não alteráveis:</strong> O relatório é gerado sobre os dados reais de campo e bloqueado. Qualquer modificação torna-o inválido — sem recurso.",
+        "independent": "<strong>Verificação autónoma:</strong> Qualquer pessoa com o relatório pode verificar a sua autenticidade — sem conta, sem acesso à plataforma."
+      },
+      "link": "Explorar GeoTapp Verifier"
+    },
+    "core": {
+      "badge": "Plataforma GeoTapp",
+      "title": "Um sistema, três níveis de certeza",
+      "subtitle": "TimeTracker regista no campo. Flow organiza no escritório. Verifier certifica que tudo corresponde.",
+      "features": [
+        {
+          "title": "Operabilidade móvel real",
+          "desc": "O TimeTracker funciona sem ligação e sincroniza assim que o técnico recupera a rede. O trabalho nunca para."
+        },
+        {
+          "title": "Privacidade por concepção",
+          "desc": "A localização é registada <strong>apenas</strong> no registo de entrada e saída. Sem rastreio contínuo. Totalmente conforme com o RGPD."
+        },
+        {
+          "title": "Controlo operacional em tempo real",
+          "desc": "Os dados de campo chegam ao Flow imediatamente. O escritório tem visibilidade em directo sem ligar para ninguém."
+        },
+        {
+          "title": "Prova defensável ao longo do tempo",
+          "desc": "Cada relatório fica bloqueado sobre dados reais de campo — não alterável após a geração. Contestação? O dado está lá. Verificável por qualquer pessoa. Sempre."
+        }
+      ]
+    },
+    "footer_cta": {
+      "title": "Pare de perder trabalho não documentado.",
+      "subtitle": "Cada trabalho sem prova verificável é um trabalho contestável. GeoTapp fecha esta falha.",
+      "button": "Prove o seu trabalho",
+      "pricing_link": "Ver planos e preços →"
+    },
+    "settori": {
+      "title": "Documentação verificável para cada setor — Soluções GeoTapp",
+      "subtitle": "Escolha o seu setor para ver como o GeoTapp gera provas do trabalho realizado — para mostrar ao cliente em caso de disputa.",
+      "see_all": "Ver todos os setores suportados",
+      "installatori": {
+        "name": "Instaladores",
+        "desc": "Eletricistas, Canalizadores, Técnicos. Cada intervenção documentada com GPS e fotos — dados inalteráveis, verificáveis pelo cliente.",
+        "cta": "Comprovar cada intervenção"
+      },
+      "sicurezza": {
+        "name": "Segurança",
+        "desc": "Vigilância, Seguranças, Serviços Fiduciários. Presenças verificáveis, turnos documentados com prova objetiva.",
+        "cta": "Provar presenças ao cliente"
+      },
+      "pulizie": {
+        "name": "Limpeza",
+        "desc": "Empresas de limpeza, Facility, Multisserviços. Cada ronda documentada e verificável pelo cliente — zero disputas.",
+        "cta": "Evitar disputas"
+      }
+    },
+    "app_mockup": {
+      "greeting": "Bom dia,",
+      "status": "🟢 Em serviço",
+      "next_job_label": "Próxima intervenção",
+      "next_job_time": "Em 15 min"
+    },
+    "demo_banner": {
+      "badge": "Exemplo real",
+      "title": "Relatório certificado — descarregar e verificar",
+      "field_operator": "Operador",
+      "field_intervention": "Intervenção",
+      "btn_download": "Descarregar relatório (.zip)",
+      "btn_verify": "Verificar autenticidade →"
+    },
+    "flow_mockup": {
+      "pipeline_title": "Pipeline Vendas",
+      "month": "Dezembro 2025",
+      "quote_name": "Orçamento A. Silva",
+      "quote_approved": "Aprovado hoje às 09:30"
+    }
+  },
+  "pricing": {
+    "badge": "Soluções GeoTapp",
+    "title": "Escolha o produto certo.",
+    "subtitle": "Soluções práticas para empresas com técnicos e operadores de campo.",
+    "vat_note": "Todos os preços excluem IVA. Facturação de acordo com os termos de serviço.",
+    "categories": {
+      "app": {
+        "title": "GeoTapp TimeTracker",
+        "description": "Aplicação móvel para técnicos de campo",
+        "products": [
+          {
+            "name": "GeoTapp TimeTracker",
+            "tagline": "A partir de",
+            "desc": "A solução completa para registar presenças, actividade de campo e comprovativos de trabalho. Preço por utilizador/ano.",
+            "features": [
+              "App Android/iOS",
+              "Registo de presença GPS",
+              "Relatórios semanais"
+            ],
+            "button": "Ver calculadora"
+          }
+        ]
+      },
+      "flow": {
+        "title": "GeoTapp Flow",
+        "description": "Gestão de operações de campo e equipas",
+        "products": [
+          {
+            "name": "GeoTapp Flow Business",
+            "tagline": "Para empresas estruturadas.",
+            "desc": "A solução completa para empresas estruturadas e organizações complexas.",
+            "features": [
+              "Equipas ilimitadas (não utilizadores timetracker)",
+              "API",
+              "Suporte prioritário",
+              "Automatizações",
+              "Relatórios avançados",
+              "TimeTracker: ilimitado*"
+            ]
+          },
+          {
+            "name": "GeoTapp Flow Team",
+            "tagline": "Para pequenas equipas operacionais.",
+            "desc": "Coordene e gira a sua equipa operacional em tempo real.",
+            "features": [
+              "5 utilizadores Flow incluídos (não timetracker)",
+              "Gestão de trabalhos",
+              "Registos em campo",
+              "Relatórios operacionais",
+              "Integrações",
+              "TimeTracker: máx. 5 utilizadores*"
+            ]
+          },
+          {
+            "name": "GeoTapp Flow Solo",
+            "tagline": "Para freelancers e microempresas.",
+            "desc": "Tudo o que precisa para gerir intervenções de forma autónoma.",
+            "features": [
+              "1 utilizador",
+              "Gestão de tarefas",
+              "Relatórios básicos",
+              "Integrações essenciais",
+              "TimeTracker: máx. 2 utilizadores*"
+            ]
+          }
+        ]
+      }
+    },
+    "calculator": {
+      "title": "Calculadora de licenças TimeTracker",
+      "subtitle": "Estime o seu investimento anual em força de trabalho.",
+      "active_users": "Utilizadores ativos",
+      "discount_threshold": "Limiar de desconto",
+      "cost_per_user": "Custo médio por utilizador",
+      "per_month": "/mês",
+      "standard_rate": "Tarifa padrão (1–25 @ €2)",
+      "mixed_rate": "Tarifa mista (desconto por volume aplicado)",
+      "annual_total": "Total anual (+IVA)",
+      "annual_billing_note": "Faturação anual única",
+      "enterprise_plan": "Plano Enterprise",
+      "enterprise_desc": "Para equipas com mais de 150 utilizadores oferecemos SLAs personalizados e gestão de conta dedicada.",
+      "request_quote": "Solicitar orçamento",
+      "add_to_cart": "Adicionar licença App ao carrinho",
+      "secure_payment": "Pagamento seguro via Stripe. IVA calculado no checkout."
+    },
+    "simulator": {
+      "section_title": "Calcule o seu orçamento",
+      "employees_label": "Número de colaboradores:",
+      "one_employee": "1 Colaborador",
+      "many_employees": "150+ Colaboradores",
+      "price_per_user": "Preço por utilizador",
+      "annual_total": "Total anual",
+      "per_month": "/mês",
+      "per_user_annual": "por utilizador, faturação anual",
+      "selected_badge": "Selecionado",
+      "enterprise_plan": "Plano Enterprise",
+      "enterprise_desc": "Para grandes organizações oferecemos soluções personalizadas.",
+      "enterprise_cta": "Contacte-nos para um orçamento",
+      "company_placeholder": "Nome da empresa",
+      "email_placeholder": "Email do administrador",
+      "email_error_format": "Introduza um endereço de email válido (ex. nome@empresa.pt)",
+      "email_error_placeholder": "Introduza um email empresarial real.",
+      "terms_alert": "Para continuar deve aceitar os Termos e confirmar que leu a Política de Privacidade.",
+      "processing": "A processar...",
+      "request_info": "Solicitar informações",
+      "buy_now": "Comprar agora",
+      "payment_note": "Pagamento seguro via Stripe. Cancele quando quiser.",
+      "success_sent": "Pedido enviado com sucesso! Entraremos em contacto em breve.",
+      "error_request": "Erro ao enviar pedido",
+      "plus_vat": "+ IVA"
+    },
+    "bundle": {
+      "title": "Calculadora Bundle",
+      "subtitle": "Calcule a sua poupança com o Bundle Flow + TimeTracker",
+      "employees": "Número de colaboradores",
+      "billingCycle": "Ciclo de faturação",
+      "monthly": "Mensal",
+      "yearly": "Anual",
+      "flowPlan": "Plano Flow",
+      "solo": "Solo (1 utilizador)",
+      "team": "Team (até 5 utilizadores)",
+      "business": "Business (ilimitado)",
+      "priceBreakdown": "Detalhe de preços",
+      "flowPrice": "GeoTapp Flow",
+      "trackerPrice": "TimeTracker",
+      "subtotal": "Subtotal",
+      "bundleDiscount": "Desconto Bundle (15% primeiro ano)",
+      "totalPrice": "Preço total",
+      "savings": "Poupa",
+      "perMonth": "/mês",
+      "perYear": "/ano",
+      "cta": "Obter o Bundle",
+      "notes": "Nota: O desconto aplica-se nos primeiros 12 meses",
+      "employees_unit": "funcionários",
+      "first_year_savings": "no primeiro ano!",
+      "loading": "Carregando...",
+      "modal_title": "Insira seu email",
+      "modal_desc": "Precisamos do seu email para criar sua sessão de checkout e enviar o recibo.",
+      "email_placeholder": "seu@email.com",
+      "btn_cancel": "Cancelar",
+      "btn_continue": "Continuar",
+      "error_checkout": "Erro ao criar a sessão. Por favor, tente novamente.",
+      "error_connection": "Erro de conexão. Por favor, tente novamente."
+    },
+    "tracker_footnote": "* Número máximo de utilizadores TimeTracker que podem ser ativados simultaneamente no plano Flow. Ao remover o acesso de um funcionário, a vaga fica disponível de imediato."
+  },
+  "contact": {
+    "title": "Vamos falar de <span class=\"text-primary\">Negócio</span>.",
+    "subtitle": "Precisa de perceber se o GeoTapp se adequa à sua empresa. Estamos aqui para responder de forma concreta.",
+    "guarantee_title": "Garantia de resposta",
+    "guarantee_text": "Primeira resposta média em 12 horas úteis. Nenhuma questão perdida no vazio.",
+    "form": {
+      "name": "Nome",
+      "company": "Empresa",
+      "email": "E-mail profissional",
+      "reason": "Motivo do contacto",
+      "message": "Mensagem",
+      "send": "Enviar",
+      "reason_options": [
+        "Quero uma Demo do GeoTapp",
+        "Pedido de Informação Geral",
+        "Parceria",
+        "Outro"
+      ],
+      "name_placeholder": "O seu nome",
+      "email_placeholder": "voce@email.com",
+      "company_placeholder": "Nome da empresa",
+      "message_placeholder": "A sua mensagem...",
+      "submit": "Enviar mensagem",
+      "submitting": "A enviar..."
+    },
+    "hours": "Seg-Sex 9:00 - 18:00",
+    "location_city": "Brescia, IT",
+    "channels_title": "Canais Diretos",
+    "email_label": "E-mail Geral",
+    "email_desc": "Para informações, orçamentos e suporte.",
+    "hq_label": "Sede",
+    "hq_city": "Brescia, Itália",
+    "hq_note": "Visitas por marcação.",
+    "privacy_note": "Ao enviar este formulário aceita a nossa Política de Privacidade.",
+    "map_title": "Onde estamos — Trenzano (BS), Itália",
+    "success": "Mensagem enviada com sucesso. Responderemos o mais brevemente possível.",
+    "error": "Erro ao enviar. Tente novamente mais tarde.",
+    "sending": "A enviar...",
+    "map_unavailable": "Mapa não disponível",
+    "open_maps": "Abrir no Google Maps ↗"
+  },
+  "login_hub": {
+    "title": "Aceda à sua <span class=\"text-primary\">Conta</span>.",
+    "subtitle": "Seleccione o produto ao qual pretende ligar-se.",
+    "flow": {
+      "desc": "Gestão operacional, trabalhos, coordenação e relatórios.",
+      "btn": "Entrar no Flow"
+    },
+    "timetracker": {
+      "desc": "Presenças, actividade de campo e comprovativos de trabalho.",
+      "btn": "Entrar no TimeTracker"
+    }
+  },
+  "product_pages": {
+    "flow": {
+      "hero_badge": "GeoTapp Flow — Gestão de operações de campo",
+      "hero_title": "GeoTapp Flow.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600\">Gestão Operacional.</span>",
+      "hero_subtitle": "O centro operacional para empresas com técnicos e operadores de campo. Gira trabalhos, coordene equipas e produza relatórios de trabalho estruturados e verificáveis.",
+      "visual_placeholder": "PAINEL DE OPERAÇÕES",
+      "grid_title": "Capacidades operacionais",
+      "grid_subtitle": "Cada módulo foi concebido para o controlo real do trabalho de campo. Clique para explorar.",
+      "sectors": {
+        "1": "Trabalhos e Clientes",
+        "2": "Planeamento e Recursos",
+        "3": "Controlo e Visibilidade"
+      },
+      "cta_title": "Tome o controlo real do seu campo.",
+      "cta_button": "Ver preços",
+      "modal": {
+        "status": "ESTADO DO SISTEMA: <span class=\"text-green-600\">OPERACIONAL</span>",
+        "encryption": "DADOS: <span class=\"text-slate-400\">PROTEGIDOS</span>",
+        "access": "ACESSO: <span class=\"text-blue-600\">SEGURO</span>",
+        "close": "Fechar"
+      },
+      "systems": {
+        "nexus-core": {
+          "name": "Gestão de trabalhos",
+          "short": "Crie e gira intervenções técnicas. Atribua tarefas aos técnicos, monitorize o progresso e mantenha tudo registado por trabalho.",
+          "full": "### Controlo central dos trabalhos.\n\nCada intervenção começa como um trabalho estruturado.\nA **Gestão de trabalhos** dá-lhe uma visão clara de todo o trabalho em curso.\n\n#### Gestão de intervenções\n\nCrie um trabalho, atribua o técnico, defina o local e a data.\nMonitorize o estado: Aberto, Em curso, Concluído.\n\n#### Histórico operacional\n\nCada trabalho tem um arquivo completo de actividades, comprovativos fotográficos, notas e marcas de tempo.\nO cliente pergunta o que foi feito? Tem os dados. Sempre."
+        },
+        "titan-flow": {
+          "name": "Atribuição de tarefas",
+          "short": "Distribua o trabalho pelos técnicos com precisão. Comunique instruções, prazos e prioridades operacionais de forma estruturada.",
+          "full": "### O trabalho certo para o técnico certo.\n\nUma atribuição confusa gera atrasos e disputas.\nA **Atribuição de tarefas** traz clareza operacional.\n\n#### Distribuição precisa\n\nAssim que um trabalho é aberto, atribua um ou mais técnicos.\nCada técnico vê o seu trabalho no GeoTapp TimeTracker.\n\n#### Comunicação operacional\n\nInstruções, notas, anexos técnicos: tudo chega ao técnico antes de partir para o campo.\nMenos chamadas, menos mal-entendidos, menos atrasos."
+        },
+        "ledger-prime": {
+          "name": "Relatórios e facturação",
+          "short": "Gere relatórios estruturados a partir de cada trabalho. Exporte documentação e apoie a facturação com dados reais de campo.",
+          "full": "### Do trabalho ao relatório, de forma ordenada.\n\nA facturação manual é lenta e muitas vezes incompleta.\nOs **Relatórios e a facturação** fecham o ciclo operacional.\n\n#### Relatórios estruturados\n\nCada intervenção concluída gera documentação recolhendo marcas de tempo, fotos e notas do campo.\nSem dados a introduzir manualmente — tudo provém do TimeTracker.\n\n#### Apoio à facturação\n\nOs dados reais dos trabalhos facilitam orçamentos e facturas mais precisos.\nMenos erros, menos disputas, ciclo administrativo mais ágil."
+        },
+        "quantum-logistics": {
+          "name": "Calendário de intervenções",
+          "short": "Planeie intervenções, visualize o calendário operacional e gira a disponibilidade da equipa sem sobreposições.",
+          "full": "### Visão completa do trabalho planeado.\n\nSem um calendário partilhado, o planeamento torna-se caótico.\nO **Calendário de intervenções** dá-lhe visibilidade operacional clara.\n\n#### Planeamento avançado\n\nVisualize todas as intervenções em vistas de calendário diário, semanal e mensal.\nIdentifique sobreposições e optimize a distribuição da carga de trabalho.\n\n#### Disponibilidade da equipa\n\nVeja quem está disponível, quem está de férias e quem já está sobrecarregado.\nAtribua novas intervenções sem criar conflitos operacionais."
+        },
+        "supply-command": {
+          "name": "Gestão de recursos",
+          "short": "Controle materiais, equipamentos e recursos operacionais necessários para cada intervenção de campo. Sem surpresas.",
+          "full": "### Nenhuma intervenção sem os recursos necessários.\n\nEnviar um técnico para o campo sem os materiais adequados é um erro dispendioso.\nA **Gestão de recursos** previne surpresas operacionais.\n\n#### Materiais por trabalho\n\nAssocie os recursos necessários a cada trabalho.\nO responsável vê antecipadamente o que é necessário e quando.\n\n#### Fornecedores e aprovisionamento\n\nGuarde os contactos e condições dos seus fornecedores habituais.\nReduz os tempos de aprovisionamento e mantenha os custos sob controlo."
+        },
+        "the-architect": {
+          "name": "Planeamento do trabalho",
+          "short": "Organize o trabalho em fases, tarefas e prazos. Mantenha o projecto sob controlo sem folhas de cálculo ou mensagens de WhatsApp.",
+          "full": "### Estruture o trabalho. Controle o progresso.\n\nOs trabalhos complexos requerem estrutura.\nO **Planeamento do trabalho** traz ordem operacional.\n\n#### Fases e prazos\n\nEstruture intervenções complexas em fases operacionais com prazos claros.\nAtribua responsabilidades a cada membro da equipa.\n\n#### Acompanhamento do progresso\n\nVisualize o progresso em tempo real.\nSaiba sempre o que foi feito e o que está em aberto.\nAja antes que um atraso se torne um problema para o cliente."
+        },
+        "the-auditor": {
+          "name": "Documentação de intervenções",
+          "short": "Recolha evidências fotográficas, notas operacionais e documentos assinados para cada intervenção. O trabalho realizado mantém-se verificável.",
+          "full": "### Prova real para cada intervenção.\n\nSem documentação, o trabalho realizado é contestável.\nA **Documentação de intervenções** torna cada trabalho verificável.\n\n#### Evidência fotográfica\n\nOs técnicos tiram fotos directamente do GeoTapp TimeTracker no campo.\nAs imagens são automaticamente ligadas ao trabalho com marca de tempo e localização.\n\n#### Assinatura digital do cliente\n\nO cliente pode assinar o relatório de trabalho directamente no ecrã do técnico.\nA assinatura digital fica incluída no relatório e constitui prova do serviço prestado."
+        },
+        "the-uplink": {
+          "name": "Ligação campo-escritório",
+          "short": "Os dados recolhidos pelo TimeTracker chegam ao Flow em tempo real. O campo e o escritório trabalham com os mesmos dados operacionais.",
+          "full": "### Escritório e campo, finalmente ligados.\n\nA desconexão entre campo e escritório gera erros evitáveis, atrasos e disputas.\nA **Ligação campo-escritório** fecha a lacuna.\n\n#### Sincronização em tempo real\n\nCada registo de presença, foto e nota registada no TimeTracker chega ao Flow de imediato.\nO responsável tem uma visão ao vivo sem ter de ligar ao técnico.\n\n#### Histórico fiável\n\nTudo o que o técnico regista no campo é arquivado e ligado ao trabalho.\nNenhum dado se perde. Nenhuma informação falta quando chega o momento de elaborar o relatório."
+        },
+        "the-oracle": {
+          "name": "Visibilidade operacional",
+          "short": "Painel operacional em tempo real. Saiba sempre quantas intervenções estão abertas, em curso ou concluídas hoje.",
+          "full": "### Dados operacionais, não suposições.\n\nDecidir sem dados fiáveis é perigoso.\nA **Visibilidade operacional** converte os dados de campo em informação concreta.\n\n#### Painel operacional\n\nVeja em tempo real:\n- Intervenções abertas e em curso\n- Técnicos activos\n- Intervenções concluídas hoje e esta semana\n\n#### Relatórios periódicos\n\nReceba resumos de actividade automatizados.\nCompare períodos, identifique estrangulamentos e optimize as operações."
+        }
+      }
+    },
+    "app": {
+      "hero_badge": "GeoTapp TimeTracker — App para técnicos de campo",
+      "hero_title": "GeoTapp TimeTracker.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600\">O campo no seu bolso.</span>",
+      "hero_subtitle": "A aplicação móvel utilizada pelos técnicos para registar a actividade, recolher comprovativos e manter o fio operacional directamente do campo. Disponível em Android e iOS.",
+      "visual_placeholder": "INTERFACE DE CAMPO",
+      "grid_title": "Ferramentas para o trabalho de campo",
+      "grid_subtitle": "Cada funcionalidade foi concebida para quem trabalha fora do escritório e não tem tempo a perder. Clique para explorar.",
+      "sectors": {
+        "1": "Operações essenciais",
+        "2": "Logística e Comunicações",
+        "3": "Dados e Administração"
+      },
+      "cta_title": "Dê aos seus técnicos a ferramenta certa.",
+      "cta_button": "Ver preços",
+      "modal": {
+        "status": "ESTADO DO SISTEMA: <span class=\"text-green-600\">OPERACIONAL</span>",
+        "encryption": "DADOS: <span class=\"text-slate-400\">PROTEGIDOS</span>",
+        "device": "DISPOSITIVO: <span class=\"text-blue-600\">MÓVEL / TABLET</span>",
+        "close": "Fechar"
+      },
+      "systems": {
+        "timelock-alpha": {
+          "name": "Registo de presença GPS",
+          "short": "Registo de entrada e saída ligado à posição GPS e a uma marca de tempo precisa. Cada sessão de trabalho torna-se um evento operacional verificável.",
+          "full": "### O tempo é verificável.\n\nAs marcas de tempo sem verificação geram disputas.\nO **Registo de presença GPS** torna cada sessão de trabalho num registo fiável e incontestável.\n\n#### Registo geolocalizado de entrada e saída\n\nO técnico regista a entrada e saída do campo.\nLocalização, endereço e hora são registados automaticamente.\n\n#### Histórico imutável\n\nCada sessão é um registo verificável: hora de entrada, hora de saída, posição, duração e trabalho associado.\nO cliente pergunta quando chegou? Os dados estão lá, sempre."
+        },
+        "event-horizon": {
+          "name": "Planeamento de turnos",
+          "short": "Gira turnos e disponibilidade do pessoal. Vistas semanais e mensais para coordenação sem confusão ou sobreposições.",
+          "full": "### Sem conflitos de turnos.\n\nOrganizar pessoal móvel requer clareza.\nO **Planeamento de turnos** dá ao responsável uma visão precisa e actualizada.\n\n#### Vista de calendário\n\nVeja quem trabalha quando.\nIdentifique ausências, férias e sobreposições antes de se tornarem problemas operacionais.\n\n#### Disponibilidade em tempo real\n\nOs colaboradores confirmam a presença ou reportam ausências directamente da aplicação.\nO responsável vê as lacunas no horário antes de atribuir novos trabalhos."
+        },
+        "unit-matrix": {
+          "name": "Registo de operadores",
+          "short": "Gira um registo completo dos seus operadores: funções, contactos, certificações e acesso à plataforma.",
+          "full": "### Conheça a sua equipa.\n\nCada operador é um recurso operacional chave.\nO **Registo de operadores** centraliza toda a informação vital.\n\n#### Gestão de certificações\n\nVeja de relance quem possui as qualificações necessárias para uma intervenção ou local específico.\n\n#### Integração rápida\n\nAdicionar um novo técnico é simples.\nEnvie um link de convite: em minutos está operacional no GeoTapp TimeTracker."
+        },
+        "sector-grid": {
+          "name": "Locais e estaleiros",
+          "short": "Crie uma base de dados de locais operacionais e estaleiros. Ligue cada intervenção à localização correcta e organize as equipas por zona.",
+          "full": "### Cada intervenção no lugar certo.\n\nTrabalhar sem referência geográfica gera confusão.\nOs **Locais e estaleiros** trazem clareza operacional.\n\n#### Base de dados de locais\n\nCrie um catálogo de locais de clientes, estaleiros e localizações operacionais.\nO sistema liga automaticamente a actividade do técnico ao local da intervenção.\n\n#### Equipas por zona\n\nOrganize os técnicos em equipas por local ou área geográfica.\nAtribua intervenções à equipa certa, não apenas ao indivíduo."
+        },
+        "energy-logistics": {
+          "name": "Gestão de viaturas e despesas",
+          "short": "Registe a utilização de viaturas da empresa, o combustível consumido e as despesas de deslocação do pessoal de campo.",
+          "full": "### Cada deslocação documentada.\n\nAs despesas de deslocação são um item crítico para qualquer empresa com pessoal móvel.\nA **Gestão de viaturas** monitoriza cada custo.\n\n#### Utilização de viaturas\n\nAtribua temporariamente uma viatura a um colaborador para uma intervenção.\nSaiba sempre quem usa que viatura e para que trabalho.\n\n#### Despesas de combustível\n\nO colaborador regista o abastecimento directamente da aplicação com foto do recibo e valor.\nTudo arquivado, tudo ligado ao trabalho."
+        },
+        "neural-link": {
+          "name": "Comunicações operacionais",
+          "short": "Canal interno para comunicações da empresa. Mensagens dirigidas a grupos específicos com confirmações de leitura.",
+          "full": "### Comunicações claras. Sem ruído de fundo.\n\nO WhatsApp mistura vida privada e profissional e não oferece controlo sobre o estado de leitura.\nAs **Comunicações operacionais** são o canal oficial da empresa.\n\n#### Mensagens dirigidas\n\nNotifique apenas a equipa que precisa de saber.\nMudança de turno no estaleiro do Porto? Apenas os técnicos atribuídos recebem a mensagem.\n\n#### Confirmações de leitura\n\nSaiba sempre quem leu a comunicação e quem não leu.\nResponsabilidade clara e transparente para todos."
+        },
+        "payroll-bridge": {
+          "name": "Exportação de presenças",
+          "short": "Exporte as presenças mensais em formatos compatíveis com os principais softwares de processamento salarial. Menos trabalho manual, menos erros.",
+          "full": "### O processamento salarial sem dores de cabeça.\n\nO fecho do mês não tem de ser um pesadelo administrativo.\nA **Exportação de presenças** liga as operações de campo à administração de RH.\n\n#### Multi-formato\n\nGere ficheiros de presenças prontos a importar nos principais softwares de processamento salarial portugueses (Primavera, PHC, TOConline).\n\n#### Acesso para o contabilista\n\nAtribua acesso limitado ao seu gabinete de contabilidade.\nDescarrega os dados de que necessita de forma autónoma, sem ligar ao fecho de cada mês."
+        },
+        "data-core": {
+          "name": "Relatórios semanais",
+          "short": "Relatórios detalhados sobre as horas trabalhadas por trabalho e por operador. Dados fiáveis para controlo interno e facturação.",
+          "full": "### Os dados não mentem.\n\nTome decisões com base em factos, não em impressões.\nOs **Relatórios semanais** extraem valor das operações diárias.\n\n#### Relatórios detalhados\n\nCada semana, uma imagem completa: quem trabalhou, onde, em que trabalho e durante quanto tempo.\n\n#### Transparência total\n\nColaboradores e responsáveis consultam o mesmo relatório mensal.\nAs horas contabilizadas são idênticas para todos.\nSem disputas no fecho do mês."
+        },
+        "identity-forge": {
+          "name": "App com a sua marca",
+          "short": "Carregue o seu logótipo e escolha as cores da sua empresa. Os seus operadores usam uma aplicação que reflecte a sua identidade de marca.",
+          "full": "### A sua empresa, a sua aplicação.\n\nNão use uma aplicação genérica.\nFaça com que os seus colaboradores se sintam parte da SUA empresa com uma experiência visual coerente.\n\n#### Logótipo da empresa\n\nO seu logótipo em destaque no ecrã de início de sessão e no painel principal.\n\n#### Cores da empresa\n\nEscolha o tema de cores que se adequa à sua imagem corporativa.\nProfissional, coerente, reconhecível."
+        }
+      }
+    }
+  },
+  "cart": {
+    "title": "Carrinho",
+    "empty": "O carrinho está vazio.",
+    "license_default": "Licença Standard",
+    "quantity": "Quantidade",
+    "per_month": "mês",
+    "per_year": "ano",
+    "total_monthly": "Total Mensal",
+    "total_yearly": "Total Anual",
+    "vat_note": "IVA (calculado no checkout)",
+    "email_label": "Email para receber licenças e acesso SaaS",
+    "email_placeholder": "nome@empresa.com",
+    "email_hint": "Enviaremos aqui as chaves de licença e os detalhes de acesso.",
+    "email_error_empty": "Por favor, insira um endereço de email válido.",
+    "email_error_invalid": "Por favor, insira um endereço de email válido (ex. nome@empresa.com).",
+    "terms_alert": "Para continuar deve aceitar os Termos e confirmar que leu a Política de Privacidade.",
+    "checkout_loading": "A processar...",
+    "checkout_button": "Prosseguir para o Checkout",
+    "checkout_error": "Ocorreu um erro. Por favor, tente novamente.",
+    "policy_terms_prefix": "Li e aceito os",
+    "policy_terms_link": "Termos Gerais de Serviço",
+    "policy_terms_suffix": "GeoTapp.",
+    "policy_privacy_prefix": "Li a",
+    "policy_privacy_link": "Política de Privacidade",
+    "policy_privacy_suffix": "GeoTapp."
+  },
+  "guida": {
+    "page_title": "Guia do utilizador",
+    "download_pdf": "Descarregar / Imprimir PDF"
+  },
+  "demo": {
+    "page_title": "Reserve a sua demo personalizada",
+    "settori": [
+      "Limpeza / Facility / Multiservice",
+      "Segurança / Vigilância / Steward",
+      "Instaladores / Eletricistas / Canalizadores",
+      "Logística / Transportes",
+      "Construção / Manutenção",
+      "Outro"
+    ],
+    "cosa_vedrai": [
+      {
+        "title": "Marcação GPS em ação",
+        "desc": "Como o técnico marca ponto na app móvel e como o escritório vê a localização verificada — sem rastreamento contínuo."
+      },
+      {
+        "title": "Relatórios verificáveis",
+        "desc": "Como cada intervenção gera um relatório com provas fotográficas, assinatura digital e hash imutável que pode mostrar ao cliente."
+      },
+      {
+        "title": "Gestão de equipas pelo Flow",
+        "desc": "Como atribuir tarefas, monitorizar o progresso e produzir relatórios semanais sem folhas Excel ou chamadas telefónicas."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Quanto tempo dura a demo?",
+        "a": "30 minutos exatos. Mostramos a plataforma em uso real e respondemos às suas perguntas específicas do setor."
+      },
+      {
+        "q": "É necessária preparação?",
+        "a": "Não. Basta trazer o seu caso concreto — quantos operadores tem e que problemas tem hoje com as horas ou os relatórios."
+      },
+      {
+        "q": "A demo é gratuita?",
+        "a": "Sim, completamente gratuita e sem compromisso. No final pode iniciar um período de teste diretamente."
+      },
+      {
+        "q": "Posso convidar um colega?",
+        "a": "Absolutamente. Muitas vezes participam juntos o responsável operacional e o administrador ou RH."
+      }
+    ],
+    "form_name": "Nome completo",
+    "form_name_placeholder": "João Silva",
+    "form_company": "Empresa",
+    "form_company_placeholder": "Nome da empresa",
+    "form_sector": "Setor",
+    "form_email": "Email",
+    "form_email_placeholder": "joao@empresa.pt",
+    "form_phone": "Telefone (opcional)",
+    "form_phone_placeholder": "+351 912 345 678",
+    "form_submit": "Reservar a demo gratuita",
+    "form_submitting": "A enviar...",
+    "success_title": "Pedido recebido!",
+    "success_desc": "Entraremos em contacto no prazo de 1 dia útil para agendar a demo.",
+    "error_message": "Erro ao enviar. Por favor tente mais tarde."
+  },
+  "download_page": {
+    "title": "Descarregar GeoTapp",
+    "subtitle": "Escolha a versão adequada às suas necessidades.",
+    "demo_report_badge": "Exemplo real",
+    "demo_report_title": "Relatório de intervenção certificado",
+    "demo_report_desc": "Descarregue um relatório real gerado pelo GeoTapp. Contém GPS verificado, provas fotográficas, cadeia hash de operadores e selagem criptográfica.",
+    "demo_report_btn_download": "Descarregar relatório de exemplo (.zip)",
+    "demo_report_btn_verify": "Verificar autenticidade",
+    "demo_report_field_operator": "Operador",
+    "demo_report_field_type": "Tipo de intervenção",
+    "windows_title": "GeoTapp para Windows",
+    "windows_desc": "A aplicação de secretária completa para gestão empresarial. Ideal para administração e controlo total.",
+    "windows_features": [
+      "Gestão completa de frota",
+      "Planeamento de turnos",
+      "Exportação de salários",
+      "Notificações de secretária"
+    ],
+    "windows_btn": "Descarregar para Windows",
+    "wp_title": "Plugin WordPress",
+    "wp_desc": "Integre o GeoTapp no seu site empresarial. Permita que os colaboradores acedam diretamente da sua intranet.",
+    "wp_features": [
+      "Integração Iframe segura",
+      "Shortcode [geotap_app]",
+      "Login automático",
+      "Compatível com todos os temas"
+    ],
+    "wp_btn": "Descarregar Plugin"
+  },
+  "chi_siamo": {
+    "badge": "A nossa história",
+    "hero_title_line1": "Nascidos no campo,",
+    "hero_title_line2": "não num escritório.",
+    "hero_desc": "O GeoTapp não foi inventado por investidores ou analistas. Nasceu da frustração real de quem trabalha todos os dias entre prazos, obras e clientes exigentes.",
+    "story": [
+      "Era 2024. Mike Petraroli, o nosso fundador, trabalhava como empregado e tinha um problema aparentemente banal mas incrivelmente caro: <strong>provar o seu próprio trabalho.</strong>",
+      "No final do mês, as contas das horas nunca batiam certo. As intervenções feitas a correr entre clientes eram esquecidas. O papel perdia-se, as mensagens do WhatsApp ficavam enterradas. Era uma hemorragia silenciosa de tempo e dinheiro.",
+      "Procurou uma solução. Só encontrou software complexos, caros, cheios de gráficos inúteis e pobres em substância. Software feito por pessoas que nunca tinham marcado ponto ou emitido uma fatura de emergência da carrinha.",
+      "Então Mike decidiu construir ele próprio a ferramenta que teria querido ter: simples, móvel, com provas verificáveis. Não para investidores — para empresas como a sua."
+    ],
+    "values_title": "Os nossos valores",
+    "values": [
+      {
+        "title": "Missão clara",
+        "desc": "Tornar cada intervenção mensurável e verificável. O trabalho de campo merece as mesmas ferramentas de transparência que um escritório."
+      },
+      {
+        "title": "Equipa dedicada",
+        "desc": "Somos uma equipa pequena obcecada com o problema que resolvemos. Cada funcionalidade vem de feedback real, não de roteiros de marketing."
+      },
+      {
+        "title": "Privacy by Design",
+        "desc": "Não vendemos dados, não rastreamos continuamente. GPS apenas no momento da marcação de ponto, zero vigilância."
+      },
+      {
+        "title": "Feito em Itália",
+        "desc": "Desenvolvido em Itália para o mercado italiano e europeu. As regras RGPD, a cultura do trabalho e os regulamentos locais estão no DNA do produto."
+      }
+    ],
+    "cta_title": "Junte-se à Revolução Simples",
+    "cta_desc": "Não somos uma Big Tech inalcançável. Somos pessoas reais construindo software para pessoas reais.",
+    "cta_btn": "Envie-nos uma Mensagem",
+    "stats": [
+      {
+        "number": "2024",
+        "label": "Fundada"
+      },
+      {
+        "number": "100%",
+        "label": "Feito para o campo"
+      },
+      {
+        "number": "GDPR",
+        "label": "Privacidade certificada"
+      }
+    ],
+    "mission_quote": "O trabalho em campo merece as mesmas ferramentas de transparência que um escritório."
+  },
+  "blog": {
+    "hero_title": "Pensamentos e Centelhas.",
+    "hero_desc": "Não escrevemos para preencher páginas. Escrevemos para partilhar o que aprendemos construindo o futuro do trabalho verificável.",
+    "no_posts": "Nenhum artigo disponível de momento.",
+    "read_article": "Ler artigo →",
+    "cta_title": "Fique a par",
+    "cta_desc": "Sem spam, apenas atualizações de valor sobre o produto e o sector.",
+    "cta_btn": "Contacte-nos",
+    "schema_desc": "Guias e análises sobre certificação de trabalho em campo, gestão de equipas, RGPD e geolocalização.",
+    "meta_title": "Blog | GeoTapp — Verificação do trabalho em campo",
+    "meta_desc": "Guias, análises e recursos sobre gestão de equipas, certificação de intervenções, RGPD e geolocalização. Da equipa GeoTapp.",
+    "cat_all": "Todos"
+  },
+  "trial": {
+    "page_title": "14 dias grátis. Sem cartão.",
+    "page_subtitle": "Acesso completo a todos os módulos GeoTapp Flow durante 14 dias. Sem cartão de crédito, sem compromisso. Cancele quando quiser.",
+    "badge": "Teste gratuito — 14 dias",
+    "form_title": "Crie a sua conta",
+    "form_company": "Nome da empresa",
+    "form_company_placeholder": "Ex. Instalações Silva Lda",
+    "form_vat": "NIF europeu",
+    "form_vat_placeholder": "Ex. PT123456789",
+    "form_email": "Email empresarial",
+    "form_email_placeholder": "Ex. silva@empresa.pt",
+    "form_fullname": "Nome completo",
+    "form_fullname_placeholder": "Ex. João Silva",
+    "form_plan": "Plano GeoTapp Flow",
+    "form_plan_note": "O número de utilizadores do plano refere-se ao GeoTapp Flow (gestão de escritório/CRM). As licenças GeoTapp Timetracker para operadores de campo são uma subscrição separada, com um número máximo incluído conforme o plano escolhido.",
+    "plan_solo": "Solo — 1 utilizador Flow",
+    "plan_team": "Team — até 5 utilizadores Flow",
+    "plan_business": "Business — utilizadores Flow ilimitados",
+    "form_seats": "Licenças Timetracker (opcional)",
+    "form_seats_hint": "Subscrição separada para operadores de campo (aplicação móvel). Limite incluído no plano: Solo máx. 2, Team máx. 5, Business ilimitadas. Pode ajustar as licenças após a ativação.",
+    "form_submit": "Iniciar teste gratuito",
+    "form_submitting": "A ativar...",
+    "form_privacy": "Os seus dados são tratados de acordo com a nossa",
+    "form_privacy_link": "Política de Privacidade",
+    "form_email_hint": "Use um email empresarial (não Gmail, Yahoo, etc.)",
+    "success_title": "Verifique o seu email!",
+    "success_desc": "Enviámos o link de ativação para ",
+    "success_desc2": "Clique no link para definir a sua palavra-passe e aceder ao seu teste.",
+    "success_spam": "Não encontra? Verifique a pasta de spam.",
+    "error_message": "Erro durante a ativação. Tente novamente ou escreva para info@geotapp.com.",
+    "benefits_title": "O que inclui o teste",
+    "benefits": [
+      {
+        "title": "Acesso completo",
+        "desc": "Todos os módulos ativos: CRM, faturação, gestão de equipas, suporte ao cliente."
+      },
+      {
+        "title": "Sem cartão necessário",
+        "desc": "Introduza apenas os dados da empresa. O cartão só é adicionado se decidir continuar."
+      },
+      {
+        "title": "Os seus dados estão seguros",
+        "desc": "Os seus dados são seus. Pode exportá-los a qualquer momento."
+      }
+    ],
+    "faq": [
+      {
+        "q": "O que acontece após 14 dias?",
+        "a": "Receberá um email com o link para ativar a subscrição. Se não fizer nada, a conta é suspensa sem cobranças."
+      },
+      {
+        "q": "Preciso de inserir o cartão de crédito?",
+        "a": "Não. O teste é completamente gratuito e sem cartão. Só o adiciona se decidir continuar."
+      },
+      {
+        "q": "Posso convidar a minha equipa?",
+        "a": "Sim, pode adicionar utilizadores no painel de definições durante o teste."
+      },
+      {
+        "q": "Quanto tempo demora a começar?",
+        "a": "Menos de 2 minutos: preencha o formulário, receba o email, defina a palavra-passe e está dentro."
+      }
+    ]
+  },
+  "roi": {
+    "meta_title": "Calculadora ROI GeoTapp — Descubra as suas poupanças reais",
+    "meta_desc": "Calcule em 2 minutos quanto pouparia com o GeoTapp: menos burocracia, zero disputas, operadores mais produtivos.",
+    "hero_title": "Calcule o seu ROI com o GeoTapp",
+    "hero_subtitle": "Introduza os dados da sua empresa e descubra quanto pode poupar por ano.",
+    "step1_title": "A sua empresa",
+    "step1_subtitle": "Fale-nos um pouco sobre si",
+    "field_settore": "Setor",
+    "field_operatori": "Número de operadores",
+    "settore_installatori": "Instaladores e manutenção",
+    "settore_pulizie": "Limpeza e saneamento",
+    "settore_sicurezza": "Segurança e vigilância",
+    "settore_altro": "Outro setor",
+    "step2_title": "A sua situação atual",
+    "step2_subtitle": "Seja preciso: quanto mais reais os dados, mais preciso o cálculo",
+    "field_siti": "Sites visitados por dia (por operador)",
+    "field_ore_admin": "Horas/semana em burocracia e relatórios",
+    "field_contestazioni": "Disputas de clientes por mês (não pagos, reclamações, etc.)",
+    "field_costo_orario": "Custo horário médio de um operador (€)",
+    "step3_title": "Onde enviamos o seu relatório?",
+    "step3_subtitle": "Os seus resultados personalizados chegam imediatamente. Sem spam.",
+    "field_nome": "Nome completo",
+    "field_email": "Email empresarial",
+    "field_telefono": "Telefone (opcional)",
+    "cta_calcola": "Calcular o meu ROI",
+    "consent_text": "Ao clicar em 'Calcular o meu ROI' aceita receber comunicações comerciais da GeoTapp. Pode cancelar a subscrição a qualquer momento.",
+    "next": "Seguinte",
+    "back": "Voltar",
+    "results_title": "A sua poupança estimada com o GeoTapp",
+    "results_subtitle": "Com base nos dados que introduziu",
+    "results_admin": "Poupança em burocracia e relatórios",
+    "results_dispute": "Poupança em disputas e reclamações",
+    "results_coord": "Poupança na coordenação de equipas",
+    "results_total": "Poupança anual total",
+    "results_payback": "Retorno estimado",
+    "results_payback_unit": "meses",
+    "results_roi": "ROI estimado",
+    "results_cta": "Inicie o seu teste gratuito de 14 dias",
+    "results_disclaimer": "Estimativa indicativa baseada em médias do setor. Os resultados reais podem variar.",
+    "per_anno": "/ ano",
+    "label_operators": "operadores",
+    "embed_title": "Calculadora ROI GeoTapp"
+  }
+}

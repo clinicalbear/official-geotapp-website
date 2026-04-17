@@ -107,8 +107,23 @@ export default function Home() {
               className="text-4xl md:text-6xl font-display font-bold text-slate-900 leading-[1.1] tracking-tight mb-8"
               dangerouslySetInnerHTML={{ __html: dict.landing.hero_title }}
             ></h1>
-            <p className="text-xl text-text-secondary leading-relaxed max-w-2xl mx-auto mb-10 font-light">
+            <p className="text-xl text-text-secondary leading-relaxed max-w-2xl mx-auto mb-4 font-light">
               {dict.landing.hero_subtitle}
+            </p>
+            <p className="text-sm text-slate-400 mb-10">
+              {dict.landing.hero_sectors_prefix}{' '}
+              <Link href={getLink('/settori/pulizie')} className="underline hover:text-slate-600 transition-colors">
+                {dict.landing.hero_sectors_pulizie}
+              </Link>
+              {', '}
+              <Link href={getLink('/settori/installatori')} className="underline hover:text-slate-600 transition-colors">
+                {dict.landing.hero_sectors_installatori}
+              </Link>
+              {' '}{dict.landing.hero_sectors_and}{' '}
+              <Link href={getLink('/settori/sicurezza')} className="underline hover:text-slate-600 transition-colors">
+                {dict.landing.hero_sectors_sicurezza}
+              </Link>
+              .
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
               <Link

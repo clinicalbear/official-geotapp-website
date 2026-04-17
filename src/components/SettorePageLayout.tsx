@@ -602,6 +602,51 @@ export default function SettorePageLayout({ content, locale, settore }: Props) {
         </div>
       </section>
 
+      {/* ── ALTRI SETTORI ── */}
+      {(() => {
+        const OTHER_SETTORI: Record<string, Record<SettoreSlug, string>> = {
+          it: { pulizie: 'Imprese di pulizie', installatori: 'Installatori', sicurezza: 'Aziende di sicurezza' },
+          en: { pulizie: 'Cleaning companies', installatori: 'Installers', sicurezza: 'Security services' },
+          de: { pulizie: 'Reinigungsunternehmen', installatori: 'Installateure', sicurezza: 'Sicherheitsdienste' },
+          fr: { pulizie: 'Entreprises de nettoyage', installatori: 'Installateurs', sicurezza: 'Services de sécurité' },
+          es: { pulizie: 'Empresas de limpieza', installatori: 'Instaladores', sicurezza: 'Servicios de seguridad' },
+          pt: { pulizie: 'Empresas de limpeza', installatori: 'Instaladores', sicurezza: 'Serviços de segurança' },
+          nl: { pulizie: 'Schoonmaakbedrijven', installatori: 'Installateurs', sicurezza: 'Beveiligingsdiensten' },
+          da: { pulizie: 'Rengøringsvirksomheder', installatori: 'Installatører', sicurezza: 'Sikkerhedstjenester' },
+          sv: { pulizie: 'Städföretag', installatori: 'Installatörer', sicurezza: 'Säkerhetstjänster' },
+          nb: { pulizie: 'Renholdsbedrifter', installatori: 'Installatører', sicurezza: 'Sikkerhetstjenester' },
+          ru: { pulizie: 'Клининговые компании', installatori: 'Монтажники', sicurezza: 'Охранные службы' },
+        };
+        const CROSS_TITLE: Record<string, string> = {
+          it: 'Altri settori', en: 'Other sectors', de: 'Weitere Branchen',
+          fr: 'Autres secteurs', es: 'Otros sectores', pt: 'Outros setores',
+          nl: 'Andere sectoren', da: 'Andre sektorer', sv: 'Andra sektorer',
+          nb: 'Andre sektorer', ru: 'Другие отрасли',
+        };
+        const names = OTHER_SETTORI[locale] ?? OTHER_SETTORI.en;
+        const others = (['pulizie', 'installatori', 'sicurezza'] as SettoreSlug[]).filter(s => s !== settore);
+        return (
+          <section className="px-6 py-12 bg-white border-t border-slate-100">
+            <div className="container mx-auto max-w-3xl text-center">
+              <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-5">
+                {CROSS_TITLE[locale] ?? 'Other sectors'}
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                {others.map(s => (
+                  <Link
+                    key={s}
+                    href={localizePath(`/settori/${s}`, locale)}
+                    className="px-5 py-2.5 rounded-xl border border-slate-200 text-sm font-bold text-slate-700 hover:border-slate-400 hover:text-slate-900 transition-colors"
+                  >
+                    {names[s]}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+        );
+      })()}
+
       {/* ── DEMO REPORT ── */}
       <section className="px-6 py-16 bg-slate-50 border-t border-slate-200">
         <div className="container mx-auto max-w-2xl">
