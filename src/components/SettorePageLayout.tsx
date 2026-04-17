@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import Script from 'next/script';
 import { ArrowRight, CheckCircle2, ShieldCheck, X, Camera, MapPin, Clock } from 'lucide-react';
@@ -7,6 +9,7 @@ import type { SettoreContent, SettoreSlug } from '@/content/settori/types';
 import { JsonLd } from '@/components/seo/JsonLd';
 import DemoReportBanner from '@/components/DemoReportBanner';
 import BlogHighlights from '@/components/BlogHighlights';
+import { trackEvent } from '@/lib/analytics';
 
 // WP category IDs per settore — used for BlogHighlights
 // pulizie     → gestione-presenze (9)   — cleaning companies need attendance
@@ -376,6 +379,7 @@ export default function SettorePageLayout({ content, locale, settore }: Props) {
             <Link
               href={trialLink}
               className={`inline-flex items-center gap-2 rounded-xl px-8 py-4 font-bold text-white shadow-lg transition-colors ${colors.btn}`}
+              onClick={() => trackEvent('trial_click', { source: `settore_${settore}` })}
             >
               {content.cta_mid.cta} <ArrowRight size={18} />
             </Link>
@@ -664,6 +668,7 @@ export default function SettorePageLayout({ content, locale, settore }: Props) {
             <Link
               href={trialLink}
               className={`inline-flex items-center gap-2 rounded-xl px-8 py-4 font-bold text-white shadow-lg transition-colors ${colors.btn}`}
+              onClick={() => trackEvent('trial_click', { source: `settore_${settore}_footer` })}
             >
               {content.cta.primary} <ArrowRight size={18} />
             </Link>
