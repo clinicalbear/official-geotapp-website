@@ -20,6 +20,7 @@ import {
   getLocaleFromPathname,
   localizePath,
 } from '@/lib/i18n/locale-routing';
+import { trackEvent } from '@/lib/analytics';
 
 function CartButton() {
   const { items, toggleCart } = useCart();
@@ -243,6 +244,7 @@ export default function Navbar() {
 
           <Link
             href={getLink('/trial')}
+            onClick={() => trackEvent('trial_click', { source: 'navbar' })}
             className="px-5 py-2.5 text-sm font-bold bg-slate-900 text-white rounded-lg hover:bg-primary hover:text-slate-900 transition-all duration-300 shadow-lg shadow-slate-900/20"
           >
             {dict.cta}
@@ -346,7 +348,7 @@ export default function Navbar() {
                   <LanguageSwitcher className="justify-start" />
                   <Link
                     href={getLink('/trial')}
-                    onClick={() => setIsOpen(false)}
+                    onClick={() => { setIsOpen(false); trackEvent('trial_click', { source: 'navbar_mobile' }); }}
                 className="w-full py-4 text-center text-white font-bold bg-slate-900 rounded-xl shadow-lg"
               >
                 {dict.cta}
