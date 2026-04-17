@@ -10,6 +10,9 @@
       "installatori": "Instaladores",
       "sicurezza": "Segurança",
       "pulizie": "Limpeza",
+      "edilizia": "Construção",
+      "impianti": "Instalações",
+      "manutenzione": "Manutenção",
       "label": "Setores"
     },
     "logo_alt": "GeoTapp — A plataforma que torna o trabalho verificável",

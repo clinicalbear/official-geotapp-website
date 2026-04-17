@@ -10,6 +10,9 @@
       "installatori": "Installateurs",
       "sicurezza": "Beveiliging",
       "pulizie": "Schoonmaak",
+      "edilizia": "Bouw",
+      "impianti": "Installaties",
+      "manutenzione": "Onderhoud",
       "label": "Sectoren"
     },
     "logo_alt": "GeoTapp — Het platform dat werk verifieerbaar maakt",

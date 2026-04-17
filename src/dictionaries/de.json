@@ -10,6 +10,9 @@
       "installatori": "Installateure",
       "sicurezza": "Sicherheitsdienst",
       "pulizie": "Gebäudereinigung",
+      "edilizia": "Bauwesen",
+      "impianti": "Anlagentechnik",
+      "manutenzione": "Instandhaltung",
       "label": "Branchen"
     },
     "logo_alt": "GeoTapp — Die Plattform, die Arbeit verifizierbar macht",

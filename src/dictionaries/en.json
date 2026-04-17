@@ -10,6 +10,9 @@
       "installatori": "Installers",
       "sicurezza": "Security",
       "pulizie": "Cleaning",
+      "edilizia": "Construction",
+      "impianti": "Mechanical & Electrical",
+      "manutenzione": "Maintenance",
       "label": "Sectors"
     },
     "logo_alt": "GeoTapp — The platform that makes work verifiable",

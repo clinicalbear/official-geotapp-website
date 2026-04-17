@@ -10,6 +10,9 @@
       "installatori": "Installatører",
       "sicurezza": "Sikkerhet",
       "pulizie": "Renhold",
+      "edilizia": "Bygg og anlegg",
+      "impianti": "Tekniske installasjoner",
+      "manutenzione": "Vedlikehold",
       "label": "Sektorer"
     },
     "logo_alt": "GeoTapp — Plattformen som gjør arbeid verifiserbart",

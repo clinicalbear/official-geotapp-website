@@ -10,6 +10,9 @@
       "installatori": "Installateurs",
       "sicurezza": "Sécurité",
       "pulizie": "Nettoyage",
+      "edilizia": "BTP",
+      "impianti": "Installations techniques",
+      "manutenzione": "Maintenance",
       "label": "Secteurs"
     },
     "logo_alt": "GeoTapp — La plateforme qui rend le travail vérifiable",

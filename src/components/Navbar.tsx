@@ -53,16 +53,28 @@ export default function Navbar() {
   const getLink = (path: string) => localizePath(path, currentLocale);
   const sectorLinks = [
     {
+      href: getLink('/settori/edilizia'),
+      label: dict.sectors.edilizia,
+    },
+    {
+      href: getLink('/settori/impianti'),
+      label: dict.sectors.impianti,
+    },
+    {
       href: getLink('/settori/installatori'),
       label: dict.sectors.installatori,
     },
     {
-      href: getLink('/settori/sicurezza'),
-      label: dict.sectors.sicurezza,
+      href: getLink('/settori/manutenzione'),
+      label: dict.sectors.manutenzione,
     },
     {
       href: getLink('/settori/pulizie'),
       label: dict.sectors.pulizie,
+    },
+    {
+      href: getLink('/settori/sicurezza'),
+      label: dict.sectors.sicurezza,
     },
   ];
 
@@ -180,7 +192,7 @@ export default function Navbar() {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 10 }}
-                  className="absolute top-full left-0 mt-4 w-44 bg-white border border-border rounded-xl p-2 shadow-2xl"
+                  className="absolute top-full left-0 mt-4 w-52 bg-white border border-border rounded-xl p-2 shadow-2xl"
                 >
                   <div className="grid gap-0.5">
                     {sectorLinks.map((sector) => (
