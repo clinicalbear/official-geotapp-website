@@ -683,6 +683,114 @@
     "cta_btn": "Nous contacter",
     "schema_desc": "Guides et analyses sur la certification du travail terrain, la gestion d'équipe, le RGPD et la géolocalisation.",
     "meta_title": "Blog | GeoTapp — Vérification du travail terrain",
-    "meta_desc": "Guides, analyses et ressources sur la gestion d'équipe, la certification des interventions, le RGPD et la géolocalisation. Par l'équipe GeoTapp."
+    "meta_desc": "Guides, analyses et ressources sur la gestion d'équipe, la certification des interventions, le RGPD et la géolocalisation. Par l'équipe GeoTapp.",
+    "cat_all": "Tous"
+  },
+  "trial": {
+    "page_title": "14 jours gratuits. Sans carte.",
+    "page_subtitle": "Accès complet à tous les modules GeoTapp Flow pendant 14 jours. Sans carte de crédit, sans engagement. Annulez quand vous voulez.",
+    "badge": "Essai gratuit — 14 jours",
+    "form_title": "Créez votre compte",
+    "form_company": "Nom de l'entreprise",
+    "form_company_placeholder": "Ex. Installations Martin SAS",
+    "form_vat": "Numéro de TVA européen",
+    "form_vat_placeholder": "Ex. FR12345678901",
+    "form_email": "Email professionnel",
+    "form_email_placeholder": "Ex. martin@entreprise.fr",
+    "form_fullname": "Nom complet",
+    "form_fullname_placeholder": "Ex. Jean Martin",
+    "form_plan": "Plan GeoTapp Flow",
+    "form_plan_note": "Le nombre d'utilisateurs du plan concerne GeoTapp Flow (gestion bureau/CRM). Les licences GeoTapp Timetracker pour les opérateurs terrain sont un abonnement séparé, avec un nombre maximum inclus selon le plan choisi.",
+    "plan_solo": "Solo — 1 utilisateur Flow",
+    "plan_team": "Team — jusqu'à 5 utilisateurs Flow",
+    "plan_business": "Business — utilisateurs Flow illimités",
+    "form_seats": "Licences Timetracker (optionnel)",
+    "form_seats_hint": "Abonnement séparé pour les opérateurs terrain (application mobile). Limite incluse dans le plan : Solo max 2, Team max 5, Business illimitées. Vous pouvez modifier les licences après l'activation.",
+    "form_submit": "Commencer l'essai gratuit",
+    "form_submitting": "Activation en cours...",
+    "form_privacy": "Vos données sont traitées conformément à notre",
+    "form_privacy_link": "Politique de confidentialité",
+    "form_email_hint": "Utilisez un email professionnel (pas Gmail, Yahoo, etc.)",
+    "success_title": "Vérifiez votre email !",
+    "success_desc": "Nous avons envoyé le lien d'activation à ",
+    "success_desc2": "Cliquez sur le lien pour définir votre mot de passe et accéder à votre essai.",
+    "success_spam": "Vous ne le trouvez pas ? Vérifiez votre dossier spam.",
+    "error_message": "Erreur lors de l'activation. Réessayez ou écrivez à info@geotapp.com.",
+    "benefits_title": "Ce qui est inclus",
+    "benefits": [
+      {
+        "title": "Accès complet",
+        "desc": "Tous les modules actifs : CRM, facturation, gestion d'équipes, support client."
+      },
+      {
+        "title": "Sans carte requise",
+        "desc": "Saisissez uniquement vos données professionnelles. La carte n'est ajoutée que si vous décidez de continuer."
+      },
+      {
+        "title": "Vos données sont sécurisées",
+        "desc": "Vos données restent les vôtres. Vous pouvez les exporter à tout moment."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Que se passe-t-il après 14 jours ?",
+        "a": "Vous recevrez un email avec le lien pour activer votre abonnement. Si vous ne faites rien, le compte est suspendu sans frais."
+      },
+      {
+        "q": "Dois-je entrer ma carte de crédit ?",
+        "a": "Non. L'essai est entièrement gratuit et sans carte. Vous l'ajoutez uniquement si vous choisissez de continuer."
+      },
+      {
+        "q": "Puis-je inviter mon équipe ?",
+        "a": "Oui, vous pouvez ajouter des utilisateurs depuis le panneau de paramètres pendant l'essai."
+      },
+      {
+        "q": "Combien de temps faut-il pour commencer ?",
+        "a": "Moins de 2 minutes : remplissez le formulaire, recevez l'email, définissez votre mot de passe et vous êtes prêt."
+      }
+    ]
+  },
+  "roi": {
+    "meta_title": "Calculateur ROI GeoTapp — Découvrez vos économies réelles",
+    "meta_desc": "Calculez en 2 minutes ce que vous économiseriez avec GeoTapp : moins de paperasse, zéro dispute, opérateurs plus productifs.",
+    "hero_title": "Calculez votre ROI avec GeoTapp",
+    "hero_subtitle": "Entrez les données de votre entreprise et découvrez combien vous pouvez économiser chaque année.",
+    "step1_title": "Votre entreprise",
+    "step1_subtitle": "Parlez-nous un peu de vous",
+    "field_settore": "Secteur",
+    "field_operatori": "Nombre d'opérateurs",
+    "settore_installatori": "Installation et maintenance",
+    "settore_pulizie": "Nettoyage et assainissement",
+    "settore_sicurezza": "Sécurité et surveillance",
+    "settore_altro": "Autre secteur",
+    "step2_title": "Votre situation actuelle",
+    "step2_subtitle": "Soyez précis : plus les données sont réelles, plus le calcul est précis",
+    "field_siti": "Sites visités par jour (par opérateur)",
+    "field_ore_admin": "Heures/semaine consacrées aux tâches administratives et au reporting",
+    "field_contestazioni": "Litiges clients par mois (impayés, réclamations, etc.)",
+    "field_costo_orario": "Coût horaire moyen d'un opérateur (€)",
+    "step3_title": "Où envoyer votre rapport ?",
+    "step3_subtitle": "Vos résultats personnalisés arrivent immédiatement. Pas de spam.",
+    "field_nome": "Nom complet",
+    "field_email": "Email professionnel",
+    "field_telefono": "Téléphone (optionnel)",
+    "cta_calcola": "Calculer mon ROI",
+    "consent_text": "En cliquant sur 'Calculer mon ROI', vous acceptez de recevoir des communications commerciales de GeoTapp. Vous pouvez vous désinscrire à tout moment.",
+    "next": "Suivant",
+    "back": "Retour",
+    "results_title": "Vos économies estimées avec GeoTapp",
+    "results_subtitle": "Basé sur les données que vous avez saisies",
+    "results_admin": "Économies administratives et reporting",
+    "results_dispute": "Économies sur litiges et réclamations",
+    "results_coord": "Économies de coordination d'équipe",
+    "results_total": "Économies annuelles totales",
+    "results_payback": "Retour sur investissement estimé",
+    "results_payback_unit": "mois",
+    "results_roi": "ROI estimé",
+    "results_cta": "Commencer votre essai gratuit de 14 jours",
+    "results_disclaimer": "Estimation indicative basée sur les moyennes du secteur. Les résultats réels peuvent varier.",
+    "per_anno": "/ an",
+    "label_operators": "opérateurs",
+    "embed_title": "Calculateur ROI GeoTapp"
   }
 }

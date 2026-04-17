@@ -1,7 +1,7 @@
 import type { AppLocale } from '@/lib/i18n/config';
 import type { SettoreContent } from '../types';
 
-const map: Record<AppLocale, () => Promise<{ default: SettoreContent }>> = {
+const map: Partial<Record<AppLocale, () => Promise<{ default: SettoreContent }>>> = {
   it: () => import('./it'),
   en: () => import('./en'),
   de: () => import('./de'),
@@ -9,7 +9,7 @@ const map: Record<AppLocale, () => Promise<{ default: SettoreContent }>> = {
 };
 
 export async function getInstallatoriContent(locale: AppLocale): Promise<SettoreContent> {
-  const loader = map[locale] ?? map['en'];
+  const loader = (map[locale] ?? map['en'])!;
   const mod = await loader();
   return mod.default;
 }

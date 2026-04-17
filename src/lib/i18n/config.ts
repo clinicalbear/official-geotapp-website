@@ -4,6 +4,13 @@ export const SUPPORTED_LOCALES = [
   'en',
   'de',
   'nl',
+  'fr',
+  'es',
+  'pt',
+  'da',
+  'sv',
+  'nb',
+  'ru',
 ] as const;
 
 export type AppLocale = (typeof SUPPORTED_LOCALES)[number];
@@ -17,6 +24,13 @@ export const LOCALE_LABELS: Record<AppLocale, string> = {
   en: '🇬🇧 English',
   de: '🇩🇪 Deutsch',
   nl: '🇳🇱 Nederlands',
+  fr: '🇫🇷 Français',
+  es: '🇪🇸 Español',
+  pt: '🇵🇹 Português',
+  da: '🇩🇰 Dansk',
+  sv: '🇸🇪 Svenska',
+  nb: '🇳🇴 Norsk',
+  ru: '🇷🇺 Русский',
 };
 
 export const COUNTRY_TO_LOCALE: Partial<Record<string, AppLocale>> = {
@@ -34,4 +48,16 @@ export const COUNTRY_TO_LOCALE: Partial<Record<string, AppLocale>> = {
   NL: 'nl',
   BE: 'nl',
   SR: 'nl',
+  FR: 'fr',
+  ES: 'es',
+  MX: 'es',
+  AR: 'es',
+  CL: 'es',
+  CO: 'es',
+  PT: 'pt',
+  BR: 'pt',
+  DK: 'da',
+  SE: 'sv',
+  NO: 'nb',
+  RU: 'ru',
 };

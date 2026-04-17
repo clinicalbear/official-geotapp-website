@@ -4,6 +4,13 @@ import enDict from '@/dictionaries/en.json';
 import itDict from '@/dictionaries/it.json';
 import deDict from '@/dictionaries/de.json';
 import nlDict from '@/dictionaries/nl.json';
+import frDict from '@/dictionaries/fr.json';
+import esDict from '@/dictionaries/es.json';
+import ptDict from '@/dictionaries/pt.json';
+import daDict from '@/dictionaries/da.json';
+import svDict from '@/dictionaries/sv.json';
+import nbDict from '@/dictionaries/nb.json';
+import ruDict from '@/dictionaries/ru.json';
 import { DEFAULT_LOCALE, type AppLocale } from './config';
 
 export type SiteDictionary = typeof enDict;
@@ -51,6 +58,13 @@ const DICTIONARIES: Record<AppLocale, SiteDictionary> = {
   en: enDict,
   de: deDict,
   nl: withOverrides(nlDict),
+  fr: withOverrides(frDict),
+  es: withOverrides(esDict),
+  pt: withOverrides(ptDict),
+  da: withOverrides(daDict),
+  sv: withOverrides(svDict),
+  nb: withOverrides(nbDict),
+  ru: withOverrides(ruDict),
 };
 
 export function getDictionary(locale?: AppLocale | null): SiteDictionary {

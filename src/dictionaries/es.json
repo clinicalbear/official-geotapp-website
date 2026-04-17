@@ -683,6 +683,114 @@
     "cta_btn": "Contáctanos",
     "schema_desc": "Guías y análisis sobre certificación del trabajo en campo, gestión de equipos, GDPR y geolocalización.",
     "meta_title": "Blog | GeoTapp — Verificación del trabajo en campo",
-    "meta_desc": "Guías, análisis y recursos sobre gestión de equipos, certificación de intervenciones, GDPR y geolocalización. Del equipo GeoTapp."
+    "meta_desc": "Guías, análisis y recursos sobre gestión de equipos, certificación de intervenciones, GDPR y geolocalización. Del equipo GeoTapp.",
+    "cat_all": "Todos"
+  },
+  "trial": {
+    "page_title": "14 días gratis. Sin tarjeta.",
+    "page_subtitle": "Acceso completo a todos los módulos GeoTapp Flow durante 14 días. Sin tarjeta de crédito, sin compromiso. Cancela cuando quieras.",
+    "badge": "Prueba gratuita — 14 días",
+    "form_title": "Crea tu cuenta",
+    "form_company": "Nombre de la empresa",
+    "form_company_placeholder": "Ej. Instalaciones García SL",
+    "form_vat": "NIF/CIF europeo",
+    "form_vat_placeholder": "Ej. ES12345678A",
+    "form_email": "Email empresarial",
+    "form_email_placeholder": "Ej. garcia@empresa.es",
+    "form_fullname": "Nombre completo",
+    "form_fullname_placeholder": "Ej. Carlos García",
+    "form_plan": "Plan GeoTapp Flow",
+    "form_plan_note": "El número de usuarios del plan se refiere a GeoTapp Flow (gestión de oficina/CRM). Las licencias GeoTapp Timetracker para operarios de campo son una suscripción separada, con un número máximo incluido según el plan elegido.",
+    "plan_solo": "Solo — 1 usuario Flow",
+    "plan_team": "Team — hasta 5 usuarios Flow",
+    "plan_business": "Business — usuarios Flow ilimitados",
+    "form_seats": "Licencias Timetracker (opcional)",
+    "form_seats_hint": "Suscripción separada para operarios de campo (app móvil). Límite incluido en el plan: Solo máx. 2, Team máx. 5, Business ilimitadas. Puedes modificar las licencias después de la activación.",
+    "form_submit": "Empezar prueba gratuita",
+    "form_submitting": "Activando...",
+    "form_privacy": "Tus datos se procesan de acuerdo con nuestra",
+    "form_privacy_link": "Política de privacidad",
+    "form_email_hint": "Usa un email empresarial (no Gmail, Yahoo, etc.)",
+    "success_title": "¡Comprueba tu email!",
+    "success_desc": "Hemos enviado el enlace de activación a ",
+    "success_desc2": "Haz clic en el enlace para establecer tu contraseña y acceder a tu prueba.",
+    "success_spam": "¿No lo encuentras? Revisa la carpeta de spam.",
+    "error_message": "Error durante la activación. Inténtalo de nuevo o escribe a info@geotapp.com.",
+    "benefits_title": "Qué incluye la prueba",
+    "benefits": [
+      {
+        "title": "Acceso completo",
+        "desc": "Todos los módulos activos: CRM, facturación, gestión de equipos, soporte al cliente."
+      },
+      {
+        "title": "Sin tarjeta requerida",
+        "desc": "Solo introduce los datos de tu empresa. La tarjeta se añade solo si decides continuar."
+      },
+      {
+        "title": "Tus datos están seguros",
+        "desc": "Tus datos son tuyos. Puedes exportarlos en cualquier momento."
+      }
+    ],
+    "faq": [
+      {
+        "q": "¿Qué pasa después de 14 días?",
+        "a": "Recibirás un email con el enlace para activar tu suscripción. Si no haces nada, la cuenta se suspende sin cargos."
+      },
+      {
+        "q": "¿Necesito introducir mi tarjeta de crédito?",
+        "a": "No. La prueba es completamente gratuita y sin tarjeta. Solo la añades si decides continuar."
+      },
+      {
+        "q": "¿Puedo invitar a mi equipo?",
+        "a": "Sí, puedes añadir usuarios desde el panel de configuración durante la prueba."
+      },
+      {
+        "q": "¿Cuánto tiempo se tarda en empezar?",
+        "a": "Menos de 2 minutos: rellena el formulario, recibe el email, establece tu contraseña y ya estás dentro."
+      }
+    ]
+  },
+  "roi": {
+    "meta_title": "Calculadora ROI GeoTapp — Descubre tus ahorros reales",
+    "meta_desc": "Calcula en 2 minutos cuánto ahorrarías con GeoTapp: menos burocracia, cero disputas, operarios más productivos.",
+    "hero_title": "Calcula tu ROI con GeoTapp",
+    "hero_subtitle": "Introduce los datos de tu empresa y descubre cuánto puedes ahorrar cada año.",
+    "step1_title": "Tu empresa",
+    "step1_subtitle": "Cuéntanos un poco sobre ti",
+    "field_settore": "Sector",
+    "field_operatori": "Número de operarios",
+    "settore_installatori": "Instaladores y mantenimiento",
+    "settore_pulizie": "Limpieza y saneamiento",
+    "settore_sicurezza": "Seguridad y vigilancia",
+    "settore_altro": "Otro sector",
+    "step2_title": "Tu situación actual",
+    "step2_subtitle": "Sé preciso: cuanto más reales sean los datos, más preciso será el cálculo",
+    "field_siti": "Sitios visitados al día (por operario)",
+    "field_ore_admin": "Horas/semana en burocracia e informes",
+    "field_contestazioni": "Disputas de clientes al mes (impagos, reclamaciones, etc.)",
+    "field_costo_orario": "Coste horario medio de un operario (€)",
+    "step3_title": "¿Dónde enviamos tu informe?",
+    "step3_subtitle": "Tus resultados personalizados llegan de inmediato. Sin spam.",
+    "field_nome": "Nombre completo",
+    "field_email": "Email empresarial",
+    "field_telefono": "Teléfono (opcional)",
+    "cta_calcola": "Calcular mi ROI",
+    "consent_text": "Al hacer clic en 'Calcular mi ROI', aceptas recibir comunicaciones comerciales de GeoTapp. Puedes darte de baja en cualquier momento.",
+    "next": "Siguiente",
+    "back": "Atrás",
+    "results_title": "Tu ahorro estimado con GeoTapp",
+    "results_subtitle": "Basado en los datos que has introducido",
+    "results_admin": "Ahorro en burocracia e informes",
+    "results_dispute": "Ahorro en disputas y reclamaciones",
+    "results_coord": "Ahorro en coordinación de equipos",
+    "results_total": "Ahorro anual total",
+    "results_payback": "Retorno estimado",
+    "results_payback_unit": "meses",
+    "results_roi": "ROI estimado",
+    "results_cta": "Empieza tu prueba gratuita de 14 días",
+    "results_disclaimer": "Estimación indicativa basada en promedios del sector. Los resultados reales pueden variar.",
+    "per_anno": "/ año",
+    "label_operators": "operarios",
+    "embed_title": "Calculadora ROI GeoTapp"
   }
 }

@@ -1,7 +1,7 @@
 import type { AppLocale } from '@/lib/i18n/config';
 import type { VerifierCopy } from './types';
 
-const map: Record<AppLocale, () => Promise<{ default: VerifierCopy }>> = {
+const map: Partial<Record<AppLocale, () => Promise<{ default: VerifierCopy }>>> = {
   it: () => import('./it'),
   en: () => import('./en'),
   de: () => import('./de'),
@@ -9,7 +9,7 @@ const map: Record<AppLocale, () => Promise<{ default: VerifierCopy }>> = {
 };
 
 export async function getVerifierCopy(locale: AppLocale): Promise<VerifierCopy> {
-  const loader = map[locale] ?? map['it'];
+  const loader = (map[locale] ?? map['it'])!;
   const mod = await loader();
   return mod.default;
 }

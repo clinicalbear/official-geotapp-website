@@ -73,6 +73,8 @@ async function fetchBlogPosts(locale: AppLocale, categoryId: number, limit = 3):
 
 const SECTION_LABELS: Record<AppLocale, string> = {
   it: 'Dal blog', en: 'From the blog', de: 'Aus dem Blog', nl: 'Van de blog',
+  fr: 'Du blog', es: 'Del blog', pt: 'Do blog',
+  da: 'Fra bloggen', sv: 'Från bloggen', nb: 'Fra bloggen', ru: 'Из блога',
 };
 
 const HIGHLIGHTS_TITLE_LABELS: Record<AppLocale, string> = {
@@ -80,14 +82,25 @@ const HIGHLIGHTS_TITLE_LABELS: Record<AppLocale, string> = {
   en: 'Useful resources for your sector',
   de: 'Nützliche Ressourcen für Ihre Branche',
   nl: 'Nuttige bronnen voor uw sector',
+  fr: 'Ressources utiles pour votre secteur',
+  es: 'Recursos útiles para tu sector',
+  pt: 'Recursos úteis para o seu setor',
+  da: 'Nyttige ressourcer til din branche',
+  sv: 'Användbara resurser för din bransch',
+  nb: 'Nyttige ressurser for din bransje',
+  ru: 'Полезные ресурсы для вашей отрасли',
 };
 
 const SEE_ALL_LABELS: Record<AppLocale, string> = {
   it: 'Vedi tutti →', en: 'See all →', de: 'Alle ansehen →', nl: 'Alles bekijken →',
+  fr: 'Voir tout →', es: 'Ver todo →', pt: 'Ver tudo →',
+  da: 'Se alle →', sv: 'Se alla →', nb: 'Se alle →', ru: 'Все →',
 };
 
 const READ_MORE_LABELS: Record<AppLocale, string> = {
   it: 'Leggi →', en: 'Read →', de: 'Lesen →', nl: 'Lezen →',
+  fr: 'Lire →', es: 'Leer →', pt: 'Ler →',
+  da: 'Læs →', sv: 'Läs →', nb: 'Les →', ru: 'Читать →',
 };
 
 interface Props {

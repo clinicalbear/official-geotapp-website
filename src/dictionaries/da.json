@@ -683,6 +683,114 @@
     "cta_btn": "Kontakt os",
     "schema_desc": "Vejledninger og indsigt om certificering af feltarbejde, teamledelse, GDPR og geolokalisering.",
     "meta_title": "Blog | GeoTapp — Verificering af feltarbejde",
-    "meta_desc": "Vejledninger, indsigt og ressourcer om teamledelse, certificering af interventioner, GDPR og geolokalisering. Fra GeoTapp-teamet."
+    "meta_desc": "Vejledninger, indsigt og ressourcer om teamledelse, certificering af interventioner, GDPR og geolokalisering. Fra GeoTapp-teamet.",
+    "cat_all": "Alle"
+  },
+  "trial": {
+    "page_title": "14 dage gratis. Intet kort.",
+    "page_subtitle": "Fuld adgang til alle GeoTapp Flow-moduler i 14 dage. Intet kreditkort, ingen forpligtelse. Annullér når du vil.",
+    "badge": "Gratis prøveperiode — 14 dage",
+    "form_title": "Opret din konto",
+    "form_company": "Virksomhedsnavn",
+    "form_company_placeholder": "F.eks. Jensen Installationer ApS",
+    "form_vat": "Europæisk CVR/momsnummer",
+    "form_vat_placeholder": "F.eks. DK12345678",
+    "form_email": "Erhvervs-email",
+    "form_email_placeholder": "F.eks. jensen@virksomhed.dk",
+    "form_fullname": "Fulde navn",
+    "form_fullname_placeholder": "F.eks. Lars Jensen",
+    "form_plan": "GeoTapp Flow-plan",
+    "form_plan_note": "Planens brugerantal refererer til GeoTapp Flow (kontorstyring/CRM). GeoTapp Timetracker-licenser til feltoperatører er et separat abonnement med et maksimalt antal inkluderet afhængigt af den valgte plan.",
+    "plan_solo": "Solo — 1 Flow-bruger",
+    "plan_team": "Team — op til 5 Flow-brugere",
+    "plan_business": "Business — ubegrænsede Flow-brugere",
+    "form_seats": "Timetracker-licenser (valgfrit)",
+    "form_seats_hint": "Separat abonnement for feltoperatører (mobilapp). Grænse inkluderet i plan: Solo maks. 2, Team maks. 5, Business ubegrænset. Du kan justere licenser efter aktivering.",
+    "form_submit": "Start gratis prøveperiode",
+    "form_submitting": "Aktiverer...",
+    "form_privacy": "Dine data behandles i henhold til vores",
+    "form_privacy_link": "Privatlivspolitik",
+    "form_email_hint": "Brug en erhvervs-email (ikke Gmail, Yahoo osv.)",
+    "success_title": "Tjek din email!",
+    "success_desc": "Vi har sendt aktiveringslinket til ",
+    "success_desc2": "Klik på linket for at angive din adgangskode og få adgang til din prøveperiode.",
+    "success_spam": "Kan du ikke finde det? Tjek din spam-mappe.",
+    "error_message": "Aktiveringsfejl. Prøv igen eller skriv til info@geotapp.com.",
+    "benefits_title": "Hvad er inkluderet",
+    "benefits": [
+      {
+        "title": "Fuld adgang",
+        "desc": "Alle moduler aktive: CRM, fakturering, teamstyring, kundesupport."
+      },
+      {
+        "title": "Intet kort krævet",
+        "desc": "Indtast kun dine virksomhedsoplysninger. Kortet tilføjes kun, hvis du beslutter dig for at fortsætte."
+      },
+      {
+        "title": "Dine data er sikre",
+        "desc": "Dine data er dine. Du kan eksportere dem når som helst."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Hvad sker der efter 14 dage?",
+        "a": "Du modtager en email med et link til at aktivere dit abonnement. Hvis du ikke gør noget, suspenderes kontoen uden gebyrer."
+      },
+      {
+        "q": "Skal jeg indtaste mit kreditkort?",
+        "a": "Nej. Prøveperioden er helt gratis og uden kort. Du tilføjer det kun, hvis du vælger at fortsætte."
+      },
+      {
+        "q": "Kan jeg invitere mit team?",
+        "a": "Ja, du kan tilføje brugere fra indstillingspanelet under prøveperioden."
+      },
+      {
+        "q": "Hvor lang tid tager det at komme i gang?",
+        "a": "Mindre end 2 minutter: udfyld formularen, modtag emailen, angiv din adgangskode og du er i gang."
+      }
+    ]
+  },
+  "roi": {
+    "meta_title": "GeoTapp ROI-beregner — Opdag dine reelle besparelser",
+    "meta_desc": "Beregn på 2 minutter, hvad du ville spare med GeoTapp: mindre bureaukrati, nul tvister, mere produktive operatører.",
+    "hero_title": "Beregn dit ROI med GeoTapp",
+    "hero_subtitle": "Indtast dine virksomhedsdata og opdag, hvor meget du kan spare hvert år.",
+    "step1_title": "Din virksomhed",
+    "step1_subtitle": "Fortæl os lidt om dig",
+    "field_settore": "Sektor",
+    "field_operatori": "Antal operatører",
+    "settore_installatori": "Installation og vedligeholdelse",
+    "settore_pulizie": "Rengøring og sanitet",
+    "settore_sicurezza": "Sikkerhed og overvågning",
+    "settore_altro": "Anden sektor",
+    "step2_title": "Din nuværende situation",
+    "step2_subtitle": "Vær præcis: jo mere nøjagtige data, jo mere præcis beregning",
+    "field_siti": "Besøgte steder pr. dag (pr. operatør)",
+    "field_ore_admin": "Timer/uge brugt på administration og rapportering",
+    "field_contestazioni": "Kundetvister pr. måned (ubetalte, krav osv.)",
+    "field_costo_orario": "Gennemsnitlig timepris for en operatør (€)",
+    "step3_title": "Hvor sender vi din rapport?",
+    "step3_subtitle": "Dine personlige resultater ankommer med det samme. Intet spam.",
+    "field_nome": "Fulde navn",
+    "field_email": "Erhvervs-email",
+    "field_telefono": "Telefon (valgfrit)",
+    "cta_calcola": "Beregn mit ROI",
+    "consent_text": "Ved at klikke på 'Beregn mit ROI' accepterer du at modtage kommercielle meddelelser fra GeoTapp. Du kan afmelde dig til enhver tid.",
+    "next": "Næste",
+    "back": "Tilbage",
+    "results_title": "Dine estimerede besparelser med GeoTapp",
+    "results_subtitle": "Baseret på de data, du har indtastet",
+    "results_admin": "Besparelser på administration og rapportering",
+    "results_dispute": "Besparelser på tvister og krav",
+    "results_coord": "Besparelser på teamkoordinering",
+    "results_total": "Samlede årlige besparelser",
+    "results_payback": "Estimeret tilbagebetalingsperiode",
+    "results_payback_unit": "måneder",
+    "results_roi": "Estimeret ROI",
+    "results_cta": "Start din gratis 14-dages prøveperiode",
+    "results_disclaimer": "Vejledende estimat baseret på branchegennemsnit. De faktiske resultater kan variere.",
+    "per_anno": "/ år",
+    "label_operators": "operatører",
+    "embed_title": "GeoTapp ROI-beregner"
   }
 }

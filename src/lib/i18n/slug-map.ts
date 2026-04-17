@@ -5,7 +5,7 @@ import type { AppLocale } from './config';
  * Italian is the canonical form — other locales get translated slugs.
  * Used by localizePath() and buildLocaleAlternates().
  */
-export const SLUG_MAP: Record<string, Record<AppLocale, string>> = {
+export const SLUG_MAP: Record<string, Partial<Record<AppLocale, string>>> = {
   'chi-siamo': {
     it: 'chi-siamo',
     en: 'about-us',
