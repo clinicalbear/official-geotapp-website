@@ -22,6 +22,7 @@ export async function generateMetadata({
     title: { absolute: 'App Manutenzione: Gestione Squadre e Interventi con GPS | GeoTapp' },
     description:
       'Gestisci squadre di manutenzione con GPS: interventi, turni, prove di servizio. Storico completo per ogni impianto o sede cliente. Prova GeoTapp gratis.',
+    robots: { index: false, follow: false },
     alternates: {
       canonical: 'https://geotapp.com/it/settori/manutenzione/',
     },

@@ -22,6 +22,7 @@ export async function generateMetadata({
     title: { absolute: 'App per Installatori e Impiantisti: Gestione Interventi GPS | GeoTapp' },
     description:
       'Traccia interventi, ore e materiali per installatori e impiantisti con GPS. Prove di servizio automatiche, zero contestazioni clienti. Prova GeoTapp gratis.',
+    robots: { index: false, follow: false },
     alternates: {
       canonical: 'https://geotapp.com/it/settori/impianti/',
     },

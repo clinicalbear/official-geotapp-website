@@ -22,6 +22,7 @@ export async function generateMetadata({
     title: { absolute: 'App Cantiere per Edilizia: Presenze GPS e Gestione Squadre | GeoTapp' },
     description:
       'Gestisci presenze, turni e sicurezza in cantiere con GPS in tempo reale. Timbrature certificate, report automatici. App GDPR-compliant per imprese edili.',
+    robots: { index: false, follow: false },
     alternates: {
       canonical: 'https://geotapp.com/it/settori/edilizia/',
     },

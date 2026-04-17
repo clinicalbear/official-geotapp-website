@@ -52,21 +52,10 @@ export default function Navbar() {
 
   const getLink = (path: string) => localizePath(path, currentLocale);
   const sectorLinks = [
-    {
-      href: getLink('/settori/edilizia'),
-      label: dict.sectors.edilizia,
-    },
-    {
-      href: getLink('/settori/impianti'),
-      label: dict.sectors.impianti,
-    },
+    // edilizia, impianti, manutenzione nascosti temporaneamente — contenuto da rivedere
     {
       href: getLink('/settori/installatori'),
       label: dict.sectors.installatori,
-    },
-    {
-      href: getLink('/settori/manutenzione'),
-      label: dict.sectors.manutenzione,
     },
     {
       href: getLink('/settori/pulizie'),
