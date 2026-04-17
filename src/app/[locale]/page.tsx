@@ -53,8 +53,8 @@ const BASE_URL = 'https://geotapp.com';
 // this is the SEO anchor keyword for all locale variants.
 const LOCALE_META: Record<string, { title: string; description: string }> = {
   it: {
-    title: 'App timbrature geolocalizzate | Prova interventi, incassa senza discussioni',
-    description: 'App timbrature geolocalizzate per operai sul campo. GeoTapp registra GPS, ore, foto e report non modificabile per ogni intervento. Tutela il tuo lavoro. GDPR compliant.',
+    title: 'Timbrature GPS per Squadre sul Campo | GeoTapp',
+    description: 'Controlla presenze, orari e posizioni GPS del tuo team in tempo reale. Riduci contestazioni, errori in busta paga e lavoro non documentato. Prova gratis.',
   },
   en: {
     title: 'GPS Time Tracking for Field Teams | Prove Jobs, Get Paid — GeoTapp',
