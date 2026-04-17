@@ -8,12 +8,20 @@ const BASE = 'https://geotapp.com';
 /**
  * Maps internal locale codes to BCP-47 hreflang tags.
  * Google uses BCP-47 (e.g. it-IT, de-DE) for regional targeting.
- * Generic codes (en, fr) are used where no single country dominates.
+ * Generic codes (en) are used where no single country dominates.
  */
 const HREFLANG: Record<string, string> = {
   it: 'it-IT',
   en: 'en',
   de: 'de-DE',
+  nl: 'nl-NL',
+  fr: 'fr-FR',
+  es: 'es-ES',
+  pt: 'pt-PT',
+  da: 'da-DK',
+  nb: 'nb-NO',
+  sv: 'sv-SE',
+  ru: 'ru-RU',
 };
 
 /**
