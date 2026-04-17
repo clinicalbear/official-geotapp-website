@@ -24,6 +24,10 @@ export async function generateMetadata({
       'Gestisci squadre, turni e presenze con GPS in tempo reale. Prove automatiche di servizio, zero contestazioni clienti. App GDPR-compliant per pulizie.',
     alternates: {
       canonical: 'https://geotapp.com/it/settori/impresa-di-pulizie/',
+      languages: {
+        'it-IT': 'https://geotapp.com/it/settori/impresa-di-pulizie/',
+        'x-default': 'https://geotapp.com/it/settori/impresa-di-pulizie/',
+      },
     },
     openGraph: {
       url: 'https://geotapp.com/it/settori/impresa-di-pulizie/',

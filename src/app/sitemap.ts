@@ -222,5 +222,21 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     });
   });
 
-  return [...localeEntries, ...blogEntries];
+  // 3. IT-only landing pages (single-locale, no hreflang alternates).
+  const itOnlyEntries: MetadataRoute.Sitemap = [
+    {
+      url: `${BASE_URL}/it/settori/impresa-di-pulizie/`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.85,
+      alternates: {
+        languages: {
+          'it-IT': `${BASE_URL}/it/settori/impresa-di-pulizie/`,
+          'x-default': `${BASE_URL}/it/settori/impresa-di-pulizie/`,
+        },
+      },
+    },
+  ];
+
+  return [...localeEntries, ...itOnlyEntries, ...blogEntries];
 }
