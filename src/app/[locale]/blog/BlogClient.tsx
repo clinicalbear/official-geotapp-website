@@ -109,7 +109,7 @@ export default function BlogClient({ locale, posts }: { locale: AppLocale; posts
                   className={activeCat === 'all' ? 'active' : ''}
                   onClick={() => handleCatClick('all')}
                 >
-                  Tutti
+                  {b.cat_all}
                 </button>
                 {categories.map((cat) => (
                   <button

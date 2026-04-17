@@ -571,15 +571,36 @@
     "error_message": "Errore durante l'attivazione. Riprova o scrivi a info@geotapp.com.",
     "benefits_title": "Cosa include il trial",
     "benefits": [
-      { "title": "Accesso completo", "desc": "Tutti i moduli attivi: CRM, fatturazione, gestione squadre, supporto clienti." },
-      { "title": "Nessuna carta richiesta", "desc": "Inserisci solo i dati aziendali. La carta si aggiunge solo se decidi di continuare." },
-      { "title": "Dati al sicuro", "desc": "I tuoi dati rimangono tuoi. Puoi esportarli in qualsiasi momento." }
+      {
+        "title": "Accesso completo",
+        "desc": "Tutti i moduli attivi: CRM, fatturazione, gestione squadre, supporto clienti."
+      },
+      {
+        "title": "Nessuna carta richiesta",
+        "desc": "Inserisci solo i dati aziendali. La carta si aggiunge solo se decidi di continuare."
+      },
+      {
+        "title": "Dati al sicuro",
+        "desc": "I tuoi dati rimangono tuoi. Puoi esportarli in qualsiasi momento."
+      }
     ],
     "faq": [
-      { "q": "Cosa succede dopo 14 giorni?", "a": "Riceverai un'email con il link per attivare l'abbonamento. Se non fai nulla, l'account viene sospeso senza addebiti." },
-      { "q": "Devo inserire la carta di credito?", "a": "No. Il trial è completamente gratuito e senza carta. La inserisci solo se scegli di continuare." },
-      { "q": "Posso invitare il mio team?", "a": "Sì, puoi aggiungere utenti dal pannello impostazioni durante il trial." },
-      { "q": "Quanto tempo ci vuole per iniziare?", "a": "Meno di 2 minuti: compila il form, ricevi l'email, imposta la password e sei dentro." }
+      {
+        "q": "Cosa succede dopo 14 giorni?",
+        "a": "Riceverai un'email con il link per attivare l'abbonamento. Se non fai nulla, l'account viene sospeso senza addebiti."
+      },
+      {
+        "q": "Devo inserire la carta di credito?",
+        "a": "No. Il trial è completamente gratuito e senza carta. La inserisci solo se scegli di continuare."
+      },
+      {
+        "q": "Posso invitare il mio team?",
+        "a": "Sì, puoi aggiungere utenti dal pannello impostazioni durante il trial."
+      },
+      {
+        "q": "Quanto tempo ci vuole per iniziare?",
+        "a": "Meno di 2 minuti: compila il form, ricevi l'email, imposta la password e sei dentro."
+      }
     ]
   },
   "demo": {
@@ -727,7 +748,8 @@
     "cta_btn": "Inizia trial gratuito",
     "schema_desc": "Guide e approfondimenti su certificazione del lavoro sul campo, gestione squadre, GDPR e geolocalizzazione.",
     "meta_title": "Blog | GeoTapp — Certificazione del lavoro sul campo",
-    "meta_desc": "Guide, approfondimenti e risorse su gestione squadre, certificazione interventi, GDPR e geolocalizzazione. Dal team GeoTapp."
+    "meta_desc": "Guide, approfondimenti e risorse su gestione squadre, certificazione interventi, GDPR e geolocalizzazione. Dal team GeoTapp.",
+    "cat_all": "Tutti"
   },
   "roi": {
     "meta_title": "Calcolatore ROI GeoTapp — Scopri il tuo risparmio reale",

@@ -75,6 +75,17 @@ const SECTION_LABELS: Record<AppLocale, string> = {
   it: 'Dal blog', en: 'From the blog', de: 'Aus dem Blog', nl: 'Van de blog',
 };
 
+const HIGHLIGHTS_TITLE_LABELS: Record<AppLocale, string> = {
+  it: 'Risorse utili per il tuo settore',
+  en: 'Useful resources for your sector',
+  de: 'Nützliche Ressourcen für Ihre Branche',
+  nl: 'Nuttige bronnen voor uw sector',
+};
+
+const SEE_ALL_LABELS: Record<AppLocale, string> = {
+  it: 'Vedi tutti →', en: 'See all →', de: 'Alle ansehen →', nl: 'Alles bekijken →',
+};
+
 const READ_MORE_LABELS: Record<AppLocale, string> = {
   it: 'Leggi →', en: 'Read →', de: 'Lesen →', nl: 'Lezen →',
 };
@@ -90,6 +101,8 @@ export default async function BlogHighlights({ locale, categoryId, className = '
   if (posts.length === 0) return null;
 
   const label = SECTION_LABELS[locale] ?? SECTION_LABELS['en'];
+  const highlightsTitle = HIGHLIGHTS_TITLE_LABELS[locale] ?? HIGHLIGHTS_TITLE_LABELS['en'];
+  const seeAll = SEE_ALL_LABELS[locale] ?? SEE_ALL_LABELS['en'];
   const readMore = READ_MORE_LABELS[locale] ?? READ_MORE_LABELS['en'];
 
   return (
@@ -98,13 +111,13 @@ export default async function BlogHighlights({ locale, categoryId, className = '
         <div className="flex items-center justify-between mb-10">
           <div>
             <span className="text-primary font-bold uppercase tracking-widest text-sm block mb-2">{label}</span>
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900">Risorse utili per il tuo settore</h2>
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900">{highlightsTitle}</h2>
           </div>
           <Link
             href={`/${locale}/blog/`}
             className="hidden md:flex items-center gap-2 text-slate-500 hover:text-slate-900 font-semibold text-sm transition-colors"
           >
-            {readMore} tutti
+            {seeAll}
           </Link>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">

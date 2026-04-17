@@ -571,15 +571,36 @@
     "error_message": "Aktivierungsfehler. Bitte erneut versuchen oder an info@geotapp.com schreiben.",
     "benefits_title": "Was enthalten ist",
     "benefits": [
-      { "title": "Vollständiger Zugang", "desc": "Alle Module aktiv: CRM, Rechnungsstellung, Teamverwaltung, Kundensupport." },
-      { "title": "Keine Karte erforderlich", "desc": "Nur Firmendaten eingeben. Karte nur hinzufügen, wenn Sie weitermachen möchten." },
-      { "title": "Ihre Daten sind sicher", "desc": "Ihre Daten gehören Ihnen. Sie können sie jederzeit exportieren." }
+      {
+        "title": "Vollständiger Zugang",
+        "desc": "Alle Module aktiv: CRM, Rechnungsstellung, Teamverwaltung, Kundensupport."
+      },
+      {
+        "title": "Keine Karte erforderlich",
+        "desc": "Nur Firmendaten eingeben. Karte nur hinzufügen, wenn Sie weitermachen möchten."
+      },
+      {
+        "title": "Ihre Daten sind sicher",
+        "desc": "Ihre Daten gehören Ihnen. Sie können sie jederzeit exportieren."
+      }
     ],
     "faq": [
-      { "q": "Was passiert nach 14 Tagen?", "a": "Sie erhalten eine E-Mail mit einem Link zur Aktivierung des Abonnements. Wenn Sie nichts tun, wird das Konto ohne Kosten gesperrt." },
-      { "q": "Muss ich eine Kreditkarte angeben?", "a": "Nein. Der Test ist völlig kostenlos ohne Kreditkarte. Sie fügen diese nur hinzu, wenn Sie weitermachen möchten." },
-      { "q": "Kann ich mein Team einladen?", "a": "Ja, Sie können während des Tests Nutzer über die Einstellungen hinzufügen." },
-      { "q": "Wie lange dauert der Einstieg?", "a": "Weniger als 2 Minuten: Formular ausfüllen, E-Mail empfangen, Passwort festlegen – fertig." }
+      {
+        "q": "Was passiert nach 14 Tagen?",
+        "a": "Sie erhalten eine E-Mail mit einem Link zur Aktivierung des Abonnements. Wenn Sie nichts tun, wird das Konto ohne Kosten gesperrt."
+      },
+      {
+        "q": "Muss ich eine Kreditkarte angeben?",
+        "a": "Nein. Der Test ist völlig kostenlos ohne Kreditkarte. Sie fügen diese nur hinzu, wenn Sie weitermachen möchten."
+      },
+      {
+        "q": "Kann ich mein Team einladen?",
+        "a": "Ja, Sie können während des Tests Nutzer über die Einstellungen hinzufügen."
+      },
+      {
+        "q": "Wie lange dauert der Einstieg?",
+        "a": "Weniger als 2 Minuten: Formular ausfüllen, E-Mail empfangen, Passwort festlegen – fertig."
+      }
     ]
   },
   "demo": {
@@ -727,7 +748,8 @@
     "cta_btn": "Kostenlos testen",
     "schema_desc": "Anleitungen und Einblicke zur Außendienst-Zertifizierung, Teamverwaltung, DSGVO und Geolokalisierung.",
     "meta_title": "Blog | GeoTapp — Außendienst-Verifikation",
-    "meta_desc": "Anleitungen, Einblicke und Ressourcen zu Teamverwaltung, Außendienst-Zertifizierung, DSGVO und Geolokalisierung. Vom GeoTapp-Team."
+    "meta_desc": "Anleitungen, Einblicke und Ressourcen zu Teamverwaltung, Außendienst-Zertifizierung, DSGVO und Geolokalisierung. Vom GeoTapp-Team.",
+    "cat_all": "Alle"
   },
   "roi": {
     "meta_title": "GeoTapp ROI-Rechner — Entdecken Sie Ihre echten Einsparungen",
