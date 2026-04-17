@@ -55,9 +55,25 @@ export default async function PulizieLocalePage({
     ],
   };
 
+  const softwareApp = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'GeoTapp',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Android, iOS, Web',
+    description: content.meta.description,
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'EUR',
+      description: 'Prova gratuita',
+    },
+  };
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApp) }} />
       <SettorePageLayout content={content} locale={resolvedLocale} settore="pulizie" />
     </>
   );
