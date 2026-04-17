@@ -17,16 +17,8 @@ const SLUG_TRANSLATIONS = {
 };
 
 // Removed locales and their slug translations → redirect to English equivalent
-const REMOVED_LOCALE_SLUGS = {
-  fr: { 'qui-sommes-nous': 'about-us', 'guide': 'guide', 'secteurs': 'sectors', 'tarifs': 'pricing', 'fonctionnalites': 'features', 'produits': 'products', 'nettoyage': 'cleaning', 'installateurs': 'installers', 'securite': 'security', 'ressources': 'resources', 'comparaison': 'compare', 'kontakt': 'contact', },
-  es: { 'quienes-somos': 'about-us', 'guia': 'guide', 'sectores': 'sectors', 'precios': 'pricing', 'caracteristicas': 'features', 'productos': 'products', 'limpieza': 'cleaning', 'instaladores': 'installers', 'seguridad': 'security', 'recursos': 'resources', 'comparacion': 'compare', 'contacto': 'contact', },
-  pt: { 'quem-somos': 'about-us', 'guia': 'guide', 'setores': 'sectors', 'precos': 'pricing', 'funcionalidades': 'features', 'produtos': 'products', 'limpeza': 'cleaning', 'instaladores': 'installers', 'seguranca': 'security', 'recursos': 'resources', 'comparacao': 'compare', 'contato': 'contact', },
-  nl: { 'over-ons': 'about-us', 'handleiding': 'guide', 'sectoren': 'sectors', 'prijzen': 'pricing', 'functies': 'features', 'producten': 'products', 'schoonmaak': 'cleaning', 'installateurs': 'installers', 'beveiliging': 'security', 'bronnen': 'resources', 'vergelijking': 'compare', },
-  da: { 'om-os': 'about-us', 'vejledning': 'guide', 'sektorer': 'sectors', 'priser': 'pricing', 'funktioner': 'features', 'produkter': 'products', 'rengoring': 'cleaning', 'installatorer': 'installers', 'sikkerhed': 'security', 'ressourcer': 'resources', 'sammenligning': 'compare', 'kontakt': 'contact', },
-  sv: { 'om-oss': 'about-us', 'guide': 'guide', 'sektorer': 'sectors', 'priser': 'pricing', 'funktioner': 'features', 'produkter': 'products', 'stadning': 'cleaning', 'installatorer': 'installers', 'sakerhet': 'security', 'resurser': 'resources', 'jamforelse': 'compare', 'kontakt': 'contact', },
-  nb: { 'om-oss': 'about-us', 'guide': 'guide', 'sektorer': 'sectors', 'priser': 'pricing', 'funksjoner': 'features', 'produkter': 'products', 'rengjoring': 'cleaning', 'installatorer': 'installers', 'sikkerhet': 'security', 'ressurser': 'resources', 'sammenligning': 'compare', 'kontakt': 'contact', },
-  ru: { 'o-nas': 'about-us', 'rukovodstvo': 'guide', 'otrasli': 'sectors', 'ceny': 'pricing', 'vozmozhnosti': 'features', 'produkty': 'products', 'uborka': 'cleaning', 'montazhniki': 'installers', 'bezopasnost': 'security', 'resursy': 'resources', 'sravnenie': 'compare', 'kontakt': 'contact', },
-};
+// All locales are currently active — nothing to redirect
+const REMOVED_LOCALE_SLUGS = {};
 
 const REMOVED_LOCALES = Object.keys(REMOVED_LOCALE_SLUGS);
 
@@ -121,7 +113,7 @@ const nextConfig = {
     return [...buildCompoundRewrites(), ...buildRewrites()];
   },
   async redirects() {
-    const ACTIVE_LOCALES = ['it', 'en', 'de'];
+    const ACTIVE_LOCALES = ['it', 'en', 'de', 'nl', 'fr', 'es', 'pt', 'da', 'sv', 'nb', 'ru'];
 
     const demoToTrialRedirects = [
       { source: '/demo',   destination: '/trial/', permanent: true },
