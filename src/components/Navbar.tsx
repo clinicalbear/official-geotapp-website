@@ -65,6 +65,14 @@ export default function Navbar() {
       href: getLink('/settori/sicurezza'),
       label: dict.sectors.sicurezza,
     },
+    {
+      href: getLink('/settori/elettricisti'),
+      label: dict.sectors.elettricisti,
+    },
+    {
+      href: getLink('/settori/idraulici'),
+      label: dict.sectors.idraulici,
+    },
   ];
 
   // Product menu is data-driven to keep desktop and mobile entries synchronized.
