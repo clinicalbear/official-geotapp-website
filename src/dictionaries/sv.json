@@ -10,6 +10,8 @@
       "installatori": "Installatörer",
       "sicurezza": "Säkerhet",
       "pulizie": "Städning",
+      "elettricisti": "Elektriker",
+      "idraulici": "Rörmokare",
       "edilizia": "Byggbranschen",
       "impianti": "Tekniska installationer",
       "manutenzione": "Underhåll",
@@ -156,6 +158,16 @@
         "name": "Städning",
         "desc": "Städföretag, Facility, Multiservice. Varje omgång dokumenterad och verifierbar av uppdragsgivaren — noll tvister.",
         "cta": "Undvik tvister"
+      },
+      "elettricisti": {
+        "name": "Elektriker",
+        "desc": "Elinstallationer, el-tavlor, kabeldragning. Varje jobb dokumenterat med GPS och foton — manipuleringssäkra bevis för att stänga varje tvist.",
+        "cta": "Dokumentera varje jobb"
+      },
+      "idraulici": {
+        "name": "Rörmokare",
+        "desc": "VVS, värme, pannor. GPS-arbetsrapporter med före-och-efter-foton — inga tvister om utfört arbete.",
+        "cta": "Bevisa varje jobb"
       }
     },
     "app_mockup": {

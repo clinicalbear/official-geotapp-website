@@ -10,6 +10,8 @@
       "installatori": "Instaladores",
       "sicurezza": "Seguridad",
       "pulizie": "Limpieza",
+      "elettricisti": "Electricistas",
+      "idraulici": "Fontaneros",
       "edilizia": "Construcción",
       "impianti": "Instalaciones",
       "manutenzione": "Mantenimiento",
@@ -156,6 +158,16 @@
         "name": "Limpieza",
         "desc": "Empresas de limpieza, Facility, Multiservicios. Cada ronda documentada y verificable por el cliente — cero disputas.",
         "cta": "Evitar disputas"
+      },
+      "elettricisti": {
+        "name": "Electricistas",
+        "desc": "Instalaciones eléctricas, cuadros, cableado. Cada intervención documentada con GPS y fotos — pruebas inviolables para cerrar cualquier disputa.",
+        "cta": "Documenta cada intervención"
+      },
+      "idraulici": {
+        "name": "Fontaneros",
+        "desc": "Fontanería, calefacción, calderas. Informes GPS con fotos antes y después — cero disputas sobre trabajos realizados.",
+        "cta": "Prueba cada trabajo"
       }
     },
     "app_mockup": {

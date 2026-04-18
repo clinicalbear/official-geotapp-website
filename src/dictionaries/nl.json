@@ -10,6 +10,8 @@
       "installatori": "Installateurs",
       "sicurezza": "Beveiliging",
       "pulizie": "Schoonmaak",
+      "elettricisti": "Elektriciens",
+      "idraulici": "Loodgieters",
       "edilizia": "Bouw",
       "impianti": "Installaties",
       "manutenzione": "Onderhoud",
@@ -156,6 +158,16 @@
         "name": "Schoonmaak",
         "desc": "Schoonmaakbedrijven, Facility, Multiservice. Elke ronde gedocumenteerd en controleerbaar door de opdrachtgever — nul geschillen.",
         "cta": "Geschillen vermijden"
+      },
+      "elettricisti": {
+        "name": "Elektriciens",
+        "desc": "Elektrische installaties, schakelkasten, bedrading. Elke klus vastgelegd met GPS en foto's — manipulatiebestendig bewijs om elk geschil te sluiten.",
+        "cta": "Documenteer elke klus"
+      },
+      "idraulici": {
+        "name": "Loodgieters",
+        "desc": "Sanitair, verwarming, ketels. GPS werkbonnen met voor-en-na foto's — geen geschillen over uitgevoerd werk.",
+        "cta": "Bewijs elke klus"
       }
     },
     "app_mockup": {

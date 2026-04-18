@@ -10,6 +10,8 @@
       "installatori": "Installatori",
       "sicurezza": "Sicurezza",
       "pulizie": "Pulizie",
+      "elettricisti": "Elettricisti",
+      "idraulici": "Idraulici",
       "edilizia": "Edilizia",
       "impianti": "Impianti",
       "manutenzione": "Manutenzione",
@@ -156,6 +158,16 @@
         "name": "Pulizie",
         "desc": "Imprese di pulizia, Facility, Multiservizi. Ogni passaggio documentato e verificabile dal committente — zero contestazioni.",
         "cta": "Evita contestazioni"
+      },
+      "elettricisti": {
+        "name": "Elettricisti",
+        "desc": "Impianti elettrici, quadri, cablaggi. Ogni intervento documentato con GPS e foto — prove inviolabili per chiudere ogni contestazione.",
+        "cta": "Documenta ogni intervento"
+      },
+      "idraulici": {
+        "name": "Idraulici",
+        "desc": "Impianti idraulici, riscaldamento, caldaie. Rapportini GPS con foto prima e dopo — zero contestazioni sui lavori eseguiti.",
+        "cta": "Prova ogni lavoro eseguito"
       }
     },
     "app_mockup": {

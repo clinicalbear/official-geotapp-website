@@ -10,6 +10,8 @@
       "installatori": "Installatører",
       "sicurezza": "Sikkerhed",
       "pulizie": "Rengøring",
+      "elettricisti": "Elektrikere",
+      "idraulici": "VVS-installatører",
       "edilizia": "Byggeri",
       "impianti": "Tekniske installationer",
       "manutenzione": "Vedligeholdelse",
@@ -156,6 +158,16 @@
         "name": "Rengøring",
         "desc": "Rengøringsvirksomheder, Facility, Multiservice. Hvert gennemgang dokumenteret og verificerbar af kunden — nul tvister.",
         "cta": "Undgå tvister"
+      },
+      "elettricisti": {
+        "name": "Elektrikere",
+        "desc": "El-installationer, tavler, kabler. Hvert arbejde dokumenteret med GPS og billeder — manipulationssikkert bevis til at lukke enhver tvist.",
+        "cta": "Dokumentér hvert arbejde"
+      },
+      "idraulici": {
+        "name": "VVS-installatører",
+        "desc": "VVS, varme, kedler. GPS-arbejdsrapporter med billeder før og efter — ingen tvister om udført arbejde.",
+        "cta": "Bevis hvert arbejde"
       }
     },
     "app_mockup": {

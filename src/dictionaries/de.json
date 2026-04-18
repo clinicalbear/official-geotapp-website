@@ -10,6 +10,8 @@
       "installatori": "Installateure",
       "sicurezza": "Sicherheitsdienst",
       "pulizie": "Gebäudereinigung",
+      "elettricisti": "Elektriker",
+      "idraulici": "Klempner",
       "edilizia": "Bauwesen",
       "impianti": "Anlagentechnik",
       "manutenzione": "Instandhaltung",
@@ -156,6 +158,16 @@
         "name": "Reinigung",
         "desc": "Reinigungsunternehmen, Facility, Multiservice. Jeder Durchgang dokumentiert und vom Auftraggeber prüfbar — null Beschwerden.",
         "cta": "Beschwerden vermeiden"
+      },
+      "elettricisti": {
+        "name": "Elektriker",
+        "desc": "Elektroinstallationen, Schaltanlagen, Verkabelung. Jeder Einsatz mit GPS und Fotos dokumentiert — manipulationssichere Beweise für jeden Streitfall.",
+        "cta": "Jeden Einsatz dokumentieren"
+      },
+      "idraulici": {
+        "name": "Klempner",
+        "desc": "Sanitär, Heizung, Kessel. GPS-Arbeitsberichte mit Vorher-Nachher-Fotos — keine Streitigkeiten über ausgeführte Arbeiten.",
+        "cta": "Jeden Auftrag beweisen"
       }
     },
     "app_mockup": {

@@ -10,6 +10,8 @@
       "installatori": "Installers",
       "sicurezza": "Security",
       "pulizie": "Cleaning",
+      "elettricisti": "Electricians",
+      "idraulici": "Plumbers",
       "edilizia": "Construction",
       "impianti": "Mechanical & Electrical",
       "manutenzione": "Maintenance",
@@ -156,6 +158,16 @@
         "name": "Cleaning",
         "desc": "Cleaning companies, Facility, Multiservice. Every round documented and verifiable by the client — zero disputes.",
         "cta": "Avoid disputes"
+      },
+      "elettricisti": {
+        "name": "Electricians",
+        "desc": "Electrical installations, panels, cabling. Every job documented with GPS and photos — tamper-proof evidence to close any dispute.",
+        "cta": "Document every job"
+      },
+      "idraulici": {
+        "name": "Plumbers",
+        "desc": "Plumbing, heating, boilers. GPS job reports with before-and-after photos — zero disputes about work completed.",
+        "cta": "Prove every job done"
       }
     },
     "app_mockup": {

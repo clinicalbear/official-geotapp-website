@@ -10,6 +10,8 @@
       "installatori": "Instaladores",
       "sicurezza": "Segurança",
       "pulizie": "Limpeza",
+      "elettricisti": "Eletricistas",
+      "idraulici": "Canalizadores",
       "edilizia": "Construção",
       "impianti": "Instalações",
       "manutenzione": "Manutenção",
@@ -156,6 +158,16 @@
         "name": "Limpeza",
         "desc": "Empresas de limpeza, Facility, Multisserviços. Cada ronda documentada e verificável pelo cliente — zero disputas.",
         "cta": "Evitar disputas"
+      },
+      "elettricisti": {
+        "name": "Eletricistas",
+        "desc": "Instalações elétricas, quadros, cablagem. Cada intervenção documentada com GPS e fotos — provas invioláveis para encerrar qualquer disputa.",
+        "cta": "Documente cada intervenção"
+      },
+      "idraulici": {
+        "name": "Canalizadores",
+        "desc": "Canalização, aquecimento, caldeiras. Relatórios GPS com fotos antes e depois — zero disputas sobre trabalhos realizados.",
+        "cta": "Prove cada trabalho"
       }
     },
     "app_mockup": {

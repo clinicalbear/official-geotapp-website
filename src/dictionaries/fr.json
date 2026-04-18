@@ -10,6 +10,8 @@
       "installatori": "Installateurs",
       "sicurezza": "Sécurité",
       "pulizie": "Nettoyage",
+      "elettricisti": "Électriciens",
+      "idraulici": "Plombiers",
       "edilizia": "BTP",
       "impianti": "Installations techniques",
       "manutenzione": "Maintenance",
@@ -156,6 +158,16 @@
         "name": "Nettoyage",
         "desc": "Entreprises de nettoyage, Facility, Multiservices. Chaque passage documenté et vérifiable par le donneur d'ordre — zéro contestation.",
         "cta": "Éviter les contestations"
+      },
+      "elettricisti": {
+        "name": "Électriciens",
+        "desc": "Installations électriques, tableaux, câblage. Chaque intervention documentée avec GPS et photos — preuves inviolables pour clore tout litige.",
+        "cta": "Documentez chaque intervention"
+      },
+      "idraulici": {
+        "name": "Plombiers",
+        "desc": "Plomberie, chauffage, chaudières. Rapports GPS avec photos avant/après — zéro litige sur les travaux réalisés.",
+        "cta": "Prouvez chaque travail"
       }
     },
     "app_mockup": {
