@@ -2,8 +2,8 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App per Installatori | GeoTapp — Rapportini GPS',
-    description: 'GeoTapp è l\'app e software per installatori, elettricisti e idraulici: rapportini GPS, prove fotografiche e report non alterabili. Prova gratis.',
+    title: 'App per Installatori, Elettricisti e Termoidraulici | GeoTapp — Rapportini GPS',
+    description: 'GeoTapp è l\'app per installatori, elettricisti, idraulici e termoidraulici: rapportini GPS verificati, prove fotografiche e report non alterabili. Prova gratis.',
   },
   hero: {
     badge: 'Software per Installatori, Elettricisti, Idraulici e Manutentori',
