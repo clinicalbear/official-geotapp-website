@@ -518,7 +518,7 @@ export default function GeoTappApp() {
         <div className="mx-auto mb-14 max-w-3xl text-center">
           <h2 className="text-3xl font-display font-bold text-slate-900 md:text-5xl">
             {isItalian
-              ? 'Cosa fa davvero GeoTapp TimeTracker oggi'
+              ? 'App timbrature geolocalizzate: cosa fa davvero GeoTapp TimeTracker'
               : 'What GeoTapp TimeTracker really does today'}
           </h2>
           <p className="mt-5 text-xl text-slate-500">
