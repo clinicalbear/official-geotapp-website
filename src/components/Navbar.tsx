@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -45,6 +45,8 @@ export default function Navbar() {
   const [productMenuOpen, setProductMenuOpen] = useState(false);
   const [sectorMenuOpen, setSectorMenuOpen] = useState(false);
   const [sectorMobileOpen, setSectorMobileOpen] = useState(false);
+  const productLeaveTimer = React.useRef<ReturnType<typeof setTimeout> | null>(null);
+  const sectorLeaveTimer = React.useRef<ReturnType<typeof setTimeout> | null>(null);
   const pathname = usePathname();
   const currentLocale = getLocaleFromPathname(pathname) ?? DEFAULT_LOCALE;
   const dict = getDictionary(currentLocale).navbar;
@@ -132,9 +134,14 @@ export default function Navbar() {
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8">
           <div
-            className="relative group pb-4"
-            onMouseEnter={() => setProductMenuOpen(true)}
-            onMouseLeave={() => setProductMenuOpen(false)}
+            className="relative group"
+            onMouseEnter={() => {
+              if (productLeaveTimer.current) clearTimeout(productLeaveTimer.current);
+              setProductMenuOpen(true);
+            }}
+            onMouseLeave={() => {
+              productLeaveTimer.current = setTimeout(() => setProductMenuOpen(false), 120);
+            }}
           >
             <button className="flex items-center gap-1 text-sm font-bold text-text-secondary hover:text-slate-900 transition-colors">
               {dict.products} <ChevronDown size={14} />
@@ -146,7 +153,7 @@ export default function Navbar() {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 10 }}
-                  className="absolute top-full left-0 w-96 bg-white border border-border rounded-xl p-2 shadow-2xl"
+                  className="absolute top-full left-0 mt-2 w-96 bg-white border border-border rounded-xl p-2 shadow-2xl"
                 >
                   <div className="grid gap-1">
                     {products.map((p) => (
@@ -176,9 +183,14 @@ export default function Navbar() {
 
           {/* Settori Dropdown */}
           <div
-            className="relative group pb-4"
-            onMouseEnter={() => setSectorMenuOpen(true)}
-            onMouseLeave={() => setSectorMenuOpen(false)}
+            className="relative group"
+            onMouseEnter={() => {
+              if (sectorLeaveTimer.current) clearTimeout(sectorLeaveTimer.current);
+              setSectorMenuOpen(true);
+            }}
+            onMouseLeave={() => {
+              sectorLeaveTimer.current = setTimeout(() => setSectorMenuOpen(false), 120);
+            }}
           >
             <button className="flex items-center gap-1 text-sm font-bold text-text-secondary hover:text-slate-900 transition-colors">
               {dict.sectors.label} <ChevronDown size={14} />
@@ -189,7 +201,7 @@ export default function Navbar() {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 10 }}
-                  className="absolute top-full left-0 w-52 bg-white border border-border rounded-xl p-2 shadow-2xl"
+                  className="absolute top-full left-0 mt-2 w-52 bg-white border border-border rounded-xl p-2 shadow-2xl"
                 >
                   <div className="grid gap-0.5">
                     {sectorLinks.map((sector) => (
