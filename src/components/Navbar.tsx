@@ -109,8 +109,8 @@ export default function Navbar() {
       className={clsx(
         'fixed top-0 w-full z-50 transition-all duration-300 border-b border-transparent',
         scrolled
-          ? 'bg-white/80 backdrop-blur-md border-border py-4 shadow-sm'
-          : 'bg-transparent py-6',
+          ? 'bg-white/95 backdrop-blur-md border-border py-4 shadow-sm'
+          : 'bg-white/75 backdrop-blur-sm py-6',
       )}
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
