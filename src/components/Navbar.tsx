@@ -133,27 +133,29 @@ export default function Navbar() {
             <button className="flex items-center gap-1 text-sm font-bold text-text-secondary hover:text-primary transition-colors">
               {dict.products} <ChevronDown size={14} />
             </button>
-            <div className="absolute top-full left-0 mt-2 w-96 bg-white border border-border rounded-xl p-2 shadow-2xl z-50 invisible opacity-0 pointer-events-none group-hover:visible group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-150">
-              <div className="grid gap-1">
-                {products.map((p) => (
-                  <Link
-                    key={p.name}
-                    href={p.href}
-                    className="flex items-start gap-4 p-3 rounded-lg hover:bg-primary/10 transition-colors group/item"
-                  >
-                    <div className="w-10 h-10 rounded-md bg-slate-50 border border-slate-200 flex items-center justify-center shadow-sm shrink-0 group-hover/item:bg-white transition-colors">
-                      <Image src={p.iconSrc} alt={p.name} width={28} height={28} className="object-contain" />
-                    </div>
-                    <div>
-                      <div className="text-sm font-bold text-slate-900 group-hover/item:text-primary transition-colors">
-                        {p.name}
+            <div className="absolute top-full left-0 w-96 pt-2 z-50 invisible opacity-0 pointer-events-none group-hover:visible group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-150">
+              <div className="bg-white border border-border rounded-xl p-2 shadow-2xl">
+                <div className="grid gap-1">
+                  {products.map((p) => (
+                    <Link
+                      key={p.name}
+                      href={p.href}
+                      className="flex items-start gap-4 p-3 rounded-lg hover:bg-primary/10 transition-colors group/item"
+                    >
+                      <div className="w-10 h-10 rounded-md bg-slate-50 border border-slate-200 flex items-center justify-center shadow-sm shrink-0 group-hover/item:bg-white transition-colors">
+                        <Image src={p.iconSrc} alt={p.name} width={28} height={28} className="object-contain" />
                       </div>
-                      <div className="text-xs text-text-muted mt-0.5 font-medium">
-                        {p.desc}
+                      <div>
+                        <div className="text-sm font-bold text-slate-900 group-hover/item:text-primary transition-colors">
+                          {p.name}
+                        </div>
+                        <div className="text-xs text-text-muted mt-0.5 font-medium">
+                          {p.desc}
+                        </div>
                       </div>
-                    </div>
-                  </Link>
-                ))}
+                    </Link>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -163,17 +165,19 @@ export default function Navbar() {
             <button className="flex items-center gap-1 text-sm font-bold text-text-secondary hover:text-primary transition-colors">
               {dict.sectors.label} <ChevronDown size={14} />
             </button>
-            <div className="absolute top-full left-0 mt-2 w-52 bg-white border border-border rounded-xl p-2 shadow-2xl z-50 invisible opacity-0 pointer-events-none group-hover:visible group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-150">
-              <div className="grid gap-0.5">
-                {sectorLinks.map((sector) => (
-                  <Link
-                    key={sector.href}
-                    href={sector.href}
-                    className="block px-4 py-2.5 text-sm font-bold text-slate-700 hover:bg-primary/10 hover:text-primary rounded-lg transition-colors"
-                  >
-                    {sector.label}
-                  </Link>
-                ))}
+            <div className="absolute top-full left-0 w-52 pt-2 z-50 invisible opacity-0 pointer-events-none group-hover:visible group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-150">
+              <div className="bg-white border border-border rounded-xl p-2 shadow-2xl">
+                <div className="grid gap-0.5">
+                  {sectorLinks.map((sector) => (
+                    <Link
+                      key={sector.href}
+                      href={sector.href}
+                      className="block px-4 py-2.5 text-sm font-bold text-slate-700 hover:bg-primary/10 hover:text-primary rounded-lg transition-colors"
+                    >
+                      {sector.label}
+                    </Link>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
