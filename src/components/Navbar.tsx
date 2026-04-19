@@ -132,7 +132,7 @@ export default function Navbar() {
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8">
           <div
-            className="relative group"
+            className="relative group pb-4"
             onMouseEnter={() => setProductMenuOpen(true)}
             onMouseLeave={() => setProductMenuOpen(false)}
           >
@@ -146,7 +146,7 @@ export default function Navbar() {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 10 }}
-                  className="absolute top-full left-0 mt-4 w-96 bg-white border border-border rounded-xl p-2 shadow-2xl"
+                  className="absolute top-full left-0 w-96 bg-white border border-border rounded-xl p-2 shadow-2xl"
                 >
                   <div className="grid gap-1">
                     {products.map((p) => (
@@ -176,7 +176,7 @@ export default function Navbar() {
 
           {/* Settori Dropdown */}
           <div
-            className="relative group"
+            className="relative group pb-4"
             onMouseEnter={() => setSectorMenuOpen(true)}
             onMouseLeave={() => setSectorMenuOpen(false)}
           >
@@ -189,7 +189,7 @@ export default function Navbar() {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 10 }}
-                  className="absolute top-full left-0 mt-4 w-52 bg-white border border-border rounded-xl p-2 shadow-2xl"
+                  className="absolute top-full left-0 w-52 bg-white border border-border rounded-xl p-2 shadow-2xl"
                 >
                   <div className="grid gap-0.5">
                     {sectorLinks.map((sector) => (
