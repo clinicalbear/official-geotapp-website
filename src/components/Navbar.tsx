@@ -27,7 +27,7 @@ function CartButton() {
   return (
     <button
       onClick={toggleCart}
-      className="relative p-2 text-text-secondary hover:text-slate-900 transition-colors"
+      className="relative p-2 text-text-secondary hover:text-primary transition-colors"
     >
       <ShoppingCart size={22} />
       {items.length > 0 && (
@@ -107,9 +107,9 @@ export default function Navbar() {
   return (
     <nav
       className={clsx(
-        'fixed top-0 w-full z-50 transition-all duration-300 border-b border-transparent',
+        'fixed top-0 w-full z-50 transition-all duration-300 border-b border-transparent shadow-[0_2px_12px_rgba(0,0,0,0.08)]',
         scrolled
-          ? 'bg-white/95 backdrop-blur-md border-border py-4 shadow-sm'
+          ? 'bg-white/95 backdrop-blur-md border-border py-4'
           : 'bg-white/75 backdrop-blur-sm py-6',
       )}
     >
@@ -130,7 +130,7 @@ export default function Navbar() {
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8">
           <div className="relative group">
-            <button className="flex items-center gap-1 text-sm font-bold text-text-secondary hover:text-slate-900 transition-colors">
+            <button className="flex items-center gap-1 text-sm font-bold text-text-secondary hover:text-primary transition-colors">
               {dict.products} <ChevronDown size={14} />
             </button>
             <div className="absolute top-full left-0 mt-2 w-96 bg-white border border-border rounded-xl p-2 shadow-2xl z-50 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-150">
@@ -139,7 +139,7 @@ export default function Navbar() {
                   <Link
                     key={p.name}
                     href={p.href}
-                    className="flex items-start gap-4 p-3 rounded-lg hover:bg-slate-50 transition-colors group/item"
+                    className="flex items-start gap-4 p-3 rounded-lg hover:bg-primary/10 transition-colors group/item"
                   >
                     <div className="w-10 h-10 rounded-md bg-slate-50 border border-slate-200 flex items-center justify-center shadow-sm shrink-0 group-hover/item:bg-white transition-colors">
                       <Image src={p.iconSrc} alt={p.name} width={28} height={28} className="object-contain" />
@@ -160,7 +160,7 @@ export default function Navbar() {
 
           {/* Settori Dropdown */}
           <div className="relative group">
-            <button className="flex items-center gap-1 text-sm font-bold text-text-secondary hover:text-slate-900 transition-colors">
+            <button className="flex items-center gap-1 text-sm font-bold text-text-secondary hover:text-primary transition-colors">
               {dict.sectors.label} <ChevronDown size={14} />
             </button>
             <div className="absolute top-full left-0 mt-2 w-52 bg-white border border-border rounded-xl p-2 shadow-2xl z-50 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-150">
@@ -169,7 +169,7 @@ export default function Navbar() {
                   <Link
                     key={sector.href}
                     href={sector.href}
-                    className="block px-4 py-2.5 text-sm font-bold text-slate-700 hover:bg-slate-50 hover:text-slate-900 rounded-lg transition-colors"
+                    className="block px-4 py-2.5 text-sm font-bold text-slate-700 hover:bg-primary/10 hover:text-primary rounded-lg transition-colors"
                   >
                     {sector.label}
                   </Link>
@@ -180,25 +180,25 @@ export default function Navbar() {
 
           <Link
             href={getLink('/pricing')}
-            className="text-sm font-bold text-text-secondary hover:text-slate-900 transition-colors"
+            className="text-sm font-bold text-text-secondary hover:text-primary transition-colors"
           >
             {dict.pricing}
           </Link>
           <Link
             href={getLink('/confronto')}
-            className="text-sm font-bold text-text-secondary hover:text-slate-900 transition-colors"
+            className="text-sm font-bold text-text-secondary hover:text-primary transition-colors"
           >
             {dict.compare}
           </Link>
           <Link
             href={getLink('/contact')}
-            className="text-sm font-bold text-text-secondary hover:text-slate-900 transition-colors"
+            className="text-sm font-bold text-text-secondary hover:text-primary transition-colors"
           >
             {dict.contact}
           </Link>
           <Link
             href="/blog"
-            className="text-sm font-bold text-text-secondary hover:text-slate-900 transition-colors"
+            className="text-sm font-bold text-text-secondary hover:text-primary transition-colors"
           >
             {dict.blog}
           </Link>
@@ -209,7 +209,7 @@ export default function Navbar() {
             href="https://flow.geotapp.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm font-bold text-text-secondary hover:text-slate-900 transition-colors"
+            className="text-sm font-bold text-text-secondary hover:text-primary transition-colors"
           >
             {dict.login}
           </Link>
@@ -278,7 +278,7 @@ export default function Navbar() {
                         key={`mobile-${sector.href}`}
                         href={sector.href}
                         onClick={() => { setIsOpen(false); setSectorMobileOpen(false); }}
-                        className="text-base font-medium text-text-muted hover:text-slate-900"
+                        className="text-base font-medium text-text-muted hover:text-primary"
                       >
                         {sector.label}
                       </Link>
