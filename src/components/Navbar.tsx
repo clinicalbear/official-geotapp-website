@@ -133,7 +133,7 @@ export default function Navbar() {
             <button className="flex items-center gap-1 text-sm font-bold text-text-secondary hover:text-primary transition-colors">
               {dict.products} <ChevronDown size={14} />
             </button>
-            <div className="absolute top-full left-0 mt-2 w-96 bg-white border border-border rounded-xl p-2 shadow-2xl z-50 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-150">
+            <div className="absolute top-full left-0 mt-2 w-96 bg-white border border-border rounded-xl p-2 shadow-2xl z-50 invisible opacity-0 pointer-events-none group-hover:visible group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-150">
               <div className="grid gap-1">
                 {products.map((p) => (
                   <Link
@@ -163,7 +163,7 @@ export default function Navbar() {
             <button className="flex items-center gap-1 text-sm font-bold text-text-secondary hover:text-primary transition-colors">
               {dict.sectors.label} <ChevronDown size={14} />
             </button>
-            <div className="absolute top-full left-0 mt-2 w-52 bg-white border border-border rounded-xl p-2 shadow-2xl z-50 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-150">
+            <div className="absolute top-full left-0 mt-2 w-52 bg-white border border-border rounded-xl p-2 shadow-2xl z-50 invisible opacity-0 pointer-events-none group-hover:visible group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-150">
               <div className="grid gap-0.5">
                 {sectorLinks.map((sector) => (
                   <Link
