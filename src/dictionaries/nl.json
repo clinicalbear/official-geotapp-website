@@ -393,7 +393,9 @@
       "company_placeholder": "Bedrijfsnaam",
       "message_placeholder": "Uw bericht...",
       "submit": "Bericht versturen",
-      "submitting": "Versturen..."
+      "submitting": "Versturen...",
+      "all_required": "* Alle velden zijn verplicht",
+      "reason_placeholder": "Selecteer een reden"
     },
     "hours": "Ma-Vr 9:00 - 18:00",
     "location_city": "Brescia, IT",

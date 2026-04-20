@@ -392,7 +392,9 @@
       "company_placeholder": "Virksomhedsnavn",
       "message_placeholder": "Din besked...",
       "submit": "Send besked",
-      "submitting": "Sender..."
+      "submitting": "Sender...",
+      "all_required": "* Alle felter er påkrævede",
+      "reason_placeholder": "Vælg en årsag"
     },
     "hours": "Man-Fre 9:00 - 18:00",
     "location_city": "Brescia, IT",

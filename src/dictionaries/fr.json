@@ -392,7 +392,9 @@
       "company_placeholder": "Nom de l'entreprise",
       "message_placeholder": "Votre message...",
       "submit": "Envoyer le message",
-      "submitting": "Envoi en cours..."
+      "submitting": "Envoi en cours...",
+      "all_required": "* Tous les champs sont obligatoires",
+      "reason_placeholder": "Sélectionnez un motif"
     },
     "hours": "Lun-Ven 9:00 - 18:00",
     "location_city": "Brescia, IT",

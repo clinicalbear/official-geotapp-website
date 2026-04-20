@@ -393,7 +393,9 @@
       "company_placeholder": "Company name",
       "message_placeholder": "Your message...",
       "submit": "Send Message",
-      "submitting": "Sending..."
+      "submitting": "Sending...",
+      "all_required": "* All fields are required",
+      "reason_placeholder": "Select a reason"
     },
     "hours": "Mon-Fri 9:00 - 18:00",
     "location_city": "Brescia, IT",

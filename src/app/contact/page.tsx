@@ -23,6 +23,7 @@ export default function ContactPage() {
   const currentLocale = getLocaleFromPathname(pathname) ?? DEFAULT_LOCALE;
   const dict = getDictionary(currentLocale).contact;
   const [loading, setLoading] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
   const [status, setStatus] = useState<{
     type: 'success' | 'error';
     text: string;
@@ -33,12 +34,26 @@ export default function ContactPage() {
     sector: '',
     company: '',
     email: '',
-    reason: dict.form.reason_options[0],
+    reason: '',
     message: '',
   });
 
+  const isValid = (v: string) => v.trim().length > 0;
+
+  const fieldClass = (value: string, extra = '') => {
+    const base = `w-full bg-slate-50 border rounded-xl px-4 py-3 text-slate-900 focus:ring-2 outline-none transition-all ${extra}`;
+    if (!submitted) return `${base} border-slate-200 focus:border-primary focus:ring-primary/20`;
+    if (isValid(value)) return `${base} border-[#8FC436] ring-2 ring-[#8FC436]/20 focus:border-[#8FC436] focus:ring-[#8FC436]/20`;
+    return `${base} border-red-400 ring-2 ring-red-400/20 focus:border-red-400 focus:ring-red-400/20`;
+  };
+
+  const allFieldsValid = () =>
+    Object.values(formData).every((v) => isValid(v));
+
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    setSubmitted(true);
+    if (!allFieldsValid()) return;
     setStatus(null);
     setLoading(true);
     try {
@@ -50,9 +65,10 @@ export default function ContactPage() {
         sector: '',
         company: '',
         email: '',
-        reason: dict.form.reason_options[0],
+        reason: '',
         message: '',
       });
+      setSubmitted(false);
     } catch {
       setStatus({ type: 'error', text: dict.error });
     } finally {
@@ -154,6 +170,8 @@ export default function ContactPage() {
             className="bg-white p-8 rounded-3xl border border-border shadow-2xl shadow-slate-200/50"
           >
             <form className="space-y-6" onSubmit={handleSubmit}>
+              <p className="text-xs text-slate-400">{dict.form.all_required}</p>
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-sm font-bold text-slate-700 mb-2">
@@ -161,10 +179,9 @@ export default function ContactPage() {
                   </label>
                   <input
                     type="text"
-                    required
                     value={formData.firstName}
                     onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
-                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                    className={fieldClass(formData.firstName)}
                     placeholder={dict.form.first_name_placeholder}
                   />
                 </div>
@@ -174,10 +191,9 @@ export default function ContactPage() {
                   </label>
                   <input
                     type="text"
-                    required
                     value={formData.lastName}
                     onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
-                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                    className={fieldClass(formData.lastName)}
                     placeholder={dict.form.last_name_placeholder}
                   />
                 </div>
@@ -189,10 +205,9 @@ export default function ContactPage() {
                     {dict.form.sector}
                   </label>
                   <select
-                    required
                     value={formData.sector}
                     onChange={(e) => setFormData({ ...formData, sector: e.target.value })}
-                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all appearance-none"
+                    className={fieldClass(formData.sector, 'appearance-none')}
                   >
                     <option value="" disabled>{dict.form.sector_placeholder}</option>
                     {(dict.form.sector_options as { value: string; label: string }[]).map((opt) => (
@@ -208,7 +223,7 @@ export default function ContactPage() {
                     type="text"
                     value={formData.company}
                     onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                    className={fieldClass(formData.company)}
                     placeholder="Nome Azienda Srl"
                   />
                 </div>
@@ -220,10 +235,9 @@ export default function ContactPage() {
                 </label>
                 <input
                   type="email"
-                  required
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                  className={fieldClass(formData.email)}
                   placeholder="mario@azienda.com"
                 />
               </div>
@@ -235,10 +249,11 @@ export default function ContactPage() {
                 <select
                   value={formData.reason}
                   onChange={(e) => setFormData({ ...formData, reason: e.target.value })}
-                  className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all appearance-none"
+                  className={fieldClass(formData.reason, 'appearance-none')}
                 >
+                  <option value="" disabled>{dict.form.reason_placeholder}</option>
                   {dict.form.reason_options.map((opt: string) => (
-                    <option key={opt}>{opt}</option>
+                    <option key={opt} value={opt}>{opt}</option>
                   ))}
                 </select>
               </div>
@@ -249,10 +264,9 @@ export default function ContactPage() {
                 </label>
                 <textarea
                   rows={4}
-                  required
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all resize-none"
+                  className={fieldClass(formData.message, 'resize-none')}
                   placeholder="..."
                 />
               </div>
