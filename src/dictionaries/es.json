@@ -344,6 +344,38 @@
     "guarantee_text": "Primera respuesta media en 12 horas hábiles. Ninguna consulta perdida en el vacío.",
     "form": {
       "name": "Nombre",
+      "first_name": "Nombre",
+      "last_name": "Apellido",
+      "first_name_placeholder": "Carlos",
+      "last_name_placeholder": "García",
+      "sector": "Sector",
+      "sector_placeholder": "Selecciona tu sector",
+      "sector_options": [
+        {
+          "value": "installatori",
+          "label": "Instaladores"
+        },
+        {
+          "value": "sicurezza",
+          "label": "Seguridad y vigilancia"
+        },
+        {
+          "value": "pulizie",
+          "label": "Limpieza y saneamiento"
+        },
+        {
+          "value": "elettricisti",
+          "label": "Electricistas"
+        },
+        {
+          "value": "idraulici",
+          "label": "Fontaneros"
+        },
+        {
+          "value": "altro",
+          "label": "Otro sector"
+        }
+      ],
       "company": "Empresa",
       "email": "Correo corporativo",
       "reason": "Motivo del contacto",

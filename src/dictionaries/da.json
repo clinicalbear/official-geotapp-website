@@ -344,6 +344,38 @@
     "guarantee_text": "Gennemsnitligt første svar inden for 12 arbejdstimer. Ingen sager tabt i det tomme.",
     "form": {
       "name": "Navn",
+      "first_name": "Fornavn",
+      "last_name": "Efternavn",
+      "first_name_placeholder": "Lars",
+      "last_name_placeholder": "Hansen",
+      "sector": "Sektor",
+      "sector_placeholder": "Vælg din sektor",
+      "sector_options": [
+        {
+          "value": "installatori",
+          "label": "Installatører"
+        },
+        {
+          "value": "sicurezza",
+          "label": "Sikkerhed & Overvågning"
+        },
+        {
+          "value": "pulizie",
+          "label": "Rengøring & Sanitet"
+        },
+        {
+          "value": "elettricisti",
+          "label": "Elektrikere"
+        },
+        {
+          "value": "idraulici",
+          "label": "VVS-installatører"
+        },
+        {
+          "value": "altro",
+          "label": "Anden sektor"
+        }
+      ],
       "company": "Virksomhed",
       "email": "Arbejdsmailadresse",
       "reason": "Årsag til kontakt",

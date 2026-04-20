@@ -345,6 +345,38 @@
     "guarantee_text": "Durchschnittliche Erstantwort innerhalb von 12 Geschäftsstunden. Keine verlorenen Anfragen.",
     "form": {
       "name": "Name",
+      "first_name": "Vorname",
+      "last_name": "Nachname",
+      "first_name_placeholder": "Max",
+      "last_name_placeholder": "Müller",
+      "sector": "Branche",
+      "sector_placeholder": "Wähle deine Branche",
+      "sector_options": [
+        {
+          "value": "installatori",
+          "label": "Installateure"
+        },
+        {
+          "value": "sicurezza",
+          "label": "Sicherheit & Bewachung"
+        },
+        {
+          "value": "pulizie",
+          "label": "Reinigung & Desinfektion"
+        },
+        {
+          "value": "elettricisti",
+          "label": "Elektriker"
+        },
+        {
+          "value": "idraulici",
+          "label": "Klempner / Installateure"
+        },
+        {
+          "value": "altro",
+          "label": "Anderer Bereich"
+        }
+      ],
       "company": "Unternehmen",
       "email": "Geschäftliche E-Mail",
       "reason": "Anfragegrund",

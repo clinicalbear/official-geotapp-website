@@ -344,6 +344,38 @@
     "guarantee_text": "Среднее время первого ответа — 12 рабочих часов. Ни одно обращение не теряется.",
     "form": {
       "name": "Имя",
+      "first_name": "Имя",
+      "last_name": "Фамилия",
+      "first_name_placeholder": "Иван",
+      "last_name_placeholder": "Иванов",
+      "sector": "Отрасль",
+      "sector_placeholder": "Выберите отрасль",
+      "sector_options": [
+        {
+          "value": "installatori",
+          "label": "Монтажники"
+        },
+        {
+          "value": "sicurezza",
+          "label": "Безопасность и охрана"
+        },
+        {
+          "value": "pulizie",
+          "label": "Уборка и дезинфекция"
+        },
+        {
+          "value": "elettricisti",
+          "label": "Электрики"
+        },
+        {
+          "value": "idraulici",
+          "label": "Сантехники"
+        },
+        {
+          "value": "altro",
+          "label": "Другой сектор"
+        }
+      ],
       "company": "Компания",
       "email": "Рабочий e-mail",
       "reason": "Причина обращения",

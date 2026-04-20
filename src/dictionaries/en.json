@@ -345,6 +345,38 @@
     "guarantee_text": "Average first response within 12 business hours. No tickets lost in the void.",
     "form": {
       "name": "Name",
+      "first_name": "First name",
+      "last_name": "Last name",
+      "first_name_placeholder": "John",
+      "last_name_placeholder": "Smith",
+      "sector": "Sector",
+      "sector_placeholder": "Select your sector",
+      "sector_options": [
+        {
+          "value": "installatori",
+          "label": "Installers"
+        },
+        {
+          "value": "sicurezza",
+          "label": "Security & Surveillance"
+        },
+        {
+          "value": "pulizie",
+          "label": "Cleaning & Sanitation"
+        },
+        {
+          "value": "elettricisti",
+          "label": "Electricians"
+        },
+        {
+          "value": "idraulici",
+          "label": "Plumbers"
+        },
+        {
+          "value": "altro",
+          "label": "Other sector"
+        }
+      ],
       "company": "Company",
       "email": "Work Email",
       "reason": "Reason for Contact",

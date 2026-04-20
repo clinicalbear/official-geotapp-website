@@ -345,6 +345,38 @@
     "guarantee_text": "Gemiddeld eerste reactie binnen 12 werkuren. Geen tickets die verloren gaan.",
     "form": {
       "name": "Naam",
+      "first_name": "Voornaam",
+      "last_name": "Achternaam",
+      "first_name_placeholder": "Jan",
+      "last_name_placeholder": "Jansen",
+      "sector": "Sector",
+      "sector_placeholder": "Selecteer je sector",
+      "sector_options": [
+        {
+          "value": "installatori",
+          "label": "Installateurs"
+        },
+        {
+          "value": "sicurezza",
+          "label": "Beveiliging & Bewaking"
+        },
+        {
+          "value": "pulizie",
+          "label": "Schoonmaak & Sanitatie"
+        },
+        {
+          "value": "elettricisti",
+          "label": "Elektriciens"
+        },
+        {
+          "value": "idraulici",
+          "label": "Loodgieters"
+        },
+        {
+          "value": "altro",
+          "label": "Andere sector"
+        }
+      ],
       "company": "Bedrijf",
       "email": "Zakelijk e-mailadres",
       "reason": "Reden van contact",

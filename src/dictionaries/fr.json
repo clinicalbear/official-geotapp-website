@@ -344,6 +344,38 @@
     "guarantee_text": "Première réponse moyenne en 12 heures ouvrées. Aucune demande perdue dans le vide.",
     "form": {
       "name": "Nom",
+      "first_name": "Prénom",
+      "last_name": "Nom de famille",
+      "first_name_placeholder": "Jean",
+      "last_name_placeholder": "Dupont",
+      "sector": "Secteur",
+      "sector_placeholder": "Sélectionnez votre secteur",
+      "sector_options": [
+        {
+          "value": "installatori",
+          "label": "Installateurs"
+        },
+        {
+          "value": "sicurezza",
+          "label": "Sécurité & Surveillance"
+        },
+        {
+          "value": "pulizie",
+          "label": "Nettoyage & Assainissement"
+        },
+        {
+          "value": "elettricisti",
+          "label": "Électriciens"
+        },
+        {
+          "value": "idraulici",
+          "label": "Plombiers"
+        },
+        {
+          "value": "altro",
+          "label": "Autre secteur"
+        }
+      ],
       "company": "Entreprise",
       "email": "E-mail professionnel",
       "reason": "Motif du contact",

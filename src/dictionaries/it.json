@@ -345,6 +345,38 @@
     "guarantee_text": "Risposta media entro 12 ore lavorative. Nessun ticket nel vuoto.",
     "form": {
       "name": "Nome",
+      "first_name": "Nome",
+      "last_name": "Cognome",
+      "first_name_placeholder": "Mario",
+      "last_name_placeholder": "Rossi",
+      "sector": "Settore",
+      "sector_placeholder": "Seleziona il tuo settore",
+      "sector_options": [
+        {
+          "value": "installatori",
+          "label": "Installatori"
+        },
+        {
+          "value": "sicurezza",
+          "label": "Sicurezza e vigilanza"
+        },
+        {
+          "value": "pulizie",
+          "label": "Pulizie e sanificazione"
+        },
+        {
+          "value": "elettricisti",
+          "label": "Elettricisti"
+        },
+        {
+          "value": "idraulici",
+          "label": "Idraulici"
+        },
+        {
+          "value": "altro",
+          "label": "Altro settore"
+        }
+      ],
       "company": "Azienda",
       "email": "Email aziendale",
       "reason": "Motivo del contatto",

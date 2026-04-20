@@ -344,6 +344,38 @@
     "guarantee_text": "Genomsnittligt första svar inom 12 arbetstimmar. Inga ärenden förlorade i tomma intet.",
     "form": {
       "name": "Namn",
+      "first_name": "Förnamn",
+      "last_name": "Efternamn",
+      "first_name_placeholder": "Lars",
+      "last_name_placeholder": "Lindgren",
+      "sector": "Sektor",
+      "sector_placeholder": "Välj din sektor",
+      "sector_options": [
+        {
+          "value": "installatori",
+          "label": "Installatörer"
+        },
+        {
+          "value": "sicurezza",
+          "label": "Säkerhet & Bevakning"
+        },
+        {
+          "value": "pulizie",
+          "label": "Städning & Sanering"
+        },
+        {
+          "value": "elettricisti",
+          "label": "Elektriker"
+        },
+        {
+          "value": "idraulici",
+          "label": "VVS-installatörer"
+        },
+        {
+          "value": "altro",
+          "label": "Annan sektor"
+        }
+      ],
       "company": "Företag",
       "email": "Jobbmail",
       "reason": "Anledning till kontakt",
