@@ -28,7 +28,9 @@ export default function ContactPage() {
     text: string;
   } | null>(null);
   const [formData, setFormData] = useState({
-    name: '',
+    firstName: '',
+    lastName: '',
+    sector: '',
     company: '',
     email: '',
     reason: dict.form.reason_options[0],
@@ -40,10 +42,12 @@ export default function ContactPage() {
     setStatus(null);
     setLoading(true);
     try {
-      await submitContact(formData);
+      await submitContact({ ...formData, language: currentLocale });
       setStatus({ type: 'success', text: dict.success });
       setFormData({
-        name: '',
+        firstName: '',
+        lastName: '',
+        sector: '',
         company: '',
         email: '',
         reason: dict.form.reason_options[0],
@@ -153,16 +157,48 @@ export default function ContactPage() {
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-sm font-bold text-slate-700 mb-2">
-                    {dict.form.name}
+                    {dict.form.first_name}
                   </label>
                   <input
                     type="text"
                     required
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    value={formData.firstName}
+                    onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
                     className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
-                    placeholder="Mario Rossi"
+                    placeholder={dict.form.first_name_placeholder}
                   />
+                </div>
+                <div>
+                  <label className="block text-sm font-bold text-slate-700 mb-2">
+                    {dict.form.last_name}
+                  </label>
+                  <input
+                    type="text"
+                    required
+                    value={formData.lastName}
+                    onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
+                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                    placeholder={dict.form.last_name_placeholder}
+                  />
+                </div>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <label className="block text-sm font-bold text-slate-700 mb-2">
+                    {dict.form.sector}
+                  </label>
+                  <select
+                    required
+                    value={formData.sector}
+                    onChange={(e) => setFormData({ ...formData, sector: e.target.value })}
+                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all appearance-none"
+                  >
+                    <option value="" disabled>{dict.form.sector_placeholder}</option>
+                    {(dict.form.sector_options as { value: string; label: string }[]).map((opt) => (
+                      <option key={opt.value} value={opt.value}>{opt.label}</option>
+                    ))}
+                  </select>
                 </div>
                 <div>
                   <label className="block text-sm font-bold text-slate-700 mb-2">
