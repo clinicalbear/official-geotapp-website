@@ -10,7 +10,7 @@ import {
   resolveLocale,
   stripLocaleFromPathname,
 } from '@/lib/i18n/locale-routing';
-import { translatePath } from '@/lib/i18n/slug-map';
+import { translatePath, REVERSE_SLUG_MAP } from '@/lib/i18n/slug-map';
 
 const PUBLIC_FILE = /\.(.*)$/;
 
@@ -655,6 +655,31 @@ export async function middleware(req: NextRequest) {
       const redirectUrl = req.nextUrl.clone();
       redirectUrl.pathname = strippedPath;
       return NextResponse.redirect(redirectUrl, 308);
+    }
+
+    // Reverse-translate localized slugs to canonical Italian paths.
+    // The sitemap generates translated URLs (e.g. /nl/sectoren/schoonmaak/) but
+    // Next.js app-router files use Italian canonical slugs (settori/pulizie).
+    // Rewrite translated paths internally so the correct page.tsx is served
+    // while the browser URL stays at the translated form.
+    const strippedForReverse = stripLocaleFromPathname(pathname);
+    const reverseMap = REVERSE_SLUG_MAP[pathnameLocale] ?? {};
+    const slugSegments = strippedForReverse.split('/').filter(Boolean);
+    const canonicalSegments = slugSegments.map((seg) => reverseMap[seg] ?? seg);
+    const hasTranslatedSlugs = canonicalSegments.some((seg, i) => seg !== slugSegments[i]);
+
+    if (hasTranslatedSlugs) {
+      const canonicalInternalPath = `/${pathnameLocale}/${canonicalSegments.join('/')}/`;
+      const rewriteUrl = req.nextUrl.clone();
+      rewriteUrl.pathname = canonicalInternalPath;
+      const rewriteResponse = NextResponse.rewrite(rewriteUrl);
+      rewriteResponse.cookies.set(LOCALE_COOKIE_NAME, pathnameLocale, {
+        path: '/',
+        sameSite: 'lax',
+        maxAge: 60 * 60 * 24 * 365,
+      });
+      applySecurityHeaders(rewriteResponse);
+      return rewriteResponse;
     }
 
     const response = NextResponse.next();

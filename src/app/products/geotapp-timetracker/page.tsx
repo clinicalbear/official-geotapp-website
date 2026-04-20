@@ -473,14 +473,14 @@ export default function GeoTappApp() {
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-lg text-slate-500">
             {isItalian
-              ? 'Disponibile su App Store. Presto anche su Google Play.'
+              ? 'Disponibile su Google Play e su App Store.'
               : currentLocale === 'de'
-              ? 'Verfügbar im App Store. Bald auch auf Google Play.'
-              : 'Available on the App Store. Coming soon on Google Play.'}
+              ? 'Verfügbar auf Google Play und im App Store.'
+              : 'Available on Google Play and on the App Store.'}
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-5 sm:flex-row">
             {/* Google Play badge */}
-            <div className="flex cursor-not-allowed items-center gap-4 rounded-2xl border-2 border-slate-200 bg-slate-50 px-7 py-4 opacity-60 transition-opacity hover:opacity-75">
+            <a href="https://play.google.com/store/apps/details?id=com.geotapp.timetrackerandroid" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 rounded-2xl border-2 border-slate-200 bg-slate-50 px-7 py-4 transition-opacity hover:opacity-80">
               <svg viewBox="0 0 24 24" className="h-8 w-8 shrink-0" aria-hidden="true">
                 <path d="M3.18 23.76c.3.17.64.24.99.21l13.1-7.57-2.83-2.83-11.26 10.19z" fill="#EA4335"/>
                 <path d="M22.35 10.56l-3.17-1.83-3.18 3.18 3.18 3.18 3.19-1.84a1.83 1.83 0 0 0 0-2.69z" fill="#FBBC04"/>
@@ -493,10 +493,7 @@ export default function GeoTappApp() {
                 </div>
                 <div className="text-lg font-bold text-slate-900 leading-tight">Google Play</div>
               </div>
-              <span className="ml-2 rounded-full bg-amber-100 px-3 py-1 text-xs font-bold text-amber-700">
-                {isItalian ? 'Presto' : currentLocale === 'de' ? 'Bald' : 'Soon'}
-              </span>
-            </div>
+            </a>
 
             {/* App Store badge */}
             <a href="https://apps.apple.com/app/id6761460207" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 rounded-2xl border-2 border-slate-200 bg-slate-50 px-7 py-4 transition-opacity hover:opacity-80">
