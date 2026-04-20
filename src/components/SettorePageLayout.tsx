@@ -12,17 +12,19 @@ import BlogHighlights from '@/components/BlogHighlights';
 import { trackEvent } from '@/lib/analytics';
 
 // WP category IDs per settore — used for BlogHighlights
-// pulizie       → gestione-presenze (9)   — cleaning companies need attendance
-// installatori  → geotapp-flow (65)       — field operations
-// sicurezza     → gestione-presenze (9)   — security services need attendance
-// elettricisti  → geotapp-flow (65)       — field intervention reporting
-// idraulici     → geotapp-flow (65)       — field intervention reporting
+// pulizie          → gestione-presenze (9)   — cleaning companies need attendance
+// installatori     → geotapp-flow (65)       — field operations
+// sicurezza        → gestione-presenze (9)   — security services need attendance
+// elettricisti     → geotapp-flow (65)       — field intervention reporting
+// idraulici        → geotapp-flow (65)       — field intervention reporting
+// termoidraulici   → geotapp-flow (65)       — field intervention reporting
 const SETTORE_CATEGORY: Record<SettoreSlug, number> = {
   pulizie: 9,
   installatori: 65,
   sicurezza: 9,
   elettricisti: 65,
   idraulici: 65,
+  termoidraulici: 65,
 };
 
 interface Props {
@@ -35,11 +37,12 @@ const SETTORE_COLORS: Record<
   SettoreSlug,
   { badge: string; h1: string; btn: string; step: string; accent: string; light: string }
 > = {
-  installatori: { badge: 'bg-indigo-100 text-indigo-700', h1: 'text-indigo-600', btn: 'bg-indigo-600 hover:bg-indigo-700', step: 'bg-indigo-600', accent: 'text-indigo-600', light: 'bg-indigo-50' },
-  pulizie:      { badge: 'bg-cyan-100 text-cyan-700',    h1: 'text-cyan-600',   btn: 'bg-cyan-600 hover:bg-cyan-700',     step: 'bg-cyan-600',   accent: 'text-cyan-600',   light: 'bg-cyan-50'   },
-  sicurezza:    { badge: 'bg-amber-100 text-amber-700',  h1: 'text-amber-600',  btn: 'bg-amber-600 hover:bg-amber-700',   step: 'bg-amber-600',  accent: 'text-amber-600',  light: 'bg-amber-50'  },
-  elettricisti: { badge: 'bg-yellow-100 text-yellow-700', h1: 'text-yellow-600', btn: 'bg-yellow-600 hover:bg-yellow-700', step: 'bg-yellow-600', accent: 'text-yellow-600', light: 'bg-yellow-50' },
-  idraulici:    { badge: 'bg-blue-100 text-blue-700',    h1: 'text-blue-600',   btn: 'bg-blue-600 hover:bg-blue-700',     step: 'bg-blue-600',   accent: 'text-blue-600',   light: 'bg-blue-50'   },
+  installatori:    { badge: 'bg-indigo-100 text-indigo-700', h1: 'text-indigo-600', btn: 'bg-indigo-600 hover:bg-indigo-700', step: 'bg-indigo-600', accent: 'text-indigo-600', light: 'bg-indigo-50' },
+  pulizie:         { badge: 'bg-cyan-100 text-cyan-700',    h1: 'text-cyan-600',   btn: 'bg-cyan-600 hover:bg-cyan-700',     step: 'bg-cyan-600',   accent: 'text-cyan-600',   light: 'bg-cyan-50'   },
+  sicurezza:       { badge: 'bg-amber-100 text-amber-700',  h1: 'text-amber-600',  btn: 'bg-amber-600 hover:bg-amber-700',   step: 'bg-amber-600',  accent: 'text-amber-600',  light: 'bg-amber-50'  },
+  elettricisti:    { badge: 'bg-yellow-100 text-yellow-700', h1: 'text-yellow-600', btn: 'bg-yellow-600 hover:bg-yellow-700', step: 'bg-yellow-600', accent: 'text-yellow-600', light: 'bg-yellow-50' },
+  idraulici:       { badge: 'bg-blue-100 text-blue-700',    h1: 'text-blue-600',   btn: 'bg-blue-600 hover:bg-blue-700',     step: 'bg-blue-600',   accent: 'text-blue-600',   light: 'bg-blue-50'   },
+  termoidraulici:  { badge: 'bg-orange-100 text-orange-700', h1: 'text-orange-600', btn: 'bg-orange-600 hover:bg-orange-700', step: 'bg-orange-600', accent: 'text-orange-600', light: 'bg-orange-50' },
 };
 
 const RISORSE_LABELS: Record<string, string> = {
@@ -615,17 +618,17 @@ export default function SettorePageLayout({ content, locale, settore }: Props) {
       {/* ── ALTRI SETTORI ── */}
       {(() => {
         const OTHER_SETTORI: Record<string, Record<SettoreSlug, string>> = {
-          it: { pulizie: 'Imprese di pulizie', installatori: 'Installatori', sicurezza: 'Aziende di sicurezza', elettricisti: 'Elettricisti', idraulici: 'Idraulici' },
-          en: { pulizie: 'Cleaning companies', installatori: 'Installers', sicurezza: 'Security services', elettricisti: 'Electricians', idraulici: 'Plumbers' },
-          de: { pulizie: 'Reinigungsunternehmen', installatori: 'Installateure', sicurezza: 'Sicherheitsdienste', elettricisti: 'Elektriker', idraulici: 'Klempner' },
-          fr: { pulizie: 'Entreprises de nettoyage', installatori: 'Installateurs', sicurezza: 'Services de sécurité', elettricisti: 'Électriciens', idraulici: 'Plombiers' },
-          es: { pulizie: 'Empresas de limpieza', installatori: 'Instaladores', sicurezza: 'Servicios de seguridad', elettricisti: 'Electricistas', idraulici: 'Fontaneros' },
-          pt: { pulizie: 'Empresas de limpeza', installatori: 'Instaladores', sicurezza: 'Serviços de segurança', elettricisti: 'Eletricistas', idraulici: 'Canalizadores' },
-          nl: { pulizie: 'Schoonmaakbedrijven', installatori: 'Installateurs', sicurezza: 'Beveiligingsdiensten', elettricisti: 'Elektriciens', idraulici: 'Loodgieters' },
-          da: { pulizie: 'Rengøringsvirksomheder', installatori: 'Installatører', sicurezza: 'Sikkerhedstjenester', elettricisti: 'Elektrikere', idraulici: 'VVS-installatører' },
-          sv: { pulizie: 'Städföretag', installatori: 'Installatörer', sicurezza: 'Säkerhetstjänster', elettricisti: 'Elektriker', idraulici: 'Rörmokare' },
-          nb: { pulizie: 'Renholdsbedrifter', installatori: 'Installatører', sicurezza: 'Sikkerhetstjenester', elettricisti: 'Elektrikere', idraulici: 'Rørleggere' },
-          ru: { pulizie: 'Клининговые компании', installatori: 'Монтажники', sicurezza: 'Охранные службы', elettricisti: 'Электрики', idraulici: 'Сантехники' },
+          it: { pulizie: 'Imprese di pulizie', installatori: 'Installatori', sicurezza: 'Aziende di sicurezza', elettricisti: 'Elettricisti', idraulici: 'Idraulici', termoidraulici: 'Termoidraulici' },
+          en: { pulizie: 'Cleaning companies', installatori: 'Installers', sicurezza: 'Security services', elettricisti: 'Electricians', idraulici: 'Plumbers', termoidraulici: 'Heating engineers' },
+          de: { pulizie: 'Reinigungsunternehmen', installatori: 'Installateure', sicurezza: 'Sicherheitsdienste', elettricisti: 'Elektriker', idraulici: 'Klempner', termoidraulici: 'Heizungsinstallateure' },
+          fr: { pulizie: 'Entreprises de nettoyage', installatori: 'Installateurs', sicurezza: 'Services de sécurité', elettricisti: 'Électriciens', idraulici: 'Plombiers', termoidraulici: 'Plombiers-chauffagistes' },
+          es: { pulizie: 'Empresas de limpieza', installatori: 'Instaladores', sicurezza: 'Servicios de seguridad', elettricisti: 'Electricistas', idraulici: 'Fontaneros', termoidraulici: 'Fontaneros calefactores' },
+          pt: { pulizie: 'Empresas de limpeza', installatori: 'Instaladores', sicurezza: 'Serviços de segurança', elettricisti: 'Eletricistas', idraulici: 'Canalizadores', termoidraulici: 'Técnicos de aquecimento' },
+          nl: { pulizie: 'Schoonmaakbedrijven', installatori: 'Installateurs', sicurezza: 'Beveiligingsdiensten', elettricisti: 'Elektriciens', idraulici: 'Loodgieters', termoidraulici: 'CV-monteurs' },
+          da: { pulizie: 'Rengøringsvirksomheder', installatori: 'Installatører', sicurezza: 'Sikkerhedstjenester', elettricisti: 'Elektrikere', idraulici: 'VVS-installatører', termoidraulici: 'Varmeinstallatører' },
+          sv: { pulizie: 'Städföretag', installatori: 'Installatörer', sicurezza: 'Säkerhetstjänster', elettricisti: 'Elektriker', idraulici: 'Rörmokare', termoidraulici: 'VVS-tekniker' },
+          nb: { pulizie: 'Renholdsbedrifter', installatori: 'Installatører', sicurezza: 'Sikkerhetstjenester', elettricisti: 'Elektrikere', idraulici: 'Rørleggere', termoidraulici: 'VVS-teknikere' },
+          ru: { pulizie: 'Клининговые компании', installatori: 'Монтажники', sicurezza: 'Охранные службы', elettricisti: 'Электрики', idraulici: 'Сантехники', termoidraulici: 'Теплотехники' },
         };
         const CROSS_TITLE: Record<string, string> = {
           it: 'Altri settori', en: 'Other sectors', de: 'Weitere Branchen',
@@ -634,7 +637,7 @@ export default function SettorePageLayout({ content, locale, settore }: Props) {
           nb: 'Andre sektorer', ru: 'Другие отрасли',
         };
         const names = OTHER_SETTORI[locale] ?? OTHER_SETTORI.en;
-        const others = (['pulizie', 'installatori', 'sicurezza', 'elettricisti', 'idraulici'] as SettoreSlug[]).filter(s => s !== settore);
+        const others = (['pulizie', 'installatori', 'sicurezza', 'elettricisti', 'idraulici', 'termoidraulici'] as SettoreSlug[]).filter(s => s !== settore);
         return (
           <section className="px-6 py-12 bg-white border-t border-slate-100">
             <div className="container mx-auto max-w-3xl text-center">

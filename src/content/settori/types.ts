@@ -93,7 +93,7 @@ export interface SettoreContent {
   }>;
 }
 
-export type SettoreSlug = 'installatori' | 'pulizie' | 'sicurezza' | 'elettricisti' | 'idraulici';
+export type SettoreSlug = 'installatori' | 'pulizie' | 'sicurezza' | 'elettricisti' | 'idraulici' | 'termoidraulici';
 
 // Suppress unused-import warning — AppLocale is re-exported for use in content files
 export type { AppLocale };
