@@ -26,7 +26,7 @@ export default function ContactForm() {
     setLoading(true);
 
     try {
-      await submitContact(formData);
+      await submitContact({ ...formData, language: locale });
       toast.success(c.success);
       setFormData({ name: '', email: '', company: '', message: '' });
     } catch (error) {
