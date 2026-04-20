@@ -15,7 +15,8 @@
       "edilizia": "Bouw",
       "impianti": "Installaties",
       "manutenzione": "Onderhoud",
-      "label": "Sectoren"
+      "label": "Sectoren",
+      "termoidraulici": "CV & Sanitair"
     },
     "logo_alt": "GeoTapp — Het platform dat werk verifieerbaar maakt",
     "product_flow_desc": "Operationeel beheer van interventies en teams",

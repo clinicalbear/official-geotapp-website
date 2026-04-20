@@ -15,7 +15,8 @@
       "edilizia": "Bauwesen",
       "impianti": "Anlagentechnik",
       "manutenzione": "Instandhaltung",
-      "label": "Branchen"
+      "label": "Branchen",
+      "termoidraulici": "Heizung & Sanitär"
     },
     "logo_alt": "GeoTapp — Die Plattform, die Arbeit verifizierbar macht",
     "product_flow_desc": "Operative Einsatzverwaltung und Teamplanung",

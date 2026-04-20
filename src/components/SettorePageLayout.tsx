@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
 import { ArrowRight, CheckCircle2, ShieldCheck, X, Camera, MapPin, Clock } from 'lucide-react';
@@ -8,29 +9,14 @@ import type { AppLocale } from '@/lib/i18n/config';
 import type { SettoreContent, SettoreSlug } from '@/content/settori/types';
 import { JsonLd } from '@/components/seo/JsonLd';
 import DemoReportBanner from '@/components/DemoReportBanner';
-import BlogHighlights from '@/components/BlogHighlights';
 import { trackEvent } from '@/lib/analytics';
 
-// WP category IDs per settore — used for BlogHighlights
-// pulizie          → gestione-presenze (9)   — cleaning companies need attendance
-// installatori     → geotapp-flow (65)       — field operations
-// sicurezza        → gestione-presenze (9)   — security services need attendance
-// elettricisti     → geotapp-flow (65)       — field intervention reporting
-// idraulici        → geotapp-flow (65)       — field intervention reporting
-// termoidraulici   → geotapp-flow (65)       — field intervention reporting
-const SETTORE_CATEGORY: Record<SettoreSlug, number> = {
-  pulizie: 9,
-  installatori: 65,
-  sicurezza: 9,
-  elettricisti: 65,
-  idraulici: 65,
-  termoidraulici: 65,
-};
 
 interface Props {
   content: SettoreContent;
   locale: AppLocale;
   settore: SettoreSlug;
+  children?: React.ReactNode;
 }
 
 const SETTORE_COLORS: Record<
@@ -52,7 +38,7 @@ const RISORSE_LABELS: Record<string, string> = {
   sv: 'Guider & artiklar →', nb: 'Guider & artikler →', ru: 'Руководства & статьи →',
 };
 
-export default function SettorePageLayout({ content, locale, settore }: Props) {
+export default function SettorePageLayout({ content, locale, settore, children }: Props) {
   const colors = SETTORE_COLORS[settore];
   const trialLink = localizePath('/trial', locale);
   const pricingLink = localizePath('/pricing', locale);
@@ -692,7 +678,7 @@ export default function SettorePageLayout({ content, locale, settore }: Props) {
         </div>
       </section>
 
-      <BlogHighlights locale={locale} categoryId={SETTORE_CATEGORY[settore]} />
+      {children}
     </div>
   );
 }

@@ -15,7 +15,8 @@
       "edilizia": "Construção",
       "impianti": "Instalações",
       "manutenzione": "Manutenção",
-      "label": "Setores"
+      "label": "Setores",
+      "termoidraulici": "Aquecimento e Canalização"
     },
     "logo_alt": "GeoTapp — A plataforma que torna o trabalho verificável",
     "product_flow_desc": "Gestão operacional de intervenções e equipas",

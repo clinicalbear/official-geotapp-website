@@ -15,7 +15,8 @@
       "edilizia": "Bygg og anlegg",
       "impianti": "Tekniske installasjoner",
       "manutenzione": "Vedlikehold",
-      "label": "Sektorer"
+      "label": "Sektorer",
+      "termoidraulici": "VVS-installatør"
     },
     "logo_alt": "GeoTapp — Plattformen som gjør arbeid verifiserbart",
     "product_flow_desc": "Operativ håndtering av oppdrag og team",

@@ -5,6 +5,7 @@ import { DEFAULT_LOCALE, type AppLocale } from '@/lib/i18n/config';
 import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
 import { getIdrauliciContent } from '@/content/settori/idraulici';
 import SettorePageLayout from '@/components/SettorePageLayout';
+import BlogHighlights from '@/components/BlogHighlights';
 
 const pathname = '/settori/idraulici';
 
@@ -54,7 +55,9 @@ export default async function IdrauliciLocalePage({
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
-      <SettorePageLayout content={content} locale={resolvedLocale} settore="idraulici" />
+      <SettorePageLayout content={content} locale={resolvedLocale} settore="idraulici">
+        <BlogHighlights locale={resolvedLocale} categoryId={65} />
+      </SettorePageLayout>
     </>
   );
 }

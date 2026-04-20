@@ -5,6 +5,7 @@ import { DEFAULT_LOCALE, type AppLocale } from '@/lib/i18n/config';
 import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
 import { getElettricistiContent } from '@/content/settori/elettricisti';
 import SettorePageLayout from '@/components/SettorePageLayout';
+import BlogHighlights from '@/components/BlogHighlights';
 
 const pathname = '/settori/elettricisti';
 
@@ -54,7 +55,9 @@ export default async function ElettricistiLocalePage({
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
-      <SettorePageLayout content={content} locale={resolvedLocale} settore="elettricisti" />
+      <SettorePageLayout content={content} locale={resolvedLocale} settore="elettricisti">
+        <BlogHighlights locale={resolvedLocale} categoryId={65} />
+      </SettorePageLayout>
     </>
   );
 }

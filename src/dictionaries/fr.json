@@ -15,7 +15,8 @@
       "edilizia": "BTP",
       "impianti": "Installations techniques",
       "manutenzione": "Maintenance",
-      "label": "Secteurs"
+      "label": "Secteurs",
+      "termoidraulici": "Plomberie-Chauffage"
     },
     "logo_alt": "GeoTapp — La plateforme qui rend le travail vérifiable",
     "product_flow_desc": "Gestion opérationnelle des interventions et équipes",

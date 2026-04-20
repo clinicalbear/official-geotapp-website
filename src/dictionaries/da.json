@@ -15,7 +15,8 @@
       "edilizia": "Byggeri",
       "impianti": "Tekniske installationer",
       "manutenzione": "Vedligeholdelse",
-      "label": "Brancher"
+      "label": "Brancher",
+      "termoidraulici": "VVS-installatør"
     },
     "logo_alt": "GeoTapp — Platformen der gør arbejde verificerbart",
     "product_flow_desc": "Operationel styring af interventioner og teams",

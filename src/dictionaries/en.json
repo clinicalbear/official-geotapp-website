@@ -15,7 +15,8 @@
       "edilizia": "Construction",
       "impianti": "Mechanical & Electrical",
       "manutenzione": "Maintenance",
-      "label": "Sectors"
+      "label": "Sectors",
+      "termoidraulici": "Heating & Plumbing"
     },
     "logo_alt": "GeoTapp — The platform that makes work verifiable",
     "product_flow_desc": "Field operations and team management",

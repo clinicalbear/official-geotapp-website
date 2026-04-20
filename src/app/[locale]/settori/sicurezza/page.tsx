@@ -5,6 +5,7 @@ import { DEFAULT_LOCALE, type AppLocale } from '@/lib/i18n/config';
 import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
 import { getSicurezzaContent } from '@/content/settori/sicurezza';
 import SettorePageLayout from '@/components/SettorePageLayout';
+import BlogHighlights from '@/components/BlogHighlights';
 
 const pathname = '/settori/sicurezza';
 
@@ -54,7 +55,9 @@ export default async function SicurezzaLocalePage({
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
-      <SettorePageLayout content={content} locale={resolvedLocale} settore="sicurezza" />
+      <SettorePageLayout content={content} locale={resolvedLocale} settore="sicurezza">
+        <BlogHighlights locale={resolvedLocale} categoryId={9} />
+      </SettorePageLayout>
     </>
   );
 }

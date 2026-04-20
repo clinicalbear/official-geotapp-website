@@ -15,7 +15,8 @@
       "edilizia": "Edilizia",
       "impianti": "Impianti",
       "manutenzione": "Manutenzione",
-      "label": "Settori"
+      "label": "Settori",
+      "termoidraulici": "Termoidraulici"
     },
     "logo_alt": "GeoTapp — La piattaforma che rende il lavoro verificabile",
     "product_flow_desc": "Gestione operativa interventi e squadre",
