@@ -53,8 +53,8 @@ const BASE_URL = 'https://geotapp.com';
 // this is the SEO anchor keyword for all locale variants.
 const LOCALE_META: Record<string, { title: string; description: string }> = {
   it: {
-    title: 'App Presenze GPS per Aziende con Squadre sul Campo | GeoTapp',
-    description: 'Timbrature GPS, prove fotografiche e report non alterabili per imprese con squadre in esterno. Elimina contestazioni e controlla i cantieri in tempo reale. Prova gratis.',
+    title: 'Timbrature GPS e Presenze Dipendenti sul Campo | App GeoTapp',
+    description: 'Timbrature GPS certificate, prove fotografiche e report non alterabili per imprese con squadre in esterno. Elimina contestazioni e controlla i cantieri. Prova gratis.',
   },
   en: {
     title: 'GPS Time Tracking for Field Teams | GeoTapp',
