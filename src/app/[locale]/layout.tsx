@@ -12,6 +12,7 @@ import CartDrawer from '@/components/CartDrawer';
 import Script from 'next/script';
 import CookieConsentBanner from '@/components/CookieConsentBanner';
 import NewsletterModal from '@/components/NewsletterModal';
+import ChatWidget from '@/components/kairos/ChatWidget';
 
 const BASE_URL = 'https://geotapp.com';
 
@@ -507,6 +508,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         />
         <CookieConsentBanner locale={locale} />
         <NewsletterModal locale={locale} />
+        <ChatWidget />
       </body>
     </html>
   );

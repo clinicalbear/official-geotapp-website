@@ -904,5 +904,19 @@
     "datalake_desc": "De 100 a 100 milhões de registos sem esforço. Usamos PostgreSQL particionado para gerir volumes massivos de dados sem abrandamentos. O seu histórico é precioso — guardamo-lo para sempre, acessível num instante.",
     "cdn_title": "Global CDN Edge",
     "cdn_desc": "A velocidade é geográfica. Os nossos recursos estáticos são replicados em mais de 300 centros de dados em todo o mundo. Quer o seu cliente esteja em Nova Iorque ou Tóquio, o seu site carrega como se o servidor estivesse na sala ao lado."
+  },
+  "kairos": {
+    "subtitle": "O seu assistente GeoTapp",
+    "welcome": "Ola! Sou o Kairos, o assistente GeoTapp. Como posso ajudar?",
+    "placeholder": "Escreva a sua pergunta...",
+    "send": "Enviar",
+    "quick_pricing": "Precos",
+    "quick_how": "Como funciona",
+    "quick_trial": "Teste gratis",
+    "quick_contact": "Fale connosco",
+    "fallback": "Nao encontrei uma resposta. Pode reformular ou contactar-nos diretamente.",
+    "low_confidence": "Nao tenho a certeza de ter compreendido. Deseja contactar a equipa?",
+    "contact_btn": "Contactar",
+    "powered_by": "Powered by GeoTapp"
   }
 }

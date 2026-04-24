@@ -905,5 +905,19 @@
     "datalake_desc": "Van 100 naar 100 miljoen records zonder moeite. We gebruiken gepartitioneerde PostgreSQL om enorme datavolumes te verwerken zonder vertraging. Uw geschiedenis is waardevol — we bewaren hem voor altijd, direct toegankelijk.",
     "cdn_title": "Global CDN Edge",
     "cdn_desc": "Snelheid is geografisch. Onze statische assets worden gerepliceerd over 300+ datacenters wereldwijd. Of uw klant nu in New York of Tokio zit — uw site laadt alsof de server in de kamer ernaast staat."
+  },
+  "kairos": {
+    "subtitle": "Uw GeoTapp-assistent",
+    "welcome": "Hoi! Ik ben Kairos, de GeoTapp-assistent. Hoe kan ik helpen?",
+    "placeholder": "Stel uw vraag...",
+    "send": "Verstuur",
+    "quick_pricing": "Prijzen",
+    "quick_how": "Hoe het werkt",
+    "quick_trial": "Gratis proberen",
+    "quick_contact": "Neem contact op",
+    "fallback": "Ik kon geen antwoord vinden. U kunt herformuleren of direct contact opnemen.",
+    "low_confidence": "Ik weet niet zeker of ik het goed begrepen heb. Wilt u het team contacteren?",
+    "contact_btn": "Contact",
+    "powered_by": "Powered by GeoTapp"
   }
 }

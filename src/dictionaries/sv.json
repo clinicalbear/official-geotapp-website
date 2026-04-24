@@ -904,5 +904,19 @@
     "datalake_desc": "Från 100 till 100 miljoner poster utan att svettas. Vi använder partitionerad PostgreSQL för att hantera massiva datavolymer utan fördröjningar. Din historik är värdefull — vi behåller den för alltid, tillgänglig på ett ögonblick.",
     "cdn_title": "Global CDN Edge",
     "cdn_desc": "Hastighet är geografisk. Våra statiska resurser replikeras över 300+ datacenter världen över. Oavsett om din kund finns i New York eller Tokyo laddas din sajt som om servern vore i rummet bredvid."
+  },
+  "kairos": {
+    "subtitle": "Din GeoTapp-assistent",
+    "welcome": "Hej! Jag ar Kairos, GeoTapp-assistenten. Hur kan jag hjalpa?",
+    "placeholder": "Skriv din fraga...",
+    "send": "Skicka",
+    "quick_pricing": "Priser",
+    "quick_how": "Sa fungerar det",
+    "quick_trial": "Gratis provperiod",
+    "quick_contact": "Kontakta oss",
+    "fallback": "Jag kunde inte hitta ett svar. Du kan omformulera eller kontakta oss direkt.",
+    "low_confidence": "Jag ar inte saker pa att jag forstod ratt. Vill du kontakta teamet?",
+    "contact_btn": "Kontakt",
+    "powered_by": "Powered by GeoTapp"
   }
 }
