@@ -53,17 +53,11 @@ const FAQ_EN = [
   },
 ];
 
-const ROWS = [
-  { feature: 'GPS verificato e sigillato', geotapp: true, competitor: false },
-  { feature: 'Report non alterabili con hash crittografico', geotapp: true, competitor: false },
-  { feature: 'Verifica indipendente da parte del cliente', geotapp: true, competitor: false },
-  { feature: 'Prove fotografiche collegate a GPS e timestamp', geotapp: true, competitor: false },
-  { feature: 'Registrazione presenze base', geotapp: true, competitor: true },
-  { feature: 'App mobile Android/iOS', geotapp: true, competitor: true },
-  { feature: 'Dashboard gestione team', geotapp: true, competitor: true },
-  { feature: 'Messaggistica interna proprietaria', geotapp: true, competitor: true },
-  { feature: 'Conformità GDPR geolocalizzazione', geotapp: true, competitor: false },
-];
+const ROWS_IT = ['GPS verificato e sigillato','Report non alterabili con hash crittografico','Verifica indipendente da parte del cliente','Prove fotografiche collegate a GPS e timestamp','Registrazione presenze base','App mobile Android/iOS','Dashboard gestione team','Messaggistica interna proprietaria','Conformità GDPR geolocalizzazione'];
+const ROWS_EN = ['Verified and sealed GPS','Tamper-proof reports with cryptographic hash','Independent verification by client','Photo evidence linked to GPS and timestamp','Basic attendance tracking','Mobile app Android/iOS','Team management dashboard','Built-in messaging','GDPR-compliant geolocation'];
+const ROWS_GEO =  [true,true,true,true,true,true,true,true,true];
+const ROWS_COMP = [false,false,false,false,true,true,true,true,false];
+function getRows(locale: string) { const f = locale === 'it' ? ROWS_IT : ROWS_EN; return f.map((feature, i) => ({ feature, geotapp: ROWS_GEO[i], competitor: ROWS_COMP[i] })); }
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -81,6 +75,7 @@ export default async function GeoTappVsConnecteamPage({ params }: { params: Prom
   const { locale } = await params;
   const isIt = locale === 'it';
   const faqItems = isIt ? FAQ_IT : FAQ_EN;
+  const rows = getRows(locale);
 
   const faqSchema = {
     '@context': 'https://schema.org',
@@ -158,7 +153,7 @@ export default async function GeoTappVsConnecteamPage({ params }: { params: Prom
                   </tr>
                 </thead>
                 <tbody>
-                  {ROWS.map((row, i) => (
+                  {rows.map((row, i) => (
                     <tr key={i} className="border-b border-white/5 hover:bg-white/3 transition-colors">
                       <td className="py-3 px-4 text-sm text-text-secondary">{row.feature}</td>
                       <td className="py-3 px-4 text-center">

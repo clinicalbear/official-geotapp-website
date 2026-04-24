@@ -57,19 +57,11 @@ const FAQ_EN = [
   },
 ];
 
-const ROWS = [
-  { feature: 'GPS verificato per interventi sul campo', geotapp: true, competitor: true },
-  { feature: 'Report sigillato crittograficamente', geotapp: true, competitor: false },
-  { feature: 'Verifica indipendente da parte del committente', geotapp: true, competitor: false },
-  { feature: 'Prove fotografiche collegate a GPS e timestamp', geotapp: true, competitor: false },
-  { feature: 'Conformità GDPR / linee guida Garante italiano', geotapp: true, competitor: false },
-  { feature: 'Nessun monitoraggio continuo dei dipendenti', geotapp: true, competitor: false },
-  { feature: 'App mobile Android/iOS', geotapp: true, competitor: true },
-  { feature: 'Messaggistica interna proprietaria', geotapp: true, competitor: true },
-  { feature: 'Dashboard gestione team', geotapp: true, competitor: true },
-  { feature: 'Export per elaborazione paghe', geotapp: true, competitor: true },
-  { feature: 'Progettato per mercato italiano / CCNL', geotapp: true, competitor: false },
-];
+const ROWS_IT = ['GPS verificato per interventi sul campo','Report sigillato crittograficamente','Verifica indipendente da parte del committente','Prove fotografiche collegate a GPS e timestamp','Conformità GDPR / linee guida Garante italiano','Nessun monitoraggio continuo dei dipendenti','App mobile Android/iOS','Messaggistica interna proprietaria','Dashboard gestione team','Export per elaborazione paghe','Progettato per mercato italiano / CCNL'];
+const ROWS_EN = ['GPS verified for field jobs','Cryptographically sealed report','Independent verification by client','Photo evidence linked to GPS and timestamp','GDPR compliant / Italian DPA guidelines','No continuous employee monitoring','Mobile app Android/iOS','Built-in messaging','Team management dashboard','Payroll export','Designed for Italian market / CCNL'];
+const ROWS_GEO =  [true,true,true,true,true,true,true,true,true,true,true];
+const ROWS_COMP = [true,false,false,false,false,false,true,true,true,true,false];
+function getRows(locale: string) { const f = locale === 'it' ? ROWS_IT : ROWS_EN; return f.map((feature, i) => ({ feature, geotapp: ROWS_GEO[i], competitor: ROWS_COMP[i] })); }
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -87,6 +79,7 @@ export default async function GeoTappVsHubstaffPage({ params }: { params: Promis
   const { locale } = await params;
   const isIt = locale === 'it';
   const faqItems = isIt ? FAQ_IT : FAQ_EN;
+  const rows = getRows(locale);
 
   const faqSchema = {
     '@context': 'https://schema.org',
@@ -172,7 +165,7 @@ export default async function GeoTappVsHubstaffPage({ params }: { params: Promis
                   </tr>
                 </thead>
                 <tbody>
-                  {ROWS.map((row, i) => (
+                  {rows.map((row, i) => (
                     <tr key={i} className="border-b border-white/5 hover:bg-white/3 transition-colors">
                       <td className="py-3 px-4 text-sm text-text-secondary">{row.feature}</td>
                       <td className="py-3 px-4 text-center">

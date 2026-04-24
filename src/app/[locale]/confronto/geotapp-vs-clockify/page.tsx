@@ -53,19 +53,25 @@ const FAQ_EN = [
   },
 ];
 
-const ROWS = [
-  { feature: 'GPS verificato al momento dell\'intervento', geotapp: true, competitor: false },
-  { feature: 'Report sigillato crittograficamente', geotapp: true, competitor: false },
-  { feature: 'Prove fotografiche collegate a GPS e timestamp', geotapp: true, competitor: false },
-  { feature: 'Verifica indipendente da parte del cliente', geotapp: true, competitor: false },
-  { feature: 'Tracciamento ore', geotapp: true, competitor: true },
-  { feature: 'App mobile Android/iOS', geotapp: true, competitor: true },
-  { feature: 'Messaggistica interna proprietaria', geotapp: true, competitor: false },
-  { feature: 'Export presenze/paghe', geotapp: true, competitor: true },
-  { feature: 'Piano gratuito', geotapp: false, competitor: true },
-  { feature: 'Gestione commesse multi-sito', geotapp: true, competitor: false },
-  { feature: 'Conformità GDPR geolocalizzazione', geotapp: true, competitor: false },
+const ROWS_IT = [
+  'GPS verificato al momento dell\'intervento', 'Report sigillato crittograficamente',
+  'Prove fotografiche collegate a GPS e timestamp', 'Verifica indipendente da parte del cliente',
+  'Tracciamento ore', 'App mobile Android/iOS', 'Messaggistica interna proprietaria',
+  'Export presenze/paghe', 'Piano gratuito', 'Gestione commesse multi-sito', 'Conformità GDPR geolocalizzazione',
 ];
+const ROWS_EN = [
+  'GPS verified at job site', 'Cryptographically sealed report',
+  'Photo evidence linked to GPS and timestamp', 'Independent verification by client',
+  'Time tracking', 'Mobile app Android/iOS', 'Built-in messaging',
+  'Payroll/attendance export', 'Free plan', 'Multi-site job management', 'GDPR-compliant geolocation',
+];
+const ROWS_GEO =   [true, true, true, true, true, true, true, true, false, true, true];
+const ROWS_COMP =  [false, false, false, false, true, true, false, true, true, false, false];
+
+function getRows(locale: string) {
+  const features = locale === 'it' ? ROWS_IT : ROWS_EN;
+  return features.map((feature, i) => ({ feature, geotapp: ROWS_GEO[i], competitor: ROWS_COMP[i] }));
+}
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -83,6 +89,7 @@ export default async function GeoTappVsClockifyPage({ params }: { params: Promis
   const { locale } = await params;
   const isIt = locale === 'it';
   const faqItems = isIt ? FAQ_IT : FAQ_EN;
+  const rows = getRows(locale);
 
   const faqSchema = {
     '@context': 'https://schema.org',
@@ -158,7 +165,7 @@ export default async function GeoTappVsClockifyPage({ params }: { params: Promis
                   </tr>
                 </thead>
                 <tbody>
-                  {ROWS.map((row, i) => (
+                  {rows.map((row, i) => (
                     <tr key={i} className="border-b border-white/5 hover:bg-white/3 transition-colors">
                       <td className="py-3 px-4 text-sm text-text-secondary">{row.feature}</td>
                       <td className="py-3 px-4 text-center">
