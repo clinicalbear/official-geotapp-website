@@ -6,7 +6,7 @@ import {
   SUPPORTED_LOCALES,
   type AppLocale,
 } from './config';
-import { translatePath } from './slug-map';
+import { REVERSE_SLUG_MAP, translatePath } from './slug-map';
 
 export { DEFAULT_LOCALE, SUPPORTED_LOCALES } from './config';
 export type { AppLocale } from './config';
@@ -116,8 +116,22 @@ export function localizePath(
   pathname: string,
   locale: AppLocale,
 ): string {
-  const normalizedPath = stripLocaleFromPathname(pathname);
-  const translatedPath = translatePath(normalizedPath, locale);
+  // 1. Strip the current locale prefix (e.g. /es/precios/ → /precios/)
+  const sourceLocale = getLocaleFromPathname(pathname);
+  const strippedPath = stripLocaleFromPathname(pathname);
+
+  // 2. Reverse-translate segments from the source locale back to canonical
+  //    (e.g. /precios/ → /pricing/ using the ES reverse map)
+  let canonicalPath = strippedPath;
+  if (sourceLocale) {
+    const reverseMap = REVERSE_SLUG_MAP[sourceLocale] ?? {};
+    const segments = strippedPath.split('/').filter(Boolean);
+    const canonical = segments.map((seg) => reverseMap[seg] ?? seg);
+    canonicalPath = segments.length > 0 ? '/' + canonical.join('/') + '/' : '/';
+  }
+
+  // 3. Translate canonical path to the target locale
+  const translatedPath = translatePath(canonicalPath, locale);
   if (translatedPath === '/') return `/${locale}/`;
   return translatedPath.endsWith('/')
     ? `/${locale}${translatedPath}`
