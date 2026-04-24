@@ -847,5 +847,21 @@
     "per_anno": "/ an",
     "label_operators": "opérateurs",
     "embed_title": "Calculateur ROI GeoTapp"
+  },
+  "features": {
+    "title": "Power Under the Hood.",
+    "subtitle": "Nous ne fabriquons pas des jouets. GeoTapp est une plateforme d'entreprise conçue pour passer à l'échelle. Voici les technologies qui font la magie.",
+    "offline_title": "Offline-First Architecture",
+    "offline_desc": "La connexion lâche, le travail non. Nous avons construit une base de données synchronisée en local (CRDT) qui vit à l'intérieur de l'application. Vos techniciens peuvent travailler dans un bunker souterrain ; dès qu'ils aperçoivent un bout de ciel, les données se synchronisent silencieusement avec le cloud.",
+    "encryption_title": "Military-Grade Encryption",
+    "encryption_desc": "Dormez tranquille. Nous utilisons le chiffrement AES-256 au repos et TLS 1.3 en transit. Même si un attaquant interceptait vos données, il ne verrait que du bruit blanc. La confidentialité n'est pas juste une case à cocher — c'est des mathématiques.",
+    "realtime_title": "Real-Time WebSocket",
+    "realtime_desc": "Fini d'appuyer sur F5. Grâce aux WebSockets, l'information voyage instantanément. Quand un technicien ferme un ticket à Lyon, le manager à Paris voit le point passer au vert dans la même milliseconde. Comme si vous étiez partout à la fois.",
+    "cms_title": "Headless CMS Integration",
+    "cms_desc": "Le contenu est fluide. Notre architecture headless découple les données de la présentation. Cela signifie que vous pouvez publier un article de blog, le pousser vers l'application mobile et l'envoyer par newsletter d'un seul clic.",
+    "datalake_title": "Scalable Data Lake",
+    "datalake_desc": "De 100 à 100 millions d'enregistrements sans effort. Nous utilisons PostgreSQL partitionné pour gérer des volumes de données massifs sans ralentissement. Votre historique est précieux — nous le conservons indéfiniment, accessible en un instant.",
+    "cdn_title": "Global CDN Edge",
+    "cdn_desc": "La vitesse est géographique. Nos ressources statiques sont répliquées sur plus de 300 centres de données dans le monde. Que votre client soit à New York ou Tokyo, votre site se charge comme si le serveur était dans la pièce d'à côté."
   }
 }

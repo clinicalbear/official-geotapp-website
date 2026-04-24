@@ -847,5 +847,21 @@
     "per_anno": "/ año",
     "label_operators": "operarios",
     "embed_title": "Calculadora ROI GeoTapp"
+  },
+  "features": {
+    "title": "Power Under the Hood.",
+    "subtitle": "No construimos juguetes. GeoTapp es una plataforma empresarial diseñada para escalar. Estas son las tecnologías que hacen la magia posible.",
+    "offline_title": "Offline-First Architecture",
+    "offline_desc": "La conexión falla, el trabajo no. Hemos construido una base de datos sincronizada en local (CRDT) que vive dentro de la aplicación. Tus técnicos pueden trabajar en un búnker subterráneo; en cuanto vean un resquicio de cielo, los datos se sincronizarán silenciosamente con la nube.",
+    "encryption_title": "Military-Grade Encryption",
+    "encryption_desc": "Duerme tranquilo. Usamos cifrado AES-256 en reposo y TLS 1.3 en tránsito. Incluso si un atacante interceptara tus datos, solo vería ruido blanco. La privacidad no es solo un trámite legal — es matemática.",
+    "realtime_title": "Real-Time WebSocket",
+    "realtime_desc": "Se acabó pulsar F5. Gracias a los WebSockets, la información viaja al instante. Cuando un técnico cierra un ticket en Sevilla, el manager en Madrid ve el punto volverse verde en ese mismo milisegundo. Es como estar en todas partes a la vez.",
+    "cms_title": "Headless CMS Integration",
+    "cms_desc": "El contenido es fluido. Nuestra arquitectura headless desacopla los datos de la presentación. Eso significa que puedes publicar un artículo en el blog, enviarlo a la app móvil y distribuirlo por newsletter con un solo clic.",
+    "datalake_title": "Scalable Data Lake",
+    "datalake_desc": "De 100 a 100 millones de registros sin despeinarse. Usamos PostgreSQL particionado para gestionar volúmenes masivos de datos sin ralentizaciones. Tu historial es valioso — lo conservamos para siempre, accesible en un instante.",
+    "cdn_title": "Global CDN Edge",
+    "cdn_desc": "La velocidad es geográfica. Nuestros archivos estáticos se replican en más de 300 centros de datos en todo el mundo. Tanto si tu cliente está en Nueva York como en Tokio, tu sitio carga como si el servidor estuviera en la habitación de al lado."
   }
 }

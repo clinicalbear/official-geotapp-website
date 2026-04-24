@@ -848,5 +848,21 @@
     "per_anno": "/ year",
     "label_operators": "operators",
     "embed_title": "GeoTapp ROI Calculator"
+  },
+  "features": {
+    "title": "Power Under the Hood.",
+    "subtitle": "We don't build toys. GeoTapp is an enterprise platform built to scale. Here are the technologies that make the magic happen.",
+    "offline_title": "Offline-First Architecture",
+    "offline_desc": "Connection drops, work doesn't. We built a locally-synced database (CRDT) that lives inside the app. Your technicians can work in an underground bunker; as soon as they see a sliver of sky, data will silently sync with the cloud.",
+    "encryption_title": "Military-Grade Encryption",
+    "encryption_desc": "Sleep soundly. We use AES-256 encryption at rest and TLS 1.3 in transit. Even if an attacker intercepted your data, they would see nothing but white noise. Privacy isn't just a legal checkbox — it's mathematics.",
+    "realtime_title": "Real-Time WebSocket",
+    "realtime_desc": "No more hitting F5. Thanks to WebSockets, information travels instantly. When a technician closes a ticket in Rome, the manager in Milan sees the dot turn green in the same millisecond. It's like being everywhere at once.",
+    "cms_title": "Headless CMS Integration",
+    "cms_desc": "Content is fluid. Our headless architecture decouples data from presentation. This means you can publish a blog post, push it to the mobile app, and send it via newsletter with a single click.",
+    "datalake_title": "Scalable Data Lake",
+    "datalake_desc": "From 100 to 100 million records without breaking a sweat. We use partitioned PostgreSQL to handle massive data volumes without slowdowns. Your history is precious — we keep it forever, accessible in an instant.",
+    "cdn_title": "Global CDN Edge",
+    "cdn_desc": "Speed is geographic. Our static assets are replicated across 300+ data centres worldwide. Whether your client is in New York or Tokyo, your site loads as if the server were in the next room."
   }
 }

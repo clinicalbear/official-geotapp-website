@@ -847,5 +847,21 @@
     "per_anno": "/ år",
     "label_operators": "operatører",
     "embed_title": "GeoTapp ROI-beregner"
+  },
+  "features": {
+    "title": "Power Under the Hood.",
+    "subtitle": "Vi bygger ikke legetøj. GeoTapp er en enterprise-platform bygget til at skalere. Her er de teknologier, der gør magien mulig.",
+    "offline_title": "Offline-First Architecture",
+    "offline_desc": "Forbindelsen forsvinder, arbejdet gør ikke. Vi har bygget en lokalt synkroniseret database (CRDT), der lever inde i appen. Dine teknikere kan arbejde i en underjordisk bunker; så snart de ser et glimt af himmel, synkroniserer data lydløst med skyen.",
+    "encryption_title": "Military-Grade Encryption",
+    "encryption_desc": "Sov trygt. Vi bruger AES-256-kryptering i hvile og TLS 1.3 i transit. Selv hvis en angriber opsnappede dine data, ville vedkommende kun se hvid støj. Privatliv er ikke bare et juridisk afkrydsningsfelt — det er matematik.",
+    "realtime_title": "Real-Time WebSocket",
+    "realtime_desc": "Slut med at trykke F5. Takket være WebSockets rejser information øjeblikkeligt. Når en tekniker lukker en sag i Aarhus, ser manageren i København prikken blive grøn i samme millisekund. Det er som at være alle steder på én gang.",
+    "cms_title": "Headless CMS Integration",
+    "cms_desc": "Indhold er flydende. Vores headless-arkitektur adskiller data fra præsentation. Det betyder, at du kan udgive et blogindlæg, sende det til mobilappen og distribuere det via nyhedsbrev med et enkelt klik.",
+    "datalake_title": "Scalable Data Lake",
+    "datalake_desc": "Fra 100 til 100 millioner poster uden at svede. Vi bruger partitioneret PostgreSQL til at håndtere massive datamængder uden forsinkelser. Din historik er værdifuld — vi gemmer den for altid, tilgængelig på et øjeblik.",
+    "cdn_title": "Global CDN Edge",
+    "cdn_desc": "Hastighed er geografisk. Vores statiske filer replikeres på tværs af 300+ datacentre verden over. Uanset om din kunde er i New York eller Tokyo, indlæser dit site som om serveren var i det næste værelse."
   }
 }

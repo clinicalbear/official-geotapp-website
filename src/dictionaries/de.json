@@ -848,5 +848,21 @@
     "per_anno": "/ Jahr",
     "label_operators": "Mitarbeiter",
     "embed_title": "GeoTapp ROI-Rechner"
+  },
+  "features": {
+    "title": "Power Under the Hood.",
+    "subtitle": "Wir bauen kein Spielzeug. GeoTapp ist eine Enterprise-Plattform, die für Skalierung gebaut wurde. Hier sind die Technologien, die die Magie möglich machen.",
+    "offline_title": "Offline-First Architecture",
+    "offline_desc": "Die Verbindung bricht ab, die Arbeit nicht. Wir haben eine lokal synchronisierte Datenbank (CRDT) gebaut, die direkt in der App lebt. Ihre Techniker können in einem Kellerbunker arbeiten — sobald sie einen Streifen Himmel sehen, synchronisieren sich die Daten lautlos mit der Cloud.",
+    "encryption_title": "Military-Grade Encryption",
+    "encryption_desc": "Schlafen Sie ruhig. Wir verwenden AES-256-Verschlüsselung im Ruhezustand und TLS 1.3 bei der Übertragung. Selbst wenn ein Angreifer Ihre Daten abfangen würde, sähe er nur weißes Rauschen. Datenschutz ist kein rechtliches Pflichtfeld — er ist Mathematik.",
+    "realtime_title": "Real-Time WebSocket",
+    "realtime_desc": "Kein F5 mehr drücken. Dank WebSockets reisen Informationen sofort. Wenn ein Techniker in Rom ein Ticket schließt, sieht der Manager in München den Punkt in derselben Millisekunde grün werden. Es ist, als wäre man überall gleichzeitig.",
+    "cms_title": "Headless CMS Integration",
+    "cms_desc": "Inhalte sind fließend. Unsere Headless-Architektur entkoppelt Daten von der Darstellung. Das bedeutet: Sie veröffentlichen einen Blogbeitrag, pushen ihn in die Mobile App und versenden ihn per Newsletter — mit einem einzigen Klick.",
+    "datalake_title": "Scalable Data Lake",
+    "datalake_desc": "Von 100 auf 100 Millionen Datensätze ohne ins Schwitzen zu geraten. Wir verwenden partitioniertes PostgreSQL, um massive Datenmengen ohne Geschwindigkeitsverlust zu verarbeiten. Ihre Historie ist wertvoll — wir bewahren sie für immer, in einem Augenblick abrufbar.",
+    "cdn_title": "Global CDN Edge",
+    "cdn_desc": "Geschwindigkeit ist geografisch. Unsere statischen Assets werden auf 300+ Rechenzentren weltweit repliziert. Ob Ihr Kunde in New York oder Tokio ist — Ihre Seite lädt, als befände sich der Server im Nebenzimmer."
   }
 }

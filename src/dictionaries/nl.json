@@ -784,5 +784,21 @@
     "per_anno": "/ jaar",
     "label_operators": "medewerkers",
     "embed_title": "GeoTapp ROI-Calculator"
+  },
+  "features": {
+    "title": "Power Under the Hood.",
+    "subtitle": "We bouwen geen speelgoed. GeoTapp is een enterprise platform gebouwd om te schalen. Dit zijn de technologieën die de magie mogelijk maken.",
+    "offline_title": "Offline-First Architecture",
+    "offline_desc": "Verbinding valt weg, werk niet. We hebben een lokaal gesynchroniseerde database (CRDT) gebouwd die in de app zelf leeft. Uw technici kunnen werken in een ondergrondse bunker — zodra ze een glimp hemel zien, synchroniseert de data stilletjes met de cloud.",
+    "encryption_title": "Military-Grade Encryption",
+    "encryption_desc": "Slaap gerust. We gebruiken AES-256-versleuteling in rust en TLS 1.3 in transit. Zelfs als een aanvaller uw data zou onderscheppen, ziet hij niets dan witte ruis. Privacy is geen juridisch vinkje — het is wiskunde.",
+    "realtime_title": "Real-Time WebSocket",
+    "realtime_desc": "Geen F5 meer nodig. Dankzij WebSockets reist informatie onmiddellijk. Als een technicus in Rotterdam een ticket sluit, ziet de manager in Amsterdam het stipje in diezelfde milliseconde groen worden. Alsof je overal tegelijk bent.",
+    "cms_title": "Headless CMS Integration",
+    "cms_desc": "Content is vloeibaar. Onze headless-architectuur ontkoppelt data van presentatie. Dat betekent: publiceer een blogpost, push hem naar de mobiele app en verstuur hem via nieuwsbrief — met één klik.",
+    "datalake_title": "Scalable Data Lake",
+    "datalake_desc": "Van 100 naar 100 miljoen records zonder moeite. We gebruiken gepartitioneerde PostgreSQL om enorme datavolumes te verwerken zonder vertraging. Uw geschiedenis is waardevol — we bewaren hem voor altijd, direct toegankelijk.",
+    "cdn_title": "Global CDN Edge",
+    "cdn_desc": "Snelheid is geografisch. Onze statische assets worden gerepliceerd over 300+ datacenters wereldwijd. Of uw klant nu in New York of Tokio zit — uw site laadt alsof de server in de kamer ernaast staat."
   }
 }

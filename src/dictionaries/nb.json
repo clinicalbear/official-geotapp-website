@@ -847,5 +847,21 @@
     "per_anno": "/ år",
     "label_operators": "operatører",
     "embed_title": "GeoTapp ROI-kalkulator"
+  },
+  "features": {
+    "title": "Power Under the Hood.",
+    "subtitle": "Vi bygger ikke leker. GeoTapp er en enterprise-plattform bygget for å skalere. Her er teknologiene som gjør magien mulig.",
+    "offline_title": "Offline-First Architecture",
+    "offline_desc": "Tilkoblingen faller ut, arbeidet ikke. Vi har bygget en lokalt synkronisert database (CRDT) som lever inne i appen. Teknikerne dine kan jobbe i en underjordisk bunker; så snart de ser et glimt av himmelen, synkroniserer data lydløst med skyen.",
+    "encryption_title": "Military-Grade Encryption",
+    "encryption_desc": "Sov trygt. Vi bruker AES-256-kryptering i ro og TLS 1.3 i transitt. Selv om en angriper fanget opp dataene dine, ville vedkommende bare se hvit støy. Personvern er ikke bare en juridisk avkrysningsboks — det er matematikk.",
+    "realtime_title": "Real-Time WebSocket",
+    "realtime_desc": "Slutt å trykke F5. Takket være WebSockets reiser informasjon øyeblikkelig. Når en tekniker lukker en sak i Bergen, ser manageren i Oslo prikken bli grønn i samme millisekund. Det er som å være overalt på én gang.",
+    "cms_title": "Headless CMS Integration",
+    "cms_desc": "Innhold er flytende. Vår headless-arkitektur kobler data fra presentasjon. Det betyr at du kan publisere et blogginnlegg, sende det til mobilappen og distribuere det via nyhetsbrev med ett enkelt klikk.",
+    "datalake_title": "Scalable Data Lake",
+    "datalake_desc": "Fra 100 til 100 millioner poster uten å svette. Vi bruker partisjonert PostgreSQL for å håndtere massive datavolumer uten tregheter. Din historikk er verdifull — vi bevarer den for alltid, tilgjengelig på et øyeblikk.",
+    "cdn_title": "Global CDN Edge",
+    "cdn_desc": "Hastighet er geografisk. Våre statiske ressurser repliseres på tvers av 300+ datasentre verden over. Enten kunden din er i New York eller Tokyo laster nettstedet ditt som om serveren var i rommet ved siden av."
   }
 }

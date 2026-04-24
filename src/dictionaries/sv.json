@@ -847,5 +847,21 @@
     "per_anno": "/ år",
     "label_operators": "operatörer",
     "embed_title": "GeoTapp ROI-kalkylator"
+  },
+  "features": {
+    "title": "Power Under the Hood.",
+    "subtitle": "Vi bygger inte leksaker. GeoTapp är en enterprise-plattform byggd för att skala. Här är de teknologier som gör magin möjlig.",
+    "offline_title": "Offline-First Architecture",
+    "offline_desc": "Uppkopplingen försvinner, arbetet inte. Vi har byggt en lokalt synkroniserad databas (CRDT) som lever inuti appen. Dina tekniker kan arbeta i en underjordisk bunker; så fort de ser en bit himmel synkroniseras data tyst med molnet.",
+    "encryption_title": "Military-Grade Encryption",
+    "encryption_desc": "Sov lugnt. Vi använder AES-256-kryptering i vila och TLS 1.3 i transit. Även om en angripare lyckades fånga upp dina data skulle de bara se vitt brus. Integritet är inte bara en juridisk kryssruta — det är matematik.",
+    "realtime_title": "Real-Time WebSocket",
+    "realtime_desc": "Sluta trycka F5. Tack vare WebSockets färdas information ögonblickligen. När en tekniker stänger ett ärende i Göteborg ser chefen i Stockholm pricken bli grön i samma millisekund. Det är som att vara överallt på en gång.",
+    "cms_title": "Headless CMS Integration",
+    "cms_desc": "Innehåll är flytande. Vår headless-arkitektur frikopplar data från presentation. Det innebär att du kan publicera ett blogginlägg, pusha det till mobilappen och skicka det via nyhetsbrev med ett enda klick.",
+    "datalake_title": "Scalable Data Lake",
+    "datalake_desc": "Från 100 till 100 miljoner poster utan att svettas. Vi använder partitionerad PostgreSQL för att hantera massiva datavolymer utan fördröjningar. Din historik är värdefull — vi behåller den för alltid, tillgänglig på ett ögonblick.",
+    "cdn_title": "Global CDN Edge",
+    "cdn_desc": "Hastighet är geografisk. Våra statiska resurser replikeras över 300+ datacenter världen över. Oavsett om din kund finns i New York eller Tokyo laddas din sajt som om servern vore i rummet bredvid."
   }
 }

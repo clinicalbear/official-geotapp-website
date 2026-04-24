@@ -1,19 +1,60 @@
-// Slug translations — only IT canonical → EN and DE translated slugs
+// Slug translations — canonical (Italian) → all locales with different slugs
 const SLUG_TRANSLATIONS = {
-  'chi-siamo':    { en: 'about-us',   de: 'uber-uns' },
-  'guida':        { en: 'guide',      de: 'anleitung' },
-  'settori':      { en: 'sectors',    de: 'branchen' },
-  'contact':      {                   de: 'kontakt' },
-  'pricing':      {                   de: 'preise' },
-  'features':     {                   de: 'funktionen' },
-  'products':     {                   de: 'produkte' },
+  'chi-siamo': {
+    en: 'about-us', de: 'uber-uns', nl: 'over-ons', fr: 'a-propos',
+    es: 'quienes-somos', pt: 'sobre-nos', da: 'om-os', sv: 'om-oss', nb: 'om-oss', ru: 'o-nas',
+  },
+  'guida': {
+    en: 'guide', de: 'anleitung', nl: 'gids', fr: 'guide',
+    es: 'guia', pt: 'guia', da: 'vejledning', sv: 'guide', nb: 'guide', ru: 'rukovodstvo',
+  },
+  'settori': {
+    en: 'sectors', de: 'branchen', nl: 'sectoren', fr: 'secteurs',
+    es: 'sectores', pt: 'setores', da: 'sektorer', sv: 'sektorer', nb: 'sektorer', ru: 'sektory',
+  },
+  'contact': {
+    de: 'kontakt', es: 'contacto', pt: 'contacto',
+    da: 'kontakt', sv: 'kontakt', nb: 'kontakt', ru: 'kontakt',
+  },
+  'pricing': {
+    de: 'preise', nl: 'tarieven', fr: 'tarifs',
+    es: 'precios', pt: 'precos', da: 'priser', sv: 'priser', nb: 'priser', ru: 'tseny',
+  },
+  'features': {
+    de: 'funktionen', nl: 'functies', fr: 'fonctionnalites',
+    es: 'funciones', pt: 'funcionalidades', da: 'funktioner', sv: 'funktioner', nb: 'funksjoner', ru: 'vozmozhnosti',
+  },
+  'products': {
+    de: 'produkte', nl: 'producten', fr: 'produits',
+    es: 'productos', pt: 'produtos', da: 'produkter', sv: 'produkter', nb: 'produkter', ru: 'produkty',
+  },
   // Sector sub-pages
-  'pulizie':      { en: 'cleaning',   de: 'reinigung' },
-  'installatori': { en: 'installers', de: 'installateure' },
-  'sicurezza':    { en: 'security',   de: 'sicherheit' },
-  'risorse':      { en: 'resources',  de: 'ressourcen' },
+  'pulizie': {
+    en: 'cleaning', de: 'reinigung', nl: 'schoonmaak', fr: 'nettoyage',
+    es: 'limpieza', pt: 'limpeza', da: 'rengoering', sv: 'rengoering', nb: 'rengjoring', ru: 'uborka',
+  },
+  'installatori': {
+    en: 'installers', de: 'installateure', nl: 'installateurs', fr: 'installateurs',
+    es: 'instaladores', pt: 'instaladores', da: 'montorer', sv: 'montorer', nb: 'montorer', ru: 'montazhniki',
+  },
+  'sicurezza': {
+    en: 'security', de: 'sicherheit', nl: 'beveiliging', fr: 'securite',
+    es: 'seguridad', pt: 'seguranca', da: 'sikkerhed', sv: 'sakerhet', nb: 'sikkerhet', ru: 'bezopasnost',
+  },
+  'risorse': {
+    en: 'resources', de: 'ressourcen', nl: 'bronnen', fr: 'ressources',
+    es: 'recursos', pt: 'recursos', da: 'ressourcer', sv: 'resurser', nb: 'ressurser', ru: 'resursy',
+  },
   // Competitor comparison pages
-  'confronto':    { en: 'compare',    de: 'vergleich' },
+  'confronto': {
+    en: 'compare', de: 'vergleich', nl: 'vergelijking', fr: 'comparaison',
+    es: 'comparacion', pt: 'comparacao', da: 'sammenligning', sv: 'jamforelse', nb: 'sammenligning', ru: 'sravnenie',
+  },
+  // Legal pages
+  'terms': {
+    nl: 'voorwaarden', fr: 'conditions', es: 'terminos', pt: 'termos',
+    da: 'vilkaar', sv: 'villkor', nb: 'vilkaar', ru: 'usloviya',
+  },
 };
 
 // Removed locales and their slug translations → redirect to English equivalent

@@ -1,9 +1,24 @@
 'use client';
 
+import { useParams } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { Layers, Zap, Shield, Database, Smartphone, Globe } from 'lucide-react';
+import { getDictionary } from '@/lib/i18n/dictionaries';
+import type { AppLocale } from '@/lib/i18n/config';
 
 export default function FeaturesPage() {
+  const { locale } = useParams<{ locale: string }>();
+  const t = getDictionary(locale as AppLocale).features;
+
+  const feats = [
+    { icon: Smartphone, title: t.offline_title, desc: t.offline_desc },
+    { icon: Shield, title: t.encryption_title, desc: t.encryption_desc },
+    { icon: Zap, title: t.realtime_title, desc: t.realtime_desc },
+    { icon: Layers, title: t.cms_title, desc: t.cms_desc },
+    { icon: Database, title: t.datalake_title, desc: t.datalake_desc },
+    { icon: Globe, title: t.cdn_title, desc: t.cdn_desc },
+  ];
+
   return (
     <div className="bg-background min-h-screen pt-40 pb-20">
       <section className="px-6 text-center mb-24">
@@ -13,50 +28,17 @@ export default function FeaturesPage() {
           className="container mx-auto max-w-4xl"
         >
           <h1 className="text-5xl md:text-7xl font-display font-bold text-white mb-8">
-            Potenza Sotto il Cofano.
+            {t.title}
           </h1>
           <p className="text-xl text-text-secondary leading-relaxed font-light max-w-2xl mx-auto">
-            Non costruiamo giocattoli. GeoTapp è una piattaforma enterprise
-            concepita per scalare. Ecco le tecnologie che rendono possibile la
-            magia.
+            {t.subtitle}
           </p>
         </motion.div>
       </section>
 
       <section className="container mx-auto px-6 max-w-6xl">
         <div className="grid md:grid-cols-2 gap-x-16 gap-y-24">
-          {[
-            {
-              icon: Smartphone,
-              title: 'Offline-First Architecture',
-              desc: "La connessione cade, il lavoro no. Abbiamo costruito un database locale sincronizzato (CRDT) che vive dentro l'app. I tuoi tecnici possono lavorare in un bunker sotterraneo; non appena vedranno uno specchio di cielo, i dati si allineeranno silenziosamente col cloud.",
-            },
-            {
-              icon: Shield,
-              title: 'Military-Grade Encryption',
-              desc: 'Dormi sonni tranquilli. Utilizziamo la crittografia AES-256 a riposo e TLS 1.3 in transito. Anche se un attaccante intercettasse i tuoi dati, vedrebbe solo rumore bianco. La privacy non è solo una checkbox legale, è matematica.',
-            },
-            {
-              icon: Zap,
-              title: 'Real-Time WebSocket',
-              desc: 'Basta premere F5. Grazie ai WebSocket, le informazioni viaggiano istantaneamente. Se un tecnico chiude un ticket a Roma, il manager a Milano vede il pallino diventare verde nello stesso millisecondo. È come essere ovunque contemporaneamente.',
-            },
-            {
-              icon: Layers,
-              title: 'Headless CMS Integration',
-              desc: "Il contenuto è liquido. La nostra architettura headless disaccoppia i dati dalla presentazione. Questo significa che puoi pubblicare un articolo sul blog, spararlo sull'app mobile e inviarlo via newsletter con un solo click. ",
-            },
-            {
-              icon: Database,
-              title: 'Scalable Data Lake',
-              desc: 'Da 100 a 100 milioni di record senza battere ciglio. Utilizziamo PostgreSQL partizionato per gestire volumi di dati massicci senza rallentamenti. Il tuo storico è prezioso; noi lo conserviamo per sempre, accessibile in un istante.',
-            },
-            {
-              icon: Globe,
-              title: 'Global CDN Edge',
-              desc: 'La velocità è geografica. I nostri asset statici sono replicati in 300+ data center nel mondo. Che il tuo cliente sia a New York o a Tokyo, il tuo sito caricherà come se il server fosse nella stanza accanto.',
-            },
-          ].map((feat, i) => (
+          {feats.map((feat, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0 }}

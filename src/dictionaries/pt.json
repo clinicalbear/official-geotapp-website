@@ -847,5 +847,21 @@
     "per_anno": "/ ano",
     "label_operators": "operadores",
     "embed_title": "Calculadora ROI GeoTapp"
+  },
+  "features": {
+    "title": "Power Under the Hood.",
+    "subtitle": "Não construímos brinquedos. GeoTapp é uma plataforma empresarial construída para escalar. Aqui estão as tecnologias que fazem a magia acontecer.",
+    "offline_title": "Offline-First Architecture",
+    "offline_desc": "A ligação cai, o trabalho não. Construímos uma base de dados sincronizada localmente (CRDT) que vive dentro da aplicação. Os seus técnicos podem trabalhar num bunker subterrâneo; assim que avistarem um pedaço de céu, os dados sincronizam silenciosamente com a nuvem.",
+    "encryption_title": "Military-Grade Encryption",
+    "encryption_desc": "Durma descansado. Usamos encriptação AES-256 em repouso e TLS 1.3 em trânsito. Mesmo que um atacante interceptasse os seus dados, só veria ruído branco. A privacidade não é apenas uma formalidade legal — é matemática.",
+    "realtime_title": "Real-Time WebSocket",
+    "realtime_desc": "Sem precisar de carregar em F5. Graças aos WebSockets, a informação viaja instantaneamente. Quando um técnico fecha um ticket no Porto, o gestor em Lisboa vê o ponto ficar verde no mesmo milissegundo. É como estar em todo o lado ao mesmo tempo.",
+    "cms_title": "Headless CMS Integration",
+    "cms_desc": "O conteúdo é fluido. A nossa arquitetura headless desacopla os dados da apresentação. Isso significa que pode publicar um artigo no blog, enviá-lo para a app móvel e distribuí-lo por newsletter com um único clique.",
+    "datalake_title": "Scalable Data Lake",
+    "datalake_desc": "De 100 a 100 milhões de registos sem esforço. Usamos PostgreSQL particionado para gerir volumes massivos de dados sem abrandamentos. O seu histórico é precioso — guardamo-lo para sempre, acessível num instante.",
+    "cdn_title": "Global CDN Edge",
+    "cdn_desc": "A velocidade é geográfica. Os nossos recursos estáticos são replicados em mais de 300 centros de dados em todo o mundo. Quer o seu cliente esteja em Nova Iorque ou Tóquio, o seu site carrega como se o servidor estivesse na sala ao lado."
   }
 }
