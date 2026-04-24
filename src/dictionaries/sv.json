@@ -28,7 +28,11 @@
     "tagline": "Fältaktivitet registrerad. Verksamhet organiserad. Rapporter verifierbara.",
     "privacy": "Integritetspolicy",
     "terms": "Användarvillkor",
-    "rights": "Alla rättigheter förbehållna."
+    "rights": "Alla rättigheter förbehållna.",
+    "newsletter_title": "Håll dig uppdaterad om branschen",
+    "newsletter_desc": "Ingen spam, bara värdefulla uppdateringar om verksamhetsstyrning, HR och teknik för SMF.",
+    "sectors": "Sektorer",
+    "contact": "Kontakt"
   },
   "landing": {
     "hero_badge": "Arbetet hände. Gör det nu bevisbart.",
@@ -336,7 +340,14 @@
       "error_checkout": "Fel vid skapande av session. Försök igen.",
       "error_connection": "Anslutningsfel. Försök igen."
     },
-    "tracker_footnote": "* Maximalt antal TimeTracker-användare som kan aktiveras samtidigt i Flow-planen. Att ta bort åtkomst för en medarbetare frigör platsen omedelbart."
+    "tracker_footnote": "* Maximalt antal TimeTracker-användare som kan aktiveras samtidigt i Flow-planen. Att ta bort åtkomst för en medarbetare frigör platsen omedelbart.",
+    "per_year": "/år",
+    "title_gradient": "Skala Ditt Företag.",
+    "or_monthly": "eller",
+    "per_month_short": "/månad",
+    "annual_savings": "Årlig besparing:",
+    "no_monthly_option": "Inget månadsalternativ",
+    "add_btn": "Lägg till"
   },
   "contact": {
     "title": "Låt oss prata <span class=\"text-primary\">affärer</span>.",
@@ -648,7 +659,17 @@
     "form_submitting": "Skickar...",
     "success_title": "Förfrågan mottagen!",
     "success_desc": "Vi kontaktar dig inom 1 arbetsdag för att schemalägga demon.",
-    "error_message": "Fel vid sändning. Försök igen senare."
+    "error_message": "Fel vid sändning. Försök igen senare.",
+    "badge": "Demo GeoTapp — 30 Minuter",
+    "page_subtitle": "Vi visar dig hur GeoTapp eliminerar tvister om timmar och gör varje uppdrag dokumenterat och verifierbart.",
+    "form_title": "Dina uppgifter",
+    "urgent_contact": "Brådskande frågor? Skriv till",
+    "no_spam": "Ingen spam. Dina uppgifter hanteras enligt vår",
+    "trust_gps": "GPS-verifierad stämpling",
+    "trust_offline": "Fungerar offline",
+    "trust_response": "Svar inom 1 dag",
+    "what_youll_see": "Vad du kommer att se i demon",
+    "faq_title": "Vanliga frågor"
   },
   "download_page": {
     "title": "Ladda ner GeoTapp",
@@ -847,6 +868,26 @@
     "per_anno": "/ år",
     "label_operators": "operatörer",
     "embed_title": "GeoTapp ROI-kalkylator"
+  },
+  "settore_layout": {
+    "pain_subtitle": "Stämplingsappar registrerar. De certifierar inte. Skillnaden är enorm, och vid en tvist känner du den.",
+    "before": "Före",
+    "after": "Med GeoTapp",
+    "classic_app": "Standardapp / Kalkylblad",
+    "roi_badge": "Beräkna din ROI",
+    "roi_title": "Hur mycket skulle du spara med GeoTapp?",
+    "roi_desc": "Ange din teamstorlek och få en ROI-uppskattning på 30 sekunder. Utan registrering, utan email.",
+    "roi_cta": "Beräkna min ROI",
+    "mockup_title": "Uppdrag öppet",
+    "mockup_gps": "GPS verifierad",
+    "mockup_photos": "Foton bifogade",
+    "mockup_photos_count": "3 geolokaliserade foton",
+    "mockup_sealed": "Ej redigerbar efter stängning",
+    "mockup_status_active": "Aktiv",
+    "mockup_status_completed": "Slutförd",
+    "mockup_status_summary": "4 operatörer aktiva på 6 platser",
+    "see_real_report": "Se en riktig rapport",
+    "cta_note": "Ingen bindning. Inget avtal. Vi konfigurerar för ditt riktiga fall."
   },
   "features": {
     "title": "Power Under the Hood.",

@@ -28,7 +28,11 @@
     "tagline": "Feltaktivitet registrert. Operasjoner organisert. Rapporter verifiserbare.",
     "privacy": "Personvernpolicy",
     "terms": "Tjenestevilkår",
-    "rights": "Alle rettigheter forbeholdt."
+    "rights": "Alle rettigheter forbeholdt.",
+    "newsletter_title": "Hold deg oppdatert om bransjen",
+    "newsletter_desc": "Ingen spam, bare verdifulle oppdateringer om driftsstyring, HR og teknologi for SMB-er.",
+    "sectors": "Sektorer",
+    "contact": "Kontakt"
   },
   "landing": {
     "hero_badge": "Arbeidet skjedde. Gjør det nå bevisbart.",
@@ -336,7 +340,14 @@
       "error_checkout": "Feil ved oppretting av økt. Prøv igjen.",
       "error_connection": "Tilkoblingsfeil. Prøv igjen."
     },
-    "tracker_footnote": "* Maksimalt antall TimeTracker-brukere som kan aktiveres samtidig i Flow-planen. Å fjerne tilgang for en ansatt frigjør plassen umiddelbart."
+    "tracker_footnote": "* Maksimalt antall TimeTracker-brukere som kan aktiveres samtidig i Flow-planen. Å fjerne tilgang for en ansatt frigjør plassen umiddelbart.",
+    "per_year": "/år",
+    "title_gradient": "Skalér Din Bedrift.",
+    "or_monthly": "eller",
+    "per_month_short": "/måned",
+    "annual_savings": "Årlig besparelse:",
+    "no_monthly_option": "Ingen månedlig mulighet",
+    "add_btn": "Legg til"
   },
   "contact": {
     "title": "La oss snakke <span class=\"text-primary\">forretninger</span>.",
@@ -648,7 +659,17 @@
     "form_submitting": "Sender...",
     "success_title": "Forespørsel mottatt!",
     "success_desc": "Vi kontakter deg innen 1 virkedag for å planlegge demoen.",
-    "error_message": "Feil ved sending. Prøv igjen senere."
+    "error_message": "Feil ved sending. Prøv igjen senere.",
+    "badge": "Demo GeoTapp — 30 Minutter",
+    "page_subtitle": "Vi viser deg hvordan GeoTapp eliminerer tvister om timer og gjør hvert oppdrag dokumentert og verifiserbart.",
+    "form_title": "Dine opplysninger",
+    "urgent_contact": "Presserende spørsmål? Skriv til",
+    "no_spam": "Ingen spam. Dine data behandles i henhold til vår",
+    "trust_gps": "GPS-verifisert stempling",
+    "trust_offline": "Fungerer offline",
+    "trust_response": "Svar innen 1 dag",
+    "what_youll_see": "Hva du vil se i demoen",
+    "faq_title": "Ofte stilte spørsmål"
   },
   "download_page": {
     "title": "Last ned GeoTapp",
@@ -847,6 +868,26 @@
     "per_anno": "/ år",
     "label_operators": "operatører",
     "embed_title": "GeoTapp ROI-kalkulator"
+  },
+  "settore_layout": {
+    "pain_subtitle": "Stemplingsapper registrerer. De sertifiserer ikke. Forskjellen er enorm, og når tvisten kommer, kjenner du den.",
+    "before": "Før",
+    "after": "Med GeoTapp",
+    "classic_app": "Standard app / Regneark",
+    "roi_badge": "Beregn din ROI",
+    "roi_title": "Hvor mye ville du spart med GeoTapp?",
+    "roi_desc": "Angi teamstørrelsen din og få et ROI-estimat på 30 sekunder. Uten registrering, uten email.",
+    "roi_cta": "Beregn min ROI",
+    "mockup_title": "Oppdrag åpent",
+    "mockup_gps": "GPS verifisert",
+    "mockup_photos": "Bilder vedlagt",
+    "mockup_photos_count": "3 geolokaliserte bilder",
+    "mockup_sealed": "Ikke redigerbar etter lukking",
+    "mockup_status_active": "Aktiv",
+    "mockup_status_completed": "Fullført",
+    "mockup_status_summary": "4 operatører aktive på 6 lokasjoner",
+    "see_real_report": "Se en ekte rapport",
+    "cta_note": "Ingen binding. Ingen kontrakt. Vi konfigurerer på din virkelige sak."
   },
   "features": {
     "title": "Power Under the Hood.",

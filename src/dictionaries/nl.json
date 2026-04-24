@@ -28,7 +28,11 @@
     "tagline": "Buitendienstactiviteit geregistreerd. Operaties georganiseerd. Rapporten verifieerbaar.",
     "privacy": "Privacybeleid",
     "terms": "Gebruiksvoorwaarden",
-    "rights": "Alle rechten voorbehouden."
+    "rights": "Alle rechten voorbehouden.",
+    "newsletter_title": "Blijf op de hoogte van de sector",
+    "newsletter_desc": "Geen spam, alleen waardevolle updates over operationeel beheer, HR en technologie voor het MKB.",
+    "sectors": "Sectoren",
+    "contact": "Contact"
   },
   "landing": {
     "hero_badge": "Het werk is gedaan. Maak het nu bewijsbaar.",
@@ -601,6 +605,70 @@
     "page_title": "Gebruikershandleiding",
     "download_pdf": "Downloaden / Afdrukken als PDF"
   },
+  "trial": {
+    "page_title": "Start uw gratis proefperiode van 14 dagen",
+    "page_subtitle": "Volledige toegang tot alle GeoTapp Flow-modules gedurende 14 dagen. Geen creditcard, geen verplichting. Op elk moment opzegbaar.",
+    "badge": "Gratis proefperiode — 14 dagen",
+    "form_title": "Maak uw account aan",
+    "form_company": "Bedrijfsnaam",
+    "form_company_placeholder": "Bijv. De Vries Installaties BV",
+    "form_vat": "Europees BTW-nummer",
+    "form_vat_placeholder": "Bijv. NL123456789B01",
+    "form_email": "Zakelijk e-mailadres",
+    "form_email_placeholder": "Bijv. jan@bedrijf.nl",
+    "form_fullname": "Volledige naam",
+    "form_fullname_placeholder": "Bijv. Jan de Vries",
+    "form_plan": "GeoTapp Flow-abonnement",
+    "form_plan_note": "Het aantal gebruikers van het plan verwijst naar GeoTapp Flow (kantoorbeheer / CRM). GeoTapp Timetracker-licenties voor buitendienstmedewerkers zijn een apart abonnement, met een maximum inbegrepen afhankelijk van het gekozen plan.",
+    "plan_solo": "Solo — 1 Flow-gebruiker",
+    "plan_team": "Team — tot 5 Flow-gebruikers",
+    "plan_business": "Business — onbeperkt Flow-gebruikers",
+    "form_seats": "Timetracker-licenties (optioneel)",
+    "form_seats_hint": "Apart abonnement voor buitendienstmedewerkers (mobiele app). Limiet inbegrepen in plan: Solo max 2, Team max 5, Business onbeperkt. U kunt licenties aanpassen na activering.",
+    "form_submit": "Start de proefperiode",
+    "form_submitting": "Bezig...",
+    "form_privacy": "Uw gegevens worden verwerkt volgens ons",
+    "form_privacy_link": "Privacybeleid",
+    "form_email_hint": "Gebruik een zakelijk e-mailadres (geen Gmail, Yahoo, etc.)",
+    "success_title": "Controleer uw e-mail!",
+    "success_desc": "We hebben de activeringslink gestuurd naar ",
+    "success_desc2": "Klik op de link om uw wachtwoord in te stellen en toegang te krijgen tot uw proefperiode.",
+    "success_spam": "Kunt u het niet vinden? Controleer uw spammap.",
+    "error_message": "Activeringsfout. Probeer het opnieuw of stuur een e-mail naar info@geotapp.com.",
+    "benefits_title": "Wat zit er in de proefperiode",
+    "benefits": [
+      {
+        "title": "Volledige toegang",
+        "desc": "Alle modules actief: CRM, facturering, teambeheer, klantondersteuning."
+      },
+      {
+        "title": "Geen creditcard vereist",
+        "desc": "Voer alleen uw bedrijfsgegevens in. Voeg pas een kaart toe als u besluit door te gaan."
+      },
+      {
+        "title": "Uw gegevens zijn veilig",
+        "desc": "Uw gegevens blijven van u. U kunt ze op elk moment exporteren."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Wat gebeurt er na 14 dagen?",
+        "a": "U ontvangt een e-mail met een link om uw abonnement te activeren. Als u niets doet, wordt het account opgeschort zonder kosten."
+      },
+      {
+        "q": "Moet ik een creditcard invoeren?",
+        "a": "Nee. De proefperiode is volledig gratis zonder creditcard. U voegt er alleen een toe als u besluit door te gaan."
+      },
+      {
+        "q": "Kan ik mijn team uitnodigen?",
+        "a": "Ja, u kunt gebruikers toevoegen vanuit het instellingenpaneel tijdens de proefperiode."
+      },
+      {
+        "q": "Hoe lang duurt het om te beginnen?",
+        "a": "Minder dan 2 minuten: vul het formulier in, ontvang de e-mail, stel uw wachtwoord in en u bent binnen."
+      }
+    ]
+  },
   "demo": {
     "page_title": "Boek uw persoonlijke demo",
     "settori": [
@@ -656,7 +724,17 @@
     "form_submitting": "Versturen...",
     "success_title": "Aanvraag ontvangen!",
     "success_desc": "We nemen binnen 1 werkdag contact met u op om de demo in te plannen.",
-    "error_message": "Fout bij verzenden. Probeer het later opnieuw."
+    "error_message": "Fout bij verzenden. Probeer het later opnieuw.",
+    "badge": "Demo GeoTapp — 30 Minuten",
+    "page_subtitle": "We laten u zien hoe GeoTapp geschillen over uren elimineert en elke opdracht gedocumenteerd en verifieerbaar maakt.",
+    "form_title": "Uw gegevens",
+    "urgent_contact": "Dringende vragen? Schrijf naar",
+    "no_spam": "Geen spam. Uw gegevens worden behandeld volgens ons",
+    "trust_gps": "GPS-geverifieerde klok-in",
+    "trust_offline": "Werkt offline",
+    "trust_response": "Reactie binnen 1 dag",
+    "what_youll_see": "Wat u in de demo ziet",
+    "faq_title": "Veelgestelde vragen"
   },
   "download_page": {
     "title": "GeoTapp downloaden",
@@ -791,6 +869,26 @@
     "per_anno": "/ jaar",
     "label_operators": "medewerkers",
     "embed_title": "GeoTapp ROI-Calculator"
+  },
+  "settore_layout": {
+    "pain_subtitle": "Klok-in apps registreren. Ze certificeren niet. Er is een enorm verschil, en bij een geschil voel je dat.",
+    "before": "Voorheen",
+    "after": "Met GeoTapp",
+    "classic_app": "Standaard app / Spreadsheet",
+    "roi_badge": "Bereken uw ROI",
+    "roi_title": "Hoeveel zou u besparen met GeoTapp?",
+    "roi_desc": "Voer uw teamgrootte in en ontvang een ROI-schatting in 30 seconden. Zonder registratie, zonder e-mail.",
+    "roi_cta": "Bereken mijn ROI",
+    "mockup_title": "Opdracht open",
+    "mockup_gps": "GPS geverifieerd",
+    "mockup_photos": "Foto's bijgevoegd",
+    "mockup_photos_count": "3 gelokaliseerde foto's",
+    "mockup_sealed": "Niet bewerkbaar na sluiting",
+    "mockup_status_active": "Actief",
+    "mockup_status_completed": "Voltooid",
+    "mockup_status_summary": "4 medewerkers actief op 6 locaties",
+    "see_real_report": "Bekijk een echt rapport",
+    "cta_note": "Geen binding. Geen contract. We configureren op uw echte situatie."
   },
   "features": {
     "title": "Power Under the Hood.",

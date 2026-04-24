@@ -28,7 +28,11 @@
     "tagline": "Actividad de campo registrada. Operaciones organizadas. Informes verificables.",
     "privacy": "Política de privacidad",
     "terms": "Términos de servicio",
-    "rights": "Todos los derechos reservados."
+    "rights": "Todos los derechos reservados.",
+    "newsletter_title": "Mantente al día del sector",
+    "newsletter_desc": "Sin spam, solo actualizaciones de valor sobre gestión operativa, RRHH y tecnología para PYMES.",
+    "sectors": "Sectores",
+    "contact": "Contacto"
   },
   "landing": {
     "hero_badge": "El trabajo ocurrió. Ahora hazlo demostrable.",
@@ -336,7 +340,14 @@
       "error_checkout": "Error al crear la sesión. Por favor, inténtalo de nuevo.",
       "error_connection": "Error de conexión. Por favor, inténtalo de nuevo."
     },
-    "tracker_footnote": "* Número máximo de usuarios TimeTracker activables simultáneamente en el plan Flow. Al eliminar el acceso de un empleado, el puesto queda libre de inmediato."
+    "tracker_footnote": "* Número máximo de usuarios TimeTracker activables simultáneamente en el plan Flow. Al eliminar el acceso de un empleado, el puesto queda libre de inmediato.",
+    "per_year": "/año",
+    "title_gradient": "Escala Tu Negocio.",
+    "or_monthly": "o",
+    "per_month_short": "/mes",
+    "annual_savings": "Ahorro anual:",
+    "no_monthly_option": "Sin opción mensual",
+    "add_btn": "Añadir"
   },
   "contact": {
     "title": "Hablemos de <span class=\"text-primary\">Negocio</span>.",
@@ -648,7 +659,17 @@
     "form_submitting": "Enviando...",
     "success_title": "¡Solicitud recibida!",
     "success_desc": "Nos pondremos en contacto contigo en 1 día hábil para programar la demo.",
-    "error_message": "Error al enviar. Por favor inténtalo más tarde."
+    "error_message": "Error al enviar. Por favor inténtalo más tarde.",
+    "badge": "Demo GeoTapp — 30 Minutos",
+    "page_subtitle": "Te mostramos cómo GeoTapp elimina las disputas sobre horas y hace cada intervención documentada y verificable.",
+    "form_title": "Tus datos",
+    "urgent_contact": "¿Preguntas urgentes? Escribe a",
+    "no_spam": "Sin spam. Tus datos se tratan según nuestra",
+    "trust_gps": "Fichaje GPS verificado",
+    "trust_offline": "Funciona offline",
+    "trust_response": "Respuesta en 1 día",
+    "what_youll_see": "Qué verás en la demo",
+    "faq_title": "Preguntas frecuentes"
   },
   "download_page": {
     "title": "Descargar GeoTapp",
@@ -847,6 +868,26 @@
     "per_anno": "/ año",
     "label_operators": "operarios",
     "embed_title": "Calculadora ROI GeoTapp"
+  },
+  "settore_layout": {
+    "pain_subtitle": "Las apps de fichaje registran. No certifican. Hay una diferencia enorme, y cuando llega la disputa la sientes toda.",
+    "before": "Antes",
+    "after": "Con GeoTapp",
+    "classic_app": "App genérica / Hoja de cálculo",
+    "roi_badge": "Calcula tu ROI",
+    "roi_title": "¿Cuánto ahorrarías con GeoTapp?",
+    "roi_desc": "Introduce el tamaño de tu equipo y obtén una estimación del ROI en 30 segundos. Sin registro, sin email.",
+    "roi_cta": "Calcular mi ROI",
+    "mockup_title": "Intervención abierta",
+    "mockup_gps": "GPS verificado",
+    "mockup_photos": "Fotos adjuntas",
+    "mockup_photos_count": "3 fotos geolocalizadas",
+    "mockup_sealed": "No editable tras el cierre",
+    "mockup_status_active": "Activo",
+    "mockup_status_completed": "Completado",
+    "mockup_status_summary": "4 operarios activos en 6 sitios",
+    "see_real_report": "Ver un informe real",
+    "cta_note": "Sin permanencia. Sin contrato. Configuramos sobre tu caso real."
   },
   "features": {
     "title": "Power Under the Hood.",
