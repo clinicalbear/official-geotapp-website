@@ -62,6 +62,11 @@ const ROUTES: RouteEntry[] = [
   { path: '/settori/installatori/', priority: 0.9, changeFrequency: 'weekly' },
   { path: '/settori/sicurezza/', priority: 0.9, changeFrequency: 'weekly' },
 
+  // Settori verticali — landing SEO aggiuntive
+  { path: '/settori/elettricisti/', priority: 0.9, changeFrequency: 'weekly' },
+  { path: '/settori/idraulici/', priority: 0.9, changeFrequency: 'weekly' },
+  { path: '/settori/termoidraulici/', priority: 0.9, changeFrequency: 'weekly' },
+
   // Settori risorse (pillar SEO — pagine long-tail per settore)
   { path: '/settori/pulizie/risorse/', priority: 0.85, changeFrequency: 'monthly' },
   { path: '/settori/installatori/risorse/', priority: 0.85, changeFrequency: 'monthly' },
