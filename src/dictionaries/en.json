@@ -28,7 +28,11 @@
     "tagline": "Field activity recorded. Operations organised. Reports verifiable.",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "newsletter_title": "Stay updated on the industry",
+    "newsletter_desc": "No spam, just valuable updates on operations management, HR and technology for SMEs.",
+    "sectors": "Sectors",
+    "contact": "Contact"
   },
   "landing": {
     "hero_badge": "The work happened. Now make it provable.",
@@ -337,6 +341,13 @@
       "error_connection": "Connection error. Please try again."
     },
     "intro_label": "2026 Introductory Price",
+    "per_year": "/year",
+    "title_gradient": "Scale Your Business.",
+    "or_monthly": "or",
+    "per_month_short": "/month",
+    "annual_savings": "Annual savings:",
+    "no_monthly_option": "No monthly option",
+    "add_btn": "Add",
     "tracker_footnote": "* Maximum number of TimeTracker users that can be activated simultaneously on the Flow plan. Removing an employee's access immediately frees the slot."
   },
   "contact": {

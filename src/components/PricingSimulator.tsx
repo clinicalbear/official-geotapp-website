@@ -21,6 +21,7 @@ export default function PricingSimulator() {
   const [contactEmail, setContactEmail] = useState('');
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState<string | null>(null);
+  const [isSuccess, setIsSuccess] = useState(false);
   const [termsAccepted, setTermsAccepted] = useState(false);
   const [privacyRead, setPrivacyRead] = useState(false);
 
@@ -155,6 +156,7 @@ export default function PricingSimulator() {
 
     setLoading(true);
     setStatus(null);
+    setIsSuccess(false);
     try {
       // Check for Enterprise
       if (quote?.isCustom) {
@@ -168,11 +170,12 @@ export default function PricingSimulator() {
               name: companyName,
               email: contactEmail,
               company: companyName,
-              message: `Richiesta Enterprise per ${seatCount} dipendenti.`,
+              message: `Enterprise request for ${seatCount} employees.`,
             }),
           },
         );
         if (!res.ok) throw new Error(ps.error_request);
+        setIsSuccess(true);
         setStatus(ps.success_sent);
         return;
       }
@@ -184,7 +187,7 @@ export default function PricingSimulator() {
           period: 'year',
           quantity: seatCount,
           metadata: {
-            details: `${seatCount} utenti (annuale)`,
+            details: `${seatCount} users (annual)`,
           },
         },
       ];
@@ -205,7 +208,7 @@ export default function PricingSimulator() {
                 productKey: 'GEOTAPP_APP',
                 licenseType: 'BUSINESS',
                 metadata: {
-                  details: `${seatCount} utenti (annuale)`,
+                  details: `${seatCount} users (annual)`,
                   product_key: 'GEOTAPP_APP', // Redundant but consistent
                 },
               },
@@ -220,7 +223,7 @@ export default function PricingSimulator() {
         window.location.href = data.checkout_url || data.url;
       } else {
         throw new Error(
-          data.message || data.error || 'Errore sconosciuto dal server',
+          data.message || data.error || (ps.error_request ?? 'Unknown server error'),
         );
       }
     } catch (e: any) {
@@ -453,7 +456,7 @@ export default function PricingSimulator() {
 
           {status && (
             <div
-              className={`p-3 rounded-lg text-center ${status.includes('successo') ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}
+              className={`p-3 rounded-lg text-center ${isSuccess ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}
             >
               {status}
             </div>

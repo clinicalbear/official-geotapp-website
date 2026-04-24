@@ -28,7 +28,11 @@
     "tagline": "Außendienst erfasst. Einsätze organisiert. Berichte prüfbar.",
     "privacy": "Datenschutz",
     "terms": "Nutzungsbedingungen",
-    "rights": "Alle Rechte vorbehalten."
+    "rights": "Alle Rechte vorbehalten.",
+    "newsletter_title": "Bleiben Sie auf dem Laufenden",
+    "newsletter_desc": "Kein Spam, nur wertvolle Updates zu Betriebsführung, HR und Technologie für KMU.",
+    "sectors": "Branchen",
+    "contact": "Kontakt"
   },
   "landing": {
     "hero_badge": "Die Arbeit war da. Jetzt machen Sie sie beweisbar.",
@@ -337,6 +341,13 @@
       "error_connection": "Verbindungsfehler. Bitte erneut versuchen."
     },
     "intro_label": "Einführungspreis 2026",
+    "per_year": "/Jahr",
+    "title_gradient": "Skalieren Sie Ihr Business.",
+    "or_monthly": "oder",
+    "per_month_short": "/Monat",
+    "annual_savings": "Jährliche Ersparnis:",
+    "no_monthly_option": "Keine monatliche Option",
+    "add_btn": "Hinzufügen",
     "tracker_footnote": "* Maximale Anzahl gleichzeitig aktivierbarer TimeTracker-Nutzer im Flow-Plan. Das Entfernen des Mitarbeiterzugangs gibt den Platz sofort frei."
   },
   "contact": {

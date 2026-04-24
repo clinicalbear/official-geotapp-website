@@ -26,10 +26,10 @@ export default function Footer() {
             <div>
               <span className="text-primary font-bold uppercase tracking-widest text-xs block mb-3">Newsletter</span>
               <h2 className="text-2xl md:text-3xl font-display font-bold text-text-primary mb-3">
-                Resta aggiornato sul settore
+                {dict.newsletter_title}
               </h2>
               <p className="text-text-secondary leading-relaxed max-w-md">
-                Niente spam, solo aggiornamenti di valore su gestione operativa, HR e tecnologia per le PMI.
+                {dict.newsletter_desc}
               </p>
             </div>
             <div>
@@ -59,8 +59,8 @@ export default function Footer() {
             <Link href={getLink('/privacy')} className="hover:text-text-primary transition-colors">{dict.privacy}</Link>
             <Link href={getLink('/terms')} className="hover:text-text-primary transition-colors">{dict.terms}</Link>
             <Link href={getLink('/blog')} className="hover:text-text-primary transition-colors">Blog</Link>
-            <Link href={getLink('/settori')} className="hover:text-text-primary transition-colors">Settori</Link>
-            <Link href={getLink('/contact')} className="hover:text-text-primary transition-colors">Contatti</Link>
+            <Link href={getLink('/settori')} className="hover:text-text-primary transition-colors">{dict.sectors}</Link>
+            <Link href={getLink('/contact')} className="hover:text-text-primary transition-colors">{dict.contact}</Link>
           </div>
 
           {/* Social */}
@@ -73,6 +73,9 @@ export default function Footer() {
             </a>
             <a href="https://www.linkedin.com/company/110850300/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-text-secondary hover:text-text-primary transition-colors">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="https://www.trustpilot.com/evaluate/geotapp.com" target="_blank" rel="noopener noreferrer" aria-label="Trustpilot" className="text-text-secondary hover:text-[#00b67a] transition-colors">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0l2.927 8.986H24l-7.336 5.328 2.8 8.614L12 17.6l-7.464 5.328 2.8-8.614L0 8.986h9.073z"/></svg>
             </a>
           </div>
 

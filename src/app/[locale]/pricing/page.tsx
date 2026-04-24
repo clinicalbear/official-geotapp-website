@@ -3,10 +3,17 @@
 import type { Metadata } from 'next';
 import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
 
+const PRICING_SCHEMA_NAME: Record<string, string> = {
+  it: 'Prezzi GeoTapp', en: 'GeoTapp Pricing', de: 'GeoTapp Preise',
+  nl: 'GeoTapp Prijzen', fr: 'Tarifs GeoTapp', es: 'Precios GeoTapp',
+  pt: 'Preços GeoTapp', da: 'GeoTapp Priser', sv: 'GeoTapp Priser',
+  nb: 'GeoTapp Priser', ru: 'Цены GeoTapp',
+};
+
 const PRICING_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  'name': 'Prezzi GeoTapp',
+  'name': 'GeoTapp Pricing',
   'mainEntity': {
     '@type': 'ItemList',
     'itemListElement': [
@@ -169,7 +176,7 @@ export default async function LocalePricingPage({ params }: { params: Promise<{ 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(PRICING_SCHEMA) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ ...PRICING_SCHEMA, name: PRICING_SCHEMA_NAME[locale] ?? PRICING_SCHEMA_NAME.en }) }} />
       {faq && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />}
       <PricingPage />
     </>

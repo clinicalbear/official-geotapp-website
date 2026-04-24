@@ -1,6 +1,6 @@
 'use client';
 
-import { Check, ArrowRight, Star, Heart } from 'lucide-react';
+import { Check, Heart } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
@@ -129,7 +129,6 @@ export default function Pricing() {
   const pathname = usePathname();
   const currentLocale = getLocaleFromPathname(pathname) ?? DEFAULT_LOCALE;
   const dict = getDictionary(currentLocale);
-  const isItalian = currentLocale === 'it';
 
   // State per le statistiche dei promo code
   const [promoStats, setPromoStats] = useState<
@@ -222,7 +221,7 @@ export default function Pricing() {
             ></span>
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
-              Scala il Tuo Business.
+              {(dict.pricing as any).title_gradient ?? 'Scale Your Business.'}
             </span>
           </h1>
           <p className="text-xl text-slate-500 leading-relaxed font-light max-w-2xl mx-auto">
@@ -231,55 +230,6 @@ export default function Pricing() {
         </motion.div>
       </div>
 
-      {/* Bundle Promotion Banner */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.3 }}
-        className="container mx-auto max-w-6xl mb-16"
-      >
-        <Link href="/pricing/bundle/" className="block">
-          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-purple-600 via-blue-600 to-purple-600 p-8 md:p-12 shadow-2xl hover:shadow-3xl transition-all duration-300 group">
-            {/* Animated background pattern */}
-            <div className="absolute inset-0 opacity-20">
-              <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
-            </div>
-
-            <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
-              <div className="flex-1 text-white">
-                <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold mb-4">
-                  <Star className="w-4 h-4" />
-                  Offerta Speciale
-                </div>
-                <h2 className="text-3xl md:text-4xl font-bold mb-3">
-                  Bundle Flow + TimeTracker
-                </h2>
-                <p className="text-lg text-white/90 mb-4">
-                  Risparmia il <span className="font-bold text-2xl">15%</span>{' '}
-                  sul primo anno acquistando insieme Flow e TimeTracker
-                </p>
-                <div className="flex flex-wrap gap-3 text-sm">
-                  <div className="flex items-center gap-2">
-                    <Check className="w-5 h-5" />
-                    <span>CRM & ERP Completo</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Check className="w-5 h-5" />
-                    <span>Tracciamento Ore</span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex-shrink-0">
-                <div className="bg-white text-purple-600 px-8 py-4 rounded-xl font-bold text-lg shadow-lg group-hover:scale-105 transition-transform duration-300 flex items-center gap-2">
-                  Scopri il Bundle
-                  <ArrowRight className="w-5 h-5" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </Link>
-      </motion.div>
 
       {categories.map((category) => (
         <section
@@ -393,10 +343,11 @@ export default function Pricing() {
                     const monthlyPrice = (
                       product as Product
                     ).monthlyPrice?.replace(/\s/g, '');
+                    const p = dict.pricing as any;
                     const periodLabel = isOnce
                       ? 'one-time (lifetime)'
                       : hasMonthly
-                        ? '/anno'
+                        ? (p.per_year ?? '/year')
                         : product.period;
                     const savings = (product as Product).savings;
 
@@ -422,16 +373,16 @@ export default function Pricing() {
                         {hasMonthly && (
                           <div className="space-y-1">
                             <div className="text-sm text-slate-600">
-                              oppure{' '}
+                              {p.or_monthly ?? 'or'}{' '}
                               <span className="font-semibold text-slate-700">
-                                {monthlyPrice}/mese
+                                {monthlyPrice}{p.per_month_short ?? '/month'}
                               </span>
                             </div>
                             {savings && (
                               <div className="inline-flex items-center gap-2 px-2 py-1 bg-green-50 border border-green-200 rounded-full">
                                 <Heart className="h-3 w-3 text-green-600" />
                                 <span className="text-[10px] font-bold text-green-700 uppercase tracking-wider">
-                                  Risparmio annuale: {savings}
+                                  {p.annual_savings ?? 'Annual savings:'} {savings}
                                 </span>
                               </div>
                             )}
@@ -439,7 +390,7 @@ export default function Pricing() {
                         )}
                         {isOnce && !hasMonthly && (
                           <div className="text-xs text-slate-500">
-                            Nessuna opzione mensile
+                            {p.no_monthly_option ?? 'No monthly option'}
                           </div>
                         )}
                       </>
@@ -477,7 +428,7 @@ export default function Pricing() {
                     onClick={() => handleAddToCart(product)}
                     className={`w-full py-3 rounded-lg text-center font-bold text-sm uppercase tracking-wide transition-all shadow-md hover:-translate-y-1 ${product.button}`}
                   >
-                    {isItalian ? 'Aggiungi' : 'Add'}
+                    {(dict.pricing as any).add_btn ?? 'Add'}
                   </button>
                 )}
               </motion.div>

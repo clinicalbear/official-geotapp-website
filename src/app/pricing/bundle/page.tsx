@@ -14,10 +14,9 @@ import {
 export default function BundlePricingPage() {
   const pathname = usePathname();
   const currentLocale = getLocaleFromPathname(pathname) ?? DEFAULT_LOCALE;
-  const isItalian = currentLocale === 'it';
-
   // Locale copy remains in-file so IT/EN variants evolve together.
-  const copy = isItalian
+  // Non-IT locales fall back to English.
+  const copy = currentLocale === 'it'
     ? {
         badge: 'Offerta Bundle - Risparmia il 15%',
         subtitle:

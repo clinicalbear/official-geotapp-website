@@ -28,7 +28,11 @@
     "tagline": "Lavoro sul campo registrato. Operazioni organizzate. Report verificabili.",
     "privacy": "Privacy Policy",
     "terms": "Termini di Servizio",
-    "rights": "Tutti i diritti riservati."
+    "rights": "Tutti i diritti riservati.",
+    "newsletter_title": "Resta aggiornato sul settore",
+    "newsletter_desc": "Niente spam, solo aggiornamenti di valore su gestione operativa, HR e tecnologia per le PMI.",
+    "sectors": "Settori",
+    "contact": "Contatti"
   },
   "landing": {
     "hero_badge": "Il lavoro c'è stato. Ora rendilo dimostrabile.",
@@ -337,6 +341,13 @@
       "error_connection": "Errore di connessione. Riprova."
     },
     "intro_label": "Tariffa introduttiva 2026",
+    "per_year": "/anno",
+    "title_gradient": "Scala il Tuo Business.",
+    "or_monthly": "oppure",
+    "per_month_short": "/mese",
+    "annual_savings": "Risparmio annuale:",
+    "no_monthly_option": "Nessuna opzione mensile",
+    "add_btn": "Aggiungi",
     "tracker_footnote": "* Numero massimo di utenti TimeTracker attivabili contemporaneamente nel piano Flow. Rimuovendo l'accesso a un dipendente il posto si libera subito."
   },
   "contact": {

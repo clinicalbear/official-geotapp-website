@@ -337,6 +337,13 @@
       "error_connection": "Verbindingsfout. Probeer opnieuw."
     },
     "intro_label": "Introductieprijs 2026",
+    "per_year": "/jaar",
+    "title_gradient": "Schaal Uw Business.",
+    "or_monthly": "of",
+    "per_month_short": "/maand",
+    "annual_savings": "Jaarlijkse besparing:",
+    "no_monthly_option": "Geen maandelijkse optie",
+    "add_btn": "Toevoegen",
     "tracker_footnote": "* Maximum aantal TimeTracker-gebruikers dat gelijktijdig actief kan zijn in het Flow-plan. Het verwijderen van toegang voor een medewerker maakt de plek direct vrij."
   },
   "contact": {

@@ -1,5 +1,19 @@
 'use client';
 
+const T: Record<string, { title: string; desc: string; retry: string }> = {
+  it: { title: 'Errore Critico!', desc: 'Si è verificato un errore critico che impedisce il caricamento del layout.', retry: 'Riprova' },
+  en: { title: 'Critical Error!', desc: 'A critical error occurred that prevents the layout from loading.', retry: 'Try again' },
+  de: { title: 'Kritischer Fehler!', desc: 'Ein kritischer Fehler verhindert das Laden des Layouts.', retry: 'Erneut versuchen' },
+  fr: { title: 'Erreur critique !', desc: 'Une erreur critique empêche le chargement de la mise en page.', retry: 'Réessayer' },
+  es: { title: '¡Error crítico!', desc: 'Un error crítico impide la carga del diseño.', retry: 'Reintentar' },
+};
+
+function getT() {
+  if (typeof navigator === 'undefined') return T.en;
+  const lang = navigator.language?.split('-')[0];
+  return T[lang ?? ''] ?? T.en;
+}
+
 export default function GlobalError({
   error,
   reset,
@@ -7,17 +21,18 @@ export default function GlobalError({
   error: Error & { digest?: string };
   reset: () => void;
 }) {
+  const t = getT();
+
   return (
     <html>
       <body>
         <div className="flex min-h-screen flex-col items-center justify-center bg-gray-100 p-4">
           <div className="rounded-lg bg-white p-6 shadow-xl">
             <h2 className="mb-4 text-2xl font-bold text-red-600">
-              Errore Critico!
+              {t.title}
             </h2>
             <p className="mb-4 text-gray-700">
-              Si è verificato un errore critico che impedisce il caricamento del
-              layout.
+              {t.desc}
             </p>
             <div className="mb-4 overflow-auto rounded bg-gray-100 p-2 text-sm text-red-800">
               {error.message}
@@ -26,7 +41,7 @@ export default function GlobalError({
               onClick={() => reset()}
               className="rounded bg-blue-600 px-4 py-2 font-bold text-white hover:bg-blue-700"
             >
-              Riprova
+              {t.retry}
             </button>
           </div>
         </div>
