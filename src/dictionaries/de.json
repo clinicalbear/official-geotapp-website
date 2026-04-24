@@ -186,6 +186,7 @@
       "title": "Zertifizierter Bericht — herunterladen und verifizieren",
       "field_operator": "Mitarbeiter",
       "field_intervention": "Einsatz",
+      "field_intervention_value": "Austausch des Schaltschranks",
       "btn_download": "Bericht herunterladen (.zip)",
       "btn_verify": "Authentizität prüfen →"
     },
@@ -724,7 +725,17 @@
     "form_submitting": "Wird gesendet...",
     "success_title": "Anfrage erhalten!",
     "success_desc": "Wir werden Sie innerhalb von 1 Werktag kontaktieren, um die Demo zu vereinbaren.",
-    "error_message": "Fehler beim Senden. Bitte versuchen Sie es später erneut."
+    "error_message": "Fehler beim Senden. Bitte versuchen Sie es später erneut.",
+    "badge": "Demo GeoTapp — 30 Minuten",
+    "page_subtitle": "Wir zeigen Ihnen, wie GeoTapp Streitigkeiten über Arbeitsstunden eliminiert und jeden Einsatz dokumentiert und überprüfbar macht.",
+    "form_title": "Ihre Daten",
+    "urgent_contact": "Dringende Fragen? Schreiben Sie an",
+    "no_spam": "Kein Spam. Ihre Daten werden gemäß unserer Datenschutzerklärung behandelt.",
+    "trust_gps": "GPS-verifizierte Zeiterfassung",
+    "trust_offline": "Funktioniert offline",
+    "trust_response": "Antwort innerhalb von 1 Tag",
+    "what_youll_see": "Was Sie in der Demo sehen werden",
+    "faq_title": "Häufig gestellte Fragen"
   },
   "download_page": {
     "title": "GeoTapp herunterladen",

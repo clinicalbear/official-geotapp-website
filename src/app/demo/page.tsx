@@ -72,7 +72,7 @@ export default function DemoPage() {
             animate={{ opacity: 1 }}
             className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-bold tracking-wide mb-6"
           >
-            Demo GeoTapp — 30 Minuti
+            {d.badge ?? 'Demo GeoTapp — 30 Minutes'}
           </motion.span>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -87,7 +87,7 @@ export default function DemoPage() {
             transition={{ delay: 0.1 }}
             className="text-xl text-slate-500 font-light leading-relaxed"
           >
-            Ti mostriamo come GeoTapp elimina le contestazioni sulle ore e rende ogni intervento documentato e verificabile.
+            {d.page_subtitle ?? 'We show you how GeoTapp eliminates hour disputes and makes every job documented and verifiable.'}
           </motion.p>
         </div>
 
@@ -113,7 +113,7 @@ export default function DemoPage() {
                     {d.success_desc}
                   </p>
                   <p className="text-slate-500 text-sm">
-                    Hai domande urgenti? Scrivi a <a href="mailto:info@geotapp.com" className="text-primary underline">info@geotapp.com</a>
+                    {d.urgent_contact ?? 'Urgent questions? Write to'} <a href="mailto:info@geotapp.com" className="text-primary underline">info@geotapp.com</a>
                   </p>
                 </motion.div>
               ) : (
@@ -124,7 +124,7 @@ export default function DemoPage() {
                   className="bg-white border border-slate-200 rounded-3xl p-8 shadow-xl shadow-slate-100/60 space-y-5"
                   onSubmit={handleSubmit}
                 >
-                  <h2 className="text-lg font-bold text-slate-900 mb-2">I tuoi dati</h2>
+                  <h2 className="text-lg font-bold text-slate-900 mb-2">{d.form_title ?? 'Your details'}</h2>
 
                   <div className="grid sm:grid-cols-2 gap-5">
                     <div>
@@ -217,8 +217,8 @@ export default function DemoPage() {
                   </button>
 
                   <p className="text-center text-xs text-slate-400">
-                    Nessuno spam. I tuoi dati sono trattati secondo la nostra{' '}
-                    <a href="/it/privacy/" className="underline hover:text-slate-600">Privacy Policy</a>.
+                    {d.no_spam ?? 'No spam. Your data is handled according to our'}{' '}
+                    <a href={`/${locale ?? 'en'}/privacy/`} className="underline hover:text-slate-600">Privacy Policy</a>.
                   </p>
                 </motion.form>
               )}
@@ -230,13 +230,13 @@ export default function DemoPage() {
                 <ShieldCheck size={14} className="text-emerald-500" /> GDPR Compliant
               </span>
               <span className="flex items-center gap-1.5">
-                <MapPin size={14} className="text-blue-500" /> Timbratura GPS verificata
+                <MapPin size={14} className="text-blue-500" /> {d.trust_gps ?? 'GPS-verified clock-in'}
               </span>
               <span className="flex items-center gap-1.5">
-                <WifiOff size={14} className="text-amber-500" /> Funziona offline
+                <WifiOff size={14} className="text-amber-500" /> {d.trust_offline ?? 'Works offline'}
               </span>
               <span className="flex items-center gap-1.5">
-                <Clock size={14} className="text-slate-400" /> Risposta entro 1 giorno
+                <Clock size={14} className="text-slate-400" /> {d.trust_response ?? 'Response within 1 day'}
               </span>
             </div>
           </motion.div>
@@ -252,7 +252,7 @@ export default function DemoPage() {
             <div>
               <h2 className="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
                 <Calendar size={20} className="text-primary" />
-                Cosa vedrai nella demo
+                {d.what_youll_see ?? 'What you\'ll see in the demo'}
               </h2>
               <div className="space-y-5">
                 {d.cosa_vedrai.map((item: { title: string; desc: string }, i: number) => (
@@ -269,7 +269,7 @@ export default function DemoPage() {
 
             {/* FAQ */}
             <div>
-              <h2 className="text-xl font-bold text-slate-900 mb-5">Domande frequenti</h2>
+              <h2 className="text-xl font-bold text-slate-900 mb-5">{d.faq_title ?? 'Frequently asked questions'}</h2>
               <div className="space-y-3">
                 {d.faq.map((item: { q: string; a: string }, i: number) => (
                   <div key={i} className="border border-slate-200 rounded-2xl overflow-hidden">

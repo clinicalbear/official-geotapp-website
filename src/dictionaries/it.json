@@ -186,6 +186,7 @@
       "title": "Report certificato da scaricare e verificare",
       "field_operator": "Operatore",
       "field_intervention": "Intervento",
+      "field_intervention_value": "Sostituzione quadro elettrico",
       "btn_download": "Scarica il report (.zip)",
       "btn_verify": "Verifica autenticità →"
     },
@@ -724,7 +725,17 @@
     "form_submitting": "Invio in corso...",
     "success_title": "Richiesta ricevuta!",
     "success_desc": "Ti contatteremo entro 1 giorno lavorativo per fissare la demo.",
-    "error_message": "Errore nell'invio. Riprova più tardi."
+    "error_message": "Errore nell'invio. Riprova più tardi.",
+    "badge": "Demo GeoTapp — 30 Minuti",
+    "page_subtitle": "Ti mostriamo come GeoTapp elimina le contestazioni sulle ore e rende ogni intervento documentato e verificabile.",
+    "form_title": "I tuoi dati",
+    "urgent_contact": "Hai domande urgenti? Scrivi a",
+    "no_spam": "Nessuno spam. I tuoi dati sono trattati secondo la nostra",
+    "trust_gps": "Timbratura GPS verificata",
+    "trust_offline": "Funziona offline",
+    "trust_response": "Risposta entro 1 giorno",
+    "what_youll_see": "Cosa vedrai nella demo",
+    "faq_title": "Domande frequenti"
   },
   "download_page": {
     "title": "Download GeoTapp",

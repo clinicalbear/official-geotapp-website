@@ -186,6 +186,7 @@
       "title": "Certified report — download and verify",
       "field_operator": "Operator",
       "field_intervention": "Job",
+      "field_intervention_value": "Electrical panel replacement",
       "btn_download": "Download report (.zip)",
       "btn_verify": "Verify authenticity →"
     },
@@ -724,7 +725,17 @@
     "form_submitting": "Sending...",
     "success_title": "Request received!",
     "success_desc": "We will contact you within 1 business day to schedule the demo.",
-    "error_message": "Error sending. Please try again later."
+    "error_message": "Error sending. Please try again later.",
+    "badge": "Demo GeoTapp — 30 Minutes",
+    "page_subtitle": "We show you how GeoTapp eliminates hour disputes and makes every job documented and verifiable.",
+    "form_title": "Your details",
+    "urgent_contact": "Urgent questions? Write to",
+    "no_spam": "No spam. Your data is handled according to our",
+    "trust_gps": "GPS-verified clock-in",
+    "trust_offline": "Works offline",
+    "trust_response": "Response within 1 day",
+    "what_youll_see": "What you'll see in the demo",
+    "faq_title": "Frequently asked questions"
   },
   "download_page": {
     "title": "Download GeoTapp",

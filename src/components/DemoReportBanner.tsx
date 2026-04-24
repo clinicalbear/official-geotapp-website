@@ -34,7 +34,7 @@ export default function DemoReportBanner() {
         {[
           ['Report ID', DEMO_REPORT_ID],
           [d.field_operator, 'Mario Bianchi'],
-          [d.field_intervention, 'Sostituzione quadro elettrico'],
+          [d.field_intervention, (d as any).field_intervention_value ?? 'Electrical panel replacement'],
         ].map(([label, value]) => (
           <div key={label}>
             <div className="text-xs text-slate-400 uppercase tracking-wide mb-0.5">{label}</div>
