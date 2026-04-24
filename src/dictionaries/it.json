@@ -871,6 +871,26 @@
     "label_operators": "operatori",
     "embed_title": "Calcolatore ROI GeoTapp"
   },
+  "settore_layout": {
+    "pain_subtitle": "Le app di timbratura registrano. Non certificano. C'è una differenza enorme, e nel momento della contestazione la senti tutta.",
+    "before": "Prima",
+    "after": "Con GeoTapp",
+    "classic_app": "Gestionale / App classica",
+    "roi_badge": "Calcola il tuo ROI",
+    "roi_title": "Quanto risparmieresti con GeoTapp?",
+    "roi_desc": "Inserisci la dimensione del tuo team e ottieni una stima del ROI in 30 secondi. Senza registrazione, senza email.",
+    "roi_cta": "Calcola il tuo ROI",
+    "mockup_title": "Intervento aperto",
+    "mockup_gps": "GPS verificato",
+    "mockup_photos": "Foto allegate",
+    "mockup_photos_count": "3 foto georeferenziate",
+    "mockup_sealed": "Non modificabile dopo la chiusura",
+    "mockup_status_active": "Attivo",
+    "mockup_status_completed": "Completato",
+    "mockup_status_summary": "4 operatori attivi su 6 siti",
+    "see_real_report": "Guarda un report reale",
+    "cta_note": "Nessun vincolo. Nessun contratto. Configuriamo sul tuo caso reale."
+  },
   "features": {
     "title": "Potenza Sotto il Cofano.",
     "subtitle": "Non costruiamo giocattoli. GeoTapp è una piattaforma enterprise concepita per scalare. Ecco le tecnologie che rendono possibile la magia.",

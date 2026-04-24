@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Script from 'next/script';
 import { ArrowRight, CheckCircle2, ShieldCheck, X, Camera, MapPin, Clock } from 'lucide-react';
 import { localizePath } from '@/lib/i18n/locale-routing';
+import { getDictionary } from '@/lib/i18n/dictionaries';
 import type { AppLocale } from '@/lib/i18n/config';
 import type { SettoreContent, SettoreSlug } from '@/content/settori/types';
 import { JsonLd } from '@/components/seo/JsonLd';
@@ -42,6 +43,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
   const colors = SETTORE_COLORS[settore];
   const trialLink = localizePath('/trial', locale);
   const pricingLink = localizePath('/pricing', locale);
+  const sl = (getDictionary(locale) as any).settore_layout ?? {};
 
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
@@ -186,7 +188,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
             {content.pain.title}
           </h2>
           <p className="text-center text-slate-500 mb-16 text-lg max-w-2xl mx-auto">
-            Le app di timbratura registrano. Non certificano. C&apos;è una differenza enorme, e nel momento della contestazione la senti tutta.
+            {sl.pain_subtitle ?? "Clock-in apps record. They don't certify. There's an enormous difference, and you feel it the moment a dispute arises."}
           </p>
           <div className="grid md:grid-cols-3 gap-6">
             {content.pain.items.map((item, i) => (
@@ -216,7 +218,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
                   <div className="w-8 h-8 rounded-full bg-red-600 flex items-center justify-center shrink-0">
                     <X size={16} className="text-white" />
                   </div>
-                  <span className="font-bold text-red-400 text-lg tracking-wide uppercase text-sm">Prima</span>
+                  <span className="font-bold text-red-400 text-lg tracking-wide uppercase text-sm">{sl.before ?? 'Before'}</span>
                 </div>
                 <ul className="space-y-4">
                   {content.prima_dopo.prima.map((item, i) => (
@@ -233,7 +235,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
                   <div className="w-8 h-8 rounded-full bg-green-600 flex items-center justify-center shrink-0">
                     <CheckCircle2 size={16} className="text-white" />
                   </div>
-                  <span className="font-bold text-green-400 text-lg tracking-wide uppercase text-sm">Con GeoTapp</span>
+                  <span className="font-bold text-green-400 text-lg tracking-wide uppercase text-sm">{sl.after ?? 'With GeoTapp'}</span>
                 </div>
                 <ul className="space-y-4">
                   {content.prima_dopo.dopo.map((item, i) => (
@@ -315,7 +317,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
                 <thead>
                   <tr className="bg-slate-100">
                     <th className="py-4 px-6 text-left font-semibold text-slate-500 w-1/3"></th>
-                    <th className="py-4 px-6 text-center font-semibold text-slate-600">Gestionale / App classica</th>
+                    <th className="py-4 px-6 text-center font-semibold text-slate-600">{sl.classic_app ?? 'Generic app / Spreadsheet'}</th>
                     <th className={`py-4 px-6 text-center font-bold ${colors.accent}`}>GeoTapp</th>
                   </tr>
                 </thead>
@@ -338,25 +340,19 @@ export default function SettorePageLayout({ content, locale, settore, children }
       <section className="px-6 py-20 bg-slate-50">
         <div className="container mx-auto max-w-3xl text-center">
           <p className={`text-sm font-bold uppercase tracking-widest ${colors.accent} mb-3`}>
-            {locale === 'it' ? 'Calcola il tuo ROI' : locale === 'de' ? 'ROI berechnen' : locale === 'nl' ? 'Bereken je ROI' : 'Calculate your ROI'}
+            {sl.roi_badge ?? 'Calculate your ROI'}
           </p>
           <h2 className="text-3xl font-bold text-slate-900 mb-4 md:text-4xl">
-            {locale === 'it' ? 'Quanto risparmieresti con GeoTapp?' : locale === 'de' ? 'Wie viel würdest du mit GeoTapp sparen?' : locale === 'nl' ? 'Hoeveel bespaar je met GeoTapp?' : 'How much would you save with GeoTapp?'}
+            {sl.roi_title ?? 'How much would you save with GeoTapp?'}
           </h2>
           <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-            {locale === 'it'
-              ? 'Inserisci i dati della tua azienda e scopri in 2 minuti quanto puoi risparmiare su contestazioni, ore admin e coordinamento.'
-              : locale === 'de'
-              ? 'Gib deine Unternehmensdaten ein und entdecke in 2 Minuten, wie viel du einsparen kannst.'
-              : locale === 'nl'
-              ? 'Voer je bedrijfsgegevens in en ontdek in 2 minuten hoeveel je kunt besparen.'
-              : 'Enter your company data and find out in 2 minutes how much you can save.'}
+            {sl.roi_desc ?? 'Enter your team size and get an estimated ROI in 30 seconds. No registration, no email.'}
           </p>
           <Link
             href={`/${locale}/roi-calculator/`}
             className={`inline-flex items-center gap-2 rounded-xl px-8 py-4 font-bold text-white shadow-lg transition-colors ${colors.btn}`}
           >
-            {locale === 'it' ? 'Calcola il tuo ROI' : locale === 'de' ? 'Meinen ROI berechnen' : locale === 'nl' ? 'Bereken mijn ROI' : 'Calculate my ROI'} <ArrowRight size={18} />
+            {sl.roi_cta ?? 'Calculate my ROI'} <ArrowRight size={18} />
           </Link>
         </div>
       </section>
@@ -477,7 +473,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
                       <Clock size={16} className={colors.accent} />
                     </div>
                     <div>
-                      <div className="text-xs text-slate-400">Intervento aperto</div>
+                      <div className="text-xs text-slate-400">{sl.mockup_title ?? 'Job open'}</div>
                       <div className="font-bold text-slate-800 text-sm">08:47 — Via Roma 14</div>
                     </div>
                   </div>
@@ -486,7 +482,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
                       <MapPin size={16} className={colors.accent} />
                     </div>
                     <div>
-                      <div className="text-xs text-slate-400">GPS verificato</div>
+                      <div className="text-xs text-slate-400">{sl.mockup_gps ?? 'GPS verified'}</div>
                       <div className="font-bold text-slate-800 text-sm">45.4642°N, 9.1900°E</div>
                     </div>
                   </div>
@@ -495,8 +491,8 @@ export default function SettorePageLayout({ content, locale, settore, children }
                       <Camera size={16} className={colors.accent} />
                     </div>
                     <div>
-                      <div className="text-xs text-slate-400">Foto allegate</div>
-                      <div className="font-bold text-slate-800 text-sm">3 foto georeferenziate</div>
+                      <div className="text-xs text-slate-400">{sl.mockup_photos ?? 'Photos attached'}</div>
+                      <div className="font-bold text-slate-800 text-sm">{sl.mockup_photos_count ?? '3 geotagged photos'}</div>
                     </div>
                   </div>
                   <div className="rounded-xl overflow-hidden bg-slate-100 h-28 flex items-center justify-center">
@@ -529,7 +525,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
                     </div>
                   </div>
                   <div className="rounded-lg bg-green-50 border border-green-200 p-2 text-center text-green-700 font-bold text-xs">
-                    Non modificabile dopo la chiusura
+                    {sl.mockup_sealed ?? 'Not editable after closure'}
                   </div>
                 </div>
               </div>
@@ -543,10 +539,10 @@ export default function SettorePageLayout({ content, locale, settore, children }
                 </div>
                 <div className="p-5 space-y-2 bg-white">
                   {[
-                    { name: 'Luigi B.', site: 'Condominio A', status: 'Attivo', color: 'bg-green-500' },
-                    { name: 'Sara M.', site: 'Uffici Centro', status: 'Attivo', color: 'bg-green-500' },
-                    { name: 'Marco T.', site: 'Scuola Via Po', status: 'Completato', color: 'bg-slate-400' },
-                    { name: 'Anna C.', site: 'Hotel Nord', status: 'Attivo', color: 'bg-green-500' },
+                    { name: 'Luigi B.', site: 'Condominio A', status: sl.mockup_status_active ?? 'Active', color: 'bg-green-500' },
+                    { name: 'Sara M.', site: 'Uffici Centro', status: sl.mockup_status_active ?? 'Active', color: 'bg-green-500' },
+                    { name: 'Marco T.', site: 'Scuola Via Po', status: sl.mockup_status_completed ?? 'Completed', color: 'bg-slate-400' },
+                    { name: 'Anna C.', site: 'Hotel Nord', status: sl.mockup_status_active ?? 'Active', color: 'bg-green-500' },
                   ].map((op, i) => (
                     <div key={i} className="flex items-center gap-3 p-2.5 rounded-xl bg-slate-50">
                       <div className={`w-2 h-2 rounded-full ${op.color} shrink-0`} />
@@ -557,7 +553,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
                       <span className="text-[11px] text-slate-500 shrink-0">{op.status}</span>
                     </div>
                   ))}
-                  <div className="pt-2 text-center text-xs text-slate-400">4 operatori attivi su 6 siti</div>
+                  <div className="pt-2 text-center text-xs text-slate-400">{sl.mockup_status_summary ?? '4 operators active on 6 sites'}</div>
                 </div>
               </div>
             </div>
@@ -649,7 +645,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
       {/* ── DEMO REPORT ── */}
       <section className="px-6 py-16 bg-slate-50 border-t border-slate-200">
         <div className="container mx-auto max-w-2xl">
-          <p className="text-center text-sm font-semibold text-slate-500 uppercase tracking-widest mb-5">Guarda un report reale</p>
+          <p className="text-center text-sm font-semibold text-slate-500 uppercase tracking-widest mb-5">{sl.see_real_report ?? 'See a real report'}</p>
           <DemoReportBanner />
         </div>
       </section>
@@ -674,7 +670,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
               {content.cta.secondary}
             </Link>
           </div>
-          <p className="mt-6 text-slate-500 text-sm">Nessun vincolo. Nessun contratto. Configuriamo sul tuo caso reale.</p>
+          <p className="mt-6 text-slate-500 text-sm">{sl.cta_note ?? 'No lock-in. No contract. We set up on your real case.'}</p>
         </div>
       </section>
 

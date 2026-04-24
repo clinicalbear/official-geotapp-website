@@ -871,6 +871,26 @@
     "label_operators": "operators",
     "embed_title": "GeoTapp ROI Calculator"
   },
+  "settore_layout": {
+    "pain_subtitle": "Clock-in apps record. They don't certify. There's an enormous difference, and you feel it the moment a dispute arises.",
+    "before": "Before",
+    "after": "With GeoTapp",
+    "classic_app": "Generic app / Spreadsheet",
+    "roi_badge": "Calculate your ROI",
+    "roi_title": "How much would you save with GeoTapp?",
+    "roi_desc": "Enter your team size and get an estimated ROI in 30 seconds. No registration, no email.",
+    "roi_cta": "Calculate my ROI",
+    "mockup_title": "Job open",
+    "mockup_gps": "GPS verified",
+    "mockup_photos": "Photos attached",
+    "mockup_photos_count": "3 geotagged photos",
+    "mockup_sealed": "Not editable after closure",
+    "mockup_status_active": "Active",
+    "mockup_status_completed": "Completed",
+    "mockup_status_summary": "4 operators active on 6 sites",
+    "see_real_report": "See a real report",
+    "cta_note": "No lock-in. No contract. We set up on your real case."
+  },
   "features": {
     "title": "Power Under the Hood.",
     "subtitle": "We don't build toys. GeoTapp is an enterprise platform built to scale. Here are the technologies that make the magic happen.",

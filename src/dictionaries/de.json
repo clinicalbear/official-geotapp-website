@@ -871,6 +871,26 @@
     "label_operators": "Mitarbeiter",
     "embed_title": "GeoTapp ROI-Rechner"
   },
+  "settore_layout": {
+    "pain_subtitle": "Stempelapps erfassen. Sie zertifizieren nicht. Der Unterschied ist gewaltig — und im Streitfall spürt man ihn sofort.",
+    "before": "Vorher",
+    "after": "Mit GeoTapp",
+    "classic_app": "Standard-App / Tabellenkalkulation",
+    "roi_badge": "ROI berechnen",
+    "roi_title": "Wie viel würden Sie mit GeoTapp sparen?",
+    "roi_desc": "Geben Sie die Teamgröße ein und erhalten Sie eine ROI-Schätzung in 30 Sekunden. Ohne Registrierung, ohne E-Mail.",
+    "roi_cta": "Meinen ROI berechnen",
+    "mockup_title": "Einsatz offen",
+    "mockup_gps": "GPS verifiziert",
+    "mockup_photos": "Fotos angehängt",
+    "mockup_photos_count": "3 georeferenzierte Fotos",
+    "mockup_sealed": "Nach Abschluss nicht bearbeitbar",
+    "mockup_status_active": "Aktiv",
+    "mockup_status_completed": "Abgeschlossen",
+    "mockup_status_summary": "4 Mitarbeiter aktiv auf 6 Standorten",
+    "see_real_report": "Echten Bericht ansehen",
+    "cta_note": "Keine Bindung. Kein Vertrag. Wir konfigurieren auf Ihren realen Fall."
+  },
   "features": {
     "title": "Power Under the Hood.",
     "subtitle": "Wir bauen kein Spielzeug. GeoTapp ist eine Enterprise-Plattform, die für Skalierung gebaut wurde. Hier sind die Technologien, die die Magie möglich machen.",
