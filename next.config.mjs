@@ -45,6 +45,22 @@ const SLUG_TRANSLATIONS = {
     en: 'resources', de: 'ressourcen', nl: 'bronnen', fr: 'ressources',
     es: 'recursos', pt: 'recursos', da: 'ressourcer', sv: 'resurser', nb: 'ressurser', ru: 'resursy',
   },
+  'edilizia': {
+    en: 'construction', de: 'bauwesen', nl: 'bouw', fr: 'construction',
+    es: 'construccion', pt: 'construcao', da: 'byggeri', sv: 'byggnation', nb: 'bygg', ru: 'stroitelstvo',
+  },
+  'impianti': {
+    en: 'mechanical-electrical', de: 'anlagenbau', nl: 'installaties', fr: 'installations',
+    es: 'instalaciones', pt: 'instalacoes', da: 'installationer', sv: 'installationer', nb: 'installasjoner', ru: 'inzhenernye-sistemy',
+  },
+  'manutenzione': {
+    en: 'maintenance', de: 'wartung', nl: 'onderhoud', fr: 'maintenance',
+    es: 'mantenimiento', pt: 'manutencao', da: 'vedligeholdelse', sv: 'underhall', nb: 'vedlikehold', ru: 'tekhobsluzhivanie',
+  },
+  'impresa-di-pulizie': {
+    en: 'cleaning-company', de: 'reinigungsunternehmen', nl: 'schoonmaakbedrijf', fr: 'entreprise-nettoyage',
+    es: 'empresa-limpieza', pt: 'empresa-limpeza', da: 'rengoringsfirma', sv: 'stadforetag', nb: 'rengjringsfirma', ru: 'kliningovaya-kompaniya',
+  },
   // Competitor comparison pages
   'confronto': {
     en: 'compare', de: 'vergleich', nl: 'vergelijking', fr: 'comparaison',
@@ -67,6 +83,10 @@ const COMPOUND_CANONICAL_PARTS = [
   ['settori', 'pulizie'],
   ['settori', 'installatori'],
   ['settori', 'sicurezza'],
+  ['settori', 'edilizia'],
+  ['settori', 'impianti'],
+  ['settori', 'manutenzione'],
+  ['settori', 'impresa-di-pulizie'],
   ['settori', 'pulizie',      'risorse'],
   ['settori', 'installatori', 'risorse'],
   ['settori', 'sicurezza',    'risorse'],

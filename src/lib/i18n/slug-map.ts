@@ -118,7 +118,27 @@ export const SLUG_MAP: Record<string, Partial<Record<AppLocale, string>>> = {
     fr: 'ressources', es: 'recursos', pt: 'recursos',
     da: 'ressourcer', sv: 'resurser', nb: 'ressurser', ru: 'resursy',
   },
-  // ────────────────────────────────────────────────────────────────────────────
+  'edilizia': {
+    it: 'edilizia', en: 'construction', de: 'bauwesen', nl: 'bouw',
+    fr: 'construction', es: 'construccion', pt: 'construcao',
+    da: 'byggeri', sv: 'byggnation', nb: 'bygg', ru: 'stroitelstvo',
+  },
+  'impianti': {
+    it: 'impianti', en: 'mechanical-electrical', de: 'anlagenbau', nl: 'installaties',
+    fr: 'installations', es: 'instalaciones', pt: 'instalacoes',
+    da: 'installationer', sv: 'installationer', nb: 'installasjoner', ru: 'inzhenernye-sistemy',
+  },
+  'manutenzione': {
+    it: 'manutenzione', en: 'maintenance', de: 'wartung', nl: 'onderhoud',
+    fr: 'maintenance', es: 'mantenimiento', pt: 'manutencao',
+    da: 'vedligeholdelse', sv: 'underhall', nb: 'vedlikehold', ru: 'tekhobsluzhivanie',
+  },
+  'impresa-di-pulizie': {
+    it: 'impresa-di-pulizie', en: 'cleaning-company', de: 'reinigungsunternehmen', nl: 'schoonmaakbedrijf',
+    fr: 'entreprise-nettoyage', es: 'empresa-limpieza', pt: 'empresa-limpeza',
+    da: 'rengoringsfirma', sv: 'stadforetag', nb: 'rengjringsfirma', ru: 'kliningovaya-kompaniya',
+  },
+  // ───────���──────────────────────────────��────────────────────────────���────────
   'download': {
     it: 'download',
     en: 'download',
