@@ -641,7 +641,15 @@ export async function middleware(req: NextRequest) {
     return staticResponse;
   }
 
-  // 2b. /links — Instagram link-in-bio utility page. Locale-agnostic: bypass
+  // 2b. /verifica — Public report verification page. Locale-agnostic: bypass
+  // locale detection and serve the page directly without locale prefix redirect.
+  if (pathname.startsWith('/verifica')) {
+    const response = NextResponse.next();
+    applySecurityHeaders(response);
+    return response;
+  }
+
+  // 2c. /links — Instagram link-in-bio utility page. Locale-agnostic: bypass
   // locale detection and serve the page directly without locale prefix redirect.
   if (pathname === '/links' || pathname === '/links/') {
     const response = NextResponse.next();
