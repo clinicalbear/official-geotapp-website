@@ -1,7 +1,8 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import {
   ArrowRight,
   CheckCircle2,
@@ -53,7 +54,7 @@ const MockupFlow = ({ m }: { m: { pipeline_title: string; month: string; quote_n
   </div>
 );
 
-import { useEffect } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { usePathname } from 'next/navigation';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import {
@@ -63,6 +64,73 @@ import {
 } from '@/lib/i18n/locale-routing';
 import DemoReportBanner from '@/components/DemoReportBanner';
 import TrustBar from '@/components/TrustBar';
+import ListedOn from '@/components/ListedOn';
+
+const FLOW_SLIDES = [
+  { src: '/screen_dashboard.png', alt: 'GeoTapp Flow — Dashboard KPI e moduli operativi' },
+  { src: '/screen_live_map.png', alt: 'GeoTapp Flow — Mappa delle timbrature con aggiornamento live' },
+  { src: '/schermataFlow.webp', alt: 'GeoTapp Flow — Pannello operativo' },
+];
+
+const TT_SLIDES = [
+  { src: '/screenshots/timetracker-dashboard.jpg', alt: 'Dashboard iniziale GeoTapp TimeTracker' },
+  { src: '/screenshots/timetracker-richieste.jpg', alt: 'GeoTapp TimeTracker — Richieste ferie e cambio turno' },
+  { src: '/TT2.webp', alt: 'GeoTapp TimeTracker — Menu navigazione' },
+];
+
+function FlowCarousel() {
+  const [i, setI] = useState(0);
+  const next = useCallback(() => setI((c) => (c + 1) % FLOW_SLIDES.length), []);
+  useEffect(() => { const t = setInterval(next, 4000); return () => clearInterval(t); }, [next]);
+  const s = FLOW_SLIDES[i];
+  return (
+    <div className="relative">
+      <div className="relative z-10 rounded-xl overflow-hidden shadow-2xl shadow-flow/20 border border-slate-200">
+        <AnimatePresence mode="wait">
+          <motion.div key={i} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.4 }}>
+            <Image src={s.src} alt={s.alt} width={1920} height={1080} className="w-full h-auto" priority={i === 0} />
+          </motion.div>
+        </AnimatePresence>
+      </div>
+      <div className="absolute inset-0 bg-flow/10 rounded-xl transform rotate-3 scale-105 -z-0 blur-xl"></div>
+      <div className="flex justify-center gap-2 mt-4 relative z-10">
+        {FLOW_SLIDES.map((_, idx) => (
+          <button key={idx} onClick={() => setI(idx)}
+            className={`h-2 rounded-full transition-all ${idx === i ? 'bg-flow w-6' : 'bg-slate-300 w-2.5 hover:bg-slate-400'}`}
+            aria-label={`Slide ${idx + 1}`} />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function TTCarousel() {
+  const [i, setI] = useState(0);
+  const next = useCallback(() => setI((c) => (c + 1) % TT_SLIDES.length), []);
+  useEffect(() => { const t = setInterval(next, 4000); return () => clearInterval(t); }, [next]);
+  const s = TT_SLIDES[i];
+  return (
+    <div className="relative flex justify-center">
+      <div className="absolute inset-0 bg-app/20 rounded-[3rem] blur-3xl scale-110 -z-10 pointer-events-none"></div>
+      <div className="mx-auto w-[280px] bg-slate-900 rounded-[3rem] p-[3px] shadow-2xl shadow-app/30 relative border-[3px] border-slate-800">
+        <div className="w-full bg-white rounded-[2.8rem] overflow-hidden">
+          <AnimatePresence mode="wait">
+            <motion.div key={i} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.4 }}>
+              <Image src={s.src} alt={s.alt} width={720} height={1504} className="w-full h-auto" />
+            </motion.div>
+          </AnimatePresence>
+        </div>
+      </div>
+      <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+        {TT_SLIDES.map((_, idx) => (
+          <button key={idx} onClick={() => setI(idx)}
+            className={`h-2 rounded-full transition-all ${idx === i ? 'bg-app w-6' : 'bg-slate-300 w-2.5 hover:bg-slate-400'}`}
+            aria-label={`Slide ${idx + 1}`} />
+        ))}
+      </div>
+    </div>
+  );
+}
 
 export default function Home() {
   // Locale resolution is path-based so all internal links stay language-aware.
@@ -166,6 +234,11 @@ export default function Home() {
       {/* TRUST BAR — social proof immediately after hero */}
       <TrustBar locale={currentLocale} />
 
+      {/* LISTED ON — directory badges */}
+      <div className="listed-on-wrapper" style={{ background: 'linear-gradient(135deg, #2a8fc4 0%, #3BAEE0 50%, #2a8fc4 100%)', boxShadow: 'inset 0 4px 12px rgba(0,0,0,0.15), inset 0 -4px 12px rgba(0,0,0,0.1)' }}>
+        <ListedOn locale={currentLocale} />
+      </div>
+
       {/* PROBLEM SECTION */}
       <section className="py-20 bg-slate-50 border-b border-slate-100">
         <div className="container mx-auto px-6 max-w-5xl">
@@ -191,83 +264,89 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Segment switch drives the verticalized entry pages. */}
       {/* SETTORI SECTION */}
-      <section className="py-12 bg-white border-b border-slate-100">
+      <section className="py-20 bg-white border-b border-slate-100">
         <div className="container mx-auto px-6 max-w-6xl">
-          <div className="text-center mb-10">
-            <h2 className="text-2xl font-bold text-slate-800">
+          <div className="text-center mb-14">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">
               {dict.home_sections.settori.title}
             </h2>
-            <p className="text-slate-500">
+            <p className="text-lg text-slate-500 max-w-2xl mx-auto">
               {dict.home_sections.settori.subtitle}
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 gap-8">
             {/* Installatori */}
             <Link
               href={getLink('/settori/installatori')}
-              className="group p-6 rounded-2xl border border-slate-200 hover:border-amber-400 hover:shadow-lg hover:shadow-amber-100 transition-all bg-slate-50 hover:bg-white"
+              className="group relative rounded-2xl overflow-hidden border border-slate-200 hover:border-amber-300 transition-all hover:shadow-xl hover:shadow-amber-100/50 hover:-translate-y-1"
             >
-              <div className="flex items-center gap-4 mb-3">
-                <div className="p-3 bg-amber-100 text-amber-600 rounded-lg group-hover:bg-amber-500 group-hover:text-white transition-colors">
-                  <Hammer size={24} />
+              <div className="h-2 bg-gradient-to-r from-amber-400 to-orange-500" />
+              <div className="p-8">
+                <div className="w-14 h-14 bg-amber-50 text-amber-600 rounded-xl flex items-center justify-center mb-5 group-hover:bg-amber-500 group-hover:text-white transition-colors">
+                  <Hammer size={28} />
                 </div>
-                <h3 className="font-bold text-lg text-slate-900">
+                <h3 className="font-bold text-xl text-slate-900 mb-3">
                   {dict.home_sections.settori.installatori.name}
                 </h3>
-              </div>
-              <p className="text-sm text-slate-600 mb-4">
-                {dict.home_sections.settori.installatori.desc}
-              </p>
-              <div className="text-amber-600 font-bold text-sm flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                {dict.home_sections.settori.installatori.cta} <ArrowRight size={16} />
+                <p className="text-slate-600 leading-relaxed mb-6">
+                  {dict.home_sections.settori.installatori.desc}
+                </p>
+                <div className="text-amber-600 font-bold text-sm flex items-center gap-2 group-hover:gap-3 transition-all">
+                  {dict.home_sections.settori.installatori.cta} <ArrowRight size={16} />
+                </div>
               </div>
             </Link>
 
             {/* Sicurezza */}
             <Link
               href={getLink('/settori/sicurezza')}
-              className="group p-6 rounded-2xl border border-slate-200 hover:border-indigo-400 hover:shadow-lg hover:shadow-indigo-100 transition-all bg-slate-50 hover:bg-white"
+              className="group relative rounded-2xl overflow-hidden border border-slate-200 hover:border-indigo-300 transition-all hover:shadow-xl hover:shadow-indigo-100/50 hover:-translate-y-1"
             >
-              <div className="flex items-center gap-4 mb-3">
-                <div className="p-3 bg-indigo-100 text-indigo-600 rounded-lg group-hover:bg-indigo-500 group-hover:text-white transition-colors">
-                  <ShieldCheck size={24} />
+              <div className="h-2 bg-gradient-to-r from-indigo-400 to-violet-500" />
+              <div className="p-8">
+                <div className="w-14 h-14 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center mb-5 group-hover:bg-indigo-500 group-hover:text-white transition-colors">
+                  <ShieldCheck size={28} />
                 </div>
-                <h3 className="font-bold text-lg text-slate-900">{dict.home_sections.settori.sicurezza.name}</h3>
-              </div>
-              <p className="text-sm text-slate-600 mb-4">
-                {dict.home_sections.settori.sicurezza.desc}
-              </p>
-              <div className="text-indigo-600 font-bold text-sm flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                {dict.home_sections.settori.sicurezza.cta} <ArrowRight size={16} />
+                <h3 className="font-bold text-xl text-slate-900 mb-3">
+                  {dict.home_sections.settori.sicurezza.name}
+                </h3>
+                <p className="text-slate-600 leading-relaxed mb-6">
+                  {dict.home_sections.settori.sicurezza.desc}
+                </p>
+                <div className="text-indigo-600 font-bold text-sm flex items-center gap-2 group-hover:gap-3 transition-all">
+                  {dict.home_sections.settori.sicurezza.cta} <ArrowRight size={16} />
+                </div>
               </div>
             </Link>
 
             {/* Pulizie */}
             <Link
               href={getLink('/settori/pulizie')}
-              className="group p-6 rounded-2xl border border-slate-200 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-100 transition-all bg-slate-50 hover:bg-white"
+              className="group relative rounded-2xl overflow-hidden border border-slate-200 hover:border-cyan-300 transition-all hover:shadow-xl hover:shadow-cyan-100/50 hover:-translate-y-1"
             >
-              <div className="flex items-center gap-4 mb-3">
-                <div className="p-3 bg-cyan-100 text-cyan-600 rounded-lg group-hover:bg-cyan-500 group-hover:text-white transition-colors">
-                  <Sparkles size={24} />
+              <div className="h-2 bg-gradient-to-r from-cyan-400 to-teal-500" />
+              <div className="p-8">
+                <div className="w-14 h-14 bg-cyan-50 text-cyan-600 rounded-xl flex items-center justify-center mb-5 group-hover:bg-cyan-500 group-hover:text-white transition-colors">
+                  <Sparkles size={28} />
                 </div>
-                <h3 className="font-bold text-lg text-slate-900">{dict.home_sections.settori.pulizie.name}</h3>
-              </div>
-              <p className="text-sm text-slate-600 mb-4">
-                {dict.home_sections.settori.pulizie.desc}
-              </p>
-              <div className="text-cyan-600 font-bold text-sm flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                {dict.home_sections.settori.pulizie.cta} <ArrowRight size={16} />
+                <h3 className="font-bold text-xl text-slate-900 mb-3">
+                  {dict.home_sections.settori.pulizie.name}
+                </h3>
+                <p className="text-slate-600 leading-relaxed mb-6">
+                  {dict.home_sections.settori.pulizie.desc}
+                </p>
+                <div className="text-cyan-600 font-bold text-sm flex items-center gap-2 group-hover:gap-3 transition-all">
+                  {dict.home_sections.settori.pulizie.cta} <ArrowRight size={16} />
+                </div>
               </div>
             </Link>
           </div>
-          <div className="text-center mt-8">
+          <div className="text-center mt-10">
             <Link
               href={getLink('/settori')}
-              className="inline-flex items-center gap-2 text-slate-600 font-semibold hover:text-slate-900 transition-colors text-sm"
+              className="inline-flex items-center gap-2 text-slate-500 font-semibold hover:text-slate-900 transition-colors"
             >
               {dict.home_sections.settori.see_all} <ArrowRight size={16} />
             </Link>
@@ -413,11 +492,7 @@ export default function Home() {
                 viewport={{ once: true }}
                 className="relative"
               >
-                {/* Visual Artifact */}
-                <div className="relative z-10 transform md:rotate-[-2deg] hover:rotate-0 transition-transform duration-500 shadow-2xl shadow-flow/20">
-                  <MockupFlow m={dict.home_sections.flow_mockup} />
-                </div>
-                <div className="absolute inset-0 bg-flow/10 rounded-xl transform rotate-3 scale-105 -z-0 blur-xl"></div>
+                <FlowCarousel />
               </motion.div>
             </div>
             <div className="order-1 md:order-2">
@@ -518,32 +593,8 @@ export default function Home() {
                 {dict.home_sections.app.link} <ArrowRight size={18} />
               </Link>
             </div>
-            <div className="relative">
-              {/* Placeholder for App Screen - using a styled box for now to represent "Phone" */}
-              <div className="relative flex justify-center">
-                <div className="absolute inset-0 bg-app/20 rounded-[3rem] blur-3xl scale-110 -z-10 pointer-events-none"></div>
-                <div className="mx-auto w-[280px] h-[560px] bg-slate-900 rounded-[3rem] p-4 shadow-2xl shadow-app/30 relative border-8 border-slate-800">
-                <div className="w-full h-full bg-slate-800 rounded-[2rem] overflow-hidden relative">
-                  {/* Fake App UI */}
-                  <div className="absolute top-0 left-0 w-full h-40 bg-app p-6 text-white">
-                    <div className="text-xs opacity-80 mt-8">{dict.home_sections.app_mockup.greeting}</div>
-                    <div className="text-2xl font-bold">Marco</div>
-                    <div className="mt-4 px-3 py-1 bg-white/20 rounded-full text-xs inline-block">
-                      {dict.home_sections.app_mockup.status}
-                    </div>
-                  </div>
-                  <div className="absolute top-44 left-4 right-4 bg-white rounded-xl p-4 shadow-lg">
-                    <div className="text-xs text-slate-400 uppercase font-bold mb-2">
-                      {dict.home_sections.app_mockup.next_job_label}
-                    </div>
-                    <div className="text-slate-900 font-bold text-lg">
-                      Via Roma 45, Milano
-                    </div>
-                    <div className="text-app text-sm mt-1">{dict.home_sections.app_mockup.next_job_time}</div>
-                  </div>
-                </div>
-                </div>
-              </div>
+            <div className="relative pb-8">
+              <TTCarousel />
             </div>
           </div>
         </div>
