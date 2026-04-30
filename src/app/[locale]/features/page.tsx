@@ -2,7 +2,8 @@
 
 import { useParams } from 'next/navigation';
 import { motion } from 'framer-motion';
-import { Layers, Zap, Shield, Database, Smartphone, Globe } from 'lucide-react';
+import Image from 'next/image';
+import { Layers, Zap, Shield, Database, Smartphone, Globe, MapPin } from 'lucide-react';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import type { AppLocale } from '@/lib/i18n/config';
 
@@ -11,6 +12,7 @@ export default function FeaturesPage() {
   const t = getDictionary(locale as AppLocale).features;
 
   const feats = [
+    { icon: MapPin, title: t.gps_title, desc: t.gps_desc, highlight: true },
     { icon: Smartphone, title: t.offline_title, desc: t.offline_desc },
     { icon: Shield, title: t.encryption_title, desc: t.encryption_desc },
     { icon: Zap, title: t.realtime_title, desc: t.realtime_desc },
@@ -33,6 +35,39 @@ export default function FeaturesPage() {
           <p className="text-xl text-text-secondary leading-relaxed font-light max-w-2xl mx-auto">
             {t.subtitle}
           </p>
+        </motion.div>
+      </section>
+
+      <section className="container mx-auto px-6 max-w-5xl mb-24">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="rounded-3xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur-sm"
+        >
+          <div className="p-8 md:p-12">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="p-3 rounded-xl bg-primary/20 text-primary">
+                <MapPin size={24} />
+              </div>
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-white">
+                {t.gps_title}
+              </h2>
+            </div>
+            <p className="text-lg text-text-secondary leading-relaxed font-light max-w-3xl mb-8">
+              {t.gps_desc}
+            </p>
+            <div className="rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+              <Image
+                src="/screen_live_map.png"
+                alt={t.gps_title}
+                width={1920}
+                height={1080}
+                className="w-full h-auto"
+                priority
+              />
+            </div>
+          </div>
         </motion.div>
       </section>
 

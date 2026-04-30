@@ -58,15 +58,17 @@ const ROWS_IT = [
   'Prove fotografiche collegate a GPS e timestamp', 'Verifica indipendente da parte del cliente',
   'Tracciamento ore', 'App mobile Android/iOS', 'Messaggistica interna proprietaria',
   'Export presenze/paghe', 'Piano gratuito', 'Gestione commesse multi-sito', 'Conformità GDPR geolocalizzazione',
+  'Informativa GPS automatica con firma digitale*',
 ];
 const ROWS_EN = [
   'GPS verified at job site', 'Cryptographically sealed report',
   'Photo evidence linked to GPS and timestamp', 'Independent verification by client',
   'Time tracking', 'Mobile app Android/iOS', 'Built-in messaging',
   'Payroll/attendance export', 'Free plan', 'Multi-site job management', 'GDPR-compliant geolocation',
+  'Automatic GPS privacy notice with digital signature*',
 ];
-const ROWS_GEO =   [true, true, true, true, true, true, true, true, false, true, true];
-const ROWS_COMP =  [false, false, false, false, true, true, false, true, true, false, false];
+const ROWS_GEO =   [true, true, true, true, true, true, true, true, false, true, true, true];
+const ROWS_COMP =  [false, false, false, false, true, true, false, true, true, false, false, false];
 
 function getRows(locale: string) {
   const features = locale === 'it' ? ROWS_IT : ROWS_EN;
@@ -184,6 +186,15 @@ export default async function GeoTappVsClockifyPage({ params }: { params: Promis
               </table>
             </div>
           </section>
+
+          {/* Privacy consent footnote */}
+          <div className="mb-16 px-4">
+            <p className="text-xs text-text-secondary leading-relaxed">
+              {isIt
+                ? '* Per legge (GDPR Art. 13 e, in Italia, Art. 4 Statuto dei Lavoratori), ogni dipendente deve firmare un\'informativa privacy prima di essere geolocalizzato. La maggior parte dei software GPS non lo gestisce: il rischio legale resta al titolare. GeoTapp genera automaticamente l\'informativa personalizzata, la fa firmare digitalmente al dipendente e blocca l\'accesso GPS finché non è firmata. Nessun altro software sul mercato lo fa.'
+                : '* By law (GDPR Art. 13), every employee must sign a privacy notice before being geolocated. Most GPS software does not handle this: the legal risk stays with the employer. GeoTapp automatically generates the personalised notice, gets it digitally signed by the employee and blocks GPS access until it is signed. No other software on the market does this.'}
+            </p>
+          </div>
 
           {/* Key difference */}
           <section className="mb-16">

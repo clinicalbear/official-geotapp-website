@@ -52,7 +52,7 @@ export default function DemoReportBanner() {
           {d.btn_download}
         </a>
         <Link
-          href={`/verifica/${DEMO_REPORT_ID}`}
+          href={`/${locale}/products/geotapp-verifier`}
           className="flex items-center justify-center gap-2 px-5 py-2.5 bg-white/10 text-white font-semibold rounded-xl text-sm border border-white/20 hover:bg-white/20 transition"
         >
           <ShieldCheck size={16} />

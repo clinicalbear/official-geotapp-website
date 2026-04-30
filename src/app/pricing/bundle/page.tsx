@@ -34,7 +34,7 @@ export default function BundlePricingPage() {
         featureTitle: 'Cosa Include il Bundle',
         ctaTitle: 'Pronto a iniziare con il Bundle?',
         ctaText:
-          '7 giorni di prova gratuita, poi risparmia il 15% per il primo anno',
+          '14 giorni di prova gratuita, poi risparmia il 15% per il primo anno',
         ctaPrimary: 'Calcola il tuo prezzo',
         ctaSecondary: 'Vedi tutti i piani',
         faqTitle: 'Domande Frequenti',
@@ -54,7 +54,7 @@ export default function BundlePricingPage() {
           },
           {
             q: 'Il periodo di prova è davvero gratuito?',
-            a: 'Sì, i primi 7 giorni sono completamente gratuiti. Non ti verrà addebitato nulla fino alla fine del periodo di prova.',
+            a: 'Sì, i primi 14 giorni sono completamente gratuiti. Non ti verrà addebitato nulla fino alla fine del periodo di prova.',
           },
           {
             q: 'Posso cancellare in qualsiasi momento?',
@@ -97,7 +97,7 @@ export default function BundlePricingPage() {
           'CRM, projects, invoicing, time tracking and reporting in one solution',
         featureTitle: 'What the Bundle includes',
         ctaTitle: 'Ready to start with the Bundle?',
-        ctaText: '7-day free trial, then save 15% during the first year',
+        ctaText: '14-day free trial, then save 15% during the first year',
         ctaPrimary: 'Calculate your price',
         ctaSecondary: 'See all plans',
         faqTitle: 'Frequently asked questions',
@@ -116,7 +116,7 @@ export default function BundlePricingPage() {
           },
           {
             q: 'Is the trial period really free?',
-            a: 'Yes. The first 7 days are completely free and nothing is charged before the trial ends.',
+            a: 'Yes. The first 14 days are completely free and nothing is charged before the trial ends.',
           },
           {
             q: 'Can I cancel at any time?',

@@ -53,10 +53,10 @@ const FAQ_EN = [
   },
 ];
 
-const ROWS_IT = ['GPS verificato e sigillato','Report non alterabili con hash crittografico','Verifica indipendente da parte del cliente','Prove fotografiche collegate a GPS e timestamp','Registrazione presenze base','App mobile Android/iOS','Dashboard gestione team','Messaggistica interna proprietaria','Conformità GDPR geolocalizzazione'];
-const ROWS_EN = ['Verified and sealed GPS','Tamper-proof reports with cryptographic hash','Independent verification by client','Photo evidence linked to GPS and timestamp','Basic attendance tracking','Mobile app Android/iOS','Team management dashboard','Built-in messaging','GDPR-compliant geolocation'];
-const ROWS_GEO =  [true,true,true,true,true,true,true,true,true];
-const ROWS_COMP = [false,false,false,false,true,true,true,true,false];
+const ROWS_IT = ['GPS verificato e sigillato','Report non alterabili con hash crittografico','Verifica indipendente da parte del cliente','Prove fotografiche collegate a GPS e timestamp','Registrazione presenze base','App mobile Android/iOS','Dashboard gestione team','Messaggistica interna proprietaria','Conformità GDPR geolocalizzazione','Informativa GPS automatica con firma digitale*'];
+const ROWS_EN = ['Verified and sealed GPS','Tamper-proof reports with cryptographic hash','Independent verification by client','Photo evidence linked to GPS and timestamp','Basic attendance tracking','Mobile app Android/iOS','Team management dashboard','Built-in messaging','GDPR-compliant geolocation','Automatic GPS privacy notice with digital signature*'];
+const ROWS_GEO =  [true,true,true,true,true,true,true,true,true,true];
+const ROWS_COMP = [false,false,false,false,true,true,true,true,false,false];
 function getRows(locale: string) { const f = locale === 'it' ? ROWS_IT : ROWS_EN; return f.map((feature, i) => ({ feature, geotapp: ROWS_GEO[i], competitor: ROWS_COMP[i] })); }
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
@@ -172,6 +172,15 @@ export default async function GeoTappVsConnecteamPage({ params }: { params: Prom
               </table>
             </div>
           </section>
+
+          {/* Privacy consent footnote */}
+          <div className="mb-16 px-4">
+            <p className="text-xs text-text-secondary leading-relaxed">
+              {isIt
+                ? '* Per legge (GDPR Art. 13 e, in Italia, Art. 4 Statuto dei Lavoratori), ogni dipendente deve firmare un\'informativa privacy prima di essere geolocalizzato. La maggior parte dei software GPS non lo gestisce: il rischio legale resta al titolare. GeoTapp genera automaticamente l\'informativa personalizzata, la fa firmare digitalmente al dipendente e blocca l\'accesso GPS finché non è firmata. Nessun altro software sul mercato lo fa.'
+                : '* By law (GDPR Art. 13), every employee must sign a privacy notice before being geolocated. Most GPS software does not handle this: the legal risk stays with the employer. GeoTapp automatically generates the personalised notice, gets it digitally signed by the employee and blocks GPS access until it is signed. No other software on the market does this.'}
+            </p>
+          </div>
 
           {/* Key difference */}
           <section className="mb-16">

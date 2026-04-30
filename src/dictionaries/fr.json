@@ -440,7 +440,7 @@
     "flow": {
       "hero_badge": "GeoTapp Flow — Gestion des opérations terrain",
       "hero_title": "GeoTapp Flow.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600\">Gestion Opérationnelle.</span>",
-      "hero_subtitle": "Le centre opérationnel pour les entreprises disposant de techniciens et d'opérateurs terrain. Gérez les missions, coordonnez les équipes et produisez des rapports de travail structurés et vérifiables.",
+      "hero_subtitle": "Le centre opérationnel pour gérer clients, projets, équipes et administration en un seul endroit. Flow est la plateforme sur laquelle repose aussi TimeTracker.",
       "visual_placeholder": "PANNEAU OPÉRATIONS",
       "grid_title": "Capacités opérationnelles",
       "grid_subtitle": "Chaque module est conçu pour un contrôle réel des interventions terrain. Cliquez pour explorer.",
@@ -892,6 +892,8 @@
   "features": {
     "title": "Power Under the Hood.",
     "subtitle": "Nous ne fabriquons pas des jouets. GeoTapp est une plateforme d'entreprise conçue pour passer à l'échelle. Voici les technologies qui font la magie.",
+    "gps_title": "Suivi GPS & Cartes Géographiques",
+    "gps_desc": "Sachez où se trouve votre équipe, en temps réel. Notre carte live affiche chaque pointage avec les coordonnées GPS, la validation géofencing et la protection anti-spoofing. Les managers voient qui est sur site en un coup d'œil — sans appels, sans incertitude.",
     "offline_title": "Offline-First Architecture",
     "offline_desc": "La connexion lâche, le travail non. Nous avons construit une base de données synchronisée en local (CRDT) qui vit à l'intérieur de l'application. Vos techniciens peuvent travailler dans un bunker souterrain ; dès qu'ils aperçoivent un bout de ciel, les données se synchronisent silencieusement avec le cloud.",
     "encryption_title": "Military-Grade Encryption",

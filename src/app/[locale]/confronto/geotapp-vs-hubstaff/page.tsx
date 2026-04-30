@@ -57,10 +57,10 @@ const FAQ_EN = [
   },
 ];
 
-const ROWS_IT = ['GPS verificato per interventi sul campo','Report sigillato crittograficamente','Verifica indipendente da parte del committente','Prove fotografiche collegate a GPS e timestamp','Conformità GDPR / linee guida Garante italiano','Nessun monitoraggio continuo dei dipendenti','App mobile Android/iOS','Messaggistica interna proprietaria','Dashboard gestione team','Export per elaborazione paghe','Progettato per mercato italiano / CCNL'];
-const ROWS_EN = ['GPS verified for field jobs','Cryptographically sealed report','Independent verification by client','Photo evidence linked to GPS and timestamp','GDPR compliant / Italian DPA guidelines','No continuous employee monitoring','Mobile app Android/iOS','Built-in messaging','Team management dashboard','Payroll export','Designed for Italian market / CCNL'];
-const ROWS_GEO =  [true,true,true,true,true,true,true,true,true,true,true];
-const ROWS_COMP = [true,false,false,false,false,false,true,true,true,true,false];
+const ROWS_IT = ['GPS verificato per interventi sul campo','Report sigillato crittograficamente','Verifica indipendente da parte del committente','Prove fotografiche collegate a GPS e timestamp','Conformità GDPR / linee guida Garante italiano','Nessun monitoraggio continuo dei dipendenti','App mobile Android/iOS','Messaggistica interna proprietaria','Dashboard gestione team','Export per elaborazione paghe','Progettato per mercato italiano / CCNL','Informativa GPS automatica con firma digitale*'];
+const ROWS_EN = ['GPS verified for field jobs','Cryptographically sealed report','Independent verification by client','Photo evidence linked to GPS and timestamp','GDPR compliant / Italian DPA guidelines','No continuous employee monitoring','Mobile app Android/iOS','Built-in messaging','Team management dashboard','Payroll export','Designed for Italian market / CCNL','Automatic GPS privacy notice with digital signature*'];
+const ROWS_GEO =  [true,true,true,true,true,true,true,true,true,true,true,true];
+const ROWS_COMP = [true,false,false,false,false,false,true,true,true,true,false,false];
 function getRows(locale: string) { const f = locale === 'it' ? ROWS_IT : ROWS_EN; return f.map((feature, i) => ({ feature, geotapp: ROWS_GEO[i], competitor: ROWS_COMP[i] })); }
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
@@ -184,6 +184,15 @@ export default async function GeoTappVsHubstaffPage({ params }: { params: Promis
               </table>
             </div>
           </section>
+
+          {/* Privacy consent footnote */}
+          <div className="mb-16 px-4">
+            <p className="text-xs text-text-secondary leading-relaxed">
+              {isIt
+                ? '* Per legge (GDPR Art. 13 e, in Italia, Art. 4 Statuto dei Lavoratori), ogni dipendente deve firmare un\'informativa privacy prima di essere geolocalizzato. La maggior parte dei software GPS non lo gestisce: il rischio legale resta al titolare. GeoTapp genera automaticamente l\'informativa personalizzata, la fa firmare digitalmente al dipendente e blocca l\'accesso GPS finché non è firmata. Nessun altro software sul mercato lo fa.'
+                : '* By law (GDPR Art. 13), every employee must sign a privacy notice before being geolocated. Most GPS software does not handle this: the legal risk stays with the employer. GeoTapp automatically generates the personalised notice, gets it digitally signed by the employee and blocks GPS access until it is signed. No other software on the market does this.'}
+            </p>
+          </div>
 
           {/* Side by side */}
           <section className="mb-16">

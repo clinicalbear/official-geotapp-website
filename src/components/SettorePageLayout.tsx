@@ -132,11 +132,11 @@ export default function SettorePageLayout({ content, locale, settore, children }
               <div className={`mb-6 inline-block rounded-full px-4 py-1.5 text-sm font-bold tracking-wide ${colors.badge}`}>
                 {content.hero.badge}
               </div>
-              <h1 className="mb-6 text-5xl font-bold leading-[1.1] text-slate-900 md:text-6xl">
+              <h1 className="mb-6 text-3xl font-bold leading-[1.1] text-slate-900 sm:text-4xl md:text-6xl">
                 {content.hero.h1_line1}
                 <span className={`block ${colors.h1}`}>{content.hero.h1_line2}</span>
               </h1>
-              <p className="mb-8 text-xl leading-relaxed text-slate-600">
+              <p className="mb-8 text-base leading-relaxed text-slate-600 sm:text-lg md:text-xl">
                 {content.hero.subtitle}
               </p>
               <div className="flex flex-col gap-4 sm:flex-row">
@@ -155,11 +155,11 @@ export default function SettorePageLayout({ content, locale, settore, children }
                 {RISORSE_LABELS[locale] ?? RISORSE_LABELS['en']}
               </Link>
               {content.pricing_hint && (
-                <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm text-slate-700 shadow-sm">
+                <div className="mt-6 inline-flex flex-wrap items-center gap-1.5 rounded-2xl border border-slate-200 bg-white px-4 py-2 text-sm text-slate-700 shadow-sm sm:gap-2 sm:rounded-full">
                   <span className="text-slate-500">{content.pricing_hint.label}</span>
                   <span className={`font-bold ${colors.accent}`}>{content.pricing_hint.price}</span>
                   <span className="text-slate-500">{content.pricing_hint.per}</span>
-                  <span className="mx-1 text-slate-300">·</span>
+                  <span className="mx-1 hidden text-slate-300 sm:inline">·</span>
                   <span className="text-slate-400">{content.pricing_hint.note}</span>
                 </div>
               )}

@@ -442,7 +442,7 @@
     "flow": {
       "hero_badge": "GeoTapp Flow — Field Operations Management",
       "hero_title": "GeoTapp Flow.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600\">Field Operations Management.</span>",
-      "hero_subtitle": "The operational centre for companies with field technicians and operators. Manage jobs, coordinate teams and produce structured, verifiable work reports.",
+      "hero_subtitle": "The operational hub for managing clients, projects, teams and administration in one place. Flow is the platform that also powers TimeTracker.",
       "visual_placeholder": "OPERATIONS PANEL",
       "grid_title": "Operational capabilities",
       "grid_subtitle": "Every module is designed for real control of field work. Click to explore.",
@@ -894,6 +894,8 @@
   "features": {
     "title": "Power Under the Hood.",
     "subtitle": "We don't build toys. GeoTapp is an enterprise platform built to scale. Here are the technologies that make the magic happen.",
+    "gps_title": "GPS Tracking & Geographic Maps",
+    "gps_desc": "Know where your team is, in real time. Our live map shows every clock-in with GPS coordinates, geofencing validation and anti-spoofing protection. Managers see who is on-site at a glance — no calls, no guesswork.",
     "offline_title": "Offline-First Architecture",
     "offline_desc": "Connection drops, work doesn't. We built a locally-synced database (CRDT) that lives inside the app. Your technicians can work in an underground bunker; as soon as they see a sliver of sky, data will silently sync with the cloud.",
     "encryption_title": "Military-Grade Encryption",

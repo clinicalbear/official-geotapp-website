@@ -115,36 +115,44 @@ async function fetchMediaMap(ids: number[]): Promise<Map<number, string>> {
 }
 
 
+async function buildPostList(all: Awaited<ReturnType<typeof fetchAllPosts>>, locale: string): Promise<Post[]> {
+  const catMap = await fetchCategoryMap(locale);
+  const filtered = all.filter((p) => isLocalePost(p.link ?? '', locale));
+  if (filtered.length === 0) return [];
+  const mediaIds = [...new Set(filtered.map((p) => p.featured_media).filter((id) => id > 0))];
+  const mediaMap = await fetchMediaMap(mediaIds);
+
+  return filtered.map((p) => {
+    const contentText = stripHtml(p.content?.rendered ?? '');
+    const wordCount = contentText.trim() ? contentText.trim().split(/\s+/).length : 0;
+    const readingTime = Math.max(1, Math.ceil(wordCount / 200));
+    const cats = (p.categories ?? [])
+      .map((id: number) => catMap.get(id))
+      .filter(Boolean) as Array<{ slug: string; name: string }>;
+
+    return {
+      id: p.id,
+      slug: p.slug,
+      title: stripHtml(p.title?.rendered ?? ''),
+      excerpt: stripHtml(p.excerpt?.rendered ?? '').slice(0, 160),
+      date: p.date,
+      url: normalizeUrl(p.link, p.slug),
+      image: mediaMap.get(p.featured_media) ?? null,
+      categories: cats,
+      readingTime,
+    };
+  });
+}
+
 async function fetchPosts(locale: string): Promise<Post[]> {
   try {
-    const [all, catMap] = await Promise.all([fetchAllPosts(), fetchCategoryMap(locale)]);
-    const filtered = all.filter((p) => isLocalePost(p.link ?? '', locale));
-    const mediaIds = [...new Set(filtered.map((p) => p.featured_media).filter((id) => id > 0))];
-    const mediaMap = await fetchMediaMap(mediaIds);
-
-    return filtered.map((p) => {
-      // Reading time: word count of full post content ÷ 200 wpm
-      const contentText = stripHtml(p.content?.rendered ?? '');
-      const wordCount = contentText.trim() ? contentText.trim().split(/\s+/).length : 0;
-      const readingTime = Math.max(1, Math.ceil(wordCount / 200));
-
-      // Map category IDs → slugs for the current locale
-      const cats = (p.categories ?? [])
-        .map((id: number) => catMap.get(id))
-        .filter(Boolean) as Array<{ slug: string; name: string }>;
-
-      return {
-        id: p.id,
-        slug: p.slug,
-        title: stripHtml(p.title?.rendered ?? ''),
-        excerpt: stripHtml(p.excerpt?.rendered ?? '').slice(0, 160),
-        date: p.date,
-        url: normalizeUrl(p.link, p.slug),
-        image: mediaMap.get(p.featured_media) ?? null,
-        categories: cats,
-        readingTime,
-      };
-    });
+    const all = await fetchAllPosts();
+    const posts = await buildPostList(all, locale);
+    // Fallback to English if no posts exist for this locale
+    if (posts.length === 0 && locale !== 'en') {
+      return buildPostList(all, 'en');
+    }
+    return posts;
   } catch {
     return [];
   }

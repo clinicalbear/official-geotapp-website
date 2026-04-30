@@ -440,7 +440,7 @@
     "flow": {
       "hero_badge": "GeoTapp Flow — Gestão de operações de campo",
       "hero_title": "GeoTapp Flow.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600\">Gestão Operacional.</span>",
-      "hero_subtitle": "O centro operacional para empresas com técnicos e operadores de campo. Gira trabalhos, coordene equipas e produza relatórios de trabalho estruturados e verificáveis.",
+      "hero_subtitle": "O centro operacional para gerir clientes, projetos, equipas e administração num único ambiente. Flow é a plataforma que também alimenta o TimeTracker.",
       "visual_placeholder": "PAINEL DE OPERAÇÕES",
       "grid_title": "Capacidades operacionais",
       "grid_subtitle": "Cada módulo foi concebido para o controlo real do trabalho de campo. Clique para explorar.",
@@ -892,6 +892,8 @@
   "features": {
     "title": "Power Under the Hood.",
     "subtitle": "Não construímos brinquedos. GeoTapp é uma plataforma empresarial construída para escalar. Aqui estão as tecnologias que fazem a magia acontecer.",
+    "gps_title": "Rastreamento GPS e Mapas Geográficos",
+    "gps_desc": "Saiba onde a sua equipa está, em tempo real. O nosso mapa ao vivo mostra cada registo de ponto com coordenadas GPS, validação de geofencing e proteção anti-spoofing. Os gestores veem quem está no local num relance — sem chamadas, sem adivinhações.",
     "offline_title": "Offline-First Architecture",
     "offline_desc": "A ligação cai, o trabalho não. Construímos uma base de dados sincronizada localmente (CRDT) que vive dentro da aplicação. Os seus técnicos podem trabalhar num bunker subterrâneo; assim que avistarem um pedaço de céu, os dados sincronizam silenciosamente com a nuvem.",
     "encryption_title": "Military-Grade Encryption",

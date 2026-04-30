@@ -442,7 +442,7 @@
     "flow": {
       "hero_badge": "GeoTapp Flow — Außendienststeuerung",
       "hero_title": "GeoTapp Flow.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600\">Einsatzverwaltung.</span>",
-      "hero_subtitle": "Die Schaltzentrale für Unternehmen mit Außendiensttechnikern und -mitarbeitern. Aufträge verwalten, Teams koordinieren und strukturierte, prüfbare Arbeitsberichte erstellen.",
+      "hero_subtitle": "Die operative Zentrale für Kunden, Aufträge, Teams und Verwaltung in einer Umgebung. Flow ist die Plattform, auf der auch TimeTracker basiert.",
       "visual_placeholder": "BEDIENFELD",
       "grid_title": "Operative Funktionen",
       "grid_subtitle": "Jedes Modul ist auf echte Außendienstkontrolle ausgelegt. Klicken Sie zum Erkunden.",
@@ -894,6 +894,8 @@
   "features": {
     "title": "Power Under the Hood.",
     "subtitle": "Wir bauen kein Spielzeug. GeoTapp ist eine Enterprise-Plattform, die für Skalierung gebaut wurde. Hier sind die Technologien, die die Magie möglich machen.",
+    "gps_title": "GPS-Tracking & Geografische Karten",
+    "gps_desc": "Wissen Sie, wo Ihr Team ist — in Echtzeit. Unsere Live-Karte zeigt jede Stempelung mit GPS-Koordinaten, Geofencing-Validierung und Anti-Spoofing-Schutz. Manager sehen auf einen Blick, wer vor Ort ist — ohne Anrufe, ohne Rätselraten.",
     "offline_title": "Offline-First Architecture",
     "offline_desc": "Die Verbindung bricht ab, die Arbeit nicht. Wir haben eine lokal synchronisierte Datenbank (CRDT) gebaut, die direkt in der App lebt. Ihre Techniker können in einem Kellerbunker arbeiten — sobald sie einen Streifen Himmel sehen, synchronisieren sich die Daten lautlos mit der Cloud.",
     "encryption_title": "Military-Grade Encryption",

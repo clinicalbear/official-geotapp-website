@@ -440,7 +440,7 @@
     "flow": {
       "hero_badge": "GeoTapp Flow — Hantering av fältverksamhet",
       "hero_title": "GeoTapp Flow.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600\">Operativ Hantering.</span>",
-      "hero_subtitle": "Det operativa centret för företag med fälttekniker och operatörer. Hantera arbetsorder, koordinera team och producera strukturerade, verifierbara arbetsrapporter.",
+      "hero_subtitle": "Det operativa navet för att hantera kunder, projekt, team och administration på ett ställe. Flow är plattformen som även driver TimeTracker.",
       "visual_placeholder": "DRIFTSPANEL",
       "grid_title": "Operativa funktioner",
       "grid_subtitle": "Varje modul är utformad för verklig kontroll av fältarbete. Klicka för att utforska.",
@@ -892,6 +892,8 @@
   "features": {
     "title": "Power Under the Hood.",
     "subtitle": "Vi bygger inte leksaker. GeoTapp är en enterprise-plattform byggd för att skala. Här är de teknologier som gör magin möjlig.",
+    "gps_title": "GPS-spårning & Geografiska Kartor",
+    "gps_desc": "Vet var ditt team befinner sig — i realtid. Vår live-karta visar varje stämpling med GPS-koordinater, geofencing-validering och anti-spoofing-skydd. Chefer ser vem som är på plats med en blick — inga samtal, inga gissningar.",
     "offline_title": "Offline-First Architecture",
     "offline_desc": "Uppkopplingen försvinner, arbetet inte. Vi har byggt en lokalt synkroniserad databas (CRDT) som lever inuti appen. Dina tekniker kan arbeta i en underjordisk bunker; så fort de ser en bit himmel synkroniseras data tyst med molnet.",
     "encryption_title": "Military-Grade Encryption",

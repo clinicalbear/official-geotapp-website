@@ -441,7 +441,7 @@
     "flow": {
       "hero_badge": "GeoTapp Flow — Beheer van buitendienstoperaties",
       "hero_title": "GeoTapp Flow.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600\">Operationeel Beheer.</span>",
-      "hero_subtitle": "Het operationele centrum voor bedrijven met buitendienstmonteurs en -medewerkers. Beheer werkbeurten, coördineer teams en produceer gestructureerde, verifieerbare werkbonnen.",
+      "hero_subtitle": "Het operationele centrum voor klanten, projecten, teams en administratie in één omgeving. Flow is het platform waarop ook TimeTracker draait.",
       "visual_placeholder": "OPERATIEPANEEL",
       "grid_title": "Operationele mogelijkheden",
       "grid_subtitle": "Elke module is ontworpen voor echte controle over buitendienstwerk. Klik om te verkennen.",
@@ -893,6 +893,8 @@
   "features": {
     "title": "Power Under the Hood.",
     "subtitle": "We bouwen geen speelgoed. GeoTapp is een enterprise platform gebouwd om te schalen. Dit zijn de technologieën die de magie mogelijk maken.",
+    "gps_title": "GPS-tracking & Geografische Kaarten",
+    "gps_desc": "Weet waar je team is, in realtime. Onze live kaart toont elke inklok met GPS-coördinaten, geofencing-validatie en anti-spoofing-bescherming. Managers zien in één oogopslag wie op locatie is — geen telefoontjes, geen giswerk.",
     "offline_title": "Offline-First Architecture",
     "offline_desc": "Verbinding valt weg, werk niet. We hebben een lokaal gesynchroniseerde database (CRDT) gebouwd die in de app zelf leeft. Uw technici kunnen werken in een ondergrondse bunker — zodra ze een glimp hemel zien, synchroniseert de data stilletjes met de cloud.",
     "encryption_title": "Military-Grade Encryption",

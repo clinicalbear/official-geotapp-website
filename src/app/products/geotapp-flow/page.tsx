@@ -373,6 +373,15 @@ function GpsPrivacySection({ locale }: { locale: string }) {
               <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 leading-tight">
                 {c.title}
               </h2>
+              <p className="mt-3 text-lg font-semibold text-green-700">
+                {locale === 'it'
+                  ? 'Timbri in regola dal primo giorno — o non timbri.*'
+                  : locale === 'de'
+                    ? 'Ab Tag eins konform — oder gar nicht stempeln.*'
+                    : locale === 'fr'
+                      ? 'Conforme dès le premier jour — ou pas de pointage.*'
+                      : 'Compliant from day one — or you don\'t clock in.*'}
+              </p>
             </div>
           </div>
 
@@ -405,6 +414,17 @@ function GpsPrivacySection({ locale }: { locale: string }) {
               </span>
             ))}
           </div>
+
+          {/* Footnote */}
+          <p className="mt-6 text-xs text-green-700/60 leading-relaxed">
+            {locale === 'it'
+              ? '* Per legge (GDPR Art. 13 e, in Italia, Art. 4 Statuto dei Lavoratori), ogni dipendente deve firmare un\'informativa privacy prima di essere geolocalizzato. La maggior parte dei software GPS non lo gestisce: il rischio legale resta al titolare. GeoTapp genera automaticamente l\'informativa personalizzata, la fa firmare digitalmente al dipendente e blocca l\'accesso GPS finché non è firmata. Nessun altro software sul mercato lo fa.'
+              : locale === 'de'
+                ? '* Nach geltendem Recht (DSGVO Art. 13, in Deutschland auch BDSG und BetrVG) muss jeder Mitarbeiter vor der GPS-Ortung eine Datenschutzerklärung unterschreiben. Die meisten GPS-Systeme kümmern sich nicht darum — das rechtliche Risiko bleibt beim Arbeitgeber. GeoTapp erstellt die Erklärung automatisch, lässt sie digital unterschreiben und sperrt den GPS-Zugang, bis sie unterzeichnet ist. Kein anderes System am Markt bietet das.'
+                : locale === 'fr'
+                  ? '* La loi (RGPD Art. 13, en France aussi le Code du travail et les recommandations CNIL) exige que chaque salarié signe un avis de confidentialité avant d\'être géolocalisé. La plupart des logiciels GPS ne gèrent pas cela : le risque juridique reste à l\'employeur. GeoTapp génère automatiquement l\'avis, le fait signer numériquement et bloque l\'accès GPS tant qu\'il n\'est pas signé. Aucun autre logiciel sur le marché ne le fait.'
+                  : '* By law (GDPR Art. 13), every employee must sign a privacy notice before being geolocated. Most GPS software does not handle this: the legal risk stays with the employer. GeoTapp automatically generates the personalised notice, gets it digitally signed and blocks GPS access until it is signed. No other software on the market does this.'}
+          </p>
         </div>
       </div>
     </section>

@@ -414,9 +414,26 @@ export default function GeoTappApp() {
             )}
           </h1>
 
-          <p className="text-xl md:text-2xl text-slate-500 font-light leading-relaxed max-w-4xl mx-auto mb-16">
+          <p className="text-xl md:text-2xl text-slate-500 font-light leading-relaxed max-w-4xl mx-auto mb-8">
             {appDict.hero_subtitle}
           </p>
+
+          {/* GPS Privacy Consent Badge */}
+          <div className="inline-flex flex-col items-center gap-2 mb-16">
+            <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-green-50 border-2 border-green-200 shadow-sm">
+              <Shield size={20} className="text-green-600" />
+              <span className="text-base font-bold text-green-800">
+                {isItalian
+                  ? 'Timbri in regola dal primo giorno — o non timbri.*'
+                  : 'Compliant from day one — or you don\'t clock in.*'}
+              </span>
+            </div>
+            <p className="text-xs text-slate-400 max-w-xl text-center leading-relaxed">
+              {isItalian
+                ? '* Per legge, ogni dipendente deve firmare un\'informativa privacy prima di essere geolocalizzato. GeoTapp è l\'unico sistema che la genera in automatico, la fa firmare e blocca l\'accesso GPS finché non è firmata.'
+                : '* By law, every employee must sign a privacy notice before being geolocated. GeoTapp is the only system that generates it automatically, gets it signed and blocks GPS access until it is.'}
+            </p>
+          </div>
 
           <motion.div
             whileHover={{ scale: 1.01 }}

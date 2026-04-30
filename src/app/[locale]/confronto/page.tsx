@@ -63,6 +63,30 @@ const COMPARISONS: Record<string, { tagline: string; highlight: string }>[] = [
     fr: { tagline: 'Surveillance à distance vs certification terrain', highlight: 'Hubstaff surveille les télétravailleurs. GeoTapp certifie les opérateurs physiques sur le terrain — conforme RGPD.' },
     es: { tagline: 'Monitoreo remoto vs certificación de campo', highlight: 'Hubstaff monitorea trabajadores remotos. GeoTapp certifica operadores físicos en campo — compatible con RGPD.' },
   } as any,
+  {
+    slug: 'geotapp-vs-nobadge', competitor: 'NoBadge',
+    it: { tagline: 'Timbratura presenze vs certificazione interventi', highlight: 'NoBadge registra le presenze. GeoTapp certifica il lavoro con GPS anti-spoofing e report verificabili.' },
+    en: { tagline: 'Attendance tracking vs job certification', highlight: 'NoBadge records attendance. GeoTapp certifies work with anti-spoofing GPS and verifiable reports.' },
+    de: { tagline: 'Anwesenheitserfassung vs Einsatzzertifizierung', highlight: 'NoBadge erfasst Anwesenheit. GeoTapp zertifiziert Arbeit mit Anti-Spoofing-GPS und verifizierbaren Berichten.' },
+    fr: { tagline: 'Pointage vs certification des interventions', highlight: 'NoBadge enregistre les présences. GeoTapp certifie le travail avec GPS anti-fraude et rapports vérifiables.' },
+    es: { tagline: 'Fichaje de presencia vs certificación de trabajos', highlight: 'NoBadge registra presencias. GeoTapp certifica el trabajo con GPS anti-spoofing e informes verificables.' },
+  } as any,
+  {
+    slug: 'geotapp-vs-libemax', competitor: 'Libemax',
+    it: { tagline: 'Geofence vs anti-spoofing GPS', highlight: 'Libemax usa il geofence per la timbratura. GeoTapp verifica che il GPS sia reale con anti-spoofing — due livelli di sicurezza diversi.' },
+    en: { tagline: 'Geofence vs anti-spoofing GPS', highlight: 'Libemax uses geofence for check-in. GeoTapp verifies GPS is real with anti-spoofing — two different security levels.' },
+    de: { tagline: 'Geofence vs Anti-Spoofing-GPS', highlight: 'Libemax nutzt Geofence. GeoTapp verifiziert GPS-Echtheit mit Anti-Spoofing — zwei verschiedene Sicherheitsstufen.' },
+    fr: { tagline: 'Geofence vs anti-spoofing GPS', highlight: 'Libemax utilise le geofence. GeoTapp vérifie que le GPS est réel avec l\'anti-spoofing — deux niveaux de sécurité différents.' },
+    es: { tagline: 'Geofence vs anti-spoofing GPS', highlight: 'Libemax usa geofence. GeoTapp verifica que el GPS es real con anti-spoofing — dos niveles de seguridad diferentes.' },
+  } as any,
+  {
+    slug: 'geotapp-vs-blink', competitor: 'Blink',
+    it: { tagline: 'Software pulizie DE vs certificazione campo', highlight: 'Blink è il numero 1 per le pulizie in Germania. GeoTapp aggiunge anti-spoofing e report con valore probatorio.' },
+    en: { tagline: 'Cleaning software DE vs field certification', highlight: 'Blink is #1 for cleaning in Germany. GeoTapp adds anti-spoofing and reports with evidentiary value.' },
+    de: { tagline: 'Reinigungssoftware vs Feldzertifizierung', highlight: 'Blink ist Nr. 1 für Gebäudereinigung. GeoTapp ergänzt Anti-Spoofing und Berichte mit Beweiskraft.' },
+    fr: { tagline: 'Logiciel nettoyage DE vs certification terrain', highlight: 'Blink est le n°1 du nettoyage en Allemagne. GeoTapp ajoute l\'anti-spoofing et des rapports avec valeur probante.' },
+    es: { tagline: 'Software limpieza DE vs certificación de campo', highlight: 'Blink es el nº1 en limpieza en Alemania. GeoTapp añade anti-spoofing e informes con valor probatorio.' },
+  } as any,
 ];
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {

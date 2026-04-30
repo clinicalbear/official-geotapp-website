@@ -43,7 +43,6 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [sectorMobileOpen, setSectorMobileOpen] = useState(false);
-  const [sectorDesktopOpen, setSectorDesktopOpen] = useState(false);
   const pathname = usePathname();
   const currentLocale = getLocaleFromPathname(pathname) ?? DEFAULT_LOCALE;
   const dict = getDictionary(currentLocale).navbar;
@@ -106,15 +105,6 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => {
-    if (!sectorDesktopOpen) return;
-    const close = (e: MouseEvent) => {
-      const nav = document.querySelector('[data-sector-dropdown]');
-      if (nav && !nav.contains(e.target as Node)) setSectorDesktopOpen(false);
-    };
-    document.addEventListener('mousedown', close);
-    return () => document.removeEventListener('mousedown', close);
-  }, [sectorDesktopOpen]);
 
   // Single tree manages sticky header, desktop dropdown and mobile drawer.
   return (
@@ -174,32 +164,25 @@ export default function Navbar() {
           </div>
 
           {/* Settori Dropdown */}
-          <div className="relative" data-sector-dropdown>
-            <button
-              className="flex items-center gap-1 text-sm font-bold text-text-secondary hover:text-primary transition-colors"
-              onClick={() => setSectorDesktopOpen(!sectorDesktopOpen)}
-              onBlur={(e) => { if (!e.currentTarget.parentElement?.contains(e.relatedTarget as Node)) setSectorDesktopOpen(false); }}
-            >
-              {dict.sectors.label} <ChevronDown size={14} className={sectorDesktopOpen ? 'rotate-180 transition-transform' : 'transition-transform'} />
+          <div className="relative group">
+            <button className="flex items-center gap-1 text-sm font-bold text-text-secondary hover:text-primary transition-colors">
+              {dict.sectors.label} <ChevronDown size={14} />
             </button>
-            {sectorDesktopOpen && (
-              <div className="absolute top-full left-0 w-52 pt-2 z-50">
-                <div className="bg-white border border-border rounded-xl p-2 shadow-2xl">
-                  <div className="grid gap-0.5">
-                    {sectorLinks.map((sector) => (
-                      <Link
-                        key={sector.href}
-                        href={sector.href}
-                        onClick={() => setSectorDesktopOpen(false)}
-                        className="block px-4 py-2.5 text-sm font-bold text-slate-700 hover:bg-primary/10 hover:text-primary rounded-lg transition-colors"
-                      >
-                        {sector.label}
-                      </Link>
-                    ))}
-                  </div>
+            <div className="absolute top-full left-0 w-52 pt-2 z-50 invisible opacity-0 pointer-events-none group-hover:visible group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-150">
+              <div className="bg-white border border-border rounded-xl p-2 shadow-2xl">
+                <div className="grid gap-0.5">
+                  {sectorLinks.map((sector) => (
+                    <Link
+                      key={sector.href}
+                      href={sector.href}
+                      className="block px-4 py-2.5 text-sm font-bold text-slate-700 hover:bg-primary/10 hover:text-primary rounded-lg transition-colors"
+                    >
+                      {sector.label}
+                    </Link>
+                  ))}
                 </div>
               </div>
-            )}
+            </div>
           </div>
 
           <Link
