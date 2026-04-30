@@ -24,7 +24,7 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import { GEOTAPP_SYSTEMS, SystemDetail } from './systems-data';
 import { usePathname } from 'next/navigation';
 import { getDictionary } from '@/lib/i18n/dictionaries';
@@ -33,7 +33,7 @@ import {
   getLocaleFromPathname,
   localizePath,
 } from '@/lib/i18n/locale-routing';
-import TrialButton from '@/components/TrialButton';
+
 
 // --- SYSTEM CARD COMPONENT (LIGHT THEME) ---
 const SystemCard = ({
@@ -164,6 +164,104 @@ const Sectiondivider = ({ title }: { title: string }) => (
     <div className="h-px bg-slate-200 flex-grow"></div>
   </div>
 );
+
+const CAROUSEL_SLIDES = [
+  {
+    src: '/screen_dashboard.png',
+    alt_it: 'GeoTapp Flow — Dashboard con KPI e moduli operativi',
+    alt_en: 'GeoTapp Flow — Dashboard with KPIs and operational modules',
+    label_it: 'Dashboard KPI e moduli operativi',
+    label_en: 'KPI Dashboard & Operational Modules',
+  },
+  {
+    src: '/screen_live_map.png',
+    alt_it: 'GeoTapp Flow — Mappa GPS live con timbrature geolocalizzate',
+    alt_en: 'GeoTapp Flow — Live GPS map with geolocated clock-ins',
+    label_it: 'Mappa GPS live — Geolocalizzazione in tempo reale',
+    label_en: 'Live GPS Map — Real-time Geolocation',
+  },
+  {
+    src: '/schermataFlow.webp',
+    alt_it: 'GeoTapp Flow — Pannello operativo',
+    alt_en: 'GeoTapp Flow — Operational dashboard',
+    label_it: 'Dashboard operativa',
+    label_en: 'Operational Dashboard',
+  },
+];
+
+function ScreenCarousel({ isItalian }: { isItalian: boolean }) {
+  const [current, setCurrent] = useState(0);
+  const total = CAROUSEL_SLIDES.length;
+
+  const next = useCallback(() => setCurrent((i) => (i + 1) % total), [total]);
+  const prev = useCallback(() => setCurrent((i) => (i - 1 + total) % total), [total]);
+
+  useEffect(() => {
+    const timer = setInterval(next, 5000);
+    return () => clearInterval(timer);
+  }, [next]);
+
+  const slide = CAROUSEL_SLIDES[current];
+
+  return (
+    <div className="relative mx-auto mt-16 max-w-6xl">
+      <p className="text-center text-sm font-semibold uppercase tracking-widest text-slate-400 mb-4">
+        {isItalian ? slide.label_it : slide.label_en}
+      </p>
+
+      <div className="relative rounded-2xl shadow-2xl border border-slate-200 overflow-hidden">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={current}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.4 }}
+          >
+            <Image
+              src={slide.src}
+              alt={isItalian ? slide.alt_it : slide.alt_en}
+              width={1920}
+              height={1080}
+              className="w-full h-auto"
+              priority={current === 0}
+            />
+          </motion.div>
+        </AnimatePresence>
+
+        {/* Navigation arrows */}
+        <button
+          onClick={prev}
+          className="absolute left-3 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/80 hover:bg-white shadow-lg text-slate-700 transition-colors"
+          aria-label="Previous"
+        >
+          <ArrowRight size={20} className="rotate-180" />
+        </button>
+        <button
+          onClick={next}
+          className="absolute right-3 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/80 hover:bg-white shadow-lg text-slate-700 transition-colors"
+          aria-label="Next"
+        >
+          <ArrowRight size={20} />
+        </button>
+      </div>
+
+      {/* Dots */}
+      <div className="flex justify-center gap-2 mt-4">
+        {CAROUSEL_SLIDES.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setCurrent(i)}
+            className={`w-2.5 h-2.5 rounded-full transition-all ${
+              i === current ? 'bg-blue-600 w-6' : 'bg-slate-300 hover:bg-slate-400'
+            }`}
+            aria-label={`Slide ${i + 1}`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
 
 export default function GeoTappApp() {
   const [selectedSystem, setSelectedSystem] = useState<SystemDetail | null>(
@@ -415,23 +513,7 @@ export default function GeoTappApp() {
             {flowDict.hero_subtitle}
           </p>
 
-          <motion.div
-            whileHover={{ scale: 1.01 }}
-            viewport={{ once: true }}
-            className="relative mx-auto mt-16 max-w-6xl"
-          >
-            {/* Flow dashboard screenshot */}
-            <div className="relative rounded-2xl shadow-2xl border border-slate-200 overflow-hidden">
-              <Image
-                src="/schermataFlow.webp"
-                alt="GeoTapp Flow — pannello operativo"
-                width={1512}
-                height={756}
-                className="w-full h-auto"
-                priority
-              />
-            </div>
-          </motion.div>
+          <ScreenCarousel isItalian={isItalian} />
         </motion.div>
       </section>
 
@@ -505,6 +587,49 @@ export default function GeoTappApp() {
         </div>
       </section>
 
+      {/* GPS PRIVACY COMPLIANCE SECTION */}
+      <section className="container mx-auto mb-24 max-w-7xl px-6">
+        <div className="rounded-[2rem] border border-green-100 bg-green-50 p-8 md:p-12">
+          <div className="grid gap-8 md:grid-cols-[1fr_2fr] items-center">
+            <div className="flex flex-col items-center md:items-start gap-4">
+              <div className="inline-flex rounded-2xl bg-white p-4 text-green-600 shadow-sm">
+                <ShieldCheck size={48} />
+              </div>
+              <h2 className="text-3xl font-display font-bold text-slate-900 md:text-4xl text-center md:text-left">
+                {isItalian
+                  ? 'Liberatoria GPS automatica'
+                  : 'Automatic GPS Privacy Consent'}
+              </h2>
+            </div>
+            <div>
+              <p className="text-lg leading-relaxed text-slate-700 mb-4">
+                {isItalian
+                  ? 'Quando inviti un dipendente, Flow genera automaticamente l\'informativa privacy GPS conforme al GDPR e la invia al lavoratore per la firma digitale. Il dipendente compila i propri dati, legge il documento e firma con un click — tutto via web, senza carta né moduli da stampare.'
+                  : 'When you invite an employee, Flow automatically generates a GDPR-compliant GPS privacy notice and sends it for digital signature. The employee fills in their details, reads the document and signs with one click — all via web, no paper or printing required.'}
+              </p>
+              <p className="text-lg leading-relaxed text-slate-700 mb-4">
+                {isItalian
+                  ? 'Il PDF firmato viene archiviato automaticamente e l\'amministratore vede in tempo reale chi ha firmato e chi no. Niente piu fogli volanti, niente rischio di contestazioni: ogni consenso e tracciato con data, ora e firma digitale.'
+                  : 'The signed PDF is archived automatically and the administrator can see in real time who has signed and who hasn\'t. No more loose papers, no risk of disputes: every consent is logged with date, time and digital signature.'}
+              </p>
+              <div className="flex flex-wrap gap-3 mt-6">
+                {(isItalian
+                  ? ['Conforme GDPR art. 13', 'Firma digitale tracciata', 'PDF archiviato', '4 lingue (IT/EN/DE/FR)', 'Zero carta']
+                  : ['GDPR Art. 13 compliant', 'Tracked digital signature', 'Archived PDF', '4 languages (IT/EN/DE/FR)', 'Zero paper']
+                ).map((tag) => (
+                  <span
+                    key={tag}
+                    className="inline-flex items-center gap-1 rounded-full bg-green-100 px-3 py-1 text-sm font-medium text-green-800"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* SYSTEM GRID */}
       <section className="container mx-auto px-6 max-w-7xl">
         <div className="text-center max-w-3xl mx-auto mb-24">
@@ -571,17 +696,15 @@ export default function GeoTappApp() {
             {flowDict.cta_title}
           </h2>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <TrialButton
-              priceId={process.env.NEXT_PUBLIC_STRIPE_PRICE_FLOW_START_MONTHLY!}
-              productName="GeoTapp FLOW"
-              productKey="GEOTAPP_FLOW"
+            <Link
+              href={getLink('/trial')}
               className="inline-flex items-center gap-4 px-12 py-6 bg-blue-600 text-white font-bold rounded-xl text-xl hover:bg-blue-700 transition-all shadow-lg hover:shadow-blue-500/30 hover:-translate-y-2 group"
-                >
-                  <Zap size={24} />{' '}
-                  {isItalian
-                    ? 'Prova Flow gratis per 7 giorni'
-                    : 'Try Flow free for 7 days'}
-                </TrialButton>
+            >
+              <Zap size={24} />{' '}
+              {isItalian
+                ? 'Prova Flow gratis per 14 giorni'
+                : 'Try Flow free for 14 days'}
+            </Link>
             <Link
               href={getLink('/pricing')}
               className="inline-flex items-center gap-4 px-12 py-6 bg-slate-100 text-slate-900 font-bold rounded-xl text-xl hover:bg-slate-200 transition-all group"
