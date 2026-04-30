@@ -263,6 +263,154 @@ function ScreenCarousel({ isItalian }: { isItalian: boolean }) {
   );
 }
 
+// --- GPS PRIVACY COMPLIANCE SECTION (locale-aware) ---
+const GPS_PRIVACY_CONTENT: Record<string, {
+  title: string;
+  p1: string;
+  p2: string;
+  legal: string;
+  tags: string[];
+}> = {
+  it: {
+    title: 'Liberatoria GPS automatica per ogni dipendente',
+    p1: 'Quando inviti un nuovo dipendente, Flow genera automaticamente l\'informativa privacy GPS conforme al GDPR e gliela invia per la firma digitale. Il lavoratore compila i propri dati, legge il documento e firma con un click — tutto via web, senza carta.',
+    p2: 'Il PDF firmato viene archiviato automaticamente e tu vedi in tempo reale chi ha firmato e chi no. Niente pi\u00f9 fogli volanti, niente rischio di sanzioni: ogni consenso \u00e8 tracciato con data, ora e firma digitale.',
+    legal: 'Conforme all\'Art. 4 dello Statuto dei Lavoratori e alle linee guida del Garante Privacy. Flow genera anche il modello per l\'accordo sindacale o l\'autorizzazione dell\'Ispettorato del Lavoro (ITL), obbligatori prima di attivare la geolocalizzazione.',
+    tags: ['Art. 4 Statuto Lavoratori', 'GDPR art. 13', 'Accordo sindacale / ITL', 'Firma digitale tracciata', 'PDF archiviato', 'Zero carta'],
+  },
+  en: {
+    title: 'Automatic GPS privacy consent for every employee',
+    p1: 'When you invite a new employee, Flow automatically generates a GDPR-compliant GPS privacy notice and sends it for digital signature. The worker fills in their details, reads the document and signs with one click — all via web, no paper.',
+    p2: 'The signed PDF is archived automatically and you can see in real time who has signed and who hasn\'t. No more loose papers, no risk of fines: every consent is logged with date, time and digital signature.',
+    legal: 'Compliant with EU GDPR Art. 13 and Art. 6. The notice covers legal basis, data minimization (GPS only at clock-in/out, no continuous tracking), retention periods and data subject rights.',
+    tags: ['GDPR Art. 13 compliant', 'Digital signature tracked', 'Archived PDF', 'No continuous tracking', 'Zero paper'],
+  },
+  de: {
+    title: 'Automatische GPS-Datenschutzerkl\u00e4rung f\u00fcr jeden Mitarbeiter',
+    p1: 'Wenn Sie einen neuen Mitarbeiter einladen, erstellt Flow automatisch einen DSGVO-konformen GPS-Datenschutzhinweis und sendet ihn zur digitalen Unterschrift. Der Mitarbeiter tr\u00e4gt seine Daten ein, liest das Dokument und unterschreibt mit einem Klick — alles online, ohne Papier.',
+    p2: 'Das unterschriebene PDF wird automatisch archiviert und Sie sehen in Echtzeit, wer unterschrieben hat und wer nicht. Keine losen Zettel, kein Bu\u00dfgeldrisiko: jede Zustimmung ist mit Datum, Uhrzeit und digitaler Unterschrift protokolliert.',
+    legal: 'Konform mit DSGVO und BDSG (Bundesdatenschutzgesetz). Flow ber\u00fccksichtigt die Mitbestimmungsrechte des Betriebsrats gem\u00e4\u00df BetrVG \u00a7 87 Abs. 1 Nr. 6 bei der Einf\u00fchrung technischer \u00dcberwachungseinrichtungen.',
+    tags: ['DSGVO-konform', 'BDSG', 'Betriebsrat (BetrVG \u00a7 87)', 'Digitale Unterschrift', 'PDF archiviert', 'Kein Papier'],
+  },
+  fr: {
+    title: 'Autorisation GPS automatique pour chaque salari\u00e9',
+    p1: 'Lorsque vous invitez un nouveau salari\u00e9, Flow g\u00e9n\u00e8re automatiquement l\'avis de confidentialit\u00e9 GPS conforme au RGPD et l\'envoie pour signature num\u00e9rique. Le salari\u00e9 remplit ses donn\u00e9es, lit le document et signe en un clic — tout en ligne, sans papier.',
+    p2: 'Le PDF sign\u00e9 est archiv\u00e9 automatiquement et vous voyez en temps r\u00e9el qui a sign\u00e9 et qui ne l\'a pas fait. Plus de feuilles volantes, plus de risque de sanctions : chaque consentement est trac\u00e9 avec date, heure et signature num\u00e9rique.',
+    legal: 'Conforme au RGPD et aux recommandations de la CNIL sur la g\u00e9olocalisation des salari\u00e9s. Le dispositif respecte le Code du travail (art. L.1121-1) et le principe de proportionnalit\u00e9 : pas de suivi continu, uniquement au pointage.',
+    tags: ['RGPD conforme', 'CNIL', 'Code du travail', 'Signature num\u00e9rique', 'PDF archiv\u00e9', 'Z\u00e9ro papier'],
+  },
+  nl: {
+    title: 'Automatische GPS-privacyverklaring voor elke medewerker',
+    p1: 'Wanneer u een nieuwe medewerker uitnodigt, genereert Flow automatisch een AVG-conforme GPS-privacyverklaring en stuurt deze ter digitale ondertekening. De medewerker vult zijn gegevens in, leest het document en ondertekent met \u00e9\u00e9n klik — alles online, zonder papier.',
+    p2: 'De ondertekende PDF wordt automatisch gearchiveerd en u ziet in realtime wie heeft getekend en wie niet. Geen losse papieren, geen risico op boetes: elke toestemming is vastgelegd met datum, tijd en digitale handtekening.',
+    legal: 'Conform de AVG en de richtlijnen van de Autoriteit Persoonsgegevens (AP). Een DPIA (Data Protection Impact Assessment) is standaard inbegrepen bij GPS-verwerking van werknemers.',
+    tags: ['AVG-conform', 'Autoriteit Persoonsgegevens', 'DPIA inbegrepen', 'Digitale handtekening', 'PDF gearchiveerd', 'Geen papier'],
+  },
+  es: {
+    title: 'Autorizaci\u00f3n GPS autom\u00e1tica para cada empleado',
+    p1: 'Cuando invitas a un nuevo empleado, Flow genera autom\u00e1ticamente el aviso de privacidad GPS conforme al RGPD y lo env\u00eda para firma digital. El trabajador completa sus datos, lee el documento y firma con un clic — todo online, sin papel.',
+    p2: 'El PDF firmado se archiva autom\u00e1ticamente y puedes ver en tiempo real qui\u00e9n ha firmado y qui\u00e9n no. Sin papeles sueltos, sin riesgo de sanciones: cada consentimiento queda registrado con fecha, hora y firma digital.',
+    legal: 'Conforme al RGPD y a la LOPDGDD (Ley Org\u00e1nica 3/2018). Flow contempla la obligaci\u00f3n de informar al comit\u00e9 de empresa seg\u00fan el Estatuto de los Trabajadores (art. 64.5).',
+    tags: ['RGPD conforme', 'LOPDGDD', 'Comit\u00e9 de empresa', 'Firma digital', 'PDF archivado', 'Cero papel'],
+  },
+  pt: {
+    title: 'Autoriza\u00e7\u00e3o GPS autom\u00e1tica para cada colaborador',
+    p1: 'Quando convida um novo colaborador, o Flow gera automaticamente o aviso de privacidade GPS conforme ao RGPD e envia-o para assinatura digital. O colaborador preenche os seus dados, l\u00ea o documento e assina com um clique — tudo online, sem papel.',
+    p2: 'O PDF assinado \u00e9 arquivado automaticamente e voc\u00ea v\u00ea em tempo real quem assinou e quem n\u00e3o assinou. Sem pap\u00e9is soltos, sem risco de san\u00e7\u00f5es: cada consentimento fica registado com data, hora e assinatura digital.',
+    legal: 'Conforme ao RGPD e \u00e0s orienta\u00e7\u00f5es da CNPD (Comiss\u00e3o Nacional de Prote\u00e7\u00e3o de Dados). O C\u00f3digo do Trabalho (art. 20.\u00ba) exige proporcionalidade e informa\u00e7\u00e3o pr\u00e9via ao trabalhador.',
+    tags: ['RGPD conforme', 'CNPD', 'C\u00f3digo do Trabalho', 'Assinatura digital', 'PDF arquivado', 'Zero papel'],
+  },
+  da: {
+    title: 'Automatisk GPS-samtykkeerklaring for hver medarbejder',
+    p1: 'N\u00e5r du inviterer en ny medarbejder, genererer Flow automatisk en GDPR-kompatibel GPS-privatlivserkl\u00e6ring og sender den til digital underskrift. Medarbejderen udfylder sine data, l\u00e6ser dokumentet og underskriver med \u00e9t klik — alt online, uden papir.',
+    p2: 'Den underskrevne PDF arkiveres automatisk, og du kan i realtid se, hvem der har underskrevet, og hvem der ikke har. Ingen l\u00f8se papirer, ingen risiko for b\u00f8der: hvert samtykke logges med dato, tid og digital underskrift.',
+    legal: 'I overensstemmelse med GDPR og Datatilsynets retningslinjer for overv\u00e5gning af medarbejdere i Danmark. Kun GPS ved stempling, ingen kontinuerlig sporing.',
+    tags: ['GDPR-kompatibel', 'Datatilsynet', 'Digital underskrift', 'PDF arkiveret', 'Intet papir'],
+  },
+  sv: {
+    title: 'Automatiskt GPS-sekretessmedgivande f\u00f6r varje anst\u00e4lld',
+    p1: 'N\u00e4r du bjuder in en ny anst\u00e4lld genererar Flow automatiskt ett GDPR-kompatibelt GPS-sekretessmeddelande och skickar det f\u00f6r digital signatur. Den anst\u00e4llde fyller i sina uppgifter, l\u00e4ser dokumentet och signerar med ett klick — allt online, utan papper.',
+    p2: 'Den signerade PDF:en arkiveras automatiskt och du ser i realtid vem som har signerat och vem som inte har det. Inga l\u00f6sa papper, ingen risk f\u00f6r b\u00f6ter: varje samtycke loggas med datum, tid och digital signatur.',
+    legal: 'I enlighet med GDPR och IMY:s (Integritetsskyddsmyndigheten) riktlinjer. MBL (lagen om medbest\u00e4mmande) kr\u00e4ver f\u00f6rhandling med fackf\u00f6reningen innan GPS-\u00f6vervakning inf\u00f6rs.',
+    tags: ['GDPR-kompatibel', 'IMY', 'MBL (medbest\u00e4mmande)', 'Digital signatur', 'PDF arkiverad', 'Inget papper'],
+  },
+  nb: {
+    title: 'Automatisk GPS-personvernerklaring for hver ansatt',
+    p1: 'N\u00e5r du inviterer en ny ansatt, genererer Flow automatisk et GDPR-kompatibelt GPS-personvernvarsel og sender det til digital signatur. Den ansatte fyller inn sine data, leser dokumentet og signerer med ett klikk — alt online, uten papir.',
+    p2: 'Den signerte PDF-en arkiveres automatisk, og du ser i sanntid hvem som har signert og hvem som ikke har det. Ingen l\u00f8se papirer, ingen risiko for b\u00f8ter: hvert samtykke logges med dato, tid og digital signatur.',
+    legal: 'I samsvar med GDPR og Datatilsynets retningslinjer for overv\u00e5king av ansatte. Arbeidsmilj\u00f8loven (\u00a7 9-1) krever at kontrolltiltak er forholdsmessige og at ansatte informeres p\u00e5 forh\u00e5nd.',
+    tags: ['GDPR-kompatibel', 'Datatilsynet', 'Arbeidsmilj\u00f8loven', 'Digital signatur', 'PDF arkivert', 'Ikke papir'],
+  },
+  ru: {
+    title: '\u0410\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0447\u0435\u0441\u043a\u043e\u0435 \u0441\u043e\u0433\u043b\u0430\u0441\u0438\u0435 \u043d\u0430 GPS-\u043c\u043e\u043d\u0438\u0442\u043e\u0440\u0438\u043d\u0433 \u0434\u043b\u044f \u043a\u0430\u0436\u0434\u043e\u0433\u043e \u0441\u043e\u0442\u0440\u0443\u0434\u043d\u0438\u043a\u0430',
+    p1: '\u041f\u0440\u0438 \u043f\u0440\u0438\u0433\u043b\u0430\u0448\u0435\u043d\u0438\u0438 \u043d\u043e\u0432\u043e\u0433\u043e \u0441\u043e\u0442\u0440\u0443\u0434\u043d\u0438\u043a\u0430 Flow \u0430\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0447\u0435\u0441\u043a\u0438 \u0441\u043e\u0437\u0434\u0430\u0451\u0442 \u0443\u0432\u0435\u0434\u043e\u043c\u043b\u0435\u043d\u0438\u0435 \u043e \u043a\u043e\u043d\u0444\u0438\u0434\u0435\u043d\u0446\u0438\u0430\u043b\u044c\u043d\u043e\u0441\u0442\u0438 GPS \u0438 \u043e\u0442\u043f\u0440\u0430\u0432\u043b\u044f\u0435\u0442 \u0435\u0433\u043e \u043d\u0430 \u0446\u0438\u0444\u0440\u043e\u0432\u0443\u044e \u043f\u043e\u0434\u043f\u0438\u0441\u044c. \u0421\u043e\u0442\u0440\u0443\u0434\u043d\u0438\u043a \u0437\u0430\u043f\u043e\u043b\u043d\u044f\u0435\u0442 \u0441\u0432\u043e\u0438 \u0434\u0430\u043d\u043d\u044b\u0435, \u0447\u0438\u0442\u0430\u0435\u0442 \u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442 \u0438 \u043f\u043e\u0434\u043f\u0438\u0441\u044b\u0432\u0430\u0435\u0442 \u0432 \u043e\u0434\u0438\u043d \u043a\u043b\u0438\u043a \u2014 \u0432\u0441\u0451 \u043e\u043d\u043b\u0430\u0439\u043d, \u0431\u0435\u0437 \u0431\u0443\u043c\u0430\u0433\u0438.',
+    p2: '\u041f\u043e\u0434\u043f\u0438\u0441\u0430\u043d\u043d\u044b\u0439 PDF \u0430\u0440\u0445\u0438\u0432\u0438\u0440\u0443\u0435\u0442\u0441\u044f \u0430\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0447\u0435\u0441\u043a\u0438, \u0438 \u0432\u044b \u0432\u0438\u0434\u0438\u0442\u0435 \u0432 \u0440\u0435\u0430\u043b\u044c\u043d\u043e\u043c \u0432\u0440\u0435\u043c\u0435\u043d\u0438, \u043a\u0442\u043e \u043f\u043e\u0434\u043f\u0438\u0441\u0430\u043b, \u0430 \u043a\u0442\u043e \u043d\u0435\u0442. \u041d\u0438\u043a\u0430\u043a\u0438\u0445 \u0440\u0430\u0437\u0440\u043e\u0437\u043d\u0435\u043d\u043d\u044b\u0445 \u0431\u0443\u043c\u0430\u0433, \u043d\u0438\u043a\u0430\u043a\u043e\u0433\u043e \u0440\u0438\u0441\u043a\u0430 \u0448\u0442\u0440\u0430\u0444\u043e\u0432: \u043a\u0430\u0436\u0434\u043e\u0435 \u0441\u043e\u0433\u043b\u0430\u0441\u0438\u0435 \u0437\u0430\u0444\u0438\u043a\u0441\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0441 \u0434\u0430\u0442\u043e\u0439, \u0432\u0440\u0435\u043c\u0435\u043d\u0435\u043c \u0438 \u0446\u0438\u0444\u0440\u043e\u0432\u043e\u0439 \u043f\u043e\u0434\u043f\u0438\u0441\u044c\u044e.',
+    legal: '\u0421\u043e\u043e\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u0443\u0435\u0442 \u0424\u0417-152 \u00ab\u041e \u043f\u0435\u0440\u0441\u043e\u043d\u0430\u043b\u044c\u043d\u044b\u0445 \u0434\u0430\u043d\u043d\u044b\u0445\u00bb \u0438 \u0422\u0440\u0443\u0434\u043e\u0432\u043e\u043c\u0443 \u043a\u043e\u0434\u0435\u043a\u0441\u0443 \u0420\u0424. \u0420\u0430\u0431\u043e\u0442\u043e\u0434\u0430\u0442\u0435\u043b\u044c \u043e\u0431\u044f\u0437\u0430\u043d \u043f\u043e\u043b\u0443\u0447\u0438\u0442\u044c \u043f\u0438\u0441\u044c\u043c\u0435\u043d\u043d\u043e\u0435 \u0441\u043e\u0433\u043b\u0430\u0441\u0438\u0435 \u0440\u0430\u0431\u043e\u0442\u043d\u0438\u043a\u0430 \u0438 \u0443\u0432\u0435\u0434\u043e\u043c\u0438\u0442\u044c \u0420\u043e\u0441\u043a\u043e\u043c\u043d\u0430\u0434\u0437\u043e\u0440.',
+    tags: ['\u0424\u0417-152', '\u0422\u0440\u0443\u0434\u043e\u0432\u043e\u0439 \u043a\u043e\u0434\u0435\u043a\u0441 \u0420\u0424', '\u0420\u043e\u0441\u043a\u043e\u043c\u043d\u0430\u0434\u0437\u043e\u0440', '\u0426\u0438\u0444\u0440\u043e\u0432\u0430\u044f \u043f\u043e\u0434\u043f\u0438\u0441\u044c', 'PDF \u0430\u0440\u0445\u0438\u0432', '\u0411\u0435\u0437 \u0431\u0443\u043c\u0430\u0433\u0438'],
+  },
+};
+
+function GpsPrivacySection({ locale }: { locale: string }) {
+  const c = GPS_PRIVACY_CONTENT[locale] ?? GPS_PRIVACY_CONTENT['en']!;
+
+  return (
+    <section className="container mx-auto mb-24 max-w-7xl px-6">
+      <div className="relative rounded-[2rem] border-2 border-green-200 bg-gradient-to-br from-green-50 via-white to-emerald-50 p-10 md:p-16 shadow-lg overflow-hidden">
+        {/* Background decorative element */}
+        <div className="absolute -right-12 -top-12 w-64 h-64 rounded-full bg-green-100 opacity-30 blur-3xl" />
+        <div className="absolute -left-8 -bottom-8 w-48 h-48 rounded-full bg-emerald-100 opacity-20 blur-2xl" />
+
+        <div className="relative z-10">
+          {/* Header */}
+          <div className="flex flex-col md:flex-row items-start md:items-center gap-6 mb-10">
+            <div className="inline-flex rounded-2xl bg-green-600 p-5 text-white shadow-xl shadow-green-200">
+              <ShieldCheck size={40} />
+            </div>
+            <div>
+              <div className="text-xs font-bold uppercase tracking-[0.25em] text-green-600 mb-2 font-mono">
+                {locale === 'it' ? 'COMPLIANCE AUTOMATICA' : 'AUTOMATIC COMPLIANCE'}
+              </div>
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 leading-tight">
+                {c.title}
+              </h2>
+            </div>
+          </div>
+
+          {/* Content grid */}
+          <div className="grid gap-8 md:grid-cols-2 mb-10">
+            <div>
+              <p className="text-lg leading-relaxed text-slate-700 mb-5">{c.p1}</p>
+              <p className="text-lg leading-relaxed text-slate-700">{c.p2}</p>
+            </div>
+            <div className="rounded-2xl border border-green-200 bg-white/80 p-8 shadow-sm">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
+                <span className="text-sm font-bold uppercase tracking-widest text-green-700 font-mono">
+                  {locale === 'it' ? 'NORMATIVA LOCALE' : locale === 'de' ? 'LOKALES RECHT' : locale === 'fr' ? 'L\u00c9GISLATION LOCALE' : 'LOCAL REGULATION'}
+                </span>
+              </div>
+              <p className="text-base leading-relaxed text-slate-600">{c.legal}</p>
+            </div>
+          </div>
+
+          {/* Tags */}
+          <div className="flex flex-wrap gap-3">
+            {c.tags.map((tag) => (
+              <span
+                key={tag}
+                className="inline-flex items-center gap-1.5 rounded-full bg-green-100 border border-green-200 px-4 py-1.5 text-sm font-semibold text-green-800"
+              >
+                <ShieldCheck size={14} />
+                {tag}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function GeoTappApp() {
   const [selectedSystem, setSelectedSystem] = useState<SystemDetail | null>(
     null,
@@ -564,6 +712,9 @@ export default function GeoTappApp() {
         </div>
       </section>
 
+      {/* GPS PRIVACY COMPLIANCE — HERO-STYLE SECTION */}
+      <GpsPrivacySection locale={currentLocale} />
+
       <section className="container mx-auto mb-24 max-w-7xl px-6">
         <div className="rounded-[2rem] border border-slate-200 bg-slate-50 p-8 md:p-12">
           <div className="grid gap-8 md:grid-cols-2">
@@ -583,49 +734,6 @@ export default function GeoTappApp() {
                 </div>
               );
             })}
-          </div>
-        </div>
-      </section>
-
-      {/* GPS PRIVACY COMPLIANCE SECTION */}
-      <section className="container mx-auto mb-24 max-w-7xl px-6">
-        <div className="rounded-[2rem] border border-green-100 bg-green-50 p-8 md:p-12">
-          <div className="grid gap-8 md:grid-cols-[1fr_2fr] items-center">
-            <div className="flex flex-col items-center md:items-start gap-4">
-              <div className="inline-flex rounded-2xl bg-white p-4 text-green-600 shadow-sm">
-                <ShieldCheck size={48} />
-              </div>
-              <h2 className="text-3xl font-display font-bold text-slate-900 md:text-4xl text-center md:text-left">
-                {isItalian
-                  ? 'Liberatoria GPS automatica'
-                  : 'Automatic GPS Privacy Consent'}
-              </h2>
-            </div>
-            <div>
-              <p className="text-lg leading-relaxed text-slate-700 mb-4">
-                {isItalian
-                  ? 'Quando inviti un dipendente, Flow genera automaticamente l\'informativa privacy GPS conforme al GDPR e la invia al lavoratore per la firma digitale. Il dipendente compila i propri dati, legge il documento e firma con un click — tutto via web, senza carta né moduli da stampare.'
-                  : 'When you invite an employee, Flow automatically generates a GDPR-compliant GPS privacy notice and sends it for digital signature. The employee fills in their details, reads the document and signs with one click — all via web, no paper or printing required.'}
-              </p>
-              <p className="text-lg leading-relaxed text-slate-700 mb-4">
-                {isItalian
-                  ? 'Il PDF firmato viene archiviato automaticamente e l\'amministratore vede in tempo reale chi ha firmato e chi no. Niente piu fogli volanti, niente rischio di contestazioni: ogni consenso e tracciato con data, ora e firma digitale.'
-                  : 'The signed PDF is archived automatically and the administrator can see in real time who has signed and who hasn\'t. No more loose papers, no risk of disputes: every consent is logged with date, time and digital signature.'}
-              </p>
-              <div className="flex flex-wrap gap-3 mt-6">
-                {(isItalian
-                  ? ['Conforme GDPR art. 13', 'Firma digitale tracciata', 'PDF archiviato', '4 lingue (IT/EN/DE/FR)', 'Zero carta']
-                  : ['GDPR Art. 13 compliant', 'Tracked digital signature', 'Archived PDF', '4 languages (IT/EN/DE/FR)', 'Zero paper']
-                ).map((tag) => (
-                  <span
-                    key={tag}
-                    className="inline-flex items-center gap-1 rounded-full bg-green-100 px-3 py-1 text-sm font-medium text-green-800"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
           </div>
         </div>
       </section>
