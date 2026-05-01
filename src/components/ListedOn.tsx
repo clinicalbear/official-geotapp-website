@@ -109,7 +109,7 @@ const URLS = {
   capterra: 'https://www.capterra.com/p/10041643/GeoTapp-Flow/',
   getapp: 'https://www.getapp.com/operations-management-software/a/geotapp-flow/',
   softwareadvice: 'https://www.softwareadvice.com/product/548499-GeoTapp-Flow/',
-  saashub: 'https://www.saashub.com/geotapp-flow',
+  saashub: 'https://www.saashub.com/geotapp',
   kompass: 'https://it.kompass.com/c/geotapp/it1415466/',
   cylex: 'https://www.cylex.it/azienda/geotapp.html',
   hotfrog: 'https://www.hotfrog.it/company/b582d0c9ce6459cc7416dce853e50149',
