@@ -99,12 +99,12 @@ function FeaturedCard({ post, locale, label, index }: { post: Post; locale: stri
 }
 
 /* ── Standard card ── */
-function PostCard({ post, locale, label, index }: { post: Post; locale: string; label: string; index: number }) {
+function PostCard({ post, locale, label, index, stretch }: { post: Post; locale: string; label: string; index: number; stretch?: boolean }) {
   const date = new Date(post.date).toLocaleDateString(locale, { day: 'numeric', month: 'long', year: 'numeric' });
-  // Vary excerpt length for masonry effect — alternate between short and long
-  const clampClass = index % 3 === 0 ? 'line-clamp-4' : index % 3 === 1 ? 'line-clamp-2' : 'line-clamp-3';
-  // Vary image height for masonry effect
-  const imgHeight = index % 3 === 0 ? 'h-52' : index % 3 === 1 ? 'h-36' : 'h-44';
+  // Stretch mode: fill parent height (beside featured card)
+  // Masonry mode: vary heights for visual interest
+  const clampClass = stretch ? '' : (index % 3 === 0 ? 'line-clamp-4' : index % 3 === 1 ? 'line-clamp-2' : 'line-clamp-3');
+  const imgHeight = stretch ? 'h-52' : (index % 3 === 0 ? 'h-52' : index % 3 === 1 ? 'h-36' : 'h-44');
 
   return (
     <motion.article
@@ -112,11 +112,11 @@ function PostCard({ post, locale, label, index }: { post: Post; locale: string; 
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-60px' }}
       transition={{ duration: 0.5, delay: index * 0.08 }}
-      className="group flex flex-col"
+      className={`group flex flex-col ${stretch ? 'h-full' : ''}`}
       style={{ '--cat-shadow': getCategoryColor(post.categories ?? []) } as React.CSSProperties}
     >
       <Link href={post.url} className="flex flex-col h-full">
-        <div className="blog-card flex flex-col bg-surface border border-border rounded-2xl overflow-hidden">
+        <div className={`blog-card flex flex-col bg-surface border border-border rounded-2xl overflow-hidden ${stretch ? 'h-full' : ''}`}>
           {post.image && (
             <div className={`relative w-full ${imgHeight} shrink-0 overflow-hidden`}>
               <Image
@@ -231,7 +231,7 @@ export default function BlogClient({ locale, posts }: { locale: AppLocale; posts
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
                 <FeaturedCard post={featured} locale={locale} label={b.read_article} index={0} />
                 {beside && (
-                  <PostCard post={beside} locale={locale} label={b.read_article} index={1} />
+                  <PostCard post={beside} locale={locale} label={b.read_article} index={1} stretch />
                 )}
               </div>
             )}
