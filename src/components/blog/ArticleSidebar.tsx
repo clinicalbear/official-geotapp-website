@@ -132,18 +132,18 @@ export default function ArticleSidebar({ headings, locale, categories = [], date
 
   return (
     <aside className="sticky top-28 max-h-[calc(100vh-8rem)] overflow-y-auto pb-8">
-      {/* Digital clock-in stamp */}
-      <div className="mb-6 rounded-xl overflow-hidden border border-slate-200 bg-slate-900">
-        {/* Status bar */}
-        <div className="flex items-center gap-2 px-3 py-1.5 bg-slate-800 border-b border-slate-700">
-          <span className="relative flex h-1.5 w-1.5">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-60" />
-            <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-400" />
+      {/* Digital clock-in stamp — light/airy */}
+      <div className="mb-6 rounded-xl border border-slate-200 bg-white p-4">
+        {/* Status */}
+        <div className="flex items-center gap-2 mb-3">
+          <span className="relative flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full opacity-60" style={{ backgroundColor: product.color }} />
+            <span className="relative inline-flex rounded-full h-2 w-2" style={{ backgroundColor: product.color }} />
           </span>
-          <span className="text-green-400 text-[9px] font-mono uppercase tracking-widest">Clock-in</span>
+          <span className="text-[10px] font-mono uppercase tracking-widest" style={{ color: product.color }}>Clock-in</span>
           {categories[0] && (
             <span
-              className="ml-auto px-2 py-0.5 text-[8px] font-bold rounded text-white uppercase tracking-wider"
+              className="ml-auto px-2 py-0.5 text-[8px] font-semibold rounded-full uppercase tracking-wider text-white"
               style={{ backgroundColor: product.color }}
             >
               {categories[0].name}
@@ -151,16 +151,17 @@ export default function ArticleSidebar({ headings, locale, categories = [], date
           )}
         </div>
         {/* Data fields */}
-        <div className="grid grid-cols-2 divide-x divide-slate-700">
-          <div className="px-3 py-2.5">
-            <span className="text-slate-500 text-[8px] font-mono uppercase tracking-widest block mb-1">Date</span>
-            <span className="text-white font-mono text-[13px] tracking-wide">
+        <div className="flex items-center gap-4">
+          <div>
+            <span className="text-slate-400 text-[8px] font-mono uppercase tracking-widest block mb-0.5">Date</span>
+            <span className="text-slate-700 font-mono text-[13px] tracking-wide">
               {date ? new Date(date).toLocaleDateString('en-GB', { day: '2-digit', month: '2-digit', year: 'numeric' }).replace(/\//g, '.') : ''}
             </span>
           </div>
-          <div className="px-3 py-2.5">
-            <span className="text-slate-500 text-[8px] font-mono uppercase tracking-widest block mb-1">Duration</span>
-            <span className="text-white font-mono text-[13px] tracking-wide">
+          <div className="w-px h-8 bg-slate-200" />
+          <div>
+            <span className="text-slate-400 text-[8px] font-mono uppercase tracking-widest block mb-0.5">Duration</span>
+            <span className="text-slate-700 font-mono text-[13px] tracking-wide">
               00:{readingTime ? String(readingTime).padStart(2, '0') : '00'}:00
             </span>
           </div>
