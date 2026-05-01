@@ -497,9 +497,11 @@ export async function middleware(req: NextRequest) {
 
   // 1. Blog proxy — serve blog.geotapp.com WordPress content at geotapp.com/blog/
   // Exception: /blog and /blog/ (index) are served by Next.js, not proxied.
+  // Exception: Article URLs (/blog/{locale?}/YYYY/MM/DD/slug/) are rendered by Next.js.
   // Proxying the WP root (/) causes a redirect loop: WP responds with a redirect
   // to geotapp.com/blog/ which the middleware re-intercepts indefinitely.
-  if (pathname.startsWith('/blog') && pathname !== '/blog' && pathname !== '/blog/') {
+  const isArticleUrl = /^\/blog\/(?:[a-z]{2}\/)?20\d{2}\//.test(pathname);
+  if (pathname.startsWith('/blog') && pathname !== '/blog' && pathname !== '/blog/' && !isArticleUrl) {
     const wpPath = pathname.slice(BLOG_BASE.length) || '/';
     const normalizedWpPath =
       wpPath === '/wp-sitemap.xml' ? '/wp-sitemap.xml/' : wpPath;
@@ -683,6 +685,15 @@ export async function middleware(req: NextRequest) {
     return response;
   }
 
+  // 2d. Blog article URLs — rendered by Next.js [...slug] catch-all.
+  // These have the locale embedded in the path (/blog/en/2026/...) not as a prefix.
+  // Bypass locale routing so they don't get /it/ prepended.
+  if (/^\/blog\/(?:[a-z]{2}\/)?20\d{2}\//.test(pathname)) {
+    const response = NextResponse.next();
+    applySecurityHeaders(response);
+    return response;
+  }
+
   const pathnameLocale = getLocaleFromPathname(pathname);
   if (pathnameLocale) {
     // Locale-prefixed blog paths → strip locale and redirect to /blog/* for WordPress proxy.
@@ -691,11 +702,13 @@ export async function middleware(req: NextRequest) {
     const strippedPath = stripLocaleFromPathname(pathname);
     // Next.js-served sub-paths of /blog/ — do NOT redirect to WP proxy.
     const BLOG_NEXTJS_PATHS = [`${BLOG_BASE}/feed/`];
+    const isStrippedArticle = /^\/blog\/(?:[a-z]{2}\/)?20\d{2}\//.test(strippedPath);
     if (
       strippedPath.startsWith(BLOG_BASE) &&
       strippedPath !== BLOG_BASE &&
       strippedPath !== `${BLOG_BASE}/` &&
-      !BLOG_NEXTJS_PATHS.includes(strippedPath)
+      !BLOG_NEXTJS_PATHS.includes(strippedPath) &&
+      !isStrippedArticle
     ) {
       const redirectUrl = req.nextUrl.clone();
       redirectUrl.pathname = strippedPath;
