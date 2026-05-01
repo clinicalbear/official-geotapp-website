@@ -395,6 +395,22 @@ a:hover {
   border-color: transparent;
 }
 
+/* ===== BLOG — MASONRY LAYOUT ===== */
+.blog-masonry {
+  columns: 1;
+  column-gap: 1.5rem;
+}
+@media (min-width: 640px) {
+  .blog-masonry { columns: 2; }
+}
+@media (min-width: 1024px) {
+  .blog-masonry { columns: 3; }
+}
+.blog-masonry-item {
+  break-inside: avoid;
+  margin-bottom: 1.5rem;
+}
+
 /* ===== BLOG — INTERACTIVE CARD EFFECTS ===== */
 .blog-card {
   transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;

@@ -101,6 +101,10 @@ function FeaturedCard({ post, locale, label, index }: { post: Post; locale: stri
 /* ── Standard card ── */
 function PostCard({ post, locale, label, index }: { post: Post; locale: string; label: string; index: number }) {
   const date = new Date(post.date).toLocaleDateString(locale, { day: 'numeric', month: 'long', year: 'numeric' });
+  // Vary excerpt length for masonry effect — alternate between short and long
+  const clampClass = index % 3 === 0 ? 'line-clamp-4' : index % 3 === 1 ? 'line-clamp-2' : 'line-clamp-3';
+  // Vary image height for masonry effect
+  const imgHeight = index % 3 === 0 ? 'h-52' : index % 3 === 1 ? 'h-36' : 'h-44';
 
   return (
     <motion.article
@@ -112,9 +116,9 @@ function PostCard({ post, locale, label, index }: { post: Post; locale: string; 
       style={{ '--cat-shadow': getCategoryColor(post.categories ?? []) } as React.CSSProperties}
     >
       <Link href={post.url} className="flex flex-col h-full">
-        <div className="blog-card flex flex-col h-full bg-surface border border-border rounded-2xl overflow-hidden">
+        <div className="blog-card flex flex-col bg-surface border border-border rounded-2xl overflow-hidden">
           {post.image && (
-            <div className="relative w-full h-44 shrink-0 overflow-hidden">
+            <div className={`relative w-full ${imgHeight} shrink-0 overflow-hidden`}>
               <Image
                 src={post.image}
                 alt={post.title}
@@ -131,11 +135,11 @@ function PostCard({ post, locale, label, index }: { post: Post; locale: string; 
                 <span className="card-reading-time">&#9201; {post.readingTime} min</span>
               )}
             </div>
-            <h2 className="text-lg font-display font-bold text-text-primary mb-3 group-hover:text-primary transition-colors leading-snug flex-1">
+            <h2 className="text-lg font-display font-bold text-text-primary mb-3 group-hover:text-primary transition-colors leading-snug">
               {post.title}
             </h2>
             {post.excerpt && (
-              <p className="text-text-secondary text-sm leading-relaxed mb-4 line-clamp-3">
+              <p className={`text-text-secondary text-sm leading-relaxed mb-4 ${clampClass}`}>
                 {post.excerpt}{post.excerpt.length === 160 ? '…' : ''}
               </p>
             )}
@@ -221,15 +225,23 @@ export default function BlogClient({ locale, posts }: { locale: AppLocale; posts
           )}
 
           <section className="container mx-auto max-w-6xl">
-            {/* Featured post + masonry grid */}
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {featured && (
+            {/* Featured post */}
+            {featured && (
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
                 <FeaturedCard post={featured} locale={locale} label={b.read_article} index={0} />
-              )}
-              {rest.map((post, i) => (
-                <PostCard key={post.id} post={post} locale={locale} label={b.read_article} index={i + 1} />
-              ))}
-            </div>
+              </div>
+            )}
+
+            {/* Masonry grid */}
+            {rest.length > 0 && (
+              <div className="blog-masonry">
+                {rest.map((post, i) => (
+                  <div key={post.id} className="blog-masonry-item">
+                    <PostCard post={post} locale={locale} label={b.read_article} index={i + 1} />
+                  </div>
+                ))}
+              </div>
+            )}
           </section>
 
           {totalPages > 1 && (
