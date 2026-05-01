@@ -265,7 +265,7 @@ export default async function BlogArticlePage({ params }: Props) {
         <div className="max-w-7xl mx-auto flex gap-12 px-6">
           <ArticleContent html={contentWithIds} />
           <div className="hidden lg:block w-72 shrink-0 pt-16">
-            <ArticleSidebar headings={headings} locale={locale} />
+            <ArticleSidebar headings={headings} locale={locale} categories={categories} date={date} readingTime={readingTime} />
           </div>
         </div>
       </div>
