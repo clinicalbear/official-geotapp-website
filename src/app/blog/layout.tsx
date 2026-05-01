@@ -31,9 +31,26 @@ export default function BlogLayout({ children }: { children: ReactNode }) {
         </Script>
       </head>
       <body className={clsx(inter.variable, poppins.variable, 'font-sans bg-background text-text-primary antialiased')}>
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
+        <div className="relative min-h-screen overflow-hidden">
+          <div
+            aria-hidden="true"
+            style={{
+              position: 'fixed',
+              inset: 0,
+              zIndex: 0,
+              pointerEvents: 'none',
+              background:
+                'radial-gradient(ellipse 60% 50% at 5% 15%, rgba(143,196,54,0.12), transparent),' +
+                'radial-gradient(ellipse 50% 40% at 95% 50%, rgba(59,174,224,0.10), transparent),' +
+                'radial-gradient(ellipse 40% 35% at 50% 85%, rgba(139,92,246,0.08), transparent)',
+            }}
+          />
+          <div className="relative z-10">
+            <Navbar />
+            <main>{children}</main>
+            <Footer />
+          </div>
+        </div>
       </body>
     </html>
   );

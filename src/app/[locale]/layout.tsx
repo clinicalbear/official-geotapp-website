@@ -482,8 +482,9 @@ export default async function LocaleLayout({ children, params }: Props) {
               zIndex: 0,
               pointerEvents: 'none',
               background:
-                'radial-gradient(ellipse 55% 45% at 0% 0%, rgb(224 242 254 / 0.6), transparent),' +
-                'radial-gradient(ellipse 55% 45% at 100% 100%, rgb(243 232 255 / 0.6), transparent)',
+                'radial-gradient(ellipse 60% 50% at 5% 15%, rgba(143,196,54,0.12), transparent),' +
+                'radial-gradient(ellipse 50% 40% at 95% 50%, rgba(59,174,224,0.10), transparent),' +
+                'radial-gradient(ellipse 40% 35% at 50% 85%, rgba(139,92,246,0.08), transparent)',
             }}
           />
 

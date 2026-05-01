@@ -188,7 +188,21 @@ export default function BlogClient({ locale, posts }: { locale: AppLocale; posts
   }
 
   return (
-    <div className="bg-background min-h-screen pt-40 pb-20 px-6">
+    <div className="bg-background min-h-screen pt-40 pb-20 px-6 relative overflow-hidden">
+      {/* Background glow effects */}
+      <div
+        aria-hidden="true"
+        style={{
+          position: 'absolute',
+          inset: 0,
+          pointerEvents: 'none',
+          background:
+            'radial-gradient(ellipse 60% 50% at 10% 20%, rgba(143,196,54,0.12), transparent),' +
+            'radial-gradient(ellipse 50% 40% at 90% 60%, rgba(59,174,224,0.10), transparent),' +
+            'radial-gradient(ellipse 40% 35% at 50% 90%, rgba(139,92,246,0.08), transparent)',
+        }}
+      />
+      <div className="relative z-10">
       <section className="container mx-auto max-w-6xl text-center mb-16">
         <h1 className="text-5xl md:text-6xl font-display font-bold text-text-primary mb-6">
           {b.hero_title}
@@ -282,6 +296,7 @@ export default function BlogClient({ locale, posts }: { locale: AppLocale; posts
           </Link>
         </div>
       </section>
+      </div>{/* close z-10 */}
     </div>
   );
 }
