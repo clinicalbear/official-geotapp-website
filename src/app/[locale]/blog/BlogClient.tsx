@@ -177,9 +177,10 @@ export default function BlogClient({ locale, posts }: { locale: AppLocale; posts
   const totalPages = Math.ceil(filtered.length / POSTS_PER_PAGE);
   const visible = filtered.slice(page * POSTS_PER_PAGE, (page + 1) * POSTS_PER_PAGE);
 
-  // First post is featured (large), rest are normal
+  // First post is featured (large), second goes beside it, rest below in masonry
   const featured = visible[0] ?? null;
-  const rest = visible.slice(1);
+  const beside = visible[1] ?? null;
+  const rest = visible.slice(2);
 
   function handleCatClick(slug: string) {
     setActiveCat(slug);
@@ -225,10 +226,13 @@ export default function BlogClient({ locale, posts }: { locale: AppLocale; posts
           )}
 
           <section className="container mx-auto max-w-6xl">
-            {/* Featured post */}
+            {/* Featured post + beside card */}
             {featured && (
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
                 <FeaturedCard post={featured} locale={locale} label={b.read_article} index={0} />
+                {beside && (
+                  <PostCard post={beside} locale={locale} label={b.read_article} index={1} />
+                )}
               </div>
             )}
 
