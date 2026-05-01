@@ -760,7 +760,17 @@
     "schema_desc": "Руководства и аналитика по сертификации полевых работ, управлению командой, GDPR и геолокации.",
     "meta_title": "Блог | GeoTapp — Верификация полевых работ",
     "meta_desc": "Руководства, аналитика и ресурсы по управлению командой, сертификации выездов, GDPR и геолокации. От команды GeoTapp.",
-    "cat_all": "Все"
+    "cat_all": "Все",
+    "toc_title": "Soderzhanie",
+    "reading_time_suffix": "min chteniya",
+    "cta_sidebar_title": "Poprobujte GeoTapp besplatno",
+    "cta_sidebar_desc": "14 dnej, bez kreditnoj karty",
+    "cta_sidebar_btn": "Nachat seychas",
+    "related_title": "Pohozhie stati",
+    "cta_final_title": "Poprobujte GeoTapp besplatno na 14 dnej",
+    "cta_final_desc": "Kreditnaya karta ne trebuetsya. Nachnite za 2 minuty.",
+    "cta_final_btn": "Nachat seychas",
+    "read_post": "Chitat"
   },
   "trial": {
     "page_title": "14 дней бесплатно. Без карты.",

@@ -825,7 +825,17 @@
     "schema_desc": "Gidsen en inzichten over certificering van veldwerk, teambeheer, AVG en geolocatie.",
     "meta_title": "Blog | GeoTapp — Verificatie van veldwerk",
     "meta_desc": "Gidsen, inzichten en bronnen over teambeheer, certificering van interventies, AVG en geolocatie. Van het GeoTapp-team.",
-    "cat_all": "Alle"
+    "cat_all": "Alle",
+    "toc_title": "Inhoud",
+    "reading_time_suffix": "min leestijd",
+    "cta_sidebar_title": "Probeer GeoTapp gratis",
+    "cta_sidebar_desc": "14 dagen, geen creditcard nodig",
+    "cta_sidebar_btn": "Nu starten",
+    "related_title": "Gerelateerde artikelen",
+    "cta_final_title": "Probeer GeoTapp 14 dagen gratis",
+    "cta_final_desc": "Geen creditcard nodig. Begin in 2 minuten.",
+    "cta_final_btn": "Nu starten",
+    "read_post": "Lees"
   },
   "roi": {
     "meta_title": "GeoTapp ROI-Calculator — Ontdek uw echte besparingen",

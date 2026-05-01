@@ -826,7 +826,17 @@
     "schema_desc": "Guides and insights on field work certification, team management, GDPR and geolocation.",
     "meta_title": "Blog | GeoTapp — Field Work Verification",
     "meta_desc": "Guides, insights and resources on team management, field work certification, GDPR and geolocation. From the GeoTapp team.",
-    "cat_all": "All"
+    "cat_all": "All",
+    "toc_title": "Contents",
+    "reading_time_suffix": "min read",
+    "cta_sidebar_title": "Try GeoTapp free",
+    "cta_sidebar_desc": "14 days, no credit card required",
+    "cta_sidebar_btn": "Start now",
+    "related_title": "Related articles",
+    "cta_final_title": "Try GeoTapp free for 14 days",
+    "cta_final_desc": "No credit card required. Get started in 2 minutes.",
+    "cta_final_btn": "Start now",
+    "read_post": "Read"
   },
   "roi": {
     "meta_title": "GeoTapp ROI Calculator — Discover Your Real Savings",

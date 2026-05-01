@@ -826,7 +826,17 @@
     "schema_desc": "Guide e approfondimenti su certificazione del lavoro sul campo, gestione squadre, GDPR e geolocalizzazione.",
     "meta_title": "Blog | GeoTapp — Certificazione del lavoro sul campo",
     "meta_desc": "Guide, approfondimenti e risorse su gestione squadre, certificazione interventi, GDPR e geolocalizzazione. Dal team GeoTapp.",
-    "cat_all": "Tutti"
+    "cat_all": "Tutti",
+    "toc_title": "Indice",
+    "reading_time_suffix": "min di lettura",
+    "cta_sidebar_title": "Prova GeoTapp gratis",
+    "cta_sidebar_desc": "14 giorni, nessuna carta richiesta",
+    "cta_sidebar_btn": "Inizia ora",
+    "related_title": "Articoli correlati",
+    "cta_final_title": "Prova GeoTapp gratis per 14 giorni",
+    "cta_final_desc": "Nessuna carta di credito richiesta. Inizia in 2 minuti.",
+    "cta_final_btn": "Inizia subito",
+    "read_post": "Leggi"
   },
   "roi": {
     "meta_title": "Calcolatore ROI GeoTapp — Scopri il tuo risparmio reale",

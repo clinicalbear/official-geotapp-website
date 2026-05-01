@@ -760,7 +760,17 @@
     "schema_desc": "Vejledninger og indsigt om certificering af feltarbejde, teamledelse, GDPR og geolokalisering.",
     "meta_title": "Blog | GeoTapp — Verificering af feltarbejde",
     "meta_desc": "Vejledninger, indsigt og ressourcer om teamledelse, certificering af interventioner, GDPR og geolokalisering. Fra GeoTapp-teamet.",
-    "cat_all": "Alle"
+    "cat_all": "Alle",
+    "toc_title": "Indhold",
+    "reading_time_suffix": "min lasetid",
+    "cta_sidebar_title": "Prov GeoTapp gratis",
+    "cta_sidebar_desc": "14 dage, intet kreditkort paakraevet",
+    "cta_sidebar_btn": "Start nu",
+    "related_title": "Relaterede artikler",
+    "cta_final_title": "Prov GeoTapp gratis i 14 dage",
+    "cta_final_desc": "Intet kreditkort paakraevet. Kom i gang pa 2 minutter.",
+    "cta_final_btn": "Start nu",
+    "read_post": "Laes"
   },
   "trial": {
     "page_title": "14 dage gratis. Intet kort.",

@@ -760,7 +760,17 @@
     "schema_desc": "Guides et analyses sur la certification du travail terrain, la gestion d'équipe, le RGPD et la géolocalisation.",
     "meta_title": "Blog | GeoTapp — Vérification du travail terrain",
     "meta_desc": "Guides, analyses et ressources sur la gestion d'équipe, la certification des interventions, le RGPD et la géolocalisation. Par l'équipe GeoTapp.",
-    "cat_all": "Tous"
+    "cat_all": "Tous",
+    "toc_title": "Sommaire",
+    "reading_time_suffix": "min de lecture",
+    "cta_sidebar_title": "Essayez GeoTapp gratuitement",
+    "cta_sidebar_desc": "14 jours, sans carte bancaire",
+    "cta_sidebar_btn": "Commencer",
+    "related_title": "Articles connexes",
+    "cta_final_title": "Essayez GeoTapp gratuitement pendant 14 jours",
+    "cta_final_desc": "Aucune carte bancaire requise. Demarrez en 2 minutes.",
+    "cta_final_btn": "Commencer maintenant",
+    "read_post": "Lire"
   },
   "trial": {
     "page_title": "14 jours gratuits. Sans carte.",

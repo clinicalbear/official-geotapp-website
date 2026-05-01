@@ -760,7 +760,17 @@
     "schema_desc": "Guías y análisis sobre certificación del trabajo en campo, gestión de equipos, GDPR y geolocalización.",
     "meta_title": "Blog | GeoTapp — Verificación del trabajo en campo",
     "meta_desc": "Guías, análisis y recursos sobre gestión de equipos, certificación de intervenciones, GDPR y geolocalización. Del equipo GeoTapp.",
-    "cat_all": "Todos"
+    "cat_all": "Todos",
+    "toc_title": "Indice",
+    "reading_time_suffix": "min de lectura",
+    "cta_sidebar_title": "Prueba GeoTapp gratis",
+    "cta_sidebar_desc": "14 dias, sin tarjeta de credito",
+    "cta_sidebar_btn": "Empezar ahora",
+    "related_title": "Articulos relacionados",
+    "cta_final_title": "Prueba GeoTapp gratis durante 14 dias",
+    "cta_final_desc": "Sin tarjeta de credito. Empieza en 2 minutos.",
+    "cta_final_btn": "Empezar ahora",
+    "read_post": "Leer"
   },
   "trial": {
     "page_title": "14 días gratis. Sin tarjeta.",

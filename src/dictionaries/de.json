@@ -826,7 +826,17 @@
     "schema_desc": "Anleitungen und Einblicke zur Außendienst-Zertifizierung, Teamverwaltung, DSGVO und Geolokalisierung.",
     "meta_title": "Blog | GeoTapp — Außendienst-Verifikation",
     "meta_desc": "Anleitungen, Einblicke und Ressourcen zu Teamverwaltung, Außendienst-Zertifizierung, DSGVO und Geolokalisierung. Vom GeoTapp-Team.",
-    "cat_all": "Alle"
+    "cat_all": "Alle",
+    "toc_title": "Inhalt",
+    "reading_time_suffix": "Min. Lesezeit",
+    "cta_sidebar_title": "GeoTapp kostenlos testen",
+    "cta_sidebar_desc": "14 Tage, keine Kreditkarte erforderlich",
+    "cta_sidebar_btn": "Jetzt starten",
+    "related_title": "Verwandte Artikel",
+    "cta_final_title": "GeoTapp 14 Tage kostenlos testen",
+    "cta_final_desc": "Keine Kreditkarte erforderlich. In 2 Minuten starten.",
+    "cta_final_btn": "Jetzt starten",
+    "read_post": "Lesen"
   },
   "roi": {
     "meta_title": "GeoTapp ROI-Rechner — Entdecken Sie Ihre echten Einsparungen",
