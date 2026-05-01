@@ -186,6 +186,22 @@ async function fetchRelatedPosts(postId: number, categoryIds: number[], locale: 
   }
 }
 
+async function fetchMorePosts(excludeIds: Set<number>, locale: string): Promise<RelatedPost[]> {
+  try {
+    const res = await wpFetch(
+      `${WP}/wp-json/wp/v2/posts/?per_page=20&_embed=wp:featuredmedia`,
+    );
+    if (!res.ok) return [];
+    const posts: any[] = await res.json();
+    return posts
+      .filter((p: any) => !excludeIds.has(p.id) && isLocalePost(p.link, locale))
+      .slice(0, 3)
+      .map(mapRelatedPost);
+  } catch {
+    return [];
+  }
+}
+
 type Props = {
   params: Promise<{ slug: string[] }>;
 };
@@ -224,6 +240,10 @@ export default async function BlogArticlePage({ params }: Props) {
   const canonicalUrl = `https://geotapp.com/blog/${slug.join('/')}/`;
 
   const relatedPosts = await fetchRelatedPosts(post.id, categoryIds, locale);
+
+  // "Leggi anche" — recent posts excluding current + related
+  const excludeIds = new Set([post.id, ...relatedPosts.map(p => p.id)]);
+  const morePosts = await fetchMorePosts(excludeIds, locale);
 
   const articleSchema = {
     '@context': 'https://schema.org',
@@ -290,7 +310,7 @@ export default async function BlogArticlePage({ params }: Props) {
       </div>
 
       {/* Related posts + CTA */}
-      <ArticleFooter relatedPosts={relatedPosts} locale={locale} />
+      <ArticleFooter relatedPosts={relatedPosts} morePosts={morePosts} locale={locale} />
     </>
   );
 }
