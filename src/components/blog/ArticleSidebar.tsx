@@ -137,10 +137,10 @@ export default function ArticleSidebar({ headings, locale, categories = [], date
         {/* Status */}
         <div className="flex items-center gap-2 mb-3">
           <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full opacity-60" style={{ backgroundColor: product.color }} />
-            <span className="relative inline-flex rounded-full h-2 w-2" style={{ backgroundColor: product.color }} />
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-60" />
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500" />
           </span>
-          <span className="text-[10px] font-mono uppercase tracking-widest" style={{ color: product.color }}>Clock-in</span>
+          <span className="text-[10px] font-mono uppercase tracking-widest text-green-500">Clock-in</span>
           {categories[0] && (
             <span
               className="ml-auto px-2 py-0.5 text-[8px] font-semibold rounded-full uppercase tracking-wider text-white"
