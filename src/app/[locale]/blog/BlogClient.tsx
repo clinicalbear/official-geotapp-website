@@ -3,33 +3,28 @@
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import type { AppLocale } from '@/lib/i18n/config';
 
-const POSTS_PER_PAGE = 12;
+const POSTS_PER_PAGE = 13; // 1 featured + 12 normal
 
-// TimeTracker → arancione logo (#F97316)
-// Flow        → viola/lilla (#8B5CF6)
-// Verifier    → verde (#22C55E)
 const CATEGORY_COLORS: Record<string, string> = {
-  // TimeTracker
-  'gps':               'rgba(249,115,22,0.70)',
-  'tracking':          'rgba(249,115,22,0.70)',
+  'gps': 'rgba(249,115,22,0.70)',
+  'tracking': 'rgba(249,115,22,0.70)',
   'geolocalizzazione': 'rgba(249,115,22,0.70)',
-  'timbrature':        'rgba(249,115,22,0.70)',
-  'presenze':          'rgba(249,115,22,0.70)',
-  'app':               'rgba(249,115,22,0.70)',
-  // Flow
-  'gestione':          'rgba(139,92,246,0.70)',
-  'operazioni':        'rgba(139,92,246,0.70)',
-  'business':          'rgba(139,92,246,0.70)',
-  'tecnologia':        'rgba(139,92,246,0.70)',
-  'software':          'rgba(139,92,246,0.70)',
-  // Verifier
-  'sicurezza':         'rgba(34,197,94,0.70)',
-  'security':          'rgba(34,197,94,0.70)',
-  'verifica':          'rgba(34,197,94,0.70)',
-  'prove':             'rgba(34,197,94,0.70)',
+  'timbrature': 'rgba(249,115,22,0.70)',
+  'presenze': 'rgba(249,115,22,0.70)',
+  'app': 'rgba(249,115,22,0.70)',
+  'gestione': 'rgba(139,92,246,0.70)',
+  'operazioni': 'rgba(139,92,246,0.70)',
+  'business': 'rgba(139,92,246,0.70)',
+  'tecnologia': 'rgba(139,92,246,0.70)',
+  'software': 'rgba(139,92,246,0.70)',
+  'sicurezza': 'rgba(34,197,94,0.70)',
+  'security': 'rgba(34,197,94,0.70)',
+  'verifica': 'rgba(34,197,94,0.70)',
+  'prove': 'rgba(34,197,94,0.70)',
 };
 const DEFAULT_COLOR = 'rgba(143,196,54,0.70)';
 
@@ -53,12 +48,110 @@ export type Post = {
   readingTime: number;
 };
 
+/* ── Featured card (first post, spans 2 columns) ── */
+function FeaturedCard({ post, locale, label, index }: { post: Post; locale: string; label: string; index: number }) {
+  const date = new Date(post.date).toLocaleDateString(locale, { day: 'numeric', month: 'long', year: 'numeric' });
+
+  return (
+    <motion.article
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-60px' }}
+      transition={{ duration: 0.5, delay: index * 0.08 }}
+      className="col-span-1 sm:col-span-2 lg:col-span-2 group"
+      style={{ '--cat-shadow': getCategoryColor(post.categories ?? []) } as React.CSSProperties}
+    >
+      <Link href={post.url} className="block h-full">
+        <div className="blog-card flex flex-col md:flex-row h-full bg-surface border border-border rounded-2xl overflow-hidden">
+          {post.image && (
+            <div className="relative w-full md:w-1/2 h-56 md:h-auto shrink-0 overflow-hidden">
+              <Image
+                src={post.image}
+                alt={post.title}
+                fill
+                className="object-cover blog-card-img"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                priority
+              />
+            </div>
+          )}
+          <div className="flex flex-col flex-1 p-8">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="text-text-muted text-xs font-mono">{date}</span>
+              {post.readingTime > 0 && (
+                <span className="card-reading-time">&#9201; {post.readingTime} min</span>
+              )}
+            </div>
+            <h2 className="text-2xl md:text-3xl font-display font-bold text-text-primary mb-4 group-hover:text-primary transition-colors leading-tight">
+              {post.title}
+            </h2>
+            {post.excerpt && (
+              <p className="text-text-secondary text-base leading-relaxed mb-6 line-clamp-4">
+                {post.excerpt}{post.excerpt.length === 160 ? '…' : ''}
+              </p>
+            )}
+            <span className="text-primary text-sm font-bold mt-auto">{label}</span>
+          </div>
+        </div>
+      </Link>
+    </motion.article>
+  );
+}
+
+/* ── Standard card ── */
+function PostCard({ post, locale, label, index }: { post: Post; locale: string; label: string; index: number }) {
+  const date = new Date(post.date).toLocaleDateString(locale, { day: 'numeric', month: 'long', year: 'numeric' });
+
+  return (
+    <motion.article
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-60px' }}
+      transition={{ duration: 0.5, delay: index * 0.08 }}
+      className="group flex flex-col"
+      style={{ '--cat-shadow': getCategoryColor(post.categories ?? []) } as React.CSSProperties}
+    >
+      <Link href={post.url} className="flex flex-col h-full">
+        <div className="blog-card flex flex-col h-full bg-surface border border-border rounded-2xl overflow-hidden">
+          {post.image && (
+            <div className="relative w-full h-44 shrink-0 overflow-hidden">
+              <Image
+                src={post.image}
+                alt={post.title}
+                fill
+                className="object-cover blog-card-img"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              />
+            </div>
+          )}
+          <div className="flex flex-col flex-1 p-6">
+            <div className="flex items-center gap-3 mb-3">
+              <span className="text-text-muted text-xs font-mono">{date}</span>
+              {post.readingTime > 0 && (
+                <span className="card-reading-time">&#9201; {post.readingTime} min</span>
+              )}
+            </div>
+            <h2 className="text-lg font-display font-bold text-text-primary mb-3 group-hover:text-primary transition-colors leading-snug flex-1">
+              {post.title}
+            </h2>
+            {post.excerpt && (
+              <p className="text-text-secondary text-sm leading-relaxed mb-4 line-clamp-3">
+                {post.excerpt}{post.excerpt.length === 160 ? '…' : ''}
+              </p>
+            )}
+            <span className="text-primary text-sm font-bold mt-auto">{label}</span>
+          </div>
+        </div>
+      </Link>
+    </motion.article>
+  );
+}
+
 export default function BlogClient({ locale, posts }: { locale: AppLocale; posts: Post[] }) {
   const b = getDictionary(locale).blog;
   const [page, setPage] = useState(0);
   const [activeCat, setActiveCat] = useState<string>('all');
 
-  // Build sorted category list from posts (by frequency)
   const categories = useMemo(() => {
     const freq = new Map<string, { name: string; count: number }>();
     for (const p of posts) {
@@ -72,7 +165,6 @@ export default function BlogClient({ locale, posts }: { locale: AppLocale; posts
       .sort((a, b) => b.count - a.count);
   }, [posts]);
 
-  // Filter posts by selected category
   const filtered = useMemo(() => {
     if (activeCat === 'all') return posts;
     return posts.filter((p) => (p.categories ?? []).some((c) => c.slug === activeCat));
@@ -80,6 +172,10 @@ export default function BlogClient({ locale, posts }: { locale: AppLocale; posts
 
   const totalPages = Math.ceil(filtered.length / POSTS_PER_PAGE);
   const visible = filtered.slice(page * POSTS_PER_PAGE, (page + 1) * POSTS_PER_PAGE);
+
+  // First post is featured (large), rest are normal
+  const featured = visible[0] ?? null;
+  const rest = visible.slice(1);
 
   function handleCatClick(slug: string) {
     setActiveCat(slug);
@@ -103,7 +199,7 @@ export default function BlogClient({ locale, posts }: { locale: AppLocale; posts
         <>
           {/* Category filter bar */}
           {categories.length > 0 && (
-            <div className="container mx-auto max-w-6xl mb-8">
+            <div className="container mx-auto max-w-6xl mb-10">
               <div className="gt-category-filter" id="gt-cat-filter">
                 <button
                   className={activeCat === 'all' ? 'active' : ''}
@@ -125,57 +221,14 @@ export default function BlogClient({ locale, posts }: { locale: AppLocale; posts
           )}
 
           <section className="container mx-auto max-w-6xl">
+            {/* Featured post + masonry grid */}
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {visible.map((post) => {
-                const date = new Date(post.date).toLocaleDateString(locale, {
-                  day: 'numeric', month: 'long', year: 'numeric',
-                });
-                return (
-                  <article
-                    key={post.id}
-                    id={`post-${post.id}`}
-                    className="group flex flex-col"
-                    style={{ '--cat-shadow': getCategoryColor(post.categories ?? []) } as React.CSSProperties}
-                  >
-                    <Link href={post.url} className="flex flex-col h-full">
-                      <div className="cat-card flex flex-col h-full bg-surface border border-border rounded-2xl overflow-hidden transition-all duration-300">
-                        {post.image && (
-                          <div className="relative w-full h-44 shrink-0 overflow-hidden">
-                            <Image
-                              src={post.image}
-                              alt={post.title}
-                              fill
-                              className="object-cover"
-                              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                            />
-                          </div>
-                        )}
-                        <div className="flex flex-col flex-1 p-6">
-                          <div className="flex items-center gap-3 mb-3">
-                            <span className="text-text-muted text-xs font-mono">{date}</span>
-                            {post.readingTime > 0 && (
-                              <span className="card-reading-time">
-                                &#9201; {post.readingTime} min
-                              </span>
-                            )}
-                          </div>
-                          <h2 className="text-lg font-display font-bold text-text-primary mb-3 group-hover:text-primary transition-colors leading-snug flex-1">
-                            {post.title}
-                          </h2>
-                          {post.excerpt && (
-                            <p className="text-text-secondary text-sm leading-relaxed mb-4 line-clamp-3">
-                              {post.excerpt}{post.excerpt.length === 160 ? '…' : ''}
-                            </p>
-                          )}
-                          <span className="text-primary text-sm font-bold mt-auto">
-                            {b.read_article}
-                          </span>
-                        </div>
-                      </div>
-                    </Link>
-                  </article>
-                );
-              })}
+              {featured && (
+                <FeaturedCard post={featured} locale={locale} label={b.read_article} index={0} />
+              )}
+              {rest.map((post, i) => (
+                <PostCard key={post.id} post={post} locale={locale} label={b.read_article} index={i + 1} />
+              ))}
             </div>
           </section>
 
