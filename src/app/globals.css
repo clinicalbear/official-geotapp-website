@@ -455,11 +455,13 @@ a:hover {
   margin: 2rem 0;
   max-width: 100%;
   height: auto;
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .article-content img:hover {
-  transform: scale(1.02);
+  transform: scale(1.02) rotate(0.5deg);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 
 .article-content ul,

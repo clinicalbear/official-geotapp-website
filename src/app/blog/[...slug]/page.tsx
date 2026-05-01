@@ -141,27 +141,41 @@ interface RelatedPost {
   image: string | null;
 }
 
+function mapRelatedPost(p: any): RelatedPost {
+  return {
+    id: p.id,
+    slug: p.slug,
+    title: stripHtml(p.title?.rendered ?? ''),
+    excerpt: stripHtml(p.excerpt?.rendered ?? '').slice(0, 140),
+    date: p.date,
+    url: normalizeUrl(p.link, p.slug),
+    image: p._embedded?.['wp:featuredmedia']?.[0]?.source_url ?? null,
+  };
+}
+
 async function fetchRelatedPosts(postId: number, categoryIds: number[], locale: string): Promise<RelatedPost[]> {
-  if (categoryIds.length === 0) return [];
   try {
-    const res = await fetch(
-      `${WP}/wp-json/wp/v2/posts/?categories=${categoryIds[0]}&exclude=${postId}&per_page=3&_embed=wp:featuredmedia`,
-      { headers: HEADERS, cache: 'no-store', signal: AbortSignal.timeout(8000) }
+    // Try category-based first, then fallback to recent posts
+    const catParam = categoryIds.length > 0 ? `&categories=${categoryIds[0]}` : '';
+    const res = await wpFetch(
+      `${WP}/wp-json/wp/v2/posts/?exclude=${postId}&per_page=12${catParam}&_embed=wp:featuredmedia`,
     );
     if (!res.ok) return [];
-    const posts = await res.json();
-    return posts
-      .filter((p: any) => isLocalePost(p.link, locale))
-      .slice(0, 3)
-      .map((p: any) => ({
-        id: p.id,
-        slug: p.slug,
-        title: stripHtml(p.title?.rendered ?? ''),
-        excerpt: stripHtml(p.excerpt?.rendered ?? '').slice(0, 140),
-        date: p.date,
-        url: normalizeUrl(p.link, p.slug),
-        image: p._embedded?.['wp:featuredmedia']?.[0]?.source_url ?? null,
-      }));
+    const posts: any[] = await res.json();
+
+    // Filter by locale first
+    const localeFiltered = posts.filter((p: any) => isLocalePost(p.link, locale));
+    if (localeFiltered.length >= 3) {
+      return localeFiltered.slice(0, 3).map(mapRelatedPost);
+    }
+
+    // Not enough locale matches — use whatever we have
+    if (localeFiltered.length > 0) {
+      return localeFiltered.slice(0, 3).map(mapRelatedPost);
+    }
+
+    // No locale matches at all — return first 3 regardless of locale
+    return posts.slice(0, 3).map(mapRelatedPost);
   } catch {
     return [];
   }
