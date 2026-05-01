@@ -436,7 +436,33 @@ export async function middleware(req: NextRequest) {
     });
   }
 
-  // 0c. Force trailing slash — prevent duplicate URLs in GSC
+  // 0c. Blog listing redirects: /blog/ → /it/blog/, /blog/{locale}/ → /{locale}/blog/
+  // WordPress-style listing URLs must 301 to the Next.js canonical [locale]/blog/ route.
+  // Article URLs (/blog/en/2026/...) and WP assets (/blog/wp-*) are NOT redirected.
+  if (pathname.startsWith('/blog')) {
+    // Skip WP admin/api/assets/login
+    if (pathname.startsWith('/blog/wp-')) {
+      // fall through to blog proxy below
+    } else {
+      const BLOG_LISTING_LOCALES = ['en','de','fr','es','pt','nl','da','sv','nb','ru'];
+
+      // /blog or /blog/ exactly → /it/blog/
+      if (pathname === '/blog' || pathname === '/blog/') {
+        return NextResponse.redirect(new URL('/it/blog/', req.url), 301);
+      }
+
+      // /blog/{locale} or /blog/{locale}/ exactly (no more segments) → /{locale}/blog/
+      for (const loc of BLOG_LISTING_LOCALES) {
+        if (pathname === `/blog/${loc}` || pathname === `/blog/${loc}/`) {
+          return NextResponse.redirect(new URL(`/${loc}/blog/`, req.url), 301);
+        }
+      }
+
+      // Everything else under /blog/ (articles, assets) → pass through to proxy
+    }
+  }
+
+  // 0d. Force trailing slash — prevent duplicate URLs in GSC
   // 308 (Permanent Redirect) preserves the HTTP method (unlike 301).
   // Exclusions: static files (have a file extension), API routes, blog proxy,
   // and paths that already end with '/'.
