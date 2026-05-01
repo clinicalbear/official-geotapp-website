@@ -39,24 +39,29 @@ export default function ArticleSidebar({ headings, locale }: ArticleSidebarProps
     return () => observer.disconnect();
   }, [headings]);
 
+  if (headings.length === 0) return null;
+
   return (
-    <aside className="hidden lg:block w-64 sticky top-24 max-h-[calc(100vh-8rem)] overflow-y-auto">
+    <aside className="sticky top-28 max-h-[calc(100vh-8rem)] overflow-y-auto">
       {/* Table of Contents */}
-      <nav>
-        <p className="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3">
+      <nav className="border-l-2 border-slate-200 pl-5">
+        <p className="text-[11px] font-bold uppercase tracking-widest text-slate-400 mb-4">
           {labels.toc}
         </p>
-        <ul className="space-y-1.5">
+        <ul className="space-y-2.5">
           {headings.map((heading) => (
-            <li key={heading.id}>
+            <li key={heading.id} className="relative">
+              {activeId === heading.id && (
+                <span className="absolute -left-[22px] top-0.5 w-0.5 h-full bg-[#8FC436] rounded-full transition-all duration-300" />
+              )}
               <a
                 href={`#${heading.id}`}
-                className={`block transition-colors duration-200 ${
-                  heading.level === 3 ? 'pl-3 text-sm font-normal' : 'font-medium'
+                className={`block text-[13px] leading-snug transition-all duration-200 ${
+                  heading.level === 3 ? 'pl-3' : ''
                 } ${
                   activeId === heading.id
-                    ? 'text-primary font-semibold'
-                    : 'text-slate-500 hover:text-slate-900'
+                    ? 'text-slate-900 font-semibold translate-x-0.5'
+                    : 'text-slate-400 hover:text-slate-700'
                 }`}
               >
                 {heading.text}
@@ -67,12 +72,12 @@ export default function ArticleSidebar({ headings, locale }: ArticleSidebarProps
       </nav>
 
       {/* CTA Card */}
-      <div className="mt-8 bg-slate-50 rounded-2xl p-5 border border-slate-200">
+      <div className="mt-10 bg-gradient-to-br from-slate-50 to-slate-100 rounded-2xl p-6 border border-slate-200/80 shadow-sm">
         <p className="text-sm font-bold text-slate-900">{labels.cta_title}</p>
-        <p className="text-xs text-slate-500 mt-1">{labels.cta_desc}</p>
+        <p className="text-xs text-slate-500 mt-1.5 leading-relaxed">{labels.cta_desc}</p>
         <Link
           href={`/${locale}/trial/`}
-          className="mt-4 block w-full text-center px-4 py-2.5 bg-[#8FC436] text-white text-sm font-semibold rounded-xl hover:bg-[#7db02e] transition-colors"
+          className="mt-5 block w-full text-center px-4 py-3 bg-[#8FC436] text-white text-sm font-semibold rounded-xl hover:bg-[#7db02e] hover:shadow-md transition-all duration-200"
         >
           {labels.cta_btn}
         </Link>

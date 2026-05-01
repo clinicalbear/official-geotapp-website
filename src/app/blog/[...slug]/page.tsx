@@ -262,9 +262,11 @@ export default async function BlogArticlePage({ params }: Props) {
 
       {/* Content + Sidebar */}
       <div className="bg-white">
-        <div className="max-w-7xl mx-auto flex">
+        <div className="max-w-7xl mx-auto flex gap-12 px-6">
           <ArticleContent html={contentWithIds} />
-          <ArticleSidebar headings={headings} locale={locale} />
+          <div className="hidden lg:block w-72 shrink-0 pt-16">
+            <ArticleSidebar headings={headings} locale={locale} />
+          </div>
         </div>
       </div>
 
