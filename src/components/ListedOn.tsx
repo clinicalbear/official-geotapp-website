@@ -96,10 +96,20 @@ const HotfrogLogo = ({ scale }: { scale: number }) => (
   </svg>
 );
 
+/* ── SaaSHub logo: hexagon icon + wordmark ── */
+const SaaSHubLogo = ({ scale }: { scale: number }) => (
+  <svg width={130 * scale} height={32 * scale} viewBox="0 0 130 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M14 4L24.5 9.5V20.5L14 26L3.5 20.5V9.5L14 4Z" fill="#6366F1"/>
+    <text x="9" y="19" fontFamily="var(--font-poppins, Poppins, sans-serif)" fontSize="10" fontWeight="800" fill="#fff">S</text>
+    <text x="30" y="23" fontFamily="var(--font-poppins, Poppins, sans-serif)" fontSize="17" fontWeight="700" fill="#6366F1">SaaSHub</text>
+  </svg>
+);
+
 const URLS = {
   capterra: 'https://www.capterra.com/p/10041643/GeoTapp-Flow/',
   getapp: 'https://www.getapp.com/operations-management-software/a/geotapp-flow/',
   softwareadvice: 'https://www.softwareadvice.com/product/548499-GeoTapp-Flow/',
+  saashub: 'https://www.saashub.com/geotapp-flow',
   kompass: 'https://it.kompass.com/c/geotapp/it1415466/',
   cylex: 'https://www.cylex.it/azienda/geotapp.html',
   hotfrog: 'https://www.hotfrog.it/company/b582d0c9ce6459cc7416dce853e50149',
@@ -117,6 +127,7 @@ function CompactListedOn({ locale }: { locale: string }) {
         { name: 'Capterra', url: URLS.capterra, logo: <CapterraLogo scale={1} /> },
         { name: 'GetApp', url: URLS.getapp, logo: <GetAppLogo scale={1} /> },
         { name: 'Software Advice', url: URLS.softwareadvice, logo: <SoftwareAdviceLogo scale={1} /> },
+        { name: 'SaaSHub', url: URLS.saashub, logo: <SaaSHubLogo scale={1} /> },
       ].map((p) => (
         <a key={p.name} href={p.url} target="_blank" rel="noopener noreferrer" aria-label={p.name}
           style={{ opacity: 0.6, transition: 'opacity 0.2s', display: 'flex', alignItems: 'center' }}
@@ -136,6 +147,7 @@ function FullListedOn({ locale }: { locale: string }) {
     { name: 'Capterra', url: URLS.capterra, logo: <CapterraLogo scale={3} /> },
     { name: 'GetApp', url: URLS.getapp, logo: <GetAppLogo scale={3} /> },
     { name: 'Software Advice', url: URLS.softwareadvice, logo: <SoftwareAdviceLogo scale={3} /> },
+    { name: 'SaaSHub', url: URLS.saashub, logo: <SaaSHubLogo scale={3} /> },
   ];
 
   return (
