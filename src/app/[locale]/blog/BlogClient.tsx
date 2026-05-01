@@ -188,7 +188,7 @@ export default function BlogClient({ locale, posts }: { locale: AppLocale; posts
   }
 
   return (
-    <div className="bg-background min-h-screen pt-40 pb-20 px-6 relative overflow-hidden">
+    <div className="min-h-screen pt-40 pb-20 px-6 relative overflow-hidden">
       {/* Background glow effects */}
       <div
         aria-hidden="true"
