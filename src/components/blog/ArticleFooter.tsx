@@ -121,7 +121,7 @@ function CtaBanner({ labels, locale }: { labels: typeof FOOTER_LABELS[string]; l
         <h2 className="text-3xl md:text-4xl font-display font-bold text-white">
           {labels.cta_title}
         </h2>
-        <p className="text-slate-400 text-lg mt-4">
+        <p className="text-slate-900 text-lg mt-4">
           {labels.cta_desc}
         </p>
         <Link
