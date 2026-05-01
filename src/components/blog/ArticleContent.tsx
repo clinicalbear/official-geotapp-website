@@ -4,9 +4,10 @@ import { motion } from 'framer-motion';
 
 interface ArticleContentProps {
   html: string;
+  newsletter?: React.ReactNode;
 }
 
-export default function ArticleContent({ html }: ArticleContentProps) {
+export default function ArticleContent({ html, newsletter }: ArticleContentProps) {
   return (
     <motion.article
       initial={{ opacity: 0, y: 20 }}
@@ -19,6 +20,7 @@ export default function ArticleContent({ html }: ArticleContentProps) {
           className="article-content"
           dangerouslySetInnerHTML={{ __html: html }}
         />
+        {newsletter}
       </div>
     </motion.article>
   );

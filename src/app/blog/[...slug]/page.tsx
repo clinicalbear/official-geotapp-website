@@ -4,6 +4,9 @@ import ArticleHero from '@/components/blog/ArticleHero';
 import ArticleContent from '@/components/blog/ArticleContent';
 import ArticleSidebar from '@/components/blog/ArticleSidebar';
 import ArticleFooter from '@/components/blog/ArticleFooter';
+import ReadingProgress from '@/components/blog/ReadingProgress';
+import BackToTop from '@/components/blog/BackToTop';
+import NewsletterInline from '@/components/blog/NewsletterInline';
 
 export const dynamic = 'force-dynamic';
 
@@ -285,6 +288,9 @@ export default async function BlogArticlePage({ params }: Props) {
 
   return (
     <>
+      <ReadingProgress />
+      <BackToTop />
+
       {/* Structured data */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
@@ -302,7 +308,7 @@ export default async function BlogArticlePage({ params }: Props) {
       {/* Content + Sidebar */}
       <div className="bg-white">
         <div className="max-w-7xl mx-auto flex gap-12 px-6">
-          <ArticleContent html={contentWithIds} />
+          <ArticleContent html={contentWithIds} newsletter={<NewsletterInline locale={locale} />} />
           <div className="hidden lg:block w-72 shrink-0 pt-16">
             <ArticleSidebar headings={headings} locale={locale} categories={categories} date={date} readingTime={readingTime} title={title} />
           </div>
