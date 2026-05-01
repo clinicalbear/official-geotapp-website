@@ -156,52 +156,21 @@ function mapRelatedPost(p: any): RelatedPost {
   };
 }
 
-async function fetchRelatedPosts(postId: number, categoryIds: number[], locale: string): Promise<RelatedPost[]> {
+async function fetchAllRelated(postId: number, locale: string): Promise<{ related: RelatedPost[]; more: RelatedPost[] }> {
   try {
-    // Try each category until we find locale-matching posts
-    for (const catId of categoryIds) {
-      const res = await wpFetch(
-        `${WP}/wp-json/wp/v2/posts/?exclude=${postId}&per_page=12&categories=${catId}&_embed=wp:featuredmedia`,
-      );
-      if (!res.ok) continue;
-      const posts: any[] = await res.json();
-      const localeFiltered = posts.filter((p: any) => isLocalePost(p.link, locale));
-      if (localeFiltered.length > 0) {
-        return localeFiltered.slice(0, 3).map(mapRelatedPost);
-      }
-    }
-
-    // No category match — fallback to recent posts in same locale
+    // Single fetch: 20 recent posts (excludes current), filter by locale client-side
     const res = await wpFetch(
-      `${WP}/wp-json/wp/v2/posts/?exclude=${postId}&per_page=12&_embed=wp:featuredmedia`,
+      `${WP}/wp-json/wp/v2/posts/?exclude=${postId}&per_page=20&_embed=wp:featuredmedia`,
     );
-    if (!res.ok) return [];
+    if (!res.ok) return { related: [], more: [] };
     const posts: any[] = await res.json();
-    const localeFiltered = posts.filter((p: any) => isLocalePost(p.link, locale));
-    if (localeFiltered.length > 0) {
-      return localeFiltered.slice(0, 3).map(mapRelatedPost);
-    }
-
-    // Last resort — any 3 recent posts
-    return posts.slice(0, 3).map(mapRelatedPost);
+    const localePosts = posts.filter((p: any) => isLocalePost(p.link, locale));
+    const pool = localePosts.length >= 6 ? localePosts : posts;
+    const related = pool.slice(0, 3).map(mapRelatedPost);
+    const more = pool.slice(3, 6).map(mapRelatedPost);
+    return { related, more };
   } catch {
-    return [];
-  }
-}
-
-async function fetchMorePosts(excludeIds: Set<number>, locale: string): Promise<RelatedPost[]> {
-  try {
-    const res = await wpFetch(
-      `${WP}/wp-json/wp/v2/posts/?per_page=20&_embed=wp:featuredmedia`,
-    );
-    if (!res.ok) return [];
-    const posts: any[] = await res.json();
-    return posts
-      .filter((p: any) => !excludeIds.has(p.id) && isLocalePost(p.link, locale))
-      .slice(0, 3)
-      .map(mapRelatedPost);
-  } catch {
-    return [];
+    return { related: [], more: [] };
   }
 }
 
@@ -242,11 +211,7 @@ export default async function BlogArticlePage({ params }: Props) {
 
   const canonicalUrl = `https://geotapp.com/blog/${slug.join('/')}/`;
 
-  const relatedPosts = await fetchRelatedPosts(post.id, categoryIds, locale);
-
-  // "Leggi anche" — recent posts excluding current + related
-  const excludeIds = new Set([post.id, ...relatedPosts.map(p => p.id)]);
-  const morePosts = await fetchMorePosts(excludeIds, locale);
+  const { related: relatedPosts, more: morePosts } = await fetchAllRelated(post.id, locale);
 
   const articleSchema = {
     '@context': 'https://schema.org',
