@@ -188,12 +188,11 @@ export default function ArticleSidebar({ headings, locale, categories = [], date
         href={`/${locale}${product.href}`}
         className="block mb-6 p-6 rounded-2xl border border-slate-200 hover:border-slate-300 hover:shadow-md transition-all duration-200 group"
       >
-        <Image
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
           src={product.logo}
           alt={product.name}
-          width={160}
-          height={40}
-          className="h-10 w-auto mx-auto mb-4 group-hover:scale-105 transition-transform duration-200"
+          className="max-h-12 max-w-[160px] w-auto mx-auto mb-4 group-hover:scale-105 transition-transform duration-200 object-contain"
         />
         <p className="text-[12px] text-slate-500 leading-relaxed text-center">{labels.product_desc}</p>
         <span className="mt-3 block text-center text-[12px] font-semibold text-[#8FC436] group-hover:translate-x-0.5 transition-transform">
