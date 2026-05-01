@@ -1,10 +1,5 @@
 'use client';
 
-/**
- * MapBackground — dense city-map pattern with streets, blocks, pins.
- * 3D perspective tilt. Fades toward center for content readability.
- */
-
 interface MapBackgroundProps {
   products?: Array<'timetracker' | 'flow' | 'verifier'>;
 }
@@ -17,116 +12,162 @@ const COLORS = {
 
 function buildSvg(colors: string[]): string {
   const c = (i: number) => colors[i % colors.length];
-  const parts: string[] = [];
+  const p: string[] = [];
 
-  // ── Dense street grid — major roads ──
-  const majorH = [0, 120, 260, 380, 520, 650, 780, 900];
-  const majorV = [0, 150, 300, 440, 580, 720, 870, 1020, 1150, 1300];
-
-  majorH.forEach((y, i) => {
-    parts.push(`<line x1="0" y1="${y}" x2="1400" y2="${y}" stroke="${c(i)}" stroke-width="1.4" opacity="0.16"/>`);
-  });
-  majorV.forEach((x, i) => {
-    parts.push(`<line x1="${x}" y1="0" x2="${x}" y2="950" stroke="${c(i)}" stroke-width="1.4" opacity="0.16"/>`);
-  });
-
-  // ── Secondary streets between major ones ──
-  const secH = [55, 170, 320, 450, 585, 710, 840];
-  const secV = [75, 220, 370, 510, 650, 795, 945, 1085, 1230];
-
-  secH.forEach((y, i) => {
-    // Some are shorter (dead ends, not full width)
-    const x1 = (i % 3 === 0) ? 0 : majorV[i % majorV.length];
-    const x2 = (i % 3 === 1) ? 1400 : majorV[(i + 3) % majorV.length];
-    parts.push(`<line x1="${x1}" y1="${y}" x2="${x2}" y2="${y}" stroke="${c(i)}" stroke-width="0.6" opacity="0.10"/>`);
-  });
-  secV.forEach((x, i) => {
-    const y1 = (i % 3 === 0) ? 0 : majorH[i % majorH.length];
-    const y2 = (i % 3 === 2) ? 950 : majorH[(i + 2) % majorH.length];
-    parts.push(`<line x1="${x}" y1="${y1}" x2="${x}" y2="${y2}" stroke="${c(i + 1)}" stroke-width="0.6" opacity="0.10"/>`);
-  });
-
-  // ── Curved roads (boulevards, tangenziali) ──
-  const curves = [
-    'M0 200 Q200 160 400 220 Q600 280 800 200 Q1000 120 1200 210 L1400 250',
-    'M0 680 Q300 620 500 700 Q700 780 900 680 Q1100 580 1300 700 L1400 720',
-    'M200 0 Q160 200 250 400 Q340 600 200 800 L180 950',
-    'M1000 0 Q1060 250 980 450 Q900 650 1020 850 L1040 950',
-    'M0 450 Q150 420 300 460 Q500 510 700 440 Q900 370 1100 460 L1400 480',
+  // ── Main roads — organic curves, different widths ──
+  const mainRoads = [
+    // Big boulevard curving through the city
+    'M-20 300 C100 280 200 320 350 290 S500 240 650 300 S850 380 1000 310 S1200 260 1450 340',
+    // Another major road crossing
+    'M400 -20 C380 100 420 200 390 350 S360 500 400 620 S440 750 380 950',
+    // Diagonal avenue
+    'M-20 100 C100 130 250 200 400 350 S550 500 700 550 S900 580 1100 650 L1450 750',
+    // Ring road
+    'M-20 650 C150 600 300 580 500 620 S700 680 850 640 S1050 580 1200 630 L1450 660',
+    // North-south highway
+    'M800 -20 C790 120 820 250 780 400 S750 550 800 700 S830 800 790 950',
+    // Connector road
+    'M-20 480 C120 460 250 490 380 470 S520 440 650 480 S800 520 950 470 L1450 500',
   ];
-  curves.forEach((d, i) => {
-    parts.push(`<path d="${d}" fill="none" stroke="${c(i)}" stroke-width="1.0" opacity="0.14" stroke-linecap="round"/>`);
+
+  mainRoads.forEach((d, i) => {
+    p.push(`<path d="${d}" fill="none" stroke="${c(i)}" stroke-width="1.6" opacity="0.15" stroke-linecap="round"/>`);
   });
 
-  // ── Building blocks (fill spaces between streets) ──
-  for (let gi = 0; gi < majorH.length - 1; gi++) {
-    for (let gj = 0; gj < majorV.length - 1; gj++) {
-      const y = majorH[gi];
-      const x = majorV[gj];
-      const cellW = majorV[gj + 1] - x;
-      const cellH = majorH[gi + 1] - y;
+  // ── Secondary streets — shorter, connecting main roads ──
+  const secondaryRoads = [
+    // Curved side streets
+    'M200 280 C220 350 180 420 230 490',
+    'M350 290 C370 370 340 440 380 520',
+    'M500 240 C480 310 520 380 490 460',
+    'M650 300 C630 380 670 450 640 540',
+    'M150 100 C180 170 140 250 190 310',
+    'M550 100 C530 190 570 280 540 350',
+    'M900 310 C880 400 920 480 890 560',
+    'M1050 280 C1030 360 1070 430 1040 520',
+    // Short connectors
+    'M250 200 C300 220 340 190 390 220',
+    'M450 350 C500 380 540 340 600 370',
+    'M700 400 C740 440 780 410 830 450',
+    'M100 500 C150 530 190 510 250 540',
+    'M550 550 C600 580 640 560 700 590',
+    'M850 550 C900 520 940 560 1000 530',
+    'M300 650 C350 680 400 650 450 690',
+    'M600 680 C650 650 700 690 750 660',
+    // Winding alleys
+    'M180 350 C200 360 190 390 210 400 S230 430 210 460',
+    'M420 400 C440 420 430 450 450 470 S470 500 450 520',
+    'M680 450 C700 470 690 500 710 520 S730 550 710 580',
+    'M950 400 C970 430 960 460 980 490',
+    'M1100 400 C1120 440 1110 480 1130 520',
+    'M300 550 C280 580 310 610 290 640',
+    'M500 580 C520 610 510 640 530 670',
+    'M750 600 C770 630 760 660 780 690',
+    // Dead-end streets
+    'M130 300 L80 320',
+    'M270 470 L220 500',
+    'M580 450 L540 490',
+    'M830 350 L870 310',
+    'M1000 550 L1050 580',
+    'M350 700 L310 740',
+  ];
 
-      // Skip some cells for variety (parks, open areas)
-      if ((gi + gj) % 5 === 0) continue;
+  secondaryRoads.forEach((d, i) => {
+    p.push(`<path d="${d}" fill="none" stroke="${c(i)}" stroke-width="0.7" opacity="0.12" stroke-linecap="round"/>`);
+  });
 
-      // 2-4 buildings per block
-      const numBuildings = 2 + ((gi * 7 + gj * 3) % 3);
-      for (let b = 0; b < numBuildings; b++) {
-        const bx = x + 8 + ((b * 31 + gi * 13) % (cellW - 30));
-        const by = y + 8 + ((b * 23 + gj * 17) % (cellH - 25));
-        const bw = 12 + ((gi + gj + b) % 3) * 8;
-        const bh = 10 + ((gi * 2 + b) % 3) * 6;
-        parts.push(
-          `<rect x="${bx}" y="${by}" width="${bw}" height="${bh}" rx="1.5" fill="${c(gi + gj + b)}" opacity="0.05"/>`
-        );
-      }
-    }
-  }
+  // ── Buildings — irregular shapes along streets ──
+  // Rotated rectangles to follow street angles
+  const buildings = [
+    // Along first boulevard
+    { x: 120, y: 260, w: 18, h: 12, r: -5 }, { x: 160, y: 310, w: 14, h: 20, r: 8 },
+    { x: 220, y: 255, w: 22, h: 14, r: -3 }, { x: 280, y: 300, w: 16, h: 18, r: 12 },
+    { x: 370, y: 260, w: 20, h: 12, r: -8 }, { x: 430, y: 300, w: 14, h: 22, r: 5 },
+    { x: 520, y: 250, w: 18, h: 16, r: -4 }, { x: 580, y: 280, w: 24, h: 14, r: 10 },
+    { x: 670, y: 270, w: 16, h: 20, r: -6 }, { x: 740, y: 310, w: 20, h: 14, r: 3 },
+    { x: 820, y: 340, w: 14, h: 18, r: -10 }, { x: 900, y: 290, w: 22, h: 12, r: 7 },
+    { x: 980, y: 320, w: 16, h: 16, r: -2 }, { x: 1060, y: 280, w: 20, h: 14, r: 9 },
+    { x: 1140, y: 310, w: 14, h: 20, r: -5 },
+    // Along diagonal avenue
+    { x: 100, y: 130, w: 16, h: 12, r: 15 }, { x: 180, y: 180, w: 20, h: 14, r: 20 },
+    { x: 300, y: 240, w: 14, h: 18, r: 25 }, { x: 450, y: 370, w: 18, h: 12, r: 18 },
+    { x: 560, y: 440, w: 22, h: 14, r: 12 }, { x: 720, y: 520, w: 16, h: 20, r: 8 },
+    { x: 870, y: 570, w: 20, h: 14, r: 5 }, { x: 1000, y: 610, w: 14, h: 18, r: 15 },
+    { x: 1120, y: 660, w: 18, h: 12, r: 10 },
+    // Fill areas between roads
+    { x: 200, y: 380, w: 16, h: 14, r: -8 }, { x: 250, y: 420, w: 12, h: 18, r: 5 },
+    { x: 320, y: 390, w: 20, h: 12, r: -3 }, { x: 380, y: 440, w: 14, h: 16, r: 10 },
+    { x: 440, y: 410, w: 18, h: 14, r: -6 }, { x: 500, y: 460, w: 16, h: 20, r: 4 },
+    { x: 570, y: 380, w: 12, h: 14, r: -12 }, { x: 620, y: 420, w: 20, h: 12, r: 8 },
+    { x: 700, y: 460, w: 14, h: 18, r: -4 }, { x: 760, y: 430, w: 18, h: 14, r: 7 },
+    { x: 830, y: 470, w: 16, h: 12, r: -9 }, { x: 900, y: 440, w: 22, h: 16, r: 3 },
+    // South area
+    { x: 150, y: 560, w: 14, h: 12, r: 6 }, { x: 220, y: 590, w: 18, h: 16, r: -4 },
+    { x: 340, y: 570, w: 16, h: 14, r: 8 }, { x: 420, y: 610, w: 12, h: 18, r: -7 },
+    { x: 500, y: 590, w: 20, h: 12, r: 5 }, { x: 600, y: 630, w: 14, h: 16, r: -3 },
+    { x: 680, y: 600, w: 18, h: 14, r: 10 }, { x: 770, y: 640, w: 16, h: 12, r: -8 },
+    { x: 860, y: 610, w: 12, h: 18, r: 4 }, { x: 950, y: 580, w: 20, h: 14, r: -6 },
+    { x: 1050, y: 550, w: 14, h: 16, r: 9 }, { x: 1130, y: 590, w: 18, h: 12, r: -2 },
+    // North area
+    { x: 450, y: 120, w: 14, h: 12, r: -8 }, { x: 620, y: 140, w: 16, h: 18, r: 5 },
+    { x: 700, y: 100, w: 20, h: 14, r: -3 }, { x: 850, y: 130, w: 14, h: 16, r: 10 },
+    { x: 950, y: 150, w: 18, h: 12, r: -5 }, { x: 1080, y: 120, w: 16, h: 20, r: 7 },
+    // Near ring road
+    { x: 130, y: 620, w: 16, h: 12, r: 4 }, { x: 250, y: 660, w: 14, h: 14, r: -6 },
+    { x: 430, y: 650, w: 18, h: 12, r: 8 }, { x: 560, y: 670, w: 12, h: 16, r: -4 },
+    { x: 720, y: 660, w: 20, h: 14, r: 3 }, { x: 880, y: 680, w: 16, h: 12, r: -9 },
+    { x: 1020, y: 640, w: 14, h: 18, r: 6 }, { x: 1160, y: 670, w: 18, h: 14, r: -2 },
+  ];
 
-  // ── Roundabouts at key intersections ──
+  buildings.forEach((b, i) => {
+    p.push(
+      `<rect x="${b.x}" y="${b.y}" width="${b.w}" height="${b.h}" rx="1" fill="${c(i)}" opacity="0.06" transform="rotate(${b.r} ${b.x + b.w / 2} ${b.y + b.h / 2})"/>`
+    );
+  });
+
+  // ── Roundabouts ──
   const roundabouts = [
-    { x: 300, y: 260 }, { x: 580, y: 120 }, { x: 720, y: 380 },
-    { x: 440, y: 520 }, { x: 150, y: 650 }, { x: 870, y: 260 },
-    { x: 1020, y: 520 }, { x: 300, y: 780 }, { x: 720, y: 650 },
-    { x: 1150, y: 380 }, { x: 580, y: 780 }, { x: 1020, y: 780 },
+    { x: 350, y: 290 }, { x: 650, y: 300 }, { x: 800, y: 400 },
+    { x: 400, y: 470 }, { x: 500, y: 620 }, { x: 780, y: 640 },
+    { x: 200, y: 490 }, { x: 950, y: 470 }, { x: 1100, y: 630 },
   ];
   roundabouts.forEach((r, i) => {
-    parts.push(`<circle cx="${r.x}" cy="${r.y}" r="8" fill="none" stroke="${c(i)}" stroke-width="0.8" opacity="0.14"/>`);
-    parts.push(`<circle cx="${r.x}" cy="${r.y}" r="3" fill="${c(i)}" opacity="0.08"/>`);
+    p.push(`<circle cx="${r.x}" cy="${r.y}" r="7" fill="none" stroke="${c(i)}" stroke-width="0.8" opacity="0.14"/>`);
+    p.push(`<circle cx="${r.x}" cy="${r.y}" r="2.5" fill="${c(i)}" opacity="0.10"/>`);
   });
 
-  // ── GPS Pins (teardrop markers) ──
+  // ── GPS Pins ──
   const pins = [
-    { x: 300, y: 240 }, { x: 580, y: 100 }, { x: 720, y: 360 },
-    { x: 440, y: 500 }, { x: 150, y: 630 }, { x: 870, y: 240 },
-    { x: 1020, y: 500 }, { x: 300, y: 760 }, { x: 720, y: 630 },
-    { x: 1150, y: 360 }, { x: 200, y: 120 }, { x: 500, y: 380 },
-    { x: 940, y: 650 }, { x: 1100, y: 120 }, { x: 650, y: 520 },
+    { x: 200, y: 270 }, { x: 450, y: 330 }, { x: 700, y: 280 },
+    { x: 550, y: 500 }, { x: 350, y: 600 }, { x: 850, y: 560 },
+    { x: 150, y: 450 }, { x: 950, y: 350 }, { x: 1100, y: 500 },
+    { x: 300, y: 180 }, { x: 600, y: 150 }, { x: 900, y: 200 },
+    { x: 400, y: 700 }, { x: 750, y: 700 }, { x: 1050, y: 300 },
+    { x: 100, y: 600 }, { x: 650, y: 600 }, { x: 1000, y: 680 },
   ];
-  pins.forEach((p, i) => {
+  pins.forEach((pin, i) => {
     const color = c(i);
-    parts.push(
-      `<g transform="translate(${p.x},${p.y})" opacity="0.22">` +
-        `<path d="M0-10 C-5-10 -8-6 -8-3 C-8 2 0 8 0 8 C0 8 8 2 8-3 C8-6 5-10 0-10Z" fill="${color}"/>` +
-        `<circle cx="0" cy="-3" r="2.5" fill="white" opacity="0.9"/>` +
+    p.push(
+      `<g transform="translate(${pin.x},${pin.y})" opacity="0.20">` +
+        `<path d="M0-9 C-4-9 -7-5 -7-3 C-7 1 0 7 0 7 C0 7 7 1 7-3 C7-5 4-9 0-9Z" fill="${color}"/>` +
+        `<circle cx="0" cy="-3" r="2" fill="white" opacity="0.9"/>` +
       `</g>`
     );
   });
 
-  // ── Small park/green areas (irregular shapes) ──
-  const parks = [
-    { x: 460, y: 140, w: 50, h: 35 },
-    { x: 760, y: 540, w: 40, h: 45 },
-    { x: 170, y: 400, w: 55, h: 30 },
-    { x: 1060, y: 680, w: 45, h: 40 },
-  ];
-  parks.forEach((p, i) => {
-    parts.push(
-      `<rect x="${p.x}" y="${p.y}" width="${p.w}" height="${p.h}" rx="6" fill="${c(i + 1)}" opacity="0.04"/>`
-    );
-  });
+  // ── River (organic S-curve) ──
+  p.push(
+    `<path d="M1300 -20 C1250 80 1180 150 1200 250 S1150 400 1180 500 S1120 650 1200 800 L1250 950" fill="none" stroke="${c(1)}" stroke-width="4" opacity="0.05" stroke-linecap="round"/>`
+  );
+  // River banks
+  p.push(
+    `<path d="M1310 -20 C1260 80 1190 150 1210 250 S1160 400 1190 500 S1130 650 1210 800 L1260 950" fill="none" stroke="${c(1)}" stroke-width="0.5" opacity="0.08" stroke-linecap="round"/>`
+  );
+  p.push(
+    `<path d="M1290 -20 C1240 80 1170 150 1190 250 S1140 400 1170 500 S1110 650 1190 800 L1240 950" fill="none" stroke="${c(1)}" stroke-width="0.5" opacity="0.08" stroke-linecap="round"/>`
+  );
 
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 950" preserveAspectRatio="xMidYMid slice">${parts.join('')}</svg>`;
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 950" preserveAspectRatio="xMidYMid slice">${p.join('')}</svg>`;
 }
 
 export default function MapBackground({ products }: MapBackgroundProps) {
