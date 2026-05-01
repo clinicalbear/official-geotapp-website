@@ -111,7 +111,12 @@ export default function ArticleFooter({ relatedPosts, morePosts, locale }: Artic
 
 function CtaBanner({ labels, locale }: { labels: typeof FOOTER_LABELS[string]; locale: string }) {
   return (
-    <section className="bg-gradient-to-br from-slate-900 to-slate-800">
+    <section
+      style={{
+        background: 'linear-gradient(135deg, #2a8fc4 0%, #3BAEE0 50%, #2a8fc4 100%)',
+        boxShadow: 'inset 0 4px 12px rgba(0,0,0,0.15), inset 0 -4px 12px rgba(0,0,0,0.1)',
+      }}
+    >
       <div className="max-w-4xl mx-auto text-center py-20 px-6">
         <h2 className="text-3xl md:text-4xl font-display font-bold text-white">
           {labels.cta_title}
