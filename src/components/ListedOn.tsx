@@ -19,7 +19,17 @@ const logoStyles = `
 }
 .listed-on-logo:hover {
   filter: brightness(1) invert(0) opacity(1) drop-shadow(0 4px 12px rgba(0,0,0,0.25));
-  transform: scale(1.12);
+  transform: scale(1.15);
+}
+@keyframes logo-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.logo-carousel {
+  animation: logo-scroll 35s linear infinite;
+}
+.logo-carousel:hover {
+  animation-play-state: paused;
 }
 `;
 
@@ -144,10 +154,13 @@ function FullListedOn({ locale }: { locale: string }) {
   const label = LABEL[locale] ?? LABEL.en;
 
   const platforms = [
-    { name: 'Capterra', url: URLS.capterra, logo: <CapterraLogo scale={3} /> },
-    { name: 'GetApp', url: URLS.getapp, logo: <GetAppLogo scale={3} /> },
-    { name: 'Software Advice', url: URLS.softwareadvice, logo: <SoftwareAdviceLogo scale={3} /> },
-    { name: 'SaaSHub', url: URLS.saashub, logo: <SaaSHubLogo scale={3} /> },
+    { name: 'Capterra', url: URLS.capterra, logo: <CapterraLogo scale={2.5} /> },
+    { name: 'GetApp', url: URLS.getapp, logo: <GetAppLogo scale={2.5} /> },
+    { name: 'Software Advice', url: URLS.softwareadvice, logo: <SoftwareAdviceLogo scale={2.5} /> },
+    { name: 'SaaSHub', url: URLS.saashub, logo: <SaaSHubLogo scale={2.5} /> },
+    { name: 'Kompass', url: URLS.kompass, logo: <KompassLogo scale={2.5} /> },
+    { name: 'Cylex', url: URLS.cylex, logo: <CylexLogo scale={2.5} /> },
+    { name: 'Hotfrog', url: URLS.hotfrog, logo: <HotfrogLogo scale={2.5} /> },
   ];
 
   return (
@@ -183,29 +196,24 @@ function FullListedOn({ locale }: { locale: string }) {
         {label}
       </span>
 
-      <div
-        style={{
-          position: 'relative',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          gap: '64px',
-          flexWrap: 'wrap',
-          marginTop: '92px',
-        }}
-      >
-        {platforms.map((p) => (
-          <a
-            key={p.name}
-            href={p.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={p.name}
-            className="listed-on-logo"
-          >
-            {p.logo}
-          </a>
-        ))}
+      {/* Carousel container */}
+      <div style={{ overflow: 'hidden', position: 'relative', marginTop: '92px' }}>
+        <div className="logo-carousel" style={{ display: 'flex', alignItems: 'center', gap: '80px', width: 'max-content' }}>
+          {/* Render logos twice for seamless loop */}
+          {[...platforms, ...platforms].map((p, i) => (
+            <a
+              key={`${p.name}-${i}`}
+              href={p.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={p.name}
+              className="listed-on-logo"
+              style={{ flexShrink: 0 }}
+            >
+              {p.logo}
+            </a>
+          ))}
+        </div>
       </div>
     </motion.div>
   );
