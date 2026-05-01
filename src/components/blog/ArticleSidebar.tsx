@@ -66,10 +66,10 @@ function ShareButtons({ title, copiedLabel }: { title: string; copiedLabel: stri
   };
 
   const shareLinks = [
-    { icon: <LinkedInIcon />, label: 'LinkedIn', href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}` },
-    { icon: <FacebookIcon />, label: 'Facebook', href: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}` },
-    { icon: <XIcon />, label: 'X', href: `https://x.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(title)}` },
-    { icon: <EmailIcon />, label: 'Email', href: `mailto:?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(url)}` },
+    { icon: <LinkedInIcon />, label: 'LinkedIn', href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, hoverColor: '#0A66C2' },
+    { icon: <FacebookIcon />, label: 'Facebook', href: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`, hoverColor: '#1877F2' },
+    { icon: <XIcon />, label: 'X', href: `https://x.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(title)}`, hoverColor: '#000000' },
+    { icon: <EmailIcon />, label: 'Email', href: `mailto:?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(url)}`, hoverColor: '#EA4335' },
   ];
 
   return (
@@ -81,7 +81,9 @@ function ShareButtons({ title, copiedLabel }: { title: string; copiedLabel: stri
           target={s.label === 'Email' ? '_self' : '_blank'}
           rel="noopener noreferrer"
           aria-label={s.label}
-          className="p-2 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-lg transition-all"
+          className="p-2 text-slate-400 rounded-lg transition-all duration-200 hover:bg-slate-50"
+          onMouseEnter={(e) => { e.currentTarget.style.color = s.hoverColor; }}
+          onMouseLeave={(e) => { e.currentTarget.style.color = ''; }}
         >
           {s.icon}
         </a>
@@ -89,7 +91,9 @@ function ShareButtons({ title, copiedLabel }: { title: string; copiedLabel: stri
       <button
         onClick={handleCopy}
         aria-label="Copy link"
-        className={`p-2 rounded-lg transition-all ${copied ? 'text-green-500 bg-green-50' : 'text-slate-400 hover:text-slate-700 hover:bg-slate-100'}`}
+        className={`p-2 rounded-lg transition-all duration-200 ${copied ? 'text-green-500 bg-green-50' : 'text-slate-400 hover:bg-slate-50'}`}
+        onMouseEnter={(e) => { if (!copied) e.currentTarget.style.color = '#8FC436'; }}
+        onMouseLeave={(e) => { if (!copied) e.currentTarget.style.color = ''; }}
       >
         {copied ? <CheckIcon /> : <LinkIcon />}
       </button>
