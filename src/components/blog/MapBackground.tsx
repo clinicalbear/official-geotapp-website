@@ -10,191 +10,100 @@ const COLORS = {
   verifier: '#22C55E',
 };
 
-/**
- * Isometric building: top face + right face + front face
- * Creates a 3D block effect viewed from top-right
- */
-function isoBuilding(x: number, y: number, w: number, d: number, h: number, color: string, opacity: number): string {
-  // Isometric projection: x shifts right, y shifts down-right
-  const iso = 0.5; // isometric ratio
-
-  // Top face (roof)
-  const topFace = `M${x},${y - h} L${x + w},${y - h + w * iso * 0.5} L${x + w + d},${y - h + (w - d) * iso * 0.5} L${x + d},${y - h - d * iso * 0.5} Z`;
-
-  // Front face (left wall)
-  const frontFace = `M${x},${y - h} L${x + d},${y - h - d * iso * 0.5} L${x + d},${y - d * iso * 0.5} L${x},${y} Z`;
-
-  // Right face (right wall)
-  const rightFace = `M${x + d},${y - h - d * iso * 0.5} L${x + w + d},${y - h + (w - d) * iso * 0.5} L${x + w + d},${y + (w - d) * iso * 0.5} L${x + d},${y - d * iso * 0.5} Z`;
-
-  return (
-    `<path d="${topFace}" fill="${color}" opacity="${opacity * 0.7}"/>` +
-    `<path d="${frontFace}" fill="${color}" opacity="${opacity * 1.0}"/>` +
-    `<path d="${rightFace}" fill="${color}" opacity="${opacity * 0.5}"/>`
-  );
-}
-
-/**
- * Flat road segment
- */
-function road(x1: number, y1: number, x2: number, y2: number, width: number, color: string): string {
-  return `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${color}" stroke-width="${width}" opacity="0.10" stroke-linecap="round"/>`;
-}
-
-/**
- * GPS pin in isometric style
- */
-function pin(x: number, y: number, color: string): string {
-  return (
-    `<g transform="translate(${x},${y})" opacity="0.25">` +
-      // Shadow ellipse on ground
-      `<ellipse cx="0" cy="2" rx="4" ry="1.5" fill="#000" opacity="0.15"/>` +
-      // Pin body
-      `<path d="M0-14 C-5-14 -8-10 -8-7 C-8-2 0 4 0 4 C0 4 8-2 8-7 C8-10 5-14 0-14Z" fill="${color}"/>` +
-      // White dot
-      `<circle cx="0" cy="-7" r="2.5" fill="white" opacity="0.9"/>` +
-    `</g>`
-  );
-}
-
 function buildSvg(colors: string[]): string {
   const c = (i: number) => colors[i % colors.length];
   const p: string[] = [];
 
-  // ── ROADS — straight streets forming a city grid ──
+  // ── Coordinate grid (lat/lon style) ──
+  for (let x = 0; x <= 1400; x += 100) {
+    const op = x % 200 === 0 ? '0.06' : '0.03';
+    const sw = x % 200 === 0 ? '0.8' : '0.4';
+    p.push(`<line x1="${x}" y1="0" x2="${x}" y2="950" stroke="${c(0)}" stroke-width="${sw}" opacity="${op}"/>`);
+  }
+  for (let y = 0; y <= 950; y += 100) {
+    const op = y % 200 === 0 ? '0.06' : '0.03';
+    const sw = y % 200 === 0 ? '0.8' : '0.4';
+    p.push(`<line x1="0" y1="${y}" x2="1400" y2="${y}" stroke="${c(1)}" stroke-width="${sw}" opacity="${op}"/>`);
+  }
 
-  // Horizontal streets
-  p.push(road(0, 200, 1400, 200, 3, c(0)));
-  p.push(road(0, 400, 1400, 400, 3.5, c(1)));
-  p.push(road(0, 600, 1400, 600, 3, c(2)));
-  p.push(road(0, 800, 1400, 800, 2.5, c(0)));
-
-  // Vertical streets
-  p.push(road(200, 0, 200, 950, 3, c(1)));
-  p.push(road(450, 0, 450, 950, 3.5, c(2)));
-  p.push(road(700, 0, 700, 950, 3, c(0)));
-  p.push(road(950, 0, 950, 950, 3, c(1)));
-  p.push(road(1200, 0, 1200, 950, 2.5, c(2)));
-
-  // Diagonal boulevard
-  p.push(`<path d="M0 100 L500 350 L800 300 L1400 550" fill="none" stroke="${c(0)}" stroke-width="2.5" opacity="0.08" stroke-linecap="round"/>`);
-  // Curved ring road
-  p.push(`<path d="M100 700 Q400 650 700 700 Q1000 750 1300 680" fill="none" stroke="${c(1)}" stroke-width="2" opacity="0.07" stroke-linecap="round"/>`);
-
-  // Secondary streets (thinner)
-  p.push(road(320, 200, 320, 400, 1.5, c(2)));
-  p.push(road(580, 200, 580, 400, 1.5, c(0)));
-  p.push(road(830, 400, 830, 600, 1.5, c(1)));
-  p.push(road(1080, 400, 1080, 600, 1.5, c(2)));
-  p.push(road(200, 300, 450, 300, 1.5, c(0)));
-  p.push(road(450, 500, 700, 500, 1.5, c(1)));
-  p.push(road(700, 300, 950, 300, 1.5, c(2)));
-  p.push(road(950, 500, 1200, 500, 1.5, c(0)));
-  p.push(road(200, 700, 450, 700, 1.5, c(1)));
-  p.push(road(700, 700, 950, 700, 1.5, c(2)));
-
-  // ── ISOMETRIC BUILDINGS — 3D blocks between streets ──
-
-  // Block 1 (top-left: between x200-450, y200-400)
-  p.push(isoBuilding(230, 280, 30, 20, 35, c(0), 0.09));
-  p.push(isoBuilding(290, 300, 25, 15, 25, c(1), 0.08));
-  p.push(isoBuilding(340, 270, 35, 20, 45, c(2), 0.10));
-  p.push(isoBuilding(240, 350, 28, 18, 30, c(0), 0.08));
-  p.push(isoBuilding(330, 360, 22, 16, 20, c(1), 0.07));
-  p.push(isoBuilding(400, 280, 20, 14, 28, c(2), 0.08));
-
-  // Block 2 (top-center: between x450-700, y200-400)
-  p.push(isoBuilding(480, 280, 35, 22, 50, c(1), 0.10));
-  p.push(isoBuilding(550, 300, 28, 18, 30, c(2), 0.08));
-  p.push(isoBuilding(490, 360, 32, 20, 40, c(0), 0.09));
-  p.push(isoBuilding(610, 270, 25, 16, 35, c(1), 0.08));
-  p.push(isoBuilding(640, 350, 30, 18, 25, c(2), 0.07));
-  p.push(isoBuilding(560, 250, 20, 14, 22, c(0), 0.07));
-
-  // Block 3 (top-right: between x700-950, y200-400)
-  p.push(isoBuilding(730, 280, 30, 20, 45, c(2), 0.10));
-  p.push(isoBuilding(800, 300, 35, 22, 55, c(0), 0.11));
-  p.push(isoBuilding(870, 280, 25, 16, 30, c(1), 0.08));
-  p.push(isoBuilding(740, 360, 28, 18, 35, c(2), 0.09));
-  p.push(isoBuilding(830, 350, 22, 14, 20, c(0), 0.07));
-  p.push(isoBuilding(910, 340, 20, 16, 28, c(1), 0.08));
-
-  // Block 4 (far right: between x950-1200, y200-400)
-  p.push(isoBuilding(980, 270, 32, 20, 40, c(0), 0.09));
-  p.push(isoBuilding(1050, 290, 28, 18, 50, c(1), 0.10));
-  p.push(isoBuilding(1120, 280, 25, 16, 32, c(2), 0.08));
-  p.push(isoBuilding(990, 360, 30, 20, 25, c(0), 0.07));
-  p.push(isoBuilding(1070, 350, 35, 22, 45, c(1), 0.09));
-  p.push(isoBuilding(1150, 340, 22, 14, 28, c(2), 0.08));
-
-  // Block 5 (middle-left: between x200-450, y400-600)
-  p.push(isoBuilding(230, 480, 28, 18, 35, c(1), 0.09));
-  p.push(isoBuilding(300, 500, 32, 20, 42, c(2), 0.10));
-  p.push(isoBuilding(380, 470, 25, 16, 28, c(0), 0.08));
-  p.push(isoBuilding(250, 560, 30, 18, 38, c(1), 0.09));
-  p.push(isoBuilding(350, 550, 22, 14, 22, c(2), 0.07));
-
-  // Block 6 (middle-center: between x450-700, y400-600)
-  p.push(isoBuilding(480, 470, 35, 22, 55, c(0), 0.11));
-  p.push(isoBuilding(560, 490, 28, 18, 35, c(1), 0.09));
-  p.push(isoBuilding(630, 480, 30, 20, 42, c(2), 0.10));
-  p.push(isoBuilding(490, 560, 25, 16, 28, c(0), 0.08));
-  p.push(isoBuilding(580, 550, 32, 20, 38, c(1), 0.09));
-
-  // Block 7 (middle-right: between x700-950, y400-600)
-  p.push(isoBuilding(730, 480, 30, 20, 48, c(2), 0.10));
-  p.push(isoBuilding(810, 470, 35, 22, 35, c(0), 0.09));
-  p.push(isoBuilding(890, 490, 25, 16, 30, c(1), 0.08));
-  p.push(isoBuilding(750, 560, 28, 18, 25, c(2), 0.07));
-  p.push(isoBuilding(860, 550, 30, 20, 40, c(0), 0.09));
-
-  // Block 8 (far right middle: between x950-1200, y400-600)
-  p.push(isoBuilding(980, 480, 32, 20, 45, c(1), 0.10));
-  p.push(isoBuilding(1060, 470, 28, 18, 55, c(2), 0.11));
-  p.push(isoBuilding(1140, 490, 25, 16, 32, c(0), 0.08));
-  p.push(isoBuilding(1000, 560, 30, 20, 28, c(1), 0.08));
-  p.push(isoBuilding(1100, 550, 35, 22, 40, c(2), 0.09));
-
-  // Bottom row buildings (between y600-800)
-  p.push(isoBuilding(230, 680, 28, 18, 30, c(0), 0.08));
-  p.push(isoBuilding(340, 700, 32, 20, 40, c(1), 0.09));
-  p.push(isoBuilding(490, 680, 30, 20, 35, c(2), 0.09));
-  p.push(isoBuilding(600, 700, 25, 16, 28, c(0), 0.08));
-  p.push(isoBuilding(730, 690, 35, 22, 50, c(1), 0.10));
-  p.push(isoBuilding(870, 680, 28, 18, 32, c(2), 0.08));
-  p.push(isoBuilding(990, 700, 30, 20, 42, c(0), 0.09));
-  p.push(isoBuilding(1100, 680, 25, 16, 28, c(1), 0.08));
-
-  // Top row buildings (y0-200)
-  p.push(isoBuilding(230, 150, 25, 16, 30, c(2), 0.08));
-  p.push(isoBuilding(350, 170, 30, 20, 40, c(0), 0.09));
-  p.push(isoBuilding(500, 150, 28, 18, 35, c(1), 0.09));
-  p.push(isoBuilding(640, 160, 32, 20, 45, c(2), 0.10));
-  p.push(isoBuilding(780, 140, 25, 16, 28, c(0), 0.08));
-  p.push(isoBuilding(920, 160, 30, 18, 38, c(1), 0.09));
-  p.push(isoBuilding(1060, 150, 28, 16, 32, c(2), 0.08));
-
-  // ── ROUNDABOUTS ──
-  const roundabouts = [
-    { x: 450, y: 400 }, { x: 700, y: 200 }, { x: 950, y: 400 },
-    { x: 700, y: 600 }, { x: 200, y: 400 }, { x: 1200, y: 600 },
+  // ── Coordinate labels (faint numbers like lat/lon) ──
+  const coords = [
+    { x: 205, y: 15, t: '45.4642° N' }, { x: 405, y: 15, t: '9.1900° E' },
+    { x: 605, y: 15, t: '45.4654° N' }, { x: 805, y: 15, t: '9.1915° E' },
+    { x: 1005, y: 15, t: '45.4668° N' }, { x: 1205, y: 15, t: '9.1932° E' },
+    { x: 5, y: 205, t: '45.464°' }, { x: 5, y: 405, t: '45.463°' },
+    { x: 5, y: 605, t: '45.462°' }, { x: 5, y: 805, t: '45.461°' },
   ];
-  roundabouts.forEach((r, i) => {
-    p.push(`<circle cx="${r.x}" cy="${r.y}" r="10" fill="none" stroke="${c(i)}" stroke-width="1.5" opacity="0.12"/>`);
-    p.push(`<circle cx="${r.x}" cy="${r.y}" r="4" fill="${c(i)}" opacity="0.06"/>`);
+  coords.forEach((co) => {
+    p.push(`<text x="${co.x}" y="${co.y}" font-family="monospace" font-size="7" fill="${c(0)}" opacity="0.08">${co.t}</text>`);
   });
 
-  // ── GPS PINS ──
-  const pins_data = [
-    { x: 320, y: 280 }, { x: 550, y: 480 }, { x: 800, y: 290 },
-    { x: 1050, y: 470 }, { x: 400, y: 560 }, { x: 730, y: 680 },
-    { x: 250, y: 470 }, { x: 920, y: 550 }, { x: 1150, y: 280 },
-    { x: 500, y: 160 }, { x: 870, y: 690 }, { x: 650, y: 350 },
-    { x: 350, y: 700 }, { x: 1000, y: 700 }, { x: 150, y: 280 },
+  // ── GPS route paths (dashed, like navigation trails) ──
+  const routes = [
+    { d: 'M120 180 L280 220 L350 380 L500 350 L580 500 L720 480 L800 620', color: c(0), w: 2 },
+    { d: 'M900 120 L850 280 L950 380 L880 520 L1000 580 L1100 500 L1200 620 L1280 580', color: c(1), w: 2 },
+    { d: 'M300 650 L450 600 L550 700 L700 660 L780 780 L920 720 L1050 800', color: c(2), w: 2 },
+    { d: 'M150 450 L250 500 L380 440 L480 520 L560 460', color: c(0), w: 1.5 },
+    { d: 'M650 200 L720 300 L680 380 L760 420', color: c(1), w: 1.5 },
+    { d: 'M1050 250 L1120 350 L1080 420 L1180 480', color: c(2), w: 1.5 },
   ];
-  pins_data.forEach((pp, i) => {
-    p.push(pin(pp.x, pp.y, c(i)));
+  routes.forEach((r) => {
+    p.push(`<path d="${r.d}" fill="none" stroke="${r.color}" stroke-width="${r.w}" opacity="0.12" stroke-dasharray="8 4" stroke-linecap="round"/>`);
   });
+
+  // ── Waypoints (circles at route turns with pulse ring) ──
+  const waypoints = [
+    { x: 120, y: 180 }, { x: 350, y: 380 }, { x: 580, y: 500 }, { x: 800, y: 620 },
+    { x: 900, y: 120 }, { x: 950, y: 380 }, { x: 1100, y: 500 }, { x: 1280, y: 580 },
+    { x: 300, y: 650 }, { x: 550, y: 700 }, { x: 780, y: 780 }, { x: 1050, y: 800 },
+    { x: 250, y: 500 }, { x: 480, y: 520 }, { x: 720, y: 300 }, { x: 1120, y: 350 },
+    { x: 280, y: 220 }, { x: 500, y: 350 }, { x: 720, y: 480 },
+    { x: 850, y: 280 }, { x: 1000, y: 580 }, { x: 450, y: 600 },
+    { x: 700, y: 660 }, { x: 920, y: 720 }, { x: 880, y: 520 },
+  ];
+  waypoints.forEach((w, i) => {
+    const color = c(i);
+    // Outer pulse ring
+    p.push(`<circle cx="${w.x}" cy="${w.y}" r="8" fill="none" stroke="${color}" stroke-width="0.5" opacity="0.08"/>`);
+    // Inner filled dot
+    p.push(`<circle cx="${w.x}" cy="${w.y}" r="3" fill="${color}" opacity="0.15"/>`);
+    // Center bright dot
+    p.push(`<circle cx="${w.x}" cy="${w.y}" r="1.2" fill="${color}" opacity="0.25"/>`);
+  });
+
+  // ── Distance markers (small ticks along routes) ──
+  const ticks = [
+    { x: 200, y: 200, r: 15 }, { x: 430, y: 360, r: -10 },
+    { x: 650, y: 490, r: 20 }, { x: 870, y: 300, r: -15 },
+    { x: 1050, y: 560, r: 10 }, { x: 380, y: 620, r: -8 },
+    { x: 750, y: 720, r: 12 }, { x: 1150, y: 460, r: -18 },
+  ];
+  ticks.forEach((t, i) => {
+    p.push(`<line x1="${t.x - 4}" y1="${t.y}" x2="${t.x + 4}" y2="${t.y}" stroke="${c(i)}" stroke-width="0.6" opacity="0.10" transform="rotate(${t.r} ${t.x} ${t.y})"/>`);
+  });
+
+  // ── Signal radius circles (like GPS accuracy zones) ──
+  const signals = [
+    { x: 350, y: 380, r: 40 }, { x: 950, y: 380, r: 50 },
+    { x: 550, y: 700, r: 35 }, { x: 1100, y: 500, r: 45 },
+    { x: 250, y: 500, r: 30 }, { x: 800, y: 620, r: 42 },
+  ];
+  signals.forEach((s, i) => {
+    p.push(`<circle cx="${s.x}" cy="${s.y}" r="${s.r}" fill="${c(i)}" opacity="0.03"/>`);
+    p.push(`<circle cx="${s.x}" cy="${s.y}" r="${s.r}" fill="none" stroke="${c(i)}" stroke-width="0.5" opacity="0.06" stroke-dasharray="3 3"/>`);
+  });
+
+  // ── Compass rose (top-right area) ──
+  const cx = 1300, cy = 100;
+  p.push(`<circle cx="${cx}" cy="${cy}" r="25" fill="none" stroke="${c(0)}" stroke-width="0.5" opacity="0.08"/>`);
+  p.push(`<circle cx="${cx}" cy="${cy}" r="18" fill="none" stroke="${c(0)}" stroke-width="0.3" opacity="0.06"/>`);
+  // N-S line
+  p.push(`<line x1="${cx}" y1="${cy - 22}" x2="${cx}" y2="${cy + 22}" stroke="${c(0)}" stroke-width="0.4" opacity="0.08"/>`);
+  // E-W line
+  p.push(`<line x1="${cx - 22}" y1="${cy}" x2="${cx + 22}" y2="${cy}" stroke="${c(0)}" stroke-width="0.4" opacity="0.08"/>`);
+  // N arrow
+  p.push(`<path d="M${cx} ${cy - 22} L${cx - 3} ${cy - 16} L${cx + 3} ${cy - 16} Z" fill="${c(0)}" opacity="0.12"/>`);
+  p.push(`<text x="${cx - 2}" y="${cy - 27}" font-family="monospace" font-size="6" fill="${c(0)}" opacity="0.10">N</text>`);
 
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 950" preserveAspectRatio="xMidYMid slice">${p.join('')}</svg>`;
 }
@@ -204,7 +113,7 @@ export default function MapBackground({ products }: MapBackgroundProps) {
     ? products
     : (['timetracker', 'flow', 'verifier'] as const);
 
-  const colors = activeProducts.map((p) => COLORS[p]);
+  const colors = activeProducts.map((pp) => COLORS[pp]);
   const svg = buildSvg(colors);
   const encoded = `url("data:image/svg+xml,${encodeURIComponent(svg)}")`;
 
@@ -213,21 +122,17 @@ export default function MapBackground({ products }: MapBackgroundProps) {
       aria-hidden="true"
       style={{
         position: 'fixed',
-        inset: '-15% -8%',
-        width: '116%',
-        height: '130%',
+        inset: 0,
         zIndex: 0,
         pointerEvents: 'none',
         backgroundImage: encoded,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
-        transform: 'perspective(1200px) rotateX(10deg) rotateZ(-2deg)',
-        transformOrigin: 'center center',
         maskImage:
-          'linear-gradient(to right, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.5) 15%, transparent 30%, transparent 70%, rgba(0,0,0,0.5) 85%, rgba(0,0,0,0.9) 100%)',
+          'linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 18%, transparent 32%, transparent 68%, rgba(0,0,0,0.5) 82%, rgba(0,0,0,1) 100%)',
         WebkitMaskImage:
-          'linear-gradient(to right, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.5) 15%, transparent 30%, transparent 70%, rgba(0,0,0,0.5) 85%, rgba(0,0,0,0.9) 100%)',
+          'linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 18%, transparent 32%, transparent 68%, rgba(0,0,0,0.5) 82%, rgba(0,0,0,1) 100%)',
       }}
     />
   );
