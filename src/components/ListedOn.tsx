@@ -158,7 +158,6 @@ function FullListedOn({ locale }: { locale: string }) {
     { name: 'GetApp', url: URLS.getapp, logo: <GetAppLogo scale={2.5} /> },
     { name: 'Software Advice', url: URLS.softwareadvice, logo: <SoftwareAdviceLogo scale={2.5} /> },
     { name: 'SaaSHub', url: URLS.saashub, logo: <SaaSHubLogo scale={2.5} /> },
-    { name: 'Kompass', url: URLS.kompass, logo: <KompassLogo scale={2.5} /> },
     { name: 'Cylex', url: URLS.cylex, logo: <CylexLogo scale={2.5} /> },
     { name: 'Hotfrog', url: URLS.hotfrog, logo: <HotfrogLogo scale={2.5} /> },
   ];
