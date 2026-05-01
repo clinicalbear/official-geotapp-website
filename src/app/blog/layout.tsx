@@ -31,7 +31,7 @@ export default function BlogLayout({ children }: { children: ReactNode }) {
         </Script>
       </head>
       <body className={clsx(inter.variable, poppins.variable, 'font-sans bg-background text-text-primary antialiased')}>
-        <div className="relative min-h-screen overflow-hidden">
+        <div className="relative min-h-screen overflow-x-clip">
           <div className="relative z-10">
             <Navbar />
             <main>{children}</main>
