@@ -10,133 +10,190 @@ const COLORS = {
   verifier: '#22C55E',
 };
 
+/**
+ * Isometric building: top face + right face + front face
+ * Creates a 3D block effect viewed from top-right
+ */
+function isoBuilding(x: number, y: number, w: number, d: number, h: number, color: string, opacity: number): string {
+  // Isometric projection: x shifts right, y shifts down-right
+  const iso = 0.5; // isometric ratio
+
+  // Top face (roof)
+  const topFace = `M${x},${y - h} L${x + w},${y - h + w * iso * 0.5} L${x + w + d},${y - h + (w - d) * iso * 0.5} L${x + d},${y - h - d * iso * 0.5} Z`;
+
+  // Front face (left wall)
+  const frontFace = `M${x},${y - h} L${x + d},${y - h - d * iso * 0.5} L${x + d},${y - d * iso * 0.5} L${x},${y} Z`;
+
+  // Right face (right wall)
+  const rightFace = `M${x + d},${y - h - d * iso * 0.5} L${x + w + d},${y - h + (w - d) * iso * 0.5} L${x + w + d},${y + (w - d) * iso * 0.5} L${x + d},${y - d * iso * 0.5} Z`;
+
+  return (
+    `<path d="${topFace}" fill="${color}" opacity="${opacity * 0.7}"/>` +
+    `<path d="${frontFace}" fill="${color}" opacity="${opacity * 1.0}"/>` +
+    `<path d="${rightFace}" fill="${color}" opacity="${opacity * 0.5}"/>`
+  );
+}
+
+/**
+ * Flat road segment
+ */
+function road(x1: number, y1: number, x2: number, y2: number, width: number, color: string): string {
+  return `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${color}" stroke-width="${width}" opacity="0.10" stroke-linecap="round"/>`;
+}
+
+/**
+ * GPS pin in isometric style
+ */
+function pin(x: number, y: number, color: string): string {
+  return (
+    `<g transform="translate(${x},${y})" opacity="0.25">` +
+      // Shadow ellipse on ground
+      `<ellipse cx="0" cy="2" rx="4" ry="1.5" fill="#000" opacity="0.15"/>` +
+      // Pin body
+      `<path d="M0-14 C-5-14 -8-10 -8-7 C-8-2 0 4 0 4 C0 4 8-2 8-7 C8-10 5-14 0-14Z" fill="${color}"/>` +
+      // White dot
+      `<circle cx="0" cy="-7" r="2.5" fill="white" opacity="0.9"/>` +
+    `</g>`
+  );
+}
+
 function buildSvg(colors: string[]): string {
   const c = (i: number) => colors[i % colors.length];
   const p: string[] = [];
 
-  // ── LEFT SIDE — organic European old town ──
+  // ── ROADS — straight streets forming a city grid ──
 
-  // Main boulevard curving left side
-  p.push(`<path d="M-20 280 C80 260 180 300 280 270 S400 230 500 290 S600 350 680 310" fill="none" stroke="${c(0)}" stroke-width="1.5" opacity="0.16" stroke-linecap="round"/>`);
-  // Vertical main road left
-  p.push(`<path d="M300 -20 C280 80 320 180 290 300 S260 420 310 550 S340 680 280 850 L260 950" fill="none" stroke="${c(1)}" stroke-width="1.5" opacity="0.16" stroke-linecap="round"/>`);
-  // Diagonal avenue left
-  p.push(`<path d="M-20 120 C60 140 150 200 250 310 S350 430 420 520 S480 600 500 700" fill="none" stroke="${c(2)}" stroke-width="1.4" opacity="0.14" stroke-linecap="round"/>`);
-  // Lower horizontal left
-  p.push(`<path d="M-20 580 C100 560 200 600 320 570 S450 530 550 580" fill="none" stroke="${c(0)}" stroke-width="1.3" opacity="0.14" stroke-linecap="round"/>`);
-  // Left side streets
-  p.push(`<path d="M120 260 C140 330 100 400 150 470" fill="none" stroke="${c(1)}" stroke-width="0.7" opacity="0.11" stroke-linecap="round"/>`);
-  p.push(`<path d="M280 270 C300 340 270 410 310 490" fill="none" stroke="${c(2)}" stroke-width="0.7" opacity="0.11" stroke-linecap="round"/>`);
-  p.push(`<path d="M420 230 C400 300 440 370 410 440" fill="none" stroke="${c(0)}" stroke-width="0.7" opacity="0.11" stroke-linecap="round"/>`);
-  p.push(`<path d="M80 400 C130 420 170 390 220 430" fill="none" stroke="${c(1)}" stroke-width="0.6" opacity="0.10" stroke-linecap="round"/>`);
-  p.push(`<path d="M180 500 C230 520 260 490 320 530" fill="none" stroke="${c(2)}" stroke-width="0.6" opacity="0.10" stroke-linecap="round"/>`);
-  p.push(`<path d="M100 140 C130 190 110 240 160 280" fill="none" stroke="${c(0)}" stroke-width="0.6" opacity="0.10" stroke-linecap="round"/>`);
-  p.push(`<path d="M350 130 C340 200 370 270 340 340" fill="none" stroke="${c(1)}" stroke-width="0.6" opacity="0.10" stroke-linecap="round"/>`);
-  // Alleys
-  p.push(`<path d="M160 310 C180 330 170 360 190 380" fill="none" stroke="${c(2)}" stroke-width="0.4" opacity="0.09" stroke-linecap="round"/>`);
-  p.push(`<path d="M250 400 C270 430 250 460 280 480" fill="none" stroke="${c(0)}" stroke-width="0.4" opacity="0.09" stroke-linecap="round"/>`);
-  p.push(`<path d="M380 350 C400 370 390 400 410 430" fill="none" stroke="${c(1)}" stroke-width="0.4" opacity="0.09" stroke-linecap="round"/>`);
-  p.push(`<path d="M70 500 L30 530" fill="none" stroke="${c(2)}" stroke-width="0.4" opacity="0.08" stroke-linecap="round"/>`);
-  p.push(`<path d="M200 600 L160 640" fill="none" stroke="${c(0)}" stroke-width="0.4" opacity="0.08" stroke-linecap="round"/>`);
+  // Horizontal streets
+  p.push(road(0, 200, 1400, 200, 3, c(0)));
+  p.push(road(0, 400, 1400, 400, 3.5, c(1)));
+  p.push(road(0, 600, 1400, 600, 3, c(2)));
+  p.push(road(0, 800, 1400, 800, 2.5, c(0)));
 
-  // ── RIGHT SIDE — different neighborhood, more diagonal/radial ──
+  // Vertical streets
+  p.push(road(200, 0, 200, 950, 3, c(1)));
+  p.push(road(450, 0, 450, 950, 3.5, c(2)));
+  p.push(road(700, 0, 700, 950, 3, c(0)));
+  p.push(road(950, 0, 950, 950, 3, c(1)));
+  p.push(road(1200, 0, 1200, 950, 2.5, c(2)));
 
-  // Radial road from a central point (piazza)
-  const piazzaX = 1050, piazzaY = 400;
-  p.push(`<path d="M${piazzaX} ${piazzaY} C1100 350 1150 280 1200 200 S1280 100 1350 -20" fill="none" stroke="${c(0)}" stroke-width="1.4" opacity="0.15" stroke-linecap="round"/>`);
-  p.push(`<path d="M${piazzaX} ${piazzaY} C1120 420 1200 450 1300 460 S1380 470 1450 480" fill="none" stroke="${c(1)}" stroke-width="1.4" opacity="0.15" stroke-linecap="round"/>`);
-  p.push(`<path d="M${piazzaX} ${piazzaY} C1080 460 1120 540 1150 640 S1180 750 1200 850" fill="none" stroke="${c(2)}" stroke-width="1.4" opacity="0.15" stroke-linecap="round"/>`);
-  p.push(`<path d="M${piazzaX} ${piazzaY} C1000 440 950 500 900 580 S840 680 800 780" fill="none" stroke="${c(0)}" stroke-width="1.3" opacity="0.14" stroke-linecap="round"/>`);
-  p.push(`<path d="M${piazzaX} ${piazzaY} C1010 350 980 280 960 200 S930 100 920 -20" fill="none" stroke="${c(1)}" stroke-width="1.3" opacity="0.14" stroke-linecap="round"/>`);
-  p.push(`<path d="M${piazzaX} ${piazzaY} C1100 380 1180 340 1280 310 S1380 280 1450 260" fill="none" stroke="${c(2)}" stroke-width="1.2" opacity="0.13" stroke-linecap="round"/>`);
-  // Ring around piazza
-  p.push(`<circle cx="${piazzaX}" cy="${piazzaY}" r="30" fill="none" stroke="${c(0)}" stroke-width="1.2" opacity="0.14"/>`);
-  p.push(`<circle cx="${piazzaX}" cy="${piazzaY}" r="10" fill="${c(0)}" opacity="0.06"/>`);
-  // Right side streets connecting radials
-  p.push(`<path d="M1100 280 C1140 310 1120 360 1160 380" fill="none" stroke="${c(1)}" stroke-width="0.6" opacity="0.10" stroke-linecap="round"/>`);
-  p.push(`<path d="M1200 350 C1220 400 1180 440 1220 480" fill="none" stroke="${c(2)}" stroke-width="0.6" opacity="0.10" stroke-linecap="round"/>`);
-  p.push(`<path d="M1000 300 C1040 330 1020 370 1060 400" fill="none" stroke="${c(0)}" stroke-width="0.6" opacity="0.10" stroke-linecap="round"/>`);
-  p.push(`<path d="M950 480 C990 510 970 550 1010 580" fill="none" stroke="${c(1)}" stroke-width="0.6" opacity="0.10" stroke-linecap="round"/>`);
-  p.push(`<path d="M1100 520 C1140 550 1120 590 1160 620" fill="none" stroke="${c(2)}" stroke-width="0.6" opacity="0.10" stroke-linecap="round"/>`);
-  p.push(`<path d="M1180 200 C1220 240 1200 280 1240 320" fill="none" stroke="${c(0)}" stroke-width="0.5" opacity="0.09" stroke-linecap="round"/>`);
+  // Diagonal boulevard
+  p.push(`<path d="M0 100 L500 350 L800 300 L1400 550" fill="none" stroke="${c(0)}" stroke-width="2.5" opacity="0.08" stroke-linecap="round"/>`);
+  // Curved ring road
+  p.push(`<path d="M100 700 Q400 650 700 700 Q1000 750 1300 680" fill="none" stroke="${c(1)}" stroke-width="2" opacity="0.07" stroke-linecap="round"/>`);
 
-  // ── CENTER — connecting roads between left and right neighborhoods ──
-  p.push(`<path d="M550 290 C620 300 700 350 780 340 S860 320 950 360 L${piazzaX} ${piazzaY}" fill="none" stroke="${c(2)}" stroke-width="1.3" opacity="0.14" stroke-linecap="round"/>`);
-  p.push(`<path d="M500 520 C580 500 660 540 750 510 S850 470 950 500" fill="none" stroke="${c(0)}" stroke-width="1.0" opacity="0.12" stroke-linecap="round"/>`);
-  p.push(`<path d="M550 700 C650 680 750 720 850 690 S950 650 1050 700" fill="none" stroke="${c(1)}" stroke-width="0.8" opacity="0.11" stroke-linecap="round"/>`);
-  // Center side streets
-  p.push(`<path d="M620 300 C640 370 610 430 650 500" fill="none" stroke="${c(2)}" stroke-width="0.6" opacity="0.10" stroke-linecap="round"/>`);
-  p.push(`<path d="M780 340 C760 410 800 480 770 550" fill="none" stroke="${c(0)}" stroke-width="0.6" opacity="0.10" stroke-linecap="round"/>`);
-  p.push(`<path d="M700 200 C720 260 690 330 720 390" fill="none" stroke="${c(1)}" stroke-width="0.5" opacity="0.09" stroke-linecap="round"/>`);
+  // Secondary streets (thinner)
+  p.push(road(320, 200, 320, 400, 1.5, c(2)));
+  p.push(road(580, 200, 580, 400, 1.5, c(0)));
+  p.push(road(830, 400, 830, 600, 1.5, c(1)));
+  p.push(road(1080, 400, 1080, 600, 1.5, c(2)));
+  p.push(road(200, 300, 450, 300, 1.5, c(0)));
+  p.push(road(450, 500, 700, 500, 1.5, c(1)));
+  p.push(road(700, 300, 950, 300, 1.5, c(2)));
+  p.push(road(950, 500, 1200, 500, 1.5, c(0)));
+  p.push(road(200, 700, 450, 700, 1.5, c(1)));
+  p.push(road(700, 700, 950, 700, 1.5, c(2)));
 
-  // ── Roundabouts ──
+  // ── ISOMETRIC BUILDINGS — 3D blocks between streets ──
+
+  // Block 1 (top-left: between x200-450, y200-400)
+  p.push(isoBuilding(230, 280, 30, 20, 35, c(0), 0.09));
+  p.push(isoBuilding(290, 300, 25, 15, 25, c(1), 0.08));
+  p.push(isoBuilding(340, 270, 35, 20, 45, c(2), 0.10));
+  p.push(isoBuilding(240, 350, 28, 18, 30, c(0), 0.08));
+  p.push(isoBuilding(330, 360, 22, 16, 20, c(1), 0.07));
+  p.push(isoBuilding(400, 280, 20, 14, 28, c(2), 0.08));
+
+  // Block 2 (top-center: between x450-700, y200-400)
+  p.push(isoBuilding(480, 280, 35, 22, 50, c(1), 0.10));
+  p.push(isoBuilding(550, 300, 28, 18, 30, c(2), 0.08));
+  p.push(isoBuilding(490, 360, 32, 20, 40, c(0), 0.09));
+  p.push(isoBuilding(610, 270, 25, 16, 35, c(1), 0.08));
+  p.push(isoBuilding(640, 350, 30, 18, 25, c(2), 0.07));
+  p.push(isoBuilding(560, 250, 20, 14, 22, c(0), 0.07));
+
+  // Block 3 (top-right: between x700-950, y200-400)
+  p.push(isoBuilding(730, 280, 30, 20, 45, c(2), 0.10));
+  p.push(isoBuilding(800, 300, 35, 22, 55, c(0), 0.11));
+  p.push(isoBuilding(870, 280, 25, 16, 30, c(1), 0.08));
+  p.push(isoBuilding(740, 360, 28, 18, 35, c(2), 0.09));
+  p.push(isoBuilding(830, 350, 22, 14, 20, c(0), 0.07));
+  p.push(isoBuilding(910, 340, 20, 16, 28, c(1), 0.08));
+
+  // Block 4 (far right: between x950-1200, y200-400)
+  p.push(isoBuilding(980, 270, 32, 20, 40, c(0), 0.09));
+  p.push(isoBuilding(1050, 290, 28, 18, 50, c(1), 0.10));
+  p.push(isoBuilding(1120, 280, 25, 16, 32, c(2), 0.08));
+  p.push(isoBuilding(990, 360, 30, 20, 25, c(0), 0.07));
+  p.push(isoBuilding(1070, 350, 35, 22, 45, c(1), 0.09));
+  p.push(isoBuilding(1150, 340, 22, 14, 28, c(2), 0.08));
+
+  // Block 5 (middle-left: between x200-450, y400-600)
+  p.push(isoBuilding(230, 480, 28, 18, 35, c(1), 0.09));
+  p.push(isoBuilding(300, 500, 32, 20, 42, c(2), 0.10));
+  p.push(isoBuilding(380, 470, 25, 16, 28, c(0), 0.08));
+  p.push(isoBuilding(250, 560, 30, 18, 38, c(1), 0.09));
+  p.push(isoBuilding(350, 550, 22, 14, 22, c(2), 0.07));
+
+  // Block 6 (middle-center: between x450-700, y400-600)
+  p.push(isoBuilding(480, 470, 35, 22, 55, c(0), 0.11));
+  p.push(isoBuilding(560, 490, 28, 18, 35, c(1), 0.09));
+  p.push(isoBuilding(630, 480, 30, 20, 42, c(2), 0.10));
+  p.push(isoBuilding(490, 560, 25, 16, 28, c(0), 0.08));
+  p.push(isoBuilding(580, 550, 32, 20, 38, c(1), 0.09));
+
+  // Block 7 (middle-right: between x700-950, y400-600)
+  p.push(isoBuilding(730, 480, 30, 20, 48, c(2), 0.10));
+  p.push(isoBuilding(810, 470, 35, 22, 35, c(0), 0.09));
+  p.push(isoBuilding(890, 490, 25, 16, 30, c(1), 0.08));
+  p.push(isoBuilding(750, 560, 28, 18, 25, c(2), 0.07));
+  p.push(isoBuilding(860, 550, 30, 20, 40, c(0), 0.09));
+
+  // Block 8 (far right middle: between x950-1200, y400-600)
+  p.push(isoBuilding(980, 480, 32, 20, 45, c(1), 0.10));
+  p.push(isoBuilding(1060, 470, 28, 18, 55, c(2), 0.11));
+  p.push(isoBuilding(1140, 490, 25, 16, 32, c(0), 0.08));
+  p.push(isoBuilding(1000, 560, 30, 20, 28, c(1), 0.08));
+  p.push(isoBuilding(1100, 550, 35, 22, 40, c(2), 0.09));
+
+  // Bottom row buildings (between y600-800)
+  p.push(isoBuilding(230, 680, 28, 18, 30, c(0), 0.08));
+  p.push(isoBuilding(340, 700, 32, 20, 40, c(1), 0.09));
+  p.push(isoBuilding(490, 680, 30, 20, 35, c(2), 0.09));
+  p.push(isoBuilding(600, 700, 25, 16, 28, c(0), 0.08));
+  p.push(isoBuilding(730, 690, 35, 22, 50, c(1), 0.10));
+  p.push(isoBuilding(870, 680, 28, 18, 32, c(2), 0.08));
+  p.push(isoBuilding(990, 700, 30, 20, 42, c(0), 0.09));
+  p.push(isoBuilding(1100, 680, 25, 16, 28, c(1), 0.08));
+
+  // Top row buildings (y0-200)
+  p.push(isoBuilding(230, 150, 25, 16, 30, c(2), 0.08));
+  p.push(isoBuilding(350, 170, 30, 20, 40, c(0), 0.09));
+  p.push(isoBuilding(500, 150, 28, 18, 35, c(1), 0.09));
+  p.push(isoBuilding(640, 160, 32, 20, 45, c(2), 0.10));
+  p.push(isoBuilding(780, 140, 25, 16, 28, c(0), 0.08));
+  p.push(isoBuilding(920, 160, 30, 18, 38, c(1), 0.09));
+  p.push(isoBuilding(1060, 150, 28, 16, 32, c(2), 0.08));
+
+  // ── ROUNDABOUTS ──
   const roundabouts = [
-    { x: 280, y: 270 }, { x: 500, y: 290 }, { x: 310, y: 550 },
-    { x: 420, y: 520 }, { x: 680, y: 310 }, { x: 780, y: 510 },
-    { x: 900, y: 580 }, { x: 1150, y: 280 }, { x: 1200, y: 480 },
+    { x: 450, y: 400 }, { x: 700, y: 200 }, { x: 950, y: 400 },
+    { x: 700, y: 600 }, { x: 200, y: 400 }, { x: 1200, y: 600 },
   ];
   roundabouts.forEach((r, i) => {
-    p.push(`<circle cx="${r.x}" cy="${r.y}" r="6" fill="none" stroke="${c(i)}" stroke-width="0.8" opacity="0.13"/>`);
-    p.push(`<circle cx="${r.x}" cy="${r.y}" r="2" fill="${c(i)}" opacity="0.08"/>`);
+    p.push(`<circle cx="${r.x}" cy="${r.y}" r="10" fill="none" stroke="${c(i)}" stroke-width="1.5" opacity="0.12"/>`);
+    p.push(`<circle cx="${r.x}" cy="${r.y}" r="4" fill="${c(i)}" opacity="0.06"/>`);
   });
 
-  // ── Buildings — rotated, varied sizes, along streets ──
-  const bldgs = [
-    // Left neighborhood
-    { x: 80, y: 240, w: 18, h: 12, r: -6 }, { x: 130, y: 285, w: 14, h: 20, r: 10 },
-    { x: 200, y: 250, w: 20, h: 14, r: -4 }, { x: 170, y: 330, w: 16, h: 22, r: 15 },
-    { x: 230, y: 370, w: 22, h: 12, r: -8 }, { x: 310, y: 330, w: 14, h: 18, r: 5 },
-    { x: 350, y: 400, w: 18, h: 14, r: -12 }, { x: 420, y: 350, w: 16, h: 20, r: 8 },
-    { x: 110, y: 430, w: 20, h: 16, r: -3 }, { x: 180, y: 470, w: 14, h: 14, r: 12 },
-    { x: 260, y: 440, w: 18, h: 12, r: -7 }, { x: 340, y: 480, w: 16, h: 18, r: 4 },
-    { x: 80, y: 530, w: 14, h: 16, r: 9 }, { x: 150, y: 560, w: 20, h: 12, r: -5 },
-    { x: 250, y: 540, w: 16, h: 20, r: 6 }, { x: 350, y: 580, w: 18, h: 14, r: -10 },
-    { x: 420, y: 560, w: 12, h: 16, r: 3 }, { x: 480, y: 520, w: 22, h: 14, r: -8 },
-    { x: 100, y: 160, w: 16, h: 12, r: 14 }, { x: 200, y: 180, w: 14, h: 18, r: 20 },
-    { x: 350, y: 180, w: 18, h: 14, r: -6 }, { x: 450, y: 260, w: 14, h: 16, r: 8 },
-    { x: 130, y: 620, w: 18, h: 12, r: 4 }, { x: 250, y: 640, w: 14, h: 18, r: -8 },
-    { x: 380, y: 630, w: 20, h: 14, r: 6 }, { x: 450, y: 660, w: 16, h: 12, r: -3 },
-    // Right neighborhood (around piazza, angled differently)
-    { x: 1000, y: 320, w: 16, h: 14, r: -25 }, { x: 1080, y: 300, w: 14, h: 18, r: 30 },
-    { x: 1140, y: 340, w: 18, h: 12, r: -15 }, { x: 1100, y: 440, w: 20, h: 16, r: 20 },
-    { x: 1030, y: 480, w: 14, h: 14, r: -30 }, { x: 1150, y: 480, w: 16, h: 18, r: 25 },
-    { x: 980, y: 540, w: 18, h: 12, r: -20 }, { x: 1060, y: 560, w: 14, h: 20, r: 15 },
-    { x: 1180, y: 560, w: 20, h: 14, r: -10 }, { x: 1120, y: 220, w: 16, h: 16, r: 35 },
-    { x: 1220, y: 260, w: 14, h: 12, r: -20 }, { x: 1250, y: 400, w: 18, h: 16, r: 10 },
-    { x: 1160, y: 640, w: 16, h: 14, r: -25 }, { x: 1080, y: 680, w: 14, h: 18, r: 20 },
-    { x: 960, y: 200, w: 18, h: 12, r: -15 }, { x: 1000, y: 140, w: 14, h: 16, r: 10 },
-    { x: 1200, y: 160, w: 20, h: 14, r: 25 }, { x: 1300, y: 350, w: 16, h: 18, r: -30 },
-    // Center
-    { x: 600, y: 320, w: 16, h: 14, r: 8 }, { x: 660, y: 370, w: 14, h: 18, r: -6 },
-    { x: 720, y: 400, w: 18, h: 12, r: 12 }, { x: 780, y: 450, w: 14, h: 16, r: -10 },
-    { x: 640, y: 480, w: 20, h: 14, r: 5 }, { x: 700, y: 540, w: 16, h: 18, r: -8 },
-    { x: 550, y: 400, w: 14, h: 12, r: 10 }, { x: 850, y: 420, w: 18, h: 16, r: -4 },
-    { x: 580, y: 600, w: 16, h: 14, r: 7 }, { x: 700, y: 650, w: 14, h: 18, r: -12 },
-    { x: 820, y: 630, w: 18, h: 12, r: 9 }, { x: 900, y: 660, w: 16, h: 16, r: -6 },
+  // ── GPS PINS ──
+  const pins_data = [
+    { x: 320, y: 280 }, { x: 550, y: 480 }, { x: 800, y: 290 },
+    { x: 1050, y: 470 }, { x: 400, y: 560 }, { x: 730, y: 680 },
+    { x: 250, y: 470 }, { x: 920, y: 550 }, { x: 1150, y: 280 },
+    { x: 500, y: 160 }, { x: 870, y: 690 }, { x: 650, y: 350 },
+    { x: 350, y: 700 }, { x: 1000, y: 700 }, { x: 150, y: 280 },
   ];
-  bldgs.forEach((b, i) => {
-    p.push(
-      `<rect x="${b.x}" y="${b.y}" width="${b.w}" height="${b.h}" rx="1" fill="${c(i)}" opacity="0.06" transform="rotate(${b.r} ${b.x + b.w / 2} ${b.y + b.h / 2})"/>`
-    );
-  });
-
-  // ── GPS Pins ──
-  const pins = [
-    { x: 200, y: 250 }, { x: 400, y: 280 }, { x: 150, y: 450 },
-    { x: 320, y: 530 }, { x: 450, y: 650 }, { x: 100, y: 600 },
-    { x: piazzaX, y: piazzaY - 40 }, { x: 1150, y: 260 }, { x: 1200, y: 470 },
-    { x: 1080, y: 650 }, { x: 950, y: 550 }, { x: 680, y: 290 },
-    { x: 750, y: 500 }, { x: 600, y: 620 }, { x: 850, y: 680 },
-    { x: 280, y: 180 }, { x: 500, y: 400 }, { x: 1300, y: 340 },
-  ];
-  pins.forEach((pin, i) => {
-    const color = c(i);
-    p.push(
-      `<g transform="translate(${pin.x},${pin.y})" opacity="0.20">` +
-        `<path d="M0-9 C-4-9 -7-5 -7-3 C-7 1 0 7 0 7 C0 7 7 1 7-3 C7-5 4-9 0-9Z" fill="${color}"/>` +
-        `<circle cx="0" cy="-3" r="2" fill="white" opacity="0.9"/>` +
-      `</g>`
-    );
+  pins_data.forEach((pp, i) => {
+    p.push(pin(pp.x, pp.y, c(i)));
   });
 
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 950" preserveAspectRatio="xMidYMid slice">${p.join('')}</svg>`;
