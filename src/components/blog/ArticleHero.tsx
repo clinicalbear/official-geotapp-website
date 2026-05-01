@@ -1,7 +1,8 @@
 'use client';
 
+import { useRef } from 'react';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 interface ArticleHeroProps {
   title: string;
@@ -59,6 +60,13 @@ export default function ArticleHero({
 }: ArticleHeroProps) {
   const categoryColor = getCategoryColor(categories);
   const primaryCategory = categories[0];
+  const heroRef = useRef<HTMLElement>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ['start start', 'end start'],
+  });
+  const imageY = useTransform(scrollYProgress, [0, 1], ['0%', '30%']);
 
   const formattedDate = new Date(date).toLocaleDateString(locale, {
     day: 'numeric',
@@ -67,17 +75,19 @@ export default function ArticleHero({
   });
 
   return (
-    <section className="relative w-screen min-h-[40vh] md:min-h-[60vh] overflow-hidden">
-      {/* Background image or fallback gradient */}
+    <section ref={heroRef} className="relative w-screen min-h-[40vh] md:min-h-[60vh] overflow-hidden">
+      {/* Background image with parallax or fallback gradient */}
       {image ? (
-        <Image
-          src={image}
-          alt={title}
-          fill
-          priority
-          className="object-cover"
-          sizes="100vw"
-        />
+        <motion.div className="absolute inset-0" style={{ y: imageY }}>
+          <Image
+            src={image}
+            alt={title}
+            fill
+            priority
+            className="object-cover scale-110"
+            sizes="100vw"
+          />
+        </motion.div>
       ) : (
         <div className="absolute inset-0 bg-gradient-to-b from-slate-900 to-slate-800" />
       )}

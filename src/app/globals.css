@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Smooth scroll for anchor links (ToC) with offset for sticky navbar */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
 /* GSAP UI Demo Range Slider (Exact Replica Style) */
 .ui-demo--range {
   -webkit-appearance: none;
@@ -451,17 +457,20 @@ a:hover {
 }
 
 .article-content img {
+  display: block;
   border-radius: 0.75rem;
   margin: 2rem 0;
   max-width: 100%;
   height: auto;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, clip-path 0s;
+  clip-path: inset(0 round 0.75rem);
 }
 
 .article-content img:hover {
-  transform: scale(1.02) rotate(0.5deg);
+  transform: scale(1.04) rotate(0.8deg);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  clip-path: inset(0 round 0.75rem);
 }
 
 .article-content ul,

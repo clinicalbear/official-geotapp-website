@@ -155,26 +155,31 @@ function mapRelatedPost(p: any): RelatedPost {
 
 async function fetchRelatedPosts(postId: number, categoryIds: number[], locale: string): Promise<RelatedPost[]> {
   try {
-    // Try category-based first, then fallback to recent posts
-    const catParam = categoryIds.length > 0 ? `&categories=${categoryIds[0]}` : '';
+    // Try each category until we find locale-matching posts
+    for (const catId of categoryIds) {
+      const res = await wpFetch(
+        `${WP}/wp-json/wp/v2/posts/?exclude=${postId}&per_page=12&categories=${catId}&_embed=wp:featuredmedia`,
+      );
+      if (!res.ok) continue;
+      const posts: any[] = await res.json();
+      const localeFiltered = posts.filter((p: any) => isLocalePost(p.link, locale));
+      if (localeFiltered.length > 0) {
+        return localeFiltered.slice(0, 3).map(mapRelatedPost);
+      }
+    }
+
+    // No category match — fallback to recent posts in same locale
     const res = await wpFetch(
-      `${WP}/wp-json/wp/v2/posts/?exclude=${postId}&per_page=12${catParam}&_embed=wp:featuredmedia`,
+      `${WP}/wp-json/wp/v2/posts/?exclude=${postId}&per_page=12&_embed=wp:featuredmedia`,
     );
     if (!res.ok) return [];
     const posts: any[] = await res.json();
-
-    // Filter by locale first
     const localeFiltered = posts.filter((p: any) => isLocalePost(p.link, locale));
-    if (localeFiltered.length >= 3) {
-      return localeFiltered.slice(0, 3).map(mapRelatedPost);
-    }
-
-    // Not enough locale matches — use whatever we have
     if (localeFiltered.length > 0) {
       return localeFiltered.slice(0, 3).map(mapRelatedPost);
     }
 
-    // No locale matches at all — return first 3 regardless of locale
+    // Last resort — any 3 recent posts
     return posts.slice(0, 3).map(mapRelatedPost);
   } catch {
     return [];
