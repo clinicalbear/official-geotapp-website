@@ -1,5 +1,9 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+import ArticleHero from '@/components/blog/ArticleHero';
+import ArticleContent from '@/components/blog/ArticleContent';
+import ArticleSidebar from '@/components/blog/ArticleSidebar';
+import ArticleFooter from '@/components/blog/ArticleFooter';
 
 export const dynamic = 'force-dynamic';
 
@@ -102,7 +106,65 @@ function resolvePostData(post: WPPost, locale: string) {
   const contentWithIds = addHeadingIds(content);
   const headings = extractHeadings(contentWithIds);
 
-  return { title, content: contentWithIds, excerpt, date, featuredImage, categories, yoastTitle, yoastDesc, readingTime, headings, locale };
+  const modified = post.modified;
+  const categoryIds = post.categories ?? [];
+
+  return { title, content: contentWithIds, excerpt, date, modified, featuredImage, categories, categoryIds, yoastTitle, yoastDesc, readingTime, headings, locale };
+}
+
+function normalizeUrl(link: string, slug: string): string {
+  try {
+    const p = new URL(link);
+    if (p.hostname === 'blog.geotapp.com') return `/blog${p.pathname}`;
+    if (p.hostname === 'geotapp.com') return p.pathname;
+  } catch { /* fallback */ }
+  return `/blog/${slug}/`;
+}
+
+function isLocalePost(link: string, locale: string): boolean {
+  try {
+    const afterBlog = new URL(link).pathname.replace(/^\/blog\//, '');
+    if (locale === 'it') return !/^[a-z]{2}\//.test(afterBlog);
+    return afterBlog.startsWith(`${locale}/`);
+  } catch {
+    return false;
+  }
+}
+
+interface RelatedPost {
+  id: number;
+  slug: string;
+  title: string;
+  excerpt: string;
+  date: string;
+  url: string;
+  image: string | null;
+}
+
+async function fetchRelatedPosts(postId: number, categoryIds: number[], locale: string): Promise<RelatedPost[]> {
+  if (categoryIds.length === 0) return [];
+  try {
+    const res = await fetch(
+      `${WP}/wp-json/wp/v2/posts/?categories=${categoryIds[0]}&exclude=${postId}&per_page=3&_fields=id,slug,title,excerpt,date,link,featured_media&_embed=wp:featuredmedia`,
+      { headers: HEADERS, cache: 'no-store', signal: AbortSignal.timeout(8000) }
+    );
+    if (!res.ok) return [];
+    const posts = await res.json();
+    return posts
+      .filter((p: any) => isLocalePost(p.link, locale))
+      .slice(0, 3)
+      .map((p: any) => ({
+        id: p.id,
+        slug: p.slug,
+        title: stripHtml(p.title?.rendered ?? ''),
+        excerpt: stripHtml(p.excerpt?.rendered ?? '').slice(0, 140),
+        date: p.date,
+        url: normalizeUrl(p.link, p.slug),
+        image: p._embedded?.['wp:featuredmedia']?.[0]?.source_url ?? null,
+      }));
+  } catch {
+    return [];
+  }
 }
 
 type Props = {
@@ -138,13 +200,76 @@ export default async function BlogArticlePage({ params }: Props) {
   const post = await fetchPost(articleSlug);
   if (!post) notFound();
 
-  const { title, content, date, readingTime } = resolvePostData(post, locale);
+  const { title, content: contentWithIds, excerpt, date, modified, featuredImage, categories, categoryIds, readingTime, headings } = resolvePostData(post, locale);
+
+  const canonicalUrl = `https://geotapp.com/blog/${slug.join('/')}/`;
+
+  const relatedPosts = await fetchRelatedPosts(post.id, categoryIds, locale);
+
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: title,
+    description: excerpt,
+    image: featuredImage || undefined,
+    datePublished: date,
+    dateModified: modified || date,
+    author: {
+      '@type': 'Organization',
+      name: 'GeoTapp',
+      url: 'https://geotapp.com',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'GeoTapp',
+      url: 'https://geotapp.com',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://geotapp.com/logo.png',
+      },
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': canonicalUrl,
+    },
+  };
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'GeoTapp', item: 'https://geotapp.com' },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: `https://geotapp.com/${locale}/blog/` },
+      { '@type': 'ListItem', position: 3, name: title },
+    ],
+  };
 
   return (
-    <div>
-      <h1>{title}</h1>
-      <p>{locale} | {date} | {readingTime} min</p>
-      <div dangerouslySetInnerHTML={{ __html: content }} />
-    </div>
+    <>
+      {/* Structured data */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+
+      {/* Hero */}
+      <ArticleHero
+        title={title}
+        image={featuredImage}
+        categories={categories}
+        date={date}
+        readingTime={readingTime}
+        locale={locale}
+      />
+
+      {/* Content + Sidebar */}
+      <div className="bg-white">
+        <div className="max-w-7xl mx-auto flex">
+          <ArticleContent html={contentWithIds} />
+          <ArticleSidebar headings={headings} locale={locale} />
+        </div>
+      </div>
+
+      {/* Related posts + CTA */}
+      <ArticleFooter relatedPosts={relatedPosts} locale={locale} />
+    </>
   );
 }
