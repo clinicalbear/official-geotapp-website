@@ -127,33 +127,16 @@ export default function ArticleHero({
           {title}
         </motion.h1>
 
-        {/* Digital clock-in stamp */}
-        <motion.div
+        {/* Meta line */}
+        <motion.p
+          className="text-sm text-white/70"
           variants={fadeInUp}
           initial="hidden"
           animate="visible"
           custom={0.3}
-          className="mt-2 inline-flex items-center gap-0 rounded-lg overflow-hidden border border-white/15 bg-black/30 backdrop-blur-sm"
         >
-          {/* Green active dot */}
-          <div className="flex items-center gap-2 px-3 py-2 border-r border-white/10">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-60" />
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-green-400" />
-            </span>
-            <span className="text-green-400 text-[10px] font-mono uppercase tracking-wider">Clock-in</span>
-          </div>
-          {/* Date */}
-          <div className="px-3 py-2 border-r border-white/10">
-            <span className="text-white/50 text-[9px] font-mono uppercase tracking-wider block leading-none mb-0.5">Date</span>
-            <span className="text-white font-mono text-xs tracking-wide">{new Date(date).toLocaleDateString('en-GB', { day: '2-digit', month: '2-digit', year: 'numeric' }).replace(/\//g, '.')}</span>
-          </div>
-          {/* Reading time as duration */}
-          <div className="px-3 py-2">
-            <span className="text-white/50 text-[9px] font-mono uppercase tracking-wider block leading-none mb-0.5">Duration</span>
-            <span className="text-white font-mono text-xs tracking-wide">00:{String(readingTime).padStart(2, '0')}:00</span>
-          </div>
-        </motion.div>
+          {formattedDate} &middot; {readingTime} min
+        </motion.p>
       </div>
     </section>
   );
