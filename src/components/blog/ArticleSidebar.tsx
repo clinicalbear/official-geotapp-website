@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface ArticleSidebarProps {
   headings: Array<{ id: string; text: string; level: number }>;
@@ -9,79 +10,94 @@ interface ArticleSidebarProps {
   categories?: Array<{ slug: string; name: string }>;
   date?: string;
   readingTime?: number;
+  title?: string;
 }
 
 const SIDEBAR_LABELS: Record<string, {
   toc: string; cta_title: string; cta_desc: string; cta_btn: string;
-  share: string; copied: string; product_title: string; product_desc: string; product_btn: string;
+  share: string; copied: string; product_desc: string; product_btn: string;
 }> = {
-  it: { toc: 'In questo articolo', cta_title: 'Prova GeoTapp gratis', cta_desc: '14 giorni di prova gratuita. Nessuna carta di credito. Setup in 2 minuti.', cta_btn: 'Inizia ora', share: 'Condividi', copied: 'Link copiato!', product_title: 'Prodotto correlato', product_desc: 'Scopri come GeoTapp risolve questo problema', product_btn: 'Scopri di piu' },
-  en: { toc: 'In this article', cta_title: 'Try GeoTapp free', cta_desc: '14-day free trial. No credit card required. Setup in 2 minutes.', cta_btn: 'Start now', share: 'Share', copied: 'Link copied!', product_title: 'Related product', product_desc: 'See how GeoTapp solves this problem', product_btn: 'Learn more' },
-  de: { toc: 'In diesem Artikel', cta_title: 'GeoTapp kostenlos testen', cta_desc: '14 Tage kostenlos. Keine Kreditkarte. Setup in 2 Minuten.', cta_btn: 'Jetzt starten', share: 'Teilen', copied: 'Link kopiert!', product_title: 'Verwandtes Produkt', product_desc: 'So lost GeoTapp dieses Problem', product_btn: 'Mehr erfahren' },
-  fr: { toc: 'Dans cet article', cta_title: 'Essayez GeoTapp', cta_desc: '14 jours gratuits. Sans carte bancaire. Pret en 2 minutes.', cta_btn: 'Commencer', share: 'Partager', copied: 'Lien copie !', product_title: 'Produit associe', product_desc: 'Decouvrez comment GeoTapp resout ce probleme', product_btn: 'En savoir plus' },
+  it: { toc: 'In questo articolo', cta_title: 'Prova GeoTapp gratis', cta_desc: '14 giorni di prova gratuita. Nessuna carta di credito. Setup in 2 minuti.', cta_btn: 'Inizia ora', share: 'Condividi', copied: 'Copiato!', product_desc: 'Scopri come GeoTapp risolve questo problema', product_btn: 'Scopri di piu' },
+  en: { toc: 'In this article', cta_title: 'Try GeoTapp free', cta_desc: '14-day free trial. No credit card required. Setup in 2 minutes.', cta_btn: 'Start now', share: 'Share', copied: 'Copied!', product_desc: 'See how GeoTapp solves this problem', product_btn: 'Learn more' },
+  de: { toc: 'In diesem Artikel', cta_title: 'GeoTapp kostenlos testen', cta_desc: '14 Tage kostenlos. Keine Kreditkarte. Setup in 2 Minuten.', cta_btn: 'Jetzt starten', share: 'Teilen', copied: 'Kopiert!', product_desc: 'So lost GeoTapp dieses Problem', product_btn: 'Mehr erfahren' },
+  fr: { toc: 'Dans cet article', cta_title: 'Essayez GeoTapp', cta_desc: '14 jours gratuits. Sans carte bancaire. Pret en 2 minutes.', cta_btn: 'Commencer', share: 'Partager', copied: 'Copie !', product_desc: 'Decouvrez comment GeoTapp resout ce probleme', product_btn: 'En savoir plus' },
 };
 
-// Detect related product from categories
-function detectProduct(categories: Array<{ slug: string; name: string }>): { name: string; icon: string; color: string; href: string } {
+function detectProduct(categories: Array<{ slug: string; name: string }>): { name: string; logo: string; color: string; href: string } {
   const slugs = categories.map(c => c.slug.toLowerCase()).join(' ');
-  if (/gps|track|timbr|presenz|geoloc|clock|attendance/.test(slugs)) {
-    return { name: 'GeoTapp TimeTracker', icon: '⏱', color: '#F97316', href: '/products/geotapp-timetracker/' };
+  if (/gps|track|timbr|presenz|geoloc|clock|attendance|zeit/.test(slugs)) {
+    return { name: 'GeoTapp TimeTracker', logo: '/TimeTrackerTrasparente.png', color: '#F97316', href: '/products/geotapp-timetracker/' };
   }
-  if (/sicur|secur|verif|prov|proof/.test(slugs)) {
-    return { name: 'GeoTapp Verifier', icon: '🛡', color: '#22C55E', href: '/products/geotapp-verifier/' };
+  if (/sicur|secur|verif|prov|proof|report|document/.test(slugs)) {
+    return { name: 'GeoTapp Verifier', logo: '/logoVerifier.png', color: '#22C55E', href: '/products/geotapp-verifier/' };
   }
-  return { name: 'GeoTapp Flow', icon: '⚡', color: '#8B5CF6', href: '/products/geotapp-flow/' };
+  return { name: 'GeoTapp Flow', logo: '/logoFlow.png', color: '#8B5CF6', href: '/products/geotapp-flow/' };
 }
 
-function ShareButton({ label, copiedLabel }: { label: string; copiedLabel: string }) {
+/* ── Social Share Icons (inline SVG) ── */
+const LinkedInIcon = () => (
+  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+);
+const FacebookIcon = () => (
+  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+);
+const XIcon = () => (
+  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+);
+const EmailIcon = () => (
+  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+);
+const LinkIcon = () => (
+  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+);
+const CheckIcon = () => (
+  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 13l4 4L19 7"/></svg>
+);
+
+function ShareButtons({ title, copiedLabel }: { title: string; copiedLabel: string }) {
   const [copied, setCopied] = useState(false);
 
+  const url = typeof window !== 'undefined' ? window.location.href : '';
+
   const handleCopy = () => {
-    navigator.clipboard.writeText(window.location.href);
+    navigator.clipboard.writeText(url);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
 
-  const handleLinkedIn = () => {
-    window.open(
-      `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}`,
-      '_blank',
-      'width=600,height=500'
-    );
-  };
+  const shareLinks = [
+    { icon: <LinkedInIcon />, label: 'LinkedIn', href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}` },
+    { icon: <FacebookIcon />, label: 'Facebook', href: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}` },
+    { icon: <XIcon />, label: 'X', href: `https://x.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(title)}` },
+    { icon: <EmailIcon />, label: 'Email', href: `mailto:?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(url)}` },
+  ];
 
   return (
-    <div className="flex items-center gap-2">
-      <button
-        onClick={handleLinkedIn}
-        className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-slate-500 bg-slate-100 rounded-lg hover:bg-slate-200 hover:text-slate-700 transition-all"
-        aria-label="Share on LinkedIn"
-      >
-        <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        LinkedIn
-      </button>
+    <div className="flex items-center gap-1.5">
+      {shareLinks.map((s) => (
+        <a
+          key={s.label}
+          href={s.href}
+          target={s.label === 'Email' ? '_self' : '_blank'}
+          rel="noopener noreferrer"
+          aria-label={s.label}
+          className="p-2 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-lg transition-all"
+        >
+          {s.icon}
+        </a>
+      ))}
       <button
         onClick={handleCopy}
-        className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-slate-500 bg-slate-100 rounded-lg hover:bg-slate-200 hover:text-slate-700 transition-all"
         aria-label="Copy link"
+        className={`p-2 rounded-lg transition-all ${copied ? 'text-green-500 bg-green-50' : 'text-slate-400 hover:text-slate-700 hover:bg-slate-100'}`}
       >
-        {copied ? (
-          <>
-            <svg className="w-3.5 h-3.5 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 13l4 4L19 7"/></svg>
-            <span className="text-green-600">{copiedLabel}</span>
-          </>
-        ) : (
-          <>
-            <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
-            {label}
-          </>
-        )}
+        {copied ? <CheckIcon /> : <LinkIcon />}
       </button>
     </div>
   );
 }
 
-export default function ArticleSidebar({ headings, locale, categories = [], date, readingTime }: ArticleSidebarProps) {
+export default function ArticleSidebar({ headings, locale, categories = [], date, readingTime, title = '' }: ArticleSidebarProps) {
   const [activeId, setActiveId] = useState<string>('');
   const labels = SIDEBAR_LABELS[locale] || SIDEBAR_LABELS['en'];
   const product = detectProduct(categories);
@@ -112,33 +128,33 @@ export default function ArticleSidebar({ headings, locale, categories = [], date
 
   return (
     <aside className="sticky top-28 max-h-[calc(100vh-8rem)] overflow-y-auto pb-8">
-      {/* Article Info */}
-      <div className="flex items-center gap-3 mb-6 pb-5 border-b border-slate-100">
+      {/* Article Meta */}
+      <div className="mb-6 pb-5 border-b border-slate-100">
         {categories[0] && (
           <span
-            className="px-2.5 py-1 text-[11px] font-semibold rounded-full text-white"
+            className="inline-block px-2.5 py-1 text-[11px] font-semibold rounded-full text-white mb-3"
             style={{ backgroundColor: product.color }}
           >
             {categories[0].name}
           </span>
         )}
-        <div className="flex items-center gap-2 text-[11px] text-slate-400">
+        <div className="flex items-center gap-2 text-[12px] text-slate-400">
           {formattedDate && <span>{formattedDate}</span>}
           {readingTime && (
             <>
-              <span className="w-0.5 h-0.5 rounded-full bg-slate-300" />
+              <span className="w-1 h-1 rounded-full bg-slate-300" />
               <span>{readingTime} min</span>
             </>
           )}
         </div>
       </div>
 
-      {/* Share Buttons */}
+      {/* Share */}
       <div className="mb-6 pb-5 border-b border-slate-100">
         <p className="text-[11px] font-bold uppercase tracking-widest text-slate-400 mb-3">
           {labels.share}
         </p>
-        <ShareButton label="Link" copiedLabel={labels.copied} />
+        <ShareButtons title={title} copiedLabel={labels.copied} />
       </div>
 
       {/* Table of Contents */}
@@ -172,17 +188,23 @@ export default function ArticleSidebar({ headings, locale, categories = [], date
       )}
 
       {/* Related Product */}
-      <div className="mb-6 p-4 rounded-xl bg-white border border-slate-200 shadow-sm">
-        <div className="flex items-center gap-2.5 mb-2">
-          <span className="text-lg">{product.icon}</span>
-          <span className="text-xs font-bold text-slate-700">{product.name}</span>
+      <div className="mb-6 p-5 rounded-xl bg-white border border-slate-200 shadow-sm">
+        <div className="flex items-center gap-3 mb-3">
+          <Image
+            src={product.logo}
+            alt={product.name}
+            width={32}
+            height={32}
+            className="rounded-lg"
+          />
+          <span className="text-[13px] font-bold text-slate-800">{product.name}</span>
         </div>
         <p className="text-[12px] text-slate-500 leading-relaxed mb-3">{labels.product_desc}</p>
         <Link
           href={`/${locale}${product.href}`}
-          className="text-[12px] font-semibold text-[#8FC436] hover:underline"
+          className="inline-flex items-center gap-1 text-[12px] font-semibold text-[#8FC436] hover:underline"
         >
-          {labels.product_btn} &rarr;
+          {labels.product_btn} <span aria-hidden="true">&rarr;</span>
         </Link>
       </div>
 
