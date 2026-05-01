@@ -74,7 +74,7 @@ interface WPPost {
 async function fetchPost(articleSlug: string): Promise<WPPost | null> {
   try {
     const res = await wpFetch(
-      `${WP}/wp-json/wp/v2/posts/?slug=${encodeURIComponent(articleSlug)}&_embed=wp:featuredmedia,wp:term&_fields=id,slug,title,excerpt,content,date,modified,link,featured_media,categories,meta`,
+      `${WP}/wp-json/wp/v2/posts/?slug=${encodeURIComponent(articleSlug)}&_embed=wp:featuredmedia,wp:term`,
     );
     if (!res.ok) return null;
     const posts: WPPost[] = await res.json();
@@ -145,7 +145,7 @@ async function fetchRelatedPosts(postId: number, categoryIds: number[], locale: 
   if (categoryIds.length === 0) return [];
   try {
     const res = await fetch(
-      `${WP}/wp-json/wp/v2/posts/?categories=${categoryIds[0]}&exclude=${postId}&per_page=3&_fields=id,slug,title,excerpt,date,link,featured_media&_embed=wp:featuredmedia`,
+      `${WP}/wp-json/wp/v2/posts/?categories=${categoryIds[0]}&exclude=${postId}&per_page=3&_embed=wp:featuredmedia`,
       { headers: HEADERS, cache: 'no-store', signal: AbortSignal.timeout(8000) }
     );
     if (!res.ok) return [];
