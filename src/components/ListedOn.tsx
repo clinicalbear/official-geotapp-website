@@ -169,7 +169,7 @@ function FullListedOn({ locale }: { locale: string }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-40px' }}
       transition={{ duration: 0.3 }}
-      style={{ textAlign: 'center', padding: '56px 24px 76px', position: 'relative', overflow: 'hidden', minHeight: '320px' }}
+      style={{ textAlign: 'center', padding: '56px 0 76px', position: 'relative', overflow: 'hidden', minHeight: '320px' }}
     >
       <style dangerouslySetInnerHTML={{ __html: logoStyles }} />
       {/* Watermark text */}
