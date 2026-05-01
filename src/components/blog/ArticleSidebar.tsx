@@ -153,14 +153,6 @@ export default function ArticleSidebar({ headings, locale, categories = [], date
         </div>
       </div>
 
-      {/* Share */}
-      <div className="mb-6 pb-5 border-b border-slate-100">
-        <p className="text-[11px] font-bold uppercase tracking-widest text-slate-400 mb-3">
-          {labels.share}
-        </p>
-        <ShareButtons title={title} copiedLabel={labels.copied} />
-      </div>
-
       {/* Table of Contents */}
       {headings.length > 0 && (
         <nav className="mb-8 border-l-2 border-slate-200 pl-4">
@@ -191,37 +183,42 @@ export default function ArticleSidebar({ headings, locale, categories = [], date
         </nav>
       )}
 
-      {/* Related Product */}
-      <div className="mb-6 p-5 rounded-xl bg-white border border-slate-200 shadow-sm">
-        <div className="flex items-center gap-3 mb-3">
-          <Image
-            src={product.logo}
-            alt={product.name}
-            width={32}
-            height={32}
-            className="rounded-lg"
-          />
-          <span className="text-[13px] font-bold text-slate-800">{product.name}</span>
-        </div>
-        <p className="text-[12px] text-slate-500 leading-relaxed mb-3">{labels.product_desc}</p>
-        <Link
-          href={`/${locale}${product.href}`}
-          className="inline-flex items-center gap-1 text-[12px] font-semibold text-[#8FC436] hover:underline"
-        >
-          {labels.product_btn} <span aria-hidden="true">&rarr;</span>
-        </Link>
-      </div>
+      {/* Related Product — logo grande */}
+      <Link
+        href={`/${locale}${product.href}`}
+        className="block mb-6 p-6 rounded-2xl border border-slate-200 hover:border-slate-300 hover:shadow-md transition-all duration-200 group"
+      >
+        <Image
+          src={product.logo}
+          alt={product.name}
+          width={160}
+          height={40}
+          className="h-10 w-auto mx-auto mb-4 group-hover:scale-105 transition-transform duration-200"
+        />
+        <p className="text-[12px] text-slate-500 leading-relaxed text-center">{labels.product_desc}</p>
+        <span className="mt-3 block text-center text-[12px] font-semibold text-[#8FC436] group-hover:translate-x-0.5 transition-transform">
+          {labels.product_btn} &rarr;
+        </span>
+      </Link>
 
-      {/* CTA Card */}
-      <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl p-6 shadow-lg">
-        <p className="text-sm font-bold text-white">{labels.cta_title}</p>
-        <p className="text-xs text-slate-400 mt-2 leading-relaxed">{labels.cta_desc}</p>
+      {/* CTA — leggero, arioso */}
+      <div className="mb-6 rounded-2xl border border-[#8FC436]/20 bg-[#8FC436]/5 p-5">
+        <p className="text-[13px] font-bold text-slate-800">{labels.cta_title}</p>
+        <p className="text-[11px] text-slate-500 mt-1.5 leading-relaxed">{labels.cta_desc}</p>
         <Link
           href={`/${locale}/trial/`}
-          className="mt-5 block w-full text-center px-4 py-3 bg-[#8FC436] text-white text-sm font-semibold rounded-xl hover:bg-[#7db02e] hover:shadow-md transition-all duration-200"
+          className="mt-4 block w-full text-center px-4 py-2.5 bg-[#8FC436] text-white text-[13px] font-semibold rounded-xl hover:bg-[#7db02e] transition-colors"
         >
           {labels.cta_btn}
         </Link>
+      </div>
+
+      {/* Share — in fondo */}
+      <div className="pt-5 border-t border-slate-100">
+        <p className="text-[11px] font-bold uppercase tracking-widest text-slate-400 mb-3">
+          {labels.share}
+        </p>
+        <ShareButtons title={title} copiedLabel={labels.copied} />
       </div>
     </aside>
   );
