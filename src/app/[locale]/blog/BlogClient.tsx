@@ -258,6 +258,35 @@ export default function BlogClient({ locale, posts }: { locale: AppLocale; posts
                     <PostCard post={post} locale={locale} label={b.read_article} index={i + 1} />
                   </div>
                 ))}
+                {/* Filler cards to avoid empty space in last column(s) */}
+                {rest.length % 3 !== 0 && (
+                  <div className="blog-masonry-item">
+                    <Link
+                      href={`/${locale}/trial/`}
+                      className="block h-full rounded-2xl border border-dashed border-[#8FC436]/30 bg-[#8FC436]/5 p-8 text-center hover:border-[#8FC436]/60 hover:bg-[#8FC436]/10 transition-all duration-300 group"
+                    >
+                      <div className="flex flex-col items-center justify-center h-full min-h-[200px]">
+                        <span className="text-4xl mb-4">🚀</span>
+                        <p className="text-lg font-display font-bold text-slate-800 mb-2">{b.cta_title}</p>
+                        <p className="text-sm text-slate-500 mb-4">{b.cta_desc}</p>
+                        <span className="text-sm font-bold text-[#8FC436] group-hover:translate-x-1 transition-transform">
+                          {b.cta_btn} &rarr;
+                        </span>
+                      </div>
+                    </Link>
+                  </div>
+                )}
+                {rest.length % 3 === 1 && (
+                  <div className="blog-masonry-item">
+                    <div className="rounded-2xl border border-dashed border-slate-200 bg-slate-50/50 p-8 text-center">
+                      <div className="flex flex-col items-center justify-center min-h-[200px]">
+                        <span className="text-4xl mb-4">📬</span>
+                        <p className="text-lg font-display font-bold text-slate-800 mb-2">{b.hero_title}</p>
+                        <p className="text-sm text-slate-500">{b.hero_desc}</p>
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
             )}
           </section>
