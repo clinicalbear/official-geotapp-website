@@ -66,7 +66,7 @@ export default function ArticleHero({
     target: heroRef,
     offset: ['start start', 'end start'],
   });
-  const imageY = useTransform(scrollYProgress, [0, 1], ['0%', '30%']);
+  const imageY = useTransform(scrollYProgress, [0, 1], ['0%', '50%']);
 
   const formattedDate = new Date(date).toLocaleDateString(locale, {
     day: 'numeric',
@@ -84,7 +84,7 @@ export default function ArticleHero({
             alt={title}
             fill
             priority
-            className="object-cover scale-110"
+            className="object-cover scale-125"
             sizes="100vw"
           />
         </motion.div>
