@@ -197,9 +197,9 @@ export default function BlogClient({ locale, posts }: { locale: AppLocale; posts
           inset: 0,
           pointerEvents: 'none',
           background:
-            'radial-gradient(ellipse 60% 50% at 10% 20%, rgba(143,196,54,0.12), transparent),' +
-            'radial-gradient(ellipse 50% 40% at 90% 60%, rgba(59,174,224,0.10), transparent),' +
-            'radial-gradient(ellipse 40% 35% at 50% 90%, rgba(139,92,246,0.08), transparent)',
+            'radial-gradient(ellipse 70% 55% at 0% 10%, rgba(143,196,54,0.25), transparent),' +
+            'radial-gradient(ellipse 60% 50% at 100% 45%, rgba(59,174,224,0.20), transparent),' +
+            'radial-gradient(ellipse 50% 45% at 40% 90%, rgba(139,92,246,0.15), transparent)',
         }}
       />
       <div className="relative z-10">
