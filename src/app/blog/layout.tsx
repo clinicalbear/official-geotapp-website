@@ -40,9 +40,9 @@ export default function BlogLayout({ children }: { children: ReactNode }) {
               zIndex: 0,
               pointerEvents: 'none',
               background:
-                'radial-gradient(ellipse 70% 55% at 0% 10%, rgba(143,196,54,0.25), transparent),' +
-                'radial-gradient(ellipse 60% 50% at 100% 45%, rgba(59,174,224,0.20), transparent),' +
-                'radial-gradient(ellipse 50% 45% at 40% 90%, rgba(139,92,246,0.15), transparent)',
+                'radial-gradient(ellipse 70% 55% at 0% 10%, rgba(143,196,54,0.10), transparent),' +
+                'radial-gradient(ellipse 60% 50% at 100% 45%, rgba(59,174,224,0.08), transparent),' +
+                'radial-gradient(ellipse 50% 45% at 40% 90%, rgba(139,92,246,0.06), transparent)',
             }}
           />
           <div className="relative z-10">
