@@ -121,7 +121,7 @@ const URLS = {
   softwareadvice: 'https://www.softwareadvice.com/product/548499-GeoTapp-Flow/',
   saashub: 'https://www.saashub.com/geotapp',
   kompass: 'https://it.kompass.com/c/geotapp/it1415466/',
-  cylex: 'https://www.cylex.it/azienda/geotapp.html',
+  cylex: 'https://www.cylex-italia.it/trenzano/geotapp-16334946.html',
   hotfrog: 'https://www.hotfrog.it/company/b582d0c9ce6459cc7416dce853e50149',
 };
 
