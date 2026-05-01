@@ -4,6 +4,7 @@ import { useState, useMemo } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import MapBackground from '@/components/blog/MapBackground';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import type { AppLocale } from '@/lib/i18n/config';
 
@@ -189,19 +190,7 @@ export default function BlogClient({ locale, posts }: { locale: AppLocale; posts
 
   return (
     <div className="min-h-screen pt-40 pb-20 px-6 relative overflow-hidden">
-      {/* Background glow effects */}
-      <div
-        aria-hidden="true"
-        style={{
-          position: 'absolute',
-          inset: 0,
-          pointerEvents: 'none',
-          background:
-            'radial-gradient(ellipse 70% 55% at 0% 10%, rgba(143,196,54,0.10), transparent),' +
-            'radial-gradient(ellipse 60% 50% at 100% 45%, rgba(59,174,224,0.08), transparent),' +
-            'radial-gradient(ellipse 50% 45% at 40% 90%, rgba(139,92,246,0.06), transparent)',
-        }}
-      />
+      <MapBackground />
       <div className="relative z-10">
       <section className="container mx-auto max-w-6xl text-center mb-16">
         <h1 className="text-5xl md:text-6xl font-display font-bold text-text-primary mb-6">

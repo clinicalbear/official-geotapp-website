@@ -7,6 +7,7 @@ import ArticleFooter from '@/components/blog/ArticleFooter';
 import ReadingProgress from '@/components/blog/ReadingProgress';
 import BackToTop from '@/components/blog/BackToTop';
 import NewsletterInline from '@/components/blog/NewsletterInline';
+import MapBackground from '@/components/blog/MapBackground';
 
 export const dynamic = 'force-dynamic';
 
@@ -251,8 +252,16 @@ export default async function BlogArticlePage({ params }: Props) {
     ],
   };
 
+  // Detect products from categories for map background color
+  const mapProducts: Array<'timetracker' | 'flow' | 'verifier'> = [];
+  const catSlugs = categories.map(c => c.slug.toLowerCase()).join(' ');
+  if (/gps|track|timbr|presenz|geoloc|clock|attendance|zeit/.test(catSlugs)) mapProducts.push('timetracker');
+  if (/gestione|operazioni|business|software|flow|workflow/.test(catSlugs)) mapProducts.push('flow');
+  if (/sicur|secur|verif|prov|proof|report|document/.test(catSlugs)) mapProducts.push('verifier');
+
   return (
     <>
+      <MapBackground products={mapProducts.length > 0 ? mapProducts : undefined} />
       <ReadingProgress />
       <BackToTop />
 
