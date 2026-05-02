@@ -217,23 +217,21 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Product logos under screenshots */}
-              <div className="flex items-center justify-center gap-6 mt-12 anim-fade-in-up anim-delay-600">
-                <Link href={getLink('/products/geotapp-timetracker')} className="flex items-center gap-2 group">
-                  <img src="/TimeTrackerTrasparente.png" alt="TimeTracker" className="h-7 w-auto opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all" />
-                  <span className="text-[#F97316] text-xs font-bold opacity-70 group-hover:opacity-100 transition-opacity">TimeTracker</span>
-                </Link>
-                <div className="w-px h-6 bg-white/15" />
-                <Link href={getLink('/products/geotapp-flow')} className="flex items-center gap-2 group">
-                  <img src="/logoFlow.png" alt="Flow" className="h-7 w-auto opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all" />
-                  <span className="text-[#8B5CF6] text-xs font-bold opacity-70 group-hover:opacity-100 transition-opacity">Flow</span>
-                </Link>
-                <div className="w-px h-6 bg-white/15" />
-                <Link href={getLink('/products/geotapp-verifier')} className="flex items-center gap-2 group">
-                  <img src="/logoVerifier.png" alt="Verifier" className="h-7 w-auto opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all" />
-                  <span className="text-[#22C55E] text-xs font-bold opacity-70 group-hover:opacity-100 transition-opacity">Verifier</span>
-                </Link>
-              </div>
+            </div>
+
+            {/* Product logos — below screenshots, full width */}
+            <div className="hidden lg:flex items-center justify-center gap-10 mt-8 anim-fade-in-up anim-delay-600 lg:col-span-2">
+              <Link href={getLink('/products/geotapp-timetracker')} className="group">
+                <img src="/TimeTrackerTrasparente.png" alt="TimeTracker" className="h-8 w-auto opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all" />
+              </Link>
+              <div className="w-px h-8 bg-white/15" />
+              <Link href={getLink('/products/geotapp-flow')} className="group">
+                <img src="/logoFlow.png" alt="Flow" className="h-8 w-auto opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all" />
+              </Link>
+              <div className="w-px h-8 bg-white/15" />
+              <Link href={getLink('/products/geotapp-verifier')} className="group">
+                <img src="/logoVerifier.png" alt="Verifier" className="h-8 w-auto opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all" />
+              </Link>
             </div>
           </div>
         </div>
