@@ -3,19 +3,15 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 
-/**
- * Animated ECG/heartbeat line.
- * Draws itself when it enters the viewport, then pulses continuously.
- * Color defaults to Flow purple (#8B5CF6).
- */
 export default function HeartbeatLine({ color = '#8B5CF6' }: { color?: string }) {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: '-100px' });
 
-  // ECG-like waveform path: flat → small bump → flat → big spike → dip → recovery → flat (repeated)
+  // ECG beat pattern
   const beat = 'l30 0 l5 -8 l5 8 l20 0 l4 -5 l3 12 l4 -40 l4 55 l4 -22 l3 5 l25 0';
   const gap = 'l40 0';
-  const fullPath = `M0 50 ${gap} ${beat} ${gap} ${beat} ${gap} ${beat} ${gap} ${beat} ${gap} ${beat} ${gap} ${beat} ${gap} ${beat} ${gap} ${beat} l40 0`;
+  // More repetitions to fill the full height when rendered vertically-ish
+  const fullPath = `M0 50 ${gap} ${beat} ${gap} ${beat} ${gap} ${beat} ${gap} ${beat} ${gap} ${beat} ${gap} ${beat} ${gap} ${beat} ${gap} ${beat} ${gap} ${beat} ${gap} ${beat} ${gap} ${beat} ${gap} ${beat} l40 0`;
 
   return (
     <div
@@ -30,15 +26,14 @@ export default function HeartbeatLine({ color = '#8B5CF6' }: { color?: string })
       }}
     >
       <svg
-        viewBox="0 0 1400 100"
+        viewBox="0 0 2100 100"
         preserveAspectRatio="none"
         style={{
           position: 'absolute',
-          top: '50%',
+          top: 0,
           left: 0,
           width: '100%',
-          height: '120px',
-          transform: 'translateY(-50%)',
+          height: '100%',
         }}
       >
         {/* Glow behind the line */}
@@ -53,7 +48,7 @@ export default function HeartbeatLine({ color = '#8B5CF6' }: { color?: string })
           style={{ filter: 'blur(8px)' }}
           initial={{ pathLength: 0 }}
           animate={inView ? { pathLength: 1 } : { pathLength: 0 }}
-          transition={{ duration: 2.5, ease: 'easeInOut' }}
+          transition={{ duration: 3.5, ease: 'easeInOut' }}
         />
         {/* Main line */}
         <motion.path
@@ -66,21 +61,21 @@ export default function HeartbeatLine({ color = '#8B5CF6' }: { color?: string })
           opacity="0.15"
           initial={{ pathLength: 0 }}
           animate={inView ? { pathLength: 1 } : { pathLength: 0 }}
-          transition={{ duration: 2.5, ease: 'easeInOut' }}
+          transition={{ duration: 3.5, ease: 'easeInOut' }}
         />
-        {/* Bright dot traveling along the path */}
+        {/* Bright dot traveling along the path — slow */}
         {inView && (
           <>
             <circle r="3" fill={color} opacity="0.4">
               <animateMotion
-                dur="4s"
+                dur="8s"
                 repeatCount="indefinite"
                 path={fullPath}
               />
             </circle>
             <circle r="6" fill={color} opacity="0.1">
               <animateMotion
-                dur="4s"
+                dur="8s"
                 repeatCount="indefinite"
                 path={fullPath}
               />
