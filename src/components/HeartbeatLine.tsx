@@ -8,7 +8,7 @@ export default function HeartbeatLine({ color = '#8B5CF6' }: { color?: string })
   const inView = useInView(ref, { once: true, margin: '-100px' });
 
   // ECG beat pattern
-  const beat = 'l30 0 l5 -8 l5 8 l20 0 l4 -5 l3 12 l4 -40 l4 55 l4 -22 l3 5 l25 0';
+  const beat = 'l30 0 l5 -12 l5 12 l20 0 l4 -8 l3 18 l4 -65 l4 85 l4 -35 l3 7 l25 0';
   const gap = 'l40 0';
   const fullPath = `M0 50 ${gap} ${beat} ${gap} ${beat} ${gap} ${beat} ${gap} ${beat} ${gap} ${beat} ${gap} ${beat} ${gap} ${beat} ${gap} ${beat} ${gap} ${beat} L1400 50`;
 
