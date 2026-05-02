@@ -192,7 +192,7 @@ export default function Home() {
             {/* Right — logos + stacked screenshots */}
             <div className="relative hidden lg:block anim-fade-in-up anim-delay-400" style={{ perspective: '1200px' }}>
               {/* Product logos above screenshots */}
-              <div className="flex items-center justify-center gap-10 mb-8">
+              <div className="flex items-center justify-center gap-10 mb-8 -mt-4">
                 <Link href={getLink('/products/geotapp-timetracker')} className="group">
                   <img src="/TimeTrackerTrasparente.png" alt="TimeTracker" className="h-8 w-auto opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all" />
                 </Link>
