@@ -118,17 +118,21 @@ export default function Home() {
       <section className="relative pt-40 pb-32 px-6 overflow-hidden">
         <div className="container mx-auto max-w-5xl text-center z-10 relative">
           <div>
-            <span className="inline-block px-5 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-bold tracking-wide mb-8 anim-fade-in-up">
-              <span className="inline-block w-2 h-2 rounded-full bg-primary mr-2 animate-pulse" />
-              {dict.landing.hero_badge}
-            </span>
-            <h1
-              className="text-5xl md:text-7xl font-display font-bold text-slate-900 leading-[1.05] tracking-tight mb-8 anim-fade-in-up anim-delay-200"
-              dangerouslySetInnerHTML={{ __html: dict.landing.hero_title }}
-            ></h1>
-            <p className="text-xl md:text-2xl text-text-secondary leading-relaxed max-w-2xl mx-auto mb-4 font-light anim-fade-in-up anim-delay-400">
-              {dict.landing.hero_subtitle}
-            </p>
+            {(() => { const d = DIFF_COPY[currentLocale] ?? DIFF_COPY['en']; return (
+              <>
+                <span className="inline-block px-5 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-bold tracking-wide mb-8 anim-fade-in-up">
+                  <span className="inline-block w-2 h-2 rounded-full bg-primary mr-2 animate-pulse" />
+                  {dict.landing.hero_badge}
+                </span>
+                <h1 className="text-5xl md:text-7xl font-display font-bold text-slate-900 leading-[1.05] tracking-tight mb-4 anim-fade-in-up anim-delay-200">
+                  {d.h2_1}<br />
+                  <span className="text-primary">{d.h2_2}</span>
+                </h1>
+                <p className="text-xl md:text-2xl text-text-secondary leading-relaxed max-w-3xl mx-auto mb-4 font-light anim-fade-in-up anim-delay-400">
+                  {d.desc}
+                </p>
+              </>
+            ); })()}
             <p className="text-sm text-slate-400 mb-10 anim-fade-in-up anim-delay-500">
               {dict.landing.hero_sectors_prefix}{' '}
               <Link href={getLink('/settori/pulizie')} className="underline hover:text-slate-600 transition-colors">
@@ -195,28 +199,6 @@ export default function Home() {
         <ListedOn locale={currentLocale} />
       </div>
 
-      {/* DIFFERENTIATOR — "Everything they do, we do. But what we do, they can't." */}
-      <section className="py-28 bg-slate-900 relative overflow-hidden">
-        {/* Accent line */}
-        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#F97316] via-[#8FC436] to-[#8B5CF6]" />
-        <div className="container mx-auto px-6 max-w-4xl text-center relative z-10">
-          {(() => { const d = DIFF_COPY[currentLocale] ?? DIFF_COPY['en']; return (<>
-            <h2 className="text-4xl md:text-6xl font-display font-bold text-white mb-8 anim-fade-in-up leading-tight">
-              {d.h2_1}<br />
-              <span className="text-primary">{d.h2_2}</span>
-            </h2>
-            <p className="text-lg md:text-xl text-slate-400 leading-relaxed max-w-3xl mx-auto mb-12 anim-fade-in-up anim-delay-200">
-              {d.desc}
-            </p>
-            <a
-              href="#verifier-section"
-              className="inline-flex items-center gap-2 px-8 py-4 border border-primary/30 text-primary font-bold rounded-2xl hover:bg-primary/10 hover:gap-3 transition-all anim-fade-in-up anim-delay-300 text-lg"
-            >
-              {d.link} <ArrowRight size={18} />
-            </a>
-          </>); })()}
-        </div>
-      </section>
 
       {/* PROBLEM SECTION */}
       <section className="py-20 bg-slate-50 border-b border-slate-100">
