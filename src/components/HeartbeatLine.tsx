@@ -68,14 +68,14 @@ export default function HeartbeatLine({ color = '#8B5CF6' }: { color?: string })
           <>
             <circle r="3" fill={color} opacity="0.4">
               <animateMotion
-                dur="8s"
+                dur="16s"
                 repeatCount="indefinite"
                 path={fullPath}
               />
             </circle>
             <circle r="6" fill={color} opacity="0.1">
               <animateMotion
-                dur="8s"
+                dur="16s"
                 repeatCount="indefinite"
                 path={fullPath}
               />
