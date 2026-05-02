@@ -193,30 +193,30 @@ export default function Home() {
             <div className="relative hidden lg:block anim-fade-in-up anim-delay-400" style={{ perspective: '1200px' }}>
               {/* Back screenshot — live map */}
               <div
-                className="absolute top-8 -right-4 w-[85%] rounded-xl overflow-hidden border border-white/10 shadow-2xl shadow-black/40"
+                className="absolute top-8 -left-4 w-[85%] rounded-xl overflow-hidden border border-white/10 shadow-2xl shadow-black/40"
                 style={{ transform: 'rotateY(-8deg) rotateX(2deg)' }}
               >
                 <img src="/screen_live_map.png" alt="GeoTapp Flow Live Map" className="w-full" loading="eager" />
               </div>
-              {/* Middle — TimeTracker in smartphone frame */}
-              <div
-                className="absolute top-8 right-0 w-[180px]"
-                style={{ transform: 'rotateY(-5deg) rotateX(2deg)' }}
-              >
-                <div className="bg-slate-800 rounded-[2rem] p-2 border border-white/15 shadow-2xl shadow-black/50">
-                  {/* Phone notch */}
-                  <div className="w-20 h-4 bg-slate-900 rounded-full mx-auto mb-1" />
-                  <div className="rounded-[1.5rem] overflow-hidden">
-                    <img src="/screenshots/timetracker-dashboard.jpg" alt="GeoTapp TimeTracker" className="w-full" loading="eager" />
-                  </div>
-                </div>
-              </div>
-              {/* Front screenshot — Flow dashboard */}
+              {/* Middle — Flow dashboard */}
               <div
                 className="relative w-[90%] rounded-xl overflow-hidden border border-white/10 shadow-2xl shadow-primary/20"
                 style={{ transform: 'rotateY(-3deg)' }}
               >
                 <img src="/screen_dashboard.png" alt="GeoTapp Flow Dashboard" className="w-full" loading="eager" />
+              </div>
+              {/* Front — TimeTracker in smartphone frame, in primo piano */}
+              <div
+                className="absolute -bottom-6 -right-4 w-[160px] z-20"
+                style={{ transform: 'rotateY(-3deg)' }}
+              >
+                <div className="rounded-[2rem] p-[3px] border-[3px] border-white/20 shadow-2xl shadow-black/60 bg-slate-900">
+                  <div className="w-16 h-3 bg-slate-800 rounded-full mx-auto mt-1 mb-0.5" />
+                  <div className="rounded-[1.6rem] overflow-hidden">
+                    <img src="/screenshots/timetracker-dashboard.jpg" alt="GeoTapp TimeTracker" className="w-full" loading="eager" />
+                  </div>
+                  <div className="h-2" />
+                </div>
               </div>
             </div>
           </div>
