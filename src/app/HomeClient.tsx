@@ -72,6 +72,20 @@ const TrustBar = dynamic(() => import('@/components/TrustBar'), { ssr: true });
 const ListedOn = dynamic(() => import('@/components/ListedOn'), { ssr: true });
 
 
+const DIFF_COPY: Record<string, { h2_1: string; h2_2: string; desc: string; link: string }> = {
+  it: { h2_1: 'Tutto quello che fanno loro, lo facciamo anche noi.', h2_2: 'Ma quello che facciamo noi, loro non possono.', desc: 'Timbratura GPS, CRM, gestione squadre \u2014 s\u00ec, facciamo tutto questo. Ma quando il cliente contesta, gli altri ti lasciano con un foglio Excel. Noi ti diamo un report sigillato, non alterabile, verificabile da chiunque \u2014 e la discussione finisce l\u00ec.', link: 'Scopri la differenza' },
+  en: { h2_1: 'Everything they do, we do.', h2_2: 'But what we do, they can\'t.', desc: 'GPS tracking, CRM, team management \u2014 yes, we do all of that. But when a client disputes your work, the others leave you alone. We hand you a sealed, verified report that ends the conversation.', link: 'See the difference' },
+  de: { h2_1: 'Alles, was die anderen tun, tun wir auch.', h2_2: 'Aber was wir tun, k\u00f6nnen die anderen nicht.', desc: 'GPS-Tracking, CRM, Teamverwaltung \u2014 ja, das alles machen wir auch. Aber wenn ein Kunde Ihre Arbeit bestreitet, lassen die anderen Sie allein. Wir geben Ihnen einen versiegelten, nicht ver\u00e4nderbaren Bericht, der die Diskussion beendet.', link: 'Den Unterschied sehen' },
+  fr: { h2_1: 'Tout ce qu\'ils font, nous le faisons aussi.', h2_2: 'Mais ce que nous faisons, ils ne le peuvent pas.', desc: 'Suivi GPS, CRM, gestion d\'\u00e9quipes \u2014 oui, nous faisons tout cela. Mais quand un client conteste votre travail, les autres vous laissent seul. Nous vous donnons un rapport scell\u00e9, non modifiable, v\u00e9rifiable par tous.', link: 'Voir la diff\u00e9rence' },
+  nl: { h2_1: 'Alles wat zij doen, doen wij ook.', h2_2: 'Maar wat wij doen, kunnen zij niet.', desc: 'GPS-tracking, CRM, teambeheer \u2014 ja, dat doen wij ook allemaal. Maar wanneer een klant uw werk betwist, laten de anderen u alleen. Wij geven u een verzegeld, niet-wijzigbaar rapport dat de discussie be\u00ebindigt.', link: 'Ontdek het verschil' },
+  es: { h2_1: 'Todo lo que ellos hacen, nosotros tambi\u00e9n.', h2_2: 'Pero lo que hacemos nosotros, ellos no pueden.', desc: 'Seguimiento GPS, CRM, gesti\u00f3n de equipos \u2014 s\u00ed, hacemos todo eso. Pero cuando un cliente cuestiona tu trabajo, los dem\u00e1s te dejan solo. Nosotros te damos un informe sellado, no alterable, verificable por cualquiera.', link: 'Ver la diferencia' },
+  pt: { h2_1: 'Tudo o que eles fazem, n\u00f3s tamb\u00e9m fazemos.', h2_2: 'Mas o que n\u00f3s fazemos, eles n\u00e3o conseguem.', desc: 'Rastreamento GPS, CRM, gest\u00e3o de equipes \u2014 sim, fazemos tudo isso. Mas quando um cliente contesta o seu trabalho, os outros deixam voc\u00ea sozinho. N\u00f3s entregamos um relat\u00f3rio selado, verific\u00e1vel, que encerra a discuss\u00e3o.', link: 'Veja a diferen\u00e7a' },
+  da: { h2_1: 'Alt hvad de g\u00f8r, g\u00f8r vi ogs\u00e5.', h2_2: 'Men hvad vi g\u00f8r, kan de ikke.', desc: 'GPS-sporing, CRM, teamledelse \u2014 ja, det g\u00f8r vi ogs\u00e5. Men n\u00e5r en kunde bestrider dit arbejde, lader de andre dig alene. Vi giver dig en forseglet, ikke-\u00e6ndringsbar rapport, der afslutter diskussionen.', link: 'Se forskellen' },
+  sv: { h2_1: 'Allt de g\u00f6r, g\u00f6r vi ocks\u00e5.', h2_2: 'Men det vi g\u00f6r, kan de inte.', desc: 'GPS-sp\u00e5rning, CRM, teamhantering \u2014 ja, allt det g\u00f6r vi ocks\u00e5. Men n\u00e4r en kund ifr\u00e5gas\u00e4tter ditt arbete, l\u00e4mnar de andra dig ensam. Vi ger dig en f\u00f6rseglad, ej \u00e4ndringsbar rapport som avslutar diskussionen.', link: 'Se skillnaden' },
+  nb: { h2_1: 'Alt de gj\u00f8r, gj\u00f8r vi ogs\u00e5.', h2_2: 'Men det vi gj\u00f8r, kan de ikke.', desc: 'GPS-sporing, CRM, teamledelse \u2014 ja, alt det gj\u00f8r vi ogs\u00e5. Men n\u00e5r en kunde bestrider arbeidet ditt, lar de andre deg alene. Vi gir deg en forseglet, ikke-endringsbar rapport som avslutter diskusjonen.', link: 'Se forskjellen' },
+  ru: { h2_1: '\u0412\u0441\u0451, \u0447\u0442\u043e \u0434\u0435\u043b\u0430\u044e\u0442 \u043e\u043d\u0438, \u0434\u0435\u043b\u0430\u0435\u043c \u0438 \u043c\u044b.', h2_2: '\u041d\u043e \u0442\u043e, \u0447\u0442\u043e \u0434\u0435\u043b\u0430\u0435\u043c \u043c\u044b, \u043e\u043d\u0438 \u043d\u0435 \u043c\u043e\u0433\u0443\u0442.', desc: 'GPS-\u0442\u0440\u0435\u043a\u0438\u043d\u0433, CRM, \u0443\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435 \u043a\u043e\u043c\u0430\u043d\u0434\u0430\u043c\u0438 \u2014 \u0434\u0430, \u0432\u0441\u0451 \u044d\u0442\u043e \u043c\u044b \u0434\u0435\u043b\u0430\u0435\u043c. \u041d\u043e \u043a\u043e\u0433\u0434\u0430 \u043a\u043b\u0438\u0435\u043d\u0442 \u043e\u0441\u043f\u0430\u0440\u0438\u0432\u0430\u0435\u0442 \u0432\u0430\u0448\u0443 \u0440\u0430\u0431\u043e\u0442\u0443, \u0434\u0440\u0443\u0433\u0438\u0435 \u043e\u0441\u0442\u0430\u0432\u043b\u044f\u044e\u0442 \u0432\u0430\u0441 \u043e\u0434\u043d\u043e\u0433\u043e. \u041c\u044b \u0434\u0430\u0451\u043c \u0432\u0430\u043c \u0437\u0430\u043f\u0435\u0447\u0430\u0442\u0430\u043d\u043d\u044b\u0439, \u043d\u0435\u0438\u0437\u043c\u0435\u043d\u044f\u0435\u043c\u044b\u0439 \u043e\u0442\u0447\u0451\u0442, \u043a\u043e\u0442\u043e\u0440\u044b\u0439 \u0437\u0430\u0432\u0435\u0440\u0448\u0430\u0435\u0442 \u0441\u043f\u043e\u0440.', link: '\u0423\u0432\u0438\u0434\u0435\u0442\u044c \u0440\u0430\u0437\u043d\u0438\u0446\u0443' },
+};
+
 export default function Home() {
   // Locale resolution is path-based so all internal links stay language-aware.
   const pathname = usePathname();
@@ -104,17 +118,17 @@ export default function Home() {
       <section className="relative pt-40 pb-32 px-6">
         <div className="container mx-auto max-w-5xl text-center z-10 relative">
           <div className="anim-fade-in-up">
-            <span className="inline-block px-4 py-1.5 rounded-full bg-slate-100 border border-slate-200 text-slate-600 text-sm font-bold tracking-wide mb-8 anim-fade-in-up anim-delay-100">
+            <span className="typing-cursor inline-block px-4 py-1.5 rounded-full bg-slate-100 border border-slate-200 text-slate-600 text-sm font-bold tracking-wide mb-8 anim-fade-in-up">
               {dict.landing.hero_badge}
             </span>
             <h1
               className="text-4xl md:text-6xl font-display font-bold text-slate-900 leading-[1.1] tracking-tight mb-8 anim-fade-in-up anim-delay-200"
               dangerouslySetInnerHTML={{ __html: dict.landing.hero_title }}
             ></h1>
-            <p className="text-xl text-text-secondary leading-relaxed max-w-2xl mx-auto mb-4 font-light anim-fade-in-up anim-delay-200">
+            <p className="text-xl text-text-secondary leading-relaxed max-w-2xl mx-auto mb-4 font-light anim-fade-in-up anim-delay-400">
               {dict.landing.hero_subtitle}
             </p>
-            <p className="text-sm text-slate-400 mb-10 anim-fade-in-up anim-delay-300">
+            <p className="text-sm text-slate-400 mb-10 anim-fade-in-up anim-delay-500">
               {dict.landing.hero_sectors_prefix}{' '}
               <Link href={getLink('/settori/pulizie')} className="underline hover:text-slate-600 transition-colors">
                 {dict.landing.hero_sectors_pulizie}
@@ -129,7 +143,7 @@ export default function Home() {
               </Link>
               .
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10 anim-fade-in-up anim-delay-300">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10 anim-fade-in-up anim-delay-600">
               <Link
                 href={getLink('/trial')}
                 className="px-8 py-4 bg-primary text-white font-bold rounded-xl text-lg hover:bg-primary/90 transition-all shadow-lg hover:shadow-primary/30 transform hover:-translate-y-1"
@@ -144,7 +158,7 @@ export default function Home() {
               </Link>
             </div>
             {/* TrustBlock: 3 micro-signals below CTAs */}
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center text-sm text-slate-500 anim-fade-in-up anim-delay-400">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center text-sm text-slate-500 anim-fade-in-up anim-delay-800">
               <div className="flex items-center gap-2">
                 <ShieldCheck size={16} className="text-emerald-500 shrink-0" />
                 <span><strong className="text-slate-700">{dict.landing.trust_gdpr}</strong> — {dict.landing.trust_gdpr_desc}</span>
@@ -163,8 +177,12 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Abstract Bg Decoration — CSS gradient, no filter:blur to avoid GPU layer cost */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[1000px] bg-gradient-to-b from-slate-100/50 to-transparent rounded-full -z-0 pointer-events-none" />
+        {/* Animated gradient blobs */}
+        <div className="absolute inset-0 -z-0 pointer-events-none overflow-hidden">
+          <div className="hero-blob-1 absolute top-10 left-1/4 w-[500px] h-[500px] bg-gradient-to-br from-[#8FC436]/15 to-transparent rounded-full blur-3xl" />
+          <div className="hero-blob-2 absolute top-20 right-1/4 w-[400px] h-[400px] bg-gradient-to-bl from-[#3BAEE0]/12 to-transparent rounded-full blur-3xl" />
+          <div className="hero-blob-3 absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-gradient-to-t from-[#8B5CF6]/8 to-transparent rounded-full blur-3xl" />
+        </div>
       </section>
 
       {/* TRUST BAR — social proof immediately after hero */}
@@ -174,6 +192,27 @@ export default function Home() {
       <div className="listed-on-wrapper" style={{ background: 'linear-gradient(135deg, #2a8fc4 0%, #3BAEE0 50%, #2a8fc4 100%)', boxShadow: 'inset 0 4px 12px rgba(0,0,0,0.15), inset 0 -4px 12px rgba(0,0,0,0.1)' }}>
         <ListedOn locale={currentLocale} />
       </div>
+
+      {/* DIFFERENTIATOR — "Everything they do, we do. But what we do, they can't." */}
+      <section className="py-20 bg-white border-b border-slate-100">
+        <div className="container mx-auto px-6 max-w-4xl text-center">
+          {(() => { const d = DIFF_COPY[currentLocale] ?? DIFF_COPY['en']; return (<>
+            <h2 className="text-3xl md:text-5xl font-display font-bold text-slate-900 mb-6 anim-fade-in-up">
+              {d.h2_1}<br />
+              <span className="text-primary">{d.h2_2}</span>
+            </h2>
+            <p className="text-lg md:text-xl text-slate-500 leading-relaxed max-w-3xl mx-auto mb-10 anim-fade-in-up anim-delay-200">
+              {d.desc}
+            </p>
+            <a
+              href="#verifier-section"
+              className="inline-flex items-center gap-2 text-primary font-bold hover:gap-3 transition-all anim-fade-in-up anim-delay-300"
+            >
+              {d.link} <ArrowRight size={18} />
+            </a>
+          </>); })()}
+        </div>
+      </section>
 
       {/* PROBLEM SECTION */}
       <section className="py-20 bg-slate-50 border-b border-slate-100">
@@ -292,7 +331,7 @@ export default function Home() {
 
       {/* Product blocks: Verifier leads as the unique trust mechanism, then office (Flow), then field (App). */}
       {/* PRODUCT SECTION: VERIFIER */}
-      <section className="py-24 border-t border-slate-100 bg-white">
+      <section id="verifier-section" className="py-24 border-t border-slate-100 bg-white">
         <div className="container mx-auto px-6 max-w-6xl">
           <div className="grid md:grid-cols-[3fr_2fr] gap-16 items-center">
             <div className="order-2 md:order-1">
