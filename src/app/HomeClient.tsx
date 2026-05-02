@@ -115,7 +115,7 @@ export default function Home() {
     <div className="bg-background min-h-screen text-text-primary overflow-hidden">
       {/* Landing is locale-aware: all internal links pass through getLink(). */}
       {/* HERO SECTION — dark bg, text left, screenshots right */}
-      <section className="relative pt-32 pb-20 px-6 bg-slate-900 overflow-hidden">
+      <section className="relative pt-32 pb-20 px-6 overflow-hidden" style={{ background: 'linear-gradient(180deg, #1e293b 0%, #334155 60%, #f8fafc 100%)' }}>
         {/* Gradient accent top */}
         <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#F97316] via-[#8FC436] to-[#8B5CF6]" />
 
