@@ -18,6 +18,7 @@ import {
   MapPin,
   WifiOff,
 } from 'lucide-react';
+import HeartbeatLine from '@/components/HeartbeatLine';
 
 // UI MOCKUP COMPONENTS (Built with Tailwind for "Real Example" feel)
 const MockupFlow = ({ m }: { m: { pipeline_title: string; month: string; quote_name: string; quote_approved: string } }) => (
@@ -482,7 +483,8 @@ export default function Home() {
       </section>
 
       {/* PRODUCT SECTION: FLOW */}
-      <section className="py-24 border-t border-slate-100 bg-white">
+      <section className="py-24 border-t border-slate-100 bg-white relative">
+        <HeartbeatLine />
         <div className="container mx-auto px-6 max-w-6xl">
           <div className="grid md:grid-cols-[3fr_2fr] gap-16 items-center">
             <div className="order-2 md:order-1">
