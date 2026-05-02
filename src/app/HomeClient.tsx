@@ -210,12 +210,10 @@ export default function Home() {
                 className="absolute -bottom-6 -right-4 w-[160px] z-20"
                 style={{ transform: 'rotateY(-3deg)' }}
               >
-                <div className="rounded-[2rem] p-[3px] border-[3px] border-white/20 shadow-2xl shadow-black/60 bg-slate-900">
-                  <div className="w-16 h-3 bg-slate-800 rounded-full mx-auto mt-1 mb-0.5" />
-                  <div className="rounded-[1.6rem] overflow-hidden">
+                <div className="rounded-[2rem] border-[3px] border-white/20 shadow-2xl shadow-black/60 bg-slate-900 overflow-hidden">
+                  <div className="rounded-[1.8rem] overflow-hidden m-[3px]">
                     <img src="/screenshots/timetracker-dashboard.jpg" alt="GeoTapp TimeTracker" className="w-full" loading="eager" />
                   </div>
-                  <div className="h-2" />
                 </div>
               </div>
             </div>
