@@ -115,17 +115,18 @@ export default function Home() {
     <div className="bg-background min-h-screen text-text-primary overflow-hidden">
       {/* Landing is locale-aware: all internal links pass through getLink(). */}
       {/* HERO SECTION */}
-      <section className="relative pt-40 pb-32 px-6">
+      <section className="relative pt-40 pb-32 px-6 overflow-hidden">
         <div className="container mx-auto max-w-5xl text-center z-10 relative">
-          <div className="anim-fade-in-up">
-            <span className="typing-cursor inline-block px-4 py-1.5 rounded-full bg-slate-100 border border-slate-200 text-slate-600 text-sm font-bold tracking-wide mb-8 anim-fade-in-up">
+          <div>
+            <span className="inline-block px-5 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-bold tracking-wide mb-8 anim-fade-in-up">
+              <span className="inline-block w-2 h-2 rounded-full bg-primary mr-2 animate-pulse" />
               {dict.landing.hero_badge}
             </span>
             <h1
-              className="text-4xl md:text-6xl font-display font-bold text-slate-900 leading-[1.1] tracking-tight mb-8 anim-fade-in-up anim-delay-200"
+              className="text-5xl md:text-7xl font-display font-bold text-slate-900 leading-[1.05] tracking-tight mb-8 anim-fade-in-up anim-delay-200"
               dangerouslySetInnerHTML={{ __html: dict.landing.hero_title }}
             ></h1>
-            <p className="text-xl text-text-secondary leading-relaxed max-w-2xl mx-auto mb-4 font-light anim-fade-in-up anim-delay-400">
+            <p className="text-xl md:text-2xl text-text-secondary leading-relaxed max-w-2xl mx-auto mb-4 font-light anim-fade-in-up anim-delay-400">
               {dict.landing.hero_subtitle}
             </p>
             <p className="text-sm text-slate-400 mb-10 anim-fade-in-up anim-delay-500">
@@ -146,13 +147,14 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10 anim-fade-in-up anim-delay-600">
               <Link
                 href={getLink('/trial')}
-                className="px-8 py-4 bg-primary text-white font-bold rounded-xl text-lg hover:bg-primary/90 transition-all shadow-lg hover:shadow-primary/30 transform hover:-translate-y-1"
+                className="group px-10 py-5 bg-primary text-white font-bold rounded-2xl text-lg hover:bg-primary/90 transition-all shadow-xl shadow-primary/25 transform hover:-translate-y-1 hover:shadow-primary/40"
               >
                 {dict.landing.hero_cta_primary}
+                <ArrowRight size={18} className="inline ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 href={getLink('/settori')}
-                className="px-8 py-4 bg-white text-slate-900 border border-slate-200 font-bold rounded-xl text-lg hover:border-slate-400 transition-all"
+                className="px-10 py-5 bg-white/80 backdrop-blur text-slate-900 border border-slate-200 font-bold rounded-2xl text-lg hover:border-primary/40 hover:bg-white transition-all"
               >
                 {dict.landing.hero_cta_secondary}
               </Link>
@@ -177,11 +179,11 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Animated gradient blobs */}
-        <div className="absolute inset-0 -z-0 pointer-events-none overflow-hidden">
-          <div className="hero-blob-1 absolute top-10 left-1/4 w-[500px] h-[500px] bg-gradient-to-br from-[#8FC436]/15 to-transparent rounded-full blur-3xl" />
-          <div className="hero-blob-2 absolute top-20 right-1/4 w-[400px] h-[400px] bg-gradient-to-bl from-[#3BAEE0]/12 to-transparent rounded-full blur-3xl" />
-          <div className="hero-blob-3 absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-gradient-to-t from-[#8B5CF6]/8 to-transparent rounded-full blur-3xl" />
+        {/* Animated gradient blobs — visible */}
+        <div className="absolute inset-0 -z-0 pointer-events-none">
+          <div className="hero-blob-1 absolute -top-20 -left-20 w-[600px] h-[600px] bg-gradient-to-br from-[#8FC436]/30 to-transparent rounded-full blur-[100px]" />
+          <div className="hero-blob-2 absolute -top-10 -right-20 w-[500px] h-[500px] bg-gradient-to-bl from-[#3BAEE0]/25 to-transparent rounded-full blur-[100px]" />
+          <div className="hero-blob-3 absolute -bottom-40 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-gradient-to-t from-[#8B5CF6]/20 to-transparent rounded-full blur-[100px]" />
         </div>
       </section>
 
@@ -194,19 +196,21 @@ export default function Home() {
       </div>
 
       {/* DIFFERENTIATOR — "Everything they do, we do. But what we do, they can't." */}
-      <section className="py-20 bg-white border-b border-slate-100">
-        <div className="container mx-auto px-6 max-w-4xl text-center">
+      <section className="py-28 bg-slate-900 relative overflow-hidden">
+        {/* Accent line */}
+        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#F97316] via-[#8FC436] to-[#8B5CF6]" />
+        <div className="container mx-auto px-6 max-w-4xl text-center relative z-10">
           {(() => { const d = DIFF_COPY[currentLocale] ?? DIFF_COPY['en']; return (<>
-            <h2 className="text-3xl md:text-5xl font-display font-bold text-slate-900 mb-6 anim-fade-in-up">
+            <h2 className="text-4xl md:text-6xl font-display font-bold text-white mb-8 anim-fade-in-up leading-tight">
               {d.h2_1}<br />
               <span className="text-primary">{d.h2_2}</span>
             </h2>
-            <p className="text-lg md:text-xl text-slate-500 leading-relaxed max-w-3xl mx-auto mb-10 anim-fade-in-up anim-delay-200">
+            <p className="text-lg md:text-xl text-slate-400 leading-relaxed max-w-3xl mx-auto mb-12 anim-fade-in-up anim-delay-200">
               {d.desc}
             </p>
             <a
               href="#verifier-section"
-              className="inline-flex items-center gap-2 text-primary font-bold hover:gap-3 transition-all anim-fade-in-up anim-delay-300"
+              className="inline-flex items-center gap-2 px-8 py-4 border border-primary/30 text-primary font-bold rounded-2xl hover:bg-primary/10 hover:gap-3 transition-all anim-fade-in-up anim-delay-300 text-lg"
             >
               {d.link} <ArrowRight size={18} />
             </a>
