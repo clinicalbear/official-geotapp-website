@@ -288,7 +288,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
                   <tr className="bg-slate-800 text-white">
                     <th className="py-4 px-6 text-left font-semibold w-1/3"></th>
                     <th className="py-4 px-6 text-center font-semibold">App di timbratura classica</th>
-                    <th className="py-4 px-6 text-center font-bold text-white bg-[#8FC436]">GeoTapp</th>
+                    <th className="py-4 px-6 text-center font-bold text-white bg-[#6a9a1f]">GeoTapp</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -322,7 +322,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
                   <tr className="bg-slate-100">
                     <th className="py-4 px-6 text-left font-semibold text-slate-500 w-1/3"></th>
                     <th className="py-4 px-6 text-center font-semibold text-slate-600">{sl.classic_app ?? 'Generic app / Spreadsheet'}</th>
-                    <th className="py-4 px-6 text-center font-bold text-white bg-[#8FC436]">GeoTapp</th>
+                    <th className="py-4 px-6 text-center font-bold text-white bg-[#6a9a1f]">GeoTapp</th>
                   </tr>
                 </thead>
                 <tbody>
