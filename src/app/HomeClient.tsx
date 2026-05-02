@@ -114,134 +114,119 @@ export default function Home() {
   return (
     <div className="bg-background min-h-screen text-text-primary overflow-hidden">
       {/* Landing is locale-aware: all internal links pass through getLink(). */}
-      {/* HERO SECTION — dark bg, text left, screenshots right */}
-      <section className="relative pt-32 pb-20 px-6 overflow-hidden" style={{ background: 'linear-gradient(180deg, #1e293b 0%, #334155 60%, #f8fafc 100%)' }}>
-        {/* Gradient accent top */}
-        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#F97316] via-[#8FC436] to-[#8B5CF6]" />
-
+      {/* HERO SECTION */}
+      <section className="relative pt-36 pb-24 px-6 bg-white overflow-hidden">
         <div className="container mx-auto max-w-7xl z-10 relative">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Left — text */}
-            <div>
-              <span className="inline-block px-5 py-2 rounded-full bg-primary/15 border border-primary/25 text-primary text-sm font-bold tracking-wide mb-8 anim-fade-in-up">
-                <span className="inline-block w-2 h-2 rounded-full bg-primary mr-2 animate-pulse" />
-                {dict.landing.hero_badge}
-              </span>
+          <div className="grid lg:grid-cols-[1fr_1.1fr] gap-16 items-center">
 
+            {/* ── Left: Copy ── */}
+            <div className="relative z-10">
+              {/* Badge */}
+              <div className="anim-fade-in-up mb-8">
+                <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold tracking-wide"
+                  style={{ background: 'linear-gradient(135deg, rgba(143,196,54,0.1), rgba(59,174,224,0.08))', border: '1px solid rgba(143,196,54,0.2)', color: '#8FC436' }}>
+                  <span className="w-2 h-2 rounded-full bg-[#8FC436] animate-pulse" />
+                  {dict.landing.hero_badge}
+                </span>
+              </div>
+
+              {/* Headline */}
               {(() => { const d = DIFF_COPY[currentLocale] ?? DIFF_COPY['en']; return (
                 <>
-                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white leading-[1.08] tracking-tight mb-6 anim-fade-in-up anim-delay-200">
+                  <h1 className="text-[2.8rem] md:text-[3.5rem] lg:text-[4rem] font-display font-extrabold text-slate-900 leading-[1.06] tracking-tight mb-7 anim-fade-in-up anim-delay-100">
                     {d.h2_1}<br />
-                    <span className="text-primary">{d.h2_2}</span>
+                    <span style={{ color: '#8FC436' }}>{d.h2_2}</span>
                   </h1>
-                  <p className="text-lg text-slate-800 leading-relaxed max-w-xl mb-6 anim-fade-in-up anim-delay-300">
+                  <p className="text-lg text-slate-500 leading-relaxed max-w-lg mb-5 anim-fade-in-up anim-delay-200">
                     {d.desc}
                   </p>
                 </>
               ); })()}
 
-              <p className="text-sm text-slate-600 mb-8 anim-fade-in-up anim-delay-400">
+              {/* Sectors */}
+              <p className="text-sm text-slate-400 mb-8 anim-fade-in-up anim-delay-300">
                 {dict.landing.hero_sectors_prefix}{' '}
-                <Link href={getLink('/settori/pulizie')} className="underline hover:text-slate-300 transition-colors">
-                  {dict.landing.hero_sectors_pulizie}
-                </Link>
+                <Link href={getLink('/settori/pulizie')} className="underline decoration-dotted hover:text-slate-700 transition-colors">{dict.landing.hero_sectors_pulizie}</Link>
                 {', '}
-                <Link href={getLink('/settori/installatori')} className="underline hover:text-slate-300 transition-colors">
-                  {dict.landing.hero_sectors_installatori}
-                </Link>
+                <Link href={getLink('/settori/installatori')} className="underline decoration-dotted hover:text-slate-700 transition-colors">{dict.landing.hero_sectors_installatori}</Link>
                 {' '}{dict.landing.hero_sectors_and}{' '}
-                <Link href={getLink('/settori/sicurezza')} className="underline hover:text-slate-300 transition-colors">
-                  {dict.landing.hero_sectors_sicurezza}
-                </Link>
-                .
+                <Link href={getLink('/settori/sicurezza')} className="underline decoration-dotted hover:text-slate-700 transition-colors">{dict.landing.hero_sectors_sicurezza}</Link>.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 mb-10 anim-fade-in-up anim-delay-500">
+              {/* CTAs */}
+              <div className="flex flex-col sm:flex-row gap-4 mb-10 anim-fade-in-up anim-delay-300">
                 <Link
                   href={getLink('/trial')}
-                  className="group px-8 py-4 bg-primary text-white font-bold rounded-2xl text-lg hover:bg-primary/90 transition-all shadow-xl shadow-primary/25 transform hover:-translate-y-1"
+                  className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-slate-900 text-white font-bold rounded-2xl text-lg transition-all shadow-lg shadow-slate-900/15 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-slate-900/20"
                 >
                   {dict.landing.hero_cta_primary}
-                  <ArrowRight size={18} className="inline ml-2 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link
                   href={getLink('/settori')}
-                  className="px-8 py-4 bg-white/10 text-white border border-white/20 font-bold rounded-2xl text-lg hover:bg-white/20 transition-all"
+                  className="inline-flex items-center justify-center px-8 py-4 text-slate-700 border-2 border-slate-200 font-bold rounded-2xl text-lg hover:border-slate-400 hover:bg-slate-50 transition-all"
                 >
                   {dict.landing.hero_cta_secondary}
                 </Link>
               </div>
 
               {/* Trust signals */}
-              <div className="flex flex-col sm:flex-row gap-5 text-sm anim-fade-in-up anim-delay-600">
-                <div className="flex items-center gap-2">
-                  <ShieldCheck size={16} className="text-emerald-500 shrink-0" />
-                  <span className="font-bold text-slate-800">{dict.landing.trust_gdpr}</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <MapPin size={16} className="text-blue-500 shrink-0" />
-                  <span className="font-bold text-slate-800">{dict.landing.trust_gps}</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <WifiOff size={16} className="text-amber-500 shrink-0" />
-                  <span className="font-bold text-slate-800">{dict.landing.trust_offline}</span>
-                </div>
+              <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-slate-500 anim-fade-in-up anim-delay-400">
+                <span className="flex items-center gap-1.5"><ShieldCheck size={15} className="text-emerald-500" /><strong className="text-slate-700">{dict.landing.trust_gdpr}</strong></span>
+                <span className="flex items-center gap-1.5"><MapPin size={15} className="text-blue-500" /><strong className="text-slate-700">{dict.landing.trust_gps}</strong></span>
+                <span className="flex items-center gap-1.5"><WifiOff size={15} className="text-amber-500" /><strong className="text-slate-700">{dict.landing.trust_offline}</strong></span>
               </div>
             </div>
 
-            {/* Right — logos + stacked screenshots */}
-            <div className="relative hidden lg:block anim-fade-in-up anim-delay-400" style={{ perspective: '1200px' }}>
-              {/* Product logos above screenshots */}
-              <div className="flex items-center justify-center gap-10 mb-8 -mt-4">
+            {/* ── Right: Product showcase ── */}
+            <div className="relative hidden lg:flex flex-col items-center anim-fade-in-up anim-delay-300">
+
+              {/* Product logos bar */}
+              <div className="flex items-center gap-8 mb-10 px-8 py-4 rounded-2xl bg-slate-50 border border-slate-100">
                 <Link href={getLink('/products/geotapp-timetracker')} className="group">
-                  <img src="/TimeTrackerTrasparente.png" alt="TimeTracker" className="h-14 w-auto opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all" />
+                  <img src="/TimeTrackerTrasparente.png" alt="TimeTracker" className="h-9 w-auto object-contain opacity-75 group-hover:opacity-100 group-hover:scale-110 transition-all" />
                 </Link>
-                <div className="w-px h-8 bg-white/15" />
+                <div className="w-px h-8 bg-slate-200" />
                 <Link href={getLink('/products/geotapp-flow')} className="group">
-                  <img src="/logoFlow.png" alt="Flow" className="h-14 w-auto opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all" />
+                  <img src="/logoFlow.png" alt="Flow" className="h-9 w-auto object-contain opacity-75 group-hover:opacity-100 group-hover:scale-110 transition-all" />
                 </Link>
-                <div className="w-px h-8 bg-white/15" />
+                <div className="w-px h-8 bg-slate-200" />
                 <Link href={getLink('/products/geotapp-verifier')} className="group">
-                  <img src="/logoVerifier.png" alt="Verifier" className="h-14 w-auto opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all" />
+                  <img src="/logoVerifier.png" alt="Verifier" className="h-9 w-auto object-contain opacity-75 group-hover:opacity-100 group-hover:scale-110 transition-all" />
                 </Link>
-              </div>
-              {/* Back screenshot — live map */}
-              <div
-                className="absolute top-8 -left-4 w-[85%] rounded-xl overflow-hidden border border-white/10 shadow-2xl shadow-black/40"
-                style={{ transform: 'rotateY(-8deg) rotateX(2deg)' }}
-              >
-                <img src="/screen_live_map.png" alt="GeoTapp Flow Live Map" className="w-full" loading="eager" />
-              </div>
-              {/* Middle — Flow dashboard */}
-              <div
-                className="relative w-[90%] rounded-xl overflow-hidden border border-white/10 shadow-2xl shadow-primary/20"
-                style={{ transform: 'rotateY(-3deg)' }}
-              >
-                <img src="/screen_dashboard.png" alt="GeoTapp Flow Dashboard" className="w-full" loading="eager" />
-              </div>
-              {/* Front — TimeTracker in smartphone frame, in primo piano */}
-              <div
-                className="absolute -bottom-6 -right-4 w-[160px] z-20"
-                style={{ transform: 'rotateY(-3deg)' }}
-              >
-                <div className="rounded-[2rem] border-[3px] border-white/20 shadow-2xl shadow-black/60 bg-slate-900 overflow-hidden">
-                  <div className="rounded-[1.8rem] overflow-hidden m-[3px]">
-                    <img src="/screenshots/timetracker-dashboard.jpg" alt="GeoTapp TimeTracker" className="w-full" loading="eager" />
-                  </div>
-                </div>
               </div>
 
+              {/* Screenshot stack */}
+              <div className="relative w-full" style={{ perspective: '1000px' }}>
+                {/* Glow behind screenshots */}
+                <div className="absolute inset-4 rounded-3xl bg-gradient-to-br from-[#8FC436]/20 via-[#3BAEE0]/10 to-[#8B5CF6]/15 blur-2xl" />
+
+                {/* Back — live map */}
+                <div className="absolute top-6 left-0 w-[88%] rounded-2xl overflow-hidden border border-slate-200 shadow-xl"
+                  style={{ transform: 'rotateY(-6deg) rotateX(2deg) translateZ(-40px)' }}>
+                  <img src="/screen_live_map.png" alt="Live Map" className="w-full" />
+                </div>
+
+                {/* Front — dashboard */}
+                <div className="relative w-[92%] ml-auto rounded-2xl overflow-hidden border border-slate-200 shadow-2xl shadow-slate-300/50"
+                  style={{ transform: 'rotateY(-3deg) translateZ(0)' }}>
+                  <img src="/screen_dashboard.png" alt="Flow Dashboard" className="w-full" />
+                </div>
+
+                {/* Phone — TimeTracker, front-right */}
+                <div className="absolute -bottom-8 -right-2 w-[140px] z-20 rounded-[1.8rem] border-[3px] border-slate-300 bg-white shadow-2xl shadow-slate-400/30 overflow-hidden"
+                  style={{ transform: 'rotateY(-2deg)' }}>
+                  <img src="/screenshots/timetracker-dashboard.jpg" alt="TimeTracker" className="w-full" />
+                </div>
+              </div>
             </div>
 
           </div>
         </div>
 
-        {/* Background blobs on dark */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="hero-blob-1 absolute -top-40 -left-40 w-[600px] h-[600px] bg-[#8FC436]/10 rounded-full blur-[120px]" />
-          <div className="hero-blob-2 absolute top-20 -right-40 w-[500px] h-[500px] bg-[#3BAEE0]/8 rounded-full blur-[120px]" />
-          <div className="hero-blob-3 absolute -bottom-40 left-1/3 w-[500px] h-[500px] bg-[#8B5CF6]/8 rounded-full blur-[120px]" />
-        </div>
+        {/* Subtle bg accent — top right */}
+        <div className="hero-blob-1 absolute -top-32 -right-32 w-[500px] h-[500px] bg-[#8FC436]/[0.06] rounded-full blur-[80px] pointer-events-none" />
+        <div className="hero-blob-2 absolute -bottom-40 -left-40 w-[400px] h-[400px] bg-[#3BAEE0]/[0.05] rounded-full blur-[80px] pointer-events-none" />
       </section>
 
       {/* TRUST BAR — social proof immediately after hero */}
