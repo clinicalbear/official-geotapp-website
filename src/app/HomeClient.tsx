@@ -1,14 +1,12 @@
 'use client';
 
-import { motion, AnimatePresence, useInView } from 'framer-motion';
+import { motion } from 'framer-motion';
 import Link from 'next/link';
-import Image from 'next/image';
 import {
   ArrowRight,
   CheckCircle2,
   ShieldCheck,
   Zap,
-  BarChart3,
   Map,
   Smartphone,
   Database,
@@ -21,88 +19,10 @@ import {
 // Heavy below-fold components — dynamic import to reduce initial bundle
 import dynamic from 'next/dynamic';
 const HeartbeatLine = dynamic(() => import('@/components/HeartbeatLine'), { ssr: false });
+const FlowCarousel = dynamic(() => import('@/components/FlowCarousel'), { ssr: false });
+const TTCarousel = dynamic(() => import('@/components/TTCarousel'), { ssr: false });
+const VerifierMockup = dynamic(() => import('@/components/VerifierMockup'), { ssr: false });
 
-// ── VERIFIER MOCKUP with scan line + verified stamp ──
-function VerifierMockup() {
-  const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: '-100px' });
-
-  const checks = [
-    'Report integrity: VERIFIED',
-    'Timestamp match: OK',
-    'GPS data: CONSISTENT',
-    'Document not modified: CONFIRMED',
-  ];
-
-  return (
-    <div ref={ref} className="relative">
-      <div className="bg-slate-900 rounded-2xl p-6 shadow-2xl shadow-slate-900/40 transform md:-rotate-1 hover:rotate-0 transition-transform duration-500 font-mono text-sm relative overflow-hidden">
-        {/* Scan line animation */}
-        {inView && (
-          <motion.div
-            className="absolute left-0 right-0 h-[2px] z-20 pointer-events-none"
-            style={{
-              background: 'linear-gradient(90deg, transparent 0%, #22C55E 30%, #22C55E 70%, transparent 100%)',
-              boxShadow: '0 0 15px rgba(34,197,94,0.6), 0 0 30px rgba(34,197,94,0.3)',
-            }}
-            initial={{ top: 0 }}
-            animate={{ top: '100%' }}
-            transition={{ duration: 2, ease: 'easeInOut', repeat: Infinity, repeatDelay: 3 }}
-          />
-        )}
-
-        {/* Terminal header */}
-        <div className="flex items-center gap-2 mb-4 pb-4 border-b border-slate-700">
-          <div className="w-3 h-3 rounded-full bg-red-500"></div>
-          <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-          <div className="w-3 h-3 rounded-full bg-green-500"></div>
-          <span className="ml-2 text-slate-400 text-xs tracking-wider">geotapp-verifier</span>
-        </div>
-
-        {/* Check lines */}
-        <div className="space-y-3">
-          {checks.map((check, i) => (
-            <motion.div
-              key={check}
-              className="flex items-center gap-3"
-              initial={{ opacity: 0, x: -10 }}
-              animate={inView ? { opacity: 1, x: 0 } : {}}
-              transition={{ delay: 0.5 + i * 0.4, duration: 0.3 }}
-            >
-              <CheckCircle2 size={16} className="text-green-400 shrink-0" />
-              <span className="text-green-400">{check}</span>
-            </motion.div>
-          ))}
-          <motion.div
-            className="mt-4 pt-4 border-t border-slate-700 text-slate-400 text-xs"
-            initial={{ opacity: 0 }}
-            animate={inView ? { opacity: 1 } : {}}
-            transition={{ delay: 2.3, duration: 0.3 }}
-          >
-            Verified by GeoTapp Verifier — 22/03/2026
-          </motion.div>
-        </div>
-
-        {/* VERIFIED stamp — appears after checks complete */}
-        <motion.div
-          className="absolute inset-0 flex items-center justify-center pointer-events-none z-10"
-          initial={{ opacity: 0, scale: 2.5, rotate: -15 }}
-          animate={inView ? { opacity: 1, scale: 1, rotate: -12 } : {}}
-          transition={{ delay: 2.8, duration: 0.3, type: 'spring', stiffness: 200, damping: 15 }}
-        >
-          <div
-            className="px-8 py-3 border-4 border-green-400 rounded-lg"
-            style={{ opacity: 0.25 }}
-          >
-            <span className="text-green-400 text-3xl font-bold tracking-[0.3em] uppercase">
-              Verified
-            </span>
-          </div>
-        </motion.div>
-      </div>
-    </div>
-  );
-}
 
 // UI MOCKUP COMPONENTS (Built with Tailwind for "Real Example" feel)
 const MockupFlow = ({ m }: { m: { pipeline_title: string; month: string; quote_name: string; quote_approved: string } }) => (
@@ -139,7 +59,7 @@ const MockupFlow = ({ m }: { m: { pipeline_title: string; month: string; quote_n
   </div>
 );
 
-import { useEffect, useState, useCallback, useRef } from 'react';
+import { useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import {
@@ -151,71 +71,6 @@ const DemoReportBanner = dynamic(() => import('@/components/DemoReportBanner'), 
 const TrustBar = dynamic(() => import('@/components/TrustBar'), { ssr: true });
 const ListedOn = dynamic(() => import('@/components/ListedOn'), { ssr: true });
 
-const FLOW_SLIDES = [
-  { src: '/screen_dashboard.png', alt: 'GeoTapp Flow — Dashboard KPI e moduli operativi' },
-  { src: '/screen_live_map.png', alt: 'GeoTapp Flow — Mappa delle timbrature con aggiornamento live' },
-  { src: '/schermataFlow.webp', alt: 'GeoTapp Flow — Pannello operativo' },
-];
-
-const TT_SLIDES = [
-  { src: '/screenshots/timetracker-dashboard.jpg', alt: 'Dashboard iniziale GeoTapp TimeTracker' },
-  { src: '/screenshots/timetracker-richieste.jpg', alt: 'GeoTapp TimeTracker — Richieste ferie e cambio turno' },
-  { src: '/TT2.webp', alt: 'GeoTapp TimeTracker — Menu navigazione' },
-];
-
-function FlowCarousel() {
-  const [i, setI] = useState(0);
-  const next = useCallback(() => setI((c) => (c + 1) % FLOW_SLIDES.length), []);
-  useEffect(() => { const t = setInterval(next, 4000); return () => clearInterval(t); }, [next]);
-  const s = FLOW_SLIDES[i];
-  return (
-    <div className="relative">
-      <div className="relative z-10 rounded-xl overflow-hidden shadow-2xl shadow-flow/20 border border-slate-200">
-        <AnimatePresence mode="wait">
-          <motion.div key={i} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.4 }}>
-            <Image src={s.src} alt={s.alt} width={1920} height={1080} className="w-full h-auto" priority={i === 0} loading={i === 0 ? 'eager' : 'lazy'} />
-          </motion.div>
-        </AnimatePresence>
-      </div>
-      <div className="absolute inset-0 bg-flow/10 rounded-xl transform rotate-3 scale-105 -z-0 blur-xl"></div>
-      <div className="flex justify-center gap-2 mt-4 relative z-10">
-        {FLOW_SLIDES.map((_, idx) => (
-          <button key={idx} onClick={() => setI(idx)}
-            className={`h-2 rounded-full transition-all ${idx === i ? 'bg-flow w-6' : 'bg-slate-300 w-2.5 hover:bg-slate-400'}`}
-            aria-label={`Slide ${idx + 1}`} />
-        ))}
-      </div>
-    </div>
-  );
-}
-
-function TTCarousel() {
-  const [i, setI] = useState(0);
-  const next = useCallback(() => setI((c) => (c + 1) % TT_SLIDES.length), []);
-  useEffect(() => { const t = setInterval(next, 4000); return () => clearInterval(t); }, [next]);
-  const s = TT_SLIDES[i];
-  return (
-    <div className="relative flex justify-center">
-      <div className="absolute inset-0 bg-app/20 rounded-[3rem] blur-3xl scale-110 -z-10 pointer-events-none"></div>
-      <div className="mx-auto w-[280px] bg-slate-900 rounded-[3rem] p-[3px] shadow-2xl shadow-app/30 relative border-[3px] border-slate-800">
-        <div className="w-full bg-white rounded-[2.8rem] overflow-hidden">
-          <AnimatePresence mode="wait">
-            <motion.div key={i} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.4 }}>
-              <Image src={s.src} alt={s.alt} width={720} height={1504} className="w-full h-auto" loading="lazy" />
-            </motion.div>
-          </AnimatePresence>
-        </div>
-      </div>
-      <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-10">
-        {TT_SLIDES.map((_, idx) => (
-          <button key={idx} onClick={() => setI(idx)}
-            className={`h-2 rounded-full transition-all ${idx === i ? 'bg-app w-6' : 'bg-slate-300 w-2.5 hover:bg-slate-400'}`}
-            aria-label={`Slide ${idx + 1}`} />
-        ))}
-      </div>
-    </div>
-  );
-}
 
 export default function Home() {
   // Locale resolution is path-based so all internal links stay language-aware.
@@ -248,22 +103,18 @@ export default function Home() {
       {/* HERO SECTION */}
       <section className="relative pt-40 pb-32 px-6">
         <div className="container mx-auto max-w-5xl text-center z-10 relative">
-          <motion.div
-            initial={{ opacity: 1, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <span className="inline-block px-4 py-1.5 rounded-full bg-slate-100 border border-slate-200 text-slate-600 text-sm font-bold tracking-wide mb-8">
+          <div className="anim-fade-in-up">
+            <span className="inline-block px-4 py-1.5 rounded-full bg-slate-100 border border-slate-200 text-slate-600 text-sm font-bold tracking-wide mb-8 anim-fade-in-up anim-delay-100">
               {dict.landing.hero_badge}
             </span>
             <h1
-              className="text-4xl md:text-6xl font-display font-bold text-slate-900 leading-[1.1] tracking-tight mb-8"
+              className="text-4xl md:text-6xl font-display font-bold text-slate-900 leading-[1.1] tracking-tight mb-8 anim-fade-in-up anim-delay-200"
               dangerouslySetInnerHTML={{ __html: dict.landing.hero_title }}
             ></h1>
-            <p className="text-xl text-text-secondary leading-relaxed max-w-2xl mx-auto mb-4 font-light">
+            <p className="text-xl text-text-secondary leading-relaxed max-w-2xl mx-auto mb-4 font-light anim-fade-in-up anim-delay-200">
               {dict.landing.hero_subtitle}
             </p>
-            <p className="text-sm text-slate-400 mb-10">
+            <p className="text-sm text-slate-400 mb-10 anim-fade-in-up anim-delay-300">
               {dict.landing.hero_sectors_prefix}{' '}
               <Link href={getLink('/settori/pulizie')} className="underline hover:text-slate-600 transition-colors">
                 {dict.landing.hero_sectors_pulizie}
@@ -278,7 +129,7 @@ export default function Home() {
               </Link>
               .
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10 anim-fade-in-up anim-delay-300">
               <Link
                 href={getLink('/trial')}
                 className="px-8 py-4 bg-primary text-white font-bold rounded-xl text-lg hover:bg-primary/90 transition-all shadow-lg hover:shadow-primary/30 transform hover:-translate-y-1"
@@ -293,7 +144,7 @@ export default function Home() {
               </Link>
             </div>
             {/* TrustBlock: 3 micro-signals below CTAs */}
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center text-sm text-slate-500">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center text-sm text-slate-500 anim-fade-in-up anim-delay-400">
               <div className="flex items-center gap-2">
                 <ShieldCheck size={16} className="text-emerald-500 shrink-0" />
                 <span><strong className="text-slate-700">{dict.landing.trust_gdpr}</strong> — {dict.landing.trust_gdpr_desc}</span>
@@ -309,7 +160,7 @@ export default function Home() {
                 <span><strong className="text-slate-700">{dict.landing.trust_offline}</strong> — {dict.landing.trust_offline_desc}</span>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
 
         {/* Abstract Bg Decoration — CSS gradient, no filter:blur to avoid GPU layer cost */}
