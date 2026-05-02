@@ -173,18 +173,18 @@ export default function Home() {
               </div>
 
               {/* Trust signals */}
-              <div className="flex flex-col sm:flex-row gap-5 text-sm text-slate-500 anim-fade-in-up anim-delay-600">
+              <div className="flex flex-col sm:flex-row gap-5 text-sm anim-fade-in-up anim-delay-600">
                 <div className="flex items-center gap-2">
-                  <ShieldCheck size={16} className="text-emerald-400 shrink-0" />
-                  <span><strong className="text-slate-300">{dict.landing.trust_gdpr}</strong></span>
+                  <ShieldCheck size={16} className="text-emerald-500 shrink-0" />
+                  <span className="font-bold text-slate-800">{dict.landing.trust_gdpr}</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <MapPin size={16} className="text-blue-400 shrink-0" />
-                  <span><strong className="text-slate-300">{dict.landing.trust_gps}</strong></span>
+                  <MapPin size={16} className="text-blue-500 shrink-0" />
+                  <span className="font-bold text-slate-800">{dict.landing.trust_gps}</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <WifiOff size={16} className="text-amber-400 shrink-0" />
-                  <span><strong className="text-slate-300">{dict.landing.trust_offline}</strong></span>
+                  <WifiOff size={16} className="text-amber-500 shrink-0" />
+                  <span className="font-bold text-slate-800">{dict.landing.trust_offline}</span>
                 </div>
               </div>
             </div>
@@ -194,15 +194,15 @@ export default function Home() {
               {/* Product logos above screenshots */}
               <div className="flex items-center justify-center gap-10 mb-8 -mt-4">
                 <Link href={getLink('/products/geotapp-timetracker')} className="group">
-                  <img src="/TimeTrackerTrasparente.png" alt="TimeTracker" className="h-8 w-auto opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all" />
+                  <img src="/TimeTrackerTrasparente.png" alt="TimeTracker" className="h-14 w-auto opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all" />
                 </Link>
                 <div className="w-px h-8 bg-white/15" />
                 <Link href={getLink('/products/geotapp-flow')} className="group">
-                  <img src="/logoFlow.png" alt="Flow" className="h-8 w-auto opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all" />
+                  <img src="/logoFlow.png" alt="Flow" className="h-14 w-auto opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all" />
                 </Link>
                 <div className="w-px h-8 bg-white/15" />
                 <Link href={getLink('/products/geotapp-verifier')} className="group">
-                  <img src="/logoVerifier.png" alt="Verifier" className="h-8 w-auto opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all" />
+                  <img src="/logoVerifier.png" alt="Verifier" className="h-14 w-auto opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all" />
                 </Link>
               </div>
               {/* Back screenshot — live map */}
