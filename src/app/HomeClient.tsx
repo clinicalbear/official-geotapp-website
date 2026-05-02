@@ -18,7 +18,9 @@ import {
   MapPin,
   WifiOff,
 } from 'lucide-react';
-import HeartbeatLine from '@/components/HeartbeatLine';
+// Heavy below-fold components — dynamic import to reduce initial bundle
+import dynamic from 'next/dynamic';
+const HeartbeatLine = dynamic(() => import('@/components/HeartbeatLine'), { ssr: false });
 
 // ── VERIFIER MOCKUP with scan line + verified stamp ──
 function VerifierMockup() {
@@ -145,9 +147,9 @@ import {
   getLocaleFromPathname,
   localizePath,
 } from '@/lib/i18n/locale-routing';
-import DemoReportBanner from '@/components/DemoReportBanner';
-import TrustBar from '@/components/TrustBar';
-import ListedOn from '@/components/ListedOn';
+const DemoReportBanner = dynamic(() => import('@/components/DemoReportBanner'), { ssr: true });
+const TrustBar = dynamic(() => import('@/components/TrustBar'), { ssr: true });
+const ListedOn = dynamic(() => import('@/components/ListedOn'), { ssr: true });
 
 const FLOW_SLIDES = [
   { src: '/screen_dashboard.png', alt: 'GeoTapp Flow — Dashboard KPI e moduli operativi' },
@@ -171,7 +173,7 @@ function FlowCarousel() {
       <div className="relative z-10 rounded-xl overflow-hidden shadow-2xl shadow-flow/20 border border-slate-200">
         <AnimatePresence mode="wait">
           <motion.div key={i} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.4 }}>
-            <Image src={s.src} alt={s.alt} width={1920} height={1080} className="w-full h-auto" priority={i === 0} />
+            <Image src={s.src} alt={s.alt} width={1920} height={1080} className="w-full h-auto" priority={i === 0} loading={i === 0 ? 'eager' : 'lazy'} />
           </motion.div>
         </AnimatePresence>
       </div>
@@ -199,7 +201,7 @@ function TTCarousel() {
         <div className="w-full bg-white rounded-[2.8rem] overflow-hidden">
           <AnimatePresence mode="wait">
             <motion.div key={i} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.4 }}>
-              <Image src={s.src} alt={s.alt} width={720} height={1504} className="w-full h-auto" />
+              <Image src={s.src} alt={s.alt} width={720} height={1504} className="w-full h-auto" loading="lazy" />
             </motion.div>
           </AnimatePresence>
         </div>

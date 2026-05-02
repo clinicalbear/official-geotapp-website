@@ -247,12 +247,10 @@ export default async function LocaleLayout({ children, params }: Props) {
             next/font/google already handles fonts.googleapis.com and
             fonts.gstatic.com internally — no manual preconnect needed.
             Stripe JS is loaded on pricing/checkout pages only. */}
-        <link rel="preconnect" href="https://js.stripe.com" />
-
         {/* ── DNS prefetch ───────────────────────────────────────────────────
             Resolve DNS early for domains we WILL navigate to or call,
-            without paying the TCP handshake cost upfront. */}
-        <link rel="dns-prefetch" href="https://api.stripe.com" />
+            without paying the TCP handshake cost upfront.
+            Stripe preconnect removed — only used on pricing/trial pages. */}
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com" />
@@ -468,7 +466,7 @@ export default async function LocaleLayout({ children, params }: Props) {
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6506843864993991"
           crossOrigin="anonymous"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
         <div className="relative min-h-screen overflow-hidden">
           {/* Background Glow Effects — CSS radial-gradient instead of

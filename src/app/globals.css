@@ -588,3 +588,10 @@ a:hover {
   color: #64748b;
   margin-top: 0.5rem;
 }
+
+/* Performance: hint browser about animated elements */
+.blog-card,
+.listed-on-logo,
+.cat-card {
+  will-change: transform;
+}
