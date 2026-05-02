@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { getAdminApp } from '@/lib/firebase-admin';
 
 const ML_API = 'https://connect.mailerlite.com/api';
 
@@ -9,6 +10,16 @@ const SECTOR_GROUPS: Record<string, string> = {
   pulizie:      '183189285492491623',
   sicurezza:    '183189285702206473',
   altro:        '183189360410101627',
+};
+
+// Map new sectors to existing MailerLite groups (specific sector stored in fields.sector)
+const SECTOR_GROUP_MAP: Record<string, string> = {
+  elettricisti:   'installatori',
+  idraulici:      'installatori',
+  termoidraulici: 'installatori',
+  edilizia:       'altro',
+  impianti:       'installatori',
+  manutenzione:   'altro',
 };
 
 // Language group IDs (lang:xx)
@@ -51,7 +62,10 @@ export async function POST(req: NextRequest) {
 
   // Build group list: general + sector group + language group
   const groupIds = [SECTOR_GROUPS.general];
-  if (sector) groupIds.push(SECTOR_GROUPS[sector] ?? SECTOR_GROUPS.altro);
+  if (sector) {
+    const groupKey = SECTOR_GROUPS[sector] ? sector : (SECTOR_GROUP_MAP[sector] ?? 'altro');
+    groupIds.push(SECTOR_GROUPS[groupKey]);
+  }
   if (locale && LANG_GROUPS[locale]) groupIds.push(LANG_GROUPS[locale]);
 
   const res = await fetch(`${ML_API}/subscribers`, {
@@ -72,6 +86,23 @@ export async function POST(req: NextRequest) {
     const err = await res.json().catch(() => ({}));
     console.error('Mailerlite error:', err);
     return NextResponse.json({ error: 'Subscription failed' }, { status: 502 });
+  }
+
+  // Save to Firestore (non-blocking, don't fail the request)
+  try {
+    getAdminApp();
+    const { getFirestore } = await import('firebase-admin/firestore');
+    const db = getFirestore();
+    await db.collection('newsletter_subscribers').doc(email).set({
+      email,
+      sector: sector ?? null,
+      locale: locale ?? null,
+      source: 'website',
+      subscribedAt: new Date(),
+      unsubscribed: false,
+    }, { merge: true });
+  } catch (err) {
+    console.error('Firestore save failed (non-fatal):', err);
   }
 
   return NextResponse.json({ ok: true });

@@ -20,6 +20,7 @@
     "@types/jquery": "^3.5.33",
     "axios": "^1.6.0",
     "clsx": "^2.1.1",
+    "firebase-admin": "^13.8.0",
     "framer-motion": "^10.18.0",
     "gsap": "^3.13.0",
     "jquery": "^3.7.1",
