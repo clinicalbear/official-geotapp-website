@@ -500,30 +500,37 @@ export default function Home() {
         {/* Background: floating shield icons */}
         <div aria-hidden="true" className="absolute inset-0 pointer-events-none">
           {[
-            { x: '8%', y: '15%', s: 40, r: -12, o: 0.04 },
-            { x: '85%', y: '10%', s: 55, r: 8, o: 0.03 },
-            { x: '92%', y: '65%', s: 35, r: -20, o: 0.04 },
-            { x: '5%', y: '75%', s: 50, r: 15, o: 0.03 },
-            { x: '75%', y: '85%', s: 30, r: -5, o: 0.05 },
-            { x: '20%', y: '90%', s: 45, r: 10, o: 0.03 },
+            { x: '6%', y: '12%', s: 45, r: -12, o: 0.06, d: 6 },
+            { x: '88%', y: '8%', s: 60, r: 8, o: 0.05, d: 8 },
+            { x: '93%', y: '60%', s: 38, r: -20, o: 0.06, d: 7 },
+            { x: '3%', y: '70%', s: 55, r: 15, o: 0.05, d: 9 },
+            { x: '78%', y: '82%', s: 35, r: -5, o: 0.07, d: 5 },
+            { x: '18%', y: '88%', s: 50, r: 10, o: 0.05, d: 7.5 },
+            { x: '50%', y: '5%', s: 30, r: -8, o: 0.04, d: 6.5 },
+            { x: '65%', y: '45%', s: 42, r: 18, o: 0.04, d: 8.5 },
           ].map((p, i) => (
             <motion.div
               key={i}
               className="absolute"
               style={{ left: p.x, top: p.y }}
-              initial={{ opacity: 0, scale: 0.5 }}
+              initial={{ opacity: 0, scale: 0.5, y: 0 }}
               whileInView={{ opacity: p.o, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.3 + i * 0.15, duration: 0.6 }}
+              transition={{ delay: 0.2 + i * 0.12, duration: 0.5 }}
             >
-              <ShieldCheck size={p.s} className="text-emerald-500" style={{ transform: `rotate(${p.r}deg)` }} />
+              <motion.div
+                animate={{ y: [0, -12, 0, 8, 0] }}
+                transition={{ duration: p.d, repeat: Infinity, ease: 'easeInOut' }}
+              >
+                <ShieldCheck size={p.s} className="text-emerald-500" style={{ transform: `rotate(${p.r}deg)` }} />
+              </motion.div>
             </motion.div>
           ))}
         </div>
 
-        <div className="container mx-auto px-6 max-w-5xl relative z-10">
+        <div className="container mx-auto px-6 max-w-6xl relative z-10">
           <motion.div
-            className="text-center max-w-3xl mx-auto mb-14"
+            className="text-center max-w-4xl mx-auto mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -539,7 +546,7 @@ export default function Home() {
               {dict.landing.report_section_body}
             </p>
           </motion.div>
-          <div className="grid md:grid-cols-2 gap-5 mb-12 max-w-2xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-6 mb-14 max-w-4xl mx-auto">
             {[
               dict.landing.report_feature_1,
               dict.landing.report_feature_2,
@@ -574,7 +581,7 @@ export default function Home() {
             </Link>
           </motion.div>
           <motion.div
-            className="max-w-2xl mx-auto"
+            className="max-w-3xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
