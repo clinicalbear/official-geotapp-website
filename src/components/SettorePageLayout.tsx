@@ -296,7 +296,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
                     <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
                       <td className="py-4 px-6 font-semibold text-slate-700">{row.label}</td>
                       <td className="py-4 px-6 text-center text-slate-500">{row.competitor}</td>
-                      <td className="py-4 px-6 text-center font-bold text-white bg-[#8FC436]/90">{row.geotapp}</td>
+                      <td className={`py-4 px-6 text-center font-bold text-white ${i % 2 === 0 ? 'bg-[#8FC436]' : 'bg-[#7db02e]'}`}>{row.geotapp}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -330,7 +330,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
                     <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
                       <td className="py-4 px-6 font-semibold text-slate-700">{row.label}</td>
                       <td className="py-4 px-6 text-center text-slate-400">{row.gestionale}</td>
-                      <td className="py-4 px-6 text-center font-bold text-white bg-[#8FC436]/90">{row.geotapp}</td>
+                      <td className={`py-4 px-6 text-center font-bold text-white ${i % 2 === 0 ? 'bg-[#8FC436]' : 'bg-[#7db02e]'}`}>{row.geotapp}</td>
                     </tr>
                   ))}
                 </tbody>
