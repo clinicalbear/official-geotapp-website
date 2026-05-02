@@ -114,80 +114,113 @@ export default function Home() {
   return (
     <div className="bg-background min-h-screen text-text-primary overflow-hidden">
       {/* Landing is locale-aware: all internal links pass through getLink(). */}
-      {/* HERO SECTION */}
-      <section className="relative pt-40 pb-32 px-6 overflow-hidden">
-        <div className="container mx-auto max-w-5xl text-center z-10 relative">
-          <div>
-            {(() => { const d = DIFF_COPY[currentLocale] ?? DIFF_COPY['en']; return (
-              <>
-                <span className="inline-block px-5 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-bold tracking-wide mb-8 anim-fade-in-up">
-                  <span className="inline-block w-2 h-2 rounded-full bg-primary mr-2 animate-pulse" />
-                  {dict.landing.hero_badge}
-                </span>
-                <h1 className="text-5xl md:text-7xl font-display font-bold text-slate-900 leading-[1.05] tracking-tight mb-4 anim-fade-in-up anim-delay-200">
-                  {d.h2_1}<br />
-                  <span className="text-primary">{d.h2_2}</span>
-                </h1>
-                <p className="text-xl md:text-2xl text-text-secondary leading-relaxed max-w-3xl mx-auto mb-4 font-light anim-fade-in-up anim-delay-400">
-                  {d.desc}
-                </p>
-              </>
-            ); })()}
-            <p className="text-sm text-slate-400 mb-10 anim-fade-in-up anim-delay-500">
-              {dict.landing.hero_sectors_prefix}{' '}
-              <Link href={getLink('/settori/pulizie')} className="underline hover:text-slate-600 transition-colors">
-                {dict.landing.hero_sectors_pulizie}
-              </Link>
-              {', '}
-              <Link href={getLink('/settori/installatori')} className="underline hover:text-slate-600 transition-colors">
-                {dict.landing.hero_sectors_installatori}
-              </Link>
-              {' '}{dict.landing.hero_sectors_and}{' '}
-              <Link href={getLink('/settori/sicurezza')} className="underline hover:text-slate-600 transition-colors">
-                {dict.landing.hero_sectors_sicurezza}
-              </Link>
-              .
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10 anim-fade-in-up anim-delay-600">
-              <Link
-                href={getLink('/trial')}
-                className="group px-10 py-5 bg-primary text-white font-bold rounded-2xl text-lg hover:bg-primary/90 transition-all shadow-xl shadow-primary/25 transform hover:-translate-y-1 hover:shadow-primary/40"
-              >
-                {dict.landing.hero_cta_primary}
-                <ArrowRight size={18} className="inline ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
-                href={getLink('/settori')}
-                className="px-10 py-5 bg-white/80 backdrop-blur text-slate-900 border border-slate-200 font-bold rounded-2xl text-lg hover:border-primary/40 hover:bg-white transition-all"
-              >
-                {dict.landing.hero_cta_secondary}
-              </Link>
+      {/* HERO SECTION — dark bg, text left, screenshots right */}
+      <section className="relative pt-32 pb-20 px-6 bg-slate-900 overflow-hidden">
+        {/* Gradient accent top */}
+        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#F97316] via-[#8FC436] to-[#8B5CF6]" />
+
+        <div className="container mx-auto max-w-7xl z-10 relative">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left — text */}
+            <div>
+              <span className="inline-block px-5 py-2 rounded-full bg-primary/15 border border-primary/25 text-primary text-sm font-bold tracking-wide mb-8 anim-fade-in-up">
+                <span className="inline-block w-2 h-2 rounded-full bg-primary mr-2 animate-pulse" />
+                {dict.landing.hero_badge}
+              </span>
+
+              {(() => { const d = DIFF_COPY[currentLocale] ?? DIFF_COPY['en']; return (
+                <>
+                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white leading-[1.08] tracking-tight mb-6 anim-fade-in-up anim-delay-200">
+                    {d.h2_1}<br />
+                    <span className="text-primary">{d.h2_2}</span>
+                  </h1>
+                  <p className="text-lg text-slate-400 leading-relaxed max-w-xl mb-6 anim-fade-in-up anim-delay-300">
+                    {d.desc}
+                  </p>
+                </>
+              ); })()}
+
+              <p className="text-sm text-slate-500 mb-8 anim-fade-in-up anim-delay-400">
+                {dict.landing.hero_sectors_prefix}{' '}
+                <Link href={getLink('/settori/pulizie')} className="underline hover:text-slate-300 transition-colors">
+                  {dict.landing.hero_sectors_pulizie}
+                </Link>
+                {', '}
+                <Link href={getLink('/settori/installatori')} className="underline hover:text-slate-300 transition-colors">
+                  {dict.landing.hero_sectors_installatori}
+                </Link>
+                {' '}{dict.landing.hero_sectors_and}{' '}
+                <Link href={getLink('/settori/sicurezza')} className="underline hover:text-slate-300 transition-colors">
+                  {dict.landing.hero_sectors_sicurezza}
+                </Link>
+                .
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4 mb-10 anim-fade-in-up anim-delay-500">
+                <Link
+                  href={getLink('/trial')}
+                  className="group px-8 py-4 bg-primary text-white font-bold rounded-2xl text-lg hover:bg-primary/90 transition-all shadow-xl shadow-primary/25 transform hover:-translate-y-1"
+                >
+                  {dict.landing.hero_cta_primary}
+                  <ArrowRight size={18} className="inline ml-2 group-hover:translate-x-1 transition-transform" />
+                </Link>
+                <Link
+                  href={getLink('/settori')}
+                  className="px-8 py-4 bg-white/10 text-white border border-white/20 font-bold rounded-2xl text-lg hover:bg-white/20 transition-all"
+                >
+                  {dict.landing.hero_cta_secondary}
+                </Link>
+              </div>
+
+              {/* Trust signals */}
+              <div className="flex flex-col sm:flex-row gap-5 text-sm text-slate-500 anim-fade-in-up anim-delay-600">
+                <div className="flex items-center gap-2">
+                  <ShieldCheck size={16} className="text-emerald-400 shrink-0" />
+                  <span><strong className="text-slate-300">{dict.landing.trust_gdpr}</strong></span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <MapPin size={16} className="text-blue-400 shrink-0" />
+                  <span><strong className="text-slate-300">{dict.landing.trust_gps}</strong></span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <WifiOff size={16} className="text-amber-400 shrink-0" />
+                  <span><strong className="text-slate-300">{dict.landing.trust_offline}</strong></span>
+                </div>
+              </div>
             </div>
-            {/* TrustBlock: 3 micro-signals below CTAs */}
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center text-sm text-slate-500 anim-fade-in-up anim-delay-800">
-              <div className="flex items-center gap-2">
-                <ShieldCheck size={16} className="text-emerald-500 shrink-0" />
-                <span><strong className="text-slate-700">{dict.landing.trust_gdpr}</strong> — {dict.landing.trust_gdpr_desc}</span>
+
+            {/* Right — stacked screenshots in perspective */}
+            <div className="relative hidden lg:block anim-fade-in-up anim-delay-400" style={{ perspective: '1200px' }}>
+              {/* Back screenshot — live map */}
+              <div
+                className="absolute top-8 -right-4 w-[85%] rounded-xl overflow-hidden border border-white/10 shadow-2xl shadow-black/40"
+                style={{ transform: 'rotateY(-8deg) rotateX(2deg)' }}
+              >
+                <img src="/screen_live_map.png" alt="GeoTapp Flow Live Map" className="w-full" loading="eager" />
               </div>
-              <div className="hidden sm:block w-1 h-1 rounded-full bg-slate-300" />
-              <div className="flex items-center gap-2">
-                <MapPin size={16} className="text-brand-blue shrink-0" />
-                <span><strong className="text-slate-700">{dict.landing.trust_gps}</strong> — {dict.landing.trust_gps_desc}</span>
+              {/* Middle screenshot — TimeTracker */}
+              <div
+                className="absolute top-16 right-8 w-[80%] rounded-xl overflow-hidden border border-white/10 shadow-2xl shadow-black/40"
+                style={{ transform: 'rotateY(-5deg) rotateX(1deg)' }}
+              >
+                <img src="/screenshots/timetracker-dashboard.jpg" alt="GeoTapp TimeTracker" className="w-full" loading="eager" />
               </div>
-              <div className="hidden sm:block w-1 h-1 rounded-full bg-slate-300" />
-              <div className="flex items-center gap-2">
-                <WifiOff size={16} className="text-amber-500 shrink-0" />
-                <span><strong className="text-slate-700">{dict.landing.trust_offline}</strong> — {dict.landing.trust_offline_desc}</span>
+              {/* Front screenshot — Flow dashboard */}
+              <div
+                className="relative w-[90%] rounded-xl overflow-hidden border border-white/10 shadow-2xl shadow-primary/20"
+                style={{ transform: 'rotateY(-3deg)' }}
+              >
+                <img src="/screen_dashboard.png" alt="GeoTapp Flow Dashboard" className="w-full" loading="eager" />
               </div>
             </div>
           </div>
         </div>
 
-        {/* Animated gradient blobs — visible */}
-        <div className="absolute inset-0 -z-0 pointer-events-none">
-          <div className="hero-blob-1 absolute -top-20 -left-20 w-[600px] h-[600px] bg-gradient-to-br from-[#8FC436]/30 to-transparent rounded-full blur-[100px]" />
-          <div className="hero-blob-2 absolute -top-10 -right-20 w-[500px] h-[500px] bg-gradient-to-bl from-[#3BAEE0]/25 to-transparent rounded-full blur-[100px]" />
-          <div className="hero-blob-3 absolute -bottom-40 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-gradient-to-t from-[#8B5CF6]/20 to-transparent rounded-full blur-[100px]" />
+        {/* Background blobs on dark */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="hero-blob-1 absolute -top-40 -left-40 w-[600px] h-[600px] bg-[#8FC436]/10 rounded-full blur-[120px]" />
+          <div className="hero-blob-2 absolute top-20 -right-40 w-[500px] h-[500px] bg-[#3BAEE0]/8 rounded-full blur-[120px]" />
+          <div className="hero-blob-3 absolute -bottom-40 left-1/3 w-[500px] h-[500px] bg-[#8B5CF6]/8 rounded-full blur-[120px]" />
         </div>
       </section>
 
