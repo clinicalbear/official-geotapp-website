@@ -496,9 +496,39 @@ export default function Home() {
       </section>
 
       {/* REPORT SECTION */}
-      <section className="py-24 border-t border-slate-100 bg-slate-50">
-        <div className="container mx-auto px-6 max-w-5xl">
-          <div className="text-center max-w-3xl mx-auto mb-14">
+      <section className="py-24 border-t border-slate-100 bg-slate-50 relative overflow-hidden">
+        {/* Background: floating shield icons */}
+        <div aria-hidden="true" className="absolute inset-0 pointer-events-none">
+          {[
+            { x: '8%', y: '15%', s: 40, r: -12, o: 0.04 },
+            { x: '85%', y: '10%', s: 55, r: 8, o: 0.03 },
+            { x: '92%', y: '65%', s: 35, r: -20, o: 0.04 },
+            { x: '5%', y: '75%', s: 50, r: 15, o: 0.03 },
+            { x: '75%', y: '85%', s: 30, r: -5, o: 0.05 },
+            { x: '20%', y: '90%', s: 45, r: 10, o: 0.03 },
+          ].map((p, i) => (
+            <motion.div
+              key={i}
+              className="absolute"
+              style={{ left: p.x, top: p.y }}
+              initial={{ opacity: 0, scale: 0.5 }}
+              whileInView={{ opacity: p.o, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 + i * 0.15, duration: 0.6 }}
+            >
+              <ShieldCheck size={p.s} className="text-emerald-500" style={{ transform: `rotate(${p.r}deg)` }} />
+            </motion.div>
+          ))}
+        </div>
+
+        <div className="container mx-auto px-6 max-w-5xl relative z-10">
+          <motion.div
+            className="text-center max-w-3xl mx-auto mb-14"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
               {dict.landing.report_section_title}
             </h2>
@@ -508,7 +538,7 @@ export default function Home() {
             <p className="text-slate-600 leading-relaxed">
               {dict.landing.report_section_body}
             </p>
-          </div>
+          </motion.div>
           <div className="grid md:grid-cols-2 gap-5 mb-12 max-w-2xl mx-auto">
             {[
               dict.landing.report_feature_1,
@@ -516,23 +546,42 @@ export default function Home() {
               dict.landing.report_feature_3,
               dict.landing.report_feature_4,
             ].map((feat, i) => (
-              <div key={i} className="flex items-start gap-3 bg-white rounded-xl p-5 border border-slate-200 shadow-sm">
+              <motion.div
+                key={i}
+                className="flex items-start gap-3 bg-white rounded-xl p-5 border border-slate-200 shadow-sm hover:shadow-md hover:border-emerald-200 transition-all"
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1, duration: 0.4 }}
+              >
                 <CheckCircle2 className="text-emerald-500 shrink-0 mt-0.5" size={18} />
                 <span className="text-slate-700 text-sm">{feat}</span>
-              </div>
+              </motion.div>
             ))}
           </div>
-          <div className="text-center mb-10">
+          <motion.div
+            className="text-center mb-10"
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.5, duration: 0.4 }}
+          >
             <Link
               href={getLink('/products/geotapp-verifier')}
-              className="inline-flex items-center gap-2 px-8 py-4 bg-emerald-600 text-white font-bold rounded-xl text-lg hover:bg-emerald-700 transition-all shadow-lg"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-emerald-600 text-white font-bold rounded-xl text-lg hover:bg-emerald-700 transition-all shadow-lg hover:shadow-emerald-200"
             >
               {dict.landing.report_cta} <ArrowRight size={18} />
             </Link>
-          </div>
-          <div className="max-w-2xl mx-auto">
+          </motion.div>
+          <motion.div
+            className="max-w-2xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.6, duration: 0.5 }}
+          >
             <DemoReportBanner />
-          </div>
+          </motion.div>
         </div>
       </section>
 
