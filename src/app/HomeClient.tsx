@@ -134,13 +134,13 @@ export default function Home() {
                     {d.h2_1}<br />
                     <span className="text-primary">{d.h2_2}</span>
                   </h1>
-                  <p className="text-lg text-slate-400 leading-relaxed max-w-xl mb-6 anim-fade-in-up anim-delay-300">
+                  <p className="text-lg text-slate-800 leading-relaxed max-w-xl mb-6 anim-fade-in-up anim-delay-300">
                     {d.desc}
                   </p>
                 </>
               ); })()}
 
-              <p className="text-sm text-slate-500 mb-8 anim-fade-in-up anim-delay-400">
+              <p className="text-sm text-slate-600 mb-8 anim-fade-in-up anim-delay-400">
                 {dict.landing.hero_sectors_prefix}{' '}
                 <Link href={getLink('/settori/pulizie')} className="underline hover:text-slate-300 transition-colors">
                   {dict.landing.hero_sectors_pulizie}
