@@ -288,7 +288,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
                   <tr className="bg-slate-800 text-white">
                     <th className="py-4 px-6 text-left font-semibold w-1/3"></th>
                     <th className="py-4 px-6 text-center font-semibold">App di timbratura classica</th>
-                    <th className={`py-4 px-6 text-center font-semibold ${colors.accent} bg-white`}>GeoTapp</th>
+                    <th className="py-4 px-6 text-center font-bold text-white bg-[#8FC436]">GeoTapp</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -296,7 +296,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
                     <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
                       <td className="py-4 px-6 font-semibold text-slate-700">{row.label}</td>
                       <td className="py-4 px-6 text-center text-slate-500">{row.competitor}</td>
-                      <td className={`py-4 px-6 text-center font-semibold ${colors.accent}`}>{row.geotapp}</td>
+                      <td className="py-4 px-6 text-center font-bold text-white bg-[#8FC436]/90">{row.geotapp}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -322,7 +322,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
                   <tr className="bg-slate-100">
                     <th className="py-4 px-6 text-left font-semibold text-slate-500 w-1/3"></th>
                     <th className="py-4 px-6 text-center font-semibold text-slate-600">{sl.classic_app ?? 'Generic app / Spreadsheet'}</th>
-                    <th className={`py-4 px-6 text-center font-bold ${colors.accent}`}>GeoTapp</th>
+                    <th className="py-4 px-6 text-center font-bold text-white bg-[#8FC436]">GeoTapp</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -330,7 +330,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
                     <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
                       <td className="py-4 px-6 font-semibold text-slate-700">{row.label}</td>
                       <td className="py-4 px-6 text-center text-slate-400">{row.gestionale}</td>
-                      <td className={`py-4 px-6 text-center font-semibold ${colors.accent}`}>{row.geotapp}</td>
+                      <td className="py-4 px-6 text-center font-bold text-white bg-[#8FC436]/90">{row.geotapp}</td>
                     </tr>
                   ))}
                 </tbody>
