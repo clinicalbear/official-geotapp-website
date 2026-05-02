@@ -85,7 +85,7 @@
     "flow": {
       "badge": "GeoTapp Flow",
       "title": "Coordonnez le terrain depuis un hub opérationnel unique.",
-      "subtitle": "Flow est le système utilisé par le bureau pour gérer les missions, affecter les activités, suivre l'avancement et générer des rapports de travail structurés. <strong class=\"text-slate-900\">Moins de friction interne, plus de contrôle réel.</strong>",
+      "subtitle": "Flow est le système utilisé par le bureau pour gérer les missions, affecter les activités, suivre l'avancement et générer des rapports de travail structurés. <strong class=\"text-slate-900\">Moins de friction interne, plus de contrôle réel.</strong><br/><br/><em>Votre entreprise est un organisme vivant. Chaque intervention, chaque mission, chaque opérateur est un battement. GeoTapp Flow les garde tous synchronisés.</em>",
       "features": {
         "crm": "<strong>Gestion des missions :</strong> Créez des interventions, affectez les techniciens et suivez l'avancement en temps réel.",
         "pipeline": "<strong>Rapports structurés :</strong> Chaque intervention terminée génère une documentation traçable prête pour le client."

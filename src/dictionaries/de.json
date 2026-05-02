@@ -85,7 +85,7 @@
     "flow": {
       "badge": "GeoTapp Flow",
       "title": "Außendienst aus einer Zentrale koordinieren.",
-      "subtitle": "Flow ist das System, das das Büro nutzt, um Aufträge zu verwalten, Tätigkeiten zuzuweisen, Fortschritte zu überwachen und strukturierte Arbeitsberichte zu erstellen. <strong class=\"text-slate-900\">Weniger interne Reibung, mehr echte Kontrolle.</strong>",
+      "subtitle": "Flow ist das System, das das Büro nutzt, um Aufträge zu verwalten, Tätigkeiten zuzuweisen, Fortschritte zu überwachen und strukturierte Arbeitsberichte zu erstellen. <strong class=\"text-slate-900\">Weniger interne Reibung, mehr echte Kontrolle.</strong><br/><br/><em>Ihr Unternehmen ist ein lebendiger Organismus. Jeder Auftrag, jede Aufgabe, jeder Mitarbeiter ist ein Herzschlag. GeoTapp Flow hält sie alle synchron.</em>",
       "features": {
         "crm": "<strong>Auftragsverwaltung:</strong> Einsätze erstellen, Techniker zuweisen und Fortschritte in Echtzeit überwachen.",
         "pipeline": "<strong>Strukturierte Berichte:</strong> Jeder abgeschlossene Auftrag erzeugt rückverfolgbare Dokumentation für den Kunden."

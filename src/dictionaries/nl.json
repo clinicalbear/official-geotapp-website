@@ -85,7 +85,7 @@
     "flow": {
       "badge": "GeoTapp Flow",
       "title": "Coördineer de buitendienst vanuit één operationeel centrum.",
-      "subtitle": "Flow is het systeem dat kantoor gebruikt om werkbeurten te beheren, activiteiten toe te wijzen, voortgang bij te houden en gestructureerde werkbonnen te genereren. <strong class=\"text-slate-900\">Minder interne wrijving, meer echte controle.</strong>",
+      "subtitle": "Flow is het systeem dat kantoor gebruikt om werkbeurten te beheren, activiteiten toe te wijzen, voortgang bij te houden en gestructureerde werkbonnen te genereren. <strong class=\"text-slate-900\">Minder interne wrijving, meer echte controle.</strong><br/><br/><em>Uw bedrijf is een levend organisme. Elke opdracht, elke taak, elke medewerker is een hartslag. GeoTapp Flow houdt ze allemaal gesynchroniseerd.</em>",
       "features": {
         "crm": "<strong>Werkbeurtbeheer:</strong> Maak interventies aan, wijs monteurs toe en volg de voortgang in realtime.",
         "pipeline": "<strong>Gestructureerde werkbonnen:</strong> Elke voltooide werkbeurt genereert traceerbare documentatie klaar voor de klant."

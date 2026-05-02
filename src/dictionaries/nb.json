@@ -85,7 +85,7 @@
     "flow": {
       "badge": "GeoTapp Flow",
       "title": "Koordiner feltet fra ett operasjonelt knutepunkt.",
-      "subtitle": "Flow er systemet kontoret bruker for å administrere arbeidsordrer, tildele aktiviteter, spore fremgang og generere strukturerte arbeidsrapporter. <strong class=\"text-slate-900\">Mindre intern friksjon, mer reell kontroll.</strong>",
+      "subtitle": "Flow er systemet kontoret bruker for å administrere arbeidsordrer, tildele aktiviteter, spore fremgang og generere strukturerte arbeidsrapporter. <strong class=\"text-slate-900\">Mindre intern friksjon, mer reell kontroll.</strong><br/><br/><em>Bedriften din er en levende organisme. Hvert oppdrag, hver oppgave, hver medarbeider er et hjerteslag. GeoTapp Flow holder dem alle synkroniserte.</em>",
       "features": {
         "crm": "<strong>Håndtering av arbeidsordrer:</strong> Opprett arbeidsordrer, tildel feltteknikere og overvåk fremdriften i sanntid.",
         "pipeline": "<strong>Strukturerte rapporter:</strong> Hvert fullført oppdrag genererer sporbar dokumentasjon klar for kunden."

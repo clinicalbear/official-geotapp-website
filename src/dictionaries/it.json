@@ -85,7 +85,7 @@
     "flow": {
       "badge": "GeoTapp Flow",
       "title": "L'ufficio vede tutto. In tempo reale.",
-      "subtitle": "Flow è il centro operativo dell'ufficio: commesse, attività, avanzamento e report strutturati. <strong class=\"text-slate-900\">Il campo lavora. L'ufficio sa.</strong>",
+      "subtitle": "Flow è il centro operativo dell'ufficio: commesse, attività, avanzamento e report strutturati. <strong class=\"text-slate-900\">Il campo lavora. L'ufficio sa.</strong><br/><br/><em>La tua azienda è un organismo vivo. Ogni intervento, ogni commessa, ogni operatore è un battito. GeoTapp Flow li tiene tutti sincronizzati.</em>",
       "features": {
         "crm": "<strong>Gestione Commesse:</strong> Ogni intervento nasce strutturato, con tecnico assegnato, sede e stato aggiornato in tempo reale.",
         "pipeline": "<strong>Documentazione automatica:</strong> Ogni intervento completato genera un report pronto — senza compilazione manuale, senza errori."

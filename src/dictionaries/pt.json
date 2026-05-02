@@ -85,7 +85,7 @@
     "flow": {
       "badge": "GeoTapp Flow",
       "title": "Coordene o campo a partir de um hub operacional único.",
-      "subtitle": "O Flow é o sistema utilizado pelo escritório para gerir trabalhos, atribuir actividades, acompanhar o progresso e gerar relatórios de trabalho estruturados. <strong class=\"text-slate-900\">Menos fricção interna, mais controlo real.</strong>",
+      "subtitle": "O Flow é o sistema utilizado pelo escritório para gerir trabalhos, atribuir actividades, acompanhar o progresso e gerar relatórios de trabalho estruturados. <strong class=\"text-slate-900\">Menos fricção interna, mais controlo real.</strong><br/><br/><em>A sua empresa é um organismo vivo. Cada intervenção, cada tarefa, cada operador é um batimento. GeoTapp Flow mantém todos sincronizados.</em>",
       "features": {
         "crm": "<strong>Gestão de trabalhos:</strong> Crie intervenções, atribua técnicos e monitorize o progresso em tempo real.",
         "pipeline": "<strong>Relatórios estruturados:</strong> Cada trabalho concluído gera documentação rastreável pronta para o cliente."

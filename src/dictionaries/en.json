@@ -85,7 +85,7 @@
     "flow": {
       "badge": "GeoTapp Flow",
       "title": "The office sees everything. In real time.",
-      "subtitle": "Flow is the operational hub: jobs, tasks, progress and structured reports. <strong class=\"text-slate-900\">The field works. The office knows.</strong>",
+      "subtitle": "Flow is the operational hub: jobs, tasks, progress and structured reports. <strong class=\"text-slate-900\">The field works. The office knows.</strong><br/><br/><em>Your company is a living organism. Every job, every task, every worker is a heartbeat. GeoTapp Flow keeps them all in sync.</em>",
       "features": {
         "crm": "<strong>Job Management:</strong> Every intervention is structured from the start, with assigned technician, location and live status.",
         "pipeline": "<strong>Automatic documentation:</strong> Every completed job generates a ready report — no manual entry, no errors."
