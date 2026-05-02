@@ -189,8 +189,22 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right — stacked screenshots in perspective */}
+            {/* Right — logos + stacked screenshots */}
             <div className="relative hidden lg:block anim-fade-in-up anim-delay-400" style={{ perspective: '1200px' }}>
+              {/* Product logos above screenshots */}
+              <div className="flex items-center justify-center gap-10 mb-8">
+                <Link href={getLink('/products/geotapp-timetracker')} className="group">
+                  <img src="/TimeTrackerTrasparente.png" alt="TimeTracker" className="h-8 w-auto opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all" />
+                </Link>
+                <div className="w-px h-8 bg-white/15" />
+                <Link href={getLink('/products/geotapp-flow')} className="group">
+                  <img src="/logoFlow.png" alt="Flow" className="h-8 w-auto opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all" />
+                </Link>
+                <div className="w-px h-8 bg-white/15" />
+                <Link href={getLink('/products/geotapp-verifier')} className="group">
+                  <img src="/logoVerifier.png" alt="Verifier" className="h-8 w-auto opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all" />
+                </Link>
+              </div>
               {/* Back screenshot — live map */}
               <div
                 className="absolute top-8 -left-4 w-[85%] rounded-xl overflow-hidden border border-white/10 shadow-2xl shadow-black/40"
@@ -219,20 +233,6 @@ export default function Home() {
 
             </div>
 
-            {/* Product logos — below screenshots, full width */}
-            <div className="hidden lg:flex items-center justify-center gap-10 mt-8 anim-fade-in-up anim-delay-600 lg:col-span-2">
-              <Link href={getLink('/products/geotapp-timetracker')} className="group">
-                <img src="/TimeTrackerTrasparente.png" alt="TimeTracker" className="h-8 w-auto opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all" />
-              </Link>
-              <div className="w-px h-8 bg-white/15" />
-              <Link href={getLink('/products/geotapp-flow')} className="group">
-                <img src="/logoFlow.png" alt="Flow" className="h-8 w-auto opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all" />
-              </Link>
-              <div className="w-px h-8 bg-white/15" />
-              <Link href={getLink('/products/geotapp-verifier')} className="group">
-                <img src="/logoVerifier.png" alt="Verifier" className="h-8 w-auto opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all" />
-              </Link>
-            </div>
           </div>
         </div>
 
