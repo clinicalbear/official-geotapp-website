@@ -5,6 +5,7 @@ import { clsx } from 'clsx';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Script from 'next/script';
+import SiteAnalytics from '@/components/SiteAnalytics';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const poppins = Poppins({
@@ -31,6 +32,7 @@ export default function BlogLayout({ children }: { children: ReactNode }) {
         </Script>
       </head>
       <body className={clsx(inter.variable, poppins.variable, 'font-sans bg-background text-text-primary antialiased')}>
+        <SiteAnalytics />
         <div className="relative min-h-screen overflow-x-clip">
           <div className="relative z-10">
             <Navbar />
