@@ -6,6 +6,10 @@
     "contact": "Contact",
     "login": "Login",
     "cta": "Start free trial",
+    "cta_trial": "Try free",
+    "cta_how": "See how it works",
+    "cta_start": "Start trial",
+    "cta_signin": "Sign in",
     "sectors": {
       "installatori": "Installers",
       "sicurezza": "Security",
@@ -627,6 +631,8 @@
     "form_seats": "Timetracker licences (optional)",
     "form_seats_hint": "Separate subscription for field operators (mobile app). Limit included in plan: Solo max 2, Team max 5, Business unlimited. You can adjust licences after activation.",
     "form_submit": "Start free trial",
+    "form_submit_simple": "Start free",
+    "form_response_time": "You'll receive the welcome email in a few moments",
     "form_submitting": "Setting up...",
     "form_privacy": "Your data is processed according to our",
     "form_privacy_link": "Privacy Policy",
@@ -634,7 +640,7 @@
     "success_title": "Check your email!",
     "success_desc": "We've sent the activation link to ",
     "success_desc2": "Click the link to set your password and access your trial.",
-    "success_spam": "Can't find it? Check your spam folder.",
+    "success_spam": "Can't find it in your inbox? Check your spam or promotions folder.",
     "error_message": "Activation error. Please try again or write to info@geotapp.com.",
     "benefits_title": "What's included",
     "benefits": [
@@ -668,7 +674,8 @@
         "q": "How long does it take to get started?",
         "a": "Less than 2 minutes: fill in the form, receive the email, set your password and you're in."
       }
-    ]
+    ],
+    "success_sender": "The email will arrive from:"
   },
   "demo": {
     "page_title": "Book your Personalised Demo",
@@ -836,7 +843,10 @@
     "cta_final_title": "Try GeoTapp free for 14 days",
     "cta_final_desc": "No credit card required. Get started in 2 minutes.",
     "cta_final_btn": "Start now",
-    "read_post": "Read"
+    "read_post": "Read",
+    "next_step_text": "See how GeoTapp solves this for {sector} companies",
+    "next_step_fallback": "See how GeoTapp works for your business",
+    "next_step_cta": "Learn more"
   },
   "roi": {
     "meta_title": "GeoTapp ROI Calculator — Discover Your Real Savings",

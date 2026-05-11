@@ -6,6 +6,10 @@
     "contact": "Contact",
     "login": "Connexion",
     "cta": "Demander une démo",
+    "cta_trial": "Essai gratuit",
+    "cta_how": "Voir comment ça marche",
+    "cta_start": "Démarrer l'essai",
+    "cta_signin": "Connexion",
     "sectors": {
       "installatori": "Installateurs",
       "sicurezza": "Sécurité",
@@ -770,7 +774,10 @@
     "cta_final_title": "Essayez GeoTapp gratuitement pendant 14 jours",
     "cta_final_desc": "Aucune carte bancaire requise. Demarrez en 2 minutes.",
     "cta_final_btn": "Commencer maintenant",
-    "read_post": "Lire"
+    "read_post": "Lire",
+    "next_step_text": "Découvrez comment GeoTapp résout ce problème pour les entreprises de {sector}",
+    "next_step_fallback": "Découvrez comment GeoTapp fonctionne pour votre entreprise",
+    "next_step_cta": "En savoir plus"
   },
   "trial": {
     "page_title": "14 jours gratuits. Sans carte.",
@@ -793,6 +800,8 @@
     "form_seats": "Licences Timetracker (optionnel)",
     "form_seats_hint": "Abonnement séparé pour les opérateurs terrain (application mobile). Limite incluse dans le plan : Solo max 2, Team max 5, Business illimitées. Vous pouvez modifier les licences après l'activation.",
     "form_submit": "Commencer l'essai gratuit",
+    "form_submit_simple": "Commencer gratuitement",
+    "form_response_time": "Vous recevrez l'email de bienvenue dans quelques instants",
     "form_submitting": "Activation en cours...",
     "form_privacy": "Vos données sont traitées conformément à notre",
     "form_privacy_link": "Politique de confidentialité",
@@ -800,7 +809,7 @@
     "success_title": "Vérifiez votre email !",
     "success_desc": "Nous avons envoyé le lien d'activation à ",
     "success_desc2": "Cliquez sur le lien pour définir votre mot de passe et accéder à votre essai.",
-    "success_spam": "Vous ne le trouvez pas ? Vérifiez votre dossier spam.",
+    "success_spam": "Vous ne le voyez pas dans la boîte de réception ? Vérifiez les dossiers spam ou promotions.",
     "error_message": "Erreur lors de l'activation. Réessayez ou écrivez à info@geotapp.com.",
     "benefits_title": "Ce qui est inclus",
     "benefits": [
@@ -834,7 +843,8 @@
         "q": "Combien de temps faut-il pour commencer ?",
         "a": "Moins de 2 minutes : remplissez le formulaire, recevez l'email, définissez votre mot de passe et vous êtes prêt."
       }
-    ]
+    ],
+    "success_sender": "L'email arrivera de :"
   },
   "roi": {
     "meta_title": "Calculateur ROI GeoTapp — Découvrez vos économies réelles",

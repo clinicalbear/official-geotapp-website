@@ -6,6 +6,10 @@
     "contact": "Kontakt",
     "login": "Log ind",
     "cta": "Anmod om demo",
+    "cta_trial": "Prøv gratis",
+    "cta_how": "Se hvordan det virker",
+    "cta_start": "Start prøveperiode",
+    "cta_signin": "Log ind",
     "sectors": {
       "installatori": "Installatører",
       "sicurezza": "Sikkerhed",
@@ -770,7 +774,10 @@
     "cta_final_title": "Prov GeoTapp gratis i 14 dage",
     "cta_final_desc": "Intet kreditkort paakraevet. Kom i gang pa 2 minutter.",
     "cta_final_btn": "Start nu",
-    "read_post": "Laes"
+    "read_post": "Laes",
+    "next_step_text": "Se hvordan GeoTapp løser dette problem for {sector}-virksomheder",
+    "next_step_fallback": "Se hvordan GeoTapp fungerer for din virksomhed",
+    "next_step_cta": "Læs mere"
   },
   "trial": {
     "page_title": "14 dage gratis. Intet kort.",
@@ -793,6 +800,8 @@
     "form_seats": "Timetracker-licenser (valgfrit)",
     "form_seats_hint": "Separat abonnement for feltoperatører (mobilapp). Grænse inkluderet i plan: Solo maks. 2, Team maks. 5, Business ubegrænset. Du kan justere licenser efter aktivering.",
     "form_submit": "Start gratis prøveperiode",
+    "form_submit_simple": "Start gratis",
+    "form_response_time": "Du modtager velkomstmailen inden for få øjeblikke",
     "form_submitting": "Aktiverer...",
     "form_privacy": "Dine data behandles i henhold til vores",
     "form_privacy_link": "Privatlivspolitik",
@@ -800,7 +809,7 @@
     "success_title": "Tjek din email!",
     "success_desc": "Vi har sendt aktiveringslinket til ",
     "success_desc2": "Klik på linket for at angive din adgangskode og få adgang til din prøveperiode.",
-    "success_spam": "Kan du ikke finde det? Tjek din spam-mappe.",
+    "success_spam": "Kan du ikke finde den i indbakken? Tjek spam- eller reklamemappen.",
     "error_message": "Aktiveringsfejl. Prøv igen eller skriv til info@geotapp.com.",
     "benefits_title": "Hvad er inkluderet",
     "benefits": [
@@ -834,7 +843,8 @@
         "q": "Hvor lang tid tager det at komme i gang?",
         "a": "Mindre end 2 minutter: udfyld formularen, modtag emailen, angiv din adgangskode og du er i gang."
       }
-    ]
+    ],
+    "success_sender": "Mailen kommer fra:"
   },
   "roi": {
     "meta_title": "GeoTapp ROI-beregner — Opdag dine reelle besparelser",

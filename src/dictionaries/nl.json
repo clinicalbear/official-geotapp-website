@@ -6,6 +6,10 @@
     "contact": "Contact",
     "login": "Inloggen",
     "cta": "Demo aanvragen",
+    "cta_trial": "Gratis proberen",
+    "cta_how": "Bekijk hoe het werkt",
+    "cta_start": "Start proefperiode",
+    "cta_signin": "Inloggen",
     "sectors": {
       "installatori": "Installateurs",
       "sicurezza": "Beveiliging",
@@ -626,6 +630,8 @@
     "form_seats": "Timetracker-licenties (optioneel)",
     "form_seats_hint": "Apart abonnement voor buitendienstmedewerkers (mobiele app). Limiet inbegrepen in plan: Solo max 2, Team max 5, Business onbeperkt. U kunt licenties aanpassen na activering.",
     "form_submit": "Start de proefperiode",
+    "form_submit_simple": "Gratis starten",
+    "form_response_time": "U ontvangt de welkomstmail binnen enkele ogenblikken",
     "form_submitting": "Bezig...",
     "form_privacy": "Uw gegevens worden verwerkt volgens ons",
     "form_privacy_link": "Privacybeleid",
@@ -633,7 +639,7 @@
     "success_title": "Controleer uw e-mail!",
     "success_desc": "We hebben de activeringslink gestuurd naar ",
     "success_desc2": "Klik op de link om uw wachtwoord in te stellen en toegang te krijgen tot uw proefperiode.",
-    "success_spam": "Kunt u het niet vinden? Controleer uw spammap.",
+    "success_spam": "Niet in je inbox? Controleer de map spam of promoties.",
     "error_message": "Activeringsfout. Probeer het opnieuw of stuur een e-mail naar info@geotapp.com.",
     "benefits_title": "Wat zit er in de proefperiode",
     "benefits": [
@@ -667,7 +673,8 @@
         "q": "Hoe lang duurt het om te beginnen?",
         "a": "Minder dan 2 minuten: vul het formulier in, ontvang de e-mail, stel uw wachtwoord in en u bent binnen."
       }
-    ]
+    ],
+    "success_sender": "De e-mail komt van:"
   },
   "demo": {
     "page_title": "Boek uw persoonlijke demo",
@@ -835,7 +842,10 @@
     "cta_final_title": "Probeer GeoTapp 14 dagen gratis",
     "cta_final_desc": "Geen creditcard nodig. Begin in 2 minuten.",
     "cta_final_btn": "Nu starten",
-    "read_post": "Lees"
+    "read_post": "Lees",
+    "next_step_text": "Ontdek hoe GeoTapp dit probleem oplost voor {sector}-bedrijven",
+    "next_step_fallback": "Ontdek hoe GeoTapp werkt voor uw bedrijf",
+    "next_step_cta": "Meer informatie"
   },
   "roi": {
     "meta_title": "GeoTapp ROI-Calculator — Ontdek uw echte besparingen",

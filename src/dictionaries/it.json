@@ -6,6 +6,10 @@
     "contact": "Contatti",
     "login": "Accedi",
     "cta": "Inizia trial gratuito",
+    "cta_trial": "Prova gratis",
+    "cta_how": "Vedi come funziona",
+    "cta_start": "Inizia il trial",
+    "cta_signin": "Accedi",
     "sectors": {
       "installatori": "Installatori",
       "sicurezza": "Sicurezza",
@@ -85,7 +89,7 @@
     "flow": {
       "badge": "GeoTapp Flow",
       "title": "L'ufficio vede tutto. In tempo reale.",
-      "subtitle": "Flow è il centro operativo dell'ufficio: commesse, attività, avanzamento e report strutturati. <strong class=\"text-slate-900\">Il campo lavora. L'ufficio sa.</strong><br/><br/><em>La tua azienda è un organismo vivo. Ogni intervento, ogni commessa, ogni operatore è un battito. GeoTapp Flow li tiene tutti sincronizzati.</em>",
+      "subtitle": "Flow è il centro operativo dell'ufficio: commesse, attività, avanzamento e report strutturati. <strong class=\"text-slate-900\">Il campo lavora. L'ufficio sa.</strong><br/><br/><em><strong>«La tua azienda è un organismo vivo. Ogni intervento, ogni commessa, ogni operatore è un battito. GeoTapp Flow li tiene tutti sincronizzati.»</strong></em>",
       "features": {
         "crm": "<strong>Gestione Commesse:</strong> Ogni intervento nasce strutturato, con tecnico assegnato, sede e stato aggiornato in tempo reale.",
         "pipeline": "<strong>Documentazione automatica:</strong> Ogni intervento completato genera un report pronto — senza compilazione manuale, senza errori."
@@ -627,6 +631,8 @@
     "form_seats": "Licenze Timetracker (opzionale)",
     "form_seats_hint": "Abbonamento separato per gli operatori sul campo (app mobile). Limite incluso nel piano: Solo max 2, Team max 5, Business illimitate. Puoi modificare le licenze dopo l'attivazione.",
     "form_submit": "Inizia trial gratuito",
+    "form_submit_simple": "Inizia gratis",
+    "form_response_time": "Riceverai l'email di benvenuto entro pochi istanti",
     "form_submitting": "Attivazione in corso...",
     "form_privacy": "I tuoi dati sono trattati secondo la nostra",
     "form_privacy_link": "Privacy Policy",
@@ -634,7 +640,7 @@
     "success_title": "Controlla la tua email!",
     "success_desc": "Abbiamo inviato il link di attivazione a ",
     "success_desc2": "Clicca il link per impostare la password e accedere al tuo trial.",
-    "success_spam": "Non lo trovi? Controlla la cartella spam.",
+    "success_spam": "Non lo trovi nella inbox? Controlla la cartella spam o promozioni.",
     "error_message": "Errore durante l'attivazione. Riprova o scrivi a info@geotapp.com.",
     "benefits_title": "Cosa include il trial",
     "benefits": [
@@ -668,7 +674,8 @@
         "q": "Quanto tempo ci vuole per iniziare?",
         "a": "Meno di 2 minuti: compila il form, ricevi l'email, imposta la password e sei dentro."
       }
-    ]
+    ],
+    "success_sender": "L'email arriverà da:"
   },
   "demo": {
     "page_title": "Prenota la tua Demo Personalizzata",
@@ -836,7 +843,10 @@
     "cta_final_title": "Prova GeoTapp gratis per 14 giorni",
     "cta_final_desc": "Nessuna carta di credito richiesta. Inizia in 2 minuti.",
     "cta_final_btn": "Inizia subito",
-    "read_post": "Leggi"
+    "read_post": "Leggi",
+    "next_step_text": "Scopri come GeoTapp risolve questo problema per le aziende di {sector}",
+    "next_step_fallback": "Scopri come funziona GeoTapp per la tua azienda",
+    "next_step_cta": "Scopri di più"
   },
   "roi": {
     "meta_title": "Calcolatore ROI GeoTapp — Scopri il tuo risparmio reale",

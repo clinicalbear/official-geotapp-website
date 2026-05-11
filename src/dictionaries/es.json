@@ -6,6 +6,10 @@
     "contact": "Contacto",
     "login": "Acceder",
     "cta": "Solicitar demo",
+    "cta_trial": "Prueba gratis",
+    "cta_how": "Mira cómo funciona",
+    "cta_start": "Empezar prueba",
+    "cta_signin": "Acceder",
     "sectors": {
       "installatori": "Instaladores",
       "sicurezza": "Seguridad",
@@ -770,7 +774,10 @@
     "cta_final_title": "Prueba GeoTapp gratis durante 14 dias",
     "cta_final_desc": "Sin tarjeta de credito. Empieza en 2 minutos.",
     "cta_final_btn": "Empezar ahora",
-    "read_post": "Leer"
+    "read_post": "Leer",
+    "next_step_text": "Descubre cómo GeoTapp resuelve este problema para empresas de {sector}",
+    "next_step_fallback": "Descubre cómo GeoTapp funciona para tu empresa",
+    "next_step_cta": "Saber más"
   },
   "trial": {
     "page_title": "14 días gratis. Sin tarjeta.",
@@ -793,6 +800,8 @@
     "form_seats": "Licencias Timetracker (opcional)",
     "form_seats_hint": "Suscripción separada para operarios de campo (app móvil). Límite incluido en el plan: Solo máx. 2, Team máx. 5, Business ilimitadas. Puedes modificar las licencias después de la activación.",
     "form_submit": "Empezar prueba gratuita",
+    "form_submit_simple": "Empezar gratis",
+    "form_response_time": "Recibirás el email de bienvenida en unos instantes",
     "form_submitting": "Activando...",
     "form_privacy": "Tus datos se procesan de acuerdo con nuestra",
     "form_privacy_link": "Política de privacidad",
@@ -800,7 +809,7 @@
     "success_title": "¡Comprueba tu email!",
     "success_desc": "Hemos enviado el enlace de activación a ",
     "success_desc2": "Haz clic en el enlace para establecer tu contraseña y acceder a tu prueba.",
-    "success_spam": "¿No lo encuentras? Revisa la carpeta de spam.",
+    "success_spam": "¿No lo encuentras en la bandeja de entrada? Revisa la carpeta de spam o promociones.",
     "error_message": "Error durante la activación. Inténtalo de nuevo o escribe a info@geotapp.com.",
     "benefits_title": "Qué incluye la prueba",
     "benefits": [
@@ -834,7 +843,8 @@
         "q": "¿Cuánto tiempo se tarda en empezar?",
         "a": "Menos de 2 minutos: rellena el formulario, recibe el email, establece tu contraseña y ya estás dentro."
       }
-    ]
+    ],
+    "success_sender": "El correo llegará desde:"
   },
   "roi": {
     "meta_title": "Calculadora ROI GeoTapp — Descubre tus ahorros reales",

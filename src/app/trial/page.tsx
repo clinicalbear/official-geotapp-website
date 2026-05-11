@@ -1,6 +1,6 @@
 'use client';
 
-import { FormEvent, useState } from 'react';
+import { FormEvent, useState, useEffect, useRef } from 'react';
 import {
   CheckCircle2,
   Send,
@@ -11,20 +11,20 @@ import {
   Rocket,
   CreditCard,
   Users,
+  Mail,
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { usePathname } from 'next/navigation';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import { getLocaleFromPathname } from '@/lib/i18n/locale-routing';
 import Link from 'next/link';
+import { trackEvent } from '@/lib/analytics';
 
 const BENEFIT_ICONS = [
   <Rocket size={20} className="text-primary" />,
   <CreditCard size={20} className="text-emerald-500" />,
   <ShieldCheck size={20} className="text-blue-500" />,
 ];
-
-const PLANS = ['SOLO', 'TEAM', 'BUSINESS'] as const;
 
 export default function TrialPage() {
   const pathname = usePathname();
@@ -36,38 +36,86 @@ export default function TrialPage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
-  const SEATS_MAX: Record<typeof PLANS[number], number> = {
-    SOLO: 2,
-    TEAM: 5,
-    BUSINESS: 999,
-  };
 
-  const [formData, setFormData] = useState({
-    companyName: '',
-    vatNumber: '',
-    email: '',
-    fullName: '',
-    plan: 'TEAM' as typeof PLANS[number],
-    timetrackerSeats: 3,
-  });
+  const [email, setEmail] = useState('');
+
+  // --- Funnel tracking ---
+  const touchedFields = useRef<Set<string>>(new Set());
+  const formStarted = useRef(false);
+  const pageLoadTime = useRef(Date.now());
+
+  // Track page view with scroll depth
+  useEffect(() => {
+    trackEvent('trial_page_view', { locale: locale || 'it' });
+
+    let maxScroll = 0;
+    const handleScroll = () => {
+      const scrollPct = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+      if (scrollPct > maxScroll) {
+        maxScroll = scrollPct;
+        if (scrollPct >= 25 && maxScroll < 30) trackEvent('trial_scroll', { depth: '25' });
+        if (scrollPct >= 50 && maxScroll < 55) trackEvent('trial_scroll', { depth: '50' });
+        if (scrollPct >= 75 && maxScroll < 80) trackEvent('trial_scroll', { depth: '75' });
+        if (scrollPct >= 95) trackEvent('trial_scroll', { depth: '100' });
+      }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    // Track abandonment on page leave
+    const handleBeforeUnload = () => {
+      if (formStarted.current && !submitted) {
+        const timeOnPage = Math.round((Date.now() - pageLoadTime.current) / 1000);
+        const lastField = Array.from(touchedFields.current).pop() || 'none';
+        trackEvent('trial_form_abandon', {
+          fields_touched: touchedFields.current.size.toString(),
+          last_field: lastField,
+          time_on_page: timeOnPage.toString(),
+          locale: locale || 'it',
+        });
+      }
+    };
+    window.addEventListener('beforeunload', handleBeforeUnload);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+    };
+  }, [locale, submitted]);
+
+  const trackFieldFocus = (fieldName: string) => {
+    if (!formStarted.current) {
+      formStarted.current = true;
+      trackEvent('trial_form_start', { first_field: fieldName, locale: locale || 'it' });
+    }
+    touchedFields.current.add(fieldName);
+    trackEvent('trial_field_focus', { field: fieldName });
+  };
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setError(null);
     setLoading(true);
+    const timeOnPage = Math.round((Date.now() - pageLoadTime.current) / 1000);
+    trackEvent('trial_form_submit', {
+      fields_touched: touchedFields.current.size.toString(),
+      time_to_submit: timeOnPage.toString(),
+      locale: locale || 'it',
+    });
     try {
       const saasUrl = process.env.NEXT_PUBLIC_SAAS_URL || 'https://crm.geotapp.com';
       const res = await fetch(`${saasUrl}/api/trial/start`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ email }),
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || d.error_message);
-      setSubmittedEmail(formData.email);
+      setSubmittedEmail(email);
       setSubmitted(true);
+      trackEvent('trial_form_success', { locale: locale || 'it' });
     } catch (err: any) {
       setError(err.message);
+      trackEvent('trial_form_error', { error: err.message, locale: locale || 'it' });
     } finally {
       setLoading(false);
     }
@@ -127,7 +175,19 @@ export default function TrialPage() {
                     {d.success_desc}<strong>{submittedEmail}</strong>
                   </p>
                   <p className="text-slate-600 mb-4">{d.success_desc2}</p>
-                  <p className="text-slate-500 text-sm">{d.success_spam}</p>
+                  <div className="mt-6 bg-amber-50 border-2 border-amber-300 rounded-2xl p-5 text-left">
+                    <div className="flex items-start gap-3">
+                      <Mail size={24} className="text-amber-600 flex-shrink-0 mt-0.5" />
+                      <div className="flex-1">
+                        <p className="text-base font-semibold text-slate-900 mb-2">{d.success_spam}</p>
+                        <p className="text-sm text-slate-700">
+                          {d.success_sender}
+                          <br />
+                          <code className="inline-block mt-1 px-2 py-1 bg-white border border-amber-300 rounded font-mono text-amber-900 font-bold">no-reply@geotapp.com</code>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </motion.div>
               ) : (
                 <motion.form
@@ -139,49 +199,6 @@ export default function TrialPage() {
                 >
                   <h2 className="text-lg font-bold text-slate-900 mb-2">{d.form_title}</h2>
 
-                  <div className="grid sm:grid-cols-2 gap-5">
-                    <div>
-                      <label className="block text-sm font-bold text-slate-700 mb-1.5">
-                        {d.form_company} <span className="text-red-500">*</span>
-                      </label>
-                      <input
-                        type="text"
-                        required
-                        value={formData.companyName}
-                        onChange={(e) => setFormData({ ...formData, companyName: e.target.value })}
-                        placeholder={d.form_company_placeholder}
-                        className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-bold text-slate-700 mb-1.5">
-                        {d.form_vat} <span className="text-red-500">*</span>
-                      </label>
-                      <input
-                        type="text"
-                        required
-                        value={formData.vatNumber}
-                        onChange={(e) => setFormData({ ...formData, vatNumber: e.target.value })}
-                        placeholder={d.form_vat_placeholder}
-                        className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-bold text-slate-700 mb-1.5">
-                      {d.form_fullname} <span className="text-red-500">*</span>
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      value={formData.fullName}
-                      onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                      placeholder={d.form_fullname_placeholder}
-                      className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
-                    />
-                  </div>
-
                   <div>
                     <label className="block text-sm font-bold text-slate-700 mb-1.5">
                       {d.form_email} <span className="text-red-500">*</span>
@@ -189,54 +206,14 @@ export default function TrialPage() {
                     <input
                       type="email"
                       required
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      onFocus={() => trackFieldFocus('email')}
                       placeholder={d.form_email_placeholder}
                       className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
                     />
                     <p className="mt-1 text-xs text-slate-400">{d.form_email_hint}</p>
                   </div>
-
-                  <div>
-                    <label className="block text-sm font-bold text-slate-700 mb-1.5">
-                      {d.form_plan} <span className="text-red-500">*</span>
-                    </label>
-                    <div className="relative">
-                      <select
-                        required
-                        value={formData.plan}
-                        onChange={(e) => {
-                          const newPlan = e.target.value as typeof PLANS[number];
-                          const maxSeats = SEATS_MAX[newPlan];
-                          setFormData({ ...formData, plan: newPlan, timetrackerSeats: Math.min(formData.timetrackerSeats, maxSeats) });
-                        }}
-                        className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all appearance-none pr-10"
-                      >
-                        <option value="SOLO">{d.plan_solo}</option>
-                        <option value="TEAM">{d.plan_team}</option>
-                        <option value="BUSINESS">{d.plan_business}</option>
-                      </select>
-                      <ChevronDown size={16} className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none" />
-                    </div>
-                    <p className="mt-1.5 text-xs text-slate-400 leading-relaxed">{d.form_plan_note}</p>
-                  </div>
-
-                  {formData.plan !== 'SOLO' && (
-                    <div>
-                      <label className="block text-sm font-bold text-slate-700 mb-1.5">
-                        {d.form_seats}
-                      </label>
-                      <input
-                        type="number"
-                        min={0}
-                        max={SEATS_MAX[formData.plan]}
-                        value={formData.timetrackerSeats}
-                        onChange={(e) => setFormData({ ...formData, timetrackerSeats: Math.min(Number(e.target.value), SEATS_MAX[formData.plan]) })}
-                        className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
-                      />
-                      <p className="mt-1 text-xs text-slate-400">{d.form_seats_hint}</p>
-                    </div>
-                  )}
 
                   {error && (
                     <p className="rounded-lg border border-red-200 bg-red-50 text-red-700 px-4 py-3 text-sm">
@@ -250,8 +227,12 @@ export default function TrialPage() {
                     className="w-full py-4 bg-primary text-white font-bold text-lg rounded-xl hover:bg-primary/90 transition-all shadow-lg hover:shadow-primary/30 flex items-center justify-center gap-2 transform hover:-translate-y-0.5 disabled:opacity-60 disabled:cursor-not-allowed disabled:transform-none"
                   >
                     <Send size={20} />
-                    {loading ? d.form_submitting : d.form_submit}
+                    {loading ? d.form_submitting : d.form_submit_simple}
                   </button>
+
+                  <p className="text-center text-sm text-slate-500">
+                    {d.form_response_time}
+                  </p>
 
                   <p className="text-center text-xs text-slate-400">
                     {d.form_privacy}{' '}
@@ -270,13 +251,13 @@ export default function TrialPage() {
                 <ShieldCheck size={14} className="text-emerald-500" /> GDPR Compliant
               </span>
               <span className="flex items-center gap-1.5">
-                <MapPin size={14} className="text-blue-500" /> Timbratura GPS verificata
+                <MapPin size={14} className="text-blue-500" /> {(d as any).trust_gps ?? 'Verified GPS tracking'}
               </span>
               <span className="flex items-center gap-1.5">
-                <WifiOff size={14} className="text-amber-500" /> TimeTracker: registrazione offline, sync alla connessione
+                <WifiOff size={14} className="text-amber-500" /> {(d as any).trust_offline ?? 'Offline recording, auto sync'}
               </span>
               <span className="flex items-center gap-1.5">
-                <Users size={14} className="text-slate-400" /> Nessuna carta richiesta
+                <Users size={14} className="text-slate-400" /> {(d as any).trust_no_card ?? 'No credit card required'}
               </span>
             </div>
           </motion.div>
@@ -313,7 +294,7 @@ export default function TrialPage() {
                     <button
                       type="button"
                       className="w-full flex items-center justify-between gap-4 px-5 py-4 text-left font-bold text-slate-900 hover:bg-slate-50 transition-colors"
-                      onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                      onClick={() => { setOpenFaq(openFaq === i ? null : i); trackEvent('trial_faq_click', { question: item.q.slice(0, 50), index: i.toString() }); }}
                     >
                       <span>{item.q}</span>
                       <ChevronDown

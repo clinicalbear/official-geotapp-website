@@ -6,6 +6,10 @@
     "contact": "Kontakt",
     "login": "Anmelden",
     "cta": "Kostenlos testen",
+    "cta_trial": "Gratis testen",
+    "cta_how": "So funktioniert es",
+    "cta_start": "Test starten",
+    "cta_signin": "Anmelden",
     "sectors": {
       "installatori": "Installateure",
       "sicurezza": "Sicherheitsdienst",
@@ -627,6 +631,8 @@
     "form_seats": "Timetracker-Lizenzen (optional)",
     "form_seats_hint": "Separates Abonnement für Außendienstmitarbeiter (mobile App). Im Tarif enthaltenes Limit: Solo max. 2, Team max. 5, Business unbegrenzt. Lizenzen können nach der Aktivierung angepasst werden.",
     "form_submit": "Kostenlos testen",
+    "form_submit_simple": "Kostenlos starten",
+    "form_response_time": "Sie erhalten die Willkommens-E-Mail in wenigen Augenblicken",
     "form_submitting": "Wird eingerichtet...",
     "form_privacy": "Ihre Daten werden gemäß unserer",
     "form_privacy_link": "Datenschutzerklärung",
@@ -634,7 +640,7 @@
     "success_title": "E-Mail prüfen!",
     "success_desc": "Wir haben den Aktivierungslink an ",
     "success_desc2": "Klicken Sie auf den Link, um Ihr Passwort festzulegen und auf Ihren Test zuzugreifen.",
-    "success_spam": "Nicht gefunden? Spam-Ordner prüfen.",
+    "success_spam": "Nicht im Posteingang? Sieh im Spam- oder Werbeordner nach.",
     "error_message": "Aktivierungsfehler. Bitte erneut versuchen oder an info@geotapp.com schreiben.",
     "benefits_title": "Was enthalten ist",
     "benefits": [
@@ -668,7 +674,8 @@
         "q": "Wie lange dauert der Einstieg?",
         "a": "Weniger als 2 Minuten: Formular ausfüllen, E-Mail empfangen, Passwort festlegen – fertig."
       }
-    ]
+    ],
+    "success_sender": "Die E-Mail kommt von:"
   },
   "demo": {
     "page_title": "Buchen Sie Ihre persönliche Demo",
@@ -836,7 +843,10 @@
     "cta_final_title": "GeoTapp 14 Tage kostenlos testen",
     "cta_final_desc": "Keine Kreditkarte erforderlich. In 2 Minuten starten.",
     "cta_final_btn": "Jetzt starten",
-    "read_post": "Lesen"
+    "read_post": "Lesen",
+    "next_step_text": "Erfahren Sie, wie GeoTapp dieses Problem für {sector}-Unternehmen löst",
+    "next_step_fallback": "Erfahren Sie, wie GeoTapp für Ihr Unternehmen funktioniert",
+    "next_step_cta": "Mehr erfahren"
   },
   "roi": {
     "meta_title": "GeoTapp ROI-Rechner — Entdecken Sie Ihre echten Einsparungen",
