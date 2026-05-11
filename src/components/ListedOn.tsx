@@ -129,22 +129,37 @@ const URLS = {
 function CompactListedOn({ locale }: { locale: string }) {
   const label = LABEL[locale] ?? LABEL.en;
   return (
-    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '14px 24px', gap: '24px', flexWrap: 'wrap' }}>
-      <span style={{ fontFamily: 'var(--font-inter, Inter, sans-serif)', fontSize: '0.65rem', fontWeight: 600, color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.14em', whiteSpace: 'nowrap' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '18px 24px 16px', gap: '14px' }}>
+      <span style={{
+        display: 'inline-block',
+        padding: '4px 12px',
+        borderRadius: '999px',
+        background: '#f1f5f9',
+        border: '1px solid #e2e8f0',
+        fontFamily: 'var(--font-inter, Inter, sans-serif)',
+        fontSize: '0.6rem',
+        fontWeight: 700,
+        color: '#64748b',
+        textTransform: 'uppercase',
+        letterSpacing: '0.14em',
+        whiteSpace: 'nowrap',
+      }}>
         {label}
       </span>
-      {[
-        { name: 'Capterra', url: URLS.capterra, logo: <CapterraLogo scale={1} /> },
-        { name: 'GetApp', url: URLS.getapp, logo: <GetAppLogo scale={1} /> },
-        { name: 'Software Advice', url: URLS.softwareadvice, logo: <SoftwareAdviceLogo scale={1} /> },
-        { name: 'SaaSHub', url: URLS.saashub, logo: <SaaSHubLogo scale={1} /> },
-      ].map((p) => (
-        <a key={p.name} href={p.url} target="_blank" rel="noopener noreferrer" aria-label={p.name}
-          style={{ opacity: 0.6, transition: 'opacity 0.2s', display: 'flex', alignItems: 'center' }}
-          onMouseEnter={(e) => { e.currentTarget.style.opacity = '1'; }}
-          onMouseLeave={(e) => { e.currentTarget.style.opacity = '0.6'; }}
-        >{p.logo}</a>
-      ))}
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '24px', flexWrap: 'wrap' }}>
+        {[
+          { name: 'Capterra', url: URLS.capterra, logo: <CapterraLogo scale={1} /> },
+          { name: 'GetApp', url: URLS.getapp, logo: <GetAppLogo scale={1} /> },
+          { name: 'Software Advice', url: URLS.softwareadvice, logo: <SoftwareAdviceLogo scale={1} /> },
+          { name: 'SaaSHub', url: URLS.saashub, logo: <SaaSHubLogo scale={1} /> },
+        ].map((p) => (
+          <a key={p.name} href={p.url} target="_blank" rel="noopener noreferrer" aria-label={p.name}
+            style={{ opacity: 0.6, transition: 'opacity 0.2s', display: 'flex', alignItems: 'center' }}
+            onMouseEnter={(e) => { e.currentTarget.style.opacity = '1'; }}
+            onMouseLeave={(e) => { e.currentTarget.style.opacity = '0.6'; }}
+          >{p.logo}</a>
+        ))}
+      </div>
     </div>
   );
 }
