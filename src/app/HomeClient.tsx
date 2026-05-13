@@ -59,7 +59,21 @@ const MockupFlow = ({ m }: { m: { pipeline_title: string; month: string; quote_n
   </div>
 );
 
-import { useEffect } from 'react';
+import { useEffect, useState, useCallback } from 'react';
+
+const TT_BGS = ['/bg1.webp', '/bg2.webp', '/bg3.webp'];
+const TTBgCarousel = () => {
+  const [i, setI] = useState(0);
+  const next = useCallback(() => setI((c) => (c + 1) % TT_BGS.length), []);
+  useEffect(() => { const t = setInterval(next, 6000); return () => clearInterval(t); }, [next]);
+  return (
+    <div className="w-full h-full relative">
+      {TT_BGS.map((src, idx) => (
+        <img key={src} src={src} alt="" loading="lazy" decoding="async" className="absolute inset-0 w-full h-full object-cover transition-opacity duration-700" style={{ opacity: idx === i ? 1 : 0 }} />
+      ))}
+    </div>
+  );
+};
 import { usePathname } from 'next/navigation';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import {
@@ -97,6 +111,17 @@ export default function Home() {
   // Localized link helper prevents accidental fallback to default-language paths.
   // Landing composition below intentionally alternates narrative and proof blocks.
 
+  // Render hero video only on viewport ≥ md (768px). Mobile gets pure bg-white
+  // so the browser never fetches videoHero.mp4 or its poster (LCP killer).
+  const [showHeroVideo, setShowHeroVideo] = useState(false);
+  useEffect(() => {
+    const mq = window.matchMedia('(min-width: 768px)');
+    setShowHeroVideo(mq.matches);
+    const onChange = (e: MediaQueryListEvent) => setShowHeroVideo(e.matches);
+    mq.addEventListener('change', onChange);
+    return () => mq.removeEventListener('change', onChange);
+  }, []);
+
   useEffect(() => {
     const bar = document.getElementById('sticky-mobile-cta');
     if (!bar) return;
@@ -111,122 +136,199 @@ export default function Home() {
     return () => observer.disconnect();
   }, []);
 
+  // Verifier: lock page when section.top hits 113px. Image scrolls inside viewport.
+  useEffect(() => {
+    const viewport = document.getElementById('verifier-report-viewport');
+    const img = document.getElementById('verifier-report-img');
+    const section = document.getElementById('verifier-section');
+    if (!viewport || !img || !section) return;
+    if (window.innerWidth < 768) return;
+
+    const LOCK_PX = 113;
+    const CAPTURE_ZONE = 300;
+    let imageOffset = 0; // target position (set instantly by wheel)
+    let renderedOffset = 0; // what's actually rendered (lerps toward target)
+    let locked = false;
+    let animating = false;
+
+    const getOverflow = () => img.scrollHeight - viewport.clientHeight;
+
+    // Smooth animation loop: renderedOffset chases imageOffset
+    const animate = () => {
+      const diff = imageOffset - renderedOffset;
+      if (Math.abs(diff) < 0.5) {
+        renderedOffset = imageOffset;
+        img.style.transform = `translateY(${-renderedOffset}px)`;
+        animating = false;
+        return;
+      }
+      renderedOffset += diff * 0.25; // lerp factor (higher = snappier)
+      img.style.transform = `translateY(${-renderedOffset}px)`;
+      requestAnimationFrame(animate);
+    };
+
+    const applyImage = () => {
+      if (!animating) {
+        animating = true;
+        requestAnimationFrame(animate);
+      }
+    };
+
+    const onWheel = (e: WheelEvent) => {
+      const overflow = getOverflow();
+      if (overflow <= 0) return;
+
+      // ── LOCKED: drive image, ignore everything else ──
+      if (locked) {
+        e.preventDefault();
+        imageOffset = Math.max(0, Math.min(overflow, imageOffset + e.deltaY));
+        applyImage();
+
+        // Unlock at limits
+        if (e.deltaY > 0 && imageOffset >= overflow - 1) locked = false;
+        if (e.deltaY < 0 && imageOffset <= 1) locked = false;
+        return;
+      }
+
+      // ── NOT LOCKED ──
+      const st = section.getBoundingClientRect().top;
+      const distToLock = st - LOCK_PX; // positive = section below lock, negative = above
+
+      // Outside capture zone → let browser handle
+      if (Math.abs(distToLock) > CAPTURE_ZONE) return;
+
+      // ── INSIDE CAPTURE ZONE: take over scroll to kill momentum ──
+      e.preventDefault();
+
+      const newSt = st - e.deltaY;
+
+      // Check if this event crosses the lock point
+      // Going down: st > LOCK_PX now, newSt <= LOCK_PX after
+      if (e.deltaY > 0 && distToLock > 0 && newSt <= LOCK_PX && imageOffset < overflow - 1) {
+        // Snap to lock, remainder into image
+        window.scrollBy({ top: distToLock, behavior: 'instant' });
+        const remainder = e.deltaY - distToLock;
+        imageOffset = Math.min(overflow, imageOffset + Math.max(0, remainder));
+        applyImage();
+        locked = true;
+        return;
+      }
+
+      // Going up: st < LOCK_PX now, newSt >= LOCK_PX after
+      if (e.deltaY < 0 && distToLock < 0 && newSt >= LOCK_PX && imageOffset > 1) {
+        // Snap to lock, remainder into image
+        window.scrollBy({ top: distToLock, behavior: 'instant' });
+        const remainder = Math.abs(e.deltaY) - Math.abs(distToLock);
+        imageOffset = Math.max(0, imageOffset - Math.max(0, remainder));
+        applyImage();
+        locked = true;
+        return;
+      }
+
+      // In capture zone but not crossing lock: scroll manually (no momentum)
+      window.scrollBy({ top: e.deltaY, behavior: 'instant' });
+    };
+
+    // Reset when section fully below viewport
+    const onScroll = () => {
+      if (section.getBoundingClientRect().top > window.innerHeight) {
+        imageOffset = 0;
+        applyImage();
+        locked = false;
+      }
+    };
+
+    window.addEventListener('wheel', onWheel, { passive: false });
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => {
+      window.removeEventListener('wheel', onWheel);
+      window.removeEventListener('scroll', onScroll);
+    };
+  }, []);
+
   return (
     <div className="bg-background min-h-screen text-text-primary overflow-hidden">
       {/* Landing is locale-aware: all internal links pass through getLink(). */}
       {/* HERO SECTION */}
-      <section className="relative pt-36 pb-24 px-6 bg-white overflow-hidden">
-        <div className="container mx-auto max-w-7xl z-10 relative">
-          <div className="grid lg:grid-cols-[1fr_1.1fr] gap-16 items-center">
+      <section className="relative pt-28 lg:pt-32 pb-16 lg:pb-24 px-6 bg-white overflow-hidden">
 
-            {/* ── Left: Copy ── */}
-            <div className="relative z-10">
-              {/* Badge */}
-              <div className="anim-fade-in-up mb-8">
-                <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold tracking-wide"
-                  style={{ background: 'linear-gradient(135deg, rgba(143,196,54,0.1), rgba(59,174,224,0.08))', border: '1px solid rgba(143,196,54,0.2)', color: '#8FC436' }}>
-                  <span className="w-2 h-2 rounded-full bg-[#8FC436] animate-pulse" />
-                  {dict.landing.hero_badge}
-                </span>
-              </div>
-
-              {/* Headline */}
-              {(() => { const d = DIFF_COPY[currentLocale] ?? DIFF_COPY['en']; return (
-                <>
-                  <h1 className="text-[2.8rem] md:text-[3.5rem] lg:text-[4rem] font-display font-extrabold text-slate-900 leading-[1.06] tracking-tight mb-7 anim-fade-in-up anim-delay-100">
-                    {d.h2_1}<br />
-                    <span style={{ color: '#8FC436' }}>{d.h2_2}</span>
-                  </h1>
-                  <p className="text-lg text-slate-500 leading-relaxed max-w-lg mb-5 anim-fade-in-up anim-delay-200">
-                    {d.desc}
-                  </p>
-                </>
-              ); })()}
-
-              {/* Sectors */}
-              <p className="text-sm text-slate-400 mb-8 anim-fade-in-up anim-delay-300">
-                {dict.landing.hero_sectors_prefix}{' '}
-                <Link href={getLink('/settori/pulizie')} className="underline decoration-dotted hover:text-slate-700 transition-colors">{dict.landing.hero_sectors_pulizie}</Link>
-                {', '}
-                <Link href={getLink('/settori/installatori')} className="underline decoration-dotted hover:text-slate-700 transition-colors">{dict.landing.hero_sectors_installatori}</Link>
-                {' '}{dict.landing.hero_sectors_and}{' '}
-                <Link href={getLink('/settori/sicurezza')} className="underline decoration-dotted hover:text-slate-700 transition-colors">{dict.landing.hero_sectors_sicurezza}</Link>.
-              </p>
-
-              {/* CTAs */}
-              <div className="flex flex-col sm:flex-row gap-4 mb-10 anim-fade-in-up anim-delay-300">
-                <Link
-                  href={getLink('/trial')}
-                  className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-slate-900 text-white font-bold rounded-2xl text-lg transition-all shadow-lg shadow-slate-900/15 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-slate-900/20"
-                >
-                  {dict.landing.hero_cta_primary}
-                  <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-                </Link>
-                <Link
-                  href={getLink('/settori')}
-                  className="inline-flex items-center justify-center px-8 py-4 text-slate-700 border-2 border-slate-200 font-bold rounded-2xl text-lg hover:border-slate-400 hover:bg-slate-50 transition-all"
-                >
-                  {dict.landing.hero_cta_secondary}
-                </Link>
-              </div>
-
-              {/* Trust signals */}
-              <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-slate-500 anim-fade-in-up anim-delay-400">
-                <span className="flex items-center gap-1.5"><ShieldCheck size={15} className="text-emerald-500" /><strong className="text-slate-700">{dict.landing.trust_gdpr}</strong></span>
-                <span className="flex items-center gap-1.5"><MapPin size={15} className="text-blue-500" /><strong className="text-slate-700">{dict.landing.trust_gps}</strong></span>
-                <span className="flex items-center gap-1.5"><WifiOff size={15} className="text-amber-500" /><strong className="text-slate-700">{dict.landing.trust_offline}</strong></span>
-              </div>
-            </div>
-
-            {/* ── Right: Product showcase ── */}
-            <div className="relative hidden lg:flex flex-col items-center anim-fade-in-up anim-delay-300">
-
-              {/* Product logos bar */}
-              <div className="flex items-center gap-8 mb-10 px-8 py-4 rounded-2xl bg-slate-50 border border-slate-100">
-                <Link href={getLink('/products/geotapp-timetracker')} className="group">
-                  <img src="/TimeTrackerTrasparente.png" alt="TimeTracker" className="h-9 w-auto object-contain opacity-75 group-hover:opacity-100 group-hover:scale-110 transition-all" />
-                </Link>
-                <div className="w-px h-8 bg-slate-200" />
-                <Link href={getLink('/products/geotapp-flow')} className="group">
-                  <img src="/logoFlow.png" alt="Flow" className="h-9 w-auto object-contain opacity-75 group-hover:opacity-100 group-hover:scale-110 transition-all" />
-                </Link>
-                <div className="w-px h-8 bg-slate-200" />
-                <Link href={getLink('/products/geotapp-verifier')} className="group">
-                  <img src="/logoVerifier.png" alt="Verifier" className="h-9 w-auto object-contain opacity-75 group-hover:opacity-100 group-hover:scale-110 transition-all" />
-                </Link>
-              </div>
-
-              {/* Screenshot stack */}
-              <div className="relative w-full" style={{ perspective: '1000px' }}>
-                {/* Glow behind screenshots */}
-                <div className="absolute inset-4 rounded-3xl bg-gradient-to-br from-[#8FC436]/20 via-[#3BAEE0]/10 to-[#8B5CF6]/15 blur-2xl" />
-
-                {/* Back — live map */}
-                <div className="absolute top-6 left-0 w-[88%] rounded-2xl overflow-hidden border border-slate-200 shadow-xl"
-                  style={{ transform: 'rotateY(-6deg) rotateX(2deg) translateZ(-40px)' }}>
-                  <img src="/screen_live_map.png" alt="Live Map" className="w-full" />
-                </div>
-
-                {/* Front — dashboard */}
-                <div className="relative w-[92%] ml-auto rounded-2xl overflow-hidden border border-slate-200 shadow-2xl shadow-slate-300/50"
-                  style={{ transform: 'rotateY(-3deg) translateZ(0)' }}>
-                  <img src="/screen_dashboard.png" alt="Flow Dashboard" className="w-full" />
-                </div>
-
-                {/* Phone — TimeTracker, front-right */}
-                <div className="absolute -bottom-8 -right-2 w-[140px] z-20 rounded-[1.8rem] border-[3px] border-slate-300 bg-white shadow-2xl shadow-slate-400/30 overflow-hidden"
-                  style={{ transform: 'rotateY(-2deg)' }}>
-                  <img src="/screenshots/timetracker-dashboard.jpg" alt="TimeTracker" className="w-full" />
-                </div>
-              </div>
-            </div>
-
+        {/* ── Video background — desktop only (mobile: bg-white per LCP) ── */}
+        {showHeroVideo && (
+          <div className="absolute inset-0 z-0">
+            <video
+              autoPlay
+              muted
+              playsInline
+              preload="metadata"
+              className="w-full h-full object-cover scale-[1.12] origin-top-left hero-video-blur"
+              poster="/screen_dashboard.webp"
+            >
+              <source src="/videoHero.mp4" type="video/mp4" />
+            </video>
+            {/* White overlay fades in with the blur */}
+            <div className="absolute inset-0 bg-white/25 hero-frost-overlay" />
           </div>
+        )}
+
+        {/* ── Text content — fades in as video plays ── */}
+        <div className="container mx-auto max-w-5xl z-10 relative text-center">
+
+          <div className="hero-text-late hero-text-late-d1 mb-5">
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold tracking-wide"
+              style={{ background: 'linear-gradient(135deg, rgba(143,196,54,0.12), rgba(59,174,224,0.1))', border: '1px solid rgba(143,196,54,0.25)', color: '#8FC436', backdropFilter: 'blur(8px)' }}>
+              <span className="w-2 h-2 rounded-full bg-[#8FC436] animate-pulse" />
+              {dict.landing.hero_badge}
+            </span>
+          </div>
+
+          {(() => { const d = DIFF_COPY[currentLocale] ?? DIFF_COPY['en']; return (
+            <>
+              <h1 className="text-[2.2rem] sm:text-[2.8rem] md:text-[3.5rem] lg:text-[4rem] font-display font-extrabold leading-[1.06] tracking-tight mb-7 hero-text-late hero-text-late-d2 hero-glass-text">
+                {d.h2_1}<br />
+                <span className="hero-glass-text-green">{d.h2_2}</span>
+              </h1>
+              <p className="text-lg leading-relaxed max-w-2xl mx-auto mb-5 hero-text-late hero-text-late-d3 hero-glass-sub">
+                {d.desc}
+              </p>
+            </>
+          ); })()}
+
+          <p className="text-sm text-slate-500 mb-8 hero-text-late hero-text-late-d4">
+            {dict.landing.hero_sectors_prefix}{' '}
+            <Link href={getLink('/settori/pulizie')} className="underline decoration-dotted hover:text-slate-700 transition-colors">{dict.landing.hero_sectors_pulizie}</Link>
+            {', '}
+            <Link href={getLink('/settori/installatori')} className="underline decoration-dotted hover:text-slate-700 transition-colors">{dict.landing.hero_sectors_installatori}</Link>
+            {' '}{dict.landing.hero_sectors_and}{' '}
+            <Link href={getLink('/settori/sicurezza')} className="underline decoration-dotted hover:text-slate-700 transition-colors">{dict.landing.hero_sectors_sicurezza}</Link>.
+          </p>
+
+          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-10 hero-text-late hero-text-late-d5">
+            <Link
+              href={getLink('/trial')}
+              className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-slate-900 text-white font-bold rounded-2xl text-lg transition-all shadow-lg shadow-slate-900/15 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-slate-900/20"
+            >
+              {dict.landing.hero_cta_primary}
+              <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link
+              href={getLink('/settori')}
+              className="inline-flex items-center justify-center px-8 py-4 text-slate-700 border-2 border-slate-200 font-bold rounded-2xl text-lg hover:border-slate-400 hover:bg-white/80 backdrop-blur-sm transition-all"
+            >
+              {dict.landing.hero_cta_secondary}
+            </Link>
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-slate-500 hero-text-late hero-text-late-d6">
+            <span className="flex items-center gap-1.5"><ShieldCheck size={15} className="text-emerald-500" /><strong className="text-slate-700">{dict.landing.trust_gdpr}</strong></span>
+            <span className="flex items-center gap-1.5"><MapPin size={15} className="text-blue-500" /><strong className="text-slate-700">{dict.landing.trust_gps}</strong></span>
+            <span className="flex items-center gap-1.5"><WifiOff size={15} className="text-amber-500" /><strong className="text-slate-700">{dict.landing.trust_offline}</strong></span>
+          </div>
+
         </div>
 
-        {/* Subtle bg accent — top right */}
-        <div className="hero-blob-1 absolute -top-32 -right-32 w-[500px] h-[500px] bg-[#8FC436]/[0.06] rounded-full blur-[80px] pointer-events-none" />
-        <div className="hero-blob-2 absolute -bottom-40 -left-40 w-[400px] h-[400px] bg-[#3BAEE0]/[0.05] rounded-full blur-[80px] pointer-events-none" />
+        {/* Subtle bg accents */}
+        <div className="hero-blob-1 absolute -top-32 -right-32 w-[500px] h-[500px] bg-[#8FC436]/[0.06] rounded-full blur-[80px] pointer-events-none z-[1]" />
+        <div className="hero-blob-2 absolute -bottom-40 -left-40 w-[400px] h-[400px] bg-[#3BAEE0]/[0.05] rounded-full blur-[80px] pointer-events-none z-[1]" />
       </section>
 
       {/* TRUST BAR — social proof immediately after hero */}
@@ -353,23 +455,133 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Product blocks: Verifier leads as the unique trust mechanism, then office (Flow), then field (App). */}
-      {/* PRODUCT SECTION: VERIFIER */}
-      <section id="verifier-section" className="py-24 border-t border-slate-100 bg-white">
-        <div className="container mx-auto px-6 max-w-6xl">
+      {/* Product blocks: Flow (office) → TimeTracker (field) → Verifier (trust) */}
+      {/* PRODUCT SECTION: FLOW */}
+      <section className="relative border-t border-slate-100 overflow-hidden">
+        <HeartbeatLine />
+        {/* Left: carousel as background, reduced height */}
+        <div className="absolute left-0 top-0 bottom-0 w-[55%] hidden md:block overflow-hidden">
+          <div className="absolute inset-0">
+            <FlowCarousel />
+          </div>
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-white" />
+        </div>
+        <div className="container mx-auto px-6 max-w-6xl relative z-10 py-24">
           <div className="grid md:grid-cols-[3fr_2fr] gap-16 items-center">
-            <div className="order-2 md:order-1">
-              {/* Verifier visual mockup with scan + stamp */}
-              <VerifierMockup />
-            </div>
+            <div className="order-2 md:order-1" /> {/* spacer for the carousel */}
             <div className="order-1 md:order-2">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="p-2 bg-emerald-50 rounded-lg text-emerald-600">
-                  <FileCheck2 size={24} />
+              <div className="mb-4">
+                <img src="/logoFlow.webp" alt="GeoTapp Flow" width="200" height="68" loading="lazy" decoding="async" className="h-10 w-auto object-contain" />
+              </div>
+              <h3 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
+                {dict.home_sections.flow.title}
+              </h3>
+              <p
+                className="text-lg text-text-secondary leading-relaxed mb-8"
+                dangerouslySetInnerHTML={{
+                  __html: dict.home_sections.flow.subtitle,
+                }}
+              ></p>
+              <ul className="space-y-4 mb-8">
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="text-flow shrink-0 mt-1" size={20} />
+                  <span
+                    className="text-slate-700"
+                    dangerouslySetInnerHTML={{
+                      __html: dict.home_sections.flow.features.crm,
+                    }}
+                  ></span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="text-flow shrink-0 mt-1" size={20} />
+                  <span
+                    className="text-slate-700"
+                    dangerouslySetInnerHTML={{
+                      __html: dict.home_sections.flow.features.pipeline,
+                    }}
+                  ></span>
+                </li>
+              </ul>
+              <Link
+                href={getLink('/products/geotapp-flow')}
+                className="text-flow font-bold hover:underline flex items-center gap-2"
+              >
+                {dict.home_sections.flow.link} <ArrowRight size={18} />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* PRODUCT SECTION: TIMETRACKER */}
+      <section className="relative border-t border-slate-100 bg-white overflow-hidden">
+        {/* Right: bg carousel behind the smartphone */}
+        <div className="absolute right-0 top-0 bottom-0 w-[50%] hidden md:block overflow-hidden">
+          <TTBgCarousel />
+          <div className="absolute inset-0 bg-white/40" />
+          <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-white" />
+        </div>
+        <div className="container mx-auto px-6 max-w-6xl relative z-10 py-24">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            <div>
+              <div className="mb-4">
+                <img src="/TimeTrackerTrasparente.webp" alt="GeoTapp TimeTracker" width="200" height="43" loading="lazy" decoding="async" className="h-10 w-auto object-contain" />
+              </div>
+              <h3 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
+                {dict.home_sections.app.title}
+              </h3>
+              <p
+                className="text-lg text-text-secondary leading-relaxed mb-8"
+                dangerouslySetInnerHTML={{
+                  __html: dict.home_sections.app.subtitle,
+                }}
+              ></p>
+              <div className="grid grid-cols-2 gap-4 mb-8">
+                <div className="p-4 bg-white rounded-xl shadow-sm border border-slate-200">
+                  <Map className="text-app mb-2" />
+                  <div className="font-bold text-slate-900">
+                    {dict.home_sections.app.card_gps.title}
+                  </div>
+                  <div className="text-xs text-slate-500">
+                    {dict.home_sections.app.card_gps.desc}
+                  </div>
                 </div>
-                <h2 className="text-emerald-600 font-bold uppercase tracking-widest text-sm">
-                  {dict.home_sections.verifier.badge}
-                </h2>
+                <div className="p-4 bg-white rounded-xl shadow-sm border border-slate-200">
+                  <ShieldCheck className="text-app mb-2" />
+                  <div className="font-bold text-slate-900">
+                    {dict.home_sections.app.card_gdpr.title}
+                  </div>
+                  <div className="text-xs text-slate-500">
+                    {dict.home_sections.app.card_gdpr.desc}
+                  </div>
+                </div>
+              </div>
+              <Link
+                href={getLink('/products/geotapp-timetracker')}
+                className="text-app font-bold hover:underline flex items-center gap-2"
+              >
+                {dict.home_sections.app.link} <ArrowRight size={18} />
+              </Link>
+            </div>
+            <div className="relative pb-8">
+              <TTCarousel />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* PRODUCT SECTION: VERIFIER — locks at 113px, image scrolls inside viewport */}
+      <section id="verifier-section" className="border-t border-slate-100 bg-white">
+        <div className="container mx-auto px-6 max-w-6xl py-24">
+          <div className="grid md:grid-cols-[3fr_2fr] gap-16 items-start">
+            <div className="order-2 md:order-1">
+              <div id="verifier-report-viewport" className="rounded-2xl border border-slate-200 bg-white shadow-xl shadow-slate-200/50 overflow-hidden" style={{ maxHeight: '80vh' }}>
+                <img id="verifier-report-img" src="/screenshots/verifier-report.png" alt="Certified Work Report" className="w-full block" />
+              </div>
+            </div>
+            <div id="verifier-text" className="order-1 md:order-2 md:sticky md:top-20 md:self-start">
+              <div className="mb-4">
+                <img src="/logoVerifier.png" alt="GeoTapp Verifier" className="h-10 w-auto object-contain" />
               </div>
               <h3 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
                 {dict.home_sections.verifier.title}
@@ -410,6 +622,25 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* TRIAL CTA — between Verifier and Report */}
+      <div className="py-16 bg-gradient-to-r from-emerald-50 to-blue-50 border-t border-b border-slate-100">
+        <div className="container mx-auto px-6 max-w-3xl text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">
+            {(dict.landing as any)?.trial_cta_headline ?? 'Provalo gratis per 14 giorni'}
+          </h2>
+          <p className="text-lg text-slate-500 mb-8">
+            {(dict.landing as any)?.trial_cta_subtitle ?? 'Nessuna carta di credito richiesta'}
+          </p>
+          <Link
+            href={getLink('/trial')}
+            className="inline-flex items-center justify-center gap-2 px-10 py-5 bg-emerald-600 text-white font-bold rounded-2xl text-lg hover:bg-emerald-700 transition-colors shadow-lg hover:shadow-emerald-200"
+          >
+            {dict.landing.hero_cta_primary}
+            <ArrowRight size={20} />
+          </Link>
+        </div>
+      </div>
 
       {/* REPORT SECTION */}
       <section className="py-24 border-t border-slate-100 bg-slate-50 relative overflow-hidden">
@@ -505,126 +736,6 @@ export default function Home() {
           >
             <DemoReportBanner />
           </motion.div>
-        </div>
-      </section>
-
-      {/* PRODUCT SECTION: FLOW */}
-      <section className="py-24 border-t border-slate-100 bg-white relative">
-        <HeartbeatLine />
-        <div className="container mx-auto px-6 max-w-6xl">
-          <div className="grid md:grid-cols-[3fr_2fr] gap-16 items-center">
-            <div className="order-2 md:order-1">
-              <motion.div
-                initial={{ opacity: 0, x: -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="relative"
-              >
-                <FlowCarousel />
-              </motion.div>
-            </div>
-            <div className="order-1 md:order-2">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="p-2 bg-flow/10 rounded-lg text-flow">
-                  <Database size={24} />
-                </div>
-                <h2 className="text-flow font-bold uppercase tracking-widest text-sm">
-                  {dict.home_sections.flow.badge}
-                </h2>
-              </div>
-              <h3 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-                {dict.home_sections.flow.title}
-              </h3>
-              <p
-                className="text-lg text-text-secondary leading-relaxed mb-8"
-                dangerouslySetInnerHTML={{
-                  __html: dict.home_sections.flow.subtitle,
-                }}
-              ></p>
-              <ul className="space-y-4 mb-8">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="text-flow shrink-0 mt-1" size={20} />
-                  <span
-                    className="text-slate-700"
-                    dangerouslySetInnerHTML={{
-                      __html: dict.home_sections.flow.features.crm,
-                    }}
-                  ></span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="text-flow shrink-0 mt-1" size={20} />
-                  <span
-                    className="text-slate-700"
-                    dangerouslySetInnerHTML={{
-                      __html: dict.home_sections.flow.features.pipeline,
-                    }}
-                  ></span>
-                </li>
-              </ul>
-              <Link
-                href={getLink('/products/geotapp-flow')}
-                className="text-flow font-bold hover:underline flex items-center gap-2"
-              >
-                {dict.home_sections.flow.link} <ArrowRight size={18} />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* PRODUCT SECTION: APP */}
-      <section className="py-24 border-t border-slate-100 bg-slate-50">
-        <div className="container mx-auto px-6 max-w-6xl">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div>
-              <div className="flex items-center gap-3 mb-4">
-                <div className="p-2 bg-app/10 rounded-lg text-app">
-                  <Smartphone size={24} />
-                </div>
-                <h2 className="text-app font-bold uppercase tracking-widest text-sm">
-                  {dict.home_sections.app.badge}
-                </h2>
-              </div>
-              <h3 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-                {dict.home_sections.app.title}
-              </h3>
-              <p
-                className="text-lg text-text-secondary leading-relaxed mb-8"
-                dangerouslySetInnerHTML={{
-                  __html: dict.home_sections.app.subtitle,
-                }}
-              ></p>
-              <div className="grid grid-cols-2 gap-4 mb-8">
-                <div className="p-4 bg-white rounded-xl shadow-sm border border-slate-200">
-                  <Map className="text-app mb-2" />
-                  <div className="font-bold text-slate-900">
-                    {dict.home_sections.app.card_gps.title}
-                  </div>
-                  <div className="text-xs text-slate-500">
-                    {dict.home_sections.app.card_gps.desc}
-                  </div>
-                </div>
-                <div className="p-4 bg-white rounded-xl shadow-sm border border-slate-200">
-                  <ShieldCheck className="text-app mb-2" />
-                  <div className="font-bold text-slate-900">
-                    {dict.home_sections.app.card_gdpr.title}
-                  </div>
-                  <div className="text-xs text-slate-500">
-                    {dict.home_sections.app.card_gdpr.desc}
-                  </div>
-                </div>
-              </div>
-              <Link
-                href={getLink('/products/geotapp-timetracker')}
-                className="text-app font-bold hover:underline flex items-center gap-2"
-              >
-                {dict.home_sections.app.link} <ArrowRight size={18} />
-              </Link>
-            </div>
-            <div className="relative pb-8">
-              <TTCarousel />
-            </div>
-          </div>
         </div>
       </section>
 
@@ -749,6 +860,9 @@ export default function Home() {
         id="sticky-mobile-cta"
         className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-white/95 backdrop-blur-sm border-t border-slate-200 px-4 py-3 shadow-2xl"
       >
+        <p className="text-xs text-slate-500 text-center mb-1">
+          {(dict.landing as any)?.sticky_cta_subtitle ?? '14 giorni gratis — nessuna carta di credito'}
+        </p>
         <Link
           href={getLink('/trial')}
           className="block w-full text-center py-3 bg-primary text-white font-bold rounded-xl text-base"
