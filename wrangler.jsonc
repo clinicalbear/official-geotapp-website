@@ -8,8 +8,11 @@
     "directory": ".open-next/assets",
     "binding": "ASSETS",
   },
+  // HTTP referrer-restricted key, scoped to *.geotapp.com only.
+  // Safe to commit: NEXT_PUBLIC_ prefix exposes it in the client bundle anyway,
+  // and Google Cloud restrictions reject requests from other origins.
   "vars": {
-    "NEXT_PUBLIC_GOOGLE_MAPS_API_KEY": "AIzaSyAE65Qw9pzVKGfHf_XPAYB1oDWl6GxFee4",
+    "NEXT_PUBLIC_GOOGLE_MAPS_API_KEY": "AIzaSyBHT5hjzXCd7z6mn_A-oOxXiw97HrcdUx0",
   },
   // Cron trigger — keeps the Worker warm every 15 minutes.
   // The scheduled handler is injected into .open-next/worker.js post-build
