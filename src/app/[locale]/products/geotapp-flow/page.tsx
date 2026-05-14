@@ -102,6 +102,8 @@ export default async function LocaleFlowPage({ params }: Props) {
   };
   return (
     <>
+      <link rel="preload" as="image" href="/logoFlow.webp" fetchPriority="high" />
+      <link rel="preload" as="image" href="/screen_dashboard.webp" />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       {faq && (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
