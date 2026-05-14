@@ -115,11 +115,21 @@ const SaaSHubLogo = ({ scale }: { scale: number }) => (
   </svg>
 );
 
+/* ── TrustRadius logo: orange shield + wordmark ── */
+const TrustRadiusLogo = ({ scale }: { scale: number }) => (
+  <svg width={150 * scale} height={32 * scale} viewBox="0 0 150 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M14 4 L24 8 V18 C24 22.5 19.5 25.5 14 28 C8.5 25.5 4 22.5 4 18 V8 Z" fill="#FF5C39"/>
+    <path d="M9 16 L13 20 L20 12" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+    <text x="30" y="23" fontFamily="var(--font-poppins, Poppins, sans-serif)" fontSize="16" fontWeight="700" fill="#FF5C39">TrustRadius</text>
+  </svg>
+);
+
 const URLS = {
   capterra: 'https://www.capterra.com/p/10041643/GeoTapp-Flow/',
   getapp: 'https://www.getapp.com/operations-management-software/a/geotapp-flow/',
   softwareadvice: 'https://www.softwareadvice.com/product/548499-GeoTapp-Flow/',
   saashub: 'https://www.saashub.com/geotapp',
+  trustradius: 'https://www.trustradius.com/products/geotapp-flow/',
   kompass: 'https://it.kompass.com/c/geotapp/it1415466/',
   cylex: 'https://www.cylex-italia.it/trenzano/geotapp-16334946.html',
   hotfrog: 'https://www.hotfrog.it/company/b582d0c9ce6459cc7416dce853e50149',
@@ -151,6 +161,7 @@ function CompactListedOn({ locale }: { locale: string }) {
           { name: 'Capterra', url: URLS.capterra, logo: <CapterraLogo scale={1} /> },
           { name: 'GetApp', url: URLS.getapp, logo: <GetAppLogo scale={1} /> },
           { name: 'Software Advice', url: URLS.softwareadvice, logo: <SoftwareAdviceLogo scale={1} /> },
+          { name: 'TrustRadius', url: URLS.trustradius, logo: <TrustRadiusLogo scale={1} /> },
           { name: 'SaaSHub', url: URLS.saashub, logo: <SaaSHubLogo scale={1} /> },
         ].map((p) => (
           <a key={p.name} href={p.url} target="_blank" rel="noopener noreferrer" aria-label={p.name}
@@ -172,6 +183,7 @@ function FullListedOn({ locale }: { locale: string }) {
     { name: 'Capterra', url: URLS.capterra, logo: <CapterraLogo scale={2.5} /> },
     { name: 'GetApp', url: URLS.getapp, logo: <GetAppLogo scale={2.5} /> },
     { name: 'Software Advice', url: URLS.softwareadvice, logo: <SoftwareAdviceLogo scale={2.5} /> },
+    { name: 'TrustRadius', url: URLS.trustradius, logo: <TrustRadiusLogo scale={2.5} /> },
     { name: 'SaaSHub', url: URLS.saashub, logo: <SaaSHubLogo scale={2.5} /> },
     { name: 'Cylex', url: URLS.cylex, logo: <CylexLogo scale={2.5} /> },
     { name: 'Hotfrog', url: URLS.hotfrog, logo: <HotfrogLogo scale={2.5} /> },
