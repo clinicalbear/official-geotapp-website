@@ -167,14 +167,14 @@ const Sectiondivider = ({ title }: { title: string }) => (
 
 const CAROUSEL_SLIDES = [
   {
-    src: '/screen_dashboard.png',
+    src: '/screen_dashboard.webp',
     alt_it: 'GeoTapp Flow — Dashboard con KPI e moduli operativi',
     alt_en: 'GeoTapp Flow — Dashboard with KPIs and operational modules',
     label_it: 'Dashboard KPI e moduli operativi',
     label_en: 'KPI Dashboard & Operational Modules',
   },
   {
-    src: '/screen_live_map.png',
+    src: '/screen_live_map.webp',
     alt_it: 'GeoTapp Flow — Mappa GPS live con timbrature geolocalizzate',
     alt_en: 'GeoTapp Flow — Live GPS map with geolocated clock-ins',
     label_it: 'Mappa GPS live — Geolocalizzazione in tempo reale',
@@ -191,15 +191,25 @@ const CAROUSEL_SLIDES = [
 
 function ScreenCarousel({ isItalian }: { isItalian: boolean }) {
   const [current, setCurrent] = useState(0);
+  const [isDesktop, setIsDesktop] = useState(false);
   const total = CAROUSEL_SLIDES.length;
 
   const next = useCallback(() => setCurrent((i) => (i + 1) % total), [total]);
   const prev = useCallback(() => setCurrent((i) => (i - 1 + total) % total), [total]);
 
   useEffect(() => {
+    const mq = window.matchMedia('(min-width: 768px)');
+    setIsDesktop(mq.matches);
+    const onChange = (e: MediaQueryListEvent) => setIsDesktop(e.matches);
+    mq.addEventListener('change', onChange);
+    return () => mq.removeEventListener('change', onChange);
+  }, []);
+
+  useEffect(() => {
+    if (!isDesktop) return;
     const timer = setInterval(next, 5000);
     return () => clearInterval(timer);
-  }, [next]);
+  }, [next, isDesktop]);
 
   const slide = CAROUSEL_SLIDES[current];
 
@@ -210,24 +220,39 @@ function ScreenCarousel({ isItalian }: { isItalian: boolean }) {
       </p>
 
       <div className="relative rounded-2xl shadow-2xl border border-slate-200 overflow-hidden">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={current}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.4 }}
-          >
-            <Image
-              src={slide.src}
-              alt={isItalian ? slide.alt_it : slide.alt_en}
-              width={1920}
-              height={1080}
-              className="w-full h-auto"
-              priority={current === 0}
-            />
-          </motion.div>
-        </AnimatePresence>
+        {isDesktop ? (
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={current}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.4 }}
+            >
+              <Image
+                src={slide.src}
+                alt={isItalian ? slide.alt_it : slide.alt_en}
+                width={1920}
+                height={1080}
+                sizes="(max-width: 768px) 100vw, 1152px"
+                className="w-full h-auto"
+                priority={current === 0}
+                fetchPriority={current === 0 ? 'high' : 'auto'}
+              />
+            </motion.div>
+          </AnimatePresence>
+        ) : (
+          <Image
+            src={CAROUSEL_SLIDES[0].src}
+            alt={isItalian ? CAROUSEL_SLIDES[0].alt_it : CAROUSEL_SLIDES[0].alt_en}
+            width={1920}
+            height={1080}
+            sizes="100vw"
+            className="w-full h-auto"
+            priority
+            fetchPriority="high"
+          />
+        )}
 
         {/* Navigation arrows */}
         <button
@@ -649,11 +674,7 @@ export default function GeoTappApp() {
 
       {/* HERO SECTION (LIGHT) */}
       <section className="container mx-auto px-6 max-w-7xl text-center mb-32 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1 }}
-        >
+        <div>
           <div className="mb-8 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-100 text-blue-600 font-mono text-xs tracking-widest">
             <Server size={14} className="animate-pulse" />
             {flowDict.hero_badge}
@@ -667,6 +688,7 @@ export default function GeoTappApp() {
               width={520}
               height={260}
               priority
+              fetchPriority="high"
               className="mx-auto h-20 w-auto md:h-28"
             />
             {heroTitleRest && (
@@ -682,7 +704,7 @@ export default function GeoTappApp() {
           </p>
 
           <ScreenCarousel isItalian={isItalian} />
-        </motion.div>
+        </div>
       </section>
 
       <section className="container mx-auto mb-24 max-w-6xl px-6">

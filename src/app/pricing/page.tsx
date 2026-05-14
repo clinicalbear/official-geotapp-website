@@ -4,7 +4,8 @@ import { Check, Heart } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import PricingCalculator from '@/components/PricingCalculator';
+import dynamic from 'next/dynamic';
+const PricingCalculator = dynamic(() => import('@/components/PricingCalculator'), { ssr: false });
 import { useCart } from '@/store/cart';
 import { usePathname } from 'next/navigation';
 import { getDictionary } from '@/lib/i18n/dictionaries';
@@ -207,11 +208,7 @@ export default function Pricing() {
   return (
     <div className="pt-32 pb-20 px-6 min-h-screen bg-background text-slate-900">
       <div className="container mx-auto max-w-4xl text-center mb-20">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
+        <div>
           <span className="px-4 py-2 rounded-full border border-blue-100 bg-blue-50 text-blue-600 text-xs font-bold uppercase tracking-widest mb-6 inline-block">
             {dict.pricing.badge}
           </span>
@@ -227,7 +224,7 @@ export default function Pricing() {
           <p className="text-xl text-slate-500 leading-relaxed font-light max-w-2xl mx-auto">
             {dict.pricing.subtitle}
           </p>
-        </motion.div>
+        </div>
       </div>
 
 
