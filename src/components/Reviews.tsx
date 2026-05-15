@@ -93,7 +93,7 @@ export default function Reviews({ locale }: { locale: string }) {
   if (REVIEWS.length === 0) return null;
 
   const avg = REVIEWS.reduce((s, r) => s + r.rating, 0) / REVIEWS.length;
-  const avgStr = avg.toFixed(1);
+  const avgStr = avg.toLocaleString(locale, { minimumFractionDigits: 1, maximumFractionDigits: 1 });
 
   return (
     <section className="py-20 bg-white border-b border-slate-100" aria-label={c.heading}>
@@ -131,11 +131,11 @@ export default function Reviews({ locale }: { locale: string }) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-40px' }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm hover:shadow-lg hover:-translate-y-1 hover:border-slate-300 transition-all flex flex-col gap-4 no-underline"
+                className="group bg-white rounded-2xl border border-slate-200 p-8 shadow-sm hover:shadow-lg hover:-translate-y-1 hover:border-slate-300 transition-all flex flex-col gap-4 no-underline"
               >
                 <div className="flex items-center gap-1" aria-label={starsLabel} role="img">
                   {[0, 1, 2, 3, 4].map((i) => (
-                    <Star key={i} size={18} fill={i < r.rating ? '#FBBF24' : 'none'} stroke="#FBBF24" strokeWidth={1.5} />
+                    <Star key={i} size={18} fill={i < r.rating ? '#FBBF24' : 'none'} stroke="#FBBF24" strokeWidth={1.5} aria-hidden="true" />
                   ))}
                 </div>
                 <p
@@ -153,7 +153,7 @@ export default function Reviews({ locale }: { locale: string }) {
                       {[r.reviewer.industry, r.reviewer.companySize].filter(Boolean).join(' · ')}
                     </div>
                   )}
-                  <div className="inline-flex items-center gap-2 mt-3 text-xs text-slate-600 hover:text-slate-900 transition">
+                  <div className="inline-flex items-center gap-2 mt-3 text-xs text-slate-600 group-hover:text-slate-900 transition">
                     <Logo />
                     <ExternalLink size={12} />
                   </div>
