@@ -6,7 +6,8 @@ export type Review = {
   sourceUrl: string;
   rating: 1 | 2 | 3 | 4 | 5;
   date: string;          // ISO YYYY-MM-DD
-  lang: string;          // BCP-47
+  /** BCP-47 language code of the quote and title text. */
+  lang: string;
   reviewer: {
     displayName: string;
     role?: string;
