@@ -84,6 +84,7 @@ import {
 const DemoReportBanner = dynamic(() => import('@/components/DemoReportBanner'), { ssr: true });
 const TrustBar = dynamic(() => import('@/components/TrustBar'), { ssr: true });
 const ListedOn = dynamic(() => import('@/components/ListedOn'), { ssr: true });
+const Reviews = dynamic(() => import('@/components/Reviews'), { ssr: true });
 
 
 const DIFF_COPY: Record<string, { h2_1: string; h2_2: string; desc: string; link: string }> = {
@@ -339,6 +340,8 @@ export default function Home() {
         <ListedOn locale={currentLocale} />
       </div>
 
+      {/* REVIEWS, voci reali dei customer */}
+      <Reviews locale={currentLocale} />
 
       {/* PROBLEM SECTION */}
       <section className="py-20 bg-slate-50 border-b border-slate-100">

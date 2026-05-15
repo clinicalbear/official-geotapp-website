@@ -5,6 +5,8 @@ import { SUPPORTED_LOCALES } from '@/lib/i18n/config';
 import type { AppLocale } from '@/lib/i18n/config';
 import HomeClient from '../page';
 import BlogHighlights from '@/components/BlogHighlights';
+import { REVIEWS } from '@/data/reviews';
+import { buildReviewsSchema } from '@/lib/seo/reviewsSchema';
 
 export { generateLocaleStaticParams as generateStaticParams } from '@/lib/i18n/static-params';
 
@@ -103,12 +105,19 @@ type Props = { params: Promise<{ locale: string }> };
 export default async function LocalePage({ params }: Props) {
   const { locale } = await params;
   const faq = HOMEPAGE_FAQ[locale] ?? null;
+  const reviewsSchema = buildReviewsSchema(REVIEWS);
   return (
     <>
       {faq && (
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}
+        />
+      )}
+      {reviewsSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewsSchema) }}
         />
       )}
       <HomeClient />
