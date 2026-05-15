@@ -16,7 +16,7 @@ function sourceName(s: Source): string {
 }
 
 // Returns null on empty input so callers can skip injecting an empty schema.
-export function buildReviewsSchema(reviews: Review[]) {
+export function buildReviewsSchema(reviews: Review[]): Record<string, unknown> | null {
   if (reviews.length === 0) return null;
 
   const avg = reviews.reduce((sum, r) => sum + r.rating, 0) / reviews.length;
