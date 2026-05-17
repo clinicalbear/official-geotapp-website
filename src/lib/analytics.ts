@@ -46,6 +46,10 @@ export function trackEvent(
   params?: Record<string, string | number>,
 ): void {
   if (typeof window === 'undefined') return;
+  // Internal traffic skip: developers/founders toggle via ?gt_internal=on.
+  // Inline script in [locale]/layout.tsx sets window.__gtSkip from localStorage.
+  // Suppresses every custom event so test browsing doesn't pollute GA4 metrics.
+  if ((window as unknown as { __gtSkip?: boolean }).__gtSkip === true) return;
   if (typeof window.gtag === 'function') {
     window.gtag('event', eventName, params ?? {});
     // Also flush any queued events that may have accumulated before gtag loaded

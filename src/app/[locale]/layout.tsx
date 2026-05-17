@@ -13,6 +13,8 @@ import Script from 'next/script';
 import CookieConsentBanner from '@/components/CookieConsentBanner';
 import NewsletterModal from '@/components/NewsletterModal';
 import ChatWidget from '@/components/kairos/ChatWidget';
+import SiteAnalytics from '@/components/SiteAnalytics';
+import InternalTrafficBadge from '@/components/InternalTrafficBadge';
 
 const BASE_URL = 'https://geotapp.com';
 
@@ -434,6 +436,32 @@ export default async function LocaleLayout({ children, params }: Props) {
             renders only on the homepage, not on every sub-page under [locale]/.
             Previously injected here it bled to settori pages causing duplicate
             FAQPage errors in Google's Rich Results validator. */}
+        {/* ── Internal traffic toggle ────────────────────────────────────────
+            Visit ?gt_internal=on to disable analytics for your browser (test
+            visits won't pollute GA4/GTM data). Visit ?gt_internal=off to
+            re-enable. The flag persists in localStorage across sessions.
+            Must run BEFORE gtag init so the GA script can read window.__gtSkip. */}
+        <Script id="internal-traffic-toggle" strategy="beforeInteractive">
+          {`
+            (function(){
+              try {
+                var url = new URL(window.location.href);
+                var p = url.searchParams.get('gt_internal');
+                if (p === 'on')  { localStorage.setItem('gt_skip_analytics', '1'); }
+                if (p === 'off') { localStorage.removeItem('gt_skip_analytics'); }
+                if (p === 'on' || p === 'off') {
+                  url.searchParams.delete('gt_internal');
+                  history.replaceState(null, '', url.toString());
+                }
+                window.__gtSkip = localStorage.getItem('gt_skip_analytics') === '1';
+                if (window.__gtSkip) {
+                  console.warn('[GeoTapp] Internal traffic — analytics DISABLED on this browser. Run ?gt_internal=off to re-enable.');
+                }
+              } catch(_) { /* localStorage blocked: ignore */ }
+            })();
+          `}
+        </Script>
+
         {/* ── Google Consent Mode v2 — must run BEFORE GA loads ─────────────
             Default: all storage denied. Updated by CookieConsentBanner
             when the user accepts analytics/ads cookies. */}
@@ -458,8 +486,17 @@ export default async function LocaleLayout({ children, params }: Props) {
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-87PN0GEMW4');
+            // Bot detection: skip GA4 for headless browsers and known bot patterns
+            var ua = navigator.userAgent || '';
+            var isBot = /bot|crawl|spider|headless|phantom|puppet|selenium|playwright|wget|curl|python|scrapy|httpclient/i.test(ua)
+              || !navigator.languages || navigator.languages.length === 0
+              || navigator.webdriver === true;
+            // Internal traffic skip: developers/founders toggle via ?gt_internal=on
+            var isInternal = window.__gtSkip === true;
+            if (!isBot && !isInternal) {
+              gtag('js', new Date());
+              gtag('config', 'G-87PN0GEMW4');
+            }
           `}
         </Script>
         <Script
@@ -504,9 +541,11 @@ export default async function LocaleLayout({ children, params }: Props) {
             },
           }}
         />
+        <SiteAnalytics />
         <CookieConsentBanner locale={locale} />
         <NewsletterModal locale={locale} />
         <ChatWidget />
+        <InternalTrafficBadge />
       </body>
     </html>
   );
