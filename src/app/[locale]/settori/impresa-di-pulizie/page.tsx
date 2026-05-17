@@ -5,6 +5,7 @@ import { DEFAULT_LOCALE, type AppLocale } from '@/lib/i18n/config';
 import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
 import { getImpresaDiPulizieContent } from '@/content/settori/impresa-di-pulizie';
 import SettorePageLayout from '@/components/SettorePageLayout';
+import BlogHighlights from '@/components/BlogHighlights';
 
 const pathname = '/settori/impresa-di-pulizie';
 
@@ -55,6 +56,7 @@ export default async function ImpresaDiPulizieLocalePage({
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <SettorePageLayout content={content} locale={resolvedLocale} settore="impresa-di-pulizie" />
+      <BlogHighlights locale={resolvedLocale} categoryId={9} />
     </>
   );
 }

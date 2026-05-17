@@ -5,6 +5,7 @@ import { DEFAULT_LOCALE, type AppLocale } from '@/lib/i18n/config';
 import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
 import { getEdiliziaContent } from '@/content/settori/edilizia';
 import SettorePageLayout from '@/components/SettorePageLayout';
+import BlogHighlights from '@/components/BlogHighlights';
 
 const pathname = '/settori/edilizia';
 
@@ -55,6 +56,7 @@ export default async function EdiliziaLocalePage({
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <SettorePageLayout content={content} locale={resolvedLocale} settore="edilizia" />
+      <BlogHighlights locale={resolvedLocale} categoryId={65} />
     </>
   );
 }

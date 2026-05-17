@@ -98,6 +98,30 @@ const content: SettoreContent = {
         q: 'Overholder GeoTapp GDPR for medarbejdergeolokation?',
         a: 'Ja. GeoTapp håndterer geolokation i overensstemmelse med GDPR og inkluderer informationsformularer til medarbejdere.',
       },
+      {
+        q: 'Hvordan håndterer GeoTapp Arbejdsmiljølovens §38 om dokumentation af arbejdstid for elektrikere?',
+        a: 'Arbejdsmiljøloven §38 og bekendtgørelse om hvileperiode kræver, at arbejdsgiveren registrerer daglig start, slut og pauser for hver medarbejder — uændret tilgængelig for Arbejdstilsynet i mindst fem år. GeoTapp registrerer hver stempling med GPS-tidsstempel og kryptografisk segl, som ikke kan ændres efterfølgende. Når Arbejdstilsynet kommer på inspektion, eksporterer du PDF-rapporten direkte fra dashboardet — ingen Excel, intet papir, ingen efterrationaliseringer.',
+      },
+      {
+        q: 'Opfylder GeoTapp dokumentationskravene fra Sikkerhedsstyrelsen for el-installationsvirksomheder?',
+        a: 'Sikkerhedsstyrelsens autorisationsordning kræver, at autoriserede el-installatører dokumenterer hvem der har udført hvilken installation, hvornår og under hvis fagligt ansvar (KLS-systemet). GeoTapp knytter hver intervention til specifik medarbejder, GPS-koordinater, fototagning af installationen og tidsstempel — alt eksporterbart som installationsrapport i format kompatibelt med Sikkerhedsstyrelsens kontrolskemaer. Ved revision fra autorisationsmyndigheden har du fuld sporbarhed.',
+      },
+      {
+        q: 'Hvordan opfylder GeoTapp DS/EN 50110 om sikkerhed ved elektrisk arbejde?',
+        a: 'DS/EN 50110-1 (drift af elektriske installationer) kræver dokumentation af arbejdsmetode, sikkerhedsforanstaltninger og udførende person ved hver intervention på spændingsførende anlæg. GeoTapp lader medarbejderen vedhæfte foto før, under og efter arbejdet, registrere sikkerhedsbarriere (frakobling, jording, afskærmning) i en tjekliste, og signere digitalt. Hele revisionssporet er manipulationssikret og tilgængeligt i op til 10 år — overgår den lovpligtige 5-årige opbevaringsfrist.',
+      },
+      {
+        q: 'Hvordan håndteres tvister med kunder om timeforbrug og udført arbejde på el-installationer?',
+        a: 'Den klassiske konflikt: kunden påstår, at elektrikeren brugte færre timer end faktureret, eller at en del af arbejdet ikke blev udført. GeoTapp leverer i hver tvist en uafhængigt verificerbar rapport via geotapp.com/products/geotapp-verifier: GPS-stempling ved ankomst og afgang, før- og efter-fotos af installationen med tidsstempel, og kryptografisk segl. Forbrugerklagenævnet og byggeklagenævnet accepterer denne dokumentation som objektivt bevis. I de fleste tilfælde løses tvisten uden retssag.',
+      },
+      {
+        q: 'Hvad sker der, hvis Datatilsynet kontrollerer GPS-sporing af medarbejdere?',
+        a: 'Datatilsynet har siden 2019 udstedt bøder på op til 1,2 millioner kroner til virksomheder, der sporede medarbejdere uden lovligt grundlag eller proportionalitet. GeoTapp er konfigureret efter Datatilsynets vejledning om medarbejderovervågning: GPS aktiveret kun i arbejdstid (slås automatisk fra ved udstempling), forhåndsinformation til medarbejderen, formålsbinding (timeregistrering og sikkerhed — ikke profilering), og dataopbevaring begrænset til den lovpligtige periode. Vi leverer den fulde Artikel 30-fortegnelse over behandlingsaktiviteter klar til Datatilsynets inspektion.',
+      },
+      {
+        q: 'Integrerer GeoTapp med ERP-systemer som e-conomic, Dinero eller Visma for fakturering af el-installationsarbejde?',
+        a: 'Ja. GeoTapp eksporterer timesedler og opgavedata i CSV/JSON-format kompatibelt med e-conomic, Dinero, Visma Business og Microsoft Dynamics 365. Hver intervention indeholder kunde-ID, projekt-ID, opgavekategori (servicebesøg, installation eller reparation), faktiske timer og brugte materialer. Det betyder, at faktureringen kan genereres automatisk — uden manuel indtastning og uden forsinkelse på tilbagebetaling fra kunden.',
+      },
     ],
   },
   cta: {

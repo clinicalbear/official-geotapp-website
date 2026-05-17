@@ -5,6 +5,7 @@ import { DEFAULT_LOCALE, type AppLocale } from '@/lib/i18n/config';
 import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
 import { getImpiantiContent } from '@/content/settori/impianti';
 import SettorePageLayout from '@/components/SettorePageLayout';
+import BlogHighlights from '@/components/BlogHighlights';
 
 const pathname = '/settori/impianti';
 
@@ -55,6 +56,7 @@ export default async function ImpiantiLocalePage({
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <SettorePageLayout content={content} locale={resolvedLocale} settore="impianti" />
+      <BlogHighlights locale={resolvedLocale} categoryId={65} />
     </>
   );
 }

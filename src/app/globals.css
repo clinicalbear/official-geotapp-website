@@ -605,6 +605,114 @@ a:hover {
 .anim-delay-600 { animation-delay: 0.6s; opacity: 0; }
 .anim-delay-800 { animation-delay: 0.8s; opacity: 0; }
 
+/* Hero text — appears late on desktop (synced with video blur onset),
+   immediately on mobile (no video, so no reason to delay LCP element). */
+@keyframes hero-text-late {
+  0%   { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.hero-text-late {
+  animation: hero-text-late 0.6s ease-out forwards;
+  opacity: 1; /* mobile default: visible immediately (no animation, no LCP penalty) */
+}
+
+/* Desktop only: delay text appearance to sync with hero video intro.
+   Mobile keeps the H1 immediately visible — Lighthouse LCP must paint <2.5s. */
+@media (min-width: 768px) {
+  .hero-text-late {
+    animation: hero-text-late 1.5s ease-out forwards;
+    opacity: 0;
+  }
+  .hero-text-late-d1 { animation-delay: 4.5s; }
+  .hero-text-late-d2 { animation-delay: 4.9s; }
+  .hero-text-late-d3 { animation-delay: 5.3s; }
+  .hero-text-late-d4 { animation-delay: 5.8s; }
+  .hero-text-late-d5 { animation-delay: 6.1s; }
+  .hero-text-late-d6 { animation-delay: 6.4s; }
+  .hero-text-late-d7 { animation-delay: 6.7s; }
+  .hero-text-late-d8 { animation-delay: 7.0s; }
+}
+
+/* Respect users with motion-reduction preference — no animation at all. */
+@media (prefers-reduced-motion: reduce) {
+  .hero-text-late {
+    animation: none;
+    opacity: 1;
+  }
+}
+
+/* Hero cinematic — devices rise flat from center, split & rotate to perspective */
+@keyframes hero-monitor-cine {
+  0%   { opacity: 0; transform: translateY(160px) translateX(80%) rotateY(0deg) rotateX(0deg) scale(0.85); }
+  35%  { opacity: 1; transform: translateY(0)    translateX(80%) rotateY(0deg) rotateX(0deg) scale(0.85); }
+  100% { opacity: 1; transform: translateY(0)    translateX(0)   rotateY(32deg) rotateX(4deg) scale(1); }
+}
+@keyframes hero-phone-cine {
+  0%   { opacity: 0; transform: translateY(180px) translateX(-120%) rotateY(0deg) rotateZ(0deg) scale(0.85); }
+  40%  { opacity: 1; transform: translateY(0)    translateX(-120%) rotateY(0deg) rotateZ(0deg) scale(0.85); }
+  100% { opacity: 1; transform: translateY(0)    translateX(0)    rotateY(-18deg) rotateZ(3deg) scale(1); }
+}
+@keyframes hero-text-cine {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero-monitor-cine {
+  animation: hero-monitor-cine 1.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  opacity: 0;
+}
+.hero-phone-cine {
+  animation: hero-phone-cine 1.9s cubic-bezier(0.22, 1, 0.36, 1) 0.1s forwards;
+  opacity: 0;
+}
+.hero-text-cine {
+  animation: hero-text-cine 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+}
+.hero-text-d1 { animation-delay: 1.2s; }
+.hero-text-d2 { animation-delay: 1.4s; }
+.hero-text-d3 { animation-delay: 1.55s; }
+.hero-text-d4 { animation-delay: 1.7s; }
+.hero-text-d5 { animation-delay: 1.85s; }
+.hero-text-d6 { animation-delay: 2.0s; }
+
+/* Hero frosted glass — blur applied directly to video */
+@keyframes hero-video-blur {
+  0%   { filter: blur(0px); }
+  100% { filter: blur(20px); }
+}
+@keyframes hero-frost-overlay {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+.hero-video-blur {
+  animation: hero-video-blur 8s ease-in forwards;
+}
+.hero-frost-overlay {
+  animation: hero-frost-overlay 8s ease-in forwards;
+  opacity: 0;
+}
+
+/* Etched-in-glass text effect */
+.hero-glass-text {
+  color: rgba(15, 23, 42, 0.75);
+  text-shadow:
+    0 1px 1px rgba(255,255,255,0.8),
+    0 -1px 1px rgba(0,0,0,0.12);
+}
+.hero-glass-text-green {
+  color: rgba(143, 196, 54, 0.8);
+  text-shadow:
+    0 1px 1px rgba(255,255,255,0.7),
+    0 -1px 1px rgba(0,0,0,0.1);
+}
+.hero-glass-sub {
+  color: rgba(15, 23, 42, 0.85);
+  text-shadow:
+    0 1px 1px rgba(255,255,255,0.9),
+    0 -1px 1px rgba(0,0,0,0.1),
+    0 0 8px rgba(255,255,255,0.6);
+}
+
 /* Hero animated background */
 @keyframes blob-float-1 {
   0%, 100% { transform: translate(0, 0) scale(1); }

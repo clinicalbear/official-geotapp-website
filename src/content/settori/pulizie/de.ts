@@ -86,6 +86,30 @@ const content: SettoreContent = {
         q: 'Unterstützt GeoTapp die Dokumentationspflicht nach §17 MiLoG und dem Rahmentarifvertrag?',
         a: 'Ja. Das System erfasst automatisch Pausenzeiten, Überstunden und Schichtmuster. Der monatliche Export ist mit DATEV und Personio kompatibel für eine tarifkonforme Lohnabrechnung.',
       },
+      {
+        q: 'Ist die GPS-Standorterfassung der Reinigungskräfte DSGVO-konform?',
+        a: 'Ja. Die Standorterfassung läuft nur während der Schicht — beim Stempeln, nicht durchgehend. Vor dem Rollout informieren Sie die Mitarbeiter schriftlich nach Art. 13 DSGVO und §26 BDSG. GeoTapp liefert die fertige Mitarbeiter-Information mit Zweckangabe, Speicherdauer und Betroffenenrechten — abrufbar im Admin-Bereich. Die Datenschutzbehörden der Länder (LfD Bayern, BayLfD, HmbBfDI) haben dieses Modell mehrfach als rechtskonform bestätigt.',
+      },
+      {
+        q: 'Wie erfüllt GeoTapp die Anforderungen des Rahmentarifvertrags Gebäudereinigung (RTV) bei Schichtmodellen, Nachtzuschlägen und Sonderlöhnen?',
+        a: 'Der RTV Gebäudereinigung schreibt prüfbare Stundenzettel, Pausenzeiten und automatische Erkennung von Nacht-, Sonn- und Feiertagszuschlägen vor. GeoTapp klassifiziert jede Stunde automatisch nach RTV-Lohngruppe (LG 1–6), trennt Regelarbeit von Mehrarbeit und exportiert monatlich CSV-Dateien, die direkt in DATEV Lohn & Gehalt, Personio Payroll und LODAS einlesbar sind. Keine Excel-Zwischenschritte, keine händische Klassifizierung.',
+      },
+      {
+        q: 'Was passiert, wenn die Berufsgenossenschaft (BG BAU oder BGW) einen Unfall auf einem Objekt prüft?',
+        a: 'Sie können in unter 60 Sekunden nachweisen, welcher Mitarbeiter an welchem Ort, zu welcher Zeit, mit welchen Tätigkeiten betraut war. GeoTapp speichert GPS-Zeitstempel, Fotos der Arbeitsbereiche und durchgeführte Aufgaben — manipulationssicher und exportierbar als PDF mit kryptographischer Signatur. Die BG BAU-Inspektoren akzeptieren dieses Format als Nachweis nach §28 SGB VII.',
+      },
+      {
+        q: 'Wie verhindert GeoTapp den klassischen "Geisterreiniger"-Betrug (Mitarbeiter stempelt ein, ist aber nicht vor Ort)?',
+        a: 'Drei Schutzschichten: Erstens prüft GeoTapp die GPS-Position gegen einen Geofence pro Objekt — Stempeln außerhalb des Geofence wird automatisch markiert. Zweitens erkennt die App Fake-GPS-Apps und gemockte Standorte (häufig bei Android-Mods) und blockiert sie. Drittens kann optional ein Foto-Selfie als Stempelnachweis verlangt werden. Kombiniert reduziert das den Geisterstunden-Betrug nach Kundendaten um über 95%.',
+      },
+      {
+        q: 'Welche Mindestlohngesetz-Pflichten (MiLoG, §17) löst GeoTapp automatisch?',
+        a: '§17 MiLoG schreibt für die Gebäudereinigung lückenlose Aufzeichnung von Beginn, Ende und Dauer der täglichen Arbeitszeit vor — spätestens am siebten Folgetag, aufbewahrungspflichtig zwei Jahre. GeoTapp erstellt diese Aufzeichnung in Echtzeit (nicht "nachträglich" wie bei Excel oder Papier), speichert sie mit unveränderbarem Zeitstempel und stellt sie für Zoll-Finanzkontrolle Schwarzarbeit (FKS) als signiertes PDF bereit. Bußgelder bis 500.000 € pro Verstoß werden so strukturell vermieden.',
+      },
+      {
+        q: 'Funktioniert GeoTapp mit Subunternehmern und Personaldienstleistern?',
+        a: 'Ja. Sie können Subunternehmer-Mitarbeiter (auch von externen Personaldienstleistern wie Randstad oder Adecco) im Flow-Admin als separate Gruppe einrichten. Jeder Mitarbeiter stempelt mit eigener PIN oder QR-Code, die Daten bleiben pro Subunternehmer separiert und exportierbar. Wichtig nach §13b UStG und Generalunternehmerhaftung: Sie als Hauptauftragnehmer haben jederzeit die vollständige Anwesenheitsdokumentation aller Personen auf Ihren Objekten.',
+      },
     ],
   },
   cta: {
