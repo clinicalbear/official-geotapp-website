@@ -175,7 +175,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://geotapp.com/og-default.png',
+        url: 'https://geotapp.com/logoFlow.webp',
         width: 1200,
         height: 630,
         alt: 'GeoTapp',

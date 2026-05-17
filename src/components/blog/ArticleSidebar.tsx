@@ -26,12 +26,12 @@ const SIDEBAR_LABELS: Record<string, {
 function detectProduct(categories: Array<{ slug: string; name: string }>): { name: string; logo: string; color: string; href: string } {
   const slugs = categories.map(c => c.slug.toLowerCase()).join(' ');
   if (/gps|track|timbr|presenz|geoloc|clock|attendance|zeit/.test(slugs)) {
-    return { name: 'GeoTapp TimeTracker', logo: '/TimeTrackerTrasparente.png', color: '#F97316', href: '/products/geotapp-timetracker/' };
+    return { name: 'GeoTapp TimeTracker', logo: '/TimeTrackerTrasparente.webp', color: '#F97316', href: '/products/geotapp-timetracker/' };
   }
   if (/sicur|secur|verif|prov|proof|report|document/.test(slugs)) {
-    return { name: 'GeoTapp Verifier', logo: '/logoVerifier.png', color: '#22C55E', href: '/products/geotapp-verifier/' };
+    return { name: 'GeoTapp Verifier', logo: '/logoVerifier.webp', color: '#22C55E', href: '/products/geotapp-verifier/' };
   }
-  return { name: 'GeoTapp Flow', logo: '/logoFlow.png', color: '#8B5CF6', href: '/products/geotapp-flow/' };
+  return { name: 'GeoTapp Flow', logo: '/logoFlow.webp', color: '#8B5CF6', href: '/products/geotapp-flow/' };
 }
 
 /* ── Social Share Icons (inline SVG) ── */

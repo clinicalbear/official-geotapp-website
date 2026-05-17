@@ -579,12 +579,12 @@ export default function Home() {
           <div className="grid md:grid-cols-[3fr_2fr] gap-16 items-start">
             <div className="order-2 md:order-1">
               <div id="verifier-report-viewport" className="rounded-2xl border border-slate-200 bg-white shadow-xl shadow-slate-200/50 overflow-hidden" style={{ maxHeight: '80vh' }}>
-                <img id="verifier-report-img" src="/screenshots/verifier-report.png" alt="Certified Work Report" className="w-full block" />
+                <img id="verifier-report-img" src="/screenshots/verifier-report.webp" alt="Certified Work Report" className="w-full block" />
               </div>
             </div>
             <div id="verifier-text" className="order-1 md:order-2 md:sticky md:top-20 md:self-start">
               <div className="mb-4">
-                <img src="/logoVerifier.png" alt="GeoTapp Verifier" className="h-10 w-auto object-contain" />
+                <img src="/logoVerifier.webp" alt="GeoTapp Verifier" className="h-10 w-auto object-contain" />
               </div>
               <h3 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
                 {dict.home_sections.verifier.title}

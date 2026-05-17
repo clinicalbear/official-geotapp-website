@@ -1,3 +1,47 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+// Build 301 redirects from legacy .png/.jpg/.jpeg paths to their .webp counterparts.
+// Generated at build time by scanning public/ for *.webp files and checking if a
+// legacy raster file would have existed (i.e. references in older indexed pages).
+function buildLegacyImageRedirects() {
+  const redirects = [];
+  const SKIP_DIRS = ['downloads']; // user-facing downloads stay JPG/PNG
+  const SKIP_FILES = ['FaviconGeoTapp', 'icon']; // browser favicons stay PNG
+  function walk(dir) {
+    let entries;
+    try { entries = fs.readdirSync(dir, { withFileTypes: true }); }
+    catch { return; }
+    for (const e of entries) {
+      const full = path.join(dir, e.name);
+      if (e.isDirectory()) {
+        if (SKIP_DIRS.includes(e.name)) continue;
+        walk(full);
+        continue;
+      }
+      if (!e.name.endsWith('.webp')) continue;
+      const base = e.name.slice(0, -5);
+      if (SKIP_FILES.includes(base)) continue;
+      const publicDir = path.join(__dirname, 'public');
+      const rel = path.relative(publicDir, full).replace(/\\/g, '/');
+      const relDir = path.posix.dirname(rel);
+      const dirPrefix = relDir === '.' ? '' : `${relDir}/`;
+      for (const ext of ['png', 'jpg', 'jpeg']) {
+        redirects.push({
+          source: `/${dirPrefix}${base}.${ext}`,
+          destination: `/${dirPrefix}${base}.webp`,
+          permanent: true,
+        });
+      }
+    }
+  }
+  walk(path.join(__dirname, 'public'));
+  return redirects;
+}
+
 // Slug translations — canonical (Italian) → all locales with different slugs
 const SLUG_TRANSLATIONS = {
   'chi-siamo': {
@@ -214,6 +258,7 @@ const nextConfig = {
       ...buildRemovedLocaleRedirects(),
       ...appRenames,
       ...legacyRedirects,
+      ...buildLegacyImageRedirects(),
     ];
   },
   async headers() {

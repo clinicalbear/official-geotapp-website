@@ -39,14 +39,14 @@ export const metadata: Metadata = {
     title: 'GeoTapp — Field Work Verification Platform',
     description:
       'GPS-verified attendance, tamper-proof reports and photo evidence for field service companies. GDPR compliant. Zero disputes.',
-    images: [{ url: '/logoFlow.png', width: 1200, height: 630, alt: 'GeoTapp — GPS Field Work Verification Platform' }],
+    images: [{ url: '/logoFlow.webp', width: 1200, height: 630, alt: 'GeoTapp — GPS Field Work Verification Platform' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'GeoTapp — Field Work Verification Platform',
     description:
       'GPS-verified attendance, tamper-proof reports and photo evidence for field service companies. GDPR compliant. Zero disputes.',
-    images: ['/logoFlow.png'],
+    images: ['/logoFlow.webp'],
   },
   icons: {
     icon: '/FaviconGeoTapp.png',

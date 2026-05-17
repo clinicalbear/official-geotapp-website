@@ -59,7 +59,7 @@ export default function FeaturesPage() {
             </p>
             <div className="rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
               <Image
-                src="/screen_live_map.png"
+                src="/screen_live_map.webp"
                 alt={t.gps_title}
                 width={1920}
                 height={1080}

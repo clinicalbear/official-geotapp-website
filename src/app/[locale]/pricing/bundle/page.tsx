@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       description: m.description,
       url: `https://geotapp.com/${locale}/pricing/bundle/`,
       type: 'website',
-      images: [{ url: '/logoFlow.png', width: 1200, height: 630, alt: m.title }],
+      images: [{ url: '/logoFlow.webp', width: 1200, height: 630, alt: m.title }],
     },
     twitter: {
       card: 'summary_large_image',

@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       description: m.description,
       url: `https://geotapp.com/${locale}/products/geotapp-verifier/`,
       type: 'website',
-      images: [{ url: '/logoVerifier.png', width: 1200, height: 630, alt: m.title }],
+      images: [{ url: '/logoVerifier.webp', width: 1200, height: 630, alt: m.title }],
     },
     twitter: {
       card: 'summary_large_image',
