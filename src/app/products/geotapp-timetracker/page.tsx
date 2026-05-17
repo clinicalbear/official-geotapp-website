@@ -382,13 +382,13 @@ export default function GeoTappApp() {
         )}
       </AnimatePresence>
 
-      {/* HERO SECTION (LIGHT) */}
+      {/* HERO SECTION (LIGHT) — removed motion.div wrapper because the
+          initial opacity:0, scale:0.9 was the LCP killer (PSI mobile measured
+          9.4s waiting for the H1 logo to fade in). Plain <div> renders the
+          hero instantly. Desktop users still get smooth UX from the rest of
+          the page animations below. */}
       <section className="container mx-auto px-6 max-w-7xl text-center mb-32 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1 }}
-        >
+        <div>
           <div className="mb-8 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-100 text-blue-600 font-mono text-xs tracking-widest">
             <Smartphone size={14} className="animate-pulse" />
             {appDict.hero_badge}
@@ -435,12 +435,13 @@ export default function GeoTappApp() {
             </p>
           </div>
 
-          <motion.div
-            whileHover={{ scale: 1.01 }}
-            viewport={{ once: true }}
-            className="relative mx-auto mt-16 max-w-6xl"
-          >
-            {/* TimeTracker app screenshots — side by side, cropped to 16/9 */}
+          <div className="relative mx-auto mt-16 max-w-6xl transition-transform duration-200 hover:scale-[1.01]">
+            {/* TimeTracker app screenshots — side by side, cropped to 16/9.
+                NO priority: the logoTT in <h1> is the actual LCP candidate.
+                Removing priority from TT1/TT2 frees mobile bandwidth — LCP was
+                9.4s on mobile because 3 priority images contended for the same
+                slow-network slots. Plain CSS hover replaces the framer-motion
+                wrapper (no extra JS for a 1.01x scale). */}
             <div className="relative rounded-2xl shadow-2xl border border-slate-200 aspect-[16/9] overflow-hidden flex">
               <div className="relative w-1/2 h-full">
                 <Image
@@ -448,8 +449,8 @@ export default function GeoTappApp() {
                   alt="GeoTapp TimeTracker — Dashboard"
                   fill
                   className="object-cover object-top"
-                  sizes="50vw"
-                  priority
+                  sizes="(max-width: 768px) 50vw, 600px"
+                  loading="lazy"
                 />
               </div>
               <div className="relative w-1/2 h-full border-l border-slate-200">
@@ -458,13 +459,13 @@ export default function GeoTappApp() {
                   alt="GeoTapp TimeTracker — Menu"
                   fill
                   className="object-cover object-top"
-                  sizes="50vw"
-                  priority
+                  sizes="(max-width: 768px) 50vw, 600px"
+                  loading="lazy"
                 />
               </div>
             </div>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </section>
 
       <section className="container mx-auto mb-24 max-w-6xl px-6">

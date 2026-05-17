@@ -255,7 +255,6 @@ export default async function LocaleLayout({ children, params }: Props) {
             Stripe preconnect removed — only used on pricing/trial pages. */}
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
-        <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com" />
         {/* The Flutter app — CTAs link here; prefetch DNS so click is instant */}
         <link rel="dns-prefetch" href="https://app.geotapp.com" />
         {/* Blog WP origin — sitemap + API calls */}

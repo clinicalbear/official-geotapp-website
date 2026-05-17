@@ -36,14 +36,8 @@ export default function BlogLayout({ children }: { children: ReactNode }) {
         <Script id="gtag-init" strategy="afterInteractive">
           {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}var ua=navigator.userAgent||'';var isBot=/bot|crawl|spider|headless|phantom|puppet|selenium|playwright|wget|curl|python|scrapy|httpclient/i.test(ua)||!navigator.languages||navigator.languages.length===0||navigator.webdriver===true;if(!isBot&&window.__gtSkip!==true){gtag('js',new Date());gtag('config','G-87PN0GEMW4');}`}
         </Script>
-        {/* Adsense loads only on the blog (this layout) — ad inventory lives
-            here, not on the main site. Saves ~75-90ms TBT across non-blog pages. */}
-        <Script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6506843864993991"
-          crossOrigin="anonymous"
-          strategy="lazyOnload"
-        />
+        {/* Adsense fully removed — owner decided not to configure ad inventory.
+            Saves ~75-90ms TBT on every blog page on top of the main site. */}
       </head>
       <body className={clsx(inter.variable, poppins.variable, 'font-sans bg-background text-text-primary antialiased')}>
         <SiteAnalytics />
