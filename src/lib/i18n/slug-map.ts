@@ -138,6 +138,21 @@ export const SLUG_MAP: Record<string, Partial<Record<AppLocale, string>>> = {
     fr: 'entreprise-nettoyage', es: 'empresa-limpieza', pt: 'empresa-limpeza',
     da: 'rengoringsfirma', sv: 'stadforetag', nb: 'rengjringsfirma', ru: 'kliningovaya-kompaniya',
   },
+  'elettricisti': {
+    it: 'elettricisti', en: 'electricians', de: 'elektriker', nl: 'elektriciens',
+    fr: 'electriciens', es: 'electricistas', pt: 'eletricistas',
+    da: 'elektrikere', sv: 'elektriker', nb: 'elektrikere', ru: 'elektriki',
+  },
+  'idraulici': {
+    it: 'idraulici', en: 'plumbers', de: 'klempner', nl: 'loodgieters',
+    fr: 'plombiers', es: 'fontaneros', pt: 'canalizadores',
+    da: 'vvs-installatorer', sv: 'vvs-installatorer', nb: 'rorleggere', ru: 'santekhniki',
+  },
+  'termoidraulici': {
+    it: 'termoidraulici', en: 'hvac-plumbers', de: 'heizung-sanitaer', nl: 'cv-installateurs',
+    fr: 'plombiers-chauffagistes', es: 'fontaneros-calefaccion', pt: 'canalizadores-aquecimento',
+    da: 'vvs-vand-varme', sv: 'vvs-och-varme', nb: 'rorleggere-vvs', ru: 'santekhnika-otoplenie',
+  },
   // ───────���──────────────────────────────��────────────────────────────���────────
   'download': {
     it: 'download',

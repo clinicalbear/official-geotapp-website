@@ -10,7 +10,7 @@ import {
   resolveLocale,
   stripLocaleFromPathname,
 } from '@/lib/i18n/locale-routing';
-import { translatePath, REVERSE_SLUG_MAP } from '@/lib/i18n/slug-map';
+import { translatePath, REVERSE_SLUG_MAP, SLUG_MAP } from '@/lib/i18n/slug-map';
 
 const PUBLIC_FILE = /\.(.*)$/;
 
@@ -713,6 +713,29 @@ export async function middleware(req: NextRequest) {
       const redirectUrl = req.nextUrl.clone();
       redirectUrl.pathname = strippedPath;
       return NextResponse.redirect(redirectUrl, 308);
+    }
+
+    // 301 redirect from Italian canonical slug to localized slug for non-IT locales.
+    // This preserves SEO equity for URLs that Google indexed before slug translation
+    // existed (e.g. /da/sektorer/elettricisti/ → /da/sektorer/elektrikere/).
+    if (pathnameLocale !== 'it') {
+      const strippedForRedirect = stripLocaleFromPathname(pathname);
+      const segmentsForRedirect = strippedForRedirect.split('/').filter(Boolean);
+      const redirectSegments = segmentsForRedirect.map((seg) => {
+        // If seg is an Italian canonical that has a translation for this locale, use it.
+        const translations = SLUG_MAP[seg];
+        if (translations && translations[pathnameLocale] && translations[pathnameLocale] !== seg) {
+          return translations[pathnameLocale]!;
+        }
+        return seg;
+      });
+      const needsRedirect = redirectSegments.some((seg, i) => seg !== segmentsForRedirect[i]);
+      if (needsRedirect) {
+        const trailing = pathname.endsWith('/') ? '/' : '';
+        const redirectUrl = req.nextUrl.clone();
+        redirectUrl.pathname = `/${pathnameLocale}/${redirectSegments.join('/')}${trailing}`;
+        return NextResponse.redirect(redirectUrl, 301);
+      }
     }
 
     // Reverse-translate localized slugs to canonical Italian paths.
