@@ -112,15 +112,30 @@ export default function Home() {
   // Localized link helper prevents accidental fallback to default-language paths.
   // Landing composition below intentionally alternates narrative and proof blocks.
 
-  // Render hero video only on viewport ≥ md (768px). Mobile gets pure bg-white
-  // so the browser never fetches videoHero.mp4 or its poster (LCP killer).
+  // Render hero video only on viewport ≥ md (768px) AND only after browser is
+  // idle. Mobile gets pure bg-white so the browser never fetches videoHero.mp4
+  // (LCP killer). On desktop we delay 1s after first idle so the video doesn't
+  // block FCP / hurt TBT on initial paint — was costing 200-400ms on /it/ and
+  // /de/ desktop scores.
   const [showHeroVideo, setShowHeroVideo] = useState(false);
   useEffect(() => {
     const mq = window.matchMedia('(min-width: 768px)');
-    setShowHeroVideo(mq.matches);
-    const onChange = (e: MediaQueryListEvent) => setShowHeroVideo(e.matches);
+    if (!mq.matches) return;
+    const ric = (window as unknown as {
+      requestIdleCallback?: (cb: () => void, opts?: { timeout: number }) => number;
+    }).requestIdleCallback;
+    const handle = ric
+      ? ric(() => setShowHeroVideo(true), { timeout: 2000 })
+      : window.setTimeout(() => setShowHeroVideo(true), 1000);
+    const onChange = (e: MediaQueryListEvent) => {
+      if (!e.matches) setShowHeroVideo(false);
+    };
     mq.addEventListener('change', onChange);
-    return () => mq.removeEventListener('change', onChange);
+    return () => {
+      mq.removeEventListener('change', onChange);
+      if (ric) (window as unknown as { cancelIdleCallback?: (id: number) => void }).cancelIdleCallback?.(handle);
+      else clearTimeout(handle);
+    };
   }, []);
 
   useEffect(() => {
@@ -260,7 +275,7 @@ export default function Home() {
               autoPlay
               muted
               playsInline
-              preload="metadata"
+              preload="none"
               className="w-full h-full object-cover scale-[1.12] origin-top-left hero-video-blur"
               poster="/screen_dashboard.webp"
             >

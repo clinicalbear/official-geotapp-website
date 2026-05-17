@@ -6,17 +6,17 @@ import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
 import SettoriPage from '../../settori/page';
 
 const SETTORI_META: Record<string, { title: string; description: string }> = {
-  it: { title: 'Settori — Documentazione verificabile per ogni settore | GeoTapp', description: 'GeoTapp trasforma ogni intervento in prova verificabile: installatori, imprese di pulizia, sicurezza. Report sigillati con GPS e foto — verificabili da chiunque.' },
-  en: { title: 'Sectors — Verifiable proof of work for every sector | GeoTapp', description: 'GeoTapp turns every field job into verifiable proof: installers, cleaning companies, security. Tamper-proof reports with GPS and photos — verifiable by anyone.' },
-  de: { title: 'Branchen — Verifizierbare Arbeitsnachweise für jede Branche | GeoTapp', description: 'GeoTapp macht jeden Außendiensteinsatz zum verifizierbaren Nachweis: Installateure, Reinigung, Sicherheit. Manipulationssichere Berichte mit GPS und Fotos — von jedem prüfbar.' },
-  fr: { title: 'Secteurs — Preuves vérifiables du travail pour chaque secteur | GeoTapp', description: 'GeoTapp transforme chaque intervention en preuve vérifiable : installateurs, nettoyage, sécurité. Rapports scellés avec GPS et photos — vérifiables par n\'importe qui.' },
-  es: { title: 'Sectores — Pruebas verificables del trabajo para cada sector | GeoTapp', description: 'GeoTapp convierte cada intervención en prueba verificable: instaladores, limpieza, seguridad. Informes sellados con GPS y fotos — verificables por cualquiera.' },
-  pt: { title: 'Setores — Provas verificáveis do trabalho para cada setor | GeoTapp', description: 'GeoTapp transforma cada intervenção em prova verificável: instaladores, limpeza, segurança. Relatórios selados com GPS e fotos — verificáveis por qualquer pessoa.' },
-  nl: { title: 'Sectoren — Verifieerbaar bewijs voor elke sector | GeoTapp', description: 'GeoTapp maakt elke velddienst tot verifieerbaar bewijs: installateurs, schoonmaak, beveiliging. Verzegelde rapporten met GPS en foto\'s — door iedereen te verifiëren.' },
-  ru: { title: 'Отрасли — Верифицируемые доказательства работы для каждой отрасли | GeoTapp', description: 'GeoTapp превращает каждый выезд в верифицируемое доказательство: монтажники, клининг, охрана. Запечатанные отчёты с GPS и фото — проверяемые кем угодно.' },
-  da: { title: 'Brancher — Verificerbare arbejdsbeviser for enhver branche | GeoTapp', description: 'GeoTapp gør hvert feltbesøg til verificerbart bevis: installatører, rengøring, sikkerhed. Forseglede rapporter med GPS og fotos — verificerbare af enhver.' },
-  sv: { title: 'Branscher — Verifierbara arbetsbevis för varje sektor | GeoTapp', description: 'GeoTapp förvandlar varje fältuppdrag till verifierbart bevis: installatörer, städning, säkerhet. Förseglade rapporter med GPS och foton — verifierbara av vem som helst.' },
-  nb: { title: 'Bransjer — Verifiserbare arbeidsbevis for enhver bransje | GeoTapp', description: 'GeoTapp gjør hvert feltoppdrag til verifiserbart bevis: installatører, renhold, sikkerhet. Forseglede rapporter med GPS og bilder — verifiserbare av alle.' },
+  it: { title: 'Settori — Documentazione verificabile | GeoTapp', description: 'Da pulizie a sicurezza: ogni intervento diventa prova verificabile con GPS e foto. Report sigillati, contestazioni azzerate.' },
+  en: { title: 'Sectors — Verifiable proof of work | GeoTapp', description: 'From cleaning to security: every field job becomes verifiable proof with GPS and photos. Tamper-proof reports, zero disputes.' },
+  de: { title: 'Branchen — Verifizierbare Nachweise | GeoTapp', description: 'Von Reinigung bis Sicherheit: jeder Außendiensteinsatz wird mit GPS und Fotos verifizierbar. Manipulationssichere Berichte.' },
+  fr: { title: 'Secteurs — Preuves vérifiables | GeoTapp', description: 'Du nettoyage à la sécurité : chaque intervention devient preuve vérifiable avec GPS et photos. Rapports scellés, zéro litige.' },
+  es: { title: 'Sectores — Pruebas verificables | GeoTapp', description: 'De limpieza a seguridad: cada intervención se vuelve prueba verificable con GPS y fotos. Informes sellados, cero disputas.' },
+  pt: { title: 'Setores — Provas verificáveis | GeoTapp', description: 'De limpeza a segurança: cada intervenção vira prova verificável com GPS e fotos. Relatórios selados, zero contestações.' },
+  nl: { title: 'Sectoren — Verifieerbaar bewijs | GeoTapp', description: 'Van schoonmaak tot beveiliging: elke interventie wordt verifieerbaar bewijs met GPS en foto\'s. Verzegelde rapporten.' },
+  ru: { title: 'Отрасли — Верифицируемые доказательства | GeoTapp', description: 'От клининга до охраны: каждый выезд — верифицируемое доказательство с GPS и фото. Запечатанные отчёты, ноль споров.' },
+  da: { title: 'Brancher — Verificerbare beviser | GeoTapp', description: 'Fra rengøring til sikkerhed: hvert feltbesøg bliver verificerbart bevis med GPS og fotos. Forseglede rapporter, nul tvister.' },
+  sv: { title: 'Branscher — Verifierbara bevis | GeoTapp', description: 'Från städning till säkerhet: varje fältuppdrag blir verifierbart bevis med GPS och foton. Förseglade rapporter, noll tvister.' },
+  nb: { title: 'Bransjer — Verifiserbare bevis | GeoTapp', description: 'Fra renhold til sikkerhet: hvert feltoppdrag blir verifiserbart bevis med GPS og bilder. Forseglede rapporter, null tvister.' },
 };
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {

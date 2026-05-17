@@ -8,10 +8,10 @@ import SettoriLinks from '@/components/SettoriLinks';
 import { type AppLocale } from '@/lib/i18n/config';
 
 const flowMeta: Record<string, { title: string; description: string }> = {
-  it: { title: 'GeoTapp Flow — Gestione Operativa Interventi e Squadre', description: 'GeoTapp Flow è il sistema operativo per aziende con tecnici sul campo. Gestisci commesse, assegna attività, monitora l\'avanzamento e produci report verificabili in tempo reale.' },
-  en: { title: 'GeoTapp Flow — Field Operations Management', description: 'GeoTapp Flow is the operational hub for companies with field technicians. Manage jobs, assign tasks, track progress and generate verifiable reports in real time.' },
-  de: { title: 'GeoTapp Flow — Operative Einsatzverwaltung', description: 'GeoTapp Flow ist das operative System für Unternehmen mit Außendiensttechnikern. Aufträge verwalten, Aufgaben zuweisen und überprüfbare Berichte erstellen.' },
-  fr: { title: 'GeoTapp Flow — Gestion Opérationnelle des Interventions', description: 'GeoTapp Flow est le système opérationnel pour les entreprises avec des techniciens terrain. Gérez les commandes, assignez les tâches et produisez des rapports vérifiables.' },
+  it: { title: 'GeoTapp Flow — Gestione Operativa Interventi e Squadre', description: 'Sistema operativo per aziende con tecnici sul campo: commesse, attività, avanzamento e report verificabili in tempo reale.' },
+  en: { title: 'GeoTapp Flow — Field Operations Management', description: 'Operational hub for companies with field technicians: manage jobs, assign tasks, track progress, generate verifiable reports.' },
+  de: { title: 'GeoTapp Flow — Operative Einsatzverwaltung', description: 'Das operative System für Unternehmen mit Außendiensttechnikern. Aufträge verwalten, Aufgaben zuweisen, prüfbare Berichte erstellen.' },
+  fr: { title: 'GeoTapp Flow — Gestion Opérationnelle des Interventions', description: 'Système opérationnel pour entreprises avec techniciens terrain : commandes, tâches, suivi et rapports vérifiables en temps réel.' },
   es: { title: 'GeoTapp Flow — Gestión Operativa de Intervenciones', description: 'GeoTapp Flow es el sistema operativo para empresas con técnicos en campo. Gestiona pedidos, asigna tareas y genera informes verificables en tiempo real.' },
   nl: { title: 'GeoTapp Flow — Operationeel Beheer van Interventies', description: 'GeoTapp Flow is het operationele systeem voor bedrijven met buitendiensttechnici. Beheer opdrachten, wijs taken toe en maak verifieerbare rapporten.' },
   pt: { title: 'GeoTapp Flow — Gestão Operacional de Intervenções', description: 'GeoTapp Flow é o sistema operacional para empresas com técnicos de campo. Gerencie ordens de serviço, atribua tarefas e produza relatórios verificáveis.' },

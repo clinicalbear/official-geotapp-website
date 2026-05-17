@@ -56,7 +56,7 @@ const BASE_URL = 'https://geotapp.com';
 const LOCALE_META: Record<string, { title: string; description: string }> = {
   it: {
     title: 'GeoTapp — Timbrature GPS e Presenze Dipendenti sul Campo',
-    description: 'Timbrature GPS certificate, prove fotografiche e report non alterabili per imprese con squadre in esterno. Elimina contestazioni e controlla i cantieri. Prova gratis.',
+    description: 'Timbrature GPS certificate, prove fotografiche e report non alterabili per imprese con squadre in esterno. Elimina contestazioni — prova gratis.',
   },
   en: {
     title: 'GPS Time Tracking for Field Teams | GeoTapp',

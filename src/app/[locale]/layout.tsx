@@ -499,12 +499,10 @@ export default async function LocaleLayout({ children, params }: Props) {
             }
           `}
         </Script>
-        <Script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6506843864993991"
-          crossOrigin="anonymous"
-          strategy="lazyOnload"
-        />
+        {/* Adsense removed from main site layout — it was loading on every page
+            (homepage, sectors, products, pricing) but ad slots only exist on
+            the blog. Moved to src/app/blog/layout.tsx where ad inventory lives.
+            Saves ~75-90ms TBT across all non-blog pages. */}
         <div className="relative min-h-screen overflow-hidden">
           {/* Background Glow Effects — CSS radial-gradient instead of
               filter:blur() to avoid GPU compositing overhead on mobile.
