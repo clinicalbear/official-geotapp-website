@@ -699,6 +699,16 @@ export async function middleware(req: NextRequest) {
     return response;
   }
 
+  // 2e. Blog author URLs — rendered by Next.js /blog/author/[slug]/ route.
+  // Locale is detected from cookie/Accept-Language inside the page, not from
+  // the URL prefix, so bypass locale routing to avoid the /it/blog/author/...
+  // ↔ /blog/author/... redirect loop the locale router would otherwise create.
+  if (/^\/blog\/author\/[^/]+\/?$/.test(pathname)) {
+    const response = NextResponse.next();
+    applySecurityHeaders(response);
+    return response;
+  }
+
   const pathnameLocale = getLocaleFromPathname(pathname);
   if (pathnameLocale) {
     // Locale-prefixed blog paths → strip locale and redirect to /blog/* for WordPress proxy.
