@@ -125,6 +125,33 @@ const baseCategories: BaseCategoryConfig[] = [
   },
 ];
 
+// Display-only currency conversion for regional English locales.
+// The checkout flow still charges in EUR (Stripe handles forex at the customer's
+// card-issuer rate); only the *displayed* price changes so US/UK/AU/CA visitors
+// see a familiar number instead of doing mental conversion. Rates are pinned
+// conservatively (ECB reference ± typical FX margin) and updated quarterly.
+const REGIONAL_PRICING_DISPLAY: Partial<Record<string, { symbol: string; rate: number; position: 'before' | 'after' }>> = {
+  'en-us': { symbol: '$',  rate: 1.10, position: 'before' },
+  'en-gb': { symbol: '£',  rate: 0.86, position: 'before' },
+  'en-au': { symbol: 'A$', rate: 1.65, position: 'before' },
+  'en-ca': { symbol: 'C$', rate: 1.48, position: 'before' },
+  // en-ie keeps EUR (Ireland uses EUR natively), en falls back to EUR display.
+};
+
+function convertPriceDisplay(eurPrice: string | undefined, locale: string): string | undefined {
+  if (!eurPrice) return eurPrice;
+  const config = REGIONAL_PRICING_DISPLAY[locale];
+  if (!config) return eurPrice;
+  const match = eurPrice.match(/[\d.,]+/);
+  if (!match) return eurPrice;
+  const numStr = match[0].replace(/\./g, '').replace(',', '.');
+  const num = parseFloat(numStr);
+  if (Number.isNaN(num)) return eurPrice;
+  const converted = Math.round(num * config.rate);
+  const formatted = new Intl.NumberFormat('en-US').format(converted);
+  return config.position === 'before' ? `${config.symbol}${formatted}` : `${formatted} ${config.symbol}`;
+}
+
 export default function Pricing() {
   const { addItem, toggleCart } = useCart();
   const pathname = usePathname();
@@ -174,10 +201,16 @@ export default function Pricing() {
         ...cat,
         title: catDict.title,
         description: catDict.description,
-        products: cat.products.map((prod, i) => ({
-          ...prod,
-          ...catDict.products[i],
-        })),
+        products: cat.products.map((prod, i) => {
+          const merged = { ...prod, ...catDict.products[i] };
+          // Apply regional currency display for en-US/en-GB/en-AU/en-CA visitors.
+          return {
+            ...merged,
+            price: convertPriceDisplay(merged.price, currentLocale) ?? merged.price,
+            monthlyPrice: convertPriceDisplay(merged.monthlyPrice, currentLocale),
+            savings: convertPriceDisplay(merged.savings, currentLocale),
+          };
+        }),
       };
     })
     .filter((cat): cat is NonNullable<typeof cat> => cat !== null);
@@ -186,10 +219,14 @@ export default function Pricing() {
     addItem({
       id: product.id,
       name: product.name,
-      // Handle Italian number format: remove € and spaces, remove thousands separator (.), replace decimal separator (,) with .
+      // Strip any currency symbol ($, €, £, A$, C$) before parsing.
+      // Handle Italian number format: remove space, drop '.' thousands separator,
+      // swap ',' decimal separator with '.'. For US/UK/AU/CA display formats
+      // (no '.' thousands, no ',' decimal) the same transforms are no-ops.
       price: parseFloat(
         product.price
-          .replace('€', '')
+          .replace(/[€$£]/g, '')
+          .replace(/A|C/g, '')
           .replace(/\s/g, '')
           .replace(/\./g, '')
           .replace(',', '.'),
