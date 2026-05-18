@@ -53,12 +53,41 @@ async function fetchUser(slug: string): Promise<WPUser | null> {
 }
 
 async function fetchPosts(authorId: number): Promise<WPPostLite[]> {
+  // Fetch a wide page (the WP REST API doesn't filter by Polylang language
+  // out of the box on this install). Locale filtering happens below by
+  // parsing the permalink: Polylang prefixes non-default locales as
+  // /blog/{lang}/YYYY/..., the default locale (it) has no prefix.
   const res = await fetch(
-    `${WP_BASE}/posts/?author=${authorId}&per_page=24&_embed=wp:featuredmedia&orderby=date&order=desc`,
-    { headers: WP_HEADERS, cache: 'no-store', signal: AbortSignal.timeout(10000) },
+    `${WP_BASE}/posts/?author=${authorId}&per_page=100&_embed=wp:featuredmedia&orderby=date&order=desc`,
+    { headers: WP_HEADERS, cache: 'no-store', signal: AbortSignal.timeout(15000) },
   );
   if (!res.ok) return [];
   return (await res.json()) as WPPostLite[];
+}
+
+/** Map an AppLocale to the Polylang language slug used in permalinks. */
+function languageCodeFor(locale: AppLocale): string {
+  // Regional EN variants share the 'en' set of articles.
+  if (locale === 'en' || locale.startsWith('en-')) return 'en';
+  return locale; // it, de, fr, es, pt, nl, da, sv, nb, ru — Polylang slugs match
+}
+
+/** Read the language slug embedded in a WordPress permalink. */
+function postLanguageFromLink(link: string): string {
+  try {
+    const u = new URL(link);
+    // Patterns: /blog/{slug}/, /blog/YYYY/.../, /blog/{lang}/{slug}/, /blog/{lang}/YYYY/...
+    const segments = u.pathname.split('/').filter(Boolean);
+    // segments[0] is "blog"
+    const second = segments[1];
+    if (!second) return 'it';
+    if (/^\d{4}$/.test(second)) return 'it'; // year segment → default IT
+    if (/^[a-z]{2}$/.test(second)) return second;
+    // Slug-only URL (no date archive) → also IT
+    return 'it';
+  } catch {
+    return 'it';
+  }
 }
 
 function detectLocale(headerStore: Headers, cookieValue: string | undefined): AppLocale {
@@ -139,7 +168,11 @@ export default async function AuthorPage({
     no_articles: 'No articles yet.',
   };
 
-  const posts = await fetchPosts(user.id);
+  const allPosts = await fetchPosts(user.id);
+  const wantedLang = languageCodeFor(locale);
+  const posts = allPosts.filter(
+    (p) => postLanguageFromLink(p.link) === wantedLang,
+  );
   const avatar = user.avatar_urls['96'] || user.avatar_urls['48'] || '';
 
   const featuredUrl = user.url && user.url.includes('featured.com') ? user.url : 'https://featured.com/p/michele-petraroli';
@@ -168,7 +201,7 @@ export default async function AuthorPage({
         }}
       />
 
-      <section className="px-6 pt-28 pb-16 bg-gradient-to-b from-slate-50 to-white">
+      <section className="px-6 pt-40 pb-16 bg-gradient-to-b from-slate-50 to-white">
         <div className="container mx-auto max-w-4xl">
           <div className="flex flex-col items-center text-center md:flex-row md:items-start md:text-left md:gap-10">
             {avatar && (
@@ -231,9 +264,16 @@ export default async function AuthorPage({
               {posts.map((p) => {
                 const cover =
                   p._embedded?.['wp:featuredmedia']?.[0]?.source_url ?? '';
-                const articleSlug = p.slug;
-                const langSeg = locale === 'it' || locale === 'en' ? '' : `/${locale.split('-')[0]}`;
-                const href = `/blog${langSeg}/${articleSlug}/`;
+                // Use WP's canonical permalink — already includes the
+                // language prefix where applicable. Strip the origin so
+                // the link stays internal to the Next.js app.
+                let href = `/blog/${p.slug}/`;
+                try {
+                  const u = new URL(p.link);
+                  href = u.pathname;
+                } catch {
+                  /* fall back to slug */
+                }
                 return (
                   <Link
                     key={p.id}
