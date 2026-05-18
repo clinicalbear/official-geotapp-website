@@ -276,7 +276,7 @@
       "discount_threshold": "Seuil de remise",
       "cost_per_user": "Coût moyen par utilisateur",
       "per_month": "/mois",
-      "standard_rate": "Tarif standard (1–25 @ €2)",
+      "standard_rate": "Tarif standard (1–25 @ {price})",
       "mixed_rate": "Tarif mixte (remise volume appliquée)",
       "annual_total": "Total annuel (+TVA)",
       "annual_billing_note": "Facturation annuelle unique",
@@ -957,5 +957,15 @@
     "low_confidence": "Je ne suis pas sur d'avoir bien compris. Souhaitez-vous contacter l'equipe ?",
     "contact_btn": "Nous contacter",
     "powered_by": "Powered by GeoTapp"
+  },
+  "author_page": {
+    "job_title": "PDG & Fondateur",
+    "verified_label": "Expert vérifié",
+    "bio": "Michele « Mike » Petraroli, PDG et fondateur de GeoTapp. Profil d'expert vérifié sur <a href=\"https://featured.com/p/michele-petraroli\" rel=\"me noopener\" target=\"_blank\">Featured.com</a>.",
+    "articles_heading": "Articles de",
+    "view_profile": "Voir le profil vérifié",
+    "follow_linkedin": "Se connecter sur LinkedIn",
+    "read_more": "Lire",
+    "no_articles": "Aucun article pour le moment."
   }
 }

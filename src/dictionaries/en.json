@@ -277,7 +277,7 @@
       "discount_threshold": "Discount Threshold",
       "cost_per_user": "Average Cost per User",
       "per_month": "/month",
-      "standard_rate": "Standard Rate (1–25 @ €2)",
+      "standard_rate": "Standard Rate (1–25 @ {price})",
       "mixed_rate": "Mixed Rate (Volume Discount Applied)",
       "annual_total": "Annual Total (+VAT)",
       "annual_billing_note": "Single annual billing",
@@ -959,5 +959,15 @@
     "low_confidence": "I'm not sure I understood correctly. Would you like to contact the team?",
     "contact_btn": "Contact us",
     "powered_by": "Powered by GeoTapp"
+  },
+  "author_page": {
+    "job_title": "CEO & Founder",
+    "verified_label": "Verified expert",
+    "bio": "Michele \"Mike\" Petraroli, CEO and founder of GeoTapp. Verified expert profile on <a href=\"https://featured.com/p/michele-petraroli\" rel=\"me noopener\" target=\"_blank\">Featured.com</a>.",
+    "articles_heading": "Articles by",
+    "view_profile": "View verified profile",
+    "follow_linkedin": "Connect on LinkedIn",
+    "read_more": "Read",
+    "no_articles": "No articles yet."
   }
 }

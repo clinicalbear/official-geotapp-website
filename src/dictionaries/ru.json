@@ -276,7 +276,7 @@
       "discount_threshold": "Порог скидки",
       "cost_per_user": "Средняя стоимость на пользователя",
       "per_month": "/мес",
-      "standard_rate": "Стандартный тариф (1–25 @ €2)",
+      "standard_rate": "Стандартный тариф (1–25 @ {price})",
       "mixed_rate": "Смешанный тариф (скидка за объём применена)",
       "annual_total": "Итого в год (+НДС)",
       "annual_billing_note": "Единовременная годовая оплата",
@@ -957,5 +957,15 @@
     "low_confidence": "Я не уверен, что правильно понял. Хотите связаться с командой?",
     "contact_btn": "Связаться",
     "powered_by": "Powered by GeoTapp"
+  },
+  "author_page": {
+    "job_title": "CEO и основатель",
+    "verified_label": "Верифицированный эксперт",
+    "bio": "Микеле \"Майк\" Петрароли, CEO и основатель GeoTapp. Верифицированный профиль эксперта на <a href=\"https://featured.com/p/michele-petraroli\" rel=\"me noopener\" target=\"_blank\">Featured.com</a>.",
+    "articles_heading": "Статьи от",
+    "view_profile": "Открыть верифицированный профиль",
+    "follow_linkedin": "Подключиться в LinkedIn",
+    "read_more": "Читать",
+    "no_articles": "Пока нет статей."
   }
 }

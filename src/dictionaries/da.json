@@ -276,7 +276,7 @@
       "discount_threshold": "Rabatgrænse",
       "cost_per_user": "Gennemsnitlig pris pr. bruger",
       "per_month": "/md",
-      "standard_rate": "Standardtakst (1–25 @ €2)",
+      "standard_rate": "Standardtakst (1–25 @ {price})",
       "mixed_rate": "Blandet takst (mængderabat anvendt)",
       "annual_total": "Årstotal (+moms)",
       "annual_billing_note": "Enkelt årlig fakturering",
@@ -957,5 +957,15 @@
     "low_confidence": "Jeg er ikke sikker pa, om jeg forstod korrekt. Vil du kontakte teamet?",
     "contact_btn": "Kontakt",
     "powered_by": "Powered by GeoTapp"
+  },
+  "author_page": {
+    "job_title": "CEO og grundlægger",
+    "verified_label": "Verificeret ekspert",
+    "bio": "Michele \"Mike\" Petraroli, CEO og grundlægger af GeoTapp. Verificeret ekspertprofil på <a href=\"https://featured.com/p/michele-petraroli\" rel=\"me noopener\" target=\"_blank\">Featured.com</a>.",
+    "articles_heading": "Artikler af",
+    "view_profile": "Se verificeret profil",
+    "follow_linkedin": "Opret forbindelse på LinkedIn",
+    "read_more": "Læs",
+    "no_articles": "Ingen artikler endnu."
   }
 }

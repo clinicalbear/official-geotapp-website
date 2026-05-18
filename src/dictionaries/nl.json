@@ -276,7 +276,7 @@
       "discount_threshold": "Kortingsdrempel",
       "cost_per_user": "Gemiddelde kosten per gebruiker",
       "per_month": "/maand",
-      "standard_rate": "Standaardtarief (1–25 @ €2)",
+      "standard_rate": "Standaardtarief (1–25 @ {price})",
       "mixed_rate": "Gemengd tarief (volumekorting toegepast)",
       "annual_total": "Jaartotaal (+BTW)",
       "annual_billing_note": "Eenmalige jaarfacturering",
@@ -958,5 +958,15 @@
     "low_confidence": "Ik weet niet zeker of ik het goed begrepen heb. Wilt u het team contacteren?",
     "contact_btn": "Contact",
     "powered_by": "Powered by GeoTapp"
+  },
+  "author_page": {
+    "job_title": "CEO en oprichter",
+    "verified_label": "Geverifieerd expert",
+    "bio": "Michele \"Mike\" Petraroli, CEO en oprichter van GeoTapp. Geverifieerd expertprofiel op <a href=\"https://featured.com/p/michele-petraroli\" rel=\"me noopener\" target=\"_blank\">Featured.com</a>.",
+    "articles_heading": "Artikelen van",
+    "view_profile": "Bekijk geverifieerd profiel",
+    "follow_linkedin": "Maak contact op LinkedIn",
+    "read_more": "Lees",
+    "no_articles": "Nog geen artikelen."
   }
 }

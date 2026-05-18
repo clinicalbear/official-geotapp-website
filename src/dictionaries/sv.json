@@ -276,7 +276,7 @@
       "discount_threshold": "Rabattgräns",
       "cost_per_user": "Genomsnittlig kostnad per användare",
       "per_month": "/mån",
-      "standard_rate": "Standardtaxa (1–25 @ €2)",
+      "standard_rate": "Standardtaxa (1–25 @ {price})",
       "mixed_rate": "Blandad taxa (volymrabatt tillämpad)",
       "annual_total": "Årstotal (+moms)",
       "annual_billing_note": "Enskild årsfakturering",
@@ -957,5 +957,15 @@
     "low_confidence": "Jag ar inte saker pa att jag forstod ratt. Vill du kontakta teamet?",
     "contact_btn": "Kontakt",
     "powered_by": "Powered by GeoTapp"
+  },
+  "author_page": {
+    "job_title": "VD och grundare",
+    "verified_label": "Verifierad expert",
+    "bio": "Michele \"Mike\" Petraroli, VD och grundare av GeoTapp. Verifierad expertprofil på <a href=\"https://featured.com/p/michele-petraroli\" rel=\"me noopener\" target=\"_blank\">Featured.com</a>.",
+    "articles_heading": "Artiklar av",
+    "view_profile": "Visa verifierad profil",
+    "follow_linkedin": "Anslut på LinkedIn",
+    "read_more": "Läs",
+    "no_articles": "Inga artiklar än."
   }
 }
