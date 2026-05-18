@@ -15,6 +15,12 @@ import NewsletterModal from '@/components/NewsletterModal';
 import ChatWidget from '@/components/kairos/ChatWidget';
 import SiteAnalytics from '@/components/SiteAnalytics';
 import InternalTrafficBadge from '@/components/InternalTrafficBadge';
+import {
+  EUR_PRICES,
+  convertEurToLocale,
+  getCurrencyForLocale,
+} from '@/lib/pricing';
+import type { AppLocale } from '@/lib/i18n/config';
 
 const BASE_URL = 'https://geotapp.com';
 
@@ -45,7 +51,7 @@ const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
       'GDPR compliant — nessun tracciamento continuo',
       'App mobile Android e iOS (Flutter)',
     ],
-    offersDescription: 'Prova gratuita 14 giorni, piani a pagamento da 3€/operatore/mese via Stripe',
+    offersDescription: 'Prova gratuita 14 giorni, piani a pagamento da {price}/operatore/mese via Stripe',
   },
   en: {
     description:
@@ -60,7 +66,7 @@ const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
       'GDPR compliant — no continuous tracking',
       'Mobile app for Android and iOS (Flutter)',
     ],
-    offersDescription: '14-day free trial, paid plans from €3/operator/month via Stripe',
+    offersDescription: '14-day free trial, paid plans from {price}/operator/month via Stripe',
   },
   de: {
     description:
@@ -75,7 +81,7 @@ const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
       'DSGVO-konform — keine kontinuierliche Verfolgung',
       'Mobile App für Android und iOS (Flutter)',
     ],
-    offersDescription: '14-tägige kostenlose Testphase, kostenpflichtige Pläne ab 3€/Nutzer/Monat via Stripe',
+    offersDescription: '14-tägige kostenlose Testphase, kostenpflichtige Pläne ab {price}/Nutzer/Monat via Stripe',
   },
   fr: {
     description:
@@ -90,7 +96,7 @@ const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
       'Conforme RGPD — pas de suivi continu',
       'Application mobile Android et iOS (Flutter)',
     ],
-    offersDescription: 'Essai gratuit 14 jours, plans payants à partir de 3€/opérateur/mois via Stripe',
+    offersDescription: 'Essai gratuit 14 jours, plans payants à partir de {price}/opérateur/mois via Stripe',
   },
   es: {
     description:
@@ -105,7 +111,7 @@ const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
       'Conforme RGPD — sin seguimiento continuo',
       'App móvil para Android e iOS (Flutter)',
     ],
-    offersDescription: 'Prueba gratuita 14 días, planes de pago desde 3€/operador/mes via Stripe',
+    offersDescription: 'Prueba gratuita 14 días, planes de pago desde {price}/operador/mes via Stripe',
   },
   pt: {
     description:
@@ -120,7 +126,7 @@ const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
       'Conforme RGPD — sem rastreamento contínuo',
       'App móvel para Android e iOS (Flutter)',
     ],
-    offersDescription: 'Avaliação gratuita 14 dias, planos pagos a partir de 3€/operador/mês via Stripe',
+    offersDescription: 'Avaliação gratuita 14 dias, planos pagos a partir de {price}/operador/mês via Stripe',
   },
   nl: {
     description:
@@ -135,7 +141,7 @@ const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
       'AVG-conform — geen continue tracking',
       'Mobiele app voor Android en iOS (Flutter)',
     ],
-    offersDescription: '14 dagen gratis proberen, betaalde plannen vanaf 3€/gebruiker/maand via Stripe',
+    offersDescription: '14 dagen gratis proberen, betaalde plannen vanaf {price}/gebruiker/maand via Stripe',
   },
   ru: {
     description:
@@ -150,7 +156,7 @@ const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
       'Соответствие GDPR — без непрерывного отслеживания',
       'Мобильное приложение для Android и iOS (Flutter)',
     ],
-    offersDescription: 'Бесплатный пробный период 14 дней, платные планы от 3€/оператор/месяц через Stripe',
+    offersDescription: 'Бесплатный пробный период 14 дней, платные планы от {price}/оператор/месяц через Stripe',
   },
   da: {
     description:
@@ -165,7 +171,7 @@ const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
       'GDPR-kompatibel — ingen kontinuerlig sporing',
       'Mobilapp til Android og iOS (Flutter)',
     ],
-    offersDescription: '14 dages gratis prøveperiode, betalte planer fra 3€/bruger/måned via Stripe',
+    offersDescription: '14 dages gratis prøveperiode, betalte planer fra {price}/bruger/måned via Stripe',
   },
   sv: {
     description:
@@ -180,7 +186,7 @@ const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
       'GDPR-kompatibel — ingen kontinuerlig spårning',
       'Mobilapp för Android och iOS (Flutter)',
     ],
-    offersDescription: '14 dagars gratis provperiod, betalda planer från 3€/användare/månad via Stripe',
+    offersDescription: '14 dagars gratis provperiod, betalda planer från {price}/användare/månad via Stripe',
   },
   nb: {
     description:
@@ -195,7 +201,7 @@ const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
       'GDPR-kompatibel — ingen kontinuerlig sporing',
       'Mobilapp for Android og iOS (Flutter)',
     ],
-    offersDescription: '14 dagers gratis prøveperiode, betalte planer fra 3€/bruker/måned via Stripe',
+    offersDescription: '14 dagers gratis prøveperiode, betalte planer fra {price}/bruker/måned via Stripe',
   },
 };
 
@@ -208,6 +214,18 @@ export default async function LocaleLayout({ children, params }: Props) {
   const { locale } = await params;
   const data = LOCALE_SCHEMA[locale] ?? LOCALE_SCHEMA.en;
   const localeUrl = `${BASE_URL}/${locale}/`;
+
+  // Locale-aware pricing for structured data + offers description.
+  // EUR is master; non-EUR locales render the converted/buffered price.
+  const standardRate = convertEurToLocale(
+    EUR_PRICES.tracker.tier1.perSeatMonthly,
+    locale as AppLocale,
+  );
+  const offersDescription = data.offersDescription.replace(
+    '{price}',
+    standardRate.formatted,
+  );
+  const priceCurrency = getCurrencyForLocale(locale as AppLocale);
 
   const localeSchema = {
     '@context': 'https://schema.org',
@@ -226,8 +244,8 @@ export default async function LocaleLayout({ children, params }: Props) {
     offers: {
       '@type': 'Offer',
       price: '0',
-      priceCurrency: 'EUR',
-      description: data.offersDescription,
+      priceCurrency,
+      description: offersDescription,
     },
     publisher: {
       '@type': 'Organization',
@@ -312,6 +330,31 @@ export default async function LocaleLayout({ children, params }: Props) {
                   'Portuguese', 'Dutch', 'Russian', 'Danish', 'Swedish', 'Norwegian',
                 ],
               },
+              founder: { '@id': 'https://geotapp.com/#founder' },
+            }),
+          }}
+        />
+        {/* Person schema for founder — feeds Google Knowledge Graph and ties
+            the author entity used by blog Article schema (Yoast) to the same
+            canonical Person, with verified third-party profile (Featured.com)
+            in sameAs as an E-E-A-T signal. */}
+        <script
+          id="schema-founder-person"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Person',
+              '@id': 'https://geotapp.com/#founder',
+              name: 'Michele Petraroli',
+              alternateName: 'Mike Petraroli',
+              jobTitle: 'CEO & Founder',
+              worksFor: { '@id': 'https://geotapp.com/#organization' },
+              url: 'https://geotapp.com/chi-siamo/',
+              sameAs: [
+                'https://featured.com/p/michele-petraroli',
+                'https://www.linkedin.com/in/michele-petraroli-532545397/',
+              ],
             }),
           }}
         />
@@ -338,8 +381,8 @@ export default async function LocaleLayout({ children, params }: Props) {
               offers: {
                 '@type': 'Offer',
                 price: '0',
-                priceCurrency: 'EUR',
-                description: data.offersDescription,
+                priceCurrency,
+                description: offersDescription,
               },
               featureList: data.featureList,
               publisher: {
