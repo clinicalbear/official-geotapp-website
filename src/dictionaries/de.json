@@ -39,6 +39,7 @@
     "contact": "Kontakt"
   },
   "landing": {
+    "us_badge": "🇺🇸 Serving US teams — chat support 9am–6pm ET. USD invoicing available on request.",
     "hero_badge": "Die Arbeit war da. Jetzt machen Sie sie beweisbar.",
     "hero_title": "Wenn Sie es nicht beweisen können, sagt der Kunde: Es ist nie passiert.",
     "hero_subtitle": "GeoTapp verwandelt jeden Außendiensteinsatz in objektive Beweise: versiegelte Berichte mit echten GPS-Daten, zeitgestempelte Fotonachweise und Dokumentation, die jeder unabhängig prüfen kann — ohne Vertrauen, ohne Streit.",
@@ -820,7 +821,23 @@
         "label": "Zertifizierter Datenschutz"
       }
     ],
-    "mission_quote": "Außendienstarbeit verdient dieselben Transparenz-Tools wie ein Büro."
+    "mission_quote": "Außendienstarbeit verdient dieselben Transparenz-Tools wie ein Büro.",
+    "founder": {
+      "section_label": "Der Gründer",
+      "name": "Michele Angelo Petraroli",
+      "role": "Founder & CEO",
+      "bio": "Michele Angelo Petraroli ist Gründer und CEO von GeoTapp, einem italienischen SaaS-Unternehmen, das Außendienst-Management-Software für europäische KMU entwickelt. Aus operativer Erfahrung wusste er, wie Reinigungsunternehmen, Installateure und Sicherheitsdienste Geld verlieren, wenn der Arbeitsnachweis fehlt. 2024 gründete er GeoTapp, um das Problem an der Wurzel zu lösen. Heute betreut GeoTapp Hunderte von KMU in Italien, Frankreich, Deutschland und Großbritannien mit DSGVO-konformer GPS-Verfolgung, Foto-Nachweisen und digitalen Unterschriften.",
+      "expertise_label": "Kompetenzbereiche",
+      "expertise": [
+        "Field Service Management",
+        "DSGVO & Mitarbeiter-Geolokalisierung",
+        "Workforce Management",
+        "B2B SaaS",
+        "Europäische KMU"
+      ],
+      "cta_linkedin": "LinkedIn",
+      "cta_email": "Kontakt aufnehmen"
+    }
   },
   "blog": {
     "hero_title": "Gedanken & Funken.",

@@ -289,6 +289,18 @@ export default function Home() {
         {/* ── Text content — fades in as video plays ── */}
         <div className="container mx-auto max-w-5xl z-10 relative text-center">
 
+          {/* US-customer banner — only on /en/ pages. Signals that GeoTapp serves
+              US teams (chat support window + USD invoicing path) even though the
+              core business is EU-based. Removes the "vendor europeo only" friction
+              that was bouncing US visitors who saw EUR pricing. */}
+          {currentLocale === 'en' && (
+            <div className="hero-text-late hero-text-late-d1 mb-4">
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold bg-blue-50 border border-blue-200 text-blue-700">
+                {dict.landing.us_badge}
+              </span>
+            </div>
+          )}
+
           <div className="hero-text-late hero-text-late-d1 mb-5">
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold tracking-wide"
               style={{ background: 'linear-gradient(135deg, rgba(143,196,54,0.12), rgba(59,174,224,0.1))', border: '1px solid rgba(143,196,54,0.25)', color: '#8FC436', backdropFilter: 'blur(8px)' }}>

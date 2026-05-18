@@ -29,15 +29,20 @@ export default async function RoiCalculatorPage({
   searchParams,
 }: {
   params: Promise<{ locale: string }>;
-  searchParams: Promise<{ embed?: string }>;
+  searchParams: Promise<{ embed?: string; currency?: string }>;
 }) {
   const { locale } = await params;
-  const { embed } = await searchParams;
+  const { embed, currency } = await searchParams;
   const safeLocale = (SUPPORTED_LOCALES as readonly string[]).includes(locale)
     ? (locale as AppLocale)
     : ('it' as AppLocale);
   const dict = getDictionary(safeLocale);
   const trialUrl = `/${safeLocale}/trial/`;
+
+  // USD opt-in for US-facing visitors. ?currency=usd shows the calculator in
+  // dollars (EUR base amounts auto-converted at 1.10x). Useful for FLSA blog
+  // cluster to demo ROI in dollars without forking the calculator route.
+  const safeCurrency: 'EUR' | 'USD' = currency?.toLowerCase() === 'usd' ? 'USD' : 'EUR';
 
   return (
     <RoiCalculatorClient
@@ -45,6 +50,7 @@ export default async function RoiCalculatorPage({
       locale={safeLocale}
       trialUrl={trialUrl}
       embed={embed === '1'}
+      currency={safeCurrency}
     />
   );
 }

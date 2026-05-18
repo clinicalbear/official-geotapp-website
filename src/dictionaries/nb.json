@@ -39,6 +39,7 @@
     "contact": "Kontakt"
   },
   "landing": {
+    "us_badge": "🇺🇸 Serving US teams — chat support 9am–6pm ET. USD invoicing available on request.",
     "hero_badge": "Arbeidet skjedde. Gjør det nå bevisbart.",
     "hero_title": "Hvis du ikke kan bevise det, sier kunden at det aldri skjedde.",
     "hero_subtitle": "GeoTapp gjør hvert feltoppdrag om til objektive bevis: forseglede rapporter med ekte GPS-data, tidsstemplede fotobevis og dokumentasjon som hvem som helst kan verifisere uavhengig — uten tillit, uten tvister.",
@@ -751,7 +752,23 @@
         "label": "Sertifisert personvern"
       }
     ],
-    "mission_quote": "Feltarbeid fortjener de samme transparensverktøyene som et kontor."
+    "mission_quote": "Feltarbeid fortjener de samme transparensverktøyene som et kontor.",
+    "founder": {
+      "section_label": "Grunnleggeren",
+      "name": "Michele Angelo Petraroli",
+      "role": "Founder & CEO",
+      "bio": "Michele Angelo Petraroli er grunnlegger og CEO av GeoTapp, et italiensk SaaS-selskap for håndtering av feltarbeidere for europeiske SMB-er. Fra operativ erfaring så han hvordan rengjøringsbedrifter, installatører og sikkerhetsselskaper taper penger når beviset på arbeid mangler. Han grunnla GeoTapp i 2024 for å løse problemet ved roten. I dag betjener GeoTapp hundrevis av SMB-er i Italia, Frankrike, Tyskland og Storbritannia med GDPR-kompatibel GPS-sporing, fotobevis og digitale signaturer.",
+      "expertise_label": "Ekspertiseområder",
+      "expertise": [
+        "Feltservicehåndtering",
+        "GDPR & Ansattes geolokalisering",
+        "Workforce Management",
+        "B2B SaaS",
+        "Europeiske SMB"
+      ],
+      "cta_linkedin": "LinkedIn",
+      "cta_email": "Kontakt meg"
+    }
   },
   "blog": {
     "hero_title": "Tanker og Gnister.",

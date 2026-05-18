@@ -39,6 +39,7 @@
     "contact": "Contact"
   },
   "landing": {
+    "us_badge": "🇺🇸 Serving US teams — chat support 9am–6pm ET. USD invoicing available on request.",
     "hero_badge": "Het werk is gedaan. Maak het nu bewijsbaar.",
     "hero_title": "Als u het niet kunt bewijzen, zegt de klant dat het nooit is gebeurd.",
     "hero_subtitle": "GeoTapp verandert elke velddienst in objectief bewijs: verzegelde rapporten met echte GPS-gegevens, tijdgestempeld fotobewijs en documentatie die iedereen onafhankelijk kan verifiëren — zonder vertrouwen, zonder geschillen.",
@@ -819,7 +820,23 @@
         "label": "Gecertificeerde privacy"
       }
     ],
-    "mission_quote": "Veldwerk verdient dezelfde transparantie-tools als een kantoor."
+    "mission_quote": "Veldwerk verdient dezelfde transparantie-tools als een kantoor.",
+    "founder": {
+      "section_label": "De oprichter",
+      "name": "Michele Angelo Petraroli",
+      "role": "Founder & CEO",
+      "bio": "Michele Angelo Petraroli is founder en CEO van GeoTapp, een Italiaanse SaaS voor het beheer van veldwerkers bij Europese MKB's. Vanuit zijn operationele ervaring zag hij hoe schoonmaakbedrijven, installateurs en beveiligingsdiensten geld verliezen als het bewijs van werk ontbreekt. Hij richtte GeoTapp op in 2024 om het probleem bij de wortel aan te pakken. Vandaag bedient GeoTapp honderden MKB's in Italië, Frankrijk, Duitsland en het Verenigd Koninkrijk met AVG-conforme GPS-tracking, fotobewijs en digitale handtekeningen.",
+      "expertise_label": "Vakgebieden",
+      "expertise": [
+        "Veldservice management",
+        "AVG & Werknemers geolocatie",
+        "Workforce Management",
+        "B2B SaaS",
+        "Europese MKB"
+      ],
+      "cta_linkedin": "LinkedIn",
+      "cta_email": "Neem contact op"
+    }
   },
   "blog": {
     "hero_title": "Gedachten & Vonken.",

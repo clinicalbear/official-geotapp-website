@@ -39,6 +39,7 @@
     "contact": "Contact"
   },
   "landing": {
+    "us_badge": "🇺🇸 Serving US teams — chat support 9am–6pm ET. USD invoicing available on request.",
     "hero_badge": "Le travail a eu lieu. Rendez-le maintenant prouvable.",
     "hero_title": "Si vous ne pouvez pas le prouver, le client dit que ça n'a jamais eu lieu.",
     "hero_subtitle": "GeoTapp transforme chaque intervention terrain en preuve objective : rapports scellés avec de vraies données GPS, preuves photographiques horodatées et documentation vérifiable par n'importe qui — sans faire confiance, sans contestations.",
@@ -751,7 +752,23 @@
         "label": "Confidentialité certifiée"
       }
     ],
-    "mission_quote": "Le travail sur le terrain mérite les mêmes outils de transparence qu'un bureau."
+    "mission_quote": "Le travail sur le terrain mérite les mêmes outils de transparence qu'un bureau.",
+    "founder": {
+      "section_label": "Le fondateur",
+      "name": "Michele Angelo Petraroli",
+      "role": "Founder & CEO",
+      "bio": "Michele Angelo Petraroli est founder et CEO de GeoTapp, SaaS italien pour la gestion des équipes terrain dans les PME européennes. Issu d'une expérience opérationnelle, il a vu directement comment les entreprises de nettoyage, les installateurs et les sociétés de sécurité perdent de l'argent quand la preuve du travail manque. Il a fondé GeoTapp en 2024 pour résoudre le problème à la racine. Aujourd'hui GeoTapp accompagne des centaines de PME en Italie, France, Allemagne et Royaume-Uni avec un suivi GPS conforme au RGPD, des preuves photographiques et des signatures numériques.",
+      "expertise_label": "Domaines d'expertise",
+      "expertise": [
+        "Gestion service terrain",
+        "RGPD & Géolocalisation salariés",
+        "Workforce Management",
+        "B2B SaaS",
+        "PME européennes"
+      ],
+      "cta_linkedin": "LinkedIn",
+      "cta_email": "Me contacter"
+    }
   },
   "blog": {
     "hero_title": "Pensées & Étincelles.",
