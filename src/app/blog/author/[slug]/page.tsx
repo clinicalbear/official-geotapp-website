@@ -8,8 +8,17 @@ import { SUPPORTED_LOCALES, DEFAULT_LOCALE, type AppLocale } from '@/lib/i18n/co
 
 export const dynamic = 'force-dynamic';
 
-const WP_BASE = 'https://geotapp.com/blog/wp-json/wp/v2';
-const WP_HEADERS = { 'x-geotapp-proxy': '1' };
+// Fetch directly from the WordPress origin (blog.geotapp.com) instead of
+// going through the geotapp.com/blog/ proxy. Otherwise the Cloudflare Worker
+// would recursively call itself when rendering this server component,
+// hitting subrequest limits and timing out the request.
+const WP_BASE = 'https://blog.geotapp.com/wp-json/wp/v2';
+const WP_HEADERS = {
+  'x-geotapp-proxy': '1',
+  // Bypass the blog.geotapp.com → geotapp.com/blog/ 301 redirect at the
+  // Apache .htaccess layer: the proxy header tells Apache this is the
+  // canonical fetch, not a user browser that should be redirected.
+};
 
 interface WPUser {
   id: number;
