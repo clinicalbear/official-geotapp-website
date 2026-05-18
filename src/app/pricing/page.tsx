@@ -125,31 +125,40 @@ const baseCategories: BaseCategoryConfig[] = [
   },
 ];
 
-// Display-only currency conversion for regional English locales.
-// The checkout flow still charges in EUR (Stripe handles forex at the customer's
-// card-issuer rate); only the *displayed* price changes so US/UK/AU/CA visitors
-// see a familiar number instead of doing mental conversion. Rates are pinned
-// conservatively (ECB reference ± typical FX margin) and updated quarterly.
-const REGIONAL_PRICING_DISPLAY: Partial<Record<string, { symbol: string; rate: number; position: 'before' | 'after' }>> = {
+// Dual-currency *informational* display for regional English locales.
+// We never replace the EUR primary price (that would over-promise: checkout
+// charges in EUR and the customer's bank converts at their daily FX rate).
+// Instead we render an APPROXIMATION underneath, plus a "Charged in EUR"
+// disclaimer at the page level, so US/UK/AU/CA visitors get familiar context
+// without false expectations of a fixed-USD checkout. Rates pinned to ECB
+// reference ± typical retail FX spread; refresh quarterly.
+const REGIONAL_FX: Partial<Record<string, { symbol: string; rate: number; position: 'before' | 'after' }>> = {
   'en-us': { symbol: '$',  rate: 1.10, position: 'before' },
   'en-gb': { symbol: '£',  rate: 0.86, position: 'before' },
   'en-au': { symbol: 'A$', rate: 1.65, position: 'before' },
   'en-ca': { symbol: 'C$', rate: 1.48, position: 'before' },
-  // en-ie keeps EUR (Ireland uses EUR natively), en falls back to EUR display.
+  // en-ie keeps EUR (Ireland uses EUR natively), generic 'en' falls back to EUR-only too.
 };
 
-function convertPriceDisplay(eurPrice: string | undefined, locale: string): string | undefined {
-  if (!eurPrice) return eurPrice;
-  const config = REGIONAL_PRICING_DISPLAY[locale];
-  if (!config) return eurPrice;
+/**
+ * Returns the approximate local-currency rendering of an EUR price, e.g.
+ *   eurToLocal('€36', 'en-us') === '≈ $40 USD'
+ * Used as secondary line below the primary EUR price. Never overrides the
+ * primary price — only adds informational context for non-EUR visitors.
+ */
+function eurToLocal(eurPrice: string | undefined, locale: string): string | null {
+  if (!eurPrice) return null;
+  const config = REGIONAL_FX[locale];
+  if (!config) return null;
   const match = eurPrice.match(/[\d.,]+/);
-  if (!match) return eurPrice;
+  if (!match) return null;
   const numStr = match[0].replace(/\./g, '').replace(',', '.');
   const num = parseFloat(numStr);
-  if (Number.isNaN(num)) return eurPrice;
+  if (Number.isNaN(num)) return null;
   const converted = Math.round(num * config.rate);
   const formatted = new Intl.NumberFormat('en-US').format(converted);
-  return config.position === 'before' ? `${config.symbol}${formatted}` : `${formatted} ${config.symbol}`;
+  const currencyCode = ({ 'en-us': 'USD', 'en-gb': 'GBP', 'en-au': 'AUD', 'en-ca': 'CAD' } as Record<string, string>)[locale];
+  return `≈ ${config.position === 'before' ? `${config.symbol}${formatted}` : `${formatted} ${config.symbol}`} ${currencyCode}`;
 }
 
 export default function Pricing() {
@@ -203,12 +212,13 @@ export default function Pricing() {
         description: catDict.description,
         products: cat.products.map((prod, i) => {
           const merged = { ...prod, ...catDict.products[i] };
-          // Apply regional currency display for en-US/en-GB/en-AU/en-CA visitors.
+          // Primary price stays in EUR (matches what Stripe will actually charge).
+          // For en-US/en-GB/en-AU/en-CA we add a SECONDARY informational line
+          // approximating the local-currency equivalent at today's FX rate.
           return {
             ...merged,
-            price: convertPriceDisplay(merged.price, currentLocale) ?? merged.price,
-            monthlyPrice: convertPriceDisplay(merged.monthlyPrice, currentLocale),
-            savings: convertPriceDisplay(merged.savings, currentLocale),
+            priceSecondary: eurToLocal(merged.price, currentLocale),
+            monthlyPriceSecondary: eurToLocal(merged.monthlyPrice, currentLocale),
           };
         }),
       };
@@ -219,14 +229,10 @@ export default function Pricing() {
     addItem({
       id: product.id,
       name: product.name,
-      // Strip any currency symbol ($, €, £, A$, C$) before parsing.
-      // Handle Italian number format: remove space, drop '.' thousands separator,
-      // swap ',' decimal separator with '.'. For US/UK/AU/CA display formats
-      // (no '.' thousands, no ',' decimal) the same transforms are no-ops.
+      // Handle Italian number format: remove € and spaces, remove thousands separator (.), replace decimal separator (,) with .
       price: parseFloat(
         product.price
-          .replace(/[€$£]/g, '')
-          .replace(/A|C/g, '')
+          .replace('€', '')
           .replace(/\s/g, '')
           .replace(/\./g, '')
           .replace(',', '.'),
@@ -261,6 +267,12 @@ export default function Pricing() {
           <p className="text-xl text-slate-500 leading-relaxed font-light max-w-2xl mx-auto">
             {dict.pricing.subtitle}
           </p>
+          {REGIONAL_FX[currentLocale] && (
+            <p className="mt-6 inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-medium bg-blue-50 border border-blue-100 text-blue-700">
+              All prices listed in EUR. Local-currency amounts shown are approximate
+              and your bank charges the EUR amount at its daily exchange rate.
+            </p>
+          )}
         </div>
       </div>
 
@@ -384,6 +396,8 @@ export default function Pricing() {
                         ? (p.per_year ?? '/year')
                         : product.period;
                     const savings = (product as Product).savings;
+                    const priceSecondary = (product as Product & { priceSecondary?: string | null }).priceSecondary;
+                    const monthlyPriceSecondary = (product as Product & { monthlyPriceSecondary?: string | null }).monthlyPriceSecondary;
 
                     return (
                       <>
@@ -397,6 +411,11 @@ export default function Pricing() {
                             {periodLabel}
                           </span>
                         </div>
+                        {priceSecondary && (
+                          <div className="text-xs text-slate-500 mb-1">
+                            {priceSecondary}
+                          </div>
+                        )}
                         {!isOnce && (
                           <div className="mb-2">
                             <span className="inline-block text-[9px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full bg-amber-50 border border-amber-200 text-amber-700">
@@ -411,6 +430,11 @@ export default function Pricing() {
                               <span className="font-semibold text-slate-700">
                                 {monthlyPrice}{p.per_month_short ?? '/month'}
                               </span>
+                              {monthlyPriceSecondary && (
+                                <span className="text-xs text-slate-400 ml-1">
+                                  ({monthlyPriceSecondary})
+                                </span>
+                              )}
                             </div>
                             {savings && (
                               <div className="inline-flex items-center gap-2 px-2 py-1 bg-green-50 border border-green-200 rounded-full">
