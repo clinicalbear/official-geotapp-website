@@ -498,10 +498,15 @@ export async function middleware(req: NextRequest) {
   // 1. Blog proxy — serve blog.geotapp.com WordPress content at geotapp.com/blog/
   // Exception: /blog and /blog/ (index) are served by Next.js, not proxied.
   // Exception: Article URLs (/blog/{locale?}/YYYY/MM/DD/slug/) are rendered by Next.js.
+  // Exception: /blog/author/{slug}/ rendered by Next.js (dedicated author page
+  // with localized bio, social links, Person schema). The WP default theme
+  // serves a bare article archive at this URL; the Next.js route gives a
+  // proper E-E-A-T author profile.
   // Proxying the WP root (/) causes a redirect loop: WP responds with a redirect
   // to geotapp.com/blog/ which the middleware re-intercepts indefinitely.
   const isArticleUrl = /^\/blog\/(?:[a-z]{2}\/)?20\d{2}\//.test(pathname);
-  if (pathname.startsWith('/blog') && pathname !== '/blog' && pathname !== '/blog/' && !isArticleUrl) {
+  const isAuthorUrl = /^\/blog\/author\/[^/]+\/?$/.test(pathname);
+  if (pathname.startsWith('/blog') && pathname !== '/blog' && pathname !== '/blog/' && !isArticleUrl && !isAuthorUrl) {
     const wpPath = pathname.slice(BLOG_BASE.length) || '/';
     const normalizedWpPath =
       wpPath === '/wp-sitemap.xml' ? '/wp-sitemap.xml/' : wpPath;

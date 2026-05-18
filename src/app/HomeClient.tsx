@@ -489,12 +489,13 @@ export default function Home() {
       {/* PRODUCT SECTION: FLOW */}
       <section className="relative border-t border-slate-100 overflow-hidden">
         <HeartbeatLine />
-        {/* Left: carousel as background, reduced height */}
-        <div className="absolute left-0 top-0 bottom-0 w-[55%] hidden md:block overflow-hidden">
-          <div className="absolute inset-0">
+        {/* Left: carousel as background, vertically centred within the section
+            so it aligns with the items-center text block on the right. */}
+        <div className="absolute left-0 top-24 bottom-24 w-[55%] hidden md:flex md:items-center overflow-hidden">
+          <div className="w-full">
             <FlowCarousel />
           </div>
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-white" />
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-white pointer-events-none" />
         </div>
         <div className="container mx-auto px-6 max-w-6xl relative z-10 py-24">
           <div className="grid md:grid-cols-[3fr_2fr] gap-16 items-center">
