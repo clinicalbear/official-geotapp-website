@@ -72,7 +72,9 @@ async function fetchBlogPosts(locale: AppLocale, categoryId: number, limit = 3):
 }
 
 const SECTION_LABELS: Record<AppLocale, string> = {
-  it: 'Dal blog', en: 'From the blog', de: 'Aus dem Blog', nl: 'Van de blog',
+  it: 'Dal blog', en: 'From the blog',
+ 'en-us': 'From the blog', 'en-gb': 'From the blog', 'en-au': 'From the blog', 'en-ie': 'From the blog', 'en-ca': 'From the blog',
+  de: 'Aus dem Blog', nl: 'Van de blog',
   fr: 'Du blog', es: 'Del blog', pt: 'Do blog',
   da: 'Fra bloggen', sv: 'Från bloggen', nb: 'Fra bloggen', ru: 'Из блога',
 };
@@ -80,6 +82,7 @@ const SECTION_LABELS: Record<AppLocale, string> = {
 const HIGHLIGHTS_TITLE_LABELS: Record<AppLocale, string> = {
   it: 'Risorse utili per il tuo settore',
   en: 'Useful resources for your sector',
+ 'en-us': 'Useful resources for your sector', 'en-gb': 'Useful resources for your sector', 'en-au': 'Useful resources for your sector', 'en-ie': 'Useful resources for your sector', 'en-ca': 'Useful resources for your sector',
   de: 'Nützliche Ressourcen für Ihre Branche',
   nl: 'Nuttige bronnen voor uw sector',
   fr: 'Ressources utiles pour votre secteur',
@@ -92,13 +95,13 @@ const HIGHLIGHTS_TITLE_LABELS: Record<AppLocale, string> = {
 };
 
 const SEE_ALL_LABELS: Record<AppLocale, string> = {
-  it: 'Vedi tutti →', en: 'See all →', de: 'Alle ansehen →', nl: 'Alles bekijken →',
+  it: 'Vedi tutti →', en: 'See all →', 'en-us': 'See all →', 'en-gb': 'See all →', 'en-au': 'See all →', 'en-ie': 'See all →', 'en-ca': 'See all →', de: 'Alle ansehen →', nl: 'Alles bekijken →',
   fr: 'Voir tout →', es: 'Ver todo →', pt: 'Ver tudo →',
   da: 'Se alle →', sv: 'Se alla →', nb: 'Se alle →', ru: 'Все →',
 };
 
 const READ_MORE_LABELS: Record<AppLocale, string> = {
-  it: 'Leggi →', en: 'Read →', de: 'Lesen →', nl: 'Lezen →',
+  it: 'Leggi →', en: 'Read →', 'en-us': 'Read →', 'en-gb': 'Read →', 'en-au': 'Read →', 'en-ie': 'Read →', 'en-ca': 'Read →', de: 'Lesen →', nl: 'Lezen →',
   fr: 'Lire →', es: 'Leer →', pt: 'Ler →',
   da: 'Læs →', sv: 'Läs →', nb: 'Les →', ru: 'Читать →',
 };

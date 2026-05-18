@@ -4,6 +4,11 @@ import type { SettoreContent } from '../types';
 const map: Partial<Record<AppLocale, () => Promise<{ default: SettoreContent }>>> = {
   it: () => import('./it'),
   en: () => import('./en'),
+  'en-us': () => import('./en'),
+  'en-gb': () => import('./en'),
+  'en-au': () => import('./en'),
+  'en-ie': () => import('./en'),
+  'en-ca': () => import('./en'),
   de: () => import('./de'),
   nl: () => import('./nl'),
 };

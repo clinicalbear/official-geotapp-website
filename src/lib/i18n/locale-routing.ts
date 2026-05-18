@@ -24,16 +24,17 @@ export function normalizeLocaleCode(
     return null;
   }
 
-  const normalized = value
-    .trim()
-    .toLowerCase()
-    .replace(/_/g, '-')
-    .split('-')[0];
+  const normalized = value.trim().toLowerCase().replace(/_/g, '-');
 
-  if (
-    (SUPPORTED_LOCALES as readonly string[]).includes(normalized)
-  ) {
+  // Exact match first — handles regional locales like 'en-us', 'en-gb', etc.
+  if ((SUPPORTED_LOCALES as readonly string[]).includes(normalized)) {
     return normalized as AppLocale;
+  }
+
+  // Fall back to language-only segment — handles 'en-nz' → 'en', 'pt-br' → 'pt'.
+  const langOnly = normalized.split('-')[0];
+  if ((SUPPORTED_LOCALES as readonly string[]).includes(langOnly)) {
+    return langOnly as AppLocale;
   }
 
   return null;

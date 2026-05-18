@@ -45,15 +45,15 @@ function buildLegacyImageRedirects() {
 // Slug translations — canonical (Italian) → all locales with different slugs
 const SLUG_TRANSLATIONS = {
   'chi-siamo': {
-    en: 'about-us', de: 'uber-uns', nl: 'over-ons', fr: 'a-propos',
+    en: 'about-us', 'en-us': 'about-us', 'en-gb': 'about-us', 'en-au': 'about-us', 'en-ie': 'about-us', 'en-ca': 'about-us', de: 'uber-uns', nl: 'over-ons', fr: 'a-propos',
     es: 'quienes-somos', pt: 'sobre-nos', da: 'om-os', sv: 'om-oss', nb: 'om-oss', ru: 'o-nas',
   },
   'guida': {
-    en: 'guide', de: 'anleitung', nl: 'gids', fr: 'guide',
+    en: 'guide', 'en-us': 'guide', 'en-gb': 'guide', 'en-au': 'guide', 'en-ie': 'guide', 'en-ca': 'guide', de: 'anleitung', nl: 'gids', fr: 'guide',
     es: 'guia', pt: 'guia', da: 'vejledning', sv: 'guide', nb: 'guide', ru: 'rukovodstvo',
   },
   'settori': {
-    en: 'sectors', de: 'branchen', nl: 'sectoren', fr: 'secteurs',
+    en: 'sectors', 'en-us': 'sectors', 'en-gb': 'sectors', 'en-au': 'sectors', 'en-ie': 'sectors', 'en-ca': 'sectors', de: 'branchen', nl: 'sectoren', fr: 'secteurs',
     es: 'sectores', pt: 'setores', da: 'sektorer', sv: 'sektorer', nb: 'sektorer', ru: 'sektory',
   },
   'contact': {
@@ -74,40 +74,40 @@ const SLUG_TRANSLATIONS = {
   },
   // Sector sub-pages
   'pulizie': {
-    en: 'cleaning', de: 'reinigung', nl: 'schoonmaak', fr: 'nettoyage',
+    en: 'cleaning', 'en-us': 'cleaning', 'en-gb': 'cleaning', 'en-au': 'cleaning', 'en-ie': 'cleaning', 'en-ca': 'cleaning', de: 'reinigung', nl: 'schoonmaak', fr: 'nettoyage',
     es: 'limpieza', pt: 'limpeza', da: 'rengoering', sv: 'rengoering', nb: 'rengjoring', ru: 'uborka',
   },
   'installatori': {
-    en: 'installers', de: 'installateure', nl: 'installateurs', fr: 'installateurs',
+    en: 'installers', 'en-us': 'installers', 'en-gb': 'installers', 'en-au': 'installers', 'en-ie': 'installers', 'en-ca': 'installers', de: 'installateure', nl: 'installateurs', fr: 'installateurs',
     es: 'instaladores', pt: 'instaladores', da: 'montorer', sv: 'montorer', nb: 'montorer', ru: 'montazhniki',
   },
   'sicurezza': {
-    en: 'security', de: 'sicherheit', nl: 'beveiliging', fr: 'securite',
+    en: 'security', 'en-us': 'security', 'en-gb': 'security', 'en-au': 'security', 'en-ie': 'security', 'en-ca': 'security', de: 'sicherheit', nl: 'beveiliging', fr: 'securite',
     es: 'seguridad', pt: 'seguranca', da: 'sikkerhed', sv: 'sakerhet', nb: 'sikkerhet', ru: 'bezopasnost',
   },
   'risorse': {
-    en: 'resources', de: 'ressourcen', nl: 'bronnen', fr: 'ressources',
+    en: 'resources', 'en-us': 'resources', 'en-gb': 'resources', 'en-au': 'resources', 'en-ie': 'resources', 'en-ca': 'resources', de: 'ressourcen', nl: 'bronnen', fr: 'ressources',
     es: 'recursos', pt: 'recursos', da: 'ressourcer', sv: 'resurser', nb: 'ressurser', ru: 'resursy',
   },
   'edilizia': {
-    en: 'construction', de: 'bauwesen', nl: 'bouw', fr: 'construction',
+    en: 'construction', 'en-us': 'construction', 'en-gb': 'construction', 'en-au': 'construction', 'en-ie': 'construction', 'en-ca': 'construction', de: 'bauwesen', nl: 'bouw', fr: 'construction',
     es: 'construccion', pt: 'construcao', da: 'byggeri', sv: 'byggnation', nb: 'bygg', ru: 'stroitelstvo',
   },
   'impianti': {
-    en: 'mechanical-electrical', de: 'anlagenbau', nl: 'installaties', fr: 'installations',
+    en: 'mechanical-electrical', 'en-us': 'mechanical-electrical', 'en-gb': 'mechanical-electrical', 'en-au': 'mechanical-electrical', 'en-ie': 'mechanical-electrical', 'en-ca': 'mechanical-electrical', de: 'anlagenbau', nl: 'installaties', fr: 'installations',
     es: 'instalaciones', pt: 'instalacoes', da: 'installationer', sv: 'installationer', nb: 'installasjoner', ru: 'inzhenernye-sistemy',
   },
   'manutenzione': {
-    en: 'maintenance', de: 'wartung', nl: 'onderhoud', fr: 'maintenance',
+    en: 'maintenance', 'en-us': 'maintenance', 'en-gb': 'maintenance', 'en-au': 'maintenance', 'en-ie': 'maintenance', 'en-ca': 'maintenance', de: 'wartung', nl: 'onderhoud', fr: 'maintenance',
     es: 'mantenimiento', pt: 'manutencao', da: 'vedligeholdelse', sv: 'underhall', nb: 'vedlikehold', ru: 'tekhobsluzhivanie',
   },
   'impresa-di-pulizie': {
-    en: 'cleaning-company', de: 'reinigungsunternehmen', nl: 'schoonmaakbedrijf', fr: 'entreprise-nettoyage',
+    en: 'cleaning-company', 'en-us': 'cleaning-company', 'en-gb': 'cleaning-company', 'en-au': 'cleaning-company', 'en-ie': 'cleaning-company', 'en-ca': 'cleaning-company', de: 'reinigungsunternehmen', nl: 'schoonmaakbedrijf', fr: 'entreprise-nettoyage',
     es: 'empresa-limpieza', pt: 'empresa-limpeza', da: 'rengoringsfirma', sv: 'stadforetag', nb: 'rengjringsfirma', ru: 'kliningovaya-kompaniya',
   },
   // Competitor comparison pages
   'confronto': {
-    en: 'compare', de: 'vergleich', nl: 'vergelijking', fr: 'comparaison',
+    en: 'compare', 'en-us': 'compare', 'en-gb': 'compare', 'en-au': 'compare', 'en-ie': 'compare', 'en-ca': 'compare', de: 'vergleich', nl: 'vergelijking', fr: 'comparaison',
     es: 'comparacion', pt: 'comparacao', da: 'sammenligning', sv: 'jamforelse', nb: 'sammenligning', ru: 'sravnenie',
   },
   // Legal pages

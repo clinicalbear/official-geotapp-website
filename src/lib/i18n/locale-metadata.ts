@@ -13,6 +13,11 @@ const BASE = 'https://geotapp.com';
 const HREFLANG: Record<string, string> = {
   it: 'it-IT',
   en: 'en',
+  'en-us': 'en-US',
+  'en-gb': 'en-GB',
+  'en-au': 'en-AU',
+  'en-ie': 'en-IE',
+  'en-ca': 'en-CA',
   de: 'de-DE',
   nl: 'nl-NL',
   fr: 'fr-FR',

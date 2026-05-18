@@ -1,6 +1,11 @@
 
 
 import enDict from '@/dictionaries/en.json';
+import enUsDict from '@/dictionaries/en-us.json';
+import enGbDict from '@/dictionaries/en-gb.json';
+import enAuDict from '@/dictionaries/en-au.json';
+import enIeDict from '@/dictionaries/en-ie.json';
+import enCaDict from '@/dictionaries/en-ca.json';
 import itDict from '@/dictionaries/it.json';
 import deDict from '@/dictionaries/de.json';
 import nlDict from '@/dictionaries/nl.json';
@@ -56,6 +61,14 @@ const DICTIONARIES: Record<AppLocale, SiteDictionary> = {
   // Keep all locales explicit to ensure compile-time key coverage.
   it: itDict,
   en: enDict,
+  // Regional English variants: tiny override files merged onto base en dictionary
+  // (currency hint, support timezone, regional compliance language). This avoids
+  // duplicating thousands of lines per region.
+  'en-us': withOverrides(enUsDict),
+  'en-gb': withOverrides(enGbDict),
+  'en-au': withOverrides(enAuDict),
+  'en-ie': withOverrides(enIeDict),
+  'en-ca': withOverrides(enCaDict),
   de: deDict,
   nl: withOverrides(nlDict),
   fr: withOverrides(frDict),
