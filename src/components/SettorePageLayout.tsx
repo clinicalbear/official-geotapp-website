@@ -8,6 +8,10 @@ import { localizePath } from '@/lib/i18n/locale-routing';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import type { AppLocale } from '@/lib/i18n/config';
 import type { SettoreContent, SettoreSlug } from '@/content/settori/types';
+import {
+  ALL_REGIONAL_FAQ,
+  ALL_REGIONAL_FAQ_TITLES,
+} from '@/content/settori/regional-faq-index';
 import { JsonLd } from '@/components/seo/JsonLd';
 import DemoReportBanner from '@/components/DemoReportBanner';
 import { trackEvent } from '@/lib/analytics';
@@ -598,6 +602,33 @@ export default function SettorePageLayout({ content, locale, settore, children }
               </div>
             ))}
           </div>
+
+          {(() => {
+            const regionalItems = ALL_REGIONAL_FAQ[settore]?.[locale];
+            const regionalTitle =
+              ALL_REGIONAL_FAQ_TITLES[settore]?.[locale] ?? 'Regional compliance';
+            if (!regionalItems || regionalItems.length === 0) return null;
+            return (
+              <div className="mt-16">
+                <h3 className="text-2xl font-bold text-slate-900 mb-6 text-center">
+                  {regionalTitle}
+                </h3>
+                <div className="space-y-4">
+                  {regionalItems.map((item, i) => (
+                    <div
+                      key={`regional-${i}`}
+                      className="border border-slate-200 rounded-xl p-6 bg-white"
+                    >
+                      <h4 className="font-bold text-slate-900 mb-3">{item.q}</h4>
+                      <p className="text-slate-600 leading-relaxed text-sm">
+                        {item.a}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            );
+          })()}
         </div>
       </section>
 

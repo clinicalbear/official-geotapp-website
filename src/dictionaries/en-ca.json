@@ -1,5 +1,93 @@
 {
+  "footer": {
+    "tagline": "Field activity recorded. Operations organized. Reports verifiable."
+  },
   "landing": {
+    "problem_subtitle": "It's not an organization problem. It's a proof problem.",
     "us_badge": "🇨🇦 Serving Canadian teams — federal + provincial labour codes compliant. CAD invoicing on request."
+  },
+  "home_sections": {
+    "core": {
+      "subtitle": "TimeTracker records on the field. Flow organizes in the office. Verifier certifies everything matches. A closed loop, no gaps."
+    }
+  },
+  "pricing": {
+    "categories": {
+      "flow": {
+        "products": [
+          {
+            "name": "GeoTapp Flow Business",
+            "tagline": "For structured businesses.",
+            "desc": "The complete solution for structured companies and complex organizations.",
+            "features": [
+              "Unlimited teams (not timetracker users)",
+              "API",
+              "Priority support",
+              "Automations",
+              "Advanced reports",
+              "TimeTracker: unlimited*"
+            ]
+          },
+          {
+            "name": "GeoTapp Flow Team",
+            "tagline": "For small operational teams.",
+            "desc": "Coordinate and manage your operational team in real time.",
+            "features": [
+              "5 Flow users included (not timetracker)",
+              "Job management",
+              "Field clock-ins",
+              "Operational reports",
+              "Integrations",
+              "TimeTracker: max 5 users*"
+            ]
+          },
+          {
+            "name": "GeoTapp Flow Solo",
+            "tagline": "For freelancers and micro-businesses.",
+            "desc": "Everything you need to manage field jobs independently.",
+            "features": [
+              "1 user",
+              "Task management",
+              "Basic reports",
+              "Essential integrations",
+              "TimeTracker: max 2 users*"
+            ]
+          }
+        ]
+      }
+    },
+    "simulator": {
+      "enterprise_desc": "For large organizations we offer tailored solutions."
+    }
+  },
+  "product_pages": {
+    "flow": {
+      "systems": {
+        "quantum-logistics": {
+          "short": "Plan interventions, visualize the operational calendar and manage team availability without overlaps.",
+          "full": "### Full View of Planned Work.\n\nWithout a shared calendar, planning becomes chaotic.\n**Intervention Calendar** gives you clear operational visibility.\n\n#### Advanced Planning\n\nView all interventions on daily, weekly and monthly calendar views.\nIdentify overlaps and optimize workload distribution.\n\n#### Team Availability\n\nSee who is available, who is on leave and who is already overloaded.\nAssign new interventions without creating operational conflicts."
+        },
+        "the-architect": {
+          "short": "Organize work into phases, tasks and deadlines. Keep the project under control without spreadsheets or WhatsApp messages."
+        },
+        "the-oracle": {
+          "full": "### Operational Data, Not Assumptions.\n\nDeciding without reliable data is dangerous.\n**Operational Visibility** turns field data into concrete information.\n\n#### Operational Dashboard\n\nSee in real time:\n- Open and in-progress interventions\n- Active technicians\n- Interventions completed today and this week\n\n#### Periodic Reports\n\nReceive automated activity summaries.\nCompare periods, identify bottlenecks and optimize operations."
+        }
+      }
+    },
+    "app": {
+      "systems": {
+        "event-horizon": {
+          "full": "### No Shift Conflicts.\n\nOrganizing mobile personnel requires clarity.\n**Shift Planning** gives the manager a precise, up-to-date view.\n\n#### Calendar View\n\nSee who works when.\nIdentify absences, holidays and overlaps before they become operational problems.\n\n#### Real-time Availability\n\nEmployees confirm attendance or report absences directly from the app.\nThe manager sees gaps in the schedule before assigning new jobs."
+        },
+        "unit-matrix": {
+          "full": "### Know Your Team.\n\nEvery operator is a key operational resource.\n**Operator Registry** centralizes all vital information.\n\n#### Certification Management\n\nSee at a glance who holds the required qualifications for a specific intervention or site.\n\n#### Rapid Onboarding\n\nAdding a new technician is simple.\nSend an invite link: within minutes they are operational on GeoTapp TimeTracker."
+        },
+        "sector-grid": {
+          "short": "Create a database of operational sites and worksites. Link each intervention to the correct location and organize teams by zone.",
+          "full": "### Every Intervention in the Right Place.\n\nWorking without geographic reference generates confusion.\n**Sites and Worksites** brings operational clarity.\n\n#### Site Database\n\nCreate a catalogue of client sites, worksites and operational locations.\nThe system automatically links technician activity to the intervention site.\n\n#### Zone-based Teams\n\nOrganize technicians into teams by site or geographic area.\nAssign interventions to the correct team, not just the individual."
+        }
+      }
+    }
   }
 }
