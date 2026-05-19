@@ -59,8 +59,8 @@ const LOCALE_META: Record<string, { title: string; description: string }> = {
     description: 'Timbrature GPS certificate, prove fotografiche e report non alterabili per imprese con squadre in esterno. Elimina contestazioni — prova gratis.',
   },
   en: {
-    title: 'GPS Time Tracking for Field Teams | GeoTapp',
-    description: 'Track field team hours, GPS location and job photos automatically. Tamper-proof reports stop disputes before they start. Try free — GDPR compliant.',
+    title: 'Client disputes the work? Prove every visit | GeoTapp',
+    description: 'Client claims the job was not done? GeoTapp logs GPS, timestamps, photos and tamper-proof reports. Prove every visit and get paid without argument.',
   },
   de: {
     title: 'Kunde bestreitet? Einsätze belegen | GPS-Software Außendienst',
