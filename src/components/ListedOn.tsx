@@ -124,15 +124,75 @@ const TrustRadiusLogo = ({ scale }: { scale: number }) => (
   </svg>
 );
 
+/* ── G2 logo: red square with G2 wordmark ── */
+const G2Logo = ({ scale }: { scale: number }) => (
+  <svg width={80 * scale} height={32 * scale} viewBox="0 0 80 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <rect x="2" y="4" width="24" height="24" rx="4" fill="#FF492C"/>
+    <text x="6" y="23" fontFamily="var(--font-poppins, Poppins, sans-serif)" fontSize="15" fontWeight="800" fill="#fff">G2</text>
+    <text x="32" y="23" fontFamily="var(--font-poppins, Poppins, sans-serif)" fontSize="17" fontWeight="700" fill="#FF492C">G2</text>
+  </svg>
+);
+
+/* ── SourceForge logo: orange brand square + wordmark ── */
+const SourceForgeLogo = ({ scale }: { scale: number }) => (
+  <svg width={160 * scale} height={32 * scale} viewBox="0 0 160 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <rect x="2" y="4" width="24" height="24" rx="4" fill="#EE7600"/>
+    <path d="M9 11 L14 16 L9 21 M15 21 L20 16 L15 11" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+    <text x="32" y="23" fontFamily="var(--font-poppins, Poppins, sans-serif)" fontSize="16" fontWeight="700" fill="#1F2937">SourceForge</text>
+  </svg>
+);
+
+/* ── Slashdot logo: green diamond + wordmark ── */
+const SlashdotLogo = ({ scale }: { scale: number }) => (
+  <svg width={130 * scale} height={32 * scale} viewBox="0 0 130 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <rect x="2" y="4" width="24" height="24" rx="4" fill="#006666"/>
+    <text x="7" y="22" fontFamily="var(--font-poppins, Poppins, sans-serif)" fontSize="16" fontWeight="800" fill="#fff" fontStyle="italic">/.</text>
+    <text x="32" y="23" fontFamily="var(--font-poppins, Poppins, sans-serif)" fontSize="16" fontWeight="700" fill="#006666">Slashdot</text>
+  </svg>
+);
+
+/* ── Top Business Software logo: blue square + wordmark ── */
+const TopBusinessSoftwareLogo = ({ scale }: { scale: number }) => (
+  <svg width={210 * scale} height={32 * scale} viewBox="0 0 210 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <rect x="2" y="4" width="24" height="24" rx="4" fill="#1E40AF"/>
+    <text x="9" y="22" fontFamily="var(--font-poppins, Poppins, sans-serif)" fontSize="14" fontWeight="800" fill="#fff">TBS</text>
+    <text x="32" y="23" fontFamily="var(--font-poppins, Poppins, sans-serif)" fontSize="14" fontWeight="700" fill="#1E40AF">Top Business Software</text>
+  </svg>
+);
+
+/* ── AlternativeTo logo: orange square with white pointer + wordmark ── */
+const AlternativeToLogo = ({ scale }: { scale: number }) => (
+  <svg width={170 * scale} height={32 * scale} viewBox="0 0 170 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <rect x="2" y="4" width="24" height="24" rx="4" fill="#F7941D"/>
+    <path d="M8 14 L14 10 L14 12.5 L20 12.5 L20 15.5 L14 15.5 L14 18 Z" fill="#fff"/>
+    <text x="32" y="23" fontFamily="var(--font-poppins, Poppins, sans-serif)" fontSize="16" fontWeight="700" fill="#1F2937">AlternativeTo</text>
+  </svg>
+);
+
+/* ── SaaSworthy logo: teal square with S + wordmark ── */
+const SaaSworthyLogo = ({ scale }: { scale: number }) => (
+  <svg width={150 * scale} height={32 * scale} viewBox="0 0 150 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <rect x="2" y="4" width="24" height="24" rx="4" fill="#0FB6D8"/>
+    <text x="9" y="22" fontFamily="var(--font-poppins, Poppins, sans-serif)" fontSize="15" fontWeight="800" fill="#fff">S</text>
+    <text x="32" y="23" fontFamily="var(--font-poppins, Poppins, sans-serif)" fontSize="16" fontWeight="700" fill="#0FB6D8">SaaSworthy</text>
+  </svg>
+);
+
 const URLS = {
   capterra: 'https://www.capterra.com/p/10041643/GeoTapp-Flow/',
   getapp: 'https://www.getapp.com/operations-management-software/a/geotapp-flow/',
   softwareadvice: 'https://www.softwareadvice.com/product/548499-GeoTapp-Flow/',
   saashub: 'https://www.saashub.com/geotapp',
   trustradius: 'https://www.trustradius.com/products/geotapp-flow/',
+  g2: 'https://www.g2.com/products/geotapp-flow/',
+  sourceforge: 'https://sourceforge.net/software/product/GeoTapp/',
+  slashdot: 'https://slashdot.org/software/p/GeoTapp/',
+  topbusinesssoftware: 'https://topbusinesssoftware.com/products/GeoTapp/',
   kompass: 'https://it.kompass.com/c/geotapp/it1415466/',
   cylex: 'https://www.cylex-italia.it/trenzano/geotapp-16334946.html',
   hotfrog: 'https://www.hotfrog.it/company/b582d0c9ce6459cc7416dce853e50149',
+  alternativeto: 'https://alternativeto.net/software/geotapp-flow/about/',
+  saasworthy: 'https://www.saasworthy.com/product/geotapp-flow',
 };
 
 /* ── Compact footer variant ── */
@@ -162,7 +222,13 @@ function CompactListedOn({ locale }: { locale: string }) {
           { name: 'GetApp', url: URLS.getapp, logo: <GetAppLogo scale={1} /> },
           { name: 'Software Advice', url: URLS.softwareadvice, logo: <SoftwareAdviceLogo scale={1} /> },
           { name: 'TrustRadius', url: URLS.trustradius, logo: <TrustRadiusLogo scale={1} /> },
+          { name: 'G2', url: URLS.g2, logo: <G2Logo scale={1} /> },
+          { name: 'SourceForge', url: URLS.sourceforge, logo: <SourceForgeLogo scale={1} /> },
+          { name: 'Slashdot', url: URLS.slashdot, logo: <SlashdotLogo scale={1} /> },
+          { name: 'Top Business Software', url: URLS.topbusinesssoftware, logo: <TopBusinessSoftwareLogo scale={1} /> },
           { name: 'SaaSHub', url: URLS.saashub, logo: <SaaSHubLogo scale={1} /> },
+          { name: 'AlternativeTo', url: URLS.alternativeto, logo: <AlternativeToLogo scale={1} /> },
+          { name: 'SaaSworthy', url: URLS.saasworthy, logo: <SaaSworthyLogo scale={1} /> },
         ].map((p) => (
           <a key={p.name} href={p.url} target="_blank" rel="noopener noreferrer" aria-label={p.name}
             style={{ opacity: 0.6, transition: 'opacity 0.2s', display: 'flex', alignItems: 'center' }}
@@ -184,7 +250,13 @@ function FullListedOn({ locale }: { locale: string }) {
     { name: 'GetApp', url: URLS.getapp, logo: <GetAppLogo scale={2.5} /> },
     { name: 'Software Advice', url: URLS.softwareadvice, logo: <SoftwareAdviceLogo scale={2.5} /> },
     { name: 'TrustRadius', url: URLS.trustradius, logo: <TrustRadiusLogo scale={2.5} /> },
+    { name: 'G2', url: URLS.g2, logo: <G2Logo scale={2.5} /> },
+    { name: 'SourceForge', url: URLS.sourceforge, logo: <SourceForgeLogo scale={2.5} /> },
+    { name: 'Slashdot', url: URLS.slashdot, logo: <SlashdotLogo scale={2.5} /> },
+    { name: 'Top Business Software', url: URLS.topbusinesssoftware, logo: <TopBusinessSoftwareLogo scale={2.5} /> },
     { name: 'SaaSHub', url: URLS.saashub, logo: <SaaSHubLogo scale={2.5} /> },
+    { name: 'AlternativeTo', url: URLS.alternativeto, logo: <AlternativeToLogo scale={2.5} /> },
+    { name: 'SaaSworthy', url: URLS.saasworthy, logo: <SaaSworthyLogo scale={2.5} /> },
     { name: 'Cylex', url: URLS.cylex, logo: <CylexLogo scale={2.5} /> },
     { name: 'Hotfrog', url: URLS.hotfrog, logo: <HotfrogLogo scale={2.5} /> },
   ];
