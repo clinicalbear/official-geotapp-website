@@ -181,6 +181,9 @@ export default function Reviews({ locale }: { locale: string }) {
         <style>{`
           .reviews-marquee {
             overflow: hidden;
+            /* Vertical padding gives room for the card hover lift + shadow,
+               which would otherwise be clipped by overflow: hidden. */
+            padding: 1.5rem 0;
             -webkit-mask-image: linear-gradient(to right, transparent, #000 5%, #000 95%, transparent);
             mask-image: linear-gradient(to right, transparent, #000 5%, #000 95%, transparent);
           }
