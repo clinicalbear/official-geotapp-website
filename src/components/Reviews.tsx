@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Star, ExternalLink } from 'lucide-react';
-import { REVIEWS, type Source } from '@/data/reviews';
+import { REVIEWS, resolveReviewText, type Source } from '@/data/reviews';
 
 type ReviewsCopy = {
   heading: string;
@@ -10,20 +10,21 @@ type ReviewsCopy = {
   viewOn: string;
   aggregateLine: string;
   starsAriaLabel: string;
+  translationNote: string;
 };
 
 const COPY: Record<string, ReviewsCopy> = {
-  it: { heading: 'Ascolta chi ci usa ogni giorno', subheading: 'Recensioni reali da fonti verificate indipendenti', viewOn: 'Vedi su {source}', aggregateLine: 'Media {avg} stelle su {count} recensioni', starsAriaLabel: '{rating} stelle su 5' },
-  en: { heading: 'What our customers say', subheading: 'Real reviews from verified independent sources', viewOn: 'View on {source}', aggregateLine: 'Average {avg} stars across {count} reviews', starsAriaLabel: '{rating} stars out of 5' },
-  de: { heading: 'Was unsere Kunden sagen', subheading: 'Echte Bewertungen aus unabhängig verifizierten Quellen', viewOn: 'Auf {source} ansehen', aggregateLine: 'Durchschnitt {avg} Sterne aus {count} Bewertungen', starsAriaLabel: '{rating} von 5 Sternen' },
-  fr: { heading: 'Ce que disent nos clients', subheading: 'Avis réels issus de sources indépendantes vérifiées', viewOn: 'Voir sur {source}', aggregateLine: 'Moyenne {avg} étoiles sur {count} avis', starsAriaLabel: '{rating} étoiles sur 5' },
-  es: { heading: 'Lo que dicen nuestros clientes', subheading: 'Reseñas reales de fuentes independientes verificadas', viewOn: 'Ver en {source}', aggregateLine: 'Promedio {avg} estrellas sobre {count} reseñas', starsAriaLabel: '{rating} estrellas sobre 5' },
-  pt: { heading: 'O que dizem os nossos clientes', subheading: 'Avaliações reais de fontes independentes verificadas', viewOn: 'Ver em {source}', aggregateLine: 'Média {avg} estrelas em {count} avaliações', starsAriaLabel: '{rating} estrelas em 5' },
-  nl: { heading: 'Wat onze klanten zeggen', subheading: 'Echte reviews uit onafhankelijk geverifieerde bronnen', viewOn: 'Bekijk op {source}', aggregateLine: 'Gemiddeld {avg} sterren over {count} reviews', starsAriaLabel: '{rating} van de 5 sterren' },
-  ru: { heading: 'Что говорят наши клиенты', subheading: 'Реальные отзывы из независимых проверенных источников', viewOn: 'Смотреть на {source}', aggregateLine: 'Средняя оценка {avg} звёзд из {count} отзывов', starsAriaLabel: '{rating} звёзд из 5' },
-  da: { heading: 'Hvad vores kunder siger', subheading: 'Ægte anmeldelser fra uafhængige verificerede kilder', viewOn: 'Se på {source}', aggregateLine: 'Gennemsnit {avg} stjerner ud af {count} anmeldelser', starsAriaLabel: '{rating} ud af 5 stjerner' },
-  sv: { heading: 'Vad våra kunder säger', subheading: 'Riktiga recensioner från oberoende verifierade källor', viewOn: 'Visa på {source}', aggregateLine: 'Genomsnitt {avg} stjärnor av {count} recensioner', starsAriaLabel: '{rating} av 5 stjärnor' },
-  nb: { heading: 'Hva kundene våre sier', subheading: 'Ekte anmeldelser fra uavhengige verifiserte kilder', viewOn: 'Se på {source}', aggregateLine: 'Gjennomsnitt {avg} stjerner av {count} anmeldelser', starsAriaLabel: '{rating} av 5 stjerner' },
+  it: { heading: 'Ascolta chi ci usa ogni giorno', subheading: 'Recensioni reali da fonti verificate indipendenti', viewOn: 'Vedi su {source}', aggregateLine: 'Media {avg} stelle su {count} recensioni', starsAriaLabel: '{rating} stelle su 5', translationNote: 'Le recensioni sono tradotte per facilitarne la lettura. Clicca su una recensione per leggere l’originale verificato sulla fonte.' },
+  en: { heading: 'What our customers say', subheading: 'Real reviews from verified independent sources', viewOn: 'View on {source}', aggregateLine: 'Average {avg} stars across {count} reviews', starsAriaLabel: '{rating} stars out of 5', translationNote: 'Reviews are translated for easier reading. Click any review to read the verified original on its source.' },
+  de: { heading: 'Was unsere Kunden sagen', subheading: 'Echte Bewertungen aus unabhängig verifizierten Quellen', viewOn: 'Auf {source} ansehen', aggregateLine: 'Durchschnitt {avg} Sterne aus {count} Bewertungen', starsAriaLabel: '{rating} von 5 Sternen', translationNote: 'Die Bewertungen wurden zur besseren Lesbarkeit übersetzt. Klicken Sie auf eine Bewertung, um das verifizierte Original an der Quelle zu lesen.' },
+  fr: { heading: 'Ce que disent nos clients', subheading: 'Avis réels issus de sources indépendantes vérifiées', viewOn: 'Voir sur {source}', aggregateLine: 'Moyenne {avg} étoiles sur {count} avis', starsAriaLabel: '{rating} étoiles sur 5', translationNote: 'Les avis sont traduits pour faciliter la lecture. Cliquez sur un avis pour lire l’original vérifié sur sa source.' },
+  es: { heading: 'Lo que dicen nuestros clientes', subheading: 'Reseñas reales de fuentes independientes verificadas', viewOn: 'Ver en {source}', aggregateLine: 'Promedio {avg} estrellas sobre {count} reseñas', starsAriaLabel: '{rating} estrellas sobre 5', translationNote: 'Las reseñas están traducidas para facilitar la lectura. Haz clic en una reseña para leer el original verificado en su fuente.' },
+  pt: { heading: 'O que dizem os nossos clientes', subheading: 'Avaliações reais de fontes independentes verificadas', viewOn: 'Ver em {source}', aggregateLine: 'Média {avg} estrelas em {count} avaliações', starsAriaLabel: '{rating} estrelas em 5', translationNote: 'As avaliações são traduzidas para facilitar a leitura. Clica numa avaliação para ler o original verificado na fonte.' },
+  nl: { heading: 'Wat onze klanten zeggen', subheading: 'Echte reviews uit onafhankelijk geverifieerde bronnen', viewOn: 'Bekijk op {source}', aggregateLine: 'Gemiddeld {avg} sterren over {count} reviews', starsAriaLabel: '{rating} van de 5 sterren', translationNote: 'De reviews zijn vertaald voor het leesgemak. Klik op een review om het geverifieerde origineel bij de bron te lezen.' },
+  ru: { heading: 'Что говорят наши клиенты', subheading: 'Реальные отзывы из независимых проверенных источников', viewOn: 'Смотреть на {source}', aggregateLine: 'Средняя оценка {avg} звёзд из {count} отзывов', starsAriaLabel: '{rating} звёзд из 5', translationNote: 'Отзывы переведены для удобства чтения. Нажмите на отзыв, чтобы прочитать проверенный оригинал на источнике.' },
+  da: { heading: 'Hvad vores kunder siger', subheading: 'Ægte anmeldelser fra uafhængige verificerede kilder', viewOn: 'Se på {source}', aggregateLine: 'Gennemsnit {avg} stjerner ud af {count} anmeldelser', starsAriaLabel: '{rating} ud af 5 stjerner', translationNote: 'Anmeldelserne er oversat for at gøre dem lettere at læse. Klik på en anmeldelse for at læse den verificerede original ved kilden.' },
+  sv: { heading: 'Vad våra kunder säger', subheading: 'Riktiga recensioner från oberoende verifierade källor', viewOn: 'Visa på {source}', aggregateLine: 'Genomsnitt {avg} stjärnor av {count} recensioner', starsAriaLabel: '{rating} av 5 stjärnor', translationNote: 'Recensionerna är översatta för att underlätta läsningen. Klicka på en recension för att läsa det verifierade originalet vid källan.' },
+  nb: { heading: 'Hva kundene våre sier', subheading: 'Ekte anmeldelser fra uavhengige verifiserte kilder', viewOn: 'Se på {source}', aggregateLine: 'Gjennomsnitt {avg} stjerner av {count} anmeldelser', starsAriaLabel: '{rating} av 5 stjerner', translationNote: 'Anmeldelsene er oversatt for å gjøre dem lettere å lese. Klikk på en anmeldelse for å lese den verifiserte originalen hos kilden.' },
 };
 
 const SOURCE_NAMES: Record<Source, string> = {
@@ -119,6 +120,7 @@ export default function Reviews({ locale }: { locale: string }) {
             const viewLabel = c.viewOn.replace('{source}', sourceName);
             const starsLabel = c.starsAriaLabel.replace('{rating}', String(r.rating));
             const Logo = SOURCE_LOGOS[r.source];
+            const { text, lang } = resolveReviewText(r, locale);
 
             return (
               <motion.a
@@ -139,10 +141,10 @@ export default function Reviews({ locale }: { locale: string }) {
                   ))}
                 </div>
                 <p
-                  lang={r.lang}
+                  lang={lang}
                   className="text-slate-700 text-base leading-relaxed italic flex-1"
                 >
-                  {`“${r.quote}”`}
+                  {`“${text.quote}”`}
                 </p>
                 <div className="border-t border-slate-100 pt-4 mt-auto">
                   <div className="font-semibold text-slate-900 text-sm">
@@ -171,6 +173,16 @@ export default function Reviews({ locale }: { locale: string }) {
           className="text-center text-sm text-slate-500 mt-12"
         >
           {c.aggregateLine.replace('{avg}', avgStr).replace('{count}', String(REVIEWS.length))}
+        </motion.p>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4, delay: 0.5 }}
+          className="text-center text-xs text-slate-400 mt-3 max-w-2xl mx-auto"
+        >
+          {c.translationNote}
         </motion.p>
       </div>
     </section>

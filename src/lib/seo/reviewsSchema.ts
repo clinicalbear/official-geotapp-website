@@ -38,7 +38,8 @@ export function buildReviewsSchema(reviews: Review[]): Record<string, unknown> |
       '@type': 'Review',
       author: { '@type': 'Person', name: r.reviewer.displayName },
       datePublished: r.date,
-      reviewBody: r.quote,
+      reviewBody: r.original.quote,
+      inLanguage: r.origLang,
       reviewRating: {
         '@type': 'Rating',
         ratingValue: String(r.rating),
