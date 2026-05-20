@@ -299,6 +299,8 @@ export default async function LocaleLayout({ children, params }: Props) {
               '@id': 'https://geotapp.com/#organization',
               name: 'GeoTapp',
               url: 'https://geotapp.com',
+              description:
+                'GeoTapp is a field workforce management platform: GPS-verified time tracking, geo-timestamped proof of work and team coordination for field-service businesses in construction, cleaning, security and maintenance.',
               telephone: '+393520140978',
               email: 'info@geotapp.com',
               logo: {
@@ -312,6 +314,10 @@ export default async function LocaleLayout({ children, params }: Props) {
                 'https://www.facebook.com/profile.php?id=61583303732388',
                 'https://www.instagram.com/geotapp_official/',
                 'https://t.me/geotapp',
+                'https://it.trustpilot.com/review/geotapp.com',
+                'https://www.capterra.com/p/10041643/GeoTapp-Flow/',
+                'https://alternativeto.net/software/geotapp-flow/about/',
+                'https://www.saasworthy.com/product/geotapp-flow',
               ],
               address: {
                 '@type': 'PostalAddress',
