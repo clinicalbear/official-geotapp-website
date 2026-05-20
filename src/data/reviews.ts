@@ -20,6 +20,23 @@ export type Review = {
 
 export const REVIEWS: Review[] = [
   {
+    id: 'capterra-2026-05-16-marika',
+    source: 'capterra',
+    sourceUrl: 'https://www.capterra.com/p/10041643/GeoTapp-Flow/',
+    rating: 5,
+    date: '2026-05-16',
+    lang: 'en',
+    reviewer: {
+      displayName: 'Marika B.',
+      role: 'Informatore Scientifico',
+      industry: 'Medical devices',
+      companySize: '1',
+    },
+    title: 'GeoTapp Flow is the Top',
+    quote:
+      'The app is intuitive and easy to use. Everything is entered neatly and organized. A valuable tool for organizing your daily work. I highly recommend trying it; it is useful for keeping everything under control.',
+  },
+  {
     id: 'capterra-2026-05-11',
     source: 'capterra',
     sourceUrl: 'https://www.capterra.com/p/10041643/GeoTapp-Flow/',
