@@ -318,6 +318,7 @@ export default async function LocaleLayout({ children, params }: Props) {
                 'https://www.capterra.com/p/10041643/GeoTapp-Flow/',
                 'https://alternativeto.net/software/geotapp-flow/about/',
                 'https://www.saasworthy.com/product/geotapp-flow',
+                'https://www.wikidata.org/wiki/Q139861459',
               ],
               address: {
                 '@type': 'PostalAddress',
