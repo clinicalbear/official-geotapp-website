@@ -148,7 +148,13 @@ export default function Reviews({ locale }: { locale: string }) {
                   </div>
                   <p
                     lang={lang}
-                    className="text-slate-700 text-base leading-relaxed italic flex-1"
+                    className="text-slate-700 text-base leading-relaxed italic"
+                    style={{
+                      display: '-webkit-box',
+                      WebkitLineClamp: 6,
+                      WebkitBoxOrient: 'vertical',
+                      overflow: 'hidden',
+                    }}
                   >
                     {`“${text.quote}”`}
                   </p>
@@ -189,6 +195,7 @@ export default function Reviews({ locale }: { locale: string }) {
           }
           .reviews-card {
             width: 340px;
+            height: 340px;
             flex-shrink: 0;
             margin-right: 2rem;
           }
