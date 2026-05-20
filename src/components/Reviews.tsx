@@ -114,56 +114,93 @@ export default function Reviews({ locale }: { locale: string }) {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {REVIEWS.map((r, idx) => {
-            const sourceName = SOURCE_NAMES[r.source];
-            const viewLabel = c.viewOn.replace('{source}', sourceName);
-            const starsLabel = c.starsAriaLabel.replace('{rating}', String(r.rating));
-            const Logo = SOURCE_LOGOS[r.source];
-            const { text, lang } = resolveReviewText(r, locale);
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, margin: '-40px' }}
+          transition={{ duration: 0.5 }}
+          className="reviews-marquee"
+        >
+          <div className="reviews-track">
+            {[...REVIEWS, ...REVIEWS].map((r, idx) => {
+              const sourceName = SOURCE_NAMES[r.source];
+              const viewLabel = c.viewOn.replace('{source}', sourceName);
+              const starsLabel = c.starsAriaLabel.replace('{rating}', String(r.rating));
+              const Logo = SOURCE_LOGOS[r.source];
+              const { text, lang } = resolveReviewText(r, locale);
+              const isClone = idx >= REVIEWS.length;
 
-            return (
-              <motion.a
-                key={r.id}
-                href={r.sourceUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={`${viewLabel}, ${r.reviewer.displayName}`}
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-40px' }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="group bg-white rounded-2xl border border-slate-200 p-8 shadow-sm hover:shadow-lg hover:-translate-y-1 hover:border-slate-300 transition-all flex flex-col gap-4 no-underline"
-              >
-                <div className="flex items-center gap-1" aria-label={starsLabel} role="img">
-                  {[0, 1, 2, 3, 4].map((i) => (
-                    <Star key={i} size={18} fill={i < r.rating ? '#FBBF24' : 'none'} stroke="#FBBF24" strokeWidth={1.5} aria-hidden="true" />
-                  ))}
-                </div>
-                <p
-                  lang={lang}
-                  className="text-slate-700 text-base leading-relaxed italic flex-1"
+              return (
+                <a
+                  key={`${r.id}-${idx}`}
+                  href={r.sourceUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={isClone ? undefined : `${viewLabel}, ${r.reviewer.displayName}`}
+                  aria-hidden={isClone || undefined}
+                  tabIndex={isClone ? -1 : undefined}
+                  className="reviews-card group bg-white rounded-2xl border border-slate-200 p-8 shadow-sm hover:shadow-lg hover:-translate-y-1 hover:border-slate-300 transition-all flex flex-col gap-4 no-underline"
                 >
-                  {`“${text.quote}”`}
-                </p>
-                <div className="border-t border-slate-100 pt-4 mt-auto">
-                  <div className="font-semibold text-slate-900 text-sm">
-                    {r.reviewer.displayName}
+                  <div className="flex items-center gap-1" aria-label={starsLabel} role="img">
+                    {[0, 1, 2, 3, 4].map((i) => (
+                      <Star key={i} size={18} fill={i < r.rating ? '#FBBF24' : 'none'} stroke="#FBBF24" strokeWidth={1.5} aria-hidden="true" />
+                    ))}
                   </div>
-                  {(r.reviewer.industry || r.reviewer.companySize) && (
-                    <div className="text-xs text-slate-500 mt-1">
-                      {[r.reviewer.industry, r.reviewer.companySize].filter(Boolean).join(' · ')}
+                  <p
+                    lang={lang}
+                    className="text-slate-700 text-base leading-relaxed italic flex-1"
+                  >
+                    {`“${text.quote}”`}
+                  </p>
+                  <div className="border-t border-slate-100 pt-4 mt-auto">
+                    <div className="font-semibold text-slate-900 text-sm">
+                      {r.reviewer.displayName}
                     </div>
-                  )}
-                  <div className="inline-flex items-center gap-2 mt-3 text-xs text-slate-600 group-hover:text-slate-900 transition">
-                    <Logo />
-                    <ExternalLink size={12} />
+                    {(r.reviewer.industry || r.reviewer.companySize) && (
+                      <div className="text-xs text-slate-500 mt-1">
+                        {[r.reviewer.industry, r.reviewer.companySize].filter(Boolean).join(' · ')}
+                      </div>
+                    )}
+                    <div className="inline-flex items-center gap-2 mt-3 text-xs text-slate-600 group-hover:text-slate-900 transition">
+                      <Logo />
+                      <ExternalLink size={12} />
+                    </div>
                   </div>
-                </div>
-              </motion.a>
-            );
-          })}
-        </div>
+                </a>
+              );
+            })}
+          </div>
+        </motion.div>
+
+        <style>{`
+          .reviews-marquee {
+            overflow: hidden;
+            -webkit-mask-image: linear-gradient(to right, transparent, #000 5%, #000 95%, transparent);
+            mask-image: linear-gradient(to right, transparent, #000 5%, #000 95%, transparent);
+          }
+          .reviews-track {
+            display: flex;
+            width: max-content;
+            animation: reviews-scroll 44s linear infinite;
+          }
+          .reviews-marquee:hover .reviews-track,
+          .reviews-track:focus-within {
+            animation-play-state: paused;
+          }
+          .reviews-card {
+            width: 340px;
+            flex-shrink: 0;
+            margin-right: 2rem;
+          }
+          @keyframes reviews-scroll {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+          }
+          @media (prefers-reduced-motion: reduce) {
+            .reviews-marquee { overflow-x: auto; }
+            .reviews-track { animation: none; }
+          }
+        `}</style>
 
         <motion.p
           initial={{ opacity: 0 }}
