@@ -169,7 +169,6 @@ const content: SettoreContent = {
   },
   pricing_hint: {
     label: 'Vanaf',
-    price: '€3',
     per: 'operator/maand',
     note: '14 dagen gratis proberen',
   },

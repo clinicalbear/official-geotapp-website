@@ -154,7 +154,6 @@ const content: SettoreContent = {
   },
   pricing_hint: {
     label: 'Ab',
-    price: '3 €',
     per: 'Techniker/Monat',
     note: '14 Tage kostenlos testen',
   },

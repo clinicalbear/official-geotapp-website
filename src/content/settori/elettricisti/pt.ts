@@ -108,7 +108,6 @@ const content: SettoreContent = {
   },
   pricing_hint: {
     label: 'A partir de',
-    price: '3 €',
     per: 'operador/mês',
     note: 'Experimente grátis 14 dias',
   },

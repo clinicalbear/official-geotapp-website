@@ -132,7 +132,6 @@ const content: SettoreContent = {
 
   pricing_hint: {
     label: 'От',
-    price: '3 €',
     per: 'сотрудник/месяц',
     note: '14 дней бесплатно',
   },

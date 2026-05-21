@@ -2,6 +2,12 @@
 
 import type { Metadata } from 'next';
 import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
+import {
+  EUR_PRICES,
+  convertEurToLocale,
+  getCurrencyForLocale,
+} from '@/lib/pricing';
+import type { AppLocale } from '@/lib/i18n/config';
 
 const PRICING_SCHEMA_NAME: Record<string, string> = {
   it: 'Prezzi GeoTapp', en: 'GeoTapp Pricing', de: 'GeoTapp Preise',
@@ -10,112 +16,146 @@ const PRICING_SCHEMA_NAME: Record<string, string> = {
   nb: 'GeoTapp Priser', ru: 'Цены GeoTapp',
 };
 
-const PRICING_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'WebPage',
-  'name': 'GeoTapp Pricing',
-  'mainEntity': {
-    '@type': 'ItemList',
-    'itemListElement': [
-      {
-        '@type': 'ListItem',
-        'position': 1,
-        'item': {
-          '@type': 'SoftwareApplication',
-          'name': 'GeoTapp TimeTracker',
-          'applicationCategory': 'BusinessApplication',
-          'operatingSystem': 'Android, iOS',
-          'offers': {
-            '@type': 'Offer',
-            'price': '3.00',
-            'priceCurrency': 'EUR',
-            'priceSpecification': {
-              '@type': 'UnitPriceSpecification',
-              'price': '3.00',
-              'priceCurrency': 'EUR',
-              'unitText': 'per user per month',
-              'billingIncrement': 1,
-              'referenceQuantity': { '@type': 'QuantitativeValue', 'value': 1, 'unitCode': 'MON' },
-            },
-          },
-        },
-      },
-      {
-        '@type': 'ListItem',
-        'position': 2,
-        'item': {
-          '@type': 'SoftwareApplication',
-          'name': 'GeoTapp Flow Solo',
-          'applicationCategory': 'BusinessApplication',
-          'operatingSystem': 'Web',
-          'offers': {
-            '@type': 'Offer',
-            'price': '39.00',
-            'priceCurrency': 'EUR',
-            'priceSpecification': {
-              '@type': 'UnitPriceSpecification',
-              'price': '39.00',
-              'priceCurrency': 'EUR',
-              'unitText': 'per month',
-              'referenceQuantity': { '@type': 'QuantitativeValue', 'value': 1, 'unitCode': 'MON' },
-            },
-          },
-        },
-      },
-      {
-        '@type': 'ListItem',
-        'position': 3,
-        'item': {
-          '@type': 'SoftwareApplication',
-          'name': 'GeoTapp Flow Team',
-          'applicationCategory': 'BusinessApplication',
-          'operatingSystem': 'Web',
-          'offers': {
-            '@type': 'Offer',
-            'price': '99.00',
-            'priceCurrency': 'EUR',
-          },
-        },
-      },
-      {
-        '@type': 'ListItem',
-        'position': 4,
-        'item': {
-          '@type': 'SoftwareApplication',
-          'name': 'GeoTapp Flow Business',
-          'applicationCategory': 'BusinessApplication',
-          'operatingSystem': 'Web',
-          'offers': {
-            '@type': 'Offer',
-            'price': '199.00',
-            'priceCurrency': 'EUR',
-          },
-        },
-      },
-    ],
-  },
-};
+function buildPricingSchema(locale: AppLocale) {
+  const priceCurrency = getCurrencyForLocale(locale);
+  const trackerMonthly = convertEurToLocale(
+    EUR_PRICES.tracker.tier1.perSeatMonthly,
+    locale,
+  );
+  const flowSolo = convertEurToLocale(EUR_PRICES.flow.solo.monthly, locale);
+  const flowTeam = convertEurToLocale(EUR_PRICES.flow.team.monthly, locale);
+  const flowBusiness = convertEurToLocale(
+    EUR_PRICES.flow.business.monthly,
+    locale,
+  );
+  const fmt = (n: number) => n.toFixed(2);
 
-const PRICING_FAQ: Record<string, object> = {
-  it: {
-    '@context': 'https://schema.org', '@type': 'FAQPage',
-    mainEntity: [
-      { '@type': 'Question', name: 'GeoTapp ha una prova gratuita?', acceptedAnswer: { '@type': 'Answer', text: 'Sì. GeoTapp offre una prova gratuita di 14 giorni senza carta di credito. I piani a pagamento partono da 3€ per operatore al mese (TimeTracker) e includono report sigillati, gestione multi-sito e sincronizzazione con Flow.' } },
-      { '@type': 'Question', name: 'Quanto costa GeoTapp per una piccola impresa di pulizie?', acceptedAnswer: { '@type': 'Answer', text: 'Il piano TimeTracker parte da 3€ per operatore al mese (36€/anno per utente). Per un\'impresa con 5 operatori il costo annuale è di 180€, 15€ al mese. Non ci sono costi di attivazione né vincoli contrattuali minimi.' } },
-      { '@type': 'Question', name: 'Posso cambiare piano in qualsiasi momento?', acceptedAnswer: { '@type': 'Answer', text: 'Sì. Puoi passare da un piano all\'altro in qualsiasi momento dal pannello di gestione. Non ci sono penali per il cambio o la cancellazione.' } },
-      { '@type': 'Question', name: 'Il piano include GeoTapp Flow e TimeTracker?', acceptedAnswer: { '@type': 'Answer', text: 'I piani Team e Business includono sia GeoTapp Flow (pannello web per la gestione) sia GeoTapp TimeTracker (app mobile per i tecnici). Il piano base TimeTracker include solo l\'app mobile.' } },
-      { '@type': 'Question', name: 'Sono previsti costi nascosti?', acceptedAnswer: { '@type': 'Answer', text: 'No. Il prezzo indicato è comprensivo di tutte le funzionalità del piano scelto. Non ci sono costi per supporto, aggiornamenti o utilizzo di GeoTapp Verifier da parte dei tuoi clienti.' } },
-    ],
-  },
-  en: {
-    '@context': 'https://schema.org', '@type': 'FAQPage',
-    mainEntity: [
-      { '@type': 'Question', name: 'Does GeoTapp have a free trial?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. GeoTapp offers a 14-day free trial with no credit card required. Paid plans start from €3 per operator per month (TimeTracker) and include sealed reports, multi-site management and Flow sync.' } },
-      { '@type': 'Question', name: 'Can I change plans at any time?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. You can switch plans at any time from the management panel. There are no penalties for changing or cancelling.' } },
-      { '@type': 'Question', name: 'Are there any hidden fees?', acceptedAnswer: { '@type': 'Answer', text: 'No. The listed price includes all features of the chosen plan. There are no additional costs for support, updates or your clients using GeoTapp Verifier.' } },
-    ],
-  },
-};
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    'name': 'GeoTapp Pricing',
+    'mainEntity': {
+      '@type': 'ItemList',
+      'itemListElement': [
+        {
+          '@type': 'ListItem',
+          'position': 1,
+          'item': {
+            '@type': 'SoftwareApplication',
+            'name': 'GeoTapp TimeTracker',
+            'applicationCategory': 'BusinessApplication',
+            'operatingSystem': 'Android, iOS',
+            'offers': {
+              '@type': 'Offer',
+              'price': fmt(trackerMonthly.amount),
+              'priceCurrency': priceCurrency,
+              'priceSpecification': {
+                '@type': 'UnitPriceSpecification',
+                'price': fmt(trackerMonthly.amount),
+                'priceCurrency': priceCurrency,
+                'unitText': 'per user per month',
+                'billingIncrement': 1,
+                'referenceQuantity': { '@type': 'QuantitativeValue', 'value': 1, 'unitCode': 'MON' },
+              },
+            },
+          },
+        },
+        {
+          '@type': 'ListItem',
+          'position': 2,
+          'item': {
+            '@type': 'SoftwareApplication',
+            'name': 'GeoTapp Flow Solo',
+            'applicationCategory': 'BusinessApplication',
+            'operatingSystem': 'Web',
+            'offers': {
+              '@type': 'Offer',
+              'price': fmt(flowSolo.amount),
+              'priceCurrency': priceCurrency,
+              'priceSpecification': {
+                '@type': 'UnitPriceSpecification',
+                'price': fmt(flowSolo.amount),
+                'priceCurrency': priceCurrency,
+                'unitText': 'per month',
+                'referenceQuantity': { '@type': 'QuantitativeValue', 'value': 1, 'unitCode': 'MON' },
+              },
+            },
+          },
+        },
+        {
+          '@type': 'ListItem',
+          'position': 3,
+          'item': {
+            '@type': 'SoftwareApplication',
+            'name': 'GeoTapp Flow Team',
+            'applicationCategory': 'BusinessApplication',
+            'operatingSystem': 'Web',
+            'offers': {
+              '@type': 'Offer',
+              'price': fmt(flowTeam.amount),
+              'priceCurrency': priceCurrency,
+            },
+          },
+        },
+        {
+          '@type': 'ListItem',
+          'position': 4,
+          'item': {
+            '@type': 'SoftwareApplication',
+            'name': 'GeoTapp Flow Business',
+            'applicationCategory': 'BusinessApplication',
+            'operatingSystem': 'Web',
+            'offers': {
+              '@type': 'Offer',
+              'price': fmt(flowBusiness.amount),
+              'priceCurrency': priceCurrency,
+            },
+          },
+        },
+      ],
+    },
+  };
+}
+
+function buildPricingFAQ(locale: AppLocale): Record<string, object> {
+  const monthlyRate = convertEurToLocale(
+    EUR_PRICES.tracker.tier1.perSeatMonthly,
+    locale,
+  ).formatted;
+  const annualRate = convertEurToLocale(
+    EUR_PRICES.tracker.tier1.perSeatAnnual,
+    locale,
+  ).formatted;
+  const fiveOpsAnnual = convertEurToLocale(
+    EUR_PRICES.tracker.tier1.perSeatAnnual * 5,
+    locale,
+  ).formatted;
+  const fiveOpsMonthly = convertEurToLocale(
+    (EUR_PRICES.tracker.tier1.perSeatAnnual * 5) / 12,
+    locale,
+  ).formatted;
+
+  return {
+    it: {
+      '@context': 'https://schema.org', '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: 'GeoTapp ha una prova gratuita?', acceptedAnswer: { '@type': 'Answer', text: `Sì. GeoTapp offre una prova gratuita di 14 giorni senza carta di credito. I piani a pagamento partono da ${monthlyRate} per operatore al mese (TimeTracker) e includono report sigillati, gestione multi-sito e sincronizzazione con Flow.` } },
+        { '@type': 'Question', name: 'Quanto costa GeoTapp per una piccola impresa di pulizie?', acceptedAnswer: { '@type': 'Answer', text: `Il piano TimeTracker parte da ${monthlyRate} per operatore al mese (${annualRate}/anno per utente). Per un'impresa con 5 operatori il costo annuale è di ${fiveOpsAnnual}, ${fiveOpsMonthly} al mese. Non ci sono costi di attivazione né vincoli contrattuali minimi.` } },
+        { '@type': 'Question', name: 'Posso cambiare piano in qualsiasi momento?', acceptedAnswer: { '@type': 'Answer', text: 'Sì. Puoi passare da un piano all\'altro in qualsiasi momento dal pannello di gestione. Non ci sono penali per il cambio o la cancellazione.' } },
+        { '@type': 'Question', name: 'Il piano include GeoTapp Flow e TimeTracker?', acceptedAnswer: { '@type': 'Answer', text: 'I piani Team e Business includono sia GeoTapp Flow (pannello web per la gestione) sia GeoTapp TimeTracker (app mobile per i tecnici). Il piano base TimeTracker include solo l\'app mobile.' } },
+        { '@type': 'Question', name: 'Sono previsti costi nascosti?', acceptedAnswer: { '@type': 'Answer', text: 'No. Il prezzo indicato è comprensivo di tutte le funzionalità del piano scelto. Non ci sono costi per supporto, aggiornamenti o utilizzo di GeoTapp Verifier da parte dei tuoi clienti.' } },
+      ],
+    },
+    en: {
+      '@context': 'https://schema.org', '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: 'Does GeoTapp have a free trial?', acceptedAnswer: { '@type': 'Answer', text: `Yes. GeoTapp offers a 14-day free trial with no credit card required. Paid plans start from ${monthlyRate} per operator per month (TimeTracker) and include sealed reports, multi-site management and Flow sync.` } },
+        { '@type': 'Question', name: 'Can I change plans at any time?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. You can switch plans at any time from the management panel. There are no penalties for changing or cancelling.' } },
+        { '@type': 'Question', name: 'Are there any hidden fees?', acceptedAnswer: { '@type': 'Answer', text: 'No. The listed price includes all features of the chosen plan. There are no additional costs for support, updates or your clients using GeoTapp Verifier.' } },
+      ],
+    },
+  };
+}
 
 const PRICING_BREADCRUMB: Record<string, object> = {
   it: { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'GeoTapp', item: 'https://geotapp.com' }, { '@type': 'ListItem', position: 2, name: 'Prezzi', item: 'https://geotapp.com/it/pricing/' }] },
@@ -165,7 +205,8 @@ import PricingPage from '../../pricing/page';
 
 export default async function LocalePricingPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  const faq = PRICING_FAQ[locale] ?? PRICING_FAQ['en'];
+  const pricingFaq = buildPricingFAQ(locale as AppLocale);
+  const faq = pricingFaq[locale] ?? pricingFaq['en'];
   const breadcrumb = PRICING_BREADCRUMB[locale] ?? {
     '@context': 'https://schema.org', '@type': 'BreadcrumbList',
     itemListElement: [
@@ -173,10 +214,11 @@ export default async function LocalePricingPage({ params }: { params: Promise<{ 
       { '@type': 'ListItem', position: 2, name: 'Pricing', item: `https://geotapp.com/${locale}/pricing/` },
     ],
   };
+  const pricingSchema = buildPricingSchema(locale as AppLocale);
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ ...PRICING_SCHEMA, name: PRICING_SCHEMA_NAME[locale] ?? PRICING_SCHEMA_NAME.en }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ ...pricingSchema, name: PRICING_SCHEMA_NAME[locale] ?? PRICING_SCHEMA_NAME.en }) }} />
       {faq && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />}
       <PricingPage />
     </>

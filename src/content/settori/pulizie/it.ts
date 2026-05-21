@@ -262,7 +262,6 @@ const content: SettoreContent = {
 
   pricing_hint: {
     label: 'A partire da',
-    price: '3 €',
     per: 'operatore/mese',
     note: 'Prova gratuita 14 giorni',
   },

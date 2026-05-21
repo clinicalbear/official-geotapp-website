@@ -3,14 +3,19 @@
 import PolicyConsentField from '@/components/PolicyConsentField';
 import { buildPolicyAcceptancePayload } from '@/lib/policyAcceptance';
 import { useMemo, useState, useRef } from 'react';
-import { calculatePricing, PRICING_TIERS, PricingTier } from '@/lib/pricing';
+import {
+  PRICING_TIERS,
+  PricingTier,
+  calculateTrackerQuote,
+  convertEurToLocale,
+  getCurrencyForLocale,
+} from '@/lib/pricing';
 import gsap from 'gsap';
 import { FiCheck } from 'react-icons/fi';
 import { usePathname } from 'next/navigation';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import { getLocaleFromPathname } from '@/lib/i18n/locale-routing';
 
-// Not passing tiers as props anymore to rely on the single source of truth constant for the cards
 export default function PricingSimulator() {
   const pathname = usePathname();
   const locale = getLocaleFromPathname(pathname);
@@ -25,19 +30,16 @@ export default function PricingSimulator() {
   const [termsAccepted, setTermsAccepted] = useState(false);
   const [privacyRead, setPrivacyRead] = useState(false);
 
-  // Refs for animation targets only
   const thumbRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
   const minSeats = 1;
-  const maxSeats = 151; // 151 triggers Enterprise
+  const maxSeats = 151;
 
-  // Quote Calculation
   const quote = useMemo(() => {
-    return calculatePricing(seatCount);
-  }, [seatCount]);
+    return calculateTrackerQuote(seatCount, locale);
+  }, [seatCount, locale]);
 
-  // Current Active Tier Object
   const currentTier = useMemo(() => {
     return PRICING_TIERS.find(
       (t) =>
@@ -45,19 +47,16 @@ export default function PricingSimulator() {
         (t.maxSeats === null || seatCount <= t.maxSeats),
     );
   }, [seatCount]);
-  // -------- PURE REACT POSITIONING --------
-  // Clamp progress to 100% for the slider visual, even if > 150
+
   const sliderPercent = Math.min(
     100,
     ((seatCount - minSeats) / (150 - minSeats)) * 100,
   );
 
-  // Dynamic Scale Calculation (1.0 at min -> 1.8 at max)
   const dynamicScale = 1 + (Math.min(seatCount, 150) / 150) * 0.8;
 
   const lastSeatCount = useRef(seatCount);
 
-  // Inertia/Tilt Effect
   useMemo(() => {
     const delta = seatCount - lastSeatCount.current;
     const marker = thumbRef.current?.querySelector(
@@ -69,14 +68,13 @@ export default function PricingSimulator() {
 
       gsap.to(marker, {
         rotation: rotation,
-        scale: dynamicScale, // Apply dynamic size during drag
-        opacity: 1, // Ensure visibility
+        scale: dynamicScale,
+        opacity: 1,
         y: -5,
         duration: 0.1,
         overwrite: true,
       });
 
-      // Return to 0 rotation but keep scale
       gsap.to(marker, {
         rotation: 0,
         scale: dynamicScale,
@@ -89,7 +87,6 @@ export default function PricingSimulator() {
     lastSeatCount.current = seatCount;
   }, [seatCount, dynamicScale]);
 
-  // Animations for Press/Release (Visual Flair only)
   const handleInputDown = () => {
     const marker = thumbRef.current?.querySelector(
       '.ui-range__marker-container',
@@ -127,7 +124,6 @@ export default function PricingSimulator() {
       setEmailError(ps.email_error_format);
       return false;
     }
-    // Basic check for common placeholder domains or typos
     if (email.endsWith('@example.com') || email.endsWith('@test.com')) {
       setEmailError(ps.email_error_placeholder);
       return false;
@@ -139,7 +135,7 @@ export default function PricingSimulator() {
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const val = e.target.value;
     setContactEmail(val);
-    if (emailError) validateEmail(val); // Clear error as they type
+    if (emailError) validateEmail(val);
   };
 
   const handleEmailBlur = () => {
@@ -158,9 +154,7 @@ export default function PricingSimulator() {
     setStatus(null);
     setIsSuccess(false);
     try {
-      // Check for Enterprise
-      if (quote?.isCustom) {
-        // Submit as contact/lead instead of stripe checkout
+      if (quote.isCustom) {
         const res = await fetch(
           `${process.env.NEXT_PUBLIC_SAAS_URL || 'https://crm.geotapp.com'}/api/v1/public/contact`,
           {
@@ -180,18 +174,6 @@ export default function PricingSimulator() {
         return;
       }
 
-      const items = [
-        {
-          name: 'GeoTapp Timetracker License',
-          price: quote.unitAnnual,
-          period: 'year',
-          quantity: seatCount,
-          metadata: {
-            details: `${seatCount} users (annual)`,
-          },
-        },
-      ];
-
       const res = await fetch(
         `${process.env.NEXT_PUBLIC_SAAS_URL || 'https://crm.geotapp.com'}/api/v1/checkout`,
         {
@@ -201,7 +183,10 @@ export default function PricingSimulator() {
             items: [
               {
                 name: 'GeoTapp Timetracker License',
-                price: quote.unitAnnual,
+                price: quote.eur.avgPerSeatAnnual,
+                currency: getCurrencyForLocale(locale),
+                displayAmount: quote.display.avgPerSeatAnnual.amount,
+                displayFormatted: quote.display.avgPerSeatAnnual.formatted,
                 period: 'year',
                 quantity: seatCount,
                 stripePriceId: 'prod_TZxemMJkQrWryr',
@@ -209,11 +194,12 @@ export default function PricingSimulator() {
                 licenseType: 'BUSINESS',
                 metadata: {
                   details: `${seatCount} users (annual)`,
-                  product_key: 'GEOTAPP_APP', // Redundant but consistent
+                  product_key: 'GEOTAPP_APP',
                 },
               },
             ],
             email: contactEmail,
+            displayCurrency: getCurrencyForLocale(locale),
             ...buildPolicyAcceptancePayload(),
           }),
         },
@@ -233,11 +219,11 @@ export default function PricingSimulator() {
     }
   };
 
-  const currency = new Intl.NumberFormat(locale || 'it', {
-    style: 'currency',
-    currency: 'EUR',
-    maximumFractionDigits: 2,
-  });
+  // Per-tier marketing card price (uses locale's currency, EUR base × FX × buffer)
+  const tierMonthlyPrice = (tier: PricingTier) => {
+    if (tier.priceAnnualPerSeat === 0) return null;
+    return convertEurToLocale(tier.priceAnnualPerSeat / 12, locale);
+  };
 
   return (
     <div ref={containerRef} className="max-w-7xl mx-auto px-4 select-none">
@@ -245,6 +231,7 @@ export default function PricingSimulator() {
       <div className="grid md:grid-cols-3 gap-8 mb-16">
         {PRICING_TIERS.map((tier) => {
           const isActive = currentTier?.code === tier.code;
+          const tierPrice = tierMonthlyPrice(tier);
           return (
             <div
               key={tier.code}
@@ -267,14 +254,14 @@ export default function PricingSimulator() {
               </p>
 
               <div className="mb-6">
-                {tier.maxSeats === null ? (
+                {tier.maxSeats === null || !tierPrice ? (
                   <span className="text-4xl font-bold text-gray-900">
                     Custom
                   </span>
                 ) : (
                   <div className="flex items-baseline gap-1">
                     <span className="text-4xl font-bold text-gray-900">
-                      €{tier.priceAnnualPerSeat / 12}
+                      {tierPrice.formatted}
                     </span>
                     <span className="text-gray-500">{ps.per_month}</span>
                   </div>
@@ -317,9 +304,7 @@ export default function PricingSimulator() {
               </span>
             </label>
 
-            {/* SLIDER AREA */}
             <div className="mb-8 mt-4 relative" style={{ height: '60px' }}>
-              {/* Custom Visual Layer */}
               <div
                 className="absolute top-4 left-0 right-0 pointer-events-none"
                 style={{ zIndex: 1 }}
@@ -334,7 +319,6 @@ export default function PricingSimulator() {
                     }}
                   />
                 </div>
-                {/* Visual Thumb */}
                 <div
                   ref={thumbRef}
                   className="absolute top-0 w-6 h-6 flex items-center justify-center"
@@ -359,7 +343,6 @@ export default function PricingSimulator() {
                 </div>
               </div>
 
-              {/* NATIVE RANGE INPUT */}
               <input
                 type="range"
                 min={minSeats}
@@ -392,7 +375,7 @@ export default function PricingSimulator() {
                 <div className="flex justify-between items-center mb-2">
                   <span className="text-gray-600">{ps.price_per_user}</span>
                   <span className="text-lg font-bold text-gray-900">
-                    {currency.format(quote.unitAnnual / 12)}
+                    {quote.display.avgPerSeatMonthly.formatted}
                     <span className="text-xs font-normal text-gray-500">
                       /mo
                     </span>
@@ -403,7 +386,7 @@ export default function PricingSimulator() {
                     {ps.annual_total}
                   </span>
                   <span className="text-4xl font-bold text-geotapp-primary font-display">
-                    {currency.format(quote.totalAnnual)}
+                    {quote.display.totalAnnual.formatted}
                   </span>
                 </div>
                 <p className="text-xs text-gray-500 mt-2 text-right">{ps.plus_vat}</p>

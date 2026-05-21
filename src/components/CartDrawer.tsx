@@ -9,6 +9,11 @@ import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import { getLocaleFromPathname } from '@/lib/i18n/locale-routing';
+import {
+  formatLocalAmount,
+  getCurrencyForLocale,
+  type CurrencyCode,
+} from '@/lib/pricing';
 
 export default function CartDrawer() {
   const { items, isOpen, toggleCart, removeItem, clearCart } = useCart();
@@ -25,13 +30,20 @@ export default function CartDrawer() {
     setMounted(true);
   }, []);
 
-  // Calculate totals locally
-  const monthly = items
+  // Cart display currency: first item dictates currency, fallback to locale's currency.
+  // Items added in the same session share the user's locale, so this is consistent
+  // unless an older persisted cart has stale items in a different currency.
+  const cartCurrency: CurrencyCode =
+    items[0]?.currency ?? getCurrencyForLocale(locale);
+
+  // Totals in display currency (sum of displayAmount). EUR totals also computed
+  // for the checkout payload (backend authoritative).
+  const monthlyDisplay = items
     .filter((i) => i.period === 'mo')
-    .reduce((acc, i) => acc + i.price, 0);
-  const yearly = items
+    .reduce((acc, i) => acc + i.displayAmount, 0);
+  const yearlyDisplay = items
     .filter((i) => i.period === 'year')
-    .reduce((acc, i) => acc + i.price, 0);
+    .reduce((acc, i) => acc + i.displayAmount, 0);
 
   const [loading, setLoading] = useState(false);
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -58,7 +70,6 @@ export default function CartDrawer() {
     !termsAccepted ||
     !privacyRead;
 
-  // Checkout pipeline normalizes bundle metadata before calling SaaS checkout.
   const handleCheckout = async () => {
     if (!validateEmail(email)) {
       return;
@@ -69,7 +80,6 @@ export default function CartDrawer() {
     }
     setLoading(true);
     try {
-      // Normalize seat bundles to canonical product identifiers for pricing consistency.
       const checkoutItems = items.map((item) => {
         const isTimetrackerSeatBundle =
           Number(item?.metadata?.employeeCount) > 0 ||
@@ -99,12 +109,12 @@ export default function CartDrawer() {
           body: JSON.stringify({
             items: checkoutItems,
             email: email.trim(),
+            displayCurrency: cartCurrency,
             ...buildPolicyAcceptancePayload(),
           }),
         },
       );
       const data = await response.json();
-      // Redirect only when backend returns a signed checkout URL.
       if (data.url) {
         clearCart();
         toggleCart();
@@ -127,7 +137,6 @@ export default function CartDrawer() {
     <AnimatePresence>
       {isOpen && (
         <>
-          {/* Backdrop */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -136,7 +145,6 @@ export default function CartDrawer() {
             className="fixed inset-0 bg-slate-900/40 z-[60] backdrop-blur-sm"
           />
 
-          {/* Drawer */}
           <motion.div
             initial={{ x: '100%' }}
             animate={{ x: 0 }}
@@ -188,7 +196,7 @@ export default function CartDrawer() {
                           {dict.quantity}: {item.quantity}
                         </div>
                         <div className="font-bold text-slate-900 text-lg">
-                          €{item.price.toFixed(2)}
+                          {item.displayFormatted}
                           <span className="text-xs text-slate-500 font-normal">
                             /{item.period === 'mo' ? dict.per_month : dict.per_year}
                           </span>
@@ -203,19 +211,19 @@ export default function CartDrawer() {
             {items.length > 0 && (
               <div className="p-6 border-t border-slate-100 bg-slate-50 safe-area-pb">
                 <div className="space-y-3 mb-6">
-                  {monthly > 0 && (
+                  {monthlyDisplay > 0 && (
                     <div className="flex justify-between text-slate-600">
                       <span>{dict.total_monthly}</span>
                       <span className="text-slate-900 font-bold">
-                        €{monthly.toFixed(2)}
+                        {formatLocalAmount(monthlyDisplay, cartCurrency, locale)}
                       </span>
                     </div>
                   )}
-                  {yearly > 0 && (
+                  {yearlyDisplay > 0 && (
                     <div className="flex justify-between text-slate-600">
                       <span>{dict.total_yearly}</span>
                       <span className="text-slate-900 font-bold">
-                        €{yearly.toFixed(2)}
+                        {formatLocalAmount(yearlyDisplay, cartCurrency, locale)}
                       </span>
                     </div>
                   )}
@@ -280,5 +288,3 @@ export default function CartDrawer() {
     </AnimatePresence>
   );
 }
-
-// Cart note: preserve checkout normalization and policy acceptance flow (1/1)

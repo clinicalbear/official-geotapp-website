@@ -6,6 +6,11 @@ import FlowPage from '../../../products/geotapp-flow/page';
 import BlogHighlights from '@/components/BlogHighlights';
 import SettoriLinks from '@/components/SettoriLinks';
 import { type AppLocale } from '@/lib/i18n/config';
+import {
+  EUR_PRICES,
+  convertEurToLocale,
+  getCurrencyForLocale,
+} from '@/lib/pricing';
 
 const flowMeta: Record<string, { title: string; description: string }> = {
   it: { title: 'GeoTapp Flow — Gestione Operativa Interventi e Squadre', description: 'Sistema operativo per aziende con tecnici sul campo: commesse, attività, avanzamento e report verificabili in tempo reale.' },
@@ -81,17 +86,30 @@ const FLOW_FAQ: Record<string, object> = {
   },
 };
 
-const FLOW_SOFTWARE: Record<string, object> = {
-  it: { '@context': 'https://schema.org', '@type': 'SoftwareApplication', name: 'GeoTapp Flow', operatingSystem: 'Web', applicationCategory: 'BusinessApplication', offers: { '@type': 'Offer', price: '39', priceCurrency: 'EUR', description: 'Prova gratuita 14 giorni. Piani a pagamento da 39€/mese (Flow Start).' }, url: 'https://geotapp.com/it/products/geotapp-flow/' },
-  en: { '@context': 'https://schema.org', '@type': 'SoftwareApplication', name: 'GeoTapp Flow', operatingSystem: 'Web', applicationCategory: 'BusinessApplication', offers: { '@type': 'Offer', price: '39', priceCurrency: 'EUR', description: '14-day free trial. Paid plans from €39/month (Flow Start).' }, url: 'https://geotapp.com/en/products/geotapp-flow/' },
-};
+function buildFlowSoftware(locale: AppLocale) {
+  const soloMonthly = convertEurToLocale(EUR_PRICES.flow.solo.monthly, locale);
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'GeoTapp Flow',
+    operatingSystem: 'Web',
+    applicationCategory: 'BusinessApplication',
+    offers: {
+      '@type': 'Offer',
+      price: soloMonthly.amount.toFixed(2),
+      priceCurrency: getCurrencyForLocale(locale),
+      description: `14-day free trial. Paid plans from ${soloMonthly.formatted} per month (Flow Start).`,
+    },
+    url: `https://geotapp.com/${locale}/products/geotapp-flow/`,
+  };
+}
 
 type Props = { params: Promise<{ locale: string }> };
 
 export default async function LocaleFlowPage({ params }: Props) {
   const { locale } = await params;
   const faq = FLOW_FAQ[locale] ?? FLOW_FAQ['en'];
-  const software = FLOW_SOFTWARE[locale] ?? FLOW_SOFTWARE['en'];
+  const software = buildFlowSoftware(locale as AppLocale);
   const breadcrumb = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',

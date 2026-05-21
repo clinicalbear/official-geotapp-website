@@ -108,7 +108,6 @@ const content: SettoreContent = {
   },
   pricing_hint: {
     label: 'Från',
-    price: '3 €',
     per: 'medarbetare/månad',
     note: 'Gratis provperiod 14 dagar',
   },

@@ -1,15 +1,21 @@
-
-
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
+import type { CurrencyCode } from '@/lib/pricing';
 
 export interface CartItem {
   id: string;
   name: string;
+  /** EUR price — authoritative for backend / Stripe checkout. */
   price: number;
+  /** Display currency for the user's locale. */
+  currency: CurrencyCode;
+  /** Display amount in that currency (FX-converted + buffered, psychologically rounded). */
+  displayAmount: number;
+  /** Pre-formatted display string, e.g. "$3.99" or "€36,00". */
+  displayFormatted: string;
   period?: 'mo' | 'year';
-  quantity: number; // For "Seats" or "Licenses"
-  metadata?: any; // For custom configs like "1-25 employees"
+  quantity: number;
+  metadata?: any;
 }
 
 interface CartState {
@@ -23,14 +29,13 @@ interface CartState {
 
 export const useCart = create<CartState>()(
   persist(
-    (set, get) => ({
+    (set) => ({
       items: [],
       isOpen: false,
       addItem: (newItem) =>
         set((state) => {
           const existing = state.items.find((i) => i.id === newItem.id);
           if (existing) {
-            // Update existing item (e.g. update quantity/price)
             return {
               items: state.items.map((i) =>
                 i.id === newItem.id ? { ...newItem } : i,

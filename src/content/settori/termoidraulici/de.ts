@@ -169,7 +169,6 @@ const content: SettoreContent = {
   },
   pricing_hint: {
     label: 'Ab',
-    price: '3 €',
     per: 'Operator/Monat',
     note: '14-tägige kostenlose Testphase',
   },

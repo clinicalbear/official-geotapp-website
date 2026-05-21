@@ -75,7 +75,7 @@ export default function ArticleHero({
   });
 
   return (
-    <section ref={heroRef} className="relative w-screen min-h-[40vh] md:min-h-[60vh] overflow-hidden">
+    <section ref={heroRef} className="relative w-screen min-h-[55vh] md:min-h-[65vh] mt-[72px] md:mt-[88px] overflow-hidden">
       {/* Background image with parallax or fallback gradient */}
       {image ? (
         <motion.div className="absolute inset-0" style={{ y: imageY }}>
@@ -92,16 +92,16 @@ export default function ArticleHero({
         <div className="absolute inset-0 bg-gradient-to-b from-slate-900 to-slate-800" />
       )}
 
-      {/* Gradient overlay */}
+      {/* Gradient overlay — stronger for title readability */}
       <div
         className="absolute inset-0"
         style={{
-          background: 'linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 40%)',
+          background: 'linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.1) 100%)',
         }}
       />
 
       {/* Content */}
-      <div className="absolute inset-0 flex flex-col items-center justify-end pb-12 md:pb-16 px-4">
+      <div className="absolute inset-0 flex flex-col items-center justify-end pb-10 md:pb-16 px-4 md:px-8">
         {/* Category badge */}
         {primaryCategory && (
           <motion.span
@@ -118,7 +118,8 @@ export default function ArticleHero({
 
         {/* Title */}
         <motion.h1
-          className="font-display font-bold text-white text-4xl md:text-5xl lg:text-6xl max-w-4xl text-center mb-4"
+          className="font-display font-bold text-4xl md:text-5xl lg:text-6xl max-w-4xl text-center mb-4"
+          style={{ color: '#8FC436', textShadow: '0 2px 8px rgba(0,0,0,0.7)' }}
           variants={fadeInUp}
           initial="hidden"
           animate="visible"

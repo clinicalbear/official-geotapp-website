@@ -132,7 +132,6 @@ const content: SettoreContent = {
 
   pricing_hint: {
     label: 'Vanaf',
-    price: '3 €',
     per: 'medewerker/maand',
     note: '14 dagen gratis proberen',
   },

@@ -154,7 +154,6 @@ const content: SettoreContent = {
   },
   pricing_hint: {
     label: 'À partir de',
-    price: '3 €',
     per: 'ouvrier/mois',
     note: 'Essai gratuit de 14 jours',
   },

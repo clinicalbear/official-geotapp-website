@@ -49,6 +49,30 @@ export default function Navbar() {
   // Navbar strings remain locale-bound to keep desktop/mobile menus in sync.
 
   const getLink = (path: string) => localizePath(path, currentLocale);
+
+  // Dynamic CTA based on current page
+  const isTrialPage = pathname.includes('/trial');
+  const isBlogArticle = /\/blog\/.+/.test(pathname);
+  const isPricingPage = pathname.includes('/pricing') || pathname.includes('/prezzi') || pathname.includes('/preise') || pathname.includes('/priser') || pathname.includes('/tarifs') || pathname.includes('/precios') || pathname.includes('/tarieven');
+  const isSectorPage = pathname.includes('/settori');
+  const isHomepage = pathname === '/' || /^\/[a-z]{2}\/?$/.test(pathname);
+
+  let ctaText = dict.cta_trial ?? dict.cta;
+  let ctaHref = getLink('/trial');
+  let ctaHidden = false;
+
+  if (isTrialPage) {
+    ctaText = dict.cta_signin ?? dict.login;
+    ctaHref = 'https://flow.geotapp.com';
+    ctaHidden = false;
+  } else if (isPricingPage) {
+    ctaText = dict.cta_start ?? dict.cta;
+  } else if (isBlogArticle) {
+    ctaText = dict.cta_how ?? dict.cta;
+    ctaHref = getLink('/come-funziona');
+  } else if (isHomepage || isSectorPage) {
+    ctaText = dict.cta_trial ?? dict.cta;
+  }
   const sectorLinks = [
     // edilizia, impianti, manutenzione nascosti temporaneamente — contenuto da rivedere
     {
@@ -230,11 +254,12 @@ export default function Navbar() {
           <CartButton />
 
           <Link
-            href={getLink('/trial')}
+            href={ctaHref}
+            {...(isTrialPage ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
             onClick={() => trackEvent('trial_click', { source: 'navbar' })}
             className="px-5 py-2.5 text-sm font-bold bg-slate-900 text-white rounded-lg hover:bg-primary hover:text-slate-900 transition-all duration-300 shadow-lg shadow-slate-900/20"
           >
-            {dict.cta}
+            {ctaText}
           </Link>
         </div>
 
@@ -334,11 +359,12 @@ export default function Navbar() {
               </Link>
                   <LanguageSwitcher className="justify-start" />
                   <Link
-                    href={getLink('/trial')}
+                    href={ctaHref}
+                    {...(isTrialPage ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                     onClick={() => { setIsOpen(false); trackEvent('trial_click', { source: 'navbar_mobile' }); }}
                 className="w-full py-4 text-center text-white font-bold bg-slate-900 rounded-xl shadow-lg"
               >
-                {dict.cta}
+                {ctaText}
               </Link>
             </div>
           </motion.div>

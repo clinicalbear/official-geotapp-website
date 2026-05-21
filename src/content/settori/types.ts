@@ -82,7 +82,10 @@ export interface SettoreContent {
   };
   pricing_hint?: {
     label: string;     // e.g. "A partire da"
-    price: string;     // e.g. "3 €"
+    /** @deprecated price is now computed dynamically per locale via lib/pricing.
+     * The field is kept optional for backwards compatibility with existing content
+     * files but is no longer read by SettorePageLayout. Safe to remove from content. */
+    price?: string;
     per: string;       // e.g. "operatore/mese"
     note: string;      // e.g. "Prova gratuita 14 giorni"
   };

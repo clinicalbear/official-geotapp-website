@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { Calculator, Users, TrendingDown, Check, Zap } from 'lucide-react';
 import type { AppLocale } from '@/lib/i18n/config';
 import { getDictionary } from '@/lib/i18n/dictionaries';
+import { calculateBundleQuote, getCurrencyForLocale } from '@/lib/pricing';
 
 interface BundleCalculatorProps {
   locale?: AppLocale;
@@ -26,52 +27,14 @@ export default function BundleCalculator({
   const [email, setEmail] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
-  // Flow Pricing (annual = 10 months)
-  const flowPricesYearly = {
-    solo: 390,
-    team: 990,
-    business: 1990,
-  };
+  const quote = calculateBundleQuote({
+    flowPlan,
+    employeeCount,
+    billingCycle,
+    locale,
+  });
 
-  // TimeTracker Pricing
-  const calculateTrackerPrice = () => {
-    if (billingCycle === 'monthly') {
-      // Monthly: €2.50/employee flat
-      return employeeCount * 2.5;
-    } else {
-      // Yearly: Tiered pricing
-      // 1-25: €3/mese (€36/anno)
-      // 26+: €2.50/mese (€30/anno)
-      let total = 0;
-      if (employeeCount <= 25) {
-        total = employeeCount * 36;
-      } else {
-        total = 25 * 36 + (employeeCount - 25) * 30;
-      }
-      return total;
-    }
-  };
-
-  const flowPriceBase = flowPricesYearly[flowPlan];
-  const flowPrice =
-    billingCycle === 'monthly' ? flowPriceBase / 12 : flowPriceBase;
-  const trackerPrice = calculateTrackerPrice();
-  const subtotal =
-    billingCycle === 'monthly'
-      ? flowPrice + trackerPrice
-      : flowPrice + trackerPrice;
-  const discount = subtotal * 0.15; // 15% discount
-  const total = subtotal - discount;
-  const savings = discount;
-
-  // Format price display
-  const formatPrice = (price: number) => {
-    return new Intl.NumberFormat(locale || 'it', {
-      style: 'currency',
-      currency: 'EUR',
-      minimumFractionDigits: 2,
-    }).format(price);
-  };
+  const periodSuffix = billingCycle === 'monthly' ? t.perMonth : t.perYear;
 
   const handleCheckout = async () => {
     if (!email || !email.includes('@')) {
@@ -90,11 +53,22 @@ export default function BundleCalculator({
           },
           body: JSON.stringify({
             email,
-            companyId: `bundle-${Date.now()}`, // Generate temporary company ID
+            companyId: `bundle-${Date.now()}`,
             selectedProducts: ['flow', 'tracker'],
             flowPlan,
             employeeCount,
             billingCycle,
+            // Display currency for receipts; backend still charges EUR until
+            // multi-currency presentment is enabled.
+            displayCurrency: getCurrencyForLocale(locale),
+            displayAmounts: {
+              flow: quote.display.flow.amount,
+              tracker: quote.display.tracker.amount,
+              subtotal: quote.display.subtotal.amount,
+              discount: quote.display.discount.amount,
+              total: quote.display.total.amount,
+            },
+            eurAmounts: quote.eur,
           }),
         },
       );
@@ -227,8 +201,8 @@ export default function BundleCalculator({
                 {t.flowPrice} ({flowPlan})
               </span>
               <span className="font-bold text-slate-900">
-                {formatPrice(flowPrice)}
-                {billingCycle === 'monthly' ? t.perMonth : t.perYear}
+                {quote.display.flow.formatted}
+                {periodSuffix}
               </span>
             </div>
 
@@ -239,8 +213,8 @@ export default function BundleCalculator({
                 {t.employees_unit})
               </span>
               <span className="font-bold text-slate-900">
-                {formatPrice(trackerPrice)}
-                {billingCycle === 'monthly' ? t.perMonth : t.perYear}
+                {quote.display.tracker.formatted}
+                {periodSuffix}
               </span>
             </div>
 
@@ -248,7 +222,7 @@ export default function BundleCalculator({
             <div className="flex justify-between items-center pb-3 border-b-2 border-slate-200">
               <span className="text-slate-700 font-semibold">{t.subtotal}</span>
               <span className="font-bold text-slate-900">
-                {formatPrice(subtotal)}
+                {quote.display.subtotal.formatted}
               </span>
             </div>
 
@@ -258,7 +232,7 @@ export default function BundleCalculator({
                 {t.bundleDiscount}
               </span>
               <span className="font-bold text-green-600">
-                -{formatPrice(discount)}
+                -{quote.display.discount.formatted}
               </span>
             </div>
 
@@ -269,10 +243,10 @@ export default function BundleCalculator({
               </span>
               <div className="text-right">
                 <div className="text-3xl font-black text-blue-600">
-                  {formatPrice(total)}
+                  {quote.display.total.formatted}
                 </div>
                 <div className="text-sm text-slate-600">
-                  {billingCycle === 'monthly' ? t.perMonth : t.perYear}
+                  {periodSuffix}
                 </div>
               </div>
             </div>
@@ -284,7 +258,7 @@ export default function BundleCalculator({
               className="bg-gradient-to-r from-green-50 to-emerald-50 -mx-6 px-6 py-4 flex items-center justify-center gap-2 text-green-700 font-bold border-t border-green-100"
             >
               <TrendingDown size={20} />
-              {t.savings}: {formatPrice(savings)}{' '}
+              {t.savings}: {quote.display.discount.formatted}{' '}
               {t.first_year_savings}
             </motion.div>
           </div>

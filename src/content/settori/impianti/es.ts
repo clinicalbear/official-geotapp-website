@@ -154,7 +154,6 @@ const content: SettoreContent = {
   },
   pricing_hint: {
     label: 'Desde',
-    price: '3 €',
     per: 'técnico/mes',
     note: 'Prueba gratuita de 14 días',
   },

@@ -6,12 +6,12 @@ const content: SettoreContent = {
     description: 'GeoTapp è l\'app per installatori, elettricisti, idraulici e termoidraulici: rapportini GPS verificati, prove fotografiche e report non alterabili. Prova gratis.',
   },
   hero: {
-    badge: 'Software per Installatori, Elettricisti, Idraulici e Manutentori',
-    h1_line1: 'Software per installatori e manutentori:',
-    h1_line2: 'interventi, rapportini e ore più chiare',
-    subtitle: 'GeoTapp unisce Flow + TimeTracker per chi lavora tra furgoni, cantieri e clienti finali. Le app Android e iOS aiutano il tecnico sul campo; l\'ufficio vede commessa, tempi, prove fotografiche e note senza rincorrere nessuno. Il software di gestione interventi per installatori che lavora mentre sei sul campo.',
-    cta_primary: 'Inizia subito gratuitamente!',
-    cta_note: 'Nessun vincolo. Risposta entro 12 ore lavorative.',
+    badge: 'App per Installatori, Elettricisti, Idraulici e Termoidraulici',
+    h1_line1: 'Il cliente contesta le ore?',
+    h1_line2: 'Mostragli il rapportino GPS.',
+    subtitle: 'I tuoi tecnici timbrano dallo smartphone in 5 secondi. Il sistema genera un rapportino con GPS verificato e foto — non alterabile. Quando il cliente chiede "quanto tempo ci avete messo?", hai la risposta pronta.',
+    cta_primary: 'Prova gratis 14 giorni',
+    cta_note: 'Nessuna carta di credito. Operativi dal primo giorno.',
   },
   pain: {
     title: 'Il problema che conosci già',
@@ -174,7 +174,6 @@ const content: SettoreContent = {
   },
   pricing_hint: {
     label: 'A partire da',
-    price: '3 €',
     per: 'operatore/mese',
     note: 'Prova gratuita 14 giorni',
   },

@@ -169,7 +169,6 @@ const content: SettoreContent = {
   },
   pricing_hint: {
     label: 'A partir de',
-    price: '3 €',
     per: 'operador/mês',
     note: 'Período de teste gratuito de 14 dias',
   },

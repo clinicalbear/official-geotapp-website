@@ -8,6 +8,7 @@ import ReadingProgress from '@/components/blog/ReadingProgress';
 import BackToTop from '@/components/blog/BackToTop';
 import NewsletterInline from '@/components/blog/NewsletterInline';
 import MapBackground from '@/components/blog/MapBackground';
+import Comments, { type CommentItem } from '@/components/blog/Comments';
 
 export const dynamic = 'force-dynamic';
 
@@ -175,6 +176,31 @@ async function fetchAllRelated(postId: number, locale: string): Promise<{ relate
   }
 }
 
+async function fetchComments(postId: number): Promise<CommentItem[]> {
+  try {
+    const res = await wpFetch(
+      `${WP}/wp-json/wp/v2/comments/?post=${postId}&per_page=100&order=asc&orderby=date&_fields=id,author_name,date,content,author_avatar_urls`,
+    );
+    if (!res.ok) return [];
+    const data: Array<{
+      id: number;
+      author_name?: string;
+      date: string;
+      content?: { rendered?: string };
+      author_avatar_urls?: Record<string, string>;
+    }> = await res.json();
+    return data.map((c) => ({
+      id: c.id,
+      author: stripHtml(c.author_name ?? ''),
+      date: c.date,
+      html: c.content?.rendered ?? '',
+      avatar: c.author_avatar_urls?.['48'] ?? null,
+    }));
+  } catch {
+    return [];
+  }
+}
+
 type Props = {
   params: Promise<{ slug: string[] }>;
 };
@@ -212,7 +238,10 @@ export default async function BlogArticlePage({ params }: Props) {
 
   const canonicalUrl = `https://geotapp.com/blog/${slug.join('/')}/`;
 
-  const { related: relatedPosts, more: morePosts } = await fetchAllRelated(post.id, locale);
+  const [{ related: relatedPosts, more: morePosts }, comments] = await Promise.all([
+    fetchAllRelated(post.id, locale),
+    fetchComments(post.id),
+  ]);
 
   const articleSchema = {
     '@context': 'https://schema.org',
@@ -288,6 +317,9 @@ export default async function BlogArticlePage({ params }: Props) {
           </div>
         </div>
       </div>
+
+      {/* Comments */}
+      <Comments postId={post.id} locale={locale} comments={comments} />
 
       {/* Related posts + CTA */}
       <ArticleFooter relatedPosts={relatedPosts} morePosts={morePosts} locale={locale} />

@@ -180,7 +180,6 @@ const content: SettoreContent = {
 
   pricing_hint: {
     label: 'Starting from',
-    price: '3 €',
     per: 'worker/month',
     note: '14-day free trial',
   },

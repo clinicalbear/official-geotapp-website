@@ -6,6 +6,7 @@ import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
 import { getPulizieContent } from '@/content/settori/pulizie';
 import SettorePageLayout from '@/components/SettorePageLayout';
 import BlogHighlights from '@/components/BlogHighlights';
+import { getCurrencyForLocale } from '@/lib/pricing';
 
 const pathname = '/settori/pulizie';
 
@@ -66,8 +67,8 @@ export default async function PulizieLocalePage({
     offers: {
       '@type': 'Offer',
       price: '0',
-      priceCurrency: 'EUR',
-      description: 'Prova gratuita',
+      priceCurrency: getCurrencyForLocale(resolvedLocale),
+      description: 'Free trial',
     },
   };
 

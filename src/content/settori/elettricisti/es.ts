@@ -108,7 +108,6 @@ const content: SettoreContent = {
   },
   pricing_hint: {
     label: 'Desde',
-    price: '3 €',
     per: 'operario/mes',
     note: 'Prueba gratis 14 días',
   },

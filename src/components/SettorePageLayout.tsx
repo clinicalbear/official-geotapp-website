@@ -15,6 +15,11 @@ import {
 import { JsonLd } from '@/components/seo/JsonLd';
 import DemoReportBanner from '@/components/DemoReportBanner';
 import { trackEvent } from '@/lib/analytics';
+import {
+  EUR_PRICES,
+  convertEurToLocale,
+  getCurrencyForLocale,
+} from '@/lib/pricing';
 
 
 interface Props {
@@ -52,6 +57,14 @@ export default function SettorePageLayout({ content, locale, settore, children }
   const trialLink = localizePath('/trial', locale);
   const pricingLink = localizePath('/pricing', locale);
   const sl = (getDictionary(locale) as any).settore_layout ?? {};
+
+  // Locale-aware tier-1 monthly rate (used both in the inline pricing badge
+  // and in the SoftwareApplication schema below).
+  const standardRate = convertEurToLocale(
+    EUR_PRICES.tracker.tier1.perSeatMonthly,
+    locale,
+  );
+  const standardCurrency = getCurrencyForLocale(locale);
 
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
@@ -119,9 +132,9 @@ export default function SettorePageLayout({ content, locale, settore, children }
             applicationCategory: 'BusinessApplication',
             offers: {
               '@type': 'Offer',
-              price: '3',
-              priceCurrency: 'EUR',
-              description: 'Piano TimeTracker da 3 €/operatore/mese. Prova gratuita 14 giorni.',
+              price: standardRate.amount.toFixed(2),
+              priceCurrency: standardCurrency,
+              description: `TimeTracker plan from ${standardRate.formatted} per operator per month. 14-day free trial.`,
             },
             url: `https://geotapp.com/${locale}/settori/${settore}/`,
           }} />
@@ -161,7 +174,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
               {content.pricing_hint && (
                 <div className="mt-6 inline-flex flex-wrap items-center gap-1.5 rounded-2xl border border-slate-200 bg-white px-4 py-2 text-sm text-slate-700 shadow-sm sm:gap-2 sm:rounded-full">
                   <span className="text-slate-500">{content.pricing_hint.label}</span>
-                  <span className={`font-bold ${colors.accent}`}>{content.pricing_hint.price}</span>
+                  <span className={`font-bold ${colors.accent}`}>{standardRate.formatted}</span>
                   <span className="text-slate-500">{content.pricing_hint.per}</span>
                   <span className="mx-1 hidden text-slate-300 sm:inline">·</span>
                   <span className="text-slate-400">{content.pricing_hint.note}</span>

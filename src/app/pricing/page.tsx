@@ -14,11 +14,25 @@ import {
   getLocaleFromPathname,
 } from '@/lib/i18n/locale-routing';
 import { useEffect, useState } from 'react';
+import {
+  EUR_PRICES,
+  convertEurToLocale,
+  getFlowPlanPrice,
+  getCurrencyForLocale,
+  type FlowPlanCode,
+  type LocalizedAmount,
+} from '@/lib/pricing';
+import type { AppLocale } from '@/lib/i18n/config';
 
 interface Product {
   id: string;
   name: string;
+  /** Display string for the annual price (locale-aware, e.g. "$3,990.00") */
   price: string;
+  /** Numeric annual price in EUR (authoritative for backend) */
+  priceEur: number;
+  /** Numeric annual price in display currency */
+  priceDisplay: number;
   period: string;
   tagline: string;
   desc: string;
@@ -34,14 +48,13 @@ interface Product {
 
 interface BaseProductConfig {
   id: string;
-  price: string;
+  /** Stable code used to derive the price dynamically per locale */
+  priceKey: 'tracker-annual' | FlowPlanCode;
   period: string;
   button: string;
   isBestValue?: boolean;
   isCalculator?: boolean;
   idMonthly?: string;
-  monthlyPrice?: string;
-  savings?: string;
   metadata?: Record<string, unknown>;
 }
 
@@ -54,7 +67,6 @@ interface BaseCategoryConfig {
   products: BaseProductConfig[];
 }
 
-// Base configuration for products (Ids, Prices, Colors, Logic)
 const baseCategories: BaseCategoryConfig[] = [
   {
     id: 'app',
@@ -63,7 +75,7 @@ const baseCategories: BaseCategoryConfig[] = [
     products: [
       {
         id: 'prod_TZxemMJkQrWryr',
-        price: '€36',
+        priceKey: 'tracker-annual',
         period: '/year',
         button: 'bg-emerald-600 text-white hover:bg-emerald-700',
         isCalculator: true,
@@ -82,9 +94,7 @@ const baseCategories: BaseCategoryConfig[] = [
       {
         id: process.env.NEXT_PUBLIC_STRIPE_PRICE_FLOW_ELITE_ANNUAL!,
         idMonthly: process.env.NEXT_PUBLIC_STRIPE_PRICE_FLOW_ELITE_MONTHLY!,
-        price: '1.990 €',
-        monthlyPrice: '199 €',
-        savings: '398 €',
+        priceKey: 'business',
         period: '/year',
         button: 'bg-blue-600 text-white hover:bg-blue-700',
         metadata: {
@@ -96,9 +106,7 @@ const baseCategories: BaseCategoryConfig[] = [
       {
         id: process.env.NEXT_PUBLIC_STRIPE_PRICE_FLOW_PRO_ANNUAL!,
         idMonthly: process.env.NEXT_PUBLIC_STRIPE_PRICE_FLOW_PRO_MONTHLY!,
-        price: '990 €',
-        monthlyPrice: '99 €',
-        savings: '198 €',
+        priceKey: 'team',
         period: '/year',
         button: 'bg-blue-500 text-white hover:bg-blue-600',
         metadata: {
@@ -110,9 +118,7 @@ const baseCategories: BaseCategoryConfig[] = [
       {
         id: process.env.NEXT_PUBLIC_STRIPE_PRICE_FLOW_START_ANNUAL!,
         idMonthly: process.env.NEXT_PUBLIC_STRIPE_PRICE_FLOW_START_MONTHLY!,
-        price: '390 €',
-        monthlyPrice: '39 €',
-        savings: '78 €',
+        priceKey: 'solo',
         period: '/year',
         button: 'bg-blue-400 text-white hover:bg-blue-500',
         metadata: {
@@ -125,40 +131,29 @@ const baseCategories: BaseCategoryConfig[] = [
   },
 ];
 
-// Dual-currency *informational* display for regional English locales.
-// We never replace the EUR primary price (that would over-promise: checkout
-// charges in EUR and the customer's bank converts at their daily FX rate).
-// Instead we render an APPROXIMATION underneath, plus a "Charged in EUR"
-// disclaimer at the page level, so US/UK/AU/CA visitors get familiar context
-// without false expectations of a fixed-USD checkout. Rates pinned to ECB
-// reference ± typical retail FX spread; refresh quarterly.
-const REGIONAL_FX: Partial<Record<string, { symbol: string; rate: number; position: 'before' | 'after' }>> = {
-  'en-us': { symbol: '$',  rate: 1.10, position: 'before' },
-  'en-gb': { symbol: '£',  rate: 0.86, position: 'before' },
-  'en-au': { symbol: 'A$', rate: 1.65, position: 'before' },
-  'en-ca': { symbol: 'C$', rate: 1.48, position: 'before' },
-  // en-ie keeps EUR (Ireland uses EUR natively), generic 'en' falls back to EUR-only too.
-};
-
-/**
- * Returns the approximate local-currency rendering of an EUR price, e.g.
- *   eurToLocal('€36', 'en-us') === '≈ $40 USD'
- * Used as secondary line below the primary EUR price. Never overrides the
- * primary price — only adds informational context for non-EUR visitors.
- */
-function eurToLocal(eurPrice: string | undefined, locale: string): string | null {
-  if (!eurPrice) return null;
-  const config = REGIONAL_FX[locale];
-  if (!config) return null;
-  const match = eurPrice.match(/[\d.,]+/);
-  if (!match) return null;
-  const numStr = match[0].replace(/\./g, '').replace(',', '.');
-  const num = parseFloat(numStr);
-  if (Number.isNaN(num)) return null;
-  const converted = Math.round(num * config.rate);
-  const formatted = new Intl.NumberFormat('en-US').format(converted);
-  const currencyCode = ({ 'en-us': 'USD', 'en-gb': 'GBP', 'en-au': 'AUD', 'en-ca': 'CAD' } as Record<string, string>)[locale];
-  return `≈ ${config.position === 'before' ? `${config.symbol}${formatted}` : `${formatted} ${config.symbol}`} ${currencyCode}`;
+// Build per-locale price strings for a product. Returns annual + monthly +
+// savings, all formatted in the user's currency via the central pricing module.
+function resolveProductPricing(
+  priceKey: BaseProductConfig['priceKey'],
+  locale: AppLocale,
+): {
+  annual: LocalizedAmount;
+  monthly: LocalizedAmount | null;
+  annualSavings: LocalizedAmount | null;
+} {
+  if (priceKey === 'tracker-annual') {
+    const annual = convertEurToLocale(
+      EUR_PRICES.tracker.tier1.perSeatAnnual,
+      locale,
+    );
+    return { annual, monthly: null, annualSavings: null };
+  }
+  const plan = getFlowPlanPrice(priceKey, locale);
+  return {
+    annual: plan.annual,
+    monthly: plan.monthly,
+    annualSavings: plan.annualSavings,
+  };
 }
 
 export default function Pricing() {
@@ -167,13 +162,11 @@ export default function Pricing() {
   const currentLocale = getLocaleFromPathname(pathname) ?? DEFAULT_LOCALE;
   const dict = getDictionary(currentLocale);
 
-  // State per le statistiche dei promo code
   const [promoStats, setPromoStats] = useState<
     Record<string, { used: number; remaining: number; maxUses: number }>
   >({});
   const [isLoadingStats, setIsLoadingStats] = useState(true);
 
-  // Fetch delle statistiche promo code al mount - v2
   useEffect(() => {
     const fetchPromoStats = async () => {
       try {
@@ -192,15 +185,14 @@ export default function Pricing() {
     };
 
     fetchPromoStats();
-    // Aggiorna ogni 2 minuti
     const interval = setInterval(fetchPromoStats, 120000);
     return () => clearInterval(interval);
   }, []);
 
-  // Merge base data with dictionary translations
+  // Merge base data with dictionary translations + locale-aware pricing.
   const categories = baseCategories
     .map((cat) => {
-      // @ts-ignore
+      // @ts-ignore — dictionary categories indexed by string code
       const catDict = dict.pricing?.categories?.[cat.id];
       if (!catDict) {
         console.error(`Missing category in dictionary: ${cat.id}`);
@@ -211,32 +203,32 @@ export default function Pricing() {
         title: catDict.title,
         description: catDict.description,
         products: cat.products.map((prod, i) => {
-          const merged = { ...prod, ...catDict.products[i] };
-          // Primary price stays in EUR (matches what Stripe will actually charge).
-          // For en-US/en-GB/en-AU/en-CA we add a SECONDARY informational line
-          // approximating the local-currency equivalent at today's FX rate.
+          const dictProduct = catDict.products[i] ?? {};
+          const pricing = resolveProductPricing(prod.priceKey, currentLocale);
           return {
-            ...merged,
-            priceSecondary: eurToLocal(merged.price, currentLocale),
-            monthlyPriceSecondary: eurToLocal(merged.monthlyPrice, currentLocale),
+            ...prod,
+            ...dictProduct,
+            price: pricing.annual.formatted,
+            priceEur: pricing.annual.eurAmount,
+            priceDisplay: pricing.annual.amount,
+            monthlyPrice: pricing.monthly?.formatted,
+            savings: pricing.annualSavings?.formatted,
           };
         }),
       };
     })
     .filter((cat): cat is NonNullable<typeof cat> => cat !== null);
 
+  const cartCurrency = getCurrencyForLocale(currentLocale);
+
   const handleAddToCart = (product: any) => {
     addItem({
       id: product.id,
       name: product.name,
-      // Handle Italian number format: remove € and spaces, remove thousands separator (.), replace decimal separator (,) with .
-      price: parseFloat(
-        product.price
-          .replace('€', '')
-          .replace(/\s/g, '')
-          .replace(/\./g, '')
-          .replace(',', '.'),
-      ),
+      price: product.priceEur,
+      currency: cartCurrency,
+      displayAmount: product.priceDisplay,
+      displayFormatted: product.price,
       period: product.period?.includes('year')
         ? 'year'
         : product.period?.includes('once')
@@ -267,12 +259,6 @@ export default function Pricing() {
           <p className="text-xl text-slate-500 leading-relaxed font-light max-w-2xl mx-auto">
             {dict.pricing.subtitle}
           </p>
-          {REGIONAL_FX[currentLocale] && (
-            <p className="mt-6 inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-medium bg-blue-50 border border-blue-100 text-blue-700">
-              All prices listed in EUR. Local-currency amounts shown are approximate
-              and your bank charges the EUR amount at its daily exchange rate.
-            </p>
-          )}
         </div>
       </div>
 
@@ -329,7 +315,6 @@ export default function Pricing() {
                 transition={{ delay: i * 0.1, duration: 0.4 }}
                 className={`relative p-6 rounded-2xl border border-slate-200 bg-white hover:shadow-xl hover:border-slate-300 transition-all duration-300 flex flex-col h-full ${category.id === 'app' ? 'lg:col-span-1' : ''}`}
               >
-                {/* Best Value Decoration */}
                 {(product as any).isBestValue && (
                   <span className="absolute -top-3 left-6 bg-slate-900 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest shadow-md">
                     Best Value
@@ -385,10 +370,8 @@ export default function Pricing() {
                       (product as Product).monthlyPrice,
                     );
                     const isOnce = product.period === '/once';
-                    const annualPrice = product.price.replace(/\s/g, '');
-                    const monthlyPrice = (
-                      product as Product
-                    ).monthlyPrice?.replace(/\s/g, '');
+                    const annualPrice = product.price;
+                    const monthlyPrice = (product as Product).monthlyPrice;
                     const p = dict.pricing as any;
                     const periodLabel = isOnce
                       ? 'one-time (lifetime)'
@@ -396,8 +379,6 @@ export default function Pricing() {
                         ? (p.per_year ?? '/year')
                         : product.period;
                     const savings = (product as Product).savings;
-                    const priceSecondary = (product as Product & { priceSecondary?: string | null }).priceSecondary;
-                    const monthlyPriceSecondary = (product as Product & { monthlyPriceSecondary?: string | null }).monthlyPriceSecondary;
 
                     return (
                       <>
@@ -411,11 +392,6 @@ export default function Pricing() {
                             {periodLabel}
                           </span>
                         </div>
-                        {priceSecondary && (
-                          <div className="text-xs text-slate-500 mb-1">
-                            {priceSecondary}
-                          </div>
-                        )}
                         {!isOnce && (
                           <div className="mb-2">
                             <span className="inline-block text-[9px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full bg-amber-50 border border-amber-200 text-amber-700">
@@ -423,18 +399,13 @@ export default function Pricing() {
                             </span>
                           </div>
                         )}
-                        {hasMonthly && (
+                        {hasMonthly && monthlyPrice && (
                           <div className="space-y-1">
                             <div className="text-sm text-slate-600">
                               {p.or_monthly ?? 'or'}{' '}
                               <span className="font-semibold text-slate-700">
                                 {monthlyPrice}{p.per_month_short ?? '/month'}
                               </span>
-                              {monthlyPriceSecondary && (
-                                <span className="text-xs text-slate-400 ml-1">
-                                  ({monthlyPriceSecondary})
-                                </span>
-                              )}
                             </div>
                             {savings && (
                               <div className="inline-flex items-center gap-2 px-2 py-1 bg-green-50 border border-green-200 rounded-full">
@@ -460,7 +431,6 @@ export default function Pricing() {
                   {product.desc}
                 </p>
 
-                {/* Features (Mini List) */}
                 <ul className="mb-6 space-y-2">
                   {product.features.map((f: string) => (
                     <li
@@ -498,7 +468,6 @@ export default function Pricing() {
             )}
           </div>
 
-          {/* TimeTracker footnote — only for Flow section */}
           {category.id === 'flow' && (dict.pricing as any).tracker_footnote && (
             <p className="text-xs text-slate-400 mt-4 leading-relaxed">
               {(dict.pricing as any).tracker_footnote}

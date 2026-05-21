@@ -169,7 +169,6 @@ const content: SettoreContent = {
   },
   pricing_hint: {
     label: 'Från',
-    price: '3 €',
     per: 'operatör/månad',
     note: '14 dagars gratis provperiod',
   },

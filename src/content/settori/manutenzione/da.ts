@@ -132,7 +132,6 @@ const content: SettoreContent = {
 
   pricing_hint: {
     label: 'Fra',
-    price: '3 €',
     per: 'medarbejder/måned',
     note: '14 dages gratis prøveperiode',
   },

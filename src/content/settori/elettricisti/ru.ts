@@ -108,7 +108,6 @@ const content: SettoreContent = {
   },
   pricing_hint: {
     label: 'От',
-    price: '3 €',
     per: 'сотрудник/месяц',
     note: 'Бесплатный пробный период 14 дней',
   },

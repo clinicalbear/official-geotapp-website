@@ -14,30 +14,11 @@ import { useCart } from '@/store/cart';
 import { usePathname } from 'next/navigation';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import { getLocaleFromPathname } from '@/lib/i18n/locale-routing';
-
-const calculatePrice = (count: number) => {
-  if (count > 150) return null; // Custom Quote
-
-  const tier1Limit = 25;
-  const tier1Annual = 36; // €3/mese = €36/anno per utente (1-25)
-  const tier2Annual = 30; // €2.50/mese = €30/anno per utente (26-150)
-
-  let annualTotal = 0;
-
-  if (count <= tier1Limit) {
-    annualTotal = count * tier1Annual;
-  } else {
-    // First 25 at €32/year
-    annualTotal += tier1Limit * tier1Annual;
-    // Remainder at €24/year
-    annualTotal += (count - tier1Limit) * tier2Annual;
-  }
-
-  const monthlyAverage = annualTotal / 12;
-  const averageRate = monthlyAverage / count;
-
-  return { averageRate, monthlyAverage, annualTotal };
-};
+import {
+  calculateTrackerQuote,
+  getStandardRateMonthly,
+  getCurrencyForLocale,
+} from '@/lib/pricing';
 
 export default function PricingCalculator() {
   const pathname = usePathname();
@@ -46,18 +27,25 @@ export default function PricingCalculator() {
 
   const [employees, setEmployees] = useState(10);
 
-  const price = calculatePrice(employees);
+  const quote = calculateTrackerQuote(employees, locale);
   const { addItem, toggleCart } = useCart();
-  // Hook stability check: hooks are called unconditionally at the top level.
+
+  const standardRateLabel = pc.standard_rate.replace(
+    '{price}',
+    getStandardRateMonthly(locale).formatted,
+  );
 
   const handleAddToCart = () => {
-    if (!price) return;
+    if (!quote || quote.isCustom) return;
     addItem({
       id: 'prod_TZxemMJkQrWryr',
       name: 'GeoTapp Timetracker License',
-      price: price.annualTotal, // Currently storing the FULL annual amount as the price
+      price: quote.eur.totalAnnual,
+      currency: getCurrencyForLocale(locale),
+      displayAmount: quote.display.totalAnnual.amount,
+      displayFormatted: quote.display.totalAnnual.formatted,
       period: 'year',
-      quantity: 1, // Represents 1 bundle of X employees
+      quantity: 1,
       metadata: {
         details: `${employees} Collaborators Plan`,
         employeeCount: employees,
@@ -118,21 +106,21 @@ export default function PricingCalculator() {
 
       {/* Price Display */}
       <div className="bg-slate-50 rounded-2xl p-8 border border-slate-200 mb-8 relative z-10">
-        {price ? (
+        {quote && !quote.isCustom ? (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
               <div className="text-slate-500 text-xs font-bold uppercase tracking-wider mb-2">
                 {pc.cost_per_user}
               </div>
               <div className="text-3xl font-bold text-slate-900">
-                €{price.averageRate.toFixed(2)}
+                {quote.display.avgPerSeatMonthly.formatted}
                 <span className="text-sm font-normal text-slate-400">
                   {pc.per_month}
                 </span>
               </div>
               <div className="text-xs text-blue-600 mt-2 flex items-center gap-1 font-medium bg-blue-50 inline-block px-2 py-1 rounded-md">
                 <Info size={12} />
-                {employees <= 25 ? pc.standard_rate : pc.mixed_rate}
+                {employees <= 25 ? standardRateLabel : pc.mixed_rate}
               </div>
             </div>
             <div className="text-right border-l md:border-l-0 md:border-l border-slate-200 pl-0 md:pl-8 pt-6 md:pt-0 border-t md:border-t-0">
@@ -140,11 +128,7 @@ export default function PricingCalculator() {
                 {pc.annual_total}
               </div>
               <div className="text-4xl font-display font-bold text-slate-900">
-                €
-                {price.annualTotal.toLocaleString(locale || 'it', {
-                  minimumFractionDigits: 2,
-                  maximumFractionDigits: 2,
-                })}
+                {quote.display.totalAnnual.formatted}
               </div>
               <div className="text-xs text-slate-400 mt-1">
                 {pc.annual_billing_note}
@@ -170,7 +154,7 @@ export default function PricingCalculator() {
       </div>
 
       {/* Action Button */}
-      {price && (
+      {quote && !quote.isCustom && (
         <div className="text-center relative z-10">
           <button
             onClick={handleAddToCart}

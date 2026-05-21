@@ -180,7 +180,6 @@ const content: SettoreContent = {
 
   pricing_hint: {
     label: 'À partir de',
-    price: '3 €',
     per: 'agent/mois',
     note: 'Essai gratuit 14 jours',
   },

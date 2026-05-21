@@ -169,7 +169,6 @@ const content: SettoreContent = {
   },
   pricing_hint: {
     label: 'Starting from',
-    price: '€3',
     per: 'operator/month',
     note: '14-day free trial',
   },

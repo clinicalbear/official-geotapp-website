@@ -6,6 +6,11 @@ import AppPage from '../../../products/geotapp-timetracker/page';
 import BlogHighlights from '@/components/BlogHighlights';
 import SettoriLinks from '@/components/SettoriLinks';
 import { type AppLocale } from '@/lib/i18n/config';
+import {
+  EUR_PRICES,
+  convertEurToLocale,
+  getCurrencyForLocale,
+} from '@/lib/pricing';
 
 const appMeta: Record<string, { title: string; description: string }> = {
   it: { title: 'GeoTapp TimeTracker — App Timbratura GPS per Tecnici sul Campo', description: 'GeoTapp TimeTracker è l\'app mobile per tecnici che registra presenze, attività e prove fotografiche dal campo. Timbratura GPS, report settimanali e sincronizzazione in tempo reale con Flow.' },
@@ -81,17 +86,30 @@ const APP_FAQ: Record<string, object> = {
   },
 };
 
-const APP_SOFTWARE: Record<string, object> = {
-  it: { '@context': 'https://schema.org', '@type': 'SoftwareApplication', name: 'GeoTapp TimeTracker', operatingSystem: 'Android, iOS', applicationCategory: 'BusinessApplication', offers: { '@type': 'Offer', price: '3', priceCurrency: 'EUR', description: 'Prova gratuita 14 giorni. Piani a pagamento da 3€/operatore/mese.' }, url: 'https://geotapp.com/it/products/geotapp-timetracker/' },
-  en: { '@context': 'https://schema.org', '@type': 'SoftwareApplication', name: 'GeoTapp TimeTracker', operatingSystem: 'Android, iOS', applicationCategory: 'BusinessApplication', offers: { '@type': 'Offer', price: '3', priceCurrency: 'EUR', description: '14-day free trial. Paid plans from €3/operator/month.' }, url: 'https://geotapp.com/en/products/geotapp-timetracker/' },
-};
+function buildAppSoftware(locale: AppLocale) {
+  const rate = convertEurToLocale(EUR_PRICES.tracker.tier1.perSeatMonthly, locale);
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'GeoTapp TimeTracker',
+    operatingSystem: 'Android, iOS',
+    applicationCategory: 'BusinessApplication',
+    offers: {
+      '@type': 'Offer',
+      price: rate.amount.toFixed(2),
+      priceCurrency: getCurrencyForLocale(locale),
+      description: `14-day free trial. Paid plans from ${rate.formatted} per operator per month.`,
+    },
+    url: `https://geotapp.com/${locale}/products/geotapp-timetracker/`,
+  };
+}
 
 type Props = { params: Promise<{ locale: string }> };
 
 export default async function LocaleAppPage({ params }: Props) {
   const { locale } = await params;
   const faq = APP_FAQ[locale] ?? APP_FAQ['en'];
-  const software = APP_SOFTWARE[locale] ?? APP_SOFTWARE['en'];
+  const software = buildAppSoftware(locale as AppLocale);
   const breadcrumb = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',

@@ -5,6 +5,7 @@ import VerifierPage from '../../../products/geotapp-verifier/page';
 import BlogHighlights from '@/components/BlogHighlights';
 import SettoriLinks from '@/components/SettoriLinks';
 import { type AppLocale } from '@/lib/i18n/config';
+import { getCurrencyForLocale } from '@/lib/pricing';
 
 const verifierMeta: Record<string, { title: string; description: string }> = {
   it: { title: 'GeoTapp Verifier — Verifica Indipendente dei Report di Lavoro', description: 'GeoTapp Verifier certifica ogni intervento con dati GPS sigillati, prove fotografiche con timestamp e report non alterabili. Verifica indipendente per aziende che devono difendere il lavoro svolto.' },
@@ -79,17 +80,29 @@ const VERIFIER_FAQ: Record<string, object> = {
   },
 };
 
-const VERIFIER_SOFTWARE: Record<string, object> = {
-  it: { '@context': 'https://schema.org', '@type': 'SoftwareApplication', name: 'GeoTapp Verifier', operatingSystem: 'Web', applicationCategory: 'BusinessApplication', offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR', description: 'Incluso nei piani GeoTapp. Verifica gratuita per i destinatari dei report.' }, url: 'https://geotapp.com/it/products/geotapp-verifier/' },
-  en: { '@context': 'https://schema.org', '@type': 'SoftwareApplication', name: 'GeoTapp Verifier', operatingSystem: 'Web', applicationCategory: 'BusinessApplication', offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR', description: 'Included in GeoTapp plans. Free verification for report recipients.' }, url: 'https://geotapp.com/en/products/geotapp-verifier/' },
-};
+function buildVerifierSoftware(locale: AppLocale) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'GeoTapp Verifier',
+    operatingSystem: 'Web',
+    applicationCategory: 'BusinessApplication',
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: getCurrencyForLocale(locale),
+      description: 'Included in GeoTapp plans. Free verification for report recipients.',
+    },
+    url: `https://geotapp.com/${locale}/products/geotapp-verifier/`,
+  };
+}
 
 type Props = { params: Promise<{ locale: string }> };
 
 export default async function LocaleVerifierPage({ params }: Props) {
   const { locale } = await params;
   const faq = VERIFIER_FAQ[locale] ?? VERIFIER_FAQ['en'];
-  const software = VERIFIER_SOFTWARE[locale] ?? VERIFIER_SOFTWARE['en'];
+  const software = buildVerifierSoftware(locale as AppLocale);
   const breadcrumb = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',

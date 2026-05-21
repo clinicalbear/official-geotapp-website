@@ -154,7 +154,6 @@ const content: SettoreContent = {
   },
   pricing_hint: {
     label: 'A partir de',
-    price: '3 €',
     per: 'operário/mês',
     note: 'Teste gratuito de 14 dias',
   },

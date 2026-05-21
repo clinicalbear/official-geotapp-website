@@ -49,19 +49,19 @@ export default function NewsletterInline({ locale }: NewsletterInlineProps) {
         <p className="mt-4 text-sm font-semibold text-[#8FC436]">{labels.success}</p>
       ) : (
         <form onSubmit={handleSubmit} className="mt-5 flex flex-col items-center gap-2 max-w-sm mx-auto">
-          <div className="flex items-center gap-2 w-full">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 w-full">
             <input
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder={labels.placeholder}
               required
-              className="flex-1 px-4 py-2.5 text-sm rounded-xl border border-slate-200 bg-white text-slate-700 placeholder:text-slate-400 outline-none focus:border-[#8FC436] transition-colors"
+              className="flex-1 min-w-0 px-4 py-2.5 text-sm rounded-xl border border-slate-200 bg-white text-slate-700 placeholder:text-slate-400 outline-none focus:border-[#8FC436] transition-colors"
             />
             <button
               type="submit"
               disabled={status === 'loading'}
-              className="px-5 py-2.5 text-sm font-semibold text-white bg-[#8FC436] rounded-xl hover:bg-[#7db02e] transition-colors disabled:opacity-70 disabled:cursor-not-allowed"
+              className="shrink-0 px-5 py-2.5 text-sm font-semibold text-white bg-[#8FC436] rounded-xl hover:bg-[#7db02e] transition-colors disabled:opacity-70 disabled:cursor-not-allowed"
             >
               {status === 'loading' ? '...' : labels.btn}
             </button>

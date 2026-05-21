@@ -180,7 +180,6 @@ const content: SettoreContent = {
 
   pricing_hint: {
     label: 'Ab',
-    price: '3 €',
     per: 'Mitarbeiter/Monat',
     note: '14 Tage kostenlos testen',
   },

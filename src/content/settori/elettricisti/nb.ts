@@ -108,7 +108,6 @@ const content: SettoreContent = {
   },
   pricing_hint: {
     label: 'Fra',
-    price: '3 €',
     per: 'medarbeider/måned',
     note: 'Gratis prøveperiode 14 dager',
   },
