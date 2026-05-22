@@ -319,6 +319,7 @@ export default async function BlogArticlePage({ params }: Props) {
         <div className="max-w-7xl mx-auto flex gap-12 px-6">
           <ArticleContent
             html={contentWithIds}
+            locale={locale}
             newsletter={
               ARTICLE_LEAD_MAGNETS[articleSlug]
                 ? <LeadMagnetInline magnet={ARTICLE_LEAD_MAGNETS[articleSlug]} locale={locale} />
