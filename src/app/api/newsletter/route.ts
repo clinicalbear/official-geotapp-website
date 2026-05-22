@@ -37,6 +37,11 @@ const LANG_GROUPS: Record<string, string> = {
   nb: '183189742813185694',
 };
 
+// Lead magnet group IDs — subscriber che scarica un asset specifico
+const LEAD_MAGNET_GROUPS: Record<string, string> = {
+  'informativa-gps': '188186066672420802',
+};
+
 export async function POST(req: NextRequest) {
   const apiKey = process.env.MAILERLITE_API_KEY;
   if (!apiKey) {
@@ -46,12 +51,14 @@ export async function POST(req: NextRequest) {
   let email: string;
   let sector: string | undefined;
   let locale: string | undefined;
+  let leadMagnet: string | undefined;
 
   try {
     const body = await req.json();
     email  = (body.email  ?? '').trim().toLowerCase();
     sector = (body.sector ?? '').trim().toLowerCase() || undefined;
     locale = (body.locale ?? '').trim().toLowerCase() || undefined;
+    leadMagnet = (body.leadMagnet ?? '').trim().toLowerCase() || undefined;
   } catch {
     return NextResponse.json({ error: 'Invalid request body' }, { status: 400 });
   }
@@ -67,6 +74,9 @@ export async function POST(req: NextRequest) {
     groupIds.push(SECTOR_GROUPS[groupKey]);
   }
   if (locale && LANG_GROUPS[locale]) groupIds.push(LANG_GROUPS[locale]);
+  if (leadMagnet && LEAD_MAGNET_GROUPS[leadMagnet]) {
+    groupIds.push(LEAD_MAGNET_GROUPS[leadMagnet]);
+  }
 
   const res = await fetch(`${ML_API}/subscribers`, {
     method: 'POST',
@@ -76,7 +86,7 @@ export async function POST(req: NextRequest) {
     },
     body: JSON.stringify({
       email,
-      fields: { sector: sector ?? '', language: locale ?? '' },
+      fields: { sector: sector ?? '', language: locale ?? '', lead_magnet: leadMagnet ?? '' },
       groups: groupIds,
       status: 'active',
     }),
@@ -97,6 +107,7 @@ export async function POST(req: NextRequest) {
       email,
       sector: sector ?? null,
       locale: locale ?? null,
+      leadMagnet: leadMagnet ?? null,
       source: 'website',
       subscribedAt: new Date(),
       unsubscribed: false,
