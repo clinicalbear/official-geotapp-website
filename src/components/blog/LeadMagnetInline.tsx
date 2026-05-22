@@ -28,7 +28,7 @@ export const LEAD_MAGNETS: Record<string, LeadMagnetAsset> = {
         placeholder: 'La tua email',
         btn: 'Inviami il fac-simile',
         consent: 'Iscrivendoti ricevi il documento e contenuti pratici su GPS e gestione del campo. Niente spam, disiscrizione in un click.',
-        success: 'Fatto! Il documento è qui sotto e te l’abbiamo mandato anche via email.',
+        success: 'Fatto, il documento è qui sotto. Ti arriva anche via email da info@geotapp.com: se finisce tra spam o promozioni, spostala nella posta principale, così ricevi anche le prossime guide pratiche.',
         download: 'Scarica il fac-simile (PDF)',
         error: 'Qualcosa non ha funzionato. Riprova.',
       },
