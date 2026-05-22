@@ -3,6 +3,7 @@
 import { useMemo } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { trackEvent } from '@/lib/analytics';
 
 interface ArticleContentProps {
   html: string;
@@ -25,6 +26,7 @@ function MidArticleCta({ locale }: { locale: string }) {
       <p className="text-sm text-slate-500 mt-2">{labels.desc}</p>
       <Link
         href={`/${locale}/trial/`}
+        onClick={() => trackEvent('trial_click', { source: 'blog_article' })}
         className="mt-4 inline-block px-6 py-3 text-sm font-semibold text-white bg-[#8FC436] rounded-xl hover:bg-[#7db02e] transition-colors"
       >
         {labels.btn}

@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { trackEvent } from '@/lib/analytics';
 
 interface RelatedPost {
   id: number;
@@ -126,6 +127,7 @@ function CtaBanner({ labels, locale }: { labels: typeof FOOTER_LABELS[string]; l
         </p>
         <Link
           href={`/${locale}/trial/`}
+          onClick={() => trackEvent('trial_click', { source: 'blog_article_footer' })}
           className="mt-8 inline-block px-8 py-4 bg-[#8FC436] text-white font-bold text-lg rounded-xl hover:bg-[#7db02e] transition-colors"
         >
           {labels.cta_btn}

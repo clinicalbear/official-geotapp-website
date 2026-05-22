@@ -11,6 +11,7 @@ import {
 } from '@/lib/i18n/locale-routing';
 import NewsletterForm from '@/components/NewsletterForm';
 import ListedOn from '@/components/ListedOn';
+import { trackEvent } from '@/lib/analytics';
 
 const FOOTER_LABELS: Record<string, {
   products: string; solutions: string; resources: string; company: string; legal: string;
@@ -116,7 +117,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li><Link href={getLink('/chi-siamo')} className={linkClass}>{t.about}</Link></li>
               <li><Link href={getLink('/contact')} className={linkClass}>{t.contact}</Link></li>
-              <li><Link href={getLink('/trial')} className={linkClass}>{t.trial}</Link></li>
+              <li><Link href={getLink('/trial')} onClick={() => trackEvent('trial_click', { source: 'footer' })} className={linkClass}>{t.trial}</Link></li>
               <li><Link href={getLink('/login')} className={linkClass}>{t.login}</Link></li>
             </ul>
           </div>

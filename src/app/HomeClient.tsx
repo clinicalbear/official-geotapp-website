@@ -81,6 +81,7 @@ import {
   getLocaleFromPathname,
   localizePath,
 } from '@/lib/i18n/locale-routing';
+import { trackEvent } from '@/lib/analytics';
 const DemoReportBanner = dynamic(() => import('@/components/DemoReportBanner'), { ssr: true });
 const TrustBar = dynamic(() => import('@/components/TrustBar'), { ssr: true });
 const ListedOn = dynamic(() => import('@/components/ListedOn'), { ssr: true });
@@ -333,6 +334,7 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-10 hero-text-late hero-text-late-d5">
             <Link
               href={getLink('/trial')}
+              onClick={() => trackEvent('trial_click', { source: 'homepage_hero' })}
               className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-slate-900 text-white font-bold rounded-2xl text-lg transition-all shadow-lg shadow-slate-900/15 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-slate-900/20"
             >
               {dict.landing.hero_cta_primary}
@@ -665,6 +667,7 @@ export default function Home() {
           </p>
           <Link
             href={getLink('/trial')}
+            onClick={() => trackEvent('trial_click', { source: 'homepage_cta' })}
             className="inline-flex items-center justify-center gap-2 px-10 py-5 bg-emerald-600 text-white font-bold rounded-2xl text-lg hover:bg-emerald-700 transition-colors shadow-lg hover:shadow-emerald-200"
           >
             {dict.landing.hero_cta_primary}
@@ -896,6 +899,7 @@ export default function Home() {
         </p>
         <Link
           href={getLink('/trial')}
+          onClick={() => trackEvent('trial_click', { source: 'homepage_sticky' })}
           className="block w-full text-center py-3 bg-primary text-white font-bold rounded-xl text-base"
         >
           {dict.landing.hero_cta_primary}
