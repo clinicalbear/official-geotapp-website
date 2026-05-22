@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getAdminApp } from '@/lib/firebase-admin';
 
 const ML_API = 'https://connect.mailerlite.com/api';
 
@@ -98,23 +97,9 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Subscription failed' }, { status: 502 });
   }
 
-  // Save to Firestore (non-blocking, don't fail the request)
-  try {
-    getAdminApp();
-    const { getFirestore } = await import('firebase-admin/firestore');
-    const db = getFirestore();
-    await db.collection('newsletter_subscribers').doc(email).set({
-      email,
-      sector: sector ?? null,
-      locale: locale ?? null,
-      leadMagnet: leadMagnet ?? null,
-      source: 'website',
-      subscribedAt: new Date(),
-      unsubscribed: false,
-    }, { merge: true });
-  } catch (err) {
-    console.error('Firestore save failed (non-fatal):', err);
-  }
-
+  // MailerLite is the system of record for subscribers. No local copy is
+  // kept: the firebase-admin SDK cannot run on the Cloudflare Workers runtime
+  // (importing it fails the whole route module). If a local mirror is needed,
+  // use the Firestore REST API, not firebase-admin.
   return NextResponse.json({ ok: true });
 }

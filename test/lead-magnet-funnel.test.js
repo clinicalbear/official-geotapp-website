@@ -47,3 +47,15 @@ test('footer trial link fires trial_click', () => {
   const c = read('src', 'components', 'Footer.tsx');
   assert.match(c, /trial_click/);
 });
+
+test('newsletter route has no firebase-admin dependency (Workers-incompatible)', () => {
+  // firebase-admin is a Node SDK that cannot load on the Cloudflare Workers
+  // runtime: importing it makes the whole route module fail (500 on every
+  // request). The route must rely only on fetch() to MailerLite.
+  // We check for an actual import, not the word, so a comment may mention it.
+  const route = read('src', 'app', 'api', 'newsletter', 'route.ts');
+  assert.doesNotMatch(route, /from\s+['"](firebase-admin|@\/lib\/firebase-admin)/);
+  assert.doesNotMatch(route, /import\(['"]firebase-admin/);
+  assert.doesNotMatch(route, /getAdminApp/);
+  assert.ok(!exists('src', 'lib', 'firebase-admin.ts'), 'dead firebase-admin.ts still present');
+});
