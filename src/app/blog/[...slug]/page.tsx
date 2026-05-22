@@ -7,6 +7,7 @@ import ArticleFooter from '@/components/blog/ArticleFooter';
 import ReadingProgress from '@/components/blog/ReadingProgress';
 import BackToTop from '@/components/blog/BackToTop';
 import NewsletterInline from '@/components/blog/NewsletterInline';
+import LeadMagnetInline from '@/components/blog/LeadMagnetInline';
 import MapBackground from '@/components/blog/MapBackground';
 import Comments, { type CommentItem } from '@/components/blog/Comments';
 
@@ -228,6 +229,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
+// Articoli che mostrano un lead magnet al posto della newsletter generica.
+const ARTICLE_LEAD_MAGNETS: Record<string, string> = {
+  'fac-simile-informativa-gps-dipendenti-2026': 'informativa-gps',
+};
+
 export default async function BlogArticlePage({ params }: Props) {
   const { slug } = await params;
   const { locale, articleSlug } = parseSlug(slug);
@@ -311,7 +317,14 @@ export default async function BlogArticlePage({ params }: Props) {
       {/* Content + Sidebar */}
       <div className="bg-white">
         <div className="max-w-7xl mx-auto flex gap-12 px-6">
-          <ArticleContent html={contentWithIds} newsletter={<NewsletterInline locale={locale} />} />
+          <ArticleContent
+            html={contentWithIds}
+            newsletter={
+              ARTICLE_LEAD_MAGNETS[articleSlug]
+                ? <LeadMagnetInline magnet={ARTICLE_LEAD_MAGNETS[articleSlug]} locale={locale} />
+                : <NewsletterInline locale={locale} />
+            }
+          />
           <div className="hidden lg:block w-72 shrink-0 pt-16">
             <ArticleSidebar headings={headings} locale={locale} categories={categories} date={date} readingTime={readingTime} title={title} />
           </div>
