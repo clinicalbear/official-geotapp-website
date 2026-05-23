@@ -642,6 +642,71 @@ export default function SettorePageLayout({ content, locale, settore, children }
               </div>
             );
           })()}
+
+          {/* ── RISORSE NORMATIVE (audit internal linking 2026-05-23) ── */}
+          {/* Articolo GDPR è top-impressioni del blog ma riceveva 0 link strutturali. */}
+          {/* Questa sezione gli aggrega link contestuali da tutti i 10 settori. */}
+          {(() => {
+            const NORM_TITLE: Record<string, string> = {
+              it: 'Approfondisci la normativa',
+              en: 'Compliance deep-dive',
+              de: 'Compliance vertiefen',
+              fr: 'Approfondir la conformité',
+              es: 'Profundizar en el cumplimiento',
+              pt: 'Aprofundar a conformidade',
+              nl: 'Verdieping naleving',
+              da: 'Gå dybere i compliance',
+              sv: 'Fördjupa efterlevnaden',
+              nb: 'Dybdedykk compliance',
+              ru: 'Углублённый анализ нормативов',
+            };
+            const NORM_LINKS: Record<string, { href: string; label: string }[]> = {
+              it: [
+                { href: '/blog/2025/11/20/geolocalizzazione-dipendenti-gdpr-guida-legale/',
+                  label: 'Geolocalizzazione dipendenti e GDPR: cosa è permesso e cosa no' },
+                { href: '/blog/2026/04/22/fac-simile-informativa-gps-dipendenti-2026/',
+                  label: 'Fac-simile informativa GPS dipendenti 2026' },
+                { href: '/blog/2026/04/13/garante-privacy-geolocalizzazione-dipendenti-2026/',
+                  label: 'Garante Privacy e geolocalizzazione: linee guida 2026' },
+              ],
+              en: [
+                { href: '/blog/en/2026/04/13/ico-employee-gps-tracking-uk-gdpr-2026/',
+                  label: 'UK GDPR and employee GPS tracking: what the ICO actually allows' },
+              ],
+              de: [
+                { href: '/blog/de/2026/04/22/muster-datenschutzerklaerung-gps-mitarbeiterortung-2026/',
+                  label: 'DSGVO-Muster-Datenschutzerklärung: GPS-Mitarbeiterortung 2026' },
+              ],
+            };
+            // Le 7 locale che NON hanno articoli normative tradotti ricadono su EN.
+            const links = NORM_LINKS[locale]
+              ?? NORM_LINKS[locale.split('-')[0]]
+              ?? NORM_LINKS.en;
+            const title = NORM_TITLE[locale]
+              ?? NORM_TITLE[locale.split('-')[0]]
+              ?? NORM_TITLE.en;
+            if (!links || links.length === 0) return null;
+            return (
+              <div className="mt-16 pt-12 border-t border-slate-200">
+                <h3 className="text-xl font-bold text-slate-900 mb-4 text-center">
+                  {title}
+                </h3>
+                <ul className="space-y-2 max-w-2xl mx-auto">
+                  {links.map((link, i) => (
+                    <li key={`norm-${i}`} className="text-center">
+                      <Link
+                        href={link.href}
+                        className={`inline-flex items-center gap-2 text-sm font-medium ${colors.accent} hover:underline`}
+                      >
+                        <ArrowRight className="w-4 h-4" />
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            );
+          })()}
         </div>
       </section>
 
