@@ -86,20 +86,82 @@ const APP_FAQ: Record<string, object> = {
   },
 };
 
+const APP_DESCRIPTION: Record<string, string> = {
+  it: "GeoTapp TimeTracker è l'app mobile per tecnici sul campo: timbratura GPS verificata, prove fotografiche, report settimanali e sincronizzazione in tempo reale con GeoTapp Flow. Funziona offline.",
+  en: 'GeoTapp TimeTracker is the mobile app for field technicians: verified GPS clock-in, photo evidence, weekly reports and real-time sync with GeoTapp Flow. Works offline.',
+  de: 'GeoTapp TimeTracker ist die mobile App für Außendiensttechniker: verifizierte GPS-Zeiterfassung, Fotobeweise, Wochenberichte und Echtzeitsynchronisation mit GeoTapp Flow. Funktioniert offline.',
+  fr: "GeoTapp TimeTracker est l'application mobile pour techniciens terrain : pointage GPS vérifié, preuves photo, rapports hebdomadaires et synchronisation temps réel avec GeoTapp Flow. Fonctionne hors ligne.",
+  es: 'GeoTapp TimeTracker es la app móvil para técnicos de campo: fichaje GPS verificado, pruebas fotográficas, informes semanales y sincronización en tiempo real con GeoTapp Flow. Funciona sin conexión.',
+  nl: 'GeoTapp TimeTracker is de mobiele app voor buitendiensttechnici: geverifieerd GPS in- en uitklokken, fotobewijs, wekelijkse rapporten en realtime synchronisatie met GeoTapp Flow. Werkt offline.',
+  pt: 'GeoTapp TimeTracker é o app móvel para técnicos de campo: ponto GPS verificado, provas fotográficas, relatórios semanais e sincronização em tempo real com o GeoTapp Flow. Funciona offline.',
+  sv: 'GeoTapp TimeTracker är mobilappen för fälttekniker: verifierad GPS-incheckning, fotobevis, veckorapporter och realtidssynkronisering med GeoTapp Flow. Fungerar offline.',
+  da: 'GeoTapp TimeTracker er mobilappen til serviceteknikere: verificeret GPS-ind- og udtjekning, fotobeviser, ugentlige rapporter og realtidssynkronisering med GeoTapp Flow. Fungerer offline.',
+  nb: 'GeoTapp TimeTracker er mobilappen for serviceteknikere: verifisert GPS-innsjekking, fotobevis, ukentlige rapporter og sanntidssynkronisering med GeoTapp Flow. Fungerer offline.',
+  ru: 'GeoTapp TimeTracker — мобильное приложение для выездных техников: верифицированные GPS-отметки, фотодоказательства, еженедельные отчёты и синхронизация с GeoTapp Flow в реальном времени. Работает офлайн.',
+};
+
+const APP_FEATURES: Record<string, string[]> = {
+  it: [
+    'Timbratura GPS verificata (anti-spoofing)',
+    'Prove fotografiche con timestamp e GPS',
+    'Funziona offline e sincronizza automaticamente',
+    'Report sigillati crittograficamente',
+    'Modulo informativa GPS con firma digitale',
+    'Integrazione nativa con GeoTapp Flow',
+    'Disponibile su Google Play e App Store',
+    'Conforme GDPR — geolocalizzazione solo a timbratura',
+  ],
+  en: [
+    'Verified GPS clock-in (anti-spoofing)',
+    'Photo evidence with timestamp and GPS',
+    'Works offline, syncs automatically',
+    'Cryptographically sealed reports',
+    'GPS privacy notice module with digital signature',
+    'Native integration with GeoTapp Flow',
+    'Available on Google Play and App Store',
+    'GDPR compliant — geolocation only at clock-in/out',
+  ],
+  de: [
+    'Verifizierte GPS-Zeiterfassung (Anti-Spoofing)',
+    'Fotobeweise mit Zeitstempel und GPS',
+    'Funktioniert offline, synchronisiert automatisch',
+    'Kryptographisch versiegelte Berichte',
+    'GPS-Datenschutzerklärung mit digitaler Unterschrift',
+    'Native Integration mit GeoTapp Flow',
+    'Verfügbar im Google Play Store und App Store',
+    'DSGVO-konform — Standorterfassung nur beim Stempeln',
+  ],
+};
+
 function buildAppSoftware(locale: AppLocale) {
   const rate = convertEurToLocale(EUR_PRICES.tracker.tier1.perSeatMonthly, locale);
+  const description = APP_DESCRIPTION[locale] ?? APP_DESCRIPTION.en;
+  const featureList = APP_FEATURES[locale] ?? APP_FEATURES.en;
   return {
     '@context': 'https://schema.org',
-    '@type': 'SoftwareApplication',
+    '@type': 'MobileApplication',
+    '@id': `https://geotapp.com/${locale}/products/geotapp-timetracker/#software`,
     name: 'GeoTapp TimeTracker',
-    operatingSystem: 'Android, iOS',
+    operatingSystem: 'Android 6.0+, iOS 14+',
     applicationCategory: 'BusinessApplication',
+    applicationSubCategory: 'Time Tracking',
+    description,
+    featureList,
+    image: 'https://geotapp.com/logoTT.webp',
+    screenshot: [
+      'https://geotapp.com/screenshots/timetracker-dashboard.webp',
+      'https://geotapp.com/screenshots/timetracker-richieste.webp',
+    ],
+    inLanguage: locale,
     offers: {
       '@type': 'Offer',
       price: rate.amount.toFixed(2),
       priceCurrency: getCurrencyForLocale(locale),
+      availability: 'https://schema.org/InStock',
+      url: `https://geotapp.com/${locale}/trial/`,
       description: `14-day free trial. Paid plans from ${rate.formatted} per operator per month.`,
     },
+    publisher: { '@id': 'https://geotapp.com/#organization' },
     url: `https://geotapp.com/${locale}/products/geotapp-timetracker/`,
   };
 }

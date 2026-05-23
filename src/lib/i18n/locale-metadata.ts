@@ -9,8 +9,12 @@ const BASE = 'https://geotapp.com';
  * Maps internal locale codes to BCP-47 hreflang tags.
  * Google uses BCP-47 (e.g. it-IT, de-DE) for regional targeting.
  * Generic codes (en) are used where no single country dominates.
+ *
+ * Exported so [locale]/page.tsx (home) and sitemap.ts use the same source of
+ * truth and never drift on casing (audit 2026-05-23 ha rilevato en-us vs en-US
+ * tra mappa inline della home e questa mappa canonical).
  */
-const HREFLANG: Record<string, string> = {
+export const HREFLANG: Record<string, string> = {
   it: 'it-IT',
   en: 'en',
   'en-us': 'en-US',

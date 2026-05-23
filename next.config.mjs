@@ -218,12 +218,18 @@ const nextConfig = {
     return [...buildCompoundRewrites(), ...buildRewrites()];
   },
   async redirects() {
+    // 11 lingue base. Le 5 en-XX variants (en-us/gb/au/ie/ca) sono gestite a parte
+    // dove serve, perche' molte rewrites/redirect non hanno equivalenti regionali.
     const ACTIVE_LOCALES = ['it', 'en', 'de', 'nl', 'fr', 'es', 'pt', 'da', 'sv', 'nb', 'ru'];
+    // Tutte le 16 lingue (per redirect che vanno applicati uniformemente, es. /demo/).
+    const ALL_LOCALES = [...ACTIVE_LOCALES, 'en-us', 'en-gb', 'en-au', 'en-ie', 'en-ca'];
 
+    // /demo/ -> /trial/ in TUTTE le 16 lingue (audit sitemap 2026-05-23: prima
+    // solo 3 lingue avevano il redirect, le altre 13 servivano /demo/ con 200 OK).
     const demoToTrialRedirects = [
       { source: '/demo',   destination: '/trial/', permanent: true },
       { source: '/demo/',  destination: '/trial/', permanent: true },
-      ...['it', 'en', 'de'].flatMap(locale => [
+      ...ALL_LOCALES.flatMap(locale => [
         { source: `/${locale}/demo`,   destination: `/${locale}/trial/`, permanent: true },
         { source: `/${locale}/demo/`,  destination: `/${locale}/trial/`, permanent: true },
       ]),

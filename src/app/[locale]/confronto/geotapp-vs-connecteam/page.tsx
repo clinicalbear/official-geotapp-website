@@ -1,8 +1,14 @@
 import type { Metadata } from 'next';
 import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
+import {
+  buildComparisonArticle,
+  buildComparisonBreadcrumb,
+} from '@/lib/seo/comparisonSchema';
 export { generateLocaleStaticParams as generateStaticParams } from '@/lib/i18n/static-params';
 
 const PATHNAME = '/confronto/geotapp-vs-connecteam/';
+const ARTICLE_DATE_PUBLISHED = '2025-09-01';
+const ARTICLE_DATE_MODIFIED = '2026-05-23';
 
 const META: Record<string, { title: string; description: string }> = {
   it: {
@@ -87,20 +93,28 @@ export default async function GeoTappVsConnecteamPage({ params }: { params: Prom
     })),
   };
 
-  const breadcrumb = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'GeoTapp', item: 'https://geotapp.com' },
-      { '@type': 'ListItem', position: 2, name: 'GeoTapp vs Connecteam', item: `https://geotapp.com/${locale}${PATHNAME}` },
-    ],
-  };
+  const breadcrumb = buildComparisonBreadcrumb({
+    locale,
+    pathname: PATHNAME,
+    competitorName: 'Connecteam',
+  });
+
+  const meta = META[locale] ?? META.en;
+  const article = buildComparisonArticle({
+    locale,
+    pathname: PATHNAME,
+    headline: meta.title,
+    description: meta.description,
+    datePublished: ARTICLE_DATE_PUBLISHED,
+    dateModified: ARTICLE_DATE_MODIFIED,
+  });
 
   const isEn = locale === 'en';
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <div className="min-h-screen pt-32 pb-20 px-6">

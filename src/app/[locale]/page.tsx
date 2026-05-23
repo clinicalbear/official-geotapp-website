@@ -3,6 +3,7 @@
 import type { Metadata } from 'next';
 import { SUPPORTED_LOCALES } from '@/lib/i18n/config';
 import type { AppLocale } from '@/lib/i18n/config';
+import { HREFLANG } from '@/lib/i18n/locale-metadata';
 import HomeClient from '../page';
 import BlogHighlights from '@/components/BlogHighlights';
 import { REVIEWS } from '@/data/reviews';
@@ -17,7 +18,7 @@ const HOMEPAGE_FAQ: Record<string, object> = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: [
-      { '@type': 'Question', name: 'Come funziona la rilevazione presenze GPS di GeoTapp?', acceptedAnswer: { '@type': 'Answer', text: 'L\'operatore apre e chiude il turno dall\'app mobile. GeoTapp registra le coordinate GPS reali in quel momento — non inserite a mano. Ogni timbratura è certificata con timestamp e posizione verificabile da chiunque.' } },
+      { '@type': 'Question', name: 'Come funziona la rilevazione presenze GPS di GeoTapp?', acceptedAnswer: { '@type': 'Answer', text: 'L\'operatore apre e chiude il turno dall\'app mobile. GeoTapp registra le coordinate GPS reali in quel momento, non inserite a mano. Ogni timbratura è certificata con timestamp e posizione verificabile da chiunque.' } },
       { '@type': 'Question', name: 'GeoTapp è conforme al GDPR per la geolocalizzazione dei dipendenti?', acceptedAnswer: { '@type': 'Answer', text: 'Sì. GeoTapp traccia la posizione solo durante l\'orario di lavoro attivo, include modulistica per l\'informativa ai dipendenti e non raccoglie dati non necessari. Conforme alle linee guida del Garante Privacy italiano.' } },
       { '@type': 'Question', name: 'Cosa contiene un report GeoTapp?', acceptedAnswer: { '@type': 'Answer', text: 'Ogni report include: timestamp di inizio e fine intervento, coordinate GPS verificate, prove fotografiche con hash crittografico, dati dell\'operatore e sigillo digitale. Il report non è modificabile dopo la chiusura.' } },
       { '@type': 'Question', name: 'GeoTapp funziona per imprese di pulizie, installatori e sicurezza?', acceptedAnswer: { '@type': 'Answer', text: 'Sì. GeoTapp è usato da imprese di pulizie, multiservizi, installatori e servizi di vigilanza. La piattaforma scala da 3 a 300 operatori e gestisce più siti contemporaneamente.' } },
@@ -28,9 +29,9 @@ const HOMEPAGE_FAQ: Record<string, object> = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: [
-      { '@type': 'Question', name: 'How does GeoTapp GPS attendance tracking work?', acceptedAnswer: { '@type': 'Answer', text: 'The operator opens and closes their shift from the mobile app. GeoTapp records the real GPS coordinates at that moment — not entered manually. Every clock-in is certified with a timestamp and position verifiable by anyone.' } },
-      { '@type': 'Question', name: 'Is GeoTapp GDPR compliant for employee geolocation?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. GeoTapp records location only during active work sessions — at clock-in and clock-out. No continuous tracking. The platform includes employee disclosure templates and collects no unnecessary data.' } },
-      { '@type': 'Question', name: 'What does a GeoTapp report contain?', acceptedAnswer: { '@type': 'Answer', text: 'Each report includes: start and end timestamps, verified GPS coordinates, photo evidence with cryptographic hash, operator data and a digital seal. The report cannot be modified after generation — any change breaks the seal.' } },
+      { '@type': 'Question', name: 'How does GeoTapp GPS attendance tracking work?', acceptedAnswer: { '@type': 'Answer', text: 'The operator opens and closes their shift from the mobile app. GeoTapp records the real GPS coordinates at that moment, not entered manually. Every clock-in is certified with a timestamp and position verifiable by anyone.' } },
+      { '@type': 'Question', name: 'Is GeoTapp GDPR compliant for employee geolocation?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. GeoTapp records location only during active work sessions: at clock-in and clock-out. No continuous tracking. The platform includes employee disclosure templates and collects no unnecessary data.' } },
+      { '@type': 'Question', name: 'What does a GeoTapp report contain?', acceptedAnswer: { '@type': 'Answer', text: 'Each report includes: start and end timestamps, verified GPS coordinates, photo evidence with cryptographic hash, operator data and a digital seal. The report cannot be modified after generation; any change breaks the seal.' } },
       { '@type': 'Question', name: 'Does GeoTapp work for cleaning companies, installers and security services?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. GeoTapp is used by cleaning companies, facility services, installers and security services. The platform scales from 3 to 300 operators and manages multiple sites simultaneously.' } },
       { '@type': 'Question', name: 'How does a client verify a GeoTapp report?', acceptedAnswer: { '@type': 'Answer', text: 'The client receives a unique link and can verify the report at geotapp.com/products/geotapp-verifier without accessing your account. The system compares the cryptographic seal and confirms the data has not been modified.' } },
     ],
@@ -39,8 +40,8 @@ const HOMEPAGE_FAQ: Record<string, object> = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: [
-      { '@type': 'Question', name: 'Wie funktioniert die GPS-Anwesenheitserfassung von GeoTapp?', acceptedAnswer: { '@type': 'Answer', text: 'Der Mitarbeiter öffnet und schließt seine Schicht über die mobile App. GeoTapp erfasst die echten GPS-Koordinaten in diesem Moment — nicht manuell eingegeben. Jede Zeiterfassung wird mit einem verifizierbaren Zeitstempel und Standort zertifiziert.' } },
-      { '@type': 'Question', name: 'Ist GeoTapp DSGVO-konform für die Mitarbeitergeolokalisierung?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. GeoTapp erfasst den Standort nur beim Ein- und Ausstempeln — kein kontinuierliches Tracking. Die Plattform enthält Vorlagen für die Mitarbeiterinformation und erfasst keine unnötigen Daten.' } },
+      { '@type': 'Question', name: 'Wie funktioniert die GPS-Anwesenheitserfassung von GeoTapp?', acceptedAnswer: { '@type': 'Answer', text: 'Der Mitarbeiter öffnet und schließt seine Schicht über die mobile App. GeoTapp erfasst die echten GPS-Koordinaten in diesem Moment, nicht manuell eingegeben. Jede Zeiterfassung wird mit einem verifizierbaren Zeitstempel und Standort zertifiziert.' } },
+      { '@type': 'Question', name: 'Ist GeoTapp DSGVO-konform für die Mitarbeitergeolokalisierung?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. GeoTapp erfasst den Standort nur beim Ein- und Ausstempeln, kein kontinuierliches Tracking. Die Plattform enthält Vorlagen für die Mitarbeiterinformation und erfasst keine unnötigen Daten.' } },
       { '@type': 'Question', name: 'Was enthält ein GeoTapp-Bericht?', acceptedAnswer: { '@type': 'Answer', text: 'Jeder Bericht enthält: Start- und Endzeitstempel, verifizierte GPS-Koordinaten, Fotobelege mit kryptographischem Hash, Mitarbeiterdaten und ein digitales Siegel. Der Bericht ist nach der Erstellung nicht mehr änderbar.' } },
       { '@type': 'Question', name: 'Funktioniert GeoTapp für Reinigungsunternehmen, Installateure und Sicherheitsdienste?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. GeoTapp wird von Reinigungsunternehmen, Facility-Services, Installateuren und Sicherheitsdiensten eingesetzt. Die Plattform skaliert von 3 bis 300 Mitarbeitern.' } },
       { '@type': 'Question', name: 'Wie kann ein Kunde einen GeoTapp-Bericht verifizieren?', acceptedAnswer: { '@type': 'Answer', text: 'Der Kunde erhält einen eindeutigen Link und kann den Bericht auf geotapp.com/products/geotapp-verifier ohne Zugang zu Ihrem Konto prüfen. Das System vergleicht das kryptographische Siegel und bestätigt, dass die Daten nicht verändert wurden.' } },
@@ -55,8 +56,8 @@ const BASE_URL = 'https://geotapp.com';
 // this is the SEO anchor keyword for all locale variants.
 const LOCALE_META: Record<string, { title: string; description: string }> = {
   it: {
-    title: 'GeoTapp — Timbrature GPS e Presenze Dipendenti sul Campo',
-    description: 'Timbrature GPS certificate, prove fotografiche e report non alterabili per imprese con squadre in esterno. Elimina contestazioni — prova gratis.',
+    title: 'Cliente contesta il lavoro? Prova ogni intervento | GeoTapp',
+    description: 'Cliente contesta il servizio? GeoTapp registra GPS, foto, orario e rapportino non modificabile. Prova ogni intervento e fatturi senza dover discutere.',
   },
   en: {
     title: 'Client disputes the work? Prove every visit | GeoTapp',
@@ -136,12 +137,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   // x-default → /en/ because:
   //   - /en/ is a real page served by app/[locale]/page.tsx with locale="en"
   //   - bare / triggers a 308 geo-redirect in middleware → invalid x-default per Google spec
-  const HREFLANG_MAP: Record<string, string> = {
-    it: 'it-IT', en: 'en', de: 'de-DE', fr: 'fr-FR', es: 'es-ES',
-    pt: 'pt-PT', nl: 'nl-NL', da: 'da-DK', nb: 'nb-NO', sv: 'sv-SE', ru: 'ru-RU',
-  };
+  //
+  // HREFLANG mappa importata da locale-metadata.ts (single source of truth, audit 2026-05-23).
+  // Prima qui c'era una mappa inline che divergeva su en-* (en-us vs en-US): consolidata.
   const languages = Object.fromEntries(
-    SUPPORTED_LOCALES.map((l) => [HREFLANG_MAP[l] ?? l, `${BASE_URL}/${l}/`]),
+    SUPPORTED_LOCALES.map((l) => [HREFLANG[l] ?? l, `${BASE_URL}/${l}/`]),
   ) as Record<string, string>;
   languages['x-default'] = `${BASE_URL}/en/`;
 

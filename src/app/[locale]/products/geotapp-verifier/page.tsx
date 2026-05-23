@@ -80,19 +80,71 @@ const VERIFIER_FAQ: Record<string, object> = {
   },
 };
 
+const VERIFIER_DESCRIPTION: Record<string, string> = {
+  it: 'GeoTapp Verifier certifica ogni intervento con dati GPS sigillati, prove fotografiche con timestamp e report non alterabili. Verifica indipendente per aziende che devono difendere il lavoro svolto.',
+  en: 'GeoTapp Verifier certifies every job with sealed GPS data, timestamped photo evidence and tamper-proof reports. Independent verification for companies that need to defend completed work.',
+  de: 'GeoTapp Verifier zertifiziert jeden Einsatz mit versiegelten GPS-Daten, zeitgestempelten Fotobeweisen und manipulationssicheren Berichten — unabhängig verifizierbar.',
+  fr: "GeoTapp Verifier certifie chaque intervention avec des données GPS scellées, des preuves photographiques horodatées et des rapports inaltérables, vérifiables indépendamment.",
+  es: 'GeoTapp Verifier certifica cada intervención con datos GPS sellados, pruebas fotográficas con marca de tiempo e informes inalterables, verificables de forma independiente.',
+  nl: 'GeoTapp Verifier certificeert elke interventie met verzegelde GPS-gegevens, getimestampt fotobewijs en fraudebestendige rapporten, onafhankelijk te verifiëren.',
+  pt: 'GeoTapp Verifier certifica cada intervenção com dados GPS selados, provas fotográficas com carimbo de data/hora e relatórios inalteráveis, verificáveis de forma independente.',
+  sv: 'GeoTapp Verifier certifierar varje insats med förseglad GPS-data, tidsstämplad fotodokumentation och manipuleringssäkra rapporter, oberoende verifierbara.',
+  da: 'GeoTapp Verifier certificerer hvert job med forseglet GPS-data, tidsstemplede fotobeviser og manipulationssikre rapporter, uafhængigt verificerbare.',
+  nb: 'GeoTapp Verifier sertifiserer hvert oppdrag med forseglet GPS-data, tidsstemplede fotobevis og manipuleringssikre rapporter, uavhengig verifiserbare.',
+  ru: 'GeoTapp Verifier сертифицирует каждый выезд запечатанными GPS-данными, фотодоказательствами с временными метками и защищёнными от изменений отчётами — независимо проверяемыми.',
+};
+
+const VERIFIER_FEATURES: Record<string, string[]> = {
+  it: [
+    'Hash crittografico applicato a ogni report alla chiusura',
+    'Verifica indipendente: il committente non accede al tuo account',
+    'Catena hash su foto, GPS e timestamp',
+    'Link di verifica univoco condivisibile',
+    'Integrazione nativa con Flow e TimeTracker',
+    'Conforme GDPR',
+  ],
+  en: [
+    'Cryptographic hash applied to every report at closure',
+    'Independent verification: clients do not access your account',
+    'Hash chain across photos, GPS and timestamps',
+    'Unique shareable verification link',
+    'Native integration with Flow and TimeTracker',
+    'GDPR compliant',
+  ],
+  de: [
+    'Kryptographischer Hash beim Abschluss jedes Berichts',
+    'Unabhängige Verifizierung — Kunde benötigt keinen Kontozugang',
+    'Hash-Kette über Fotos, GPS und Zeitstempel',
+    'Eindeutiger teilbarer Verifikationslink',
+    'Native Integration mit Flow und TimeTracker',
+    'DSGVO-konform',
+  ],
+};
+
 function buildVerifierSoftware(locale: AppLocale) {
+  const description = VERIFIER_DESCRIPTION[locale] ?? VERIFIER_DESCRIPTION.en;
+  const featureList = VERIFIER_FEATURES[locale] ?? VERIFIER_FEATURES.en;
   return {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
+    '@id': `https://geotapp.com/${locale}/products/geotapp-verifier/#software`,
     name: 'GeoTapp Verifier',
     operatingSystem: 'Web',
     applicationCategory: 'BusinessApplication',
+    applicationSubCategory: 'Document Verification',
+    description,
+    featureList,
+    image: 'https://geotapp.com/logoVerifier.webp',
+    screenshot: ['https://geotapp.com/screenshots/verifier-report.webp'],
+    inLanguage: locale,
     offers: {
       '@type': 'Offer',
       price: '0',
       priceCurrency: getCurrencyForLocale(locale),
+      availability: 'https://schema.org/InStock',
       description: 'Included in GeoTapp plans. Free verification for report recipients.',
     },
+    publisher: { '@id': 'https://geotapp.com/#organization' },
     url: `https://geotapp.com/${locale}/products/geotapp-verifier/`,
   };
 }

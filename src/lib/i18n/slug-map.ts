@@ -137,56 +137,67 @@ export const SLUG_MAP: Record<string, Partial<Record<AppLocale, string>>> = {
     it: 'pulizie', en: 'cleaning', de: 'reinigung', nl: 'schoonmaak',
     fr: 'nettoyage', es: 'limpieza', pt: 'limpeza',
     da: 'rengoering', sv: 'rengoering', nb: 'rengjoring', ru: 'uborka',
+    'en-us': 'cleaning', 'en-gb': 'cleaning', 'en-au': 'cleaning', 'en-ie': 'cleaning', 'en-ca': 'cleaning',
   },
   'installatori': {
     it: 'installatori', en: 'installers', de: 'installateure', nl: 'installateurs',
     fr: 'installateurs', es: 'instaladores', pt: 'instaladores',
     da: 'montorer', sv: 'montorer', nb: 'montorer', ru: 'montazhniki',
+    'en-us': 'installers', 'en-gb': 'installers', 'en-au': 'installers', 'en-ie': 'installers', 'en-ca': 'installers',
   },
   'sicurezza': {
     it: 'sicurezza', en: 'security', de: 'sicherheit', nl: 'beveiliging',
     fr: 'securite', es: 'seguridad', pt: 'seguranca',
     da: 'sikkerhed', sv: 'sakerhet', nb: 'sikkerhet', ru: 'bezopasnost',
+    'en-us': 'security', 'en-gb': 'security', 'en-au': 'security', 'en-ie': 'security', 'en-ca': 'security',
   },
   'risorse': {
     it: 'risorse', en: 'resources', de: 'ressourcen', nl: 'bronnen',
     fr: 'ressources', es: 'recursos', pt: 'recursos',
     da: 'ressourcer', sv: 'resurser', nb: 'ressurser', ru: 'resursy',
+    'en-us': 'resources', 'en-gb': 'resources', 'en-au': 'resources', 'en-ie': 'resources', 'en-ca': 'resources',
   },
   'edilizia': {
     it: 'edilizia', en: 'construction', de: 'bauwesen', nl: 'bouw',
     fr: 'construction', es: 'construccion', pt: 'construcao',
     da: 'byggeri', sv: 'byggnation', nb: 'bygg', ru: 'stroitelstvo',
+    'en-us': 'construction', 'en-gb': 'construction', 'en-au': 'construction', 'en-ie': 'construction', 'en-ca': 'construction',
   },
   'impianti': {
     it: 'impianti', en: 'mechanical-electrical', de: 'anlagenbau', nl: 'installaties',
     fr: 'installations', es: 'instalaciones', pt: 'instalacoes',
     da: 'installationer', sv: 'installationer', nb: 'installasjoner', ru: 'inzhenernye-sistemy',
+    'en-us': 'mechanical-electrical', 'en-gb': 'mechanical-electrical', 'en-au': 'mechanical-electrical', 'en-ie': 'mechanical-electrical', 'en-ca': 'mechanical-electrical',
   },
   'manutenzione': {
     it: 'manutenzione', en: 'maintenance', de: 'wartung', nl: 'onderhoud',
     fr: 'maintenance', es: 'mantenimiento', pt: 'manutencao',
     da: 'vedligeholdelse', sv: 'underhall', nb: 'vedlikehold', ru: 'tekhobsluzhivanie',
+    'en-us': 'maintenance', 'en-gb': 'maintenance', 'en-au': 'maintenance', 'en-ie': 'maintenance', 'en-ca': 'maintenance',
   },
   'impresa-di-pulizie': {
     it: 'impresa-di-pulizie', en: 'cleaning-company', de: 'reinigungsunternehmen', nl: 'schoonmaakbedrijf',
     fr: 'entreprise-nettoyage', es: 'empresa-limpieza', pt: 'empresa-limpeza',
     da: 'rengoringsfirma', sv: 'stadforetag', nb: 'rengjringsfirma', ru: 'kliningovaya-kompaniya',
+    'en-us': 'cleaning-company', 'en-gb': 'cleaning-company', 'en-au': 'cleaning-company', 'en-ie': 'cleaning-company', 'en-ca': 'cleaning-company',
   },
   'elettricisti': {
     it: 'elettricisti', en: 'electricians', de: 'elektriker', nl: 'elektriciens',
     fr: 'electriciens', es: 'electricistas', pt: 'eletricistas',
     da: 'elektrikere', sv: 'elektriker', nb: 'elektrikere', ru: 'elektriki',
+    'en-us': 'electricians', 'en-gb': 'electricians', 'en-au': 'electricians', 'en-ie': 'electricians', 'en-ca': 'electricians',
   },
   'idraulici': {
     it: 'idraulici', en: 'plumbers', de: 'klempner', nl: 'loodgieters',
     fr: 'plombiers', es: 'fontaneros', pt: 'canalizadores',
     da: 'vvs-installatorer', sv: 'vvs-installatorer', nb: 'rorleggere', ru: 'santekhniki',
+    'en-us': 'plumbers', 'en-gb': 'plumbers', 'en-au': 'plumbers', 'en-ie': 'plumbers', 'en-ca': 'plumbers',
   },
   'termoidraulici': {
     it: 'termoidraulici', en: 'hvac-plumbers', de: 'heizung-sanitaer', nl: 'cv-installateurs',
     fr: 'plombiers-chauffagistes', es: 'fontaneros-calefaccion', pt: 'canalizadores-aquecimento',
     da: 'vvs-vand-varme', sv: 'vvs-och-varme', nb: 'rorleggere-vvs', ru: 'santekhnika-otoplenie',
+    'en-us': 'hvac-plumbers', 'en-gb': 'hvac-plumbers', 'en-au': 'hvac-plumbers', 'en-ie': 'hvac-plumbers', 'en-ca': 'hvac-plumbers',
   },
   // ───────���──────────────────────────────��────────────────────────────���────────
   'download': {
@@ -210,32 +221,39 @@ export const SLUG_MAP: Record<string, Partial<Record<AppLocale, string>>> = {
   'demo': {
     it: 'demo', en: 'demo', de: 'demo', nl: 'demo',
     fr: 'demo', es: 'demo', pt: 'demo', da: 'demo', sv: 'demo', nb: 'demo', ru: 'demo',
+    'en-us': 'demo', 'en-gb': 'demo', 'en-au': 'demo', 'en-ie': 'demo', 'en-ca': 'demo',
   },
   'blog': {
     it: 'blog', en: 'blog', de: 'blog', nl: 'blog',
     fr: 'blog', es: 'blog', pt: 'blog', da: 'blog', sv: 'blog', nb: 'blog', ru: 'blog',
+    'en-us': 'blog', 'en-gb': 'blog', 'en-au': 'blog', 'en-ie': 'blog', 'en-ca': 'blog',
   },
   'confronto': {
     it: 'confronto', en: 'compare', de: 'vergleich', nl: 'vergelijking',
     fr: 'comparaison', es: 'comparacion', pt: 'comparacao',
     da: 'sammenligning', sv: 'jamforelse', nb: 'sammenligning', ru: 'sravnenie',
+    'en-us': 'compare', 'en-gb': 'compare', 'en-au': 'compare', 'en-ie': 'compare', 'en-ca': 'compare',
   },
   'login': {
     it: 'login', en: 'login', de: 'login', nl: 'login',
     fr: 'login', es: 'login', pt: 'login', da: 'login', sv: 'login', nb: 'login', ru: 'login',
+    'en-us': 'login', 'en-gb': 'login', 'en-au': 'login', 'en-ie': 'login', 'en-ca': 'login',
   },
   'privacy': {
     it: 'privacy', en: 'privacy', de: 'privacy', nl: 'privacy',
     fr: 'privacy', es: 'privacy', pt: 'privacy', da: 'privacy', sv: 'privacy', nb: 'privacy', ru: 'privacy',
+    'en-us': 'privacy', 'en-gb': 'privacy', 'en-au': 'privacy', 'en-ie': 'privacy', 'en-ca': 'privacy',
   },
   'terms': {
     it: 'terms', en: 'terms', de: 'terms', nl: 'voorwaarden',
     fr: 'conditions', es: 'terminos', pt: 'termos',
     da: 'vilkaar', sv: 'villkor', nb: 'vilkaar', ru: 'usloviya',
+    'en-us': 'terms', 'en-gb': 'terms', 'en-au': 'terms', 'en-ie': 'terms', 'en-ca': 'terms',
   },
   'cookies': {
     it: 'cookies', en: 'cookies', de: 'cookies', nl: 'cookies',
     fr: 'cookies', es: 'cookies', pt: 'cookies', da: 'cookies', sv: 'cookies', nb: 'cookies', ru: 'cookies',
+    'en-us': 'cookies', 'en-gb': 'cookies', 'en-au': 'cookies', 'en-ie': 'cookies', 'en-ca': 'cookies',
   },
 };
 

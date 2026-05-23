@@ -1,8 +1,14 @@
 import type { Metadata } from 'next';
 import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
+import {
+  buildComparisonArticle,
+  buildComparisonBreadcrumb,
+} from '@/lib/seo/comparisonSchema';
 export { generateLocaleStaticParams as generateStaticParams } from '@/lib/i18n/static-params';
 
 const PATHNAME = '/confronto/geotapp-vs-libemax/';
+const ARTICLE_DATE_PUBLISHED = '2026-02-01';
+const ARTICLE_DATE_MODIFIED = '2026-05-23';
 
 const META: Record<string, { title: string; description: string }> = {
   it: { title: 'GeoTapp vs Libemax — Confronto 2026 | GeoTapp', description: 'GeoTapp vs Libemax Rilevazione Presenze: geofence o anti-spoofing? Confronto su GPS verificato, report sigillati crittograficamente e prove fotografiche non alterabili.' },
@@ -109,11 +115,14 @@ export default async function GeoTappVsLibemaxPage({ params }: { params: Promise
   };
 
   const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqItems.map((item) => ({ '@type': 'Question', name: item.q, acceptedAnswer: { '@type': 'Answer', text: item.a } })) };
-  const breadcrumb = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'GeoTapp', item: 'https://geotapp.com' }, { '@type': 'ListItem', position: 2, name: 'GeoTapp vs Libemax', item: `https://geotapp.com/${locale}${PATHNAME}` }] };
+  const breadcrumb = buildComparisonBreadcrumb({ locale, pathname: PATHNAME, competitorName: 'Libemax' });
+  const meta = META[locale] ?? META.en;
+  const article = buildComparisonArticle({ locale, pathname: PATHNAME, headline: meta.title, description: meta.description, datePublished: ARTICLE_DATE_PUBLISHED, dateModified: ARTICLE_DATE_MODIFIED });
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <div className="min-h-screen pt-32 pb-20 px-6">
         <div className="container mx-auto max-w-4xl">

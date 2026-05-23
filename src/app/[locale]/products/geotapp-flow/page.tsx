@@ -11,6 +11,7 @@ import {
   convertEurToLocale,
   getCurrencyForLocale,
 } from '@/lib/pricing';
+import { REVIEWS } from '@/data/reviews';
 
 const flowMeta: Record<string, { title: string; description: string }> = {
   it: { title: 'GeoTapp Flow — Gestione Operativa Interventi e Squadre', description: 'Sistema operativo per aziende con tecnici sul campo: commesse, attività, avanzamento e report verificabili in tempo reale.' },
@@ -86,21 +87,100 @@ const FLOW_FAQ: Record<string, object> = {
   },
 };
 
+const FLOW_DESCRIPTION: Record<string, string> = {
+  it: 'GeoTapp Flow è il sistema operativo per aziende con tecnici sul campo: crea commesse, assegna attività, monitora avanzamento e produce report sigillati e verificabili in tempo reale.',
+  en: 'GeoTapp Flow is the operational management platform for companies with field technicians: create jobs, assign tasks, monitor progress and produce sealed, verifiable reports in real time.',
+  de: 'GeoTapp Flow ist die operative Verwaltungsplattform für Unternehmen mit Außendiensttechnikern: Aufträge erstellen, Aufgaben zuweisen, Fortschritt überwachen und versiegelte, verifizierbare Berichte in Echtzeit erstellen.',
+  fr: "GeoTapp Flow est la plateforme de gestion opérationnelle pour entreprises avec techniciens terrain : créer des commandes, assigner des tâches, suivre l'avancement et produire des rapports scellés vérifiables en temps réel.",
+  es: 'GeoTapp Flow es la plataforma de gestión operativa para empresas con técnicos de campo: crea órdenes, asigna tareas, supervisa el progreso y produce informes sellados verificables en tiempo real.',
+  nl: 'GeoTapp Flow is het operationele beheersplatform voor bedrijven met buitendiensttechnici: maak opdrachten, wijs taken toe, volg voortgang en produceer verzegelde, verifieerbare rapporten in realtime.',
+  pt: 'GeoTapp Flow é a plataforma de gestão operacional para empresas com técnicos de campo: crie ordens, atribua tarefas, monitorize o progresso e produza relatórios selados verificáveis em tempo real.',
+  da: 'GeoTapp Flow er den operationelle administrationsplatform til virksomheder med serviceteknikere: opret opgaver, tildel arbejde, overvåg fremskridt og generér forseglede, verificerbare rapporter i realtid.',
+  sv: 'GeoTapp Flow är den operativa hanteringsplattformen för företag med fälttekniker: skapa uppdrag, tilldela uppgifter, övervaka framsteg och generera förseglade, verifierbara rapporter i realtid.',
+  nb: 'GeoTapp Flow er den operative administrasjonsplattformen for bedrifter med serviceteknikere: opprett oppdrag, tildel oppgaver, overvåk fremdrift og generer forseglede, verifiserbare rapporter i sanntid.',
+  ru: 'GeoTapp Flow — операционная платформа управления для компаний с выездными техниками: создавайте заказы, назначайте задачи, отслеживайте прогресс и формируйте запечатанные проверяемые отчёты в реальном времени.',
+};
+
+const FLOW_FEATURES: Record<string, string[]> = {
+  it: [
+    'Gestione commesse e interventi multi-sito',
+    'Assegnazione attività ai tecnici sul campo',
+    'Avanzamento lavori in tempo reale',
+    'Report sigillati crittograficamente e verificabili',
+    'Prove fotografiche con GPS e timestamp',
+    'Integrazione nativa con GeoTapp TimeTracker e Verifier',
+    'Export dati per fatturazione e paghe',
+    'GDPR compliant — informativa GPS firmata digitalmente',
+  ],
+  en: [
+    'Multi-site job and intervention management',
+    'Task assignment to field technicians',
+    'Real-time job progress tracking',
+    'Cryptographically sealed, independently verifiable reports',
+    'Photo evidence with GPS and timestamp',
+    'Native integration with GeoTapp TimeTracker and Verifier',
+    'Data export for billing and payroll',
+    'GDPR compliant — digitally signed GPS privacy notice',
+  ],
+  de: [
+    'Auftrags- und Einsatzverwaltung über mehrere Standorte',
+    'Aufgabenzuweisung an Außendiensttechniker',
+    'Echtzeit-Fortschrittsverfolgung',
+    'Kryptographisch versiegelte, unabhängig verifizierbare Berichte',
+    'Fotobeweise mit GPS und Zeitstempel',
+    'Native Integration mit GeoTapp TimeTracker und Verifier',
+    'Datenexport für Abrechnung und Lohn',
+    'DSGVO-konform — digital signierte GPS-Datenschutzerklärung',
+  ],
+};
+
 function buildFlowSoftware(locale: AppLocale) {
   const soloMonthly = convertEurToLocale(EUR_PRICES.flow.solo.monthly, locale);
+  const description = FLOW_DESCRIPTION[locale] ?? FLOW_DESCRIPTION.en;
+  const featureList = FLOW_FEATURES[locale] ?? FLOW_FEATURES.en;
+  // Real reviews from the data file refer to "GeoTapp Flow" (see buildReviewsSchema).
+  // Attach the aggregateRating to the Flow product page only — never invent numbers.
+  const reviews = REVIEWS;
+  const aggregateRating =
+    reviews.length > 0
+      ? {
+          '@type': 'AggregateRating',
+          ratingValue: (
+            reviews.reduce((s, r) => s + r.rating, 0) / reviews.length
+          ).toFixed(1),
+          reviewCount: String(reviews.length),
+          bestRating: '5',
+          worstRating: '1',
+        }
+      : undefined;
   return {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
+    '@id': `https://geotapp.com/${locale}/products/geotapp-flow/#software`,
     name: 'GeoTapp Flow',
-    operatingSystem: 'Web',
+    operatingSystem: 'Web, Android, iOS',
     applicationCategory: 'BusinessApplication',
+    applicationSubCategory: 'Field Service Management',
+    description,
+    featureList,
+    image: 'https://geotapp.com/logoFlow.webp',
+    screenshot: [
+      'https://geotapp.com/screen_dashboard.webp',
+      'https://geotapp.com/screen_live_map.webp',
+      'https://geotapp.com/screenshots/flow-live-map.webp',
+    ],
+    inLanguage: locale,
     offers: {
       '@type': 'Offer',
       price: soloMonthly.amount.toFixed(2),
       priceCurrency: getCurrencyForLocale(locale),
+      availability: 'https://schema.org/InStock',
+      url: `https://geotapp.com/${locale}/trial/`,
       description: `14-day free trial. Paid plans from ${soloMonthly.formatted} per month (Flow Start).`,
     },
+    publisher: { '@id': 'https://geotapp.com/#organization' },
     url: `https://geotapp.com/${locale}/products/geotapp-flow/`,
+    ...(aggregateRating ? { aggregateRating } : {}),
   };
 }
 
