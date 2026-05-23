@@ -9,9 +9,12 @@ import SiteAnalytics from '@/components/SiteAnalytics';
 import InternalTrafficBadge from '@/components/InternalTrafficBadge';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
+// Poppins weights kept in sync with src/app/[locale]/layout.tsx — only the
+// subset of weights actually used in the codebase (500 for PricingSimulator,
+// 700 for headings, 800 for the homepage hero H1). Saves preload bandwidth.
 const poppins = Poppins({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
+  weight: ['500', '700', '800'],
   variable: '--font-poppins',
 });
 

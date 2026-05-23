@@ -3,8 +3,12 @@
 import { Check, Heart } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
 import dynamic from 'next/dynamic';
+// Removed framer-motion import on this page: the only usage was a `whileInView`
+// reveal on the price cards. That single intersection-observer driven animation
+// pulled framer-motion into the pricing route bundle (~50KB gz) and contributed
+// to mobile TBT ~430ms. Replaced with a pure CSS keyframe + animation-delay,
+// visually identical, zero JS cost.
 const PricingCalculator = dynamic(() => import('@/components/PricingCalculator'), { ssr: false });
 import { useCart } from '@/store/cart';
 import { usePathname } from 'next/navigation';
@@ -307,13 +311,10 @@ export default function Pricing() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {category.products.map((product, i) => (
-              <motion.div
+              <div
                 key={product.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1, duration: 0.4 }}
-                className={`relative p-6 rounded-2xl border border-slate-200 bg-white hover:shadow-xl hover:border-slate-300 transition-all duration-300 flex flex-col h-full ${category.id === 'app' ? 'lg:col-span-1' : ''}`}
+                style={{ animationDelay: `${i * 0.1}s` }}
+                className={`pricing-card-reveal relative p-6 rounded-2xl border border-slate-200 bg-white hover:shadow-xl hover:border-slate-300 transition-all duration-300 flex flex-col h-full ${category.id === 'app' ? 'lg:col-span-1' : ''}`}
               >
                 {(product as any).isBestValue && (
                   <span className="absolute -top-3 left-6 bg-slate-900 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest shadow-md">
@@ -459,7 +460,7 @@ export default function Pricing() {
                     {(dict.pricing as any).add_btn ?? 'Add'}
                   </button>
                 )}
-              </motion.div>
+              </div>
             ))}
             {category.id === 'app' && (
               <div className="col-span-1 md:col-span-1 lg:col-span-2 h-full">

@@ -605,14 +605,33 @@ a:hover {
 .anim-delay-600 { animation-delay: 0.6s; opacity: 0; }
 .anim-delay-800 { animation-delay: 0.8s; opacity: 0; }
 
+/* Pricing cards reveal — was framer-motion whileInView.
+   The cards sit below the H1 hero on /pricing/, so on first paint they are
+   below the fold and the LCP element is the H1. Plain CSS keyframe replaces
+   ~50KB of framer-motion runtime on this route. inline style sets the
+   per-card delay (i * 0.1s) via animationDelay. */
+.pricing-card-reveal {
+  animation: fadeInUp 0.4s ease-out both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .pricing-card-reveal {
+    animation: none;
+  }
+}
+
 /* Hero text — appears late on desktop (synced with video blur onset),
-   immediately on mobile (no video, so no reason to delay LCP element). */
+   immediately on mobile (no video, so no reason to delay LCP element).
+   Mobile path: NO animation at all. The previous version still triggered the
+   0.6s opacity 0 -> 1 ramp on mobile because the rule left animation set on
+   the base selector, which keeps the H1 (LCP candidate) at opacity 0 for the
+   first frame. Chromium scored that as delayed first paint of the largest
+   element, pushing mobile LCP to ~4s. Moved the animation declaration into
+   the desktop @media block so mobile renders the H1 already at opacity 1. */
 @keyframes hero-text-late {
   0%   { opacity: 0; transform: translateY(10px); }
   100% { opacity: 1; transform: translateY(0); }
 }
 .hero-text-late {
-  animation: hero-text-late 0.6s ease-out forwards;
   opacity: 1; /* mobile default: visible immediately (no animation, no LCP penalty) */
 }
 

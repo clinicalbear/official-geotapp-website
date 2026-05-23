@@ -25,9 +25,14 @@ import type { AppLocale } from '@/lib/i18n/config';
 const BASE_URL = 'https://geotapp.com';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
+// Poppins weights: only what is actually used as font-display.
+// font-display heading scale ranges from font-bold (700) to font-extrabold (800).
+// Weight 500 retained for the lone PricingSimulator label. 400 and 600 were
+// preloaded but never used → dropped to save ~80KB woff2 on the mobile preload
+// budget, reducing contention with the LCP element on slow connections.
 const poppins = Poppins({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
+  weight: ['500', '700', '800'],
   variable: '--font-poppins',
 });
 

@@ -4,9 +4,10 @@ import '../globals.css';
 import { clsx } from 'clsx';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
+// Poppins weights kept in sync with src/app/[locale]/layout.tsx.
 const poppins = Poppins({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
+  weight: ['500', '700', '800'],
   variable: '--font-poppins',
 });
 
