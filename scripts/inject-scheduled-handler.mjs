@@ -30,7 +30,7 @@ const WARM_PAGES = [
   '/',
   '/it/',
   '/it/products/geotapp-flow/',
-  '/it/products/geotapp-app/',
+  '/it/products/geotapp-timetracker/',
   '/it/pricing/',
   '/it/settori/',
   '/it/settori/pulizie/',
