@@ -108,6 +108,39 @@ export default function SiteAnalytics() {
           page: pagePath,
           type: pageType,
         });
+
+        // Funnel attribution: se l'anchor punta a /trial/ emettiamo anche
+        // un evento trial_click esplicito, con source derivato dal pathname.
+        // Copre i CTA dei server component (confronto/*, roi-calculator) che
+        // non possono avere onClick inline. I CTA che gia' emettono
+        // trial_click manualmente onClick (Home, Footer, Navbar, prodotti,
+        // blog Article*) continuano a funzionare; resta una piccola
+        // duplicazione su quei pochi, accettabile per il funnel.
+        const trialHrefPattern = /\/trial\/?(?:[?#]|$)/;
+        if (trialHrefPattern.test(href)) {
+          const segments = pagePath.split('/').filter(Boolean);
+          let source = 'unknown';
+          if (segments.length === 0 || segments.length === 1) {
+            source = 'home';
+          } else if (segments[1] === 'confronto') {
+            source = segments[2] ? `confronto_${segments[2]}` : 'confronto_index';
+          } else if (segments[1] === 'blog') {
+            source = isBlog ? 'blog_article' : 'blog_listing';
+          } else if (segments[1] === 'roi-calculator') {
+            source = 'roi_calculator';
+          } else if (segments[1] === 'products') {
+            source = `product_${segments[2] || 'unknown'}`;
+          } else if (segments[1] === 'settori') {
+            source = `settore_${segments[2] || 'unknown'}`;
+          } else if (segments[1] === 'pricing') {
+            source = 'pricing';
+          } else if (segments[1] === 'links') {
+            source = 'links_page';
+          } else {
+            source = segments.slice(1, 3).join('_') || 'other';
+          }
+          trackEvent('trial_click', { source });
+        }
       } else if (anchor && !isInternal && href.startsWith('http')) {
         trackEvent('outbound_click', {
           text: text.slice(0, 50),
