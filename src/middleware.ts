@@ -436,9 +436,12 @@ export async function middleware(req: NextRequest) {
     });
   }
 
-  // 0c. Blog listing redirects: /blog/ → /it/blog/, /blog/{locale}/ → /{locale}/blog/
-  // WordPress-style listing URLs must 301 to the Next.js canonical [locale]/blog/ route.
-  // Article URLs (/blog/en/2026/...) and WP assets (/blog/wp-*) are NOT redirected.
+  // 0c. Blog listing redirects.
+  //
+  // /blog or /blog/                  → 302 → /{detected_lang}/blog/  (GEO-AWARE)
+  // /blog/{locale} or /blog/{locale}/ → 301 → /{locale}/blog/         (stable equivalence)
+  //
+  // Article URLs (/blog/en/2026/...) and WP assets (/blog/wp-*) NOT redirected.
   if (pathname.startsWith('/blog')) {
     // Skip WP admin/api/assets/login
     if (pathname.startsWith('/blog/wp-')) {
@@ -446,12 +449,45 @@ export async function middleware(req: NextRequest) {
     } else {
       const BLOG_LISTING_LOCALES = ['en','de','fr','es','pt','nl','da','sv','nb','ru'];
 
-      // /blog or /blog/ exactly → /it/blog/
+      // /blog or /blog/ exactly → /{detected_lang}/blog/ via 302 (geo-aware).
+      //
+      // 302 (not 301): destinazione varia per visitatore (geo + cookie + Accept-Language).
+      // Un 301 farebbe cachare a Google la prima destinazione vista dal crawler
+      // (probabilmente /it/blog/ dato che Googlebot crawla principalmente da USA con
+      // header neutri), portando tutti gli utenti a /it/ a prescindere dalla loro lingua.
+      //
+      // X-Robots-Tag: noindex,follow — il path "nudo" /blog non compare in SERP perche'
+      // il contenuto cambia per utente; Google segue il redirect verso /{lang}/blog/
+      // che e' la pagina canonical e indicizzabile.
+      //
+      // LOCALE_COOKIE set — alla seconda visita la scelta dell'utente viene rispettata
+      // anche se cambia paese/rete (laptop in hotel all'estero, VPN, ecc.).
       if (pathname === '/blog' || pathname === '/blog/') {
-        return NextResponse.redirect(new URL('/it/blog/', req.url), 301);
+        const countryCode =
+          req.headers.get('cf-ipcountry') ||
+          req.headers.get('x-vercel-ip-country') ||
+          (req as any).geo?.country ||
+          null;
+        const detectedLocale = resolveLocale({
+          cookieLocale: req.cookies.get(LOCALE_COOKIE_NAME)?.value,
+          countryCode,
+          acceptLanguage: req.headers.get('accept-language'),
+        });
+        const blogRedirect = NextResponse.redirect(
+          new URL(`/${detectedLocale}/blog/`, req.url),
+          302,
+        );
+        blogRedirect.headers.set('X-Robots-Tag', 'noindex, follow');
+        blogRedirect.cookies.set(LOCALE_COOKIE_NAME, detectedLocale, {
+          path: '/',
+          sameSite: 'lax',
+          maxAge: 60 * 60 * 24 * 365,
+        });
+        return blogRedirect;
       }
 
       // /blog/{locale} or /blog/{locale}/ exactly (no more segments) → /{locale}/blog/
+      // Questo resta 301: l'equivalenza /blog/en/ ↔ /en/blog/ e' stabile per qualsiasi visitatore.
       for (const loc of BLOG_LISTING_LOCALES) {
         if (pathname === `/blog/${loc}` || pathname === `/blog/${loc}/`) {
           return NextResponse.redirect(new URL(`/${loc}/blog/`, req.url), 301);
