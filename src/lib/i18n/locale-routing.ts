@@ -95,8 +95,22 @@ export function getLocaleFromPathname(
     return null;
   }
 
-  const [firstSegment] = pathname.split('/').filter(Boolean);
-  return normalizeLocaleCode(firstSegment);
+  const segments = pathname.split('/').filter(Boolean);
+  if (segments.length === 0) {
+    return null;
+  }
+
+  const fromFirst = normalizeLocaleCode(segments[0]);
+  if (fromFirst) {
+    return fromFirst;
+  }
+
+  // Blog uses /blog/{locale}/... structure (WordPress multilingual via Polylang)
+  if (segments[0] === 'blog' && segments.length >= 2) {
+    return normalizeLocaleCode(segments[1]);
+  }
+
+  return null;
 }
 
 export function stripLocaleFromPathname(pathname?: string | null): string {

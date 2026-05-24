@@ -637,7 +637,7 @@
     "form_submitting": "Attivazione in corso...",
     "form_privacy": "I tuoi dati sono trattati secondo la nostra",
     "form_privacy_link": "Privacy Policy",
-    "form_email_hint": "Usa un'email aziendale (no Gmail, Yahoo, ecc.)",
+    "form_email_hint": "Email aziendale consigliata. Va bene anche personale (Gmail, Outlook, ecc.).",
     "success_title": "Controlla la tua email!",
     "success_desc": "Abbiamo inviato il link di attivazione a ",
     "success_desc2": "Clicca il link per impostare la password e accedere al tuo trial.",

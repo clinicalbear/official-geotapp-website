@@ -822,7 +822,7 @@
     "form_submitting": "Activando...",
     "form_privacy": "Tus datos se procesan de acuerdo con nuestra",
     "form_privacy_link": "Política de privacidad",
-    "form_email_hint": "Usa un email empresarial (no Gmail, Yahoo, etc.)",
+    "form_email_hint": "Email empresarial recomendado. Personal (Gmail, Outlook, etc.) también vale.",
     "success_title": "¡Comprueba tu email!",
     "success_desc": "Hemos enviado el enlace de activación a ",
     "success_desc2": "Haz clic en el enlace para establecer tu contraseña y acceder a tu prueba.",

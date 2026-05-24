@@ -637,7 +637,7 @@
     "form_submitting": "Setting up...",
     "form_privacy": "Your data is processed according to our",
     "form_privacy_link": "Privacy Policy",
-    "form_email_hint": "Use a business email (no Gmail, Yahoo, etc.)",
+    "form_email_hint": "Business email preferred. Personal (Gmail, Outlook, etc.) also works.",
     "success_title": "Check your email!",
     "success_desc": "We've sent the activation link to ",
     "success_desc2": "Click the link to set your password and access your trial.",

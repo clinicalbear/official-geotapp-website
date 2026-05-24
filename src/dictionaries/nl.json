@@ -636,7 +636,7 @@
     "form_submitting": "Bezig...",
     "form_privacy": "Uw gegevens worden verwerkt volgens ons",
     "form_privacy_link": "Privacybeleid",
-    "form_email_hint": "Gebruik een zakelijk e-mailadres (geen Gmail, Yahoo, etc.)",
+    "form_email_hint": "Zakelijk e-mailadres aanbevolen. Persoonlijk (Gmail, Outlook, etc.) kan ook.",
     "success_title": "Controleer uw e-mail!",
     "success_desc": "We hebben de activeringslink gestuurd naar ",
     "success_desc2": "Klik op de link om uw wachtwoord in te stellen en toegang te krijgen tot uw proefperiode.",

@@ -822,7 +822,7 @@
     "form_submitting": "Activation en cours...",
     "form_privacy": "Vos données sont traitées conformément à notre",
     "form_privacy_link": "Politique de confidentialité",
-    "form_email_hint": "Utilisez un email professionnel (pas Gmail, Yahoo, etc.)",
+    "form_email_hint": "Email pro recommandé. Personnel (Gmail, Outlook, etc.) fonctionne aussi.",
     "success_title": "Vérifiez votre email !",
     "success_desc": "Nous avons envoyé le lien d'activation à ",
     "success_desc2": "Cliquez sur le lien pour définir votre mot de passe et accéder à votre essai.",

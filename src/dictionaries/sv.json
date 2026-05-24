@@ -822,7 +822,7 @@
     "form_submitting": "Aktiverar...",
     "form_privacy": "Dina uppgifter behandlas enligt vår",
     "form_privacy_link": "Integritetspolicy",
-    "form_email_hint": "Använd en företags-e-post (inte Gmail, Yahoo osv.)",
+    "form_email_hint": "Företags-e-post rekommenderas. Personlig (Gmail, Outlook osv.) funkar också.",
     "success_title": "Kolla din e-post!",
     "success_desc": "Vi har skickat aktiveringslinken till ",
     "success_desc2": "Klicka på länken för att ange ditt lösenord och komma åt din provperiod.",

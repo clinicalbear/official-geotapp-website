@@ -19,6 +19,7 @@ import { getDictionary } from '@/lib/i18n/dictionaries';
 import { getLocaleFromPathname } from '@/lib/i18n/locale-routing';
 import Link from 'next/link';
 import { trackEvent } from '@/lib/analytics';
+import Reviews from '@/components/Reviews';
 
 const BENEFIT_ICONS = [
   <Rocket size={20} className="text-primary" />,
@@ -35,7 +36,7 @@ export default function TrialPage() {
   const [submittedEmail, setSubmittedEmail] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [openFaq, setOpenFaq] = useState<number | null>(0);
 
   const [email, setEmail] = useState('');
 
@@ -151,6 +152,11 @@ export default function TrialPage() {
           >
             {d.page_subtitle}
           </motion.p>
+        </div>
+
+        {/* Reviews: social proof above the form */}
+        <div className="mb-16">
+          <Reviews locale={locale || 'it'} />
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">

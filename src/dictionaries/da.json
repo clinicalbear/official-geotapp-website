@@ -822,7 +822,7 @@
     "form_submitting": "Aktiverer...",
     "form_privacy": "Dine data behandles i henhold til vores",
     "form_privacy_link": "Privatlivspolitik",
-    "form_email_hint": "Brug en erhvervs-email (ikke Gmail, Yahoo osv.)",
+    "form_email_hint": "Erhvervs-email anbefales. Personlig (Gmail, Outlook osv.) virker også.",
     "success_title": "Tjek din email!",
     "success_desc": "Vi har sendt aktiveringslinket til ",
     "success_desc2": "Klik på linket for at angive din adgangskode og få adgang til din prøveperiode.",

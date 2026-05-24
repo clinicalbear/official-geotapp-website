@@ -637,7 +637,7 @@
     "form_submitting": "Wird eingerichtet...",
     "form_privacy": "Ihre Daten werden gemäß unserer",
     "form_privacy_link": "Datenschutzerklärung",
-    "form_email_hint": "Bitte geschäftliche E-Mail verwenden (kein Gmail, Yahoo usw.)",
+    "form_email_hint": "Geschäfts-E-Mail empfohlen. Persönliche (Gmail, Outlook usw.) geht auch.",
     "success_title": "E-Mail prüfen!",
     "success_desc": "Wir haben den Aktivierungslink an ",
     "success_desc2": "Klicken Sie auf den Link, um Ihr Passwort festzulegen und auf Ihren Test zuzugreifen.",
