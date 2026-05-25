@@ -137,6 +137,41 @@ export default async function ConfrontoIndexPage({ params }: { params: Promise<{
             </p>
           </div>
 
+          <Link
+            href={`/${locale}/confronto/dinamico/`}
+            className="block group mb-8 bg-gradient-to-br from-primary/20 via-primary/10 to-purple-500/10 border border-primary/40 hover:border-primary/70 rounded-2xl p-6 transition-all duration-200"
+          >
+            <div className="flex items-start justify-between gap-4">
+              <div className="flex-1">
+                <div className="flex items-center gap-3 mb-2">
+                  <span className="font-bold text-lg">
+                    {{
+                      it: '🆕 Comparativa Dinamica — confronta TUTTI in una pagina',
+                      en: '🆕 Live Comparison — compare ALL competitors in one place',
+                      de: '🆕 Dynamischer Vergleich — alle Konkurrenten auf einer Seite',
+                      fr: '🆕 Comparatif Dynamique — tous les concurrents sur une page',
+                      es: '🆕 Comparativa Dinámica — todos los competidores en una página',
+                      nl: '🆕 Dynamische Vergelijking — alle concurrenten op één pagina',
+                      pt: '🆕 Comparação Dinâmica — todos os concorrentes numa página',
+                    }[locale] ?? '🆕 Live Comparison — compare ALL competitors in one place'}
+                  </span>
+                </div>
+                <p className="text-text-secondary text-sm">
+                  {{
+                    it: 'Selettore competitor + tabella 12 feature aggiornata in tempo reale. Tutte le alternative confrontate in un solo posto.',
+                    en: 'Competitor selector + 12-feature table updated in real time. All alternatives compared in one place.',
+                    de: 'Konkurrenten-Auswahl + 12-Feature-Tabelle in Echtzeit. Alle Alternativen auf einer Seite.',
+                    fr: 'Sélecteur de concurrents + tableau 12 fonctions en temps réel. Toutes les alternatives au même endroit.',
+                    es: 'Selector de competidores + tabla de 12 funciones en tiempo real. Todas las alternativas en un solo lugar.',
+                    nl: 'Concurrent-selector + tabel met 12 functies in real time. Alle alternatieven op één plek.',
+                    pt: 'Seletor de concorrentes + tabela de 12 funções em tempo real. Todas as alternativas num só lugar.',
+                  }[locale] ?? 'Competitor selector + 12-feature table updated in real time.'}
+                </p>
+              </div>
+              <span className="text-primary text-xl group-hover:translate-x-1 transition-transform mt-1">→</span>
+            </div>
+          </Link>
+
           <div className="space-y-4">
             {COMPARISONS.map((item: any) => {
               const loc = item[locale] ?? item.en;
