@@ -111,7 +111,7 @@ export default function TrialPage() {
       const res = await fetch(`${saasUrl}/api/trial/start`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email, language: locale || 'it' }),
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || d.error_message);
