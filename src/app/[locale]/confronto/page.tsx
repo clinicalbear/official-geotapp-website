@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { TrialCTALink } from '@/components/analytics/TrialCTALink';
 import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
 export { generateLocaleStaticParams as generateStaticParams } from '@/lib/i18n/static-params';
 
@@ -171,12 +172,13 @@ export default async function ConfrontoIndexPage({ params }: { params: Promise<{
             <p className="text-text-secondary mb-6">
               {c.cta_desc}
             </p>
-            <Link
+            <TrialCTALink
               href={`/${locale}/trial/`}
+              source="confronto_index"
               className="inline-block bg-primary text-black font-semibold px-8 py-3 rounded-full hover:bg-primary/90 transition-colors"
             >
               {c.cta_btn}
-            </Link>
+            </TrialCTALink>
           </div>
 
         </div>

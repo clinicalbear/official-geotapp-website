@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { TrialCTALink } from '@/components/analytics/TrialCTALink';
 import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
 import {
   buildComparisonArticle,
@@ -169,7 +170,7 @@ export default async function GeoTappVsNoBadgePage({ params }: { params: Promise
           <div className="text-center bg-gradient-to-br from-primary/20 to-purple-500/10 border border-primary/20 rounded-2xl p-10">
             <h2 className="text-2xl font-bold mb-3">{t.cta}</h2>
             <p className="text-text-secondary mb-6">{t.ctaDesc}</p>
-            <a href={`https://geotapp.com/${locale}/trial/`} className="inline-block bg-primary text-black font-semibold px-8 py-3 rounded-full hover:bg-primary/90 transition-colors">{t.ctaBtn}</a>
+            <TrialCTALink href={`/${locale}/trial/`} source="confronto_vs_nobadge" className="inline-block bg-primary text-black font-semibold px-8 py-3 rounded-full hover:bg-primary/90 transition-colors">{t.ctaBtn}</TrialCTALink>
           </div>
         </div>
       </div>

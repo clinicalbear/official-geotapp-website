@@ -7,6 +7,7 @@ import { motion } from 'framer-motion';
 import MapBackground from '@/components/blog/MapBackground';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import type { AppLocale } from '@/lib/i18n/config';
+import { trackEvent } from '@/lib/analytics';
 
 const POSTS_PER_PAGE = 13; // 1 featured + 12 normal
 
@@ -252,6 +253,7 @@ export default function BlogClient({ locale, posts }: { locale: AppLocale; posts
                   <div className="blog-masonry-item">
                     <Link
                       href={`/${locale}/trial/`}
+                      onClick={() => trackEvent('trial_click', { source: 'blog_masonry_filler' })}
                       className="block h-full rounded-2xl border border-dashed border-[#8FC436]/30 bg-[#8FC436]/5 p-8 text-center hover:border-[#8FC436]/60 hover:bg-[#8FC436]/10 transition-all duration-300 group"
                     >
                       <div className="flex flex-col items-center justify-center h-full min-h-[200px]">
@@ -308,6 +310,7 @@ export default function BlogClient({ locale, posts }: { locale: AppLocale; posts
           </div>
           <Link
             href={`/${locale}/trial/`}
+            onClick={() => trackEvent('trial_click', { source: 'blog_bottom_gradient' })}
             className="shrink-0 inline-block px-8 py-4 bg-primary text-white font-bold rounded-xl hover:opacity-90 transition-opacity text-lg"
           >
             {b.cta_btn}

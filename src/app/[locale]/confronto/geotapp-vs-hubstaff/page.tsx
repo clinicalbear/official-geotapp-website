@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { TrialCTALink } from '@/components/analytics/TrialCTALink';
 import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
 import {
   buildComparisonArticle,
@@ -284,12 +285,13 @@ export default async function GeoTappVsHubstaffPage({ params }: { params: Promis
                 ? 'Ti mostriamo come un intervento diventa una prova verificabile — in 20 minuti, senza impegno.'
                 : 'We show you how a job becomes verifiable proof — in 20 minutes, no commitment.'}
             </p>
-            <a
-              href={`https://geotapp.com/${locale}/trial/`}
+            <TrialCTALink
+              href={`/${locale}/trial/`}
+              source="confronto_vs_hubstaff"
               className="inline-block bg-primary text-black font-semibold px-8 py-3 rounded-full hover:bg-primary/90 transition-colors"
             >
               {isIt ? 'Inizia subito gratuitamente!' : 'Start for free!'}
-            </a>
+            </TrialCTALink>
           </div>
 
         </div>

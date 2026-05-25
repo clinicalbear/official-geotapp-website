@@ -18,7 +18,7 @@ import { usePathname } from 'next/navigation';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import { getLocaleFromPathname } from '@/lib/i18n/locale-routing';
 import Link from 'next/link';
-import { trackEvent } from '@/lib/analytics';
+import { trackEvent, consumeTrialSource } from '@/lib/analytics';
 import Reviews from '@/components/Reviews';
 
 const BENEFIT_ICONS = [
@@ -45,9 +45,13 @@ export default function TrialPage() {
   const formStarted = useRef(false);
   const pageLoadTime = useRef(Date.now());
 
-  // Track page view with scroll depth
+  // Track page view with scroll depth + source attribution (CTA d'origine)
   useEffect(() => {
-    trackEvent('trial_page_view', { locale: locale || 'it' });
+    const source = consumeTrialSource();
+    trackEvent('trial_page_view', {
+      locale: locale || 'it',
+      ...(source ? { source } : {}),
+    });
 
     let maxScroll = 0;
     const handleScroll = () => {
@@ -125,22 +129,22 @@ export default function TrialPage() {
   const localePrefix = locale !== 'it' ? `/${locale}` : '/it';
 
   return (
-    <div className="pt-32 pb-24 px-6 min-h-screen bg-white text-slate-900">
+    <div className="pt-20 md:pt-28 pb-24 px-6 min-h-screen bg-white text-slate-900">
       <div className="container mx-auto max-w-6xl">
 
-        {/* HEADER */}
-        <div className="text-center mb-16 max-w-3xl mx-auto">
+        {/* HEADER — compatto su mobile per portare il form above the fold */}
+        <div className="text-center mb-8 md:mb-12 max-w-3xl mx-auto">
           <motion.span
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-bold tracking-wide mb-6"
+            className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-bold tracking-wide mb-4 md:mb-6"
           >
             {d.badge}
           </motion.span>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-6xl font-display font-bold text-slate-900 mb-6 leading-tight"
+            className="text-3xl md:text-6xl font-display font-bold text-slate-900 mb-3 md:mb-6 leading-tight"
           >
             {d.page_title}
           </motion.h1>
@@ -148,14 +152,14 @@ export default function TrialPage() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.1 }}
-            className="text-xl text-slate-500 font-light leading-relaxed"
+            className="text-base md:text-xl text-slate-500 font-light leading-relaxed"
           >
             {d.page_subtitle}
           </motion.p>
         </div>
 
-        {/* Reviews: social proof above the form */}
-        <div className="mb-16">
+        {/* Reviews: social proof sopra il form su desktop, sotto su mobile */}
+        <div className="hidden md:block mb-12">
           <Reviews locale={locale || 'it'} />
         </div>
 
@@ -326,6 +330,11 @@ export default function TrialPage() {
               </div>
             </div>
           </motion.div>
+        </div>
+
+        {/* Reviews su mobile: sotto il form per non spingere la CTA fuori dal fold */}
+        <div className="md:hidden mt-12">
+          <Reviews locale={locale || 'it'} />
         </div>
       </div>
     </div>

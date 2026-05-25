@@ -159,6 +159,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
               <div className="flex flex-col gap-4 sm:flex-row">
                 <Link
                   href={trialLink}
+                  onClick={() => trackEvent('trial_click', { source: `settore_${settore}_hero` })}
                   className={`inline-flex items-center gap-2 rounded-xl px-8 py-4 font-bold text-white shadow-lg transition-colors ${colors.btn}`}
                 >
                   {content.hero.cta_primary} <ArrowRight size={18} />
