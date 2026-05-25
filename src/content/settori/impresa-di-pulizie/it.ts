@@ -188,19 +188,29 @@ const content: SettoreContent = {
 
   schema_faq: [
     {
-      question: 'Come funziona la timbratura GPS per imprese di pulizie?',
+      question: "Quanto costa un'app per impresa di pulizie con GPS?",
       answer:
-        "L'operatore timbra ingresso e uscita dallo smartphone. GeoTapp registra le coordinate GPS — non inserite a mano. Ogni timbratura è certificata con timestamp e posizione verificabile dal committente.",
+        "Per una squadra di 5 addetti il costo parte da circa 5 euro per dipendente al mese, senza vincoli. GeoTapp Flow include presenze GPS, foto interventi e report cliente nel trial gratuito di 14 giorni.",
     },
     {
-      question: 'Posso dimostrare al cliente che il servizio è stato eseguito?',
+      question: "L'app GPS rispetta lo Statuto dei lavoratori (articolo 4)?",
       answer:
-        'Sì. GeoTapp genera automaticamente un report sigillato con GPS, foto e timestamp a fine intervento. Il cliente lo riceve e lo verifica da solo.',
+        "Sì, se configurata con il protocollo Garante: informativa firmata, finalità organizzativa, geolocalizzazione solo durante turno. Tutte queste regole sono attivate di default su GeoTapp Flow.",
     },
     {
-      question: 'GeoTapp è conforme al GDPR per la geolocalizzazione dei dipendenti?',
+      question: "Come dimostro al cliente che ho eseguito il servizio di pulizia?",
       answer:
-        "Sì. GeoTapp traccia la posizione solo durante l'orario di lavoro attivo, include modulistica per l'informativa ai dipendenti e non raccoglie dati non necessari.",
+        "L'app registra ingresso e uscita GPS, foto del lavoro fatto e nota libera. Il report PDF è firmato con marca temporale e arriva al cliente in automatico a fine intervento.",
+    },
+    {
+      question: "Posso usare l'app anche senza connessione internet sul cantiere?",
+      answer:
+        "Sì, GeoTapp Flow lavora offline. I dati GPS e le foto restano sul telefono dell'addetto e si sincronizzano automaticamente al primo segnale, senza perdita.",
+    },
+    {
+      question: "Quanto tempo serve per attivare l'app sulla mia squadra?",
+      answer:
+        "Quindici minuti per il setup azienda, cliente e commessa. Poi il primo addetto timbra dal cantiere il giorno stesso. Niente formazione esterna richiesta.",
     },
   ],
 };
