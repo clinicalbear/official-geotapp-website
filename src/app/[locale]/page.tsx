@@ -145,6 +145,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   ) as Record<string, string>;
   languages['x-default'] = `${BASE_URL}/en/`;
 
+  // Regional EN variants (en-us, en-gb, en-au, en-ie, en-ca) sono "alternate
+  // regional content" del locale canonical /en/. Canonical → /en/ per
+  // consolidare authority sul brand. Hreflang resta regionale → Google
+  // serve la variant giusta per geo IP utente. Fix audit 2026-05-25
+  // (drop "geotapp" pos 4→12 causato da split authority).
+  const REGIONAL_EN = new Set(['en-us', 'en-gb', 'en-au', 'en-ie', 'en-ca']);
+  const canonicalLocale = REGIONAL_EN.has(locale) ? 'en' : locale;
+
   return {
     // Use absolute title to bypass the root layout template ("%s | GeoTapp").
     // Home page titles already include the brand name at the start
@@ -155,7 +163,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     alternates: {
       // Absolute canonical required here — homepage path is just "/" per locale,
       // relative "/${locale}" without trailing slash would resolve to a redirect URL.
-      canonical: `${BASE_URL}/${locale}/`,
+      canonical: `${BASE_URL}/${canonicalLocale}/`,
       languages,
     },
     openGraph: {
