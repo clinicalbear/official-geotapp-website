@@ -21,6 +21,7 @@ import {
   getCurrencyForLocale,
 } from '@/lib/pricing';
 import type { AppLocale } from '@/lib/i18n/config';
+import { getConsentMode } from '@/lib/consent-mode';
 
 const BASE_URL = 'https://geotapp.com';
 
@@ -219,6 +220,9 @@ export default async function LocaleLayout({ children, params }: Props) {
   const { locale } = await params;
   const data = LOCALE_SCHEMA[locale] ?? LOCALE_SCHEMA.en;
   const localeUrl = `${BASE_URL}/${locale}/`;
+  // Geo-aware consent: EU/UK/EEA/CH = denied di default + banner.
+  // Resto del mondo (US/CA/AU/etc) = granted, no banner.
+  const consentMode = await getConsentMode();
 
   // Locale-aware pricing for structured data + offers description.
   // EUR is master; non-EUR locales render the converted/buffered price.
@@ -517,20 +521,34 @@ export default async function LocaleLayout({ children, params }: Props) {
         </Script>
 
         {/* ── Google Consent Mode v2 — must run BEFORE GA loads ─────────────
-            Default: all storage denied. Updated by CookieConsentBanner
-            when the user accepts analytics/ads cookies. */}
+            Geo-aware: per utenti EU/UK/EEA/CH parte denied (banner mostra
+            le 3 opzioni). Per gli altri (US/CA/AU/etc) parte granted —
+            jurisdiction non richiede consent per analytics non-essenziali. */}
         <Script id="google-consent-default" strategy="beforeInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('consent', 'default', {
-              analytics_storage: 'denied',
-              ad_storage: 'denied',
-              ad_user_data: 'denied',
-              ad_personalization: 'denied',
-              wait_for_update: 500,
-            });
-          `}
+          {consentMode === 'eu'
+            ? `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('consent', 'default', {
+                analytics_storage: 'denied',
+                ad_storage: 'denied',
+                ad_user_data: 'denied',
+                ad_personalization: 'denied',
+                wait_for_update: 500,
+              });
+              window.__gtConsentMode = 'eu';
+            `
+            : `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('consent', 'default', {
+                analytics_storage: 'granted',
+                ad_storage: 'denied',
+                ad_user_data: 'denied',
+                ad_personalization: 'denied',
+              });
+              window.__gtConsentMode = 'rest';
+            `}
         </Script>
         <Script
           strategy="afterInteractive"
@@ -594,7 +612,7 @@ export default async function LocaleLayout({ children, params }: Props) {
           }}
         />
         <SiteAnalytics />
-        <CookieConsentBanner locale={locale} />
+        {consentMode === 'eu' && <CookieConsentBanner locale={locale} />}
         <NewsletterModal locale={locale} />
         <ChatWidget />
         <InternalTrafficBadge />
