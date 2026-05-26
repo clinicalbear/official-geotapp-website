@@ -158,11 +158,6 @@ export default function TrialPage() {
           </motion.p>
         </div>
 
-        {/* Reviews: social proof sopra il form su desktop, sotto su mobile */}
-        <div className="hidden md:block mb-12">
-          <Reviews locale={locale || 'it'} />
-        </div>
-
         <div className="grid lg:grid-cols-2 gap-12 items-start">
 
           {/* LEFT: form */}
@@ -332,8 +327,12 @@ export default function TrialPage() {
           </motion.div>
         </div>
 
-        {/* Reviews su mobile: sotto il form per non spingere la CTA fuori dal fold */}
-        <div className="md:hidden mt-12">
+        {/* Reviews sotto il form su TUTTI i device.
+            Pre-26/05/2026 erano sopra su desktop, ma l'analisi funnel GA4 ha
+            mostrato che 4 trial_page_view su 5 NON iniziano il form: il
+            blocco recensioni spingeva la CTA fuori dal fold sul desktop.
+            Form-first ovunque + social proof come supporto dopo. */}
+        <div className="mt-12">
           <Reviews locale={locale || 'it'} />
         </div>
       </div>
