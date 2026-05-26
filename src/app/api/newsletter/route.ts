@@ -97,9 +97,21 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Subscription failed' }, { status: 502 });
   }
 
-  // MailerLite is the system of record for subscribers. No local copy is
-  // kept: the firebase-admin SDK cannot run on the Cloudflare Workers runtime
-  // (importing it fails the whole route module). If a local mirror is needed,
-  // use the Firestore REST API, not firebase-admin.
+  // Per il lead-magnet "informativa-gps" notifichiamo ANCHE il CRM, che
+  // gestisce la drip sequence multilingua (sostituisce automation
+  // MailerLite legacy). Non blocca la risposta: se il CRM fallisce,
+  // il subscriber è già su MailerLite come backup.
+  if (leadMagnet === 'informativa-gps') {
+    const crmUrl = process.env.CRM_GDPR_ENDPOINT;
+    const crmSecret = process.env.CRM_SYNC_SECRET;
+    if (crmUrl && crmSecret) {
+      fetch(crmUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'x-sync-secret': crmSecret },
+        body: JSON.stringify({ email, sector, locale }),
+      }).catch(err => console.error('[newsletter] CRM gdpr-download notify failed:', err));
+    }
+  }
+
   return NextResponse.json({ ok: true });
 }
