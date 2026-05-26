@@ -12,6 +12,76 @@ interface RoiPayload {
   email: string;
   telefono?: string;
   locale: string;
+  subscribe_newsletter?: boolean;
+}
+
+const ML_API = 'https://connect.mailerlite.com/api';
+
+// Stesso mapping di /api/newsletter/route.ts
+const SECTOR_GROUPS: Record<string, string> = {
+  general:      '183189041386096435',
+  installatori: '183189285297457050',
+  pulizie:      '183189285492491623',
+  sicurezza:    '183189285702206473',
+  altro:        '183189360410101627',
+};
+const SECTOR_GROUP_MAP: Record<string, string> = {
+  elettricisti:   'installatori',
+  idraulici:      'installatori',
+  termoidraulici: 'installatori',
+  edilizia:       'altro',
+  impianti:       'installatori',
+  manutenzione:   'altro',
+};
+const LANG_GROUPS: Record<string, string> = {
+  it: '183189741229836143', en: '183189741372441733', de: '183189741577963038',
+  fr: '183189741714278118', es: '183189741873661863', pt: '183189742031996078',
+  nl: '183189742179845410', ru: '183189742345520573', da: '183189742514341407',
+  sv: '183189742669530726', nb: '183189742813185694',
+};
+
+async function subscribeToNewsletter(
+  email: string,
+  sector: string,
+  locale: string,
+  fields: Record<string, string | number>,
+): Promise<void> {
+  const apiKey = process.env.MAILERLITE_API_KEY;
+  if (!apiKey) {
+    console.warn('[roi-calculator] MAILERLITE_API_KEY missing, skip subscribe');
+    return;
+  }
+  const groupIds = [SECTOR_GROUPS.general];
+  if (sector) {
+    const groupKey = SECTOR_GROUPS[sector] ? sector : (SECTOR_GROUP_MAP[sector] ?? 'altro');
+    groupIds.push(SECTOR_GROUPS[groupKey]);
+  }
+  const lcase = locale.toLowerCase().split('-')[0]; // en-ie → en
+  if (LANG_GROUPS[lcase]) groupIds.push(LANG_GROUPS[lcase]);
+
+  try {
+    const res = await fetch(`${ML_API}/subscribers`, {
+      method: 'POST',
+      headers: { 'Authorization': `Bearer ${apiKey}`, 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        email,
+        fields: {
+          sector,
+          language: locale,
+          lead_magnet: 'roi-calculator',
+          ...fields,
+        },
+        groups: groupIds,
+        status: 'active',
+      }),
+    });
+    if (!res.ok && res.status !== 409) {
+      const err = await res.json().catch(() => ({}));
+      console.error('[roi-calculator] MailerLite subscribe failed:', res.status, err);
+    }
+  } catch (err) {
+    console.error('[roi-calculator] MailerLite call error:', err);
+  }
 }
 
 interface RoiResult {
@@ -124,6 +194,18 @@ export async function POST(req: NextRequest) {
   } catch (err) {
     // Log but don't fail the request — user still gets their results
     console.error('[roi-calculator] email send failed:', err);
+  }
+
+  // Iscrizione newsletter via MailerLite (con consent esplicito).
+  // Non blocca la response: se MailerLite fallisce, l'utente vede comunque
+  // il ROI e Mike riceve la notifica email.
+  if (body.subscribe_newsletter !== false) {
+    await subscribeToNewsletter(email, settore, body.locale ?? '', {
+      roi_savings_eur: Math.round(roi.risparmio_totale),
+      roi_payback_months: roi.payback_mesi,
+      roi_pct: roi.roi_pct,
+      operatori,
+    });
   }
 
   return NextResponse.json({ ok: true, roi });

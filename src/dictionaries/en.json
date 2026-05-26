@@ -891,6 +891,7 @@
     "field_telefono": "Phone (optional)",
     "cta_calcola": "Calculate My ROI",
     "consent_text": "By clicking 'Calculate My ROI' you agree to receive commercial communications from GeoTapp. You can unsubscribe at any time.",
+    "newsletter_opt_in": "Also send me the monthly newsletter with practical tips to actually realize the ROI you just calculated (GPS, GDPR, field ops). One-click unsubscribe.",
     "next": "Next",
     "back": "Back",
     "results_title": "Your Estimated Savings with GeoTapp",

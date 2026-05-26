@@ -154,6 +154,10 @@ export default function RoiCalculatorClient({ dict, locale, trialUrl, embed = fa
   const [error, setError] = useState('');
   const [result, setResult] = useState<RoiResult | null>(null);
   const [countActive, setCountActive] = useState(false);
+  // Default ON: legittimo interesse — la newsletter copre il servizio appena
+  // richiesto (consigli per realizzare il ROI calcolato). L'utente può
+  // disattivare in 1 click sotto al form.
+  const [subscribeNewsletter, setSubscribeNewsletter] = useState(true);
   const containerRef = useRef<HTMLDivElement>(null);
 
   // Notify parent iframe of height changes for embed mode
@@ -185,7 +189,7 @@ export default function RoiCalculatorClient({ dict, locale, trialUrl, embed = fa
       const res = await fetch('/api/roi-calculator', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...form, locale }),
+        body: JSON.stringify({ ...form, locale, subscribe_newsletter: subscribeNewsletter }),
       });
       if (!res.ok) throw new Error('Server error');
       const data = await res.json();
@@ -326,6 +330,17 @@ export default function RoiCalculatorClient({ dict, locale, trialUrl, embed = fa
                     />
                   </div>
                   {error && <p className="text-red-500 text-sm">{error}</p>}
+                  <label className="flex items-start gap-2.5 cursor-pointer select-none">
+                    <input
+                      type="checkbox"
+                      checked={subscribeNewsletter}
+                      onChange={(e) => setSubscribeNewsletter(e.target.checked)}
+                      className="mt-0.5 h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500 cursor-pointer flex-shrink-0"
+                    />
+                    <span className="text-xs text-gray-500 leading-relaxed">
+                      {dict.newsletter_opt_in ?? 'Voglio anche ricevere la newsletter mensile con consigli pratici per realizzare il ROI calcolato (GPS, GDPR, gestione campo). Disiscrizione in 1 click.'}
+                    </span>
+                  </label>
                   <button
                     onClick={handleSubmit}
                     disabled={loading}
