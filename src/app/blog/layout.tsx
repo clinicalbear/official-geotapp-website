@@ -7,6 +7,7 @@ import Footer from '@/components/Footer';
 import Script from 'next/script';
 import SiteAnalytics from '@/components/SiteAnalytics';
 import InternalTrafficBadge from '@/components/InternalTrafficBadge';
+import CookieConsentBanner from '@/components/CookieConsentBanner';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 // Poppins weights kept in sync with src/app/[locale]/layout.tsx — only the
@@ -32,6 +33,23 @@ export default function BlogLayout({ children }: { children: ReactNode }) {
         <Script id="internal-traffic-toggle" strategy="beforeInteractive">
           {`(function(){try{var url=new URL(window.location.href);var p=url.searchParams.get('gt_internal');if(p==='on')localStorage.setItem('gt_skip_analytics','1');if(p==='off')localStorage.removeItem('gt_skip_analytics');if(p==='on'||p==='off'){url.searchParams.delete('gt_internal');history.replaceState(null,'',url.toString());}window.__gtSkip=localStorage.getItem('gt_skip_analytics')==='1';if(window.__gtSkip)console.warn('[GeoTapp] Internal traffic — analytics DISABLED. ?gt_internal=off to re-enable.');}catch(_){}})();`}
         </Script>
+        {/* Google Consent Mode v2: default denied. Updated by CookieConsentBanner
+            quando l'utente sceglie. Allineato a /[locale]/layout.tsx — prima il
+            blog non aveva consent default impostato, creando un'asimmetria GDPR
+            tra sito e blog. */}
+        <Script id="google-consent-default" strategy="beforeInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('consent', 'default', {
+              analytics_storage: 'denied',
+              ad_storage: 'denied',
+              ad_user_data: 'denied',
+              ad_personalization: 'denied',
+              wait_for_update: 500,
+            });
+          `}
+        </Script>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-87PN0GEMW4"
           strategy="afterInteractive"
@@ -52,6 +70,7 @@ export default function BlogLayout({ children }: { children: ReactNode }) {
           </div>
         </div>
         <InternalTrafficBadge />
+        <CookieConsentBanner locale={locale} />
       </body>
     </html>
   );
