@@ -37,7 +37,21 @@ interface RoiResult {
   roi_pct: number;
 }
 
-const SETTORI = ['installatori', 'pulizie', 'sicurezza', 'altro'] as const;
+// Settori disponibili nel selettore. Allineati ai 10 settori reali del sito
+// (geotapp-site/src/content/settori/). "altro" è il catch-all per chi non
+// rientra in nessuna categoria specifica. Mappati ai MailerLite group via
+// SECTOR_GROUP_MAP in /api/roi-calculator/route.ts per automation mirate.
+const SETTORI = [
+  'elettricisti',
+  'idraulici',
+  'termoidraulici',
+  'impianti',
+  'edilizia',
+  'manutenzione',
+  'pulizie',
+  'sicurezza',
+  'altro',
+] as const;
 
 function useCountUp(target: number, duration = 1200, active = false): number {
   const [value, setValue] = useState(0);

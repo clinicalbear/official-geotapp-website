@@ -40,6 +40,23 @@ const LANG_GROUPS: Record<string, string> = {
   sv: '183189742669530726', nb: '183189742813185694',
 };
 
+// Mappa lingua primaria → country code "naturale" della lingua. Usato
+// quando il locale non ha suffix regionale esplicito (es. 'it' → 'IT',
+// 'fr' → 'FR'). I locale regionali (en-ie, en-us, ...) usano direttamente
+// il suffix. Per 'en' generico ritorniamo '' (multiplo, no default).
+const LANG_TO_DEFAULT_COUNTRY: Record<string, string> = {
+  it: 'IT', de: 'DE', fr: 'FR', es: 'ES', pt: 'PT', nl: 'NL',
+  da: 'DK', sv: 'SE', nb: 'NO', ru: 'RU',
+};
+
+function deriveCountry(locale: string): string {
+  const norm = locale.toLowerCase().trim();
+  if (norm.includes('-')) {
+    return norm.split('-')[1].toUpperCase();
+  }
+  return LANG_TO_DEFAULT_COUNTRY[norm] ?? '';
+}
+
 async function subscribeToNewsletter(
   email: string,
   sector: string,
@@ -59,6 +76,7 @@ async function subscribeToNewsletter(
   const lcase = locale.toLowerCase().split('-')[0]; // en-ie → en
   if (LANG_GROUPS[lcase]) groupIds.push(LANG_GROUPS[lcase]);
 
+  const country = deriveCountry(locale);
   try {
     const res = await fetch(`${ML_API}/subscribers`, {
       method: 'POST',
@@ -68,6 +86,7 @@ async function subscribeToNewsletter(
         fields: {
           sector,
           language: locale,
+          country,
           lead_magnet: 'roi-calculator',
           ...fields,
         },
