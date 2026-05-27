@@ -69,7 +69,7 @@ const TTBgCarousel = () => {
   return (
     <div className="w-full h-full relative">
       {TT_BGS.map((src, idx) => (
-        <img key={src} src={src} alt="" loading="lazy" decoding="async" className="absolute inset-0 w-full h-full object-cover transition-opacity duration-700" style={{ opacity: idx === i ? 1 : 0 }} />
+        <img key={src} src={src} alt="" loading={idx === 0 ? 'eager' : 'lazy'} fetchPriority={idx === 0 ? 'high' : undefined} decoding={idx === 0 ? 'sync' : 'async'} className="absolute inset-0 w-full h-full object-cover transition-opacity duration-700" style={{ opacity: idx === i ? 1 : 0 }} />
       ))}
     </div>
   );
