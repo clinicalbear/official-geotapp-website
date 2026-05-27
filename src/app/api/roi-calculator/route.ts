@@ -57,7 +57,55 @@ function deriveCountry(locale: string): string {
   return LANG_TO_DEFAULT_COUNTRY[norm] ?? '';
 }
 
-async function subscribeToNewsletter(
+/**
+ * Notifica il CRM del nuovo lead ROI. Sostituisce MailerLite per
+ * la sequenza drip "roi-calculator" — il CRM ha drip engine nativo
+ * con templates multilingua hardcoded (vedi geotapp-crm/src/lib/
+ * drip-templates.ts).
+ */
+async function notifyCrmLead(
+  email: string,
+  name: string,
+  sector: string,
+  locale: string,
+  telefono: string,
+  roi: { savings: number; payback: number; roiPct: number; operatori: number },
+): Promise<void> {
+  const crmUrl = process.env.CRM_LEAD_ENDPOINT;
+  const secret = process.env.CRM_SYNC_SECRET;
+  if (!crmUrl || !secret) {
+    console.warn('[roi-calculator] CRM_LEAD_ENDPOINT / CRM_SYNC_SECRET missing, skip CRM notify');
+    return;
+  }
+  try {
+    const res = await fetch(crmUrl, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'x-sync-secret': secret },
+      body: JSON.stringify({
+        email,
+        name,
+        sector,
+        locale,
+        telefono,
+        roi_savings_eur: roi.savings,
+        roi_payback_months: roi.payback,
+        roi_pct: roi.roiPct,
+        operatori: roi.operatori,
+      }),
+    });
+    if (!res.ok) {
+      const t = await res.text().catch(() => '');
+      console.error('[roi-calculator] CRM notify failed:', res.status, t.slice(0, 200));
+    }
+  } catch (err) {
+    console.error('[roi-calculator] CRM call error:', err);
+  }
+}
+
+// Legacy MailerLite subscribe (mantenuta per backward-compat con altri
+// lead magnet — fac-simile GDPR continua a usare MailerLite). NON usata
+// più per ROI calculator dal 26/05/2026.
+async function subscribeToNewsletterLegacy(
   email: string,
   sector: string,
   locale: string,
@@ -87,7 +135,11 @@ async function subscribeToNewsletter(
           sector,
           language: locale,
           country,
+          // Field generico (riusabile per futuri lead magnet)
           lead_magnet: 'roi-calculator',
+          // Field dedicato per il trigger MailerLite automation. Vedi
+          // automation "lead_magnet_ROI" creata 26/05/2026 da Mike.
+          lead_magnet_ROI: 'true',
           ...fields,
         },
         groups: groupIds,
@@ -215,16 +267,25 @@ export async function POST(req: NextRequest) {
     console.error('[roi-calculator] email send failed:', err);
   }
 
-  // Iscrizione newsletter via MailerLite (con consent esplicito).
-  // Non blocca la response: se MailerLite fallisce, l'utente vede comunque
-  // il ROI e Mike riceve la notifica email.
+  // Notifica il CRM del nuovo lead ROI con consent esplicito.
+  // Il CRM crea NewsletterSubscriber + DripSubscription "roi-calculator"
+  // (step 0, send immediato al prossimo cron tick — 5 min max).
+  // Non blocca la response: se il CRM non risponde, l'utente vede comunque
+  // il ROI e Mike riceve la notifica email su info@.
   if (body.subscribe_newsletter !== false) {
-    await subscribeToNewsletter(email, settore, body.locale ?? '', {
-      roi_savings_eur: Math.round(roi.risparmio_totale),
-      roi_payback_months: roi.payback_mesi,
-      roi_pct: roi.roi_pct,
-      operatori,
-    });
+    await notifyCrmLead(
+      email,
+      nome,
+      settore,
+      body.locale ?? '',
+      body.telefono ?? '',
+      {
+        savings: Math.round(roi.risparmio_totale),
+        payback: roi.payback_mesi,
+        roiPct: roi.roi_pct,
+        operatori,
+      },
+    );
   }
 
   return NextResponse.json({ ok: true, roi });
