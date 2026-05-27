@@ -1,7 +1,6 @@
 
 
 import type { Metadata } from 'next';
-import ReactDOM from 'react-dom';
 import { SUPPORTED_LOCALES } from '@/lib/i18n/config';
 import type { AppLocale } from '@/lib/i18n/config';
 import { HREFLANG } from '@/lib/i18n/locale-metadata';
@@ -106,14 +105,14 @@ type Props = { params: Promise<{ locale: string }> };
 
 export default async function LocalePage({ params }: Props) {
   const { locale } = await params;
-  // LCP hero image preload — bg1.webp è il primo frame del TTBgCarousel,
-  // full-bleed sopra-fold. Lo schedula come high-priority appena il browser
-  // riceve l'HTML, prima di scoprirlo durante body parse.
-  ReactDOM.preload('/bg1.webp', { as: 'image', fetchPriority: 'high' });
   const faq = HOMEPAGE_FAQ[locale] ?? null;
   const reviewsSchema = buildReviewsSchema(REVIEWS);
   return (
     <>
+      {/* LCP hero image preload — bg1.webp è il primo frame del TTBgCarousel,
+          full-bleed sopra-fold. Inietta <link rel="preload"> nel head così
+          il browser scopre l'immagine PRIMA di parsare il body. */}
+      <link rel="preload" href="/bg1.webp" as="image" fetchPriority="high" />
       {faq && (
         <script
           type="application/ld+json"
