@@ -411,7 +411,7 @@ export default function RoiCalculatorClient({ dict, locale, trialUrl, embed = fa
                   </div>
                   <a
                     href={trialUrl}
-                    onClick={() => trackEvent('trial_click', { source: 'roi_calculator' })}
+                    onClick={() => trackEvent('trial_click', { cta_source: 'roi_calculator' })}
                     className="block w-full py-4 rounded-xl font-bold text-white text-center bg-blue-600 hover:bg-blue-700 transition-colors text-base shadow-md"
                   >
                     {dict.results_cta} →

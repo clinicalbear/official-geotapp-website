@@ -470,7 +470,7 @@ export default function LinksClient({ articles, locale = 'it' }: Props) {
         {/* Primary CTA → TRIAL */}
         <motion.div variants={fadeUp} custom={3}>
           <Link href={withUtm(trialHref, 'ig_links_trial', 'hero_primary')}
-            onClick={() => trackEvent('trial_click', { source: 'links_hero', locale: locale })}
+            onClick={() => trackEvent('trial_click', { cta_source: 'links_hero', cta_locale: locale })}
             className="group flex items-center justify-center gap-2 w-full py-4 bg-slate-900 text-white font-semibold text-[15px] rounded-2xl hover:bg-primary hover:text-slate-900 transition-all duration-200 mb-2 shadow-lg shadow-slate-900/8 active:scale-[0.98]">
             <Sparkles size={16} className="text-primary group-hover:text-slate-900 transition-colors duration-150" />
             {t.ctaPrimary}
@@ -531,7 +531,7 @@ export default function LinksClient({ articles, locale = 'it' }: Props) {
           viewport={{ once: true, margin: '-20px' }} transition={{ duration: 0.5, delay: 0.25 }}
           className="mt-4 text-center">
           <Link href={withUtm(trialHref, 'ig_links_trial', 'sector_fallback')}
-            onClick={() => trackEvent('trial_click', { source: 'links_sector_fallback', locale: locale })}
+            onClick={() => trackEvent('trial_click', { cta_source: 'links_sector_fallback', cta_locale: locale })}
             className="inline-flex items-center gap-1 text-[12.5px] font-medium text-slate-500 hover:text-primary transition-colors duration-150">
             {t.sectorFallback}
           </Link>
@@ -589,7 +589,7 @@ export default function LinksClient({ articles, locale = 'it' }: Props) {
           </h3>
           <p className="relative text-[12.5px] text-slate-500 mb-5 leading-relaxed">{t.bottomSub}</p>
           <Link href={withUtm(trialHref, 'ig_links_trial', 'bottom_banner')}
-            onClick={() => trackEvent('trial_click', { source: 'links_bottom_banner', locale: locale })}
+            onClick={() => trackEvent('trial_click', { cta_source: 'links_bottom_banner', cta_locale: locale })}
             className="relative group inline-flex items-center justify-center gap-2 w-full py-3.5 bg-slate-900 text-white font-semibold text-[14.5px] rounded-2xl hover:bg-primary hover:text-slate-900 transition-all duration-200 shadow-lg shadow-slate-900/10 active:scale-[0.98]">
             <Sparkles size={15} className="text-primary group-hover:text-slate-900 transition-colors duration-150" />
             {t.bottomCta}

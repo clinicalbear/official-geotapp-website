@@ -15,7 +15,7 @@ export function TrialCTALink({ source, onClick, children, ...rest }: TrialCTALin
     <Link
       {...rest}
       onClick={(e) => {
-        trackEvent('trial_click', { source });
+        trackEvent('trial_click', { cta_source: source });
         onClick?.(e);
       }}
     >

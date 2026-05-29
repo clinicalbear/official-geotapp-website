@@ -141,7 +141,7 @@ export default function SiteAnalytics() {
           }
           // Deriva il locale dal pathname (primo segmento se è un codice lingua).
           const localeGuess = segments[0] && /^[a-z]{2}(-[a-z]{2})?$/i.test(segments[0]) ? segments[0] : 'it';
-          trackEvent('trial_click', { source, locale: localeGuess });
+          trackEvent('trial_click', { cta_source: source, cta_locale: localeGuess });
         }
       } else if (anchor && !isInternal && href.startsWith('http')) {
         trackEvent('outbound_click', {

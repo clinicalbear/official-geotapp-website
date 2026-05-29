@@ -262,7 +262,7 @@ export default function Navbar() {
               // trial_click che non mappa a nessun trial_page_view nuovo
               // (gonfia il funnel con click fake-conversion).
               if (isTrialPage) return;
-              trackEvent('trial_click', { source: 'navbar', locale: currentLocale });
+              trackEvent('trial_click', { cta_source: 'navbar', cta_locale: currentLocale });
             }}
             className="px-5 py-2.5 text-sm font-bold bg-slate-900 text-white rounded-lg hover:bg-primary hover:text-slate-900 transition-all duration-300 shadow-lg shadow-slate-900/20"
           >
@@ -371,7 +371,7 @@ export default function Navbar() {
                     onClick={() => {
                       setIsOpen(false);
                       if (isTrialPage) return;
-                      trackEvent('trial_click', { source: 'navbar_mobile', locale: currentLocale });
+                      trackEvent('trial_click', { cta_source: 'navbar_mobile', cta_locale: currentLocale });
                     }}
                 className="w-full py-4 text-center text-white font-bold bg-slate-900 rounded-xl shadow-lg"
               >

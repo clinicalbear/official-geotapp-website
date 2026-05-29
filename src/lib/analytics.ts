@@ -51,12 +51,14 @@ export function trackEvent(
   // Suppresses every custom event so test browsing doesn't pollute GA4 metrics.
   if ((window as unknown as { __gtSkip?: boolean }).__gtSkip === true) return;
 
-  // Carry-over: salva il source del trial_click in sessionStorage così la
+  // Carry-over: salva il cta_source del trial_click in sessionStorage così la
   // /trial/ page può attribuire la conversione al CTA d'origine nel
   // trial_page_view event (altrimenti si perde nel navigate cross-page).
-  if (eventName === 'trial_click' && params && typeof params.source === 'string') {
+  // Param rinominato da `source` a `cta_source` perché `source` è dimensione
+  // built-in GA4 e collide con la creazione di custom dimension event-scope.
+  if (eventName === 'trial_click' && params && typeof params.cta_source === 'string') {
     try {
-      sessionStorage.setItem('trial_source', params.source);
+      sessionStorage.setItem('trial_source', params.cta_source);
       sessionStorage.setItem('trial_source_ts', String(Date.now()));
     } catch {
       // ignora: sessionStorage può essere bloccato (private mode, etc.)

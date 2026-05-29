@@ -50,7 +50,7 @@ export default function TrialPage() {
     const source = consumeTrialSource();
     trackEvent('trial_page_view', {
       locale: locale || 'it',
-      ...(source ? { source } : {}),
+      ...(source ? { cta_source: source } : {}),
     });
 
     let maxScroll = 0;
@@ -90,7 +90,7 @@ export default function TrialPage() {
   const trackFieldFocus = (fieldName: string) => {
     if (!formStarted.current) {
       formStarted.current = true;
-      trackEvent('trial_form_start', { first_field: fieldName, locale: locale || 'it' });
+      trackEvent('trial_form_start', { first_field: fieldName, cta_locale: locale || 'it' });
     }
     touchedFields.current.add(fieldName);
     trackEvent('trial_field_focus', { field: fieldName });
@@ -117,10 +117,10 @@ export default function TrialPage() {
       if (!res.ok) throw new Error(data.error || d.error_message);
       setSubmittedEmail(email);
       setSubmitted(true);
-      trackEvent('trial_form_success', { locale: locale || 'it' });
+      trackEvent('trial_form_success', { cta_locale: locale || 'it' });
     } catch (err: any) {
       setError(err.message);
-      trackEvent('trial_form_error', { error: err.message, locale: locale || 'it' });
+      trackEvent('trial_form_error', { error: err.message, cta_locale: locale || 'it' });
     } finally {
       setLoading(false);
     }

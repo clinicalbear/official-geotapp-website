@@ -117,7 +117,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li><Link href={getLink('/chi-siamo')} className={linkClass}>{t.about}</Link></li>
               <li><Link href={getLink('/contact')} className={linkClass}>{t.contact}</Link></li>
-              <li><Link href={getLink('/trial')} onClick={() => trackEvent('trial_click', { source: 'footer', locale: currentLocale })} className={linkClass}>{t.trial}</Link></li>
+              <li><Link href={getLink('/trial')} onClick={() => trackEvent('trial_click', { cta_source: 'footer', cta_locale: currentLocale })} className={linkClass}>{t.trial}</Link></li>
               <li><Link href={getLink('/login')} className={linkClass}>{t.login}</Link></li>
             </ul>
           </div>

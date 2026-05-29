@@ -222,7 +222,7 @@ export default function ArticleSidebar({ headings, locale, categories = [], date
         <p className="text-[11px] text-slate-500 mt-1.5 leading-relaxed">{labels.cta_desc}</p>
         <Link
           href={`/${locale}/trial/`}
-          onClick={() => trackEvent('trial_click', { source: 'blog_sidebar', locale: locale })}
+          onClick={() => trackEvent('trial_click', { cta_source: 'blog_sidebar', cta_locale: locale })}
           className="mt-4 block w-full text-center px-4 py-2.5 bg-[#8FC436] text-white text-[13px] font-semibold rounded-xl hover:bg-[#7db02e] transition-colors"
         >
           {labels.cta_btn}
