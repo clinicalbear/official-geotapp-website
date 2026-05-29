@@ -86,6 +86,26 @@ const content: SettoreContent = {
         q: '¿GeoTapp ayuda a reducir las disputas sobre horas y trabajos realizados?',
         a: 'Ese es uno de los principales casos de uso: tiempos, posición, notas y pruebas fotográficas hacen que reconstruir y defender lo que se hizo en obra sea mucho más sencillo.',
       },
+      {
+        q: '¿El comité de empresa debe ser informado antes de implantar GeoTapp?',
+        a: 'Sí. El art. 64.5 del Estatuto de los Trabajadores reconoce al comité de empresa el derecho de información previa sobre la implantación y revisión de sistemas de organización y control del trabajo. GeoTapp entrega la documentación lista para la consulta: ámbito de tratamiento, base jurídica, plazos de conservación. Sin información previa al comité no se despliega el sistema, es como lo diseñamos.',
+      },
+      {
+        q: '¿Es la geolocalización GPS conforme al RGPD y a la LOPDGDD?',
+        a: 'Sí. GeoTapp registra exclusivamente la entrada y la salida con validación GPS de la ubicación de trabajo, sin seguimiento continuo durante la jornada ni geolocalización fuera del horario laboral. La minimización de datos (art. 5.1.c RGPD) y la finalidad definida están integradas en la arquitectura del producto, no son ajustes opcionales. Los plazos de conservación cumplen el Estatuto de los Trabajadores y la LOPDGDD (art. 87-91 sobre derechos digitales).',
+      },
+      {
+        q: '¿Cómo trata GeoTapp la privacidad del cliente final?',
+        a: 'Para los instaladores que entran en casas de particulares, GeoTapp separa dos flujos: la empresa recibe la prueba de presencia en la ubicación del cliente, pero la dirección del cliente no entra en una base de datos centralizada y el trayecto entre visitas no se registra. El técnico, por tanto, no es visible 24/7 y el cliente final conserva su privacidad. Compatible con las certificaciones eléctrica REBT y de gas (Reglamentos ITC).',
+      },
+      {
+        q: '¿Qué datos puedo exportar para la nómina?',
+        a: 'GeoTapp exporta resúmenes mensuales de presencia compatibles con A3 Nom, Sage Despachos y Cegid. La exportación contiene por empleado: horas trabajadas por orden, horas extraordinarias, dietas y desplazamientos según convenio, verificados con GPS y marca de tiempo. El gestor laboral recibe un fichero auditable en lugar de una estimación.',
+      },
+      {
+        q: '¿Qué dice la Agencia Española de Protección de Datos sobre la monitorización?',
+        a: 'La AEPD exige, para la monitorización sistemática de personal, una evaluación de impacto (EIPD) previa. En GeoTapp esta evaluación está disponible para tu comité de empresa. La base jurídica es el interés legítimo (art. 6.1.f RGPD) fundamentado en la necesidad operativa de la empresa; la proporcionalidad se demuestra mediante registro limitado (solo momentos de fichaje) y plazos de conservación estrictos. Sin caja negra: todos los campos de datos están en la documentación pública.',
+      },
     ],
   },
   cta: {

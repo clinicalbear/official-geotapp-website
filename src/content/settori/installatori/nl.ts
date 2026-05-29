@@ -86,6 +86,26 @@ const content: SettoreContent = {
         q: 'Helpt GeoTapp om geschillen over uren en werkzaamheden te verminderen?',
         a: 'Dat is een van de voornaamste toepassingen: tijden, locatie, notities en fotobewijs maken het reconstrueren en verdedigen van wat er op locatie is gedaan veel eenvoudiger.',
       },
+      {
+        q: 'Heeft de ondernemingsraad instemmingsrecht bij invoering van GeoTapp?',
+        a: 'Ja. Onder art. 27 lid 1 sub l WOR (Wet op de ondernemingsraden) heeft de OR instemmingsrecht over een tijdregistratiesysteem of personeelsvolgsysteem. GeoTapp levert de DPIA en de OR-stukken kant-en-klaar mee, zodat de invoering technisch en juridisch in orde is voordat het systeem live gaat. Zonder OR-instemming geen rollout, dat is hoe wij het ontwerpen.',
+      },
+      {
+        q: 'Is de GPS-registratie AVG-conform?',
+        a: 'Ja. GeoTapp registreert uitsluitend in- en uitklokken met GPS-validatie van de werklocatie, geen continue tracking, geen achtergrondvolging buiten dienst. De gegevensminimalisatie (art. 5 lid 1 sub c AVG) en doelbinding zijn structureel in de productarchitectuur ingebouwd, niet als optionele instelling. Bewaartermijnen zijn conform CAO Elektrotechnisch en de Arbeidstijdenwet.',
+      },
+      {
+        q: 'Hoe gaat GeoTapp om met de privacy van de eindklant?',
+        a: 'Voor installateurs bij particulieren splitst GeoTapp twee gegevensstromen: de werkgever ziet aanwezigheidsbewijs op de klantlocatie, maar het klantadres komt niet in een centrale database terecht en de route tussen klantbezoeken wordt niet vastgelegd. De monteur is dus niet 24/7 zichtbaar, en de eindklant houdt zijn privacy. Geschikt voor BIK-installateurs en F-gassen-erkende bedrijven.',
+      },
+      {
+        q: 'Welke gegevens kan ik exporteren voor de salarisadministratie?',
+        a: 'GeoTapp exporteert maandelijkse aanwezigheidsoverzichten compatibel met AFAS, NMBRS en Loket.nl. De export bevat per medewerker: gewerkte uren per opdracht, overuren, reisuren conform CAO, geverifieerd met GPS en tijdstempel. De salarisverwerker krijgt een controleerbaar bestand in plaats van een schatting.',
+      },
+      {
+        q: 'Hoe verhoudt GeoTapp zich tot het toetsingskader van de AP?',
+        a: 'De Autoriteit Persoonsgegevens vereist voor systematische monitoring van werknemers een DPIA (gegevensbeschermingseffectbeoordeling). Bij GeoTapp ligt deze klaar voor uw OR. De grondslag is gerechtvaardigd belang (art. 6 lid 1 sub f AVG) onderbouwd met de bedrijfsspecifieke noodzaak; de proportionaliteit wordt aangetoond door beperkte registratie (alleen klok-momenten) en strakke bewaartermijnen. Geen black-box, alle datavelden staan in de publieke documentatie.',
+      },
     ],
   },
   cta: {
