@@ -11,6 +11,13 @@ const map: Partial<Record<AppLocale, () => Promise<{ default: SettoreContent }>>
   'en-ca': () => import('./en'),
   de: () => import('./de'),
   nl: () => import('./nl'),
+  es: () => import('./es'),
+  fr: () => import('./fr'),
+  pt: () => import('./pt'),
+  da: () => import('./da'),
+  sv: () => import('./sv'),
+  nb: () => import('./nb'),
+  ru: () => import('./ru'),
 };
 
 export async function getPulizieContent(locale: AppLocale): Promise<SettoreContent> {
