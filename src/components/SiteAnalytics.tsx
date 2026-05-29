@@ -139,7 +139,9 @@ export default function SiteAnalytics() {
           } else {
             source = segments.slice(1, 3).join('_') || 'other';
           }
-          trackEvent('trial_click', { source });
+          // Deriva il locale dal pathname (primo segmento se è un codice lingua).
+          const localeGuess = segments[0] && /^[a-z]{2}(-[a-z]{2})?$/i.test(segments[0]) ? segments[0] : 'it';
+          trackEvent('trial_click', { source, locale: localeGuess });
         }
       } else if (anchor && !isInternal && href.startsWith('http')) {
         trackEvent('outbound_click', {

@@ -196,6 +196,7 @@ export function DynamicComparison({ locale, copy, initialId }: Props) {
           onClick={() =>
             trackEvent('trial_click', {
               source: `dynamic_compare_${selected.id}`,
+              locale,
             })
           }
           className="inline-block rounded-xl bg-[#8FC436] px-8 py-4 text-lg font-bold text-white shadow-lg transition-opacity hover:opacity-90"

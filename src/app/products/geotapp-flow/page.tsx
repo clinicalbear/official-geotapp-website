@@ -849,7 +849,7 @@ export default function GeoTappApp() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href={getLink('/trial')}
-              onClick={() => trackEvent('trial_click', { source: 'product_flow' })}
+              onClick={() => trackEvent('trial_click', { source: 'product_flow', locale: currentLocale })}
               className="inline-flex items-center gap-4 px-12 py-6 bg-blue-600 text-white font-bold rounded-xl text-xl hover:bg-blue-700 transition-all shadow-lg hover:shadow-blue-500/30 hover:-translate-y-2 group"
             >
               <Zap size={24} />{' '}

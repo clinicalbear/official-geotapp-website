@@ -256,7 +256,14 @@ export default function Navbar() {
           <Link
             href={ctaHref}
             {...(isTrialPage ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-            onClick={() => trackEvent('trial_click', { source: 'navbar' })}
+            onClick={() => {
+              // Skip trial_click se siamo già su /trial/: il "self-loop"
+              // apre una nuova tab con sessionStorage vuoto, produce un
+              // trial_click che non mappa a nessun trial_page_view nuovo
+              // (gonfia il funnel con click fake-conversion).
+              if (isTrialPage) return;
+              trackEvent('trial_click', { source: 'navbar', locale: currentLocale });
+            }}
             className="px-5 py-2.5 text-sm font-bold bg-slate-900 text-white rounded-lg hover:bg-primary hover:text-slate-900 transition-all duration-300 shadow-lg shadow-slate-900/20"
           >
             {ctaText}
@@ -361,7 +368,11 @@ export default function Navbar() {
                   <Link
                     href={ctaHref}
                     {...(isTrialPage ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-                    onClick={() => { setIsOpen(false); trackEvent('trial_click', { source: 'navbar_mobile' }); }}
+                    onClick={() => {
+                      setIsOpen(false);
+                      if (isTrialPage) return;
+                      trackEvent('trial_click', { source: 'navbar_mobile', locale: currentLocale });
+                    }}
                 className="w-full py-4 text-center text-white font-bold bg-slate-900 rounded-xl shadow-lg"
               >
                 {ctaText}

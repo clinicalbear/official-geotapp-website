@@ -159,7 +159,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
               <div className="flex flex-col gap-4 sm:flex-row">
                 <Link
                   href={trialLink}
-                  onClick={() => trackEvent('trial_click', { source: `settore_${settore}_hero` })}
+                  onClick={() => trackEvent('trial_click', { source: `settore_${settore}_hero`, locale })}
                   className={`inline-flex items-center gap-2 rounded-xl px-8 py-4 font-bold text-white shadow-lg transition-colors ${colors.btn}`}
                 >
                   {content.hero.cta_primary} <ArrowRight size={18} />
@@ -392,7 +392,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
             <Link
               href={trialLink}
               className={`inline-flex items-center gap-2 rounded-xl px-8 py-4 font-bold text-white shadow-lg transition-colors ${colors.btn}`}
-              onClick={() => trackEvent('trial_click', { source: `settore_${settore}` })}
+              onClick={() => trackEvent('trial_click', { source: `settore_${settore}`, locale })}
             >
               {content.cta_mid.cta} <ArrowRight size={18} />
             </Link>
@@ -778,7 +778,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
             <Link
               href={trialLink}
               className={`inline-flex items-center gap-2 rounded-xl px-8 py-4 font-bold text-white shadow-lg transition-colors ${colors.btn}`}
-              onClick={() => trackEvent('trial_click', { source: `settore_${settore}_footer` })}
+              onClick={() => trackEvent('trial_click', { source: `settore_${settore}_footer`, locale })}
             >
               {content.cta.primary} <ArrowRight size={18} />
             </Link>
