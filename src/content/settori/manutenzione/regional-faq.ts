@@ -6,6 +6,12 @@ export interface RegionalFaqItem {
 }
 
 export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
+  it: 'Conformità normativa in Italia',
+  de: 'Compliance in Deutschland',
+  fr: 'Conformité en France',
+  es: 'Cumplimiento normativo en España',
+  pt: 'Conformidade em Portugal',
+  nl: 'Compliance in Nederland',
   'en-us': 'Regional compliance',
   'en-gb': 'Regional compliance',
   'en-au': 'Regional compliance',
@@ -14,6 +20,90 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
 };
 
 export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
+  it: [
+    {
+      q: 'Ore e interventi multisito secondo il CCNL (Multiservizi/Metalmeccanici)?',
+      a: 'Ore per tecnico e per sito, reperibilità e trasferta e conservazione sul Libro Unico del Lavoro, con ogni intervento di manutenzione registrato dall\'app.',
+    },
+    {
+      q: 'Geolocalizzazione e art. 4 dello Statuto dei Lavoratori?',
+      a: 'Posizione legata all\'intervento e al turno, con informativa, legittimo interesse e l\'accordo sindacale o l\'autorizzazione dell\'Ispettorato del Lavoro per il controllo a distanza.',
+    },
+    {
+      q: 'Sicurezza (D.Lgs 81/2008) e verifiche periodiche?',
+      a: 'Tracciabilità di idoneità, DUVRI per appalti e controlli periodici, con storico per ogni sito e tecnico.',
+    },
+  ],
+  de: [
+    {
+      q: 'Zeiterfassung für standortübergreifende Wartung?',
+      a: 'Stunden je Techniker und Standort, Bereitschafts- und Fahrtzeiten und Aufbewahrung nach §16 ArbZG, bei jedem Wartungseinsatz erfasst.',
+    },
+    {
+      q: 'DSGVO und Betriebsrat bei GPS-Ortung der Techniker?',
+      a: 'Ortung nur während der Arbeitszeit, mit Interessenabwägung nach Art. 6 DSGVO und Mitbestimmung des Betriebsrats nach §87 BetrVG.',
+    },
+    {
+      q: 'Arbeitssicherheit und wiederkehrende Prüfungen (BetrSichV)?',
+      a: 'Zuordnung von Gefährdungsbeurteilung und Prüfeinsätzen zur befähigten Person nach BetrSichV, mit Nachweis je Standort.',
+    },
+  ],
+  fr: [
+    {
+      q: 'Heures et interventions multisites selon la convention applicable ?',
+      a: 'Heures par technicien et par site, indemnités de déplacement et d\'astreinte et conservation des données, enregistrées à chaque intervention de maintenance.',
+    },
+    {
+      q: 'RGPD et CNIL pour la géolocalisation des techniciens ?',
+      a: 'Géolocalisation limitée au temps de travail, information préalable, intérêt légitime et consultation du CSE, selon les lignes directrices CNIL.',
+    },
+    {
+      q: 'Sécurité au travail et vérifications réglementaires ?',
+      a: 'Rattachement du document unique (DUERP) et des vérifications périodiques à la qualification du technicien, avec historique par site.',
+    },
+  ],
+  es: [
+    {
+      q: '¿Jornada e intervenciones multisede según el convenio aplicable?',
+      a: 'Registro diario (art. 34.9 ET) por técnico y centro, dietas y disponibilidad y conservación de datos, capturado en cada intervención de mantenimiento.',
+    },
+    {
+      q: '¿RGPD y AEPD para la geolocalización de técnicos?',
+      a: 'Geolocalización solo durante la jornada, con información previa, interés legítimo y el art. 90 LOPDGDD, con derecho de acceso del trabajador.',
+    },
+    {
+      q: '¿Prevención de riesgos e inspecciones periódicas?',
+      a: 'Asociación de la evaluación de riesgos y las inspecciones reglamentarias a la habilitación del técnico, con historial por centro.',
+    },
+  ],
+  pt: [
+    {
+      q: 'Horas e intervenções multissítio segundo a CCT aplicável?',
+      a: 'Horas por técnico e por local, disponibilidade e ajudas de custo e conservação dos dados, registados em cada intervenção de manutenção.',
+    },
+    {
+      q: 'RGPD e CNPD na geolocalização dos técnicos?',
+      a: 'Geolocalização apenas durante o tempo de trabalho, com informação prévia, interesse legítimo e direito de acesso, conforme a CNPD.',
+    },
+    {
+      q: 'Segurança no trabalho e inspeções periódicas?',
+      a: 'Associação da avaliação de riscos e das inspeções regulamentares à qualificação do técnico, com histórico por local.',
+    },
+  ],
+  nl: [
+    {
+      q: 'Urenregistratie bij onderhoud op meerdere locaties?',
+      a: 'Uren per technicus en per locatie, consignatie- en reisuren en de bewaartermijn uit de Arbeidstijdenwet, bij elke onderhoudsklus vastgelegd.',
+    },
+    {
+      q: 'AVG en de Autoriteit Persoonsgegevens bij GPS-tracking?',
+      a: 'Locatie alleen tijdens werktijd, met privacyverklaring, belangenafweging (art. 6 AVG) en DPIA, volgens de richtsnoeren van de AP.',
+    },
+    {
+      q: 'RI&E (Arbowet) en periodieke keuringen?',
+      a: 'Koppeling van de RI&E en wettelijke keuringen aan de gecertificeerde technicus, met inspectiedossier per locatie.',
+    },
+  ],
   'en-us': [
     {
       q: 'EPA Section 608 refrigerant handling per technician?',

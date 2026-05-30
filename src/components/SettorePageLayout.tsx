@@ -678,8 +678,16 @@ export default function SettorePageLayout({ content, locale, settore, children }
                 { href: '/blog/de/2026/04/22/muster-datenschutzerklaerung-gps-mitarbeiterortung-2026/',
                   label: 'DSGVO-Muster-Datenschutzerklärung: GPS-Mitarbeiterortung 2026' },
               ],
+              nl: [
+                { href: '/blog/nl/2026/05/30/software-schoonmaakbedrijven-avg-gps-2026/',
+                  label: 'Software voor schoonmaakbedrijven: AVG, GPS en urenregistratie' },
+                { href: '/blog/nl/2026/05/25/geotapp-updates-mei-2026/',
+                  label: 'GeoTapp mei 2026: facturatie, AVG, beveiliging, badges' },
+                { href: '/blog/nl/2026/05/21/geotapp-vs-hubstaff-2026-surveillance-vs-certificering/',
+                  label: 'GeoTapp vs Hubstaff: surveillance versus werkcertificering' },
+              ],
             };
-            // Le 7 locale che NON hanno articoli normative tradotti ricadono su EN.
+            // Le 6 locale che NON hanno articoli normative tradotti ricadono su EN.
             const links = NORM_LINKS[locale]
               ?? NORM_LINKS[locale.split('-')[0]]
               ?? NORM_LINKS.en;

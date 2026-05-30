@@ -6,6 +6,12 @@ export interface RegionalFaqItem {
 }
 
 export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
+  it: 'Conformità normativa in Italia',
+  de: 'Compliance in Deutschland',
+  fr: 'Conformité en France',
+  es: 'Cumplimiento normativo en España',
+  pt: 'Conformidade em Portugal',
+  nl: 'Compliance in Nederland',
   'en-us': 'Regional compliance',
   'en-gb': 'Regional compliance',
   'en-au': 'Regional compliance',
@@ -14,6 +20,90 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
 };
 
 export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
+  it: [
+    {
+      q: 'Ore, reperibilità e trasferte secondo il CCNL Metalmeccanici?',
+      a: 'Ore per elettricista e per cantiere, indennità di reperibilità e trasferta e conservazione sul Libro Unico del Lavoro, registrate a ogni intervento.',
+    },
+    {
+      q: 'Geolocalizzazione e art. 4 dello Statuto dei Lavoratori?',
+      a: 'Posizione legata al lavoro e al turno, con informativa, legittimo interesse e l\'accordo sindacale o l\'autorizzazione dell\'Ispettorato del Lavoro per il controllo a distanza.',
+    },
+    {
+      q: 'Lavori elettrici CEI 11-27 (PES/PAV/PEI) e DM 37/2008?',
+      a: 'Tracciabilità degli interventi per profilo di idoneità (PES/PAV/PEI) e per lettera A del DM 37/2008, a supporto della dichiarazione di conformità.',
+    },
+  ],
+  de: [
+    {
+      q: 'Zeiterfassung nach dem Tarifvertrag Elektrohandwerk?',
+      a: 'Stunden je Elektriker und Auftrag, Bereitschafts- und Fahrtzeiten und Aufbewahrung nach §16 ArbZG, bei jedem Einsatz erfasst.',
+    },
+    {
+      q: 'DSGVO und Betriebsrat bei GPS-Ortung der Elektriker?',
+      a: 'Ortung nur während der Arbeitszeit, mit Interessenabwägung nach Art. 6 DSGVO und Mitbestimmung des Betriebsrats nach §87 BetrVG.',
+    },
+    {
+      q: 'DGUV Vorschrift 3 und VDE 0105-100?',
+      a: 'Zuordnung der Arbeiten zur Elektrofachkraft und Nachweis der wiederkehrenden Prüfungen nach DGUV V3 und VDE 0105-100 je Einsatz.',
+    },
+  ],
+  fr: [
+    {
+      q: 'Heures et astreintes selon la convention de la métallurgie ?',
+      a: 'Heures par électricien et par chantier, indemnités d\'astreinte et de déplacement et conservation des données, enregistrées à chaque intervention.',
+    },
+    {
+      q: 'RGPD et CNIL pour la géolocalisation des électriciens ?',
+      a: 'Géolocalisation limitée au temps de travail, information préalable, intérêt légitime et consultation du CSE, selon les lignes directrices CNIL.',
+    },
+    {
+      q: 'Habilitation électrique NF C 18-510 ?',
+      a: 'Rattachement de chaque intervention à l\'habilitation électrique du salarié (NF C 18-510), avec l\'historique de validité.',
+    },
+  ],
+  es: [
+    {
+      q: '¿Jornada y disponibilidad según el convenio del metal?',
+      a: 'Registro diario (art. 34.9 ET) por electricista y obra, pluses de disponibilidad y dietas y conservación de datos, capturado en cada intervención.',
+    },
+    {
+      q: '¿RGPD y AEPD para la geolocalización de electricistas?',
+      a: 'Geolocalización solo durante la jornada, con información previa, interés legítimo y el art. 90 LOPDGDD, con derecho de acceso del trabajador.',
+    },
+    {
+      q: '¿REBT y carné de instalador electricista?',
+      a: 'Asociación de cada intervención al carné de instalador electricista (REBT), con el historial de soporte al boletín de instalación.',
+    },
+  ],
+  pt: [
+    {
+      q: 'Horas e disponibilidade segundo a CCT da metalurgia?',
+      a: 'Horas por eletricista e por obra, disponibilidade e ajudas de custo e conservação dos dados, registados em cada intervenção.',
+    },
+    {
+      q: 'RGPD e CNPD na geolocalização dos eletricistas?',
+      a: 'Geolocalização apenas durante o tempo de trabalho, com informação prévia, interesse legítimo e direito de acesso, conforme a CNPD.',
+    },
+    {
+      q: 'Certificação DGEG de instalações elétricas?',
+      a: 'Associação de cada intervenção à certificação DGEG do técnico, com o histórico de suporte ao termo de responsabilidade da instalação.',
+    },
+  ],
+  nl: [
+    {
+      q: 'Uren en consignatie volgens de CAO Metaal en Techniek?',
+      a: 'Uren per elektricien en per opdracht, consignatie- en reisuren en de bewaartermijn uit de Arbeidstijdenwet, bij elke klus vastgelegd.',
+    },
+    {
+      q: 'AVG en de Autoriteit Persoonsgegevens bij GPS-tracking?',
+      a: 'Locatie alleen tijdens werktijd, met privacyverklaring, belangenafweging (art. 6 AVG) en DPIA, volgens de richtsnoeren van de AP.',
+    },
+    {
+      q: 'NEN 3140 en aanwijzing (VOP/VP/VK)?',
+      a: 'Koppeling van elke klus aan de juiste NEN 3140-aanwijzing (VOP/VP/VK) en het inspectiedossier, per medewerker bijgehouden.',
+    },
+  ],
   'en-us': [
     {
       q: 'Does GeoTapp produce NECA-compatible job-costing records?',

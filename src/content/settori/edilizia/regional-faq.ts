@@ -6,6 +6,12 @@ export interface RegionalFaqItem {
 }
 
 export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
+  it: 'Conformità normativa in Italia',
+  de: 'Compliance in Deutschland',
+  fr: 'Conformité en France',
+  es: 'Cumplimiento normativo en España',
+  pt: 'Conformidade em Portugal',
+  nl: 'Compliance in Nederland',
   'en-us': 'Regional compliance',
   'en-gb': 'Regional compliance',
   'en-au': 'Regional compliance',
@@ -14,6 +20,90 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
 };
 
 export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
+  it: [
+    {
+      q: 'Presenze in cantiere ai fini DURC e Cassa Edile?',
+      a: 'Ore per operaio e per cantiere, riconciliate con la denuncia mensile alla Cassa Edile e utili a mantenere il DURC regolare, registrate dal dispositivo in cantiere.',
+    },
+    {
+      q: 'Geolocalizzazione e art. 4 dello Statuto dei Lavoratori in cantiere?',
+      a: 'Posizione legata al cantiere e al turno, con informativa, legittimo interesse e l\'accordo sindacale o l\'autorizzazione dell\'Ispettorato del Lavoro richiesti per il controllo a distanza.',
+    },
+    {
+      q: 'Sicurezza cantieri (Titolo IV D.Lgs 81/2008) e subappalto?',
+      a: 'Tracciamento di presenze per POS/PSC, idoneità del personale e catena di subappalto, con storico per ogni impresa e lavoratore.',
+    },
+  ],
+  de: [
+    {
+      q: 'Zeiterfassung für SOKA-BAU und Baumindestlohn?',
+      a: 'Stunden je Baustelle und Beschäftigtem, abgestimmt auf die SOKA-BAU-Meldung und den allgemeinverbindlichen Bau-Mindestlohn, prüffähig nach §16 ArbZG.',
+    },
+    {
+      q: 'DSGVO und Betriebsrat bei GPS-Ortung auf der Baustelle?',
+      a: 'Ortung nur während der Arbeitszeit, mit Interessenabwägung nach Art. 6 DSGVO und Mitbestimmung des Betriebsrats nach §87 BetrVG.',
+    },
+    {
+      q: 'Nachweis bei Generalunternehmer-Haftung (AEntG)?',
+      a: 'Lückenloser Stunden- und Lohnnachweis je Subunternehmer für die Mindestlohn-Generalunternehmerhaftung nach dem AEntG.',
+    },
+  ],
+  fr: [
+    {
+      q: 'Pointage et carte BTP sur le chantier ?',
+      a: 'Heures par chantier et par compagnon, rattachées à la carte d\'identification professionnelle BTP et à la caisse de congés CIBTP, enregistrées sur site.',
+    },
+    {
+      q: 'RGPD et CNIL pour la géolocalisation des compagnons ?',
+      a: 'Géolocalisation limitée au temps de travail et au chantier, information préalable, intérêt légitime et consultation du CSE, selon les lignes directrices CNIL.',
+    },
+    {
+      q: 'Preuve face à la solidarité financière en cas de sous-traitance ?',
+      a: 'Historique d\'heures et de salaire par sous-traitant pour répondre à l\'obligation de vigilance et à la solidarité financière du donneur d\'ordre.',
+    },
+  ],
+  es: [
+    {
+      q: '¿Registro de jornada, TPC y Libro de Subcontratación?',
+      a: 'Registro diario (art. 34.9 ET) por trabajador y obra, vinculado a la Tarjeta Profesional de la Construcción y al Libro de Subcontratación, capturado en obra.',
+    },
+    {
+      q: '¿RGPD y AEPD para la geolocalización en obra?',
+      a: 'Geolocalización solo durante la jornada y la obra, con información previa, interés legítimo y el art. 90 LOPDGDD, con derecho de acceso del trabajador.',
+    },
+    {
+      q: '¿Acreditación REA y responsabilidad en subcontratación?',
+      a: 'Historial de horas y salario por subcontrata para el Registro de Empresas Acreditadas (REA) y la cadena de subcontratación de la Ley 32/2006.',
+    },
+  ],
+  pt: [
+    {
+      q: 'Registo de tempos na obra e CCT da construção civil?',
+      a: 'Horas por trabalhador e por obra, acréscimos aplicáveis e histórico de antiguidade, conforme a CCT da construção civil, registados no estaleiro.',
+    },
+    {
+      q: 'RGPD e CNPD na geolocalização em obra?',
+      a: 'Geolocalização apenas durante o tempo de trabalho e na obra, com informação prévia, interesse legítimo e direito de acesso, conforme a CNPD.',
+    },
+    {
+      q: 'Comprovação na subcontratação e alvará IMPIC?',
+      a: 'Histórico de horas e retribuição por subcontratado, articulável com o alvará IMPIC e a responsabilidade solidária na subcontratação.',
+    },
+  ],
+  nl: [
+    {
+      q: 'Urenregistratie voor de CAO Bouw & Infra?',
+      a: 'Gewerkte uren per bouwplaats en medewerker, toeslagen en reisuren, vastgelegd volgens de CAO Bouw & Infra en de bewaartermijn van de Arbeidstijdenwet.',
+    },
+    {
+      q: 'AVG en de Autoriteit Persoonsgegevens bij GPS op de bouwplaats?',
+      a: 'Locatie alleen tijdens werktijd en op de bouwplaats, met privacyverklaring, belangenafweging (art. 6 AVG) en DPIA, volgens de richtsnoeren van de AP.',
+    },
+    {
+      q: 'Ketenaansprakelijkheid en G-rekening bij onderaanneming?',
+      a: 'Sluitend uren- en loonoverzicht per onderaannemer voor de Wet ketenaansprakelijkheid, de G-rekening en de WAADI-toets.',
+    },
+  ],
   'en-us': [
     {
       q: 'Does GeoTapp satisfy Davis-Bacon prevailing wage record-keeping?',

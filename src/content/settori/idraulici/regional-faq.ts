@@ -6,6 +6,12 @@ export interface RegionalFaqItem {
 }
 
 export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
+  it: 'Conformità normativa in Italia',
+  de: 'Compliance in Deutschland',
+  fr: 'Conformité en France',
+  es: 'Cumplimiento normativo en España',
+  pt: 'Conformidade em Portugal',
+  nl: 'Compliance in Nederland',
   'en-us': 'Regional compliance',
   'en-gb': 'Regional compliance',
   'en-au': 'Regional compliance',
@@ -14,6 +20,90 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
 };
 
 export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
+  it: [
+    {
+      q: 'Ore e interventi secondo il CCNL Metalmeccanici/installazione impianti?',
+      a: 'Ore per idraulico e per commessa, reperibilità e trasferta e conservazione sul Libro Unico del Lavoro, registrate a ogni intervento.',
+    },
+    {
+      q: 'Geolocalizzazione e art. 4 dello Statuto dei Lavoratori?',
+      a: 'Posizione legata all\'intervento e al turno, con informativa, legittimo interesse e l\'accordo sindacale o l\'autorizzazione dell\'Ispettorato del Lavoro per il controllo a distanza.',
+    },
+    {
+      q: 'Impianti idrico e gas: DM 37/2008 (lettere C/E) e abilitazione gas?',
+      a: 'Tracciabilità degli interventi su impianti idrosanitari e gas per lettera di abilitazione, a supporto della dichiarazione di conformità.',
+    },
+  ],
+  de: [
+    {
+      q: 'Zeiterfassung nach dem Tarifvertrag SHK-Handwerk?',
+      a: 'Stunden je Installateur und Auftrag, Bereitschafts- und Fahrtzeiten und Aufbewahrung nach §16 ArbZG, bei jedem Einsatz erfasst.',
+    },
+    {
+      q: 'DSGVO und Betriebsrat bei GPS-Ortung der Installateure?',
+      a: 'Ortung nur während der Arbeitszeit, mit Interessenabwägung nach Art. 6 DSGVO und Mitbestimmung des Betriebsrats nach §87 BetrVG.',
+    },
+    {
+      q: 'Gasinstallation nach TRGI (DVGW G 600)?',
+      a: 'Zuordnung der Gasarbeiten zum eingetragenen Installateur und Nachweis nach TRGI (DVGW-Arbeitsblatt G 600) je Einsatz.',
+    },
+  ],
+  fr: [
+    {
+      q: 'Heures et déplacements selon la convention de la métallurgie ?',
+      a: 'Heures par plombier et par chantier, indemnités de déplacement et d\'astreinte et conservation des données, enregistrées à chaque intervention.',
+    },
+    {
+      q: 'RGPD et CNIL pour la géolocalisation des plombiers ?',
+      a: 'Géolocalisation limitée au temps de travail, information préalable, intérêt légitime et consultation du CSE, selon les lignes directrices CNIL.',
+    },
+    {
+      q: 'Qualification gaz (PG) et Qualibat ?',
+      a: 'Rattachement des interventions gaz à l\'appellation Professionnel Gaz (PG) et aux qualifications Qualibat, avec l\'historique de validité.',
+    },
+  ],
+  es: [
+    {
+      q: '¿Jornada y desplazamientos según el convenio del metal?',
+      a: 'Registro diario (art. 34.9 ET) por fontanero y obra, dietas y disponibilidad y conservación de datos, capturado en cada intervención.',
+    },
+    {
+      q: '¿RGPD y AEPD para la geolocalización de fontaneros?',
+      a: 'Geolocalización solo durante la jornada, con información previa, interés legítimo y el art. 90 LOPDGDD, con derecho de acceso del trabajador.',
+    },
+    {
+      q: '¿Carné de instalador de gas (RITE / reglamento del gas)?',
+      a: 'Asociación de cada intervención de gas al carné de instalador habilitado, con el historial de soporte al certificado de instalación.',
+    },
+  ],
+  pt: [
+    {
+      q: 'Horas e deslocações segundo a CCT da metalurgia?',
+      a: 'Horas por canalizador e por obra, ajudas de custo e disponibilidade e conservação dos dados, registados em cada intervenção.',
+    },
+    {
+      q: 'RGPD e CNPD na geolocalização dos canalizadores?',
+      a: 'Geolocalização apenas durante o tempo de trabalho, com informação prévia, interesse legítimo e direito de acesso, conforme a CNPD.',
+    },
+    {
+      q: 'Certificação de instalador de gás (DGEG)?',
+      a: 'Associação de cada intervenção de gás à certificação de instalador habilitado pela DGEG, com o histórico de suporte ao termo de responsabilidade.',
+    },
+  ],
+  nl: [
+    {
+      q: 'Uren en consignatie volgens de CAO Metaal en Techniek?',
+      a: 'Uren per loodgieter en per opdracht, consignatie- en reisuren en de bewaartermijn uit de Arbeidstijdenwet, bij elke klus vastgelegd.',
+    },
+    {
+      q: 'AVG en de Autoriteit Persoonsgegevens bij GPS-tracking?',
+      a: 'Locatie alleen tijdens werktijd, met privacyverklaring, belangenafweging (art. 6 AVG) en DPIA, volgens de richtsnoeren van de AP.',
+    },
+    {
+      q: 'Gascertificering (BRL 6000 / SCIOS) bij gaswerk?',
+      a: 'Koppeling van gaswerk aan de erkende, gecertificeerde installateur (CO-vrij / BRL 6000) en het inspectiedossier, per klus.',
+    },
+  ],
   'en-us': [
     {
       q: 'UPC/IPC-compliant inspection records per job?',
