@@ -676,7 +676,8 @@
         "a": "Meno di 2 minuti: compila il form, ricevi l'email, imposta la password e sei dentro."
       }
     ],
-    "success_sender": "L'email arriverà da:"
+    "success_sender": "L'email arriverà da:",
+    "form_seats_required_note": "* Campo obbligatorio: inserisci 0 se non ti servono licenze TimeTracker."
   },
   "demo": {
     "page_title": "Prenota la tua Demo Personalizzata",

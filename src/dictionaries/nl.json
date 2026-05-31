@@ -675,7 +675,8 @@
         "a": "Minder dan 2 minuten: vul het formulier in, ontvang de e-mail, stel uw wachtwoord in en u bent binnen."
       }
     ],
-    "success_sender": "De e-mail komt van:"
+    "success_sender": "De e-mail komt van:",
+    "form_seats_required_note": "* Verplicht: vul 0 in als je geen TimeTracker-licenties nodig hebt."
   },
   "demo": {
     "page_title": "Boek uw persoonlijke demo",

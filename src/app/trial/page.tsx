@@ -39,7 +39,7 @@ export default function TrialPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
 
   const [email, setEmail] = useState('');
-  const [plan, setPlan] = useState<'SOLO' | 'TEAM' | 'BUSINESS'>('TEAM');
+  const [plan, setPlan] = useState<'' | 'SOLO' | 'TEAM' | 'BUSINESS'>('');
   const [seats, setSeats] = useState('');
 
   // Localize the trial to the user, not just to the page default ('it').
@@ -252,6 +252,7 @@ export default function TrialPage() {
                       onFocus={() => trackFieldFocus('plan')}
                       className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
                     >
+                      <option value="" disabled>{d.form_plan}…</option>
                       <option value="SOLO">{d.plan_solo}</option>
                       <option value="TEAM">{d.plan_team}</option>
                       <option value="BUSINESS">{d.plan_business}</option>
@@ -262,11 +263,12 @@ export default function TrialPage() {
                   {/* TimeTracker seats */}
                   <div>
                     <label className="block text-sm font-bold text-slate-700 mb-1.5">
-                      {d.form_seats}
+                      {d.form_seats} <span className="text-red-500">*</span>
                     </label>
                     <input
                       type="number"
                       min={0}
+                      required
                       inputMode="numeric"
                       value={seats}
                       onChange={(e) => setSeats(e.target.value)}
@@ -275,6 +277,7 @@ export default function TrialPage() {
                       className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
                     />
                     <p className="mt-1 text-xs text-slate-400">{d.form_seats_hint}</p>
+                    <p className="mt-1 text-xs text-slate-500 font-medium">{(d as any).form_seats_required_note}</p>
                   </div>
 
                   {error && (

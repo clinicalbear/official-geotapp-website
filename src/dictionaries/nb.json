@@ -861,7 +861,8 @@
         "a": "Mindre enn 2 minutter: fyll ut skjemaet, motta e-posten, angi passordet ditt og du er i gang."
       }
     ],
-    "success_sender": "E-posten kommer fra:"
+    "success_sender": "E-posten kommer fra:",
+    "form_seats_required_note": "* Obligatorisk: skriv 0 hvis du ikke trenger TimeTracker-lisenser."
   },
   "roi": {
     "meta_title": "GeoTapp ROI-kalkulator — Oppdag dine reelle besparelser",

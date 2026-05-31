@@ -676,7 +676,8 @@
         "a": "Weniger als 2 Minuten: Formular ausfüllen, E-Mail empfangen, Passwort festlegen – fertig."
       }
     ],
-    "success_sender": "Die E-Mail kommt von:"
+    "success_sender": "Die E-Mail kommt von:",
+    "form_seats_required_note": "* Pflichtfeld: Geben Sie 0 ein, wenn Sie keine TimeTracker-Lizenzen benötigen."
   },
   "demo": {
     "page_title": "Buchen Sie Ihre persönliche Demo",

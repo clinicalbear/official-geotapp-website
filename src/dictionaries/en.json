@@ -676,7 +676,8 @@
         "a": "Less than 2 minutes: fill in the form, receive the email, set your password and you're in."
       }
     ],
-    "success_sender": "The email will arrive from:"
+    "success_sender": "The email will arrive from:",
+    "form_seats_required_note": "* Required: enter 0 if you don't need any TimeTracker seats."
   },
   "demo": {
     "page_title": "Book your Personalised Demo",

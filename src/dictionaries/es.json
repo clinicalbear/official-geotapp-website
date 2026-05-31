@@ -861,7 +861,8 @@
         "a": "Menos de 2 minutos: rellena el formulario, recibe el email, establece tu contraseña y ya estás dentro."
       }
     ],
-    "success_sender": "El correo llegará desde:"
+    "success_sender": "El correo llegará desde:",
+    "form_seats_required_note": "* Obligatorio: introduce 0 si no necesitas licencias TimeTracker."
   },
   "roi": {
     "meta_title": "Calculadora ROI GeoTapp — Descubre tus ahorros reales",
