@@ -39,6 +39,21 @@ export default function TrialPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
 
   const [email, setEmail] = useState('');
+  const [plan, setPlan] = useState<'SOLO' | 'TEAM' | 'BUSINESS'>('TEAM');
+  const [seats, setSeats] = useState('');
+
+  // Localize the trial to the user, not just to the page default ('it').
+  // An explicit non-it URL locale (e.g. /fr/trial) wins; otherwise fall back
+  // to the browser language when it is one we support.
+  const SUPPORTED_LANGS = ['it', 'en', 'de', 'nl', 'fr', 'es', 'pt', 'da', 'sv', 'nb', 'ru'];
+  const detectLanguage = (): string => {
+    if (locale && locale !== 'it') return locale;
+    if (typeof navigator !== 'undefined') {
+      const nav = (navigator.language || '').slice(0, 2).toLowerCase();
+      if (SUPPORTED_LANGS.includes(nav)) return nav;
+    }
+    return locale || 'it';
+  };
 
   // --- Funnel tracking ---
   const touchedFields = useRef<Set<string>>(new Set());
@@ -111,7 +126,12 @@ export default function TrialPage() {
       const res = await fetch(`${saasUrl}/api/trial/start`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, language: locale || 'it' }),
+        body: JSON.stringify({
+          email,
+          plan,
+          timetrackerSeats: seats.trim() === '' ? 0 : Number(seats),
+          language: detectLanguage(),
+        }),
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || d.error_message);
@@ -218,6 +238,43 @@ export default function TrialPage() {
                       className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
                     />
                     <p className="mt-1 text-xs text-slate-400">{d.form_email_hint}</p>
+                  </div>
+
+                  {/* Flow plan */}
+                  <div>
+                    <label className="block text-sm font-bold text-slate-700 mb-1.5">
+                      {d.form_plan} <span className="text-red-500">*</span>
+                    </label>
+                    <select
+                      required
+                      value={plan}
+                      onChange={(e) => setPlan(e.target.value as 'SOLO' | 'TEAM' | 'BUSINESS')}
+                      onFocus={() => trackFieldFocus('plan')}
+                      className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                    >
+                      <option value="SOLO">{d.plan_solo}</option>
+                      <option value="TEAM">{d.plan_team}</option>
+                      <option value="BUSINESS">{d.plan_business}</option>
+                    </select>
+                    <p className="mt-1 text-xs text-slate-400">{d.form_plan_note}</p>
+                  </div>
+
+                  {/* TimeTracker seats */}
+                  <div>
+                    <label className="block text-sm font-bold text-slate-700 mb-1.5">
+                      {d.form_seats}
+                    </label>
+                    <input
+                      type="number"
+                      min={0}
+                      inputMode="numeric"
+                      value={seats}
+                      onChange={(e) => setSeats(e.target.value)}
+                      onFocus={() => trackFieldFocus('seats')}
+                      placeholder="0"
+                      className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                    />
+                    <p className="mt-1 text-xs text-slate-400">{d.form_seats_hint}</p>
                   </div>
 
                   {error && (
