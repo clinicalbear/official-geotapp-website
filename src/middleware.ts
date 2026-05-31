@@ -229,6 +229,16 @@ const DEPUBLISHED_BLOG_TEST_PATHS = new Set([
   '/blog/da/2026/03/23/test-2/',
 ]);
 
+// Articoli olandesi la cui lingua Polylang e' stata corretta da IT a NL (31/05/2026).
+// I vecchi URL senza prefisso /nl/ erano gia' indicizzati: 302 verso il nuovo URL /nl/.
+const NL_RELANG_REDIRECTS: Record<string, string> = {
+  '/blog/2026/05/30/software-schoonmaakbedrijven-avg-gps-2026/': '/blog/nl/2026/05/30/software-schoonmaakbedrijven-avg-gps-2026/',
+  '/blog/2026/05/25/software-voor-schoonmaakbedrijven-2026/': '/blog/nl/2026/05/25/software-voor-schoonmaakbedrijven-2026/',
+  '/blog/2026/05/21/bewijsplicht-schoonmaakdienst-software/': '/blog/nl/2026/05/21/bewijsplicht-schoonmaakdienst-software/',
+  '/blog/2026/05/18/gps-tracking-schoonmaakpersoneel/': '/blog/nl/2026/05/18/gps-tracking-schoonmaakpersoneel/',
+  '/blog/2026/05/14/personeelsbeheer-software-schoonmaak/': '/blog/nl/2026/05/14/personeelsbeheer-software-schoonmaak/',
+};
+
 function normalizePathWithTrailingSlash(pathname: string): string {
   if (!pathname) return '/';
   return pathname.endsWith('/') ? pathname : `${pathname}/`;
@@ -382,6 +392,16 @@ export async function middleware(req: NextRequest) {
       const url = req.nextUrl.clone();
       url.host = bareHost;
       return NextResponse.redirect(url, { status: 301 });
+    }
+  }
+
+  // 0a2. Articoli olandesi rilingua (IT→NL): 302 dai vecchi URL (senza /nl/)
+  // ai nuovi URL /nl/. Deve precedere il rendering articolo (catch-all Next.js).
+  {
+    const normalizedRelang = pathname.endsWith('/') ? pathname : `${pathname}/`;
+    const relangTarget = NL_RELANG_REDIRECTS[normalizedRelang];
+    if (relangTarget) {
+      return NextResponse.redirect(new URL(relangTarget, req.url), 302);
     }
   }
 
