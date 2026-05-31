@@ -80,9 +80,9 @@ function isItalianPost(link: string): boolean {
 function resolveUrl(link: string, slug: string): string {
   try {
     const { pathname } = new URL(link);
-    return `https://blog.geotapp.com${pathname}`;
+    return `https://geotapp.com/blog${pathname}`;
   } catch {
-    return `https://blog.geotapp.com/${slug}`;
+    return `https://geotapp.com/blog/${slug}`;
   }
 }
 
