@@ -148,6 +148,10 @@ const content: SettoreContent = {
     subtitle: 'What electricians ask us most before getting started.',
     items: [
       {
+        q: 'Can GeoTapp work as a construction app for electricians on building sites?',
+        a: 'Yes. On a construction site the electrician clocks in with GPS, logs the work order and photographs each stage of the installation. The site manager sees who is on which site in real time, and every job closes with a sealed report tied to location and time.',
+      },
+      {
         q: 'Is GeoTapp suitable as an app for electricians?',
         a: 'Yes. GeoTapp is used by electricians and electrical contractors to manage jobs, timesheets, attendance and installation photo evidence. It works for single-site jobs and multiple concurrent sites.',
       },
@@ -174,6 +178,10 @@ const content: SettoreContent = {
   },
   schema_sector_name: 'Electricians',
   schema_faq: [
+    {
+      question: 'Is GeoTapp a construction app for electricians working on building sites?',
+      answer: 'Yes. GeoTapp works as a construction app for electricians: GPS clock-in on each site, work orders assigned per team, photo evidence of every installation stage, and sealed job reports with verified location and time across all active sites.',
+    },
     {
       question: 'Does GeoTapp work as an app for electricians?',
       answer: 'Yes. GeoTapp is the app for electricians that records every job with GPS, photos and verifiable timestamps. The engineer clocks in from the field, the office sees everything in real time, and the client receives a sealed job report.',

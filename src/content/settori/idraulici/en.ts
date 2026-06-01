@@ -148,6 +148,10 @@ const content: SettoreContent = {
     subtitle: 'What plumbers and HVAC technicians ask us most before getting started.',
     items: [
       {
+        q: 'Does GeoTapp do GPS time tracking for plumbers?',
+        a: 'Yes. Plumbers and heating engineers clock in and out from the field with a single tap, and each entry is stamped with verified GPS and time. The office gets exact hours per job and per site without chasing anyone for a timesheet, and the same data feeds straight into the sealed job report.',
+      },
+      {
         q: 'Is GeoTapp suitable as an app for plumbers and HVAC technicians?',
         a: 'Yes. GeoTapp is used by plumbers and heating engineers to manage jobs, timesheets, attendance and photo evidence of plumbing and heating systems. It works for emergency call-outs and planned maintenance alike.',
       },
@@ -174,6 +178,10 @@ const content: SettoreContent = {
   },
   schema_sector_name: 'Plumbers and HVAC Technicians',
   schema_faq: [
+    {
+      question: 'Does GeoTapp offer GPS time tracking for plumbers and heating engineers?',
+      answer: 'Yes. GeoTapp provides GPS time tracking built for plumbers: the engineer taps to start and stop on site, every entry carries a verified location and timestamp, and the office sees exact hours per job without manual timesheets.',
+    },
     {
       question: 'Does GeoTapp work as an app for plumbers and HVAC technicians?',
       answer: 'Yes. GeoTapp is the app for plumbers and HVAC technicians that records every job with GPS, photos and verifiable timestamps. The engineer clocks in from the field, the office sees everything in real time, and the client receives a sealed job report.',
