@@ -63,7 +63,27 @@ for (const r of results) {
 }
 
 if (failed > 0) {
-  console.error(`\n[blog-hubs] ${failed}/${LOCALES.length} hub DEGRADATI — controllare WordPress / deploy.`);
+  const summary = `${failed}/${LOCALES.length} hub DEGRADATI — controllare WordPress / deploy.\n\n` +
+    results.filter((r) => !r.ok).map((r) => `- /${r.locale}/blog/: ${r.reason}`).join('\n');
+  console.error(`\n[blog-hubs] ${summary}`);
+
+  // Alert opzionale: se configurato, inoltra al CRM che invia l'email via SMTP.
+  // (Su esecuzione manuale `npm run check:blog` questi env non ci sono -> solo log + exit 1.)
+  const alertUrl = process.env.BLOG_ALERT_URL;
+  const alertToken = process.env.BLOG_ALERT_TOKEN;
+  if (alertUrl && alertToken) {
+    try {
+      const res = await fetch(alertUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${alertToken}` },
+        body: JSON.stringify({ message: summary }),
+        signal: AbortSignal.timeout(TIMEOUT_MS),
+      });
+      console.log(`[blog-hubs] alert inviato: HTTP ${res.status}`);
+    } catch (e) {
+      console.error(`[blog-hubs] invio alert fallito: ${e?.message || e}`);
+    }
+  }
   process.exit(1);
 }
 console.log(`\n[blog-hubs] tutti i ${LOCALES.length} hub sani.`);
