@@ -4,6 +4,7 @@ import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
 import { generateLocaleStaticParams as generateStaticParams } from '@/lib/i18n/static-params';
 import type { AppLocale } from '@/lib/i18n/config';
 import BlogClient, { type Post } from './BlogClient';
+import { JsonLd } from '@/components/seo/JsonLd';
 
 const WP = 'https://blog.geotapp.com';
 const HEADERS = { host: 'blog.geotapp.com', 'x-geotapp-proxy': '1', 'x-forwarded-proto': 'https' };
@@ -12,6 +13,22 @@ const HEADERS = { host: 'blog.geotapp.com', 'x-geotapp-proxy': '1', 'x-forwarded
 // con next.revalidate i worker deduplicano il fetch e il signal non si propaga, bloccando il build.
 function wpFetch(url: string): Promise<Response> {
   return fetch(url, { headers: HEADERS, cache: 'no-store', signal: AbortSignal.timeout(8000) });
+}
+
+// Fetch critico (prima pagina): 2 tentativi, lancia se entrambi falliscono.
+// Un singolo hiccup di WP non deve tradursi in una pagina blog vuota servita con HTTP 200.
+async function wpFetchOrThrow(url: string, tries = 2): Promise<Response> {
+  let lastErr: unknown = null;
+  for (let i = 0; i < tries; i++) {
+    try {
+      const r = await wpFetch(url);
+      if (r.ok) return r;
+      lastErr = new Error(`WP responded ${r.status}`);
+    } catch (e) {
+      lastErr = e;
+    }
+  }
+  throw lastErr ?? new Error('WP fetch failed');
 }
 
 function stripHtml(html: string): string {
@@ -46,10 +63,10 @@ function isLocalePost(link: string, locale: string): boolean {
 }
 
 async function fetchAllPosts(): Promise<{ id: number; slug: string; title: any; excerpt: any; date: string; link: string; featured_media: number; categories: number[]; content?: any }[]> {
-  const first = await wpFetch(
+  // Lancia su fallimento (rete/non-200): distingue "WP irraggiungibile" da "WP ok ma 0 post".
+  const first = await wpFetchOrThrow(
     `${WP}/wp-json/wp/v2/posts/?per_page=100&page=1&_fields=id,slug,title,excerpt,content,date,link,featured_media,categories&status=publish`,
   );
-  if (!first.ok) return [];
   const totalPages = parseInt(first.headers.get('x-wp-totalpages') ?? '1', 10);
   const firstData = await first.json();
 
@@ -144,17 +161,36 @@ async function buildPostList(all: Awaited<ReturnType<typeof fetchAllPosts>>, loc
   });
 }
 
+// Cache della lista post per locale, persistente tra richieste nello stesso isolate Worker.
+// Due scopi SEO:
+//  - TTL fresco: entro CACHE_TTL_MS serviamo dalla cache senza colpire WP (veloce per i crawler,
+//    meno carico sul backend).
+//  - stale-on-error: se WP fallisce, serviamo l'ultima lista buona invece di una pagina vuota.
+// Se WP fallisce e non c'e' cache disponibile, rilanciamo -> HTTP 500 (mai un 200 "blog vuoto",
+// che Google interpreterebbe come soft-404 / thin content e potrebbe deindicizzare l'hub).
+const POST_CACHE = new Map<string, { posts: Post[]; ts: number }>();
+const CACHE_TTL_MS = 5 * 60 * 1000;
+
 async function fetchPosts(locale: string): Promise<Post[]> {
+  const cached = POST_CACHE.get(locale);
+  if (cached && Date.now() - cached.ts < CACHE_TTL_MS) return cached.posts;
   try {
     const all = await fetchAllPosts();
-    const posts = await buildPostList(all, locale);
+    let posts = await buildPostList(all, locale);
     // Fallback to English if no posts exist for this locale
     if (posts.length === 0 && locale !== 'en') {
-      return buildPostList(all, 'en');
+      posts = await buildPostList(all, 'en');
     }
-    return posts;
-  } catch {
+    if (posts.length > 0) {
+      POST_CACHE.set(locale, { posts, ts: Date.now() });
+      return posts;
+    }
+    // WP ha risposto correttamente ma non risultano post: empty-state legittimo, HTTP 200.
     return [];
+  } catch {
+    // WP irraggiungibile/errore: serviamo stale se disponibile, altrimenti 500 (mai soft-404).
+    if (cached) return cached.posts;
+    throw new Error('Blog temporarily unavailable');
   }
 }
 
@@ -180,8 +216,41 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
+// Structured data Blog + BlogPosting: rende esplicito alle macchine (Google, e soprattutto i
+// motori AI che prendono un solo snapshot e non eseguono bene il JS) che questo hub e' un blog
+// con questi articoli. Emesso SOLO se ci sono post: un blogPost[] vuoto segnalerebbe "blog vuoto".
+function buildBlogJsonLd(locale: string, posts: Post[]): Record<string, unknown> | null {
+  if (posts.length === 0) return null;
+  const dict = getDictionary(locale as AppLocale).blog;
+  const hubUrl = `https://geotapp.com/${locale}/blog/`;
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Blog',
+    '@id': `${hubUrl}#blog`,
+    url: hubUrl,
+    name: dict.meta_title,
+    description: dict.meta_desc,
+    inLanguage: locale,
+    publisher: { '@type': 'Organization', name: 'GeoTapp', url: 'https://geotapp.com/' },
+    blogPost: posts.slice(0, 50).map((p) => ({
+      '@type': 'BlogPosting',
+      headline: p.title,
+      url: `https://geotapp.com${p.url}`,
+      datePublished: p.date,
+      inLanguage: locale,
+      ...(p.image ? { image: p.image } : {}),
+    })),
+  };
+}
+
 export default async function BlogPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const posts = await fetchPosts(locale);
-  return <BlogClient locale={locale as AppLocale} posts={posts} />;
+  const blogLd = buildBlogJsonLd(locale, posts);
+  return (
+    <>
+      {blogLd && <JsonLd data={blogLd} />}
+      <BlogClient locale={locale as AppLocale} posts={posts} />
+    </>
+  );
 }

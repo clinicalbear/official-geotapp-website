@@ -467,7 +467,9 @@ export async function middleware(req: NextRequest) {
     if (pathname.startsWith('/blog/wp-')) {
       // fall through to blog proxy below
     } else {
-      const BLOG_LISTING_LOCALES = ['en','de','fr','es','pt','nl','da','sv','nb','ru'];
+      // 'it' incluso: /blog/it/ -> 301 -> /it/blog/ (coerenza con gli altri locale; senza
+      // questo /blog/it/ cadeva nel proxy e dava 404, unico hub-locale non redirezionato).
+      const BLOG_LISTING_LOCALES = ['it','en','de','fr','es','pt','nl','da','sv','nb','ru'];
 
       // /blog or /blog/ exactly → /{detected_lang}/blog/ via 302 (geo-aware).
       //
