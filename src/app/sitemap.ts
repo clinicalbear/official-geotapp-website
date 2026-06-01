@@ -89,6 +89,9 @@ const ROUTES: RouteEntry[] = [
   { path: '/contact/', priority: 0.65, changeFrequency: 'monthly' },
   { path: '/chi-siamo/', priority: 0.55, changeFrequency: 'monthly' },
 
+  // Entity / AEO page ("Cos'è GeoTapp" — localized slug per locale via SLUG_MAP)
+  { path: '/cos-e-geotapp/', priority: 0.7, changeFrequency: 'monthly' },
+
   // Legale (bassa priorità)
   { path: '/privacy/', priority: 0.3, changeFrequency: 'yearly' },
   { path: '/terms/', priority: 0.3, changeFrequency: 'yearly' },
