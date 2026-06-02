@@ -83,7 +83,6 @@ export default function Footer() {
               <li><Link href={getLink('/products/geotapp-timetracker')} className={linkClass}>{t.timetracker}</Link></li>
               <li><Link href={getLink('/products/geotapp-verifier')} className={linkClass}>{t.verifier}</Link></li>
               <li><Link href={getLink('/pricing')} className={linkClass}>{t.pricing}</Link></li>
-              <li><Link href={getLink('/pricing/bundle')} className={linkClass}>{t.bundle}</Link></li>
               <li><Link href={getLink('/features')} className={linkClass}>{t.features}</Link></li>
             </ul>
           </div>

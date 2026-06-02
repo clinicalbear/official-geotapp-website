@@ -54,7 +54,6 @@ const ROUTES: RouteEntry[] = [
 
   // Pricing (pagine di conversione — priorità alta)
   { path: '/pricing/', priority: 0.9, changeFrequency: 'weekly' },
-  { path: '/pricing/bundle/', priority: 0.85, changeFrequency: 'weekly' },
 
   // Settori verticali (landing SEO — alta priorità)
   { path: '/settori/', priority: 0.9, changeFrequency: 'weekly' },

@@ -194,7 +194,6 @@ const SITEMAP_ROUTES: SitemapRouteEntry[] = [
   { path: '/products/geotapp-timetracker/', priority: 0.95, changeFrequency: 'weekly' },
   { path: '/products/geotapp-verifier/', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/pricing/', priority: 0.9, changeFrequency: 'weekly' },
-  { path: '/pricing/bundle/', priority: 0.85, changeFrequency: 'weekly' },
   { path: '/settori/', priority: 0.9, changeFrequency: 'weekly' },
   { path: '/settori/pulizie/', priority: 0.9, changeFrequency: 'weekly' },
   { path: '/settori/installatori/', priority: 0.9, changeFrequency: 'weekly' },
@@ -402,6 +401,21 @@ export async function middleware(req: NextRequest) {
     const relangTarget = NL_RELANG_REDIRECTS[normalizedRelang];
     if (relangTarget) {
       return NextResponse.redirect(new URL(relangTarget, req.url), 301);
+    }
+  }
+
+  // 0a3. Bundle ritirato dal sito: 301 da .../{prezzi}/bundle/ → .../{prezzi}/
+  // (copre tutti i locale e gli slug localizzati: pricing/preise/tarifs/...).
+  {
+    const PRICING_SLUGS = new Set([
+      'pricing', 'preise', 'tarieven', 'tarifs', 'precios', 'precos', 'priser', 'tseny',
+    ]);
+    const m = pathname.match(/^\/([a-z]{2}(?:-[a-z]{2})?)\/([a-z-]+)\/bundle\/?$/);
+    if (m && PRICING_SLUGS.has(m[2])) {
+      return NextResponse.redirect(new URL(`/${m[1]}/${m[2]}/`, req.url), 301);
+    }
+    if (pathname === '/pricing/bundle' || pathname === '/pricing/bundle/') {
+      return NextResponse.redirect(new URL('/en/pricing/', req.url), 301);
     }
   }
 
