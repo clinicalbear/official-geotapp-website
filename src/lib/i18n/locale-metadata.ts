@@ -34,14 +34,38 @@ export const HREFLANG: Record<string, string> = {
 };
 
 /**
- * Regional EN variants (en-us, en-gb, en-au, en-ie, en-ca) sono "alternate
- * regional content" del locale canonical `/en/`. Pricing/messaging localizzati,
- * stessa pagina concettuale. Per consolidare authority sul brand (e non
- * splittare pos 4 → 12 come accaduto 13-25/05/2026 sulla query "geotapp"),
- * dichiariamo canonical = `/en` per tutte queste varianti. Hreflang resta
- * regionale → Google serve la variant giusta per geo IP dell'utente.
+ * Regional EN variants (en-us, en-gb, en-au, en-ie, en-ca) renderizzano prezzi
+ * in valuta locale (USD/GBP/AUD/CAD) — vedi LOCALE_CURRENCY in lib/pricing.ts.
+ *
+ * Strategia canonical IBRIDA (audit 2026-06-02):
+ *  - Pagine BRAND/entity (home, what-is-geotapp, about-us): canonical → `/en/`
+ *    per consolidare authority sulla query "geotapp" (incidente pos 4→12 del
+ *    13-25/05/2026, causato da pagine inglesi quasi-duplicate in competizione).
+ *  - Pagine COMMERCIALI (pricing, products, settori, roi-calculator): canonical
+ *    = self, così la variante in valuta locale è indicizzabile e ranka nel suo
+ *    mercato (un inglese trova £, un americano $, non il prezzo in €). Hreflang
+ *    cluster resta completo → Google serve la variante giusta per geo.
+ *  - en-ie renderizza EUR (byte-identica a `/en/`) → sempre consolidata.
  */
 const REGIONAL_EN_VARIANTS = new Set(['en-us', 'en-gb', 'en-au', 'en-ie', 'en-ca']);
+
+// en-ie usa EUR (LOCALE_CURRENCY): contenuto identico a /en/ → sempre consolidata.
+const EUR_REGIONAL_EN = new Set(['en-ie']);
+
+// Prefissi delle pagine commerciali con prezzo in valuta locale: qui le varianti
+// regionali (USD/GBP/AUD/CAD) fanno canonical su se stesse per rankare nel mercato.
+// Tutto il resto (brand/entity/info/legal) resta consolidato su /en/.
+const REGIONAL_SELF_CANONICAL_PREFIXES = ['/pricing', '/products/', '/settori', '/roi-calculator'];
+
+/**
+ * Per la `locale` data e il `path` (senza prefisso locale), il canonical punta
+ * a se stesso (true) o consolida su /en/ (false, solo per varianti EN regionali).
+ */
+function regionalSelfCanonical(locale: string, path: string): boolean {
+  if (!REGIONAL_EN_VARIANTS.has(locale)) return true; // locale primarie: sempre self
+  if (EUR_REGIONAL_EN.has(locale)) return false;       // en-ie (EUR): consolida
+  return REGIONAL_SELF_CANONICAL_PREFIXES.some((p) => path.startsWith(p));
+}
 
 /**
  * Builds canonical + hreflang alternates for a locale-prefixed page.
@@ -55,10 +79,12 @@ const REGIONAL_EN_VARIANTS = new Set(['en-us', 'en-gb', 'en-au', 'en-ie', 'en-ca
  * (e.g. /en/sectors/cleaning/, /de/branchen/reinigung/) instead of partially-
  * translated ones (e.g. /en/sectors/pulizie/) that trigger a redirect chain.
  *
- * Canonical strategy:
+ * Canonical strategy (IBRIDA, vedi regionalSelfCanonical sopra):
  * - Locale primary (it, en, de, fr, es, nl, pt, da, sv, nb, ru): canonical = self
- * - Locale regional EN variant (en-us, en-gb, en-au, en-ie, en-ca): canonical = /en/{path}
- *   (consolida authority sul brand; hreflang continua a regionalizzare il rendering)
+ * - Regional EN su pagine commerciali (pricing/products/settori/roi): canonical = self
+ *   (ranka con valuta locale; hreflang cluster resta completo)
+ * - Regional EN su pagine brand/entity/info + en-ie: canonical = /en/{path}
+ *   (consolida authority sul brand)
  */
 export function buildLocaleAlternates(
   locale: string,
@@ -75,8 +101,9 @@ export function buildLocaleAlternates(
   // The bare canonical path (e.g. /chi-siamo/) triggers a 308 → /it/ leaking link equity.
   languages['x-default'] = `${BASE}/en${translatePath(path, 'en')}`;
 
-  // Regional EN variants point canonical to /en/ to consolidate brand authority.
-  const canonicalLocale = REGIONAL_EN_VARIANTS.has(locale) ? 'en' : locale;
+  // Hybrid canonical: commercial regional-EN pages self-canonical (rank with local
+  // currency); brand/entity/info pages + en-ie consolidate to /en/ (brand authority).
+  const canonicalLocale = regionalSelfCanonical(locale, path) ? locale : 'en';
   const canonicalPath = translatePath(path, canonicalLocale as AppLocale);
 
   return {
