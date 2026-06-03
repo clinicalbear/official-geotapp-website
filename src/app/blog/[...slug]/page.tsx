@@ -259,9 +259,14 @@ export default async function BlogArticlePage({ params }: Props) {
     datePublished: date,
     dateModified: modified || date,
     author: {
-      '@type': 'Organization',
-      name: 'GeoTapp',
-      url: 'https://geotapp.com',
+      '@type': 'Person',
+      '@id': 'https://geotapp.com/#founder',
+      name: 'Michele Petraroli',
+      url: 'https://geotapp.com/chi-siamo/',
+      sameAs: [
+        'https://www.linkedin.com/in/michele-petraroli-532545397/',
+        'https://featured.com/p/michele-petraroli',
+      ],
     },
     publisher: {
       '@type': 'Organization',
