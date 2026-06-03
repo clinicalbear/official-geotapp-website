@@ -13,6 +13,11 @@ import {
   FileCheck2,
   MapPin,
   WifiOff,
+  Hammer,
+  Sparkles,
+  AlertTriangle,
+  FileX,
+  Receipt,
 } from 'lucide-react';
 // Heavy below-fold components — dynamic import to reduce initial bundle
 import dynamic from 'next/dynamic';
@@ -75,8 +80,6 @@ const TTBgCarousel = () => {
 import { usePathname } from 'next/navigation';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import FounderViewTracker from '@/components/analytics/FounderViewTracker';
-import DisputeScene from '@/components/home/DisputeScene';
-import SectorProofPanel from '@/components/home/SectorProofPanel';
 import {
   DEFAULT_LOCALE,
   getLocaleFromPathname,
@@ -373,26 +376,80 @@ export default function Home() {
       {/* REVIEWS, voci reali dei customer */}
       <Reviews locale={currentLocale} />
 
-            {/* PROBLEM SECTION — Scena del contenzioso */}
-      <DisputeScene
-        locale={currentLocale}
-        title={dict.landing.problem_title}
-        subtitle={dict.landing.problem_subtitle}
-      />
+            {/* PROBLEM SECTION — 3 riquadri ariosi, senza numeri */}
+      <section className="py-24 bg-slate-50 border-b border-slate-100">
+        <div className="container mx-auto px-6 max-w-6xl">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              {dict.landing.problem_title}
+            </h2>
+            <p className="text-xl text-text-secondary font-light">
+              {dict.landing.problem_subtitle}
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {(dict.landing.problem_items as { title: string; desc: string }[]).map((item, i) => {
+              const Icon = [AlertTriangle, FileX, Receipt][i] ?? AlertTriangle;
+              return (
+                <div
+                  key={i}
+                  className="bg-white rounded-3xl p-10 border border-slate-100 shadow-sm hover:shadow-md transition-shadow"
+                >
+                  <div className="w-14 h-14 rounded-2xl bg-rose-50 text-rose-500 flex items-center justify-center mb-6">
+                    <Icon size={26} />
+                  </div>
+                  <h3 className="font-bold text-slate-900 text-xl mb-3">{item.title}</h3>
+                  <p className="text-slate-600 leading-relaxed">{item.desc}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
 
-            {/* SETTORI SECTION — Report verificato live */}
-      <SectorProofPanel
-        locale={currentLocale}
-        title={dict.home_sections.settori.title}
-        subtitle={dict.home_sections.settori.subtitle}
-        seeAll={dict.home_sections.settori.see_all}
-        seeAllHref={getLink('/settori')}
-        sectors={[
-          { key: 'installatori', name: dict.home_sections.settori.installatori.name, desc: dict.home_sections.settori.installatori.desc, cta: dict.home_sections.settori.installatori.cta, href: getLink('/settori/installatori') },
-          { key: 'sicurezza', name: dict.home_sections.settori.sicurezza.name, desc: dict.home_sections.settori.sicurezza.desc, cta: dict.home_sections.settori.sicurezza.cta, href: getLink('/settori/sicurezza') },
-          { key: 'pulizie', name: dict.home_sections.settori.pulizie.name, desc: dict.home_sections.settori.pulizie.desc, cta: dict.home_sections.settori.pulizie.cta, href: getLink('/settori/pulizie') },
-        ]}
-      />
+            {/* SETTORI SECTION — 3 riquadri ariosi */}
+      <section className="py-24 bg-white border-b border-slate-100">
+        <div className="container mx-auto px-6 max-w-6xl">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">
+              {dict.home_sections.settori.title}
+            </h2>
+            <p className="text-lg text-slate-500">
+              {dict.home_sections.settori.subtitle}
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              { Icon: Hammer, iconCls: 'bg-amber-50 text-amber-600', ctaCls: 'text-amber-600', hoverBorder: 'hover:border-amber-200', d: dict.home_sections.settori.installatori, href: getLink('/settori/installatori') },
+              { Icon: ShieldCheck, iconCls: 'bg-indigo-50 text-indigo-600', ctaCls: 'text-indigo-600', hoverBorder: 'hover:border-indigo-200', d: dict.home_sections.settori.sicurezza, href: getLink('/settori/sicurezza') },
+              { Icon: Sparkles, iconCls: 'bg-cyan-50 text-cyan-600', ctaCls: 'text-cyan-600', hoverBorder: 'hover:border-cyan-200', d: dict.home_sections.settori.pulizie, href: getLink('/settori/pulizie') },
+            ].map(({ Icon, iconCls, ctaCls, hoverBorder, d, href }, i) => (
+              <Link
+                key={i}
+                href={href}
+                className={`group bg-white rounded-3xl p-10 border border-slate-100 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 ${hoverBorder}`}
+              >
+                <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 ${iconCls}`}>
+                  <Icon size={26} />
+                </div>
+                <h3 className="font-bold text-slate-900 text-xl mb-3">{d.name}</h3>
+                <p className="text-slate-600 leading-relaxed mb-6">{d.desc}</p>
+                <div className={`font-bold text-sm flex items-center gap-2 group-hover:gap-3 transition-all ${ctaCls}`}>
+                  {d.cta} <ArrowRight size={16} />
+                </div>
+              </Link>
+            ))}
+          </div>
+          <div className="text-center mt-12">
+            <Link
+              href={getLink('/settori')}
+              className="inline-flex items-center gap-2 text-slate-500 font-semibold hover:text-slate-900 transition-colors"
+            >
+              {dict.home_sections.settori.see_all} <ArrowRight size={16} />
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* Product blocks: Flow (office) → TimeTracker (field) → Verifier (trust) */}
       {/* PRODUCT SECTION: FLOW */}
