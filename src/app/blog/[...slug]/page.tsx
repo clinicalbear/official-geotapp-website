@@ -11,6 +11,7 @@ import NewsletterInline from '@/components/blog/NewsletterInline';
 import LeadMagnetInline from '@/components/blog/LeadMagnetInline';
 import MapBackground from '@/components/blog/MapBackground';
 import Comments, { type CommentItem } from '@/components/blog/Comments';
+import { detectPostLocale } from '@/lib/blog-locale';
 
 export const dynamic = 'force-dynamic';
 
@@ -128,16 +129,6 @@ function normalizeUrl(link: string, slug: string): string {
   return `/blog/${slug}/`;
 }
 
-function isLocalePost(link: string, locale: string): boolean {
-  try {
-    const afterBlog = new URL(link).pathname.replace(/^\/blog\//, '');
-    if (locale === 'it') return !/^[a-z]{2}\//.test(afterBlog);
-    return afterBlog.startsWith(`${locale}/`);
-  } catch {
-    return false;
-  }
-}
-
 interface RelatedPost {
   id: number;
   slug: string;
@@ -162,14 +153,17 @@ function mapRelatedPost(p: any): RelatedPost {
 
 async function fetchAllRelated(postId: number, locale: string): Promise<{ related: RelatedPost[]; more: RelatedPost[] }> {
   try {
-    // Single fetch: 20 recent posts (excludes current), filter by locale client-side
+    // Polylang's lang= REST param does NOT filter (verified), so we fetch a wide
+    // window and filter by locale client-side. class_list carries the language-suffixed
+    // category used for detection; _fields keeps the payload light despite per_page=100
+    // (this runs per request: force-dynamic + no-store).
     const res = await wpFetch(
-      `${WP}/wp-json/wp/v2/posts/?exclude=${postId}&per_page=20&_embed=wp:featuredmedia`,
+      `${WP}/wp-json/wp/v2/posts/?exclude=${postId}&per_page=100&_embed=wp:featuredmedia&_fields=id,slug,title,excerpt,date,link,class_list,_links,_embedded`,
     );
     if (!res.ok) return { related: [], more: [] };
     const posts: any[] = await res.json();
-    const localePosts = posts.filter((p: any) => isLocalePost(p.link, locale));
-    const pool = localePosts.length >= 6 ? localePosts : posts;
+    // Only ever show same-language posts. Never fall back to the mixed-language pool.
+    const pool = posts.filter((p: any) => detectPostLocale(p) === locale);
     const related = pool.slice(0, 3).map(mapRelatedPost);
     const more = pool.slice(3, 6).map(mapRelatedPost);
     return { related, more };

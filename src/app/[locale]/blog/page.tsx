@@ -5,6 +5,7 @@ import { generateLocaleStaticParams as generateStaticParams } from '@/lib/i18n/s
 import type { AppLocale } from '@/lib/i18n/config';
 import BlogClient, { type Post } from './BlogClient';
 import { JsonLd } from '@/components/seo/JsonLd';
+import { detectPostLocale } from '@/lib/blog-locale';
 
 const WP = 'https://blog.geotapp.com';
 const HEADERS = { host: 'blog.geotapp.com', 'x-geotapp-proxy': '1', 'x-forwarded-proto': 'https' };
@@ -50,22 +51,12 @@ function normalizeUrl(link: string, slug: string): string {
   return `/blog/${slug}/`;
 }
 
-// Polylang's lang= param doesn't filter via REST API.
-// Detect language from WP permalink: IT → /blog/YEAR/..., others → /blog/{locale}/YEAR/...
-function isLocalePost(link: string, locale: string): boolean {
-  try {
-    const afterBlog = new URL(link).pathname.replace(/^\/blog\//, '');
-    if (locale === 'it') return !/^[a-z]{2}\//.test(afterBlog);
-    return afterBlog.startsWith(`${locale}/`);
-  } catch {
-    return false;
-  }
-}
-
-async function fetchAllPosts(): Promise<{ id: number; slug: string; title: any; excerpt: any; date: string; link: string; featured_media: number; categories: number[]; content?: any }[]> {
+async function fetchAllPosts(): Promise<{ id: number; slug: string; title: any; excerpt: any; date: string; link: string; featured_media: number; categories: number[]; class_list?: string[]; content?: any }[]> {
+  // class_list carries the language-suffixed category used by detectPostLocale.
+  const FIELDS = 'id,slug,title,excerpt,content,date,link,featured_media,categories,class_list';
   // Lancia su fallimento (rete/non-200): distingue "WP irraggiungibile" da "WP ok ma 0 post".
   const first = await wpFetchOrThrow(
-    `${WP}/wp-json/wp/v2/posts/?per_page=100&page=1&_fields=id,slug,title,excerpt,content,date,link,featured_media,categories&status=publish`,
+    `${WP}/wp-json/wp/v2/posts/?per_page=100&page=1&_fields=${FIELDS}&status=publish`,
   );
   const totalPages = parseInt(first.headers.get('x-wp-totalpages') ?? '1', 10);
   const firstData = await first.json();
@@ -73,7 +64,7 @@ async function fetchAllPosts(): Promise<{ id: number; slug: string; title: any; 
   const rest = totalPages > 1
     ? await Promise.all(
         Array.from({ length: totalPages - 1 }, (_, i) =>
-          wpFetch(`${WP}/wp-json/wp/v2/posts/?per_page=100&page=${i + 2}&_fields=id,slug,title,excerpt,content,date,link,featured_media,categories&status=publish`)
+          wpFetch(`${WP}/wp-json/wp/v2/posts/?per_page=100&page=${i + 2}&_fields=${FIELDS}&status=publish`)
             .then((r) => r.ok ? r.json() : [])
             .catch(() => [])
         )
@@ -134,7 +125,7 @@ async function fetchMediaMap(ids: number[]): Promise<Map<number, string>> {
 
 async function buildPostList(all: Awaited<ReturnType<typeof fetchAllPosts>>, locale: string): Promise<Post[]> {
   const catMap = await fetchCategoryMap(locale);
-  const filtered = all.filter((p) => isLocalePost(p.link ?? '', locale));
+  const filtered = all.filter((p) => detectPostLocale(p) === locale);
   if (filtered.length === 0) return [];
   const mediaIds = [...new Set(filtered.map((p) => p.featured_media).filter((id) => id > 0))];
   const mediaMap = await fetchMediaMap(mediaIds);
