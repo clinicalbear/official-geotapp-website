@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import ArticleHero from '@/components/blog/ArticleHero';
 import ArticleContent from '@/components/blog/ArticleContent';
+import ArticleDisclaimer from '@/components/blog/ArticleDisclaimer';
 import ArticleSidebar from '@/components/blog/ArticleSidebar';
 import ArticleFooter from '@/components/blog/ArticleFooter';
 import ReadingProgress from '@/components/blog/ReadingProgress';
@@ -331,6 +332,9 @@ export default async function BlogArticlePage({ params }: Props) {
           </div>
         </div>
       </div>
+
+      {/* Disclaimer YMYL — non è consulenza legale (tutti gli articoli, lingua dell'articolo) */}
+      <ArticleDisclaimer locale={locale} />
 
       {/* Comments */}
       <Comments postId={post.id} locale={locale} comments={comments} />
