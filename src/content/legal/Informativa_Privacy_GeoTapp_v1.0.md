@@ -7,11 +7,9 @@
 ## 1. TITOLARE DEL TRATTAMENTO
 
 **GeoTapp di Michele Angelo Petraroli**  
-Via [Indirizzo completo], Trenzano (BS), Italia  
 P.IVA: IT04183990987  
 Email: info@geotapp.com  
-PEC: [pec@geotapp.pec.it]  
-Telefono: [+39 XXX XXXXXXX]
+PEC: geotapp@pec.it
 
 **Data Protection Officer (DPO):** info@geotapp.com
 
@@ -214,7 +212,6 @@ Web: https://www.garanteprivacy.it
 
 ### 8.2 Contatti Breach
 - **Email:** security@geotapp.com
-- **Telefono emergenze:** [+39 XXX XXXXXXX]
 - **PGP Key:** https://geotapp.com/pgp-key.asc
 
 ---

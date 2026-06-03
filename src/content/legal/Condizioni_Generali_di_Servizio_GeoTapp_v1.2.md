@@ -1,7 +1,7 @@
 # POLITICA DI UTILIZZO GEO TAPP FLOW & TIMETRACKER
 ## Versione 1.3 - Marzo 2026 (Sede IT - Zero Knowledge Encryption)
 **Data ultima modifica:** 10 Marzo 2026  
-**Titolare:** GeoTapp di Michele Angelo Petraroli, Trenzano (BS), Italia - P.IVA IT04183990987  
+**Titolare:** GeoTapp di Michele Angelo Petraroli - P.IVA IT04183990987  
 **Contatto GDPR/DPO/Rep UE:** info@geotapp.com  
 
 ### 1. INTRODUZIONE E ACCETTAZIONE
@@ -216,7 +216,6 @@ Diritto accesso/portabilità su dati crittografati limitato a export encrypted. 
 ### 13. CONTATTI
 
 **GeoTapp di Michele Angelo Petraroli**  
-Via [Indirizzo], Trenzano (BS), Italia  
 P.IVA: IT04183990987  
 
 **Email:** info@geotapp.com  

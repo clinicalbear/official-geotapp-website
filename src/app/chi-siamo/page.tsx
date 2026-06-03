@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { Target, Users, Lock, Heart, Quote } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { getDictionary } from '@/lib/i18n/dictionaries';
@@ -83,6 +84,66 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
+      </section>
+
+      {/* Founder */}
+      <section className="container mx-auto px-6 max-w-4xl mb-24">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12 p-8 md:p-10 rounded-3xl border border-white/10 bg-white/[0.02]"
+        >
+          <div className="shrink-0">
+            <Image
+              src="/michele-petraroli.webp"
+              alt={`${cs.founder.name}, ${cs.founder.role} GeoTapp`}
+              width={160}
+              height={160}
+              className="rounded-2xl border border-primary/30 object-cover shadow-lg shadow-primary/10"
+            />
+          </div>
+          <div className="flex-1">
+            <span className="text-primary text-sm font-bold uppercase tracking-widest mb-2 inline-block">
+              {cs.founder.section_label}
+            </span>
+            <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-1">
+              {cs.founder.name}
+            </h2>
+            <p className="text-primary/90 font-medium mb-5">{cs.founder.role}</p>
+            <p className="text-text-secondary leading-relaxed font-light mb-6">
+              {cs.founder.bio}
+            </p>
+            <div className="mb-6">
+              <div className="text-xs uppercase tracking-widest text-text-secondary mb-3">
+                {cs.founder.expertise_label}
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {cs.founder.expertise.map((e: string) => (
+                  <span key={e} className="px-3 py-1.5 rounded-full text-sm border border-white/10 bg-white/[0.03] text-text-secondary">
+                    {e}
+                  </span>
+                ))}
+              </div>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <a
+                href="https://www.linkedin.com/in/michele-petraroli-532545397/"
+                target="_blank"
+                rel="noopener noreferrer me"
+                className="px-5 py-2.5 rounded-xl bg-[#0A66C2] text-white font-semibold text-sm hover:bg-[#0a5cb0] transition-colors"
+              >
+                {cs.founder.cta_linkedin}
+              </a>
+              <a
+                href="/contact"
+                className="px-5 py-2.5 rounded-xl border border-primary/40 text-foreground font-semibold text-sm hover:bg-primary/10 transition-colors"
+              >
+                {cs.founder.cta_email}
+              </a>
+            </div>
+          </div>
+        </motion.div>
       </section>
 
       {/* Mission Quote */}

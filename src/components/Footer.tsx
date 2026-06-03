@@ -169,9 +169,10 @@ export default function Footer() {
               </a>
             </div>
 
-            {/* Copyright */}
+            {/* Copyright + identità aziendale (online-only: niente indirizzo/telefono) */}
             <div className="text-text-muted text-xs text-center md:text-right">
               <span>&copy; 2026 GeoTapp. {dict.rights}</span>
+              <span className="block mt-1">GeoTapp di Michele Angelo Petraroli · P.IVA IT04183990987</span>
             </div>
           </div>
         </div>

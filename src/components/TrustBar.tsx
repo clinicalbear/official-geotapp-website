@@ -1,74 +1,80 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
-import { motion, useInView } from 'framer-motion';
+import { useRef } from 'react';
+import { motion } from 'framer-motion';
 import { ShieldCheck, MapPin, FileCheck } from 'lucide-react';
 
+// Claim qualitativi VERIFICABILI (no metriche inventate): i tre differenziatori
+// reali del prodotto — sigillo anti-manomissione, GPS reale, verifica lato cliente.
 const COPY: Record<string, {
   headline: string;
-  stat1: string; label1: string;
-  stat2: string; label2: string;
-  stat3: string; label3: string;
+  claims: { title: string; sub: string }[];
   sectors: string;
 }> = {
-  it: { headline: 'Aziende con operatori sul campo si fidano di GeoTapp', stat1: '500+', label1: 'Aziende attive', stat2: '50.000+', label2: 'Interventi verificati', stat3: '6', label3: 'Settori coperti', sectors: 'Pulizie · Edilizia · Sicurezza · Installatori · Manutenzione · Impiantistica' },
-  en: { headline: 'Field service companies trust GeoTapp', stat1: '500+', label1: 'Active companies', stat2: '50,000+', label2: 'Verified jobs', stat3: '6', label3: 'Sectors covered', sectors: 'Cleaning · Construction · Security · Installers · Maintenance · HVAC' },
-  de: { headline: 'Außendienstunternehmen vertrauen auf GeoTapp', stat1: '500+', label1: 'Aktive Unternehmen', stat2: '50.000+', label2: 'Verifizierte Einsätze', stat3: '6', label3: 'Branchen abgedeckt', sectors: 'Reinigung · Bau · Sicherheit · Installateure · Wartung · Haustechnik' },
-  fr: { headline: 'Les entreprises de terrain font confiance à GeoTapp', stat1: '500+', label1: 'Entreprises actives', stat2: '50 000+', label2: 'Interventions vérifiées', stat3: '6', label3: 'Secteurs couverts', sectors: 'Nettoyage · BTP · Sécurité · Installateurs · Maintenance · CVC' },
-  es: { headline: 'Empresas de campo confían en GeoTapp', stat1: '500+', label1: 'Empresas activas', stat2: '50.000+', label2: 'Intervenciones verificadas', stat3: '6', label3: 'Sectores cubiertos', sectors: 'Limpieza · Construcción · Seguridad · Instaladores · Mantenimiento · Climatización' },
-  pt: { headline: 'Empresas de campo confiam no GeoTapp', stat1: '500+', label1: 'Empresas ativas', stat2: '50.000+', label2: 'Intervenções verificadas', stat3: '6', label3: 'Setores cobertos', sectors: 'Limpeza · Construção · Segurança · Instaladores · Manutenção · AVAC' },
-  nl: { headline: 'Buitendienstbedrijven vertrouwen op GeoTapp', stat1: '500+', label1: 'Actieve bedrijven', stat2: '50.000+', label2: 'Geverifieerde opdrachten', stat3: '6', label3: 'Sectoren gedekt', sectors: 'Schoonmaak · Bouw · Beveiliging · Installateurs · Onderhoud · HVAC' },
-  ru: { headline: 'Компании с выездными сотрудниками доверяют GeoTapp', stat1: '500+', label1: 'Активных компаний', stat2: '50 000+', label2: 'Верифицированных выездов', stat3: '6', label3: 'Покрытых отраслей', sectors: 'Уборка · Строительство · Охрана · Монтаж · Обслуживание · ОВК' },
-  da: { headline: 'Feltservicevirksomheder stoler på GeoTapp', stat1: '500+', label1: 'Aktive virksomheder', stat2: '50.000+', label2: 'Verificerede jobs', stat3: '6', label3: 'Sektorer dækket', sectors: 'Rengøring · Byggeri · Sikkerhed · Installatører · Vedligeholdelse · VVS' },
-  sv: { headline: 'Fältserviceföretag litar på GeoTapp', stat1: '500+', label1: 'Aktiva företag', stat2: '50 000+', label2: 'Verifierade jobb', stat3: '6', label3: 'Sektorer täckta', sectors: 'Städning · Bygg · Säkerhet · Installatörer · Underhåll · VVS' },
-  nb: { headline: 'Feltservicebedrifter stoler på GeoTapp', stat1: '500+', label1: 'Aktive bedrifter', stat2: '50 000+', label2: 'Verifiserte oppdrag', stat3: '6', label3: 'Sektorer dekket', sectors: 'Rengjøring · Bygg · Sikkerhet · Installatører · Vedlikehold · VVS' },
+  it: { headline: 'La prova del lavoro sul campo, verificabile da chiunque', claims: [
+    { title: 'Report a prova di manomissione', sub: 'Sigillo crittografico su ogni intervento' },
+    { title: 'Timbratura GPS reale', sub: 'Posizione e ora registrate sul posto' },
+    { title: 'Verifica indipendente', sub: 'Il cliente controlla, senza account' },
+  ], sectors: 'Pulizie · Edilizia · Sicurezza · Installatori · Manutenzione · Impiantistica' },
+  en: { headline: 'Proof of field work, verifiable by anyone', claims: [
+    { title: 'Tamper-proof reports', sub: 'Cryptographic seal on every job' },
+    { title: 'Real GPS clock-in', sub: 'Location and time logged on site' },
+    { title: 'Independent verification', sub: 'The client checks, no account needed' },
+  ], sectors: 'Cleaning · Construction · Security · Installers · Maintenance · HVAC' },
+  de: { headline: 'Nachweis der Außendienstarbeit, von jedem überprüfbar', claims: [
+    { title: 'Manipulationssichere Berichte', sub: 'Kryptografisches Siegel auf jedem Einsatz' },
+    { title: 'Echte GPS-Erfassung', sub: 'Ort und Zeit vor Ort erfasst' },
+    { title: 'Unabhängige Überprüfung', sub: 'Der Kunde prüft, ganz ohne Konto' },
+  ], sectors: 'Reinigung · Bau · Sicherheit · Installateure · Wartung · Haustechnik' },
+  fr: { headline: 'La preuve du travail sur le terrain, vérifiable par tous', claims: [
+    { title: 'Rapports infalsifiables', sub: 'Sceau cryptographique sur chaque intervention' },
+    { title: 'Pointage GPS réel', sub: 'Lieu et heure enregistrés sur place' },
+    { title: 'Vérification indépendante', sub: 'Le client vérifie, sans compte' },
+  ], sectors: 'Nettoyage · BTP · Sécurité · Installateurs · Maintenance · CVC' },
+  es: { headline: 'La prueba del trabajo de campo, verificable por cualquiera', claims: [
+    { title: 'Informes a prueba de manipulaciones', sub: 'Sello criptográfico en cada intervención' },
+    { title: 'Fichaje GPS real', sub: 'Ubicación y hora registradas in situ' },
+    { title: 'Verificación independiente', sub: 'El cliente comprueba, sin cuenta' },
+  ], sectors: 'Limpieza · Construcción · Seguridad · Instaladores · Mantenimiento · Climatización' },
+  pt: { headline: 'A prova do trabalho no terreno, verificável por qualquer um', claims: [
+    { title: 'Relatórios à prova de adulteração', sub: 'Selo criptográfico em cada intervenção' },
+    { title: 'Registo GPS real', sub: 'Local e hora registados no local' },
+    { title: 'Verificação independente', sub: 'O cliente verifica, sem conta' },
+  ], sectors: 'Limpeza · Construção · Segurança · Instaladores · Manutenção · AVAC' },
+  nl: { headline: 'Bewijs van werk in het veld, door iedereen te verifiëren', claims: [
+    { title: 'Fraudebestendige rapporten', sub: 'Cryptografisch zegel op elke opdracht' },
+    { title: 'Echte GPS-registratie', sub: 'Locatie en tijd ter plaatse vastgelegd' },
+    { title: 'Onafhankelijke verificatie', sub: 'De klant controleert, zonder account' },
+  ], sectors: 'Schoonmaak · Bouw · Beveiliging · Installateurs · Onderhoud · HVAC' },
+  ru: { headline: 'Доказательство полевой работы, которое может проверить каждый', claims: [
+    { title: 'Отчёты, защищённые от подделки', sub: 'Криптографическая печать на каждом выезде' },
+    { title: 'Реальная GPS-отметка', sub: 'Место и время фиксируются на объекте' },
+    { title: 'Независимая проверка', sub: 'Клиент проверяет без аккаунта' },
+  ], sectors: 'Уборка · Строительство · Охрана · Монтаж · Обслуживание · ОВК' },
+  da: { headline: 'Bevis for feltarbejde, som alle kan verificere', claims: [
+    { title: 'Manipulationssikre rapporter', sub: 'Kryptografisk segl på hvert job' },
+    { title: 'Ægte GPS-stempling', sub: 'Sted og tid registreret på stedet' },
+    { title: 'Uafhængig verificering', sub: 'Kunden tjekker, uden konto' },
+  ], sectors: 'Rengøring · Byggeri · Sikkerhed · Installatører · Vedligeholdelse · VVS' },
+  sv: { headline: 'Bevis på fältarbete, verifierbart av vem som helst', claims: [
+    { title: 'Manipuleringssäkra rapporter', sub: 'Kryptografiskt sigill på varje jobb' },
+    { title: 'Äkta GPS-stämpling', sub: 'Plats och tid registreras på plats' },
+    { title: 'Oberoende verifiering', sub: 'Kunden kontrollerar, utan konto' },
+  ], sectors: 'Städning · Bygg · Säkerhet · Installatörer · Underhåll · VVS' },
+  nb: { headline: 'Bevis på feltarbeid, verifiserbart av hvem som helst', claims: [
+    { title: 'Manipuleringssikre rapporter', sub: 'Kryptografisk segl på hvert oppdrag' },
+    { title: 'Ekte GPS-stempling', sub: 'Sted og tid registrert på stedet' },
+    { title: 'Uavhengig verifisering', sub: 'Kunden sjekker, uten konto' },
+  ], sectors: 'Rengjøring · Bygg · Sikkerhet · Installatører · Vedlikehold · VVS' },
 };
 
-const STAT_TARGETS = [500, 50000, 6];
-const STAT_SUFFIXES = ['+', '+', ''];
-
-function AnimatedCounter({ target, suffix, inView }: { target: number; suffix: string; inView: boolean }) {
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    if (!inView) return;
-    const duration = 2200;
-    const steps = 70;
-    const increment = target / steps;
-    let current = 0;
-    const timer = setInterval(() => {
-      current += increment;
-      if (current >= target) {
-        setCount(target);
-        clearInterval(timer);
-      } else {
-        setCount(Math.floor(current));
-      }
-    }, duration / steps);
-    return () => clearInterval(timer);
-  }, [inView, target]);
-
-  const formatted = target >= 1000
-    ? count.toLocaleString('de-DE')
-    : count.toString();
-
-  return <>{formatted}{suffix}</>;
-}
-
-const STATS_ICONS = [ShieldCheck, MapPin, FileCheck];
+const CLAIM_ICONS = [ShieldCheck, FileCheck, MapPin];
 const ICON_COLORS = ['#8FC436', '#3BAEE0', '#F97316'];
 const ICON_BG = ['rgba(143,196,54,0.12)', 'rgba(59,174,224,0.12)', 'rgba(249,115,22,0.12)'];
 
 export default function TrustBar({ locale }: { locale: string }) {
   const c = COPY[locale] ?? COPY.en;
   const ref = useRef<HTMLElement>(null);
-  const inView = useInView(ref, { once: true, margin: '-80px' });
-
-  const stats = [
-    { label: c.label1, target: STAT_TARGETS[0], suffix: STAT_SUFFIXES[0] },
-    { label: c.label2, target: STAT_TARGETS[1], suffix: STAT_SUFFIXES[1] },
-    { label: c.label3, target: STAT_TARGETS[2], suffix: STAT_SUFFIXES[2] },
-  ];
 
   return (
     <motion.section
@@ -114,20 +120,20 @@ export default function TrustBar({ locale }: { locale: string }) {
         <div style={{
           display: 'flex',
           justifyContent: 'center',
-          gap: '80px',
+          gap: '64px',
           flexWrap: 'wrap',
           marginBottom: '56px',
         }}>
-          {stats.map(({ label, target, suffix }, i) => {
-            const Icon = STATS_ICONS[i];
+          {c.claims.map(({ title, sub }, i) => {
+            const Icon = CLAIM_ICONS[i];
             return (
               <motion.div
-                key={label}
+                key={title}
                 initial={{ opacity: 0, scale: 0.8, y: 20 }}
                 whileInView={{ opacity: 1, scale: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.18, type: 'spring', stiffness: 100 }}
-                style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '14px', minWidth: '140px' }}
+                style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '14px', maxWidth: '260px' }}
               >
                 <div style={{
                   width: '72px',
@@ -143,21 +149,22 @@ export default function TrustBar({ locale }: { locale: string }) {
                 </div>
                 <span style={{
                   fontFamily: 'var(--font-poppins, Poppins, sans-serif)',
-                  fontSize: 'clamp(2.5rem, 5vw, 3.5rem)',
-                  fontWeight: 800,
+                  fontSize: 'clamp(1.15rem, 2.2vw, 1.4rem)',
+                  fontWeight: 700,
                   color: '#0f172a',
-                  lineHeight: 1,
-                  letterSpacing: '-0.03em',
+                  lineHeight: 1.2,
+                  letterSpacing: '-0.01em',
                 }}>
-                  <AnimatedCounter target={target} suffix={suffix} inView={inView} />
+                  {title}
                 </span>
                 <span style={{
                   fontFamily: 'var(--font-inter, Inter, sans-serif)',
                   fontSize: '0.95rem',
                   color: '#64748b',
                   fontWeight: 500,
+                  lineHeight: 1.4,
                 }}>
-                  {label}
+                  {sub}
                 </span>
               </motion.div>
             );

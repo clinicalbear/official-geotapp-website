@@ -16,7 +16,6 @@ import {
   getLocaleFromPathname,
 } from '@/lib/i18n/locale-routing';
 import { submitContact } from '@/lib/api';
-import LocationMap from '@/components/LocationMap';
 
 export default function ContactPage() {
   const pathname = usePathname();
@@ -298,19 +297,8 @@ export default function ContactPage() {
           </motion.div>
         </div>
 
-        {/* MAPPA */}
-        <motion.div
-          className="mt-20"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6 }}
-        >
-          <div className="mb-6 flex items-center gap-3">
-            <MapPin className="text-primary" size={22} />
-            <h2 className="text-xl font-bold text-slate-900">{dict.map_title}</h2>
-          </div>
-          <LocationMap apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY ?? ''} />
-        </motion.div>
+        {/* Mappa rimossa (2026-06-03): GeoTapp opera 100% online, nessuna sede
+            aperta al pubblico — niente indirizzo/geo da mostrare. */}
       </div>
     </div>
   );

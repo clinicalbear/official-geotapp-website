@@ -102,7 +102,7 @@ export function buildComparisonArticle(args: {
       name: 'GeoTapp',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://geotapp.com/FaviconGeoTapp.png',
+        url: 'https://geotapp.com/LogoGeoTapp.webp',
       },
     },
     image: image ?? 'https://geotapp.com/LogoGeoTapp.webp',

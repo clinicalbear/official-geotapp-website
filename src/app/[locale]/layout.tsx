@@ -260,11 +260,10 @@ export default async function LocaleLayout({ children, params }: Props) {
       '@type': 'Organization',
       name: 'GeoTapp',
       url: BASE_URL,
-      telephone: '+393520140978',
       email: 'info@geotapp.com',
       logo: {
         '@type': 'ImageObject',
-        url: `${BASE_URL}/FaviconGeoTapp.png`,
+        url: `${BASE_URL}/LogoGeoTapp.webp`,
       },
     },
   };
@@ -310,13 +309,10 @@ export default async function LocaleLayout({ children, params }: Props) {
               url: 'https://geotapp.com',
               description:
                 'GeoTapp is a field workforce management platform: GPS-verified time tracking, geo-timestamped proof of work and team coordination for field-service businesses in construction, cleaning, security and maintenance.',
-              telephone: '+393520140978',
               email: 'info@geotapp.com',
               logo: {
                 '@type': 'ImageObject',
-                url: 'https://geotapp.com/FaviconGeoTapp.png',
-                width: 512,
-                height: 512,
+                url: 'https://geotapp.com/LogoGeoTapp.webp',
               },
               sameAs: [
                 'https://www.linkedin.com/company/110850300/',
@@ -331,14 +327,10 @@ export default async function LocaleLayout({ children, params }: Props) {
               ],
               address: {
                 '@type': 'PostalAddress',
-                streetAddress: 'Via Guglielmo Marconi 4',
-                addressLocality: 'Trenzano',
-                postalCode: '25030',
                 addressCountry: 'IT',
               },
               contactPoint: {
                 '@type': 'ContactPoint',
-                telephone: '+393520140978',
                 email: 'info@geotapp.com',
                 contactType: 'customer support',
                 availableLanguage: [
@@ -406,11 +398,10 @@ export default async function LocaleLayout({ children, params }: Props) {
                 '@id': 'https://geotapp.com/#organization',
                 name: 'GeoTapp',
                 url: 'https://geotapp.com',
-                telephone: '+393520140978',
                 email: 'info@geotapp.com',
                 logo: {
                   '@type': 'ImageObject',
-                  url: 'https://geotapp.com/FaviconGeoTapp.png',
+                  url: 'https://geotapp.com/LogoGeoTapp.webp',
                 },
               },
             }),
@@ -424,48 +415,12 @@ export default async function LocaleLayout({ children, params }: Props) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localeSchema) }}
         />
-        {/* ── LocalBusiness schema ───────────────────────────────────────────
-            Signals physical presence to Google Maps and local search. */}
-        <script
-          id="schema-local-business"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'ProfessionalService',
-              '@id': 'https://geotapp.com/#localbusiness',
-              name: 'GeoTapp',
-              url: 'https://geotapp.com',
-              telephone: '+393520140978',
-              email: 'info@geotapp.com',
-              priceRange: '€€',
-              address: {
-                '@type': 'PostalAddress',
-                streetAddress: 'Via Guglielmo Marconi 4',
-                addressLocality: 'Trenzano',
-                postalCode: '25030',
-                addressCountry: 'IT',
-              },
-              geo: {
-                '@type': 'GeoCoordinates',
-                latitude: 45.4771587,
-                longitude: 10.0041003,
-              },
-              openingHoursSpecification: {
-                '@type': 'OpeningHoursSpecification',
-                dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-                opens: '09:00',
-                closes: '18:00',
-              },
-              sameAs: [
-                'https://www.linkedin.com/company/110850300/',
-                'https://www.facebook.com/profile.php?id=61583303732388',
-                'https://www.instagram.com/geotapp_official/',
-                'https://t.me/geotapp',
-              ],
-            }),
-          }}
-        />
+        {/* LocalBusiness/ProfessionalService schema rimosso (2026-06-03):
+            GeoTapp è un SaaS solo-online, senza sede aperta al pubblico.
+            Dichiarare indirizzo fisico, geo-coordinate e orari di apertura
+            sarebbe inaccurato (rischio rich-result errati / aspettativa local-pack)
+            ed esporrebbe un indirizzo che non vogliamo pubblicare. L'entità è già
+            coperta da Organization + SoftwareApplication. */}
         {/* ── WebSite schema ────────────────────────────────────────────────
             Enables Sitelinks Search Box in SERP. target points to the blog
             WP search endpoint which is the only working search on the site. */}

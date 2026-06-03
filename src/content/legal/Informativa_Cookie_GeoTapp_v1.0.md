@@ -145,7 +145,6 @@ Per esercitare i diritti, contattare: **privacy@geotapp.com**
 ## 9. TITOLARE DEL TRATTAMENTO
 
 **GeoTapp di Michele Angelo Petraroli**
-Via [Indirizzo], Trenzano (BS), Italia
 P.IVA: IT04183990987
 Email: privacy@geotapp.com
 

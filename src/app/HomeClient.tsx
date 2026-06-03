@@ -860,6 +860,40 @@ export default function Home() {
         </div>
       </section>
 
+      {/* FOUNDER STRIP — segnale Experience (chi c'è dietro il prodotto) */}
+      {(() => {
+        const f = dict.chi_siamo.founder;
+        const storyLabel = ({ it: 'La nostra storia', en: 'Our story', de: 'Unsere Geschichte', fr: 'Notre histoire', es: 'Nuestra historia', pt: 'A nossa história', nl: 'Ons verhaal', ru: 'Наша история', da: 'Vores historie', sv: 'Vår historia', nb: 'Vår historie' } as Record<string, string>)[currentLocale] ?? 'Our story';
+        return (
+          <section className="py-20 px-6 bg-slate-50 border-t border-slate-100">
+            <div className="container mx-auto max-w-3xl">
+              <div className="flex flex-col sm:flex-row items-center gap-6 sm:gap-8 text-center sm:text-left">
+                <img
+                  src="/michele-petraroli.webp"
+                  alt={`${f.name}, ${f.role} GeoTapp`}
+                  width={104}
+                  height={104}
+                  loading="lazy"
+                  decoding="async"
+                  className="rounded-2xl border border-slate-200 object-cover shadow-sm shrink-0"
+                />
+                <div>
+                  <p className="text-xs uppercase tracking-widest text-primary font-bold mb-2">
+                    {f.section_label}
+                  </p>
+                  <p className="text-lg text-slate-700 leading-relaxed mb-3">
+                    <span className="font-bold text-slate-900">{f.name}</span>, {f.role}
+                  </p>
+                  <a href={getLink('/chi-siamo')} className="text-primary font-semibold hover:underline">
+                    {storyLabel} &rarr;
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+        );
+      })()}
+
       {/* CTA FOOTER */}
       <section className="py-32 bg-slate-900 text-white text-center px-6">
         <div className="container mx-auto max-w-4xl">
