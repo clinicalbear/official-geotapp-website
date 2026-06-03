@@ -339,14 +339,14 @@ export default function Home() {
             <Link
               href={getLink('/trial')}
               onClick={() => trackEvent('trial_click', { cta_source: 'homepage_hero', cta_locale: currentLocale })}
-              className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-slate-900 text-white font-bold rounded-2xl text-lg transition-all shadow-lg shadow-slate-900/15 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-slate-900/20"
+              className="btn-geo group"
             >
               {dict.landing.hero_cta_primary}
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
               href={getLink('/settori')}
-              className="inline-flex items-center justify-center px-8 py-4 text-slate-700 border-2 border-slate-200 font-bold rounded-2xl text-lg hover:border-slate-400 hover:bg-white/80 backdrop-blur-sm transition-all"
+              className="btn-geo-ghost backdrop-blur-sm"
             >
               {dict.landing.hero_cta_secondary}
             </Link>
@@ -380,6 +380,7 @@ export default function Home() {
       <section className="py-24 bg-slate-50 border-b border-slate-100">
         <div className="container mx-auto px-6 max-w-6xl">
           <div className="text-center max-w-3xl mx-auto mb-16">
+            <div className="flex justify-center mb-6"><span className="geo-accent-line" /></div>
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
               {dict.landing.problem_title}
             </h2>
@@ -411,6 +412,7 @@ export default function Home() {
       <section className="py-24 bg-white border-b border-slate-100">
         <div className="container mx-auto px-6 max-w-6xl">
           <div className="text-center max-w-3xl mx-auto mb-16">
+            <div className="flex justify-center mb-6"><span className="geo-accent-line" /></div>
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">
               {dict.home_sections.settori.title}
             </h2>

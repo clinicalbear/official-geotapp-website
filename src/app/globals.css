@@ -769,3 +769,96 @@ a:hover {
 .cat-card {
   will-change: transform;
 }
+
+/* ════════════════════════════════════════════════════════════════════
+   GEOTAPP BRAND SYSTEM v1 (2026-06-03)
+   Identità: verde lime #8FC436 (firma) + blu #3BAEE0 (logo) come gradiente
+   brand. Bottone primario di proprietà, accenti gradiente, ombre verdi.
+   ════════════════════════════════════════════════════════════════════ */
+
+/* Gradiente brand del logo (verde -> blu) */
+:root {
+  --geo-green: #8FC436;
+  --geo-green-deep: #6fa028;
+  --geo-blue: #3BAEE0;
+  --geo-grad: linear-gradient(135deg, #8FC436 0%, #5cc08a 50%, #3BAEE0 115%);
+  --geo-ink: #0e2a05; /* testo near-black verde per contrasto su lime */
+}
+
+/* Bottone primario brand: lime pieno, testo scuro (accessibile + moderno),
+   glow verde. Sostituisce il generico dark-slate. */
+.btn-geo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  font-weight: 800;
+  font-size: 1.0625rem;
+  line-height: 1;
+  color: var(--geo-ink);
+  background: var(--geo-green);
+  box-shadow: 0 8px 22px rgba(143, 196, 54, 0.38), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.22s ease, background 0.22s ease;
+}
+.btn-geo:hover {
+  background: #9ed13f;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(143, 196, 54, 0.48), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+.btn-geo:active { transform: translateY(0); }
+
+/* Variante "ghost" brand per CTA secondarie */
+.btn-geo-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  font-weight: 700;
+  font-size: 1.0625rem;
+  color: #334155;
+  background: #fff;
+  border: 1.5px solid #e2e8f0;
+  transition: all 0.2s ease;
+}
+.btn-geo-ghost:hover { border-color: var(--geo-green); color: var(--geo-green-deep); box-shadow: 0 6px 18px rgba(143, 196, 54, 0.15); }
+
+/* Testo con gradiente brand (per parole chiave nei titoli) */
+.text-geo-gradient {
+  background: var(--geo-grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Accento brand sopra/sotto i titoli di sezione: linea gradiente verde->blu */
+.geo-accent-line {
+  display: inline-block;
+  width: 56px;
+  height: 4px;
+  border-radius: 9999px;
+  background: var(--geo-grad);
+}
+
+/* Eyebrow di sezione brandizzato */
+.geo-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--geo-green-deep);
+}
+.geo-eyebrow::before {
+  content: '';
+  width: 18px;
+  height: 2px;
+  border-radius: 9999px;
+  background: var(--geo-grad);
+}
