@@ -285,7 +285,7 @@ export default function ContactPage() {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full py-4 bg-slate-900 text-white font-bold text-lg rounded-xl hover:bg-primary hover:text-slate-900 transition-all shadow-lg hover:shadow-primary/30 flex items-center justify-center gap-2 transform hover:-translate-y-1 disabled:opacity-60 disabled:cursor-not-allowed disabled:transform-none"
+                className="btn-modern w-full disabled:opacity-60 disabled:cursor-not-allowed"
               >
                 <Send size={20} /> {loading ? dict.sending : dict.form.send}
               </button>

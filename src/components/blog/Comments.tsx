@@ -105,7 +105,7 @@ const L: Record<
 
 function formatDate(iso: string, locale: string): string {
   try {
-    return new Date(iso).toLocaleDateString(locale, {
+    return new Date(iso).toLocaleDateString(locale, { timeZone: 'UTC',
       day: 'numeric',
       month: 'long',
       year: 'numeric',
@@ -272,7 +272,7 @@ export default function Comments({ postId, locale, comments }: CommentsProps) {
               <button
                 type="submit"
                 disabled={status === 'loading'}
-                className="px-5 py-2.5 text-sm font-semibold text-white bg-[#8FC436] rounded-xl hover:bg-[#7db02e] transition-colors disabled:opacity-70 disabled:cursor-not-allowed"
+                className="btn-modern-sm disabled:opacity-70 disabled:cursor-not-allowed"
               >
                 {status === 'loading' ? t.sending : t.btn}
               </button>

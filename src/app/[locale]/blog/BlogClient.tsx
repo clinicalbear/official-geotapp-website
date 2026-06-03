@@ -193,7 +193,8 @@ export default function BlogClient({ locale, posts }: { locale: AppLocale; posts
     <div className="min-h-screen pt-40 pb-20 px-6 relative overflow-hidden">
       <MapBackground />
       <div className="relative z-10">
-      <section className="container mx-auto max-w-6xl text-center mb-16">
+      <section className="container-geo text-center mb-16">
+        <div className="flex justify-center mb-6"><span className="geo-accent-line" /></div>
         <h1 className="text-5xl md:text-6xl font-display font-bold text-text-primary mb-6">
           {b.hero_title}
         </h1>
@@ -311,7 +312,7 @@ export default function BlogClient({ locale, posts }: { locale: AppLocale; posts
           <Link
             href={`/${locale}/trial/`}
             onClick={() => trackEvent('trial_click', { cta_source: 'blog_bottom_gradient' })}
-            className="shrink-0 inline-block px-8 py-4 bg-primary text-white font-bold rounded-xl hover:opacity-90 transition-opacity text-lg"
+            className="btn-modern shrink-0"
           >
             {b.cta_btn}
           </Link>

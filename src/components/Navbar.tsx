@@ -264,7 +264,7 @@ export default function Navbar() {
               if (isTrialPage) return;
               trackEvent('trial_click', { cta_source: 'navbar', cta_locale: currentLocale });
             }}
-            className="px-5 py-2.5 text-sm font-bold bg-slate-900 text-white rounded-lg hover:bg-primary hover:text-slate-900 transition-all duration-300 shadow-lg shadow-slate-900/20"
+            className="btn-modern-sm"
           >
             {ctaText}
           </Link>

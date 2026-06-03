@@ -322,8 +322,8 @@ export default async function BlogArticlePage({ params }: Props) {
             locale={locale}
             newsletter={
               ARTICLE_LEAD_MAGNETS[articleSlug]
-                ? <LeadMagnetInline magnet={ARTICLE_LEAD_MAGNETS[articleSlug]} locale={locale} />
-                : <NewsletterInline locale={locale} />
+                ? <LeadMagnetInline key="lead-magnet" magnet={ARTICLE_LEAD_MAGNETS[articleSlug]} locale={locale} />
+                : <NewsletterInline key="newsletter" locale={locale} />
             }
           />
           <div className="hidden lg:block w-72 shrink-0 pt-16">

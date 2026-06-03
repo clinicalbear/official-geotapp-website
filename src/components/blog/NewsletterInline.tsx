@@ -61,7 +61,7 @@ export default function NewsletterInline({ locale }: NewsletterInlineProps) {
             <button
               type="submit"
               disabled={status === 'loading'}
-              className="shrink-0 px-5 py-2.5 text-sm font-semibold text-white bg-[#8FC436] rounded-xl hover:bg-[#7db02e] transition-colors disabled:opacity-70 disabled:cursor-not-allowed"
+              className="btn-modern-sm shrink-0 disabled:opacity-70 disabled:cursor-not-allowed"
             >
               {status === 'loading' ? '...' : labels.btn}
             </button>

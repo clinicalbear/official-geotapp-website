@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
 import { ArrowRight, CheckCircle2, ShieldCheck, X, Camera, MapPin, Clock } from 'lucide-react';
+import GeoBadge from '@/components/GeoBadge';
 import { localizePath } from '@/lib/i18n/locale-routing';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import type { AppLocale } from '@/lib/i18n/config';
@@ -146,9 +147,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
         <div className="container relative z-10 mx-auto max-w-6xl">
           <div className="grid items-center gap-12 md:grid-cols-2">
             <div>
-              <div className={`mb-6 inline-block rounded-full px-4 py-1.5 text-sm font-bold tracking-wide ${colors.badge}`}>
-                {content.hero.badge}
-              </div>
+              <GeoBadge className="mb-6">{content.hero.badge}</GeoBadge>
               <h1 className="mb-6 text-3xl font-bold leading-[1.1] text-slate-900 sm:text-4xl md:text-6xl">
                 {content.hero.h1_line1}
                 <span className={`block ${colors.h1}`}>{content.hero.h1_line2}</span>
@@ -160,7 +159,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
                 <Link
                   href={trialLink}
                   onClick={() => trackEvent('trial_click', { cta_source: `settore_${settore}_hero`, cta_locale: locale })}
-                  className={`inline-flex items-center gap-2 rounded-xl px-8 py-4 font-bold text-white shadow-lg transition-colors ${colors.btn}`}
+                  className="btn-modern"
                 >
                   {content.hero.cta_primary} <ArrowRight size={18} />
                 </Link>
@@ -205,7 +204,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
 
       {/* ── PROBLEMA ── */}
       <section className="px-6 py-24 bg-white">
-        <div className="container mx-auto max-w-5xl">
+        <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center md:text-4xl">
             {content.pain.title}
           </h2>
@@ -229,7 +228,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
       {/* ── PRIMA / DOPO ── */}
       {content.prima_dopo && (
         <section className="px-6 py-24 bg-slate-900 text-white">
-          <div className="container mx-auto max-w-5xl">
+          <div className="container mx-auto max-w-6xl">
             <h2 className="text-3xl font-bold text-center mb-16 md:text-4xl">
               {content.prima_dopo.title}
             </h2>
@@ -276,7 +275,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
       {/* ── SCENARIO REALE ── */}
       {content.scenario && (
         <section className="px-6 py-20 bg-white">
-          <div className="container mx-auto max-w-3xl">
+          <div className="container mx-auto max-w-4xl">
             <p className={`text-sm font-bold uppercase tracking-widest ${colors.accent} mb-4 text-center`}>
               {content.scenario.title}
             </p>
@@ -360,7 +359,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
 
       {/* ── ROI CALCULATOR CTA ── */}
       <section className="px-6 py-20 bg-slate-50">
-        <div className="container mx-auto max-w-3xl text-center">
+        <div className="container mx-auto max-w-4xl text-center">
           <p className={`text-sm font-bold uppercase tracking-widest ${colors.accent} mb-3`}>
             {sl.roi_badge ?? 'Calculate your ROI'}
           </p>
@@ -372,7 +371,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
           </p>
           <Link
             href={`/${locale}/roi-calculator/`}
-            className={`inline-flex items-center gap-2 rounded-xl px-8 py-4 font-bold text-white shadow-lg transition-colors ${colors.btn}`}
+            className="btn-modern"
           >
             {sl.roi_cta ?? 'Calculate my ROI'} <ArrowRight size={18} />
           </Link>
@@ -382,7 +381,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
       {/* ── CTA MID-PAGE ── */}
       {content.cta_mid && (
         <section className={`px-6 py-16 ${colors.light}`}>
-          <div className="container mx-auto max-w-3xl text-center">
+          <div className="container mx-auto max-w-4xl text-center">
             <h2 className="text-2xl font-bold text-slate-900 mb-4 md:text-3xl">
               {content.cta_mid.title}
             </h2>
@@ -391,7 +390,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
             </p>
             <Link
               href={trialLink}
-              className={`inline-flex items-center gap-2 rounded-xl px-8 py-4 font-bold text-white shadow-lg transition-colors ${colors.btn}`}
+              className="btn-modern"
               onClick={() => trackEvent('trial_click', { cta_source: `settore_${settore}`, cta_locale: locale })}
             >
               {content.cta_mid.cta} <ArrowRight size={18} />
@@ -402,7 +401,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
 
       {/* ── COME FUNZIONA ── */}
       <section className="px-6 py-24 bg-white">
-        <div className="container mx-auto max-w-4xl text-center">
+        <div className="container mx-auto max-w-6xl text-center">
           <h2 className="text-3xl font-bold text-slate-900 mb-4 md:text-4xl">
             {content.workflow.title}
           </h2>
@@ -442,7 +441,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
       {/* ── COSA CAMBIA DAVVERO ── */}
       {content.cosa_cambia && (
         <section className="px-6 py-24 bg-slate-900 text-white">
-          <div className="container mx-auto max-w-5xl">
+          <div className="container mx-auto max-w-6xl">
             <h2 className="text-3xl font-bold text-center mb-16 md:text-4xl">
               {content.cosa_cambia.title}
             </h2>
@@ -461,7 +460,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
 
       {/* ── TESTIMONIAL ── */}
       <section className="px-6 py-20 bg-slate-900">
-        <div className="container mx-auto max-w-3xl text-center">
+        <div className="container mx-auto max-w-4xl text-center">
           <blockquote className="text-2xl font-medium text-white italic mb-8 leading-relaxed">
             &ldquo;{content.testimonial.quote}&rdquo;
           </blockquote>
@@ -473,7 +472,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
       {/* ── PROVA VISIVA ── */}
       {content.prova_visiva && (
         <section className="px-6 py-24 bg-white">
-          <div className="container mx-auto max-w-5xl">
+          <div className="container mx-auto max-w-6xl">
             <div className="text-center mb-14">
               <h2 className="text-3xl font-bold text-slate-900 mb-4 md:text-4xl">
                 {content.prova_visiva.title}
@@ -586,7 +585,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
       {/* ── TRUST / NON ALTERABILE ── */}
       {content.trust && (
         <section className="px-6 py-24 bg-white">
-          <div className="container mx-auto max-w-3xl text-center">
+          <div className="container mx-auto max-w-4xl text-center">
             <ShieldCheck className={`mx-auto mb-6 ${colors.accent}`} size={48} />
             <h2 className="text-3xl font-bold text-slate-900 mb-6 md:text-4xl">
               {content.trust.title}
@@ -594,16 +593,14 @@ export default function SettorePageLayout({ content, locale, settore, children }
             <p className="text-lg text-slate-600 leading-relaxed mb-8">
               {content.trust.body}
             </p>
-            <div className={`inline-block rounded-full px-6 py-2 text-sm font-bold ${colors.badge}`}>
-              {content.trust.badge}
-            </div>
+            <GeoBadge>{content.trust.badge}</GeoBadge>
           </div>
         </section>
       )}
 
       {/* ── FAQ ── */}
       <section className="px-6 py-24 bg-slate-50">
-        <div className="container mx-auto max-w-3xl">
+        <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
             {content.faq.title}
           </h2>
@@ -749,7 +746,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
         const others = (['pulizie', 'installatori', 'sicurezza', 'elettricisti', 'idraulici', 'termoidraulici', 'edilizia', 'impianti', 'manutenzione', 'impresa-di-pulizie'] as SettoreSlug[]).filter(s => s !== settore);
         return (
           <section className="px-6 py-12 bg-white border-t border-slate-100">
-            <div className="container mx-auto max-w-3xl text-center">
+            <div className="container mx-auto max-w-4xl text-center">
               <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-5">
                 {CROSS_TITLE[locale] ?? 'Other sectors'}
               </p>
@@ -771,7 +768,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
 
       {/* ── DEMO REPORT ── */}
       <section className="px-6 py-16 bg-slate-50 border-t border-slate-200">
-        <div className="container mx-auto max-w-2xl">
+        <div className="container mx-auto max-w-4xl">
           <p className="text-center text-sm font-semibold text-slate-500 uppercase tracking-widest mb-5">{sl.see_real_report ?? 'See a real report'}</p>
           <DemoReportBanner />
         </div>
@@ -779,20 +776,20 @@ export default function SettorePageLayout({ content, locale, settore, children }
 
       {/* ── CTA FINALE ── */}
       <section className="px-6 py-24 bg-slate-900 text-white">
-        <div className="container mx-auto max-w-3xl text-center">
+        <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-4xl font-bold mb-6 md:text-5xl">{content.cta.title}</h2>
           <p className="text-slate-300 text-xl mb-10 leading-relaxed">{content.cta.subtitle}</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href={trialLink}
-              className={`inline-flex items-center gap-2 rounded-xl px-8 py-4 font-bold text-white shadow-lg transition-colors ${colors.btn}`}
+              className="btn-modern"
               onClick={() => trackEvent('trial_click', { cta_source: `settore_${settore}_footer`, cta_locale: locale })}
             >
               {content.cta.primary} <ArrowRight size={18} />
             </Link>
             <Link
               href={pricingLink}
-              className="inline-flex items-center gap-2 rounded-xl border border-slate-600 px-8 py-4 font-bold text-slate-300 hover:border-slate-400 transition-colors"
+              className="btn-modern-ghost"
             >
               {content.cta.secondary}
             </Link>

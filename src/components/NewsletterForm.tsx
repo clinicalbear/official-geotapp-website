@@ -375,8 +375,8 @@ export default function NewsletterForm({
             type="submit"
             disabled={status === 'loading'}
             style={{
-              padding: '0.625rem 1.25rem', borderRadius: '10px', border: 'none',
-              background: '#8FC436', color: '#0f172a',
+              padding: '0.625rem 1.25rem', borderRadius: '9999px', border: 'none',
+              background: 'linear-gradient(120deg,#5a9e2a,#3a9e6f 48%,#2a8fc4)', color: '#fff', boxShadow: '0 6px 16px rgba(42,143,196,0.3)',
               fontFamily: 'var(--font-inter,Inter,sans-serif)', fontSize: '0.875rem', fontWeight: 700,
               cursor: status === 'loading' ? 'not-allowed' : 'pointer',
               opacity: status === 'loading' ? 0.7 : 1, whiteSpace: 'nowrap',

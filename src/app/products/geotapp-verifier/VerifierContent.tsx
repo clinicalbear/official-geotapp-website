@@ -25,6 +25,7 @@ import { localizePath } from '@/lib/i18n/locale-routing';
 import DemoReportBanner from '@/components/DemoReportBanner';
 import type { AppLocale } from '@/lib/i18n/config';
 import type { VerifierCopy } from '@/content/verifier/types';
+import GeoBadge from '@/components/GeoBadge';
 
 const VERIFIER_DOWNLOAD_URL = '/downloads/report-verifier-0.2.1.zip';
 
@@ -156,10 +157,7 @@ export default function VerifierContent({ copy, locale }: VerifierContentProps) 
           transition={{ duration: 0.8 }}
           className="text-center"
         >
-          <div className="mb-8 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50 border border-emerald-100 text-emerald-700 font-mono text-xs tracking-widest">
-            <FileCheck2 size={14} className="animate-pulse" />
-            {copy.hero_badge}
-          </div>
+          <GeoBadge className="mb-8">{copy.hero_badge}</GeoBadge>
 
           {/* Logo */}
           <div className="mb-10 flex justify-center">
@@ -564,10 +562,7 @@ console.log(result.integrityLevel);`}
       {/* CTA */}
       <section className="py-32 bg-slate-900 text-white text-center px-6">
         <div className="container mx-auto max-w-4xl">
-          <div className="mb-6 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-900/50 border border-emerald-700 text-emerald-400 text-sm font-bold">
-            <FileCheck2 size={14} />
-            GeoTapp Verifier
-          </div>
+          <GeoBadge className="mb-6">GeoTapp Verifier</GeoBadge>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             {copy.cta_title}
           </h2>

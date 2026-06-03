@@ -210,7 +210,7 @@ export default async function ConfrontoIndexPage({ params }: { params: Promise<{
             <TrialCTALink
               href={`/${locale}/trial/`}
               source="confronto_index"
-              className="inline-block bg-primary text-black font-semibold px-8 py-3 rounded-full hover:bg-primary/90 transition-colors"
+              className="btn-modern"
             >
               {c.cta_btn}
             </TrialCTALink>

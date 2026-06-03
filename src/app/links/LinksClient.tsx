@@ -471,8 +471,8 @@ export default function LinksClient({ articles, locale = 'it' }: Props) {
         <motion.div variants={fadeUp} custom={3}>
           <Link href={withUtm(trialHref, 'ig_links_trial', 'hero_primary')}
             onClick={() => trackEvent('trial_click', { cta_source: 'links_hero', cta_locale: locale })}
-            className="group flex items-center justify-center gap-2 w-full py-4 bg-slate-900 text-white font-semibold text-[15px] rounded-2xl hover:bg-primary hover:text-slate-900 transition-all duration-200 mb-2 shadow-lg shadow-slate-900/8 active:scale-[0.98]">
-            <Sparkles size={16} className="text-primary group-hover:text-slate-900 transition-colors duration-150" />
+            className="btn-modern w-full mb-2">
+            <Sparkles size={16} />
             {t.ctaPrimary}
             <ArrowRight size={17} className="group-hover:translate-x-0.5 transition-transform duration-150" />
           </Link>
@@ -484,7 +484,7 @@ export default function LinksClient({ articles, locale = 'it' }: Props) {
         {/* Secondary CTA → DEMO */}
         <motion.div variants={fadeUp} custom={5}>
           <Link href={withUtm(demoHref, 'ig_links_demo', 'hero_secondary')}
-            className="flex items-center justify-center w-full py-3.5 border border-slate-200 text-slate-700 font-medium text-[15px] rounded-2xl hover:border-primary/40 hover:text-primary hover:bg-primary/3 transition-all duration-200 active:scale-[0.98]">
+            className="btn-modern-ghost w-full">
             {t.ctaSecondary}
           </Link>
         </motion.div>
@@ -590,8 +590,8 @@ export default function LinksClient({ articles, locale = 'it' }: Props) {
           <p className="relative text-[12.5px] text-slate-500 mb-5 leading-relaxed">{t.bottomSub}</p>
           <Link href={withUtm(trialHref, 'ig_links_trial', 'bottom_banner')}
             onClick={() => trackEvent('trial_click', { cta_source: 'links_bottom_banner', cta_locale: locale })}
-            className="relative group inline-flex items-center justify-center gap-2 w-full py-3.5 bg-slate-900 text-white font-semibold text-[14.5px] rounded-2xl hover:bg-primary hover:text-slate-900 transition-all duration-200 shadow-lg shadow-slate-900/10 active:scale-[0.98]">
-            <Sparkles size={15} className="text-primary group-hover:text-slate-900 transition-colors duration-150" />
+            className="btn-modern w-full">
+            <Sparkles size={15} />
             {t.bottomCta}
             <ArrowRight size={16} className="group-hover:translate-x-0.5 transition-transform duration-150" />
           </Link>

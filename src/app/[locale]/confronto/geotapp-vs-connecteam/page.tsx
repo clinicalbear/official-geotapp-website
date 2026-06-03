@@ -303,7 +303,7 @@ export default async function GeoTappVsConnecteamPage({ params }: { params: Prom
             <TrialCTALink
               href={`/${locale}/trial/`}
               source="confronto_vs_connecteam"
-              className="inline-block bg-primary text-black font-semibold px-8 py-3 rounded-full hover:bg-primary/90 transition-colors"
+              className="btn-modern"
             >
               {isIt ? 'Inizia subito gratuitamente!' : 'Start for free!'}
             </TrialCTALink>

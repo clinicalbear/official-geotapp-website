@@ -17,6 +17,7 @@ import { submitContact } from '@/lib/api';
 import { usePathname } from 'next/navigation';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import { getLocaleFromPathname } from '@/lib/i18n/locale-routing';
+import GeoBadge from '@/components/GeoBadge';
 
 const COSA_VEDRAI_ICONS = [
   <MapPin size={20} className="text-blue-500" />,
@@ -67,13 +68,9 @@ export default function DemoPage() {
 
         {/* HEADER */}
         <div className="text-center mb-16 max-w-3xl mx-auto">
-          <motion.span
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-bold tracking-wide mb-6"
-          >
+          <GeoBadge className="mb-6">
             {d.badge ?? 'Demo GeoTapp — 30 Minutes'}
-          </motion.span>
+          </GeoBadge>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -210,7 +207,7 @@ export default function DemoPage() {
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full py-4 bg-primary text-white font-bold text-lg rounded-xl hover:bg-primary/90 transition-all shadow-lg hover:shadow-primary/30 flex items-center justify-center gap-2 transform hover:-translate-y-0.5 disabled:opacity-60 disabled:cursor-not-allowed disabled:transform-none"
+                    className="btn-modern w-full disabled:opacity-60 disabled:cursor-not-allowed"
                   >
                     <Send size={20} />
                     {loading ? d.form_submitting : d.form_submit}

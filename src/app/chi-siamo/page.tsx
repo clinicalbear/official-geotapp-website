@@ -216,7 +216,7 @@ export default function AboutPage() {
             </p>
             <a
               href="/contact"
-              className="px-8 py-4 bg-primary text-white font-bold rounded-xl hover:bg-primary/90 transition-colors inline-block text-lg shadow-lg shadow-primary/25"
+              className="btn-modern"
             >
               {cs.cta_btn}
             </a>

@@ -14,7 +14,6 @@ import {
   BarChart3,
   Users,
   X,
-  Server,
   Globe,
   Cpu,
   Camera,
@@ -34,6 +33,7 @@ import {
   localizePath,
 } from '@/lib/i18n/locale-routing';
 import { trackEvent } from '@/lib/analytics';
+import GeoBadge from '@/components/GeoBadge';
 
 
 // --- SYSTEM CARD COMPONENT (LIGHT THEME) ---
@@ -676,10 +676,7 @@ export default function GeoTappApp() {
       {/* HERO SECTION (LIGHT) */}
       <section className="container mx-auto px-6 max-w-7xl text-center mb-32 relative z-10">
         <div>
-          <div className="mb-8 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-100 text-blue-600 font-mono text-xs tracking-widest">
-            <Server size={14} className="animate-pulse" />
-            {flowDict.hero_badge}
-          </div>
+          <GeoBadge className="mb-8">{flowDict.hero_badge}</GeoBadge>
 
           <h1 className="text-5xl md:text-8xl font-display font-bold text-slate-900 mb-8 leading-tight tracking-tight">
             <span className="sr-only">{heroTitlePlain || 'GeoTapp Flow'}</span>
@@ -850,7 +847,7 @@ export default function GeoTappApp() {
             <Link
               href={getLink('/trial')}
               onClick={() => trackEvent('trial_click', { cta_source: 'product_flow', cta_locale: currentLocale })}
-              className="inline-flex items-center gap-4 px-12 py-6 bg-blue-600 text-white font-bold rounded-xl text-xl hover:bg-blue-700 transition-all shadow-lg hover:shadow-blue-500/30 hover:-translate-y-2 group"
+              className="btn-modern"
             >
               <Zap size={24} />{' '}
               {isItalian
@@ -859,7 +856,7 @@ export default function GeoTappApp() {
             </Link>
             <Link
               href={getLink('/pricing')}
-              className="inline-flex items-center gap-4 px-12 py-6 bg-slate-100 text-slate-900 font-bold rounded-xl text-xl hover:bg-slate-200 transition-all group"
+              className="btn-modern-ghost"
             >
               <Globe
                 className="group-hover:rotate-12 transition-transform"

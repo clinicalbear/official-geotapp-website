@@ -128,7 +128,7 @@ function CtaBanner({ labels, locale }: { labels: typeof FOOTER_LABELS[string]; l
         <Link
           href={`/${locale}/trial/`}
           onClick={() => trackEvent('trial_click', { cta_source: 'blog_article_footer', cta_locale: locale })}
-          className="mt-8 inline-block px-8 py-4 bg-[#8FC436] text-white font-bold text-lg rounded-xl hover:bg-[#7db02e] transition-colors"
+          className="btn-modern mt-8"
         >
           {labels.cta_btn}
         </Link>

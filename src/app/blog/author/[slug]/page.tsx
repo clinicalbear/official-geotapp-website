@@ -231,7 +231,7 @@ export default async function AuthorPage({
                   href={featuredUrl}
                   target="_blank"
                   rel="me noopener"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-slate-900 text-white text-sm font-bold hover:bg-slate-800 transition-colors"
+                  className="btn-modern"
                 >
                   <BadgeCheck size={16} />
                   {t.view_profile}
@@ -241,7 +241,7 @@ export default async function AuthorPage({
                   href={linkedinUrl}
                   target="_blank"
                   rel="me noopener"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-slate-300 text-slate-700 text-sm font-bold hover:bg-slate-50 transition-colors"
+                  className="btn-modern-ghost"
                 >
                   <Linkedin size={16} />
                   {t.follow_linkedin}

@@ -199,7 +199,7 @@ export function DynamicComparison({ locale, copy, initialId }: Props) {
               locale,
             })
           }
-          className="inline-block rounded-xl bg-[#8FC436] px-8 py-4 text-lg font-bold text-white shadow-lg transition-opacity hover:opacity-90"
+          className="btn-modern"
         >
           {copy.ctaBtn}
         </Link>

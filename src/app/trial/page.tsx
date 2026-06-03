@@ -20,6 +20,7 @@ import { getLocaleFromPathname } from '@/lib/i18n/locale-routing';
 import Link from 'next/link';
 import { trackEvent, consumeTrialSource } from '@/lib/analytics';
 import Reviews from '@/components/Reviews';
+import GeoBadge from '@/components/GeoBadge';
 
 const BENEFIT_ICONS = [
   <Rocket size={20} className="text-primary" />,
@@ -163,9 +164,9 @@ export default function TrialPage() {
           <motion.span
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-bold tracking-wide mb-4 md:mb-6"
+            className="inline-block mb-4 md:mb-6"
           >
-            {d.badge}
+            <GeoBadge>{d.badge}</GeoBadge>
           </motion.span>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -295,7 +296,7 @@ export default function TrialPage() {
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full py-4 bg-primary text-white font-bold text-lg rounded-xl hover:bg-primary/90 transition-all shadow-lg hover:shadow-primary/30 flex items-center justify-center gap-2 transform hover:-translate-y-0.5 disabled:opacity-60 disabled:cursor-not-allowed disabled:transform-none"
+                    className="btn-modern w-full disabled:opacity-60 disabled:cursor-not-allowed"
                   >
                     <Send size={20} />
                     {loading ? d.form_submitting : d.form_submit_simple}

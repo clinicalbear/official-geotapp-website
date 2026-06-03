@@ -68,7 +68,7 @@ export default function ArticleHero({
   });
   const imageY = useTransform(scrollYProgress, [0, 1], ['0%', '50%']);
 
-  const formattedDate = new Date(date).toLocaleDateString(locale, {
+  const formattedDate = new Date(date).toLocaleDateString(locale, { timeZone: 'UTC',
     day: 'numeric',
     month: 'long',
     year: 'numeric',
@@ -102,17 +102,17 @@ export default function ArticleHero({
 
       {/* Content */}
       <div className="absolute inset-0 flex flex-col items-center justify-end pb-10 md:pb-16 px-4 md:px-8">
-        {/* Category badge */}
+        {/* Categoria — stile badge homepage (no chip) */}
         {primaryCategory && (
           <motion.span
-            className="px-3 py-1 rounded-full text-xs font-semibold text-white mb-4"
-            style={{ backgroundColor: categoryColor }}
+            className="geo-status mb-4"
             variants={fadeInUp}
             initial="hidden"
             animate="visible"
             custom={0.1}
           >
-            {primaryCategory.name}
+            <span className="w-2 h-2 rounded-full animate-pulse" style={{ background: 'linear-gradient(135deg,#8FC436,#3BAEE0)' }} />
+            <span className="text-white geo-underline" style={{ textShadow: '0 1px 6px rgba(0,0,0,0.6)' }}>{primaryCategory.name}</span>
           </motion.span>
         )}
 

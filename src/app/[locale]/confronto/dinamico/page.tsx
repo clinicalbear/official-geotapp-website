@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
 import { DynamicComparison } from '@/components/DynamicComparison';
+import GeoBadge from '@/components/GeoBadge';
 export { generateLocaleStaticParams as generateStaticParams } from '@/lib/i18n/static-params';
 
 const PATHNAME = '/confronto/dinamico/';
@@ -250,9 +251,7 @@ export default async function Page({
 
         {/* Hero */}
         <header className="mb-12 text-center">
-          <span className="mb-4 inline-block rounded-full bg-[#8FC436]/10 px-4 py-1 text-sm font-bold text-[#5a8521]">
-            {c.badge}
-          </span>
+          <GeoBadge className="mb-4">{c.badge}</GeoBadge>
           <h1 className="mb-4 text-3xl font-bold text-slate-900 sm:text-4xl md:text-5xl">
             {c.title}
           </h1>

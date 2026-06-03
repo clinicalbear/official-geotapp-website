@@ -270,99 +270,72 @@ export default function Home() {
   return (
     <div className="bg-background min-h-screen text-text-primary overflow-hidden">
       {/* Landing is locale-aware: all internal links pass through getLink(). */}
-      {/* HERO SECTION */}
-      <section className="relative pt-28 lg:pt-32 pb-16 lg:pb-24 px-6 bg-white overflow-hidden">
+                  {/* HERO SECTION — Moderno / Accattivante */}
+      <section className="relative pt-28 lg:pt-36 pb-20 lg:pb-28 overflow-hidden bg-gradient-to-b from-white via-white to-[#f0f8e6]">
+        {/* Aurora animata brand */}
+        <div className="geo-aurora" aria-hidden="true"><span className="a1" /><span className="a2" /><span className="a3" /></div>
 
-        {/* ── Video background — desktop only (mobile: bg-white per LCP) ── */}
-        {showHeroVideo && (
-          <div className="absolute inset-0 z-0">
-            <video
-              autoPlay
-              muted
-              playsInline
-              preload="none"
-              className="w-full h-full object-cover scale-[1.12] origin-top-left hero-video-blur"
-              poster="/screen_dashboard.webp"
-            >
-              <source src="/videoHero.mp4" type="video/mp4" />
-            </video>
-            {/* White overlay fades in with the blur */}
-            <div className="absolute inset-0 bg-white/25 hero-frost-overlay" />
+        <div className="container-geo relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-10 items-center">
+            {/* Testo */}
+            <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
+              {currentLocale === 'en' && (
+                <span className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full text-xs font-semibold bg-blue-50 border border-blue-200 text-blue-700">{dict.landing.us_badge}</span>
+              )}
+              <div className="mb-8">
+                <span className="geo-status">
+                  <span className="w-2 h-2 rounded-full animate-pulse" style={{ background: 'linear-gradient(135deg,#8FC436,#3BAEE0)' }} />
+                  <span className="text-geo-gradient geo-underline">{dict.landing.hero_badge}</span>
+                </span>
+              </div>
+              {(() => { const d = DIFF_COPY[currentLocale] ?? DIFF_COPY['en']; return (
+                <>
+                  <h1 className="font-display font-extrabold text-[2.4rem] sm:text-[3rem] lg:text-[3.8rem] leading-[1.05] tracking-tight text-slate-900 mb-6">
+                    {d.h2_1}<br /><span className="text-geo-gradient">{d.h2_2}</span>
+                  </h1>
+                  <p className="text-lg leading-relaxed text-slate-600 max-w-xl mb-8">{d.desc}</p>
+                </>
+              ); })()}
+              <div className="flex flex-col sm:flex-row gap-4 mb-8">
+                <Link href={getLink('/trial')} onClick={() => trackEvent('trial_click', { cta_source: 'homepage_hero', cta_locale: currentLocale })} className="btn-modern group">
+                  {dict.landing.hero_cta_primary} <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                </Link>
+                <Link href={getLink('/settori')} className="btn-modern-ghost">{dict.landing.hero_cta_secondary}</Link>
+              </div>
+              <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-slate-500">
+                <span className="flex items-center gap-1.5"><ShieldCheck size={15} className="text-[#8FC436]" /><strong className="text-slate-700">{dict.landing.trust_gdpr}</strong></span>
+                <span className="flex items-center gap-1.5"><MapPin size={15} className="text-[#3BAEE0]" /><strong className="text-slate-700">{dict.landing.trust_gps}</strong></span>
+                <span className="flex items-center gap-1.5"><WifiOff size={15} className="text-amber-500" /><strong className="text-slate-700">{dict.landing.trust_offline}</strong></span>
+              </div>
+            </motion.div>
+
+            {/* Visual fluttuante con pin GPS */}
+            <motion.div initial={{ opacity: 0, scale: 0.92, y: 30 }} animate={{ opacity: 1, scale: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.15 }} className="relative hidden md:block">
+              <div className="geo-glass geo-float rounded-[28px] p-3">
+                <img src="/screen_live_map.webp" alt="GeoTapp live map" width={640} height={420} className="rounded-[20px] w-full h-auto" />
+              </div>
+              {/* Pin GPS che cade + pulsa */}
+              <div className="absolute" style={{ top: '37%', left: '45%' }}>
+                <span className="absolute -inset-3 rounded-full bg-[#8FC436]/40 geo-pin-ring" />
+                <div className="geo-pin-drop relative w-11 h-11 rounded-full bg-white shadow-lg shadow-[#8FC436]/40 flex items-center justify-center ring-2 ring-[#8FC436]">
+                  <MapPin size={22} className="text-[#5a9e2a]" />
+                </div>
+              </div>
+              {/* Chip dato verificato */}
+              <div className="absolute -bottom-5 -left-5 geo-glass geo-float-chip rounded-2xl px-4 py-3 flex items-center gap-2.5">
+                <div className="w-9 h-9 rounded-full bg-emerald-500 flex items-center justify-center shadow-md shadow-emerald-500/30"><ShieldCheck size={18} className="text-white" /></div>
+                <div className="font-mono-tech text-[11px] leading-tight text-slate-600">
+                  <div className="text-slate-900 font-bold">GPS 44.41&deg;N</div>
+                  <div>08:12 &middot; sealed</div>
+                </div>
+              </div>
+              {/* Live */}
+              <div className="absolute -top-3 right-6 geo-glass rounded-full px-3 py-1.5 flex items-center gap-1.5 text-xs font-semibold text-slate-700">
+                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" /> Live
+              </div>
+            </motion.div>
           </div>
-        )}
-
-        {/* ── Text content — fades in as video plays ── */}
-        <div className="container mx-auto max-w-5xl z-10 relative text-center">
-
-          {/* US-customer banner — only on /en/ pages. Signals that GeoTapp serves
-              US teams (chat support window + USD invoicing path) even though the
-              core business is EU-based. Removes the "vendor europeo only" friction
-              that was bouncing US visitors who saw EUR pricing. */}
-          {currentLocale === 'en' && (
-            <div className="hero-text-late hero-text-late-d1 mb-4">
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold bg-blue-50 border border-blue-200 text-blue-700">
-                {dict.landing.us_badge}
-              </span>
-            </div>
-          )}
-
-          <div className="hero-text-late hero-text-late-d1 mb-5">
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold tracking-wide"
-              style={{ background: 'linear-gradient(135deg, rgba(143,196,54,0.12), rgba(59,174,224,0.1))', border: '1px solid rgba(143,196,54,0.25)', color: '#8FC436', backdropFilter: 'blur(8px)' }}>
-              <span className="w-2 h-2 rounded-full bg-[#8FC436] animate-pulse" />
-              {dict.landing.hero_badge}
-            </span>
-          </div>
-
-          {(() => { const d = DIFF_COPY[currentLocale] ?? DIFF_COPY['en']; return (
-            <>
-              <h1 className="text-[2.2rem] sm:text-[2.8rem] md:text-[3.5rem] lg:text-[4rem] font-display font-extrabold leading-[1.06] tracking-tight mb-7 hero-text-late hero-text-late-d2 hero-glass-text">
-                {d.h2_1}<br />
-                <span className="hero-glass-text-green">{d.h2_2}</span>
-              </h1>
-              <p className="text-lg leading-relaxed max-w-2xl mx-auto mb-5 hero-text-late hero-text-late-d3 hero-glass-sub">
-                {d.desc}
-              </p>
-            </>
-          ); })()}
-
-          <p className="text-sm text-slate-500 mb-8 hero-text-late hero-text-late-d4">
-            {dict.landing.hero_sectors_prefix}{' '}
-            <Link href={getLink('/settori/pulizie')} className="underline decoration-dotted hover:text-slate-700 transition-colors">{dict.landing.hero_sectors_pulizie}</Link>
-            {', '}
-            <Link href={getLink('/settori/installatori')} className="underline decoration-dotted hover:text-slate-700 transition-colors">{dict.landing.hero_sectors_installatori}</Link>
-            {' '}{dict.landing.hero_sectors_and}{' '}
-            <Link href={getLink('/settori/sicurezza')} className="underline decoration-dotted hover:text-slate-700 transition-colors">{dict.landing.hero_sectors_sicurezza}</Link>.
-          </p>
-
-          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-10 hero-text-late hero-text-late-d5">
-            <Link
-              href={getLink('/trial')}
-              onClick={() => trackEvent('trial_click', { cta_source: 'homepage_hero', cta_locale: currentLocale })}
-              className="btn-geo group"
-            >
-              {dict.landing.hero_cta_primary}
-              <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <Link
-              href={getLink('/settori')}
-              className="btn-geo-ghost backdrop-blur-sm"
-            >
-              {dict.landing.hero_cta_secondary}
-            </Link>
-          </div>
-
-          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-slate-500 hero-text-late hero-text-late-d6">
-            <span className="flex items-center gap-1.5"><ShieldCheck size={15} className="text-emerald-500" /><strong className="text-slate-700">{dict.landing.trust_gdpr}</strong></span>
-            <span className="flex items-center gap-1.5"><MapPin size={15} className="text-blue-500" /><strong className="text-slate-700">{dict.landing.trust_gps}</strong></span>
-            <span className="flex items-center gap-1.5"><WifiOff size={15} className="text-amber-500" /><strong className="text-slate-700">{dict.landing.trust_offline}</strong></span>
-          </div>
-
         </div>
-
-        {/* Subtle bg accents */}
-        <div className="hero-blob-1 absolute -top-32 -right-32 w-[500px] h-[500px] bg-[#8FC436]/[0.06] rounded-full blur-[80px] pointer-events-none z-[1]" />
-        <div className="hero-blob-2 absolute -bottom-40 -left-40 w-[400px] h-[400px] bg-[#3BAEE0]/[0.05] rounded-full blur-[80px] pointer-events-none z-[1]" />
       </section>
 
       {/* TRUST BAR — social proof immediately after hero */}
@@ -377,8 +350,8 @@ export default function Home() {
       <Reviews locale={currentLocale} />
 
             {/* PROBLEM SECTION — 3 riquadri ariosi, senza numeri */}
-      <section className="py-24 bg-slate-50 border-b border-slate-100">
-        <div className="container mx-auto px-6 max-w-6xl">
+      <section className="py-24 bg-gradient-to-b from-[#fbf0ee] via-white to-[#e9f3fb]">
+        <div className="container-geo">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <div className="flex justify-center mb-6"><span className="geo-accent-line" /></div>
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
@@ -394,9 +367,9 @@ export default function Home() {
               return (
                 <div
                   key={i}
-                  className="bg-white rounded-3xl p-10 border border-slate-100 shadow-sm hover:shadow-md transition-shadow"
+                  className="card-modern p-10"
                 >
-                  <div className="w-14 h-14 rounded-2xl bg-rose-50 text-rose-500 flex items-center justify-center mb-6">
+                  <div className="w-14 h-14 rounded-2xl icon-grad-rose flex items-center justify-center mb-6">
                     <Icon size={26} />
                   </div>
                   <h3 className="font-bold text-slate-900 text-xl mb-3">{item.title}</h3>
@@ -409,8 +382,8 @@ export default function Home() {
       </section>
 
             {/* SETTORI SECTION — 3 riquadri ariosi */}
-      <section className="py-24 bg-white border-b border-slate-100">
-        <div className="container mx-auto px-6 max-w-6xl">
+      <section className="py-24 bg-gradient-to-b from-[#e9f3fb] via-white to-[#f0f8e6]">
+        <div className="container-geo">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <div className="flex justify-center mb-6"><span className="geo-accent-line" /></div>
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">
@@ -429,7 +402,7 @@ export default function Home() {
               <Link
                 key={i}
                 href={href}
-                className={`group bg-white rounded-3xl p-10 border border-slate-100 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 ${hoverBorder}`}
+                className={`group card-modern p-10 ${hoverBorder}`}
               >
                 <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 ${iconCls}`}>
                   <Icon size={26} />
@@ -453,9 +426,43 @@ export default function Home() {
         </div>
       </section>
 
+      {/* AREA FONDATORE — Experience, a metà pagina (non nascosta in fondo) */}
+      {(() => {
+        const f = dict.chi_siamo.founder;
+        const storyLabel = ({ it: 'La nostra storia', en: 'Our story', de: 'Unsere Geschichte', fr: 'Notre histoire', es: 'Nuestra historia', pt: 'A nossa história', nl: 'Ons verhaal', ru: 'Наша история', da: 'Vores historie', sv: 'Vår historia', nb: 'Vår historie' } as Record<string, string>)[currentLocale] ?? 'Our story';
+        return (
+          <section className="py-20 bg-gradient-to-b from-[#f0f8e6] via-white to-white">
+            <div className="container-geo">
+              <FounderViewTracker source="homepage_block" />
+              <div className="relative geo-glass rounded-[28px] p-8 md:p-12 overflow-hidden">
+                <div aria-hidden="true" className="absolute -top-20 -right-20 w-72 h-72 rounded-full bg-[#8FC436]/12 blur-3xl pointer-events-none" />
+                <div aria-hidden="true" className="absolute -bottom-24 -left-16 w-72 h-72 rounded-full bg-[#3BAEE0]/10 blur-3xl pointer-events-none" />
+                <div className="relative flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                  <div className="shrink-0 relative">
+                    <div aria-hidden="true" className="absolute -inset-2 rounded-[28px] bg-gradient-to-br from-[#8FC436] to-[#3BAEE0] opacity-70 blur-[3px]" />
+                    <img src="/michele-petraroli.webp" alt={`${f.name}, ${f.role} GeoTapp`} width={176} height={176} loading="lazy" decoding="async" className="relative w-36 h-36 md:w-44 md:h-44 rounded-[24px] object-cover ring-4 ring-white" />
+                  </div>
+                  <div className="flex-1 text-center md:text-left">
+                    <p className="geo-eyebrow mb-4">{f.section_label}</p>
+                    <p className="text-xl md:text-2xl text-slate-800 leading-snug font-display font-semibold mb-5">
+                      &ldquo;{dict.chi_siamo.mission_quote}&rdquo;
+                    </p>
+                    <p className="text-slate-900 font-bold">{f.name}</p>
+                    <p className="text-slate-500 text-sm mb-6">{f.role}</p>
+                    <Link href={getLink('/chi-siamo')} className="btn-modern-ghost">
+                      {storyLabel} <ArrowRight size={16} />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        );
+      })()}
+
       {/* Product blocks: Flow (office) → TimeTracker (field) → Verifier (trust) */}
       {/* PRODUCT SECTION: FLOW */}
-      <section className="relative border-t border-slate-100 overflow-hidden">
+      <section className="relative overflow-hidden bg-gradient-to-b from-white via-[#f6f3fc] to-[#faf3ec]">
         <HeartbeatLine />
         {/* Left: carousel as background, vertically centred within the section
             so it aligns with the items-center text block on the right. */}
@@ -463,9 +470,9 @@ export default function Home() {
           <div className="w-full">
             <FlowCarousel />
           </div>
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-white pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-[#f6f3fc] pointer-events-none" />
         </div>
-        <div className="container mx-auto px-6 max-w-6xl relative z-10 py-24">
+        <div className="container-geo relative z-10 py-24">
           <div className="grid md:grid-cols-[3fr_2fr] gap-16 items-center">
             <div className="order-2 md:order-1" /> {/* spacer for the carousel */}
             <div className="order-1 md:order-2">
@@ -513,14 +520,14 @@ export default function Home() {
       </section>
 
       {/* PRODUCT SECTION: TIMETRACKER */}
-      <section className="relative border-t border-slate-100 bg-white overflow-hidden">
+      <section className="relative overflow-hidden bg-gradient-to-b from-[#faf3ec] via-[#fdf6ee] to-[#f2f8e8]">
         {/* Right: bg carousel behind the smartphone */}
         <div className="absolute right-0 top-0 bottom-0 w-[50%] hidden md:block overflow-hidden">
           <TTBgCarousel />
-          <div className="absolute inset-0 bg-white/40" />
-          <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-white" />
+          <div className="absolute inset-0 bg-[#fdf6ee]/40" />
+          <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-[#fdf6ee]" />
         </div>
-        <div className="container mx-auto px-6 max-w-6xl relative z-10 py-24">
+        <div className="container-geo relative z-10 py-24">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
               <div className="mb-4">
@@ -570,8 +577,8 @@ export default function Home() {
       </section>
 
       {/* PRODUCT SECTION: VERIFIER — locks at 113px, image scrolls inside viewport */}
-      <section id="verifier-section" className="border-t border-slate-100 bg-white">
-        <div className="container mx-auto px-6 max-w-6xl py-24">
+      <section id="verifier-section" className="bg-gradient-to-b from-[#f2f8e8] via-[#f1f8e7] to-white">
+        <div className="container-geo py-24">
           <div className="grid md:grid-cols-[3fr_2fr] gap-16 items-start">
             <div className="order-2 md:order-1">
               <div id="verifier-report-viewport" className="rounded-2xl border border-slate-200 bg-white shadow-xl shadow-slate-200/50 overflow-hidden" style={{ maxHeight: '80vh' }}>
@@ -634,7 +641,7 @@ export default function Home() {
           <Link
             href={getLink('/trial')}
             onClick={() => trackEvent('trial_click', { cta_source: 'homepage_cta', cta_locale: currentLocale })}
-            className="inline-flex items-center justify-center gap-2 px-10 py-5 bg-emerald-600 text-white font-bold rounded-2xl text-lg hover:bg-emerald-700 transition-colors shadow-lg hover:shadow-emerald-200"
+            className="btn-modern"
           >
             {dict.landing.hero_cta_primary}
             <ArrowRight size={20} />
@@ -675,7 +682,7 @@ export default function Home() {
           ))}
         </div>
 
-        <div className="container mx-auto px-6 max-w-6xl relative z-10">
+        <div className="container-geo relative z-10">
           <motion.div
             className="text-center max-w-4xl mx-auto mb-16"
             initial={{ opacity: 0, y: 20 }}
@@ -741,7 +748,7 @@ export default function Home() {
 
       {/* PLATFORM OVERVIEW */}
       <section id="platform" className="py-24 border-t border-slate-100 bg-slate-50">
-        <div className="container mx-auto px-6 max-w-6xl">
+        <div className="container-geo">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="text-primary font-bold tracking-widest uppercase text-sm">
               {dict.home_sections.core.badge}
@@ -826,40 +833,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FOUNDER STRIP — segnale Experience (chi c'è dietro il prodotto) */}
-      {(() => {
-        const f = dict.chi_siamo.founder;
-        const storyLabel = ({ it: 'La nostra storia', en: 'Our story', de: 'Unsere Geschichte', fr: 'Notre histoire', es: 'Nuestra historia', pt: 'A nossa história', nl: 'Ons verhaal', ru: 'Наша история', da: 'Vores historie', sv: 'Vår historia', nb: 'Vår historie' } as Record<string, string>)[currentLocale] ?? 'Our story';
-        return (
-          <section className="py-20 px-6 bg-slate-50 border-t border-slate-100">
-            <FounderViewTracker source="homepage_strip" />
-            <div className="container mx-auto max-w-3xl">
-              <div className="flex flex-col sm:flex-row items-center gap-6 sm:gap-8 text-center sm:text-left">
-                <img
-                  src="/michele-petraroli.webp"
-                  alt={`${f.name}, ${f.role} GeoTapp`}
-                  width={104}
-                  height={104}
-                  loading="lazy"
-                  decoding="async"
-                  className="rounded-2xl border border-slate-200 object-cover shadow-sm shrink-0"
-                />
-                <div>
-                  <p className="text-xs uppercase tracking-widest text-primary font-bold mb-2">
-                    {f.section_label}
-                  </p>
-                  <p className="text-lg text-slate-700 leading-relaxed mb-3">
-                    <span className="font-bold text-slate-900">{f.name}</span>, {f.role}
-                  </p>
-                  <a href={getLink('/chi-siamo')} className="text-primary font-semibold hover:underline">
-                    {storyLabel} &rarr;
-                  </a>
-                </div>
-              </div>
-            </div>
-          </section>
-        );
-      })()}
 
       {/* CTA FOOTER */}
       <section className="py-32 bg-slate-900 text-white text-center px-6">
@@ -875,7 +848,7 @@ export default function Home() {
           </p>
           <Link
             href={getLink('/contact')}
-            className="inline-block px-10 py-5 bg-primary text-slate-900 font-bold rounded-xl text-xl hover:bg-white transition-all shadow-glow hover:scale-105"
+            className="btn-modern"
           >
             {dict.home_sections.footer_cta.button}
           </Link>
@@ -901,7 +874,7 @@ export default function Home() {
         <Link
           href={getLink('/trial')}
           onClick={() => trackEvent('trial_click', { cta_source: 'homepage_sticky', cta_locale: currentLocale })}
-          className="block w-full text-center py-3 bg-primary text-white font-bold rounded-xl text-base"
+          className="btn-modern w-full"
         >
           {dict.landing.hero_cta_primary}
         </Link>

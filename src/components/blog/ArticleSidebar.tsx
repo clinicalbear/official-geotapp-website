@@ -58,7 +58,8 @@ const CheckIcon = () => (
 function ShareButtons({ title, copiedLabel }: { title: string; copiedLabel: string }) {
   const [copied, setCopied] = useState(false);
 
-  const url = typeof window !== 'undefined' ? window.location.href : '';
+  const [url, setUrl] = useState('');
+  useEffect(() => { setUrl(window.location.href); }, []);
 
   const handleCopy = () => {
     navigator.clipboard.writeText(url);
@@ -128,7 +129,7 @@ export default function ArticleSidebar({ headings, locale, categories = [], date
   }, [headings]);
 
   const formattedDate = date
-    ? new Date(date).toLocaleDateString(locale, { day: 'numeric', month: 'short', year: 'numeric' })
+    ? new Date(date).toLocaleDateString(locale, { timeZone: 'UTC', day: 'numeric', month: 'short', year: 'numeric' })
     : '';
 
   return (
@@ -156,7 +157,7 @@ export default function ArticleSidebar({ headings, locale, categories = [], date
           <div>
             <span className="text-slate-400 text-[8px] font-mono uppercase tracking-widest block mb-0.5">Date</span>
             <span className="text-slate-700 font-mono text-[13px] tracking-wide">
-              {date ? new Date(date).toLocaleDateString('en-GB', { day: '2-digit', month: '2-digit', year: 'numeric' }).replace(/\//g, '.') : ''}
+              {date ? new Date(date).toLocaleDateString('en-GB', { timeZone: 'UTC', day: '2-digit', month: '2-digit', year: 'numeric' }).replace(/\//g, '.') : ''}
             </span>
           </div>
           <div className="w-px h-8 bg-slate-200" />
@@ -223,7 +224,7 @@ export default function ArticleSidebar({ headings, locale, categories = [], date
         <Link
           href={`/${locale}/trial/`}
           onClick={() => trackEvent('trial_click', { cta_source: 'blog_sidebar', cta_locale: locale })}
-          className="mt-4 block w-full text-center px-4 py-2.5 bg-[#8FC436] text-white text-[13px] font-semibold rounded-xl hover:bg-[#7db02e] transition-colors"
+          className="btn-modern-sm mt-4 w-full"
         >
           {labels.cta_btn}
         </Link>

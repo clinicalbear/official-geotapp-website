@@ -93,7 +93,7 @@ export default function ArticleNextStep({ categories, locale }: ArticleNextStepP
           </div>
           <Link
             href={href}
-            className="shrink-0 inline-flex items-center gap-2 px-5 py-2.5 bg-slate-900 text-white text-sm font-bold rounded-lg hover:bg-primary hover:text-slate-900 transition-all duration-300 shadow-lg shadow-slate-900/20"
+            className="btn-modern shrink-0"
           >
             {dict.next_step_cta}
             <ArrowRight size={16} />

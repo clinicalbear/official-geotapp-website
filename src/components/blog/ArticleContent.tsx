@@ -27,7 +27,7 @@ function MidArticleCta({ locale }: { locale: string }) {
       <Link
         href={`/${locale}/trial/`}
         onClick={() => trackEvent('trial_click', { cta_source: 'blog_article' })}
-        className="mt-4 inline-block px-6 py-3 text-sm font-semibold text-white bg-[#8FC436] rounded-xl hover:bg-[#7db02e] transition-colors"
+        className="btn-modern-sm mt-4"
       >
         {labels.btn}
       </Link>
@@ -38,8 +38,15 @@ function MidArticleCta({ locale }: { locale: string }) {
 export default function ArticleContent({ html, newsletter, locale = 'it' }: ArticleContentProps) {
   // Split content roughly in half at a paragraph boundary to insert mid-article CTA
   const [firstHalf, secondHalf] = useMemo(() => {
-    const paragraphs = html.split('</p>');
-    if (paragraphs.length < 6) return [html, ''];
+    // WP avvolge il contenuto in <article class="zenith-imported-content">...</article>.
+    // Va rimosso PRIMA dello split: altrimenti la prima metà resta con <article> aperto
+    // e la seconda con </article> orfano, che il browser chiude contro il motion.article
+    // che avvolge tutto → ristrutturazione DOM → hydration mismatch sulla newsletter.
+    const clean = html
+      .replace(/^\s*<article\b[^>]*>/i, '')
+      .replace(/<\/article>\s*$/i, '');
+    const paragraphs = clean.split('</p>');
+    if (paragraphs.length < 6) return [clean, ''];
     const midIndex = Math.floor(paragraphs.length / 2);
     const first = paragraphs.slice(0, midIndex).join('</p>') + '</p>';
     const second = paragraphs.slice(midIndex).join('</p>');
@@ -55,13 +62,17 @@ export default function ArticleContent({ html, newsletter, locale = 'it' }: Arti
     >
       <div className="max-w-3xl mx-auto px-6 py-16">
         <div
+          key="article-first"
           className="article-content"
+          suppressHydrationWarning
           dangerouslySetInnerHTML={{ __html: firstHalf }}
         />
-        {secondHalf && <MidArticleCta locale={locale} />}
+        {secondHalf && <MidArticleCta key="article-cta" locale={locale} />}
         {secondHalf && (
           <div
+            key="article-second"
             className="article-content"
+            suppressHydrationWarning
             dangerouslySetInnerHTML={{ __html: secondHalf }}
           />
         )}

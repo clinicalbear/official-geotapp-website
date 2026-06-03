@@ -32,6 +32,7 @@ import {
   localizePath,
 } from '@/lib/i18n/locale-routing';
 import { trackEvent } from '@/lib/analytics';
+import GeoBadge from '@/components/GeoBadge';
 // --- SYSTEM CARD COMPONENT (LIGHT THEME) ---
 const SystemCard = ({
   system,
@@ -390,10 +391,7 @@ export default function GeoTappApp() {
           the page animations below. */}
       <section className="container mx-auto px-6 max-w-7xl text-center mb-32 relative z-10">
         <div>
-          <div className="mb-8 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-100 text-blue-600 font-mono text-xs tracking-widest">
-            <Smartphone size={14} className="animate-pulse" />
-            {appDict.hero_badge}
-          </div>
+          <GeoBadge className="mb-8">{appDict.hero_badge}</GeoBadge>
 
           <h1 className="text-5xl md:text-8xl font-display font-bold text-slate-900 mb-8 leading-tight tracking-tight">
             <span className="sr-only">
@@ -483,10 +481,9 @@ export default function GeoTappApp() {
       {/* DOWNLOAD SECTION */}
       <section className="container mx-auto mb-24 max-w-4xl px-6">
         <div className="rounded-[2rem] border border-slate-200 bg-white p-10 text-center shadow-sm">
-          <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-slate-100 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-slate-500">
-            <Smartphone size={12} />
+          <GeoBadge className="mb-3">
             {isItalian ? 'App Mobile' : 'Mobile App'}
-          </div>
+          </GeoBadge>
           <h2 className="mt-4 text-3xl font-bold text-slate-900">
             {isItalian ? 'Scarica GeoTapp TimeTracker' : currentLocale === 'de' ? 'GeoTapp TimeTracker herunterladen' : 'Download GeoTapp TimeTracker'}
           </h2>
@@ -658,7 +655,7 @@ export default function GeoTappApp() {
             <Link
               href={getLink('/trial')}
               onClick={() => trackEvent('trial_click', { cta_source: 'product_timetracker', cta_locale: currentLocale })}
-              className="inline-flex items-center gap-4 px-12 py-6 bg-blue-600 text-white font-bold rounded-xl text-xl hover:bg-blue-700 transition-all shadow-lg hover:shadow-blue-500/30 hover:-translate-y-2 group"
+              className="btn-modern"
             >
               <Clock size={24} />{' '}
               {isItalian
@@ -669,7 +666,7 @@ export default function GeoTappApp() {
             </Link>
             <Link
               href={getLink('/pricing')}
-              className="inline-flex items-center gap-4 px-12 py-6 bg-slate-100 text-slate-900 font-bold rounded-xl text-xl hover:bg-slate-200 transition-all group"
+              className="btn-modern-ghost"
             >
               <Smartphone
                 className="group-hover:rotate-12 transition-transform"

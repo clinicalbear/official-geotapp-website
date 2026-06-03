@@ -4,6 +4,7 @@ import { Check, Heart } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
+import GeoBadge from '@/components/GeoBadge';
 // Removed framer-motion import on this page: the only usage was a `whileInView`
 // reveal on the price cards. That single intersection-observer driven animation
 // pulled framer-motion into the pricing route bundle (~50KB gz) and contributed
@@ -248,9 +249,7 @@ export default function Pricing() {
     <div className="pt-32 pb-20 px-6 min-h-screen bg-background text-slate-900">
       <div className="container mx-auto max-w-4xl text-center mb-20">
         <div>
-          <span className="px-4 py-2 rounded-full border border-blue-100 bg-blue-50 text-blue-600 text-xs font-bold uppercase tracking-widest mb-6 inline-block">
-            {dict.pricing.badge}
-          </span>
+          <GeoBadge className="mb-6">{dict.pricing.badge}</GeoBadge>
           <h1 className="text-5xl md:text-7xl font-display font-bold text-slate-900 mb-8 leading-tight">
             <span
               dangerouslySetInnerHTML={{ __html: dict.pricing.title }}

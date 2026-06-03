@@ -361,29 +361,32 @@ a:hover {
 .gt-category-filter {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 0.5rem;
-  padding: 1rem 0;
-  border-bottom: 1px solid #e2e8f0;
+  padding: 0.5rem 0 1.25rem;
 }
 .gt-category-filter button {
-  padding: 0.35rem 1rem;
-  border-radius: 999px;
-  border: 2px solid #e2e8f0;
-  background: white;
-  font-size: 0.8rem;
+  padding: 0.5rem 1.15rem;
+  border-radius: 9999px;
+  border: 1px solid #e8edf3;
+  background: #fff;
+  font-size: 0.82rem;
   font-weight: 600;
-  color: #475569;
+  color: #64748b;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: transform 0.22s cubic-bezier(0.22,1,0.36,1), box-shadow 0.22s ease, border-color 0.22s ease, color 0.22s ease, background 0.22s ease;
 }
 .gt-category-filter button:hover {
-  border-color: #3BAEE0;
-  color: #3BAEE0;
+  border-color: rgba(143,196,54,0.45);
+  color: #5a9e2a;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(143,196,54,0.14);
 }
 .gt-category-filter button.active {
-  border-color: #3BAEE0;
-  background: #3BAEE0;
-  color: white;
+  border-color: transparent;
+  background: linear-gradient(120deg,#5a9e2a 0%,#3a9e6f 48%,#2a8fc4 100%);
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(42,143,196,0.32);
 }
 
 /* ===== BLOG — CARD CATEGORY SHADOW ===== */
@@ -862,3 +865,185 @@ a:hover {
   border-radius: 9999px;
   background: var(--geo-grad);
 }
+
+/* ════════════════════════════════════════════════════════════════════
+   GEOTAPP — LOOK "TECNICO / INGEGNERIZZATO" (2026-06-03)
+   Griglia strutturale, monospace per la strumentazione, angoli netti,
+   ombre dure offset, alto contrasto. Anti-template.
+   ════════════════════════════════════════════════════════════════════ */
+
+.font-mono-tech {
+  font-family: ui-monospace, 'JetBrains Mono', 'SF Mono', 'SFMono-Regular', Menlo, Consolas, 'Liberation Mono', monospace;
+  font-feature-settings: 'tnum' 1;
+}
+
+/* Griglia tecnica di sfondo (sottile) */
+.tech-grid {
+  background-image:
+    linear-gradient(rgba(15, 23, 42, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, 0.045) 1px, transparent 1px);
+  background-size: 34px 34px;
+  background-position: center;
+}
+
+/* Cornice tecnica (bordo netto, sottile) */
+.tech-frame {
+  border: 1px solid #0f172a;
+  border-radius: 2px;
+}
+
+/* Bottone primario "ingegnerizzato": lime, angoli netti, ombra dura offset */
+.btn-tech {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.95rem 1.7rem;
+  border-radius: 2px;
+  font-family: ui-monospace, 'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--geo-ink);
+  background: var(--geo-green);
+  border: 1.5px solid #0f172a;
+  box-shadow: 4px 4px 0 0 #0f172a;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.15s ease;
+}
+.btn-tech:hover { transform: translate(2px, 2px); box-shadow: 2px 2px 0 0 #0f172a; background: #9ed13f; }
+.btn-tech:active { transform: translate(4px, 4px); box-shadow: 0 0 0 0 #0f172a; }
+
+.btn-tech-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.95rem 1.7rem;
+  border-radius: 2px;
+  font-family: ui-monospace, 'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #0f172a;
+  background: #fff;
+  border: 1.5px solid #0f172a;
+  box-shadow: 4px 4px 0 0 #cbd5e1;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.btn-tech-ghost:hover { transform: translate(2px, 2px); box-shadow: 2px 2px 0 0 #cbd5e1; }
+
+/* Chip-etichetta monospace tipo strumento di misura */
+.tech-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: ui-monospace, 'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #475569;
+  background: #fff;
+  border: 1px solid #cbd5e1;
+  border-radius: 2px;
+  padding: 0.3rem 0.6rem;
+}
+
+/* ════════════════════════════════════════════════════════════════════
+   GEOTAPP — LOOK "MODERNO / ACCATTIVANTE" (2026-06-03)
+   Aurora animata brand, profondità, fluttuazione, pin GPS che pulsa,
+   bottone gradiente con glow. Fluido e sorprendente, niente angoli duri.
+   ════════════════════════════════════════════════════════════════════ */
+
+@keyframes geo-aurora-1 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(6%,-8%) scale(1.18); } }
+@keyframes geo-aurora-2 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(-7%,6%) scale(1.12); } }
+@keyframes geo-aurora-3 { 0%,100% { transform: translate(0,0) scale(1.05); } 50% { transform: translate(5%,7%) scale(0.92); } }
+@keyframes geo-float { 0%,100% { transform: translateY(0) rotate(-1.5deg); } 50% { transform: translateY(-16px) rotate(-1.5deg); } }
+@keyframes geo-float-chip { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+@keyframes geo-pin-pulse { 0% { transform: scale(0.5); opacity: 0.65; } 70% { transform: scale(2.4); opacity: 0; } 100% { opacity: 0; } }
+@keyframes geo-pin-drop { 0% { transform: translateY(-18px) scale(0.6); opacity: 0; } 60% { transform: translateY(2px) scale(1.05); opacity: 1; } 100% { transform: translateY(0) scale(1); opacity: 1; } }
+
+.geo-aurora { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+.geo-aurora span { position: absolute; border-radius: 9999px; filter: blur(90px); opacity: 0.55; will-change: transform; }
+.geo-aurora .a1 { width: 46vw; height: 46vw; top: -14%; right: -8%; background: radial-gradient(circle, rgba(143,196,54,0.55), transparent 70%); animation: geo-aurora-1 16s ease-in-out infinite; }
+.geo-aurora .a2 { width: 42vw; height: 42vw; bottom: -18%; left: -10%; background: radial-gradient(circle, rgba(59,174,224,0.5), transparent 70%); animation: geo-aurora-2 20s ease-in-out infinite; }
+.geo-aurora .a3 { width: 34vw; height: 34vw; top: 20%; left: 30%; background: radial-gradient(circle, rgba(92,192,138,0.4), transparent 70%); animation: geo-aurora-3 24s ease-in-out infinite; }
+
+.geo-float { animation: geo-float 7s ease-in-out infinite; }
+.geo-float-chip { animation: geo-float-chip 4.5s ease-in-out infinite; }
+.geo-pin-drop { animation: geo-pin-drop 0.7s cubic-bezier(0.34,1.56,0.64,1) 0.4s both; }
+.geo-pin-ring { animation: geo-pin-pulse 2.4s ease-out infinite; }
+
+.geo-glass { background: rgba(255,255,255,0.65); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border: 1px solid rgba(255,255,255,0.7); box-shadow: 0 30px 70px -20px rgba(15,23,42,0.35), 0 10px 30px -15px rgba(59,174,224,0.25); }
+
+.btn-modern {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+  padding: 1rem 2rem; border-radius: 9999px; font-weight: 700; font-size: 1.0625rem; color: #fff;
+  background: linear-gradient(120deg, #5a9e2a 0%, #3a9e6f 48%, #2a8fc4 100%);
+  box-shadow: 0 12px 30px rgba(42,143,196,0.35), 0 4px 10px rgba(90,158,42,0.25);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+}
+.btn-modern:hover { transform: translateY(-3px); box-shadow: 0 20px 44px rgba(42,143,196,0.45), 0 6px 16px rgba(90,158,42,0.3); filter: brightness(1.06); }
+
+.btn-modern-ghost {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+  padding: 1rem 2rem; border-radius: 9999px; font-weight: 700; font-size: 1.0625rem; color: #334155;
+  background: rgba(255,255,255,0.7); backdrop-filter: blur(8px); border: 1px solid #e2e8f0;
+  transition: all 0.25s ease;
+}
+.btn-modern-ghost:hover { border-color: var(--geo-green); color: var(--geo-green-deep); transform: translateY(-2px); box-shadow: 0 10px 24px rgba(143,196,54,0.18); }
+
+/* Card moderna coerente con l'hero: ombra morbida a strati, hover che si
+   solleva con glow brand, bordo che vira al verde. */
+.card-modern {
+  background: #fff;
+  border: 1px solid #eef2f7;
+  border-radius: 26px;
+  box-shadow: 0 1px 2px rgba(15,23,42,0.04), 0 14px 34px -20px rgba(15,23,42,0.14);
+  transition: transform 0.32s cubic-bezier(0.22,1,0.36,1), box-shadow 0.32s ease, border-color 0.32s ease;
+}
+.card-modern:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 1px 2px rgba(15,23,42,0.04), 0 28px 54px -22px rgba(59,174,224,0.3);
+  border-color: rgba(143,196,54,0.45);
+}
+/* Cerchio icona con gradiente brand morbido */
+.icon-grad-green { background: linear-gradient(135deg, rgba(143,196,54,0.18), rgba(59,174,224,0.14)); color: #5a9e2a; }
+.icon-grad-rose { background: linear-gradient(135deg, rgba(244,63,94,0.14), rgba(249,115,22,0.12)); color: #e11d48; }
+
+/* ── Larghezza contenuti standard (desktop/tablet); mobile invariato ── */
+.container-geo {
+  width: 100%;
+  max-width: 72rem; /* 1152px */
+  margin-inline: auto;
+  padding-inline: 1.5rem; /* mobile */
+}
+@media (min-width: 768px) { .container-geo { padding-inline: 2rem; } }
+
+/* ── Tinte d'area che sfumano (zone di colore diversificate) ── */
+:root {
+  --area-mint: #f0f8e6; /* verde tenue */
+  --area-sky:  #e9f3fb; /* blu tenue */
+  --area-warm: #fbf0ee; /* caldo/rosa tenue */
+  --area-lilac:#f3f0fb; /* lilla tenue (Flow) */
+}
+
+/* 6 — Status minimale (pallino gradiente + testo gradiente) */
+.geo-status { display: inline-flex; align-items: center; gap: 0.5rem; font-weight: 800; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.09em; }
+
+
+/* Sottolineatura premium componibile (per la 6) */
+.geo-underline { position: relative; display: inline-block; padding-bottom: 6px; }
+.geo-underline::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; border-radius: 9999px; background: var(--geo-grad); box-shadow: 0 2px 10px rgba(59,174,224,0.35); }
+
+/* Bottone moderno compatto (navbar, CTA piccoli) */
+.btn-modern-sm {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  padding: 0.6rem 1.15rem; border-radius: 9999px;
+  font-weight: 700; font-size: 0.875rem; color: #fff;
+  background: linear-gradient(120deg, #5a9e2a 0%, #3a9e6f 48%, #2a8fc4 100%);
+  box-shadow: 0 6px 16px rgba(42,143,196,0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+.btn-modern-sm:hover { transform: translateY(-2px); box-shadow: 0 10px 22px rgba(42,143,196,0.42); filter: brightness(1.06); }
