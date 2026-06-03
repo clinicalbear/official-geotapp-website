@@ -76,6 +76,7 @@ const TTBgCarousel = () => {
 };
 import { usePathname } from 'next/navigation';
 import { getDictionary } from '@/lib/i18n/dictionaries';
+import FounderViewTracker from '@/components/analytics/FounderViewTracker';
 import {
   DEFAULT_LOCALE,
   getLocaleFromPathname,
@@ -866,6 +867,7 @@ export default function Home() {
         const storyLabel = ({ it: 'La nostra storia', en: 'Our story', de: 'Unsere Geschichte', fr: 'Notre histoire', es: 'Nuestra historia', pt: 'A nossa história', nl: 'Ons verhaal', ru: 'Наша история', da: 'Vores historie', sv: 'Vår historia', nb: 'Vår historie' } as Record<string, string>)[currentLocale] ?? 'Our story';
         return (
           <section className="py-20 px-6 bg-slate-50 border-t border-slate-100">
+            <FounderViewTracker source="homepage_strip" />
             <div className="container mx-auto max-w-3xl">
               <div className="flex flex-col sm:flex-row items-center gap-6 sm:gap-8 text-center sm:text-left">
                 <img

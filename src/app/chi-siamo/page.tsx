@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import FounderViewTracker from '@/components/analytics/FounderViewTracker';
 import { Target, Users, Lock, Heart, Quote } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { getDictionary } from '@/lib/i18n/dictionaries';
@@ -88,6 +89,7 @@ export default function AboutPage() {
 
       {/* Founder */}
       <section className="container mx-auto px-6 max-w-4xl mb-24">
+        <FounderViewTracker source="chi_siamo" />
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
