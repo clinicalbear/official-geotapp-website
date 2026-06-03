@@ -59,10 +59,15 @@ export default function TrialPage() {
   const touchedFields = useRef<Set<string>>(new Set());
   const formStarted = useRef(false);
   const pageLoadTime = useRef(Date.now());
+  // CTA d'origine: consumeTrialSource() svuota il sessionStorage alla prima
+  // lettura (nel trial_page_view), quindi lo conserviamo qui per attribuire
+  // anche gli stage successivi del funnel — fino a trial_form_success.
+  const trialSource = useRef<string | null>(null);
 
   // Track page view with scroll depth + source attribution (CTA d'origine)
   useEffect(() => {
     const source = consumeTrialSource();
+    trialSource.current = source;
     trackEvent('trial_page_view', {
       locale: locale || 'it',
       ...(source ? { cta_source: source } : {}),
@@ -105,7 +110,7 @@ export default function TrialPage() {
   const trackFieldFocus = (fieldName: string) => {
     if (!formStarted.current) {
       formStarted.current = true;
-      trackEvent('trial_form_start', { first_field: fieldName, cta_locale: locale || 'it' });
+      trackEvent('trial_form_start', { first_field: fieldName, cta_locale: locale || 'it', ...(trialSource.current ? { cta_source: trialSource.current } : {}) });
     }
     touchedFields.current.add(fieldName);
     trackEvent('trial_field_focus', { field: fieldName });
@@ -120,6 +125,7 @@ export default function TrialPage() {
       fields_touched: touchedFields.current.size.toString(),
       time_to_submit: timeOnPage.toString(),
       locale: locale || 'it',
+      ...(trialSource.current ? { cta_source: trialSource.current } : {}),
     });
     try {
       const saasUrl = process.env.NEXT_PUBLIC_SAAS_URL || 'https://crm.geotapp.com';
@@ -137,7 +143,7 @@ export default function TrialPage() {
       if (!res.ok) throw new Error(data.error || d.error_message);
       setSubmittedEmail(email);
       setSubmitted(true);
-      trackEvent('trial_form_success', { cta_locale: locale || 'it' });
+      trackEvent('trial_form_success', { cta_locale: locale || 'it', ...(trialSource.current ? { cta_source: trialSource.current } : {}) });
     } catch (err: any) {
       setError(err.message);
       trackEvent('trial_form_error', { error: err.message, cta_locale: locale || 'it' });
