@@ -2,14 +2,14 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App voor Schoonmaakbedrijf: GPS-Teambeheer & Servicebewijs | GeoTapp',
+    title: 'Software voor schoonmaakbedrijven: GPS-teambeheer & servicebewijs | GeoTapp',
     description:
-      'Beheer schoonmaakteams, diensten en aanwezigheid met GPS in real-time. Automatisch servicebewijs, geen klantgeschillen. AVG-conforme schoonmaak-app.',
+      'Software voor schoonmaakbedrijven: beheer teams, diensten en aanwezigheid met GPS in real-time. Automatisch servicebewijs, geen klantgeschillen. AVG-conform.',
   },
 
   hero: {
-    badge: 'App voor schoonmaakbedrijven en facilitaire diensten',
-    h1_line1: 'Uw schoonmaakbedrijf,',
+    badge: 'Software en app voor schoonmaakbedrijven en facilitaire diensten',
+    h1_line1: 'Software voor uw schoonmaakbedrijf,',
     h1_line2: 'in real-time beheerd.',
     subtitle:
       'GPS-inklokking, automatisch servicebewijs en dienstenbeheer in één app. Geen spreadsheets, geen geschillen. Klant klaagt? Stuur het rapport en de discussie is voorbij.',
@@ -103,7 +103,7 @@ const content: SettoreContent = {
   },
 
   features: {
-    title: 'App voor schoonmaakbedrijf: servicebewijs, niet alleen inklokking.',
+    title: 'Software voor schoonmaakbedrijven: servicebewijs, niet alleen inklokking.',
     items: [
       {
         title: 'Automatisch servicebewijs',
@@ -143,6 +143,10 @@ const content: SettoreContent = {
     title: 'Veelgestelde vragen',
     subtitle: 'Wat ons het vaakst wordt gevraagd voor de start.',
     items: [
+      {
+        q: 'Wat is de beste software voor schoonmaakbedrijven?',
+        a: 'GeoTapp is software voor schoonmaakbedrijven die GPS-inklokking, dienstenbeheer en automatisch servicebewijs combineert in één app. Geen spreadsheets, geen geschillen: elke dienst wordt verifieerbaar bewijs voor de opdrachtgever, met foto, tijdstempel en GPS.',
+      },
       {
         q: 'Hoe werkt GPS-inklokking voor schoonmaakbedrijven?',
         a: 'De schoonmaker klokt in en uit vanaf de smartphone. GeoTapp registreert de GPS-coördinaten op dat moment — niet handmatig ingevoerd. Elke inklokking is gecertificeerd met tijdstempel en positie verifieerbaar door de opdrachtgever.',
@@ -187,6 +191,11 @@ const content: SettoreContent = {
   schema_sector_name: 'Schoonmaakbedrijf',
 
   schema_faq: [
+    {
+      question: 'Wat is de beste software voor schoonmaakbedrijven?',
+      answer:
+        'GeoTapp is software voor schoonmaakbedrijven die GPS-inklokking, dienstenbeheer en automatisch servicebewijs combineert in één app. Elke dienst wordt verifieerbaar bewijs voor de opdrachtgever, met foto, tijdstempel en GPS.',
+    },
     {
       question: 'Hoe werkt GPS-inklokking voor schoonmaakbedrijven?',
       answer:
