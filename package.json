@@ -15,7 +15,7 @@
     "check:blog": "node scripts/check-blog-hubs.mjs"
   },
   "dependencies": {
-    "@geotapp/report-verifier": "file:../geotapp-report-verifier/geotapp-report-verifier-0.2.1.tgz",
+    "@geotapp/report-verifier": "file:vendor/geotapp-report-verifier-0.2.1.tgz",
     "@opentelemetry/api": "^1.9.0",
     "@stripe/stripe-js": "^8.6.1",
     "@types/jquery": "^3.5.33",
