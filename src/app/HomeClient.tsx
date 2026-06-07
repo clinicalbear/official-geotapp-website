@@ -541,7 +541,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
               <div className="mb-4">
-                <img src="/TimeTrackerTrasparente.webp" alt="GeoTapp TimeTracker" width="200" height="43" loading="lazy" decoding="async" className="h-10 w-auto object-contain" />
+                <img src="/logoTT.webp" alt="GeoTapp TimeTracker" width="108" height="40" loading="lazy" decoding="async" className="h-10 w-auto object-contain" />
               </div>
               <h3 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
                 {dict.home_sections.app.title}
