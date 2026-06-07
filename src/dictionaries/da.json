@@ -84,7 +84,30 @@
     "hero_sectors_pulizie": "rengøringsvirksomheder",
     "hero_sectors_installatori": "installatører",
     "hero_sectors_sicurezza": "sikkerhedstjenester",
-    "hero_sectors_and": "og"
+    "hero_sectors_and": "og",
+    "clockin_demo": {
+      "step_clock": "Stempl ind",
+      "step_gps": "GPS verificeret",
+      "step_photo": "Foto på stedet",
+      "step_sealed": "Forseglet",
+      "caption": "Én stempling. GPS, foto og tidspunkt, forseglet. Kan ikke laves om, kan ikke diskuteres.",
+      "replay": "Se igen"
+    },
+    "roi_mini": {
+      "title": "Hvad koster det dig ikke at kunne bevise det?",
+      "subtitle": "Tre tal, et ærligt estimat. På to sekunder, uden e-mail.",
+      "field_operatori": "Medarbejdere",
+      "field_costo": "Timepris (€)",
+      "field_contestazioni": "Tvister pr. måned",
+      "result_prefix": "Du efterlader hvert år cirka",
+      "result_suffix": "på bordet",
+      "disclaimer": "Minimumsestimat (tvister + koordinering). Det fulde regnskab, post for post, står i rapporten.",
+      "email_label": "Vil du have den detaljerede rapport og sammenligningen med din branche?",
+      "email_placeholder": "Din arbejdsmail",
+      "email_cta": "Send mig rapporten + start prøveperioden",
+      "email_ok": "Gjort. Tjek din indbakke om lidt.",
+      "email_err": "Noget gik galt. Prøv igen."
+    }
   },
   "home_sections": {
     "flow": {

@@ -84,7 +84,30 @@
     "hero_sectors_pulizie": "empresas de limpieza",
     "hero_sectors_installatori": "instaladores",
     "hero_sectors_sicurezza": "servicios de seguridad",
-    "hero_sectors_and": "y"
+    "hero_sectors_and": "y",
+    "clockin_demo": {
+      "step_clock": "Fichar",
+      "step_gps": "GPS verificado",
+      "step_photo": "Foto en el sitio",
+      "step_sealed": "Sellado",
+      "caption": "Un fichaje. GPS, foto y hora, sellados. No se repite, no se discute.",
+      "replay": "Volver a ver"
+    },
+    "roi_mini": {
+      "title": "¿Cuánto te cuesta no poder demostrarlo?",
+      "subtitle": "Tres números, una estimación honesta. En dos segundos, sin correo.",
+      "field_operatori": "Operarios",
+      "field_costo": "Coste por hora (€)",
+      "field_contestazioni": "Reclamaciones al mes",
+      "result_prefix": "Estás dejando sobre la mesa unos",
+      "result_suffix": "al año",
+      "disclaimer": "Estimación mínima (disputas + coordinación). La cuenta completa, partida por partida, está en el informe.",
+      "email_label": "¿Quieres el informe detallado y la comparación con tu sector?",
+      "email_placeholder": "Tu correo de trabajo",
+      "email_cta": "Mándame el informe + empieza la prueba",
+      "email_ok": "Hecho. Revisa el correo en un momento.",
+      "email_err": "Algo no ha funcionado. Inténtalo de nuevo."
+    }
   },
   "home_sections": {
     "flow": {

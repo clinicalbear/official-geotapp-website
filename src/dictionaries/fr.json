@@ -84,7 +84,30 @@
     "hero_sectors_pulizie": "entreprises de nettoyage",
     "hero_sectors_installatori": "installateurs",
     "hero_sectors_sicurezza": "services de sécurité",
-    "hero_sectors_and": "et"
+    "hero_sectors_and": "et",
+    "clockin_demo": {
+      "step_clock": "Pointer",
+      "step_gps": "GPS vérifié",
+      "step_photo": "Photo sur place",
+      "step_sealed": "Scellé",
+      "caption": "Un pointage. GPS, photo et heure, scellés. Impossible à refaire, impossible à contester.",
+      "replay": "Revoir"
+    },
+    "roi_mini": {
+      "title": "Combien ça te coûte de ne pas pouvoir le prouver ?",
+      "subtitle": "Trois chiffres, une estimation honnête. En deux secondes, sans e-mail.",
+      "field_operatori": "Opérateurs",
+      "field_costo": "Coût horaire (€)",
+      "field_contestazioni": "Litiges par mois",
+      "result_prefix": "Tu laisses filer environ",
+      "result_suffix": "par an",
+      "disclaimer": "Estimation minimale (litiges + coordination). Le calcul complet, poste par poste, est dans le rapport.",
+      "email_label": "Tu veux le rapport détaillé et la comparaison avec ton secteur ?",
+      "email_placeholder": "Ton e-mail professionnel",
+      "email_cta": "Envoie-moi le rapport + démarre l'essai",
+      "email_ok": "C'est fait. Regarde ta boîte dans un instant.",
+      "email_err": "Quelque chose n'a pas marché. Réessaie."
+    }
   },
   "home_sections": {
     "flow": {

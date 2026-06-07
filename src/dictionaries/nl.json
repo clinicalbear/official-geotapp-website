@@ -84,7 +84,30 @@
     "hero_sectors_pulizie": "schoonmaakbedrijven",
     "hero_sectors_installatori": "installateurs",
     "hero_sectors_sicurezza": "beveiligingsdiensten",
-    "hero_sectors_and": "en"
+    "hero_sectors_and": "en",
+    "clockin_demo": {
+      "step_clock": "Inklokken",
+      "step_gps": "GPS gecontroleerd",
+      "step_photo": "Foto ter plaatse",
+      "step_sealed": "Verzegeld",
+      "caption": "Eén klokslag. GPS, foto en tijd, verzegeld. Niet over te doen, niet over te discussiëren.",
+      "replay": "Opnieuw bekijken"
+    },
+    "roi_mini": {
+      "title": "Wat kost het je als je het niet kunt bewijzen?",
+      "subtitle": "Drie cijfers, een eerlijke schatting. In twee seconden, zonder e-mail.",
+      "field_operatori": "Medewerkers",
+      "field_costo": "Uurtarief (€)",
+      "field_contestazioni": "Geschillen per maand",
+      "result_prefix": "Je laat per jaar ongeveer",
+      "result_suffix": "liggen",
+      "disclaimer": "Minimale schatting (geschillen + coördinatie). De volledige rekening, post voor post, staat in het rapport.",
+      "email_label": "Wil je het gedetailleerde rapport en de vergelijking met jouw sector?",
+      "email_placeholder": "Je zakelijke e-mail",
+      "email_cta": "Stuur me het rapport + start de proef",
+      "email_ok": "Klaar. Kijk zo even in je mailbox.",
+      "email_err": "Er ging iets mis. Probeer het opnieuw."
+    }
   },
   "home_sections": {
     "flow": {

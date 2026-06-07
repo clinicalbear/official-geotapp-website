@@ -84,7 +84,30 @@
     "hero_sectors_pulizie": "städföretag",
     "hero_sectors_installatori": "installatörer",
     "hero_sectors_sicurezza": "säkerhetstjänster",
-    "hero_sectors_and": "och"
+    "hero_sectors_and": "och",
+    "clockin_demo": {
+      "step_clock": "Stämpla in",
+      "step_gps": "GPS verifierad",
+      "step_photo": "Foto på plats",
+      "step_sealed": "Förseglat",
+      "caption": "En stämpling. GPS, foto och tid, förseglade. Kan inte göras om, kan inte ifrågasättas.",
+      "replay": "Se igen"
+    },
+    "roi_mini": {
+      "title": "Vad kostar det dig att inte kunna bevisa det?",
+      "subtitle": "Tre siffror, en ärlig uppskattning. På två sekunder, utan e-post.",
+      "field_operatori": "Anställda",
+      "field_costo": "Timkostnad (€)",
+      "field_contestazioni": "Tvister per månad",
+      "result_prefix": "Du lämnar varje år ungefär",
+      "result_suffix": "på bordet",
+      "disclaimer": "Minimiuppskattning (tvister + samordning). Hela kalkylen, post för post, finns i rapporten.",
+      "email_label": "Vill du ha den detaljerade rapporten och jämförelsen med din bransch?",
+      "email_placeholder": "Din jobbmejl",
+      "email_cta": "Skicka mig rapporten + starta provperioden",
+      "email_ok": "Klart. Kolla inkorgen om en stund.",
+      "email_err": "Något gick fel. Försök igen."
+    }
   },
   "home_sections": {
     "flow": {

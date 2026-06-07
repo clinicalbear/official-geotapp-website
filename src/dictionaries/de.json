@@ -84,7 +84,30 @@
     "hero_sectors_pulizie": "Reinigungsunternehmen",
     "hero_sectors_installatori": "Installateure",
     "hero_sectors_sicurezza": "Sicherheitsdienste",
-    "hero_sectors_and": "und"
+    "hero_sectors_and": "und",
+    "clockin_demo": {
+      "step_clock": "Stempeln",
+      "step_gps": "GPS geprüft",
+      "step_photo": "Foto vor Ort",
+      "step_sealed": "Versiegelt",
+      "caption": "Eine Stempelung. GPS, Foto und Uhrzeit, versiegelt. Nicht wiederholbar, nicht diskutierbar.",
+      "replay": "Nochmal ansehen"
+    },
+    "roi_mini": {
+      "title": "Was kostet es dich, wenn du es nicht beweisen kannst?",
+      "subtitle": "Drei Zahlen, eine ehrliche Schätzung. In zwei Sekunden, ohne E-Mail.",
+      "field_operatori": "Mitarbeiter",
+      "field_costo": "Stundensatz (€)",
+      "field_contestazioni": "Reklamationen pro Monat",
+      "result_prefix": "Du lässt jedes Jahr ungefähr",
+      "result_suffix": "liegen",
+      "disclaimer": "Mindestschätzung (Streitfälle + Koordination). Die vollständige Rechnung, Posten für Posten, steht im Report.",
+      "email_label": "Willst du den ausführlichen Report und den Vergleich mit deiner Branche?",
+      "email_placeholder": "Deine geschäftliche E-Mail",
+      "email_cta": "Report schicken + Trial starten",
+      "email_ok": "Erledigt. Schau gleich in dein Postfach.",
+      "email_err": "Etwas hat nicht geklappt. Versuch es nochmal."
+    }
   },
   "home_sections": {
     "flow": {
