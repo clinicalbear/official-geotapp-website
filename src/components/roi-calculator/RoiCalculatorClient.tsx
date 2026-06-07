@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import type { AppLocale } from '@/lib/i18n/config';
+import type { RoiResult } from '@/lib/roi';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import { trackEvent } from '@/lib/analytics';
 type RoiDict = ReturnType<typeof getDictionary>['roi'];
@@ -25,16 +26,6 @@ interface FormData {
   nome: string;
   email: string;
   telefono: string;
-}
-
-interface RoiResult {
-  risparmio_admin: number;
-  risparmio_dispute: number;
-  risparmio_coord: number;
-  risparmio_totale: number;
-  costo_geotapp_annuo: number;
-  payback_mesi: number;
-  roi_pct: number;
 }
 
 // Settori disponibili nel selettore. Allineati ai 10 settori reali del sito

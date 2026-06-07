@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
+import { calcRoi } from '@/lib/roi';
 
 interface RoiPayload {
   settore: string;
@@ -153,31 +154,6 @@ async function subscribeToNewsletterLegacy(
   } catch (err) {
     console.error('[roi-calculator] MailerLite call error:', err);
   }
-}
-
-interface RoiResult {
-  risparmio_admin: number;
-  risparmio_dispute: number;
-  risparmio_coord: number;
-  risparmio_totale: number;
-  costo_geotapp_annuo: number;
-  payback_mesi: number;
-  roi_pct: number;
-}
-
-function calcRoi(p: RoiPayload): RoiResult {
-  const risparmio_admin = p.ore_admin * 0.65 * p.costo_orario * 52;
-  const risparmio_dispute = p.contestazioni * 12 * 180;
-  const risparmio_coord = p.operatori * 1.0 * p.costo_orario * 52;
-  const risparmio_totale = risparmio_admin + risparmio_dispute + risparmio_coord;
-  const costo_geotapp_annuo = p.operatori * 25 * 12;
-  const payback_mesi = risparmio_totale > 0
-    ? Math.ceil(costo_geotapp_annuo / (risparmio_totale / 12))
-    : 0;
-  const roi_pct = costo_geotapp_annuo > 0
-    ? Math.round((risparmio_totale - costo_geotapp_annuo) / costo_geotapp_annuo * 100)
-    : 0;
-  return { risparmio_admin, risparmio_dispute, risparmio_coord, risparmio_totale, costo_geotapp_annuo, payback_mesi, roi_pct };
 }
 
 function fmt(n: number) {
