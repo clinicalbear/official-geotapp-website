@@ -25,6 +25,7 @@ const HeartbeatLine = dynamic(() => import('@/components/HeartbeatLine'), { ssr:
 const FlowCarousel = dynamic(() => import('@/components/FlowCarousel'), { ssr: false });
 const TTCarousel = dynamic(() => import('@/components/TTCarousel'), { ssr: false });
 const VerifierMockup = dynamic(() => import('@/components/VerifierMockup'), { ssr: false });
+const ClockInDemo = dynamic(() => import('@/components/ClockInDemo'), { ssr: false, loading: () => <div className="hidden md:block" /> });
 
 
 // UI MOCKUP COMPONENTS (Built with Tailwind for "Real Example" feel)
@@ -312,30 +313,9 @@ export default function Home() {
               </div>
             </motion.div>
 
-            {/* Visual fluttuante con pin GPS */}
+            {/* Visual fluttuante: demo interattiva timbratura (mock) */}
             <motion.div initial={{ opacity: 0, scale: 0.92, y: 30 }} animate={{ opacity: 1, scale: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.15 }} className="relative hidden md:block">
-              <div className="geo-glass geo-float rounded-[28px] p-3">
-                <img src="/screen_live_map.webp" alt="GeoTapp live map" width={640} height={420} className="rounded-[20px] w-full h-auto" />
-              </div>
-              {/* Pin GPS che cade + pulsa */}
-              <div className="absolute" style={{ top: '37%', left: '45%' }}>
-                <span className="absolute -inset-3 rounded-full bg-[#8FC436]/40 geo-pin-ring" />
-                <div className="geo-pin-drop relative w-11 h-11 rounded-full bg-white shadow-lg shadow-[#8FC436]/40 flex items-center justify-center ring-2 ring-[#8FC436]">
-                  <MapPin size={22} className="text-[#5a9e2a]" />
-                </div>
-              </div>
-              {/* Chip dato verificato */}
-              <div className="absolute -bottom-5 -left-5 geo-glass geo-float-chip rounded-2xl px-4 py-3 flex items-center gap-2.5">
-                <div className="w-9 h-9 rounded-full bg-emerald-500 flex items-center justify-center shadow-md shadow-emerald-500/30"><ShieldCheck size={18} className="text-white" /></div>
-                <div className="font-mono-tech text-[11px] leading-tight text-slate-600">
-                  <div className="text-slate-900 font-bold">GPS 44.41&deg;N</div>
-                  <div>08:12 &middot; sealed</div>
-                </div>
-              </div>
-              {/* Live */}
-              <div className="absolute -top-3 right-6 geo-glass rounded-full px-3 py-1.5 flex items-center gap-1.5 text-xs font-semibold text-slate-700">
-                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" /> Live
-              </div>
+              <ClockInDemo dict={dict} />
             </motion.div>
           </div>
         </div>
