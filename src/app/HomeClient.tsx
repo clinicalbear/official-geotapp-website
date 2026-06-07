@@ -90,6 +90,7 @@ const DemoReportBanner = dynamic(() => import('@/components/DemoReportBanner'), 
 const TrustBar = dynamic(() => import('@/components/TrustBar'), { ssr: true });
 const ListedOn = dynamic(() => import('@/components/ListedOn'), { ssr: true });
 const Reviews = dynamic(() => import('@/components/Reviews'), { ssr: true });
+const RoiMini = dynamic(() => import('@/components/RoiMini'), { ssr: true });
 
 
 const DIFF_COPY: Record<string, { h2_1: string; h2_2: string; desc: string; link: string }> = {
@@ -337,6 +338,13 @@ export default function Home() {
               </div>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* ROI MINI — calcolatore risparmio sotto l'hero (mai above-the-fold / non LCP) */}
+      <section className="py-20 bg-gradient-to-b from-[#f0f8e6] via-white to-white">
+        <div className="container-geo">
+          <RoiMini dict={dict} locale={currentLocale} />
         </div>
       </section>
 
