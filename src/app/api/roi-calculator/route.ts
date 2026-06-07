@@ -14,6 +14,8 @@ interface RoiPayload {
   telefono?: string;
   locale: string;
   subscribe_newsletter?: boolean;
+  /** Origine del lead: 'mini' = mini-calcolatore homepage, undefined = form completo. Ignorato lato server. */
+  source?: string;
 }
 
 const ML_API = 'https://connect.mailerlite.com/api';
@@ -176,9 +178,14 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Invalid JSON' }, { status: 400 });
   }
 
-  const { settore, operatori, siti, ore_admin, contestazioni, costo_orario, nome, email } = body;
+  const { operatori, siti, ore_admin, contestazioni, costo_orario, email } = body;
+  // Solo l'email è obbligatoria: il mini-calcolatore (source: 'mini') invia
+  // nome vuoto e nessun settore esplicito. Default settore a 'altro' e nome a ''
+  // per non rompere il flusso del form completo (che continua a inviarli).
+  const settore = body.settore || 'altro';
+  const nome = body.nome ?? '';
 
-  if (!settore || !nome || !email) {
+  if (!email) {
     return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
   }
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
