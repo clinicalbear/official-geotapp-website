@@ -6,6 +6,10 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://geotapp.com'),
+  // Facebook/Meta Business domain verification (Events Manager / domain ownership).
+  other: {
+    'facebook-domain-verification': 'a3lsnm3iee2gxdgt6b6npm6k39mfx3',
+  },
   title: {
     // Neutral fallback — locale-specific pages override with title: { absolute: '...' }.
     // Keeping this brand-only avoids an Italian title leaking onto EN/DE/FR pages that
