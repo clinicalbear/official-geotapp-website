@@ -1,0 +1,58 @@
+name: Deploy site (Cloudflare Workers)
+
+# Deploy geotapp.com (OpenNext on Cloudflare Workers) from THIS repo.
+# Built dormant: workflow_dispatch ONLY, so committing it deploys nothing.
+# First run is launched by hand from the Actions tab, AFTER the secrets exist.
+#
+# REQUIRED SECRETS (repo Settings → Secrets and variables → Actions):
+#   CLOUDFLARE_API_TOKEN  (token with "Edit Cloudflare Workers")
+#   CF_ACCOUNT_ID         (34a3e90dabdb6c10eb33f37259fafca4)
+#
+# GO LIVE: after a clean dispatch run, uncomment the `push:` block to auto-deploy.
+
+"on":
+  workflow_dispatch: {}
+  # push:
+  #   branches: [main]
+
+concurrency:
+  group: deploy-site-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install deps
+        run: npm ci || npm install
+
+      - name: Capture current Version ID (for rollback)
+        id: prev
+        run: |
+          set +e
+          VID="$(npx wrangler deployments list -c wrangler.jsonc 2>/dev/null \
+            | grep -iE 'Version ID|Deployment ID' | head -1 | awk '{print $NF}')"
+          echo "version_id=$VID" >> "$GITHUB_OUTPUT"
+          echo "Previous version: ${VID:-unknown}"
+
+      - name: Build + deploy (npm run deploy)
+        run: npm run deploy
+
+      - name: Healthcheck
+        id: health
+        run: bash ci/healthcheck.sh
+
+      - name: Rollback on failure
+        if: ${{ failure() && steps.health.outcome == 'failure' }}
+        run: |
+          echo "Healthcheck failed — rolling back Cloudflare Worker..."
+          npx wrangler rollback -c wrangler.jsonc --message "CI auto-rollback: failed healthcheck" \
+            || echo "wrangler rollback failed — check the Cloudflare dashboard manually."
