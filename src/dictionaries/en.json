@@ -106,7 +106,15 @@
       "email_placeholder": "Your work email",
       "email_cta": "Send me the report + start the trial",
       "email_ok": "Done. Check your inbox in a moment.",
-      "email_err": "Something went wrong. Try again."
+      "email_err": "Something went wrong. Try again.",
+      "pitch_kicker": "ROI Calculator",
+      "pitch_title": "The numbers you don't look at are the ones costing you.",
+      "pitch_body": "The hours lost to paperwork, the disputes you end up paying for, the coordination done by word of mouth. You don't feel them leaving the books, but they do. Drop in three numbers and see what it adds up to in a year: it usually surprises you, and not for the better.",
+      "pitch_points": [
+        "Every unpaid dispute weighs on you, twelve months out of twelve",
+        "Hours spent in the office are hours you don't bill",
+        "Two seconds and no email to see the number"
+      ]
     }
   },
   "home_sections": {

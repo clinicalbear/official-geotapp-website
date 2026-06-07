@@ -106,7 +106,15 @@
       "email_placeholder": "La tua email di lavoro",
       "email_cta": "Mandami il report + avvia il trial",
       "email_ok": "Fatto. Controlla la posta tra poco.",
-      "email_err": "Qualcosa non ha funzionato. Riprova."
+      "email_err": "Qualcosa non ha funzionato. Riprova.",
+      "pitch_kicker": "Calcolatore ROI",
+      "pitch_title": "I numeri che non guardi sono quelli che ti costano.",
+      "pitch_body": "Le ore in burocrazia, le contestazioni che paghi tu, il coordinamento fatto a voce. Non li senti uscire dal conto, ma escono. Mettici tre numeri e guarda quanto fa in un anno: di solito sorprende, e non in meglio.",
+      "pitch_points": [
+        "Ogni contestazione non pagata pesa, dodici mesi su dodici",
+        "Le ore passate in ufficio sono ore che non fatturi",
+        "Due secondi e nessuna email per vedere il numero"
+      ]
     }
   },
   "home_sections": {

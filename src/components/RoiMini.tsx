@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { CheckCircle2 } from 'lucide-react';
 import type { AppLocale } from '@/lib/i18n/config';
 import type { SiteDictionary } from '@/lib/i18n/dictionaries';
 import { calcRoi } from '@/lib/roi';
@@ -113,11 +114,32 @@ export default function RoiMini({ dict, locale }: Props) {
     'w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm';
 
   return (
-    <div className="geo-glass rounded-2xl border border-border shadow-lg p-6 sm:p-8 max-w-xl mx-auto">
-      <h3 className="text-xl sm:text-2xl font-bold text-text-primary">{t.title}</h3>
-      <p className="mt-2 text-sm text-text-secondary">{t.subtitle}</p>
+    <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+      {/* LEFT — pitch */}
+      <div>
+        <p className="geo-eyebrow mb-5">{t.pitch_kicker}</p>
+        <h2 className="font-display font-extrabold text-[2rem] sm:text-[2.5rem] lg:text-[2.9rem] leading-[1.08] tracking-tight text-slate-900 mb-5">
+          {t.pitch_title}
+        </h2>
+        <p className="text-base sm:text-lg text-text-secondary leading-relaxed mb-8 max-w-xl">
+          {t.pitch_body}
+        </p>
+        <ul className="space-y-4">
+          {t.pitch_points.map((point) => (
+            <li key={point} className="flex items-start gap-3">
+              <CheckCircle2 className="text-emerald-600 shrink-0 mt-0.5" size={22} />
+              <span className="text-slate-700 text-base sm:text-lg leading-snug">{point}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
 
-      <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4">
+      {/* RIGHT — calculator card */}
+      <div className="geo-glass rounded-[28px] border border-border shadow-xl p-6 sm:p-8 lg:p-10">
+        <h3 className="text-xl sm:text-2xl font-bold text-text-primary">{t.title}</h3>
+        <p className="mt-2 text-sm text-text-secondary">{t.subtitle}</p>
+
+        <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4">
         <div>
           <label htmlFor="roi-mini-operatori" className="block text-xs font-medium text-text-secondary mb-1">
             {t.field_operatori}
@@ -162,12 +184,12 @@ export default function RoiMini({ dict, locale }: Props) {
         </div>
       </div>
 
-      <div className="mt-6 rounded-xl bg-green-50 border border-green-200 p-5 text-center">
-        <p className="text-sm text-text-secondary">{t.result_prefix}</p>
-        <p className="text-3xl sm:text-4xl font-extrabold text-green-600 my-1" aria-live="polite">
-          {money}
+      <div className="mt-6 rounded-2xl bg-green-50 border border-green-200 p-5 text-center">
+        <p className="text-base sm:text-lg text-text-secondary leading-snug" aria-live="polite">
+          {t.result_prefix}{' '}
+          <span className="text-3xl sm:text-4xl font-extrabold text-green-600 align-middle">{money}</span>{' '}
+          {t.result_suffix}
         </p>
-        <p className="text-sm text-text-secondary">{t.result_suffix}</p>
         <p className="mt-3 text-xs text-text-secondary">{t.disclaimer}</p>
       </div>
 
@@ -218,7 +240,8 @@ export default function RoiMini({ dict, locale }: Props) {
         </button>
         {status === 'ok' && <p className="text-sm text-green-600 text-center">{t.email_ok}</p>}
         {status === 'err' && <p className="text-sm text-red-600 text-center">{t.email_err}</p>}
-      </form>
+        </form>
+      </div>
     </div>
   );
 }
