@@ -40,6 +40,8 @@ export default function RoiMini({ dict, locale }: Props) {
   const [email, setEmail] = useState('');
   const [settore, setSettore] = useState<SettoreKey>('altro');
   const [status, setStatus] = useState<'idle' | 'loading' | 'ok' | 'err'>('idle');
+  // Honeypot anti-spam: campo invisibile agli umani, riempito dai bot. Vedi route.ts.
+  const [hp, setHp] = useState('');
 
   const roi = calcRoi({
     operatori,
@@ -98,6 +100,7 @@ export default function RoiMini({ dict, locale }: Props) {
           locale,
           subscribe_newsletter: true,
           source: 'mini',
+          hp,
         }),
       });
       setStatus(res.ok ? 'ok' : 'err');
@@ -125,7 +128,7 @@ export default function RoiMini({ dict, locale }: Props) {
             min={1}
             inputMode="numeric"
             value={operatori}
-            onChange={(e) => setOperatori(num(e.target.value, 0))}
+            onChange={(e) => setOperatori(Math.max(1, num(e.target.value, 1)))}
             className={inputClass}
           />
         </div>
@@ -169,6 +172,17 @@ export default function RoiMini({ dict, locale }: Props) {
       </div>
 
       <form onSubmit={handleSubmit} className="mt-6 space-y-3">
+        {/* Honeypot: offscreen (non display:none, così i bot lo riempiono). Gli umani non lo vedono. */}
+        <input
+          type="text"
+          name="company_website"
+          value={hp}
+          onChange={(e) => setHp(e.target.value)}
+          tabIndex={-1}
+          autoComplete="off"
+          aria-hidden="true"
+          style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', opacity: 0 }}
+        />
         <label htmlFor="roi-mini-email" className="block text-sm font-medium text-text-primary">
           {t.email_label}
         </label>

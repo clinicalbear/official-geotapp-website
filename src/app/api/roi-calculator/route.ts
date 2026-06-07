@@ -14,8 +14,10 @@ interface RoiPayload {
   telefono?: string;
   locale: string;
   subscribe_newsletter?: boolean;
-  /** Origine del lead: 'mini' = mini-calcolatore homepage, undefined = form completo. Ignorato lato server. */
+  /** Origine del lead: 'mini' = mini-calcolatore homepage, undefined = form completo. */
   source?: string;
+  /** Honeypot anti-spam: se valorizzato, la richiesta è un bot e viene scartata silenziosamente. */
+  hp?: string;
 }
 
 const ML_API = 'https://connect.mailerlite.com/api';
@@ -73,6 +75,7 @@ async function notifyCrmLead(
   locale: string,
   telefono: string,
   roi: { savings: number; payback: number; roiPct: number; operatori: number },
+  source: string,
 ): Promise<void> {
   const crmUrl = process.env.CRM_LEAD_ENDPOINT;
   const secret = process.env.CRM_SYNC_SECRET;
@@ -94,6 +97,7 @@ async function notifyCrmLead(
         roi_payback_months: roi.payback,
         roi_pct: roi.roiPct,
         operatori: roi.operatori,
+        source,
       }),
     });
     if (!res.ok) {
@@ -178,12 +182,22 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Invalid JSON' }, { status: 400 });
   }
 
+  // Honeypot anti-spam: campo invisibile riempito solo dai bot. Se valorizzato,
+  // rispondiamo 200 ok senza inviare email né notificare il CRM (drop silenzioso,
+  // così il bot non capisce di essere stato filtrato). Deterministico, zero API.
+  if (typeof body.hp === 'string' && body.hp.trim() !== '') {
+    return NextResponse.json({ ok: true });
+  }
+
   const { operatori, siti, ore_admin, contestazioni, costo_orario, email } = body;
   // Solo l'email è obbligatoria: il mini-calcolatore (source: 'mini') invia
   // nome vuoto e nessun settore esplicito. Default settore a 'altro' e nome a ''
   // per non rompere il flusso del form completo (che continua a inviarli).
   const settore = body.settore || 'altro';
   const nome = body.nome ?? '';
+  // Origine del lead per distinguere homepage mini-calcolatore ('mini') dal form
+  // completo ('full'). Plumbato in email + notifica CRM.
+  const source = body.source || 'full';
 
   if (!email) {
     return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
@@ -225,6 +239,7 @@ export async function POST(req: NextRequest) {
       <tr><td style="padding:8px;border-top:1px solid #eee">Contestazioni/mese</td><td style="padding:8px;border-top:1px solid #eee">${escHtml(contestazioni)}</td></tr>
       <tr><td style="padding:8px;border-top:1px solid #eee">Costo orario</td><td style="padding:8px;border-top:1px solid #eee">€${escHtml(costo_orario)}</td></tr>
       <tr><td style="padding:8px;border-top:1px solid #eee">Lingua</td><td style="padding:8px;border-top:1px solid #eee">${escHtml(body.locale ?? '')}</td></tr>
+      <tr><td style="padding:8px;border-top:1px solid #eee">Origine</td><td style="padding:8px;border-top:1px solid #eee">${escHtml(source === 'mini' ? 'Mini-calcolatore homepage' : 'Form completo')}</td></tr>
     </table>
     <h3 style="margin-top:24px">Risultati ROI</h3>
     <table style="border-collapse:collapse;width:100%;max-width:600px">
@@ -242,7 +257,7 @@ export async function POST(req: NextRequest) {
     await transporter.sendMail({
       from: `"GeoTapp ROI Calculator" <${process.env.EMAIL_FROM ?? 'info@geotapp.com'}>`,
       to: toEmail,
-      subject: `Nuovo lead ROI: ${nome} (${settore}) — risparmio ${fmt(roi.risparmio_totale)}/anno`,
+      subject: `Nuovo lead ROI [${source === 'mini' ? 'mini' : 'full'}]: ${nome} (${settore}), risparmio ${fmt(roi.risparmio_totale)}/anno`,
       html: htmlBody,
     });
   } catch (err) {
@@ -268,6 +283,7 @@ export async function POST(req: NextRequest) {
         roiPct: roi.roi_pct,
         operatori,
       },
+      source,
     );
   }
 

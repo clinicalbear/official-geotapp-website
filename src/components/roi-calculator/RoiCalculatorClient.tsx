@@ -26,6 +26,8 @@ interface FormData {
   nome: string;
   email: string;
   telefono: string;
+  /** Honeypot anti-spam: invisibile agli umani, riempito dai bot. Vedi route.ts. */
+  hp: string;
 }
 
 // Settori disponibili nel selettore. Allineati ai 10 settori reali del sito
@@ -153,7 +155,7 @@ export default function RoiCalculatorClient({ dict, locale, trialUrl, embed = fa
   const [dir, setDir] = useState(1);
   const [form, setForm] = useState<FormData>({
     settore: '', operatori: 10, siti: 5, ore_admin: 8,
-    contestazioni: 3, costo_orario: 22, nome: '', email: '', telefono: '',
+    contestazioni: 3, costo_orario: 22, nome: '', email: '', telefono: '', hp: '',
   });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
@@ -318,6 +320,13 @@ export default function RoiCalculatorClient({ dict, locale, trialUrl, embed = fa
                     <p className="text-gray-500 text-sm mt-1">{dict.step3_subtitle}</p>
                   </div>
                   <div className="space-y-4">
+                    {/* Honeypot: offscreen (non display:none, così i bot lo riempiono). Gli umani non lo vedono. */}
+                    <input
+                      type="text" name="company_website" value={form.hp}
+                      onChange={e => update('hp', e.target.value)}
+                      tabIndex={-1} autoComplete="off" aria-hidden="true"
+                      style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', opacity: 0 }}
+                    />
                     <input
                       type="text" placeholder={dict.field_nome} value={form.nome}
                       onChange={e => update('nome', e.target.value)}

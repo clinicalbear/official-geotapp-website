@@ -3,7 +3,7 @@
  *
  * Used by both the full ROI calculator API (src/app/api/roi-calculator/route.ts)
  * and the homepage mini-calculator. Do NOT change the numeric constants without
- * updating src/lib/roi.test.ts — the formula is the contract behind the public
+ * updating src/lib/roi.test.ts: the formula is the contract behind the public
  * "risparmio stimato" numbers shown to leads.
  *
  * Constants (verbatim from the original implementation):
