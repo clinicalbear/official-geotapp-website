@@ -2,13 +2,13 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App for Electricians | GeoTapp — GPS Job Reports & Proof',
-    description: 'GeoTapp is the app for electricians: GPS-verified job reports, installation photos and tamper-proof records. Close disputes with real evidence. Try free.',
+    title: 'Electrician Time Tracking App | GPS Job Reports & Proof | GeoTapp',
+    description: 'GeoTapp is the time tracking app for electricians: GPS-verified clock-ins, job reports, installation photos and tamper-proof records. Close disputes with real evidence. Try free.',
   },
   hero: {
-    badge: 'App for Electricians and Electrical Contractors',
+    badge: 'Time Tracking & Job Reports for Electricians and Electrical Contractors',
     h1_line1: 'App for electricians:',
-    h1_line2: 'GPS job reports, photo evidence and zero disputes.',
+    h1_line2: 'GPS time tracking, job reports and zero disputes.',
     subtitle: 'GeoTapp records every electrical job with GPS, photos and verifiable timestamps. Client disputes a job? Show them the report — no argument needed. Your engineers are protected, your invoices too.',
     cta_primary: 'Start free today',
     cta_note: 'No commitment. Response within 12 business hours.',
@@ -163,6 +163,10 @@ const content: SettoreContent = {
         q: 'Does GeoTapp help resolve client disputes?',
         a: 'That\'s the primary use case: GPS timestamps, photo evidence and sealed job reports make any unfounded dispute resolvable in minutes.',
       },
+      {
+        q: 'Does GeoTapp work as time tracking for electricians?',
+        a: 'Yes. GeoTapp is GPS time tracking built for electricians: the engineer clocks in and out on site from their smartphone, every entry carries verified GPS and a timestamp, and the hours flow straight into payroll export. Unlike plain time tracking, each clock-in is tied to installation photos and a sealed job report.',
+      },
     ],
   },
   cta: {
@@ -197,6 +201,10 @@ const content: SettoreContent = {
     {
       question: 'Are GeoTapp job reports accepted in disputes?',
       answer: 'GeoTapp reports are sealed with GPS, timestamps and photo evidence. They have been used successfully to resolve disputes over jobs denied by the client.',
+    },
+    {
+      question: 'Does GeoTapp work as time tracking for electricians?',
+      answer: 'Yes. GeoTapp is GPS time tracking for electricians: the engineer clocks in and out on site, every entry carries verified GPS and a timestamp, and the hours export to payroll. Each clock-in is tied to installation photos and a sealed job report.',
     },
   ],
 };

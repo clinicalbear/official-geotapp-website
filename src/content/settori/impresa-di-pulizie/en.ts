@@ -4,7 +4,7 @@ const content: SettoreContent = {
   meta: {
     title: 'Cleaning Company App: GPS Team Management & Proof of Service | GeoTapp',
     description:
-      'Manage cleaning crews, shifts and attendance with real-time GPS. Automatic proof of service, zero client disputes. GDPR-compliant cleaning company app.',
+      'GPS tracking for cleaners: manage crews, shifts and attendance in real time. Automatic proof of service, zero client disputes. GDPR-compliant cleaning company app.',
   },
 
   hero: {
@@ -167,6 +167,10 @@ const content: SettoreContent = {
         q: 'How much does GeoTapp cost for a cleaning company?',
         a: 'Plans start from a few euros per worker per month. Try free for 14 days — no commitment.',
       },
+      {
+        q: 'Does GeoTapp do GPS tracking for cleaners?',
+        a: 'Yes. GeoTapp provides GPS tracking for cleaners during active shifts: the cleaner clocks in and out from their smartphone and every entry is tied to verified GPS coordinates and a timestamp. It is location tracking for proof of attendance, not surveillance, and it runs only during working hours for GDPR compliance.',
+      },
     ],
   },
 
@@ -201,6 +205,11 @@ const content: SettoreContent = {
       question: 'Is GeoTapp GDPR compliant for employee GPS tracking?',
       answer:
         'Yes. GeoTapp tracks location only during active working hours, includes employee privacy notice templates and collects no unnecessary data.',
+    },
+    {
+      question: 'Does GeoTapp do GPS tracking for cleaners?',
+      answer:
+        'Yes. GeoTapp provides GPS tracking for cleaners during active shifts: the cleaner clocks in from their smartphone and every entry is tied to verified GPS and a timestamp. It runs only during working hours for GDPR compliance.',
     },
   ],
 };

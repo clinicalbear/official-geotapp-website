@@ -252,10 +252,10 @@ export default async function LocalePage({ params }: Props) {
   const reviewsSchema = buildReviewsSchema(REVIEWS);
   return (
     <>
-      {/* LCP hero image preload — bg1.webp è il primo frame del TTBgCarousel,
-          full-bleed sopra-fold. Inietta <link rel="preload"> nel head così
-          il browser scopre l'immagine PRIMA di parsare il body. */}
-      <link rel="preload" href="/bg1.webp" as="image" fetchPriority="high" />
+      {/* NB: nessun preload di bg1.webp. Il TTBgCarousel che la usa è `hidden md:block`
+          (solo desktop) e MOLTO sotto la fold (sezione TimeTracker, ~riga 528 di HomeClient).
+          Preloadarla ad alta priorità su mobile scaricava 147KB mai mostrati, rubando banda
+          all'LCP reale (l'h1 dell'hero). Rimosso il 2026-06-06. */}
       {faq && (
         <script
           type="application/ld+json"

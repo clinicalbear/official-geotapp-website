@@ -277,8 +277,10 @@ export default function Home() {
 
         <div className="container-geo relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-10 items-center">
-            {/* Testo */}
-            <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
+            {/* Testo — NIENTE opacity:0 sull'entrata: contiene l'h1 = elemento LCP su mobile.
+                Nasconderlo dietro framer-motion lo rendeva invisibile fino all'hydration
+                → LCP mobile instabile (2-7s). Lo slide y resta, ma l'elemento è visibile subito. */}
+            <motion.div initial={{ y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
               {currentLocale === 'en' && (
                 <span className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full text-xs font-semibold bg-blue-50 border border-blue-200 text-blue-700">{dict.landing.us_badge}</span>
               )}

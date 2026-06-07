@@ -3,7 +3,7 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'Software voor Schoonmaakbedrijven en Facilitaire Diensten | Dienst­roosters | GeoTapp',
-    description: 'GeoTapp voor schoonmaakbedrijven en facilitaire dienstverleners: GPS-gebaseerde inklokregistratie, fotobewijs van gereinigde ruimtes, supervisie van verspreid personeel en naleving van de CAO Schoonmaak.',
+    description: 'Software voor schoonmaakbedrijven: GPS-inklokregistratie, fotobewijs van gereinigde ruimtes, dienstroosters op elk object en naleving van de CAO Schoonmaak. Probeer GeoTapp gratis.',
   },
   hero: {
     badge: 'Software voor Schoonmaakbedrijven, Facilitaire Diensten en Gebouwbeheer',
@@ -86,6 +86,18 @@ const content: SettoreContent = {
         q: 'Helpt GeoTapp bij naleving van de CAO Schoonmaak voor pauzes en overwerk?',
         a: 'Ja. Het systeem registreert automatisch pauzetijden, overwerk en dienstroosters. De maandelijkse export is compatibel met AFAS en NMBRS voor CAO-conforme salarisverwerking.',
       },
+      {
+        q: 'Welke software voor schoonmaakbedrijven heb ik nodig?',
+        a: 'Een schoonmaakbedrijf heeft software nodig die meer doet dan uren registreren: GPS-geverifieerde inklok, fotobewijs per ruimte, dienstroosters over meerdere objecten en een salarisexport. GeoTapp combineert Flow en TimeTracker zodat u dat alles in één systeem heeft, inclusief naleving van de CAO Schoonmaak.',
+      },
+      {
+        q: 'Is GeoTapp schoonmaak software met fotobewijs?',
+        a: 'Ja. Bij elke dienst maakt de medewerker foto\'s van de gereinigde ruimtes rechtstreeks in de app. Elke foto krijgt datum, tijd en GPS en wordt aan het servicerapport gekoppeld. Zo levert de schoonmaak software onweerlegbaar bewijs richting de opdrachtgever.',
+      },
+      {
+        q: 'Werkt de software voor de schoonmaakbranche met AFAS en NMBRS?',
+        a: 'Ja. De maandelijkse export is compatibel met AFAS, NMBRS en andere Nederlandse salarispakketten, met automatische scheiding van reguliere uren, overwerk en CAO-toeslagen.',
+      },
     ],
   },
   cta: {
@@ -94,7 +106,37 @@ const content: SettoreContent = {
     primary: 'Demo aanvragen',
     secondary: 'Prijzen bekijken',
   },
+  differenza: {
+    title: 'Tijdregistratie-software vs GeoTapp.',
+    subtitle: 'De meeste software voor schoonmaakbedrijven registreert alleen uren. GeoTapp levert bewijs van de geleverde dienst.',
+    rows: [
+      { label: 'Wat het registreert', competitor: 'In- en uitkloktijd', geotapp: 'Tijd, geverifieerde GPS, foto\'s per ruimte en gedekte objecten' },
+      { label: 'Wie kan verifiëren', competitor: 'Alleen uw kantoor', geotapp: 'U, de opdrachtgever en een derde partij, onafhankelijk' },
+      { label: 'Bij geschillen', competitor: 'Gegevens niet verdedigbaar', geotapp: 'Verzegeld rapport, niet te vervalsen' },
+      { label: 'CAO Schoonmaak', competitor: 'Handmatig bij te houden', geotapp: 'Pauzes en overwerk automatisch geregistreerd' },
+      { label: 'Salarisexport', competitor: 'Los proces', geotapp: 'Compatibel met AFAS en NMBRS' },
+    ],
+  },
+  pricing_hint: {
+    label: 'Vanaf',
+    per: 'medewerker/maand',
+    note: '14 dagen gratis proberen',
+  },
   schema_sector_name: 'Schoonmaakbedrijven',
+  schema_faq: [
+    {
+      question: 'Welke software voor schoonmaakbedrijven heb ik nodig?',
+      answer: 'Een schoonmaakbedrijf heeft software nodig die GPS-geverifieerde inklok, fotobewijs per ruimte, dienstroosters over meerdere objecten en een salarisexport combineert. GeoTapp verbindt Flow en TimeTracker in één systeem, inclusief naleving van de CAO Schoonmaak.',
+    },
+    {
+      question: 'Is GeoTapp schoonmaak software met fotobewijs?',
+      answer: 'Ja. Bij elke dienst fotografeert de medewerker de gereinigde ruimtes in de app. Elke foto krijgt datum, tijd en GPS en wordt aan het servicerapport gekoppeld als bewijs richting de opdrachtgever.',
+    },
+    {
+      question: 'Werkt de software voor de schoonmaakbranche met AFAS en NMBRS?',
+      answer: 'Ja. De maandelijkse export is compatibel met AFAS, NMBRS en andere Nederlandse salarispakketten, met automatische scheiding van reguliere uren, overwerk en CAO-toeslagen.',
+    },
+  ],
 };
 
 export default content;

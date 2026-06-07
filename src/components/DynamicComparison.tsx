@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Check, X, ChevronDown, ExternalLink } from 'lucide-react';
+import { Check, X, ChevronDown } from 'lucide-react';
 import {
   COMPETITORS,
   FEATURE_KEYS,
@@ -80,14 +80,6 @@ export function DynamicComparison({ locale, copy, initialId }: Props) {
               ? copy.pricingLabel.replace('{eur}', String(selected.pricingFromEur))
               : '—'}
           </span>
-          <a
-            href={selected.homepage}
-            target="_blank"
-            rel="noopener noreferrer nofollow"
-            className="inline-flex items-center gap-1 text-[#8FC436] hover:underline"
-          >
-            {copy.visitWebsite} <ExternalLink size={14} />
-          </a>
         </div>
       </div>
 
