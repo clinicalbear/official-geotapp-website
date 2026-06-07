@@ -106,7 +106,15 @@
       "email_placeholder": "Ton e-mail professionnel",
       "email_cta": "Envoie-moi le rapport + démarre l'essai",
       "email_ok": "C'est fait. Regarde ta boîte dans un instant.",
-      "email_err": "Quelque chose n'a pas marché. Réessaie."
+      "email_err": "Quelque chose n'a pas marché. Réessaie.",
+      "pitch_kicker": "Calculateur de ROI",
+      "pitch_title": "Les chiffres que tu ne regardes pas sont ceux qui te coûtent.",
+      "pitch_body": "Les heures de paperasse, les litiges que tu paies toi-même, la coordination faite à la voix. Tu ne les sens pas sortir du compte, mais ils sortent. Mets trois chiffres et regarde ce que ça fait sur un an : en général ça surprend, et pas en mieux.",
+      "pitch_points": [
+        "Chaque litige non payé pèse, douze mois sur douze",
+        "Les heures passées au bureau sont des heures que tu ne factures pas",
+        "Deux secondes et aucun e-mail pour voir le chiffre"
+      ]
     }
   },
   "home_sections": {
@@ -214,6 +222,7 @@
       "title": "Rapport certifié — télécharger et vérifier",
       "field_operator": "Opérateur",
       "field_intervention": "Intervention",
+      "field_intervention_value": "Remplacement du tableau électrique",
       "btn_download": "Télécharger le rapport (.zip)",
       "btn_verify": "Vérifier l'authenticité →"
     },
@@ -368,6 +377,7 @@
       "error_checkout": "Erreur lors de la création de la session. Veuillez réessayer.",
       "error_connection": "Erreur de connexion. Veuillez réessayer."
     },
+    "intro_label": "Tarif de lancement 2026",
     "tracker_footnote": "* Nombre maximum d'utilisateurs TimeTracker activables simultanément dans le plan Flow. Supprimer l'accès d'un employé libère immédiatement la place.",
     "per_year": "/an",
     "title_gradient": "Développez Votre Business.",

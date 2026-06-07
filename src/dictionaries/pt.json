@@ -106,7 +106,15 @@
       "email_placeholder": "O teu e-mail de trabalho",
       "email_cta": "Envia-me o relatório + começa o teste",
       "email_ok": "Feito. Verifica o e-mail daqui a pouco.",
-      "email_err": "Algo não funcionou. Tenta de novo."
+      "email_err": "Algo não funcionou. Tenta de novo.",
+      "pitch_kicker": "Calculadora de ROI",
+      "pitch_title": "Os números que não olhas são os que te custam.",
+      "pitch_body": "As horas de papelada, as contestações que pagas tu, a coordenação feita de viva voz. Não os sentes sair da conta, mas saem. Mete três números e vê quanto dá num ano: normalmente surpreende, e não para melhor.",
+      "pitch_points": [
+        "Cada contestação que não cobras pesa, doze meses por ano",
+        "As horas que passas no escritório são horas que não faturas",
+        "Dois segundos e nenhum email para ver o número"
+      ]
     }
   },
   "home_sections": {
@@ -214,6 +222,7 @@
       "title": "Relatório certificado — descarregar e verificar",
       "field_operator": "Operador",
       "field_intervention": "Intervenção",
+      "field_intervention_value": "Substituição do quadro elétrico",
       "btn_download": "Descarregar relatório (.zip)",
       "btn_verify": "Verificar autenticidade →"
     },
@@ -368,6 +377,7 @@
       "error_checkout": "Erro ao criar a sessão. Por favor, tente novamente.",
       "error_connection": "Erro de conexão. Por favor, tente novamente."
     },
+    "intro_label": "Tarifa de lançamento 2026",
     "tracker_footnote": "* Número máximo de utilizadores TimeTracker que podem ser ativados simultaneamente no plano Flow. Ao remover o acesso de um funcionário, a vaga fica disponível de imediato.",
     "per_year": "/ano",
     "title_gradient": "Escale o Seu Negócio.",

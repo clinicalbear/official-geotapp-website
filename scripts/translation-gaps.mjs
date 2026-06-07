@@ -22,6 +22,13 @@ const HERE = dirname(fileURLToPath(import.meta.url));
 const DICT_DIR = join(HERE, '..', 'src', 'dictionaries');
 const REFERENCE = 'it'; // site is IT-first
 
+// en-* regional files (en-us, en-gb, en-au, en-ca, en-ie) are intentional PARTIAL
+// overrides: they hold only the handful of keys that differ from en.json and inherit
+// everything else via the dictionary merge at runtime. They are NOT full translations,
+// so comparing them against the reference produces hundreds of false "missing" keys.
+// Skip them entirely — only it (reference), en, and the 9 full locales are checked.
+const SKIP_LOCALES = new Set(['en-us', 'en-gb', 'en-au', 'en-ca', 'en-ie']);
+
 // Flatten nested object into dotted key paths (arrays treated as leaves).
 function flatten(obj, prefix = '', out = new Set()) {
   if (obj && typeof obj === 'object' && !Array.isArray(obj)) {
@@ -51,7 +58,9 @@ function main() {
   const asJson = argv.includes('--json');
 
   const refKeys = flatten(JSON.parse(readFileSync(join(DICT_DIR, `${REFERENCE}.json`), 'utf8')));
-  const files = readdirSync(DICT_DIR).filter((f) => f.endsWith('.json') && f !== `${REFERENCE}.json`);
+  const files = readdirSync(DICT_DIR).filter(
+    (f) => f.endsWith('.json') && f !== `${REFERENCE}.json` && !SKIP_LOCALES.has(f.replace('.json', '')),
+  );
 
   const report = [];
   for (const file of files.sort()) {

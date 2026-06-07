@@ -106,7 +106,15 @@
       "email_placeholder": "Je zakelijke e-mail",
       "email_cta": "Stuur me het rapport + start de proef",
       "email_ok": "Klaar. Kijk zo even in je mailbox.",
-      "email_err": "Er ging iets mis. Probeer het opnieuw."
+      "email_err": "Er ging iets mis. Probeer het opnieuw.",
+      "pitch_kicker": "ROI-calculator",
+      "pitch_title": "De cijfers die je niet bekijkt, zijn de cijfers die je geld kosten.",
+      "pitch_body": "De uren papierwerk, de betwistingen die je zelf betaalt, de coördinatie die mondeling gaat. Je voelt het niet van de rekening gaan, maar het gaat eraf. Vul drie cijfers in en kijk wat het over een jaar wordt: meestal verrast het, en niet ten goede.",
+      "pitch_points": [
+        "Elke onbetaalde betwisting weegt, twaalf maanden per jaar",
+        "Uren op kantoor zijn uren die je niet factureert",
+        "Twee seconden en geen e-mail om het cijfer te zien"
+      ]
     }
   },
   "home_sections": {
@@ -214,6 +222,7 @@
       "title": "Gecertificeerd rapport — download en verifieer",
       "field_operator": "Medewerker",
       "field_intervention": "Interventie",
+      "field_intervention_value": "Vervanging van de schakelkast",
       "btn_download": "Rapport downloaden (.zip)",
       "btn_verify": "Authenticiteit verifiëren →"
     },

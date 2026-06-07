@@ -106,7 +106,15 @@
       "email_placeholder": "Din jobbmejl",
       "email_cta": "Skicka mig rapporten + starta provperioden",
       "email_ok": "Klart. Kolla inkorgen om en stund.",
-      "email_err": "Något gick fel. Försök igen."
+      "email_err": "Något gick fel. Försök igen.",
+      "pitch_kicker": "ROI-kalkylator",
+      "pitch_title": "Siffrorna du inte tittar på är de som kostar dig.",
+      "pitch_body": "Timmarna i pappersarbete, reklamationerna du betalar själv, samordningen som sköts muntligt. Du känner inte hur de lämnar kontot, men det gör de. Lägg in tre siffror och se vad det blir på ett år: oftast överraskar det, och inte till det bättre.",
+      "pitch_points": [
+        "Varje obetald reklamation väger, tolv månader om året",
+        "Timmar på kontoret är timmar du inte fakturerar",
+        "Två sekunder och inget mejl för att se siffran"
+      ]
     }
   },
   "home_sections": {
@@ -214,6 +222,7 @@
       "title": "Certifierad rapport — ladda ned och verifiera",
       "field_operator": "Operatör",
       "field_intervention": "Insats",
+      "field_intervention_value": "Byte av elcentralen",
       "btn_download": "Ladda ned rapport (.zip)",
       "btn_verify": "Verifiera äkthet →"
     },
@@ -368,6 +377,7 @@
       "error_checkout": "Fel vid skapande av session. Försök igen.",
       "error_connection": "Anslutningsfel. Försök igen."
     },
+    "intro_label": "Introduktionspris 2026",
     "tracker_footnote": "* Maximalt antal TimeTracker-användare som kan aktiveras samtidigt i Flow-planen. Att ta bort åtkomst för en medarbetare frigör platsen omedelbart.",
     "per_year": "/år",
     "title_gradient": "Skala Ditt Företag.",

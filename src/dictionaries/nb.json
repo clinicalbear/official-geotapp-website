@@ -106,7 +106,15 @@
       "email_placeholder": "Jobb-e-posten din",
       "email_cta": "Send meg rapporten + start prøveperioden",
       "email_ok": "Gjort. Sjekk innboksen om litt.",
-      "email_err": "Noe gikk galt. Prøv igjen."
+      "email_err": "Noe gikk galt. Prøv igjen.",
+      "pitch_kicker": "ROI-kalkulator",
+      "pitch_title": "Tallene du ikke ser på, er de som koster deg.",
+      "pitch_body": "Timene i papirarbeid, innsigelsene du betaler selv, koordineringen gjort muntlig. Du merker dem ikke forlate kontoen, men det gjør de. Legg inn tre tall og se hva det blir på et år: som regel overrasker det, og ikke til det bedre.",
+      "pitch_points": [
+        "Hver ubetalt innsigelse veier, tolv måneder i året",
+        "Timer på kontoret er timer du ikke fakturerer",
+        "To sekunder og ingen e-post for å se tallet"
+      ]
     }
   },
   "home_sections": {
@@ -214,6 +222,7 @@
       "title": "Sertifisert rapport — last ned og verifiser",
       "field_operator": "Operatør",
       "field_intervention": "Innsats",
+      "field_intervention_value": "Utskifting av eltavlen",
       "btn_download": "Last ned rapport (.zip)",
       "btn_verify": "Verifiser autentisitet →"
     },
@@ -368,6 +377,7 @@
       "error_checkout": "Feil ved oppretting av økt. Prøv igjen.",
       "error_connection": "Tilkoblingsfeil. Prøv igjen."
     },
+    "intro_label": "Introduksjonspris 2026",
     "tracker_footnote": "* Maksimalt antall TimeTracker-brukere som kan aktiveres samtidig i Flow-planen. Å fjerne tilgang for en ansatt frigjør plassen umiddelbart.",
     "per_year": "/år",
     "title_gradient": "Skalér Din Bedrift.",

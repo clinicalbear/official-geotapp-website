@@ -106,7 +106,15 @@
       "email_placeholder": "Deine geschäftliche E-Mail",
       "email_cta": "Report schicken + Trial starten",
       "email_ok": "Erledigt. Schau gleich in dein Postfach.",
-      "email_err": "Etwas hat nicht geklappt. Versuch es nochmal."
+      "email_err": "Etwas hat nicht geklappt. Versuch es nochmal.",
+      "pitch_kicker": "ROI-Rechner",
+      "pitch_title": "Die Zahlen, die du nicht ansiehst, sind die, die dich kosten.",
+      "pitch_body": "Die Stunden im Papierkram, die Beanstandungen, die du selbst bezahlst, die Koordination per Zuruf. Du spürst nicht, wie sie das Konto verlassen, aber sie tun es. Gib drei Zahlen ein und schau, was am Ende eines Jahres herauskommt: meistens überrascht es, und nicht im Guten.",
+      "pitch_points": [
+        "Jede nicht bezahlte Beanstandung wiegt, zwölf Monate im Jahr",
+        "Stunden im Büro sind Stunden, die du nicht abrechnest",
+        "Zwei Sekunden und keine E-Mail, um die Zahl zu sehen"
+      ]
     }
   },
   "home_sections": {
