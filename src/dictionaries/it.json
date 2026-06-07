@@ -41,6 +41,14 @@
   "landing": {
     "us_badge": "🇺🇸 Serving US teams — chat support 9am–6pm ET. USD invoicing available on request.",
     "hero_badge": "Il lavoro c'è stato. Ora rendilo dimostrabile.",
+    "clockin_demo": {
+      "step_clock": "Timbra",
+      "step_gps": "GPS verificato",
+      "step_photo": "Foto sul posto",
+      "step_sealed": "Sigillato",
+      "caption": "Una timbratura. GPS, foto e ora, sigillati. Non si rifà, non si discute.",
+      "replay": "Rivedi"
+    },
     "hero_title": "Se non puoi dimostrarlo, per il cliente non è mai successo.",
     "hero_subtitle": "GeoTapp trasforma ogni intervento in evidenza oggettiva: report sigillati con dati GPS reali, prove fotografiche con timestamp e documentazione verificabile da chiunque — senza fidarsi, senza contestazioni.",
     "hero_cta_primary": "Inizia trial gratuito",

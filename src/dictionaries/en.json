@@ -41,6 +41,14 @@
   "landing": {
     "us_badge": "🇺🇸 Serving US teams — chat support 9am–6pm ET. USD invoicing available on request.",
     "hero_badge": "The work happened. Now make it provable.",
+    "clockin_demo": {
+      "step_clock": "Clock in",
+      "step_gps": "GPS verified",
+      "step_photo": "Photo on site",
+      "step_sealed": "Sealed",
+      "caption": "One clock-in. GPS, photo and time, sealed. You can't redo it, you can't argue with it.",
+      "replay": "Replay"
+    },
     "hero_title": "If you can't prove it, the client says it never happened.",
     "hero_subtitle": "GeoTapp turns every field job into objective evidence: sealed reports with real GPS data, timestamped photo proof and documentation anyone can verify — without trusting you, without disputes.",
     "hero_cta_primary": "Start free trial",
