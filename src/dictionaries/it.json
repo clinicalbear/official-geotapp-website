@@ -84,7 +84,22 @@
     "hero_sectors_pulizie": "imprese di pulizie",
     "hero_sectors_installatori": "installatori",
     "hero_sectors_sicurezza": "aziende di sicurezza",
-    "hero_sectors_and": "e"
+    "hero_sectors_and": "e",
+    "roi_mini": {
+      "title": "Quanto ti costa non poterlo dimostrare?",
+      "subtitle": "Tre numeri, una stima onesta. In due secondi, senza email.",
+      "field_operatori": "Operatori",
+      "field_costo": "Costo orario (€)",
+      "field_contestazioni": "Contestazioni al mese",
+      "result_prefix": "Stai lasciando sul tavolo circa",
+      "result_suffix": "all'anno",
+      "disclaimer": "Stima minima (dispute + coordinamento). Il conto completo, voce per voce, è nel report.",
+      "email_label": "Vuoi il report dettagliato e il confronto col tuo settore?",
+      "email_placeholder": "La tua email di lavoro",
+      "email_cta": "Mandami il report + avvia il trial",
+      "email_ok": "Fatto. Controlla la posta tra poco.",
+      "email_err": "Qualcosa non ha funzionato. Riprova."
+    }
   },
   "home_sections": {
     "flow": {

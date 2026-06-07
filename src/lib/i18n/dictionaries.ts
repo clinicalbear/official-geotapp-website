@@ -69,7 +69,10 @@ const DICTIONARIES: Record<AppLocale, SiteDictionary> = {
   'en-au': withOverrides(enAuDict),
   'en-ie': withOverrides(enIeDict),
   'en-ca': withOverrides(enCaDict),
-  de: deDict,
+  // de.json is a full dictionary, but routed through withOverrides so that
+  // newly-added base keys (e.g. landing.roi_mini, pending DE translation)
+  // fall back to EN instead of breaking the SiteDictionary type contract.
+  de: withOverrides(deDict),
   nl: withOverrides(nlDict),
   fr: withOverrides(frDict),
   es: withOverrides(esDict),

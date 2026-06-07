@@ -1,0 +1,210 @@
+'use client';
+
+import { useState } from 'react';
+import type { AppLocale } from '@/lib/i18n/config';
+import type { SiteDictionary } from '@/lib/i18n/dictionaries';
+import { calcRoi } from '@/lib/roi';
+
+interface Props {
+  dict: SiteDictionary;
+  locale: AppLocale;
+}
+
+// Settori del selettore, allineati alle chiavi dict.roi.settore_* esistenti.
+// "altro" è il catch-all. Stesso set del calcolatore completo.
+const SETTORI = [
+  'installatori',
+  'pulizie',
+  'sicurezza',
+  'elettricisti',
+  'idraulici',
+  'termoidraulici',
+  'impianti',
+  'edilizia',
+  'manutenzione',
+  'altro',
+] as const;
+
+type SettoreKey = (typeof SETTORI)[number];
+
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+export default function RoiMini({ dict, locale }: Props) {
+  const t = dict.landing.roi_mini;
+  const r = dict.roi;
+
+  const [operatori, setOperatori] = useState(10);
+  const [costoOrario, setCostoOrario] = useState(18);
+  const [contestazioni, setContestazioni] = useState(2);
+
+  const [email, setEmail] = useState('');
+  const [settore, setSettore] = useState<SettoreKey>('altro');
+  const [status, setStatus] = useState<'idle' | 'loading' | 'ok' | 'err'>('idle');
+
+  const roi = calcRoi({
+    operatori,
+    costo_orario: costoOrario,
+    contestazioni,
+  });
+
+  const money = new Intl.NumberFormat(locale, {
+    style: 'currency',
+    currency: 'EUR',
+    maximumFractionDigits: 0,
+  }).format(roi.risparmio_totale);
+
+  const settoreLabel = (key: SettoreKey): string => {
+    const labels: Record<SettoreKey, string> = {
+      installatori: r.settore_installatori,
+      pulizie: r.settore_pulizie,
+      sicurezza: r.settore_sicurezza,
+      elettricisti: r.settore_elettricisti,
+      idraulici: r.settore_idraulici,
+      termoidraulici: r.settore_termoidraulici,
+      impianti: r.settore_impianti,
+      edilizia: r.settore_edilizia,
+      manutenzione: r.settore_manutenzione,
+      altro: r.settore_altro,
+    };
+    return labels[key];
+  };
+
+  const num = (v: string, min = 0) => {
+    const n = Number(v);
+    return Number.isFinite(n) && n >= min ? n : min;
+  };
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    if (!EMAIL_RE.test(email)) {
+      setStatus('err');
+      return;
+    }
+    setStatus('loading');
+    try {
+      const res = await fetch('/api/roi-calculator', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          operatori,
+          costo_orario: costoOrario,
+          contestazioni,
+          siti: 0,
+          ore_admin: 0,
+          settore,
+          email,
+          nome: '',
+          telefono: '',
+          locale,
+          subscribe_newsletter: true,
+          source: 'mini',
+        }),
+      });
+      setStatus(res.ok ? 'ok' : 'err');
+    } catch {
+      setStatus('err');
+    }
+  }
+
+  const inputClass =
+    'w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm';
+
+  return (
+    <div className="geo-glass rounded-2xl border border-border shadow-lg p-6 sm:p-8 max-w-xl mx-auto">
+      <h3 className="text-xl sm:text-2xl font-bold text-text-primary">{t.title}</h3>
+      <p className="mt-2 text-sm text-text-secondary">{t.subtitle}</p>
+
+      <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div>
+          <label htmlFor="roi-mini-operatori" className="block text-xs font-medium text-text-secondary mb-1">
+            {t.field_operatori}
+          </label>
+          <input
+            id="roi-mini-operatori"
+            type="number"
+            min={1}
+            inputMode="numeric"
+            value={operatori}
+            onChange={(e) => setOperatori(num(e.target.value, 0))}
+            className={inputClass}
+          />
+        </div>
+        <div>
+          <label htmlFor="roi-mini-costo" className="block text-xs font-medium text-text-secondary mb-1">
+            {t.field_costo}
+          </label>
+          <input
+            id="roi-mini-costo"
+            type="number"
+            min={0}
+            inputMode="numeric"
+            value={costoOrario}
+            onChange={(e) => setCostoOrario(num(e.target.value, 0))}
+            className={inputClass}
+          />
+        </div>
+        <div>
+          <label htmlFor="roi-mini-contestazioni" className="block text-xs font-medium text-text-secondary mb-1">
+            {t.field_contestazioni}
+          </label>
+          <input
+            id="roi-mini-contestazioni"
+            type="number"
+            min={0}
+            inputMode="numeric"
+            value={contestazioni}
+            onChange={(e) => setContestazioni(num(e.target.value, 0))}
+            className={inputClass}
+          />
+        </div>
+      </div>
+
+      <div className="mt-6 rounded-xl bg-green-50 border border-green-200 p-5 text-center">
+        <p className="text-sm text-text-secondary">{t.result_prefix}</p>
+        <p className="text-3xl sm:text-4xl font-extrabold text-green-600 my-1" aria-live="polite">
+          {money}
+        </p>
+        <p className="text-sm text-text-secondary">{t.result_suffix}</p>
+        <p className="mt-3 text-xs text-text-secondary">{t.disclaimer}</p>
+      </div>
+
+      <form onSubmit={handleSubmit} className="mt-6 space-y-3">
+        <label htmlFor="roi-mini-email" className="block text-sm font-medium text-text-primary">
+          {t.email_label}
+        </label>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <input
+            id="roi-mini-email"
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder={t.email_placeholder}
+            className={inputClass}
+            aria-label={t.email_placeholder}
+          />
+          <select
+            value={settore}
+            onChange={(e) => setSettore(e.target.value as SettoreKey)}
+            className={inputClass}
+            aria-label={r.field_settore}
+          >
+            {SETTORI.map((s) => (
+              <option key={s} value={s}>
+                {settoreLabel(s)}
+              </option>
+            ))}
+          </select>
+        </div>
+        <button
+          type="submit"
+          disabled={status === 'loading'}
+          className="w-full py-3 rounded-xl font-bold text-white bg-green-600 hover:bg-green-700 disabled:opacity-60 disabled:cursor-not-allowed transition-colors text-base"
+        >
+          {t.email_cta}
+        </button>
+        {status === 'ok' && <p className="text-sm text-green-600 text-center">{t.email_ok}</p>}
+        {status === 'err' && <p className="text-sm text-red-600 text-center">{t.email_err}</p>}
+      </form>
+    </div>
+  );
+}

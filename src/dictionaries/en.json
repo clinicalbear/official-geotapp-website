@@ -84,7 +84,22 @@
     "hero_sectors_pulizie": "cleaning companies",
     "hero_sectors_installatori": "installers",
     "hero_sectors_sicurezza": "security services",
-    "hero_sectors_and": "and"
+    "hero_sectors_and": "and",
+    "roi_mini": {
+      "title": "What does it cost you to not be able to prove it?",
+      "subtitle": "Three numbers, one honest estimate. Two seconds, no email.",
+      "field_operatori": "Field workers",
+      "field_costo": "Hourly cost (€)",
+      "field_contestazioni": "Disputes per month",
+      "result_prefix": "You're leaving roughly",
+      "result_suffix": "on the table every year",
+      "disclaimer": "Conservative estimate (disputes + coordination). The full breakdown, line by line, is in the report.",
+      "email_label": "Want the detailed report and a benchmark for your sector?",
+      "email_placeholder": "Your work email",
+      "email_cta": "Send me the report + start the trial",
+      "email_ok": "Done. Check your inbox in a moment.",
+      "email_err": "Something went wrong. Try again."
+    }
   },
   "home_sections": {
     "flow": {
