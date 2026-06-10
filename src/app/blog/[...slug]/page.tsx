@@ -12,6 +12,7 @@ import LeadMagnetInline from '@/components/blog/LeadMagnetInline';
 import MapBackground from '@/components/blog/MapBackground';
 import Comments, { type CommentItem } from '@/components/blog/Comments';
 import { detectPostLocale } from '@/lib/blog-locale';
+import { sanitizeWpHtml } from '@/lib/sanitize-wp';
 
 export const dynamic = 'force-dynamic';
 
@@ -94,7 +95,9 @@ async function fetchPost(articleSlug: string): Promise<WPPost | null> {
 
 function resolvePostData(post: WPPost, locale: string) {
   const title = stripHtml(post.title.rendered);
-  const content = post.content.rendered;
+  // Allowlist-sanitize il contenuto WP prima del render (difesa in profondità
+  // contro XSS da WordPress compromesso — vedi src/lib/sanitize-wp.ts).
+  const content = sanitizeWpHtml(post.content.rendered);
   const excerpt = stripHtml(post.excerpt.rendered).slice(0, 160);
   const date = post.date;
 
@@ -189,7 +192,7 @@ async function fetchComments(postId: number): Promise<CommentItem[]> {
       id: c.id,
       author: stripHtml(c.author_name ?? ''),
       date: c.date,
-      html: c.content?.rendered ?? '',
+      html: sanitizeWpHtml(c.content?.rendered ?? ''),
       avatar: c.author_avatar_urls?.['48'] ?? null,
     }));
   } catch {

@@ -446,6 +446,43 @@ export default function LinksClient({ articles, locale = 'it' }: Props) {
         <span className="text-[10px] font-semibold text-slate-400 tracking-[0.12em] uppercase">Instagram</span>
       </motion.nav>
 
+      {/* ARTICLES — in cima: chi arriva da Instagram vede subito gli articoli */}
+      <section className="px-6 pt-4 pb-9 max-w-md mx-auto">
+        <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, ease: 'easeOut' }}
+          className="flex items-end justify-between mb-5">
+          <div>
+            <p className="text-[10px] font-bold text-primary uppercase tracking-[0.14em] mb-1">{t.blogLabel}</p>
+            <h2 className="font-display font-bold text-lg text-slate-900 leading-tight">{t.blogTitle}</h2>
+          </div>
+          <Link href={withUtm('https://geotapp.com/blog', 'ig_links_blog', 'blog_all')} target="_blank" rel="noopener noreferrer"
+            className="text-xs font-medium text-slate-400 hover:text-primary transition-colors pb-0.5">
+            {t.blogAll}
+          </Link>
+        </motion.div>
+        {articles.length === 0 ? (
+          <div className="text-center py-10">
+            <Zap size={20} className="text-slate-200 mx-auto mb-2" />
+            <p className="text-sm text-slate-300">{t.blogEmpty}</p>
+          </div>
+        ) : (
+          <motion.div initial="hidden" animate="show"
+            variants={stagger} className="space-y-3">
+            {articles.map((a, i) => (
+              <ArticleCard
+                key={a.id}
+                article={a}
+                sectorLabel={a.sector ? sectorBadgeMap[a.sector] : null}
+                index={i}
+                campaign="ig_links_blog"
+              />
+            ))}
+          </motion.div>
+        )}
+      </section>
+
+      <div className="max-w-md mx-auto px-6"><div className="h-px bg-gradient-to-r from-transparent via-slate-100 to-transparent" /></div>
+
       {/* HERO */}
       <motion.section initial="hidden" animate="show" variants={stagger}
         className="relative px-6 pt-4 pb-10 max-w-md mx-auto text-center">
@@ -536,43 +573,6 @@ export default function LinksClient({ articles, locale = 'it' }: Props) {
             {t.sectorFallback}
           </Link>
         </motion.div>
-      </section>
-
-      <div className="max-w-md mx-auto px-6"><div className="h-px bg-gradient-to-r from-transparent via-slate-100 to-transparent" /></div>
-
-      {/* ARTICLES */}
-      <section className="px-6 py-9 max-w-md mx-auto">
-        <motion.div initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-40px' }} transition={{ duration: 0.4, ease: 'easeOut' }}
-          className="flex items-end justify-between mb-5">
-          <div>
-            <p className="text-[10px] font-bold text-primary uppercase tracking-[0.14em] mb-1">{t.blogLabel}</p>
-            <h2 className="font-display font-bold text-lg text-slate-900 leading-tight">{t.blogTitle}</h2>
-          </div>
-          <Link href={withUtm('https://geotapp.com/blog', 'ig_links_blog', 'blog_all')} target="_blank" rel="noopener noreferrer"
-            className="text-xs font-medium text-slate-400 hover:text-primary transition-colors pb-0.5">
-            {t.blogAll}
-          </Link>
-        </motion.div>
-        {articles.length === 0 ? (
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-center py-10">
-            <Zap size={20} className="text-slate-200 mx-auto mb-2" />
-            <p className="text-sm text-slate-300">{t.blogEmpty}</p>
-          </motion.div>
-        ) : (
-          <motion.div initial="hidden" whileInView="show" viewport={{ once: true, margin: '-30px' }}
-            variants={stagger} className="space-y-3">
-            {articles.map((a, i) => (
-              <ArticleCard
-                key={a.id}
-                article={a}
-                sectorLabel={a.sector ? sectorBadgeMap[a.sector] : null}
-                index={i}
-                campaign="ig_links_blog"
-              />
-            ))}
-          </motion.div>
-        )}
       </section>
 
       <div className="max-w-md mx-auto px-6"><div className="h-px bg-gradient-to-r from-transparent via-slate-100 to-transparent" /></div>

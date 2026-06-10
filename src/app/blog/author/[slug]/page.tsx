@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Linkedin, BadgeCheck, ExternalLink } from 'lucide-react';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import { SUPPORTED_LOCALES, DEFAULT_LOCALE, type AppLocale } from '@/lib/i18n/config';
+import { sanitizeWpHtml } from '@/lib/sanitize-wp';
 
 export const dynamic = 'force-dynamic';
 
@@ -295,7 +296,7 @@ export default async function AuthorPage({
                       </p>
                       <h3
                         className="font-bold text-slate-900 text-base leading-snug mb-3 group-hover:text-emerald-700 transition-colors"
-                        dangerouslySetInnerHTML={{ __html: p.title.rendered }}
+                        dangerouslySetInnerHTML={{ __html: sanitizeWpHtml(p.title.rendered) }}
                       />
                       <p
                         className="text-sm text-slate-600 leading-relaxed line-clamp-3"

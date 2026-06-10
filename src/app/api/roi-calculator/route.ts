@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
-import nodemailer from 'nodemailer';
 import { calcRoi } from '@/lib/roi';
+import { rateLimitOk, clientIp } from '@/lib/rate-limit';
 
 interface RoiPayload {
   settore: string;
@@ -76,6 +76,7 @@ async function notifyCrmLead(
   telefono: string,
   roi: { savings: number; payback: number; roiPct: number; operatori: number },
   source: string,
+  newsletterConsent: boolean,
 ): Promise<void> {
   const crmUrl = process.env.CRM_LEAD_ENDPOINT;
   const secret = process.env.CRM_SYNC_SECRET;
@@ -98,6 +99,7 @@ async function notifyCrmLead(
         roi_pct: roi.roiPct,
         operatori: roi.operatori,
         source,
+        newsletter_consent: newsletterConsent,
       }),
     });
     if (!res.ok) {
@@ -162,19 +164,18 @@ async function subscribeToNewsletterLegacy(
   }
 }
 
-function fmt(n: number) {
-  return new Intl.NumberFormat('it-IT', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(n);
-}
-
-function escHtml(s: string | number): string {
-  return String(s)
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;');
-}
+// Settori ammessi dal form (RoiMini + form completo). Valori fuori lista
+// (payload manipolati) collassano su 'altro' per non sporcare CRM ed email.
+const VALID_SECTORS = new Set([
+  'pulizie', 'sicurezza', 'installatori', 'impianti', 'edilizia',
+  'manutenzione', 'elettricisti', 'idraulici', 'termoidraulici', 'altro',
+]);
 
 export async function POST(req: NextRequest) {
+  if (!rateLimitOk(`roi:${clientIp(req)}`, 5, 60_000)) {
+    return NextResponse.json({ error: 'Too many requests' }, { status: 429 });
+  }
+
   let body: RoiPayload;
   try {
     body = await req.json();
@@ -193,8 +194,8 @@ export async function POST(req: NextRequest) {
   // Solo l'email è obbligatoria: il mini-calcolatore (source: 'mini') invia
   // nome vuoto e nessun settore esplicito. Default settore a 'altro' e nome a ''
   // per non rompere il flusso del form completo (che continua a inviarli).
-  const settore = body.settore || 'altro';
-  const nome = body.nome ?? '';
+  const settore = VALID_SECTORS.has(body.settore) ? body.settore : 'altro';
+  const nome = String(body.nome ?? '').slice(0, 120);
   // Origine del lead per distinguere homepage mini-calcolatore ('mini') dal form
   // completo ('full'). Plumbato in email + notifica CRM.
   const source = body.source || 'full';
@@ -214,78 +215,27 @@ export async function POST(req: NextRequest) {
 
   const roi = calcRoi(body);
 
-  const toEmail = process.env.ROI_EMAIL_TO ?? 'michele@geotapp.com';
-  const transporter = nodemailer.createTransport({
-    host: 'smtp.ionos.it',
-    port: 587,
-    secure: false,
-    auth: {
-      user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PASSWORD,
+  // Notifica il CRM del nuovo lead ROI — SEMPRE, anche senza consenso
+  // newsletter. Il CRM manda l'avviso email all'admin (SMTP funziona sul
+  // VPS, NON nel Worker Cloudflare: nodemailer qui falliva in silenzio) e,
+  // solo se newsletter_consent=true, crea NewsletterSubscriber +
+  // DripSubscription "roi-calculator" (step 0, send al prossimo cron tick).
+  // Se il CRM non risponde, l'utente vede comunque il ROI.
+  await notifyCrmLead(
+    email,
+    nome,
+    settore,
+    body.locale ?? '',
+    body.telefono ?? '',
+    {
+      savings: Math.round(roi.risparmio_totale),
+      payback: roi.payback_mesi,
+      roiPct: roi.roi_pct,
+      operatori,
     },
-  });
-
-  const htmlBody = `
-    <h2>Nuovo lead ROI Calculator — GeoTapp</h2>
-    <table style="border-collapse:collapse;width:100%;max-width:600px">
-      <tr><th style="text-align:left;padding:8px;background:#f5f5f5">Campo</th><th style="text-align:left;padding:8px;background:#f5f5f5">Valore</th></tr>
-      <tr><td style="padding:8px;border-top:1px solid #eee">Nome</td><td style="padding:8px;border-top:1px solid #eee">${escHtml(nome)}</td></tr>
-      <tr><td style="padding:8px;border-top:1px solid #eee">Email</td><td style="padding:8px;border-top:1px solid #eee">${escHtml(email)}</td></tr>
-      <tr><td style="padding:8px;border-top:1px solid #eee">Telefono</td><td style="padding:8px;border-top:1px solid #eee">${escHtml(body.telefono ?? '—')}</td></tr>
-      <tr><td style="padding:8px;border-top:1px solid #eee">Settore</td><td style="padding:8px;border-top:1px solid #eee">${escHtml(settore)}</td></tr>
-      <tr><td style="padding:8px;border-top:1px solid #eee">Operatori</td><td style="padding:8px;border-top:1px solid #eee">${escHtml(operatori)}</td></tr>
-      <tr><td style="padding:8px;border-top:1px solid #eee">Siti/giorno</td><td style="padding:8px;border-top:1px solid #eee">${escHtml(siti)}</td></tr>
-      <tr><td style="padding:8px;border-top:1px solid #eee">Ore admin/settimana</td><td style="padding:8px;border-top:1px solid #eee">${escHtml(ore_admin)}</td></tr>
-      <tr><td style="padding:8px;border-top:1px solid #eee">Contestazioni/mese</td><td style="padding:8px;border-top:1px solid #eee">${escHtml(contestazioni)}</td></tr>
-      <tr><td style="padding:8px;border-top:1px solid #eee">Costo orario</td><td style="padding:8px;border-top:1px solid #eee">€${escHtml(costo_orario)}</td></tr>
-      <tr><td style="padding:8px;border-top:1px solid #eee">Lingua</td><td style="padding:8px;border-top:1px solid #eee">${escHtml(body.locale ?? '')}</td></tr>
-      <tr><td style="padding:8px;border-top:1px solid #eee">Origine</td><td style="padding:8px;border-top:1px solid #eee">${escHtml(source === 'mini' ? 'Mini-calcolatore homepage' : 'Form completo')}</td></tr>
-    </table>
-    <h3 style="margin-top:24px">Risultati ROI</h3>
-    <table style="border-collapse:collapse;width:100%;max-width:600px">
-      <tr><td style="padding:8px;border-top:1px solid #eee">Risparmio burocrazia</td><td style="padding:8px;border-top:1px solid #eee"><strong>${fmt(roi.risparmio_admin)}/anno</strong></td></tr>
-      <tr><td style="padding:8px;border-top:1px solid #eee">Risparmio contestazioni</td><td style="padding:8px;border-top:1px solid #eee"><strong>${fmt(roi.risparmio_dispute)}/anno</strong></td></tr>
-      <tr><td style="padding:8px;border-top:1px solid #eee">Risparmio coordinamento</td><td style="padding:8px;border-top:1px solid #eee"><strong>${fmt(roi.risparmio_coord)}/anno</strong></td></tr>
-      <tr><td style="padding:8px;border-top:1px solid #eee"><strong>TOTALE RISPARMIO</strong></td><td style="padding:8px;border-top:1px solid #eee"><strong style="color:#22c55e;font-size:1.2em">${fmt(roi.risparmio_totale)}/anno</strong></td></tr>
-      <tr><td style="padding:8px;border-top:1px solid #eee">Costo GeoTapp stimato</td><td style="padding:8px;border-top:1px solid #eee">${fmt(roi.costo_geotapp_annuo)}/anno</td></tr>
-      <tr><td style="padding:8px;border-top:1px solid #eee">Payback stimato</td><td style="padding:8px;border-top:1px solid #eee">${roi.payback_mesi} mesi</td></tr>
-      <tr><td style="padding:8px;border-top:1px solid #eee">ROI stimato</td><td style="padding:8px;border-top:1px solid #eee"><strong>${roi.roi_pct}%</strong></td></tr>
-    </table>
-  `;
-
-  try {
-    await transporter.sendMail({
-      from: `"GeoTapp ROI Calculator" <${process.env.EMAIL_FROM ?? 'info@geotapp.com'}>`,
-      to: toEmail,
-      subject: `Nuovo lead ROI [${source === 'mini' ? 'mini' : 'full'}]: ${nome} (${settore}), risparmio ${fmt(roi.risparmio_totale)}/anno`,
-      html: htmlBody,
-    });
-  } catch (err) {
-    // Log but don't fail the request — user still gets their results
-    console.error('[roi-calculator] email send failed:', err);
-  }
-
-  // Notifica il CRM del nuovo lead ROI con consent esplicito.
-  // Il CRM crea NewsletterSubscriber + DripSubscription "roi-calculator"
-  // (step 0, send immediato al prossimo cron tick — 5 min max).
-  // Non blocca la response: se il CRM non risponde, l'utente vede comunque
-  // il ROI e Mike riceve la notifica email su info@.
-  if (body.subscribe_newsletter !== false) {
-    await notifyCrmLead(
-      email,
-      nome,
-      settore,
-      body.locale ?? '',
-      body.telefono ?? '',
-      {
-        savings: Math.round(roi.risparmio_totale),
-        payback: roi.payback_mesi,
-        roiPct: roi.roi_pct,
-        operatori,
-      },
-      source,
-    );
-  }
+    source,
+    body.subscribe_newsletter !== false,
+  );
 
   return NextResponse.json({ ok: true, roi });
 }

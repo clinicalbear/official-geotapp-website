@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { rateLimitOk, clientIp } from '@/lib/rate-limit';
 
 // Gateway commenti del blog (headless).
 // Il browser invia qui; questo endpoint valida, filtra lo spam e poi crea il
@@ -19,6 +20,9 @@ const MAX_COMMENT = 3000;
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export async function POST(req: NextRequest) {
+  if (!rateLimitOk(`cm:${clientIp(req)}`, 3, 60_000)) {
+    return NextResponse.json({ error: 'too_many_requests' }, { status: 429 });
+  }
   // base64 di "utente:application-password" di un account WordPress che può moderare.
   const auth = process.env.WP_COMMENTS_AUTH;
   if (!auth) {

@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { rateLimitOk, clientIp } from '@/lib/rate-limit';
 
 const ML_API = 'https://connect.mailerlite.com/api';
 
@@ -42,6 +43,9 @@ const LEAD_MAGNET_GROUPS: Record<string, string> = {
 };
 
 export async function POST(req: NextRequest) {
+  if (!rateLimitOk(`nl:${clientIp(req)}`, 5, 60_000)) {
+    return NextResponse.json({ error: 'Too many requests' }, { status: 429 });
+  }
   const apiKey = process.env.MAILERLITE_API_KEY;
   if (!apiKey) {
     return NextResponse.json({ error: 'Server misconfiguration' }, { status: 500 });
