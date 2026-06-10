@@ -2,8 +2,8 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'Software voor Schoonmaakbedrijven en Facilitaire Diensten | Dienst­roosters | GeoTapp',
-    description: 'Software voor schoonmaakbedrijven: GPS-inklokregistratie, fotobewijs van gereinigde ruimtes, dienstroosters op elk object en naleving van de CAO Schoonmaak. Probeer GeoTapp gratis.',
+    title: 'Software voor Schoonmaakbedrijven | Urenregistratie & Bewijs | GeoTapp',
+    description: 'Software voor schoonmaakbedrijven: urenregistratie met GPS, fotobewijs van gereinigde ruimtes, dienstroosters op elk object en naleving van de CAO Schoonmaak. Probeer GeoTapp gratis.',
   },
   hero: {
     badge: 'Software voor Schoonmaakbedrijven, Facilitaire Diensten en Gebouwbeheer',
@@ -63,6 +63,10 @@ const content: SettoreContent = {
         title: 'Salarisexport voor AFAS en NMBRS',
         desc: 'Exporteer maandelijkse aanwezigheidsgegevens compatibel met AFAS, NMBRS en andere Nederlandse salarissoftware, met automatische scheiding van reguliere uren, overwerk en CAO-toeslagen.',
       },
+      {
+        title: 'Urenregistratie zonder papier',
+        desc: 'De urenregistratie loopt automatisch mee met elke dienst: begintijd, eindtijd, pauzes en object. Geen briefjes meer aan het einde van de maand, geen reconstructies — de uren staan al klaar voor de loonadministratie.',
+      },
     ],
   },
   testimonial: {
@@ -98,6 +102,14 @@ const content: SettoreContent = {
         q: 'Werkt de software voor de schoonmaakbranche met AFAS en NMBRS?',
         a: 'Ja. De maandelijkse export is compatibel met AFAS, NMBRS en andere Nederlandse salarispakketten, met automatische scheiding van reguliere uren, overwerk en CAO-toeslagen.',
       },
+      {
+        q: 'Hoe werkt urenregistratie voor een schoonmaakbedrijf?',
+        a: 'Elke medewerker klokt in en uit via de smartphone, per object. De urenregistratie gebeurt automatisch met GPS-verificatie en is direct zichtbaar voor het kantoor. Begintijd, eindtijd, pauzes en overwerk worden vastgelegd zoals de CAO Schoonmaak vereist, zonder papieren urenbriefjes.',
+      },
+      {
+        q: 'Wat kost software voor een schoonmaakbedrijf?',
+        a: 'GeoTapp begint bij enkele euro\'s per medewerker per maand, afhankelijk van teamgrootte en modules. U kunt 14 dagen gratis proberen, zonder creditcard en zonder verplichtingen — zo ziet u eerst of het werkt voor uw objecten.',
+      },
     ],
   },
   cta: {
@@ -115,6 +127,32 @@ const content: SettoreContent = {
       { label: 'Bij geschillen', competitor: 'Gegevens niet verdedigbaar', geotapp: 'Verzegeld rapport, niet te vervalsen' },
       { label: 'CAO Schoonmaak', competitor: 'Handmatig bij te houden', geotapp: 'Pauzes en overwerk automatisch geregistreerd' },
       { label: 'Salarisexport', competitor: 'Los proces', geotapp: 'Compatibel met AFAS en NMBRS' },
+    ],
+  },
+  non_gestionale: {
+    title: 'Geen planningssoftware. Bewijssoftware.',
+    subtitle: 'Planningssoftware organiseert het werk. GeoTapp bewijst dat het is uitgevoerd.',
+    items: [
+      {
+        label: 'Hoofddoel',
+        gestionale: 'Roosters plannen en organiseren',
+        geotapp: 'Verifieerbaar bewijs per dienst genereren',
+      },
+      {
+        label: 'Wat het oplevert',
+        gestionale: 'Gegevens in uw eigen systeem',
+        geotapp: 'Verzegelde rapporten die de opdrachtgever zelf controleert',
+      },
+      {
+        label: 'Bij een geschil',
+        gestionale: 'U toont cijfers die alleen u kunt lezen',
+        geotapp: 'U stuurt een rapport met GPS en foto\'s — discussie voorbij',
+      },
+      {
+        label: 'Naast uw huidige planning',
+        gestionale: 'Vervangt vaak het hele pakket',
+        geotapp: 'Werkt náást uw planningssoftware, export naar AFAS en NMBRS',
+      },
     ],
   },
   pricing_hint: {
@@ -135,6 +173,14 @@ const content: SettoreContent = {
     {
       question: 'Werkt de software voor de schoonmaakbranche met AFAS en NMBRS?',
       answer: 'Ja. De maandelijkse export is compatibel met AFAS, NMBRS en andere Nederlandse salarispakketten, met automatische scheiding van reguliere uren, overwerk en CAO-toeslagen.',
+    },
+    {
+      question: 'Hoe werkt urenregistratie voor een schoonmaakbedrijf?',
+      answer: 'Elke medewerker klokt in en uit via de smartphone, per object. De urenregistratie gebeurt automatisch met GPS-verificatie: begintijd, eindtijd, pauzes en overwerk worden vastgelegd zoals de CAO Schoonmaak vereist, zonder papieren urenbriefjes.',
+    },
+    {
+      question: 'Wat kost software voor een schoonmaakbedrijf?',
+      answer: 'GeoTapp begint bij enkele euro\'s per medewerker per maand, afhankelijk van teamgrootte en modules. 14 dagen gratis proberen, zonder creditcard en zonder verplichtingen.',
     },
   ],
 };
