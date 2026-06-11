@@ -3,7 +3,7 @@
  * Plugin Name: GeoTapp Multilingual SEO Automation
  * Plugin URI: https://geotapp.com
  * Description: Auto-translates historical and new posts with Polylang + DeepL, links translations, and adds reverse-proxy-safe SEO signals.
- * Version: 1.3.0
+ * Version: 1.4.0
  * Author: GeoTapp
  * License: GPL2
  */
@@ -43,10 +43,6 @@ function gtmsa_default_settings() {
         'target_languages' => 'en,de,fr,es,pt,nl,sv,da,nb,ru',
         'deepl_api_key' => '',
         'deepl_api_url' => 'https://api.deepl.com/v2/translate',
-        'translation_provider' => 'deepl',
-        'aws_access_key'       => '',
-        'aws_secret_key'       => '',
-        'aws_region'           => 'eu-west-1',
         'auto_translate_on_publish' => 1,
         'sync_updates' => 0,
         'publish_translations' => 1,
@@ -228,6 +224,19 @@ function gtmsa_autofix_post_language_rest($post) {
 add_action('rest_after_insert_post', 'gtmsa_autofix_post_language_rest', 20, 1);
 // Editor/import/script: a questo punto wp_insert_post ha già scritto i termini.
 add_action('save_post_post', 'gtmsa_autofix_post_language', 999, 1);
+
+// REGOLA: ogni articolo PUBBLICATO deve avere la lingua impostata. I post
+// programmati (status 'future') si auto-pubblicano via wp-cron con
+// wp_publish_post(), che NON sempre rilancia save_post: senza questo hook la
+// rete di sicurezza salterebbe proprio sui post schedulati (il caso di /articoli).
+// transition_post_status scatta sempre alla pubblicazione.
+function gtmsa_autofix_language_on_publish($new_status, $old_status, $post) {
+    if ($new_status !== 'publish' || !is_object($post) || $post->post_type !== 'post') {
+        return;
+    }
+    gtmsa_autofix_post_language($post->ID);
+}
+add_action('transition_post_status', 'gtmsa_autofix_language_on_publish', 9, 3);
 
 /**
  * Espone la lingua Polylang sul REST API: leggibile nelle risposte
@@ -494,184 +503,7 @@ function gtmsa_map_deepl_target($lang) {
     return $map[$lang] ?? null;
 }
 
-function gtmsa_map_aws_language($lang) {
-    $lang = gtmsa_normalize_language($lang, '');
-    $map = [
-        'it' => 'it',
-        'en' => 'en',
-        'de' => 'de',
-        'fr' => 'fr',
-        'es' => 'es',
-        'pt' => 'pt',
-        'nb' => 'no',   // AWS Translate uses 'no' for Norwegian Bokmål, not 'nb'
-        'da' => 'da',
-        'sv' => 'sv',
-        'ru' => 'ru',
-        'nl' => 'nl',
-    ];
-    return $map[$lang] ?? null;
-}
-
-/**
- * Builds AWS Signature V4 Authorization headers for AWS Translate.
- */
-function gtmsa_aws_sign_request($access_key, $secret_key, $region, $body_json) {
-    $service   = 'translate';
-    $host      = "translate.{$region}.amazonaws.com";
-    $uri       = '/TranslateText';
-    $method    = 'POST';
-    $algorithm = 'AWS4-HMAC-SHA256';
-
-    $now        = new DateTime('UTC');
-    $amz_date   = $now->format('Ymd\THis\Z');
-    $date_stamp = $now->format('Ymd');
-
-    $content_type = 'application/x-amz-json-1.1';
-    $amz_target   = 'AWSShineFrontendService_20170701.TranslateText';
-    $payload_hash = hash('sha256', $body_json);
-
-    // Canonical headers must be sorted alphabetically and each end with \n
-    $canonical_headers = "content-type:{$content_type}\n"
-        . "host:{$host}\n"
-        . "x-amz-date:{$amz_date}\n"
-        . "x-amz-target:{$amz_target}\n";
-    $signed_headers = 'content-type;host;x-amz-date;x-amz-target';
-
-    // Canonical request: canonical_headers ends with \n, spec requires another \n before signed_headers
-    $canonical_request = $method . "\n"
-        . $uri . "\n"
-        . "\n"                 // empty query string
-        . $canonical_headers   // already ends with \n
-        . "\n"                 // blank line required by AWS Sig V4 spec
-        . $signed_headers . "\n"
-        . $payload_hash;
-
-    $credential_scope = "{$date_stamp}/{$region}/{$service}/aws4_request";
-    $string_to_sign   = $algorithm . "\n"
-        . $amz_date . "\n"
-        . $credential_scope . "\n"
-        . hash('sha256', $canonical_request);
-
-    $signing_key = hash_hmac('sha256', 'aws4_request',
-        hash_hmac('sha256', $service,
-            hash_hmac('sha256', $region,
-                hash_hmac('sha256', $date_stamp, 'AWS4' . $secret_key, true),
-            true),
-        true),
-    true);
-
-    $signature = hash_hmac('sha256', $string_to_sign, $signing_key);
-
-    $authorization = "{$algorithm} Credential={$access_key}/{$credential_scope}, "
-        . "SignedHeaders={$signed_headers}, Signature={$signature}";
-
-    return [
-        'Content-Type'  => $content_type,
-        'X-Amz-Date'    => $amz_date,
-        'X-Amz-Target'  => $amz_target,
-        'Authorization' => $authorization,
-    ];
-}
-
-/**
- * Translates a single text chunk via AWS Translate API.
- */
-function gtmsa_aws_translate_chunk($text, $source_code, $target_code, $access_key, $secret_key, $region) {
-    $body_json = json_encode([
-        'Text'               => $text,
-        'SourceLanguageCode' => $source_code,
-        'TargetLanguageCode' => $target_code,
-    ]);
-
-    $headers  = gtmsa_aws_sign_request($access_key, $secret_key, $region, $body_json);
-    $endpoint = "https://translate.{$region}.amazonaws.com/TranslateText";
-
-    $response = wp_remote_post($endpoint, [
-        'timeout' => 60,
-        'headers' => $headers,
-        'body'    => $body_json,
-    ]);
-
-    if (is_wp_error($response)) {
-        error_log('GTMSA AWS error: ' . $response->get_error_message());
-        return null;
-    }
-
-    $status = wp_remote_retrieve_response_code($response);
-    if ($status < 200 || $status >= 300) {
-        error_log('GTMSA AWS HTTP error: ' . $status . ' — ' . wp_remote_retrieve_body($response));
-        return null;
-    }
-
-    $decoded = json_decode(wp_remote_retrieve_body($response), true);
-    if (empty($decoded['TranslatedText'])) {
-        error_log('GTMSA AWS payload invalid.');
-        return null;
-    }
-    return (string) $decoded['TranslatedText'];
-}
-
-/**
- * Translates a single text via AWS Translate, auto-chunking if > 9500 bytes.
- */
-function gtmsa_aws_translate_single($text, $source_code, $target_code, $access_key, $secret_key, $region) {
-    $max_bytes = 9500;
-    if (strlen($text) <= $max_bytes) {
-        return gtmsa_aws_translate_chunk($text, $source_code, $target_code, $access_key, $secret_key, $region);
-    }
-
-    $paragraphs = preg_split('/(\n\n+)/', $text, -1, PREG_SPLIT_DELIM_CAPTURE);
-    $chunks     = [];
-    $current    = '';
-    foreach ($paragraphs as $part) {
-        if (strlen($current . $part) > $max_bytes) {
-            if ($current !== '') { $chunks[] = $current; $current = ''; }
-            if (strlen($part) > $max_bytes) {
-                foreach (str_split($part, $max_bytes) as $piece) { $chunks[] = $piece; }
-                continue;
-            }
-        }
-        $current .= $part;
-    }
-    if ($current !== '') { $chunks[] = $current; }
-
-    $translated_parts = [];
-    foreach ($chunks as $chunk) {
-        $result = gtmsa_aws_translate_chunk($chunk, $source_code, $target_code, $access_key, $secret_key, $region);
-        if ($result === null) { return null; }
-        $translated_parts[] = $result;
-    }
-    return implode('', $translated_parts);
-}
-
-/**
- * Translates an array of texts via AWS Translate (one API call per text).
- */
-function gtmsa_translate_text_batch_aws($texts, $source_language, $target_language, $settings) {
-    $access_key = trim((string) ($settings['aws_access_key'] ?? ''));
-    $secret_key = trim((string) ($settings['aws_secret_key'] ?? ''));
-    $region     = trim((string) ($settings['aws_region'] ?? 'eu-west-1'));
-
-    if (!$access_key || !$secret_key) { return null; }
-
-    $source_code = gtmsa_map_aws_language($source_language);
-    $target_code = gtmsa_map_aws_language($target_language);
-    if (!$source_code || !$target_code) { return null; }
-
-    $translated = [];
-    foreach ($texts as $text) {
-        $text = (string) $text;
-        if (trim($text) === '') {
-            // AWS rejects empty strings — return as-is
-            $translated[] = $text;
-            continue;
-        }
-        $result = gtmsa_aws_translate_single($text, $source_code, $target_code, $access_key, $secret_key, $region);
-        if ($result === null) { return null; }
-        $translated[] = $result;
-    }
-    return $translated;
-}
+// AWS Translate rimosso (non più usato): la traduzione automatica usa solo DeepL.
 
 function gtmsa_translate_text_batch_deepl($texts, $source_language, $target_language, $settings) {
     $api_key = trim((string) $settings['deepl_api_key']);
@@ -741,10 +573,7 @@ function gtmsa_translate_text_batch_deepl($texts, $source_language, $target_lang
 }
 
 function gtmsa_translate_text_batch($texts, $source_language, $target_language, $settings) {
-    $provider = $settings['translation_provider'] ?? 'deepl';
-    if ($provider === 'aws') {
-        return gtmsa_translate_text_batch_aws($texts, $source_language, $target_language, $settings);
-    }
+    // AWS Translate rimosso (non più usato): la traduzione automatica usa solo DeepL.
     return gtmsa_translate_text_batch_deepl($texts, $source_language, $target_language, $settings);
 }
 
@@ -1002,7 +831,7 @@ function gtmsa_process_translation_queue() {
     }
 
     $settings = gtmsa_get_settings();
-    // Allow plenty of time: each post requires ~100 AWS calls (content + terms × 9 languages).
+    // Allow plenty of time: ogni post richiede ~100 chiamate DeepL (contenuto + termini × 9 lingue).
     @set_time_limit(600);
 
     $queue = gtmsa_get_queue();
@@ -1197,10 +1026,6 @@ function gtmsa_sanitize_settings($input) {
         $output['source_language']
     );
     $output['deepl_api_key'] = sanitize_text_field($input['deepl_api_key'] ?? '');
-    $output['translation_provider'] = in_array($input['translation_provider'] ?? 'deepl', ['deepl', 'aws'], true) ? $input['translation_provider'] : 'deepl';
-    $output['aws_access_key']       = sanitize_text_field($input['aws_access_key'] ?? '');
-    $output['aws_secret_key']       = sanitize_text_field($input['aws_secret_key'] ?? '');
-    $output['aws_region']           = sanitize_text_field($input['aws_region'] ?? 'eu-west-1');
     $output['deepl_api_url'] = esc_url_raw($input['deepl_api_url'] ?? $defaults['deepl_api_url']);
 
     $bool_keys = ['auto_translate_on_publish', 'sync_updates', 'publish_translations', 'translate_slug', 'noindex_origin_host'];
@@ -1275,25 +1100,6 @@ function gtmsa_render_settings_page() {
             </td>
           </tr>
           <tr>
-            <th scope="row">Provider traduzione</th>
-            <td>
-              <label>
-                <input type="radio" name="<?php echo esc_attr(GTMSA_OPTION_KEY); ?>[translation_provider]"
-                  value="deepl" <?php checked($settings['translation_provider'] ?? 'deepl', 'deepl'); ?>
-                  id="gtmsa_provider_deepl" />
-                DeepL
-              </label>
-              &nbsp;&nbsp;
-              <label>
-                <input type="radio" name="<?php echo esc_attr(GTMSA_OPTION_KEY); ?>[translation_provider]"
-                  value="aws" <?php checked($settings['translation_provider'] ?? 'deepl', 'aws'); ?>
-                  id="gtmsa_provider_aws" />
-                AWS Translate
-              </label>
-            </td>
-          </tr>
-          <tbody id="gtmsa-deepl-fields">
-          <tr>
             <th scope="row"><label for="gtmsa_deepl_api_key">DeepL API Key</label></th>
             <td><input id="gtmsa_deepl_api_key" name="<?php echo esc_attr(GTMSA_OPTION_KEY); ?>[deepl_api_key]" type="password" value="<?php echo esc_attr($settings['deepl_api_key']); ?>" class="regular-text" autocomplete="new-password" /></td>
           </tr>
@@ -1301,27 +1107,6 @@ function gtmsa_render_settings_page() {
             <th scope="row"><label for="gtmsa_deepl_api_url">DeepL API URL</label></th>
             <td><input id="gtmsa_deepl_api_url" name="<?php echo esc_attr(GTMSA_OPTION_KEY); ?>[deepl_api_url]" type="url" value="<?php echo esc_attr($settings['deepl_api_url']); ?>" class="regular-text" /></td>
           </tr>
-          </tbody>
-          <tbody id="gtmsa-aws-fields">
-          <tr>
-            <th scope="row"><label for="gtmsa_aws_access_key">AWS Access Key ID</label></th>
-            <td><input id="gtmsa_aws_access_key" name="<?php echo esc_attr(GTMSA_OPTION_KEY); ?>[aws_access_key]"
-              type="text" value="<?php echo esc_attr($settings['aws_access_key'] ?? ''); ?>" class="regular-text" /></td>
-          </tr>
-          <tr>
-            <th scope="row"><label for="gtmsa_aws_secret_key">AWS Secret Key</label></th>
-            <td><input id="gtmsa_aws_secret_key" name="<?php echo esc_attr(GTMSA_OPTION_KEY); ?>[aws_secret_key]"
-              type="password" value="<?php echo esc_attr($settings['aws_secret_key'] ?? ''); ?>" class="regular-text" autocomplete="new-password" /></td>
-          </tr>
-          <tr>
-            <th scope="row"><label for="gtmsa_aws_region">AWS Region</label></th>
-            <td>
-              <input id="gtmsa_aws_region" name="<?php echo esc_attr(GTMSA_OPTION_KEY); ?>[aws_region]"
-                type="text" value="<?php echo esc_attr($settings['aws_region'] ?? 'eu-west-1'); ?>" class="regular-text" />
-              <p class="description">Es: eu-west-1, us-east-1</p>
-            </td>
-          </tr>
-          </tbody>
           <tr>
             <th scope="row">Auto traduzione nuovi articoli</th>
             <td><?php gtmsa_render_checkbox('auto_translate_on_publish', $settings['auto_translate_on_publish']); ?></td>
@@ -1349,18 +1134,6 @@ function gtmsa_render_settings_page() {
             </table>
 
             <?php submit_button('Salva configurazione'); ?>
-          <script>
-          (function(){
-              function gtmsaToggleProvider() {
-                  var isAws = document.getElementById('gtmsa_provider_aws').checked;
-                  document.getElementById('gtmsa-deepl-fields').style.display = isAws ? 'none' : '';
-                  document.getElementById('gtmsa-aws-fields').style.display   = isAws ? '' : 'none';
-              }
-              document.getElementById('gtmsa_provider_deepl').addEventListener('change', gtmsaToggleProvider);
-              document.getElementById('gtmsa_provider_aws').addEventListener('change', gtmsaToggleProvider);
-              gtmsaToggleProvider();
-          })();
-          </script>
           </form>
 
           <hr />
@@ -1467,7 +1240,7 @@ function gtmsa_handle_run_queue_now() {
 
     // Schedule an immediate single cron event and spawn cron in background.
     // Running the queue synchronously inside admin-post.php causes 504 Gateway Timeout
-    // when Cloudflare's 100s proxy timeout is exceeded (8 posts × 9 languages = 72 AWS calls).
+    // when Cloudflare's 100s proxy timeout is exceeded (8 post × 9 lingue = 72 chiamate DeepL).
     if ( ! wp_next_scheduled( GTMSA_CRON_HOOK ) ) {
         wp_schedule_single_event( time() - 1, GTMSA_CRON_HOOK );
     }
