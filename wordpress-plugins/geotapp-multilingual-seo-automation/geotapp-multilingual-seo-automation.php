@@ -152,6 +152,109 @@ function gtmsa_is_polylang_ready() {
         && function_exists('pll_save_post_translations');
 }
 
+/**
+ * Deduce la lingua di un post dai suoi slug categoria. Pure function, testabile.
+ *
+ * Le categorie non-default portano il suffisso lingua (es. "field-service-de",
+ * "geotapp-nl"); le categorie italiane non hanno suffisso. Ritorna la lingua
+ * solo se gli slug indicano UNA sola lingua non-default registrata; null se
+ * nessun suffisso (post di default), suffisso non registrato o segnali
+ * ambigui (due lingue diverse).
+ *
+ * @param string[] $slugs      Slug delle categorie del post.
+ * @param string[] $registered Lingue registrate in Polylang.
+ * @param string   $default    Lingua di default (le sue categorie sono senza suffisso).
+ * @return string|null
+ */
+function gtmsa_lang_from_category_slugs(array $slugs, array $registered, string $default = 'it'): ?string {
+    $found = [];
+    foreach ($slugs as $slug) {
+        if (preg_match('/-([a-z]{2})$/', (string) $slug, $m)
+            && $m[1] !== $default
+            && in_array($m[1], $registered, true)) {
+            $found[$m[1]] = true;
+        }
+    }
+    return count($found) === 1 ? array_key_first($found) : null;
+}
+
+/**
+ * Rete di sicurezza: un post creato senza lingua Polylang esplicita resta
+ * sulla lingua di default (it) e il permalink esce SENZA prefisso lingua
+ * anche se il contenuto è tradotto (è successo a decine di post NL/DE delle
+ * campagne pubblicate via REST in due fasi). Qui, se le categorie del post
+ * indicano in modo univoco una lingua non-default e il post sta ancora sulla
+ * default, assegniamo la lingua corretta. Non tocca mai un'assegnazione
+ * non-default esplicita.
+ *
+ * @return string|null La lingua assegnata, o null se non è servito intervenire.
+ */
+function gtmsa_autofix_post_language($post_id) {
+    if (!gtmsa_is_polylang_ready()) {
+        return null;
+    }
+    $post_id = is_object($post_id) ? $post_id->ID : intval($post_id);
+    if (!$post_id || wp_is_post_revision($post_id) || get_post_type($post_id) !== 'post') {
+        return null;
+    }
+    $default = function_exists('pll_default_language') ? (pll_default_language() ?: 'it') : 'it';
+    $current = pll_get_post_language($post_id);
+    if ($current && $current !== $default) {
+        return null; // lingua non-default già assegnata esplicitamente
+    }
+    $slugs = wp_get_object_terms($post_id, 'category', ['fields' => 'slugs']);
+    if (!is_array($slugs)) {
+        return null;
+    }
+    $registered = pll_languages_list();
+    $lang = gtmsa_lang_from_category_slugs($slugs, is_array($registered) ? $registered : [], $default);
+    if ($lang === null) {
+        return null;
+    }
+    pll_set_post_language($post_id, $lang);
+    error_log("GTMSA: autofix lingua post {$post_id} -> {$lang} (dedotta dalla categoria)");
+    return $lang;
+}
+
+function gtmsa_autofix_post_language_rest($post) {
+    gtmsa_autofix_post_language(is_object($post) ? $post->ID : $post);
+}
+// REST: scatta dopo che categorie e campi sono stati scritti.
+add_action('rest_after_insert_post', 'gtmsa_autofix_post_language_rest', 20, 1);
+// Editor/import/script: a questo punto wp_insert_post ha già scritto i termini.
+add_action('save_post_post', 'gtmsa_autofix_post_language', 999, 1);
+
+/**
+ * Espone la lingua Polylang sul REST API: leggibile nelle risposte
+ * (`_fields=...,gtmsa_lang`, utile per i monitor) e scrivibile alla creazione
+ * (`{"gtmsa_lang":"de"}`), così i publisher impostano la lingua in modo
+ * atomico invece che in una seconda fase separata.
+ */
+function gtmsa_register_rest_lang_field() {
+    if (!gtmsa_is_polylang_ready() || !function_exists('register_rest_field')) {
+        return;
+    }
+    register_rest_field('post', 'gtmsa_lang', [
+        'get_callback' => function ($post_arr) {
+            return pll_get_post_language(intval($post_arr['id'])) ?: null;
+        },
+        'update_callback' => function ($value, $post) {
+            $lang = gtmsa_normalize_language((string) $value, '');
+            if ($lang) {
+                pll_set_post_language($post->ID, $lang);
+                pll_save_post_translations([$lang => $post->ID]);
+            }
+            return true;
+        },
+        'schema' => [
+            'description' => 'Lingua Polylang del post',
+            'type'        => ['string', 'null'],
+            'context'     => ['view', 'edit'],
+        ],
+    ]);
+}
+add_action('rest_api_init', 'gtmsa_register_rest_lang_field');
+
 function gtmsa_admin_notice_polylang_missing() {
     if (!current_user_can('manage_options')) {
         return;
