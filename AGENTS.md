@@ -157,6 +157,25 @@ Money pages warmup (9 URL): `/`, `/it/`, `/it/products/geotapp-flow/`, `/it/prod
 - Servito su `geotapp.com/blog/` tramite middleware proxy verso `blog.geotapp.com`
 - Plugin SEO: **Zenith SEO** (proprietario, NON Yoast) — `wp-content/plugins/zenith-seo/`
 - SFTP accesso: `su325938@access-5018990701.webspace-host.com` porta 22
+
+### Fetch WP REST dal Worker — contratto obbligatorio
+
+Ogni fetch verso il WP REST API dal codice Next.js (pagine, route handler) DEVE:
+
+1. **Trailing slash sull'endpoint**: `/wp-json/wp/v2/posts/?...`, MAI `/posts?...` — senza slash la subrequest del Worker riceve 404 (fuori dal Worker funziona: per questo i bug emergono solo live).
+2. **`cache: 'no-store'`** + cache in-memory module-level (TTL + stale-on-error, vedi `POST_CACHE` nell'hub blog) — `next: { revalidate }` nel Worker deduplica il fetch, il signal non si propaga e la fetch fallisce.
+3. **`export const dynamic = 'force-dynamic'`** sulla pagina — con ISR la pagina viene pre-renderizzata in build e un render vuoto resta in cache fino al revalidate.
+4. **Header** `{ host: 'blog.geotapp.com', 'x-geotapp-proxy': '1' }` — l'header proxy bypassa il redirect Cloudflare di blog.geotapp.com.
+5. **`console.error` nei catch** delle fetch — senza, i fallimenti sono invisibili; con, si diagnosticano in 1 minuto con `npx wrangler tail official-geotapp-website --format json`.
+
+### Lingua dei post (Polylang) — storia e guardrail
+
+I post tradotti pubblicati via REST in due fasi (crea post → imposta lingua dopo) sono nati con lingua `it` e permalink SENZA prefisso lingua (43 NL + 2 DE), o con la lingua di un altro batch (8 post IT marcati `nb`). Guardrail attivi:
+
+- **Mai dedurre la lingua di un post dal prefisso del permalink**: usare `detectPostLocale` (`src/lib/blog-locale.ts`, basato su `class_list`) e richiedere `class_list` nei `_fields`.
+- **GTMSA autofix**: il plugin assegna la lingua dalla categoria suffissata (`-de`, `-nl`, ...) se il post sta sulla default — `gtmsa_autofix_post_language` in `wordpress-plugins/geotapp-multilingual-seo-automation/`.
+- **Campo REST `gtmsa_lang`**: i publisher devono passarlo alla creazione del post (atomico); leggibile nei monitor.
+- **Monitor**: `scripts/check-blog-hubs.mjs` (cron VPS) include lo scan categoria-suffisso vs prefisso URL e alza alert.
 - Canonical blog index: usa `get_pagenum_link(1)` in `class-head-renderer.php` — NON `get_permalink()` (bug: restituisce l'URL del primo post del loop)
 - La homepage WordPress ha `body.home.blog` (is_front_page() AND is_home() entrambi true) — il fix canonical usa `if (is_home())` senza la condizione `!is_front_page()`
 
