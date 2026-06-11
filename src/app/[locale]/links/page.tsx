@@ -111,16 +111,16 @@ function truncate(text: string, max = 110): string {
   return clean.length > max ? clean.slice(0, max).trimEnd() + '…' : clean;
 }
 
+// cache: 'no-store' come l'hub blog: con next.revalidate il data-cache del
+// Worker deduplica il fetch e il signal non si propaga → fetch sempre fallita
+// a runtime (pagina vuota). Il caching vive in ARTICLE_CACHE qui sotto.
 async function wpJson<T>(url: string, timeoutMs = 6000): Promise<T | null> {
   try {
-    const controller = new AbortController();
-    const timer = setTimeout(() => controller.abort(), timeoutMs);
     const res = await fetch(url, {
       headers: WP_HEADERS,
-      signal: controller.signal,
-      next: { revalidate: 3600 },
+      cache: 'no-store',
+      signal: AbortSignal.timeout(timeoutMs),
     });
-    clearTimeout(timer);
     if (!res.ok) return null;
     return (await res.json()) as T;
   } catch {
@@ -209,7 +209,14 @@ function pickPinnedBySector(
   return null;
 }
 
+// Cache per locale nello stesso isolate Worker: TTL fresco + stale-on-error,
+// stesso schema del POST_CACHE dell'hub blog.
+const ARTICLE_CACHE = new Map<string, { articles: Article[]; ts: number }>();
+const ARTICLE_CACHE_TTL_MS = 60 * 60 * 1000;
+
 async function getArticles(locale: string): Promise<Article[]> {
+  const cached = ARTICLE_CACHE.get(locale);
+  if (cached && Date.now() - cached.ts < ARTICLE_CACHE_TTL_MS) return cached.articles;
   try {
     // ── Resolve sector → category ID for this locale ────────────────────────
     const slugsForLocale = SECTORS
@@ -261,13 +268,13 @@ async function getArticles(locale: string): Promise<Article[]> {
     }
 
     const combined = [...pinned, ...fillers].slice(0, targetTotal);
-    if (combined.length === 0) return [];
+    if (combined.length === 0) return cached?.articles ?? [];
 
     // ── Media (featured images) in one batch ────────────────────────────────
     const mediaIds = combined.map(c => c.post.featured_media).filter(Boolean);
     const mediaMap = await fetchMediaMap(mediaIds);
 
-    return combined.map(({ post, sector }) => ({
+    const articles = combined.map(({ post, sector }) => ({
       id: post.id,
       slug: post.slug,
       title: stripHtml(post.title.rendered),
@@ -277,8 +284,11 @@ async function getArticles(locale: string): Promise<Article[]> {
       image: mediaMap[post.featured_media] ?? null,
       sector,
     }));
+    ARTICLE_CACHE.set(locale, { articles, ts: Date.now() });
+    return articles;
   } catch {
-    return [];
+    // Errore WP: meglio servire la lista stale che una pagina vuota.
+    return cached?.articles ?? [];
   }
 }
 

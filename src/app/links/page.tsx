@@ -87,25 +87,31 @@ function truncate(text: string, max = 110): string {
 
 // ─── Data fetching ────────────────────────────────────────────────────────────
 
-async function getLatestArticles(): Promise<Article[]> {
-  try {
-    const controller = new AbortController();
-    const timer = setTimeout(() => controller.abort(), 6000);
+// Cache nello stesso isolate Worker (TTL fresco + stale-on-error), stesso
+// schema del POST_CACHE dell'hub blog.
+let ARTICLE_CACHE: { articles: Article[]; ts: number } | null = null;
+const ARTICLE_CACHE_TTL_MS = 60 * 60 * 1000;
 
-    // Recuperiamo 50 post: il blog pubblica in 11 lingue, servono ≥ 4 IT dopo il filtro
+async function getLatestArticles(): Promise<Article[]> {
+  if (ARTICLE_CACHE && Date.now() - ARTICLE_CACHE.ts < ARTICLE_CACHE_TTL_MS) {
+    return ARTICLE_CACHE.articles;
+  }
+  try {
+    // Recuperiamo 50 post: il blog pubblica in 11 lingue, servono ≥ 4 IT dopo il filtro.
+    // cache: 'no-store' come l'hub blog: con next.revalidate il data-cache del
+    // Worker deduplica il fetch e il signal non si propaga → fetch sempre fallita.
     const res = await fetch(
       'https://blog.geotapp.com/wp-json/wp/v2/posts' +
         '?per_page=50&status=publish' +
         '&_fields=id,slug,title,excerpt,date,link,featured_media,class_list',
       {
         headers: WP_HEADERS,
-        signal: controller.signal,
-        next: { revalidate: 3600 },
+        cache: 'no-store',
+        signal: AbortSignal.timeout(6000),
       }
     );
-    clearTimeout(timer);
 
-    if (!res.ok) return [];
+    if (!res.ok) return ARTICLE_CACHE?.articles ?? [];
 
     const raw: WpPost[] = await res.json();
 
@@ -113,7 +119,7 @@ async function getLatestArticles(): Promise<Article[]> {
     // (detectPostLocale), NON dal prefisso del permalink: diversi post NL/DE
     // sono pubblicati senza prefisso lingua nell'URL.
     const itPosts = raw.filter(p => detectPostLocale(p) === 'it').slice(0, 4);
-    if (itPosts.length === 0) return [];
+    if (itPosts.length === 0) return ARTICLE_CACHE?.articles ?? [];
 
     // Recupera immagini in parallelo
     const mediaIds = itPosts.map(p => p.featured_media).filter(Boolean);
@@ -124,7 +130,7 @@ async function getLatestArticles(): Promise<Article[]> {
         const mRes = await fetch(
           `https://blog.geotapp.com/wp-json/wp/v2/media` +
             `?include=${mediaIds.join(',')}&_fields=id,media_details,source_url`,
-          { headers: WP_HEADERS, next: { revalidate: 3600 } }
+          { headers: WP_HEADERS, cache: 'no-store', signal: AbortSignal.timeout(6000) }
         );
         if (mRes.ok) {
           const mediaItems: WpMedia[] = await mRes.json();
@@ -143,7 +149,7 @@ async function getLatestArticles(): Promise<Article[]> {
       }
     }
 
-    return itPosts.map(p => ({
+    const articles = itPosts.map(p => ({
       id: p.id,
       slug: p.slug,
       title: stripHtml(p.title.rendered),
@@ -152,8 +158,11 @@ async function getLatestArticles(): Promise<Article[]> {
       url: resolveUrl(p.link, p.slug),
       image: mediaMap[p.featured_media] ?? null,
     }));
+    ARTICLE_CACHE = { articles, ts: Date.now() };
+    return articles;
   } catch {
-    return [];
+    // Errore WP: meglio servire la lista stale che una pagina vuota.
+    return ARTICLE_CACHE?.articles ?? [];
   }
 }
 

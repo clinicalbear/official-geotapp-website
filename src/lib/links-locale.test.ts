@@ -47,6 +47,12 @@ describe('/[locale]/links page locale filtering', () => {
   it('no longer filters by permalink prefix alone', () => {
     expect(localeLinksPage).not.toMatch(/isLangPost/);
   });
+
+  it('fetches WP with no-store like the blog hub (next.revalidate breaks in the Worker)', () => {
+    expect(localeLinksPage).not.toMatch(/next:\s*\{\s*revalidate/);
+    expect(localeLinksPage).toMatch(/cache:\s*'no-store'/);
+    expect(localeLinksPage).toMatch(/force-dynamic/);
+  });
 });
 
 describe('/links page (root, IT) locale filtering', () => {
@@ -61,5 +67,11 @@ describe('/links page (root, IT) locale filtering', () => {
 
   it('no longer filters by permalink prefix alone', () => {
     expect(rootLinksPage).not.toMatch(/isItalianPost/);
+  });
+
+  it('fetches WP with no-store like the blog hub (next.revalidate breaks in the Worker)', () => {
+    expect(rootLinksPage).not.toMatch(/next:\s*\{\s*revalidate/);
+    expect(rootLinksPage).toMatch(/cache:\s*'no-store'/);
+    expect(rootLinksPage).toMatch(/force-dynamic/);
   });
 });
