@@ -4,7 +4,7 @@
  * Server component: recupera i 4 articoli IT più recenti da WordPress
  * e li passa al client component per rendering animato.
  *
- * ISR: revalidate ogni ora. Nessun impatto sulle performance di navigazione.
+ * Render on demand + cache in-memory (ARTICLE_CACHE, TTL 1h).
  *
  * SEO: noindex (pagina utility, non deve competere con le pagine principali).
  *
@@ -22,7 +22,7 @@ import { detectPostLocale } from '@/lib/blog-locale';
 
 // Render on demand (stesso pattern dell'hub blog): con ISR la pagina veniva
 // pre-renderizzata in build, dove le fetch WP falliscono → cache vuota per 1h
-// a ogni deploy. Il caching vive nelle fetch (next: { revalidate: 3600 }).
+// a ogni deploy. Il caching vive in ARTICLE_CACHE (in-memory, TTL 1h).
 
 export const dynamic = 'force-dynamic';
 

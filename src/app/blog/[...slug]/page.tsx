@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { notFound } from 'next/navigation';
+import { notFound, permanentRedirect } from 'next/navigation';
 import ArticleHero from '@/components/blog/ArticleHero';
 import ArticleContent from '@/components/blog/ArticleContent';
 import ArticleDisclaimer from '@/components/blog/ArticleDisclaimer';
@@ -12,6 +12,7 @@ import LeadMagnetInline from '@/components/blog/LeadMagnetInline';
 import MapBackground from '@/components/blog/MapBackground';
 import Comments, { type CommentItem } from '@/components/blog/Comments';
 import { detectPostLocale } from '@/lib/blog-locale';
+import { canonicalBlogPath, requestedBlogPath } from '@/lib/blog-canonical';
 import { sanitizeWpHtml } from '@/lib/sanitize-wp';
 
 export const dynamic = 'force-dynamic';
@@ -71,6 +72,7 @@ interface WPPost {
   date: string;
   modified: string;
   link: string;
+  class_list?: string[];
   featured_media: number;
   categories: number[];
   meta?: { yoast_wpseo_title?: string; yoast_wpseo_metadesc?: string };
@@ -80,14 +82,21 @@ interface WPPost {
   };
 }
 
-async function fetchPost(articleSlug: string): Promise<WPPost | null> {
+async function fetchPost(articleSlug: string, requestedLocale?: string): Promise<WPPost | null> {
   try {
     const res = await wpFetch(
       `${WP}/wp-json/wp/v2/posts/?slug=${encodeURIComponent(articleSlug)}&_embed=wp:featuredmedia,wp:term`,
     );
     if (!res.ok) return null;
     const posts: WPPost[] = await res.json();
-    return posts.length > 0 ? posts[0] : null;
+    if (posts.length === 0) return null;
+    // Polylang permette lo stesso slug in lingue diverse: se la query ne ritorna
+    // più d'uno, scegli quello che corrisponde alla lingua dell'URL richiesto.
+    if (posts.length > 1 && requestedLocale) {
+      const match = posts.find((p) => detectPostLocale(p) === requestedLocale);
+      if (match) return match;
+    }
+    return posts[0];
   } catch {
     return null;
   }
@@ -206,12 +215,15 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const { locale, articleSlug } = parseSlug(slug);
-  const post = await fetchPost(articleSlug);
+  const { locale: urlLocale, articleSlug } = parseSlug(slug);
+  const post = await fetchPost(articleSlug, urlLocale);
   if (!post) return { title: 'Not Found' };
 
+  // Lingua e canonical dal permalink REALE del post, non dall'URL richiesto:
+  // così l'URL senza prefisso di un post tradotto non si auto-referenzia.
+  const locale = detectPostLocale(post);
   const { title, yoastTitle, yoastDesc, featuredImage } = resolvePostData(post, locale);
-  const canonical = `https://geotapp.com/blog/${slug.join('/')}/`;
+  const canonical = `https://geotapp.com${canonicalBlogPath(post)}`;
 
   return {
     title: { absolute: yoastTitle },
@@ -234,13 +246,23 @@ const ARTICLE_LEAD_MAGNETS: Record<string, string> = {
 
 export default async function BlogArticlePage({ params }: Props) {
   const { slug } = await params;
-  const { locale, articleSlug } = parseSlug(slug);
-  const post = await fetchPost(articleSlug);
+  const { locale: urlLocale, articleSlug } = parseSlug(slug);
+  const post = await fetchPost(articleSlug, urlLocale);
   if (!post) notFound();
+
+  // Lingua dal permalink REALE del post (post.link), non dal prefisso dell'URL
+  // richiesto. Se l'URL richiesto non coincide col canonical (es. post tradotto
+  // raggiunto senza prefisso lingua, o con un prefisso errato) → 301 al canonical.
+  // Elimina il contenuto duplicato in modo sistemico, per tutti i post.
+  const canonicalPath = canonicalBlogPath(post);
+  if (requestedBlogPath(slug) !== canonicalPath) {
+    permanentRedirect(canonicalPath); // 308 — equivalente permanente del 301
+  }
+  const locale = detectPostLocale(post);
 
   const { title, content: contentWithIds, excerpt, date, modified, featuredImage, categories, categoryIds, readingTime, headings } = resolvePostData(post, locale);
 
-  const canonicalUrl = `https://geotapp.com/blog/${slug.join('/')}/`;
+  const canonicalUrl = `https://geotapp.com${canonicalPath}`;
 
   const [{ related: relatedPosts, more: morePosts }, comments] = await Promise.all([
     fetchAllRelated(post.id, locale),
