@@ -18,6 +18,7 @@
 
 import type { Metadata } from 'next';
 import LinksClient, { type Article } from './LinksClient';
+import { detectPostLocale } from '@/lib/blog-locale';
 
 // ─── ISR ──────────────────────────────────────────────────────────────────────
 
@@ -33,6 +34,7 @@ type WpPost = {
   date: string;
   link: string;
   featured_media: number;
+  class_list?: string[];
 };
 
 type WpMedia = {
@@ -67,16 +69,6 @@ function stripHtml(html: string): string {
     .trim();
 }
 
-function isItalianPost(link: string): boolean {
-  try {
-    const { pathname } = new URL(link);
-    // Polylang aggiunge /{lang}/ ai post non-IT; i post IT non hanno prefisso lingua.
-    return !/(\/en\/|\/de\/|\/fr\/|\/es\/|\/pt\/|\/nl\/|\/ru\/|\/da\/|\/sv\/|\/nb\/)/.test(pathname);
-  } catch {
-    return true;
-  }
-}
-
 function resolveUrl(link: string, slug: string): string {
   try {
     const { pathname } = new URL(link);
@@ -98,11 +90,11 @@ async function getLatestArticles(): Promise<Article[]> {
     const controller = new AbortController();
     const timer = setTimeout(() => controller.abort(), 6000);
 
-    // Recuperiamo 12 post (≥ 4 IT dopo il filtro lingua)
+    // Recuperiamo 50 post: il blog pubblica in 11 lingue, servono ≥ 4 IT dopo il filtro
     const res = await fetch(
       'https://blog.geotapp.com/wp-json/wp/v2/posts' +
-        '?per_page=12&status=publish' +
-        '&_fields=id,slug,title,excerpt,date,link,featured_media',
+        '?per_page=50&status=publish' +
+        '&_fields=id,slug,title,excerpt,date,link,featured_media,class_list',
       {
         headers: WP_HEADERS,
         signal: controller.signal,
@@ -115,8 +107,10 @@ async function getLatestArticles(): Promise<Article[]> {
 
     const raw: WpPost[] = await res.json();
 
-    // Filtro IT e prendi i 4 più recenti
-    const itPosts = raw.filter(p => isItalianPost(p.link)).slice(0, 4);
+    // Filtro IT e prendi i 4 più recenti. La lingua si rileva da class_list
+    // (detectPostLocale), NON dal prefisso del permalink: diversi post NL/DE
+    // sono pubblicati senza prefisso lingua nell'URL.
+    const itPosts = raw.filter(p => detectPostLocale(p) === 'it').slice(0, 4);
     if (itPosts.length === 0) return [];
 
     // Recupera immagini in parallelo

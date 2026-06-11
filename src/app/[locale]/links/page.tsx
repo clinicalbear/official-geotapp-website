@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import LinksClient, { type Article, type Sector } from '../../links/LinksClient';
+import { detectPostLocale } from '@/lib/blog-locale';
 export { generateLocaleStaticParams as generateStaticParams } from '@/lib/i18n/static-params';
 
 // ─── ISR ──────────────────────────────────────────────────────────────────────
@@ -15,6 +16,7 @@ type WpPost = {
   link: string;
   featured_media: number;
   categories?: number[];
+  class_list?: string[];
 };
 
 type WpMedia = {
@@ -27,12 +29,6 @@ type WpMedia = {
       medium?: { source_url: string };
     };
   };
-};
-
-// ─── Polylang language slug in URL ────────────────────────────────────────────
-const LANG_PATH_MAP: Record<string, string> = {
-  en: '/en/', de: '/de/', fr: '/fr/', es: '/es/',
-  pt: '/pt/', nl: '/nl/', da: '/da/', sv: '/sv/', nb: '/nb/', ru: '/ru/',
 };
 
 // ─── Sector → WP category slug (per language) ────────────────────────────────
@@ -108,17 +104,6 @@ function stripHtml(html: string): string {
     .replace(/&nbsp;/g, ' ').trim();
 }
 
-function isLangPost(link: string, locale: string): boolean {
-  try {
-    const { pathname } = new URL(link);
-    if (locale === 'it') {
-      return !/(\/en\/|\/de\/|\/fr\/|\/es\/|\/pt\/|\/nl\/|\/ru\/|\/da\/|\/sv\/|\/nb\/)/.test(pathname);
-    }
-    const prefix = LANG_PATH_MAP[locale];
-    return prefix ? pathname.includes(prefix) : false;
-  } catch { return false; }
-}
-
 function truncate(text: string, max = 110): string {
   const clean = text.replace(/\s+/g, ' ').trim();
   return clean.length > max ? clean.slice(0, max).trimEnd() + '…' : clean;
@@ -156,15 +141,16 @@ async function fetchPostsInCategories(ids: number[]): Promise<WpPost[]> {
   const data = await wpJson<WpPost[]>(
     `https://blog.geotapp.com/wp-json/wp/v2/posts?categories=${ids.join(',')}` +
       `&per_page=20&status=publish&orderby=date&order=desc` +
-      `&_fields=id,slug,title,excerpt,date,link,featured_media,categories`,
+      `&_fields=id,slug,title,excerpt,date,link,featured_media,categories,class_list`,
   );
   return data ?? [];
 }
 
+// 50 post: il blog pubblica in 11 lingue, con 20 ne restavano solo 2-3 per locale.
 async function fetchLatestPosts(): Promise<WpPost[]> {
   const data = await wpJson<WpPost[]>(
-    'https://blog.geotapp.com/wp-json/wp/v2/posts?per_page=20&status=publish' +
-      '&_fields=id,slug,title,excerpt,date,link,featured_media,categories',
+    'https://blog.geotapp.com/wp-json/wp/v2/posts?per_page=50&status=publish' +
+      '&_fields=id,slug,title,excerpt,date,link,featured_media,categories,class_list',
   );
   return data ?? [];
 }
@@ -203,7 +189,7 @@ function pickPinnedBySector(
   if (catId !== undefined) {
     const candidate = categoryPosts.find(p =>
       p.categories?.includes(catId) &&
-      isLangPost(p.link, locale) &&
+      detectPostLocale(p) === locale &&
       !alreadyPickedIds.has(p.id),
     );
     if (candidate) return candidate;
@@ -212,7 +198,7 @@ function pickPinnedBySector(
   const keywords = SECTOR_KEYWORDS[sector]?.[locale];
   if (keywords?.length) {
     const candidate = latestPool.find(p =>
-      isLangPost(p.link, locale) &&
+      detectPostLocale(p) === locale &&
       !alreadyPickedIds.has(p.id) &&
       matchesKeywords(p, keywords),
     );
@@ -265,7 +251,9 @@ async function getArticles(locale: string): Promise<Article[]> {
     for (const p of latestPool) {
       if (pinned.length + fillers.length >= targetTotal) break;
       if (picked.has(p.id)) continue;
-      if (!isLangPost(p.link, locale)) continue;
+      // La lingua si rileva da class_list (detectPostLocale), NON dal prefisso del
+      // permalink: diversi post NL/DE sono pubblicati senza prefisso lingua nell'URL.
+      if (detectPostLocale(p) !== locale) continue;
       picked.add(p.id);
       fillers.push({ post: p, sector: null });
     }
