@@ -53,6 +53,10 @@ describe('/[locale]/links page locale filtering', () => {
     expect(localeLinksPage).toMatch(/cache:\s*'no-store'/);
     expect(localeLinksPage).toMatch(/force-dynamic/);
   });
+
+  it('uses trailing-slash REST endpoints (without it the Worker subrequest gets 404)', () => {
+    expect(localeLinksPage).not.toMatch(/wp\/v2\/(posts|categories|media)\?/);
+  });
 });
 
 describe('/links page (root, IT) locale filtering', () => {
@@ -73,5 +77,9 @@ describe('/links page (root, IT) locale filtering', () => {
     expect(rootLinksPage).not.toMatch(/next:\s*\{\s*revalidate/);
     expect(rootLinksPage).toMatch(/cache:\s*'no-store'/);
     expect(rootLinksPage).toMatch(/force-dynamic/);
+  });
+
+  it('uses trailing-slash REST endpoints (without it the Worker subrequest gets 404)', () => {
+    expect(rootLinksPage).not.toMatch(/wp\/v2\/(posts|categories|media)\?/);
   });
 });

@@ -121,9 +121,13 @@ async function wpJson<T>(url: string, timeoutMs = 6000): Promise<T | null> {
       cache: 'no-store',
       signal: AbortSignal.timeout(timeoutMs),
     });
-    if (!res.ok) return null;
+    if (!res.ok) {
+      console.error(`links wpJson: HTTP ${res.status} for ${url}`);
+      return null;
+    }
     return (await res.json()) as T;
-  } catch {
+  } catch (err) {
+    console.error(`links wpJson: fetch failed for ${url}:`, err);
     return null;
   }
 }
@@ -132,7 +136,7 @@ async function wpJson<T>(url: string, timeoutMs = 6000): Promise<T | null> {
 async function resolveCategoryIds(slugs: string[]): Promise<Record<string, number>> {
   if (slugs.length === 0) return {};
   const data = await wpJson<Array<{ id: number; slug: string }>>(
-    `https://blog.geotapp.com/wp-json/wp/v2/categories?slug=${slugs.join(',')}&_fields=id,slug&per_page=20`,
+    `https://blog.geotapp.com/wp-json/wp/v2/categories/?slug=${slugs.join(',')}&_fields=id,slug&per_page=20`,
   );
   if (!data) return {};
   return Object.fromEntries(data.map(c => [c.slug, c.id]));
@@ -141,7 +145,7 @@ async function resolveCategoryIds(slugs: string[]): Promise<Record<string, numbe
 async function fetchPostsInCategories(ids: number[]): Promise<WpPost[]> {
   if (ids.length === 0) return [];
   const data = await wpJson<WpPost[]>(
-    `https://blog.geotapp.com/wp-json/wp/v2/posts?categories=${ids.join(',')}` +
+    `https://blog.geotapp.com/wp-json/wp/v2/posts/?categories=${ids.join(',')}` +
       `&per_page=20&status=publish&orderby=date&order=desc` +
       `&_fields=id,slug,title,excerpt,date,link,featured_media,categories,class_list`,
   );
@@ -151,7 +155,7 @@ async function fetchPostsInCategories(ids: number[]): Promise<WpPost[]> {
 // 50 post: il blog pubblica in 11 lingue, con 20 ne restavano solo 2-3 per locale.
 async function fetchLatestPosts(): Promise<WpPost[]> {
   const data = await wpJson<WpPost[]>(
-    'https://blog.geotapp.com/wp-json/wp/v2/posts?per_page=50&status=publish' +
+    'https://blog.geotapp.com/wp-json/wp/v2/posts/?per_page=50&status=publish' +
       '&_fields=id,slug,title,excerpt,date,link,featured_media,categories,class_list',
   );
   return data ?? [];
@@ -160,7 +164,7 @@ async function fetchLatestPosts(): Promise<WpPost[]> {
 async function fetchMediaMap(ids: number[]): Promise<Record<number, string>> {
   if (ids.length === 0) return {};
   const data = await wpJson<WpMedia[]>(
-    `https://blog.geotapp.com/wp-json/wp/v2/media?include=${ids.join(',')}` +
+    `https://blog.geotapp.com/wp-json/wp/v2/media/?include=${ids.join(',')}` +
       `&_fields=id,media_details,source_url&per_page=20`,
   );
   if (!data) return {};
@@ -286,8 +290,9 @@ async function getArticles(locale: string): Promise<Article[]> {
     }));
     ARTICLE_CACHE.set(locale, { articles, ts: Date.now() });
     return articles;
-  } catch {
+  } catch (err) {
     // Errore WP: meglio servire la lista stale che una pagina vuota.
+    console.error(`links getArticles failed for locale ${locale}:`, err);
     return cached?.articles ?? [];
   }
 }
