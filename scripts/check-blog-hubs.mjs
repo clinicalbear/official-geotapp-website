@@ -57,18 +57,24 @@ async function checkHub(locale) {
 // ─── Coerenza lingua dei post ─────────────────────────────────────────────────
 // Un post creato senza lingua Polylang esplicita resta "it" e il permalink esce
 // senza prefisso lingua anche se il contenuto è tradotto (successo a decine di
-// post NL/DE). Segnale: la categoria suffissata (-de, -nl, ...) non coincide col
-// prefisso lingua del permalink. Qui scandiamo tutti i post pubblicati e
-// segnaliamo ogni incoerenza, così la deriva non si accumula in silenzio.
+// post NL/DE). La sorgente di verità è la lingua Polylang, esposta dal plugin
+// GTMSA sul campo REST `gtmsa_lang`. Verifichiamo due invarianti:
+//   A) gtmsa_lang deve coincidere col prefisso lingua del permalink (il bug:
+//      lingua impostata male → URL e hub sbagliati).
+//   B) una categoria con suffisso lingua (-de, -nl, ...) non deve contraddire
+//      gtmsa_lang (allerta precoce su una traduzione mal collegata).
+// NB: le categorie SENZA suffisso (geotapp, novita, confronti) hanno traduzioni
+// Polylang che condividono lo slug: NON sono un segnale di lingua, vanno ignorate
+// (altrimenti generano falsi positivi su post in realtà corretti).
 const NON_DEFAULT = ['en', 'de', 'fr', 'es', 'pt', 'nl', 'ru', 'da', 'sv', 'nb'];
 
-function catLocale(post) {
+function suffixedCatLocale(post) {
   for (const cls of post.class_list ?? []) {
     if (!cls.startsWith('category-')) continue;
     const m = /-([a-z]{2})$/.exec(cls.slice('category-'.length));
     if (m && NON_DEFAULT.includes(m[1])) return m[1];
   }
-  return 'it';
+  return null; // nessuna categoria suffissata → nessun segnale
 }
 
 function linkLocale(link) {
@@ -82,7 +88,7 @@ function linkLocale(link) {
 }
 
 async function checkLanguageConsistency() {
-  const FIELDS = 'id,slug,link,class_list';
+  const FIELDS = 'id,slug,link,class_list,gtmsa_lang';
   const wp = `${BASE}/blog/wp-json/wp/v2/posts/`;
   const all = [];
   try {
@@ -101,9 +107,24 @@ async function checkLanguageConsistency() {
   } catch (e) {
     return { ok: false, reason: `errore fetch REST: ${e?.message || e}`, mismatches: [] };
   }
-  const mismatches = all
-    .filter((p) => catLocale(p) !== linkLocale(p.link))
-    .map((p) => `id=${p.id} cat=${catLocale(p)} url=${linkLocale(p.link)} ${p.slug}`);
+  // Se il campo gtmsa_lang non c'è (plugin non aggiornato), non possiamo validare
+  // in modo autorevole: segnalalo invece di dare un falso "tutto ok".
+  if (all.length > 0 && all.every((p) => p.gtmsa_lang === undefined)) {
+    return { ok: false, reason: 'campo gtmsa_lang assente (plugin GTMSA non aggiornato?)', mismatches: [] };
+  }
+  const mismatches = [];
+  for (const p of all) {
+    const lang = p.gtmsa_lang || 'it';
+    const url = linkLocale(p.link);
+    if (lang !== url) {
+      mismatches.push(`id=${p.id} lang=${lang} url=${url} ${p.slug}`);
+      continue;
+    }
+    const cat = suffixedCatLocale(p);
+    if (cat && cat !== lang) {
+      mismatches.push(`id=${p.id} categoria=${cat} lang=${lang} ${p.slug}`);
+    }
+  }
   return mismatches.length === 0
     ? { ok: true, reason: `${all.length} post coerenti`, mismatches }
     : { ok: false, reason: `${mismatches.length} post con lingua incoerente`, mismatches };
