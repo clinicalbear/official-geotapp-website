@@ -3,7 +3,7 @@
  * Plugin Name: GeoTapp Multilingual SEO Automation
  * Plugin URI: https://geotapp.com
  * Description: Auto-translates historical and new posts with Polylang + DeepL, links translations, and adds reverse-proxy-safe SEO signals.
- * Version: 1.1.0
+ * Version: 1.3.0
  * Author: GeoTapp
  * License: GPL2
  */
@@ -43,6 +43,10 @@ function gtmsa_default_settings() {
         'target_languages' => 'en,de,fr,es,pt,nl,sv,da,nb,ru',
         'deepl_api_key' => '',
         'deepl_api_url' => 'https://api.deepl.com/v2/translate',
+        'translation_provider' => 'deepl',
+        'aws_access_key'       => '',
+        'aws_secret_key'       => '',
+        'aws_region'           => 'eu-west-1',
         'auto_translate_on_publish' => 1,
         'sync_updates' => 0,
         'publish_translations' => 1,
@@ -152,6 +156,7 @@ function gtmsa_is_polylang_ready() {
         && function_exists('pll_save_post_translations');
 }
 
+
 /**
  * Deduce la lingua di un post dai suoi slug categoria. Pure function, testabile.
  *
@@ -254,6 +259,8 @@ function gtmsa_register_rest_lang_field() {
     ]);
 }
 add_action('rest_api_init', 'gtmsa_register_rest_lang_field');
+
+
 
 function gtmsa_admin_notice_polylang_missing() {
     if (!current_user_can('manage_options')) {
@@ -406,8 +413,7 @@ function gtmsa_get_post_language_safe($post_id, $settings = null) {
 
     $lang = pll_get_post_language((int) $post_id);
     if (!$lang) {
-        $settings = $settings ?: gtmsa_get_settings();
-        return $settings['source_language'];
+        return '';
     }
 
     return gtmsa_normalize_language($lang, ($settings ?: gtmsa_get_settings())['source_language']);
@@ -488,7 +494,186 @@ function gtmsa_map_deepl_target($lang) {
     return $map[$lang] ?? null;
 }
 
-function gtmsa_translate_text_batch($texts, $source_language, $target_language, $settings) {
+function gtmsa_map_aws_language($lang) {
+    $lang = gtmsa_normalize_language($lang, '');
+    $map = [
+        'it' => 'it',
+        'en' => 'en',
+        'de' => 'de',
+        'fr' => 'fr',
+        'es' => 'es',
+        'pt' => 'pt',
+        'nb' => 'no',   // AWS Translate uses 'no' for Norwegian Bokmål, not 'nb'
+        'da' => 'da',
+        'sv' => 'sv',
+        'ru' => 'ru',
+        'nl' => 'nl',
+    ];
+    return $map[$lang] ?? null;
+}
+
+/**
+ * Builds AWS Signature V4 Authorization headers for AWS Translate.
+ */
+function gtmsa_aws_sign_request($access_key, $secret_key, $region, $body_json) {
+    $service   = 'translate';
+    $host      = "translate.{$region}.amazonaws.com";
+    $uri       = '/TranslateText';
+    $method    = 'POST';
+    $algorithm = 'AWS4-HMAC-SHA256';
+
+    $now        = new DateTime('UTC');
+    $amz_date   = $now->format('Ymd\THis\Z');
+    $date_stamp = $now->format('Ymd');
+
+    $content_type = 'application/x-amz-json-1.1';
+    $amz_target   = 'AWSShineFrontendService_20170701.TranslateText';
+    $payload_hash = hash('sha256', $body_json);
+
+    // Canonical headers must be sorted alphabetically and each end with \n
+    $canonical_headers = "content-type:{$content_type}\n"
+        . "host:{$host}\n"
+        . "x-amz-date:{$amz_date}\n"
+        . "x-amz-target:{$amz_target}\n";
+    $signed_headers = 'content-type;host;x-amz-date;x-amz-target';
+
+    // Canonical request: canonical_headers ends with \n, spec requires another \n before signed_headers
+    $canonical_request = $method . "\n"
+        . $uri . "\n"
+        . "\n"                 // empty query string
+        . $canonical_headers   // already ends with \n
+        . "\n"                 // blank line required by AWS Sig V4 spec
+        . $signed_headers . "\n"
+        . $payload_hash;
+
+    $credential_scope = "{$date_stamp}/{$region}/{$service}/aws4_request";
+    $string_to_sign   = $algorithm . "\n"
+        . $amz_date . "\n"
+        . $credential_scope . "\n"
+        . hash('sha256', $canonical_request);
+
+    $signing_key = hash_hmac('sha256', 'aws4_request',
+        hash_hmac('sha256', $service,
+            hash_hmac('sha256', $region,
+                hash_hmac('sha256', $date_stamp, 'AWS4' . $secret_key, true),
+            true),
+        true),
+    true);
+
+    $signature = hash_hmac('sha256', $string_to_sign, $signing_key);
+
+    $authorization = "{$algorithm} Credential={$access_key}/{$credential_scope}, "
+        . "SignedHeaders={$signed_headers}, Signature={$signature}";
+
+    return [
+        'Content-Type'  => $content_type,
+        'X-Amz-Date'    => $amz_date,
+        'X-Amz-Target'  => $amz_target,
+        'Authorization' => $authorization,
+    ];
+}
+
+/**
+ * Translates a single text chunk via AWS Translate API.
+ */
+function gtmsa_aws_translate_chunk($text, $source_code, $target_code, $access_key, $secret_key, $region) {
+    $body_json = json_encode([
+        'Text'               => $text,
+        'SourceLanguageCode' => $source_code,
+        'TargetLanguageCode' => $target_code,
+    ]);
+
+    $headers  = gtmsa_aws_sign_request($access_key, $secret_key, $region, $body_json);
+    $endpoint = "https://translate.{$region}.amazonaws.com/TranslateText";
+
+    $response = wp_remote_post($endpoint, [
+        'timeout' => 60,
+        'headers' => $headers,
+        'body'    => $body_json,
+    ]);
+
+    if (is_wp_error($response)) {
+        error_log('GTMSA AWS error: ' . $response->get_error_message());
+        return null;
+    }
+
+    $status = wp_remote_retrieve_response_code($response);
+    if ($status < 200 || $status >= 300) {
+        error_log('GTMSA AWS HTTP error: ' . $status . ' — ' . wp_remote_retrieve_body($response));
+        return null;
+    }
+
+    $decoded = json_decode(wp_remote_retrieve_body($response), true);
+    if (empty($decoded['TranslatedText'])) {
+        error_log('GTMSA AWS payload invalid.');
+        return null;
+    }
+    return (string) $decoded['TranslatedText'];
+}
+
+/**
+ * Translates a single text via AWS Translate, auto-chunking if > 9500 bytes.
+ */
+function gtmsa_aws_translate_single($text, $source_code, $target_code, $access_key, $secret_key, $region) {
+    $max_bytes = 9500;
+    if (strlen($text) <= $max_bytes) {
+        return gtmsa_aws_translate_chunk($text, $source_code, $target_code, $access_key, $secret_key, $region);
+    }
+
+    $paragraphs = preg_split('/(\n\n+)/', $text, -1, PREG_SPLIT_DELIM_CAPTURE);
+    $chunks     = [];
+    $current    = '';
+    foreach ($paragraphs as $part) {
+        if (strlen($current . $part) > $max_bytes) {
+            if ($current !== '') { $chunks[] = $current; $current = ''; }
+            if (strlen($part) > $max_bytes) {
+                foreach (str_split($part, $max_bytes) as $piece) { $chunks[] = $piece; }
+                continue;
+            }
+        }
+        $current .= $part;
+    }
+    if ($current !== '') { $chunks[] = $current; }
+
+    $translated_parts = [];
+    foreach ($chunks as $chunk) {
+        $result = gtmsa_aws_translate_chunk($chunk, $source_code, $target_code, $access_key, $secret_key, $region);
+        if ($result === null) { return null; }
+        $translated_parts[] = $result;
+    }
+    return implode('', $translated_parts);
+}
+
+/**
+ * Translates an array of texts via AWS Translate (one API call per text).
+ */
+function gtmsa_translate_text_batch_aws($texts, $source_language, $target_language, $settings) {
+    $access_key = trim((string) ($settings['aws_access_key'] ?? ''));
+    $secret_key = trim((string) ($settings['aws_secret_key'] ?? ''));
+    $region     = trim((string) ($settings['aws_region'] ?? 'eu-west-1'));
+
+    if (!$access_key || !$secret_key) { return null; }
+
+    $source_code = gtmsa_map_aws_language($source_language);
+    $target_code = gtmsa_map_aws_language($target_language);
+    if (!$source_code || !$target_code) { return null; }
+
+    $translated = [];
+    foreach ($texts as $text) {
+        $text = (string) $text;
+        if (trim($text) === '') {
+            // AWS rejects empty strings — return as-is
+            $translated[] = $text;
+            continue;
+        }
+        $result = gtmsa_aws_translate_single($text, $source_code, $target_code, $access_key, $secret_key, $region);
+        if ($result === null) { return null; }
+        $translated[] = $result;
+    }
+    return $translated;
+}
+
+function gtmsa_translate_text_batch_deepl($texts, $source_language, $target_language, $settings) {
     $api_key = trim((string) $settings['deepl_api_key']);
     if ($api_key === '') {
         return null;
@@ -555,10 +740,105 @@ function gtmsa_translate_text_batch($texts, $source_language, $target_language, 
     return $translated;
 }
 
-function gtmsa_copy_taxonomies($source_post_id, $target_post_id, $target_language) {
+function gtmsa_translate_text_batch($texts, $source_language, $target_language, $settings) {
+    $provider = $settings['translation_provider'] ?? 'deepl';
+    if ($provider === 'aws') {
+        return gtmsa_translate_text_batch_aws($texts, $source_language, $target_language, $settings);
+    }
+    return gtmsa_translate_text_batch_deepl($texts, $source_language, $target_language, $settings);
+}
+
+/**
+ * Returns the Polylang-translated term ID for $term_id in $target_language.
+ * If no translation exists yet, translates the term name/description via the
+ * configured provider, creates the translated term, and registers it with Polylang.
+ * Falls back to the original term ID on any error.
+ */
+function gtmsa_get_or_create_translated_term($term_id, $taxonomy, $source_language, $target_language, $settings) {
+    $term_id = (int) $term_id;
+
+    // 1. Check if Polylang already has a translation.
+    if (function_exists('pll_get_term')) {
+        $existing = pll_get_term($term_id, $target_language);
+        if ($existing) {
+            return (int) $existing;
+        }
+    }
+
+    // 2. Get the source term.
+    $source_term = get_term($term_id, $taxonomy);
+    if (!$source_term || is_wp_error($source_term)) {
+        return $term_id;
+    }
+
+    // 3. Translate name (and description if non-empty).
+    $texts_to_translate = [$source_term->name];
+    $has_desc = trim($source_term->description) !== '';
+    if ($has_desc) {
+        $texts_to_translate[] = $source_term->description;
+    }
+
+    $translated_texts = gtmsa_translate_text_batch($texts_to_translate, $source_language, $target_language, $settings);
+    if (!is_array($translated_texts) || count($translated_texts) < 1) {
+        return $term_id; // translation failed — fall back to source term
+    }
+
+    $translated_name = trim($translated_texts[0]);
+    if ($translated_name === '') {
+        return $term_id;
+    }
+    $translated_desc = ($has_desc && isset($translated_texts[1])) ? trim($translated_texts[1]) : '';
+
+    // 4. Create the translated term (handle slug collisions).
+    $base_slug = sanitize_title($translated_name) . '-' . $target_language;
+    $inserted  = wp_insert_term($translated_name, $taxonomy, [
+        'description' => $translated_desc,
+        'slug'        => $base_slug,
+    ]);
+
+    if (is_wp_error($inserted)) {
+        // Term with same name or slug already exists — retrieve it.
+        $existing_term = get_term_by('name', $translated_name, $taxonomy);
+        if (!$existing_term) {
+            $existing_term = get_term_by('slug', $base_slug, $taxonomy);
+        }
+        if (!$existing_term) {
+            error_log('GTMSA: could not create/find translated term "' . $translated_name . '" (' . $taxonomy . '/' . $target_language . '): ' . $inserted->get_error_message());
+            return $term_id;
+        }
+        $new_term_id = (int) $existing_term->term_id;
+    } else {
+        $new_term_id = (int) $inserted['term_id'];
+    }
+
+    // 5. Register language and link with Polylang.
+    if (function_exists('pll_set_term_language')) {
+        pll_set_term_language($new_term_id, $target_language);
+    }
+    if (function_exists('pll_save_term_translations')) {
+        $source_lang = $source_language;
+        $current_map = function_exists('pll_get_term_translations')
+            ? (pll_get_term_translations($term_id) ?: [])
+            : [];
+        $current_map[$source_lang]    = $term_id;
+        $current_map[$target_language] = $new_term_id;
+        pll_save_term_translations($current_map);
+    }
+
+    return $new_term_id;
+}
+
+function gtmsa_copy_taxonomies($source_post_id, $target_post_id, $source_language, $target_language, $settings) {
     $taxonomies = get_object_taxonomies(get_post_type($source_post_id), 'names');
 
+    // Exclude Polylang's internal taxonomies — copying them overwrites pll_set_post_language()
+    // and corrupts translation links built by pll_save_post_translations().
+    $polylang_internal = ['language', 'post_translations', 'term_language', 'term_translations'];
+
     foreach ($taxonomies as $taxonomy) {
+        if (in_array($taxonomy, $polylang_internal, true)) {
+            continue;
+        }
         $term_ids = wp_get_object_terms($source_post_id, $taxonomy, ['fields' => 'ids']);
         if (is_wp_error($term_ids) || empty($term_ids)) {
             continue;
@@ -566,10 +846,9 @@ function gtmsa_copy_taxonomies($source_post_id, $target_post_id, $target_languag
 
         $translated_term_ids = [];
         foreach ($term_ids as $term_id) {
-            $translated = (function_exists('pll_get_term'))
-                ? pll_get_term((int) $term_id, $target_language)
-                : 0;
-            $translated_term_ids[] = $translated ? (int) $translated : (int) $term_id;
+            $translated_term_ids[] = gtmsa_get_or_create_translated_term(
+                (int) $term_id, $taxonomy, $source_language, $target_language, $settings
+            );
         }
 
         wp_set_object_terms($target_post_id, array_values(array_unique($translated_term_ids)), $taxonomy, false);
@@ -597,8 +876,7 @@ function gtmsa_translate_one_post($source_post_id, $settings) {
     $post_language = gtmsa_get_post_language_safe($source_post->ID, $settings);
 
     if (!$post_language) {
-        pll_set_post_language($source_post->ID, $source_language);
-        $post_language = $source_language;
+        return true;
     }
 
     if ($post_language !== $source_language) {
@@ -635,7 +913,12 @@ function gtmsa_translate_one_post($source_post_id, $settings) {
             : 0;
 
         $should_update_existing = $existing_translation_id > 0 && !empty($settings['sync_updates']);
+
+        // Translation already exists and full sync is disabled: only update taxonomies.
         if ($existing_translation_id > 0 && !$should_update_existing) {
+            $translations_map[$target_language] = $existing_translation_id;
+            pll_save_post_translations($translations_map);
+            gtmsa_copy_taxonomies($source_post->ID, $existing_translation_id, $source_language, $target_language, $settings);
             continue;
         }
 
@@ -677,7 +960,11 @@ function gtmsa_translate_one_post($source_post_id, $settings) {
             $payload['ID'] = $existing_translation_id;
             $target_post_id = wp_update_post($payload, true);
         } else {
-            $target_post_id = wp_insert_post($payload, true);
+            // Insert as 'draft' first so Polylang does not lock the language to the
+            // site default during the publish transition; set language explicitly, then publish.
+            $insert_payload = $payload;
+            $insert_payload['post_status'] = 'draft';
+            $target_post_id = wp_insert_post($insert_payload, true);
         }
 
         if (is_wp_error($target_post_id)) {
@@ -688,16 +975,23 @@ function gtmsa_translate_one_post($source_post_id, $settings) {
 
         $target_post_id = (int) $target_post_id;
         pll_set_post_language($target_post_id, $target_language);
-        gtmsa_copy_taxonomies($source_post->ID, $target_post_id, $target_language);
+
+        // Promote to desired status. wp_update_post fires save_post which causes Polylang
+        // to reset the language to the site default — so we re-set it immediately after.
+        if (!$should_update_existing && $translated_status !== 'draft') {
+            wp_update_post(['ID' => $target_post_id, 'post_status' => $translated_status]);
+            pll_set_post_language($target_post_id, $target_language);
+        }
+        gtmsa_copy_taxonomies($source_post->ID, $target_post_id, $source_language, $target_language, $settings);
         gtmsa_sync_featured_image($source_post->ID, $target_post_id);
 
         update_post_meta($target_post_id, '_gtmsa_generated_from', (int) $source_post->ID);
         update_post_meta($target_post_id, '_gtmsa_generated_lang', $target_language);
 
         $translations_map[$target_language] = $target_post_id;
+        // Save after every language so partial results survive a timeout.
+        pll_save_post_translations($translations_map);
     }
-
-    pll_save_post_translations($translations_map);
 
     return $all_ok;
 }
@@ -708,16 +1002,16 @@ function gtmsa_process_translation_queue() {
     }
 
     $settings = gtmsa_get_settings();
-    if (trim((string) $settings['deepl_api_key']) === '') {
-        return;
-    }
+    // Allow plenty of time: each post requires ~100 AWS calls (content + terms × 9 languages).
+    @set_time_limit(600);
 
     $queue = gtmsa_get_queue();
     if (!$queue) {
         return;
     }
 
-    $batch_size = $settings['queue_batch_size'];
+    // Force batch size to 1: one post per cron tick to avoid memory/timeout issues.
+    $batch_size = 1;
     $current_batch = array_slice($queue, 0, $batch_size);
     $remaining = array_slice($queue, $batch_size);
 
@@ -887,6 +1181,8 @@ add_filter('robots_txt', 'gtmsa_filter_robots_txt', 10, 2);
 
 function gtmsa_register_settings() {
     register_setting(GTMSA_OPTION_KEY, GTMSA_OPTION_KEY, 'gtmsa_sanitize_settings');
+
+
 }
 add_action('admin_init', 'gtmsa_register_settings');
 
@@ -901,6 +1197,10 @@ function gtmsa_sanitize_settings($input) {
         $output['source_language']
     );
     $output['deepl_api_key'] = sanitize_text_field($input['deepl_api_key'] ?? '');
+    $output['translation_provider'] = in_array($input['translation_provider'] ?? 'deepl', ['deepl', 'aws'], true) ? $input['translation_provider'] : 'deepl';
+    $output['aws_access_key']       = sanitize_text_field($input['aws_access_key'] ?? '');
+    $output['aws_secret_key']       = sanitize_text_field($input['aws_secret_key'] ?? '');
+    $output['aws_region']           = sanitize_text_field($input['aws_region'] ?? 'eu-west-1');
     $output['deepl_api_url'] = esc_url_raw($input['deepl_api_url'] ?? $defaults['deepl_api_url']);
 
     $bool_keys = ['auto_translate_on_publish', 'sync_updates', 'publish_translations', 'translate_slug', 'noindex_origin_host'];
@@ -960,8 +1260,9 @@ function gtmsa_render_settings_page() {
 
           <div class="notice notice-info"><p>Post in coda traduzione: <strong><?php echo esc_html((string) $queue_count); ?></strong></p></div>
 
-          <form method="post" action="options.php">
-            <?php settings_fields(GTMSA_OPTION_KEY); ?>
+          <form method="post" action="<?php echo esc_url(admin_url('admin-post.php')); ?>">
+            <?php wp_nonce_field('gtmsa_save_settings_action', 'gtmsa_save_nonce'); ?>
+            <input type="hidden" name="action" value="gtmsa_save_settings" />
             <table class="form-table" role="presentation">
           <tr>
             <th scope="row"><label for="gtmsa_source_language">Lingua sorgente</label></th>
@@ -974,6 +1275,25 @@ function gtmsa_render_settings_page() {
             </td>
           </tr>
           <tr>
+            <th scope="row">Provider traduzione</th>
+            <td>
+              <label>
+                <input type="radio" name="<?php echo esc_attr(GTMSA_OPTION_KEY); ?>[translation_provider]"
+                  value="deepl" <?php checked($settings['translation_provider'] ?? 'deepl', 'deepl'); ?>
+                  id="gtmsa_provider_deepl" />
+                DeepL
+              </label>
+              &nbsp;&nbsp;
+              <label>
+                <input type="radio" name="<?php echo esc_attr(GTMSA_OPTION_KEY); ?>[translation_provider]"
+                  value="aws" <?php checked($settings['translation_provider'] ?? 'deepl', 'aws'); ?>
+                  id="gtmsa_provider_aws" />
+                AWS Translate
+              </label>
+            </td>
+          </tr>
+          <tbody id="gtmsa-deepl-fields">
+          <tr>
             <th scope="row"><label for="gtmsa_deepl_api_key">DeepL API Key</label></th>
             <td><input id="gtmsa_deepl_api_key" name="<?php echo esc_attr(GTMSA_OPTION_KEY); ?>[deepl_api_key]" type="password" value="<?php echo esc_attr($settings['deepl_api_key']); ?>" class="regular-text" autocomplete="new-password" /></td>
           </tr>
@@ -981,6 +1301,27 @@ function gtmsa_render_settings_page() {
             <th scope="row"><label for="gtmsa_deepl_api_url">DeepL API URL</label></th>
             <td><input id="gtmsa_deepl_api_url" name="<?php echo esc_attr(GTMSA_OPTION_KEY); ?>[deepl_api_url]" type="url" value="<?php echo esc_attr($settings['deepl_api_url']); ?>" class="regular-text" /></td>
           </tr>
+          </tbody>
+          <tbody id="gtmsa-aws-fields">
+          <tr>
+            <th scope="row"><label for="gtmsa_aws_access_key">AWS Access Key ID</label></th>
+            <td><input id="gtmsa_aws_access_key" name="<?php echo esc_attr(GTMSA_OPTION_KEY); ?>[aws_access_key]"
+              type="text" value="<?php echo esc_attr($settings['aws_access_key'] ?? ''); ?>" class="regular-text" /></td>
+          </tr>
+          <tr>
+            <th scope="row"><label for="gtmsa_aws_secret_key">AWS Secret Key</label></th>
+            <td><input id="gtmsa_aws_secret_key" name="<?php echo esc_attr(GTMSA_OPTION_KEY); ?>[aws_secret_key]"
+              type="password" value="<?php echo esc_attr($settings['aws_secret_key'] ?? ''); ?>" class="regular-text" autocomplete="new-password" /></td>
+          </tr>
+          <tr>
+            <th scope="row"><label for="gtmsa_aws_region">AWS Region</label></th>
+            <td>
+              <input id="gtmsa_aws_region" name="<?php echo esc_attr(GTMSA_OPTION_KEY); ?>[aws_region]"
+                type="text" value="<?php echo esc_attr($settings['aws_region'] ?? 'eu-west-1'); ?>" class="regular-text" />
+              <p class="description">Es: eu-west-1, us-east-1</p>
+            </td>
+          </tr>
+          </tbody>
           <tr>
             <th scope="row">Auto traduzione nuovi articoli</th>
             <td><?php gtmsa_render_checkbox('auto_translate_on_publish', $settings['auto_translate_on_publish']); ?></td>
@@ -1008,6 +1349,18 @@ function gtmsa_render_settings_page() {
             </table>
 
             <?php submit_button('Salva configurazione'); ?>
+          <script>
+          (function(){
+              function gtmsaToggleProvider() {
+                  var isAws = document.getElementById('gtmsa_provider_aws').checked;
+                  document.getElementById('gtmsa-deepl-fields').style.display = isAws ? 'none' : '';
+                  document.getElementById('gtmsa-aws-fields').style.display   = isAws ? '' : 'none';
+              }
+              document.getElementById('gtmsa_provider_deepl').addEventListener('change', gtmsaToggleProvider);
+              document.getElementById('gtmsa_provider_aws').addEventListener('change', gtmsaToggleProvider);
+              gtmsaToggleProvider();
+          })();
+          </script>
           </form>
 
           <hr />
@@ -1109,24 +1462,43 @@ function gtmsa_handle_run_queue_now() {
         wp_die('Unauthorized');
     }
 
-    try {
-        check_admin_referer('gtmsa_run_queue_now', '_gtmsa_run_nonce');
-        gtmsa_clear_last_error();
-        gtmsa_process_translation_queue();
-        $redirect_url = add_query_arg(['page' => 'gtmsa-settings'], admin_url('options-general.php'));
-    } catch (Throwable $e) {
-        gtmsa_set_last_error($e->getMessage());
-        error_log('GTMSA_QUEUE_NOW_ERROR: ' . $e->getMessage());
-        $redirect_url = add_query_arg(
-            ['page' => 'gtmsa-settings', 'gtmsa_error' => 1],
-            admin_url('options-general.php')
-        );
-    }
+    check_admin_referer('gtmsa_run_queue_now', '_gtmsa_run_nonce');
+    gtmsa_clear_last_error();
 
+    // Schedule an immediate single cron event and spawn cron in background.
+    // Running the queue synchronously inside admin-post.php causes 504 Gateway Timeout
+    // when Cloudflare's 100s proxy timeout is exceeded (8 posts × 9 languages = 72 AWS calls).
+    if ( ! wp_next_scheduled( GTMSA_CRON_HOOK ) ) {
+        wp_schedule_single_event( time() - 1, GTMSA_CRON_HOOK );
+    }
+    spawn_cron();
+
+    $redirect_url = add_query_arg(
+        ['page' => 'gtmsa-settings', 'gtmsa_queued' => 1],
+        admin_url('options-general.php')
+    );
     wp_safe_redirect($redirect_url);
     exit;
 }
 add_action('admin_post_gtmsa_run_queue_now', 'gtmsa_handle_run_queue_now');
+
+function gtmsa_handle_save_settings() {
+    if (!current_user_can('manage_options')) {
+        wp_die('Unauthorized');
+    }
+    check_admin_referer('gtmsa_save_settings_action', 'gtmsa_save_nonce');
+
+    $input    = isset($_POST[GTMSA_OPTION_KEY]) && is_array($_POST[GTMSA_OPTION_KEY]) ? $_POST[GTMSA_OPTION_KEY] : [];
+    $sanitized = gtmsa_sanitize_settings($input);
+    update_option(GTMSA_OPTION_KEY, $sanitized, false);
+
+    wp_safe_redirect(add_query_arg(
+        ['page' => 'gtmsa-settings', 'settings-updated' => 'true'],
+        admin_url('options-general.php')
+    ));
+    exit;
+}
+add_action('admin_post_gtmsa_save_settings', 'gtmsa_handle_save_settings');
 
 if (defined('WP_CLI') && WP_CLI && class_exists('WP_CLI')) {
     class GTMSA_CLI_Command {
@@ -1157,4 +1529,197 @@ if (defined('WP_CLI') && WP_CLI && class_exists('WP_CLI')) {
     }
 
     WP_CLI::add_command('gtmsa', 'GTMSA_CLI_Command');
+}
+
+// ── Frontend: 12 articoli per pagina sul blog ──────────────────────────────────
+add_action('pre_get_posts', 'gtmsa_set_posts_per_page');
+function gtmsa_set_posts_per_page($query) {
+    if (!is_admin() && $query->is_main_query() && (is_home() || is_archive())) {
+        $query->set('posts_per_page', 12);
+    }
+}
+
+// ── Frontend: bandiere lingue disponibili per ogni post ────────────────────────
+function gtmsa_language_flags_html($post_id) {
+    if (!function_exists('pll_get_post_translations') || !function_exists('pll_languages_list')) {
+        return '';
+    }
+    $translations = pll_get_post_translations((int) $post_id);
+    if (count($translations) <= 1) {
+        return '';
+    }
+
+    // Build slug → flag_url map once using pll_languages_list with specific field.
+    static $flag_map = null;
+    if ($flag_map === null) {
+        $slugs     = pll_languages_list();
+        $flag_urls = pll_languages_list(['fields' => 'flag_url']);
+        $names     = pll_languages_list(['fields' => 'name']);
+        $flag_map  = [];
+        if (is_array($slugs) && is_array($flag_urls)) {
+            foreach ($slugs as $i => $slug) {
+                $flag_map[$slug] = [
+                    'url'  => $flag_urls[$i] ?? '',
+                    'name' => $names[$i] ?? strtoupper($slug),
+                ];
+            }
+        }
+    }
+
+    $html = '<div class="gtmsa-lang-flags" aria-label="Traduzioni disponibili">';
+    foreach (array_keys($translations) as $slug) {
+        $info = $flag_map[$slug] ?? null;
+        if (!$info || empty($info['url'])) {
+            continue;
+        }
+        $html .= sprintf(
+            '<img src="%s" alt="%s" title="%s" width="18" height="13" loading="lazy">',
+            esc_url($info['url']),
+            esc_attr(strtoupper($slug)),
+            esc_attr($info['name'])
+        );
+    }
+    $html .= '</div>';
+    return $html;
+}
+
+// CSS per le bandiere nel frontend
+add_action('wp_head', 'gtmsa_lang_flags_css');
+function gtmsa_lang_flags_css() {
+    if (!is_home() && !is_archive()) {
+        return;
+    }
+    echo '<style>
+.gtmsa-lang-flags{display:flex;flex-wrap:wrap;gap:3px;margin-top:10px;}
+.gtmsa-lang-flags img{width:18px;height:13px;border-radius:2px;opacity:.85;transition:opacity .15s;}
+.gtmsa-lang-flags img:hover{opacity:1;}
+</style>';
+}
+
+// ── Admin UI: default alla vista italiana nella lista articoli ─────────────────
+// Quando l'utente apre Articoli senza filtro lingua, reindirizza a ?lang=it
+// così vede solo i 25 originali italiani con i flag delle traduzioni.
+add_action('load-edit.php', 'gtmsa_default_posts_list_to_italian');
+function gtmsa_default_posts_list_to_italian() {
+    // Solo per post_type=post (non pagine o CPT)
+    $post_type = $_GET['post_type'] ?? 'post';
+    if ($post_type !== 'post') {
+        return;
+    }
+    // Se il filtro lingua è già impostato (anche a 'all') non toccare nulla
+    if (isset($_GET['lang'])) {
+        return;
+    }
+    // Reindirizza alla stessa URL con lang=it aggiunto
+    $url = add_query_arg('lang', 'it', $_SERVER['REQUEST_URI']);
+    wp_redirect($url);
+    exit;
+}
+
+// ── Admin UI: raggruppa colonne Polylang in una sola cella con wrap 4 per riga ─
+// ── Admin column: replace Polylang's per-language columns with one compact "Lingue" column ──
+
+// Remove all individual Polylang language_* columns (priority 200 → runs after Polylang's 100)
+add_filter('manage_edit-post_columns', 'gtmsa_replace_polylang_columns', 200);
+function gtmsa_replace_polylang_columns($columns) {
+    // Strip every column added by Polylang (they all start with 'language_')
+    foreach (array_keys($columns) as $key) {
+        if (strpos($key, 'language_') === 0) {
+            unset($columns[$key]);
+        }
+    }
+    // Insert our compact column before 'comments' (or at the end if not present)
+    $pos = array_search('comments', array_keys($columns));
+    if ($pos !== false) {
+        $before = array_slice($columns, 0, $pos, true);
+        $after  = array_slice($columns, $pos, null, true);
+        $columns = array_merge($before, ['gtmsa_translations' => __('Lingue', 'gtmsa')], $after);
+    } else {
+        $columns['gtmsa_translations'] = __('Lingue', 'gtmsa');
+    }
+    return $columns;
+}
+
+// Fill the column with flag images for each translation
+add_action('manage_post_posts_custom_column', 'gtmsa_translations_column', 10, 2);
+function gtmsa_translations_column($column, $post_id) {
+    if ($column !== 'gtmsa_translations') return;
+    if (!function_exists('pll_get_post_translations') || !function_exists('pll_languages_list')) {
+        echo '—';
+        return;
+    }
+
+    $translations = pll_get_post_translations((int) $post_id);
+
+    // Build flag map once per request
+    static $flag_map = null;
+    if ($flag_map === null) {
+        $flag_map = [];
+        $slugs     = pll_languages_list();
+        $flag_urls = pll_languages_list(['fields' => 'flag_url']);
+        $names     = pll_languages_list(['fields' => 'name']);
+        if (is_array($slugs)) {
+            foreach ($slugs as $i => $slug) {
+                $flag_map[$slug] = [
+                    'url'  => $flag_urls[$i] ?? '',
+                    'name' => $names[$i] ?? strtoupper($slug),
+                ];
+            }
+        }
+    }
+
+    if (empty($translations)) {
+        echo '—';
+        return;
+    }
+
+    echo '<div class="gtmsa-admin-flags">';
+    foreach ($translations as $slug => $tr_id) {
+        $info = $flag_map[$slug] ?? null;
+        if (!$info || empty($info['url'])) continue;
+        $edit_url = get_edit_post_link((int) $tr_id);
+        $label    = esc_attr($info['name']);
+        $flag_img = sprintf('<img src="%s" alt="%s" title="%s" width="18" height="13">',
+            esc_url($info['url']), $label, $label);
+        if ($edit_url) {
+            printf('<a href="%s" title="%s">%s</a>', esc_url($edit_url), $label, $flag_img);
+        } else {
+            echo $flag_img;
+        }
+    }
+    echo '</div>';
+}
+
+// CSS for the compact column
+add_action('admin_head', 'gtmsa_translations_column_css');
+function gtmsa_translations_column_css() {
+    $screen = get_current_screen();
+    if (!$screen || $screen->base !== 'edit' || $screen->post_type !== 'post') return;
+    ?>
+    <style>
+        .column-gtmsa_translations { width: 120px; }
+        /* Column widths */
+        .column-title        { width: 36% !important; }
+        .column-author       { width: 6% !important; white-space: nowrap; overflow: hidden; }
+        .column-categories   { width: 8% !important; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .column-tags         { width: 7% !important; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .column-language     { width: 4% !important; white-space: nowrap; }
+        .column-date         { width: 7% !important; white-space: nowrap; }
+        .column-rrm_product_id { width: 5% !important; white-space: nowrap; text-align: center; }
+        .gtmsa-admin-flags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3px;
+            align-items: center;
+        }
+        .gtmsa-admin-flags img {
+            width: 18px;
+            height: 13px;
+            border-radius: 2px;
+            opacity: .9;
+            vertical-align: middle;
+        }
+        .gtmsa-admin-flags a:hover img { opacity: 1; }
+    </style>
+    <?php
 }
