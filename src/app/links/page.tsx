@@ -20,9 +20,11 @@ import type { Metadata } from 'next';
 import LinksClient, { type Article } from './LinksClient';
 import { detectPostLocale } from '@/lib/blog-locale';
 
-// ─── ISR ──────────────────────────────────────────────────────────────────────
+// Render on demand (stesso pattern dell'hub blog): con ISR la pagina veniva
+// pre-renderizzata in build, dove le fetch WP falliscono → cache vuota per 1h
+// a ogni deploy. Il caching vive nelle fetch (next: { revalidate: 3600 }).
 
-export const revalidate = 3600; // 1 ora
+export const dynamic = 'force-dynamic';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 

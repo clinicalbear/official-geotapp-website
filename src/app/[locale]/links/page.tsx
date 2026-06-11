@@ -3,8 +3,10 @@ import LinksClient, { type Article, type Sector } from '../../links/LinksClient'
 import { detectPostLocale } from '@/lib/blog-locale';
 export { generateLocaleStaticParams as generateStaticParams } from '@/lib/i18n/static-params';
 
-// ─── ISR ──────────────────────────────────────────────────────────────────────
-export const revalidate = 3600;
+// Render on demand (stesso pattern dell'hub blog): con ISR la pagina veniva
+// pre-renderizzata in build, dove le fetch WP falliscono → cache vuota per 1h
+// a ogni deploy. Il caching vive nelle fetch (next.revalidate in wpJson).
+export const dynamic = 'force-dynamic';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 type WpPost = {
