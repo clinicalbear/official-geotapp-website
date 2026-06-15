@@ -65,7 +65,29 @@ describe('validateScheda', () => {
   it('rejects a completo card with modelloPdf null', () => {
     const r = validateScheda({ ...baseScheda(), modelloPdf: null });
     expect(r.ok).toBe(false);
-    expect(r.errori.length).toBeGreaterThan(0);
+    expect(r.errori.some((e) => e.includes('modelloPdf'))).toBe(true);
+  });
+
+  it('rejects a completo card with empty checklist but valid modelloPdf', () => {
+    const r = validateScheda({ ...baseScheda(), checklist: [] });
+    expect(r.ok).toBe(false);
+    expect(r.errori.some((e) => e.includes('checklist'))).toBe(true);
+  });
+
+  it('rejects a card whose top-level aggiornatoIl is non-ISO (2026/6/13)', () => {
+    const r = validateScheda({ ...baseScheda(), aggiornatoIl: '2026/6/13' });
+    expect(r.ok).toBe(false);
+    expect(r.errori.some((e) => e.includes('aggiornatoIl'))).toBe(true);
+  });
+
+  it('rejects a card whose autoritaCompetente.verificatoIl is non-ISO (13/06/2026)', () => {
+    const base = baseScheda();
+    const r = validateScheda({
+      ...base,
+      autoritaCompetente: { ...base.autoritaCompetente, verificatoIl: '13/06/2026' },
+    });
+    expect(r.ok).toBe(false);
+    expect(r.errori.some((e) => e.includes('verificatoIl'))).toBe(true);
   });
 
   it('rejects a card whose contact verificatoIl is non-ISO (13/06/2026)', () => {
@@ -75,7 +97,7 @@ describe('validateScheda', () => {
       contatti: [{ ...base.contatti[0], verificatoIl: '13/06/2026' }],
     });
     expect(r.ok).toBe(false);
-    expect(r.errori.length).toBeGreaterThan(0);
+    expect(r.errori.some((e) => e.includes('verificatoIl'))).toBe(true);
   });
 
   it('rejects a checklist item with empty fonte.url', () => {
@@ -85,6 +107,6 @@ describe('validateScheda', () => {
       checklist: [{ ...base.checklist[0], fonte: { titolo: 'X', url: '' } }],
     });
     expect(r.ok).toBe(false);
-    expect(r.errori.length).toBeGreaterThan(0);
+    expect(r.errori.some((e) => e.includes('fonte.url'))).toBe(true);
   });
 });

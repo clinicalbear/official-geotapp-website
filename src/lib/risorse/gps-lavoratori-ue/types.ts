@@ -65,6 +65,7 @@ export interface SchedaPaese {
   checklist: VoceChecklist[];
   procedura: PassoProcedura[];
   contatti: Contatto[];
+  /** "Nessun PDF" si rappresenta con `null`, MAI con `{ disponibile: false }`. */
   modelloPdf: ModelloPdf | null;
   sanzioneMax: SanzioneMax;
   fonti: Fonte[];
