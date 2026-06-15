@@ -7,7 +7,7 @@ import {
   buildSchedaArticleJsonLd,
 } from './jsonLd';
 
-describe('jsonLd — risorsa GPS lavoratori UE', () => {
+describe('jsonLd: risorsa GPS lavoratori UE', () => {
   it('absoluteLocalizedUrl produce URL assoluta col path localizzato', () => {
     // it: slug invariato; de: "risorse" -> "ressourcen", "gps-lavoratori-ue" -> "gps-mitarbeiter-eu"
     expect(absoluteLocalizedUrl('/risorse/gps-lavoratori-ue/', 'it')).toBe(
