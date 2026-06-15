@@ -42,6 +42,9 @@ import { serbia } from './paesi/rs';
 import { bosnia } from './paesi/ba';
 import { montenegro } from './paesi/me';
 import { macedoniaDelNord } from './paesi/mk';
+import { ucraina } from './paesi/ua';
+import { moldova } from './paesi/md';
+import { bielorussia } from './paesi/by';
 
 export const PAESI: SchedaPaese[] = [
   italia,
@@ -80,6 +83,9 @@ export const PAESI: SchedaPaese[] = [
   bosnia,
   montenegro,
   macedoniaDelNord,
+  ucraina,
+  moldova,
+  bielorussia,
 ];
 
 export function getSchedaBySlug(slugCanonico: string): SchedaPaese | undefined {

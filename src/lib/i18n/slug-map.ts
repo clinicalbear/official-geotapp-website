@@ -440,6 +440,24 @@ export const SLUG_MAP: Record<string, Partial<Record<AppLocale, string>>> = {
     da: 'nordmakedonien', sv: 'nordmakedonien', nb: 'nord-makedonia', ru: 'severnaya-makedoniya',
     'en-us': 'north-macedonia', 'en-gb': 'north-macedonia', 'en-au': 'north-macedonia', 'en-ie': 'north-macedonia', 'en-ca': 'north-macedonia',
   },
+  'ucraina': {
+    it: 'ucraina', en: 'ukraine', de: 'ukraine', nl: 'oekraine',
+    fr: 'ukraine', es: 'ucrania', pt: 'ucrania',
+    da: 'ukraine', sv: 'ukraina', nb: 'ukraina', ru: 'ukraina',
+    'en-us': 'ukraine', 'en-gb': 'ukraine', 'en-au': 'ukraine', 'en-ie': 'ukraine', 'en-ca': 'ukraine',
+  },
+  'moldova': {
+    it: 'moldova', en: 'moldova', de: 'moldau', nl: 'moldavie',
+    fr: 'moldavie', es: 'moldavia', pt: 'moldavia',
+    da: 'moldova', sv: 'moldavien', nb: 'moldova', ru: 'moldova',
+    'en-us': 'moldova', 'en-gb': 'moldova', 'en-au': 'moldova', 'en-ie': 'moldova', 'en-ca': 'moldova',
+  },
+  'bielorussia': {
+    it: 'bielorussia', en: 'belarus', de: 'belarus', nl: 'belarus',
+    fr: 'bielorussie', es: 'bielorrusia', pt: 'bielorrussia',
+    da: 'hviderusland', sv: 'vitryssland', nb: 'hviterussland', ru: 'belarus',
+    'en-us': 'belarus', 'en-gb': 'belarus', 'en-au': 'belarus', 'en-ie': 'belarus', 'en-ca': 'belarus',
+  },
   // ───────���──────────────────────────────��────────────────────────────���────────
   'download': {
     it: 'download',
