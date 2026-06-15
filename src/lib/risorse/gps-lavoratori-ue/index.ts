@@ -7,8 +7,9 @@
 
 import type { SchedaPaese, StatoScheda } from './types';
 import { italia } from './paesi/it';
+import { germania } from './paesi/de';
 
-export const PAESI: SchedaPaese[] = [italia];
+export const PAESI: SchedaPaese[] = [italia, germania];
 
 export function getSchedaBySlug(slugCanonico: string): SchedaPaese | undefined {
   return PAESI.find((p) => p.slugCanonico === slugCanonico);

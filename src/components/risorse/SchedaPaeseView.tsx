@@ -17,6 +17,8 @@ interface SchedaPaeseViewProps {
   dict: RisorseGpsDict;
   locale: AppLocale;
   trialUrl: string;
+  /** Nome del paese nella lingua corrente (ripiega su scheda.nome). */
+  nomePaese?: string;
 }
 
 const BADGE_STYLE: Record<RispostaChecklist, string> = {
@@ -61,14 +63,15 @@ function ExternalLink({ href, children }: { href: string; children: React.ReactN
   );
 }
 
-export default function SchedaPaeseView({ scheda, dict, locale, trialUrl }: SchedaPaeseViewProps) {
+export default function SchedaPaeseView({ scheda, dict, locale, trialUrl, nomePaese }: SchedaPaeseViewProps) {
+  const nomeLocale = nomePaese ?? scheda.nome;
   // Percorso in-arrivo: niente dossier, solo l'avviso "in preparazione".
   if (scheda.stato === 'in-arrivo') {
     return (
       <main className="container mx-auto max-w-3xl px-4 py-20 text-center">
         <p className="text-6xl mb-6" aria-hidden="true">{scheda.bandiera}</p>
         <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-          {scheda.nome}
+          {nomeLocale}
         </h1>
         <p className="inline-block rounded-full bg-amber-100 text-amber-800 px-4 py-1 text-sm font-semibold mb-4">
           {dict.inArrivo}
@@ -84,7 +87,7 @@ export default function SchedaPaeseView({ scheda, dict, locale, trialUrl }: Sche
       <header className="mb-12 text-center">
         <p className="text-6xl mb-4" aria-hidden="true">{scheda.bandiera}</p>
         <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">
-          {dict.metaTitleScheda.replace('{paese}', scheda.nome)}
+          {dict.metaTitleScheda.replace('{paese}', nomeLocale)}
         </h1>
         <p className="text-sm text-slate-500">
           {dict.aggiornatoIl} {formatDate(scheda.aggiornatoIl, locale)}

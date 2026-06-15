@@ -6,6 +6,8 @@
  * il contratto tra i file dati, il validatore e le pagine.
  */
 
+import type { AppLocale } from '@/lib/i18n/config';
+
 export type StatoScheda = 'completo' | 'scheda-senza-pdf' | 'in-arrivo';
 export type RispostaChecklist = 'si' | 'no' | 'dipende';
 
@@ -57,6 +59,11 @@ export interface SchedaPaese {
   slugCanonico: string;
   /** Nome IT del paese, per la cornice. */
   nome: string;
+  /**
+   * Nome localizzato del paese per ciascuna lingua (es. de: 'Deutschland',
+   * fr: 'Allemagne'). Se una locale manca, si ripiega su `nome` (italiano).
+   */
+  nomi?: Partial<Record<AppLocale, string>>;
   /** Emoji bandiera. */
   bandiera: string;
   federale: boolean;

@@ -63,8 +63,9 @@ export async function generateMetadata({
     return { title: { absolute: 'GeoTapp' } };
   }
 
-  const title = dict.metaTitleScheda.replace('{paese}', scheda.nome);
-  const description = dict.metaDescScheda.replace('{paese}', scheda.nome);
+  const nomePaese = scheda.nomi?.[resolvedLocale] ?? scheda.nome;
+  const title = dict.metaTitleScheda.replace('{paese}', nomePaese);
+  const description = dict.metaDescScheda.replace('{paese}', nomePaese);
 
   return {
     title: { absolute: title },
@@ -92,18 +93,19 @@ export default async function SchedaPaesePage({
   }
 
   const trialUrl = `/${resolvedLocale}/trial/`;
+  const nomePaese = scheda.nomi?.[resolvedLocale] ?? scheda.nome;
 
   // Structured data: BreadcrumbList (Home -> Strumento -> Paese) + Article.
   const breadcrumbJsonLd = buildBreadcrumbJsonLd(
     buildBreadcrumbItems(resolvedLocale, dict.h1Selettore, {
-      name: scheda.nome,
+      name: nomePaese,
       canonicalSlug: scheda.slugCanonico,
     }),
   );
   const articleJsonLd = buildSchedaArticleJsonLd({
     locale: resolvedLocale,
-    headline: dict.metaTitleScheda.replace('{paese}', scheda.nome),
-    description: dict.metaDescScheda.replace('{paese}', scheda.nome),
+    headline: dict.metaTitleScheda.replace('{paese}', nomePaese),
+    description: dict.metaDescScheda.replace('{paese}', nomePaese),
     dateModified: scheda.aggiornatoIl,
     canonicalSlug: scheda.slugCanonico,
   });
@@ -123,6 +125,7 @@ export default async function SchedaPaesePage({
         dict={dict}
         locale={resolvedLocale}
         trialUrl={trialUrl}
+        nomePaese={nomePaese}
       />
     </>
   );
