@@ -1,6 +1,7 @@
 import type { SchedaPaese, RispostaChecklist } from '@/lib/risorse/gps-lavoratori-ue/types';
 import type { AppLocale } from '@/lib/i18n/config';
 import type { SiteDictionary } from '@/lib/i18n/dictionaries';
+import { loc } from '@/lib/risorse/gps-lavoratori-ue/localize';
 import LeadMagnetInline from '@/components/blog/LeadMagnetInline';
 
 /**
@@ -102,7 +103,7 @@ export default function SchedaPaeseView({ scheda, dict, locale, trialUrl, nomePa
           {scheda.checklist.map((item, i) => (
             <li key={i} className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
               <div className="flex flex-wrap items-start justify-between gap-3 mb-2">
-                <p className="font-semibold text-slate-900 flex-1 min-w-0">{item.voce}</p>
+                <p className="font-semibold text-slate-900 flex-1 min-w-0">{loc(item.voce, locale)}</p>
                 <span className="shrink-0 flex items-center gap-2">
                   <span
                     className={`rounded-full px-3 py-0.5 text-xs font-semibold ${BADGE_STYLE[item.risposta]}`}
@@ -112,7 +113,7 @@ export default function SchedaPaeseView({ scheda, dict, locale, trialUrl, nomePa
                   <span className="text-xs text-slate-500">{serveGloss(dict, item.risposta)}</span>
                 </span>
               </div>
-              <p className="text-slate-600 leading-relaxed mb-2">{item.dettaglio}</p>
+              <p className="text-slate-600 leading-relaxed mb-2">{loc(item.dettaglio, locale)}</p>
               <p className="text-sm">
                 <ExternalLink href={item.fonte.url}>{item.fonte.titolo}</ExternalLink>
               </p>
@@ -130,7 +131,7 @@ export default function SchedaPaeseView({ scheda, dict, locale, trialUrl, nomePa
               <span className="shrink-0 w-9 h-9 rounded-full bg-[#8FC436] text-white font-bold flex items-center justify-center">
                 {passo.passo}
               </span>
-              <p className="text-slate-700 leading-relaxed pt-1">{passo.descrizione}</p>
+              <p className="text-slate-700 leading-relaxed pt-1">{loc(passo.descrizione, locale)}</p>
             </li>
           ))}
         </ol>
@@ -169,8 +170,8 @@ export default function SchedaPaeseView({ scheda, dict, locale, trialUrl, nomePa
       <section className="mb-14">
         <h2 className="text-2xl font-bold text-slate-900 mb-6">{dict.sezioneSanzione}</h2>
         <div className="rounded-xl border border-red-200 bg-red-50 p-5">
-          <p className="text-3xl font-bold text-red-700 mb-2">{scheda.sanzioneMax.importo}</p>
-          <p className="text-slate-700 leading-relaxed mb-2">{scheda.sanzioneMax.casoCitato}</p>
+          <p className="text-3xl font-bold text-red-700 mb-2">{loc(scheda.sanzioneMax.importo, locale)}</p>
+          <p className="text-slate-700 leading-relaxed mb-2">{loc(scheda.sanzioneMax.casoCitato, locale)}</p>
           <p className="text-sm">
             <ExternalLink href={scheda.sanzioneMax.urlFonte}>{scheda.sanzioneMax.urlFonte}</ExternalLink>
           </p>
@@ -242,7 +243,7 @@ function Contatto({
       <p className="text-sm">
         <ExternalLink href={contatto.urlFonte}>{contatto.urlFonte}</ExternalLink>
       </p>
-      {contatto.note && <p className="text-sm text-slate-500">{contatto.note}</p>}
+      {contatto.note && <p className="text-sm text-slate-500">{loc(contatto.note, locale)}</p>}
       <p className="text-xs text-slate-400">
         {dict.verificatoIl} {formatDate(contatto.verificatoIl, locale)}
       </p>
