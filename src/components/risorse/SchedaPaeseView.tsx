@@ -1,5 +1,6 @@
 import type { SchedaPaese, RispostaChecklist } from '@/lib/risorse/gps-lavoratori-ue/types';
 import type { AppLocale } from '@/lib/i18n/config';
+import type { SiteDictionary } from '@/lib/i18n/dictionaries';
 
 /**
  * Vista presentazionale di una scheda-paese per la risorsa "GPS sui lavoratori in UE".
@@ -8,29 +9,7 @@ import type { AppLocale } from '@/lib/i18n/config';
  * `risorseGps` del dizionario; i contenuti dalla `SchedaPaese`.
  */
 
-type RisorseGpsDict = {
-  metaTitleScheda: string;
-  metaDescScheda: string;
-  sezioneCosaServe: string;
-  sezioneProcedura: string;
-  sezioneAChiInviare: string;
-  sezioneModello: string;
-  sezioneSanzione: string;
-  sezioneFonti: string;
-  rispostaSi: string;
-  rispostaNo: string;
-  rispostaDipende: string;
-  verificatoIl: string;
-  aggiornatoIl: string;
-  scaricaModello: string;
-  autoritaCompetente: string;
-  disclaimer: string;
-  ctaTitolo: string;
-  ctaTesto: string;
-  ctaBottone: string;
-  inArrivo: string;
-  inArrivoNota: string;
-};
+type RisorseGpsDict = SiteDictionary['risorseGps'];
 
 interface SchedaPaeseViewProps {
   scheda: SchedaPaese;

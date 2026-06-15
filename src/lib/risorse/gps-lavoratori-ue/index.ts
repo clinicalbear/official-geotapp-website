@@ -17,12 +17,14 @@ export function getSchedaBySlug(slugCanonico: string): SchedaPaese | undefined {
 /** Lista leggera per la pagina selettore: solo i campi di anteprima. */
 export function getAllStati(): {
   slugCanonico: string;
+  codiceISO: string;
   nome: string;
   bandiera: string;
   stato: StatoScheda;
 }[] {
   return PAESI.map((p) => ({
     slugCanonico: p.slugCanonico,
+    codiceISO: p.codiceISO,
     nome: p.nome,
     bandiera: p.bandiera,
     stato: p.stato,

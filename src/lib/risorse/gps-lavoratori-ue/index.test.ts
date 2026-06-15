@@ -38,5 +38,6 @@ describe('registro paesi GPS lavoratori UE', () => {
     expect(it?.stato).toBe('completo');
     expect(it?.nome).toBe('Italia');
     expect(it?.bandiera).toBe('🇮🇹');
+    expect(it?.codiceISO).toBe('IT');
   });
 });
