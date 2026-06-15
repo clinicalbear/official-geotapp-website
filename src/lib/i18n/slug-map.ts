@@ -320,6 +320,42 @@ export const SLUG_MAP: Record<string, Partial<Record<AppLocale, string>>> = {
     da: 'polen', sv: 'polen', nb: 'polen', ru: 'polsha',
     'en-us': 'poland', 'en-gb': 'poland', 'en-au': 'poland', 'en-ie': 'poland', 'en-ca': 'poland',
   },
+  'repubblica-ceca': {
+    it: 'repubblica-ceca', en: 'czech-republic', de: 'tschechien', nl: 'tsjechie',
+    fr: 'republique-tcheque', es: 'republica-checa', pt: 'chequia',
+    da: 'tjekkiet', sv: 'tjeckien', nb: 'tsjekkia', ru: 'chehiya',
+    'en-us': 'czech-republic', 'en-gb': 'czech-republic', 'en-au': 'czech-republic', 'en-ie': 'czech-republic', 'en-ca': 'czech-republic',
+  },
+  'grecia': {
+    it: 'grecia', en: 'greece', de: 'griechenland', nl: 'griekenland',
+    fr: 'grece', es: 'grecia', pt: 'grecia',
+    da: 'graekenland', sv: 'grekland', nb: 'hellas', ru: 'gretsiya',
+    'en-us': 'greece', 'en-gb': 'greece', 'en-au': 'greece', 'en-ie': 'greece', 'en-ca': 'greece',
+  },
+  'finlandia': {
+    it: 'finlandia', en: 'finland', de: 'finnland', nl: 'finland',
+    fr: 'finlande', es: 'finlandia', pt: 'finlandia',
+    da: 'finland', sv: 'finland', nb: 'finland', ru: 'finlyandiya',
+    'en-us': 'finland', 'en-gb': 'finland', 'en-au': 'finland', 'en-ie': 'finland', 'en-ca': 'finland',
+  },
+  'croazia': {
+    it: 'croazia', en: 'croatia', de: 'kroatien', nl: 'kroatie',
+    fr: 'croatie', es: 'croacia', pt: 'croacia',
+    da: 'kroatien', sv: 'kroatien', nb: 'kroatia', ru: 'horvatiya',
+    'en-us': 'croatia', 'en-gb': 'croatia', 'en-au': 'croatia', 'en-ie': 'croatia', 'en-ca': 'croatia',
+  },
+  'slovenia': {
+    it: 'slovenia', en: 'slovenia', de: 'slowenien', nl: 'slovenie',
+    fr: 'slovenie', es: 'eslovenia', pt: 'eslovenia',
+    da: 'slovenien', sv: 'slovenien', nb: 'slovenia', ru: 'sloveniya',
+    'en-us': 'slovenia', 'en-gb': 'slovenia', 'en-au': 'slovenia', 'en-ie': 'slovenia', 'en-ca': 'slovenia',
+  },
+  'slovacchia': {
+    it: 'slovacchia', en: 'slovakia', de: 'slowakei', nl: 'slowakije',
+    fr: 'slovaquie', es: 'eslovaquia', pt: 'eslovaquia',
+    da: 'slovakiet', sv: 'slovakien', nb: 'slovakia', ru: 'slovakiya',
+    'en-us': 'slovakia', 'en-gb': 'slovakia', 'en-au': 'slovakia', 'en-ie': 'slovakia', 'en-ca': 'slovakia',
+  },
   // ───────���──────────────────────────────��────────────────────────────���────────
   'download': {
     it: 'download',

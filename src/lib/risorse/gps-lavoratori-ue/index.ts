@@ -22,6 +22,12 @@ import { irlanda } from './paesi/ie';
 import { svizzera } from './paesi/ch';
 import { romania } from './paesi/ro';
 import { polonia } from './paesi/pl';
+import { repubblicaCeca } from './paesi/cz';
+import { grecia } from './paesi/gr';
+import { finlandia } from './paesi/fi';
+import { croazia } from './paesi/hr';
+import { slovenia } from './paesi/si';
+import { slovacchia } from './paesi/sk';
 
 export const PAESI: SchedaPaese[] = [
   italia,
@@ -40,6 +46,12 @@ export const PAESI: SchedaPaese[] = [
   svizzera,
   romania,
   polonia,
+  repubblicaCeca,
+  grecia,
+  finlandia,
+  croazia,
+  slovenia,
+  slovacchia,
 ];
 
 export function getSchedaBySlug(slugCanonico: string): SchedaPaese | undefined {
