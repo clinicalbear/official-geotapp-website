@@ -166,10 +166,7 @@ export const italia: SchedaPaese = {
         'Garante Privacy, newsletter del 29 gennaio 2026 (sanzione settore sementi)',
       url: 'https://www.garanteprivacy.it',
     },
-    {
-      titolo: 'Legge 20 maggio 1970, n. 300 (Statuto dei Lavoratori), art. 4',
-      url: 'https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1970-05-20;300',
-    },
+    FONTE_STATUTO_ART4,
     FONTE_GDPR,
   ],
 

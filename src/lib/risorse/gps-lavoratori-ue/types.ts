@@ -53,7 +53,7 @@ export interface SanzioneMax {
 export interface SchedaPaese {
   /** Codice ISO del paese, es. 'DE'. */
   codiceISO: string;
-  /** Slug canonico, chiave di SLUG_MAP, es. 'germania'. */
+  /** Slug canonico, chiave di SLUG_MAP (pianificato in un task successivo), es. 'germania'. */
   slugCanonico: string;
   /** Nome IT del paese, per la cornice. */
   nome: string;

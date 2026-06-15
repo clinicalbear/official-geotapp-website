@@ -24,6 +24,13 @@ describe('registro paesi GPS lavoratori UE', () => {
     }
   });
 
+  it('PAESI non ha slugCanonico o codiceISO duplicati', () => {
+    const slugs = new Set(PAESI.map((s) => s.slugCanonico));
+    expect(slugs.size).toBe(PAESI.length);
+    const isos = new Set(PAESI.map((s) => s.codiceISO));
+    expect(isos.size).toBe(PAESI.length);
+  });
+
   it('getAllStati() include una voce per "italia" con lo stato giusto', () => {
     const stati = getAllStati();
     const it = stati.find((e) => e.slugCanonico === 'italia');
