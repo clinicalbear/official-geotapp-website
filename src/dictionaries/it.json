@@ -1008,5 +1008,33 @@
     "follow_linkedin": "Connettiti su LinkedIn",
     "read_more": "Leggi",
     "no_articles": "Nessun articolo per ora."
+  },
+  "risorseGps": {
+    "metaTitleSelettore": "GPS e monitoraggio dei lavoratori in Europa: cosa serve per essere a norma, paese per paese",
+    "metaDescSelettore": "Scegli il paese e scopri cosa serve per mettere a norma GPS, geolocalizzazione e rilevazione presenze dei lavoratori: procedura, autorita, modello da scaricare.",
+    "h1Selettore": "GPS e monitoraggio dei lavoratori, paese per paese",
+    "introSelettore": "Devi mettere il GPS o la rilevazione presenze ai lavoratori in un altro paese europeo? Scegli la destinazione e trovi cosa serve per essere a norma: gli adempimenti, la procedura passo passo, l'autorita a cui rivolgerti e un modello pronto da scaricare.",
+    "scegliPaese": "Scegli il paese",
+    "inArrivo": "In arrivo",
+    "inArrivoNota": "Stiamo preparando la scheda di questo paese.",
+    "metaTitleScheda": "GPS e monitoraggio dei lavoratori in {paese}: cosa serve per essere a norma",
+    "metaDescScheda": "Cosa serve per mettere a norma GPS e monitoraggio dei lavoratori in {paese}: adempimenti, procedura, autorita competente, sanzioni e modello da scaricare.",
+    "sezioneCosaServe": "Cosa serve",
+    "sezioneProcedura": "La procedura, passo per passo",
+    "sezioneAChiInviare": "A chi rivolgerti",
+    "sezioneModello": "Il modello da scaricare",
+    "sezioneSanzione": "Quanto si rischia",
+    "sezioneFonti": "Fonti",
+    "rispostaSi": "Si",
+    "rispostaNo": "No",
+    "rispostaDipende": "Dipende",
+    "verificatoIl": "Verificato il",
+    "aggiornatoIl": "Aggiornato il",
+    "scaricaModello": "Scarica il modello",
+    "autoritaCompetente": "Autorita competente",
+    "disclaimer": "Questa e una risorsa informativa, non una consulenza legale. Prima di attivare un sistema di monitoraggio fai verificare la tua situazione da un professionista.",
+    "ctaTitolo": "Vuoi un sistema gia a norma?",
+    "ctaTesto": "GeoTapp registra la posizione solo alla timbratura, non in continuo, e genera l'informativa da far firmare. Provalo gratis.",
+    "ctaBottone": "Prova GeoTapp gratis"
   }
 }

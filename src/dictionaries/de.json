@@ -1008,5 +1008,33 @@
     "follow_linkedin": "Auf LinkedIn vernetzen",
     "read_more": "Lesen",
     "no_articles": "Noch keine Artikel."
+  },
+  "risorseGps": {
+    "metaTitleSelettore": "GPS und Mitarbeiterüberwachung in Europa: Was Sie für die Konformität brauchen, Land für Land",
+    "metaDescSelettore": "Wählen Sie ein Land und erfahren Sie, was nötig ist, um GPS, Geolokalisierung und Zeiterfassung der Mitarbeiter rechtskonform zu machen: Verfahren, zuständige Behörde, Vorlage zum Download.",
+    "h1Selettore": "GPS und Mitarbeiterüberwachung, Land für Land",
+    "introSelettore": "Müssen Sie GPS oder eine Zeiterfassung für Mitarbeiter in einem anderen europäischen Land einführen? Wählen Sie das Zielland und erfahren Sie, was für die Konformität nötig ist: die Pflichten, das Verfahren Schritt für Schritt, die zuständige Behörde und eine fertige Vorlage zum Download.",
+    "scegliPaese": "Land auswählen",
+    "inArrivo": "Demnächst",
+    "inArrivoNota": "Wir bereiten die Seite für dieses Land vor.",
+    "metaTitleScheda": "GPS und Mitarbeiterüberwachung in {paese}: Was Sie für die Konformität brauchen",
+    "metaDescScheda": "Was nötig ist, um GPS und Mitarbeiterüberwachung in {paese} rechtskonform zu machen: Pflichten, Verfahren, zuständige Behörde, Sanktionen und Vorlage zum Download.",
+    "sezioneCosaServe": "Was Sie brauchen",
+    "sezioneProcedura": "Das Verfahren, Schritt für Schritt",
+    "sezioneAChiInviare": "An wen Sie sich wenden",
+    "sezioneModello": "Die Vorlage zum Download",
+    "sezioneSanzione": "Was Sie riskieren",
+    "sezioneFonti": "Quellen",
+    "rispostaSi": "Ja",
+    "rispostaNo": "Nein",
+    "rispostaDipende": "Es kommt darauf an",
+    "verificatoIl": "Geprüft am",
+    "aggiornatoIl": "Aktualisiert am",
+    "scaricaModello": "Vorlage herunterladen",
+    "autoritaCompetente": "Zuständige Behörde",
+    "disclaimer": "Dies ist eine informative Ressource, keine Rechtsberatung. Bevor Sie ein Überwachungssystem aktivieren, lassen Sie Ihre Situation von einer Fachkraft prüfen.",
+    "ctaTitolo": "Möchten Sie ein System, das bereits konform ist?",
+    "ctaTesto": "GeoTapp erfasst den Standort nur bei der Zeiterfassung, nicht durchgehend, und erstellt die zu unterzeichnende Datenschutzerklärung. Testen Sie es kostenlos.",
+    "ctaBottone": "GeoTapp kostenlos testen"
   }
 }

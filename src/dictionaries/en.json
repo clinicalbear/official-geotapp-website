@@ -1008,5 +1008,33 @@
     "follow_linkedin": "Connect on LinkedIn",
     "read_more": "Read",
     "no_articles": "No articles yet."
+  },
+  "risorseGps": {
+    "metaTitleSelettore": "GPS and worker monitoring in Europe: what you need to stay compliant, country by country",
+    "metaDescSelettore": "Choose a country and find out what it takes to make GPS, geolocation and attendance tracking of workers compliant: the procedure, the authority, a template to download.",
+    "h1Selettore": "GPS and worker monitoring, country by country",
+    "introSelettore": "Do you need to put GPS or attendance tracking in place for workers in another European country? Choose the destination and find out what it takes to be compliant: the obligations, the step-by-step procedure, the authority to contact and a ready-made template to download.",
+    "scegliPaese": "Choose a country",
+    "inArrivo": "Coming soon",
+    "inArrivoNota": "We are preparing the page for this country.",
+    "metaTitleScheda": "GPS and worker monitoring in {paese}: what you need to stay compliant",
+    "metaDescScheda": "What it takes to make GPS and worker monitoring compliant in {paese}: obligations, procedure, competent authority, penalties and a template to download.",
+    "sezioneCosaServe": "What you need",
+    "sezioneProcedura": "The procedure, step by step",
+    "sezioneAChiInviare": "Who to contact",
+    "sezioneModello": "The template to download",
+    "sezioneSanzione": "What you risk",
+    "sezioneFonti": "Sources",
+    "rispostaSi": "Yes",
+    "rispostaNo": "No",
+    "rispostaDipende": "It depends",
+    "verificatoIl": "Verified on",
+    "aggiornatoIl": "Updated on",
+    "scaricaModello": "Download the template",
+    "autoritaCompetente": "Competent authority",
+    "disclaimer": "This is an informational resource, not legal advice. Before activating a monitoring system, have your situation checked by a professional.",
+    "ctaTitolo": "Want a system that is already compliant?",
+    "ctaTesto": "GeoTapp records the location only at clock-in, not continuously, and generates the notice for workers to sign. Try it for free.",
+    "ctaBottone": "Try GeoTapp for free"
   }
 }

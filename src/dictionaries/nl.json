@@ -1008,5 +1008,33 @@
     "follow_linkedin": "Maak contact op LinkedIn",
     "read_more": "Lees",
     "no_articles": "Nog geen artikelen."
+  },
+  "risorseGps": {
+    "metaTitleSelettore": "GPS en monitoring van werknemers in Europa: wat je nodig hebt om aan de regels te voldoen, land voor land",
+    "metaDescSelettore": "Kies een land en ontdek wat er nodig is om GPS, geolocatie en aanwezigheidsregistratie van werknemers in orde te maken: de procedure, de autoriteit, een sjabloon om te downloaden.",
+    "h1Selettore": "GPS en monitoring van werknemers, land voor land",
+    "introSelettore": "Moet je GPS of aanwezigheidsregistratie voor werknemers invoeren in een ander Europees land? Kies de bestemming en ontdek wat er nodig is om aan de regels te voldoen: de verplichtingen, de procedure stap voor stap, de autoriteit waar je je toe moet wenden en een kant-en-klaar sjabloon om te downloaden.",
+    "scegliPaese": "Kies een land",
+    "inArrivo": "Binnenkort",
+    "inArrivoNota": "We zijn de pagina voor dit land aan het voorbereiden.",
+    "metaTitleScheda": "GPS en monitoring van werknemers in {paese}: wat je nodig hebt om aan de regels te voldoen",
+    "metaDescScheda": "Wat er nodig is om GPS en monitoring van werknemers in {paese} in orde te maken: verplichtingen, procedure, bevoegde autoriteit, sancties en een sjabloon om te downloaden.",
+    "sezioneCosaServe": "Wat je nodig hebt",
+    "sezioneProcedura": "De procedure, stap voor stap",
+    "sezioneAChiInviare": "Tot wie je je moet wenden",
+    "sezioneModello": "Het sjabloon om te downloaden",
+    "sezioneSanzione": "Wat je riskeert",
+    "sezioneFonti": "Bronnen",
+    "rispostaSi": "Ja",
+    "rispostaNo": "Nee",
+    "rispostaDipende": "Het hangt ervan af",
+    "verificatoIl": "Geverifieerd op",
+    "aggiornatoIl": "Bijgewerkt op",
+    "scaricaModello": "Download het sjabloon",
+    "autoritaCompetente": "Bevoegde autoriteit",
+    "disclaimer": "Dit is een informatieve bron, geen juridisch advies. Laat je situatie door een professional controleren voordat je een monitoringsysteem activeert.",
+    "ctaTitolo": "Wil je een systeem dat al voldoet aan de regels?",
+    "ctaTesto": "GeoTapp registreert de locatie alleen bij het inklokken, niet continu, en genereert de te ondertekenen verklaring. Probeer het gratis.",
+    "ctaBottone": "Probeer GeoTapp gratis"
   }
 }

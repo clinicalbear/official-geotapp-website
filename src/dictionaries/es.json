@@ -1008,5 +1008,33 @@
     "follow_linkedin": "Conectar en LinkedIn",
     "read_more": "Leer",
     "no_articles": "Aún no hay artículos."
+  },
+  "risorseGps": {
+    "metaTitleSelettore": "GPS y control de los trabajadores en Europa: qué hace falta para cumplir la normativa, país por país",
+    "metaDescSelettore": "Elige un país y descubre qué hace falta para que el GPS, la geolocalización y el control de presencia de los trabajadores cumplan la normativa: el procedimiento, la autoridad, una plantilla para descargar.",
+    "h1Selettore": "GPS y control de los trabajadores, país por país",
+    "introSelettore": "¿Tienes que instalar el GPS o el control de presencia a los trabajadores en otro país europeo? Elige el destino y descubre qué hace falta para cumplir la normativa: las obligaciones, el procedimiento paso a paso, la autoridad a la que dirigirte y una plantilla lista para descargar.",
+    "scegliPaese": "Elige un país",
+    "inArrivo": "Próximamente",
+    "inArrivoNota": "Estamos preparando la ficha de este país.",
+    "metaTitleScheda": "GPS y control de los trabajadores en {paese}: qué hace falta para cumplir la normativa",
+    "metaDescScheda": "Qué hace falta para que el GPS y el control de los trabajadores en {paese} cumplan la normativa: obligaciones, procedimiento, autoridad competente, sanciones y plantilla para descargar.",
+    "sezioneCosaServe": "Qué necesitas",
+    "sezioneProcedura": "El procedimiento, paso a paso",
+    "sezioneAChiInviare": "A quién dirigirte",
+    "sezioneModello": "La plantilla para descargar",
+    "sezioneSanzione": "Qué te juegas",
+    "sezioneFonti": "Fuentes",
+    "rispostaSi": "Sí",
+    "rispostaNo": "No",
+    "rispostaDipende": "Depende",
+    "verificatoIl": "Verificado el",
+    "aggiornatoIl": "Actualizado el",
+    "scaricaModello": "Descargar la plantilla",
+    "autoritaCompetente": "Autoridad competente",
+    "disclaimer": "Este es un recurso informativo, no un asesoramiento jurídico. Antes de activar un sistema de control, haz que un profesional revise tu situación.",
+    "ctaTitolo": "¿Quieres un sistema que ya cumpla la normativa?",
+    "ctaTesto": "GeoTapp registra la ubicación solo al fichar, no de forma continua, y genera la información que hay que firmar. Pruébalo gratis.",
+    "ctaBottone": "Prueba GeoTapp gratis"
   }
 }
