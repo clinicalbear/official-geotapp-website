@@ -356,6 +356,42 @@ export const SLUG_MAP: Record<string, Partial<Record<AppLocale, string>>> = {
     da: 'slovakiet', sv: 'slovakien', nb: 'slovakia', ru: 'slovakiya',
     'en-us': 'slovakia', 'en-gb': 'slovakia', 'en-au': 'slovakia', 'en-ie': 'slovakia', 'en-ca': 'slovakia',
   },
+  'ungheria': {
+    it: 'ungheria', en: 'hungary', de: 'ungarn', nl: 'hongarije',
+    fr: 'hongrie', es: 'hungria', pt: 'hungria',
+    da: 'ungarn', sv: 'ungern', nb: 'ungarn', ru: 'vengriya',
+    'en-us': 'hungary', 'en-gb': 'hungary', 'en-au': 'hungary', 'en-ie': 'hungary', 'en-ca': 'hungary',
+  },
+  'bulgaria': {
+    it: 'bulgaria', en: 'bulgaria', de: 'bulgarien', nl: 'bulgarije',
+    fr: 'bulgarie', es: 'bulgaria', pt: 'bulgaria',
+    da: 'bulgarien', sv: 'bulgarien', nb: 'bulgaria', ru: 'bolgariya',
+    'en-us': 'bulgaria', 'en-gb': 'bulgaria', 'en-au': 'bulgaria', 'en-ie': 'bulgaria', 'en-ca': 'bulgaria',
+  },
+  'estonia': {
+    it: 'estonia', en: 'estonia', de: 'estland', nl: 'estland',
+    fr: 'estonie', es: 'estonia', pt: 'estonia',
+    da: 'estland', sv: 'estland', nb: 'estland', ru: 'estoniya',
+    'en-us': 'estonia', 'en-gb': 'estonia', 'en-au': 'estonia', 'en-ie': 'estonia', 'en-ca': 'estonia',
+  },
+  'lettonia': {
+    it: 'lettonia', en: 'latvia', de: 'lettland', nl: 'letland',
+    fr: 'lettonie', es: 'letonia', pt: 'letonia',
+    da: 'letland', sv: 'lettland', nb: 'latvia', ru: 'latviya',
+    'en-us': 'latvia', 'en-gb': 'latvia', 'en-au': 'latvia', 'en-ie': 'latvia', 'en-ca': 'latvia',
+  },
+  'lituania': {
+    it: 'lituania', en: 'lithuania', de: 'litauen', nl: 'litouwen',
+    fr: 'lituanie', es: 'lituania', pt: 'lituania',
+    da: 'litauen', sv: 'litauen', nb: 'litauen', ru: 'litva',
+    'en-us': 'lithuania', 'en-gb': 'lithuania', 'en-au': 'lithuania', 'en-ie': 'lithuania', 'en-ca': 'lithuania',
+  },
+  'lussemburgo': {
+    it: 'lussemburgo', en: 'luxembourg', de: 'luxemburg', nl: 'luxemburg',
+    fr: 'luxembourg', es: 'luxemburgo', pt: 'luxemburgo',
+    da: 'luxembourg', sv: 'luxemburg', nb: 'luxembourg', ru: 'lyuksemburg',
+    'en-us': 'luxembourg', 'en-gb': 'luxembourg', 'en-au': 'luxembourg', 'en-ie': 'luxembourg', 'en-ca': 'luxembourg',
+  },
   // ───────���──────────────────────────────��────────────────────────────���────────
   'download': {
     it: 'download',
