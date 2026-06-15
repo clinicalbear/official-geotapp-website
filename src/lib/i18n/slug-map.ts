@@ -392,6 +392,54 @@ export const SLUG_MAP: Record<string, Partial<Record<AppLocale, string>>> = {
     da: 'luxembourg', sv: 'luxemburg', nb: 'luxembourg', ru: 'lyuksemburg',
     'en-us': 'luxembourg', 'en-gb': 'luxembourg', 'en-au': 'luxembourg', 'en-ie': 'luxembourg', 'en-ca': 'luxembourg',
   },
+  'islanda': {
+    it: 'islanda', en: 'iceland', de: 'island', nl: 'ijsland',
+    fr: 'islande', es: 'islandia', pt: 'islandia',
+    da: 'island', sv: 'island', nb: 'island', ru: 'islandiya',
+    'en-us': 'iceland', 'en-gb': 'iceland', 'en-au': 'iceland', 'en-ie': 'iceland', 'en-ca': 'iceland',
+  },
+  'malta': {
+    it: 'malta', en: 'malta', de: 'malta', nl: 'malta',
+    fr: 'malte', es: 'malta', pt: 'malta',
+    da: 'malta', sv: 'malta', nb: 'malta', ru: 'malta',
+    'en-us': 'malta', 'en-gb': 'malta', 'en-au': 'malta', 'en-ie': 'malta', 'en-ca': 'malta',
+  },
+  'cipro': {
+    it: 'cipro', en: 'cyprus', de: 'zypern', nl: 'cyprus',
+    fr: 'chypre', es: 'chipre', pt: 'chipre',
+    da: 'cypern', sv: 'cypern', nb: 'kypros', ru: 'kipr',
+    'en-us': 'cyprus', 'en-gb': 'cyprus', 'en-au': 'cyprus', 'en-ie': 'cyprus', 'en-ca': 'cyprus',
+  },
+  'albania': {
+    it: 'albania', en: 'albania', de: 'albanien', nl: 'albanie',
+    fr: 'albanie', es: 'albania', pt: 'albania',
+    da: 'albanien', sv: 'albanien', nb: 'albania', ru: 'albaniya',
+    'en-us': 'albania', 'en-gb': 'albania', 'en-au': 'albania', 'en-ie': 'albania', 'en-ca': 'albania',
+  },
+  'serbia': {
+    it: 'serbia', en: 'serbia', de: 'serbien', nl: 'servie',
+    fr: 'serbie', es: 'serbia', pt: 'servia',
+    da: 'serbien', sv: 'serbien', nb: 'serbia', ru: 'serbiya',
+    'en-us': 'serbia', 'en-gb': 'serbia', 'en-au': 'serbia', 'en-ie': 'serbia', 'en-ca': 'serbia',
+  },
+  'bosnia-erzegovina': {
+    it: 'bosnia-erzegovina', en: 'bosnia-and-herzegovina', de: 'bosnien-und-herzegowina', nl: 'bosnie-en-herzegovina',
+    fr: 'bosnie-herzegovine', es: 'bosnia-y-herzegovina', pt: 'bosnia-e-herzegovina',
+    da: 'bosnien-hercegovina', sv: 'bosnien-och-hercegovina', nb: 'bosnia-hercegovina', ru: 'bosniya-i-gertsegovina',
+    'en-us': 'bosnia-and-herzegovina', 'en-gb': 'bosnia-and-herzegovina', 'en-au': 'bosnia-and-herzegovina', 'en-ie': 'bosnia-and-herzegovina', 'en-ca': 'bosnia-and-herzegovina',
+  },
+  'montenegro': {
+    it: 'montenegro', en: 'montenegro', de: 'montenegro', nl: 'montenegro',
+    fr: 'montenegro', es: 'montenegro', pt: 'montenegro',
+    da: 'montenegro', sv: 'montenegro', nb: 'montenegro', ru: 'chernogoriya',
+    'en-us': 'montenegro', 'en-gb': 'montenegro', 'en-au': 'montenegro', 'en-ie': 'montenegro', 'en-ca': 'montenegro',
+  },
+  'macedonia-del-nord': {
+    it: 'macedonia-del-nord', en: 'north-macedonia', de: 'nordmazedonien', nl: 'noord-macedonie',
+    fr: 'macedoine-du-nord', es: 'macedonia-del-norte', pt: 'macedonia-do-norte',
+    da: 'nordmakedonien', sv: 'nordmakedonien', nb: 'nord-makedonia', ru: 'severnaya-makedoniya',
+    'en-us': 'north-macedonia', 'en-gb': 'north-macedonia', 'en-au': 'north-macedonia', 'en-ie': 'north-macedonia', 'en-ca': 'north-macedonia',
+  },
   // ───────���──────────────────────────────��────────────────────────────���────────
   'download': {
     it: 'download',
