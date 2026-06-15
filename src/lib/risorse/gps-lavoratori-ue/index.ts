@@ -11,8 +11,26 @@ import { germania } from './paesi/de';
 import { francia } from './paesi/fr';
 import { spagna } from './paesi/es';
 import { olanda } from './paesi/nl';
+import { portogallo } from './paesi/pt';
+import { danimarca } from './paesi/dk';
+import { svezia } from './paesi/se';
+import { norvegia } from './paesi/no';
+import { austria } from './paesi/at';
+import { belgio } from './paesi/be';
 
-export const PAESI: SchedaPaese[] = [italia, germania, francia, spagna, olanda];
+export const PAESI: SchedaPaese[] = [
+  italia,
+  germania,
+  francia,
+  spagna,
+  olanda,
+  portogallo,
+  danimarca,
+  svezia,
+  norvegia,
+  austria,
+  belgio,
+];
 
 export function getSchedaBySlug(slugCanonico: string): SchedaPaese | undefined {
   return PAESI.find((p) => p.slugCanonico === slugCanonico);

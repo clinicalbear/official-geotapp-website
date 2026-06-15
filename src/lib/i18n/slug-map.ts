@@ -254,6 +254,42 @@ export const SLUG_MAP: Record<string, Partial<Record<AppLocale, string>>> = {
     da: 'nederlandene', sv: 'nederlanderna', nb: 'nederland', ru: 'niderlandy',
     'en-us': 'netherlands', 'en-gb': 'netherlands', 'en-au': 'netherlands', 'en-ie': 'netherlands', 'en-ca': 'netherlands',
   },
+  'portogallo': {
+    it: 'portogallo', en: 'portugal', de: 'portugal', nl: 'portugal',
+    fr: 'portugal', es: 'portugal', pt: 'portugal',
+    da: 'portugal', sv: 'portugal', nb: 'portugal', ru: 'portugaliya',
+    'en-us': 'portugal', 'en-gb': 'portugal', 'en-au': 'portugal', 'en-ie': 'portugal', 'en-ca': 'portugal',
+  },
+  'danimarca': {
+    it: 'danimarca', en: 'denmark', de: 'daenemark', nl: 'denemarken',
+    fr: 'danemark', es: 'dinamarca', pt: 'dinamarca',
+    da: 'danmark', sv: 'danmark', nb: 'danmark', ru: 'daniya',
+    'en-us': 'denmark', 'en-gb': 'denmark', 'en-au': 'denmark', 'en-ie': 'denmark', 'en-ca': 'denmark',
+  },
+  'svezia': {
+    it: 'svezia', en: 'sweden', de: 'schweden', nl: 'zweden',
+    fr: 'suede', es: 'suecia', pt: 'suecia',
+    da: 'sverige', sv: 'sverige', nb: 'sverige', ru: 'shvetsiya',
+    'en-us': 'sweden', 'en-gb': 'sweden', 'en-au': 'sweden', 'en-ie': 'sweden', 'en-ca': 'sweden',
+  },
+  'norvegia': {
+    it: 'norvegia', en: 'norway', de: 'norwegen', nl: 'noorwegen',
+    fr: 'norvege', es: 'noruega', pt: 'noruega',
+    da: 'norge', sv: 'norge', nb: 'norge', ru: 'norvegiya',
+    'en-us': 'norway', 'en-gb': 'norway', 'en-au': 'norway', 'en-ie': 'norway', 'en-ca': 'norway',
+  },
+  'austria': {
+    it: 'austria', en: 'austria', de: 'oesterreich', nl: 'oostenrijk',
+    fr: 'autriche', es: 'austria', pt: 'austria',
+    da: 'ostrig', sv: 'osterrike', nb: 'osterrike', ru: 'avstriya',
+    'en-us': 'austria', 'en-gb': 'austria', 'en-au': 'austria', 'en-ie': 'austria', 'en-ca': 'austria',
+  },
+  'belgio': {
+    it: 'belgio', en: 'belgium', de: 'belgien', nl: 'belgie',
+    fr: 'belgique', es: 'belgica', pt: 'belgica',
+    da: 'belgien', sv: 'belgien', nb: 'belgia', ru: 'belgiya',
+    'en-us': 'belgium', 'en-gb': 'belgium', 'en-au': 'belgium', 'en-ie': 'belgium', 'en-ca': 'belgium',
+  },
   // ───────���──────────────────────────────��────────────────────────────���────────
   'download': {
     it: 'download',
