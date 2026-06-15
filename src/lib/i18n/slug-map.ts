@@ -290,6 +290,36 @@ export const SLUG_MAP: Record<string, Partial<Record<AppLocale, string>>> = {
     da: 'belgien', sv: 'belgien', nb: 'belgia', ru: 'belgiya',
     'en-us': 'belgium', 'en-gb': 'belgium', 'en-au': 'belgium', 'en-ie': 'belgium', 'en-ca': 'belgium',
   },
+  'regno-unito': {
+    it: 'regno-unito', en: 'united-kingdom', de: 'vereinigtes-koenigreich', nl: 'verenigd-koninkrijk',
+    fr: 'royaume-uni', es: 'reino-unido', pt: 'reino-unido',
+    da: 'storbritannien', sv: 'storbritannien', nb: 'storbritannia', ru: 'velikobritaniya',
+    'en-us': 'united-kingdom', 'en-gb': 'united-kingdom', 'en-au': 'united-kingdom', 'en-ie': 'united-kingdom', 'en-ca': 'united-kingdom',
+  },
+  'irlanda': {
+    it: 'irlanda', en: 'ireland', de: 'irland', nl: 'ierland',
+    fr: 'irlande', es: 'irlanda', pt: 'irlanda',
+    da: 'irland', sv: 'irland', nb: 'irland', ru: 'irlandiya',
+    'en-us': 'ireland', 'en-gb': 'ireland', 'en-au': 'ireland', 'en-ie': 'ireland', 'en-ca': 'ireland',
+  },
+  'svizzera': {
+    it: 'svizzera', en: 'switzerland', de: 'schweiz', nl: 'zwitserland',
+    fr: 'suisse', es: 'suiza', pt: 'suica',
+    da: 'schweiz', sv: 'schweiz', nb: 'sveits', ru: 'shveytsariya',
+    'en-us': 'switzerland', 'en-gb': 'switzerland', 'en-au': 'switzerland', 'en-ie': 'switzerland', 'en-ca': 'switzerland',
+  },
+  'romania': {
+    it: 'romania', en: 'romania', de: 'rumaenien', nl: 'roemenie',
+    fr: 'roumanie', es: 'rumania', pt: 'romenia',
+    da: 'rumaenien', sv: 'rumanien', nb: 'romania', ru: 'rumyniya',
+    'en-us': 'romania', 'en-gb': 'romania', 'en-au': 'romania', 'en-ie': 'romania', 'en-ca': 'romania',
+  },
+  'polonia': {
+    it: 'polonia', en: 'poland', de: 'polen', nl: 'polen',
+    fr: 'pologne', es: 'polonia', pt: 'polonia',
+    da: 'polen', sv: 'polen', nb: 'polen', ru: 'polsha',
+    'en-us': 'poland', 'en-gb': 'poland', 'en-au': 'poland', 'en-ie': 'poland', 'en-ca': 'poland',
+  },
   // ───────���──────────────────────────────��────────────────────────────���────────
   'download': {
     it: 'download',
