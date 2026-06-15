@@ -47,49 +47,49 @@ export const italia: SchedaPaese = {
 
   checklist: [
     {
-      voce: 'Hai completato la procedura dell’art. 4 PRIMA di installare il sistema?',
+      voce: "Accordo sindacale (RSA/RSU) o autorizzazione dell'Ispettorato del Lavoro, prima di installare il sistema",
       risposta: 'si',
       dettaglio:
         'Il GPS è uno strumento da cui può derivare un controllo a distanza dei lavoratori. L’art. 4 dello Statuto dei Lavoratori lo consente solo dopo accordo sindacale con RSA o RSU, oppure autorizzazione dell’Ispettorato Territoriale del Lavoro. Installare prima di questo passaggio, o usarlo in modo difforme da quanto autorizzato, è la strada più rapida verso la sanzione.',
       fonte: FONTE_STATUTO_ART4,
     },
     {
-      voce: 'L’informativa al lavoratore è completa, chiara e veritiera?',
+      voce: 'Informativa scritta ai lavoratori, completa e veritiera (art. 13 GDPR)',
       risposta: 'si',
       dettaglio:
         'Il lavoratore deve sapere in modo chiaro e veritiero che viene geolocalizzato, come, quando e perché (art. 13 GDPR). Nel caso degli autotrasporti l’informativa c’era ma piena di incongruenze e refusi: per il Garante è come non averla.',
       fonte: FONTE_PROVV_AUTOTRASPORTI,
     },
     {
-      voce: 'Eviti il tracciamento continuo, raccogliendo la posizione solo quando serve?',
+      voce: 'Divieto di tracciamento continuo: posizione raccolta solo quando serve (minimizzazione)',
       risposta: 'si',
       dettaglio:
         'Seguire il mezzo h24, pause comprese, viola il principio di minimizzazione (art. 5 GDPR). La posizione si raccoglie quando serve a una finalità legittima, non per sapere sempre dov’è la persona. Il tracciamento continuo è uno dei motivi della sanzione da 50.000 € all’azienda di autotrasporti.',
       fonte: FONTE_PROVV_AUTOTRASPORTI,
     },
     {
-      voce: 'Usi i dati di posizione per la sola finalità dichiarata, senza riusarli per sanzionare?',
-      risposta: 'no',
+      voce: 'Uso dei dati per la sola finalita dichiarata, senza riuso per sanzioni disciplinari',
+      risposta: 'si',
       dettaglio:
-        'Riutilizzare dati raccolti per un’altra finalità (per esempio verificare la sede di lavoro) per avviare un procedimento disciplinare è uno sviamento di finalità, e il Garante lo colpisce sempre. È l’errore costato caro all’ente pubblico nel caso ARSAC.',
+        "I dati di posizione vanno usati solo per la finalita per cui sono stati raccolti. Riutilizzarli per un altro scopo (per esempio dati raccolti per verificare la sede di lavoro e poi usati per avviare un procedimento disciplinare) e uno sviamento di finalita, e il Garante lo colpisce sempre. E l'errore costato caro all'ente pubblico nel caso ARSAC.",
       fonte: FONTE_PROVV_ARSAC,
     },
     {
-      voce: 'Hai svolto la valutazione d’impatto (DPIA) quando il rischio è elevato?',
+      voce: "Valutazione d'impatto sulla protezione dei dati (DPIA)",
       risposta: 'dipende',
       dettaglio:
         'Per un trattamento di questo tipo serve la DPIA (art. 35 GDPR) quando il rischio è elevato. Ometterla, come nel caso dell’ente pubblico, è di per sé una violazione.',
       fonte: FONTE_PROVV_ARSAC,
     },
     {
-      voce: 'La conservazione dei dati è limitata al tempo strettamente necessario?',
+      voce: 'Conservazione dei dati limitata al tempo strettamente necessario',
       risposta: 'si',
       dettaglio:
         'I dati si tengono per il tempo necessario alla finalità, non "per sicurezza" a tempo indefinito. Nel caso degli autotrasporti la conservazione per 180 giorni ha contribuito alla sanzione.',
       fonte: FONTE_PROVV_AUTOTRASPORTI,
     },
     {
-      voce: 'La finalità è legittima e dichiarata (organizzativa, di sicurezza, di tutela del patrimonio)?',
+      voce: 'Finalita legittima e dichiarata (organizzativa, di sicurezza, di tutela del patrimonio)',
       risposta: 'si',
       dettaglio:
         'Esigenze organizzative, di sicurezza o di tutela del patrimonio aziendale sono finalità legittime. Mai "controllare cosa fa il dipendente": è esattamente la cosa che l’art. 4 vieta.',

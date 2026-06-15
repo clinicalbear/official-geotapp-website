@@ -31,6 +31,12 @@ function rispostaLabel(dict: RisorseGpsDict, risposta: RispostaChecklist): strin
   return dict.rispostaDipende;
 }
 
+function serveGloss(dict: RisorseGpsDict, risposta: RispostaChecklist): string {
+  if (risposta === 'si') return dict.serveObbligatorio;
+  if (risposta === 'no') return dict.serveNonRichiesto;
+  return dict.serveDipende;
+}
+
 function formatDate(iso: string, locale: AppLocale): string {
   // iso atteso YYYY-MM-DD. In caso di formato inatteso si rende il valore grezzo.
   const parsed = new Date(iso);
@@ -87,16 +93,20 @@ export default function SchedaPaeseView({ scheda, dict, locale, trialUrl }: Sche
 
       {/* 1. Cosa serve */}
       <section className="mb-14">
-        <h2 className="text-2xl font-bold text-slate-900 mb-6">{dict.sezioneCosaServe}</h2>
+        <h2 className="text-2xl font-bold text-slate-900 mb-3">{dict.sezioneCosaServe}</h2>
+        <p className="text-sm text-slate-500 mb-6">{dict.cosaServeLegenda}</p>
         <ul className="space-y-5">
           {scheda.checklist.map((item, i) => (
             <li key={i} className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
               <div className="flex flex-wrap items-start justify-between gap-3 mb-2">
                 <p className="font-semibold text-slate-900 flex-1 min-w-0">{item.voce}</p>
-                <span
-                  className={`shrink-0 rounded-full px-3 py-0.5 text-xs font-semibold ${BADGE_STYLE[item.risposta]}`}
-                >
-                  {rispostaLabel(dict, item.risposta)}
+                <span className="shrink-0 flex items-center gap-2">
+                  <span
+                    className={`rounded-full px-3 py-0.5 text-xs font-semibold ${BADGE_STYLE[item.risposta]}`}
+                  >
+                    {rispostaLabel(dict, item.risposta)}
+                  </span>
+                  <span className="text-xs text-slate-500">{serveGloss(dict, item.risposta)}</span>
                 </span>
               </div>
               <p className="text-slate-600 leading-relaxed mb-2">{item.dettaglio}</p>
