@@ -1,6 +1,7 @@
 import type { SchedaPaese, RispostaChecklist } from '@/lib/risorse/gps-lavoratori-ue/types';
 import type { AppLocale } from '@/lib/i18n/config';
 import type { SiteDictionary } from '@/lib/i18n/dictionaries';
+import LeadMagnetInline from '@/components/blog/LeadMagnetInline';
 
 /**
  * Vista presentazionale di una scheda-paese per la risorsa "GPS sui lavoratori in UE".
@@ -140,18 +141,14 @@ export default function SchedaPaeseView({ scheda, dict, locale, trialUrl }: Sche
           ))}
       </section>
 
-      {/* 4. Modello: solo se presente e disponibile */}
+      {/* 4. Modello: solo se presente e disponibile.
+          Il download è instradato dalla cattura lead-magnet esistente
+          (LeadMagnetInline → leadMagnet 'informativa-gps' → /api/newsletter →
+          MailerLite + notifica CRM). Il PDF viene servito solo dopo l'email. */}
       {scheda.modelloPdf && scheda.modelloPdf.disponibile && (
         <section className="mb-14">
           <h2 className="text-2xl font-bold text-slate-900 mb-6">{dict.sezioneModello}</h2>
-          {/* TODO: instradare il download tramite la cattura lead-magnet esistente
-              (leadMagnet 'informativa-gps', MailerLite) nel Task SEO/wiring. */}
-          <a
-            href={scheda.modelloPdf.url}
-            className="inline-flex items-center gap-2 rounded-full bg-[#7db02e] hover:bg-[#6a9a1f] text-white font-semibold px-6 py-3 shadow-md transition-colors"
-          >
-            {dict.scaricaModello}
-          </a>
+          <LeadMagnetInline magnet="informativa-gps" locale={locale} />
         </section>
       )}
 

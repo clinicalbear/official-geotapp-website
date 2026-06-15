@@ -21,6 +21,7 @@ import type { MetadataRoute } from 'next';
 import { SUPPORTED_LOCALES } from '@/lib/i18n/config';
 import type { AppLocale } from '@/lib/i18n/config';
 import { translatePath } from '@/lib/i18n/slug-map';
+import { getAllStati } from '@/lib/risorse/gps-lavoratori-ue';
 
 export const dynamic = 'force-dynamic';
 
@@ -90,6 +91,10 @@ const ROUTES: RouteEntry[] = [
 
   // Entity / AEO page ("Cos'è GeoTapp" — localized slug per locale via SLUG_MAP)
   { path: '/cos-e-geotapp/', priority: 0.7, changeFrequency: 'monthly' },
+
+  // Risorsa "GPS sui lavoratori in UE" — pagina-selettore (landing dello strumento).
+  // Le schede-paese pubblicate vengono aggiunte dinamicamente più in basso da getAllStati().
+  { path: '/risorse/gps-lavoratori-ue/', priority: 0.8, changeFrequency: 'monthly' },
 
   // Legale (bassa priorità)
   { path: '/privacy/', priority: 0.3, changeFrequency: 'yearly' },
@@ -208,6 +213,23 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     })),
   );
 
+  // 1b. Schede-paese della risorsa "GPS sui lavoratori in UE": solo i paesi
+  //     pubblicati (non "in-arrivo"), per ogni locale, con slug localizzato e
+  //     hreflang alternates costruiti sul path canonico.
+  const shippedCountries = getAllStati().filter((s) => s.stato !== 'in-arrivo');
+  const schedaPaeseEntries: MetadataRoute.Sitemap = SUPPORTED_LOCALES.flatMap((locale) =>
+    shippedCountries.map((country) => {
+      const canonicalPath = `/risorse/gps-lavoratori-ue/${country.slugCanonico}/`;
+      return {
+        url: `${BASE_URL}/${locale}${translatePath(canonicalPath, locale as AppLocale)}`,
+        lastModified: now,
+        changeFrequency: 'monthly' as const,
+        priority: 0.7,
+        alternates: buildAlternates(canonicalPath),
+      };
+    }),
+  );
+
   // 2. Blog posts: all locales in parallel, deduplicated by URL.
   //    Hreflang for blog posts is handled by WordPress/Polylang in the page HTML.
   const wpPostsByLocale = await Promise.all(
@@ -245,5 +267,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ];
 
-  return [...localeEntries, ...itOnlyEntries, ...blogEntries];
+  return [...localeEntries, ...schedaPaeseEntries, ...itOnlyEntries, ...blogEntries];
 }

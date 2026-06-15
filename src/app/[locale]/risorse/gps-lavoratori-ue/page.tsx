@@ -5,6 +5,10 @@ import { SUPPORTED_LOCALES } from '@/lib/i18n/config';
 import type { AppLocale } from '@/lib/i18n/config';
 import { localizePath } from '@/lib/i18n/locale-routing';
 import { getAllStati } from '@/lib/risorse/gps-lavoratori-ue';
+import {
+  buildBreadcrumbItems,
+  buildBreadcrumbJsonLd,
+} from '@/lib/risorse/gps-lavoratori-ue/jsonLd';
 import SelettorePaesiClient, {
   type PaeseSelettore,
 } from '@/components/risorse/SelettorePaesiClient';
@@ -59,11 +63,22 @@ export default async function SelettorePaesiPage({
     ),
   }));
 
+  // Structured data: BreadcrumbList (Home -> Strumento).
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd(
+    buildBreadcrumbItems(resolvedLocale, dict.h1Selettore),
+  );
+
   return (
-    <SelettorePaesiClient
-      countries={countries}
-      dict={dict}
-      h1={dict.h1Selettore}
-    />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <SelettorePaesiClient
+        countries={countries}
+        dict={dict}
+        h1={dict.h1Selettore}
+      />
+    </>
   );
 }

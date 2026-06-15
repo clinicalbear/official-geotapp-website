@@ -6,6 +6,11 @@ import { SUPPORTED_LOCALES } from '@/lib/i18n/config';
 import type { AppLocale } from '@/lib/i18n/config';
 import { REVERSE_SLUG_MAP, translateSlug } from '@/lib/i18n/slug-map';
 import { getAllStati, getSchedaBySlug } from '@/lib/risorse/gps-lavoratori-ue';
+import {
+  buildBreadcrumbItems,
+  buildBreadcrumbJsonLd,
+  buildSchedaArticleJsonLd,
+} from '@/lib/risorse/gps-lavoratori-ue/jsonLd';
 import SchedaPaeseView from '@/components/risorse/SchedaPaeseView';
 
 /**
@@ -88,12 +93,37 @@ export default async function SchedaPaesePage({
 
   const trialUrl = `/${resolvedLocale}/trial/`;
 
+  // Structured data: BreadcrumbList (Home -> Strumento -> Paese) + Article.
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd(
+    buildBreadcrumbItems(resolvedLocale, dict.h1Selettore, {
+      name: scheda.nome,
+      canonicalSlug: scheda.slugCanonico,
+    }),
+  );
+  const articleJsonLd = buildSchedaArticleJsonLd({
+    locale: resolvedLocale,
+    headline: dict.metaTitleScheda.replace('{paese}', scheda.nome),
+    description: dict.metaDescScheda.replace('{paese}', scheda.nome),
+    dateModified: scheda.aggiornatoIl,
+    canonicalSlug: scheda.slugCanonico,
+  });
+
   return (
-    <SchedaPaeseView
-      scheda={scheda}
-      dict={dict}
-      locale={resolvedLocale}
-      trialUrl={trialUrl}
-    />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
+      <SchedaPaeseView
+        scheda={scheda}
+        dict={dict}
+        locale={resolvedLocale}
+        trialUrl={trialUrl}
+      />
+    </>
   );
 }
