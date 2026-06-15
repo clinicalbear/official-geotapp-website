@@ -216,7 +216,10 @@ function Contatto({
   locale: AppLocale;
 }) {
   return (
-    <div className="space-y-1">
+    // `data-verificato-il` espone la data di verifica per tooling interno
+    // (es. monitor di freschezza). Nessun effetto visivo: la staleness e una
+    // preoccupazione di report, non un allarme per l'utente.
+    <div className="space-y-1" data-verificato-il={contatto.verificatoIl}>
       <p className="font-semibold text-slate-900">{contatto.ente}</p>
       {contatto.email && (
         <p className="text-sm">
