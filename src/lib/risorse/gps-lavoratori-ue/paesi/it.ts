@@ -24,7 +24,7 @@ const FONTE_PROVV_ARSAC = {
 };
 const FONTE_STATUTO_ART4 = {
   titolo: 'Legge 20 maggio 1970, n. 300 (Statuto dei Lavoratori), art. 4',
-  url: 'https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10112287',
+  url: 'https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1970-05-20;300',
 };
 const FONTE_GDPR = {
   titolo: 'Regolamento UE 2016/679 (GDPR), artt. 5, 13, 25, 35, 88',
