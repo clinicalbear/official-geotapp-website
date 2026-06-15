@@ -131,10 +131,14 @@ export default function Navbar() {
 
 
   // Single tree manages sticky header, desktop dropdown and mobile drawer.
+  // IMPORTANT: the header is `sticky` (not `fixed`) on purpose. Sticky keeps the
+  // bar in the normal flow, so every page content starts BELOW it automatically
+  // and no page needs its own top padding to clear the navbar. Switching back to
+  // `fixed` reintroduces the recurring bug where page titles slip under the bar.
   return (
     <nav
       className={clsx(
-        'fixed top-0 w-full z-50 transition-all duration-300 border-b border-transparent shadow-[0_2px_12px_rgba(0,0,0,0.08)]',
+        'sticky top-0 w-full z-50 transition-all duration-300 border-b border-transparent shadow-[0_2px_12px_rgba(0,0,0,0.08)]',
         scrolled
           ? 'bg-white/95 backdrop-blur-md border-border py-4'
           : 'bg-white/75 backdrop-blur-sm py-6',
