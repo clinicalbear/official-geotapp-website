@@ -217,6 +217,43 @@ export const SLUG_MAP: Record<string, Partial<Record<AppLocale, string>>> = {
     da: 'vvs-vand-varme', sv: 'vvs-och-varme', nb: 'rorleggere-vvs', ru: 'santekhnika-otoplenie',
     'en-us': 'hvac-plumbers', 'en-gb': 'hvac-plumbers', 'en-au': 'hvac-plumbers', 'en-ie': 'hvac-plumbers', 'en-ca': 'hvac-plumbers',
   },
+  // ── GPS lavoratori UE — strumento per paese ─────────────────────────────────
+  'gps-lavoratori-ue': {
+    it: 'gps-lavoratori-ue', en: 'gps-workers-eu', de: 'gps-mitarbeiter-eu', nl: 'gps-werknemers-eu',
+    fr: 'gps-travailleurs-ue', es: 'gps-trabajadores-ue', pt: 'gps-trabalhadores-ue',
+    da: 'gps-medarbejdere-eu', sv: 'gps-anstallda-eu', nb: 'gps-ansatte-eu', ru: 'gps-rabotniki-es',
+    'en-us': 'gps-workers-eu', 'en-gb': 'gps-workers-eu', 'en-au': 'gps-workers-eu', 'en-ie': 'gps-workers-eu', 'en-ca': 'gps-workers-eu',
+  },
+  'italia': {
+    it: 'italia', en: 'italy', de: 'italien', nl: 'italie',
+    fr: 'italie', es: 'italia', pt: 'italia',
+    da: 'italien', sv: 'italien', nb: 'italia', ru: 'italiya',
+    'en-us': 'italy', 'en-gb': 'italy', 'en-au': 'italy', 'en-ie': 'italy', 'en-ca': 'italy',
+  },
+  'germania': {
+    it: 'germania', en: 'germany', de: 'deutschland', nl: 'duitsland',
+    fr: 'allemagne', es: 'alemania', pt: 'alemanha',
+    da: 'tyskland', sv: 'tyskland', nb: 'tyskland', ru: 'germaniya',
+    'en-us': 'germany', 'en-gb': 'germany', 'en-au': 'germany', 'en-ie': 'germany', 'en-ca': 'germany',
+  },
+  'francia': {
+    it: 'francia', en: 'france', de: 'frankreich', nl: 'frankrijk',
+    fr: 'france', es: 'francia', pt: 'franca',
+    da: 'frankrig', sv: 'frankrike', nb: 'frankrike', ru: 'frantsiya',
+    'en-us': 'france', 'en-gb': 'france', 'en-au': 'france', 'en-ie': 'france', 'en-ca': 'france',
+  },
+  'spagna': {
+    it: 'spagna', en: 'spain', de: 'spanien', nl: 'spanje',
+    fr: 'espagne', es: 'espana', pt: 'espanha',
+    da: 'spanien', sv: 'spanien', nb: 'spania', ru: 'ispaniya',
+    'en-us': 'spain', 'en-gb': 'spain', 'en-au': 'spain', 'en-ie': 'spain', 'en-ca': 'spain',
+  },
+  'olanda': {
+    it: 'olanda', en: 'netherlands', de: 'niederlande', nl: 'nederland',
+    fr: 'pays-bas', es: 'paises-bajos', pt: 'paises-baixos',
+    da: 'nederlandene', sv: 'nederlanderna', nb: 'nederland', ru: 'niderlandy',
+    'en-us': 'netherlands', 'en-gb': 'netherlands', 'en-au': 'netherlands', 'en-ie': 'netherlands', 'en-ca': 'netherlands',
+  },
   // ───────���──────────────────────────────��────────────────────────────���────────
   'download': {
     it: 'download',
