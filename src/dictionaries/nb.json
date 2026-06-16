@@ -46,6 +46,14 @@
       "survey": {
         "title": "Undersøkelse: bevis for utført arbeid",
         "desc": "To minutter, anonymt: stoler du på ordet, eller trenger du et bevis? Hjelp oss å forstå et reelt problem."
+      },
+      "sanzioni": {
+        "title": "GPS-botkalkulator",
+        "desc": "Velg et land og finn ut hvor mye du risikerer ved å overvåke ansatte: reell maksimal bot og plikter som eksponerer deg."
+      },
+      "indice": {
+        "title": "Indeks for ansattovervåking i Europa",
+        "desc": "Rangeringen av 39 europeiske land etter hvor strengt rammeverket for ansattovervåking er."
       }
     }
   },
@@ -1070,18 +1078,6 @@
     "formatoHtml": "HTML",
     "copia": "Kopier",
     "copiato": "Kopiert!"
-  },
-  "risorseHub": {
-    "cards": {
-      "sanzioni": {
-        "title": "GPS-botkalkulator",
-        "desc": "Velg et land og finn ut hvor mye du risikerer ved å overvåke ansatte: reell maksimal bot og plikter som eksponerer deg."
-      },
-      "indice": {
-        "title": "Indeks for ansattovervåking i Europa",
-        "desc": "Rangeringen av 39 europeiske land etter hvor strengt rammeverket for ansattovervåking er."
-      }
-    }
   },
   "embedStrumento": {
     "titolo": "Bygg inn dette verktøyet",

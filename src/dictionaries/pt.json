@@ -46,6 +46,14 @@
       "survey": {
         "title": "Inquérito: a prova do trabalho",
         "desc": "Dois minutos, anónimo: confias na palavra ou precisas de uma prova? Ajuda-nos a perceber um problema real."
+      },
+      "sanzioni": {
+        "title": "Calculadora de sanções GPS",
+        "desc": "Escolhe o país e descobre quanto arriscas ao monitorizar trabalhadores: sanção máxima real e obrigações que te expõem."
+      },
+      "indice": {
+        "title": "Índice de vigilância laboral na Europa",
+        "desc": "A classificação dos 39 países europeus pela rigidez do quadro sobre monitorização de trabalhadores."
       }
     }
   },
@@ -1070,18 +1078,6 @@
     "formatoHtml": "HTML",
     "copia": "Copiar",
     "copiato": "Copiado!"
-  },
-  "risorseHub": {
-    "cards": {
-      "sanzioni": {
-        "title": "Calculadora de sanções GPS",
-        "desc": "Escolhe o país e descobre quanto arriscas ao monitorizar trabalhadores: sanção máxima real e obrigações que te expõem."
-      },
-      "indice": {
-        "title": "Índice de vigilância laboral na Europa",
-        "desc": "A classificação dos 39 países europeus pela rigidez do quadro sobre monitorização de trabalhadores."
-      }
-    }
   },
   "embedStrumento": {
     "titolo": "Incorpora esta ferramenta",

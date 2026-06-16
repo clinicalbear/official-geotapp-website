@@ -46,6 +46,14 @@
       "survey": {
         "title": "Undersøgelse: bevis for udført arbejde",
         "desc": "To minutter, anonymt: stoler du på ordet, eller har du brug for et bevis? Hjælp os med at forstå et reelt problem."
+      },
+      "sanzioni": {
+        "title": "GPS-bødeberegner",
+        "desc": "Vælg et land og find ud af, hvor meget du risikerer ved at overvåge medarbejdere: reel maksimal bøde og forpligtelser, der udsætter dig."
+      },
+      "indice": {
+        "title": "Indeks for medarbejderovervågning i Europa",
+        "desc": "Rangeringen af 39 europæiske lande efter hvor strengt deres regelsæt for medarbejderovervågning er."
       }
     }
   },
@@ -1070,18 +1078,6 @@
     "formatoHtml": "HTML",
     "copia": "Kopiér",
     "copiato": "Kopieret!"
-  },
-  "risorseHub": {
-    "cards": {
-      "sanzioni": {
-        "title": "GPS-bødeberegner",
-        "desc": "Vælg et land og find ud af, hvor meget du risikerer ved at overvåge medarbejdere: reel maksimal bøde og forpligtelser, der udsætter dig."
-      },
-      "indice": {
-        "title": "Indeks for medarbejderovervågning i Europa",
-        "desc": "Rangeringen af 39 europæiske lande efter hvor strengt deres regelsæt for medarbejderovervågning er."
-      }
-    }
   },
   "embedStrumento": {
     "titolo": "Indlejr dette værktøj",
