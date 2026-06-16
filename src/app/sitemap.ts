@@ -92,9 +92,13 @@ const ROUTES: RouteEntry[] = [
   // Entity / AEO page ("Cos'è GeoTapp" — localized slug per locale via SLUG_MAP)
   { path: '/cos-e-geotapp/', priority: 0.7, changeFrequency: 'monthly' },
 
+  // Hub Risorse + strumenti (asset linkabili per backlink).
+  { path: '/risorse/', priority: 0.8, changeFrequency: 'weekly' },
   // Risorsa "GPS sui lavoratori in UE" — pagina-selettore (landing dello strumento).
   // Le schede-paese pubblicate vengono aggiunte dinamicamente più in basso da getAllStati().
   { path: '/risorse/gps-lavoratori-ue/', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/risorse/sanzioni-gps/', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/risorse/indice-sorveglianza/', priority: 0.8, changeFrequency: 'monthly' },
 
   // Legale (bassa priorità)
   { path: '/privacy/', priority: 0.3, changeFrequency: 'yearly' },
