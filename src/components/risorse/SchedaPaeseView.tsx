@@ -183,6 +183,8 @@ export default function SchedaPaeseView({ scheda, dict, locale, trialUrl, nomePa
         </div>
       </section>
 
+      {attribuzione}
+
       {/* 6. Fonti */}
       <section className="mb-14">
         <h2 className="text-2xl font-bold text-slate-900 mb-6">{dict.sezioneFonti}</h2>
@@ -211,8 +213,6 @@ export default function SchedaPaeseView({ scheda, dict, locale, trialUrl, nomePa
           {dict.ctaBottone}
         </a>
       </section>
-
-      {attribuzione}
     </main>
   );
 }
