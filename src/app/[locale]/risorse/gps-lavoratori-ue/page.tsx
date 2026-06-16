@@ -83,7 +83,7 @@ export default async function SelettorePaesiPage({
       />
       <div className="container mx-auto max-w-3xl px-4 pb-16">
         <EmbedCodeBox
-          embedUrl={`https://geotapp.com/embed/${resolvedLocale}/gps-lavoratori-ue`}
+          embedUrl={`https://geotapp.com/embed/${resolvedLocale}/gps-lavoratori-ue/`}
           pageUrl={`https://geotapp.com${localizePath('/risorse/gps-lavoratori-ue/', resolvedLocale)}`}
           pageTitle={dict.h1Selettore}
           labels={fullDict.embedStrumento}
