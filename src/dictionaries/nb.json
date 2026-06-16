@@ -1029,5 +1029,58 @@
     "follow_linkedin": "Koble til på LinkedIn",
     "read_more": "Les",
     "no_articles": "Ingen artikler ennå."
+  },
+  "sanzioniGps": {
+    "metaTitle": "GPS-botkalkulator: hvor mye du risikerer ved å overvåke ansatte, land for land",
+    "metaDesc": "Velg et land og se den reelle maksimale boten for GPS-overvåking av ansatte, og hvilke plikter som eksponerer deg. Verifiserte data, 39 europeiske land.",
+    "h1": "Hvor mye risikerer du ved å spore de ansatte?",
+    "intro": "Velg et land, se den høyeste boten som faktisk er gitt, og kryss av for det du allerede har på plass: vi sier hvor eksponert du er. Kildeverifiserte data, 39 land.",
+    "sanzioneMax": "Maksimal bot",
+    "casoCitato": "Reell sak",
+    "fonte": "Se kilden",
+    "adempimentiTitolo": "Hva du må ha på plass (kryss av for det du allerede har)",
+    "obbligatorio": "Påkrevd",
+    "condizionale": "Det kommer an på",
+    "ceLHai": "Har du det?",
+    "espostoUno": "Du mangler {n} påkrevd plikt av {tot}: du er eksponert for opptil",
+    "espostoMulti": "Du mangler {n} påkrevde plikter av {tot}: du er eksponert for opptil",
+    "inRegola": "Ingen påkrevd plikt mangler: du er på rett vei.",
+    "vediScheda": "Åpne den fullstendige landsiden: {paese}"
+  },
+  "indiceSorveglianza": {
+    "metaTitle": "Indeks for ansattovervåking i Europa: rangering av de 39 landene",
+    "metaDesc": "Hvilke europeiske land har de strengeste reglene om ansattovervåking? Rangering etter strenghetsindeks, med maksimal bot og kilde. 39 land.",
+    "h1": "Indeks for ansattovervåking i Europa",
+    "intro": "Europa behandler ikke overvåking av ansatte likt overalt. Vi har rangert 39 land etter hvor strengt rammeverket er: flere plikter, høyere indeks. Klikk på kolonnene for å sortere.",
+    "colPaese": "Land",
+    "colIndice": "Strenghetsindeks",
+    "colObblighi": "Plikter",
+    "colSanzione": "Maksimal bot",
+    "scheda": "Side",
+    "metodologiaTitolo": "Slik beregnes indeksen",
+    "metodologia": "Indeksen (0-100) måler hvor mange plikter om ansattovervåking som er obligatoriske i landet: poengsum = plikter + halvparten av de betingede, delt på totalen. Høyere = strengere rammeverk for den som vil spore. Data utledet fra de kildeverifiserte landsidene; den måler etterlevelsesbyrden, ikke 'frihet'."
+  },
+  "attribuzione": {
+    "datiVerificati": "Data samlet inn og verifisert av GeoTapp.",
+    "liberoCitare": "Du kan fritt sitere dem, så lenge du oppgir kilden med en lenke til denne siden.",
+    "ripubblicazione": "For full republisering av datasettet eller kommersiell bruk",
+    "contattaci": "kontakt oss",
+    "titoloCita": "Siter denne siden",
+    "formatoTesto": "Tekst",
+    "formatoHtml": "HTML",
+    "copia": "Kopier",
+    "copiato": "Kopiert!"
+  },
+  "risorseHub": {
+    "cards": {
+      "sanzioni": {
+        "title": "GPS-botkalkulator",
+        "desc": "Velg et land og finn ut hvor mye du risikerer ved å overvåke ansatte: reell maksimal bot og plikter som eksponerer deg."
+      },
+      "indice": {
+        "title": "Indeks for ansattovervåking i Europa",
+        "desc": "Rangeringen av 39 europeiske land etter hvor strengt rammeverket for ansattovervåking er."
+      }
+    }
   }
 }

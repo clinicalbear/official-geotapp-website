@@ -1029,5 +1029,58 @@
     "follow_linkedin": "Anslut på LinkedIn",
     "read_more": "Läs",
     "no_articles": "Inga artiklar än."
+  },
+  "sanzioniGps": {
+    "metaTitle": "GPS-bötesräknare: hur mycket du riskerar genom att övervaka anställda, land för land",
+    "metaDesc": "Välj ett land och se det verkliga maxbeloppet för GPS-övervakning av anställda och vilka skyldigheter som exponerar dig. Verifierade data, 39 europeiska länder.",
+    "h1": "Hur mycket riskerar du genom att spåra dina anställda?",
+    "intro": "Välj ett land, se den högsta bot som faktiskt utdömts och bocka för det du redan har på plats: vi säger hur exponerad du är. Källverifierade data, 39 länder.",
+    "sanzioneMax": "Högsta bot",
+    "casoCitato": "Verkligt fall",
+    "fonte": "Se källan",
+    "adempimentiTitolo": "Vad du behöver ha på plats (bocka för det du redan har)",
+    "obbligatorio": "Obligatoriskt",
+    "condizionale": "Det beror på",
+    "ceLHai": "Har du det?",
+    "espostoUno": "Du saknar {n} obligatorisk skyldighet av {tot}: du är exponerad upp till",
+    "espostoMulti": "Du saknar {n} obligatoriska skyldigheter av {tot}: du är exponerad upp till",
+    "inRegola": "Ingen obligatorisk skyldighet saknas: du är på rätt väg.",
+    "vediScheda": "Öppna den fullständiga landssidan: {paese}"
+  },
+  "indiceSorveglianza": {
+    "metaTitle": "Index för medarbetarövervakning i Europa: rangordning av de 39 länderna",
+    "metaDesc": "Vilka europeiska länder har de strängaste reglerna om medarbetarövervakning? Rangordning efter stränghetsindex, med högsta bot och källa. 39 länder.",
+    "h1": "Index för medarbetarövervakning i Europa",
+    "intro": "Europa behandlar inte övervakning av anställda likadant överallt. Vi har rangordnat 39 länder efter hur strängt ramverket är: fler skyldigheter, högre index. Klicka på kolumnerna för att sortera.",
+    "colPaese": "Land",
+    "colIndice": "Stränghetsindex",
+    "colObblighi": "Skyldigheter",
+    "colSanzione": "Högsta bot",
+    "scheda": "Sida",
+    "metodologiaTitolo": "Så beräknas indexet",
+    "metodologia": "Indexet (0-100) mäter hur många skyldigheter om medarbetarövervakning som är obligatoriska i landet: poäng = skyldigheter + hälften av de villkorade, delat med totalen. Högre = strängare ramverk för den som vill spåra. Data härledda från de källverifierade landssidorna; det mäter efterlevnadsbördan, inte 'frihet'."
+  },
+  "attribuzione": {
+    "datiVerificati": "Data insamlade och verifierade av GeoTapp.",
+    "liberoCitare": "Du får citera dem fritt, så länge du anger källan med en länk till den här sidan.",
+    "ripubblicazione": "För fullständig återpublicering av datasetet eller kommersiell användning",
+    "contattaci": "kontakta oss",
+    "titoloCita": "Citera den här sidan",
+    "formatoTesto": "Text",
+    "formatoHtml": "HTML",
+    "copia": "Kopiera",
+    "copiato": "Kopierat!"
+  },
+  "risorseHub": {
+    "cards": {
+      "sanzioni": {
+        "title": "GPS-bötesräknare",
+        "desc": "Välj ett land och ta reda på hur mycket du riskerar genom att övervaka anställda: verklig maxbot och skyldigheter som exponerar dig."
+      },
+      "indice": {
+        "title": "Index för medarbetarövervakning i Europa",
+        "desc": "Rangordningen av 39 europeiska länder efter hur strängt deras ramverk för medarbetarövervakning är."
+      }
+    }
   }
 }

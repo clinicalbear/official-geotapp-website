@@ -1029,5 +1029,58 @@
     "follow_linkedin": "Opret forbindelse på LinkedIn",
     "read_more": "Læs",
     "no_articles": "Ingen artikler endnu."
+  },
+  "sanzioniGps": {
+    "metaTitle": "GPS-bødeberegner: hvor meget du risikerer ved at overvåge medarbejdere, land for land",
+    "metaDesc": "Vælg et land og se den reelle maksimale bøde for GPS-overvågning af medarbejdere, og hvilke forpligtelser der udsætter dig. Verificerede data, 39 europæiske lande.",
+    "h1": "Hvor meget risikerer du ved at spore dine medarbejdere?",
+    "intro": "Vælg et land, se den højeste bøde der reelt er givet, og afkryds hvad du allerede har på plads: vi fortæller dig, hvor udsat du er. Kildeverificerede data, 39 lande.",
+    "sanzioneMax": "Maksimal bøde",
+    "casoCitato": "Reel sag",
+    "fonte": "Se kilden",
+    "adempimentiTitolo": "Hvad du skal have på plads (afkryds hvad du allerede har)",
+    "obbligatorio": "Påkrævet",
+    "condizionale": "Det afhænger",
+    "ceLHai": "Har du det?",
+    "espostoUno": "Du mangler {n} påkrævet forpligtelse ud af {tot}: du er udsat for op til",
+    "espostoMulti": "Du mangler {n} påkrævede forpligtelser ud af {tot}: du er udsat for op til",
+    "inRegola": "Ingen påkrævet forpligtelse mangler: du er på rette vej.",
+    "vediScheda": "Åbn den fulde landeside: {paese}"
+  },
+  "indiceSorveglianza": {
+    "metaTitle": "Indeks for medarbejderovervågning i Europa: rangering af de 39 lande",
+    "metaDesc": "Hvilke europæiske lande har de strengeste regler om medarbejderovervågning? Rangering efter strenghedsindeks, med maksimal bøde og kilde. 39 lande.",
+    "h1": "Indeks for medarbejderovervågning i Europa",
+    "intro": "Europa behandler ikke overvågning af medarbejdere ens overalt. Vi har rangeret 39 lande efter hvor strengt regelsættet er: flere pligter, højere indeks. Klik på kolonnerne for at sortere.",
+    "colPaese": "Land",
+    "colIndice": "Strenghedsindeks",
+    "colObblighi": "Pligter",
+    "colSanzione": "Maksimal bøde",
+    "scheda": "Side",
+    "metodologiaTitolo": "Sådan beregnes indekset",
+    "metodologia": "Indekset (0-100) måler, hvor mange pligter om medarbejderovervågning der er obligatoriske i landet: score = pligter + halvdelen af de betingede, divideret med totalen. Højere = strengere ramme for den, der vil spore. Data afledt af de kildeverificerede landesider; det måler efterlevelsesbyrden, ikke 'frihed'."
+  },
+  "attribuzione": {
+    "datiVerificati": "Data indsamlet og verificeret af GeoTapp.",
+    "liberoCitare": "Du må frit citere dem, så længe du angiver kilden med et link til denne side.",
+    "ripubblicazione": "For fuld genudgivelse af datasættet eller kommerciel brug",
+    "contattaci": "kontakt os",
+    "titoloCita": "Citér denne side",
+    "formatoTesto": "Tekst",
+    "formatoHtml": "HTML",
+    "copia": "Kopiér",
+    "copiato": "Kopieret!"
+  },
+  "risorseHub": {
+    "cards": {
+      "sanzioni": {
+        "title": "GPS-bødeberegner",
+        "desc": "Vælg et land og find ud af, hvor meget du risikerer ved at overvåge medarbejdere: reel maksimal bøde og forpligtelser, der udsætter dig."
+      },
+      "indice": {
+        "title": "Indeks for medarbejderovervågning i Europa",
+        "desc": "Rangeringen af 39 europæiske lande efter hvor strengt deres regelsæt for medarbejderovervågning er."
+      }
+    }
   }
 }

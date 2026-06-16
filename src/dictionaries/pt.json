@@ -1029,5 +1029,58 @@
     "follow_linkedin": "Conectar no LinkedIn",
     "read_more": "Ler",
     "no_articles": "Ainda sem artigos."
+  },
+  "sanzioniGps": {
+    "metaTitle": "Calculadora de sanções GPS: quanto arriscas ao monitorizar trabalhadores, país a país",
+    "metaDesc": "Escolhe o país e vê a sanção máxima real pela monitorização GPS de trabalhadores e que obrigações te expõem. Dados verificados, 39 países europeus.",
+    "h1": "Quanto arriscas ao monitorizar os trabalhadores?",
+    "intro": "Escolhe o país, vê a sanção mais alta realmente aplicada e assinala o que já tens em ordem: dizemos-te a quanto estás exposto. Dados verificados na fonte, 39 países.",
+    "sanzioneMax": "Sanção máxima",
+    "casoCitato": "Caso real",
+    "fonte": "Ver a fonte",
+    "adempimentiTitolo": "O que precisas de ter em ordem (assinala o que já tens)",
+    "obbligatorio": "Obrigatório",
+    "condizionale": "Depende",
+    "ceLHai": "Tens isto?",
+    "espostoUno": "Falta-te {n} obrigação obrigatória de {tot}: estás exposto até",
+    "espostoMulti": "Faltam-te {n} obrigações obrigatórias de {tot}: estás exposto até",
+    "inRegola": "Nenhuma obrigação obrigatória em falta: estás no bom caminho.",
+    "vediScheda": "Abrir a ficha completa: {paese}"
+  },
+  "indiceSorveglianza": {
+    "metaTitle": "Índice de vigilância laboral na Europa: a classificação dos 39 países",
+    "metaDesc": "Que países europeus têm as regras mais rígidas sobre monitorização de trabalhadores? Classificação por índice de severidade, com sanção máxima e fonte. 39 países.",
+    "h1": "Índice de vigilância laboral na Europa",
+    "intro": "A Europa não trata a vigilância dos trabalhadores da mesma forma em todo o lado. Classificámos 39 países pela rigidez do quadro: mais obrigações, mais alto o índice. Clica nas colunas para reordenar.",
+    "colPaese": "País",
+    "colIndice": "Índice de severidade",
+    "colObblighi": "Obrigações",
+    "colSanzione": "Sanção máxima",
+    "scheda": "Ficha",
+    "metodologiaTitolo": "Como é calculado o índice",
+    "metodologia": "O índice (0-100) mede quantas obrigações de monitorização de trabalhadores são obrigatórias nesse país: pontuação = obrigações + metade das condicionais, sobre o total. Mais alto = quadro mais rígido para quem quer rastrear. Dados derivados das fichas-país verificadas na fonte; mede a carga de conformidade, não a 'liberdade'."
+  },
+  "attribuzione": {
+    "datiVerificati": "Dados recolhidos e verificados pela GeoTapp.",
+    "liberoCitare": "Podes citá-los livremente, desde que indiques a fonte com um link para esta página.",
+    "ripubblicazione": "Para a republicação integral do conjunto de dados ou usos comerciais,",
+    "contattaci": "contacta-nos",
+    "titoloCita": "Citar esta página",
+    "formatoTesto": "Texto",
+    "formatoHtml": "HTML",
+    "copia": "Copiar",
+    "copiato": "Copiado!"
+  },
+  "risorseHub": {
+    "cards": {
+      "sanzioni": {
+        "title": "Calculadora de sanções GPS",
+        "desc": "Escolhe o país e descobre quanto arriscas ao monitorizar trabalhadores: sanção máxima real e obrigações que te expõem."
+      },
+      "indice": {
+        "title": "Índice de vigilância laboral na Europa",
+        "desc": "A classificação dos 39 países europeus pela rigidez do quadro sobre monitorização de trabalhadores."
+      }
+    }
   }
 }
