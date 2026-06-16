@@ -14,6 +14,7 @@ import {
 } from '@/lib/risorse/gps-lavoratori-ue/jsonLd';
 import SchedaPaeseView from '@/components/risorse/SchedaPaeseView';
 import CambiaStatoSelect from '@/components/risorse/CambiaStatoSelect';
+import RisorsaAttribuzione from '@/components/risorse/RisorsaAttribuzione';
 import type { PaeseSelettore } from '@/components/risorse/SelettorePaesiClient';
 
 /**
@@ -87,7 +88,8 @@ export default async function SchedaPaesePage({
 }) {
   const { locale, paese } = await params;
   const resolvedLocale = safeLocale(locale);
-  const dict = getDictionary(resolvedLocale).risorseGps;
+  const fullDict = getDictionary(resolvedLocale);
+  const dict = fullDict.risorseGps;
 
   const canonical = localizedToCanonical(paese, resolvedLocale);
   const scheda = getSchedaBySlug(canonical);
@@ -143,6 +145,15 @@ export default async function SchedaPaesePage({
         locale={resolvedLocale}
         trialUrl={trialUrl}
         nomePaese={nomePaese}
+        attribuzione={
+          <RisorsaAttribuzione
+            pageUrl={`https://geotapp.com${currentHref}`}
+            pageTitle={dict.metaTitleScheda.replace('{paese}', nomePaese)}
+            contactHref={localizePath('/contact', resolvedLocale)}
+            labels={fullDict.attribuzione}
+            anno={2026}
+          />
+        }
         switcher={
           <CambiaStatoSelect
             countries={countries}

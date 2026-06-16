@@ -1099,5 +1099,16 @@
     "scheda": "Fiche",
     "metodologiaTitolo": "Comment l'indice est calculé",
     "metodologia": "L'indice (0-100) mesure combien d'obligations de surveillance des salariés sont obligatoires dans le pays : score = obligations + moitié des conditionnelles, sur le total. Plus élevé = cadre plus strict pour qui veut surveiller. Données issues des fiches-pays vérifiées à la source ; il mesure la charge de conformité, pas la 'liberté'."
+  },
+  "attribuzione": {
+    "datiVerificati": "Données compilées et vérifiées par GeoTapp.",
+    "liberoCitare": "Vous pouvez les citer librement, à condition d'indiquer la source avec un lien vers cette page.",
+    "ripubblicazione": "Pour la republication intégrale du jeu de données ou un usage commercial,",
+    "contattaci": "contactez-nous",
+    "titoloCita": "Citer cette page",
+    "formatoTesto": "Texte",
+    "formatoHtml": "HTML",
+    "copia": "Copier",
+    "copiato": "Copié !"
   }
 }

@@ -1099,5 +1099,16 @@
     "scheda": "Pagina",
     "metodologiaTitolo": "Hoe de index wordt berekend",
     "metodologia": "De index (0-100) meet hoeveel verplichtingen voor werknemersmonitoring in dat land verplicht zijn: score = verplichtingen + helft van de voorwaardelijke, gedeeld door het totaal. Hoger = strenger kader voor wie wil volgen. Data afgeleid van de brongeverifieerde landpagina's; het meet de nalevingslast, niet 'vrijheid'."
+  },
+  "attribuzione": {
+    "datiVerificati": "Gegevens samengesteld en geverifieerd door GeoTapp.",
+    "liberoCitare": "Je mag ze vrij citeren, mits je de bron vermeldt met een link naar deze pagina.",
+    "ripubblicazione": "Voor volledige herpublicatie van de dataset of commercieel gebruik,",
+    "contattaci": "neem contact op",
+    "titoloCita": "Citeer deze pagina",
+    "formatoTesto": "Tekst",
+    "formatoHtml": "HTML",
+    "copia": "Kopiëren",
+    "copiato": "Gekopieerd!"
   }
 }

@@ -8,6 +8,7 @@ import { getPaesiSeverita, localizePaesiSeverita } from '@/lib/risorse/gps-lavor
 import IndiceSorveglianzaClient, {
   type IndiceRow,
 } from '@/components/risorse/IndiceSorveglianzaClient';
+import RisorsaAttribuzione from '@/components/risorse/RisorsaAttribuzione';
 
 /**
  * Tool "Indice della sorveglianza sul lavoro in Europa": classifica dei 39 Paesi
@@ -44,7 +45,8 @@ export default async function IndiceSorveglianzaPage({
 }) {
   const { locale } = await params;
   const resolvedLocale = safeLocale(locale);
-  const dict = getDictionary(resolvedLocale).indiceSorveglianza;
+  const d = getDictionary(resolvedLocale);
+  const dict = d.indiceSorveglianza;
 
   const sev = getPaesiSeverita();
   const loc = localizePaesiSeverita(sev, resolvedLocale);
@@ -80,6 +82,14 @@ export default async function IndiceSorveglianzaPage({
         <p className="text-sm font-semibold text-slate-700 mb-1">{dict.metodologiaTitolo}</p>
         <p className="text-sm text-slate-500 leading-relaxed">{dict.metodologia}</p>
       </div>
+
+      <RisorsaAttribuzione
+        pageUrl={`https://geotapp.com${localizePath('/risorse/indice-sorveglianza/', resolvedLocale)}`}
+        pageTitle={d.risorseHub.cards.indice.title}
+        contactHref={localizePath('/contact', resolvedLocale)}
+        labels={d.attribuzione}
+        anno={2026}
+      />
     </main>
   );
 }
