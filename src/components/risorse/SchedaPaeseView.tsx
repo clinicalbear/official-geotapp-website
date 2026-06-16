@@ -22,6 +22,8 @@ interface SchedaPaeseViewProps {
   nomePaese?: string;
   /** Selettore-paese compatto (client) per saltare a un'altra scheda. */
   switcher?: React.ReactNode;
+  /** Footer attribuzione + box "cita questa pagina". */
+  attribuzione?: React.ReactNode;
 }
 
 const BADGE_STYLE: Record<RispostaChecklist, string> = {
@@ -66,7 +68,7 @@ function ExternalLink({ href, children }: { href: string; children: React.ReactN
   );
 }
 
-export default function SchedaPaeseView({ scheda, dict, locale, trialUrl, nomePaese, switcher }: SchedaPaeseViewProps) {
+export default function SchedaPaeseView({ scheda, dict, locale, trialUrl, nomePaese, switcher, attribuzione }: SchedaPaeseViewProps) {
   const nomeLocale = nomePaese ?? scheda.nome;
   // Percorso in-arrivo: niente dossier, solo l'avviso "in preparazione".
   if (scheda.stato === 'in-arrivo') {
@@ -209,6 +211,8 @@ export default function SchedaPaeseView({ scheda, dict, locale, trialUrl, nomePa
           {dict.ctaBottone}
         </a>
       </section>
+
+      {attribuzione}
     </main>
   );
 }

@@ -1099,5 +1099,16 @@
     "scheda": "Ficha",
     "metodologiaTitolo": "Cómo se calcula el índice",
     "metodologia": "El índice (0-100) mide cuántas obligaciones de monitorización de trabajadores son obligatorias en ese país: puntuación = obligaciones + mitad de las condicionales, sobre el total. Más alto = marco más estricto para quien quiere rastrear. Datos derivados de las fichas-país verificadas en la fuente; mide la carga de cumplimiento, no la 'libertad'."
+  },
+  "attribuzione": {
+    "datiVerificati": "Datos recopilados y verificados por GeoTapp.",
+    "liberoCitare": "Puedes citarlos libremente, siempre que indiques la fuente con un enlace a esta página.",
+    "ripubblicazione": "Para la republicación íntegra del conjunto de datos o usos comerciales,",
+    "contattaci": "contáctanos",
+    "titoloCita": "Cita esta página",
+    "formatoTesto": "Texto",
+    "formatoHtml": "HTML",
+    "copia": "Copiar",
+    "copiato": "¡Copiado!"
   }
 }

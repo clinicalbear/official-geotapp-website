@@ -1099,5 +1099,16 @@
     "scheda": "Page",
     "metodologiaTitolo": "How the index is calculated",
     "metodologia": "The index (0-100) measures how many worker-monitoring obligations are mandatory in that country: score = required obligations + half of the conditional ones, over the total. Higher = stricter framework for anyone wanting to track. Data derived from the source-verified country pages; it ranks compliance burden, not 'freedom'."
+  },
+  "attribuzione": {
+    "datiVerificati": "Data compiled and verified by GeoTapp.",
+    "liberoCitare": "You're free to cite it, as long as you credit the source with a link to this page.",
+    "ripubblicazione": "For full republication of the dataset or commercial use,",
+    "contattaci": "get in touch",
+    "titoloCita": "Cite this page",
+    "formatoTesto": "Text",
+    "formatoHtml": "HTML",
+    "copia": "Copy",
+    "copiato": "Copied!"
   }
 }

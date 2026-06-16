@@ -1099,5 +1099,16 @@
     "scheda": "Seite",
     "metodologiaTitolo": "Wie der Index berechnet wird",
     "metodologia": "Der Index (0-100) misst, wie viele Pflichten zur Mitarbeiterüberwachung in dem Land verbindlich sind: Punktzahl = Pflichten + Hälfte der bedingten, geteilt durch das Gesamt. Höher = strengerer Rahmen für alle, die tracken wollen. Daten aus den quellengeprüften Länderseiten; gemessen wird der Compliance-Aufwand, nicht 'Freiheit'."
+  },
+  "attribuzione": {
+    "datiVerificati": "Daten von GeoTapp zusammengestellt und geprüft.",
+    "liberoCitare": "Sie dürfen sie frei zitieren, sofern Sie die Quelle mit einem Link auf diese Seite angeben.",
+    "ripubblicazione": "Für die vollständige Wiederveröffentlichung des Datensatzes oder kommerzielle Nutzung",
+    "contattaci": "kontaktieren Sie uns",
+    "titoloCita": "Diese Seite zitieren",
+    "formatoTesto": "Text",
+    "formatoHtml": "HTML",
+    "copia": "Kopieren",
+    "copiato": "Kopiert!"
   }
 }

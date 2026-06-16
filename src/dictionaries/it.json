@@ -1099,5 +1099,16 @@
     "scheda": "Scheda",
     "metodologiaTitolo": "Come è calcolato l'indice",
     "metodologia": "L'indice (0-100) misura quanti adempimenti sul monitoraggio dei lavoratori sono obbligatori in quel Paese: punteggio = adempimenti obbligatori + metà di quelli condizionali, sul totale. Più alto = quadro più stringente per chi vuole tracciare. Dati derivati dalle schede-paese verificate alla fonte; misura l'onere di compliance, non la 'libertà'."
+  },
+  "attribuzione": {
+    "datiVerificati": "Dati raccolti e verificati da GeoTapp.",
+    "liberoCitare": "Puoi citarli liberamente, a patto di indicare la fonte con un link a questa pagina.",
+    "ripubblicazione": "Per la ripubblicazione integrale del dataset o per usi commerciali,",
+    "contattaci": "contattaci",
+    "titoloCita": "Cita questa pagina",
+    "formatoTesto": "Testo",
+    "formatoHtml": "HTML",
+    "copia": "Copia",
+    "copiato": "Copiato!"
   }
 }
