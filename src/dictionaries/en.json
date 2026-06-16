@@ -46,6 +46,14 @@
       "survey": {
         "title": "Survey: proof of work",
         "desc": "Two minutes, anonymous: do you trust someone's word, or do you need proof? Help us understand a real problem."
+      },
+      "sanzioni": {
+        "title": "GPS penalty calculator",
+        "desc": "Pick a country and find out how much you risk monitoring workers: real maximum fine and the obligations that expose you."
+      },
+      "indice": {
+        "title": "Worker surveillance index in Europe",
+        "desc": "The ranking of 39 European countries by how strict their worker-monitoring framework is."
       }
     }
   },
@@ -1061,5 +1069,35 @@
     "ctaTitolo": "Want a system that is already compliant?",
     "ctaTesto": "GeoTapp records the location only at clock-in, not continuously, and generates the notice for workers to sign. Try it for free.",
     "ctaBottone": "Try GeoTapp for free"
+  },
+  "sanzioniGps": {
+    "metaTitle": "GPS penalty calculator: how much you risk monitoring workers, country by country",
+    "metaDesc": "Pick a country and see the real maximum fine for GPS worker monitoring and which obligations expose you. Verified data, 39 European countries.",
+    "h1": "How much do you risk tracking your workers?",
+    "intro": "Pick a country, see the highest fine actually issued and tick what you already have in place: we tell you how exposed you are. Source-verified data, 39 countries.",
+    "sanzioneMax": "Maximum fine",
+    "casoCitato": "Real case",
+    "fonte": "See the source",
+    "adempimentiTitolo": "What you need in place (tick what you already have)",
+    "obbligatorio": "Required",
+    "condizionale": "It depends",
+    "ceLHai": "Got it?",
+    "espostoUno": "You're missing {n} required obligation out of {tot}: you're exposed up to",
+    "espostoMulti": "You're missing {n} required obligations out of {tot}: you're exposed up to",
+    "inRegola": "No required obligation missing: you're on the right track.",
+    "vediScheda": "Open the full country page: {paese}"
+  },
+  "indiceSorveglianza": {
+    "metaTitle": "Worker surveillance index in Europe: the 39-country ranking",
+    "metaDesc": "Which European countries have the strictest rules on worker monitoring? Ranking by severity index, with maximum fine and source. 39 countries.",
+    "h1": "Worker surveillance index in Europe",
+    "intro": "Europe doesn't treat worker surveillance the same way everywhere. We ranked 39 countries by how strict the framework is: more required obligations, higher the index. Click the columns to re-sort.",
+    "colPaese": "Country",
+    "colIndice": "Severity index",
+    "colObblighi": "Required obligations",
+    "colSanzione": "Maximum fine",
+    "scheda": "Page",
+    "metodologiaTitolo": "How the index is calculated",
+    "metodologia": "The index (0-100) measures how many worker-monitoring obligations are mandatory in that country: score = required obligations + half of the conditional ones, over the total. Higher = stricter framework for anyone wanting to track. Data derived from the source-verified country pages; it ranks compliance burden, not 'freedom'."
   }
 }

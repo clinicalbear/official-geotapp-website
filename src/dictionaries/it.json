@@ -46,6 +46,14 @@
       "survey": {
         "title": "Sondaggio: la prova del lavoro",
         "desc": "Due minuti, anonimo: ti fidi della parola o ti serve una prova? Aiutaci a capire un problema vero."
+      },
+      "sanzioni": {
+        "title": "Calcolatore sanzioni GPS",
+        "desc": "Scegli il Paese e scopri quanto rischi a monitorare i lavoratori: sanzione massima reale e adempimenti che ti espongono."
+      },
+      "indice": {
+        "title": "Indice della sorveglianza in Europa",
+        "desc": "La classifica dei 39 Paesi europei per quanto è stringente il quadro sul monitoraggio dei lavoratori."
       }
     }
   },
@@ -1061,5 +1069,35 @@
     "ctaTitolo": "Vuoi un sistema gia a norma?",
     "ctaTesto": "GeoTapp registra la posizione solo alla timbratura, non in continuo, e genera l'informativa da far firmare. Provalo gratis.",
     "ctaBottone": "Prova GeoTapp gratis"
+  },
+  "sanzioniGps": {
+    "metaTitle": "Calcolatore sanzioni GPS: quanto rischi a tracciare i lavoratori, Paese per Paese",
+    "metaDesc": "Scegli il Paese e scopri la sanzione massima reale per il monitoraggio GPS dei lavoratori e quali adempimenti ti espongono. Dati verificati, 39 Paesi europei.",
+    "h1": "Quanto rischi a tracciare i lavoratori?",
+    "intro": "Scegli il Paese, guarda la sanzione massima realmente comminata e spunta cosa hai già in regola: ti diciamo a quanto sei esposto. Dati verificati alla fonte, 39 Paesi.",
+    "sanzioneMax": "Sanzione massima",
+    "casoCitato": "Caso reale",
+    "fonte": "Vedi la fonte",
+    "adempimentiTitolo": "Cosa devi avere in regola (spunta ciò che hai già)",
+    "obbligatorio": "Obbligatorio",
+    "condizionale": "Dipende",
+    "ceLHai": "Ce l'hai?",
+    "espostoUno": "Ti manca {n} adempimento obbligatorio su {tot}: sei esposto fino a",
+    "espostoMulti": "Ti mancano {n} adempimenti obbligatori su {tot}: sei esposto fino a",
+    "inRegola": "Nessun adempimento obbligatorio mancante: sei sulla buona strada.",
+    "vediScheda": "Apri la scheda completa: {paese}"
+  },
+  "indiceSorveglianza": {
+    "metaTitle": "Indice della sorveglianza sul lavoro in Europa: la classifica dei 39 Paesi",
+    "metaDesc": "Quali Paesi europei hanno le regole più stringenti sul monitoraggio dei lavoratori? La classifica per indice di severità, con sanzione massima e fonte. 39 Paesi.",
+    "h1": "Indice della sorveglianza sul lavoro in Europa",
+    "intro": "Non tutta l'Europa tratta la sorveglianza dei lavoratori allo stesso modo. Abbiamo classificato 39 Paesi per quanto è stringente il quadro: più adempimenti obbligatori, più alto l'indice. Clicca le colonne per riordinare.",
+    "colPaese": "Paese",
+    "colIndice": "Indice di severità",
+    "colObblighi": "Adempimenti obbligatori",
+    "colSanzione": "Sanzione massima",
+    "scheda": "Scheda",
+    "metodologiaTitolo": "Come è calcolato l'indice",
+    "metodologia": "L'indice (0-100) misura quanti adempimenti sul monitoraggio dei lavoratori sono obbligatori in quel Paese: punteggio = adempimenti obbligatori + metà di quelli condizionali, sul totale. Più alto = quadro più stringente per chi vuole tracciare. Dati derivati dalle schede-paese verificate alla fonte; misura l'onere di compliance, non la 'libertà'."
   }
 }

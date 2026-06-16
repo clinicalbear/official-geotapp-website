@@ -175,6 +175,18 @@ export const SLUG_MAP: Record<string, Partial<Record<AppLocale, string>>> = {
     da: 'ressourcer', sv: 'resurser', nb: 'ressurser', ru: 'resursy',
     'en-us': 'resources', 'en-gb': 'resources', 'en-au': 'resources', 'en-ie': 'resources', 'en-ca': 'resources',
   },
+  'sanzioni-gps': {
+    it: 'sanzioni-gps', en: 'gps-penalties', de: 'gps-bussgelder', nl: 'gps-boetes',
+    fr: 'amendes-gps', es: 'sanciones-gps', pt: 'sancoes-gps',
+    da: 'gps-boder', sv: 'gps-boter', nb: 'gps-boter', ru: 'gps-shtrafy',
+    'en-us': 'gps-penalties', 'en-gb': 'gps-penalties', 'en-au': 'gps-penalties', 'en-ie': 'gps-penalties', 'en-ca': 'gps-penalties',
+  },
+  'indice-sorveglianza': {
+    it: 'indice-sorveglianza', en: 'surveillance-index', de: 'ueberwachungsindex', nl: 'surveillance-index',
+    fr: 'indice-surveillance', es: 'indice-vigilancia', pt: 'indice-vigilancia',
+    da: 'overvaagningsindeks', sv: 'overvakningsindex', nb: 'overvakingsindeks', ru: 'indeks-nablyudeniya',
+    'en-us': 'surveillance-index', 'en-gb': 'surveillance-index', 'en-au': 'surveillance-index', 'en-ie': 'surveillance-index', 'en-ca': 'surveillance-index',
+  },
   'edilizia': {
     it: 'edilizia', en: 'construction', de: 'bauwesen', nl: 'bouw',
     fr: 'construction', es: 'construccion', pt: 'construcao',

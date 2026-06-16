@@ -46,6 +46,14 @@
       "survey": {
         "title": "Enquête : la preuve du travail",
         "desc": "Deux minutes, anonyme : faites-vous confiance à la parole ou avez-vous besoin d'une preuve ? Aidez-nous à comprendre un vrai problème."
+      },
+      "sanzioni": {
+        "title": "Calculateur d'amendes GPS",
+        "desc": "Choisissez le pays et découvrez combien vous risquez à surveiller vos salariés : amende maximale réelle et obligations qui vous exposent."
+      },
+      "indice": {
+        "title": "Indice de surveillance des travailleurs en Europe",
+        "desc": "Le classement de 39 pays européens selon la rigueur de leur cadre de surveillance des salariés."
       }
     }
   },
@@ -1061,5 +1069,35 @@
     "ctaTitolo": "Vous voulez un système déjà conforme ?",
     "ctaTesto": "GeoTapp enregistre la position uniquement au pointage, pas en continu, et génère la notice d'information à faire signer. Essayez-le gratuitement.",
     "ctaBottone": "Essayer GeoTapp gratuitement"
+  },
+  "sanzioniGps": {
+    "metaTitle": "Calculateur d'amendes GPS : combien vous risquez à surveiller vos salariés, pays par pays",
+    "metaDesc": "Choisissez le pays et voyez l'amende maximale réelle pour la surveillance GPS des salariés et quelles obligations vous exposent. Données vérifiées, 39 pays européens.",
+    "h1": "Combien risquez-vous à surveiller vos salariés ?",
+    "intro": "Choisissez le pays, voyez l'amende la plus élevée réellement prononcée et cochez ce que vous avez déjà : on vous dit à combien vous êtes exposé. Données vérifiées à la source, 39 pays.",
+    "sanzioneMax": "Amende maximale",
+    "casoCitato": "Cas réel",
+    "fonte": "Voir la source",
+    "adempimentiTitolo": "Ce que vous devez avoir (cochez ce que vous avez déjà)",
+    "obbligatorio": "Obligatoire",
+    "condizionale": "Ça dépend",
+    "ceLHai": "Vous l'avez ?",
+    "espostoUno": "Il vous manque {n} obligation sur {tot} : vous êtes exposé jusqu'à",
+    "espostoMulti": "Il vous manque {n} obligations sur {tot} : vous êtes exposé jusqu'à",
+    "inRegola": "Aucune obligation manquante : vous êtes sur la bonne voie.",
+    "vediScheda": "Ouvrir la fiche complète du pays : {paese}"
+  },
+  "indiceSorveglianza": {
+    "metaTitle": "Indice de surveillance des travailleurs en Europe : le classement des 39 pays",
+    "metaDesc": "Quels pays européens ont les règles les plus strictes sur la surveillance des salariés ? Classement par indice de sévérité, avec amende maximale et source. 39 pays.",
+    "h1": "Indice de surveillance des travailleurs en Europe",
+    "intro": "L'Europe ne traite pas la surveillance des salariés de la même façon partout. Nous avons classé 39 pays selon la rigueur du cadre : plus d'obligations, indice plus élevé. Cliquez les colonnes pour trier.",
+    "colPaese": "Pays",
+    "colIndice": "Indice de sévérité",
+    "colObblighi": "Obligations",
+    "colSanzione": "Amende maximale",
+    "scheda": "Fiche",
+    "metodologiaTitolo": "Comment l'indice est calculé",
+    "metodologia": "L'indice (0-100) mesure combien d'obligations de surveillance des salariés sont obligatoires dans le pays : score = obligations + moitié des conditionnelles, sur le total. Plus élevé = cadre plus strict pour qui veut surveiller. Données issues des fiches-pays vérifiées à la source ; il mesure la charge de conformité, pas la 'liberté'."
   }
 }

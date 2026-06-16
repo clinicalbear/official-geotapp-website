@@ -46,6 +46,14 @@
       "survey": {
         "title": "Enquête: het werkbewijs",
         "desc": "Twee minuten, anoniem: vertrouw je op iemands woord of heb je bewijs nodig? Help ons een echt probleem te begrijpen."
+      },
+      "sanzioni": {
+        "title": "GPS-boetecalculator",
+        "desc": "Kies een land en ontdek hoeveel je riskeert bij het monitoren van werknemers: reële maximumboete en verplichtingen die je blootstellen."
+      },
+      "indice": {
+        "title": "Index werknemerstoezicht in Europa",
+        "desc": "De ranglijst van 39 Europese landen naar hoe streng hun kader voor werknemersmonitoring is."
       }
     }
   },
@@ -1061,5 +1069,35 @@
     "ctaTitolo": "Wil je een systeem dat al voldoet aan de regels?",
     "ctaTesto": "GeoTapp registreert de locatie alleen bij het inklokken, niet continu, en genereert de te ondertekenen verklaring. Probeer het gratis.",
     "ctaBottone": "Probeer GeoTapp gratis"
+  },
+  "sanzioniGps": {
+    "metaTitle": "GPS-boetecalculator: hoeveel je riskeert bij het monitoren van werknemers, land voor land",
+    "metaDesc": "Kies een land en zie de reële maximumboete voor GPS-monitoring van werknemers en welke verplichtingen je blootstellen. Geverifieerde data, 39 Europese landen.",
+    "h1": "Hoeveel riskeer je met het volgen van je werknemers?",
+    "intro": "Kies een land, zie de hoogste werkelijk opgelegde boete en vink aan wat je al hebt: we vertellen hoe blootgesteld je bent. Brongeverifieerde data, 39 landen.",
+    "sanzioneMax": "Maximumboete",
+    "casoCitato": "Reële zaak",
+    "fonte": "Bekijk de bron",
+    "adempimentiTitolo": "Wat je moet hebben (vink aan wat je al hebt)",
+    "obbligatorio": "Verplicht",
+    "condizionale": "Hangt ervan af",
+    "ceLHai": "Heb je dit?",
+    "espostoUno": "Je mist {n} verplichting van de {tot}: je bent blootgesteld tot",
+    "espostoMulti": "Je mist {n} verplichtingen van de {tot}: je bent blootgesteld tot",
+    "inRegola": "Geen verplichting ontbreekt: je zit goed.",
+    "vediScheda": "Open de volledige landpagina: {paese}"
+  },
+  "indiceSorveglianza": {
+    "metaTitle": "Index werknemerstoezicht in Europa: de ranglijst van 39 landen",
+    "metaDesc": "Welke Europese landen hebben de strengste regels voor het monitoren van werknemers? Ranglijst op strengheidsindex, met maximumboete en bron. 39 landen.",
+    "h1": "Index werknemerstoezicht in Europa",
+    "intro": "Europa behandelt toezicht op werknemers niet overal hetzelfde. We rangschikten 39 landen op hoe streng het kader is: meer verplichtingen, hogere index. Klik op de kolommen om te sorteren.",
+    "colPaese": "Land",
+    "colIndice": "Strengheidsindex",
+    "colObblighi": "Verplichtingen",
+    "colSanzione": "Maximumboete",
+    "scheda": "Pagina",
+    "metodologiaTitolo": "Hoe de index wordt berekend",
+    "metodologia": "De index (0-100) meet hoeveel verplichtingen voor werknemersmonitoring in dat land verplicht zijn: score = verplichtingen + helft van de voorwaardelijke, gedeeld door het totaal. Hoger = strenger kader voor wie wil volgen. Data afgeleid van de brongeverifieerde landpagina's; het meet de nalevingslast, niet 'vrijheid'."
   }
 }

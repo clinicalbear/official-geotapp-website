@@ -46,6 +46,14 @@
       "survey": {
         "title": "Encuesta: la prueba del trabajo",
         "desc": "Dos minutos, anónima: ¿te fías de la palabra o necesitas una prueba? Ayúdanos a entender un problema real."
+      },
+      "sanzioni": {
+        "title": "Calculadora de sanciones GPS",
+        "desc": "Elige el país y descubre cuánto te arriesgas al monitorizar trabajadores: sanción máxima real y obligaciones que te exponen."
+      },
+      "indice": {
+        "title": "Índice de vigilancia laboral en Europa",
+        "desc": "La clasificación de 39 países europeos según lo estricto de su marco de monitorización de trabajadores."
       }
     }
   },
@@ -1061,5 +1069,35 @@
     "ctaTitolo": "¿Quieres un sistema que ya cumpla la normativa?",
     "ctaTesto": "GeoTapp registra la ubicación solo al fichar, no de forma continua, y genera la información que hay que firmar. Pruébalo gratis.",
     "ctaBottone": "Prueba GeoTapp gratis"
+  },
+  "sanzioniGps": {
+    "metaTitle": "Calculadora de sanciones GPS: cuánto te arriesgas al monitorizar trabajadores, país por país",
+    "metaDesc": "Elige el país y ve la sanción máxima real por monitorización GPS de trabajadores y qué obligaciones te exponen. Datos verificados, 39 países europeos.",
+    "h1": "¿Cuánto te arriesgas al monitorizar a tus trabajadores?",
+    "intro": "Elige el país, ve la sanción más alta realmente impuesta y marca lo que ya tienes: te decimos a cuánto estás expuesto. Datos verificados en la fuente, 39 países.",
+    "sanzioneMax": "Sanción máxima",
+    "casoCitato": "Caso real",
+    "fonte": "Ver la fuente",
+    "adempimentiTitolo": "Qué necesitas tener (marca lo que ya tienes)",
+    "obbligatorio": "Obligatorio",
+    "condizionale": "Depende",
+    "ceLHai": "¿Lo tienes?",
+    "espostoUno": "Te falta {n} obligación de {tot}: estás expuesto hasta",
+    "espostoMulti": "Te faltan {n} obligaciones de {tot}: estás expuesto hasta",
+    "inRegola": "No falta ninguna obligación: vas por buen camino.",
+    "vediScheda": "Abrir la ficha completa del país: {paese}"
+  },
+  "indiceSorveglianza": {
+    "metaTitle": "Índice de vigilancia laboral en Europa: la clasificación de los 39 países",
+    "metaDesc": "¿Qué países europeos tienen las reglas más estrictas sobre monitorización de trabajadores? Clasificación por índice de severidad, con sanción máxima y fuente. 39 países.",
+    "h1": "Índice de vigilancia laboral en Europa",
+    "intro": "Europa no trata la vigilancia de los trabajadores igual en todas partes. Hemos clasificado 39 países según lo estricto del marco: más obligaciones, más alto el índice. Haz clic en las columnas para reordenar.",
+    "colPaese": "País",
+    "colIndice": "Índice de severidad",
+    "colObblighi": "Obligaciones",
+    "colSanzione": "Sanción máxima",
+    "scheda": "Ficha",
+    "metodologiaTitolo": "Cómo se calcula el índice",
+    "metodologia": "El índice (0-100) mide cuántas obligaciones de monitorización de trabajadores son obligatorias en ese país: puntuación = obligaciones + mitad de las condicionales, sobre el total. Más alto = marco más estricto para quien quiere rastrear. Datos derivados de las fichas-país verificadas en la fuente; mide la carga de cumplimiento, no la 'libertad'."
   }
 }
