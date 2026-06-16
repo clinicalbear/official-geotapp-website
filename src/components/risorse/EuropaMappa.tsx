@@ -46,8 +46,7 @@ export default function EuropaMappa({
       viewBox={EUROPA_VIEWBOX}
       role="img"
       aria-label={ariaLabel}
-      className="w-full h-auto select-none"
-      style={{ maxWidth: '640px', margin: '0 auto', display: 'block' }}
+      className="w-full h-auto select-none block mx-auto"
     >
       {codici.map((iso) => {
         const stato = statoPerIso[iso];

@@ -83,10 +83,10 @@ export default function SelettorePaesiClient({
   );
 
   return (
-    <main className="container mx-auto max-w-4xl px-4 py-12 md:py-16">
+    <main className="container mx-auto max-w-6xl px-4 py-12 md:py-16">
       <header className="mb-10 text-center">
-        <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">{h1}</h1>
-        <p className="text-slate-600 text-lg leading-relaxed max-w-2xl mx-auto">
+        <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 max-w-3xl mx-auto">{h1}</h1>
+        <p className="text-slate-600 text-lg leading-relaxed max-w-3xl mx-auto">
           {dict.introSelettore}
         </p>
       </header>
@@ -120,8 +120,10 @@ export default function SelettorePaesiClient({
         </select>
       </div>
 
-      {/* Mappa SVG: potenziamento visivo, cliccabile sui paesi pubblicati. */}
-      <div className="mb-4">
+      {/* Mappa SVG: potenziamento visivo, cliccabile sui paesi pubblicati.
+          Su desktop occupa la fascia larga (max-w-5xl); su mobile w-full la
+          rimpicciolisce per restare dentro lo schermo. */}
+      <div className="mb-4 max-w-5xl mx-auto">
         <EuropaMappa
           statoPerIso={statoPerIso}
           nomePerIso={nomePerIso}
