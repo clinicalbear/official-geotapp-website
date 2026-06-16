@@ -81,6 +81,21 @@ export interface PaeseSeveritaLoc {
   sanzioneUrlFonte: string;
 }
 
+/** Paese -> autorità di controllo competente (per il generatore informativa). */
+export function getPaesiAutorita(): {
+  codiceISO: string;
+  nome: string;
+  nomi?: Partial<Record<AppLocale, string>>;
+  autorita: string;
+}[] {
+  return PAESI.filter((p) => p.stato !== 'in-arrivo').map((p) => ({
+    codiceISO: p.codiceISO,
+    nome: p.nome,
+    nomi: p.nomi,
+    autorita: p.autoritaCompetente.ente,
+  }));
+}
+
 export function localizePaesiSeverita(
   list: PaeseSeverita[],
   locale: AppLocale,
