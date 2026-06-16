@@ -284,6 +284,17 @@ export const italia: SchedaPaese = {
         nl: 'Houd één enkel doel aan: gegevens die voor één doel zijn verzameld, worden niet hergebruikt om te sanctioneren. Nooit.',
       },
     },
+    {
+      passo: 8,
+      descrizione: {
+        it: 'In caso di cambio sistema: se cambi sistema o software di monitoraggio, aggiorna e ri-consegna l’informativa, e verifica se va rinnovato l’accordo sindacale (art. 4) o l’autorizzazione dell’Ispettorato. Spesso cambiano fornitore (responsabile del trattamento), dati raccolti e modalità: quella firmata prima non basta.',
+        en: 'If you switch systems: when you change your monitoring system or software, update and re-issue the privacy notice, and check whether the trade-union agreement (Art. 4) or the Labour Inspectorate authorisation needs renewing. The provider (data processor), the data collected and the methods often change: the one signed earlier is not enough.',
+        de: 'Bei Systemwechsel: Wenn Sie Ihr Überwachungssystem oder Ihre Software wechseln, aktualisieren Sie die Datenschutzinformation und händigen Sie sie erneut aus und prüfen Sie, ob die Gewerkschaftsvereinbarung (Art. 4) oder die Genehmigung der Arbeitsaufsichtsbehörde erneuert werden muss. Anbieter (Auftragsverarbeiter), erhobene Daten und Modalitäten ändern sich oft: die zuvor ausgehändigte genügt nicht.',
+        fr: 'En cas de changement de système : si vous changez de système ou de logiciel de surveillance, mettez à jour et remettez l’information, et vérifiez si l’accord syndical (art. 4) ou l’autorisation de l’Inspection du travail doit être renouvelé. Le fournisseur (sous-traitant), les données collectées et les modalités changent souvent : celle remise auparavant ne suffit pas.',
+        es: 'En caso de cambio de sistema: si cambias de sistema o software de monitorización, actualiza y vuelve a entregar la información, y comprueba si debe renovarse el acuerdo sindical (art. 4) o la autorización de la Inspección de Trabajo. A menudo cambian el proveedor (encargado del tratamiento), los datos recogidos y las modalidades: la entregada antes no basta.',
+        nl: 'Bij een systeemwissel: als je van monitoringsysteem of -software verandert, werk de privacyverklaring bij en verstrek deze opnieuw, en controleer of de vakbondsovereenkomst (art. 4) of de toestemming van de Arbeidsinspectie moet worden vernieuwd. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
+      },
+    },
   ],
 
   contatti: [
