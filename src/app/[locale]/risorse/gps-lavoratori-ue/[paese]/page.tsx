@@ -4,6 +4,7 @@ import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import { SUPPORTED_LOCALES } from '@/lib/i18n/config';
 import type { AppLocale } from '@/lib/i18n/config';
+import { localizePath } from '@/lib/i18n/locale-routing';
 import { REVERSE_SLUG_MAP, translateSlug } from '@/lib/i18n/slug-map';
 import { getAllStati, getSchedaBySlug } from '@/lib/risorse/gps-lavoratori-ue';
 import {
@@ -12,6 +13,8 @@ import {
   buildSchedaArticleJsonLd,
 } from '@/lib/risorse/gps-lavoratori-ue/jsonLd';
 import SchedaPaeseView from '@/components/risorse/SchedaPaeseView';
+import CambiaStatoSelect from '@/components/risorse/CambiaStatoSelect';
+import type { PaeseSelettore } from '@/components/risorse/SelettorePaesiClient';
 
 /**
  * Pagina-scheda per paese della risorsa "GPS sui lavoratori in UE".
@@ -95,6 +98,20 @@ export default async function SchedaPaesePage({
   const trialUrl = `/${resolvedLocale}/trial/`;
   const nomePaese = scheda.nomi?.[resolvedLocale] ?? scheda.nome;
 
+  // Elenco paesi per il selettore in-scheda (stessa lista del selettore principale).
+  const countries: PaeseSelettore[] = getAllStati().map((s) => ({
+    slugCanonico: s.slugCanonico,
+    codiceISO: s.codiceISO,
+    nome: s.nome,
+    bandiera: s.bandiera,
+    stato: s.stato,
+    href: localizePath(`/risorse/gps-lavoratori-ue/${s.slugCanonico}/`, resolvedLocale),
+  }));
+  const currentHref = localizePath(
+    `/risorse/gps-lavoratori-ue/${scheda.slugCanonico}/`,
+    resolvedLocale,
+  );
+
   // Structured data: BreadcrumbList (Home -> Strumento -> Paese) + Article.
   const breadcrumbJsonLd = buildBreadcrumbJsonLd(
     buildBreadcrumbItems(resolvedLocale, dict.h1Selettore, {
@@ -126,6 +143,14 @@ export default async function SchedaPaesePage({
         locale={resolvedLocale}
         trialUrl={trialUrl}
         nomePaese={nomePaese}
+        switcher={
+          <CambiaStatoSelect
+            countries={countries}
+            currentHref={currentHref}
+            label={dict.scegliPaese}
+            inArrivoLabel={dict.inArrivo}
+          />
+        }
       />
     </>
   );

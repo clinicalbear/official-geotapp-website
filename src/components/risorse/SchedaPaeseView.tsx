@@ -20,6 +20,8 @@ interface SchedaPaeseViewProps {
   trialUrl: string;
   /** Nome del paese nella lingua corrente (ripiega su scheda.nome). */
   nomePaese?: string;
+  /** Selettore-paese compatto (client) per saltare a un'altra scheda. */
+  switcher?: React.ReactNode;
 }
 
 const BADGE_STYLE: Record<RispostaChecklist, string> = {
@@ -64,7 +66,7 @@ function ExternalLink({ href, children }: { href: string; children: React.ReactN
   );
 }
 
-export default function SchedaPaeseView({ scheda, dict, locale, trialUrl, nomePaese }: SchedaPaeseViewProps) {
+export default function SchedaPaeseView({ scheda, dict, locale, trialUrl, nomePaese, switcher }: SchedaPaeseViewProps) {
   const nomeLocale = nomePaese ?? scheda.nome;
   // Percorso in-arrivo: niente dossier, solo l'avviso "in preparazione".
   if (scheda.stato === 'in-arrivo') {
@@ -92,6 +94,9 @@ export default function SchedaPaeseView({ scheda, dict, locale, trialUrl, nomePa
           {dict.aggiornatoIl} {formatDate(scheda.aggiornatoIl, locale)}
         </p>
       </header>
+
+      {/* Selettore-paese: cambia Stato senza tornare all'elenco. */}
+      {switcher && <div className="mb-12">{switcher}</div>}
 
       {/* 1. Cosa serve */}
       <section className="mb-14">
