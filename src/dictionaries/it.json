@@ -1,5 +1,6 @@
 {
   "navbar": {
+    "resources": "Risorse",
     "products": "Prodotti",
     "pricing": "Prezzi",
     "blog": "Blog",
@@ -27,6 +28,26 @@
     "product_app_desc": "App mobile per tecnici sul campo",
     "product_verifier_desc": "Verifica integrità dei report di lavoro",
     "compare": "Confronto"
+  },
+  "risorseHub": {
+    "metaTitle": "Risorse — GeoTapp",
+    "metaDesc": "Strumenti e risorse gratuite di GeoTapp: la guida al monitoraggio GPS dei lavoratori in Europa, il calcolatore del ROI e il sondaggio sulla prova del lavoro.",
+    "h1": "Risorse",
+    "intro": "Strumenti, guide e dati gratuiti per rendere il lavoro sul campo dimostrabile. Li teniamo aggiornati e ne aggiungiamo di nuovi.",
+    "cards": {
+      "gps": {
+        "title": "Monitoraggio GPS dei lavoratori in UE",
+        "desc": "Paese per paese: cosa serve per mettere a norma GPS e monitoraggio dei lavoratori, con checklist, procedura, contatti e modello da scaricare."
+      },
+      "roi": {
+        "title": "Calcolatore del ROI",
+        "desc": "Stima quanto tempo e denaro recuperi usando GeoTapp sulle tue attività sul campo."
+      },
+      "survey": {
+        "title": "Sondaggio: la prova del lavoro",
+        "desc": "Due minuti, anonimo: ti fidi della parola o ti serve una prova? Aiutaci a capire un problema vero."
+      }
+    }
   },
   "footer": {
     "tagline": "Lavoro sul campo registrato. Operazioni organizzate. Report verificabili.",

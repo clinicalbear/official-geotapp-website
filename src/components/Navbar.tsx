@@ -226,6 +226,12 @@ export default function Navbar() {
             {dict.compare}
           </Link>
           <Link
+            href={getLink('/risorse')}
+            className="text-sm font-bold text-text-secondary hover:text-primary transition-colors"
+          >
+            {dict.resources}
+          </Link>
+          <Link
             href={getLink('/contact')}
             className="text-sm font-bold text-text-secondary hover:text-primary transition-colors"
           >
@@ -344,6 +350,13 @@ export default function Navbar() {
                 className="text-lg font-bold text-text-secondary"
               >
                 {dict.compare}
+              </Link>
+              <Link
+                href={getLink('/risorse')}
+                onClick={() => setIsOpen(false)}
+                className="text-lg font-bold text-text-secondary"
+              >
+                {dict.resources}
               </Link>
               <Link
                 href={getLink('/contact')}

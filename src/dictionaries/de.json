@@ -1,5 +1,6 @@
 {
   "navbar": {
+    "resources": "Ressourcen",
     "products": "Produkte",
     "pricing": "Preise",
     "blog": "Blog",
@@ -27,6 +28,26 @@
     "product_app_desc": "Mobile App für Außendiensttechniker",
     "product_verifier_desc": "Integritätsprüfung von Arbeitsberichten",
     "compare": "Vergleich"
+  },
+  "risorseHub": {
+    "metaTitle": "Ressourcen — GeoTapp",
+    "metaDesc": "Kostenlose Tools und Ressourcen von GeoTapp: der Leitfaden zur GPS-Überwachung von Mitarbeitern in Europa, der ROI-Rechner und die Umfrage zum Arbeitsnachweis.",
+    "h1": "Ressourcen",
+    "intro": "Kostenlose Tools, Leitfäden und Daten, um Außendienstarbeit nachweisbar zu machen. Wir halten sie aktuell und fügen neue hinzu.",
+    "cards": {
+      "gps": {
+        "title": "GPS-Überwachung von Mitarbeitern in der EU",
+        "desc": "Land für Land: was nötig ist, um GPS und Mitarbeiterüberwachung rechtskonform zu machen, mit Checkliste, Ablauf, Kontakten und Vorlage zum Herunterladen."
+      },
+      "roi": {
+        "title": "ROI-Rechner",
+        "desc": "Schätzen Sie, wie viel Zeit und Geld Sie mit GeoTapp im Außendienst zurückgewinnen."
+      },
+      "survey": {
+        "title": "Umfrage: der Arbeitsnachweis",
+        "desc": "Zwei Minuten, anonym: Vertrauen Sie dem Wort oder brauchen Sie einen Nachweis? Helfen Sie uns, ein echtes Problem zu verstehen."
+      }
+    }
   },
   "footer": {
     "tagline": "Außendienst erfasst. Einsätze organisiert. Berichte prüfbar.",

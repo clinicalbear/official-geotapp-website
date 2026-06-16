@@ -1,5 +1,6 @@
 {
   "navbar": {
+    "resources": "Ressources",
     "products": "Produits",
     "pricing": "Tarifs",
     "blog": "Blog",
@@ -27,6 +28,26 @@
     "product_app_desc": "Application mobile pour techniciens terrain",
     "product_verifier_desc": "Vérification de l'intégrité des rapports de travail",
     "compare": "Comparaison"
+  },
+  "risorseHub": {
+    "metaTitle": "Ressources — GeoTapp",
+    "metaDesc": "Outils et ressources gratuits de GeoTapp : le guide de la surveillance GPS des travailleurs en Europe, le calculateur de ROI et l'enquête sur la preuve du travail.",
+    "h1": "Ressources",
+    "intro": "Des outils, guides et données gratuits pour rendre le travail sur le terrain prouvable. Nous les mettons à jour et en ajoutons de nouveaux.",
+    "cards": {
+      "gps": {
+        "title": "Surveillance GPS des travailleurs dans l'UE",
+        "desc": "Pays par pays : ce qu'il faut pour mettre en conformité le GPS et la surveillance des travailleurs, avec checklist, procédure, contacts et modèle à télécharger."
+      },
+      "roi": {
+        "title": "Calculateur de ROI",
+        "desc": "Estimez le temps et l'argent que vous récupérez en utilisant GeoTapp sur vos opérations de terrain."
+      },
+      "survey": {
+        "title": "Enquête : la preuve du travail",
+        "desc": "Deux minutes, anonyme : faites-vous confiance à la parole ou avez-vous besoin d'une preuve ? Aidez-nous à comprendre un vrai problème."
+      }
+    }
   },
   "footer": {
     "tagline": "Activité terrain enregistrée. Opérations organisées. Rapports vérifiables.",

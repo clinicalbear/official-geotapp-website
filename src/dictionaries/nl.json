@@ -1,5 +1,6 @@
 {
   "navbar": {
+    "resources": "Bronnen",
     "products": "Producten",
     "pricing": "Tarieven",
     "blog": "Blog",
@@ -27,6 +28,26 @@
     "product_app_desc": "Mobiele app voor buitendiensttechnici",
     "product_verifier_desc": "Integriteitsverificatie van werkrapporten",
     "compare": "Vergelijking"
+  },
+  "risorseHub": {
+    "metaTitle": "Bronnen — GeoTapp",
+    "metaDesc": "Gratis tools en bronnen van GeoTapp: de gids over GPS-monitoring van werknemers in Europa, de ROI-calculator en de enquête over werkbewijs.",
+    "h1": "Bronnen",
+    "intro": "Gratis tools, gidsen en data om veldwerk aantoonbaar te maken. We houden ze actueel en voegen er nieuwe toe.",
+    "cards": {
+      "gps": {
+        "title": "GPS-monitoring van werknemers in de EU",
+        "desc": "Land voor land: wat nodig is om GPS en werknemersmonitoring conform te maken, met checklist, procedure, contacten en sjabloon om te downloaden."
+      },
+      "roi": {
+        "title": "ROI-calculator",
+        "desc": "Schat hoeveel tijd en geld je terugwint met GeoTapp in je veldwerk."
+      },
+      "survey": {
+        "title": "Enquête: het werkbewijs",
+        "desc": "Twee minuten, anoniem: vertrouw je op iemands woord of heb je bewijs nodig? Help ons een echt probleem te begrijpen."
+      }
+    }
   },
   "footer": {
     "tagline": "Buitendienstactiviteit geregistreerd. Operaties georganiseerd. Rapporten verifieerbaar.",

@@ -1,5 +1,6 @@
 {
   "navbar": {
+    "resources": "Resources",
     "products": "Products",
     "pricing": "Pricing",
     "blog": "Blog",
@@ -27,6 +28,26 @@
     "product_app_desc": "Mobile app for field technicians",
     "product_verifier_desc": "Work report integrity verification",
     "compare": "Compare"
+  },
+  "risorseHub": {
+    "metaTitle": "Resources — GeoTapp",
+    "metaDesc": "Free tools and resources from GeoTapp: the guide to GPS worker monitoring across Europe, the ROI calculator and the proof-of-work survey.",
+    "h1": "Resources",
+    "intro": "Free tools, guides and data to make field work provable. We keep them updated and add new ones.",
+    "cards": {
+      "gps": {
+        "title": "GPS monitoring of workers in the EU",
+        "desc": "Country by country: what it takes to make GPS and worker monitoring compliant, with checklist, procedure, contacts and a template to download."
+      },
+      "roi": {
+        "title": "ROI calculator",
+        "desc": "Estimate how much time and money you get back by using GeoTapp on your field operations."
+      },
+      "survey": {
+        "title": "Survey: proof of work",
+        "desc": "Two minutes, anonymous: do you trust someone's word, or do you need proof? Help us understand a real problem."
+      }
+    }
   },
   "footer": {
     "tagline": "Field activity recorded. Operations organised. Reports verifiable.",
