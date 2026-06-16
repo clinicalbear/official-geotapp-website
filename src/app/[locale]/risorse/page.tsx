@@ -61,7 +61,7 @@ export default async function RisorseHubPage({
         <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
           {dict.h1}
         </h1>
-        <p className="text-slate-600 text-lg leading-relaxed max-w-2xl mx-auto">
+        <p className="text-slate-600 text-lg leading-relaxed max-w-2xl mx-auto whitespace-pre-line">
           {dict.intro}
         </p>
       </header>

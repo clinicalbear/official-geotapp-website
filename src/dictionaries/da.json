@@ -29,6 +29,26 @@
     "product_verifier_desc": "Integritetskontrol af arbejdsrapporter",
     "compare": "Sammenligning"
   },
+  "risorseHub": {
+    "metaTitle": "Ressourcer — GeoTapp",
+    "metaDesc": "Gratis værktøjer og ressourcer fra GeoTapp: guiden til GPS-overvågning af medarbejdere i Europa, ROI-beregneren og undersøgelsen om bevis for udført arbejde.",
+    "h1": "Ressourcer",
+    "intro": "Gratis værktøjer, guider og data, der gør markarbejde dokumenterbart.\nVi holder dem opdateret og tilføjer nye.",
+    "cards": {
+      "gps": {
+        "title": "GPS-overvågning af medarbejdere i EU",
+        "desc": "Land for land: hvad der skal til for at gøre GPS og medarbejderovervågning lovlig, med tjekliste, fremgangsmåde, kontakter og skabelon til download."
+      },
+      "roi": {
+        "title": "ROI-beregner",
+        "desc": "Beregn hvor meget tid og penge du henter hjem ved at bruge GeoTapp til dit markarbejde."
+      },
+      "survey": {
+        "title": "Undersøgelse: bevis for udført arbejde",
+        "desc": "To minutter, anonymt: stoler du på ordet, eller har du brug for et bevis? Hjælp os med at forstå et reelt problem."
+      }
+    }
+  },
   "footer": {
     "tagline": "Feltaktivitet registreret. Drift organiseret. Arbejdsrapporter verificerbare.",
     "privacy": "Privatlivspolitik",

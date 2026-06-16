@@ -29,6 +29,26 @@
     "product_verifier_desc": "Verificação de integridade de relatórios de trabalho",
     "compare": "Comparação"
   },
+  "risorseHub": {
+    "metaTitle": "Recursos — GeoTapp",
+    "metaDesc": "Ferramentas e recursos gratuitos da GeoTapp: o guia para a monitorização GPS de trabalhadores na Europa, a calculadora de ROI e o inquérito sobre a prova do trabalho.",
+    "h1": "Recursos",
+    "intro": "Ferramentas, guias e dados gratuitos para tornar o trabalho no terreno comprovável.\nMantemo-los atualizados e acrescentamos novos.",
+    "cards": {
+      "gps": {
+        "title": "Monitorização GPS de trabalhadores na UE",
+        "desc": "País a país: o que é preciso para pôr em conformidade o GPS e a monitorização dos trabalhadores, com checklist, procedimento, contactos e modelo para descarregar."
+      },
+      "roi": {
+        "title": "Calculadora de ROI",
+        "desc": "Estima quanto tempo e dinheiro recuperas ao usar a GeoTapp nas tuas atividades no terreno."
+      },
+      "survey": {
+        "title": "Inquérito: a prova do trabalho",
+        "desc": "Dois minutos, anónimo: confias na palavra ou precisas de uma prova? Ajuda-nos a perceber um problema real."
+      }
+    }
+  },
   "footer": {
     "tagline": "Actividade de campo registada. Operações organizadas. Relatórios verificáveis.",
     "privacy": "Política de privacidade",
