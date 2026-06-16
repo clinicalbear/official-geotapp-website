@@ -283,7 +283,10 @@ const nextConfig = {
       },
       {
         source: '/sitemap.xml',
-        headers: [{ key: 'Cache-Control', value: 'public, s-maxage=3600, stale-while-revalidate=86400' }],
+        // no-store: il sitemap si rigenera fresco a ogni richiesta. Evita lo
+        // strato cache (CDN + OpenNext) che restava incastrato su versioni vecchie
+        // (mancavano strumento GPS, schede, nuovi tool). Endpoint per crawler: ok.
+        headers: [{ key: 'Cache-Control', value: 'no-store, must-revalidate' }],
       },
       {
         source: '/sitemap/:id',
