@@ -75,7 +75,7 @@ export default function ArticleHero({
   });
 
   return (
-    <section ref={heroRef} className="relative w-screen min-h-[55vh] md:min-h-[65vh] mt-[72px] md:mt-[88px] overflow-hidden">
+    <section ref={heroRef} className="relative w-screen min-h-[calc(55vh_+_72px)] md:min-h-[calc(65vh_+_88px)] -mt-[72px] md:-mt-[88px] overflow-hidden">
       {/* Background image with parallax or fallback gradient */}
       {image ? (
         <motion.div className="absolute inset-0" style={{ y: imageY }}>
