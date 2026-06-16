@@ -12,6 +12,7 @@ import {
 import SelettorePaesiClient, {
   type PaeseSelettore,
 } from '@/components/risorse/SelettorePaesiClient';
+import EmbedCodeBox from '@/components/risorse/EmbedCodeBox';
 
 /**
  * Pagina-selettore (landing dello strumento) della risorsa "GPS sui lavoratori in UE".
@@ -49,7 +50,8 @@ export default async function SelettorePaesiPage({
 }) {
   const { locale } = await params;
   const resolvedLocale = safeLocale(locale);
-  const dict = getDictionary(resolvedLocale).risorseGps;
+  const fullDict = getDictionary(resolvedLocale);
+  const dict = fullDict.risorseGps;
 
   const countries: PaeseSelettore[] = getAllStati().map((s) => ({
     slugCanonico: s.slugCanonico,
@@ -79,6 +81,14 @@ export default async function SelettorePaesiPage({
         dict={dict}
         h1={dict.h1Selettore}
       />
+      <div className="container mx-auto max-w-3xl px-4 pb-16">
+        <EmbedCodeBox
+          embedUrl={`https://geotapp.com/embed/${resolvedLocale}/gps-lavoratori-ue`}
+          pageUrl={`https://geotapp.com${localizePath('/risorse/gps-lavoratori-ue/', resolvedLocale)}`}
+          pageTitle={dict.h1Selettore}
+          labels={fullDict.embedStrumento}
+        />
+      </div>
     </>
   );
 }

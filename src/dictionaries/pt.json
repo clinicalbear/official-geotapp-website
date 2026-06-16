@@ -1062,5 +1062,11 @@
         "desc": "A classificação dos 39 países europeus pela rigidez do quadro sobre monitorização de trabalhadores."
       }
     }
+  },
+  "embedStrumento": {
+    "titolo": "Incorpora esta ferramenta",
+    "desc": "Publica o mapa interativo no teu site ou blog: copia o código. Inclui um link para a fonte.",
+    "copia": "Copiar o código",
+    "copiato": "Copiado!"
   }
 }

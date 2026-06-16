@@ -384,6 +384,17 @@ export async function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
   const host = req.headers.get('host');
 
+  // Route /embed/: widget incorporabili in iframe da siti terzi. DEVONO essere
+  // framabili (niente X-Frame-Options: SAMEORIGIN) e restano fuori dal routing
+  // locale (gestiscono il locale come parametro di route). Cambio confinato a /embed/.
+  if (pathname.startsWith('/embed/')) {
+    const res = NextResponse.next();
+    res.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
+    res.headers.set('X-Content-Type-Options', 'nosniff');
+    res.headers.set('Content-Security-Policy', 'frame-ancestors *');
+    return res;
+  }
+
   // 0a. www → non-www redirect (301 permanent)
   // Explicit allowlist to prevent host header injection / open redirect.
   if (host !== null && host.startsWith('www.')) {

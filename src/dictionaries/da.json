@@ -1062,5 +1062,11 @@
         "desc": "Rangeringen af 39 europæiske lande efter hvor strengt deres regelsæt for medarbejderovervågning er."
       }
     }
+  },
+  "embedStrumento": {
+    "titolo": "Indlejr dette værktøj",
+    "desc": "Udgiv det interaktive kort på dit website eller blog: kopiér koden. Indeholder et link til kilden.",
+    "copia": "Kopiér koden",
+    "copiato": "Kopieret!"
   }
 }
