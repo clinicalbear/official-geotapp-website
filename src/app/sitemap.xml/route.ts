@@ -1,23 +1,10 @@
+// Sitemap come Route Handler (non come convenzione app/sitemap.ts) per poter
+// impostare ESPLICITAMENTE Cache-Control: no-store sulla risposta. Con la
+// convenzione sitemap.ts, Next/OpenNext cacha la route per suo conto (s-maxage)
+// e l'override da next.config non si applica alle route-metadata → la sitemap
+// restava incastrata su versioni vecchie (mancavano strumento GPS, schede, tool).
+// Qui controlliamo noi gli header → niente cache, si rigenera sempre fresca.
 
-
-// Sitemap strategy:
-// Single /sitemap.xml — no shards, no sitemap index.
-//
-// Contains:
-//   - 11 locales × N routes = locale pages with hreflang alternates
-//   - 11 locales × M blog posts (deduplicated by URL) = blog entries
-//
-// Blog posts are fetched via /wp-json/wp/v2/posts/ (NOT ?rest_route=/) for each
-// locale in parallel. Using ?rest_route=/ on blog.geotapp.com triggers the
-// Cloudflare CDN-level redirect (blog.geotapp.com → geotapp.com/blog/) before
-// Apache sees the request. /wp-json/ bypasses the root-path redirect.
-//
-// Cache strategy:
-//   force-dynamic guarantees fresh data when Cloudflare edge cache misses.
-//   next.config.mjs serves Cache-Control: public, s-maxage=3600, stale-while-revalidate=86400.
-//   SWR means crawlers never wait for sitemap re-generation; latency stays under 50ms.
-
-import type { MetadataRoute } from 'next';
 import { SUPPORTED_LOCALES } from '@/lib/i18n/config';
 import type { AppLocale } from '@/lib/i18n/config';
 import { translatePath } from '@/lib/i18n/slug-map';
@@ -27,114 +14,77 @@ export const dynamic = 'force-dynamic';
 
 const BASE_URL = 'https://geotapp.com';
 const WP_DIRECT = 'https://blog.geotapp.com';
-// Test blog posts de-published in WordPress but still returned by WP REST API (cache lag).
-// SYNC: identical copy also in src/middleware.ts — remove from both files when posts are fully purged.
 const DEPUBLISHED_BLOG_TEST_PATHS = new Set([
   '/blog/da/2026/03/23/test/',
   '/blog/da/2026/03/23/test-2/',
 ]);
 
-type RouteEntry = {
-  path: string;
-  priority: number;
-  changeFrequency: MetadataRoute.Sitemap[number]['changeFrequency'];
-};
+type ChangeFreq =
+  | 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
+type RouteEntry = { path: string; priority: number; changeFrequency: ChangeFreq };
 
-// Paths MUST end with '/' — next.config.mjs has trailingSlash:true.
-// Without the trailing slash, Googlebot follows a 308 redirect on every
-// sitemap URL, wasting crawl budget and causing "Crawled – currently not indexed"
-// for the redirect source in Search Console.
+// Paths MUST end with '/' — trailingSlash:true.
 const ROUTES: RouteEntry[] = [
-  // Home
   { path: '/', priority: 1.0, changeFrequency: 'weekly' },
-
-  // Prodotti (money pages — alta priorità)
   { path: '/products/geotapp-flow/', priority: 0.95, changeFrequency: 'weekly' },
   { path: '/products/geotapp-timetracker/', priority: 0.95, changeFrequency: 'weekly' },
   { path: '/products/geotapp-verifier/', priority: 0.8, changeFrequency: 'monthly' },
-
-  // Pricing (pagine di conversione — priorità alta)
   { path: '/pricing/', priority: 0.9, changeFrequency: 'weekly' },
-
-  // Settori verticali (landing SEO — alta priorità)
   { path: '/settori/', priority: 0.9, changeFrequency: 'weekly' },
   { path: '/settori/pulizie/', priority: 0.9, changeFrequency: 'weekly' },
   { path: '/settori/installatori/', priority: 0.9, changeFrequency: 'weekly' },
   { path: '/settori/sicurezza/', priority: 0.9, changeFrequency: 'weekly' },
-
-  // Settori verticali — landing SEO aggiuntive
   { path: '/settori/elettricisti/', priority: 0.9, changeFrequency: 'weekly' },
   { path: '/settori/idraulici/', priority: 0.9, changeFrequency: 'weekly' },
   { path: '/settori/termoidraulici/', priority: 0.9, changeFrequency: 'weekly' },
-
-  // Settori risorse (pillar SEO — pagine long-tail per settore)
   { path: '/settori/pulizie/risorse/', priority: 0.85, changeFrequency: 'monthly' },
   { path: '/settori/installatori/risorse/', priority: 0.85, changeFrequency: 'monthly' },
   { path: '/settori/sicurezza/risorse/', priority: 0.85, changeFrequency: 'monthly' },
-
-  // Confronto competitor (BOFU — pagine comparazione ad alta intenzione d'acquisto)
   { path: '/confronto/', priority: 0.75, changeFrequency: 'monthly' },
   { path: '/confronto/geotapp-vs-connecteam/', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/confronto/geotapp-vs-clockify/', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/confronto/geotapp-vs-hubstaff/', priority: 0.8, changeFrequency: 'monthly' },
-
-  // Blog index
   { path: '/blog/', priority: 0.85, changeFrequency: 'daily' },
-
-  // Demo (lead generation — alta priorità)
   { path: '/demo/', priority: 0.9, changeFrequency: 'monthly' },
-
-  // Supporto / conversion
   { path: '/guida/', priority: 0.7, changeFrequency: 'monthly' },
   { path: '/contact/', priority: 0.65, changeFrequency: 'monthly' },
   { path: '/chi-siamo/', priority: 0.55, changeFrequency: 'monthly' },
-
-  // Entity / AEO page ("Cos'è GeoTapp" — localized slug per locale via SLUG_MAP)
   { path: '/cos-e-geotapp/', priority: 0.7, changeFrequency: 'monthly' },
-
   // Hub Risorse + strumenti (asset linkabili per backlink).
   { path: '/risorse/', priority: 0.8, changeFrequency: 'weekly' },
-  // Risorsa "GPS sui lavoratori in UE" — pagina-selettore (landing dello strumento).
-  // Le schede-paese pubblicate vengono aggiunte dinamicamente più in basso da getAllStati().
   { path: '/risorse/gps-lavoratori-ue/', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/risorse/sanzioni-gps/', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/risorse/indice-sorveglianza/', priority: 0.8, changeFrequency: 'monthly' },
-
-  // Legale (bassa priorità)
   { path: '/privacy/', priority: 0.3, changeFrequency: 'yearly' },
   { path: '/terms/', priority: 0.3, changeFrequency: 'yearly' },
-
-  // Cookies (legale — bassa priorità)
   { path: '/cookies/', priority: 0.3, changeFrequency: 'yearly' },
-
-  // /success esclusa: pagina Stripe post-pagamento, noindex
 ];
 
-// Hreflang alternates for a localized page.
-// x-default → /en/{path}: real page, no redirect.
-// Using the bare non-locale path (e.g. /pricing/) as x-default would trigger a 308
-// redirect to the geo-resolved locale, which leaks link equity and creates an
-// inconsistency with the hreflang alternates in the page HTML (locale-metadata.ts).
-function buildAlternates(canonicalPath: string): MetadataRoute.Sitemap[number]['alternates'] {
+interface Entry {
+  url: string;
+  lastmod: string; // YYYY-MM-DD
+  changefreq?: ChangeFreq;
+  priority?: number;
+  alternates?: Record<string, string>; // hreflang -> href
+}
+
+function buildAlternates(canonicalPath: string): Record<string, string> {
   const languages: Record<string, string> = {};
   for (const locale of SUPPORTED_LOCALES) {
     languages[locale] = `${BASE_URL}/${locale}${translatePath(canonicalPath, locale as AppLocale)}`;
   }
   languages['x-default'] = `${BASE_URL}/en${translatePath(canonicalPath, 'en')}`;
-  return { languages };
+  return languages;
 }
 
 // ─── WordPress blog helpers ─────────────────────────────────────────────────
-
 type WpPost = { slug: string; modified: string; link?: string };
 type WpPostResponse = { slug?: string; modified?: string; link?: string };
 
 function isDepublishedBlogTestUrl(url: string): boolean {
   try {
     const parsed = new URL(url, BASE_URL);
-    const normalized = parsed.pathname.endsWith('/')
-      ? parsed.pathname
-      : `${parsed.pathname}/`;
+    const normalized = parsed.pathname.endsWith('/') ? parsed.pathname : `${parsed.pathname}/`;
     return DEPUBLISHED_BLOG_TEST_PATHS.has(normalized);
   } catch {
     return false;
@@ -155,7 +105,7 @@ function normalizeWpPublicUrl(rawUrl: string | undefined, slug: string): string 
         return `${BASE_URL}${path}${parsed.search}${parsed.hash}`;
       }
     } catch {
-      // fall through to slug fallback
+      // fall through
     }
   }
   return `${BASE_URL}/blog/${slug}/`;
@@ -169,25 +119,17 @@ async function fetchWpPostsForLocale(locale: string): Promise<WpPost[]> {
       status: 'publish',
       lang: locale,
     });
-
-    // Use /wp-json/ path (not ?rest_route=/) to avoid the Cloudflare CDN-level
-    // redirect that fires for blog.geotapp.com root path before Apache sees it.
-    const res = await fetch(
-      `${WP_DIRECT}/wp-json/wp/v2/posts/?${query.toString()}`,
-      {
-        headers: {
-          host: new URL(WP_DIRECT).host,
-          'x-geotapp-proxy': '1',
-          'x-forwarded-proto': 'https',
-        },
-        next: { revalidate: 3600 },
+    const res = await fetch(`${WP_DIRECT}/wp-json/wp/v2/posts/?${query.toString()}`, {
+      headers: {
+        host: new URL(WP_DIRECT).host,
+        'x-geotapp-proxy': '1',
+        'x-forwarded-proto': 'https',
       },
-    );
+      next: { revalidate: 3600 },
+    });
     if (!res.ok) return [];
-
     const rows = (await res.json()) as WpPostResponse[];
     if (!Array.isArray(rows)) return [];
-
     return rows
       .filter((row) => !!row.slug && !!row.modified)
       .map((row) => ({
@@ -200,76 +142,101 @@ async function fetchWpPostsForLocale(locale: string): Promise<WpPost[]> {
   }
 }
 
-// ─── Single sitemap default export ───────────────────────────────────────────
-// No generateSitemaps() export → Next.js serves everything as /sitemap.xml.
+// ─── XML serialization ───────────────────────────────────────────────────────
+function fmtDate(d: Date): string {
+  return d.toISOString().slice(0, 10);
+}
+function xmlEsc(s: string): string {
+  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+function serialize(entries: Entry[]): string {
+  const body = entries
+    .map((e) => {
+      const alts = e.alternates
+        ? Object.entries(e.alternates)
+            .map(([lang, href]) => `    <xhtml:link rel="alternate" hreflang="${lang}" href="${xmlEsc(href)}"/>`)
+            .join('\n')
+        : '';
+      return (
+        '  <url>\n' +
+        `    <loc>${xmlEsc(e.url)}</loc>\n` +
+        `    <lastmod>${e.lastmod}</lastmod>\n` +
+        (e.changefreq ? `    <changefreq>${e.changefreq}</changefreq>\n` : '') +
+        (e.priority != null ? `    <priority>${e.priority}</priority>\n` : '') +
+        (alts ? alts + '\n' : '') +
+        '  </url>'
+      );
+    })
+    .join('\n');
+  return (
+    '<?xml version="1.0" encoding="UTF-8"?>\n' +
+    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n' +
+    body +
+    '\n</urlset>\n'
+  );
+}
 
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+export async function GET(): Promise<Response> {
   const now = new Date();
+  const nowStr = fmtDate(now);
 
-  // 1. Locale pages: 11 locales × N routes, each with hreflang alternates.
-  const localeEntries: MetadataRoute.Sitemap = SUPPORTED_LOCALES.flatMap((locale) =>
+  // 1. Locale pages: 11 locales × routes, con hreflang.
+  const localeEntries: Entry[] = SUPPORTED_LOCALES.flatMap((locale) =>
     ROUTES.map(({ path, priority, changeFrequency }) => ({
       url: `${BASE_URL}/${locale}${translatePath(path, locale as AppLocale)}`,
-      lastModified: now,
-      changeFrequency,
+      lastmod: nowStr,
+      changefreq: changeFrequency,
       priority: Math.round(priority * 0.85 * 100) / 100,
       alternates: buildAlternates(path),
     })),
   );
 
-  // 1b. Schede-paese della risorsa "GPS sui lavoratori in UE": solo i paesi
-  //     pubblicati (non "in-arrivo"), per ogni locale, con slug localizzato e
-  //     hreflang alternates costruiti sul path canonico.
-  const shippedCountries = getAllStati().filter((s) => s.stato !== 'in-arrivo');
-  const schedaPaeseEntries: MetadataRoute.Sitemap = SUPPORTED_LOCALES.flatMap((locale) =>
-    shippedCountries.map((country) => {
+  // 1b. Schede-paese GPS (paesi pubblicati × locale).
+  const shipped = getAllStati().filter((s) => s.stato !== 'in-arrivo');
+  const schedaPaeseEntries: Entry[] = SUPPORTED_LOCALES.flatMap((locale) =>
+    shipped.map((country) => {
       const canonicalPath = `/risorse/gps-lavoratori-ue/${country.slugCanonico}/`;
       return {
         url: `${BASE_URL}/${locale}${translatePath(canonicalPath, locale as AppLocale)}`,
-        lastModified: now,
-        changeFrequency: 'monthly' as const,
+        lastmod: nowStr,
+        changefreq: 'monthly' as const,
         priority: 0.7,
         alternates: buildAlternates(canonicalPath),
       };
     }),
   );
 
-  // 2. Blog posts: all locales in parallel, deduplicated by URL.
-  //    Hreflang for blog posts is handled by WordPress/Polylang in the page HTML.
-  const wpPostsByLocale = await Promise.all(
-    SUPPORTED_LOCALES.map((locale) => fetchWpPostsForLocale(locale)),
-  );
-  const seenUrls = new Set<string>();
-  const blogEntries: MetadataRoute.Sitemap = [];
-
+  // 2. Blog (11 locali in parallelo, dedup per URL).
+  const wpPostsByLocale = await Promise.all(SUPPORTED_LOCALES.map((l) => fetchWpPostsForLocale(l)));
+  const seen = new Set<string>();
+  const blogEntries: Entry[] = [];
   wpPostsByLocale.flat().forEach(({ slug, modified, link }) => {
     const url = link || `${BASE_URL}/blog/${slug}/`;
-    if (isDepublishedBlogTestUrl(url)) return;
-    if (seenUrls.has(url)) return;
-    seenUrls.add(url);
-    blogEntries.push({
-      url,
-      lastModified: new Date(modified),
-      changeFrequency: 'weekly',
-      priority: 0.75,
-    });
+    if (isDepublishedBlogTestUrl(url) || seen.has(url)) return;
+    seen.add(url);
+    blogEntries.push({ url, lastmod: fmtDate(new Date(modified)), changefreq: 'weekly', priority: 0.75 });
   });
 
-  // 3. IT-only landing pages (single-locale, no hreflang alternates).
-  const itOnlyEntries: MetadataRoute.Sitemap = [
+  // 3. IT-only landing.
+  const itOnly: Entry[] = [
     {
       url: `${BASE_URL}/it/settori/impresa-di-pulizie/`,
-      lastModified: now,
-      changeFrequency: 'monthly',
+      lastmod: nowStr,
+      changefreq: 'monthly',
       priority: 0.85,
       alternates: {
-        languages: {
-          'it-IT': `${BASE_URL}/it/settori/impresa-di-pulizie/`,
-          'x-default': `${BASE_URL}/it/settori/impresa-di-pulizie/`,
-        },
+        'it-IT': `${BASE_URL}/it/settori/impresa-di-pulizie/`,
+        'x-default': `${BASE_URL}/it/settori/impresa-di-pulizie/`,
       },
     },
   ];
 
-  return [...localeEntries, ...schedaPaeseEntries, ...itOnlyEntries, ...blogEntries];
+  const xml = serialize([...localeEntries, ...schedaPaeseEntries, ...itOnly, ...blogEntries]);
+  return new Response(xml, {
+    headers: {
+      'Content-Type': 'application/xml; charset=utf-8',
+      'Cache-Control': 'no-store, must-revalidate',
+      'X-Content-Type-Options': 'nosniff',
+    },
+  });
 }
