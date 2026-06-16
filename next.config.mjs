@@ -281,17 +281,8 @@ const nextConfig = {
         source: '/((?!api|_next).*)',
         headers: [{ key: 'Cache-Control', value: 'public, max-age=3600, s-maxage=86400, stale-while-revalidate=86400' }],
       },
-      {
-        source: '/sitemap.xml',
-        // no-store: il sitemap si rigenera fresco a ogni richiesta. Evita lo
-        // strato cache (CDN + OpenNext) che restava incastrato su versioni vecchie
-        // (mancavano strumento GPS, schede, nuovi tool). Endpoint per crawler: ok.
-        headers: [{ key: 'Cache-Control', value: 'no-store, must-revalidate' }],
-      },
-      {
-        source: '/sitemap/:id',
-        headers: [{ key: 'Cache-Control', value: 'public, s-maxage=3600, stale-while-revalidate=86400' }],
-      },
+      // /sitemap.xml: header gestiti dal Route Handler (app/sitemap.xml/route.ts),
+      // che imposta no-store sulla risposta. Nessuna regola qui per non interferire.
       {
         source: '/robots.txt',
         headers: [{ key: 'Cache-Control', value: 'public, s-maxage=3600, stale-while-revalidate=86400' }],
