@@ -1110,5 +1110,11 @@
     "formatoHtml": "HTML",
     "copia": "Kopiëren",
     "copiato": "Gekopieerd!"
+  },
+  "embedStrumento": {
+    "titolo": "Sluit deze tool in",
+    "desc": "Publiceer de interactieve kaart op je site of blog: kopieer de code. Bevat een link naar de bron.",
+    "copia": "Kopieer de code",
+    "copiato": "Gekopieerd!"
   }
 }

@@ -1110,5 +1110,11 @@
     "formatoHtml": "HTML",
     "copia": "Copier",
     "copiato": "Copié !"
+  },
+  "embedStrumento": {
+    "titolo": "Intégrer cet outil",
+    "desc": "Publiez la carte interactive sur votre site ou blog : copiez le code. Il inclut un lien vers la source.",
+    "copia": "Copier le code",
+    "copiato": "Copié !"
   }
 }

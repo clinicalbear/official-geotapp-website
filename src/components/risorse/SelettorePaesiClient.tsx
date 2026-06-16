@@ -31,14 +31,25 @@ interface SelettorePaesiClientProps {
   countries: PaeseSelettore[];
   dict: RisorseGpsDict;
   h1: string;
+  /** Modalità widget incorporabile: apre la scheda su geotapp.com in nuova tab + mini-logo. */
+  embed?: boolean;
 }
+
+const SITE_ORIGIN = 'https://geotapp.com';
 
 export default function SelettorePaesiClient({
   countries,
   dict,
   h1,
+  embed = false,
 }: SelettorePaesiClientProps) {
   const router = useRouter();
+
+  const go = (href: string) => {
+    if (!href) return;
+    if (embed) window.open(`${SITE_ORIGIN}${href}`, '_blank', 'noopener,noreferrer');
+    else router.push(href);
+  };
 
   const hrefPerIso = useMemo(() => {
     const m: Record<string, string> = {};
@@ -60,15 +71,9 @@ export default function SelettorePaesiClient({
     return m;
   }, [countries]);
 
-  const onMapSelect = (codiceISO: string) => {
-    const href = hrefPerIso[codiceISO];
-    if (href) router.push(href);
-  };
+  const onMapSelect = (codiceISO: string) => go(hrefPerIso[codiceISO]);
 
-  const onSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const href = e.target.value;
-    if (href) router.push(href);
-  };
+  const onSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => go(e.target.value);
 
   // I paesi pubblicati per primi, poi gli "in arrivo"; entro ogni gruppo per nome.
   const ordinati = useMemo(
@@ -83,12 +88,14 @@ export default function SelettorePaesiClient({
   );
 
   return (
-    <main className="container mx-auto max-w-6xl px-4 py-12 md:py-16">
-      <header className="mb-10 text-center">
-        <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 max-w-3xl mx-auto">{h1}</h1>
-        <p className="text-slate-600 text-lg leading-relaxed max-w-3xl mx-auto">
-          {dict.introSelettore}
-        </p>
+    <main className={`container mx-auto max-w-6xl px-4 ${embed ? 'relative py-6 pb-12' : 'py-12 md:py-16'}`}>
+      <header className={embed ? 'mb-6 text-center' : 'mb-10 text-center'}>
+        <h1 className={`font-bold text-slate-900 max-w-3xl mx-auto ${embed ? 'text-xl md:text-2xl mb-1' : 'text-3xl md:text-4xl mb-4'}`}>{h1}</h1>
+        {!embed && (
+          <p className="text-slate-600 text-lg leading-relaxed max-w-3xl mx-auto">
+            {dict.introSelettore}
+          </p>
+        )}
       </header>
 
       {/* Selettore accessibile: percorso primario, sempre usabile da tastiera. */}
@@ -154,6 +161,19 @@ export default function SelettorePaesiClient({
           CC BY-SA 3.0
         </a>
       </p>
+
+      {/* Mini-logo stile Google Maps: brand inamovibile nell'iframe. */}
+      {embed && (
+        <a
+          href={`${SITE_ORIGIN}/risorse/gps-lavoratori-ue/`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="absolute bottom-3 right-3 inline-flex items-center gap-1.5 rounded-full bg-white/95 border border-slate-200 shadow px-2.5 py-1 text-xs font-bold text-slate-800 hover:shadow-md"
+        >
+          <img src="/FaviconGeoTapp.png" alt="" width={16} height={16} className="rounded" />
+          GeoTapp
+        </a>
+      )}
     </main>
   );
 }

@@ -1082,5 +1082,11 @@
         "desc": "Rangordningen av 39 europeiska länder efter hur strängt deras ramverk för medarbetarövervakning är."
       }
     }
+  },
+  "embedStrumento": {
+    "titolo": "Bädda in det här verktyget",
+    "desc": "Publicera den interaktiva kartan på din webbplats eller blogg: kopiera koden. Innehåller en länk till källan.",
+    "copia": "Kopiera koden",
+    "copiato": "Kopierat!"
   }
 }

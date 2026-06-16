@@ -1110,5 +1110,11 @@
     "formatoHtml": "HTML",
     "copia": "Copy",
     "copiato": "Copied!"
+  },
+  "embedStrumento": {
+    "titolo": "Embed this tool",
+    "desc": "Publish the interactive map on your site or blog: copy the code. It includes a link to the source.",
+    "copia": "Copy the code",
+    "copiato": "Copied!"
   }
 }

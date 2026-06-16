@@ -1110,5 +1110,11 @@
     "formatoHtml": "HTML",
     "copia": "Copia",
     "copiato": "Copiato!"
+  },
+  "embedStrumento": {
+    "titolo": "Incorpora questo strumento",
+    "desc": "Pubblica la mappa interattiva sul tuo sito o blog: copia il codice. Include un link alla fonte.",
+    "copia": "Copia il codice",
+    "copiato": "Copiato!"
   }
 }

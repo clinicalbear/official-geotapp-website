@@ -1082,5 +1082,11 @@
         "desc": "Rangeringen av 39 europeiske land etter hvor strengt rammeverket for ansattovervåking er."
       }
     }
+  },
+  "embedStrumento": {
+    "titolo": "Bygg inn dette verktøyet",
+    "desc": "Publiser det interaktive kartet på nettstedet eller bloggen din: kopier koden. Inneholder en lenke til kilden.",
+    "copia": "Kopier koden",
+    "copiato": "Kopiert!"
   }
 }
