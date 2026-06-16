@@ -46,6 +46,14 @@
       "survey": {
         "title": "Umfrage: der Arbeitsnachweis",
         "desc": "Zwei Minuten, anonym: Vertrauen Sie dem Wort oder brauchen Sie einen Nachweis? Helfen Sie uns, ein echtes Problem zu verstehen."
+      },
+      "sanzioni": {
+        "title": "GPS-Bußgeldrechner",
+        "desc": "Land wählen und sehen, wie viel Sie bei Mitarbeiterüberwachung riskieren: reales Höchstbußgeld und exponierende Pflichten."
+      },
+      "indice": {
+        "title": "Index der Arbeitnehmerüberwachung in Europa",
+        "desc": "Das Ranking von 39 europäischen Ländern nach Strenge des Mitarbeiterüberwachungs-Rahmens."
       }
     }
   },
@@ -1061,5 +1069,35 @@
     "ctaTitolo": "Möchten Sie ein System, das bereits konform ist?",
     "ctaTesto": "GeoTapp erfasst den Standort nur bei der Zeiterfassung, nicht durchgehend, und erstellt die zu unterzeichnende Datenschutzerklärung. Testen Sie es kostenlos.",
     "ctaBottone": "GeoTapp kostenlos testen"
+  },
+  "sanzioniGps": {
+    "metaTitle": "GPS-Bußgeldrechner: wie viel Sie bei Mitarbeiterüberwachung riskieren, Land für Land",
+    "metaDesc": "Land wählen und das reale Höchstbußgeld für GPS-Mitarbeiterüberwachung sehen, plus welche Pflichten Sie exponieren. Geprüfte Daten, 39 europäische Länder.",
+    "h1": "Wie viel riskieren Sie bei der Überwachung Ihrer Mitarbeiter?",
+    "intro": "Land wählen, das tatsächlich verhängte Höchstbußgeld sehen und ankreuzen, was Sie schon haben: wir sagen Ihnen, wie hoch Ihr Risiko ist. Quellengeprüfte Daten, 39 Länder.",
+    "sanzioneMax": "Höchstbußgeld",
+    "casoCitato": "Realer Fall",
+    "fonte": "Quelle ansehen",
+    "adempimentiTitolo": "Was Sie haben müssen (ankreuzen, was schon da ist)",
+    "obbligatorio": "Pflicht",
+    "condizionale": "Kommt darauf an",
+    "ceLHai": "Haben Sie das?",
+    "espostoUno": "Ihnen fehlt {n} Pflicht von {tot}: Sie riskieren bis zu",
+    "espostoMulti": "Ihnen fehlen {n} Pflichten von {tot}: Sie riskieren bis zu",
+    "inRegola": "Keine Pflicht fehlt: Sie sind auf dem richtigen Weg.",
+    "vediScheda": "Vollständige Länderseite öffnen: {paese}"
+  },
+  "indiceSorveglianza": {
+    "metaTitle": "Index der Arbeitnehmerüberwachung in Europa: das Ranking der 39 Länder",
+    "metaDesc": "Welche europäischen Länder haben die strengsten Regeln zur Mitarbeiterüberwachung? Ranking nach Strenge-Index, mit Höchstbußgeld und Quelle. 39 Länder.",
+    "h1": "Index der Arbeitnehmerüberwachung in Europa",
+    "intro": "Europa behandelt die Überwachung von Mitarbeitern nicht überall gleich. Wir haben 39 Länder danach geordnet, wie streng der Rahmen ist: mehr Pflichten, höherer Index. Spalten anklicken zum Sortieren.",
+    "colPaese": "Land",
+    "colIndice": "Strenge-Index",
+    "colObblighi": "Pflichten",
+    "colSanzione": "Höchstbußgeld",
+    "scheda": "Seite",
+    "metodologiaTitolo": "Wie der Index berechnet wird",
+    "metodologia": "Der Index (0-100) misst, wie viele Pflichten zur Mitarbeiterüberwachung in dem Land verbindlich sind: Punktzahl = Pflichten + Hälfte der bedingten, geteilt durch das Gesamt. Höher = strengerer Rahmen für alle, die tracken wollen. Daten aus den quellengeprüften Länderseiten; gemessen wird der Compliance-Aufwand, nicht 'Freiheit'."
   }
 }

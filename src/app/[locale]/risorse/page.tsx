@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Map, Calculator, ClipboardList, ArrowRight } from 'lucide-react';
+import { Map, Calculator, ClipboardList, Gavel, BarChart3, ArrowRight } from 'lucide-react';
 import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import { SUPPORTED_LOCALES } from '@/lib/i18n/config';
@@ -28,6 +28,8 @@ function safeLocale(locale: string): AppLocale {
 // Ordine e destinazioni delle card; testi (title/desc) dal dizionario per chiave.
 const CARDS = [
   { key: 'gps', path: '/risorse/gps-lavoratori-ue/', Icon: Map },
+  { key: 'sanzioni', path: '/risorse/sanzioni-gps/', Icon: Gavel },
+  { key: 'indice', path: '/risorse/indice-sorveglianza/', Icon: BarChart3 },
   { key: 'roi', path: '/roi-calculator/', Icon: Calculator },
   { key: 'survey', path: '/survey/', Icon: ClipboardList },
 ] as const;
