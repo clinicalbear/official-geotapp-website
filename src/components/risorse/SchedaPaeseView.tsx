@@ -70,7 +70,6 @@ export default function SchedaPaeseView({ scheda, dict, locale, trialUrl, nomePa
   if (scheda.stato === 'in-arrivo') {
     return (
       <main className="container mx-auto max-w-3xl px-4 py-20 text-center">
-        <p className="text-6xl mb-6" aria-hidden="true">{scheda.bandiera}</p>
         <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
           {nomeLocale}
         </h1>
@@ -86,7 +85,6 @@ export default function SchedaPaeseView({ scheda, dict, locale, trialUrl, nomePa
     <main className="container mx-auto max-w-4xl px-4 py-12 md:py-16">
       {/* Header */}
       <header className="mb-12 text-center">
-        <p className="text-6xl mb-4" aria-hidden="true">{scheda.bandiera}</p>
         <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">
           {dict.metaTitleScheda.replace('{paese}', nomeLocale)}
         </h1>
