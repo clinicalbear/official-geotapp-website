@@ -5,6 +5,7 @@ import { CheckCircle2 } from 'lucide-react';
 import type { AppLocale } from '@/lib/i18n/config';
 import type { SiteDictionary } from '@/lib/i18n/dictionaries';
 import { calcRoi } from '@/lib/roi';
+import { getCurrencyForLocale, FX_RATES_PER_EUR, FX_BUFFER } from '@/lib/pricing';
 
 interface Props {
   dict: SiteDictionary;
@@ -44,17 +45,28 @@ export default function RoiMini({ dict, locale }: Props) {
   // Honeypot anti-spam: campo invisibile agli umani, riempito dai bot. Vedi route.ts.
   const [hp, setHp] = useState('');
 
+  // Valuta del locale (USD/GBP/AUD/CAD/EUR...). Il modello roi è in EUR: l'input
+  // costo-orario (in valuta locale) va convertito in EUR PRIMA del calcolo, e
+  // l'output riconvertito in locale per il display. FX + buffer come il pricing.
+  const cur = getCurrencyForLocale(locale);
+  const costoOrarioEur = cur === 'EUR'
+    ? costoOrario
+    : Math.round(costoOrario / (FX_RATES_PER_EUR[cur] * FX_BUFFER));
+
   const roi = calcRoi({
     operatori,
-    costo_orario: costoOrario,
+    costo_orario: costoOrarioEur,
     contestazioni,
   });
 
+  const localTotal = cur === 'EUR'
+    ? roi.risparmio_totale
+    : Math.round(roi.risparmio_totale * FX_RATES_PER_EUR[cur] * FX_BUFFER);
   const money = new Intl.NumberFormat(locale, {
     style: 'currency',
-    currency: 'EUR',
+    currency: cur,
     maximumFractionDigits: 0,
-  }).format(roi.risparmio_totale);
+  }).format(localTotal);
 
   const settoreLabel = (key: SettoreKey): string => {
     const labels: Record<SettoreKey, string> = {
@@ -90,7 +102,7 @@ export default function RoiMini({ dict, locale }: Props) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           operatori,
-          costo_orario: costoOrario,
+          costo_orario: costoOrarioEur,
           contestazioni,
           siti: 0,
           ore_admin: 0,

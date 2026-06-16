@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import type { AppLocale } from '@/lib/i18n/config';
 import type { RoiResult } from '@/lib/roi';
+import { getCurrencyForLocale, FX_RATES_PER_EUR, FX_BUFFER, type CurrencyCode } from '@/lib/pricing';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import { trackEvent } from '@/lib/analytics';
 type RoiDict = ReturnType<typeof getDictionary>['roi'];
@@ -66,35 +67,50 @@ function useCountUp(target: number, duration = 1200, active = false): number {
   return value;
 }
 
-type Currency = 'EUR' | 'USD';
+type Currency = 'EUR' | 'USD'; // opt-in dalla pagina (?currency=usd); la valuta REALE è derivata dal locale
 
-function formatMoney(n: number, locale: string, currency: Currency = 'EUR'): string {
-  const numberLocale =
-    currency === 'USD' ? 'en-US' :
-    locale === 'de' ? 'de-DE' :
-    locale === 'nl' ? 'nl-NL' :
-    locale === 'en' ? 'en-GB' : 'it-IT';
-  return new Intl.NumberFormat(numberLocale, {
-    style: 'currency', currency, maximumFractionDigits: 0,
+const NUMBER_LOCALE: Partial<Record<CurrencyCode, string>> = {
+  USD: 'en-US', GBP: 'en-GB', AUD: 'en-AU', CAD: 'en-CA',
+};
+function numberLocaleFor(cur: CurrencyCode, locale: string): string {
+  return (
+    NUMBER_LOCALE[cur] ??
+    (locale === 'de' ? 'de-DE'
+      : locale === 'nl' ? 'nl-NL'
+      : locale === 'fr' ? 'fr-FR'
+      : locale === 'es' ? 'es-ES'
+      : locale === 'pt' ? 'pt-PT'
+      : locale === 'en' ? 'en-GB'
+      : 'it-IT')
+  );
+}
+function formatMoney(n: number, cur: CurrencyCode, locale: string): string {
+  return new Intl.NumberFormat(numberLocaleFor(cur, locale), {
+    style: 'currency', currency: cur, maximumFractionDigits: 0,
   }).format(n);
 }
-
-// EUR -> USD conversion used for US-facing presentations. Conservative 1.10
-// reflects ECB reference rate ± typical Stripe FX margin. The ROI delta is
-// expressed in raw money; exact conversion is informational only.
-const EUR_TO_USD = 1.10;
-function maybeConvert(n: number, currency: Currency): number {
-  return currency === 'USD' ? Math.round(n * EUR_TO_USD) : n;
+function currencySymbol(cur: CurrencyCode, locale: string): string {
+  const parts = new Intl.NumberFormat(numberLocaleFor(cur, locale), {
+    style: 'currency', currency: cur, maximumFractionDigits: 0,
+  }).formatToParts(0);
+  return parts.find((p) => p.type === 'currency')?.value ?? cur;
+}
+// EUR (base del modello, calcolato lato server) -> valuta locale, con FX + buffer
+// coerenti col pricing del sito (src/lib/pricing.ts). Inverso per l'input utente.
+function toLocal(eur: number, cur: CurrencyCode): number {
+  return cur === 'EUR' ? eur : Math.round(eur * FX_RATES_PER_EUR[cur] * FX_BUFFER);
+}
+function toEur(local: number, cur: CurrencyCode): number {
+  return cur === 'EUR' ? local : Math.round(local / (FX_RATES_PER_EUR[cur] * FX_BUFFER));
 }
 
 function SliderField({
-  label, value, min, max, step = 1, unit, currency = 'EUR', onChange,
+  label, value, min, max, step = 1, unit, symbol = '€', onChange,
 }: {
   label: string; value: number; min: number; max: number;
-  step?: number; unit?: string; currency?: Currency; onChange: (v: number) => void;
+  step?: number; unit?: string; symbol?: string; onChange: (v: number) => void;
 }) {
-  const isMoney = unit === '€' || unit === '$';
-  const symbol = currency === 'USD' ? '$' : '€';
+  const isMoney = unit === 'money';
   return (
     <div className="space-y-2">
       <div className="flex justify-between items-center">
@@ -117,24 +133,24 @@ function SliderField({
 }
 
 function ResultCard({
-  label, value, highlight, countActive, locale, currency = 'EUR',
+  label, value, highlight, countActive, locale, cur,
 }: {
-  label: string; value: number; highlight?: boolean; countActive: boolean; locale: string; currency?: Currency;
+  label: string; value: number; highlight?: boolean; countActive: boolean; locale: string; cur: CurrencyCode;
 }) {
-  const animated = useCountUp(maybeConvert(value, currency), 1400, countActive);
+  const animated = useCountUp(toLocal(value, cur), 1400, countActive);
   return (
     <div className={`rounded-xl p-4 ${highlight ? 'bg-green-50 border-2 border-green-400' : 'bg-gray-50 border border-gray-200'}`}>
       <p className="text-sm text-gray-600 mb-1">{label}</p>
       <p className={`font-bold ${highlight ? 'text-2xl text-green-600' : 'text-xl text-gray-800'}`}>
-        {formatMoney(animated, locale, currency)}
+        {formatMoney(animated, cur, locale)}
       </p>
     </div>
   );
 }
 
-function AnimatedTotal({ value, locale, active, currency = 'EUR' }: { value: number; locale: string; active: boolean; currency?: Currency }) {
-  const animated = useCountUp(maybeConvert(value, currency), 1600, active);
-  return <>{formatMoney(animated, locale, currency)}</>;
+function AnimatedTotal({ value, locale, active, cur }: { value: number; locale: string; active: boolean; cur: CurrencyCode }) {
+  const animated = useCountUp(toLocal(value, cur), 1600, active);
+  return <>{formatMoney(animated, cur, locale)}</>;
 }
 
 const variants = {
@@ -151,6 +167,10 @@ const ERROR_MSGS: Record<string, { required: string; network: string }> = {
 };
 
 export default function RoiCalculatorClient({ dict, locale, trialUrl, embed = false, currency = 'EUR' }: Props) {
+  // Valuta reale: opt-in USD dalla pagina (?currency=usd), altrimenti quella del locale
+  // (USD/GBP/AUD/CAD/EUR... via src/lib/pricing.ts). Il modello server resta in EUR.
+  const cur: CurrencyCode = currency === 'USD' ? 'USD' : getCurrencyForLocale(locale);
+  const curSymbol = currencySymbol(cur, locale);
   const [step, setStep] = useState(0);
   const [dir, setDir] = useState(1);
   const [form, setForm] = useState<FormData>({
@@ -196,7 +216,7 @@ export default function RoiCalculatorClient({ dict, locale, trialUrl, embed = fa
       const res = await fetch('/api/roi-calculator', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...form, locale, subscribe_newsletter: subscribeNewsletter }),
+        body: JSON.stringify({ ...form, costo_orario: toEur(form.costo_orario, cur), locale, subscribe_newsletter: subscribeNewsletter }),
       });
       if (!res.ok) throw new Error('Server error');
       const data = await res.json();
@@ -300,7 +320,7 @@ export default function RoiCalculatorClient({ dict, locale, trialUrl, embed = fa
                   <SliderField label={dict.field_siti} value={form.siti} min={1} max={30} onChange={v => update('siti', v)} />
                   <SliderField label={dict.field_ore_admin} value={form.ore_admin} min={1} max={40} onChange={v => update('ore_admin', v)} />
                   <SliderField label={dict.field_contestazioni} value={form.contestazioni} min={0} max={30} onChange={v => update('contestazioni', v)} />
-                  <SliderField label={dict.field_costo_orario} value={form.costo_orario} min={10} max={80} unit={currency === 'USD' ? '$' : '€'} currency={currency} onChange={v => update('costo_orario', v)} />
+                  <SliderField label={dict.field_costo_orario} value={form.costo_orario} min={10} max={80} unit="money" symbol={curSymbol} onChange={v => update('costo_orario', v)} />
                   <div className="flex gap-3">
                     <button onClick={goBack} className="flex-1 py-3 rounded-xl font-semibold text-gray-600 border border-gray-300 hover:bg-gray-50 transition-colors">
                       ← {dict.back}
@@ -382,9 +402,9 @@ export default function RoiCalculatorClient({ dict, locale, trialUrl, embed = fa
                     <p className="text-gray-500 text-sm mt-1">{dict.results_subtitle}</p>
                   </div>
                   <div className="grid grid-cols-1 gap-3">
-                    <ResultCard label={dict.results_admin} value={result.risparmio_admin} countActive={countActive} locale={locale} currency={currency} />
-                    <ResultCard label={dict.results_dispute} value={result.risparmio_dispute} countActive={countActive} locale={locale} currency={currency} />
-                    <ResultCard label={dict.results_coord} value={result.risparmio_coord} countActive={countActive} locale={locale} currency={currency} />
+                    <ResultCard label={dict.results_admin} value={result.risparmio_admin} countActive={countActive} locale={locale} cur={cur} />
+                    <ResultCard label={dict.results_dispute} value={result.risparmio_dispute} countActive={countActive} locale={locale} cur={cur} />
+                    <ResultCard label={dict.results_coord} value={result.risparmio_coord} countActive={countActive} locale={locale} cur={cur} />
                   </div>
                   <motion.div
                     initial={{ scale: 0.95, opacity: 0 }}
@@ -394,7 +414,7 @@ export default function RoiCalculatorClient({ dict, locale, trialUrl, embed = fa
                   >
                     <p className="text-sm opacity-80 mb-1">{dict.results_total}</p>
                     <p className="text-4xl font-black">
-                      <AnimatedTotal value={result.risparmio_totale} locale={locale} active={countActive} currency={currency} />
+                      <AnimatedTotal value={result.risparmio_totale} locale={locale} active={countActive} cur={cur} />
                     </p>
                     <p className="text-sm opacity-80 mt-1">{dict.per_anno}</p>
                   </motion.div>

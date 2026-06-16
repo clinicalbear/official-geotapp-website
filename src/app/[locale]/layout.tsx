@@ -12,6 +12,7 @@ import CartDrawer from '@/components/CartDrawer';
 import Script from 'next/script';
 import CookieConsentBanner from '@/components/CookieConsentBanner';
 import NewsletterModal from '@/components/NewsletterModal';
+import SurveyInvite from '@/components/SurveyInvite';
 import ChatWidget from '@/components/kairos/ChatWidget';
 import SiteAnalytics from '@/components/SiteAnalytics';
 import InternalTrafficBadge from '@/components/InternalTrafficBadge';
@@ -568,6 +569,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         />
         <SiteAnalytics />
         {consentMode === 'eu' && <CookieConsentBanner locale={locale} />}
+        <SurveyInvite />
         <NewsletterModal locale={locale} />
         <ChatWidget />
         <InternalTrafficBadge />

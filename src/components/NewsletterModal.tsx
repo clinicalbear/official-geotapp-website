@@ -25,13 +25,20 @@ export default function NewsletterModal({ locale }: { locale: string }) {
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
-    if (localStorage.getItem(STORAGE_KEY)) return;
+    // gtapp_modal_seen = flag condiviso: se la campagna sondaggio ha già mostrato
+    // il suo modale in questa visita, la newsletter cede la precedenza (mai due insieme).
+    if (localStorage.getItem(STORAGE_KEY) || localStorage.getItem('gtapp_modal_seen')) return;
 
     function handleScroll() {
       const scrollRatio =
         (window.scrollY + window.innerHeight) /
         document.documentElement.scrollHeight;
       if (scrollRatio >= 0.5) {
+        if (localStorage.getItem('gtapp_modal_seen')) {
+          window.removeEventListener('scroll', handleScroll);
+          return;
+        }
+        localStorage.setItem('gtapp_modal_seen', '1');
         setVisible(true);
         window.removeEventListener('scroll', handleScroll);
       }

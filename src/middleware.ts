@@ -471,6 +471,33 @@ export async function middleware(req: NextRequest) {
     });
   }
 
+  // 0b4. Survey neutral link: /survey or /survey/ → 302 → /{detected_lang}/survey/
+  //
+  // Un solo link universale che Mike condivide ovunque; la lingua segue browser +
+  // geo (stesso meccanismo di /blog, resolveLocale: cookie → Accept-Language → paese).
+  // 302 + noindex,follow: la destinazione varia per visitatore.
+  if (pathname === '/survey' || pathname === '/survey/') {
+    const countryCode =
+      req.headers.get('cf-ipcountry') ||
+      req.headers.get('x-vercel-ip-country') ||
+      null;
+    const detectedLocale = resolveLocale({
+      cookieLocale: req.cookies.get(LOCALE_COOKIE_NAME)?.value,
+      countryCode,
+      acceptLanguage: req.headers.get('accept-language'),
+    });
+    const surveyRedirect = NextResponse.redirect(
+      new URL(`/${detectedLocale}/survey/`, req.url),
+      302,
+    );
+    surveyRedirect.headers.set('X-Robots-Tag', 'noindex, follow');
+    surveyRedirect.cookies.set(LOCALE_COOKIE_NAME, detectedLocale, {
+      path: '/',
+      sameSite: 'lax',
+    });
+    return surveyRedirect;
+  }
+
   // 0c. Blog listing redirects.
   //
   // /blog or /blog/                  → 302 → /{detected_lang}/blog/  (GEO-AWARE)

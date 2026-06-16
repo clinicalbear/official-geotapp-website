@@ -75,14 +75,18 @@ export function resolveLocale({
     return cookieMatch;
   }
 
-  const countryMatch = getLocaleForCountry(countryCode);
-  if (countryMatch) {
-    return countryMatch;
-  }
-
+  // BROWSER-FIRST (scelta di Mike, 2026-06-14): la lingua del browser ha priorità
+  // sul paese. Riflette la lingua che la persona LEGGE, ovunque si trovi fisicamente
+  // (es. italiano espatriato a Berlino -> italiano, non tedesco). Il cookie resta
+  // sopra a tutto (scelta esplicita dell'utente); il paese è la riserva.
   const acceptLanguageMatch = parseAcceptLanguage(acceptLanguage)[0];
   if (acceptLanguageMatch) {
     return acceptLanguageMatch;
+  }
+
+  const countryMatch = getLocaleForCountry(countryCode);
+  if (countryMatch) {
+    return countryMatch;
   }
 
   return DEFAULT_LOCALE;
