@@ -85,11 +85,13 @@ export default function LeadMagnetInline({ magnet, locale }: Props) {
       <p className="text-sm text-slate-500 mt-2 max-w-md mx-auto">{t.desc}</p>
 
       {/* Download DIRETTO — nessun cancello email */}
+      {/* Il tracciamento di questo click è gestito a monte da ArticleContent via
+          delegazione (un solo listener per tutti i link PDF dell'articolo), così
+          si conta anche il link grezzo nel corpo WP e non si conta due volte. */}
       <a
         href={asset.file}
         target="_blank"
         rel="noopener"
-        onClick={() => trackEvent('lead_magnet_download', { magnet, locale })}
         className="mt-5 inline-block px-6 py-3 text-sm font-semibold text-white bg-[#3BAEE0] rounded-xl hover:bg-[#2f97c4] transition-colors"
       >
         {t.download}

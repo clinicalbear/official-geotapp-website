@@ -978,7 +978,24 @@
     "results_disclaimer": "Estimation indicative basée sur les moyennes du secteur. Les résultats réels peuvent varier.",
     "per_anno": "/ an",
     "label_operators": "opérateurs",
-    "embed_title": "Calculateur ROI GeoTapp"
+    "embed_title": "Calculateur ROI GeoTapp",
+    "intro": "Ce calculateur estime combien votre entreprise peut économiser chaque année en automatisant les présences, les rapports d'intervention et les preuves de travail. Saisissez quelques chiffres et obtenez en 30 secondes votre économie annuelle, le délai de retour et le ROI, sans inscription.",
+    "faq_title": "Questions fréquentes sur le calcul du ROI",
+    "pricing_link": "Découvrez combien vous pouvez économiser avec le calculateur de ROI",
+    "faq": [
+      {
+        "q": "Comment calcule-t-on le ROI d'une application de pointage GPS ?",
+        "a": "L'estimation repose sur trois postes concrets : les heures administratives économisées chaque mois, les litiges et heures supplémentaires injustifiées évités grâce aux preuves géolocalisées, et le temps de coordination récupéré. Le total annuel est comparé au coût de l'abonnement pour obtenir le ROI et le délai de retour."
+      },
+      {
+        "q": "Dois-je m'inscrire ou laisser un e-mail pour voir le résultat ?",
+        "a": "Non. Le calcul est immédiat et gratuit : saisissez vos chiffres et voyez l'estimation tout de suite. L'e-mail est facultatif et sert uniquement si vous voulez le détail et les guides pratiques."
+      },
+      {
+        "q": "Sur quelles données repose l'économie estimée ?",
+        "a": "Uniquement sur les valeurs que vous saisissez : nombre d'opérateurs, sites ou chantiers suivis, heures consacrées à l'administration, coût horaire et litiges typiques de votre secteur. Plus vos données sont réalistes, plus l'estimation est proche de votre cas."
+      }
+    ]
   },
   "settore_layout": {
     "pain_subtitle": "Les apps de pointage enregistrent. Elles ne certifient pas. La différence est énorme, et on la ressent dès qu'un litige survient.",

@@ -978,7 +978,24 @@
     "results_disclaimer": "Indikative Schätzung basierend auf Branchendurchschnittswerten. Tatsächliche Ergebnisse können abweichen.",
     "per_anno": "/ Jahr",
     "label_operators": "Mitarbeiter",
-    "embed_title": "GeoTapp ROI-Rechner"
+    "embed_title": "GeoTapp ROI-Rechner",
+    "intro": "Der Rechner schätzt, wie viel dein Betrieb jährlich sparen kann, wenn Anwesenheiten, Einsatzberichte und Arbeitsnachweise automatisiert werden. Gib wenige Werte ein und erhalte in 30 Sekunden die jährliche Ersparnis, die Amortisationszeit und den ROI, ohne Registrierung.",
+    "faq_title": "Häufige Fragen zur ROI-Berechnung",
+    "pricing_link": "Sieh mit dem ROI-Rechner, wie viel du sparen kannst",
+    "faq": [
+      {
+        "q": "Wie wird der ROI einer GPS-Zeiterfassungs-App berechnet?",
+        "a": "Die Schätzung beruht auf drei konkreten Posten: den monatlich eingesparten Verwaltungsstunden, den dank geolokalisierter Nachweise vermiedenen Streitfällen und unnötigen Überstunden sowie der zurückgewonnenen Koordinationszeit. Die Jahressumme wird mit den Abokosten verglichen, woraus sich ROI und Amortisationszeit ergeben."
+      },
+      {
+        "q": "Muss ich mich registrieren oder eine E-Mail hinterlassen, um das Ergebnis zu sehen?",
+        "a": "Nein. Die Berechnung ist sofort und kostenlos: Werte eingeben und die Schätzung sofort sehen. Die E-Mail ist optional und wird nur genutzt, wenn du die detaillierte Aufschlüsselung und Praxisleitfäden möchtest."
+      },
+      {
+        "q": "Auf welchen Daten beruht die geschätzte Ersparnis?",
+        "a": "Nur auf den Werten, die du eingibst: Anzahl der Mitarbeiter, betreute Standorte oder Baustellen, Verwaltungsstunden, Stundenkosten und die für deine Branche typischen Streitfälle. Je realistischer die Eingaben, desto näher ist die Schätzung an deinem Fall."
+      }
+    ]
   },
   "settore_layout": {
     "pain_subtitle": "Stempelapps erfassen. Sie zertifizieren nicht. Der Unterschied ist gewaltig — und im Streitfall spürt man ihn sofort.",

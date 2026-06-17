@@ -290,7 +290,7 @@ export default function RoiCalculatorClient({ dict, locale, trialUrl, embed = fa
                               : 'border-gray-200 text-gray-600 hover:border-blue-300'
                           }`}
                         >
-                          {dict[`settore_${s}` as keyof RoiDict]}
+                          {dict[`settore_${s}` as keyof RoiDict] as string}
                         </button>
                       ))}
                     </div>

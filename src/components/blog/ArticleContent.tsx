@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo } from 'react';
+import { useMemo, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { trackEvent } from '@/lib/analytics';
@@ -53,8 +53,32 @@ export default function ArticleContent({ html, newsletter, locale = 'it' }: Arti
     return [first, second];
   }, [html]);
 
+  // Tracciamento download lead magnet via DELEGAZIONE: cattura il click su QUALSIASI
+  // link a un PDF / cartella /downloads/ dentro l'articolo, sia quello grezzo nel
+  // corpo WordPress sia quello del widget LeadMagnetInline (renderizzato qui come
+  // `newsletter`) sia futuri. È l'unica fonte dell'evento `lead_magnet_download`
+  // (il widget NON spara più l'onClick proprio, così non si conta due volte). Prima
+  // del 2026-06-17 la conversione del contenuto più cliccato era invisibile: il link
+  // più usato era quello grezzo WP, senza alcun evento.
+  const articleRef = useRef<HTMLElement>(null);
+  useEffect(() => {
+    const root = articleRef.current;
+    if (!root) return;
+    const onClick = (e: MouseEvent) => {
+      const a = (e.target as HTMLElement | null)?.closest('a');
+      if (!a) return;
+      const href = a.getAttribute('href') || '';
+      if (/\.pdf(\?|#|$)/i.test(href) || href.includes('/downloads/')) {
+        trackEvent('lead_magnet_download', { locale, href });
+      }
+    };
+    root.addEventListener('click', onClick);
+    return () => root.removeEventListener('click', onClick);
+  }, [locale]);
+
   return (
     <motion.article
+      ref={articleRef}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, delay: 0.15 }}

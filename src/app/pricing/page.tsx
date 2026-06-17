@@ -478,6 +478,16 @@ export default function Pricing() {
 
       <div className="text-center mt-20 border-t border-slate-100 pt-12">
         <p className="text-slate-400 text-sm">{dict.pricing.vat_note}</p>
+        {(dict as any).roi?.pricing_link && (
+          <p className="mt-4 text-sm">
+            <Link
+              href={`/${currentLocale}/roi-calculator/`}
+              className="font-semibold text-primary underline underline-offset-2 hover:text-primary/80"
+            >
+              {(dict as any).roi.pricing_link} →
+            </Link>
+          </p>
+        )}
       </div>
     </div>
   );

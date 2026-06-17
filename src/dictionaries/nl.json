@@ -978,7 +978,24 @@
     "results_disclaimer": "Indicatieve schatting op basis van sectorgemiddelden. Werkelijke resultaten kunnen variëren.",
     "per_anno": "/ jaar",
     "label_operators": "medewerkers",
-    "embed_title": "GeoTapp ROI-Calculator"
+    "embed_title": "GeoTapp ROI-Calculator",
+    "intro": "Deze rekentool schat hoeveel je bedrijf per jaar kan besparen door aanwezigheid, werkbonnen en bewijs van werk te automatiseren. Vul een paar gegevens in en zie in 30 seconden je jaarlijkse besparing, terugverdientijd en ROI, zonder registratie.",
+    "faq_title": "Veelgestelde vragen over de ROI-berekening",
+    "pricing_link": "Ontdek met de ROI-calculator hoeveel je kunt besparen",
+    "faq": [
+      {
+        "q": "Hoe wordt de ROI van een gps-urenregistratie-app berekend?",
+        "a": "De schatting is opgebouwd uit drie concrete posten: de administratie-uren die je maandelijks bespaart, de geschillen en onterechte overuren die je vermijdt dankzij gelokaliseerd bewijs, en de teruggewonnen coördinatietijd. Het jaartotaal wordt vergeleken met de abonnementskosten voor de ROI en terugverdientijd."
+      },
+      {
+        "q": "Moet ik me registreren of een e-mail achterlaten om het resultaat te zien?",
+        "a": "Nee. De berekening is direct en gratis: vul je gegevens in en zie meteen de schatting. E-mail is optioneel en wordt alleen gebruikt als je het gedetailleerde overzicht en praktische gidsen wilt."
+      },
+      {
+        "q": "Op welke gegevens is de geschatte besparing gebaseerd?",
+        "a": "Alleen op de waarden die je invult: aantal medewerkers, beheerde locaties of werven, uren besteed aan administratie, uurkosten en de geschillen die typisch zijn voor jouw sector. Hoe realistischer je invoer, hoe dichter de schatting bij jouw situatie ligt."
+      }
+    ]
   },
   "settore_layout": {
     "pain_subtitle": "Klok-in apps registreren. Ze certificeren niet. Er is een enorm verschil, en bij een geschil voel je dat.",

@@ -978,7 +978,24 @@
     "results_disclaimer": "Indicative estimate based on industry averages. Actual results may vary.",
     "per_anno": "/ year",
     "label_operators": "operators",
-    "embed_title": "GeoTapp ROI Calculator"
+    "embed_title": "GeoTapp ROI Calculator",
+    "intro": "This calculator estimates how much your business can save each year by automating attendance, field reports and proof of work. Enter a few figures and get your annual saving, payback time and ROI in 30 seconds, with no sign-up.",
+    "faq_title": "Frequently asked questions about the ROI calculation",
+    "pricing_link": "See how much you can save with the ROI calculator",
+    "faq": [
+      {
+        "q": "How is the ROI of a GPS time-tracking app calculated?",
+        "a": "The estimate is built from three concrete items: the admin hours saved every month, the disputes and unwarranted overtime avoided thanks to geolocated proof, and the coordination time recovered. The yearly total is compared with the subscription cost to produce ROI and payback time."
+      },
+      {
+        "q": "Do I need to register or leave an email to see the result?",
+        "a": "No. The calculation is instant and free: enter your figures and see the estimate straight away. Email is optional and only used if you want the detailed breakdown and practical guides."
+      },
+      {
+        "q": "What data is the estimated saving based on?",
+        "a": "Only the values you enter: number of operators, sites or job sites managed, hours spent on admin, hourly cost and the disputes typical of your sector. The more realistic your inputs, the closer the estimate is to your situation."
+      }
+    ]
   },
   "settore_layout": {
     "pain_subtitle": "Clock-in apps record. They don't certify. There's an enormous difference, and you feel it the moment a dispute arises.",

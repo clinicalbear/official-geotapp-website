@@ -978,7 +978,24 @@
     "results_disclaimer": "Estimación indicativa basada en promedios del sector. Los resultados reales pueden variar.",
     "per_anno": "/ año",
     "label_operators": "operarios",
-    "embed_title": "Calculadora ROI GeoTapp"
+    "embed_title": "Calculadora ROI GeoTapp",
+    "intro": "Esta calculadora estima cuánto puede ahorrar tu empresa cada año automatizando la asistencia, los partes de trabajo y las pruebas del trabajo realizado. Introduce unos pocos datos y obtén en 30 segundos el ahorro anual, el tiempo de amortización y el ROI, sin registro.",
+    "faq_title": "Preguntas frecuentes sobre el cálculo del ROI",
+    "pricing_link": "Descubre cuánto puedes ahorrar con la calculadora de ROI",
+    "faq": [
+      {
+        "q": "¿Cómo se calcula el ROI de una app de control de presencia con GPS?",
+        "a": "La estimación se basa en tres partidas concretas: las horas de administración que ahorras cada mes, las reclamaciones y horas extra injustificadas que evitas gracias a las pruebas geolocalizadas, y el tiempo de coordinación recuperado. El total anual se compara con el coste de la suscripción para obtener el ROI y el tiempo de amortización."
+      },
+      {
+        "q": "¿Tengo que registrarme o dejar un correo para ver el resultado?",
+        "a": "No. El cálculo es inmediato y gratuito: introduce tus datos y verás la estimación al instante. El correo es opcional y solo se usa si quieres el desglose detallado y las guías prácticas."
+      },
+      {
+        "q": "¿En qué datos se basa el ahorro estimado?",
+        "a": "Solo en los valores que introduces tú: número de operarios, centros u obras gestionadas, horas dedicadas a administración, coste por hora y las reclamaciones típicas de tu sector. Cuanto más realistas sean los datos, más se acerca la estimación a tu caso."
+      }
+    ]
   },
   "settore_layout": {
     "pain_subtitle": "Las apps de fichaje registran. No certifican. Hay una diferencia enorme, y cuando llega la disputa la sientes toda.",

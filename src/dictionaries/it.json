@@ -978,7 +978,24 @@
     "results_disclaimer": "Stima indicativa basata su medie di settore. I risultati reali possono variare.",
     "per_anno": "/ anno",
     "label_operators": "operatori",
-    "embed_title": "Calcolatore ROI GeoTapp"
+    "embed_title": "Calcolatore ROI GeoTapp",
+    "intro": "Il calcolatore stima quanto la tua impresa può risparmiare ogni anno automatizzando presenze, rapportini e prove del lavoro sul campo. Inserisci pochi dati e ottieni in 30 secondi il risparmio annuo, il tempo di rientro e il ROI, senza registrazione.",
+    "faq_title": "Domande frequenti sul calcolo del ROI",
+    "pricing_link": "Scopri quanto puoi risparmiare con il calcolatore ROI",
+    "faq": [
+      {
+        "q": "Come si calcola il ROI di un'app di rilevazione presenze GPS?",
+        "a": "La stima parte da tre voci concrete: le ore di lavoro amministrativo risparmiate ogni mese, le contestazioni e gli straordinari non dovuti evitati grazie alle prove geolocalizzate, e il tempo di coordinamento recuperato. Il totale annuo viene confrontato con il costo dell'abbonamento per ottenere ROI e tempo di rientro."
+      },
+      {
+        "q": "Devo registrarmi o lasciare l'email per vedere il risultato?",
+        "a": "No. Il calcolo è immediato e gratuito: inserisci i tuoi dati e vedi subito la stima. L'email è facoltativa e serve solo se vuoi ricevere il dettaglio e le guide pratiche."
+      },
+      {
+        "q": "Su quali dati si basa il risparmio stimato?",
+        "a": "Solo sui valori che inserisci tu: numero di operatori, siti o cantieri seguiti, ore dedicate all'amministrazione, costo orario e contestazioni tipiche del tuo settore. Più i dati sono realistici, più la stima è vicina al tuo caso."
+      }
+    ]
   },
   "settore_layout": {
     "pain_subtitle": "Le app di timbratura registrano. Non certificano. C'è una differenza enorme, e nel momento della contestazione la senti tutta.",

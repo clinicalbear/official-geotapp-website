@@ -978,7 +978,24 @@
     "results_disclaimer": "Estimativa indicativa baseada em médias do setor. Os resultados reais podem variar.",
     "per_anno": "/ ano",
     "label_operators": "operadores",
-    "embed_title": "Calculadora ROI GeoTapp"
+    "embed_title": "Calculadora ROI GeoTapp",
+    "intro": "Esta calculadora estima quanto a tua empresa pode poupar por ano ao automatizar presenças, relatórios de trabalho e provas do trabalho realizado. Introduz alguns dados e obtém em 30 segundos a poupança anual, o tempo de retorno e o ROI, sem registo.",
+    "faq_title": "Perguntas frequentes sobre o cálculo do ROI",
+    "pricing_link": "Descobre quanto podes poupar com a calculadora de ROI",
+    "faq": [
+      {
+        "q": "Como se calcula o ROI de uma app de registo de presenças por GPS?",
+        "a": "A estimativa assenta em três rubricas concretas: as horas administrativas poupadas todos os meses, as contestações e horas extra indevidas evitadas graças às provas geolocalizadas, e o tempo de coordenação recuperado. O total anual é comparado com o custo da subscrição para obter o ROI e o tempo de retorno."
+      },
+      {
+        "q": "Tenho de me registar ou deixar um e-mail para ver o resultado?",
+        "a": "Não. O cálculo é imediato e gratuito: introduz os teus dados e vês logo a estimativa. O e-mail é facultativo e só é usado se quiseres o detalhe e os guias práticos."
+      },
+      {
+        "q": "Em que dados se baseia a poupança estimada?",
+        "a": "Apenas nos valores que introduzes: número de operadores, locais ou obras geridas, horas dedicadas à administração, custo horário e as contestações típicas do teu setor. Quanto mais realistas forem os dados, mais próxima a estimativa fica do teu caso."
+      }
+    ]
   },
   "settore_layout": {
     "pain_subtitle": "As apps de registo de ponto registam. Não certificam. A diferença é enorme, e no momento da disputa sente-a toda.",

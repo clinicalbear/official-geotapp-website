@@ -978,7 +978,24 @@
     "results_disclaimer": "Veiledende estimat basert på bransjegjennomsitt. Faktiske resultater kan variere.",
     "per_anno": "/ år",
     "label_operators": "operatører",
-    "embed_title": "GeoTapp ROI-kalkulator"
+    "embed_title": "GeoTapp ROI-kalkulator",
+    "intro": "Denne kalkulatoren anslår hvor mye bedriften din kan spare hvert år ved å automatisere oppmøte, arbeidsrapporter og dokumentasjon av utført arbeid. Legg inn noen tall og få på 30 sekunder den årlige besparelsen, tilbakebetalingstiden og ROI, uten registrering.",
+    "faq_title": "Ofte stilte spørsmål om ROI-beregningen",
+    "pricing_link": "Se hvor mye du kan spare med ROI-kalkulatoren",
+    "faq": [
+      {
+        "q": "Hvordan beregnes ROI for en app for GPS-tidsregistrering?",
+        "a": "Estimatet bygger på tre konkrete poster: de administrative timene du sparer hver måned, tvistene og uberettiget overtid du unngår takket være geolokalisert dokumentasjon, og gjenvunnet koordineringstid. Årssummen sammenlignes med abonnementskostnaden for å gi ROI og tilbakebetalingstid."
+      },
+      {
+        "q": "Må jeg registrere meg eller legge igjen en e-post for å se resultatet?",
+        "a": "Nei. Beregningen er umiddelbar og gratis: legg inn tallene dine og se estimatet med en gang. E-post er valgfritt og brukes bare hvis du vil ha den detaljerte oversikten og praktiske guider."
+      },
+      {
+        "q": "Hvilke data er den anslåtte besparelsen basert på?",
+        "a": "Bare på verdiene du legger inn: antall ansatte, steder eller byggeplasser, timer brukt på administrasjon, timekostnad og tvistene som er typiske for bransjen din. Jo mer realistiske data, desto nærmere er estimatet din situasjon."
+      }
+    ]
   },
   "settore_layout": {
     "pain_subtitle": "Stemplingsapper registrerer. De sertifiserer ikke. Forskjellen er enorm, og når tvisten kommer, kjenner du den.",
