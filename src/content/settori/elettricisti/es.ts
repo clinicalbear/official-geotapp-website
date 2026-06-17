@@ -2,14 +2,14 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App para Electricistas | GeoTapp — Informes GPS y Pruebas',
+    title: 'App para Electricistas | GeoTapp - Informes GPS y Pruebas',
     description: 'GeoTapp es la app para electricistas: informes GPS verificados, fotos de instalaciones y registros inviolables. Cierra litigios con pruebas reales. Prueba gratis.',
   },
   hero: {
     badge: 'App para Electricistas e Instaladores Eléctricos',
     h1_line1: 'App para electricistas:',
     h1_line2: 'informes GPS, pruebas fotográficas y cero disputas.',
-    subtitle: 'GeoTapp registra cada intervención eléctrica con GPS, fotos y marcas de tiempo verificables. ¿El cliente disputa el trabajo? Muestra el informe — sin discusión. Tus técnicos están protegidos, tus facturas también.',
+    subtitle: 'GeoTapp registra cada intervención eléctrica con GPS, fotos y marcas de tiempo verificables. ¿El cliente disputa el trabajo? Muestra el informe, sin discusión. Tus técnicos están protegidos, tus facturas también.',
     cta_primary: 'Empezar gratis',
     cta_note: 'Sin compromiso. Respuesta en 12 horas laborables.',
   },
@@ -32,7 +32,7 @@ const content: SettoreContent = {
   },
   workflow: {
     title: 'Cómo funciona en tres pasos',
-    subtitle: 'De la obra a la oficina — sin llamadas.',
+    subtitle: 'De la obra a la oficina, sin llamadas.',
     steps: [
       {
         title: 'El técnico registra la intervención en obra',
@@ -57,7 +57,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Fotos de instalación selladas',
-        desc: 'El técnico fotografía desde la app. Cada imagen está vinculada a GPS y marca de tiempo — inviolable.',
+        desc: 'El técnico fotografía desde la app. Cada imagen está vinculada a GPS y marca de tiempo, inviolable.',
       },
       {
         title: 'Informes digitales automáticos',

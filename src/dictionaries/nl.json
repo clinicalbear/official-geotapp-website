@@ -23,14 +23,14 @@
       "label": "Sectoren",
       "termoidraulici": "CV & Sanitair"
     },
-    "logo_alt": "GeoTapp — Het platform dat werk verifieerbaar maakt",
+    "logo_alt": "GeoTapp - Het platform dat werk verifieerbaar maakt",
     "product_flow_desc": "Operationeel beheer van interventies en teams",
     "product_app_desc": "Mobiele app voor buitendiensttechnici",
     "product_verifier_desc": "Integriteitsverificatie van werkrapporten",
     "compare": "Vergelijking"
   },
   "risorseHub": {
-    "metaTitle": "Bronnen — GeoTapp",
+    "metaTitle": "Bronnen - GeoTapp",
     "metaDesc": "Gratis tools en bronnen van GeoTapp: de gids over GPS-monitoring van werknemers in Europa, de ROI-calculator en de enquête over werkbewijs.",
     "h1": "Bronnen",
     "intro": "Gratis tools, gidsen en data om veldwerk aantoonbaar te maken.\nWe houden ze actueel en voegen er nieuwe toe.",
@@ -72,10 +72,10 @@
     "contact": "Contact"
   },
   "landing": {
-    "us_badge": "🇺🇸 Serving US teams — chat support 9am–6pm ET. USD invoicing available on request.",
+    "us_badge": "🇺🇸 Serving US teams, chat support 9am–6pm ET. USD invoicing available on request.",
     "hero_badge": "Het werk is gedaan. Maak het nu bewijsbaar.",
     "hero_title": "Als u het niet kunt bewijzen, zegt de klant dat het nooit is gebeurd.",
-    "hero_subtitle": "GeoTapp verandert elke velddienst in objectief bewijs: verzegelde rapporten met echte GPS-gegevens, tijdgestempeld fotobewijs en documentatie die iedereen onafhankelijk kan verifiëren — zonder vertrouwen, zonder geschillen.",
+    "hero_subtitle": "GeoTapp verandert elke velddienst in objectief bewijs: verzegelde rapporten met echte GPS-gegevens, tijdgestempeld fotobewijs en documentatie die iedereen onafhankelijk kan verifiëren, zonder vertrouwen, zonder geschillen.",
     "hero_cta_primary": "30-minuten demo boeken",
     "hero_cta_secondary": "Sectoren ontdekken",
     "trust_gdpr": "AVG-conform",
@@ -107,11 +107,11 @@
     ],
     "report_section_title": "Het rapport. Geen samenvatting. Een bewijs.",
     "report_section_subtitle": "Elk GeoTapp-rapport wordt automatisch gegenereerd uit echte veldgegevens.",
-    "report_section_body": "GPS-tijdregistraties, foto's met tijdstempel, operationele notities. Het systeem brengt een cryptografisch zegel aan waardoor elke wijziging detecteerbaar is. Het resultaat is geen document om naar de klant te sturen — het is een bewijs dat de klant zelf kan verifiëren.",
-    "report_feature_1": "Niet wijzigbaar na aanmaak — elke wijziging is detecteerbaar",
-    "report_feature_2": "Verifieerbaar zonder account — door iedereen, zelfstandig",
+    "report_section_body": "GPS-tijdregistraties, foto's met tijdstempel, operationele notities. Het systeem brengt een cryptografisch zegel aan waardoor elke wijziging detecteerbaar is. Het resultaat is geen document om naar de klant te sturen, het is een bewijs dat de klant zelf kan verifiëren.",
+    "report_feature_1": "Niet wijzigbaar na aanmaak, elke wijziging is detecteerbaar",
+    "report_feature_2": "Verifieerbaar zonder account, door iedereen, zelfstandig",
     "report_feature_3": "GPS- en fotogegevens geïntegreerd en onscheidbaar",
-    "report_feature_4": "Automatisch gegenereerd — geen handmatige invulling",
+    "report_feature_4": "Automatisch gegenereerd, geen handmatige invulling",
     "report_cta": "Zie hoe uw klant zelf verifieert",
     "hero_sectors_prefix": "Ideaal voor",
     "hero_sectors_pulizie": "schoonmaakbedrijven",
@@ -180,8 +180,8 @@
       "title": "U hoeft niet dat ze u vertrouwen.",
       "subtitle": "De klant heeft het rapport. Hij verifieert het zelf, zonder GeoTapp te openen. Als de gegevens overeenkomen met het echte werk, houdt het zegel stand. Als iemand het document heeft gewijzigd, breekt het zegel. Geen beroep.",
       "features": {
-        "integrity": "<strong>Niet-aanpasbare gegevens:</strong> Het rapport wordt gegenereerd op echte veldgegevens en vergrendeld. Elke wijziging maakt het ongeldig — zonder beroep.",
-        "independent": "<strong>Autonome verificatie:</strong> Iedereen met het rapport kan de authenticiteit controleren — geen account, geen platformtoegang."
+        "integrity": "<strong>Niet-aanpasbare gegevens:</strong> Het rapport wordt gegenereerd op echte veldgegevens en vergrendeld. Elke wijziging maakt het ongeldig, zonder beroep.",
+        "independent": "<strong>Autonome verificatie:</strong> Iedereen met het rapport kan de authenticiteit controleren, geen account, geen platformtoegang."
       },
       "link": "Ontdek GeoTapp Verifier"
     },
@@ -204,7 +204,7 @@
         },
         {
           "title": "Verdedigbaar bewijs over tijd",
-          "desc": "Elk rapport wordt vergrendeld op echte veldgegevens — niet wijzigbaar na aanmaak. Geschil? De data zijn er. Door iedereen verifieerbaar. Altijd."
+          "desc": "Elk rapport wordt vergrendeld op echte veldgegevens, niet wijzigbaar na aanmaak. Geschil? De data zijn er. Door iedereen verifieerbaar. Altijd."
         }
       ]
     },
@@ -215,12 +215,12 @@
       "pricing_link": "Zie plannen en prijzen →"
     },
     "settori": {
-      "title": "Verifieerbare documentatie voor elke sector — GeoTapp-oplossingen",
-      "subtitle": "Kies uw sector om te zien hoe GeoTapp werkbewijzen genereert — te tonen aan de klant bij een geschil.",
+      "title": "Verifieerbare documentatie voor elke sector - GeoTapp-oplossingen",
+      "subtitle": "Kies uw sector om te zien hoe GeoTapp werkbewijzen genereert, te tonen aan de klant bij een geschil.",
       "see_all": "Alle ondersteunde sectoren bekijken",
       "installatori": {
         "name": "Installateurs",
-        "desc": "Elektriciens, Loodgieters, Installateurs. Elke opdracht gedocumenteerd met GPS en foto's — onvervalsbare data, controleerbaar door de klant.",
+        "desc": "Elektriciens, Loodgieters, Installateurs. Elke opdracht gedocumenteerd met GPS en foto's, onvervalsbare data, controleerbaar door de klant.",
         "cta": "Elke opdracht bewijzen"
       },
       "sicurezza": {
@@ -230,17 +230,17 @@
       },
       "pulizie": {
         "name": "Schoonmaak",
-        "desc": "Schoonmaakbedrijven, Facility, Multiservice. Elke ronde gedocumenteerd en controleerbaar door de opdrachtgever — nul geschillen.",
+        "desc": "Schoonmaakbedrijven, Facility, Multiservice. Elke ronde gedocumenteerd en controleerbaar door de opdrachtgever, nul geschillen.",
         "cta": "Geschillen vermijden"
       },
       "elettricisti": {
         "name": "Elektriciens",
-        "desc": "Elektrische installaties, schakelkasten, bedrading. Elke klus vastgelegd met GPS en foto's — manipulatiebestendig bewijs om elk geschil te sluiten.",
+        "desc": "Elektrische installaties, schakelkasten, bedrading. Elke klus vastgelegd met GPS en foto's, manipulatiebestendig bewijs om elk geschil te sluiten.",
         "cta": "Documenteer elke klus"
       },
       "idraulici": {
         "name": "Loodgieters",
-        "desc": "Sanitair, verwarming, ketels. GPS werkbonnen met voor-en-na foto's — geen geschillen over uitgevoerd werk.",
+        "desc": "Sanitair, verwarming, ketels. GPS werkbonnen met voor-en-na foto's, geen geschillen over uitgevoerd werk.",
         "cta": "Bewijs elke klus"
       }
     },
@@ -252,7 +252,7 @@
     },
     "demo_banner": {
       "badge": "Echt voorbeeld",
-      "title": "Gecertificeerd rapport — download en verifieer",
+      "title": "Gecertificeerd rapport, download en verifieer",
       "field_operator": "Medewerker",
       "field_intervention": "Interventie",
       "field_intervention_value": "Vervanging van de schakelkast",
@@ -488,7 +488,7 @@
     "hq_city": "100% online, klanten in Italië en de EU",
     "hq_note": "Geen publiek kantoor: support en onboarding op afstand.",
     "privacy_note": "Door dit formulier te verzenden gaat u akkoord met ons Privacybeleid.",
-    "map_title": "Onze locatie — Trenzano (BS), Italië",
+    "map_title": "Onze locatie - Trenzano (BS), Italië",
     "success": "Bericht succesvol verzonden. We nemen zo snel mogelijk contact met u op.",
     "error": "Fout bij verzenden. Probeer het later opnieuw.",
     "sending": "Verzenden...",
@@ -509,7 +509,7 @@
   },
   "product_pages": {
     "flow": {
-      "hero_badge": "GeoTapp Flow — Beheer van buitendienstoperaties",
+      "hero_badge": "GeoTapp Flow - Beheer van buitendienstoperaties",
       "hero_title": "GeoTapp Flow.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600\">Operationeel Beheer.</span>",
       "hero_subtitle": "Het operationele centrum voor klanten, projecten, teams en administratie in één omgeving. Flow is het platform waarop ook TimeTracker draait.",
       "visual_placeholder": "OPERATIEPANEEL",
@@ -542,7 +542,7 @@
         "ledger-prime": {
           "name": "Werkbonnen en facturering",
           "short": "Genereer gestructureerde werkbonnen van elke werkbeurt. Exporteer documentatie en ondersteun facturering met echte veldgegevens.",
-          "full": "### Van werk naar werkbon, op een ordelijke manier.\n\nHandmatige facturering is traag en vaak onvolledig.\n**Werkbonnen en facturering** sluit de operationele cyclus.\n\n#### Gestructureerde werkbonnen\n\nElke voltooide interventie genereert documentatie door tijdstempels, foto's en notities uit het veld te verzamelen.\nGeen gegevens handmatig invoeren — alles komt van TimeTracker.\n\n#### Ondersteuning bij facturering\n\nEchte werkbeurtgegevens ondersteunen nauwkeurigere offertes en facturen.\nMinder fouten, minder geschillen, snellere administratieve cyclus."
+          "full": "### Van werk naar werkbon, op een ordelijke manier.\n\nHandmatige facturering is traag en vaak onvolledig.\n**Werkbonnen en facturering** sluit de operationele cyclus.\n\n#### Gestructureerde werkbonnen\n\nElke voltooide interventie genereert documentatie door tijdstempels, foto's en notities uit het veld te verzamelen.\nGeen gegevens handmatig invoeren, alles komt van TimeTracker.\n\n#### Ondersteuning bij facturering\n\nEchte werkbeurtgegevens ondersteunen nauwkeurigere offertes en facturen.\nMinder fouten, minder geschillen, snellere administratieve cyclus."
         },
         "quantum-logistics": {
           "name": "Interventiekalender",
@@ -577,7 +577,7 @@
       }
     },
     "app": {
-      "hero_badge": "GeoTapp TimeTracker — App voor buitendienstmonteurs",
+      "hero_badge": "GeoTapp TimeTracker - App voor buitendienstmonteurs",
       "hero_title": "GeoTapp TimeTracker.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600\">De buitendienst in uw zak.</span>",
       "hero_subtitle": "De mobiele app die monteurs gebruiken om activiteit te registreren, bewijs te verzamelen en de operationele lijn te bewaken rechtstreeks vanuit het veld. Beschikbaar op Android en iOS.",
       "visual_placeholder": "VELDINTERFACE",
@@ -678,7 +678,7 @@
   "trial": {
     "page_title": "Start uw gratis proefperiode van 14 dagen",
     "page_subtitle": "Volledige toegang tot alle GeoTapp Flow-modules gedurende 14 dagen. Geen creditcard, geen verplichting. Op elk moment opzegbaar.",
-    "badge": "Gratis proefperiode — 14 dagen",
+    "badge": "Gratis proefperiode, 14 dagen",
     "form_title": "Maak uw account aan",
     "form_company": "Bedrijfsnaam",
     "form_company_placeholder": "Bijv. De Vries Installaties BV",
@@ -690,9 +690,9 @@
     "form_fullname_placeholder": "Bijv. Jan de Vries",
     "form_plan": "GeoTapp Flow-abonnement",
     "form_plan_note": "Het aantal gebruikers van het plan verwijst naar GeoTapp Flow (kantoorbeheer / CRM). GeoTapp Timetracker-licenties voor buitendienstmedewerkers zijn een apart abonnement, met een maximum inbegrepen afhankelijk van het gekozen plan.",
-    "plan_solo": "Solo — 1 Flow-gebruiker",
-    "plan_team": "Team — tot 5 Flow-gebruikers",
-    "plan_business": "Business — onbeperkt Flow-gebruikers",
+    "plan_solo": "Solo, 1 Flow-gebruiker",
+    "plan_team": "Team, tot 5 Flow-gebruikers",
+    "plan_business": "Business, onbeperkt Flow-gebruikers",
     "form_seats": "Timetracker-licenties (optioneel)",
     "form_seats_hint": "Apart abonnement voor buitendienstmedewerkers (mobiele app). Limiet inbegrepen in plan: Solo max 2, Team max 5, Business onbeperkt. U kunt licenties aanpassen na activering.",
     "form_submit": "Start de proefperiode",
@@ -756,7 +756,7 @@
     "cosa_vedrai": [
       {
         "title": "GPS inklokken in actie",
-        "desc": "Hoe de technicus incheckt via de mobiele app en hoe het kantoor de geverifieerde locatie ziet — zonder continue tracking."
+        "desc": "Hoe de technicus incheckt via de mobiele app en hoe het kantoor de geverifieerde locatie ziet, zonder continue tracking."
       },
       {
         "title": "Verifieerbare rapporten",
@@ -774,7 +774,7 @@
       },
       {
         "q": "Is voorbereiding nodig?",
-        "a": "Nee. Breng gewoon uw concrete situatie mee — hoeveel medewerkers u heeft en welke problemen u vandaag ervaart met uren of rapporten."
+        "a": "Nee. Breng gewoon uw concrete situatie mee, hoeveel medewerkers u heeft en welke problemen u vandaag ervaart met uren of rapporten."
       },
       {
         "q": "Is de demo gratis?",
@@ -799,7 +799,7 @@
     "success_title": "Aanvraag ontvangen!",
     "success_desc": "We nemen binnen 1 werkdag contact met u op om de demo in te plannen.",
     "error_message": "Fout bij verzenden. Probeer het later opnieuw.",
-    "badge": "Demo GeoTapp — 30 Minuten",
+    "badge": "Demo GeoTapp, 30 Minuten",
     "page_subtitle": "We laten u zien hoe GeoTapp geschillen over uren elimineert en elke opdracht gedocumenteerd en verifieerbaar maakt.",
     "form_title": "Uw gegevens",
     "urgent_contact": "Dringende vragen? Schrijf naar",
@@ -848,7 +848,7 @@
       "Het was 2024. Mike Petraroli, onze oprichter, werkte als werknemer en had een schijnbaar triviaal maar ongelooflijk kostbaar probleem: <strong>zijn eigen werk bewijzen.</strong>",
       "Aan het einde van de maand klopten de urencijfers nooit. Klussen die onderweg tussen klanten waren gedaan werden vergeten. Papier raakte kwijt, WhatsApp-berichten raakten begraven. Het was een stille ader van verspild tijd en geld.",
       "Hij zocht een oplossing. Hij vond alleen complexe, dure software vol nutteloze grafieken en weinig inhoud. Software gemaakt door mensen die nooit een prikkaart hadden gestempeld of een factuur hadden uitgeschreven vanuit een bestelbus.",
-      "Dus besloot Mike zelf het gereedschap te bouwen dat hij had gewild: eenvoudig, mobiel, met verifieerbaar bewijs. Niet voor investeerders — voor bedrijven zoals het zijne."
+      "Dus besloot Mike zelf het gereedschap te bouwen dat hij had gewild: eenvoudig, mobiel, met verifieerbaar bewijs. Niet voor investeerders, voor bedrijven zoals het zijne."
     ],
     "values_title": "Onze waarden",
     "values": [
@@ -913,7 +913,7 @@
     "cta_desc": "Geen spam, alleen waardevolle updates over het product en de sector.",
     "cta_btn": "Neem contact op",
     "schema_desc": "Gidsen en inzichten over certificering van veldwerk, teambeheer, AVG en geolocatie.",
-    "meta_title": "Blog | GeoTapp — Verificatie van veldwerk",
+    "meta_title": "Blog | GeoTapp - Verificatie van veldwerk",
     "meta_desc": "Gidsen, inzichten en bronnen over teambeheer, certificering van interventies, AVG en geolocatie. Van het GeoTapp-team.",
     "cat_all": "Alle",
     "toc_title": "Inhoud",
@@ -931,7 +931,7 @@
     "next_step_cta": "Meer informatie"
   },
   "roi": {
-    "meta_title": "GeoTapp ROI-Calculator — Ontdek uw echte besparingen",
+    "meta_title": "GeoTapp ROI-Calculator - Ontdek uw echte besparingen",
     "meta_desc": "Bereken in 2 minuten hoeveel u bespaart met GeoTapp: minder administratie, nul geschillen, productievere medewerkers.",
     "hero_title": "Bereken uw ROI met GeoTapp",
     "hero_subtitle": "Voer uw bedrijfsgegevens in en ontdek hoeveel u jaarlijks kunt besparen.",
@@ -1021,19 +1021,19 @@
     "title": "Power Under the Hood.",
     "subtitle": "We bouwen geen speelgoed. GeoTapp is een enterprise platform gebouwd om te schalen. Dit zijn de technologieën die de magie mogelijk maken.",
     "gps_title": "GPS-tracking & Geografische Kaarten",
-    "gps_desc": "Weet waar je team is, in realtime. Onze live kaart toont elke inklok met GPS-coördinaten, geofencing-validatie en anti-spoofing-bescherming. Managers zien in één oogopslag wie op locatie is — geen telefoontjes, geen giswerk.",
+    "gps_desc": "Weet waar je team is, in realtime. Onze live kaart toont elke inklok met GPS-coördinaten, geofencing-validatie en anti-spoofing-bescherming. Managers zien in één oogopslag wie op locatie is, geen telefoontjes, geen giswerk.",
     "offline_title": "Offline-First Architecture",
-    "offline_desc": "Verbinding valt weg, werk niet. We hebben een lokaal gesynchroniseerde database (CRDT) gebouwd die in de app zelf leeft. Uw technici kunnen werken in een ondergrondse bunker — zodra ze een glimp hemel zien, synchroniseert de data stilletjes met de cloud.",
+    "offline_desc": "Verbinding valt weg, werk niet. We hebben een lokaal gesynchroniseerde database (CRDT) gebouwd die in de app zelf leeft. Uw technici kunnen werken in een ondergrondse bunker, zodra ze een glimp hemel zien, synchroniseert de data stilletjes met de cloud.",
     "encryption_title": "Military-Grade Encryption",
-    "encryption_desc": "Slaap gerust. We gebruiken AES-256-versleuteling in rust en TLS 1.3 in transit. Zelfs als een aanvaller uw data zou onderscheppen, ziet hij niets dan witte ruis. Privacy is geen juridisch vinkje — het is wiskunde.",
+    "encryption_desc": "Slaap gerust. We gebruiken AES-256-versleuteling in rust en TLS 1.3 in transit. Zelfs als een aanvaller uw data zou onderscheppen, ziet hij niets dan witte ruis. Privacy is geen juridisch vinkje, het is wiskunde.",
     "realtime_title": "Real-Time WebSocket",
     "realtime_desc": "Geen F5 meer nodig. Dankzij WebSockets reist informatie onmiddellijk. Als een technicus in Rotterdam een ticket sluit, ziet de manager in Amsterdam het stipje in diezelfde milliseconde groen worden. Alsof je overal tegelijk bent.",
     "cms_title": "Headless CMS Integration",
-    "cms_desc": "Content is vloeibaar. Onze headless-architectuur ontkoppelt data van presentatie. Dat betekent: publiceer een blogpost, push hem naar de mobiele app en verstuur hem via nieuwsbrief — met één klik.",
+    "cms_desc": "Content is vloeibaar. Onze headless-architectuur ontkoppelt data van presentatie. Dat betekent: publiceer een blogpost, push hem naar de mobiele app en verstuur hem via nieuwsbrief, met één klik.",
     "datalake_title": "Scalable Data Lake",
-    "datalake_desc": "Van 100 naar 100 miljoen records zonder moeite. We gebruiken gepartitioneerde PostgreSQL om enorme datavolumes te verwerken zonder vertraging. Uw geschiedenis is waardevol — we bewaren hem voor altijd, direct toegankelijk.",
+    "datalake_desc": "Van 100 naar 100 miljoen records zonder moeite. We gebruiken gepartitioneerde PostgreSQL om enorme datavolumes te verwerken zonder vertraging. Uw geschiedenis is waardevol, we bewaren hem voor altijd, direct toegankelijk.",
     "cdn_title": "Global CDN Edge",
-    "cdn_desc": "Snelheid is geografisch. Onze statische assets worden gerepliceerd over 300+ datacenters wereldwijd. Of uw klant nu in New York of Tokio zit — uw site laadt alsof de server in de kamer ernaast staat."
+    "cdn_desc": "Snelheid is geografisch. Onze statische assets worden gerepliceerd over 300+ datacenters wereldwijd. Of uw klant nu in New York of Tokio zit, uw site laadt alsof de server in de kamer ernaast staat."
   },
   "kairos": {
     "subtitle": "Uw GeoTapp-assistent",

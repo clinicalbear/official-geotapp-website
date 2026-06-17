@@ -2,14 +2,14 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App para Canalizadores e Técnicos AVAC | GeoTapp — GPS',
+    title: 'App para Canalizadores e Técnicos AVAC | GeoTapp - GPS',
     description: 'GeoTapp é a app para canalizadores e técnicos de aquecimento: relatórios GPS verificados, fotos de instalações e registos invioláveis. Encerre disputas com provas reais. Experimente grátis.',
   },
   hero: {
     badge: 'App para Canalizadores, Técnicos AVAC e Aquecimento',
     h1_line1: 'App para canalizadores e técnicos AVAC:',
     h1_line2: 'relatórios GPS, provas fotográficas e zero disputas.',
-    subtitle: 'GeoTapp regista cada intervenção de canalização e aquecimento com GPS, fotos e carimbos de data/hora verificáveis. O cliente contesta? Mostre o relatório — sem discussão. Os seus técnicos estão protegidos, as suas faturas também.',
+    subtitle: 'GeoTapp regista cada intervenção de canalização e aquecimento com GPS, fotos e carimbos de data/hora verificáveis. O cliente contesta? Mostre o relatório, sem discussão. Os seus técnicos estão protegidos, as suas faturas também.',
     cta_primary: 'Começar grátis',
     cta_note: 'Sem compromisso. Resposta em 12 horas úteis.',
   },
@@ -32,7 +32,7 @@ const content: SettoreContent = {
   },
   workflow: {
     title: 'Como funciona em três passos',
-    subtitle: 'Da intervenção ao escritório — sem telefonemas.',
+    subtitle: 'Da intervenção ao escritório, sem telefonemas.',
     steps: [
       {
         title: 'O técnico regista a intervenção',
@@ -57,7 +57,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Fotos seladas antes e depois',
-        desc: 'Imagens ligadas ao GPS e carimbo de data/hora — invioláveis.',
+        desc: 'Imagens ligadas ao GPS e carimbo de data/hora, invioláveis.',
       },
       {
         title: 'Relatórios automáticos',

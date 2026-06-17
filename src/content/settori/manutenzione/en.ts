@@ -2,7 +2,7 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'Maintenance Team Management App | GeoTapp — GPS Tracking & Proof of Service',
+    title: 'Maintenance Team Management App | GeoTapp - GPS Tracking & Proof of Service',
     description:
       'Manage maintenance crews with GPS: jobs, shifts, proof of service. Full history per asset or client site. Try GeoTapp free.',
   },
@@ -12,7 +12,7 @@ const content: SettoreContent = {
     h1_line1: 'Your maintenance crew,',
     h1_line2: 'always under control.',
     subtitle:
-      'Track jobs, schedule shifts and document every visit with real GPS and photo evidence. Full history per asset and client — no manual data entry.',
+      'Track jobs, schedule shifts and document every visit with real GPS and photo evidence. Full history per asset and client, no manual data entry.',
     cta_primary: 'Try GeoTapp free for 14 days',
     cta_note: 'No commitment. No credit card required.',
   },
@@ -22,7 +22,7 @@ const content: SettoreContent = {
     items: [
       {
         title: 'How do you document periodic maintenance visits?',
-        desc: 'Automatic report with GPS, hours and photos for every visit. Full history, downloadable — no manual input required.',
+        desc: 'Automatic report with GPS, hours and photos for every visit. Full history, downloadable, no manual input required.',
       },
       {
         title: 'Do technicians actually arrive on time?',
@@ -41,7 +41,7 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'Technician clocks in with GPS on arrival',
-        desc: 'Opens the job from their smartphone. GeoTapp records real GPS coordinates, timestamp and photos — fully automatic, tamper-proof.',
+        desc: 'Opens the job from their smartphone. GeoTapp records real GPS coordinates, timestamp and photos, fully automatic, tamper-proof.',
       },
       {
         title: 'Hours and job details are logged automatically',
@@ -49,7 +49,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Client receives a digitally signed report',
-        desc: 'At the end of the job, the system generates a report with GPS, hours and digital signature. The client verifies it independently — no access to your system needed.',
+        desc: 'At the end of the job, the system generates a report with GPS, hours and digital signature. The client verifies it independently, no access to your system needed.',
       },
     ],
   },
@@ -63,7 +63,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Maintenance history per asset',
-        desc: 'Every job is linked to the site or asset. Full history is searchable and downloadable — for you and for the client.',
+        desc: 'Every job is linked to the site or asset. Full history is searchable and downloadable, for you and for the client.',
       },
       {
         title: 'Automated tamper-proof reports',
@@ -97,11 +97,11 @@ const content: SettoreContent = {
     items: [
       {
         q: 'How do you document periodic maintenance visits?',
-        a: 'GeoTapp automatically generates a report for every visit with GPS, hours and photos. Full history, downloadable per asset or client site — no manual input.',
+        a: 'GeoTapp automatically generates a report for every visit with GPS, hours and photos. Full history, downloadable per asset or client site, no manual input.',
       },
       {
         q: 'Do technicians actually arrive on time?',
-        a: 'With GeoTapp you can verify arrival time and GPS position of every technician in real time. No phone call needed — the data is already in your dashboard.',
+        a: 'With GeoTapp you can verify arrival time and GPS position of every technician in real time. No phone call needed, the data is already in your dashboard.',
       },
       {
         q: 'How do I prove the maintenance service was delivered?',
@@ -117,7 +117,7 @@ const content: SettoreContent = {
       },
       {
         q: 'How much does GeoTapp cost for a maintenance company?',
-        a: 'Plans start from a few euros per worker per month. Try free for 14 days — no commitment.',
+        a: 'Plans start from a few euros per worker per month. Try free for 14 days, no commitment.',
       },
     ],
   },
@@ -142,7 +142,7 @@ const content: SettoreContent = {
     {
       question: 'How do you document periodic maintenance visits?',
       answer:
-        'GeoTapp automatically generates a report for every visit with GPS, hours and photos. Full history, downloadable per asset or client site — no manual input.',
+        'GeoTapp automatically generates a report for every visit with GPS, hours and photos. Full history, downloadable per asset or client site, no manual input.',
     },
     {
       question: 'Do technicians actually arrive on time?',

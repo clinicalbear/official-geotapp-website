@@ -9,7 +9,7 @@ const content: SettoreContent = {
     badge: 'App for installers, technicians and service teams',
     h1_line1: 'Every job documented,',
     h1_line2: 'every hour tracked.',
-    subtitle: 'For electrical, plumbing, HVAC and mechanical installers. GeoTapp connects Flow + TimeTracker to track GPS, hours and photos for every job — from the van to the office without phone calls.',
+    subtitle: 'For electrical, plumbing, HVAC and mechanical installers. GeoTapp connects Flow + TimeTracker to track GPS, hours and photos for every job, from the van to the office without phone calls.',
     cta_primary: 'Try GeoTapp free for 14 days',
     cta_note: 'No commitment. No credit card required.',
   },
@@ -18,7 +18,7 @@ const content: SettoreContent = {
     items: [
       {
         title: 'Clients dispute the hours worked',
-        desc: 'GPS clock-ins timestamped as irrefutable proof. The data is certified at the moment of the job — not editable afterwards.',
+        desc: 'GPS clock-ins timestamped as irrefutable proof. The data is certified at the moment of the job, not editable afterwards.',
       },
       {
         title: 'Chasing technicians for updates',
@@ -36,7 +36,7 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'The technician clocks in via GPS at the start',
-        desc: 'Opens the job from their smartphone. GeoTapp records real GPS coordinates, timestamp and photos — fully automatic, tamper-proof.',
+        desc: 'Opens the job from their smartphone. GeoTapp records real GPS coordinates, timestamp and photos, fully automatic, tamper-proof.',
       },
       {
         title: 'Hours are recorded automatically per job',
@@ -60,7 +60,7 @@ const content: SettoreContent = {
       {
         label: 'Who can verify',
         competitor: 'Your office only',
-        geotapp: 'You, the client, a third party — independently',
+        geotapp: 'You, the client, a third party, independently',
       },
       {
         label: 'In case of dispute',
@@ -91,7 +91,7 @@ const content: SettoreContent = {
       'The client disputes? Open the report: photos, GPS, timestamp, digital signature.',
       'You send it. The dispute ends in a minute.',
       'Payment is safe. The technician is protected.',
-      'At month-end the export is already done — hours and jobs aggregated automatically.',
+      'At month-end the export is already done, hours and jobs aggregated automatically.',
     ],
   },
   features: {
@@ -103,7 +103,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Sealed photo evidence',
-        desc: 'The technician takes photos from the app. Every image is linked to the job with GPS and timestamp — tamper-proof after generation.',
+        desc: 'The technician takes photos from the app. Every image is linked to the job with GPS and timestamp, tamper-proof after generation.',
       },
       {
         title: 'Multi-site job management',
@@ -126,7 +126,7 @@ const content: SettoreContent = {
   testimonial: {
     quote: 'Clients no longer dispute the hours. We open the report with GPS and photos and the discussion ends right there.',
     author: 'Robert F.',
-    role: 'Owner, mechanical & electrical contractor — 20 technicians',
+    role: 'Owner, mechanical & electrical contractor, 20 technicians',
   },
   faq: {
     title: 'Frequently asked questions',
@@ -142,7 +142,7 @@ const content: SettoreContent = {
       },
       {
         q: 'How do I speed up invoicing for completed jobs?',
-        a: 'GeoTapp automatically generates the export of hours and jobs ready for your accounting software. No manual entry, no risk of errors — invoicing becomes a single click.',
+        a: 'GeoTapp automatically generates the export of hours and jobs ready for your accounting software. No manual entry, no risk of errors, invoicing becomes a single click.',
       },
     ],
   },
@@ -169,7 +169,7 @@ const content: SettoreContent = {
     },
     {
       question: 'How do I speed up invoicing for completed jobs?',
-      answer: 'GeoTapp automatically generates the export of hours and jobs ready for your accounting software. No manual entry, no risk of errors — invoicing becomes a single click.',
+      answer: 'GeoTapp automatically generates the export of hours and jobs ready for your accounting software. No manual entry, no risk of errors, invoicing becomes a single click.',
     },
   ],
 };

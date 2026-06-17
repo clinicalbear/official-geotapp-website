@@ -36,17 +36,17 @@ const SETTORE_CONFIG: Record<string, {
   pulizie: {
     categoryId: 9,
     labels: {
-      it: { title: 'Gestione presenze imprese di pulizie: guida e risorse — GeoTapp', description: 'Come gestire presenze, turni e interventi nelle imprese di pulizie con timbratura GPS. Guide pratiche per responsabili operativi.', heading: 'Gestione presenze nelle imprese di pulizie' },
-      en: { title: 'GPS attendance tracking for cleaning companies: guides — GeoTapp', description: 'How to manage attendance, shifts and jobs in cleaning companies with GPS tracking. Practical guides for operations managers.', heading: 'Attendance tracking for cleaning companies' },
-      de: { title: 'Zeiterfassung für Reinigungsunternehmen: Leitfäden — GeoTapp', description: 'GPS-Zeiterfassung und Einsatzverwaltung für Reinigungsunternehmen. Praxisnahe Leitfäden für Betriebsleiter.', heading: 'Zeiterfassung in Reinigungsunternehmen' },
-      fr: { title: 'Gestion des présences en entreprise de nettoyage : guide — GeoTapp', description: 'Comment gérer les présences, les équipes et les interventions dans les entreprises de nettoyage avec le pointage GPS.', heading: 'Gestion des présences en entreprise de nettoyage' },
-      es: { title: 'Control de presencia en empresas de limpieza: guía — GeoTapp', description: 'Cómo gestionar presencias, turnos e intervenciones en empresas de limpieza con fichaje GPS. Guías prácticas.', heading: 'Control de presencia en empresas de limpieza' },
-      pt: { title: 'Recursos para empresas de limpeza — GeoTapp', description: 'Artigos e guias para gerir presenças e intervenções em empresas de limpeza.', heading: 'Recursos para empresas de limpeza' },
-      nl: { title: 'Bronnen voor schoonmaakbedrijven — GeoTapp', description: 'Artikelen en gidsen voor het beheer van aanwezigheid en opdrachten bij schoonmaakbedrijven.', heading: 'Bronnen voor schoonmaakbedrijven' },
-      da: { title: 'Ressourcer til rengøringsvirksomheder — GeoTapp', description: 'Artikler og guides til styring af fremmøde og opgaver i rengøringsvirksomheder.', heading: 'Ressourcer til rengøringsvirksomheder' },
-      sv: { title: 'Resurser för städföretag — GeoTapp', description: 'Artiklar och guider för hantering av närvaro och uppdrag i städföretag.', heading: 'Resurser för städföretag' },
-      nb: { title: 'Ressurser for rengjøringsbedrifter — GeoTapp', description: 'Artikler og veiledninger for administrasjon av fremmøte og oppdrag i rengjøringsbedrifter.', heading: 'Ressurser for rengjøringsbedrifter' },
-      ru: { title: 'Ресурсы для клининговых компаний — GeoTapp', description: 'Статьи и руководства по управлению присутствием и заявками в клининговых компаниях.', heading: 'Ресурсы для клининговых компаний' },
+      it: { title: 'Gestione presenze imprese di pulizie: guida e risorse - GeoTapp', description: 'Come gestire presenze, turni e interventi nelle imprese di pulizie con timbratura GPS. Guide pratiche per responsabili operativi.', heading: 'Gestione presenze nelle imprese di pulizie' },
+      en: { title: 'GPS attendance tracking for cleaning companies: guides - GeoTapp', description: 'How to manage attendance, shifts and jobs in cleaning companies with GPS tracking. Practical guides for operations managers.', heading: 'Attendance tracking for cleaning companies' },
+      de: { title: 'Zeiterfassung für Reinigungsunternehmen: Leitfäden - GeoTapp', description: 'GPS-Zeiterfassung und Einsatzverwaltung für Reinigungsunternehmen. Praxisnahe Leitfäden für Betriebsleiter.', heading: 'Zeiterfassung in Reinigungsunternehmen' },
+      fr: { title: 'Gestion des présences en entreprise de nettoyage : guide - GeoTapp', description: 'Comment gérer les présences, les équipes et les interventions dans les entreprises de nettoyage avec le pointage GPS.', heading: 'Gestion des présences en entreprise de nettoyage' },
+      es: { title: 'Control de presencia en empresas de limpieza: guía - GeoTapp', description: 'Cómo gestionar presencias, turnos e intervenciones en empresas de limpieza con fichaje GPS. Guías prácticas.', heading: 'Control de presencia en empresas de limpieza' },
+      pt: { title: 'Recursos para empresas de limpeza - GeoTapp', description: 'Artigos e guias para gerir presenças e intervenções em empresas de limpeza.', heading: 'Recursos para empresas de limpeza' },
+      nl: { title: 'Bronnen voor schoonmaakbedrijven - GeoTapp', description: 'Artikelen en gidsen voor het beheer van aanwezigheid en opdrachten bij schoonmaakbedrijven.', heading: 'Bronnen voor schoonmaakbedrijven' },
+      da: { title: 'Ressourcer til rengøringsvirksomheder - GeoTapp', description: 'Artikler og guides til styring af fremmøde og opgaver i rengøringsvirksomheder.', heading: 'Ressourcer til rengøringsvirksomheder' },
+      sv: { title: 'Resurser för städföretag - GeoTapp', description: 'Artiklar och guider för hantering av närvaro och uppdrag i städföretag.', heading: 'Resurser för städföretag' },
+      nb: { title: 'Ressurser for rengjøringsbedrifter - GeoTapp', description: 'Artikler og veiledninger for administrasjon av fremmøte og oppdrag i rengjøringsbedrifter.', heading: 'Ressurser for rengjøringsbedrifter' },
+      ru: { title: 'Ресурсы для клининговых компаний - GeoTapp', description: 'Статьи и руководства по управлению присутствием и заявками в клининговых компаниях.', heading: 'Ресурсы для клининговых компаний' },
     },
     intro: {
       it: 'Gestire le presenze in un\'impresa di pulizie non è come timbrare in ufficio. I collaboratori sono distribuiti su cantieri diversi, gli orari variano ogni giorno e il cliente finale vuole sempre sapere chi era presente, quando e per quanto tempo. Queste guide raccolgono le soluzioni operative usate dalle imprese di pulizie per risolvere questo problema.',
@@ -65,7 +65,7 @@ const SETTORE_CONFIG: Record<string, {
       it: [
         {
           h2: 'Il problema operativo che rallenta le imprese di pulizie',
-          body: 'Chi gestisce un\'impresa di pulizie con più di 5 collaboratori conosce questi problemi: non sai se il collaboratore è arrivato alle 7:00 o alle 7:45, il cliente ti chiama per sapere se la squadra è stata presente ieri, e i fogli presenze non quadrano mai. Il problema non è la volontà delle persone — è che i sistemi tradizionali non funzionano quando le squadre cambiano cantiere ogni giorno.',
+          body: 'Chi gestisce un\'impresa di pulizie con più di 5 collaboratori conosce questi problemi: non sai se il collaboratore è arrivato alle 7:00 o alle 7:45, il cliente ti chiama per sapere se la squadra è stata presente ieri, e i fogli presenze non quadrano mai. Il problema non è la volontà delle persone, è che i sistemi tradizionali non funzionano quando le squadre cambiano cantiere ogni giorno.',
         },
         {
           h2: 'Come funziona la timbratura GPS per le imprese di pulizie',
@@ -87,11 +87,11 @@ const SETTORE_CONFIG: Record<string, {
       en: [
         {
           h2: 'The operational problem that slows cleaning companies down',
-          body: 'Anyone managing a cleaning company with more than 5 staff knows these problems: you don\'t know if someone arrived at 7:00 or 7:45, a client calls asking if the team was there yesterday, and your timesheets never add up. The issue isn\'t the staff — it\'s that traditional systems don\'t work when teams move between sites every day.',
+          body: 'Anyone managing a cleaning company with more than 5 staff knows these problems: you don\'t know if someone arrived at 7:00 or 7:45, a client calls asking if the team was there yesterday, and your timesheets never add up. The issue isn\'t the staff, it\'s that traditional systems don\'t work when teams move between sites every day.',
         },
         {
           h2: 'How GPS time tracking works for cleaning companies',
-          body: 'GPS time tracking lets staff clock in and out directly from their smartphone, with verified location. No fixed hardware needed — it works on any site. Managers see attendance in real time from a dashboard and can export client reports at month end. GeoTapp TimeTracker adds the ability to send photos of completed work and communicate with the coordinator from the same device.',
+          body: 'GPS time tracking lets staff clock in and out directly from their smartphone, with verified location. No fixed hardware needed, it works on any site. Managers see attendance in real time from a dashboard and can export client reports at month end. GeoTapp TimeTracker adds the ability to send photos of completed work and communicate with the coordinator from the same device.',
           productLink: true,
         },
         {
@@ -116,17 +116,17 @@ const SETTORE_CONFIG: Record<string, {
   installatori: {
     categoryId: 65,
     labels: {
-      it: { title: 'Gestione interventi per installatori e tecnici: guida — GeoTapp', description: 'Come gestire ordini di lavoro, tecnici sul campo e reportistica per aziende di installazione. Guide operative.', heading: 'Gestione interventi per installatori e tecnici' },
-      en: { title: 'Field service management for installers: guides — GeoTapp', description: 'How to manage work orders, field technicians and reporting for installation and service companies.', heading: 'Field service management for installers' },
-      de: { title: 'Außendienstmanagement für Installateure: Leitfäden — GeoTapp', description: 'Auftragsverwaltung, Außendiensttechniker und Berichterstattung für Installations- und Servicebetriebe.', heading: 'Außendienstmanagement für Installateure' },
-      fr: { title: 'Gestion des interventions pour installateurs : guide — GeoTapp', description: 'Comment gérer les ordres de travail, les techniciens terrain et la reportique pour les entreprises d\'installation.', heading: 'Gestion des interventions pour installateurs' },
-      es: { title: 'Gestión de intervenciones para instaladores: guía — GeoTapp', description: 'Cómo gestionar órdenes de trabajo, técnicos de campo y reportes para empresas de instalación.', heading: 'Gestión de intervenciones para instaladores' },
-      pt: { title: 'Recursos para instaladores — GeoTapp', description: 'Artigos e guias para instaladores e empresas com técnicos de campo.', heading: 'Recursos para instaladores' },
-      nl: { title: 'Bronnen voor installateurs — GeoTapp', description: 'Artikelen en gidsen voor installateurs en bedrijven met buitendiensttechnici.', heading: 'Bronnen voor installateurs' },
-      da: { title: 'Ressourcer til installatører — GeoTapp', description: 'Artikler og guides til installatører og virksomheder med serviceteknikere.', heading: 'Ressourcer til installatører' },
-      sv: { title: 'Resurser för installatörer — GeoTapp', description: 'Artiklar och guider för installatörer och företag med fälttekniker.', heading: 'Resurser för installatörer' },
-      nb: { title: 'Ressurser for installatører — GeoTapp', description: 'Artikler og veiledninger for installatører og bedrifter med feltservice.', heading: 'Ressurser for installatører' },
-      ru: { title: 'Ресурсы для монтажников — GeoTapp', description: 'Статьи и руководства для монтажников и выездных технических служб.', heading: 'Ресурсы для монтажников' },
+      it: { title: 'Gestione interventi per installatori e tecnici: guida - GeoTapp', description: 'Come gestire ordini di lavoro, tecnici sul campo e reportistica per aziende di installazione. Guide operative.', heading: 'Gestione interventi per installatori e tecnici' },
+      en: { title: 'Field service management for installers: guides - GeoTapp', description: 'How to manage work orders, field technicians and reporting for installation and service companies.', heading: 'Field service management for installers' },
+      de: { title: 'Außendienstmanagement für Installateure: Leitfäden - GeoTapp', description: 'Auftragsverwaltung, Außendiensttechniker und Berichterstattung für Installations- und Servicebetriebe.', heading: 'Außendienstmanagement für Installateure' },
+      fr: { title: 'Gestion des interventions pour installateurs : guide - GeoTapp', description: 'Comment gérer les ordres de travail, les techniciens terrain et la reportique pour les entreprises d\'installation.', heading: 'Gestion des interventions pour installateurs' },
+      es: { title: 'Gestión de intervenciones para instaladores: guía - GeoTapp', description: 'Cómo gestionar órdenes de trabajo, técnicos de campo y reportes para empresas de instalación.', heading: 'Gestión de intervenciones para instaladores' },
+      pt: { title: 'Recursos para instaladores - GeoTapp', description: 'Artigos e guias para instaladores e empresas com técnicos de campo.', heading: 'Recursos para instaladores' },
+      nl: { title: 'Bronnen voor installateurs - GeoTapp', description: 'Artikelen en gidsen voor installateurs en bedrijven met buitendiensttechnici.', heading: 'Bronnen voor installateurs' },
+      da: { title: 'Ressourcer til installatører - GeoTapp', description: 'Artikler og guides til installatører og virksomheder med serviceteknikere.', heading: 'Ressourcer til installatører' },
+      sv: { title: 'Resurser för installatörer - GeoTapp', description: 'Artiklar och guider för installatörer och företag med fälttekniker.', heading: 'Resurser för installatörer' },
+      nb: { title: 'Ressurser for installatører - GeoTapp', description: 'Artikler og veiledninger for installatører og bedrifter med feltservice.', heading: 'Ressurser for installatører' },
+      ru: { title: 'Ресурсы для монтажников - GeoTapp', description: 'Статьи и руководства для монтажников и выездных технических служб.', heading: 'Ресурсы для монтажников' },
     },
     intro: {
       it: 'Coordinare tecnici sul campo significa sapere in ogni momento chi è dove, quale intervento ha appena chiuso e cosa è rimasto in sospeso. Con telefonate e messaggi WhatsApp il quadro è sempre incompleto: gli aggiornamenti arrivano in ritardo, le priorità cambiano senza che l\'ufficio lo sappia e la documentazione per il cliente è sempre un problema. Questi articoli raccolgono le pratiche operative più efficaci per aziende con tecnici sul campo.',
@@ -149,7 +149,7 @@ const SETTORE_CONFIG: Record<string, {
         },
         {
           h2: 'Come gestire ordini di lavoro e interventi in tempo reale',
-          body: 'Un sistema di gestione interventi digitale permette di assegnare ordini di lavoro direttamente allo smartphone del tecnico, con priorità, istruzioni e storico del cliente già inclusi. Il tecnico chiude l\'intervento dall\'app, raccoglie la firma del cliente e il report viene generato automaticamente — senza passare dall\'ufficio. GeoTapp Flow è progettato per questo: assegnazione interventi, tracciamento in tempo reale, raccolta firme e reportistica automatica.',
+          body: 'Un sistema di gestione interventi digitale permette di assegnare ordini di lavoro direttamente allo smartphone del tecnico, con priorità, istruzioni e storico del cliente già inclusi. Il tecnico chiude l\'intervento dall\'app, raccoglie la firma del cliente e il report viene generato automaticamente, senza passare dall\'ufficio. GeoTapp Flow è progettato per questo: assegnazione interventi, tracciamento in tempo reale, raccolta firme e reportistica automatica.',
           productLink: true,
         },
         {
@@ -171,7 +171,7 @@ const SETTORE_CONFIG: Record<string, {
         },
         {
           h2: 'How to manage work orders and field jobs in real time',
-          body: 'A digital job management system lets you assign work orders directly to the technician\'s smartphone, complete with priority, instructions, and client history. The technician closes the job from the app, collects the client\'s signature, and the report is generated automatically — no office visit needed. GeoTapp Flow is built for exactly this: job assignment, real-time tracking, signature collection, and automatic reporting.',
+          body: 'A digital job management system lets you assign work orders directly to the technician\'s smartphone, complete with priority, instructions, and client history. The technician closes the job from the app, collects the client\'s signature, and the report is generated automatically, no office visit needed. GeoTapp Flow is built for exactly this: job assignment, real-time tracking, signature collection, and automatic reporting.',
           productLink: true,
         },
         {
@@ -196,17 +196,17 @@ const SETTORE_CONFIG: Record<string, {
   sicurezza: {
     categoryId: 9,
     labels: {
-      it: { title: 'Gestione presenze e tracciabilità per servizi di sicurezza — GeoTapp', description: 'Come gestire agenti, ronde e documentazione nei servizi di sicurezza con GPS in tempo reale.', heading: 'Gestione presenze e tracciabilità nei servizi di sicurezza' },
-      en: { title: 'Attendance tracking and traceability for security services — GeoTapp', description: 'How to manage agents, patrols and documentation in security services with real-time GPS.', heading: 'Attendance tracking for security services' },
-      de: { title: 'Anwesenheitsverfolgung für Sicherheitsdienste — GeoTapp', description: 'GPS-Nachverfolgung von Agenten, Runden und Dokumentation für Sicherheitsunternehmen.', heading: 'Anwesenheit und Nachverfolgbarkeit bei Sicherheitsdiensten' },
-      fr: { title: 'Gestion des présences et traçabilité pour la sécurité — GeoTapp', description: 'Comment gérer agents, rondes et documentation dans les services de sécurité avec GPS en temps réel.', heading: 'Gestion des présences dans les services de sécurité' },
-      es: { title: 'Control de presencia y trazabilidad en servicios de seguridad — GeoTapp', description: 'Cómo gestionar agentes, rondas y documentación en servicios de seguridad con GPS en tiempo real.', heading: 'Control de presencia en servicios de seguridad' },
-      pt: { title: 'Recursos para serviços de segurança — GeoTapp', description: 'Artigos e guias para empresas de segurança e vigilância.', heading: 'Recursos para serviços de segurança' },
-      nl: { title: 'Bronnen voor beveiligingsdiensten — GeoTapp', description: 'Artikelen en gidsen voor beveiligings- en bewakingsbedrijven.', heading: 'Bronnen voor beveiligingsdiensten' },
-      da: { title: 'Ressourcer til sikkerhedstjenester — GeoTapp', description: 'Artikler og guides til sikkerheds- og overvågningsvirksomheder.', heading: 'Ressourcer til sikkerhedstjenester' },
-      sv: { title: 'Resurser för säkerhetstjänster — GeoTapp', description: 'Artiklar och guider för säkerhets- och bevakningsföretag.', heading: 'Resurser för säkerhetstjänster' },
-      nb: { title: 'Ressurser for sikkerhetstjenester — GeoTapp', description: 'Artikler og veiledninger for sikkerhets- og overvåkingsbedrifter.', heading: 'Ressurser for sikkerhetstjenester' },
-      ru: { title: 'Ресурсы для служб безопасности — GeoTapp', description: 'Статьи и руководства для охранных предприятий и служб наблюдения.', heading: 'Ресурсы для служб безопасности' },
+      it: { title: 'Gestione presenze e tracciabilità per servizi di sicurezza - GeoTapp', description: 'Come gestire agenti, ronde e documentazione nei servizi di sicurezza con GPS in tempo reale.', heading: 'Gestione presenze e tracciabilità nei servizi di sicurezza' },
+      en: { title: 'Attendance tracking and traceability for security services - GeoTapp', description: 'How to manage agents, patrols and documentation in security services with real-time GPS.', heading: 'Attendance tracking for security services' },
+      de: { title: 'Anwesenheitsverfolgung für Sicherheitsdienste - GeoTapp', description: 'GPS-Nachverfolgung von Agenten, Runden und Dokumentation für Sicherheitsunternehmen.', heading: 'Anwesenheit und Nachverfolgbarkeit bei Sicherheitsdiensten' },
+      fr: { title: 'Gestion des présences et traçabilité pour la sécurité - GeoTapp', description: 'Comment gérer agents, rondes et documentation dans les services de sécurité avec GPS en temps réel.', heading: 'Gestion des présences dans les services de sécurité' },
+      es: { title: 'Control de presencia y trazabilidad en servicios de seguridad - GeoTapp', description: 'Cómo gestionar agentes, rondas y documentación en servicios de seguridad con GPS en tiempo real.', heading: 'Control de presencia en servicios de seguridad' },
+      pt: { title: 'Recursos para serviços de segurança - GeoTapp', description: 'Artigos e guias para empresas de segurança e vigilância.', heading: 'Recursos para serviços de segurança' },
+      nl: { title: 'Bronnen voor beveiligingsdiensten - GeoTapp', description: 'Artikelen en gidsen voor beveiligings- en bewakingsbedrijven.', heading: 'Bronnen voor beveiligingsdiensten' },
+      da: { title: 'Ressourcer til sikkerhedstjenester - GeoTapp', description: 'Artikler og guides til sikkerheds- og overvågningsvirksomheder.', heading: 'Ressourcer til sikkerhedstjenester' },
+      sv: { title: 'Resurser för säkerhetstjänster - GeoTapp', description: 'Artiklar och guider för säkerhets- och bevakningsföretag.', heading: 'Resurser för säkerhetstjänster' },
+      nb: { title: 'Ressurser for sikkerhetstjenester - GeoTapp', description: 'Artikler og veiledninger for sikkerhets- og overvåkingsbedrifter.', heading: 'Ressurser for sikkerhetstjenester' },
+      ru: { title: 'Ресурсы для служб безопасности - GeoTapp', description: 'Статьи и руководства для охранных предприятий и служб наблюдения.', heading: 'Ресурсы для служб безопасности' },
     },
     intro: {
       it: 'Nelle aziende di sicurezza ogni ronda deve essere documentata, ogni agente deve essere localizzabile e ogni anomalia deve essere segnalata immediatamente. Con sistemi basati su telefonate o report cartacei, la centrale operativa ha sempre un quadro parziale e ritardato. Questi articoli affrontano i temi operativi più rilevanti per responsabili di servizi di sicurezza.',
@@ -225,11 +225,11 @@ const SETTORE_CONFIG: Record<string, {
       it: [
         {
           h2: 'Le sfide operative dei servizi di sicurezza e vigilanza',
-          body: 'Senza un sistema digitale, la centrale operativa non sa in tempo reale se gli agenti sono al posto giusto, se una ronda è stata completata o se c\'è stata un\'anomalia. Il cliente finale non ha prove concrete del servizio erogato — e in caso di contestazione, non c\'è nulla da mostrare. La tracciabilità non è un optional: è il prodotto stesso che le aziende di sicurezza vendono ai loro clienti.',
+          body: 'Senza un sistema digitale, la centrale operativa non sa in tempo reale se gli agenti sono al posto giusto, se una ronda è stata completata o se c\'è stata un\'anomalia. Il cliente finale non ha prove concrete del servizio erogato, e in caso di contestazione, non c\'è nulla da mostrare. La tracciabilità non è un optional: è il prodotto stesso che le aziende di sicurezza vendono ai loro clienti.',
         },
         {
           h2: 'Come funziona la tracciabilità degli agenti di sicurezza',
-          body: 'Un sistema di tracciabilità GPS permette alla centrale di vedere in tempo reale la posizione di ogni agente, le ronde completate e le anomalie segnalate. Gli agenti registrano presenze, eventi e note direttamente dallo smartphone — con foto, timestamp e posizione verificata. GeoTapp TimeTracker è progettata per questo: registrazione presenze con GPS, documentazione ronde e comunicazione istantanea con la centrale.',
+          body: 'Un sistema di tracciabilità GPS permette alla centrale di vedere in tempo reale la posizione di ogni agente, le ronde completate e le anomalie segnalate. Gli agenti registrano presenze, eventi e note direttamente dallo smartphone, con foto, timestamp e posizione verificata. GeoTapp TimeTracker è progettata per questo: registrazione presenze con GPS, documentazione ronde e comunicazione istantanea con la centrale.',
           productLink: true,
         },
         {
@@ -247,11 +247,11 @@ const SETTORE_CONFIG: Record<string, {
       en: [
         {
           h2: 'The operational challenges of security and surveillance services',
-          body: 'Without a digital system, the control center has no real-time view of whether agents are in the right place, whether a patrol has been completed, or whether an incident has occurred. The end client has no concrete proof of service delivered — and in case of dispute, there is nothing to show. Traceability is not an optional feature: it is the actual product security companies sell to their clients.',
+          body: 'Without a digital system, the control center has no real-time view of whether agents are in the right place, whether a patrol has been completed, or whether an incident has occurred. The end client has no concrete proof of service delivered, and in case of dispute, there is nothing to show. Traceability is not an optional feature: it is the actual product security companies sell to their clients.',
         },
         {
           h2: 'How agent tracking works in security services',
-          body: 'A GPS tracking system lets the control center see the real-time position of every agent, completed patrols, and reported incidents. Agents log attendance, events, and notes directly from their smartphone — with photos, timestamps, and verified location. GeoTapp TimeTracker is built for this: GPS attendance logging, patrol documentation, and instant communication with the control center.',
+          body: 'A GPS tracking system lets the control center see the real-time position of every agent, completed patrols, and reported incidents. Agents log attendance, events, and notes directly from their smartphone, with photos, timestamps, and verified location. GeoTapp TimeTracker is built for this: GPS attendance logging, patrol documentation, and instant communication with the control center.',
           productLink: true,
         },
         {
@@ -488,7 +488,7 @@ export default async function RisorseSettorePage({ params }: { params: Promise<P
               <h2 className="text-xl font-bold text-slate-900 mb-3">{section.h2}</h2>
               <p className="text-slate-700 leading-relaxed mb-3 max-w-3xl">
                 {section.body}{section.productLink && (
-                  <> — <Link href={productHref} className="text-blue-600 hover:underline font-medium">{config.product.name}</Link></>
+                  <>, <Link href={productHref} className="text-blue-600 hover:underline font-medium">{config.product.name}</Link></>
                 )}
               </p>
               {section.listItems && (

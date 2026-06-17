@@ -18,7 +18,7 @@ const content: SettoreContent = {
     items: [
       {
         title: '¿Quién estaba en obra y cuándo?',
-        desc: 'Cada fichaje GPS tiene marca de tiempo y está certificado. GeoTapp registra coordenadas reales en el momento del fichaje — no introducidas manualmente. Los datos son verificables por la dirección de obra en todo momento.',
+        desc: 'Cada fichaje GPS tiene marca de tiempo y está certificado. GeoTapp registra coordenadas reales en el momento del fichaje, no introducidas manualmente. Los datos son verificables por la dirección de obra en todo momento.',
       },
       {
         title: '¿Cómo gestionas a los subcontratistas?',
@@ -36,11 +36,11 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'El operario ficha en la entrada de la obra',
-        desc: 'Inicia el turno desde el smartphone. GeoTapp registra coordenadas GPS reales, marca de tiempo y — si es necesario — fotos. Totalmente automático, a prueba de manipulaciones.',
+        desc: 'Inicia el turno desde el smartphone. GeoTapp registra coordenadas GPS reales, marca de tiempo y, si es necesario, fotos. Totalmente automático, a prueba de manipulaciones.',
       },
       {
         title: 'El jefe de obra ve todo en tiempo real',
-        desc: 'Un solo panel para todos los equipos y todas las obras. Quién está presente, dónde y desde cuándo — sin perseguir a nadie por teléfono.',
+        desc: 'Un solo panel para todos los equipos y todas las obras. Quién está presente, dónde y desde cuándo, sin perseguir a nadie por teléfono.',
       },
       {
         title: 'El informe está listo para certificaciones',
@@ -60,7 +60,7 @@ const content: SettoreContent = {
       {
         label: 'Quién puede verificar',
         competitor: 'Solo tu oficina',
-        geotapp: 'Tú, la dirección de obra, un tercero — de forma independiente',
+        geotapp: 'Tú, la dirección de obra, un tercero, de forma independiente',
       },
       {
         label: 'En caso de disputa',
@@ -103,7 +103,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Panel multi-obra',
-        desc: 'Supervisa varias obras desde una sola pantalla. Ve en tiempo real quién está presente, dónde y desde cuándo — para cada obra activa.',
+        desc: 'Supervisa varias obras desde una sola pantalla. Ve en tiempo real quién está presente, dónde y desde cuándo, para cada obra activa.',
       },
       {
         title: 'Informes de avance automáticos',
@@ -111,11 +111,11 @@ const content: SettoreContent = {
       },
       {
         title: 'Seguimiento de subcontratistas',
-        desc: 'Cada equipo — interno o externo — ficha desde el smartphone. El jefe de obra ve a todos en un solo panel sin perseguir a nadie.',
+        desc: 'Cada equipo, interno o externo, ficha desde el smartphone. El jefe de obra ve a todos en un solo panel sin perseguir a nadie.',
       },
       {
         title: 'Pruebas fotográficas selladas',
-        desc: 'Los operarios toman fotos desde la app. Cada imagen está vinculada a la obra con GPS y marca de tiempo — a prueba de manipulaciones tras la generación.',
+        desc: 'Los operarios toman fotos desde la app. Cada imagen está vinculada a la obra con GPS y marca de tiempo, a prueba de manipulaciones tras la generación.',
       },
       {
         title: 'Conformidad RGPD integrada',
@@ -126,7 +126,7 @@ const content: SettoreContent = {
   testimonial: {
     quote: 'Desde que usamos GeoTapp, la dirección de obra ya no nos pide los partes de asistencia. Abrimos el informe y la certificación está lista.',
     author: 'José M.',
-    role: 'Director, empresa constructora — 35 empleados',
+    role: 'Director, empresa constructora, 35 empleados',
   },
   faq: {
     title: 'Preguntas frecuentes',
@@ -134,7 +134,7 @@ const content: SettoreContent = {
     items: [
       {
         q: '¿Quién estaba en obra y cuándo?',
-        a: 'Cada fichaje GPS tiene marca de tiempo y está certificado. GeoTapp registra coordenadas reales en el momento del fichaje — no introducidas manualmente. Los datos son verificables por la dirección de obra en todo momento.',
+        a: 'Cada fichaje GPS tiene marca de tiempo y está certificado. GeoTapp registra coordenadas reales en el momento del fichaje, no introducidas manualmente. Los datos son verificables por la dirección de obra en todo momento.',
       },
       {
         q: '¿Cómo gestionas a los subcontratistas en obra?',
@@ -161,7 +161,7 @@ const content: SettoreContent = {
   schema_faq: [
     {
       question: '¿Quién estaba en obra y cuándo?',
-      answer: 'Cada fichaje GPS tiene marca de tiempo y está certificado. GeoTapp registra coordenadas reales en el momento del fichaje — no introducidas manualmente. Los datos son verificables por la dirección de obra en todo momento.',
+      answer: 'Cada fichaje GPS tiene marca de tiempo y está certificado. GeoTapp registra coordenadas reales en el momento del fichaje, no introducidas manualmente. Los datos son verificables por la dirección de obra en todo momento.',
     },
     {
       question: '¿Cómo gestionas a los subcontratistas en obra?',

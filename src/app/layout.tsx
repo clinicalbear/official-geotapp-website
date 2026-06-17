@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     'facebook-domain-verification': 'a3lsnm3iee2gxdgt6b6npm6k39mfx3',
   },
   title: {
-    // Neutral fallback — locale-specific pages override with title: { absolute: '...' }.
+    // Neutral fallback, locale-specific pages override with title: { absolute: '...' }.
     // Keeping this brand-only avoids an Italian title leaking onto EN/DE/FR pages that
     // don't export their own title (e.g. /login, /success).
     default: 'GeoTapp',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   description:
     'GeoTapp: GPS-verified field work documentation. Sealed reports, timestamped photo evidence and tamper-proof records anyone can verify independently. GDPR compliant.',
-  // No global canonical — each page sets its own via generateMetadata.
+  // No global canonical, each page sets its own via generateMetadata.
   // A hardcoded canonical:'/' here would poison every locale page as a
   // duplicate of the homepage and prevent Google from indexing them.
   keywords: [
@@ -40,14 +40,14 @@ export const metadata: Metadata = {
     type: 'website',
     url: 'https://geotapp.com',
     siteName: 'GeoTapp',
-    title: 'GeoTapp — Field Work Verification Platform',
+    title: 'GeoTapp - Field Work Verification Platform',
     description:
       'GPS-verified attendance, tamper-proof reports and photo evidence for field service companies. GDPR compliant. Zero disputes.',
-    images: [{ url: '/logoFlow.webp', width: 1200, height: 630, alt: 'GeoTapp — GPS Field Work Verification Platform' }],
+    images: [{ url: '/logoFlow.webp', width: 1200, height: 630, alt: 'GeoTapp - GPS Field Work Verification Platform' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'GeoTapp — Field Work Verification Platform',
+    title: 'GeoTapp - Field Work Verification Platform',
     description:
       'GPS-verified attendance, tamper-proof reports and photo evidence for field service companies. GDPR compliant. Zero disputes.',
     images: ['/logoFlow.webp'],

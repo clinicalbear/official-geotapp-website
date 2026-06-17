@@ -2,14 +2,14 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App för Rörmokare och VVS-tekniker | GeoTapp — GPS, Rapporter & Bevis',
+    title: 'App för Rörmokare och VVS-tekniker | GeoTapp - GPS, Rapporter & Bevis',
     description: 'GeoTapp är appen för rörmokare och VVS-tekniker: GPS-verifierade rapporter, foton av installationer och oföränderlig dokumentation. Lös tvister med riktiga bevis. Testa gratis.',
   },
   hero: {
     badge: 'App för Rörmokare och VVS-tekniker',
     h1_line1: 'App för rörmokare och VVS-tekniker:',
     h1_line2: 'GPS-rapporter, fotobevis och noll tvister.',
-    subtitle: 'GeoTapp registrerar varje uppdrag på pannor och värmesystem med GPS, foton och verifierbara tidsstämplar. Kunden nekar utbytta delar? Visa rapporten — ingen diskussion behövs. Dina tekniker är skyddade, din fakturering också.',
+    subtitle: 'GeoTapp registrerar varje uppdrag på pannor och värmesystem med GPS, foton och verifierbara tidsstämplar. Kunden nekar utbytta delar? Visa rapporten, ingen diskussion behövs. Dina tekniker är skyddade, din fakturering också.',
     cta_primary: 'Kom igång gratis!',
     cta_note: 'Ingen bindning. Svar inom 12 arbetstimmar.',
   },
@@ -32,7 +32,7 @@ const content: SettoreContent = {
   },
   workflow: {
     title: 'Hur det fungerar i tre steg',
-    subtitle: 'Från jobbet till kontoret — utan telefonsamtal.',
+    subtitle: 'Från jobbet till kontoret, utan telefonsamtal.',
     steps: [
       {
         title: 'Teknikern registrerar uppdraget på plats',
@@ -96,7 +96,7 @@ const content: SettoreContent = {
   },
   scenario: {
     title: 'Verkligt fall',
-    body: 'En kund bestrider utbytet av en pannbrännare och vägrar betala fakturan. Med GeoTapp öppnar du rapporten: foto på den defekta, borttagna delen, den nya installerade, GPS-tidsstämpel för uppdraget och tekniska anteckningar från teknikern — allt automatiskt genererat från smartphonen på plats.',
+    body: 'En kund bestrider utbytet av en pannbrännare och vägrar betala fakturan. Med GeoTapp öppnar du rapporten: foto på den defekta, borttagna delen, den nya installerade, GPS-tidsstämpel för uppdraget och tekniska anteckningar från teknikern, allt automatiskt genererat från smartphonen på plats.',
     resolution: 'Tvisten försvinner. Fakturan betalas i sin helhet.',
   },
   features: {
@@ -108,7 +108,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Förseglade anläggningsfoton',
-        desc: 'Teknikern fotograferar från appen under och efter uppdraget. Varje bild är kopplad till GPS och tidsstämpel — oföränderlig efter generering.',
+        desc: 'Teknikern fotograferar från appen under och efter uppdraget. Varje bild är kopplad till GPS och tidsstämpel, oföränderlig efter generering.',
       },
       {
         title: 'Automatiska digitala jobbrapporter',
@@ -135,8 +135,8 @@ const content: SettoreContent = {
   },
   trust: {
     title: 'Våra rapporter kan inte ändras. Inte av dig. Inte av oss.',
-    body: 'GeoTapp-rapporter genereras av systemet i stunden för uppdraget. Det finns ingen panel för att "korrigera" en tid eller flytta ett foto. Datan är vad den är — digitalt signerad, med riktigt GPS.',
-    badge: 'Verifierbar av vem som helst — utan tillgång till ditt konto',
+    body: 'GeoTapp-rapporter genereras av systemet i stunden för uppdraget. Det finns ingen panel för att "korrigera" en tid eller flytta ett foto. Datan är vad den är, digitalt signerad, med riktigt GPS.',
+    badge: 'Verifierbar av vem som helst, utan tillgång till ditt konto',
   },
   testimonial: {
     quote: 'Med GeoTapp fotograferar mina tekniker anläggningen före och efter varje uppdrag. Tvister om delar har försvunnit. Fakturor betalas.',
@@ -153,7 +153,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Kan jag använda GeoTapp för att dokumentera utbyte av delar på pannor?',
-        a: 'Ja. Teknikern fotograferar från appen den borttagna och den installerade delen. Varje bild är kopplad till GPS, tidsstämpel och ärende — ingår i den oföränderliga rapporten.',
+        a: 'Ja. Teknikern fotograferar från appen den borttagna och den installerade delen. Varje bild är kopplad till GPS, tidsstämpel och ärende, ingår i den oföränderliga rapporten.',
       },
       {
         q: 'Hjälper GeoTapp till att lösa kundtvister om installationer?',

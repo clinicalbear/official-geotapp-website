@@ -2,14 +2,14 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App für Heizungsinstallateure | GeoTapp — GPS, Auftragsberichte & Nachweise',
+    title: 'App für Heizungsinstallateure | GeoTapp - GPS, Auftragsberichte & Nachweise',
     description: 'GeoTapp ist die App für Sanitär- und Heizungstechniker: GPS-verifizierte Auftragsberichte, Anlagenfotos und fälschungssichere Dokumentation. Kundenbeschwerden mit echten Beweisen lösen. Kostenlos testen.',
   },
   hero: {
     badge: 'App für Heizungsinstallateure und Sanitär- und Heizungstechniker',
     h1_line1: 'App für Heizungsinstallateure:',
     h1_line2: 'GPS-Auftragsberichte, Fotodokumentation und null Streitigkeiten.',
-    subtitle: 'GeoTapp erfasst jeden Heizungs- und Sanitäreinsatz mit GPS, Fotos und verifizierbaren Zeitstempeln. Der Kunde bestreitet ausgetauschte Teile? Zeigen Sie den Auftragsbericht — kein Streit nötig. Ihre Techniker sind geschützt, Ihre Rechnungen auch.',
+    subtitle: 'GeoTapp erfasst jeden Heizungs- und Sanitäreinsatz mit GPS, Fotos und verifizierbaren Zeitstempeln. Der Kunde bestreitet ausgetauschte Teile? Zeigen Sie den Auftragsbericht, kein Streit nötig. Ihre Techniker sind geschützt, Ihre Rechnungen auch.',
     cta_primary: 'Jetzt kostenlos starten!',
     cta_note: 'Keine Bindung. Antwort innerhalb von 12 Wertstunden.',
   },
@@ -32,7 +32,7 @@ const content: SettoreContent = {
   },
   workflow: {
     title: 'So funktioniert es in drei Schritten',
-    subtitle: 'Vom Einsatzort ins Büro — ohne Anrufe.',
+    subtitle: 'Vom Einsatzort ins Büro, ohne Anrufe.',
     steps: [
       {
         title: 'Techniker erfasst den Einsatz vor Ort',
@@ -96,7 +96,7 @@ const content: SettoreContent = {
   },
   scenario: {
     title: 'Realer Fall',
-    body: 'Ein Kunde bestreitet den Austausch eines Heizungsbrenners und verweigert die Zahlung. Mit GeoTapp öffnen Sie den Auftragsbericht: Foto des defekten, ausgebauten Teils, des neuen, eingebauten, GPS-Zeitstempel des Einsatzes und technische Notizen des Technikers — alles automatisch vom Smartphone vor Ort generiert.',
+    body: 'Ein Kunde bestreitet den Austausch eines Heizungsbrenners und verweigert die Zahlung. Mit GeoTapp öffnen Sie den Auftragsbericht: Foto des defekten, ausgebauten Teils, des neuen, eingebauten, GPS-Zeitstempel des Einsatzes und technische Notizen des Technikers, alles automatisch vom Smartphone vor Ort generiert.',
     resolution: 'Der Streit fällt weg. Die Rechnung wird vollständig bezahlt.',
   },
   features: {
@@ -108,7 +108,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Versiegelte Anlagenfotos',
-        desc: 'Der Techniker fotografiert aus der App während und nach dem Einsatz. Jedes Bild ist mit GPS und Zeitstempel verknüpft — nach der Erstellung fälschungssicher.',
+        desc: 'Der Techniker fotografiert aus der App während und nach dem Einsatz. Jedes Bild ist mit GPS und Zeitstempel verknüpft, nach der Erstellung fälschungssicher.',
       },
       {
         title: 'Automatische digitale Auftragsberichte',
@@ -135,8 +135,8 @@ const content: SettoreContent = {
   },
   trust: {
     title: 'Unsere Berichte können nicht verändert werden. Nicht von Ihnen. Nicht von uns.',
-    body: 'GeoTapp-Berichte werden vom System im Moment des Einsatzes generiert. Es gibt kein Panel, um eine Zeit zu "korrigieren" oder ein Foto zu verschieben. Die Daten sind wie sie sind — digital signiert, mit echtem GPS.',
-    badge: 'Von jedem prüfbar — ohne Zugriff auf Ihr Konto',
+    body: 'GeoTapp-Berichte werden vom System im Moment des Einsatzes generiert. Es gibt kein Panel, um eine Zeit zu "korrigieren" oder ein Foto zu verschieben. Die Daten sind wie sie sind, digital signiert, mit echtem GPS.',
+    badge: 'Von jedem prüfbar, ohne Zugriff auf Ihr Konto',
   },
   testimonial: {
     quote: 'Mit GeoTapp fotografieren meine Techniker die Anlage vor und nach jedem Einsatz. Streitigkeiten über Teile sind verschwunden. Die Rechnungen werden bezahlt.',
@@ -153,7 +153,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Kann ich GeoTapp verwenden, um ausgetauschte Teile an Heizungen zu dokumentieren?',
-        a: 'Ja. Der Techniker fotografiert das ausgebaute und das neu eingebaute Teil aus der App. Jedes Bild ist mit GPS, Zeitstempel und Auftrag verknüpft — im fälschungssicheren Bericht enthalten.',
+        a: 'Ja. Der Techniker fotografiert das ausgebaute und das neu eingebaute Teil aus der App. Jedes Bild ist mit GPS, Zeitstempel und Auftrag verknüpft, im fälschungssicheren Bericht enthalten.',
       },
       {
         q: 'Hilft GeoTapp bei der Beilegung von Kundenstreitigkeiten über Heizungsarbeiten?',

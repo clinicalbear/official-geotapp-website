@@ -437,7 +437,7 @@ export default function LinksClient({ articles, locale = 'it' }: Props) {
         transition={{ duration: 0.4, ease: 'easeOut' }}
         className="relative flex items-center justify-between px-6 py-5 max-w-md mx-auto">
         <Link href={withUtm('https://geotapp.com', 'ig_links_nav', 'header_logo')}
-          className="flex items-center gap-2 opacity-90 hover:opacity-100 transition-opacity" aria-label="GeoTapp — homepage">
+          className="flex items-center gap-2 opacity-90 hover:opacity-100 transition-opacity" aria-label="GeoTapp, homepage">
           <svg width="110" height="24" viewBox="0 0 110 24" fill="none" aria-hidden="true">
             <path d="M10 2C6.69 2 4 4.69 4 8c0 4.5 6 12 6 12s6-7.5 6-12c0-3.31-2.69-6-6-6zm0 8.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z" fill="#8FC436" />
             <text x="22" y="17" fontFamily="'Poppins', sans-serif" fontWeight="700" fontSize="14" fill="#0f172a" letterSpacing="-0.3">GeoTapp</text>
@@ -446,7 +446,7 @@ export default function LinksClient({ articles, locale = 'it' }: Props) {
         <span className="text-[10px] font-semibold text-slate-400 tracking-[0.12em] uppercase">Instagram</span>
       </motion.nav>
 
-      {/* ARTICLES — in cima: chi arriva da Instagram vede subito gli articoli */}
+      {/* ARTICLES, in cima: chi arriva da Instagram vede subito gli articoli */}
       <section className="px-6 pt-4 pb-9 max-w-md mx-auto">
         <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, ease: 'easeOut' }}

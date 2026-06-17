@@ -1,7 +1,7 @@
 import type { VerifierCopy } from './types';
 
 const da: VerifierCopy = {
-  hero_badge: 'GeoTapp Verifier — Verificering af Arbejdsrapporter',
+  hero_badge: 'GeoTapp Verifier - Verificering af Arbejdsrapporter',
   hero_title: 'Jeres arbejdsrapporter\ner verificerbare.',
   hero_subtitle:
     'GeoTapp Verifier kontrollerer, at en interventionsrapport stemmer overens med de operationelle data, der er registreret i marken, og ikke er blevet ændret. Mere troværdighed over for kunden, færre tvister.',
@@ -44,7 +44,7 @@ const da: VerifierCopy = {
   what_badge: 'Hvad er GeoTapp Verifier',
   what_title: 'Uafhængig verificering af interventionsrapporter.',
   what_desc:
-    'GeoTapp Verifier er det system, der gør det muligt at verificere ægtheden og integriteten af rapporter genereret af GeoTapp Flow og TimeTracker. Det sammenligner dokumentet med de originale operationelle data — GPS-tidsstempler, placeringer, fotodokumentation — og certificerer, at rapporten ikke er blevet ændret.',
+    'GeoTapp Verifier er det system, der gør det muligt at verificere ægtheden og integriteten af rapporter genereret af GeoTapp Flow og TimeTracker. Det sammenligner dokumentet med de originale operationelle data - GPS-tidsstempler, placeringer, fotodokumentation, og certificerer, at rapporten ikke er blevet ændret.',
   how_badge: 'Sådan fungerer det',
   how_title: 'Tre trin. Én verificeret rapport.',
   how_steps: [
@@ -131,13 +131,13 @@ const da: VerifierCopy = {
       a: 'GeoTapp Verifier er integreret i GeoTapp-økosystemet. Kontakt os for at finde ud af, hvilken plan der passer bedst til din virksomheds behov.',
     },
   ],
-  hero_cta_download: 'Download gratis — v0.2.1',
+  hero_cta_download: 'Download gratis, v0.2.1',
   cta_download: 'Download Verifier gratis',
   download_badge: 'Gratis download',
   download_title: 'Download GeoTapp Verifier.',
   download_desc: 'Åbent CLI-værktøj til offline verifikation af GeoTapp-rapportintegritet. Ingen konto nødvendig. Virker fra terminal eller som Node.js-bibliotek.',
   download_btn: 'Download report-verifier-0.2.1.zip',
-  download_version: 'v0.2.1 — ~46 KB — Kræver Node.js ≥ 18',
+  download_version: 'v0.2.1, ~46 KB - Kræver Node.js ≥ 18',
   download_requirements: 'Kræver Node.js ≥ 18',
   download_cli_title: 'Fra terminal',
   download_api_title: 'Som Node.js-bibliotek',
@@ -146,14 +146,14 @@ const da: VerifierCopy = {
   online_verify_title: 'Verify a report online',
   online_verify_desc: 'Upload the report ZIP file. Verification happens on the server and the file is not stored.',
   online_verify_upload_label: 'Drag the report ZIP here, or click to select',
-  online_verify_upload_hint: '.zip files only — max 25MB',
+  online_verify_upload_hint: '.zip files only, max 25MB',
   online_verify_btn: 'Verify now',
   online_verify_privacy_note: 'The file is processed in memory and never stored or shared with third parties.',
   online_verify_size_limit: 'Maximum size: 25MB',
-  online_verify_result_valid_sealed: 'Valid report — sealed and signed',
-  online_verify_result_valid_unsigned: 'Valid report — content intact, seal not cryptographically signed',
-  online_verify_result_legacy: 'Legacy report — readable, no strong seal',
-  online_verify_result_invalid: 'Invalid report — content may have been altered',
+  online_verify_result_valid_sealed: 'Valid report, sealed and signed',
+  online_verify_result_valid_unsigned: 'Valid report, content intact, seal not cryptographically signed',
+  online_verify_result_legacy: 'Legacy report, readable, no strong seal',
+  online_verify_result_invalid: 'Invalid report, content may have been altered',
   online_verify_error_too_large: 'File too large. Maximum size: 25MB.',
   online_verify_error_not_zip: 'File must be a ZIP archive.',
   online_verify_error_generic: 'Verification error. The file may be corrupted.',

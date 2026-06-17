@@ -14,18 +14,18 @@ interface ArticleHeroProps {
 }
 
 const CATEGORY_COLORS: Record<string, string> = {
-  // TimeTracker — orange
+  // TimeTracker, orange
   'gps': '#F97316',
   'tracking': '#F97316',
   'geolocalizzazione': '#F97316',
   'timbrature': '#F97316',
   'presenze': '#F97316',
-  // Flow — purple
+  // Flow, purple
   'gestione': '#8B5CF6',
   'operazioni': '#8B5CF6',
   'business': '#8B5CF6',
   'software': '#8B5CF6',
-  // Verifier — green
+  // Verifier, green
   'sicurezza': '#22C55E',
   'security': '#22C55E',
   'verifica': '#22C55E',
@@ -92,7 +92,7 @@ export default function ArticleHero({
         <div className="absolute inset-0 bg-gradient-to-b from-slate-900 to-slate-800" />
       )}
 
-      {/* Gradient overlay — stronger for title readability */}
+      {/* Gradient overlay, stronger for title readability */}
       <div
         className="absolute inset-0"
         style={{
@@ -102,7 +102,7 @@ export default function ArticleHero({
 
       {/* Content */}
       <div className="absolute inset-0 flex flex-col items-center justify-end pb-10 md:pb-16 px-4 md:px-8">
-        {/* Categoria — stile badge homepage (no chip) */}
+        {/* Categoria, stile badge homepage (no chip) */}
         {primaryCategory && (
           <motion.span
             className="geo-status mb-4"

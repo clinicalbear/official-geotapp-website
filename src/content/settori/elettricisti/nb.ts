@@ -2,14 +2,14 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App for Elektrikere | GeoTapp — GPS Arbeidsrapporter & Bevis',
+    title: 'App for Elektrikere | GeoTapp - GPS Arbeidsrapporter & Bevis',
     description: 'GeoTapp er appen for elektrikere: GPS-verifiserte arbeidsrapporter, installasjonsbilder og manipuleringssikre registreringer. Lukk tvister med ekte bevis. Prøv gratis.',
   },
   hero: {
     badge: 'App for Elektrikere og El-installatører',
     h1_line1: 'App for elektrikere:',
     h1_line2: 'GPS-rapporter, fotobevis og null tvister.',
-    subtitle: 'GeoTapp registrerer hvert elektrisk arbeid med GPS, bilder og verifiserbare tidsstempler. Kunden bestrider arbeidet? Vis rapporten — ingen diskusjon. Dine teknikere er beskyttet, dine fakturaer også.',
+    subtitle: 'GeoTapp registrerer hvert elektrisk arbeid med GPS, bilder og verifiserbare tidsstempler. Kunden bestrider arbeidet? Vis rapporten, ingen diskusjon. Dine teknikere er beskyttet, dine fakturaer også.',
     cta_primary: 'Start gratis',
     cta_note: 'Uten forpliktelse. Svar innen 12 arbeidstimer.',
   },
@@ -32,7 +32,7 @@ const content: SettoreContent = {
   },
   workflow: {
     title: 'Slik fungerer det i tre trinn',
-    subtitle: 'Fra arbeidsstedet til kontoret — uten telefonsamtaler.',
+    subtitle: 'Fra arbeidsstedet til kontoret, uten telefonsamtaler.',
     steps: [
       {
         title: 'Teknikeren registrerer innsatsen på stedet',
@@ -57,7 +57,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Forseglede installasjonsbilder',
-        desc: 'Teknikeren fotograferer fra appen. Hvert bilde er koblet til GPS og tidsstempel — umanipulerbart.',
+        desc: 'Teknikeren fotograferer fra appen. Hvert bilde er koblet til GPS og tidsstempel, umanipulerbart.',
       },
       {
         title: 'Automatiske digitale arbeidsrapporter',

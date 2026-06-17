@@ -1,7 +1,7 @@
 import type { VerifierCopy } from './types';
 
 const it: VerifierCopy = {
-  hero_badge: 'GeoTapp Verifier — Verifica Report di Lavoro',
+  hero_badge: 'GeoTapp Verifier - Verifica Report di Lavoro',
   hero_title: 'I tuoi report di lavoro\nsono verificabili.',
   hero_subtitle:
     'GeoTapp Verifier controlla che un report di intervento corrisponda ai dati operativi registrati sul campo e non sia stato modificato. Più credibilità verso il cliente, meno contestazioni.',
@@ -21,7 +21,7 @@ const it: VerifierCopy = {
     'Raccoglie i dati operativi sul campo: timbrature GPS, foto, note e firma del cliente.',
   ecosystem_timetracker_link: 'Scopri TimeTracker',
   ecosystem_flow_desc:
-    'Organizza commesse, squadre e genera i report strutturati e sigillati — pronti per la verifica.',
+    'Organizza commesse, squadre e genera i report strutturati e sigillati, pronti per la verifica.',
   ecosystem_flow_link: 'Scopri Flow',
   ecosystem_verifier_desc:
     "Verifica l'integrità di ogni report. Confronta il documento con i dati originali e certifica l'autenticità.",
@@ -44,7 +44,7 @@ const it: VerifierCopy = {
   what_badge: "Cos'è GeoTapp Verifier",
   what_title: 'Verifica indipendente dei report di intervento.',
   what_desc:
-    "GeoTapp Verifier è il sistema che permette di verificare l'autenticità e l'integrità dei report generati da GeoTapp Flow e TimeTracker. Confronta il documento con i dati operativi originali — timbrature, posizioni GPS, prove fotografiche — e certifica che il report non è stato alterato.",
+    "GeoTapp Verifier è il sistema che permette di verificare l'autenticità e l'integrità dei report generati da GeoTapp Flow e TimeTracker. Confronta il documento con i dati operativi originali, timbrature, posizioni GPS, prove fotografiche, e certifica che il report non è stato alterato.",
   how_badge: 'Come funziona',
   how_title: 'Tre passi. Un report verificato.',
   how_steps: [
@@ -56,7 +56,7 @@ const it: VerifierCopy = {
     {
       num: '02',
       title: 'Flow genera il report strutturato',
-      desc: 'GeoTapp Flow raccoglie tutti i dati di commessa e produce un report di intervento strutturato. Il report è sigillato sui dati originali — qualsiasi modifica risulta immediatamente rilevabile.',
+      desc: 'GeoTapp Flow raccoglie tutti i dati di commessa e produce un report di intervento strutturato. Il report è sigillato sui dati originali, qualsiasi modifica risulta immediatamente rilevabile.',
     },
     {
       num: '03',
@@ -131,13 +131,13 @@ const it: VerifierCopy = {
       a: "GeoTapp Verifier è integrato nell'ecosistema GeoTapp. Contattaci per capire quale piano si adatta meglio alle esigenze della tua azienda.",
     },
   ],
-  hero_cta_download: 'Scarica gratis — v0.2.1',
+  hero_cta_download: 'Scarica gratis, v0.2.1',
   cta_download: 'Scarica Verifier gratis',
   download_badge: 'Download gratuito',
   download_title: 'Scarica GeoTapp Verifier.',
   download_desc: "Strumento CLI open per verificare offline l'integrità dei report GeoTapp. Nessun account richiesto. Funziona da terminale o come libreria Node.js.",
   download_btn: 'Scarica report-verifier-0.2.1.zip',
-  download_version: 'v0.2.1 — ~46 KB — Richiede Node.js ≥ 18',
+  download_version: 'v0.2.1, ~46 KB - Richiede Node.js ≥ 18',
   download_requirements: 'Richiede Node.js ≥ 18',
   download_cli_title: 'Da terminale',
   download_api_title: 'Come libreria Node.js',
@@ -146,14 +146,14 @@ const it: VerifierCopy = {
   online_verify_title: 'Verifica un report online',
   online_verify_desc: 'Carica il file ZIP del report. La verifica avviene sul server e il file non viene salvato.',
   online_verify_upload_label: 'Trascina il report ZIP qui, oppure clicca per selezionarlo',
-  online_verify_upload_hint: 'Solo file .zip — dimensione massima 25MB',
+  online_verify_upload_hint: 'Solo file .zip, dimensione massima 25MB',
   online_verify_btn: 'Verifica ora',
   online_verify_privacy_note: 'Il file viene analizzato in memoria e non viene salvato o trasmesso a terzi.',
   online_verify_size_limit: 'Dimensione massima: 25MB',
-  online_verify_result_valid_sealed: 'Report valido — sigillato e firmato',
-  online_verify_result_valid_unsigned: 'Report valido — contenuto integro, sigillo non firmato',
-  online_verify_result_legacy: 'Report legacy — leggibile, senza sigillo forte',
-  online_verify_result_invalid: 'Report non valido — contenuto potenzialmente alterato',
+  online_verify_result_valid_sealed: 'Report valido, sigillato e firmato',
+  online_verify_result_valid_unsigned: 'Report valido, contenuto integro, sigillo non firmato',
+  online_verify_result_legacy: 'Report legacy, leggibile, senza sigillo forte',
+  online_verify_result_invalid: 'Report non valido, contenuto potenzialmente alterato',
   online_verify_error_too_large: 'File troppo grande. Dimensione massima: 25MB.',
   online_verify_error_not_zip: 'Il file deve essere un archivio ZIP.',
   online_verify_error_generic: 'Errore durante la verifica. Il file potrebbe essere danneggiato.',

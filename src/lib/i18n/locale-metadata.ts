@@ -35,7 +35,7 @@ export const HREFLANG: Record<string, string> = {
 
 /**
  * Regional EN variants (en-us, en-gb, en-au, en-ie, en-ca) renderizzano prezzi
- * in valuta locale (USD/GBP/AUD/CAD) — vedi LOCALE_CURRENCY in lib/pricing.ts.
+ * in valuta locale (USD/GBP/AUD/CAD), vedi LOCALE_CURRENCY in lib/pricing.ts.
  *
  * Strategia canonical IBRIDA (audit 2026-06-02):
  *  - Pagine BRAND/entity (home, what-is-geotapp, about-us): canonical → `/en/`
@@ -97,7 +97,7 @@ export function buildLocaleAlternates(
     }),
   ) as Record<string, string>;
 
-  // x-default: English path — /en/ is a real page with no redirect.
+  // x-default: English path, /en/ is a real page with no redirect.
   // The bare canonical path (e.g. /chi-siamo/) triggers a 308 → /it/ leaking link equity.
   languages['x-default'] = `${BASE}/en${translatePath(path, 'en')}`;
 

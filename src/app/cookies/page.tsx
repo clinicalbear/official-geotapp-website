@@ -7,6 +7,6 @@ export default function CookiesPage() {
   return LegalMarkdownPage({
     markdownContent,
     title: 'Informativa Cookie',
-    subtitle: 'Versione 1.0 — Marzo 2026',
+    subtitle: 'Versione 1.0 - Marzo 2026',
   });
 }

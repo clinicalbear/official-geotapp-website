@@ -8,8 +8,8 @@ const content: SettoreContent = {
   hero: {
     badge: 'Software til Rengøringsvirksomheder, Facility Management og Serviceentreprenører',
     h1_line1: 'Software til rengøringsvirksomheder:',
-    h1_line2: 'vagter, fotodokumentation og verificerede timer — på hvert objekt',
-    subtitle: 'GeoTapp forbinder Flow + TimeTracker for teams fordelt på flere bygninger og etager. Dine rengøringsassistenter stempler ind med GPS-verificeret smartphone; kontoret ser, hvem der rengorde hvad, hvor og hvornår — med fotodokumentation vedlagt. Ingen tvister mere, fuld overholdelse af Rengøringsoverenskomsten.',
+    h1_line2: 'vagter, fotodokumentation og verificerede timer, på hvert objekt',
+    subtitle: 'GeoTapp forbinder Flow + TimeTracker for teams fordelt på flere bygninger og etager. Dine rengøringsassistenter stempler ind med GPS-verificeret smartphone; kontoret ser, hvem der rengorde hvad, hvor og hvornår, med fotodokumentation vedlagt. Ingen tvister mere, fuld overholdelse af Rengøringsoverenskomsten.',
     cta_primary: 'Anmod om en demo',
     cta_note: 'Ingen binding. Svar inden for 12 arbejdstimer.',
   },
@@ -32,7 +32,7 @@ const content: SettoreContent = {
   },
   workflow: {
     title: 'Sådan fungerer det i tre trin',
-    subtitle: 'Fra bygningen til kontoret — uden at jage nogen.',
+    subtitle: 'Fra bygningen til kontoret, uden at jage nogen.',
     steps: [
       {
         title: 'Rengøringsassistenten stempler ind på stedet',
@@ -40,7 +40,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Kontoret ser alt i realtid',
-        desc: 'Flow modtager data øjeblikkeligt. Driftlederen ser, hvilken bygning der er betjent, af hvem, på hvilket tidspunkt og med hvilken fotodokumentation — uden at foretage et eneste opkald.',
+        desc: 'Flow modtager data øjeblikkeligt. Driftlederen ser, hvilken bygning der er betjent, af hvem, på hvilket tidspunkt og med hvilken fotodokumentation, uden at foretage et eneste opkald.',
       },
       {
         title: 'Vagtoverdragelsesrapporten er allerede klar',

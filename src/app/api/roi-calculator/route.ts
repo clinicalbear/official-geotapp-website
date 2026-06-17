@@ -64,7 +64,7 @@ function deriveCountry(locale: string): string {
 
 /**
  * Notifica il CRM del nuovo lead ROI. Sostituisce MailerLite per
- * la sequenza drip "roi-calculator" — il CRM ha drip engine nativo
+ * la sequenza drip "roi-calculator", il CRM ha drip engine nativo
  * con templates multilingua hardcoded (vedi geotapp-crm/src/lib/
  * drip-templates.ts).
  */
@@ -112,7 +112,7 @@ async function notifyCrmLead(
 }
 
 // Legacy MailerLite subscribe (mantenuta per backward-compat con altri
-// lead magnet — fac-simile GDPR continua a usare MailerLite). NON usata
+// lead magnet, fac-simile GDPR continua a usare MailerLite). NON usata
 // più per ROI calculator dal 26/05/2026.
 async function subscribeToNewsletterLegacy(
   email: string,
@@ -215,7 +215,7 @@ export async function POST(req: NextRequest) {
 
   const roi = calcRoi(body);
 
-  // Notifica il CRM del nuovo lead ROI — SEMPRE, anche senza consenso
+  // Notifica il CRM del nuovo lead ROI - SEMPRE, anche senza consenso
   // newsletter. Il CRM manda l'avviso email all'admin (SMTP funziona sul
   // VPS, NON nel Worker Cloudflare: nodemailer qui falliva in silenzio) e,
   // solo se newsletter_consent=true, crea NewsletterSubscriber +

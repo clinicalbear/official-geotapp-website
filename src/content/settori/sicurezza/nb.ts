@@ -9,7 +9,7 @@ const content: SettoreContent = {
     badge: 'Programvare for Vaktselskaper, Vektere og Arrangementsikkerhet',
     h1_line1: 'Dokumentert tilstedeværelse og vaktregistrering',
     h1_line2: 'for vektere og vaktselskaper',
-    subtitle: 'GeoTapp Flow og TimeTracker dokumenterer vekternes tilstedeværelse på tildelte poster med verifisert GPS og uforanderlige tidsstempler. Sertifikathåndtering ifølge Landsoverenskomsten for vektere, digital vaktoverdragelse og geolokaliserte hendelsesrapporter — alt på én plattform.',
+    subtitle: 'GeoTapp Flow og TimeTracker dokumenterer vekternes tilstedeværelse på tildelte poster med verifisert GPS og uforanderlige tidsstempler. Sertifikathåndtering ifølge Landsoverenskomsten for vektere, digital vaktoverdragelse og geolokaliserte hendelsesrapporter, alt på én plattform.',
     cta_primary: 'Book en Demo',
     cta_note: 'Ingen binding. Svar innen 12 arbeidstimer.',
   },
@@ -32,7 +32,7 @@ const content: SettoreContent = {
   },
   workflow: {
     title: 'Slik fungerer det i tre trinn',
-    subtitle: 'Fra vaktposten til kontoret — uten papirarbeid.',
+    subtitle: 'Fra vaktposten til kontoret, uten papirarbeid.',
     steps: [
       {
         title: 'Vekteren stempler inn på tildelt post',

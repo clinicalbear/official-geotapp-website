@@ -197,7 +197,7 @@ export default function Pricing() {
   // Merge base data with dictionary translations + locale-aware pricing.
   const categories = baseCategories
     .map((cat) => {
-      // @ts-ignore — dictionary categories indexed by string code
+      // @ts-ignore, dictionary categories indexed by string code
       const catDict = dict.pricing?.categories?.[cat.id];
       if (!catDict) {
         console.error(`Missing category in dictionary: ${cat.id}`);

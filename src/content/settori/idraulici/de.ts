@@ -2,14 +2,14 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App für Klempner & Heizungstechniker | GeoTapp — GPS-Berichte',
+    title: 'App für Klempner & Heizungstechniker | GeoTapp - GPS-Berichte',
     description: 'GeoTapp ist die App für Klempner und Heizungstechniker: GPS-verifizierte Einsatzberichte, Anlagenfotos und manipulationssichere Nachweise. Streitigkeiten mit echten Beweisen abschließen. Gratis testen.',
   },
   hero: {
     badge: 'App für Klempner, Heizungstechniker und SHK-Betriebe',
     h1_line1: 'App für Klempner und Heizungstechniker:',
     h1_line2: 'GPS-Einsatzberichte, Fotobeweise und keine Streitigkeiten.',
-    subtitle: 'GeoTapp erfasst jeden Sanitär- und Heizungseinsatz mit GPS, Fotos und verifizierbaren Zeitstempeln. Kunde bestreitet die Arbeit? Zeigen Sie den Bericht — keine Diskussion nötig. Ihre Techniker sind geschützt, Ihre Rechnungen auch.',
+    subtitle: 'GeoTapp erfasst jeden Sanitär- und Heizungseinsatz mit GPS, Fotos und verifizierbaren Zeitstempeln. Kunde bestreitet die Arbeit? Zeigen Sie den Bericht, keine Diskussion nötig. Ihre Techniker sind geschützt, Ihre Rechnungen auch.',
     cta_primary: 'Jetzt kostenlos starten',
     cta_note: 'Keine Bindung. Antwort innerhalb von 12 Geschäftsstunden.',
   },
@@ -32,7 +32,7 @@ const content: SettoreContent = {
   },
   workflow: {
     title: 'So funktioniert es in drei Schritten',
-    subtitle: 'Vom Einsatzort ins Büro — ohne Telefonate.',
+    subtitle: 'Vom Einsatzort ins Büro, ohne Telefonate.',
     steps: [
       {
         title: 'Techniker erfasst den Einsatz vor Ort',
@@ -96,7 +96,7 @@ const content: SettoreContent = {
   },
   scenario: {
     title: 'Realer Fall',
-    body: 'Ein Kunde bestreitet einen Notfall-Heizungseinsatz und weigert sich zu zahlen, weil die Arbeiten angeblich nicht abgeschlossen wurden. Mit GeoTapp öffnen Sie den Einsatzbericht: Vorher-Nachher-Fotos der Anlage, GPS-Ankunfts- und Abfahrtszeiten, technische Notizen zu ausgetauschten Teilen — alles automatisch vom Smartphone des Technikers vor Ort generiert.',
+    body: 'Ein Kunde bestreitet einen Notfall-Heizungseinsatz und weigert sich zu zahlen, weil die Arbeiten angeblich nicht abgeschlossen wurden. Mit GeoTapp öffnen Sie den Einsatzbericht: Vorher-Nachher-Fotos der Anlage, GPS-Ankunfts- und Abfahrtszeiten, technische Notizen zu ausgetauschten Teilen, alles automatisch vom Smartphone des Technikers vor Ort generiert.',
     resolution: 'Die Beschwerde fällt. Die Rechnung wird vollständig bezahlt.',
   },
   features: {
@@ -108,7 +108,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Versiegelte Sanitär- und Heizungsanlagen-Fotos',
-        desc: 'Der Techniker fotografiert vor und nach dem Einsatz. Jedes Bild ist mit GPS und Zeitstempel verknüpft — nach der Erstellung manipulationssicher.',
+        desc: 'Der Techniker fotografiert vor und nach dem Einsatz. Jedes Bild ist mit GPS und Zeitstempel verknüpft, nach der Erstellung manipulationssicher.',
       },
       {
         title: 'Automatische digitale Einsatzberichte',
@@ -135,8 +135,8 @@ const content: SettoreContent = {
   },
   trust: {
     title: 'Unsere Berichte können nicht verändert werden. Nicht von Ihnen. Nicht von uns.',
-    body: 'GeoTapp-Berichte werden vom System im Moment des Einsatzes erstellt. Es gibt kein Panel, um eine Zeit zu "korrigieren" oder ein Foto zu verschieben. Die Daten sind wie sie sind — digital signiert, mit echtem GPS.',
-    badge: 'Überprüfbar von jedem — ohne Zugang zu Ihrem Konto',
+    body: 'GeoTapp-Berichte werden vom System im Moment des Einsatzes erstellt. Es gibt kein Panel, um eine Zeit zu "korrigieren" oder ein Foto zu verschieben. Die Daten sind wie sie sind, digital signiert, mit echtem GPS.',
+    badge: 'Überprüfbar von jedem, ohne Zugang zu Ihrem Konto',
   },
   testimonial: {
     quote: 'Früher habe ich Stunden damit verbracht, Einsätze gegenüber Kunden zu erklären. Jetzt schicke ich den Bericht und das Argument endet dort.',
@@ -153,7 +153,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Kann ich GeoTapp zur Dokumentation von Sanitär- und Heizungseinsätzen einsetzen?',
-        a: 'Ja. Der Techniker fotografiert vor und nach dem Einsatz aus der App. Jedes Bild ist mit GPS, Zeitstempel und Auftrag verknüpft — im manipulationssicheren Bericht enthalten.',
+        a: 'Ja. Der Techniker fotografiert vor und nach dem Einsatz aus der App. Jedes Bild ist mit GPS, Zeitstempel und Auftrag verknüpft, im manipulationssicheren Bericht enthalten.',
       },
       {
         q: 'Verwaltet GeoTapp Notfalleinsätze und geplante Wartungen?',

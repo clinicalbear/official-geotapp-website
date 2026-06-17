@@ -9,7 +9,7 @@ const content: SettoreContent = {
     badge: 'App para instaladores, técnicos y equipos de servicio',
     h1_line1: 'Cada intervención documentada,',
     h1_line2: 'cada hora registrada.',
-    subtitle: 'Para instaladores eléctricos, fontaneros, técnicos de climatización y especialistas en instalaciones. GeoTapp conecta Flow + TimeTracker para registrar GPS, horas y fotos por proyecto — de la furgoneta a la oficina sin llamadas.',
+    subtitle: 'Para instaladores eléctricos, fontaneros, técnicos de climatización y especialistas en instalaciones. GeoTapp conecta Flow + TimeTracker para registrar GPS, horas y fotos por proyecto, de la furgoneta a la oficina sin llamadas.',
     cta_primary: 'Prueba GeoTapp gratis durante 14 días',
     cta_note: 'Sin compromiso. Sin tarjeta de crédito.',
   },
@@ -18,7 +18,7 @@ const content: SettoreContent = {
     items: [
       {
         title: 'Los clientes disputan las horas trabajadas',
-        desc: 'Fichajes GPS con marca de tiempo como prueba irrefutable. Los datos se certifican en el momento de la intervención — no modificables después.',
+        desc: 'Fichajes GPS con marca de tiempo como prueba irrefutable. Los datos se certifican en el momento de la intervención, no modificables después.',
       },
       {
         title: 'Perseguir a los técnicos para saber dónde están',
@@ -36,7 +36,7 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'El técnico ficha por GPS al inicio de la intervención',
-        desc: 'Abre el proyecto desde el smartphone. GeoTapp registra coordenadas GPS reales, marca de tiempo y fotos — totalmente automático, a prueba de manipulaciones.',
+        desc: 'Abre el proyecto desde el smartphone. GeoTapp registra coordenadas GPS reales, marca de tiempo y fotos, totalmente automático, a prueba de manipulaciones.',
       },
       {
         title: 'Las horas se registran automáticamente por proyecto',
@@ -60,7 +60,7 @@ const content: SettoreContent = {
       {
         label: 'Quién puede verificar',
         competitor: 'Solo tu oficina',
-        geotapp: 'Tú, el cliente, un tercero — de forma independiente',
+        geotapp: 'Tú, el cliente, un tercero, de forma independiente',
       },
       {
         label: 'En caso de disputa',
@@ -91,7 +91,7 @@ const content: SettoreContent = {
       'El cliente disputa? Abres el informe: fotos, GPS, hora, firma digital.',
       'Se lo envías. La disputa termina en un minuto.',
       'El pago está seguro. El técnico está protegido.',
-      'A fin de mes la exportación ya está lista — horas y proyectos agregados automáticamente.',
+      'A fin de mes la exportación ya está lista, horas y proyectos agregados automáticamente.',
     ],
   },
   features: {
@@ -103,7 +103,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Pruebas fotográficas selladas',
-        desc: 'El técnico toma fotos desde la app. Cada imagen está vinculada a la intervención con GPS y marca de tiempo — a prueba de manipulaciones tras la generación.',
+        desc: 'El técnico toma fotos desde la app. Cada imagen está vinculada a la intervención con GPS y marca de tiempo, a prueba de manipulaciones tras la generación.',
       },
       {
         title: 'Gestión multi-sede de proyectos',
@@ -126,7 +126,7 @@ const content: SettoreContent = {
   testimonial: {
     quote: 'Los clientes ya no disputan las horas. Abrimos el informe con GPS y fotos y la discusión termina ahí.',
     author: 'Roberto F.',
-    role: 'Director, empresa de instalaciones — 20 técnicos',
+    role: 'Director, empresa de instalaciones, 20 técnicos',
   },
   faq: {
     title: 'Preguntas frecuentes',
@@ -142,7 +142,7 @@ const content: SettoreContent = {
       },
       {
         q: '¿Cómo agilizo la facturación de intervenciones terminadas?',
-        a: 'GeoTapp genera automáticamente la exportación de horas y proyectos lista para tu software contable. Sin entrada manual, sin riesgo de errores — la facturación se hace en un clic.',
+        a: 'GeoTapp genera automáticamente la exportación de horas y proyectos lista para tu software contable. Sin entrada manual, sin riesgo de errores, la facturación se hace en un clic.',
       },
     ],
   },
@@ -169,7 +169,7 @@ const content: SettoreContent = {
     },
     {
       question: '¿Cómo agilizo la facturación de intervenciones terminadas?',
-      answer: 'GeoTapp genera automáticamente la exportación de horas y proyectos lista para tu software contable. Sin entrada manual, sin riesgo de errores — la facturación se hace en un clic.',
+      answer: 'GeoTapp genera automáticamente la exportación de horas y proyectos lista para tu software contable. Sin entrada manual, sin riesgo de errores, la facturación se hace en un clic.',
     },
   ],
 };

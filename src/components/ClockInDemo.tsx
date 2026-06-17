@@ -50,7 +50,7 @@ export default function ClockInDemo({ dict }: Props) {
     >
       <div className="geo-glass geo-float rounded-[28px] p-3">
         <div className="relative rounded-[20px] overflow-hidden bg-slate-900">
-          {/* Photo frame — reuses an existing screenshot as the "on-site photo" */}
+          {/* Photo frame, reuses an existing screenshot as the "on-site photo" */}
           <img
             src="/screen_live_map.webp"
             alt=""
@@ -152,7 +152,7 @@ export default function ClockInDemo({ dict }: Props) {
             )}
           </AnimatePresence>
 
-          {/* Clock button — pulses while at step 0 */}
+          {/* Clock button, pulses while at step 0 */}
           <div className="absolute bottom-3 right-3">
             <motion.div
               animate={reduced || step !== 0 ? { scale: 1 } : { scale: [1, 1.08, 1] }}

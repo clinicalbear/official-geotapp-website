@@ -23,14 +23,14 @@
       "label": "Sektorer",
       "termoidraulici": "VVS-installatør"
     },
-    "logo_alt": "GeoTapp — Plattformen som gjør arbeid verifiserbart",
+    "logo_alt": "GeoTapp - Plattformen som gjør arbeid verifiserbart",
     "product_flow_desc": "Operativ håndtering av oppdrag og team",
     "product_app_desc": "Mobilapp for serviceteknikere",
     "product_verifier_desc": "Integritetsverifisering av arbeidsrapporter",
     "compare": "Sammenligning"
   },
   "risorseHub": {
-    "metaTitle": "Ressurser — GeoTapp",
+    "metaTitle": "Ressurser - GeoTapp",
     "metaDesc": "Gratis verktøy og ressurser fra GeoTapp: guiden til GPS-overvåking av ansatte i Europa, ROI-kalkulatoren og undersøkelsen om bevis for utført arbeid.",
     "h1": "Ressurser",
     "intro": "Gratis verktøy, guider og data som gjør feltarbeid dokumenterbart.\nVi holder dem oppdatert og legger til nye.",
@@ -72,10 +72,10 @@
     "contact": "Kontakt"
   },
   "landing": {
-    "us_badge": "🇺🇸 Serving US teams — chat support 9am–6pm ET. USD invoicing available on request.",
+    "us_badge": "🇺🇸 Serving US teams, chat support 9am–6pm ET. USD invoicing available on request.",
     "hero_badge": "Arbeidet skjedde. Gjør det nå bevisbart.",
     "hero_title": "Hvis du ikke kan bevise det, sier kunden at det aldri skjedde.",
-    "hero_subtitle": "GeoTapp gjør hvert feltoppdrag om til objektive bevis: forseglede rapporter med ekte GPS-data, tidsstemplede fotobevis og dokumentasjon som hvem som helst kan verifisere uavhengig — uten tillit, uten tvister.",
+    "hero_subtitle": "GeoTapp gjør hvert feltoppdrag om til objektive bevis: forseglede rapporter med ekte GPS-data, tidsstemplede fotobevis og dokumentasjon som hvem som helst kan verifisere uavhengig, uten tillit, uten tvister.",
     "hero_cta_primary": "Bestill 30-minutters demo",
     "hero_cta_secondary": "Utforsk sektorer",
     "trust_gdpr": "GDPR-samsvar",
@@ -107,11 +107,11 @@
     ],
     "report_section_title": "Rapporten. Ikke et sammendrag. Et bevis.",
     "report_section_subtitle": "Hver GeoTapp-rapport genereres automatisk fra reelle feltdata.",
-    "report_section_body": "GPS-stempling, tidsstemplede bilder, operative notater. Systemet påfører et kryptografisk segl som gjør enhver endring sporbar. Resultatet er ikke et dokument å sende til kunden — det er et bevis kunden kan verifisere selv.",
-    "report_feature_1": "Ikke redigerbar etter generering — enhver endring oppdages",
-    "report_feature_2": "Verifiserbar uten konto — av hvem som helst, selvstendig",
+    "report_section_body": "GPS-stempling, tidsstemplede bilder, operative notater. Systemet påfører et kryptografisk segl som gjør enhver endring sporbar. Resultatet er ikke et dokument å sende til kunden, det er et bevis kunden kan verifisere selv.",
+    "report_feature_1": "Ikke redigerbar etter generering, enhver endring oppdages",
+    "report_feature_2": "Verifiserbar uten konto, av hvem som helst, selvstendig",
     "report_feature_3": "GPS- og fotodata integrert og uadskillelige",
-    "report_feature_4": "Automatisk generert — ingen manuell utfylling",
+    "report_feature_4": "Automatisk generert, ingen manuell utfylling",
     "report_cta": "Se hvordan kunden din verifiserer selv",
     "hero_sectors_prefix": "Ideelt for",
     "hero_sectors_pulizie": "renholdsbedrifter",
@@ -180,8 +180,8 @@
       "title": "Du trenger ikke at de stoler på deg.",
       "subtitle": "Kunden har rapporten. Han verifiserer den selv uten å åpne GeoTapp. Hvis dataene stemmer med det virkelige arbeidet, holder seglet. Hvis noen har endret dokumentet, brytes seglet. Ingen anke.",
       "features": {
-        "integrity": "<strong>Uforanderlige data:</strong> Rapporten genereres på ekte feltdata og låses. Enhver endring gjør den ugyldig — uten unntak.",
-        "independent": "<strong>Autonom verifikasjon:</strong> Hvem som helst med rapporten kan verifisere dens autentisitet — ingen konto, ingen plattformtilgang."
+        "integrity": "<strong>Uforanderlige data:</strong> Rapporten genereres på ekte feltdata og låses. Enhver endring gjør den ugyldig, uten unntak.",
+        "independent": "<strong>Autonom verifikasjon:</strong> Hvem som helst med rapporten kan verifisere dens autentisitet, ingen konto, ingen plattformtilgang."
       },
       "link": "Utforsk GeoTapp Verifier"
     },
@@ -204,7 +204,7 @@
         },
         {
           "title": "Forsvarbart bevis over tid",
-          "desc": "Hver rapport låses på ekte feltdata — ikke redigerbar etter generering. Tvist? Dataene er der. Verifiserbare av hvem som helst. Alltid."
+          "desc": "Hver rapport låses på ekte feltdata, ikke redigerbar etter generering. Tvist? Dataene er der. Verifiserbare av hvem som helst. Alltid."
         }
       ]
     },
@@ -215,12 +215,12 @@
       "pricing_link": "Se planer og priser →"
     },
     "settori": {
-      "title": "Verifiserbar dokumentasjon for hver sektor — GeoTapp-løsninger",
-      "subtitle": "Velg din sektor for å se hvordan GeoTapp genererer arbeidsbeviser — for å vise kunden ved tvister.",
+      "title": "Verifiserbar dokumentasjon for hver sektor - GeoTapp-løsninger",
+      "subtitle": "Velg din sektor for å se hvordan GeoTapp genererer arbeidsbeviser, for å vise kunden ved tvister.",
       "see_all": "Se alle støttede sektorer",
       "installatori": {
         "name": "Installatører",
-        "desc": "Elektrikere, Rørleggere, Teknikere. Hvert oppdrag dokumentert med GPS og bilder — uforanderlige data, verifiserbare av kunden.",
+        "desc": "Elektrikere, Rørleggere, Teknikere. Hvert oppdrag dokumentert med GPS og bilder, uforanderlige data, verifiserbare av kunden.",
         "cta": "Bevis hvert oppdrag"
       },
       "sicurezza": {
@@ -230,17 +230,17 @@
       },
       "pulizie": {
         "name": "Rengjøring",
-        "desc": "Rengjøringsselskaper, Facility, Multiservice. Hvert gjennomgang dokumentert og verifiserbart av kunden — null tvister.",
+        "desc": "Rengjøringsselskaper, Facility, Multiservice. Hvert gjennomgang dokumentert og verifiserbart av kunden, null tvister.",
         "cta": "Unngå tvister"
       },
       "elettricisti": {
         "name": "Elektrikere",
-        "desc": "El-installasjoner, tavler, kabler. Hvert arbeid dokumentert med GPS og bilder — manipuleringssikkert bevis for å lukke enhver tvist.",
+        "desc": "El-installasjoner, tavler, kabler. Hvert arbeid dokumentert med GPS og bilder, manipuleringssikkert bevis for å lukke enhver tvist.",
         "cta": "Dokumentér hvert arbeid"
       },
       "idraulici": {
         "name": "Rørleggere",
-        "desc": "Rørlegger, varme, kjeler. GPS-arbeidsrapporter med bilder før og etter — ingen tvister om utført arbeid.",
+        "desc": "Rørlegger, varme, kjeler. GPS-arbeidsrapporter med bilder før og etter, ingen tvister om utført arbeid.",
         "cta": "Bevis hvert arbeid"
       }
     },
@@ -252,7 +252,7 @@
     },
     "demo_banner": {
       "badge": "Ekte eksempel",
-      "title": "Sertifisert rapport — last ned og verifiser",
+      "title": "Sertifisert rapport, last ned og verifiser",
       "field_operator": "Operatør",
       "field_intervention": "Innsats",
       "field_intervention_value": "Utskifting av eltavlen",
@@ -488,7 +488,7 @@
     "hq_city": "100% online, kunder i Italia og EU",
     "hq_note": "Ingen publikumsåpen kontor: support og onboarding eksternt.",
     "privacy_note": "Ved å sende inn dette skjemaet godtar du vår Personvernpolicy.",
-    "map_title": "Hvor vi er — Trenzano (BS), Italia",
+    "map_title": "Hvor vi er - Trenzano (BS), Italia",
     "success": "Melding sendt. Vi svarer så snart som mulig.",
     "error": "Feil ved sending. Prøv igjen senere.",
     "sending": "Sender...",
@@ -509,7 +509,7 @@
   },
   "product_pages": {
     "flow": {
-      "hero_badge": "GeoTapp Flow — Styring av feltoperasjoner",
+      "hero_badge": "GeoTapp Flow - Styring av feltoperasjoner",
       "hero_title": "GeoTapp Flow.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600\">Operativ Styring.</span>",
       "hero_subtitle": "Det operative senteret for å håndtere kunder, prosjekter, team og administrasjon på ett sted. Flow er plattformen som også driver TimeTracker.",
       "visual_placeholder": "OPERASJONSPANEL",
@@ -542,7 +542,7 @@
         "ledger-prime": {
           "name": "Rapporter og fakturering",
           "short": "Generer strukturerte arbeidsrapporter fra hver arbeidsordre. Eksporter dokumentasjon og støtt fakturering med reelle feltdata.",
-          "full": "### Fra arbeid til arbeidsrapport, på en ryddig måte.\n\nManuell fakturering er treg og ofte ufullstendig.\n**Rapporter og fakturering** lukker den operative syklusen.\n\n#### Strukturerte arbeidsrapporter\n\nHver fullført intervensjon genererer dokumentasjon ved å samle tidsstempler, bilder og notater fra felt.\nIngen data å legge inn manuelt — alt kommer fra TimeTracker.\n\n#### Fakturastøtte\n\nReelle arbeidsordredata støtter mer nøyaktige tilbud og fakturaer.\nFærre feil, færre tvister, raskere administrativ syklus."
+          "full": "### Fra arbeid til arbeidsrapport, på en ryddig måte.\n\nManuell fakturering er treg og ofte ufullstendig.\n**Rapporter og fakturering** lukker den operative syklusen.\n\n#### Strukturerte arbeidsrapporter\n\nHver fullført intervensjon genererer dokumentasjon ved å samle tidsstempler, bilder og notater fra felt.\nIngen data å legge inn manuelt, alt kommer fra TimeTracker.\n\n#### Fakturastøtte\n\nReelle arbeidsordredata støtter mer nøyaktige tilbud og fakturaer.\nFærre feil, færre tvister, raskere administrativ syklus."
         },
         "quantum-logistics": {
           "name": "Intervensjonskalender",
@@ -577,7 +577,7 @@
       }
     },
     "app": {
-      "hero_badge": "GeoTapp TimeTracker — App for feltteknikere",
+      "hero_badge": "GeoTapp TimeTracker - App for feltteknikere",
       "hero_title": "GeoTapp TimeTracker.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600\">Feltet i lommen din.</span>",
       "hero_subtitle": "Mobilappen som brukes av feltteknikere for å registrere aktivitet, samle bevis og opprettholde den operative tråden direkte fra felt. Tilgjengelig på Android og iOS.",
       "visual_placeholder": "FELTGRENSESNITT",
@@ -688,7 +688,7 @@
     "cosa_vedrai": [
       {
         "title": "GPS-innsjekking i aksjon",
-        "desc": "Hvordan teknikeren sjekker inn via mobilappen og hvordan kontoret ser den verifiserte posisjonen — uten kontinuerlig sporing."
+        "desc": "Hvordan teknikeren sjekker inn via mobilappen og hvordan kontoret ser den verifiserte posisjonen, uten kontinuerlig sporing."
       },
       {
         "title": "Verifiserbare rapporter",
@@ -706,7 +706,7 @@
       },
       {
         "q": "Er forberedelse nødvendig?",
-        "a": "Nei. Ta bare med ditt konkrete tilfelle — hvor mange operatører du har og hvilke problemer du har i dag med timer eller rapporter."
+        "a": "Nei. Ta bare med ditt konkrete tilfelle, hvor mange operatører du har og hvilke problemer du har i dag med timer eller rapporter."
       },
       {
         "q": "Er demoen gratis?",
@@ -731,7 +731,7 @@
     "success_title": "Forespørsel mottatt!",
     "success_desc": "Vi kontakter deg innen 1 virkedag for å planlegge demoen.",
     "error_message": "Feil ved sending. Prøv igjen senere.",
-    "badge": "Demo GeoTapp — 30 Minutter",
+    "badge": "Demo GeoTapp, 30 Minutter",
     "page_subtitle": "Vi viser deg hvordan GeoTapp eliminerer tvister om timer og gjør hvert oppdrag dokumentert og verifiserbart.",
     "form_title": "Dine opplysninger",
     "urgent_contact": "Presserende spørsmål? Skriv til",
@@ -780,7 +780,7 @@
       "Det var 2024. Mike Petraroli, vår grunnlegger, jobbet som ansatt og hadde et tilsynelatende trivielt men utrolig kostbart problem: <strong>å bevise sitt eget arbeid.</strong>",
       "På slutten av måneden stemte aldri timregistreringen. Jobber gjort i farten mellom kunder ble glemt. Papir gikk tapt, WhatsApp-meldinger ble begravd. Det var en stille kilde til bortkastet tid og penger.",
       "Han søkte en løsning. Han fant bare komplekse, dyre programmer fulle av ubrukelige grafer og fattige på substans. Programmer laget av folk som aldri hadde stemplet inn eller utstedt en faktura i nødsituasjon fra en varebil.",
-      "Så bestemte Mike seg for å bygge verktøyet selv som han hadde ønsket å ha: enkelt, mobilt, med verifiserbare bevis. Ikke for investorer — for bedrifter som hans."
+      "Så bestemte Mike seg for å bygge verktøyet selv som han hadde ønsket å ha: enkelt, mobilt, med verifiserbare bevis. Ikke for investorer, for bedrifter som hans."
     ],
     "values_title": "Våre verdier",
     "values": [
@@ -845,7 +845,7 @@
     "cta_desc": "Ingen spam, bare verdifulle oppdateringer om produktet og bransjen.",
     "cta_btn": "Kontakt oss",
     "schema_desc": "Veiledninger og innsikt om sertifisering av feltarbeid, teamledelse, GDPR og geolokalisering.",
-    "meta_title": "Blogg | GeoTapp — Verifisering av feltarbeid",
+    "meta_title": "Blogg | GeoTapp - Verifisering av feltarbeid",
     "meta_desc": "Veiledninger, innsikt og ressurser om teamledelse, sertifisering av oppdrag, GDPR og geolokalisering. Fra GeoTapp-teamet.",
     "cat_all": "Alle",
     "toc_title": "Innhold",
@@ -865,7 +865,7 @@
   "trial": {
     "page_title": "14 dager gratis. Intet kort.",
     "page_subtitle": "Full tilgang til alle GeoTapp Flow-moduler i 14 dager. Ingen kredittkort, ingen forpliktelse. Avbestill når du vil.",
-    "badge": "Gratis prøveperiode — 14 dager",
+    "badge": "Gratis prøveperiode, 14 dager",
     "form_title": "Opprett kontoen din",
     "form_company": "Selskapsnavn",
     "form_company_placeholder": "F.eks. Hansen Installasjoner AS",
@@ -877,9 +877,9 @@
     "form_fullname_placeholder": "F.eks. Ola Hansen",
     "form_plan": "GeoTapp Flow-plan",
     "form_plan_note": "Planens brukerantall refererer til GeoTapp Flow (kontorstyring/CRM). GeoTapp Timetracker-lisenser for feltoperatører er et separat abonnement med et maksimalt antall inkludert avhengig av valgt plan.",
-    "plan_solo": "Solo — 1 Flow-bruker",
-    "plan_team": "Team — opptil 5 Flow-brukere",
-    "plan_business": "Business — ubegrensede Flow-brukere",
+    "plan_solo": "Solo, 1 Flow-bruker",
+    "plan_team": "Team, opptil 5 Flow-brukere",
+    "plan_business": "Business, ubegrensede Flow-brukere",
     "form_seats": "Timetracker-lisenser (valgfritt)",
     "form_seats_hint": "Separat abonnement for feltoperatører (mobilapp). Grense inkludert i plan: Solo maks. 2, Team maks. 5, Business ubegrenset. Du kan justere lisenser etter aktivering.",
     "form_submit": "Start gratis prøveperiode",
@@ -931,7 +931,7 @@
     "form_seats_required_note": "* Obligatorisk: skriv 0 hvis du ikke trenger TimeTracker-lisenser."
   },
   "roi": {
-    "meta_title": "GeoTapp ROI-kalkulator — Oppdag dine reelle besparelser",
+    "meta_title": "GeoTapp ROI-kalkulator - Oppdag dine reelle besparelser",
     "meta_desc": "Beregn på 2 minutter hva du ville spare med GeoTapp: mindre byråkrati, null tvister, mer produktive operatører.",
     "hero_title": "Beregn din ROI med GeoTapp",
     "hero_subtitle": "Skriv inn bedriftsdataene dine og oppdag hvor mye du kan spare hvert år.",
@@ -1021,17 +1021,17 @@
     "title": "Power Under the Hood.",
     "subtitle": "Vi bygger ikke leker. GeoTapp er en enterprise-plattform bygget for å skalere. Her er teknologiene som gjør magien mulig.",
     "gps_title": "GPS-sporing & Geografiske Kart",
-    "gps_desc": "Vet hvor teamet ditt er — i sanntid. Vårt live-kart viser hvert stempel med GPS-koordinater, geofencing-validering og anti-spoofing-beskyttelse. Ledere ser hvem som er på stedet med ett blikk — ingen samtaler, ingen gjetting.",
+    "gps_desc": "Vet hvor teamet ditt er, i sanntid. Vårt live-kart viser hvert stempel med GPS-koordinater, geofencing-validering og anti-spoofing-beskyttelse. Ledere ser hvem som er på stedet med ett blikk, ingen samtaler, ingen gjetting.",
     "offline_title": "Offline-First Architecture",
     "offline_desc": "Tilkoblingen faller ut, arbeidet ikke. Vi har bygget en lokalt synkronisert database (CRDT) som lever inne i appen. Teknikerne dine kan jobbe i en underjordisk bunker; så snart de ser et glimt av himmelen, synkroniserer data lydløst med skyen.",
     "encryption_title": "Military-Grade Encryption",
-    "encryption_desc": "Sov trygt. Vi bruker AES-256-kryptering i ro og TLS 1.3 i transitt. Selv om en angriper fanget opp dataene dine, ville vedkommende bare se hvit støy. Personvern er ikke bare en juridisk avkrysningsboks — det er matematikk.",
+    "encryption_desc": "Sov trygt. Vi bruker AES-256-kryptering i ro og TLS 1.3 i transitt. Selv om en angriper fanget opp dataene dine, ville vedkommende bare se hvit støy. Personvern er ikke bare en juridisk avkrysningsboks, det er matematikk.",
     "realtime_title": "Real-Time WebSocket",
     "realtime_desc": "Slutt å trykke F5. Takket være WebSockets reiser informasjon øyeblikkelig. Når en tekniker lukker en sak i Bergen, ser manageren i Oslo prikken bli grønn i samme millisekund. Det er som å være overalt på én gang.",
     "cms_title": "Headless CMS Integration",
     "cms_desc": "Innhold er flytende. Vår headless-arkitektur kobler data fra presentasjon. Det betyr at du kan publisere et blogginnlegg, sende det til mobilappen og distribuere det via nyhetsbrev med ett enkelt klikk.",
     "datalake_title": "Scalable Data Lake",
-    "datalake_desc": "Fra 100 til 100 millioner poster uten å svette. Vi bruker partisjonert PostgreSQL for å håndtere massive datavolumer uten tregheter. Din historikk er verdifull — vi bevarer den for alltid, tilgjengelig på et øyeblikk.",
+    "datalake_desc": "Fra 100 til 100 millioner poster uten å svette. Vi bruker partisjonert PostgreSQL for å håndtere massive datavolumer uten tregheter. Din historikk er verdifull, vi bevarer den for alltid, tilgjengelig på et øyeblikk.",
     "cdn_title": "Global CDN Edge",
     "cdn_desc": "Hastighet er geografisk. Våre statiske ressurser repliseres på tvers av 300+ datasentre verden over. Enten kunden din er i New York eller Tokyo laster nettstedet ditt som om serveren var i rommet ved siden av."
   },

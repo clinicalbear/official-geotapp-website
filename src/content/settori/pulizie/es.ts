@@ -8,8 +8,8 @@ const content: SettoreContent = {
   hero: {
     badge: 'Software para Empresas de Limpieza, Facility Management y Servicios Auxiliares',
     h1_line1: 'Software para empresas de limpieza:',
-    h1_line2: 'turnos, pruebas fotográficas y horas verificadas — en cada edificio',
-    subtitle: 'GeoTapp conecta Flow + TimeTracker para equipos distribuidos en múltiples edificios y plantas. Sus operarios fichan desde el móvil con GPS verificado; la oficina ve quién limpió qué, dónde y cuándo — con evidencia fotográfica adjunta. Sin disputas, con cumplimiento total del Convenio colectivo de limpieza de edificios.',
+    h1_line2: 'turnos, pruebas fotográficas y horas verificadas, en cada edificio',
+    subtitle: 'GeoTapp conecta Flow + TimeTracker para equipos distribuidos en múltiples edificios y plantas. Sus operarios fichan desde el móvil con GPS verificado; la oficina ve quién limpió qué, dónde y cuándo, con evidencia fotográfica adjunta. Sin disputas, con cumplimiento total del Convenio colectivo de limpieza de edificios.',
     cta_primary: 'Solicitar una demo',
     cta_note: 'Sin compromiso. Respuesta en 12 horas laborables.',
   },
@@ -32,7 +32,7 @@ const content: SettoreContent = {
   },
   workflow: {
     title: 'Cómo funciona en tres pasos',
-    subtitle: 'Del edificio a la oficina — sin perseguir a nadie.',
+    subtitle: 'Del edificio a la oficina, sin perseguir a nadie.',
     steps: [
       {
         title: 'El operario ficha en el centro',
@@ -40,7 +40,7 @@ const content: SettoreContent = {
       },
       {
         title: 'La oficina ve todo en tiempo real',
-        desc: 'Flow recibe los datos al instante. El responsable ve qué edificio ha sido atendido, por quién, a qué hora y con qué evidencia fotográfica — sin hacer una sola llamada.',
+        desc: 'Flow recibe los datos al instante. El responsable ve qué edificio ha sido atendido, por quién, a qué hora y con qué evidencia fotográfica, sin hacer una sola llamada.',
       },
       {
         title: 'El informe de traspaso ya está listo',

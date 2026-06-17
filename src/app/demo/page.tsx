@@ -51,7 +51,7 @@ export default function DemoPage() {
         name: formData.name,
         company: formData.company,
         email: formData.email,
-        reason: `Demo request — ${formData.settore}`,
+        reason: `Demo request, ${formData.settore}`,
         message: `Telefono: ${formData.phone || 'non fornito'}\nSettore: ${formData.settore}`,
       });
       setSubmitted(true);
@@ -69,7 +69,7 @@ export default function DemoPage() {
         {/* HEADER */}
         <div className="text-center mb-16 max-w-3xl mx-auto">
           <GeoBadge className="mb-6">
-            {d.badge ?? 'Demo GeoTapp — 30 Minutes'}
+            {d.badge ?? 'Demo GeoTapp, 30 Minutes'}
           </GeoBadge>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}

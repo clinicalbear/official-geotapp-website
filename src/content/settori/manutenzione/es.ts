@@ -12,7 +12,7 @@ const content: SettoreContent = {
     h1_line1: 'Tu equipo de mantenimiento,',
     h1_line2: 'siempre bajo control.',
     subtitle:
-      'Registra intervenciones, planifica turnos y documenta cada visita con GPS real y pruebas fotográficas. Historial completo por instalación y cliente — sin introducción manual de datos.',
+      'Registra intervenciones, planifica turnos y documenta cada visita con GPS real y pruebas fotográficas. Historial completo por instalación y cliente, sin introducción manual de datos.',
     cta_primary: 'Prueba GeoTapp gratis durante 14 días',
     cta_note: 'Sin compromiso. Sin tarjeta de crédito.',
   },
@@ -22,7 +22,7 @@ const content: SettoreContent = {
     items: [
       {
         title: '¿Cómo documentas las visitas de mantenimiento periódicas?',
-        desc: 'Informe automático con GPS, horas y fotos por cada visita. Historial completo y descargable — sin introducción manual.',
+        desc: 'Informe automático con GPS, horas y fotos por cada visita. Historial completo y descargable, sin introducción manual.',
       },
       {
         title: '¿Los técnicos llegan realmente a tiempo?',
@@ -41,7 +41,7 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'El técnico ficha GPS al llegar',
-        desc: 'Abre la intervención desde su smartphone. GeoTapp registra coordenadas GPS reales, marca de tiempo y fotos — todo automático e inalterable.',
+        desc: 'Abre la intervención desde su smartphone. GeoTapp registra coordenadas GPS reales, marca de tiempo y fotos, todo automático e inalterable.',
       },
       {
         title: 'Las horas y la intervención se registran automáticamente',
@@ -88,7 +88,7 @@ const content: SettoreContent = {
     quote:
       'Con GeoTapp cada visita de mantenimiento queda registrada. Los clientes ven el historial completo por instalación y ya no hay discusiones sobre horas o trabajos realizados.',
     author: 'Andrés L.',
-    role: 'Responsable de mantenimiento, facility management — España',
+    role: 'Responsable de mantenimiento, facility management - España',
   },
 
   faq: {
@@ -97,7 +97,7 @@ const content: SettoreContent = {
     items: [
       {
         q: '¿Cómo se documentan las visitas de mantenimiento periódicas?',
-        a: 'GeoTapp genera automáticamente un informe por visita con GPS, horas y fotos. Historial completo por instalación o sede del cliente — sin introducción manual.',
+        a: 'GeoTapp genera automáticamente un informe por visita con GPS, horas y fotos. Historial completo por instalación o sede del cliente, sin introducción manual.',
       },
       {
         q: '¿Los técnicos llegan realmente a tiempo?',
@@ -117,7 +117,7 @@ const content: SettoreContent = {
       },
       {
         q: '¿Cuánto cuesta GeoTapp para una empresa de mantenimiento?',
-        a: 'Los planes empiezan desde pocos euros por técnico al mes. Prueba gratis 14 días — sin compromiso.',
+        a: 'Los planes empiezan desde pocos euros por técnico al mes. Prueba gratis 14 días, sin compromiso.',
       },
     ],
   },

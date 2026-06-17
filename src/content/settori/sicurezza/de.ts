@@ -9,7 +9,7 @@ const content: SettoreContent = {
     badge: 'Software für Bewachungsgewerbe, Wachpersonal und Veranstaltungsschutz',
     h1_line1: 'Nachweisbare Anwesenheit und Schichtdokumentation',
     h1_line2: 'für Sicherheitsdienste und Wachpersonal',
-    subtitle: 'GeoTapp Flow und TimeTracker dokumentieren die Anwesenheit von Wachpersonal an zugewiesenen Posten mit verifizierten GPS-Daten und unveränderlichen Zeitstempeln. §34a GewO-konforme Qualifikationsverfolgung, digitale Schichtübergabe und geolokalisierte Störungsberichte — alles in einer Plattform.',
+    subtitle: 'GeoTapp Flow und TimeTracker dokumentieren die Anwesenheit von Wachpersonal an zugewiesenen Posten mit verifizierten GPS-Daten und unveränderlichen Zeitstempeln. §34a GewO-konforme Qualifikationsverfolgung, digitale Schichtübergabe und geolokalisierte Störungsberichte, alles in einer Plattform.',
     cta_primary: 'Demo anfordern',
     cta_note: 'Unverbindlich. Antwort innerhalb von 12 Arbeitsstunden.',
   },
@@ -18,7 +18,7 @@ const content: SettoreContent = {
     items: [
       {
         title: 'Nachweis der Postenbesetzung zum vertraglich vereinbarten Zeitpunkt',
-        desc: 'Ein Auftraggeber bestreitet die Anwesenheit einer Wachperson zu einem bestimmten Zeitpunkt. Ohne verifizierte GPS-Daten und unveränderliche Zeitstempel bleibt der Vertragsverstoß unbeweisbar — in beide Richtungen.',
+        desc: 'Ein Auftraggeber bestreitet die Anwesenheit einer Wachperson zu einem bestimmten Zeitpunkt. Ohne verifizierte GPS-Daten und unveränderliche Zeitstempel bleibt der Vertragsverstoß unbeweisbar, in beide Richtungen.',
       },
       {
         title: 'Störungsberichte ohne Positionsnachweis',
@@ -32,7 +32,7 @@ const content: SettoreContent = {
   },
   workflow: {
     title: 'So funktioniert es in drei Schritten',
-    subtitle: 'Vom Wachposten in die Leitstelle — ohne Papierkram.',
+    subtitle: 'Vom Wachposten in die Leitstelle, ohne Papierkram.',
     steps: [
       {
         title: 'Die Wachperson stempelt am zugewiesenen Posten ein',
@@ -40,11 +40,11 @@ const content: SettoreContent = {
       },
       {
         title: 'Der Einsatzleiter sieht alle Posten in Echtzeit',
-        desc: 'Flow empfängt Daten sofort. Der Einsatzleiter überprüft die vollständige Posten­besetzung, Schichtwechsel und Abweichungen — ohne das Feld anzurufen.',
+        desc: 'Flow empfängt Daten sofort. Der Einsatzleiter überprüft die vollständige Posten­besetzung, Schichtwechsel und Abweichungen, ohne das Feld anzurufen.',
       },
       {
         title: 'Der Anwesenheitsnachweis ist sofort bereit',
-        desc: 'Am Schichtende liegt das Anwesenheitsprotokoll mit echten GPS-Daten strukturiert vor — bereit für Auftraggeber-Audits oder Kontrollen der Behörden gem. §34a GewO.',
+        desc: 'Am Schichtende liegt das Anwesenheitsprotokoll mit echten GPS-Daten strukturiert vor, bereit für Auftraggeber-Audits oder Kontrollen der Behörden gem. §34a GewO.',
       },
     ],
   },
@@ -66,7 +66,7 @@ const content: SettoreContent = {
     ],
   },
   testimonial: {
-    quote: 'Mit GeoTapp haben wir Streitigkeiten über Postenstärken eliminiert. Auftraggeber erhalten ein GPS-gestempeltes Anwesenheitsprotokoll — da gibt es nichts mehr zu diskutieren.',
+    quote: 'Mit GeoTapp haben wir Streitigkeiten über Postenstärken eliminiert. Auftraggeber erhalten ein GPS-gestempeltes Anwesenheitsprotokoll, da gibt es nichts mehr zu diskutieren.',
     author: 'Stefan K.',
     role: 'Betriebsleiter, Sicherheitsdienstleister',
   },
@@ -80,7 +80,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Wie unterstützt GeoTapp die Dokumentation von Störungsberichten?',
-        a: 'TimeTracker verknüpft jeden Vorfall mit einem zertifizierten GPS-Standort und einem unveränderlichen Zeitstempel. Der generierte Störungsbericht enthält Koordinaten, Uhrzeit und Fotos — gerichtsverwertbar und auftraggebersicher.',
+        a: 'TimeTracker verknüpft jeden Vorfall mit einem zertifizierten GPS-Standort und einem unveränderlichen Zeitstempel. Der generierte Störungsbericht enthält Koordinaten, Uhrzeit und Fotos, gerichtsverwertbar und auftraggebersicher.',
       },
       {
         q: 'Unterstützt GeoTapp die digitale Schichtübergabe zwischen Wachpersonen?',

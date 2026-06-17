@@ -134,7 +134,7 @@ export default function ArticleSidebar({ headings, locale, categories = [], date
 
   return (
     <aside className="sticky top-28 max-h-[calc(100vh-8rem)] overflow-y-auto pb-8">
-      {/* Digital clock-in stamp — light/airy */}
+      {/* Digital clock-in stamp, light/airy */}
       <div className="mb-6 rounded-xl border border-slate-200 bg-white p-4">
         {/* Status */}
         <div className="flex items-center gap-2 mb-3">
@@ -200,7 +200,7 @@ export default function ArticleSidebar({ headings, locale, categories = [], date
         </nav>
       )}
 
-      {/* Related Product — logo grande */}
+      {/* Related Product, logo grande */}
       <Link
         href={`/${locale}${product.href}`}
         className="block mb-6 p-6 rounded-2xl border border-slate-200 hover:border-slate-300 hover:shadow-md transition-all duration-200 group"
@@ -217,7 +217,7 @@ export default function ArticleSidebar({ headings, locale, categories = [], date
         </span>
       </Link>
 
-      {/* CTA — leggero, arioso */}
+      {/* CTA, leggero, arioso */}
       <div className="mb-6 rounded-2xl border border-[#8FC436]/20 bg-[#8FC436]/5 p-5">
         <p className="text-[13px] font-bold text-slate-800">{labels.cta_title}</p>
         <p className="text-[11px] text-slate-500 mt-1.5 leading-relaxed">{labels.cta_desc}</p>
@@ -230,7 +230,7 @@ export default function ArticleSidebar({ headings, locale, categories = [], date
         </Link>
       </div>
 
-      {/* Share — in fondo */}
+      {/* Share, in fondo */}
       <div className="pt-5 border-t border-slate-100">
         <p className="text-[11px] font-bold uppercase tracking-widest text-slate-400 mb-3">
           {labels.share}

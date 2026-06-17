@@ -12,7 +12,7 @@ const content: SettoreContent = {
     h1_line1: 'Ihr Wartungsteam,',
     h1_line2: 'immer unter Kontrolle.',
     subtitle:
-      'Erfassen Sie Einsätze, planen Sie Schichten und dokumentieren Sie jeden Besuch mit echtem GPS und Fotonachweisen. Vollständige Historie pro Anlage und Kunde — ohne manuelle Eingabe.',
+      'Erfassen Sie Einsätze, planen Sie Schichten und dokumentieren Sie jeden Besuch mit echtem GPS und Fotonachweisen. Vollständige Historie pro Anlage und Kunde, ohne manuelle Eingabe.',
     cta_primary: 'GeoTapp 14 Tage kostenlos testen',
     cta_note: 'Keine Bindung. Keine Kreditkarte erforderlich.',
   },
@@ -22,7 +22,7 @@ const content: SettoreContent = {
     items: [
       {
         title: 'Wie dokumentieren Sie regelmäßige Wartungsbesuche?',
-        desc: 'Automatischer Bericht mit GPS, Stunden und Fotos für jeden Besuch. Vollständige Historie, herunterladbar — ohne manuelle Eingabe.',
+        desc: 'Automatischer Bericht mit GPS, Stunden und Fotos für jeden Besuch. Vollständige Historie, herunterladbar, ohne manuelle Eingabe.',
       },
       {
         title: 'Kommen die Techniker wirklich pünktlich an?',
@@ -41,7 +41,7 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'Techniker stempelt GPS bei Ankunft',
-        desc: 'Öffnet den Einsatz vom Smartphone. GeoTapp erfasst echte GPS-Koordinaten, Zeitstempel und Fotos — vollautomatisch, fälschungssicher.',
+        desc: 'Öffnet den Einsatz vom Smartphone. GeoTapp erfasst echte GPS-Koordinaten, Zeitstempel und Fotos, vollautomatisch, fälschungssicher.',
       },
       {
         title: 'Stunden und Einsatz werden automatisch erfasst',
@@ -88,7 +88,7 @@ const content: SettoreContent = {
     quote:
       'Mit GeoTapp ist jeder Wartungseinsatz nachvollziehbar. Die Kunden sehen die komplette Historie pro Anlage und es gibt keine Diskussionen mehr über Stunden oder erledigte Arbeiten.',
     author: 'Andreas L.',
-    role: 'Wartungsleiter, Facility Management — Deutschland',
+    role: 'Wartungsleiter, Facility Management - Deutschland',
   },
 
   faq: {
@@ -97,7 +97,7 @@ const content: SettoreContent = {
     items: [
       {
         q: 'Wie dokumentiert man regelmäßige Wartungsbesuche?',
-        a: 'GeoTapp erstellt automatisch einen Bericht pro Besuch mit GPS, Stunden und Fotos. Vollständige Historie pro Anlage oder Kundenstandort — ohne manuelle Eingabe.',
+        a: 'GeoTapp erstellt automatisch einen Bericht pro Besuch mit GPS, Stunden und Fotos. Vollständige Historie pro Anlage oder Kundenstandort, ohne manuelle Eingabe.',
       },
       {
         q: 'Kommen die Techniker wirklich pünktlich?',
@@ -117,7 +117,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Was kostet GeoTapp für ein Wartungsunternehmen?',
-        a: 'Die Pläne starten ab wenigen Euro pro Mitarbeiter/Monat. 14 Tage kostenlos testen — ohne Bindung.',
+        a: 'Die Pläne starten ab wenigen Euro pro Mitarbeiter/Monat. 14 Tage kostenlos testen, ohne Bindung.',
       },
     ],
   },

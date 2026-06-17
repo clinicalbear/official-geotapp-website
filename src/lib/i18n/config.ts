@@ -49,7 +49,7 @@ export const COUNTRY_TO_LOCALE: Partial<Record<string, AppLocale>> = {
   AT: 'de',
   LI: 'de',
   CH: 'de',
-  // Regional English variants — country → dedicated locale-region.
+  // Regional English variants, country → dedicated locale-region.
   // Each maps to its own locale so hreflang signals targeting independently.
   // NZ continues to fall back to generic 'en' (volume too small to justify a
   // dedicated locale today; revisit if NZ traffic crosses ~50 sess/month).
@@ -77,7 +77,7 @@ export const COUNTRY_TO_LOCALE: Partial<Record<string, AppLocale>> = {
 };
 
 /**
- * English regional variants — every variant resolves to the base 'en' for
+ * English regional variants, every variant resolves to the base 'en' for
  * routing/dictionaries fallback. Used by helpers that need to know whether
  * a locale is "an English variant" without listing each one.
  */

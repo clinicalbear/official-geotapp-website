@@ -12,7 +12,7 @@ const content: SettoreContent = {
     h1_line1: 'La tua squadra di manutenzione,',
     h1_line2: 'sempre sotto controllo.',
     subtitle:
-      'Traccia interventi, pianifica turni e documenta ogni visita con GPS reale e prove fotografiche. Storico completo per impianti e clienti — senza nessun inserimento manuale.',
+      'Traccia interventi, pianifica turni e documenta ogni visita con GPS reale e prove fotografiche. Storico completo per impianti e clienti, senza nessun inserimento manuale.',
     cta_primary: 'Prova GeoTapp gratis per 14 giorni',
     cta_note: 'Nessun vincolo. Nessuna carta di credito richiesta.',
   },
@@ -41,7 +41,7 @@ const content: SettoreContent = {
     steps: [
       {
         title: "Il tecnico timbra GPS all'arrivo in sede",
-        desc: "Apre l'intervento dallo smartphone. GeoTapp registra coordinate GPS reali, timestamp e foto — tutto automatico, non modificabile.",
+        desc: "Apre l'intervento dallo smartphone. GeoTapp registra coordinate GPS reali, timestamp e foto, tutto automatico, non modificabile.",
       },
       {
         title: "Le ore e l'intervento vengono registrati automaticamente",
@@ -49,7 +49,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Il cliente riceve il report firmato digitalmente',
-        desc: "A fine intervento il sistema genera un report con GPS, ore e firma digitale. Il cliente lo verifica in autonomia — senza accesso al gestionale.",
+        desc: "A fine intervento il sistema genera un report con GPS, ore e firma digitale. Il cliente lo verifica in autonomia, senza accesso al gestionale.",
       },
     ],
   },
@@ -63,7 +63,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Storico manutenzione per impianto',
-        desc: 'Ogni intervento è collegato alla sede o all\'impianto. Lo storico completo è consultabile e scaricabile — per te e per il cliente.',
+        desc: 'Ogni intervento è collegato alla sede o all\'impianto. Lo storico completo è consultabile e scaricabile, per te e per il cliente.',
       },
       {
         title: 'Report automatici e non alterabili',
@@ -88,7 +88,7 @@ const content: SettoreContent = {
     quote:
       'Con GeoTapp ogni intervento di manutenzione è tracciato. I clienti vedono lo storico completo di ogni impianto e non ci sono più discussioni sulle ore o sui lavori eseguiti.',
     author: 'Andrea L.',
-    role: 'Responsabile manutenzione, facility management — Centro Italia',
+    role: 'Responsabile manutenzione, facility management - Centro Italia',
   },
 
   faq: {
@@ -97,11 +97,11 @@ const content: SettoreContent = {
     items: [
       {
         q: 'Come documenti gli interventi periodici di manutenzione?',
-        a: "GeoTapp genera automaticamente un report per ogni visita con GPS, ore e foto. Lo storico è completo e scaricabile per impianto o per sede cliente — senza nessun inserimento manuale.",
+        a: "GeoTapp genera automaticamente un report per ogni visita con GPS, ore e foto. Lo storico è completo e scaricabile per impianto o per sede cliente, senza nessun inserimento manuale.",
       },
       {
         q: 'I tecnici arrivano davvero nei tempi previsti?',
-        a: "Con GeoTapp puoi verificare in tempo reale l'orario di arrivo e la posizione GPS di ogni tecnico. Nessuna chiamata necessaria — il dato è già disponibile in dashboard.",
+        a: "Con GeoTapp puoi verificare in tempo reale l'orario di arrivo e la posizione GPS di ogni tecnico. Nessuna chiamata necessaria, il dato è già disponibile in dashboard.",
       },
       {
         q: 'Come dimostro ai clienti il servizio di manutenzione erogato?',
@@ -117,7 +117,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Quanto costa GeoTapp per un\'azienda di manutenzione?',
-        a: 'I piani partono da pochi euro per operatore al mese. Prova gratis per 14 giorni — senza impegno.',
+        a: 'I piani partono da pochi euro per operatore al mese. Prova gratis per 14 giorni, senza impegno.',
       },
     ],
   },
@@ -142,7 +142,7 @@ const content: SettoreContent = {
     {
       question: 'Come documenti gli interventi periodici di manutenzione?',
       answer:
-        "GeoTapp genera automaticamente un report per ogni visita con GPS, ore e foto. Lo storico è completo e scaricabile per impianto o per sede cliente — senza nessun inserimento manuale.",
+        "GeoTapp genera automaticamente un report per ogni visita con GPS, ore e foto. Lo storico è completo e scaricabile per impianto o per sede cliente, senza nessun inserimento manuale.",
     },
     {
       question: 'I tecnici arrivano davvero nei tempi previsti?',

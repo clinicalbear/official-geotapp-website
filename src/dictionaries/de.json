@@ -23,14 +23,14 @@
       "label": "Branchen",
       "termoidraulici": "Heizung & Sanitär"
     },
-    "logo_alt": "GeoTapp — Die Plattform, die Arbeit verifizierbar macht",
+    "logo_alt": "GeoTapp - Die Plattform, die Arbeit verifizierbar macht",
     "product_flow_desc": "Operative Einsatzverwaltung und Teamplanung",
     "product_app_desc": "Mobile App für Außendiensttechniker",
     "product_verifier_desc": "Integritätsprüfung von Arbeitsberichten",
     "compare": "Vergleich"
   },
   "risorseHub": {
-    "metaTitle": "Ressourcen — GeoTapp",
+    "metaTitle": "Ressourcen - GeoTapp",
     "metaDesc": "Kostenlose Tools und Ressourcen von GeoTapp: der Leitfaden zur GPS-Überwachung von Mitarbeitern in Europa, der ROI-Rechner und die Umfrage zum Arbeitsnachweis.",
     "h1": "Ressourcen",
     "intro": "Kostenlose Tools, Leitfäden und Daten, um Außendienstarbeit nachweisbar zu machen.\nWir halten sie aktuell und fügen neue hinzu.",
@@ -72,10 +72,10 @@
     "contact": "Kontakt"
   },
   "landing": {
-    "us_badge": "🇺🇸 Serving US teams — chat support 9am–6pm ET. USD invoicing available on request.",
+    "us_badge": "🇺🇸 Serving US teams, chat support 9am–6pm ET. USD invoicing available on request.",
     "hero_badge": "Die Arbeit war da. Jetzt machen Sie sie beweisbar.",
     "hero_title": "Wenn Sie es nicht beweisen können, sagt der Kunde: Es ist nie passiert.",
-    "hero_subtitle": "GeoTapp verwandelt jeden Außendiensteinsatz in objektive Beweise: versiegelte Berichte mit echten GPS-Daten, zeitgestempelte Fotonachweise und Dokumentation, die jeder unabhängig prüfen kann — ohne Vertrauen, ohne Streit.",
+    "hero_subtitle": "GeoTapp verwandelt jeden Außendiensteinsatz in objektive Beweise: versiegelte Berichte mit echten GPS-Daten, zeitgestempelte Fotonachweise und Dokumentation, die jeder unabhängig prüfen kann, ohne Vertrauen, ohne Streit.",
     "hero_cta_primary": "Kostenlos testen",
     "hero_cta_secondary": "Branchen entdecken",
     "trust_gdpr": "DSGVO-konform",
@@ -107,11 +107,11 @@
     ],
     "report_section_title": "Der Bericht. Nicht eine Zusammenfassung. Ein Beweis.",
     "report_section_subtitle": "Jeder GeoTapp-Bericht wird automatisch aus echten Felddaten generiert.",
-    "report_section_body": "GPS-Zeitstempel, Fotos mit Zeitstempel, Betriebsnotizen. Das System versiegelt jeden Bericht kryptografisch, sodass jede Änderung erkennbar ist. Das Ergebnis ist kein Dokument zum Weiterleiten — es ist ein Nachweis, den der Kunde selbst prüfen kann.",
-    "report_feature_1": "Nicht veränderbar nach Erstellung — jede Änderung ist erkennbar",
-    "report_feature_2": "Prüfbar ohne Konto — von jedem, unabhängig",
+    "report_section_body": "GPS-Zeitstempel, Fotos mit Zeitstempel, Betriebsnotizen. Das System versiegelt jeden Bericht kryptografisch, sodass jede Änderung erkennbar ist. Das Ergebnis ist kein Dokument zum Weiterleiten, es ist ein Nachweis, den der Kunde selbst prüfen kann.",
+    "report_feature_1": "Nicht veränderbar nach Erstellung, jede Änderung ist erkennbar",
+    "report_feature_2": "Prüfbar ohne Konto, von jedem, unabhängig",
     "report_feature_3": "GPS- und Fotodaten integriert und nicht trennbar",
-    "report_feature_4": "Automatisch generiert — keine manuelle Erfassung",
+    "report_feature_4": "Automatisch generiert, keine manuelle Erfassung",
     "report_cta": "So verifiziert Ihr Kunde selbst",
     "hero_sectors_prefix": "Ideal für",
     "hero_sectors_pulizie": "Reinigungsunternehmen",
@@ -180,8 +180,8 @@
       "title": "Sie brauchen kein Vertrauen.",
       "subtitle": "Der Kunde hat den Bericht. Er prüft ihn selbst, ohne GeoTapp zu öffnen. Wenn die Daten der realen Arbeit entsprechen, hält das Siegel. Wenn jemand das Dokument geändert hat, bricht das Siegel. Kein Einspruch.",
       "features": {
-        "integrity": "<strong>Nicht veränderbare Daten:</strong> Der Bericht wird auf echten Felddaten generiert und gesperrt. Jede Änderung macht ihn ungültig — ohne Ausnahme.",
-        "independent": "<strong>Autonome Prüfung:</strong> Jeder mit dem Bericht kann die Echtheit überprüfen — kein Konto, kein Plattformzugang."
+        "integrity": "<strong>Nicht veränderbare Daten:</strong> Der Bericht wird auf echten Felddaten generiert und gesperrt. Jede Änderung macht ihn ungültig, ohne Ausnahme.",
+        "independent": "<strong>Autonome Prüfung:</strong> Jeder mit dem Bericht kann die Echtheit überprüfen, kein Konto, kein Plattformzugang."
       },
       "link": "GeoTapp Verifier entdecken"
     },
@@ -215,12 +215,12 @@
       "pricing_link": "Pläne und Preise ansehen →"
     },
     "settori": {
-      "title": "Nachweisbare Dokumentation für jeden Sektor — GeoTapp-Lösungen",
-      "subtitle": "Wählen Sie Ihren Sektor und sehen Sie, wie GeoTapp Arbeitsnachweise erstellt — zum Vorzeigen beim Kunden bei Konflikten.",
+      "title": "Nachweisbare Dokumentation für jeden Sektor - GeoTapp-Lösungen",
+      "subtitle": "Wählen Sie Ihren Sektor und sehen Sie, wie GeoTapp Arbeitsnachweise erstellt, zum Vorzeigen beim Kunden bei Konflikten.",
       "see_all": "Alle unterstützten Sektoren anzeigen",
       "installatori": {
         "name": "Installateure",
-        "desc": "Elektriker, Installateure, Anlagentechniker. Jeder Einsatz mit GPS und Fotos dokumentiert — unveränderliche Daten, vom Kunden prüfbar.",
+        "desc": "Elektriker, Installateure, Anlagentechniker. Jeder Einsatz mit GPS und Fotos dokumentiert, unveränderliche Daten, vom Kunden prüfbar.",
         "cta": "Jeden Einsatz nachweisen"
       },
       "sicurezza": {
@@ -230,17 +230,17 @@
       },
       "pulizie": {
         "name": "Reinigung",
-        "desc": "Reinigungsunternehmen, Facility, Multiservice. Jeder Durchgang dokumentiert und vom Auftraggeber prüfbar — null Beschwerden.",
+        "desc": "Reinigungsunternehmen, Facility, Multiservice. Jeder Durchgang dokumentiert und vom Auftraggeber prüfbar, null Beschwerden.",
         "cta": "Beschwerden vermeiden"
       },
       "elettricisti": {
         "name": "Elektriker",
-        "desc": "Elektroinstallationen, Schaltanlagen, Verkabelung. Jeder Einsatz mit GPS und Fotos dokumentiert — manipulationssichere Beweise für jeden Streitfall.",
+        "desc": "Elektroinstallationen, Schaltanlagen, Verkabelung. Jeder Einsatz mit GPS und Fotos dokumentiert, manipulationssichere Beweise für jeden Streitfall.",
         "cta": "Jeden Einsatz dokumentieren"
       },
       "idraulici": {
         "name": "Klempner",
-        "desc": "Sanitär, Heizung, Kessel. GPS-Arbeitsberichte mit Vorher-Nachher-Fotos — keine Streitigkeiten über ausgeführte Arbeiten.",
+        "desc": "Sanitär, Heizung, Kessel. GPS-Arbeitsberichte mit Vorher-Nachher-Fotos, keine Streitigkeiten über ausgeführte Arbeiten.",
         "cta": "Jeden Auftrag beweisen"
       }
     },
@@ -252,7 +252,7 @@
     },
     "demo_banner": {
       "badge": "Echtes Beispiel",
-      "title": "Zertifizierter Bericht — herunterladen und verifizieren",
+      "title": "Zertifizierter Bericht, herunterladen und verifizieren",
       "field_operator": "Mitarbeiter",
       "field_intervention": "Einsatz",
       "field_intervention_value": "Austausch des Schaltschranks",
@@ -488,7 +488,7 @@
     "hq_city": "100% online, Kunden in Italien und der EU",
     "hq_note": "Kein öffentliches Büro: Support und Onboarding aus der Ferne.",
     "privacy_note": "Mit dem Absenden dieses Formulars stimmen Sie unserer Datenschutzerklärung zu.",
-    "map_title": "Wo wir sind — Trenzano (BS), Italien",
+    "map_title": "Wo wir sind - Trenzano (BS), Italien",
     "success": "Nachricht erfolgreich gesendet. Wir melden uns so schnell wie möglich.",
     "error": "Fehler beim Senden. Bitte versuchen Sie es später erneut.",
     "sending": "Wird gesendet...",
@@ -509,7 +509,7 @@
   },
   "product_pages": {
     "flow": {
-      "hero_badge": "GeoTapp Flow — Außendienststeuerung",
+      "hero_badge": "GeoTapp Flow - Außendienststeuerung",
       "hero_title": "GeoTapp Flow.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600\">Einsatzverwaltung.</span>",
       "hero_subtitle": "Die operative Zentrale für Kunden, Aufträge, Teams und Verwaltung in einer Umgebung. Flow ist die Plattform, auf der auch TimeTracker basiert.",
       "visual_placeholder": "BEDIENFELD",
@@ -542,7 +542,7 @@
         "ledger-prime": {
           "name": "Berichte und Abrechnung",
           "short": "Strukturierte Berichte aus jedem Auftrag erstellen. Dokumentation exportieren und Abrechnung mit echten Außendienstdaten unterstützen.",
-          "full": "### Von der Arbeit zum Bericht — geordnet.\n\nManuelle Abrechnung ist langsam und oft unvollständig.\n**Berichte und Abrechnung** schließt den operativen Kreislauf.\n\n#### Strukturierte Berichte\n\nJeder abgeschlossene Einsatz erzeugt Dokumentation durch Zusammenführung von Zeitstempeln, Fotos und Notizen aus dem Außendienst.\nKeine manuelle Dateneingabe — alles kommt aus TimeTracker.\n\n#### Abrechnungsunterstützung\n\nEchte Auftragsdaten unterstützen genauere Angebote und Rechnungen.\nWeniger Fehler, weniger Streitigkeiten, schnellerer Verwaltungszyklus."
+          "full": "### Von der Arbeit zum Bericht, geordnet.\n\nManuelle Abrechnung ist langsam und oft unvollständig.\n**Berichte und Abrechnung** schließt den operativen Kreislauf.\n\n#### Strukturierte Berichte\n\nJeder abgeschlossene Einsatz erzeugt Dokumentation durch Zusammenführung von Zeitstempeln, Fotos und Notizen aus dem Außendienst.\nKeine manuelle Dateneingabe, alles kommt aus TimeTracker.\n\n#### Abrechnungsunterstützung\n\nEchte Auftragsdaten unterstützen genauere Angebote und Rechnungen.\nWeniger Fehler, weniger Streitigkeiten, schnellerer Verwaltungszyklus."
         },
         "quantum-logistics": {
           "name": "Einsatzkalender",
@@ -567,7 +567,7 @@
         "the-uplink": {
           "name": "Außendienst-Büro-Verbindung",
           "short": "Von TimeTracker erfasste Daten gelangen in Echtzeit in Flow. Außendienst und Büro arbeiten mit denselben operativen Daten.",
-          "full": "### Büro und Außendienst — endlich verbunden.\n\nDie Trennung zwischen Außendienst und Büro erzeugt vermeidbare Fehler, Verzögerungen und Streitigkeiten.\n**Außendienst-Büro-Verbindung** schließt die Lücke.\n\n#### Echtzeitsynchronisation\n\nJedes Ein-/Ausstempeln, jedes Foto und jede Notiz in TimeTracker gelangt sofort in Flow.\nDer Manager hat eine Live-Ansicht, ohne den Techniker anrufen zu müssen.\n\n#### Zuverlässige Historie\n\nAlles, was der Techniker im Außendienst erfasst, wird archiviert und mit dem Auftrag verknüpft.\nKeine Daten gehen verloren. Keine Information fehlt, wenn es Zeit ist, Bericht zu erstatten."
+          "full": "### Büro und Außendienst, endlich verbunden.\n\nDie Trennung zwischen Außendienst und Büro erzeugt vermeidbare Fehler, Verzögerungen und Streitigkeiten.\n**Außendienst-Büro-Verbindung** schließt die Lücke.\n\n#### Echtzeitsynchronisation\n\nJedes Ein-/Ausstempeln, jedes Foto und jede Notiz in TimeTracker gelangt sofort in Flow.\nDer Manager hat eine Live-Ansicht, ohne den Techniker anrufen zu müssen.\n\n#### Zuverlässige Historie\n\nAlles, was der Techniker im Außendienst erfasst, wird archiviert und mit dem Auftrag verknüpft.\nKeine Daten gehen verloren. Keine Information fehlt, wenn es Zeit ist, Bericht zu erstatten."
         },
         "the-oracle": {
           "name": "Operative Sichtbarkeit",
@@ -577,7 +577,7 @@
       }
     },
     "app": {
-      "hero_badge": "GeoTapp TimeTracker — Außendienst-App",
+      "hero_badge": "GeoTapp TimeTracker - Außendienst-App",
       "hero_title": "GeoTapp TimeTracker.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600\">Der Außendienst in Ihrer Tasche.</span>",
       "hero_subtitle": "Die mobile App für Techniker zur Erfassung von Tätigkeiten, Sammlung von Nachweisen und Aufrechterhaltung des operativen Fadens direkt aus dem Außendienst. Verfügbar für Android und iOS.",
       "visual_placeholder": "AUSSENDIENST-INTERFACE",
@@ -640,7 +640,7 @@
         "identity-forge": {
           "name": "Marken-App",
           "short": "Ihr Logo hochladen und Unternehmensfarben wählen. Ihre Mitarbeiter nutzen eine App, die Ihre Markenidentität widerspiegelt.",
-          "full": "### Ihr Unternehmen, Ihre App.\n\nKeine generische App verwenden.\nLassen Sie Ihre Mitarbeiter Teil IHRES Unternehmens fühlen — mit einem konsistenten Markenerlebnis.\n\n#### Firmenlogo\n\nIhr Logo prominent auf dem Login-Bildschirm und dem Hauptdashboard.\n\n#### Unternehmensfarben\n\nDas Farbthema wählen, das zu Ihrem Unternehmensauftritt passt.\nProfessionell, konsistent, wiedererkennbar."
+          "full": "### Ihr Unternehmen, Ihre App.\n\nKeine generische App verwenden.\nLassen Sie Ihre Mitarbeiter Teil IHRES Unternehmens fühlen, mit einem konsistenten Markenerlebnis.\n\n#### Firmenlogo\n\nIhr Logo prominent auf dem Login-Bildschirm und dem Hauptdashboard.\n\n#### Unternehmensfarben\n\nDas Farbthema wählen, das zu Ihrem Unternehmensauftritt passt.\nProfessionell, konsistent, wiedererkennbar."
         }
       }
     }
@@ -678,7 +678,7 @@
   "trial": {
     "page_title": "14 Tage kostenlos. Keine Kreditkarte.",
     "page_subtitle": "Vollständiger Zugang zu allen GeoTapp Flow-Modulen für 14 Tage. Keine Kreditkarte, keine Verpflichtung. Jederzeit kündbar.",
-    "badge": "Kostenlose Testphase — 14 Tage",
+    "badge": "Kostenlose Testphase, 14 Tage",
     "form_title": "Konto erstellen",
     "form_company": "Firmenname",
     "form_company_placeholder": "Z.B. Rossi Installationen GmbH",
@@ -690,9 +690,9 @@
     "form_fullname_placeholder": "Z.B. Mario Rossi",
     "form_plan": "GeoTapp Flow-Tarif",
     "form_plan_note": "Die Nutzeranzahl des Tarifs bezieht sich auf GeoTapp Flow (Büroverwaltung / CRM). GeoTapp Timetracker-Lizenzen für Außendienstmitarbeiter sind ein separates Abonnement, mit einer im gewählten Tarif enthaltenen Höchstanzahl.",
-    "plan_solo": "Solo — 1 Flow-Nutzer",
-    "plan_team": "Team — bis 5 Flow-Nutzer",
-    "plan_business": "Business — unbegrenzte Flow-Nutzer",
+    "plan_solo": "Solo, 1 Flow-Nutzer",
+    "plan_team": "Team, bis 5 Flow-Nutzer",
+    "plan_business": "Business, unbegrenzte Flow-Nutzer",
     "form_seats": "Timetracker-Lizenzen (optional)",
     "form_seats_hint": "Separates Abonnement für Außendienstmitarbeiter (mobile App). Im Tarif enthaltenes Limit: Solo max. 2, Team max. 5, Business unbegrenzt. Lizenzen können nach der Aktivierung angepasst werden.",
     "form_submit": "Kostenlos testen",
@@ -756,7 +756,7 @@
     "cosa_vedrai": [
       {
         "title": "GPS-Zeiterfassung in Aktion",
-        "desc": "Wie der Techniker sich über die mobile App einbucht und wie das Büro den verifizierten Standort sieht — ohne Dauerüberwachung."
+        "desc": "Wie der Techniker sich über die mobile App einbucht und wie das Büro den verifizierten Standort sieht, ohne Dauerüberwachung."
       },
       {
         "title": "Verifizierbare Berichte",
@@ -774,7 +774,7 @@
       },
       {
         "q": "Ist Vorbereitung erforderlich?",
-        "a": "Nein. Bringen Sie einfach Ihren konkreten Fall mit — wie viele Mitarbeiter Sie haben und welche Probleme Sie heute mit Stunden oder Berichten haben."
+        "a": "Nein. Bringen Sie einfach Ihren konkreten Fall mit, wie viele Mitarbeiter Sie haben und welche Probleme Sie heute mit Stunden oder Berichten haben."
       },
       {
         "q": "Ist die Demo kostenlos?",
@@ -799,7 +799,7 @@
     "success_title": "Anfrage erhalten!",
     "success_desc": "Wir werden Sie innerhalb von 1 Werktag kontaktieren, um die Demo zu vereinbaren.",
     "error_message": "Fehler beim Senden. Bitte versuchen Sie es später erneut.",
-    "badge": "Demo GeoTapp — 30 Minuten",
+    "badge": "Demo GeoTapp, 30 Minuten",
     "page_subtitle": "Wir zeigen Ihnen, wie GeoTapp Streitigkeiten über Arbeitsstunden eliminiert und jeden Einsatz dokumentiert und überprüfbar macht.",
     "form_title": "Ihre Daten",
     "urgent_contact": "Dringende Fragen? Schreiben Sie an",
@@ -848,7 +848,7 @@
       "Es war 2024. Mike Petraroli, unser Gründer, arbeitete als Angestellter und hatte ein scheinbar triviales, aber unglaublich kostspieliges Problem: <strong>seine eigene Arbeit zu beweisen.</strong>",
       "Am Monatsende stimmten die Stunden nie. Einsätze im Laufen zwischen Kunden wurden vergessen. Papier ging verloren, WhatsApp-Nachrichten wurden begraben. Es war eine stille Quelle von Zeitverlust und Geldabfluss.",
       "Er suchte eine Lösung. Er fand nur komplexe, teure Software voller nutzloser Grafiken und wenig Substanz. Software von Leuten, die noch nie einen Stempel gedrückt oder eine Rechnung im Notfall aus dem Lieferwagen ausgestellt hatten.",
-      "Also beschloss Mike, das Werkzeug selbst zu bauen, das er gehabt haben wollte: einfach, mobil, mit überprüfbaren Beweisen. Nicht für Investoren — für Unternehmen wie seines."
+      "Also beschloss Mike, das Werkzeug selbst zu bauen, das er gehabt haben wollte: einfach, mobil, mit überprüfbaren Beweisen. Nicht für Investoren, für Unternehmen wie seines."
     ],
     "values_title": "Unsere Werte",
     "values": [
@@ -913,7 +913,7 @@
     "cta_desc": "Vollständiger Zugang zu allen Modulen. Keine Kreditkarte, keine Verpflichtung.",
     "cta_btn": "Kostenlos testen",
     "schema_desc": "Anleitungen und Einblicke zur Außendienst-Zertifizierung, Teamverwaltung, DSGVO und Geolokalisierung.",
-    "meta_title": "Blog | GeoTapp — Außendienst-Verifikation",
+    "meta_title": "Blog | GeoTapp - Außendienst-Verifikation",
     "meta_desc": "Anleitungen, Einblicke und Ressourcen zu Teamverwaltung, Außendienst-Zertifizierung, DSGVO und Geolokalisierung. Vom GeoTapp-Team.",
     "cat_all": "Alle",
     "toc_title": "Inhalt",
@@ -931,7 +931,7 @@
     "next_step_cta": "Mehr erfahren"
   },
   "roi": {
-    "meta_title": "GeoTapp ROI-Rechner — Entdecken Sie Ihre echten Einsparungen",
+    "meta_title": "GeoTapp ROI-Rechner - Entdecken Sie Ihre echten Einsparungen",
     "meta_desc": "Berechnen Sie in 2 Minuten, wie viel Sie mit GeoTapp sparen: weniger Verwaltung, null Streitigkeiten, produktivere Mitarbeiter.",
     "hero_title": "Berechnen Sie Ihren ROI mit GeoTapp",
     "hero_subtitle": "Geben Sie Ihre Unternehmensdaten ein und entdecken Sie, wie viel Sie jährlich sparen können.",
@@ -998,7 +998,7 @@
     ]
   },
   "settore_layout": {
-    "pain_subtitle": "Stempelapps erfassen. Sie zertifizieren nicht. Der Unterschied ist gewaltig — und im Streitfall spürt man ihn sofort.",
+    "pain_subtitle": "Stempelapps erfassen. Sie zertifizieren nicht. Der Unterschied ist gewaltig, und im Streitfall spürt man ihn sofort.",
     "before": "Vorher",
     "after": "Mit GeoTapp",
     "classic_app": "Standard-App / Tabellenkalkulation",
@@ -1021,19 +1021,19 @@
     "title": "Power Under the Hood.",
     "subtitle": "Wir bauen kein Spielzeug. GeoTapp ist eine Enterprise-Plattform, die für Skalierung gebaut wurde. Hier sind die Technologien, die die Magie möglich machen.",
     "gps_title": "GPS-Tracking & Geografische Karten",
-    "gps_desc": "Wissen Sie, wo Ihr Team ist — in Echtzeit. Unsere Live-Karte zeigt jede Stempelung mit GPS-Koordinaten, Geofencing-Validierung und Anti-Spoofing-Schutz. Manager sehen auf einen Blick, wer vor Ort ist — ohne Anrufe, ohne Rätselraten.",
+    "gps_desc": "Wissen Sie, wo Ihr Team ist, in Echtzeit. Unsere Live-Karte zeigt jede Stempelung mit GPS-Koordinaten, Geofencing-Validierung und Anti-Spoofing-Schutz. Manager sehen auf einen Blick, wer vor Ort ist, ohne Anrufe, ohne Rätselraten.",
     "offline_title": "Offline-First Architecture",
-    "offline_desc": "Die Verbindung bricht ab, die Arbeit nicht. Wir haben eine lokal synchronisierte Datenbank (CRDT) gebaut, die direkt in der App lebt. Ihre Techniker können in einem Kellerbunker arbeiten — sobald sie einen Streifen Himmel sehen, synchronisieren sich die Daten lautlos mit der Cloud.",
+    "offline_desc": "Die Verbindung bricht ab, die Arbeit nicht. Wir haben eine lokal synchronisierte Datenbank (CRDT) gebaut, die direkt in der App lebt. Ihre Techniker können in einem Kellerbunker arbeiten, sobald sie einen Streifen Himmel sehen, synchronisieren sich die Daten lautlos mit der Cloud.",
     "encryption_title": "Military-Grade Encryption",
-    "encryption_desc": "Schlafen Sie ruhig. Wir verwenden AES-256-Verschlüsselung im Ruhezustand und TLS 1.3 bei der Übertragung. Selbst wenn ein Angreifer Ihre Daten abfangen würde, sähe er nur weißes Rauschen. Datenschutz ist kein rechtliches Pflichtfeld — er ist Mathematik.",
+    "encryption_desc": "Schlafen Sie ruhig. Wir verwenden AES-256-Verschlüsselung im Ruhezustand und TLS 1.3 bei der Übertragung. Selbst wenn ein Angreifer Ihre Daten abfangen würde, sähe er nur weißes Rauschen. Datenschutz ist kein rechtliches Pflichtfeld, er ist Mathematik.",
     "realtime_title": "Real-Time WebSocket",
     "realtime_desc": "Kein F5 mehr drücken. Dank WebSockets reisen Informationen sofort. Wenn ein Techniker in Rom ein Ticket schließt, sieht der Manager in München den Punkt in derselben Millisekunde grün werden. Es ist, als wäre man überall gleichzeitig.",
     "cms_title": "Headless CMS Integration",
-    "cms_desc": "Inhalte sind fließend. Unsere Headless-Architektur entkoppelt Daten von der Darstellung. Das bedeutet: Sie veröffentlichen einen Blogbeitrag, pushen ihn in die Mobile App und versenden ihn per Newsletter — mit einem einzigen Klick.",
+    "cms_desc": "Inhalte sind fließend. Unsere Headless-Architektur entkoppelt Daten von der Darstellung. Das bedeutet: Sie veröffentlichen einen Blogbeitrag, pushen ihn in die Mobile App und versenden ihn per Newsletter, mit einem einzigen Klick.",
     "datalake_title": "Scalable Data Lake",
-    "datalake_desc": "Von 100 auf 100 Millionen Datensätze ohne ins Schwitzen zu geraten. Wir verwenden partitioniertes PostgreSQL, um massive Datenmengen ohne Geschwindigkeitsverlust zu verarbeiten. Ihre Historie ist wertvoll — wir bewahren sie für immer, in einem Augenblick abrufbar.",
+    "datalake_desc": "Von 100 auf 100 Millionen Datensätze ohne ins Schwitzen zu geraten. Wir verwenden partitioniertes PostgreSQL, um massive Datenmengen ohne Geschwindigkeitsverlust zu verarbeiten. Ihre Historie ist wertvoll, wir bewahren sie für immer, in einem Augenblick abrufbar.",
     "cdn_title": "Global CDN Edge",
-    "cdn_desc": "Geschwindigkeit ist geografisch. Unsere statischen Assets werden auf 300+ Rechenzentren weltweit repliziert. Ob Ihr Kunde in New York oder Tokio ist — Ihre Seite lädt, als befände sich der Server im Nebenzimmer."
+    "cdn_desc": "Geschwindigkeit ist geografisch. Unsere statischen Assets werden auf 300+ Rechenzentren weltweit repliziert. Ob Ihr Kunde in New York oder Tokio ist - Ihre Seite lädt, als befände sich der Server im Nebenzimmer."
   },
   "kairos": {
     "subtitle": "Ihr GeoTapp-Assistent",

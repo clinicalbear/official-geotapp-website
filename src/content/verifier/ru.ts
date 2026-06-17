@@ -1,7 +1,7 @@
 import type { VerifierCopy } from './types';
 
 const ru: VerifierCopy = {
-  hero_badge: 'GeoTapp Verifier — Верификация рабочих отчётов',
+  hero_badge: 'GeoTapp Verifier, Верификация рабочих отчётов',
   hero_title: 'Ваши рабочие отчёты\nподдаются проверке.',
   hero_subtitle:
     'GeoTapp Verifier проверяет, что отчёт об интервенции соответствует операционным данным, зафиксированным на месте, и не был изменён. Больше доверия со стороны клиента, меньше споров.',
@@ -26,7 +26,7 @@ const ru: VerifierCopy = {
   ecosystem_verifier_desc:
     'Проверяет целостность каждого отчёта. Сравнивает документ с исходными данными и подтверждает подлинность.',
   problem_badge: 'Реальная проблема',
-  problem_title: 'Непроверяемый отчёт — это оспариваемый отчёт.',
+  problem_title: 'Непроверяемый отчёт, это оспариваемый отчёт.',
   problem_items: [
     {
       title: 'Клиенты, ставящие под сомнение выполненную работу',
@@ -44,7 +44,7 @@ const ru: VerifierCopy = {
   what_badge: 'Что такое GeoTapp Verifier',
   what_title: 'Независимая верификация отчётов об интервенции.',
   what_desc:
-    'GeoTapp Verifier — это система, позволяющая проверить подлинность и целостность отчётов, сгенерированных GeoTapp Flow и TimeTracker. Она сопоставляет документ с исходными операционными данными — GPS-метками, геолокациями, фотодоказательствами — и удостоверяет, что отчёт не был изменён.',
+    'GeoTapp Verifier, это система, позволяющая проверить подлинность и целостность отчётов, сгенерированных GeoTapp Flow и TimeTracker. Она сопоставляет документ с исходными операционными данными - GPS-метками, геолокациями, фотодоказательствами, и удостоверяет, что отчёт не был изменён.',
   how_badge: 'Как это работает',
   how_title: 'Три шага. Один верифицированный отчёт.',
   how_steps: [
@@ -85,7 +85,7 @@ const ru: VerifierCopy = {
     },
     {
       title: 'Сотрудники и назначения',
-      desc: 'Проверяет, что техники, указанные в отчёте, — те же, кто фиксировал полевую активность.',
+      desc: 'Проверяет, что техники, указанные в отчёте,, те же, кто фиксировал полевую активность.',
     },
     {
       title: 'Проверяемо без доступа к платформе',
@@ -104,7 +104,7 @@ const ru: VerifierCopy = {
   ecosystem_badge: 'Экосистема GeoTapp',
   ecosystem_title: 'Verifier работает совместно с Flow и TimeTracker.',
   ecosystem_desc:
-    'GeoTapp Verifier — не отдельный инструмент. Это финальный этап интегрированного операционного цикла: данные собираются в поле с помощью TimeTracker, организуются в Flow, а затем сертифицируются Verifier.',
+    'GeoTapp Verifier, не отдельный инструмент. Это финальный этап интегрированного операционного цикла: данные собираются в поле с помощью TimeTracker, организуются в Flow, а затем сертифицируются Verifier.',
   cta_title: 'Начните создавать верифицируемые отчёты.',
   cta_subtitle:
     'Узнайте, как GeoTapp Verifier может помочь вашей компании сократить споры и повысить доверие клиентов.',
@@ -124,20 +124,20 @@ const ru: VerifierCopy = {
     },
     {
       q: 'Работает ли Verifier с историческими отчётами?',
-      a: 'Да. Все отчёты, сгенерированные GeoTapp Flow с данными TimeTracker, могут быть верифицированы в любой момент — даже спустя месяцы или годы после их создания.',
+      a: 'Да. Все отчёты, сгенерированные GeoTapp Flow с данными TimeTracker, могут быть верифицированы в любой момент, даже спустя месяцы или годы после их создания.',
     },
     {
       q: 'Нужно ли приобретать Verifier отдельно?',
       a: 'GeoTapp Verifier интегрирован в экосистему GeoTapp. Свяжитесь с нами, чтобы определить, какой тарифный план лучше всего подходит для вашей компании.',
     },
   ],
-  hero_cta_download: 'Скачать бесплатно — v0.2.1',
+  hero_cta_download: 'Скачать бесплатно, v0.2.1',
   cta_download: 'Скачать Verifier бесплатно',
   download_badge: 'Бесплатная загрузка',
   download_title: 'Скачать GeoTapp Verifier.',
   download_desc: 'Открытый CLI-инструмент для офлайн-проверки целостности отчётов GeoTapp. Учётная запись не требуется. Работает из терминала или как библиотека Node.js.',
   download_btn: 'Скачать report-verifier-0.2.1.zip',
-  download_version: 'v0.2.1 — ~40 КБ — Требуется Node.js ≥ 18',
+  download_version: 'v0.2.1, ~40 КБ, Требуется Node.js ≥ 18',
   download_requirements: 'Требуется Node.js ≥ 18',
   download_cli_title: 'Из терминала',
   download_api_title: 'Как библиотека Node.js',
@@ -146,14 +146,14 @@ const ru: VerifierCopy = {
   online_verify_title: 'Verify a report online',
   online_verify_desc: 'Upload the report ZIP file. Verification happens on the server and the file is not stored.',
   online_verify_upload_label: 'Drag the report ZIP here, or click to select',
-  online_verify_upload_hint: '.zip files only — max 25MB',
+  online_verify_upload_hint: '.zip files only, max 25MB',
   online_verify_btn: 'Verify now',
   online_verify_privacy_note: 'The file is processed in memory and never stored or shared with third parties.',
   online_verify_size_limit: 'Maximum size: 25MB',
-  online_verify_result_valid_sealed: 'Valid report — sealed and signed',
-  online_verify_result_valid_unsigned: 'Valid report — content intact, seal not cryptographically signed',
-  online_verify_result_legacy: 'Legacy report — readable, no strong seal',
-  online_verify_result_invalid: 'Invalid report — content may have been altered',
+  online_verify_result_valid_sealed: 'Valid report, sealed and signed',
+  online_verify_result_valid_unsigned: 'Valid report, content intact, seal not cryptographically signed',
+  online_verify_result_legacy: 'Legacy report, readable, no strong seal',
+  online_verify_result_invalid: 'Invalid report, content may have been altered',
   online_verify_error_too_large: 'File too large. Maximum size: 25MB.',
   online_verify_error_not_zip: 'File must be a ZIP archive.',
   online_verify_error_generic: 'Verification error. The file may be corrupted.',

@@ -49,7 +49,7 @@ export default async function ImpresaDiPulizieLocalePage({
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'GeoTapp', item: 'https://geotapp.com' },
-      { '@type': 'ListItem', position: 2, name: content.meta.title.replace(/ [|—].*$/, '').trim(), item: `https://geotapp.com/${resolvedLocale}/settori/impresa-di-pulizie/` },
+      { '@type': 'ListItem', position: 2, name: content.meta.title.replace(/ [|-].*$/, '').trim(), item: `https://geotapp.com/${resolvedLocale}/settori/impresa-di-pulizie/` },
     ],
   };
   return (

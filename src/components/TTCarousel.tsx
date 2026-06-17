@@ -6,8 +6,8 @@ import { AnimatePresence, motion } from 'framer-motion';
 
 const TT_SLIDES = [
   { src: '/screenshots/timetracker-dashboard.webp', alt: 'Dashboard iniziale GeoTapp TimeTracker' },
-  { src: '/screenshots/timetracker-richieste.webp', alt: 'GeoTapp TimeTracker — Richieste ferie e cambio turno' },
-  { src: '/TT2.webp', alt: 'GeoTapp TimeTracker — Menu navigazione' },
+  { src: '/screenshots/timetracker-richieste.webp', alt: 'GeoTapp TimeTracker - Richieste ferie e cambio turno' },
+  { src: '/TT2.webp', alt: 'GeoTapp TimeTracker - Menu navigazione' },
 ];
 
 export default function TTCarousel() {

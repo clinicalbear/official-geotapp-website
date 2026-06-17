@@ -19,7 +19,7 @@ import {
   FileX,
   Receipt,
 } from 'lucide-react';
-// Heavy below-fold components — dynamic import to reduce initial bundle
+// Heavy below-fold components, dynamic import to reduce initial bundle
 import dynamic from 'next/dynamic';
 const HeartbeatLine = dynamic(() => import('@/components/HeartbeatLine'), { ssr: false });
 const FlowCarousel = dynamic(() => import('@/components/FlowCarousel'), { ssr: false });
@@ -122,7 +122,7 @@ export default function Home() {
   // Render hero video only on viewport ≥ md (768px) AND only after browser is
   // idle. Mobile gets pure bg-white so the browser never fetches videoHero.mp4
   // (LCP killer). On desktop we delay 1s after first idle so the video doesn't
-  // block FCP / hurt TBT on initial paint — was costing 200-400ms on /it/ and
+  // block FCP / hurt TBT on initial paint, was costing 200-400ms on /it/ and
   // /de/ desktop scores.
   const [showHeroVideo, setShowHeroVideo] = useState(false);
   useEffect(() => {
@@ -272,14 +272,14 @@ export default function Home() {
   return (
     <div className="bg-background min-h-screen text-text-primary overflow-hidden">
       {/* Landing is locale-aware: all internal links pass through getLink(). */}
-                  {/* HERO SECTION — Moderno / Accattivante */}
+                  {/* HERO SECTION - Moderno / Accattivante */}
       <section className="relative pt-28 lg:pt-36 pb-20 lg:pb-28 overflow-hidden bg-gradient-to-b from-white via-white to-[#f0f8e6]">
         {/* Aurora animata brand */}
         <div className="geo-aurora" aria-hidden="true"><span className="a1" /><span className="a2" /><span className="a3" /></div>
 
         <div className="container-geo relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-10 items-center">
-            {/* Testo — NIENTE opacity:0 sull'entrata: contiene l'h1 = elemento LCP su mobile.
+            {/* Testo - NIENTE opacity:0 sull'entrata: contiene l'h1 = elemento LCP su mobile.
                 Nasconderlo dietro framer-motion lo rendeva invisibile fino all'hydration
                 → LCP mobile instabile (2-7s). Lo slide y resta, ma l'elemento è visibile subito. */}
             <motion.div initial={{ y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
@@ -321,17 +321,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ROI MINI — calcolatore risparmio sotto l'hero (mai above-the-fold / non LCP) */}
+      {/* ROI MINI, calcolatore risparmio sotto l'hero (mai above-the-fold / non LCP) */}
       <section className="py-20 bg-gradient-to-b from-[#f0f8e6] via-white to-white">
         <div className="container-geo">
           <RoiMini dict={dict} locale={currentLocale} />
         </div>
       </section>
 
-      {/* TRUST BAR — social proof immediately after hero */}
+      {/* TRUST BAR, social proof immediately after hero */}
       <TrustBar locale={currentLocale} />
 
-      {/* LISTED ON — directory badges */}
+      {/* LISTED ON, directory badges */}
       <div className="listed-on-wrapper" style={{ background: 'linear-gradient(135deg, #2a8fc4 0%, #3BAEE0 50%, #2a8fc4 100%)', boxShadow: 'inset 0 4px 12px rgba(0,0,0,0.15), inset 0 -4px 12px rgba(0,0,0,0.1)' }}>
         <ListedOn locale={currentLocale} />
       </div>
@@ -339,7 +339,7 @@ export default function Home() {
       {/* REVIEWS, voci reali dei customer */}
       <Reviews locale={currentLocale} />
 
-            {/* PROBLEM SECTION — 3 riquadri ariosi, senza numeri */}
+            {/* PROBLEM SECTION, 3 riquadri ariosi, senza numeri */}
       <section className="py-24 bg-gradient-to-b from-[#fbf0ee] via-white to-[#e9f3fb]">
         <div className="container-geo">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -371,7 +371,7 @@ export default function Home() {
         </div>
       </section>
 
-            {/* SETTORI SECTION — 3 riquadri ariosi */}
+            {/* SETTORI SECTION, 3 riquadri ariosi */}
       <section className="py-24 bg-gradient-to-b from-[#e9f3fb] via-white to-[#f0f8e6]">
         <div className="container-geo">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -416,7 +416,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* AREA FONDATORE — Experience, a metà pagina (non nascosta in fondo) */}
+      {/* AREA FONDATORE - Experience, a metà pagina (non nascosta in fondo) */}
       {(() => {
         const f = dict.chi_siamo.founder;
         const storyLabel = ({ it: 'La nostra storia', en: 'Our story', de: 'Unsere Geschichte', fr: 'Notre histoire', es: 'Nuestra historia', pt: 'A nossa história', nl: 'Ons verhaal', ru: 'Наша история', da: 'Vores historie', sv: 'Vår historia', nb: 'Vår historie' } as Record<string, string>)[currentLocale] ?? 'Our story';
@@ -566,7 +566,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PRODUCT SECTION: VERIFIER — locks at 113px, image scrolls inside viewport */}
+      {/* PRODUCT SECTION: VERIFIER, locks at 113px, image scrolls inside viewport */}
       <section id="verifier-section" className="bg-gradient-to-b from-[#f2f8e8] via-[#f1f8e7] to-white">
         <div className="container-geo py-24">
           <div className="grid md:grid-cols-[3fr_2fr] gap-16 items-start">
@@ -619,7 +619,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* TRIAL CTA — between Verifier and Report */}
+      {/* TRIAL CTA, between Verifier and Report */}
       <div className="py-16 bg-gradient-to-r from-emerald-50 to-blue-50 border-t border-b border-slate-100">
         <div className="container mx-auto px-6 max-w-3xl text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">
@@ -859,7 +859,7 @@ export default function Home() {
         className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-white/95 backdrop-blur-sm border-t border-slate-200 px-4 py-3 shadow-2xl"
       >
         <p className="text-xs text-slate-500 text-center mb-1">
-          {(dict.landing as any)?.sticky_cta_subtitle ?? '14 giorni gratis — nessuna carta di credito'}
+          {(dict.landing as any)?.sticky_cta_subtitle ?? '14 giorni gratis, nessuna carta di credito'}
         </p>
         <Link
           href={getLink('/trial')}

@@ -298,7 +298,7 @@ export default function ContactPage() {
         </div>
 
         {/* Mappa rimossa (2026-06-03): GeoTapp opera 100% online, nessuna sede
-            aperta al pubblico — niente indirizzo/geo da mostrare. */}
+            aperta al pubblico, niente indirizzo/geo da mostrare. */}
       </div>
     </div>
   );

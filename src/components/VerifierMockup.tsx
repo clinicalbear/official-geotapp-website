@@ -60,11 +60,11 @@ export default function VerifierMockup() {
             animate={inView ? { opacity: 1 } : {}}
             transition={{ delay: 2.3, duration: 0.3 }}
           >
-            Verified by GeoTapp Verifier — 22/03/2026
+            Verified by GeoTapp Verifier, 22/03/2026
           </motion.div>
         </div>
 
-        {/* VERIFIED stamp — appears after checks complete */}
+        {/* VERIFIED stamp, appears after checks complete */}
         <motion.div
           className="absolute inset-0 flex items-center justify-center pointer-events-none z-10"
           initial={{ opacity: 0, scale: 2.5, rotate: -15 }}

@@ -5,9 +5,9 @@ import Image from 'next/image';
 import { AnimatePresence, motion } from 'framer-motion';
 
 const FLOW_SLIDES = [
-  { src: '/screen_dashboard.webp', alt: 'GeoTapp Flow — Dashboard KPI e moduli operativi' },
-  { src: '/screen_live_map.webp', alt: 'GeoTapp Flow — Mappa delle timbrature con aggiornamento live' },
-  { src: '/schermataFlow.webp', alt: 'GeoTapp Flow — Pannello operativo' },
+  { src: '/screen_dashboard.webp', alt: 'GeoTapp Flow - Dashboard KPI e moduli operativi' },
+  { src: '/screen_live_map.webp', alt: 'GeoTapp Flow - Mappa delle timbrature con aggiornamento live' },
+  { src: '/schermataFlow.webp', alt: 'GeoTapp Flow - Pannello operativo' },
 ];
 
 export default function FlowCarousel() {

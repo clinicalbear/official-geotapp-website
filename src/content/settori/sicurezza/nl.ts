@@ -9,7 +9,7 @@ const content: SettoreContent = {
     badge: 'Software voor Beveiligingsbedrijven, Beveiligers en Evenementenbeveiliging',
     h1_line1: 'Aantoonbare aanwezigheid en dienstregistratie',
     h1_line2: 'voor beveiligers en beveiligingsbedrijven',
-    subtitle: 'GeoTapp Flow en TimeTracker documenteren de aanwezigheid van beveiligers op toegewezen posten met geverifieerde GPS en onveranderlijke tijdstempels. Diplomabeheer conform de CAO Particuliere Beveiliging, digitale dienstoverdracht en geogelokaliseerde incidentrapporten — alles op één platform.',
+    subtitle: 'GeoTapp Flow en TimeTracker documenteren de aanwezigheid van beveiligers op toegewezen posten met geverifieerde GPS en onveranderlijke tijdstempels. Diplomabeheer conform de CAO Particuliere Beveiliging, digitale dienstoverdracht en geogelokaliseerde incidentrapporten, alles op één platform.',
     cta_primary: 'Demo Aanvragen',
     cta_note: 'Vrijblijvend. Reactie binnen 12 werkuren.',
   },
@@ -32,7 +32,7 @@ const content: SettoreContent = {
   },
   workflow: {
     title: 'Hoe het werkt in drie stappen',
-    subtitle: 'Van de bewakingspost naar het kantoor — zonder papierwerk.',
+    subtitle: 'Van de bewakingspost naar het kantoor, zonder papierwerk.',
     steps: [
       {
         title: 'De beveiliger klokt in op de toegewezen post',

@@ -4,7 +4,7 @@ import { readReportFromZipBuffer, verifyArtifact } from '@geotapp/report-verifie
 const MAX_FILE_SIZE_BYTES = 25 * 1024 * 1024; // 25MB
 
 export async function POST(req: NextRequest) {
-  // Size check before parsing — avoids loading large body into memory
+  // Size check before parsing, avoids loading large body into memory
   const contentLength = Number(req.headers.get('content-length') ?? 0);
   if (contentLength > MAX_FILE_SIZE_BYTES) {
     return NextResponse.json(

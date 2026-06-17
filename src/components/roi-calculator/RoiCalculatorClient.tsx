@@ -181,7 +181,7 @@ export default function RoiCalculatorClient({ dict, locale, trialUrl, embed = fa
   const [error, setError] = useState('');
   const [result, setResult] = useState<RoiResult | null>(null);
   const [countActive, setCountActive] = useState(false);
-  // Default ON: legittimo interesse — la newsletter copre il servizio appena
+  // Default ON: legittimo interesse, la newsletter copre il servizio appena
   // richiesto (consigli per realizzare il ROI calcolato). L'utente può
   // disattivare in 1 click sotto al form.
   const [subscribeNewsletter, setSubscribeNewsletter] = useState(true);
@@ -238,7 +238,7 @@ export default function RoiCalculatorClient({ dict, locale, trialUrl, embed = fa
   return (
     <div ref={containerRef} className={wrapperClass}>
       <div className="max-w-2xl mx-auto">
-        {/* Header — hidden in embed mode */}
+        {/* Header, hidden in embed mode */}
         {!embed && (
           <div className="text-center mb-10">
             <h1 className="text-3xl font-bold text-gray-900 mb-3">{dict.hero_title}</h1>

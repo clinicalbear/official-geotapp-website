@@ -2,14 +2,14 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App voor Loodgieters & Installateurs | GeoTapp — GPS Werkbonnen',
+    title: 'App voor Loodgieters & Installateurs | GeoTapp - GPS Werkbonnen',
     description: 'GeoTapp is de app voor loodgieters en cv-installateurs: GPS-geverifieerde werkbonnen, installatiefotos en manipulatiebestendige rapporten. Sluit geschillen af met echt bewijs. Gratis proberen.',
   },
   hero: {
     badge: 'App voor Loodgieters, CV-installateurs en Sanitair Technicians',
     h1_line1: 'App voor loodgieters en cv-installateurs:',
     h1_line2: 'GPS werkbonnen, fotobewijs en geen geschillen.',
-    subtitle: 'GeoTapp legt elke sanitair- en verwarmingsklus vast met GPS, foto\'s en verifieerbare tijdstempels. Klant betwist het werk? Toon het rapport — geen discussie nodig. Uw monteurs zijn beschermd, uw facturen ook.',
+    subtitle: 'GeoTapp legt elke sanitair- en verwarmingsklus vast met GPS, foto\'s en verifieerbare tijdstempels. Klant betwist het werk? Toon het rapport, geen discussie nodig. Uw monteurs zijn beschermd, uw facturen ook.',
     cta_primary: 'Gratis starten',
     cta_note: 'Geen verplichtingen. Reactie binnen 12 werkuren.',
   },
@@ -32,7 +32,7 @@ const content: SettoreContent = {
   },
   workflow: {
     title: 'Hoe het werkt in drie stappen',
-    subtitle: 'Van de klus naar het kantoor — zonder telefoontjes.',
+    subtitle: 'Van de klus naar het kantoor, zonder telefoontjes.',
     steps: [
       {
         title: 'Monteur registreert de klus op locatie',
@@ -57,7 +57,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Verzegelde sanitair- en verwarmingssysteemfotos',
-        desc: 'De monteur fotografeert voor en na de klus. Elk beeld is gekoppeld aan GPS en tijdstempel — na generatie manipulatiebestendig.',
+        desc: 'De monteur fotografeert voor en na de klus. Elk beeld is gekoppeld aan GPS en tijdstempel, na generatie manipulatiebestendig.',
       },
       {
         title: 'Automatische digitale werkrapporten',
@@ -92,7 +92,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Kan ik GeoTapp gebruiken om sanitair- en verwarmingsklussen te documenteren?',
-        a: 'Ja. De monteur fotografeert voor en na de klus vanuit de app. Elk beeld is gekoppeld aan GPS, tijdstempel en opdracht — opgenomen in het manipulatiebestendige rapport.',
+        a: 'Ja. De monteur fotografeert voor en na de klus vanuit de app. Elk beeld is gekoppeld aan GPS, tijdstempel en opdracht, opgenomen in het manipulatiebestendige rapport.',
       },
       {
         q: 'Beheert GeoTapp spoedoproepen en gepland onderhoud?',

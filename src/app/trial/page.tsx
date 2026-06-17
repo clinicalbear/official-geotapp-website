@@ -62,7 +62,7 @@ export default function TrialPage() {
   const pageLoadTime = useRef(Date.now());
   // CTA d'origine: consumeTrialSource() svuota il sessionStorage alla prima
   // lettura (nel trial_page_view), quindi lo conserviamo qui per attribuire
-  // anche gli stage successivi del funnel — fino a trial_form_success.
+  // anche gli stage successivi del funnel, fino a trial_form_success.
   const trialSource = useRef<string | null>(null);
 
   // Track page view with scroll depth + source attribution (CTA d'origine)
@@ -159,7 +159,7 @@ export default function TrialPage() {
     <div className="pt-20 md:pt-28 pb-24 px-6 min-h-screen bg-white text-slate-900">
       <div className="container mx-auto max-w-6xl">
 
-        {/* HEADER — compatto su mobile per portare il form above the fold */}
+        {/* HEADER, compatto su mobile per portare il form above the fold */}
         <div className="text-center mb-8 md:mb-12 max-w-3xl mx-auto">
           <motion.span
             initial={{ opacity: 0 }}

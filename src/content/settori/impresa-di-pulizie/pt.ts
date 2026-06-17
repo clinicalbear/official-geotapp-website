@@ -26,7 +26,7 @@ const content: SettoreContent = {
       },
       {
         title: 'As folhas de presença em papel são pouco fiáveis?',
-        desc: 'Registo automático a partir do smartphone, sem introduções manuais. O dado é o que é — e não se pode alterar.',
+        desc: 'Registo automático a partir do smartphone, sem introduções manuais. O dado é o que é, e não se pode alterar.',
       },
       {
         title: 'Difícil coordenar várias equipas?',
@@ -57,15 +57,15 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'O operador regista com GPS',
-        desc: 'Abre e fecha o turno a partir do smartphone. GeoTapp regista coordenadas GPS reais, fotos e carimbo temporal — tudo automático e inalterável.',
+        desc: 'Abre e fecha o turno a partir do smartphone. GeoTapp regista coordenadas GPS reais, fotos e carimbo temporal, tudo automático e inalterável.',
       },
       {
         title: 'O responsável vê tudo em tempo real',
-        desc: 'Um painel para todas as sedes. Sabe exatamente quem está em cada local, onde e desde quando — sem andar atrás de ninguém.',
+        desc: 'Um painel para todas as sedes. Sabe exatamente quem está em cada local, onde e desde quando, sem andar atrás de ninguém.',
       },
       {
         title: 'O relatório está pronto automaticamente',
-        desc: 'No final do turno, o sistema gera um relatório selado com GPS, fotos e assinatura digital. Envie ao cliente — verificável de forma autónoma.',
+        desc: 'No final do turno, o sistema gera um relatório selado com GPS, fotos e assinatura digital. Envie ao cliente, verificável de forma autónoma.',
       },
     ],
   },
@@ -82,7 +82,7 @@ const content: SettoreContent = {
       {
         label: 'Quem pode verificar',
         competitor: 'Apenas o seu escritório',
-        geotapp: 'Você, o cliente, um terceiro — de forma independente',
+        geotapp: 'Você, o cliente, um terceiro, de forma independente',
       },
       {
         label: 'Em caso de disputa',
@@ -123,7 +123,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Documentação fotográfica',
-        desc: 'Os operadores tiram fotos diretamente da app. Cada imagem é georreferenciada com carimbo temporal — prova visual do trabalho realizado.',
+        desc: 'Os operadores tiram fotos diretamente da app. Cada imagem é georreferenciada com carimbo temporal, prova visual do trabalho realizado.',
       },
       {
         title: 'O seu pessoal está protegido',
@@ -136,7 +136,7 @@ const content: SettoreContent = {
     quote:
       'Desde que usamos GeoTapp, as disputas com clientes resolvem-se em um minuto. Enviamos o relatório com fotos e GPS, e a discussão termina aí. Não perdemos nenhum contrato em um ano.',
     author: 'Rosa M.',
-    role: 'Proprietária, empresa de limpeza industrial — Portugal',
+    role: 'Proprietária, empresa de limpeza industrial - Portugal',
   },
 
   faq: {
@@ -145,7 +145,7 @@ const content: SettoreContent = {
     items: [
       {
         q: 'Como funciona o registo GPS para empresas de limpeza?',
-        a: 'O operador regista entrada e saída a partir do smartphone. GeoTapp regista as coordenadas GPS nesse momento — não introduzidas manualmente. Cada registo é certificado com carimbo temporal e posição verificável pelo cliente.',
+        a: 'O operador regista entrada e saída a partir do smartphone. GeoTapp regista as coordenadas GPS nesse momento, não introduzidas manualmente. Cada registo é certificado com carimbo temporal e posição verificável pelo cliente.',
       },
       {
         q: 'Posso provar ao cliente que o serviço foi realizado?',
@@ -165,7 +165,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Quanto custa GeoTapp para uma empresa de limpeza?',
-        a: 'Os planos começam a partir de poucos euros por operador por mês. Experimente grátis durante 14 dias — sem compromisso.',
+        a: 'Os planos começam a partir de poucos euros por operador por mês. Experimente grátis durante 14 dias, sem compromisso.',
       },
     ],
   },
@@ -190,7 +190,7 @@ const content: SettoreContent = {
     {
       question: 'Como funciona o registo GPS para empresas de limpeza?',
       answer:
-        'O operador regista a partir do smartphone. GeoTapp regista coordenadas GPS — não introduzidas manualmente. Cada registo é certificado com carimbo temporal e posição verificável pelo cliente.',
+        'O operador regista a partir do smartphone. GeoTapp regista coordenadas GPS, não introduzidas manualmente. Cada registo é certificado com carimbo temporal e posição verificável pelo cliente.',
     },
     {
       question: 'Posso provar ao cliente que o serviço foi realizado?',

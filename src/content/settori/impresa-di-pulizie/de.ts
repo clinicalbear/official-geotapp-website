@@ -26,7 +26,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Papier-Stundenzettel sind unzuverlässig?',
-        desc: 'Automatische Erfassung vom Smartphone, keine manuellen Einträge. Die Daten sind wie sie sind — und können nicht geändert werden.',
+        desc: 'Automatische Erfassung vom Smartphone, keine manuellen Einträge. Die Daten sind wie sie sind, und können nicht geändert werden.',
       },
       {
         title: 'Schwierig, mehrere Teams zu koordinieren?',
@@ -57,15 +57,15 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'Reinigungskraft stempelt mit GPS',
-        desc: 'Öffnet und schließt die Schicht vom Smartphone. GeoTapp erfasst echte GPS-Koordinaten, Fotos und Zeitstempel — vollautomatisch, fälschungssicher.',
+        desc: 'Öffnet und schließt die Schicht vom Smartphone. GeoTapp erfasst echte GPS-Koordinaten, Fotos und Zeitstempel, vollautomatisch, fälschungssicher.',
       },
       {
         title: 'Der Verantwortliche sieht alles in Echtzeit',
-        desc: 'Ein Dashboard für alle Standorte. Sie wissen genau, wer vor Ort ist, wo und seit wann — ohne jemandem hinterherzulaufen.',
+        desc: 'Ein Dashboard für alle Standorte. Sie wissen genau, wer vor Ort ist, wo und seit wann, ohne jemandem hinterherzulaufen.',
       },
       {
         title: 'Der Bericht ist automatisch fertig',
-        desc: 'Am Ende der Schicht erstellt das System einen versiegelten Bericht mit GPS, Fotos und digitaler Signatur. Senden Sie ihn an den Kunden — eigenständig prüfbar.',
+        desc: 'Am Ende der Schicht erstellt das System einen versiegelten Bericht mit GPS, Fotos und digitaler Signatur. Senden Sie ihn an den Kunden, eigenständig prüfbar.',
       },
     ],
   },
@@ -82,7 +82,7 @@ const content: SettoreContent = {
       {
         label: 'Wer prüfen kann',
         competitor: 'Nur Ihr Büro',
-        geotapp: 'Sie, der Auftraggeber, ein Dritter — eigenständig',
+        geotapp: 'Sie, der Auftraggeber, ein Dritter, eigenständig',
       },
       {
         label: 'Im Streitfall',
@@ -123,7 +123,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Fotodokumentation',
-        desc: 'Reinigungskräfte fotografieren direkt aus der App. Jedes Bild ist mit GPS und Zeitstempel georeferenziert — visueller Beweis der geleisteten Arbeit.',
+        desc: 'Reinigungskräfte fotografieren direkt aus der App. Jedes Bild ist mit GPS und Zeitstempel georeferenziert, visueller Beweis der geleisteten Arbeit.',
       },
       {
         title: 'Ihr Personal ist geschützt',
@@ -136,7 +136,7 @@ const content: SettoreContent = {
     quote:
       'Seit wir GeoTapp nutzen, werden Kundenstreitigkeiten in einer Minute gelöst. Wir senden den Bericht mit Fotos und GPS, und die Diskussion ist beendet. Wir haben in einem Jahr keinen einzigen Vertrag verloren.',
     author: 'Sabine M.',
-    role: 'Inhaberin, Gebäudereinigungsunternehmen — Deutschland',
+    role: 'Inhaberin, Gebäudereinigungsunternehmen - Deutschland',
   },
 
   faq: {
@@ -145,7 +145,7 @@ const content: SettoreContent = {
     items: [
       {
         q: 'Wie funktioniert die GPS-Stempelung für Reinigungsunternehmen?',
-        a: 'Die Reinigungskraft stempelt Ein- und Ausgang vom Smartphone. GeoTapp erfasst die GPS-Koordinaten in diesem Moment — nicht manuell eingegeben. Jede Stempelung ist mit Zeitstempel und Position vom Auftraggeber prüfbar.',
+        a: 'Die Reinigungskraft stempelt Ein- und Ausgang vom Smartphone. GeoTapp erfasst die GPS-Koordinaten in diesem Moment, nicht manuell eingegeben. Jede Stempelung ist mit Zeitstempel und Position vom Auftraggeber prüfbar.',
       },
       {
         q: 'Kann ich dem Kunden beweisen, dass der Service erbracht wurde?',
@@ -165,7 +165,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Was kostet GeoTapp für ein Reinigungsunternehmen?',
-        a: 'Die Pläne starten ab wenigen Euro pro Mitarbeiter/Monat. 14 Tage kostenlos testen — ohne Bindung.',
+        a: 'Die Pläne starten ab wenigen Euro pro Mitarbeiter/Monat. 14 Tage kostenlos testen, ohne Bindung.',
       },
     ],
   },
@@ -190,7 +190,7 @@ const content: SettoreContent = {
     {
       question: 'Wie funktioniert die GPS-Stempelung für Reinigungsunternehmen?',
       answer:
-        'Die Reinigungskraft stempelt vom Smartphone. GeoTapp erfasst GPS-Koordinaten — nicht manuell eingegeben. Jede Stempelung ist mit Zeitstempel und Position vom Auftraggeber prüfbar.',
+        'Die Reinigungskraft stempelt vom Smartphone. GeoTapp erfasst GPS-Koordinaten, nicht manuell eingegeben. Jede Stempelung ist mit Zeitstempel und Position vom Auftraggeber prüfbar.',
     },
     {
       question: 'Kann ich dem Kunden beweisen, dass der Service erbracht wurde?',

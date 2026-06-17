@@ -1,7 +1,7 @@
 import type { AppLocale } from './i18n/config';
 
 // ============================================================================
-// EUR base prices — single source of truth.
+// EUR base prices, single source of truth.
 // EUR is the master currency (per project decision); all other currencies are
 // derived from these via FX_RATES_PER_EUR × FX_BUFFER, then psychologically rounded.
 // ============================================================================
@@ -161,7 +161,7 @@ function roundPsychological(value: number, currency: CurrencyCode): number {
     }
     case 'SEK':
     case 'NOK':
-      // Whole krona/krone — round UP.
+      // Whole krona/krone, round UP.
       return Math.ceil(value);
     case 'EUR':
     default:
@@ -437,7 +437,7 @@ export const PRICING_TIERS: PricingTier[] = [
 ];
 
 // ============================================================================
-// Legacy compatibility shim — old API still used by a couple of files.
+// Legacy compatibility shim, old API still used by a couple of files.
 // New code should use calculateTrackerQuote(seats, locale).
 // ============================================================================
 

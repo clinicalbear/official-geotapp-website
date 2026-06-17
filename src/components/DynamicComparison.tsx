@@ -78,7 +78,7 @@ export function DynamicComparison({ locale, copy, initialId }: Props) {
           <span className="font-semibold text-slate-700">
             {selected.pricingFromEur != null
               ? copy.pricingLabel.replace('{eur}', String(selected.pricingFromEur))
-              : '—'}
+              : '-'}
           </span>
         </div>
       </div>

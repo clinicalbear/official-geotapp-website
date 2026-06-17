@@ -23,14 +23,14 @@
       "label": "Settori",
       "termoidraulici": "Termoidraulici"
     },
-    "logo_alt": "GeoTapp — La piattaforma che rende il lavoro verificabile",
+    "logo_alt": "GeoTapp - La piattaforma che rende il lavoro verificabile",
     "product_flow_desc": "Gestione operativa interventi e squadre",
     "product_app_desc": "App mobile per tecnici sul campo",
     "product_verifier_desc": "Verifica integrità dei report di lavoro",
     "compare": "Confronto"
   },
   "risorseHub": {
-    "metaTitle": "Risorse — GeoTapp",
+    "metaTitle": "Risorse - GeoTapp",
     "metaDesc": "Strumenti e risorse gratuite di GeoTapp: la guida al monitoraggio GPS dei lavoratori in Europa, il calcolatore del ROI e il sondaggio sulla prova del lavoro.",
     "h1": "Risorse",
     "intro": "Strumenti, guide e dati gratuiti per rendere il lavoro sul campo dimostrabile.\nLi teniamo aggiornati e ne aggiungiamo di nuovi.",
@@ -72,7 +72,7 @@
     "contact": "Contatti"
   },
   "landing": {
-    "us_badge": "🇺🇸 Serving US teams — chat support 9am–6pm ET. USD invoicing available on request.",
+    "us_badge": "🇺🇸 Serving US teams, chat support 9am–6pm ET. USD invoicing available on request.",
     "hero_badge": "Il lavoro c'è stato. Ora rendilo dimostrabile.",
     "clockin_demo": {
       "step_clock": "Timbra",
@@ -83,7 +83,7 @@
       "replay": "Rivedi"
     },
     "hero_title": "Se non puoi dimostrarlo, per il cliente non è mai successo.",
-    "hero_subtitle": "GeoTapp trasforma ogni intervento in evidenza oggettiva: report sigillati con dati GPS reali, prove fotografiche con timestamp e documentazione verificabile da chiunque — senza fidarsi, senza contestazioni.",
+    "hero_subtitle": "GeoTapp trasforma ogni intervento in evidenza oggettiva: report sigillati con dati GPS reali, prove fotografiche con timestamp e documentazione verificabile da chiunque, senza fidarsi, senza contestazioni.",
     "hero_cta_primary": "Inizia trial gratuito",
     "hero_cta_secondary": "Scopri i Settori",
     "trust_gdpr": "GDPR Compliant",
@@ -116,10 +116,10 @@
     "report_section_title": "Il report. Non un riepilogo. Una prova.",
     "report_section_subtitle": "Ogni report GeoTapp è generato automaticamente dai dati reali del campo.",
     "report_section_body": "Timbrature GPS, foto con timestamp, note operative. I dati sono bloccati: non alterabili dopo la generazione. Quando nasce un dubbio, non devi spiegare. Devi mostrare. Il risultato non è un documento da mandare al cliente. È una prova che chiude la discussione.",
-    "report_feature_1": "Non modificabile dopo la generazione — qualsiasi alterazione è rilevabile",
-    "report_feature_2": "Verificabile senza account — da chiunque, in autonomia",
+    "report_feature_1": "Non modificabile dopo la generazione, qualsiasi alterazione è rilevabile",
+    "report_feature_2": "Verificabile senza account, da chiunque, in autonomia",
     "report_feature_3": "Dati GPS e fotografici integrati e non separabili",
-    "report_feature_4": "Generato automaticamente — nessuna compilazione manuale",
+    "report_feature_4": "Generato automaticamente, nessuna compilazione manuale",
     "report_cta": "Scopri come il cliente lo verifica da solo",
     "hero_sectors_prefix": "Ideale per",
     "hero_sectors_pulizie": "imprese di pulizie",
@@ -157,7 +157,7 @@
       "subtitle": "Flow è il centro operativo dell'ufficio: commesse, attività, avanzamento e report strutturati. <strong class=\"text-slate-900\">Il campo lavora. L'ufficio sa.</strong><br/><br/><em><strong>«La tua azienda è un organismo vivo. Ogni intervento, ogni commessa, ogni operatore è un battito. GeoTapp Flow li tiene tutti sincronizzati.»</strong></em>",
       "features": {
         "crm": "<strong>Gestione Commesse:</strong> Ogni intervento nasce strutturato, con tecnico assegnato, sede e stato aggiornato in tempo reale.",
-        "pipeline": "<strong>Documentazione automatica:</strong> Ogni intervento completato genera un report pronto — senza compilazione manuale, senza errori."
+        "pipeline": "<strong>Documentazione automatica:</strong> Ogni intervento completato genera un report pronto, senza compilazione manuale, senza errori."
       },
       "link": "Scopri GeoTapp Flow"
     },
@@ -180,8 +180,8 @@
       "title": "Non hai bisogno che si fidino di te.",
       "subtitle": "Non sei tu a dire che il lavoro è stato fatto. È il report che lo dimostra. Il cliente lo verifica da solo, senza accedere a GeoTapp. Se i dati corrispondono al lavoro reale, il report regge. Se qualcuno ha modificato il documento, non regge più. Senza appello.",
       "features": {
-        "integrity": "<strong>Dati non alterabili:</strong> Il report è generato sui dati reali di campo e bloccato. Qualsiasi modifica lo rende non valido — senza appello.",
-        "independent": "<strong>Verifica autonoma:</strong> Chiunque abbia il report può verificarne l'autenticità — senza account, senza accesso alla piattaforma."
+        "integrity": "<strong>Dati non alterabili:</strong> Il report è generato sui dati reali di campo e bloccato. Qualsiasi modifica lo rende non valido, senza appello.",
+        "independent": "<strong>Verifica autonoma:</strong> Chiunque abbia il report può verificarne l'autenticità, senza account, senza accesso alla piattaforma."
       },
       "link": "Scopri GeoTapp Verifier"
     },
@@ -215,12 +215,12 @@
       "pricing_link": "Vedi i piani e prezzi →"
     },
     "settori": {
-      "title": "Documentazione verificabile per ogni settore — Soluzioni GeoTapp",
-      "subtitle": "Scegli il tuo settore per vedere come GeoTapp genera prove del lavoro svolto — da mostrare al cliente in caso di contestazione.",
+      "title": "Documentazione verificabile per ogni settore - Soluzioni GeoTapp",
+      "subtitle": "Scegli il tuo settore per vedere come GeoTapp genera prove del lavoro svolto, da mostrare al cliente in caso di contestazione.",
       "see_all": "Vedi tutti i settori supportati",
       "installatori": {
         "name": "Installatori",
-        "desc": "Elettricisti, Idraulici, Impiantisti. Ogni intervento documentato con GPS e foto — dati non alterabili, verificabili dal cliente.",
+        "desc": "Elettricisti, Idraulici, Impiantisti. Ogni intervento documentato con GPS e foto, dati non alterabili, verificabili dal cliente.",
         "cta": "Dimostra ogni intervento"
       },
       "sicurezza": {
@@ -230,17 +230,17 @@
       },
       "pulizie": {
         "name": "Pulizie",
-        "desc": "Imprese di pulizia, Facility, Multiservizi. Ogni passaggio documentato e verificabile dal committente — zero contestazioni.",
+        "desc": "Imprese di pulizia, Facility, Multiservizi. Ogni passaggio documentato e verificabile dal committente, zero contestazioni.",
         "cta": "Evita contestazioni"
       },
       "elettricisti": {
         "name": "Elettricisti",
-        "desc": "Impianti elettrici, quadri, cablaggi. Ogni intervento documentato con GPS e foto — prove inviolabili per chiudere ogni contestazione.",
+        "desc": "Impianti elettrici, quadri, cablaggi. Ogni intervento documentato con GPS e foto, prove inviolabili per chiudere ogni contestazione.",
         "cta": "Documenta ogni intervento"
       },
       "idraulici": {
         "name": "Idraulici",
-        "desc": "Impianti idraulici, riscaldamento, caldaie. Rapportini GPS con foto prima e dopo — zero contestazioni sui lavori eseguiti.",
+        "desc": "Impianti idraulici, riscaldamento, caldaie. Rapportini GPS con foto prima e dopo, zero contestazioni sui lavori eseguiti.",
         "cta": "Prova ogni lavoro eseguito"
       }
     },
@@ -488,7 +488,7 @@
     "hq_city": "100% online, clienti in Italia e UE",
     "hq_note": "Nessuna sede aperta al pubblico: supporto e onboarding da remoto.",
     "privacy_note": "Inviando questo modulo accetti la nostra Privacy Policy.",
-    "map_title": "Dove siamo — Trenzano (BS), Italia",
+    "map_title": "Dove siamo - Trenzano (BS), Italia",
     "success": "Messaggio inviato con successo. Ti risponderemo al più presto.",
     "error": "Errore durante l'invio. Riprova più tardi.",
     "sending": "Invio in corso...",
@@ -509,7 +509,7 @@
   },
   "product_pages": {
     "flow": {
-      "hero_badge": "GeoTapp Flow — Gestione Operativa",
+      "hero_badge": "GeoTapp Flow - Gestione Operativa",
       "hero_title": "GeoTapp Flow.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600\">Gestione Interventi e Squadre.</span>",
       "hero_subtitle": "Il centro operativo per gestire clienti, commesse, squadre e amministrazione in un unico ambiente. Flow è la piattaforma su cui si appoggia anche TimeTracker.",
       "visual_placeholder": "PANNELLO OPERATIVO",
@@ -577,7 +577,7 @@
       }
     },
     "app": {
-      "hero_badge": "GeoTapp TimeTracker — App per Tecnici",
+      "hero_badge": "GeoTapp TimeTracker - App per Tecnici",
       "hero_title": "GeoTapp TimeTracker.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600\">Il Campo in Tasca.</span>",
       "hero_subtitle": "L'app mobile usata dai tecnici per registrare attività, raccogliere prove e mantenere il filo operativo direttamente dal campo. Disponibile su Android e iOS.",
       "visual_placeholder": "INTERFACCIA CAMPO",
@@ -678,7 +678,7 @@
   "trial": {
     "page_title": "14 giorni gratis. Nessuna carta.",
     "page_subtitle": "Accesso completo a tutti i moduli GeoTapp Flow per 14 giorni. Nessuna carta di credito, nessun impegno. Annulli quando vuole.",
-    "badge": "Trial gratuito — 14 giorni",
+    "badge": "Trial gratuito, 14 giorni",
     "form_title": "Crea il tuo account",
     "form_company": "Nome azienda",
     "form_company_placeholder": "Es. Impianti Rossi Srl",
@@ -690,9 +690,9 @@
     "form_fullname_placeholder": "Es. Mario Rossi",
     "form_plan": "Piano GeoTapp Flow",
     "form_plan_note": "Gli utenti del piano si riferiscono a GeoTapp Flow (gestione ufficio/CRM). Le licenze GeoTapp Timetracker per gli operatori sul campo sono un abbonamento separato, con un numero massimo incluso in base al piano scelto.",
-    "plan_solo": "Solo — 1 utente Flow",
-    "plan_team": "Team — fino a 5 utenti Flow",
-    "plan_business": "Business — utenti Flow illimitati",
+    "plan_solo": "Solo, 1 utente Flow",
+    "plan_team": "Team, fino a 5 utenti Flow",
+    "plan_business": "Business, utenti Flow illimitati",
     "form_seats": "Licenze Timetracker (opzionale)",
     "form_seats_hint": "Abbonamento separato per gli operatori sul campo (app mobile). Limite incluso nel piano: Solo max 2, Team max 5, Business illimitate. Puoi modificare le licenze dopo l'attivazione.",
     "form_submit": "Inizia trial gratuito",
@@ -756,7 +756,7 @@
     "cosa_vedrai": [
       {
         "title": "Timbratura GPS in azione",
-        "desc": "Come il tecnico timbra dall'app mobile e come l'ufficio vede la posizione verificata — senza tracciamento continuo."
+        "desc": "Come il tecnico timbra dall'app mobile e come l'ufficio vede la posizione verificata, senza tracciamento continuo."
       },
       {
         "title": "Report verificabili",
@@ -774,7 +774,7 @@
       },
       {
         "q": "È necessaria preparazione?",
-        "a": "No. Basta portare il tuo caso concreto — quanti operatori hai, che problemi hai oggi con le ore o i report."
+        "a": "No. Basta portare il tuo caso concreto, quanti operatori hai, che problemi hai oggi con le ore o i report."
       },
       {
         "q": "La demo è gratuita?",
@@ -799,7 +799,7 @@
     "success_title": "Richiesta ricevuta!",
     "success_desc": "Ti contatteremo entro 1 giorno lavorativo per fissare la demo.",
     "error_message": "Errore nell'invio. Riprova più tardi.",
-    "badge": "Demo GeoTapp — 30 Minuti",
+    "badge": "Demo GeoTapp, 30 Minuti",
     "page_subtitle": "Ti mostriamo come GeoTapp elimina le contestazioni sulle ore e rende ogni intervento documentato e verificabile.",
     "form_title": "I tuoi dati",
     "urgent_contact": "Hai domande urgenti? Scrivi a",
@@ -848,7 +848,7 @@
       "Era il 2024. Mike Petraroli, il nostro fondatore, lavorava come dipendente e aveva un problema apparentemente banale ma incredibilmente costoso: <strong>dimostrare il proprio lavoro.</strong>",
       "A fine mese, i conti delle ore non tornavano mai. Gli interventi fatti di corsa tra un cliente e l'altro venivano dimenticati. La carta si perdeva, i messaggi WhatsApp venivano sepolti. Era un'emorragia silenziosa di tempo e denaro.",
       "Cercò una soluzione. Trovò solo software complessi, costosi, pieni di grafici inutili e poveri di sostanza. Software fatti da chi non aveva mai timbrato un cartellino o emesso una fattura in emergenza dal furgone.",
-      "Così Mike decise di costruire lui stesso lo strumento che avrebbe voluto avere: semplice, mobile, con prove verificabili. Non per investitori — per le aziende come la sua."
+      "Così Mike decise di costruire lui stesso lo strumento che avrebbe voluto avere: semplice, mobile, con prove verificabili. Non per investitori, per le aziende come la sua."
     ],
     "values_title": "I Nostri Valori",
     "values": [
@@ -913,7 +913,7 @@
     "cta_desc": "Accesso completo a tutti i moduli. Nessuna carta di credito, nessun impegno.",
     "cta_btn": "Inizia trial gratuito",
     "schema_desc": "Guide e approfondimenti su certificazione del lavoro sul campo, gestione squadre, GDPR e geolocalizzazione.",
-    "meta_title": "Blog | GeoTapp — Certificazione del lavoro sul campo",
+    "meta_title": "Blog | GeoTapp - Certificazione del lavoro sul campo",
     "meta_desc": "Guide, approfondimenti e risorse su gestione squadre, certificazione interventi, GDPR e geolocalizzazione. Dal team GeoTapp.",
     "cat_all": "Tutti",
     "toc_title": "Indice",
@@ -931,7 +931,7 @@
     "next_step_cta": "Scopri di più"
   },
   "roi": {
-    "meta_title": "Calcolatore ROI GeoTapp — Scopri il tuo risparmio reale",
+    "meta_title": "Calcolatore ROI GeoTapp - Scopri il tuo risparmio reale",
     "meta_desc": "Calcola in 2 minuti quanto risparmieresti con GeoTapp: meno burocrazia, zero contestazioni, operatori più produttivi.",
     "hero_title": "Calcola il tuo ROI con GeoTapp",
     "hero_subtitle": "Inserisci i dati della tua azienda e scopri quanto puoi risparmiare ogni anno.",
@@ -1021,7 +1021,7 @@
     "title": "Potenza Sotto il Cofano.",
     "subtitle": "Non costruiamo giocattoli. GeoTapp è una piattaforma enterprise concepita per scalare. Ecco le tecnologie che rendono possibile la magia.",
     "gps_title": "Tracciamento GPS e Mappe Geografiche",
-    "gps_desc": "Sai dove si trova il tuo team, in tempo reale. La nostra mappa live mostra ogni timbratura con coordinate GPS, validazione geofencing e protezione anti-spoofing. I manager vedono chi è sul campo con un colpo d'occhio — senza chiamate, senza incertezze.",
+    "gps_desc": "Sai dove si trova il tuo team, in tempo reale. La nostra mappa live mostra ogni timbratura con coordinate GPS, validazione geofencing e protezione anti-spoofing. I manager vedono chi è sul campo con un colpo d'occhio, senza chiamate, senza incertezze.",
     "offline_title": "Offline-First Architecture",
     "offline_desc": "La connessione cade, il lavoro no. Abbiamo costruito un database locale sincronizzato (CRDT) che vive dentro l'app. I tuoi tecnici possono lavorare in un bunker sotterraneo; non appena vedranno uno specchio di cielo, i dati si allineeranno silenziosamente col cloud.",
     "encryption_title": "Military-Grade Encryption",

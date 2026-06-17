@@ -74,7 +74,7 @@ export default function Navbar() {
     ctaText = dict.cta_trial ?? dict.cta;
   }
   const sectorLinks = [
-    // edilizia, impianti, manutenzione nascosti temporaneamente — contenuto da rivedere
+    // edilizia, impianti, manutenzione nascosti temporaneamente, contenuto da rivedere
     {
       href: getLink('/settori/installatori'),
       label: dict.sectors.installatori,

@@ -8,8 +8,8 @@ const content: SettoreContent = {
   hero: {
     badge: 'Logiciel pour Entreprises de Nettoyage, Facility Management et Propreté Industrielle',
     h1_line1: 'Logiciel pour entreprises de nettoyage :',
-    h1_line2: 'plannings, preuves photo et heures vérifiées — sur chaque site',
-    subtitle: 'GeoTapp relie Flow + TimeTracker pour les équipes réparties sur plusieurs bâtiments et étages. Vos agents pointent depuis leur smartphone avec GPS vérifié ; le bureau voit qui a nettoyé quoi, où et quand — avec les preuves photographiques jointes. Plus aucun litige, conformité CCN Nettoyage (IDCC 3043) assurée.',
+    h1_line2: 'plannings, preuves photo et heures vérifiées, sur chaque site',
+    subtitle: 'GeoTapp relie Flow + TimeTracker pour les équipes réparties sur plusieurs bâtiments et étages. Vos agents pointent depuis leur smartphone avec GPS vérifié ; le bureau voit qui a nettoyé quoi, où et quand, avec les preuves photographiques jointes. Plus aucun litige, conformité CCN Nettoyage (IDCC 3043) assurée.',
     cta_primary: 'Demander une démo',
     cta_note: 'Sans engagement. Réponse sous 12 heures ouvrées.',
   },
@@ -32,7 +32,7 @@ const content: SettoreContent = {
   },
   workflow: {
     title: 'Comment ça fonctionne en trois étapes',
-    subtitle: 'Du bâtiment au bureau — sans courir après personne.',
+    subtitle: 'Du bâtiment au bureau, sans courir après personne.',
     steps: [
       {
         title: 'L\'agent pointe sur site',
@@ -40,7 +40,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Le bureau voit tout en temps réel',
-        desc: 'Flow reçoit les données instantanément. Le responsable voit quel site a été traité, par qui, à quelle heure et avec quelles preuves photographiques — sans passer un seul appel.',
+        desc: 'Flow reçoit les données instantanément. Le responsable voit quel site a été traité, par qui, à quelle heure et avec quelles preuves photographiques, sans passer un seul appel.',
       },
       {
         title: 'Le compte rendu de passation est déjà prêt',

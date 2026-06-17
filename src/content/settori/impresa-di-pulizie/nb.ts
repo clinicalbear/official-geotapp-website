@@ -26,7 +26,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Papirtimelister er upålitelige?',
-        desc: 'Automatisk registrering fra smarttelefonen, ingen manuelle registreringer. Dataene er hva de er — og kan ikke endres.',
+        desc: 'Automatisk registrering fra smarttelefonen, ingen manuelle registreringer. Dataene er hva de er, og kan ikke endres.',
       },
       {
         title: 'Vanskelig å koordinere flere team?',
@@ -57,15 +57,15 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'Renholderen stempler med GPS',
-        desc: 'Åpner og lukker vakten fra smarttelefonen. GeoTapp registrerer ekte GPS-koordinater, bilder og tidsstempel — helautomatisk, manipuleringssikkert.',
+        desc: 'Åpner og lukker vakten fra smarttelefonen. GeoTapp registrerer ekte GPS-koordinater, bilder og tidsstempel, helautomatisk, manipuleringssikkert.',
       },
       {
         title: 'Lederen ser alt i sanntid',
-        desc: 'Ett dashboard for alle lokasjoner. Vet nøyaktig hvem som er på stedet, hvor og siden når — uten å jage noen.',
+        desc: 'Ett dashboard for alle lokasjoner. Vet nøyaktig hvem som er på stedet, hvor og siden når, uten å jage noen.',
       },
       {
         title: 'Rapporten er klar automatisk',
-        desc: 'Ved vaktens slutt genererer systemet en forseglet rapport med GPS, bilder og digital signatur. Send den til kunden — uavhengig verifiserbar.',
+        desc: 'Ved vaktens slutt genererer systemet en forseglet rapport med GPS, bilder og digital signatur. Send den til kunden, uavhengig verifiserbar.',
       },
     ],
   },
@@ -82,7 +82,7 @@ const content: SettoreContent = {
       {
         label: 'Hvem kan verifisere',
         competitor: 'Bare ditt kontor',
-        geotapp: 'Deg, kunden, en tredjepart — selvstendig',
+        geotapp: 'Deg, kunden, en tredjepart, selvstendig',
       },
       {
         label: 'Ved tvister',
@@ -123,7 +123,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Fotodokumentasjon',
-        desc: 'Renholdere tar bilder direkte fra appen. Hvert bilde er geotagget med tidsstempel — visuelt bevis for utført arbeid.',
+        desc: 'Renholdere tar bilder direkte fra appen. Hvert bilde er geotagget med tidsstempel, visuelt bevis for utført arbeid.',
       },
       {
         title: 'Ditt personale er beskyttet',
@@ -136,7 +136,7 @@ const content: SettoreContent = {
     quote:
       'Siden vi begynte å bruke GeoTapp, løses kundetvister på ett minutt. Vi sender rapporten med bilder og GPS, og diskusjonen stopper der. Vi har ikke mistet en eneste kontrakt på et år.',
     author: 'Susanne M.',
-    role: 'Eier, kommersielt rengjøringsfirma — Norge',
+    role: 'Eier, kommersielt rengjøringsfirma - Norge',
   },
 
   faq: {
@@ -145,7 +145,7 @@ const content: SettoreContent = {
     items: [
       {
         q: 'Hvordan fungerer GPS-stempling for rengjøringsfirmaer?',
-        a: 'Renholderen stempler inn og ut fra smarttelefonen. GeoTapp registrerer GPS-koordinatene i det øyeblikket — ikke manuelt registrert. Hver stempling er sertifisert med tidsstempel og posisjon verifiserbar av kunden.',
+        a: 'Renholderen stempler inn og ut fra smarttelefonen. GeoTapp registrerer GPS-koordinatene i det øyeblikket, ikke manuelt registrert. Hver stempling er sertifisert med tidsstempel og posisjon verifiserbar av kunden.',
       },
       {
         q: 'Kan jeg bevise overfor kunden at tjenesten ble utført?',
@@ -165,7 +165,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Hva koster GeoTapp for et rengjøringsfirma?',
-        a: 'Planene starter fra noen få euro per medarbeider per måned. Prøv gratis i 14 dager — uten binding.',
+        a: 'Planene starter fra noen få euro per medarbeider per måned. Prøv gratis i 14 dager, uten binding.',
       },
     ],
   },
@@ -190,7 +190,7 @@ const content: SettoreContent = {
     {
       question: 'Hvordan fungerer GPS-stempling for rengjøringsfirmaer?',
       answer:
-        'Renholderen stempler fra smarttelefonen. GeoTapp registrerer GPS-koordinater — ikke manuelt registrert. Hver stempling er sertifisert med tidsstempel og posisjon verifiserbar av kunden.',
+        'Renholderen stempler fra smarttelefonen. GeoTapp registrerer GPS-koordinater, ikke manuelt registrert. Hver stempling er sertifisert med tidsstempel og posisjon verifiserbar av kunden.',
     },
     {
       question: 'Kan jeg bevise overfor kunden at tjenesten ble utført?',

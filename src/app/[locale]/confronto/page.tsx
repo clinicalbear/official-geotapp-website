@@ -8,63 +8,63 @@ const PATHNAME = '/confronto/';
 
 const META: Record<string, { title: string; description: string }> = {
   it: {
-    title: 'GeoTapp vs Competitor — Confronti Completi | GeoTapp',
+    title: 'GeoTapp vs Competitor - Confronti Completi | GeoTapp',
     description: 'Confronta GeoTapp con Connecteam, Clockify, Hubstaff e altri. Scopri perché GeoTapp è la scelta giusta per aziende con operatori sul campo che devono certificare il lavoro svolto.',
   },
   en: {
-    title: 'GeoTapp vs Competitors — Full Comparisons | GeoTapp',
+    title: 'GeoTapp vs Competitors - Full Comparisons | GeoTapp',
     description: 'Compare GeoTapp with Connecteam, Clockify, Hubstaff and others. Find out why GeoTapp is the right choice for field service companies that need to certify completed work.',
   },
   de: {
-    title: 'GeoTapp vs Konkurrenten — Vollständige Vergleiche | GeoTapp',
+    title: 'GeoTapp vs Konkurrenten - Vollständige Vergleiche | GeoTapp',
     description: 'Vergleichen Sie GeoTapp mit Connecteam, Clockify, Hubstaff und anderen. Erfahren Sie, warum GeoTapp die richtige Wahl für Außendienstunternehmen ist.',
   },
   fr: {
-    title: 'GeoTapp vs Concurrents — Comparaisons complètes | GeoTapp',
+    title: 'GeoTapp vs Concurrents - Comparaisons complètes | GeoTapp',
     description: 'Comparez GeoTapp avec Connecteam, Clockify, Hubstaff et d\'autres. Découvrez pourquoi GeoTapp est le bon choix pour les entreprises de terrain.',
   },
   es: {
-    title: 'GeoTapp vs Competidores — Comparaciones completas | GeoTapp',
+    title: 'GeoTapp vs Competidores - Comparaciones completas | GeoTapp',
     description: 'Compara GeoTapp con Connecteam, Clockify, Hubstaff y otros. Descubre por qué GeoTapp es la elección correcta para empresas de servicio en campo.',
   },
   nl: {
-    title: 'GeoTapp vs Concurrenten — Volledige vergelijkingen | GeoTapp',
+    title: 'GeoTapp vs Concurrenten - Volledige vergelijkingen | GeoTapp',
     description: 'Vergelijk GeoTapp met Connecteam, Clockify, Hubstaff en anderen. Ontdek waarom GeoTapp de juiste keuze is voor bedrijven met medewerkers op locatie die werk moeten certificeren.',
   },
   pt: {
-    title: 'GeoTapp vs Concorrentes — Comparações completas | GeoTapp',
+    title: 'GeoTapp vs Concorrentes - Comparações completas | GeoTapp',
     description: 'Compare a GeoTapp com Connecteam, Clockify, Hubstaff e outros. Descubra porque a GeoTapp é a escolha certa para empresas com equipas no terreno que precisam de certificar o trabalho.',
   },
   da: {
-    title: 'GeoTapp vs konkurrenter — Komplette sammenligninger | GeoTapp',
+    title: 'GeoTapp vs konkurrenter - Komplette sammenligninger | GeoTapp',
     description: 'Sammenlign GeoTapp med Connecteam, Clockify, Hubstaff og andre. Find ud af, hvorfor GeoTapp er det rigtige valg for virksomheder med medarbejdere i marken, der skal certificere udført arbejde.',
   },
   sv: {
-    title: 'GeoTapp vs konkurrenter — Kompletta jämförelser | GeoTapp',
+    title: 'GeoTapp vs konkurrenter - Kompletta jämförelser | GeoTapp',
     description: 'Jämför GeoTapp med Connecteam, Clockify, Hubstaff och andra. Ta reda på varför GeoTapp är rätt val för företag med personal i fält som måste certifiera utfört arbete.',
   },
   nb: {
-    title: 'GeoTapp vs konkurrenter — Komplette sammenligninger | GeoTapp',
+    title: 'GeoTapp vs konkurrenter - Komplette sammenligninger | GeoTapp',
     description: 'Sammenlign GeoTapp med Connecteam, Clockify, Hubstaff og andre. Finn ut hvorfor GeoTapp er det riktige valget for bedrifter med ansatte i felt som må sertifisere utført arbeid.',
   },
   ru: {
-    title: 'GeoTapp vs конкуренты — Полные сравнения | GeoTapp',
-    description: 'Сравните GeoTapp с Connecteam, Clockify, Hubstaff и другими. Узнайте, почему GeoTapp — правильный выбор для компаний с сотрудниками на выезде, которым нужно сертифицировать выполненную работу.',
+    title: 'GeoTapp vs конкуренты, Полные сравнения | GeoTapp',
+    description: 'Сравните GeoTapp с Connecteam, Clockify, Hubstaff и другими. Узнайте, почему GeoTapp, правильный выбор для компаний с сотрудниками на выезде, которым нужно сертифицировать выполненную работу.',
   },
 };
 
 const COPY: Record<string, Record<string, string>> = {
-  it: { badge: 'Confronti', title_suffix: 'le alternative', intro: 'Non tutte le app sono uguali. GeoTapp è l\'unico sistema che produce prove verificabili del lavoro svolto — non solo registra ore e posizione.', cta_title: 'La prova migliore è vederlo dal vivo.', cta_desc: 'Ti mostriamo come un intervento diventa una prova verificabile — in 20 minuti, senza impegno.', cta_btn: 'Inizia subito gratuitamente!', breadcrumb: 'Confronti' },
-  en: { badge: 'Comparisons', title_suffix: 'the alternatives', intro: 'Not all apps are equal. GeoTapp is the only system that produces verifiable proof of completed work — not just records hours and location.', cta_title: 'The best proof is seeing it live.', cta_desc: 'We show you how a job becomes verifiable proof — in 20 minutes, no commitment.', cta_btn: 'Start for free!', breadcrumb: 'Compare' },
-  de: { badge: 'Vergleiche', title_suffix: 'die Alternativen', intro: 'Nicht alle Apps sind gleich. GeoTapp ist das einzige System, das überprüfbare Nachweise der geleisteten Arbeit liefert — nicht nur Stunden und Standort erfasst.', cta_title: 'Der beste Beweis ist, es live zu sehen.', cta_desc: 'Wir zeigen Ihnen, wie ein Einsatz zum überprüfbaren Nachweis wird — in 20 Minuten, unverbindlich.', cta_btn: 'Jetzt kostenlos starten!', breadcrumb: 'Vergleiche' },
-  fr: { badge: 'Comparaisons', title_suffix: 'les alternatives', intro: 'Toutes les applications ne se valent pas. GeoTapp est le seul système qui produit des preuves vérifiables du travail effectué.', cta_title: 'La meilleure preuve, c\'est de le voir en direct.', cta_desc: 'Nous vous montrons comment une intervention devient une preuve vérifiable — en 20 minutes, sans engagement.', cta_btn: 'Commencez gratuitement !', breadcrumb: 'Comparaisons' },
-  es: { badge: 'Comparaciones', title_suffix: 'las alternativas', intro: 'No todas las apps son iguales. GeoTapp es el único sistema que produce pruebas verificables del trabajo realizado.', cta_title: 'La mejor prueba es verlo en directo.', cta_desc: 'Te mostramos cómo una intervención se convierte en prueba verificable — en 20 minutos, sin compromiso.', cta_btn: '¡Empieza gratis!', breadcrumb: 'Comparaciones' },
-  nl: { badge: 'Vergelijkingen', title_suffix: 'de alternatieven', intro: 'Niet alle apps zijn gelijk. GeoTapp is het enige systeem dat verifieerbaar bewijs van uitgevoerd werk levert.', cta_title: 'Het beste bewijs is het live zien.', cta_desc: 'We laten u zien hoe een opdracht verifieerbaar bewijs wordt — in 20 minuten, vrijblijvend.', cta_btn: 'Start gratis!', breadcrumb: 'Vergelijkingen' },
-  pt: { badge: 'Comparações', title_suffix: 'as alternativas', intro: 'Nem todas as apps são iguais. GeoTapp é o único sistema que produz provas verificáveis do trabalho realizado.', cta_title: 'A melhor prova é ver ao vivo.', cta_desc: 'Mostramos-lhe como uma intervenção se torna prova verificável — em 20 minutos, sem compromisso.', cta_btn: 'Comece grátis!', breadcrumb: 'Comparações' },
-  da: { badge: 'Sammenligninger', title_suffix: 'alternativerne', intro: 'Ikke alle apps er ens. GeoTapp er det eneste system, der producerer verificerbart bevis for udført arbejde — ikke bare registrerer timer og placering.', cta_title: 'Det bedste bevis er at se det live.', cta_desc: 'Vi viser dig, hvordan en opgave bliver til verificerbart bevis — på 20 minutter, uforpligtende.', cta_btn: 'Kom gratis i gang!', breadcrumb: 'Sammenligninger' },
-  sv: { badge: 'Jämförelser', title_suffix: 'alternativen', intro: 'Alla appar är inte likadana. GeoTapp är det enda systemet som producerar verifierbara bevis på utfört arbete — inte bara registrerar timmar och plats.', cta_title: 'Det bästa beviset är att se det live.', cta_desc: 'Vi visar dig hur ett uppdrag blir verifierbart bevis — på 20 minuter, utan förpliktelser.', cta_btn: 'Kom igång gratis!', breadcrumb: 'Jämförelser' },
-  nb: { badge: 'Sammenligninger', title_suffix: 'alternativene', intro: 'Ikke alle apper er like. GeoTapp er det eneste systemet som produserer verifiserbart bevis på utført arbeid — ikke bare registrerer timer og posisjon.', cta_title: 'Det beste beviset er å se det live.', cta_desc: 'Vi viser deg hvordan et oppdrag blir til verifiserbart bevis — på 20 minutter, uforpliktende.', cta_btn: 'Kom i gang gratis!', breadcrumb: 'Sammenligninger' },
-  ru: { badge: 'Сравнения', title_suffix: 'альтернативы', intro: 'Не все приложения одинаковы. GeoTapp — единственная система, которая создаёт проверяемые доказательства выполненной работы, а не просто фиксирует часы и местоположение.', cta_title: 'Лучшее доказательство — увидеть вживую.', cta_desc: 'Покажем, как работа превращается в проверяемое доказательство — за 20 минут, без обязательств.', cta_btn: 'Начните бесплатно!', breadcrumb: 'Сравнения' },
+  it: { badge: 'Confronti', title_suffix: 'le alternative', intro: 'Non tutte le app sono uguali. GeoTapp è l\'unico sistema che produce prove verificabili del lavoro svolto, non solo registra ore e posizione.', cta_title: 'La prova migliore è vederlo dal vivo.', cta_desc: 'Ti mostriamo come un intervento diventa una prova verificabile, in 20 minuti, senza impegno.', cta_btn: 'Inizia subito gratuitamente!', breadcrumb: 'Confronti' },
+  en: { badge: 'Comparisons', title_suffix: 'the alternatives', intro: 'Not all apps are equal. GeoTapp is the only system that produces verifiable proof of completed work, not just records hours and location.', cta_title: 'The best proof is seeing it live.', cta_desc: 'We show you how a job becomes verifiable proof, in 20 minutes, no commitment.', cta_btn: 'Start for free!', breadcrumb: 'Compare' },
+  de: { badge: 'Vergleiche', title_suffix: 'die Alternativen', intro: 'Nicht alle Apps sind gleich. GeoTapp ist das einzige System, das überprüfbare Nachweise der geleisteten Arbeit liefert, nicht nur Stunden und Standort erfasst.', cta_title: 'Der beste Beweis ist, es live zu sehen.', cta_desc: 'Wir zeigen Ihnen, wie ein Einsatz zum überprüfbaren Nachweis wird, in 20 Minuten, unverbindlich.', cta_btn: 'Jetzt kostenlos starten!', breadcrumb: 'Vergleiche' },
+  fr: { badge: 'Comparaisons', title_suffix: 'les alternatives', intro: 'Toutes les applications ne se valent pas. GeoTapp est le seul système qui produit des preuves vérifiables du travail effectué.', cta_title: 'La meilleure preuve, c\'est de le voir en direct.', cta_desc: 'Nous vous montrons comment une intervention devient une preuve vérifiable, en 20 minutes, sans engagement.', cta_btn: 'Commencez gratuitement !', breadcrumb: 'Comparaisons' },
+  es: { badge: 'Comparaciones', title_suffix: 'las alternativas', intro: 'No todas las apps son iguales. GeoTapp es el único sistema que produce pruebas verificables del trabajo realizado.', cta_title: 'La mejor prueba es verlo en directo.', cta_desc: 'Te mostramos cómo una intervención se convierte en prueba verificable, en 20 minutos, sin compromiso.', cta_btn: '¡Empieza gratis!', breadcrumb: 'Comparaciones' },
+  nl: { badge: 'Vergelijkingen', title_suffix: 'de alternatieven', intro: 'Niet alle apps zijn gelijk. GeoTapp is het enige systeem dat verifieerbaar bewijs van uitgevoerd werk levert.', cta_title: 'Het beste bewijs is het live zien.', cta_desc: 'We laten u zien hoe een opdracht verifieerbaar bewijs wordt, in 20 minuten, vrijblijvend.', cta_btn: 'Start gratis!', breadcrumb: 'Vergelijkingen' },
+  pt: { badge: 'Comparações', title_suffix: 'as alternativas', intro: 'Nem todas as apps são iguais. GeoTapp é o único sistema que produz provas verificáveis do trabalho realizado.', cta_title: 'A melhor prova é ver ao vivo.', cta_desc: 'Mostramos-lhe como uma intervenção se torna prova verificável, em 20 minutos, sem compromisso.', cta_btn: 'Comece grátis!', breadcrumb: 'Comparações' },
+  da: { badge: 'Sammenligninger', title_suffix: 'alternativerne', intro: 'Ikke alle apps er ens. GeoTapp er det eneste system, der producerer verificerbart bevis for udført arbejde, ikke bare registrerer timer og placering.', cta_title: 'Det bedste bevis er at se det live.', cta_desc: 'Vi viser dig, hvordan en opgave bliver til verificerbart bevis, på 20 minutter, uforpligtende.', cta_btn: 'Kom gratis i gang!', breadcrumb: 'Sammenligninger' },
+  sv: { badge: 'Jämförelser', title_suffix: 'alternativen', intro: 'Alla appar är inte likadana. GeoTapp är det enda systemet som producerar verifierbara bevis på utfört arbete, inte bara registrerar timmar och plats.', cta_title: 'Det bästa beviset är att se det live.', cta_desc: 'Vi visar dig hur ett uppdrag blir verifierbart bevis, på 20 minuter, utan förpliktelser.', cta_btn: 'Kom igång gratis!', breadcrumb: 'Jämförelser' },
+  nb: { badge: 'Sammenligninger', title_suffix: 'alternativene', intro: 'Ikke alle apper er like. GeoTapp er det eneste systemet som produserer verifiserbart bevis på utført arbeid, ikke bare registrerer timer og posisjon.', cta_title: 'Det beste beviset er å se det live.', cta_desc: 'Vi viser deg hvordan et oppdrag blir til verifiserbart bevis, på 20 minutter, uforpliktende.', cta_btn: 'Kom i gang gratis!', breadcrumb: 'Sammenligninger' },
+  ru: { badge: 'Сравнения', title_suffix: 'альтернативы', intro: 'Не все приложения одинаковы. GeoTapp, единственная система, которая создаёт проверяемые доказательства выполненной работы, а не просто фиксирует часы и местоположение.', cta_title: 'Лучшее доказательство, увидеть вживую.', cta_desc: 'Покажем, как работа превращается в проверяемое доказательство, за 20 минут, без обязательств.', cta_btn: 'Начните бесплатно!', breadcrumb: 'Сравнения' },
 };
 
 const COMPARISONS: Record<string, { tagline: string; highlight: string }>[] = [
@@ -98,17 +98,17 @@ const COMPARISONS: Record<string, { tagline: string; highlight: string }>[] = [
   } as any,
   {
     slug: 'geotapp-vs-hubstaff', competitor: 'Hubstaff',
-    it: { tagline: 'Monitoraggio remoto vs certificazione sul campo', highlight: 'Hubstaff monitora i lavoratori remoti. GeoTapp certifica operatori fisici sul campo — conforme GDPR.' },
-    en: { tagline: 'Remote monitoring vs field certification', highlight: 'Hubstaff monitors remote workers. GeoTapp certifies physical field operators — GDPR compliant.' },
-    de: { tagline: 'Remote-Überwachung vs Feldzertifizierung', highlight: 'Hubstaff überwacht Remote-Arbeiter. GeoTapp zertifiziert physische Feldmitarbeiter — DSGVO-konform.' },
-    fr: { tagline: 'Surveillance à distance vs certification terrain', highlight: 'Hubstaff surveille les télétravailleurs. GeoTapp certifie les opérateurs physiques sur le terrain — conforme RGPD.' },
-    es: { tagline: 'Monitoreo remoto vs certificación de campo', highlight: 'Hubstaff monitorea trabajadores remotos. GeoTapp certifica operadores físicos en campo — compatible con RGPD.' },
-    pt: { tagline: 'Monitorização remota vs certificação no terreno', highlight: 'A Hubstaff monitoriza trabalhadores remotos. A GeoTapp certifica operadores físicos no terreno — conforme o RGPD.' },
-    nl: { tagline: 'Monitoring op afstand vs certificering in het veld', highlight: 'Hubstaff monitort externe werkers. GeoTapp certificeert fysieke medewerkers op locatie — AVG-conform.' },
-    da: { tagline: 'Fjernovervågning vs feltcertificering', highlight: 'Hubstaff overvåger fjernarbejdere. GeoTapp certificerer fysiske medarbejdere i marken — GDPR-kompatibel.' },
-    sv: { tagline: 'Fjärrövervakning vs fältcertifiering', highlight: 'Hubstaff övervakar distansarbetare. GeoTapp certifierar fysisk personal i fält — GDPR-kompatibel.' },
-    nb: { tagline: 'Fjernovervåking vs feltsertifisering', highlight: 'Hubstaff overvåker fjernarbeidere. GeoTapp sertifiserer fysiske ansatte i felt — GDPR-kompatibel.' },
-    ru: { tagline: 'Удалённый мониторинг vs полевая сертификация', highlight: 'Hubstaff следит за удалёнными сотрудниками. GeoTapp сертифицирует работников на выезде — соответствует GDPR.' },
+    it: { tagline: 'Monitoraggio remoto vs certificazione sul campo', highlight: 'Hubstaff monitora i lavoratori remoti. GeoTapp certifica operatori fisici sul campo, conforme GDPR.' },
+    en: { tagline: 'Remote monitoring vs field certification', highlight: 'Hubstaff monitors remote workers. GeoTapp certifies physical field operators - GDPR compliant.' },
+    de: { tagline: 'Remote-Überwachung vs Feldzertifizierung', highlight: 'Hubstaff überwacht Remote-Arbeiter. GeoTapp zertifiziert physische Feldmitarbeiter - DSGVO-konform.' },
+    fr: { tagline: 'Surveillance à distance vs certification terrain', highlight: 'Hubstaff surveille les télétravailleurs. GeoTapp certifie les opérateurs physiques sur le terrain, conforme RGPD.' },
+    es: { tagline: 'Monitoreo remoto vs certificación de campo', highlight: 'Hubstaff monitorea trabajadores remotos. GeoTapp certifica operadores físicos en campo, compatible con RGPD.' },
+    pt: { tagline: 'Monitorização remota vs certificação no terreno', highlight: 'A Hubstaff monitoriza trabalhadores remotos. A GeoTapp certifica operadores físicos no terreno, conforme o RGPD.' },
+    nl: { tagline: 'Monitoring op afstand vs certificering in het veld', highlight: 'Hubstaff monitort externe werkers. GeoTapp certificeert fysieke medewerkers op locatie - AVG-conform.' },
+    da: { tagline: 'Fjernovervågning vs feltcertificering', highlight: 'Hubstaff overvåger fjernarbejdere. GeoTapp certificerer fysiske medarbejdere i marken - GDPR-kompatibel.' },
+    sv: { tagline: 'Fjärrövervakning vs fältcertifiering', highlight: 'Hubstaff övervakar distansarbetare. GeoTapp certifierar fysisk personal i fält - GDPR-kompatibel.' },
+    nb: { tagline: 'Fjernovervåking vs feltsertifisering', highlight: 'Hubstaff overvåker fjernarbeidere. GeoTapp sertifiserer fysiske ansatte i felt - GDPR-kompatibel.' },
+    ru: { tagline: 'Удалённый мониторинг vs полевая сертификация', highlight: 'Hubstaff следит за удалёнными сотрудниками. GeoTapp сертифицирует работников на выезде, соответствует GDPR.' },
   } as any,
   {
     slug: 'geotapp-vs-nobadge', competitor: 'NoBadge',
@@ -126,17 +126,17 @@ const COMPARISONS: Record<string, { tagline: string; highlight: string }>[] = [
   } as any,
   {
     slug: 'geotapp-vs-libemax', competitor: 'Libemax',
-    it: { tagline: 'Geofence vs anti-spoofing GPS', highlight: 'Libemax usa il geofence per la timbratura. GeoTapp verifica che il GPS sia reale con anti-spoofing — due livelli di sicurezza diversi.' },
-    en: { tagline: 'Geofence vs anti-spoofing GPS', highlight: 'Libemax uses geofence for check-in. GeoTapp verifies GPS is real with anti-spoofing — two different security levels.' },
-    de: { tagline: 'Geofence vs Anti-Spoofing-GPS', highlight: 'Libemax nutzt Geofence. GeoTapp verifiziert GPS-Echtheit mit Anti-Spoofing — zwei verschiedene Sicherheitsstufen.' },
-    fr: { tagline: 'Geofence vs anti-spoofing GPS', highlight: 'Libemax utilise le geofence. GeoTapp vérifie que le GPS est réel avec l\'anti-spoofing — deux niveaux de sécurité différents.' },
-    es: { tagline: 'Geofence vs anti-spoofing GPS', highlight: 'Libemax usa geofence. GeoTapp verifica que el GPS es real con anti-spoofing — dos niveles de seguridad diferentes.' },
-    pt: { tagline: 'Geofence vs anti-spoofing GPS', highlight: 'A Libemax usa geofence. A GeoTapp verifica que o GPS é real com anti-spoofing — dois níveis de segurança diferentes.' },
-    nl: { tagline: 'Geofence vs anti-spoofing-GPS', highlight: 'Libemax gebruikt geofence. GeoTapp verifieert dat het GPS echt is met anti-spoofing — twee verschillende beveiligingsniveaus.' },
-    da: { tagline: 'Geofence vs anti-spoofing-GPS', highlight: 'Libemax bruger geofence. GeoTapp verificerer, at GPS\'en er ægte med anti-spoofing — to forskellige sikkerhedsniveauer.' },
-    sv: { tagline: 'Geofence vs anti-spoofing-GPS', highlight: 'Libemax använder geofence. GeoTapp verifierar att GPS:en är äkta med anti-spoofing — två olika säkerhetsnivåer.' },
-    nb: { tagline: 'Geofence vs anti-spoofing-GPS', highlight: 'Libemax bruker geofence. GeoTapp verifiserer at GPS-en er ekte med anti-spoofing — to forskjellige sikkerhetsnivåer.' },
-    ru: { tagline: 'Геозона vs анти-спуфинг GPS', highlight: 'Libemax использует геозону. GeoTapp проверяет подлинность GPS с помощью анти-спуфинга — два разных уровня безопасности.' },
+    it: { tagline: 'Geofence vs anti-spoofing GPS', highlight: 'Libemax usa il geofence per la timbratura. GeoTapp verifica che il GPS sia reale con anti-spoofing, due livelli di sicurezza diversi.' },
+    en: { tagline: 'Geofence vs anti-spoofing GPS', highlight: 'Libemax uses geofence for check-in. GeoTapp verifies GPS is real with anti-spoofing, two different security levels.' },
+    de: { tagline: 'Geofence vs Anti-Spoofing-GPS', highlight: 'Libemax nutzt Geofence. GeoTapp verifiziert GPS-Echtheit mit Anti-Spoofing, zwei verschiedene Sicherheitsstufen.' },
+    fr: { tagline: 'Geofence vs anti-spoofing GPS', highlight: 'Libemax utilise le geofence. GeoTapp vérifie que le GPS est réel avec l\'anti-spoofing, deux niveaux de sécurité différents.' },
+    es: { tagline: 'Geofence vs anti-spoofing GPS', highlight: 'Libemax usa geofence. GeoTapp verifica que el GPS es real con anti-spoofing, dos niveles de seguridad diferentes.' },
+    pt: { tagline: 'Geofence vs anti-spoofing GPS', highlight: 'A Libemax usa geofence. A GeoTapp verifica que o GPS é real com anti-spoofing, dois níveis de segurança diferentes.' },
+    nl: { tagline: 'Geofence vs anti-spoofing-GPS', highlight: 'Libemax gebruikt geofence. GeoTapp verifieert dat het GPS echt is met anti-spoofing, twee verschillende beveiligingsniveaus.' },
+    da: { tagline: 'Geofence vs anti-spoofing-GPS', highlight: 'Libemax bruger geofence. GeoTapp verificerer, at GPS\'en er ægte med anti-spoofing, to forskellige sikkerhedsniveauer.' },
+    sv: { tagline: 'Geofence vs anti-spoofing-GPS', highlight: 'Libemax använder geofence. GeoTapp verifierar att GPS:en är äkta med anti-spoofing, två olika säkerhetsnivåer.' },
+    nb: { tagline: 'Geofence vs anti-spoofing-GPS', highlight: 'Libemax bruker geofence. GeoTapp verifiserer at GPS-en er ekte med anti-spoofing, to forskjellige sikkerhetsnivåer.' },
+    ru: { tagline: 'Геозона vs анти-спуфинг GPS', highlight: 'Libemax использует геозону. GeoTapp проверяет подлинность GPS с помощью анти-спуфинга, два разных уровня безопасности.' },
   } as any,
   {
     slug: 'geotapp-vs-blink', competitor: 'Blink',
@@ -150,7 +150,7 @@ const COMPARISONS: Record<string, { tagline: string; highlight: string }>[] = [
     da: { tagline: 'Rengøringssoftware DE vs feltcertificering', highlight: 'Blink er nr. 1 til rengøring i Tyskland. GeoTapp tilføjer anti-spoofing og rapporter med bevisværdi.' },
     sv: { tagline: 'Städprogram DE vs fältcertifiering', highlight: 'Blink är nummer 1 för städning i Tyskland. GeoTapp lägger till anti-spoofing och rapporter med bevisvärde.' },
     nb: { tagline: 'Renholdsprogram DE vs feltsertifisering', highlight: 'Blink er nummer 1 for renhold i Tyskland. GeoTapp legger til anti-spoofing og rapporter med bevisverdi.' },
-    ru: { tagline: 'ПО для клининга DE vs полевая сертификация', highlight: 'Blink — №1 для клининга в Германии. GeoTapp добавляет анти-спуфинг и отчёты с доказательной силой.' },
+    ru: { tagline: 'ПО для клининга DE vs полевая сертификация', highlight: 'Blink, №1 для клининга в Германии. GeoTapp добавляет анти-спуфинг и отчёты с доказательной силой.' },
   } as any,
 ];
 
@@ -210,18 +210,18 @@ export default async function ConfrontoIndexPage({ params }: { params: Promise<{
                 <div className="flex items-center gap-3 mb-2">
                   <span className="font-bold text-lg">
                     {{
-                      it: '🆕 Comparativa Dinamica — confronta TUTTI in una pagina',
-                      en: '🆕 Live Comparison — compare ALL competitors in one place',
-                      de: '🆕 Dynamischer Vergleich — alle Konkurrenten auf einer Seite',
-                      fr: '🆕 Comparatif Dynamique — tous les concurrents sur une page',
-                      es: '🆕 Comparativa Dinámica — todos los competidores en una página',
-                      nl: '🆕 Dynamische Vergelijking — alle concurrenten op één pagina',
-                      pt: '🆕 Comparação Dinâmica — todos os concorrentes numa página',
-                      da: '🆕 Dynamisk sammenligning — alle konkurrenter på én side',
-                      sv: '🆕 Dynamisk jämförelse — alla konkurrenter på en sida',
-                      nb: '🆕 Dynamisk sammenligning — alle konkurrenter på én side',
-                      ru: '🆕 Динамическое сравнение — все конкуренты на одной странице',
-                    }[locale] ?? '🆕 Live Comparison — compare ALL competitors in one place'}
+                      it: '🆕 Comparativa Dinamica, confronta TUTTI in una pagina',
+                      en: '🆕 Live Comparison, compare ALL competitors in one place',
+                      de: '🆕 Dynamischer Vergleich, alle Konkurrenten auf einer Seite',
+                      fr: '🆕 Comparatif Dynamique, tous les concurrents sur une page',
+                      es: '🆕 Comparativa Dinámica, todos los competidores en una página',
+                      nl: '🆕 Dynamische Vergelijking, alle concurrenten op één pagina',
+                      pt: '🆕 Comparação Dinâmica, todos os concorrentes numa página',
+                      da: '🆕 Dynamisk sammenligning, alle konkurrenter på én side',
+                      sv: '🆕 Dynamisk jämförelse, alla konkurrenter på en sida',
+                      nb: '🆕 Dynamisk sammenligning, alle konkurrenter på én side',
+                      ru: '🆕 Динамическое сравнение, все конкуренты на одной странице',
+                    }[locale] ?? '🆕 Live Comparison, compare ALL competitors in one place'}
                   </span>
                 </div>
                 <p className="text-text-secondary text-sm">

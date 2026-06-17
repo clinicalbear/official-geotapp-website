@@ -11,7 +11,7 @@ export default function ChatBubble({ onClick }: ChatBubbleProps) {
       aria-label="Chat with Kairos"
       className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-primary shadow-lg transition-transform hover:scale-110"
     >
-      {/* Hourglass icon — Kairos = god of time */}
+      {/* Hourglass icon - Kairos = god of time */}
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"

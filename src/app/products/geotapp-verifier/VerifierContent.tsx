@@ -216,11 +216,11 @@ export default function VerifierContent({ copy, locale }: VerifierContentProps) 
               <div className="w-3 h-3 rounded-full bg-red-500"></div>
               <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
               <div className="w-3 h-3 rounded-full bg-green-500"></div>
-              <span className="ml-3 text-slate-400 text-xs tracking-widest uppercase">GeoTapp Verifier — Storico Commessa</span>
+              <span className="ml-3 text-slate-400 text-xs tracking-widest uppercase">GeoTapp Verifier - Storico Commessa</span>
             </div>
             <Image
               src="/verifier-report.webp"
-              alt="GeoTapp Verifier — report storico commessa con integrity check"
+              alt="GeoTapp Verifier, report storico commessa con integrity check"
               width={1280}
               height={900}
               className="w-full h-auto"

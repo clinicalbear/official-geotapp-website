@@ -9,7 +9,7 @@ const content: SettoreContent = {
     badge: 'App til installatører, teknikere og serviceteams',
     h1_line1: 'Hver opgave dokumenteret,',
     h1_line2: 'hver time registreret.',
-    subtitle: 'For el-, VVS- og mekaniske installatører. GeoTapp forbinder Flow + TimeTracker for at spore GPS, timer og fotos per opgave — fra varevognen til kontoret uden telefonopkald.',
+    subtitle: 'For el-, VVS- og mekaniske installatører. GeoTapp forbinder Flow + TimeTracker for at spore GPS, timer og fotos per opgave, fra varevognen til kontoret uden telefonopkald.',
     cta_primary: 'Prøv GeoTapp gratis i 14 dage',
     cta_note: 'Ingen binding. Intet kreditkort påkrævet.',
   },
@@ -18,7 +18,7 @@ const content: SettoreContent = {
     items: [
       {
         title: 'Kunder bestrider de arbejdede timer',
-        desc: 'GPS-stemplinger tidsstemplet som uigendriveligt bevis. Data certificeres i opgaveøjeblikket — kan ikke redigeres efterfølgende.',
+        desc: 'GPS-stemplinger tidsstemplet som uigendriveligt bevis. Data certificeres i opgaveøjeblikket, kan ikke redigeres efterfølgende.',
       },
       {
         title: 'Jagte teknikere for opdateringer',
@@ -36,7 +36,7 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'Teknikeren stempler ind via GPS ved start',
-        desc: 'Åbner opgaven fra smartphonen. GeoTapp registrerer reelle GPS-koordinater, tidsstempel og fotos — fuldautomatisk, manipulationssikkert.',
+        desc: 'Åbner opgaven fra smartphonen. GeoTapp registrerer reelle GPS-koordinater, tidsstempel og fotos, fuldautomatisk, manipulationssikkert.',
       },
       {
         title: 'Timer registreres automatisk per opgave',
@@ -60,7 +60,7 @@ const content: SettoreContent = {
       {
         label: 'Hvem kan verificere',
         competitor: 'Kun dit kontor',
-        geotapp: 'Dig, kunden, en tredjepart — uafhængigt',
+        geotapp: 'Dig, kunden, en tredjepart, uafhængigt',
       },
       {
         label: 'Ved tvist',
@@ -91,7 +91,7 @@ const content: SettoreContent = {
       'Kunden bestrider? Åbn rapporten: fotos, GPS, tidsstempel, digital signatur.',
       'Du sender den. Tvisten er løst på et minut.',
       'Betalingen er sikret. Teknikeren er beskyttet.',
-      'Ved månedens slutning er eksporten allerede klar — timer og opgaver aggregeret automatisk.',
+      'Ved månedens slutning er eksporten allerede klar, timer og opgaver aggregeret automatisk.',
     ],
   },
   features: {
@@ -103,7 +103,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Forseglet fotobevis',
-        desc: 'Teknikeren fotograferer direkte fra appen. Hvert billede er knyttet til opgaven med GPS og tidsstempel — manipulationssikkert efter generering.',
+        desc: 'Teknikeren fotograferer direkte fra appen. Hvert billede er knyttet til opgaven med GPS og tidsstempel, manipulationssikkert efter generering.',
       },
       {
         title: 'Multi-lokation opgavestyring',
@@ -126,7 +126,7 @@ const content: SettoreContent = {
   testimonial: {
     quote: 'Kunder bestrider ikke længere timerne. Vi åbner rapporten med GPS og fotos, og diskussionen stopper der.',
     author: 'Robert F.',
-    role: 'Ejer, installationsfirma — 20 teknikere',
+    role: 'Ejer, installationsfirma, 20 teknikere',
   },
   faq: {
     title: 'Ofte stillede spørgsmål',
@@ -142,7 +142,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Hvordan fremskynder jeg fakturering af afsluttede opgaver?',
-        a: 'GeoTapp genererer automatisk eksporten af timer og opgaver klar til dit regnskabsprogram. Ingen manuel indtastning, ingen fejlrisiko — fakturering bliver ét klik.',
+        a: 'GeoTapp genererer automatisk eksporten af timer og opgaver klar til dit regnskabsprogram. Ingen manuel indtastning, ingen fejlrisiko, fakturering bliver ét klik.',
       },
     ],
   },
@@ -169,7 +169,7 @@ const content: SettoreContent = {
     },
     {
       question: 'Hvordan fremskynder jeg fakturering af afsluttede opgaver?',
-      answer: 'GeoTapp genererer automatisk eksporten af timer og opgaver klar til dit regnskabsprogram. Ingen manuel indtastning, ingen fejlrisiko — fakturering bliver ét klik.',
+      answer: 'GeoTapp genererer automatisk eksporten af timer og opgaver klar til dit regnskabsprogram. Ingen manuel indtastning, ingen fejlrisiko, fakturering bliver ét klik.',
     },
   ],
 };

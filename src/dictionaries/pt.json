@@ -23,14 +23,14 @@
       "label": "Setores",
       "termoidraulici": "Aquecimento e Canalização"
     },
-    "logo_alt": "GeoTapp — A plataforma que torna o trabalho verificável",
+    "logo_alt": "GeoTapp - A plataforma que torna o trabalho verificável",
     "product_flow_desc": "Gestão operacional de intervenções e equipas",
     "product_app_desc": "App móvel para técnicos de campo",
     "product_verifier_desc": "Verificação de integridade de relatórios de trabalho",
     "compare": "Comparação"
   },
   "risorseHub": {
-    "metaTitle": "Recursos — GeoTapp",
+    "metaTitle": "Recursos - GeoTapp",
     "metaDesc": "Ferramentas e recursos gratuitos da GeoTapp: o guia para a monitorização GPS de trabalhadores na Europa, a calculadora de ROI e o inquérito sobre a prova do trabalho.",
     "h1": "Recursos",
     "intro": "Ferramentas, guias e dados gratuitos para tornar o trabalho no terreno comprovável.\nMantemo-los atualizados e acrescentamos novos.",
@@ -72,10 +72,10 @@
     "contact": "Contacto"
   },
   "landing": {
-    "us_badge": "🇺🇸 Serving US teams — chat support 9am–6pm ET. USD invoicing available on request.",
+    "us_badge": "🇺🇸 Serving US teams, chat support 9am–6pm ET. USD invoicing available on request.",
     "hero_badge": "O trabalho aconteceu. Agora torne-o demonstrável.",
     "hero_title": "Se não puder provar, o cliente diz que nunca aconteceu.",
-    "hero_subtitle": "GeoTapp transforma cada intervenção em campo em evidência objectiva: relatórios selados com dados GPS reais, provas fotográficas com marca de tempo e documentação verificável por qualquer pessoa — sem confiar, sem contestações.",
+    "hero_subtitle": "GeoTapp transforma cada intervenção em campo em evidência objectiva: relatórios selados com dados GPS reais, provas fotográficas com marca de tempo e documentação verificável por qualquer pessoa, sem confiar, sem contestações.",
     "hero_cta_primary": "Agendar demo de 30 minutos",
     "hero_cta_secondary": "Explorar setores",
     "trust_gdpr": "Conforme RGPD",
@@ -107,11 +107,11 @@
     ],
     "report_section_title": "O relatório. Não um resumo. Uma prova.",
     "report_section_subtitle": "Cada relatório GeoTapp é gerado automaticamente a partir de dados reais do campo.",
-    "report_section_body": "Registros GPS, fotos com carimbo de data/hora, notas operacionais. O sistema aplica um selo criptográfico que torna qualquer modificação detectável. O resultado não é um documento para enviar ao cliente — é uma prova que o cliente pode verificar por conta própria.",
-    "report_feature_1": "Não modificável após geração — qualquer alteração é detetável",
-    "report_feature_2": "Verificável sem conta — por qualquer pessoa, de forma autônoma",
+    "report_section_body": "Registros GPS, fotos com carimbo de data/hora, notas operacionais. O sistema aplica um selo criptográfico que torna qualquer modificação detectável. O resultado não é um documento para enviar ao cliente, é uma prova que o cliente pode verificar por conta própria.",
+    "report_feature_1": "Não modificável após geração, qualquer alteração é detetável",
+    "report_feature_2": "Verificável sem conta, por qualquer pessoa, de forma autônoma",
     "report_feature_3": "Dados GPS e fotográficos integrados e inseparáveis",
-    "report_feature_4": "Gerado automaticamente — sem preenchimento manual",
+    "report_feature_4": "Gerado automaticamente, sem preenchimento manual",
     "report_cta": "Ver como o cliente verifica por conta própria",
     "hero_sectors_prefix": "Ideal para",
     "hero_sectors_pulizie": "empresas de limpeza",
@@ -180,8 +180,8 @@
       "title": "Não precisa que confiem em si.",
       "subtitle": "O cliente tem o relatório. Verifica-o por si mesmo, sem aceder ao GeoTapp. Se os dados correspondem ao trabalho real, o selo aguenta. Se alguém modificou o documento, o selo parte-se. Sem recurso.",
       "features": {
-        "integrity": "<strong>Dados não alteráveis:</strong> O relatório é gerado sobre os dados reais de campo e bloqueado. Qualquer modificação torna-o inválido — sem recurso.",
-        "independent": "<strong>Verificação autónoma:</strong> Qualquer pessoa com o relatório pode verificar a sua autenticidade — sem conta, sem acesso à plataforma."
+        "integrity": "<strong>Dados não alteráveis:</strong> O relatório é gerado sobre os dados reais de campo e bloqueado. Qualquer modificação torna-o inválido, sem recurso.",
+        "independent": "<strong>Verificação autónoma:</strong> Qualquer pessoa com o relatório pode verificar a sua autenticidade, sem conta, sem acesso à plataforma."
       },
       "link": "Explorar GeoTapp Verifier"
     },
@@ -204,7 +204,7 @@
         },
         {
           "title": "Prova defensável ao longo do tempo",
-          "desc": "Cada relatório fica bloqueado sobre dados reais de campo — não alterável após a geração. Contestação? O dado está lá. Verificável por qualquer pessoa. Sempre."
+          "desc": "Cada relatório fica bloqueado sobre dados reais de campo, não alterável após a geração. Contestação? O dado está lá. Verificável por qualquer pessoa. Sempre."
         }
       ]
     },
@@ -215,12 +215,12 @@
       "pricing_link": "Ver planos e preços →"
     },
     "settori": {
-      "title": "Documentação verificável para cada setor — Soluções GeoTapp",
-      "subtitle": "Escolha o seu setor para ver como o GeoTapp gera provas do trabalho realizado — para mostrar ao cliente em caso de disputa.",
+      "title": "Documentação verificável para cada setor - Soluções GeoTapp",
+      "subtitle": "Escolha o seu setor para ver como o GeoTapp gera provas do trabalho realizado, para mostrar ao cliente em caso de disputa.",
       "see_all": "Ver todos os setores suportados",
       "installatori": {
         "name": "Instaladores",
-        "desc": "Eletricistas, Canalizadores, Técnicos. Cada intervenção documentada com GPS e fotos — dados inalteráveis, verificáveis pelo cliente.",
+        "desc": "Eletricistas, Canalizadores, Técnicos. Cada intervenção documentada com GPS e fotos, dados inalteráveis, verificáveis pelo cliente.",
         "cta": "Comprovar cada intervenção"
       },
       "sicurezza": {
@@ -230,17 +230,17 @@
       },
       "pulizie": {
         "name": "Limpeza",
-        "desc": "Empresas de limpeza, Facility, Multisserviços. Cada ronda documentada e verificável pelo cliente — zero disputas.",
+        "desc": "Empresas de limpeza, Facility, Multisserviços. Cada ronda documentada e verificável pelo cliente, zero disputas.",
         "cta": "Evitar disputas"
       },
       "elettricisti": {
         "name": "Eletricistas",
-        "desc": "Instalações elétricas, quadros, cablagem. Cada intervenção documentada com GPS e fotos — provas invioláveis para encerrar qualquer disputa.",
+        "desc": "Instalações elétricas, quadros, cablagem. Cada intervenção documentada com GPS e fotos, provas invioláveis para encerrar qualquer disputa.",
         "cta": "Documente cada intervenção"
       },
       "idraulici": {
         "name": "Canalizadores",
-        "desc": "Canalização, aquecimento, caldeiras. Relatórios GPS com fotos antes e depois — zero disputas sobre trabalhos realizados.",
+        "desc": "Canalização, aquecimento, caldeiras. Relatórios GPS com fotos antes e depois, zero disputas sobre trabalhos realizados.",
         "cta": "Prove cada trabalho"
       }
     },
@@ -252,7 +252,7 @@
     },
     "demo_banner": {
       "badge": "Exemplo real",
-      "title": "Relatório certificado — descarregar e verificar",
+      "title": "Relatório certificado, descarregar e verificar",
       "field_operator": "Operador",
       "field_intervention": "Intervenção",
       "field_intervention_value": "Substituição do quadro elétrico",
@@ -488,7 +488,7 @@
     "hq_city": "100% online, clientes em Itália e na UE",
     "hq_note": "Sem escritório aberto ao público: suporte e onboarding remotos.",
     "privacy_note": "Ao enviar este formulário aceita a nossa Política de Privacidade.",
-    "map_title": "Onde estamos — Trenzano (BS), Itália",
+    "map_title": "Onde estamos - Trenzano (BS), Itália",
     "success": "Mensagem enviada com sucesso. Responderemos o mais brevemente possível.",
     "error": "Erro ao enviar. Tente novamente mais tarde.",
     "sending": "A enviar...",
@@ -509,7 +509,7 @@
   },
   "product_pages": {
     "flow": {
-      "hero_badge": "GeoTapp Flow — Gestão de operações de campo",
+      "hero_badge": "GeoTapp Flow - Gestão de operações de campo",
       "hero_title": "GeoTapp Flow.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600\">Gestão Operacional.</span>",
       "hero_subtitle": "O centro operacional para gerir clientes, projetos, equipas e administração num único ambiente. Flow é a plataforma que também alimenta o TimeTracker.",
       "visual_placeholder": "PAINEL DE OPERAÇÕES",
@@ -542,7 +542,7 @@
         "ledger-prime": {
           "name": "Relatórios e facturação",
           "short": "Gere relatórios estruturados a partir de cada trabalho. Exporte documentação e apoie a facturação com dados reais de campo.",
-          "full": "### Do trabalho ao relatório, de forma ordenada.\n\nA facturação manual é lenta e muitas vezes incompleta.\nOs **Relatórios e a facturação** fecham o ciclo operacional.\n\n#### Relatórios estruturados\n\nCada intervenção concluída gera documentação recolhendo marcas de tempo, fotos e notas do campo.\nSem dados a introduzir manualmente — tudo provém do TimeTracker.\n\n#### Apoio à facturação\n\nOs dados reais dos trabalhos facilitam orçamentos e facturas mais precisos.\nMenos erros, menos disputas, ciclo administrativo mais ágil."
+          "full": "### Do trabalho ao relatório, de forma ordenada.\n\nA facturação manual é lenta e muitas vezes incompleta.\nOs **Relatórios e a facturação** fecham o ciclo operacional.\n\n#### Relatórios estruturados\n\nCada intervenção concluída gera documentação recolhendo marcas de tempo, fotos e notas do campo.\nSem dados a introduzir manualmente, tudo provém do TimeTracker.\n\n#### Apoio à facturação\n\nOs dados reais dos trabalhos facilitam orçamentos e facturas mais precisos.\nMenos erros, menos disputas, ciclo administrativo mais ágil."
         },
         "quantum-logistics": {
           "name": "Calendário de intervenções",
@@ -577,7 +577,7 @@
       }
     },
     "app": {
-      "hero_badge": "GeoTapp TimeTracker — App para técnicos de campo",
+      "hero_badge": "GeoTapp TimeTracker - App para técnicos de campo",
       "hero_title": "GeoTapp TimeTracker.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600\">O campo no seu bolso.</span>",
       "hero_subtitle": "A aplicação móvel utilizada pelos técnicos para registar a actividade, recolher comprovativos e manter o fio operacional directamente do campo. Disponível em Android e iOS.",
       "visual_placeholder": "INTERFACE DE CAMPO",
@@ -688,7 +688,7 @@
     "cosa_vedrai": [
       {
         "title": "Marcação GPS em ação",
-        "desc": "Como o técnico marca ponto na app móvel e como o escritório vê a localização verificada — sem rastreamento contínuo."
+        "desc": "Como o técnico marca ponto na app móvel e como o escritório vê a localização verificada, sem rastreamento contínuo."
       },
       {
         "title": "Relatórios verificáveis",
@@ -706,7 +706,7 @@
       },
       {
         "q": "É necessária preparação?",
-        "a": "Não. Basta trazer o seu caso concreto — quantos operadores tem e que problemas tem hoje com as horas ou os relatórios."
+        "a": "Não. Basta trazer o seu caso concreto, quantos operadores tem e que problemas tem hoje com as horas ou os relatórios."
       },
       {
         "q": "A demo é gratuita?",
@@ -731,7 +731,7 @@
     "success_title": "Pedido recebido!",
     "success_desc": "Entraremos em contacto no prazo de 1 dia útil para agendar a demo.",
     "error_message": "Erro ao enviar. Por favor tente mais tarde.",
-    "badge": "Demo GeoTapp — 30 Minutos",
+    "badge": "Demo GeoTapp, 30 Minutos",
     "page_subtitle": "Mostramos-lhe como o GeoTapp elimina disputas sobre horas e torna cada intervenção documentada e verificável.",
     "form_title": "Os seus dados",
     "urgent_contact": "Perguntas urgentes? Escreva para",
@@ -780,7 +780,7 @@
       "Era 2024. Mike Petraroli, o nosso fundador, trabalhava como empregado e tinha um problema aparentemente banal mas incrivelmente caro: <strong>provar o seu próprio trabalho.</strong>",
       "No final do mês, as contas das horas nunca batiam certo. As intervenções feitas a correr entre clientes eram esquecidas. O papel perdia-se, as mensagens do WhatsApp ficavam enterradas. Era uma hemorragia silenciosa de tempo e dinheiro.",
       "Procurou uma solução. Só encontrou software complexos, caros, cheios de gráficos inúteis e pobres em substância. Software feito por pessoas que nunca tinham marcado ponto ou emitido uma fatura de emergência da carrinha.",
-      "Então Mike decidiu construir ele próprio a ferramenta que teria querido ter: simples, móvel, com provas verificáveis. Não para investidores — para empresas como a sua."
+      "Então Mike decidiu construir ele próprio a ferramenta que teria querido ter: simples, móvel, com provas verificáveis. Não para investidores, para empresas como a sua."
     ],
     "values_title": "Os nossos valores",
     "values": [
@@ -845,7 +845,7 @@
     "cta_desc": "Sem spam, apenas atualizações de valor sobre o produto e o sector.",
     "cta_btn": "Contacte-nos",
     "schema_desc": "Guias e análises sobre certificação de trabalho em campo, gestão de equipas, RGPD e geolocalização.",
-    "meta_title": "Blog | GeoTapp — Verificação do trabalho em campo",
+    "meta_title": "Blog | GeoTapp - Verificação do trabalho em campo",
     "meta_desc": "Guias, análises e recursos sobre gestão de equipas, certificação de intervenções, RGPD e geolocalização. Da equipa GeoTapp.",
     "cat_all": "Todos",
     "toc_title": "Indice",
@@ -865,7 +865,7 @@
   "trial": {
     "page_title": "14 dias grátis. Sem cartão.",
     "page_subtitle": "Acesso completo a todos os módulos GeoTapp Flow durante 14 dias. Sem cartão de crédito, sem compromisso. Cancele quando quiser.",
-    "badge": "Teste gratuito — 14 dias",
+    "badge": "Teste gratuito, 14 dias",
     "form_title": "Crie a sua conta",
     "form_company": "Nome da empresa",
     "form_company_placeholder": "Ex. Instalações Silva Lda",
@@ -877,9 +877,9 @@
     "form_fullname_placeholder": "Ex. João Silva",
     "form_plan": "Plano GeoTapp Flow",
     "form_plan_note": "O número de utilizadores do plano refere-se ao GeoTapp Flow (gestão de escritório/CRM). As licenças GeoTapp Timetracker para operadores de campo são uma subscrição separada, com um número máximo incluído conforme o plano escolhido.",
-    "plan_solo": "Solo — 1 utilizador Flow",
-    "plan_team": "Team — até 5 utilizadores Flow",
-    "plan_business": "Business — utilizadores Flow ilimitados",
+    "plan_solo": "Solo, 1 utilizador Flow",
+    "plan_team": "Team, até 5 utilizadores Flow",
+    "plan_business": "Business, utilizadores Flow ilimitados",
     "form_seats": "Licenças Timetracker (opcional)",
     "form_seats_hint": "Subscrição separada para operadores de campo (aplicação móvel). Limite incluído no plano: Solo máx. 2, Team máx. 5, Business ilimitadas. Pode ajustar as licenças após a ativação.",
     "form_submit": "Iniciar teste gratuito",
@@ -931,7 +931,7 @@
     "form_seats_required_note": "* Obrigatório: indica 0 se não precisas de licenças TimeTracker."
   },
   "roi": {
-    "meta_title": "Calculadora ROI GeoTapp — Descubra as suas poupanças reais",
+    "meta_title": "Calculadora ROI GeoTapp - Descubra as suas poupanças reais",
     "meta_desc": "Calcule em 2 minutos quanto pouparia com o GeoTapp: menos burocracia, zero disputas, operadores mais produtivos.",
     "hero_title": "Calcule o seu ROI com o GeoTapp",
     "hero_subtitle": "Introduza os dados da sua empresa e descubra quanto pode poupar por ano.",
@@ -1021,17 +1021,17 @@
     "title": "Power Under the Hood.",
     "subtitle": "Não construímos brinquedos. GeoTapp é uma plataforma empresarial construída para escalar. Aqui estão as tecnologias que fazem a magia acontecer.",
     "gps_title": "Rastreamento GPS e Mapas Geográficos",
-    "gps_desc": "Saiba onde a sua equipa está, em tempo real. O nosso mapa ao vivo mostra cada registo de ponto com coordenadas GPS, validação de geofencing e proteção anti-spoofing. Os gestores veem quem está no local num relance — sem chamadas, sem adivinhações.",
+    "gps_desc": "Saiba onde a sua equipa está, em tempo real. O nosso mapa ao vivo mostra cada registo de ponto com coordenadas GPS, validação de geofencing e proteção anti-spoofing. Os gestores veem quem está no local num relance, sem chamadas, sem adivinhações.",
     "offline_title": "Offline-First Architecture",
     "offline_desc": "A ligação cai, o trabalho não. Construímos uma base de dados sincronizada localmente (CRDT) que vive dentro da aplicação. Os seus técnicos podem trabalhar num bunker subterrâneo; assim que avistarem um pedaço de céu, os dados sincronizam silenciosamente com a nuvem.",
     "encryption_title": "Military-Grade Encryption",
-    "encryption_desc": "Durma descansado. Usamos encriptação AES-256 em repouso e TLS 1.3 em trânsito. Mesmo que um atacante interceptasse os seus dados, só veria ruído branco. A privacidade não é apenas uma formalidade legal — é matemática.",
+    "encryption_desc": "Durma descansado. Usamos encriptação AES-256 em repouso e TLS 1.3 em trânsito. Mesmo que um atacante interceptasse os seus dados, só veria ruído branco. A privacidade não é apenas uma formalidade legal, é matemática.",
     "realtime_title": "Real-Time WebSocket",
     "realtime_desc": "Sem precisar de carregar em F5. Graças aos WebSockets, a informação viaja instantaneamente. Quando um técnico fecha um ticket no Porto, o gestor em Lisboa vê o ponto ficar verde no mesmo milissegundo. É como estar em todo o lado ao mesmo tempo.",
     "cms_title": "Headless CMS Integration",
     "cms_desc": "O conteúdo é fluido. A nossa arquitetura headless desacopla os dados da apresentação. Isso significa que pode publicar um artigo no blog, enviá-lo para a app móvel e distribuí-lo por newsletter com um único clique.",
     "datalake_title": "Scalable Data Lake",
-    "datalake_desc": "De 100 a 100 milhões de registos sem esforço. Usamos PostgreSQL particionado para gerir volumes massivos de dados sem abrandamentos. O seu histórico é precioso — guardamo-lo para sempre, acessível num instante.",
+    "datalake_desc": "De 100 a 100 milhões de registos sem esforço. Usamos PostgreSQL particionado para gerir volumes massivos de dados sem abrandamentos. O seu histórico é precioso, guardamo-lo para sempre, acessível num instante.",
     "cdn_title": "Global CDN Edge",
     "cdn_desc": "A velocidade é geográfica. Os nossos recursos estáticos são replicados em mais de 300 centros de dados em todo o mundo. Quer o seu cliente esteja em Nova Iorque ou Tóquio, o seu site carrega como se o servidor estivesse na sala ao lado."
   },

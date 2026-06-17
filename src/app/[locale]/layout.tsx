@@ -49,13 +49,13 @@ const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
     description:
       'GeoTapp genera prove verificabili del lavoro svolto sul campo: report sigillati con dati GPS reali, prove fotografiche con timestamp e documentazione non modificabile verificabile da chiunque. SaaS GDPR-compliant per aziende con operatori in mobilità.',
     featureList: [
-      'Report di lavoro non modificabili — verificabili indipendentemente da chiunque',
+      'Report di lavoro non modificabili, verificabili indipendentemente da chiunque',
       'Prove fotografiche collegate a timestamp GPS e commessa',
-      'Documentazione interventi non modificabile — ogni alterazione è rilevabile',
+      'Documentazione interventi non modificabile, ogni alterazione è rilevabile',
       'Prova del lavoro svolto: evidenza oggettiva per ogni intervento sul campo',
       'Timbratura geolocalizzata tramite GPS',
       'Gestione commesse e interventi tecnici',
-      'GDPR compliant — nessun tracciamento continuo',
+      'GDPR compliant, nessun tracciamento continuo',
       'App mobile Android e iOS (Flutter)',
     ],
     offersDescription: 'Prova gratuita 14 giorni, piani a pagamento da {price}/operatore/mese via Stripe',
@@ -64,13 +64,13 @@ const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
     description:
       'GeoTapp generates verifiable proof of field work: sealed reports with real GPS data, timestamped photo evidence and tamper-proof documentation anyone can verify independently. GDPR-compliant SaaS for companies with mobile operators.',
     featureList: [
-      'Tamper-proof work reports — independently verifiable by anyone',
+      'Tamper-proof work reports, independently verifiable by anyone',
       'Photo evidence linked to GPS timestamp and job',
-      'Tamper-proof job documentation — any modification is detectable',
+      'Tamper-proof job documentation, any modification is detectable',
       'Work proof: objective evidence for every field intervention',
       'GPS-based verifiable time tracking',
       'Job and technical intervention management',
-      'GDPR compliant — no continuous tracking',
+      'GDPR compliant, no continuous tracking',
       'Mobile app for Android and iOS (Flutter)',
     ],
     offersDescription: '14-day free trial, paid plans from {price}/operator/month via Stripe',
@@ -79,13 +79,13 @@ const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
     description:
       'GeoTapp erzeugt verifizierbare Nachweise für geleistete Außendienstarbeit: versiegelte Berichte mit echten GPS-Daten, zeitgestempelte Fotobelege und manipulationssichere Dokumentation, die jeder unabhängig prüfen kann.',
     featureList: [
-      'Nicht veränderbare Arbeitsberichte — unabhängig verifizierbar',
+      'Nicht veränderbare Arbeitsberichte, unabhängig verifizierbar',
       'Fotobelege verknüpft mit GPS-Zeitstempel und Auftrag',
-      'Manipulationssichere Auftragsdokumentation — jede Änderung ist erkennbar',
+      'Manipulationssichere Auftragsdokumentation, jede Änderung ist erkennbar',
       'Arbeitsnachweis: objektive Beweise für jeden Außendiensteinsatz',
       'GPS-basierte verifizierbare Zeiterfassung',
       'Auftrags- und Einsatzverwaltung',
-      'DSGVO-konform — keine kontinuierliche Verfolgung',
+      'DSGVO-konform, keine kontinuierliche Verfolgung',
       'Mobile App für Android und iOS (Flutter)',
     ],
     offersDescription: '14-tägige kostenlose Testphase, kostenpflichtige Pläne ab {price}/Nutzer/Monat via Stripe',
@@ -94,13 +94,13 @@ const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
     description:
       'GeoTapp génère des preuves vérifiables du travail effectué sur le terrain : rapports scellés avec données GPS réelles, preuves photographiques horodatées et documentation inviolable vérifiable par n\'importe qui.',
     featureList: [
-      'Rapports de travail non modifiables — vérifiables indépendamment par n\'importe qui',
+      'Rapports de travail non modifiables, vérifiables indépendamment par n\'importe qui',
       'Preuves photographiques liées au timestamp GPS et à l\'intervention',
-      'Documentation d\'intervention inviolable — toute modification est détectable',
+      'Documentation d\'intervention inviolable, toute modification est détectable',
       'Preuve du travail : evidence objective pour chaque intervention terrain',
       'Pointage vérifiable par GPS',
       'Gestion des ordres de travail et interventions',
-      'Conforme RGPD — pas de suivi continu',
+      'Conforme RGPD, pas de suivi continu',
       'Application mobile Android et iOS (Flutter)',
     ],
     offersDescription: 'Essai gratuit 14 jours, plans payants à partir de {price}/opérateur/mois via Stripe',
@@ -109,13 +109,13 @@ const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
     description:
       'GeoTapp genera pruebas verificables del trabajo realizado en campo: informes sellados con datos GPS reales, evidencias fotográficas con marca de tiempo y documentación a prueba de manipulaciones que cualquiera puede verificar.',
     featureList: [
-      'Informes de trabajo no modificables — verificables independientemente por cualquiera',
+      'Informes de trabajo no modificables, verificables independientemente por cualquiera',
       'Evidencias fotográficas vinculadas a timestamp GPS y trabajo',
-      'Documentación de intervenciones a prueba de manipulaciones — cualquier cambio es detectable',
+      'Documentación de intervenciones a prueba de manipulaciones, cualquier cambio es detectable',
       'Prueba del trabajo: evidencia objetiva para cada intervención en campo',
       'Fichaje verificable por GPS',
       'Gestión de órdenes de trabajo e intervenciones',
-      'Conforme RGPD — sin seguimiento continuo',
+      'Conforme RGPD, sin seguimiento continuo',
       'App móvil para Android e iOS (Flutter)',
     ],
     offersDescription: 'Prueba gratuita 14 días, planes de pago desde {price}/operador/mes via Stripe',
@@ -124,13 +124,13 @@ const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
     description:
       'GeoTapp gera provas verificáveis do trabalho realizado em campo: relatórios selados com dados GPS reais, provas fotográficas com marca de tempo e documentação inviolável que qualquer pessoa pode verificar.',
     featureList: [
-      'Relatórios de trabalho não modificáveis — verificáveis independentemente por qualquer pessoa',
+      'Relatórios de trabalho não modificáveis, verificáveis independentemente por qualquer pessoa',
       'Provas fotográficas ligadas a timestamp GPS e intervenção',
-      'Documentação de intervenções inviolável — qualquer alteração é detectável',
+      'Documentação de intervenções inviolável, qualquer alteração é detectável',
       'Prova do trabalho: evidência objectiva para cada intervenção em campo',
       'Marcação de ponto verificável por GPS',
       'Gestão de ordens de trabalho e intervenções',
-      'Conforme RGPD — sem rastreamento contínuo',
+      'Conforme RGPD, sem rastreamento contínuo',
       'App móvel para Android e iOS (Flutter)',
     ],
     offersDescription: 'Avaliação gratuita 14 dias, planos pagos a partir de {price}/operador/mês via Stripe',
@@ -139,13 +139,13 @@ const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
     description:
       'GeoTapp genereert verifieerbaar bewijs van uitgevoerd veldwerk: verzegelde rapporten met echte GPS-gegevens, tijdgestempeld fotobewijs en onvervalsbare documentatie die iedereen onafhankelijk kan controleren.',
     featureList: [
-      'Niet wijzigbare werkrapporten — onafhankelijk verifieerbaar door iedereen',
+      'Niet wijzigbare werkrapporten, onafhankelijk verifieerbaar door iedereen',
       'Fotobewijs gekoppeld aan GPS-tijdstempel en opdracht',
-      'Onvervalsbare opdrachtdocumentatie — elke wijziging is detecteerbaar',
+      'Onvervalsbare opdrachtdocumentatie, elke wijziging is detecteerbaar',
       'Werkbewijs: objectief bewijs voor elke velddienst',
       'Verifieerbare GPS-tijdregistratie',
       'Werkorder- en interventiebeheer',
-      'AVG-conform — geen continue tracking',
+      'AVG-conform, geen continue tracking',
       'Mobiele app voor Android en iOS (Flutter)',
     ],
     offersDescription: '14 dagen gratis proberen, betaalde plannen vanaf {price}/gebruiker/maand via Stripe',
@@ -154,13 +154,13 @@ const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
     description:
       'GeoTapp генерирует верифицируемые доказательства выполненной полевой работы: запечатанные отчёты с реальными GPS-данными, фотодоказательства с временными метками и защищённая от изменений документация, проверяемая кем угодно.',
     featureList: [
-      'Неизменяемые рабочие отчёты — независимо верифицируемые кем угодно',
+      'Неизменяемые рабочие отчёты, независимо верифицируемые кем угодно',
       'Фотодоказательства привязаны к GPS-временной метке и заявке',
-      'Неизменяемая документация выездов — любая модификация обнаруживается',
+      'Неизменяемая документация выездов, любая модификация обнаруживается',
       'Доказательство работы: объективные свидетельства каждого выезда',
       'Верифицируемый GPS-учёт рабочего времени',
       'Управление заявками и техническими вмешательствами',
-      'Соответствие GDPR — без непрерывного отслеживания',
+      'Соответствие GDPR, без непрерывного отслеживания',
       'Мобильное приложение для Android и iOS (Flutter)',
     ],
     offersDescription: 'Бесплатный пробный период 14 дней, платные планы от {price}/оператор/месяц через Stripe',
@@ -169,13 +169,13 @@ const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
     description:
       'GeoTapp genererer verificerbare beviser for udført feltarbejde: forseglede rapporter med reelle GPS-data, tidsstemplede fotobeviser og uforanderlig dokumentation, som enhver kan verificere uafhængigt.',
     featureList: [
-      'Ikke-redigerbare arbejdsrapporter — uafhængigt verificerbare af enhver',
+      'Ikke-redigerbare arbejdsrapporter, uafhængigt verificerbare af enhver',
       'Fotobeviser bundet til GPS-tidsstempel og arbejdsordre',
-      'Uforanderlig dokumentation af udkald — enhver ændring opdages',
+      'Uforanderlig dokumentation af udkald, enhver ændring opdages',
       'Arbejdsbevis: objektive beviser for hvert feltbesøg',
       'Verificerbar GPS-tidsregistrering',
       'Håndtering af arbejdsordrer og interventioner',
-      'GDPR-kompatibel — ingen kontinuerlig sporing',
+      'GDPR-kompatibel, ingen kontinuerlig sporing',
       'Mobilapp til Android og iOS (Flutter)',
     ],
     offersDescription: '14 dages gratis prøveperiode, betalte planer fra {price}/bruger/måned via Stripe',
@@ -184,13 +184,13 @@ const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
     description:
       'GeoTapp genererar verifierbara bevis för utfört fältarbete: förseglade rapporter med verkliga GPS-data, tidsstämplade fotobevis och oföränderlig dokumentation som vem som helst kan verifiera oberoende.',
     featureList: [
-      'Oföränderliga arbetsrapporter — oberoende verifierbara av vem som helst',
+      'Oföränderliga arbetsrapporter, oberoende verifierbara av vem som helst',
       'Fotobevis kopplade till GPS-tidsstämpel och arbetsorder',
-      'Oföränderlig dokumentation av utryckningar — varje ändring upptäcks',
+      'Oföränderlig dokumentation av utryckningar, varje ändring upptäcks',
       'Arbetsproof: objektiva bevis för varje fältuppdrag',
       'Verifierbar GPS-tidregistrering',
       'Hantering av arbetsorder och interventioner',
-      'GDPR-kompatibel — ingen kontinuerlig spårning',
+      'GDPR-kompatibel, ingen kontinuerlig spårning',
       'Mobilapp för Android och iOS (Flutter)',
     ],
     offersDescription: '14 dagars gratis provperiod, betalda planer från {price}/användare/månad via Stripe',
@@ -199,13 +199,13 @@ const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
     description:
       'GeoTapp genererer verifiserbare bevis for utført feltarbeid: forseglede rapporter med ekte GPS-data, tidsstemplede fotobevis og uforanderlig dokumentasjon som hvem som helst kan verifisere uavhengig.',
     featureList: [
-      'Ikke-redigerbare arbeidsrapporter — uavhengig verifiserbare av hvem som helst',
+      'Ikke-redigerbare arbeidsrapporter, uavhengig verifiserbare av hvem som helst',
       'Fotobevis bundet til GPS-tidsstempel og arbeidsordre',
-      'Uforanderlig dokumentasjon av utrykning — enhver endring oppdages',
+      'Uforanderlig dokumentasjon av utrykning, enhver endring oppdages',
       'Arbeidsbevis: objektive beviser for hvert feltoppdrag',
       'Verifiserbar GPS-tidsregistrering',
       'Håndtering av arbeidsordrer og intervensjoner',
-      'GDPR-kompatibel — ingen kontinuerlig sporing',
+      'GDPR-kompatibel, ingen kontinuerlig sporing',
       'Mobilapp for Android og iOS (Flutter)',
     ],
     offersDescription: '14 dagers gratis prøveperiode, betalte planer fra {price}/bruker/måned via Stripe',
@@ -274,17 +274,17 @@ export default async function LocaleLayout({ children, params }: Props) {
       <head>
         {/* ── Critical preconnects ───────────────────────────────────────────
             next/font/google already handles fonts.googleapis.com and
-            fonts.gstatic.com internally — no manual preconnect needed.
+            fonts.gstatic.com internally, no manual preconnect needed.
             Stripe JS is loaded on pricing/checkout pages only. */}
         {/* ── DNS prefetch ───────────────────────────────────────────────────
             Resolve DNS early for domains we WILL navigate to or call,
             without paying the TCP handshake cost upfront.
-            Stripe preconnect removed — only used on pricing/trial pages. */}
+            Stripe preconnect removed, only used on pricing/trial pages. */}
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
-        {/* The Flutter app — CTAs link here; prefetch DNS so click is instant */}
+        {/* The Flutter app - CTAs link here; prefetch DNS so click is instant */}
         <link rel="dns-prefetch" href="https://app.geotapp.com" />
-        {/* Blog WP origin — sitemap + API calls */}
+        {/* Blog WP origin, sitemap + API calls */}
         <link rel="dns-prefetch" href="https://blog.geotapp.com" />
       </head>
       <body
@@ -343,7 +343,7 @@ export default async function LocaleLayout({ children, params }: Props) {
             }),
           }}
         />
-        {/* Person schema for founder — feeds Google Knowledge Graph and ties
+        {/* Person schema for founder, feeds Google Knowledge Graph and ties
             the author entity used by blog Article schema (Yoast) to the same
             canonical Person, with verified third-party profile (Featured.com)
             in sameAs as an E-E-A-T signal. */}
@@ -469,16 +469,16 @@ export default async function LocaleLayout({ children, params }: Props) {
                 }
                 window.__gtSkip = localStorage.getItem('gt_skip_analytics') === '1';
                 if (window.__gtSkip) {
-                  console.warn('[GeoTapp] Internal traffic — analytics DISABLED on this browser. Run ?gt_internal=off to re-enable.');
+                  console.warn('[GeoTapp] Internal traffic, analytics DISABLED on this browser. Run ?gt_internal=off to re-enable.');
                 }
               } catch(_) { /* localStorage blocked: ignore */ }
             })();
           `}
         </Script>
 
-        {/* ── Google Consent Mode v2 — must run BEFORE GA loads ─────────────
+        {/* ── Google Consent Mode v2, must run BEFORE GA loads ─────────────
             Geo-aware: per utenti EU/UK/EEA/CH parte denied (banner mostra
-            le 3 opzioni). Per gli altri (US/CA/AU/etc) parte granted —
+            le 3 opzioni). Per gli altri (US/CA/AU/etc) parte granted -
             jurisdiction non richiede consent per analytics non-essenziali. */}
         <Script id="google-consent-default" strategy="beforeInteractive">
           {consentMode === 'eu'
@@ -527,12 +527,12 @@ export default async function LocaleLayout({ children, params }: Props) {
             }
           `}
         </Script>
-        {/* Adsense removed from main site layout — it was loading on every page
+        {/* Adsense removed from main site layout, it was loading on every page
             (homepage, sectors, products, pricing) but ad slots only exist on
             the blog. Moved to src/app/blog/layout.tsx where ad inventory lives.
             Saves ~75-90ms TBT across all non-blog pages. */}
         <div className="relative min-h-screen overflow-hidden">
-          {/* Background Glow Effects — CSS radial-gradient instead of
+          {/* Background Glow Effects - CSS radial-gradient instead of
               filter:blur() to avoid GPU compositing overhead on mobile.
               Visual output is identical; no per-frame repaint cost. */}
           <div

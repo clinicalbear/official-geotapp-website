@@ -9,7 +9,7 @@ const content: SettoreContent = {
     badge: 'Logiciel pour Agents de Sécurité, SSIAP et Sécurité Événementielle',
     h1_line1: 'Présences vérifiées et rapports de rondes',
     h1_line2: 'pour agents de sécurité et SSIAP',
-    subtitle: 'GeoTapp Flow et TimeTracker documentent la présence des agents aux postes assignés avec GPS vérifié et horodatages inaltérables. Suivi des agréments CNAPS, passation de consignes numérique et rapports d\'incidents géolocalisés — tout sur une seule plateforme.',
+    subtitle: 'GeoTapp Flow et TimeTracker documentent la présence des agents aux postes assignés avec GPS vérifié et horodatages inaltérables. Suivi des agréments CNAPS, passation de consignes numérique et rapports d\'incidents géolocalisés, tout sur une seule plateforme.',
     cta_primary: 'Demander une Démo',
     cta_note: 'Sans engagement. Réponse sous 12 heures ouvrées.',
   },
@@ -32,7 +32,7 @@ const content: SettoreContent = {
   },
   workflow: {
     title: 'Comment ça fonctionne en trois étapes',
-    subtitle: 'Du poste de sécurité au bureau — sans paperasse.',
+    subtitle: 'Du poste de sécurité au bureau, sans paperasse.',
     steps: [
       {
         title: 'L\'agent pointe au poste assigné',
@@ -66,7 +66,7 @@ const content: SettoreContent = {
     ],
   },
   testimonial: {
-    quote: 'Depuis GeoTapp, les litiges sur la couverture des postes ont disparu. Les clients reçoivent un registre de présence horodaté GPS — il n\'y a plus rien à discuter.',
+    quote: 'Depuis GeoTapp, les litiges sur la couverture des postes ont disparu. Les clients reçoivent un registre de présence horodaté GPS, il n\'y a plus rien à discuter.',
     author: 'Laurent D.',
     role: 'Directeur des Opérations, société de sécurité privée',
   },

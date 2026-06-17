@@ -8,8 +8,8 @@ const content: SettoreContent = {
   hero: {
     badge: 'Programvara för Städföretag, Facility Management och Serviceentreprenader',
     h1_line1: 'Programvara för städföretag:',
-    h1_line2: 'scheman, fotodokumentation och verifierade timmar — på varje objekt',
-    subtitle: 'GeoTapp kopplar samman Flow + TimeTracker för team fördelade på flera byggnader och våningar. Era städare stämplar in med GPS-verifierad smartphone; kontoret ser vem som städat vad, var och när — med bifogad fotodokumentation. Inga tvister, full efterlevnad av Städ- och serviceentreprenadavtalet.',
+    h1_line2: 'scheman, fotodokumentation och verifierade timmar, på varje objekt',
+    subtitle: 'GeoTapp kopplar samman Flow + TimeTracker för team fördelade på flera byggnader och våningar. Era städare stämplar in med GPS-verifierad smartphone; kontoret ser vem som städat vad, var och när, med bifogad fotodokumentation. Inga tvister, full efterlevnad av Städ- och serviceentreprenadavtalet.',
     cta_primary: 'Begär en demo',
     cta_note: 'Inga bindningar. Svar inom 12 arbetstimmar.',
   },
@@ -32,7 +32,7 @@ const content: SettoreContent = {
   },
   workflow: {
     title: 'Så fungerar det i tre steg',
-    subtitle: 'Från byggnaden till kontoret — utan att jaga någon.',
+    subtitle: 'Från byggnaden till kontoret, utan att jaga någon.',
     steps: [
       {
         title: 'Städaren stämplar in på plats',
@@ -40,7 +40,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Kontoret ser allt i realtid',
-        desc: 'Flow tar emot data omedelbart. Objektansvarig ser vilken byggnad som betjänats, av vem, vid vilken tid och med vilka fotodokument — utan ett enda telefonsamtal.',
+        desc: 'Flow tar emot data omedelbart. Objektansvarig ser vilken byggnad som betjänats, av vem, vid vilken tid och med vilka fotodokument, utan ett enda telefonsamtal.',
       },
       {
         title: 'Överlämningsrapporten är redan klar',

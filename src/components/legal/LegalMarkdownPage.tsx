@@ -10,7 +10,7 @@ type LegalMarkdownPageProps = {
  * Minimal markdown → HTML converter for legal pages.
  * Handles: headings (H1-H3), bold, italic, links, horizontal rules,
  * unordered/ordered lists, blockquotes, tables, and paragraphs.
- * No external dependencies — safe in all runtimes including Cloudflare Workers.
+ * No external dependencies, safe in all runtimes including Cloudflare Workers.
  */
 function markdownToHtml(md: string): string {
   const lines = md.split('\n');
@@ -63,7 +63,7 @@ function markdownToHtml(md: string): string {
       continue;
     }
 
-    // Table — collect all rows
+    // Table, collect all rows
     if (line.includes('|') && lines[i + 1]?.match(/^\|[-| :]+\|/)) {
       const rows: string[] = [];
       const headerCells = line.split('|').filter((_, idx, arr) => idx > 0 && idx < arr.length - 1);
@@ -85,7 +85,7 @@ function markdownToHtml(md: string): string {
       i++; continue;
     }
 
-    // Paragraph — collect consecutive non-special lines.
+    // Paragraph, collect consecutive non-special lines.
     // Uses specific prefix checks so bold lines like "**Note:**" are
     // treated as paragraph text and not skipped (preventing infinite loops).
     const paraLines: string[] = [];

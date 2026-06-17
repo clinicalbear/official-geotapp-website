@@ -13,7 +13,7 @@ export default function robots(): MetadataRoute.Robots {
       },
       {
         // Allow RAG/citation bots (Perplexity, Claude, ChatGPT search, Google AI Overview,
-        // Google-Extended for Gemini training, Meta AI) — these can drive referral traffic.
+        // Google-Extended for Gemini training, Meta AI), these can drive referral traffic.
         // OAI-SearchBot = ChatGPT search; GPTBot = OpenAI training (allowed intentionally
         // for brand visibility in AI answers).
         userAgent: [

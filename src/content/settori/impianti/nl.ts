@@ -9,7 +9,7 @@ const content: SettoreContent = {
     badge: 'App voor installateurs, monteurs en serviceteams',
     h1_line1: 'Elke opdracht gedocumenteerd,',
     h1_line2: 'elk uur bijgehouden.',
-    subtitle: 'Voor elektro-, loodgieters-, HVAC- en mechanische installateurs. GeoTapp verbindt Flow + TimeTracker om GPS, uren en foto\'s per opdracht bij te houden — van de bus naar kantoor zonder telefoontjes.',
+    subtitle: 'Voor elektro-, loodgieters-, HVAC- en mechanische installateurs. GeoTapp verbindt Flow + TimeTracker om GPS, uren en foto\'s per opdracht bij te houden, van de bus naar kantoor zonder telefoontjes.',
     cta_primary: 'Probeer GeoTapp 14 dagen gratis',
     cta_note: 'Geen verplichtingen. Geen creditcard vereist.',
   },
@@ -18,7 +18,7 @@ const content: SettoreContent = {
     items: [
       {
         title: 'Klanten betwisten de gewerkte uren',
-        desc: 'GPS-klokregistraties met tijdstempel als onweerlegbaar bewijs. De gegevens worden gecertificeerd op het moment van de opdracht — niet achteraf te wijzigen.',
+        desc: 'GPS-klokregistraties met tijdstempel als onweerlegbaar bewijs. De gegevens worden gecertificeerd op het moment van de opdracht, niet achteraf te wijzigen.',
       },
       {
         title: 'Monteurs achternazitten voor updates',
@@ -36,7 +36,7 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'De monteur klokt in via GPS bij aanvang',
-        desc: 'Opent de opdracht vanaf de smartphone. GeoTapp registreert echte GPS-coördinaten, tijdstempel en foto\'s — volledig automatisch, manipulatiebestendig.',
+        desc: 'Opent de opdracht vanaf de smartphone. GeoTapp registreert echte GPS-coördinaten, tijdstempel en foto\'s, volledig automatisch, manipulatiebestendig.',
       },
       {
         title: 'Uren worden automatisch per opdracht geregistreerd',
@@ -60,7 +60,7 @@ const content: SettoreContent = {
       {
         label: 'Wie kan verifiëren',
         competitor: 'Alleen uw kantoor',
-        geotapp: 'U, de klant, een derde partij — onafhankelijk',
+        geotapp: 'U, de klant, een derde partij, onafhankelijk',
       },
       {
         label: 'Bij geschillen',
@@ -91,7 +91,7 @@ const content: SettoreContent = {
       'De klant betwist? Open het rapport: foto\'s, GPS, tijdstempel, digitale handtekening.',
       'U stuurt het. Het geschil is in een minuut opgelost.',
       'De betaling is veilig. De monteur is beschermd.',
-      'Aan het einde van de maand is de export al klaar — uren en opdrachten automatisch samengevoegd.',
+      'Aan het einde van de maand is de export al klaar, uren en opdrachten automatisch samengevoegd.',
     ],
   },
   features: {
@@ -103,7 +103,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Verzegeld fotobewijs',
-        desc: 'De monteur maakt foto\'s vanuit de app. Elk beeld is gekoppeld aan de opdracht met GPS en tijdstempel — manipulatiebestendig na generatie.',
+        desc: 'De monteur maakt foto\'s vanuit de app. Elk beeld is gekoppeld aan de opdracht met GPS en tijdstempel, manipulatiebestendig na generatie.',
       },
       {
         title: 'Multi-locatie opdrachtbeheer',
@@ -126,7 +126,7 @@ const content: SettoreContent = {
   testimonial: {
     quote: 'Klanten betwisten de uren niet meer. We openen het rapport met GPS en foto\'s en de discussie stopt daar.',
     author: 'Robert F.',
-    role: 'Eigenaar, installatiebedrijf — 20 monteurs',
+    role: 'Eigenaar, installatiebedrijf, 20 monteurs',
   },
   faq: {
     title: 'Veelgestelde vragen',
@@ -142,7 +142,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Hoe versnel ik de facturatie van afgeronde opdrachten?',
-        a: 'GeoTapp genereert automatisch de export van uren en opdrachten, klaar voor uw boekhoudsoftware. Geen handmatige invoer, geen foutrisico — facturatie wordt één klik.',
+        a: 'GeoTapp genereert automatisch de export van uren en opdrachten, klaar voor uw boekhoudsoftware. Geen handmatige invoer, geen foutrisico, facturatie wordt één klik.',
       },
     ],
   },
@@ -169,7 +169,7 @@ const content: SettoreContent = {
     },
     {
       question: 'Hoe versnel ik de facturatie van afgeronde opdrachten?',
-      answer: 'GeoTapp genereert automatisch de export van uren en opdrachten, klaar voor uw boekhoudsoftware. Geen handmatige invoer, geen foutrisico — facturatie wordt één klik.',
+      answer: 'GeoTapp genereert automatisch de export van uren en opdrachten, klaar voor uw boekhoudsoftware. Geen handmatige invoer, geen foutrisico, facturatie wordt één klik.',
     },
   ],
 };

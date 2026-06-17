@@ -9,7 +9,7 @@ const content: SettoreContent = {
     badge: 'Mjukvara för Bevakningsföretag, Ordningsvakter och Evenemangsbevakning',
     h1_line1: 'Verifierad närvaro och skiftdokumentation',
     h1_line2: 'för ordningsvakter och bevakningsföretag',
-    subtitle: 'GeoTapp Flow och TimeTracker dokumenterar ordningsvakternas närvaro på tilldelade poster med verifierad GPS och oföränderliga tidsstämplar. Certifikathantering enligt Bevakningsavtalet (Almega), digital skiftöverlämning och geolokaliserade incidentrapporter — allt på en plattform.',
+    subtitle: 'GeoTapp Flow och TimeTracker dokumenterar ordningsvakternas närvaro på tilldelade poster med verifierad GPS och oföränderliga tidsstämplar. Certifikathantering enligt Bevakningsavtalet (Almega), digital skiftöverlämning och geolokaliserade incidentrapporter, allt på en plattform.',
     cta_primary: 'Boka en Demo',
     cta_note: 'Utan bindning. Svar inom 12 arbetstimmar.',
   },
@@ -32,7 +32,7 @@ const content: SettoreContent = {
   },
   workflow: {
     title: 'Hur det fungerar i tre steg',
-    subtitle: 'Från bevakningsposten till kontoret — utan pappersarbete.',
+    subtitle: 'Från bevakningsposten till kontoret, utan pappersarbete.',
     steps: [
       {
         title: 'Vakten stämplar in på tilldelad post',

@@ -12,7 +12,7 @@ const content: SettoreContent = {
     h1_line1: 'Votre équipe de maintenance,',
     h1_line2: 'toujours sous contrôle.',
     subtitle:
-      'Suivez les interventions, planifiez les équipes et documentez chaque visite avec GPS réel et preuves photo. Historique complet par installation et client — sans saisie manuelle.',
+      'Suivez les interventions, planifiez les équipes et documentez chaque visite avec GPS réel et preuves photo. Historique complet par installation et client, sans saisie manuelle.',
     cta_primary: 'Essayez GeoTapp gratuitement pendant 14 jours',
     cta_note: 'Sans engagement. Aucune carte de crédit requise.',
   },
@@ -22,7 +22,7 @@ const content: SettoreContent = {
     items: [
       {
         title: 'Comment documentez-vous les visites de maintenance périodiques ?',
-        desc: 'Rapport automatique avec GPS, heures et photos pour chaque visite. Historique complet, téléchargeable — sans saisie manuelle.',
+        desc: 'Rapport automatique avec GPS, heures et photos pour chaque visite. Historique complet, téléchargeable, sans saisie manuelle.',
       },
       {
         title: 'Les techniciens arrivent-ils vraiment à l\'heure ?',
@@ -41,7 +41,7 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'Le technicien pointe GPS à l\'arrivée',
-        desc: 'Il ouvre l\'intervention depuis son smartphone. GeoTapp enregistre les coordonnées GPS réelles, l\'horodatage et les photos — entièrement automatique, infalsifiable.',
+        desc: 'Il ouvre l\'intervention depuis son smartphone. GeoTapp enregistre les coordonnées GPS réelles, l\'horodatage et les photos, entièrement automatique, infalsifiable.',
       },
       {
         title: 'Les heures et l\'intervention sont enregistrées automatiquement',
@@ -88,7 +88,7 @@ const content: SettoreContent = {
     quote:
       'Avec GeoTapp, chaque visite de maintenance est tracée. Les clients voient l\'historique complet par installation et il n\'y a plus de discussions sur les heures ou les travaux effectués.',
     author: 'André L.',
-    role: 'Responsable maintenance, facility management — France',
+    role: 'Responsable maintenance, facility management - France',
   },
 
   faq: {
@@ -97,7 +97,7 @@ const content: SettoreContent = {
     items: [
       {
         q: 'Comment documentez-vous les visites de maintenance périodiques ?',
-        a: 'GeoTapp génère automatiquement un rapport par visite avec GPS, heures et photos. Historique complet par installation ou site client — sans saisie manuelle.',
+        a: 'GeoTapp génère automatiquement un rapport par visite avec GPS, heures et photos. Historique complet par installation ou site client, sans saisie manuelle.',
       },
       {
         q: 'Les techniciens arrivent-ils vraiment à l\'heure ?',
@@ -117,7 +117,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Combien coûte GeoTapp pour une entreprise de maintenance ?',
-        a: 'Les plans démarrent à quelques euros par technicien par mois. Essai gratuit de 14 jours — sans engagement.',
+        a: 'Les plans démarrent à quelques euros par technicien par mois. Essai gratuit de 14 jours, sans engagement.',
       },
     ],
   },

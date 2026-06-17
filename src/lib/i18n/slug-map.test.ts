@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { localizePath } from './locale-routing';
 
-describe('localizePath — GPS lavoratori UE resource tool', () => {
+describe('localizePath - GPS lavoratori UE resource tool', () => {
   it('localizes tool + country segments to German', () => {
     expect(localizePath('/risorse/gps-lavoratori-ue/germania/', 'de')).toBe(
       '/de/ressourcen/gps-mitarbeiter-eu/deutschland/',

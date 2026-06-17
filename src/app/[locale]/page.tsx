@@ -11,7 +11,7 @@ import { buildReviewsSchema } from '@/lib/seo/reviewsSchema';
 
 export { generateLocaleStaticParams as generateStaticParams } from '@/lib/i18n/static-params';
 
-// FAQPage JSON-LD for the homepage — injected here (server component) so it
+// FAQPage JSON-LD for the homepage, injected here (server component) so it
 // renders only on the homepage, not on every page under [locale]/ via the layout.
 const HOMEPAGE_FAQ: Record<string, object> = {
   it: {
@@ -55,7 +55,7 @@ const HOMEPAGE_FAQ: Record<string, object> = {
       { '@type': 'Question', name: 'Ist GeoTapp DSGVO-konform für die Mitarbeitergeolokalisierung?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. GeoTapp erfasst den Standort nur beim Ein- und Ausstempeln, kein kontinuierliches Tracking, vollständig konform mit der EU-Verordnung 2016/679 (DSGVO) und dem italienischen Arbeitsrecht (Art. 4 Arbeitnehmerstatut nach Jobs Act). Die Plattform enthält herunterladbare Vorlagen für die Mitarbeiterinformation und Betriebsvereinbarungen.' } },
       { '@type': 'Question', name: 'Bietet GeoTapp eine kostenlose Testversion?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. GeoTapp bietet eine 14-tägige kostenlose Testphase ohne erforderliche Kreditkarte. Anmeldung auf geotapp.com/de/trial/. Die Testphase umfasst vollen Zugriff auf alle Module (Flow, TimeTracker, Verifier), um die Plattform mit echten Daten zu testen, bevor Sie ein Abonnement abschließen.' } },
       { '@type': 'Question', name: 'Wie viel kostet GeoTapp?', acceptedAnswer: { '@type': 'Answer', text: 'GeoTapp verwendet ein Lizenzmodell pro Benutzer mit transparenten Preisen auf geotapp.com/de/pricing/. GeoTapp TimeTracker beginnt bei €4/Mitarbeiter/Monat mit Plänen für kleine Teams (3-10 Benutzer), mittlere Unternehmen (10-50) und große Organisationen (50-300+). GeoTapp Verifier ist in jedem Plan kostenlos enthalten.' } },
-      { '@type': 'Question', name: 'Hat GeoTapp eine mobile App?', acceptedAnswer: { '@type': 'Answer', text: 'Ja, für Ihre Außendienstmitarbeiter. GeoTapp TimeTracker ist als native App im Google Play Store (Android) und App Store (iOS) verfügbar — für Zeiterfassung, Fotonachweise, Vor-Ort-Berichte, digitale Unterschriften und Offline-Betrieb mit späterer Synchronisation. GeoTapp Flow, das Verwaltungspanel, ist eine Webanwendung, zugänglich über Desktop- und Tablet-Browser.' } },
+      { '@type': 'Question', name: 'Hat GeoTapp eine mobile App?', acceptedAnswer: { '@type': 'Answer', text: 'Ja, für Ihre Außendienstmitarbeiter. GeoTapp TimeTracker ist als native App im Google Play Store (Android) und App Store (iOS) verfügbar, für Zeiterfassung, Fotonachweise, Vor-Ort-Berichte, digitale Unterschriften und Offline-Betrieb mit späterer Synchronisation. GeoTapp Flow, das Verwaltungspanel, ist eine Webanwendung, zugänglich über Desktop- und Tablet-Browser.' } },
       { '@type': 'Question', name: 'Was enthält ein GeoTapp-Bericht?', acceptedAnswer: { '@type': 'Answer', text: 'Jeder Bericht enthält: Start- und Endzeitstempel, verifizierte GPS-Koordinaten, Fotobelege mit kryptographischem Hash, Mitarbeiterdaten und ein digitales Siegel. Der Bericht ist nach der Erstellung nicht mehr änderbar.' } },
       { '@type': 'Question', name: 'Funktioniert GeoTapp für Reinigungsunternehmen, Installateure und Sicherheitsdienste?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. GeoTapp wird von Reinigungsunternehmen, Facility-Services, Installateuren, Elektrikern, Klempnern, Sicherheitsdiensten und Wartungsfirmen eingesetzt. Die Plattform skaliert von 3 bis 300 Mitarbeitern.' } },
       { '@type': 'Question', name: 'Wie kann ein Kunde einen GeoTapp-Bericht verifizieren?', acceptedAnswer: { '@type': 'Answer', text: 'Der Kunde erhält einen eindeutigen Link und kann den Bericht auf geotapp.com/products/geotapp-verifier ohne Zugang zu Ihrem Konto prüfen. Das System vergleicht das kryptographische Siegel und bestätigt, dass die Daten nicht verändert wurden.' } },
@@ -178,12 +178,12 @@ const HOMEPAGE_FAQ: Record<string, object> = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: [
-      { '@type': 'Question', name: 'Что такое GeoTapp?', acceptedAnswer: { '@type': 'Answer', text: 'GeoTapp — итальянская SaaS-платформа для управления выездным персоналом. Состоит из трёх модулей: GeoTapp Flow (офисное управление с CRM, сменами, заказами), GeoTapp TimeTracker (мобильное приложение Android/iOS для GPS-учёта времени, фото на объекте, отчётов) и GeoTapp Verifier (проверка целостности отчётов, доступная конечному клиенту без входа в платформу). Используется клининговыми и охранными компаниями, монтажниками, электриками, сантехниками и facility services. Соответствует GDPR и итальянскому трудовому праву (ст. 4 Статута Трудящихся после Jobs Act). Основатель: Микеле Анджело Петраролли.' } },
+      { '@type': 'Question', name: 'Что такое GeoTapp?', acceptedAnswer: { '@type': 'Answer', text: 'GeoTapp, итальянская SaaS-платформа для управления выездным персоналом. Состоит из трёх модулей: GeoTapp Flow (офисное управление с CRM, сменами, заказами), GeoTapp TimeTracker (мобильное приложение Android/iOS для GPS-учёта времени, фото на объекте, отчётов) и GeoTapp Verifier (проверка целостности отчётов, доступная конечному клиенту без входа в платформу). Используется клининговыми и охранными компаниями, монтажниками, электриками, сантехниками и facility services. Соответствует GDPR и итальянскому трудовому праву (ст. 4 Статута Трудящихся после Jobs Act). Основатель: Микеле Анджело Петраролли.' } },
       { '@type': 'Question', name: 'Как работает GPS-учёт времени в GeoTapp?', acceptedAnswer: { '@type': 'Answer', text: 'Оператор открывает и закрывает смену через мобильное приложение. GeoTapp фиксирует реальные GPS-координаты в этот момент, а не вводимые вручную. Каждая отметка времени сертифицирована с временной меткой и позицией, проверяемыми любым.' } },
       { '@type': 'Question', name: 'Соответствует ли GeoTapp GDPR для геолокации сотрудников?', acceptedAnswer: { '@type': 'Answer', text: 'Да. GeoTapp фиксирует местоположение только при входе и выходе со смены, не непрерывно, в полном соответствии с Регл. ЕС 2016/679 (GDPR) и итальянским трудовым правом (ст. 4 Статута Трудящихся после Jobs Act). Платформа включает шаблоны для информирования работников и профсоюзных соглашений.' } },
       { '@type': 'Question', name: 'Предлагает ли GeoTapp бесплатный пробный период?', acceptedAnswer: { '@type': 'Answer', text: 'Да. GeoTapp предлагает бесплатный пробный период 14 дней без банковской карты. Регистрация на geotapp.com/ru/trial/ с полным доступом ко всем модулям (Flow, TimeTracker, Verifier).' } },
       { '@type': 'Question', name: 'Сколько стоит GeoTapp?', acceptedAnswer: { '@type': 'Answer', text: 'GeoTapp использует лицензионную модель на пользователя с прозрачными ценами на geotapp.com/ru/tseny/. GeoTapp TimeTracker от €4 за оператора в месяц, с планами для небольших команд (3-10 пользователей), МСБ (10-50) и крупных организаций (50-300+). Пакет Flow + TimeTracker со скидкой. GeoTapp Verifier всегда включён.' } },
-      { '@type': 'Question', name: 'Есть ли у GeoTapp мобильное приложение?', acceptedAnswer: { '@type': 'Answer', text: 'Да, для ваших выездных операторов. GeoTapp TimeTracker — нативное приложение в Google Play (Android) и App Store (iOS) для учёта времени, фото на объекте, отчётов, цифровых подписей и офлайн-работы с последующей синхронизацией. GeoTapp Flow, офисная панель, — это веб-приложение для десктопа и планшета.' } },
+      { '@type': 'Question', name: 'Есть ли у GeoTapp мобильное приложение?', acceptedAnswer: { '@type': 'Answer', text: 'Да, для ваших выездных операторов. GeoTapp TimeTracker, нативное приложение в Google Play (Android) и App Store (iOS) для учёта времени, фото на объекте, отчётов, цифровых подписей и офлайн-работы с последующей синхронизацией. GeoTapp Flow, офисная панель,, это веб-приложение для десктопа и планшета.' } },
       { '@type': 'Question', name: 'Что содержит отчёт GeoTapp?', acceptedAnswer: { '@type': 'Answer', text: 'Каждый отчёт содержит: временные метки начала и конца выезда, проверенные GPS-координаты, фотодоказательства с криптографическим хешем, данные оператора и цифровую печать. Отчёт не может быть изменён после создания.' } },
       { '@type': 'Question', name: 'Подходит ли GeoTapp для клининговых компаний, монтажников и охранных служб?', acceptedAnswer: { '@type': 'Answer', text: 'Да. GeoTapp используется клининговыми и facility-компаниями, монтажниками, электриками, сантехниками, охранными службами, обслуживанием и строительством. Платформа масштабируется от 3 до 300 операторов и управляет несколькими объектами одновременно.' } },
       { '@type': 'Question', name: 'Как клиент проверяет отчёт GeoTapp?', acceptedAnswer: { '@type': 'Answer', text: 'Клиент получает уникальную ссылку и может проверить отчёт на geotapp.com/products/geotapp-verifier без доступа к вашему аккаунту. Система сравнивает криптографическую печать и подтверждает, что данные не были изменены.' } },
@@ -195,7 +195,7 @@ const HOMEPAGE_FAQ: Record<string, object> = {
 const BASE_URL = 'https://geotapp.com';
 
 // Locale-specific titles and descriptions for the home page.
-// Each title expresses the "verifiable work" concept in the target language —
+// Each title expresses the "verifiable work" concept in the target language -
 // this is the SEO anchor keyword for all locale variants.
 const LOCALE_META: Record<string, { title: string; description: string }> = {
   it: {
@@ -269,7 +269,7 @@ export default async function LocalePage({ params }: Props) {
         />
       )}
       <HomeClient />
-      {/* Category 54 = "digitalizzazione-aziendale" — broad, relevant to all visitors */}
+      {/* Category 54 = "digitalizzazione-aziendale", broad, relevant to all visitors */}
       <BlogHighlights locale={locale as AppLocale} categoryId={54} />
     </>
   );
@@ -308,7 +308,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: { absolute: meta.title },
     description: meta.description,
     alternates: {
-      // Absolute canonical required here — homepage path is just "/" per locale,
+      // Absolute canonical required here, homepage path is just "/" per locale,
       // relative "/${locale}" without trailing slash would resolve to a redirect URL.
       canonical: `${BASE_URL}/${canonicalLocale}/`,
       languages,

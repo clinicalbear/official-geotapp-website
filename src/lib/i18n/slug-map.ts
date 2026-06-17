@@ -2,7 +2,7 @@ import type { AppLocale } from './config';
 
 /**
  * Maps canonical (Italian) page slugs to their localized equivalents.
- * Italian is the canonical form — other locales get translated slugs.
+ * Italian is the canonical form, other locales get translated slugs.
  * Used by localizePath() and buildLocaleAlternates().
  */
 export const SLUG_MAP: Record<string, Partial<Record<AppLocale, string>>> = {
@@ -235,7 +235,7 @@ export const SLUG_MAP: Record<string, Partial<Record<AppLocale, string>>> = {
     da: 'vvs-vand-varme', sv: 'vvs-och-varme', nb: 'rorleggere-vvs', ru: 'santekhnika-otoplenie',
     'en-us': 'hvac-plumbers', 'en-gb': 'hvac-plumbers', 'en-au': 'hvac-plumbers', 'en-ie': 'hvac-plumbers', 'en-ca': 'hvac-plumbers',
   },
-  // ── GPS lavoratori UE — strumento per paese ─────────────────────────────────
+  // ── GPS lavoratori UE, strumento per paese ─────────────────────────────────
   'gps-lavoratori-ue': {
     it: 'gps-lavoratori-ue', en: 'gps-workers-eu', de: 'gps-mitarbeiter-eu', nl: 'gps-werknemers-eu',
     fr: 'gps-travailleurs-ue', es: 'gps-trabajadores-ue', pt: 'gps-trabalhadores-ue',

@@ -8,8 +8,8 @@ const content: SettoreContent = {
   hero: {
     badge: 'Software para Empresas de Limpeza, Higiene e Facility Management',
     h1_line1: 'Software para empresas de limpeza:',
-    h1_line2: 'turnos, provas fotográficas e horas verificadas — em cada edifício',
-    subtitle: 'GeoTapp liga Flow + TimeTracker para equipas distribuídas por vários edifícios e pisos. Os seus operacionais registam o ponto pelo smartphone com GPS verificado; o escritório vê quem limpou o quê, onde e quando — com provas fotográficas anexas. Sem litígios, com total conformidade com o CCT Limpeza e Higiene Urbana.',
+    h1_line2: 'turnos, provas fotográficas e horas verificadas, em cada edifício',
+    subtitle: 'GeoTapp liga Flow + TimeTracker para equipas distribuídas por vários edifícios e pisos. Os seus operacionais registam o ponto pelo smartphone com GPS verificado; o escritório vê quem limpou o quê, onde e quando, com provas fotográficas anexas. Sem litígios, com total conformidade com o CCT Limpeza e Higiene Urbana.',
     cta_primary: 'Pedir uma demonstração',
     cta_note: 'Sem compromisso. Resposta em 12 horas úteis.',
   },
@@ -32,7 +32,7 @@ const content: SettoreContent = {
   },
   workflow: {
     title: 'Como funciona em três passos',
-    subtitle: 'Do edifício ao escritório — sem correr atrás de ninguém.',
+    subtitle: 'Do edifício ao escritório, sem correr atrás de ninguém.',
     steps: [
       {
         title: 'O operacional regista o ponto no local',
@@ -40,7 +40,7 @@ const content: SettoreContent = {
       },
       {
         title: 'O escritório vê tudo em tempo real',
-        desc: 'O Flow recebe os dados instantaneamente. O responsável vê qual o edifício atendido, por quem, a que horas e com que evidência fotográfica — sem fazer uma única chamada.',
+        desc: 'O Flow recebe os dados instantaneamente. O responsável vê qual o edifício atendido, por quem, a que horas e com que evidência fotográfica, sem fazer uma única chamada.',
       },
       {
         title: 'O relatório de passagem de turno já está pronto',

@@ -1,6 +1,6 @@
 # INFORMATIVA SULL'USO DEI COOKIE
-## GeoTapp — geotapp.com
-**Versione 1.0 — Marzo 2026**
+## GeoTapp, geotapp.com
+**Versione 1.0 - Marzo 2026**
 
 ---
 
@@ -103,8 +103,8 @@ Le preferenze possono essere modificate in qualsiasi momento cliccando sul link 
 
 Il trattamento dei dati tramite cookie si fonda su:
 
-- **Cookie tecnici necessari**: legittimo interesse del Titolare (art. 6.1.f GDPR) e obbligo contrattuale — non richiedono consenso
-- **Cookie analitici e marketing**: consenso espresso dell'utente (art. 6.1.a GDPR) — raccolto tramite banner
+- **Cookie tecnici necessari**: legittimo interesse del Titolare (art. 6.1.f GDPR) e obbligo contrattuale, non richiedono consenso
+- **Cookie analitici e marketing**: consenso espresso dell'utente (art. 6.1.a GDPR), raccolto tramite banner
 
 Il consenso è libero, specifico, informato e revocabile in qualsiasi momento senza pregiudizio.
 

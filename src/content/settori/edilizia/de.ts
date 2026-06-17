@@ -18,7 +18,7 @@ const content: SettoreContent = {
     items: [
       {
         title: 'Wer war auf der Baustelle und wann?',
-        desc: 'Jede GPS-Stempelung ist mit Zeitstempel und Zertifikat versehen. GeoTapp erfasst reale Koordinaten zum Zeitpunkt der Stempelung — nicht manuell eingetragen. Die Daten sind jederzeit von der Bauleitung überprüfbar.',
+        desc: 'Jede GPS-Stempelung ist mit Zeitstempel und Zertifikat versehen. GeoTapp erfasst reale Koordinaten zum Zeitpunkt der Stempelung, nicht manuell eingetragen. Die Daten sind jederzeit von der Bauleitung überprüfbar.',
       },
       {
         title: 'Wie verwalten Sie Subunternehmer?',
@@ -36,11 +36,11 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'Der Arbeiter stempelt am Baustelleneingang',
-        desc: 'Startet die Schicht vom Smartphone. GeoTapp erfasst reale GPS-Koordinaten, Zeitstempel und — bei Bedarf — Fotos. Vollautomatisch, manipulationssicher.',
+        desc: 'Startet die Schicht vom Smartphone. GeoTapp erfasst reale GPS-Koordinaten, Zeitstempel und, bei Bedarf - Fotos. Vollautomatisch, manipulationssicher.',
       },
       {
         title: 'Der Bauleiter sieht alles in Echtzeit',
-        desc: 'Ein Dashboard für alle Teams und alle Baustellen. Wer anwesend ist, wo und seit wann — ohne jemanden telefonisch nachzujagen.',
+        desc: 'Ein Dashboard für alle Teams und alle Baustellen. Wer anwesend ist, wo und seit wann, ohne jemanden telefonisch nachzujagen.',
       },
       {
         title: 'Der Bericht ist fertig für Aufmaße und Bauleitung',
@@ -60,7 +60,7 @@ const content: SettoreContent = {
       {
         label: 'Wer kann prüfen',
         competitor: 'Nur Ihr Büro',
-        geotapp: 'Sie, die Bauleitung, ein Dritter — unabhängig',
+        geotapp: 'Sie, die Bauleitung, ein Dritter, unabhängig',
       },
       {
         label: 'Bei Streitigkeiten',
@@ -103,7 +103,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Multi-Baustellen-Dashboard',
-        desc: 'Überwachen Sie mehrere Baustellen auf einem Bildschirm. Sehen Sie in Echtzeit, wer anwesend ist, wo und seit wann — für jede aktive Baustelle.',
+        desc: 'Überwachen Sie mehrere Baustellen auf einem Bildschirm. Sehen Sie in Echtzeit, wer anwesend ist, wo und seit wann, für jede aktive Baustelle.',
       },
       {
         title: 'Automatische Aufmaßberichte',
@@ -111,11 +111,11 @@ const content: SettoreContent = {
       },
       {
         title: 'Subunternehmer-Tracking',
-        desc: 'Jedes Team — intern oder extern — stempelt vom Smartphone. Der Bauleiter sieht alle auf einem Dashboard, ohne jemanden nachzujagen.',
+        desc: 'Jedes Team, intern oder extern, stempelt vom Smartphone. Der Bauleiter sieht alle auf einem Dashboard, ohne jemanden nachzujagen.',
       },
       {
         title: 'Versiegelte Fotonachweise',
-        desc: 'Arbeiter fotografieren direkt aus der App. Jedes Bild ist mit GPS und Zeitstempel an die Baustelle gekoppelt — nach Erstellung manipulationssicher.',
+        desc: 'Arbeiter fotografieren direkt aus der App. Jedes Bild ist mit GPS und Zeitstempel an die Baustelle gekoppelt, nach Erstellung manipulationssicher.',
       },
       {
         title: 'Integrierte DSGVO-Konformität',
@@ -126,7 +126,7 @@ const content: SettoreContent = {
   testimonial: {
     quote: 'Seit wir GeoTapp nutzen, fragt die Bauleitung nicht mehr nach Anwesenheitslisten. Wir öffnen den Bericht und das Aufmaß ist fertig.',
     author: 'Josef M.',
-    role: 'Inhaber, Bauunternehmen — 35 Mitarbeiter',
+    role: 'Inhaber, Bauunternehmen, 35 Mitarbeiter',
   },
   faq: {
     title: 'Häufig gestellte Fragen',
@@ -134,7 +134,7 @@ const content: SettoreContent = {
     items: [
       {
         q: 'Wer war auf der Baustelle und wann?',
-        a: 'Jede GPS-Stempelung ist mit Zeitstempel und Zertifikat versehen. GeoTapp erfasst reale Koordinaten zum Zeitpunkt der Stempelung — nicht manuell eingetragen. Die Daten sind jederzeit von der Bauleitung überprüfbar.',
+        a: 'Jede GPS-Stempelung ist mit Zeitstempel und Zertifikat versehen. GeoTapp erfasst reale Koordinaten zum Zeitpunkt der Stempelung, nicht manuell eingetragen. Die Daten sind jederzeit von der Bauleitung überprüfbar.',
       },
       {
         q: 'Wie verwalten Sie Subunternehmer auf der Baustelle?',
@@ -161,7 +161,7 @@ const content: SettoreContent = {
   schema_faq: [
     {
       question: 'Wer war auf der Baustelle und wann?',
-      answer: 'Jede GPS-Stempelung ist mit Zeitstempel und Zertifikat versehen. GeoTapp erfasst reale Koordinaten zum Zeitpunkt der Stempelung — nicht manuell eingetragen. Die Daten sind jederzeit von der Bauleitung überprüfbar.',
+      answer: 'Jede GPS-Stempelung ist mit Zeitstempel und Zertifikat versehen. GeoTapp erfasst reale Koordinaten zum Zeitpunkt der Stempelung, nicht manuell eingetragen. Die Daten sind jederzeit von der Bauleitung überprüfbar.',
     },
     {
       question: 'Wie verwalten Sie Subunternehmer auf der Baustelle?',

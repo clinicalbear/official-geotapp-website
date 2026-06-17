@@ -2,7 +2,7 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App per impresa di pulizie | GeoTapp — GPS, Presenze e Certificazione',
+    title: 'App per impresa di pulizie | GeoTapp - GPS, Presenze e Certificazione',
     description: 'Smetti di rincorrere le squadre per telefono. GeoTapp è l\'app per impresa di pulizie che certifica presenze e interventi con GPS reale e prove fotografiche, in conformità al GDPR e al CCNL Multiservizi. Prova gratis.',
   },
 
@@ -11,7 +11,7 @@ const content: SettoreContent = {
     h1_line1: 'L\'app per impresa di pulizie',
     h1_line2: 'che certifica ogni intervento.',
     subtitle:
-      'GeoTapp è l\'app per impresa di pulizie che trasforma ogni intervento in prova difendibile. I clienti contestano. Gli operatori non sono verificabili. I report non bastano mai. GeoTapp risolve tutto con GPS reale, prove fotografiche e report non alterabili — che il committente può verificare da solo.',
+      'GeoTapp è l\'app per impresa di pulizie che trasforma ogni intervento in prova difendibile. I clienti contestano. Gli operatori non sono verificabili. I report non bastano mai. GeoTapp risolve tutto con GPS reale, prove fotografiche e report non alterabili, che il committente può verificare da solo.',
     cta_primary: 'Inizia subito gratuitamente!',
     cta_note: 'Nessun vincolo. Risposta entro 12 ore lavorative.',
   },
@@ -25,11 +25,11 @@ const content: SettoreContent = {
       },
       {
         title: "Operatori sul campo che non puoi verificare",
-        desc: "Non puoi essere su tutti i siti. Non sai se il lavoro è stato fatto finché il cliente non si lamenta — e a quel punto è già tardi per ricostruire qualcosa.",
+        desc: "Non puoi essere su tutti i siti. Non sai se il lavoro è stato fatto finché il cliente non si lamenta, e a quel punto è già tardi per ricostruire qualcosa.",
       },
       {
         title: "L'ispettorato chiede documentazione reale",
-        desc: "Orari, presenze, straordinari, pause — il foglio presenze non basta. Il CCNL Multiservizi richiede tracciabilità reale. \"C'è scritto sul telefono\" non è documentazione.",
+        desc: "Orari, presenze, straordinari, pause, il foglio presenze non basta. Il CCNL Multiservizi richiede tracciabilità reale. \"C'è scritto sul telefono\" non è documentazione.",
       },
     ],
   },
@@ -52,7 +52,7 @@ const content: SettoreContent = {
 
   scenario: {
     title: 'Caso reale',
-    body: 'Il cliente dice che il bagno non è stato pulito. Con GeoTapp apri il report e mostri la foto dell\'ambiente, l\'ora di scatto e la posizione GPS — tutto generato automaticamente dall\'app dell\'operatore al momento dell\'intervento.',
+    body: 'Il cliente dice che il bagno non è stato pulito. Con GeoTapp apri il report e mostri la foto dell\'ambiente, l\'ora di scatto e la posizione GPS, tutto generato automaticamente dall\'app dell\'operatore al momento dell\'intervento.',
     resolution: 'La discussione finisce lì.',
   },
 
@@ -68,7 +68,7 @@ const content: SettoreContent = {
       {
         label: 'Chi può verificare',
         competitor: 'Solo il tuo ufficio',
-        geotapp: 'Tu, il committente, un ente terzo — in autonomia',
+        geotapp: 'Tu, il committente, un ente terzo, in autonomia',
       },
       {
         label: 'In caso di contestazione',
@@ -88,7 +88,7 @@ const content: SettoreContent = {
       {
         label: 'Controllo in tempo reale',
         competitor: 'No',
-        geotapp: 'Sì — tutti i siti, tutti gli operatori',
+        geotapp: 'Sì, tutti i siti, tutti gli operatori',
       },
     ],
   },
@@ -114,8 +114,8 @@ const content: SettoreContent = {
       },
       {
         label: 'Valore verso il cliente',
-        gestionale: 'Nessuno — è uno strumento interno',
-        geotapp: 'Massimo — è una prova indipendente',
+        gestionale: 'Nessuno, è uno strumento interno',
+        geotapp: 'Massimo, è una prova indipendente',
       },
       {
         label: 'Prova fotografica',
@@ -131,15 +131,15 @@ const content: SettoreContent = {
     steps: [
       {
         title: "L'operatore certifica sul posto",
-        desc: 'Con GeoTapp TimeTracker registra ingresso, uscita, foto degli ambienti e note dallo smartphone. Il GPS è verificato — non inserito a mano. Il dato è quello, e non si può cambiare.',
+        desc: 'Con GeoTapp TimeTracker registra ingresso, uscita, foto degli ambienti e note dallo smartphone. Il GPS è verificato, non inserito a mano. Il dato è quello, e non si può cambiare.',
       },
       {
         title: "L'ufficio controlla in tempo reale",
-        desc: 'Flow mostra in una dashboard unica chi è presente, dove e da quanto. Vedi lo stato di ogni edificio, ricevi alert su anomalie e assegni commesse — senza inseguire nessuno.',
+        desc: 'Flow mostra in una dashboard unica chi è presente, dove e da quanto. Vedi lo stato di ogni edificio, ricevi alert su anomalie e assegni commesse, senza inseguire nessuno.',
       },
       {
         title: 'Il report è già pronto. E non lo puoi modificare.',
-        desc: 'A fine turno il sistema genera automaticamente un report sigillato con GPS, foto e firma digitale. Il committente lo riceve e lo verifica da solo — senza accesso al tuo sistema, senza fidarsi della tua parola.',
+        desc: 'A fine turno il sistema genera automaticamente un report sigillato con GPS, foto e firma digitale. Il committente lo riceve e lo verifica da solo, senza accesso al tuo sistema, senza fidarsi della tua parola.',
       },
     ],
   },
@@ -157,11 +157,11 @@ const content: SettoreContent = {
       },
       {
         title: 'Report difendibili in qualsiasi sede',
-        desc: 'Ogni report è firmato digitalmente e non alterabile. Vale davanti a un cliente, un ispettore o un avvocato — senza che tu debba spiegare niente.',
+        desc: 'Ogni report è firmato digitalmente e non alterabile. Vale davanti a un cliente, un ispettore o un avvocato, senza che tu debba spiegare niente.',
       },
       {
         title: "Pronto per l'ispettorato",
-        desc: 'Orari, pause, straordinari, notturni — tutto tracciato e conforme al CCNL Multiservizi. In caso di controllo hai tutta la documentazione in ordine in tre clic.',
+        desc: 'Orari, pause, straordinari, notturni, tutto tracciato e conforme al CCNL Multiservizi. In caso di controllo hai tutta la documentazione in ordine in tre clic.',
       },
       {
         title: 'Gestione multi-sito senza chiamate',
@@ -179,7 +179,7 @@ const content: SettoreContent = {
     items: [
       {
         title: 'Non devi più fidarti degli operatori.',
-        desc: 'Non perché non siano affidabili — ma perché non devi farlo. Il sistema genera la prova al momento dell\'intervento, indipendentemente da quello che ti dicono. Il dato è quello.',
+        desc: 'Non perché non siano affidabili, ma perché non devi farlo. Il sistema genera la prova al momento dell\'intervento, indipendentemente da quello che ti dicono. Il dato è quello.',
       },
       {
         title: 'Non devi più difenderti a voce.',
@@ -187,7 +187,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Hai prove verificabili. Sempre.',
-        desc: 'Ogni intervento chiuso diventa automaticamente un\'evidenza strutturata — GPS, foto, timestamp, firma. Non devi fare niente di extra. Il sistema lo fa mentre i tuoi operatori lavorano.',
+        desc: 'Ogni intervento chiuso diventa automaticamente un\'evidenza strutturata - GPS, foto, timestamp, firma. Non devi fare niente di extra. Il sistema lo fa mentre i tuoi operatori lavorano.',
       },
     ],
   },
@@ -199,7 +199,7 @@ const content: SettoreContent = {
 
   cta_mid: {
     title: 'Vuoi vedere come funziona su un caso reale?',
-    body: 'Ti mostriamo il flusso completo: dall\'operatore che apre l\'intervento al report che riceve il cliente. In 20 minuti capisci se fa per te — senza impegno.',
+    body: 'Ti mostriamo il flusso completo: dall\'operatore che apre l\'intervento al report che riceve il cliente. In 20 minuti capisci se fa per te, senza impegno.',
     cta: 'Inizia subito gratuitamente!',
   },
 
@@ -207,14 +207,14 @@ const content: SettoreContent = {
     quote:
       'Prima avevamo sempre qualche cliente che contestava. Da quando usiamo GeoTapp, basta mandare il report e la discussione finisce lì. In sei mesi non abbiamo perso un contratto per contestazione.',
     author: 'Roberta M.',
-    role: 'Responsabile operativa, impresa di pulizie industriali — Nord Italia',
+    role: 'Responsabile operativa, impresa di pulizie industriali - Nord Italia',
   },
 
   trust: {
     title: 'I nostri report non si possono alterare. Non da te. Non da noi.',
     body:
-      "I report GeoTapp sono generati dal sistema nel momento dell'intervento. Non esiste un pannello dove \"correggere\" un orario o spostare una foto. Il dato è quello — firmato digitalmente, con GPS reale. Quando lo mostri a un cliente, a un avvocato o a un ispettore, regge.",
-    badge: 'Verificabile da chiunque — senza accesso al tuo account',
+      "I report GeoTapp sono generati dal sistema nel momento dell'intervento. Non esiste un pannello dove \"correggere\" un orario o spostare una foto. Il dato è quello, firmato digitalmente, con GPS reale. Quando lo mostri a un cliente, a un avvocato o a un ispettore, regge.",
+    badge: 'Verificabile da chiunque, senza accesso al tuo account',
   },
 
   faq: {
@@ -223,7 +223,7 @@ const content: SettoreContent = {
     items: [
       {
         q: "GeoTapp è solo un'app di timbratura per imprese di pulizie?",
-        a: "No. GeoTapp è un sistema di certificazione del lavoro, non un'app di timbratura. Le app di timbratura registrano un orario. GeoTapp produce un report sigillato con GPS verificato, prove fotografiche e timestamp — che il committente può verificare autonomamente. La differenza tra \"c'è scritto\" e \"si può dimostrare\".",
+        a: "No. GeoTapp è un sistema di certificazione del lavoro, non un'app di timbratura. Le app di timbratura registrano un orario. GeoTapp produce un report sigillato con GPS verificato, prove fotografiche e timestamp, che il committente può verificare autonomamente. La differenza tra \"c'è scritto\" e \"si può dimostrare\".",
       },
       {
         q: 'È compatibile con il CCNL Multiservizi?',
@@ -271,7 +271,7 @@ const content: SettoreContent = {
   schema_faq: [
     {
       question: "GeoTapp è solo un'app di timbratura per imprese di pulizie?",
-      answer: 'No. GeoTapp è l\'app e software per imprese di pulizie e multiservizi che va oltre la timbratura: produce report sigillati con GPS verificato, foto e timestamp verificabili autonomamente dal committente — non un semplice registro orari.',
+      answer: 'No. GeoTapp è l\'app e software per imprese di pulizie e multiservizi che va oltre la timbratura: produce report sigillati con GPS verificato, foto e timestamp verificabili autonomamente dal committente, non un semplice registro orari.',
     },
     {
       question: 'È compatibile con il CCNL Multiservizi?',
@@ -279,7 +279,7 @@ const content: SettoreContent = {
     },
     {
       question: 'Come gestisco più siti contemporaneamente?',
-      answer: 'Dashboard unica per tutti i siti. Vedi in tempo reale chi è attivo dove, assegni commesse e ricevi alert automatici su anomalie — senza telefonate.',
+      answer: 'Dashboard unica per tutti i siti. Vedi in tempo reale chi è attivo dove, assegni commesse e ricevi alert automatici su anomalie, senza telefonate.',
     },
     {
       question: 'Come controllo che gli operatori abbiano davvero eseguito il lavoro?',

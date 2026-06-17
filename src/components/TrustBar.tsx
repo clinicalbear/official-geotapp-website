@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { ShieldCheck, MapPin, FileCheck } from 'lucide-react';
 
 // Claim qualitativi VERIFICABILI (no metriche inventate): i tre differenziatori
-// reali del prodotto — sigillo anti-manomissione, GPS reale, verifica lato cliente.
+// reali del prodotto, sigillo anti-manomissione, GPS reale, verifica lato cliente.
 const COPY: Record<string, {
   headline: string;
   claims: { title: string; sub: string }[];

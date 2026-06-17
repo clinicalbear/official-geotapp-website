@@ -26,7 +26,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Papieren urenstaten zijn onbetrouwbaar?',
-        desc: 'Automatische registratie vanaf de smartphone, geen handmatige invoer. De gegevens zijn wat ze zijn — en kunnen niet worden gewijzigd.',
+        desc: 'Automatische registratie vanaf de smartphone, geen handmatige invoer. De gegevens zijn wat ze zijn, en kunnen niet worden gewijzigd.',
       },
       {
         title: 'Moeilijk om meerdere teams te coördineren?',
@@ -57,15 +57,15 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'Schoonmaker klokt in met GPS',
-        desc: 'Opent en sluit de dienst vanaf de smartphone. GeoTapp registreert echte GPS-coördinaten, foto\'s en tijdstempel — volledig automatisch, niet te wijzigen.',
+        desc: 'Opent en sluit de dienst vanaf de smartphone. GeoTapp registreert echte GPS-coördinaten, foto\'s en tijdstempel, volledig automatisch, niet te wijzigen.',
       },
       {
         title: 'De manager ziet alles in real-time',
-        desc: 'Eén dashboard voor alle locaties. Weet precies wie er is, waar en sinds wanneer — zonder iemand achterna te zitten.',
+        desc: 'Eén dashboard voor alle locaties. Weet precies wie er is, waar en sinds wanneer, zonder iemand achterna te zitten.',
       },
       {
         title: 'Het rapport is automatisch klaar',
-        desc: 'Aan het einde van de dienst genereert het systeem een verzegeld rapport met GPS, foto\'s en digitale handtekening. Stuur het naar de klant — onafhankelijk verifieerbaar.',
+        desc: 'Aan het einde van de dienst genereert het systeem een verzegeld rapport met GPS, foto\'s en digitale handtekening. Stuur het naar de klant, onafhankelijk verifieerbaar.',
       },
     ],
   },
@@ -82,7 +82,7 @@ const content: SettoreContent = {
       {
         label: 'Wie kan verifiëren',
         competitor: 'Alleen uw kantoor',
-        geotapp: 'U, de opdrachtgever, een derde — onafhankelijk',
+        geotapp: 'U, de opdrachtgever, een derde, onafhankelijk',
       },
       {
         label: 'Bij geschillen',
@@ -123,7 +123,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Fotodocumentatie',
-        desc: 'Schoonmakers maken foto\'s rechtstreeks vanuit de app. Elk beeld is gegeotagd met tijdstempel — visueel bewijs van het geleverde werk.',
+        desc: 'Schoonmakers maken foto\'s rechtstreeks vanuit de app. Elk beeld is gegeotagd met tijdstempel, visueel bewijs van het geleverde werk.',
       },
       {
         title: 'Uw personeel is beschermd',
@@ -136,7 +136,7 @@ const content: SettoreContent = {
     quote:
       'Sinds we GeoTapp gebruiken, worden klantgeschillen in een minuut opgelost. We sturen het rapport met foto\'s en GPS, en de discussie is voorbij. We hebben in een jaar geen enkel contract verloren.',
     author: 'Sandra M.',
-    role: 'Eigenaar, commercieel schoonmaakbedrijf — Nederland',
+    role: 'Eigenaar, commercieel schoonmaakbedrijf - Nederland',
   },
 
   faq: {
@@ -145,7 +145,7 @@ const content: SettoreContent = {
     items: [
       {
         q: 'Hoe werkt GPS-inklokking voor schoonmaakbedrijven?',
-        a: 'De schoonmaker klokt in en uit vanaf de smartphone. GeoTapp registreert de GPS-coördinaten op dat moment — niet handmatig ingevoerd. Elke inklokking is gecertificeerd met tijdstempel en positie verifieerbaar door de opdrachtgever.',
+        a: 'De schoonmaker klokt in en uit vanaf de smartphone. GeoTapp registreert de GPS-coördinaten op dat moment, niet handmatig ingevoerd. Elke inklokking is gecertificeerd met tijdstempel en positie verifieerbaar door de opdrachtgever.',
       },
       {
         q: 'Kan ik de klant bewijzen dat de dienst is geleverd?',
@@ -165,7 +165,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Wat kost GeoTapp voor een schoonmaakbedrijf?',
-        a: 'Plannen starten vanaf enkele euro\'s per medewerker per maand. 14 dagen gratis proberen — zonder verplichtingen.',
+        a: 'Plannen starten vanaf enkele euro\'s per medewerker per maand. 14 dagen gratis proberen, zonder verplichtingen.',
       },
     ],
   },
@@ -190,7 +190,7 @@ const content: SettoreContent = {
     {
       question: 'Hoe werkt GPS-inklokking voor schoonmaakbedrijven?',
       answer:
-        'De schoonmaker klokt in en uit vanaf de smartphone. GeoTapp registreert GPS-coördinaten — niet handmatig ingevoerd. Elke inklokking is gecertificeerd met tijdstempel en positie verifieerbaar door de opdrachtgever.',
+        'De schoonmaker klokt in en uit vanaf de smartphone. GeoTapp registreert GPS-coördinaten, niet handmatig ingevoerd. Elke inklokking is gecertificeerd met tijdstempel en positie verifieerbaar door de opdrachtgever.',
     },
     {
       question: 'Kan ik de klant bewijzen dat de dienst is geleverd?',

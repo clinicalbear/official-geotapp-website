@@ -28,7 +28,7 @@ export interface AttribuzioneLabels {
 interface Props {
   /** URL assoluto canonico della pagina (es. https://geotapp.com/it/risorse/...). */
   pageUrl: string;
-  /** Anchor text a tema (es. "Calcolatore sanzioni GPS — GeoTapp"). */
+  /** Anchor text a tema (es. "Calcolatore sanzioni GPS - GeoTapp"). */
   pageTitle: string;
   contactHref: string;
   labels: AttribuzioneLabels;
@@ -37,8 +37,8 @@ interface Props {
 
 export default function RisorsaAttribuzione({ pageUrl, pageTitle, contactHref, labels, anno }: Props) {
   const urlUtm = `${pageUrl}${UTM}`;
-  const snippetTesto = `${pageTitle} — GeoTapp. ${pageUrl}`;
-  const snippetHtml = `Fonte: <a href="${urlUtm}">${pageTitle} — GeoTapp</a>`;
+  const snippetTesto = `${pageTitle} - GeoTapp. ${pageUrl}`;
+  const snippetHtml = `Fonte: <a href="${urlUtm}">${pageTitle} - GeoTapp</a>`;
   const [copied, setCopied] = useState<string | null>(null);
 
   const copy = (text: string, which: string) => {

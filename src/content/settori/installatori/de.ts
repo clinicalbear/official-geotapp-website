@@ -9,7 +9,7 @@ const content: SettoreContent = {
     badge: 'Software für Elektriker, Heizungsinstallateure und Handwerksbetriebe',
     h1_line1: 'Außendienst im Griff:',
     h1_line2: 'Einsätze, Stundenzettel und Nachweise klar dokumentiert',
-    subtitle: 'GeoTapp verbindet Flow + TimeTracker für Handwerksbetriebe, die zwischen Baustellen, Fahrzeugen und Endkunden arbeiten. Die Android- und iOS-Apps unterstützen den Techniker im Außendienst; das Büro sieht Auftrag, Zeiten, Fotobeweise und Notizen ohne Nachfragen — DSGVO-konform, §17 MiLoG-tauglich.',
+    subtitle: 'GeoTapp verbindet Flow + TimeTracker für Handwerksbetriebe, die zwischen Baustellen, Fahrzeugen und Endkunden arbeiten. Die Android- und iOS-Apps unterstützen den Techniker im Außendienst; das Büro sieht Auftrag, Zeiten, Fotobeweise und Notizen ohne Nachfragen - DSGVO-konform, §17 MiLoG-tauglich.',
     cta_primary: 'Demo anfragen',
     cta_note: 'Keine Bindung. Antwort innerhalb von 12 Geschäftsstunden.',
   },
@@ -32,7 +32,7 @@ const content: SettoreContent = {
   },
   workflow: {
     title: 'So funktioniert es in drei Schritten',
-    subtitle: 'Vom Fahrzeug ins Büro — ohne Telefonate.',
+    subtitle: 'Vom Fahrzeug ins Büro, ohne Telefonate.',
     steps: [
       {
         title: 'Techniker stempelt im Außendienst',

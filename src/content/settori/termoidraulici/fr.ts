@@ -2,14 +2,14 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App pour Plombiers-Chauffagistes | GeoTapp — GPS, Rapports & Preuves',
+    title: 'App pour Plombiers-Chauffagistes | GeoTapp - GPS, Rapports & Preuves',
     description: 'GeoTapp est l\'app pour installateurs de chauffage : rapports GPS vérifiés, photos d\'installations et documents infalsifiables. Résolvez les litiges avec de vraies preuves. Essayez gratuitement.',
   },
   hero: {
     badge: 'App pour Plombiers-Chauffagistes et Installateurs Thermosanitaires',
     h1_line1: 'App pour plombiers-chauffagistes :',
     h1_line2: 'rapports GPS, preuves photo et zéro litige.',
-    subtitle: 'GeoTapp enregistre chaque intervention sur chaudière et installation avec GPS, photos et horodatages vérifiables. Le client conteste les pièces remplacées ? Montrez le rapport — pas de discussion. Vos techniciens sont protégés, vos factures aussi.',
+    subtitle: 'GeoTapp enregistre chaque intervention sur chaudière et installation avec GPS, photos et horodatages vérifiables. Le client conteste les pièces remplacées ? Montrez le rapport, pas de discussion. Vos techniciens sont protégés, vos factures aussi.',
     cta_primary: 'Démarrer gratuitement !',
     cta_note: 'Sans engagement. Réponse sous 12 heures ouvrables.',
   },
@@ -32,7 +32,7 @@ const content: SettoreContent = {
   },
   workflow: {
     title: 'Comment ça fonctionne en trois étapes',
-    subtitle: 'Du chantier au bureau — sans appels téléphoniques.',
+    subtitle: 'Du chantier au bureau, sans appels téléphoniques.',
     steps: [
       {
         title: 'Le technicien enregistre l\'intervention sur le terrain',
@@ -96,7 +96,7 @@ const content: SettoreContent = {
   },
   scenario: {
     title: 'Cas réel',
-    body: 'Un client conteste le remplacement d\'un brûleur de chaudière et refuse de payer la facture. Avec GeoTapp, vous ouvrez le rapport d\'intervention : photo de la pièce défectueuse retirée, de la nouvelle installée, horodatage GPS de l\'intervention et notes techniques du technicien — tout généré automatiquement depuis le smartphone sur place.',
+    body: 'Un client conteste le remplacement d\'un brûleur de chaudière et refuse de payer la facture. Avec GeoTapp, vous ouvrez le rapport d\'intervention : photo de la pièce défectueuse retirée, de la nouvelle installée, horodatage GPS de l\'intervention et notes techniques du technicien, tout généré automatiquement depuis le smartphone sur place.',
     resolution: 'Le litige tombe. La facture est payée en totalité.',
   },
   features: {
@@ -108,7 +108,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Photos d\'installation scellées',
-        desc: 'Le technicien photographie depuis l\'app pendant et après l\'intervention. Chaque image est liée au GPS et à l\'horodatage — infalsifiable après génération.',
+        desc: 'Le technicien photographie depuis l\'app pendant et après l\'intervention. Chaque image est liée au GPS et à l\'horodatage, infalsifiable après génération.',
       },
       {
         title: 'Rapports d\'intervention numériques automatiques',
@@ -135,8 +135,8 @@ const content: SettoreContent = {
   },
   trust: {
     title: 'Nos rapports ne peuvent pas être modifiés. Ni par vous. Ni par nous.',
-    body: 'Les rapports GeoTapp sont générés par le système au moment de l\'intervention. Il n\'existe aucun panneau pour "corriger" une heure ou déplacer une photo. La donnée est celle-là — signée numériquement, avec un vrai GPS.',
-    badge: 'Vérifiable par n\'importe qui — sans accès à votre compte',
+    body: 'Les rapports GeoTapp sont générés par le système au moment de l\'intervention. Il n\'existe aucun panneau pour "corriger" une heure ou déplacer une photo. La donnée est celle-là, signée numériquement, avec un vrai GPS.',
+    badge: 'Vérifiable par n\'importe qui, sans accès à votre compte',
   },
   testimonial: {
     quote: 'Avec GeoTapp, mes techniciens photographient l\'installation avant et après chaque intervention. Les litiges sur les pièces ont disparu. Les factures sont payées.',
@@ -153,7 +153,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Puis-je utiliser GeoTapp pour documenter le remplacement de pièces sur chaudières ?',
-        a: 'Oui. Le technicien photographie depuis l\'app la pièce retirée et celle installée. Chaque image est liée au GPS, à l\'horodatage et au chantier — incluse dans le rapport infalsifiable.',
+        a: 'Oui. Le technicien photographie depuis l\'app la pièce retirée et celle installée. Chaque image est liée au GPS, à l\'horodatage et au chantier, incluse dans le rapport infalsifiable.',
       },
       {
         q: 'GeoTapp aide-t-il à résoudre les litiges clients sur les installations ?',

@@ -14,17 +14,17 @@ import {
 import { REVIEWS } from '@/data/reviews';
 
 const flowMeta: Record<string, { title: string; description: string }> = {
-  it: { title: 'GeoTapp Flow — Gestione Operativa Interventi e Squadre', description: 'Sistema operativo per aziende con tecnici sul campo: commesse, attività, avanzamento e report verificabili in tempo reale.' },
-  en: { title: 'GeoTapp Flow — Field Operations Management', description: 'Operational hub for companies with field technicians: manage jobs, assign tasks, track progress, generate verifiable reports.' },
-  de: { title: 'GeoTapp Flow — Operative Einsatzverwaltung', description: 'Das operative System für Unternehmen mit Außendiensttechnikern. Aufträge verwalten, Aufgaben zuweisen, prüfbare Berichte erstellen.' },
-  fr: { title: 'GeoTapp Flow — Gestion Opérationnelle des Interventions', description: 'Système opérationnel pour entreprises avec techniciens terrain : commandes, tâches, suivi et rapports vérifiables en temps réel.' },
-  es: { title: 'GeoTapp Flow — Gestión Operativa de Intervenciones', description: 'GeoTapp Flow es el sistema operativo para empresas con técnicos en campo. Gestiona pedidos, asigna tareas y genera informes verificables en tiempo real.' },
-  nl: { title: 'GeoTapp Flow — Operationeel Beheer van Interventies', description: 'GeoTapp Flow is het operationele systeem voor bedrijven met buitendiensttechnici. Beheer opdrachten, wijs taken toe en maak verifieerbare rapporten.' },
-  pt: { title: 'GeoTapp Flow — Gestão Operacional de Intervenções', description: 'GeoTapp Flow é o sistema operacional para empresas com técnicos de campo. Gerencie ordens de serviço, atribua tarefas e produza relatórios verificáveis.' },
-  sv: { title: 'GeoTapp Flow — Operativ Hantering av Interventioner', description: 'GeoTapp Flow är det operativa systemet för företag med fälttekniker. Hantera uppdrag, tilldela uppgifter och skapa verifierbara rapporter.' },
-  da: { title: 'GeoTapp Flow — Operationel Håndtering af Interventioner', description: 'GeoTapp Flow er det operative system for virksomheder med serviceteknikere. Administrer opgaver, tildel arbejde og generer verificerbare rapporter.' },
-  nb: { title: 'GeoTapp Flow — Operativ Håndtering av Intervensjoner', description: 'GeoTapp Flow er det operative systemet for bedrifter med serviceteknikere. Administrer oppdrag, tildel oppgaver og generer verifiserbare rapporter.' },
-  ru: { title: 'GeoTapp Flow — Оперативное Управление Интервенциями', description: 'GeoTapp Flow — операционная система для компаний с выездными техниками. Управляйте заказами, назначайте задачи и формируйте проверяемые отчёты.' },
+  it: { title: 'GeoTapp Flow - Gestione Operativa Interventi e Squadre', description: 'Sistema operativo per aziende con tecnici sul campo: commesse, attività, avanzamento e report verificabili in tempo reale.' },
+  en: { title: 'GeoTapp Flow - Field Operations Management', description: 'Operational hub for companies with field technicians: manage jobs, assign tasks, track progress, generate verifiable reports.' },
+  de: { title: 'GeoTapp Flow - Operative Einsatzverwaltung', description: 'Das operative System für Unternehmen mit Außendiensttechnikern. Aufträge verwalten, Aufgaben zuweisen, prüfbare Berichte erstellen.' },
+  fr: { title: 'GeoTapp Flow - Gestion Opérationnelle des Interventions', description: 'Système opérationnel pour entreprises avec techniciens terrain : commandes, tâches, suivi et rapports vérifiables en temps réel.' },
+  es: { title: 'GeoTapp Flow - Gestión Operativa de Intervenciones', description: 'GeoTapp Flow es el sistema operativo para empresas con técnicos en campo. Gestiona pedidos, asigna tareas y genera informes verificables en tiempo real.' },
+  nl: { title: 'GeoTapp Flow - Operationeel Beheer van Interventies', description: 'GeoTapp Flow is het operationele systeem voor bedrijven met buitendiensttechnici. Beheer opdrachten, wijs taken toe en maak verifieerbare rapporten.' },
+  pt: { title: 'GeoTapp Flow - Gestão Operacional de Intervenções', description: 'GeoTapp Flow é o sistema operacional para empresas com técnicos de campo. Gerencie ordens de serviço, atribua tarefas e produza relatórios verificáveis.' },
+  sv: { title: 'GeoTapp Flow - Operativ Hantering av Interventioner', description: 'GeoTapp Flow är det operativa systemet för företag med fälttekniker. Hantera uppdrag, tilldela uppgifter och skapa verifierbara rapporter.' },
+  da: { title: 'GeoTapp Flow - Operationel Håndtering af Interventioner', description: 'GeoTapp Flow er det operative system for virksomheder med serviceteknikere. Administrer opgaver, tildel arbejde og generer verificerbare rapporter.' },
+  nb: { title: 'GeoTapp Flow - Operativ Håndtering av Intervensjoner', description: 'GeoTapp Flow er det operative systemet for bedrifter med serviceteknikere. Administrer oppdrag, tildel oppgaver og generer verifiserbare rapporter.' },
+  ru: { title: 'GeoTapp Flow, Оперативное Управление Интервенциями', description: 'GeoTapp Flow, операционная система для компаний с выездными техниками. Управляйте заказами, назначайте задачи и формируйте проверяемые отчёты.' },
 };
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
@@ -60,7 +60,7 @@ const FLOW_FAQ: Record<string, object> = {
       { '@type': 'Question', name: 'GeoTapp Flow funziona offline?', acceptedAnswer: { '@type': 'Answer', text: 'GeoTapp TimeTracker (l\'app mobile per i tecnici) funziona offline e sincronizza i dati GPS e le foto appena torna la connessione. Flow (il pannello di gestione) richiede connessione internet.' } },
       { '@type': 'Question', name: 'GeoTapp Flow si integra con altri software gestionali?', acceptedAnswer: { '@type': 'Answer', text: 'GeoTapp Flow supporta l\'export dei dati per la fatturazione e la gestione paghe. L\'integrazione diretta con gestionali terzi è disponibile tramite richiesta.' } },
       { '@type': 'Question', name: 'Quanti tecnici può gestire GeoTapp Flow?', acceptedAnswer: { '@type': 'Answer', text: 'GeoTapp Flow scala da team di 3 persone fino a 300+ operatori su più siti. I piani Team e Business includono funzionalità avanzate per team di grandi dimensioni.' } },
-      { '@type': 'Question', name: 'I report generati da Flow sono contestabili dal cliente?', acceptedAnswer: { '@type': 'Answer', text: 'No. I report GeoTapp sono sigillati crittograficamente e verificabili tramite GeoTapp Verifier. Il cliente può verificare l\'integrità dei dati in modo indipendente — senza accesso al tuo account.' } },
+      { '@type': 'Question', name: 'I report generati da Flow sono contestabili dal cliente?', acceptedAnswer: { '@type': 'Answer', text: 'No. I report GeoTapp sono sigillati crittograficamente e verificabili tramite GeoTapp Verifier. Il cliente può verificare l\'integrità dei dati in modo indipendente, senza accesso al tuo account.' } },
     ],
   },
   en: {
@@ -98,7 +98,7 @@ const FLOW_DESCRIPTION: Record<string, string> = {
   da: 'GeoTapp Flow er den operationelle administrationsplatform til virksomheder med serviceteknikere: opret opgaver, tildel arbejde, overvåg fremskridt og generér forseglede, verificerbare rapporter i realtid.',
   sv: 'GeoTapp Flow är den operativa hanteringsplattformen för företag med fälttekniker: skapa uppdrag, tilldela uppgifter, övervaka framsteg och generera förseglade, verifierbara rapporter i realtid.',
   nb: 'GeoTapp Flow er den operative administrasjonsplattformen for bedrifter med serviceteknikere: opprett oppdrag, tildel oppgaver, overvåk fremdrift og generer forseglede, verifiserbare rapporter i sanntid.',
-  ru: 'GeoTapp Flow — операционная платформа управления для компаний с выездными техниками: создавайте заказы, назначайте задачи, отслеживайте прогресс и формируйте запечатанные проверяемые отчёты в реальном времени.',
+  ru: 'GeoTapp Flow, операционная платформа управления для компаний с выездными техниками: создавайте заказы, назначайте задачи, отслеживайте прогресс и формируйте запечатанные проверяемые отчёты в реальном времени.',
 };
 
 const FLOW_FEATURES: Record<string, string[]> = {
@@ -110,7 +110,7 @@ const FLOW_FEATURES: Record<string, string[]> = {
     'Prove fotografiche con GPS e timestamp',
     'Integrazione nativa con GeoTapp TimeTracker e Verifier',
     'Export dati per fatturazione e paghe',
-    'GDPR compliant — informativa GPS firmata digitalmente',
+    'GDPR compliant, informativa GPS firmata digitalmente',
   ],
   en: [
     'Multi-site job and intervention management',
@@ -120,7 +120,7 @@ const FLOW_FEATURES: Record<string, string[]> = {
     'Photo evidence with GPS and timestamp',
     'Native integration with GeoTapp TimeTracker and Verifier',
     'Data export for billing and payroll',
-    'GDPR compliant — digitally signed GPS privacy notice',
+    'GDPR compliant, digitally signed GPS privacy notice',
   ],
   de: [
     'Auftrags- und Einsatzverwaltung über mehrere Standorte',
@@ -130,7 +130,7 @@ const FLOW_FEATURES: Record<string, string[]> = {
     'Fotobeweise mit GPS und Zeitstempel',
     'Native Integration mit GeoTapp TimeTracker und Verifier',
     'Datenexport für Abrechnung und Lohn',
-    'DSGVO-konform — digital signierte GPS-Datenschutzerklärung',
+    'DSGVO-konform, digital signierte GPS-Datenschutzerklärung',
   ],
 };
 
@@ -139,7 +139,7 @@ function buildFlowSoftware(locale: AppLocale) {
   const description = FLOW_DESCRIPTION[locale] ?? FLOW_DESCRIPTION.en;
   const featureList = FLOW_FEATURES[locale] ?? FLOW_FEATURES.en;
   // Real reviews from the data file refer to "GeoTapp Flow" (see buildReviewsSchema).
-  // Attach the aggregateRating to the Flow product page only — never invent numbers.
+  // Attach the aggregateRating to the Flow product page only, never invent numbers.
   const reviews = REVIEWS;
   const aggregateRating =
     reviews.length > 0

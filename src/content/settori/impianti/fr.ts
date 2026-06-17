@@ -9,7 +9,7 @@ const content: SettoreContent = {
     badge: 'Application pour installateurs, techniciens et équipes de service',
     h1_line1: 'Chaque intervention documentée,',
     h1_line2: 'chaque heure tracée.',
-    subtitle: 'Pour installateurs électriques, plombiers, techniciens CVC et spécialistes en génie climatique. GeoTapp connecte Flow + TimeTracker pour suivre GPS, heures et photos par mission — du véhicule au bureau sans appels téléphoniques.',
+    subtitle: 'Pour installateurs électriques, plombiers, techniciens CVC et spécialistes en génie climatique. GeoTapp connecte Flow + TimeTracker pour suivre GPS, heures et photos par mission, du véhicule au bureau sans appels téléphoniques.',
     cta_primary: 'Essayez GeoTapp gratuitement pendant 14 jours',
     cta_note: 'Sans engagement. Aucune carte bancaire requise.',
   },
@@ -18,7 +18,7 @@ const content: SettoreContent = {
     items: [
       {
         title: 'Les clients contestent les heures d\'intervention',
-        desc: 'Pointages GPS horodatés comme preuve irréfutable. Les données sont certifiées au moment de l\'intervention — non modifiables après coup.',
+        desc: 'Pointages GPS horodatés comme preuve irréfutable. Les données sont certifiées au moment de l\'intervention, non modifiables après coup.',
       },
       {
         title: 'Courir après les techniciens pour des nouvelles',
@@ -36,7 +36,7 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'Le technicien pointe par GPS au début de l\'intervention',
-        desc: 'Il ouvre la mission depuis son smartphone. GeoTapp enregistre les coordonnées GPS réelles, l\'horodatage et des photos — entièrement automatique, infalsifiable.',
+        desc: 'Il ouvre la mission depuis son smartphone. GeoTapp enregistre les coordonnées GPS réelles, l\'horodatage et des photos, entièrement automatique, infalsifiable.',
       },
       {
         title: 'Les heures sont enregistrées automatiquement par mission',
@@ -60,7 +60,7 @@ const content: SettoreContent = {
       {
         label: 'Qui peut vérifier',
         competitor: 'Votre bureau uniquement',
-        geotapp: 'Vous, le client, un tiers — de manière indépendante',
+        geotapp: 'Vous, le client, un tiers, de manière indépendante',
       },
       {
         label: 'En cas de litige',
@@ -91,7 +91,7 @@ const content: SettoreContent = {
       'Le client conteste ? Ouvrez le rapport : photos, GPS, horodatage, signature numérique.',
       'Vous l\'envoyez. Le litige est réglé en une minute.',
       'Le paiement est sécurisé. Le technicien est protégé.',
-      'En fin de mois, l\'export est déjà prêt — heures et missions agrégées automatiquement.',
+      'En fin de mois, l\'export est déjà prêt, heures et missions agrégées automatiquement.',
     ],
   },
   features: {
@@ -103,7 +103,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Preuves photographiques scellées',
-        desc: 'Le technicien photographie depuis l\'application. Chaque image est liée à l\'intervention avec GPS et horodatage — infalsifiable après génération.',
+        desc: 'Le technicien photographie depuis l\'application. Chaque image est liée à l\'intervention avec GPS et horodatage, infalsifiable après génération.',
       },
       {
         title: 'Gestion multi-sites des missions',
@@ -126,7 +126,7 @@ const content: SettoreContent = {
   testimonial: {
     quote: 'Les clients ne contestent plus les heures. Nous ouvrons le rapport avec GPS et photos et la discussion s\'arrête là.',
     author: 'Robert F.',
-    role: 'Dirigeant, entreprise d\'installation — 20 techniciens',
+    role: 'Dirigeant, entreprise d\'installation, 20 techniciens',
   },
   faq: {
     title: 'Questions fréquentes',
@@ -142,7 +142,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Comment accélérer la facturation des interventions terminées ?',
-        a: 'GeoTapp génère automatiquement l\'export des heures et missions prêt pour votre logiciel comptable. Aucune saisie manuelle, aucun risque d\'erreur — la facturation se fait en un clic.',
+        a: 'GeoTapp génère automatiquement l\'export des heures et missions prêt pour votre logiciel comptable. Aucune saisie manuelle, aucun risque d\'erreur, la facturation se fait en un clic.',
       },
     ],
   },
@@ -169,7 +169,7 @@ const content: SettoreContent = {
     },
     {
       question: 'Comment accélérer la facturation des interventions terminées ?',
-      answer: 'GeoTapp génère automatiquement l\'export des heures et missions prêt pour votre logiciel comptable. Aucune saisie manuelle, aucun risque d\'erreur — la facturation se fait en un clic.',
+      answer: 'GeoTapp génère automatiquement l\'export des heures et missions prêt pour votre logiciel comptable. Aucune saisie manuelle, aucun risque d\'erreur, la facturation se fait en un clic.',
     },
   ],
 };

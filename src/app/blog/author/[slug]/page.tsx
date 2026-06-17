@@ -70,7 +70,7 @@ async function fetchPosts(authorId: number): Promise<WPPostLite[]> {
 function languageCodeFor(locale: AppLocale): string {
   // Regional EN variants share the 'en' set of articles.
   if (locale === 'en' || locale.startsWith('en-')) return 'en';
-  return locale; // it, de, fr, es, pt, nl, da, sv, nb, ru — Polylang slugs match
+  return locale; // it, de, fr, es, pt, nl, da, sv, nb, ru - Polylang slugs match
 }
 
 /** Read the language slug embedded in a WordPress permalink. */
@@ -137,7 +137,7 @@ export async function generateMetadata({
   const user = await fetchUser(slug);
   if (!user) return {};
   return {
-    title: `${user.name} — GeoTapp`,
+    title: `${user.name} - GeoTapp`,
     description: stripHtml(user.description).slice(0, 160),
     alternates: { canonical: `https://geotapp.com/blog/author/${user.slug}/` },
   };
@@ -265,7 +265,7 @@ export default async function AuthorPage({
               {posts.map((p) => {
                 const cover =
                   p._embedded?.['wp:featuredmedia']?.[0]?.source_url ?? '';
-                // Use WP's canonical permalink — already includes the
+                // Use WP's canonical permalink, already includes the
                 // language prefix where applicable. Strip the origin so
                 // the link stays internal to the Next.js app.
                 let href = `/blog/${p.slug}/`;

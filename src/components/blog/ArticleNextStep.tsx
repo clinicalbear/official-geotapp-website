@@ -55,7 +55,7 @@ function findSectorMatch(categories: Category[]): { path: string; icon: React.Re
     if (SECTOR_MAP[slug]) {
       return { ...SECTOR_MAP[slug], sectorName: cat.name };
     }
-    // Partial match — check if any key is contained in the category slug
+    // Partial match, check if any key is contained in the category slug
     for (const [key, value] of Object.entries(SECTOR_MAP)) {
       if (slug.includes(key) || key.includes(slug)) {
         return { ...value, sectorName: cat.name };

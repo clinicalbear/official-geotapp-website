@@ -63,7 +63,7 @@ export default function HeartbeatLine({ color = '#8B5CF6' }: { color?: string })
           animate={inView ? { pathLength: 1 } : { pathLength: 0 }}
           transition={{ duration: 2.5, ease: 'easeInOut' }}
         />
-        {/* Bright dot traveling along the path — slow */}
+        {/* Bright dot traveling along the path, slow */}
         {inView && (
           <>
             <circle r="3" fill={color} opacity="0.4">

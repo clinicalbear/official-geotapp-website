@@ -26,7 +26,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Paper timesheets are unreliable?',
-        desc: 'Automatic tracking from the smartphone, no manual entries. The data is what it is — and it cannot be changed.',
+        desc: 'Automatic tracking from the smartphone, no manual entries. The data is what it is, and it cannot be changed.',
       },
       {
         title: 'Hard to coordinate multiple crews?',
@@ -57,15 +57,15 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'Cleaner clocks in with GPS',
-        desc: 'Opens and closes the shift from their smartphone. GeoTapp records real GPS coordinates, photos and timestamp — fully automatic, tamper-proof.',
+        desc: 'Opens and closes the shift from their smartphone. GeoTapp records real GPS coordinates, photos and timestamp, fully automatic, tamper-proof.',
       },
       {
         title: 'Manager sees everything in real time',
-        desc: 'Single dashboard for all sites. Know exactly who is on site, where and since when — without chasing anyone.',
+        desc: 'Single dashboard for all sites. Know exactly who is on site, where and since when, without chasing anyone.',
       },
       {
         title: 'Report is ready automatically',
-        desc: 'At the end of the shift, the system generates a sealed report with GPS, photos and digital signature. Send it to the client — independently verifiable.',
+        desc: 'At the end of the shift, the system generates a sealed report with GPS, photos and digital signature. Send it to the client, independently verifiable.',
       },
     ],
   },
@@ -82,7 +82,7 @@ const content: SettoreContent = {
       {
         label: 'Who can verify',
         competitor: 'Only your office',
-        geotapp: 'You, the client, a third party — independently',
+        geotapp: 'You, the client, a third party, independently',
       },
       {
         label: 'In case of dispute',
@@ -107,7 +107,7 @@ const content: SettoreContent = {
     items: [
       {
         title: 'Automatic proof of service',
-        desc: 'Every completed job generates a report with GPS, photos and timestamp. The client receives it and verifies independently — no access to your system needed.',
+        desc: 'Every completed job generates a report with GPS, photos and timestamp. The client receives it and verifies independently, no access to your system needed.',
       },
       {
         title: 'Real control across all sites',
@@ -123,7 +123,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Photo documentation',
-        desc: 'Cleaners take photos directly from the app. Every image is geo-tagged with timestamp — visual proof of the work done.',
+        desc: 'Cleaners take photos directly from the app. Every image is geo-tagged with timestamp, visual proof of the work done.',
       },
       {
         title: 'Your staff are protected',
@@ -145,11 +145,11 @@ const content: SettoreContent = {
     items: [
       {
         q: 'How does GPS clock-in work for cleaning companies?',
-        a: 'The cleaner clocks in and out from their smartphone. GeoTapp records the GPS coordinates at that moment — not entered manually. Every clock-in is certified with timestamp and position verifiable by the client.',
+        a: 'The cleaner clocks in and out from their smartphone. GeoTapp records the GPS coordinates at that moment, not entered manually. Every clock-in is certified with timestamp and position verifiable by the client.',
       },
       {
         q: 'Can I prove to the client that the service was delivered?',
-        a: 'Yes. GeoTapp automatically generates a sealed report with GPS, photos and timestamp at the end of each job. The client receives it and verifies independently — no access to your system needed.',
+        a: 'Yes. GeoTapp automatically generates a sealed report with GPS, photos and timestamp at the end of each job. The client receives it and verifies independently, no access to your system needed.',
       },
       {
         q: 'Is GeoTapp GDPR compliant for employee GPS tracking?',
@@ -165,7 +165,7 @@ const content: SettoreContent = {
       },
       {
         q: 'How much does GeoTapp cost for a cleaning company?',
-        a: 'Plans start from a few euros per worker per month. Try free for 14 days — no commitment.',
+        a: 'Plans start from a few euros per worker per month. Try free for 14 days, no commitment.',
       },
       {
         q: 'Does GeoTapp do GPS tracking for cleaners?',
@@ -194,7 +194,7 @@ const content: SettoreContent = {
     {
       question: 'How does GPS clock-in work for cleaning companies?',
       answer:
-        'The cleaner clocks in and out from their smartphone. GeoTapp records GPS coordinates — not entered manually. Every clock-in is certified with timestamp and position verifiable by the client.',
+        'The cleaner clocks in and out from their smartphone. GeoTapp records GPS coordinates, not entered manually. Every clock-in is certified with timestamp and position verifiable by the client.',
     },
     {
       question: 'Can I prove to the client that the service was delivered?',

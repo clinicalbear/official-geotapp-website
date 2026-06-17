@@ -242,7 +242,7 @@ export default function CookieConsentBanner({ locale }: { locale: string }) {
     updateConsent(analytics);
     // L'evento consent_choice viene emesso DOPO updateConsent. Se l'utente
     // ha negato analytics, il gtag.js droppa l'evento e in GA4 lo vediamo
-    // come "non emesso" — è semanticamente corretto (chi nega analytics non
+    // come "non emesso", è semanticamente corretto (chi nega analytics non
     // vuole essere tracciato neanche per misurare il rifiuto).
     trackEvent('consent_choice', { action, analytics: analytics ? 'granted' : 'denied' });
     setVisible(false);
@@ -387,7 +387,7 @@ export default function CookieConsentBanner({ locale }: { locale: string }) {
               {t.modalIntro}
             </p>
 
-            {/* Necessari — sempre on */}
+            {/* Necessari, sempre on */}
             <CategoryRow
               title={t.catNecessary}
               desc={t.catNecessaryDesc}
@@ -397,7 +397,7 @@ export default function CookieConsentBanner({ locale }: { locale: string }) {
               onChange={() => {}}
             />
 
-            {/* Analytics — toggle */}
+            {/* Analytics, toggle */}
             <CategoryRow
               title={t.catAnalytics}
               desc={t.catAnalyticsDesc}

@@ -90,7 +90,7 @@ export default function DeleteAccountPage() {
               <ShieldCheck size={20} className="text-slate-700" />
             </div>
             <div>
-              <h3 className="font-bold text-slate-900 mb-1">B2B Platform — Data Managed by Your Employer</h3>
+              <h3 className="font-bold text-slate-900 mb-1">B2B Platform - Data Managed by Your Employer</h3>
               <p className="text-slate-500 text-sm leading-relaxed">
                 GeoTapp is a business-to-business platform. Your account and work-session data belong to the company
                 that activated your licence. Upon receiving your request, we will notify the responsible company

@@ -105,7 +105,7 @@ async function fetchPost(articleSlug: string, requestedLocale?: string): Promise
 function resolvePostData(post: WPPost, locale: string) {
   const title = stripHtml(post.title.rendered);
   // Allowlist-sanitize il contenuto WP prima del render (difesa in profondità
-  // contro XSS da WordPress compromesso — vedi src/lib/sanitize-wp.ts).
+  // contro XSS da WordPress compromesso, vedi src/lib/sanitize-wp.ts).
   const content = sanitizeWpHtml(post.content.rendered);
   const excerpt = stripHtml(post.excerpt.rendered).slice(0, 160);
   const date = post.date;
@@ -256,7 +256,7 @@ export default async function BlogArticlePage({ params }: Props) {
   // Elimina il contenuto duplicato in modo sistemico, per tutti i post.
   const canonicalPath = canonicalBlogPath(post);
   if (requestedBlogPath(slug) !== canonicalPath) {
-    permanentRedirect(canonicalPath); // 308 — equivalente permanente del 301
+    permanentRedirect(canonicalPath); // 308, equivalente permanente del 301
   }
   const locale = detectPostLocale(post);
 
@@ -357,7 +357,7 @@ export default async function BlogArticlePage({ params }: Props) {
         </div>
       </div>
 
-      {/* Disclaimer YMYL — non è consulenza legale (tutti gli articoli, lingua dell'articolo) */}
+      {/* Disclaimer YMYL, non è consulenza legale (tutti gli articoli, lingua dell'articolo) */}
       <ArticleDisclaimer locale={locale} />
 
       {/* Comments */}

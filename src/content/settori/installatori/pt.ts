@@ -32,7 +32,7 @@ const content: SettoreContent = {
   },
   workflow: {
     title: 'Como funciona em três passos',
-    subtitle: 'Da carrinha ao escritório — sem chamadas telefónicas.',
+    subtitle: 'Da carrinha ao escritório, sem chamadas telefónicas.',
     steps: [
       {
         title: 'O técnico regista a entrada no local',

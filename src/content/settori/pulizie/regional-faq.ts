@@ -27,7 +27,7 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
     },
     {
       q: 'GDPR e Garante Privacy per la geolocalizzazione degli addetti?',
-      a: 'Informativa, base giuridica del legittimo interesse e — punto dirimente in Italia — l\'accordo sindacale o l\'autorizzazione dell\'Ispettorato del Lavoro previsti dall\'art. 4 dello Statuto dei Lavoratori per il controllo a distanza.',
+      a: 'Informativa, base giuridica del legittimo interesse e, punto dirimente in Italia, l\'accordo sindacale o l\'autorizzazione dell\'Ispettorato del Lavoro previsti dall\'art. 4 dello Statuto dei Lavoratori per il controllo a distanza.',
     },
     {
       q: 'Tracciabilità del cambio appalto e dei minimi tabellari?',
@@ -37,7 +37,7 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   de: [
     {
       q: 'Welche Arbeitszeiterfassung verlangt der Tarifvertrag Gebäudereinigung?',
-      a: 'Geleistete Stunden je Objekt, Zuschläge für Nacht- und Feiertagsarbeit und die Aufbewahrung nach §16 ArbZG — pro Schicht erfasst, abgestimmt auf den Rahmentarifvertrag.',
+      a: 'Geleistete Stunden je Objekt, Zuschläge für Nacht- und Feiertagsarbeit und die Aufbewahrung nach §16 ArbZG, pro Schicht erfasst, abgestimmt auf den Rahmentarifvertrag.',
     },
     {
       q: 'DSGVO und Betriebsrat bei GPS-Ortung von Reinigungskräften?',

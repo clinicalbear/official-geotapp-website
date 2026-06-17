@@ -37,7 +37,7 @@ const LANG_GROUPS: Record<string, string> = {
   nb: '183189742813185694',
 };
 
-// Lead magnet group IDs — subscriber che scarica un asset specifico
+// Lead magnet group IDs, subscriber che scarica un asset specifico
 const LEAD_MAGNET_GROUPS: Record<string, string> = {
   'informativa-gps': '188186066672420802',
 };

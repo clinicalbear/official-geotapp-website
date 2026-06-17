@@ -2,14 +2,14 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App para Técnicos de Aquecimento | GeoTapp — GPS, Relatórios e Provas',
+    title: 'App para Técnicos de Aquecimento | GeoTapp - GPS, Relatórios e Provas',
     description: 'GeoTapp é a app para instaladores termossanitários: relatórios GPS verificados, fotos de instalações e documentação inalterável. Resolva reclamações com provas reais. Experimente grátis.',
   },
   hero: {
     badge: 'App para Técnicos de Aquecimento e Instaladores Termossanitários',
     h1_line1: 'App para técnicos de aquecimento:',
     h1_line2: 'relatórios GPS, provas fotográficas e zero reclamações.',
-    subtitle: 'GeoTapp regista cada intervenção em caldeiras e instalações com GPS, fotos e carimbos de tempo verificáveis. O cliente nega os materiais substituídos? Mostre o relatório — sem discussões. Os seus técnicos estão protegidos, o seu faturamento também.',
+    subtitle: 'GeoTapp regista cada intervenção em caldeiras e instalações com GPS, fotos e carimbos de tempo verificáveis. O cliente nega os materiais substituídos? Mostre o relatório, sem discussões. Os seus técnicos estão protegidos, o seu faturamento também.',
     cta_primary: 'Comece grátis agora!',
     cta_note: 'Sem compromisso. Resposta em 12 horas úteis.',
   },
@@ -32,7 +32,7 @@ const content: SettoreContent = {
   },
   workflow: {
     title: 'Como funciona em três passos',
-    subtitle: 'Do trabalho para o escritório — sem telefonemas.',
+    subtitle: 'Do trabalho para o escritório, sem telefonemas.',
     steps: [
       {
         title: 'O técnico regista a intervenção no local',
@@ -96,7 +96,7 @@ const content: SettoreContent = {
   },
   scenario: {
     title: 'Caso real',
-    body: 'Um cliente contesta a substituição de um queimador de caldeira e recusa pagar a fatura. Com o GeoTapp abre o relatório: foto do componente defeituoso retirado, do novo instalado, hora GPS da intervenção e notas técnicas do técnico — tudo gerado automaticamente a partir do smartphone no local.',
+    body: 'Um cliente contesta a substituição de um queimador de caldeira e recusa pagar a fatura. Com o GeoTapp abre o relatório: foto do componente defeituoso retirado, do novo instalado, hora GPS da intervenção e notas técnicas do técnico, tudo gerado automaticamente a partir do smartphone no local.',
     resolution: 'A reclamação cai. A fatura é paga na totalidade.',
   },
   features: {
@@ -108,7 +108,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Provas fotográficas da instalação',
-        desc: 'O técnico fotografa a partir da app durante e após a intervenção. Cada imagem está ligada a GPS e carimbo de tempo — inalterável após a geração.',
+        desc: 'O técnico fotografa a partir da app durante e após a intervenção. Cada imagem está ligada a GPS e carimbo de tempo, inalterável após a geração.',
       },
       {
         title: 'Relatórios digitais automáticos',
@@ -135,8 +135,8 @@ const content: SettoreContent = {
   },
   trust: {
     title: 'Os nossos relatórios não podem ser alterados. Não por si. Não por nós.',
-    body: 'Os relatórios GeoTapp são gerados pelo sistema no momento da intervenção. Não existe nenhum painel para "corrigir" uma hora ou mover uma foto. O dado é esse — assinado digitalmente, com GPS real.',
-    badge: 'Verificável por qualquer pessoa — sem acesso à sua conta',
+    body: 'Os relatórios GeoTapp são gerados pelo sistema no momento da intervenção. Não existe nenhum painel para "corrigir" uma hora ou mover uma foto. O dado é esse, assinado digitalmente, com GPS real.',
+    badge: 'Verificável por qualquer pessoa, sem acesso à sua conta',
   },
   testimonial: {
     quote: 'Com o GeoTapp os meus técnicos fotografam a instalação antes e depois de cada intervenção. As reclamações sobre materiais desapareceram. As faturas são pagas.',
@@ -153,7 +153,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Posso usar o GeoTapp para documentar a substituição de componentes em caldeiras?',
-        a: 'Sim. O técnico fotografa a partir da app o componente retirado e o instalado. Cada imagem está ligada a GPS, carimbo de tempo e obra — incluída no relatório inalterável.',
+        a: 'Sim. O técnico fotografa a partir da app o componente retirado e o instalado. Cada imagem está ligada a GPS, carimbo de tempo e obra, incluída no relatório inalterável.',
       },
       {
         q: 'O GeoTapp ajuda a resolver reclamações de clientes sobre instalações?',

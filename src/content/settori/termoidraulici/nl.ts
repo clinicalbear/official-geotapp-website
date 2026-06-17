@@ -2,14 +2,14 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App voor CV-monteurs | GeoTapp — GPS, Rapporten & Bewijs',
+    title: 'App voor CV-monteurs | GeoTapp - GPS, Rapporten & Bewijs',
     description: 'GeoTapp is de app voor installateurs van verwarmingsinstallaties: GPS-geverifieerde rapporten, foto\'s van installaties en onvervalsbare documentatie. Los geschillen op met echt bewijs. Gratis proberen.',
   },
   hero: {
     badge: 'App voor CV-monteurs en Installateurs Verwarmingsinstallaties',
     h1_line1: 'App voor CV-monteurs:',
     h1_line2: 'GPS-rapporten, fotobewijs en nul geschillen.',
-    subtitle: 'GeoTapp registreert elke cv-ketel en verwarmingsklus met GPS, foto\'s en verifieerbare tijdstempels. Klant ontkent vervangen onderdelen? Laat het rapport zien — geen discussie nodig. Uw monteurs zijn beschermd, uw facturen ook.',
+    subtitle: 'GeoTapp registreert elke cv-ketel en verwarmingsklus met GPS, foto\'s en verifieerbare tijdstempels. Klant ontkent vervangen onderdelen? Laat het rapport zien, geen discussie nodig. Uw monteurs zijn beschermd, uw facturen ook.',
     cta_primary: 'Gratis starten!',
     cta_note: 'Geen verplichting. Reactie binnen 12 werkuren.',
   },
@@ -32,7 +32,7 @@ const content: SettoreContent = {
   },
   workflow: {
     title: 'Zo werkt het in drie stappen',
-    subtitle: 'Van de klus naar het kantoor — zonder telefoontjes.',
+    subtitle: 'Van de klus naar het kantoor, zonder telefoontjes.',
     steps: [
       {
         title: 'Monteur registreert de klus ter plaatse',
@@ -96,7 +96,7 @@ const content: SettoreContent = {
   },
   scenario: {
     title: 'Werkelijk geval',
-    body: 'Een klant ontkent de vervanging van een cv-ketelbrander en weigert de factuur te betalen. Met GeoTapp opent u het rapport: foto van het defecte, verwijderde onderdeel, het nieuwe geïnstalleerde, GPS-tijdstempel van de klus en technische notities van de monteur — alles automatisch gegenereerd vanaf de smartphone ter plaatse.',
+    body: 'Een klant ontkent de vervanging van een cv-ketelbrander en weigert de factuur te betalen. Met GeoTapp opent u het rapport: foto van het defecte, verwijderde onderdeel, het nieuwe geïnstalleerde, GPS-tijdstempel van de klus en technische notities van de monteur, alles automatisch gegenereerd vanaf de smartphone ter plaatse.',
     resolution: 'Het geschil vervalt. De factuur wordt volledig betaald.',
   },
   features: {
@@ -108,7 +108,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Verzegelde installatiefoto\'s',
-        desc: 'De monteur fotografeert vanuit de app tijdens en na de klus. Elk beeld is gekoppeld aan GPS en tijdstempel — onvervalsbaar na aanmaak.',
+        desc: 'De monteur fotografeert vanuit de app tijdens en na de klus. Elk beeld is gekoppeld aan GPS en tijdstempel, onvervalsbaar na aanmaak.',
       },
       {
         title: 'Automatische digitale klusrapporten',
@@ -135,8 +135,8 @@ const content: SettoreContent = {
   },
   trust: {
     title: 'Onze rapporten kunnen niet worden gewijzigd. Niet door u. Niet door ons.',
-    body: 'GeoTapp-rapporten worden door het systeem gegenereerd op het moment van de klus. Er is geen paneel om een tijd te "corrigeren" of een foto te verplaatsen. De gegevens zijn wat ze zijn — digitaal ondertekend, met echt GPS.',
-    badge: 'Door iedereen verifieerbaar — zonder toegang tot uw account',
+    body: 'GeoTapp-rapporten worden door het systeem gegenereerd op het moment van de klus. Er is geen paneel om een tijd te "corrigeren" of een foto te verplaatsen. De gegevens zijn wat ze zijn, digitaal ondertekend, met echt GPS.',
+    badge: 'Door iedereen verifieerbaar, zonder toegang tot uw account',
   },
   testimonial: {
     quote: 'Met GeoTapp fotograferen mijn monteurs de installatie voor en na elke klus. Geschillen over onderdelen zijn verdwenen. Facturen worden betaald.',
@@ -153,7 +153,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Kan ik GeoTapp gebruiken om vervangen onderdelen op cv-ketels te documenteren?',
-        a: 'Ja. De monteur fotografeert het verwijderde en het nieuwe geplaatste onderdeel vanuit de app. Elk beeld is gekoppeld aan GPS, tijdstempel en opdrachtnummer — opgenomen in het onvervalsbare rapport.',
+        a: 'Ja. De monteur fotografeert het verwijderde en het nieuwe geplaatste onderdeel vanuit de app. Elk beeld is gekoppeld aan GPS, tijdstempel en opdrachtnummer, opgenomen in het onvervalsbare rapport.',
       },
       {
         q: 'Helpt GeoTapp bij het oplossen van klantgeschillen over verwarmingswerk?',

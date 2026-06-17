@@ -19,7 +19,7 @@ function flushQueue(): void {
 function scheduleFlush(): void {
   if (flushScheduled) return;
   flushScheduled = true;
-  // Poll every 200ms for up to ~10 seconds. After that we give up — gtag will
+  // Poll every 200ms for up to ~10 seconds. After that we give up, gtag will
   // never load (consent denied, blocked by adblock, network failure).
   let attempts = 0;
   const maxAttempts = 50;
@@ -71,7 +71,7 @@ export function trackEvent(
     if (queue.length > 0) flushQueue();
     return;
   }
-  // gtag not ready yet — buffer the event and schedule a flush.
+  // gtag not ready yet, buffer the event and schedule a flush.
   queue.push([eventName, params]);
   scheduleFlush();
 }

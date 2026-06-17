@@ -45,7 +45,7 @@ export async function generateMetadata({
   const { locale } = await params;
   const l = LABELS[safeLocale(locale)] ?? LABELS.it;
   return {
-    title: { absolute: `${l.heading} — GeoTapp` },
+    title: { absolute: `${l.heading} - GeoTapp` },
     description: l.intro.slice(0, 155),
     alternates: buildLocaleAlternates(locale, '/risorse/generatore-informativa-gps/'),
   };

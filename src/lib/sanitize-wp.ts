@@ -6,7 +6,7 @@
  * il contenuto iniettato arriverebbe ai lettori passando per dangerouslySetInnerHTML.
  * Questo modulo filtra tutto su allowlist PRIMA che l'HTML entri nel render.
  *
- * Libreria: `xss` (pure JS, niente DOM) — funziona sia nel Worker Cloudflare
+ * Libreria: `xss` (pure JS, niente DOM), funziona sia nel Worker Cloudflare
  * (SSR/server components, dove jsdom/DOMPurify non girano) sia nel browser.
  */
 import { FilterXSS, getDefaultWhiteList } from 'xss';

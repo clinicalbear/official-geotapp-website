@@ -213,11 +213,11 @@ const T: Record<InfLocale, Template> = {
 
 function fill(s: string, i: InfInputs): string {
   return s
-    .replace(/\{azienda\}/g, i.azienda || '—')
+    .replace(/\{azienda\}/g, i.azienda || '-')
     .replace(/\{paese\}/g, i.paese)
     .replace(/\{finalita\}/g, i.finalita)
     .replace(/\{quando\}/g, i.quando)
-    .replace(/\{conservazione\}/g, i.conservazione || '—')
+    .replace(/\{conservazione\}/g, i.conservazione || '-')
     .replace(/\{autorita\}/g, i.autorita);
 }
 

@@ -9,7 +9,7 @@ const content: SettoreContent = {
     badge: 'Software para Vigilantes de Seguridad, Seguridad Privada y Eventos',
     h1_line1: 'Presencias verificadas y registros de turno',
     h1_line2: 'para vigilantes de seguridad y seguridad privada',
-    subtitle: 'GeoTapp Flow y TimeTracker documentan la presencia de los vigilantes en los puestos asignados con GPS verificado y marcas de tiempo inmutables. Seguimiento de habilitaciones conforme a la Ley 5/2014, relevo digital de turno e informes de incidentes geolocalizados — todo en una sola plataforma.',
+    subtitle: 'GeoTapp Flow y TimeTracker documentan la presencia de los vigilantes en los puestos asignados con GPS verificado y marcas de tiempo inmutables. Seguimiento de habilitaciones conforme a la Ley 5/2014, relevo digital de turno e informes de incidentes geolocalizados, todo en una sola plataforma.',
     cta_primary: 'Solicitar una Demo',
     cta_note: 'Sin compromiso. Respuesta en 12 horas laborables.',
   },
@@ -32,7 +32,7 @@ const content: SettoreContent = {
   },
   workflow: {
     title: 'Cómo funciona en tres pasos',
-    subtitle: 'Del puesto de vigilancia a la central — sin papeleo.',
+    subtitle: 'Del puesto de vigilancia a la central, sin papeleo.',
     steps: [
       {
         title: 'El vigilante ficha en el puesto asignado',

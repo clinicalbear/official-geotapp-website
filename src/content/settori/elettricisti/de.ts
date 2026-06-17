@@ -2,14 +2,14 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App für Elektriker | GeoTapp — GPS-Einsatzberichte & Beweise',
+    title: 'App für Elektriker | GeoTapp - GPS-Einsatzberichte & Beweise',
     description: 'GeoTapp ist die App für Elektriker: GPS-verifizierte Einsatzberichte, Anlagenfotos und manipulationssichere Nachweise. Streitigkeiten mit echten Beweisen abschließen. Gratis testen.',
   },
   hero: {
     badge: 'App für Elektriker und Elektroinstallationsbetriebe',
     h1_line1: 'App für Elektriker:',
     h1_line2: 'GPS-Einsatzberichte, Fotobeweise und keine Streitigkeiten.',
-    subtitle: 'GeoTapp erfasst jeden Elektroeinsatz mit GPS, Fotos und verifizierbaren Zeitstempeln. Kunde bestreitet den Einsatz? Zeigen Sie den Bericht — keine Diskussion nötig. Ihre Techniker sind geschützt, Ihre Rechnungen auch.',
+    subtitle: 'GeoTapp erfasst jeden Elektroeinsatz mit GPS, Fotos und verifizierbaren Zeitstempeln. Kunde bestreitet den Einsatz? Zeigen Sie den Bericht, keine Diskussion nötig. Ihre Techniker sind geschützt, Ihre Rechnungen auch.',
     cta_primary: 'Jetzt kostenlos starten',
     cta_note: 'Keine Bindung. Antwort innerhalb von 12 Geschäftsstunden.',
   },
@@ -32,7 +32,7 @@ const content: SettoreContent = {
   },
   workflow: {
     title: 'So funktioniert es in drei Schritten',
-    subtitle: 'Von der Baustelle ins Büro — ohne Telefonate.',
+    subtitle: 'Von der Baustelle ins Büro, ohne Telefonate.',
     steps: [
       {
         title: 'Techniker erfasst den Einsatz vor Ort',
@@ -96,7 +96,7 @@ const content: SettoreContent = {
   },
   scenario: {
     title: 'Realer Fall',
-    body: 'Ein Kunde bestreitet den Abschluss einer Elektroinstallation und weigert sich, die letzte Rechnung zu bezahlen. Mit GeoTapp öffnen Sie den Einsatzbericht: Foto des fertiggestellten Schaltschranks, GPS-Zeitstempel für Beginn und Ende der Arbeiten, technische Notizen des Technikers — alles automatisch vom Smartphone vor Ort generiert.',
+    body: 'Ein Kunde bestreitet den Abschluss einer Elektroinstallation und weigert sich, die letzte Rechnung zu bezahlen. Mit GeoTapp öffnen Sie den Einsatzbericht: Foto des fertiggestellten Schaltschranks, GPS-Zeitstempel für Beginn und Ende der Arbeiten, technische Notizen des Technikers, alles automatisch vom Smartphone vor Ort generiert.',
     resolution: 'Die Beschwerde fällt. Die Rechnung wird vollständig bezahlt.',
   },
   features: {
@@ -108,7 +108,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Versiegelte Anlagenfotos',
-        desc: 'Der Techniker fotografiert aus der App am Ende des Einsatzes. Jedes Bild ist mit GPS und Zeitstempel verknüpft — nach der Erstellung manipulationssicher.',
+        desc: 'Der Techniker fotografiert aus der App am Ende des Einsatzes. Jedes Bild ist mit GPS und Zeitstempel verknüpft, nach der Erstellung manipulationssicher.',
       },
       {
         title: 'Automatische digitale Einsatzberichte',
@@ -135,8 +135,8 @@ const content: SettoreContent = {
   },
   trust: {
     title: 'Unsere Berichte können nicht verändert werden. Nicht von Ihnen. Nicht von uns.',
-    body: 'GeoTapp-Berichte werden vom System im Moment des Einsatzes erstellt. Es gibt kein Panel, um eine Zeit zu "korrigieren" oder ein Foto zu verschieben. Die Daten sind wie sie sind — digital signiert, mit echtem GPS.',
-    badge: 'Überprüfbar von jedem — ohne Zugang zu Ihrem Konto',
+    body: 'GeoTapp-Berichte werden vom System im Moment des Einsatzes erstellt. Es gibt kein Panel, um eine Zeit zu "korrigieren" oder ein Foto zu verschieben. Die Daten sind wie sie sind, digital signiert, mit echtem GPS.',
+    badge: 'Überprüfbar von jedem, ohne Zugang zu Ihrem Konto',
   },
   testimonial: {
     quote: 'Mit GeoTapp erfassen meine Techniker die Anlage sofort nach Abschluss. Kein Streit hält dem Bericht stand. Rechnungen werden bezahlt.',
@@ -153,7 +153,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Kann ich GeoTapp zur Dokumentation von Elektroanlagen einsetzen?',
-        a: 'Ja. Der Techniker fotografiert aus der App während oder am Ende des Einsatzes. Jedes Bild ist mit GPS, Zeitstempel und Auftrag verknüpft — im manipulationssicheren Bericht enthalten.',
+        a: 'Ja. Der Techniker fotografiert aus der App während oder am Ende des Einsatzes. Jedes Bild ist mit GPS, Zeitstempel und Auftrag verknüpft, im manipulationssicheren Bericht enthalten.',
       },
       {
         q: 'Hilft GeoTapp bei der Lösung von Kundenstreitigkeiten?',

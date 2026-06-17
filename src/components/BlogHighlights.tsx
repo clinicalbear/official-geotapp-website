@@ -44,7 +44,7 @@ function normalizeUrl(link: string, slug: string): string {
 async function fetchBlogPosts(locale: AppLocale, categoryId: number, limit = 3): Promise<BlogPost[]> {
   try {
     const res = await fetch(
-      // per_page=20 intentionally larger than limit=3 — locale filtering happens after fetch
+      // per_page=20 intentionally larger than limit=3, locale filtering happens after fetch
       // (WP REST API does not support per-language filtering via query param)
       `${WP}/wp-json/wp/v2/posts?categories=${categoryId}&per_page=20&_fields=id,slug,title,excerpt,date,link&status=publish`,
       {

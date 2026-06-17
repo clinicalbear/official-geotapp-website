@@ -127,7 +127,7 @@ export default function RoiMini({ dict, locale }: Props) {
 
   return (
     <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
-      {/* LEFT — pitch */}
+      {/* LEFT, pitch */}
       <div>
         <p className="geo-eyebrow mb-5">{t.pitch_kicker}</p>
         <h2 className="font-display font-extrabold text-[2rem] sm:text-[2.5rem] lg:text-[2.9rem] leading-[1.08] tracking-tight text-slate-900 mb-5">
@@ -146,7 +146,7 @@ export default function RoiMini({ dict, locale }: Props) {
         </ul>
       </div>
 
-      {/* RIGHT — calculator card */}
+      {/* RIGHT, calculator card */}
       <div className="geo-glass rounded-[28px] border border-border shadow-xl p-6 sm:p-8 lg:p-10">
         <h3 className="text-xl sm:text-2xl font-bold text-text-primary">{t.title}</h3>
         <p className="mt-2 text-sm text-text-secondary">{t.subtitle}</p>

@@ -142,7 +142,7 @@ export default function SurveyForm({ locale }: { locale: string }) {
       <h1 className="text-2xl font-extrabold tracking-tight text-slate-900 sm:text-3xl">{c.title}</h1>
       <p className="mt-2 text-slate-500">{c.intro}</p>
 
-      {/* Q1 — settore */}
+      {/* Q1, settore */}
       <fieldset className="mt-8">
         <legend className="mb-3 font-semibold text-slate-900">{c.q1.label}</legend>
         <div className="grid gap-2 sm:grid-cols-2">
@@ -152,7 +152,7 @@ export default function SurveyForm({ locale }: { locale: string }) {
         </div>
       </fieldset>
 
-      {/* Branch — smistamento A/B */}
+      {/* Branch, smistamento A/B */}
       <fieldset className="mt-8">
         <legend className="mb-3 font-semibold text-slate-900">{c.branch.label}</legend>
         <div className="grid gap-2">
@@ -161,7 +161,7 @@ export default function SurveyForm({ locale }: { locale: string }) {
         </div>
       </fieldset>
 
-      {/* Percorso A — chi svolge */}
+      {/* Percorso A, chi svolge */}
       {side === 'A' && (
         <div className="mt-8 space-y-8">
           <fieldset>
@@ -183,7 +183,7 @@ export default function SurveyForm({ locale }: { locale: string }) {
         </div>
       )}
 
-      {/* Percorso B — chi commissiona */}
+      {/* Percorso B, chi commissiona */}
       {side === 'B' && (
         <div className="mt-8 space-y-8">
           <fieldset>

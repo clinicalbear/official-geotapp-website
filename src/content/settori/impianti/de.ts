@@ -9,7 +9,7 @@ const content: SettoreContent = {
     badge: 'App für Installateure, Techniker und Serviceteams',
     h1_line1: 'Jeder Einsatz dokumentiert,',
     h1_line2: 'jede Stunde erfasst.',
-    subtitle: 'Für Elektro-, Sanitär-, HLK- und Anlageninstallateure. GeoTapp verbindet Flow + TimeTracker, um GPS, Stunden und Fotos für jeden Auftrag zu erfassen — vom Transporter ins Büro ohne Telefonate.',
+    subtitle: 'Für Elektro-, Sanitär-, HLK- und Anlageninstallateure. GeoTapp verbindet Flow + TimeTracker, um GPS, Stunden und Fotos für jeden Auftrag zu erfassen, vom Transporter ins Büro ohne Telefonate.',
     cta_primary: 'GeoTapp 14 Tage kostenlos testen',
     cta_note: 'Keine Verpflichtung. Keine Kreditkarte erforderlich.',
   },
@@ -18,7 +18,7 @@ const content: SettoreContent = {
     items: [
       {
         title: 'Kunden bestreiten die geleisteten Stunden',
-        desc: 'GPS-Stempelungen mit Zeitstempel als unwiderlegbarer Nachweis. Die Daten werden zum Zeitpunkt des Einsatzes zertifiziert — nachträglich nicht änderbar.',
+        desc: 'GPS-Stempelungen mit Zeitstempel als unwiderlegbarer Nachweis. Die Daten werden zum Zeitpunkt des Einsatzes zertifiziert, nachträglich nicht änderbar.',
       },
       {
         title: 'Techniker hinterhertelefonieren',
@@ -36,7 +36,7 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'Der Techniker stempelt per GPS beim Start',
-        desc: 'Öffnet den Auftrag vom Smartphone. GeoTapp erfasst reale GPS-Koordinaten, Zeitstempel und Fotos — vollautomatisch, manipulationssicher.',
+        desc: 'Öffnet den Auftrag vom Smartphone. GeoTapp erfasst reale GPS-Koordinaten, Zeitstempel und Fotos, vollautomatisch, manipulationssicher.',
       },
       {
         title: 'Stunden werden automatisch pro Auftrag erfasst',
@@ -60,7 +60,7 @@ const content: SettoreContent = {
       {
         label: 'Wer kann prüfen',
         competitor: 'Nur Ihr Büro',
-        geotapp: 'Sie, der Auftraggeber, ein Dritter — unabhängig',
+        geotapp: 'Sie, der Auftraggeber, ein Dritter, unabhängig',
       },
       {
         label: 'Bei Streitigkeiten',
@@ -91,7 +91,7 @@ const content: SettoreContent = {
       'Der Kunde bestreitet? Öffnen Sie den Bericht: Fotos, GPS, Zeitstempel, digitale Signatur.',
       'Sie senden ihn. Die Diskussion ist in einer Minute beendet.',
       'Die Zahlung ist sicher. Der Techniker ist geschützt.',
-      'Am Monatsende ist der Export fertig — Stunden und Aufträge automatisch zusammengefasst.',
+      'Am Monatsende ist der Export fertig - Stunden und Aufträge automatisch zusammengefasst.',
     ],
   },
   features: {
@@ -103,7 +103,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Versiegelte Fotonachweise',
-        desc: 'Der Techniker fotografiert direkt aus der App. Jedes Bild ist mit GPS und Zeitstempel an den Einsatz gekoppelt — nach Erstellung manipulationssicher.',
+        desc: 'Der Techniker fotografiert direkt aus der App. Jedes Bild ist mit GPS und Zeitstempel an den Einsatz gekoppelt, nach Erstellung manipulationssicher.',
       },
       {
         title: 'Multi-Standort-Auftragsverwaltung',
@@ -126,7 +126,7 @@ const content: SettoreContent = {
   testimonial: {
     quote: 'Kunden bestreiten die Stunden nicht mehr. Wir öffnen den Bericht mit GPS und Fotos und die Diskussion ist beendet.',
     author: 'Robert F.',
-    role: 'Inhaber, Anlagenbauunternehmen — 20 Techniker',
+    role: 'Inhaber, Anlagenbauunternehmen, 20 Techniker',
   },
   faq: {
     title: 'Häufig gestellte Fragen',
@@ -142,7 +142,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Wie beschleunige ich die Fakturierung abgeschlossener Einsätze?',
-        a: 'GeoTapp generiert automatisch den Export von Stunden und Aufträgen, bereit für Ihre Buchhaltungssoftware. Keine manuelle Eingabe, kein Fehlerrisiko — die Fakturierung wird zum Klick.',
+        a: 'GeoTapp generiert automatisch den Export von Stunden und Aufträgen, bereit für Ihre Buchhaltungssoftware. Keine manuelle Eingabe, kein Fehlerrisiko, die Fakturierung wird zum Klick.',
       },
     ],
   },
@@ -169,7 +169,7 @@ const content: SettoreContent = {
     },
     {
       question: 'Wie beschleunige ich die Fakturierung abgeschlossener Einsätze?',
-      answer: 'GeoTapp generiert automatisch den Export von Stunden und Aufträgen, bereit für Ihre Buchhaltungssoftware. Keine manuelle Eingabe, kein Fehlerrisiko — die Fakturierung wird zum Klick.',
+      answer: 'GeoTapp generiert automatisch den Export von Stunden und Aufträgen, bereit für Ihre Buchhaltungssoftware. Keine manuelle Eingabe, kein Fehlerrisiko, die Fakturierung wird zum Klick.',
     },
   ],
 };

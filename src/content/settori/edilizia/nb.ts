@@ -18,7 +18,7 @@ const content: SettoreContent = {
     items: [
       {
         title: 'Hvem var på byggeplassen og når?',
-        desc: 'Hver GPS-stempling er tidsstemplet og sertifisert. GeoTapp registrerer reelle koordinater i stemplingsøyeblikket — ikke lagt inn manuelt. Data kan verifiseres av prosjektledelsen når som helst.',
+        desc: 'Hver GPS-stempling er tidsstemplet og sertifisert. GeoTapp registrerer reelle koordinater i stemplingsøyeblikket, ikke lagt inn manuelt. Data kan verifiseres av prosjektledelsen når som helst.',
       },
       {
         title: 'Hvordan styrer du underentreprenører?',
@@ -36,11 +36,11 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'Arbeideren stempler inn ved byggeplassen',
-        desc: 'Starter skiftet fra smarttelefonen. GeoTapp registrerer reelle GPS-koordinater, tidsstempel og — om nødvendig — bilder. Helautomatisk, manipulasjonssikkert.',
+        desc: 'Starter skiftet fra smarttelefonen. GeoTapp registrerer reelle GPS-koordinater, tidsstempel og, om nødvendig, bilder. Helautomatisk, manipulasjonssikkert.',
       },
       {
         title: 'Anleggslederen ser alt i sanntid',
-        desc: 'Ett dashboard for alle lag og alle byggeplasser. Hvem som er til stede, hvor og siden når — uten å jage noen over telefonen.',
+        desc: 'Ett dashboard for alle lag og alle byggeplasser. Hvem som er til stede, hvor og siden når, uten å jage noen over telefonen.',
       },
       {
         title: 'Rapporten er klar for fremdriftsrapporter',
@@ -60,7 +60,7 @@ const content: SettoreContent = {
       {
         label: 'Hvem kan verifisere',
         competitor: 'Bare ditt kontor',
-        geotapp: 'Deg, prosjektledelsen, en tredjepart — uavhengig',
+        geotapp: 'Deg, prosjektledelsen, en tredjepart, uavhengig',
       },
       {
         label: 'Ved tvist',
@@ -103,7 +103,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Multi-byggeplass-dashboard',
-        desc: 'Overvåk flere byggeplasser fra én skjerm. Se i sanntid hvem som er til stede, hvor og siden når — for hver aktiv byggeplass.',
+        desc: 'Overvåk flere byggeplasser fra én skjerm. Se i sanntid hvem som er til stede, hvor og siden når, for hver aktiv byggeplass.',
       },
       {
         title: 'Automatiske fremdriftsrapporter',
@@ -111,11 +111,11 @@ const content: SettoreContent = {
       },
       {
         title: 'Underentreprenør-sporing',
-        desc: 'Hvert lag — internt eller eksternt — stempler inn fra smarttelefonen. Anleggslederen ser alle på ett dashboard uten å jage noen.',
+        desc: 'Hvert lag, internt eller eksternt, stempler inn fra smarttelefonen. Anleggslederen ser alle på ett dashboard uten å jage noen.',
       },
       {
         title: 'Forseglet bildebevis',
-        desc: 'Arbeidere tar bilder fra appen. Hvert bilde er koblet til byggeplassen med GPS og tidsstempel — manipulasjonssikkert etter generering.',
+        desc: 'Arbeidere tar bilder fra appen. Hvert bilde er koblet til byggeplassen med GPS og tidsstempel, manipulasjonssikkert etter generering.',
       },
       {
         title: 'Innebygd GDPR-samsvar',
@@ -126,7 +126,7 @@ const content: SettoreContent = {
   testimonial: {
     quote: 'Siden vi begynte å bruke GeoTapp, ber ikke prosjektledelsen lenger om oppmøtelister. Vi åpner rapporten og fremdriftsrapporten er klar.',
     author: 'Josef M.',
-    role: 'Eier, byggefirma — 35 ansatte',
+    role: 'Eier, byggefirma, 35 ansatte',
   },
   faq: {
     title: 'Ofte stilte spørsmål',
@@ -134,7 +134,7 @@ const content: SettoreContent = {
     items: [
       {
         q: 'Hvem var på byggeplassen og når?',
-        a: 'Hver GPS-stempling er tidsstemplet og sertifisert. GeoTapp registrerer reelle koordinater i stemplingsøyeblikket — ikke lagt inn manuelt. Data kan verifiseres av prosjektledelsen når som helst.',
+        a: 'Hver GPS-stempling er tidsstemplet og sertifisert. GeoTapp registrerer reelle koordinater i stemplingsøyeblikket, ikke lagt inn manuelt. Data kan verifiseres av prosjektledelsen når som helst.',
       },
       {
         q: 'Hvordan styrer du underentreprenører på byggeplassen?',
@@ -161,7 +161,7 @@ const content: SettoreContent = {
   schema_faq: [
     {
       question: 'Hvem var på byggeplassen og når?',
-      answer: 'Hver GPS-stempling er tidsstemplet og sertifisert. GeoTapp registrerer reelle koordinater i stemplingsøyeblikket — ikke lagt inn manuelt. Data kan verifiseres av prosjektledelsen når som helst.',
+      answer: 'Hver GPS-stempling er tidsstemplet og sertifisert. GeoTapp registrerer reelle koordinater i stemplingsøyeblikket, ikke lagt inn manuelt. Data kan verifiseres av prosjektledelsen når som helst.',
     },
     {
       question: 'Hvordan styrer du underentreprenører på byggeplassen?',

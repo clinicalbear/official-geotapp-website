@@ -2,14 +2,14 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App para Fontaneros y Técnicos HVAC | GeoTapp — GPS',
+    title: 'App para Fontaneros y Técnicos HVAC | GeoTapp - GPS',
     description: 'GeoTapp es la app para fontaneros y técnicos de calefacción: informes GPS verificados, fotos de instalaciones y registros inviolables. Cierra litigios con pruebas reales. Prueba gratis.',
   },
   hero: {
     badge: 'App para Fontaneros, Técnicos HVAC y Calefactores',
     h1_line1: 'App para fontaneros y técnicos HVAC:',
     h1_line2: 'informes GPS, pruebas fotográficas y cero disputas.',
-    subtitle: 'GeoTapp registra cada intervención de fontanería y calefacción con GPS, fotos y marcas de tiempo verificables. ¿El cliente disputa el trabajo? Muestra el informe — sin discusión.',
+    subtitle: 'GeoTapp registra cada intervención de fontanería y calefacción con GPS, fotos y marcas de tiempo verificables. ¿El cliente disputa el trabajo? Muestra el informe, sin discusión.',
     cta_primary: 'Empezar gratis',
     cta_note: 'Sin compromiso. Respuesta en 12 horas laborables.',
   },
@@ -32,7 +32,7 @@ const content: SettoreContent = {
   },
   workflow: {
     title: 'Cómo funciona en tres pasos',
-    subtitle: 'De la intervención a la oficina — sin llamadas.',
+    subtitle: 'De la intervención a la oficina, sin llamadas.',
     steps: [
       {
         title: 'El técnico registra la intervención',
@@ -57,7 +57,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Fotos selladas antes y después',
-        desc: 'Imágenes vinculadas a GPS y marca de tiempo — inviolables.',
+        desc: 'Imágenes vinculadas a GPS y marca de tiempo, inviolables.',
       },
       {
         title: 'Informes automáticos',

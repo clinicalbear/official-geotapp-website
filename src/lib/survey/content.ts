@@ -1,5 +1,5 @@
 /**
- * BOZZA CONTENUTO SONDAGGIO "Prova del lavoro" — 11 lingue, DUE PERCORSI.
+ * BOZZA CONTENUTO SONDAGGIO "Prova del lavoro", 11 lingue, DUE PERCORSI.
  * Stato: DA RIVEDERE (Michele controlli almeno IT e NB, che conosce).
  *
  * Struttura: anonimo. Q1 (settore) comune -> domanda BRANCH che smista ->

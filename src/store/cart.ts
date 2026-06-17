@@ -5,7 +5,7 @@ import type { CurrencyCode } from '@/lib/pricing';
 export interface CartItem {
   id: string;
   name: string;
-  /** EUR price — authoritative for backend / Stripe checkout. */
+  /** EUR price, authoritative for backend / Stripe checkout. */
   price: number;
   /** Display currency for the user's locale. */
   currency: CurrencyCode;

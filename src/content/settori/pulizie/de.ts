@@ -8,8 +8,8 @@ const content: SettoreContent = {
   hero: {
     badge: 'Software für Gebäudereinigung, Facility Management und Unterhaltsreinigung',
     h1_line1: 'Gebäudereinigung im Griff:',
-    h1_line2: 'Schichten, Fotodokumentation und geprüfte Stunden — auf jedem Objekt',
-    subtitle: 'GeoTapp verbindet Flow + TimeTracker für Teams, die auf mehrere Gebäude und Etagen verteilt sind. Ihre Reinigungskräfte stempeln per GPS-verifiziertem Smartphone; das Büro sieht, wer was, wo und wann gereinigt hat — mit Fotobeweisen. Keine Streitigkeiten mehr, volle Konformität mit dem Rahmentarifvertrag Gebäudereinigung und §17 MiLoG.',
+    h1_line2: 'Schichten, Fotodokumentation und geprüfte Stunden, auf jedem Objekt',
+    subtitle: 'GeoTapp verbindet Flow + TimeTracker für Teams, die auf mehrere Gebäude und Etagen verteilt sind. Ihre Reinigungskräfte stempeln per GPS-verifiziertem Smartphone; das Büro sieht, wer was, wo und wann gereinigt hat, mit Fotobeweisen. Keine Streitigkeiten mehr, volle Konformität mit dem Rahmentarifvertrag Gebäudereinigung und §17 MiLoG.',
     cta_primary: 'Demo anfragen',
     cta_note: 'Keine Bindung. Antwort innerhalb von 12 Geschäftsstunden.',
   },
@@ -32,7 +32,7 @@ const content: SettoreContent = {
   },
   workflow: {
     title: 'So funktioniert es in drei Schritten',
-    subtitle: 'Vom Objekt ins Büro — ohne Hinterhertelefoniern.',
+    subtitle: 'Vom Objekt ins Büro, ohne Hinterhertelefoniern.',
     steps: [
       {
         title: 'Reinigungskraft stempelt am Objekt',
@@ -40,7 +40,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Büro sieht alles in Echtzeit',
-        desc: 'Flow empfängt die Daten sofort. Der Objektleiter sieht, welches Gebäude bedient wurde, von wem, zu welcher Uhrzeit und mit welchen Fotobeweisen — ohne einen Anruf zu tätigen.',
+        desc: 'Flow empfängt die Daten sofort. Der Objektleiter sieht, welches Gebäude bedient wurde, von wem, zu welcher Uhrzeit und mit welchen Fotobeweisen, ohne einen Anruf zu tätigen.',
       },
       {
         title: 'Der Übergabebericht ist bereits fertig',
@@ -57,7 +57,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Vorher-Nachher-Fotodokumentation',
-        desc: 'Reinigungskräfte fotografieren direkt aus der App. Bilder mit Datum, Uhrzeit und GPS — unwiderlegbarer Nachweis der erbrachten Dienstleistung.',
+        desc: 'Reinigungskräfte fotografieren direkt aus der App. Bilder mit Datum, Uhrzeit und GPS, unwiderlegbarer Nachweis der erbrachten Dienstleistung.',
       },
       {
         title: 'Lohnexport für DATEV und Personio',
@@ -88,7 +88,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Ist die GPS-Standorterfassung der Reinigungskräfte DSGVO-konform?',
-        a: 'Ja. Die Standorterfassung läuft nur während der Schicht — beim Stempeln, nicht durchgehend. Vor dem Rollout informieren Sie die Mitarbeiter schriftlich nach Art. 13 DSGVO und §26 BDSG. GeoTapp liefert die fertige Mitarbeiter-Information mit Zweckangabe, Speicherdauer und Betroffenenrechten — abrufbar im Admin-Bereich. Die Datenschutzbehörden der Länder (LfD Bayern, BayLfD, HmbBfDI) haben dieses Modell mehrfach als rechtskonform bestätigt.',
+        a: 'Ja. Die Standorterfassung läuft nur während der Schicht, beim Stempeln, nicht durchgehend. Vor dem Rollout informieren Sie die Mitarbeiter schriftlich nach Art. 13 DSGVO und §26 BDSG. GeoTapp liefert die fertige Mitarbeiter-Information mit Zweckangabe, Speicherdauer und Betroffenenrechten, abrufbar im Admin-Bereich. Die Datenschutzbehörden der Länder (LfD Bayern, BayLfD, HmbBfDI) haben dieses Modell mehrfach als rechtskonform bestätigt.',
       },
       {
         q: 'Wie erfüllt GeoTapp die Anforderungen des Rahmentarifvertrags Gebäudereinigung (RTV) bei Schichtmodellen, Nachtzuschlägen und Sonderlöhnen?',
@@ -96,15 +96,15 @@ const content: SettoreContent = {
       },
       {
         q: 'Was passiert, wenn die Berufsgenossenschaft (BG BAU oder BGW) einen Unfall auf einem Objekt prüft?',
-        a: 'Sie können in unter 60 Sekunden nachweisen, welcher Mitarbeiter an welchem Ort, zu welcher Zeit, mit welchen Tätigkeiten betraut war. GeoTapp speichert GPS-Zeitstempel, Fotos der Arbeitsbereiche und durchgeführte Aufgaben — manipulationssicher und exportierbar als PDF mit kryptographischer Signatur. Die BG BAU-Inspektoren akzeptieren dieses Format als Nachweis nach §28 SGB VII.',
+        a: 'Sie können in unter 60 Sekunden nachweisen, welcher Mitarbeiter an welchem Ort, zu welcher Zeit, mit welchen Tätigkeiten betraut war. GeoTapp speichert GPS-Zeitstempel, Fotos der Arbeitsbereiche und durchgeführte Aufgaben, manipulationssicher und exportierbar als PDF mit kryptographischer Signatur. Die BG BAU-Inspektoren akzeptieren dieses Format als Nachweis nach §28 SGB VII.',
       },
       {
         q: 'Wie verhindert GeoTapp den klassischen "Geisterreiniger"-Betrug (Mitarbeiter stempelt ein, ist aber nicht vor Ort)?',
-        a: 'Drei Schutzschichten: Erstens prüft GeoTapp die GPS-Position gegen einen Geofence pro Objekt — Stempeln außerhalb des Geofence wird automatisch markiert. Zweitens erkennt die App Fake-GPS-Apps und gemockte Standorte (häufig bei Android-Mods) und blockiert sie. Drittens kann optional ein Foto-Selfie als Stempelnachweis verlangt werden. Kombiniert reduziert das den Geisterstunden-Betrug nach Kundendaten um über 95%.',
+        a: 'Drei Schutzschichten: Erstens prüft GeoTapp die GPS-Position gegen einen Geofence pro Objekt - Stempeln außerhalb des Geofence wird automatisch markiert. Zweitens erkennt die App Fake-GPS-Apps und gemockte Standorte (häufig bei Android-Mods) und blockiert sie. Drittens kann optional ein Foto-Selfie als Stempelnachweis verlangt werden. Kombiniert reduziert das den Geisterstunden-Betrug nach Kundendaten um über 95%.',
       },
       {
         q: 'Welche Mindestlohngesetz-Pflichten (MiLoG, §17) löst GeoTapp automatisch?',
-        a: '§17 MiLoG schreibt für die Gebäudereinigung lückenlose Aufzeichnung von Beginn, Ende und Dauer der täglichen Arbeitszeit vor — spätestens am siebten Folgetag, aufbewahrungspflichtig zwei Jahre. GeoTapp erstellt diese Aufzeichnung in Echtzeit (nicht "nachträglich" wie bei Excel oder Papier), speichert sie mit unveränderbarem Zeitstempel und stellt sie für Zoll-Finanzkontrolle Schwarzarbeit (FKS) als signiertes PDF bereit. Bußgelder bis 500.000 € pro Verstoß werden so strukturell vermieden.',
+        a: '§17 MiLoG schreibt für die Gebäudereinigung lückenlose Aufzeichnung von Beginn, Ende und Dauer der täglichen Arbeitszeit vor, spätestens am siebten Folgetag, aufbewahrungspflichtig zwei Jahre. GeoTapp erstellt diese Aufzeichnung in Echtzeit (nicht "nachträglich" wie bei Excel oder Papier), speichert sie mit unveränderbarem Zeitstempel und stellt sie für Zoll-Finanzkontrolle Schwarzarbeit (FKS) als signiertes PDF bereit. Bußgelder bis 500.000 € pro Verstoß werden so strukturell vermieden.',
       },
       {
         q: 'Funktioniert GeoTapp mit Subunternehmern und Personaldienstleistern?',

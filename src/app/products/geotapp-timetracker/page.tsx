@@ -218,13 +218,13 @@ export default function GeoTappApp() {
           icon: Map,
           title: 'Lavoro verificabile sul campo',
           description:
-            'Ingresso e uscita sono collegati a coordinate, indirizzo e orario, cosi ogni sessione diventa un evento operativo verificabile.',
+            'Ingresso e uscita sono collegati a coordinate, indirizzo e orario, così ogni sessione diventa un evento operativo verificabile.',
         },
         {
           icon: Camera,
-          title: 'Prove che il cliente puo controllare',
+          title: 'Prove che il cliente può controllare',
           description:
-            'Gli operatori scattano foto, aggiungono note e inviano prove strutturate del lavoro svolto, con una garanzia di veridicita piu forte verso il cliente.',
+            'Gli operatori scattano foto, aggiungono note e inviano prove strutturate del lavoro svolto, con una garanzia di veridicita più forte verso il cliente.',
         },
         {
           icon: FileArchive,
@@ -269,7 +269,7 @@ export default function GeoTappApp() {
     ? [
         {
           icon: CheckCircle2,
-          title: 'Molto piu di una semplice timbratura',
+          title: 'Molto più di una semplice timbratura',
           description:
             'TimeTracker copre dettaglio commessa, report, comunicazioni, richieste, sessioni lavoro e responsabilita operativa, non solo presenze.',
         },
@@ -277,7 +277,7 @@ export default function GeoTappApp() {
           icon: MessageSquare,
           title: 'Meno contestazioni tra campo, ufficio e cliente',
           description:
-            'L’operativita del campo non resta isolata: l’ufficio segue avanzamento, controlla prove e risponde al cliente con fatti prima che nascano discussioni.',
+            'L’operatività del campo non resta isolata: l’ufficio segue avanzamento, controlla prove e risponde al cliente con fatti prima che nascano discussioni.',
         },
       ]
     : [
@@ -384,7 +384,7 @@ export default function GeoTappApp() {
         )}
       </AnimatePresence>
 
-      {/* HERO SECTION (LIGHT) — removed motion.div wrapper because the
+      {/* HERO SECTION (LIGHT), removed motion.div wrapper because the
           initial opacity:0, scale:0.9 was the LCP killer (PSI mobile measured
           9.4s waiting for the H1 logo to fade in). Plain <div> renders the
           hero instantly. Desktop users still get smooth UX from the rest of
@@ -423,8 +423,8 @@ export default function GeoTappApp() {
               <Shield size={20} className="text-green-600" />
               <span className="text-base font-bold text-green-800">
                 {isItalian
-                  ? 'Timbri in regola dal primo giorno — o non timbri.*'
-                  : 'Compliant from day one — or you don\'t clock in.*'}
+                  ? 'Timbri in regola dal primo giorno, o non timbri.*'
+                  : 'Compliant from day one, or you don\'t clock in.*'}
               </span>
             </div>
             <p className="text-xs text-slate-400 max-w-xl text-center leading-relaxed">
@@ -435,9 +435,9 @@ export default function GeoTappApp() {
           </div>
 
           <div className="relative mx-auto mt-16 max-w-6xl transition-transform duration-200 hover:scale-[1.01]">
-            {/* TimeTracker app screenshots — side by side, cropped to 16/9.
+            {/* TimeTracker app screenshots, side by side, cropped to 16/9.
                 NO priority: the logoTT in <h1> is the actual LCP candidate.
-                Removing priority from TT1/TT2 frees mobile bandwidth — LCP was
+                Removing priority from TT1/TT2 frees mobile bandwidth - LCP was
                 9.4s on mobile because 3 priority images contended for the same
                 slow-network slots. Plain CSS hover replaces the framer-motion
                 wrapper (no extra JS for a 1.01x scale). */}
@@ -445,7 +445,7 @@ export default function GeoTappApp() {
               <div className="relative w-1/2 h-full">
                 <Image
                   src="/TT1.webp"
-                  alt="GeoTapp TimeTracker — Dashboard"
+                  alt="GeoTapp TimeTracker - Dashboard"
                   fill
                   className="object-cover object-top"
                   sizes="(max-width: 768px) 50vw, 600px"
@@ -455,7 +455,7 @@ export default function GeoTappApp() {
               <div className="relative w-1/2 h-full border-l border-slate-200">
                 <Image
                   src="/TT2.webp"
-                  alt="GeoTapp TimeTracker — Menu"
+                  alt="GeoTapp TimeTracker - Menu"
                   fill
                   className="object-cover object-top"
                   sizes="(max-width: 768px) 50vw, 600px"
@@ -536,7 +536,7 @@ export default function GeoTappApp() {
           </h2>
           <p className="mt-5 text-xl text-slate-500">
             {isItalian
-              ? 'Non solo presenze: raccoglie lavoro verificabile sul campo, prove affidabili per il cliente e uno storico operativo che l’ufficio puo davvero usare.'
+              ? 'Non solo presenze: raccoglie lavoro verificabile sul campo, prove affidabili per il cliente e uno storico operativo che l’ufficio può davvero usare.'
               : 'Not just attendance: it captures verifiable field work, reliable customer proof and the operational history the office can trust.'}
           </p>
         </div>

@@ -32,7 +32,7 @@ const content: SettoreContent = {
   },
   workflow: {
     title: 'Sådan fungerer det i tre trin',
-    subtitle: 'Fra varebilen til kontoret — uden telefonopkald.',
+    subtitle: 'Fra varebilen til kontoret, uden telefonopkald.',
     steps: [
       {
         title: 'Teknikeren stempler ind på stedet',

@@ -2,14 +2,14 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App for Rørleggere & VVS-installatører | GeoTapp — GPS',
+    title: 'App for Rørleggere & VVS-installatører | GeoTapp - GPS',
     description: 'GeoTapp er appen for rørleggere og VVS-installatører: GPS-verifiserte arbeidsrapporter, installasjonsbilder og manipuleringssikre registreringer. Lukk tvister med ekte bevis. Prøv gratis.',
   },
   hero: {
     badge: 'App for Rørleggere, VVS-installatører og Varmeteknikere',
     h1_line1: 'App for rørleggere og VVS-installatører:',
     h1_line2: 'GPS-rapporter, fotobevis og null tvister.',
-    subtitle: 'GeoTapp registrerer hvert VVS- og varmearbeid med GPS, bilder og verifiserbare tidsstempler. Kunden bestrider arbeidet? Vis rapporten — ingen diskusjon. Dine teknikere er beskyttet, dine fakturaer også.',
+    subtitle: 'GeoTapp registrerer hvert VVS- og varmearbeid med GPS, bilder og verifiserbare tidsstempler. Kunden bestrider arbeidet? Vis rapporten, ingen diskusjon. Dine teknikere er beskyttet, dine fakturaer også.',
     cta_primary: 'Start gratis',
     cta_note: 'Uten forpliktelse. Svar innen 12 arbeidstimer.',
   },
@@ -32,7 +32,7 @@ const content: SettoreContent = {
   },
   workflow: {
     title: 'Slik fungerer det i tre trinn',
-    subtitle: 'Fra arbeidet til kontoret — uten telefonsamtaler.',
+    subtitle: 'Fra arbeidet til kontoret, uten telefonsamtaler.',
     steps: [
       {
         title: 'Teknikeren registrerer arbeidet',
@@ -57,7 +57,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Forseglede bilder før og etter',
-        desc: 'Bilder koblet til GPS og tidsstempel — umanipulerbare.',
+        desc: 'Bilder koblet til GPS og tidsstempel, umanipulerbare.',
       },
       {
         title: 'Automatiske rapporter',

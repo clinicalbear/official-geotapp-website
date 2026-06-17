@@ -26,7 +26,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Les feuilles de présence papier sont peu fiables ?',
-        desc: 'Suivi automatique depuis le smartphone, aucune saisie manuelle. Les données sont ce qu\'elles sont — et ne peuvent pas être modifiées.',
+        desc: 'Suivi automatique depuis le smartphone, aucune saisie manuelle. Les données sont ce qu\'elles sont, et ne peuvent pas être modifiées.',
       },
       {
         title: 'Difficile de coordonner plusieurs équipes ?',
@@ -57,15 +57,15 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'L\'agent pointe avec GPS',
-        desc: 'Ouvre et ferme son service depuis le smartphone. GeoTapp enregistre les coordonnées GPS réelles, photos et horodatage — entièrement automatique, infalsifiable.',
+        desc: 'Ouvre et ferme son service depuis le smartphone. GeoTapp enregistre les coordonnées GPS réelles, photos et horodatage, entièrement automatique, infalsifiable.',
       },
       {
         title: 'Le responsable voit tout en temps réel',
-        desc: 'Un seul tableau de bord pour tous les sites. Sachez exactement qui est sur place, où et depuis quand — sans courir après personne.',
+        desc: 'Un seul tableau de bord pour tous les sites. Sachez exactement qui est sur place, où et depuis quand, sans courir après personne.',
       },
       {
         title: 'Le rapport est prêt automatiquement',
-        desc: 'À la fin du service, le système génère un rapport scellé avec GPS, photos et signature numérique. Envoyez-le au client — vérifiable de manière autonome.',
+        desc: 'À la fin du service, le système génère un rapport scellé avec GPS, photos et signature numérique. Envoyez-le au client, vérifiable de manière autonome.',
       },
     ],
   },
@@ -82,7 +82,7 @@ const content: SettoreContent = {
       {
         label: 'Qui peut vérifier',
         competitor: 'Seulement votre bureau',
-        geotapp: 'Vous, le donneur d\'ordre, un tiers — en autonomie',
+        geotapp: 'Vous, le donneur d\'ordre, un tiers, en autonomie',
       },
       {
         label: 'En cas de litige',
@@ -123,7 +123,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Documentation photographique',
-        desc: 'Les agents photographient directement depuis l\'app. Chaque image est géolocalisée avec horodatage — preuve visuelle du travail effectué.',
+        desc: 'Les agents photographient directement depuis l\'app. Chaque image est géolocalisée avec horodatage, preuve visuelle du travail effectué.',
       },
       {
         title: 'Votre personnel est protégé',
@@ -136,7 +136,7 @@ const content: SettoreContent = {
     quote:
       'Depuis que nous utilisons GeoTapp, les litiges clients se résolvent en une minute. Nous envoyons le rapport avec photos et GPS, et la discussion s\'arrête là. Nous n\'avons perdu aucun contrat en un an.',
     author: 'Sophie M.',
-    role: 'Gérante, entreprise de nettoyage industriel — France',
+    role: 'Gérante, entreprise de nettoyage industriel - France',
   },
 
   faq: {
@@ -145,7 +145,7 @@ const content: SettoreContent = {
     items: [
       {
         q: 'Comment fonctionne le pointage GPS pour les entreprises de nettoyage ?',
-        a: 'L\'agent pointe entrée et sortie depuis son smartphone. GeoTapp enregistre les coordonnées GPS à ce moment — pas de saisie manuelle. Chaque pointage est certifié avec horodatage et position vérifiable par le donneur d\'ordre.',
+        a: 'L\'agent pointe entrée et sortie depuis son smartphone. GeoTapp enregistre les coordonnées GPS à ce moment, pas de saisie manuelle. Chaque pointage est certifié avec horodatage et position vérifiable par le donneur d\'ordre.',
       },
       {
         q: 'Puis-je prouver au client que le service a été effectué ?',
@@ -165,7 +165,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Combien coûte GeoTapp pour une entreprise de nettoyage ?',
-        a: 'Les plans démarrent à quelques euros par agent par mois. Essai gratuit de 14 jours — sans engagement.',
+        a: 'Les plans démarrent à quelques euros par agent par mois. Essai gratuit de 14 jours, sans engagement.',
       },
     ],
   },
@@ -190,7 +190,7 @@ const content: SettoreContent = {
     {
       question: 'Comment fonctionne le pointage GPS pour les entreprises de nettoyage ?',
       answer:
-        'L\'agent pointe depuis son smartphone. GeoTapp enregistre les coordonnées GPS — pas de saisie manuelle. Chaque pointage est certifié avec horodatage et position vérifiable par le donneur d\'ordre.',
+        'L\'agent pointe depuis son smartphone. GeoTapp enregistre les coordonnées GPS, pas de saisie manuelle. Chaque pointage est certifié avec horodatage et position vérifiable par le donneur d\'ordre.',
     },
     {
       question: 'Puis-je prouver au client que le service a été effectué ?',

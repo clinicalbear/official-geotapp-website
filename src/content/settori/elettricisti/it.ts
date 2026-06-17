@@ -2,14 +2,14 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App per Elettricisti | GeoTapp — Rapportini GPS e Prove',
+    title: 'App per Elettricisti | GeoTapp - Rapportini GPS e Prove',
     description: 'GeoTapp è l\'app per elettricisti: rapportini GPS verificati, foto degli impianti e report non alterabili. Chiudi le contestazioni con prove reali. Prova gratis.',
   },
   hero: {
     badge: 'App per Elettricisti e Impiantisti Elettrici',
     h1_line1: 'App per elettricisti:',
     h1_line2: 'rapportini GPS, prove fotografiche e zero contestazioni.',
-    subtitle: 'GeoTapp registra ogni intervento elettrico con GPS, foto e timestamp verificabili. Il cliente contesta? Mostri il rapportino — non discuti. Il tuo tecnico è protetto, il tuo fatturato anche.',
+    subtitle: 'GeoTapp registra ogni intervento elettrico con GPS, foto e timestamp verificabili. Il cliente contesta? Mostri il rapportino, non discuti. Il tuo tecnico è protetto, il tuo fatturato anche.',
     cta_primary: 'Inizia subito gratuitamente!',
     cta_note: 'Nessun vincolo. Risposta entro 12 ore lavorative.',
   },
@@ -96,7 +96,7 @@ const content: SettoreContent = {
   },
   scenario: {
     title: 'Caso reale',
-    body: 'Un cliente contesta il completamento dell\'impianto elettrico e rifiuta di pagare l\'ultima fattura. Con GeoTapp apri il rapportino: foto del quadro completato, orario GPS di inizio e fine lavori, note tecniche del tecnico — tutto generato in automatico dallo smartphone sul posto.',
+    body: 'Un cliente contesta il completamento dell\'impianto elettrico e rifiuta di pagare l\'ultima fattura. Con GeoTapp apri il rapportino: foto del quadro completato, orario GPS di inizio e fine lavori, note tecniche del tecnico, tutto generato in automatico dallo smartphone sul posto.',
     resolution: 'La contestazione cade. La fattura viene pagata per intero.',
   },
   features: {
@@ -108,7 +108,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Prove fotografiche dell\'impianto',
-        desc: 'Il tecnico scatta foto dall\'app al termine dell\'intervento. Ogni immagine è collegata a GPS e timestamp — non alterabile dopo la generazione.',
+        desc: 'Il tecnico scatta foto dall\'app al termine dell\'intervento. Ogni immagine è collegata a GPS e timestamp, non alterabile dopo la generazione.',
       },
       {
         title: 'Rapportini digitali automatici',
@@ -135,8 +135,8 @@ const content: SettoreContent = {
   },
   trust: {
     title: 'I nostri report non si possono alterare. Non da te. Non da noi.',
-    body: 'I report GeoTapp sono generati dal sistema nel momento dell\'intervento. Non esiste un pannello per "correggere" un orario o spostare una foto. Il dato è quello — firmato digitalmente, con GPS reale.',
-    badge: 'Verificabile da chiunque — senza accesso al tuo account',
+    body: 'I report GeoTapp sono generati dal sistema nel momento dell\'intervento. Non esiste un pannello per "correggere" un orario o spostare una foto. Il dato è quello, firmato digitalmente, con GPS reale.',
+    badge: 'Verificabile da chiunque, senza accesso al tuo account',
   },
   testimonial: {
     quote: 'Con GeoTapp i miei tecnici registrano l\'impianto appena finito. Nessuna contestazione regge più. Le fatture vengono pagate.',
@@ -153,7 +153,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Posso usare GeoTapp per documentare impianti e interventi elettrici?',
-        a: 'Sì. Il tecnico scatta foto dall\'app durante o al termine dell\'intervento. Ogni immagine è collegata a GPS, timestamp e commessa — inclusa nel rapportino non alterabile.',
+        a: 'Sì. Il tecnico scatta foto dall\'app durante o al termine dell\'intervento. Ogni immagine è collegata a GPS, timestamp e commessa, inclusa nel rapportino non alterabile.',
       },
       {
         q: 'GeoTapp aiuta a risolvere le contestazioni dei clienti?',

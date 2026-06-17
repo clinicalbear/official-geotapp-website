@@ -169,22 +169,22 @@ const Sectiondivider = ({ title }: { title: string }) => (
 const CAROUSEL_SLIDES = [
   {
     src: '/screen_dashboard.webp',
-    alt_it: 'GeoTapp Flow — Dashboard con KPI e moduli operativi',
-    alt_en: 'GeoTapp Flow — Dashboard with KPIs and operational modules',
+    alt_it: 'GeoTapp Flow - Dashboard con KPI e moduli operativi',
+    alt_en: 'GeoTapp Flow - Dashboard with KPIs and operational modules',
     label_it: 'Dashboard KPI e moduli operativi',
     label_en: 'KPI Dashboard & Operational Modules',
   },
   {
     src: '/screen_live_map.webp',
-    alt_it: 'GeoTapp Flow — Mappa GPS live con timbrature geolocalizzate',
-    alt_en: 'GeoTapp Flow — Live GPS map with geolocated clock-ins',
-    label_it: 'Mappa GPS live — Geolocalizzazione in tempo reale',
-    label_en: 'Live GPS Map — Real-time Geolocation',
+    alt_it: 'GeoTapp Flow - Mappa GPS live con timbrature geolocalizzate',
+    alt_en: 'GeoTapp Flow - Live GPS map with geolocated clock-ins',
+    label_it: 'Mappa GPS live - Geolocalizzazione in tempo reale',
+    label_en: 'Live GPS Map - Real-time Geolocation',
   },
   {
     src: '/schermataFlow.webp',
-    alt_it: 'GeoTapp Flow — Pannello operativo',
-    alt_en: 'GeoTapp Flow — Operational dashboard',
+    alt_it: 'GeoTapp Flow - Pannello operativo',
+    alt_en: 'GeoTapp Flow - Operational dashboard',
     label_it: 'Dashboard operativa',
     label_en: 'Operational Dashboard',
   },
@@ -299,70 +299,70 @@ const GPS_PRIVACY_CONTENT: Record<string, {
 }> = {
   it: {
     title: 'Liberatoria GPS automatica per ogni dipendente',
-    p1: 'Quando inviti un nuovo dipendente, Flow genera automaticamente l\'informativa privacy GPS conforme al GDPR e gliela invia per la firma digitale. Il lavoratore compila i propri dati, legge il documento e firma con un click — tutto via web, senza carta.',
+    p1: 'Quando inviti un nuovo dipendente, Flow genera automaticamente l\'informativa privacy GPS conforme al GDPR e gliela invia per la firma digitale. Il lavoratore compila i propri dati, legge il documento e firma con un click, tutto via web, senza carta.',
     p2: 'Il PDF firmato viene archiviato automaticamente e tu vedi in tempo reale chi ha firmato e chi no. Niente pi\u00f9 fogli volanti, niente rischio di sanzioni: ogni consenso \u00e8 tracciato con data, ora e firma digitale.',
     legal: 'Conforme all\'Art. 4 dello Statuto dei Lavoratori e alle linee guida del Garante Privacy. Flow genera anche il modello per l\'accordo sindacale o l\'autorizzazione dell\'Ispettorato del Lavoro (ITL), obbligatori prima di attivare la geolocalizzazione.',
     tags: ['Art. 4 Statuto Lavoratori', 'GDPR art. 13', 'Accordo sindacale / ITL', 'Firma digitale tracciata', 'PDF archiviato', 'Zero carta'],
   },
   en: {
     title: 'Automatic GPS privacy consent for every employee',
-    p1: 'When you invite a new employee, Flow automatically generates a GDPR-compliant GPS privacy notice and sends it for digital signature. The worker fills in their details, reads the document and signs with one click — all via web, no paper.',
+    p1: 'When you invite a new employee, Flow automatically generates a GDPR-compliant GPS privacy notice and sends it for digital signature. The worker fills in their details, reads the document and signs with one click, all via web, no paper.',
     p2: 'The signed PDF is archived automatically and you can see in real time who has signed and who hasn\'t. No more loose papers, no risk of fines: every consent is logged with date, time and digital signature.',
     legal: 'Compliant with EU GDPR Art. 13 and Art. 6. The notice covers legal basis, data minimization (GPS only at clock-in/out, no continuous tracking), retention periods and data subject rights.',
     tags: ['GDPR Art. 13 compliant', 'Digital signature tracked', 'Archived PDF', 'No continuous tracking', 'Zero paper'],
   },
   de: {
     title: 'Automatische GPS-Datenschutzerkl\u00e4rung f\u00fcr jeden Mitarbeiter',
-    p1: 'Wenn Sie einen neuen Mitarbeiter einladen, erstellt Flow automatisch einen DSGVO-konformen GPS-Datenschutzhinweis und sendet ihn zur digitalen Unterschrift. Der Mitarbeiter tr\u00e4gt seine Daten ein, liest das Dokument und unterschreibt mit einem Klick — alles online, ohne Papier.',
+    p1: 'Wenn Sie einen neuen Mitarbeiter einladen, erstellt Flow automatisch einen DSGVO-konformen GPS-Datenschutzhinweis und sendet ihn zur digitalen Unterschrift. Der Mitarbeiter tr\u00e4gt seine Daten ein, liest das Dokument und unterschreibt mit einem Klick, alles online, ohne Papier.',
     p2: 'Das unterschriebene PDF wird automatisch archiviert und Sie sehen in Echtzeit, wer unterschrieben hat und wer nicht. Keine losen Zettel, kein Bu\u00dfgeldrisiko: jede Zustimmung ist mit Datum, Uhrzeit und digitaler Unterschrift protokolliert.',
     legal: 'Konform mit DSGVO und BDSG (Bundesdatenschutzgesetz). Flow ber\u00fccksichtigt die Mitbestimmungsrechte des Betriebsrats gem\u00e4\u00df BetrVG \u00a7 87 Abs. 1 Nr. 6 bei der Einf\u00fchrung technischer \u00dcberwachungseinrichtungen.',
     tags: ['DSGVO-konform', 'BDSG', 'Betriebsrat (BetrVG \u00a7 87)', 'Digitale Unterschrift', 'PDF archiviert', 'Kein Papier'],
   },
   fr: {
     title: 'Autorisation GPS automatique pour chaque salari\u00e9',
-    p1: 'Lorsque vous invitez un nouveau salari\u00e9, Flow g\u00e9n\u00e8re automatiquement l\'avis de confidentialit\u00e9 GPS conforme au RGPD et l\'envoie pour signature num\u00e9rique. Le salari\u00e9 remplit ses donn\u00e9es, lit le document et signe en un clic — tout en ligne, sans papier.',
+    p1: 'Lorsque vous invitez un nouveau salari\u00e9, Flow g\u00e9n\u00e8re automatiquement l\'avis de confidentialit\u00e9 GPS conforme au RGPD et l\'envoie pour signature num\u00e9rique. Le salari\u00e9 remplit ses donn\u00e9es, lit le document et signe en un clic, tout en ligne, sans papier.',
     p2: 'Le PDF sign\u00e9 est archiv\u00e9 automatiquement et vous voyez en temps r\u00e9el qui a sign\u00e9 et qui ne l\'a pas fait. Plus de feuilles volantes, plus de risque de sanctions : chaque consentement est trac\u00e9 avec date, heure et signature num\u00e9rique.',
     legal: 'Conforme au RGPD et aux recommandations de la CNIL sur la g\u00e9olocalisation des salari\u00e9s. Le dispositif respecte le Code du travail (art. L.1121-1) et le principe de proportionnalit\u00e9 : pas de suivi continu, uniquement au pointage.',
     tags: ['RGPD conforme', 'CNIL', 'Code du travail', 'Signature num\u00e9rique', 'PDF archiv\u00e9', 'Z\u00e9ro papier'],
   },
   nl: {
     title: 'Automatische GPS-privacyverklaring voor elke medewerker',
-    p1: 'Wanneer u een nieuwe medewerker uitnodigt, genereert Flow automatisch een AVG-conforme GPS-privacyverklaring en stuurt deze ter digitale ondertekening. De medewerker vult zijn gegevens in, leest het document en ondertekent met \u00e9\u00e9n klik — alles online, zonder papier.',
+    p1: 'Wanneer u een nieuwe medewerker uitnodigt, genereert Flow automatisch een AVG-conforme GPS-privacyverklaring en stuurt deze ter digitale ondertekening. De medewerker vult zijn gegevens in, leest het document en ondertekent met \u00e9\u00e9n klik, alles online, zonder papier.',
     p2: 'De ondertekende PDF wordt automatisch gearchiveerd en u ziet in realtime wie heeft getekend en wie niet. Geen losse papieren, geen risico op boetes: elke toestemming is vastgelegd met datum, tijd en digitale handtekening.',
     legal: 'Conform de AVG en de richtlijnen van de Autoriteit Persoonsgegevens (AP). Een DPIA (Data Protection Impact Assessment) is standaard inbegrepen bij GPS-verwerking van werknemers.',
     tags: ['AVG-conform', 'Autoriteit Persoonsgegevens', 'DPIA inbegrepen', 'Digitale handtekening', 'PDF gearchiveerd', 'Geen papier'],
   },
   es: {
     title: 'Autorizaci\u00f3n GPS autom\u00e1tica para cada empleado',
-    p1: 'Cuando invitas a un nuevo empleado, Flow genera autom\u00e1ticamente el aviso de privacidad GPS conforme al RGPD y lo env\u00eda para firma digital. El trabajador completa sus datos, lee el documento y firma con un clic — todo online, sin papel.',
+    p1: 'Cuando invitas a un nuevo empleado, Flow genera autom\u00e1ticamente el aviso de privacidad GPS conforme al RGPD y lo env\u00eda para firma digital. El trabajador completa sus datos, lee el documento y firma con un clic, todo online, sin papel.',
     p2: 'El PDF firmado se archiva autom\u00e1ticamente y puedes ver en tiempo real qui\u00e9n ha firmado y qui\u00e9n no. Sin papeles sueltos, sin riesgo de sanciones: cada consentimiento queda registrado con fecha, hora y firma digital.',
     legal: 'Conforme al RGPD y a la LOPDGDD (Ley Org\u00e1nica 3/2018). Flow contempla la obligaci\u00f3n de informar al comit\u00e9 de empresa seg\u00fan el Estatuto de los Trabajadores (art. 64.5).',
     tags: ['RGPD conforme', 'LOPDGDD', 'Comit\u00e9 de empresa', 'Firma digital', 'PDF archivado', 'Cero papel'],
   },
   pt: {
     title: 'Autoriza\u00e7\u00e3o GPS autom\u00e1tica para cada colaborador',
-    p1: 'Quando convida um novo colaborador, o Flow gera automaticamente o aviso de privacidade GPS conforme ao RGPD e envia-o para assinatura digital. O colaborador preenche os seus dados, l\u00ea o documento e assina com um clique — tudo online, sem papel.',
+    p1: 'Quando convida um novo colaborador, o Flow gera automaticamente o aviso de privacidade GPS conforme ao RGPD e envia-o para assinatura digital. O colaborador preenche os seus dados, l\u00ea o documento e assina com um clique, tudo online, sem papel.',
     p2: 'O PDF assinado \u00e9 arquivado automaticamente e voc\u00ea v\u00ea em tempo real quem assinou e quem n\u00e3o assinou. Sem pap\u00e9is soltos, sem risco de san\u00e7\u00f5es: cada consentimento fica registado com data, hora e assinatura digital.',
     legal: 'Conforme ao RGPD e \u00e0s orienta\u00e7\u00f5es da CNPD (Comiss\u00e3o Nacional de Prote\u00e7\u00e3o de Dados). O C\u00f3digo do Trabalho (art. 20.\u00ba) exige proporcionalidade e informa\u00e7\u00e3o pr\u00e9via ao trabalhador.',
     tags: ['RGPD conforme', 'CNPD', 'C\u00f3digo do Trabalho', 'Assinatura digital', 'PDF arquivado', 'Zero papel'],
   },
   da: {
     title: 'Automatisk GPS-samtykkeerklaring for hver medarbejder',
-    p1: 'N\u00e5r du inviterer en ny medarbejder, genererer Flow automatisk en GDPR-kompatibel GPS-privatlivserkl\u00e6ring og sender den til digital underskrift. Medarbejderen udfylder sine data, l\u00e6ser dokumentet og underskriver med \u00e9t klik — alt online, uden papir.',
+    p1: 'N\u00e5r du inviterer en ny medarbejder, genererer Flow automatisk en GDPR-kompatibel GPS-privatlivserkl\u00e6ring og sender den til digital underskrift. Medarbejderen udfylder sine data, l\u00e6ser dokumentet og underskriver med \u00e9t klik, alt online, uden papir.',
     p2: 'Den underskrevne PDF arkiveres automatisk, og du kan i realtid se, hvem der har underskrevet, og hvem der ikke har. Ingen l\u00f8se papirer, ingen risiko for b\u00f8der: hvert samtykke logges med dato, tid og digital underskrift.',
     legal: 'I overensstemmelse med GDPR og Datatilsynets retningslinjer for overv\u00e5gning af medarbejdere i Danmark. Kun GPS ved stempling, ingen kontinuerlig sporing.',
     tags: ['GDPR-kompatibel', 'Datatilsynet', 'Digital underskrift', 'PDF arkiveret', 'Intet papir'],
   },
   sv: {
     title: 'Automatiskt GPS-sekretessmedgivande f\u00f6r varje anst\u00e4lld',
-    p1: 'N\u00e4r du bjuder in en ny anst\u00e4lld genererar Flow automatiskt ett GDPR-kompatibelt GPS-sekretessmeddelande och skickar det f\u00f6r digital signatur. Den anst\u00e4llde fyller i sina uppgifter, l\u00e4ser dokumentet och signerar med ett klick — allt online, utan papper.',
+    p1: 'N\u00e4r du bjuder in en ny anst\u00e4lld genererar Flow automatiskt ett GDPR-kompatibelt GPS-sekretessmeddelande och skickar det f\u00f6r digital signatur. Den anst\u00e4llde fyller i sina uppgifter, l\u00e4ser dokumentet och signerar med ett klick, allt online, utan papper.',
     p2: 'Den signerade PDF:en arkiveras automatiskt och du ser i realtid vem som har signerat och vem som inte har det. Inga l\u00f6sa papper, ingen risk f\u00f6r b\u00f6ter: varje samtycke loggas med datum, tid och digital signatur.',
     legal: 'I enlighet med GDPR och IMY:s (Integritetsskyddsmyndigheten) riktlinjer. MBL (lagen om medbest\u00e4mmande) kr\u00e4ver f\u00f6rhandling med fackf\u00f6reningen innan GPS-\u00f6vervakning inf\u00f6rs.',
     tags: ['GDPR-kompatibel', 'IMY', 'MBL (medbest\u00e4mmande)', 'Digital signatur', 'PDF arkiverad', 'Inget papper'],
   },
   nb: {
     title: 'Automatisk GPS-personvernerklaring for hver ansatt',
-    p1: 'N\u00e5r du inviterer en ny ansatt, genererer Flow automatisk et GDPR-kompatibelt GPS-personvernvarsel og sender det til digital signatur. Den ansatte fyller inn sine data, leser dokumentet og signerer med ett klikk — alt online, uten papir.',
+    p1: 'N\u00e5r du inviterer en ny ansatt, genererer Flow automatisk et GDPR-kompatibelt GPS-personvernvarsel og sender det til digital signatur. Den ansatte fyller inn sine data, leser dokumentet og signerer med ett klikk, alt online, uten papir.',
     p2: 'Den signerte PDF-en arkiveres automatisk, og du ser i sanntid hvem som har signert og hvem som ikke har det. Ingen l\u00f8se papirer, ingen risiko for b\u00f8ter: hvert samtykke logges med dato, tid og digital signatur.',
     legal: 'I samsvar med GDPR og Datatilsynets retningslinjer for overv\u00e5king av ansatte. Arbeidsmilj\u00f8loven (\u00a7 9-1) krever at kontrolltiltak er forholdsmessige og at ansatte informeres p\u00e5 forh\u00e5nd.',
     tags: ['GDPR-kompatibel', 'Datatilsynet', 'Arbeidsmilj\u00f8loven', 'Digital signatur', 'PDF arkivert', 'Ikke papir'],
@@ -401,12 +401,12 @@ function GpsPrivacySection({ locale }: { locale: string }) {
               </h2>
               <p className="mt-3 text-lg font-semibold text-green-700">
                 {locale === 'it'
-                  ? 'Timbri in regola dal primo giorno — o non timbri.*'
+                  ? 'Timbri in regola dal primo giorno, o non timbri.*'
                   : locale === 'de'
-                    ? 'Ab Tag eins konform — oder gar nicht stempeln.*'
+                    ? 'Ab Tag eins konform, oder gar nicht stempeln.*'
                     : locale === 'fr'
-                      ? 'Conforme dès le premier jour — ou pas de pointage.*'
-                      : 'Compliant from day one — or you don\'t clock in.*'}
+                      ? 'Conforme dès le premier jour, ou pas de pointage.*'
+                      : 'Compliant from day one, or you don\'t clock in.*'}
               </p>
             </div>
           </div>
@@ -446,7 +446,7 @@ function GpsPrivacySection({ locale }: { locale: string }) {
             {locale === 'it'
               ? '* Per legge (GDPR Art. 13 e, in Italia, Art. 4 Statuto dei Lavoratori), ogni dipendente deve firmare un\'informativa privacy prima di essere geolocalizzato. La maggior parte dei software GPS non lo gestisce: il rischio legale resta al titolare. GeoTapp genera automaticamente l\'informativa personalizzata, la fa firmare digitalmente al dipendente e blocca l\'accesso GPS finché non è firmata. Nessun altro software sul mercato lo fa.'
               : locale === 'de'
-                ? '* Nach geltendem Recht (DSGVO Art. 13, in Deutschland auch BDSG und BetrVG) muss jeder Mitarbeiter vor der GPS-Ortung eine Datenschutzerklärung unterschreiben. Die meisten GPS-Systeme kümmern sich nicht darum — das rechtliche Risiko bleibt beim Arbeitgeber. GeoTapp erstellt die Erklärung automatisch, lässt sie digital unterschreiben und sperrt den GPS-Zugang, bis sie unterzeichnet ist. Kein anderes System am Markt bietet das.'
+                ? '* Nach geltendem Recht (DSGVO Art. 13, in Deutschland auch BDSG und BetrVG) muss jeder Mitarbeiter vor der GPS-Ortung eine Datenschutzerklärung unterschreiben. Die meisten GPS-Systeme kümmern sich nicht darum, das rechtliche Risiko bleibt beim Arbeitgeber. GeoTapp erstellt die Erklärung automatisch, lässt sie digital unterschreiben und sperrt den GPS-Zugang, bis sie unterzeichnet ist. Kein anderes System am Markt bietet das.'
                 : locale === 'fr'
                   ? '* La loi (RGPD Art. 13, en France aussi le Code du travail et les recommandations CNIL) exige que chaque salarié signe un avis de confidentialité avant d\'être géolocalisé. La plupart des logiciels GPS ne gèrent pas cela : le risque juridique reste à l\'employeur. GeoTapp génère automatiquement l\'avis, le fait signer numériquement et bloque l\'accès GPS tant qu\'il n\'est pas signé. Aucun autre logiciel sur le marché ne le fait.'
                   : '* By law (GDPR Art. 13), every employee must sign a privacy notice before being geolocated. Most GPS software does not handle this: the legal risk stays with the employer. GeoTapp automatically generates the personalised notice, gets it digitally signed and blocks GPS access until it is signed. No other software on the market does this.'}
@@ -513,7 +513,7 @@ export default function GeoTappApp() {
           icon: Camera,
           title: 'Prove difendibili verso il cliente',
           description:
-            'Foto, note, timbrature e prove raccolte sul campo restano legate alla commessa, cosi l’ufficio risponde con fatti e non con supposizioni.',
+            'Foto, note, timbrature e prove raccolte sul campo restano legate alla commessa, così l’ufficio risponde con fatti e non con supposizioni.',
         },
         {
           icon: FileArchive,
@@ -523,9 +523,9 @@ export default function GeoTappApp() {
         },
         {
           icon: CreditCard,
-          title: 'Fatturazione piu rapida, con meno attriti interni',
+          title: 'Fatturazione più rapida, con meno attriti interni',
           description:
-            'Preventivi, fatture e integrazioni come Fatture in Cloud lavorano su dati reali di commessa, per una consuntivazione piu rapida e difendibile.',
+            'Preventivi, fatture e integrazioni come Fatture in Cloud lavorano su dati reali di commessa, per una consuntivazione più rapida e difendibile.',
         },
       ]
     : [
@@ -560,13 +560,13 @@ export default function GeoTappApp() {
           icon: ShieldCheck,
           title: 'Pensato per ufficio, amministrazione e coordinamento',
           description:
-            'Flow serve a titolari, amministrazione e responsabili che vogliono meno discussioni interne, ruoli piu chiari e controllo vero del lavoro.',
+            'Flow serve a titolari, amministrazione e responsabili che vogliono meno discussioni interne, ruoli più chiari e controllo vero del lavoro.',
         },
         {
           icon: MessageSquare,
           title: 'Integrato a TimeTracker in tempo reale',
           description:
-            'Timbrature, operativita sul campo, prove foto e avanzamento commessa tornano in Flow in tempo reale per controllo, report e prove difendibili.',
+            'Timbrature, operatività sul campo, prove foto e avanzamento commessa tornano in Flow in tempo reale per controllo, report e prove difendibili.',
         },
       ]
     : [
@@ -725,7 +725,7 @@ export default function GeoTappApp() {
           </h2>
           <p className="mt-5 text-xl text-slate-500">
             {isItalian
-              ? 'Non solo dashboard gestionale: collega pianificazione, operativita, consuntivazione e prove difendibili di cio che il team ha svolto davvero.'
+              ? 'Non solo dashboard gestionale: collega pianificazione, operatività, consuntivazione e prove difendibili di ciò che il team ha svolto davvero.'
               : 'More than a dashboard: it connects planning, execution, billing and defensible proof of what the team actually delivered.'}
           </p>
         </div>
@@ -752,7 +752,7 @@ export default function GeoTappApp() {
         </div>
       </section>
 
-      {/* GPS PRIVACY COMPLIANCE — HERO-STYLE SECTION */}
+      {/* GPS PRIVACY COMPLIANCE - HERO-STYLE SECTION */}
       <GpsPrivacySection locale={currentLocale} />
 
       <section className="container mx-auto mb-24 max-w-7xl px-6">

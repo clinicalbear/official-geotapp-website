@@ -20,7 +20,7 @@ export interface EmbedLabels {
 interface Props {
   embedUrl: string; // https://geotapp.com/embed/it/gps-lavoratori-ue
   pageUrl: string; // https://geotapp.com/it/risorse/gps-lavoratori-ue/
-  pageTitle: string; // anchor a tema (senza "— GeoTapp")
+  pageTitle: string; // anchor a tema (senza "- GeoTapp")
   labels: EmbedLabels;
 }
 
@@ -28,10 +28,10 @@ export default function EmbedCodeBox({ embedUrl, pageUrl, pageTitle, labels }: P
   const code =
     `<iframe src="${embedUrl}" width="100%" height="640" loading="lazy" ` +
     `style="border:1px solid #e2e8f0;border-radius:12px;max-width:760px" ` +
-    `title="${pageTitle} — GeoTapp"></iframe>\n` +
+    `title="${pageTitle} - GeoTapp"></iframe>\n` +
     `<p style="font:13px system-ui,sans-serif">Fonte: ` +
     `<a href="${pageUrl}?utm_source=embed&amp;utm_medium=referral&amp;utm_campaign=risorse">` +
-    `${pageTitle} — GeoTapp</a></p>`;
+    `${pageTitle} - GeoTapp</a></p>`;
 
   const [copied, setCopied] = useState(false);
   const copy = () => {

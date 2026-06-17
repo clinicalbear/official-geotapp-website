@@ -24,7 +24,7 @@ export async function generateMetadata({
     description: content.meta.description,
     // buildLocaleAlternates: x-default → /en/settori/pulizie/ (real page, no redirect).
     // The previous custom implementation used geotapp.com/settori/pulizie/ which sends
-    // a 308 to /it/ — a redirect target as x-default leaks link equity.
+    // a 308 to /it/, a redirect target as x-default leaks link equity.
     alternates: buildLocaleAlternates(resolvedLocale, pathname + '/'),
     openGraph: {
       url: `https://geotapp.com/${resolvedLocale}${pathname}`,
@@ -53,7 +53,7 @@ export default async function PulizieLocalePage({
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'GeoTapp', item: 'https://geotapp.com' },
-      { '@type': 'ListItem', position: 2, name: content.meta.title.replace(/ [|—].*$/, '').trim(), item: `https://geotapp.com/${resolvedLocale}/settori/pulizie/` },
+      { '@type': 'ListItem', position: 2, name: content.meta.title.replace(/ [|-].*$/, '').trim(), item: `https://geotapp.com/${resolvedLocale}/settori/pulizie/` },
     ],
   };
 

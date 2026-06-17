@@ -5,9 +5,9 @@ import { usePathname } from 'next/navigation';
 import { trackEvent } from '@/lib/analytics';
 
 /**
- * Global site analytics — tracks scroll depth, section visibility,
+ * Global site analytics, tracks scroll depth, section visibility,
  * CTA clicks, and engagement across all pages (site + blog articles).
- * Drop into the root layout once — no per-page changes needed.
+ * Drop into the root layout once, no per-page changes needed.
  */
 export default function SiteAnalytics() {
   const pathname = usePathname();
@@ -178,5 +178,5 @@ export default function SiteAnalytics() {
     };
   }, [pathname]);
 
-  return null; // No UI — pure tracking
+  return null; // No UI, pure tracking
 }

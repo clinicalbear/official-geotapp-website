@@ -1,5 +1,5 @@
 /**
- * Competitor comparison data — used by /confronto/dinamico/ DynamicComparison.tsx.
+ * Competitor comparison data, used by /confronto/dinamico/ DynamicComparison.tsx.
  *
  * 12 features in fixed order (matches the static `/confronto/geotapp-vs-{competitor}/`
  * pages already published, to preserve consistency).
@@ -191,7 +191,7 @@ export const FEATURE_LABELS: Record<FeatureKey, LocalizedString> = {
   },
 };
 
-/** GeoTapp's feature vector — fixed across all competitor comparisons. */
+/** GeoTapp's feature vector, fixed across all competitor comparisons. */
 export const GEOTAPP_FEATURES: Record<FeatureKey, boolean> = {
   gps_verified_at_site: true,
   sealed_report: true,

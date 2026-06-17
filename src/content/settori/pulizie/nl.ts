@@ -8,8 +8,8 @@ const content: SettoreContent = {
   hero: {
     badge: 'Software voor Schoonmaakbedrijven, Facilitaire Diensten en Gebouwbeheer',
     h1_line1: 'Software voor schoonmaakbedrijven:',
-    h1_line2: 'dienstroosters, fotobewijs en gecontroleerde uren — op elk object',
-    subtitle: 'GeoTapp verbindt Flow + TimeTracker voor teams verspreid over meerdere gebouwen en verdiepingen. Uw medewerkers klokken in via GPS-geverifieerde smartphone; het kantoor ziet wie wat, waar en wanneer heeft schoongemaakt — met bijgevoegd fotobewijs. Geen disputen meer, volledige naleving van de CAO Schoonmaak.',
+    h1_line2: 'dienstroosters, fotobewijs en gecontroleerde uren, op elk object',
+    subtitle: 'GeoTapp verbindt Flow + TimeTracker voor teams verspreid over meerdere gebouwen en verdiepingen. Uw medewerkers klokken in via GPS-geverifieerde smartphone; het kantoor ziet wie wat, waar en wanneer heeft schoongemaakt, met bijgevoegd fotobewijs. Geen disputen meer, volledige naleving van de CAO Schoonmaak.',
     cta_primary: 'Demo aanvragen',
     cta_note: 'Geen verplichtingen. Antwoord binnen 12 werkuren.',
   },
@@ -32,7 +32,7 @@ const content: SettoreContent = {
   },
   workflow: {
     title: 'Hoe het werkt in drie stappen',
-    subtitle: 'Van het gebouw naar het kantoor — zonder achter mensen aan te lopen.',
+    subtitle: 'Van het gebouw naar het kantoor, zonder achter mensen aan te lopen.',
     steps: [
       {
         title: 'Medewerker klokt in op locatie',
@@ -40,7 +40,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Kantoor ziet alles in real time',
-        desc: 'Flow ontvangt de gegevens direct. De objectleider ziet welk gebouw is bediend, door wie, op welk tijdstip en met welk fotobewijs — zonder een enkel telefoontje te plegen.',
+        desc: 'Flow ontvangt de gegevens direct. De objectleider ziet welk gebouw is bediend, door wie, op welk tijdstip en met welk fotobewijs, zonder een enkel telefoontje te plegen.',
       },
       {
         title: 'Het overdrachtrapport is al klaar',
@@ -65,7 +65,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Urenregistratie zonder papier',
-        desc: 'De urenregistratie loopt automatisch mee met elke dienst: begintijd, eindtijd, pauzes en object. Geen briefjes meer aan het einde van de maand, geen reconstructies — de uren staan al klaar voor de loonadministratie.',
+        desc: 'De urenregistratie loopt automatisch mee met elke dienst: begintijd, eindtijd, pauzes en object. Geen briefjes meer aan het einde van de maand, geen reconstructies, de uren staan al klaar voor de loonadministratie.',
       },
     ],
   },
@@ -108,7 +108,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Wat kost software voor een schoonmaakbedrijf?',
-        a: 'GeoTapp begint bij enkele euro\'s per medewerker per maand, afhankelijk van teamgrootte en modules. U kunt 14 dagen gratis proberen, zonder creditcard en zonder verplichtingen — zo ziet u eerst of het werkt voor uw objecten.',
+        a: 'GeoTapp begint bij enkele euro\'s per medewerker per maand, afhankelijk van teamgrootte en modules. U kunt 14 dagen gratis proberen, zonder creditcard en zonder verplichtingen, zo ziet u eerst of het werkt voor uw objecten.',
       },
     ],
   },
@@ -146,7 +146,7 @@ const content: SettoreContent = {
       {
         label: 'Bij een geschil',
         gestionale: 'U toont cijfers die alleen u kunt lezen',
-        geotapp: 'U stuurt een rapport met GPS en foto\'s — discussie voorbij',
+        geotapp: 'U stuurt een rapport met GPS en foto\'s, discussie voorbij',
       },
       {
         label: 'Naast uw huidige planning',

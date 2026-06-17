@@ -299,17 +299,17 @@ async function getArticles(locale: string): Promise<Article[]> {
 
 // ─── Localized texts ──────────────────────────────────────────────────────────
 const META_TEXTS: Record<string, { title: string; description: string }> = {
-  it: { title: 'GeoTapp — Link ufficiali', description: 'Prove GPS, foto e report verificabili. Prova il trial gratuito senza carta di credito.' },
-  en: { title: 'GeoTapp — Official Links', description: 'GPS proof, photos and verifiable reports. Try the free trial — no credit card required.' },
-  de: { title: 'GeoTapp — Offizielle Links', description: 'GPS-Nachweis, Fotos und überprüfbare Berichte. Kostenlose Testversion — keine Kreditkarte erforderlich.' },
-  fr: { title: 'GeoTapp — Liens officiels', description: 'Preuves GPS, photos et rapports vérifiables. Essai gratuit — sans carte de crédit.' },
-  es: { title: 'GeoTapp — Enlaces oficiales', description: 'Pruebas GPS, fotos e informes verificables. Prueba gratuita — sin tarjeta de crédito.' },
-  pt: { title: 'GeoTapp — Links oficiais', description: 'Prova GPS, fotos e relatórios verificáveis. Teste grátis — sem cartão de crédito.' },
-  nl: { title: 'GeoTapp — Officiële links', description: 'GPS-bewijs, foto\'s en verifieerbare rapporten. Gratis proefversie — geen creditcard nodig.' },
-  da: { title: 'GeoTapp — Officielle links', description: 'GPS-bevis, fotos og verificerbare rapporter. Gratis prøveversion — intet kreditkort.' },
-  sv: { title: 'GeoTapp — Officiella länkar', description: 'GPS-bevis, foton och verifierbara rapporter. Gratis testperiod — inget kreditkort.' },
-  nb: { title: 'GeoTapp — Offisielle lenker', description: 'GPS-bevis, bilder og verifiserbare rapporter. Gratis prøveperiode — uten kredittkort.' },
-  ru: { title: 'GeoTapp — Официальные ссылки', description: 'GPS-доказательства, фото и проверяемые отчёты. Бесплатный пробный период — без карты.' },
+  it: { title: 'GeoTapp - Link ufficiali', description: 'Prove GPS, foto e report verificabili. Prova il trial gratuito senza carta di credito.' },
+  en: { title: 'GeoTapp - Official Links', description: 'GPS proof, photos and verifiable reports. Try the free trial, no credit card required.' },
+  de: { title: 'GeoTapp - Offizielle Links', description: 'GPS-Nachweis, Fotos und überprüfbare Berichte. Kostenlose Testversion, keine Kreditkarte erforderlich.' },
+  fr: { title: 'GeoTapp - Liens officiels', description: 'Preuves GPS, photos et rapports vérifiables. Essai gratuit, sans carte de crédit.' },
+  es: { title: 'GeoTapp - Enlaces oficiales', description: 'Pruebas GPS, fotos e informes verificables. Prueba gratuita, sin tarjeta de crédito.' },
+  pt: { title: 'GeoTapp - Links oficiais', description: 'Prova GPS, fotos e relatórios verificáveis. Teste grátis, sem cartão de crédito.' },
+  nl: { title: 'GeoTapp - Officiële links', description: 'GPS-bewijs, foto\'s en verifieerbare rapporten. Gratis proefversie, geen creditcard nodig.' },
+  da: { title: 'GeoTapp - Officielle links', description: 'GPS-bevis, fotos og verificerbare rapporter. Gratis prøveversion, intet kreditkort.' },
+  sv: { title: 'GeoTapp - Officiella länkar', description: 'GPS-bevis, foton och verifierbara rapporter. Gratis testperiod, inget kreditkort.' },
+  nb: { title: 'GeoTapp - Offisielle lenker', description: 'GPS-bevis, bilder og verifiserbare rapporter. Gratis prøveperiode, uten kredittkort.' },
+  ru: { title: 'GeoTapp, Официальные ссылки', description: 'GPS-доказательства, фото и проверяемые отчёты. Бесплатный пробный период, без карты.' },
 };
 
 // ─── Metadata ─────────────────────────────────────────────────────────────────

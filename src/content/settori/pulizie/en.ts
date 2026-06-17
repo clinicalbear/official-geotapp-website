@@ -2,14 +2,14 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'Cleaning Company Software | GeoTapp — Certify Every Job',
+    title: 'Cleaning Company Software | GeoTapp - Certify Every Job',
     description: 'GeoTapp is the cleaning company management software that certifies every job: tamper-proof reports with GPS and photos, zero disputes. GDPR compliant. Try free.',
   },
   hero: {
     badge: 'Software for Cleaning Companies, Facility Services and FM Contractors',
     h1_line1: 'Cleaning company software:',
-    h1_line2: 'shift records, photo proof and verified hours — every site',
-    subtitle: 'GeoTapp connects Flow + TimeTracker for teams spread across multiple buildings and floors. Operatives clock in with GPS-verified smartphones; the office sees who cleaned what, where and when — with photo evidence attached. No more disputes, full NMW and Agency Workers Regulations compliance.',
+    h1_line2: 'shift records, photo proof and verified hours, every site',
+    subtitle: 'GeoTapp connects Flow + TimeTracker for teams spread across multiple buildings and floors. Operatives clock in with GPS-verified smartphones; the office sees who cleaned what, where and when, with photo evidence attached. No more disputes, full NMW and Agency Workers Regulations compliance.',
     cta_primary: 'Request a Demo',
     cta_note: 'No commitment. Reply within 12 business hours.',
   },
@@ -32,7 +32,7 @@ const content: SettoreContent = {
   },
   workflow: {
     title: 'How it works in three steps',
-    subtitle: 'From the building floor to the office — no chasing required.',
+    subtitle: 'From the building floor to the office, no chasing required.',
     steps: [
       {
         title: 'Operative clocks in on site',
@@ -40,7 +40,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Office sees everything in real time',
-        desc: 'Flow receives data instantly. The manager sees which site has been serviced, by whom, at what time and with what photographic evidence — without making a single call.',
+        desc: 'Flow receives data instantly. The manager sees which site has been serviced, by whom, at what time and with what photographic evidence, without making a single call.',
       },
       {
         title: 'The handover report is already done',

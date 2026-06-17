@@ -1,4 +1,4 @@
-// RSS 2.0 feed per locale — served at /{locale}/blog/feed/
+// RSS 2.0 feed per locale, served at /{locale}/blog/feed/
 // Fetches posts from WP REST API with lang={locale} param (Polylang).
 // Bypasses the /blog/ Cloudflare redirect by hitting blog.geotapp.com directly.
 

@@ -9,7 +9,7 @@ import { detectPostLocale } from '@/lib/blog-locale';
 
 const WP = 'https://blog.geotapp.com';
 const HEADERS = { host: 'blog.geotapp.com', 'x-geotapp-proxy': '1', 'x-forwarded-proto': 'https' };
-// 8 s timeout per le fetch WP — evita che il build SSG si blocchi se il server è lento.
+// 8 s timeout per le fetch WP, evita che il build SSG si blocchi se il server è lento.
 // cache: 'no-store' previene il deadlock Next.js 16 tra next.revalidate e AbortSignal:
 // con next.revalidate i worker deduplicano il fetch e il signal non si propaga, bloccando il build.
 function wpFetch(url: string): Promise<Response> {
@@ -187,7 +187,7 @@ async function fetchPosts(locale: string): Promise<Post[]> {
 
 export { generateStaticParams };
 
-// Fetch real posts from WP at request time — Cloudflare Worker renders on demand.
+// Fetch real posts from WP at request time - Cloudflare Worker renders on demand.
 // force-dynamic skips SSG for this route so the build doesn't hang on WP API calls.
 export const dynamic = 'force-dynamic';
 

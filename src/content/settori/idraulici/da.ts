@@ -2,14 +2,14 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App til Blikkenslagere & VVS-installatører | GeoTapp — GPS',
+    title: 'App til Blikkenslagere & VVS-installatører | GeoTapp - GPS',
     description: 'GeoTapp er appen til blikkenslagere og VVS-installatører: GPS-verificerede arbejdsrapporter, installationsbilleder og manipulationssikre registreringer. Luk tvister med ægte beviser. Prøv gratis.',
   },
   hero: {
     badge: 'App til Blikkenslagere, VVS-installatører og Varmetekniker',
     h1_line1: 'App til blikkenslagere og VVS-installatører:',
     h1_line2: 'GPS-rapporter, fotobeviser og nul tvister.',
-    subtitle: 'GeoTapp registrerer hvert VVS- og varmearbejde med GPS, billeder og verificerbare tidsstempler. Kunden bestrider arbejdet? Vis rapporten — ingen diskussion. Dine teknikere er beskyttede, dine fakturaer også.',
+    subtitle: 'GeoTapp registrerer hvert VVS- og varmearbejde med GPS, billeder og verificerbare tidsstempler. Kunden bestrider arbejdet? Vis rapporten, ingen diskussion. Dine teknikere er beskyttede, dine fakturaer også.',
     cta_primary: 'Start gratis',
     cta_note: 'Ingen forpligtelse. Svar inden for 12 arbejdstimer.',
   },
@@ -32,7 +32,7 @@ const content: SettoreContent = {
   },
   workflow: {
     title: 'Sådan fungerer det i tre trin',
-    subtitle: 'Fra arbejdet til kontoret — uden telefonopkald.',
+    subtitle: 'Fra arbejdet til kontoret, uden telefonopkald.',
     steps: [
       {
         title: 'Teknikeren registrerer arbejdet',
@@ -57,7 +57,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Forseglede billeder før og efter',
-        desc: 'Billeder knyttet til GPS og tidsstempel — umanipulerbare.',
+        desc: 'Billeder knyttet til GPS og tidsstempel, umanipulerbare.',
       },
       {
         title: 'Automatiske rapporter',

@@ -26,7 +26,7 @@ const content: SettoreContent = {
       },
       {
         title: 'I fogli presenze sono inaffidabili?',
-        desc: 'Tracciamento automatico da smartphone, niente inserimenti manuali. Il dato è quello — e non si può cambiare.',
+        desc: 'Tracciamento automatico da smartphone, niente inserimenti manuali. Il dato è quello, e non si può cambiare.',
       },
       {
         title: 'Difficile coordinare più squadre?',
@@ -57,15 +57,15 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'L\'operatore timbra con GPS',
-        desc: 'Apre e chiude il turno dallo smartphone. GeoTapp registra coordinate GPS reali, foto e timestamp — tutto automatico, non modificabile.',
+        desc: 'Apre e chiude il turno dallo smartphone. GeoTapp registra coordinate GPS reali, foto e timestamp, tutto automatico, non modificabile.',
       },
       {
         title: 'Il responsabile vede tutto in tempo reale',
-        desc: 'Dashboard unica per tutti i cantieri. Sai esattamente chi è presente, dove e da quando — senza inseguire nessuno.',
+        desc: 'Dashboard unica per tutti i cantieri. Sai esattamente chi è presente, dove e da quando, senza inseguire nessuno.',
       },
       {
         title: 'Il report è pronto automaticamente',
-        desc: 'A fine turno il sistema genera un report sigillato con GPS, foto e firma digitale. Invialo al cliente — è verificabile in autonomia.',
+        desc: 'A fine turno il sistema genera un report sigillato con GPS, foto e firma digitale. Invialo al cliente, è verificabile in autonomia.',
       },
     ],
   },
@@ -82,7 +82,7 @@ const content: SettoreContent = {
       {
         label: 'Chi può verificare',
         competitor: 'Solo il tuo ufficio',
-        geotapp: 'Tu, il committente, un ente terzo — in autonomia',
+        geotapp: 'Tu, il committente, un ente terzo, in autonomia',
       },
       {
         label: 'In caso di contestazione',
@@ -107,7 +107,7 @@ const content: SettoreContent = {
     items: [
       {
         title: 'Prove di servizio automatiche',
-        desc: 'Ogni intervento chiuso genera un report con GPS, foto e timestamp. Il cliente lo riceve e lo verifica da solo — senza accesso al tuo sistema.',
+        desc: 'Ogni intervento chiuso genera un report con GPS, foto e timestamp. Il cliente lo riceve e lo verifica da solo, senza accesso al tuo sistema.',
       },
       {
         title: 'Controllo reale su tutti i siti',
@@ -123,7 +123,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Documentazione fotografica',
-        desc: 'Gli operatori scattano foto direttamente dall\'app. Ogni immagine è georeferenziata con timestamp — prova visiva del lavoro svolto.',
+        desc: 'Gli operatori scattano foto direttamente dall\'app. Ogni immagine è georeferenziata con timestamp, prova visiva del lavoro svolto.',
       },
       {
         title: 'Il tuo personale è protetto',
@@ -136,7 +136,7 @@ const content: SettoreContent = {
     quote:
       'Da quando usiamo GeoTapp, le contestazioni dei clienti si risolvono in un minuto. Mandiamo il report con le foto e il GPS, e la discussione finisce lì. In un anno non abbiamo perso neanche un contratto.',
     author: 'Roberta M.',
-    role: 'Titolare, impresa di pulizie industriali — Nord Italia',
+    role: 'Titolare, impresa di pulizie industriali - Nord Italia',
   },
 
   faq: {
@@ -145,11 +145,11 @@ const content: SettoreContent = {
     items: [
       {
         q: 'Come funziona la timbratura GPS per imprese di pulizie?',
-        a: "L'operatore timbra ingresso e uscita dallo smartphone. GeoTapp registra le coordinate GPS in quel momento — non inserite a mano. Ogni timbratura è certificata con timestamp e posizione verificabile dal committente.",
+        a: "L'operatore timbra ingresso e uscita dallo smartphone. GeoTapp registra le coordinate GPS in quel momento, non inserite a mano. Ogni timbratura è certificata con timestamp e posizione verificabile dal committente.",
       },
       {
         q: 'Posso dimostrare al cliente che il servizio è stato eseguito?',
-        a: 'Sì. GeoTapp genera automaticamente un report sigillato con GPS, foto e timestamp a fine intervento. Il cliente lo riceve e lo verifica da solo — senza accesso al tuo sistema.',
+        a: 'Sì. GeoTapp genera automaticamente un report sigillato con GPS, foto e timestamp a fine intervento. Il cliente lo riceve e lo verifica da solo, senza accesso al tuo sistema.',
       },
       {
         q: 'GeoTapp è conforme al GDPR per la geolocalizzazione dei dipendenti?',
@@ -165,7 +165,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Quanto costa GeoTapp per un\'impresa di pulizie?',
-        a: 'I piani partono da pochi euro per operatore al mese. Prova gratis per 14 giorni — senza impegno.',
+        a: 'I piani partono da pochi euro per operatore al mese. Prova gratis per 14 giorni, senza impegno.',
       },
     ],
   },

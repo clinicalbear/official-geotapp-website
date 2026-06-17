@@ -1,7 +1,7 @@
 import type { VerifierCopy } from './types';
 
 const pt: VerifierCopy = {
-  hero_badge: 'GeoTapp Verifier — Verificação de Relatórios de Trabalho',
+  hero_badge: 'GeoTapp Verifier - Verificação de Relatórios de Trabalho',
   hero_title: 'Os seus relatórios de trabalho\nsão verificáveis.',
   hero_subtitle:
     'O GeoTapp Verifier verifica se um relatório de intervenção corresponde aos dados operacionais registados em campo e não foi modificado. Mais credibilidade para o cliente, menos disputas.',
@@ -44,7 +44,7 @@ const pt: VerifierCopy = {
   what_badge: 'O que é o GeoTapp Verifier',
   what_title: 'Verificação independente de relatórios de intervenção.',
   what_desc:
-    'O GeoTapp Verifier é o sistema que permite verificar a autenticidade e integridade dos relatórios gerados pelo GeoTapp Flow e TimeTracker. Compara o documento com os dados operacionais originais — timestamps GPS, localizações, evidências fotográficas — e certifica que o relatório não foi alterado.',
+    'O GeoTapp Verifier é o sistema que permite verificar a autenticidade e integridade dos relatórios gerados pelo GeoTapp Flow e TimeTracker. Compara o documento com os dados operacionais originais, timestamps GPS, localizações, evidências fotográficas, e certifica que o relatório não foi alterado.',
   how_badge: 'Como funciona',
   how_title: 'Três passos. Um relatório verificado.',
   how_steps: [
@@ -131,13 +131,13 @@ const pt: VerifierCopy = {
       a: 'O GeoTapp Verifier está integrado no ecossistema GeoTapp. Contacte-nos para determinar qual o plano que melhor se adapta às necessidades da sua empresa.',
     },
   ],
-  hero_cta_download: 'Baixar grátis — v0.2.1',
+  hero_cta_download: 'Baixar grátis, v0.2.1',
   cta_download: 'Baixar Verifier grátis',
   download_badge: 'Download gratuito',
   download_title: 'Baixar GeoTapp Verifier.',
   download_desc: 'Ferramenta CLI aberta para verificar offline a integridade dos relatórios GeoTapp. Sem conta necessária. Funciona no terminal ou como biblioteca Node.js.',
   download_btn: 'Baixar report-verifier-0.2.1.zip',
-  download_version: 'v0.2.1 — ~46 KB — Requer Node.js ≥ 18',
+  download_version: 'v0.2.1, ~46 KB - Requer Node.js ≥ 18',
   download_requirements: 'Requer Node.js ≥ 18',
   download_cli_title: 'Do terminal',
   download_api_title: 'Como biblioteca Node.js',
@@ -146,14 +146,14 @@ const pt: VerifierCopy = {
   online_verify_title: 'Verify a report online',
   online_verify_desc: 'Upload the report ZIP file. Verification happens on the server and the file is not stored.',
   online_verify_upload_label: 'Drag the report ZIP here, or click to select',
-  online_verify_upload_hint: '.zip files only — max 25MB',
+  online_verify_upload_hint: '.zip files only, max 25MB',
   online_verify_btn: 'Verify now',
   online_verify_privacy_note: 'The file is processed in memory and never stored or shared with third parties.',
   online_verify_size_limit: 'Maximum size: 25MB',
-  online_verify_result_valid_sealed: 'Valid report — sealed and signed',
-  online_verify_result_valid_unsigned: 'Valid report — content intact, seal not cryptographically signed',
-  online_verify_result_legacy: 'Legacy report — readable, no strong seal',
-  online_verify_result_invalid: 'Invalid report — content may have been altered',
+  online_verify_result_valid_sealed: 'Valid report, sealed and signed',
+  online_verify_result_valid_unsigned: 'Valid report, content intact, seal not cryptographically signed',
+  online_verify_result_legacy: 'Legacy report, readable, no strong seal',
+  online_verify_result_invalid: 'Invalid report, content may have been altered',
   online_verify_error_too_large: 'File too large. Maximum size: 25MB.',
   online_verify_error_not_zip: 'File must be a ZIP archive.',
   online_verify_error_generic: 'Verification error. The file may be corrupted.',

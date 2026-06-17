@@ -12,7 +12,7 @@ const content: SettoreContent = {
     h1_line1: 'Ditt vedlikeholdsteam,',
     h1_line2: 'alltid under kontroll.',
     subtitle:
-      'Registrer oppdrag, planlegg vakter og dokumenter hvert besøk med ekte GPS og fotodokumentasjon. Komplett historikk per anlegg og kunde — uten manuell registrering.',
+      'Registrer oppdrag, planlegg vakter og dokumenter hvert besøk med ekte GPS og fotodokumentasjon. Komplett historikk per anlegg og kunde, uten manuell registrering.',
     cta_primary: 'Prøv GeoTapp gratis i 14 dager',
     cta_note: 'Ingen binding. Ingen kredittkort påkrevd.',
   },
@@ -22,7 +22,7 @@ const content: SettoreContent = {
     items: [
       {
         title: 'Hvordan dokumenterer du periodiske vedlikeholdsbesøk?',
-        desc: 'Automatisk rapport med GPS, timer og bilder for hvert besøk. Komplett historikk, nedlastbar — uten manuell registrering.',
+        desc: 'Automatisk rapport med GPS, timer og bilder for hvert besøk. Komplett historikk, nedlastbar, uten manuell registrering.',
       },
       {
         title: 'Kommer teknikerne virkelig i tide?',
@@ -41,7 +41,7 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'Teknikeren stempler GPS ved ankomst',
-        desc: 'Åpner oppdraget fra smarttelefonen. GeoTapp registrerer ekte GPS-koordinater, tidsstempel og bilder — helautomatisk, manipuleringssikkert.',
+        desc: 'Åpner oppdraget fra smarttelefonen. GeoTapp registrerer ekte GPS-koordinater, tidsstempel og bilder, helautomatisk, manipuleringssikkert.',
       },
       {
         title: 'Timer og oppdrag registreres automatisk',
@@ -88,7 +88,7 @@ const content: SettoreContent = {
     quote:
       'Med GeoTapp er hvert vedlikeholdsbesøk sporbart. Kundene ser den komplette historikken per anlegg, og det er ikke lenger diskusjoner om timer eller utført arbeid.',
     author: 'Anders L.',
-    role: 'Vedlikeholdsleder, facility management — Norge',
+    role: 'Vedlikeholdsleder, facility management - Norge',
   },
 
   faq: {
@@ -97,7 +97,7 @@ const content: SettoreContent = {
     items: [
       {
         q: 'Hvordan dokumenterer man periodiske vedlikeholdsbesøk?',
-        a: 'GeoTapp genererer automatisk en rapport per besøk med GPS, timer og bilder. Komplett historikk per anlegg eller kundelokasjon — uten manuell registrering.',
+        a: 'GeoTapp genererer automatisk en rapport per besøk med GPS, timer og bilder. Komplett historikk per anlegg eller kundelokasjon, uten manuell registrering.',
       },
       {
         q: 'Kommer teknikerne virkelig i tide?',
@@ -117,7 +117,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Hva koster GeoTapp for en vedlikeholdsbedrift?',
-        a: 'Planene starter fra noen få euro per medarbeider per måned. Prøv gratis i 14 dager — uten binding.',
+        a: 'Planene starter fra noen få euro per medarbeider per måned. Prøv gratis i 14 dager, uten binding.',
       },
     ],
   },

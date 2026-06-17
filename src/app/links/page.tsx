@@ -1,5 +1,5 @@
 /**
- * geotapp.com/links — Link in bio ufficiale Instagram
+ * geotapp.com/links - Link in bio ufficiale Instagram
  *
  * Server component: recupera i 4 articoli IT più recenti da WordPress
  * e li passa al client component per rendering animato.
@@ -169,11 +169,11 @@ async function getLatestArticles(): Promise<Article[]> {
 // ─── Metadata ────────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = {
-  title: 'GeoTapp — Link ufficiali',
+  title: 'GeoTapp - Link ufficiali',
   description:
     'Verifica il lavoro sul campo con prove GPS, foto e report verificabili. Demo, blog e risorse GeoTapp.',
   openGraph: {
-    title: 'GeoTapp — Link ufficiali',
+    title: 'GeoTapp - Link ufficiali',
     description: 'Verifica il lavoro sul campo con prove GPS, foto e report verificabili.',
     url: 'https://geotapp.com/links',
     siteName: 'GeoTapp',
@@ -189,7 +189,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'GeoTapp — Link ufficiali',
+    title: 'GeoTapp - Link ufficiali',
     description: 'Verifica il lavoro sul campo con prove GPS, foto e report verificabili.',
   },
   // Pagina utility: non deve competere con pagine principali in SERP

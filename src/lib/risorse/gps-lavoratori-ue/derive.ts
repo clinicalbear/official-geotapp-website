@@ -20,7 +20,7 @@ export interface PaeseSeverita {
   nome: string;
   nomi?: Partial<Record<AppLocale, string>>;
   bandiera: string;
-  /** Adempimenti OBBLIGATORI (risposta 'si') — quelli che, se mancano, ti espongono. */
+  /** Adempimenti OBBLIGATORI (risposta 'si'), quelli che, se mancano, ti espongono. */
   obbligatori: VoceChecklist[];
   /** Adempimenti CONDIZIONALI (risposta 'dipende'). */
   condizionali: VoceChecklist[];

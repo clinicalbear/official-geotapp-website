@@ -2,14 +2,14 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App pour Électriciens | GeoTapp — Rapports GPS & Preuves',
+    title: 'App pour Électriciens | GeoTapp - Rapports GPS & Preuves',
     description: 'GeoTapp est l\'app pour électriciens : rapports GPS vérifiés, photos d\'installation et comptes-rendus inviolables. Clôturez les litiges avec de vraies preuves. Essai gratuit.',
   },
   hero: {
     badge: 'App pour Électriciens et Installateurs Électriques',
     h1_line1: 'App pour électriciens :',
     h1_line2: 'rapports GPS, preuves photo et zéro litige.',
-    subtitle: 'GeoTapp enregistre chaque intervention électrique avec GPS, photos et horodatages vérifiables. Le client conteste ? Montrez le rapport — pas de discussion. Vos techniciens sont protégés, vos factures aussi.',
+    subtitle: 'GeoTapp enregistre chaque intervention électrique avec GPS, photos et horodatages vérifiables. Le client conteste ? Montrez le rapport, pas de discussion. Vos techniciens sont protégés, vos factures aussi.',
     cta_primary: 'Commencer gratuitement',
     cta_note: 'Sans engagement. Réponse sous 12 heures ouvrées.',
   },
@@ -32,7 +32,7 @@ const content: SettoreContent = {
   },
   workflow: {
     title: 'Comment ça fonctionne en trois étapes',
-    subtitle: 'Du chantier au bureau — sans appels téléphoniques.',
+    subtitle: 'Du chantier au bureau, sans appels téléphoniques.',
     steps: [
       {
         title: 'Le technicien enregistre l\'intervention sur site',
@@ -57,7 +57,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Photos d\'installation scellées',
-        desc: 'Le technicien photographie depuis l\'app en fin d\'intervention. Chaque image est liée au GPS et à l\'horodatage — inviolable après génération.',
+        desc: 'Le technicien photographie depuis l\'app en fin d\'intervention. Chaque image est liée au GPS et à l\'horodatage, inviolable après génération.',
       },
       {
         title: 'Rapports d\'intervention automatiques',

@@ -18,7 +18,7 @@ const content: SettoreContent = {
     items: [
       {
         title: 'Who was on site and when?',
-        desc: 'Every GPS clock-in is timestamped and certified. GeoTapp records real coordinates at the moment of clocking — not entered manually. The data is verifiable by project management at any time.',
+        desc: 'Every GPS clock-in is timestamped and certified. GeoTapp records real coordinates at the moment of clocking, not entered manually. The data is verifiable by project management at any time.',
       },
       {
         title: 'How do you manage subcontractors?',
@@ -36,11 +36,11 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'The worker clocks in at the site entrance',
-        desc: 'Opens the shift from their smartphone. GeoTapp records real GPS coordinates, timestamp and — if needed — photos. Fully automatic, tamper-proof.',
+        desc: 'Opens the shift from their smartphone. GeoTapp records real GPS coordinates, timestamp and, if needed, photos. Fully automatic, tamper-proof.',
       },
       {
         title: 'The site manager sees everything in real time',
-        desc: 'Single dashboard for all crews and all sites. Who is present, where and since when — without chasing anyone by phone.',
+        desc: 'Single dashboard for all crews and all sites. Who is present, where and since when, without chasing anyone by phone.',
       },
       {
         title: 'The report is ready for progress certificates',
@@ -60,7 +60,7 @@ const content: SettoreContent = {
       {
         label: 'Who can verify',
         competitor: 'Your office only',
-        geotapp: 'You, the project director, a third party — independently',
+        geotapp: 'You, the project director, a third party, independently',
       },
       {
         label: 'In case of dispute',
@@ -103,7 +103,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Multi-site dashboard',
-        desc: 'Monitor multiple construction sites from a single screen. See in real time who is present, where and since when — for every active site.',
+        desc: 'Monitor multiple construction sites from a single screen. See in real time who is present, where and since when, for every active site.',
       },
       {
         title: 'Automated progress reports',
@@ -111,11 +111,11 @@ const content: SettoreContent = {
       },
       {
         title: 'Subcontractor tracking',
-        desc: 'Every crew — internal or external — clocks in from their smartphone. The site manager sees everyone from a single dashboard without chasing anyone.',
+        desc: 'Every crew, internal or external, clocks in from their smartphone. The site manager sees everyone from a single dashboard without chasing anyone.',
       },
       {
         title: 'Sealed photo evidence',
-        desc: 'Workers take photos from the app. Every image is linked to the site with GPS and timestamp — tamper-proof after generation.',
+        desc: 'Workers take photos from the app. Every image is linked to the site with GPS and timestamp, tamper-proof after generation.',
       },
       {
         title: 'Built-in GDPR compliance',
@@ -126,7 +126,7 @@ const content: SettoreContent = {
   testimonial: {
     quote: 'Since we started using GeoTapp, the project director no longer asks for attendance sheets. We open the report and the progress certificate is ready.',
     author: 'Joseph M.',
-    role: 'Owner, construction company — 35 employees',
+    role: 'Owner, construction company, 35 employees',
   },
   faq: {
     title: 'Frequently asked questions',
@@ -134,7 +134,7 @@ const content: SettoreContent = {
     items: [
       {
         q: 'Who was on site and when?',
-        a: 'Every GPS clock-in is timestamped and certified. GeoTapp records real coordinates at the moment of clocking — not entered manually. The data is verifiable by project management at any time.',
+        a: 'Every GPS clock-in is timestamped and certified. GeoTapp records real coordinates at the moment of clocking, not entered manually. The data is verifiable by project management at any time.',
       },
       {
         q: 'How do you manage subcontractors on site?',
@@ -161,7 +161,7 @@ const content: SettoreContent = {
   schema_faq: [
     {
       question: 'Who was on site and when?',
-      answer: 'Every GPS clock-in is timestamped and certified. GeoTapp records real coordinates at the moment of clocking — not entered manually. The data is verifiable by project management at any time.',
+      answer: 'Every GPS clock-in is timestamped and certified. GeoTapp records real coordinates at the moment of clocking, not entered manually. The data is verifiable by project management at any time.',
     },
     {
       question: 'How do you manage subcontractors on site?',

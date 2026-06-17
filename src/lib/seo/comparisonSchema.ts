@@ -68,8 +68,8 @@ export function buildComparisonArticle(args: {
   pathname: string;
   headline: string;
   description: string;
-  datePublished: string; // ISO YYYY-MM-DD — stable per comparison page
-  dateModified?: string; // ISO YYYY-MM-DD — optional, defaults to datePublished
+  datePublished: string; // ISO YYYY-MM-DD, stable per comparison page
+  dateModified?: string; // ISO YYYY-MM-DD, optional, defaults to datePublished
   image?: string;
 }): Record<string, unknown> {
   const {

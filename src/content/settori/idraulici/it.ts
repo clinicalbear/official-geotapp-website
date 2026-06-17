@@ -2,14 +2,14 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App per Idraulici e Termoidraulici | GeoTapp — GPS e Rapportini',
+    title: 'App per Idraulici e Termoidraulici | GeoTapp - GPS e Rapportini',
     description: 'GeoTapp è l\'app per idraulici e termoidraulici: rapportini GPS verificati, foto degli impianti e report non alterabili. Chiudi le contestazioni con prove reali. Prova gratis.',
   },
   hero: {
     badge: 'App per Idraulici, Termoidraulici e Impiantisti',
     h1_line1: 'App per idraulici e termoidraulici:',
     h1_line2: 'rapportini GPS, prove fotografiche e zero contestazioni.',
-    subtitle: 'GeoTapp registra ogni intervento idraulico con GPS, foto e timestamp verificabili. Il cliente contesta? Mostri il rapportino — non discuti. Il tuo tecnico è protetto, il tuo fatturato anche.',
+    subtitle: 'GeoTapp registra ogni intervento idraulico con GPS, foto e timestamp verificabili. Il cliente contesta? Mostri il rapportino, non discuti. Il tuo tecnico è protetto, il tuo fatturato anche.',
     cta_primary: 'Inizia subito gratuitamente!',
     cta_note: 'Nessun vincolo. Risposta entro 12 ore lavorative.',
   },
@@ -96,7 +96,7 @@ const content: SettoreContent = {
   },
   scenario: {
     title: 'Caso reale',
-    body: 'Un cliente contesta un intervento termoidraulico urgente e rifiuta di pagare sostenendo che i lavori non siano stati completati. Con GeoTapp apri il rapportino: foto dell\'impianto prima e dopo, orario GPS di arrivo e fine lavori, note tecniche sui materiali sostituiti — tutto generato in automatico dallo smartphone del tecnico sul posto.',
+    body: 'Un cliente contesta un intervento termoidraulico urgente e rifiuta di pagare sostenendo che i lavori non siano stati completati. Con GeoTapp apri il rapportino: foto dell\'impianto prima e dopo, orario GPS di arrivo e fine lavori, note tecniche sui materiali sostituiti, tutto generato in automatico dallo smartphone del tecnico sul posto.',
     resolution: 'La contestazione cade. La fattura viene pagata per intero.',
   },
   features: {
@@ -108,7 +108,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Foto impianti idraulici sigillate',
-        desc: 'Il tecnico scatta foto prima e dopo l\'intervento. Ogni immagine è collegata a GPS e timestamp — non alterabile dopo la generazione.',
+        desc: 'Il tecnico scatta foto prima e dopo l\'intervento. Ogni immagine è collegata a GPS e timestamp, non alterabile dopo la generazione.',
       },
       {
         title: 'Rapportini digitali automatici',
@@ -135,8 +135,8 @@ const content: SettoreContent = {
   },
   trust: {
     title: 'I nostri report non si possono alterare. Non da te. Non da noi.',
-    body: 'I report GeoTapp sono generati dal sistema nel momento dell\'intervento. Non esiste un pannello per "correggere" un orario o spostare una foto. Il dato è quello — firmato digitalmente, con GPS reale.',
-    badge: 'Verificabile da chiunque — senza accesso al tuo account',
+    body: 'I report GeoTapp sono generati dal sistema nel momento dell\'intervento. Non esiste un pannello per "correggere" un orario o spostare una foto. Il dato è quello, firmato digitalmente, con GPS reale.',
+    badge: 'Verificabile da chiunque, senza accesso al tuo account',
   },
   testimonial: {
     quote: 'Prima perdevo ore a spiegare gli interventi ai clienti. Adesso mando il rapportino e la discussione finisce lì.',
@@ -153,11 +153,11 @@ const content: SettoreContent = {
       },
       {
         q: 'Posso usare GeoTapp per documentare interventi idraulici e termoidraulici?',
-        a: 'Sì. Il tecnico scatta foto prima e dopo l\'intervento dall\'app. Ogni immagine è collegata a GPS, timestamp e commessa — inclusa nel rapportino non alterabile.',
+        a: 'Sì. Il tecnico scatta foto prima e dopo l\'intervento dall\'app. Ogni immagine è collegata a GPS, timestamp e commessa, inclusa nel rapportino non alterabile.',
       },
       {
         q: 'GeoTapp gestisce sia interventi d\'emergenza che manutenzione programmata?',
-        a: 'Sì. Ogni tipologia di intervento — urgenza, manutenzione, collaudo — ha la sua commessa in GeoTapp. Lo storico di ogni impianto è sempre disponibile con tutte le prove fotografiche.',
+        a: 'Sì. Ogni tipologia di intervento, urgenza, manutenzione, collaudo, ha la sua commessa in GeoTapp. Lo storico di ogni impianto è sempre disponibile con tutte le prove fotografiche.',
       },
     ],
   },

@@ -12,7 +12,7 @@ const content: SettoreContent = {
     h1_line1: 'Uw onderhoudsteam,',
     h1_line2: 'altijd onder controle.',
     subtitle:
-      'Registreer interventies, plan diensten en documenteer elk bezoek met echte GPS en fotobewijs. Volledige historie per installatie en klant — zonder handmatige invoer.',
+      'Registreer interventies, plan diensten en documenteer elk bezoek met echte GPS en fotobewijs. Volledige historie per installatie en klant, zonder handmatige invoer.',
     cta_primary: 'Probeer GeoTapp 14 dagen gratis',
     cta_note: 'Geen verplichtingen. Geen creditcard nodig.',
   },
@@ -22,7 +22,7 @@ const content: SettoreContent = {
     items: [
       {
         title: 'Hoe documenteert u periodieke onderhoudsbezoeken?',
-        desc: 'Automatisch rapport met GPS, uren en foto\'s per bezoek. Volledige historie, downloadbaar — zonder handmatige invoer.',
+        desc: 'Automatisch rapport met GPS, uren en foto\'s per bezoek. Volledige historie, downloadbaar, zonder handmatige invoer.',
       },
       {
         title: 'Komen de technici echt op tijd?',
@@ -41,7 +41,7 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'Technicus klokt in met GPS bij aankomst',
-        desc: 'Opent de interventie vanaf de smartphone. GeoTapp registreert echte GPS-coördinaten, tijdstempel en foto\'s — volledig automatisch, niet te wijzigen.',
+        desc: 'Opent de interventie vanaf de smartphone. GeoTapp registreert echte GPS-coördinaten, tijdstempel en foto\'s, volledig automatisch, niet te wijzigen.',
       },
       {
         title: 'Uren en interventie worden automatisch geregistreerd',
@@ -88,7 +88,7 @@ const content: SettoreContent = {
     quote:
       'Met GeoTapp is elk onderhoudsbezoek traceerbaar. Klanten zien de volledige historie per installatie en er zijn geen discussies meer over uren of uitgevoerd werk.',
     author: 'André L.',
-    role: 'Onderhoudmanager, facility management — Nederland',
+    role: 'Onderhoudmanager, facility management - Nederland',
   },
 
   faq: {
@@ -97,7 +97,7 @@ const content: SettoreContent = {
     items: [
       {
         q: 'Hoe documenteert u periodieke onderhoudsbezoeken?',
-        a: 'GeoTapp genereert automatisch een rapport per bezoek met GPS, uren en foto\'s. Volledige historie per installatie of klantlocatie — zonder handmatige invoer.',
+        a: 'GeoTapp genereert automatisch een rapport per bezoek met GPS, uren en foto\'s. Volledige historie per installatie of klantlocatie, zonder handmatige invoer.',
       },
       {
         q: 'Komen de technici echt op tijd?',
@@ -117,7 +117,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Wat kost GeoTapp voor een onderhoudsbedrijf?',
-        a: 'Plannen starten vanaf enkele euro\'s per medewerker per maand. 14 dagen gratis proberen — zonder verplichtingen.',
+        a: 'Plannen starten vanaf enkele euro\'s per medewerker per maand. 14 dagen gratis proberen, zonder verplichtingen.',
       },
     ],
   },

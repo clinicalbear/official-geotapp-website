@@ -26,7 +26,7 @@ const content: SettoreContent = {
       },
       {
         title: '¿Las hojas de presencia en papel son poco fiables?',
-        desc: 'Seguimiento automático desde el smartphone, sin entradas manuales. El dato es lo que es — y no se puede cambiar.',
+        desc: 'Seguimiento automático desde el smartphone, sin entradas manuales. El dato es lo que es, y no se puede cambiar.',
       },
       {
         title: '¿Difícil coordinar varios equipos?',
@@ -57,15 +57,15 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'El operario ficha con GPS',
-        desc: 'Abre y cierra su turno desde el smartphone. GeoTapp registra coordenadas GPS reales, fotos y marca de tiempo — todo automático e inalterable.',
+        desc: 'Abre y cierra su turno desde el smartphone. GeoTapp registra coordenadas GPS reales, fotos y marca de tiempo, todo automático e inalterable.',
       },
       {
         title: 'El responsable ve todo en tiempo real',
-        desc: 'Un panel para todas las sedes. Sabes exactamente quién está en cada sitio, dónde y desde cuándo — sin perseguir a nadie.',
+        desc: 'Un panel para todas las sedes. Sabes exactamente quién está en cada sitio, dónde y desde cuándo, sin perseguir a nadie.',
       },
       {
         title: 'El informe está listo automáticamente',
-        desc: 'Al final del turno, el sistema genera un informe sellado con GPS, fotos y firma digital. Envíalo al cliente — verificable de forma autónoma.',
+        desc: 'Al final del turno, el sistema genera un informe sellado con GPS, fotos y firma digital. Envíalo al cliente, verificable de forma autónoma.',
       },
     ],
   },
@@ -82,7 +82,7 @@ const content: SettoreContent = {
       {
         label: 'Quién puede verificar',
         competitor: 'Solo tu oficina',
-        geotapp: 'Tú, el cliente, un tercero — de forma independiente',
+        geotapp: 'Tú, el cliente, un tercero, de forma independiente',
       },
       {
         label: 'En caso de disputa',
@@ -123,7 +123,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Documentación fotográfica',
-        desc: 'Los operarios toman fotos directamente desde la app. Cada imagen está geolocalizada con marca de tiempo — prueba visual del trabajo realizado.',
+        desc: 'Los operarios toman fotos directamente desde la app. Cada imagen está geolocalizada con marca de tiempo, prueba visual del trabajo realizado.',
       },
       {
         title: 'Tu personal está protegido',
@@ -136,7 +136,7 @@ const content: SettoreContent = {
     quote:
       'Desde que usamos GeoTapp, las disputas con clientes se resuelven en un minuto. Enviamos el informe con fotos y GPS, y la discusión termina ahí. No hemos perdido ni un contrato en un año.',
     author: 'Rosa M.',
-    role: 'Propietaria, empresa de limpieza industrial — España',
+    role: 'Propietaria, empresa de limpieza industrial - España',
   },
 
   faq: {
@@ -145,7 +145,7 @@ const content: SettoreContent = {
     items: [
       {
         q: '¿Cómo funciona el fichaje GPS para empresas de limpieza?',
-        a: 'El operario ficha entrada y salida desde el smartphone. GeoTapp registra las coordenadas GPS en ese momento — no se introducen a mano. Cada fichaje es certificado con marca de tiempo y posición verificable por el cliente.',
+        a: 'El operario ficha entrada y salida desde el smartphone. GeoTapp registra las coordenadas GPS en ese momento, no se introducen a mano. Cada fichaje es certificado con marca de tiempo y posición verificable por el cliente.',
       },
       {
         q: '¿Puedo demostrar al cliente que el servicio se realizó?',
@@ -165,7 +165,7 @@ const content: SettoreContent = {
       },
       {
         q: '¿Cuánto cuesta GeoTapp para una empresa de limpieza?',
-        a: 'Los planes empiezan desde pocos euros por operario al mes. Prueba gratis 14 días — sin compromiso.',
+        a: 'Los planes empiezan desde pocos euros por operario al mes. Prueba gratis 14 días, sin compromiso.',
       },
     ],
   },
@@ -190,7 +190,7 @@ const content: SettoreContent = {
     {
       question: '¿Cómo funciona el fichaje GPS para empresas de limpieza?',
       answer:
-        'El operario ficha desde el smartphone. GeoTapp registra coordenadas GPS — no se introducen a mano. Cada fichaje es certificado con marca de tiempo y posición verificable por el cliente.',
+        'El operario ficha desde el smartphone. GeoTapp registra coordenadas GPS, no se introducen a mano. Cada fichaje es certificado con marca de tiempo y posición verificable por el cliente.',
     },
     {
       question: '¿Puedo demostrar al cliente que el servicio se realizó?',

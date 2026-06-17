@@ -9,31 +9,31 @@ const PATHNAME = '/confronto/dinamico/';
 
 const META: Record<string, { title: string; description: string }> = {
   it: {
-    title: 'Confronta GeoTapp con Connecteam, Hubstaff, Jibble e altri — Comparativa Dinamica',
+    title: 'Confronta GeoTapp con Connecteam, Hubstaff, Jibble e altri - Comparativa Dinamica',
     description: 'Confronta GeoTapp con i principali competitor del field service in tempo reale. 12 feature, 7 competitor, una sola tabella. Scopri perché GeoTapp è l\'unico che produce prove verificabili del lavoro svolto.',
   },
   en: {
-    title: 'Compare GeoTapp vs Connecteam, Hubstaff, Jibble and more — Live Comparison',
+    title: 'Compare GeoTapp vs Connecteam, Hubstaff, Jibble and more - Live Comparison',
     description: 'Compare GeoTapp with the main field service competitors in real time. 12 features, 7 competitors, one table. See why GeoTapp is the only one that produces verifiable work proof.',
   },
   de: {
-    title: 'GeoTapp vs Connecteam, Hubstaff, Jibble und mehr — Dynamischer Vergleich',
+    title: 'GeoTapp vs Connecteam, Hubstaff, Jibble und mehr - Dynamischer Vergleich',
     description: 'Vergleichen Sie GeoTapp mit den wichtigsten Konkurrenten im Außendienst in Echtzeit. 12 Funktionen, 7 Tools, eine Tabelle.',
   },
   fr: {
-    title: 'Comparez GeoTapp vs Connecteam, Hubstaff, Jibble — Comparatif Dynamique',
+    title: 'Comparez GeoTapp vs Connecteam, Hubstaff, Jibble - Comparatif Dynamique',
     description: 'Comparez GeoTapp avec les principaux concurrents du field service en temps réel. 12 fonctionnalités, 7 outils, un tableau.',
   },
   es: {
-    title: 'Compara GeoTapp con Connecteam, Hubstaff, Jibble — Comparativa Dinámica',
+    title: 'Compara GeoTapp con Connecteam, Hubstaff, Jibble - Comparativa Dinámica',
     description: 'Compara GeoTapp con los principales competidores del field service en tiempo real. 12 funciones, 7 herramientas, una tabla.',
   },
   nl: {
-    title: 'Vergelijk GeoTapp met Connecteam, Hubstaff, Jibble — Dynamische Vergelijking',
+    title: 'Vergelijk GeoTapp met Connecteam, Hubstaff, Jibble - Dynamische Vergelijking',
     description: 'Vergelijk GeoTapp met de belangrijkste field service concurrenten in real time. 12 functies, 7 tools, één tabel.',
   },
   pt: {
-    title: 'Compara GeoTapp com Connecteam, Hubstaff, Jibble — Comparação Dinâmica',
+    title: 'Compara GeoTapp com Connecteam, Hubstaff, Jibble - Comparação Dinâmica',
     description: 'Compara GeoTapp com os principais concorrentes do field service em tempo real. 12 funções, 7 ferramentas, uma tabela.',
   },
 };
