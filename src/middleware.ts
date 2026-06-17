@@ -445,6 +445,13 @@ export async function middleware(req: NextRequest) {
     }
   }
 
+  // 0a2-bis. /blog/404/ è solo la pagina-errore del tema WP (noindex, mai indicizzata):
+  // alcuni hit diretti/bookmark/bot ci finiscono sopra. 301 verso l'hub blog così
+  // l'URL letterale non restituisce più un 404 ai pochi visitatori che lo richiedono.
+  if (pathname === '/blog/404' || pathname === '/blog/404/') {
+    return NextResponse.redirect(new URL('/blog/', req.url), 301);
+  }
+
   // 0a3. Bundle ritirato dal sito: 301 da .../{prezzi}/bundle/ → .../{prezzi}/
   // (copre tutti i locale e gli slug localizzati: pricing/preise/tarifs/...).
   {
