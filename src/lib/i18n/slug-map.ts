@@ -181,6 +181,12 @@ export const SLUG_MAP: Record<string, Partial<Record<AppLocale, string>>> = {
     da: 'gps-boder', sv: 'gps-boter', nb: 'gps-boter', ru: 'gps-shtrafy',
     'en-us': 'gps-penalties', 'en-gb': 'gps-penalties', 'en-au': 'gps-penalties', 'en-ie': 'gps-penalties', 'en-ca': 'gps-penalties',
   },
+  'generatore-informativa-gps': {
+    it: 'generatore-informativa-gps', en: 'gps-notice-generator', de: 'gps-hinweis-generator', nl: 'gps-verklaring-generator',
+    fr: 'generateur-avis-gps', es: 'generador-aviso-gps', pt: 'gerador-aviso-gps',
+    da: 'gps-meddelelse-generator', sv: 'gps-meddelande-generator', nb: 'gps-erklaering-generator', ru: 'generator-uvedomleniya-gps',
+    'en-us': 'gps-notice-generator', 'en-gb': 'gps-notice-generator', 'en-au': 'gps-notice-generator', 'en-ie': 'gps-notice-generator', 'en-ca': 'gps-notice-generator',
+  },
   'indice-sorveglianza': {
     it: 'indice-sorveglianza', en: 'surveillance-index', de: 'ueberwachungsindex', nl: 'surveillance-index',
     fr: 'indice-surveillance', es: 'indice-vigilancia', pt: 'indice-vigilancia',

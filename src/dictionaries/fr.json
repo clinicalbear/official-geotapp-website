@@ -54,6 +54,10 @@
       "indice": {
         "title": "Indice de surveillance des travailleurs en Europe",
         "desc": "Le classement de 39 pays européens selon la rigueur de leur cadre de surveillance des salariés."
+      },
+      "generatore": {
+        "title": "Générateur d'avis GPS",
+        "desc": "Créez votre modèle d'avis de confidentialité GPS avec votre logo, conforme au RGPD. Gratuit, dans votre navigateur."
       }
     }
   },

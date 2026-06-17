@@ -54,6 +54,10 @@
       "indice": {
         "title": "Indeks for medarbejderovervågning i Europa",
         "desc": "Rangeringen af 39 europæiske lande efter hvor strengt deres regelsæt for medarbejderovervågning er."
+      },
+      "generatore": {
+        "title": "GPS-meddelelse-generator",
+        "desc": "Lav dit eksempel på en GPS-privatlivsmeddelelse med dit logo, GDPR-konform. Gratis, i din browser."
       }
     }
   },

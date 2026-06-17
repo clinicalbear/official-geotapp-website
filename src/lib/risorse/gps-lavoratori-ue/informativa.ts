@@ -7,7 +7,7 @@
  * Disclaimer obbligatorio in pagina: è una bozza, non consulenza legale.
  */
 
-export type InfLocale = 'it' | 'en' | 'de' | 'fr' | 'es' | 'nl';
+export type InfLocale = 'it' | 'en' | 'de' | 'fr' | 'es' | 'nl' | 'pt' | 'da' | 'sv' | 'nb' | 'ru';
 
 export interface InfInputs {
   azienda: string;
@@ -129,6 +129,86 @@ const T: Record<InfLocale, Template> = {
     dpoLine: 'Functionaris voor gegevensbescherming (FG): {dpo}.',
     chiusura: 'Deze verklaring is een automatisch gegenereerd concept en vormt geen juridisch advies. Laat het vóór gebruik door een professional controleren.',
   },
+  pt: {
+    titolo: "Informação sobre o tratamento dos dados de geolocalização dos trabalhadores",
+    intro: "Nos termos dos artigos 13.º e 14.º do Regulamento (UE) 2016/679 (RGPD), {azienda} presta as seguintes informações sobre o tratamento dos dados de geolocalização do pessoal.",
+    sezioni: [
+      { titolo: "1. Responsável pelo tratamento", testo: "O responsável pelo tratamento é {azienda}." },
+      { titolo: "2. Finalidade e fundamento jurídico", testo: "Os dados são tratados para a seguinte finalidade: {finalita}. O fundamento jurídico é o interesse legítimo do empregador e/ou a execução da relação de trabalho (art. 6.º do RGPD), no respeito da legislação nacional sobre o controlo à distância." },
+      { titolo: "3. Categorias de dados", testo: "São tratados dados de geolocalização (posição do dispositivo ou do veículo) associados ao trabalhador." },
+      { titolo: "4. Quando e como", testo: "A posição é recolhida {quando}. O tratamento é proporcional à finalidade e não implica um controlo à distância contínuo dos trabalhadores." },
+      { titolo: "5. Destinatários", testo: "Os dados são acessíveis ao pessoal autorizado e aos subcontratantes (por exemplo, o fornecedor do software), que os tratam por conta do responsável pelo tratamento." },
+      { titolo: "6. Conservação", testo: "Os dados são conservados durante {conservazione} e, em seguida, eliminados ou anonimizados." },
+      { titolo: "7. Direitos do titular dos dados", testo: "O trabalhador pode exercer os direitos de acesso, retificação, apagamento, limitação, oposição e portabilidade, bem como apresentar reclamação à autoridade de controlo." },
+      { titolo: "8. Autoridade de controlo", testo: "Autoridade de controlo competente para reclamações: {autorita} ({paese})." },
+    ],
+    dpoLine: "Encarregado da proteção de dados (EPD): {dpo}.",
+    chiusura: "A presente informação é um rascunho gerado automaticamente e não constitui aconselhamento jurídico. Verifique o seu conteúdo com um profissional antes de a utilizar.",
+  },
+  da: {
+    titolo: "Oplysninger om behandling af medarbejderes geolokaliseringsdata",
+    intro: "I henhold til artikel 13 og 14 i forordning (EU) 2016/679 (Databeskyttelsesforordningen, GDPR) giver {azienda} hermed følgende oplysninger om behandlingen af personalets geolokaliseringsdata.",
+    sezioni: [
+      { titolo: "1. Dataansvarlig", testo: "Den dataansvarlige er {azienda}." },
+      { titolo: "2. Formål og retsgrundlag", testo: "Dataene behandles til følgende formål: {finalita}. Retsgrundlaget er arbejdsgiverens legitime interesse og/eller opfyldelsen af ansættelsesforholdet (artikel 6 i Databeskyttelsesforordningen) under overholdelse af den nationale lovgivning om fjernovervågning." },
+      { titolo: "3. Kategorier af data", testo: "Der behandles geolokaliseringsdata (enhedens eller køretøjets position) knyttet til medarbejderen." },
+      { titolo: "4. Hvornår og hvordan", testo: "Positionen registreres {quando}. Behandlingen står i rimeligt forhold til formålet og indebærer ikke en vedvarende fjernovervågning af medarbejderne." },
+      { titolo: "5. Modtagere", testo: "Dataene er tilgængelige for autoriseret personale og for databehandlere (f.eks. softwareleverandøren), som behandler dem på vegne af den dataansvarlige." },
+      { titolo: "6. Opbevaring", testo: "Dataene opbevares i {conservazione} og slettes eller anonymiseres derefter." },
+      { titolo: "7. Den registreredes rettigheder", testo: "Medarbejderen kan udøve retten til indsigt, berigtigelse, sletning, begrænsning, indsigelse og dataportabilitet samt indgive klage til tilsynsmyndigheden." },
+      { titolo: "8. Tilsynsmyndighed", testo: "Kompetent tilsynsmyndighed for klager: {autorita} ({paese})." },
+    ],
+    dpoLine: "Databeskyttelsesrådgiver (DPO): {dpo}.",
+    chiusura: "Disse oplysninger er et automatisk genereret udkast og udgør ikke juridisk rådgivning. Få indholdet kontrolleret af en fagperson inden brug.",
+  },
+  sv: {
+    titolo: "Information om behandling av anställdas geolokaliseringsuppgifter",
+    intro: "I enlighet med artiklarna 13 och 14 i förordning (EU) 2016/679 (dataskyddsförordningen, GDPR) lämnar {azienda} följande information om behandlingen av personalens geolokaliseringsuppgifter.",
+    sezioni: [
+      { titolo: "1. Personuppgiftsansvarig", testo: "Personuppgiftsansvarig är {azienda}." },
+      { titolo: "2. Ändamål och rättslig grund", testo: "Uppgifterna behandlas för följande ändamål: {finalita}. Den rättsliga grunden är arbetsgivarens berättigade intresse och/eller fullgörandet av anställningsförhållandet (artikel 6 i GDPR), med iakttagande av nationell lagstiftning om kontroll på distans." },
+      { titolo: "3. Kategorier av uppgifter", testo: "Geolokaliseringsuppgifter behandlas (positionen för enheten eller fordonet) kopplade till arbetstagaren." },
+      { titolo: "4. När och hur", testo: "Positionen registreras {quando}. Behandlingen står i proportion till ändamålet och innebär inte en fortlöpande kontroll på distans av arbetstagarna." },
+      { titolo: "5. Mottagare", testo: "Uppgifterna är tillgängliga för behörig personal och för personuppgiftsbiträden (till exempel programvaruleverantören), som behandlar dem för den personuppgiftsansvariges räkning." },
+      { titolo: "6. Lagring", testo: "Uppgifterna lagras under {conservazione} och raderas eller anonymiseras därefter." },
+      { titolo: "7. Den registrerades rättigheter", testo: "Arbetstagaren kan utöva rätten till tillgång, rättelse, radering, begränsning, invändning och dataportabilitet samt lämna in klagomål till tillsynsmyndigheten." },
+      { titolo: "8. Tillsynsmyndighet", testo: "Behörig tillsynsmyndighet för klagomål: {autorita} ({paese})." },
+    ],
+    dpoLine: "Dataskyddsombud (DPO): {dpo}.",
+    chiusura: "Denna information är ett automatiskt genererat utkast och utgör inte juridisk rådgivning. Kontrollera innehållet med en yrkesverksam innan användning.",
+  },
+  nb: {
+    titolo: "Personvernerklæring om behandling av geolokaliseringsdata for arbeidstakere",
+    intro: "I henhold til artikkel 13 og 14 i forordning (EU) 2016/679 (personvernforordningen / GDPR) gir {azienda} følgende informasjon om behandlingen av geolokaliseringsdata for de ansatte.",
+    sezioni: [
+      { titolo: "1. Behandlingsansvarlig", testo: "Behandlingsansvarlig er {azienda}." },
+      { titolo: "2. Formål og rettslig grunnlag", testo: "Dataene behandles for følgende formål: {finalita}. Det rettslige grunnlaget er arbeidsgiverens berettigede interesse og/eller oppfyllelse av arbeidsforholdet (artikkel 6 i personvernforordningen), i samsvar med nasjonal lovgivning om fjernkontroll av arbeidstakere." },
+      { titolo: "3. Kategorier av personopplysninger", testo: "Det behandles geolokaliseringsdata (posisjonen til enheten eller kjøretøyet) knyttet til arbeidstakeren." },
+      { titolo: "4. Når og hvordan", testo: "Posisjonen registreres {quando}. Behandlingen står i forhold til formålet og innebærer ikke en kontinuerlig fjernkontroll av arbeidstakerne." },
+      { titolo: "5. Mottakere", testo: "Dataene er tilgjengelige for autorisert personell og for databehandlere (for eksempel programvareleverandøren), som behandler dem på vegne av den behandlingsansvarlige." },
+      { titolo: "6. Lagring", testo: "Dataene lagres i {conservazione} og deretter slettes eller anonymiseres." },
+      { titolo: "7. Den registrertes rettigheter", testo: "Arbeidstakeren kan utøve retten til innsyn, retting, sletting, begrensning, innsigelse og dataportabilitet, samt klage til tilsynsmyndigheten." },
+      { titolo: "8. Tilsynsmyndighet", testo: "Tilsynsmyndighet med ansvar for klager: {autorita} ({paese})." },
+    ],
+    dpoLine: "Personvernombud (DPO): {dpo}.",
+    chiusura: "Denne personvernerklæringen er et automatisk generert utkast og utgjør ikke juridisk rådgivning. Få innholdet kontrollert av en fagperson før bruk.",
+  },
+  ru: {
+    titolo: "Уведомление об обработке данных о геолокации работников",
+    intro: "В соответствии со статьями 13 и 14 Регламента (ЕС) 2016/679 (GDPR) компания {azienda} предоставляет следующую информацию об обработке данных о геолокации персонала.",
+    sezioni: [
+      { titolo: "1. Контролёр данных", testo: "Контролёром обработки данных является {azienda}." },
+      { titolo: "2. Цели и правовое основание", testo: "Данные обрабатываются в следующих целях: {finalita}. Правовым основанием является законный интерес работодателя и/или исполнение трудовых отношений (ст. 6 GDPR) при соблюдении национального законодательства о дистанционном контроле." },
+      { titolo: "3. Категории данных", testo: "Обрабатываются данные о геолокации (местоположение устройства или транспортного средства), связанные с работником." },
+      { titolo: "4. Когда и как", testo: "Местоположение фиксируется {quando}. Обработка соразмерна цели и не предполагает непрерывного дистанционного контроля за работниками." },
+      { titolo: "5. Получатели данных", testo: "Доступ к данным имеют уполномоченный персонал и обработчики данных (например, поставщик программного обеспечения), которые обрабатывают их по поручению контролёра." },
+      { titolo: "6. Хранение", testo: "Данные хранятся в течение {conservazione}, после чего удаляются или анонимизируются." },
+      { titolo: "7. Права субъекта данных", testo: "Работник вправе осуществлять права на доступ, исправление, удаление, ограничение обработки, возражение и переносимость данных, а также подать жалобу в надзорный орган." },
+      { titolo: "8. Надзорный орган", testo: "Надзорный орган, компетентный рассматривать жалобы: {autorita} ({paese})." },
+    ],
+    dpoLine: "Должностное лицо по защите данных (DPO): {dpo}.",
+    chiusura: "Настоящее уведомление является автоматически сгенерированным черновиком и не представляет собой юридическую консультацию. Перед использованием проверьте его содержание у специалиста.",
+  },
 };
 
 function fill(s: string, i: InfInputs): string {
@@ -154,7 +234,27 @@ export function buildInformativa(locale: InfLocale, i: InfInputs): string {
 }
 
 export function infLocale(locale: string): InfLocale {
-  return (['it', 'en', 'de', 'fr', 'es', 'nl'] as const).includes(locale as InfLocale)
+  return (['it', 'en', 'de', 'fr', 'es', 'nl', 'pt', 'da', 'sv', 'nb', 'ru'] as const).includes(locale as InfLocale)
     ? (locale as InfLocale)
     : 'en';
+}
+
+export interface InformativaDoc {
+  titolo: string;
+  intro: string;
+  dpo?: string;       // riga DPO già compilata, se presente
+  sezioni: { titolo: string; testo: string }[];
+  chiusura: string;
+}
+
+/** Versione strutturata (per il rendering HTML/PDF del generatore). */
+export function buildInformativaDoc(locale: InfLocale, i: InfInputs): InformativaDoc {
+  const t = T[locale] ?? T.en;
+  return {
+    titolo: t.titolo,
+    intro: fill(t.intro, i),
+    dpo: i.dpo && i.dpo.trim() ? fill(t.dpoLine.replace(/\{dpo\}/g, i.dpo), i) : undefined,
+    sezioni: t.sezioni.map((s) => ({ titolo: s.titolo, testo: fill(s.testo, i) })),
+    chiusura: t.chiusura,
+  };
 }

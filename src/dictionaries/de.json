@@ -54,6 +54,10 @@
       "indice": {
         "title": "Index der Arbeitnehmerüberwachung in Europa",
         "desc": "Das Ranking von 39 europäischen Ländern nach Strenge des Mitarbeiterüberwachungs-Rahmens."
+      },
+      "generatore": {
+        "title": "GPS-Hinweis-Generator",
+        "desc": "Erstellen Sie Ihre Muster-Datenschutzerklärung für GPS mit Ihrem Logo, DSGVO-konform. Kostenlos, in Ihrem Browser."
       }
     }
   },

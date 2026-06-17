@@ -54,6 +54,10 @@
       "indice": {
         "title": "Indeks for ansattovervåking i Europa",
         "desc": "Rangeringen av 39 europeiske land etter hvor strengt rammeverket for ansattovervåking er."
+      },
+      "generatore": {
+        "title": "GPS-erklæring-generator",
+        "desc": "Lag ditt eksempel på en GPS-personvernerklæring med din logo, GDPR-kompatibel. Gratis, i nettleseren din."
       }
     }
   },

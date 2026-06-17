@@ -54,6 +54,10 @@
       "indice": {
         "title": "Worker surveillance index in Europe",
         "desc": "The ranking of 39 European countries by how strict their worker-monitoring framework is."
+      },
+      "generatore": {
+        "title": "GPS notice generator",
+        "desc": "Create your customised GPS privacy notice with your logo, GDPR-compliant. Free, in your browser."
       }
     }
   },

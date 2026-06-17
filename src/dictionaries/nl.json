@@ -54,6 +54,10 @@
       "indice": {
         "title": "Index werknemerstoezicht in Europa",
         "desc": "De ranglijst van 39 Europese landen naar hoe streng hun kader voor werknemersmonitoring is."
+      },
+      "generatore": {
+        "title": "GPS-verklaring-generator",
+        "desc": "Maak uw voorbeeld van een GPS-privacyverklaring met uw logo, AVG-conform. Gratis, in uw browser."
       }
     }
   },

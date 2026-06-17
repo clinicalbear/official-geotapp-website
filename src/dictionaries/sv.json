@@ -54,6 +54,10 @@
       "indice": {
         "title": "Index för medarbetarövervakning i Europa",
         "desc": "Rangordningen av 39 europeiska länder efter hur strängt deras ramverk för medarbetarövervakning är."
+      },
+      "generatore": {
+        "title": "GPS-meddelande-generator",
+        "desc": "Skapa ditt exempel på ett GPS-integritetsmeddelande med din logotyp, GDPR-förenligt. Gratis, i din webbläsare."
       }
     }
   },

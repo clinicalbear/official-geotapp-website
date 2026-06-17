@@ -54,6 +54,10 @@
       "indice": {
         "title": "Indice della sorveglianza in Europa",
         "desc": "La classifica dei 39 Paesi europei per quanto è stringente il quadro sul monitoraggio dei lavoratori."
+      },
+      "generatore": {
+        "title": "Generatore informativa GPS",
+        "desc": "Crea il fac-simile dell'informativa privacy GPS personalizzato col tuo logo, conforme GDPR. Gratis, nel tuo browser."
       }
     }
   },

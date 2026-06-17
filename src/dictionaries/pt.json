@@ -54,6 +54,10 @@
       "indice": {
         "title": "Índice de vigilância laboral na Europa",
         "desc": "A classificação dos 39 países europeus pela rigidez do quadro sobre monitorização de trabalhadores."
+      },
+      "generatore": {
+        "title": "Gerador de aviso GPS",
+        "desc": "Crie o seu modelo de aviso de privacidade GPS com o seu logótipo, conforme o RGPD. Grátis, no seu navegador."
       }
     }
   },
