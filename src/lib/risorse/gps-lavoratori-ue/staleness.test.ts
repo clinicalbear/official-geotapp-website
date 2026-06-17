@@ -8,7 +8,7 @@ describe('isStale', () => {
     expect(isStale('2026-03-15', '2026-06-15')).toBe(false);
   });
 
-  it('una data piu vecchia della soglia (6 mesi) e stale', () => {
+  it('una data più vecchia della soglia (6 mesi) e stale', () => {
     // 7 mesi indietro, soglia 6 mesi → stale
     expect(isStale('2025-11-15', '2026-06-15')).toBe(true);
   });

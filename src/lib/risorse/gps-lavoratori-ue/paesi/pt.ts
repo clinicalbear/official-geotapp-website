@@ -114,7 +114,7 @@ export const portogallo: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "La sorveglianza a distanza non puo servire a controllare la prestazione professionale; e ammessa solo per la protezione e sicurezza di persone e beni o per particolari esigenze dell'attivita.",
+        it: "La sorveglianza a distanza non può servire a controllare la prestazione professionale; e ammessa solo per la protezione e sicurezza di persone e beni o per particolari esigenze dell'attività.",
         en: 'Remote surveillance may not be used to monitor professional performance; it is allowed only for the protection and safety of people and property or for particular needs of the activity.',
         de: 'Die Fernueberwachung darf nicht zur Kontrolle der beruflichen Leistung dienen; sie ist nur zum Schutz und zur Sicherheit von Personen und Sachen oder fuer besondere Erfordernisse der Taetigkeit zulaessig.',
         fr: 'La surveillance a distance ne peut servir a controler la prestation professionnelle; elle n\'est admise que pour la protection et la securite des personnes et des biens ou pour des besoins particuliers de l\'activite.',
@@ -134,7 +134,7 @@ export const portogallo: SchedaPaese = {
       },
       risposta: 'no',
       dettaglio: {
-        it: "Con il GDPR e venuta meno la vecchia autorizzazione preventiva della CNPD; resta un controllo a posteriori. Nota: l'art. 21 CT non e stato esplicitamente abrogato e la dottrina e divisa, ma in pratica l'autorizzazione preventiva non viene piu richiesta.",
+        it: "Con il GDPR e venuta meno la vecchia autorizzazione preventiva della CNPD; resta un controllo a posteriori. Nota: l'art. 21 CT non e stato esplicitamente abrogato e la dottrina e divisa, ma in pratica l'autorizzazione preventiva non viene più richiesta.",
         en: 'With the GDPR the old prior authorisation by the CNPD has fallen away; an a posteriori review remains. Note: art. 21 CT has not been expressly repealed and legal opinion is divided, but in practice prior authorisation is no longer required.',
         de: 'Mit der DSGVO ist die alte vorherige Genehmigung durch die CNPD weggefallen; es bleibt eine nachtraegliche Kontrolle. Hinweis: Art. 21 CT wurde nicht ausdruecklich aufgehoben und die Lehre ist geteilt, in der Praxis wird die vorherige Genehmigung jedoch nicht mehr verlangt.',
         fr: 'Avec le RGPD, l\'ancienne autorisation prealable de la CNPD a disparu; un controle a posteriori subsiste. Note: l\'art. 21 CT n\'a pas ete expressement abroge et la doctrine est divisee, mais en pratique l\'autorisation prealable n\'est plus exigee.',
@@ -154,7 +154,7 @@ export const portogallo: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "Per la CNPD la geolocalizzazione non puo localizzare il lavoratore ne monitorarne il rendimento, non puo estendersi a pause e riposi, e il lavoratore deve poter passare al modo privato fuori dall'orario. Il consenso del lavoratore non e una base valida.",
+        it: "Per la CNPD la geolocalizzazione non può localizzare il lavoratore ne monitorarne il rendimento, non può estendersi a pause e riposi, e il lavoratore deve poter passare al modo privato fuori dall'orario. Il consenso del lavoratore non e una base valida.",
         en: 'According to the CNPD, geolocation may not locate the worker nor monitor their performance, may not extend to breaks and rest periods, and the worker must be able to switch to private mode outside working hours. The worker\'s consent is not a valid legal basis.',
         de: 'Nach Auffassung der CNPD darf die Geolokalisierung den Arbeitnehmer weder orten noch seine Leistung ueberwachen, sie darf sich nicht auf Pausen und Ruhezeiten erstrecken, und der Arbeitnehmer muss ausserhalb der Arbeitszeit in den Privatmodus wechseln koennen. Die Einwilligung des Arbeitnehmers ist keine gueltige Rechtsgrundlage.',
         fr: 'Pour la CNPD, la geolocalisation ne peut localiser le travailleur ni surveiller son rendement, ne peut s\'etendre aux pauses et aux repos, et le travailleur doit pouvoir passer en mode prive en dehors des heures de travail. Le consentement du travailleur n\'est pas une base juridique valable.',
@@ -220,7 +220,7 @@ export const portogallo: SchedaPaese = {
     {
       passo: 2,
       descrizione: {
-        it: 'Verifica la finalita: ammessa solo per sicurezza di persone/beni o esigenze particolari dell\'attivita, mai per controllare il rendimento.',
+        it: 'Verifica la finalita: ammessa solo per sicurezza di persone/beni o esigenze particolari dell\'attività, mai per controllare il rendimento.',
         en: 'Check the purpose: allowed only for the safety of people/property or particular needs of the activity, never to monitor performance.',
         de: 'Pruefen Sie den Zweck: nur zur Sicherheit von Personen/Sachen oder fuer besondere Erfordernisse der Taetigkeit zulaessig, niemals zur Leistungskontrolle.',
         fr: 'Verifiez la finalite: admise uniquement pour la securite des personnes/biens ou des besoins particuliers de l\'activite, jamais pour controler le rendement.',
@@ -295,7 +295,7 @@ export const portogallo: SchedaPaese = {
       nl: 'tot 20 miljoen euro of 4% van de wereldwijde jaaromzet',
     },
     casoCitato: {
-      it: "La violazione dell'art. 20 del Codigo do Trabalho e una contraordenacao grave. Dal GDPR la CNPD non pubblica piu le singole decisioni sanzionatorie, quindi non esiste un importo-faro pubblicabile per la geolocalizzazione dei dipendenti; il rischio resta quello generale del GDPR (art. 83): fino a 20 milioni di euro o il 4% del fatturato annuo mondiale.",
+      it: "La violazione dell'art. 20 del Codigo do Trabalho e una contraordenacao grave. Dal GDPR la CNPD non pubblica più le singole decisioni sanzionatorie, quindi non esiste un importo-faro pubblicabile per la geolocalizzazione dei dipendenti; il rischio resta quello generale del GDPR (art. 83): fino a 20 milioni di euro o il 4% del fatturato annuo mondiale.",
       en: 'Breach of art. 20 of the Codigo do Trabalho is a serious administrative offence (contraordenacao grave). Since the GDPR, the CNPD no longer publishes individual sanction decisions, so there is no publishable benchmark figure for employee geolocation; the risk remains the general GDPR one (art. 83): up to 20 million euro or 4% of total annual worldwide turnover.',
       de: 'Der Verstoss gegen Art. 20 des Codigo do Trabalho ist eine schwere Ordnungswidrigkeit (contraordenacao grave). Seit der DSGVO veroeffentlicht die CNPD keine einzelnen Sanktionsentscheidungen mehr, sodass es keinen veroeffentlichbaren Richtwert fuer die Geolokalisierung von Beschaeftigten gibt; das Risiko bleibt das allgemeine der DSGVO (Art. 83): bis zu 20 Millionen Euro oder 4% des weltweiten Jahresumsatzes.',
       fr: 'La violation de l\'art. 20 du Codigo do Trabalho est une contravention grave (contraordenacao grave). Depuis le RGPD, la CNPD ne publie plus les decisions de sanction individuelles, de sorte qu\'il n\'existe pas de montant de reference publiable pour la geolocalisation des salaries; le risque reste celui, general, du RGPD (art. 83): jusqu\'a 20 millions d\'euros ou 4% du chiffre d\'affaires annuel mondial.',

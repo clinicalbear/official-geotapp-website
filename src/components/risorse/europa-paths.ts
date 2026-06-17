@@ -7,7 +7,7 @@
  * originale (viewBox completo: "30.767 241.591 784.077 458.627"). Il componente
  * <EuropaMappa> usa un viewBox ritagliato sull'Europa.
  *
- * Ogni voce e' la chiave ISO 3166-1 alpha-2 -> lista di path "d" (i paesi a piu'
+ * Ogni voce e' la chiave ISO 3166-1 alpha-2 -> lista di path "d" (i paesi a più'
  * isole hanno piu' tracciati). Generato, non modificare a mano.
  */
 

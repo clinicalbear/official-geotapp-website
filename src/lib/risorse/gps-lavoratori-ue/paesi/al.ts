@@ -152,7 +152,7 @@ export const albania: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "Per l'IDP la sorveglianza deve usare il mezzo meno intrusivo, essere giustificata da un bisogno specifico e con conservazione il piu' breve possibile; va informato chi e' sorvegliato.",
+        it: "Per l'IDP la sorveglianza deve usare il mezzo meno intrusivo, essere giustificata da un bisogno specifico e con conservazione il più' breve possibile; va informato chi e' sorvegliato.",
         en: 'For the IDP, surveillance must use the least intrusive means, be justified by a specific need and with retention as short as possible; the person under surveillance must be informed.',
         de: 'Nach Auffassung der IDP muss die Ueberwachung das am wenigsten eingreifende Mittel verwenden, durch einen konkreten Bedarf gerechtfertigt und so kurz wie moeglich gespeichert sein; die ueberwachte Person ist zu informieren.',
         fr: "Pour l'IDP, la surveillance doit recourir au moyen le moins intrusif, etre justifiee par un besoin specifique et avec une conservation aussi breve que possible ; la personne surveillee doit etre informee.",

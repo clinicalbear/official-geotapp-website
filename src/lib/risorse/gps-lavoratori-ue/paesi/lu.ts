@@ -108,7 +108,7 @@ export const lussemburgo: SchedaPaese = {
     },
     {
       voce: {
-        it: 'Possibilita per la delegazione o i lavoratori di chiedere un parere preventivo alla CNPD entro 15 giorni (effetto sospensivo)',
+        it: 'Possibilità per la delegazione o i lavoratori di chiedere un parere preventivo alla CNPD entro 15 giorni (effetto sospensivo)',
         en: 'Possibility for the delegation or the workers to request a prior opinion from the CNPD within 15 days (suspensive effect)',
         de: 'Moeglichkeit fuer die Delegation oder die Arbeitnehmer, innerhalb von 15 Tagen eine vorherige Stellungnahme der CNPD anzufordern (aufschiebende Wirkung)',
         fr: "Possibilite pour la delegation ou les travailleurs de demander un avis prealable a la CNPD dans un delai de 15 jours (effet suspensif)",
@@ -157,7 +157,7 @@ export const lussemburgo: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "Serve una base dell'art. 6 GDPR e l'informazione individuale (art. 13); il datore non puo sorvegliare fuori dall'orario, e se e ammesso l'uso privato del veicolo il sistema non puo restare permanente e il lavoratore deve poterlo disattivare.",
+        it: "Serve una base dell'art. 6 GDPR e l'informazione individuale (art. 13); il datore non può sorvegliare fuori dall'orario, e se e ammesso l'uso privato del veicolo il sistema non può restare permanente e il lavoratore deve poterlo disattivare.",
         en: 'A basis under GDPR art. 6 and individual information (art. 13) are required; the employer cannot monitor outside working hours, and if private use of the vehicle is allowed the system cannot remain permanent and the worker must be able to deactivate it.',
         de: 'Erforderlich sind eine Grundlage nach Art. 6 DSGVO und die individuelle Information (Art. 13); der Arbeitgeber darf nicht ausserhalb der Arbeitszeit ueberwachen, und wenn die private Nutzung des Fahrzeugs erlaubt ist, darf das System nicht dauerhaft bleiben und der Arbeitnehmer muss es deaktivieren koennen.',
         fr: "Une base au titre de l'art. 6 RGPD et l'information individuelle (art. 13) sont necessaires; l'employeur ne peut pas surveiller en dehors des heures de travail, et si l'usage prive du vehicule est autorise, le systeme ne peut pas rester permanent et le travailleur doit pouvoir le desactiver.",
@@ -203,7 +203,7 @@ export const lussemburgo: SchedaPaese = {
     {
       passo: 2,
       descrizione: {
-        it: 'Lascia alla delegazione o ai lavoratori la possibilita di chiedere un parere alla CNPD entro 15 giorni (effetto sospensivo).',
+        it: 'Lascia alla delegazione o ai lavoratori la possibilità di chiedere un parere alla CNPD entro 15 giorni (effetto sospensivo).',
         en: 'Allow the delegation or the workers the possibility to request an opinion from the CNPD within 15 days (suspensive effect).',
         de: 'Geben Sie der Delegation oder den Arbeitnehmern die Moeglichkeit, innerhalb von 15 Tagen eine Stellungnahme der CNPD anzufordern (aufschiebende Wirkung).',
         fr: "Laissez a la delegation ou aux travailleurs la possibilite de demander un avis a la CNPD dans un delai de 15 jours (effet suspensif).",
@@ -278,7 +278,7 @@ export const lussemburgo: SchedaPaese = {
       nl: '2.800 €',
     },
     casoCitato: {
-      it: "CNPD, deliberazione 11FR/2021 dell'8 aprile 2021: sanzione a una societa per un sistema di geolocalizzazione dei veicoli di servizio gestito in modo illecito, con conservazione dei dati eccessiva (2 anni e 4 mesi), informazione carente ai lavoratori (art. 13) e sicurezza insufficiente (art. 32). Multa 2.800 euro.",
+      it: "CNPD, deliberazione 11FR/2021 dell'8 aprile 2021: sanzione a una società per un sistema di geolocalizzazione dei veicoli di servizio gestito in modo illecito, con conservazione dei dati eccessiva (2 anni e 4 mesi), informazione carente ai lavoratori (art. 13) e sicurezza insufficiente (art. 32). Multa 2.800 euro.",
       en: 'CNPD, decision 11FR/2021 of 8 April 2021: a penalty against a company for a service-vehicle geolocation system operated unlawfully, with excessive data retention (2 years and 4 months), inadequate information to workers (art. 13) and insufficient security (art. 32). Fine of 2,800 euros.',
       de: 'CNPD, Beschluss 11FR/2021 vom 8. April 2021: Sanktion gegen ein Unternehmen wegen eines rechtswidrig betriebenen Ortungssystems fuer Dienstfahrzeuge, mit uebermaessiger Datenspeicherung (2 Jahre und 4 Monate), mangelhafter Information der Arbeitnehmer (Art. 13) und unzureichender Sicherheit (Art. 32). Geldbusse von 2.800 Euro.',
       fr: "CNPD, deliberation 11FR/2021 du 8 avril 2021: sanction a l'encontre d'une societe pour un systeme de geolocalisation des vehicules de service exploite de maniere illicite, avec une conservation des donnees excessive (2 ans et 4 mois), une information insuffisante des travailleurs (art. 13) et une securite insuffisante (art. 32). Amende de 2 800 euros.",

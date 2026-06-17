@@ -100,7 +100,7 @@ export const olanda: SchedaPaese = {
       },
       risposta: 'dipende',
       dettaglio: {
-        it: "Dove esiste un consiglio aziendale (ondernemingsraad, OR), il datore ne ha bisogno del consenso preventivo (instemmingsrecht) prima di introdurre un sistema che tratta i dati del personale o ne controlla presenza, comportamento o rendimento (WOR art. 27, lett. k e l). Se l'OR non acconsente, non si puo procedere. Vale dove un OR esiste: e obbligatorio dai 50 dipendenti in su.",
+        it: "Dove esiste un consiglio aziendale (ondernemingsraad, OR), il datore ne ha bisogno del consenso preventivo (instemmingsrecht) prima di introdurre un sistema che tratta i dati del personale o ne controlla presenza, comportamento o rendimento (WOR art. 27, lett. k e l). Se l'OR non acconsente, non si può procedere. Vale dove un OR esiste: e obbligatorio dai 50 dipendenti in su.",
         en: 'Where a works council (ondernemingsraad, OR) exists, the employer needs its prior consent (instemmingsrecht) before introducing a system that processes staff data or monitors attendance, behaviour or performance (WOR art. 27, points k and l). If the OR does not consent, the employer cannot proceed. This applies where an OR exists: it is mandatory from 50 employees upwards.',
         de: 'Wo ein Betriebsrat (ondernemingsraad, OR) besteht, benoetigt der Arbeitgeber dessen vorherige Zustimmung (instemmingsrecht), bevor er ein System einfuehrt, das Personaldaten verarbeitet oder Anwesenheit, Verhalten oder Leistung ueberwacht (WOR Art. 27, Buchstaben k und l). Stimmt der OR nicht zu, darf der Arbeitgeber nicht fortfahren. Dies gilt, wo ein OR besteht: ab 50 Beschaeftigten ist er verpflichtend.',
         fr: "La ou un conseil d'entreprise (ondernemingsraad, OR) existe, l'employeur a besoin de son accord prealable (instemmingsrecht) avant d'introduire un systeme qui traite les donnees du personnel ou qui controle la presence, le comportement ou le rendement (WOR art. 27, points k et l). Si l'OR ne donne pas son accord, l'employeur ne peut pas avancer. Cela vaut la ou un OR existe: il est obligatoire a partir de 50 salaries.",
@@ -140,7 +140,7 @@ export const olanda: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: 'I lavoratori vanno informati in anticipo e in modo completo su cosa viene controllato e perche.',
+        it: 'I lavoratori vanno informati in anticipo e in modo completo su cosa viene controllato e perché.',
         en: 'Workers must be informed in advance and fully about what is monitored and why.',
         de: 'Die Beschaeftigten sind im Voraus und vollstaendig darueber zu informieren, was kontrolliert wird und warum.',
         fr: 'Les travailleurs doivent etre informes a l\'avance et de maniere complete de ce qui est controle et pourquoi.',
@@ -180,7 +180,7 @@ export const olanda: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "La lista DPIA dell'AP cita espressamente i sistemi GPS nei veicoli dei dipendenti e il monitoraggio sistematico delle attivita dei lavoratori, oltre al trattamento su larga scala di dati di localizzazione: in questi casi la DPIA e obbligatoria.",
+        it: "La lista DPIA dell'AP cita espressamente i sistemi GPS nei veicoli dei dipendenti e il monitoraggio sistematico delle attività dei lavoratori, oltre al trattamento su larga scala di dati di localizzazione: in questi casi la DPIA e obbligatoria.",
         en: "The AP's DPIA list expressly cites GPS systems in employees' vehicles and the systematic monitoring of workers' activities, as well as the large-scale processing of location data: in these cases the DPIA is mandatory.",
         de: 'Die DSFA-Liste der AP nennt ausdruecklich GPS-Systeme in den Fahrzeugen der Beschaeftigten und die systematische Ueberwachung der Taetigkeiten der Beschaeftigten sowie die umfangreiche Verarbeitung von Standortdaten: in diesen Faellen ist die DSFA verpflichtend.',
         fr: "La liste AIPD de l'AP cite expressement les systemes GPS dans les vehicules des salaries et la surveillance systematique des activites des travailleurs, ainsi que le traitement a grande echelle de donnees de localisation: dans ces cas, l'AIPD est obligatoire.",
@@ -292,7 +292,7 @@ export const olanda: SchedaPaese = {
       nl: '725.000 EUR',
     },
     casoCitato: {
-      it: "Sanzione dell'Autoriteit Persoonsgegevens (2020) a un'azienda per il trattamento delle impronte digitali dei dipendenti per la rilevazione delle presenze: dato biometrico (art. 9 GDPR) trattato senza una base valida, perche il consenso dei dipendenti non e considerato libero per lo squilibrio di potere. Non e un caso di GPS ma e il caso faro olandese sul controllo presenze dei dipendenti. L'importo potrebbe essere stato ridotto in sede di opposizione: da verificare alla fonte ufficiale.",
+      it: "Sanzione dell'Autoriteit Persoonsgegevens (2020) a un'azienda per il trattamento delle impronte digitali dei dipendenti per la rilevazione delle presenze: dato biometrico (art. 9 GDPR) trattato senza una base valida, perché il consenso dei dipendenti non e considerato libero per lo squilibrio di potere. Non e un caso di GPS ma e il caso faro olandese sul controllo presenze dei dipendenti. L'importo potrebbe essere stato ridotto in sede di opposizione: da verificare alla fonte ufficiale.",
       en: "Fine from the Autoriteit Persoonsgegevens (2020) against a company for processing employees' fingerprints for attendance recording: biometric data (art. 9 GDPR) processed without a valid basis, because the employees' consent is not regarded as freely given owing to the imbalance of power. It is not a GPS case but it is the Dutch landmark case on employee attendance monitoring. The amount may have been reduced on objection: check against the official source.",
       de: "Bussgeld der Autoriteit Persoonsgegevens (2020) gegen ein Unternehmen wegen der Verarbeitung der Fingerabdruecke von Beschaeftigten zur Zeiterfassung: biometrische Daten (Art. 9 DSGVO), die ohne gueltige Grundlage verarbeitet wurden, da die Einwilligung der Beschaeftigten wegen des Machtungleichgewichts nicht als freiwillig gilt. Es handelt sich nicht um einen GPS-Fall, aber um den niederlaendischen Leitfall zur Anwesenheitskontrolle von Beschaeftigten. Der Betrag koennte im Widerspruchsverfahren verringert worden sein: an der offiziellen Quelle zu pruefen.",
       fr: "Sanction de l'Autoriteit Persoonsgegevens (2020) contre une entreprise pour le traitement des empreintes digitales des salaries aux fins de releve des presences: donnee biometrique (art. 9 RGPD) traitee sans base valable, car le consentement des salaries n'est pas considere comme libre en raison du desequilibre de pouvoir. Ce n'est pas un cas de GPS mais c'est le cas de reference neerlandais sur le controle des presences des salaries. Le montant a pu etre reduit a la suite d'une opposition: a verifier a la source officielle.",

@@ -141,7 +141,7 @@ export const serbia: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: 'La base e l\'interesse legittimo del datore, che deve essere chiaramente definito, documentato con un test tripartito e comunicato al lavoratore; il consenso nel rapporto di lavoro e la base piu debole.',
+        it: 'La base e l\'interesse legittimo del datore, che deve essere chiaramente definito, documentato con un test tripartito e comunicato al lavoratore; il consenso nel rapporto di lavoro e la base più debole.',
         en: 'The basis is the employer\'s legitimate interest, which must be clearly defined, documented with a three-part test and communicated to the worker; consent in the employment relationship is the weakest basis.',
         de: 'Grundlage ist das berechtigte Interesse des Arbeitgebers, das klar definiert, mit einer dreiteiligen Pruefung dokumentiert und dem Beschaeftigten mitgeteilt werden muss; die Einwilligung im Arbeitsverhaeltnis ist die schwaechste Grundlage.',
         fr: 'La base est l\'intérêt légitime de l\'employeur, qui doit être clairement défini, documenté par un test en trois parties et communiqué au salarié; le consentement dans la relation de travail est la base la plus faible.',
@@ -161,7 +161,7 @@ export const serbia: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: 'Per il Poverenik il monitoraggio GPS continuo e una grave ingerenza nella privacy, perche consente il tracciamento in tempo reale di movimenti e comportamenti; le giustificazioni generiche di tutela del patrimonio sono respinte.',
+        it: 'Per il Poverenik il monitoraggio GPS continuo e una grave ingerenza nella privacy, perché consente il tracciamento in tempo reale di movimenti e comportamenti; le giustificazioni generiche di tutela del patrimonio sono respinte.',
         en: 'For the Poverenik, continuous GPS monitoring is a serious interference with privacy, because it allows real-time tracking of movements and behaviour; generic justifications of asset protection are rejected.',
         de: 'Fuer den Poverenik ist die kontinuierliche GPS-Ueberwachung ein schwerwiegender Eingriff in die Privatsphaere, da sie eine Echtzeitverfolgung von Bewegungen und Verhalten ermoeglicht; pauschale Rechtfertigungen mit dem Schutz von Vermoegenswerten werden abgelehnt.',
         fr: 'Pour le Poverenik, la surveillance GPS continue constitue une ingérence grave dans la vie privée, car elle permet le suivi en temps réel des déplacements et des comportements; les justifications générales de protection du patrimoine sont rejetées.',
@@ -282,7 +282,7 @@ export const serbia: SchedaPaese = {
       nl: 'van 50.000 tot 2.000.000 RSD voor de rechtspersoon (ongeveer 425 - 17.000 euro)',
     },
     casoCitato: {
-      it: 'Non risulta una multa del Poverenik specifica e pubblicata per il GPS sui dipendenti. Nel 2026 il Poverenik ha aperto un\'ispezione straordinaria sul JKP Mediana di Nis, che aveva installato 80 dispositivi GPS sui cassonetti, contestati dai lavoratori dell\'igiene perche ne tracciavano indirettamente i movimenti. La mancata DPIA o richiesta di parere e punita con una sanzione da 50.000 a 2.000.000 RSD per la persona giuridica.',
+      it: 'Non risulta una multa del Poverenik specifica e pubblicata per il GPS sui dipendenti. Nel 2026 il Poverenik ha aperto un\'ispezione straordinaria sul JKP Mediana di Nis, che aveva installato 80 dispositivi GPS sui cassonetti, contestati dai lavoratori dell\'igiene perché ne tracciavano indirettamente i movimenti. La mancata DPIA o richiesta di parere e punita con una sanzione da 50.000 a 2.000.000 RSD per la persona giuridica.',
       en: 'There is no specific, published Poverenik fine for GPS on employees. In 2026 the Poverenik opened an extraordinary inspection of JKP Mediana of Nis, which had installed 80 GPS devices on the waste bins, contested by the sanitation workers because they indirectly tracked their movements. Failure to carry out the DPIA or request the opinion is punished with a fine of 50,000 to 2,000,000 RSD for the legal entity.',
       de: 'Es gibt keine spezifische, veroeffentlichte Geldbusse des Poverenik fuer GPS bei Beschaeftigten. Im Jahr 2026 leitete der Poverenik eine ausserordentliche Pruefung von JKP Mediana in Nis ein, das 80 GPS-Geraete an den Muelltonnen installiert hatte, was von den Reinigungskraeften beanstandet wurde, weil dadurch indirekt ihre Bewegungen verfolgt wurden. Das Versaeumnis, die DSFA durchzufuehren oder die Stellungnahme einzuholen, wird mit einer Geldbusse von 50.000 bis 2.000.000 RSD fuer die juristische Person geahndet.',
       fr: 'Il n\'existe pas d\'amende spécifique et publiée du Poverenik pour le GPS sur les salariés. En 2026, le Poverenik a ouvert une inspection extraordinaire de la JKP Mediana de Nis, qui avait installé 80 dispositifs GPS sur les conteneurs à déchets, contestés par les agents d\'hygiène car ils suivaient indirectement leurs déplacements. L\'absence d\'AIPD ou de demande d\'avis est sanctionnée par une amende de 50 000 à 2 000 000 RSD pour la personne morale.',

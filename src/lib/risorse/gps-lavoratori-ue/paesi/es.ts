@@ -81,7 +81,7 @@ export const spagna: SchedaPaese = {
     urlFonte: FONTE_AEPD.url,
     verificatoIl: '2026-06-15',
     note: {
-      it: "Per le aziende private l'autorita competente e sempre l'AEPD nazionale. Alcune comunita autonome (Catalogna APDCAT, Paesi Baschi AVPD) hanno un'autorita propria, ma riguarda soprattutto il settore pubblico della regione.",
+      it: "Per le aziende private l'autorita competente e sempre l'AEPD nazionale. Alcune comunità autonome (Catalogna APDCAT, Paesi Baschi AVPD) hanno un'autorita propria, ma riguarda soprattutto il settore pubblico della regione.",
       en: "For private companies the competent authority is always the national AEPD. Some autonomous communities (Catalonia APDCAT, Basque Country AVPD) have their own authority, but it concerns mainly the region's public sector.",
       de: "Bei privaten Unternehmen ist die zustaendige Behoerde stets die nationale AEPD. Einige autonome Gemeinschaften (Katalonien APDCAT, Baskenland AVPD) verfuegen ueber eine eigene Behoerde, doch betrifft dies vor allem den oeffentlichen Sektor der jeweiligen Region.",
       fr: "Pour les entreprises privees, l'autorite competente est toujours l'AEPD nationale. Certaines communautes autonomes (Catalogne APDCAT, Pays basque AVPD) disposent de leur propre autorite, mais cela concerne surtout le secteur public de la region.",
@@ -162,7 +162,7 @@ export const spagna: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "L'AEPD richiede che la geolocalizzazione sia proporzionata e non usata per una sorveglianza permanente; se la finalita e il registro orario, i dati possono indicare solo inizio e fine dell'attivita, non la posizione in ogni momento, e il sistema non deve essere operativo finita la giornata.",
+        it: "L'AEPD richiede che la geolocalizzazione sia proporzionata e non usata per una sorveglianza permanente; se la finalita e il registro orario, i dati possono indicare solo inizio e fine dell'attività, non la posizione in ogni momento, e il sistema non deve essere operativo finita la giornata.",
         en: "The AEPD requires geolocation to be proportionate and not used for permanent surveillance; if the purpose is time recording, the data may indicate only the start and end of the activity, not the position at every moment, and the system must not be operational once the working day is over.",
         de: "Die AEPD verlangt, dass die Standortbestimmung verhaeltnismaessig ist und nicht zur staendigen Ueberwachung genutzt wird; ist der Zweck die Arbeitszeiterfassung, duerfen die Daten nur Beginn und Ende der Taetigkeit angeben, nicht die Position in jedem Augenblick, und das System darf nach Arbeitsende nicht in Betrieb sein.",
         fr: "L'AEPD exige que la geolocalisation soit proportionnee et non utilisee pour une surveillance permanente ; si la finalite est l'enregistrement du temps de travail, les donnees ne peuvent indiquer que le debut et la fin de l'activite, non la position a chaque instant, et le systeme ne doit pas etre operationnel une fois la journee terminee.",
@@ -202,7 +202,7 @@ export const spagna: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "Il trattamento si fonda sul potere di controllo del datore (art. 20.3 Statuto) e sull'esecuzione del rapporto di lavoro, nei limiti del GDPR; non e ammessa una finalita piu ampia che consenta l'osservazione continua dei lavoratori.",
+        it: "Il trattamento si fonda sul potere di controllo del datore (art. 20.3 Statuto) e sull'esecuzione del rapporto di lavoro, nei limiti del GDPR; non e ammessa una finalita più ampia che consenta l'osservazione continua dei lavoratori.",
         en: "The processing is based on the employer's power of control (art. 20.3 Statute) and on the performance of the employment relationship, within the limits of the GDPR; a broader purpose that would allow the continuous observation of workers is not permitted.",
         de: "Die Verarbeitung stuetzt sich auf die Kontrollbefugnis des Arbeitgebers (Art. 20.3 Statut) und auf die Erfuellung des Arbeitsverhaeltnisses, innerhalb der Grenzen der DSGVO; ein weiter gehender Zweck, der eine fortlaufende Beobachtung der Beschaeftigten erlauben wuerde, ist nicht zulaessig.",
         fr: "Le traitement repose sur le pouvoir de controle de l'employeur (art. 20.3 Statut) et sur l'execution de la relation de travail, dans les limites du RGPD ; une finalite plus large qui permettrait l'observation continue des salaries n'est pas admise.",
@@ -303,7 +303,7 @@ export const spagna: SchedaPaese = {
       nl: '200.000 €',
     },
     casoCitato: {
-      it: "AEPD contro Ares Capital S.A. (PS/00454/2024), 4 marzo 2026: la societa obbligava gli autisti a installare sul telefono personale app che raccoglievano in continuo la geolocalizzazione (oltre a foto e audio/video). Violazione della minimizzazione (art. 5.1.c), della base giuridica (art. 6.1, consenso non libero) e dell'informazione (art. 13 GDPR).",
+      it: "AEPD contro Ares Capital S.A. (PS/00454/2024), 4 marzo 2026: la società obbligava gli autisti a installare sul telefono personale app che raccoglievano in continuo la geolocalizzazione (oltre a foto e audio/video). Violazione della minimizzazione (art. 5.1.c), della base giuridica (art. 6.1, consenso non libero) e dell'informazione (art. 13 GDPR).",
       en: "AEPD against Ares Capital S.A. (PS/00454/2024), 4 March 2026: the company required drivers to install on their personal phone apps that continuously collected geolocation (as well as photos and audio/video). Breach of minimisation (art. 5.1.c), of the legal basis (art. 6.1, consent not freely given) and of the information duty (art. 13 GDPR).",
       de: "AEPD gegen Ares Capital S.A. (PS/00454/2024), 4. Maerz 2026: Das Unternehmen verpflichtete die Fahrer, auf ihrem privaten Telefon Apps zu installieren, die fortlaufend Standortdaten erhoben (sowie Fotos und Audio/Video). Verstoss gegen die Datenminimierung (Art. 5.1.c), gegen die Rechtsgrundlage (Art. 6.1, keine freiwillige Einwilligung) und gegen die Informationspflicht (Art. 13 DSGVO).",
       fr: "AEPD contre Ares Capital S.A. (PS/00454/2024), 4 mars 2026 : la societe obligeait les chauffeurs a installer sur leur telephone personnel des applications qui collectaient en continu la geolocalisation (ainsi que des photos et de l'audio/video). Violation de la minimisation (art. 5.1.c), de la base juridique (art. 6.1, consentement non libre) et de l'information (art. 13 RGPD).",

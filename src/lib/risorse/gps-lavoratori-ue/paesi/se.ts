@@ -79,7 +79,7 @@ export const svezia: SchedaPaese = {
     urlFonte: FONTE_IMY_RECLAMO.url,
     verificatoIl: '2026-06-15',
     note: {
-      it: "La Svezia ha un'unica autorita nazionale, l'IMY (gia Datainspektionen); nessuna ripartizione regionale.",
+      it: "La Svezia ha un'unica autorita nazionale, l'IMY (già Datainspektionen); nessuna ripartizione regionale.",
       en: 'Sweden has a single national authority, the IMY (formerly Datainspektionen); there is no regional split.',
       de: 'Schweden hat eine einzige nationale Behorde, die IMY (fruher Datainspektionen); es gibt keine regionale Aufteilung.',
       fr: "La Suede dispose d'une seule autorite nationale, l'IMY (anciennement Datainspektionen); il n'existe aucune repartition regionale.",
@@ -140,7 +140,7 @@ export const svezia: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: 'La base giuridica e di norma il bilanciamento di interessi, non il consenso del dipendente (rapporto di dipendenza); i lavoratori vanno informati in modo chiaro, al piu tardi quando i dati sono raccolti.',
+        it: 'La base giuridica e di norma il bilanciamento di interessi, non il consenso del dipendente (rapporto di dipendenza); i lavoratori vanno informati in modo chiaro, al più tardi quando i dati sono raccolti.',
         en: 'The legal basis is normally the balancing of interests, not the employee consent (relationship of dependence); workers must be informed clearly, at the latest when the data is collected.',
         de: 'Rechtsgrundlage ist in der Regel die Interessenabwagung, nicht die Einwilligung des Beschaftigten (Abhangigkeitsverhaltnis); die Beschaftigten sind klar zu informieren, spatestens bei der Erhebung der Daten.',
         fr: "La base juridique est en principe la mise en balance des interets, non le consentement du salarie (lien de subordination); les salaries doivent etre informes clairement, au plus tard lors de la collecte des donnees.",
@@ -217,7 +217,7 @@ export const svezia: SchedaPaese = {
     {
       passo: 3,
       descrizione: {
-        it: 'Informa i lavoratori in modo chiaro, al piu tardi alla raccolta dei dati.',
+        it: 'Informa i lavoratori in modo chiaro, al più tardi alla raccolta dei dati.',
         en: 'Inform workers clearly, at the latest when the data is collected.',
         de: 'Informieren Sie die Beschaftigten klar, spatestens bei der Erhebung der Daten.',
         fr: 'Informez clairement les salaries, au plus tard lors de la collecte des donnees.',

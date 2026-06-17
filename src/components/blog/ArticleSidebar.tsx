@@ -18,7 +18,7 @@ const SIDEBAR_LABELS: Record<string, {
   toc: string; cta_title: string; cta_desc: string; cta_btn: string;
   share: string; copied: string; product_desc: string; product_btn: string;
 }> = {
-  it: { toc: 'In questo articolo', cta_title: 'Prova GeoTapp gratis', cta_desc: '14 giorni di prova gratuita. Nessuna carta di credito. Setup in 2 minuti.', cta_btn: 'Inizia ora', share: 'Condividi', copied: 'Copiato!', product_desc: 'Scopri come GeoTapp risolve questo problema', product_btn: 'Scopri di piu' },
+  it: { toc: 'In questo articolo', cta_title: 'Prova GeoTapp gratis', cta_desc: '14 giorni di prova gratuita. Nessuna carta di credito. Setup in 2 minuti.', cta_btn: 'Inizia ora', share: 'Condividi', copied: 'Copiato!', product_desc: 'Scopri come GeoTapp risolve questo problema', product_btn: 'Scopri di più' },
   en: { toc: 'In this article', cta_title: 'Try GeoTapp free', cta_desc: '14-day free trial. No credit card required. Setup in 2 minutes.', cta_btn: 'Start now', share: 'Share', copied: 'Copied!', product_desc: 'See how GeoTapp solves this problem', product_btn: 'Learn more' },
   de: { toc: 'In diesem Artikel', cta_title: 'GeoTapp kostenlos testen', cta_desc: '14 Tage kostenlos. Keine Kreditkarte. Setup in 2 Minuten.', cta_btn: 'Jetzt starten', share: 'Teilen', copied: 'Kopiert!', product_desc: 'So lost GeoTapp dieses Problem', product_btn: 'Mehr erfahren' },
   fr: { toc: 'Dans cet article', cta_title: 'Essayez GeoTapp', cta_desc: '14 jours gratuits. Sans carte bancaire. Pret en 2 minutes.', cta_btn: 'Commencer', share: 'Partager', copied: 'Copie !', product_desc: 'Decouvrez comment GeoTapp resout ce probleme', product_btn: 'En savoir plus' },

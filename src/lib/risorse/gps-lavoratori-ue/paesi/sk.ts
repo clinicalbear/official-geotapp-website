@@ -107,7 +107,7 @@ export const slovacchia: SchedaPaese = {
     },
     {
       voce: {
-        it: "Divieto di sorvegliare senza motivi seri inerenti alla natura dell'attivita, senza preavviso (art. 13 par. 4)",
+        it: "Divieto di sorvegliare senza motivi seri inerenti alla natura dell'attività, senza preavviso (art. 13 par. 4)",
         en: 'Ban on monitoring without serious reasons inherent in the nature of the business, without prior notice (art. 13 par. 4)',
         de: 'Verbot der Ueberwachung ohne ernsthafte, in der Natur der Taetigkeit liegende Gruende und ohne vorherige Ankuendigung (Art. 13 Abs. 4)',
         fr: "Interdiction de surveiller sans motifs serieux inherents a la nature de l'activite, sans preavis (art. 13 par. 4)",
@@ -116,7 +116,7 @@ export const slovacchia: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "Il datore non puo, senza motivi seri inerenti alla particolare natura della sua attivita, ledere la privacy del lavoratore monitorandolo senza averlo avvisato prima.",
+        it: "Il datore non può, senza motivi seri inerenti alla particolare natura della sua attività, ledere la privacy del lavoratore monitorandolo senza averlo avvisato prima.",
         en: 'The employer may not, without serious reasons inherent in the particular nature of its business, infringe the privacy of the worker by monitoring them without having given prior notice.',
         de: 'Der Arbeitgeber darf ohne ernsthafte, in der besonderen Natur seiner Taetigkeit liegende Gruende die Privatsphaere des Arbeitnehmers nicht verletzen, indem er ihn ohne vorherige Ankuendigung ueberwacht.',
         fr: "L'employeur ne peut, sans motifs serieux inherents a la nature particuliere de son activite, porter atteinte a la vie privee du travailleur en le surveillant sans l'avoir prevenu au prealable.",
@@ -136,7 +136,7 @@ export const slovacchia: SchedaPaese = {
       },
       risposta: 'no',
       dettaglio: {
-        it: "Non serve un'autorizzazione preventiva dell'UOOU SR; il titolare agisce sotto la propria responsabilita, con DPIA quando richiesta, e l'autorita interviene successivamente.",
+        it: "Non serve un'autorizzazione preventiva dell'UOOU SR; il titolare agisce sotto la propria responsabilità, con DPIA quando richiesta, e l'autorita interviene successivamente.",
         en: 'No prior authorisation from the UOOU SR is needed; the controller acts under its own responsibility, with a DPIA where required, and the authority intervenes afterwards.',
         de: 'Eine vorherige Genehmigung der UOOU SR ist nicht erforderlich; der Verantwortliche handelt in eigener Verantwortung, mit DSFA wo erforderlich, und die Behoerde greift nachtraeglich ein.',
         fr: "Aucune autorisation prealable de l'UOOU SR n'est necessaire ; le responsable du traitement agit sous sa propre responsabilite, avec une AIPD lorsqu'elle est requise, et l'autorite intervient a posteriori.",
@@ -156,7 +156,7 @@ export const slovacchia: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "Il datore puo trattare i dati del lavoratore senza consenso sulla base del proprio interesse legittimo; il monitoraggio deve essere proporzionato nella durata e non avvenire durante l'uso privato del veicolo.",
+        it: "Il datore può trattare i dati del lavoratore senza consenso sulla base del proprio interesse legittimo; il monitoraggio deve essere proporzionato nella durata e non avvenire durante l'uso privato del veicolo.",
         en: 'The employer may process the worker data without consent on the basis of its own legitimate interest; the monitoring must be proportionate in duration and must not take place during the private use of the vehicle.',
         de: 'Der Arbeitgeber darf die Daten des Arbeitnehmers ohne Einwilligung auf der Grundlage seines berechtigten Interesses verarbeiten; die Ueberwachung muss in ihrer Dauer verhaeltnismaessig sein und darf nicht waehrend der privaten Nutzung des Fahrzeugs erfolgen.',
         fr: "L'employeur peut traiter les donnees du travailleur sans consentement sur la base de son propre interet legitime ; la surveillance doit etre proportionnee dans sa duree et ne pas avoir lieu pendant l'usage prive du vehicule.",
@@ -191,7 +191,7 @@ export const slovacchia: SchedaPaese = {
     {
       passo: 1,
       descrizione: {
-        it: 'Verifica motivi seri inerenti alla natura della tua attivita per il controllo.',
+        it: 'Verifica motivi seri inerenti alla natura della tua attività per il controllo.',
         en: 'Check for serious reasons inherent in the nature of your business that justify the monitoring.',
         de: 'Pruefe ernsthafte, in der Natur Ihrer Taetigkeit liegende Gruende fuer die Kontrolle.',
         fr: "Verifiez les motifs serieux inherents a la nature de votre activite qui justifient le controle.",

@@ -4,7 +4,7 @@
  * Attenzione: la Bosnia ed Erzegovina NON e' UE; e' un paese candidato. Dal 2025
  * ha una NUOVA legge sulla protezione dei dati personali (Gazzetta ufficiale BiH
  * n. 12/25), allineata al GDPR, in vigore dall'8 marzo 2025 e applicabile da fine
- * ottobre 2025. Non e' piu' il vecchio regime del 2006.
+ * ottobre 2025. Non e' più' il vecchio regime del 2006.
  *
  * Contenuti basati su fonti verificate e citate nella sezione "Fonti": nuova legge
  * 12/25, lista AZLP dei trattamenti che richiedono una DPIA (novembre 2025, include

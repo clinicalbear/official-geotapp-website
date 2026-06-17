@@ -178,7 +178,7 @@ export const irlanda: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "Il tracciamento non puo' servire a monitorare in generale il personale; e' improbabile che sia lecito fuori orario, e serve un opt-out (interruttore privacy) se il veicolo e' usato anche privatamente.",
+        it: "Il tracciamento non può' servire a monitorare in generale il personale; e' improbabile che sia lecito fuori orario, e serve un opt-out (interruttore privacy) se il veicolo e' usato anche privatamente.",
         en: 'The tracking cannot be used to monitor staff in general; it is unlikely to be lawful outside working hours, and an opt-out (privacy switch) is needed if the vehicle is also used privately.',
         de: 'Die Ortung darf nicht der allgemeinen Ueberwachung des Personals dienen; ausserhalb der Arbeitszeit ist sie kaum rechtmaessig, und es ist ein Opt-out (Privatsphaere-Schalter) erforderlich, wenn das Fahrzeug auch privat genutzt wird.',
         fr: "Le suivi ne peut pas servir a surveiller le personnel de maniere generale; il est peu probable qu'il soit licite en dehors des heures de travail, et une option de desactivation (interrupteur de confidentialite) est necessaire si le vehicule est aussi utilise a titre prive.",

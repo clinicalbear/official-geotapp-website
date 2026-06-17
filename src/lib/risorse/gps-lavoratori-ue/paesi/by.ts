@@ -265,7 +265,7 @@ export const bielorussia: SchedaPaese = {
 
   sanzioneMax: {
     importo: {
-      it: 'fino a circa 200 unita\' base (circa 2.600 euro), oltre alla possibile responsabilita\' penale',
+      it: 'fino a circa 200 unita\' base (circa 2.600 euro), oltre alla possibile responsabilità\' penale',
       en: "up to about 200 base units (around 2,600 euros), in addition to possible criminal liability",
       de: 'bis zu etwa 200 Basiseinheiten (rund 2.600 Euro), zusaetzlich zur moeglichen strafrechtlichen Haftung',
       fr: "jusqu'a environ 200 unites de base (environ 2 600 euros), en plus de la possible responsabilite penale",
@@ -273,7 +273,7 @@ export const bielorussia: SchedaPaese = {
       nl: 'tot ongeveer 200 basiseenheden (ongeveer 2.600 euro), naast de mogelijke strafrechtelijke aansprakelijkheid',
     },
     casoCitato: {
-      it: "Non risulta una decisione bielorussa specifica e pubblicata sul GPS sui dipendenti, e la trasparenza sull'applicazione e' limitata. Le sanzioni amministrative massime per violazioni sui dati arrivano a circa 200 unita' base (circa 2.600 euro), con possibile responsabilita' penale nei casi piu' gravi.",
+      it: "Non risulta una decisione bielorussa specifica e pubblicata sul GPS sui dipendenti, e la trasparenza sull'applicazione e' limitata. Le sanzioni amministrative massime per violazioni sui dati arrivano a circa 200 unita' base (circa 2.600 euro), con possibile responsabilità' penale nei casi più' gravi.",
       en: "There is no specific, published Belarusian decision on GPS on employees, and transparency over enforcement is limited. The maximum administrative penalties for data violations reach about 200 base units (around 2,600 euros), with possible criminal liability in the most serious cases.",
       de: "Eine spezifische, veroeffentlichte belarussische Entscheidung zu GPS bei Mitarbeitern ist nicht ersichtlich, und die Transparenz ueber die Durchsetzung ist begrenzt. Die hoechsten verwaltungsrechtlichen Sanktionen fuer Datenverstoesse erreichen etwa 200 Basiseinheiten (rund 2.600 Euro), mit moeglicher strafrechtlicher Haftung in den schwersten Faellen.",
       fr: "Il n'existe pas de decision bielorusse specifique et publiee sur le GPS appliquee aux salaries, et la transparence sur l'application des regles est limitee. Les sanctions administratives maximales pour les violations relatives aux donnees atteignent environ 200 unites de base (environ 2 600 euros), avec une possible responsabilite penale dans les cas les plus graves.",

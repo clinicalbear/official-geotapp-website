@@ -117,7 +117,7 @@ export const norvegia: SchedaPaese = {
       },
       risposta: 'dipende',
       dettaglio: {
-        it: 'Il datore deve discutere il piu presto possibile la misura con i rappresentanti dei lavoratori. Vale dove esistono rappresentanti (tillitsvalgte).',
+        it: 'Il datore deve discutere il più presto possibile la misura con i rappresentanti dei lavoratori. Vale dove esistono rappresentanti (tillitsvalgte).',
         en: 'The employer must discuss the measure with the employee representatives as soon as possible. This applies where representatives (tillitsvalgte) exist.',
         de: 'Der Arbeitgeber muss die Massnahme so frueh wie moeglich mit den Arbeitnehmervertretern eroertern. Dies gilt, wo Vertreter (tillitsvalgte) vorhanden sind.',
         fr: "L'employeur doit discuter de la mesure avec les representants du personnel le plus tot possible. Cela vaut la ou des representants (tillitsvalgte) existent.",
@@ -137,7 +137,7 @@ export const norvegia: SchedaPaese = {
       },
       risposta: 'no',
       dettaglio: {
-        it: 'Il capitolo 9 non prevede alcuna autorizzazione preventiva del Datatilsynet; la liceita e responsabilita del titolare.',
+        it: 'Il capitolo 9 non prevede alcuna autorizzazione preventiva del Datatilsynet; la liceita e responsabilità del titolare.',
         en: 'Chapter 9 provides for no prior authorization from the Datatilsynet; lawfulness is the responsibility of the controller.',
         de: 'Kapitel 9 sieht keine vorherige Genehmigung des Datatilsynet vor; die Rechtmaessigkeit liegt in der Verantwortung des Verantwortlichen.',
         fr: 'Le chapitre 9 ne prevoit aucune autorisation prealable du Datatilsynet; la liceite releve de la responsabilite du responsable du traitement.',
@@ -223,7 +223,7 @@ export const norvegia: SchedaPaese = {
     {
       passo: 2,
       descrizione: {
-        it: 'Se esistono rappresentanti dei lavoratori, discuti con loro il piu presto possibile la misura (§ 9-2).',
+        it: 'Se esistono rappresentanti dei lavoratori, discuti con loro il più presto possibile la misura (§ 9-2).',
         en: 'If employee representatives exist, discuss the measure with them as soon as possible (§ 9-2).',
         de: 'Wenn es Arbeitnehmervertreter gibt, eroertern Sie die Massnahme so frueh wie moeglich mit ihnen (§ 9-2).',
         fr: "Si des representants du personnel existent, discutez de la mesure avec eux le plus tot possible (§ 9-2).",

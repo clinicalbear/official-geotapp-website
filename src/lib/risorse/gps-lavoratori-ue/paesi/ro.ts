@@ -147,7 +147,7 @@ export const romania: SchedaPaese = {
     },
     {
       voce: {
-        it: 'Mezzi meno intrusivi gia rivelatisi inefficaci e interesse legittimo prevalente (art. 5 lett. a, d)',
+        it: 'Mezzi meno intrusivi già rivelatisi inefficaci e interesse legittimo prevalente (art. 5 lett. a, d)',
         en: 'Less intrusive means already proven ineffective and prevailing legitimate interest (art. 5 lett. a, d)',
         de: 'Weniger eingreifende Mittel bereits als unwirksam erwiesen und überwiegendes berechtigtes Interesse (Art. 5 Buchst. a, d)',
         fr: "Moyens moins intrusifs déjà avérés inefficaces et intérêt légitime prépondérant (art. 5 lett. a, d)",
@@ -156,7 +156,7 @@ export const romania: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "il monitoraggio e ammesso solo se altre forme meno intrusive non si sono gia rivelate efficaci e se l'interesse legittimo del datore prevale sui diritti dei lavoratori.",
+        it: "il monitoraggio e ammesso solo se altre forme meno intrusive non si sono già rivelate efficaci e se l'interesse legittimo del datore prevale sui diritti dei lavoratori.",
         en: "monitoring is permitted only if other less intrusive forms have not already proven effective and if the legitimate interest of the employer prevails over the rights of the workers.",
         de: 'die Überwachung ist nur zulässig, wenn andere weniger eingreifende Formen sich nicht bereits als wirksam erwiesen haben und wenn das berechtigte Interesse des Arbeitgebers gegenüber den Rechten der Arbeitnehmer überwiegt.',
         fr: "la surveillance n'est admise que si d'autres formes moins intrusives ne se sont pas déjà révélées efficaces et si l'intérêt légitime de l'employeur prévaut sur les droits des travailleurs.",
@@ -233,7 +233,7 @@ export const romania: SchedaPaese = {
     {
       passo: 3,
       descrizione: {
-        it: "Verifica che altri mezzi meno intrusivi non siano gia bastati e documenta l'interesse legittimo prevalente.",
+        it: "Verifica che altri mezzi meno intrusivi non siano già bastati e documenta l'interesse legittimo prevalente.",
         en: 'Verify that other less intrusive means have not already been sufficient and document the prevailing legitimate interest.',
         de: 'Prüfen Sie, dass andere weniger eingreifende Mittel nicht bereits ausgereicht haben, und dokumentieren Sie das überwiegende berechtigte Interesse.',
         fr: "Vérifiez que d'autres moyens moins intrusifs n'ont pas déjà suffi et documentez l'intérêt légitime prépondérant.",

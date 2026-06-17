@@ -93,7 +93,7 @@ export const croazia: SchedaPaese = {
       },
       risposta: 'dipende',
       dettaglio: {
-        it: "Se i dispositivi seguono tutti i movimenti del lavoratore per l'intero orario, il datore puo usarli solo con il previo consenso del consiglio dei lavoratori (o del rappresentante sindacale con i relativi poteri). Vale dove tale organo esiste.",
+        it: "Se i dispositivi seguono tutti i movimenti del lavoratore per l'intero orario, il datore può usarli solo con il previo consenso del consiglio dei lavoratori (o del rappresentante sindacale con i relativi poteri). Vale dove tale organo esiste.",
         en: 'If the devices follow all of the worker movements for the entire working time, the employer may use them only with the prior consent of the works council (or of the union representative holding the relevant powers). This applies where such a body exists.',
         de: 'Wenn die Geraete alle Bewegungen des Arbeitnehmers waehrend der gesamten Arbeitszeit verfolgen, darf der Arbeitgeber sie nur mit vorheriger Zustimmung des Betriebsrats (oder des Gewerkschaftsvertreters mit den entsprechenden Befugnissen) einsetzen. Dies gilt, wo ein solches Gremium besteht.',
         fr: "Si les dispositifs suivent tous les mouvements du travailleur pendant toute la duree du travail, l'employeur ne peut les utiliser qu'avec le consentement prealable du conseil des travailleurs (ou du representant syndical disposant des pouvoirs correspondants). Cela vaut la ou un tel organe existe.",
@@ -113,7 +113,7 @@ export const croazia: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "Il datore deve informare per iscritto il lavoratore, gia all'assunzione, che sara sorvegliato, e disciplinare il GPS con regole interne scritte: non basta un'informazione orale.",
+        it: "Il datore deve informare per iscritto il lavoratore, già all'assunzione, che sara sorvegliato, e disciplinare il GPS con regole interne scritte: non basta un'informazione orale.",
         en: 'The employer must inform the worker in writing, already at hiring, that they will be monitored, and must regulate the GPS with written internal rules: oral information is not enough.',
         de: 'Der Arbeitgeber muss den Arbeitnehmer bereits bei der Einstellung schriftlich darueber informieren, dass er ueberwacht wird, und das GPS mit schriftlichen internen Regeln regeln: eine muendliche Information genuegt nicht.',
         fr: "L'employeur doit informer le travailleur par ecrit, des l'embauche, qu'il sera surveille, et encadrer le GPS par des regles internes ecrites: une information orale ne suffit pas.",

@@ -105,7 +105,7 @@ export const francia: SchedaPaese = {
       },
       risposta: 'dipende',
       dettaglio: {
-        it: "Prima di decidere di installare un mezzo di controllo dell'attivita dei dipendenti, il datore deve informare e consultare il CSE (Comitato Sociale ed Economico). Vale pero solo dove un CSE esiste: e obbligatorio dagli 11 dipendenti in su. Sotto quella soglia non c'e CSE da consultare, ma resta l'obbligo di informare individualmente ogni dipendente (art. L1222-4).",
+        it: "Prima di decidere di installare un mezzo di controllo dell'attività dei dipendenti, il datore deve informare e consultare il CSE (Comitato Sociale ed Economico). Vale pero solo dove un CSE esiste: e obbligatorio dagli 11 dipendenti in su. Sotto quella soglia non c'e CSE da consultare, ma resta l'obbligo di informare individualmente ogni dipendente (art. L1222-4).",
         en: "Before deciding to install a means of monitoring employees' activity, the employer must inform and consult the CSE (Social and Economic Committee). This applies only where a CSE exists: it is mandatory from 11 employees upwards. Below that threshold there is no CSE to consult, but the obligation to inform each employee individually remains (art. L1222-4).",
         de: 'Bevor der Arbeitgeber beschliesst, ein Mittel zur Kontrolle der Taetigkeit der Beschaeftigten zu installieren, muss er den CSE (Sozial- und Wirtschaftsausschuss) informieren und anhoeren. Dies gilt jedoch nur dort, wo ein CSE besteht: Er ist ab 11 Beschaeftigten verpflichtend. Unterhalb dieser Schwelle gibt es keinen CSE zur Anhoerung, aber die Pflicht, jeden Beschaeftigten einzeln zu informieren, bleibt bestehen (Art. L1222-4).',
         fr: "Avant de decider d installer un moyen de controle de l activite des salaries, l employeur doit informer et consulter le CSE (Comite Social et Economique). Cela ne vaut toutefois que la ou un CSE existe: il est obligatoire a partir de 11 salaries. En dessous de ce seuil il n y a pas de CSE a consulter, mais l obligation d informer individuellement chaque salarie demeure (art. L1222-4).",
@@ -125,7 +125,7 @@ export const francia: SchedaPaese = {
       },
       risposta: 'no',
       dettaglio: {
-        it: "La Francia non prevede un'autorizzazione preventiva di un'autorita del lavoro, ne piu' dichiarazioni preventive alla CNIL (abolite dal 25 maggio 2018 col GDPR). Il modello e basato sulla responsabilizzazione: registro dei trattamenti e AIPD quando il rischio e elevato.",
+        it: "La Francia non prevede un'autorizzazione preventiva di un'autorita del lavoro, ne più' dichiarazioni preventive alla CNIL (abolite dal 25 maggio 2018 col GDPR). Il modello e basato sulla responsabilizzazione: registro dei trattamenti e AIPD quando il rischio e elevato.",
         en: 'France does not require prior authorisation from a labour authority, nor any further prior declarations to the CNIL (abolished on 25 May 2018 with the GDPR). The model is based on accountability: a record of processing activities and a DPIA where the risk is high.',
         de: 'Frankreich sieht keine vorherige Genehmigung einer Arbeitsbehoerde vor und auch keine vorherigen Meldungen an die CNIL mehr (seit dem 25. Mai 2018 mit der DSGVO abgeschafft). Das Modell beruht auf Rechenschaftspflicht: Verzeichnis der Verarbeitungstaetigkeiten und DSFA, wenn das Risiko hoch ist.',
         fr: "La France ne prevoit pas d autorisation prealable d une autorite du travail, ni de declarations prealables a la CNIL (supprimees depuis le 25 mai 2018 avec le RGPD). Le modele repose sur la responsabilisation: registre des traitements et AIPD lorsque le risque est eleve.",
@@ -145,7 +145,7 @@ export const francia: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: 'Nessun dato puo essere raccolto da un dispositivo non portato preventivamente a conoscenza del lavoratore; ognuno va informato su titolare, finalita, destinatari e diritti.',
+        it: 'Nessun dato può essere raccolto da un dispositivo non portato preventivamente a conoscenza del lavoratore; ognuno va informato su titolare, finalita, destinatari e diritti.',
         en: 'No data may be collected from a device not brought to the worker s knowledge in advance; each worker must be informed of the controller, the purposes, the recipients and their rights.',
         de: 'Es duerfen keine Daten von einem Geraet erhoben werden, das dem Beschaeftigten nicht vorab zur Kenntnis gebracht wurde; jeder ist ueber den Verantwortlichen, die Zwecke, die Empfaenger und seine Rechte zu informieren.',
         fr: "Aucune donnee ne peut etre collectee par un dispositif non porte prealablement a la connaissance du salarie; chacun doit etre informe du responsable, des finalites, des destinataires et de ses droits.",
@@ -165,7 +165,7 @@ export const francia: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "Per la CNIL la geolocalizzazione non puo servire a controllare il dipendente in permanenza, e sussidiaria (vietata se esiste gia un mezzo meno intrusivo, es. per calcolare l'orario se esiste gia un altro sistema di timbratura) e deve poter essere disattivata fuori dall'orario di lavoro.",
+        it: "Per la CNIL la geolocalizzazione non può servire a controllare il dipendente in permanenza, e sussidiaria (vietata se esiste già un mezzo meno intrusivo, es. per calcolare l'orario se esiste già un altro sistema di timbratura) e deve poter essere disattivata fuori dall'orario di lavoro.",
         en: 'For the CNIL, geolocation may not be used to monitor the employee permanently; it is subsidiary (prohibited if a less intrusive means already exists, e.g. to calculate working time where another clock-in system already exists) and must be able to be switched off outside working hours.',
         de: 'Fuer die CNIL darf die Geolokalisierung nicht dazu dienen, den Beschaeftigten dauerhaft zu kontrollieren; sie ist subsidiaer (verboten, wenn bereits ein weniger eingriffsintensives Mittel besteht, z. B. zur Berechnung der Arbeitszeit, wenn bereits ein anderes Zeiterfassungssystem besteht) und muss ausserhalb der Arbeitszeit abschaltbar sein.',
         fr: "Pour la CNIL, la geolocalisation ne peut servir a controler le salarie en permanence; elle est subsidiaire (interdite s il existe deja un moyen moins intrusif, par ex. pour calculer le temps de travail s il existe deja un autre systeme de pointage) et doit pouvoir etre desactivee en dehors du temps de travail.",
@@ -176,7 +176,7 @@ export const francia: SchedaPaese = {
     },
     {
       voce: {
-        it: "Valutazione d'impatto (AIPD) per la sorveglianza costante dell'attivita dei dipendenti",
+        it: "Valutazione d'impatto (AIPD) per la sorveglianza costante dell'attività dei dipendenti",
         en: "Data protection impact assessment (DPIA) for constant monitoring of employees' activity",
         de: 'Datenschutz-Folgenabschaetzung (DSFA) fuer die staendige Ueberwachung der Taetigkeit der Beschaeftigten',
         fr: "Analyse d impact (AIPD) pour la surveillance constante de l activite des salaries",
@@ -185,7 +185,7 @@ export const francia: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "La lista CNIL include tra i trattamenti che richiedono un'AIPD quelli che sorvegliano in modo costante l'attivita dei dipendenti e i trattamenti di dati di localizzazione su larga scala.",
+        it: "La lista CNIL include tra i trattamenti che richiedono un'AIPD quelli che sorvegliano in modo costante l'attività dei dipendenti e i trattamenti di dati di localizzazione su larga scala.",
         en: "The CNIL list includes, among the processing operations requiring a DPIA, those that constantly monitor employees' activity and large-scale processing of location data.",
         de: 'Die CNIL-Liste zaehlt zu den Verarbeitungen, die eine DSFA erfordern, jene, die die Taetigkeit der Beschaeftigten staendig ueberwachen, sowie die Verarbeitung von Standortdaten in grossem Umfang.',
         fr: "La liste de la CNIL inclut parmi les traitements requierant une AIPD ceux qui surveillent de maniere constante l activite des salaries et les traitements de donnees de localisation a grande echelle.",
@@ -242,7 +242,7 @@ export const francia: SchedaPaese = {
     {
       passo: 3,
       descrizione: {
-        it: 'Verifica la sussidiarieta: la geolocalizzazione non e ammessa se esiste gia un mezzo meno intrusivo per la stessa finalita.',
+        it: 'Verifica la sussidiarieta: la geolocalizzazione non e ammessa se esiste già un mezzo meno intrusivo per la stessa finalita.',
         en: 'Check subsidiarity: geolocation is not allowed if a less intrusive means already exists for the same purpose.',
         de: 'Pruefen Sie die Subsidiaritaet: Geolokalisierung ist nicht zulaessig, wenn fuer denselben Zweck bereits ein weniger eingriffsintensives Mittel besteht.',
         fr: "Verifiez la subsidiarite: la geolocalisation n est pas admise s il existe deja un moyen moins intrusif pour la meme finalite.",
@@ -275,7 +275,7 @@ export const francia: SchedaPaese = {
     {
       passo: 6,
       descrizione: {
-        it: 'Tieni aggiornato il registro dei trattamenti (responsabilizzazione, non piu dichiarazione preventiva).',
+        it: 'Tieni aggiornato il registro dei trattamenti (responsabilizzazione, non più dichiarazione preventiva).',
         en: 'Keep the record of processing activities up to date (accountability, no longer a prior declaration).',
         de: 'Halten Sie das Verzeichnis der Verarbeitungstaetigkeiten aktuell (Rechenschaftspflicht, keine vorherige Meldung mehr).',
         fr: 'Tenez a jour le registre des traitements (responsabilisation, plus de declaration prealable).',
@@ -317,7 +317,7 @@ export const francia: SchedaPaese = {
       nl: '175.000 EUR',
     },
     casoCitato: {
-      it: "CNIL contro UBEEQO International, 7 luglio 2022: geolocalizzazione quasi permanente in violazione della minimizzazione, della durata di conservazione e dell'obbligo di informazione. Riguardava i veicoli a noleggio (clienti), non i dipendenti in senso stretto, ma e la sanzione faro francese sulla geolocalizzazione continua eccessiva. Nel 2025 la CNIL ha inoltre sanzionato piu datori per la geolocalizzazione continua dei veicoli dei dipendenti senza possibilita di sospensione durante le pause.",
+      it: "CNIL contro UBEEQO International, 7 luglio 2022: geolocalizzazione quasi permanente in violazione della minimizzazione, della durata di conservazione e dell'obbligo di informazione. Riguardava i veicoli a noleggio (clienti), non i dipendenti in senso stretto, ma e la sanzione faro francese sulla geolocalizzazione continua eccessiva. Nel 2025 la CNIL ha inoltre sanzionato più datori per la geolocalizzazione continua dei veicoli dei dipendenti senza possibilità di sospensione durante le pause.",
       en: 'CNIL v. UBEEQO International, 7 July 2022: near-permanent geolocation in breach of data minimisation, the retention period and the information obligation. It concerned rental vehicles (customers), not employees in the strict sense, but it is the French landmark fine on excessive continuous geolocation. In 2025 the CNIL also fined several employers for the continuous geolocation of employees vehicles without the possibility of suspension during breaks.',
       de: 'CNIL gegen UBEEQO International, 7. Juli 2022: nahezu permanente Geolokalisierung unter Verstoss gegen die Datenminimierung, die Speicherdauer und die Informationspflicht. Es ging um Mietfahrzeuge (Kunden), nicht um Beschaeftigte im engeren Sinne, doch es ist das franzoesische Leiturteil zur uebermaessigen kontinuierlichen Geolokalisierung. 2025 verhaengte die CNIL zudem gegen mehrere Arbeitgeber Bussgelder wegen der kontinuierlichen Geolokalisierung der Fahrzeuge der Beschaeftigten ohne Moeglichkeit der Aussetzung waehrend der Pausen.',
       fr: "CNIL contre UBEEQO International, 7 juillet 2022: geolocalisation quasi permanente en violation de la minimisation, de la duree de conservation et de l obligation d information. Cela concernait des vehicules de location (clients), non les salaries au sens strict, mais c est la sanction phare francaise sur la geolocalisation continue excessive. En 2025, la CNIL a en outre sanctionne plusieurs employeurs pour la geolocalisation continue des vehicules des salaries sans possibilite de suspension pendant les pauses.",

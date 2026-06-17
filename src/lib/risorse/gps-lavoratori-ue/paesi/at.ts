@@ -149,7 +149,7 @@ export const austria: SchedaPaese = {
     },
     {
       voce: {
-        it: 'Divieto di monitoraggio GPS permanente; ammesso solo se lo scopo non e raggiungibile con mezzi piu miti',
+        it: 'Divieto di monitoraggio GPS permanente; ammesso solo se lo scopo non e raggiungibile con mezzi più miti',
         en: 'Ban on permanent GPS monitoring; allowed only if the purpose cannot be achieved by less intrusive means',
         de: 'Verbot der dauerhaften GPS-Überwachung; nur zulässig, wenn der Zweck nicht mit milderen Mitteln erreichbar ist',
         fr: 'Interdiction de la surveillance GPS permanente ; admise uniquement si la finalité ne peut être atteinte par des moyens moins intrusifs',
@@ -158,7 +158,7 @@ export const austria: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "Nel caso austriaco di riferimento la DSB ha ritenuto illecito il tracciamento permanente di veicoli aziendali perche lo scopo era raggiungibile con mezzi piu miti, e ne ha ordinato la cessazione; i controlli fuori dall'orario di lavoro sono comunque inammissibili.",
+        it: "Nel caso austriaco di riferimento la DSB ha ritenuto illecito il tracciamento permanente di veicoli aziendali perché lo scopo era raggiungibile con mezzi più miti, e ne ha ordinato la cessazione; i controlli fuori dall'orario di lavoro sono comunque inammissibili.",
         en: 'In the Austrian reference case, the DSB found the permanent tracking of company vehicles unlawful because the purpose could be achieved by less intrusive means, and ordered it to stop; monitoring outside working hours is in any case inadmissible.',
         de: 'Im österreichischen Referenzfall hielt die DSB die dauerhafte Ortung von Firmenfahrzeugen für rechtswidrig, weil der Zweck mit milderen Mitteln erreichbar war, und ordnete deren Einstellung an; Kontrollen außerhalb der Arbeitszeit sind ohnehin unzulässig.',
         fr: "Dans l'affaire de référence autrichienne, la DSB a jugé illicite le suivi permanent des véhicules de société parce que la finalité pouvait être atteinte par des moyens moins intrusifs, et en a ordonné la cessation ; les contrôles en dehors du temps de travail sont de toute façon irrecevables.",
@@ -204,7 +204,7 @@ export const austria: SchedaPaese = {
     {
       passo: 2,
       descrizione: {
-        it: 'Verifica che lo scopo non sia raggiungibile con mezzi piu miti del tracciamento permanente.',
+        it: 'Verifica che lo scopo non sia raggiungibile con mezzi più miti del tracciamento permanente.',
         en: 'Verify that the purpose cannot be achieved by means less intrusive than permanent tracking.',
         de: 'Prüfen Sie, ob der Zweck nicht mit milderen Mitteln als der dauerhaften Ortung erreichbar ist.',
         fr: 'Vérifiez que la finalité ne peut être atteinte par des moyens moins intrusifs que le suivi permanent.',
@@ -279,7 +279,7 @@ export const austria: SchedaPaese = {
       nl: 'bevel tot beëindiging (geen geldboete); AVG-risico tot 20 miljoen euro of 4% van de omzet (art. 83)',
     },
     casoCitato: {
-      it: "Datenschutzbehorde, decisione del 1 marzo 2022 (2022-0.021.739): un'azienda aveva installato tracker GPS permanenti su 15 veicoli aziendali a uso misto; la DSB ha ritenuto il trattamento illecito perche lo scopo era raggiungibile con mezzi piu miti e ne ha ordinato la cessazione immediata, senza multa in denaro.",
+      it: "Datenschutzbehorde, decisione del 1 marzo 2022 (2022-0.021.739): un'azienda aveva installato tracker GPS permanenti su 15 veicoli aziendali a uso misto; la DSB ha ritenuto il trattamento illecito perché lo scopo era raggiungibile con mezzi più miti e ne ha ordinato la cessazione immediata, senza multa in denaro.",
       en: 'Datenschutzbehorde, decision of 1 March 2022 (2022-0.021.739): a company had installed permanent GPS trackers on 15 company vehicles used for mixed purposes; the DSB found the processing unlawful because the purpose could be achieved by less intrusive means and ordered its immediate cessation, without a monetary fine.',
       de: 'Datenschutzbehörde, Entscheidung vom 1. März 2022 (2022-0.021.739): Ein Unternehmen hatte dauerhafte GPS-Tracker an 15 gemischt genutzten Firmenfahrzeugen installiert; die DSB hielt die Verarbeitung für rechtswidrig, weil der Zweck mit milderen Mitteln erreichbar war, und ordnete deren sofortige Einstellung an, ohne Geldbuße.',
       fr: "Datenschutzbehorde, décision du 1er mars 2022 (2022-0.021.739) : une entreprise avait installé des traceurs GPS permanents sur 15 véhicules de société à usage mixte ; la DSB a jugé le traitement illicite parce que la finalité pouvait être atteinte par des moyens moins intrusifs et en a ordonné la cessation immédiate, sans amende pécuniaire.",

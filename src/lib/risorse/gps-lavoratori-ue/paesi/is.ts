@@ -137,7 +137,7 @@ export const islanda: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "La base piu pertinente e l'interesse legittimo del datore; il datore deve svolgere una valutazione documentata di prevalenza rispetto ai diritti dei lavoratori. Il consenso di norma non e valido nel rapporto di lavoro.",
+        it: "La base più pertinente e l'interesse legittimo del datore; il datore deve svolgere una valutazione documentata di prevalenza rispetto ai diritti dei lavoratori. Il consenso di norma non e valido nel rapporto di lavoro.",
         en: 'The most relevant basis is the employer legitimate interest; the employer must carry out a documented balancing assessment against workers rights. Consent is generally not valid in the employment relationship.',
         de: 'Die einschlagigste Grundlage ist das berechtigte Interesse des Arbeitgebers; der Arbeitgeber muss eine dokumentierte Abwagung gegenuber den Rechten der Beschaftigten vornehmen. Die Einwilligung ist im Arbeitsverhaltnis in der Regel nicht gultig.',
         fr: "La base la plus pertinente est l'interet legitime de l'employeur; l'employeur doit realiser une evaluation documentee de prevalence par rapport aux droits des travailleurs. Le consentement n'est en regle generale pas valable dans la relation de travail.",
@@ -278,7 +278,7 @@ export const islanda: SchedaPaese = {
       nl: 'onrechtmatigheid vastgesteld, zonder boete',
     },
     casoCitato: {
-      it: "Persuvernd, decisione 2022050836 dell'8 dicembre 2023: Islandspostur (Poste islandesi) aveva usato i dati del cronotachigrafo/GPS di un veicolo aziendale per valutare il rendimento di un dipendente e giustificarne il licenziamento, cambiando la finalita (il dispositivo era stato presentato per sicurezza e qualita del servizio) senza preavviso. Trattamento dichiarato illecito, senza multa.",
+      it: "Persuvernd, decisione 2022050836 dell'8 dicembre 2023: Islandspostur (Poste islandesi) aveva usato i dati del cronotachigrafo/GPS di un veicolo aziendale per valutare il rendimento di un dipendente e giustificarne il licenziamento, cambiando la finalita (il dispositivo era stato presentato per sicurezza e qualità del servizio) senza preavviso. Trattamento dichiarato illecito, senza multa.",
       en: 'Persuvernd, decision 2022050836 of 8 December 2023: Islandspostur (Iceland Post) had used the tachograph/GPS data of a company vehicle to assess an employee performance and justify dismissal, changing the purpose (the device had been presented for safety and service quality) without prior notice. Processing declared unlawful, with no fine.',
       de: 'Persuvernd, Entscheidung 2022050836 vom 8. Dezember 2023: Islandspostur (Islandische Post) hatte die Fahrtenschreiber-/GPS-Daten eines Firmenfahrzeugs genutzt, um die Leistung eines Beschaftigten zu bewerten und dessen Kundigung zu rechtfertigen, wobei der Zweck (das Gerat war fur Sicherheit und Servicequalitat vorgestellt worden) ohne vorherige Ankundigung geandert wurde. Die Verarbeitung wurde fur rechtswidrig erklart, ohne Geldbusse.',
       fr: "Persuvernd, decision 2022050836 du 8 decembre 2023: Islandspostur (Poste islandaise) avait utilise les donnees du chronotachygraphe/GPS d'un vehicule de societe pour evaluer le rendement d'un salarie et justifier son licenciement, en changeant la finalite (le dispositif avait ete presente pour la securite et la qualite du service) sans preavis. Traitement declare illicite, sans amende.",

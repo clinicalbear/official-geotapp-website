@@ -273,7 +273,7 @@ export const moldova: SchedaPaese = {
       nl: 'tot 20 miljoen euro of 4% van de omzet onder de nieuwe, op de AVG gebaseerde wet (vanaf 23 augustus 2026)',
     },
     casoCitato: {
-      it: "Non risulta una decisione del CNPDCP specifica e pubblicata sul GPS sui dipendenti. La legge in vigore (133/2011) prevede sanzioni piu' contenute; la nuova legge 195/2024, in vigore dal 23 agosto 2026, allinea il quadro al GDPR (fino a 20 milioni di euro o 4% del fatturato).",
+      it: "Non risulta una decisione del CNPDCP specifica e pubblicata sul GPS sui dipendenti. La legge in vigore (133/2011) prevede sanzioni più' contenute; la nuova legge 195/2024, in vigore dal 23 agosto 2026, allinea il quadro al GDPR (fino a 20 milioni di euro o 4% del fatturato).",
       en: 'There is no specific, published CNPDCP decision on GPS tracking of employees. The law in force (133/2011) provides for lower penalties; the new law 195/2024, in force from 23 August 2026, aligns the framework with the GDPR (up to 20 million euro or 4% of turnover).',
       de: 'Es gibt keine spezifische, veroeffentlichte Entscheidung des CNPDCP zur GPS-Ortung von Beschaeftigten. Das geltende Gesetz (133/2011) sieht geringere Sanktionen vor; das neue Gesetz 195/2024, das ab dem 23. August 2026 gilt, gleicht den Rahmen an die DSGVO an (bis zu 20 Millionen Euro oder 4% des Umsatzes).',
       fr: "Il n'existe pas de decision specifique et publiee du CNPDCP sur le suivi GPS des salaries. La loi en vigueur (133/2011) prevoit des sanctions plus limitees; la nouvelle loi 195/2024, en vigueur a partir du 23 aout 2026, aligne le cadre sur le RGPD (jusqu'a 20 millions d'euros ou 4% du chiffre d'affaires).",

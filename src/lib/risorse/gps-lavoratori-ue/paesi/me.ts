@@ -154,7 +154,7 @@ export const montenegro: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "Le decisioni su risultati, affidabilita' o comportamento dei dipendenti non possono basarsi unicamente su un trattamento automatizzato; il lavoratore deve poter esprimere la propria posizione.",
+        it: "Le decisioni su risultati, affidabilità' o comportamento dei dipendenti non possono basarsi unicamente su un trattamento automatizzato; il lavoratore deve poter esprimere la propria posizione.",
         en: 'Decisions about employees\' performance, reliability or conduct cannot be based solely on automated processing; the worker must be able to express their own position.',
         de: 'Entscheidungen ueber Leistung, Zuverlaessigkeit oder Verhalten der Beschaeftigten duerfen nicht allein auf automatisierter Verarbeitung beruhen; der Beschaeftigte muss seinen Standpunkt darlegen koennen.',
         fr: "Les décisions sur les résultats, la fiabilité ou le comportement des salariés ne peuvent reposer uniquement sur un traitement automatisé ; le travailleur doit pouvoir exprimer sa propre position.",
@@ -174,7 +174,7 @@ export const montenegro: SchedaPaese = {
       },
       risposta: 'dipende',
       dettaglio: {
-        it: "La legge attuale non prevede una DPIA formale in stile GDPR; il sostituto e' l'autorizzazione preventiva dell'art. 27 piu' le misure di sicurezza e la valutazione preliminare di adeguatezza (artt. 24 e 26).",
+        it: "La legge attuale non prevede una DPIA formale in stile GDPR; il sostituto e' l'autorizzazione preventiva dell'art. 27 più' le misure di sicurezza e la valutazione preliminare di adeguatezza (artt. 24 e 26).",
         en: 'The current law does not provide for a formal GDPR-style DPIA; the substitute is the prior authorisation under art. 27 plus the security measures and the preliminary adequacy assessment (arts. 24 and 26).',
         de: 'Das geltende Gesetz sieht keine foermliche DSFA nach Vorbild der DSGVO vor; an ihre Stelle treten die vorherige Genehmigung nach Art. 27 sowie die Sicherheitsmassnahmen und die vorlaeufige Angemessenheitsbewertung (Art. 24 und 26).',
         fr: "La loi actuelle ne prévoit pas d'AIPD formelle de type RGPD ; elle est remplacée par l'autorisation préalable de l'art. 27 ainsi que par les mesures de sécurité et l'évaluation préalable d'adéquation (art. 24 et 26).",

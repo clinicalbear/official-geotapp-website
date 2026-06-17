@@ -37,7 +37,7 @@ PEC: geotapp@pec.it
 | Newsletter marketing | Email, nome | Si opt-in | Fino revoca |
 | Profilazione AI Gemini | Dati aziendali aggregati anonimi | Si opt-in tier PRO | 24 mesi |
 
-**Il consenso puo essere revocato in qualsiasi momento** via email info@geotapp.com o dalle impostazioni account.
+**Il consenso può essere revocato in qualsiasi momento** via email info@geotapp.com o dalle impostazioni account.
 
 ### 2.3 Trattamenti per Legittimo Interesse (Art. 6.1.f GDPR)
 

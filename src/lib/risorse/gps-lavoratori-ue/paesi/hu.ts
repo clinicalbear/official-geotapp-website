@@ -93,7 +93,7 @@ export const ungheria: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: 'Il lavoratore puo essere controllato solo per condotte connesse al rapporto di lavoro; il datore puo usare mezzi tecnici, ma deve informarlo prima e per iscritto.',
+        it: 'Il lavoratore può essere controllato solo per condotte connesse al rapporto di lavoro; il datore può usare mezzi tecnici, ma deve informarlo prima e per iscritto.',
         en: 'The worker may be monitored only for conduct connected with the employment relationship; the employer may use technical means but must inform the worker beforehand and in writing.',
         de: 'Der Arbeitnehmer darf nur wegen Verhaltensweisen kontrolliert werden, die mit dem Arbeitsverhältnis zusammenhängen; der Arbeitgeber darf technische Mittel einsetzen, muss ihn jedoch vorab und schriftlich informieren.',
         fr: "Le travailleur ne peut être contrôlé que pour des comportements liés à la relation de travail; l'employeur peut utiliser des moyens techniques, mais il doit l'informer au préalable et par écrit.",
@@ -113,7 +113,7 @@ export const ungheria: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: 'Il controllo non puo ledere la dignita ne riguardare la vita privata del lavoratore; sui dispositivi aziendali il datore puo accedere solo ai dati connessi al lavoro.',
+        it: 'Il controllo non può ledere la dignita ne riguardare la vita privata del lavoratore; sui dispositivi aziendali il datore può accedere solo ai dati connessi al lavoro.',
         en: 'The monitoring may not impair the dignity nor concern the private life of the worker; on company devices the employer may access only work-related data.',
         de: 'Die Kontrolle darf weder die Würde verletzen noch das Privatleben des Arbeitnehmers betreffen; auf Firmengeräten darf der Arbeitgeber nur auf arbeitsbezogene Daten zugreifen.',
         fr: "Le contrôle ne peut porter atteinte à la dignité ni concerner la vie privée du travailleur; sur les appareils de l'entreprise, l'employeur ne peut accéder qu'aux données liées au travail.",
@@ -164,7 +164,7 @@ export const ungheria: SchedaPaese = {
     },
     {
       voce: {
-        it: "Valutazione d'impatto (DPIA) per il monitoraggio della posizione e dell'attivita dei lavoratori (lista NAIH)",
+        it: "Valutazione d'impatto (DPIA) per il monitoraggio della posizione e dell'attività dei lavoratori (lista NAIH)",
         en: 'Impact assessment (DPIA) for monitoring the location and activity of workers (NAIH list)',
         de: 'Datenschutz-Folgenabschätzung (DSFA) für die Überwachung von Standort und Tätigkeit der Arbeitnehmer (NAIH-Liste)',
         fr: "Analyse d'impact (AIPD) pour la surveillance de la localisation et de l'activité des travailleurs (liste NAIH)",

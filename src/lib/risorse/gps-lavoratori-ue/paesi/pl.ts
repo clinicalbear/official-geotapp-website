@@ -138,7 +138,7 @@ export const polonia: SchedaPaese = {
       },
       risposta: 'no',
       dettaglio: {
-        it: "non serve un'autorizzazione preventiva dell'UODO; la procedura e interna (regole nel regolamento/avviso, informazione, segnalazione delle aree) piu il rispetto del GDPR.",
+        it: "non serve un'autorizzazione preventiva dell'UODO; la procedura e interna (regole nel regolamento/avviso, informazione, segnalazione delle aree) più il rispetto del GDPR.",
         en: 'no prior authorisation from the UODO is required; the procedure is internal (rules in the regulations/notice, information, marking of areas) plus compliance with the GDPR.',
         de: 'eine vorherige Genehmigung der UODO ist nicht erforderlich; das Verfahren ist intern (Regeln in der Ordnung/Bekanntmachung, Information, Kennzeichnung der Bereiche) zuzueglich der Einhaltung der DSGVO.',
         fr: "aucune autorisation prealable de l'UODO n'est requise; la procedure est interne (regles dans le reglement/avis, information, signalisation des zones) plus le respect du RGPD.",
@@ -279,7 +279,7 @@ export const polonia: SchedaPaese = {
       nl: 'ongeveer 266.000 € (1.145.891 PLN)',
     },
     casoCitato: {
-      it: 'UODO contro Centrum Medyczne Ujastek (Cracovia, decisione DKN.5131.4.2024): videosorveglianza installata in due stanze di neonatologia senza che ne fossero informati pazienti ne dipendenti, piu sicurezza inadeguata delle registrazioni. Multa complessiva 1.145.891 PLN (circa 266.000 euro). Non e un caso di GPS, ma riguarda il monitoraggio dei dipendenti non comunicato.',
+      it: 'UODO contro Centrum Medyczne Ujastek (Cracovia, decisione DKN.5131.4.2024): videosorveglianza installata in due stanze di neonatologia senza che ne fossero informati pazienti ne dipendenti, più sicurezza inadeguata delle registrazioni. Multa complessiva 1.145.891 PLN (circa 266.000 euro). Non e un caso di GPS, ma riguarda il monitoraggio dei dipendenti non comunicato.',
       en: 'UODO against Centrum Medyczne Ujastek (Krakow, decision DKN.5131.4.2024): video surveillance installed in two neonatology rooms without informing either patients or employees, plus inadequate security of the recordings. Total fine 1,145,891 PLN (about 266,000 euro). It is not a GPS case, but it concerns undisclosed monitoring of employees.',
       de: 'UODO gegen Centrum Medyczne Ujastek (Krakau, Entscheidung DKN.5131.4.2024): Videoueberwachung in zwei Raeumen der Neonatologie installiert, ohne dass Patienten oder Beschaeftigte darueber informiert wurden, dazu unzureichende Sicherheit der Aufzeichnungen. Gesamtgeldbusse 1.145.891 PLN (rund 266.000 Euro). Es ist kein GPS-Fall, betrifft aber die nicht mitgeteilte Ueberwachung der Beschaeftigten.',
       fr: "UODO contre Centrum Medyczne Ujastek (Cracovie, decision DKN.5131.4.2024): videosurveillance installee dans deux salles de neonatologie sans que les patients ni les employes en soient informes, ainsi qu'une securite inadequate des enregistrements. Amende totale de 1 145 891 PLN (environ 266 000 euros). Ce n'est pas un cas de GPS, mais il concerne la surveillance non communiquee des employes.",

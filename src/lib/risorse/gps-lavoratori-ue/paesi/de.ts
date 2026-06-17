@@ -113,7 +113,7 @@ export const germania: SchedaPaese = {
       },
       risposta: 'dipende',
       dettaglio: {
-        it: "In Germania la cogestione del Betriebsrat e' obbligatoria per i sistemi tecnici idonei a sorvegliare comportamento o rendimento dei lavoratori (§ 87 c.1 n. 6 BetrVG): senza accordo col consiglio aziendale non si puo' attivare. Ma vale SOLO dove un Betriebsrat esiste; molte PMI non ce l'hanno, e allora questo passaggio non c'e' (resta comunque tutto il GDPR). Conta l'idoneita' oggettiva a sorvegliare, non l'intenzione del datore.",
+        it: "In Germania la cogestione del Betriebsrat e' obbligatoria per i sistemi tecnici idonei a sorvegliare comportamento o rendimento dei lavoratori (§ 87 c.1 n. 6 BetrVG): senza accordo col consiglio aziendale non si può' attivare. Ma vale SOLO dove un Betriebsrat esiste; molte PMI non ce l'hanno, e allora questo passaggio non c'e' (resta comunque tutto il GDPR). Conta l'idoneita' oggettiva a sorvegliare, non l'intenzione del datore.",
         en: "In Germany the co-determination of the Betriebsrat is mandatory for technical systems capable of monitoring the conduct or performance of workers (section 87(1) no. 6 BetrVG): without an agreement with the works council the system cannot be activated. But this applies ONLY where a Betriebsrat exists; many SMEs do not have one, and then this step does not apply (the entire GDPR still applies). What matters is the objective capability to monitor, not the employer's intention.",
         de: "In Deutschland ist die Mitbestimmung des Betriebsrats zwingend für technische Systeme, die geeignet sind, das Verhalten oder die Leistung der Arbeitnehmer zu überwachen (§ 87 Abs. 1 Nr. 6 BetrVG): Ohne Betriebsvereinbarung darf das System nicht aktiviert werden. Dies gilt jedoch NUR, wo ein Betriebsrat besteht; viele KMU haben keinen, und dann entfällt dieser Schritt (die gesamte DSGVO gilt weiterhin). Entscheidend ist die objektive Eignung zur Überwachung, nicht die Absicht des Arbeitgebers.",
         fr: "En Allemagne, la cogestion du Betriebsrat est obligatoire pour les systèmes techniques susceptibles de surveiller le comportement ou le rendement des travailleurs (article 87, al. 1, n° 6 BetrVG) : sans accord avec le comité d'entreprise, le système ne peut pas être activé. Mais cela ne s'applique QUE là où un Betriebsrat existe ; de nombreuses PME n'en ont pas, et alors cette étape n'existe pas (l'ensemble du RGPD reste applicable). Ce qui compte, c'est l'aptitude objective à surveiller, et non l'intention de l'employeur.",
@@ -173,7 +173,7 @@ export const germania: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "I lavoratori vanno informati in modo chiaro su quali dati di posizione si raccolgono, come, quando e perche'.",
+        it: "I lavoratori vanno informati in modo chiaro su quali dati di posizione si raccolgono, come, quando e perché'.",
         en: 'Workers must be clearly informed about which location data is collected, how, when and why.',
         de: 'Die Arbeitnehmer müssen klar darüber informiert werden, welche Standortdaten erhoben werden, wie, wann und warum.',
         fr: 'Les travailleurs doivent être clairement informés des données de localisation collectées, de la manière, du moment et de la raison.',
@@ -239,7 +239,7 @@ export const germania: SchedaPaese = {
     {
       passo: 2,
       descrizione: {
-        it: "Individua una base giuridica valida ai sensi dell'art. 6 GDPR (non piu' il solo § 26 BDSG dopo la sentenza C-34/21).",
+        it: "Individua una base giuridica valida ai sensi dell'art. 6 GDPR (non più' il solo § 26 BDSG dopo la sentenza C-34/21).",
         en: 'Identify a valid legal basis under Article 6 GDPR (no longer section 26 BDSG alone, after the C-34/21 judgment).',
         de: 'Bestimmen Sie eine gültige Rechtsgrundlage nach Art. 6 DSGVO (nach dem Urteil C-34/21 nicht mehr allein § 26 BDSG).',
         fr: "Déterminez une base juridique valable au sens de l'article 6 du RGPD (plus le seul article 26 BDSG après l'arrêt C-34/21).",
@@ -331,7 +331,7 @@ export const germania: SchedaPaese = {
       nl: '35,3 miljoen €',
     },
     casoCitato: {
-      it: "H&M, sanzione del Garante di Amburgo del 1 ottobre 2020: sorveglianza sistematica di centinaia di dipendenti del centro servizi di Norimberga (annotazioni su vita privata, malattie, famiglia). Non e' un caso specifico di GPS, ma e' la sanzione piu' nota in Germania sul controllo illecito dei lavoratori.",
+      it: "H&M, sanzione del Garante di Amburgo del 1 ottobre 2020: sorveglianza sistematica di centinaia di dipendenti del centro servizi di Norimberga (annotazioni su vita privata, malattie, famiglia). Non e' un caso specifico di GPS, ma e' la sanzione più' nota in Germania sul controllo illecito dei lavoratori.",
       en: 'H&M, fine by the Hamburg data protection authority of 1 October 2020: systematic surveillance of hundreds of employees at the Nuremberg service centre (notes on private life, illnesses, family). It is not a specific GPS case, but it is the best-known fine in Germany for the unlawful monitoring of workers.',
       de: 'H&M, Bußgeld der Hamburger Datenschutzaufsichtsbehörde vom 1. Oktober 2020: systematische Überwachung von Hunderten Beschäftigten des Servicecenters in Nürnberg (Aufzeichnungen über Privatleben, Krankheiten, Familie). Es handelt sich nicht um einen speziellen GPS-Fall, aber es ist das bekannteste Bußgeld in Deutschland wegen unrechtmäßiger Überwachung von Beschäftigten.',
       fr: "H&M, sanction de l'autorité de protection des données de Hambourg du 1er octobre 2020 : surveillance systématique de centaines de salariés du centre de services de Nuremberg (notes sur la vie privée, les maladies, la famille). Ce n'est pas un cas spécifique de GPS, mais c'est la sanction la plus connue en Allemagne pour la surveillance illicite des travailleurs.",

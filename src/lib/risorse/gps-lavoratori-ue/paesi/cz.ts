@@ -104,7 +104,7 @@ export const repubblicaCeca: SchedaPaese = {
     },
     {
       voce: {
-        it: "Divieto di sorvegliare i lavoratori senza un motivo serio inerente alla natura dell'attivita (art. 316)",
+        it: "Divieto di sorvegliare i lavoratori senza un motivo serio inerente alla natura dell'attività (art. 316)",
         en: "Prohibition on monitoring workers without a serious reason inherent to the nature of the activity (art. 316)",
         de: 'Verbot, Arbeitnehmer ohne einen schwerwiegenden, in der Art der Taetigkeit liegenden Grund zu ueberwachen (Art. 316)',
         fr: "Interdiction de surveiller les travailleurs sans un motif sérieux inhérent à la nature de l'activité (art. 316)",
@@ -113,7 +113,7 @@ export const repubblicaCeca: SchedaPaese = {
       },
       risposta: 'no',
       dettaglio: {
-        it: 'Il datore non puo\', senza un motivo serio inerente alla particolare natura della sua attivita\', ledere la privacy del lavoratore sottoponendolo a sorveglianza aperta o occulta (incluso il tracciamento).',
+        it: 'Il datore non può\', senza un motivo serio inerente alla particolare natura della sua attività\', ledere la privacy del lavoratore sottoponendolo a sorveglianza aperta o occulta (incluso il tracciamento).',
         en: 'Without a serious reason inherent to the particular nature of its activity, the employer may not infringe the worker\'s privacy by subjecting them to open or covert surveillance (including tracking).',
         de: 'Ohne einen schwerwiegenden, in der besonderen Art seiner Taetigkeit liegenden Grund darf der Arbeitgeber die Privatsphaere des Arbeitnehmers nicht verletzen, indem er ihn einer offenen oder verdeckten Ueberwachung (einschliesslich Ortung) unterwirft.',
         fr: "Sans un motif sérieux inhérent à la nature particulière de son activité, l'employeur ne peut pas porter atteinte à la vie privée du travailleur en le soumettant à une surveillance ouverte ou occulte (y compris la géolocalisation).",
@@ -188,7 +188,7 @@ export const repubblicaCeca: SchedaPaese = {
     {
       passo: 1,
       descrizione: {
-        it: "Verifica un motivo serio inerente alla natura della tua attivita' per il monitoraggio (art. 316).",
+        it: "Verifica un motivo serio inerente alla natura della tua attività' per il monitoraggio (art. 316).",
         en: 'Verify a serious reason inherent to the nature of your activity for the monitoring (art. 316).',
         de: 'Pruefen Sie einen schwerwiegenden, in der Art Ihrer Taetigkeit liegenden Grund fuer die Ueberwachung (Art. 316).',
         fr: "Vérifiez l'existence d'un motif sérieux inhérent à la nature de votre activité pour la surveillance (art. 316).",

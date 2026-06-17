@@ -153,7 +153,7 @@ export const estonia: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: 'Il trattamento sul luogo di lavoro deve essere proporzionato ai rischi; il datore non puo seguire i lavoratori in tempo reale fuori dall\'orario di lavoro.',
+        it: 'Il trattamento sul luogo di lavoro deve essere proporzionato ai rischi; il datore non può seguire i lavoratori in tempo reale fuori dall\'orario di lavoro.',
         en: 'Processing at the workplace must be proportionate to the risks; the employer cannot follow workers in real time outside working hours.',
         de: 'Die Verarbeitung am Arbeitsplatz muss verhaeltnismaessig zu den Risiken sein; der Arbeitgeber darf die Beschaeftigten ausserhalb der Arbeitszeit nicht in Echtzeit verfolgen.',
         fr: "Le traitement sur le lieu de travail doit etre proportionne aux risques; l'employeur ne peut pas suivre les salaries en temps reel en dehors des heures de travail.",
@@ -164,7 +164,7 @@ export const estonia: SchedaPaese = {
     },
     {
       voce: {
-        it: "Valutazione d'impatto (DPIA) per il monitoraggio sistematico delle attivita dei dipendenti e il tracciamento della posizione in tempo reale (lista AKI)",
+        it: "Valutazione d'impatto (DPIA) per il monitoraggio sistematico delle attività dei dipendenti e il tracciamento della posizione in tempo reale (lista AKI)",
         en: 'Impact assessment (DPIA) for systematic monitoring of employees activities and real-time location tracking (AKI list)',
         de: 'Datenschutz-Folgenabschaetzung (DSFA) fuer die systematische Ueberwachung der Taetigkeiten der Beschaeftigten und die Echtzeit-Standortverfolgung (AKI-Liste)',
         fr: "Analyse d'impact (AIPD) pour la surveillance systematique des activites des salaries et le suivi de la position en temps reel (liste AKI)",
@@ -173,7 +173,7 @@ export const estonia: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "La lista AKI include il monitoraggio sistematico delle attivita dei dipendenti su larga scala e il tracciamento in tempo reale della posizione di una persona tra i casi che richiedono una valutazione d'impatto.",
+        it: "La lista AKI include il monitoraggio sistematico delle attività dei dipendenti su larga scala e il tracciamento in tempo reale della posizione di una persona tra i casi che richiedono una valutazione d'impatto.",
         en: 'The AKI list includes large-scale systematic monitoring of employees activities and real-time tracking of a person location among the cases that require an impact assessment.',
         de: 'Die AKI-Liste fuehrt die systematische Ueberwachung der Taetigkeiten der Beschaeftigten in grossem Umfang und die Echtzeitverfolgung des Standorts einer Person unter den Faellen auf, die eine Folgenabschaetzung erfordern.',
         fr: "La liste de l'AKI inclut la surveillance systematique a grande echelle des activites des salaries et le suivi en temps reel de la position d'une personne parmi les cas qui exigent une analyse d'impact.",

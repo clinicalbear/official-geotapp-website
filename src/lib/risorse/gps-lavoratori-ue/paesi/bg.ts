@@ -153,7 +153,7 @@ export const bulgaria: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "Per il CPDP il consenso difficilmente e libero nel rapporto di lavoro; la base e l'interesse legittimo, il trattamento deve essere proporzionato e il datore non puo usare dispositivi di tracciamento durante l'uso privato del veicolo.",
+        it: "Per il CPDP il consenso difficilmente e libero nel rapporto di lavoro; la base e l'interesse legittimo, il trattamento deve essere proporzionato e il datore non può usare dispositivi di tracciamento durante l'uso privato del veicolo.",
         en: 'According to the CPDP, consent can hardly be free in the employment relationship; the basis is legitimate interest, the processing must be proportionate and the employer cannot use tracking devices during private use of the vehicle.',
         de: 'Nach Auffassung der CPDP kann die Einwilligung im Arbeitsverhaeltnis kaum freiwillig sein; die Grundlage ist das berechtigte Interesse, die Verarbeitung muss verhaeltnismaessig sein und der Arbeitgeber darf waehrend der privaten Nutzung des Fahrzeugs keine Ortungsgeraete einsetzen.',
         fr: "Pour la CPDP, le consentement peut difficilement etre libre dans la relation de travail; la base est l'interet legitime, le traitement doit etre proportionne et l'employeur ne peut pas utiliser de dispositifs de suivi pendant l'usage prive du vehicule.",

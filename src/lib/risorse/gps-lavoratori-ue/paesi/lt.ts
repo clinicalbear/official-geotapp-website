@@ -111,7 +111,7 @@ export const lituania: SchedaPaese = {
       },
       risposta: 'no',
       dettaglio: {
-        it: 'Con il GDPR non serve piu alcuna notifica o autorizzazione preventiva; il titolare si autovaluta e conserva la documentazione.',
+        it: 'Con il GDPR non serve più alcuna notifica o autorizzazione preventiva; il titolare si autovaluta e conserva la documentazione.',
         en: 'Under the GDPR no prior notification or authorisation is needed any longer; the controller self-assesses and keeps the documentation.',
         de: 'Mit der DSGVO ist keine vorherige Meldung oder Genehmigung mehr erforderlich; der Verantwortliche bewertet selbst und bewahrt die Dokumentation auf.',
         fr: "Avec le RGPD, aucune notification ou autorisation prealable n est plus necessaire; le responsable du traitement procede a une auto-evaluation et conserve la documentation.",

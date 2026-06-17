@@ -148,7 +148,7 @@ export const macedoniaDelNord: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "Il tracciamento continuo della posizione e' la forma piu' intrusiva e va sottoposto alla piu' stretta valutazione di necessita' e proporzionalita'; valgono minimizzazione e limitazione della finalita'.",
+        it: "Il tracciamento continuo della posizione e' la forma più' intrusiva e va sottoposto alla più' stretta valutazione di necessita' e proporzionalita'; valgono minimizzazione e limitazione della finalita'.",
         en: 'Continuous location tracking is the most intrusive form and must undergo the strictest assessment of necessity and proportionality; data minimisation and purpose limitation apply.',
         de: 'Die kontinuierliche Standortverfolgung ist die eingriffsintensivste Form und unterliegt der strengsten Pruefung von Erforderlichkeit und Verhaeltnismaessigkeit; Datenminimierung und Zweckbindung gelten.',
         fr: "Le suivi continu de la localisation est la forme la plus intrusive et doit faire l'objet de l'evaluation la plus stricte de necessite et de proportionnalite ; la minimisation des donnees et la limitation des finalites s'appliquent.",

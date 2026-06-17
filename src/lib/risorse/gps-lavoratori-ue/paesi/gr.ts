@@ -32,7 +32,7 @@ const FONTE_HDPA_DPIA = {
 const FONTE_HDPA_SANZIONE = {
   titolo:
     'HDPA, sanzione a un datore per geolocalizzazione (16 febbraio 2024)',
-  url: 'https://www.dpa.gr/el/enimerwtiko/prakseisArxis/prostimo-kai-epiplixi-se-ergodoti-gia-epexergasia-prosopikon-dedomenon',
+  url: 'https://www.dpa.gr/el/enimerwtiko/prakseisArxis/prostimo-kai-epiplixi-se-ergodoti-già-epexergasia-prosopikon-dedomenon',
 };
 const FONTE_HDPA = {
   titolo: 'HDPA (Garante greco), pagina ufficiale',
@@ -297,7 +297,7 @@ export const grecia: SchedaPaese = {
       nl: '2.000 €',
     },
     casoCitato: {
-      it: "HDPA (Garante greco), decisione del 16 febbraio 2024: un datore aveva usato il GPS del veicolo aziendale per localizzare un dipendente mentre era in congedo legittimo, fuori dall'orario di lavoro. Multa 2.000 euro per violazione di liceita e trasparenza, piu un'ammonizione e l'ordine di adottare sistemi disattivabili dagli utenti.",
+      it: "HDPA (Garante greco), decisione del 16 febbraio 2024: un datore aveva usato il GPS del veicolo aziendale per localizzare un dipendente mentre era in congedo legittimo, fuori dall'orario di lavoro. Multa 2.000 euro per violazione di liceita e trasparenza, più un'ammonizione e l'ordine di adottare sistemi disattivabili dagli utenti.",
       en: 'HDPA (Greek data protection authority), decision of 16 February 2024: an employer had used the company vehicle GPS to locate an employee while they were on legitimate leave, outside working hours. A fine of 2,000 euros for breach of lawfulness and transparency, plus a reprimand and an order to adopt systems that users can deactivate.',
       de: 'HDPA (griechische Datenschutzbehörde), Entscheidung vom 16. Februar 2024: Ein Arbeitgeber hatte das GPS des Firmenfahrzeugs genutzt, um einen Beschäftigten während eines rechtmäßigen Urlaubs außerhalb der Arbeitszeit zu orten. Geldbuße von 2.000 Euro wegen Verstoßes gegen Rechtmäßigkeit und Transparenz, zudem eine Verwarnung und die Anordnung, von den Nutzern deaktivierbare Systeme einzuführen.',
       fr: "HDPA (autorité grecque de protection des données), décision du 16 février 2024: un employeur avait utilisé le GPS du véhicule de l'entreprise pour localiser un salarié alors qu'il était en congé légitime, en dehors des heures de travail. Amende de 2 000 euros pour manquement à la licéité et à la transparence, ainsi qu'un avertissement et l'ordre d'adopter des systèmes désactivables par les utilisateurs.",

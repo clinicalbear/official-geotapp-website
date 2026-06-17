@@ -133,7 +133,7 @@ export const danimarca: SchedaPaese = {
       },
       risposta: 'no',
       dettaglio: {
-        it: "Non serve un'autorizzazione preventiva del Datatilsynet; vale la responsabilizzazione piu l'obbligo di informazione.",
+        it: "Non serve un'autorizzazione preventiva del Datatilsynet; vale la responsabilizzazione più l'obbligo di informazione.",
         en: 'No prior authorisation from the Datatilsynet is required; what applies is accountability plus the duty to inform.',
         de: 'Eine vorherige Genehmigung des Datatilsynet ist nicht erforderlich; es gilt die Rechenschaftspflicht und die Informationspflicht.',
         fr: "Aucune autorisation préalable du Datatilsynet n'est nécessaire ; s'appliquent la responsabilisation et l'obligation d'information.",
@@ -144,7 +144,7 @@ export const danimarca: SchedaPaese = {
     },
     {
       voce: {
-        it: "Informazione preventiva ai lavoratori (al piu tardi all'attivazione, art. 13 GDPR)",
+        it: "Informazione preventiva ai lavoratori (al più tardi all'attivazione, art. 13 GDPR)",
         en: 'Prior information to workers (at the latest at activation, art. 13 GDPR)',
         de: 'Vorherige Information der Beschäftigten (spätestens bei Aktivierung, Art. 13 DSGVO)',
         fr: "Information préalable des travailleurs (au plus tard à l'activation, art. 13 RGPD)",
@@ -153,7 +153,7 @@ export const danimarca: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "I lavoratori vanno informati, al piu tardi al momento dell'attivazione del controllo, su scopo, portata e uso dei dati, in forma chiara e accessibile.",
+        it: "I lavoratori vanno informati, al più tardi al momento dell'attivazione del controllo, su scopo, portata e uso dei dati, in forma chiara e accessibile.",
         en: 'Workers must be informed, at the latest when the monitoring is activated, of the purpose, scope and use of the data, in a clear and accessible form.',
         de: 'Die Beschäftigten sind spätestens bei Aktivierung der Kontrolle in klarer und zugänglicher Form über Zweck, Umfang und Verwendung der Daten zu informieren.',
         fr: "Les travailleurs doivent être informés, au plus tard au moment de l'activation du contrôle, de la finalité, de la portée et de l'utilisation des données, sous une forme claire et accessible.",
@@ -230,7 +230,7 @@ export const danimarca: SchedaPaese = {
     {
       passo: 3,
       descrizione: {
-        it: "Informa i lavoratori al piu tardi al momento dell'attivazione (art. 13 GDPR).",
+        it: "Informa i lavoratori al più tardi al momento dell'attivazione (art. 13 GDPR).",
         en: 'Inform the workers at the latest when the monitoring is activated (art. 13 GDPR).',
         de: 'Informieren Sie die Beschäftigten spätestens bei der Aktivierung (Art. 13 DSGVO).',
         fr: "Informez les travailleurs au plus tard au moment de l'activation (art. 13 RGPD).",

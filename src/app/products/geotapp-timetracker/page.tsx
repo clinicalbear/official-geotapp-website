@@ -271,7 +271,7 @@ export default function GeoTappApp() {
           icon: CheckCircle2,
           title: 'Molto più di una semplice timbratura',
           description:
-            'TimeTracker copre dettaglio commessa, report, comunicazioni, richieste, sessioni lavoro e responsabilita operativa, non solo presenze.',
+            'TimeTracker copre dettaglio commessa, report, comunicazioni, richieste, sessioni lavoro e responsabilità operativa, non solo presenze.',
         },
         {
           icon: MessageSquare,

@@ -118,7 +118,7 @@ export const finlandia: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "Il datore puo' trattare solo i dati direttamente necessari al rapporto di lavoro; nemmeno il consenso del lavoratore autorizza il trattamento di dati che non soddisfano questo requisito.",
+        it: "Il datore può' trattare solo i dati direttamente necessari al rapporto di lavoro; nemmeno il consenso del lavoratore autorizza il trattamento di dati che non soddisfano questo requisito.",
         en: 'The employer may process only data directly necessary for the employment relationship; not even the employee consent authorises the processing of data that does not meet this requirement.',
         de: 'Der Arbeitgeber darf nur Daten verarbeiten, die fuer das Arbeitsverhaeltnis unmittelbar erforderlich sind; auch die Einwilligung des Arbeitnehmers berechtigt nicht zur Verarbeitung von Daten, die diese Anforderung nicht erfuellen.',
         fr: "L'employeur ne peut traiter que les donnees directement necessaires a la relation de travail; meme le consentement du salarie n'autorise pas le traitement de donnees qui ne remplissent pas cette exigence.",
