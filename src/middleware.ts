@@ -182,7 +182,10 @@ function copyResponseHeaders(
 // OpenNext/Cloudflare Workers does not route the Next.js /sitemap.xml handler
 // correctly (requests fall through to [locale] route, matching locale="sitemap.xml").
 // We generate the complete sitemap directly in middleware.
-// Keep SITEMAP_ROUTES in sync with src/app/sitemap.ts.
+// ⚠️ QUESTA è l'UNICA fonte del sitemap. NON esiste app/sitemap.xml/route.ts
+// (era codice morto mai eseguito, rimosso il 16/06). Per aggiungere URL al
+// sitemap si modifica SOLO questo file: SITEMAP_ROUTES (pagine) e
+// GPS_SCHEDE_SLUGS (schede-paese). I post blog sono presi live da WordPress.
 
 const SITEMAP_BASE_URL = 'https://geotapp.com';
 
@@ -248,7 +251,7 @@ const SITEMAP_ROUTES: SitemapRouteEntry[] = [
   })),
 ];
 
-// SYNC: identical copy also in src/app/sitemap.ts — remove from both files when posts are fully purged.
+// Rimuovere quando i post di test saranno definitivamente eliminati.
 const DEPUBLISHED_BLOG_TEST_PATHS = new Set([
   '/blog/da/2026/03/23/test/',
   '/blog/da/2026/03/23/test-2/',
