@@ -278,8 +278,14 @@ const nextConfig = {
         headers: [{ key: 'Cache-Control', value: 'public, max-age=86400, stale-while-revalidate=604800' }],
       },
       {
+        // L'HTML non va MAI cachato (né browser né CDN): dopo un deploy gli hash
+        // dei CSS/JS cambiano e gli asset vecchi spariscono (404). Se il browser
+        // tenesse l'HTML vecchio, punterebbe a CSS morti → pagina senza stile.
+        // no-store = ogni navigazione riceve HTML fresco, che punta sempre agli
+        // asset del deploy corrente (che esistono). Gli asset /_next/static restano
+        // immutable e quindi cachati a lungo: nessun costo di banda reale.
         source: '/((?!api|_next).*)',
-        headers: [{ key: 'Cache-Control', value: 'public, max-age=3600, s-maxage=86400, stale-while-revalidate=86400' }],
+        headers: [{ key: 'Cache-Control', value: 'no-store, must-revalidate' }],
       },
       // /sitemap.xml: header gestiti dal Route Handler (app/sitemap.xml/route.ts),
       // che imposta no-store sulla risposta. Nessuna regola qui per non interferire.
