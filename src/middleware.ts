@@ -188,6 +188,18 @@ const SITEMAP_BASE_URL = 'https://geotapp.com';
 
 type SitemapRouteEntry = { path: string; priority: number; changeFrequency: string };
 
+// Slug canonici delle 39 schede-paese GPS (risorsa "GPS sui lavoratori in UE").
+// Lista leggera (solo slug) per non importare i dossier completi nel bundle middleware.
+// SYNC con src/lib/risorse/gps-lavoratori-ue/paesi/*.ts (campo slugCanonico).
+const GPS_SCHEDE_SLUGS = [
+  'albania', 'austria', 'belgio', 'bielorussia', 'bosnia-erzegovina', 'bulgaria',
+  'cipro', 'croazia', 'danimarca', 'estonia', 'finlandia', 'francia', 'germania',
+  'grecia', 'irlanda', 'islanda', 'italia', 'lettonia', 'lituania', 'lussemburgo',
+  'macedonia-del-nord', 'malta', 'moldova', 'montenegro', 'norvegia', 'olanda',
+  'polonia', 'portogallo', 'regno-unito', 'repubblica-ceca', 'romania', 'serbia',
+  'slovacchia', 'slovenia', 'spagna', 'svezia', 'svizzera', 'ucraina', 'ungheria',
+];
+
 const SITEMAP_ROUTES: SitemapRouteEntry[] = [
   { path: '/', priority: 1.0, changeFrequency: 'weekly' },
   { path: '/products/geotapp-flow/', priority: 0.95, changeFrequency: 'weekly' },
@@ -221,6 +233,19 @@ const SITEMAP_ROUTES: SitemapRouteEntry[] = [
   { path: '/privacy/', priority: 0.3, changeFrequency: 'yearly' },
   { path: '/terms/', priority: 0.3, changeFrequency: 'yearly' },
   { path: '/cookies/', priority: 0.3, changeFrequency: 'yearly' },
+  // Hub Risorse + strumenti (asset linkabili).
+  { path: '/risorse/', priority: 0.8, changeFrequency: 'weekly' },
+  { path: '/risorse/gps-lavoratori-ue/', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/risorse/sanzioni-gps/', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/risorse/indice-sorveglianza/', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/roi-calculator/', priority: 0.75, changeFrequency: 'monthly' },
+  { path: '/survey/', priority: 0.6, changeFrequency: 'monthly' },
+  // 39 schede-paese GPS (× 11 lingue con hreflang, via il loop sotto).
+  ...GPS_SCHEDE_SLUGS.map((slug) => ({
+    path: `/risorse/gps-lavoratori-ue/${slug}/`,
+    priority: 0.7,
+    changeFrequency: 'monthly',
+  })),
 ];
 
 // SYNC: identical copy also in src/app/sitemap.ts — remove from both files when posts are fully purged.
