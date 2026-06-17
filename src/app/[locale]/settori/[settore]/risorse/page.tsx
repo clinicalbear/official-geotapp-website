@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
 import { DEFAULT_LOCALE, SUPPORTED_LOCALES, type AppLocale } from '@/lib/i18n/config';
+import { localizePath } from '@/lib/i18n/locale-routing';
 
 const WP = 'https://blog.geotapp.com';
 const HEADERS = { host: 'blog.geotapp.com', 'x-geotapp-proxy': '1', 'x-forwarded-proto': 'https' };
@@ -379,6 +380,23 @@ const PRODUCT_PAGE_LABELS: Record<string, string> = {
   ru: 'Рекомендуемый инструмент для этого сектора',
 };
 
+// Box "strumento gratuito": collega le pagine settore-risorse alla risorsa
+// GPS lavoratori UE (asset linkabile, rilevante per ogni settore che manda
+// squadre fuori sede / all'estero).
+const GPS_CALLOUT: Record<string, { text: string; cta: string }> = {
+  it: { text: 'Mandi squadre all’estero? Lo strumento gratuito GPS lavoratori UE ti dice cosa serve per essere in regola, Paese per Paese.', cta: 'Apri la guida →' },
+  en: { text: 'Sending crews abroad? The free GPS on workers in the EU tool shows what you need to be compliant, country by country.', cta: 'Open the guide →' },
+  de: { text: 'Schicken Sie Teams ins Ausland? Das kostenlose Werkzeug GPS-Tracking von Mitarbeitern in der EU zeigt Land für Land, was nötig ist.', cta: 'Zum Leitfaden →' },
+  fr: { text: 'Vous envoyez des équipes à l’étranger ? L’outil gratuit GPS sur les travailleurs en UE indique ce qu’il faut, pays par pays.', cta: 'Ouvrir le guide →' },
+  es: { text: '¿Envías equipos al extranjero? La herramienta gratuita GPS para trabajadores en la UE indica qué necesitas, país por país.', cta: 'Abrir la guía →' },
+  pt: { text: 'Envias equipas para o estrangeiro? A ferramenta gratuita GPS dos trabalhadores na UE mostra o que precisas, país a país.', cta: 'Abrir o guia →' },
+  nl: { text: 'Stuur je teams naar het buitenland? De gratis tool GPS op werknemers in de EU toont per land wat nodig is.', cta: 'Open de gids →' },
+  da: { text: 'Sender du hold til udlandet? Det gratis værktøj GPS på medarbejdere i EU viser, hvad der kræves, land for land.', cta: 'Åbn guiden →' },
+  sv: { text: 'Skickar du team utomlands? Det gratis verktyget GPS på anställda i EU visar vad som krävs, land för land.', cta: 'Öppna guiden →' },
+  nb: { text: 'Sender du team til utlandet? Det gratis verktøyet GPS på ansatte i EU viser hva som kreves, land for land.', cta: 'Åpne veiledningen →' },
+  ru: { text: 'Отправляете бригады за рубеж? Бесплатный инструмент «GPS сотрудников в ЕС» показывает, что нужно, страна за страной.', cta: 'Открыть гид →' },
+};
+
 export default async function RisorseSettorePage({ params }: { params: Promise<Params> }) {
   const { locale, settore } = await params;
   const config = SETTORE_CONFIG[settore];
@@ -396,6 +414,8 @@ export default async function RisorseSettorePage({ params }: { params: Promise<P
   const sections = config.sections[resolvedLocale] ?? config.sections['en'] ?? [];
   const productHref = `/${resolvedLocale}/products/${config.product.slug}/`;
   const pageUrl = `https://geotapp.com/${resolvedLocale}/settori/${settore}/risorse/`;
+  const gpsHref = localizePath('/risorse/gps-lavoratori-ue/', resolvedLocale);
+  const gpsCallout = GPS_CALLOUT[resolvedLocale] ?? GPS_CALLOUT['en'];
 
   const breadcrumbJsonLd = {
     '@context': 'https://schema.org',
@@ -449,9 +469,19 @@ export default async function RisorseSettorePage({ params }: { params: Promise<P
             {label.heading}
           </h1>
 
-          <p className="text-slate-700 leading-relaxed mb-10 max-w-3xl">
+          <p className="text-slate-700 leading-relaxed mb-6 max-w-3xl">
             {intro}
           </p>
+
+          <div className="mb-10 max-w-3xl rounded-xl border border-[#8FC436]/30 bg-[#8FC436]/10 p-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+            <p className="text-sm text-slate-700 leading-relaxed">{gpsCallout.text}</p>
+            <Link
+              href={gpsHref}
+              className="shrink-0 inline-flex items-center justify-center rounded-lg bg-[#8FC436] px-4 py-2 text-sm font-semibold text-slate-900 hover:bg-[#7db02e] transition-colors whitespace-nowrap"
+            >
+              {gpsCallout.cta}
+            </Link>
+          </div>
 
           {sections.map((section, i) => (
             <section key={i} className="mb-10">
