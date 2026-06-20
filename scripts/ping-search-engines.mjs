@@ -12,7 +12,9 @@
  */
 
 const BASE_URL = 'https://geotapp.com';
-const INDEXNOW_KEY = '95d9665657a34b4ea1de9d4d0ce6f4d5';
+// Chiave allineata al file realmente servito su geotapp.com/<key>.txt.
+// (La precedente 95d9665... puntava a un keyLocation che restituiva HTML → IndexNow rigettava.)
+const INDEXNOW_KEY = 'cb109f9fd30e4cf6bff9dfbc9c5b1358';
 const SITEMAP_URL = `${BASE_URL}/sitemap.xml`;
 
 const SUPPORTED_LOCALES = ['it', 'en', 'de', 'fr', 'es', 'pt', 'nl', 'ru', 'da', 'sv', 'nb'];
@@ -58,9 +60,27 @@ async function pingBing() {
   }
 }
 
+// Ultimi N post del blog (headless WP) — sono le "recently published pages"
+// che Bing si aspetta via IndexNow. Senza questi, l'avviso "not submitted via
+// IndexNow" resta acceso perché PRIORITY_URLS contiene solo pagine statiche.
+async function fetchRecentBlogPosts(limit = 50) {
+  try {
+    const u = `${BASE_URL}/blog/wp-json/wp/v2/posts?per_page=${limit}&orderby=date&_fields=link&status=publish`;
+    const res = await fetch(u);
+    if (!res.ok) return [];
+    const data = await res.json();
+    return data.map((p) => p.link).filter((l) => typeof l === 'string' && l.startsWith('http'));
+  } catch (e) {
+    console.warn(`[IndexNow] fetch blog posts failed: ${e.message}`);
+    return [];
+  }
+}
+
 async function submitIndexNow() {
   // IndexNow protocol: notifica Bing, Yandex e (indirettamente) altri motori
   // che supportano il protocollo condiviso.
+  const recent = await fetchRecentBlogPosts(50);
+  const urlList = [...new Set([...PRIORITY_URLS, ...recent])];
   try {
     const res = await fetch('https://api.indexnow.org/indexnow', {
       method: 'POST',
@@ -69,10 +89,10 @@ async function submitIndexNow() {
         host: 'geotapp.com',
         key: INDEXNOW_KEY,
         keyLocation: `${BASE_URL}/${INDEXNOW_KEY}.txt`,
-        urlList: PRIORITY_URLS,
+        urlList,
       }),
     });
-    console.log(`[IndexNow]    ${res.status} — ${PRIORITY_URLS.length} URLs submitted`);
+    console.log(`[IndexNow]    ${res.status} — ${urlList.length} URLs submitted (${recent.length} blog post recenti)`);
     if (!res.ok) {
       const text = await res.text().catch(() => '');
       console.warn(`[IndexNow]    response body: ${text.slice(0, 200)}`);
