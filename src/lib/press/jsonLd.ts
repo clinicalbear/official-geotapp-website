@@ -24,8 +24,12 @@ export function buildPressOrganizationJsonLd(locale: AppLocale): Record<string, 
       jobTitle: 'Founder & CEO',
       url: 'https://www.linkedin.com/in/mikepetraroli/',
     },
-    // sameAs: lasciare VUOTO per ora. NON inventare URL social.
-    // I profili ufficiali verranno aggiunti dopo, una volta verificati.
-    sameAs: [],
+    // Profili ufficiali del brand (gli stessi del footer del sito). TikTok da
+    // aggiungere quando l'account esce dalla verifica.
+    sameAs: [
+      'https://www.linkedin.com/company/110850300/',
+      'https://www.instagram.com/geotapp_official/',
+      'https://www.facebook.com/profile.php?id=61573628884608',
+    ],
   };
 }
