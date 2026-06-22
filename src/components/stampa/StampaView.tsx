@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { Copy, Check, ExternalLink } from 'lucide-react';
+import { Copy, Check, ExternalLink, Download } from 'lucide-react';
 import type { SiteDictionary } from '@/lib/i18n/dictionaries';
 import type { AppLocale } from '@/lib/i18n/config';
 import { localizePath } from '@/lib/i18n/locale-routing';
@@ -179,29 +179,59 @@ export default function StampaView({
           </h2>
           <p className="text-text-secondary font-light mb-8">{d.resources_intro}</p>
 
-          <div className="grid sm:grid-cols-2 gap-4">
-            {/* Logo download */}
-            <a
-              href="/LogoGeoTapp.webp"
-              download
-              className="flex items-center gap-3 p-5 rounded-2xl border border-white/10 bg-white/[0.02] hover:border-primary/30 hover:bg-primary/5 transition-all duration-300 group"
-            >
-              <span className="flex-1 font-medium text-foreground group-hover:text-primary transition-colors">
-                {d.logo_download}
-              </span>
-              <ExternalLink size={16} className="text-text-secondary group-hover:text-primary transition-colors shrink-0" />
-            </a>
+          {/* Brand logos — preview + download (GeoTapp + products) */}
+          <h3 className="text-sm font-bold uppercase tracking-widest text-text-secondary mb-4">
+            {d.logo_download}
+          </h3>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
+            {[
+              { name: 'GeoTapp', src: '/LogoGeoTapp.webp' },
+              { name: 'GeoTapp Flow', src: '/logoFlow.webp' },
+              { name: 'TimeTracker', src: '/logoTT.webp' },
+              { name: 'Verifier', src: '/logoVerifier.webp' },
+            ].map((logo) => (
+              <a
+                key={logo.name}
+                href={logo.src}
+                download
+                className="flex flex-col items-center gap-3 p-5 rounded-2xl border border-white/10 bg-white/[0.02] hover:border-primary/30 hover:bg-primary/5 transition-all duration-300 group"
+              >
+                <span className="flex h-20 w-full items-center justify-center rounded-xl bg-white/[0.06] p-3">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={logo.src}
+                    alt={`Logo ${logo.name}`}
+                    loading="lazy"
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </span>
+                <span className="flex items-center gap-1.5 text-sm font-medium text-foreground group-hover:text-primary transition-colors">
+                  {logo.name}
+                  <Download size={14} className="text-text-secondary group-hover:text-primary shrink-0" />
+                </span>
+              </a>
+            ))}
+          </div>
 
-            {/* Photo download (same asset as founder card) */}
+          {/* Founder photo (preview) + tools */}
+          <div className="grid sm:grid-cols-2 gap-4">
+            {/* Photo download with preview (same asset as founder card) */}
             <a
               href="/michele-petraroli.webp"
               download
-              className="flex items-center gap-3 p-5 rounded-2xl border border-white/10 bg-white/[0.02] hover:border-primary/30 hover:bg-primary/5 transition-all duration-300 group"
+              className="flex items-center gap-4 p-4 rounded-2xl border border-white/10 bg-white/[0.02] hover:border-primary/30 hover:bg-primary/5 transition-all duration-300 group"
             >
+              <Image
+                src="/michele-petraroli.webp"
+                alt={d.photo_download}
+                width={56}
+                height={56}
+                className="h-14 w-14 rounded-xl object-cover border border-white/10 shrink-0"
+              />
               <span className="flex-1 font-medium text-foreground group-hover:text-primary transition-colors">
                 {d.photo_download}
               </span>
-              <ExternalLink size={16} className="text-text-secondary group-hover:text-primary transition-colors shrink-0" />
+              <Download size={16} className="text-text-secondary group-hover:text-primary transition-colors shrink-0" />
             </a>
 
             {/* GPS map (internal) */}
