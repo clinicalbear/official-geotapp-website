@@ -951,8 +951,8 @@
       { "k": "What", "v": "Time tracking and proof of work for field teams" },
       { "k": "For whom", "v": "Cleaning firms, installers, security, maintenance, construction" },
       { "k": "Founder", "v": "Michele Angelo Petraroli" },
-      { "k": "Headquarters", "v": "{{SEDE — to confirm}}" },
-      { "k": "Founded", "v": "{{ANNO — to confirm}}" }
+      { "k": "Headquarters", "v": "Trenzano (BS)" },
+      { "k": "Founded", "v": "Idea in 2024, development completed in 2025" }
     ],
     "founder_label": "The founder",
     "founder_bio": "Michele Angelo Petraroli worked in event security, and every day he hated the same chore: logging his hours by hand. The apps he tried did the same work with prettier buttons, so on holiday he built his own version: press to start, press to stop, a tidy total ready at month's end. That is where GeoTapp came from, first for his colleagues, then as a system to prove work was done without surveilling the people who do it, in line with worker-monitoring law and the GDPR.",
