@@ -869,6 +869,37 @@
       "cta_email": "Kontakt mig"
     }
   },
+  "stampa": {
+    "metaTitle": "GeoTapp Presserum",
+    "metaDesc": "Pressematerialer fra GeoTapp: hvem vi er, stifteren, verificerbare fakta og ressourcer til download. Kontakt: press@geotapp.com.",
+    "badge": "PRESSE",
+    "hero_title": "Presserum",
+    "hero_desc": "Alt hvad du har brug for til at skrive om GeoTapp: hvem vi er, hvad vi gør, og hvorfor arbejdsbevis ikke er overvågning. Materialer, fakta og kontakter til journalister og redaktioner.",
+    "boilerplate_label": "Kort fortalt",
+    "boilerplate_short": "GeoTapp er et tids- og arbejdsbevistool til virksomheder med medarbejdere i felten. Det registrerer sted og tidspunkt for en stempelregistrering udelukkende ved ind- og udtjekning, aldrig som løbende overvågning, og producerer et dokument der holder, i overensstemmelse med reglerne for medarbejderkontrol og GDPR.",
+    "boilerplate_long": "GeoTapp opstod fra et konkret problem: at bevise at et job er udført, hvor og hvornår, uden at gøre folk til prikker på et kort der overvåges hele dagen. Værktøjet registrerer lokationen udelukkende på tidspunktet for ind- og udtjekning, tilføjer fotos og noter fra felten og forsegler hver session, så enhver ændring kan opdages. Resultatet er et bevis, som kunden kan verificere selvstændigt, der beskytter arbejdsgiveren i en tvist ligesom det beskytter den medarbejder, der uretfærdigt anklages for ikke at have mødt op. Det er bygget til alle, der sender teams ud af huset, rengøringsfirmaer, installatører, sikkerhed, vedligeholdelse, byggeri, og designet til at holde sig inden for grænserne af reglerne for medarbejderkontrol og GDPR.",
+    "facts_label": "Nøglefakta",
+    "facts": [
+      { "k": "Hvad", "v": "Tidsregistrering og arbejdsbevis for feltteams" },
+      { "k": "For hvem", "v": "Rengøringsfirmaer, installatører, sikkerhed, vedligeholdelse, byggeri" },
+      { "k": "Stifter", "v": "Michele Angelo Petraroli" },
+      { "k": "Hovedkontor", "v": "{{SEDE — afventer bekræftelse}}" },
+      { "k": "Stiftet", "v": "{{ANNO — afventer bekræftelse}}" }
+    ],
+    "founder_label": "Stifteren",
+    "founder_bio": "Michele Angelo Petraroli arbejdede i eventssikkerhed og hadede dagligt den samme rutineopgave: at skrive sine timer ned i hånden. De apps han prøvede, gjorde det samme arbejde med flottere knapper, så i ferien byggede han sin egen version: tryk på start, tryk på stop, et pænt månedstotal klar ved slutningen af måneden. Det er dér, GeoTapp kom fra, først til hans kolleger, siden som et system til at bevise at arbejdet er udført uden at overvåge de mennesker der udfører det, i overensstemmelse med reglerne for medarbejderkontrol og GDPR.",
+    "resources_label": "Presseressourcer",
+    "resources_intro": "Logo, foto og klar-til-brug-materialer samt de gratis værktøjer, vi stiller til rådighed for alle.",
+    "logo_download": "Download logo",
+    "photo_download": "Foto af stifteren",
+    "asset_map": "EU-medarbejder GPS-kort",
+    "asset_facsimile": "GPS-privatlivspolitik skabelon",
+    "contact_label": "Pressekontakt",
+    "contact_office": "GeoTapp Pressekontor",
+    "contact_email": "press@geotapp.com",
+    "releases_label": "Pressemeddelelser",
+    "coverage_label": "Omtale i medierne"
+  },
   "blog": {
     "hero_title": "Tanker og Gnister.",
     "hero_desc": "Vi skriver ikke for at fylde sider. Vi skriver for at dele hvad vi lærer, mens vi bygger fremtiden for verificerbart arbejde.",

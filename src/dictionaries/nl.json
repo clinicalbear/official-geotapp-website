@@ -937,6 +937,37 @@
       "cta_email": "Neem contact op"
     }
   },
+  "stampa": {
+    "metaTitle": "GeoTapp Persruimte",
+    "metaDesc": "Persmateriaal voor GeoTapp: wie we zijn, de oprichter, verifieerbare feiten en downloadbare bronnen. Contact: press@geotapp.com.",
+    "badge": "PERS",
+    "hero_title": "Persruimte",
+    "hero_desc": "Alles wat u nodig heeft om over GeoTapp te schrijven: wie we zijn, wat we doen en waarom werkbewijzen geen bewaking zijn. Materialen, feiten en contactgegevens voor journalisten en redacties.",
+    "boilerplate_label": "Kort samengevat",
+    "boilerplate_short": "GeoTapp is een tijdregistratie- en werkbewijs-tool voor bedrijven met buitendienstteams. Het legt de locatie en het tijdstip van een klok-in vast – uitsluitend bij in- en uitklokken, nooit als doorlopende bewaking – en produceert een document dat standhoud, in overeenstemming met de regels rond werknemerscontrole en de AVG.",
+    "boilerplate_long": "GeoTapp is ontstaan uit een concreet probleem: bewijzen dat een klus is gedaan – waar en wanneer – zonder mensen de hele dag als stippen op een kaart te volgen. Het systeem legt de locatie alleen vast op het moment van in- en uitklokken, voegt foto's en notities toe vanuit het veld en verzegelt elke sessie zodat elke wijziging detecteerbaar is. Het resultaat is een bewijs dat de opdrachtgever zelfstandig kan verifiëren – een bewijs dat de werkgever beschermt bij een geschil én de werknemer die ten onrechte wordt beschuldigd niet op te zijn komen dagen. GeoTapp is gemaakt voor iedereen die teams de deur uit stuurt – schoonmaakbedrijven, installateurs, beveiliging, onderhoud, bouw – en is ontworpen om binnen de grenzen van de regels rond werknemerscontrole en de AVG te blijven.",
+    "facts_label": "Kerngegevens",
+    "facts": [
+      { "k": "Wat", "v": "Tijdregistratie en werkbewijs voor buitendienstteams" },
+      { "k": "Voor wie", "v": "Schoonmaakbedrijven, installateurs, beveiliging, onderhoud, bouw" },
+      { "k": "Oprichter", "v": "Michele Angelo Petraroli" },
+      { "k": "Hoofdkantoor", "v": "{{SEDE — nog te bevestigen}}" },
+      { "k": "Opgericht", "v": "{{ANNO — nog te bevestigen}}" }
+    ],
+    "founder_label": "De oprichter",
+    "founder_bio": "Michele Angelo Petraroli werkte in de evenementenbeveiliging en had dagelijks een hekel aan dezelfde klus: zijn uren met de hand bijhouden. De apps die hij probeerde, deden hetzelfde werk met mooiere knoppen, dus bouwde hij in zijn vakantie zijn eigen versie: druk op start, druk op stop, een nette maandtotaal aan het eind. Zo ontstond GeoTapp – eerst voor zijn collega's, daarna als systeem om te bewijzen dat werk gedaan is zonder de mensen die het doen te bewaken, in overeenstemming met de regels rond werknemerscontrole en de AVG.",
+    "resources_label": "Persbronnen",
+    "resources_intro": "Logo, foto en kant-en-klaar materiaal, plus de gratis tools die we voor iedereen beschikbaar stellen.",
+    "logo_download": "Logo downloaden",
+    "photo_download": "Foto oprichter",
+    "asset_map": "EU-werknemers GPS-kaart",
+    "asset_facsimile": "GPS-privacyverklaring sjabloon",
+    "contact_label": "Perscontact",
+    "contact_office": "GeoTapp Persafdeling",
+    "contact_email": "press@geotapp.com",
+    "releases_label": "Persberichten",
+    "coverage_label": "In de media"
+  },
   "blog": {
     "hero_title": "Gedachten & Vonken.",
     "hero_desc": "We schrijven niet om pagina's te vullen. We schrijven om te delen wat we leren bij het bouwen van de toekomst van verifieerbaar werk.",
