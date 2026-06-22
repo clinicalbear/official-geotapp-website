@@ -1,16 +1,27 @@
 'use client';
 
 import { useState } from 'react';
+import type { ComponentType } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { Copy, Check, ExternalLink, Download, Linkedin, Instagram, Facebook } from 'lucide-react';
 
+// Logo X (non presente in lucide): SVG inline, accetta `size` come le icone lucide.
+function XIcon({ size = 18 }: { size?: number | string }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
+    </svg>
+  );
+}
+
 // Profili social ufficiali del brand (gli stessi del footer e del sameAs JSON-LD).
-const PRESS_SOCIALS = [
+const PRESS_SOCIALS: { label: string; href: string; Icon: ComponentType<{ size?: number | string }> }[] = [
   { label: 'LinkedIn', href: 'https://www.linkedin.com/company/110850300/', Icon: Linkedin },
   { label: 'Instagram', href: 'https://www.instagram.com/geotapp_official/', Icon: Instagram },
   { label: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61573628884608', Icon: Facebook },
-] as const;
+  { label: 'X', href: 'https://x.com/GeoTappOfficial', Icon: XIcon },
+];
 import type { SiteDictionary } from '@/lib/i18n/dictionaries';
 import type { AppLocale } from '@/lib/i18n/config';
 import { localizePath } from '@/lib/i18n/locale-routing';
