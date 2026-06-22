@@ -869,6 +869,37 @@
       "cta_email": "Me contacter"
     }
   },
+  "stampa": {
+    "metaTitle": "Salle de presse GeoTapp",
+    "metaDesc": "Matériaux de presse pour GeoTapp : qui nous sommes, le fondateur, des faits vérifiables et des ressources téléchargeables. Contact : press@geotapp.com.",
+    "badge": "PRESSE",
+    "hero_title": "Salle de presse",
+    "hero_desc": "Tout ce dont vous avez besoin pour écrire sur GeoTapp : qui nous sommes, ce que nous faisons et pourquoi la preuve du travail n'est pas de la surveillance. Matériaux, faits et contacts pour les journalistes et les rédactions.",
+    "boilerplate_label": "En bref",
+    "boilerplate_short": "GeoTapp est un outil de suivi du temps et de preuve du travail pour les entreprises disposant d'équipes terrain. Il enregistre le lieu et l'heure d'un pointage – uniquement à l'entrée et à la sortie, jamais en surveillance continue – et produit un document qui tient la route, conforme aux règles encadrant la surveillance des salariés et le RGPD.",
+    "boilerplate_long": "GeoTapp est né d'un problème concret : apporter la preuve qu'un travail a été effectué – où et quand – sans transformer les collaborateurs en points sur une carte à surveiller toute la journée. L'outil enregistre la localisation uniquement au moment du pointage d'entrée et de sortie, ajoute des photos et des notes depuis le terrain, et scelle chaque session de façon à ce que toute modification soit détectable. Le résultat est une preuve que le client peut vérifier de manière indépendante – une preuve qui protège l'employeur en cas de litige autant que le salarié injustement accusé de ne pas s'être présenté. GeoTapp est conçu pour toute entreprise qui envoie des équipes hors site – sociétés de nettoyage, installateurs, agents de sécurité, maintenance, BTP – et est développé pour rester dans les limites des règles encadrant la surveillance des salariés et le RGPD.",
+    "facts_label": "Fiche d'identité",
+    "facts": [
+      { "k": "Quoi", "v": "Suivi du temps et preuve du travail pour équipes terrain" },
+      { "k": "Pour qui", "v": "Sociétés de nettoyage, installateurs, sécurité, maintenance, BTP" },
+      { "k": "Fondateur", "v": "Michele Angelo Petraroli" },
+      { "k": "Siège", "v": "{{SEDE — à confirmer}}" },
+      { "k": "Fondée en", "v": "{{ANNO — à confirmer}}" }
+    ],
+    "founder_label": "Le fondateur",
+    "founder_bio": "Michele Angelo Petraroli travaillait dans la sécurité événementielle et détestait chaque jour la même corvée : noter ses heures à la main. Les applications qu'il essayait faisaient le même travail avec de plus jolis boutons, alors pendant ses vacances il a construit sa propre version : appuyer sur démarrer, appuyer sur arrêter, un total mensuel propre prêt à la fin du mois. C'est là qu'est né GeoTapp – d'abord pour ses collègues, puis comme système pour prouver que le travail a été accompli sans surveiller les personnes qui le font, dans le respect des règles encadrant la surveillance des salariés et du RGPD.",
+    "resources_label": "Ressources presse",
+    "resources_intro": "Logo, photo et matériaux prêts à l'emploi, ainsi que les outils gratuits que nous mettons à disposition de tous.",
+    "logo_download": "Télécharger le logo",
+    "photo_download": "Photo du fondateur",
+    "asset_map": "Carte GPS travailleurs UE",
+    "asset_facsimile": "Modèle d'avis de confidentialité GPS",
+    "contact_label": "Contact presse",
+    "contact_office": "Service de presse GeoTapp",
+    "contact_email": "press@geotapp.com",
+    "releases_label": "Communiqués de presse",
+    "coverage_label": "Ils parlent de nous"
+  },
   "blog": {
     "hero_title": "Pensées & Étincelles.",
     "hero_desc": "Nous n'écrivons pas pour remplir des pages. Nous écrivons pour partager ce que nous apprenons en construisant l'avenir du travail vérifiable.",

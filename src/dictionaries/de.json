@@ -937,6 +937,37 @@
       "cta_email": "Kontakt aufnehmen"
     }
   },
+  "stampa": {
+    "metaTitle": "GeoTapp Pressraum",
+    "metaDesc": "Pressematerialien für GeoTapp: wer wir sind, der Gründer, verifizierbare Fakten und herunterladbare Ressourcen. Kontakt: press@geotapp.com.",
+    "badge": "PRESSE",
+    "hero_title": "Pressraum",
+    "hero_desc": "Alles, was Sie brauchen, um über GeoTapp zu berichten: wer wir sind, was wir tun und warum Arbeitsnachweise keine Überwachung sind. Materialien, Fakten und Kontakte für Journalisten und Redaktionen.",
+    "boilerplate_label": "Kurz zusammengefasst",
+    "boilerplate_short": "GeoTapp ist ein Zeiterfassungs- und Arbeitsnachweiswerkzeug für Unternehmen mit Außendienstteams. Es erfasst Ort und Zeit einer Stempelung – ausschließlich beim Ein- und Ausstempeln, niemals als Dauerüberwachung – und erstellt ein belastbares Dokument im Einklang mit den Regeln zur Mitarbeiterüberwachung und der DSGVO.",
+    "boilerplate_long": "GeoTapp entstand aus einem konkreten Problem: den Nachweis zu erbringen, dass eine Arbeit erledigt wurde – wo und wann –, ohne Mitarbeiter den ganzen Tag als Punkte auf einer Karte zu beobachten. Das System erfasst den Standort nur beim Ein- und Ausstempeln, ergänzt Fotos und Notizen aus dem Außendienst und versiegelt jede Sitzung so, dass jede Änderung erkennbar ist. Das Ergebnis ist ein Nachweis, den der Auftraggeber eigenständig überprüfen kann – einer, der den Arbeitgeber im Streitfall ebenso schützt wie den Mitarbeiter, dem zu Unrecht vorgeworfen wird, nicht erschienen zu sein. GeoTapp richtet sich an alle, die Teams außer Haus schicken – Reinigungsunternehmen, Installateure, Sicherheitsdienste, Wartung, Bau – und ist darauf ausgelegt, die Grenzen der Regeln zur Mitarbeiterüberwachung und der DSGVO einzuhalten.",
+    "facts_label": "Steckbrief",
+    "facts": [
+      { "k": "Was", "v": "Zeiterfassung und Arbeitsnachweis für Außendienstteams" },
+      { "k": "Für wen", "v": "Reinigungsunternehmen, Installateure, Sicherheitsdienste, Wartung, Bau" },
+      { "k": "Gründer", "v": "Michele Angelo Petraroli" },
+      { "k": "Hauptsitz", "v": "{{SEDE — noch zu bestätigen}}" },
+      { "k": "Gegründet", "v": "{{ANNO — noch zu bestätigen}}" }
+    ],
+    "founder_label": "Der Gründer",
+    "founder_bio": "Michele Angelo Petraroli arbeitete in der Veranstaltungssicherheit und hasste täglich dieselbe lästige Aufgabe: seine Stunden von Hand aufzuschreiben. Die Apps, die er ausprobierte, erledigten dieselbe Arbeit nur mit hübscheren Schaltflächen, also baute er im Urlaub seine eigene Version: Starten drücken, Stoppen drücken, ein ordentliches Monatsgesamt bereit. So entstand GeoTapp – zunächst für seine Kollegen, dann als System, das beweist, dass Arbeit getan wurde, ohne die Menschen zu überwachen, die sie leisten, im Einklang mit den Regeln zur Mitarbeiterüberwachung und der DSGVO.",
+    "resources_label": "Presseressourcen",
+    "resources_intro": "Logo, Foto und druckfertige Materialien sowie die kostenlosen Tools, die wir allen zur Verfügung stellen.",
+    "logo_download": "Logo herunterladen",
+    "photo_download": "Gründerfoto",
+    "asset_map": "EU-Arbeitnehmer-GPS-Karte",
+    "asset_facsimile": "GPS-Datenschutzhinweis-Vorlage",
+    "contact_label": "Pressekontakt",
+    "contact_office": "GeoTapp Pressestelle",
+    "contact_email": "press@geotapp.com",
+    "releases_label": "Pressemitteilungen",
+    "coverage_label": "In den Medien"
+  },
   "blog": {
     "hero_title": "Gedanken & Funken.",
     "hero_desc": "Wir schreiben nicht um Seiten zu füllen. Wir schreiben, um zu teilen, was wir beim Aufbau der Zukunft der verifizierbaren Arbeit lernen.",
