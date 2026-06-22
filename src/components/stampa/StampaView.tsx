@@ -3,7 +3,14 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { Copy, Check, ExternalLink, Download } from 'lucide-react';
+import { Copy, Check, ExternalLink, Download, Linkedin, Instagram, Facebook } from 'lucide-react';
+
+// Profili social ufficiali del brand (gli stessi del footer e del sameAs JSON-LD).
+const PRESS_SOCIALS = [
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/company/110850300/', Icon: Linkedin },
+  { label: 'Instagram', href: 'https://www.instagram.com/geotapp_official/', Icon: Instagram },
+  { label: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61573628884608', Icon: Facebook },
+] as const;
 import type { SiteDictionary } from '@/lib/i18n/dictionaries';
 import type { AppLocale } from '@/lib/i18n/config';
 import { localizePath } from '@/lib/i18n/locale-routing';
@@ -26,9 +33,11 @@ function useCopy() {
 export default function StampaView({
   d,
   locale,
+  allResourcesLabel,
 }: {
   d: SiteDictionary['stampa'];
   locale: AppLocale;
+  allResourcesLabel: string;
 }) {
   const { copied, copy } = useCopy();
 
@@ -255,6 +264,17 @@ export default function StampaView({
               </span>
               <ExternalLink size={16} className="text-text-secondary group-hover:text-primary transition-colors shrink-0" />
             </a>
+
+            {/* Full resources hub (internal) — utile a chi scrive un pezzo */}
+            <a
+              href={localizePath('/risorse/', locale)}
+              className="flex items-center gap-3 p-5 rounded-2xl border border-primary/20 bg-primary/[0.04] hover:border-primary/40 hover:bg-primary/10 transition-all duration-300 group sm:col-span-2"
+            >
+              <span className="flex-1 font-medium text-foreground group-hover:text-primary transition-colors">
+                {allResourcesLabel}
+              </span>
+              <ExternalLink size={16} className="text-primary shrink-0" />
+            </a>
           </div>
         </motion.div>
       </section>
@@ -277,6 +297,22 @@ export default function StampaView({
           >
             {d.contact_email}
           </a>
+
+          {/* Profili social ufficiali (visibili, non solo nel JSON-LD) */}
+          <div className="mt-6 flex items-center gap-3">
+            {PRESS_SOCIALS.map(({ label, href, Icon }) => (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={label}
+                className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/[0.02] text-text-secondary hover:text-primary hover:border-primary/30 transition-colors"
+              >
+                <Icon size={18} />
+              </a>
+            ))}
+          </div>
         </motion.div>
       </section>
 

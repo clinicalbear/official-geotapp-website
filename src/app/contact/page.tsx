@@ -7,6 +7,7 @@ import {
   Send,
   Clock,
   ShieldCheck,
+  Newspaper,
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { usePathname } from 'next/navigation';
@@ -14,6 +15,7 @@ import { getDictionary } from '@/lib/i18n/dictionaries';
 import {
   DEFAULT_LOCALE,
   getLocaleFromPathname,
+  localizePath,
 } from '@/lib/i18n/locale-routing';
 import { submitContact } from '@/lib/api';
 
@@ -21,6 +23,7 @@ export default function ContactPage() {
   const pathname = usePathname();
   const currentLocale = getLocaleFromPathname(pathname) ?? DEFAULT_LOCALE;
   const dict = getDictionary(currentLocale).contact;
+  const press = getDictionary(currentLocale).stampa;
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [status, setStatus] = useState<{
@@ -157,6 +160,18 @@ export default function ContactPage() {
                     <div className="text-sm text-slate-400 mt-1">{dict.hq_note}</div>
                   </div>
                 </div>
+
+                <a href={localizePath('/stampa/', currentLocale)} className="group flex items-start gap-6">
+                  <div className="mt-1 p-3 rounded-xl bg-slate-100 text-slate-900 group-hover:bg-primary group-hover:text-white transition-colors">
+                    <Newspaper size={24} />
+                  </div>
+                  <div>
+                    <div className="font-bold text-lg text-slate-900 mb-1 group-hover:text-primary transition-colors">
+                      {press.hero_title}
+                    </div>
+                    <div className="text-slate-500 text-lg">{press.contact_email}</div>
+                  </div>
+                </a>
               </div>
             </div>
           </motion.div>

@@ -6,7 +6,7 @@ import FounderViewTracker from '@/components/analytics/FounderViewTracker';
 import { Target, Users, Lock, Heart, Quote } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { getDictionary } from '@/lib/i18n/dictionaries';
-import { getLocaleFromPathname } from '@/lib/i18n/locale-routing';
+import { getLocaleFromPathname, localizePath } from '@/lib/i18n/locale-routing';
 
 const VALUES_ICONS = [Target, Users, Lock, Heart];
 
@@ -14,6 +14,7 @@ export default function AboutPage() {
   const pathname = usePathname();
   const locale = getLocaleFromPathname(pathname);
   const cs = getDictionary(locale).chi_siamo;
+  const press = getDictionary(locale).stampa;
 
   return (
     <div className="bg-background min-h-screen pt-40 pb-24 overflow-hidden">
@@ -142,6 +143,12 @@ export default function AboutPage() {
                 className="px-5 py-2.5 rounded-xl border border-primary/40 text-foreground font-semibold text-sm hover:bg-primary/10 transition-colors"
               >
                 {cs.founder.cta_email}
+              </a>
+              <a
+                href={localizePath('/stampa/', locale ?? 'it')}
+                className="px-5 py-2.5 rounded-xl border border-white/15 text-text-secondary font-semibold text-sm hover:border-primary/40 hover:text-primary transition-colors"
+              >
+                {press.hero_title}
               </a>
             </div>
           </div>

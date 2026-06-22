@@ -44,11 +44,12 @@ export default async function StampaPage({
 }) {
   const { locale } = await params;
   const resolved = safeLocale(locale);
-  const dict = getDictionary(resolved).stampa;
+  const full = getDictionary(resolved);
+  const dict = full.stampa;
   return (
     <>
       <JsonLd data={buildPressOrganizationJsonLd(resolved)} />
-      <StampaView d={dict} locale={resolved} />
+      <StampaView d={dict} locale={resolved} allResourcesLabel={full.risorseHub.h1} />
     </>
   );
 }
