@@ -114,7 +114,7 @@ export default function StampaView({
           </h2>
           <div className="p-6 md:p-8 rounded-2xl border border-white/10 bg-white/[0.02]">
             <dl className="divide-y divide-white/[0.06]">
-              {d.facts.map((f, i) => (
+              {d.facts.filter((f) => !f.v.includes('{{')).map((f, i) => (
                 <div key={i} className="flex gap-6 py-4 first:pt-0 last:pb-0">
                   <dt className="w-32 shrink-0 text-sm font-semibold text-primary uppercase tracking-wide pt-0.5">
                     {f.k}
