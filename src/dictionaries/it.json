@@ -937,6 +937,37 @@
       "cta_email": "Scrivimi"
     }
   },
+  "stampa": {
+    "metaTitle": "Ufficio stampa GeoTapp",
+    "metaDesc": "Materiali per la stampa su GeoTapp: chi siamo, il fondatore, dati verificabili e risorse scaricabili. Contatti: press@geotapp.com.",
+    "badge": "UFFICIO STAMPA",
+    "hero_title": "Ufficio stampa",
+    "hero_desc": "Tutto quello che serve per raccontare GeoTapp: chi siamo, cosa facciamo e perché la prova del lavoro non è sorveglianza. Materiali, dati e contatti per giornalisti e redazioni.",
+    "boilerplate_label": "In breve",
+    "boilerplate_short": "GeoTapp è uno strumento di rilevazione delle presenze e prova del lavoro svolto per le aziende con squadre sul campo. Registra dove e quando avviene una timbratura, solo all'atto del clock-in e del clock-out, mai in sorveglianza continua, e produce un documento opponibile nel rispetto dell'articolo 4 dello Statuto dei lavoratori e del GDPR.",
+    "boilerplate_long": "GeoTapp nasce da un problema concreto: dimostrare che un lavoro è stato svolto, dove e quando, senza trasformare le persone in puntini su una mappa da sorvegliare tutto il giorno. Lo strumento registra la posizione solo nel momento della timbratura, aggiunge foto e note dal campo e sigilla ogni sessione in modo che qualsiasi modifica risulti evidente. Il risultato è una prova che il cliente può verificare in autonomia e che difende tanto il datore di lavoro davanti a una contestazione quanto il lavoratore accusato ingiustamente. È pensato per chi manda squadre fuori sede, imprese di pulizie, installatori, sicurezza, manutenzione, edilizia, ed è costruito dentro i paletti dell'articolo 4 dello Statuto dei lavoratori e del GDPR.",
+    "facts_label": "Dati in breve",
+    "facts": [
+      { "k": "Cosa", "v": "Rilevazione presenze e prova del lavoro svolto per squadre sul campo" },
+      { "k": "Per chi", "v": "Imprese di pulizie, installatori, sicurezza, manutenzione, edilizia" },
+      { "k": "Fondatore", "v": "Michele Angelo Petraroli" },
+      { "k": "Sede", "v": "{{SEDE — da confermare}}" },
+      { "k": "Fondazione", "v": "{{ANNO — da confermare}}" }
+    ],
+    "founder_label": "Il fondatore",
+    "founder_bio": "Michele Angelo Petraroli lavorava nella sicurezza agli eventi, e ogni giorno odiava la stessa cosa: segnare a mano le ore. Le app che provò facevano la stessa fatica con bottoni più carini, così in ferie ne sviluppò una versione sua: premi per iniziare, premi per finire, il totale ordinato pronto a fine mese. Da lì è nato GeoTapp, prima per i colleghi, poi come sistema per dimostrare il lavoro svolto senza sorvegliare chi lo svolge, nel rispetto dell'articolo 4 e del GDPR.",
+    "resources_label": "Risorse per la stampa",
+    "resources_intro": "Logo, foto e materiali pronti all'uso, più gli strumenti che mettiamo a disposizione di tutti.",
+    "logo_download": "Scarica il logo",
+    "photo_download": "Foto del fondatore",
+    "asset_map": "Mappa GPS lavoratori UE",
+    "asset_facsimile": "Fac-simile informativa GPS",
+    "contact_label": "Contatti stampa",
+    "contact_office": "Ufficio stampa GeoTapp",
+    "contact_email": "press@geotapp.com",
+    "releases_label": "Comunicati stampa",
+    "coverage_label": "Ci hanno citato"
+  },
   "blog": {
     "hero_title": "Pensieri e Scintille.",
     "hero_desc": "Non scriviamo per riempire pagine. Scriviamo per condividere ciò che impariamo costruendo il futuro del lavoro certificabile.",

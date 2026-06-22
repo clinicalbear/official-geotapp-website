@@ -937,6 +937,37 @@
       "cta_email": "Get in touch"
     }
   },
+  "stampa": {
+    "metaTitle": "GeoTapp Press Room",
+    "metaDesc": "Press materials for GeoTapp: who we are, the founder, verifiable facts and downloadable resources. Contact: press@geotapp.com.",
+    "badge": "PRESS",
+    "hero_title": "Press room",
+    "hero_desc": "Everything you need to write about GeoTapp: who we are, what we do, and why proof of work is not surveillance. Materials, facts and contacts for journalists and newsrooms.",
+    "boilerplate_label": "In short",
+    "boilerplate_short": "GeoTapp is a time-tracking and proof-of-work tool for companies with field teams. It records where and when a clock-in happens, only at clock-in and clock-out, never as continuous surveillance, and produces a document that holds up, in line with worker-monitoring law and the GDPR.",
+    "boilerplate_long": "GeoTapp started from a concrete problem: proving that a job was done, where and when, without turning people into dots on a map to be watched all day. The tool records location only at the moment of clock-in and clock-out, adds photos and notes from the field, and seals every session so that any change is detectable. The result is proof the client can verify independently, one that protects the employer facing a dispute as much as the worker wrongly accused of not showing up. It is built for anyone sending teams off-site, cleaning firms, installers, security, maintenance, construction, and designed to stay within the limits of worker-monitoring law and the GDPR.",
+    "facts_label": "Key facts",
+    "facts": [
+      { "k": "What", "v": "Time tracking and proof of work for field teams" },
+      { "k": "For whom", "v": "Cleaning firms, installers, security, maintenance, construction" },
+      { "k": "Founder", "v": "Michele Angelo Petraroli" },
+      { "k": "Headquarters", "v": "{{SEDE — to confirm}}" },
+      { "k": "Founded", "v": "{{ANNO — to confirm}}" }
+    ],
+    "founder_label": "The founder",
+    "founder_bio": "Michele Angelo Petraroli worked in event security, and every day he hated the same chore: logging his hours by hand. The apps he tried did the same work with prettier buttons, so on holiday he built his own version: press to start, press to stop, a tidy total ready at month's end. That is where GeoTapp came from, first for his colleagues, then as a system to prove work was done without surveilling the people who do it, in line with worker-monitoring law and the GDPR.",
+    "resources_label": "Press resources",
+    "resources_intro": "Logo, photo and ready-to-use materials, plus the free tools we make available to everyone.",
+    "logo_download": "Download the logo",
+    "photo_download": "Founder photo",
+    "asset_map": "EU worker GPS map",
+    "asset_facsimile": "GPS privacy-notice template",
+    "contact_label": "Press contact",
+    "contact_office": "GeoTapp Press Office",
+    "contact_email": "press@geotapp.com",
+    "releases_label": "Press releases",
+    "coverage_label": "As featured in"
+  },
   "blog": {
     "hero_title": "Thoughts & Sparks.",
     "hero_desc": "We don't write to fill pages. We write to share what we learn building the future of verifiable work.",
