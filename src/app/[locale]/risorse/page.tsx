@@ -1,11 +1,12 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Map, Calculator, ClipboardList, Gavel, BarChart3, FileText, ArrowRight } from 'lucide-react';
+import { Map, Calculator, ClipboardList, Gavel, BarChart3, FileText, ShieldCheck, ArrowRight } from 'lucide-react';
 import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import { SUPPORTED_LOCALES } from '@/lib/i18n/config';
 import type { AppLocale } from '@/lib/i18n/config';
 import { localizePath } from '@/lib/i18n/locale-routing';
+import RisorsaFaq from '@/components/risorse/RisorsaFaq';
 
 /**
  * Hub "Risorse": vetrina di tutti gli strumenti/risorse gratuiti del sito
@@ -28,6 +29,7 @@ function safeLocale(locale: string): AppLocale {
 // Ordine e destinazioni delle card; testi (title/desc) dal dizionario per chiave.
 const CARDS = [
   { key: 'gps', path: '/risorse/gps-lavoratori-ue/', Icon: Map },
+  { key: 'dossier', path: '/risorse/dossier-conformita/', Icon: ShieldCheck },
   { key: 'generatore', path: '/risorse/generatore-informativa-gps/', Icon: FileText },
   { key: 'sanzioni', path: '/risorse/sanzioni-gps/', Icon: Gavel },
   { key: 'indice', path: '/risorse/indice-sorveglianza/', Icon: BarChart3 },
@@ -90,6 +92,8 @@ export default async function RisorseHubPage({
           );
         })}
       </div>
+
+      <RisorsaFaq title={dict.faq.title} items={dict.faq.items} />
     </main>
   );
 }

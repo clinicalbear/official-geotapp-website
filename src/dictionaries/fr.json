@@ -58,7 +58,40 @@
       "generatore": {
         "title": "Générateur d'avis GPS",
         "desc": "Créez votre modèle d'avis de confidentialité GPS avec votre logo, conforme au RGPD. Gratuit, dans votre navigateur."
+      },
+      "dossier": {
+        "title": "Dossier de conformité",
+        "desc": "Ce que GeoTapp fait et ne fait pas, avec le RGPD, le Code du travail et les limites dites clairement."
       }
+    },
+    "faq": {
+      "title": "Questions fréquentes",
+      "items": [
+        {
+          "q": "Les ressources sont-elles gratuites ?",
+          "a": "Oui, toutes. Les cartes, les calculateurs, le générateur d'information et les dossiers pays sont libres d'utilisation. C'est notre façon de partager ce que nous avons étudié sur la surveillance des salariés, même si vous ne devenez jamais client."
+        },
+        {
+          "q": "Dois-je m'inscrire ou laisser mon e-mail pour les utiliser ?",
+          "a": "Non. Vous ouvrez l'outil et vous l'utilisez. Le générateur d'information tourne dans votre navigateur et n'envoie vos données nulle part ; les autres outils ne demandent pas de compte. Si vous voulez rester informé, vous pouvez nous laisser votre e-mail, mais c'est votre choix, pas un péage."
+        },
+        {
+          "q": "Puis-je me fier aux informations juridiques présentes ici ?",
+          "a": "Elles s'appuient sur le droit national et sur des décisions réelles des autorités, avec la source indiquée et une date de vérification. Cela dit, cela reste une ressource informative, pas un conseil juridique : avant d'activer un système de surveillance, faites examiner votre situation par un professionnel."
+        },
+        {
+          "q": "Puis-je utiliser ces outils sur mon propre site ?",
+          "a": "Oui. La carte GPS des travailleurs peut être intégrée avec le code disponible sur sa page, et les ressources peuvent être citées en renvoyant à la source. Si vous tenez un blog sectoriel ou conseillez des entreprises, elles sont aussi faites pour cela."
+        },
+        {
+          "q": "Ne sont-elles utiles que si j'utilise GeoTapp ?",
+          "a": "Non, elles se suffisent à elles-mêmes. Nous les avons conçues pour que quiconque envoie des gens sur le terrain comprenne ce qu'exige la conformité, avec GeoTapp ou non. Si vous voulez ensuite un système déjà prêt à enregistrer la localisation uniquement au pointage et non en continu, il est là, mais les ressources sont utiles dans tous les cas."
+        },
+        {
+          "q": "À qui s'adressent-elles ?",
+          "a": "À toute personne dont les équipes travaillent hors site : entreprises de nettoyage, installateurs, sécurité, maintenance, bâtiment. À quiconque doit prouver où et quand un travail a été réalisé, et veut le faire sans transformer ses salariés en points sur une carte toute la journée."
+        }
+      ]
     }
   },
   "footer": {
@@ -1018,7 +1051,7 @@
     "cta_note": "Sans engagement. Sans contrat. Nous configurons sur votre cas réel."
   },
   "features": {
-    "title": "Power Under the Hood.",
+    "title": "De la puissance sous le capot.",
     "subtitle": "Nous ne fabriquons pas des jouets. GeoTapp est une plateforme d'entreprise conçue pour passer à l'échelle. Voici les technologies qui font la magie.",
     "gps_title": "Suivi GPS & Cartes Géographiques",
     "gps_desc": "Sachez où se trouve votre équipe, en temps réel. Notre carte live affiche chaque pointage avec les coordonnées GPS, la validation géofencing et la protection anti-spoofing. Les managers voient qui est sur site en un coup d'œil, sans appels, sans incertitude.",
@@ -1089,7 +1122,36 @@
     "disclaimer": "Ceci est une ressource informative, pas un conseil juridique. Avant d'activer un système de surveillance, faites vérifier votre situation par un professionnel.",
     "ctaTitolo": "Vous voulez un système déjà conforme ?",
     "ctaTesto": "GeoTapp enregistre la position uniquement au pointage, pas en continu, et génère la notice d'information à faire signer. Essayez-le gratuitement.",
-    "ctaBottone": "Essayer GeoTapp gratuitement"
+    "ctaBottone": "Essayer GeoTapp gratuitement",
+    "faq": {
+      "title": "Questions fréquentes",
+      "items": [
+        {
+          "q": "Puis-je utiliser le GPS pour surveiller mes équipes pendant qu'elles travaillent ?",
+          "a": "Le GPS au travail est légal presque partout en Europe, à une condition : il doit servir à organiser et à prouver le travail, pas à surveiller la personne. Tout est dans la manière. Enregistrer la localisation au moment du pointage, quand quelqu'un ouvre et ferme un chantier, n'a rien à voir avec le fait de le suivre en temps réel toute la journée. Le premier cas passe généralement très bien quand les documents sont en règle ; le second presque jamais."
+        },
+        {
+          "q": "Ce sont les règles de mon pays qui s'appliquent, ou celles du pays où j'envoie l'équipe ?",
+          "a": "Celles du pays où le travail se déroule. Si votre entreprise est basée en Irlande mais que le chantier est en France, vous suivez les règles françaises, même si l'équipe n'y reste que deux semaines. C'est la raison pour laquelle cette page vous demande d'abord de choisir la destination : les obligations changent d'un État à l'autre, et ce qui suffit chez vous peut s'avérer insuffisant de l'autre côté de la frontière."
+        },
+        {
+          "q": "Ai-je besoin du consentement du salarié ?",
+          "a": "Le consentement est rarement la bonne voie, ce qui surprend beaucoup de monde. Dans une relation de travail, on considère que le consentement n'est pas donné librement, car celui qui refuse craint les conséquences. Les autorités préfèrent donc d'autres bases : l'intérêt légitime de l'entreprise ou une obligation contractuelle, accompagnés d'une information claire. Dans plusieurs pays, il faut aussi passer par une étape avec les représentants du personnel ou par un accord d'entreprise avant d'activer quoi que ce soit."
+        },
+        {
+          "q": "Puis-je suivre la localisation en temps réel, toute la journée ?",
+          "a": "C'est précisément ce qui déclenche les sanctions. Le suivi continu est jugé disproportionné presque partout : vous collectez bien plus que ce dont vous avez besoin pour payer les heures ou prouver un chantier. La règle pratique consiste à recueillir le minimum, la localisation au moment qui compte, et non un fil qui suit la personne du matin au soir."
+        },
+        {
+          "q": "Quel est le risque si j'active un système sans être conforme ?",
+          "a": "Cela dépend du pays, mais les amendes RGPD atteignent des montants qu'aucune petite entreprise ne veut voir, et dans certains États s'ajoutent des conséquences en droit du travail. Le vrai problème, pourtant, n'est souvent pas l'amende : c'est que des données collectées de la mauvaise façon deviennent inutilisables au moment précis où vous en avez besoin, dans un litige ou face à un client qui conteste la facture. Chaque fiche pays indique la sanction maximale réelle et les cas avérés."
+        },
+        {
+          "q": "GeoTapp est-il un système de surveillance ?",
+          "a": "Non, et il a été conçu pour ne pas l'être. L'outil enregistre la localisation uniquement au pointage, quand quelqu'un ouvre ou ferme un chantier, jamais en continu, et il produit l'information à remettre au salarié. Il est là pour prouver ce qui a été fait et où, pas pour surveiller les gens. C'est toute la différence entre une preuve du travail et une laisse."
+        }
+      ]
+    }
   },
   "sanzioniGps": {
     "metaTitle": "Calculateur d'amendes GPS : combien vous risquez à surveiller vos salariés, pays par pays",
@@ -1106,7 +1168,36 @@
     "espostoUno": "Il vous manque {n} obligation sur {tot} : vous êtes exposé jusqu'à",
     "espostoMulti": "Il vous manque {n} obligations sur {tot} : vous êtes exposé jusqu'à",
     "inRegola": "Aucune obligation manquante : vous êtes sur la bonne voie.",
-    "vediScheda": "Ouvrir la fiche complète du pays : {paese}"
+    "vediScheda": "Ouvrir la fiche complète du pays : {paese}",
+    "faq": {
+      "title": "Questions fréquentes",
+      "items": [
+        {
+          "q": "Quel est le risque réel si le GPS n'est pas conforme ?",
+          "a": "Cela dépend du pays et de ce qui a mal tourné, mais les amendes RGPD ne sont pas symboliques : elles atteignent un pourcentage du chiffre d'affaires capable de mettre à terre une petite entreprise, et dans plusieurs États s'ajoutent des conséquences en droit du travail. Choisissez la destination ci-dessus et vous verrez le montant maximal réel, avec le cas dont il est tiré."
+        },
+        {
+          "q": "Les amendes RGPD touchent-elles vraiment les petites entreprises ?",
+          "a": "Oui, et l'idée que les autorités ne s'en prennent qu'aux gros est l'une des croyances qui coûtent le plus cher. Les cas listés sur chaque fiche pays incluent des structures de quelques personnes, sanctionnées justement pour avoir surveillé leur personnel sans avoir les documents en règle. La taille influe sur le montant, pas sur le fait d'être dans le viseur."
+        },
+        {
+          "q": "L'amende est-elle le seul risque ?",
+          "a": "Non, et ce n'est souvent même pas le pire. Des données collectées de la mauvaise façon deviennent inutilisables au moment précis où vous en avez besoin, dans un litige avec un salarié ou face à un client qui conteste une facture. Vous vous retrouvez avec l'amende à payer et sans la preuve que vous pensiez avoir."
+        },
+        {
+          "q": "Puis-je être sanctionné même si les salariés étaient d'accord ?",
+          "a": "Oui, car dans une relation de travail le consentement compte pour peu : on présume que celui qui le donne n'est pas vraiment libre de refuser. Les autorités regardent si le traitement était proportionné et si vous disposiez de bases solides et d'une information claire, pas si quelqu'un a signé une feuille. L'accord des salariés, à lui seul, ne vous protège pas."
+        },
+        {
+          "q": "D'où viennent ces chiffres ?",
+          "a": "De décisions réelles des autorités de protection des données et du droit national, pas d'estimations. Chaque fiche donne la source et le cas, pour que vous puissiez remonter au document. Il s'agit d'une ressource informative, pas d'un conseil juridique : avant d'activer un système, faites examiner votre situation par un professionnel."
+        },
+        {
+          "q": "Comment réduire le risque d'amende ?",
+          "a": "En ne collectant que le strict nécessaire : la localisation au pointage, pas un suivi continu, avec une information remise au salarié et une base autre que le consentement. C'est exactement ainsi que GeoTapp a été conçu, et le générateur d'information disponible ici dans les ressources prépare le document à remettre."
+        }
+      ]
+    }
   },
   "indiceSorveglianza": {
     "metaTitle": "Indice de surveillance des travailleurs en Europe : le classement des 39 pays",
@@ -1119,7 +1210,36 @@
     "colSanzione": "Amende maximale",
     "scheda": "Fiche",
     "metodologiaTitolo": "Comment l'indice est calculé",
-    "metodologia": "L'indice (0-100) mesure combien d'obligations de surveillance des salariés sont obligatoires dans le pays : score = obligations + moitié des conditionnelles, sur le total. Plus élevé = cadre plus strict pour qui veut surveiller. Données issues des fiches-pays vérifiées à la source ; il mesure la charge de conformité, pas la 'liberté'."
+    "metodologia": "L'indice (0-100) mesure combien d'obligations de surveillance des salariés sont obligatoires dans le pays : score = obligations + moitié des conditionnelles, sur le total. Plus élevé = cadre plus strict pour qui veut surveiller. Données issues des fiches-pays vérifiées à la source ; il mesure la charge de conformité, pas la 'liberté'.",
+    "faq": {
+      "title": "Questions fréquentes",
+      "items": [
+        {
+          "q": "Que mesure l'indice de surveillance au travail ?",
+          "a": "La rigueur du cadre de chaque pays en matière de surveillance des salariés : le nombre d'obligations imposées, les étapes requises avant d'activer un système et le poids des sanctions. Plus le score est élevé, plus vous avez de choses à mettre en règle avant d'utiliser le GPS ou tout autre dispositif de surveillance du personnel dans ce pays."
+        },
+        {
+          "q": "Un score élevé signifie-t-il que le GPS y est interdit ?",
+          "a": "Non, cela signifie qu'il faut plus de prudence, pas que c'est interdit. Presque partout en Europe, le GPS au travail est autorisé, tant qu'il sert à organiser et à prouver le travail et non à surveiller la personne. Un indice élevé vous indique simplement que les obligations sont plus lourdes et qu'improviser revient cher."
+        },
+        {
+          "q": "D'où proviennent les données du classement ?",
+          "a": "Des 39 dossiers pays du site, bâtis sur le droit national et sur des décisions réelles des autorités. Le classement les condense en un score comparable ; cliquez sur un pays et vous accédez à la fiche avec les obligations, l'autorité compétente et les sources."
+        },
+        {
+          "q": "Pourquoi des pays voisins obtiennent-ils des scores si différents ?",
+          "a": "Parce que le RGPD pose le cadre, mais chaque État y ajoute ses propres règles, et sur la surveillance des salariés les différences sont nettes : là où il faut un accord syndical, là où une simple information suffit, là où l'autorité est plus offensive. C'est pourquoi tenir pour acquises vos règles nationales de l'autre côté de la frontière est l'erreur qui déclenche les sanctions."
+        },
+        {
+          "q": "À quelle fréquence est-il mis à jour ?",
+          "a": "Les fiches portent la date de vérification et sont revues quand la loi change ou quand de nouvelles décisions paraissent. Il s'agit d'une ressource informative, pas d'un conseil juridique : avant d'activer un système, faites examiner votre situation par un professionnel."
+        },
+        {
+          "q": "Comment utiliser le classement si j'envoie des équipes à l'étranger ?",
+          "a": "Partez du pays où elles vont travailler, pas du vôtre : ce sont les règles de là-bas qui s'appliquent. Regardez le score pour mesurer l'ampleur du travail à venir, puis ouvrez la fiche pour connaître les obligations précises et préparez l'information à remettre avant le départ."
+        }
+      ]
+    }
   },
   "attribuzione": {
     "datiVerificati": "Données compilées et vérifiées par GeoTapp.",

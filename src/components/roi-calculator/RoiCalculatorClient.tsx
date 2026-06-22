@@ -164,6 +164,13 @@ const ERROR_MSGS: Record<string, { required: string; network: string }> = {
   en: { required: 'Please fill in name and email', network: 'Network error. Please try again.' },
   de: { required: 'Bitte Name und E-Mail ausfüllen', network: 'Netzwerkfehler. Bitte erneut versuchen.' },
   nl: { required: 'Vul naam en e-mail in', network: 'Netwerkfout. Probeer opnieuw.' },
+  fr: { required: "Renseignez le nom et l'email", network: 'Erreur réseau. Réessayez.' },
+  es: { required: 'Completa nombre y email', network: 'Error de red. Inténtalo de nuevo.' },
+  pt: { required: 'Preencha o nome e o email', network: 'Erro de rede. Tente novamente.' },
+  da: { required: 'Udfyld navn og e-mail', network: 'Netværksfejl. Prøv igen.' },
+  sv: { required: 'Fyll i namn och e-post', network: 'Nätverksfel. Försök igen.' },
+  nb: { required: 'Fyll inn navn og e-post', network: 'Nettverksfeil. Prøv igjen.' },
+  ru: { required: 'Укажите имя и email', network: 'Ошибка сети. Попробуйте снова.' },
 };
 
 export default function RoiCalculatorClient({ dict, locale, trialUrl, embed = false, currency = 'EUR' }: Props) {

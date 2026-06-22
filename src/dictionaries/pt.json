@@ -58,7 +58,40 @@
       "generatore": {
         "title": "Gerador de aviso GPS",
         "desc": "Crie o seu modelo de aviso de privacidade GPS com o seu logótipo, conforme o RGPD. Grátis, no seu navegador."
+      },
+      "dossier": {
+        "title": "Dossiê de conformidade",
+        "desc": "O que a GeoTapp faz e não faz, com o RGPD, o Código do Trabalho e os limites ditos com clareza."
       }
+    },
+    "faq": {
+      "title": "Perguntas frequentes",
+      "items": [
+        {
+          "q": "Os recursos são gratuitos?",
+          "a": "Sim, todos. Os mapas, as calculadoras, o gerador de informação de privacidade e os dossiês de país são de utilização gratuita. É a nossa forma de partilhar o que estudámos sobre a monitorização de trabalhadores, mesmo que nunca venha a ser cliente."
+        },
+        {
+          "q": "Tenho de me registar ou deixar o meu email para os usar?",
+          "a": "Não. Abre a ferramenta e usa-a. O gerador de informação de privacidade funciona dentro do seu navegador e não envia os seus dados para lado nenhum; as outras ferramentas não pedem conta. Se quiser manter-se a par, pode deixar-nos o seu email, mas isso é uma escolha sua, não um pedágio."
+        },
+        {
+          "q": "Posso confiar na informação jurídica aqui presente?",
+          "a": "Baseia-se na legislação nacional e em decisões reais das autoridades, com a fonte indicada e uma data de verificação. Dito isto, continua a ser um recurso informativo, não aconselhamento jurídico: antes de ligar um sistema de monitorização, peça a um profissional que avalie a sua situação."
+        },
+        {
+          "q": "Posso usar estas ferramentas no meu próprio site?",
+          "a": "Sim. O mapa do GPS de trabalhadores pode ser incorporado com o código que está na sua página, e os recursos podem ser citados ligando à fonte. Se gere um blogue do setor ou aconselha empresas, também foram pensados para isso."
+        },
+        {
+          "q": "Só são úteis se eu usar o GeoTapp?",
+          "a": "Não, valem por si. Construímo-los para que qualquer pessoa que envie gente para o terreno perceba o que a conformidade exige, use ou não o GeoTapp. Se depois quiser um sistema já preparado para registar a localização apenas na picagem e não de forma contínua, está aqui, mas os recursos são úteis de qualquer forma."
+        },
+        {
+          "q": "A quem se destinam?",
+          "a": "A quem tem equipas a trabalhar fora das instalações: empresas de limpeza, instaladores, segurança, manutenção, construção. A quem tem de provar onde e quando um serviço foi feito, e quer fazê-lo sem transformar os trabalhadores em pontos num mapa o dia inteiro."
+        }
+      ]
     }
   },
   "footer": {
@@ -1018,7 +1051,7 @@
     "cta_note": "Sem compromisso. Sem contrato. Configuramos para o seu caso real."
   },
   "features": {
-    "title": "Power Under the Hood.",
+    "title": "Potência sob o capô.",
     "subtitle": "Não construímos brinquedos. GeoTapp é uma plataforma empresarial construída para escalar. Aqui estão as tecnologias que fazem a magia acontecer.",
     "gps_title": "Rastreamento GPS e Mapas Geográficos",
     "gps_desc": "Saiba onde a sua equipa está, em tempo real. O nosso mapa ao vivo mostra cada registo de ponto com coordenadas GPS, validação de geofencing e proteção anti-spoofing. Os gestores veem quem está no local num relance, sem chamadas, sem adivinhações.",
@@ -1074,7 +1107,36 @@
     "espostoUno": "Falta-te {n} obrigação obrigatória de {tot}: estás exposto até",
     "espostoMulti": "Faltam-te {n} obrigações obrigatórias de {tot}: estás exposto até",
     "inRegola": "Nenhuma obrigação obrigatória em falta: estás no bom caminho.",
-    "vediScheda": "Abrir a ficha completa: {paese}"
+    "vediScheda": "Abrir a ficha completa: {paese}",
+    "faq": {
+      "title": "Perguntas frequentes",
+      "items": [
+        {
+          "q": "Qual é o risco real se o GPS não estiver em conformidade?",
+          "a": "Depende do país e do que correu mal, mas as coimas do RGPD não são simbólicas: chegam a uma percentagem do volume de negócios capaz de deitar abaixo uma pequena empresa, e em vários Estados há ainda consequências em sede de direito do trabalho. Escolha o destino acima e verá o valor máximo real, com o caso de que foi retirado."
+        },
+        {
+          "q": "As coimas do RGPD atingem mesmo as pequenas empresas?",
+          "a": "Sim, e a ideia de que as autoridades só vão atrás dos grandes é uma das crenças que mais caro custa. Os casos listados em cada ficha de país incluem negócios de meia dúzia de pessoas, multados precisamente por monitorizarem o pessoal sem a documentação em ordem. A dimensão influencia o montante, não o facto de estar na linha de fogo."
+        },
+        {
+          "q": "A coima é o único risco?",
+          "a": "Não, e muitas vezes nem sequer é o pior. Os dados recolhidos da forma errada tornam-se inúteis precisamente quando deles precisa, num litígio com um trabalhador ou perante um cliente que contesta uma fatura. Acaba com a coima para pagar e sem a prova que julgava ter."
+        },
+        {
+          "q": "Posso ser multado mesmo que os trabalhadores tenham concordado?",
+          "a": "Sim, porque numa relação de trabalho o consentimento conta pouco: presume-se que quem o dá não é verdadeiramente livre de recusar. As autoridades olham para se o tratamento foi proporcionado e se tinha um fundamento sólido e uma informação de privacidade clara, não para se alguém assinou um papel. O acordo dos trabalhadores, por si só, não o protege."
+        },
+        {
+          "q": "De onde vêm estes números?",
+          "a": "De decisões reais das autoridades de proteção de dados e da legislação nacional, não de estimativas. Cada ficha indica a fonte e o caso, para que possa remontar ao documento. Este é um recurso informativo, não aconselhamento jurídico: antes de ligar um sistema, peça a um profissional que avalie a sua situação."
+        },
+        {
+          "q": "Como reduzo o risco de uma coima?",
+          "a": "Recolhendo apenas o mínimo de que realmente precisa: localização na picagem, não localização contínua, com uma informação de privacidade assinada e um fundamento que não seja o consentimento. Foi exatamente assim que o GeoTapp foi construído, e o gerador de informação de privacidade aqui nos recursos prepara o documento para ser assinado."
+        }
+      ]
+    }
   },
   "indiceSorveglianza": {
     "metaTitle": "Índice de vigilância laboral na Europa: a classificação dos 39 países",
@@ -1087,7 +1149,36 @@
     "colSanzione": "Sanção máxima",
     "scheda": "Ficha",
     "metodologiaTitolo": "Como é calculado o índice",
-    "metodologia": "O índice (0-100) mede quantas obrigações de monitorização de trabalhadores são obrigatórias nesse país: pontuação = obrigações + metade das condicionais, sobre o total. Mais alto = quadro mais rígido para quem quer rastrear. Dados derivados das fichas-país verificadas na fonte; mede a carga de conformidade, não a 'liberdade'."
+    "metodologia": "O índice (0-100) mede quantas obrigações de monitorização de trabalhadores são obrigatórias nesse país: pontuação = obrigações + metade das condicionais, sobre o total. Mais alto = quadro mais rígido para quem quer rastrear. Dados derivados das fichas-país verificadas na fonte; mede a carga de conformidade, não a 'liberdade'.",
+    "faq": {
+      "title": "Perguntas frequentes",
+      "items": [
+        {
+          "q": "O que mede o índice de vigilância no trabalho?",
+          "a": "O grau de exigência do quadro de cada país sobre a monitorização de trabalhadores: o número de obrigações obrigatórias, os passos necessários antes de ligar um sistema e o peso das sanções. Quanto mais alta a pontuação, mais coisas tem de pôr em ordem antes de usar GPS ou qualquer monitorização de pessoal nesse país."
+        },
+        {
+          "q": "Uma pontuação alta significa que o GPS é proibido ali?",
+          "a": "Não, significa que é preciso mais cuidado, não que seja proibido. Em quase toda a Europa o GPS no trabalho é permitido, desde que seja usado para organizar e provar o trabalho e não para vigiar a pessoa. Um índice alto apenas lhe diz que as obrigações são mais pesadas e que improvisar sai caro."
+        },
+        {
+          "q": "De onde vêm os dados da classificação?",
+          "a": "Dos 39 dossiês de país do site, construídos com base na legislação nacional e em decisões reais das autoridades. A classificação resume-os numa pontuação comparável; clique num país e chega à ficha com as obrigações, a autoridade competente e as fontes."
+        },
+        {
+          "q": "Porque é que países vizinhos têm pontuações tão diferentes?",
+          "a": "Porque o RGPD define o enquadramento, mas cada Estado acrescenta as suas próprias regras por cima, e na monitorização de trabalhadores as diferenças são acentuadas: onde é preciso um acordo sindical, onde basta uma informação de privacidade, onde a autoridade é mais agressiva. É por isso que dar como garantidas as regras de casa do outro lado da fronteira é o erro que desencadeia as coimas."
+        },
+        {
+          "q": "Com que frequência é atualizado?",
+          "a": "As fichas indicam a data de verificação e são revistas quando a lei muda ou surgem novas decisões. Este é um recurso informativo, não aconselhamento jurídico: antes de ligar um sistema, peça a um profissional que avalie a sua situação."
+        },
+        {
+          "q": "Como uso a classificação se envio equipas para o estrangeiro?",
+          "a": "Comece pelo país onde vão trabalhar, não pelo seu: são as regras de lá que se aplicam. Olhe para a pontuação para perceber quanto trabalho tem pela frente, depois abra a ficha para as obrigações exatas e prepare a informação de privacidade para ser assinada antes da deslocação."
+        }
+      ]
+    }
   },
   "attribuzione": {
     "datiVerificati": "Dados recolhidos e verificados pela GeoTapp.",
@@ -1105,5 +1196,66 @@
     "desc": "Publica o mapa interativo no teu site ou blog: copia o código. Inclui um link para a fonte.",
     "copia": "Copiar o código",
     "copiato": "Copiado!"
+  },
+  "risorseGps": {
+    "metaTitleSelettore": "GPS e monitorização de trabalhadores na Europa: o que precisa para estar em conformidade, país a país",
+    "metaDescSelettore": "Escolha o país e descubra o que precisa para pôr em conformidade o GPS e a monitorização de trabalhadores: obrigações, procedimento, autoridade e modelo para descarregar.",
+    "h1Selettore": "GPS e monitorização de trabalhadores, país a país",
+    "introSelettore": "A mesma Europa, regras diferentes. Envia uma equipa para instalar, limpar ou vigiar noutro país e parte do princípio de que as regras sobre GPS e controlo de trabalhadores são as de casa. Não são. Cada Estado tem as suas, e valem onde se trabalha: uma empresa com uma obra no estrangeiro segue as regras locais, mesmo que a equipa esteja lá apenas em deslocação. Escolha o destino e dizemos-lhe o que precisa para estar em conformidade: as obrigações, o procedimento, a quem se dirigir e o modelo para descarregar.",
+    "scegliPaese": "Escolha o país",
+    "inArrivo": "Em breve",
+    "inArrivoNota": "Estamos a preparar a página deste país.",
+    "metaTitleScheda": "GPS e monitorização de trabalhadores em {paese}: o que precisa para estar em conformidade",
+    "metaDescScheda": "O que precisa para pôr em conformidade o GPS e a monitorização de trabalhadores em {paese}: obrigações, procedimento, autoridade competente, sanções e modelo para descarregar.",
+    "sezioneCosaServe": "O que precisa",
+    "sezioneProcedura": "O procedimento, passo a passo",
+    "sezioneAChiInviare": "A quem se dirigir",
+    "sezioneModello": "O modelo para descarregar",
+    "sezioneSanzione": "O que arrisca",
+    "sezioneFonti": "Fontes",
+    "rispostaSi": "Sim",
+    "rispostaNo": "Não",
+    "rispostaDipende": "Depende",
+    "cosaServeLegenda": "Para cada obrigação dizemos-lhe se se aplica neste país: Sim significa obrigatório, Depende apenas em certos casos, Não significa não exigido.",
+    "serveObbligatorio": "obrigatório",
+    "serveDipende": "apenas em certos casos",
+    "serveNonRichiesto": "não exigido",
+    "verificatoIl": "Verificado a",
+    "aggiornatoIl": "Atualizado a",
+    "scaricaModello": "Descarregar o modelo",
+    "autoritaCompetente": "Autoridade competente",
+    "disclaimer": "Este é um recurso informativo, não um aconselhamento jurídico. Antes de ativar um sistema de monitorização, peça a um profissional que verifique a sua situação.",
+    "ctaTitolo": "Quer um sistema que já está em conformidade?",
+    "ctaTesto": "A GeoTapp regista a localização apenas no momento da picagem, nunca em contínuo, e gera o aviso para os trabalhadores assinarem. Experimente gratuitamente.",
+    "ctaBottone": "Experimente a GeoTapp gratuitamente",
+    "faq": {
+      "title": "Perguntas frequentes",
+      "items": [
+        {
+          "q": "Posso usar o GPS para vigiar a minha equipa enquanto trabalha?",
+          "a": "O GPS no trabalho é legal em quase toda a Europa, com uma condição: tem de servir para organizar e provar o trabalho, não para vigiar a pessoa. O que conta é o como. Registar a localização na picagem, quando alguém abre e fecha uma intervenção, é coisa bem diferente de a seguir em tempo real durante todo o dia. A primeira quase sempre se pode fazer, com os papéis em ordem; a segunda quase nunca."
+        },
+        {
+          "q": "Aplicam-se as regras do meu país ou as do país para onde envio a equipa?",
+          "a": "As do país onde se trabalha. Se a sua empresa tem sede na Irlanda mas a obra é em França, segue as regras francesas, mesmo que a equipa esteja lá apenas por uma deslocação de duas semanas. É por isso que esta página lhe pede para escolher primeiro o destino: as obrigações mudam de um Estado para o outro, e o que basta em casa pode ficar aquém do outro lado da fronteira."
+        },
+        {
+          "q": "Preciso do consentimento do trabalhador?",
+          "a": "O consentimento raramente é o caminho certo, e isto apanha muita gente desprevenida. Na relação de trabalho o consentimento é considerado pouco livre, porque quem o recusa teme as consequências, por isso as autoridades preferem outros fundamentos: o interesse legítimo da empresa ou uma obrigação contratual, acompanhados de um aviso de privacidade claro. Em vários países é também necessária uma etapa com o sindicato ou um acordo de empresa antes de ligar seja o que for."
+        },
+        {
+          "q": "Posso seguir a localização em tempo real, o dia todo?",
+          "a": "É precisamente isto que faz disparar as multas. O rastreio contínuo é considerado desproporcionado em quase todo o lado: regista muito mais do que precisa para pagar as horas ou provar uma intervenção. A regra prática é recolher o mínimo, a localização no momento que importa, não um fio que segue a pessoa de manhã à noite."
+        },
+        {
+          "q": "O que arrisco se ligar um sistema sem estar em conformidade?",
+          "a": "Depende do país, mas as coimas do RGPD chegam a valores que nenhuma pequena empresa quer ver, e em alguns Estados há ainda consequências no plano do direito do trabalho. O verdadeiro problema, porém, muitas vezes não é a multa: é que os dados recolhidos da forma errada tornam-se inutilizáveis exatamente quando precisaria deles, num processo ou diante de um cliente que contesta a fatura. Na ficha de cada país encontra a sanção máxima real e os casos registados."
+        },
+        {
+          "q": "A GeoTapp é um sistema de vigilância?",
+          "a": "Não, e foi feita propositadamente para não o ser. A ferramenta regista a localização apenas no momento da picagem, quando alguém abre ou fecha um trabalho, nunca em contínuo, e produz o aviso de privacidade para assinarem. Serve para provar o que foi feito e onde, não para vigiar as pessoas. É a diferença entre uma prova do trabalho e uma trela."
+        }
+      ]
+    }
   }
 }

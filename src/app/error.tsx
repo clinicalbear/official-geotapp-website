@@ -8,6 +8,12 @@ const T: Record<string, { title: string; desc: string; retry: string }> = {
   de: { title: 'Etwas ist schiefgelaufen!', desc: 'Entschuldigung, ein unerwarteter Fehler ist aufgetreten.', retry: 'Erneut versuchen' },
   fr: { title: 'Une erreur est survenue !', desc: 'Nous nous excusons, une erreur inattendue s\'est produite.', retry: 'Réessayer' },
   es: { title: '¡Algo salió mal!', desc: 'Lo sentimos, se ha producido un error inesperado.', retry: 'Reintentar' },
+  nl: { title: 'Er is iets misgegaan!', desc: 'Excuses, er is een onverwachte fout opgetreden.', retry: 'Opnieuw proberen' },
+  pt: { title: 'Algo correu mal!', desc: 'Pedimos desculpa, ocorreu um erro inesperado.', retry: 'Tentar novamente' },
+  da: { title: 'Noget gik galt!', desc: 'Vi beklager, der opstod en uventet fejl.', retry: 'Prøv igen' },
+  sv: { title: 'Något gick fel!', desc: 'Vi ber om ursäkt, ett oväntat fel uppstod.', retry: 'Försök igen' },
+  nb: { title: 'Noe gikk galt!', desc: 'Vi beklager, det oppstod en uventet feil.', retry: 'Prøv igjen' },
+  ru: { title: 'Что-то пошло не так!', desc: 'Приносим извинения, произошла непредвиденная ошибка.', retry: 'Повторить' },
 };
 
 function getT() {

@@ -58,7 +58,40 @@
       "generatore": {
         "title": "GPS-erklæring-generator",
         "desc": "Lag ditt eksempel på en GPS-personvernerklæring med din logo, GDPR-kompatibel. Gratis, i nettleseren din."
+      },
+      "dossier": {
+        "title": "Samsvarsdossier",
+        "desc": "Hva GeoTapp gjør og ikke gjør, med GDPR og grensene sagt tydelig."
       }
+    },
+    "faq": {
+      "title": "Ofte stilte spørsmål",
+      "items": [
+        {
+          "q": "Er ressursene gratis?",
+          "a": "Ja, alle sammen. Kartene, kalkulatorene, generatoren for personvernerklæring og landdossierene er gratis å bruke. Det er måten vi deler det vi har studert om overvåking av ansatte, selv om du aldri blir kunde."
+        },
+        {
+          "q": "Må jeg registrere meg eller oppgi e-postadressen min for å bruke dem?",
+          "a": "Nei. Du åpner verktøyet og bruker det. Generatoren for personvernerklæring kjører inne i nettleseren din og sender dataene dine ingensteds; de andre verktøyene ber ikke om en konto. Vil du holde deg oppdatert kan du legge igjen e-postadressen din, men det er ditt valg, ikke en avgift."
+        },
+        {
+          "q": "Kan jeg stole på den juridiske informasjonen her?",
+          "a": "Den er bygd på nasjonal lov og reelle avgjørelser fra myndighetene, med kilde oppgitt og en verifiseringsdato. Når det er sagt, forblir den en informativ ressurs, ikke juridisk rådgivning: før du slår på et overvåkingssystem, få situasjonen din vurdert av en fagperson."
+        },
+        {
+          "q": "Kan jeg bruke disse verktøyene på mitt eget nettsted?",
+          "a": "Ja. Kartet over GPS for ansatte kan bygges inn med koden på siden, og ressursene kan siteres ved å lenke til kilden. Driver du en bransjeblogg eller rådgir bedrifter, er de ment for det også."
+        },
+        {
+          "q": "Er de bare nyttige hvis jeg bruker GeoTapp?",
+          "a": "Nei, de står på egne ben. Vi laget dem slik at alle som sender folk ut i felten forstår hva samsvar krever, med eller uten GeoTapp. Hvis du så vil ha et system som allerede er satt opp til å registrere posisjon bare ved innstempling og ikke kontinuerlig, finnes det her, men ressursene er nyttige uansett."
+        },
+        {
+          "q": "Hvem er de til for?",
+          "a": "For alle med team som jobber utenfor kontoret: rengjøringsfirmaer, montører, vakthold, vedlikehold, bygg og anlegg. Alle som må bevise hvor og når et oppdrag ble utført, og som vil gjøre det uten å gjøre de ansatte til prikker på et kart hele dagen."
+        }
+      ]
     }
   },
   "footer": {
@@ -1018,7 +1051,7 @@
     "cta_note": "Ingen binding. Ingen kontrakt. Vi konfigurerer på din virkelige sak."
   },
   "features": {
-    "title": "Power Under the Hood.",
+    "title": "Kraft under panseret.",
     "subtitle": "Vi bygger ikke leker. GeoTapp er en enterprise-plattform bygget for å skalere. Her er teknologiene som gjør magien mulig.",
     "gps_title": "GPS-sporing & Geografiske Kart",
     "gps_desc": "Vet hvor teamet ditt er, i sanntid. Vårt live-kart viser hvert stempel med GPS-koordinater, geofencing-validering og anti-spoofing-beskyttelse. Ledere ser hvem som er på stedet med ett blikk, ingen samtaler, ingen gjetting.",
@@ -1074,7 +1107,36 @@
     "espostoUno": "Du mangler {n} påkrevd plikt av {tot}: du er eksponert for opptil",
     "espostoMulti": "Du mangler {n} påkrevde plikter av {tot}: du er eksponert for opptil",
     "inRegola": "Ingen påkrevd plikt mangler: du er på rett vei.",
-    "vediScheda": "Åpne den fullstendige landsiden: {paese}"
+    "vediScheda": "Åpne den fullstendige landsiden: {paese}",
+    "faq": {
+      "title": "Ofte stilte spørsmål",
+      "items": [
+        {
+          "q": "Hva er den reelle risikoen hvis GPS-bruken ikke er i samsvar med reglene?",
+          "a": "Det avhenger av landet og av hva som gikk galt, men GDPR-bøtene er ikke symbolske: de når en prosentandel av omsetningen som kan slå beina under en liten bedrift, og i flere stater kommer det arbeidsrettslige konsekvenser i tillegg. Velg destinasjon ovenfor, så ser du det reelle maksbeløpet, sammen med saken det er hentet fra."
+        },
+        {
+          "q": "Rammer GDPR-bøtene virkelig små bedrifter?",
+          "a": "Ja, og forestillingen om at tilsynsmyndighetene bare går etter de store aktørene er en av de troene som koster mest. Sakene som er listet opp på hvert landark omfatter virksomheter på en håndfull personer, bøtelagt nettopp for å ha overvåket ansatte uten papirene i orden. Størrelsen påvirker beløpet, ikke om du er i skuddlinjen."
+        },
+        {
+          "q": "Er boten den eneste risikoen?",
+          "a": "Nei, og det er ofte ikke engang den verste. Data samlet inn på feil måte blir verdiløse akkurat når du trenger dem, i en tvist med en ansatt eller foran en kunde som bestrider en faktura. Du ender opp med boten å betale og uten beviset du trodde du hadde."
+        },
+        {
+          "q": "Kan jeg bøtelegges selv om de ansatte var enige?",
+          "a": "Ja, for i et ansettelsesforhold teller samtykke lite: den som gir det antas ikke å være virkelig fri til å si nei. Tilsynsmyndighetene ser på om behandlingen var forholdsmessig og om du hadde et solid grunnlag og en tydelig personvernerklæring, ikke på om noen signerte et ark. At de ansatte var enige beskytter deg ikke i seg selv."
+        },
+        {
+          "q": "Hvor kommer disse tallene fra?",
+          "a": "Fra reelle avgjørelser truffet av personvernmyndigheter og fra nasjonal lov, ikke fra anslag. Hvert ark oppgir kilden og saken, slik at du kan spore det tilbake til dokumentet. Dette er en informativ ressurs, ikke juridisk rådgivning: før du slår på et system, få situasjonen din vurdert av en fagperson."
+        },
+        {
+          "q": "Hvordan reduserer jeg risikoen for en bot?",
+          "a": "Ved å samle inn det aller minste du faktisk trenger: posisjon ved innstempling, ikke kontinuerlig sporing, med en signert personvernerklæring og et annet grunnlag enn samtykke. Det er nettopp slik GeoTapp er bygd, og generatoren for personvernerklæring her i ressursene klargjør dokumentet som den ansatte kan signere."
+        }
+      ]
+    }
   },
   "indiceSorveglianza": {
     "metaTitle": "Indeks for ansattovervåking i Europa: rangering av de 39 landene",
@@ -1087,7 +1149,36 @@
     "colSanzione": "Maksimal bot",
     "scheda": "Side",
     "metodologiaTitolo": "Slik beregnes indeksen",
-    "metodologia": "Indeksen (0-100) måler hvor mange plikter om ansattovervåking som er obligatoriske i landet: poengsum = plikter + halvparten av de betingede, delt på totalen. Høyere = strengere rammeverk for den som vil spore. Data utledet fra de kildeverifiserte landsidene; den måler etterlevelsesbyrden, ikke 'frihet'."
+    "metodologia": "Indeksen (0-100) måler hvor mange plikter om ansattovervåking som er obligatoriske i landet: poengsum = plikter + halvparten av de betingede, delt på totalen. Høyere = strengere rammeverk for den som vil spore. Data utledet fra de kildeverifiserte landsidene; den måler etterlevelsesbyrden, ikke 'frihet'.",
+    "faq": {
+      "title": "Ofte stilte spørsmål",
+      "items": [
+        {
+          "q": "Hva måler indeksen for overvåking på arbeidsplassen?",
+          "a": "Hvor strengt rammeverket i hvert land er når det gjelder å overvåke ansatte: antall obligatoriske plikter, stegene som kreves før du slår på et system, og tyngden av sanksjonene. Jo høyere poengsum, desto mer må du ha på plass før du bruker GPS eller annen overvåking av ansatte i det landet."
+        },
+        {
+          "q": "Betyr en høy poengsum at GPS er forbudt der?",
+          "a": "Nei, det betyr at det kreves mer varsomhet, ikke at det er forbudt. Nesten overalt i Europa er GPS på jobben tillatt, så lenge det brukes til å organisere og dokumentere arbeidet og ikke til å overvåke personen. En høy indeks forteller deg bare at pliktene er tyngre og at det å improvisere blir dyrt."
+        },
+        {
+          "q": "Hvor kommer dataene til rangeringen fra?",
+          "a": "Fra de 39 landdossierene på nettstedet, bygd på nasjonal lov og reelle avgjørelser fra myndighetene. Rangeringen koker dem ned til en poengsum du kan sammenligne; klikk på et land, så kommer du til arket med pliktene, den ansvarlige myndigheten og kildene."
+        },
+        {
+          "q": "Hvorfor får naboland så ulike poengsummer?",
+          "a": "Fordi GDPR setter rammen, men hver stat legger sine egne regler på toppen, og når det gjelder overvåking av ansatte er forskjellene store: hvor det trengs en fagforeningsavtale, hvor en personvernerklæring holder, hvor myndigheten er mer pågående. Derfor er det å ta hjemreglene for gitt over grensen feilen som utløser bøtene."
+        },
+        {
+          "q": "Hvor ofte oppdateres den?",
+          "a": "Arkene har en verifiseringsdato og gjennomgås når loven endres eller nye avgjørelser kommer. Dette er en informativ ressurs, ikke juridisk rådgivning: før du slår på et system, få situasjonen din vurdert av en fagperson."
+        },
+        {
+          "q": "Hvordan bruker jeg rangeringen hvis jeg sender team til utlandet?",
+          "a": "Start fra landet de skal jobbe i, ikke fra ditt eget: det er reglene der som gjelder. Se på poengsummen for å danne deg et bilde av hvor mye arbeid som venter, åpne deretter arket for de nøyaktige pliktene og klargjør personvernerklæringen som skal signeres før avreise."
+        }
+      ]
+    }
   },
   "attribuzione": {
     "datiVerificati": "Data samlet inn og verifisert av GeoTapp.",
@@ -1105,5 +1196,66 @@
     "desc": "Publiser det interaktive kartet på nettstedet eller bloggen din: kopier koden. Inneholder en lenke til kilden.",
     "copia": "Kopier koden",
     "copiato": "Kopiert!"
+  },
+  "risorseGps": {
+    "metaTitleSelettore": "GPS og overvåking av ansatte i Europa: hva som skal til for å være i orden, land for land",
+    "metaDescSelettore": "Velg et land og finn ut hva som skal til for å gjøre GPS og overvåking av ansatte forskriftsmessig: plikter, fremgangsmåte, tilsynsmyndighet og en mal du kan laste ned.",
+    "h1Selettore": "GPS og overvåking av ansatte, land for land",
+    "introSelettore": "Samme Europa, ulike regler. Du sender et arbeidslag for å montere, vaske eller vakte i et annet land, og går ut fra at reglene om GPS og kontroll av ansatte er de samme som hjemme. Det er de ikke. Hver stat har sine egne, og de gjelder der arbeidet skjer: en bedrift med en arbeidsplass i utlandet følger de lokale reglene, selv om laget bare er der på oppdrag. Velg destinasjonen, så forteller vi deg hva som skal til for å være i orden: pliktene, fremgangsmåten, hvem du skal kontakte og malen du kan laste ned.",
+    "scegliPaese": "Velg et land",
+    "inArrivo": "Kommer snart",
+    "inArrivoNota": "Vi holder på å lage siden for dette landet.",
+    "metaTitleScheda": "GPS og overvåking av ansatte i {paese}: hva som skal til for å være i orden",
+    "metaDescScheda": "Hva som skal til for å gjøre GPS og overvåking av ansatte forskriftsmessig i {paese}: plikter, fremgangsmåte, kompetent myndighet, sanksjoner og en mal du kan laste ned.",
+    "sezioneCosaServe": "Hva du trenger",
+    "sezioneProcedura": "Fremgangsmåten, steg for steg",
+    "sezioneAChiInviare": "Hvem du skal kontakte",
+    "sezioneModello": "Malen du kan laste ned",
+    "sezioneSanzione": "Hva du risikerer",
+    "sezioneFonti": "Kilder",
+    "rispostaSi": "Ja",
+    "rispostaNo": "Nei",
+    "rispostaDipende": "Det kommer an på",
+    "cosaServeLegenda": "For hver plikt forteller vi deg om den gjelder i dette landet: Ja betyr påkrevd, Det kommer an på betyr bare i visse tilfeller, Nei betyr ikke påkrevd.",
+    "serveObbligatorio": "påkrevd",
+    "serveDipende": "bare i visse tilfeller",
+    "serveNonRichiesto": "ikke påkrevd",
+    "verificatoIl": "Verifisert den",
+    "aggiornatoIl": "Oppdatert den",
+    "scaricaModello": "Last ned malen",
+    "autoritaCompetente": "Kompetent myndighet",
+    "disclaimer": "Dette er en informasjonsressurs, ikke juridisk rådgivning. Før du tar i bruk et overvåkingssystem, bør du få situasjonen din vurdert av en fagperson.",
+    "ctaTitolo": "Vil du ha et system som allerede er i orden?",
+    "ctaTesto": "GeoTapp registrerer posisjonen kun ved stempling, ikke kontinuerlig, og lager varselet de ansatte skal signere. Prøv det gratis.",
+    "ctaBottone": "Prøv GeoTapp gratis",
+    "faq": {
+      "title": "Vanlige spørsmål",
+      "items": [
+        {
+          "q": "Kan jeg bruke GPS til å holde øye med laget mitt mens de jobber?",
+          "a": "GPS på jobben er lovlig nesten overalt i Europa, på én betingelse: det må tjene til å organisere og dokumentere arbeidet, ikke til å overvåke personen. Det er hvordan du gjør det som teller. Å registrere posisjonen ved stempling, når noen åpner og avslutter et oppdrag, er noe helt annet enn å følge personen i sanntid hele dagen. Det første går som regel greit når papirene er i orden, det andre nesten aldri."
+        },
+        {
+          "q": "Gjelder reglene i mitt eget land, eller i landet der jeg sender laget?",
+          "a": "De i landet der arbeidet skjer. Hvis bedriften din holder til i Irland, men arbeidsplassen ligger i Frankrike, følger du de franske reglene, selv om laget bare er der i to uker. Det er derfor denne siden ber deg velge destinasjonen først: pliktene endrer seg fra en stat til den neste, og det som holder hjemme kan komme til kort på den andre siden av grensen."
+        },
+        {
+          "q": "Trenger jeg samtykke fra den ansatte?",
+          "a": "Samtykke er sjelden den riktige veien, og det overrasker mange. I et ansettelsesforhold regnes samtykke som lite fritt, fordi den som sier nei frykter følgene, så tilsynsmyndighetene foretrekker andre grunnlag: bedriftens berettigede interesse eller en avtalefestet plikt, sammen med en tydelig personvernerklæring. I flere land trengs det også et steg med fagforeningen eller en avtale på arbeidsplassen før du slår på noe som helst."
+        },
+        {
+          "q": "Kan jeg spore posisjonen i sanntid, hele dagen lang?",
+          "a": "Det er akkurat det som utløser bøtene. Kontinuerlig sporing regnes som uforholdsmessig nesten overalt: du registrerer langt mer enn du trenger for å betale timene eller dokumentere et oppdrag. Den praktiske regelen er å samle inn det minste, posisjonen i det øyeblikket som teller, ikke en tråd som følger personen fra morgen til kveld."
+        },
+        {
+          "q": "Hva risikerer jeg hvis jeg slår på et system uten å være i orden?",
+          "a": "Det kommer an på landet, men bøtene etter GDPR klatrer opp til tall ingen liten bedrift ønsker å se, og i noen stater kommer det arbeidsrettslige følger på toppen. Det egentlige problemet er likevel ofte ikke boten: det er at data som er samlet inn på feil måte blir ubrukelige akkurat når du trenger dem, i en tvist eller foran en kunde som bestrider regningen. Hvert landark viser den faktiske maksimale sanksjonen og sakene som er dokumentert."
+        },
+        {
+          "q": "Er GeoTapp et overvåkingssystem?",
+          "a": "Nei, og det ble bygget nettopp for ikke å være det. Verktøyet registrerer posisjonen kun ved stempling, når noen åpner eller avslutter et oppdrag, aldri kontinuerlig, og det lager personvernerklæringen de skal signere. Det er der for å dokumentere hva som ble gjort og hvor, ikke for å holde øye med folk. Det er forskjellen mellom dokumentasjon av arbeidet og en lenke."
+        }
+      ]
+    }
   }
 }

@@ -58,7 +58,40 @@
       "generatore": {
         "title": "GPS notice generator",
         "desc": "Create your customised GPS privacy notice with your logo, GDPR-compliant. Free, in your browser."
+      },
+      "dossier": {
+        "title": "Compliance dossier",
+        "desc": "What GeoTapp does and does not do, with GDPR, worker-monitoring law and the limits stated plainly."
       }
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "q": "Are the resources free?",
+          "a": "Yes, all of them. The maps, the calculators, the privacy-notice generator and the country dossiers are free to use. They're how we share what we've studied about monitoring workers, even if you never become a customer."
+        },
+        {
+          "q": "Do I have to sign up or leave my email to use them?",
+          "a": "No. You open the tool and use it. The privacy-notice generator runs inside your browser and sends your data nowhere; the other tools don't ask for an account. If you want to stay updated you can leave us your email, but that's your call, not a toll."
+        },
+        {
+          "q": "Can I trust the legal information here?",
+          "a": "It's built on national law and real decisions by the authorities, with the source given and a verification date. That said, it stays an informative resource, not legal advice: before switching a monitoring system on, have your situation checked by a professional."
+        },
+        {
+          "q": "Can I use these tools on my own site?",
+          "a": "Yes. The GPS workers map can be embedded with the code on its page, and the resources can be cited by linking the source. If you run an industry blog or advise companies, they're meant for that too."
+        },
+        {
+          "q": "Are they only useful if I use GeoTapp?",
+          "a": "No, they stand on their own. We built them so that anyone sending people into the field understands what compliance takes, GeoTapp or not. If you then want a system already set up to record location only at clock-in and not continuously, it's here, but the resources are useful either way."
+        },
+        {
+          "q": "Who are they for?",
+          "a": "For anyone with teams working off-site: cleaning firms, installers, security, maintenance, construction. Anyone who has to prove where and when a job was done, and wants to do it without turning employees into dots on a map all day."
+        }
+      ]
     }
   },
   "footer": {
@@ -1089,7 +1122,36 @@
     "disclaimer": "This is an informational resource, not legal advice. Before activating a monitoring system, have your situation checked by a professional.",
     "ctaTitolo": "Want a system that is already compliant?",
     "ctaTesto": "GeoTapp records the location only at clock-in, not continuously, and generates the notice for workers to sign. Try it for free.",
-    "ctaBottone": "Try GeoTapp for free"
+    "ctaBottone": "Try GeoTapp for free",
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "q": "Can I use GPS to keep an eye on my crew while they work?",
+          "a": "GPS at work is legal almost everywhere in Europe, on one condition: it has to organise and prove the work, not watch the person. The how is what counts. Recording location at clock-in, when someone opens and closes a job, is a very different thing from following them in real time all day. The first is usually fine when the paperwork is in order; the second almost never is."
+        },
+        {
+          "q": "Do my own country's rules apply, or the country where I send the team?",
+          "a": "The country where the work happens. If your company is based in Ireland but the job site is in France, you follow the French rules, even if the crew is there for a two-week stint. That's why this page asks you to pick the destination first: the obligations shift from one state to the next, and what's enough at home can fall short across the border."
+        },
+        {
+          "q": "Do I need the worker's consent?",
+          "a": "Consent is rarely the right route, which catches a lot of people out. In an employment relationship consent is treated as not freely given, because the person who refuses fears the fallout, so regulators prefer other grounds: the company's legitimate interest or a contractual duty, paired with a clear privacy notice. In several countries you also need a step with the union or a workplace agreement before you switch anything on."
+        },
+        {
+          "q": "Can I track location in real time, all day long?",
+          "a": "That's the exact thing that triggers the fines. Continuous tracking is considered disproportionate almost everywhere: you record far more than you need to pay the hours or prove a job. The practical rule is to collect the minimum, the location at the moment that matters, not a thread that trails the person from morning to night."
+        },
+        {
+          "q": "What's the risk if I switch a system on without being compliant?",
+          "a": "It depends on the country, but GDPR fines climb to numbers no small business wants to see, and in some states there are labour-law consequences on top. The real problem, though, often isn't the fine: it's that data collected the wrong way becomes useless exactly when you need it, in a dispute or in front of a client who's contesting the bill. Each country sheet shows the real maximum penalty and the cases on record."
+        },
+        {
+          "q": "Is GeoTapp a surveillance system?",
+          "a": "No, and it was built specifically not to be. The tool records location only at clock-in, when someone opens or closes a job, never continuously, and it produces the privacy notice for them to sign. It's there to prove what was done and where, not to watch people. That's the difference between proof of work and a leash."
+        }
+      ]
+    }
   },
   "sanzioniGps": {
     "metaTitle": "GPS penalty calculator: how much you risk monitoring workers, country by country",
@@ -1106,7 +1168,36 @@
     "espostoUno": "You're missing {n} required obligation out of {tot}: you're exposed up to",
     "espostoMulti": "You're missing {n} required obligations out of {tot}: you're exposed up to",
     "inRegola": "No required obligation missing: you're on the right track.",
-    "vediScheda": "Open the full country page: {paese}"
+    "vediScheda": "Open the full country page: {paese}",
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "q": "What's the real risk if GPS isn't compliant?",
+          "a": "It depends on the country and on what went wrong, but GDPR fines aren't symbolic: they reach a percentage of turnover that can floor a small business, and in several states there are labour-law consequences on top. Pick the destination above and you'll see the real maximum figure, with the case it's drawn from."
+        },
+        {
+          "q": "Do GDPR fines really hit small businesses?",
+          "a": "Yes, and the idea that regulators only go after the big players is one of the beliefs that costs the most. The cases listed on each country sheet include outfits of a handful of people, fined precisely for monitoring staff without the paperwork in order. Size affects the amount, not whether you're in the firing line."
+        },
+        {
+          "q": "Is the fine the only risk?",
+          "a": "No, and it's often not even the worst one. Data collected the wrong way becomes useless exactly when you need it, in a dispute with an employee or in front of a client contesting an invoice. You end up with the fine to pay and without the proof you thought you had."
+        },
+        {
+          "q": "Can I be fined even if the workers agreed?",
+          "a": "Yes, because in an employment relationship consent counts for little: the person who gives it is assumed not to be truly free to refuse. Regulators look at whether the processing was proportionate and whether you had solid grounds and a clear privacy notice, not at whether someone signed a sheet. The workers' agreement on its own doesn't protect you."
+        },
+        {
+          "q": "Where do these figures come from?",
+          "a": "From real decisions by data protection authorities and from national law, not from estimates. Each sheet gives the source and the case, so you can trace it back to the document. This is an informative resource, not legal advice: before switching a system on, have your situation checked by a professional."
+        },
+        {
+          "q": "How do I lower the risk of a fine?",
+          "a": "By collecting the bare minimum you actually need: location at clock-in, not continuous tracking, with a signed privacy notice and a basis other than consent. That's exactly how GeoTapp was built, and the privacy-notice generator here in the resources prepares the document for them to sign."
+        }
+      ]
+    }
   },
   "indiceSorveglianza": {
     "metaTitle": "Worker surveillance index in Europe: the 39-country ranking",
@@ -1119,7 +1210,36 @@
     "colSanzione": "Maximum fine",
     "scheda": "Page",
     "metodologiaTitolo": "How the index is calculated",
-    "metodologia": "The index (0-100) measures how many worker-monitoring obligations are mandatory in that country: score = required obligations + half of the conditional ones, over the total. Higher = stricter framework for anyone wanting to track. Data derived from the source-verified country pages; it ranks compliance burden, not 'freedom'."
+    "metodologia": "The index (0-100) measures how many worker-monitoring obligations are mandatory in that country: score = required obligations + half of the conditional ones, over the total. Higher = stricter framework for anyone wanting to track. Data derived from the source-verified country pages; it ranks compliance burden, not 'freedom'.",
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "q": "What does the workplace surveillance index measure?",
+          "a": "How strict each country's framework is on monitoring workers: the number of mandatory obligations, the steps required before switching a system on, and the weight of the penalties. The higher the score, the more you have to put in order before using GPS or any staff monitoring in that country."
+        },
+        {
+          "q": "Does a high score mean GPS is banned there?",
+          "a": "No, it means more care is needed, not that it's forbidden. Almost everywhere in Europe GPS at work is allowed, as long as it's used to organise and prove the work and not to watch the person. A high index just tells you the obligations are heavier and that improvising gets expensive."
+        },
+        {
+          "q": "Where does the ranking data come from?",
+          "a": "From the 39 country dossiers on the site, built on national law and real decisions by the authorities. The ranking distils them into a comparable score; click a country and you reach the sheet with the obligations, the competent authority and the sources."
+        },
+        {
+          "q": "Why do neighbouring countries score so differently?",
+          "a": "Because GDPR sets the frame but each state adds its own rules on top, and on monitoring workers the differences are sharp: where a union agreement is needed, where a privacy notice is enough, where the authority is more aggressive. That's why taking your home rules for granted across the border is the mistake that triggers the fines."
+        },
+        {
+          "q": "How often is it updated?",
+          "a": "The sheets carry the verification date and are reviewed when the law changes or new decisions come out. This is an informative resource, not legal advice: before switching a system on, have your situation checked by a professional."
+        },
+        {
+          "q": "How do I use the ranking if I send teams abroad?",
+          "a": "Start from the country where they'll be working, not yours: the rules there are the ones that apply. Look at the score to gauge how much work is ahead, then open the sheet for the exact obligations and prepare the privacy notice to be signed before the trip."
+        }
+      ]
+    }
   },
   "attribuzione": {
     "datiVerificati": "Data compiled and verified by GeoTapp.",

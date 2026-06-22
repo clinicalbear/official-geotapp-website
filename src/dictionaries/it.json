@@ -58,7 +58,40 @@
       "generatore": {
         "title": "Generatore informativa GPS",
         "desc": "Crea il fac-simile dell'informativa privacy GPS personalizzato col tuo logo, conforme GDPR. Gratis, nel tuo browser."
+      },
+      "dossier": {
+        "title": "Dossier di conformità",
+        "desc": "Cosa fa e cosa non fa GeoTapp, con GDPR, art. 4 e i limiti dichiarati senza giri di parole."
       }
+    },
+    "faq": {
+      "title": "Domande frequenti",
+      "items": [
+        {
+          "q": "Le risorse sono gratuite?",
+          "a": "Sì, tutte. Le mappe, i calcolatori, il generatore di informativa e i dossier per Paese si usano senza pagare nulla. Sono il modo in cui mettiamo a disposizione quello che abbiamo studiato sul monitoraggio dei lavoratori, anche se non diventi mai cliente."
+        },
+        {
+          "q": "Devo registrarmi o lasciare l'email per usarle?",
+          "a": "No. Apri lo strumento e lo usi. Il generatore di informativa lavora dentro il tuo browser e non manda i tuoi dati da nessuna parte; gli altri strumenti non chiedono account. Se vuoi restare aggiornato puoi lasciarci l'email, ma è una tua scelta, non un pedaggio."
+        },
+        {
+          "q": "Posso fidarmi delle informazioni legali che trovo qui?",
+          "a": "Sono costruite su norme nazionali e provvedimenti reali delle autorità, con la fonte indicata e una data di verifica. Detto questo, restano una risorsa informativa e non una consulenza legale: prima di attivare un sistema di monitoraggio fai controllare la tua situazione da un professionista."
+        },
+        {
+          "q": "Posso usare questi strumenti sul mio sito?",
+          "a": "Sì. La mappa GPS lavoratori si può incorporare con il codice che trovi nella sua pagina, e le risorse si possono citare linkando la fonte. Se gestisci un blog di settore o segui aziende, sono pensate anche per questo."
+        },
+        {
+          "q": "Servono solo se uso GeoTapp?",
+          "a": "No, funzionano da sole. Le abbiamo sviluppate perché chi manda persone sul campo capisca cosa serve per essere a norma, GeoTapp o meno. Se poi cerchi un sistema già impostato per registrare la posizione solo alla timbratura e non in continuo, lo trovi, ma le risorse restano utili comunque."
+        },
+        {
+          "q": "Per chi sono pensate?",
+          "a": "Per chi ha squadre che lavorano fuori sede: imprese di pulizie, installatori, sicurezza, manutenzione, edilizia. Chiunque debba dimostrare dove e quando è stato fatto un lavoro, e voglia farlo senza trasformare i dipendenti in puntini su una mappa tutto il giorno."
+        }
+      ]
     }
   },
   "footer": {
@@ -1089,7 +1122,36 @@
     "disclaimer": "Questa e una risorsa informativa, non una consulenza legale. Prima di attivare un sistema di monitoraggio fai verificare la tua situazione da un professionista.",
     "ctaTitolo": "Vuoi un sistema già a norma?",
     "ctaTesto": "GeoTapp registra la posizione solo alla timbratura, non in continuo, e genera l'informativa da far firmare. Provalo gratis.",
-    "ctaBottone": "Prova GeoTapp gratis"
+    "ctaBottone": "Prova GeoTapp gratis",
+    "faq": {
+      "title": "Domande frequenti",
+      "items": [
+        {
+          "q": "Posso usare il GPS per controllare i miei dipendenti mentre lavorano?",
+          "a": "Il GPS sul lavoro è legale quasi ovunque in Europa, a una condizione: deve servire a organizzare e provare il lavoro, non a sorvegliare la persona. La differenza la fa il come. Registrare la posizione alla timbratura, quando l'operatore apre e chiude un intervento, è cosa ben diversa dal seguirlo in tempo reale tutta la giornata. La prima quasi sempre si può, con le carte in regola; la seconda quasi mai."
+        },
+        {
+          "q": "Valgono le regole del mio Paese o di quello dove mando la squadra?",
+          "a": "Quelle del Paese dove si lavora. Se la tua azienda è italiana ma il cantiere è in Germania, segui le regole tedesche, anche se gli operai sono lì solo per una trasferta di due settimane. È il motivo per cui questa pagina ti fa scegliere prima la destinazione: gli adempimenti cambiano da uno Stato all'altro, e quello che basta a casa tua può non bastare oltre confine."
+        },
+        {
+          "q": "Mi serve il consenso del lavoratore?",
+          "a": "Quasi mai il consenso è la strada giusta, e questo sorprende molti. Nel rapporto di lavoro il consenso si considera poco libero, perché chi lo nega teme conseguenze, quindi le autorità preferiscono altre basi: l'interesse legittimo dell'azienda o un obbligo contrattuale, accompagnati da un'informativa chiara. In diversi Paesi serve anche un passaggio con il sindacato o un accordo aziendale prima di accendere qualunque sistema."
+        },
+        {
+          "q": "Posso tracciare la posizione in tempo reale, tutto il giorno?",
+          "a": "È proprio la cosa che fa scattare le multe. Il tracciamento continuo è considerato sproporzionato quasi ovunque: registri molto più di quanto ti serve per pagare le ore o dimostrare un intervento. La regola pratica è raccogliere il minimo, la posizione nel momento che conta, non un filo che segue la persona dalla mattina alla sera."
+        },
+        {
+          "q": "Cosa rischio se attivo un sistema senza essere a norma?",
+          "a": "Dipende dal Paese, ma le sanzioni del GDPR arrivano a cifre che nessuna piccola azienda vuole vedere, e in alcuni Stati ci sono anche conseguenze sul piano del diritto del lavoro. Il problema vero, però, spesso non è la multa: è che i dati raccolti male diventano inutilizzabili proprio quando ti servirebbero, in una causa o davanti a un cliente che contesta. Sulla scheda di ogni Paese trovi la sanzione massima reale e i casi citati."
+        },
+        {
+          "q": "GeoTapp è un sistema di sorveglianza?",
+          "a": "No, ed è stato sviluppato apposta per non esserlo. Lo strumento registra la posizione solo alla timbratura, quando l'operatore apre o chiude un lavoro, mai in continuo, e produce l'informativa da far firmare. Serve a provare cosa è stato fatto e dove, non a guardare le persone. È la differenza tra una prova del lavoro e un guinzaglio."
+        }
+      ]
+    }
   },
   "sanzioniGps": {
     "metaTitle": "Calcolatore sanzioni GPS: quanto rischi a tracciare i lavoratori, Paese per Paese",
@@ -1106,7 +1168,36 @@
     "espostoUno": "Ti manca {n} adempimento obbligatorio su {tot}: sei esposto fino a",
     "espostoMulti": "Ti mancano {n} adempimenti obbligatori su {tot}: sei esposto fino a",
     "inRegola": "Nessun adempimento obbligatorio mancante: sei sulla buona strada.",
-    "vediScheda": "Apri la scheda completa: {paese}"
+    "vediScheda": "Apri la scheda completa: {paese}",
+    "faq": {
+      "title": "Domande frequenti",
+      "items": [
+        {
+          "q": "Quanto si rischia davvero se il GPS non è a norma?",
+          "a": "Dipende dal Paese e da cosa hai sbagliato, ma le sanzioni del GDPR non sono simboliche: arrivano a percentuali del fatturato che mettono in ginocchio un'azienda piccola, e in diversi Stati si aggiungono conseguenze sul piano del diritto del lavoro. Scegli la destinazione qui sopra e vedi la cifra massima reale, con il caso da cui è tratta."
+        },
+        {
+          "q": "Le multe del GDPR colpiscono davvero le piccole imprese?",
+          "a": "Sì, e l'idea che le autorità guardino solo alle grandi è una delle convinzioni che costano di più. I casi citati nella scheda di ogni Paese comprendono attività di poche persone, sanzionate proprio per il monitoraggio dei dipendenti fatto senza le carte in regola. La dimensione conta sull'importo, non sull'essere o meno nel mirino."
+        },
+        {
+          "q": "La multa è l'unico rischio?",
+          "a": "No, e spesso non è nemmeno il peggiore. I dati raccolti in modo scorretto diventano inutilizzabili proprio quando ti servirebbero, in una causa con un dipendente o davanti a un cliente che contesta una fattura. Ti ritrovi con la sanzione da pagare e senza la prova che pensavi di avere."
+        },
+        {
+          "q": "Posso essere sanzionato anche se i lavoratori erano d'accordo?",
+          "a": "Sì, perché nel rapporto di lavoro il consenso conta poco: si presume che chi lo dà non sia davvero libero di rifiutare. Le autorità guardano se il trattamento era proporzionato e se avevi una base solida e un'informativa chiara, non se qualcuno aveva firmato un foglio. L'accordo dei dipendenti da solo non ti protegge."
+        },
+        {
+          "q": "Da dove vengono questi importi?",
+          "a": "Da provvedimenti reali delle autorità di protezione dati e dalle norme nazionali, non da stime. Ogni scheda riporta la fonte e il caso, così puoi risalire al documento. È una risorsa informativa, non una consulenza legale: prima di attivare un sistema fai verificare la tua situazione da un professionista."
+        },
+        {
+          "q": "Come abbasso il rischio di prendere una multa?",
+          "a": "Raccogliendo il minimo che ti serve davvero: la posizione al momento della timbratura, non un tracciamento continuo, con un'informativa firmata e una base diversa dal consenso. È esattamente come è stato sviluppato GeoTapp, e il generatore di informativa qui tra le risorse ti prepara il documento da far firmare."
+        }
+      ]
+    }
   },
   "indiceSorveglianza": {
     "metaTitle": "Indice della sorveglianza sul lavoro in Europa: la classifica dei 39 Paesi",
@@ -1119,7 +1210,36 @@
     "colSanzione": "Sanzione massima",
     "scheda": "Scheda",
     "metodologiaTitolo": "Come è calcolato l'indice",
-    "metodologia": "L'indice (0-100) misura quanti adempimenti sul monitoraggio dei lavoratori sono obbligatori in quel Paese: punteggio = adempimenti obbligatori + metà di quelli condizionali, sul totale. Più alto = quadro più stringente per chi vuole tracciare. Dati derivati dalle schede-paese verificate alla fonte; misura l'onere di compliance, non la 'libertà'."
+    "metodologia": "L'indice (0-100) misura quanti adempimenti sul monitoraggio dei lavoratori sono obbligatori in quel Paese: punteggio = adempimenti obbligatori + metà di quelli condizionali, sul totale. Più alto = quadro più stringente per chi vuole tracciare. Dati derivati dalle schede-paese verificate alla fonte; misura l'onere di compliance, non la 'libertà'.",
+    "faq": {
+      "title": "Domande frequenti",
+      "items": [
+        {
+          "q": "Cosa misura l'indice della sorveglianza sul lavoro?",
+          "a": "Quanto è severo il quadro di ogni Paese sul monitoraggio dei lavoratori: numero di adempimenti obbligatori, passaggi richiesti prima di accendere un sistema e peso delle sanzioni. Più alto è il punteggio, più cose devi mettere in ordine prima di usare GPS o controlli sui dipendenti in quel Paese."
+        },
+        {
+          "q": "Un punteggio alto vuol dire che lì il GPS è vietato?",
+          "a": "No, vuol dire che serve più attenzione, non che sia proibito. Quasi ovunque in Europa il GPS sul lavoro si può usare, a patto di farlo per organizzare e provare il lavoro e non per sorvegliare la persona. Un indice alto ti dice solo che gli adempimenti sono più pesanti e che improvvisare costa caro."
+        },
+        {
+          "q": "Da dove vengono i dati della classifica?",
+          "a": "Dai 39 dossier per Paese che trovi sul sito, costruiti su norme nazionali e provvedimenti reali delle autorità. La classifica li sintetizza in un punteggio confrontabile; cliccando un Paese arrivi alla scheda con gli adempimenti, l'autorità competente e le fonti."
+        },
+        {
+          "q": "Perché Paesi vicini hanno punteggi così diversi?",
+          "a": "Perché il GDPR fissa la cornice ma ogni Stato ci mette le sue regole sopra, e proprio sul controllo dei lavoratori le differenze sono nette: dove serve l'accordo sindacale, dove basta l'informativa, dove l'autorità è più aggressiva. È il motivo per cui dare per scontate le regole di casa, oltre confine, è l'errore che fa scattare le multe."
+        },
+        {
+          "q": "Ogni quanto è aggiornata?",
+          "a": "Le schede riportano la data di verifica e vengono riviste quando cambiano le norme o escono nuovi provvedimenti. È una risorsa informativa, non una consulenza legale: prima di attivare un sistema fai controllare la tua situazione da un professionista."
+        },
+        {
+          "q": "Come uso la classifica se mando squadre all'estero?",
+          "a": "Parti dal Paese dove andranno a lavorare, non dal tuo: valgono le regole di lì. Guarda il punteggio per capire quanto lavoro ti aspetta, poi apri la scheda per gli adempimenti precisi e prepara l'informativa da far firmare prima della trasferta."
+        }
+      ]
+    }
   },
   "attribuzione": {
     "datiVerificati": "Dati raccolti e verificati da GeoTapp.",

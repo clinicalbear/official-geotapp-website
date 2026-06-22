@@ -58,7 +58,40 @@
       "generatore": {
         "title": "Generador de aviso GPS",
         "desc": "Crea tu modelo de aviso de privacidad GPS con tu logotipo, conforme al RGPD. Gratis, en tu navegador."
+      },
+      "dossier": {
+        "title": "Dossier de cumplimiento",
+        "desc": "Lo que GeoTapp hace y no hace, con el RGPD, el Estatuto y los límites dichos con claridad."
       }
+    },
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "items": [
+        {
+          "q": "¿Los recursos son gratuitos?",
+          "a": "Sí, todos. Los mapas, las calculadoras, el generador de información de privacidad y los dosieres de país son de uso gratuito. Es nuestra forma de compartir lo que hemos estudiado sobre la monitorización de trabajadores, aunque nunca llegues a ser cliente."
+        },
+        {
+          "q": "¿Tengo que registrarme o dejar mi correo para usarlos?",
+          "a": "No. Abres la herramienta y la usas. El generador de información de privacidad funciona dentro de tu navegador y no envía tus datos a ninguna parte; las demás herramientas no piden cuenta. Si quieres mantenerte al día puedes dejarnos tu correo, pero es decisión tuya, no un peaje."
+        },
+        {
+          "q": "¿Puedo fiarme de la información legal de aquí?",
+          "a": "Está construida sobre la legislación nacional y decisiones reales de las autoridades, con la fuente indicada y una fecha de verificación. Dicho esto, sigue siendo un recurso informativo, no asesoramiento legal: antes de activar un sistema de monitorización, haz que un profesional revise tu situación."
+        },
+        {
+          "q": "¿Puedo usar estas herramientas en mi propio sitio?",
+          "a": "Sí. El mapa de GPS para trabajadores se puede incrustar con el código de su página, y los recursos se pueden citar enlazando la fuente. Si llevas un blog del sector o asesoras a empresas, también están pensados para eso."
+        },
+        {
+          "q": "¿Solo sirven si uso GeoTapp?",
+          "a": "No, se sostienen por sí solos. Los creamos para que cualquiera que envíe gente a trabajar fuera entienda qué hace falta para cumplir, use GeoTapp o no. Si luego quieres un sistema ya preparado para registrar la ubicación solo en el fichaje y no de forma continua, está aquí, pero los recursos son útiles en cualquier caso."
+        },
+        {
+          "q": "¿Para quién son?",
+          "a": "Para cualquiera con equipos trabajando fuera de la oficina: empresas de limpieza, instaladores, seguridad, mantenimiento, construcción. Cualquiera que tenga que demostrar dónde y cuándo se hizo un trabajo, y quiera hacerlo sin convertir a sus empleados en puntos en un mapa todo el día."
+        }
+      ]
     }
   },
   "footer": {
@@ -1018,7 +1051,7 @@
     "cta_note": "Sin permanencia. Sin contrato. Configuramos sobre tu caso real."
   },
   "features": {
-    "title": "Power Under the Hood.",
+    "title": "Potencia bajo el capó.",
     "subtitle": "No construimos juguetes. GeoTapp es una plataforma empresarial diseñada para escalar. Estas son las tecnologías que hacen la magia posible.",
     "gps_title": "Seguimiento GPS y Mapas Geográficos",
     "gps_desc": "Sabe dónde está tu equipo, en tiempo real. Nuestro mapa en vivo muestra cada fichaje con coordenadas GPS, validación de geofencing y protección anti-spoofing. Los gerentes ven quién está en el lugar de un vistazo, sin llamadas, sin suposiciones.",
@@ -1089,7 +1122,36 @@
     "disclaimer": "Este es un recurso informativo, no un asesoramiento jurídico. Antes de activar un sistema de control, haz que un profesional revise tu situación.",
     "ctaTitolo": "¿Quieres un sistema que ya cumpla la normativa?",
     "ctaTesto": "GeoTapp registra la ubicación solo al fichar, no de forma continua, y genera la información que hay que firmar. Pruébalo gratis.",
-    "ctaBottone": "Prueba GeoTapp gratis"
+    "ctaBottone": "Prueba GeoTapp gratis",
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "items": [
+        {
+          "q": "¿Puedo usar el GPS para vigilar a mi equipo mientras trabaja?",
+          "a": "El GPS en el trabajo es legal en casi toda Europa, con una condición: tiene que servir para organizar y demostrar el trabajo, no para vigilar a la persona. Lo que cuenta es el cómo. Registrar la ubicación en el fichaje, cuando alguien abre y cierra un servicio, es algo muy distinto de seguirlo en tiempo real todo el día. Lo primero suele estar bien cuando los papeles están en regla; lo segundo casi nunca lo está."
+        },
+        {
+          "q": "¿Se aplican las normas de mi país o las del país donde envío al equipo?",
+          "a": "Las del país donde se realiza el trabajo. Si tu empresa está en Irlanda pero la obra está en Francia, sigues las normas francesas, aunque el equipo solo vaya a estar allí dos semanas. Por eso esta página te pide elegir primero el destino: las obligaciones cambian de un Estado a otro, y lo que basta en casa puede quedarse corto al cruzar la frontera."
+        },
+        {
+          "q": "¿Necesito el consentimiento del trabajador?",
+          "a": "El consentimiento rara vez es la vía correcta, y eso pilla a mucha gente. En una relación laboral se considera que el consentimiento no se da libremente, porque quien se niega teme las consecuencias, así que los reguladores prefieren otras bases: el interés legítimo de la empresa o una obligación contractual, junto con una información clara de privacidad. En varios países también necesitas un paso previo con el sindicato o un acuerdo de empresa antes de activar nada."
+        },
+        {
+          "q": "¿Puedo rastrear la ubicación en tiempo real, durante toda la jornada?",
+          "a": "Eso es exactamente lo que provoca las multas. El rastreo continuo se considera desproporcionado en casi todas partes: recoges mucho más de lo que necesitas para pagar las horas o demostrar un servicio. La regla práctica es recoger el mínimo, la ubicación en el momento que importa, no un hilo que sigue a la persona de la mañana a la noche."
+        },
+        {
+          "q": "¿Qué riesgo corro si activo un sistema sin cumplir las normas?",
+          "a": "Depende del país, pero las multas del RGPD llegan a cifras que ninguna pequeña empresa quiere ver, y en algunos Estados se suman consecuencias en el ámbito laboral. Aun así, el problema real a menudo no es la multa: es que los datos recogidos de forma incorrecta se vuelven inútiles justo cuando los necesitas, en un conflicto o frente a un cliente que discute la factura. Cada ficha de país muestra la sanción máxima real y los casos registrados."
+        },
+        {
+          "q": "¿Es GeoTapp un sistema de vigilancia?",
+          "a": "No, y se diseñó precisamente para no serlo. La herramienta registra la ubicación solo en el fichaje, cuando alguien abre o cierra un servicio, nunca de forma continua, y genera la información de privacidad para que la firmen. Está para demostrar qué se hizo y dónde, no para vigilar a las personas. Esa es la diferencia entre la prueba del trabajo y una correa."
+        }
+      ]
+    }
   },
   "sanzioniGps": {
     "metaTitle": "Calculadora de sanciones GPS: cuánto te arriesgas al monitorizar trabajadores, país por país",
@@ -1106,7 +1168,36 @@
     "espostoUno": "Te falta {n} obligación de {tot}: estás expuesto hasta",
     "espostoMulti": "Te faltan {n} obligaciones de {tot}: estás expuesto hasta",
     "inRegola": "No falta ninguna obligación: vas por buen camino.",
-    "vediScheda": "Abrir la ficha completa del país: {paese}"
+    "vediScheda": "Abrir la ficha completa del país: {paese}",
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "items": [
+        {
+          "q": "¿Cuál es el riesgo real si el GPS no cumple las normas?",
+          "a": "Depende del país y de lo que haya fallado, pero las multas del RGPD no son simbólicas: alcanzan un porcentaje de la facturación que puede tumbar a una pequeña empresa, y en varios Estados se suman consecuencias en el ámbito laboral. Elige el destino arriba y verás la cifra máxima real, con el caso del que procede."
+        },
+        {
+          "q": "¿Las multas del RGPD afectan de verdad a las pequeñas empresas?",
+          "a": "Sí, y la idea de que los reguladores solo van a por los grandes es una de las creencias que más cara sale. Los casos recogidos en cada ficha de país incluyen negocios de un puñado de personas, multados precisamente por monitorizar a su plantilla sin tener los papeles en regla. El tamaño influye en el importe, no en si estás o no en la línea de tiro."
+        },
+        {
+          "q": "¿La multa es el único riesgo?",
+          "a": "No, y a menudo ni siquiera es el peor. Los datos recogidos de forma incorrecta se vuelven inútiles justo cuando los necesitas, en un conflicto con un empleado o frente a un cliente que discute una factura. Acabas con la multa que pagar y sin la prueba que creías tener."
+        },
+        {
+          "q": "¿Pueden multarme aunque los trabajadores estuvieran de acuerdo?",
+          "a": "Sí, porque en una relación laboral el consentimiento vale poco: se presume que quien lo da no es realmente libre de negarse. Los reguladores miran si el tratamiento fue proporcionado y si tenías una base sólida y una información de privacidad clara, no si alguien firmó un papel. El acuerdo de los trabajadores por sí solo no te protege."
+        },
+        {
+          "q": "¿De dónde salen estas cifras?",
+          "a": "De decisiones reales de las autoridades de protección de datos y de la legislación nacional, no de estimaciones. Cada ficha indica la fuente y el caso, para que puedas remontarte al documento. Es un recurso informativo, no asesoramiento legal: antes de activar un sistema, haz que un profesional revise tu situación."
+        },
+        {
+          "q": "¿Cómo reduzco el riesgo de multa?",
+          "a": "Recogiendo el mínimo imprescindible que de verdad necesitas: la ubicación en el fichaje, no rastreo continuo, con una información de privacidad firmada y una base distinta del consentimiento. Así es exactamente como se construyó GeoTapp, y el generador de información de privacidad que tienes aquí en los recursos prepara el documento para que lo firmen."
+        }
+      ]
+    }
   },
   "indiceSorveglianza": {
     "metaTitle": "Índice de vigilancia laboral en Europa: la clasificación de los 39 países",
@@ -1119,7 +1210,36 @@
     "colSanzione": "Sanción máxima",
     "scheda": "Ficha",
     "metodologiaTitolo": "Cómo se calcula el índice",
-    "metodologia": "El índice (0-100) mide cuántas obligaciones de monitorización de trabajadores son obligatorias en ese país: puntuación = obligaciones + mitad de las condicionales, sobre el total. Más alto = marco más estricto para quien quiere rastrear. Datos derivados de las fichas-país verificadas en la fuente; mide la carga de cumplimiento, no la 'libertad'."
+    "metodologia": "El índice (0-100) mide cuántas obligaciones de monitorización de trabajadores son obligatorias en ese país: puntuación = obligaciones + mitad de las condicionales, sobre el total. Más alto = marco más estricto para quien quiere rastrear. Datos derivados de las fichas-país verificadas en la fuente; mide la carga de cumplimiento, no la 'libertad'.",
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "items": [
+        {
+          "q": "¿Qué mide el índice de vigilancia laboral?",
+          "a": "Lo estricto que es el marco de cada país sobre la monitorización de trabajadores: el número de obligaciones imprescindibles, los pasos exigidos antes de activar un sistema y el peso de las sanciones. Cuanto más alta es la puntuación, más cosas tienes que dejar en regla antes de usar el GPS o cualquier monitorización de plantilla en ese país."
+        },
+        {
+          "q": "¿Una puntuación alta significa que allí el GPS está prohibido?",
+          "a": "No, significa que hace falta más cuidado, no que esté prohibido. En casi toda Europa el GPS en el trabajo está permitido, siempre que se use para organizar y demostrar el trabajo y no para vigilar a la persona. Un índice alto solo te dice que las obligaciones son más pesadas y que improvisar sale caro."
+        },
+        {
+          "q": "¿De dónde salen los datos del ranking?",
+          "a": "De los 39 dosieres de país del sitio, construidos sobre la legislación nacional y decisiones reales de las autoridades. El ranking los resume en una puntuación comparable; haz clic en un país y llegas a la ficha con las obligaciones, la autoridad competente y las fuentes."
+        },
+        {
+          "q": "¿Por qué países vecinos puntúan de forma tan distinta?",
+          "a": "Porque el RGPD marca el marco pero cada Estado añade sus propias normas encima, y en la monitorización de trabajadores las diferencias son grandes: dónde hace falta un acuerdo con el sindicato, dónde basta una información de privacidad, dónde la autoridad es más agresiva. Por eso dar por hechas las normas de tu país al cruzar la frontera es el error que provoca las multas."
+        },
+        {
+          "q": "¿Con qué frecuencia se actualiza?",
+          "a": "Las fichas llevan la fecha de verificación y se revisan cuando cambia la ley o salen nuevas decisiones. Es un recurso informativo, no asesoramiento legal: antes de activar un sistema, haz que un profesional revise tu situación."
+        },
+        {
+          "q": "¿Cómo uso el ranking si envío equipos al extranjero?",
+          "a": "Parte del país donde van a trabajar, no del tuyo: las normas que se aplican son las de allí. Mira la puntuación para calcular cuánto trabajo tienes por delante, luego abre la ficha para las obligaciones exactas y prepara la información de privacidad para que se firme antes del viaje."
+        }
+      ]
+    }
   },
   "attribuzione": {
     "datiVerificati": "Datos recopilados y verificados por GeoTapp.",

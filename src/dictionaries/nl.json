@@ -58,7 +58,40 @@
       "generatore": {
         "title": "GPS-verklaring-generator",
         "desc": "Maak uw voorbeeld van een GPS-privacyverklaring met uw logo, AVG-conform. Gratis, in uw browser."
+      },
+      "dossier": {
+        "title": "Compliancedossier",
+        "desc": "Wat GeoTapp wel en niet doet, met de AVG, medezeggenschap en grenzen die helder benoemd zijn."
       }
+    },
+    "faq": {
+      "title": "Veelgestelde vragen",
+      "items": [
+        {
+          "q": "Zijn de bronnen gratis?",
+          "a": "Ja, allemaal. De kaarten, de rekentools, de generator voor privacyverklaringen en de landendossiers zijn gratis te gebruiken. Zo delen we wat we hebben bestudeerd over het volgen van werknemers, ook als je nooit klant wordt."
+        },
+        {
+          "q": "Moet ik me aanmelden of mijn e-mail achterlaten om ze te gebruiken?",
+          "a": "Nee. Je opent de tool en gebruikt hem. De generator voor privacyverklaringen draait binnen je browser en stuurt je gegevens nergens heen; de andere tools vragen geen account. Wil je op de hoogte blijven, dan kun je je e-mail achterlaten, maar dat is jouw keuze, geen tol."
+        },
+        {
+          "q": "Kan ik de juridische informatie hier vertrouwen?",
+          "a": "Ze is opgebouwd uit nationale wetgeving en echte beslissingen van de autoriteiten, met de bron erbij en een verificatiedatum. Toch blijft het een informatieve bron, geen juridisch advies: laat je situatie door een professional nakijken voordat je een toezichtsysteem aanzet."
+        },
+        {
+          "q": "Mag ik deze tools op mijn eigen site gebruiken?",
+          "a": "Ja. De kaart met gps voor werknemers kun je insluiten met de code op de bijbehorende pagina, en de bronnen mag je citeren door naar de bron te linken. Heb je een vakblog of adviseer je bedrijven, dan zijn ze ook daarvoor bedoeld."
+        },
+        {
+          "q": "Zijn ze alleen nuttig als ik GeoTapp gebruik?",
+          "a": "Nee, ze staan op zichzelf. We hebben ze gebouwd zodat iedereen die mensen het veld in stuurt begrijpt wat conformiteit vraagt, met of zonder GeoTapp. Wil je daarna een systeem dat al is ingesteld om de locatie alleen bij het inklokken vast te leggen en niet continu, dan is het er, maar de bronnen zijn hoe dan ook nuttig."
+        },
+        {
+          "q": "Voor wie zijn ze bedoeld?",
+          "a": "Voor iedereen met teams die buiten de deur werken: schoonmaakbedrijven, installateurs, beveiliging, onderhoud, bouw. Iedereen die moet bewijzen waar en wanneer een klus is gedaan, en dat wil doen zonder werknemers de hele dag in stipjes op een kaart te veranderen."
+        }
+      ]
     }
   },
   "footer": {
@@ -186,7 +219,7 @@
       "link": "Ontdek GeoTapp Verifier"
     },
     "core": {
-      "badge": "GeoTapp Platform",
+      "badge": "GeoTapp-platform",
       "title": "Eén systeem, drie niveaus van zekerheid",
       "subtitle": "TimeTracker registreert in het veld. Flow organiseert op kantoor. Verifier bevestigt dat alles overeenkomt.",
       "features": [
@@ -261,7 +294,7 @@
     },
     "flow_mockup": {
       "pipeline_title": "Verkooppijplijn",
-      "month": "December 2025",
+      "month": "december 2025",
       "quote_name": "Offerte A. Jansen",
       "quote_approved": "Vandaag om 09:30 goedgekeurd"
     }
@@ -378,7 +411,7 @@
       "plus_vat": "+ BTW"
     },
     "bundle": {
-      "title": "Bundle Calculator",
+      "title": "Bundelcalculator",
       "subtitle": "Bereken uw besparing met het Flow + TimeTracker Bundle",
       "employees": "Aantal medewerkers",
       "billingCycle": "Factureringscyclus",
@@ -1018,7 +1051,7 @@
     "cta_note": "Geen binding. Geen contract. We configureren op uw echte situatie."
   },
   "features": {
-    "title": "Power Under the Hood.",
+    "title": "Kracht onder de motorkap.",
     "subtitle": "We bouwen geen speelgoed. GeoTapp is een enterprise platform gebouwd om te schalen. Dit zijn de technologieën die de magie mogelijk maken.",
     "gps_title": "GPS-tracking & Geografische Kaarten",
     "gps_desc": "Weet waar je team is, in realtime. Onze live kaart toont elke inklok met GPS-coördinaten, geofencing-validatie en anti-spoofing-bescherming. Managers zien in één oogopslag wie op locatie is, geen telefoontjes, geen giswerk.",
@@ -1089,7 +1122,36 @@
     "disclaimer": "Dit is een informatieve bron, geen juridisch advies. Laat je situatie door een professional controleren voordat je een monitoringsysteem activeert.",
     "ctaTitolo": "Wil je een systeem dat al voldoet aan de regels?",
     "ctaTesto": "GeoTapp registreert de locatie alleen bij het inklokken, niet continu, en genereert de te ondertekenen verklaring. Probeer het gratis.",
-    "ctaBottone": "Probeer GeoTapp gratis"
+    "ctaBottone": "Probeer GeoTapp gratis",
+    "faq": {
+      "title": "Veelgestelde vragen",
+      "items": [
+        {
+          "q": "Mag ik gps gebruiken om mijn ploeg in de gaten te houden terwijl ze werken?",
+          "a": "Gps op het werk is bijna overal in Europa toegestaan, op één voorwaarde: het moet het werk organiseren en bewijzen, niet de persoon bekijken. Het gaat om het hoe. De locatie vastleggen bij het inklokken, op het moment dat iemand een klus opent en afsluit, is iets heel anders dan iemand de hele dag in realtime volgen. Het eerste mag meestal als de papieren in orde zijn, het tweede vrijwel nooit."
+        },
+        {
+          "q": "Gelden de regels van mijn eigen land, of die van het land waar ik het team naartoe stuur?",
+          "a": "Het land waar het werk plaatsvindt. Zit je bedrijf in Ierland maar ligt de werf in Frankrijk, dan volg je de Franse regels, ook al is de ploeg er maar voor twee weken. Daarom vraagt deze pagina je eerst de bestemming te kiezen: de verplichtingen verschuiven van land tot land, en wat thuis volstaat kan over de grens tekortschieten."
+        },
+        {
+          "q": "Heb ik de toestemming van de werknemer nodig?",
+          "a": "Toestemming is zelden de juiste weg, en daar lopen veel mensen tegenaan. In een arbeidsrelatie geldt toestemming als niet vrij gegeven, omdat wie weigert bang is voor de gevolgen. Toezichthouders geven daarom de voorkeur aan andere grondslagen: het gerechtvaardigd belang van het bedrijf of een contractuele plicht, samen met een heldere privacyverklaring. In verschillende landen heb je bovendien een stap met de vakbond of een ondernemingsovereenkomst nodig voordat je iets aanzet."
+        },
+        {
+          "q": "Mag ik de locatie de hele dag in realtime volgen?",
+          "a": "Dat is precies wat de boetes uitlokt. Continue tracking wordt vrijwel overal als onevenredig beschouwd: je legt veel meer vast dan je nodig hebt om de uren uit te betalen of een klus te bewijzen. De praktische regel is om het minimum te verzamelen, de locatie op het moment dat telt, en niet een spoor dat de persoon van 's ochtends tot 's avonds achtervolgt."
+        },
+        {
+          "q": "Wat riskeer ik als ik een systeem aanzet zonder dat het conform is?",
+          "a": "Dat hangt van het land af, maar AVG-boetes lopen op tot bedragen die geen klein bedrijf wil zien, en in sommige landen komen er arbeidsrechtelijke gevolgen bovenop. Het echte probleem is vaak niet de boete: het is dat data die op de verkeerde manier is verzameld nutteloos wordt net wanneer je het nodig hebt, in een geschil of tegenover een klant die de rekening betwist. Elke landenfiche toont de werkelijke maximumboete en de gevallen die op de teller staan."
+        },
+        {
+          "q": "Is GeoTapp een bewakingssysteem?",
+          "a": "Nee, en het is bewust zo gebouwd dat het dat niet is. De tool legt de locatie alleen vast bij het inklokken, wanneer iemand een klus opent of afsluit, nooit continu, en hij maakt de privacyverklaring aan die ze kunnen ondertekenen. Hij is er om te bewijzen wat er gedaan is en waar, niet om mensen te bekijken. Dat is het verschil tussen werkbewijs en een leiband."
+        }
+      ]
+    }
   },
   "sanzioniGps": {
     "metaTitle": "GPS-boetecalculator: hoeveel je riskeert bij het monitoren van werknemers, land voor land",
@@ -1106,7 +1168,36 @@
     "espostoUno": "Je mist {n} verplichting van de {tot}: je bent blootgesteld tot",
     "espostoMulti": "Je mist {n} verplichtingen van de {tot}: je bent blootgesteld tot",
     "inRegola": "Geen verplichting ontbreekt: je zit goed.",
-    "vediScheda": "Open de volledige landpagina: {paese}"
+    "vediScheda": "Open de volledige landpagina: {paese}",
+    "faq": {
+      "title": "Veelgestelde vragen",
+      "items": [
+        {
+          "q": "Wat riskeer ik echt als de gps niet conform is?",
+          "a": "Dat hangt af van het land en van wat er misging, maar AVG-boetes zijn niet symbolisch: ze bereiken een percentage van de omzet dat een klein bedrijf op de knieën kan dwingen, en in verschillende landen komen er arbeidsrechtelijke gevolgen bovenop. Kies hierboven de bestemming en je ziet het werkelijke maximumbedrag, met het geval waar het uit komt."
+        },
+        {
+          "q": "Treffen AVG-boetes echt ook kleine bedrijven?",
+          "a": "Ja, en het idee dat toezichthouders alleen achter de grote spelers aangaan is een van de overtuigingen die het meest kost. De gevallen op elke landenfiche omvatten bedrijfjes van een handvol mensen, beboet juist omdat ze personeel volgden zonder de papieren op orde. De omvang bepaalt het bedrag, niet of je in de vuurlinie ligt."
+        },
+        {
+          "q": "Is de boete het enige risico?",
+          "a": "Nee, en vaak is het niet eens het ergste. Data die op de verkeerde manier is verzameld wordt nutteloos net wanneer je het nodig hebt, in een geschil met een werknemer of tegenover een klant die een factuur betwist. Je blijft achter met de boete én zonder het bewijs waarvan je dacht dat je het had."
+        },
+        {
+          "q": "Kan ik beboet worden ook als de werknemers akkoord gingen?",
+          "a": "Ja, want in een arbeidsrelatie telt toestemming weinig: er wordt aangenomen dat wie ze geeft niet echt vrij is om te weigeren. Toezichthouders kijken of de verwerking evenredig was en of je een stevige grondslag en een heldere privacyverklaring had, niet of iemand een papiertje heeft getekend. Het akkoord van de werknemers op zich beschermt je niet."
+        },
+        {
+          "q": "Waar komen deze cijfers vandaan?",
+          "a": "Uit echte beslissingen van gegevensbeschermingsautoriteiten en uit nationale wetgeving, niet uit schattingen. Elke fiche geeft de bron en het geval, zodat je het kunt herleiden tot het document. Dit is een informatieve bron, geen juridisch advies: laat je situatie door een professional nakijken voordat je een systeem aanzet."
+        },
+        {
+          "q": "Hoe verlaag ik het risico op een boete?",
+          "a": "Door alleen het strikt nodige te verzamelen: de locatie bij het inklokken, geen continue tracking, met een ondertekende privacyverklaring en een andere grondslag dan toestemming. Precies zo is GeoTapp gebouwd, en de generator voor privacyverklaringen hier bij de bronnen maakt het document klaar om te laten ondertekenen."
+        }
+      ]
+    }
   },
   "indiceSorveglianza": {
     "metaTitle": "Index werknemerstoezicht in Europa: de ranglijst van 39 landen",
@@ -1119,7 +1210,36 @@
     "colSanzione": "Maximumboete",
     "scheda": "Pagina",
     "metodologiaTitolo": "Hoe de index wordt berekend",
-    "metodologia": "De index (0-100) meet hoeveel verplichtingen voor werknemersmonitoring in dat land verplicht zijn: score = verplichtingen + helft van de voorwaardelijke, gedeeld door het totaal. Hoger = strenger kader voor wie wil volgen. Data afgeleid van de brongeverifieerde landpagina's; het meet de nalevingslast, niet 'vrijheid'."
+    "metodologia": "De index (0-100) meet hoeveel verplichtingen voor werknemersmonitoring in dat land verplicht zijn: score = verplichtingen + helft van de voorwaardelijke, gedeeld door het totaal. Hoger = strenger kader voor wie wil volgen. Data afgeleid van de brongeverifieerde landpagina's; het meet de nalevingslast, niet 'vrijheid'.",
+    "faq": {
+      "title": "Veelgestelde vragen",
+      "items": [
+        {
+          "q": "Wat meet de index voor werknemerstoezicht?",
+          "a": "Hoe streng het kader van elk land is over het volgen van werknemers: het aantal verplichte verplichtingen, de stappen die nodig zijn voordat je een systeem aanzet, en het gewicht van de boetes. Hoe hoger de score, hoe meer je op orde moet hebben voordat je gps of welk personeelstoezicht dan ook in dat land gebruikt."
+        },
+        {
+          "q": "Betekent een hoge score dat gps daar verboden is?",
+          "a": "Nee, het betekent dat er meer zorg nodig is, niet dat het verboden is. Bijna overal in Europa is gps op het werk toegestaan, zolang het wordt gebruikt om het werk te organiseren en te bewijzen en niet om de persoon te bekijken. Een hoge index zegt je alleen dat de verplichtingen zwaarder zijn en dat improviseren duur wordt."
+        },
+        {
+          "q": "Waar komen de gegevens van de ranglijst vandaan?",
+          "a": "Uit de 39 landendossiers op de site, opgebouwd uit nationale wetgeving en echte beslissingen van de autoriteiten. De ranglijst destilleert ze tot een vergelijkbare score; klik op een land en je komt bij de fiche met de verplichtingen, de bevoegde autoriteit en de bronnen."
+        },
+        {
+          "q": "Waarom scoren buurlanden zo verschillend?",
+          "a": "Omdat de AVG het kader bepaalt maar elk land er zijn eigen regels bovenop legt, en bij het volgen van werknemers zijn de verschillen scherp: waar een vakbondsovereenkomst nodig is, waar een privacyverklaring volstaat, waar de autoriteit feller optreedt. Daarom is uitgaan van je eigen thuisregels over de grens de fout die de boetes uitlokt."
+        },
+        {
+          "q": "Hoe vaak wordt het bijgewerkt?",
+          "a": "De fiches dragen de verificatiedatum en worden herzien wanneer de wet verandert of er nieuwe beslissingen verschijnen. Dit is een informatieve bron, geen juridisch advies: laat je situatie door een professional nakijken voordat je een systeem aanzet."
+        },
+        {
+          "q": "Hoe gebruik ik de ranglijst als ik teams naar het buitenland stuur?",
+          "a": "Begin bij het land waar ze gaan werken, niet bij het jouwe: de regels daar zijn die welke gelden. Kijk naar de score om in te schatten hoeveel werk je voor de boeg hebt, open dan de fiche voor de precieze verplichtingen en maak de privacyverklaring klaar om te laten ondertekenen vóór het vertrek."
+        }
+      ]
+    }
   },
   "attribuzione": {
     "datiVerificati": "Gegevens samengesteld en geverifieerd door GeoTapp.",

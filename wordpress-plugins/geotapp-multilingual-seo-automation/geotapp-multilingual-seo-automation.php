@@ -43,7 +43,7 @@ function gtmsa_default_settings() {
         'target_languages' => 'en,de,fr,es,pt,nl,sv,da,nb,ru',
         'deepl_api_key' => '',
         'deepl_api_url' => 'https://api.deepl.com/v2/translate',
-        'auto_translate_on_publish' => 1,
+        'auto_translate_on_publish' => 0,
         'sync_updates' => 0,
         'publish_translations' => 1,
         'translate_slug' => 1,
@@ -268,6 +268,96 @@ function gtmsa_register_rest_lang_field() {
     ]);
 }
 add_action('rest_api_init', 'gtmsa_register_rest_lang_field');
+
+/**
+ * Espone un "gruppo di traduzione" sul REST API. I publisher passano la STESSA
+ * chiave `gtmsa_tgroup` su tutte le versioni linguistiche di uno stesso articolo
+ * (es. "whatshot-2026-06-20-01") nello stesso POST che crea ognuna; GTMSA collega
+ * automaticamente le versioni come traduzioni Polylang, senza step PHP manuali.
+ * Risolve il linking delle traduzioni una volta per tutte (vedi gtmsa_lang sopra,
+ * che imposta solo la lingua del singolo post).
+ */
+function gtmsa_register_rest_tgroup_field() {
+    if (!gtmsa_is_polylang_ready() || !function_exists('register_rest_field')) {
+        return;
+    }
+    register_rest_field('post', 'gtmsa_tgroup', [
+        'get_callback' => function ($post_arr) {
+            $v = get_post_meta(intval($post_arr['id']), '_gtmsa_tgroup', true);
+            return ($v !== '') ? $v : null;
+        },
+        'update_callback' => function ($value, $post) {
+            $key = sanitize_text_field((string) $value);
+            if ($key === '') {
+                delete_post_meta($post->ID, '_gtmsa_tgroup');
+                return true;
+            }
+            update_post_meta($post->ID, '_gtmsa_tgroup', $key);
+            // Il campo gtmsa_lang viene applicato prima (registrato prima), quindi
+            // a questo punto la lingua del post e' gia' impostata.
+            gtmsa_link_translation_group($key);
+            return true;
+        },
+        'schema' => [
+            'description' => 'Chiave gruppo traduzione: i post con la stessa chiave vengono collegati come traduzioni Polylang',
+            'type'        => ['string', 'null'],
+            'context'     => ['view', 'edit'],
+        ],
+    ]);
+}
+add_action('rest_api_init', 'gtmsa_register_rest_tgroup_field');
+
+/**
+ * Collega come traduzioni Polylang tutti i post che condividono la stessa chiave
+ * `_gtmsa_tgroup`. Idempotente: ricostruisce la mappa {lingua: post_id} e la salva.
+ * Considera bozze/programmati/pubblicati cosi' funziona anche su post `future`.
+ */
+function gtmsa_link_translation_group($key) {
+    if (!gtmsa_is_polylang_ready() || $key === '' || !function_exists('pll_save_post_translations')) {
+        return;
+    }
+    $q = new WP_Query([
+        'post_type'      => 'post',
+        'post_status'    => ['publish', 'future', 'draft', 'pending', 'private'],
+        'posts_per_page' => 50,
+        'fields'         => 'ids',
+        'no_found_rows'  => true,
+        'meta_key'       => '_gtmsa_tgroup',
+        'meta_value'     => $key,
+    ]);
+    if (empty($q->posts)) {
+        return;
+    }
+    $map = [];
+    foreach ($q->posts as $pid) {
+        $lang = pll_get_post_language((int) $pid);
+        if ($lang) {
+            $map[$lang] = (int) $pid; // una versione per lingua
+        }
+    }
+    if (!empty($map)) {
+        pll_save_post_translations($map);
+    }
+}
+
+/**
+ * Rete di sicurezza: se un post con chiave gruppo viene salvato (anche fuori dal
+ * flusso REST), ricollega il gruppo. Evita ricorsione via flag statico.
+ */
+function gtmsa_relink_tgroup_on_save($post_id) {
+    static $running = false;
+    if ($running || wp_is_post_revision($post_id) || wp_is_post_autosave($post_id)) {
+        return;
+    }
+    $key = get_post_meta($post_id, '_gtmsa_tgroup', true);
+    if ($key === '') {
+        return;
+    }
+    $running = true;
+    gtmsa_link_translation_group($key);
+    $running = false;
+}
+add_action('save_post_post', 'gtmsa_relink_tgroup_on_save', 1000, 1);
 
 
 

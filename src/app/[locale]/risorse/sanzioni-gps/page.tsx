@@ -7,6 +7,7 @@ import { localizePath } from '@/lib/i18n/locale-routing';
 import { getPaesiSeverita, localizePaesiSeverita } from '@/lib/risorse/gps-lavoratori-ue/derive';
 import CalcolatoreSanzioniClient from '@/components/risorse/CalcolatoreSanzioniClient';
 import RisorsaAttribuzione from '@/components/risorse/RisorsaAttribuzione';
+import RisorsaFaq from '@/components/risorse/RisorsaFaq';
 
 /**
  * Tool "Calcolatore sanzioni GPS": scegli un Paese, vedi la sanzione massima reale
@@ -80,6 +81,8 @@ export default async function CalcolatoreSanzioniPage({
         <p className="text-slate-600 text-lg leading-relaxed max-w-2xl mx-auto">{dict.intro}</p>
       </header>
       <CalcolatoreSanzioniClient paesi={paesi} labels={labels} hrefPerIso={hrefPerIso} />
+
+      <RisorsaFaq title={dict.faq.title} items={dict.faq.items} />
 
       <RisorsaAttribuzione
         pageUrl={`https://geotapp.com${localizePath('/risorse/sanzioni-gps/', resolvedLocale)}`}

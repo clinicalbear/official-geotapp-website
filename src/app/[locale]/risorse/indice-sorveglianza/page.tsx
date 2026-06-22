@@ -9,6 +9,7 @@ import IndiceSorveglianzaClient, {
   type IndiceRow,
 } from '@/components/risorse/IndiceSorveglianzaClient';
 import RisorsaAttribuzione from '@/components/risorse/RisorsaAttribuzione';
+import RisorsaFaq from '@/components/risorse/RisorsaFaq';
 
 /**
  * Tool "Indice della sorveglianza sul lavoro in Europa": classifica dei 39 Paesi
@@ -82,6 +83,8 @@ export default async function IndiceSorveglianzaPage({
         <p className="text-sm font-semibold text-slate-700 mb-1">{dict.metodologiaTitolo}</p>
         <p className="text-sm text-slate-500 leading-relaxed">{dict.metodologia}</p>
       </div>
+
+      <RisorsaFaq title={dict.faq.title} items={dict.faq.items} />
 
       <RisorsaAttribuzione
         pageUrl={`https://geotapp.com${localizePath('/risorse/indice-sorveglianza/', resolvedLocale)}`}

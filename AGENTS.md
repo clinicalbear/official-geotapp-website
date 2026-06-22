@@ -155,7 +155,7 @@ Money pages warmup (9 URL): `/`, `/it/`, `/it/products/geotapp-flow/`, `/it/prod
 ## Blog WordPress (proxy)
 
 - Servito su `geotapp.com/blog/` tramite middleware proxy verso `blog.geotapp.com`
-- Plugin SEO: **Zenith SEO** (proprietario, NON Yoast) — `wp-content/plugins/zenith-seo/`
+- Plugin SEO: **Yoast SEO** (attivo). ⚠️ **Zenith SEO è DISATTIVATO** (verificato 2026-06-18 via REST `/wp/v2/plugins`: Yoast `active`, Zenith `inactive`). La meta description di un post va scritta nel campo **Yoast `_yoast_wpseo_metadesc`** (non più `_zenith_*`). NB: il blog è headless — il `<meta description>` renderizzato da Next.js usa l'**excerpt** del post, non l'output Yoast; quindi un post con excerpt buono ha già una meta description live anche se il campo Yoast è vuoto (ma la dashboard SEO conta come "vuota" se Yoast è vuoto). Plugin attivi: Yoast SEO + GeoTapp Multilingual SEO Automation.
 - SFTP accesso: `su325938@access-5018990701.webspace-host.com` porta 22
 
 ### Fetch WP REST dal Worker — contratto obbligatorio

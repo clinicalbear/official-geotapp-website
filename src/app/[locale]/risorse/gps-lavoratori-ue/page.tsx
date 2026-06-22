@@ -13,6 +13,7 @@ import SelettorePaesiClient, {
   type PaeseSelettore,
 } from '@/components/risorse/SelettorePaesiClient';
 import EmbedCodeBox from '@/components/risorse/EmbedCodeBox';
+import RisorsaFaq from '@/components/risorse/RisorsaFaq';
 
 /**
  * Pagina-selettore (landing dello strumento) della risorsa "GPS sui lavoratori in UE".
@@ -89,6 +90,7 @@ export default async function SelettorePaesiPage({
           labels={fullDict.embedStrumento}
         />
       </div>
+      <RisorsaFaq title={dict.faq.title} items={dict.faq.items} />
     </>
   );
 }

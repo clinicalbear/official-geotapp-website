@@ -58,7 +58,40 @@
       "generatore": {
         "title": "GPS-Hinweis-Generator",
         "desc": "Erstellen Sie Ihre Muster-Datenschutzerklärung für GPS mit Ihrem Logo, DSGVO-konform. Kostenlos, in Ihrem Browser."
+      },
+      "dossier": {
+        "title": "Konformitätsdossier",
+        "desc": "Was GeoTapp tut und was nicht, mit DSGVO, Mitbestimmung und klar benannten Grenzen."
       }
+    },
+    "faq": {
+      "title": "Häufige Fragen",
+      "items": [
+        {
+          "q": "Sind die Ressourcen kostenlos?",
+          "a": "Ja, alle. Die Karten, die Rechner, der Generator für die Datenschutzinformation und die Länderdossiers sind kostenlos nutzbar. So teilen wir, was wir über die Überwachung von Mitarbeitenden erarbeitet haben, auch wenn Sie nie Kunde werden."
+        },
+        {
+          "q": "Muss ich mich anmelden oder meine E-Mail hinterlassen, um sie zu nutzen?",
+          "a": "Nein. Sie öffnen das Werkzeug und nutzen es. Der Generator für die Datenschutzinformation läuft in Ihrem Browser und sendet Ihre Daten nirgendwohin; die anderen Werkzeuge verlangen kein Konto. Wenn Sie auf dem Laufenden bleiben möchten, können Sie uns Ihre E-Mail hinterlassen, aber das ist Ihre Entscheidung, keine Gebühr."
+        },
+        {
+          "q": "Kann ich den rechtlichen Informationen hier vertrauen?",
+          "a": "Sie beruhen auf nationalem Recht und echten Entscheidungen der Behörden, mit Quellenangabe und Prüfdatum. Dennoch bleiben sie eine informative Ressource, keine Rechtsberatung: Bevor Sie ein Überwachungssystem einschalten, lassen Sie Ihre Situation von einer Fachperson prüfen."
+        },
+        {
+          "q": "Darf ich diese Werkzeuge auf meiner eigenen Website nutzen?",
+          "a": "Ja. Die Karte zur GPS-Überwachung von Mitarbeitenden lässt sich mit dem Code auf ihrer Seite einbetten, und die Ressourcen dürfen zitiert werden, indem Sie die Quelle verlinken. Wenn Sie einen Branchenblog führen oder Unternehmen beraten, sind sie auch dafür gedacht."
+        },
+        {
+          "q": "Sind sie nur dann nützlich, wenn ich GeoTapp verwende?",
+          "a": "Nein, sie stehen für sich. Wir haben sie gebaut, damit jede und jeder, der Menschen ins Feld schickt, versteht, was Rechtskonformität verlangt, mit oder ohne GeoTapp. Wenn Sie danach ein System wollen, das bereits darauf ausgelegt ist, den Standort nur beim Einstempeln und nicht durchgehend zu erfassen, finden Sie es hier, aber die Ressourcen sind so oder so nützlich."
+        },
+        {
+          "q": "Für wen sind sie gedacht?",
+          "a": "Für alle mit Teams, die außerhalb des Betriebs arbeiten: Reinigungsfirmen, Monteure, Sicherheitsdienste, Wartung, Bau. Für alle, die belegen müssen, wo und wann ein Auftrag erledigt wurde, und das tun wollen, ohne Mitarbeitende den ganzen Tag in Punkte auf einer Karte zu verwandeln."
+        }
+      ]
     }
   },
   "footer": {
@@ -1018,7 +1051,7 @@
     "cta_note": "Keine Bindung. Kein Vertrag. Wir konfigurieren auf Ihren realen Fall."
   },
   "features": {
-    "title": "Power Under the Hood.",
+    "title": "Kraft unter der Haube.",
     "subtitle": "Wir bauen kein Spielzeug. GeoTapp ist eine Enterprise-Plattform, die für Skalierung gebaut wurde. Hier sind die Technologien, die die Magie möglich machen.",
     "gps_title": "GPS-Tracking & Geografische Karten",
     "gps_desc": "Wissen Sie, wo Ihr Team ist, in Echtzeit. Unsere Live-Karte zeigt jede Stempelung mit GPS-Koordinaten, Geofencing-Validierung und Anti-Spoofing-Schutz. Manager sehen auf einen Blick, wer vor Ort ist, ohne Anrufe, ohne Rätselraten.",
@@ -1089,7 +1122,36 @@
     "disclaimer": "Dies ist eine informative Ressource, keine Rechtsberatung. Bevor Sie ein Überwachungssystem aktivieren, lassen Sie Ihre Situation von einer Fachkraft prüfen.",
     "ctaTitolo": "Möchten Sie ein System, das bereits konform ist?",
     "ctaTesto": "GeoTapp erfasst den Standort nur bei der Zeiterfassung, nicht durchgehend, und erstellt die zu unterzeichnende Datenschutzerklärung. Testen Sie es kostenlos.",
-    "ctaBottone": "GeoTapp kostenlos testen"
+    "ctaBottone": "GeoTapp kostenlos testen",
+    "faq": {
+      "title": "Häufige Fragen",
+      "items": [
+        {
+          "q": "Darf ich GPS nutzen, um mein Team bei der Arbeit im Blick zu behalten?",
+          "a": "GPS am Arbeitsplatz ist in fast ganz Europa zulässig, allerdings unter einer Bedingung: Es muss die Arbeit organisieren und belegen, nicht die Person überwachen. Entscheidend ist das Wie. Den Standort beim Einstempeln zu erfassen, also wenn jemand einen Auftrag beginnt und abschließt, ist etwas ganz anderes, als die Person den ganzen Tag in Echtzeit zu verfolgen. Das Erste ist meist unproblematisch, sofern die Unterlagen stimmen; das Zweite fast nie."
+        },
+        {
+          "q": "Gelten die Regeln meines eigenen Landes oder die des Landes, in das ich das Team schicke?",
+          "a": "Es gilt das Land, in dem die Arbeit stattfindet. Wenn Ihr Unternehmen in Irland sitzt, die Baustelle aber in Frankreich liegt, folgen Sie den französischen Regeln, auch wenn das Team nur für zwei Wochen vor Ort ist. Genau deshalb sollten Sie auf dieser Seite zuerst das Zielland auswählen: Die Pflichten verschieben sich von Staat zu Staat, und was zu Hause reicht, kann jenseits der Grenze zu wenig sein."
+        },
+        {
+          "q": "Brauche ich die Einwilligung der Mitarbeitenden?",
+          "a": "Die Einwilligung ist selten der richtige Weg, und das überrascht viele. Im Arbeitsverhältnis gilt eine Einwilligung als nicht freiwillig erteilt, weil wer sie verweigert, Nachteile fürchtet. Deshalb bevorzugen die Aufsichtsbehörden andere Grundlagen: das berechtigte Interesse des Unternehmens oder eine vertragliche Pflicht, gepaart mit einer klaren Datenschutzinformation. In mehreren Ländern braucht es zudem einen Schritt mit der Gewerkschaft oder eine Betriebsvereinbarung, bevor Sie irgendetwas einschalten."
+        },
+        {
+          "q": "Darf ich den Standort in Echtzeit und den ganzen Tag verfolgen?",
+          "a": "Genau das löst die Bußgelder aus. Eine durchgehende Ortung gilt fast überall als unverhältnismäßig: Sie erfassen weit mehr, als Sie brauchen, um Stunden abzurechnen oder einen Auftrag zu belegen. Die praktische Regel lautet, das Minimum zu erheben, also den Standort genau im entscheidenden Moment, und keine Spur, die der Person von morgens bis abends folgt."
+        },
+        {
+          "q": "Welches Risiko habe ich, wenn ich ein System ohne Rechtskonformität einschalte?",
+          "a": "Das hängt vom Land ab, doch DSGVO-Bußgelder erreichen Größenordnungen, die kein kleines Unternehmen sehen möchte, und in einigen Staaten kommen arbeitsrechtliche Folgen hinzu. Das eigentliche Problem ist oft jedoch nicht das Bußgeld: Daten, die auf die falsche Weise erhoben wurden, werden genau dann nutzlos, wenn Sie sie brauchen, in einem Streitfall oder vor einem Kunden, der die Rechnung anficht. Jedes Länderblatt zeigt die tatsächliche Höchststrafe und die belegten Fälle."
+        },
+        {
+          "q": "Ist GeoTapp ein Überwachungssystem?",
+          "a": "Nein, und es wurde gezielt so gebaut, dass es keines ist. Das Werkzeug erfasst den Standort nur beim Einstempeln, wenn jemand einen Auftrag beginnt oder abschließt, niemals durchgehend, und es erstellt die Datenschutzinformation zur Unterschrift. Es dient dazu, zu belegen, was wo getan wurde, nicht dazu, Menschen zu beobachten. Das ist der Unterschied zwischen einem Arbeitsnachweis und einer Leine."
+        }
+      ]
+    }
   },
   "sanzioniGps": {
     "metaTitle": "GPS-Bußgeldrechner: wie viel Sie bei Mitarbeiterüberwachung riskieren, Land für Land",
@@ -1106,7 +1168,36 @@
     "espostoUno": "Ihnen fehlt {n} Pflicht von {tot}: Sie riskieren bis zu",
     "espostoMulti": "Ihnen fehlen {n} Pflichten von {tot}: Sie riskieren bis zu",
     "inRegola": "Keine Pflicht fehlt: Sie sind auf dem richtigen Weg.",
-    "vediScheda": "Vollständige Länderseite öffnen: {paese}"
+    "vediScheda": "Vollständige Länderseite öffnen: {paese}",
+    "faq": {
+      "title": "Häufige Fragen",
+      "items": [
+        {
+          "q": "Welches Risiko besteht wirklich, wenn GPS nicht rechtskonform ist?",
+          "a": "Das hängt vom Land ab und davon, was schiefgelaufen ist, doch DSGVO-Bußgelder sind nicht symbolisch: Sie erreichen einen Prozentsatz des Umsatzes, der ein kleines Unternehmen umwerfen kann, und in mehreren Staaten kommen arbeitsrechtliche Folgen hinzu. Wählen Sie oben das Zielland aus, dann sehen Sie die tatsächliche Höchstsumme samt dem Fall, aus dem sie stammt."
+        },
+        {
+          "q": "Treffen DSGVO-Bußgelder wirklich kleine Unternehmen?",
+          "a": "Ja, und die Vorstellung, dass die Aufsichtsbehörden nur die Großen verfolgen, ist einer der Glaubenssätze, die am teuersten zu stehen kommen. Die auf jedem Länderblatt aufgeführten Fälle umfassen auch Betriebe mit einer Handvoll Menschen, bestraft genau dafür, dass sie ihr Personal ohne ordentliche Unterlagen überwacht haben. Die Größe beeinflusst die Höhe, nicht die Frage, ob Sie in der Schusslinie stehen."
+        },
+        {
+          "q": "Ist das Bußgeld das einzige Risiko?",
+          "a": "Nein, und es ist oft nicht einmal das schlimmste. Daten, die auf die falsche Weise erhoben wurden, werden genau dann nutzlos, wenn Sie sie brauchen, in einem Streit mit einem Mitarbeitenden oder vor einem Kunden, der eine Rechnung anficht. Am Ende haben Sie das Bußgeld zu zahlen und stehen ohne den Nachweis da, den Sie zu haben glaubten."
+        },
+        {
+          "q": "Kann ich auch dann ein Bußgeld bekommen, wenn die Mitarbeitenden zugestimmt haben?",
+          "a": "Ja, denn im Arbeitsverhältnis zählt die Einwilligung wenig: Wer sie gibt, gilt als nicht wirklich frei, sie zu verweigern. Die Aufsichtsbehörden prüfen, ob die Verarbeitung verhältnismäßig war und ob Sie eine solide Grundlage und eine klare Datenschutzinformation hatten, nicht, ob jemand einen Zettel unterschrieben hat. Das Einverständnis der Mitarbeitenden allein schützt Sie nicht."
+        },
+        {
+          "q": "Woher stammen diese Zahlen?",
+          "a": "Aus echten Entscheidungen der Datenschutzbehörden und aus nationalem Recht, nicht aus Schätzungen. Jedes Blatt nennt die Quelle und den Fall, sodass Sie es bis zum Dokument zurückverfolgen können. Dies ist eine informative Ressource, keine Rechtsberatung: Bevor Sie ein System einschalten, lassen Sie Ihre Situation von einer Fachperson prüfen."
+        },
+        {
+          "q": "Wie senke ich das Risiko eines Bußgelds?",
+          "a": "Indem Sie nur das Allernötigste erheben, das Sie wirklich brauchen: den Standort beim Einstempeln, keine durchgehende Ortung, mit einer unterschriebenen Datenschutzinformation und einer anderen Grundlage als der Einwilligung. Genau so wurde GeoTapp gebaut, und der Generator für die Datenschutzinformation hier in den Ressourcen erstellt das Dokument zur Unterschrift."
+        }
+      ]
+    }
   },
   "indiceSorveglianza": {
     "metaTitle": "Index der Arbeitnehmerüberwachung in Europa: das Ranking der 39 Länder",
@@ -1119,7 +1210,36 @@
     "colSanzione": "Höchstbußgeld",
     "scheda": "Seite",
     "metodologiaTitolo": "Wie der Index berechnet wird",
-    "metodologia": "Der Index (0-100) misst, wie viele Pflichten zur Mitarbeiterüberwachung in dem Land verbindlich sind: Punktzahl = Pflichten + Hälfte der bedingten, geteilt durch das Gesamt. Höher = strengerer Rahmen für alle, die tracken wollen. Daten aus den quellengeprüften Länderseiten; gemessen wird der Compliance-Aufwand, nicht 'Freiheit'."
+    "metodologia": "Der Index (0-100) misst, wie viele Pflichten zur Mitarbeiterüberwachung in dem Land verbindlich sind: Punktzahl = Pflichten + Hälfte der bedingten, geteilt durch das Gesamt. Höher = strengerer Rahmen für alle, die tracken wollen. Daten aus den quellengeprüften Länderseiten; gemessen wird der Compliance-Aufwand, nicht 'Freiheit'.",
+    "faq": {
+      "title": "Häufige Fragen",
+      "items": [
+        {
+          "q": "Was misst der Index zur Arbeitsplatzüberwachung?",
+          "a": "Wie streng der Rahmen jedes Landes bei der Überwachung von Mitarbeitenden ist: die Zahl der verpflichtenden Auflagen, die nötigen Schritte vor dem Einschalten eines Systems und das Gewicht der Strafen. Je höher der Wert, desto mehr müssen Sie in Ordnung bringen, bevor Sie in diesem Land GPS oder irgendeine Personalüberwachung einsetzen."
+        },
+        {
+          "q": "Bedeutet ein hoher Wert, dass GPS dort verboten ist?",
+          "a": "Nein, er bedeutet, dass mehr Sorgfalt nötig ist, nicht dass es untersagt wäre. Fast überall in Europa ist GPS am Arbeitsplatz erlaubt, solange es eingesetzt wird, um die Arbeit zu organisieren und zu belegen, und nicht, um die Person zu beobachten. Ein hoher Index sagt Ihnen nur, dass die Pflichten schwerer wiegen und dass Improvisieren teuer wird."
+        },
+        {
+          "q": "Woher stammen die Daten der Rangliste?",
+          "a": "Aus den 39 Länderdossiers auf der Website, aufgebaut auf nationalem Recht und echten Entscheidungen der Behörden. Die Rangliste verdichtet sie zu einem vergleichbaren Wert; klicken Sie ein Land an und Sie gelangen zum Blatt mit den Pflichten, der zuständigen Behörde und den Quellen."
+        },
+        {
+          "q": "Warum schneiden Nachbarländer so unterschiedlich ab?",
+          "a": "Weil die DSGVO den Rahmen vorgibt, jeder Staat aber seine eigenen Regeln darauflegt, und bei der Überwachung von Mitarbeitenden sind die Unterschiede deutlich: hier ist eine Betriebsvereinbarung nötig, dort genügt eine Datenschutzinformation, anderswo geht die Behörde schärfer vor. Genau deshalb ist es der Fehler, der Bußgelder auslöst, die heimischen Regeln jenseits der Grenze als selbstverständlich anzunehmen."
+        },
+        {
+          "q": "Wie oft wird er aktualisiert?",
+          "a": "Die Blätter tragen das Prüfdatum und werden überarbeitet, wenn sich das Recht ändert oder neue Entscheidungen erscheinen. Dies ist eine informative Ressource, keine Rechtsberatung: Bevor Sie ein System einschalten, lassen Sie Ihre Situation von einer Fachperson prüfen."
+        },
+        {
+          "q": "Wie nutze ich die Rangliste, wenn ich Teams ins Ausland schicke?",
+          "a": "Gehen Sie vom Land aus, in dem sie arbeiten werden, nicht von Ihrem eigenen: Dort gelten die maßgeblichen Regeln. Sehen Sie sich den Wert an, um abzuschätzen, wie viel Arbeit vor Ihnen liegt, öffnen Sie dann das Blatt für die genauen Pflichten und bereiten Sie die Datenschutzinformation vor, die vor der Reise zu unterschreiben ist."
+        }
+      ]
+    }
   },
   "attribuzione": {
     "datiVerificati": "Daten von GeoTapp zusammengestellt und geprüft.",
