@@ -178,7 +178,17 @@ const SaaSworthyLogo = ({ scale }: { scale: number }) => (
   </svg>
 );
 
+/* ── Product Hunt logo: orange "P" mark + wordmark ── */
+const ProductHuntLogo = ({ scale }: { scale: number }) => (
+  <svg width={170 * scale} height={32 * scale} viewBox="0 0 170 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <circle cx="14" cy="16" r="12" fill="#DA552F"/>
+    <text x="9.5" y="21" fontFamily="var(--font-poppins, Poppins, sans-serif)" fontSize="14" fontWeight="800" fill="#fff">P</text>
+    <text x="32" y="23" fontFamily="var(--font-poppins, Poppins, sans-serif)" fontSize="17" fontWeight="700" fill="#DA552F">Product Hunt</text>
+  </svg>
+);
+
 const URLS = {
+  producthunt: 'https://www.producthunt.com/posts/geotapp',
   capterra: 'https://www.capterra.com/p/10041643/GeoTapp-Flow/',
   getapp: 'https://www.getapp.com/operations-management-software/a/geotapp-flow/',
   softwareadvice: 'https://www.softwareadvice.com/product/548499-GeoTapp-Flow/',
@@ -218,6 +228,7 @@ function CompactListedOn({ locale }: { locale: string }) {
       </span>
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '24px', flexWrap: 'wrap' }}>
         {[
+          { name: 'Product Hunt', url: URLS.producthunt, logo: <ProductHuntLogo scale={1} /> },
           { name: 'Capterra', url: URLS.capterra, logo: <CapterraLogo scale={1} /> },
           { name: 'GetApp', url: URLS.getapp, logo: <GetAppLogo scale={1} /> },
           { name: 'Software Advice', url: URLS.softwareadvice, logo: <SoftwareAdviceLogo scale={1} /> },
@@ -230,7 +241,7 @@ function CompactListedOn({ locale }: { locale: string }) {
           { name: 'AlternativeTo', url: URLS.alternativeto, logo: <AlternativeToLogo scale={1} /> },
           { name: 'SaaSworthy', url: URLS.saasworthy, logo: <SaaSworthyLogo scale={1} /> },
         ].map((p) => (
-          <a key={p.name} href={p.url} target="_blank" rel={p.name === 'SaaSHub' ? 'noopener noreferrer' : 'noopener noreferrer nofollow'} aria-label={p.name}
+          <a key={p.name} href={p.url} target="_blank" rel={(p.name === 'SaaSHub' || p.name === 'Product Hunt') ? 'noopener noreferrer' : 'noopener noreferrer nofollow'} aria-label={p.name}
             style={{ opacity: 0.6, transition: 'opacity 0.2s', display: 'flex', alignItems: 'center' }}
             onMouseEnter={(e) => { e.currentTarget.style.opacity = '1'; }}
             onMouseLeave={(e) => { e.currentTarget.style.opacity = '0.6'; }}
@@ -246,6 +257,7 @@ function FullListedOn({ locale }: { locale: string }) {
   const label = LABEL[locale] ?? LABEL.en;
 
   const platforms = [
+    { name: 'Product Hunt', url: URLS.producthunt, logo: <ProductHuntLogo scale={2.5} /> },
     { name: 'Capterra', url: URLS.capterra, logo: <CapterraLogo scale={2.5} /> },
     { name: 'GetApp', url: URLS.getapp, logo: <GetAppLogo scale={2.5} /> },
     { name: 'Software Advice', url: URLS.softwareadvice, logo: <SoftwareAdviceLogo scale={2.5} /> },
@@ -303,7 +315,7 @@ function FullListedOn({ locale }: { locale: string }) {
               key={`${p.name}-${i}`}
               href={p.url}
               target="_blank"
-              rel={p.name === 'SaaSHub' ? 'noopener noreferrer' : 'noopener noreferrer nofollow'}
+              rel={(p.name === 'SaaSHub' || p.name === 'Product Hunt') ? 'noopener noreferrer' : 'noopener noreferrer nofollow'}
               aria-label={p.name}
               className="listed-on-logo"
               style={{ flexShrink: 0 }}
