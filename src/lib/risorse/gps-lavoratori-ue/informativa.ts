@@ -211,6 +211,42 @@ const T: Record<InfLocale, Template> = {
   },
 };
 
+// ── Cogestione / rappresentanza dei lavoratori (diritto del lavoro nazionale) ──
+// Dove la legge prevede la co-decisione della rappresentanza dei lavoratori,
+// l'introduzione di un sistema OGGETTIVAMENTE IDONEO al controllo va concertata
+// PRIMA dell'attivazione, a prescindere dalla finalità (la "objektive Eignung"
+// del § 87 Abs. 1 Nr. 6 BetrVG). Il riferimento normativo è per-Paese, il testo è
+// localizzato per lingua UI. Elenco verificato ed estendibile: regimi di
+// co-determinazione/consultazione del consiglio aziendale o sindacale per i
+// principali mercati UE/SEE in cui operiamo.
+const CODETERM_REF: Record<string, string> = {
+  DE: '§ 87 Abs. 1 Nr. 6 BetrVG',
+  AT: '§ 96 Abs. 1 Z 3 ArbVG',
+  NL: 'art. 27 WOR',
+  FR: 'art. L2312-38 Code du travail (CSE)',
+  IT: 'art. 4 L. 300/1970 (Statuto dei lavoratori)',
+  ES: 'art. 64 Estatuto de los Trabajadores',
+  PT: 'comissão de trabalhadores (Código do Trabalho)',
+  SE: 'MBL (lag 1976:580)',
+  NO: 'aml § 9-2',
+  DK: 'DA/LO-aftalen om kontrolforanstaltninger',
+  FI: 'yhteistoimintalaki (1333/2021)',
+};
+
+const CODETERM_SECTION: Record<InfLocale, { titolo: string; testo: string }> = {
+  it: { titolo: '9. Cogestione e rappresentanza dei lavoratori', testo: "L'introduzione e l'utilizzo di questo sistema possono essere soggetti ai diritti di cogestione o consultazione della rappresentanza dei lavoratori (ad es. il consiglio aziendale) ai sensi di {ref}, poiché il sistema è oggettivamente idoneo al controllo del comportamento e della prestazione, a prescindere dalla finalità dichiarata. Dove tale rappresentanza esiste, va coinvolta e, ove previsto, occorre stipulare un accordo (ad es. un accordo aziendale) prima dell'attivazione del sistema in {paese}." },
+  en: { titolo: '9. Employee co-determination and representation', testo: 'The introduction and use of this system may be subject to the co-determination or consultation rights of employee representation (e.g. the works council) under {ref}, because the system is objectively capable of monitoring behaviour and performance, regardless of its stated purpose. Where such representation exists, it must be involved and, where applicable, an agreement (e.g. a works agreement) must be concluded before the system is activated in {paese}.' },
+  de: { titolo: '9. Mitbestimmung und Arbeitnehmervertretung', testo: 'Die Einführung und Anwendung dieses Systems kann der Mitbestimmung bzw. Beteiligung der Arbeitnehmervertretung (z. B. des Betriebsrats) gemäß {ref} unterliegen, da das System objektiv zur Verhaltens- und Leistungskontrolle geeignet ist, unabhängig von seinem erklärten Zweck. Wo eine solche Vertretung besteht, ist sie zu beteiligen; vor der Aktivierung des Systems in {paese} ist, soweit vorgesehen, eine Vereinbarung (z. B. eine Betriebsvereinbarung) abzuschließen.' },
+  fr: { titolo: '9. Cogestion et représentation du personnel', testo: "L'introduction et l'utilisation de ce système peuvent être soumises aux droits de cogestion ou de consultation de la représentation du personnel (par ex. le comité d'entreprise) au titre de {ref}, car le système est objectivement de nature à contrôler le comportement et la performance, indépendamment de sa finalité déclarée. Lorsqu'une telle représentation existe, elle doit être associée et, le cas échéant, un accord (par ex. un accord d'entreprise) doit être conclu avant l'activation du système en {paese}." },
+  es: { titolo: '9. Cogestión y representación de los trabajadores', testo: 'La introducción y el uso de este sistema pueden estar sujetos a los derechos de cogestión o consulta de la representación de los trabajadores (p. ej. el comité de empresa) conforme a {ref}, ya que el sistema es objetivamente idóneo para controlar el comportamiento y el rendimiento, con independencia de su finalidad declarada. Cuando exista dicha representación, debe implicársela y, en su caso, celebrar un acuerdo (p. ej. un convenio de empresa) antes de activar el sistema en {paese}.' },
+  nl: { titolo: '9. Medezeggenschap en werknemersvertegenwoordiging', testo: 'De invoering en het gebruik van dit systeem kunnen onderworpen zijn aan de medezeggenschaps- of instemmingsrechten van de werknemersvertegenwoordiging (bijv. de ondernemingsraad) op grond van {ref}, omdat het systeem objectief geschikt is om gedrag en prestaties te controleren, ongeacht het verklaarde doel. Waar een dergelijke vertegenwoordiging bestaat, moet zij worden betrokken en moet, indien van toepassing, vóór de activering van het systeem in {paese} een overeenkomst (bijv. een ondernemingsovereenkomst) worden gesloten.' },
+  pt: { titolo: '9. Cogestão e representação dos trabalhadores', testo: 'A introdução e a utilização deste sistema podem estar sujeitas aos direitos de cogestão ou consulta da representação dos trabalhadores (por ex. a comissão de trabalhadores) nos termos de {ref}, uma vez que o sistema é objetivamente idóneo para controlar o comportamento e o desempenho, independentemente da finalidade declarada. Onde exista tal representação, deve ser envolvida e, se aplicável, deve ser celebrado um acordo (por ex. um acordo de empresa) antes da ativação do sistema em {paese}.' },
+  da: { titolo: '9. Medbestemmelse og medarbejderrepræsentation', testo: 'Indførelsen og brugen af dette system kan være underlagt medbestemmelses- eller høringsrettigheder for medarbejderrepræsentationen (f.eks. samarbejdsudvalget) i henhold til {ref}, da systemet objektivt er egnet til at kontrollere adfærd og præstation, uanset det erklærede formål. Hvor en sådan repræsentation findes, skal den inddrages, og der skal, hvor det er relevant, indgås en aftale (f.eks. en virksomhedsaftale), før systemet aktiveres i {paese}.' },
+  sv: { titolo: '9. Medbestämmande och arbetstagarrepresentation', testo: 'Införandet och användningen av detta system kan omfattas av arbetstagarrepresentationens (t.ex. företagsrådets) rätt till medbestämmande eller samråd enligt {ref}, eftersom systemet objektivt är ägnat att kontrollera beteende och prestation, oavsett det uppgivna syftet. Där sådan representation finns ska den involveras, och i förekommande fall ska ett avtal (t.ex. ett lokalt kollektivavtal) ingås innan systemet aktiveras i {paese}.' },
+  nb: { titolo: '9. Medbestemmelse og arbeidstakerrepresentasjon', testo: 'Innføringen og bruken av dette systemet kan være underlagt arbeidstakerrepresentasjonens (f.eks. arbeidsmiljøutvalgets) rett til medbestemmelse eller drøfting i henhold til {ref}, fordi systemet objektivt er egnet til å kontrollere atferd og ytelse, uavhengig av det oppgitte formålet. Der slik representasjon finnes, skal den involveres, og det skal om nødvendig inngås en avtale (f.eks. en virksomhetsavtale) før systemet aktiveres i {paese}.' },
+  ru: { titolo: '9. Соучастие и представительство работников', testo: 'Внедрение и использование этой системы могут подпадать под права работников на соучастие или консультации через их представительство (например, производственный совет) согласно {ref}, поскольку система объективно пригодна для контроля поведения и результативности независимо от заявленной цели. При наличии такого представительства его необходимо привлечь и, при необходимости, заключить соглашение (например, производственное соглашение) до активации системы в {paese}.' },
+};
+
 function fill(s: string, i: InfInputs): string {
   return s
     .replace(/\{azienda\}/g, i.azienda || '-')
@@ -221,14 +257,24 @@ function fill(s: string, i: InfInputs): string {
     .replace(/\{autorita\}/g, i.autorita);
 }
 
+/** Sezione cogestione per il Paese scelto (null se il Paese non ha co-determinazione mappata). */
+function codetermSezione(locale: InfLocale, i: InfInputs, codiceISO?: string): { titolo: string; testo: string } | null {
+  const ref = codiceISO ? CODETERM_REF[codiceISO.toUpperCase()] : undefined;
+  if (!ref) return null;
+  const sec = CODETERM_SECTION[locale] ?? CODETERM_SECTION.en;
+  return { titolo: sec.titolo, testo: sec.testo.replace(/\{ref\}/g, ref).replace(/\{paese\}/g, i.paese) };
+}
+
 /** Genera il testo completo dell'informativa per la lingua data. */
-export function buildInformativa(locale: InfLocale, i: InfInputs): string {
+export function buildInformativa(locale: InfLocale, i: InfInputs, codiceISO?: string): string {
   const t = T[locale] ?? T.en;
   const parts: string[] = [t.titolo, '', fill(t.intro, i), ''];
   if (i.dpo && i.dpo.trim()) parts.push(fill(t.dpoLine.replace(/\{dpo\}/g, i.dpo), i), '');
   for (const sez of t.sezioni) {
     parts.push(sez.titolo, fill(sez.testo, i), '');
   }
+  const cod = codetermSezione(locale, i, codiceISO);
+  if (cod) parts.push(cod.titolo, cod.testo, '');
   parts.push(t.chiusura);
   return parts.join('\n');
 }
@@ -248,13 +294,16 @@ export interface InformativaDoc {
 }
 
 /** Versione strutturata (per il rendering HTML/PDF del generatore). */
-export function buildInformativaDoc(locale: InfLocale, i: InfInputs): InformativaDoc {
+export function buildInformativaDoc(locale: InfLocale, i: InfInputs, codiceISO?: string): InformativaDoc {
   const t = T[locale] ?? T.en;
+  const sezioni = t.sezioni.map((s) => ({ titolo: s.titolo, testo: fill(s.testo, i) }));
+  const cod = codetermSezione(locale, i, codiceISO);
+  if (cod) sezioni.push(cod);
   return {
     titolo: t.titolo,
     intro: fill(t.intro, i),
     dpo: i.dpo && i.dpo.trim() ? fill(t.dpoLine.replace(/\{dpo\}/g, i.dpo), i) : undefined,
-    sezioni: t.sezioni.map((s) => ({ titolo: s.titolo, testo: fill(s.testo, i) })),
+    sezioni,
     chiusura: t.chiusura,
   };
 }

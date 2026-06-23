@@ -69,7 +69,7 @@ export default function GeneratoreInformativaClient({ locale, paesi, labels }: P
       dpo: dpo.trim() || undefined,
       autorita: paese?.autorita ?? '',
     };
-    const doc = buildInformativaDoc(infLocale(locale), inputs);
+    const doc = buildInformativaDoc(infLocale(locale), inputs, paeseId);
     trackEvent('generatore_informativa', { locale, paese: paeseId });
 
     const sezioniHtml = doc.sezioni

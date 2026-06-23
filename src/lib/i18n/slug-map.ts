@@ -205,6 +205,18 @@ export const SLUG_MAP: Record<string, Partial<Record<AppLocale, string>>> = {
     da: 'gps-meddelelse-generator', sv: 'gps-meddelande-generator', nb: 'gps-erklaering-generator', ru: 'generator-uvedomleniya-gps',
     'en-us': 'gps-notice-generator', 'en-gb': 'gps-notice-generator', 'en-au': 'gps-notice-generator', 'en-ie': 'gps-notice-generator', 'en-ca': 'gps-notice-generator',
   },
+  'autovalutazione-dati-dipendenti': {
+    it: 'autovalutazione-dati-dipendenti', en: 'employee-data-compliance-check', de: 'mitarbeiterdaten-selbsttest', nl: 'werknemersdata-zelftest',
+    fr: 'autodiagnostic-donnees-salaries', es: 'autoevaluacion-datos-empleados', pt: 'autoavaliacao-dados-colaboradores',
+    da: 'medarbejderdata-selvtest', sv: 'personaldata-sjalvtest', nb: 'personaldata-selvtest', ru: 'samoproverka-dannyh-sotrudnikov',
+    'en-us': 'employee-data-compliance-check', 'en-gb': 'employee-data-compliance-check', 'en-au': 'employee-data-compliance-check', 'en-ie': 'employee-data-compliance-check', 'en-ca': 'employee-data-compliance-check',
+  },
+  'politica-conservazione-dati': {
+    it: 'politica-conservazione-dati', en: 'data-retention-policy-generator', de: 'aufbewahrungsrichtlinie-generator', nl: 'bewaarbeleid-generator',
+    fr: 'politique-conservation-donnees', es: 'politica-conservacion-datos', pt: 'politica-conservacao-dados',
+    da: 'dataopbevaringspolitik-generator', sv: 'datalagringspolicy-generator', nb: 'dataoppbevaringspolicy-generator', ru: 'politika-hraneniya-dannyh',
+    'en-us': 'data-retention-policy-generator', 'en-gb': 'data-retention-policy-generator', 'en-au': 'data-retention-policy-generator', 'en-ie': 'data-retention-policy-generator', 'en-ca': 'data-retention-policy-generator',
+  },
   'indice-sorveglianza': {
     it: 'indice-sorveglianza', en: 'surveillance-index', de: 'ueberwachungsindex', nl: 'surveillance-index',
     fr: 'indice-surveillance', es: 'indice-vigilancia', pt: 'indice-vigilancia',

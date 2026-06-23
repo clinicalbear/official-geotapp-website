@@ -39,13 +39,21 @@
         "title": "Surveillance GPS des travailleurs dans l'UE",
         "desc": "Pays par pays : ce qu'il faut pour mettre en conformité le GPS et la surveillance des travailleurs, avec checklist, procédure, contacts et modèle à télécharger."
       },
-      "roi": {
-        "title": "Calculateur de ROI",
-        "desc": "Estimez le temps et l'argent que vous récupérez en utilisant GeoTapp sur vos opérations de terrain."
+      "dossier": {
+        "title": "Dossier de conformité",
+        "desc": "Ce que GeoTapp fait et ne fait pas, avec le RGPD, le Code du travail et les limites dites clairement."
       },
-      "survey": {
-        "title": "Enquête : la preuve du travail",
-        "desc": "Deux minutes, anonyme : faites-vous confiance à la parole ou avez-vous besoin d'une preuve ? Aidez-nous à comprendre un vrai problème."
+      "autovalutazione": {
+        "title": "Êtes-vous conforme sur les données ?",
+        "desc": "Test rapide de 9 questions sur la protection des données des salariés : score et points à corriger. Gratuit, dans votre navigateur."
+      },
+      "generatore": {
+        "title": "Générateur d'avis GPS",
+        "desc": "Créez votre modèle d'avis de confidentialité GPS avec votre logo, conforme au RGPD. Gratuit, dans votre navigateur."
+      },
+      "conservazione": {
+        "title": "Politique de conservation des données",
+        "desc": "Générez le tableau de conservation des données RH par pays : durées conseillées, note légale et export. Gratuit, dans votre navigateur."
       },
       "sanzioni": {
         "title": "Calculateur d'amendes GPS",
@@ -55,13 +63,13 @@
         "title": "Indice de surveillance des travailleurs en Europe",
         "desc": "Le classement de 39 pays européens selon la rigueur de leur cadre de surveillance des salariés."
       },
-      "generatore": {
-        "title": "Générateur d'avis GPS",
-        "desc": "Créez votre modèle d'avis de confidentialité GPS avec votre logo, conforme au RGPD. Gratuit, dans votre navigateur."
+      "roi": {
+        "title": "Calculateur de ROI",
+        "desc": "Estimez le temps et l'argent que vous récupérez en utilisant GeoTapp sur vos opérations de terrain."
       },
-      "dossier": {
-        "title": "Dossier de conformité",
-        "desc": "Ce que GeoTapp fait et ne fait pas, avec le RGPD, le Code du travail et les limites dites clairement."
+      "survey": {
+        "title": "Enquête : la preuve du travail",
+        "desc": "Deux minutes, anonyme : faites-vous confiance à la parole ou avez-vous besoin d'une preuve ? Aidez-nous à comprendre un vrai problème."
       }
     },
     "faq": {
@@ -880,11 +888,26 @@
     "boilerplate_long": "GeoTapp est né d'un problème concret : apporter la preuve qu'un travail a été effectué – où et quand – sans transformer les collaborateurs en points sur une carte à surveiller toute la journée. L'outil enregistre la localisation uniquement au moment du pointage d'entrée et de sortie, ajoute des photos et des notes depuis le terrain, et scelle chaque session de façon à ce que toute modification soit détectable. Le résultat est une preuve que le client peut vérifier de manière indépendante – une preuve qui protège l'employeur en cas de litige autant que le salarié injustement accusé de ne pas s'être présenté. GeoTapp est conçu pour toute entreprise qui envoie des équipes hors site – sociétés de nettoyage, installateurs, agents de sécurité, maintenance, BTP – et est développé pour rester dans les limites des règles encadrant la surveillance des salariés et le RGPD.",
     "facts_label": "Fiche d'identité",
     "facts": [
-      { "k": "Quoi", "v": "Suivi du temps et preuve du travail pour équipes terrain" },
-      { "k": "Pour qui", "v": "Sociétés de nettoyage, installateurs, sécurité, maintenance, BTP" },
-      { "k": "Fondateur", "v": "Michele Angelo Petraroli" },
-      { "k": "Siège", "v": "Trenzano (BS)" },
-      { "k": "Fondée en", "v": "Idée en 2024, développement achevé en 2025" }
+      {
+        "k": "Quoi",
+        "v": "Suivi du temps et preuve du travail pour équipes terrain"
+      },
+      {
+        "k": "Pour qui",
+        "v": "Sociétés de nettoyage, installateurs, sécurité, maintenance, BTP"
+      },
+      {
+        "k": "Fondateur",
+        "v": "Michele Angelo Petraroli"
+      },
+      {
+        "k": "Siège",
+        "v": "Trenzano (BS)"
+      },
+      {
+        "k": "Fondée en",
+        "v": "Idée en 2024, développement achevé en 2025"
+      }
     ],
     "founder_label": "Le fondateur",
     "founder_bio": "Michele Angelo Petraroli travaillait dans la sécurité événementielle et détestait chaque jour la même corvée : noter ses heures à la main. Les applications qu'il essayait faisaient le même travail avec de plus jolis boutons, alors pendant ses vacances il a construit sa propre version : appuyer sur démarrer, appuyer sur arrêter, un total mensuel propre prêt à la fin du mois. C'est là qu'est né GeoTapp – d'abord pour ses collègues, puis comme système pour prouver que le travail a été accompli sans surveiller les personnes qui le font, dans le respect des règles encadrant la surveillance des salariés et du RGPD.",

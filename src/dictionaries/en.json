@@ -39,13 +39,21 @@
         "title": "GPS monitoring of workers in the EU",
         "desc": "Country by country: what it takes to make GPS and worker monitoring compliant, with checklist, procedure, contacts and a template to download."
       },
-      "roi": {
-        "title": "ROI calculator",
-        "desc": "Estimate how much time and money you get back by using GeoTapp on your field operations."
+      "dossier": {
+        "title": "Compliance dossier",
+        "desc": "What GeoTapp does and does not do, with GDPR, worker-monitoring law and the limits stated plainly."
       },
-      "survey": {
-        "title": "Survey: proof of work",
-        "desc": "Two minutes, anonymous: do you trust someone's word, or do you need proof? Help us understand a real problem."
+      "autovalutazione": {
+        "title": "Are you data-compliant?",
+        "desc": "Quick 9-question test on protecting employee data: score and areas to fix. Free, in your browser."
+      },
+      "generatore": {
+        "title": "GPS notice generator",
+        "desc": "Create your customised GPS privacy notice with your logo, GDPR-compliant. Free, in your browser."
+      },
+      "conservazione": {
+        "title": "Data retention policy",
+        "desc": "Generate the HR data retention table by country: recommended periods, legal note and export. Free, in your browser."
       },
       "sanzioni": {
         "title": "GPS penalty calculator",
@@ -55,13 +63,13 @@
         "title": "Worker surveillance index in Europe",
         "desc": "The ranking of 39 European countries by how strict their worker-monitoring framework is."
       },
-      "generatore": {
-        "title": "GPS notice generator",
-        "desc": "Create your customised GPS privacy notice with your logo, GDPR-compliant. Free, in your browser."
+      "roi": {
+        "title": "ROI calculator",
+        "desc": "Estimate how much time and money you get back by using GeoTapp on your field operations."
       },
-      "dossier": {
-        "title": "Compliance dossier",
-        "desc": "What GeoTapp does and does not do, with GDPR, worker-monitoring law and the limits stated plainly."
+      "survey": {
+        "title": "Survey: proof of work",
+        "desc": "Two minutes, anonymous: do you trust someone's word, or do you need proof? Help us understand a real problem."
       }
     },
     "faq": {
@@ -948,11 +956,26 @@
     "boilerplate_long": "GeoTapp started from a concrete problem: proving that a job was done, where and when, without turning people into dots on a map to be watched all day. The tool records location only at the moment of clock-in and clock-out, adds photos and notes from the field, and seals every session so that any change is detectable. The result is proof the client can verify independently, one that protects the employer facing a dispute as much as the worker wrongly accused of not showing up. It is built for anyone sending teams off-site, cleaning firms, installers, security, maintenance, construction, and designed to stay within the limits of worker-monitoring law and the GDPR.",
     "facts_label": "Key facts",
     "facts": [
-      { "k": "What", "v": "Time tracking and proof of work for field teams" },
-      { "k": "For whom", "v": "Cleaning firms, installers, security, maintenance, construction" },
-      { "k": "Founder", "v": "Michele Angelo Petraroli" },
-      { "k": "Headquarters", "v": "Trenzano (BS)" },
-      { "k": "Founded", "v": "Idea in 2024, development completed in 2025" }
+      {
+        "k": "What",
+        "v": "Time tracking and proof of work for field teams"
+      },
+      {
+        "k": "For whom",
+        "v": "Cleaning firms, installers, security, maintenance, construction"
+      },
+      {
+        "k": "Founder",
+        "v": "Michele Angelo Petraroli"
+      },
+      {
+        "k": "Headquarters",
+        "v": "Trenzano (BS)"
+      },
+      {
+        "k": "Founded",
+        "v": "Idea in 2024, development completed in 2025"
+      }
     ],
     "founder_label": "The founder",
     "founder_bio": "Michele Angelo Petraroli worked in event security, and every day he hated the same chore: logging his hours by hand. The apps he tried did the same work with prettier buttons, so on holiday he built his own version: press to start, press to stop, a tidy total ready at month's end. That is where GeoTapp came from, first for his colleagues, then as a system to prove work was done without surveilling the people who do it, in line with worker-monitoring law and the GDPR.",

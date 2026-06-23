@@ -39,13 +39,21 @@
         "title": "GPS-Überwachung von Mitarbeitern in der EU",
         "desc": "Land für Land: was nötig ist, um GPS und Mitarbeiterüberwachung rechtskonform zu machen, mit Checkliste, Ablauf, Kontakten und Vorlage zum Herunterladen."
       },
-      "roi": {
-        "title": "ROI-Rechner",
-        "desc": "Schätzen Sie, wie viel Zeit und Geld Sie mit GeoTapp im Außendienst zurückgewinnen."
+      "dossier": {
+        "title": "Konformitätsdossier",
+        "desc": "Was GeoTapp tut und was nicht, mit DSGVO, Mitbestimmung und klar benannten Grenzen."
       },
-      "survey": {
-        "title": "Umfrage: der Arbeitsnachweis",
-        "desc": "Zwei Minuten, anonym: Vertrauen Sie dem Wort oder brauchen Sie einen Nachweis? Helfen Sie uns, ein echtes Problem zu verstehen."
+      "autovalutazione": {
+        "title": "Sind Sie datenkonform?",
+        "desc": "Schneller Test mit 9 Fragen zum Schutz von Mitarbeiterdaten: Punktzahl und zu behebende Bereiche. Kostenlos, im Browser."
+      },
+      "generatore": {
+        "title": "GPS-Hinweis-Generator",
+        "desc": "Erstellen Sie Ihre Muster-Datenschutzerklärung für GPS mit Ihrem Logo, DSGVO-konform. Kostenlos, in Ihrem Browser."
+      },
+      "conservazione": {
+        "title": "Aufbewahrungsrichtlinie für Daten",
+        "desc": "Erstellen Sie die HR-Aufbewahrungstabelle nach Land: empfohlene Fristen, Rechtshinweis und Export. Kostenlos, im Browser."
       },
       "sanzioni": {
         "title": "GPS-Bußgeldrechner",
@@ -55,13 +63,13 @@
         "title": "Index der Arbeitnehmerüberwachung in Europa",
         "desc": "Das Ranking von 39 europäischen Ländern nach Strenge des Mitarbeiterüberwachungs-Rahmens."
       },
-      "generatore": {
-        "title": "GPS-Hinweis-Generator",
-        "desc": "Erstellen Sie Ihre Muster-Datenschutzerklärung für GPS mit Ihrem Logo, DSGVO-konform. Kostenlos, in Ihrem Browser."
+      "roi": {
+        "title": "ROI-Rechner",
+        "desc": "Schätzen Sie, wie viel Zeit und Geld Sie mit GeoTapp im Außendienst zurückgewinnen."
       },
-      "dossier": {
-        "title": "Konformitätsdossier",
-        "desc": "Was GeoTapp tut und was nicht, mit DSGVO, Mitbestimmung und klar benannten Grenzen."
+      "survey": {
+        "title": "Umfrage: der Arbeitsnachweis",
+        "desc": "Zwei Minuten, anonym: Vertrauen Sie dem Wort oder brauchen Sie einen Nachweis? Helfen Sie uns, ein echtes Problem zu verstehen."
       }
     },
     "faq": {
@@ -948,11 +956,26 @@
     "boilerplate_long": "GeoTapp entstand aus einem konkreten Problem: den Nachweis zu erbringen, dass eine Arbeit erledigt wurde – wo und wann –, ohne Mitarbeiter den ganzen Tag als Punkte auf einer Karte zu beobachten. Das System erfasst den Standort nur beim Ein- und Ausstempeln, ergänzt Fotos und Notizen aus dem Außendienst und versiegelt jede Sitzung so, dass jede Änderung erkennbar ist. Das Ergebnis ist ein Nachweis, den der Auftraggeber eigenständig überprüfen kann – einer, der den Arbeitgeber im Streitfall ebenso schützt wie den Mitarbeiter, dem zu Unrecht vorgeworfen wird, nicht erschienen zu sein. GeoTapp richtet sich an alle, die Teams außer Haus schicken – Reinigungsunternehmen, Installateure, Sicherheitsdienste, Wartung, Bau – und ist darauf ausgelegt, die Grenzen der Regeln zur Mitarbeiterüberwachung und der DSGVO einzuhalten.",
     "facts_label": "Steckbrief",
     "facts": [
-      { "k": "Was", "v": "Zeiterfassung und Arbeitsnachweis für Außendienstteams" },
-      { "k": "Für wen", "v": "Reinigungsunternehmen, Installateure, Sicherheitsdienste, Wartung, Bau" },
-      { "k": "Gründer", "v": "Michele Angelo Petraroli" },
-      { "k": "Hauptsitz", "v": "Trenzano (BS)" },
-      { "k": "Gegründet", "v": "Idee 2024, Entwicklung 2025 abgeschlossen" }
+      {
+        "k": "Was",
+        "v": "Zeiterfassung und Arbeitsnachweis für Außendienstteams"
+      },
+      {
+        "k": "Für wen",
+        "v": "Reinigungsunternehmen, Installateure, Sicherheitsdienste, Wartung, Bau"
+      },
+      {
+        "k": "Gründer",
+        "v": "Michele Angelo Petraroli"
+      },
+      {
+        "k": "Hauptsitz",
+        "v": "Trenzano (BS)"
+      },
+      {
+        "k": "Gegründet",
+        "v": "Idee 2024, Entwicklung 2025 abgeschlossen"
+      }
     ],
     "founder_label": "Der Gründer",
     "founder_bio": "Michele Angelo Petraroli arbeitete in der Veranstaltungssicherheit und hasste täglich dieselbe lästige Aufgabe: seine Stunden von Hand aufzuschreiben. Die Apps, die er ausprobierte, erledigten dieselbe Arbeit nur mit hübscheren Schaltflächen, also baute er im Urlaub seine eigene Version: Starten drücken, Stoppen drücken, ein ordentliches Monatsgesamt bereit. So entstand GeoTapp – zunächst für seine Kollegen, dann als System, das beweist, dass Arbeit getan wurde, ohne die Menschen zu überwachen, die sie leisten, im Einklang mit den Regeln zur Mitarbeiterüberwachung und der DSGVO.",

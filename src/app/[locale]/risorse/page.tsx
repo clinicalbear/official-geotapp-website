@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Map, Calculator, ClipboardList, Gavel, BarChart3, FileText, ShieldCheck, ArrowRight } from 'lucide-react';
+import { Map, Calculator, ClipboardList, Gavel, BarChart3, FileText, ShieldCheck, ClipboardCheck, Archive, ArrowRight } from 'lucide-react';
 import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import { SUPPORTED_LOCALES } from '@/lib/i18n/config';
@@ -30,7 +30,9 @@ function safeLocale(locale: string): AppLocale {
 const CARDS = [
   { key: 'gps', path: '/risorse/gps-lavoratori-ue/', Icon: Map },
   { key: 'dossier', path: '/risorse/dossier-conformita/', Icon: ShieldCheck },
+  { key: 'autovalutazione', path: '/risorse/autovalutazione-dati-dipendenti/', Icon: ClipboardCheck },
   { key: 'generatore', path: '/risorse/generatore-informativa-gps/', Icon: FileText },
+  { key: 'conservazione', path: '/risorse/politica-conservazione-dati/', Icon: Archive },
   { key: 'sanzioni', path: '/risorse/sanzioni-gps/', Icon: Gavel },
   { key: 'indice', path: '/risorse/indice-sorveglianza/', Icon: BarChart3 },
   { key: 'roi', path: '/roi-calculator/', Icon: Calculator },

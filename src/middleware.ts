@@ -243,6 +243,8 @@ const SITEMAP_ROUTES: SitemapRouteEntry[] = [
   { path: '/risorse/sanzioni-gps/', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/risorse/indice-sorveglianza/', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/risorse/generatore-informativa-gps/', priority: 0.85, changeFrequency: 'monthly' },
+  { path: '/risorse/autovalutazione-dati-dipendenti/', priority: 0.85, changeFrequency: 'monthly' },
+  { path: '/risorse/politica-conservazione-dati/', priority: 0.85, changeFrequency: 'monthly' },
   { path: '/risorse/dossier-conformita/', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/roi-calculator/', priority: 0.75, changeFrequency: 'monthly' },
   { path: '/survey/', priority: 0.6, changeFrequency: 'monthly' },

@@ -39,13 +39,21 @@
         "title": "GPS-overvågning af medarbejdere i EU",
         "desc": "Land for land: hvad der skal til for at gøre GPS og medarbejderovervågning lovlig, med tjekliste, fremgangsmåde, kontakter og skabelon til download."
       },
-      "roi": {
-        "title": "ROI-beregner",
-        "desc": "Beregn hvor meget tid og penge du henter hjem ved at bruge GeoTapp til dit markarbejde."
+      "dossier": {
+        "title": "Compliance-dossier",
+        "desc": "Hvad GeoTapp gør og ikke gør, med GDPR og grænserne sagt klart."
       },
-      "survey": {
-        "title": "Undersøgelse: bevis for udført arbejde",
-        "desc": "To minutter, anonymt: stoler du på ordet, eller har du brug for et bevis? Hjælp os med at forstå et reelt problem."
+      "autovalutazione": {
+        "title": "Er du data-compliant?",
+        "desc": "Hurtig test med 9 spørgsmål om beskyttelse af medarbejderdata: score og områder at rette. Gratis, i din browser."
+      },
+      "generatore": {
+        "title": "GPS-meddelelse-generator",
+        "desc": "Lav dit eksempel på en GPS-privatlivsmeddelelse med dit logo, GDPR-konform. Gratis, i din browser."
+      },
+      "conservazione": {
+        "title": "Politik for dataopbevaring",
+        "desc": "Generér HR-opbevaringstabellen land for land: anbefalede perioder, juridisk note og eksport. Gratis, i din browser."
       },
       "sanzioni": {
         "title": "GPS-bødeberegner",
@@ -55,13 +63,13 @@
         "title": "Indeks for medarbejderovervågning i Europa",
         "desc": "Rangeringen af 39 europæiske lande efter hvor strengt deres regelsæt for medarbejderovervågning er."
       },
-      "generatore": {
-        "title": "GPS-meddelelse-generator",
-        "desc": "Lav dit eksempel på en GPS-privatlivsmeddelelse med dit logo, GDPR-konform. Gratis, i din browser."
+      "roi": {
+        "title": "ROI-beregner",
+        "desc": "Beregn hvor meget tid og penge du henter hjem ved at bruge GeoTapp til dit markarbejde."
       },
-      "dossier": {
-        "title": "Compliance-dossier",
-        "desc": "Hvad GeoTapp gør og ikke gør, med GDPR og grænserne sagt klart."
+      "survey": {
+        "title": "Undersøgelse: bevis for udført arbejde",
+        "desc": "To minutter, anonymt: stoler du på ordet, eller har du brug for et bevis? Hjælp os med at forstå et reelt problem."
       }
     },
     "faq": {
@@ -880,11 +888,26 @@
     "boilerplate_long": "GeoTapp opstod fra et konkret problem: at bevise at et job er udført, hvor og hvornår, uden at gøre folk til prikker på et kort der overvåges hele dagen. Værktøjet registrerer lokationen udelukkende på tidspunktet for ind- og udtjekning, tilføjer fotos og noter fra felten og forsegler hver session, så enhver ændring kan opdages. Resultatet er et bevis, som kunden kan verificere selvstændigt, der beskytter arbejdsgiveren i en tvist ligesom det beskytter den medarbejder, der uretfærdigt anklages for ikke at have mødt op. Det er bygget til alle, der sender teams ud af huset, rengøringsfirmaer, installatører, sikkerhed, vedligeholdelse, byggeri, og designet til at holde sig inden for grænserne af reglerne for medarbejderkontrol og GDPR.",
     "facts_label": "Nøglefakta",
     "facts": [
-      { "k": "Hvad", "v": "Tidsregistrering og arbejdsbevis for feltteams" },
-      { "k": "For hvem", "v": "Rengøringsfirmaer, installatører, sikkerhed, vedligeholdelse, byggeri" },
-      { "k": "Stifter", "v": "Michele Angelo Petraroli" },
-      { "k": "Hovedkontor", "v": "Trenzano (BS)" },
-      { "k": "Stiftet", "v": "Idé i 2024, udvikling afsluttet i 2025" }
+      {
+        "k": "Hvad",
+        "v": "Tidsregistrering og arbejdsbevis for feltteams"
+      },
+      {
+        "k": "For hvem",
+        "v": "Rengøringsfirmaer, installatører, sikkerhed, vedligeholdelse, byggeri"
+      },
+      {
+        "k": "Stifter",
+        "v": "Michele Angelo Petraroli"
+      },
+      {
+        "k": "Hovedkontor",
+        "v": "Trenzano (BS)"
+      },
+      {
+        "k": "Stiftet",
+        "v": "Idé i 2024, udvikling afsluttet i 2025"
+      }
     ],
     "founder_label": "Stifteren",
     "founder_bio": "Michele Angelo Petraroli arbejdede i eventssikkerhed og hadede dagligt den samme rutineopgave: at skrive sine timer ned i hånden. De apps han prøvede, gjorde det samme arbejde med flottere knapper, så i ferien byggede han sin egen version: tryk på start, tryk på stop, et pænt månedstotal klar ved slutningen af måneden. Det er dér, GeoTapp kom fra, først til hans kolleger, siden som et system til at bevise at arbejdet er udført uden at overvåge de mennesker der udfører det, i overensstemmelse med reglerne for medarbejderkontrol og GDPR.",
