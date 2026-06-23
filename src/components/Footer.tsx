@@ -11,6 +11,7 @@ import {
 } from '@/lib/i18n/locale-routing';
 import NewsletterForm from '@/components/NewsletterForm';
 import ListedOn from '@/components/ListedOn';
+import ProductHuntBadge from '@/components/ProductHuntBadge';
 import { trackEvent } from '@/lib/analytics';
 
 const FOOTER_LABELS: Record<string, {
@@ -69,6 +70,9 @@ export default function Footer() {
       <div className="border-b border-border/40">
         <div className="container mx-auto px-6">
           <ListedOn locale={currentLocale} variant="compact" />
+          <div className="pb-5 -mt-1 flex justify-center sm:justify-start">
+            <ProductHuntBadge />
+          </div>
         </div>
       </div>
 

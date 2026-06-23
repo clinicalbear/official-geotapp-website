@@ -81,6 +81,7 @@ const TTBgCarousel = () => {
 import { usePathname } from 'next/navigation';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import FounderViewTracker from '@/components/analytics/FounderViewTracker';
+import ProductHuntBadge from '@/components/ProductHuntBadge';
 import {
   DEFAULT_LOCALE,
   getLocaleFromPathname,
@@ -286,6 +287,7 @@ export default function Home() {
               {currentLocale === 'en' && (
                 <span className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full text-xs font-semibold bg-blue-50 border border-blue-200 text-blue-700">{dict.landing.us_badge}</span>
               )}
+              <div className="mb-4"><ProductHuntBadge /></div>
               <div className="mb-8">
                 <span className="geo-status">
                   <span className="w-2 h-2 rounded-full animate-pulse" style={{ background: 'linear-gradient(135deg,#8FC436,#3BAEE0)' }} />
