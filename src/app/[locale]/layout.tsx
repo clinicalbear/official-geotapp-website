@@ -531,6 +531,8 @@ export default async function LocaleLayout({ children, params }: Props) {
             (homepage, sectors, products, pricing) but ad slots only exist on
             the blog. Moved to src/app/blog/layout.tsx where ad inventory lives.
             Saves ~75-90ms TBT across all non-blog pages. */}
+        {/* Navbar FUORI dal wrapper overflow: un antenato con overflow!=visible rompe position:sticky */}
+        <Navbar />
         <div className="relative min-h-screen overflow-hidden">
           {/* Background Glow Effects - CSS radial-gradient instead of
               filter:blur() to avoid GPU compositing overhead on mobile.
@@ -551,7 +553,6 @@ export default async function LocaleLayout({ children, params }: Props) {
           <CartDrawer />
 
           <div className="relative z-10">
-            <Navbar />
             <main>{children}</main>
             <Footer />
           </div>

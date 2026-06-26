@@ -76,9 +76,10 @@ export default async function BlogLayout({ children }: { children: ReactNode }) 
       </head>
       <body className={clsx(inter.variable, poppins.variable, 'font-sans bg-background text-text-primary antialiased')}>
         <SiteAnalytics />
+        {/* Navbar FUORI dal wrapper overflow: un antenato con overflow!=visible rompe position:sticky */}
+        <Navbar />
         <div className="relative min-h-screen overflow-x-clip">
           <div className="relative z-10">
-            <Navbar />
             <main>{children}</main>
             <Footer />
           </div>
