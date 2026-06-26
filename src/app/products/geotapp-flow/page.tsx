@@ -585,7 +585,7 @@ export default function GeoTappApp() {
       ];
 
   return (
-    <div className="bg-background min-h-screen text-slate-900 pt-32 pb-24 overflow-x-hidden">
+    <div className="bg-background min-h-screen text-slate-900 pt-5 pb-24 overflow-x-hidden">
       {/* SYSTEM DETAIL MODAL (LIGHT THEME) */}
       <AnimatePresence>
         {selectedSystem && (

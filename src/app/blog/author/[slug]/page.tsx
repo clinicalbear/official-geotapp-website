@@ -202,7 +202,7 @@ export default async function AuthorPage({
         }}
       />
 
-      <section className="px-6 pt-40 pb-16 bg-gradient-to-b from-slate-50 to-white">
+      <section className="px-6 pt-5 pb-16 bg-gradient-to-b from-slate-50 to-white">
         <div className="container mx-auto max-w-4xl">
           <div className="flex flex-col items-center text-center md:flex-row md:items-start md:text-left md:gap-10">
             {avatar && (

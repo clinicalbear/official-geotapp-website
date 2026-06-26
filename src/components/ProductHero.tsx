@@ -28,7 +28,7 @@ export default function ProductHero({
   secondaryLink,
 }: ProductHeroProps) {
   return (
-    <section className="relative pt-32 pb-20 px-6 overflow-hidden">
+    <section className="relative pt-5 pb-20 px-6 overflow-hidden">
       <div className="container mx-auto max-w-6xl relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Text Content */}
         <motion.div

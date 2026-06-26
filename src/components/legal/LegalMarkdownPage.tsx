@@ -134,7 +134,7 @@ export function LegalMarkdownPage({
   const html = markdownToHtml(markdownContent);
 
   return (
-    <div className="pt-32 pb-24 px-6 min-h-screen bg-white text-slate-900">
+    <div className="pt-5 pb-24 px-6 min-h-screen bg-white text-slate-900">
       <div className="container mx-auto max-w-4xl">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">{title}</h1>
         <p className="text-slate-500 mb-12">{subtitle}</p>

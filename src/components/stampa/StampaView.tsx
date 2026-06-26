@@ -63,7 +63,7 @@ export default function StampaView({
   const { copied, copy } = useCopy();
 
   return (
-    <div className="bg-background min-h-screen pt-40 pb-24 overflow-hidden">
+    <div className="bg-background min-h-screen pt-5 pb-24 overflow-hidden">
 
       {/* ── 1. HERO ─────────────────────────────────────────────────────── */}
       <section className="relative px-6 text-center mb-24">

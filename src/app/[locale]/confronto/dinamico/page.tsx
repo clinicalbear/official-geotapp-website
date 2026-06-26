@@ -321,7 +321,7 @@ export default async function Page({
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
-      <div className="container mx-auto px-4 pb-20 pt-20 sm:px-6 md:pt-28">
+      <div className="container mx-auto px-4 pb-20 pt-20 sm:px-6 md:pt-5">
         {/* Breadcrumb */}
         <nav
           aria-label="Breadcrumb"

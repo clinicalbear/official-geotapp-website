@@ -183,7 +183,7 @@ export default async function ConfrontoIndexPage({ params }: { params: Promise<{
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
 
-      <div className="min-h-screen pt-32 pb-20 px-6">
+      <div className="min-h-screen pt-5 pb-20 px-6">
         <div className="container mx-auto max-w-4xl">
 
           <div className="text-center mb-16">

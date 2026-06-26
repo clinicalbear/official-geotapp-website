@@ -79,7 +79,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="pt-32 pb-24 px-6 min-h-screen bg-white text-slate-900">
+    <div className="pt-5 pb-24 px-6 min-h-screen bg-white text-slate-900">
       <div className="container mx-auto max-w-6xl">
         {/* HEADER */}
         <div className="text-center mb-20 max-w-3xl mx-auto">

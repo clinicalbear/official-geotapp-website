@@ -16,7 +16,7 @@ export { generateLocaleStaticParams as generateStaticParams } from '@/lib/i18n/s
 export default async function SurveyPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   return (
-    <main className="px-4 pb-20 pt-32">
+    <main className="px-4 pb-20 pt-5">
       <SurveyForm locale={locale} />
     </main>
   );

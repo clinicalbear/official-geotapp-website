@@ -150,7 +150,7 @@ export default function TrialPage() {
   const localePrefix = locale !== 'it' ? `/${locale}` : '/it';
 
   return (
-    <div className="pt-20 md:pt-28 pb-24 px-6 min-h-screen bg-white text-slate-900">
+    <div className="pt-20 md:pt-5 pb-24 px-6 min-h-screen bg-white text-slate-900">
       <div className="container mx-auto max-w-6xl">
 
         {/* HEADER, compatto su mobile per portare il form above the fold */}

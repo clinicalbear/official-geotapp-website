@@ -274,7 +274,7 @@ export default function Home() {
     <div className="bg-background min-h-screen text-text-primary overflow-hidden">
       {/* Landing is locale-aware: all internal links pass through getLink(). */}
                   {/* HERO SECTION - Moderno / Accattivante */}
-      <section className="relative pt-28 lg:pt-36 pb-20 lg:pb-28 overflow-hidden bg-gradient-to-b from-white via-white to-[#f0f8e6]">
+      <section className="relative pt-5 pb-20 lg:pb-28 overflow-hidden bg-gradient-to-b from-white via-white to-[#f0f8e6]">
         {/* Aurora animata brand */}
         <div className="geo-aurora" aria-hidden="true"><span className="a1" /><span className="a2" /><span className="a3" /></div>
 

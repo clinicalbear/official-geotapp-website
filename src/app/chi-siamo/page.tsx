@@ -17,7 +17,7 @@ export default function AboutPage() {
   const press = getDictionary(locale).stampa;
 
   return (
-    <div className="bg-background min-h-screen pt-40 pb-24 overflow-hidden">
+    <div className="bg-background min-h-screen pt-5 pb-24 overflow-hidden">
 
       {/* Hero */}
       <section className="relative px-6 text-center mb-24">

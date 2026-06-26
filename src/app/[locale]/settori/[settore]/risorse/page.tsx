@@ -456,7 +456,7 @@ export default async function RisorseSettorePage({ params }: { params: Promise<P
       )}
 
       <div className="bg-white min-h-screen text-slate-900 font-sans">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 pt-32 pb-12">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 pt-5 pb-12">
 
           <Link
             href={`/${resolvedLocale}/settori/${settore}/`}

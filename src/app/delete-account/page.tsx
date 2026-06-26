@@ -58,7 +58,7 @@ export default function DeleteAccountPage() {
   };
 
   return (
-    <div className="pt-32 pb-24 px-6 min-h-screen bg-white text-slate-900">
+    <div className="pt-5 pb-24 px-6 min-h-screen bg-white text-slate-900">
       <div className="container mx-auto max-w-3xl">
 
         {/* Header */}

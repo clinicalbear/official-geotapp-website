@@ -1,8 +1,9 @@
 
 
 import { NextRequest, NextResponse } from 'next/server';
+import { rateLimitOk, clientIp } from '@/lib/rate-limit';
 
-const INDEXNOW_KEY = '95d9665657a34b4ea1de9d4d0ce6f4d5';
+const INDEXNOW_KEY = 'cb109f9fd30e4cf6bff9dfbc9c5b1358';
 const INDEXNOW_ENDPOINT = 'https://api.indexnow.org/indexnow';
 const HOST = 'geotapp.com';
 
@@ -16,6 +17,11 @@ export async function GET() {
 }
 
 export async function POST(request: NextRequest) {
+  // Anti-abuse: cap submissions per IP so nobody can flood IndexNow with
+  // garbage URLs attributed to geotapp.com.
+  if (!rateLimitOk(`indexnow:${clientIp(request)}`, 5, 60_000)) {
+    return NextResponse.json({ error: 'Too many requests' }, { status: 429 });
+  }
   const body = await request.json().catch(() => null);
   const urls = Array.isArray(body?.urls)
     ? body.urls.filter(

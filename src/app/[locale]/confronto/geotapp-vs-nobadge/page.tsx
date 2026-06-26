@@ -316,7 +316,7 @@ export default async function GeoTappVsNoBadgePage({ params }: { params: Promise
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <div className="min-h-screen pt-32 pb-20 px-6">
+      <div className="min-h-screen pt-5 pb-20 px-6">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-16">
             <span className="inline-block text-xs font-semibold tracking-widest uppercase text-primary mb-4">{t.badge}</span>

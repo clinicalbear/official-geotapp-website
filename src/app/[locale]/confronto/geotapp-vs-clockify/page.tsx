@@ -352,7 +352,7 @@ export default async function GeoTappVsClockifyPage({ params }: { params: Promis
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <div className="min-h-screen pt-32 pb-20 px-6">
+      <div className="min-h-screen pt-5 pb-20 px-6">
         <div className="container mx-auto max-w-4xl">
 
           {/* Hero */}

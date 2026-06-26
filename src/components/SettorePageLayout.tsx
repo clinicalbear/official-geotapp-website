@@ -143,7 +143,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
       )}
 
       {/* ── HERO ── */}
-      <section className="relative overflow-hidden bg-slate-50 px-6 pb-24 pt-32">
+      <section className="relative overflow-hidden bg-slate-50 px-6 pb-24 pt-5">
         <div className="container relative z-10 mx-auto max-w-6xl">
           <div className="grid items-center gap-12 md:grid-cols-2">
             <div>

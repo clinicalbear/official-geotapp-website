@@ -22,7 +22,7 @@ export default function FeaturesPage() {
   ];
 
   return (
-    <div className="bg-background min-h-screen pt-40 pb-20">
+    <div className="bg-background min-h-screen pt-5 pb-20">
       <section className="px-6 text-center mb-24">
         <motion.div
           initial={{ opacity: 0 }}

@@ -63,7 +63,7 @@ export default async function ConservazionePage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <div className="bg-white min-h-screen text-slate-900 font-sans">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 pt-32 pb-16">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 pt-5 pb-16">
           <h1 className="text-3xl font-bold text-slate-900 mb-4">{c.heading}</h1>
           <p className="text-slate-600 leading-relaxed mb-8">{c.intro}</p>
           <ConservazioneClient locale={rl} contenuto={c} paesi={paesi} />

@@ -246,7 +246,7 @@ export default function Pricing() {
   };
 
   return (
-    <div className="pt-32 pb-20 px-6 min-h-screen bg-background text-slate-900">
+    <div className="pt-5 pb-20 px-6 min-h-screen bg-background text-slate-900">
       <div className="container mx-auto max-w-4xl text-center mb-20">
         <div>
           <GeoBadge className="mb-6">{dict.pricing.badge}</GeoBadge>

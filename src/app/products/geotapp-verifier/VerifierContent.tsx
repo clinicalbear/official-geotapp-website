@@ -147,7 +147,7 @@ export default function VerifierContent({ copy, locale }: VerifierContentProps) 
   const getLink = (path: string) => localizePath(path, locale);
 
   return (
-    <div className="bg-background min-h-screen text-slate-900 pt-32 pb-24 overflow-x-hidden">
+    <div className="bg-background min-h-screen text-slate-900 pt-5 pb-24 overflow-x-hidden">
 
       {/* HERO */}
       <section className="container mx-auto px-6 max-w-6xl mb-32">

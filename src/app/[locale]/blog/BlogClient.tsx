@@ -190,7 +190,7 @@ export default function BlogClient({ locale, posts }: { locale: AppLocale; posts
   }
 
   return (
-    <div className="min-h-screen pt-40 pb-20 px-6 relative overflow-hidden">
+    <div className="min-h-screen pt-5 pb-20 px-6 relative overflow-hidden">
       <MapBackground />
       <div className="relative z-10">
       <section className="container-geo text-center mb-16">
