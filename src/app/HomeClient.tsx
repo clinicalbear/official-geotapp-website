@@ -19,6 +19,7 @@ import {
   FileX,
   Receipt,
 } from 'lucide-react';
+import EuDataBadge from '@/components/EuDataBadge';
 // Heavy below-fold components, dynamic import to reduce initial bundle
 import dynamic from 'next/dynamic';
 const HeartbeatLine = dynamic(() => import('@/components/HeartbeatLine'), { ssr: false });
@@ -310,13 +311,18 @@ export default function Home() {
                 <span className="flex items-center gap-1.5"><ShieldCheck size={15} className="text-[#8FC436]" /><strong className="text-slate-700">{dict.landing.trust_gdpr}</strong></span>
                 <span className="flex items-center gap-1.5"><MapPin size={15} className="text-[#3BAEE0]" /><strong className="text-slate-700">{dict.landing.trust_gps}</strong></span>
                 <span className="flex items-center gap-1.5"><WifiOff size={15} className="text-amber-500" /><strong className="text-slate-700">{dict.landing.trust_offline}</strong></span>
-                <span className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#1E40AF]/10 border border-[#1E40AF]/25 text-[#1E40AF] font-semibold"><Database size={14} /><span>{dict.landing.trust_eu_data}</span></span>
+              </div>
+              {/* Sigillo UE "Dati in Europa" — su mobile (la demo a destra e nascosta sotto md) */}
+              <div className="mt-7 flex md:hidden">
+                <EuDataBadge label={dict.landing.trust_eu_data} size={116} />
               </div>
             </motion.div>
 
             {/* Visual fluttuante: demo interattiva timbratura (mock) */}
             <motion.div initial={{ opacity: 0, scale: 0.92, y: 30 }} animate={{ opacity: 1, scale: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.15 }} className="relative hidden md:block">
               <ClockInDemo dict={dict} />
+              {/* Sigillo UE "Dati in Europa" come timbro in evidenza sulla demo */}
+              <EuDataBadge label={dict.landing.trust_eu_data} size={132} className="absolute -top-6 -right-3 z-20 rotate-6 drop-shadow-xl" />
             </motion.div>
           </div>
         </div>
