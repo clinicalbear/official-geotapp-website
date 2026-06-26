@@ -9,6 +9,6 @@ export default function TermsPage() {
   return LegalMarkdownPage({
     markdownContent,
     title: 'Condizioni Generali di Servizio',
-    subtitle: 'Aggiornato al 10 Marzo 2026',
+    subtitle: 'Aggiornato al 26 Giugno 2026',
   });
 }
