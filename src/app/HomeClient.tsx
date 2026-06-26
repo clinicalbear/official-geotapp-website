@@ -306,11 +306,11 @@ export default function Home() {
                 </Link>
                 <Link href={getLink('/settori')} className="btn-modern-ghost">{dict.landing.hero_cta_secondary}</Link>
               </div>
-              <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-slate-500">
+              <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-slate-500">
                 <span className="flex items-center gap-1.5"><ShieldCheck size={15} className="text-[#8FC436]" /><strong className="text-slate-700">{dict.landing.trust_gdpr}</strong></span>
                 <span className="flex items-center gap-1.5"><MapPin size={15} className="text-[#3BAEE0]" /><strong className="text-slate-700">{dict.landing.trust_gps}</strong></span>
                 <span className="flex items-center gap-1.5"><WifiOff size={15} className="text-amber-500" /><strong className="text-slate-700">{dict.landing.trust_offline}</strong></span>
-                <span className="flex items-center gap-1.5"><Database size={15} className="text-[#1E40AF]" /><strong className="text-slate-700">{dict.landing.trust_eu_data}</strong></span>
+                <span className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#1E40AF]/10 border border-[#1E40AF]/25 text-[#1E40AF] font-semibold"><Database size={14} /><span>{dict.landing.trust_eu_data}</span></span>
               </div>
             </motion.div>
 
