@@ -1,6 +1,7 @@
 # POLITICA DI UTILIZZO GEO TAPP FLOW & TIMETRACKER
-## Versione 1.3 - Marzo 2026 (Sede IT - Zero Knowledge Encryption)
-**Data ultima modifica:** 10 Marzo 2026  
+## Versione 1.4 - Giugno 2026 (Sede IT - Zero Knowledge Encryption)
+**Data ultima modifica:** 26 Giugno 2026  
+> ⚠️ **Bozza aggiornata, da rivalidare con il legale.** Modifiche v1.4: §2 prezzi reali (Flow 390/990/1990, licenze 36/30 per operatore); §10.1 recesso allineato (P.IVA obbligatoria, durata minima 12 mesi, saldo residuo -10%, clausola RINUNCIO); Allegato 1 DPA corretto (AES-256-GCM, residenza dati verificata: Firestore UE, foto/Functions USA con SCC+DPF). DPA separato `docs/legal/dpa-geotapp.md` fuso qui ed eliminato.  
 **Titolare:** GeoTapp di Michele Angelo Petraroli - P.IVA IT04183990987  
 **Contatto GDPR/DPO/Rep UE:** info@geotapp.com  
 
@@ -21,14 +22,24 @@ GeoTapp utilizza **field-level encryption client-side** con chiavi derivate loca
 **Nessun recupero possibile** da parte di GeoTapp, nemmeno tramite supporto tecnico. **Backup password obbligatorio a carico dell'utente.**
 
 ### 2. PIANI TARIFFARI E PAGAMENTI
-| Tier | Prezzo Annuo +IVA | Utenti Max | Feature |
-|------|-------------------|------------|---------|
-| Solo Start | €189 | 5 | CRM base, timbrature |
-| TEAM PRO | €379 | 20 | AI Gemini, turni, comunicazioni |
-| Elite | €699 | Illimitato | Banking, admin full |
-| Lifetime Founder | €1.299 one-time | Illimitato | Tutto + supporto priority |
+**GeoTapp Flow** (dashboard di gestione) — abbonamento per azienda:
+| Piano | Annuale (+IVA) | Mensile (+IVA) |
+|------|---------------|----------------|
+| Solo | €390 / anno | €39 / mese |
+| Team | €990 / anno | €99 / mese |
+| Business | €1.990 / anno | €199 / mese |
 
-**Pagamenti:** Stripe auto-renew. **VAT OSS/MOSS UE:** Fatturazione B2C con reverse-charge cross-border (Reg. UE 2017/2455). Recesso 30gg pre-rinnovo, prorata refund.
+**Licenze GeoTapp TimeTracker** (app per i dipendenti) — prezzo per operatore:
+| Operatori | Annuale per operatore | Mensile per operatore |
+|-----------|----------------------|------------------------|
+| fino a 25 | €36 / anno | €3 / mese |
+| da 26 a 150 | €30 / anno | €2,50 / mese |
+
+- **Bundle Flow + TimeTracker:** sconto **15%**.
+- **Pagamento annuale = 2 mensilità in omaggio** rispetto al mensile.
+- **Servizio B2B: Partita IVA obbligatoria. Durata minima 12 mesi** (vedi §10.1).
+
+**Pagamenti:** Stripe, rinnovo automatico. Fatturazione conforme alla normativa IVA UE applicabile (operazioni B2B). Recesso, durata minima e rinuncia: vedi §10.1.
 
 ### 3. REQUISITI D'ACCESSO
 - Età 18+, aziende UE/SEE.  
@@ -78,9 +89,9 @@ GeoTapp implementa **Zero Knowledge Architecture** tramite **GeoEncryptManager**
 **Dati Crittografati Client-Side (AES-256):**
 | Collection | Campi Encrypted | Algoritmo | Chiavi |
 |-----------|-----------------|-----------|--------|
-| `workSessions` | `gpsLat`, `gpsLng`, `locationAddress` | AES-256-CBC | Client-side derivate |
-| `employees` | `phone`, `email`, `address` | AES-256-CBC | Client-side derivate |
-| `clients` | `email`, `phone`, `address` | AES-256-CBC | Client-side derivate |
+| `workSessions` | `gpsLat`, `gpsLng`, `locationAddress` | AES-256-GCM | Client-side derivate |
+| `employees` | `phone`, `email`, `address` | AES-256-GCM | Client-side derivate |
+| `clients` | `email`, `phone`, `address` | AES-256-GCM | Client-side derivate |
 
 **Derivazione Chiavi:**
 - Chiavi generate **localmente sul dispositivo Android** dell'utente
@@ -191,11 +202,11 @@ Diritto accesso/portabilità su dati crittografati limitato a export encrypted. 
 
 ### 10. RECESSO E TERMINAZIONE
 
-#### 10.1 Recesso Utente
-- **30 giorni** pre-rinnovo (B2B)
-- **14 giorni** cooling-off (B2C UE)
-- **Migrazione dati:** CSV/Firestore export (**crittografati richiedono password**)
-- **Prorata refund:** Cancellazione anticipata Elite/Lifetime
+#### 10.1 Recesso, durata minima e rinuncia (aggiornato 24/06/2026)
+- **Servizio B2B:** l'accesso richiede una **Partita IVA valida**, obbligatoria alla conversione da trial ad abbonamento. Il servizio non è destinato ai consumatori.
+- **Durata minima 12 mesi:** sottoscrivendo, il Cliente approva specificamente la clausola di durata minima di 12 (dodici) mesi e l'obbligo di corrispondere i canoni per l'intero periodo anche in caso di disdetta anticipata. In caso di pagamento mensile, le rate restano dovute fino al termine dei 12 mesi, con **facoltà di saldare in un'unica soluzione l'importo residuo, scontato del 10%**.
+- **Rinuncia al recesso e attivazione immediata (clausola RINUNCIO):** il Cliente può chiedere l'attivazione immediata del servizio dichiarando espressamente di rinunciare al diritto di recesso di 14 giorni; una volta iniziata l'erogazione, tale diritto non potrà più essere esercitato. Se il Cliente **non** rinuncia, mantiene il diritto di ripensamento e il servizio a pagamento si attiva dopo 14 giorni.
+- **Migrazione dati:** export CSV/Firestore (**i dati crittografati client-side richiedono la chiave/password dell'utente**).
 
 #### 10.2 Terminazione GeoTapp
 - Violazione ToS: Ban immediato
@@ -239,7 +250,7 @@ GeoTapp processa dati personali per conto Controller (Cliente) come da GDPR Art.
 **Encryption Multi-Layer:**
 | Livello | Implementazione | Chiavi | Responsabile |
 |---------|-----------------|--------|--------------|
-| **Client-side (ZK)** | AES-256-CBC field-level | Client derivate | Utente |
+| **Client-side (ZK)** | AES-256-GCM field-level | Client derivate | Utente |
 | **At-rest** | Firebase encryption | Google managed | GeoTapp/Google |
 | **In-transit** | TLS 1.3 | Certificati SSL | GeoTapp/Google |
 
@@ -254,11 +265,15 @@ GeoTapp processa dati personali per conto Controller (Cliente) come da GDPR Art.
 - Firebase Security Rules multi-tenant (companyId filtering)
 - Audit logs completi (Firebase Auth)
 
-### A1.3 Sub-Processor Approvati
-| Fornitore | Servizio | Luogo | SCC | Certificazioni |
-|-----------|----------|-------|-----|----------------|
-| Google LLC | Firebase/Firestore | US/IE | ✅ | SOC2, ISO 27001 |
-| Stripe Inc | Pagamenti | US/IE | ✅ | PCI-DSS Level 1 |
+### A1.3 Sub-Processor Approvati e residenza dati (verificato 25/06/2026)
+| Fornitore | Servizio | Residenza dati | Garanzia trasferimento | Certificazioni |
+|-----------|----------|----------------|------------------------|----------------|
+| Google (Firebase/Google Cloud) | Database Firestore (timbrature, orari, GPS) | **UE (multi-regione `eur3`)** | Resta in UE | SOC2, ISO 27001 |
+| Google (Firebase/Google Cloud) | Storage foto + Cloud Functions (elaborazione) | USA (`us-central1`) | SCC UE 2021 + EU-US DPF | SOC2, ISO 27001 |
+| Stripe Payments Europe | Pagamenti (dati di fatturazione, non dei dipendenti) | UE/USA | SCC + DPF | PCI-DSS Level 1 |
+| Cloudflare | CDN/sicurezza del sito web (non dati dei dipendenti) | Edge globale | SCC + DPF | SOC2, ISO 27001 |
+
+> I **dati di lavoro strutturati** (timbrature, orari, posizioni) risiedono in **UE**. Sono negli USA solo le **fotografie** (Storage) e l'**elaborazione transitoria** (Cloud Functions), coperte da SCC + EU-US DPF.
 
 ### A1.4 Data Breach Notification
 - **Discovery → Cliente:** 24h
