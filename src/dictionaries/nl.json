@@ -125,6 +125,7 @@
     "trust_gps_desc": "Elke interventie gecertificeerd met locatie en tijdstempel",
     "trust_offline": "Werkt offline",
     "trust_offline_desc": "Automatisch synchroniseren bij verbinding",
+    "trust_eu_data": "Data in Europa",
     "features_title": "Van interventie naar verifieerbaar bewijs",
     "features_subtitle": "Drie geïntegreerde tools: het veld registreert, het kantoor controleert, de klant verifieert.",
     "cta_title": "Het werk is gedaan. Bewijs het nu.",

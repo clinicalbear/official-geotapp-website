@@ -125,6 +125,7 @@
     "trust_gps_desc": "Varje uppdrag certifierat med plats och tidsstämpel",
     "trust_offline": "Fungerar offline",
     "trust_offline_desc": "Automatisk synkronisering vid anslutning",
+    "trust_eu_data": "Data i Europa",
     "features_title": "Från uppdrag till verifierbart bevis",
     "features_subtitle": "Tre integrerade verktyg: fältet registrerar, kontoret kontrollerar, kunden verifierar.",
     "cta_title": "Arbetet hände. Bevisa det nu.",

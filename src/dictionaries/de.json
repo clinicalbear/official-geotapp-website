@@ -125,6 +125,7 @@
     "trust_gps_desc": "Jeder Einsatz mit Standort und Zeitstempel zertifiziert",
     "trust_offline": "Offline-fähig",
     "trust_offline_desc": "Automatische Synchronisation bei Verbindung",
+    "trust_eu_data": "Daten in Europa",
     "features_title": "Vom Einsatz zum verifizierbaren Nachweis",
     "features_subtitle": "Drei integrierte Werkzeuge: Das Feld erfasst, das Büro kontrolliert, der Kunde verifiziert.",
     "cta_title": "Die Arbeit war da. Jetzt beweisen Sie es.",

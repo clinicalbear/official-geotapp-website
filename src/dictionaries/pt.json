@@ -125,6 +125,7 @@
     "trust_gps_desc": "Cada intervenção certificada com localização e marca de tempo",
     "trust_offline": "Funciona offline",
     "trust_offline_desc": "Sincronização automática ao reconectar",
+    "trust_eu_data": "Dados na Europa",
     "features_title": "Do trabalho à prova verificável",
     "features_subtitle": "Três ferramentas integradas: o campo regista, o escritório controla, o cliente verifica.",
     "cta_title": "O trabalho aconteceu. Agora prove-o.",

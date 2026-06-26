@@ -24,6 +24,21 @@ const SIDEBAR_LABELS: Record<string, {
   fr: { toc: 'Dans cet article', cta_title: 'Essayez GeoTapp', cta_desc: '14 jours gratuits. Sans carte bancaire. Pret en 2 minutes.', cta_btn: 'Commencer', share: 'Partager', copied: 'Copie !', product_desc: 'Decouvrez comment GeoTapp resout ce probleme', product_btn: 'En savoir plus' },
 };
 
+// Badge "dati in Europa" — localizzato in tutte e 11 le lingue (claim accurato: dati di lavoro in UE)
+const EU_BADGE: Record<string, { title: string; desc: string }> = {
+  it: { title: 'I tuoi dati restano in Europa', desc: 'Timbrature, foto e anagrafiche su server in UE.' },
+  en: { title: 'Your data stays in Europe', desc: 'Clock-ins, photos and records on EU servers.' },
+  de: { title: 'Ihre Daten bleiben in Europa', desc: 'Zeiterfassung, Fotos und Daten auf EU-Servern.' },
+  nl: { title: 'Jouw gegevens blijven in Europa', desc: 'Tijdregistraties en gegevens op EU-servers.' },
+  fr: { title: 'Vos données restent en Europe', desc: 'Pointages, photos et données sur serveurs UE.' },
+  es: { title: 'Tus datos se quedan en Europa', desc: 'Fichajes, fotos y datos en servidores de la UE.' },
+  pt: { title: 'Os teus dados ficam na Europa', desc: 'Registos, fotos e dados em servidores da UE.' },
+  da: { title: 'Dine data bliver i Europa', desc: 'Registreringer, fotos og data på EU-servere.' },
+  sv: { title: 'Dina data stannar i Europa', desc: 'Stämplingar, foton och data på EU-servrar.' },
+  nb: { title: 'Dataene dine blir i Europa', desc: 'Registreringer, bilder og data på EU-servere.' },
+  ru: { title: 'Ваши данные остаются в Европе', desc: 'Отметки, фото и данные на серверах в ЕС.' },
+};
+
 function detectProduct(categories: Array<{ slug: string; name: string }>): { name: string; logo: string; color: string; href: string } {
   const slugs = categories.map(c => c.slug.toLowerCase()).join(' ');
   if (/gps|track|timbr|presenz|geoloc|clock|attendance|zeit/.test(slugs)) {
@@ -106,6 +121,7 @@ function ShareButtons({ title, copiedLabel }: { title: string; copiedLabel: stri
 export default function ArticleSidebar({ headings, locale, categories = [], date, readingTime, title = '' }: ArticleSidebarProps) {
   const [activeId, setActiveId] = useState<string>('');
   const labels = SIDEBAR_LABELS[locale] || SIDEBAR_LABELS['en'];
+  const euBadge = EU_BADGE[locale] || EU_BADGE['en'];
   const product = detectProduct(categories);
 
   useEffect(() => {
@@ -215,6 +231,20 @@ export default function ArticleSidebar({ headings, locale, categories = [], date
         <span className="mt-3 block text-center text-[12px] font-semibold text-[#8FC436] group-hover:translate-x-0.5 transition-transform">
           {labels.product_btn} &rarr;
         </span>
+      </Link>
+
+      {/* Dati in Europa, residenza UE dei dati di lavoro */}
+      <Link
+        href={`/${locale}/privacy/`}
+        className="block mb-6 rounded-2xl border border-slate-200 hover:border-slate-300 hover:shadow-md transition-all duration-200 p-5 group"
+      >
+        <div className="flex items-center gap-2 mb-1.5">
+          <span className="text-[#1E40AF] shrink-0">
+            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg>
+          </span>
+          <p className="text-[13px] font-bold text-slate-800 leading-snug">{euBadge.title}</p>
+        </div>
+        <p className="text-[11px] text-slate-500 leading-relaxed">{euBadge.desc}</p>
       </Link>
 
       {/* CTA, leggero, arioso */}

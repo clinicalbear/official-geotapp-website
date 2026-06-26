@@ -125,6 +125,7 @@
     "trust_gps_desc": "Hvert besøg certificeret med placering og tidsstempel",
     "trust_offline": "Virker offline",
     "trust_offline_desc": "Automatisk synkronisering ved forbindelsen",
+    "trust_eu_data": "Data i Europa",
     "features_title": "Fra intervention til verificerbart bevis",
     "features_subtitle": "Tre integrerede værktøjer: marken registrerer, kontoret kontrollerer, kunden verificerer.",
     "cta_title": "Arbejdet skete. Bevis det nu.",

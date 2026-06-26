@@ -125,6 +125,7 @@
     "trust_gps_desc": "Chaque intervention certifiée avec position et horodatage",
     "trust_offline": "Fonctionne hors ligne",
     "trust_offline_desc": "Synchronisation automatique à la reconnexion",
+    "trust_eu_data": "Données en Europe",
     "features_title": "De l'intervention à la preuve vérifiable",
     "features_subtitle": "Trois outils intégrés : le terrain enregistre, le bureau contrôle, le client vérifie.",
     "cta_title": "Le travail a eu lieu. Prouvez-le maintenant.",

@@ -310,6 +310,7 @@ export default function Home() {
                 <span className="flex items-center gap-1.5"><ShieldCheck size={15} className="text-[#8FC436]" /><strong className="text-slate-700">{dict.landing.trust_gdpr}</strong></span>
                 <span className="flex items-center gap-1.5"><MapPin size={15} className="text-[#3BAEE0]" /><strong className="text-slate-700">{dict.landing.trust_gps}</strong></span>
                 <span className="flex items-center gap-1.5"><WifiOff size={15} className="text-amber-500" /><strong className="text-slate-700">{dict.landing.trust_offline}</strong></span>
+                <span className="flex items-center gap-1.5"><Database size={15} className="text-[#1E40AF]" /><strong className="text-slate-700">{dict.landing.trust_eu_data}</strong></span>
               </div>
             </motion.div>
 

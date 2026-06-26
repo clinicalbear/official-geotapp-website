@@ -133,6 +133,7 @@
     "trust_gps_desc": "Ogni intervento certificato con posizione e timestamp",
     "trust_offline": "Funziona Offline",
     "trust_offline_desc": "Sincronizzazione automatica alla riconnessione",
+    "trust_eu_data": "Dati in Europa",
     "features_title": "Da intervento a prova verificabile",
     "features_subtitle": "Tre strumenti integrati: il campo registra, l'ufficio controlla, il cliente verifica.",
     "cta_title": "Il lavoro c'è stato. Ora dimostralo.",

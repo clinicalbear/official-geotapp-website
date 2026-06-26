@@ -133,6 +133,7 @@
     "trust_gps_desc": "Every job certified with location and timestamp",
     "trust_offline": "Works Offline",
     "trust_offline_desc": "Auto-sync when connection returns",
+    "trust_eu_data": "Data hosted in the EU",
     "features_title": "From job to verifiable proof",
     "features_subtitle": "Three integrated tools: the field records, the office controls, the client verifies.",
     "cta_title": "The work happened. Now prove it.",
