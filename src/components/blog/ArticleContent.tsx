@@ -16,6 +16,13 @@ const CTA_LABELS: Record<string, { title: string; desc: string; btn: string }> =
   en: { title: 'Try GeoTapp free for 14 days', desc: 'No credit card required. Get started in 2 minutes.', btn: 'Start free trial' },
   de: { title: 'GeoTapp 14 Tage kostenlos testen', desc: 'Keine Kreditkarte erforderlich. In 2 Minuten starten.', btn: 'Kostenlos testen' },
   fr: { title: 'Essayez GeoTapp gratuitement 14 jours', desc: 'Sans carte bancaire. Démarrez en 2 minutes.', btn: 'Essai gratuit' },
+  nl: { title: 'Probeer GeoTapp 14 dagen gratis', desc: 'Geen creditcard nodig. Klaar in 2 minuten.', btn: 'Gratis proberen' },
+  es: { title: 'Prueba GeoTapp gratis 14 días', desc: 'Sin tarjeta de crédito. Empieza en 2 minutos.', btn: 'Prueba gratis' },
+  pt: { title: 'Experimenta o GeoTapp grátis 14 dias', desc: 'Sem cartão de crédito. Começa em 2 minutos.', btn: 'Teste grátis' },
+  da: { title: 'Prøv GeoTapp gratis i 14 dage', desc: 'Intet kreditkort. Kom i gang på 2 minutter.', btn: 'Start gratis' },
+  sv: { title: 'Prova GeoTapp gratis i 14 dagar', desc: 'Inget kreditkort. Kom igång på 2 minuter.', btn: 'Starta gratis' },
+  nb: { title: 'Prøv GeoTapp gratis i 14 dager', desc: 'Ingen kredittkort. Kom i gang på 2 minutter.', btn: 'Start gratis' },
+  ru: { title: 'Попробуйте GeoTapp бесплатно 14 дней', desc: 'Без банковской карты. Запуск за 2 минуты.', btn: 'Начать бесплатно' },
 };
 
 function MidArticleCta({ locale }: { locale: string }) {
