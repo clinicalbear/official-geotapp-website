@@ -2,11 +2,11 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'Software para Vigilantes de Seguridad y Seguridad Privada | Presencias Verificadas | GeoTapp',
-    description: 'Gestión de personal para empresas de seguridad privada, vigilantes y seguridad en eventos: presencias GPS verificadas, informes de incidentes geolocalizados y seguimiento de habilitaciones según Ley 5/2014.',
+    title: 'Software de Gestión para Empresas de Seguridad Privada | GeoTapp',
+    description: 'Software de gestión para empresas de seguridad privada y vigilancia: presencias GPS verificadas, partes de incidencia geolocalizados y control de habilitaciones TIP (Ley 5/2014).',
   },
   hero: {
-    badge: 'Software para Vigilantes de Seguridad, Seguridad Privada y Eventos',
+    badge: 'Software de Gestión para Empresas de Seguridad Privada y Vigilancia',
     h1_line1: 'Presencias verificadas y registros de turno',
     h1_line2: 'para vigilantes de seguridad y seguridad privada',
     subtitle: 'GeoTapp Flow y TimeTracker documentan la presencia de los vigilantes en los puestos asignados con GPS verificado y marcas de tiempo inmutables. Seguimiento de habilitaciones conforme a la Ley 5/2014, relevo digital de turno e informes de incidentes geolocalizados, todo en una sola plataforma.',
@@ -85,6 +85,10 @@ const content: SettoreContent = {
       {
         q: '¿GeoTapp soporta el relevo digital de turno entre vigilantes?',
         a: 'Sí. Los cambios de turno se registran digitalmente con acuse de recibo, notas operativas y estado de los puestos. El responsable tiene visibilidad completa de la continuidad del servicio sin depender de comunicaciones verbales.',
+      },
+      {
+        q: '¿Sirve GeoTapp como software para empresas de vigilancia y seguridad privada?',
+        a: 'Sí. GeoTapp es el software de gestión que usan las empresas de seguridad privada y de vigilancia para verificar la presencia de los vigilantes en cada puesto con GPS, controlar las habilitaciones TIP conforme a la Ley 5/2014 y entregar al cliente informes de presencia imposibles de impugnar.',
       },
     ],
   },
