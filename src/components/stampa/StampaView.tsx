@@ -359,7 +359,7 @@ export default function StampaView({
                   <a
                     href={item.url}
                     target="_blank"
-                    rel="noopener noreferrer"
+                    rel="noopener noreferrer nofollow"
                     className="flex-1 font-medium text-foreground hover:text-primary transition-colors"
                   >
                     {item.title}
@@ -393,7 +393,7 @@ export default function StampaView({
                   <a
                     href={item.url}
                     target="_blank"
-                    rel="noopener noreferrer"
+                    rel="noopener noreferrer nofollow"
                     className="flex-1 font-medium text-foreground hover:text-primary transition-colors"
                   >
                     {item.title}

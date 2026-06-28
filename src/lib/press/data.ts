@@ -10,7 +10,15 @@ export type PressItem = {
 
 // VUOTI al lancio. Aggiungere una voce = la sezione compare da sola in pagina.
 export const PRESS_RELEASES: PressItem[] = [];
-export const PRESS_COVERAGE: PressItem[] = [];
+export const PRESS_COVERAGE: PressItem[] = [
+  {
+    date: '2026-06-30',
+    outlet: 'Risorse Umane HR',
+    title: 'Presenze, GPS e art. 4: dove finisce la prova e dove comincia la sorveglianza',
+    url: 'https://www.risorseumane-hr.it/presenze-gps-articolo-4/',
+    locale: 'it',
+  },
+];
 
 export function hasPress(items: PressItem[]): boolean {
   return items.length > 0;
