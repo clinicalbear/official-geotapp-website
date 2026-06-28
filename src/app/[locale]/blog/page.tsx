@@ -16,9 +16,11 @@ function wpFetch(url: string): Promise<Response> {
   return fetch(url, { headers: HEADERS, cache: 'no-store', signal: AbortSignal.timeout(8000) });
 }
 
-// Fetch critico (prima pagina): 2 tentativi, lancia se entrambi falliscono.
-// Un singolo hiccup di WP non deve tradursi in una pagina blog vuota servita con HTTP 200.
-async function wpFetchOrThrow(url: string, tries = 2): Promise<Response> {
+// Fetch critico (prima pagina): 3 tentativi con backoff, lancia se tutti falliscono.
+// Un singolo hiccup di WP non deve tradursi in una pagina blog vuota servita con HTTP 200,
+// ma nemmeno in un 500 visibile: il backoff assorbe i blip brevi anche su isolate "freddi"
+// (cache in-memory vuota), che sono l'unico caso in cui oggi si arriva al throw.
+async function wpFetchOrThrow(url: string, tries = 3): Promise<Response> {
   let lastErr: unknown = null;
   for (let i = 0; i < tries; i++) {
     try {
@@ -28,6 +30,7 @@ async function wpFetchOrThrow(url: string, tries = 2): Promise<Response> {
     } catch (e) {
       lastErr = e;
     }
+    if (i < tries - 1) await new Promise((res) => setTimeout(res, 250 * (i + 1)));
   }
   throw lastErr ?? new Error('WP fetch failed');
 }
@@ -162,6 +165,37 @@ async function buildPostList(all: Awaited<ReturnType<typeof fetchAllPosts>>, loc
 const POST_CACHE = new Map<string, { posts: Post[]; ts: number }>();
 const CACHE_TTL_MS = 5 * 60 * 1000;
 
+// Cache CONDIVISA tra isolate (Cloudflare Cache API). L'unico caso in cui oggi si arriva al 500 è
+// un isolate "freddo" (POST_CACHE in-memory vuota) che becca un blip di WP: niente stale da servire.
+// La Cache API persiste tra isolate dello stesso colo, quindi anche un isolate freddo legge l'ultima
+// lista buona invece di lanciare. Best-effort e guardata: se il runtime non espone `caches`, no-op.
+const SHARED_KEY = (locale: string) => new Request(`https://geotapp.com/__blog-stale/${locale}`);
+
+async function readSharedPosts(locale: string): Promise<Post[] | null> {
+  try {
+    const cs = (globalThis as any).caches;
+    if (!cs?.default) return null;
+    const hit = await cs.default.match(SHARED_KEY(locale));
+    if (!hit) return null;
+    return (await hit.json()) as Post[];
+  } catch {
+    return null;
+  }
+}
+
+async function writeSharedPosts(locale: string, posts: Post[]): Promise<void> {
+  try {
+    const cs = (globalThis as any).caches;
+    if (!cs?.default) return;
+    const res = new Response(JSON.stringify(posts), {
+      headers: { 'content-type': 'application/json', 'cache-control': 'max-age=86400' },
+    });
+    await cs.default.put(SHARED_KEY(locale), res);
+  } catch {
+    /* best-effort: la cache condivisa è un di più, non deve mai rompere la richiesta */
+  }
+}
+
 async function fetchPosts(locale: string): Promise<Post[]> {
   const cached = POST_CACHE.get(locale);
   if (cached && Date.now() - cached.ts < CACHE_TTL_MS) return cached.posts;
@@ -174,13 +208,17 @@ async function fetchPosts(locale: string): Promise<Post[]> {
     }
     if (posts.length > 0) {
       POST_CACHE.set(locale, { posts, ts: Date.now() });
+      await writeSharedPosts(locale, posts);
       return posts;
     }
     // WP ha risposto correttamente ma non risultano post: empty-state legittimo, HTTP 200.
     return [];
   } catch {
-    // WP irraggiungibile/errore: serviamo stale se disponibile, altrimenti 500 (mai soft-404).
+    // WP irraggiungibile/errore: serviamo stale, prima dalla in-memory poi dalla cache condivisa
+    // tra isolate; solo se non esiste NESSUNA copia buona si arriva al 500 (mai soft-404 vuoto).
     if (cached) return cached.posts;
+    const shared = await readSharedPosts(locale);
+    if (shared && shared.length > 0) return shared;
     throw new Error('Blog temporarily unavailable');
   }
 }

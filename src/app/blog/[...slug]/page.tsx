@@ -83,23 +83,31 @@ interface WPPost {
 }
 
 async function fetchPost(articleSlug: string, requestedLocale?: string): Promise<WPPost | null> {
-  try {
-    const res = await wpFetch(
-      `${WP}/wp-json/wp/v2/posts/?slug=${encodeURIComponent(articleSlug)}&_embed=wp:featuredmedia,wp:term`,
-    );
-    if (!res.ok) return null;
-    const posts: WPPost[] = await res.json();
-    if (posts.length === 0) return null;
-    // Polylang permette lo stesso slug in lingue diverse: se la query ne ritorna
-    // più d'uno, scegli quello che corrisponde alla lingua dell'URL richiesto.
-    if (posts.length > 1 && requestedLocale) {
-      const match = posts.find((p) => detectPostLocale(p) === requestedLocale);
-      if (match) return match;
+  const url = `${WP}/wp-json/wp/v2/posts/?slug=${encodeURIComponent(articleSlug)}&_embed=wp:featuredmedia,wp:term`;
+  // 3 tentativi con backoff: un blip transitorio di WP non deve trasformare un post ESISTENTE
+  // in un 404 (rischio deindicizzazione). Una risposta OK con 0 risultati è invece un 404
+  // LEGITTIMO (slug inesistente) e non va ritentata.
+  for (let i = 0; i < 3; i++) {
+    try {
+      const res = await wpFetch(url);
+      if (res.ok) {
+        const posts: WPPost[] = await res.json();
+        if (posts.length === 0) return null; // genuino: lo slug non esiste
+        // Polylang permette lo stesso slug in lingue diverse: se la query ne ritorna
+        // più d'uno, scegli quello che corrisponde alla lingua dell'URL richiesto.
+        if (posts.length > 1 && requestedLocale) {
+          const match = posts.find((p) => detectPostLocale(p) === requestedLocale);
+          if (match) return match;
+        }
+        return posts[0];
+      }
+      // risposta non-ok (5xx / blip): ritenta
+    } catch {
+      // errore di rete / timeout: ritenta
     }
-    return posts[0];
-  } catch {
-    return null;
+    if (i < 2) await new Promise((r) => setTimeout(r, 250 * (i + 1)));
   }
+  return null;
 }
 
 function resolvePostData(post: WPPost, locale: string) {
