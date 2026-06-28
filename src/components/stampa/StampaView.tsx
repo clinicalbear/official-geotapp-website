@@ -37,6 +37,12 @@ import type { AppLocale } from '@/lib/i18n/config';
 import { localizePath } from '@/lib/i18n/locale-routing';
 import { PRESS_RELEASES, PRESS_COVERAGE, hasPress } from '@/lib/press/data';
 
+// Data ISO 'YYYY-MM-DD' → visualizzazione 'dd-MM-YYYY'. L'ISO resta nei dati (ordinamento).
+function fmtPressDate(iso: string): string {
+  const [y, m, d] = iso.split('-');
+  return d && m && y ? `${d}-${m}-${y}` : iso;
+}
+
 // ── tiny hook: show a transient "copied" check for 2s ──────────────────────
 function useCopy() {
   const [copied, setCopied] = useState<string | null>(null);
@@ -354,7 +360,7 @@ export default function StampaView({
                   key={i}
                   className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6 p-5 rounded-2xl border border-white/10 bg-white/[0.02] hover:border-primary/30 transition-colors duration-300"
                 >
-                  <time className="text-xs text-text-secondary shrink-0 font-mono">{item.date}</time>
+                  <time dateTime={item.date} className="text-xs text-text-secondary shrink-0 font-mono">{fmtPressDate(item.date)}</time>
                   <span className="text-xs text-primary uppercase tracking-wide shrink-0">{item.outlet}</span>
                   <a
                     href={item.url}
@@ -388,7 +394,7 @@ export default function StampaView({
                   key={i}
                   className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6 p-5 rounded-2xl border border-white/10 bg-white/[0.02] hover:border-primary/30 transition-colors duration-300"
                 >
-                  <time className="text-xs text-text-secondary shrink-0 font-mono">{item.date}</time>
+                  <time dateTime={item.date} className="text-xs text-text-secondary shrink-0 font-mono">{fmtPressDate(item.date)}</time>
                   <span className="text-xs text-primary uppercase tracking-wide shrink-0">{item.outlet}</span>
                   <a
                     href={item.url}
