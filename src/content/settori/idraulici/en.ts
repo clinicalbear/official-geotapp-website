@@ -2,7 +2,7 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App for Plumbers & HVAC Technicians | GeoTapp - GPS Reports',
+    title: 'Plumbing Technician App with GPS for Plumbers | GeoTapp',
     description: 'GeoTapp is the app for plumbers and HVAC technicians: GPS-verified job reports, installation photos and tamper-proof records. Close disputes with real evidence. Try free.',
   },
   hero: {
