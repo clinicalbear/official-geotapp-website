@@ -228,7 +228,7 @@ const SITEMAP_ROUTES: SitemapRouteEntry[] = [
   { path: '/confronto/geotapp-vs-clockify/', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/confronto/geotapp-vs-hubstaff/', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/blog/', priority: 0.85, changeFrequency: 'daily' },
-  { path: '/demo/', priority: 0.9, changeFrequency: 'monthly' },
+  { path: '/trial/', priority: 0.9, changeFrequency: 'monthly' },
   { path: '/guida/', priority: 0.7, changeFrequency: 'monthly' },
   { path: '/contact/', priority: 0.65, changeFrequency: 'monthly' },
   { path: '/chi-siamo/', priority: 0.55, changeFrequency: 'monthly' },
