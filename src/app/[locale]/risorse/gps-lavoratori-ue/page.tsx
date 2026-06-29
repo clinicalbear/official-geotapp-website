@@ -54,7 +54,7 @@ export default async function SelettorePaesiPage({
   const fullDict = getDictionary(resolvedLocale);
   const dict = fullDict.risorseGps;
 
-  const countries: PaeseSelettore[] = getAllStati().map((s) => ({
+  const countries: PaeseSelettore[] = getAllStati(resolvedLocale).map((s) => ({
     slugCanonico: s.slugCanonico,
     codiceISO: s.codiceISO,
     nome: s.nome,

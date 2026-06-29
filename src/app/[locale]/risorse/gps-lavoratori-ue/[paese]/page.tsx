@@ -101,7 +101,7 @@ export default async function SchedaPaesePage({
   const nomePaese = scheda.nomi?.[resolvedLocale] ?? scheda.nome;
 
   // Elenco paesi per il selettore in-scheda (stessa lista del selettore principale).
-  const countries: PaeseSelettore[] = getAllStati().map((s) => ({
+  const countries: PaeseSelettore[] = getAllStati(resolvedLocale).map((s) => ({
     slugCanonico: s.slugCanonico,
     codiceISO: s.codiceISO,
     nome: s.nome,

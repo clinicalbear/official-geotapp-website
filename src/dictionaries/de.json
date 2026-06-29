@@ -1183,7 +1183,7 @@
       "items": [
         {
           "q": "Darf ich GPS nutzen, um mein Team bei der Arbeit im Blick zu behalten?",
-          "a": "GPS am Arbeitsplatz ist in fast ganz Europa zulässig, allerdings unter einer Bedingung: Es muss die Arbeit organisieren und belegen, nicht die Person überwachen. Entscheidend ist das Wie. Den Standort beim Einstempeln zu erfassen, also wenn jemand einen Auftrag beginnt und abschließt, ist etwas ganz anderes, als die Person den ganzen Tag in Echtzeit zu verfolgen. Das Erste ist meist unproblematisch, sofern die Unterlagen stimmen; das Zweite fast nie."
+          "a": "GPS am Arbeitsplatz ist in fast ganz Europa zulässig, allerdings unter einer Bedingung: Es muss die Arbeit organisieren und belegen, nicht die Person überwachen. Entscheidend ist das Wie. Den Standort beim Einstempeln zu erfassen, also wenn jemand einen Auftrag beginnt und abschließt, ist etwas ganz anderes, als die Person den ganzen Tag in Echtzeit zu verfolgen. Das Erste lässt sich rechtskonform gestalten, das Zweite fast nie. Wobei \"rechtskonform\" in Deutschland mehr verlangt als saubere Unterlagen: Besteht ein Betriebsrat, ist auch die Standorterfassung beim Ein- und Ausstempeln mitbestimmungspflichtig (§ 87 Abs. 1 Nr. 6 BetrVG), und ohne Betriebsvereinbarung darf das System nicht aktiviert werden. Wo kein Betriebsrat besteht, entfällt dieser Schritt; die DSGVO gilt weiterhin."
         },
         {
           "q": "Gelten die Regeln meines eigenen Landes oder die des Landes, in das ich das Team schicke?",

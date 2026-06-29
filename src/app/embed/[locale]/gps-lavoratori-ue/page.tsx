@@ -33,7 +33,7 @@ export default async function EmbedGpsPage({
   const resolvedLocale = safeLocale(locale);
   const dict = getDictionary(resolvedLocale).risorseGps;
 
-  const countries: PaeseSelettore[] = getAllStati().map((s) => ({
+  const countries: PaeseSelettore[] = getAllStati(resolvedLocale).map((s) => ({
     slugCanonico: s.slugCanonico,
     codiceISO: s.codiceISO,
     nome: s.nome,

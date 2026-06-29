@@ -5,6 +5,7 @@
  * successivi; le pagine consumano questo modulo, mai i file dati direttamente.
  */
 
+import type { AppLocale } from '@/lib/i18n/config';
 import type { SchedaPaese, StatoScheda } from './types';
 import { italia } from './paesi/it';
 import { germania } from './paesi/de';
@@ -92,8 +93,12 @@ export function getSchedaBySlug(slugCanonico: string): SchedaPaese | undefined {
   return PAESI.find((p) => p.slugCanonico === slugCanonico);
 }
 
-/** Lista leggera per la pagina selettore: solo i campi di anteprima. */
-export function getAllStati(): {
+/**
+ * Lista leggera per la pagina selettore: solo i campi di anteprima.
+ * Con `locale` il nome del paese è quello localizzato (`nomi[locale]`), con
+ * ripiego sull'italiano (`nome`); senza `locale` resta italiano (retrocompatibile).
+ */
+export function getAllStati(locale?: AppLocale): {
   slugCanonico: string;
   codiceISO: string;
   nome: string;
@@ -103,7 +108,7 @@ export function getAllStati(): {
   return PAESI.map((p) => ({
     slugCanonico: p.slugCanonico,
     codiceISO: p.codiceISO,
-    nome: p.nome,
+    nome: locale ? (p.nomi?.[locale] ?? p.nome) : p.nome,
     bandiera: p.bandiera,
     stato: p.stato,
   }));
