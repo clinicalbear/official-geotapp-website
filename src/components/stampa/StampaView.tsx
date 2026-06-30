@@ -399,7 +399,7 @@ export default function StampaView({
                     <img
                       src={item.logo}
                       alt={`Logo ${item.outlet}`}
-                      className="h-14 w-auto max-w-[180px] rounded-lg object-contain bg-white px-2 py-1.5 shrink-0"
+                      className="h-28 w-auto max-w-[320px] rounded-lg object-contain bg-white px-3 py-2 shrink-0"
                     />
                   )}
                   <time dateTime={item.date} className="text-xs text-text-secondary shrink-0 font-mono">{fmtPressDate(item.date)}</time>
