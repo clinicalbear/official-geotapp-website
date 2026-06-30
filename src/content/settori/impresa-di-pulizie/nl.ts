@@ -2,9 +2,9 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App voor Schoonmaakbedrijf: GPS-Teambeheer & Servicebewijs | GeoTapp',
+    title: 'Software voor Schoonmaakbedrijven: App & Servicebewijs | GeoTapp',
     description:
-      'Beheer schoonmaakteams, diensten en aanwezigheid met GPS in real-time. Automatisch servicebewijs, geen klantgeschillen. AVG-conforme schoonmaak-app.',
+      'Software voor schoonmaakbedrijven: GPS-urenregistratie, automatisch servicebewijs en teambeheer. Geen klantgeschillen, AVG-conform. Probeer gratis.',
   },
 
   hero: {

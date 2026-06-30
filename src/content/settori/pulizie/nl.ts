@@ -2,12 +2,12 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'Software voor Schoonmaakbedrijven | Urenregistratie & Bewijs | GeoTapp',
-    description: 'Software voor schoonmaakbedrijven: urenregistratie met GPS, fotobewijs van gereinigde ruimtes, dienstroosters op elk object en naleving van de CAO Schoonmaak. Probeer GeoTapp gratis.',
+    title: 'Schoonmaaksoftware: Urenregistratie & Fotobewijs | GeoTapp',
+    description: 'Schoonmaaksoftware met GPS-urenregistratie, fotobewijs per ruimte, dienstroosters per object en naleving van de CAO Schoonmaak. Probeer GeoTapp gratis.',
   },
   hero: {
-    badge: 'Software voor Schoonmaakbedrijven, Facilitaire Diensten en Gebouwbeheer',
-    h1_line1: 'Software voor schoonmaakbedrijven:',
+    badge: 'Schoonmaaksoftware voor Facilitaire Diensten en Gebouwbeheer',
+    h1_line1: 'Schoonmaaksoftware:',
     h1_line2: 'dienstroosters, fotobewijs en gecontroleerde uren, op elk object',
     subtitle: 'GeoTapp verbindt Flow + TimeTracker voor teams verspreid over meerdere gebouwen en verdiepingen. Uw medewerkers klokken in via GPS-geverifieerde smartphone; het kantoor ziet wie wat, waar en wanneer heeft schoongemaakt, met bijgevoegd fotobewijs. Geen disputen meer, volledige naleving van de CAO Schoonmaak.',
     cta_primary: 'Demo aanvragen',
