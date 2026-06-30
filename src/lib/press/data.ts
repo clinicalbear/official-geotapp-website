@@ -6,6 +6,7 @@ export type PressItem = {
   title: string;
   url: string;
   locale: AppLocale;  // lingua del pezzo
+  logo?: string;      // path in /public del logo della testata (opzionale)
 };
 
 // VUOTI al lancio. Aggiungere una voce = la sezione compare da sola in pagina.
@@ -17,6 +18,7 @@ export const PRESS_COVERAGE: PressItem[] = [
     title: 'Presenze, GPS e art. 4: dove finisce la prova e dove comincia la sorveglianza',
     url: 'https://www.risorseumane-hr.it/presenze-gps-articolo-4/',
     locale: 'it',
+    logo: '/press/logoHR.jpg',
   },
 ];
 

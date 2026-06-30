@@ -394,6 +394,14 @@ export default function StampaView({
                   key={i}
                   className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6 p-5 rounded-2xl border border-white/10 bg-white/[0.02] hover:border-primary/30 transition-colors duration-300"
                 >
+                  {item.logo && (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={item.logo}
+                      alt={`Logo ${item.outlet}`}
+                      className="h-10 w-10 rounded-lg object-contain bg-white p-1 shrink-0"
+                    />
+                  )}
                   <time dateTime={item.date} className="text-xs text-text-secondary shrink-0 font-mono">{fmtPressDate(item.date)}</time>
                   <span className="text-xs text-primary uppercase tracking-wide shrink-0">{item.outlet}</span>
                   <a
