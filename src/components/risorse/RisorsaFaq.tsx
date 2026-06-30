@@ -44,7 +44,9 @@ export default function RisorsaFaq({ title, items }: RisorsaFaqProps) {
               className="group rounded-xl border border-slate-200 bg-white"
             >
               <summary className="flex cursor-pointer list-none items-center justify-between gap-4 p-6 font-bold text-slate-900 [&::-webkit-details-marker]:hidden">
-                <span>{it.q}</span>
+                {/* Domanda come heading (H3) per la citabilità nei motori AI/GEO,
+                    stile invariato (eredita il font dal summary). */}
+                <h3 className="m-0 text-base font-bold leading-snug text-slate-900">{it.q}</h3>
                 <ChevronDown
                   size={20}
                   className="shrink-0 text-slate-400 transition-transform duration-200 group-open:rotate-180"

@@ -6,6 +6,7 @@ import type { AppLocale } from '@/lib/i18n/config';
 import { HREFLANG } from '@/lib/i18n/locale-metadata';
 import HomeClient from '../page';
 import BlogHighlights from '@/components/BlogHighlights';
+import FaqFromSchema from '@/components/FaqFromSchema';
 import { REVIEWS } from '@/data/reviews';
 import { buildReviewsSchema } from '@/lib/seo/reviewsSchema';
 
@@ -256,12 +257,6 @@ export default async function LocalePage({ params }: Props) {
           (solo desktop) e MOLTO sotto la fold (sezione TimeTracker, ~riga 528 di HomeClient).
           Preloadarla ad alta priorità su mobile scaricava 147KB mai mostrati, rubando banda
           all'LCP reale (l'h1 dell'hero). Rimosso il 2026-06-06. */}
-      {faq && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}
-        />
-      )}
       {reviewsSchema && (
         <script
           type="application/ld+json"
@@ -269,6 +264,10 @@ export default async function LocalePage({ params }: Props) {
         />
       )}
       <HomeClient />
+      {/* FAQ visibile (domande come H3) + schema FAQPage: citabilità GEO/AI-search
+          senza toccare la prosa. Lo schema è iniettato da RisorsaFaq, quindi qui
+          NON va più lo <script> JSON-LD manuale del blocco faq. */}
+      <FaqFromSchema faq={faq} locale={locale} />
       {/* Category 54 = "digitalizzazione-aziendale", broad, relevant to all visitors */}
       <BlogHighlights locale={locale as AppLocale} categoryId={54} />
     </>

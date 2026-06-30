@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
 import FlowPage from '../../../products/geotapp-flow/page';
 import BlogHighlights from '@/components/BlogHighlights';
+import FaqFromSchema from '@/components/FaqFromSchema';
 import SettoriLinks from '@/components/SettoriLinks';
 import { type AppLocale } from '@/lib/i18n/config';
 import {
@@ -203,11 +204,10 @@ export default async function LocaleFlowPage({ params }: Props) {
       <link rel="preload" as="image" href="/logoFlow.webp" fetchPriority="high" />
       <link rel="preload" as="image" href="/screen_dashboard.webp" />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
-      {faq && (
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
-      )}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(software) }} />
       <FlowPage />
+      {/* FAQ visibile (H3) + schema FAQPage da RisorsaFaq (niente <script> faq manuale). */}
+      <FaqFromSchema faq={faq} locale={locale} />
       <BlogHighlights locale={locale as AppLocale} categoryId={65} />
       <SettoriLinks locale={locale as AppLocale} settori={['installatori']} />
     </>
