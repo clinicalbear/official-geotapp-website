@@ -44,6 +44,8 @@ type Strings = {
   vatRequired: string;
   minTermRequired: string;
   generic: string;
+  suggestedBadge: string;
+  recommendReason: (n: number) => string;
 };
 
 const UI: Record<'it' | 'en' | 'de', Strings> = {
@@ -64,6 +66,9 @@ const UI: Record<'it' | 'en' | 'de', Strings> = {
     vatRequired: 'Inserisci la partita IVA.',
     minTermRequired: 'Devi approvare specificamente la clausola di durata minima.',
     generic: 'Qualcosa è andato storto. Riprova.',
+    suggestedBadge: 'Consigliato per te',
+    recommendReason: (n) =>
+      `In base ai ${n} operatori che hai attivato nella prova. Puoi cambiare piano e posti quando vuoi.`,
   },
   en: {
     title: 'Complete your subscription',
@@ -82,6 +87,9 @@ const UI: Record<'it' | 'en' | 'de', Strings> = {
     vatRequired: 'Please enter your VAT number.',
     minTermRequired: 'You must specifically approve the minimum-term clause.',
     generic: 'Something went wrong. Please try again.',
+    suggestedBadge: 'Recommended for you',
+    recommendReason: (n) =>
+      `Based on the ${n} operators you activated during the trial. You can change plan and seats anytime.`,
   },
   de: {
     title: 'Abonnement abschließen',
@@ -100,6 +108,9 @@ const UI: Record<'it' | 'en' | 'de', Strings> = {
     vatRequired: 'Bitte geben Sie Ihre USt-IdNr. ein.',
     minTermRequired: 'Sie müssen die Mindestlaufzeit-Klausel ausdrücklich annehmen.',
     generic: 'Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.',
+    suggestedBadge: 'Für Sie empfohlen',
+    recommendReason: (n) =>
+      `Basierend auf den ${n} Mitarbeitern, die Sie in der Testphase aktiviert haben. Sie können Tarif und Plätze jederzeit ändern.`,
   },
 };
 
@@ -125,6 +136,7 @@ function CompletaInner() {
   const [plan, setPlan] = useState<string>('TEAM');
   const [ttSeats, setTtSeats] = useState<number>(0);
   const [suggestedPlan, setSuggestedPlan] = useState<string | null>(null);
+  const [usedTtSeats, setUsedTtSeats] = useState<number>(0);
 
   useEffect(() => {
     if (!tenant || !token) return;
@@ -133,10 +145,16 @@ function CompletaInner() {
     )
       .then((r) => r.json())
       .then((d) => {
-        if (d && d.trialPlan) {
-          setSuggestedPlan(d.trialPlan);
-          setPlan(d.trialPlan);
-          setTtSeats(Math.max(0, Number(d.trialTimetrackerSeats) || 0));
+        if (d && (d.recommendedPlan || d.trialPlan)) {
+          // Piano consigliato = dimensionato sugli operatori TT usati nel trial (dal backend).
+          const rec = String(d.recommendedPlan || d.trialPlan);
+          const recCap = (PLANS.find((p) => p.key === rec) || PLANS[1]).ttCap;
+          const used = Math.max(0, Number(d.usedTtSeats) || 0);
+          setSuggestedPlan(rec);
+          setPlan(rec);
+          setUsedTtSeats(used);
+          // Posti pre-riempiti a quelli davvero usati (modificabili: magari ha altre squadre).
+          setTtSeats(Math.min(used, recCap));
         }
       })
       .catch(() => {});
@@ -205,8 +223,14 @@ function CompletaInner() {
         <h1 className="text-2xl font-bold text-slate-900">{t.title}</h1>
         <p className="mt-1 text-sm text-slate-500">{t.subtitle}</p>
 
-        {/* Plan selector: the trialed plan is highlighted ("in base al tuo trial");
-            the customer can pick a different plan and choose TimeTracker seats. */}
+        {/* Plan selector: the recommended plan (sized to the TT operators actually
+            used in the trial) is highlighted; the customer can pick another plan
+            and change TimeTracker seats. */}
+        {usedTtSeats > 0 && (
+          <p className="mt-4 rounded-lg bg-primary/5 px-3 py-2 text-xs text-slate-600">
+            {t.recommendReason(usedTtSeats)}
+          </p>
+        )}
         <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-3">
           {PLANS.map((p) => {
             const isSel = plan === p.key;
@@ -224,7 +248,7 @@ function CompletaInner() {
               >
                 {isSuggested && (
                   <span className="absolute -top-2 left-3 rounded-full bg-primary px-2 py-0.5 text-[10px] font-semibold text-white">
-                    in base al tuo trial
+                    {t.suggestedBadge}
                   </span>
                 )}
                 <div className="text-sm font-bold text-slate-900">Flow {p.name}</div>
