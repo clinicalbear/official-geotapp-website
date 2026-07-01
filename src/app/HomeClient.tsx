@@ -280,10 +280,11 @@ export default function Home() {
 
         <div className="container-geo relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-10 items-center">
-            {/* Testo - NIENTE opacity:0 sull'entrata: contiene l'h1 = elemento LCP su mobile.
-                Nasconderlo dietro framer-motion lo rendeva invisibile fino all'hydration
-                → LCP mobile instabile (2-7s). Lo slide y resta, ma l'elemento è visibile subito. */}
-            <motion.div initial={{ y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
+            {/* Testo - contiene l'h1 = elemento LCP su mobile. STATICO (niente framer-motion):
+                anche senza opacity:0, il wrapper motion agganciava il paint dell'h1 al costo
+                di hydration di framer-motion (main-thread ~2,7s) → LCP mobile 4-5s. Reso div
+                puro: l'H1 dipinge dal SSR senza dipendere dalla JS (fix LCP 01/07). */}
+            <div>
               {currentLocale === 'en' && (
                 <span className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full text-xs font-semibold bg-blue-50 border border-blue-200 text-blue-700">{dict.landing.us_badge}</span>
               )}
@@ -316,7 +317,7 @@ export default function Home() {
               <div className="mt-7 flex md:hidden">
                 <EuDataBadge label={dict.landing.trust_eu_data} size={116} />
               </div>
-            </motion.div>
+            </div>
 
             {/* Visual fluttuante: demo interattiva timbratura (mock) */}
             <motion.div initial={{ opacity: 0, scale: 0.92, y: 30 }} animate={{ opacity: 1, scale: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.15 }} className="relative hidden md:block">
