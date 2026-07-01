@@ -4,7 +4,7 @@ import { useState } from 'react';
 import type { ComponentType } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { Copy, Check, ExternalLink, Download, Linkedin, Instagram, Facebook } from 'lucide-react';
+import { Copy, Check, ExternalLink, Download, Linkedin, Instagram, Facebook, Youtube } from 'lucide-react';
 
 // Logo X (non presente in lucide): SVG inline, accetta `size` come le icone lucide.
 function XIcon({ size = 18 }: { size?: number | string }) {
@@ -31,6 +31,7 @@ const PRESS_SOCIALS: { label: string; href: string; Icon: ComponentType<{ size?:
   { label: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61573628884608', Icon: Facebook },
   { label: 'X', href: 'https://x.com/GeoTappOfficial', Icon: XIcon },
   { label: 'TikTok', href: 'https://www.tiktok.com/@geotapp', Icon: TikTokIcon },
+  { label: 'YouTube', href: 'https://www.youtube.com/@GeoTappOfficial', Icon: Youtube },
 ];
 import type { SiteDictionary } from '@/lib/i18n/dictionaries';
 import type { AppLocale } from '@/lib/i18n/config';

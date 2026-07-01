@@ -32,6 +32,7 @@ export function buildPressOrganizationJsonLd(locale: AppLocale): Record<string, 
       'https://www.facebook.com/profile.php?id=61573628884608',
       'https://x.com/GeoTappOfficial',
       'https://www.tiktok.com/@geotapp',
+      'https://www.youtube.com/@GeoTappOfficial',
     ],
   };
 }

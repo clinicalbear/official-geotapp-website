@@ -320,6 +320,7 @@ export default async function LocaleLayout({ children, params }: Props) {
                 'https://www.facebook.com/profile.php?id=61583303732388',
                 'https://www.instagram.com/geotapp_official/',
                 'https://t.me/geotapp',
+                'https://www.youtube.com/@GeoTappOfficial',
                 'https://it.trustpilot.com/review/geotapp.com',
                 'https://www.capterra.com/p/10041643/GeoTapp-Flow/',
                 'https://alternativeto.net/software/geotapp-flow/about/',
