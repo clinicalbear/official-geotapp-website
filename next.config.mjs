@@ -286,8 +286,21 @@ const nextConfig = {
         // no-store = ogni navigazione riceve HTML fresco, che punta sempre agli
         // asset del deploy corrente (che esistono). Gli asset /_next/static restano
         // immutable e quindi cachati a lungo: nessun costo di banda reale.
-        source: '/((?!api|_next).*)',
+        // ECCEZIONE /blog/* (regola sotto): cachato all'edge per non far saturare
+        // la pipeline SSR→WP sotto il crawl concorrente (causa dei 5xx Bing). La
+        // sicurezza-deploy è preservata dal purge_everything a fine deploy
+        // (scripts/purge-cloudflare.mjs), che sfratta l'HTML blog vecchio.
+        source: '/((?!api|_next|blog).*)',
         headers: [{ key: 'Cache-Control', value: 'no-store, must-revalidate' }],
+      },
+      {
+        // Post del blog (/blog/{lang}/YYYY/...): renderizzati dinamici (force-dynamic
+        // + fetch WP no-store, workaround deadlock Next16), ma l'HTML in USCITA è
+        // cachabile all'edge. Così crawler/utenti prendono la cache veloce invece
+        // della pipeline SSR→WP (che sotto concorrenza va a 6-8s → timeout/5xx).
+        // s-maxage breve + SWR lungo; il purge al deploy evita HTML stantio.
+        source: '/blog/:path*',
+        headers: [{ key: 'Cache-Control', value: 'public, s-maxage=300, stale-while-revalidate=86400' }],
       },
       // /sitemap.xml: header gestiti dal Route Handler (app/sitemap.xml/route.ts),
       // che imposta no-store sulla risposta. Nessuna regola qui per non interferire.

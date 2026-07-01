@@ -11,7 +11,7 @@
     "lint": "next lint",
     "test": "vitest run",
     "test:watch": "vitest",
-    "deploy": "npm run build && node scripts/inject-scheduled-handler.mjs && node scripts/fix-asset-headers.mjs && wrangler deploy -c wrangler.jsonc && node scripts/ping-search-engines.mjs",
+    "deploy": "npm run build && node scripts/inject-scheduled-handler.mjs && node scripts/fix-asset-headers.mjs && wrangler deploy -c wrangler.jsonc && node scripts/purge-cloudflare.mjs && node scripts/ping-search-engines.mjs",
     "deploy:linux": "npm run build && node scripts/inject-scheduled-handler.mjs && node scripts/fix-asset-headers.mjs && wrangler deploy -c wrangler.jsonc && node scripts/ping-search-engines.mjs",
     "ping": "node scripts/ping-search-engines.mjs",
     "check:blog": "node scripts/check-blog-hubs.mjs"
