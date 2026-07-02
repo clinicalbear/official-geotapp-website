@@ -220,7 +220,7 @@ export interface Competitor {
 }
 
 /**
- * 7 competitor profiles. Data derived from public pricing pages + the existing
+ * 9 competitor profiles. Data derived from public pricing pages + the existing
  * static /confronto/geotapp-vs-{competitor}/ pages.
  */
 export const COMPETITORS: Competitor[] = [
@@ -319,6 +319,56 @@ export const COMPETITORS: Competitor[] = [
       builtin_messaging: false,
       payroll_export: true,
       free_plan: true,
+      multi_site_jobs: false,
+      gdpr_geo_compliance: false,
+      auto_gps_notice_signed: false,
+    },
+  },
+  {
+    id: 'personio',
+    name: 'Personio',
+    homepage: 'https://www.personio.com/',
+    pricingFromEur: null,
+    tagline: {
+      it: 'Suite HR completa: anagrafica, assenze, onboarding e paghe. Non pensata per la prova del lavoro sul campo.',
+      en: 'Full HR suite: records, absences, onboarding and payroll. Not built for field proof of work.',
+      de: 'Vollständige HR-Suite: Stammdaten, Abwesenheiten, Onboarding und Lohn. Nicht für Außendienst-Nachweise gemacht.',
+    },
+    features: {
+      gps_verified_at_site: false,
+      sealed_report: false,
+      geo_timestamped_photos: false,
+      client_verification: false,
+      time_tracking: true,
+      mobile_app: true,
+      builtin_messaging: false,
+      payroll_export: true,
+      free_plan: false,
+      multi_site_jobs: false,
+      gdpr_geo_compliance: false,
+      auto_gps_notice_signed: false,
+    },
+  },
+  {
+    id: 'sage',
+    name: 'Sage',
+    homepage: 'https://www.sage.com/',
+    pricingFromEur: null,
+    tagline: {
+      it: 'Gestionale: contabilità, fatturazione, paghe e HR (Sage HR). Non pensato per la prova del lavoro sul campo.',
+      en: 'Business suite: accounting, invoicing, payroll and HR (Sage HR). Not built for field proof of work.',
+      de: 'Business-Suite: Buchhaltung, Rechnungen, Lohn und HR (Sage HR). Nicht für Außendienst-Nachweise gemacht.',
+    },
+    features: {
+      gps_verified_at_site: false,
+      sealed_report: false,
+      geo_timestamped_photos: false,
+      client_verification: false,
+      time_tracking: true,
+      mobile_app: true,
+      builtin_messaging: false,
+      payroll_export: true,
+      free_plan: false,
       multi_site_jobs: false,
       gdpr_geo_compliance: false,
       auto_gps_notice_signed: false,
