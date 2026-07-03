@@ -68,4 +68,30 @@ describe('jsonLd: risorsa GPS lavoratori UE', () => {
     expect(json.publisher).toEqual({ '@id': `${BASE_URL}/#organization` });
     expect(json.author).toEqual({ '@id': `${BASE_URL}/#organization` });
   });
+
+  it('buildSchedaArticleJsonLd emette spatialCoverage (Country) e about (autorità) con jurisdiction', () => {
+    const json = buildSchedaArticleJsonLd({
+      locale: 'en',
+      headline: 'GPS and worker monitoring in Ireland',
+      description: 'What you need to stay compliant in Ireland.',
+      dateModified: '2026-06-12',
+      canonicalSlug: 'ireland',
+      jurisdiction: {
+        countryName: 'Ireland',
+        countryISO: 'IE',
+        authorityName: 'Data Protection Commission',
+        authorityUrl: 'https://www.dataprotection.ie/',
+      },
+    }) as Record<string, unknown>;
+    expect(json.spatialCoverage).toEqual({
+      '@type': 'Country',
+      name: 'Ireland',
+      identifier: 'IE',
+    });
+    expect(json.about).toEqual({
+      '@type': 'GovernmentOrganization',
+      name: 'Data Protection Commission',
+      url: 'https://www.dataprotection.ie/',
+    });
+  });
 });

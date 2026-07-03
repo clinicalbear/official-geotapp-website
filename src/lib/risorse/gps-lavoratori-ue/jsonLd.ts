@@ -80,6 +80,12 @@ export function buildBreadcrumbJsonLd(items: BreadcrumbItem[]): Record<string, u
 /**
  * Article della scheda-paese. Riusa l'Organization del sito come author/publisher.
  * dateModified = scheda.aggiornatoIl (atteso YYYY-MM-DD).
+ *
+ * Quando presente, [args.jurisdiction] emette i segnali di giurisdizione che
+ * rendono la scheda inequivocabilmente distinta agli occhi di Google e dei motori
+ * AI (evita che le schede-paese vengano trattate come near-duplicate):
+ *  - `spatialCoverage`: il Paese coperto dal contenuto (nome localizzato + ISO);
+ *  - `about`: l'autorità competente nazionale come [GovernmentOrganization].
  */
 export function buildSchedaArticleJsonLd(args: {
   locale: AppLocale;
@@ -87,12 +93,22 @@ export function buildSchedaArticleJsonLd(args: {
   description: string;
   dateModified: string;
   canonicalSlug: string;
+  /**
+   * Segnale di giurisdizione: il Paese di cui tratta la scheda e la sua
+   * autorità competente. Se omesso, l'Article resta senza spatialCoverage/about.
+   */
+  jurisdiction?: {
+    countryName: string;
+    countryISO: string;
+    authorityName: string;
+    authorityUrl: string;
+  };
 }): Record<string, unknown> {
   const url = absoluteLocalizedUrl(
     `/risorse/gps-lavoratori-ue/${args.canonicalSlug}/`,
     args.locale,
   );
-  return {
+  const article: Record<string, unknown> = {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: args.headline,
@@ -104,4 +120,22 @@ export function buildSchedaArticleJsonLd(args: {
     author: ORGANIZATION_REF,
     publisher: ORGANIZATION_REF,
   };
+
+  if (args.jurisdiction) {
+    const j = args.jurisdiction;
+    // Il Paese focus del contenuto: dichiara esplicitamente la giurisdizione.
+    article.spatialCoverage = {
+      '@type': 'Country',
+      name: j.countryName,
+      identifier: j.countryISO,
+    };
+    // L'autorità nazionale competente: entità concreta di cui tratta la scheda.
+    article.about = {
+      '@type': 'GovernmentOrganization',
+      name: j.authorityName,
+      url: j.authorityUrl,
+    };
+  }
+
+  return article;
 }

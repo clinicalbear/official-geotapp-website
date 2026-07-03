@@ -127,6 +127,12 @@ export default async function SchedaPaesePage({
     description: dict.metaDescScheda.replace('{paese}', nomePaese),
     dateModified: scheda.aggiornatoIl,
     canonicalSlug: scheda.slugCanonico,
+    jurisdiction: {
+      countryName: nomePaese,
+      countryISO: scheda.codiceISO,
+      authorityName: scheda.autoritaCompetente.ente,
+      authorityUrl: scheda.autoritaCompetente.urlFonte,
+    },
   });
 
   return (
