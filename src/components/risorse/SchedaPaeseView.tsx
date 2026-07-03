@@ -2,7 +2,7 @@ import type { SchedaPaese, RispostaChecklist } from '@/lib/risorse/gps-lavorator
 import type { AppLocale } from '@/lib/i18n/config';
 import type { SiteDictionary } from '@/lib/i18n/dictionaries';
 import { loc } from '@/lib/risorse/gps-lavoratori-ue/localize';
-import LeadMagnetInline from '@/components/blog/LeadMagnetInline';
+import InformativaFacsimile from '@/components/risorse/InformativaFacsimile';
 
 /**
  * Vista presentazionale di una scheda-paese per la risorsa "GPS sui lavoratori in UE".
@@ -160,16 +160,19 @@ export default function SchedaPaeseView({ scheda, dict, locale, trialUrl, nomePa
           ))}
       </section>
 
-      {/* 4. Modello: solo se presente e disponibile.
-          Il download è instradato dalla cattura lead-magnet esistente
-          (LeadMagnetInline → leadMagnet 'informativa-gps' → /api/newsletter →
-          MailerLite + notifica CRM). Il PDF viene servito solo dopo l'email. */}
-      {scheda.modelloPdf && scheda.modelloPdf.disponibile && (
-        <section className="mb-14">
-          <h2 className="text-2xl font-bold text-slate-900 mb-6">{dict.sezioneModello}</h2>
-          <LeadMagnetInline magnet="informativa-gps" locale={locale} />
-        </section>
-      )}
+      {/* 4. Fac-simile informativa: download GRATUITO per QUESTO Paese nella lingua
+          della pagina (nessun cancello email), con iscrizione FACOLTATIVA sotto,
+          dopo il download. Il PDF è generato on-the-fly da buildFacsimilePrintHtml
+          → disponibile per tutte le lingue e tutti i Paesi, non solo l'Italia. */}
+      <section className="mb-14">
+        <h2 className="text-2xl font-bold text-slate-900 mb-6">{dict.sezioneModello}</h2>
+        <InformativaFacsimile
+          locale={locale}
+          countryName={nomeLocale}
+          authority={scheda.autoritaCompetente.ente}
+          countryISO={scheda.codiceISO}
+        />
+      </section>
 
       {/* 5. Sanzione */}
       <section className="mb-14">

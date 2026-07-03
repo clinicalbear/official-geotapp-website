@@ -353,3 +353,51 @@ export function buildInformativaDoc(locale: InfLocale, i: InfInputs, codiceISO?:
     chiusura: t.chiusura,
   };
 }
+
+/** Riempimento visibile dei campi da completare a mano nel fac-simile. */
+const FACSIMILE_BLANK = '____________________';
+
+function escHtml(s: string): string {
+  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+/**
+ * HTML stampabile del FAC-SIMILE (bozza da compilare) dell'informativa GPS per
+ * un Paese, nella lingua data: azienda/finalità/quando/conservazione restano
+ * blank da completare a mano. Riusa [buildInformativaDoc] (cornice GDPR art.
+ * 13/14 + base giuridica e autorità del Paese) — nessun contenuto legale
+ * inventato per-paese. Usato dal download gratuito sulle schede-paese, in tutte
+ * le lingue e per tutti i Paesi; l'HTML si auto-stampa (salva come PDF).
+ */
+export function buildFacsimilePrintHtml(args: {
+  locale: InfLocale;
+  countryName: string;
+  authority: string;
+  countryISO: string;
+  footer: string;
+}): string {
+  const doc = buildInformativaDoc(
+    args.locale,
+    {
+      azienda: FACSIMILE_BLANK,
+      paese: args.countryName,
+      finalita: FACSIMILE_BLANK,
+      quando: FACSIMILE_BLANK,
+      conservazione: FACSIMILE_BLANK,
+      autorita: args.authority,
+    },
+    args.countryISO,
+  );
+  const sezioni = doc.sezioni
+    .map((s) => `<h2>${escHtml(s.titolo)}</h2><p>${escHtml(s.testo)}</p>`)
+    .join('');
+  return `<!doctype html><html lang="${escHtml(args.locale)}"><head><meta charset="utf-8"><title>${escHtml(doc.titolo)}</title>
+<style>@page{size:A4;margin:22mm 20mm}*{box-sizing:border-box}body{font-family:Georgia,'Times New Roman',serif;color:#1e293b;line-height:1.55;font-size:12pt;margin:0}.head{border-bottom:2px solid #8FC436;padding-bottom:14px;margin-bottom:22px}h1{font-size:17pt;margin:0;color:#0f172a}h2{font-size:12.5pt;margin:18px 0 4px;color:#0f172a}p{margin:0 0 8px}.disc{margin-top:18px;font-size:9.5pt;color:#64748b;background:#f8fafc;border-left:3px solid #cbd5e1;padding:8px 12px}.foot{margin-top:26px;padding-top:12px;border-top:1px solid #e2e8f0;font-size:9pt;color:#94a3b8}</style>
+</head><body onload="window.print()">
+<div class="head"><h1>${escHtml(doc.titolo)}</h1></div>
+<p>${escHtml(doc.intro)}</p>
+${sezioni}
+<p class="disc">${escHtml(doc.chiusura)}</p>
+<p class="foot">${escHtml(args.footer)} · geotapp.com</p>
+</body></html>`;
+}
