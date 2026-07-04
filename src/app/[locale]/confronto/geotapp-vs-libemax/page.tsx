@@ -114,6 +114,23 @@ const ROWS_LABELS: Record<string, string[]> = {
 const ROWS_GEO =  [true,true,true,true,true,true,true,true,true,true,true,true,true];
 const ROWS_COMP = [false,false,false,false,true,true,true,true,true,true,true,true,false];
 
+// Riassunto neutro ed estraibile, subito sotto la tabella: frase fattuale citabile
+// dai motori AI senza doverla ricostruire dalla tabella. Neutro per scelta: la
+// neutralita' e' cio' che ci fa citare, niente superlativi.
+const TABLE_TAKEAWAY: Record<string, string> = {
+  it: 'In breve: Libemax verifica la presenza con il geofence; GeoTapp aggiunge la verifica anti-spoofing del GPS, il report sigillato e la verifica del cliente, pensati per reggere una contestazione.',
+  en: 'In short: Libemax checks presence with geofencing; GeoTapp adds GPS anti-spoofing, the sealed report and client verification, built to hold up in a dispute.',
+  de: 'Kurz gesagt: Libemax prüft die Anwesenheit per Geofence; GeoTapp ergänzt den GPS-Anti-Spoofing-Schutz, den versiegelten Bericht und die Kundenprüfung, ausgelegt darauf, einem Streit standzuhalten.',
+  fr: 'En bref : Libemax vérifie la présence par géorepérage ; GeoTapp ajoute l\'anti-spoofing GPS, le rapport scellé et la vérification client, conçus pour résister à une contestation.',
+  es: 'En resumen: Libemax verifica la presencia con geovalla; GeoTapp añade el anti-spoofing del GPS, el informe sellado y la verificación del cliente, pensados para resistir una reclamación.',
+  pt: 'Em resumo: a Libemax verifica a presença com geofencing; a GeoTapp acrescenta o anti-spoofing do GPS, o relatório selado e a verificação do cliente, feitos para resistir a uma contestação.',
+  nl: 'Kort gezegd: Libemax controleert aanwezigheid met geofencing; GeoTapp voegt GPS-anti-spoofing, het verzegelde rapport en klantverificatie toe, gemaakt om een geschil te doorstaan.',
+  da: 'Kort sagt: Libemax kontrollerer tilstedeværelse med geofencing; GeoTapp tilføjer GPS-anti-spoofing, den forseglede rapport og kundeverificering, bygget til at holde i en tvist.',
+  sv: 'Kort sagt: Libemax kontrollerar närvaro med geofencing; GeoTapp lägger till GPS-anti-spoofing, den förseglade rapporten och kundverifiering, byggt för att hålla i en tvist.',
+  nb: 'Kort sagt: Libemax sjekker tilstedeværelse med geofencing; GeoTapp legger til GPS-anti-spoofing, den forseglede rapporten og kundeverifisering, laget for å holde i en tvist.',
+  ru: 'Коротко: Libemax проверяет присутствие через геозону; GeoTapp добавляет защиту GPS от подмены, защищённый отчёт и проверку заказчиком, рассчитанные выдержать спор.',
+};
+
 type Copy = {
   badge: string; h1sub: string; desc: string; summary: string; summaryText: string;
   noteTitle: string; noteText: string; features: string; feat: string; diff: string;
@@ -304,6 +321,7 @@ export default async function GeoTappVsLibemaxPage({ params }: { params: Promise
   const t = T[locale] ?? T.en;
   const faqItems = FAQ[locale] ?? FAQ.en;
   const labels = ROWS_LABELS[locale] ?? ROWS_LABELS.en;
+  const tableTakeaway = TABLE_TAKEAWAY[locale] ?? TABLE_TAKEAWAY.en;
   const rows = labels.map((feature, i) => ({ feature, geotapp: ROWS_GEO[i], competitor: ROWS_COMP[i] }));
 
   const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqItems.map((item) => ({ '@type': 'Question', name: item.q, acceptedAnswer: { '@type': 'Answer', text: item.a } })) };
@@ -339,6 +357,11 @@ export default async function GeoTappVsLibemaxPage({ params }: { params: Promise
                 <tbody>{rows.map((row, i) => (<tr key={i} className="border-b border-white/5 hover:bg-white/3 transition-colors"><td className="py-3 px-4 text-sm text-text-secondary">{row.feature}</td><td className="py-3 px-4 text-center">{row.geotapp ? <span className="text-green-400 font-bold text-lg">&#10003;</span> : <span className="text-text-secondary/40 text-lg">&mdash;</span>}</td><td className="py-3 px-4 text-center">{row.competitor ? <span className="text-green-400 font-bold text-lg">&#10003;</span> : <span className="text-text-secondary/40 text-lg">&mdash;</span>}</td></tr>))}</tbody>
               </table>
             </div>
+          </section>
+
+          {/* Neutral, AI-extractable takeaway right under the table */}
+          <section className="mb-16 -mt-8">
+            <p className="text-sm text-text-secondary leading-relaxed rounded-xl border border-white/10 bg-white/5 p-4">{tableTakeaway}</p>
           </section>
 
           {/* Privacy consent footnote */}

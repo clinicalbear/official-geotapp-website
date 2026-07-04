@@ -113,6 +113,23 @@ const ROWS_LABELS: Record<string, string[]> = {
 const ROWS_GEO =   [true, true, true, true, true, true, true, true, false, true, true, true];
 const ROWS_COMP =  [false, false, false, false, true, true, false, true, true, false, false, false];
 
+// Riassunto neutro ed estraibile, posizionato SUBITO SOTTO la tabella: una frase
+// fattuale che i motori AI possono citare senza doverla ricostruire dalla tabella.
+// Neutro per scelta: la neutralita' e' cio' che ci fa citare, niente superlativi.
+const TABLE_TAKEAWAY: Record<string, string> = {
+  it: 'In breve: Jibble registra le presenze con riconoscimento facciale e GPS di base; GeoTapp aggiunge il report sigillato, la foto-prova collegata a GPS e ora, e la verifica del cliente sull\'intervento.',
+  en: 'In short: Jibble logs attendance with face recognition and basic GPS; GeoTapp adds the sealed report, photo evidence tied to GPS and time, and independent client verification of the job.',
+  de: 'Kurz gesagt: Jibble erfasst Anwesenheit per Gesichtserkennung und Basis-GPS; GeoTapp ergänzt den versiegelten Bericht, Fotobeweise mit GPS und Zeit und die unabhängige Kundenprüfung des Einsatzes.',
+  fr: 'En bref : Jibble enregistre les présences avec reconnaissance faciale et GPS basique ; GeoTapp ajoute le rapport scellé, la preuve photo liée au GPS et à l\'heure, et la vérification indépendante du client.',
+  es: 'En resumen: Jibble registra la asistencia con reconocimiento facial y GPS básico; GeoTapp añade el informe sellado, la prueba fotográfica ligada a GPS y hora, y la verificación independiente del cliente.',
+  pt: 'Em resumo: a Jibble regista presenças com reconhecimento facial e GPS básico; a GeoTapp acrescenta o relatório selado, a prova fotográfica ligada a GPS e hora, e a verificação independente do cliente.',
+  nl: 'Kort gezegd: Jibble registreert aanwezigheid met gezichtsherkenning en basis-GPS; GeoTapp voegt het verzegelde rapport, fotobewijs gekoppeld aan GPS en tijd, en onafhankelijke klantverificatie toe.',
+  da: 'Kort sagt: Jibble registrerer fremmøde med ansigtsgenkendelse og basis-GPS; GeoTapp tilføjer den forseglede rapport, fotobevis knyttet til GPS og tid, og uafhængig kundeverificering af opgaven.',
+  sv: 'Kort sagt: Jibble registrerar närvaro med ansiktsigenkänning och enkel GPS; GeoTapp lägger till den förseglade rapporten, fotobevis kopplat till GPS och tid, och oberoende kundverifiering av uppdraget.',
+  nb: 'Kort sagt: Jibble registrerer oppmøte med ansiktsgjenkjenning og enkel GPS; GeoTapp legger til den forseglede rapporten, fotobevis koblet til GPS og tid, og uavhengig kundeverifisering av oppdraget.',
+  ru: 'Коротко: Jibble фиксирует присутствие по распознаванию лица и базовому GPS; GeoTapp добавляет защищённый отчёт, фотодоказательства с GPS и временем и независимую проверку заказчиком.',
+};
+
 type Copy = {
   badge: string; h1sub: string; desc: string;
   summary: string; summaryText: string; footnote: string;
@@ -332,6 +349,7 @@ export default async function GeoTappVsJibblePage({ params }: { params: Promise<
   const t = T[locale] ?? T.en;
   const faqItems = FAQ[locale] ?? FAQ.en;
   const labels = ROWS_LABELS[locale] ?? ROWS_LABELS.en;
+  const tableTakeaway = TABLE_TAKEAWAY[locale] ?? TABLE_TAKEAWAY.en;
   const rows = labels.map((feature, i) => ({ feature, geotapp: ROWS_GEO[i], competitor: ROWS_COMP[i] }));
 
   const faqSchema = {
@@ -430,6 +448,13 @@ export default async function GeoTappVsJibblePage({ params }: { params: Promise<
                 </tbody>
               </table>
             </div>
+          </section>
+
+          {/* Neutral, AI-extractable takeaway right under the table */}
+          <section className="mb-16 -mt-8">
+            <p className="text-sm text-text-secondary leading-relaxed rounded-xl border border-white/10 bg-white/5 p-4">
+              {tableTakeaway}
+            </p>
           </section>
 
           {/* Privacy consent footnote */}

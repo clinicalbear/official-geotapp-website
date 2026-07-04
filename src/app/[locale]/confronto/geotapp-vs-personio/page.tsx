@@ -113,6 +113,22 @@ const ROWS_LABELS: Record<string, string[]> = {
 const ROWS_GEO =   [true, true, true, true, true, true, true, true, false, true, true, true];
 const ROWS_COMP =  [false, false, false, false, true, true, false, true, false, false, false, false];
 
+// Riassunto neutro ed estraibile, subito sotto la tabella: frase fattuale citabile
+// dai motori AI senza doverla ricostruire dalla tabella. Neutro per scelta.
+const TABLE_TAKEAWAY: Record<string, string> = {
+  it: 'In breve: Personio gestisce HR, assenze e paghe dell\'organico; GeoTapp prova il lavoro svolto sul campo con GPS verificato, report sigillato e verifica del cliente. Spesso si affiancano.',
+  en: 'In short: Personio manages HR, absences and payroll; GeoTapp proves field work with verified GPS, sealed reports and client verification. They often work side by side.',
+  de: 'Kurz gesagt: Personio verwaltet HR, Abwesenheiten und Lohn; GeoTapp belegt die Außenarbeit mit verifiziertem GPS, versiegelten Berichten und Kundenprüfung. Oft ergänzen sie sich.',
+  fr: 'En bref : Personio gère RH, absences et paie ; GeoTapp prouve le travail terrain avec GPS vérifié, rapports scellés et vérification client. Ils fonctionnent souvent ensemble.',
+  es: 'En resumen: Personio gestiona RRHH, ausencias y nóminas; GeoTapp prueba el trabajo de campo con GPS verificado, informes sellados y verificación del cliente. A menudo se complementan.',
+  pt: 'Em resumo: a Personio gere RH, ausências e salários; a GeoTapp prova o trabalho no terreno com GPS verificado, relatórios selados e verificação do cliente. Muitas vezes complementam-se.',
+  nl: 'Kort gezegd: Personio beheert HR, verzuim en loon; GeoTapp bewijst veldwerk met geverifieerd GPS, verzegelde rapporten en klantverificatie. Ze werken vaak samen.',
+  da: 'Kort sagt: Personio styrer HR, fravær og løn; GeoTapp beviser markarbejde med verificeret GPS, forseglede rapporter og kundeverificering. De supplerer ofte hinanden.',
+  sv: 'Kort sagt: Personio hanterar HR, frånvaro och lön; GeoTapp bevisar fältarbete med verifierad GPS, förseglade rapporter och kundverifiering. De kompletterar ofta varandra.',
+  nb: 'Kort sagt: Personio styrer HR, fravær og lønn; GeoTapp beviser feltarbeid med verifisert GPS, forseglede rapporter og kundeverifisering. De utfyller ofte hverandre.',
+  ru: 'Коротко: Personio ведёт HR, отсутствия и зарплату; GeoTapp доказывает выездную работу проверенным GPS, защищёнными отчётами и проверкой заказчиком. Часто дополняют друг друга.',
+};
+
 type Copy = {
   badge: string; h1sub: string; desc: string;
   summary: string; summaryText: string; footnote: string;
@@ -332,6 +348,7 @@ export default async function GeoTappVsPersonioPage({ params }: { params: Promis
   const t = T[locale] ?? T.en;
   const faqItems = FAQ[locale] ?? FAQ.en;
   const labels = ROWS_LABELS[locale] ?? ROWS_LABELS.en;
+  const tableTakeaway = TABLE_TAKEAWAY[locale] ?? TABLE_TAKEAWAY.en;
   const rows = labels.map((feature, i) => ({ feature, geotapp: ROWS_GEO[i], competitor: ROWS_COMP[i] }));
 
   const faqSchema = {
@@ -430,6 +447,13 @@ export default async function GeoTappVsPersonioPage({ params }: { params: Promis
                 </tbody>
               </table>
             </div>
+          </section>
+
+          {/* Neutral, AI-extractable takeaway right under the table */}
+          <section className="mb-16 -mt-8">
+            <p className="text-sm text-text-secondary leading-relaxed rounded-xl border border-white/10 bg-white/5 p-4">
+              {tableTakeaway}
+            </p>
           </section>
 
           {/* Privacy consent footnote */}
