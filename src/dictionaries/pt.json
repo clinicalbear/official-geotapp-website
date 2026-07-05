@@ -952,7 +952,7 @@
   },
   "trial": {
     "page_title": "14 dias grátis. Sem cartão.",
-    "page_subtitle": "Acesso completo a todos os módulos GeoTapp Flow durante 14 dias. Sem cartão de crédito, sem compromisso. Cancele quando quiser.",
+    "page_subtitle": "O plano Business completo durante 14 dias: utilizadores de escritório ilimitados e até 50 operadores no terreno. Sem cartão, sem compromisso, e os dias começam no teu primeiro acesso, não no registo.",
     "badge": "Teste gratuito, 14 dias",
     "form_title": "Crie a sua conta",
     "form_company": "Nome da empresa",
@@ -985,16 +985,16 @@
     "benefits_title": "O que inclui o teste",
     "benefits": [
       {
-        "title": "Acesso completo",
-        "desc": "Todos os módulos ativos: CRM, faturação, gestão de equipas, suporte ao cliente."
+        "title": "O maior plano, não uma demo",
+        "desc": "Experimentas o GeoTapp Flow no máximo: todos os módulos, utilizadores de escritório ilimitados e 50 postos TimeTracker para a tua equipa, ativos desde o primeiro dia."
       },
       {
-        "title": "Sem cartão necessário",
-        "desc": "Introduza apenas os dados da empresa. O cartão só é adicionado se decidir continuar."
+        "title": "Sem cartão de crédito",
+        "desc": "Basta o teu email: conta pronta em 2 minutos. O cartão só entra em jogo se decidires ficar."
       },
       {
-        "title": "Os seus dados estão seguros",
-        "desc": "Os seus dados são seus. Pode exportá-los a qualquer momento."
+        "title": "Dados seguros, RGPD desde o primeiro dia",
+        "desc": "Dados na Europa, prova do trabalho e nunca vigilância. Continuam teus: exportas quando quiseres."
       }
     ],
     "faq": [
@@ -1008,7 +1008,7 @@
       },
       {
         "q": "Posso convidar a minha equipa?",
-        "a": "Sim, pode adicionar utilizadores no painel de definições durante o teste."
+        "a": "Sim: durante o teste podes ativar até 50 operadores de terreno no painel de licenças. Precisas de mais? Escreve para support@geotapp.com e aumentamos o limite."
       },
       {
         "q": "Quanto tempo demora a começar?",

@@ -952,7 +952,7 @@
   },
   "trial": {
     "page_title": "14 jours gratuits. Sans carte.",
-    "page_subtitle": "Accès complet à tous les modules GeoTapp Flow pendant 14 jours. Sans carte de crédit, sans engagement. Annulez quand vous voulez.",
+    "page_subtitle": "Le plan Business complet pendant 14 jours : utilisateurs bureau illimités et jusqu'à 50 opérateurs sur le terrain. Sans carte, sans engagement, et les jours démarrent à votre première connexion, pas à l'inscription.",
     "badge": "Essai gratuit, 14 jours",
     "form_title": "Créez votre compte",
     "form_company": "Nom de l'entreprise",
@@ -985,16 +985,16 @@
     "benefits_title": "Ce qui est inclus",
     "benefits": [
       {
-        "title": "Accès complet",
-        "desc": "Tous les modules actifs : CRM, facturation, gestion d'équipes, support client."
+        "title": "Le plus grand plan, pas une démo",
+        "desc": "Vous essayez GeoTapp Flow à pleine puissance : tous les modules, utilisateurs bureau illimités et 50 postes TimeTracker pour votre équipe, actifs dès le premier jour."
       },
       {
-        "title": "Sans carte requise",
-        "desc": "Saisissez uniquement vos données professionnelles. La carte n'est ajoutée que si vous décidez de continuer."
+        "title": "Aucune carte bancaire requise",
+        "desc": "Juste votre email : compte prêt en 2 minutes. La carte n'entre en jeu que si vous décidez de rester."
       },
       {
-        "title": "Vos données sont sécurisées",
-        "desc": "Vos données restent les vôtres. Vous pouvez les exporter à tout moment."
+        "title": "Données en sécurité, RGPD dès le premier jour",
+        "desc": "Données hébergées en Europe, preuve du travail et jamais de surveillance. Elles restent les vôtres : exportez-les quand vous voulez."
       }
     ],
     "faq": [
@@ -1008,7 +1008,7 @@
       },
       {
         "q": "Puis-je inviter mon équipe ?",
-        "a": "Oui, vous pouvez ajouter des utilisateurs depuis le panneau de paramètres pendant l'essai."
+        "a": "Oui : pendant l'essai vous pouvez activer jusqu'à 50 opérateurs terrain depuis le panneau licences. Il vous en faut plus ? Écrivez à support@geotapp.com et nous montons la limite."
       },
       {
         "q": "Combien de temps faut-il pour commencer ?",

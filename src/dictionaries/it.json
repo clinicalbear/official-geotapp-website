@@ -719,7 +719,7 @@
   },
   "trial": {
     "page_title": "14 giorni gratis. Nessuna carta.",
-    "page_subtitle": "Accesso completo a tutti i moduli GeoTapp Flow per 14 giorni. Nessuna carta di credito, nessun impegno. Annulli quando vuole.",
+    "page_subtitle": "Il piano Business completo per 14 giorni: utenti ufficio illimitati e fino a 50 operatori sul campo. Nessuna carta, nessun impegno, e i giorni partono dal tuo primo accesso, non dall'iscrizione.",
     "badge": "Trial gratuito, 14 giorni",
     "form_title": "Crea il tuo account",
     "form_company": "Nome azienda",
@@ -752,16 +752,16 @@
     "benefits_title": "Cosa include il trial",
     "benefits": [
       {
-        "title": "Accesso completo",
-        "desc": "Tutti i moduli attivi: CRM, fatturazione, gestione squadre, supporto clienti."
+        "title": "Il piano più grande, non una demo",
+        "desc": "Provi GeoTapp Flow al massimo: tutti i moduli, utenti ufficio illimitati e 50 postazioni TimeTracker per la squadra, attive da subito."
       },
       {
         "title": "Nessuna carta richiesta",
-        "desc": "Inserisci solo i dati aziendali. La carta si aggiunge solo se decidi di continuare."
+        "desc": "Basta la tua email: account pronto in 2 minuti. La carta entra in gioco solo se decidi di restare."
       },
       {
-        "title": "Dati al sicuro",
-        "desc": "I tuoi dati rimangono tuoi. Puoi esportarli in qualsiasi momento."
+        "title": "Dati al sicuro, GDPR dal primo giorno",
+        "desc": "Dati in Europa, prova del lavoro e mai sorveglianza. Restano tuoi: li esporti quando vuoi."
       }
     ],
     "faq": [
@@ -775,7 +775,7 @@
       },
       {
         "q": "Posso invitare il mio team?",
-        "a": "Sì, puoi aggiungere utenti dal pannello impostazioni durante il trial."
+        "a": "Sì: durante il trial puoi attivare fino a 50 operatori sul campo dal pannello licenze. Te ne servono di più? Scrivi a support@geotapp.com e li alziamo."
       },
       {
         "q": "Quanto tempo ci vuole per iniziare?",

@@ -952,7 +952,7 @@
   },
   "trial": {
     "page_title": "14 dager gratis. Intet kort.",
-    "page_subtitle": "Full tilgang til alle GeoTapp Flow-moduler i 14 dager. Ingen kredittkort, ingen forpliktelse. Avbestill når du vil.",
+    "page_subtitle": "Hele Business-planen i 14 dager: ubegrensede kontorbrukere og opptil 50 medarbeidere i felt. Ingen kort, ingen binding, og dagene starter ved din første innlogging, ikke ved registreringen.",
     "badge": "Gratis prøveperiode, 14 dager",
     "form_title": "Opprett kontoen din",
     "form_company": "Selskapsnavn",
@@ -985,16 +985,16 @@
     "benefits_title": "Hva er inkludert",
     "benefits": [
       {
-        "title": "Full tilgang",
-        "desc": "Alle moduler aktive: CRM, fakturering, teamstyring, kundestøtte."
+        "title": "Den største planen, ikke en demo",
+        "desc": "Du prøver GeoTapp Flow på full kraft: alle moduler, ubegrensede kontorbrukere og 50 TimeTracker-plasser til laget ditt, aktive fra dag én."
       },
       {
-        "title": "Intet kort kreves",
-        "desc": "Skriv inn bare bedriftsdataene dine. Kortet legges til bare hvis du bestemmer deg for å fortsette."
+        "title": "Ingen kredittkort nødvendig",
+        "desc": "Bare e-posten din: konto klar på 2 minutter. Kortet kommer først inn i bildet hvis du bestemmer deg for å bli."
       },
       {
-        "title": "Dataene dine er trygge",
-        "desc": "Dataene dine er dine. Du kan eksportere dem når som helst."
+        "title": "Data i sikkerhet, GDPR fra dag én",
+        "desc": "Data i Europa, bevis på arbeidet og aldri overvåking. De forblir dine: eksporter dem når du vil."
       }
     ],
     "faq": [
@@ -1008,7 +1008,7 @@
       },
       {
         "q": "Kan jeg invitere teamet mitt?",
-        "a": "Ja, du kan legge til brukere fra innstillingspanelet under prøveperioden."
+        "a": "Ja: i prøveperioden kan du aktivere opptil 50 feltmedarbeidere fra lisenspanelet. Trenger du flere? Skriv til support@geotapp.com, så hever vi grensen."
       },
       {
         "q": "Hvor lang tid tar det å komme i gang?",

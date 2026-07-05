@@ -952,7 +952,7 @@
   },
   "trial": {
     "page_title": "14 dage gratis. Intet kort.",
-    "page_subtitle": "Fuld adgang til alle GeoTapp Flow-moduler i 14 dage. Intet kreditkort, ingen forpligtelse. Annullér når du vil.",
+    "page_subtitle": "Den fulde Business-plan i 14 dage: ubegrænsede kontorbrugere og op til 50 medarbejdere i marken. Intet kort, ingen binding, og dagene starter ved dit første login, ikke ved tilmeldingen.",
     "badge": "Gratis prøveperiode, 14 dage",
     "form_title": "Opret din konto",
     "form_company": "Virksomhedsnavn",
@@ -985,16 +985,16 @@
     "benefits_title": "Hvad er inkluderet",
     "benefits": [
       {
-        "title": "Fuld adgang",
-        "desc": "Alle moduler aktive: CRM, fakturering, teamstyring, kundesupport."
+        "title": "Den største plan, ikke en demo",
+        "desc": "Du prøver GeoTapp Flow for fuld kraft: alle moduler, ubegrænsede kontorbrugere og 50 TimeTracker-pladser til dit hold, aktive fra dag ét."
       },
       {
-        "title": "Intet kort krævet",
-        "desc": "Indtast kun dine virksomhedsoplysninger. Kortet tilføjes kun, hvis du beslutter dig for at fortsætte."
+        "title": "Intet kreditkort påkrævet",
+        "desc": "Kun din e-mail: konto klar på 2 minutter. Kortet kommer først i spil, hvis du beslutter at blive."
       },
       {
-        "title": "Dine data er sikre",
-        "desc": "Dine data er dine. Du kan eksportere dem når som helst."
+        "title": "Data i sikkerhed, GDPR fra dag ét",
+        "desc": "Data i Europa, bevis for arbejdet og aldrig overvågning. De forbliver dine: eksportér dem, når du vil."
       }
     ],
     "faq": [
@@ -1008,7 +1008,7 @@
       },
       {
         "q": "Kan jeg invitere mit team?",
-        "a": "Ja, du kan tilføje brugere fra indstillingspanelet under prøveperioden."
+        "a": "Ja: under prøveperioden kan du aktivere op til 50 medarbejdere i marken fra licenspanelet. Brug for flere? Skriv til support@geotapp.com, så hæver vi grænsen."
       },
       {
         "q": "Hvor lang tid tager det at komme i gang?",

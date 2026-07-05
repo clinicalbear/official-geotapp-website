@@ -952,7 +952,7 @@
   },
   "trial": {
     "page_title": "14 dagar gratis. Inget kort.",
-    "page_subtitle": "Full tillgång till alla GeoTapp Flow-moduler i 14 dagar. Inget kreditkort, inget åtagande. Avbryt när du vill.",
+    "page_subtitle": "Hela Business-planen i 14 dagar: obegränsade kontorsanvändare och upp till 50 medarbetare i fält. Inget kort, ingen bindning, och dagarna börjar vid din första inloggning, inte vid registreringen.",
     "badge": "Gratis provperiod, 14 dagar",
     "form_title": "Skapa ditt konto",
     "form_company": "Företagsnamn",
@@ -985,16 +985,16 @@
     "benefits_title": "Vad ingår",
     "benefits": [
       {
-        "title": "Full tillgång",
-        "desc": "Alla moduler aktiva: CRM, fakturering, teamhantering, kundsupport."
+        "title": "Den största planen, inte en demo",
+        "desc": "Du provar GeoTapp Flow på full kraft: alla moduler, obegränsade kontorsanvändare och 50 TimeTracker-platser för ditt lag, aktiva från dag ett."
       },
       {
-        "title": "Inget kort krävs",
-        "desc": "Ange bara dina företagsuppgifter. Kortet läggs till bara om du väljer att fortsätta."
+        "title": "Inget kreditkort krävs",
+        "desc": "Bara din e-post: kontot klart på 2 minuter. Kortet kommer in i bilden först om du bestämmer dig för att stanna."
       },
       {
-        "title": "Dina data är säkra",
-        "desc": "Dina data är dina. Du kan exportera dem när som helst."
+        "title": "Data i säkerhet, GDPR från dag ett",
+        "desc": "Data i Europa, bevis på arbetet och aldrig övervakning. De förblir dina: exportera dem när du vill."
       }
     ],
     "faq": [
@@ -1008,7 +1008,7 @@
       },
       {
         "q": "Kan jag bjuda in mitt team?",
-        "a": "Ja, du kan lägga till användare från inställningspanelen under provperioden."
+        "a": "Ja: under provperioden kan du aktivera upp till 50 fältmedarbetare från licenspanelen. Behöver du fler? Skriv till support@geotapp.com så höjer vi gränsen."
       },
       {
         "q": "Hur lång tid tar det att komma igång?",

@@ -719,7 +719,7 @@
   },
   "trial": {
     "page_title": "14 Tage kostenlos. Keine Kreditkarte.",
-    "page_subtitle": "Vollständiger Zugang zu allen GeoTapp Flow-Modulen für 14 Tage. Keine Kreditkarte, keine Verpflichtung. Jederzeit kündbar.",
+    "page_subtitle": "Der komplette Business-Plan für 14 Tage: unbegrenzte Büro-Nutzer und bis zu 50 Mitarbeiter im Außendienst. Keine Karte, keine Verpflichtung, und die Tage laufen ab Ihrem ersten Login, nicht ab der Anmeldung.",
     "badge": "Kostenlose Testphase, 14 Tage",
     "form_title": "Konto erstellen",
     "form_company": "Firmenname",
@@ -752,16 +752,16 @@
     "benefits_title": "Was enthalten ist",
     "benefits": [
       {
-        "title": "Vollständiger Zugang",
-        "desc": "Alle Module aktiv: CRM, Rechnungsstellung, Teamverwaltung, Kundensupport."
+        "title": "Der größte Plan, keine Demo",
+        "desc": "Sie testen GeoTapp Flow in vollem Umfang: alle Module, unbegrenzte Büro-Nutzer und 50 TimeTracker-Plätze für Ihr Team, sofort aktiv."
       },
       {
-        "title": "Keine Karte erforderlich",
-        "desc": "Nur Firmendaten eingeben. Karte nur hinzufügen, wenn Sie weitermachen möchten."
+        "title": "Keine Kreditkarte nötig",
+        "desc": "Nur Ihre E-Mail: Konto in 2 Minuten bereit. Die Karte kommt erst ins Spiel, wenn Sie bleiben möchten."
       },
       {
-        "title": "Ihre Daten sind sicher",
-        "desc": "Ihre Daten gehören Ihnen. Sie können sie jederzeit exportieren."
+        "title": "Daten sicher, DSGVO ab dem ersten Tag",
+        "desc": "Daten in Europa, Arbeitsnachweis und niemals Überwachung. Sie bleiben Ihre: Export jederzeit möglich."
       }
     ],
     "faq": [
@@ -775,11 +775,11 @@
       },
       {
         "q": "Kann ich mein Team einladen?",
-        "a": "Ja, Sie können während des Tests Nutzer über die Einstellungen hinzufügen."
+        "a": "Ja: Während des Trials können Sie bis zu 50 Außendienst-Mitarbeiter über das Lizenz-Panel aktivieren. Brauchen Sie mehr? Schreiben Sie an support@geotapp.com, wir erhöhen das Limit."
       },
       {
         "q": "Wie lange dauert der Einstieg?",
-        "a": "Weniger als 2 Minuten: Formular ausfüllen, E-Mail empfangen, Passwort festlegen – fertig."
+        "a": "Weniger als 2 Minuten: Formular ausfüllen, E-Mail empfangen, Passwort festlegen, fertig."
       }
     ],
     "success_sender": "Die E-Mail kommt von:",

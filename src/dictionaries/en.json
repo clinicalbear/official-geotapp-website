@@ -719,7 +719,7 @@
   },
   "trial": {
     "page_title": "14 days free. No credit card.",
-    "page_subtitle": "Full access to all GeoTapp Flow modules for 14 days. No credit card, no commitment. Cancel anytime.",
+    "page_subtitle": "The full Business plan for 14 days: unlimited office users and up to 50 field operators. No card, no commitment, and the clock starts at your first login, not at signup.",
     "badge": "Free trial, 14 days",
     "form_title": "Create your account",
     "form_company": "Company name",
@@ -752,16 +752,16 @@
     "benefits_title": "What's included",
     "benefits": [
       {
-        "title": "Full access",
-        "desc": "All modules active: CRM, invoicing, team management, customer support."
+        "title": "The biggest plan, not a demo",
+        "desc": "You try GeoTapp Flow at full power: every module, unlimited office users and 50 TimeTracker seats for your crew, active from day one."
       },
       {
-        "title": "No card required",
-        "desc": "Just enter your company details. Add a card only if you decide to continue."
+        "title": "No credit card required",
+        "desc": "Just your email: account ready in 2 minutes. The card only comes in if you decide to stay."
       },
       {
-        "title": "Your data is safe",
-        "desc": "Your data stays yours. You can export it at any time."
+        "title": "Your data safe, GDPR from day one",
+        "desc": "Data stored in Europe, proof of work and never surveillance. It stays yours: export it whenever you want."
       }
     ],
     "faq": [
@@ -775,7 +775,7 @@
       },
       {
         "q": "Can I invite my team?",
-        "a": "Yes, you can add users from the settings panel during the trial."
+        "a": "Yes: during the trial you can activate up to 50 field operators from the licenses panel. Need more? Write to support@geotapp.com and we will raise the cap."
       },
       {
         "q": "How long does it take to get started?",

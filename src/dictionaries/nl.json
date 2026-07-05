@@ -719,7 +719,7 @@
   },
   "trial": {
     "page_title": "Start uw gratis proefperiode van 14 dagen",
-    "page_subtitle": "Volledige toegang tot alle GeoTapp Flow-modules gedurende 14 dagen. Geen creditcard, geen verplichting. Op elk moment opzegbaar.",
+    "page_subtitle": "Het volledige Business-plan voor 14 dagen: onbeperkte kantoorgebruikers en tot 50 medewerkers in het veld. Geen kaart, geen verplichting, en de dagen gaan pas lopen bij je eerste login, niet bij de aanmelding.",
     "badge": "Gratis proefperiode, 14 dagen",
     "form_title": "Maak uw account aan",
     "form_company": "Bedrijfsnaam",
@@ -752,16 +752,16 @@
     "benefits_title": "Wat zit er in de proefperiode",
     "benefits": [
       {
-        "title": "Volledige toegang",
-        "desc": "Alle modules actief: CRM, facturering, teambeheer, klantondersteuning."
+        "title": "Het grootste plan, geen demo",
+        "desc": "Je probeert GeoTapp Flow op volle kracht: alle modules, onbeperkte kantoorgebruikers en 50 TimeTracker-plekken voor je ploeg, direct actief."
       },
       {
-        "title": "Geen creditcard vereist",
-        "desc": "Voer alleen uw bedrijfsgegevens in. Voeg pas een kaart toe als u besluit door te gaan."
+        "title": "Geen creditcard nodig",
+        "desc": "Alleen je e-mail: account klaar in 2 minuten. De kaart komt pas in beeld als je besluit te blijven."
       },
       {
-        "title": "Uw gegevens zijn veilig",
-        "desc": "Uw gegevens blijven van u. U kunt ze op elk moment exporteren."
+        "title": "Data veilig, AVG vanaf dag één",
+        "desc": "Data in Europa, bewijs van werk en nooit surveillance. Ze blijven van jou: exporteren kan wanneer je wilt."
       }
     ],
     "faq": [
@@ -775,7 +775,7 @@
       },
       {
         "q": "Kan ik mijn team uitnodigen?",
-        "a": "Ja, u kunt gebruikers toevoegen vanuit het instellingenpaneel tijdens de proefperiode."
+        "a": "Ja: tijdens de proefperiode kun je tot 50 veldmedewerkers activeren via het licentiepaneel. Meer nodig? Mail support@geotapp.com en we verhogen de limiet."
       },
       {
         "q": "Hoe lang duurt het om te beginnen?",

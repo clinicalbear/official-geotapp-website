@@ -952,7 +952,7 @@
   },
   "trial": {
     "page_title": "14 días gratis. Sin tarjeta.",
-    "page_subtitle": "Acceso completo a todos los módulos GeoTapp Flow durante 14 días. Sin tarjeta de crédito, sin compromiso. Cancela cuando quieras.",
+    "page_subtitle": "El plan Business completo durante 14 días: usuarios de oficina ilimitados y hasta 50 operarios en campo. Sin tarjeta, sin compromiso, y los días empiezan con tu primer acceso, no con el registro.",
     "badge": "Prueba gratuita, 14 días",
     "form_title": "Crea tu cuenta",
     "form_company": "Nombre de la empresa",
@@ -985,16 +985,16 @@
     "benefits_title": "Qué incluye la prueba",
     "benefits": [
       {
-        "title": "Acceso completo",
-        "desc": "Todos los módulos activos: CRM, facturación, gestión de equipos, soporte al cliente."
+        "title": "El plan más grande, no una demo",
+        "desc": "Pruebas GeoTapp Flow a plena potencia: todos los módulos, usuarios de oficina ilimitados y 50 puestos TimeTracker para tu equipo, activos desde el primer día."
       },
       {
-        "title": "Sin tarjeta requerida",
-        "desc": "Solo introduce los datos de tu empresa. La tarjeta se añade solo si decides continuar."
+        "title": "Sin tarjeta de crédito",
+        "desc": "Solo tu email: cuenta lista en 2 minutos. La tarjeta solo entra en juego si decides quedarte."
       },
       {
-        "title": "Tus datos están seguros",
-        "desc": "Tus datos son tuyos. Puedes exportarlos en cualquier momento."
+        "title": "Datos seguros, RGPD desde el primer día",
+        "desc": "Datos alojados en Europa, prueba del trabajo y nunca vigilancia. Siguen siendo tuyos: los exportas cuando quieras."
       }
     ],
     "faq": [
@@ -1008,7 +1008,7 @@
       },
       {
         "q": "¿Puedo invitar a mi equipo?",
-        "a": "Sí, puedes añadir usuarios desde el panel de configuración durante la prueba."
+        "a": "Sí: durante la prueba puedes activar hasta 50 operarios de campo desde el panel de licencias. ¿Necesitas más? Escribe a support@geotapp.com y subimos el límite."
       },
       {
         "q": "¿Cuánto tiempo se tarda en empezar?",
