@@ -17,8 +17,17 @@
 
 
 import { defineCloudflareConfig } from '@opennextjs/cloudflare';
+import staticAssetsIncrementalCache from '@opennextjs/cloudflare/overrides/incremental-cache/static-assets-incremental-cache';
 
 export default {
-  ...defineCloudflareConfig(),
+  // Incremental cache sugli static assets del Worker (05/07/2026): senza una
+  // incremental cache configurata, le ~1.380 pagine prerenderizzate al build
+  // (.open-next/cache) NON venivano deployate e il Worker ri-renderizzava in
+  // SSR ogni richiesta → TTFB ~1s reale, ~5s simulato mobile (LCP home 5,3s).
+  // Con questa override i prerender viaggiano negli asset (cdn-cgi/_next_cache)
+  // e vengono serviti senza SSR. Caveat (accettato): niente revalidation a
+  // runtime — le pagine si rinfrescano a ogni deploy, che facciamo spesso;
+  // l'unico fetch ISR (BlogHighlights, revalidate 3600) degrada a stale-servito.
+  ...defineCloudflareConfig({ incrementalCache: staticAssetsIncrementalCache }),
   buildCommand: 'npm run build:web',
 };

@@ -184,7 +184,7 @@ export default async function AuthorPage({
     '@type': 'Person',
     '@id': `https://geotapp.com/blog/author/${user.slug}/#person`,
     name: user.name,
-    alternateName: 'Michele Petraroli',
+    alternateName: ['Michele Petraroli', 'Mike Petraroli'],
     jobTitle: t.job_title,
     description: stripHtml(t.bio || user.description),
     image: avatar,

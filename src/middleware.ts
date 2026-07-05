@@ -26,7 +26,19 @@ const PUBLIC_FILE = /\.(.*)$/;
  * - Permissions-Policy: geolocation blocked at document level, the GeoTapp
  *   marketing site doesn't need JS geolocation; the mobile app handles that.
  */
-function applySecurityHeaders(response: NextResponse): void {
+function applySecurityHeaders(response: NextResponse, req?: NextRequest): void {
+  // Cookie geo per il Consent Mode client-side (vedi src/lib/consent-mode.ts):
+  // l'HTML e' statico/cachato e identico per tutti, il paese viaggia nel cookie.
+  // Non httpOnly: lo script inline del consent lo legge da document.cookie.
+  if (req) {
+    const country = (req.headers.get('cf-ipcountry') || '').toUpperCase();
+    if (/^[A-Z]{2}$/.test(country)) {
+      response.headers.append(
+        'Set-Cookie',
+        `gt_geo=${country}; Path=/; Max-Age=86400; SameSite=Lax; Secure`,
+      );
+    }
+  }
   response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
   response.headers.set('Permissions-Policy', 'geolocation=(), camera=(), microphone=()');
   // HSTS: force HTTPS for 1 year, include subdomains, allow preload list submission
@@ -825,7 +837,7 @@ export async function middleware(req: NextRequest) {
     PUBLIC_FILE.test(pathname)
   ) {
     const staticResponse = NextResponse.next();
-    applySecurityHeaders(staticResponse);
+    applySecurityHeaders(staticResponse, req);
     return staticResponse;
   }
 
@@ -833,7 +845,7 @@ export async function middleware(req: NextRequest) {
   // locale detection and serve the page directly without locale prefix redirect.
   if (pathname.startsWith('/verifica')) {
     const response = NextResponse.next();
-    applySecurityHeaders(response);
+    applySecurityHeaders(response, req);
     return response;
   }
 
@@ -841,7 +853,7 @@ export async function middleware(req: NextRequest) {
   // locale detection and serve the page directly without locale prefix redirect.
   if (pathname === '/links' || pathname === '/links/') {
     const response = NextResponse.next();
-    applySecurityHeaders(response);
+    applySecurityHeaders(response, req);
     return response;
   }
 
@@ -850,7 +862,7 @@ export async function middleware(req: NextRequest) {
   // Bypass locale routing so they don't get /it/ prepended.
   if (/^\/blog\/(?:[a-z]{2}\/)?20\d{2}\//.test(pathname)) {
     const response = NextResponse.next();
-    applySecurityHeaders(response);
+    applySecurityHeaders(response, req);
     return response;
   }
 
@@ -860,7 +872,7 @@ export async function middleware(req: NextRequest) {
   // ↔ /blog/author/... redirect loop the locale router would otherwise create.
   if (/^\/blog\/author\/[^/]+\/?$/.test(pathname)) {
     const response = NextResponse.next();
-    applySecurityHeaders(response);
+    applySecurityHeaders(response, req);
     return response;
   }
 
@@ -929,7 +941,7 @@ export async function middleware(req: NextRequest) {
         sameSite: 'lax',
         maxAge: 60 * 60 * 24 * 365,
       });
-      applySecurityHeaders(rewriteResponse);
+      applySecurityHeaders(rewriteResponse, req);
       return rewriteResponse;
     }
 
@@ -939,7 +951,7 @@ export async function middleware(req: NextRequest) {
       sameSite: 'lax',
       maxAge: 60 * 60 * 24 * 365,
     });
-    applySecurityHeaders(response);
+    applySecurityHeaders(response, req);
     return response;
   }
 

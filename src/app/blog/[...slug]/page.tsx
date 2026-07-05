@@ -288,7 +288,8 @@ export default async function BlogArticlePage({ params }: Props) {
     author: {
       '@type': 'Person',
       '@id': 'https://geotapp.com/#founder',
-      name: 'Michele Petraroli',
+      name: 'Michele Angelo Petraroli',
+      alternateName: ['Michele Petraroli', 'Mike Petraroli'],
       url: 'https://geotapp.com/chi-siamo/',
       sameAs: [
         'https://www.linkedin.com/in/michele-petraroli-532545397/',

@@ -214,6 +214,13 @@ export default function CookieConsentBanner({ locale }: { locale: string }) {
   const t = TEXTS[locale] ?? TEXTS.en;
 
   useEffect(() => {
+    // Regime deciso client-side dallo script consent (cookie gt_geo, vedi
+    // lib/consent-mode.ts): fuori dai paesi GDPR il banner non si mostra.
+    // Il componente ora è SEMPRE renderizzato dai layout (HTML statico
+    // identico per tutti), quindi il gate geografico vive qui.
+    if ((window as unknown as { __gtConsentMode?: string }).__gtConsentMode === 'rest') {
+      return;
+    }
     let stored: StoredConsent | null = null;
     try {
       const raw = localStorage.getItem(STORAGE_KEY);

@@ -9,9 +9,13 @@ import Script from 'next/script';
 import SiteAnalytics from '@/components/SiteAnalytics';
 import InternalTrafficBadge from '@/components/InternalTrafficBadge';
 import CookieConsentBanner from '@/components/CookieConsentBanner';
-import { getConsentMode } from '@/lib/consent-mode';
+import { buildConsentDefaultScript } from '@/lib/consent-mode';
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
+// display 'optional' (05/07): il repaint da font-swap aggiornava l'LCP al
+// momento in cui il woff2 finiva di scaricare su rete mobile (~4,8s, PSI).
+// Con 'optional' l'LCP resta il primo paint col fallback (~1,2s); il font
+// brand entra dalla navigazione successiva, gia' in cache.
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'optional' });
 // Poppins weights kept in sync with src/app/[locale]/layout.tsx, only the
 // subset of weights actually used in the codebase (500 for PricingSimulator,
 // 700 for headings, 800 for the homepage hero H1). Saves preload bandwidth.
@@ -19,6 +23,7 @@ const poppins = Poppins({
   subsets: ['latin'],
   weight: ['500', '700', '800'],
   variable: '--font-poppins',
+  display: 'optional',
 });
 
 export default async function BlogLayout({ children }: { children: ReactNode }) {
@@ -26,7 +31,6 @@ export default async function BlogLayout({ children }: { children: ReactNode }) 
   // without params. Default to 'en' for the blog article pages, the Navbar
   // and Footer will show English labels. The LanguageSwitcher still works.
   const locale = 'en';
-  const consentMode = await getConsentMode();
 
   return (
     <html lang={locale}>
@@ -36,33 +40,11 @@ export default async function BlogLayout({ children }: { children: ReactNode }) 
         <Script id="internal-traffic-toggle" strategy="beforeInteractive">
           {`(function(){try{var url=new URL(window.location.href);var p=url.searchParams.get('gt_internal');if(p==='on')localStorage.setItem('gt_skip_analytics','1');if(p==='off')localStorage.removeItem('gt_skip_analytics');if(p==='on'||p==='off'){url.searchParams.delete('gt_internal');history.replaceState(null,'',url.toString());}window.__gtSkip=localStorage.getItem('gt_skip_analytics')==='1';if(window.__gtSkip)console.warn('[GeoTapp] Internal traffic, analytics DISABLED. ?gt_internal=off to re-enable.');}catch(_){}})();`}
         </Script>
-        {/* Google Consent Mode v2 geo-aware: EU/UK/EEA/CH → denied + banner;
-            altri Paesi → granted (no obbligo per analytics non-essenziali). */}
+        {/* Google Consent Mode v2, client-side dal cookie gt_geo: l'HTML del
+            blog e' edge-cached (fix 5xx 01/07), il regime per-visitatore non
+            puo' stare nell'HTML o resta impresso nella copia cachata. */}
         <Script id="google-consent-default" strategy="beforeInteractive">
-          {consentMode === 'eu'
-            ? `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('consent', 'default', {
-                analytics_storage: 'denied',
-                ad_storage: 'denied',
-                ad_user_data: 'denied',
-                ad_personalization: 'denied',
-                wait_for_update: 500,
-              });
-              window.__gtConsentMode = 'eu';
-            `
-            : `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('consent', 'default', {
-                analytics_storage: 'granted',
-                ad_storage: 'denied',
-                ad_user_data: 'denied',
-                ad_personalization: 'denied',
-              });
-              window.__gtConsentMode = 'rest';
-            `}
+          {buildConsentDefaultScript()}
         </Script>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-87PN0GEMW4"
@@ -86,7 +68,7 @@ export default async function BlogLayout({ children }: { children: ReactNode }) 
         </div>
         <SurveyInvite />
         <InternalTrafficBadge />
-        {consentMode === 'eu' && <CookieConsentBanner locale={locale} />}
+        <CookieConsentBanner locale={locale} />
       </body>
     </html>
   );

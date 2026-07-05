@@ -1,18 +1,30 @@
-import { headers } from 'next/headers';
-
 /**
- * Paesi soggetti a GDPR EU / EEA / UK GDPR / Swiss FADP.
- * Per questi utenti mostriamo il consent banner e applichiamo
- * consent_default = denied. Tutti gli altri vengono trattati come
- * jurisdiction senza obbligo di consent per analytics non-essenziali
- * (USA, Canada, Australia, India, Giappone, etc.) con
- * consent_default = granted e nessun banner.
+ * Consent Mode geo-aware, versione CLIENT-SIDE (refactor 05/07/2026).
  *
- * UK GDPR (gestito da ICO) richiede comunque consent per analytics
- * cookies non-essenziali, quindi GB resta in lista.
- * CH segue FADP che è sostanzialmente allineato a GDPR.
+ * PRIMA: i layout chiamavano getConsentMode() che leggeva headers()
+ * (cf-ipcountry) sul server. Due problemi gravi:
+ * 1. headers() forza TUTTO l'albero [locale] in rendering dinamico → niente
+ *    prerender → ogni richiesta paga l'SSR completo sul Worker → TTFB ~5s su
+ *    rete mobile (LCP home 5,3-5,5s, misurato PSI 05/07).
+ * 2. Con l'HTML cachato all'edge (blog dal 01/07, marketing dal 05/07) il
+ *    consent del PRIMO visitatore restava impresso nella copia cachata e
+ *    veniva servito a tutti: un utente EU poteva ricevere il default
+ *    'granted' di un visitatore US. Non conforme.
+ *
+ * ORA: l'HTML è identico per tutti (prerenderizzabile e cachabile) e contiene
+ * un unico script inline che decide il regime sul CLIENT leggendo il cookie
+ * `gt_geo` (impostato dal middleware da cf-ipcountry a ogni richiesta).
+ * Fallback senza cookie: 'eu' (safe-by-default, come prima).
+ * Il default parte SEMPRE 'denied' con wait_for_update; per i paesi non-GDPR
+ * lo script fa subito l'update ad analytics granted (denied→granted è lecito,
+ * l'inverso no). GA carica lazyOnload, quindi l'update arriva ben prima.
+ *
+ * UK GDPR (ICO) richiede comunque consent per analytics non-essenziali,
+ * quindi GB resta in lista. CH segue FADP, allineato al GDPR.
  */
-const EU_EEA_UK_CH = new Set([
+
+/** Paesi GDPR EU / EEA / UK GDPR / Swiss FADP: default denied + banner. */
+export const GDPR_COUNTRIES = [
   // EU-27
   'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR',
   'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL',
@@ -21,25 +33,38 @@ const EU_EEA_UK_CH = new Set([
   'IS', 'LI', 'NO',
   // UK + Switzerland
   'GB', 'CH',
-]);
+];
+
+/** Nome del cookie geo impostato dal middleware (leggibile da JS, non httpOnly). */
+export const GEO_COOKIE = 'gt_geo';
 
 export type ConsentMode = 'eu' | 'rest';
 
 /**
- * Determina il regime consent in base all'IP del visitatore (Cloudflare).
- *
- * - 'eu': GDPR-style, default denied, banner obbligatorio
- * - 'rest': default granted, nessun banner
- *
- * Fallback su 'eu' se l'header non è disponibile (safe-by-default).
+ * Script inline universale (beforeInteractive): stesso HTML per ogni paese,
+ * la scelta eu/rest avviene nel browser dal cookie. Espone
+ * window.__gtConsentMode ('eu' | 'rest') per il CookieConsentBanner.
  */
-export async function getConsentMode(): Promise<ConsentMode> {
-  try {
-    const h = await headers();
-    const country = (h.get('cf-ipcountry') || h.get('x-vercel-ip-country') || '').toUpperCase();
-    if (!country) return 'eu';
-    return EU_EEA_UK_CH.has(country) ? 'eu' : 'rest';
-  } catch {
-    return 'eu';
-  }
+export function buildConsentDefaultScript(): string {
+  return `
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    (function () {
+      var GDPR = ${JSON.stringify(GDPR_COUNTRIES)};
+      var m = document.cookie.match(/(?:^|;\\s*)${GEO_COOKIE}=([A-Z]{2})/);
+      var country = m ? m[1] : '';
+      var mode = (!country || GDPR.indexOf(country) !== -1) ? 'eu' : 'rest';
+      gtag('consent', 'default', {
+        analytics_storage: 'denied',
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        wait_for_update: 500,
+      });
+      if (mode === 'rest') {
+        gtag('consent', 'update', { analytics_storage: 'granted' });
+      }
+      window.__gtConsentMode = mode;
+    })();
+  `;
 }

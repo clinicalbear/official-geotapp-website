@@ -22,11 +22,15 @@ import {
   getCurrencyForLocale,
 } from '@/lib/pricing';
 import type { AppLocale } from '@/lib/i18n/config';
-import { getConsentMode } from '@/lib/consent-mode';
+import { buildConsentDefaultScript } from '@/lib/consent-mode';
 
 const BASE_URL = 'https://geotapp.com';
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
+// display 'optional' (05/07): il repaint da font-swap aggiornava l'LCP al
+// momento in cui il woff2 finiva di scaricare su rete mobile (~4,8s, PSI).
+// Con 'optional' l'LCP resta il primo paint col fallback (~1,2s); il font
+// brand entra dalla navigazione successiva, gia' in cache.
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'optional' });
 // Poppins weights: only what is actually used as font-display.
 // font-display heading scale ranges from font-bold (700) to font-extrabold (800).
 // Weight 500 retained for the lone PricingSimulator label. 400 and 600 were
@@ -36,6 +40,7 @@ const poppins = Poppins({
   subsets: ['latin'],
   weight: ['500', '700', '800'],
   variable: '--font-poppins',
+  display: 'optional',
 });
 
 type LocaleSchemaData = {
@@ -221,9 +226,6 @@ export default async function LocaleLayout({ children, params }: Props) {
   const { locale } = await params;
   const data = LOCALE_SCHEMA[locale] ?? LOCALE_SCHEMA.en;
   const localeUrl = `${BASE_URL}/${locale}/`;
-  // Geo-aware consent: EU/UK/EEA/CH = denied di default + banner.
-  // Resto del mondo (US/CA/AU/etc) = granted, no banner.
-  const consentMode = await getConsentMode();
 
   // Locale-aware pricing for structured data + offers description.
   // EUR is master; non-EUR locales render the converted/buffered price.
@@ -307,6 +309,10 @@ export default async function LocaleLayout({ children, params }: Props) {
               '@type': 'Organization',
               '@id': 'https://geotapp.com/#organization',
               name: 'GeoTapp',
+              // Varianti scritte/di spaziazione che sono INEQUIVOCABILMENTE nostre.
+              // NON includiamo "Geotap" (una p): e' un brand terzo, rivendicarlo
+              // sarebbe scorretto e controproducente.
+              alternateName: ['Geo Tapp', 'GeoTapp App'],
               url: 'https://geotapp.com',
               description:
                 'GeoTapp is a field workforce management platform: GPS-verified time tracking, geo-timestamped proof of work and team coordination for field-service businesses in construction, cleaning, security and maintenance.',
@@ -356,8 +362,8 @@ export default async function LocaleLayout({ children, params }: Props) {
               '@context': 'https://schema.org',
               '@type': 'Person',
               '@id': 'https://geotapp.com/#founder',
-              name: 'Michele Petraroli',
-              alternateName: 'Mike Petraroli',
+              name: 'Michele Angelo Petraroli',
+              alternateName: ['Michele Petraroli', 'Mike Petraroli'],
               jobTitle: 'CEO & Founder',
               worksFor: { '@id': 'https://geotapp.com/#organization' },
               url: 'https://geotapp.com/chi-siamo/',
@@ -478,34 +484,11 @@ export default async function LocaleLayout({ children, params }: Props) {
         </Script>
 
         {/* ── Google Consent Mode v2, must run BEFORE GA loads ─────────────
-            Geo-aware: per utenti EU/UK/EEA/CH parte denied (banner mostra
-            le 3 opzioni). Per gli altri (US/CA/AU/etc) parte granted -
-            jurisdiction non richiede consent per analytics non-essenziali. */}
+            Client-side dal cookie gt_geo (middleware): HTML identico per tutti
+            → pagine prerenderizzabili/cachabili senza incidenti di compliance.
+            EU/UK/EEA/CH: denied + banner. Altri: update immediato a granted. */}
         <Script id="google-consent-default" strategy="beforeInteractive">
-          {consentMode === 'eu'
-            ? `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('consent', 'default', {
-                analytics_storage: 'denied',
-                ad_storage: 'denied',
-                ad_user_data: 'denied',
-                ad_personalization: 'denied',
-                wait_for_update: 500,
-              });
-              window.__gtConsentMode = 'eu';
-            `
-            : `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('consent', 'default', {
-                analytics_storage: 'granted',
-                ad_storage: 'denied',
-                ad_user_data: 'denied',
-                ad_personalization: 'denied',
-              });
-              window.__gtConsentMode = 'rest';
-            `}
+          {buildConsentDefaultScript()}
         </Script>
         <Script
           strategy="lazyOnload"
@@ -570,7 +553,7 @@ export default async function LocaleLayout({ children, params }: Props) {
           }}
         />
         <SiteAnalytics />
-        {consentMode === 'eu' && <CookieConsentBanner locale={locale} />}
+        <CookieConsentBanner locale={locale} />
         <SurveyInvite />
         <NewsletterModal locale={locale} />
         <ChatWidget />

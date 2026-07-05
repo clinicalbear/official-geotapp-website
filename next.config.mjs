@@ -280,17 +280,31 @@ const nextConfig = {
         headers: [{ key: 'Cache-Control', value: 'public, max-age=86400, stale-while-revalidate=604800' }],
       },
       {
-        // L'HTML non va MAI cachato (né browser né CDN): dopo un deploy gli hash
-        // dei CSS/JS cambiano e gli asset vecchi spariscono (404). Se il browser
-        // tenesse l'HTML vecchio, punterebbe a CSS morti → pagina senza stile.
-        // no-store = ogni navigazione riceve HTML fresco, che punta sempre agli
-        // asset del deploy corrente (che esistono). Gli asset /_next/static restano
-        // immutable e quindi cachati a lungo: nessun costo di banda reale.
-        // ECCEZIONE /blog/* (regola sotto): cachato all'edge per non far saturare
-        // la pipeline SSR→WP sotto il crawl concorrente (causa dei 5xx Bing). La
-        // sicurezza-deploy è preservata dal purge_everything a fine deploy
-        // (scripts/purge-cloudflare.mjs), che sfratta l'HTML blog vecchio.
-        source: '/((?!api|_next|blog).*)',
+        // Pagine marketing (home locale, prodotti, settori, pricing, risorse…):
+        // il no-store storico costringeva OGNI richiesta alla pipeline SSR del
+        // Worker → TTFB ~5s su rete mobile (misurato PSI 05/07: LCP home 5,3-5,5s
+        // di cui ~5,2s solo TTFB). Stessa cura dei /blog/* (fix 5xx Bing 01/07):
+        // il browser rivalida SEMPRE (max-age=0 → mai HTML stantio che punta ad
+        // asset morti post-deploy), l'edge serve la copia per 5 min + SWR. La
+        // sicurezza-deploy resta garantita dal purge_everything a fine deploy
+        // (scripts/purge-cloudflare.mjs). Gli asset /_next/static restano immutable.
+        // Il lookahead esclude (anche con prefisso lingua) i flussi sensibili.
+        source: '/((?!api|_next|blog|(?:[a-z]{2}(?:-[a-z]{2})?/)?(?:admin|login|abbonati|success|survey|delete-account)).+)',
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=0, must-revalidate, s-maxage=300, stale-while-revalidate=86400' }],
+      },
+      {
+        // Flussi sensibili o con stato (consent page con token, aree riservate,
+        // survey, cancellazione account): MAI in cache condivisa. Con e senza
+        // prefisso lingua (/login, /it/login, /en/abbonati/completa, …).
+        // Regola DOPO il catch-all: in caso di doppio match vince questa.
+        source: '/((?:[a-z]{2}(?:-[a-z]{2})?/)?(?:admin|login|abbonati|success|survey|delete-account).*)',
+        headers: [{ key: 'Cache-Control', value: 'no-store, must-revalidate' }],
+      },
+      {
+        // Root '/': redirect geografico dal middleware. Un redirect geo-dipendente
+        // cachato all'edge servirebbe a tutti la lingua del primo visitatore.
+        // (Il middleware già non emette direttive di cache; questa è la cintura.)
+        source: '/',
         headers: [{ key: 'Cache-Control', value: 'no-store, must-revalidate' }],
       },
       {
