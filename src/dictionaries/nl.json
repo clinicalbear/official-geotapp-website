@@ -743,6 +743,7 @@
     "form_submitting": "Bezig...",
     "form_privacy": "Uw gegevens worden verwerkt volgens ons",
     "form_privacy_link": "Privacybeleid",
+    "form_usage_note": "Tijdens de proefperiode verzamelen we gebruiksgegevens van de app (bezochte schermen, gebruikte functies) om je op weg te helpen en de dienst te verbeteren. Ze worden aan het einde van de proef verwijderd; we bewaren alleen geaggregeerde, anonieme statistieken.",
     "form_email_hint": "Zakelijk e-mailadres aanbevolen. Persoonlijk (Gmail, Outlook, etc.) kan ook.",
     "success_title": "Controleer uw e-mail!",
     "success_desc": "We hebben de activeringslink gestuurd naar ",

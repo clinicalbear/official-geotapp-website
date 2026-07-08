@@ -977,6 +977,7 @@
     "form_submitting": "Aktiverer...",
     "form_privacy": "Dine data behandles i henhold til vores",
     "form_privacy_link": "Privatlivspolitik",
+    "form_usage_note": "Under prøveperioden indsamler vi brugsdata om appen (besøgte skærme, anvendte funktioner) for at hjælpe dig i gang og forbedre tjenesten. De slettes ved prøvens afslutning; vi beholder kun aggregerede, anonyme statistikker.",
     "form_email_hint": "Erhvervs-email anbefales. Personlig (Gmail, Outlook osv.) virker også.",
     "success_title": "Tjek din email!",
     "success_desc": "Vi har sendt aktiveringslinket til ",

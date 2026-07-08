@@ -977,6 +977,7 @@
     "form_submitting": "Aktiverar...",
     "form_privacy": "Dina uppgifter behandlas enligt vår",
     "form_privacy_link": "Integritetspolicy",
+    "form_usage_note": "Under provperioden samlar vi in användningsdata om appen (besökta skärmar, använda funktioner) för att hjälpa dig komma igång och förbättra tjänsten. De raderas när provet avslutas; vi behåller endast aggregerad, anonym statistik.",
     "form_email_hint": "Företags-e-post rekommenderas. Personlig (Gmail, Outlook osv.) funkar också.",
     "success_title": "Kolla din e-post!",
     "success_desc": "Vi har skickat aktiveringslinken till ",

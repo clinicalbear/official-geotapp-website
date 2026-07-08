@@ -977,6 +977,7 @@
     "form_submitting": "Activando...",
     "form_privacy": "Tus datos se procesan de acuerdo con nuestra",
     "form_privacy_link": "Política de privacidad",
+    "form_usage_note": "Durante la prueba recogemos datos de uso de la aplicación (pantallas visitadas, funciones utilizadas) para ayudarte a empezar y mejorar el servicio. Se eliminan al finalizar la prueba; solo conservamos estadísticas agregadas y anónimas.",
     "form_email_hint": "Email empresarial recomendado. Personal (Gmail, Outlook, etc.) también vale.",
     "success_title": "¡Comprueba tu email!",
     "success_desc": "Hemos enviado el enlace de activación a ",

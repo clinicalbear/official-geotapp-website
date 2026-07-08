@@ -743,6 +743,7 @@
     "form_submitting": "Setting up...",
     "form_privacy": "Your data is processed according to our",
     "form_privacy_link": "Privacy Policy",
+    "form_usage_note": "During the trial we collect app usage data (screens visited, features used) to help you get started and to improve the service. It is deleted when the trial ends; we keep only aggregate, anonymous statistics.",
     "form_email_hint": "Business email preferred. Personal (Gmail, Outlook, etc.) also works.",
     "success_title": "Check your email!",
     "success_desc": "We've sent the activation link to ",

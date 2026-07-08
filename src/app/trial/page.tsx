@@ -267,6 +267,12 @@ export default function TrialPage() {
                     </Link>
                     .
                   </p>
+
+                  {d.form_usage_note && (
+                    <p className="text-center text-xs text-slate-400">
+                      {d.form_usage_note}
+                    </p>
+                  )}
                 </motion.form>
               )}
             </AnimatePresence>

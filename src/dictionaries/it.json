@@ -743,6 +743,7 @@
     "form_submitting": "Attivazione in corso...",
     "form_privacy": "I tuoi dati sono trattati secondo la nostra",
     "form_privacy_link": "Privacy Policy",
+    "form_usage_note": "Durante il periodo di prova raccogliamo dati sull'uso dell'app (schermate visitate, funzioni utilizzate) per aiutarti a partire e migliorare il servizio. Vengono cancellati al termine della prova; ne conserviamo solo statistiche aggregate e anonime.",
     "form_email_hint": "Email aziendale consigliata. Va bene anche personale (Gmail, Outlook, ecc.).",
     "success_title": "Controlla la tua email!",
     "success_desc": "Abbiamo inviato il link di attivazione a ",

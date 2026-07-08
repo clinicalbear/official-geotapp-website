@@ -743,6 +743,7 @@
     "form_submitting": "Wird eingerichtet...",
     "form_privacy": "Ihre Daten werden gemäß unserer",
     "form_privacy_link": "Datenschutzerklärung",
+    "form_usage_note": "Während der Testphase erfassen wir Nutzungsdaten der App (aufgerufene Bildschirme, genutzte Funktionen), um dir den Start zu erleichtern und den Dienst zu verbessern. Sie werden am Ende der Testphase gelöscht; wir behalten nur aggregierte, anonyme Statistiken.",
     "form_email_hint": "Geschäfts-E-Mail empfohlen. Persönliche (Gmail, Outlook usw.) geht auch.",
     "success_title": "E-Mail prüfen!",
     "success_desc": "Wir haben den Aktivierungslink an ",
