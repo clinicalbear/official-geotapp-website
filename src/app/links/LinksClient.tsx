@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { ArrowRight, MapPin, Camera, FileCheck, Zap, Sparkles, Wrench, Shield, Brush } from 'lucide-react';
+import { ArrowRight, MapPin, Camera, FileCheck, Zap, Sparkles, Wrench, Shield, Brush, ClipboardList } from 'lucide-react';
 import { trackEvent } from '@/lib/analytics';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
@@ -297,6 +297,21 @@ const UI: Record<string, UIStrings> = {
   },
 };
 
+// ─── Survey (link in cima, localizzato) ──────────────────────────────────────
+const SURVEY: Record<string, { label: string; note: string }> = {
+  it: { label: 'Fiducia o prova? Dillo in 2 minuti', note: 'Sondaggio anonimo, niente da vendere' },
+  en: { label: 'Trust or proof? Tell us in 2 minutes', note: 'Anonymous survey, nothing to sell' },
+  de: { label: 'Vertrauen oder Nachweis? In 2 Minuten', note: 'Anonyme Umfrage, nichts zu verkaufen' },
+  fr: { label: 'Confiance ou preuve ? En 2 minutes', note: 'Sondage anonyme, rien à vendre' },
+  es: { label: '¿Confianza o prueba? En 2 minutos', note: 'Encuesta anónima, nada que vender' },
+  pt: { label: 'Confiança ou prova? Em 2 minutos', note: 'Inquérito anónimo, nada para vender' },
+  nl: { label: 'Vertrouwen of bewijs? In 2 minuten', note: 'Anonieme enquête, niets te verkopen' },
+  da: { label: 'Tillid eller bevis? På 2 minutter', note: 'Anonym undersøgelse, intet at sælge' },
+  sv: { label: 'Förtroende eller bevis? På 2 minuter', note: 'Anonym enkät, inget att sälja' },
+  nb: { label: 'Tillit eller bevis? På 2 minutter', note: 'Anonym undersøkelse, ingenting å selge' },
+  ru: { label: 'Доверие или доказательство? За 2 минуты', note: 'Анонимный опрос, ничего не продаём' },
+};
+
 // ─── UTM helpers ──────────────────────────────────────────────────────────────
 
 const BASE_UTM = 'utm_source=instagram&utm_medium=bio';
@@ -414,6 +429,7 @@ function QuickLink({ label, href }: { label: string; href: string }) {
 
 export default function LinksClient({ articles, locale = 'it' }: Props) {
   const t = UI[locale] ?? UI['it'];
+  const survey = SURVEY[locale] ?? SURVEY['it'];
   const langPath = locale === 'it' ? 'it' : locale;
 
   const trialHref = `https://geotapp.com/${langPath}/trial/`;
@@ -445,6 +461,28 @@ export default function LinksClient({ articles, locale = 'it' }: Props) {
         </Link>
         <span className="text-[10px] font-semibold text-slate-400 tracking-[0.12em] uppercase">Instagram</span>
       </motion.nav>
+
+      {/* SURVEY — primo link cliccabile (campagna sondaggio, localizzato) */}
+      <motion.section initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4, ease: 'easeOut', delay: 0.05 }}
+        className="px-6 pt-1 pb-5 max-w-md mx-auto">
+        <Link
+          href={withUtm(`https://geotapp.com/${langPath}/survey/`, 'ig_links_survey', 'survey_top')}
+          target="_blank" rel="noopener noreferrer"
+          onClick={() => trackEvent('survey_click', { cta_source: 'links_top', cta_locale: locale })}
+          className="group flex items-center gap-3.5 p-4 rounded-2xl border border-[#3BAEE0]/25 bg-gradient-to-r from-[#3BAEE0]/8 to-primary/8 hover:border-[#3BAEE0]/45 transition-all duration-200 active:scale-[0.98]">
+          <div className="shrink-0 w-11 h-11 rounded-xl bg-[#3BAEE0]/12 border border-[#3BAEE0]/20 flex items-center justify-center text-[#3BAEE0]">
+            <ClipboardList size={20} strokeWidth={2} />
+          </div>
+          <div className="flex-1 min-w-0">
+            <h3 className="font-semibold text-[14px] leading-tight text-slate-800 group-hover:text-[#2f97c4] transition-colors duration-150">{survey.label}</h3>
+            <p className="text-[11.5px] text-slate-400 leading-snug mt-0.5 line-clamp-1">{survey.note}</p>
+          </div>
+          <div className="shrink-0 text-[#3BAEE0]/50 group-hover:text-[#3BAEE0] group-hover:translate-x-0.5 transition-all duration-150">
+            <ArrowRight size={15} />
+          </div>
+        </Link>
+      </motion.section>
 
       {/* ARTICLES, in cima: chi arriva da Instagram vede subito gli articoli */}
       <section className="px-6 pt-4 pb-9 max-w-md mx-auto">
