@@ -9,6 +9,7 @@ import {
 } from '@/lib/risorse/gps-lavoratori-ue/jsonLd';
 import GeneratoreInformativaClient from '@/components/risorse/GeneratoreInformativaClient';
 import RisorsaFaq from '@/components/risorse/RisorsaFaq';
+import LicenzaContenuto from '@/components/LicenzaContenuto';
 
 /**
  * Generatore di informativa GPS per i lavoratori.
@@ -96,6 +97,7 @@ export default async function GeneratoreInformativaPage({
           <GeneratoreInformativaClient locale={rl} paesi={paesi} labels={l.form} />
         </div>
         {l.faq && <RisorsaFaq title={l.faq.title} items={l.faq.items} />}
+        <LicenzaContenuto locale={rl} />
       </div>
     </>
   );

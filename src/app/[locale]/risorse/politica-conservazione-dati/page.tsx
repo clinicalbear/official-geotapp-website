@@ -7,6 +7,7 @@ import { absoluteLocalizedUrl, buildBreadcrumbJsonLd } from '@/lib/risorse/gps-l
 import { getConservazione } from '@/lib/risorse/conservazione-dati-rh';
 import ConservazioneClient from '@/components/risorse/ConservazioneClient';
 import RisorsaFaq from '@/components/risorse/RisorsaFaq';
+import LicenzaContenuto from '@/components/LicenzaContenuto';
 
 /**
  * Generatore "Politica di conservazione dei dati RH".
@@ -69,6 +70,7 @@ export default async function ConservazionePage({
           <ConservazioneClient locale={rl} contenuto={c} paesi={paesi} />
         </div>
         <RisorsaFaq title={c.faq.title} items={c.faq.items} />
+        <LicenzaContenuto locale={rl} />
       </div>
     </>
   );

@@ -7,6 +7,7 @@ import { absoluteLocalizedUrl, buildBreadcrumbJsonLd } from '@/lib/risorse/gps-l
 import { getAutovalutazione } from '@/lib/risorse/autovalutazione-dati-rh';
 import AutovalutazioneClient from '@/components/risorse/AutovalutazioneClient';
 import RisorsaFaq from '@/components/risorse/RisorsaFaq';
+import LicenzaContenuto from '@/components/LicenzaContenuto';
 
 /**
  * Auto-valutazione "Sei conforme sui dati dei dipendenti?".
@@ -72,6 +73,7 @@ export default async function AutovalutazionePage({
           <AutovalutazioneClient locale={rl} contenuto={c} hrefs={hrefs} />
         </div>
         <RisorsaFaq title={c.faq.title} items={c.faq.items} />
+        <LicenzaContenuto locale={rl} />
       </div>
     </>
   );

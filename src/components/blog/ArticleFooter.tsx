@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { trackEvent } from '@/lib/analytics';
+import LicenzaContenuto from '@/components/LicenzaContenuto';
 
 interface RelatedPost {
   id: number;
@@ -113,6 +114,9 @@ export default function ArticleFooter({ relatedPosts, morePosts, locale }: Artic
 
       {/* CTA Banner */}
       <CtaBanner labels={labels} locale={locale} />
+
+      {/* Copyright + licenza d'uso del contenuto */}
+      <LicenzaContenuto locale={locale} />
     </>
   );
 }
