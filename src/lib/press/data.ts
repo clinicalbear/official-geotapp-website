@@ -34,7 +34,7 @@ export const PRESS_COVERAGE: PressItem[] = [
     title: 'Presenze, GPS e art. 4: dove finisce la prova e dove comincia la sorveglianza',
     url: 'https://www.risorseumane-hr.it/presenze-gps-articolo-4/',
     locale: 'it',
-    logo: '/press/logoHR.jpg',
+    logo: '/press/logoHR.png',
   },
 ];
 

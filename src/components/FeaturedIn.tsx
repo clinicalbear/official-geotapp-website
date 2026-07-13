@@ -22,10 +22,9 @@ const LABEL: Record<string, string> = {
 const styles = `
 .featured-in-logo {
   transition: transform .3s ease, filter .3s ease;
-  filter: saturate(0.9);
+  filter: saturate(0.95);
 }
 .featured-in-logo:hover { transform: scale(1.1); filter: saturate(1.15); }
-.featured-in-logo img { mix-blend-mode: multiply; }
 `;
 
 export default function FeaturedIn({ locale }: { locale: string }) {
@@ -45,7 +44,7 @@ export default function FeaturedIn({ locale }: { locale: string }) {
         padding: '56px 24px 76px',
         position: 'relative',
         overflow: 'hidden',
-        background: 'linear-gradient(180deg, #eef6de 0%, #f5faec 100%)',
+        background: 'linear-gradient(180deg, #d3e6b0 0%, #e0eec6 100%)',
       }}
     >
       <style dangerouslySetInnerHTML={{ __html: styles }} />
@@ -61,7 +60,7 @@ export default function FeaturedIn({ locale }: { locale: string }) {
           fontFamily: 'var(--font-poppins, Poppins, sans-serif)',
           fontSize: 'clamp(56px, 11vw, 130px)',
           fontWeight: 900,
-          color: 'rgba(122, 158, 54, 0.16)',
+          color: 'rgba(90, 120, 40, 0.15)',
           textTransform: 'uppercase',
           letterSpacing: '0.04em',
           whiteSpace: 'nowrap',
