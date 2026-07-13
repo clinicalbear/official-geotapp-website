@@ -54,13 +54,13 @@ export default function FeaturedIn({ locale }: { locale: string }) {
         aria-hidden="true"
         style={{
           position: 'absolute',
-          top: '-0.12em',
+          top: '25px',
           left: '50%',
           transform: 'translateX(-50%)',
           fontFamily: 'var(--font-poppins, Poppins, sans-serif)',
-          fontSize: 'clamp(56px, 11vw, 130px)',
+          fontSize: 'clamp(19px, 3.7vw, 43px)',
           fontWeight: 900,
-          color: 'rgba(51, 51, 51, 0.08)',
+          color: 'rgba(51, 51, 51, 0.10)',
           textTransform: 'uppercase',
           letterSpacing: '0.04em',
           whiteSpace: 'nowrap',
@@ -78,7 +78,7 @@ export default function FeaturedIn({ locale }: { locale: string }) {
         style={{
           position: 'relative',
           zIndex: 1,
-          marginTop: 'clamp(60px, 9vw, 104px)',
+          marginTop: 'clamp(28px, 4vw, 44px)',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
