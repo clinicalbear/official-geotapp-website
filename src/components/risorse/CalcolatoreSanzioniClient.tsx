@@ -89,7 +89,7 @@ export default function CalcolatoreSanzioniClient({ paesi, labels, hrefPerIso }:
             <a
               href={sel.sanzioneUrlFonte}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer nofollow"
               className="text-sm text-[#6a9a1f] underline underline-offset-2 hover:text-[#557d18] break-words"
             >
               {labels.fonte}

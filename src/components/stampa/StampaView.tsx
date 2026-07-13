@@ -333,7 +333,7 @@ export default function StampaView({
                 key={label}
                 href={href}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener noreferrer nofollow"
                 aria-label={label}
                 className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/[0.02] text-text-secondary hover:text-primary hover:border-primary/30 transition-colors"
               >

@@ -60,7 +60,7 @@ function ExternalLink({ href, children }: { href: string; children: React.ReactN
     <a
       href={href}
       target="_blank"
-      rel="noopener noreferrer"
+      rel="noopener noreferrer nofollow"
       className="text-[#6a9a1f] underline underline-offset-2 hover:text-[#557d18] break-words"
     >
       {children}

@@ -103,7 +103,7 @@ function ShareButtons({ title, copiedLabel }: { title: string; copiedLabel: stri
           key={s.label}
           href={s.href}
           target={s.label === 'Email' ? '_self' : '_blank'}
-          rel="noopener noreferrer"
+          rel="noopener noreferrer nofollow"
           aria-label={s.label}
           className="p-2 text-slate-400 rounded-lg transition-all duration-200 hover:bg-slate-50"
           onMouseEnter={(e) => { e.currentTarget.style.color = s.hoverColor; }}

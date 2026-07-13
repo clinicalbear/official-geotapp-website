@@ -166,7 +166,7 @@ export default function AdminDashboard() {
                 process.env.NEXT_PUBLIC_STRAPI_URL || 'http://localhost:1337'
               }
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer nofollow"
               className="block w-full text-center px-6 py-3 bg-blue-500 text-white font-medium rounded-lg hover:bg-blue-600 transition"
             >
               Accedi al CMS Strapi

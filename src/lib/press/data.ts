@@ -11,10 +11,12 @@ export type PressItem = {
                       // assente/false = nofollow (chi ci cita in nofollow o senza link). Fonti autorevoli solo.
 };
 
-// rel del nostro link uscente verso la testata, guidato dalla reciprocità (vedi PressItem.follow).
-// dofollow (noopener) solo per chi ci concede un dofollow; per tutti gli altri nofollow.
-export function pressRel(item: PressItem): string {
-  return item.follow ? 'noopener noreferrer' : 'noopener noreferrer nofollow';
+// rel del nostro link uscente verso la testata.
+// DECISIONE 13/07/2026: niente più reciprocità. TUTTI i link esterni escono nofollow,
+// senza eccezioni, anche verso chi ci concede un dofollow. Il flag `follow` resta nel tipo
+// solo come annotazione storica di chi ci linka dofollow, ma NON cambia più il rel.
+export function pressRel(_item: PressItem): string {
+  return 'noopener noreferrer nofollow';
 }
 
 // VUOTI al lancio. Aggiungere una voce = la sezione compare da sola in pagina.
@@ -37,7 +39,9 @@ export const PRESS_COVERAGE: PressItem[] = [
     url: 'https://azbigmedia.com/business/workflow-automation-how-leaders-pick-first-win-pilots-without-hurting-quality/#answer7',
     locale: 'en',
     logo: '/press/azbigmedia.png',
-    follow: true, // AZ Big Media ci linka in dofollow (rel="noopener", verificato) -> ricambiamo dofollow
+    follow: true, // AZ Big Media ci linka in dofollow (rel="noopener", verificato).
+                  // NB: dal 13/07/2026 questo flag NON concede piu' dofollow (pressRel torna
+                  // sempre nofollow): resta solo come annotazione di chi ci linka dofollow.
   },
   {
     date: '2026-07-08',

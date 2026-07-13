@@ -135,7 +135,7 @@ export default function Reviews({ locale }: { locale: string }) {
                   key={`${r.id}-${idx}`}
                   href={r.sourceUrl}
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="noopener noreferrer nofollow"
                   aria-label={isClone ? undefined : `${viewLabel}, ${r.reviewer.displayName}`}
                   aria-hidden={isClone || undefined}
                   tabIndex={isClone ? -1 : undefined}

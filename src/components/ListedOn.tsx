@@ -241,7 +241,7 @@ function CompactListedOn({ locale }: { locale: string }) {
           { name: 'AlternativeTo', url: URLS.alternativeto, logo: <AlternativeToLogo scale={1} /> },
           { name: 'SaaSworthy', url: URLS.saasworthy, logo: <SaaSworthyLogo scale={1} /> },
         ].map((p) => (
-          <a key={p.name} href={p.url} target="_blank" rel={(p.name === 'SaaSHub' || p.name === 'Product Hunt') ? 'noopener noreferrer' : 'noopener noreferrer nofollow'} aria-label={p.name}
+          <a key={p.name} href={p.url} target="_blank" rel="noopener noreferrer nofollow" aria-label={p.name}
             style={{ opacity: 0.6, transition: 'opacity 0.2s', display: 'flex', alignItems: 'center' }}
             onMouseEnter={(e) => { e.currentTarget.style.opacity = '1'; }}
             onMouseLeave={(e) => { e.currentTarget.style.opacity = '0.6'; }}
@@ -293,7 +293,7 @@ function FullListedOn({ locale }: { locale: string }) {
               key={`${p.name}-${i}`}
               href={p.url}
               target="_blank"
-              rel={(p.name === 'SaaSHub' || p.name === 'Product Hunt') ? 'noopener noreferrer' : 'noopener noreferrer nofollow'}
+              rel="noopener noreferrer nofollow"
               aria-label={p.name}
               className="listed-on-logo"
               style={{ flexShrink: 0 }}

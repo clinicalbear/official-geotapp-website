@@ -133,7 +133,7 @@ export default function AboutPage() {
               <a
                 href="https://www.linkedin.com/in/michele-petraroli-532545397/"
                 target="_blank"
-                rel="noopener noreferrer me"
+                rel="noopener noreferrer nofollow me"
                 className="px-5 py-2.5 rounded-xl bg-[#0A66C2] text-white font-semibold text-sm hover:bg-[#0a5cb0] transition-colors"
               >
                 {cs.founder.cta_linkedin}

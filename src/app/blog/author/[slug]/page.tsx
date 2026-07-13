@@ -231,7 +231,7 @@ export default async function AuthorPage({
                 <a
                   href={featuredUrl}
                   target="_blank"
-                  rel="me noopener"
+                  rel="me noopener nofollow"
                   className="btn-modern"
                 >
                   <BadgeCheck size={16} />
@@ -241,7 +241,7 @@ export default async function AuthorPage({
                 <a
                   href={linkedinUrl}
                   target="_blank"
-                  rel="me noopener"
+                  rel="me noopener nofollow"
                   className="btn-modern-ghost"
                 >
                   <Linkedin size={16} />

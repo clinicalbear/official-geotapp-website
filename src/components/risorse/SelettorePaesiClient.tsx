@@ -146,7 +146,7 @@ export default function SelettorePaesiClient({
         <a
           href="https://github.com/flekschas/simple-world-map"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener noreferrer nofollow"
           className="underline underline-offset-2 hover:text-slate-600"
         >
           simple-world-map
@@ -155,7 +155,7 @@ export default function SelettorePaesiClient({
         <a
           href="https://creativecommons.org/licenses/by-sa/3.0/"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener noreferrer nofollow"
           className="underline underline-offset-2 hover:text-slate-600"
         >
           CC BY-SA 3.0
