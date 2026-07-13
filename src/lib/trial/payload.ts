@@ -18,15 +18,19 @@ export type TrialPayload = {
   language: string;
   // Anti-bot signals read server-side by /api/trial/start:
   // `hp` = honeypot (hidden field; only bots fill it),
-  // `elapsedMs` = time from page load to submit (bot-speed signal).
+  // `elapsedMs` = time from page load to submit (bot-speed signal),
+  // `turnstileToken` = token del captcha invisibile Cloudflare Turnstile.
+  // hp ed elapsedMs sono SEMPRE inviati: la loro assenza lato server ora significa
+  // "richiesta non arrivata dal form" (POST diretto di un bot) e viene bloccata.
   hp?: string;
   elapsedMs?: number;
+  turnstileToken?: string;
 };
 
 export function buildTrialPayload(
   email: string,
   language: string,
-  antiBot?: { hp?: string; elapsedMs?: number },
+  antiBot?: { hp?: string; elapsedMs?: number; turnstileToken?: string },
 ): TrialPayload {
   return {
     email: email.trim(),
@@ -36,5 +40,6 @@ export function buildTrialPayload(
     language,
     hp: antiBot?.hp ?? '',
     ...(antiBot?.elapsedMs != null ? { elapsedMs: antiBot.elapsedMs } : {}),
+    ...(antiBot?.turnstileToken ? { turnstileToken: antiBot.turnstileToken } : {}),
   };
 }

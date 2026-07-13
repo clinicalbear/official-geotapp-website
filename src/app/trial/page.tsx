@@ -14,10 +14,16 @@ import {
   Mail,
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Script from 'next/script';
 import { usePathname } from 'next/navigation';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import { getLocaleFromPathname } from '@/lib/i18n/locale-routing';
 import Link from 'next/link';
+
+// Cloudflare Turnstile: captcha invisibile e gratuito. Se la sitekey non e' configurata
+// il widget non viene reso e il server (senza secret) salta la verifica: rollout a stadi,
+// nessuna rottura dei signup veri prima che le chiavi siano in env.
+const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || '';
 import { trackEvent, consumeTrialSource } from '@/lib/analytics';
 import { buildTrialPayload } from '@/lib/trial/payload';
 import Reviews from '@/components/Reviews';
@@ -120,6 +126,12 @@ export default function TrialPage() {
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    // Il form va preso PRIMA di qualunque await: dopo, e.currentTarget e' gia' null.
+    // Turnstile (rendering implicito) inietta da se' un input nascosto
+    // `cf-turnstile-response` dentro il form: e' li' che vive il token.
+    const formEl = e.currentTarget;
+    const turnstileToken =
+      (formEl.elements.namedItem('cf-turnstile-response') as HTMLInputElement | null)?.value || '';
     setError(null);
     setLoading(true);
     const elapsedMs = Date.now() - pageLoadTime.current;
@@ -135,7 +147,9 @@ export default function TrialPage() {
       const res = await fetch(`${saasUrl}/api/trial/start`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(buildTrialPayload(email, detectLanguage(), { hp, elapsedMs })),
+        body: JSON.stringify(
+          buildTrialPayload(email, detectLanguage(), { hp, elapsedMs, turnstileToken }),
+        ),
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || d.error_message);
@@ -256,6 +270,26 @@ export default function TrialPage() {
                     onChange={(e) => setHp(e.target.value)}
                     style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, opacity: 0 }}
                   />
+
+                  {/* Cloudflare Turnstile: captcha invisibile. Con rendering implicito
+                      inietta da se' l'input nascosto `cf-turnstile-response` dentro il
+                      form, che leggiamo al submit. Reso solo se la sitekey e' configurata. */}
+                  {TURNSTILE_SITE_KEY && (
+                    <>
+                      <Script
+                        src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+                        strategy="afterInteractive"
+                        async
+                        defer
+                      />
+                      <div
+                        className="cf-turnstile"
+                        data-sitekey={TURNSTILE_SITE_KEY}
+                        data-theme="light"
+                        data-size="flexible"
+                      />
+                    </>
+                  )}
 
                   {error && (
                     <p className="rounded-lg border border-red-200 bg-red-50 text-red-700 px-4 py-3 text-sm">
