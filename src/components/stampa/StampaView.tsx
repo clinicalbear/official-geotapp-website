@@ -36,7 +36,7 @@ const PRESS_SOCIALS: { label: string; href: string; Icon: ComponentType<{ size?:
 import type { SiteDictionary } from '@/lib/i18n/dictionaries';
 import type { AppLocale } from '@/lib/i18n/config';
 import { localizePath } from '@/lib/i18n/locale-routing';
-import { PRESS_RELEASES, PRESS_COVERAGE, hasPress } from '@/lib/press/data';
+import { PRESS_RELEASES, PRESS_COVERAGE, hasPress, pressRel } from '@/lib/press/data';
 
 // Data ISO 'YYYY-MM-DD' → visualizzazione 'dd-MM-YYYY'. L'ISO resta nei dati (ordinamento).
 function fmtPressDate(iso: string): string {
@@ -366,7 +366,7 @@ export default function StampaView({
                   <a
                     href={item.url}
                     target="_blank"
-                    rel="noopener noreferrer nofollow"
+                    rel={pressRel(item)}
                     className="flex-1 font-medium text-foreground hover:text-primary transition-colors"
                   >
                     {item.title}
@@ -408,7 +408,7 @@ export default function StampaView({
                   <a
                     href={item.url}
                     target="_blank"
-                    rel="noopener noreferrer nofollow"
+                    rel={pressRel(item)}
                     className="flex-1 font-medium text-foreground hover:text-primary transition-colors"
                   >
                     {item.title}

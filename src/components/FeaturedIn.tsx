@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { PRESS_COVERAGE, hasPress } from '@/lib/press/data';
+import { PRESS_COVERAGE, hasPress, pressRel } from '@/lib/press/data';
 
 // Media/press credibility bar ("cited by"). Localized idiomatically per market
 // (a literal "cited on" reads wrong in EN/DE), mirroring the ListedOn label set.
@@ -91,7 +91,7 @@ export default function FeaturedIn({ locale }: { locale: string }) {
             key={item.outlet}
             href={item.url}
             target="_blank"
-            rel="noopener noreferrer nofollow"
+            rel={pressRel(item)}
             aria-label={item.outlet}
             className="featured-in-logo"
             style={{ display: 'inline-flex', alignItems: 'center' }}

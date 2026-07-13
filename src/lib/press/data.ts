@@ -7,7 +7,15 @@ export type PressItem = {
   url: string;
   locale: AppLocale;  // lingua del pezzo
   logo?: string;      // path in /public del logo della testata (opzionale)
+  follow?: boolean;   // reciprocità rel: true = diamo dofollow SOLO a chi ci ha dato un link dofollow;
+                      // assente/false = nofollow (chi ci cita in nofollow o senza link). Fonti autorevoli solo.
 };
+
+// rel del nostro link uscente verso la testata, guidato dalla reciprocità (vedi PressItem.follow).
+// dofollow (noopener) solo per chi ci concede un dofollow; per tutti gli altri nofollow.
+export function pressRel(item: PressItem): string {
+  return item.follow ? 'noopener noreferrer' : 'noopener noreferrer nofollow';
+}
 
 // VUOTI al lancio. Aggiungere una voce = la sezione compare da sola in pagina.
 export const PRESS_RELEASES: PressItem[] = [];
@@ -19,6 +27,7 @@ export const PRESS_COVERAGE: PressItem[] = [
     url: 'https://azbigmedia.com/business/workflow-automation-how-leaders-pick-first-win-pilots-without-hurting-quality/#answer7',
     locale: 'en',
     logo: '/press/azbigmedia.png',
+    follow: true, // AZ Big Media ci linka in dofollow (rel="noopener", verificato) -> ricambiamo dofollow
   },
   {
     date: '2026-07-08',
