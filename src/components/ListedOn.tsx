@@ -279,35 +279,13 @@ function FullListedOn({ locale }: { locale: string }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-40px' }}
       transition={{ duration: 0.3 }}
-      style={{ textAlign: 'center', padding: '56px 0 76px', position: 'relative', overflow: 'hidden', minHeight: '320px' }}
+      aria-label={label}
+      style={{ textAlign: 'center', padding: '40px 0 52px', position: 'relative', overflow: 'hidden' }}
     >
       <style dangerouslySetInnerHTML={{ __html: logoStyles }} />
-      {/* Watermark text */}
-      <span
-        aria-hidden="true"
-        style={{
-          position: 'absolute',
-          top: '-0.15em',
-          left: '50%',
-          transform: 'translateX(-50%)',
-          fontFamily: 'var(--font-poppins, Poppins, sans-serif)',
-          fontSize: 'clamp(80px, 12vw, 140px)',
-          fontWeight: 900,
-          color: '#f8fafc',
-          textTransform: 'uppercase',
-          letterSpacing: '0.04em',
-          textShadow: '0 4px 12px rgba(0,0,0,0.15)',
-          whiteSpace: 'nowrap',
-          pointerEvents: 'none',
-          userSelect: 'none',
-          lineHeight: 1,
-        }}
-      >
-        {label}
-      </span>
 
-      {/* Carousel container */}
-      <div style={{ overflow: 'hidden', position: 'relative', marginTop: '92px' }}>
+      {/* Label removed per design 2026-07-13: logo carousel only (aria-label kept for a11y) */}
+      <div style={{ overflow: 'hidden', position: 'relative', marginTop: '0' }}>
         <div className="logo-carousel" style={{ display: 'flex', alignItems: 'center', gap: '80px', width: 'max-content' }}>
           {/* Render logos twice for seamless loop */}
           {[...platforms, ...platforms].map((p, i) => (

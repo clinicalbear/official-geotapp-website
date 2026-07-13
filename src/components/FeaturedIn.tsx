@@ -20,18 +20,12 @@ const LABEL: Record<string, string> = {
 };
 
 const styles = `
-.featured-in-chip { transition: transform .25s ease; text-decoration: none; display: inline-flex; }
-.featured-in-chip:hover { transform: translateY(-3px); }
-.featured-in-chip:hover .featured-in-inner {
-  box-shadow: 0 10px 24px rgba(15,23,42,0.12);
-  border-color: rgba(143,196,54,0.45);
+.featured-in-logo {
+  transition: transform .3s ease, filter .3s ease;
+  filter: saturate(0.9);
 }
-.featured-in-inner {
-  display: inline-flex; align-items: center;
-  background: #ffffff; border: 1px solid #e2e8f0; border-radius: 14px;
-  padding: 14px 22px; box-shadow: 0 2px 10px rgba(15,23,42,0.06);
-  transition: box-shadow .25s ease, border-color .25s ease;
-}
+.featured-in-logo:hover { transform: scale(1.1); filter: saturate(1.15); }
+.featured-in-logo img { mix-blend-mode: multiply; }
 `;
 
 export default function FeaturedIn({ locale }: { locale: string }) {
@@ -51,7 +45,7 @@ export default function FeaturedIn({ locale }: { locale: string }) {
         padding: '56px 24px 76px',
         position: 'relative',
         overflow: 'hidden',
-        background: 'linear-gradient(180deg, #f8fafc 0%, #ffffff 100%)',
+        background: 'linear-gradient(180deg, #eef6de 0%, #f5faec 100%)',
       }}
     >
       <style dangerouslySetInnerHTML={{ __html: styles }} />
@@ -67,7 +61,7 @@ export default function FeaturedIn({ locale }: { locale: string }) {
           fontFamily: 'var(--font-poppins, Poppins, sans-serif)',
           fontSize: 'clamp(56px, 11vw, 130px)',
           fontWeight: 900,
-          color: '#eef2f7',
+          color: 'rgba(122, 158, 54, 0.16)',
           textTransform: 'uppercase',
           letterSpacing: '0.04em',
           whiteSpace: 'nowrap',
@@ -80,7 +74,7 @@ export default function FeaturedIn({ locale }: { locale: string }) {
         {label}
       </span>
 
-      {/* Static centered row of clean logo chips (few outlets -> no carousel) */}
+      {/* Static centered row of bare logos (no boxes), few outlets -> no carousel */}
       <div
         style={{
           position: 'relative',
@@ -89,7 +83,7 @@ export default function FeaturedIn({ locale }: { locale: string }) {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          gap: 'clamp(18px, 4vw, 44px)',
+          gap: 'clamp(28px, 6vw, 72px)',
           flexWrap: 'wrap',
         }}
       >
@@ -100,28 +94,27 @@ export default function FeaturedIn({ locale }: { locale: string }) {
             target="_blank"
             rel="noopener noreferrer nofollow"
             aria-label={item.outlet}
-            className="featured-in-chip"
+            className="featured-in-logo"
+            style={{ display: 'inline-flex', alignItems: 'center' }}
           >
-            <span className="featured-in-inner">
-              {item.logo ? (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
-                  src={item.logo}
-                  alt={item.outlet}
-                  style={{
-                    height: 'clamp(28px, 3.6vw, 42px)',
-                    width: 'auto',
-                    maxWidth: '210px',
-                    objectFit: 'contain',
-                    display: 'block',
-                  }}
-                />
-              ) : (
-                <span style={{ fontWeight: 700, color: '#334155', fontSize: '0.95rem' }}>
-                  {item.outlet}
-                </span>
-              )}
-            </span>
+            {item.logo ? (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={item.logo}
+                alt={item.outlet}
+                style={{
+                  height: 'clamp(34px, 4.4vw, 52px)',
+                  width: 'auto',
+                  maxWidth: '240px',
+                  objectFit: 'contain',
+                  display: 'block',
+                }}
+              />
+            ) : (
+              <span style={{ fontWeight: 700, color: '#3f5220', fontSize: '1.05rem' }}>
+                {item.outlet}
+              </span>
+            )}
           </a>
         ))}
       </div>

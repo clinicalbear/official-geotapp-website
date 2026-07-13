@@ -214,6 +214,10 @@ function buildRemovedLocaleRedirects() {
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: { unoptimized: true },
+  // Cap static-generation workers: a full clean build renders ~1435 pages, and 11
+  // parallel workers OOM (SIGKILL) on a RAM-constrained builder. 4 workers fit and
+  // still build in reasonable time. See deploy notes 2026-07-13.
+  experimental: { cpus: 4 },
   trailingSlash: true,
   async rewrites() {
     return [...buildCompoundRewrites(), ...buildRewrites()];
