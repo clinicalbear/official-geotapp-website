@@ -408,8 +408,11 @@ export default function StampaView({
                       />
                     </div>
                   )}
-                  <time dateTime={item.date} className="text-xs text-text-secondary shrink-0 font-mono">{fmtPressDate(item.date)}</time>
-                  <span className="text-xs text-primary uppercase tracking-wide shrink-0">{item.outlet}</span>
+                  {/* Colonne a larghezza FISSA: senza, un nome lungo ("Small Business Leader")
+                      spinge il titolo piu' a destra di uno corto ("AZ Big Media"), e la colonna
+                      dei titoli fa i gradini. Cosi' ogni titolo attacca allo stesso punto. */}
+                  <time dateTime={item.date} className="text-xs text-text-secondary shrink-0 font-mono sm:w-24">{fmtPressDate(item.date)}</time>
+                  <span className="text-xs text-primary uppercase tracking-wide shrink-0 sm:w-52">{item.outlet}</span>
                   <a
                     href={item.url}
                     target="_blank"
