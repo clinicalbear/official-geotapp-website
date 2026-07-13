@@ -70,7 +70,19 @@ export const belgio: SchedaPaese = {
   stato: 'scheda-senza-pdf',
 
   autoritaCompetente: {
-    ente: 'Autorita per la protezione dei dati (APD/GBA)',
+    ente: {
+      it: 'Autorita per la protezione dei dati (APD/GBA)',
+      en: 'Data Protection Authority (APD/GBA)',
+      de: 'Datenschutzbehörde (APD/GBA)',
+      fr: 'Autorité de protection des données (APD/GBA)',
+      es: 'Autoridad de Protección de Datos (APD/GBA)',
+      nl: 'Gegevensbeschermingsautoriteit (APD/GBA)',
+      pt: 'Autoridade de Proteção de Dados (APD/GBA)',
+      da: 'Databeskyttelsesmyndigheden (APD/GBA)',
+      sv: 'Dataskyddsmyndigheten (APD/GBA)',
+      nb: 'Datatilsynet (APD/GBA)',
+      ru: 'Орган по защите данных (APD/GBA)',
+    },
     portale: FONTE_APD_RECLAMO.url,
     urlFonte: FONTE_APD_RECLAMO.url,
     verificatoIl: '2026-06-15',

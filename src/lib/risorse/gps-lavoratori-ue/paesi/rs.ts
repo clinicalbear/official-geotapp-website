@@ -75,7 +75,19 @@ export const serbia: SchedaPaese = {
   stato: 'scheda-senza-pdf',
 
   autoritaCompetente: {
-    ente: 'Poverenik (Garante serbo per l\'informazione e la protezione dei dati)',
+    ente: {
+      it: 'Poverenik (Garante serbo per l\'informazione e la protezione dei dati)',
+      en: 'Poverenik (Serbian Commissioner for Information and Data Protection)',
+      de: 'Poverenik (Serbischer Beauftragter für Information und Datenschutz)',
+      fr: "Poverenik (Commissaire serbe à l'information et à la protection des données)",
+      es: 'Poverenik (Comisionado serbio para la Información y la Protección de Datos)',
+      nl: 'Poverenik (Servische commissaris voor informatie en gegevensbescherming)',
+      pt: 'Poverenik (Comissário sérvio para a Informação e a Proteção de Dados)',
+      da: 'Poverenik (serbisk kommissær for information og databeskyttelse)',
+      sv: 'Poverenik (serbiska kommissionären för information och dataskydd)',
+      nb: 'Poverenik (serbisk kommissær for informasjon og personvern)',
+      ru: 'Poverenik (сербский уполномоченный по вопросам информации и защиты данных)',
+    },
     portale: FONTE_POVERENIK.url,
     urlFonte: FONTE_POVERENIK.url,
     verificatoIl: '2026-06-15',

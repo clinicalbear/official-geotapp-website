@@ -1208,7 +1208,9 @@
           "a": "No, and it was built specifically not to be. The tool records location only at clock-in, when someone opens or closes a job, never continuously, and it produces the privacy notice for them to sign. It's there to prove what was done and where, not to watch people. That's the difference between proof of work and a leash."
         }
       ]
-    }
+    },
+    "mappaFonte": "Map:",
+    "mappaDi": "by"
   },
   "sanzioniGps": {
     "metaTitle": "GPS penalty calculator: how much you risk monitoring workers, country by country",
@@ -1307,12 +1309,14 @@
     "formatoTesto": "Text",
     "formatoHtml": "HTML",
     "copia": "Copy",
-    "copiato": "Copied!"
+    "copiato": "Copied!",
+    "fonte": "Source:"
   },
   "embedStrumento": {
     "titolo": "Embed this tool",
     "desc": "Publish the interactive map on your site or blog: copy the code. It includes a link to the source.",
     "copia": "Copy the code",
-    "copiato": "Copied!"
+    "copiato": "Copied!",
+    "fonte": "Source:"
   }
 }

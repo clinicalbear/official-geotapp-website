@@ -74,7 +74,19 @@ export const svezia: SchedaPaese = {
   stato: 'scheda-senza-pdf',
 
   autoritaCompetente: {
-    ente: 'IMY (Integritetsskyddsmyndigheten, autorita garante svedese)',
+    ente: {
+      it: 'IMY (Integritetsskyddsmyndigheten, autorita garante svedese)',
+      en: 'IMY (Integritetsskyddsmyndigheten, Swedish data protection authority)',
+      de: 'IMY (Integritetsskyddsmyndigheten, schwedische Datenschutzbehörde)',
+      fr: 'IMY (Integritetsskyddsmyndigheten, autorité suédoise de protection des données)',
+      es: 'IMY (Integritetsskyddsmyndigheten, autoridad sueca de protección de datos)',
+      nl: 'IMY (Integritetsskyddsmyndigheten, Zweedse gegevensbeschermingsautoriteit)',
+      pt: 'IMY (Integritetsskyddsmyndigheten, autoridade sueca de proteção de dados)',
+      da: 'IMY (Integritetsskyddsmyndigheten, svensk databeskyttelsesmyndighed)',
+      sv: 'IMY (Integritetsskyddsmyndigheten)',
+      nb: 'IMY (Integritetsskyddsmyndigheten, svensk datatilsyn)',
+      ru: 'IMY (Integritetsskyddsmyndigheten, шведский орган по защите данных)',
+    },
     portale: FONTE_IMY_RECLAMO.url,
     urlFonte: FONTE_IMY_RECLAMO.url,
     verificatoIl: '2026-06-15',

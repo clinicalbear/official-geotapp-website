@@ -23,6 +23,8 @@ export interface AttribuzioneLabels {
   formatoHtml: string;
   copia: string;
   copiato: string;
+  /** Etichetta della citazione HTML da incollare ("Quelle:", "Source:"...). */
+  fonte: string;
 }
 
 interface Props {
@@ -38,7 +40,7 @@ interface Props {
 export default function RisorsaAttribuzione({ pageUrl, pageTitle, contactHref, labels, anno }: Props) {
   const urlUtm = `${pageUrl}${UTM}`;
   const snippetTesto = `${pageTitle} - GeoTapp. ${pageUrl}`;
-  const snippetHtml = `Fonte: <a href="${urlUtm}">${pageTitle} - GeoTapp</a>`;
+  const snippetHtml = `${labels.fonte} <a href="${urlUtm}">${pageTitle} - GeoTapp</a>`;
   const [copied, setCopied] = useState<string | null>(null);
 
   const copy = (text: string, which: string) => {

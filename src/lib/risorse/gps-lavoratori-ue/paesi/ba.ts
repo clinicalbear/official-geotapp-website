@@ -67,7 +67,19 @@ export const bosnia: SchedaPaese = {
   stato: 'scheda-senza-pdf',
 
   autoritaCompetente: {
-    ente: 'AZLP (Agenzia per la protezione dei dati personali della BiH)',
+    ente: {
+      it: 'AZLP (Agenzia per la protezione dei dati personali della BiH)',
+      en: 'AZLP (Personal Data Protection Agency of Bosnia and Herzegovina)',
+      de: 'AZLP (Agentur für den Schutz personenbezogener Daten von Bosnien und Herzegowina)',
+      fr: 'AZLP (Agence de protection des données personnelles de Bosnie-Herzégovine)',
+      es: 'AZLP (Agencia de Protección de Datos Personales de Bosnia y Herzegovina)',
+      nl: 'AZLP (Agentschap voor de Bescherming van Persoonsgegevens van Bosnië en Herzegovina)',
+      pt: 'AZLP (Agência de Proteção de Dados Pessoais da Bósnia e Herzegovina)',
+      da: 'AZLP (Agentur for Beskyttelse af Personoplysninger i Bosnien-Hercegovina)',
+      sv: 'AZLP (Myndigheten för skydd av personuppgifter i Bosnien och Hercegovina)',
+      nb: 'AZLP (Byrå for beskyttelse av personopplysninger i Bosnia-Hercegovina)',
+      ru: 'AZLP (Агентство по защите персональных данных Боснии и Герцеговины)',
+    },
     portale: 'https://azlp.ba/',
     urlFonte: 'https://azlp.ba/',
     verificatoIl: '2026-06-15',

@@ -66,7 +66,19 @@ export const bielorussia: SchedaPaese = {
   stato: 'scheda-senza-pdf',
 
   autoritaCompetente: {
-    ente: 'NPDPC (Centro nazionale per la protezione dei dati personali)',
+    ente: {
+      it: 'NPDPC (Centro nazionale per la protezione dei dati personali)',
+      en: 'NPDPC (National Centre for Personal Data Protection)',
+      de: 'NPDPC (Nationales Zentrum für den Schutz personenbezogener Daten)',
+      fr: 'NPDPC (Centre national de protection des données personnelles)',
+      es: 'NPDPC (Centro Nacional de Protección de Datos Personales)',
+      nl: 'NPDPC (Nationaal Centrum voor de Bescherming van Persoonsgegevens)',
+      pt: 'NPDPC (Centro Nacional de Proteção de Dados Pessoais)',
+      da: 'NPDPC (Nationalt Center for Beskyttelse af Personoplysninger)',
+      sv: 'NPDPC (Nationella centret för skydd av personuppgifter)',
+      nb: 'NPDPC (Nasjonalt senter for beskyttelse av personopplysninger)',
+      ru: 'NPDPC (Национальный центр защиты персональных данных)',
+    },
     portale: FONTE_NPDPC.url,
     urlFonte: FONTE_NPDPC.url,
     verificatoIl: '2026-06-15',

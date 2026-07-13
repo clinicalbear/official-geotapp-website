@@ -67,7 +67,19 @@ export const danimarca: SchedaPaese = {
   stato: 'scheda-senza-pdf',
 
   autoritaCompetente: {
-    ente: 'Datatilsynet (autorita garante danese)',
+    ente: {
+      it: 'Datatilsynet (autorita garante danese)',
+      en: 'Datatilsynet (Danish data protection authority)',
+      de: 'Datatilsynet (dänische Datenschutzbehörde)',
+      fr: 'Datatilsynet (autorité danoise de protection des données)',
+      es: 'Datatilsynet (autoridad danesa de protección de datos)',
+      nl: 'Datatilsynet (Deense gegevensbeschermingsautoriteit)',
+      pt: 'Datatilsynet (autoridade dinamarquesa de proteção de dados)',
+      da: 'Datatilsynet',
+      sv: 'Datatilsynet (danska dataskyddsmyndigheten)',
+      nb: 'Datatilsynet (dansk datatilsyn)',
+      ru: 'Datatilsynet (датский орган по защите данных)',
+    },
     portale: FONTE_DATATILSYNET.url,
     urlFonte: FONTE_DATATILSYNET.url,
     verificatoIl: '2026-06-15',

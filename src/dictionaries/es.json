@@ -1208,7 +1208,9 @@
           "a": "No, y se diseñó precisamente para no serlo. La herramienta registra la ubicación solo en el fichaje, cuando alguien abre o cierra un servicio, nunca de forma continua, y genera la información de privacidad para que la firmen. Está para demostrar qué se hizo y dónde, no para vigilar a las personas. Esa es la diferencia entre la prueba del trabajo y una correa."
         }
       ]
-    }
+    },
+    "mappaFonte": "Mapa:",
+    "mappaDi": "de"
   },
   "sanzioniGps": {
     "metaTitle": "Calculadora de sanciones GPS: cuánto te arriesgas al monitorizar trabajadores, país por país",
@@ -1307,12 +1309,14 @@
     "formatoTesto": "Texto",
     "formatoHtml": "HTML",
     "copia": "Copiar",
-    "copiato": "¡Copiado!"
+    "copiato": "¡Copiado!",
+    "fonte": "Fuente:"
   },
   "embedStrumento": {
     "titolo": "Incrusta esta herramienta",
     "desc": "Publica el mapa interactivo en tu sitio o blog: copia el código. Incluye un enlace a la fuente.",
     "copia": "Copiar el código",
-    "copiato": "¡Copiado!"
+    "copiato": "¡Copiado!",
+    "fonte": "Fuente:"
   }
 }

@@ -15,6 +15,8 @@ export interface EmbedLabels {
   desc: string;
   copia: string;
   copiato: string;
+  /** Etichetta della riga-backlink dentro il codice generato ("Quelle:", "Source:"...). */
+  fonte: string;
 }
 
 interface Props {
@@ -29,7 +31,7 @@ export default function EmbedCodeBox({ embedUrl, pageUrl, pageTitle, labels }: P
     `<iframe src="${embedUrl}" width="100%" height="640" loading="lazy" ` +
     `style="border:1px solid #e2e8f0;border-radius:12px;max-width:760px" ` +
     `title="${pageTitle} - GeoTapp"></iframe>\n` +
-    `<p style="font:13px system-ui,sans-serif">Fonte: ` +
+    `<p style="font:13px system-ui,sans-serif">${labels.fonte} ` +
     `<a href="${pageUrl}?utm_source=embed&amp;utm_medium=referral&amp;utm_campaign=risorse">` +
     `${pageTitle} - GeoTapp</a></p>`;
 

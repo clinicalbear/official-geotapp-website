@@ -58,7 +58,19 @@ export const italia: SchedaPaese = {
   stato: 'completo',
 
   autoritaCompetente: {
-    ente: 'Garante per la protezione dei dati personali',
+    ente: {
+      it: 'Garante per la protezione dei dati personali',
+      en: 'Garante per la protezione dei dati personali (Italian Data Protection Authority)',
+      de: 'Garante per la protezione dei dati personali (italienische Datenschutzbehörde)',
+      fr: 'Garante per la protezione dei dati personali (autorité italienne de protection des données)',
+      es: 'Garante per la protezione dei dati personali (autoridad italiana de protección de datos)',
+      nl: 'Garante per la protezione dei dati personali (Italiaanse gegevensbeschermingsautoriteit)',
+      pt: 'Garante per la protezione dei dati personali (autoridade italiana de proteção de dados)',
+      da: 'Garante per la protezione dei dati personali (italiensk databeskyttelsesmyndighed)',
+      sv: 'Garante per la protezione dei dati personali (italienska dataskyddsmyndigheten)',
+      nb: 'Garante per la protezione dei dati personali (italiensk datatilsyn)',
+      ru: 'Garante per la protezione dei dati personali (итальянский орган по защите данных)',
+    },
     urlFonte: 'https://www.garanteprivacy.it',
     verificatoIl: '2026-06-15',
   },

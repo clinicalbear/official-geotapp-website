@@ -12,6 +12,7 @@ import {
   buildBreadcrumbJsonLd,
   buildSchedaArticleJsonLd,
 } from '@/lib/risorse/gps-lavoratori-ue/jsonLd';
+import { loc } from '@/lib/risorse/gps-lavoratori-ue/localize';
 import SchedaPaeseView from '@/components/risorse/SchedaPaeseView';
 import CambiaStatoSelect from '@/components/risorse/CambiaStatoSelect';
 import RisorsaAttribuzione from '@/components/risorse/RisorsaAttribuzione';
@@ -130,7 +131,7 @@ export default async function SchedaPaesePage({
     jurisdiction: {
       countryName: nomePaese,
       countryISO: scheda.codiceISO,
-      authorityName: scheda.autoritaCompetente.ente,
+      authorityName: loc(scheda.autoritaCompetente.ente, resolvedLocale),
       authorityUrl: scheda.autoritaCompetente.urlFonte,
     },
   });

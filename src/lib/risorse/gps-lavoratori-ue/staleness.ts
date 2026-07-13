@@ -7,6 +7,7 @@
  * monitor scripts/check-risorse-freshness.mjs, che SOLO segnala, non riscrive nulla.
  */
 
+import { loc } from './localize';
 import type { SchedaPaese, Contatto } from './types';
 
 /**
@@ -61,7 +62,7 @@ export function schedeDaRicontrollare(
     for (const c of candidati) {
       if (isStale(c.verificatoIl, oggi, mesiSoglia)) {
         const data = c.verificatoIl || '(nessuna data)';
-        voci.push(`${c.ente}: verificato il ${data}`);
+        voci.push(`${loc(c.ente, 'it')}: verificato il ${data}`);
       }
     }
 

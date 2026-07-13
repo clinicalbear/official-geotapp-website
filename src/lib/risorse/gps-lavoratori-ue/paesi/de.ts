@@ -88,7 +88,19 @@ export const germania: SchedaPaese = {
   stato: 'scheda-senza-pdf',
 
   autoritaCompetente: {
-    ente: 'Autorita garante per la protezione dati del Land in cui ha sede l\'azienda',
+    ente: {
+      it: "Autorita garante per la protezione dei dati del Land in cui ha sede l'azienda",
+      en: 'Data protection authority of the Land where the company is based',
+      de: 'Zuständige Landesdatenschutzbehörde des Bundeslandes, in dem das Unternehmen seinen Sitz hat',
+      fr: "Autorité de protection des données du Land où l'entreprise a son siège",
+      es: 'Autoridad de protección de datos del Land donde la empresa tiene su sede',
+      nl: 'Gegevensbeschermingsautoriteit van de deelstaat waar het bedrijf is gevestigd',
+      pt: 'Autoridade de proteção de dados do Land onde a empresa tem a sua sede',
+      da: 'Databeskyttelsesmyndigheden i den delstat, hvor virksomheden har hjemsted',
+      sv: 'Dataskyddsmyndigheten i den delstat där företaget har sitt säte',
+      nb: 'Datatilsynet i delstaten der virksomheten har sitt sete',
+      ru: 'Орган по защите данных той федеральной земли, где находится компания',
+    },
     urlFonte: FONTE_BFDI_LISTA_LAND.url,
     verificatoIl: '2026-06-15',
     note: {

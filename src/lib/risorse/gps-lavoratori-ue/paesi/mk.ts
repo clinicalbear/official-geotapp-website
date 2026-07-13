@@ -62,7 +62,19 @@ export const macedoniaDelNord: SchedaPaese = {
   stato: 'scheda-senza-pdf',
 
   autoritaCompetente: {
-    ente: 'AZLP (Agenzia per la protezione dei dati personali)',
+    ente: {
+      it: 'AZLP (Agenzia per la protezione dei dati personali)',
+      en: 'AZLP (Personal Data Protection Agency)',
+      de: 'AZLP (Agentur für den Schutz personenbezogener Daten)',
+      fr: 'AZLP (Agence de protection des données personnelles)',
+      es: 'AZLP (Agencia de Protección de Datos Personales)',
+      nl: 'AZLP (Agentschap voor de Bescherming van Persoonsgegevens)',
+      pt: 'AZLP (Agência de Proteção de Dados Pessoais)',
+      da: 'AZLP (Agentur for Beskyttelse af Personoplysninger)',
+      sv: 'AZLP (Myndigheten för skydd av personuppgifter)',
+      nb: 'AZLP (Byrå for beskyttelse av personopplysninger)',
+      ru: 'AZLP (Агентство по защите персональных данных)',
+    },
     portale: FONTE_AZLP.url,
     urlFonte: FONTE_AZLP.url,
     verificatoIl: '2026-06-15',

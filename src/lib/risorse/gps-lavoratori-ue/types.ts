@@ -26,7 +26,10 @@ export interface Fonte {
 }
 
 export interface Contatto {
-  ente: string;
+  /** Nome dell'ente. Localizzabile: le denominazioni descrittive (es. "autorità
+   *  del Land della sede") vanno tradotte, altrimenti finiscono in italiano nei
+   *  PDF e nelle schede di ogni lingua. I nomi propri (CNIL, AEPD) restano `string`. */
+  ente: TestoLoc;
   email?: string;
   portale?: string;
   /** Pagina ufficiale che documenta il contatto. */

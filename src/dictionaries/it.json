@@ -1208,7 +1208,9 @@
           "a": "No, ed è stato sviluppato apposta per non esserlo. Lo strumento registra la posizione solo alla timbratura, quando l'operatore apre o chiude un lavoro, mai in continuo, e produce l'informativa da far firmare. Serve a provare cosa è stato fatto e dove, non a guardare le persone. È la differenza tra una prova del lavoro e un guinzaglio."
         }
       ]
-    }
+    },
+    "mappaFonte": "Mappa:",
+    "mappaDi": "di"
   },
   "sanzioniGps": {
     "metaTitle": "Calcolatore sanzioni GPS: quanto rischi a tracciare i lavoratori, Paese per Paese",
@@ -1307,12 +1309,14 @@
     "formatoTesto": "Testo",
     "formatoHtml": "HTML",
     "copia": "Copia",
-    "copiato": "Copiato!"
+    "copiato": "Copiato!",
+    "fonte": "Fonte:"
   },
   "embedStrumento": {
     "titolo": "Incorpora questo strumento",
     "desc": "Pubblica la mappa interattiva sul tuo sito o blog: copia il codice. Include un link alla fonte.",
     "copia": "Copia il codice",
-    "copiato": "Copiato!"
+    "copiato": "Copiato!",
+    "fonte": "Fonte:"
   }
 }

@@ -142,7 +142,7 @@ export default function SelettorePaesiClient({
 
       {/* Attribuzione richiesta dalla licenza CC BY-SA 3.0. */}
       <p className="text-center text-xs text-slate-400">
-        Mappa:{' '}
+        {dict.mappaFonte}{' '}
         <a
           href="https://github.com/flekschas/simple-world-map"
           target="_blank"
@@ -151,7 +151,7 @@ export default function SelettorePaesiClient({
         >
           simple-world-map
         </a>{' '}
-        di Fritz Lekschas,{' '}
+        {dict.mappaDi} Fritz Lekschas,{' '}
         <a
           href="https://creativecommons.org/licenses/by-sa/3.0/"
           target="_blank"

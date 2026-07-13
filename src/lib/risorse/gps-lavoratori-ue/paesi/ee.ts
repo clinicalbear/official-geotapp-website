@@ -67,7 +67,19 @@ export const estonia: SchedaPaese = {
   stato: 'scheda-senza-pdf',
 
   autoritaCompetente: {
-    ente: 'AKI (Andmekaitse Inspektsioon, Garante estone)',
+    ente: {
+      it: 'AKI (Andmekaitse Inspektsioon, Garante estone)',
+      en: 'AKI (Andmekaitse Inspektsioon, Estonian data protection authority)',
+      de: 'AKI (Andmekaitse Inspektsioon, estnische Datenschutzbehörde)',
+      fr: 'AKI (Andmekaitse Inspektsioon, autorité estonienne de protection des données)',
+      es: 'AKI (Andmekaitse Inspektsioon, autoridad estonia de protección de datos)',
+      nl: 'AKI (Andmekaitse Inspektsioon, Estse gegevensbeschermingsautoriteit)',
+      pt: 'AKI (Andmekaitse Inspektsioon, autoridade estónia de proteção de dados)',
+      da: 'AKI (Andmekaitse Inspektsioon, estisk databeskyttelsesmyndighed)',
+      sv: 'AKI (Andmekaitse Inspektsioon, estniska dataskyddsmyndigheten)',
+      nb: 'AKI (Andmekaitse Inspektsioon, estisk datatilsyn)',
+      ru: 'AKI (Andmekaitse Inspektsioon, эстонский орган по защите данных)',
+    },
     portale: FONTE_AKI_RECLAMO.url,
     urlFonte: FONTE_AKI_RECLAMO.url,
     verificatoIl: '2026-06-15',

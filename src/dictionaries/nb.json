@@ -1246,13 +1246,15 @@
     "formatoTesto": "Tekst",
     "formatoHtml": "HTML",
     "copia": "Kopier",
-    "copiato": "Kopiert!"
+    "copiato": "Kopiert!",
+    "fonte": "Kilde:"
   },
   "embedStrumento": {
     "titolo": "Bygg inn dette verktøyet",
     "desc": "Publiser det interaktive kartet på nettstedet eller bloggen din: kopier koden. Inneholder en lenke til kilden.",
     "copia": "Kopier koden",
-    "copiato": "Kopiert!"
+    "copiato": "Kopiert!",
+    "fonte": "Kilde:"
   },
   "risorseGps": {
     "metaTitleSelettore": "GPS og overvåking av ansatte i Europa: hva som skal til for å være i orden, land for land",
@@ -1313,6 +1315,8 @@
           "a": "Nei, og det ble bygget nettopp for ikke å være det. Verktøyet registrerer posisjonen kun ved stempling, når noen åpner eller avslutter et oppdrag, aldri kontinuerlig, og det lager personvernerklæringen de skal signere. Det er der for å dokumentere hva som ble gjort og hvor, ikke for å holde øye med folk. Det er forskjellen mellom dokumentasjon av arbeidet og en lenke."
         }
       ]
-    }
+    },
+    "mappaFonte": "Kart:",
+    "mappaDi": "av"
   }
 }

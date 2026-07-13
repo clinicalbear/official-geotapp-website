@@ -63,7 +63,19 @@ export const ucraina: SchedaPaese = {
   stato: 'scheda-senza-pdf',
 
   autoritaCompetente: {
-    ente: 'Difensore civico del Parlamento ucraino (Garante per la protezione dei dati)',
+    ente: {
+      it: 'Difensore civico del Parlamento ucraino (Garante per la protezione dei dati)',
+      en: 'Ombudsman of the Ukrainian Parliament (Data Protection Authority)',
+      de: 'Bürgerbeauftragter des ukrainischen Parlaments (Datenschutzbehörde)',
+      fr: "Médiateur du Parlement ukrainien (autorité de protection des données)",
+      es: 'Defensor del Pueblo del Parlamento ucraniano (autoridad de protección de datos)',
+      nl: 'Ombudsman van het Oekraïense parlement (gegevensbeschermingsautoriteit)',
+      pt: 'Provedor de Justiça do Parlamento ucraniano (autoridade de proteção de dados)',
+      da: 'Ombudsmanden i det ukrainske parlament (databeskyttelsesmyndighed)',
+      sv: 'Ombudsmannen i det ukrainska parlamentet (dataskyddsmyndighet)',
+      nb: 'Ombudsmannen i det ukrainske parlamentet (datatilsyn)',
+      ru: 'Уполномоченный Верховной Рады Украины по правам человека (орган по защите данных)',
+    },
     portale: FONTE_OMBUDSMAN.url,
     urlFonte: FONTE_OMBUDSMAN.url,
     verificatoIl: '2026-06-15',

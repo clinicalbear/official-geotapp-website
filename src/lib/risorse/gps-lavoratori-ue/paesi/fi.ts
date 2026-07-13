@@ -72,7 +72,19 @@ export const finlandia: SchedaPaese = {
   stato: 'scheda-senza-pdf',
 
   autoritaCompetente: {
-    ente: 'Ufficio del Garante per la protezione dei dati (Tietosuojavaltuutetun toimisto)',
+    ente: {
+      it: 'Ufficio del Garante per la protezione dei dati (Tietosuojavaltuutetun toimisto)',
+      en: 'Office of the Data Protection Ombudsman (Tietosuojavaltuutetun toimisto)',
+      de: 'Büro des Datenschutzbeauftragten (Tietosuojavaltuutetun toimisto)',
+      fr: 'Bureau du Médiateur à la protection des données (Tietosuojavaltuutetun toimisto)',
+      es: 'Oficina del Defensor de la Protección de Datos (Tietosuojavaltuutetun toimisto)',
+      nl: 'Bureau van de ombudsman voor gegevensbescherming (Tietosuojavaltuutetun toimisto)',
+      pt: 'Gabinete do Provedor de Proteção de Dados (Tietosuojavaltuutetun toimisto)',
+      da: 'Kontoret for Databeskyttelsesombudsmanden (Tietosuojavaltuutetun toimisto)',
+      sv: 'Dataombudsmannens byrå (Tietosuojavaltuutetun toimisto)',
+      nb: 'Kontoret til datatilsynsombudsmannen (Tietosuojavaltuutetun toimisto)',
+      ru: 'Аппарат уполномоченного по защите данных (Tietosuojavaltuutetun toimisto)',
+    },
     portale: FONTE_GARANTE_SEGNALAZIONE.url,
     urlFonte: FONTE_GARANTE_SEGNALAZIONE.url,
     verificatoIl: '2026-06-15',

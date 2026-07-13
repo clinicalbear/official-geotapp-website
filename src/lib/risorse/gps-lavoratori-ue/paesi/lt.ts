@@ -65,7 +65,19 @@ export const lituania: SchedaPaese = {
   stato: 'scheda-senza-pdf',
 
   autoritaCompetente: {
-    ente: 'VDAI (Valstybine duomenu apsaugos inspekcija, Garante lituano)',
+    ente: {
+      it: 'VDAI (Valstybine duomenu apsaugos inspekcija, Garante lituano)',
+      en: 'VDAI (Valstybine duomenu apsaugos inspekcija, Lithuanian data protection authority)',
+      de: 'VDAI (Valstybine duomenu apsaugos inspekcija, litauische Datenschutzbehörde)',
+      fr: 'VDAI (Valstybine duomenu apsaugos inspekcija, autorité lituanienne de protection des données)',
+      es: 'VDAI (Valstybine duomenu apsaugos inspekcija, autoridad lituana de protección de datos)',
+      nl: 'VDAI (Valstybine duomenu apsaugos inspekcija, Litouwse gegevensbeschermingsautoriteit)',
+      pt: 'VDAI (Valstybine duomenu apsaugos inspekcija, autoridade lituana de proteção de dados)',
+      da: 'VDAI (Valstybine duomenu apsaugos inspekcija, litauisk databeskyttelsesmyndighed)',
+      sv: 'VDAI (Valstybine duomenu apsaugos inspekcija, litauiska dataskyddsmyndigheten)',
+      nb: 'VDAI (Valstybine duomenu apsaugos inspekcija, litauisk datatilsyn)',
+      ru: 'VDAI (Valstybine duomenu apsaugos inspekcija, литовский орган по защите данных)',
+    },
     portale: FONTE_VDAI_SERVIZI.url,
     urlFonte: FONTE_VDAI_SERVIZI.url,
     verificatoIl: '2026-06-15',

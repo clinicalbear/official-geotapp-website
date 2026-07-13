@@ -7,6 +7,7 @@ import { buildInformativaDoc, infLocale, type InfInputs } from '@/lib/risorse/gp
 
 export interface GenLabels {
   azienda: string;
+  aziendaPlaceholder: string;
   paese: string;
   paesePlaceholder: string;
   finalita: string;
@@ -120,7 +121,7 @@ export default function GeneratoreInformativaClient({ locale, paesi, labels }: P
       <div className="grid sm:grid-cols-2 gap-5">
         <div className="sm:col-span-2">
           <label className={labelCls}>{labels.azienda} *</label>
-          <input className={inputCls} value={azienda} onChange={(e) => setAzienda(e.target.value)} placeholder="Es. Rossi Pulizie S.r.l." />
+          <input className={inputCls} value={azienda} onChange={(e) => setAzienda(e.target.value)} placeholder={labels.aziendaPlaceholder} />
         </div>
 
         <div>

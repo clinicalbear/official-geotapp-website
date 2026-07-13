@@ -70,7 +70,19 @@ export const grecia: SchedaPaese = {
   stato: 'scheda-senza-pdf',
 
   autoritaCompetente: {
-    ente: 'HDPA (Garante greco per la protezione dei dati)',
+    ente: {
+      it: 'HDPA (Garante greco per la protezione dei dati)',
+      en: 'HDPA (Greek Data Protection Authority)',
+      de: 'HDPA (Griechische Datenschutzbehörde)',
+      fr: 'HDPA (Autorité grecque de protection des données)',
+      es: 'HDPA (Autoridad griega de protección de datos)',
+      nl: 'HDPA (Griekse gegevensbeschermingsautoriteit)',
+      pt: 'HDPA (Autoridade grega de proteção de dados)',
+      da: 'HDPA (Græsk databeskyttelsesmyndighed)',
+      sv: 'HDPA (Grekiska dataskyddsmyndigheten)',
+      nb: 'HDPA (Gresk datatilsyn)',
+      ru: 'HDPA (Греческий орган по защите данных)',
+    },
     portale: FONTE_HDPA.url,
     urlFonte: FONTE_HDPA.url,
     verificatoIl: '2026-06-15',

@@ -1208,7 +1208,9 @@
           "a": "Nee, en het is bewust zo gebouwd dat het dat niet is. De tool legt de locatie alleen vast bij het inklokken, wanneer iemand een klus opent of afsluit, nooit continu, en hij maakt de privacyverklaring aan die ze kunnen ondertekenen. Hij is er om te bewijzen wat er gedaan is en waar, niet om mensen te bekijken. Dat is het verschil tussen werkbewijs en een leiband."
         }
       ]
-    }
+    },
+    "mappaFonte": "Kaart:",
+    "mappaDi": "door"
   },
   "sanzioniGps": {
     "metaTitle": "GPS-boetecalculator: hoeveel je riskeert bij het monitoren van werknemers, land voor land",
@@ -1307,12 +1309,14 @@
     "formatoTesto": "Tekst",
     "formatoHtml": "HTML",
     "copia": "Kopiëren",
-    "copiato": "Gekopieerd!"
+    "copiato": "Gekopieerd!",
+    "fonte": "Bron:"
   },
   "embedStrumento": {
     "titolo": "Sluit deze tool in",
     "desc": "Publiceer de interactieve kaart op je site of blog: kopieer de code. Bevat een link naar de bron.",
     "copia": "Kopieer de code",
-    "copiato": "Gekopieerd!"
+    "copiato": "Gekopieerd!",
+    "fonte": "Bron:"
   }
 }

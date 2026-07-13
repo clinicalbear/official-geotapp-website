@@ -68,7 +68,19 @@ export const montenegro: SchedaPaese = {
   stato: 'scheda-senza-pdf',
 
   autoritaCompetente: {
-    ente: 'AZLP (Agenzia per la protezione dei dati personali e il libero accesso all\'informazione)',
+    ente: {
+      it: 'AZLP (Agenzia per la protezione dei dati personali e il libero accesso all\'informazione)',
+      en: 'AZLP (Agency for Personal Data Protection and Free Access to Information)',
+      de: 'AZLP (Agentur für den Schutz personenbezogener Daten und den freien Zugang zu Informationen)',
+      fr: "AZLP (Agence de protection des données personnelles et de libre accès à l'information)",
+      es: 'AZLP (Agencia de Protección de Datos Personales y Libre Acceso a la Información)',
+      nl: 'AZLP (Agentschap voor de Bescherming van Persoonsgegevens en Vrije Toegang tot Informatie)',
+      pt: 'AZLP (Agência de Proteção de Dados Pessoais e Livre Acesso à Informação)',
+      da: 'AZLP (Agentur for Beskyttelse af Personoplysninger og Fri Adgang til Information)',
+      sv: 'AZLP (Myndigheten för skydd av personuppgifter och fri tillgång till information)',
+      nb: 'AZLP (Byrå for beskyttelse av personopplysninger og fri tilgang til informasjon)',
+      ru: 'AZLP (Агентство по защите персональных данных и свободному доступу к информации)',
+    },
     portale: FONTE_AZLP_MODULI.url,
     urlFonte: FONTE_AZLP_CONTATTI.url,
     verificatoIl: '2026-06-15',

@@ -82,7 +82,7 @@ export interface PaeseSeveritaLoc {
 }
 
 /** Paese -> autorità di controllo competente (per il generatore informativa). */
-export function getPaesiAutorita(): {
+export function getPaesiAutorita(locale: AppLocale = 'it'): {
   codiceISO: string;
   nome: string;
   nomi?: Partial<Record<AppLocale, string>>;
@@ -92,7 +92,7 @@ export function getPaesiAutorita(): {
     codiceISO: p.codiceISO,
     nome: p.nome,
     nomi: p.nomi,
-    autorita: p.autoritaCompetente.ente,
+    autorita: loc(p.autoritaCompetente.ente, locale),
   }));
 }
 

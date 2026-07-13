@@ -67,7 +67,19 @@ export const ungheria: SchedaPaese = {
   stato: 'scheda-senza-pdf',
 
   autoritaCompetente: {
-    ente: 'NAIH (Garante ungherese per la protezione dei dati)',
+    ente: {
+      it: 'NAIH (Garante ungherese per la protezione dei dati)',
+      en: 'NAIH (Hungarian Data Protection Authority)',
+      de: 'NAIH (Ungarische Datenschutzbehörde)',
+      fr: 'NAIH (Autorité hongroise de protection des données)',
+      es: 'NAIH (Autoridad húngara de protección de datos)',
+      nl: 'NAIH (Hongaarse gegevensbeschermingsautoriteit)',
+      pt: 'NAIH (Autoridade húngara de proteção de dados)',
+      da: 'NAIH (Ungarsk databeskyttelsesmyndighed)',
+      sv: 'NAIH (Ungerska dataskyddsmyndigheten)',
+      nb: 'NAIH (Ungarsk datatilsyn)',
+      ru: 'NAIH (Венгерский орган по защите данных)',
+    },
     portale: FONTE_NAIH.url,
     urlFonte: FONTE_NAIH.url,
     verificatoIl: '2026-06-15',

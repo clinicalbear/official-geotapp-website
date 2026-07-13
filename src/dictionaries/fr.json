@@ -1208,7 +1208,9 @@
           "a": "Non, et il a été conçu pour ne pas l'être. L'outil enregistre la localisation uniquement au pointage, quand quelqu'un ouvre ou ferme un chantier, jamais en continu, et il produit l'information à remettre au salarié. Il est là pour prouver ce qui a été fait et où, pas pour surveiller les gens. C'est toute la différence entre une preuve du travail et une laisse."
         }
       ]
-    }
+    },
+    "mappaFonte": "Carte :",
+    "mappaDi": "par"
   },
   "sanzioniGps": {
     "metaTitle": "Calculateur d'amendes GPS : combien vous risquez à surveiller vos salariés, pays par pays",
@@ -1307,12 +1309,14 @@
     "formatoTesto": "Texte",
     "formatoHtml": "HTML",
     "copia": "Copier",
-    "copiato": "Copié !"
+    "copiato": "Copié !",
+    "fonte": "Source :"
   },
   "embedStrumento": {
     "titolo": "Intégrer cet outil",
     "desc": "Publiez la carte interactive sur votre site ou blog : copiez le code. Il inclut un lien vers la source.",
     "copia": "Copier le code",
-    "copiato": "Copié !"
+    "copiato": "Copié !",
+    "fonte": "Source :"
   }
 }

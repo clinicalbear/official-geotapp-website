@@ -1208,7 +1208,9 @@
           "a": "Nein, und es wurde gezielt so gebaut, dass es keines ist. Das Werkzeug erfasst den Standort nur beim Einstempeln, wenn jemand einen Auftrag beginnt oder abschließt, niemals durchgehend, und es erstellt die Datenschutzinformation zur Unterschrift. Es dient dazu, zu belegen, was wo getan wurde, nicht dazu, Menschen zu beobachten. Das ist der Unterschied zwischen einem Arbeitsnachweis und einer Leine."
         }
       ]
-    }
+    },
+    "mappaFonte": "Karte:",
+    "mappaDi": "von"
   },
   "sanzioniGps": {
     "metaTitle": "GPS-Bußgeldrechner: wie viel Sie bei Mitarbeiterüberwachung riskieren, Land für Land",
@@ -1307,12 +1309,14 @@
     "formatoTesto": "Text",
     "formatoHtml": "HTML",
     "copia": "Kopieren",
-    "copiato": "Kopiert!"
+    "copiato": "Kopiert!",
+    "fonte": "Quelle:"
   },
   "embedStrumento": {
     "titolo": "Dieses Tool einbetten",
     "desc": "Veröffentlichen Sie die interaktive Karte auf Ihrer Website oder Ihrem Blog: Code kopieren. Enthält einen Link zur Quelle.",
     "copia": "Code kopieren",
-    "copiato": "Kopiert!"
+    "copiato": "Kopiert!",
+    "fonte": "Quelle:"
   }
 }

@@ -1246,13 +1246,15 @@
     "formatoTesto": "Text",
     "formatoHtml": "HTML",
     "copia": "Kopiera",
-    "copiato": "Kopierat!"
+    "copiato": "Kopierat!",
+    "fonte": "Källa:"
   },
   "embedStrumento": {
     "titolo": "Bädda in det här verktyget",
     "desc": "Publicera den interaktiva kartan på din webbplats eller blogg: kopiera koden. Innehåller en länk till källan.",
     "copia": "Kopiera koden",
-    "copiato": "Kopierat!"
+    "copiato": "Kopierat!",
+    "fonte": "Källa:"
   },
   "risorseGps": {
     "metaTitleSelettore": "GPS och övervakning av anställda i Europa: vad som krävs för att följa reglerna, land för land",
@@ -1313,6 +1315,8 @@
           "a": "Nej, och det byggdes uttryckligen för att inte vara det. Verktyget registrerar platsen endast vid instämpling, när någon öppnar eller avslutar ett jobb, aldrig löpande, och det tar fram informationstexten som de ska skriva under. Det finns där för att styrka vad som gjorts och var, inte för att hålla koll på folk. Det är skillnaden mellan ett bevis på utfört arbete och ett koppel."
         }
       ]
-    }
+    },
+    "mappaFonte": "Karta:",
+    "mappaDi": "av"
   }
 }

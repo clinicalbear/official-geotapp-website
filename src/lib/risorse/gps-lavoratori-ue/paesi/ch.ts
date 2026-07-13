@@ -72,7 +72,19 @@ export const svizzera: SchedaPaese = {
   stato: 'scheda-senza-pdf',
 
   autoritaCompetente: {
-    ente: 'PFPDT / FDPIC (Preposto federale alla protezione dei dati e alla trasparenza)',
+    ente: {
+      it: 'PFPDT / FDPIC (Preposto federale alla protezione dei dati e alla trasparenza)',
+      en: 'PFPDT / FDPIC (Federal Data Protection and Information Commissioner)',
+      de: 'PFPDT / FDPIC (Eidgenössischer Beauftragter für Datenschutz und Öffentlichkeit)',
+      fr: 'PFPDT / FDPIC (Préposé fédéral à la protection des données et à la transparence)',
+      es: 'PFPDT / FDPIC (Comisionado Federal de Protección de Datos y Transparencia)',
+      nl: 'PFPDT / FDPIC (Federale functionaris voor gegevensbescherming en transparantie)',
+      pt: 'PFPDT / FDPIC (Comissário Federal para a Proteção de Dados e a Transparência)',
+      da: 'PFPDT / FDPIC (Forbundskommissær for databeskyttelse og gennemsigtighed)',
+      sv: 'PFPDT / FDPIC (Federala dataskydds- och offentlighetsombudsmannen)',
+      nb: 'PFPDT / FDPIC (Føderal kommissær for personvern og innsyn)',
+      ru: 'PFPDT / FDPIC (Федеральный уполномоченный по защите данных и транспарентности)',
+    },
     portale: FONTE_FDPIC_SORVEGLIANZA.url,
     urlFonte: FONTE_FDPIC_SORVEGLIANZA.url,
     verificatoIl: '2026-06-15',

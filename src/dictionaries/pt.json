@@ -1246,13 +1246,15 @@
     "formatoTesto": "Texto",
     "formatoHtml": "HTML",
     "copia": "Copiar",
-    "copiato": "Copiado!"
+    "copiato": "Copiado!",
+    "fonte": "Fonte:"
   },
   "embedStrumento": {
     "titolo": "Incorpora esta ferramenta",
     "desc": "Publica o mapa interativo no teu site ou blog: copia o código. Inclui um link para a fonte.",
     "copia": "Copiar o código",
-    "copiato": "Copiado!"
+    "copiato": "Copiado!",
+    "fonte": "Fonte:"
   },
   "risorseGps": {
     "metaTitleSelettore": "GPS e monitorização de trabalhadores na Europa: o que precisa para estar em conformidade, país a país",
@@ -1313,6 +1315,8 @@
           "a": "Não, e foi feita propositadamente para não o ser. A ferramenta regista a localização apenas no momento da picagem, quando alguém abre ou fecha um trabalho, nunca em contínuo, e produz o aviso de privacidade para assinarem. Serve para provar o que foi feito e onde, não para vigiar as pessoas. É a diferença entre uma prova do trabalho e uma trela."
         }
       ]
-    }
+    },
+    "mappaFonte": "Mapa:",
+    "mappaDi": "por"
   }
 }

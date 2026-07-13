@@ -71,7 +71,19 @@ export const norvegia: SchedaPaese = {
   stato: 'scheda-senza-pdf',
 
   autoritaCompetente: {
-    ente: 'Datatilsynet (autorita garante norvegese)',
+    ente: {
+      it: 'Datatilsynet (autorita garante norvegese)',
+      en: 'Datatilsynet (Norwegian data protection authority)',
+      de: 'Datatilsynet (norwegische Datenschutzbehörde)',
+      fr: 'Datatilsynet (autorité norvégienne de protection des données)',
+      es: 'Datatilsynet (autoridad noruega de protección de datos)',
+      nl: 'Datatilsynet (Noorse gegevensbeschermingsautoriteit)',
+      pt: 'Datatilsynet (autoridade norueguesa de proteção de dados)',
+      da: 'Datatilsynet (norsk databeskyttelsesmyndighed)',
+      sv: 'Datatilsynet (norska dataskyddsmyndigheten)',
+      nb: 'Datatilsynet',
+      ru: 'Datatilsynet (норвежский орган по защите данных)',
+    },
     portale: FONTE_DATATILSYNET.url,
     urlFonte: FONTE_DATATILSYNET.url,
     verificatoIl: '2026-06-15',

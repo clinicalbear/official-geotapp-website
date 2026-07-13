@@ -152,7 +152,7 @@ export default function SchedaPaeseView({ scheda, dict, locale, trialUrl, nomePa
           <Contatto contatto={scheda.autoritaCompetente} dict={dict} locale={locale} />
         </div>
         {scheda.contatti
-          .filter((c) => c.ente !== scheda.autoritaCompetente.ente)
+          .filter((c) => loc(c.ente, locale) !== loc(scheda.autoritaCompetente.ente, locale))
           .map((contatto, i) => (
             <div key={i} className="rounded-xl border border-slate-200 bg-slate-50 p-5 mb-4">
               <Contatto contatto={contatto} dict={dict} locale={locale} />
@@ -169,7 +169,7 @@ export default function SchedaPaeseView({ scheda, dict, locale, trialUrl, nomePa
         <InformativaFacsimile
           locale={locale}
           countryName={nomeLocale}
-          authority={scheda.autoritaCompetente.ente}
+          authority={loc(scheda.autoritaCompetente.ente, locale)}
           countryISO={scheda.codiceISO}
         />
       </section>
@@ -234,7 +234,7 @@ function Contatto({
     // (es. monitor di freschezza). Nessun effetto visivo: la staleness e una
     // preoccupazione di report, non un allarme per l'utente.
     <div className="space-y-1" data-verificato-il={contatto.verificatoIl}>
-      <p className="font-semibold text-slate-900">{contatto.ente}</p>
+      <p className="font-semibold text-slate-900">{loc(contatto.ente, locale)}</p>
       {contatto.email && (
         <p className="text-sm">
           <a

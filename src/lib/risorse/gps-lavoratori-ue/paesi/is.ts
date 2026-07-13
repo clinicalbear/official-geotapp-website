@@ -71,7 +71,19 @@ export const islanda: SchedaPaese = {
   stato: 'scheda-senza-pdf',
 
   autoritaCompetente: {
-    ente: 'Persuvernd (Garante islandese per la protezione dei dati)',
+    ente: {
+      it: 'Persuvernd (Garante islandese per la protezione dei dati)',
+      en: 'Persuvernd (Icelandic Data Protection Authority)',
+      de: 'Persuvernd (Isländische Datenschutzbehörde)',
+      fr: 'Persuvernd (Autorité islandaise de protection des données)',
+      es: 'Persuvernd (Autoridad islandesa de protección de datos)',
+      nl: 'Persuvernd (IJslandse gegevensbeschermingsautoriteit)',
+      pt: 'Persuvernd (Autoridade islandesa de proteção de dados)',
+      da: 'Persuvernd (Islandsk databeskyttelsesmyndighed)',
+      sv: 'Persuvernd (Isländska dataskyddsmyndigheten)',
+      nb: 'Persuvernd (Islandsk datatilsyn)',
+      ru: 'Persuvernd (Исландский орган по защите данных)',
+    },
     portale: FONTE_PERSUVERND_RECLAMO.url,
     urlFonte: 'https://www.personuvernd.is/',
     verificatoIl: '2026-06-15',

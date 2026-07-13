@@ -64,7 +64,19 @@ export const cipro: SchedaPaese = {
   stato: 'scheda-senza-pdf',
 
   autoritaCompetente: {
-    ente: 'Garante cipriota per la protezione dei dati personali',
+    ente: {
+      it: 'Garante cipriota per la protezione dei dati personali',
+      en: 'Cypriot Commissioner for Personal Data Protection',
+      de: 'Zyprischer Beauftragter für den Schutz personenbezogener Daten',
+      fr: 'Commissaire chypriote à la protection des données personnelles',
+      es: 'Comisionado chipriota de Protección de Datos Personales',
+      nl: 'Cypriotische commissaris voor de bescherming van persoonsgegevens',
+      pt: 'Comissário cipriota para a Proteção de Dados Pessoais',
+      da: 'Cypriotisk kommissær for beskyttelse af personoplysninger',
+      sv: 'Cypriotiska kommissionären för skydd av personuppgifter',
+      nb: 'Kypriotisk kommissær for beskyttelse av personopplysninger',
+      ru: 'Кипрский уполномоченный по защите персональных данных',
+    },
     portale: FONTE_GARANTE_CY.url,
     urlFonte: FONTE_GARANTE_CY.url,
     verificatoIl: '2026-06-15',

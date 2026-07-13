@@ -66,7 +66,19 @@ export const moldova: SchedaPaese = {
   stato: 'scheda-senza-pdf',
 
   autoritaCompetente: {
-    ente: 'CNPDCP (Centro nazionale per la protezione dei dati personali)',
+    ente: {
+      it: 'CNPDCP (Centro nazionale per la protezione dei dati personali)',
+      en: 'CNPDCP (National Centre for Personal Data Protection)',
+      de: 'CNPDCP (Nationales Zentrum für den Schutz personenbezogener Daten)',
+      fr: 'CNPDCP (Centre national de protection des données personnelles)',
+      es: 'CNPDCP (Centro Nacional de Protección de Datos Personales)',
+      nl: 'CNPDCP (Nationaal Centrum voor de Bescherming van Persoonsgegevens)',
+      pt: 'CNPDCP (Centro Nacional de Proteção de Dados Pessoais)',
+      da: 'CNPDCP (Nationalt Center for Beskyttelse af Personoplysninger)',
+      sv: 'CNPDCP (Nationella centret för skydd av personuppgifter)',
+      nb: 'CNPDCP (Nasjonalt senter for beskyttelse av personopplysninger)',
+      ru: 'CNPDCP (Национальный центр защиты персональных данных)',
+    },
     portale: FONTE_CNPDCP_RECLAMI.url,
     urlFonte: FONTE_CNPDCP_RECLAMI.url,
     verificatoIl: '2026-06-15',

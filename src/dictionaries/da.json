@@ -1246,13 +1246,15 @@
     "formatoTesto": "Tekst",
     "formatoHtml": "HTML",
     "copia": "Kopiér",
-    "copiato": "Kopieret!"
+    "copiato": "Kopieret!",
+    "fonte": "Kilde:"
   },
   "embedStrumento": {
     "titolo": "Indlejr dette værktøj",
     "desc": "Udgiv det interaktive kort på dit website eller blog: kopiér koden. Indeholder et link til kilden.",
     "copia": "Kopiér koden",
-    "copiato": "Kopieret!"
+    "copiato": "Kopieret!",
+    "fonte": "Kilde:"
   },
   "risorseGps": {
     "metaTitleSelettore": "GPS og medarbejderovervågning i Europa: hvad der skal til for at være lovlig, land for land",
@@ -1313,6 +1315,8 @@
           "a": "Nej, og det er bygget netop til ikke at være det. Værktøjet registrerer kun positionen ved indstempling, når nogen åbner eller lukker en opgave, aldrig løbende, og det laver privatlivsmeddelelsen, de skal underskrive. Det er der for at dokumentere, hvad der blev gjort og hvor, ikke for at holde øje med folk. Det er forskellen mellem dokumentation af arbejdet og en snor."
         }
       ]
-    }
+    },
+    "mappaFonte": "Kort:",
+    "mappaDi": "af"
   }
 }

@@ -47,7 +47,7 @@ export default async function ConservazionePage({
   const { locale } = await params;
   const rl = safeLocale(locale);
   const c = getConservazione(rl);
-  const paesi = getPaesiAutorita().map((p) => ({
+  const paesi = getPaesiAutorita(rl).map((p) => ({
     id: p.codiceISO,
     nome: p.nomi?.[rl] ?? p.nome,
   }));

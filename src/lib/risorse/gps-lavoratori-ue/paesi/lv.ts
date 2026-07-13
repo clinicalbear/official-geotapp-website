@@ -68,7 +68,19 @@ export const lettonia: SchedaPaese = {
   stato: 'scheda-senza-pdf',
 
   autoritaCompetente: {
-    ente: 'DVI (Datu valsts inspekcija, Garante lettone)',
+    ente: {
+      it: 'DVI (Datu valsts inspekcija, Garante lettone)',
+      en: 'DVI (Datu valsts inspekcija, Latvian data protection authority)',
+      de: 'DVI (Datu valsts inspekcija, lettische Datenschutzbehörde)',
+      fr: 'DVI (Datu valsts inspekcija, autorité lettone de protection des données)',
+      es: 'DVI (Datu valsts inspekcija, autoridad letona de protección de datos)',
+      nl: 'DVI (Datu valsts inspekcija, Letse gegevensbeschermingsautoriteit)',
+      pt: 'DVI (Datu valsts inspekcija, autoridade letã de proteção de dados)',
+      da: 'DVI (Datu valsts inspekcija, lettisk databeskyttelsesmyndighed)',
+      sv: 'DVI (Datu valsts inspekcija, lettiska dataskyddsmyndigheten)',
+      nb: 'DVI (Datu valsts inspekcija, latvisk datatilsyn)',
+      ru: 'DVI (Datu valsts inspekcija, латвийский орган по защите данных)',
+    },
     portale: FONTE_DVI_RECLAMO.url,
     urlFonte: FONTE_DVI_RECLAMO.url,
     verificatoIl: '2026-06-15',
