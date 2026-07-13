@@ -399,12 +399,12 @@ export default function StampaView({
                     // Box IDENTICO per ogni testata: i loghi hanno proporzioni molto diverse
                     // (AZ Big Media larghissimo, HR quasi quadrato), quindi si scalano DENTRO
                     // lo stesso riquadro invece di occupare larghezze diverse.
-                    <div className="flex h-24 w-56 shrink-0 items-center justify-center rounded-lg bg-white p-3">
+                    <div className="flex h-36 w-56 shrink-0 items-center justify-center rounded-lg bg-white p-3">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
                         src={item.logo}
                         alt={`Logo ${item.outlet}`}
-                        className="max-h-full max-w-full object-contain"
+                        className="w-full h-auto max-h-full object-contain"
                       />
                     </div>
                   )}
