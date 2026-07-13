@@ -51,6 +51,7 @@ export default function DemoReportBanner() {
         <a
           href={DEMO_ZIP_URL}
           download
+          rel="noopener noreferrer nofollow"
           className="flex items-center justify-center gap-2 px-5 py-2.5 bg-emerald-500 text-white font-semibold rounded-xl text-sm hover:bg-emerald-600 transition-all hover:shadow-md"
         >
           <Download size={16} />
