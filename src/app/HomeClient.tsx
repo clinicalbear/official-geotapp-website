@@ -340,13 +340,13 @@ export default function Home() {
       {/* TRUST BAR, social proof immediately after hero */}
       <TrustBar locale={currentLocale} />
 
+      {/* FEATURED IN, media/press citations (data-driven from PRESS_COVERAGE) */}
+      <FeaturedIn locale={currentLocale} />
+
       {/* LISTED ON, directory badges */}
       <div className="listed-on-wrapper" style={{ background: 'linear-gradient(135deg, #2a8fc4 0%, #3BAEE0 50%, #2a8fc4 100%)', boxShadow: 'inset 0 4px 12px rgba(0,0,0,0.15), inset 0 -4px 12px rgba(0,0,0,0.1)' }}>
         <ListedOn locale={currentLocale} />
       </div>
-
-      {/* FEATURED IN, media/press citations (data-driven from PRESS_COVERAGE) */}
-      <FeaturedIn locale={currentLocale} />
 
       {/* REVIEWS, voci reali dei customer */}
       <Reviews locale={currentLocale} />
