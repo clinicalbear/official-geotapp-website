@@ -16,14 +16,25 @@ export type TrialPayload = {
   businessUsers: number;
   timetrackerSeats: number;
   language: string;
+  // Anti-bot signals read server-side by /api/trial/start:
+  // `hp` = honeypot (hidden field; only bots fill it),
+  // `elapsedMs` = time from page load to submit (bot-speed signal).
+  hp?: string;
+  elapsedMs?: number;
 };
 
-export function buildTrialPayload(email: string, language: string): TrialPayload {
+export function buildTrialPayload(
+  email: string,
+  language: string,
+  antiBot?: { hp?: string; elapsedMs?: number },
+): TrialPayload {
   return {
     email: email.trim(),
     plan: TRIAL_DEFAULTS.plan,
     businessUsers: TRIAL_DEFAULTS.businessUsers,
     timetrackerSeats: TRIAL_DEFAULTS.timetrackerSeats,
     language,
+    hp: antiBot?.hp ?? '',
+    ...(antiBot?.elapsedMs != null ? { elapsedMs: antiBot.elapsedMs } : {}),
   };
 }

@@ -41,6 +41,8 @@ export default function TrialPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
 
   const [email, setEmail] = useState('');
+  // Honeypot anti-bot: hidden from humans, only bots fill it (server drops the signup).
+  const [hp, setHp] = useState('');
 
   // Localize the trial to the user, not just to the page default ('it').
   // An explicit non-it URL locale (e.g. /fr/trial) wins; otherwise fall back
@@ -120,7 +122,8 @@ export default function TrialPage() {
     e.preventDefault();
     setError(null);
     setLoading(true);
-    const timeOnPage = Math.round((Date.now() - pageLoadTime.current) / 1000);
+    const elapsedMs = Date.now() - pageLoadTime.current;
+    const timeOnPage = Math.round(elapsedMs / 1000);
     trackEvent('trial_form_submit', {
       fields_touched: touchedFields.current.size.toString(),
       time_to_submit: timeOnPage.toString(),
@@ -132,7 +135,7 @@ export default function TrialPage() {
       const res = await fetch(`${saasUrl}/api/trial/start`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(buildTrialPayload(email, detectLanguage())),
+        body: JSON.stringify(buildTrialPayload(email, detectLanguage(), { hp, elapsedMs })),
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || d.error_message);
@@ -240,6 +243,19 @@ export default function TrialPage() {
                     />
                     <p className="mt-1 text-xs text-slate-400">{d.form_email_hint}</p>
                   </div>
+
+                  {/* Honeypot: invisibile e fuori dal tab order per gli umani; i bot che
+                      auto-riempiono i campi lo compilano e il server scarta il signup. */}
+                  <input
+                    type="text"
+                    name="company_website"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    aria-hidden="true"
+                    value={hp}
+                    onChange={(e) => setHp(e.target.value)}
+                    style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, opacity: 0 }}
+                  />
 
                   {error && (
                     <p className="rounded-lg border border-red-200 bg-red-50 text-red-700 px-4 py-3 text-sm">
