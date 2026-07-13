@@ -45,7 +45,7 @@ export const PRESS_COVERAGE: PressItem[] = [
     title: 'GPS e vigilanza privata, prova del servizio o controllo del lavoratore?',
     url: 'https://www.vigilanzaprivataonline.com/vigilanza-tecnologica/gps-e-vigilanza-privata-prova-del-servizio-o-controllo-del-lavoratore-3560.html',
     locale: 'it',
-    logo: '/press/vigilanzaprivataonline.png',
+    logo: '/press/vigilanzaprivataonline-v2.png',
   },
   {
     date: '2026-06-30',
