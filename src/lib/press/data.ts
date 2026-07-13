@@ -21,6 +21,14 @@ export const PRESS_COVERAGE: PressItem[] = [
     logo: '/press/azbigmedia.png',
   },
   {
+    date: '2026-07-08',
+    outlet: 'Vigilanza Privata Online',
+    title: 'GPS e vigilanza privata, prova del servizio o controllo del lavoratore?',
+    url: 'https://www.vigilanzaprivataonline.com/vigilanza-tecnologica/gps-e-vigilanza-privata-prova-del-servizio-o-controllo-del-lavoratore-3560.html',
+    locale: 'it',
+    logo: '/press/vigilanzaprivataonline.png',
+  },
+  {
     date: '2026-06-30',
     outlet: 'Risorse Umane HR',
     title: 'Presenze, GPS e art. 4: dove finisce la prova e dove comincia la sorveglianza',
