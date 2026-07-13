@@ -396,12 +396,17 @@ export default function StampaView({
                   className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6 p-5 rounded-2xl border border-white/10 bg-white/[0.02] hover:border-primary/30 transition-colors duration-300"
                 >
                   {item.logo && (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
-                      src={item.logo}
-                      alt={`Logo ${item.outlet}`}
-                      className="h-28 w-auto max-w-[320px] rounded-lg object-contain bg-white px-3 py-2 shrink-0"
-                    />
+                    // Box IDENTICO per ogni testata: i loghi hanno proporzioni molto diverse
+                    // (AZ Big Media larghissimo, HR quasi quadrato), quindi si scalano DENTRO
+                    // lo stesso riquadro invece di occupare larghezze diverse.
+                    <div className="flex h-24 w-56 shrink-0 items-center justify-center rounded-lg bg-white p-3">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={item.logo}
+                        alt={`Logo ${item.outlet}`}
+                        className="max-h-full max-w-full object-contain"
+                      />
+                    </div>
                   )}
                   <time dateTime={item.date} className="text-xs text-text-secondary shrink-0 font-mono">{fmtPressDate(item.date)}</time>
                   <span className="text-xs text-primary uppercase tracking-wide shrink-0">{item.outlet}</span>
