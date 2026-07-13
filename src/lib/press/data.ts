@@ -22,6 +22,16 @@ export const PRESS_RELEASES: PressItem[] = [];
 export const PRESS_COVERAGE: PressItem[] = [
   {
     date: '2026-07-13',
+    outlet: 'Small Business Leader',
+    title: 'Stop scope creep in service work: boundaries that protect margin and relationships',
+    url: 'https://smallbizleader.com/qa/stop-scope-creep-in-service-work-boundaries-that-protect-margin-and-relationships/',
+    locale: 'en',
+    logo: '/press/smallbizleader.png',
+    // NIENTE follow: ci linkano in dofollow (rel="" verificato nel DOM), ma il dominio ha
+    // Spam Score Moz 37% (fascia media) -> non ricambiamo. Reversibile in ogni momento.
+  },
+  {
+    date: '2026-07-13',
     outlet: 'AZ Big Media',
     title: 'Workflow automation: How leaders pick first-win pilots without hurting quality',
     url: 'https://azbigmedia.com/business/workflow-automation-how-leaders-pick-first-win-pilots-without-hurting-quality/#answer7',
