@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { ArrowRight, MapPin, Camera, FileCheck, Zap, Sparkles, Wrench, Shield, Brush, ClipboardList } from 'lucide-react';
+import { ArrowRight, MapPin, Camera, FileCheck, Zap, Sparkles, Wrench, Shield, Brush, ClipboardList, Award } from 'lucide-react';
 import { trackEvent } from '@/lib/analytics';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
@@ -427,6 +427,22 @@ function QuickLink({ label, href }: { label: string; href: string }) {
 
 // ─── Main Component ───────────────────────────────────────────────────────────
 
+// ─── "As featured in AZ Big Media" — badge stampa in evidenza (deep link alla citazione) ──
+const AZB_URL = 'https://azbigmedia.com/business/workflow-automation-how-leaders-pick-first-win-pilots-without-hurting-quality/#answer7';
+const FEATURED: Record<string, { label: string; sub: string }> = {
+  it: { label: 'Ci hanno citato su AZ Big Media', sub: 'Michele su automazione e prova del lavoro' },
+  en: { label: 'As featured in AZ Big Media', sub: 'Michele on workflow automation, proof over surveillance' },
+  de: { label: 'Bekannt aus AZ Big Media', sub: 'Michele über Workflow-Automatisierung' },
+  fr: { label: 'Vu dans AZ Big Media', sub: 'Michele sur l\'automatisation des flux' },
+  es: { label: 'Aparecemos en AZ Big Media', sub: 'Michele sobre automatización y prueba del trabajo' },
+  pt: { label: 'Citados na AZ Big Media', sub: 'Michele sobre automação de fluxos' },
+  nl: { label: 'Te zien in AZ Big Media', sub: 'Michele over workflow-automatisering' },
+  da: { label: 'Omtalt i AZ Big Media', sub: 'Michele om workflow-automatisering' },
+  sv: { label: 'Omnämnda i AZ Big Media', sub: 'Michele om workflow-automatisering' },
+  nb: { label: 'Omtalt i AZ Big Media', sub: 'Michele om arbeidsflyt-automatisering' },
+  ru: { label: 'О нас пишет AZ Big Media', sub: 'Микеле об автоматизации процессов' },
+};
+
 export default function LinksClient({ articles, locale = 'it' }: Props) {
   const t = UI[locale] ?? UI['it'];
   const survey = SURVEY[locale] ?? SURVEY['it'];
@@ -482,6 +498,28 @@ export default function LinksClient({ articles, locale = 'it' }: Props) {
             <ArrowRight size={15} />
           </div>
         </Link>
+      </motion.section>
+
+      {/* AS FEATURED IN — badge stampa AZ Big Media, in evidenza (link cliccabile per traffico Instagram) */}
+      <motion.section initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4, ease: 'easeOut', delay: 0.08 }}
+        className="px-6 pb-5 max-w-md mx-auto">
+        <a
+          href={AZB_URL}
+          target="_blank" rel="noopener noreferrer"
+          onClick={() => trackEvent('press_click', { cta_source: 'links_featured_azbigmedia', cta_locale: locale })}
+          className="group flex items-center gap-3.5 p-4 rounded-2xl border border-primary/25 bg-gradient-to-r from-primary/8 to-primary/5 hover:border-primary/45 transition-all duration-200 active:scale-[0.98]">
+          <div className="shrink-0 w-11 h-11 rounded-xl bg-primary/12 border border-primary/20 flex items-center justify-center text-[#6a9a1f]">
+            <Award size={20} strokeWidth={2} />
+          </div>
+          <div className="flex-1 min-w-0">
+            <h3 className="font-semibold text-[14px] leading-tight text-slate-800 group-hover:text-[#6a9a1f] transition-colors duration-150">{(FEATURED[locale] || FEATURED.en).label}</h3>
+            <p className="text-[11.5px] text-slate-400 leading-snug mt-0.5 line-clamp-1">{(FEATURED[locale] || FEATURED.en).sub}</p>
+          </div>
+          <div className="shrink-0 text-primary/50 group-hover:text-primary group-hover:translate-x-0.5 transition-all duration-150">
+            <ArrowRight size={15} />
+          </div>
+        </a>
       </motion.section>
 
       {/* ARTICLES, in cima: chi arriva da Instagram vede subito gli articoli */}

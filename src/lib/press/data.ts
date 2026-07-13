@@ -13,6 +13,14 @@ export type PressItem = {
 export const PRESS_RELEASES: PressItem[] = [];
 export const PRESS_COVERAGE: PressItem[] = [
   {
+    date: '2026-07-13',
+    outlet: 'AZ Big Media',
+    title: 'Workflow automation: How leaders pick first-win pilots without hurting quality',
+    url: 'https://azbigmedia.com/business/workflow-automation-how-leaders-pick-first-win-pilots-without-hurting-quality/#answer7',
+    locale: 'en',
+    logo: '/press/azbigmedia.png',
+  },
+  {
     date: '2026-06-30',
     outlet: 'Risorse Umane HR',
     title: 'Presenze, GPS e art. 4: dove finisce la prova e dove comincia la sorveglianza',
