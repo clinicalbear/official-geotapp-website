@@ -76,6 +76,9 @@ interface WPPost {
   featured_media: number;
   categories: number[];
   meta?: { yoast_wpseo_title?: string; yoast_wpseo_metadesc?: string };
+  // Yoast espone i metadati QUI (i campi `_yoast_wpseo_*` sono protetti e non
+  // arrivano in `meta` sulla REST pubblica). E' questa la fonte vera dello snippet.
+  yoast_head_json?: { title?: string; description?: string };
   _embedded?: {
     'wp:featuredmedia'?: Array<{ source_url: string; media_details?: { sizes?: Record<string, { source_url: string }> } }>;
     'wp:term'?: Array<Array<{ id: number; slug: string; name: string }>>;
@@ -124,8 +127,17 @@ function resolvePostData(post: WPPost, locale: string) {
 
   const categories = post._embedded?.['wp:term']?.[0]?.map((t) => ({ id: t.id, slug: t.slug, name: t.name })) ?? [];
 
-  const yoastTitle = post.meta?.yoast_wpseo_title || title;
-  const yoastDesc = post.meta?.yoast_wpseo_metadesc || excerpt;
+  // 🔴 I metadati Yoast NON arrivano in `post.meta` (WP non espone i campi protetti
+  // `_yoast_wpseo_*` nella REST pubblica): quel ramo era sempre undefined, quindi il blog
+  // serviva da sempre il TITOLO DEL POST e l'EXCERPT, ignorando ogni title/metadesc curato
+  // in Yoast. Scoperto 14/07/2026 (CTR guida GDPR fermo all'1%: non stavamo servendo lo
+  // snippet che credevamo). I valori veri stanno in `yoast_head_json`, che WP espone.
+  //
+  // Il title di Yoast include il suffisso del template (" - GeoTapp"): lo togliamo, cosi'
+  // i 900 titoli esistenti restano identici a oggi e cambia SOLO chi ha un title custom.
+  const yoastRawTitle = post.yoast_head_json?.title?.replace(/\s*[-–|]\s*GeoTapp\s*$/i, '').trim();
+  const yoastTitle = yoastRawTitle || post.meta?.yoast_wpseo_title || title;
+  const yoastDesc = post.yoast_head_json?.description || post.meta?.yoast_wpseo_metadesc || excerpt;
 
   const contentText = stripHtml(content);
   const wordCount = contentText.trim() ? contentText.trim().split(/\s+/).length : 0;
