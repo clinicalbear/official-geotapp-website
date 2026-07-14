@@ -2,8 +2,12 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'Plumbing Technician App with GPS for Plumbers | GeoTapp',
-    description: 'GeoTapp is the app for plumbers and HVAC technicians: GPS-verified job reports, installation photos and tamper-proof records. Close disputes with real evidence. Try free.',
+    // Riscritti 14/07/2026: il vecchio title ripeteva "plumb" due volte ed era l'eco
+    // letterale della query (pos 8,2 con 86 impressioni e ZERO click: a quella posizione
+    // il problema non e' il ranking, e' che lo snippet sembra generato da una macchina).
+    // La vecchia description era 170c: Google tagliava la promessa a meta' frase.
+    title: 'GPS App for Plumbers: Prove Every Job You Did | GeoTapp',
+    description: 'Your engineer says the job is done. The client says nobody showed up. GPS check-ins and photo reports settle it in seconds, not in an argument.',
   },
   hero: {
     badge: 'App for Plumbers, HVAC Technicians and Heating Engineers',
