@@ -42,7 +42,7 @@ const T: Record<InfLocale, Template> = {
       { titolo: '3. Categorie di dati', testo: 'Vengono trattati dati di geolocalizzazione (posizione del dispositivo o del veicolo) associati al lavoratore.' },
       { titolo: '4. Quando e come', testo: 'La posizione è rilevata {quando}. Il trattamento è proporzionato alla finalità e non comporta un controllo a distanza continuativo dei lavoratori.' },
       { titolo: '5. Destinatari', testo: 'I dati sono accessibili al personale autorizzato e ai responsabili del trattamento (ad es. il fornitore del software), che li trattano per conto del titolare.' },
-      { titolo: '6. Conservazione', testo: 'I dati sono conservati per {conservazione} e poi cancellati o anonimizzati.' },
+      { titolo: '6. Conservazione', testo: 'I dati sono conservati per {conservazione} e poi cancellati o anonimizzati.{conservazioneLegale}' },
       { titolo: '7. Diritti dell’interessato', testo: 'Il lavoratore può esercitare i diritti di accesso, rettifica, cancellazione, limitazione, opposizione e portabilità, e proporre reclamo all’autorità di controllo.' },
       { titolo: '8. Autorità di controllo', testo: 'Autorità di controllo competente per reclami: {autorita} ({paese}).' },
     ],
@@ -58,7 +58,7 @@ const T: Record<InfLocale, Template> = {
       { titolo: '3. Categories of data', testo: 'Geolocation data (device or vehicle position) linked to the worker is processed.' },
       { titolo: '4. When and how', testo: 'Position is recorded {quando}. The processing is proportionate to its purpose and does not amount to continuous remote monitoring of workers.' },
       { titolo: '5. Recipients', testo: 'Data is accessible to authorised staff and to processors (e.g. the software provider), who process it on the controller’s behalf.' },
-      { titolo: '6. Retention', testo: 'Data is kept for {conservazione} and then deleted or anonymised.' },
+      { titolo: '6. Retention', testo: 'Data is kept for {conservazione} and then deleted or anonymised.{conservazioneLegale}' },
       { titolo: '7. Data subject rights', testo: 'The worker may exercise the rights of access, rectification, erasure, restriction, objection and portability, and lodge a complaint with the supervisory authority.' },
       { titolo: '8. Supervisory authority', testo: 'Supervisory authority competent for complaints: {autorita} ({paese}).' },
     ],
@@ -74,7 +74,7 @@ const T: Record<InfLocale, Template> = {
       { titolo: '3. Datenkategorien', testo: 'Verarbeitet werden Standortdaten (Position des Geräts oder Fahrzeugs), die dem Mitarbeiter zugeordnet sind.' },
       { titolo: '4. Wann und wie', testo: 'Die Position wird {quando} erfasst. Die Verarbeitung ist verhältnismäßig und stellt keine kontinuierliche Fernüberwachung dar.' },
       { titolo: '5. Empfänger', testo: 'Zugriff haben befugte Mitarbeiter und Auftragsverarbeiter (z. B. der Softwareanbieter), die im Auftrag des Verantwortlichen handeln.' },
-      { titolo: '6. Speicherdauer', testo: 'Die Daten werden für {conservazione} gespeichert und danach gelöscht oder anonymisiert.' },
+      { titolo: '6. Speicherdauer', testo: 'Die Daten werden für {conservazione} gespeichert und danach gelöscht oder anonymisiert.{conservazioneLegale}' },
       { titolo: '7. Rechte der betroffenen Person', testo: 'Der Mitarbeiter hat das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung, Widerspruch und Übertragbarkeit sowie auf Beschwerde bei der Aufsichtsbehörde.' },
       { titolo: '8. Aufsichtsbehörde', testo: 'Zuständige Aufsichtsbehörde für Beschwerden: {autorita} ({paese}).' },
     ],
@@ -90,7 +90,7 @@ const T: Record<InfLocale, Template> = {
       { titolo: '3. Catégories de données', testo: 'Sont traitées des données de géolocalisation (position de l’appareil ou du véhicule) liées au salarié.' },
       { titolo: '4. Quand et comment', testo: 'La position est enregistrée {quando}. Le traitement est proportionné à sa finalité et ne constitue pas une surveillance permanente.' },
       { titolo: '5. Destinataires', testo: 'Les données sont accessibles au personnel autorisé et aux sous-traitants (par ex. le fournisseur du logiciel), agissant pour le compte du responsable.' },
-      { titolo: '6. Conservation', testo: 'Les données sont conservées pendant {conservazione} puis supprimées ou anonymisées.' },
+      { titolo: '6. Conservation', testo: 'Les données sont conservées pendant {conservazione} puis supprimées ou anonymisées.{conservazioneLegale}' },
       { titolo: '7. Droits de la personne concernée', testo: 'Le salarié peut exercer ses droits d’accès, de rectification, d’effacement, de limitation, d’opposition et de portabilité, et introduire une réclamation auprès de l’autorité de contrôle.' },
       { titolo: '8. Autorité de contrôle', testo: 'Autorité de contrôle compétente pour les réclamations : {autorita} ({paese}).' },
     ],
@@ -106,7 +106,7 @@ const T: Record<InfLocale, Template> = {
       { titolo: '3. Categorías de datos', testo: 'Se tratan datos de geolocalización (posición del dispositivo o del vehículo) vinculados al trabajador.' },
       { titolo: '4. Cuándo y cómo', testo: 'La posición se registra {quando}. El tratamiento es proporcionado a su finalidad y no supone una vigilancia continua a distancia.' },
       { titolo: '5. Destinatarios', testo: 'Los datos son accesibles al personal autorizado y a los encargados del tratamiento (p. ej. el proveedor del software), que actúan por cuenta del responsable.' },
-      { titolo: '6. Conservación', testo: 'Los datos se conservan durante {conservazione} y después se suprimen o anonimizan.' },
+      { titolo: '6. Conservación', testo: 'Los datos se conservan durante {conservazione} y después se suprimen o anonimizan.{conservazioneLegale}' },
       { titolo: '7. Derechos del interesado', testo: 'El trabajador puede ejercer los derechos de acceso, rectificación, supresión, limitación, oposición y portabilidad, y presentar una reclamación ante la autoridad de control.' },
       { titolo: '8. Autoridad de control', testo: 'Autoridad de control competente para reclamaciones: {autorita} ({paese}).' },
     ],
@@ -122,7 +122,7 @@ const T: Record<InfLocale, Template> = {
       { titolo: '3. Categorieën gegevens', testo: 'Er worden locatiegegevens (positie van het apparaat of voertuig) verwerkt die aan de werknemer zijn gekoppeld.' },
       { titolo: '4. Wanneer en hoe', testo: 'De positie wordt {quando} vastgelegd. De verwerking is evenredig aan het doel en vormt geen continue controle op afstand.' },
       { titolo: '5. Ontvangers', testo: 'De gegevens zijn toegankelijk voor bevoegd personeel en verwerkers (bijv. de softwareleverancier), die namens de verantwoordelijke handelen.' },
-      { titolo: '6. Bewaring', testo: 'De gegevens worden {conservazione} bewaard en daarna verwijderd of geanonimiseerd.' },
+      { titolo: '6. Bewaring', testo: 'De gegevens worden {conservazione} bewaard en daarna verwijderd of geanonimiseerd.{conservazioneLegale}' },
       { titolo: '7. Rechten van de betrokkene', testo: 'De werknemer kan de rechten op inzage, rectificatie, wissing, beperking, bezwaar en overdraagbaarheid uitoefenen en een klacht indienen bij de toezichthoudende autoriteit.' },
       { titolo: '8. Toezichthoudende autoriteit', testo: 'Bevoegde toezichthoudende autoriteit voor klachten: {autorita} ({paese}).' },
     ],
@@ -138,7 +138,7 @@ const T: Record<InfLocale, Template> = {
       { titolo: "3. Categorias de dados", testo: "São tratados dados de geolocalização (posição do dispositivo ou do veículo) associados ao trabalhador." },
       { titolo: "4. Quando e como", testo: "A posição é recolhida {quando}. O tratamento é proporcional à finalidade e não implica um controlo à distância contínuo dos trabalhadores." },
       { titolo: "5. Destinatários", testo: "Os dados são acessíveis ao pessoal autorizado e aos subcontratantes (por exemplo, o fornecedor do software), que os tratam por conta do responsável pelo tratamento." },
-      { titolo: "6. Conservação", testo: "Os dados são conservados durante {conservazione} e, em seguida, eliminados ou anonimizados." },
+      { titolo: "6. Conservação", testo: "Os dados são conservados durante {conservazione} e, em seguida, eliminados ou anonimizados.{conservazioneLegale}" },
       { titolo: "7. Direitos do titular dos dados", testo: "O trabalhador pode exercer os direitos de acesso, retificação, apagamento, limitação, oposição e portabilidade, bem como apresentar reclamação à autoridade de controlo." },
       { titolo: "8. Autoridade de controlo", testo: "Autoridade de controlo competente para reclamações: {autorita} ({paese})." },
     ],
@@ -154,7 +154,7 @@ const T: Record<InfLocale, Template> = {
       { titolo: "3. Kategorier af data", testo: "Der behandles geolokaliseringsdata (enhedens eller køretøjets position) knyttet til medarbejderen." },
       { titolo: "4. Hvornår og hvordan", testo: "Positionen registreres {quando}. Behandlingen står i rimeligt forhold til formålet og indebærer ikke en vedvarende fjernovervågning af medarbejderne." },
       { titolo: "5. Modtagere", testo: "Dataene er tilgængelige for autoriseret personale og for databehandlere (f.eks. softwareleverandøren), som behandler dem på vegne af den dataansvarlige." },
-      { titolo: "6. Opbevaring", testo: "Dataene opbevares i {conservazione} og slettes eller anonymiseres derefter." },
+      { titolo: "6. Opbevaring", testo: "Dataene opbevares i {conservazione} og slettes eller anonymiseres derefter.{conservazioneLegale}" },
       { titolo: "7. Den registreredes rettigheder", testo: "Medarbejderen kan udøve retten til indsigt, berigtigelse, sletning, begrænsning, indsigelse og dataportabilitet samt indgive klage til tilsynsmyndigheden." },
       { titolo: "8. Tilsynsmyndighed", testo: "Kompetent tilsynsmyndighed for klager: {autorita} ({paese})." },
     ],
@@ -170,7 +170,7 @@ const T: Record<InfLocale, Template> = {
       { titolo: "3. Kategorier av uppgifter", testo: "Geolokaliseringsuppgifter behandlas (positionen för enheten eller fordonet) kopplade till arbetstagaren." },
       { titolo: "4. När och hur", testo: "Positionen registreras {quando}. Behandlingen står i proportion till ändamålet och innebär inte en fortlöpande kontroll på distans av arbetstagarna." },
       { titolo: "5. Mottagare", testo: "Uppgifterna är tillgängliga för behörig personal och för personuppgiftsbiträden (till exempel programvaruleverantören), som behandlar dem för den personuppgiftsansvariges räkning." },
-      { titolo: "6. Lagring", testo: "Uppgifterna lagras under {conservazione} och raderas eller anonymiseras därefter." },
+      { titolo: "6. Lagring", testo: "Uppgifterna lagras under {conservazione} och raderas eller anonymiseras därefter.{conservazioneLegale}" },
       { titolo: "7. Den registrerades rättigheter", testo: "Arbetstagaren kan utöva rätten till tillgång, rättelse, radering, begränsning, invändning och dataportabilitet samt lämna in klagomål till tillsynsmyndigheten." },
       { titolo: "8. Tillsynsmyndighet", testo: "Behörig tillsynsmyndighet för klagomål: {autorita} ({paese})." },
     ],
@@ -186,7 +186,7 @@ const T: Record<InfLocale, Template> = {
       { titolo: "3. Kategorier av personopplysninger", testo: "Det behandles geolokaliseringsdata (posisjonen til enheten eller kjøretøyet) knyttet til arbeidstakeren." },
       { titolo: "4. Når og hvordan", testo: "Posisjonen registreres {quando}. Behandlingen står i forhold til formålet og innebærer ikke en kontinuerlig fjernkontroll av arbeidstakerne." },
       { titolo: "5. Mottakere", testo: "Dataene er tilgjengelige for autorisert personell og for databehandlere (for eksempel programvareleverandøren), som behandler dem på vegne av den behandlingsansvarlige." },
-      { titolo: "6. Lagring", testo: "Dataene lagres i {conservazione} og deretter slettes eller anonymiseres." },
+      { titolo: "6. Lagring", testo: "Dataene lagres i {conservazione} og deretter slettes eller anonymiseres.{conservazioneLegale}" },
       { titolo: "7. Den registrertes rettigheter", testo: "Arbeidstakeren kan utøve retten til innsyn, retting, sletting, begrensning, innsigelse og dataportabilitet, samt klage til tilsynsmyndigheten." },
       { titolo: "8. Tilsynsmyndighet", testo: "Tilsynsmyndighet med ansvar for klager: {autorita} ({paese})." },
     ],
@@ -202,7 +202,7 @@ const T: Record<InfLocale, Template> = {
       { titolo: "3. Категории данных", testo: "Обрабатываются данные о геолокации (местоположение устройства или транспортного средства), связанные с работником." },
       { titolo: "4. Когда и как", testo: "Местоположение фиксируется {quando}. Обработка соразмерна цели и не предполагает непрерывного дистанционного контроля за работниками." },
       { titolo: "5. Получатели данных", testo: "Доступ к данным имеют уполномоченный персонал и обработчики данных (например, поставщик программного обеспечения), которые обрабатывают их по поручению контролёра." },
-      { titolo: "6. Хранение", testo: "Данные хранятся в течение {conservazione}, после чего удаляются или анонимизируются." },
+      { titolo: "6. Хранение", testo: "Данные хранятся в течение {conservazione}, после чего удаляются или анонимизируются.{conservazioneLegale}" },
       { titolo: "7. Права субъекта данных", testo: "Работник вправе осуществлять права на доступ, исправление, удаление, ограничение обработки, возражение и переносимость данных, а также подать жалобу в надзорный орган." },
       { titolo: "8. Надзорный орган", testo: "Надзорный орган, компетентный рассматривать жалобы: {autorita} ({paese})." },
     ],
@@ -234,17 +234,17 @@ const CODETERM_REF: Record<string, string> = {
 };
 
 const CODETERM_SECTION: Record<InfLocale, { titolo: string; testo: string }> = {
-  it: { titolo: '9. Cogestione e rappresentanza dei lavoratori', testo: "L'introduzione e l'utilizzo di questo sistema possono essere soggetti ai diritti di cogestione o consultazione della rappresentanza dei lavoratori (ad es. il consiglio aziendale) ai sensi di {ref}, poiché il sistema è oggettivamente idoneo al controllo del comportamento e della prestazione, a prescindere dalla finalità dichiarata. Dove tale rappresentanza esiste, va coinvolta e, ove previsto, occorre stipulare un accordo (ad es. un accordo aziendale) prima dell'attivazione del sistema in {paese}." },
-  en: { titolo: '9. Employee co-determination and representation', testo: 'The introduction and use of this system may be subject to the co-determination or consultation rights of employee representation (e.g. the works council) under {ref}, because the system is objectively capable of monitoring behaviour and performance, regardless of its stated purpose. Where such representation exists, it must be involved and, where applicable, an agreement (e.g. a works agreement) must be concluded before the system is activated in {paese}.' },
-  de: { titolo: '9. Mitbestimmung und Arbeitnehmervertretung', testo: 'Die Einführung und Anwendung dieses Systems kann der Mitbestimmung bzw. Beteiligung der Arbeitnehmervertretung (z. B. des Betriebsrats) gemäß {ref} unterliegen, da das System objektiv zur Verhaltens- und Leistungskontrolle geeignet ist, unabhängig von seinem erklärten Zweck. Wo eine solche Vertretung besteht, ist sie zu beteiligen; vor der Aktivierung des Systems in {paese} ist, soweit vorgesehen, eine Vereinbarung (z. B. eine Betriebsvereinbarung) abzuschließen.' },
-  fr: { titolo: '9. Cogestion et représentation du personnel', testo: "L'introduction et l'utilisation de ce système peuvent être soumises aux droits de cogestion ou de consultation de la représentation du personnel (par ex. le comité d'entreprise) au titre de {ref}, car le système est objectivement de nature à contrôler le comportement et la performance, indépendamment de sa finalité déclarée. Lorsqu'une telle représentation existe, elle doit être associée et, le cas échéant, un accord (par ex. un accord d'entreprise) doit être conclu avant l'activation du système en {paese}." },
-  es: { titolo: '9. Cogestión y representación de los trabajadores', testo: 'La introducción y el uso de este sistema pueden estar sujetos a los derechos de cogestión o consulta de la representación de los trabajadores (p. ej. el comité de empresa) conforme a {ref}, ya que el sistema es objetivamente idóneo para controlar el comportamiento y el rendimiento, con independencia de su finalidad declarada. Cuando exista dicha representación, debe implicársela y, en su caso, celebrar un acuerdo (p. ej. un convenio de empresa) antes de activar el sistema en {paese}.' },
-  nl: { titolo: '9. Medezeggenschap en werknemersvertegenwoordiging', testo: 'De invoering en het gebruik van dit systeem kunnen onderworpen zijn aan de medezeggenschaps- of instemmingsrechten van de werknemersvertegenwoordiging (bijv. de ondernemingsraad) op grond van {ref}, omdat het systeem objectief geschikt is om gedrag en prestaties te controleren, ongeacht het verklaarde doel. Waar een dergelijke vertegenwoordiging bestaat, moet zij worden betrokken en moet, indien van toepassing, vóór de activering van het systeem in {paese} een overeenkomst (bijv. een ondernemingsovereenkomst) worden gesloten.' },
-  pt: { titolo: '9. Cogestão e representação dos trabalhadores', testo: 'A introdução e a utilização deste sistema podem estar sujeitas aos direitos de cogestão ou consulta da representação dos trabalhadores (por ex. a comissão de trabalhadores) nos termos de {ref}, uma vez que o sistema é objetivamente idóneo para controlar o comportamento e o desempenho, independentemente da finalidade declarada. Onde exista tal representação, deve ser envolvida e, se aplicável, deve ser celebrado um acordo (por ex. um acordo de empresa) antes da ativação do sistema em {paese}.' },
-  da: { titolo: '9. Medbestemmelse og medarbejderrepræsentation', testo: 'Indførelsen og brugen af dette system kan være underlagt medbestemmelses- eller høringsrettigheder for medarbejderrepræsentationen (f.eks. samarbejdsudvalget) i henhold til {ref}, da systemet objektivt er egnet til at kontrollere adfærd og præstation, uanset det erklærede formål. Hvor en sådan repræsentation findes, skal den inddrages, og der skal, hvor det er relevant, indgås en aftale (f.eks. en virksomhedsaftale), før systemet aktiveres i {paese}.' },
-  sv: { titolo: '9. Medbestämmande och arbetstagarrepresentation', testo: 'Införandet och användningen av detta system kan omfattas av arbetstagarrepresentationens (t.ex. företagsrådets) rätt till medbestämmande eller samråd enligt {ref}, eftersom systemet objektivt är ägnat att kontrollera beteende och prestation, oavsett det uppgivna syftet. Där sådan representation finns ska den involveras, och i förekommande fall ska ett avtal (t.ex. ett lokalt kollektivavtal) ingås innan systemet aktiveras i {paese}.' },
-  nb: { titolo: '9. Medbestemmelse og arbeidstakerrepresentasjon', testo: 'Innføringen og bruken av dette systemet kan være underlagt arbeidstakerrepresentasjonens (f.eks. arbeidsmiljøutvalgets) rett til medbestemmelse eller drøfting i henhold til {ref}, fordi systemet objektivt er egnet til å kontrollere atferd og ytelse, uavhengig av det oppgitte formålet. Der slik representasjon finnes, skal den involveres, og det skal om nødvendig inngås en avtale (f.eks. en virksomhetsavtale) før systemet aktiveres i {paese}.' },
-  ru: { titolo: '9. Соучастие и представительство работников', testo: 'Внедрение и использование этой системы могут подпадать под права работников на соучастие или консультации через их представительство (например, производственный совет) согласно {ref}, поскольку система объективно пригодна для контроля поведения и результативности независимо от заявленной цели. При наличии такого представительства его необходимо привлечь и, при необходимости, заключить соглашение (например, производственное соглашение) до активации системы в {paese}.' },
+  it: { titolo: '10. Cogestione e rappresentanza dei lavoratori', testo: "L'introduzione e l'utilizzo di questo sistema possono essere soggetti ai diritti di cogestione o consultazione della rappresentanza dei lavoratori (ad es. il consiglio aziendale) ai sensi di {ref}, poiché il sistema è oggettivamente idoneo al controllo del comportamento e della prestazione, a prescindere dalla finalità dichiarata. Dove tale rappresentanza esiste, va coinvolta e, ove previsto, occorre stipulare un accordo (ad es. un accordo aziendale) prima dell'attivazione del sistema in {paese}." },
+  en: { titolo: '10. Employee co-determination and representation', testo: 'The introduction and use of this system may be subject to the co-determination or consultation rights of employee representation (e.g. the works council) under {ref}, because the system is objectively capable of monitoring behaviour and performance, regardless of its stated purpose. Where such representation exists, it must be involved and, where applicable, an agreement (e.g. a works agreement) must be concluded before the system is activated in {paese}.' },
+  de: { titolo: '10. Mitbestimmung und Arbeitnehmervertretung', testo: 'Die Einführung und Anwendung dieses Systems kann der Mitbestimmung bzw. Beteiligung der Arbeitnehmervertretung (z. B. des Betriebsrats) gemäß {ref} unterliegen, da das System objektiv zur Verhaltens- und Leistungskontrolle geeignet ist, unabhängig von seinem erklärten Zweck. Wo eine solche Vertretung besteht, ist sie zu beteiligen; vor der Aktivierung des Systems in {paese} ist, soweit vorgesehen, eine Vereinbarung (z. B. eine Betriebsvereinbarung) abzuschließen.' },
+  fr: { titolo: '10. Cogestion et représentation du personnel', testo: "L'introduction et l'utilisation de ce système peuvent être soumises aux droits de cogestion ou de consultation de la représentation du personnel (par ex. le comité d'entreprise) au titre de {ref}, car le système est objectivement de nature à contrôler le comportement et la performance, indépendamment de sa finalité déclarée. Lorsqu'une telle représentation existe, elle doit être associée et, le cas échéant, un accord (par ex. un accord d'entreprise) doit être conclu avant l'activation du système en {paese}." },
+  es: { titolo: '10. Cogestión y representación de los trabajadores', testo: 'La introducción y el uso de este sistema pueden estar sujetos a los derechos de cogestión o consulta de la representación de los trabajadores (p. ej. el comité de empresa) conforme a {ref}, ya que el sistema es objetivamente idóneo para controlar el comportamiento y el rendimiento, con independencia de su finalidad declarada. Cuando exista dicha representación, debe implicársela y, en su caso, celebrar un acuerdo (p. ej. un convenio de empresa) antes de activar el sistema en {paese}.' },
+  nl: { titolo: '10. Medezeggenschap en werknemersvertegenwoordiging', testo: 'De invoering en het gebruik van dit systeem kunnen onderworpen zijn aan de medezeggenschaps- of instemmingsrechten van de werknemersvertegenwoordiging (bijv. de ondernemingsraad) op grond van {ref}, omdat het systeem objectief geschikt is om gedrag en prestaties te controleren, ongeacht het verklaarde doel. Waar een dergelijke vertegenwoordiging bestaat, moet zij worden betrokken en moet, indien van toepassing, vóór de activering van het systeem in {paese} een overeenkomst (bijv. een ondernemingsovereenkomst) worden gesloten.' },
+  pt: { titolo: '10. Cogestão e representação dos trabalhadores', testo: 'A introdução e a utilização deste sistema podem estar sujeitas aos direitos de cogestão ou consulta da representação dos trabalhadores (por ex. a comissão de trabalhadores) nos termos de {ref}, uma vez que o sistema é objetivamente idóneo para controlar o comportamento e o desempenho, independentemente da finalidade declarada. Onde exista tal representação, deve ser envolvida e, se aplicável, deve ser celebrado um acordo (por ex. um acordo de empresa) antes da ativação do sistema em {paese}.' },
+  da: { titolo: '10. Medbestemmelse og medarbejderrepræsentation', testo: 'Indførelsen og brugen af dette system kan være underlagt medbestemmelses- eller høringsrettigheder for medarbejderrepræsentationen (f.eks. samarbejdsudvalget) i henhold til {ref}, da systemet objektivt er egnet til at kontrollere adfærd og præstation, uanset det erklærede formål. Hvor en sådan repræsentation findes, skal den inddrages, og der skal, hvor det er relevant, indgås en aftale (f.eks. en virksomhedsaftale), før systemet aktiveres i {paese}.' },
+  sv: { titolo: '10. Medbestämmande och arbetstagarrepresentation', testo: 'Införandet och användningen av detta system kan omfattas av arbetstagarrepresentationens (t.ex. företagsrådets) rätt till medbestämmande eller samråd enligt {ref}, eftersom systemet objektivt är ägnat att kontrollera beteende och prestation, oavsett det uppgivna syftet. Där sådan representation finns ska den involveras, och i förekommande fall ska ett avtal (t.ex. ett lokalt kollektivavtal) ingås innan systemet aktiveras i {paese}.' },
+  nb: { titolo: '10. Medbestemmelse og arbeidstakerrepresentasjon', testo: 'Innføringen og bruken av dette systemet kan være underlagt arbeidstakerrepresentasjonens (f.eks. arbeidsmiljøutvalgets) rett til medbestemmelse eller drøfting i henhold til {ref}, fordi systemet objektivt er egnet til å kontrollere atferd og ytelse, uavhengig av det oppgitte formålet. Der slik representasjon finnes, skal den involveres, og det skal om nødvendig inngås en avtale (f.eks. en virksomhetsavtale) før systemet aktiveres i {paese}.' },
+  ru: { titolo: '10. Соучастие и представительство работников', testo: 'Внедрение и использование этой системы могут подпадать под права работников на соучастие или консультации через их представительство (например, производственный совет) согласно {ref}, поскольку система объективно пригодна для контроля поведения и результативности независимо от заявленной цели. При наличии такого представительства его необходимо привлечь и, при необходимости, заключить соглашение (например, производственное соглашение) до активации системы в {paese}.' },
 };
 
 // Override per-Paese della sezione 9, dove il regime nazionale non ammette il
@@ -312,6 +312,54 @@ function resolveBaseGiuridica(locale: InfLocale, codiceISO?: string): string {
   return ov?.[locale] ?? ov?.en ?? BASEGIURIDICA_DEFAULT[locale] ?? BASEGIURIDICA_DEFAULT.en;
 }
 
+// ── Assenza di decisioni automatizzate (sezione 9) ──
+// Indicazione obbligatoria ex art. 13, par. 2, lett. f, GDPR (uguale in tutta la
+// UE): dichiarare se vi sono decisioni basate unicamente su trattamento
+// automatizzato / profilazione ai sensi dell'art. 22. Nel nostro caso NON ce ne
+// sono, quindi la clausola è la stessa per ogni Paese; solo il testo è
+// localizzato per lingua UI. Voce sollecitata dal revisore legale DE come
+// "Pflichtangabe nach Art. 13".
+const ART22_SECTION: Record<InfLocale, { titolo: string; testo: string }> = {
+  it: { titolo: '9. Assenza di decisioni automatizzate', testo: "Non vengono adottate decisioni basate unicamente su un trattamento automatizzato, compresa la profilazione, che producano effetti giuridici o incidano in modo analogo sul lavoratore ai sensi dell'art. 22 del GDPR." },
+  en: { titolo: '9. No automated decision-making', testo: 'No decision based solely on automated processing, including profiling, producing legal effects or similarly significantly affecting the worker within the meaning of Art. 22 GDPR is taken.' },
+  de: { titolo: '9. Keine automatisierte Entscheidungsfindung', testo: 'Eine ausschließlich auf einer automatisierten Verarbeitung beruhende Entscheidung einschließlich Profiling, die rechtliche Wirkung entfaltet oder den Mitarbeiter in ähnlicher Weise erheblich beeinträchtigt, im Sinne von Art. 22 DSGVO findet nicht statt.' },
+  fr: { titolo: '9. Absence de décision automatisée', testo: "Aucune décision fondée exclusivement sur un traitement automatisé, y compris le profilage, produisant des effets juridiques ou affectant de manière significative le salarié au sens de l'art. 22 du RGPD n'est prise." },
+  es: { titolo: '9. Ausencia de decisiones automatizadas', testo: 'No se adopta ninguna decisión basada únicamente en un tratamiento automatizado, incluida la elaboración de perfiles, que produzca efectos jurídicos o afecte significativamente al trabajador de modo similar en el sentido del art. 22 del RGPD.' },
+  nl: { titolo: '9. Geen geautomatiseerde besluitvorming', testo: 'Er worden geen besluiten genomen die uitsluitend zijn gebaseerd op geautomatiseerde verwerking, met inbegrip van profilering, waaraan voor de werknemer rechtsgevolgen zijn verbonden of die hem anderszins in aanmerkelijke mate treffen in de zin van art. 22 AVG.' },
+  pt: { titolo: '9. Ausência de decisões automatizadas', testo: 'Não é tomada qualquer decisão baseada unicamente no tratamento automatizado, incluindo a definição de perfis, que produza efeitos jurídicos ou afete significativamente o trabalhador de forma similar na aceção do art. 22.º do RGPD.' },
+  da: { titolo: '9. Ingen automatiske afgørelser', testo: 'Der træffes ingen afgørelse, der alene er baseret på automatisk behandling, herunder profilering, som har retsvirkning eller på tilsvarende vis betydeligt påvirker medarbejderen, jf. artikel 22 i databeskyttelsesforordningen.' },
+  sv: { titolo: '9. Inget automatiserat beslutsfattande', testo: 'Inga beslut fattas som enbart grundas på automatiserad behandling, inbegripet profilering, och som har rättsliga följder eller på liknande sätt i betydande grad påverkar arbetstagaren, i den mening som avses i artikel 22 i GDPR.' },
+  nb: { titolo: '9. Ingen automatiserte avgjørelser', testo: 'Det treffes ingen avgjørelse som utelukkende er basert på automatisert behandling, herunder profilering, og som har rettsvirkning eller på tilsvarende måte i betydelig grad påvirker arbeidstakeren, i henhold til artikkel 22 i personvernforordningen.' },
+  ru: { titolo: '9. Отсутствие автоматизированного принятия решений', testo: 'Решения, основанные исключительно на автоматизированной обработке, включая профилирование, которые порождают юридические последствия или аналогичным образом существенно затрагивают работника по смыслу ст. 22 GDPR, не принимаются.' },
+};
+
+// ── Conservazione: riferimento legale per-Paese (suffisso della sezione 6) ──
+// Default vuoto: la conservazione resta il periodo indicato dall'utente. Per la
+// Germania si aggiunge, su indicazione del revisore legale DE, che il solo dato
+// dell'orario di lavoro SENZA riferimento di posizione segue le scadenze di
+// legge (§ 257 HGB / § 147 AO), distinte dalla conservazione dei dati di
+// posizione. Testo localizzato per lingua UI; riferimenti in forma di legge DE.
+const RETENTION_LEGAL_OVERRIDE: Record<string, Partial<Record<InfLocale, string>>> = {
+  DE: {
+    it: " Il solo dato dell'orario di lavoro, privo del riferimento di posizione, è conservato nei termini di legge previsti in Germania (§ 257 HGB, § 147 AO).",
+    en: ' The plain working-time record, without any location reference, is retained for the statutory periods applicable in Germany (§ 257 HGB, § 147 AO).',
+    de: ' Die reine Arbeitszeitangabe ohne Standortbezug wird im Rahmen der gesetzlichen Aufbewahrungsfristen (§ 257 HGB, § 147 AO) aufbewahrt.',
+    fr: " La seule donnée de temps de travail, sans référence de localisation, est conservée pendant les durées légales applicables en Allemagne (§ 257 HGB, § 147 AO).",
+    es: ' El mero dato del tiempo de trabajo, sin referencia de localización, se conserva durante los plazos legales aplicables en Alemania (§ 257 HGB, § 147 AO).',
+    nl: ' Het loutere arbeidstijdgegeven, zonder locatiereferentie, wordt bewaard gedurende de in Duitsland geldende wettelijke termijnen (§ 257 HGB, § 147 AO).',
+    pt: ' O simples dado do tempo de trabalho, sem referência de localização, é conservado durante os prazos legais aplicáveis na Alemanha (§ 257 HGB, § 147 AO).',
+    da: ' Den blotte arbejdstidsangivelse uden stedreference opbevares i de lovbestemte perioder, der gælder i Tyskland (§ 257 HGB, § 147 AO).',
+    sv: ' Enbart arbetstidsuppgiften, utan positionsreferens, lagras under de lagstadgade tider som gäller i Tyskland (§ 257 HGB, § 147 AO).',
+    nb: ' Selve arbeidstidsangivelsen, uten stedsreferanse, oppbevares i de lovbestemte fristene som gjelder i Tyskland (§ 257 HGB, § 147 AO).',
+    ru: ' Сами сведения о рабочем времени, без привязки к местоположению, хранятся в течение установленных законом сроков, применимых в Германии (§ 257 HGB, § 147 AO).',
+  },
+};
+
+function resolveRetentionLegal(locale: InfLocale, codiceISO?: string): string {
+  const ov = codiceISO ? RETENTION_LEGAL_OVERRIDE[codiceISO.toUpperCase()] : undefined;
+  return ov?.[locale] ?? ov?.en ?? '';
+}
+
 function fill(s: string, i: InfInputs): string {
   return s
     .replace(/\{azienda\}/g, i.azienda || '-')
@@ -337,11 +385,17 @@ function codetermSezione(locale: InfLocale, i: InfInputs, codiceISO?: string): {
 export function buildInformativa(locale: InfLocale, i: InfInputs, codiceISO?: string): string {
   const t = T[locale] ?? T.en;
   const baseGiuridica = resolveBaseGiuridica(locale, codiceISO);
+  const conservazioneLegale = resolveRetentionLegal(locale, codiceISO);
   const parts: string[] = [t.titolo, '', fill(t.intro, i), ''];
   if (i.dpo && i.dpo.trim()) parts.push(fill(t.dpoLine.replace(/\{dpo\}/g, i.dpo), i), '');
   for (const sez of t.sezioni) {
-    parts.push(sez.titolo, fill(sez.testo.replace(/\{baseGiuridica\}/g, baseGiuridica), i), '');
+    const testo = sez.testo
+      .replace(/\{baseGiuridica\}/g, baseGiuridica)
+      .replace(/\{conservazioneLegale\}/g, conservazioneLegale);
+    parts.push(sez.titolo, fill(testo, i), '');
   }
+  const art22 = ART22_SECTION[locale] ?? ART22_SECTION.en;
+  parts.push(art22.titolo, art22.testo, '');
   const cod = codetermSezione(locale, i, codiceISO);
   if (cod) parts.push(cod.titolo, cod.testo, '');
   parts.push(t.chiusura);
@@ -366,7 +420,16 @@ export interface InformativaDoc {
 export function buildInformativaDoc(locale: InfLocale, i: InfInputs, codiceISO?: string): InformativaDoc {
   const t = T[locale] ?? T.en;
   const baseGiuridica = resolveBaseGiuridica(locale, codiceISO);
-  const sezioni = t.sezioni.map((s) => ({ titolo: s.titolo, testo: fill(s.testo.replace(/\{baseGiuridica\}/g, baseGiuridica), i) }));
+  const conservazioneLegale = resolveRetentionLegal(locale, codiceISO);
+  const sezioni = t.sezioni.map((s) => ({
+    titolo: s.titolo,
+    testo: fill(
+      s.testo.replace(/\{baseGiuridica\}/g, baseGiuridica).replace(/\{conservazioneLegale\}/g, conservazioneLegale),
+      i,
+    ),
+  }));
+  const art22 = ART22_SECTION[locale] ?? ART22_SECTION.en;
+  sezioni.push(art22);
   const cod = codetermSezione(locale, i, codiceISO);
   if (cod) sezioni.push(cod);
   return {
