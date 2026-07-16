@@ -5,6 +5,7 @@ import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
 import AppPage from '../../../products/geotapp-timetracker/page';
 import BlogHighlights from '@/components/BlogHighlights';
 import SettoriLinks from '@/components/SettoriLinks';
+import FaqFromSchema from '@/components/FaqFromSchema';
 import { type AppLocale } from '@/lib/i18n/config';
 import {
   EUR_PRICES,
@@ -194,11 +195,12 @@ export default async function LocaleAppPage({ params }: Props) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
-      {faq && (
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
-      )}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(software) }} />
       <AppPage />
+      {/* FAQ VISIBILE (H3) + schema FAQPage: FaqFromSchema rende entrambi, cosi' il
+          testo e' citabile dagli AI (prima le FAQ vivevano solo nel <script> JSON-LD,
+          invisibili: 0 heading a domanda, l'AI non le pescava). Allineato a Flow. */}
+      {faq && <FaqFromSchema faq={faq} locale={locale} />}
       <BlogHighlights locale={locale as AppLocale} categoryId={108} />
       <SettoriLinks locale={locale as AppLocale} settori={['pulizie', 'sicurezza']} />
     </>
