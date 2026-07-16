@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { TrialCTALink } from '@/components/analytics/TrialCTALink';
+import { CompareBlogLink } from '@/components/CompareBlogLink';
 import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
 import {
   buildComparisonArticle,
@@ -514,6 +515,7 @@ export default async function GeoTappVsJibblePage({ params }: { params: Promise<
           </section>
 
           {/* CTA */}
+          <CompareBlogLink competitor="jibble" locale={locale} />
           <div className="text-center bg-gradient-to-br from-primary/20 to-purple-500/10 border border-primary/20 rounded-2xl p-10">
             <h2 className="text-2xl font-bold mb-3">
               {t.cta}

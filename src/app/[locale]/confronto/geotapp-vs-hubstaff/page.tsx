@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { TrialCTALink } from '@/components/analytics/TrialCTALink';
+import { CompareBlogLink } from '@/components/CompareBlogLink';
 import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
 import {
   buildComparisonArticle,
@@ -355,6 +356,7 @@ export default async function GeoTappVsHubstaffPage({ params }: { params: Promis
             </div>
           </section>
           <section className="mb-16"><h2 className="text-2xl font-bold mb-6">FAQ</h2><div className="space-y-4">{faqItems.map((item, i) => (<div key={i} className="border border-white/10 rounded-xl p-6"><h3 className="font-semibold mb-2">{item.q}</h3><p className="text-text-secondary text-sm">{item.a}</p></div>))}</div></section>
+          <CompareBlogLink competitor="hubstaff" locale={locale} />
           <div className="text-center bg-gradient-to-br from-primary/20 to-purple-500/10 border border-primary/20 rounded-2xl p-10">
             <h2 className="text-2xl font-bold mb-3">{t.cta}</h2>
             <p className="text-text-secondary mb-6">{t.ctaDesc}</p>
