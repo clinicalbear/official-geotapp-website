@@ -1,13 +1,19 @@
 import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
+  // Termine-bersaglio allineato alla domanda reale (GSC 90gg, verificato 16/07/2026):
+  // "software voor schoonmaakbedrijven" 429 imp, "schoonmaakbedrijf software" 229,
+  // "software schoonmaakbedrijf" 216, "app schoonmaakbedrijf" 61 = 935 imp sul lemma
+  // "schoonmaakbedrijf". Contro "schoonmaaksoftware": 51 imp, la variante MENO cercata,
+  // ed era proprio quella che meta e hero targetizzavano. Il corpo della pagina usava
+  // gia' "schoonmaakbedrijf" 13 volte: era solo la vetrina a parlare un'altra parola.
   meta: {
-    title: 'Schoonmaaksoftware: Urenregistratie & Fotobewijs | GeoTapp',
-    description: 'Schoonmaaksoftware met GPS-urenregistratie, fotobewijs per ruimte, dienstroosters per object en naleving van de CAO Schoonmaak. Probeer GeoTapp gratis.',
+    title: 'Software voor schoonmaakbedrijven: uren en fotobewijs | GeoTapp',
+    description: 'Software voor schoonmaakbedrijven: elk uur en elke ruimte met GPS en fotobewijs vastgelegd. De klant twijfelt, het bewijs niet. Naleving CAO Schoonmaak.',
   },
   hero: {
-    badge: 'Schoonmaaksoftware voor Facilitaire Diensten en Gebouwbeheer',
-    h1_line1: 'Schoonmaaksoftware:',
+    badge: 'Software voor schoonmaakbedrijven, facilitaire diensten en gebouwbeheer',
+    h1_line1: 'Software voor schoonmaakbedrijven:',
     h1_line2: 'dienstroosters, fotobewijs en gecontroleerde uren, op elk object',
     subtitle: 'GeoTapp verbindt Flow + TimeTracker voor teams verspreid over meerdere gebouwen en verdiepingen. Uw medewerkers klokken in via GPS-geverifieerde smartphone; het kantoor ziet wie wat, waar en wanneer heeft schoongemaakt, met bijgevoegd fotobewijs. Geen disputen meer, volledige naleving van de CAO Schoonmaak.',
     cta_primary: 'Demo aanvragen',
