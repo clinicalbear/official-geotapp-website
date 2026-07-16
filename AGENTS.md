@@ -85,6 +85,35 @@ Eccezione: `app/[locale]/page.tsx` (homepage) usa URL assolute costruite manualm
 
 Le settori pages (`pulizie`, `installatori`, `sicurezza`) usano `buildLocaleAlternates`. NON reimplementare la mappa `languages` manualmente.
 
+### Canonical delle varianti EN regionali (`en-us`, `en-gb`, `en-au`, `en-ie`, `en-ca`)
+
+Le varianti EN regionali **non sono duplicati**: esistono perché **cambia la legge**, non solo la valuta
+(`config.ts`: FLSA/Davis-Bacon, UK GDPR/Working Time Regulations, Fair Work Act 2009, Organisation of
+Working Time Act 1997, labour codes canadesi). La strategia canonical in `locale-metadata.ts` è **ibrida**:
+
+| Tipo di pagina | Canonical | Perché |
+|---|---|---|
+| Brand/entity (`/`, `/what-is-geotapp/`, `/about-us/`) | → `/en/` | Protegge la query "geotapp": l'incidente 13-25/05/2026 (pos 4 → 12) fu causato da home inglesi quasi-duplicate in competizione fra loro |
+| Commerciali (`/pricing`, `/products/`, `/settori`, `/roi-calculator`) | self | La variante in valuta locale deve rankare nel suo mercato (un inglese trova £, un americano $) |
+| `en-ie` su `/settori` | self | Ha la FAQ legale irlandese propria (`regional-faq.ts`) |
+| `en-ie` altrove | → `/en/` | Condivide EUR con `/en/`: lì è davvero identica |
+
+**🔴 La regola chiave (regressione corretta il 16/07/2026):** il criterio è il **CONTENUTO**, non la valuta.
+La versione precedente consolidava `en-ie` su `/en/` per *ogni* path, motivandolo con "en-ie rende EUR →
+byte-identica a `/en/`". Vero per pricing/products/roi-calculator, **falso per le pagine settore**:
+`content/settori/*/regional-faq.ts` dà a `en-ie` **3 Q&A legali irlandesi su tutti e 10 i settori**
+(Construction SEO SI 234/2019, CWPS, WRC audit pack, OWTA s.18C, Sick Leave Act 2022, HSA) che su `/en/`
+**non esistono**. Consolidarle diceva a Google "duplicato di `/en/`" indicando una pagina priva di quel
+contenuto → l'unica pagina che risponde al mercato irlandese veniva soppressa, mentre l'Irlanda ci cerca
+proprio per il Sectoral Employment Order (247 imp/GSC).
+
+⚠️ **Attenzione all'acronimo `SEO` in `content/settori/`**: quasi sempre è **Sectoral Employment Order**
+(diritto del lavoro irlandese), *non* search-engine-optimization. Non trattarlo come rumore e non
+cercare "Sectoral Employment" (il codice scrive `SEO`).
+
+Se aggiungi una variante regionale o cambi `regionalSelfCanonical()`, aggiorna
+`src/lib/i18n/locale-metadata.test.ts` — copre brand→`/en/`, commerciali→self e i due casi `en-ie`.
+
 ### JSON-LD (Schema.org)
 
 | File | Schema | Note |
