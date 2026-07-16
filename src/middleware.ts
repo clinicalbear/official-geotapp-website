@@ -242,6 +242,7 @@ const SITEMAP_ROUTES: SitemapRouteEntry[] = [
   { path: '/confronto/geotapp-vs-libemax/', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/confronto/geotapp-vs-blink/', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/confronto/geotapp-vs-nobadge/', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/confronto/geotapp-vs-picaponto/', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/confronto/dinamico/', priority: 0.7, changeFrequency: 'monthly' },
   { path: '/blog/', priority: 0.85, changeFrequency: 'daily' },
   { path: '/trial/', priority: 0.9, changeFrequency: 'monthly' },
