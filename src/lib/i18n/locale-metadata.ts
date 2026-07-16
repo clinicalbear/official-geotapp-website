@@ -45,11 +45,22 @@ export const HREFLANG: Record<string, string> = {
  *    = self, così la variante in valuta locale è indicizzabile e ranka nel suo
  *    mercato (un inglese trova £, un americano $, non il prezzo in €). Hreflang
  *    cluster resta completo → Google serve la variante giusta per geo.
- *  - en-ie renderizza EUR (byte-identica a `/en/`) → sempre consolidata.
+ *
+ * ⚠️ CORREZIONE 16/07/2026 — il criterio è il CONTENUTO, non la valuta.
+ * La regola precedente consolidava en-ie su /en/ per OGNI path, motivandolo con
+ * "en-ie renderizza EUR → byte-identica a /en/". È vero per pricing/products/
+ * roi-calculator, ma FALSO per le pagine settore: `content/settori/*\/regional-faq.ts`
+ * dà a en-ie una FAQ legale irlandese sua (Contract Cleaning ERO, OWTA s.18C, WRC,
+ * Sick Leave Act 2022) su tutti e 10 i settori, contenuto che su /en/ NON ESISTE.
+ * Consolidarle diceva a Google "questa è un duplicato di /en/" indicando una pagina
+ * che quel contenuto non ce l'ha → l'unica pagina che risponde al mercato irlandese
+ * veniva soppressa. Verificato live: /en-ie/sectors/cleaning/ rende ERO/OWTA/WRC,
+ * /en/sectors/cleaning/ non rende alcuna FAQ regionale.
+ * Le valute differenziano il PREZZO; le leggi differenziano il MERCATO.
  */
 const REGIONAL_EN_VARIANTS = new Set(['en-us', 'en-gb', 'en-au', 'en-ie', 'en-ca']);
 
-// en-ie usa EUR (LOCALE_CURRENCY): contenuto identico a /en/ → sempre consolidata.
+// en-ie usa EUR come /en/ (LOCALE_CURRENCY): il prezzo NON la differenzia.
 const EUR_REGIONAL_EN = new Set(['en-ie']);
 
 // Prefissi delle pagine commerciali con prezzo in valuta locale: qui le varianti
@@ -57,14 +68,21 @@ const EUR_REGIONAL_EN = new Set(['en-ie']);
 // Tutto il resto (brand/entity/info/legal) resta consolidato su /en/.
 const REGIONAL_SELF_CANONICAL_PREFIXES = ['/pricing', '/products/', '/settori', '/roi-calculator'];
 
+// Varianti EN che condividono la valuta con /en/ (oggi solo en-ie): si differenziano
+// per LEGGE, non per prezzo → self-canonical solo dove esiste contenuto regionale
+// proprio (le pagine settore, via regional-faq.ts). Altrove restano consolidate.
+const EUR_REGIONAL_EN_SELF_PREFIXES = ['/settori'];
+
 /**
  * Per la `locale` data e il `path` (senza prefisso locale), il canonical punta
  * a se stesso (true) o consolida su /en/ (false, solo per varianti EN regionali).
  */
 function regionalSelfCanonical(locale: string, path: string): boolean {
   if (!REGIONAL_EN_VARIANTS.has(locale)) return true; // locale primarie: sempre self
-  if (EUR_REGIONAL_EN.has(locale)) return false;       // en-ie (EUR): consolida
-  return REGIONAL_SELF_CANONICAL_PREFIXES.some((p) => path.startsWith(p));
+  const prefixes = EUR_REGIONAL_EN.has(locale)
+    ? EUR_REGIONAL_EN_SELF_PREFIXES
+    : REGIONAL_SELF_CANONICAL_PREFIXES;
+  return prefixes.some((p) => path.startsWith(p));
 }
 
 /**
