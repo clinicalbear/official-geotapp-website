@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import { SUPPORTED_LOCALES } from '@/lib/i18n/config';
@@ -82,6 +83,23 @@ export default async function SelettorePaesiPage({
         dict={dict}
         h1={dict.h1Selettore}
       />
+      {/* Lista paesi server-rendered come FALLBACK CRAWLABILE della mappa JS.
+          La mappa (SelettorePaesiClient) e' interattiva ma i suoi link vivono in
+          JS: i crawler non li seguono, quindi le pagine per-paese (le piu' citate
+          dagli AI, es. gps-workers-eu/hungary) restavano orfane di link interni e
+          ricevevano autorita' solo dalla sitemap. Questi <Link> HTML instradano
+          l'autorita' interna a ogni scheda-paese. Fix 16/07/2026. */}
+      <nav aria-label={dict.h1Selettore} className="container mx-auto max-w-3xl px-4 pb-8">
+        <ul className="flex flex-wrap gap-x-4 gap-y-2 text-sm text-text-secondary">
+          {countries.map((c) => (
+            <li key={c.slugCanonico}>
+              <Link href={c.href} className="hover:text-primary hover:underline">
+                {c.bandiera} {c.nome}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
       <div className="container mx-auto max-w-3xl px-4 pb-16">
         <EmbedCodeBox
           embedUrl={`https://geotapp.com/embed/${resolvedLocale}/gps-lavoratori-ue/`}
