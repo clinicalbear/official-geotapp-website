@@ -11,6 +11,21 @@ Sito marketing GeoTapp — Next.js 16 + Tailwind, deploy Cloudflare Workers via 
   - `npm run build` — build produzione (opennextjs-cloudflare)
   - `npm run deploy` — build + inject scheduled handler + deploy + ping motori di ricerca
   - `npm run ping` — solo ping post-deploy (Google sitemap, Bing, IndexNow)
+
+### 🔴 Come si deploya DAVVERO: basta il push su `main`
+
+**Il deploy è automatico**: `.github/workflows/deploy.yml` gira **a ogni push su `main`**
+(build OpenNext → wrangler deploy → healthcheck → rollback) usando i secret di repo
+`CLOUDFLARE_API_TOKEN` + `CF_ACCOUNT_ID`. Un push = un deploy, ~3 minuti.
+Verifica con `gh run list --repo clinicalbear/official-geotapp-website`.
+
+⚠️ **`npm run deploy` da locale FALLISCE** se `CLOUDFLARE_API_TOKEN` non è nell'ambiente
+(il token vive nei GitHub Secrets, non in locale): wrangler esce con
+`In a non-interactive environment, it's necessary to set a CLOUDFLARE_API_TOKEN` →
+`Failed to fetch auth token: 400`. **E la pipeline npm maschera l'errore restituendo
+exit code 0**: chi si fida del codice di uscita crede di aver deployato con il sito fermo
+(successo apparente, 16/07/2026). Se devi deployare da locale, esporta prima il token e
+**leggi il log**, non l'exit code. Altrimenti: pusha e basta.
 - **Compatibilità Cloudflare Workers**: `nodejs_compat` flag attivo. NON usare `readFileSync`/`fs` a runtime — le chiavi PEM e qualsiasi asset devono essere inline come stringhe letterali.
 - **Middleware locale-aware**: rileva locale da pathname → cookie → `cf-ipcountry` → `x-vercel-ip-country` → `geo.country` → Accept-Language. NON usare `x-country` (rimosso: era spoofable pubblicamente).
 
