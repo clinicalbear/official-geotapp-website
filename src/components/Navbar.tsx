@@ -69,7 +69,7 @@ export default function Navbar() {
     ctaText = dict.cta_start ?? dict.cta;
   } else if (isBlogArticle) {
     ctaText = dict.cta_how ?? dict.cta;
-    ctaHref = getLink('/come-funziona');
+    ctaHref = getLink('/guida');
   } else if (isHomepage || isSectorPage) {
     ctaText = dict.cta_trial ?? dict.cta;
   }

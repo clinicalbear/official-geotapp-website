@@ -71,7 +71,7 @@ export default function ArticleNextStep({ categories, locale }: ArticleNextStepP
 
   const href = match
     ? localizePath(match.path, locale as AppLocale)
-    : localizePath('/come-funziona/', locale as AppLocale);
+    : localizePath('/guida/', locale as AppLocale);
 
   const icon = match?.icon ?? <Sparkles size={22} className="text-primary" />;
 
