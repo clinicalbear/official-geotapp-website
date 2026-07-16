@@ -286,8 +286,13 @@ export default async function LocaleLayout({ children, params }: Props) {
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         {/* The Flutter app - CTAs link here; prefetch DNS so click is instant */}
         <link rel="dns-prefetch" href="https://app.geotapp.com" />
-        {/* Blog WP origin, sitemap + API calls */}
-        <link rel="dns-prefetch" href="https://blog.geotapp.com" />
+        {/* NB: nessun dns-prefetch per blog.geotapp.com (rimosso 16/07/2026).
+            E' l'origine WordPress che il blog headless interroga SERVER-side
+            (src/app/blog/[...slug]/page.tsx, api/comments/route.ts): il browser
+            del visitatore non contatta mai quell'host, quindi risolverne il DNS
+            in anticipo non fa guadagnare nulla. In piu' suggeriva ai crawler un
+            sottodominio che per gli utenti e' solo un 301 verso geotapp.com/blog/.
+            Il dns-prefetch va SOLO su host che il CLIENT contattera' davvero. */}
       </head>
       <body
         className={clsx(
