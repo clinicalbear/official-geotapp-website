@@ -17,6 +17,15 @@ export interface InfInputs {
   conservazione: string;
   dpo?: string;
   autorita: string; // ente autorità di controllo
+  /**
+   * true se il sistema esegue controlli tecnici anti-manomissione (rilevazione
+   * di dispositivo modificato/root o di posizione simulata). Opzionale perché
+   * questo generatore è aperto a chiunque: non tutti i sistemi li fanno, e
+   * dichiarare una categoria di dati non trattata sarebbe scorretto quanto
+   * ometterla. Chi li fa DEVE dichiararli: sono dati sul dispositivo del
+   * lavoratore, non solo la sua posizione.
+   */
+  integritaDispositivo?: boolean;
 }
 
 interface Sezione {
@@ -39,7 +48,7 @@ const T: Record<InfLocale, Template> = {
     sezioni: [
       { titolo: '1. Titolare del trattamento', testo: 'Il titolare del trattamento è {azienda}.' },
       { titolo: '2. Finalità e base giuridica', testo: 'I dati sono trattati per la seguente finalità: {finalita}. {baseGiuridica}' },
-      { titolo: '3. Categorie di dati', testo: 'Vengono trattati dati di geolocalizzazione (posizione del dispositivo o del veicolo) associati al lavoratore.' },
+      { titolo: '3. Categorie di dati', testo: 'Vengono trattati dati di geolocalizzazione (posizione del dispositivo o del veicolo) associati al lavoratore.{integritaDispositivo}' },
       { titolo: '4. Quando e come', testo: 'La posizione è rilevata {quando}. Il trattamento è proporzionato alla finalità e non comporta un controllo a distanza continuativo dei lavoratori.' },
       { titolo: '5. Destinatari', testo: 'I dati sono accessibili al personale autorizzato e ai responsabili del trattamento (ad es. il fornitore del software), che li trattano per conto del titolare.' },
       { titolo: '6. Conservazione', testo: 'I dati sono conservati per {conservazione} e poi cancellati o anonimizzati.{conservazioneLegale}' },
@@ -55,7 +64,7 @@ const T: Record<InfLocale, Template> = {
     sezioni: [
       { titolo: '1. Data controller', testo: 'The data controller is {azienda}.' },
       { titolo: '2. Purpose and legal basis', testo: 'Data is processed for the following purpose: {finalita}. {baseGiuridica}' },
-      { titolo: '3. Categories of data', testo: 'Geolocation data (device or vehicle position) linked to the worker is processed.' },
+      { titolo: '3. Categories of data', testo: 'Geolocation data (device or vehicle position) linked to the worker is processed.{integritaDispositivo}' },
       { titolo: '4. When and how', testo: 'Position is recorded {quando}. The processing is proportionate to its purpose and does not amount to continuous remote monitoring of workers.' },
       { titolo: '5. Recipients', testo: 'Data is accessible to authorised staff and to processors (e.g. the software provider), who process it on the controller’s behalf.' },
       { titolo: '6. Retention', testo: 'Data is kept for {conservazione} and then deleted or anonymised.{conservazioneLegale}' },
@@ -71,7 +80,7 @@ const T: Record<InfLocale, Template> = {
     sezioni: [
       { titolo: '1. Verantwortlicher', testo: 'Verantwortlicher ist {azienda}.' },
       { titolo: '2. Zweck und Rechtsgrundlage', testo: 'Die Daten werden zu folgendem Zweck verarbeitet: {finalita}. {baseGiuridica}' },
-      { titolo: '3. Datenkategorien', testo: 'Verarbeitet werden Standortdaten (Position des Geräts oder Fahrzeugs), die dem Mitarbeiter zugeordnet sind.' },
+      { titolo: '3. Datenkategorien', testo: 'Verarbeitet werden Standortdaten (Position des Geräts oder Fahrzeugs), die dem Mitarbeiter zugeordnet sind.{integritaDispositivo}' },
       { titolo: '4. Wann und wie', testo: 'Die Position wird {quando} erfasst. Die Verarbeitung ist verhältnismäßig und stellt keine kontinuierliche Fernüberwachung dar.' },
       { titolo: '5. Empfänger', testo: 'Zugriff haben befugte Mitarbeiter und Auftragsverarbeiter (z. B. der Softwareanbieter), die im Auftrag des Verantwortlichen handeln.' },
       { titolo: '6. Speicherdauer', testo: 'Die Daten werden für {conservazione} gespeichert und danach gelöscht oder anonymisiert.{conservazioneLegale}' },
@@ -87,7 +96,7 @@ const T: Record<InfLocale, Template> = {
     sezioni: [
       { titolo: '1. Responsable du traitement', testo: 'Le responsable du traitement est {azienda}.' },
       { titolo: '2. Finalité et base légale', testo: 'Les données sont traitées pour la finalité suivante : {finalita}. {baseGiuridica}' },
-      { titolo: '3. Catégories de données', testo: 'Sont traitées des données de géolocalisation (position de l’appareil ou du véhicule) liées au salarié.' },
+      { titolo: '3. Catégories de données', testo: 'Sont traitées des données de géolocalisation (position de l’appareil ou du véhicule) liées au salarié.{integritaDispositivo}' },
       { titolo: '4. Quand et comment', testo: 'La position est enregistrée {quando}. Le traitement est proportionné à sa finalité et ne constitue pas une surveillance permanente.' },
       { titolo: '5. Destinataires', testo: 'Les données sont accessibles au personnel autorisé et aux sous-traitants (par ex. le fournisseur du logiciel), agissant pour le compte du responsable.' },
       { titolo: '6. Conservation', testo: 'Les données sont conservées pendant {conservazione} puis supprimées ou anonymisées.{conservazioneLegale}' },
@@ -103,7 +112,7 @@ const T: Record<InfLocale, Template> = {
     sezioni: [
       { titolo: '1. Responsable del tratamiento', testo: 'El responsable del tratamiento es {azienda}.' },
       { titolo: '2. Finalidad y base jurídica', testo: 'Los datos se tratan para la siguiente finalidad: {finalita}. {baseGiuridica}' },
-      { titolo: '3. Categorías de datos', testo: 'Se tratan datos de geolocalización (posición del dispositivo o del vehículo) vinculados al trabajador.' },
+      { titolo: '3. Categorías de datos', testo: 'Se tratan datos de geolocalización (posición del dispositivo o del vehículo) vinculados al trabajador.{integritaDispositivo}' },
       { titolo: '4. Cuándo y cómo', testo: 'La posición se registra {quando}. El tratamiento es proporcionado a su finalidad y no supone una vigilancia continua a distancia.' },
       { titolo: '5. Destinatarios', testo: 'Los datos son accesibles al personal autorizado y a los encargados del tratamiento (p. ej. el proveedor del software), que actúan por cuenta del responsable.' },
       { titolo: '6. Conservación', testo: 'Los datos se conservan durante {conservazione} y después se suprimen o anonimizan.{conservazioneLegale}' },
@@ -119,7 +128,7 @@ const T: Record<InfLocale, Template> = {
     sezioni: [
       { titolo: '1. Verwerkingsverantwoordelijke', testo: 'De verwerkingsverantwoordelijke is {azienda}.' },
       { titolo: '2. Doel en rechtsgrond', testo: 'De gegevens worden verwerkt voor het volgende doel: {finalita}. {baseGiuridica}' },
-      { titolo: '3. Categorieën gegevens', testo: 'Er worden locatiegegevens (positie van het apparaat of voertuig) verwerkt die aan de werknemer zijn gekoppeld.' },
+      { titolo: '3. Categorieën gegevens', testo: 'Er worden locatiegegevens (positie van het apparaat of voertuig) verwerkt die aan de werknemer zijn gekoppeld.{integritaDispositivo}' },
       { titolo: '4. Wanneer en hoe', testo: 'De positie wordt {quando} vastgelegd. De verwerking is evenredig aan het doel en vormt geen continue controle op afstand.' },
       { titolo: '5. Ontvangers', testo: 'De gegevens zijn toegankelijk voor bevoegd personeel en verwerkers (bijv. de softwareleverancier), die namens de verantwoordelijke handelen.' },
       { titolo: '6. Bewaring', testo: 'De gegevens worden {conservazione} bewaard en daarna verwijderd of geanonimiseerd.{conservazioneLegale}' },
@@ -135,7 +144,7 @@ const T: Record<InfLocale, Template> = {
     sezioni: [
       { titolo: "1. Responsável pelo tratamento", testo: "O responsável pelo tratamento é {azienda}." },
       { titolo: "2. Finalidade e fundamento jurídico", testo: "Os dados são tratados para a seguinte finalidade: {finalita}. {baseGiuridica}" },
-      { titolo: "3. Categorias de dados", testo: "São tratados dados de geolocalização (posição do dispositivo ou do veículo) associados ao trabalhador." },
+      { titolo: "3. Categorias de dados", testo: "São tratados dados de geolocalização (posição do dispositivo ou do veículo) associados ao trabalhador.{integritaDispositivo}" },
       { titolo: "4. Quando e como", testo: "A posição é recolhida {quando}. O tratamento é proporcional à finalidade e não implica um controlo à distância contínuo dos trabalhadores." },
       { titolo: "5. Destinatários", testo: "Os dados são acessíveis ao pessoal autorizado e aos subcontratantes (por exemplo, o fornecedor do software), que os tratam por conta do responsável pelo tratamento." },
       { titolo: "6. Conservação", testo: "Os dados são conservados durante {conservazione} e, em seguida, eliminados ou anonimizados.{conservazioneLegale}" },
@@ -151,7 +160,7 @@ const T: Record<InfLocale, Template> = {
     sezioni: [
       { titolo: "1. Dataansvarlig", testo: "Den dataansvarlige er {azienda}." },
       { titolo: "2. Formål og retsgrundlag", testo: "Dataene behandles til følgende formål: {finalita}. {baseGiuridica}" },
-      { titolo: "3. Kategorier af data", testo: "Der behandles geolokaliseringsdata (enhedens eller køretøjets position) knyttet til medarbejderen." },
+      { titolo: "3. Kategorier af data", testo: "Der behandles geolokaliseringsdata (enhedens eller køretøjets position) knyttet til medarbejderen.{integritaDispositivo}" },
       { titolo: "4. Hvornår og hvordan", testo: "Positionen registreres {quando}. Behandlingen står i rimeligt forhold til formålet og indebærer ikke en vedvarende fjernovervågning af medarbejderne." },
       { titolo: "5. Modtagere", testo: "Dataene er tilgængelige for autoriseret personale og for databehandlere (f.eks. softwareleverandøren), som behandler dem på vegne af den dataansvarlige." },
       { titolo: "6. Opbevaring", testo: "Dataene opbevares i {conservazione} og slettes eller anonymiseres derefter.{conservazioneLegale}" },
@@ -167,7 +176,7 @@ const T: Record<InfLocale, Template> = {
     sezioni: [
       { titolo: "1. Personuppgiftsansvarig", testo: "Personuppgiftsansvarig är {azienda}." },
       { titolo: "2. Ändamål och rättslig grund", testo: "Uppgifterna behandlas för följande ändamål: {finalita}. {baseGiuridica}" },
-      { titolo: "3. Kategorier av uppgifter", testo: "Geolokaliseringsuppgifter behandlas (positionen för enheten eller fordonet) kopplade till arbetstagaren." },
+      { titolo: "3. Kategorier av uppgifter", testo: "Geolokaliseringsuppgifter behandlas (positionen för enheten eller fordonet) kopplade till arbetstagaren.{integritaDispositivo}" },
       { titolo: "4. När och hur", testo: "Positionen registreras {quando}. Behandlingen står i proportion till ändamålet och innebär inte en fortlöpande kontroll på distans av arbetstagarna." },
       { titolo: "5. Mottagare", testo: "Uppgifterna är tillgängliga för behörig personal och för personuppgiftsbiträden (till exempel programvaruleverantören), som behandlar dem för den personuppgiftsansvariges räkning." },
       { titolo: "6. Lagring", testo: "Uppgifterna lagras under {conservazione} och raderas eller anonymiseras därefter.{conservazioneLegale}" },
@@ -183,7 +192,7 @@ const T: Record<InfLocale, Template> = {
     sezioni: [
       { titolo: "1. Behandlingsansvarlig", testo: "Behandlingsansvarlig er {azienda}." },
       { titolo: "2. Formål og rettslig grunnlag", testo: "Dataene behandles for følgende formål: {finalita}. {baseGiuridica}" },
-      { titolo: "3. Kategorier av personopplysninger", testo: "Det behandles geolokaliseringsdata (posisjonen til enheten eller kjøretøyet) knyttet til arbeidstakeren." },
+      { titolo: "3. Kategorier av personopplysninger", testo: "Det behandles geolokaliseringsdata (posisjonen til enheten eller kjøretøyet) knyttet til arbeidstakeren.{integritaDispositivo}" },
       { titolo: "4. Når og hvordan", testo: "Posisjonen registreres {quando}. Behandlingen står i forhold til formålet og innebærer ikke en kontinuerlig fjernkontroll av arbeidstakerne." },
       { titolo: "5. Mottakere", testo: "Dataene er tilgjengelige for autorisert personell og for databehandlere (for eksempel programvareleverandøren), som behandler dem på vegne av den behandlingsansvarlige." },
       { titolo: "6. Lagring", testo: "Dataene lagres i {conservazione} og deretter slettes eller anonymiseres.{conservazioneLegale}" },
@@ -199,7 +208,7 @@ const T: Record<InfLocale, Template> = {
     sezioni: [
       { titolo: "1. Контролёр данных", testo: "Контролёром обработки данных является {azienda}." },
       { titolo: "2. Цели и правовое основание", testo: "Данные обрабатываются в следующих целях: {finalita}. {baseGiuridica}" },
-      { titolo: "3. Категории данных", testo: "Обрабатываются данные о геолокации (местоположение устройства или транспортного средства), связанные с работником." },
+      { titolo: "3. Категории данных", testo: "Обрабатываются данные о геолокации (местоположение устройства или транспортного средства), связанные с работником.{integritaDispositivo}" },
       { titolo: "4. Когда и как", testo: "Местоположение фиксируется {quando}. Обработка соразмерна цели и не предполагает непрерывного дистанционного контроля за работниками." },
       { titolo: "5. Получатели данных", testo: "Доступ к данным имеют уполномоченный персонал и обработчики данных (например, поставщик программного обеспечения), которые обрабатывают их по поручению контролёра." },
       { titolo: "6. Хранение", testo: "Данные хранятся в течение {conservazione}, после чего удаляются или анонимизируются.{conservazioneLegale}" },
@@ -355,6 +364,37 @@ const RETENTION_LEGAL_OVERRIDE: Record<string, Partial<Record<InfLocale, string>
   },
 };
 
+// ── Integrita' del dispositivo (suffisso della sezione 3) ──
+// Compare SOLO se chi compila dichiara che il sistema esegue controlli
+// anti-manomissione. Sono dati sul DISPOSITIVO del lavoratore, non sulla sola
+// posizione: se si raccolgono, l'art. 13 impone di dichiararli tra le
+// categorie di dati. La formulazione dice anche a che cosa NON servono, perche'
+// un dato raccolto "per sicurezza" e poi usato per valutare la persona sarebbe
+// un trattamento diverso da quello dichiarato.
+// In Germania un simile indicatore e' oggettivamente idoneo al controllo del
+// comportamento: ricade nella cogestione ex § 87 Abs. 1 Nr. 6 BetrVG, gia'
+// richiamata nella base giuridica per DE.
+const INTEGRITA_DISPOSITIVO: Record<InfLocale, string> = {
+  it: " Sono inoltre trattati dati tecnici sull'integrità del dispositivo (ad esempio l'indicazione che il dispositivo è modificato o che la posizione è simulata), al solo fine di verificare l'attendibilità della rilevazione e non per valutare il lavoratore.",
+  en: ' Technical data on the integrity of the device is also processed (for example an indication that the device has been modified or that the position is simulated), for the sole purpose of verifying the reliability of the record and not to assess the worker.',
+  de: ' Zusätzlich werden technische Daten zur Integrität des Geräts verarbeitet (etwa der Hinweis, dass das Gerät verändert wurde oder die Position simuliert ist), ausschließlich zur Überprüfung der Verlässlichkeit der Erfassung und nicht zur Bewertung des Mitarbeiters.',
+  fr: " Sont également traitées des données techniques sur l'intégrité de l'appareil (par exemple l'indication que l'appareil est modifié ou que la position est simulée), aux seules fins de vérifier la fiabilité du relevé et non pour évaluer le salarié.",
+  es: ' Se tratan además datos técnicos sobre la integridad del dispositivo (por ejemplo la indicación de que el dispositivo está modificado o de que la posición está simulada), con la única finalidad de verificar la fiabilidad del registro y no para evaluar al trabajador.',
+  nl: ' Daarnaast worden technische gegevens over de integriteit van het apparaat verwerkt (bijvoorbeeld de aanduiding dat het apparaat is gewijzigd of dat de locatie wordt gesimuleerd), uitsluitend om de betrouwbaarheid van de registratie te controleren en niet om de werknemer te beoordelen.',
+  pt: ' São ainda tratados dados técnicos sobre a integridade do dispositivo (por exemplo a indicação de que o dispositivo foi modificado ou de que a posição é simulada), com a única finalidade de verificar a fiabilidade do registo e não para avaliar o trabalhador.',
+  da: ' Der behandles desuden tekniske data om enhedens integritet (for eksempel angivelse af, at enheden er ændret, eller at positionen er simuleret), alene med det formål at kontrollere registreringens pålidelighed og ikke for at vurdere medarbejderen.',
+  sv: ' Dessutom behandlas tekniska uppgifter om enhetens integritet (till exempel uppgift om att enheten har ändrats eller att positionen simuleras), uteslutande för att kontrollera registreringens tillförlitlighet och inte för att bedöma arbetstagaren.',
+  nb: ' I tillegg behandles tekniske data om enhetens integritet (for eksempel angivelse av at enheten er endret, eller at posisjonen er simulert), utelukkende for å kontrollere påliteligheten av registreringen og ikke for å vurdere arbeidstakeren.',
+  ru: ' Кроме того, обрабатываются технические данные о целостности устройства (например, признак того, что устройство изменено или местоположение имитируется), исключительно для проверки достоверности записи, а не для оценки работника.',
+};
+
+function resolveIntegritaDispositivo(
+  locale: InfLocale, attiva?: boolean,
+): string {
+  if (!attiva) return '';
+  return INTEGRITA_DISPOSITIVO[locale] ?? INTEGRITA_DISPOSITIVO.en;
+}
+
 function resolveRetentionLegal(locale: InfLocale, codiceISO?: string): string {
   const ov = codiceISO ? RETENTION_LEGAL_OVERRIDE[codiceISO.toUpperCase()] : undefined;
   return ov?.[locale] ?? ov?.en ?? '';
@@ -386,12 +426,14 @@ export function buildInformativa(locale: InfLocale, i: InfInputs, codiceISO?: st
   const t = T[locale] ?? T.en;
   const baseGiuridica = resolveBaseGiuridica(locale, codiceISO);
   const conservazioneLegale = resolveRetentionLegal(locale, codiceISO);
+  const integrita = resolveIntegritaDispositivo(locale, i.integritaDispositivo);
   const parts: string[] = [t.titolo, '', fill(t.intro, i), ''];
   if (i.dpo && i.dpo.trim()) parts.push(fill(t.dpoLine.replace(/\{dpo\}/g, i.dpo), i), '');
   for (const sez of t.sezioni) {
     const testo = sez.testo
       .replace(/\{baseGiuridica\}/g, baseGiuridica)
-      .replace(/\{conservazioneLegale\}/g, conservazioneLegale);
+      .replace(/\{conservazioneLegale\}/g, conservazioneLegale)
+      .replace(/\{integritaDispositivo\}/g, integrita);
     parts.push(sez.titolo, fill(testo, i), '');
   }
   const art22 = ART22_SECTION[locale] ?? ART22_SECTION.en;
@@ -421,10 +463,14 @@ export function buildInformativaDoc(locale: InfLocale, i: InfInputs, codiceISO?:
   const t = T[locale] ?? T.en;
   const baseGiuridica = resolveBaseGiuridica(locale, codiceISO);
   const conservazioneLegale = resolveRetentionLegal(locale, codiceISO);
+  const integrita = resolveIntegritaDispositivo(locale, i.integritaDispositivo);
   const sezioni = t.sezioni.map((s) => ({
     titolo: s.titolo,
     testo: fill(
-      s.testo.replace(/\{baseGiuridica\}/g, baseGiuridica).replace(/\{conservazioneLegale\}/g, conservazioneLegale),
+      s.testo
+        .replace(/\{baseGiuridica\}/g, baseGiuridica)
+        .replace(/\{conservazioneLegale\}/g, conservazioneLegale)
+        .replace(/\{integritaDispositivo\}/g, integrita),
       i,
     ),
   }));

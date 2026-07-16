@@ -20,6 +20,8 @@ export interface GenLabels {
   dpoPlaceholder: string;
   logo: string;
   logoHint: string;
+  integrita: string;
+  integritaHint: string;
   genera: string;
   privacyNote: string;
   docFooter: string; // "Bozza generata gratuitamente con GeoTapp"
@@ -43,6 +45,7 @@ export default function GeneratoreInformativaClient({ locale, paesi, labels }: P
   const [quando, setQuando] = useState('');
   const [conservazione, setConservazione] = useState('');
   const [dpo, setDpo] = useState('');
+  const [integrita, setIntegrita] = useState(false);
   const [logo, setLogo] = useState<string | null>(null);
   const [err, setErr] = useState(false);
 
@@ -69,6 +72,7 @@ export default function GeneratoreInformativaClient({ locale, paesi, labels }: P
       conservazione: conservazione.trim(),
       dpo: dpo.trim() || undefined,
       autorita: paese?.autorita ?? '',
+      integritaDispositivo: integrita,
     };
     const doc = buildInformativaDoc(infLocale(locale), inputs, paeseId);
     trackEvent('generatore_informativa', { locale, paese: paeseId });
@@ -163,6 +167,26 @@ export default function GeneratoreInformativaClient({ locale, paesi, labels }: P
             {logo && <img src={logo} alt="logo" className="h-10 max-w-[120px] object-contain" />}
           </div>
           <p className="text-xs text-slate-400 mt-1.5">{labels.logoHint}</p>
+        </div>
+
+        {/* Opzionale: chi esegue controlli anti-manomissione raccoglie dati sul
+            dispositivo del lavoratore, non solo la posizione, e l'art. 13
+            impone di dichiararli tra le categorie di dati. Spento di default:
+            non tutti i sistemi li fanno, e dichiarare una categoria non
+            trattata sarebbe scorretto quanto ometterla. */}
+        <div className="sm:col-span-2">
+          <label className="flex items-start gap-3 cursor-pointer">
+            <input
+              type="checkbox"
+              checked={integrita}
+              onChange={(e) => setIntegrita(e.target.checked)}
+              className="mt-0.5 h-4 w-4 accent-[#8FC436]"
+            />
+            <span>
+              <span className="block text-sm font-semibold text-slate-700">{labels.integrita}</span>
+              <span className="block text-xs text-slate-400 mt-1">{labels.integritaHint}</span>
+            </span>
+          </label>
         </div>
       </div>
 
