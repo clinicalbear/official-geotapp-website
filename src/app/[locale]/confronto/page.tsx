@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { TrialCTALink } from '@/components/analytics/TrialCTALink';
 import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
+import { translatePath } from '@/lib/i18n/slug-map';
+import type { AppLocale } from '@/lib/i18n/config';
 export { generateLocaleStaticParams as generateStaticParams } from '@/lib/i18n/static-params';
 
 const PATHNAME = '/confronto/';
@@ -181,6 +183,20 @@ const COMPARISONS: Record<string, { tagline: string; highlight: string }>[] = [
     ru: { tagline: 'Геозона vs анти-спуфинг GPS', highlight: 'Libemax использует геозону. GeoTapp проверяет подлинность GPS с помощью анти-спуфинга, два разных уровня безопасности.' },
   } as any,
   {
+    slug: 'geotapp-vs-picaponto', competitor: 'PicaPonto',
+    it: { tagline: 'Registrare vs dimostrare', highlight: 'PicaPonto registra le presenze a basso costo con molti metodi di timbratura. GeoTapp produce un report non modificabile che il committente verifica da solo.' },
+    en: { tagline: 'Recording vs proving', highlight: 'PicaPonto records attendance cheaply with many clock-in methods. GeoTapp produces a tamper-proof report the client verifies independently.' },
+    de: { tagline: 'Erfassen vs beweisen', highlight: 'PicaPonto erfasst Anwesenheiten gunstig mit vielen Methoden. GeoTapp erstellt einen unveranderbaren Bericht, den der Auftraggeber selbst verifiziert.' },
+    fr: { tagline: 'Enregistrer vs prouver', highlight: 'PicaPonto enregistre les presences a bas cout avec de nombreuses methodes. GeoTapp produit un rapport infalsifiable que le client verifie lui-meme.' },
+    es: { tagline: 'Registrar vs demostrar', highlight: 'PicaPonto registra las presencias a bajo coste con muchos metodos. GeoTapp produce un informe inalterable que el cliente verifica por su cuenta.' },
+    pt: { tagline: 'Registar vs provar', highlight: 'O PicaPonto regista as presencas a baixo custo com muitos metodos. A GeoTapp produz um relatorio inalteravel que o cliente verifica sozinho.' },
+    nl: { tagline: 'Registreren vs bewijzen', highlight: 'PicaPonto registreert aanwezigheid goedkoop met veel methodes. GeoTapp produceert een onwijzigbaar rapport dat de klant zelf verifieert.' },
+    da: { tagline: 'Registrere vs bevise', highlight: 'PicaPonto registrerer fremmode billigt med mange metoder. GeoTapp producerer en uforanderlig rapport, kunden selv verificerer.' },
+    sv: { tagline: 'Registrera vs bevisa', highlight: 'PicaPonto registrerar narvaro billigt med manga metoder. GeoTapp producerar en oforanderlig rapport som kunden sjalv verifierar.' },
+    nb: { tagline: 'Registrere vs bevise', highlight: 'PicaPonto registrerer oppmote billig med mange metoder. GeoTapp produserer en uforanderlig rapport kunden selv verifiserer.' },
+    ru: { tagline: 'Учитывать vs доказывать', highlight: 'PicaPonto дёшево учитывает присутствие многими методами. GeoTapp создаёт неизменяемый отчёт, который клиент проверяет сам.' },
+  } as any,
+  {
     slug: 'geotapp-vs-blink', competitor: 'Blink',
     it: { tagline: 'Software pulizie DE vs certificazione campo', highlight: 'Blink è il numero 1 per le pulizie in Germania. GeoTapp aggiunge anti-spoofing e report con valore probatorio.' },
     en: { tagline: 'Cleaning software DE vs field certification', highlight: 'Blink is #1 for cleaning in Germany. GeoTapp adds anti-spoofing and reports with evidentiary value.' },
@@ -292,7 +308,7 @@ export default async function ConfrontoIndexPage({ params }: { params: Promise<{
               return (
                 <Link
                   key={item.slug}
-                  href={`/${locale}/confronto/${item.slug}/`}
+                  href={`/${locale}${translatePath(`/confronto/${item.slug}/`, locale as AppLocale)}`}
                   className="block group bg-white/5 hover:bg-white/8 border border-white/10 hover:border-primary/30 rounded-2xl p-6 transition-all duration-200"
                 >
                   <div className="flex items-start justify-between gap-4">
