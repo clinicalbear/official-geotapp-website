@@ -2,7 +2,7 @@ export { generateLocaleStaticParams as generateStaticParams } from '@/lib/i18n/s
 
 import type { Metadata } from 'next';
 import { DEFAULT_LOCALE, type AppLocale } from '@/lib/i18n/config';
-import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
+import { buildLocaleAlternates, buildCanonicalUrl } from '@/lib/i18n/locale-metadata';
 import { getPulizieContent } from '@/content/settori/pulizie';
 import SettorePageLayout from '@/components/SettorePageLayout';
 import BlogHighlights from '@/components/BlogHighlights';
@@ -27,7 +27,7 @@ export async function generateMetadata({
     // a 308 to /it/, a redirect target as x-default leaks link equity.
     alternates: buildLocaleAlternates(resolvedLocale, pathname + '/'),
     openGraph: {
-      url: `https://geotapp.com/${resolvedLocale}${pathname}`,
+      url: buildCanonicalUrl(resolvedLocale, pathname + '/'),
       type: 'website',
       title: content.meta.title,
       description: content.meta.description,

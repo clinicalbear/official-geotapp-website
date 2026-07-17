@@ -104,6 +104,26 @@ function regionalSelfCanonical(locale: string, path: string): boolean {
  * - Regional EN su pagine brand/entity/info + en-ie: canonical = /en/{path}
  *   (consolida authority sul brand)
  */
+/**
+ * L'URL canonico di una pagina, con la stessa identica logica di
+ * buildLocaleAlternates(). Serve per og:url, che DEVE combaciare col canonical.
+ *
+ * Perche' esiste (17/07/2026): le 10 pagine settore costruivano og:url a mano
+ * come `${BASE}/${locale}${pathname}`, cioe' con lo slug ITALIANO grezzo e senza
+ * slash finale, mentre il canonical passava da translatePath() ed era tradotto.
+ * Risultato: og:url = /de/settori/installatori/ contro canonical
+ * /de/branchen/installateure/. Non era rotto (2 hop di 308 e si arrivava), ma
+ * ogni condivisione social passava da una catena di redirect e consolidava
+ * like e share su un URL che non e' quello della pagina. Con Facebook come
+ * prima sorgente di traffico, si buttava via proprio li'.
+ *
+ * Regola: og:url non si scrive a mano, si chiede a questa funzione.
+ */
+export function buildCanonicalUrl(locale: string, path: string): string {
+  const canonicalLocale = regionalSelfCanonical(locale, path) ? locale : 'en';
+  return `${BASE}/${canonicalLocale}${translatePath(path, canonicalLocale as AppLocale)}`;
+}
+
 export function buildLocaleAlternates(
   locale: string,
   path: string,
@@ -121,11 +141,9 @@ export function buildLocaleAlternates(
 
   // Hybrid canonical: commercial regional-EN pages self-canonical (rank with local
   // currency); brand/entity/info pages + en-ie consolidate to /en/ (brand authority).
-  const canonicalLocale = regionalSelfCanonical(locale, path) ? locale : 'en';
-  const canonicalPath = translatePath(path, canonicalLocale as AppLocale);
-
+  // Una sola fonte di verita', condivisa con og:url: vedi buildCanonicalUrl().
   return {
-    canonical: `${BASE}/${canonicalLocale}${canonicalPath}`,
+    canonical: buildCanonicalUrl(locale, path),
     languages,
   };
 }
