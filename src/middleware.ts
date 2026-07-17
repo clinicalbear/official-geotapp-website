@@ -289,6 +289,30 @@ const NL_RELANG_REDIRECTS: Record<string, string> = {
   '/blog/2026/05/14/personeelsbeheer-software-schoonmaak/': '/blog/nl/2026/05/14/personeelsbeheer-software-schoonmaak/',
 };
 
+// Codici PAESE -> codice LINGUA del sito (308 permanente).
+//
+// Il sito e' organizzato per LINGUA, non per paese: la Norvegia e' /nb/ (bokmal),
+// la Danimarca /da/, la Svezia /sv/. Ma /no/, /dk/ e /se/ sono quello che scrive
+// istintivamente chiunque, noi compresi: un link cosi' in una media query o in
+// una mail alla stampa moriva con un 404, e chi lo riceveva non riprovava.
+// Meglio farlo atterrare che ricordarsi la regola.
+//
+// 308 e non 302: e' permanente e, a differenza del 301, garantisce che il metodo
+// non venga cambiato. Solo mappature NON ambigue: niente /ch/ (tedesco, francese
+// e italiano) ne' /be/ (neerlandese e francese), dove indovinare la lingua dal
+// paese sarebbe una scommessa.
+const COUNTRY_TO_LOCALE: Record<string, string> = {
+  no: 'nb', // Norvegia -> bokmal
+  dk: 'da', // Danimarca -> danese
+  se: 'sv', // Svezia -> svedese
+  at: 'de', // Austria -> tedesco
+  uk: 'en-gb',
+  us: 'en-us',
+  au: 'en-au',
+  ie: 'en-ie',
+  ca: 'en-ca',
+};
+
 function normalizePathWithTrailingSlash(pathname: string): string {
   if (!pathname) return '/';
   return pathname.endsWith('/') ? pathname : `${pathname}/`;
@@ -443,6 +467,17 @@ export async function middleware(req: NextRequest) {
     res.headers.set('X-Content-Type-Options', 'nosniff');
     res.headers.set('Content-Security-Policy', 'frame-ancestors *');
     return res;
+  }
+
+  // 0. /{paese}/... → /{lingua}/... (308). Vedi COUNTRY_TO_LOCALE.
+  const countrySegment = pathname.split('/')[1]?.toLowerCase();
+  if (countrySegment && COUNTRY_TO_LOCALE[countrySegment]) {
+    const url = req.nextUrl.clone();
+    url.pathname = pathname.replace(
+      new RegExp(`^/${countrySegment}(?=/|$)`, 'i'),
+      `/${COUNTRY_TO_LOCALE[countrySegment]}`,
+    );
+    return NextResponse.redirect(url, 308);
   }
 
   // 0a. www → non-www redirect (301 permanent)
