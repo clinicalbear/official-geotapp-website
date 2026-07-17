@@ -31,6 +31,7 @@ export async function generateMetadata({
       type: 'website',
       title: content.meta.title,
       description: content.meta.description,
+      images: [{ url: '/og-default.png', width: 1200, height: 630, alt: content.meta.title }],
     },
     twitter: {
       card: 'summary_large_image',
