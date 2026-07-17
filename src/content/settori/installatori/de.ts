@@ -2,14 +2,14 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'Software für Elektriker und Heizungsinstallateure | Einsatzverwaltung | GeoTapp',
-    description: 'GeoTapp für Elektriker, Heizungsinstallateure und Handwerksbetriebe: Einsatzverwaltung, GPS-Zeiterfassung nach §17 MiLoG, digitale Stundenzettel und Fotobeweise.',
+    title: 'Arbeitszeiterfassung für Installateure und Elektriker | GeoTapp',
+    description: 'Arbeitszeiterfassung für Installateure und Elektriker: GPS-geprüfte Zeiten, digitale Stundenzettel und Fotobeweise vom Einsatz. DSGVO-konform, §17 MiLoG.',
   },
   hero: {
-    badge: 'Software für Elektriker, Heizungsinstallateure und Handwerksbetriebe',
+    badge: 'Arbeitszeiterfassung und Einsatzverwaltung für Elektriker und Heizungsinstallateure',
     h1_line1: 'Außendienst im Griff:',
-    h1_line2: 'Einsätze, Stundenzettel und Nachweise klar dokumentiert',
-    subtitle: 'GeoTapp verbindet Flow + TimeTracker für Handwerksbetriebe, die zwischen Baustellen, Fahrzeugen und Endkunden arbeiten. Die Android- und iOS-Apps unterstützen den Techniker im Außendienst; das Büro sieht Auftrag, Zeiten, Fotobeweise und Notizen ohne Nachfragen - DSGVO-konform, §17 MiLoG-tauglich.',
+    h1_line2: 'Arbeitszeiterfassung, Einsätze und Nachweise klar dokumentiert',
+    subtitle: 'GeoTapp verbindet Flow + TimeTracker für Handwerksbetriebe, die zwischen Baustellen, Fahrzeugen und Endkunden arbeiten. Die Android- und iOS-Apps unterstützen den Techniker im Außendienst; das Büro sieht Auftrag, Zeiten, Fotobeweise und Notizen ohne Nachfragen. Die Arbeitszeiterfassung läuft dabei mit, DSGVO-konform und §17 MiLoG-tauglich.',
     cta_primary: 'Demo anfragen',
     cta_note: 'Keine Bindung. Antwort innerhalb von 12 Geschäftsstunden.',
   },
@@ -52,7 +52,7 @@ const content: SettoreContent = {
     title: 'Was Sie erhalten',
     items: [
       {
-        title: 'GPS-Zeiterfassung nach §17 MiLoG',
+        title: 'Arbeitszeiterfassung per GPS, nach §17 MiLoG',
         desc: 'Jeder Einsatzbeginn und -abschluss ist mit Position, Zeitstempel und Auftrag verknüpft. Verteidigbar gegenüber Kunden und Behörden.',
       },
       {
@@ -75,12 +75,16 @@ const content: SettoreContent = {
     subtitle: 'Was uns am häufigsten vor dem Start gefragt wird.',
     items: [
       {
+        q: 'Wie funktioniert die Arbeitszeiterfassung für Installateure im Außendienst?',
+        a: 'Der Techniker stempelt direkt beim Kunden über das Smartphone, mit GPS-Prüfung und Zeitstempel. Beginn, Ende und Pausen landen unveränderlich im Protokoll, verknüpft mit Auftrag und Fotos. Das Büro trägt nichts nach und ruft niemanden an.',
+      },
+      {
         q: 'Ist GeoTapp für Elektriker und Heizungsinstallateure geeignet?',
-        a: 'Ja. GeoTapp hilft Elektrikern, Heizungsinstallateuren und Handwerksbetrieben bei der Einsatzverwaltung, Stundenzetteln, ArbZG-konformer Zeiterfassung und Außendienst-Koordination.',
+        a: 'Ja. GeoTapp hilft Elektrikern, Heizungsinstallateuren und Handwerksbetrieben bei der Einsatzverwaltung, Stundenzetteln, ArbZG-konformer Arbeitszeiterfassung und Außendienst-Koordination.',
       },
       {
         q: 'Unterstützt GeoTapp die Anforderungen nach §17 MiLoG?',
-        a: 'Ja. Die GPS-gestützte Zeiterfassung mit unveränderlichem Protokoll und Exportfunktion unterstützt die Dokumentationspflicht nach §17 MiLoG und den ArbZG-Vorschriften.',
+        a: 'Ja. Die GPS-gestützte Arbeitszeiterfassung mit unveränderlichem Protokoll und Exportfunktion unterstützt die Dokumentationspflicht nach §17 MiLoG und den ArbZG-Vorschriften.',
       },
       {
         q: 'Kann ich die Daten direkt in DATEV oder Lexware importieren?',
