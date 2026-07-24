@@ -23,6 +23,16 @@ export function pressRel(_item: PressItem): string {
 export const PRESS_RELEASES: PressItem[] = [];
 export const PRESS_COVERAGE: PressItem[] = [
   {
+    date: '2026-07-24',
+    outlet: 'GPO Magazine',
+    title: "GPS et salariés : ce n'est pas de la surveillance si c'est une preuve du travail effectué",
+    url: 'https://www.gpomag.fr/gps-et-salaries-ce-nest-pas-de-la-surveillance-si-cest-une-preuve-du-travail-effectue/',
+    locale: 'fr',
+    logo: '/press/gpomag.png',
+    // Tribuna firmata, non promozionale: ci citano come "Michele Angelo Petraroli,
+    // fondateur de GeoTapp" ma SENZA link (menzione non linkata, per accordo editoriale).
+  },
+  {
     date: '2026-07-13',
     outlet: 'Small Business Leader',
     title: 'Stop scope creep in service work: boundaries that protect margin and relationships',
