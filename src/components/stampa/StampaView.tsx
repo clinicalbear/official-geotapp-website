@@ -393,13 +393,15 @@ export default function StampaView({
               {PRESS_COVERAGE.map((item, i) => (
                 <li
                   key={i}
-                  className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6 p-5 rounded-2xl border border-white/10 bg-white/[0.02] hover:border-primary/30 transition-colors duration-300"
+                  className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-5 p-4 rounded-2xl border border-white/10 bg-white/[0.02] hover:border-primary/30 transition-colors duration-300"
                 >
                   {item.logo && (
                     // Box IDENTICO per ogni testata: i loghi hanno proporzioni molto diverse
                     // (AZ Big Media larghissimo, HR quasi quadrato), quindi si scalano DENTRO
                     // lo stesso riquadro invece di occupare larghezze diverse.
-                    <div className="flex h-24 w-56 shrink-0 items-center justify-center rounded-lg bg-white p-3">
+                    // Riquadro basso apposta: qui la lista deve restare leggibile tutta
+                    // insieme anche con quindici testate, senza nascondere niente.
+                    <div className="flex h-16 w-44 shrink-0 items-center justify-center rounded-lg bg-white p-2.5">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
                         src={item.logo}
@@ -410,9 +412,14 @@ export default function StampaView({
                   )}
                   {/* Colonne a larghezza FISSA: senza, un nome lungo ("Small Business Leader")
                       spinge il titolo piu' a destra di uno corto ("AZ Big Media"), e la colonna
-                      dei titoli fa i gradini. Cosi' ogni titolo attacca allo stesso punto. */}
+                      dei titoli fa i gradini. Cosi' ogni titolo attacca allo stesso punto.
+                      La colonna testata sta stretta apposta: i nomi lunghi vanno a capo su due
+                      righe di text-xs, che restano dentro l'altezza del riquadro logo, mentre
+                      lo spazio guadagnato toglie una riga di a capo ai titoli lunghi. */}
                   <time dateTime={item.date} className="text-xs text-text-secondary shrink-0 font-mono sm:w-24">{fmtPressDate(item.date)}</time>
-                  <span className="text-xs text-primary uppercase tracking-wide shrink-0 sm:w-52">{item.outlet}</span>
+                  {/* min-w-0: senza, il min-content del nome fa sforare la colonna oltre w-40
+                      e i titoli ripartono da x diverse (l'effetto gradino di cui sopra). */}
+                  <span className="text-xs text-primary uppercase tracking-wide shrink-0 min-w-0 sm:w-40">{item.outlet}</span>
                   <a
                     href={item.url}
                     target="_blank"
