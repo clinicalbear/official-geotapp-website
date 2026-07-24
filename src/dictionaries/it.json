@@ -1084,6 +1084,18 @@
       {
         "q": "Su quali dati si basa il risparmio stimato?",
         "a": "Solo sui valori che inserisci tu: numero di operatori, siti o cantieri seguiti, ore dedicate all'amministrazione, costo orario e contestazioni tipiche del tuo settore. Più i dati sono realistici, più la stima è vicina al tuo caso."
+      },
+      {
+        "q": "Il risparmio stimato tiene già conto del costo dell'abbonamento?",
+        "a": "Il totale che vedi è il risparmio lordo. Il tempo di rientro e la percentuale di ROI, invece, lo confrontano con il costo annuo dello strumento, calcolato sul numero di operatori che hai inserito. Quindi la percentuale è già al netto, il totale no."
+      },
+      {
+        "q": "Cosa vuol dire il tempo di rientro in mesi?",
+        "a": "È quanti mesi di risparmio stimato servono per coprire un anno di strumento. Se esce un numero sotto i dodici, lo strumento si ripaga entro il primo anno e quello che viene dopo è margine recuperato."
+      },
+      {
+        "q": "Perché il calcolo non recupera tutte le ore di amministrazione?",
+        "a": "Perché è volutamente prudente: di quelle ore ne considera circa due terzi, non la totalità. Un po' di scartoffie resta comunque, e una stima che promette il cento per cento sarebbe un numero da venditore, non una previsione."
       }
     ]
   },

@@ -1084,6 +1084,18 @@
       {
         "q": "What data is the estimated saving based on?",
         "a": "Only the values you enter: number of operators, sites or job sites managed, hours spent on admin, hourly cost and the disputes typical of your sector. The more realistic your inputs, the closer the estimate is to your situation."
+      },
+      {
+        "q": "Does the estimated saving already include the cost of the subscription?",
+        "a": "The total you see is the gross saving. The payback time and the ROI percentage, on the other hand, compare it against the annual cost of the tool, worked out on the number of operators you entered. So the percentage is already net, the total is not."
+      },
+      {
+        "q": "What does the payback time in months actually mean?",
+        "a": "It is how many months of estimated saving it takes to cover one year of the tool. Anything under twelve means the tool pays for itself inside the first year, and what comes after that is margin you get back."
+      },
+      {
+        "q": "Why does the calculation not recover all the admin hours?",
+        "a": "Because it stays deliberately cautious: it counts about two thirds of those hours, not all of them. Some paperwork stays no matter what, and an estimate promising a hundred per cent would be a sales figure, not a forecast."
       }
     ]
   },

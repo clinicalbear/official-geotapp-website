@@ -1084,6 +1084,18 @@
       {
         "q": "Em que dados se baseia a poupança estimada?",
         "a": "Apenas nos valores que introduzes: número de operadores, locais ou obras geridas, horas dedicadas à administração, custo horário e as contestações típicas do teu setor. Quanto mais realistas forem os dados, mais próxima a estimativa fica do teu caso."
+      },
+      {
+        "q": "A poupança estimada já desconta o custo da subscrição?",
+        "a": "O total que vê é a poupança bruta. O tempo de retorno e a percentagem de ROI, esses sim, comparam-na com o custo anual da ferramenta, calculado sobre o número de operacionais que introduziu. A percentagem já é líquida, o total não."
+      },
+      {
+        "q": "O que significa o tempo de retorno em meses?",
+        "a": "São os meses de poupança estimada necessários para cobrir um ano de ferramenta. Abaixo de doze, a ferramenta paga-se a si própria logo no primeiro ano e o resto é margem recuperada."
+      },
+      {
+        "q": "Porque é que o cálculo não recupera todas as horas de administração?",
+        "a": "Porque é propositadamente prudente: considera cerca de dois terços dessas horas, não a totalidade. Alguma papelada fica sempre, e uma estimativa que prometesse cem por cento seria um número de vendedor, não uma previsão."
       }
     ]
   },

@@ -1084,6 +1084,18 @@
       {
         "q": "Auf welchen Daten beruht die geschätzte Ersparnis?",
         "a": "Nur auf den Werten, die du eingibst: Anzahl der Mitarbeiter, betreute Standorte oder Baustellen, Verwaltungsstunden, Stundenkosten und die für deine Branche typischen Streitfälle. Je realistischer die Eingaben, desto näher ist die Schätzung an deinem Fall."
+      },
+      {
+        "q": "Sind die Abokosten in der geschätzten Ersparnis schon berücksichtigt?",
+        "a": "Die angezeigte Summe ist die Bruttoersparnis. Die Amortisationszeit und der ROI-Prozentsatz vergleichen sie dagegen mit den Jahreskosten des Werkzeugs, berechnet auf die Zahl der eingetragenen Mitarbeiter. Der Prozentsatz ist also bereits netto, die Summe nicht."
+      },
+      {
+        "q": "Was bedeutet die Amortisationszeit in Monaten?",
+        "a": "Sie sagt, wie viele Monate geschätzter Ersparnis nötig sind, um ein Jahr des Werkzeugs zu decken. Liegt der Wert unter zwölf, zahlt sich das Werkzeug im ersten Jahr selbst, und was danach kommt, ist zurückgewonnene Marge."
+      },
+      {
+        "q": "Warum rechnet die Schätzung nicht alle Verwaltungsstunden heraus?",
+        "a": "Weil sie bewusst vorsichtig bleibt: sie berücksichtigt etwa zwei Drittel dieser Stunden, nicht alle. Ein Rest Papierkram bleibt ohnehin, und eine Schätzung, die hundert Prozent verspricht, wäre eine Verkaufszahl und keine Prognose."
       }
     ]
   },

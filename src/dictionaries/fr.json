@@ -1084,6 +1084,18 @@
       {
         "q": "Sur quelles données repose l'économie estimée ?",
         "a": "Uniquement sur les valeurs que vous saisissez : nombre d'opérateurs, sites ou chantiers suivis, heures consacrées à l'administration, coût horaire et litiges typiques de votre secteur. Plus vos données sont réalistes, plus l'estimation est proche de votre cas."
+      },
+      {
+        "q": "Le coût de l'abonnement est-il déjà déduit de l'économie estimée ?",
+        "a": "Le total affiché correspond à l'économie brute. Le délai de retour et le pourcentage de ROI, eux, la comparent au coût annuel de l'outil, calculé sur le nombre d'intervenants que vous avez saisi. Le pourcentage est donc déjà net, le total ne l'est pas."
+      },
+      {
+        "q": "Que signifie le délai de retour en mois ?",
+        "a": "C'est le nombre de mois d'économie estimée nécessaires pour couvrir une année d'outil. En dessous de douze, l'outil se rembourse dès la première année et ce qui suit est de la marge récupérée."
+      },
+      {
+        "q": "Pourquoi le calcul ne récupère-t-il pas toutes les heures administratives ?",
+        "a": "Parce qu'il reste volontairement prudent : il en retient environ deux tiers, pas la totalité. Une part de paperasse subsiste de toute façon, et une estimation qui promettrait cent pour cent serait un argument de vente, pas une prévision."
       }
     ]
   },

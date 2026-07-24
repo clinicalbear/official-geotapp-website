@@ -1084,6 +1084,18 @@
       {
         "q": "Hvilke data er den anslåtte besparelsen basert på?",
         "a": "Bare på verdiene du legger inn: antall ansatte, steder eller byggeplasser, timer brukt på administrasjon, timekostnad og tvistene som er typiske for bransjen din. Jo mer realistiske data, desto nærmere er estimatet din situasjon."
+      },
+      {
+        "q": "Er abonnementskostnaden allerede trukket fra den anslåtte besparelsen?",
+        "a": "Summen du ser er bruttobesparelsen. Tilbakebetalingstiden og ROI-prosenten sammenligner den derimot med årskostnaden for verktøyet, regnet ut fra antallet medarbeidere du har lagt inn. Prosenten er altså netto, summen er det ikke."
+      },
+      {
+        "q": "Hva betyr tilbakebetalingstiden i måneder?",
+        "a": "Det er hvor mange måneder med anslått besparelse som skal til for å dekke ett år med verktøyet. Under tolv betyr at det betaler seg selv i løpet av det første året, og resten er gjenvunnet margin."
+      },
+      {
+        "q": "Hvorfor henter beregningen ikke inn alle administrasjonstimene?",
+        "a": "Fordi den med vilje er forsiktig: den regner med omtrent to tredjedeler av timene, ikke alle. Noe papirarbeid blir igjen uansett, og et anslag som lover hundre prosent ville vært et salgstall og ikke en prognose."
       }
     ]
   },

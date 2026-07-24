@@ -1084,6 +1084,18 @@
       {
         "q": "Op welke gegevens is de geschatte besparing gebaseerd?",
         "a": "Alleen op de waarden die je invult: aantal medewerkers, beheerde locaties of werven, uren besteed aan administratie, uurkosten en de geschillen die typisch zijn voor jouw sector. Hoe realistischer je invoer, hoe dichter de schatting bij jouw situatie ligt."
+      },
+      {
+        "q": "Zijn de abonnementskosten al verrekend in de geschatte besparing?",
+        "a": "Het bedrag dat je ziet is de brutobesparing. De terugverdientijd en het ROI-percentage vergelijken die wel met de jaarkosten van het gereedschap, berekend op het aantal medewerkers dat je hebt ingevuld. Het percentage is dus al netto, het totaal niet."
+      },
+      {
+        "q": "Wat betekent de terugverdientijd in maanden?",
+        "a": "Het is het aantal maanden geschatte besparing dat nodig is om één jaar gereedschap te dekken. Blijft het onder de twaalf, dan betaalt het zichzelf binnen het eerste jaar terug en de rest is teruggewonnen marge."
+      },
+      {
+        "q": "Waarom haalt de berekening niet alle administratie-uren terug?",
+        "a": "Omdat ze bewust voorzichtig blijft: ze rekent ongeveer twee derde van die uren mee, niet alles. Een deel papierwerk blijft toch bestaan, en een schatting die honderd procent belooft is een verkooppraatje, geen prognose."
       }
     ]
   },

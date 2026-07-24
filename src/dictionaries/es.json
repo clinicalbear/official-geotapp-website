@@ -1084,6 +1084,18 @@
       {
         "q": "¿En qué datos se basa el ahorro estimado?",
         "a": "Solo en los valores que introduces tú: número de operarios, centros u obras gestionadas, horas dedicadas a administración, coste por hora y las reclamaciones típicas de tu sector. Cuanto más realistas sean los datos, más se acerca la estimación a tu caso."
+      },
+      {
+        "q": "¿El ahorro estimado ya descuenta el coste de la suscripción?",
+        "a": "El total que ves es el ahorro bruto. El tiempo de retorno y el porcentaje de ROI, en cambio, lo comparan con el coste anual de la herramienta, calculado sobre el número de operarios que has introducido. El porcentaje ya es neto, el total no."
+      },
+      {
+        "q": "¿Qué significa el tiempo de retorno en meses?",
+        "a": "Son los meses de ahorro estimado que hacen falta para cubrir un año de herramienta. Si sale por debajo de doce, la herramienta se paga sola dentro del primer año y lo que viene después es margen recuperado."
+      },
+      {
+        "q": "¿Por qué el cálculo no recupera todas las horas de administración?",
+        "a": "Porque es deliberadamente prudente: cuenta unas dos terceras partes de esas horas, no todas. Algo de papeleo queda igualmente, y una estimación que prometiera el cien por cien sería una cifra de vendedor, no una previsión."
       }
     ]
   },

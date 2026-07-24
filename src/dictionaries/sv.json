@@ -1084,6 +1084,18 @@
       {
         "q": "Vilka uppgifter baseras den uppskattade besparingen på?",
         "a": "Endast på de värden du anger: antal anställda, platser eller arbetsplatser, timmar för administration, timkostnad och de tvister som är typiska för din bransch. Ju mer realistiska uppgifter, desto närmare är uppskattningen din situation."
+      },
+      {
+        "q": "Är abonnemangskostnaden redan avdragen från den uppskattade besparingen?",
+        "a": "Summan du ser är bruttobesparingen. Återbetalningstiden och ROI-procenten jämför den däremot med verktygets årskostnad, räknad på antalet medarbetare du har fyllt i. Procenten är alltså netto, summan är det inte."
+      },
+      {
+        "q": "Vad betyder återbetalningstiden i månader?",
+        "a": "Det är hur många månaders uppskattad besparing som krävs för att täcka ett år med verktyget. Under tolv betyder att det betalar sig själv redan första året, och det som kommer sedan är återvunnen marginal."
+      },
+      {
+        "q": "Varför räknar kalkylen inte hem alla administrationstimmar?",
+        "a": "För att den medvetet håller igen: den tar med ungefär två tredjedelar av timmarna, inte alla. En del pappersarbete blir kvar ändå, och en uppskattning som lovar hundra procent vore en säljsiffra och inte en prognos."
       }
     ]
   },
