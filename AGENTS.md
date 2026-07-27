@@ -12,6 +12,20 @@ Sito marketing GeoTapp — Next.js 16 + Tailwind, deploy Cloudflare Workers via 
   - `npm run deploy` — build + inject scheduled handler + deploy + ping motori di ricerca
   - `npm run ping` — solo ping post-deploy (Google sitemap, Bing, IndexNow)
 
+### 🔴🔴 Su QUALE remote pushare: `official`, non `origin`
+
+Questo clone ha **due** remote e solo uno deploya:
+
+| Remote | Repo GitHub | Cosa fa |
+|---|---|---|
+| **`official`** | `clinicalbear/official-geotapp-website` | **è quello che deploya**: ha i secret `CLOUDFLARE_API_TOKEN` + `CF_ACCOUNT_ID` |
+| `origin` | `clinicalbear/geotapp-site` | mirror del codice: il workflow parte ma **fallisce sempre**, il token non c'è |
+
+Quindi: **`git push official main`**. Pushare solo su `origin` fa credere di aver deployato
+mentre il sito resta fermo, e lascia un run rosso (successo apparente, 27/07/2026: il build passa,
+`wrangler deploy` muore con "necessary to set a CLOUDFLARE_API_TOKEN"). Verifica sempre su
+`gh run list --repo clinicalbear/official-geotapp-website`.
+
 ### 🔴 Come si deploya DAVVERO: basta il push su `main`
 
 **Il deploy è automatico**: `.github/workflows/deploy.yml` gira **a ogni push su `main`**
