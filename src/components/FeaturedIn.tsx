@@ -144,6 +144,11 @@ export default function FeaturedIn({ locale }: { locale: string }) {
                   <img
                     src={item.logo}
                     alt={copy === 0 ? item.outlet : ''}
+                    // loading="lazy": senza, React 19 hoista un preload in <head> per ognuno dei
+                    // 5 loghi (~142 KB) sul percorso critico mobile. La striscia è un marquee
+                    // duplicato, non è mai l'elemento LCP. Fix 2026-07-27.
+                    loading="lazy"
+                    decoding="async"
                     style={{
                       height: 'clamp(34px, 4.4vw, 52px)',
                       width: 'auto',

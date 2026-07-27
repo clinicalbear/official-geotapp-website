@@ -67,14 +67,22 @@ const MockupFlow = ({ m }: { m: { pipeline_title: string; month: string; quote_n
 import { useEffect, useState, useCallback } from 'react';
 
 const TT_BGS = ['/bg1.webp', '/bg2.webp', '/bg3.webp'];
+// 🔴 TUTTE e tre lazy, nessuna con fetchPriority="high" (fix 2026-07-27).
+// Il carosello vive in un contenitore `hidden md:block` (solo desktop) dentro la sezione
+// TimeTracker, molto sotto la fold. Marcare la prima immagine eager+high+sync faceva sì che
+// React 19 hoistasse in <head> un <link rel="preload" as="image" fetchPriority="high"> per
+// /bg1.webp (147,6 KB) — scaricato anche su MOBILE, dove l'immagine non viene mai renderizzata,
+// rubando banda all'elemento LCP reale dell'hero (LCP mobile home 5,6-5,8s contro 1,0s desktop).
+// NB: il preload manuale era già stato tolto da [locale]/page.tsx il 06/06, ma il framework lo
+// ricreava da questi attributi: il fix non aveva mai avuto effetto in produzione.
 const TTBgCarousel = () => {
   const [i, setI] = useState(0);
   const next = useCallback(() => setI((c) => (c + 1) % TT_BGS.length), []);
   useEffect(() => { const t = setInterval(next, 6000); return () => clearInterval(t); }, [next]);
   return (
     <div className="w-full h-full relative">
-      {TT_BGS.map((src, idx) => (
-        <img key={src} src={src} alt="" loading={idx === 0 ? 'eager' : 'lazy'} fetchPriority={idx === 0 ? 'high' : undefined} decoding={idx === 0 ? 'sync' : 'async'} className="absolute inset-0 w-full h-full object-cover transition-opacity duration-700" style={{ opacity: idx === i ? 1 : 0 }} />
+      {TT_BGS.map((src) => (
+        <img key={src} src={src} alt="" loading="lazy" decoding="async" className="absolute inset-0 w-full h-full object-cover transition-opacity duration-700" style={{ opacity: src === TT_BGS[i] ? 1 : 0 }} />
       ))}
     </div>
   );
@@ -584,12 +592,14 @@ export default function Home() {
           <div className="grid md:grid-cols-[3fr_2fr] gap-16 items-start">
             <div className="order-2 md:order-1">
               <div id="verifier-report-viewport" className="rounded-2xl border border-slate-200 bg-white shadow-xl shadow-slate-200/50 overflow-hidden" style={{ maxHeight: '80vh' }}>
-                <img id="verifier-report-img" src="/screenshots/verifier-report.webp" alt="Certified Work Report" className="w-full block" />
+                {/* loading="lazy": senza, React 19 hoista un preload in <head> (36,7 KB sul
+                    percorso critico mobile per un'immagine molto sotto la fold). Fix 2026-07-27. */}
+                <img id="verifier-report-img" src="/screenshots/verifier-report.webp" alt="Certified Work Report" loading="lazy" decoding="async" className="w-full block" />
               </div>
             </div>
             <div id="verifier-text" className="order-1 md:order-2 md:sticky md:top-20 md:self-start">
               <div className="mb-4">
-                <img src="/logoVerifier.webp" alt="GeoTapp Verifier" className="h-10 w-auto object-contain" />
+                <img src="/logoVerifier.webp" alt="GeoTapp Verifier" loading="lazy" decoding="async" className="h-10 w-auto object-contain" />
               </div>
               <h3 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
                 {dict.home_sections.verifier.title}
