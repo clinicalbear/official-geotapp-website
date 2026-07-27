@@ -1067,6 +1067,10 @@ a:hover {
   display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
   padding: 1rem 2.25rem; border: none; border-radius: 9999px;
   font-weight: 700; font-size: 1.0625rem; letter-spacing: 1.3px; text-transform: uppercase;
+  /* `justify-content` centra il blocco di testo, ma quando l'etichetta va a capo
+     (navbar stretta, bottoni w-full) le singole righe seguono `text-align`, che
+     di default parte da sinistra: senza questa riga il testo esce a bandiera. */
+  text-align: center;
   color: #0B3D1A;
   background: #69DB7B;
   background: linear-gradient(90deg, #8CE7A0 0%, #69DB7B 100%);
