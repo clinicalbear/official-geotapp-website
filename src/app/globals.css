@@ -1047,3 +1047,71 @@ a:hover {
   transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
 }
 .btn-modern-sm:hover { transform: translateY(-2px); box-shadow: 0 10px 22px rgba(42,143,196,0.42); filter: brightness(1.06); }
+
+/* ── CTA del TRIAL: pillola con anello che pulsa ──────────────────────────────
+   Usato SOLO per i pulsanti che portano al trial, su pagine, confronti, blog e
+   articoli: deve staccarsi dagli altri bottoni e attirare l'occhio.
+   L'anello nasce piccolo al centro, si espande oltre il bordo e svanisce; al
+   passaggio del mouse la pulsazione si ferma e compare un anello fisso attorno.
+
+   Due accortezze tecniche, non toglierle:
+   - `z-index: 0` sul bottone crea uno stacking context, così l'anello a
+     `z-index: -1` resta dietro al bottone ma NON finisce dietro allo sfondo
+     della sezione (senza, su fondo bianco sparisce).
+   - `prefers-reduced-motion`: chi ha ridotto le animazioni di sistema vede il
+     pulsante fermo, senza pulsazione.
+   ────────────────────────────────────────────────────────────────────────── */
+.btn-ring {
+  position: relative; z-index: 0;
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+  padding: 1rem 2.25rem; border: none; border-radius: 9999px;
+  font-weight: 700; font-size: 1.0625rem; letter-spacing: 1.3px; text-transform: uppercase;
+  color: #0B3D1A;
+  background: #69DB7B;
+  background: linear-gradient(90deg, #8CE7A0 0%, #69DB7B 100%);
+  box-shadow: 12px 12px 24px rgba(105,219,123,0.55);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+}
+.btn-ring::before {
+  content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  min-width: calc(100% + 12px); min-height: calc(100% + 12px); border-radius: 9999px;
+  border: 6px solid #37C95A; box-shadow: 0 0 60px rgba(55,201,90,0.5);
+  opacity: 0; transition: all 0.3s ease-in-out 0s;
+}
+.btn-ring::after {
+  content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  width: 30px; height: 30px; border-radius: 100%; border: 6px solid #37C95A;
+  z-index: -1; animation: btn-ring-pulse 1.5s infinite;
+}
+.btn-ring:hover, .btn-ring:focus-visible { transform: translateY(-6px); }
+.btn-ring:hover::before, .btn-ring:focus-visible::before { opacity: 1; }
+.btn-ring:hover::after, .btn-ring:focus-visible::after { animation: none; display: none; }
+
+/* Variante azzurra, per quando il verde sta su fondo verde */
+.btn-ring-blue {
+  color: #062E45;
+  background: #3BAEE0;
+  background: linear-gradient(90deg, #7FD9F2 0%, #3BAEE0 100%);
+  box-shadow: 12px 12px 24px rgba(59,174,224,0.55);
+}
+.btn-ring-blue::before, .btn-ring-blue::after { border-color: #12A0DC; }
+.btn-ring-blue::before { box-shadow: 0 0 60px rgba(18,160,220,0.5); }
+
+/* Versione compatta: sidebar articoli, CTA in linea, navbar */
+.btn-ring-sm {
+  padding: 0.7rem 1.4rem; font-size: 0.875rem; letter-spacing: 1px;
+  box-shadow: 8px 8px 18px rgba(105,219,123,0.45);
+}
+.btn-ring-sm::after { width: 22px; height: 22px; border-width: 4px; }
+.btn-ring-sm::before { border-width: 4px; }
+
+@keyframes btn-ring-pulse {
+  0%   { width: 30px;  height: 30px;  opacity: 1; }
+  100% { width: 300px; height: 300px; opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-ring::after { animation: none; opacity: 0; }
+  .btn-ring:hover, .btn-ring:focus-visible { transform: none; }
+}

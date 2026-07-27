@@ -448,7 +448,7 @@ export default async function GeoTappVsConnecteamPage({ params }: { params: Prom
             <TrialCTALink
               href={`/${locale}/trial/`}
               source="confronto_vs_connecteam"
-              className="btn-modern"
+              className="btn-ring"
             >
               {t.ctaBtn}
             </TrialCTALink>

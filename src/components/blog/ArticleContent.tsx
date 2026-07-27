@@ -34,7 +34,7 @@ function MidArticleCta({ locale }: { locale: string }) {
       <Link
         href={`/${locale}/trial/`}
         onClick={() => trackEvent('trial_click', { cta_source: 'blog_article' })}
-        className="btn-modern-sm mt-4"
+        className="btn-ring btn-ring-sm mt-4"
       >
         {labels.btn}
       </Link>

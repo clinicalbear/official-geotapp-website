@@ -274,7 +274,7 @@ export default function Navbar() {
               if (isTrialPage) return;
               trackEvent('trial_click', { cta_source: 'navbar', cta_locale: currentLocale });
             }}
-            className="btn-modern-sm"
+            className="btn-ring btn-ring-sm"
           >
             {ctaText}
           </Link>

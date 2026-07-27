@@ -261,7 +261,7 @@ export default function ArticleSidebar({ headings, locale, categories = [], date
         <Link
           href={`/${locale}/trial/`}
           onClick={() => trackEvent('trial_click', { cta_source: 'blog_sidebar', cta_locale: locale })}
-          className="btn-modern-sm mt-4 w-full"
+          className="btn-ring btn-ring-sm mt-4 w-full"
         >
           {labels.cta_btn}
         </Link>

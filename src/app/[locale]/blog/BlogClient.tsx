@@ -312,7 +312,7 @@ export default function BlogClient({ locale, posts }: { locale: AppLocale; posts
           <Link
             href={`/${locale}/trial/`}
             onClick={() => trackEvent('trial_click', { cta_source: 'blog_bottom_gradient' })}
-            className="btn-modern shrink-0"
+            className="btn-ring shrink-0"
           >
             {b.cta_btn}
           </Link>

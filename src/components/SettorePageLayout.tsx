@@ -159,7 +159,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
                 <Link
                   href={trialLink}
                   onClick={() => trackEvent('trial_click', { cta_source: `settore_${settore}_hero`, cta_locale: locale })}
-                  className="btn-modern"
+                  className="btn-ring"
                 >
                   {content.hero.cta_primary} <ArrowRight size={18} />
                 </Link>
@@ -390,7 +390,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
             </p>
             <Link
               href={trialLink}
-              className="btn-modern"
+              className="btn-ring"
               onClick={() => trackEvent('trial_click', { cta_source: `settore_${settore}`, cta_locale: locale })}
             >
               {content.cta_mid.cta} <ArrowRight size={18} />
@@ -782,7 +782,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href={trialLink}
-              className="btn-modern"
+              className="btn-ring"
               onClick={() => trackEvent('trial_click', { cta_source: `settore_${settore}_footer`, cta_locale: locale })}
             >
               {content.cta.primary} <ArrowRight size={18} />

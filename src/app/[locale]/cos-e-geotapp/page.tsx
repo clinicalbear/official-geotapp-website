@@ -502,7 +502,7 @@ export default async function CosEGeoTappPage({ params }: { params: Promise<{ lo
           <p className="text-slate-700 leading-relaxed mb-6">{copy.trialText}</p>
           <Link
             href={trialHref}
-            className="btn-modern"
+            className="btn-ring"
           >
             {copy.trialCta} →
           </Link>

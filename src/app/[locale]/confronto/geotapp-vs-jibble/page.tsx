@@ -526,7 +526,7 @@ export default async function GeoTappVsJibblePage({ params }: { params: Promise<
             <TrialCTALink
               href={`/${locale}/trial/`}
               source="confronto_vs_jibble"
-              className="btn-modern"
+              className="btn-ring"
             >
               {t.ctaBtn}
             </TrialCTALink>

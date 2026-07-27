@@ -523,7 +523,7 @@ export default async function GeoTappVsPersonioPage({ params }: { params: Promis
             <TrialCTALink
               href={`/${locale}/trial/`}
               source="confronto_vs_personio"
-              className="btn-modern"
+              className="btn-ring"
             >
               {t.ctaBtn}
             </TrialCTALink>

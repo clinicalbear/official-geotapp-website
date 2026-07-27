@@ -300,7 +300,7 @@ export default function TrialPage() {
                   <button
                     type="submit"
                     disabled={loading}
-                    className="btn-modern w-full disabled:opacity-60 disabled:cursor-not-allowed"
+                    className="btn-ring w-full disabled:opacity-60 disabled:cursor-not-allowed"
                   >
                     <Send size={20} />
                     {loading ? d.form_submitting : d.form_submit_simple}

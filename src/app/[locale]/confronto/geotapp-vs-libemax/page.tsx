@@ -382,7 +382,7 @@ export default async function GeoTappVsLibemaxPage({ params }: { params: Promise
           <div className="text-center bg-gradient-to-br from-primary/20 to-purple-500/10 border border-primary/20 rounded-2xl p-10">
             <h2 className="text-2xl font-bold mb-3">{t.cta}</h2>
             <p className="text-text-secondary mb-6">{t.ctaDesc}</p>
-            <TrialCTALink href={`/${locale}/trial/`} source="confronto_vs_libemax" className="btn-modern">{t.ctaBtn}</TrialCTALink>
+            <TrialCTALink href={`/${locale}/trial/`} source="confronto_vs_libemax" className="btn-ring">{t.ctaBtn}</TrialCTALink>
           </div>
         </div>
       </div>

@@ -584,7 +584,7 @@ export default function LinksClient({ articles, locale = 'it' }: Props) {
         <motion.div variants={fadeUp} custom={3}>
           <Link href={withUtm(trialHref, 'ig_links_trial', 'hero_primary')}
             onClick={() => trackEvent('trial_click', { cta_source: 'links_hero', cta_locale: locale })}
-            className="btn-modern w-full mb-2">
+            className="btn-ring w-full mb-2">
             <Sparkles size={16} />
             {t.ctaPrimary}
             <ArrowRight size={17} className="group-hover:translate-x-0.5 transition-transform duration-150" />
@@ -666,7 +666,7 @@ export default function LinksClient({ articles, locale = 'it' }: Props) {
           <p className="relative text-[12.5px] text-slate-500 mb-5 leading-relaxed">{t.bottomSub}</p>
           <Link href={withUtm(trialHref, 'ig_links_trial', 'bottom_banner')}
             onClick={() => trackEvent('trial_click', { cta_source: 'links_bottom_banner', cta_locale: locale })}
-            className="btn-modern w-full">
+            className="btn-ring w-full">
             <Sparkles size={15} />
             {t.bottomCta}
             <ArrowRight size={16} className="group-hover:translate-x-0.5 transition-transform duration-150" />

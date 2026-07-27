@@ -312,7 +312,7 @@ export default function Home() {
                 </>
               ); })()}
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <Link href={getLink('/trial')} onClick={() => trackEvent('trial_click', { cta_source: 'homepage_hero', cta_locale: currentLocale })} className="btn-modern group">
+                <Link href={getLink('/trial')} onClick={() => trackEvent('trial_click', { cta_source: 'homepage_hero', cta_locale: currentLocale })} className="btn-ring group">
                   {dict.landing.hero_cta_primary} <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link href={getLink('/settori')} className="btn-modern-ghost">{dict.landing.hero_cta_secondary}</Link>
@@ -653,7 +653,7 @@ export default function Home() {
           <Link
             href={getLink('/trial')}
             onClick={() => trackEvent('trial_click', { cta_source: 'homepage_cta', cta_locale: currentLocale })}
-            className="btn-modern"
+            className="btn-ring"
           >
             {dict.landing.hero_cta_primary}
             <ArrowRight size={20} />
@@ -886,7 +886,7 @@ export default function Home() {
         <Link
           href={getLink('/trial')}
           onClick={() => trackEvent('trial_click', { cta_source: 'homepage_sticky', cta_locale: currentLocale })}
-          className="btn-modern w-full"
+          className="btn-ring w-full"
         >
           {dict.landing.hero_cta_primary}
         </Link>

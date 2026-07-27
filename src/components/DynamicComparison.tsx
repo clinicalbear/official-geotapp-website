@@ -191,7 +191,7 @@ export function DynamicComparison({ locale, copy, initialId }: Props) {
               locale,
             })
           }
-          className="btn-modern"
+          className="btn-ring"
         >
           {copy.ctaBtn}
         </Link>

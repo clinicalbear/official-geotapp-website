@@ -655,7 +655,7 @@ export default function GeoTappApp() {
             <Link
               href={getLink('/trial')}
               onClick={() => trackEvent('trial_click', { cta_source: 'product_timetracker', cta_locale: currentLocale })}
-              className="btn-modern"
+              className="btn-ring"
             >
               <Clock size={24} />{' '}
               {isItalian

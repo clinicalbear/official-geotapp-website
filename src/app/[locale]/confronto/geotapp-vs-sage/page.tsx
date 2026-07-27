@@ -523,7 +523,7 @@ export default async function GeoTappVsSagePage({ params }: { params: Promise<{ 
             <TrialCTALink
               href={`/${locale}/trial/`}
               source="confronto_vs_sage"
-              className="btn-modern"
+              className="btn-ring"
             >
               {t.ctaBtn}
             </TrialCTALink>

@@ -487,7 +487,7 @@ export default async function GeoTappVsClockifyPage({ params }: { params: Promis
             <TrialCTALink
               href={`/${locale}/trial/`}
               source="confronto_vs_clockify"
-              className="btn-modern"
+              className="btn-ring"
             >
               {t.ctaBtn}
             </TrialCTALink>
