@@ -37,7 +37,7 @@ GeoTapp utilizza **field-level encryption client-side** con chiavi derivate loca
 
 - **Bundle Flow + TimeTracker:** sconto **15%**.
 - **Pagamento annuale = 2 mensilità in omaggio** rispetto al mensile.
-- **Servizio B2B: Partita IVA obbligatoria. Durata minima 12 mesi** (vedi §10.1).
+- **Servizio B2B: identificativo fiscale aziendale obbligatorio. Durata minima 12 mesi** (vedi §10.1).
 
 **Pagamenti:** Stripe, rinnovo automatico. Fatturazione conforme alla normativa IVA UE applicabile (operazioni B2B). Recesso, durata minima e rinuncia: vedi §10.1.
 
@@ -203,7 +203,7 @@ Diritto accesso/portabilità su dati crittografati limitato a export encrypted. 
 ### 10. RECESSO E TERMINAZIONE
 
 #### 10.1 Recesso, durata minima e rinuncia (aggiornato 24/06/2026)
-- **Servizio B2B:** l'accesso richiede una **Partita IVA valida**, obbligatoria alla conversione da trial ad abbonamento. Il servizio non è destinato ai consumatori.
+- **Servizio B2B:** l'accesso richiede un **identificativo fiscale aziendale valido**, obbligatorio alla conversione da trial ad abbonamento: partita IVA per i Clienti stabiliti nell'Unione Europea, verificata sul registro VIES, oppure l'identificativo fiscale nazionale equivalente per i Clienti di altri Paesi. Il servizio non è destinato ai consumatori.
 - **Durata minima 12 mesi:** sottoscrivendo, il Cliente approva specificamente la clausola di durata minima di 12 (dodici) mesi e l'obbligo di corrispondere i canoni per l'intero periodo anche in caso di disdetta anticipata. In caso di pagamento mensile, le rate restano dovute fino al termine dei 12 mesi, con **facoltà di saldare in un'unica soluzione l'importo residuo, scontato del 10%**.
 - **Rinuncia al recesso e attivazione immediata (clausola RINUNCIO):** il Cliente può chiedere l'attivazione immediata del servizio dichiarando espressamente di rinunciare al diritto di recesso di 14 giorni; una volta iniziata l'erogazione, tale diritto non potrà più essere esercitato. Se il Cliente **non** rinuncia, mantiene il diritto di ripensamento e il servizio a pagamento si attiva dopo 14 giorni.
 - **Migrazione dati:** export CSV/Firestore (**i dati crittografati client-side richiedono la chiave/password dell'utente**).
@@ -217,7 +217,7 @@ Diritto accesso/portabilità su dati crittografati limitato a export encrypted. 
 ### 11. MODIFICHE ALLA POLITICA
 - Notifica email 30gg prima applicazione
 - Continuo uso = accettazione implicita
-- Changelog: https://geotapp.com/tos-changelog
+- Changelog: https://geotapp.com/terms/
 
 ### 12. LEGGE APPLICABILE E FORO
 - **Legge:** Italiana
@@ -236,7 +236,7 @@ P.IVA: IT04183990987
 - **NON per:** Recupero dati crittografati (impossibile)
 
 **Sito:** https://geotapp.com  
-**Documentazione:** https://docs.geotapp.com  
+**Documentazione:** https://geotapp.com/guida/  
 
 ---
 

@@ -9,6 +9,6 @@ export default function PrivacyPage() {
   return LegalMarkdownPage({
     markdownContent,
     title: 'Informativa Privacy',
-    subtitle: 'Versione 1.0 - 10 Marzo 2026',
+    subtitle: 'Versione 1.1 - 29 luglio 2026',
   });
 }
