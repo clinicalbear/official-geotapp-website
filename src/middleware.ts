@@ -877,9 +877,17 @@ export async function middleware(req: NextRequest) {
     return staticResponse;
   }
 
-  // 2b. /verifica - Public report verification page. Locale-agnostic: bypass
-  // locale detection and serve the page directly without locale prefix redirect.
-  if (pathname.startsWith('/verifica')) {
+  // 2b. /verifica, /verify-report, /r/ — pagine pubbliche di verifica dei report.
+  //
+  // Locale-agnostiche di proposito: `/verify-report?id=...` sta stampato in calce
+  // a ogni report gia' consegnato e `/r/<codice>` dentro il QR sul documento.
+  // Sono indirizzi su carta: non possono passare da un redirect di locale che
+  // cambia il path, e chi li apre non e' detto che sia un utente del sito.
+  if (
+    pathname.startsWith('/verifica') ||
+    pathname.startsWith('/verify-report') ||
+    pathname.startsWith('/r/')
+  ) {
     const response = NextResponse.next();
     applySecurityHeaders(response, req);
     return response;
