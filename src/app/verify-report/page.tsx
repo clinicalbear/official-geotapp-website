@@ -14,7 +14,7 @@
  * GeoTapp non c'e' piu', il documento si verifica comunque.
  */
 
-import { useState } from 'react';
+import { Suspense, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 
 interface Esito {
@@ -44,7 +44,24 @@ const COLORI = {
   invalid: { bordo: '#C65246', fondo: '#FAECEA', testo: '#7C1F17' },
 } as const;
 
-export default function VerificaReport() {
+/**
+ * Il guscio con il Suspense.
+ *
+ * `useSearchParams()` in un componente client obbliga Next a un confine di
+ * Suspense: senza, la build di produzione muore in prerender con
+ * "useSearchParams() should be wrapped in a suspense boundary". In `next dev`
+ * non si vede, perche' il prerender non avviene: l'ho preso in faccia dalla
+ * pipeline di deploy, non dai test.
+ */
+export default function PaginaVerifica() {
+  return (
+    <Suspense fallback={<main className="mx-auto max-w-2xl px-6 py-14" />}>
+      <VerificaReport />
+    </Suspense>
+  );
+}
+
+function VerificaReport() {
   const parametri = useSearchParams();
   const idStampato = parametri.get('id');
   const [file, setFile] = useState<File | null>(null);
