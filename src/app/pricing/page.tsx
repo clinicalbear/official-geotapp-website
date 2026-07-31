@@ -115,6 +115,7 @@ const baseCategories: BaseCategoryConfig[] = [
         priceKey: 'team',
         period: '/year',
         button: 'bg-blue-500 text-white hover:bg-blue-600',
+        isBestValue: true,
         metadata: {
           license_type: 'TEAM',
           seats: 5,
@@ -281,7 +282,7 @@ export default function Pricing() {
       <div key={product.name} className={`plan r-s ${delayClass}`}>
         {(product as any).isBestValue && (
           <span className="absolute -top-3 left-6 bg-slate-900 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest shadow-md">
-            Best Value
+            {(p.recommended as string) ?? 'Recommended'}
           </span>
         )}
 
@@ -380,9 +381,20 @@ export default function Pricing() {
             {product.button}
           </Link>
         ) : (
-          <button className="b1" onClick={() => handleAddToCart(product)}>
-            {(dict.pricing as any).add_btn ?? 'Add'}
-          </button>
+          <>
+            {/* Trial-first: l'azione primaria della card e' provare, non
+                comprare a freddo. Il carrello resta come azione secondaria. */}
+            <Link
+              className="b1"
+              href={getLink('/trial')}
+              onClick={() => trackEvent('trial_click', { cta_source: `pricing_card_${(product as any).priceKey}`, cta_locale: currentLocale })}
+            >
+              {dict.navbar.cta_start ?? dict.navbar.cta}
+            </Link>
+            <button className="b2 plan-add" onClick={() => handleAddToCart(product)}>
+              {(dict.pricing as any).add_btn ?? 'Add'}
+            </button>
+          </>
         )}
       </div>
     );
@@ -430,8 +442,16 @@ export default function Pricing() {
             </p>
           )}
           <div className="plans">
-            {appCategory?.products.map((product) => renderPlanCard(appCategory!, product, 'd1'))}
-            {flowCategory?.products.map((product, i) => renderPlanCard(flowCategory!, product, `d${i + 2}`))}
+            {/* Ordine di lettura: dal piano d'ingresso al piano grande (Solo →
+                Team → Business), e TimeTracker in coda come componente app:
+                prima si capisce Flow, poi il prezzo per operatore sul campo.
+                NB: il dizionario mappa le card per indice, quindi il riordino
+                avviene qui al render, mai dentro baseCategories. */}
+            {(['solo', 'team', 'business'] as const)
+              .map((key) => flowCategory?.products.find((prod) => (prod as any).priceKey === key))
+              .filter((prod): prod is NonNullable<typeof prod> => Boolean(prod))
+              .map((product, i) => renderPlanCard(flowCategory!, product, `d${i + 1}`))}
+            {appCategory?.products.map((product) => renderPlanCard(appCategory!, product, 'd4'))}
           </div>
           {(dict.pricing as any).tracker_footnote && (
             <p className="vat r" style={{ marginTop: '14px' }}>{(dict.pricing as any).tracker_footnote}</p>

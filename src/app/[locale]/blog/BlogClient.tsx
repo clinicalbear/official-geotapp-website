@@ -66,7 +66,9 @@ export default function BlogClient({ locale, posts }: { locale: AppLocale; posts
 
       <section className="ph">
         <div className="w">
-          <p className="kk k"><s></s>{dict.navbar.blog}</p>
+          {/* "Pensieri e Scintille" resta come firma nell'occhiello: l'H1 del
+              blog dice di cosa parliamo, non come ci sentiamo quando scriviamo. */}
+          <p className="kk k"><s></s>{dict.navbar.blog}{(b as any).hero_tagline ? ` · ${(b as any).hero_tagline}` : ''}</p>
           <h1>{b.hero_title}</h1>
           <p className="lede">{b.hero_desc}</p>
           <div className="acts">

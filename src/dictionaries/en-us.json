@@ -58,7 +58,8 @@
     },
     "simulator": {
       "enterprise_desc": "For large organizations we offer tailored solutions."
-    }
+    },
+    "recommended": "Recommended"
   },
   "product_pages": {
     "flow": {

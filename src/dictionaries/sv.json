@@ -465,7 +465,8 @@
     "per_month_short": "/månad",
     "annual_savings": "Årlig besparing:",
     "no_monthly_option": "Inget månadsalternativ",
-    "add_btn": "Lägg till"
+    "add_btn": "Lägg till",
+    "recommended": "Rekommenderad"
   },
   "contact": {
     "title": "Låt oss prata <span class=\"text-primary\">affärer</span>.",
@@ -931,7 +932,7 @@
     "coverage_label": "Omnämnanden i media"
   },
   "blog": {
-    "hero_title": "Tankar och Gnistor.",
+    "hero_title": "Guider om arbetsbevis, GDPR och team i fält.",
     "hero_desc": "Vi skriver inte för att fylla sidor. Vi skriver för att dela vad vi lär oss medan vi bygger framtiden för verifierbart arbete.",
     "no_posts": "Inga artiklar tillgängliga för tillfället.",
     "read_article": "Läs artikel →",
@@ -954,7 +955,8 @@
     "read_post": "Las",
     "next_step_text": "Se hur GeoTapp löser detta problem för {sector}-företag",
     "next_step_fallback": "Se hur GeoTapp fungerar för ditt företag",
-    "next_step_cta": "Läs mer"
+    "next_step_cta": "Läs mer",
+    "hero_tagline": "Tankar och Gnistor."
   },
   "trial": {
     "page_title": "14 dagar gratis. Inget kort.",

@@ -27,6 +27,24 @@
   position: relative;
 }
 
+/* Azione secondaria della card (aggiungi al carrello): sotto la CTA trial,
+   sobria, da <button> nudo. La primaria delle card e' il trial. */
+.lp-prezzi .plan .plan-add {
+  align-self: flex-start;
+  margin-top: 14px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid currentColor;
+  padding: 0 0 3px;
+  font: inherit;
+  font-size: 14.5px;
+  cursor: pointer;
+  opacity: 0.75;
+}
+.lp-prezzi .plan .plan-add:hover {
+  opacity: 1;
+}
+
 /* Il calcolatore (.calc) e' gia' scoperto in l-mockup.css per il solo mobile
    (grid-template-columns:1fr). Qui restiamo dentro .sec.ink: nessuna aggiunta
    necessaria, la card e' quella globale. */

@@ -465,7 +465,8 @@
     "per_month_short": "/mois",
     "annual_savings": "Économie annuelle :",
     "no_monthly_option": "Pas d'option mensuelle",
-    "add_btn": "Ajouter"
+    "add_btn": "Ajouter",
+    "recommended": "Recommandé"
   },
   "contact": {
     "title": "Parlons <span class=\"text-primary\">Business</span>.",
@@ -931,7 +932,7 @@
     "coverage_label": "Ils parlent de nous"
   },
   "blog": {
-    "hero_title": "Pensées & Étincelles.",
+    "hero_title": "Guides sur la preuve du travail, le RGPD et les équipes terrain.",
     "hero_desc": "Nous n'écrivons pas pour remplir des pages. Nous écrivons pour partager ce que nous apprenons en construisant l'avenir du travail vérifiable.",
     "no_posts": "Aucun article disponible pour le moment.",
     "read_article": "Lire l'article →",
@@ -954,7 +955,8 @@
     "read_post": "Lire",
     "next_step_text": "Découvrez comment GeoTapp résout ce problème pour les entreprises de {sector}",
     "next_step_fallback": "Découvrez comment GeoTapp fonctionne pour votre entreprise",
-    "next_step_cta": "En savoir plus"
+    "next_step_cta": "En savoir plus",
+    "hero_tagline": "Pensées & Étincelles."
   },
   "trial": {
     "page_title": "14 jours gratuits. Sans carte.",

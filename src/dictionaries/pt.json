@@ -465,7 +465,8 @@
     "per_month_short": "/mês",
     "annual_savings": "Poupança anual:",
     "no_monthly_option": "Sem opção mensal",
-    "add_btn": "Adicionar"
+    "add_btn": "Adicionar",
+    "recommended": "Recomendado"
   },
   "contact": {
     "title": "Vamos falar de <span class=\"text-primary\">Negócio</span>.",
@@ -931,7 +932,7 @@
     "coverage_label": "Cobertura mediática"
   },
   "blog": {
-    "hero_title": "Pensamentos e Centelhas.",
+    "hero_title": "Guias sobre prova do trabalho, RGPD e equipas no terreno.",
     "hero_desc": "Não escrevemos para preencher páginas. Escrevemos para partilhar o que aprendemos construindo o futuro do trabalho verificável.",
     "no_posts": "Nenhum artigo disponível de momento.",
     "read_article": "Ler artigo →",
@@ -954,7 +955,8 @@
     "read_post": "Ler",
     "next_step_text": "Descubra como o GeoTapp resolve este problema para empresas de {sector}",
     "next_step_fallback": "Descubra como o GeoTapp funciona para a sua empresa",
-    "next_step_cta": "Saber mais"
+    "next_step_cta": "Saber mais",
+    "hero_tagline": "Pensamentos e Centelhas."
   },
   "trial": {
     "page_title": "14 dias grátis. Sem cartão.",

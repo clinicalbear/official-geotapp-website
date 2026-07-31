@@ -465,7 +465,8 @@
     "per_month_short": "/måned",
     "annual_savings": "Årlig besparelse:",
     "no_monthly_option": "Ingen månedlig mulighet",
-    "add_btn": "Legg til"
+    "add_btn": "Legg til",
+    "recommended": "Anbefalt"
   },
   "contact": {
     "title": "La oss snakke <span class=\"text-primary\">forretninger</span>.",
@@ -931,7 +932,7 @@
     "coverage_label": "Medieomtale"
   },
   "blog": {
-    "hero_title": "Tanker og Gnister.",
+    "hero_title": "Guider om arbeidsdokumentasjon, GDPR og team i felt.",
     "hero_desc": "Vi skriver ikke for å fylle sider. Vi skriver for å dele det vi lærer mens vi bygger fremtiden for verifiserbart arbeid.",
     "no_posts": "Ingen artikler tilgjengelige for øyeblikket.",
     "read_article": "Les artikkel →",
@@ -954,7 +955,8 @@
     "read_post": "Les",
     "next_step_text": "Se hvordan GeoTapp løser dette problemet for {sector}-bedrifter",
     "next_step_fallback": "Se hvordan GeoTapp fungerer for din bedrift",
-    "next_step_cta": "Les mer"
+    "next_step_cta": "Les mer",
+    "hero_tagline": "Tanker og Gnister."
   },
   "trial": {
     "page_title": "14 dager gratis. Intet kort.",

@@ -465,7 +465,8 @@
     "annual_savings": "Annual savings:",
     "no_monthly_option": "No monthly option",
     "add_btn": "Add",
-    "tracker_footnote": "* Maximum number of TimeTracker users that can be activated simultaneously on the Flow plan. Removing an employee's access immediately frees the slot."
+    "tracker_footnote": "* Maximum number of TimeTracker users that can be activated simultaneously on the Flow plan. Removing an employee's access immediately frees the slot.",
+    "recommended": "Recommended"
   },
   "contact": {
     "title": "Let's Talk <span class=\"text-primary\">Business</span>.",
@@ -1000,7 +1001,7 @@
     "coverage_label": "As featured in"
   },
   "blog": {
-    "hero_title": "Thoughts & Sparks.",
+    "hero_title": "Guides on proof of work, GDPR and field teams.",
     "hero_desc": "We don't write to fill pages. We write to share what we learn building the future of verifiable work.",
     "no_posts": "No articles available at the moment.",
     "read_article": "Read article →",
@@ -1023,7 +1024,8 @@
     "read_post": "Read",
     "next_step_text": "See how GeoTapp solves this for {sector} companies",
     "next_step_fallback": "See how GeoTapp works for your business",
-    "next_step_cta": "Learn more"
+    "next_step_cta": "Learn more",
+    "hero_tagline": "Thoughts & Sparks."
   },
   "roi": {
     "meta_title": "GeoTapp ROI Calculator - Discover Your Real Savings",

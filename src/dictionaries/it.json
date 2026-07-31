@@ -465,7 +465,8 @@
     "annual_savings": "Risparmio annuale:",
     "no_monthly_option": "Nessuna opzione mensile",
     "add_btn": "Aggiungi",
-    "tracker_footnote": "* Numero massimo di utenti TimeTracker attivabili contemporaneamente nel piano Flow. Rimuovendo l'accesso a un dipendente il posto si libera subito."
+    "tracker_footnote": "* Numero massimo di utenti TimeTracker attivabili contemporaneamente nel piano Flow. Rimuovendo l'accesso a un dipendente il posto si libera subito.",
+    "recommended": "Consigliato"
   },
   "contact": {
     "title": "Parliamo di <span class=\"text-primary\">Business</span>.",
@@ -1000,7 +1001,7 @@
     "coverage_label": "Ci hanno citato"
   },
   "blog": {
-    "hero_title": "Pensieri e Scintille.",
+    "hero_title": "Guide su prova del lavoro, GDPR e squadre sul campo.",
     "hero_desc": "Non scriviamo per riempire pagine. Scriviamo per condividere ciò che impariamo costruendo il futuro del lavoro certificabile.",
     "no_posts": "Nessun articolo disponibile al momento.",
     "read_article": "Leggi l'articolo →",
@@ -1023,7 +1024,8 @@
     "read_post": "Leggi",
     "next_step_text": "Scopri come GeoTapp risolve questo problema per le aziende di {sector}",
     "next_step_fallback": "Scopri come funziona GeoTapp per la tua azienda",
-    "next_step_cta": "Scopri di più"
+    "next_step_cta": "Scopri di più",
+    "hero_tagline": "Pensieri e Scintille."
   },
   "roi": {
     "meta_title": "Calcolatore ROI GeoTapp - Scopri il tuo risparmio reale",

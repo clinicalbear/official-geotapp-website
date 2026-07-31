@@ -55,8 +55,11 @@ export default function Navbar() {
   let ctaHref = getLink('/trial');
 
   if (isTrialPage) {
-    ctaText = dict.cta_signin ?? dict.login;
-    ctaHref = 'https://flow.geotapp.com';
+    // Sulla pagina trial il bottone verde porta al form, non al login:
+    // il login resta nel link "Accedi" testuale. Un "ACCEDI" verde qui
+    // era la CTA primaria che spingeva fuori dal funnel.
+    ctaText = dict.cta_start ?? dict.cta;
+    ctaHref = '#trial-form';
   } else if (isPricingPage) {
     ctaText = dict.cta_start ?? dict.cta;
   } else if (isBlogArticle) {
@@ -159,7 +162,6 @@ export default function Navbar() {
         <LanguageSwitcher className="nv-lang-chip" />
         <Link
           href={ctaHref}
-          {...(isTrialPage ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
           onClick={ctaClick}
           className="nv-cta"
         >

@@ -9,6 +9,7 @@ import { clsx } from 'clsx';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import SurveyInvite from '@/components/SurveyInvite';
+import NewsletterModal from '@/components/NewsletterModal';
 import Script from 'next/script';
 import SiteAnalytics from '@/components/SiteAnalytics';
 import InternalTrafficBadge from '@/components/InternalTrafficBadge';
@@ -77,6 +78,7 @@ export default async function BlogLayout({ children }: { children: ReactNode }) 
           </div>
         </div>
         <SurveyInvite />
+        <NewsletterModal locale={locale} />
         <InternalTrafficBadge />
         <CookieConsentBanner locale={locale} />
       </body>

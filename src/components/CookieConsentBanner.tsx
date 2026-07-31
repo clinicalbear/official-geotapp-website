@@ -267,20 +267,18 @@ export default function CookieConsentBanner({ locale }: { locale: string }) {
           aria-live="polite"
           aria-label={t.modalTitle}
           style={{
+            // Barra sottile a filo del bordo inferiore: copre il meno possibile
+            // (il vecchio formato a card flottante nascondeva la CTA hero su mobile).
             position: 'fixed',
-            bottom: 16,
-            left: 16,
-            right: 16,
+            bottom: 0,
+            left: 0,
+            right: 0,
             zIndex: 9999,
-            maxWidth: 760,
-            margin: '0 auto',
             background: 'rgba(15, 23, 42, 0.97)',
             backdropFilter: 'blur(12px)',
             WebkitBackdropFilter: 'blur(12px)',
-            borderRadius: 16,
-            border: '1px solid rgba(255,255,255,0.08)',
-            padding: '16px 20px',
-            boxShadow: '0 20px 60px rgba(15, 23, 42, 0.35), 0 8px 16px rgba(15, 23, 42, 0.2)',
+            borderTop: '1px solid rgba(255,255,255,0.08)',
+            padding: '8px 16px',
           }}
         >
           <div
@@ -288,24 +286,26 @@ export default function CookieConsentBanner({ locale }: { locale: string }) {
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'space-between',
-              gap: 16,
+              gap: 12,
               flexWrap: 'wrap',
+              maxWidth: 1120,
+              margin: '0 auto',
             }}
           >
             <p
               style={{
                 margin: 0,
                 fontFamily: 'var(--font-inter, Inter, sans-serif)',
-                fontSize: '0.85rem',
+                fontSize: '0.8rem',
                 color: '#cbd5e1',
-                lineHeight: 1.5,
-                flex: '1 1 280px',
+                lineHeight: 1.4,
+                flex: '1 1 240px',
                 minWidth: 0,
               }}
             >
               🍪 {t.body}
             </p>
-            <div style={{ display: 'flex', gap: 8, flexShrink: 0, flexWrap: 'wrap' }}>
+            <div style={{ display: 'flex', gap: 6, flexShrink: 0, flexWrap: 'wrap' }}>
               <button
                 type="button"
                 onClick={() => persist(false, 'necessary_only')}
@@ -535,7 +535,7 @@ function Toggle({
 }
 
 const btnPrimaryStyle: React.CSSProperties = {
-  padding: '8px 18px',
+  padding: '6px 14px',
   borderRadius: 10,
   border: 'none',
   background: '#8FC436',
@@ -549,7 +549,7 @@ const btnPrimaryStyle: React.CSSProperties = {
 };
 
 const btnSecondaryStyle: React.CSSProperties = {
-  padding: '8px 16px',
+  padding: '6px 12px',
   borderRadius: 10,
   border: '1px solid rgba(148,163,184,0.3)',
   background: 'transparent',
@@ -562,7 +562,7 @@ const btnSecondaryStyle: React.CSSProperties = {
 };
 
 const btnGhostStyle: React.CSSProperties = {
-  padding: '8px 12px',
+  padding: '6px 10px',
   borderRadius: 10,
   border: 'none',
   background: 'transparent',

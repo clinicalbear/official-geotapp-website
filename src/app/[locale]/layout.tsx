@@ -8,15 +8,12 @@ import '../redesign-l.css';
 import '../l-mockup.css';
 import { clsx } from 'clsx';
 import Navbar from '@/components/Navbar';
-import LSipario from '@/components/LSipario';
 import LEffetti from '@/components/LEffetti';
 import Footer from '@/components/Footer';
 import { Toaster } from 'react-hot-toast';
 import CartDrawer from '@/components/CartDrawer';
 import Script from 'next/script';
 import CookieConsentBanner from '@/components/CookieConsentBanner';
-import NewsletterModal from '@/components/NewsletterModal';
-import SurveyInvite from '@/components/SurveyInvite';
 import ChatWidget from '@/components/kairos/ChatWidget';
 import SiteAnalytics from '@/components/SiteAnalytics';
 import InternalTrafficBadge from '@/components/InternalTrafficBadge';
@@ -308,7 +305,6 @@ export default async function LocaleLayout({ children, params }: Props) {
           'bg-background text-text-primary font-sans antialiased selection:bg-primary selection:text-black',
         )}
       >
-        <LSipario />
         <LEffetti />
         {/* ── Organization schema ───────────────────────────────────────────
             Standalone entity for Google Knowledge Graph. @id anchors all
@@ -570,8 +566,6 @@ export default async function LocaleLayout({ children, params }: Props) {
         />
         <SiteAnalytics />
         <CookieConsentBanner locale={locale} />
-        <SurveyInvite />
-        <NewsletterModal locale={locale} />
         <ChatWidget />
         <InternalTrafficBadge />
       </body>

@@ -781,6 +781,19 @@ details.closing .ct>p{padding-bottom:0;opacity:0;transition:padding-bottom .55s 
 .lp-risorsa-strumento .form .in{border:1px solid rgba(242,240,233,.24);padding:15px 16px;font-size:16px;color:rgba(242,240,233,.55)}
 
 /* varianti trial → .lp-trial */
+/* Testata compatta: il form deve stare sopra la piega (il worst step del
+   funnel e' page_view → form_start, non facciamo scrollare chi e' gia' qui). */
+.lp-trial .ph{padding:150px 0 44px}
+.lp-trial .ph h1{font-size:clamp(32px,4.2vw,68px)}
+.lp-trial .ph .lede{margin-top:18px}
+.lp-trial .ph .acts{margin-top:26px}
+.lp-trial #trial-form{padding-top:48px}
+@media(max-width:760px){
+  .lp-trial .ph{padding:120px 0 30px}
+  /* i due bottoni della testata duplicano il form che sta subito sotto */
+  .lp-trial .ph .acts{display:none}
+  .lp-trial #trial-form{padding-top:26px}
+}
 .lp-trial .form{background:var(--ink);color:var(--paper);padding:52px 46px}
 .lp-trial .form label{display:block;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--lime);margin-bottom:12px}
 .lp-trial .form .in{border:1px solid rgba(242,240,233,.26);padding:18px 18px;font-size:17px;color:rgba(242,240,233,.5)}
@@ -950,7 +963,15 @@ main:has(> .lp-l){padding-top:0}
 @media(max-width:1350px){.ne{margin-right:325px}}
 @media(max-width:900px){.nvr{padding:0 22px}.ne{margin-right:300px}
   .nv-cta{padding:11px 18px;font-size:12px !important}}
-@media(max-width:520px){.nv-lang{display:none}.ne{margin-right:150px}}
+@media(max-width:520px){.nv-lang{display:none}
+  /* sotto i 520px logo pieno + carrello + hamburger + CTA non ci stanno:
+     il carrello finiva SOPRA il logotipo. Misure ridotte, niente sovrapposizioni. */
+  .nvl img{height:36px !important}
+  .ne{margin-right:128px;gap:14px}
+  .nv-cta{padding:10px 14px;font-size:11px !important}}
+/* il marchio vive sopra qualsiasi contenuto che scorre: un'ombra leggera
+   lo stacca dalle fasce chiare (loghi "citati su") senza toccare il negativo */
+.nvl img{filter:drop-shadow(0 1px 10px rgba(14,14,12,.3))}
 /* apertura su mobile: il titolo puo' andare su piu' righe senza tagli */
 @media(max-width:600px){
   .op h1{font-size:clamp(30px,9.5vw,40px)}
