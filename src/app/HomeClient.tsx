@@ -65,6 +65,31 @@ const L_COPY: Record<string, LCopy> = {
   ru: { h1a: 'Работа была сделана.', h1b: 'Теперь сделайте её доказуемой.', lede: 'Каждый выезд оставляет доказательство: позиция, фото и время, закрытые в запечатанном отчёте, который клиент может проверить сам. При споре вы ничего не восстанавливаете: открываете отчёт, показываете его, и всё.', scroll: 'Листайте', cycle: 'Три инструмента, один цикл: поле записывает, офис видит, клиент проверяет. Никаких устных передач, никаких листов, которые нужно восстанавливать в пятницу вечером.', la_prova: 'Доказательство', il_ciclo: 'Цикл', il_conto: 'Счёт', presenti: 'Мы представлены на', chi: 'Кто им пользуется', campo: 'Поле', ufficio: 'Офис', cliente: 'Клиент', roi_h2: 'Цифры, на которые вы не смотрите, и есть те, что вам стоят денег.', roi_p: 'Часы на бюрократию, споры, которые оплачиваете вы, координация на словах. Вы не чувствуете, как они уходят со счёта, но они уходят. Введите три числа и посмотрите, сколько набегает за год: обычно это удивляет, и не в лучшую сторону.', roi_cta: 'Рассчитать скрытые расходы' },
 };
 
+
+/** Evidenzia una parte del titolo in verde GeoTapp (per pannello). */
+const EV_WORD: Record<string, string> = {
+  it: 'fidino', en: 'trust', de: 'vertrauen', fr: 'confiance', es: 'conf\u00eden',
+  pt: 'confiem', nl: 'vertrouwen', da: 'stoler', sv: 'litar', nb: 'stoler', ru: '\u0432\u0435\u0440\u0438\u043b\u0438',
+};
+function evidenzia(title: string, mode: 'ultima' | 'seconda-frase' | 'parola', locale?: string) {
+  if (mode === 'ultima') {
+    const m = title.trim().match(/^([\s\S]*?)(\S+)$/);
+    if (!m) return title;
+    return (<>{m[1]}<i className="ev">{m[2]}</i></>);
+  }
+  if (mode === 'seconda-frase') {
+    const i = title.indexOf('. ');
+    if (i < 0) return title;
+    return (<>{title.slice(0, i + 2)}<i className="ev">{title.slice(i + 2)}</i></>);
+  }
+  const w = EV_WORD[locale ?? ''] ?? '';
+  if (!w) return title;
+  const rx = new RegExp(`(${w})`, 'i');
+  const parts = title.split(rx);
+  if (parts.length < 3) return title;
+  return (<>{parts[0]}<i className="ev">{parts[1]}</i>{parts.slice(2).join('')}</>);
+}
+
 const SETTORI_IMGS: Record<string, { img: string; pos: string }> = {
   installatori: { img: '/bg1.webp', pos: 'center 42%' },
   pulizie: { img: '/bg2.webp', pos: 'center 38%' },
@@ -189,6 +214,7 @@ export default function Home({ jrSlot, fqSlot }: { jrSlot?: ReactNode; fqSlot?: 
   const prodotti = [
     {
       kk: `GeoTapp TimeTracker · ${L.campo}`,
+      ev: 'ultima' as const,
       d: dict.home_sections.app,
       href: getLink('/products/geotapp-timetracker'),
       feats: [
@@ -205,6 +231,7 @@ export default function Home({ jrSlot, fqSlot }: { jrSlot?: ReactNode; fqSlot?: 
     },
     {
       kk: `GeoTapp Flow · ${L.ufficio}`,
+      ev: 'seconda-frase' as const,
       d: dict.home_sections.flow,
       href: getLink('/products/geotapp-flow'),
       feats: [dict.home_sections.flow.features.crm, dict.home_sections.flow.features.pipeline],
@@ -219,6 +246,7 @@ export default function Home({ jrSlot, fqSlot }: { jrSlot?: ReactNode; fqSlot?: 
     },
     {
       kk: `GeoTapp Verifier · ${L.cliente}`,
+      ev: 'parola' as const,
       d: dict.home_sections.verifier,
       href: getLink('/products/geotapp-verifier'),
       feats: [dict.home_sections.verifier.features.integrity, dict.home_sections.verifier.features.independent],
@@ -398,7 +426,7 @@ export default function Home({ jrSlot, fqSlot }: { jrSlot?: ReactNode; fqSlot?: 
             <div className="dev">{p.dev}</div>
             <div className="ct">
               <p className="kk k">{p.kk}</p>
-              <h3>{p.d.title}</h3>
+              <h3>{evidenzia(p.d.title, p.ev, currentLocale)}</h3>
               <div className="cl2">
                 <p dangerouslySetInnerHTML={{ __html: p.d.subtitle }} />
                 {p.feats && (

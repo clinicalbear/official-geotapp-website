@@ -1047,3 +1047,11 @@ main:has(> .lp-l){padding-top:0}
 .lp-blog .posts .ph{height:210px}
 .lp-blog .posts .ph img{width:100%;height:100%;object-fit:cover}
 .jr .ph img{width:100%;height:100%;object-fit:cover}
+/* titoli dei pannelli: la parte chiave in verde GeoTapp */
+.acc h3 .ev{font-style:normal;color:#8FC436}
+/* pg2: il blocco 01 02 03 senza alcuno sfondo */
+.lp-home .pg2 .three, .lp-home .pg2 .three article{background:transparent !important;
+  box-shadow:none !important}
+/* il bottone "Scarica il report (.zip)": bg-emerald-500 catturato per errore
+   dalla regola bg-emerald-50 dello strato vecchio */
+a[class*="bg-emerald-500"]{background-color:#10b981 !important;color:#fff !important}
