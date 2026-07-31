@@ -1061,6 +1061,13 @@ a:hover {
    - `prefers-reduced-motion`: chi ha ridotto le animazioni di sistema vede il
      pulsante fermo, senza pulsazione.
    ────────────────────────────────────────────────────────────────────────── */
+/* Il pulsante trial DENTRO il corpo degli articoli WP ("Apri il trial",
+   anello che pulsa) e' stato tolto su richiesta di Mike (31/07/2026): il
+   lampeggio a meta' lettura infastidiva. Il box di contesto resta, spariscono
+   solo i bottoni che puntano al trial. La regola copre tutti gli articoli
+   pubblicati senza riscrivere i contenuti su WordPress. */
+.article-content a.btn-modern-sm[href*="/trial"] { display: none; }
+
 .btn-ring,
 .article-content .btn-modern-sm {
   position: relative; z-index: 0;
