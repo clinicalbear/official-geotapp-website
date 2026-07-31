@@ -1055,3 +1055,6 @@ main:has(> .lp-l){padding-top:0}
 /* il bottone "Scarica il report (.zip)": bg-emerald-500 catturato per errore
    dalla regola bg-emerald-50 dello strato vecchio */
 a[class*="bg-emerald-500"]{background-color:#10b981 !important;color:#fff !important}
+/* blocco 01-02-03: restano solo il filo alto del contenitore, niente altri bordi */
+.lp-home .pg2 .three, .lp-home .pg2 .three article{border-left:0 !important;
+  border-right:0 !important;border-bottom:0 !important}
