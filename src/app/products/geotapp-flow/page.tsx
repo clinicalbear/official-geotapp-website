@@ -377,8 +377,7 @@ export default function GeoTappApp() {
         <div className="w">
           <p className="kk k"><s />{flowDict.hero_badge}</p>
           <h1>
-            <span className="sr-only">{heroTitlePlain || 'GeoTapp Flow'}</span>
-            <span aria-hidden="true">{heroTitleMain.replace(/<[^>]*>/g, '')}</span>
+            {heroTitlePlain || 'GeoTapp Flow'}
             {heroTitleRest && (
               <>
                 <br />

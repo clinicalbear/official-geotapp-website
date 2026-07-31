@@ -160,8 +160,7 @@ export default function GeoTappApp() {
         <div className="w">
           <p className="kk k"><s />{appDict.hero_badge}</p>
           <h1>
-            <span className="sr-only">{heroTitlePlain || 'GeoTapp TimeTracker'}</span>
-            <span aria-hidden="true">{heroTitleMain.replace(/<[^>]*>/g, '')}</span>
+            {heroTitlePlain || 'GeoTapp TimeTracker'}
             {heroTitleRest && (
               <>
                 <br />
