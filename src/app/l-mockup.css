@@ -852,29 +852,25 @@ main:has(> .lp-l){padding-top:0}
   font-size:19px;letter-spacing:.01em;transition:color .3s,padding-left .3s}
 .nvd a.lnk:hover{color:#B6E86A;padding-left:8px}
 .nvd .kk{color:#8FC436;margin-bottom:22px}
-/* ── tendina prodotti: i loghi grandi che sfondano i bordi a destra ──
-   Il nero a destra delle tre card era vuoto: ora lo abitano le icone
-   prodotto, fuori scala, tagliate dal bordo alto-dx e dal bordo basso
-   (overflow:hidden sulla fascia). Solo desktop: sotto i 1081px il menu
-   e' quello mobile e il collage non esiste. */
-.nvd{overflow:hidden}
-.nvd-art{display:none}
+/* ── tendina prodotti: il logo fuori scala DENTRO ogni card ──
+   Ogni card cliccabile ospita il suo logo in grande sulla destra, tagliato
+   dai bordi alto e basso della card stessa (overflow:hidden). Il logo
+   piccolo sopra il titolo si spegne: la card e' gia' il suo marchio.
+   Solo desktop: sotto i 1081px il menu e' quello mobile. */
+.nvd a.itm .art{display:none}
 @media(min-width:1081px){
-  .nvd-prod .w{position:relative;z-index:1}
-  /* le card si stringono a sinistra: l'aria a destra e' del collage */
-  .nvd-prod .g{grid-template-columns:repeat(3,minmax(0,290px));justify-content:start}
-  /* fondo pieno: il collage non deve trasparire dietro i testi delle card */
-  .nvd-prod a.itm{background:#0E0E0C}
-  .nvd-prod a.itm:hover{background:#171B10}
-  .nvd-art{display:block;position:absolute;inset:0;pointer-events:none;z-index:0}
-  .nvd-art img{position:absolute;width:auto;opacity:.92;
-    filter:drop-shadow(0 24px 48px rgba(0,0,0,.45))}
-  /* Flow: esce dall'angolo alto a destra */
-  .nvd-art img:nth-child(1){height:380px;top:-90px;right:-120px;transform:rotate(8deg)}
-  /* TimeTracker: esce dal bordo basso */
-  .nvd-art img:nth-child(2){height:320px;bottom:-130px;right:330px;transform:rotate(-8deg)}
-  /* Verifier: tra i due, taglio sul bordo basso a destra */
-  .nvd-art img:nth-child(3){height:270px;bottom:-70px;right:40px;transform:rotate(5deg)}
+  .nvd-prod a.itm{position:relative;overflow:hidden;min-height:172px;padding-right:170px}
+  .nvd-prod a.itm>img:not(.art){display:none}
+  .nvd-prod a.itm .art{display:block;position:absolute;width:auto;max-width:none;margin:0;
+    opacity:.92;filter:drop-shadow(0 16px 32px rgba(0,0,0,.45));
+    transition:transform .45s cubic-bezier(.16,1,.3,1)}
+  /* misure esplicite nei rapporti nativi dei file (width:auto qui non
+     risolve il rapporto intrinseco, qualcosa a monte lo azzoppa) */
+  .nvd-prod .g a.itm:nth-child(1) .art{width:372px;height:248px;top:-42px;right:-90px}
+  .nvd-prod .g a.itm:nth-child(2) .art{width:280px;height:280px;top:-54px;right:-56px}
+  .nvd-prod .g a.itm:nth-child(3) .art{width:240px;height:289px;top:-52px;right:-36px}
+  .nvd-prod a.itm:hover .art{transform:scale(1.07) rotate(2deg)}
+  .nvd-prod a.itm b,.nvd-prod a.itm p{position:relative;z-index:1}
 }
 
 /* ── menu mobile: sipario nero a tutto schermo ── */

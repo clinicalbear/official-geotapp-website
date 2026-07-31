@@ -175,16 +175,6 @@ export default function Navbar() {
         onMouseEnter={() => openMenu('products')}
         onMouseLeave={scheduleClose}
       >
-        {/* collage decorativo: i loghi prodotto, grandi, che sfondano i bordi
-            (il taglio lo fa l'overflow della fascia). Solo desktop, via CSS. */}
-        <div className="nvd-art" aria-hidden="true">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/iconaFlow.webp" alt="" loading="lazy" />
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/iconaTT.webp" alt="" loading="lazy" />
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/iconaVerifier.webp" alt="" loading="lazy" />
-        </div>
         <div className="w">
           <p className="kk k">{dict.products}</p>
           <div className="g">
@@ -192,6 +182,10 @@ export default function Navbar() {
               <Link key={p.name} href={p.href} className="itm">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={p.iconSrc} alt="" loading="lazy" />
+                {/* il logo fuori scala che abita la card: sfonda i bordi alto
+                    e basso sulla destra, il taglio lo fa l'overflow della card */}
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={p.iconSrc} alt="" className="art" aria-hidden="true" loading="lazy" />
                 <b>{p.name}</b>
                 <p>{p.desc}</p>
               </Link>
