@@ -35,5 +35,12 @@ export default async function LocalePrivacyPage({ params }: { params: Promise<{ 
   const { locale } = await params;
   const meta = META[locale] ?? META.it;
   const content = getPrivacyContent(locale as AppLocale);
-  return LegalMarkdownPage({ markdownContent: content, title: meta.pageTitle, subtitle: meta.subtitle });
+  return LegalMarkdownPage({
+    markdownContent: content,
+    title: meta.pageTitle,
+    subtitle: meta.subtitle,
+    description: meta.description,
+    slug: 'privacy',
+    locale: locale as AppLocale,
+  });
 }

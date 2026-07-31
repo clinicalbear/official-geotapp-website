@@ -1,38 +1,41 @@
 'use client';
 
 import { useState } from 'react';
-import {
-  Users,
-  Calculator,
-  ArrowRight,
-  MessageSquare,
-  Info,
-  Shield,
-} from 'lucide-react';
 import Link from 'next/link';
 import { useCart } from '@/store/cart';
 import { usePathname } from 'next/navigation';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import { getLocaleFromPathname } from '@/lib/i18n/locale-routing';
 import {
+  EUR_PRICES,
   calculateTrackerQuote,
   getStandardRateMonthly,
+  getVolumeRateMonthly,
   getCurrencyForLocale,
 } from '@/lib/pricing';
 
+// Direzione L: stessa logica di sempre (calculateTrackerQuote, useCart), vestito
+// nel registro del mockup docs/redesign-sito-2026-07/esplorazione/prezzi.html
+// (.calc a due colonne, .seats in Anton, .tiers, .box). Componente usato SOLO
+// da questa pagina: className liberi qui, nessun'altra route lo importa.
 export default function PricingCalculator() {
   const pathname = usePathname();
   const locale = getLocaleFromPathname(pathname);
-  const pc = getDictionary(locale).pricing.calculator;
+  const dict = getDictionary(locale);
+  const pc = dict.pricing.calculator;
 
   const [employees, setEmployees] = useState(10);
 
   const quote = calculateTrackerQuote(employees, locale);
   const { addItem, toggleCart } = useCart();
 
+  const { tier1MaxSeats, tier2MaxSeats } = EUR_PRICES.tracker;
+  const tier1Rate = getStandardRateMonthly(locale);
+  const tier2Rate = getVolumeRateMonthly(locale);
+
   const standardRateLabel = pc.standard_rate.replace(
     '{price}',
-    getStandardRateMonthly(locale).formatted,
+    tier1Rate.formatted,
   );
 
   const handleAddToCart = () => {
@@ -56,118 +59,102 @@ export default function PricingCalculator() {
     toggleCart();
   };
 
+  const pct = ((employees - 1) / (151 - 1)) * 100;
+
   return (
-    <div className="w-full h-full bg-white border border-slate-200 rounded-2xl p-8 shadow-2xl relative overflow-hidden">
-      {/* Decorative Background Blob */}
-      <div className="absolute top-0 right-0 w-64 h-64 bg-blue-50 rounded-full blur-3xl opacity-50 -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
-
-      <div className="flex items-center gap-4 mb-8 relative z-10">
-        <div className="p-4 rounded-2xl bg-orange-50 text-orange-600 shadow-sm border border-orange-100">
-          <Calculator size={28} />
-        </div>
-        <div>
-          <h3 className="text-2xl font-display font-bold text-slate-900">
-            {pc.title}
-          </h3>
-          <p className="text-slate-500 text-sm">
-            {pc.subtitle}
-          </p>
-        </div>
-      </div>
-
-      {/* Slider Input */}
-      <div className="mb-12 relative z-10">
-        <div className="flex justify-between items-end mb-6">
-          <label className="text-slate-600 font-bold flex items-center gap-2 text-sm uppercase tracking-wide">
-            <Users size={18} className="text-blue-500" /> {pc.active_users}
-          </label>
-          <div className="text-4xl font-bold text-slate-900 font-display">
-            {employees > 150 ? '150+' : employees}
+    <div className={`calc${quote?.isCustom ? ' custom' : ''}`} id="calculator">
+      <div className="r">
+        <p className="kk k">{dict.pricing.categories.app.title}</p>
+        <h2>{pc.title}</h2>
+        <p style={{ color: 'rgba(242,240,233,.72)', marginTop: '18px', maxWidth: '46ch' }}>
+          {pc.subtitle}
+        </p>
+        <div className="sl">
+          <div className="seats">
+            <span>{employees > tier2MaxSeats ? `${tier2MaxSeats}+` : employees}</span>
+            <small>{pc.active_users}</small>
+          </div>
+          <div style={{ marginTop: '34px' }}>
+            <input
+              type="range"
+              min="1"
+              max="151"
+              value={employees}
+              onChange={(e) => setEmployees(parseInt(e.target.value, 10))}
+              aria-label={pc.active_users}
+              style={{
+                background: `linear-gradient(90deg,#8FC436 0%,#8FC436 ${pct}%,rgba(242,240,233,.22) ${pct}%)`,
+              }}
+            />
+          </div>
+          <div className="ends" style={{ marginTop: '14px' }}>
+            <span>1</span>
+            <span>{tier1MaxSeats} ({pc.discount_threshold})</span>
+            <span>{tier2MaxSeats}</span>
+            <span>{tier2MaxSeats}+</span>
           </div>
         </div>
-
-        <input
-          type="range"
-          min="1"
-          max="151"
-          value={employees}
-          onChange={(e) => setEmployees(parseInt(e.target.value))}
-          className="w-full h-4 bg-slate-100 rounded-full appearance-none cursor-pointer accent-blue-600 hover:accent-blue-500 transition-all focus:outline-none focus:ring-4 focus:ring-blue-100"
-        />
-
-        <div className="relative h-6 text-xs text-slate-400 mt-4 font-mono font-medium">
-          <span className="absolute left-0">1</span>
-          <span className="absolute left-[16%] -translate-x-1/2 text-blue-600 font-bold">
-            25 ({pc.discount_threshold})
-          </span>
-          <span className="absolute right-0">150+</span>
+        <div className="tiers">
+          <div className={employees <= tier1MaxSeats ? 'on' : ''}>
+            <b>1 &ndash; {tier1MaxSeats}</b>
+            <span>{tier1Rate.formatted}{pc.per_month}</span>
+          </div>
+          <div className={employees > tier1MaxSeats && employees <= tier2MaxSeats ? 'on' : ''}>
+            <b>{tier1MaxSeats + 1} &ndash; {tier2MaxSeats}</b>
+            <span>{tier2Rate.formatted}{pc.per_month}</span>
+          </div>
+          <div className={employees > tier2MaxSeats ? 'on' : ''}>
+            <b>{tier2MaxSeats}+</b>
+            <span>{pc.enterprise_plan}</span>
+          </div>
         </div>
+        <p style={{ marginTop: '22px', fontSize: '13.5px', color: 'rgba(242,240,233,.55)' }}>
+          {(dict.pricing as any).tracker_footnote}
+        </p>
       </div>
 
-      {/* Price Display */}
-      <div className="bg-slate-50 rounded-2xl p-8 border border-slate-200 mb-8 relative z-10">
+      <div className="box">
+        <p className="k" style={{ color: 'var(--seal)', marginBottom: '8px' }}>
+          {dict.pricing.simulator.section_title}
+        </p>
         {quote && !quote.isCustom ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <div>
-              <div className="text-slate-500 text-xs font-bold uppercase tracking-wider mb-2">
-                {pc.cost_per_user}
-              </div>
-              <div className="text-3xl font-bold text-slate-900">
+          <div className="money">
+            <div className="row">
+              <span>{pc.cost_per_user}</span>
+              <b>
                 {quote.display.avgPerSeatMonthly.formatted}
-                <span className="text-sm font-normal text-slate-400">
+                <small style={{ fontFamily: 'Inter', fontSize: '14px', fontWeight: 400 }}>
                   {pc.per_month}
-                </span>
-              </div>
-              <div className="text-xs text-blue-600 mt-2 flex items-center gap-1 font-medium bg-blue-50 inline-block px-2 py-1 rounded-md">
-                <Info size={12} />
-                {employees <= 25 ? standardRateLabel : pc.mixed_rate}
-              </div>
+                </small>
+              </b>
             </div>
-            <div className="text-right border-l md:border-l-0 md:border-l border-slate-200 pl-0 md:pl-8 pt-6 md:pt-0 border-t md:border-t-0">
-              <div className="text-slate-500 text-xs font-bold uppercase tracking-wider mb-2">
-                {pc.annual_total}
-              </div>
-              <div className="text-4xl font-display font-bold text-slate-900">
-                {quote.display.totalAnnual.formatted}
-              </div>
-              <div className="text-xs text-slate-400 mt-1">
-                {pc.annual_billing_note}
-              </div>
+            <p className="rate">{employees <= tier1MaxSeats ? standardRateLabel : pc.mixed_rate}</p>
+            <div className="row tot">
+              <span>{pc.annual_total}</span>
+              <b>{quote.display.totalAnnual.formatted}</b>
             </div>
+            <p className="note">
+              {pc.annual_billing_note}. {pc.secure_payment}
+            </p>
+            <button className="b1" onClick={handleAddToCart}>
+              {pc.add_to_cart}
+            </button>
           </div>
         ) : (
-          <div className="text-center py-6">
-            <div className="text-2xl font-bold text-slate-900 mb-2">
-              {pc.enterprise_plan}
+          <div className="ent">
+            <div className="row tot" style={{ paddingTop: '8px' }}>
+              <span>{pc.enterprise_plan}</span>
+              <b>{tier2MaxSeats}+</b>
             </div>
-            <p className="text-slate-500 mb-6 text-sm">
+            <p className="note" style={{ marginTop: '18px' }}>
               {pc.enterprise_desc}
             </p>
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-slate-900 text-white font-bold rounded-xl hover:bg-slate-800 transition-colors shadow-lg"
-            >
-              {pc.request_quote} <MessageSquare size={18} />
+            <Link className="b1" href="/contact">
+              {pc.request_quote}
             </Link>
           </div>
         )}
       </div>
-
-      {/* Action Button */}
-      {quote && !quote.isCustom && (
-        <div className="text-center relative z-10">
-          <button
-            onClick={handleAddToCart}
-            className="w-full block py-5 bg-gradient-to-r from-orange-500 to-red-600 text-white font-bold text-lg rounded-xl hover:scale-[1.01] hover:shadow-orange-500/30 transition-all shadow-xl"
-          >
-            {pc.add_to_cart}{' '}
-            <ArrowRight className="inline ml-2" />
-          </button>
-          <p className="mt-4 text-xs text-slate-400 flex items-center justify-center gap-1">
-            <Shield size={12} /> {pc.secure_payment}
-          </p>
-        </div>
-      )}
     </div>
   );
 }

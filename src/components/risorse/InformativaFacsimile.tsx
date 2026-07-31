@@ -226,42 +226,43 @@ export default function InformativaFacsimile({ locale, countryName, authority, c
   }
 
   return (
-    <div className="my-4 rounded-2xl border border-[#3BAEE0]/25 bg-[#3BAEE0]/5 p-8 text-center">
-      <p className="text-lg font-bold text-slate-900">{t.title.replace('{paese}', countryName)}</p>
-      <p className="text-sm text-slate-500 mt-2 max-w-md mx-auto">{t.desc}</p>
+    <div className="my-4 border border-[rgba(14,14,12,.18)] bg-white p-8 text-center">
+      <p className="text-lg font-bold text-[#0E0E0C]">{t.title.replace('{paese}', countryName)}</p>
+      <p className="text-sm text-[#78836F] mt-2 max-w-md mx-auto">{t.desc}</p>
 
       {/* Download GRATUITO, nessun cancello email. */}
       <button
         onClick={download}
-        className="mt-5 inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold text-white bg-[#3BAEE0] rounded-xl hover:bg-[#2f97c4] transition-colors"
+        className="b1"
+        style={{ marginTop: 22, display: 'inline-flex', alignItems: 'center', gap: 8, border: 0, cursor: 'pointer', background: 'var(--sky)', color: '#fff' }}
       >
         <FileText size={18} /> {t.download}
       </button>
 
       {/* Iscrizione FACOLTATIVA sotto, dopo il download. */}
-      <div className="mt-6 pt-5 border-t border-[#3BAEE0]/15 max-w-sm mx-auto">
+      <div className="mt-6 pt-5 border-t border-[rgba(14,14,12,.14)] max-w-sm mx-auto">
         {status === 'success' ? (
-          <p className="text-sm font-semibold text-[#8FC436]">{t.success}</p>
+          <p className="text-sm font-semibold text-[#5E7C1E]">{t.success}</p>
         ) : (
           <>
-            <p className="text-xs text-slate-500 mb-3">{t.prompt}</p>
+            <p className="text-xs text-[#78836F] mb-3">{t.prompt}</p>
             <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder={t.placeholder}
-                className="flex-1 min-w-0 px-4 py-2.5 text-sm rounded-xl border border-slate-200 bg-white text-slate-700 placeholder:text-slate-400 outline-none focus:border-[#3BAEE0] transition-colors"
+                className="flex-1 min-w-0 px-4 py-2.5 text-sm border border-[rgba(14,14,12,.2)] bg-white text-[#3B4237] placeholder:text-[#9AA294] outline-none focus:border-[var(--sky)] transition-colors"
               />
               <button
                 type="submit"
                 disabled={status === 'loading'}
-                className="shrink-0 px-5 py-2.5 text-sm font-semibold text-slate-700 bg-white border border-slate-200 rounded-xl hover:border-[#3BAEE0] transition-colors disabled:opacity-70 disabled:cursor-not-allowed"
+                className="shrink-0 px-5 py-2.5 text-sm font-semibold text-[#3B4237] bg-white border border-[rgba(14,14,12,.2)] hover:border-[var(--sky)] transition-colors disabled:opacity-70 disabled:cursor-not-allowed"
               >
                 {status === 'loading' ? '...' : t.btn}
               </button>
             </form>
-            <p className="text-xs text-slate-400 mt-2">{t.consent}</p>
+            <p className="text-xs text-[#9AA294] mt-2">{t.consent}</p>
             {status === 'error' && <p className="text-xs text-red-500 mt-1">{t.error}</p>}
           </>
         )}

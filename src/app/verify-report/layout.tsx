@@ -9,10 +9,19 @@
  *
  * La versione con il locale (`/it/verify-report/`) continua a usare il guscio del
  * sito, con navigazione e piede.
+ *
+ * `l-mockup.css`/`redesign-l.css` sono importati anche qui (oltre che da
+ * `[locale]/layout.tsx`) perche' la pagina vestita nella direzione L (classi
+ * `.lp-l`, `.ph`, `.form`, ecc.) deve rendere identica anche su questo guscio
+ * senza locale: e' l'indirizzo che il cliente finale apre davvero dal QR.
+ * `<main>` avvolge i children per la stessa convenzione delle pagine con
+ * locale (`main:has(> .lp-l){padding-top:0}` in l-mockup.css).
  */
 
 import type { ReactNode } from 'react';
 import '../globals.css';
+import '../redesign-l.css';
+import '../l-mockup.css';
 
 export default function LayoutVerifica({
   children,
@@ -21,7 +30,9 @@ export default function LayoutVerifica({
 }) {
   return (
     <html lang="en">
-      <body className="bg-[#F7F7F4] antialiased">{children}</body>
+      <body className="antialiased">
+        <main>{children}</main>
+      </body>
     </html>
   );
 }

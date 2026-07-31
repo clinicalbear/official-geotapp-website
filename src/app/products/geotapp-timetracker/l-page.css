@@ -1,0 +1,26 @@
+/* Direzione L — pagina prodotto GeoTapp TimeTracker.
+   Solo regole di dettaglio non gia' coperte da l-mockup.css, scopate su
+   .lp-prodotto-timetracker per non sporcare il resto del sito. */
+
+.lp-prodotto-timetracker .l-mod-click { cursor: pointer; }
+
+.lp-prodotto-timetracker .l-note { text-align: center; padding: 54px 0; }
+.lp-prodotto-timetracker .l-note p { margin-top: 14px; font-size: 18px; color: #4A5244; max-width: 62ch; margin-left: auto; margin-right: auto; }
+
+.lp-prodotto-timetracker .l-tagline { margin-top: 16px; max-width: 46ch; font-weight: 600; color: var(--seal); font-size: 17px; }
+.lp-prodotto-timetracker .l-foot-note { margin-top: 12px; font-size: 12px; line-height: 1.6; color: rgba(242, 240, 233, .55); max-width: 70ch; }
+
+/* Badge store: pillola scura, coerente col registro L */
+.lp-prodotto-timetracker .l-stores { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 34px; }
+.lp-prodotto-timetracker .l-store {
+  display: flex; align-items: center; gap: 14px; padding: 16px 26px; border-radius: 999px;
+  background: var(--ink); color: var(--paper); transition: transform .3s;
+}
+.lp-prodotto-timetracker .l-store:hover { transform: translateY(-3px); }
+.lp-prodotto-timetracker .l-store svg { flex: none; }
+.lp-prodotto-timetracker .l-store span { display: block; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; opacity: .6; }
+.lp-prodotto-timetracker .l-store b { display: block; font-size: 15px; font-weight: 600; }
+
+@media (max-width: 700px) {
+  .lp-prodotto-timetracker .split { grid-template-columns: 1fr; gap: 30px; }
+}

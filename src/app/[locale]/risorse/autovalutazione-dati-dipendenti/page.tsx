@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
 import { localizePath } from '@/lib/i18n/locale-routing';
+import { getDictionary } from '@/lib/i18n/dictionaries';
 import { SUPPORTED_LOCALES } from '@/lib/i18n/config';
 import type { AppLocale } from '@/lib/i18n/config';
 import { absoluteLocalizedUrl, buildBreadcrumbJsonLd } from '@/lib/risorse/gps-lavoratori-ue/jsonLd';
@@ -8,11 +10,16 @@ import { getAutovalutazione } from '@/lib/risorse/autovalutazione-dati-rh';
 import AutovalutazioneClient from '@/components/risorse/AutovalutazioneClient';
 import RisorsaFaq from '@/components/risorse/RisorsaFaq';
 import LicenzaContenuto from '@/components/LicenzaContenuto';
+import './l-page.css';
 
 /**
  * Auto-valutazione "Sei conforme sui dati dei dipendenti?".
  * Route: /[locale]/risorse/autovalutazione-dati-dipendenti/ (slug localizzato via slug-map).
  * Tutto client-side: nessuna risposta lascia il browser.
+ *
+ * Vestito "direzione L" (docs/redesign-sito-2026-07/esplorazione/risorsa-strumento.html),
+ * slug .lp-risorsa-strumento: la logica del questionario (AutovalutazioneClient) resta
+ * intatta, cambia solo la cornice attorno.
  */
 
 export { generateLocaleStaticParams as generateStaticParams } from '@/lib/i18n/static-params';
@@ -47,6 +54,7 @@ export default async function AutovalutazionePage({
   const { locale } = await params;
   const rl = safeLocale(locale);
   const c = getAutovalutazione(rl);
+  const dict = getDictionary(rl);
 
   const breadcrumbJsonLd = buildBreadcrumbJsonLd([
     { name: 'GeoTapp', item: `https://geotapp.com/${rl}/` },
@@ -60,19 +68,46 @@ export default async function AutovalutazionePage({
     blog: `/${rl}/blog/`,
   };
 
+  const homeHref = `/${rl}/`;
+  const resourcesLabel = dict.navbar.resources;
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
-      <div className="bg-white min-h-screen text-slate-900 font-sans">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 pt-5 pb-16">
-          <h1 className="text-3xl font-bold text-slate-900 mb-4">{c.heading}</h1>
-          <p className="text-slate-600 leading-relaxed mb-8">{c.intro}</p>
-          <AutovalutazioneClient locale={rl} contenuto={c} hrefs={hrefs} />
-        </div>
-        <RisorsaFaq title={c.faq.title} items={c.faq.items} />
+      <div className="lp-l lp-risorsa-strumento">
+        {/* ── testata scura ── */}
+        <section className="ph">
+          <div className="crumb">
+            <div className="w">
+              <Link href={homeHref}>GeoTapp</Link> / {resourcesLabel} / {c.heading}
+            </div>
+          </div>
+          <div className="w">
+            <p className="kk k"><s></s>{resourcesLabel}</p>
+            <h1>{c.heading}</h1>
+            <p className="lede">{c.intro}</p>
+            <div className="acts">
+              <a className="b1" href="#quiz">{c.vediRisultato}</a>
+            </div>
+          </div>
+        </section>
+
+        {/* ── il questionario: intatto, solo incorniciato ── */}
+        <section className="sec">
+          <div className="wn" id="quiz">
+            <AutovalutazioneClient locale={rl} contenuto={c} hrefs={hrefs} />
+          </div>
+        </section>
+
+        <section className="fq fq-wrap">
+          <div className="w">
+            <RisorsaFaq title={c.faq.title} items={c.faq.items} />
+          </div>
+        </section>
+
         <LicenzaContenuto locale={rl} />
       </div>
     </>

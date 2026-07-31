@@ -214,6 +214,11 @@ function buildRemovedLocaleRedirects() {
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: { unoptimized: true },
+  // NB: NIENTE turbopack.root qui. Impostarlo a __dirname (provato il 31/07)
+  // fa sparire dal router TUTTE le route con profondità >= 3 (/it/products/*,
+  // /it/settori/*, /it/confronto/geotapp-vs-*, /it/risorse/*): 404 secchi.
+  // Il vero colpevole degli aggiornamenti fantasma era la cache immutabile
+  // servita anche in dev (vedi headers() qui sotto).
   // Cap static-generation workers: a full clean build renders ~1435 pages, and 11
   // parallel workers OOM (SIGKILL) on a RAM-constrained builder. 4 workers fit and
   // still build in reasonable time. See deploy notes 2026-07-13.
@@ -274,6 +279,14 @@ const nextConfig = {
     ];
   },
   async headers() {
+    // In sviluppo NIENTE cache: le regole immutable qui sotto valevano anche in
+    // dev e Chrome teneva i chunk per un anno → modifiche invisibili, hydration
+    // mismatch con JS vecchio contro HTML nuovo (giornata del 31/07).
+    if (process.env.NODE_ENV === 'development') {
+      return [
+        { source: '/(.*)', headers: [{ key: 'Cache-Control', value: 'no-store' }] },
+      ];
+    }
     return [
       {
         source: '/_next/static/(.*)',

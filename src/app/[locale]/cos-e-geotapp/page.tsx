@@ -3,8 +3,31 @@ import Link from 'next/link';
 import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
 import { translatePath } from '@/lib/i18n/slug-map';
 import type { AppLocale } from '@/lib/i18n/config';
+import LNastro from '@/components/LNastro';
+import ListedOn from '@/components/ListedOn';
+import FeaturedIn from '@/components/FeaturedIn';
 
 export { generateLocaleStaticParams as generateStaticParams } from '@/lib/i18n/static-params';
+
+/* "Vedi i prezzi →" nella lingua giusta: stessa traduzione gia' presente nel corpo del testo prezzi. */
+const SEE_PRICING: Record<string, string> = {
+  it: 'Vedi i prezzi →', de: 'Preise ansehen →', fr: 'Voir les tarifs →', es: 'Ver precios →',
+  pt: 'Ver preços →', nl: 'Bekijk de prijzen →', da: 'Se priser →', sv: 'Se priser →',
+  nb: 'Se priser →', ru: 'Посмотреть цены →', en: 'See pricing →',
+};
+
+/* Icona del modulo per nome: stessi asset gia' usati nel mockup (iconaTT/iconaFlow/iconaVerifier). */
+const MODULE_ICON: Record<string, string> = {
+  'GeoTapp Flow': '/iconaFlow.webp',
+  'GeoTapp TimeTracker': '/iconaTT.webp',
+  'GeoTapp Verifier': '/iconaVerifier.webp',
+};
+
+/* "Presenti su": stessa etichetta gia' pubblicata in HomeClient.tsx. */
+const PRESENTI: Record<string, string> = {
+  it: 'Presenti su', en: 'Listed on', de: 'Gelistet auf', fr: 'Présents sur', es: 'Presentes en',
+  pt: 'Presentes em', nl: 'Vermeld op', da: 'Optaget på', sv: 'Listade på', nb: 'Oppført på', ru: 'Мы представлены на',
+};
 
 type Copy = {
   title: string;
@@ -470,79 +493,127 @@ export default async function CosEGeoTappPage({ params }: { params: Promise<{ lo
     ],
   };
 
+  const pricingHref = `/${locale}${translatePath('/pricing/', locale as AppLocale)}`;
+  const seePricing = SEE_PRICING[locale] ?? SEE_PRICING.en;
+  const presenti = PRESENTI[locale] ?? PRESENTI.en;
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
-      <main className="mx-auto max-w-4xl px-4 sm:px-6 py-12 sm:py-16">
-        <h1 className="text-3xl sm:text-5xl font-bold text-slate-900 mb-6">{copy.h1}</h1>
-        <p className="text-lg text-slate-700 leading-relaxed mb-10">{copy.intro}</p>
+      <div className="lp-l lp-cos-e">
+        {/* ── testata: stesso h1 e stesso testo, solo vestito nuovo ── */}
+        <section className="ph">
+          <div className="crumb"><div className="w"><Link href={`/${locale}/`}>Home</Link> / {copy.h1}</div></div>
+          <div className="w">
+            <h1>{copy.h1}</h1>
+            <p className="lede">{copy.intro}</p>
+            <div className="acts">
+              <Link
+                className="b1"
+                href={trialHref}
+              >
+                {copy.trialCta}
+              </Link>
+              <Link className="b2" href={pricingHref}>{seePricing}</Link>
+            </div>
+          </div>
+        </section>
 
-        <section className="mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">{copy.modulesHeading}</h2>
-          <div className="grid gap-6 sm:grid-cols-1">
+        {/* ── i tre moduli (h2 + h3 invariati) ── */}
+        <section className="sec warm"><div className="w">
+          <div className="hd"><h2 className="r">{copy.modulesHeading}</h2></div>
+          <div className="three r-s">
             {copy.modules.map((m) => (
-              <div key={m.name} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-                <h3 className="text-xl font-bold text-slate-900 mb-2">{m.name}</h3>
-                <p className="text-slate-700 leading-relaxed">{m.desc}</p>
+              <div key={m.name}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img className="ic" src={MODULE_ICON[m.name] ?? '/iconaFlow.webp'} alt="" loading="lazy" />
+                <h3>{m.name}</h3>
+                <p>{m.desc}</p>
               </div>
             ))}
           </div>
-        </section>
+        </div></section>
 
-        <section className="mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">{copy.gdprHeading}</h2>
-          <p className="text-slate-700 leading-relaxed">{copy.gdprText}</p>
-        </section>
+        {/* ── GDPR e diritto del lavoro ── */}
+        <section className="sec"><div className="wt">
+          <h2 className="r">{copy.gdprHeading}</h2>
+          <p className="r d1" style={{ color: '#4A5244', marginTop: 22, fontSize: 17.5, lineHeight: 1.7 }}>{copy.gdprText}</p>
+        </div></section>
 
-        <section className="mb-12 rounded-2xl bg-gradient-to-br from-green-50 to-blue-50 border border-slate-200 p-8 text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-3">{copy.trialHeading}</h2>
-          <p className="text-slate-700 leading-relaxed mb-6">{copy.trialText}</p>
-          <Link
-            href={trialHref}
-            className="btn-ring"
-          >
-            {copy.trialCta} →
-          </Link>
-        </section>
+        {/* ── trial gratuito ── */}
+        <section className="sec ink"><div className="wt">
+          <h2 className="r">{copy.trialHeading}</h2>
+          <p className="r d1" style={{ color: 'rgba(242,240,233,.75)', marginTop: 22, fontSize: 17.5, lineHeight: 1.7 }}>{copy.trialText}</p>
+          <div className="acts r d2" style={{ marginTop: 30 }}>
+            <Link className="b1" href={trialHref}>{copy.trialCta}</Link>
+          </div>
+        </div></section>
 
-        <section className="mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">{copy.pricingHeading}</h2>
-          <p className="text-slate-700 leading-relaxed">
+        {/* ── quanto costa ── */}
+        <section className="sec"><div className="wt">
+          <h2 className="r">{copy.pricingHeading}</h2>
+          <p className="r d1" style={{ color: '#4A5244', marginTop: 22, fontSize: 17.5, lineHeight: 1.7 }}>
             {copy.pricingText}{' '}
-            <Link href={`/${locale}${translatePath('/pricing/', locale as AppLocale)}`} className="text-blue-600 underline hover:no-underline">
-              {locale === 'it' ? 'Vedi i prezzi →' : locale === 'de' ? 'Preise ansehen →' : locale === 'fr' ? 'Voir les tarifs →' : locale === 'es' ? 'Ver precios →' : locale === 'pt' ? 'Ver preços →' : locale === 'nl' ? 'Bekijk de prijzen →' : locale === 'da' ? 'Se priser →' : locale === 'sv' ? 'Se priser →' : locale === 'nb' ? 'Se priser →' : locale === 'ru' ? 'Посмотреть цены →' : 'See pricing →'}
-            </Link>
+            <Link href={pricingHref} className="b2">{seePricing}</Link>
           </p>
+        </div></section>
+
+        {/* ── settori ── */}
+        <section className="sec warm"><div className="wt">
+          <h2 className="r">{copy.sectorsHeading}</h2>
+          <p className="r d1" style={{ color: '#4A5244', marginTop: 22, fontSize: 17.5, lineHeight: 1.7 }}>{copy.sectorsText}</p>
+        </div></section>
+
+        {/* ── chi ha fondato GeoTapp ── */}
+        <section className="sec"><div className="wt">
+          <h2 className="r">{copy.founderHeading}</h2>
+          <p className="r d1" style={{ color: '#4A5244', marginTop: 22, fontSize: 17.5, lineHeight: 1.7 }}>{copy.founderText}</p>
+        </div></section>
+
+        <LNastro />
+
+        {/* ── presenti su ── */}
+        <section className="dirs">
+          <div className="w"><p className="kk k r">{presenti}</p></div>
+          <div className="host">
+            <ListedOn locale={locale} />
+            <FeaturedIn locale={locale} />
+          </div>
         </section>
 
-        <section className="mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">{copy.sectorsHeading}</h2>
-          <p className="text-slate-700 leading-relaxed">{copy.sectorsText}</p>
-        </section>
-
-        <section className="mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">{copy.founderHeading}</h2>
-          <p className="text-slate-700 leading-relaxed">{copy.founderText}</p>
-        </section>
-
-        <section className="mb-8">
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">{copy.faqHeading}</h2>
-          <div className="space-y-5">
+        {/* ── domande frequenti: stesse 5 domande del faqSchema, invariate ── */}
+        <section className="fq"><div className="w"><div className="g">
+          <h2 className="r">{copy.faqHeading}</h2>
+          <div className="r d1">
             {copy.faq.map((f, i) => (
-              <details key={i} className="rounded-xl border border-slate-200 bg-white p-5 group">
-                <summary className="font-semibold text-slate-900 cursor-pointer list-none flex justify-between items-center">
-                  <span>{f.q}</span>
-                  <span className="text-slate-400 group-open:rotate-180 transition-transform">▾</span>
-                </summary>
-                <p className="text-slate-700 leading-relaxed mt-3">{f.a}</p>
+              <details key={i} open={i === 0}>
+                <summary>{f.q}</summary>
+                <div className="ct"><p>{f.a}</p></div>
               </details>
             ))}
           </div>
+        </div></div></section>
+
+        {/* ── chiusura ── */}
+        <section className="end">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img className="bg" src="/bg2.webp" alt="" loading="lazy" />
+          <div className="ov" />
+          <div className="w">
+            <p className="big r" style={{ fontSize: 'clamp(30px,5.2vw,72px)', maxWidth: '17ch', marginBottom: 24, color: 'var(--lime)' }}>
+              {copy.trialHeading}
+            </p>
+            <p className="r d1" style={{ color: 'rgba(255,255,255,.8)', maxWidth: '58ch', marginBottom: 32 }}>{copy.trialText}</p>
+            <div className="acts r d2">
+              <Link className="b1" href={trialHref}>{copy.trialCta}</Link>
+              <Link className="b2" href={pricingHref}>{seePricing}</Link>
+            </div>
+          </div>
         </section>
-      </main>
+      </div>
     </>
   );
 }

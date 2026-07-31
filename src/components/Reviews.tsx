@@ -13,7 +13,7 @@ type ReviewsCopy = {
   translationNote: string;
 };
 
-const COPY: Record<string, ReviewsCopy> = {
+export const REVIEWS_COPY: Record<string, ReviewsCopy> = {
   it: { heading: 'Ascolta chi ci usa ogni giorno', subheading: 'Recensioni reali da fonti verificate indipendenti', viewOn: 'Vedi su {source}', aggregateLine: 'Media {avg} stelle su {count} recensioni', starsAriaLabel: '{rating} stelle su 5', translationNote: 'Le recensioni sono tradotte per facilitarne la lettura. Clicca su una recensione per leggere l’originale verificato sulla fonte.' },
   en: { heading: 'What our customers say', subheading: 'Real reviews from verified independent sources', viewOn: 'View on {source}', aggregateLine: 'Average {avg} stars across {count} reviews', starsAriaLabel: '{rating} stars out of 5', translationNote: 'Reviews are translated for easier reading. Click any review to read the verified original on its source.' },
   de: { heading: 'Was unsere Kunden sagen', subheading: 'Echte Bewertungen aus unabhängig verifizierten Quellen', viewOn: 'Auf {source} ansehen', aggregateLine: 'Durchschnitt {avg} Sterne aus {count} Bewertungen', starsAriaLabel: '{rating} von 5 Sternen', translationNote: 'Die Bewertungen wurden zur besseren Lesbarkeit übersetzt. Klicken Sie auf eine Bewertung, um das verifizierte Original an der Quelle zu lesen.' },
@@ -80,7 +80,7 @@ const SoftwareAdviceLogo = () => (
   </svg>
 );
 
-const SOURCE_LOGOS: Record<Source, () => JSX.Element> = {
+export const SOURCE_LOGOS: Record<Source, () => JSX.Element> = {
   capterra: CapterraLogo,
   trustpilot: TrustpilotLogo,
   g2: G2Logo,
@@ -89,7 +89,7 @@ const SOURCE_LOGOS: Record<Source, () => JSX.Element> = {
 };
 
 export default function Reviews({ locale }: { locale: string }) {
-  const c = COPY[locale] ?? COPY.en;
+  const c = REVIEWS_COPY[locale] ?? REVIEWS_COPY.en;
 
   if (REVIEWS.length === 0) return null;
 

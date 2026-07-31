@@ -1,5 +1,6 @@
 'use client';
 
+import './l-page.css';
 import { Suspense, useEffect, useMemo, useState } from 'react';
 import { usePathname, useSearchParams } from 'next/navigation';
 import { getLocaleFromPathname } from '@/lib/i18n/locale-routing';
@@ -218,171 +219,158 @@ function CompletaInner() {
   }
 
   return (
-    <main className="mx-auto flex min-h-screen max-w-xl flex-col justify-center px-5 py-12">
-      <div className="card-modern p-7">
-        <h1 className="text-2xl font-bold text-slate-900">{t.title}</h1>
-        <p className="mt-1 text-sm text-slate-500">{t.subtitle}</p>
+    <div className="lp-l lp-abbonati">
+      <div className="wrap">
+        <div className="box">
+          <h1>{t.title}</h1>
+          <p className="sub">{t.subtitle}</p>
 
-        {/* Plan selector: the recommended plan (sized to the TT operators actually
-            used in the trial) is highlighted; the customer can pick another plan
-            and change TimeTracker seats. */}
-        {usedTtSeats > 0 && (
-          <p className="mt-4 rounded-lg bg-primary/5 px-3 py-2 text-xs text-slate-600">
-            {t.recommendReason(usedTtSeats)}
-          </p>
-        )}
-        <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-3">
-          {PLANS.map((p) => {
-            const isSel = plan === p.key;
-            const isSuggested = suggestedPlan === p.key;
-            return (
+          {/* Plan selector: the recommended plan (sized to the TT operators actually
+              used in the trial) is highlighted; the customer can pick another plan
+              and change TimeTracker seats. */}
+          {usedTtSeats > 0 && (
+            <p className="hint">{t.recommendReason(usedTtSeats)}</p>
+          )}
+          <div className="plans">
+            {PLANS.map((p) => {
+              const isSel = plan === p.key;
+              const isSuggested = suggestedPlan === p.key;
+              return (
+                <button
+                  type="button"
+                  key={p.key}
+                  onClick={() => selectPlan(p.key)}
+                  className={`plan-c${isSel ? ' on' : ''}`}
+                >
+                  {isSuggested && <span className="tag">{t.suggestedBadge}</span>}
+                  <div className="nm">Flow {p.name}</div>
+                  <div className="pr">
+                    €{interval === 'annual' ? p.flowAnnual : p.flowMonthly}
+                    <small>/{perLabel}</small>
+                  </div>
+                  <div className="ds">
+                    {p.flowSeats >= 999 ? 'Utenti Flow illimitati' : `${p.flowSeats} utenti Flow`} · fino a{' '}
+                    {p.ttCap >= 999 ? '∞' : p.ttCap} seat TimeTracker
+                  </div>
+                </button>
+              );
+            })}
+          </div>
+
+          {/* TimeTracker seat selector */}
+          <div className="seat">
+            <div>
+              <div className="lb">Seat TimeTracker</div>
+              <div className="mt">
+                €{ttUnit}/seat all’{perLabel} · max {cap >= 999 ? '∞' : cap}
+              </div>
+            </div>
+            <div className="ctr">
               <button
                 type="button"
-                key={p.key}
-                onClick={() => selectPlan(p.key)}
-                className={`relative rounded-xl border-2 p-4 text-left transition ${
-                  isSel
-                    ? 'border-primary bg-primary/5 shadow-md'
-                    : 'border-slate-200 bg-white hover:border-primary/40'
-                }`}
+                onClick={() => setTtSeats((s) => Math.max(0, s - 1))}
+                disabled={ttSeats <= 0}
+                aria-label="meno"
               >
-                {isSuggested && (
-                  <span className="absolute -top-2 left-3 rounded-full bg-primary px-2 py-0.5 text-[10px] font-semibold text-white">
-                    {t.suggestedBadge}
-                  </span>
-                )}
-                <div className="text-sm font-bold text-slate-900">Flow {p.name}</div>
-                <div className="mt-1 text-lg font-extrabold text-slate-900">
-                  €{interval === 'annual' ? p.flowAnnual : p.flowMonthly}
-                  <span className="text-xs font-normal text-slate-500">/{perLabel}</span>
-                </div>
-                <div className="mt-1 text-xs text-slate-500">
-                  {p.flowSeats >= 999 ? 'Utenti Flow illimitati' : `${p.flowSeats} utenti Flow`} · fino a{' '}
-                  {p.ttCap >= 999 ? '∞' : p.ttCap} seat TimeTracker
-                </div>
+                −
               </button>
-            );
-          })}
-        </div>
-
-        {/* TimeTracker seat selector */}
-        <div className="mt-4 flex items-center justify-between rounded-xl bg-slate-50 p-4">
-          <div>
-            <div className="text-sm font-semibold text-slate-700">Seat TimeTracker</div>
-            <div className="text-xs text-slate-500">
-              €{ttUnit}/seat all’{perLabel} · max {cap >= 999 ? '∞' : cap}
+              <span className="n">{ttSeats}</span>
+              <button
+                type="button"
+                onClick={() => setTtSeats((s) => Math.min(cap, s + 1))}
+                disabled={ttSeats >= cap}
+                aria-label="più"
+              >
+                +
+              </button>
             </div>
           </div>
-          <div className="flex items-center gap-3">
-            <button
-              type="button"
-              onClick={() => setTtSeats((s) => Math.max(0, s - 1))}
-              className="h-9 w-9 rounded-full border border-slate-300 text-xl leading-none text-slate-700 disabled:opacity-40"
-              disabled={ttSeats <= 0}
-              aria-label="meno"
-            >
-              −
-            </button>
-            <span className="w-7 text-center text-base font-bold">{ttSeats}</span>
-            <button
-              type="button"
-              onClick={() => setTtSeats((s) => Math.min(cap, s + 1))}
-              className="h-9 w-9 rounded-full border border-slate-300 text-xl leading-none text-slate-700 disabled:opacity-40"
-              disabled={ttSeats >= cap}
-              aria-label="più"
-            >
-              +
-            </button>
+
+          {/* Running total */}
+          <div className="tot">
+            <span className="lb">Totale</span>
+            <span className="v">
+              €{total}
+              <small> /{perLabel} + IVA</small>
+            </span>
           </div>
-        </div>
 
-        {/* Running total */}
-        <div className="mt-3 flex items-baseline justify-between border-t border-slate-100 pt-3">
-          <span className="text-sm text-slate-500">Totale</span>
-          <span className="text-xl font-extrabold text-slate-900">
-            €{total}
-            <span className="text-xs font-normal text-slate-500"> /{perLabel} + IVA</span>
-          </span>
-        </div>
+          {/* Partita IVA (mandatory) */}
+          <div className="fld">
+            <label>{t.vatLabel}</label>
+            <input
+              value={vat}
+              onChange={(e) => setVat(e.target.value)}
+              placeholder={t.vatPlaceholder}
+              className="in"
+            />
+          </div>
 
-        {/* Partita IVA (mandatory) */}
-        <label className="mt-6 block text-sm font-semibold text-slate-700">
-          {t.vatLabel}
-          <input
-            value={vat}
-            onChange={(e) => setVat(e.target.value)}
-            placeholder={t.vatPlaceholder}
-            className="mt-2 w-full rounded-xl border border-slate-200 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
-          />
-        </label>
+          {/* Clause A: explicit RINUNCIO waiver */}
+          <div className="clause">
+            <p>{CLAUSE_RINUNCIO}</p>
+            <input
+              value={rinuncio}
+              onChange={(e) => setRinuncio(e.target.value.toUpperCase())}
+              placeholder={t.rinuncioPlaceholder}
+              className="in"
+            />
+            <p className="h">{t.noWaiverHint}</p>
+          </div>
 
-        {/* Clause A: explicit RINUNCIO waiver */}
-        <div className="mt-6 rounded-xl bg-slate-50 p-4">
-          <p className="text-sm text-slate-700">{CLAUSE_RINUNCIO}</p>
-          <input
-            value={rinuncio}
-            onChange={(e) => setRinuncio(e.target.value.toUpperCase())}
-            placeholder={t.rinuncioPlaceholder}
-            className="mt-3 w-full rounded-xl border border-slate-200 px-4 py-3 text-sm uppercase tracking-wide focus:outline-none focus:ring-2 focus:ring-primary"
-          />
-          <p className="mt-2 text-xs text-slate-500">{t.noWaiverHint}</p>
-        </div>
-
-        {/* Clause B: specific acceptance of the 12-month minimum term (art. 1341 c.c.) */}
-        <label className="mt-4 flex items-start gap-3 rounded-xl bg-slate-50 p-4 text-sm text-slate-700">
-          <input
-            type="checkbox"
-            checked={minTerm}
-            onChange={(e) => setMinTerm(e.target.checked)}
-            className="mt-1 h-4 w-4 rounded border-slate-300 text-primary focus:ring-primary"
-          />
-          <span>{CLAUSE_MIN_TERM}</span>
-        </label>
-
-        {/* Terms + privacy */}
-        <div className="mt-4 space-y-3">
-          <label className="flex items-start gap-3 text-sm text-slate-700">
+          {/* Clause B: specific acceptance of the 12-month minimum term (art. 1341 c.c.) */}
+          <label className="chk">
             <input
               type="checkbox"
-              checked={terms}
-              onChange={(e) => setTerms(e.target.checked)}
-              className="mt-1 h-4 w-4 rounded border-slate-300 text-primary focus:ring-primary"
+              checked={minTerm}
+              onChange={(e) => setMinTerm(e.target.checked)}
             />
-            <span>
-              {t.termsPrefix}{' '}
-              <a href={TERMS_URL} target="_blank" rel="noreferrer" className="font-semibold text-primary hover:underline">
-                {t.termsLink}
-              </a>
-            </span>
+            <span>{CLAUSE_MIN_TERM}</span>
           </label>
-          <label className="flex items-start gap-3 text-sm text-slate-700">
-            <input
-              type="checkbox"
-              checked={privacy}
-              onChange={(e) => setPrivacy(e.target.checked)}
-              className="mt-1 h-4 w-4 rounded border-slate-300 text-primary focus:ring-primary"
-            />
-            <span>
-              {t.privacyPrefix}{' '}
-              <a href={PRIVACY_URL} target="_blank" rel="noreferrer" className="font-semibold text-primary hover:underline">
-                {t.privacyLink}
-              </a>
-            </span>
-          </label>
+
+          {/* Terms + privacy */}
+          <div className="agree">
+            <label>
+              <input
+                type="checkbox"
+                checked={terms}
+                onChange={(e) => setTerms(e.target.checked)}
+              />
+              <span>
+                {t.termsPrefix}{' '}
+                <a href={TERMS_URL} target="_blank" rel="noreferrer">
+                  {t.termsLink}
+                </a>
+              </span>
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                checked={privacy}
+                onChange={(e) => setPrivacy(e.target.checked)}
+              />
+              <span>
+                {t.privacyPrefix}{' '}
+                <a href={PRIVACY_URL} target="_blank" rel="noreferrer">
+                  {t.privacyLink}
+                </a>
+              </span>
+            </label>
+          </div>
+
+          {error && <p className="err">{error}</p>}
+
+          <button
+            type="button"
+            onClick={handleSubmit}
+            disabled={!canSubmit}
+            className="submit"
+          >
+            {loading ? '…' : t.submit}
+          </button>
         </div>
-
-        {error && <p className="mt-4 text-sm font-medium text-red-600">{error}</p>}
-
-        <button
-          type="button"
-          onClick={handleSubmit}
-          disabled={!canSubmit}
-          className="btn-modern mt-6 w-full disabled:cursor-not-allowed disabled:opacity-50"
-        >
-          {loading ? '…' : t.submit}
-        </button>
       </div>
-    </main>
+    </div>
   );
 }
 

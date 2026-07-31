@@ -40,18 +40,24 @@ export default function CambiaStatoSelect({
   };
 
   return (
-    <div className="mx-auto max-w-sm">
-      <label
-        htmlFor="cambia-stato"
-        className="block text-xs font-semibold uppercase tracking-wide text-slate-500 mb-2"
-      >
+    <div className="cambia-stato">
+      <label htmlFor="cambia-stato" className="k" style={{ display: 'block', color: 'var(--lime)', marginBottom: 10 }}>
         {label}
       </label>
       <select
         id="cambia-stato"
         defaultValue={currentHref}
         onChange={onChange}
-        className="w-full rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-slate-900 shadow-sm focus:border-[#8FC436] focus:outline-none focus:ring-2 focus:ring-[#8FC436]/40"
+        style={{
+          width: '100%',
+          maxWidth: 360,
+          background: 'transparent',
+          border: '1px solid rgba(14,14,12,.2)',
+          color: 'inherit',
+          padding: '13px 16px',
+          fontSize: 15,
+          fontFamily: 'inherit',
+        }}
       >
         {ordinati.map((c) => {
           const inArrivo = c.stato === 'in-arrivo';

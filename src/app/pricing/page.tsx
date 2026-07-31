@@ -1,10 +1,9 @@
 'use client';
 
-import { Check, Heart } from 'lucide-react';
+import './l-page.css';
 import Link from 'next/link';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
-import GeoBadge from '@/components/GeoBadge';
 // Removed framer-motion import on this page: the only usage was a `whileInView`
 // reveal on the price cards. That single intersection-observer driven animation
 // pulled framer-motion into the pricing route bundle (~50KB gz) and contributed
@@ -17,7 +16,9 @@ import { getDictionary } from '@/lib/i18n/dictionaries';
 import {
   DEFAULT_LOCALE,
   getLocaleFromPathname,
+  localizePath,
 } from '@/lib/i18n/locale-routing';
+import { trackEvent } from '@/lib/analytics';
 import { useEffect, useState } from 'react';
 import {
   EUR_PRICES,
@@ -166,6 +167,7 @@ export default function Pricing() {
   const pathname = usePathname();
   const currentLocale = getLocaleFromPathname(pathname) ?? DEFAULT_LOCALE;
   const dict = getDictionary(currentLocale);
+  const getLink = (path: string) => localizePath(path, currentLocale);
 
   const [promoStats, setPromoStats] = useState<
     Record<string, { used: number; remaining: number; maxUses: number }>
@@ -245,250 +247,240 @@ export default function Pricing() {
     toggleCart();
   };
 
-  return (
-    <div className="pt-5 pb-20 px-6 min-h-screen bg-background text-slate-900">
-      <div className="container mx-auto max-w-4xl text-center mb-20">
-        <div>
-          <GeoBadge className="mb-6">{dict.pricing.badge}</GeoBadge>
-          <h1 className="text-5xl md:text-7xl font-display font-bold text-slate-900 mb-8 leading-tight">
-            <span
-              dangerouslySetInnerHTML={{ __html: dict.pricing.title }}
-            ></span>
-            <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
-              {(dict.pricing as any).title_gradient ?? 'Scale Your Business.'}
-            </span>
-          </h1>
-          <p className="text-xl text-slate-500 leading-relaxed font-light max-w-2xl mx-auto">
-            {dict.pricing.subtitle}
-          </p>
-        </div>
-      </div>
+  const appCategory = categories.find((c) => c.id === 'app');
+  const flowCategory = categories.find((c) => c.id === 'flow');
+  const p = dict.pricing as any;
 
+  // Il titolo del trial ("14 giorni gratis. Nessuna carta.") si spezza in due
+  // righe come nel mockup solo dove il testo del dict ha davvero due frasi
+  // (non tutte le lingue lo scrivono cosi', es. nl e' una frase unica).
+  const trialTitleParts = dict.trial.page_title.split('. ');
+  const trialTitleFirst = trialTitleParts[0];
+  const trialTitleRest = trialTitleParts.slice(1).join('. ');
 
-      {categories.map((category) => (
-        <section
-          key={category.id}
-          className="container mx-auto max-w-7xl mb-32"
-        >
-          <div className="flex items-center gap-4 mb-12 border-b border-slate-100 pb-4">
-            <h2
-              className={`text-3xl font-display font-bold ${category.color} flex items-center`}
-            >
-              {category.id === 'flow' && (
-                <>
-                  <Image
-                    src="/logoFlow.webp"
-                    alt="GeoTapp Flow"
-                    width={200}
-                    height={100}
-                    className="h-10 w-auto"
-                  />
-                  <span className="sr-only">{category.title}</span>
-                </>
-              )}
-              {category.id === 'app' && (
-                <>
-                  <Image
-                    src="/logoTT.webp"
-                    alt="GeoTapp TimeTracker"
-                    width={260}
-                    height={100}
-                    className="h-auto w-[15.6rem]"
-                  />
-                  <span className="sr-only">{category.title}</span>
-                </>
-              )}
-              {category.id !== 'flow' &&
-                category.id !== 'app' &&
-                category.title}
-            </h2>
-            <span className="text-slate-400 text-sm font-light hidden md:inline-block border-l border-slate-200 pl-4">
-              {category.description}
-            </span>
+  // Un'unica card di prodotto, sia per i tre piani Flow che per TimeTracker
+  // (che al posto dell'aggiunta al carrello rimanda al calcolatore in fondo
+  // pagina): stessa logica di prezzo/promo di sempre, vestito .plan del mockup.
+  const renderPlanCard = (
+    category: NonNullable<typeof categories[number]>,
+    product: any,
+    delayClass: string,
+  ) => {
+    const hasMonthly = Boolean((product as Product).monthlyPrice);
+    const isOnce = product.period === '/once';
+    const annualPrice = product.price;
+    const monthlyPrice = (product as Product).monthlyPrice;
+    const periodLabel = isOnce
+      ? 'one-time (lifetime)'
+      : hasMonthly
+        ? (p.per_year ?? '/year')
+        : product.period;
+    const savings = (product as Product).savings;
+
+    return (
+      <div key={product.name} className={`plan r-s ${delayClass}`}>
+        {(product as any).isBestValue && (
+          <span className="absolute -top-3 left-6 bg-slate-900 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest shadow-md">
+            Best Value
+          </span>
+        )}
+
+        {category.id === 'app' && (
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px' }}>
+            <Image
+              src="/logoTT.webp"
+              alt="GeoTapp TimeTracker"
+              width={260}
+              height={100}
+              style={{ height: '20px', width: 'auto' }}
+            />
+            <span className="sr-only">{category.title}</span>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {category.products.map((product, i) => (
-              <div
-                key={product.name}
-                style={{ animationDelay: `${i * 0.1}s` }}
-                className={`pricing-card-reveal relative p-6 rounded-2xl border border-slate-200 bg-white hover:shadow-xl hover:border-slate-300 transition-all duration-300 flex flex-col h-full ${category.id === 'app' ? 'lg:col-span-1' : ''}`}
-              >
-                {(product as any).isBestValue && (
-                  <span className="absolute -top-3 left-6 bg-slate-900 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest shadow-md">
-                    Best Value
-                  </span>
-                )}
-
-                <div className="mb-4">
-                  {category.promoCode && product.period !== '/once' && (
-                    <div className="mb-3 p-3 bg-red-50 border border-red-100 rounded-lg">
-                      <div className="flex justify-between items-center mb-1">
-                        <span className="text-[10px] font-bold uppercase text-red-500 tracking-wider">
-                          Promo Code
-                        </span>
-                        {isLoadingStats ? (
-                          <span className="text-[10px] font-bold text-red-600 bg-red-100 px-2 py-0.5 rounded-full">
-                            Loading...
-                          </span>
-                        ) : promoStats[category.promoCode] ? (
-                          <span className="text-[10px] font-bold text-red-600 bg-red-100 px-2 py-0.5 rounded-full">
-                            {promoStats[category.promoCode].remaining}/
-                            {promoStats[category.promoCode].maxUses} Left
-                          </span>
-                        ) : (
-                          <span className="text-[10px] font-bold text-red-600 bg-red-100 px-2 py-0.5 rounded-full">
-                            {category.maxCoupons}/200 Left
-                          </span>
-                        )}
-                      </div>
-                      <div className="text-sm font-mono font-bold text-red-600 flex items-center gap-2">
-                        <span
-                          className="border-2 border-dashed border-red-200 px-2 py-0.5 rounded bg-white select-all cursor-pointer"
-                          title="Copia"
-                        >
-                          {category.promoCode}
-                        </span>
-                        <span className="text-[10px] text-red-400 font-sans font-normal">
-                          -25/30% OFF
-                        </span>
-                      </div>
-                    </div>
-                  )}
-                  <div className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">
-                    {product.tagline}
-                  </div>
-                  <h3 className="text-xl font-bold text-slate-900 leading-tight">
-                    {product.name}
-                  </h3>
-                </div>
-
-                <div className="mb-6">
-                  {(() => {
-                    const hasMonthly = Boolean(
-                      (product as Product).monthlyPrice,
-                    );
-                    const isOnce = product.period === '/once';
-                    const annualPrice = product.price;
-                    const monthlyPrice = (product as Product).monthlyPrice;
-                    const p = dict.pricing as any;
-                    const periodLabel = isOnce
-                      ? 'one-time (lifetime)'
-                      : hasMonthly
-                        ? (p.per_year ?? '/year')
-                        : product.period;
-                    const savings = (product as Product).savings;
-
-                    return (
-                      <>
-                        <div className="flex items-baseline gap-2 mb-1">
-                          <span
-                            className={`text-slate-900 ${hasMonthly ? 'text-4xl' : 'text-3xl'} font-bold`}
-                          >
-                            {annualPrice}
-                          </span>
-                          <span className="text-xs text-slate-500 font-medium">
-                            {periodLabel}
-                          </span>
-                        </div>
-                        {!isOnce && (
-                          <div className="mb-2">
-                            <span className="inline-block text-[9px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full bg-amber-50 border border-amber-200 text-amber-700">
-                              {dict.pricing.intro_label}
-                            </span>
-                          </div>
-                        )}
-                        {hasMonthly && monthlyPrice && (
-                          <div className="space-y-1">
-                            <div className="text-sm text-slate-600">
-                              {p.or_monthly ?? 'or'}{' '}
-                              <span className="font-semibold text-slate-700">
-                                {monthlyPrice}{p.per_month_short ?? '/month'}
-                              </span>
-                            </div>
-                            {savings && (
-                              <div className="inline-flex items-center gap-2 px-2 py-1 bg-green-50 border border-green-200 rounded-full">
-                                <Heart className="h-3 w-3 text-green-600" />
-                                <span className="text-[10px] font-bold text-green-700 uppercase tracking-wider">
-                                  {p.annual_savings ?? 'Annual savings:'} {savings}
-                                </span>
-                              </div>
-                            )}
-                          </div>
-                        )}
-                        {isOnce && !hasMonthly && (
-                          <div className="text-xs text-slate-500">
-                            {p.no_monthly_option ?? 'No monthly option'}
-                          </div>
-                        )}
-                      </>
-                    );
-                  })()}
-                </div>
-
-                <p className="text-sm text-slate-600 mb-6 flex-1 leading-relaxed border-b border-slate-100 pb-6">
-                  {product.desc}
-                </p>
-
-                <ul className="mb-6 space-y-2">
-                  {product.features.map((f: string) => (
-                    <li
-                      key={f}
-                      className="text-xs text-slate-500 flex items-center gap-2"
-                    >
-                      <Check size={12} className={category.color} /> {f}
-                    </li>
-                  ))}
-                </ul>
-
-                {(product as any).isCalculator ? (
-                  <div className="mt-auto">
-                    <Link
-                      href="#calculator"
-                      className={`block w-full py-3 rounded-lg text-center font-bold text-sm uppercase tracking-wide transition-all shadow-md hover:-translate-y-1 ${product.button}`}
-                    >
-                      {product.button}
-                    </Link>
-                  </div>
-                ) : (
-                  <button
-                    onClick={() => handleAddToCart(product)}
-                    className={`w-full py-3 rounded-lg text-center font-bold text-sm uppercase tracking-wide transition-all shadow-md hover:-translate-y-1 ${product.button}`}
-                  >
-                    {(dict.pricing as any).add_btn ?? 'Add'}
-                  </button>
-                )}
-              </div>
-            ))}
-            {category.id === 'app' && (
-              <div className="col-span-1 md:col-span-1 lg:col-span-2 h-full">
-                <PricingCalculator />
-              </div>
-            )}
-          </div>
-
-          {category.id === 'flow' && (dict.pricing as any).tracker_footnote && (
-            <p className="text-xs text-slate-400 mt-4 leading-relaxed">
-              {(dict.pricing as any).tracker_footnote}
-            </p>
-          )}
-        </section>
-      ))}
-
-      <div className="text-center mt-20 border-t border-slate-100 pt-12">
-        <p className="text-slate-400 text-sm">{dict.pricing.vat_note}</p>
-        {(dict as any).roi?.pricing_link && (
-          <p className="mt-4 text-sm">
-            <Link
-              href={`/${currentLocale}/roi-calculator/`}
-              className="font-semibold text-primary underline underline-offset-2 hover:text-primary/80"
-            >
-              {(dict as any).roi.pricing_link} →
-            </Link>
+        )}
+        {category.id === 'app' && (
+          <p className="k" style={{ fontSize: '11px', color: '#78836F', marginBottom: '10px' }}>
+            {category.description}
           </p>
         )}
+
+        {category.promoCode && product.period !== '/once' && (
+          <div className="mb-3 p-3 bg-red-50 border border-red-100 rounded-lg">
+            <div className="flex justify-between items-center mb-1">
+              <span className="text-[10px] font-bold uppercase text-red-500 tracking-wider">
+                Promo Code
+              </span>
+              {isLoadingStats ? (
+                <span className="text-[10px] font-bold text-red-600 bg-red-100 px-2 py-0.5 rounded-full">
+                  Loading...
+                </span>
+              ) : promoStats[category.promoCode] ? (
+                <span className="text-[10px] font-bold text-red-600 bg-red-100 px-2 py-0.5 rounded-full">
+                  {promoStats[category.promoCode].remaining}/
+                  {promoStats[category.promoCode].maxUses} Left
+                </span>
+              ) : (
+                <span className="text-[10px] font-bold text-red-600 bg-red-100 px-2 py-0.5 rounded-full">
+                  {category.maxCoupons}/200 Left
+                </span>
+              )}
+            </div>
+            <div className="text-sm font-mono font-bold text-red-600 flex items-center gap-2">
+              <span
+                className="border-2 border-dashed border-red-200 px-2 py-0.5 rounded bg-white select-all cursor-pointer"
+                title="Copia"
+              >
+                {category.promoCode}
+              </span>
+              <span className="text-[10px] text-red-400 font-sans font-normal">
+                -25/30% OFF
+              </span>
+            </div>
+          </div>
+        )}
+
+        <p className="tag k">{product.tagline}</p>
+        <h3>{product.name}</h3>
+
+        <div style={{ margin: '4px 0 20px' }}>
+          <span className="big" style={{ fontSize: '30px' }}>{annualPrice}</span>{' '}
+          <span className="k" style={{ fontSize: '10.5px' }}>{periodLabel}</span>
+          {!isOnce && (
+            <div className="k" style={{ fontSize: '10px', color: 'var(--seal)', marginTop: '6px' }}>
+              {dict.pricing.intro_label}
+            </div>
+          )}
+          {hasMonthly && monthlyPrice && (
+            <div style={{ fontSize: '13.5px', marginTop: '8px' }}>
+              {p.or_monthly ?? 'or'}{' '}
+              <strong>{monthlyPrice}{p.per_month_short ?? '/month'}</strong>
+              {savings && (
+                <span style={{ display: 'block', marginTop: '4px', color: 'var(--seal)' }}>
+                  {p.annual_savings ?? 'Annual savings:'} {savings}
+                </span>
+              )}
+            </div>
+          )}
+          {isOnce && !hasMonthly && (
+            <div style={{ fontSize: '13px', opacity: 0.7, marginTop: '6px' }}>
+              {p.no_monthly_option ?? 'No monthly option'}
+            </div>
+          )}
+        </div>
+
+        <p className="desc">{product.desc}</p>
+
+        <ul>
+          {product.features.map((f: string) => (
+            <li key={f}>{f}</li>
+          ))}
+        </ul>
+
+        {(product as any).isCalculator ? (
+          <Link className="b1" href="#calculator">
+            {product.button}
+          </Link>
+        ) : (
+          <button className="b1" onClick={() => handleAddToCart(product)}>
+            {(dict.pricing as any).add_btn ?? 'Add'}
+          </button>
+        )}
       </div>
+    );
+  };
+
+  return (
+    <div className="lp-l lp-prezzi">
+      <section className="ph">
+        <div className="crumb">
+          <div className="w">
+            <Link href={getLink('/')}>Home</Link> / {dict.navbar.pricing}
+          </div>
+        </div>
+        <div className="w">
+          <p className="kk k r">
+            <s></s>
+            {dict.pricing.badge}
+          </p>
+          <h1 className="r">
+            <span dangerouslySetInnerHTML={{ __html: dict.pricing.title }} />
+            <br />
+            <em>{p.title_gradient ?? 'Scale Your Business.'}</em>
+          </h1>
+          <p className="lede r d1">{dict.pricing.subtitle}</p>
+          <div className="acts r d2">
+            <Link
+              className="b1"
+              href={getLink('/trial')}
+              onClick={() => trackEvent('trial_click', { cta_source: 'pricing_hero', cta_locale: currentLocale })}
+            >
+              {dict.navbar.cta_start ?? dict.navbar.cta}
+            </Link>
+            <Link className="b2" href={getLink('/contact')}>
+              {dict.kairos.quick_contact}
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="sec">
+        <div className="w">
+          {flowCategory && (
+            <p className="kk k r">
+              {flowCategory.title} &middot; {flowCategory.description}
+            </p>
+          )}
+          <div className="plans">
+            {appCategory?.products.map((product) => renderPlanCard(appCategory!, product, 'd1'))}
+            {flowCategory?.products.map((product, i) => renderPlanCard(flowCategory!, product, `d${i + 2}`))}
+          </div>
+          {(dict.pricing as any).tracker_footnote && (
+            <p className="vat r" style={{ marginTop: '14px' }}>{(dict.pricing as any).tracker_footnote}</p>
+          )}
+          <p className="vat r">{dict.pricing.vat_note}</p>
+          {(dict as any).roi?.pricing_link && (
+            <p className="vat" style={{ marginTop: '10px' }}>
+              <Link href={`/${currentLocale}/roi-calculator/`} className="b2">
+                {(dict as any).roi.pricing_link} &rarr;
+              </Link>
+            </p>
+          )}
+        </div>
+      </section>
+
+      <section className="sec ink">
+        <div className="w">
+          <PricingCalculator />
+        </div>
+      </section>
+
+      <section className="end">
+        <img className="bg" src="/bg2.webp" alt="" loading="lazy" />
+        <div className="ov"></div>
+        <div className="w">
+          <h2 className="r">
+            {trialTitleFirst}{trialTitleRest ? '.' : ''}
+            {trialTitleRest && (
+              <>
+                <br />
+                <i>{trialTitleRest}</i>
+              </>
+            )}
+          </h2>
+          <p className="r d1">{dict.trial.page_subtitle}</p>
+          <div className="acts r d2">
+            <Link
+              className="b1"
+              href={getLink('/trial')}
+              onClick={() => trackEvent('trial_click', { cta_source: 'pricing_end', cta_locale: currentLocale })}
+            >
+              {dict.navbar.cta_start ?? dict.navbar.cta}
+            </Link>
+            <Link className="b2" href={getLink('/contact')}>
+              {dict.kairos.quick_contact}
+            </Link>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

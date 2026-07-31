@@ -1,5 +1,6 @@
 'use client';
 
+import './l-page.css';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useState, useEffect, Suspense } from 'react';
@@ -73,114 +74,54 @@ function SuccessContent() {
   }, [sessionId]);
 
   return (
-    <div
-      className="min-h-screen flex items-center justify-center py-12 px-4"
-      style={{
-        background:
-          'radial-gradient(circle at 20% 20%, rgba(73, 226, 214, 0.08), transparent 35%), radial-gradient(circle at 80% 0%, rgba(106, 125, 252, 0.14), transparent 40%), #0a0d1b',
-      }}
-    >
-      <motion.div
-        className="p-12 rounded-lg max-w-md w-full text-center"
-        style={{
-          background: 'rgba(255, 255, 255, 0.06)',
-          border: '1px solid rgba(255, 255, 255, 0.05)',
-          boxShadow: '0 20px 50px rgba(0,0,0,0.28)',
-        }}
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.6 }}
-      >
-        <div
-          className="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6"
-          style={{ background: 'rgba(106,125,252,0.35)' }}
+    <div className="lp-l lp-success">
+      <div className="card">
+        <motion.div
+          className="box"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6 }}
         >
-          <span className="text-4xl" style={{ color: '#e8ecf8' }}>
-            ✓
-          </span>
-        </div>
+          <div className="ico">✓</div>
 
-        <h1
-          className="text-3xl font-bold mb-4 font-display"
-          style={{ color: '#e8ecf8' }}
-        >
-          {t.title}
-        </h1>
+          <h1>{t.title}</h1>
 
-        <div className="mb-6" style={{ color: '#cdd2e8' }}>
-          <p>{t.thanks}</p>
-          {loading && (
-            <p className="mt-4 text-yellow-400 animate-pulse">
-              {t.generating}
-            </p>
-          )}
-
-          {!loading && inviteLink && (
-            <p className="mt-4 text-emerald-300">
-              {t.ready}
-            </p>
-          )}
-
-          {!loading && error && <p className="mt-4 text-red-400">{error}</p>}
-        </div>
-
-        {inviteLink === 'EMAIL_ONLY' ? (
-          <div className="space-y-4">
-            <div className="p-4 bg-emerald-500/10 border border-emerald-500/20 rounded-lg text-emerald-200">
-              <p className="font-bold">{t.email_sent}</p>
-              <p className="text-sm opacity-80">
-                {t.check_inbox}
-              </p>
-            </div>
-            <Link
-              href="/"
-              className="block px-6 py-3 font-medium rounded-lg transition"
-              style={{
-                background: 'rgba(255,255,255,0.1)',
-                color: '#e8ecf8',
-              }}
-            >
-              {t.back_home}
-            </Link>
+          <div className="msg">
+            <p>{t.thanks}</p>
+            {loading && <p className="wait">{t.generating}</p>}
+            {!loading && inviteLink && <p className="ready">{t.ready}</p>}
+            {!loading && error && <p className="err">{error}</p>}
           </div>
-        ) : inviteLink ? (
-          <a
-            href={inviteLink}
-            className="block px-6 py-3 font-medium rounded-lg transition transform hover:scale-105"
-            style={{
-              background: 'linear-gradient(135deg, #6a7dfc, #49e2d6)',
-              color: '#0b0f1f',
-              boxShadow: '0 0 20px rgba(73, 226, 214, 0.4)',
-            }}
-          >
-            {t.activate}
-          </a>
-        ) : (
-          <button
-            disabled={loading}
-            className="block w-full px-6 py-3 font-medium rounded-lg transition opacity-50 cursor-not-allowed"
-            style={{
-              background: 'rgba(255,255,255,0.1)',
-              color: '#e8ecf8',
-            }}
-          >
-            {loading ? t.waiting : t.unavailable}
-          </button>
-        )}
 
-        {inviteLink !== 'EMAIL_ONLY' && (
-          <a
-            href="mailto:info@geotapp.com"
-            className="block px-6 py-3 font-medium rounded-lg transition"
-            style={{
-              color: '#e8ecf8',
-              border: '1px solid rgba(255,255,255,0.4)',
-            }}
-          >
-            {t.help}
-          </a>
-        )}
-      </motion.div>
+          <div className="stack">
+            {inviteLink === 'EMAIL_ONLY' ? (
+              <>
+                <div className="msg" style={{ textAlign: 'left' }}>
+                  <p className="ready" style={{ fontWeight: 600 }}>{t.email_sent}</p>
+                  <p>{t.check_inbox}</p>
+                </div>
+                <Link href="/" className="pill-mute">
+                  {t.back_home}
+                </Link>
+              </>
+            ) : inviteLink ? (
+              <a href={inviteLink} className="pill-ok">
+                {t.activate}
+              </a>
+            ) : (
+              <button disabled={loading} className="pill-disabled">
+                {loading ? t.waiting : t.unavailable}
+              </button>
+            )}
+
+            {inviteLink !== 'EMAIL_ONLY' && (
+              <a href="mailto:info@geotapp.com" className="pill-ghost">
+                {t.help}
+              </a>
+            )}
+          </div>
+        </motion.div>
+      </div>
     </div>
   );
 }

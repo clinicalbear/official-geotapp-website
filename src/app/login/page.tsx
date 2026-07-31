@@ -1,5 +1,6 @@
 'use client';
 
+import './l-page.css';
 import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { Database, Smartphone, ArrowRight } from 'lucide-react';
@@ -8,8 +9,6 @@ import {
   DEFAULT_LOCALE,
   getLocaleFromPathname,
 } from '@/lib/i18n/locale-routing';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
 
 export default function LoginPage() {
   const pathname = usePathname();
@@ -18,79 +17,70 @@ export default function LoginPage() {
   const dict = commonDict.login_hub;
 
   return (
-    <main className="min-h-screen bg-off-white font-sans selection:bg-primary/30">
-      <Navbar />
-
-      <section className="pt-5 pb-20 container mx-auto px-6">
-        <div className="max-w-4xl mx-auto text-center mb-16">
+    <div className="lp-l lp-login">
+      <section className="ph" style={{ padding: '150px 0 70px' }}>
+        <div className="w" style={{ textAlign: 'center' }}>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-6xl font-display font-bold text-slate-900 mb-6"
+            style={{ margin: '0 auto', maxWidth: '20ch' }}
             dangerouslySetInnerHTML={{ __html: dict.title }}
           />
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-xl text-text-secondary"
+            className="lede"
+            style={{ margin: '26px auto 0' }}
           >
             {dict.subtitle}
           </motion.p>
         </div>
-
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {/* Flow Card */}
-          <motion.a
-            href={`${process.env.NEXT_PUBLIC_FLOW_URL || '#'}`}
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.2 }}
-            className="group relative bg-white rounded-3xl p-8 border border-border hover:border-flow/30 shadow-lg hover:shadow-2xl hover:shadow-flow/10 transition-all duration-300 flex flex-col items-center text-center"
-          >
-            <div className="w-20 h-20 bg-flow/10 text-flow rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-              <Database size={40} />
-            </div>
-            <h2 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-flow transition-colors">
-              GeoTapp FLOW
-            </h2>
-            <p className="text-text-secondary mb-8">{dict.flow.desc}</p>
-            <div className="mt-auto flex items-center gap-2 text-flow font-bold">
-              {dict.flow.btn}{' '}
-              <ArrowRight
-                size={18}
-                className="group-hover:translate-x-1 transition-transform"
-              />
-            </div>
-          </motion.a>
-
-          {/* TimeTracker Card */}
-          <motion.a
-            href={`${process.env.NEXT_PUBLIC_TIMETRACKER_URL || '#'}`}
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.3 }}
-            className="group relative bg-white rounded-3xl p-8 border border-border hover:border-app/30 shadow-lg hover:shadow-2xl hover:shadow-app/10 transition-all duration-300 flex flex-col items-center text-center"
-          >
-            <div className="w-20 h-20 bg-app/10 text-app rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-              <Smartphone size={40} />
-            </div>
-            <h2 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-app transition-colors">
-              GeoTapp TimeTracker
-            </h2>
-            <p className="text-text-secondary mb-8">{dict.timetracker.desc}</p>
-            <div className="mt-auto flex items-center gap-2 text-app font-bold">
-              {dict.timetracker.btn}{' '}
-              <ArrowRight
-                size={18}
-                className="group-hover:translate-x-1 transition-transform"
-              />
-            </div>
-          </motion.a>
-        </div>
       </section>
 
-      <Footer />
-    </main>
+      <section className="sec">
+        <div className="wn">
+          <div className="grid2">
+            {/* Flow Card — link identico a prima, cambia solo il vestito */}
+            <motion.a
+              href={`${process.env.NEXT_PUBLIC_FLOW_URL || '#'}`}
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.2 }}
+              className="crd r-l"
+            >
+              <div className="crd-i" style={{ background: 'rgba(59,174,224,.12)', color: '#3BAEE0' }}>
+                <Database size={40} />
+              </div>
+              <h2>GeoTapp FLOW</h2>
+              <p>{dict.flow.desc}</p>
+              <div className="crd-cta" style={{ color: '#3BAEE0' }}>
+                {dict.flow.btn}
+                <ArrowRight size={18} />
+              </div>
+            </motion.a>
+
+            {/* TimeTracker Card — link identico a prima, cambia solo il vestito */}
+            <motion.a
+              href={`${process.env.NEXT_PUBLIC_TIMETRACKER_URL || '#'}`}
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.3 }}
+              className="crd r-r"
+            >
+              <div className="crd-i" style={{ background: 'rgba(143,196,54,.14)', color: '#5c8a1f' }}>
+                <Smartphone size={40} />
+              </div>
+              <h2>GeoTapp TimeTracker</h2>
+              <p>{dict.timetracker.desc}</p>
+              <div className="crd-cta" style={{ color: '#0E0E0C' }}>
+                {dict.timetracker.btn}
+                <ArrowRight size={18} />
+              </div>
+            </motion.a>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }

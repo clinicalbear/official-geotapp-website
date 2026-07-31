@@ -1,0 +1,123 @@
+/* Direzione L — template articolo (/blog/[...slug]/). Solo vestito: le
+   classi base (.ph .art .sec .end .w .wn ecc.) sono gia' in l-mockup.css,
+   caricato da src/app/blog/layout.tsx. Qui SOLO cio' che serve in piu':
+   sfondo di pagina (qui non c'e' redesign-l.css a impostarlo) e le regole
+   difensive per il corpo HTML che arriva da WordPress, che ha le sue classi
+   e va vestito senza toccarlo. */
+.lp-articolo {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+/* Il corpo dell'articolo arriva da WP come HTML libero, dentro
+   .article-content (vedi ArticleContent.tsx). Le regole di l-mockup.css
+   su ".art .body h2/h3/li/figure" sono selettori discendenti e si applicano
+   gia' a qualunque profondita'; qui solo cio' che l-mockup non copre perche'
+   scritto per markup diretto del mockup (".art .body>p" e' figlio diretto,
+   qui i <p> sono innestati in .article-content) o perche' il tag non esiste
+   nel mockup (blockquote, tabelle, embed). */
+.lp-articolo .art .body .article-content {
+  max-width: 74ch;
+}
+.lp-articolo .art .body .article-content > p,
+.lp-articolo .art .body .article-content p {
+  margin-bottom: 26px;
+  font-size: 18.5px;
+  line-height: 1.72;
+  color: #2e342a;
+}
+.lp-articolo .art .body .article-content > p:first-of-type {
+  font-size: 22px;
+  line-height: 1.6;
+  color: var(--ink);
+}
+.lp-articolo .art .body .article-content a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: rgba(143, 196, 54, 0.5);
+  text-underline-offset: 3px;
+}
+.lp-articolo .art .body .article-content a:hover {
+  color: var(--seal);
+}
+.lp-articolo .art .body .article-content strong,
+.lp-articolo .art .body .article-content b {
+  color: var(--ink);
+  font-weight: 600;
+}
+/* Citazioni WP (blockquote): stesso trattamento del richiamo ".pull" del
+   mockup, l'unico modo di ottenerlo senza toccare l'HTML che arriva da WP. */
+.lp-articolo .art .body .article-content blockquote {
+  border-left: 3px solid var(--seal);
+  padding: 6px 0 6px 30px;
+  margin: 44px 0;
+  font-family: var(--font-anton), 'Anton', sans-serif;
+  text-transform: uppercase;
+  font-size: clamp(21px, 2.3vw, 32px);
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+}
+.lp-articolo .art .body .article-content blockquote p {
+  margin-bottom: 0;
+  font: inherit;
+  color: inherit;
+}
+/* Immagini: il reset globale (img{max-width:100%;display:block}) basta per
+   non rompere il layout; qui solo l'altezza automatica per non deformarle. */
+.lp-articolo .art .body .article-content img {
+  height: auto;
+  border-radius: 2px;
+}
+.lp-articolo .art .body .article-content iframe,
+.lp-articolo .art .body .article-content video {
+  max-width: 100%;
+}
+/* Tabelle: WP non le avvolge in un contenitore scrollabile, quindi lo
+   scroll orizzontale va sulla tabella stessa (niente wrapper da iniettare
+   nell'HTML). */
+.lp-articolo .art .body .article-content table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-collapse: collapse;
+  font-size: 15.5px;
+  margin: 32px 0;
+}
+.lp-articolo .art .body .article-content th,
+.lp-articolo .art .body .article-content td {
+  border: 1px solid rgba(14, 14, 12, 0.16);
+  padding: 10px 14px;
+  text-align: left;
+}
+.lp-articolo .art .body .article-content th {
+  background: rgba(14, 14, 12, 0.05);
+  font-weight: 600;
+}
+.lp-articolo .art .body .article-content pre,
+.lp-articolo .art .body .article-content code {
+  background: rgba(14, 14, 12, 0.05);
+  border-radius: 4px;
+  font-size: 15px;
+}
+.lp-articolo .art .body .article-content pre {
+  padding: 18px 20px;
+  overflow-x: auto;
+}
+.lp-articolo .art .body .article-content code {
+  padding: 2px 6px;
+}
+
+/* Sidebar (ArticleSidebar.tsx): sul mockup e' solo "scritto da" + indice +
+   condividi. Qui restano anche i pannelli extra (timbratura, prodotto,
+   dati in Europa, CTA): funzionalita' che "resta", vestita in coerenza col
+   resto della colonna invece di stonare col fondo carta. */
+.lp-articolo .art .side .panel {
+  border: 1px solid rgba(14, 14, 12, 0.14);
+  border-radius: 4px;
+  background: transparent;
+}
+
+/* Prima di 1000px il mockup fa impilare .lay a colonna unica (regola gia'
+   in l-mockup.css): qui la sidebar resta visibile invece di sparire, cosi'
+   indice/condividi/CTA restano raggiungibili anche da mobile. */

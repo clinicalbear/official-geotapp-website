@@ -95,20 +95,21 @@ export default function ConservazioneClient({ locale, contenuto, paesi }: Props)
     }
   }
 
-  const inputCls =
-    'w-full px-4 py-2.5 text-sm rounded-xl border border-slate-200 bg-white text-slate-800 placeholder:text-slate-400 outline-none focus:border-[#8FC436] transition-colors';
-  const labelCls = 'block text-sm font-semibold text-slate-700 mb-1.5';
-
   return (
-    <div className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 shadow-sm">
-      <div className="grid sm:grid-cols-2 gap-5">
-        <div>
-          <label className={labelCls}>{c.azienda}</label>
-          <input className={inputCls} value={azienda} onChange={(e) => setAzienda(e.target.value)} placeholder={c.aziendaPlaceholder} />
+    <div className="form r">
+      <div className="two">
+        <div className="fld">
+          <label>{c.azienda}</label>
+          <input
+            className="in"
+            value={azienda}
+            onChange={(e) => setAzienda(e.target.value)}
+            placeholder={c.aziendaPlaceholder}
+          />
         </div>
-        <div>
-          <label className={labelCls}>{c.paese}</label>
-          <select className={inputCls} value={paeseId} onChange={(e) => setPaeseId(e.target.value)}>
+        <div className="fld">
+          <label>{c.paese}</label>
+          <select className="in" value={paeseId} onChange={(e) => setPaeseId(e.target.value)}>
             {paesi.map((p) => (
               <option key={p.id} value={p.id}>{p.nome}</option>
             ))}
@@ -116,9 +117,9 @@ export default function ConservazioneClient({ locale, contenuto, paesi }: Props)
         </div>
       </div>
 
-      <div className="mt-6">
-        <p className={labelCls}>{c.selezionaTipi}</p>
-        <div className="grid sm:grid-cols-2 gap-2.5">
+      <div className="fld">
+        <label>{c.selezionaTipi}</label>
+        <div className="cd-tipi">
           {c.tipi.map((t) => {
             const on = !!selezione[t.id];
             return (
@@ -128,20 +129,8 @@ export default function ConservazioneClient({ locale, contenuto, paesi }: Props)
                 role="checkbox"
                 aria-checked={on}
                 onClick={() => toggle(t.id)}
-                className={`flex items-center gap-3 text-left px-4 py-3 rounded-xl border text-sm font-semibold transition-colors ${
-                  on
-                    ? 'bg-[#8FC436]/10 border-[#8FC436] text-slate-900'
-                    : 'bg-white border-slate-200 text-slate-500 hover:border-[#8FC436]'
-                }`}
+                className={`cd-tog${on ? ' on' : ''}`}
               >
-                <span
-                  className={`flex h-5 w-5 shrink-0 items-center justify-center rounded-md border ${
-                    on ? 'bg-[#8FC436] border-[#8FC436] text-slate-900' : 'border-slate-300 text-transparent'
-                  }`}
-                  aria-hidden="true"
-                >
-                  ✓
-                </span>
                 {t.nome}
               </button>
             );
@@ -149,30 +138,25 @@ export default function ConservazioneClient({ locale, contenuto, paesi }: Props)
         </div>
       </div>
 
-      <div className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
-        <label className={labelCls}>{c.logo}</label>
-        <div className="flex items-center gap-3">
-          <label className="inline-flex items-center gap-2 cursor-pointer px-4 py-2.5 text-sm font-semibold text-slate-700 bg-slate-50 border border-slate-200 rounded-xl hover:border-[#8FC436] transition-colors">
+      <div className="fld">
+        <label>{c.logo}</label>
+        <div className="cd-upload">
+          <label className="cd-upload-btn">
             <Upload size={16} /> {c.logo}
-            <input type="file" accept="image/*" onChange={onLogo} className="hidden" />
+            <input type="file" accept="image/*" onChange={onLogo} className="cd-upload-input" />
           </label>
-          {logo && <img src={logo} alt="logo" className="h-10 max-w-[120px] object-contain" />}
+          {logo && <img src={logo} alt="logo" className="cd-upload-preview" />}
         </div>
-        <p className="text-xs text-slate-400 mt-1.5">{c.logoHint}</p>
+        <p className="cd-hint">{c.logoHint}</p>
       </div>
 
-      {err && <p className="text-sm text-red-500 mt-4">{c.required}</p>}
+      {err && <p className="cd-err">{c.required}</p>}
 
-      <button
-        onClick={genera}
-        className="mt-6 inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-bold text-slate-900 bg-[#8FC436] rounded-xl hover:bg-[#7db02e] transition-colors"
-      >
+      <button type="button" onClick={genera} className="b1">
         <FileText size={18} /> {c.genera}
       </button>
 
-      <p className="text-xs text-slate-400 mt-4 flex items-start gap-1.5">
-        <span>🔒</span><span>{c.privacyNote}</span>
-      </p>
+      <p className="cd-privacy"><span aria-hidden="true">🔒</span><span>{c.privacyNote}</span></p>
     </div>
   );
 }

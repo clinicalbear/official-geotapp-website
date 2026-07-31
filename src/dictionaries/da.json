@@ -284,6 +284,11 @@
         "name": "VVS-installatører",
         "desc": "VVS, varme, kedler. GPS-arbejdsrapporter med billeder før og efter, ingen tvister om udført arbejde.",
         "cta": "Bevis hvert arbejde"
+      },
+      "termoidraulici": {
+        "name": "VVS-installatør",
+        "desc": "GeoTapp registrerer hvert job på kedler og varmeanlæg med GPS, fotos og verificerbare tidsstempler. Kunden nægter udskiftede dele?",
+        "cta": "Bevis udskiftede dele"
       }
     },
     "app_mockup": {

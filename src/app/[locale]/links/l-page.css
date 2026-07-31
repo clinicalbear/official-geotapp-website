@@ -1,0 +1,6 @@
+/* Direzione L — variante links → .lp-links (leggero: la pagina resta quella
+   mobile-first del link in bio, cambia solo la lista "Link utili" a filo).
+   .lp-l toglie il padding-top:100px di <main> (pensato per l'hero .ph): qui
+   non c'e' un hero nuovo, quindi lo ripristiniamo per non finire sotto la
+   barra fissa, esattamente come prima della conversione. */
+.lp-links{padding-top:100px}

@@ -397,6 +397,20 @@ const GPS_CALLOUT: Record<string, { text: string; cta: string }> = {
   ru: { text: 'Отправляете бригады за рубеж? Бесплатный инструмент «GPS сотрудников в ЕС» показывает, что нужно, страна за страной.', cta: 'Открыть гид →' },
 };
 
+// Chiusura fotografica finale: un'immagine per settore, stessa convenzione
+// gia' usata per queste tre categorie nel resto del sito (bg1=installatori,
+// bg2=pulizie, bg3=sicurezza — vedi settore-pulizie.html nel mockup).
+const END_BG: Record<string, string> = {
+  installatori: '/bg1.webp',
+  pulizie: '/bg2.webp',
+  sicurezza: '/bg3.webp',
+};
+
+// Ritmo chiaro/caldo delle sezioni, come nel mockup generale.
+function secTone(i: number): string {
+  return i % 2 === 0 ? 'sec' : 'sec warm';
+}
+
 export default async function RisorseSettorePage({ params }: { params: Promise<Params> }) {
   const { locale, settore } = await params;
   const config = SETTORE_CONFIG[settore];
@@ -416,6 +430,9 @@ export default async function RisorseSettorePage({ params }: { params: Promise<P
   const pageUrl = `https://geotapp.com/${resolvedLocale}/settori/${settore}/risorse/`;
   const gpsHref = localizePath('/risorse/gps-lavoratori-ue/', resolvedLocale);
   const gpsCallout = GPS_CALLOUT[resolvedLocale] ?? GPS_CALLOUT['en'];
+  const homeHref = `/${resolvedLocale}/`;
+  const settoreHref = `/${resolvedLocale}/settori/${settore}/`;
+  const endBg = END_BG[settore] ?? '/bg2.webp';
 
   const breadcrumbJsonLd = {
     '@context': 'https://schema.org',
@@ -455,91 +472,79 @@ export default async function RisorseSettorePage({ params }: { params: Promise<P
         />
       )}
 
-      <div className="bg-white min-h-screen text-slate-900 font-sans">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 pt-5 pb-12">
-
-          <Link
-            href={`/${resolvedLocale}/settori/${settore}/`}
-            className="text-sm text-blue-600 hover:underline"
-          >
-            {backLabel}
-          </Link>
-
-          <h1 className="text-3xl font-bold text-slate-900 mt-4 mb-4">
-            {label.heading}
-          </h1>
-
-          <p className="text-slate-700 leading-relaxed mb-6 max-w-3xl">
-            {intro}
-          </p>
-
-          <div className="mb-10 max-w-3xl rounded-xl border border-[#8FC436]/30 bg-[#8FC436]/10 p-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-            <p className="text-sm text-slate-700 leading-relaxed">{gpsCallout.text}</p>
-            <Link
-              href={gpsHref}
-              className="shrink-0 inline-flex items-center justify-center rounded-lg bg-[#8FC436] px-4 py-2 text-sm font-semibold text-slate-900 hover:bg-[#7db02e] transition-colors whitespace-nowrap"
-            >
-              {gpsCallout.cta}
-            </Link>
+      <div className="lp-l lp-risorsa-settore">
+        <section className="ph">
+          <div className="crumb">
+            <div className="w">
+              <Link href={homeHref}>GeoTapp</Link> / <Link href={settoreHref}>{backLabel}</Link> / {label.heading}
+            </div>
           </div>
+          <div className="w">
+            <h1>{label.heading}</h1>
+            <p className="lede">{intro}</p>
+          </div>
+        </section>
 
-          {sections.map((section, i) => (
-            <section key={i} className="mb-10">
-              <h2 className="text-xl font-bold text-slate-900 mb-3">{section.h2}</h2>
-              <p className="text-slate-700 leading-relaxed mb-3 max-w-3xl">
+        <section className={secTone(0)}>
+          <div className="w">
+            <div className="ctain">
+              <p>{gpsCallout.text}</p>
+              <Link className="b1" href={gpsHref}>{gpsCallout.cta}</Link>
+            </div>
+          </div>
+        </section>
+
+        {sections.map((section, i) => (
+          <section key={i} className={secTone(i + 1)}>
+            <div className="w">
+              <h2>{section.h2}</h2>
+              <p>
                 {section.body}{section.productLink && (
-                  <>, <Link href={productHref} className="text-blue-600 hover:underline font-medium">{config.product.name}</Link></>
+                  <>, <Link href={productHref}>{config.product.name}</Link></>
                 )}
               </p>
               {section.listItems && (
-                <ul className="space-y-2 ml-1">
+                <ul className="rows">
                   {section.listItems.map((item, j) => (
-                    <li key={j} className="flex items-start gap-2 text-slate-700 text-sm">
-                      <span className="text-blue-500 mt-0.5 flex-shrink-0">✓</span>
-                      <span>{item}</span>
-                    </li>
+                    <li key={j}>{item}</li>
                   ))}
                 </ul>
               )}
-            </section>
-          ))}
-
-          {posts.length === 0 ? (
-            <p className="text-slate-400 text-sm">{emptyLabel}</p>
-          ) : (
-            <ul className="space-y-6 mb-10">
-              {posts.map((post) => (
-                <li key={post.id} className="border-b border-slate-100 pb-6">
-                  <Link href={post.url} className="group">
-                    <h2 className="text-lg font-semibold text-slate-800 group-hover:text-blue-600 transition-colors mb-1">
-                      {post.title}
-                    </h2>
-                    <p className="text-sm text-slate-500 mb-2">{post.excerpt}</p>
-                    <span className="text-xs font-medium text-blue-600">{readLabel}</span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          )}
-
-          <div className="bg-blue-50 border border-blue-100 rounded-xl p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-            <div>
-              <p className="text-xs font-semibold text-blue-500 uppercase tracking-wide mb-1">
-                {productPageLabel}
-              </p>
-              <p className="text-lg font-bold text-slate-900">
-                {ctaLabel.discover} {config.product.name}
-              </p>
             </div>
-            <Link
-              href={productHref}
-              className="inline-flex items-center justify-center rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-blue-700 transition-colors whitespace-nowrap"
-            >
-              {ctaLabel.cta}
-            </Link>
-          </div>
+          </section>
+        ))}
 
-        </div>
+        <section className={secTone(sections.length + 1)}>
+          <div className="w">
+            {posts.length === 0 ? (
+              <p>{emptyLabel}</p>
+            ) : (
+              <div className="res">
+                {posts.map((post, i) => (
+                  <Link key={post.id} href={post.url} className={`r d${(i % 4) + 1}`}>
+                    <span className="nn">{String(i + 1).padStart(2, '0')}</span>
+                    <h3>{post.title}</h3>
+                    <p>{post.excerpt}</p>
+                    <span className="go" aria-hidden="true">{readLabel}</span>
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+        </section>
+
+        <section className="end">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img className="bg" src={endBg} alt="" loading="lazy" />
+          <div className="ov" />
+          <div className="w">
+            <p className="kk k">{productPageLabel}</p>
+            <h2 className="r">{ctaLabel.discover} {config.product.name}</h2>
+            <div className="acts r d1">
+              <Link className="b1" href={productHref}>{ctaLabel.cta}</Link>
+            </div>
+          </div>
+        </section>
       </div>
     </>
   );

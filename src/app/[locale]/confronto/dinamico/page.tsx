@@ -2,7 +2,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
 import { DynamicComparison } from '@/components/DynamicComparison';
-import GeoBadge from '@/components/GeoBadge';
+import { TrialCTALink } from '@/components/analytics/TrialCTALink';
+import LNastro from '@/components/LNastro';
 export { generateLocaleStaticParams as generateStaticParams } from '@/lib/i18n/static-params';
 
 const PATHNAME = '/confronto/dinamico/';
@@ -320,39 +321,22 @@ export default async function Page({
   const c = COPY[locale] ?? COPY.en;
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
-      <div className="container mx-auto px-4 pb-20 pt-20 sm:px-6 md:pt-5">
-        {/* Breadcrumb */}
-        <nav
-          aria-label="Breadcrumb"
-          className="mb-6 text-sm text-slate-500"
-        >
-          <Link href={`/${locale}/`} className="hover:text-slate-700">
-            {c.breadcrumbHome}
-          </Link>
-          <span className="mx-2">/</span>
-          <Link
-            href={`/${locale}/confronto/`}
-            className="hover:text-slate-700"
-          >
-            {c.breadcrumbCompare}
-          </Link>
-          <span className="mx-2">/</span>
-          <span className="text-slate-700">{c.breadcrumbDynamic}</span>
-        </nav>
+    <div className="lp-l lp-confronto-vs">
+      <section className="ph">
+        <div className="crumb"><div className="w">
+          <Link href={`/${locale}/`}>{c.breadcrumbHome}</Link> / <Link href={`/${locale}/confronto/`}>{c.breadcrumbCompare}</Link> / {c.breadcrumbDynamic}
+        </div></div>
+        <div className="w">
+          <p className="kk k"><s />{c.badge}</p>
+          <h1>{c.title}</h1>
+          <p className="lede">{c.subtitle}</p>
+          <div className="acts">
+            <TrialCTALink href={`/${locale}/trial/`} source="confronto_dinamico_hero" className="b1">{c.ctaBtn}</TrialCTALink>
+          </div>
+        </div>
+      </section>
 
-        {/* Hero */}
-        <header className="mb-12 text-center">
-          <GeoBadge className="mb-4">{c.badge}</GeoBadge>
-          <h1 className="mb-4 text-3xl font-bold text-slate-900 sm:text-4xl md:text-5xl">
-            {c.title}
-          </h1>
-          <p className="mx-auto max-w-2xl text-base text-slate-600 sm:text-lg">
-            {c.subtitle}
-          </p>
-        </header>
-
-        {/* Dynamic comparison */}
+      <section className="sec"><div className="wn">
         <DynamicComparison
           locale={locale}
           copy={{
@@ -369,7 +353,9 @@ export default async function Page({
             differenceText: c.differenceText,
           }}
         />
-      </div>
-    </main>
+      </div></section>
+
+      <LNastro />
+    </div>
   );
 }

@@ -1,10 +1,29 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+/**
+ * Guida utente, nella direzione L.
+ * docs/redesign-sito-2026-07/esplorazione/guida.html
+ * Il contenuto resta quello vero (guida-utente.md + dict.guida): cambia
+ * solo come e' vestito. Sommario a fili costruito dai titoli reali del
+ * documento, non da un indice inventato.
+ */
+
+import { useState, useEffect, useMemo } from 'react';
 import ReactMarkdown from 'react-markdown';
+import type { Components } from 'react-markdown';
 import { usePathname } from 'next/navigation';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import { getLocaleFromPathname } from '@/lib/i18n/locale-routing';
+import './l-page.css';
+
+function slugify(text: string): string {
+  return text
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '');
+}
 
 export default function GuidePage() {
   const pathname = usePathname();
@@ -23,39 +42,47 @@ export default function GuidePage() {
     window.print();
   };
 
+  /* il sommario a fili: i titoli veri del documento (## …), non un indice inventato */
+  const headings = useMemo(() => {
+    const matches = [...content.matchAll(/^##\s+(.+)$/gm)];
+    return matches.map((m) => ({ text: m[1].trim(), id: slugify(m[1]) }));
+  }, [content]);
+
+  const components: Components = {
+    h2: ({ children }) => {
+      const text = String(Array.isArray(children) ? children.join('') : children);
+      return <h2 id={slugify(text)}>{children}</h2>;
+    },
+  };
+
   return (
-    <div className="min-h-screen bg-gray-50">
-      <main className="pt-24 pb-16">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="flex justify-between items-center mb-8">
-            <h1 className="text-3xl font-bold font-display text-gray-900">
-              {g.page_title}
-            </h1>
-            <button
-              onClick={handleDownload}
-              className="px-4 py-2 bg-geotapp-primary text-white rounded-lg shadow-sm hover:bg-geotapp-600 transition flex items-center gap-2"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
-                  clipRule="evenodd"
-                />
-              </svg>
+    <div className="lp-l lp-guida">
+      <section className="ph">
+        <div className="w">
+          <h1>{g.page_title}</h1>
+          <div className="acts">
+            <button type="button" className="b1" onClick={handleDownload}>
               {g.download_pdf}
             </button>
           </div>
+        </div>
+      </section>
 
-          <div className="bg-white p-8 md:p-12 rounded-2xl shadow-sm prose prose-lg prose-geotapp max-w-none">
-            <ReactMarkdown>{content}</ReactMarkdown>
+      <section className="sec">
+        <div className="w">
+          <div className="gl">
+            <aside className="side r">
+              <p className="k" style={{ color: '#78836F', marginBottom: 14 }}>{g.page_title}</p>
+              {headings.map((h) => (
+                <a key={h.id} href={`#${h.id}`}>{h.text}</a>
+              ))}
+            </aside>
+            <div className="body r d1">
+              <ReactMarkdown components={components}>{content}</ReactMarkdown>
+            </div>
           </div>
         </div>
-      </main>
+      </section>
     </div>
   );
 }

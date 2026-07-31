@@ -1,14 +1,7 @@
 'use client';
 
 import { FormEvent, useState } from 'react';
-import {
-  Mail,
-  MapPin,
-  Send,
-  Clock,
-  ShieldCheck,
-  Newspaper,
-} from 'lucide-react';
+import { Mail, MapPin, Send, Clock, Newspaper } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { usePathname } from 'next/navigation';
 import { getDictionary } from '@/lib/i18n/dictionaries';
@@ -18,12 +11,16 @@ import {
   localizePath,
 } from '@/lib/i18n/locale-routing';
 import { submitContact } from '@/lib/api';
+import LNastro from '@/components/LNastro';
+import ListedOn from '@/components/ListedOn';
+import FeaturedIn from '@/components/FeaturedIn';
 
 export default function ContactPage() {
   const pathname = usePathname();
   const currentLocale = getLocaleFromPathname(pathname) ?? DEFAULT_LOCALE;
   const dict = getDictionary(currentLocale).contact;
   const press = getDictionary(currentLocale).stampa;
+  const nav = getDictionary(currentLocale).navbar;
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [status, setStatus] = useState<{
@@ -42,11 +39,12 @@ export default function ContactPage() {
 
   const isValid = (v: string) => v.trim().length > 0;
 
-  const fieldClass = (value: string, extra = '') => {
-    const base = `w-full bg-slate-50 border rounded-xl px-4 py-3 text-slate-900 focus:ring-2 outline-none transition-all ${extra}`;
-    if (!submitted) return `${base} border-slate-200 focus:border-primary focus:ring-primary/20`;
-    if (isValid(value)) return `${base} border-[#8FC436] ring-2 ring-[#8FC436]/20 focus:border-[#8FC436] focus:ring-[#8FC436]/20`;
-    return `${base} border-red-400 ring-2 ring-red-400/20 focus:border-red-400 focus:ring-red-400/20`;
+  // Bordo del campo sul form scuro: neutro finche' non si tenta l'invio,
+  // poi verde/rosso in base alla validita'. Stessa logica di prima, solo
+  // espressa come stile inline sopra la classe .in (che fissa il resto).
+  const fieldBorder = (value: string) => {
+    if (!submitted) return 'rgba(242,240,233,.24)';
+    return isValid(value) ? 'var(--seal)' : '#f36a6a';
   };
 
   const allFieldsValid = () =>
@@ -79,149 +77,70 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="pt-5 pb-24 px-6 min-h-screen bg-white text-slate-900">
-      <div className="container mx-auto max-w-6xl">
-        {/* HEADER */}
-        <div className="text-center mb-20 max-w-3xl mx-auto">
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-5xl md:text-7xl font-display font-bold text-slate-900 mb-6"
+    <div className="lp-l lp-contatti">
+      {/* ── testata, sul nero ── */}
+      <section className="ph">
+        <div className="w">
+          <p className="kk k r"><s></s>{nav.contact}</p>
+          <h1
+            className="r d1"
             dangerouslySetInnerHTML={{ __html: dict.title }}
           />
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.1 }}
-            className="text-text-secondary text-xl font-light leading-relaxed"
-          >
-            {dict.subtitle}
-          </motion.p>
+          <p className="lede r d2">{dict.subtitle}</p>
+          <div className="acts r d3">
+            <a className="b1" href={localizePath('/trial/', currentLocale)}>{nav.cta}</a>
+            <a className="b2" href={localizePath('/pricing/', currentLocale)}>{nav.pricing}</a>
+          </div>
         </div>
+      </section>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
-          {/* LEFT COLUMN */}
-          <motion.div
-            className="space-y-12"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.2 }}
-          >
-            {/* Guarantee */}
-            <div className="bg-slate-50 p-8 rounded-2xl border border-border">
-              <h3 className="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
-                <ShieldCheck className="text-primary" /> {dict.guarantee_title}
-              </h3>
-              <p className="text-slate-600 mb-6">{dict.guarantee_text}</p>
-              <div className="flex items-center gap-4 text-sm font-bold text-slate-500">
-                <span className="flex items-center gap-1">
-                  <Clock size={16} /> {dict.hours}
-                </span>
-                <span className="w-1 h-1 bg-slate-300 rounded-full" />
-                <span>{dict.location_city}</span>
-              </div>
-            </div>
+      {/* ── il form vero, vestito su nero, con a fianco i canali diretti ── */}
+      <section className="sec">
+        <div className="w">
+          <div className="cnt">
+            <motion.div
+              className="form r"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+            >
+              <form onSubmit={handleSubmit}>
+                <p className="k" style={{ color: 'rgba(242,240,233,.5)', marginBottom: 26 }}>{dict.form.all_required}</p>
 
-            {/* Direct Channels */}
-            <div>
-              <h3 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-8">
-                {dict.channels_title}
-              </h3>
-              <div className="space-y-8">
-                <div className="group flex items-start gap-6">
-                  <div className="mt-1 p-3 rounded-xl bg-slate-100 text-slate-900 group-hover:bg-primary group-hover:text-white transition-colors">
-                    <Mail size={24} />
+                <div className="two">
+                  <div className="fld">
+                    <label htmlFor="ct-first">{dict.form.first_name}</label>
+                    <input
+                      id="ct-first"
+                      type="text"
+                      value={formData.firstName}
+                      onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
+                      className="in"
+                      style={{ borderColor: fieldBorder(formData.firstName) }}
+                      placeholder={dict.form.first_name_placeholder}
+                    />
                   </div>
-                  <div>
-                    <div className="font-bold text-lg text-slate-900 mb-1">
-                      {dict.email_label}
-                    </div>
-                    <a
-                      href="mailto:info@geotapp.com"
-                      className="text-slate-500 hover:text-primary transition-colors text-lg"
-                    >
-                      info@geotapp.com
-                    </a>
-                    <div className="text-sm text-slate-400 mt-1">
-                      {dict.email_desc}
-                    </div>
+                  <div className="fld">
+                    <label htmlFor="ct-last">{dict.form.last_name}</label>
+                    <input
+                      id="ct-last"
+                      type="text"
+                      value={formData.lastName}
+                      onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
+                      className="in"
+                      style={{ borderColor: fieldBorder(formData.lastName) }}
+                      placeholder={dict.form.last_name_placeholder}
+                    />
                   </div>
                 </div>
 
-                <div className="group flex items-start gap-6">
-                  <div className="mt-1 p-3 rounded-xl bg-slate-100 text-slate-900 group-hover:bg-primary group-hover:text-white transition-colors">
-                    <MapPin size={24} />
-                  </div>
-                  <div>
-                    <div className="font-bold text-lg text-slate-900 mb-1">
-                      {dict.hq_label}
-                    </div>
-                    <div className="text-slate-500 text-lg">{dict.hq_city}</div>
-                    <div className="text-sm text-slate-400 mt-1">{dict.hq_note}</div>
-                  </div>
-                </div>
-
-                <a href={localizePath('/stampa/', currentLocale)} className="group flex items-start gap-6">
-                  <div className="mt-1 p-3 rounded-xl bg-slate-100 text-slate-900 group-hover:bg-primary group-hover:text-white transition-colors">
-                    <Newspaper size={24} />
-                  </div>
-                  <div>
-                    <div className="font-bold text-lg text-slate-900 mb-1 group-hover:text-primary transition-colors">
-                      {press.hero_title}
-                    </div>
-                    <div className="text-slate-500 text-lg">{press.contact_email}</div>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* FORM RIGHT COLUMN */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.4 }}
-            className="bg-white p-8 rounded-3xl border border-border shadow-2xl shadow-slate-200/50"
-          >
-            <form className="space-y-6" onSubmit={handleSubmit}>
-              <p className="text-xs text-slate-400">{dict.form.all_required}</p>
-
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-sm font-bold text-slate-700 mb-2">
-                    {dict.form.first_name}
-                  </label>
-                  <input
-                    type="text"
-                    value={formData.firstName}
-                    onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
-                    className={fieldClass(formData.firstName)}
-                    placeholder={dict.form.first_name_placeholder}
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-bold text-slate-700 mb-2">
-                    {dict.form.last_name}
-                  </label>
-                  <input
-                    type="text"
-                    value={formData.lastName}
-                    onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
-                    className={fieldClass(formData.lastName)}
-                    placeholder={dict.form.last_name_placeholder}
-                  />
-                </div>
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-sm font-bold text-slate-700 mb-2">
-                    {dict.form.sector}
-                  </label>
+                <div className="fld">
+                  <label htmlFor="ct-sector">{dict.form.sector}</label>
                   <select
+                    id="ct-sector"
                     value={formData.sector}
                     onChange={(e) => setFormData({ ...formData, sector: e.target.value })}
-                    className={fieldClass(formData.sector, 'appearance-none')}
+                    className="in"
+                    style={{ borderColor: fieldBorder(formData.sector), appearance: 'none' }}
                   >
                     <option value="" disabled>{dict.form.sector_placeholder}</option>
                     {(dict.form.sector_options as { value: string; label: string }[]).map((opt) => (
@@ -229,92 +148,137 @@ export default function ContactPage() {
                     ))}
                   </select>
                 </div>
-                <div>
-                  <label className="block text-sm font-bold text-slate-700 mb-2">
-                    {dict.form.company}
-                  </label>
+
+                <div className="fld">
+                  <label htmlFor="ct-company">{dict.form.company}</label>
                   <input
+                    id="ct-company"
                     type="text"
                     value={formData.company}
                     onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                    className={fieldClass(formData.company)}
+                    className="in"
+                    style={{ borderColor: fieldBorder(formData.company) }}
                     placeholder="Nome Azienda Srl"
                   />
                 </div>
-              </div>
 
-              <div>
-                <label className="block text-sm font-bold text-slate-700 mb-2">
-                  {dict.form.email}
-                </label>
-                <input
-                  type="email"
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className={fieldClass(formData.email)}
-                  placeholder="mario@azienda.com"
-                />
-              </div>
+                <div className="fld">
+                  <label htmlFor="ct-email">{dict.form.email}</label>
+                  <input
+                    id="ct-email"
+                    type="email"
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    className="in"
+                    style={{ borderColor: fieldBorder(formData.email) }}
+                    placeholder="mario@azienda.com"
+                  />
+                </div>
 
-              <div>
-                <label className="block text-sm font-bold text-slate-700 mb-2">
-                  {dict.form.reason}
-                </label>
-                <select
-                  value={formData.reason}
-                  onChange={(e) => setFormData({ ...formData, reason: e.target.value })}
-                  className={fieldClass(formData.reason, 'appearance-none')}
+                <div className="fld">
+                  <label htmlFor="ct-reason">{dict.form.reason}</label>
+                  <select
+                    id="ct-reason"
+                    value={formData.reason}
+                    onChange={(e) => setFormData({ ...formData, reason: e.target.value })}
+                    className="in"
+                    style={{ borderColor: fieldBorder(formData.reason), appearance: 'none' }}
+                  >
+                    <option value="" disabled>{dict.form.reason_placeholder}</option>
+                    {dict.form.reason_options.map((opt: string) => (
+                      <option key={opt} value={opt}>{opt}</option>
+                    ))}
+                  </select>
+                </div>
+
+                <div className="fld">
+                  <label htmlFor="ct-message">{dict.form.message}</label>
+                  <textarea
+                    id="ct-message"
+                    rows={4}
+                    value={formData.message}
+                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                    className="in ta"
+                    style={{ borderColor: fieldBorder(formData.message) }}
+                    placeholder="..."
+                  />
+                </div>
+
+                {status && (
+                  <p
+                    className={`rounded-lg border px-4 py-3 text-sm ${
+                      status.type === 'success'
+                        ? 'border-emerald-200 bg-emerald-50 text-emerald-700'
+                        : 'border-red-200 bg-red-50 text-red-700'
+                    }`}
+                    style={{ marginBottom: 20 }}
+                  >
+                    {status.text}
+                  </p>
+                )}
+
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className="b1"
+                  style={{
+                    width: '100%', border: 0, font: 'inherit', fontWeight: 500,
+                    display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8,
+                    cursor: loading ? 'not-allowed' : 'pointer', opacity: loading ? 0.6 : 1,
+                  }}
                 >
-                  <option value="" disabled>{dict.form.reason_placeholder}</option>
-                  {dict.form.reason_options.map((opt: string) => (
-                    <option key={opt} value={opt}>{opt}</option>
-                  ))}
-                </select>
-              </div>
+                  <Send size={18} /> {loading ? dict.sending : dict.form.send}
+                </button>
 
-              <div>
-                <label className="block text-sm font-bold text-slate-700 mb-2">
-                  {dict.form.message}
-                </label>
-                <textarea
-                  rows={4}
-                  value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className={fieldClass(formData.message, 'resize-none')}
-                  placeholder="..."
-                />
-              </div>
-
-              {status && (
-                <p
-                  className={`rounded-lg border px-4 py-3 text-sm ${
-                    status.type === 'success'
-                      ? 'border-emerald-200 bg-emerald-50 text-emerald-700'
-                      : 'border-red-200 bg-red-50 text-red-700'
-                  }`}
-                >
-                  {status.text}
+                <p style={{ marginTop: 20, fontSize: 13, color: 'rgba(242,240,233,.5)' }}>
+                  {dict.privacy_note}
                 </p>
-              )}
+              </form>
+            </motion.div>
 
-              <button
-                type="submit"
-                disabled={loading}
-                className="btn-modern w-full disabled:opacity-60 disabled:cursor-not-allowed"
-              >
-                <Send size={20} /> {loading ? dict.sending : dict.form.send}
-              </button>
-
-              <p className="text-center text-xs text-slate-400 mt-4">
-                {dict.privacy_note}
-              </p>
-            </form>
-          </motion.div>
+            <div className="r d1">
+              <p className="kk k" style={{ color: 'var(--seal)' }}>{dict.channels_title}</p>
+              <ul className="ch">
+                <li className="it">
+                  <p className="lb k">{dict.email_label}</p>
+                  <b><a href="mailto:info@geotapp.com">info@geotapp.com</a></b>
+                  <p>{dict.email_desc}</p>
+                </li>
+                <li className="it">
+                  <b>{dict.hours}</b>
+                  <p>{dict.location_city}</p>
+                </li>
+                <li className="it">
+                  <p className="lb k">{dict.hq_label}</p>
+                  <b>{dict.hq_city}</b>
+                  <p>{dict.hq_note}</p>
+                </li>
+                <li className="it">
+                  <p className="lb k">
+                    <Newspaper size={13} style={{ display: 'inline', marginRight: 6, verticalAlign: -2 }} />
+                    {press.hero_title}
+                  </p>
+                  <b><a href={localizePath('/stampa/', currentLocale)}>{press.contact_email}</a></b>
+                </li>
+              </ul>
+              <div className="gar">
+                <b>{dict.guarantee_title}</b>
+                <p>{dict.guarantee_text}</p>
+              </div>
+            </div>
+          </div>
         </div>
+      </section>
 
-        {/* Mappa rimossa (2026-06-03): GeoTapp opera 100% online, nessuna sede
-            aperta al pubblico, niente indirizzo/geo da mostrare. */}
-      </div>
+      <LNastro />
+
+      {/* ── presenti su: directory e stampa vere del sito ── */}
+      <section className="dirs">
+        <div className="host">
+          <ListedOn locale={currentLocale} />
+          <FeaturedIn locale={currentLocale} />
+        </div>
+      </section>
     </div>
   );
 }

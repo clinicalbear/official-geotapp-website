@@ -1,7 +1,8 @@
 import Link from 'next/link';
-import { Hammer, ShieldCheck, Sparkles, Zap, Droplets, ArrowRight } from 'lucide-react';
 import { DEFAULT_LOCALE, type AppLocale } from '@/lib/i18n/config';
 import { localizePath } from '@/lib/i18n/locale-routing';
+import { getDictionary } from '@/lib/i18n/dictionaries';
+import LNastro from '@/components/LNastro';
 
 interface Props {
   locale?: AppLocale;
@@ -38,103 +39,85 @@ const HUB_COPY: Record<
   ru: { title: 'Отрасли и решения', subtitle: 'Выберите свою отрасль, чтобы узнать, как GeoTapp может вам помочь.', installatori: 'Монтажники', installatori_desc: 'Электромонтажники, сантехники, обслуживание.', sicurezza: 'Охрана', sicurezza_desc: 'Охранники, стюарды, мероприятия.', pulizie: 'Клининг', pulizie_desc: 'Клининговые компании, управление объектами.', elettricisti: 'Электрики', elettricisti_desc: 'Документируйте каждый электромонтаж с GPS и фото.', idraulici: 'Сантехники', idraulici_desc: 'Доказывайте каждую сантехническую работу с GPS-отчётами.', cta: 'Подробнее' },
 };
 
+// Stesse foto della griglia settori della home (HomeClient.tsx SETTORI_IMGS):
+// solo bg1/bg2/bg3 disponibili, riusate con object-position diversa per varietà.
+const CARD_IMG: Record<string, { img: string; pos: string }> = {
+  installatori: { img: '/bg1.webp', pos: 'center 42%' },
+  pulizie: { img: '/bg2.webp', pos: 'center 38%' },
+  sicurezza: { img: '/bg3.webp', pos: 'center 40%' },
+  elettricisti: { img: '/settore-elettricisti.webp', pos: 'center 40%' },
+  idraulici: { img: '/settore-idraulici.webp', pos: 'center 42%' },
+};
+
+// Divide un titolo reale "Frase uno. Frase due." nelle due righe dell'h1
+// della direzione L (seconda riga in corsivo). Se il titolo non ha questa
+// forma (la maggior parte delle lingue), resta su una riga sola: niente
+// copy nuovo inventato per forzare lo spezzato.
+function splitTitle(title: string): [string, string | null] {
+  const idx = title.indexOf('. ');
+  if (idx === -1 || idx === title.length - 2) return [title, null];
+  return [title.slice(0, idx + 1), title.slice(idx + 2)];
+}
+
 export default function SettoriPage({ locale }: Props) {
   const l = locale ?? DEFAULT_LOCALE;
   const copy = HUB_COPY[l] ?? HUB_COPY['en'];
+  const dict = getDictionary(l) as any;
+  const sectorsLabel: string = dict?.navbar?.sectors?.label ?? 'Settori';
+  const [h1a, h1b] = splitTitle(copy.title);
+
+  const cards = [
+    { slug: 'installatori', label: copy.installatori, desc: copy.installatori_desc },
+    { slug: 'sicurezza', label: copy.sicurezza, desc: copy.sicurezza_desc },
+    { slug: 'pulizie', label: copy.pulizie, desc: copy.pulizie_desc },
+    { slug: 'elettricisti', label: copy.elettricisti, desc: copy.elettricisti_desc },
+    { slug: 'idraulici', label: copy.idraulici, desc: copy.idraulici_desc },
+  ];
 
   return (
-    <div className="bg-slate-50 min-h-screen py-32 px-6">
-      <div className="container mx-auto max-w-4xl">
-        <h1 className="text-4xl font-bold text-slate-900 mb-6">{copy.title}</h1>
-        <p className="text-xl text-slate-600 mb-12">{copy.subtitle}</p>
-
-        <div className="grid md:grid-cols-3 gap-6">
-          <Link
-            href={localizePath('/settori/installatori', l)}
-            className="group bg-white p-8 rounded-2xl shadow-sm border border-slate-200 hover:shadow-xl hover:border-amber-200 transition-all"
-          >
-            <div className="w-12 h-12 bg-amber-100 text-amber-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-              <Hammer size={24} />
-            </div>
-            <h2 className="text-2xl font-bold text-slate-900 mb-2 group-hover:text-amber-600 transition-colors">
-              {copy.installatori}
-            </h2>
-            <p className="text-slate-500 mb-4">{copy.installatori_desc}</p>
-            <div className="flex items-center text-amber-600 font-bold text-sm">
-              {copy.cta}{' '}
-              <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
-            </div>
-          </Link>
-
-          <Link
-            href={localizePath('/settori/sicurezza', l)}
-            className="group bg-white p-8 rounded-2xl shadow-sm border border-slate-200 hover:shadow-xl hover:border-indigo-200 transition-all"
-          >
-            <div className="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-              <ShieldCheck size={24} />
-            </div>
-            <h2 className="text-2xl font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors">
-              {copy.sicurezza}
-            </h2>
-            <p className="text-slate-500 mb-4">{copy.sicurezza_desc}</p>
-            <div className="flex items-center text-indigo-600 font-bold text-sm">
-              {copy.cta}{' '}
-              <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
-            </div>
-          </Link>
-
-          <Link
-            href={localizePath('/settori/pulizie', l)}
-            className="group bg-white p-8 rounded-2xl shadow-sm border border-slate-200 hover:shadow-xl hover:border-cyan-200 transition-all"
-          >
-            <div className="w-12 h-12 bg-cyan-100 text-cyan-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-              <Sparkles size={24} />
-            </div>
-            <h2 className="text-2xl font-bold text-slate-900 mb-2 group-hover:text-cyan-600 transition-colors">
-              {copy.pulizie}
-            </h2>
-            <p className="text-slate-500 mb-4">{copy.pulizie_desc}</p>
-            <div className="flex items-center text-cyan-600 font-bold text-sm">
-              {copy.cta}{' '}
-              <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
-            </div>
-          </Link>
-
-          <Link
-            href={localizePath('/settori/elettricisti', l)}
-            className="group bg-white p-8 rounded-2xl shadow-sm border border-slate-200 hover:shadow-xl hover:border-yellow-200 transition-all"
-          >
-            <div className="w-12 h-12 bg-yellow-100 text-yellow-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-              <Zap size={24} />
-            </div>
-            <h2 className="text-2xl font-bold text-slate-900 mb-2 group-hover:text-yellow-600 transition-colors">
-              {copy.elettricisti}
-            </h2>
-            <p className="text-slate-500 mb-4">{copy.elettricisti_desc}</p>
-            <div className="flex items-center text-yellow-600 font-bold text-sm">
-              {copy.cta}{' '}
-              <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
-            </div>
-          </Link>
-
-          <Link
-            href={localizePath('/settori/idraulici', l)}
-            className="group bg-white p-8 rounded-2xl shadow-sm border border-slate-200 hover:shadow-xl hover:border-blue-200 transition-all"
-          >
-            <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-              <Droplets size={24} />
-            </div>
-            <h2 className="text-2xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">
-              {copy.idraulici}
-            </h2>
-            <p className="text-slate-500 mb-4">{copy.idraulici_desc}</p>
-            <div className="flex items-center text-blue-600 font-bold text-sm">
-              {copy.cta}{' '}
-              <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
-            </div>
-          </Link>
+    <div className="lp-l lp-settori">
+      <section className="ph">
+        <div className="crumb">
+          <div className="w">
+            <Link href={localizePath('/', l)}>Home</Link> / {sectorsLabel}
+          </div>
         </div>
-      </div>
+        <div className="w">
+          <p className="kk k"><s></s>{sectorsLabel}</p>
+          <h1>
+            {h1a}
+            {h1b && <><br /><em>{h1b}</em></>}
+          </h1>
+          <p className="lede">{copy.subtitle}</p>
+        </div>
+      </section>
+
+      <section className="sec">
+        <div className="w">
+          <div className="setg">
+            {cards.map((c, i) => {
+              const img = CARD_IMG[c.slug] ?? CARD_IMG.installatori;
+              return (
+                <Link
+                  key={c.slug}
+                  className={`r-s d${Math.min(i + 1, 4)}`}
+                  href={localizePath(`/settori/${c.slug}`, l)}
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={img.img} alt={c.label} loading="lazy" style={{ objectPosition: img.pos }} />
+                  <div className="cp">
+                    <h3>{c.label}</h3>
+                    <p>{c.desc}</p>
+                    <span className="go">{copy.cta} &rarr;</span>
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      <LNastro />
     </div>
   );
 }

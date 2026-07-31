@@ -1,0 +1,32 @@
+/* Direzione L — pagina Prezzi (.lp-prezzi).
+   Il mockup docs/redesign-sito-2026-07/esplorazione/prezzi.html mostra 3 card
+   Flow in un'unica riga a fili (.plans, 3 colonne). Sul sito vero c'e' anche
+   GeoTapp TimeTracker (che rimanda al calcolatore), quindi qui la stessa
+   griglia a fili diventa di 4 colonne, con lo stesso collasso responsive del
+   mockup (2 colonne, poi 1) cosi' da non spingere le card sotto una larghezza
+   leggibile. Le regole di base (.plans, .plan, .calc, .box...) restano quelle
+   globali di src/app/l-mockup.css: qui solo lo scarto dovuto alla quarta card. */
+.lp-prezzi .plans {
+  grid-template-columns: repeat(4, 1fr);
+}
+@media (max-width: 1200px) {
+  .lp-prezzi .plans {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 1000px) {
+  .lp-prezzi .plans {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Serve da ancora di posizionamento al badge "Best Value" (oggi mai attivo,
+   nessun prodotto lo imposta, ma la classe resta agganciata e deve restare
+   funzionante se un domani viene attivato). */
+.lp-prezzi .plan {
+  position: relative;
+}
+
+/* Il calcolatore (.calc) e' gia' scoperto in l-mockup.css per il solo mobile
+   (grid-template-columns:1fr). Qui restiamo dentro .sec.ink: nessuna aggiunta
+   necessaria, la card e' quella globale. */

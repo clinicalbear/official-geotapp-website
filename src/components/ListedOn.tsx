@@ -14,12 +14,14 @@ const logoStyles = `
 .listed-on-logo {
   display: flex;
   align-items: center;
-  filter: brightness(0) invert(1) opacity(0.85) drop-shadow(0 2px 6px rgba(0,0,0,0.12));
-  transition: filter 0.8s ease-in-out, transform 0.8s ease-in-out;
+  /* grigio leggibile sul chiaro (direzione L); a colori al passaggio */
+  filter: brightness(0) invert(0.45) !important;
+  opacity: 1 !important;
+  transition: filter 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 .listed-on-logo:hover {
-  filter: brightness(1) invert(0) opacity(1) drop-shadow(0 4px 12px rgba(0,0,0,0.25));
-  transform: scale(1.15);
+  filter: brightness(1) invert(0) !important;
+  transform: scale(1.12);
 }
 @keyframes logo-scroll {
   0% { transform: translateX(0); }

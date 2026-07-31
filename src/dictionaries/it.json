@@ -284,6 +284,11 @@
         "name": "Idraulici",
         "desc": "Impianti idraulici, riscaldamento, caldaie. Rapportini GPS con foto prima e dopo, zero contestazioni sui lavori eseguiti.",
         "cta": "Prova ogni lavoro eseguito"
+      },
+      "termoidraulici": {
+        "name": "Termoidraulici",
+        "desc": "GeoTapp registra ogni intervento su caldaie e impianti con GPS, foto e timestamp verificabili. Il cliente nega i materiali sostituiti?",
+        "cta": "Prova i materiali sostituiti"
       }
     },
     "app_mockup": {

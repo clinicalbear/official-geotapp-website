@@ -284,6 +284,11 @@
         "name": "Rörmokare",
         "desc": "VVS, värme, pannor. GPS-arbetsrapporter med före-och-efter-foton, inga tvister om utfört arbete.",
         "cta": "Bevisa varje jobb"
+      },
+      "termoidraulici": {
+        "name": "VVS-tekniker",
+        "desc": "GeoTapp registrerar varje uppdrag på pannor och värmesystem med GPS, foton och verifierbara tidsstämplar. Kunden nekar utbytta delar?",
+        "cta": "Bevisa utbytta delar"
       }
     },
     "app_mockup": {

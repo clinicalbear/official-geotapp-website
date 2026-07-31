@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import './l-page.css';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
 import { generateLocaleStaticParams as generateStaticParams } from '@/lib/i18n/static-params';

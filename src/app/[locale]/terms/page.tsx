@@ -35,5 +35,12 @@ export default async function LocaleTermsPage({ params }: { params: Promise<{ lo
   const { locale } = await params;
   const meta = TERMS_META[locale] ?? TERMS_META.en;
   const content = getTermsContent(locale as AppLocale);
-  return LegalMarkdownPage({ markdownContent: content, title: meta.pageTitle, subtitle: meta.subtitle });
+  return LegalMarkdownPage({
+    markdownContent: content,
+    title: meta.pageTitle,
+    subtitle: meta.subtitle,
+    description: meta.description,
+    slug: 'terms',
+    locale: locale as AppLocale,
+  });
 }

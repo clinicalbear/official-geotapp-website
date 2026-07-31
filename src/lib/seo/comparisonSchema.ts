@@ -11,7 +11,7 @@
 // All strings are real; no invented metrics or competitor reviewRating values.
 // ============================================================================
 
-const BREADCRUMB_LABEL: Record<string, string> = {
+export const BREADCRUMB_LABEL: Record<string, string> = {
   it: 'Confronto',
   en: 'Comparison',
   de: 'Vergleich',
@@ -28,6 +28,28 @@ const BREADCRUMB_LABEL: Record<string, string> = {
   'en-au': 'Comparison',
   'en-ie': 'Comparison',
   'en-ca': 'Comparison',
+};
+
+// Etichetta "Home" del breadcrumb visibile, stessa traduzione gia' in uso
+// in /confronto/dinamico/ (COPY.breadcrumbHome): riusata qui per il crumb
+// visibile delle pagine di confronto singole, che prima non ne avevano uno.
+export const HOME_LABEL: Record<string, string> = {
+  it: 'Home',
+  en: 'Home',
+  de: 'Home',
+  fr: 'Accueil',
+  es: 'Inicio',
+  pt: 'Início',
+  nl: 'Home',
+  da: 'Hjem',
+  sv: 'Hem',
+  nb: 'Hjem',
+  ru: 'Главная',
+  'en-us': 'Home',
+  'en-gb': 'Home',
+  'en-au': 'Home',
+  'en-ie': 'Home',
+  'en-ca': 'Home',
 };
 
 export function buildComparisonBreadcrumb(args: {

@@ -1,0 +1,12 @@
+/* Direzione L — varianti login → .lp-login (leggero: due card, stesso contenuto) */
+.lp-login .crd{display:flex;flex-direction:column;align-items:center;text-align:center;background:#fff;
+  border:1px solid rgba(14,14,12,.1);border-radius:24px;padding:44px 34px;
+  box-shadow:0 20px 50px -30px rgba(14,14,12,.18);transition:transform .3s,box-shadow .3s}
+.lp-login .crd:hover{transform:translateY(-4px);box-shadow:0 26px 60px -28px rgba(14,14,12,.24)}
+.lp-login .crd-i{width:80px;height:80px;border-radius:20px;display:flex;align-items:center;justify-content:center;margin-bottom:24px}
+.lp-login .crd h2{font-size:22px;margin-bottom:14px}
+.lp-login .crd p{font-size:15px;color:#4A5244;line-height:1.6;margin-bottom:26px}
+.lp-login .crd-cta{margin-top:auto;display:flex;align-items:center;gap:8px;font-weight:600;font-size:15px}
+@media(max-width:700px){
+  .lp-login .grid2{grid-template-columns:1fr}
+}

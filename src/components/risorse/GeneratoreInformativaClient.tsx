@@ -116,90 +116,84 @@ export default function GeneratoreInformativaClient({ locale, paesi, labels }: P
     }
   }
 
-  const inputCls =
-    'w-full px-4 py-2.5 text-sm rounded-xl border border-slate-200 bg-white text-slate-800 placeholder:text-slate-400 outline-none focus:border-[#8FC436] transition-colors';
-  const labelCls = 'block text-sm font-semibold text-slate-700 mb-1.5';
-
   return (
-    <div className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 shadow-sm">
-      <div className="grid sm:grid-cols-2 gap-5">
-        <div className="sm:col-span-2">
-          <label className={labelCls}>{labels.azienda} *</label>
-          <input className={inputCls} value={azienda} onChange={(e) => setAzienda(e.target.value)} placeholder={labels.aziendaPlaceholder} />
-        </div>
+    <div className="form r">
+      <div className="fld">
+        <label>{labels.azienda} *</label>
+        <input className="in" value={azienda} onChange={(e) => setAzienda(e.target.value)} placeholder={labels.aziendaPlaceholder} />
+      </div>
 
-        <div>
-          <label className={labelCls}>{labels.paese}</label>
-          <select className={inputCls} value={paeseId} onChange={(e) => setPaeseId(e.target.value)}>
+      <div className="two">
+        <div className="fld">
+          <label>{labels.paese}</label>
+          <select className="in" value={paeseId} onChange={(e) => setPaeseId(e.target.value)}>
             {paesi.map((p) => (
               <option key={p.id} value={p.id}>{p.nome}</option>
             ))}
           </select>
         </div>
 
-        <div>
-          <label className={labelCls}>{labels.quando} *</label>
-          <input className={inputCls} value={quando} onChange={(e) => setQuando(e.target.value)} placeholder={labels.quandoPlaceholder} />
-        </div>
-
-        <div className="sm:col-span-2">
-          <label className={labelCls}>{labels.finalita} *</label>
-          <input className={inputCls} value={finalita} onChange={(e) => setFinalita(e.target.value)} placeholder={labels.finalitaPlaceholder} />
-        </div>
-
-        <div>
-          <label className={labelCls}>{labels.conservazione}</label>
-          <input className={inputCls} value={conservazione} onChange={(e) => setConservazione(e.target.value)} placeholder={labels.conservazionePlaceholder} />
-        </div>
-
-        <div>
-          <label className={labelCls}>{labels.dpo}</label>
-          <input className={inputCls} value={dpo} onChange={(e) => setDpo(e.target.value)} placeholder={labels.dpoPlaceholder} />
-        </div>
-
-        <div className="sm:col-span-2">
-          <label className={labelCls}>{labels.logo}</label>
-          <div className="flex items-center gap-3">
-            <label className="inline-flex items-center gap-2 cursor-pointer px-4 py-2.5 text-sm font-semibold text-slate-700 bg-slate-50 border border-slate-200 rounded-xl hover:border-[#8FC436] transition-colors">
-              <Upload size={16} /> {labels.logo}
-              <input type="file" accept="image/*" onChange={onLogo} className="hidden" />
-            </label>
-            {logo && <img src={logo} alt="logo" className="h-10 max-w-[120px] object-contain" />}
-          </div>
-          <p className="text-xs text-slate-400 mt-1.5">{labels.logoHint}</p>
-        </div>
-
-        {/* Opzionale: chi esegue controlli anti-manomissione raccoglie dati sul
-            dispositivo del lavoratore, non solo la posizione, e l'art. 13
-            impone di dichiararli tra le categorie di dati. Spento di default:
-            non tutti i sistemi li fanno, e dichiarare una categoria non
-            trattata sarebbe scorretto quanto ometterla. */}
-        <div className="sm:col-span-2">
-          <label className="flex items-start gap-3 cursor-pointer">
-            <input
-              type="checkbox"
-              checked={integrita}
-              onChange={(e) => setIntegrita(e.target.checked)}
-              className="mt-0.5 h-4 w-4 accent-[#8FC436]"
-            />
-            <span>
-              <span className="block text-sm font-semibold text-slate-700">{labels.integrita}</span>
-              <span className="block text-xs text-slate-400 mt-1">{labels.integritaHint}</span>
-            </span>
-          </label>
+        <div className="fld">
+          <label>{labels.quando} *</label>
+          <input className="in" value={quando} onChange={(e) => setQuando(e.target.value)} placeholder={labels.quandoPlaceholder} />
         </div>
       </div>
 
-      {err && <p className="text-sm text-red-500 mt-4">{labels.required}</p>}
+      <div className="fld">
+        <label>{labels.finalita} *</label>
+        <input className="in" value={finalita} onChange={(e) => setFinalita(e.target.value)} placeholder={labels.finalitaPlaceholder} />
+      </div>
 
-      <button
-        onClick={genera}
-        className="mt-6 inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-bold text-slate-900 bg-[#8FC436] rounded-xl hover:bg-[#7db02e] transition-colors"
-      >
+      <div className="two">
+        <div className="fld">
+          <label>{labels.conservazione}</label>
+          <input className="in" value={conservazione} onChange={(e) => setConservazione(e.target.value)} placeholder={labels.conservazionePlaceholder} />
+        </div>
+
+        <div className="fld">
+          <label>{labels.dpo}</label>
+          <input className="in" value={dpo} onChange={(e) => setDpo(e.target.value)} placeholder={labels.dpoPlaceholder} />
+        </div>
+      </div>
+
+      <div className="fld">
+        <label>{labels.logo}</label>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap' }}>
+          <label className="flogo">
+            <Upload size={16} /> {labels.logo}
+            <input type="file" accept="image/*" onChange={onLogo} style={{ display: 'none' }} />
+          </label>
+          {logo && <img src={logo} alt="logo" style={{ height: 40, maxWidth: 120, objectFit: 'contain' }} />}
+        </div>
+        <p className="hint">{labels.logoHint}</p>
+      </div>
+
+      {/* Opzionale: chi esegue controlli anti-manomissione raccoglie dati sul
+          dispositivo del lavoratore, non solo la posizione, e l'art. 13
+          impone di dichiararli tra le categorie di dati. Spento di default:
+          non tutti i sistemi li fanno, e dichiarare una categoria non
+          trattata sarebbe scorretto quanto ometterla. */}
+      <div className="fld">
+        <label className="fchk">
+          <input
+            type="checkbox"
+            checked={integrita}
+            onChange={(e) => setIntegrita(e.target.checked)}
+          />
+          <span>
+            <span style={{ display: 'block' }}>{labels.integrita}</span>
+            <span className="hint" style={{ marginTop: 4 }}>{labels.integritaHint}</span>
+          </span>
+        </label>
+      </div>
+
+      {err && <p style={{ color: '#FF9E9E', fontSize: 13.5, marginTop: -8, marginBottom: 20 }}>{labels.required}</p>}
+
+      <button onClick={genera} className="b1" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, border: 0, cursor: 'pointer' }}>
         <FileText size={18} /> {labels.genera}
       </button>
 
-      <p className="text-xs text-slate-400 mt-4 flex items-start gap-1.5">
+      <p className="hint" style={{ display: 'flex', alignItems: 'flex-start', gap: 6 }}>
         <span>🔒</span><span>{labels.privacyNote}</span>
       </p>
     </div>

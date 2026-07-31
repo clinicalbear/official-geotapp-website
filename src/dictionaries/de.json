@@ -284,6 +284,11 @@
         "name": "Klempner",
         "desc": "Sanitär, Heizung, Kessel. GPS-Arbeitsberichte mit Vorher-Nachher-Fotos, keine Streitigkeiten über ausgeführte Arbeiten.",
         "cta": "Jeden Auftrag beweisen"
+      },
+      "termoidraulici": {
+        "name": "Heizung & Sanitär",
+        "desc": "GeoTapp erfasst jeden Heizungs- und Sanitäreinsatz mit GPS, Fotos und verifizierbaren Zeitstempeln. Der Kunde bestreitet ausgetauschte Teile?",
+        "cta": "Ersetzte Teile nachweisen"
       }
     },
     "app_mockup": {

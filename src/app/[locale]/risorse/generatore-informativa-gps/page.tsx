@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
+import { getDictionary } from '@/lib/i18n/dictionaries';
 import { SUPPORTED_LOCALES } from '@/lib/i18n/config';
 import type { AppLocale } from '@/lib/i18n/config';
 import { getPaesiAutorita } from '@/lib/risorse/gps-lavoratori-ue/derive';
@@ -10,11 +12,17 @@ import {
 import GeneratoreInformativaClient from '@/components/risorse/GeneratoreInformativaClient';
 import RisorsaFaq from '@/components/risorse/RisorsaFaq';
 import LicenzaContenuto from '@/components/LicenzaContenuto';
+import './l-page.css';
 
 /**
  * Generatore di informativa GPS per i lavoratori.
  * Route: /[locale]/risorse/generatore-informativa-gps/
  * Tutto client-side: i dati e il logo dell'azienda non lasciano il browser.
+ *
+ * Vestito "direzione L" (docs/redesign-sito-2026-07/esplorazione/risorsa-strumento.html),
+ * slug .lp-risorsa-strumento: testata .ph, form scuro .form/.fld/.in a sinistra
+ * (nessuna anteprima statica a destra: il documento vero lo genera già il tool,
+ * un fac-simile inventato sarebbe fuorviante), FAQ e chiusura via LicenzaContenuto.
  */
 
 export { generateLocaleStaticParams as generateStaticParams } from '@/lib/i18n/static-params';
@@ -76,6 +84,7 @@ export default async function GeneratoreInformativaPage({
   const { locale } = await params;
   const rl = safeLocale(locale);
   const l = LABELS[rl] ?? LABELS[rl.split('-')[0]] ?? LABELS.it;
+  const fullDict = getDictionary(rl);
   const paesi = getPaesiAutorita(rl).map((p) => ({
     id: p.codiceISO,
     nome: p.nomi?.[rl] ?? p.nome,
@@ -83,6 +92,7 @@ export default async function GeneratoreInformativaPage({
   }));
 
   const breadcrumbJsonLd = buildBreadcrumbJsonLd(buildBreadcrumbItems(rl, l.heading));
+  const homeHref = `/${rl}/`;
 
   return (
     <>
@@ -90,13 +100,39 @@ export default async function GeneratoreInformativaPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
-      <div className="bg-white min-h-screen text-slate-900 font-sans">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 pt-5 pb-16">
-          <h1 className="text-3xl font-bold text-slate-900 mb-4">{l.heading}</h1>
-          <p className="text-slate-600 leading-relaxed mb-8">{l.intro}</p>
-          <GeneratoreInformativaClient locale={rl} paesi={paesi} labels={l.form} />
-        </div>
-        {l.faq && <RisorsaFaq title={l.faq.title} items={l.faq.items} />}
+      <div className="lp-l lp-risorsa-strumento">
+        <section className="ph">
+          <div className="crumb">
+            <div className="w">
+              <Link href={homeHref}>GeoTapp</Link> / {fullDict.navbar.resources} / {l.heading}
+            </div>
+          </div>
+          <div className="w">
+            <p className="kk k"><s></s>{fullDict.navbar.resources}</p>
+            <h1>{l.heading}</h1>
+            <p className="lede">{l.intro}</p>
+            <div className="acts">
+              <a className="b1" href="#tool">{l.form.genera}</a>
+            </div>
+          </div>
+        </section>
+
+        <section className="sec">
+          <div className="w">
+            <div className="tool" id="tool">
+              <GeneratoreInformativaClient locale={rl} paesi={paesi} labels={l.form} />
+            </div>
+          </div>
+        </section>
+
+        {l.faq && (
+          <section className="fq fq-wrap">
+            <div className="w">
+              <RisorsaFaq title={l.faq.title} items={l.faq.items} />
+            </div>
+          </section>
+        )}
+
         <LicenzaContenuto locale={rl} />
       </div>
     </>

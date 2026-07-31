@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { TrialCTALink } from '@/components/analytics/TrialCTALink';
+import ComparisonPageL from '@/components/ComparisonPageL';
 import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
 import {
   buildComparisonArticle,
@@ -383,154 +383,29 @@ export default async function GeoTappVsSagePage({ params }: { params: Promise<{ 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <div className="min-h-screen pt-5 pb-20 px-6">
-        <div className="container mx-auto max-w-4xl">
-
-          {/* Hero */}
-          <div className="text-center mb-16">
-            <span className="inline-block text-xs font-semibold tracking-widest uppercase text-primary mb-4">
-              {t.badge}
-            </span>
-            <h1 className="text-4xl md:text-5xl font-display font-bold mb-6">
-              GeoTapp vs Sage:{' '}
-              <span className="text-primary">
-                {t.h1sub}
-              </span>
-            </h1>
-            <p className="text-lg text-text-secondary max-w-2xl mx-auto">
-              {t.desc}
-            </p>
-          </div>
-
-          {/* Summary verdict */}
-          <div className="bg-primary/10 border border-primary/20 rounded-2xl p-6 mb-12">
-            <p className="font-semibold text-primary mb-2">
-              {t.summary}
-            </p>
-            <p className="text-text-secondary">
-              {t.summaryText}
-            </p>
-          </div>
-
-          {/* Comparison table */}
-          <section className="mb-16">
-            <h2 className="text-2xl font-bold mb-6">
-              {t.features}
-            </h2>
-            <div className="overflow-x-auto rounded-xl border border-white/10">
-              <table className="w-full">
-                <thead>
-                  <tr className="border-b border-white/10 bg-white/5">
-                    <th className="text-left py-3 px-4 font-semibold text-sm">
-                      {t.feat}
-                    </th>
-                    <th className="text-center py-3 px-4 font-semibold text-sm text-primary">GeoTapp</th>
-                    <th className="text-center py-3 px-4 font-semibold text-sm text-text-secondary">Sage</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {rows.map((row, i) => (
-                    <tr key={i} className="border-b border-white/5 hover:bg-white/3 transition-colors">
-                      <td className="py-3 px-4 text-sm text-text-secondary">{row.feature}</td>
-                      <td className="py-3 px-4 text-center">
-                        {row.geotapp
-                          ? <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-green-500 text-white font-black text-base">✓</span>
-                          : <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-slate-600/40 text-slate-400 font-bold text-base">✕</span>}
-                      </td>
-                      <td className="py-3 px-4 text-center">
-                        {row.competitor
-                          ? <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-green-500 text-white font-black text-base">✓</span>
-                          : <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-slate-600/40 text-slate-400 font-bold text-base">✕</span>}
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </section>
-
-          {/* Neutral, AI-extractable takeaway right under the table */}
-          <section className="mb-16 -mt-8">
-            <p className="text-sm text-text-secondary leading-relaxed rounded-xl border border-white/10 bg-white/5 p-4">
-              {tableTakeaway}
-            </p>
-          </section>
-
-          {/* Privacy consent footnote */}
-          <div className="mb-16 px-4">
-            <p className="text-xs text-text-secondary leading-relaxed">
-              {t.footnote}
-            </p>
-          </div>
-
-          {/* Key difference */}
-          <section className="mb-16">
-            <h2 className="text-2xl font-bold mb-4">
-              {t.diff}
-            </h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-white/5 border border-white/10 rounded-xl p-6">
-                <h3 className="font-semibold text-primary mb-3">GeoTapp</h3>
-                <ul className="space-y-2 text-sm text-text-secondary">
-                  {t.geo.map((li, i) => <li key={i}>• {li}</li>)}
-                </ul>
-              </div>
-              <div className="bg-white/5 border border-white/10 rounded-xl p-6">
-                <h3 className="font-semibold text-text-secondary mb-3">Sage</h3>
-                <ul className="space-y-2 text-sm text-text-secondary">
-                  {t.comp.map((li, i) => <li key={i}>• {li}</li>)}
-                </ul>
-              </div>
-            </div>
-          </section>
-
-          {/* Use cases */}
-          <section className="mb-16">
-            <h2 className="text-2xl font-bold mb-6">
-              {t.useCasesTitle}
-            </h2>
-            <div className="space-y-3">
-              {t.useCases.map((item, i) => (
-                <div key={i} className="flex items-start gap-3 p-4 bg-white/5 border border-white/10 rounded-lg">
-                  <span className="text-primary font-bold mt-0.5">✓</span>
-                  <span className="text-text-secondary text-sm">{item}</span>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* FAQ */}
-          <section className="mb-16">
-            <h2 className="text-2xl font-bold mb-6">FAQ</h2>
-            <div className="space-y-4">
-              {faqItems.map((item, i) => (
-                <div key={i} className="border border-white/10 rounded-xl p-6">
-                  <h3 className="font-semibold mb-2">{item.q}</h3>
-                  <p className="text-text-secondary text-sm">{item.a}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* CTA */}
-          <div className="text-center bg-gradient-to-br from-primary/20 to-purple-500/10 border border-primary/20 rounded-2xl p-10">
-            <h2 className="text-2xl font-bold mb-3">
-              {t.cta}
-            </h2>
-            <p className="text-text-secondary mb-6">
-              {t.ctaDesc}
-            </p>
-            <TrialCTALink
-              href={`/${locale}/trial/`}
-              source="confronto_vs_sage"
-              className="btn-ring"
-            >
-              {t.ctaBtn}
-            </TrialCTALink>
-          </div>
-
-        </div>
-      </div>
+      <ComparisonPageL
+        locale={locale}
+        competitorName="Sage"
+        competitorId="sage"
+        badge={t.badge}
+        h1sub={t.h1sub}
+        desc={t.desc}
+        summaryLabel={t.summary}
+        summaryText={t.summaryText}
+        featuresTitle={t.features}
+        featureColLabel={t.feat}
+        tableTakeaway={tableTakeaway}
+        footnote={t.footnote}
+        diffTitle={t.diff}
+        geoItems={t.geo}
+        compItems={t.comp}
+        extraList={{ title: t.useCasesTitle, items: t.useCases }}
+        rows={rows}
+        faqItems={faqItems}
+        ctaTitle={t.cta}
+        ctaDesc={t.ctaDesc}
+        ctaBtn={t.ctaBtn}
+      />
     </>
   );
 }

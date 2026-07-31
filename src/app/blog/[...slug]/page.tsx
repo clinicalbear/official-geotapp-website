@@ -1,8 +1,10 @@
 import type { Metadata } from 'next';
+import './l-page.css';
 import { notFound, permanentRedirect } from 'next/navigation';
 import ArticleHero from '@/components/blog/ArticleHero';
 import ArticleContent from '@/components/blog/ArticleContent';
 import ArticleDisclaimer from '@/components/blog/ArticleDisclaimer';
+import FeaturedIn, { FEATURED_LABEL } from '@/components/FeaturedIn';
 import ArticleSidebar from '@/components/blog/ArticleSidebar';
 import ArticleFooter from '@/components/blog/ArticleFooter';
 import ReadingProgress from '@/components/blog/ReadingProgress';
@@ -340,8 +342,10 @@ export default async function BlogArticlePage({ params }: Props) {
   if (/gestione|operazioni|business|software|flow|workflow/.test(catSlugs)) mapProducts.push('flow');
   if (/sicur|secur|verif|prov|proof|report|document/.test(catSlugs)) mapProducts.push('verifier');
 
+  const blogHref = `/${locale}/blog/`;
+
   return (
-    <>
+    <div className="lp-l lp-articolo">
       <MapBackground products={mapProducts.length > 0 ? mapProducts : undefined} />
       <ReadingProgress />
       <BackToTop />
@@ -358,25 +362,34 @@ export default async function BlogArticlePage({ params }: Props) {
         date={date}
         readingTime={readingTime}
         locale={locale}
+        blogHref={blogHref}
       />
 
-      {/* Content + Sidebar */}
-      <div className="bg-white">
-        <div className="max-w-7xl mx-auto flex gap-12 px-6">
-          <ArticleContent
-            html={contentWithIds}
-            locale={locale}
-            newsletter={
-              ARTICLE_LEAD_MAGNETS[articleSlug]
-                ? <LeadMagnetInline key="lead-magnet" magnet={ARTICLE_LEAD_MAGNETS[articleSlug]} locale={locale} />
-                : <NewsletterInline key="newsletter" locale={locale} />
-            }
-          />
-          <div className="hidden lg:block w-72 shrink-0 pt-16">
+      {/* Corpo + colonna laterale, layout .art .lay del mockup articolo */}
+      <article className="art">
+        <div className="w">
+          <div className="lay">
             <ArticleSidebar headings={headings} locale={locale} categories={categories} date={date} readingTime={readingTime} title={title} />
+            <ArticleContent
+              html={contentWithIds}
+              locale={locale}
+              newsletter={
+                ARTICLE_LEAD_MAGNETS[articleSlug]
+                  ? <LeadMagnetInline key="lead-magnet" magnet={ARTICLE_LEAD_MAGNETS[articleSlug]} locale={locale} />
+                  : <NewsletterInline key="newsletter" locale={locale} />
+              }
+            />
           </div>
         </div>
-      </div>
+      </article>
+
+      {/* Citazioni editoriali (testate, non directory): prova terza su ogni articolo */}
+      <section className="dirs">
+        <div className="w"><p className="kk k dirs-kk">{FEATURED_LABEL[locale] ?? FEATURED_LABEL.en}</p></div>
+        <div className="host">
+          <FeaturedIn locale={locale} />
+        </div>
+      </section>
 
       {/* Disclaimer YMYL, non è consulenza legale (tutti gli articoli, lingua dell'articolo) */}
       <ArticleDisclaimer locale={locale} />
@@ -386,6 +399,6 @@ export default async function BlogArticlePage({ params }: Props) {
 
       {/* Related posts + CTA */}
       <ArticleFooter relatedPosts={relatedPosts} morePosts={morePosts} locale={locale} />
-    </>
+    </div>
   );
 }

@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 import { SUPPORTED_LOCALES } from '@/lib/i18n/config';
 import type { AppLocale } from '@/lib/i18n/config';
 import { HREFLANG } from '@/lib/i18n/locale-metadata';
-import HomeClient from '../page';
+import HomeClient from '../HomeClient';
 import BlogHighlights from '@/components/BlogHighlights';
 import FaqFromSchema from '@/components/FaqFromSchema';
 import { REVIEWS } from '@/data/reviews';
@@ -263,13 +263,13 @@ export default async function LocalePage({ params }: Props) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewsSchema) }}
         />
       )}
-      <HomeClient />
-      {/* FAQ visibile (domande come H3) + schema FAQPage: citabilità GEO/AI-search
-          senza toccare la prosa. Lo schema è iniettato da RisorsaFaq, quindi qui
-          NON va più lo <script> JSON-LD manuale del blocco faq. */}
-      <FaqFromSchema faq={faq} locale={locale} />
-      {/* Category 54 = "digitalizzazione-aziendale", broad, relevant to all visitors */}
-      <BlogHighlights locale={locale as AppLocale} categoryId={54} />
+      {/* FAQ e blog entrano DENTRO la home come slot server, cosi' seguono
+          l'ordine del mockup (letture → domande → ultima inquadratura).
+          Lo schema FAQPage resta iniettato da RisorsaFaq dentro lo slot. */}
+      <HomeClient
+        jrSlot={<BlogHighlights locale={locale as AppLocale} categoryId={54} />}
+        fqSlot={<FaqFromSchema faq={faq} locale={locale} />}
+      />
     </>
   );
 }

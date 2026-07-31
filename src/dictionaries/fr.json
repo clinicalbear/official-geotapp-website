@@ -284,6 +284,11 @@
         "name": "Plombiers",
         "desc": "Plomberie, chauffage, chaudières. Rapports GPS avec photos avant/après, zéro litige sur les travaux réalisés.",
         "cta": "Prouvez chaque travail"
+      },
+      "termoidraulici": {
+        "name": "Plomberie-Chauffage",
+        "desc": "GeoTapp enregistre chaque intervention sur chaudière et installation avec GPS, photos et horodatages vérifiables. Le client conteste les pièces remplacées ?",
+        "cta": "Prouvez les pièces remplacées"
       }
     },
     "app_mockup": {

@@ -284,6 +284,11 @@
         "name": "Fontaneros",
         "desc": "Fontanería, calefacción, calderas. Informes GPS con fotos antes y después, cero disputas sobre trabajos realizados.",
         "cta": "Prueba cada trabajo"
+      },
+      "termoidraulici": {
+        "name": "Calefacción y Fontanería",
+        "desc": "GeoTapp registra cada intervención en calderas e instalaciones con GPS, fotos y marcas de tiempo verificables. ¿El cliente niega los materiales sustituidos?",
+        "cta": "Demuestra los materiales sustituidos"
       }
     },
     "app_mockup": {

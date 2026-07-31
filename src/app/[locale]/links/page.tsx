@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import './l-page.css';
 import LinksClient, { type Article, type Sector } from '../../links/LinksClient';
 import { detectPostLocale } from '@/lib/blog-locale';
 export { generateLocaleStaticParams as generateStaticParams } from '@/lib/i18n/static-params';
@@ -328,5 +329,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default async function LocaleLinksPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const articles = await getArticles(locale);
-  return <LinksClient articles={articles} locale={locale} />;
+  return (
+    <div className="lp-l lp-links">
+      <LinksClient articles={articles} locale={locale} variant="l" />
+    </div>
+  );
 }

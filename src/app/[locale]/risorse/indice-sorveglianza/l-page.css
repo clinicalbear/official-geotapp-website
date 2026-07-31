@@ -1,0 +1,97 @@
+/* Vestito pagina-specifico per /risorse/indice-sorveglianza/ (direzione L).
+   Slug .lp-risorsa-strumento (varianti condivise già in l-mockup.css).
+   Qui solo l'adattamento della classifica: .tbl del mockup è pensata per un
+   confronto sì/no a 3 colonne, questa pagina è una classifica numerica a 6
+   colonne (# / Paese / Indice / Obblighi / Sanzione / Scheda). */
+
+/* la tabella può restare più larga della colonna .wn su schermi stretti */
+.lp-risorsa-strumento .tbl-wrap { overflow-x: auto; }
+
+/* schema colonne: sostituisce l'1.6fr/.7fr/.7fr pensato per il sì/no */
+.lp-risorsa-strumento .idx-tbl .rw {
+  grid-template-columns: .5fr 2fr 1.6fr 1.1fr 1.3fr .9fr;
+  min-width: 720px;
+}
+.lp-risorsa-strumento .idx-tbl .rw > * { padding: 16px 18px; }
+
+.lp-risorsa-strumento .idx-tbl [role='columnheader'] { font-size: 14px; }
+.lp-risorsa-strumento .idx-tbl [role='columnheader'].sortable {
+  cursor: pointer;
+  user-select: none;
+}
+.lp-risorsa-strumento .idx-tbl [role='columnheader'].sortable:hover,
+.lp-risorsa-strumento .idx-tbl [role='columnheader'].sortable:focus-visible {
+  color: var(--lime);
+}
+.lp-risorsa-strumento .idx-tbl .c-num { text-align: center; color: rgba(242, 240, 233, .5); }
+.lp-risorsa-strumento .idx-tbl .rw:not(.hd2) .c-num {
+  color: #9AA491;
+  font-family: var(--font-anton), 'Anton', sans-serif;
+  font-size: 14px;
+}
+.lp-risorsa-strumento .idx-tbl .c-link { text-align: right; }
+.lp-risorsa-strumento .idx-tbl .c-link .go {
+  color: #6a9a1f;
+  font-weight: 500;
+  font-size: 14.5px;
+  white-space: nowrap;
+}
+.lp-risorsa-strumento .idx-tbl .rw:not(.hd2) .c-link .go:hover { color: var(--ink); }
+.lp-risorsa-strumento .idx-tbl .rw:not(.hd2):hover { background: rgba(143, 196, 54, .08); }
+.lp-risorsa-strumento .idx-tbl .rw:not(.hd2) .c-paese { white-space: nowrap; font-weight: 500; }
+.lp-risorsa-strumento .idx-tbl .rw:not(.hd2) .c-san { white-space: nowrap; color: #4A5244; font-size: 14.5px; }
+.lp-risorsa-strumento .idx-tbl .rw:not(.hd2) .c-obb { color: #4A5244; font-size: 14.5px; }
+
+/* barra della severità: sottile e piatta, niente rounded-full */
+.lp-risorsa-strumento .idx-bar { display: flex; align-items: center; gap: 10px; }
+.lp-risorsa-strumento .idx-track {
+  position: relative;
+  flex: 1;
+  max-width: 110px;
+  height: 4px;
+  background: rgba(14, 14, 12, .12);
+  display: block;
+}
+.lp-risorsa-strumento .idx-fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  height: 100%;
+  background: var(--seal);
+}
+.lp-risorsa-strumento .idx-bar b {
+  font-family: var(--font-anton), 'Anton', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  min-width: 26px;
+  text-align: right;
+}
+
+/* box metodologia: bordo sinistro verde, testo di corpo (non lo stile-titolo di .pull) */
+.lp-risorsa-strumento .metodo {
+  border-left: 3px solid var(--seal);
+  padding: 4px 0 4px 28px;
+  margin-top: 44px;
+}
+.lp-risorsa-strumento .metodo-t {
+  font-size: 12px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #557d18;
+  margin-bottom: 8px;
+}
+.lp-risorsa-strumento .metodo-p {
+  font-size: 15px;
+  line-height: 1.65;
+  color: #4A5244;
+  max-width: 74ch;
+}
+
+@media (max-width: 900px) {
+  .lp-risorsa-strumento .idx-tbl .c-san { display: none; }
+  .lp-risorsa-strumento .idx-tbl .rw { grid-template-columns: .5fr 1.8fr 1.5fr 1fr .9fr; min-width: 560px; }
+}
+@media (max-width: 700px) {
+  .lp-risorsa-strumento .idx-tbl .c-obb { display: none; }
+  .lp-risorsa-strumento .idx-tbl .rw { grid-template-columns: .5fr 1.7fr 1.4fr .9fr; min-width: 460px; }
+}

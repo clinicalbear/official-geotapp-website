@@ -1,92 +1,15 @@
 'use client';
 
-import { motion } from 'framer-motion';
+/**
+ * Home nella direzione L, ricostruita sul mockup
+ * docs/redesign-sito-2026-07/esplorazione/index.html.
+ * I contenuti sono quelli veri del sito (dizionari): cambia come sono vestiti.
+ * L'unico testo nuovo e' quello dell'apertura, come concordato.
+ */
+
+import { type ReactNode, useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
-import {
-  ArrowRight,
-  CheckCircle2,
-  ShieldCheck,
-  Zap,
-  Map,
-  Smartphone,
-  Database,
-  FileCheck2,
-  MapPin,
-  WifiOff,
-  Hammer,
-  Sparkles,
-  AlertTriangle,
-  FileX,
-  Receipt,
-} from 'lucide-react';
-import EuDataBadge from '@/components/EuDataBadge';
-// Heavy below-fold components, dynamic import to reduce initial bundle
 import dynamic from 'next/dynamic';
-const HeartbeatLine = dynamic(() => import('@/components/HeartbeatLine'), { ssr: false });
-const FlowCarousel = dynamic(() => import('@/components/FlowCarousel'), { ssr: false });
-const TTCarousel = dynamic(() => import('@/components/TTCarousel'), { ssr: false });
-const VerifierMockup = dynamic(() => import('@/components/VerifierMockup'), { ssr: false });
-const ClockInDemo = dynamic(() => import('@/components/ClockInDemo'), { ssr: false, loading: () => <div className="hidden md:block" /> });
-
-
-// UI MOCKUP COMPONENTS (Built with Tailwind for "Real Example" feel)
-const MockupFlow = ({ m }: { m: { pipeline_title: string; month: string; quote_name: string; quote_approved: string } }) => (
-  <div className="bg-white rounded-xl border border-border shadow-xl overflow-hidden font-sans text-xs">
-    <div className="bg-slate-50 border-b border-border p-3 flex gap-2">
-      <div className="w-3 h-3 rounded-full bg-red-400"></div>
-      <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
-      <div className="w-3 h-3 rounded-full bg-green-400"></div>
-    </div>
-    <div className="p-4 space-y-3">
-      <div className="flex justify-between items-center text-text-secondary">
-        <span className="font-bold text-text-primary">{m.pipeline_title}</span>
-        <span>{m.month}</span>
-      </div>
-      <div className="space-y-2">
-        <div className="flex items-center gap-3 p-2 bg-green-50 rounded border border-green-100">
-          <div className="w-8 h-8 rounded bg-green-200 flex items-center justify-center text-green-700 font-bold">
-            €
-          </div>
-          <div className="flex-1">
-            <div className="font-bold text-slate-800">{m.quote_name}</div>
-            <div className="text-[10px] text-slate-500">
-              {m.quote_approved}
-            </div>
-          </div>
-          <span className="font-bold text-green-600">+€12.500</span>
-        </div>
-        <div className="flex items-center gap-3 p-2 bg-slate-50 rounded border border-slate-100 opacity-60">
-          <div className="w-8 h-8 rounded bg-slate-200"></div>
-          <div className="h-2 w-24 bg-slate-200 rounded"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-);
-
-import { useEffect, useState, useCallback } from 'react';
-
-const TT_BGS = ['/bg1.webp', '/bg2.webp', '/bg3.webp'];
-// 🔴 TUTTE e tre lazy, nessuna con fetchPriority="high" (fix 2026-07-27).
-// Il carosello vive in un contenitore `hidden md:block` (solo desktop) dentro la sezione
-// TimeTracker, molto sotto la fold. Marcare la prima immagine eager+high+sync faceva sì che
-// React 19 hoistasse in <head> un <link rel="preload" as="image" fetchPriority="high"> per
-// /bg1.webp (147,6 KB) — scaricato anche su MOBILE, dove l'immagine non viene mai renderizzata,
-// rubando banda all'elemento LCP reale dell'hero (LCP mobile home 5,6-5,8s contro 1,0s desktop).
-// NB: il preload manuale era già stato tolto da [locale]/page.tsx il 06/06, ma il framework lo
-// ricreava da questi attributi: il fix non aveva mai avuto effetto in produzione.
-const TTBgCarousel = () => {
-  const [i, setI] = useState(0);
-  const next = useCallback(() => setI((c) => (c + 1) % TT_BGS.length), []);
-  useEffect(() => { const t = setInterval(next, 6000); return () => clearInterval(t); }, [next]);
-  return (
-    <div className="w-full h-full relative">
-      {TT_BGS.map((src) => (
-        <img key={src} src={src} alt="" loading="lazy" decoding="async" className="absolute inset-0 w-full h-full object-cover transition-opacity duration-700" style={{ opacity: src === TT_BGS[i] ? 1 : 0 }} />
-      ))}
-    </div>
-  );
-};
 import { usePathname } from 'next/navigation';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import FounderViewTracker from '@/components/analytics/FounderViewTracker';
@@ -96,786 +19,556 @@ import {
   localizePath,
 } from '@/lib/i18n/locale-routing';
 import { trackEvent } from '@/lib/analytics';
-const DemoReportBanner = dynamic(() => import('@/components/DemoReportBanner'), { ssr: true });
-const TrustBar = dynamic(() => import('@/components/TrustBar'), { ssr: true });
+import { REVIEWS, resolveReviewText } from '@/data/reviews';
+import { SOURCE_LOGOS, REVIEWS_COPY } from '@/components/Reviews';
+import { FEATURED_LABEL } from '@/components/FeaturedIn';
+import LNastro from '@/components/LNastro';
+
 const ListedOn = dynamic(() => import('@/components/ListedOn'), { ssr: true });
 const FeaturedIn = dynamic(() => import('@/components/FeaturedIn'), { ssr: true });
-const Reviews = dynamic(() => import('@/components/Reviews'), { ssr: true });
+const TrustBar = dynamic(() => import('@/components/TrustBar'), { ssr: true });
 const RoiMini = dynamic(() => import('@/components/RoiMini'), { ssr: true });
-
+const DemoReportBanner = dynamic(() => import('@/components/DemoReportBanner'), { ssr: true });
 
 const DIFF_COPY: Record<string, { h2_1: string; h2_2: string; desc: string; link: string }> = {
-  it: { h2_1: 'Tutto quello che fanno loro, lo facciamo anche noi.', h2_2: 'Ma quello che facciamo noi, loro non possono.', desc: 'Timbratura GPS, CRM, gestione squadre: s\u00ec, facciamo tutto questo. Ma quando il cliente contesta, gli altri ti lasciano con un foglio Excel. Noi ti diamo un report sigillato, non alterabile, verificabile da chiunque, e la discussione finisce l\u00ec.', link: 'Scopri la differenza' },
+  it: { h2_1: 'Tutto quello che fanno loro, lo facciamo anche noi.', h2_2: 'Ma quello che facciamo noi, loro non possono.', desc: 'Timbratura GPS, CRM, gestione squadre: sì, facciamo tutto questo. Ma quando il cliente contesta, gli altri ti lasciano con un foglio Excel. Noi ti diamo un report sigillato, non alterabile, verificabile da chiunque, e la discussione finisce lì.', link: 'Scopri la differenza' },
   en: { h2_1: 'Everything they do, we do.', h2_2: 'But what we do, they can\'t.', desc: 'GPS tracking, CRM, team management: yes, we do all of that. But when a client disputes your work, the others leave you alone. We hand you a sealed, verified report that ends the conversation.', link: 'See the difference' },
-  de: { h2_1: 'Alles, was die anderen tun, tun wir auch.', h2_2: 'Aber was wir tun, k\u00f6nnen die anderen nicht.', desc: 'GPS-Tracking, CRM, Teamverwaltung: ja, das alles machen wir auch. Aber wenn ein Kunde Ihre Arbeit bestreitet, lassen die anderen Sie allein. Wir geben Ihnen einen versiegelten, nicht ver\u00e4nderbaren Bericht, der die Diskussion beendet.', link: 'Den Unterschied sehen' },
-  fr: { h2_1: 'Tout ce qu\'ils font, nous le faisons aussi.', h2_2: 'Mais ce que nous faisons, ils ne le peuvent pas.', desc: 'Suivi GPS, CRM, gestion d\'\u00e9quipes: oui, nous faisons tout cela. Mais quand un client conteste votre travail, les autres vous laissent seul. Nous vous donnons un rapport scell\u00e9, non modifiable, v\u00e9rifiable par tous.', link: 'Voir la diff\u00e9rence' },
-  nl: { h2_1: 'Alles wat zij doen, doen wij ook.', h2_2: 'Maar wat wij doen, kunnen zij niet.', desc: 'GPS-tracking, CRM, teambeheer: ja, dat doen wij ook allemaal. Maar wanneer een klant uw werk betwist, laten de anderen u alleen. Wij geven u een verzegeld, niet-wijzigbaar rapport dat de discussie be\u00ebindigt.', link: 'Ontdek het verschil' },
-  es: { h2_1: 'Todo lo que ellos hacen, nosotros tambi\u00e9n.', h2_2: 'Pero lo que hacemos nosotros, ellos no pueden.', desc: 'Seguimiento GPS, CRM, gesti\u00f3n de equipos: s\u00ed, hacemos todo eso. Pero cuando un cliente cuestiona tu trabajo, los dem\u00e1s te dejan solo. Nosotros te damos un informe sellado, no alterable, verificable por cualquiera.', link: 'Ver la diferencia' },
-  pt: { h2_1: 'Tudo o que eles fazem, n\u00f3s tamb\u00e9m fazemos.', h2_2: 'Mas o que n\u00f3s fazemos, eles n\u00e3o conseguem.', desc: 'Rastreamento GPS, CRM, gest\u00e3o de equipes: sim, fazemos tudo isso. Mas quando um cliente contesta o seu trabalho, os outros deixam voc\u00ea sozinho. N\u00f3s entregamos um relat\u00f3rio selado, verific\u00e1vel, que encerra a discuss\u00e3o.', link: 'Veja a diferen\u00e7a' },
-  da: { h2_1: 'Alt hvad de g\u00f8r, g\u00f8r vi ogs\u00e5.', h2_2: 'Men hvad vi g\u00f8r, kan de ikke.', desc: 'GPS-sporing, CRM, teamledelse: ja, det g\u00f8r vi ogs\u00e5. Men n\u00e5r en kunde bestrider dit arbejde, lader de andre dig alene. Vi giver dig en forseglet, ikke-\u00e6ndringsbar rapport, der afslutter diskussionen.', link: 'Se forskellen' },
-  sv: { h2_1: 'Allt de g\u00f6r, g\u00f6r vi ocks\u00e5.', h2_2: 'Men det vi g\u00f6r, kan de inte.', desc: 'GPS-sp\u00e5rning, CRM, teamhantering: ja, allt det g\u00f6r vi ocks\u00e5. Men n\u00e4r en kund ifr\u00e5gas\u00e4tter ditt arbete, l\u00e4mnar de andra dig ensam. Vi ger dig en f\u00f6rseglad, ej \u00e4ndringsbar rapport som avslutar diskussionen.', link: 'Se skillnaden' },
-  nb: { h2_1: 'Alt de gj\u00f8r, gj\u00f8r vi ogs\u00e5.', h2_2: 'Men det vi gj\u00f8r, kan de ikke.', desc: 'GPS-sporing, CRM, teamledelse: ja, alt det gj\u00f8r vi ogs\u00e5. Men n\u00e5r en kunde bestrider arbeidet ditt, lar de andre deg alene. Vi gir deg en forseglet, ikke-endringsbar rapport som avslutter diskusjonen.', link: 'Se forskjellen' },
-  ru: { h2_1: '\u0412\u0441\u0451, \u0447\u0442\u043e \u0434\u0435\u043b\u0430\u044e\u0442 \u043e\u043d\u0438, \u0434\u0435\u043b\u0430\u0435\u043c \u0438 \u043c\u044b.', h2_2: '\u041d\u043e \u0442\u043e, \u0447\u0442\u043e \u0434\u0435\u043b\u0430\u0435\u043c \u043c\u044b, \u043e\u043d\u0438 \u043d\u0435 \u043c\u043e\u0433\u0443\u0442.', desc: 'GPS-\u0442\u0440\u0435\u043a\u0438\u043d\u0433, CRM, \u0443\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435 \u043a\u043e\u043c\u0430\u043d\u0434\u0430\u043c\u0438: \u0434\u0430, \u0432\u0441\u0451 \u044d\u0442\u043e \u043c\u044b \u0434\u0435\u043b\u0430\u0435\u043c. \u041d\u043e \u043a\u043e\u0433\u0434\u0430 \u043a\u043b\u0438\u0435\u043d\u0442 \u043e\u0441\u043f\u0430\u0440\u0438\u0432\u0430\u0435\u0442 \u0432\u0430\u0448\u0443 \u0440\u0430\u0431\u043e\u0442\u0443, \u0434\u0440\u0443\u0433\u0438\u0435 \u043e\u0441\u0442\u0430\u0432\u043b\u044f\u044e\u0442 \u0432\u0430\u0441 \u043e\u0434\u043d\u043e\u0433\u043e. \u041c\u044b \u0434\u0430\u0451\u043c \u0432\u0430\u043c \u0437\u0430\u043f\u0435\u0447\u0430\u0442\u0430\u043d\u043d\u044b\u0439, \u043d\u0435\u0438\u0437\u043c\u0435\u043d\u044f\u0435\u043c\u044b\u0439 \u043e\u0442\u0447\u0451\u0442, \u043a\u043e\u0442\u043e\u0440\u044b\u0439 \u0437\u0430\u0432\u0435\u0440\u0448\u0430\u0435\u0442 \u0441\u043f\u043e\u0440.', link: '\u0423\u0432\u0438\u0434\u0435\u0442\u044c \u0440\u0430\u0437\u043d\u0438\u0446\u0443' },
+  de: { h2_1: 'Alles, was die anderen tun, tun wir auch.', h2_2: 'Aber was wir tun, können die anderen nicht.', desc: 'GPS-Tracking, CRM, Teamverwaltung: ja, das alles machen wir auch. Aber wenn ein Kunde Ihre Arbeit bestreitet, lassen die anderen Sie allein. Wir geben Ihnen einen versiegelten, nicht veränderbaren Bericht, der die Diskussion beendet.', link: 'Den Unterschied sehen' },
+  fr: { h2_1: 'Tout ce qu\'ils font, nous le faisons aussi.', h2_2: 'Mais ce que nous faisons, ils ne le peuvent pas.', desc: 'Suivi GPS, CRM, gestion d\'équipes: oui, nous faisons tout cela. Mais quand un client conteste votre travail, les autres vous laissent seul. Nous vous donnons un rapport scellé, non modifiable, vérifiable par tous.', link: 'Voir la différence' },
+  nl: { h2_1: 'Alles wat zij doen, doen wij ook.', h2_2: 'Maar wat wij doen, kunnen zij niet.', desc: 'GPS-tracking, CRM, teambeheer: ja, dat doen wij ook allemaal. Maar wanneer een klant uw werk betwist, laten de anderen u alleen. Wij geven u een verzegeld, niet-wijzigbaar rapport dat de discussie beëindigt.', link: 'Ontdek het verschil' },
+  es: { h2_1: 'Todo lo que ellos hacen, nosotros también.', h2_2: 'Pero lo que hacemos nosotros, ellos no pueden.', desc: 'Seguimiento GPS, CRM, gestión de equipos: sí, hacemos todo eso. Pero cuando un cliente cuestiona tu trabajo, los demás te dejan solo. Nosotros te damos un informe sellado, no alterable, verificable por cualquiera.', link: 'Ver la diferencia' },
+  pt: { h2_1: 'Tudo o que eles fazem, nós também fazemos.', h2_2: 'Mas o que nós fazemos, eles não conseguem.', desc: 'Rastreamento GPS, CRM, gestão de equipes: sim, fazemos tudo isso. Mas quando um cliente contesta o seu trabalho, os outros deixam você sozinho. Nós entregamos um relatório selado, verificável, que encerra a discussão.', link: 'Veja a diferença' },
+  da: { h2_1: 'Alt hvad de gør, gør vi også.', h2_2: 'Men hvad vi gør, kan de ikke.', desc: 'GPS-sporing, CRM, teamledelse: ja, det gør vi også. Men når en kunde bestrider dit arbejde, lader de andre dig alene. Vi giver dig en forseglet, ikke-ændringsbar rapport, der afslutter diskussionen.', link: 'Se forskellen' },
+  sv: { h2_1: 'Allt de gör, gör vi också.', h2_2: 'Men det vi gör, kan de inte.', desc: 'GPS-spårning, CRM, teamhantering: ja, allt det gör vi också. Men när en kund ifrågasätter ditt arbete, lämnar de andra dig ensam. Vi ger dig en förseglad, ej ändringsbar rapport som avslutar diskussionen.', link: 'Se skillnaden' },
+  nb: { h2_1: 'Alt de gjør, gjør vi også.', h2_2: 'Men det vi gjør, kan de ikke.', desc: 'GPS-sporing, CRM, teamledelse: ja, alt det gjør vi også. Men når en kunde bestrider arbeidet ditt, lar de andre deg alene. Vi gir deg en forseglet, ikke-endringsbar rapport som avslutter diskusjonen.', link: 'Se forskjellen' },
+  ru: { h2_1: 'Всё, что делают они, делаем и мы.', h2_2: 'Но то, что делаем мы, они не могут.', desc: 'GPS-трекинг, CRM, управление командами: да, всё это мы делаем. Но когда клиент оспаривает вашу работу, другие оставляют вас одного. Мы даём вам запечатанный, неизменяемый отчёт, который завершает спор.', link: 'Увидеть разницу' },
 };
 
-export default function Home() {
-  // Locale resolution is path-based so all internal links stay language-aware.
+/** Testi nuovi introdotti dal mockup (apertura + occhielli + conto). */
+type LCopy = {
+  h1a: string; h1b: string; lede: string; scroll: string; cycle: string;
+  la_prova: string; il_ciclo: string; il_conto: string;
+  presenti: string; chi: string; campo: string; ufficio: string; cliente: string;
+  roi_h2: string; roi_p: string; roi_cta: string;
+};
+const L_COPY: Record<string, LCopy> = {
+  it: { h1a: 'Il lavoro c’è stato.', h1b: 'Ora rendilo dimostrabile.', lede: 'Ogni intervento lascia una prova: posizione, foto e orari, chiusi in un report sigillato che il cliente verifica da solo. Alla prima contestazione non ricostruisci niente: apri il report, lo mostri, e chiudi il discorso.', scroll: 'Scorri', cycle: 'Tre strumenti, un solo ciclo: il campo registra, l’ufficio vede, il cliente verifica. Nessun passaggio a voce, nessun foglio da ricostruire il venerdì sera.', la_prova: 'La prova', il_ciclo: 'Il ciclo', il_conto: 'Il conto', presenti: 'Presenti su', chi: 'Chi lo usa', campo: 'Campo', ufficio: 'Ufficio', cliente: 'Cliente', roi_h2: 'I numeri che non guardi sono quelli che ti costano.', roi_p: 'Le ore in burocrazia, le contestazioni che paghi tu, il coordinamento fatto a voce. Non li senti uscire dal conto, ma escono. Mettici tre numeri e guarda quanto fa in un anno: di solito sorprende, e non in meglio.', roi_cta: 'Calcola il costo nascosto' },
+  en: { h1a: 'The work was done.', h1b: 'Now make it provable.', lede: 'Every job leaves proof behind: location, photos and times, locked in a sealed report your client can verify on their own. When a dispute comes, you don\'t reconstruct anything: you open the report, show it, done.', scroll: 'Scroll', cycle: 'Three tools, one cycle: the field records, the office sees, the client verifies. No word of mouth, no sheet to reconstruct on Friday night.', la_prova: 'The proof', il_ciclo: 'The cycle', il_conto: 'The bill', presenti: 'Listed on', chi: 'Who uses it', campo: 'Field', ufficio: 'Office', cliente: 'Client', roi_h2: 'The numbers you don’t look at are the ones that cost you.', roi_p: 'Hours lost to paperwork, disputes you end up paying, coordination done out loud. You don’t feel them leaving the account, but they do. Put in three numbers and see what a year adds up to: it usually surprises, and not in a good way.', roi_cta: 'Calculate the hidden cost' },
+  de: { h1a: 'Die Arbeit wurde gemacht.', h1b: 'Jetzt machen Sie sie beweisbar.', lede: 'Jeder Einsatz hinterlässt einen Beweis: Position, Fotos und Zeiten, verschlossen in einem versiegelten Bericht, den Ihr Kunde selbst prüfen kann. Bei einer Beanstandung rekonstruieren Sie nichts: Sie öffnen den Bericht, zeigen ihn, fertig.', scroll: 'Scrollen', cycle: 'Drei Werkzeuge, ein Kreislauf: das Feld erfasst, das Büro sieht, der Kunde prüft. Keine mündlichen Übergaben, kein Blatt, das am Freitagabend rekonstruiert werden muss.', la_prova: 'Der Beweis', il_ciclo: 'Der Kreislauf', il_conto: 'Die Rechnung', presenti: 'Gelistet auf', chi: 'Wer es nutzt', campo: 'Außendienst', ufficio: 'Büro', cliente: 'Kunde', roi_h2: 'Die Zahlen, die Sie nicht ansehen, sind die, die Sie kosten.', roi_p: 'Stunden in Bürokratie, Streitfälle, die Sie bezahlen, Koordination auf Zuruf. Man spürt nicht, wie sie vom Konto gehen, aber sie gehen. Geben Sie drei Zahlen ein und sehen Sie, was ein Jahr ergibt: meist überrascht es, und nicht positiv.', roi_cta: 'Versteckte Kosten berechnen' },
+  fr: { h1a: 'Le travail a été fait.', h1b: 'Rendez-le prouvable.', lede: 'Chaque intervention laisse une preuve: position, photos et horaires, enfermés dans un rapport scellé que votre client peut vérifier lui-même. À la première contestation, vous ne reconstituez rien: vous ouvrez le rapport, vous le montrez, c\'est réglé.', scroll: 'Faites défiler', cycle: 'Trois outils, un seul cycle: le terrain enregistre, le bureau voit, le client vérifie. Aucune transmission orale, aucune feuille à reconstituer le vendredi soir.', la_prova: 'La preuve', il_ciclo: 'Le cycle', il_conto: 'Le compte', presenti: 'Présents sur', chi: 'Qui l’utilise', campo: 'Terrain', ufficio: 'Bureau', cliente: 'Client', roi_h2: 'Les chiffres que vous ne regardez pas sont ceux qui vous coûtent.', roi_p: 'Les heures de paperasse, les contestations que vous payez, la coordination à la voix. Vous ne les sentez pas sortir du compte, mais ils sortent. Entrez trois chiffres et regardez ce que ça donne sur un an: en général, ça surprend, et pas en bien.', roi_cta: 'Calculer le coût caché' },
+  es: { h1a: 'El trabajo se hizo.', h1b: 'Ahora hazlo demostrable.', lede: 'Cada intervención deja una prueba: posición, fotos y horarios, cerrados en un informe sellado que tu cliente puede verificar por sí mismo. Ante una disputa no reconstruyes nada: abres el informe, lo muestras y listo.', scroll: 'Desplázate', cycle: 'Tres herramientas, un solo ciclo: el campo registra, la oficina ve, el cliente verifica. Nada de boca en boca, ninguna hoja que reconstruir el viernes por la noche.', la_prova: 'La prueba', il_ciclo: 'El ciclo', il_conto: 'La cuenta', presenti: 'Presentes en', chi: 'Quién lo usa', campo: 'Campo', ufficio: 'Oficina', cliente: 'Cliente', roi_h2: 'Los números que no miras son los que te cuestan.', roi_p: 'Las horas de burocracia, las disputas que pagas tú, la coordinación de viva voz. No los sientes salir de la cuenta, pero salen. Pon tres números y mira cuánto suma en un año: suele sorprender, y no para bien.', roi_cta: 'Calcula el coste oculto' },
+  pt: { h1a: 'O trabalho foi feito.', h1b: 'Agora torne-o comprovável.', lede: 'Cada intervenção deixa uma prova: posição, fotos e horários, fechados num relatório selado que o seu cliente pode verificar sozinho. Perante uma contestação não reconstrói nada: abre o relatório, mostra-o e pronto.', scroll: 'Role', cycle: 'Três ferramentas, um só ciclo: o campo regista, o escritório vê, o cliente verifica. Nenhuma passagem de boca, nenhuma folha para reconstruir na sexta à noite.', la_prova: 'A prova', il_ciclo: 'O ciclo', il_conto: 'A conta', presenti: 'Presentes em', chi: 'Quem o usa', campo: 'Campo', ufficio: 'Escritório', cliente: 'Cliente', roi_h2: 'Os números que não olha são os que lhe custam.', roi_p: 'As horas de burocracia, as contestações que paga, a coordenação feita de viva voz. Não os sente a sair da conta, mas saem. Ponha três números e veja quanto dá num ano: costuma surpreender, e não pela positiva.', roi_cta: 'Calcular o custo oculto' },
+  nl: { h1a: 'Het werk is gedaan.', h1b: 'Maak het nu aantoonbaar.', lede: 'Elke klus laat bewijs achter: locatie, foto\'s en tijden, vastgelegd in een verzegeld rapport dat uw klant zelf kan verifiëren. Bij een geschil reconstrueert u niets: u opent het rapport, laat het zien, klaar.', scroll: 'Scroll', cycle: 'Drie tools, één cyclus: het veld registreert, het kantoor ziet, de klant verifieert. Geen mondelinge overdracht, geen blad om op vrijdagavond te reconstrueren.', la_prova: 'Het bewijs', il_ciclo: 'De cyclus', il_conto: 'De rekening', presenti: 'Vermeld op', chi: 'Wie het gebruikt', campo: 'Buitendienst', ufficio: 'Kantoor', cliente: 'Klant', roi_h2: 'De cijfers waar u niet naar kijkt, zijn de cijfers die u geld kosten.', roi_p: 'De uren aan administratie, de geschillen die u betaalt, de coördinatie op de gang. U voelt ze niet van de rekening gaan, maar ze gaan. Vul drie cijfers in en zie wat een jaar oplevert: meestal verrast het, en niet positief.', roi_cta: 'Bereken de verborgen kosten' },
+  da: { h1a: 'Arbejdet blev udført.', h1b: 'Gør det nu beviseligt.', lede: 'Hver opgave efterlader et bevis: position, fotos og tidspunkter, låst i en forseglet rapport, som din kunde selv kan verificere. Ved en tvist rekonstruerer du intet: du åbner rapporten, viser den, færdig.', scroll: 'Rul', cycle: 'Tre værktøjer, én cyklus: marken registrerer, kontoret ser, kunden verificerer. Ingen mundtlige overleveringer, intet ark der skal rekonstrueres fredag aften.', la_prova: 'Beviset', il_ciclo: 'Cyklussen', il_conto: 'Regningen', presenti: 'Optaget på', chi: 'Hvem bruger det', campo: 'Marken', ufficio: 'Kontoret', cliente: 'Kunden', roi_h2: 'De tal, du ikke kigger på, er dem, der koster dig.', roi_p: 'Timerne til bureaukrati, tvisterne du selv betaler, koordineringen på mundtlig basis. Du mærker dem ikke forlade kontoen, men de gør det. Indtast tre tal og se, hvad et år løber op i: det overrasker som regel, og ikke positivt.', roi_cta: 'Beregn de skjulte omkostninger' },
+  sv: { h1a: 'Arbetet blev gjort.', h1b: 'Gör det nu bevisbart.', lede: 'Varje uppdrag lämnar ett bevis: position, foton och tider, låsta i en förseglad rapport som din kund kan verifiera själv. Vid en tvist rekonstruerar du ingenting: du öppnar rapporten, visar den, klart.', scroll: 'Scrolla', cycle: 'Tre verktyg, en cykel: fältet registrerar, kontoret ser, kunden verifierar. Inga muntliga överlämningar, inget blad att rekonstruera på fredagskvällen.', la_prova: 'Beviset', il_ciclo: 'Cykeln', il_conto: 'Notan', presenti: 'Listade på', chi: 'Vilka använder det', campo: 'Fältet', ufficio: 'Kontoret', cliente: 'Kunden', roi_h2: 'Siffrorna du inte tittar på är de som kostar dig.', roi_p: 'Timmarna i byråkrati, tvisterna du betalar, samordningen på muntlig väg. Du känner inte att de lämnar kontot, men det gör de. Fyll i tre siffror och se vad ett år blir: det brukar överraska, och inte på ett bra sätt.', roi_cta: 'Beräkna den dolda kostnaden' },
+  nb: { h1a: 'Arbeidet ble gjort.', h1b: 'Gjør det nå beviselig.', lede: 'Hvert oppdrag etterlater et bevis: posisjon, bilder og tidspunkter, låst i en forseglet rapport som kunden din kan verifisere selv. Ved en tvist rekonstruerer du ingenting: du åpner rapporten, viser den, ferdig.', scroll: 'Rull', cycle: 'Tre verktøy, én syklus: feltet registrerer, kontoret ser, kunden verifiserer. Ingen muntlige overleveringer, ingen ark å rekonstruere fredag kveld.', la_prova: 'Beviset', il_ciclo: 'Syklusen', il_conto: 'Regnestykket', presenti: 'Oppført på', chi: 'Hvem bruker det', campo: 'Felt', ufficio: 'Kontor', cliente: 'Kunde', roi_h2: 'Tallene du ikke ser på, er de som koster deg.', roi_p: 'Timene med byråkrati, tvistene du betaler, koordineringen på muntlig basis. Du merker ikke at de forlater kontoen, men det gjør de. Legg inn tre tall og se hva et år utgjør: det overrasker som regel, og ikke positivt.', roi_cta: 'Beregn den skjulte kostnaden' },
+  ru: { h1a: 'Работа была сделана.', h1b: 'Теперь сделайте её доказуемой.', lede: 'Каждый выезд оставляет доказательство: позиция, фото и время, закрытые в запечатанном отчёте, который клиент может проверить сам. При споре вы ничего не восстанавливаете: открываете отчёт, показываете его, и всё.', scroll: 'Листайте', cycle: 'Три инструмента, один цикл: поле записывает, офис видит, клиент проверяет. Никаких устных передач, никаких листов, которые нужно восстанавливать в пятницу вечером.', la_prova: 'Доказательство', il_ciclo: 'Цикл', il_conto: 'Счёт', presenti: 'Мы представлены на', chi: 'Кто им пользуется', campo: 'Поле', ufficio: 'Офис', cliente: 'Клиент', roi_h2: 'Цифры, на которые вы не смотрите, и есть те, что вам стоят денег.', roi_p: 'Часы на бюрократию, споры, которые оплачиваете вы, координация на словах. Вы не чувствуете, как они уходят со счёта, но они уходят. Введите три числа и посмотрите, сколько набегает за год: обычно это удивляет, и не в лучшую сторону.', roi_cta: 'Рассчитать скрытые расходы' },
+};
+
+const SETTORI_IMGS: Record<string, { img: string; pos: string }> = {
+  installatori: { img: '/bg1.webp', pos: 'center 42%' },
+  pulizie: { img: '/bg2.webp', pos: 'center 38%' },
+  sicurezza: { img: '/bg3.webp', pos: 'center 40%' },
+  elettricisti: { img: '/settore-elettricisti.webp', pos: 'center 40%' },
+  idraulici: { img: '/settore-idraulici.webp', pos: 'center 42%' },
+  termoidraulici: { img: '/settore-termoidraulici.webp', pos: 'center 38%' },
+};
+
+export default function Home({ jrSlot, fqSlot }: { jrSlot?: ReactNode; fqSlot?: ReactNode } = {}) {
   const pathname = usePathname();
   const currentLocale = getLocaleFromPathname(pathname) ?? DEFAULT_LOCALE;
-  // Dictionary lookup remains local to keep this page self-contained and deterministic.
   const dict = getDictionary(currentLocale);
-  // Single helper avoids scattered localized path logic in sections below.
   const getLink = (path: string) => localizePath(path, currentLocale);
-  // Localized link helper prevents accidental fallback to default-language paths.
-  // Landing composition below intentionally alternates narrative and proof blocks.
+  const D = DIFF_COPY[currentLocale] ?? DIFF_COPY.en;
+  const L = L_COPY[currentLocale] ?? L_COPY.en;
 
-  // Render hero video only on viewport ≥ md (768px) AND only after browser is
-  // idle. Mobile gets pure bg-white so the browser never fetches videoHero.mp4
-  // (LCP killer). On desktop we delay 1s after first idle so the video doesn't
-  // block FCP / hurt TBT on initial paint, was costing 200-400ms on /it/ and
-  // /de/ desktop scores.
-  const [showHeroVideo, setShowHeroVideo] = useState(false);
+  const seqRef = useRef<HTMLElement>(null);
+  const stickRef = useRef<HTMLDivElement>(null);
+  const stageRef = useRef<HTMLDivElement>(null);
+  const pg1Ref = useRef<HTMLElement>(null);
+  const pg2Ref = useRef<HTMLElement>(null);
+  const pg3Ref = useRef<HTMLElement>(null);
+  const accRef = useRef<HTMLElement>(null);
+  const [scene, setScene] = useState(0);
+
+  /* la sequenza: barra che si riempie, contatore che cambia;
+     il mazzo: quanto ogni pagina e' coperta da quella che le sale sopra */
   useEffect(() => {
-    const mq = window.matchMedia('(min-width: 768px)');
-    if (!mq.matches) return;
-    const ric = (window as unknown as {
-      requestIdleCallback?: (cb: () => void, opts?: { timeout: number }) => number;
-    }).requestIdleCallback;
-    const handle = ric
-      ? ric(() => setShowHeroVideo(true), { timeout: 2000 })
-      : window.setTimeout(() => setShowHeroVideo(true), 1000);
-    const onChange = (e: MediaQueryListEvent) => {
-      if (!e.matches) setShowHeroVideo(false);
+    let tick = false;
+    let cur = -1;
+    const onScroll = () => {
+      if (tick) return; tick = true;
+      requestAnimationFrame(() => {
+        const seq = seqRef.current; const stick = stickRef.current;
+        if (seq && stick) {
+          const b = seq.getBoundingClientRect();
+          let p = (-b.top) / (b.height - innerHeight);
+          p = p < 0 ? 0 : (p > 1 ? 1 : p);
+          stick.style.setProperty('--p', p.toFixed(4));
+          const i = Math.min(2, Math.floor(p * 3));
+          if (i !== cur) { cur = i; setScene(i); }
+        }
+        const pages = [pg1Ref.current, pg2Ref.current, pg3Ref.current, accRef.current];
+        for (let i = 0; i < pages.length - 1; i++) {
+          const a = pages[i]; const nb = pages[i + 1];
+          if (!a || !nb) continue;
+          const r = nb.getBoundingClientRect();
+          const c = 1 - Math.min(1, Math.max(0, r.top / innerHeight));
+          a.style.setProperty('--cov', c.toFixed(3));
+        }
+        tick = false;
+      });
     };
-    mq.addEventListener('change', onChange);
+    addEventListener('scroll', onScroll, { passive: true });
+    addEventListener('resize', onScroll);
+    onScroll();
+    return () => { removeEventListener('scroll', onScroll); removeEventListener('resize', onScroll); };
+  }, []);
+
+  /* il report ruota quando entra in campo */
+  useEffect(() => {
+    const st = stageRef.current;
+    if (!st) return;
+    const io = new IntersectionObserver((es) => {
+      es.forEach((e) => { if (e.isIntersecting) e.target.classList.add('in'); });
+    }, { threshold: 0.25 });
+    io.observe(st);
+    return () => io.disconnect();
+  }, []);
+
+  /* entrando nella pagina del report, un secondo di sosta perche' la si veda */
+  useEffect(() => {
+    const rep = pg1Ref.current;
+    if (!rep) return;
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (!matchMedia('(hover:hover)').matches) return;
+    let used = false;
+    const block = (e: Event) => e.preventDefault();
+    const io = new IntersectionObserver((es) => {
+      es.forEach((e) => {
+        if (!used && e.isIntersecting && e.intersectionRatio > 0.82) {
+          used = true;
+          rep.classList.add('hold');
+          addEventListener('wheel', block, { passive: false });
+          addEventListener('touchmove', block, { passive: false });
+          setTimeout(() => {
+            removeEventListener('wheel', block);
+            removeEventListener('touchmove', block);
+            rep.classList.remove('hold');
+          }, 1000);
+        }
+      });
+    }, { threshold: [0.82] });
+    io.observe(rep);
     return () => {
-      mq.removeEventListener('change', onChange);
-      if (ric) (window as unknown as { cancelIdleCallback?: (id: number) => void }).cancelIdleCallback?.(handle);
-      else clearTimeout(handle);
+      io.disconnect();
+      removeEventListener('wheel', block);
+      removeEventListener('touchmove', block);
     };
   }, []);
 
+  /* la barra mobile fissa sparisce quando si arriva alla chiusura */
   useEffect(() => {
     const bar = document.getElementById('sticky-mobile-cta');
-    if (!bar) return;
-    const targets = document.querySelectorAll('section.py-24');
-    if (!targets.length) return;
-    const lastTarget = targets[targets.length - 1];
+    const end = document.getElementById('home-end');
+    if (!bar || !end) return;
     const observer = new IntersectionObserver(
       ([entry]) => { bar.style.display = entry.isIntersecting ? 'none' : ''; },
       { threshold: 0.3 }
     );
-    observer.observe(lastTarget);
+    observer.observe(end);
     return () => observer.disconnect();
   }, []);
 
-  // Verifier: lock page when section.top hits 113px. Image scrolls inside viewport.
-  useEffect(() => {
-    const viewport = document.getElementById('verifier-report-viewport');
-    const img = document.getElementById('verifier-report-img');
-    const section = document.getElementById('verifier-section');
-    if (!viewport || !img || !section) return;
-    if (window.innerWidth < 768) return;
+  const problems = dict.landing.problem_items as { title: string; desc: string }[];
+  const core = dict.home_sections.core;
+  const settori = dict.home_sections.settori as Record<string, any>;
+  const sectorNames = dict.navbar.sectors as Record<string, string>;
+  const seqImgs = ['/geo-scena-telefonata.webp', '/geo-scena-carte.webp', '/geo-scena-furgone.webp'];
 
-    const LOCK_PX = 113;
-    const CAPTURE_ZONE = 300;
-    let imageOffset = 0; // target position (set instantly by wheel)
-    let renderedOffset = 0; // what's actually rendered (lerps toward target)
-    let locked = false;
-    let animating = false;
+  const prodotti = [
+    {
+      kk: `GeoTapp TimeTracker · ${L.campo}`,
+      d: dict.home_sections.app,
+      href: getLink('/products/geotapp-timetracker'),
+      feats: [
+        `<strong>${dict.home_sections.app.card_gps.title}</strong>: ${dict.home_sections.app.card_gps.desc}`,
+        `<strong>${dict.home_sections.app.card_gdpr.title}</strong>: ${dict.home_sections.app.card_gdpr.desc}`,
+      ],
+      bg: '/geo-tt-campo.webp',
+      dev: (
+        <div className="phone">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/TT1.webp" alt="GeoTapp TimeTracker" loading="lazy" />
+        </div>
+      ),
+    },
+    {
+      kk: `GeoTapp Flow · ${L.ufficio}`,
+      d: dict.home_sections.flow,
+      href: getLink('/products/geotapp-flow'),
+      feats: [dict.home_sections.flow.features.crm, dict.home_sections.flow.features.pipeline],
+      bg: '/geo-flow-ufficio-sx.webp',
+      dev: (
+        <div className="browser">
+          <div className="bar"><i /><i /><i /><b>GeoTapp Flow</b></div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/schermataFlow.webp" alt="GeoTapp Flow" loading="lazy" />
+        </div>
+      ),
+    },
+    {
+      kk: `GeoTapp Verifier · ${L.cliente}`,
+      d: dict.home_sections.verifier,
+      href: getLink('/products/geotapp-verifier'),
+      feats: [dict.home_sections.verifier.features.integrity, dict.home_sections.verifier.features.independent],
+      bg: '/geo-verifier-cliente.webp',
+      dev: (
+        <div className="sheet">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/verifier-report.webp" alt="Report GeoTapp" loading="lazy" />
+        </div>
+      ),
+    },
+  ];
 
-    const getOverflow = () => img.scrollHeight - viewport.clientHeight;
-
-    // Smooth animation loop: renderedOffset chases imageOffset
-    const animate = () => {
-      const diff = imageOffset - renderedOffset;
-      if (Math.abs(diff) < 0.5) {
-        renderedOffset = imageOffset;
-        img.style.transform = `translateY(${-renderedOffset}px)`;
-        animating = false;
-        return;
-      }
-      renderedOffset += diff * 0.25; // lerp factor (higher = snappier)
-      img.style.transform = `translateY(${-renderedOffset}px)`;
-      requestAnimationFrame(animate);
-    };
-
-    const applyImage = () => {
-      if (!animating) {
-        animating = true;
-        requestAnimationFrame(animate);
-      }
-    };
-
-    const onWheel = (e: WheelEvent) => {
-      const overflow = getOverflow();
-      if (overflow <= 0) return;
-
-      // ── LOCKED: drive image, ignore everything else ──
-      if (locked) {
-        e.preventDefault();
-        imageOffset = Math.max(0, Math.min(overflow, imageOffset + e.deltaY));
-        applyImage();
-
-        // Unlock at limits
-        if (e.deltaY > 0 && imageOffset >= overflow - 1) locked = false;
-        if (e.deltaY < 0 && imageOffset <= 1) locked = false;
-        return;
-      }
-
-      // ── NOT LOCKED ──
-      const st = section.getBoundingClientRect().top;
-      const distToLock = st - LOCK_PX; // positive = section below lock, negative = above
-
-      // Outside capture zone → let browser handle
-      if (Math.abs(distToLock) > CAPTURE_ZONE) return;
-
-      // ── INSIDE CAPTURE ZONE: take over scroll to kill momentum ──
-      e.preventDefault();
-
-      const newSt = st - e.deltaY;
-
-      // Check if this event crosses the lock point
-      // Going down: st > LOCK_PX now, newSt <= LOCK_PX after
-      if (e.deltaY > 0 && distToLock > 0 && newSt <= LOCK_PX && imageOffset < overflow - 1) {
-        // Snap to lock, remainder into image
-        window.scrollBy({ top: distToLock, behavior: 'instant' });
-        const remainder = e.deltaY - distToLock;
-        imageOffset = Math.min(overflow, imageOffset + Math.max(0, remainder));
-        applyImage();
-        locked = true;
-        return;
-      }
-
-      // Going up: st < LOCK_PX now, newSt >= LOCK_PX after
-      if (e.deltaY < 0 && distToLock < 0 && newSt >= LOCK_PX && imageOffset > 1) {
-        // Snap to lock, remainder into image
-        window.scrollBy({ top: distToLock, behavior: 'instant' });
-        const remainder = Math.abs(e.deltaY) - Math.abs(distToLock);
-        imageOffset = Math.max(0, imageOffset - Math.max(0, remainder));
-        applyImage();
-        locked = true;
-        return;
-      }
-
-      // In capture zone but not crossing lock: scroll manually (no momentum)
-      window.scrollBy({ top: e.deltaY, behavior: 'instant' });
-    };
-
-    // Reset when section fully below viewport
-    const onScroll = () => {
-      if (section.getBoundingClientRect().top > window.innerHeight) {
-        imageOffset = 0;
-        applyImage();
-        locked = false;
-      }
-    };
-
-    window.addEventListener('wheel', onWheel, { passive: false });
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => {
-      window.removeEventListener('wheel', onWheel);
-      window.removeEventListener('scroll', onScroll);
-    };
-  }, []);
+  const sectorSlugs = ['installatori', 'pulizie', 'sicurezza', 'elettricisti', 'idraulici', 'termoidraulici'];
 
   return (
-    <div className="bg-background min-h-screen text-text-primary overflow-hidden">
-      {/* Landing is locale-aware: all internal links pass through getLink(). */}
-                  {/* HERO SECTION - Moderno / Accattivante */}
-      <section className="relative pt-5 pb-20 lg:pb-28 overflow-hidden bg-gradient-to-b from-white via-white to-[#f0f8e6]">
-        {/* Aurora animata brand */}
-        <div className="geo-aurora" aria-hidden="true"><span className="a1" /><span className="a2" /><span className="a3" /></div>
+    <div className="lp-l lp-home">
+      {/* ── apertura: la foto, e sopra la frase corta ── */}
+      <section className="op">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img className="bg" src="/bg1.webp" alt="" fetchPriority="high" />
+        <div className="sc" />
+        <div className="w">
+          <div className="top">
+            <span><i>✓</i>{dict.landing.trust_gdpr}</span>
+            <span><i>◎</i>{dict.landing.trust_gps}</span>
+            <span><i>⇄</i>{dict.landing.trust_offline}</span>
+            <span><i>◉</i>{dict.landing.trust_eu_data}</span>
+          </div>
+          <h1><span><b>{L.h1a}</b></span><span><b>{L.h1b}</b></span></h1>
+          <div className="low">
+            <p>{L.lede}</p>
+            <div className="acts">
+              <Link className="b1" href={getLink('/trial')} onClick={() => trackEvent('trial_click', { cta_source: 'homepage_hero', cta_locale: currentLocale })}>
+                {dict.landing.hero_cta_primary}
+              </Link>
+              <Link className="b2" href={getLink('/settori')}>{dict.landing.hero_cta_secondary}</Link>
+            </div>
+          </div>
+        </div>
+        <p className="cue k"><s />{L.scroll}</p>
+      </section>
 
-        <div className="container-geo relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-10 items-center">
-            {/* Testo - contiene l'h1 = elemento LCP su mobile. STATICO (niente framer-motion):
-                anche senza opacity:0, il wrapper motion agganciava il paint dell'h1 al costo
-                di hydration di framer-motion (main-thread ~2,7s) → LCP mobile 4-5s. Reso div
-                puro: l'H1 dipinge dal SSR senza dipendere dalla JS (fix LCP 01/07). */}
+      {/* ── il nastro, nei tre colori del marchio ── */}
+      <LNastro />
+
+      {/* ── il claim lungo ── */}
+      <section className="cl"><div className="w">
+        <h2 className="r"><span>{D.h2_1}</span><span className="s">{D.h2_2}</span></h2>
+        <div className="row">
+          <p className="r d1">{D.desc}</p>
+          <p className="r d2" style={{ color: '#6B7563' }}>{L.cycle}</p>
+        </div>
+      </div></section>
+
+      {/* ── presenti su: directory e stampa vere del sito ── */}
+      <section className="dirs">
+        <div className="w"><p className="kk k r dirs-kk">{L.presenti}</p></div>
+        <div className="host host-ink">
+          <ListedOn locale={currentLocale} />
+        </div>
+        <div className="w"><p className="kk k r dirs-kk">{FEATURED_LABEL[currentLocale] ?? FEATURED_LABEL.en}</p></div>
+        <div className="host">
+          <FeaturedIn locale={currentLocale} />
+        </div>
+      </section>
+
+      {/* ── la sequenza: la foto resta, le scene cambiano ── */}
+      <section className="seq" ref={seqRef} style={{ height: '340vh' }}>
+        <div className="stick" ref={stickRef}>
+          {seqImgs.map((src, i) => (
+            <div key={src} className={`fr${scene === i ? ' on' : ''}`}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={src} alt="" loading="lazy" />
+            </div>
+          ))}
+          <div className="veil" />
+          <div className="prog"><i /></div>
+          <div className="hd"><div className="w"><h2>{dict.landing.problem_subtitle}</h2></div></div>
+          <div className="hold"><div className="w"><div className="cap">
+            <p className="lbl k"><s />{dict.landing.problem_title}</p>
+            <div className="tx">
+              {problems.map((item, i) => (
+                <article key={i} className={scene === i ? 'on' : ''}>
+                  <h3>{item.title}</h3>
+                  <p>{item.desc}</p>
+                </article>
+              ))}
+            </div>
+          </div></div></div>
+          <div className="cnt">
+            <div className="num">
+              {problems.map((_, i) => (
+                <span key={i} className={scene === i ? 'on' : ''}>{String(i + 1).padStart(2, '0')}</span>
+              ))}
+            </div>
+            <span className="of">di 0{problems.length}</span>
+            <div className="tk">
+              {problems.map((_, i) => <i key={i} className={scene === i ? 'on' : ''} />)}
+            </div>
+          </div>
+          <p className="hint k"><s />{L.scroll}</p>
+        </div>
+      </section>
+
+      {/* ── le pagine che si impilano ── */}
+      <div className="deck">
+        <section className="scr pg1" ref={pg1Ref}><div className="w">
+          <p className="kk k">{L.la_prova}</p>
+          <div className="g">
             <div>
-              {currentLocale === 'en' && (
-                <span className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full text-xs font-semibold bg-blue-50 border border-blue-200 text-blue-700">{dict.landing.us_badge}</span>
-              )}
-              <div className="mb-8">
-                <span className="geo-status">
-                  <span className="w-2 h-2 rounded-full animate-pulse" style={{ background: 'linear-gradient(135deg,#8FC436,#3BAEE0)' }} />
-                  <span className="text-geo-gradient geo-underline">{dict.landing.hero_badge}</span>
-                </span>
-              </div>
-              {(() => { const d = DIFF_COPY[currentLocale] ?? DIFF_COPY['en']; return (
-                <>
-                  <h1 className="font-display font-extrabold text-[2.4rem] sm:text-[3rem] lg:text-[3.8rem] leading-[1.05] tracking-tight text-slate-900 mb-6">
-                    {d.h2_1}<br /><span className="text-geo-gradient">{d.h2_2}</span>
-                  </h1>
-                  <p className="text-lg leading-relaxed text-slate-600 max-w-xl mb-8">{d.desc}</p>
-                </>
-              ); })()}
-              <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <Link href={getLink('/trial')} onClick={() => trackEvent('trial_click', { cta_source: 'homepage_hero', cta_locale: currentLocale })} className="btn-ring group">
-                  {dict.landing.hero_cta_primary} <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-                </Link>
-                <Link href={getLink('/settori')} className="btn-modern-ghost">{dict.landing.hero_cta_secondary}</Link>
-              </div>
-              <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-slate-500">
-                <span className="flex items-center gap-1.5"><ShieldCheck size={15} className="text-[#8FC436]" /><strong className="text-slate-700">{dict.landing.trust_gdpr}</strong></span>
-                <span className="flex items-center gap-1.5"><MapPin size={15} className="text-[#3BAEE0]" /><strong className="text-slate-700">{dict.landing.trust_gps}</strong></span>
-                <span className="flex items-center gap-1.5"><WifiOff size={15} className="text-amber-500" /><strong className="text-slate-700">{dict.landing.trust_offline}</strong></span>
-              </div>
-              {/* Sigillo UE "Dati in Europa" - su mobile (la demo a destra e nascosta sotto md) */}
-              <div className="mt-7 flex md:hidden">
-                <EuDataBadge label={dict.landing.trust_eu_data} size={116} />
+              <h2>{dict.landing.report_section_title}</h2>
+              <p className="s">{dict.landing.report_section_subtitle}</p>
+              <p className="b">{dict.landing.report_section_body}</p>
+              <ul>
+                <li>{dict.landing.report_feature_1}</li>
+                <li>{dict.landing.report_feature_2}</li>
+                <li>{dict.landing.report_feature_3}</li>
+                <li>{dict.landing.report_feature_4}</li>
+              </ul>
+            </div>
+            <div className="stage" ref={stageRef}>
+              <div className="sheet">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/verifier-report.webp" alt="Report certificato GeoTapp" loading="lazy" />
               </div>
             </div>
-
-            {/* Visual fluttuante: demo interattiva timbratura (mock) */}
-            <motion.div initial={{ opacity: 0, scale: 0.92, y: 30 }} animate={{ opacity: 1, scale: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.15 }} className="relative hidden md:block">
-              <ClockInDemo dict={dict} />
-              {/* Sigillo UE "Dati in Europa" come timbro in evidenza sulla demo */}
-              <EuDataBadge label={dict.landing.trust_eu_data} size={132} className="absolute -top-6 -right-3 z-20 rotate-6 drop-shadow-xl" />
-            </motion.div>
           </div>
-        </div>
-      </section>
+        </div></section>
 
-      {/* ROI MINI, calcolatore risparmio sotto l'hero (mai above-the-fold / non LCP) */}
-      <section className="py-20 bg-gradient-to-b from-[#f0f8e6] via-white to-white">
-        <div className="container-geo">
-          <RoiMini dict={dict} locale={currentLocale} />
-        </div>
-      </section>
-
-      {/* TRUST BAR, social proof immediately after hero */}
-      <TrustBar locale={currentLocale} />
-
-      {/* FEATURED IN, media/press citations (data-driven from PRESS_COVERAGE) */}
-      <FeaturedIn locale={currentLocale} />
-
-      {/* LISTED ON, directory badges */}
-      <div className="listed-on-wrapper" style={{ background: 'linear-gradient(135deg, #2a8fc4 0%, #3BAEE0 50%, #2a8fc4 100%)', boxShadow: 'inset 0 4px 12px rgba(0,0,0,0.15), inset 0 -4px 12px rgba(0,0,0,0.1)' }}>
-        <ListedOn locale={currentLocale} />
-      </div>
-
-      {/* REVIEWS, voci reali dei customer */}
-      <Reviews locale={currentLocale} />
-
-            {/* PROBLEM SECTION, 3 riquadri ariosi, senza numeri */}
-      <section className="py-24 bg-gradient-to-b from-[#fbf0ee] via-white to-[#e9f3fb]">
-        <div className="container-geo">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="flex justify-center mb-6"><span className="geo-accent-line" /></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              {dict.landing.problem_title}
-            </h2>
-            <p className="text-xl text-text-secondary font-light">
-              {dict.landing.problem_subtitle}
-            </p>
+        <section className="scr pg2" ref={pg2Ref}><div className="w">
+          <p className="kk k">{core.badge}</p>
+          <div className="hd2">
+            <div>
+              <h2>{core.title}</h2>
+              <p className="sub">{core.subtitle}</p>
+            </div>
+            <div className="lead">
+              <span className="n k">{L.il_ciclo}</span>
+              <b>{core.features[0].title}</b>
+              <p dangerouslySetInnerHTML={{ __html: core.features[0].desc }} />
+            </div>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {(dict.landing.problem_items as { title: string; desc: string }[]).map((item, i) => {
-              const Icon = [AlertTriangle, FileX, Receipt][i] ?? AlertTriangle;
-              return (
-                <div
-                  key={i}
-                  className="card-modern p-10"
-                >
-                  <div className="w-14 h-14 rounded-2xl icon-grad-rose flex items-center justify-center mb-6">
-                    <Icon size={26} />
-                  </div>
-                  <h3 className="font-bold text-slate-900 text-xl mb-3">{item.title}</h3>
-                  <p className="text-slate-600 leading-relaxed">{item.desc}</p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-            {/* SETTORI SECTION, 3 riquadri ariosi */}
-      <section className="py-24 bg-gradient-to-b from-[#e9f3fb] via-white to-[#f0f8e6]">
-        <div className="container-geo">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="flex justify-center mb-6"><span className="geo-accent-line" /></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">
-              {dict.home_sections.settori.title}
-            </h2>
-            <p className="text-lg text-slate-500">
-              {dict.home_sections.settori.subtitle}
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              { Icon: Hammer, iconCls: 'bg-amber-50 text-amber-600', ctaCls: 'text-amber-600', hoverBorder: 'hover:border-amber-200', d: dict.home_sections.settori.installatori, href: getLink('/settori/installatori') },
-              { Icon: ShieldCheck, iconCls: 'bg-indigo-50 text-indigo-600', ctaCls: 'text-indigo-600', hoverBorder: 'hover:border-indigo-200', d: dict.home_sections.settori.sicurezza, href: getLink('/settori/sicurezza') },
-              { Icon: Sparkles, iconCls: 'bg-cyan-50 text-cyan-600', ctaCls: 'text-cyan-600', hoverBorder: 'hover:border-cyan-200', d: dict.home_sections.settori.pulizie, href: getLink('/settori/pulizie') },
-            ].map(({ Icon, iconCls, ctaCls, hoverBorder, d, href }, i) => (
-              <Link
-                key={i}
-                href={href}
-                className={`group card-modern p-10 ${hoverBorder}`}
-              >
-                <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 ${iconCls}`}>
-                  <Icon size={26} />
-                </div>
-                <h3 className="font-bold text-slate-900 text-xl mb-3">{d.name}</h3>
-                <p className="text-slate-600 leading-relaxed mb-6">{d.desc}</p>
-                <div className={`font-bold text-sm flex items-center gap-2 group-hover:gap-3 transition-all ${ctaCls}`}>
-                  {d.cta} <ArrowRight size={16} />
-                </div>
-              </Link>
+          <div className="three">
+            {core.features.slice(1).map((f: { title: string; desc: string }, i: number) => (
+              <article key={i}>
+                <span className="nn">{String(i + 1).padStart(2, '0')}</span>
+                <b>{f.title}</b>
+                <p dangerouslySetInnerHTML={{ __html: f.desc }} />
+              </article>
             ))}
           </div>
-          <div className="text-center mt-12">
-            <Link
-              href={getLink('/settori')}
-              className="inline-flex items-center gap-2 text-slate-500 font-semibold hover:text-slate-900 transition-colors"
-            >
-              {dict.home_sections.settori.see_all} <ArrowRight size={16} />
+        </div></section>
+
+        <section className="scr pg3" ref={pg3Ref}><div className="w">
+          <p className="kk k">{L.il_conto}</p>
+          <div className="g">
+            <div>
+              <h2>{L.roi_h2}</h2>
+              <p>{L.roi_p}</p>
+            </div>
+            <div className="card">
+              <b>{dict.landing.roi_mini.title}</b>
+              <Link href={getLink('/roi-calculator')}>{L.roi_cta}</Link>
+            </div>
+          </div>
+        </div></section>
+      </div>
+
+      {/* ── i tre strumenti: pannelli che si aprono ── */}
+      <section className="acc" ref={accRef}>
+        {prodotti.map((p) => (
+          <div className="p" key={p.kk}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img className="bg" src={p.bg} alt="" loading="lazy" />
+            <div className="sh" />
+            <div className="dev">{p.dev}</div>
+            <div className="ct">
+              <p className="kk k">{p.kk}</p>
+              <h3>{p.d.title}</h3>
+              <div className="cl2">
+                <p dangerouslySetInnerHTML={{ __html: p.d.subtitle }} />
+                {p.feats && (
+                  <ul className="feats">
+                    {p.feats.map((f: string, fi: number) => (
+                      <li key={fi} dangerouslySetInnerHTML={{ __html: f }} />
+                    ))}
+                  </ul>
+                )}
+                <Link href={p.href}>{p.d.link}</Link>
+              </div>
+            </div>
+          </div>
+        ))}
+      </section>
+
+      {/* ── il calcolatore vero e il report demo, contenuti del sito ── */}
+      <section className="roi-wrap">
+        <div className="wn">
+          <RoiMini dict={dict} locale={currentLocale} />
+          <div style={{ marginTop: 40 }}>
+            <DemoReportBanner />
+          </div>
+        </div>
+      </section>
+
+      {/* ── fascia trial (testi del sito online) ── */}
+      <section style={{ padding: '72px 0', borderTop: '1px solid rgba(14,14,12,.14)' }}>
+        <div className="wn" style={{ textAlign: 'center' }}>
+          <h2 className="r" style={{ fontSize: 'clamp(26px,3vw,48px)', marginBottom: 12 }}>
+            {(dict.landing as any)?.trial_cta_headline ?? 'Provalo gratis per 14 giorni'}
+          </h2>
+          <p className="r d1" style={{ color: '#4A5244', marginBottom: 26 }}>
+            {(dict.landing as any)?.trial_cta_subtitle ?? 'Nessuna carta di credito richiesta'}
+          </p>
+          <div className="r d2" style={{ display: 'flex', justifyContent: 'center' }}>
+            <Link className="b1" href={getLink('/trial')} onClick={() => trackEvent('trial_click', { cta_source: 'homepage_cta_band', cta_locale: currentLocale })}>
+              {dict.landing.hero_cta_primary}
             </Link>
           </div>
         </div>
       </section>
 
-      {/* AREA FONDATORE - Experience, a metà pagina (non nascosta in fondo) */}
+      {/* ── barra fiducia (numeri veri) ── */}
+      <TrustBar locale={currentLocale} />
+
+      {/* ── il fondatore ── */}
       {(() => {
         const f = dict.chi_siamo.founder;
         const storyLabel = ({ it: 'La nostra storia', en: 'Our story', de: 'Unsere Geschichte', fr: 'Notre histoire', es: 'Nuestra historia', pt: 'A nossa história', nl: 'Ons verhaal', ru: 'Наша история', da: 'Vores historie', sv: 'Vår historia', nb: 'Vår historie' } as Record<string, string>)[currentLocale] ?? 'Our story';
         return (
-          <section className="py-20 bg-gradient-to-b from-[#f0f8e6] via-white to-white">
-            <div className="container-geo">
-              <FounderViewTracker source="homepage_block" />
-              <div className="relative geo-glass rounded-[28px] p-8 md:p-12 overflow-hidden">
-                <div aria-hidden="true" className="absolute -top-20 -right-20 w-72 h-72 rounded-full bg-[#8FC436]/12 blur-3xl pointer-events-none" />
-                <div aria-hidden="true" className="absolute -bottom-24 -left-16 w-72 h-72 rounded-full bg-[#3BAEE0]/10 blur-3xl pointer-events-none" />
-                <div className="relative flex flex-col md:flex-row items-center gap-8 md:gap-12">
-                  <div className="shrink-0 relative">
-                    <div aria-hidden="true" className="absolute -inset-2 rounded-[28px] bg-gradient-to-br from-[#8FC436] to-[#3BAEE0] opacity-70 blur-[3px]" />
-                    <img src="/michele-petraroli.webp" alt={`${f.name}, ${f.role} GeoTapp`} width={176} height={176} loading="lazy" decoding="async" className="relative w-36 h-36 md:w-44 md:h-44 rounded-[24px] object-cover ring-4 ring-white" />
-                  </div>
-                  <div className="flex-1 text-center md:text-left">
-                    <p className="geo-eyebrow mb-4">{f.section_label}</p>
-                    <p className="text-xl md:text-2xl text-slate-800 leading-snug font-display font-semibold mb-5">
-                      &ldquo;{dict.chi_siamo.mission_quote}&rdquo;
-                    </p>
-                    <p className="text-slate-900 font-bold">{f.name}</p>
-                    <p className="text-slate-500 text-sm mb-6">{f.role}</p>
-                    <Link href={getLink('/chi-siamo')} className="btn-modern-ghost">
-                      {storyLabel} <ArrowRight size={16} />
-                    </Link>
-                  </div>
-                </div>
-              </div>
+          <section className="fdr"><div className="wn">
+            <FounderViewTracker source="homepage_block" />
+            <p className="kk k r" style={{ color: '#5E7C1E', marginBottom: 34 }}>{f.section_label}</p>
+            <div className="g">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img className="r-s" src="/michele-petraroli.webp" alt={`${f.name}, ${f.role} GeoTapp`} loading="lazy" />
+              <blockquote className="r d1">
+                <p>&ldquo;{dict.chi_siamo.mission_quote}&rdquo;</p>
+                <cite><b>{f.name}</b><span>{f.role}</span></cite>
+                <div><Link className="b2i" href={getLink('/chi-siamo')}>{storyLabel} &rarr;</Link></div>
+              </blockquote>
             </div>
-          </section>
+          </div></section>
         );
       })()}
 
-      {/* Product blocks: Flow (office) → TimeTracker (field) → Verifier (trust) */}
-      {/* PRODUCT SECTION: FLOW */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-white via-[#f6f3fc] to-[#faf3ec]">
-        <HeartbeatLine />
-        {/* Left: carousel as background, vertically centred within the section
-            so it aligns with the items-center text block on the right. */}
-        <div className="absolute left-0 top-24 bottom-24 w-[55%] hidden md:flex md:items-center overflow-hidden">
-          <div className="w-full">
-            <FlowCarousel />
-          </div>
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-[#f6f3fc] pointer-events-none" />
+      {/* ── settori ── */}
+      <section className="set"><div className="w">
+        <div className="hd">
+          <h2 className="r">{settori.title}</h2>
+          <p className="r d1">{settori.subtitle}</p>
         </div>
-        <div className="container-geo relative z-10 py-24">
-          <div className="grid md:grid-cols-[3fr_2fr] gap-16 items-center">
-            <div className="order-2 md:order-1" /> {/* spacer for the carousel */}
-            <div className="order-1 md:order-2">
-              <div className="mb-4">
-                <img src="/logoFlow.webp" alt="GeoTapp Flow" width="200" height="68" loading="lazy" decoding="async" className="h-10 w-auto object-contain" />
-              </div>
-              <h3 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-                {dict.home_sections.flow.title}
-              </h3>
-              <p
-                className="text-lg text-text-secondary leading-relaxed mb-8"
-                dangerouslySetInnerHTML={{
-                  __html: dict.home_sections.flow.subtitle,
-                }}
-              ></p>
-              <ul className="space-y-4 mb-8">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="text-flow shrink-0 mt-1" size={20} />
-                  <span
-                    className="text-slate-700"
-                    dangerouslySetInnerHTML={{
-                      __html: dict.home_sections.flow.features.crm,
-                    }}
-                  ></span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="text-flow shrink-0 mt-1" size={20} />
-                  <span
-                    className="text-slate-700"
-                    dangerouslySetInnerHTML={{
-                      __html: dict.home_sections.flow.features.pipeline,
-                    }}
-                  ></span>
-                </li>
-              </ul>
-              <Link
-                href={getLink('/products/geotapp-flow')}
-                className="text-flow font-bold hover:underline flex items-center gap-2"
-              >
-                {dict.home_sections.flow.link} <ArrowRight size={18} />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* PRODUCT SECTION: TIMETRACKER */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-[#faf3ec] via-[#fdf6ee] to-[#f2f8e8]">
-        {/* Right: bg carousel behind the smartphone */}
-        <div className="absolute right-0 top-0 bottom-0 w-[50%] hidden md:block overflow-hidden">
-          <TTBgCarousel />
-          <div className="absolute inset-0 bg-[#fdf6ee]/40" />
-          <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-[#fdf6ee]" />
-        </div>
-        <div className="container-geo relative z-10 py-24">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div>
-              <div className="mb-4">
-                <img src="/logoTT.webp" alt="GeoTapp TimeTracker" width="140" height="52" loading="lazy" decoding="async" className="h-[3.25rem] w-auto object-contain" />
-              </div>
-              <h3 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-                {dict.home_sections.app.title}
-              </h3>
-              <p
-                className="text-lg text-text-secondary leading-relaxed mb-8"
-                dangerouslySetInnerHTML={{
-                  __html: dict.home_sections.app.subtitle,
-                }}
-              ></p>
-              <div className="grid grid-cols-2 gap-4 mb-8">
-                <div className="p-4 bg-white rounded-xl shadow-sm border border-slate-200">
-                  <Map className="text-app mb-2" />
-                  <div className="font-bold text-slate-900">
-                    {dict.home_sections.app.card_gps.title}
-                  </div>
-                  <div className="text-xs text-slate-500">
-                    {dict.home_sections.app.card_gps.desc}
-                  </div>
+        <div className="setg">
+          {sectorSlugs.map((slug, i) => {
+            const s = settori[slug] as { name?: string; desc?: string; cta?: string } | undefined;
+            const img = SETTORI_IMGS[slug];
+            return (
+              <Link key={slug} className={`r-s d${Math.min(i + 1, 4)}`} href={getLink(`/settori/${slug}`)}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={img.img} alt={s?.name ?? sectorNames[slug] ?? slug} loading="lazy" style={{ objectPosition: img.pos }} />
+                <div className="cp">
+                  <h3>{s?.name ?? sectorNames[slug] ?? slug}</h3>
+                  {s?.desc && <p>{s.desc}</p>}
+                  <span className="go">{(s?.cta ?? settori.see_all)} &rarr;</span>
                 </div>
-                <div className="p-4 bg-white rounded-xl shadow-sm border border-slate-200">
-                  <ShieldCheck className="text-app mb-2" />
-                  <div className="font-bold text-slate-900">
-                    {dict.home_sections.app.card_gdpr.title}
-                  </div>
-                  <div className="text-xs text-slate-500">
-                    {dict.home_sections.app.card_gdpr.desc}
-                  </div>
-                </div>
-              </div>
-              <Link
-                href={getLink('/products/geotapp-timetracker')}
-                className="text-app font-bold hover:underline flex items-center gap-2"
-              >
-                {dict.home_sections.app.link} <ArrowRight size={18} />
               </Link>
-            </div>
-            <div className="relative pb-8">
-              <TTCarousel />
-            </div>
-          </div>
+            );
+          })}
         </div>
-      </section>
+        <div style={{ marginTop: 28 }}>
+          <Link href={getLink('/settori')} className="k" style={{ color: '#5E7C1E' }}>{settori.see_all} &rarr;</Link>
+        </div>
+      </div></section>
 
-      {/* PRODUCT SECTION: VERIFIER, locks at 113px, image scrolls inside viewport */}
-      <section id="verifier-section" className="bg-gradient-to-b from-[#f2f8e8] via-[#f1f8e7] to-white">
-        <div className="container-geo py-24">
-          <div className="grid md:grid-cols-[3fr_2fr] gap-16 items-start">
-            <div className="order-2 md:order-1">
-              <div id="verifier-report-viewport" className="rounded-2xl border border-slate-200 bg-white shadow-xl shadow-slate-200/50 overflow-hidden" style={{ maxHeight: '80vh' }}>
-                {/* loading="lazy": senza, React 19 hoista un preload in <head> (36,7 KB sul
-                    percorso critico mobile per un'immagine molto sotto la fold). Fix 2026-07-27. */}
-                <img id="verifier-report-img" src="/screenshots/verifier-report.webp" alt="Certified Work Report" loading="lazy" decoding="async" className="w-full block" />
-              </div>
+      {/* ── voci: le recensioni vere ── */}
+      <section className="rev"><div className="wn">
+        <p className="kk k r">{L.chi}</p>
+        {(() => {
+          const rc = REVIEWS_COPY[currentLocale] ?? REVIEWS_COPY.en;
+          const avg = REVIEWS.reduce((s, r) => s + r.rating, 0) / REVIEWS.length;
+          const avgStr = avg.toLocaleString(currentLocale, { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+          return (
+            <div className="r d1" style={{ marginBottom: 40 }}>
+              <h2 style={{ fontSize: 'clamp(24px,2.8vw,44px)', marginBottom: 12 }}>{rc.heading}</h2>
+              <p style={{ color: 'rgba(242,240,233,.66)', margin: 0 }}>{rc.subheading}</p>
+              <p className="k" style={{ color: '#8FC436', fontSize: 12, marginTop: 10 }}>
+                {rc.aggregateLine.replace('{avg}', avgStr).replace('{count}', String(REVIEWS.length))}
+              </p>
             </div>
-            <div id="verifier-text" className="order-1 md:order-2 md:sticky md:top-20 md:self-start">
-              <div className="mb-4">
-                <img src="/logoVerifier.webp" alt="GeoTapp Verifier" loading="lazy" decoding="async" className="h-10 w-auto object-contain" />
-              </div>
-              <h3 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-                {dict.home_sections.verifier.title}
-              </h3>
-              <p
-                className="text-lg text-text-secondary leading-relaxed mb-8"
-                dangerouslySetInnerHTML={{
-                  __html: dict.home_sections.verifier.subtitle,
-                }}
-              ></p>
-              <ul className="space-y-4 mb-8">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="text-emerald-600 shrink-0 mt-1" size={20} />
-                  <span
-                    className="text-slate-700"
-                    dangerouslySetInnerHTML={{
-                      __html: dict.home_sections.verifier.features.integrity,
-                    }}
-                  ></span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="text-emerald-600 shrink-0 mt-1" size={20} />
-                  <span
-                    className="text-slate-700"
-                    dangerouslySetInnerHTML={{
-                      __html: dict.home_sections.verifier.features.independent,
-                    }}
-                  ></span>
-                </li>
-              </ul>
-              <Link
-                href={getLink('/products/geotapp-verifier')}
-                className="text-emerald-600 font-bold hover:underline flex items-center gap-2"
-              >
-                {dict.home_sections.verifier.link} <ArrowRight size={18} />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+          );
+        })()}
+        {REVIEWS.map((r, i) => {
+          const { text } = resolveReviewText(r, currentLocale);
+          const meta = [r.reviewer.role, r.reviewer.industry, r.reviewer.companySize].filter(Boolean).join(' · ');
+          const Logo = SOURCE_LOGOS[r.source];
+          return (
+            <blockquote key={r.id} className={`r d${Math.min(i + 1, 4)}`}>
+              <cite>
+                <b>{r.reviewer.displayName}</b>
+                <span>{meta}</span>
+                <span className="stars" style={{ display: 'flex', flexDirection: 'row', gap: 3 }} aria-label={`${r.rating}/5`}>
+                  {[1, 2, 3, 4, 5].map((n) => (
+                    <svg key={n} width="15" height="15" viewBox="0 0 24 24" fill={n <= r.rating ? '#8FC436' : 'rgba(242,240,233,.22)'} aria-hidden="true"><path d="M12 0l2.927 8.986H24l-7.336 5.328 2.8 8.614L12 17.6l-7.464 5.328 2.8-8.614L0 8.986h9.073z"/></svg>
+                  ))}
+                </span>
+                <a className="src" href={r.sourceUrl} target="_blank" rel="noopener noreferrer nofollow"><Logo /></a>
+              </cite>
+              <p>&ldquo;{text.quote}&rdquo;</p>
+            </blockquote>
+          );
+        })}
+        <p className="r" style={{ marginTop: 26, fontSize: 13, color: 'rgba(242,240,233,.45)', maxWidth: '64ch' }}>
+          {(REVIEWS_COPY[currentLocale] ?? REVIEWS_COPY.en).translationNote}
+        </p>
+      </div></section>
 
-      {/* TRIAL CTA, between Verifier and Report */}
-      <div className="py-16 bg-gradient-to-r from-emerald-50 to-blue-50 border-t border-b border-slate-100">
-        <div className="container mx-auto px-6 max-w-3xl text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">
-            {(dict.landing as any)?.trial_cta_headline ?? 'Provalo gratis per 14 giorni'}
-          </h2>
-          <p className="text-lg text-slate-500 mb-8">
-            {(dict.landing as any)?.trial_cta_subtitle ?? 'Nessuna carta di credito richiesta'}
-          </p>
-          <Link
-            href={getLink('/trial')}
-            onClick={() => trackEvent('trial_click', { cta_source: 'homepage_cta', cta_locale: currentLocale })}
-            className="btn-ring"
-          >
-            {dict.landing.hero_cta_primary}
-            <ArrowRight size={20} />
-          </Link>
-        </div>
-      </div>
+      {/* ── letture: gli ultimi articoli veri del blog ── */}
+      {jrSlot && (
+        <section className="jr jr-wrap"><div className="w">{jrSlot}</div></section>
+      )}
 
-      {/* REPORT SECTION */}
-      <section className="py-24 border-t border-slate-100 bg-slate-50 relative overflow-hidden">
-        {/* Background: floating shield icons */}
-        <div aria-hidden="true" className="absolute inset-0 pointer-events-none">
-          {[
-            { x: '6%', y: '12%', s: 45, r: -12, o: 0.06, d: 6 },
-            { x: '88%', y: '8%', s: 60, r: 8, o: 0.05, d: 8 },
-            { x: '93%', y: '60%', s: 38, r: -20, o: 0.06, d: 7 },
-            { x: '3%', y: '70%', s: 55, r: 15, o: 0.05, d: 9 },
-            { x: '78%', y: '82%', s: 35, r: -5, o: 0.07, d: 5 },
-            { x: '18%', y: '88%', s: 50, r: 10, o: 0.05, d: 7.5 },
-            { x: '50%', y: '5%', s: 30, r: -8, o: 0.04, d: 6.5 },
-            { x: '65%', y: '45%', s: 42, r: 18, o: 0.04, d: 8.5 },
-          ].map((p, i) => (
-            <motion.div
-              key={i}
-              className="absolute"
-              style={{ left: p.x, top: p.y }}
-              initial={{ opacity: 0, scale: 0.5, y: 0 }}
-              whileInView={{ opacity: p.o, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 + i * 0.12, duration: 0.5 }}
-            >
-              <motion.div
-                animate={{ y: [0, -12, 0, 8, 0] }}
-                transition={{ duration: p.d, repeat: Infinity, ease: 'easeInOut' }}
-              >
-                <ShieldCheck size={p.s} className="text-emerald-500" style={{ transform: `rotate(${p.r}deg)` }} />
-              </motion.div>
-            </motion.div>
-          ))}
-        </div>
+      {/* ── domande, che si aprono con calma ── */}
+      {fqSlot && (
+        <section className="fq fq-wrap"><div className="w">{fqSlot}</div></section>
+      )}
 
-        <div className="container-geo relative z-10">
-          <motion.div
-            className="text-center max-w-4xl mx-auto mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              {dict.landing.report_section_title}
-            </h2>
-            <p className="text-xl text-text-secondary font-light mb-4">
-              {dict.landing.report_section_subtitle}
-            </p>
-            <p className="text-slate-600 leading-relaxed">
-              {dict.landing.report_section_body}
-            </p>
-          </motion.div>
-          <div className="grid md:grid-cols-2 gap-6 mb-14 max-w-4xl mx-auto">
-            {[
-              dict.landing.report_feature_1,
-              dict.landing.report_feature_2,
-              dict.landing.report_feature_3,
-              dict.landing.report_feature_4,
-            ].map((feat, i) => (
-              <motion.div
-                key={i}
-                className="flex items-start gap-3 bg-white rounded-xl p-5 border border-slate-200 shadow-sm hover:shadow-md hover:border-emerald-200 transition-all"
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1, duration: 0.4 }}
-              >
-                <CheckCircle2 className="text-emerald-500 shrink-0 mt-0.5" size={18} />
-                <span className="text-slate-700 text-sm">{feat}</span>
-              </motion.div>
-            ))}
-          </div>
-          <motion.div
-            className="text-center mb-10"
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.5, duration: 0.4 }}
-          >
-            <Link
-              href={getLink('/products/geotapp-verifier')}
-              className="inline-flex items-center gap-2 px-8 py-4 bg-emerald-600 text-white font-bold rounded-xl text-lg hover:bg-emerald-700 transition-all shadow-lg hover:shadow-emerald-200"
-            >
-              {dict.landing.report_cta} <ArrowRight size={18} />
+      {/* ── ultima inquadratura ── */}
+      <section className="end" id="home-end">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img className="bg" src="/geo-fine-serata.webp" alt="" loading="lazy" />
+        <div className="ov" />
+        <div className="w">
+          <h2 className="r" dangerouslySetInnerHTML={{ __html: dict.home_sections.footer_cta.title }} />
+          <p className="r d1">{dict.home_sections.footer_cta.subtitle}</p>
+          <div className="acts r d2">
+            <Link className="b1" href={getLink('/trial')} onClick={() => trackEvent('trial_click', { cta_source: 'homepage_cta', cta_locale: currentLocale })}>
+              {dict.landing.hero_cta_primary}
             </Link>
-          </motion.div>
-          <motion.div
-            className="max-w-3xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.6, duration: 0.5 }}
-          >
-            <DemoReportBanner />
-          </motion.div>
-        </div>
-      </section>
-
-      {/* PLATFORM OVERVIEW */}
-      <section id="platform" className="py-24 border-t border-slate-100 bg-slate-50">
-        <div className="container-geo">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-primary font-bold tracking-widest uppercase text-sm">
-              {dict.home_sections.core.badge}
-            </span>
-            <h2 className="text-4xl md:text-5xl font-display font-bold text-slate-900 mt-4 mb-6">
-              {dict.home_sections.core.title}
-            </h2>
-            <p className="text-xl text-text-secondary leading-relaxed font-light">
-              {dict.home_sections.core.subtitle}
-            </p>
+            <Link className="b2" href={getLink('/contact')}>{dict.home_sections.footer_cta.button}</Link>
           </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm flex items-start gap-5">
-              <div className="p-3 bg-blue-50 rounded-xl text-blue-600 shrink-0">
-                <Smartphone size={26} />
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-slate-900 mb-2">
-                  {dict.home_sections.core.features[0].title}
-                </h3>
-                <p
-                  className="text-slate-600 leading-relaxed"
-                  dangerouslySetInnerHTML={{
-                    __html: dict.home_sections.core.features[0].desc,
-                  }}
-                ></p>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm flex items-start gap-5">
-              <div className="p-3 bg-indigo-50 rounded-xl text-indigo-600 shrink-0">
-                <ShieldCheck size={26} />
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-slate-900 mb-2">
-                  {dict.home_sections.core.features[1].title}
-                </h3>
-                <p
-                  className="text-slate-600 leading-relaxed"
-                  dangerouslySetInnerHTML={{
-                    __html: dict.home_sections.core.features[1].desc,
-                  }}
-                ></p>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm flex items-start gap-5">
-              <div className="p-3 bg-amber-50 rounded-xl text-amber-600 shrink-0">
-                <Zap size={26} />
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-slate-900 mb-2">
-                  {dict.home_sections.core.features[2].title}
-                </h3>
-                <p
-                  className="text-slate-600 leading-relaxed"
-                  dangerouslySetInnerHTML={{
-                    __html: dict.home_sections.core.features[2].desc,
-                  }}
-                ></p>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm flex items-start gap-5">
-              <div className="p-3 bg-emerald-50 rounded-xl text-emerald-600 shrink-0">
-                <FileCheck2 size={26} />
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-slate-900 mb-2">
-                  {dict.home_sections.core.features[3].title}
-                </h3>
-                <p
-                  className="text-slate-600 leading-relaxed"
-                  dangerouslySetInnerHTML={{
-                    __html: dict.home_sections.core.features[3].desc,
-                  }}
-                ></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-      {/* CTA FOOTER */}
-      <section className="py-32 bg-slate-900 text-white text-center px-6">
-        <div className="container mx-auto max-w-4xl">
-          <h2
-            className="text-4xl md:text-5xl font-bold mb-8"
-            dangerouslySetInnerHTML={{
-              __html: dict.home_sections.footer_cta.title,
-            }}
-          ></h2>
-          <p className="text-xl text-slate-400 mb-12 max-w-2xl mx-auto">
-            {dict.home_sections.footer_cta.subtitle}
-          </p>
-          <Link
-            href={getLink('/contact')}
-            className="btn-modern"
-          >
-            {dict.home_sections.footer_cta.button}
-          </Link>
-          <div className="mt-6">
-            <Link
-              href={getLink('/pricing')}
-              className="text-slate-400 hover:text-slate-200 text-sm underline underline-offset-4 transition-colors"
-            >
+          <div style={{ marginTop: 22 }}>
+            <Link href={getLink('/pricing')} className="k" style={{ color: 'rgba(255,255,255,.6)' }}>
               {dict.home_sections.footer_cta.pricing_link}
             </Link>
           </div>
         </div>
       </section>
 
-      {/* STICKY MOBILE CTA */}
+      {/* ── barra mobile fissa ── */}
       <div
         id="sticky-mobile-cta"
         className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-white/95 backdrop-blur-sm border-t border-slate-200 px-4 py-3 shadow-2xl"
@@ -894,7 +587,3 @@ export default function Home() {
     </div>
   );
 }
-
-// Landing page note: keep locale-aware links and section order deterministic (1/2)
-
-// Landing page note: keep locale-aware links and section order deterministic (2/2)

@@ -284,6 +284,11 @@
         "name": "Loodgieters",
         "desc": "Sanitair, verwarming, ketels. GPS werkbonnen met voor-en-na foto's, geen geschillen over uitgevoerd werk.",
         "cta": "Bewijs elke klus"
+      },
+      "termoidraulici": {
+        "name": "CV & Sanitair",
+        "desc": "GeoTapp registreert elke cv-ketel en verwarmingsklus met GPS, foto's en verifieerbare tijdstempels. Klant ontkent vervangen onderdelen?",
+        "cta": "Bewijs vervangen onderdelen"
       }
     },
     "app_mockup": {

@@ -1,0 +1,16 @@
+/* Vestito direzione L per /verify-report — solo CSS, zero contenuti nuovi,
+   zero logica toccata: qui vive solo l'aspetto della zona di verifica reale
+   (upload del pacchetto, esito dinamico). Scopato con .lp-verifica, non
+   tocca il resto del sito. */
+
+.lp-verifica .vzone{max-width:640px;margin:0 auto}
+.lp-verifica .vnotice{border:1px solid rgba(242,240,233,.2);padding:20px 22px;margin-bottom:30px;font-size:14.5px;line-height:1.6;color:rgba(242,240,233,.75)}
+.lp-verifica .vnotice code,.lp-verifica .vnotice .mono{font-family:monospace;color:var(--lime)}
+.lp-verifica .form input[type="file"].in{cursor:pointer}
+.lp-verifica .form button.b1:disabled{opacity:.4}
+.lp-verifica .form button.b1:disabled:hover{transform:none;box-shadow:none}
+.lp-verifica .errbox{border:1px solid #C65246;background:rgba(198,82,70,.12);color:#F3C9C4;padding:20px 22px;margin-top:26px;font-size:14.5px}
+.lp-verifica .vres b{font-size:16px;word-break:break-word}
+.lp-verifica .vres dd{font-family:monospace}
+.lp-verifica .warn-list,.lp-verifica .err-list{margin-top:22px;padding-left:20px;font-size:14.5px;line-height:1.7}
+.lp-verifica .warn-list li,.lp-verifica .err-list li{list-style:disc}

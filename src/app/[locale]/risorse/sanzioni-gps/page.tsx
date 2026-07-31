@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import { SUPPORTED_LOCALES } from '@/lib/i18n/config';
@@ -8,11 +9,17 @@ import { getPaesiSeverita, localizePaesiSeverita } from '@/lib/risorse/gps-lavor
 import CalcolatoreSanzioniClient from '@/components/risorse/CalcolatoreSanzioniClient';
 import RisorsaAttribuzione from '@/components/risorse/RisorsaAttribuzione';
 import RisorsaFaq from '@/components/risorse/RisorsaFaq';
+import './l-page.css';
 
 /**
  * Tool "Calcolatore sanzioni GPS": scegli un Paese, vedi la sanzione massima reale
  * e gli adempimenti che ti espongono. Riusa i 39 dossier verificati (derive.ts).
  * Route: /[locale]/risorse/sanzioni-gps/ (slug localizzato via slug-map).
+ *
+ * Vestito "direzione L" (docs/redesign-sito-2026-07/esplorazione/risorsa-strumento.html),
+ * slug .lp-risorsa-strumento: testata scura .ph, calcolatore in .sec, FAQ in .fq
+ * (via RisorsaFaq, invariato), attribuzione in .sec, chiusura fotografica .end.
+ * Testi tutti dal dizionario reale (sanzioniGps + risorseGps), nessuno inventato.
  */
 
 export { generateLocaleStaticParams as generateStaticParams } from '@/lib/i18n/static-params';
@@ -74,23 +81,67 @@ export default async function CalcolatoreSanzioniPage({
     disclaimer: shared.disclaimer,
   };
 
+  const homeHref = `/${resolvedLocale}/`;
+  const trialUrl = `/${resolvedLocale}/trial/`;
+
   return (
-    <main className="container mx-auto max-w-3xl px-4 py-12 md:py-16">
-      <header className="mb-10 text-center">
-        <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">{dict.h1}</h1>
-        <p className="text-slate-600 text-lg leading-relaxed max-w-2xl mx-auto">{dict.intro}</p>
-      </header>
-      <CalcolatoreSanzioniClient paesi={paesi} labels={labels} hrefPerIso={hrefPerIso} />
+    <div className="lp-l lp-risorsa-strumento">
+      {/* ── testata scura ── */}
+      <section className="ph">
+        <div className="crumb">
+          <div className="w">
+            <Link href={homeHref}>GeoTapp</Link> / {d.navbar.resources} / {dict.h1}
+          </div>
+        </div>
+        <div className="w">
+          <p className="kk k"><s></s>{d.navbar.resources}</p>
+          <h1>{dict.h1}</h1>
+          <p className="lede">{dict.intro}</p>
+          <div className="acts">
+            <a className="b1" href="#calcolatore">{shared.scegliPaese}</a>
+          </div>
+        </div>
+      </section>
 
-      <RisorsaFaq title={dict.faq.title} items={dict.faq.items} />
+      {/* ── il calcolatore vero: intatto, solo incorniciato ── */}
+      <section className="sec">
+        <div className="w" id="calcolatore">
+          <CalcolatoreSanzioniClient paesi={paesi} labels={labels} hrefPerIso={hrefPerIso} />
+        </div>
+      </section>
 
-      <RisorsaAttribuzione
-        pageUrl={`https://geotapp.com${localizePath('/risorse/sanzioni-gps/', resolvedLocale)}`}
-        pageTitle={d.risorseHub.cards.sanzioni.title}
-        contactHref={localizePath('/contact', resolvedLocale)}
-        labels={d.attribuzione}
-        anno={2026}
-      />
-    </main>
+      <section className="fq fq-wrap">
+        <div className="w">
+          <RisorsaFaq title={dict.faq.title} items={dict.faq.items} />
+        </div>
+      </section>
+
+      <section className="sec">
+        <div className="w">
+          <RisorsaAttribuzione
+            pageUrl={`https://geotapp.com${localizePath('/risorse/sanzioni-gps/', resolvedLocale)}`}
+            pageTitle={d.risorseHub.cards.sanzioni.title}
+            contactHref={localizePath('/contact', resolvedLocale)}
+            labels={d.attribuzione}
+            anno={2026}
+          />
+        </div>
+      </section>
+
+      {/* ── chiusura fotografica ── */}
+      <section className="end">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img className="bg" src="/bg1.webp" alt="" loading="lazy" />
+        <div className="ov"></div>
+        <div className="w">
+          <h2 className="r">{shared.ctaTitolo}</h2>
+          <p className="r d1">{shared.ctaTesto}</p>
+          <div className="acts r d2">
+            <a className="b1" href={trialUrl}>{shared.ctaBottone}</a>
+            <a className="b2" href="#calcolatore">{shared.scegliPaese}</a>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }

@@ -1,10 +1,17 @@
 'use client';
 
+/**
+ * Ufficio stampa nella direzione L, ricostruita sul mockup
+ * docs/redesign-sito-2026-07/esplorazione/stampa.html.
+ * I contenuti sono quelli veri del dizionario (stampa) e dei dati stampa
+ * reali (@/lib/press/data): cambia come sono vestiti, non cosa dicono.
+ */
+
 import { useState } from 'react';
 import type { ComponentType } from 'react';
-import { motion } from 'framer-motion';
+import Link from 'next/link';
 import Image from 'next/image';
-import { Copy, Check, ExternalLink, Download, Linkedin, Instagram, Facebook, Youtube } from 'lucide-react';
+import { Copy, Check, ExternalLink, Linkedin, Instagram, Facebook, Youtube } from 'lucide-react';
 
 // Logo X (non presente in lucide): SVG inline, accetta `size` come le icone lucide.
 function XIcon({ size = 18 }: { size?: number | string }) {
@@ -37,6 +44,21 @@ import type { SiteDictionary } from '@/lib/i18n/dictionaries';
 import type { AppLocale } from '@/lib/i18n/config';
 import { localizePath } from '@/lib/i18n/locale-routing';
 import { PRESS_RELEASES, PRESS_COVERAGE, hasPress, pressRel } from '@/lib/press/data';
+import LNastro from '@/components/LNastro';
+import ListedOn from '@/components/ListedOn';
+import FeaturedIn from '@/components/FeaturedIn';
+
+/** "Chi siamo": stessa traduzione gia' usata in Footer.tsx (voce "about"). */
+const ABOUT_LABEL: Record<string, string> = {
+  it: 'Chi siamo', en: 'About us', de: 'Über uns', fr: 'À propos', es: 'Sobre nosotros',
+  pt: 'Sobre nós', nl: 'Over ons', da: 'Om os', sv: 'Om oss', nb: 'Om oss', ru: 'О нас',
+};
+
+/** "Presenti su": stessa etichetta gia' pubblicata in HomeClient.tsx. */
+const PRESENTI: Record<string, string> = {
+  it: 'Presenti su', en: 'Listed on', de: 'Gelistet auf', fr: 'Présents sur', es: 'Presentes en',
+  pt: 'Presentes em', nl: 'Vermeld op', da: 'Optaget på', sv: 'Listade på', nb: 'Oppført på', ru: 'Мы представлены на',
+};
 
 // Data ISO 'YYYY-MM-DD' → visualizzazione 'dd-MM-YYYY'. L'ISO resta nei dati (ordinamento).
 function fmtPressDate(iso: string): string {
@@ -68,373 +90,234 @@ export default function StampaView({
   allResourcesLabel: string;
 }) {
   const { copied, copy } = useCopy();
+  const about = ABOUT_LABEL[locale] ?? ABOUT_LABEL.en;
+  const presenti = PRESENTI[locale] ?? PRESENTI.en;
+  const facts = d.facts.filter((f) => !f.v.includes('{{'));
 
   return (
-    <div className="bg-background min-h-screen pt-5 pb-24 overflow-hidden">
-
-      {/* ── 1. HERO ─────────────────────────────────────────────────────── */}
-      <section className="relative px-6 text-center mb-24">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] rounded-full bg-primary/10 blur-[120px]" />
+    <div className="lp-l lp-stampa">
+      {/* ── testata ── */}
+      <section className="ph">
+        <div className="crumb"><div className="w"><Link href={localizePath('/', locale)}>Home</Link> / {d.hero_title}</div></div>
+        <div className="w">
+          <p className="kk k"><s />{d.badge}</p>
+          <h1>{d.hero_title}</h1>
+          <p className="lede">{d.hero_desc}</p>
+          <div className="acts">
+            <a className="b1" href="#risorse">{d.resources_label}</a>
+            <a className="b2" href="#contatti">{d.contact_label}</a>
+          </div>
         </div>
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="container mx-auto max-w-4xl relative"
-        >
-          <span className="text-primary text-sm font-bold uppercase tracking-widest mb-6 inline-block">
-            {d.badge}
-          </span>
-          <h1 className="text-5xl md:text-7xl font-display font-bold text-foreground mb-8 leading-tight">
-            {d.hero_title}
-          </h1>
-          <p className="text-xl md:text-2xl text-text-secondary leading-relaxed font-light text-balance mx-auto max-w-3xl">
-            {d.hero_desc}
-          </p>
-        </motion.div>
       </section>
 
-      {/* ── 2. BOILERPLATE ──────────────────────────────────────────────── */}
-      <section className="container mx-auto px-6 max-w-4xl mb-24">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
-          <h2 className="text-3xl font-bold text-foreground font-display mb-8">
-            {d.boilerplate_label}
-          </h2>
-          <div className="space-y-4">
-            {/* Short boilerplate */}
-            <div className="relative group p-6 rounded-2xl border border-white/10 bg-white/[0.02] hover:border-primary/30 transition-colors duration-300">
-              <p className="text-text-secondary leading-relaxed font-light pr-12">
-                {d.boilerplate_short}
-              </p>
+      {/* ── in breve + dati in breve ── */}
+      <section className="sec"><div className="w"><div className="two2">
+        <div className="r">
+          <p className="kk k" style={{ color: 'var(--seal)' }}>{d.boilerplate_label}</p>
+          <div className="story">
+            <p style={{ position: 'relative', paddingRight: 40 }}>
+              {d.boilerplate_short}
               <button
                 type="button"
-                aria-label="Copy short boilerplate"
+                aria-label="Copy"
                 onClick={() => copy('short', d.boilerplate_short)}
-                className="absolute top-4 right-4 p-2 rounded-lg border border-white/10 bg-white/[0.04] text-text-secondary hover:text-primary hover:border-primary/40 transition-all duration-200"
+                style={{ position: 'absolute', right: 0, top: 0, background: 'none', border: 0, cursor: 'pointer', color: copied === 'short' ? 'var(--seal)' : '#78836F' }}
               >
                 {copied === 'short' ? <Check size={16} /> : <Copy size={16} />}
               </button>
-            </div>
-
-            {/* Long boilerplate */}
-            <div className="relative group p-6 rounded-2xl border border-white/10 bg-white/[0.02] hover:border-primary/30 transition-colors duration-300">
-              <p className="text-text-secondary leading-relaxed font-light pr-12">
-                {d.boilerplate_long}
-              </p>
+            </p>
+            <p style={{ position: 'relative', paddingRight: 40 }}>
+              {d.boilerplate_long}
               <button
                 type="button"
-                aria-label="Copy long boilerplate"
+                aria-label="Copy"
                 onClick={() => copy('long', d.boilerplate_long)}
-                className="absolute top-4 right-4 p-2 rounded-lg border border-white/10 bg-white/[0.04] text-text-secondary hover:text-primary hover:border-primary/40 transition-all duration-200"
+                style={{ position: 'absolute', right: 0, top: 0, background: 'none', border: 0, cursor: 'pointer', color: copied === 'long' ? 'var(--seal)' : '#78836F' }}
               >
                 {copied === 'long' ? <Check size={16} /> : <Copy size={16} />}
               </button>
-            </div>
-          </div>
-        </motion.div>
-      </section>
-
-      {/* ── 3. FACTS ────────────────────────────────────────────────────── */}
-      <section className="container mx-auto px-6 max-w-4xl mb-24">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
-          <h2 className="text-3xl font-bold text-foreground font-display mb-8">
-            {d.facts_label}
-          </h2>
-          <div className="p-6 md:p-8 rounded-2xl border border-white/10 bg-white/[0.02]">
-            <dl className="divide-y divide-white/[0.06]">
-              {d.facts.filter((f) => !f.v.includes('{{')).map((f, i) => (
-                <div key={i} className="flex gap-6 py-4 first:pt-0 last:pb-0">
-                  <dt className="w-32 shrink-0 text-sm font-semibold text-primary uppercase tracking-wide pt-0.5">
-                    {f.k}
-                  </dt>
-                  <dd className="text-text-secondary leading-relaxed font-light">
-                    {f.v}
-                  </dd>
-                </div>
-              ))}
-            </dl>
-          </div>
-        </motion.div>
-      </section>
-
-      {/* ── 4. FOUNDER ──────────────────────────────────────────────────── */}
-      <section className="container mx-auto px-6 max-w-4xl mb-24">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12 p-8 md:p-10 rounded-3xl border border-white/10 bg-white/[0.02]"
-        >
-          <div className="shrink-0 flex flex-col items-center gap-3">
-            <Image
-              src="/michele-petraroli.webp"
-              alt="Michele Angelo Petraroli, fondatore di GeoTapp"
-              width={160}
-              height={160}
-              className="rounded-2xl border border-primary/30 object-cover shadow-lg shadow-primary/10"
-            />
-            <a
-              href="/michele-petraroli.webp"
-              download
-              className="text-xs text-primary/80 underline underline-offset-4 hover:text-primary transition-colors"
-            >
-              {d.photo_download}
-            </a>
-          </div>
-          <div className="flex-1">
-            <span className="text-primary text-sm font-bold uppercase tracking-widest mb-2 inline-block">
-              {d.founder_label}
-            </span>
-            <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-4">
-              Michele Angelo Petraroli
-            </h2>
-            <p className="text-text-secondary leading-relaxed font-light">
-              {d.founder_bio}
             </p>
           </div>
-        </motion.div>
-      </section>
-
-      {/* ── 5. RESOURCES ────────────────────────────────────────────────── */}
-      <section className="container mx-auto px-6 max-w-4xl mb-24">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
-          <h2 className="text-3xl font-bold text-foreground font-display mb-4">
-            {d.resources_label}
-          </h2>
-          <p className="text-text-secondary font-light mb-8">{d.resources_intro}</p>
-
-          {/* Brand logos — preview + download (GeoTapp + products) */}
-          <h3 className="text-sm font-bold uppercase tracking-widest text-text-secondary mb-4">
-            {d.logo_download}
-          </h3>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
-            {[
-              { name: 'GeoTapp', src: '/LogoGeoTapp.webp' },
-              { name: 'GeoTapp Flow', src: '/logoFlow.webp' },
-              { name: 'TimeTracker', src: '/logoTT.webp' },
-              { name: 'Verifier', src: '/logoVerifier.webp' },
-            ].map((logo) => (
-              <a
-                key={logo.name}
-                href={logo.src}
-                download
-                className="flex flex-col items-center gap-3 p-5 rounded-2xl border border-white/10 bg-white/[0.02] hover:border-primary/30 hover:bg-primary/5 transition-all duration-300 group"
-              >
-                <span className="flex h-20 w-full items-center justify-center rounded-xl bg-white/[0.06] p-3">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={logo.src}
-                    alt={`Logo ${logo.name}`}
-                    loading="lazy"
-                    className="max-h-full max-w-full object-contain"
-                  />
-                </span>
-                <span className="flex items-center gap-1.5 text-sm font-medium text-foreground group-hover:text-primary transition-colors">
-                  {logo.name}
-                  <Download size={14} className="text-text-secondary group-hover:text-primary shrink-0" />
-                </span>
-              </a>
+        </div>
+        <div className="r d1">
+          <p className="kk k" style={{ color: 'var(--seal)' }}>{d.facts_label}</p>
+          <div className="facts">
+            {facts.map((f) => (
+              <div className="rw" key={f.k}>
+                <div className="k2">{f.k}</div>
+                <div>{f.v}</div>
+              </div>
             ))}
           </div>
+        </div>
+      </div></div></section>
 
-          {/* Founder photo (preview) + tools */}
-          <div className="grid sm:grid-cols-2 gap-4">
-            {/* Photo download with preview (same asset as founder card) */}
-            <a
-              href="/michele-petraroli.webp"
-              download
-              className="flex items-center gap-4 p-4 rounded-2xl border border-white/10 bg-white/[0.02] hover:border-primary/30 hover:bg-primary/5 transition-all duration-300 group"
-            >
-              <Image
-                src="/michele-petraroli.webp"
-                alt={d.photo_download}
-                width={56}
-                height={56}
-                className="h-14 w-14 rounded-xl object-cover border border-white/10 shrink-0"
-              />
-              <span className="flex-1 font-medium text-foreground group-hover:text-primary transition-colors">
-                {d.photo_download}
-              </span>
-              <Download size={16} className="text-text-secondary group-hover:text-primary transition-colors shrink-0" />
-            </a>
-
-            {/* GPS map (internal) */}
-            <a
-              href={localizePath('/risorse/gps-lavoratori-ue/', locale)}
-              className="flex items-center gap-3 p-5 rounded-2xl border border-white/10 bg-white/[0.02] hover:border-primary/30 hover:bg-primary/5 transition-all duration-300 group"
-            >
-              <span className="flex-1 font-medium text-foreground group-hover:text-primary transition-colors">
-                {d.asset_map}
-              </span>
-              <ExternalLink size={16} className="text-text-secondary group-hover:text-primary transition-colors shrink-0" />
-            </a>
-
-            {/* Facsimile template (internal) */}
-            <a
-              href={localizePath('/risorse/generatore-informativa-gps/', locale)}
-              className="flex items-center gap-3 p-5 rounded-2xl border border-white/10 bg-white/[0.02] hover:border-primary/30 hover:bg-primary/5 transition-all duration-300 group"
-            >
-              <span className="flex-1 font-medium text-foreground group-hover:text-primary transition-colors">
-                {d.asset_facsimile}
-              </span>
-              <ExternalLink size={16} className="text-text-secondary group-hover:text-primary transition-colors shrink-0" />
-            </a>
-
-            {/* Full resources hub (internal) — utile a chi scrive un pezzo */}
-            <a
-              href={localizePath('/risorse/', locale)}
-              className="flex items-center gap-3 p-5 rounded-2xl border border-primary/20 bg-primary/[0.04] hover:border-primary/40 hover:bg-primary/10 transition-all duration-300 group sm:col-span-2"
-            >
-              <span className="flex-1 font-medium text-foreground group-hover:text-primary transition-colors">
-                {allResourcesLabel}
-              </span>
-              <ExternalLink size={16} className="text-primary shrink-0" />
-            </a>
-          </div>
-        </motion.div>
-      </section>
-
-      {/* ── 6. CONTACT ──────────────────────────────────────────────────── */}
-      <section className="container mx-auto px-6 max-w-4xl mb-24">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="p-8 md:p-10 rounded-3xl border border-primary/25 bg-primary/[0.04]"
-        >
-          <h2 className="text-3xl font-bold text-foreground font-display mb-6">
-            {d.contact_label}
-          </h2>
-          <p className="text-text-secondary font-light mb-3">{d.contact_office}</p>
-          <a
-            href={`mailto:${d.contact_email}`}
-            className="text-primary font-semibold hover:underline underline-offset-4 transition-colors"
-          >
-            {d.contact_email}
+      {/* ── il fondatore ── */}
+      <section className="sec warm"><div className="w"><div className="fnd">
+        <div className="r-s" style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+          <Image
+            src="/michele-petraroli.webp"
+            alt="Michele Angelo Petraroli, fondatore di GeoTapp"
+            width={640}
+            height={640}
+          />
+          <a href="/michele-petraroli.webp" download className="b2" style={{ fontSize: 13, textAlign: 'center' }}>
+            {d.photo_download}
           </a>
+        </div>
+        <div className="r d1">
+          <p className="kk k" style={{ color: 'var(--seal)' }}>{d.founder_label}</p>
+          <h2 style={{ fontSize: 'clamp(26px,3.2vw,46px)' }}>Michele Angelo Petraroli</h2>
+          <p style={{ color: '#3B4237', marginTop: 22, maxWidth: '60ch' }}>{d.founder_bio}</p>
+        </div>
+      </div></div></section>
 
-          {/* Profili social ufficiali (visibili, non solo nel JSON-LD) */}
-          <div className="mt-6 flex items-center gap-3">
-            {PRESS_SOCIALS.map(({ label, href, Icon }) => (
-              <a
-                key={label}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                aria-label={label}
-                className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/[0.02] text-text-secondary hover:text-primary hover:border-primary/30 transition-colors"
-              >
-                <Icon size={18} />
-              </a>
+      {/* ── risorse per la stampa ── */}
+      <section className="sec" id="risorse"><div className="w">
+        <div className="hd"><h2 className="r">{d.resources_label}</h2><p className="r d1">{d.resources_intro}</p></div>
+        <div className="dl2 r-s">
+          {[
+            { name: 'GeoTapp', src: '/LogoGeoTapp.webp' },
+            { name: 'GeoTapp Flow', src: '/logoFlow.webp' },
+            { name: 'TimeTracker', src: '/logoTT.webp' },
+            { name: 'Verifier', src: '/logoVerifier.webp' },
+          ].map((logo) => (
+            <a key={logo.name} href={logo.src} download>
+              <span className="thumb">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={logo.src} alt={logo.name} loading="lazy" />
+              </span>
+              <b>{logo.name}</b>
+              <span>{d.logo_download}</span>
+            </a>
+          ))}
+          <a href="/michele-petraroli.webp" download>
+            <span className="thumb">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/michele-petraroli.webp" alt={d.photo_download} loading="lazy" style={{ objectFit: 'cover', borderRadius: 8 }} />
+            </span>
+            <b>{d.photo_download}</b>
+            <span>.webp</span>
+          </a>
+          <a href={localizePath('/risorse/gps-lavoratori-ue/', locale)}>
+            <b>{d.asset_map}</b>
+            <span><ExternalLink size={13} style={{ display: 'inline', verticalAlign: -2 }} /></span>
+          </a>
+          <a href={localizePath('/risorse/generatore-informativa-gps/', locale)}>
+            <b>{d.asset_facsimile}</b>
+            <span><ExternalLink size={13} style={{ display: 'inline', verticalAlign: -2 }} /></span>
+          </a>
+          <a href={localizePath('/risorse/', locale)}>
+            <b>{allResourcesLabel}</b>
+            <span><ExternalLink size={13} style={{ display: 'inline', verticalAlign: -2 }} /></span>
+          </a>
+        </div>
+      </div></section>
+
+      {/* ── contatti stampa ── */}
+      <section className="sec ink" id="contatti"><div className="w">
+        <p className="kk k r">{d.contact_label}</p>
+        <h2 className="r d1">{d.contact_office}</h2>
+        <div className="acts r d2" style={{ marginTop: 26 }}>
+          <a className="b1" href={`mailto:${d.contact_email}`}>{d.contact_email}</a>
+        </div>
+        <div className="r d3" style={{ marginTop: 34, display: 'flex', gap: 16, flexWrap: 'wrap' }}>
+          {PRESS_SOCIALS.map(({ label, href, Icon }) => (
+            <a
+              key={label}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              aria-label={label}
+              style={{
+                display: 'flex', alignItems: 'center', justifyContent: 'center', width: 42, height: 42,
+                borderRadius: '50%', border: '1px solid rgba(242,240,233,.22)', color: '#F2F0E9',
+              }}
+            >
+              <Icon size={18} />
+            </a>
+          ))}
+        </div>
+      </div></section>
+
+      {/* ── comunicati stampa (solo se ce ne sono) ── */}
+      {hasPress(PRESS_RELEASES) && (
+        <section className="sec"><div className="w">
+          <div className="hd"><h2 className="r">{d.releases_label}</h2></div>
+          <ul className="rows">
+            {PRESS_RELEASES.map((item, i) => (
+              <li key={i}>
+                <a href={item.url} target="_blank" rel={pressRel(item)} style={{ display: 'flex', flexWrap: 'wrap', gap: 16, alignItems: 'baseline' }}>
+                  <time dateTime={item.date} style={{ fontSize: 12.5, color: '#78836F', fontVariantNumeric: 'tabular-nums' }}>{fmtPressDate(item.date)}</time>
+                  <span className="k" style={{ color: 'var(--seal)', fontSize: 11 }}>{item.outlet}</span>
+                  <span style={{ flex: 1 }}>{item.title}</span>
+                </a>
+              </li>
             ))}
-          </div>
-        </motion.div>
+          </ul>
+        </div></section>
+      )}
+
+      {/* ── pubblicazioni: chi ha scritto di noi ── */}
+      {hasPress(PRESS_COVERAGE) && (
+        <section className="sec warm"><div className="w">
+          <div className="hd"><h2 className="r">{d.coverage_label}</h2></div>
+          <ul className="rows covg">
+            {[...PRESS_COVERAGE].sort((a, b) => b.date.localeCompare(a.date)).map((item, i) => {
+              const riga = (
+                <>
+                  <span className="lg">
+                    {item.logo && (
+                      /* eslint-disable-next-line @next/next/no-img-element */
+                      <img src={item.logo} alt={item.outlet} loading="lazy" />
+                    )}
+                  </span>
+                  <time dateTime={item.date}>{fmtPressDate(item.date)}</time>
+                  <span className="k out">{item.outlet}</span>
+                  <span className="ti">{item.title}</span>
+                </>
+              );
+              return (
+                <li key={i}>
+                  {item.url ? (
+                    <a className="riga" href={item.url} target="_blank" rel={pressRel(item)}>{riga}</a>
+                  ) : (
+                    <span className="riga">{riga}</span>
+                  )}
+                </li>
+              );
+            })}
+          </ul>
+        </div></section>
+      )}
+
+      <LNastro />
+
+      {/* ── presenti su + ci hanno citato ── */}
+      <section className="dirs">
+        <div className="w"><p className="kk k r">{presenti}</p></div>
+        <div className="host">
+          <ListedOn locale={locale} />
+          <FeaturedIn locale={locale} />
+        </div>
       </section>
 
-      {/* ── 7. PRESS RELEASES (gated) ───────────────────────────────────── */}
-      {hasPress(PRESS_RELEASES) && (
-        <section className="container mx-auto px-6 max-w-4xl mb-24">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl font-bold text-foreground font-display mb-8">
-              {d.releases_label}
-            </h2>
-            <ul className="space-y-4">
-              {PRESS_RELEASES.map((item, i) => (
-                <li
-                  key={i}
-                  className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6 p-5 rounded-2xl border border-white/10 bg-white/[0.02] hover:border-primary/30 transition-colors duration-300"
-                >
-                  <time dateTime={item.date} className="text-xs text-text-secondary shrink-0 font-mono">{fmtPressDate(item.date)}</time>
-                  <span className="text-xs text-primary uppercase tracking-wide shrink-0">{item.outlet}</span>
-                  <a
-                    href={item.url}
-                    target="_blank"
-                    rel={pressRel(item)}
-                    className="flex-1 font-medium text-foreground hover:text-primary transition-colors"
-                  >
-                    {item.title}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-        </section>
-      )}
-
-      {/* ── 8. COVERAGE (gated) ─────────────────────────────────────────── */}
-      {hasPress(PRESS_COVERAGE) && (
-        <section className="container mx-auto px-6 max-w-4xl mb-24">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl font-bold text-foreground font-display mb-8">
-              {d.coverage_label}
-            </h2>
-            <ul className="space-y-4">
-              {PRESS_COVERAGE.map((item, i) => (
-                <li
-                  key={i}
-                  className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-5 p-4 rounded-2xl border border-white/10 bg-white/[0.02] hover:border-primary/30 transition-colors duration-300"
-                >
-                  {item.logo && (
-                    // Box IDENTICO per ogni testata: i loghi hanno proporzioni molto diverse
-                    // (AZ Big Media larghissimo, HR quasi quadrato), quindi si scalano DENTRO
-                    // lo stesso riquadro invece di occupare larghezze diverse.
-                    // Riquadro basso apposta: qui la lista deve restare leggibile tutta
-                    // insieme anche con quindici testate, senza nascondere niente.
-                    <div className="flex h-16 w-44 shrink-0 items-center justify-center rounded-lg bg-white p-2.5">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
-                        src={item.logo}
-                        alt={`Logo ${item.outlet}`}
-                        className="max-h-full max-w-full object-contain"
-                      />
-                    </div>
-                  )}
-                  {/* Colonne a larghezza FISSA: senza, un nome lungo ("Small Business Leader")
-                      spinge il titolo piu' a destra di uno corto ("AZ Big Media"), e la colonna
-                      dei titoli fa i gradini. Cosi' ogni titolo attacca allo stesso punto.
-                      La colonna testata sta stretta apposta: i nomi lunghi vanno a capo su due
-                      righe di text-xs, che restano dentro l'altezza del riquadro logo, mentre
-                      lo spazio guadagnato toglie una riga di a capo ai titoli lunghi. */}
-                  <time dateTime={item.date} className="text-xs text-text-secondary shrink-0 font-mono sm:w-24">{fmtPressDate(item.date)}</time>
-                  {/* min-w-0: senza, il min-content del nome fa sforare la colonna oltre w-40
-                      e i titoli ripartono da x diverse (l'effetto gradino di cui sopra). */}
-                  <span className="text-xs text-primary uppercase tracking-wide shrink-0 min-w-0 sm:w-40">{item.outlet}</span>
-                  <a
-                    href={item.url}
-                    target="_blank"
-                    rel={pressRel(item)}
-                    className="flex-1 font-medium text-foreground hover:text-primary transition-colors"
-                  >
-                    {item.title}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-        </section>
-      )}
-
+      {/* ── chiusura ── */}
+      <section className="end">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img className="bg" src="/bg2.webp" alt="" loading="lazy" />
+        <div className="ov" />
+        <div className="w">
+          <p className="big r" style={{ fontSize: 'clamp(30px,5.2vw,72px)', maxWidth: '17ch', marginBottom: 24, color: 'var(--lime)' }}>
+            {d.contact_label}
+          </p>
+          <p className="r d1" style={{ color: 'rgba(255,255,255,.8)', maxWidth: '58ch', marginBottom: 32 }}>{d.contact_office}</p>
+          <div className="acts r d2">
+            <a className="b1" href={`mailto:${d.contact_email}`}>{d.contact_email}</a>
+            <Link className="b2" href={localizePath('/chi-siamo/', locale)}>{about}</Link>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

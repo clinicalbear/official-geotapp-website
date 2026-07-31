@@ -1,6 +1,10 @@
 import type { ReactNode } from 'react';
-import { Inter, Poppins } from 'next/font/google';
+import { Inter, Poppins, Anton } from 'next/font/google';
 import '../globals.css';
+// Sistema grafico "direzione L": qui SOLO per le route del blog headless
+// (/blog/*, senza prefisso locale), che non passano da [locale]/layout.tsx
+// e quindi non lo caricherebbero altrimenti.
+import '../l-mockup.css';
 import { clsx } from 'clsx';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -9,6 +13,7 @@ import Script from 'next/script';
 import SiteAnalytics from '@/components/SiteAnalytics';
 import InternalTrafficBadge from '@/components/InternalTrafficBadge';
 import CookieConsentBanner from '@/components/CookieConsentBanner';
+import LEffetti from '@/components/LEffetti';
 import { buildConsentDefaultScript } from '@/lib/consent-mode';
 
 // display 'optional' (05/07): il repaint da font-swap aggiornava l'LCP al
@@ -25,6 +30,9 @@ const poppins = Poppins({
   variable: '--font-poppins',
   display: 'optional',
 });
+// Titoli in maiuscolo della direzione L (.ph h1, .art .side .au b, ecc.),
+// stesso font-weight/variable di [locale]/layout.tsx.
+const anton = Anton({ subsets: ['latin'], weight: '400', variable: '--font-anton', display: 'swap' });
 
 export default async function BlogLayout({ children }: { children: ReactNode }) {
   // Detect locale from the URL at render time is not possible in a layout
@@ -56,10 +64,12 @@ export default async function BlogLayout({ children }: { children: ReactNode }) 
         {/* Adsense fully removed, owner decided not to configure ad inventory.
             Saves ~75-90ms TBT on every blog page on top of the main site. */}
       </head>
-      <body className={clsx(inter.variable, poppins.variable, 'font-sans bg-background text-text-primary antialiased')}>
+      <body className={clsx(inter.variable, poppins.variable, anton.variable, 'font-sans bg-background text-text-primary antialiased')}>
         <SiteAnalytics />
         {/* Navbar FUORI dal wrapper overflow: un antenato con overflow!=visible rompe position:sticky */}
         <Navbar />
+        {/* Osservatore globale dei reveal .r/.r-l/.r-r/.r-s (direzione L) */}
+        <LEffetti />
         <div className="relative min-h-screen overflow-x-clip">
           <div className="relative z-10">
             <main>{children}</main>

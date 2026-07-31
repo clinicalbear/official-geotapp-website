@@ -1,0 +1,123 @@
+/* Politica conservazione dati RH — variante .lp-risorsa-strumento.
+   Copre ciò che le classi globali di l-mockup.css non prevedono:
+   form scuro con INPUT/SELECT reali (non placeholder statici),
+   bottoni-toggle piatti per la selezione dei tipi di dato, upload logo. */
+
+.lp-risorsa-strumento #tool .form {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+/* input/select reali dentro .form: il testo digitato resta leggibile,
+   solo il placeholder usa il tono smorzato del mockup statico. */
+.lp-risorsa-strumento .form input.in,
+.lp-risorsa-strumento .form select.in {
+  width: 100%;
+  background: transparent;
+  color: var(--paper);
+  font-family: inherit;
+  outline: none;
+}
+.lp-risorsa-strumento .form input.in::placeholder {
+  color: rgba(242, 240, 233, .4);
+}
+.lp-risorsa-strumento .form select.in {
+  cursor: pointer;
+}
+.lp-risorsa-strumento .form select.in option {
+  color: #0E0E0C;
+  background: #F2F0E9;
+}
+
+/* bottoni-toggle "tipi di dati": piatti, niente rounded-xl */
+.lp-risorsa-strumento .cd-tipi {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 2px;
+}
+.lp-risorsa-strumento .cd-tog {
+  text-align: left;
+  padding: 14px 16px;
+  font-size: 14.5px;
+  font-family: inherit;
+  border: 1px solid rgba(242, 240, 233, .24);
+  color: rgba(242, 240, 233, .72);
+  background: transparent;
+  cursor: pointer;
+  transition: background .25s, color .25s, border-color .25s;
+}
+.lp-risorsa-strumento .cd-tog:hover {
+  border-color: var(--lime);
+}
+.lp-risorsa-strumento .cd-tog.on {
+  background: var(--seal);
+  border-color: var(--seal);
+  color: var(--ink);
+  font-weight: 600;
+}
+@media (max-width: 640px) {
+  .lp-risorsa-strumento .cd-tipi {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* upload logo */
+.lp-risorsa-strumento .cd-upload {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.lp-risorsa-strumento .cd-upload-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 18px;
+  font-size: 13.5px;
+  border: 1px solid rgba(242, 240, 233, .24);
+  color: var(--paper);
+  cursor: pointer;
+  transition: border-color .25s;
+}
+.lp-risorsa-strumento .cd-upload-btn:hover {
+  border-color: var(--lime);
+}
+.lp-risorsa-strumento .cd-upload-input {
+  display: none;
+}
+.lp-risorsa-strumento .cd-upload-preview {
+  height: 38px;
+  max-width: 110px;
+  object-fit: contain;
+  background: #fff;
+  padding: 4px;
+}
+.lp-risorsa-strumento .cd-hint {
+  margin-top: 10px;
+  font-size: 12.5px;
+  color: rgba(242, 240, 233, .5);
+}
+
+/* errore + nota privacy + bottone genera con icona */
+.lp-risorsa-strumento .cd-err {
+  margin-top: 6px;
+  font-size: 13.5px;
+  color: #FF8A75;
+}
+.lp-risorsa-strumento .form button.b1 {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
+}
+.lp-risorsa-strumento .cd-privacy {
+  margin-top: 22px;
+  font-size: 12.5px;
+  color: rgba(242, 240, 233, .55);
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}

@@ -1,14 +1,22 @@
+import Link from 'next/link';
 import type { SchedaPaese, RispostaChecklist } from '@/lib/risorse/gps-lavoratori-ue/types';
 import type { AppLocale } from '@/lib/i18n/config';
 import type { SiteDictionary } from '@/lib/i18n/dictionaries';
 import { loc } from '@/lib/risorse/gps-lavoratori-ue/localize';
 import InformativaFacsimile from '@/components/risorse/InformativaFacsimile';
+import LNastro from '@/components/LNastro';
 
 /**
  * Vista presentazionale di una scheda-paese per la risorsa "GPS sui lavoratori in UE".
  *
  * Server component puro: nessun JS client. I testi-etichetta arrivano dal blocco
  * `risorseGps` del dizionario; i contenuti dalla `SchedaPaese`.
+ *
+ * Vestito "direzione L" (docs/redesign-sito-2026-07/esplorazione/risorsa-paese.html),
+ * slug .lp-risorsa-paese: testata scura (.ph), tre dati chiave (.info), selettore
+ * paese, procedura numerata (.steps), checklist (.rows), fac-simile, sanzione
+ * (.ctain), attribuzione, fonti, disclaimer e chiusura fotografica (.end). Tutti i
+ * dati restano quelli reali della scheda; cambia solo come sono vestiti.
  */
 
 type RisorseGpsDict = SiteDictionary['risorseGps'];
@@ -24,12 +32,17 @@ interface SchedaPaeseViewProps {
   switcher?: React.ReactNode;
   /** Footer attribuzione + box "cita questa pagina". */
   attribuzione?: React.ReactNode;
+  /** Href dell'hub /risorse/gps-lavoratori-ue/ e della home, gia' localizzati. */
+  hubHref: string;
+  homeHref: string;
+  /** Etichetta "Risorse" del menu (navbar.resources), per il filo del pane. */
+  resourcesLabel: string;
 }
 
-const BADGE_STYLE: Record<RispostaChecklist, string> = {
-  si: 'bg-green-100 text-green-800 ring-1 ring-green-200',
-  no: 'bg-red-100 text-red-800 ring-1 ring-red-200',
-  dipende: 'bg-amber-100 text-amber-800 ring-1 ring-amber-200',
+const BADGE_COLOR: Record<RispostaChecklist, string> = {
+  si: '#5E7C1E',
+  no: '#B3261E',
+  dipende: '#8A6D1E',
 };
 
 function rispostaLabel(dict: RisorseGpsDict, risposta: RispostaChecklist): string {
@@ -61,162 +74,237 @@ function ExternalLink({ href, children }: { href: string; children: React.ReactN
       href={href}
       target="_blank"
       rel="noopener noreferrer nofollow"
-      className="text-[#6a9a1f] underline underline-offset-2 hover:text-[#557d18] break-words"
+      className="underline underline-offset-2 break-words"
+      style={{ color: 'var(--seal)' }}
     >
       {children}
     </a>
   );
 }
 
-export default function SchedaPaeseView({ scheda, dict, locale, trialUrl, nomePaese, switcher, attribuzione }: SchedaPaeseViewProps) {
+export default function SchedaPaeseView({
+  scheda,
+  dict,
+  locale,
+  trialUrl,
+  nomePaese,
+  switcher,
+  attribuzione,
+  hubHref,
+  homeHref,
+  resourcesLabel,
+}: SchedaPaeseViewProps) {
   const nomeLocale = nomePaese ?? scheda.nome;
+
   // Percorso in-arrivo: niente dossier, solo l'avviso "in preparazione".
   if (scheda.stato === 'in-arrivo') {
     return (
-      <main className="container mx-auto max-w-3xl px-4 py-20 text-center">
-        <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-          {nomeLocale}
-        </h1>
-        <p className="inline-block rounded-full bg-amber-100 text-amber-800 px-4 py-1 text-sm font-semibold mb-4">
-          {dict.inArrivo}
-        </p>
-        <p className="text-slate-600 text-lg">{dict.inArrivoNota}</p>
-      </main>
+      <div className="lp-l lp-risorsa-paese">
+        <section className="ph">
+          <div className="crumb">
+            <div className="w">
+              <Link href={homeHref}>GeoTapp</Link> / <Link href={hubHref}>{resourcesLabel}</Link> / {nomeLocale}
+            </div>
+          </div>
+          <div className="w">
+            <p className="kk k"><s></s>{dict.h1Selettore}</p>
+            <h1>{nomeLocale}</h1>
+            <p className="lede">{dict.inArrivoNota}</p>
+            <div className="acts">
+              <a className="b1" href={hubHref}>{dict.scegliPaese}</a>
+            </div>
+          </div>
+        </section>
+      </div>
     );
   }
 
+  const titolo = dict.metaTitleScheda.replace('{paese}', nomeLocale);
+  const [titoloPaese, ...restoTitolo] = titolo.split(':');
+  const titoloResto = restoTitolo.join(':').trim();
+
   return (
-    <main className="container mx-auto max-w-4xl px-4 py-12 md:py-16">
-      {/* Header */}
-      <header className="mb-12 text-center">
-        <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">
-          {dict.metaTitleScheda.replace('{paese}', nomeLocale)}
-        </h1>
-        <p className="text-sm text-slate-500">
-          {dict.aggiornatoIl} {formatDate(scheda.aggiornatoIl, locale)}
-        </p>
-      </header>
-
-      {/* Selettore-paese: cambia Stato senza tornare all'elenco. */}
-      {switcher && <div className="mb-12">{switcher}</div>}
-
-      {/* 1. Cosa serve */}
-      <section className="mb-14">
-        <h2 className="text-2xl font-bold text-slate-900 mb-3">{dict.sezioneCosaServe}</h2>
-        <p className="text-sm text-slate-500 mb-6">{dict.cosaServeLegenda}</p>
-        <ul className="space-y-5">
-          {scheda.checklist.map((item, i) => (
-            <li key={i} className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
-              <div className="flex flex-wrap items-start justify-between gap-3 mb-2">
-                <p className="font-semibold text-slate-900 flex-1 min-w-0">{loc(item.voce, locale)}</p>
-                <span className="shrink-0 flex items-center gap-2">
-                  <span
-                    className={`rounded-full px-3 py-0.5 text-xs font-semibold ${BADGE_STYLE[item.risposta]}`}
-                  >
-                    {rispostaLabel(dict, item.risposta)}
-                  </span>
-                  <span className="text-xs text-slate-500">{serveGloss(dict, item.risposta)}</span>
-                </span>
-              </div>
-              <p className="text-slate-600 leading-relaxed mb-2">{loc(item.dettaglio, locale)}</p>
-              <p className="text-sm">
-                <ExternalLink href={item.fonte.url}>{item.fonte.titolo}</ExternalLink>
-              </p>
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      {/* 2. Procedura */}
-      <section className="mb-14">
-        <h2 className="text-2xl font-bold text-slate-900 mb-6">{dict.sezioneProcedura}</h2>
-        <ol className="space-y-4">
-          {scheda.procedura.map((passo) => (
-            <li key={passo.passo} className="flex gap-4">
-              <span className="shrink-0 w-9 h-9 rounded-full bg-[#8FC436] text-white font-bold flex items-center justify-center">
-                {passo.passo}
-              </span>
-              <p className="text-slate-700 leading-relaxed pt-1">{loc(passo.descrizione, locale)}</p>
-            </li>
-          ))}
-        </ol>
-      </section>
-
-      {/* 3. A chi rivolgerti */}
-      <section className="mb-14">
-        <h2 className="text-2xl font-bold text-slate-900 mb-6">{dict.sezioneAChiInviare}</h2>
-        <div className="rounded-xl border border-slate-200 bg-slate-50 p-5 mb-4">
-          <p className="text-xs font-semibold uppercase tracking-wide text-slate-500 mb-1">
-            {dict.autoritaCompetente}
-          </p>
-          <Contatto contatto={scheda.autoritaCompetente} dict={dict} locale={locale} />
+    <div className="lp-l lp-risorsa-paese">
+      {/* ── testata scura ── */}
+      <section className="ph">
+        <div className="crumb">
+          <div className="w">
+            <Link href={homeHref}>GeoTapp</Link> / <Link href={hubHref}>{resourcesLabel}</Link> / {nomeLocale}
+          </div>
         </div>
-        {scheda.contatti
-          .filter((c) => loc(c.ente, locale) !== loc(scheda.autoritaCompetente.ente, locale))
-          .map((contatto, i) => (
-            <div key={i} className="rounded-xl border border-slate-200 bg-slate-50 p-5 mb-4">
-              <Contatto contatto={contatto} dict={dict} locale={locale} />
+        <div className="w">
+          <p className="kk k"><s></s>{dict.h1Selettore}</p>
+          <h1>
+            {titoloPaese}
+            {titoloResto && <><br /><em>{titoloResto}</em></>}
+          </h1>
+          <p className="lede">{dict.aggiornatoIl} {formatDate(scheda.aggiornatoIl, locale)}</p>
+          <div className="acts">
+            <a className="b1" href={trialUrl}>{dict.ctaBottone}</a>
+            <a className="b2" href="#cambia-paese">{dict.scegliPaese}</a>
+          </div>
+        </div>
+      </section>
+
+      {/* ── tre dati chiave + selettore-paese ── */}
+      <section className="sec">
+        <div className="w">
+          <div className="info r-s">
+            <div>
+              <p className="lb k">{dict.autoritaCompetente}</p>
+              <b>{loc(scheda.autoritaCompetente.ente, locale)}</b>
+              <p>{dict.verificatoIl} {formatDate(scheda.autoritaCompetente.verificatoIl, locale)}</p>
             </div>
-          ))}
-      </section>
-
-      {/* 4. Fac-simile informativa: download GRATUITO per QUESTO Paese nella lingua
-          della pagina (nessun cancello email), con iscrizione FACOLTATIVA sotto,
-          dopo il download. Il PDF è generato on-the-fly da buildFacsimilePrintHtml
-          → disponibile per tutte le lingue e tutti i Paesi, non solo l'Italia. */}
-      <section className="mb-14">
-        <h2 className="text-2xl font-bold text-slate-900 mb-6">{dict.sezioneModello}</h2>
-        <InformativaFacsimile
-          locale={locale}
-          countryName={nomeLocale}
-          authority={loc(scheda.autoritaCompetente.ente, locale)}
-          countryISO={scheda.codiceISO}
-        />
-      </section>
-
-      {/* 5. Sanzione */}
-      <section className="mb-14">
-        <h2 className="text-2xl font-bold text-slate-900 mb-6">{dict.sezioneSanzione}</h2>
-        <div className="rounded-xl border border-red-200 bg-red-50 p-5">
-          <p className="text-3xl font-bold text-red-700 mb-2">{loc(scheda.sanzioneMax.importo, locale)}</p>
-          <p className="text-slate-700 leading-relaxed mb-2">{loc(scheda.sanzioneMax.casoCitato, locale)}</p>
-          <p className="text-sm">
-            <ExternalLink href={scheda.sanzioneMax.urlFonte}>{scheda.sanzioneMax.urlFonte}</ExternalLink>
-          </p>
+            <div>
+              <p className="lb k">{dict.sezioneSanzione}</p>
+              <b>{loc(scheda.sanzioneMax.importo, locale)}</b>
+              <p>{dict.aggiornatoIl} {formatDate(scheda.aggiornatoIl, locale)}</p>
+            </div>
+            <div>
+              <p className="lb k">{dict.sezioneCosaServe}</p>
+              <b>{scheda.checklist.length}</b>
+              <p>{dict.cosaServeLegenda}</p>
+            </div>
+          </div>
+          {switcher && (
+            <div id="cambia-paese" className="r d1" style={{ marginTop: 34 }}>
+              {switcher}
+            </div>
+          )}
         </div>
       </section>
 
-      {attribuzione}
+      {/* ── 1. cosa serve ── */}
+      <section className="sec warm">
+        <div className="w">
+          <div className="hd">
+            <h2 className="r">{dict.sezioneCosaServe}</h2>
+            <p className="r d1">{dict.cosaServeLegenda}</p>
+          </div>
+          <ul className="rows r d1">
+            {scheda.checklist.map((item, i) => (
+              <li key={i}>
+                <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', gap: 12, marginBottom: 8 }}>
+                  <p style={{ fontWeight: 600, color: 'var(--ink)', flex: 1, minWidth: 200 }}>{loc(item.voce, locale)}</p>
+                  <span style={{ display: 'flex', gap: 10, alignItems: 'center', flexShrink: 0 }}>
+                    <span
+                      className="k"
+                      style={{ padding: '3px 12px', border: `1px solid ${BADGE_COLOR[item.risposta]}`, color: BADGE_COLOR[item.risposta] }}
+                    >
+                      {rispostaLabel(dict, item.risposta)}
+                    </span>
+                    <span style={{ fontSize: 13, color: '#78836F' }}>{serveGloss(dict, item.risposta)}</span>
+                  </span>
+                </div>
+                <p style={{ marginBottom: 8 }}>{loc(item.dettaglio, locale)}</p>
+                <p style={{ fontSize: 14 }}>
+                  <ExternalLink href={item.fonte.url}>{item.fonte.titolo}</ExternalLink>
+                </p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
 
-      {/* 6. Fonti */}
-      <section className="mb-14">
-        <h2 className="text-2xl font-bold text-slate-900 mb-6">{dict.sezioneFonti}</h2>
-        <ul className="space-y-2 list-disc list-inside">
-          {scheda.fonti.map((fonte, i) => (
-            <li key={i} className="text-slate-700">
-              <ExternalLink href={fonte.url}>{fonte.titolo}</ExternalLink>
+      {/* ── 2. la procedura, passo per passo ── */}
+      <section className="sec">
+        <div className="w">
+          <div className="hd">
+            <h2 className="r">{dict.sezioneProcedura}</h2>
+          </div>
+          <ol className="steps r d1">
+            {scheda.procedura.map((passo) => (
+              <li key={passo.passo}>
+                <p>{loc(passo.descrizione, locale)}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      <LNastro />
+
+      {/* ── 3. a chi rivolgerti ── */}
+      <section className="sec warm">
+        <div className="w">
+          <div className="hd">
+            <h2 className="r">{dict.sezioneAChiInviare}</h2>
+          </div>
+          <ul className="rows r d1">
+            <li>
+              <Contatto contatto={scheda.autoritaCompetente} dict={dict} locale={locale} />
             </li>
-          ))}
-        </ul>
+            {scheda.contatti
+              .filter((c) => loc(c.ente, locale) !== loc(scheda.autoritaCompetente.ente, locale))
+              .map((contatto, i) => (
+                <li key={i}>
+                  <Contatto contatto={contatto} dict={dict} locale={locale} />
+                </li>
+              ))}
+          </ul>
+        </div>
       </section>
 
-      {/* 7. Disclaimer */}
-      <p className="rounded-lg bg-slate-100 border border-slate-200 text-slate-500 text-sm p-4 mb-14">
-        {dict.disclaimer}
-      </p>
-
-      {/* 8. CTA */}
-      <section className="rounded-2xl bg-slate-900 text-white text-center p-8 md:p-10">
-        <h2 className="text-2xl md:text-3xl font-bold mb-3">{dict.ctaTitolo}</h2>
-        <p className="text-slate-300 mb-6 max-w-2xl mx-auto">{dict.ctaTesto}</p>
-        <a
-          href={trialUrl}
-          className="inline-flex items-center gap-2 rounded-full bg-[#8FC436] hover:bg-[#7db02e] text-slate-900 font-bold px-7 py-3 shadow-md transition-colors"
-        >
-          {dict.ctaBottone}
-        </a>
+      {/* ── 4. il modello da scaricare ── */}
+      <section className="sec">
+        <div className="w">
+          <div className="hd">
+            <h2 className="r">{dict.sezioneModello}</h2>
+          </div>
+          <InformativaFacsimile
+            locale={locale}
+            countryName={nomeLocale}
+            authority={loc(scheda.autoritaCompetente.ente, locale)}
+            countryISO={scheda.codiceISO}
+          />
+        </div>
       </section>
-    </main>
+
+      {/* ── 5. quanto si rischia ── */}
+      <section className="sec warm">
+        <div className="w">
+          <div className="ctain r">
+            <b>{dict.sezioneSanzione}: {loc(scheda.sanzioneMax.importo, locale)}</b>
+            <p>{loc(scheda.sanzioneMax.casoCitato, locale)}</p>
+            <p style={{ marginTop: 14 }}>
+              <ExternalLink href={scheda.sanzioneMax.urlFonte}>{scheda.sanzioneMax.urlFonte}</ExternalLink>
+            </p>
+          </div>
+
+          {attribuzione}
+
+          {/* ── 6. fonti ── */}
+          <div className="hd" style={{ marginTop: 64 }}>
+            <h2 className="r">{dict.sezioneFonti}</h2>
+          </div>
+          <ul className="rows r d1">
+            {scheda.fonti.map((fonte, i) => (
+              <li key={i}>
+                <ExternalLink href={fonte.url}>{fonte.titolo}</ExternalLink>
+              </li>
+            ))}
+          </ul>
+
+          {/* ── 7. disclaimer ── */}
+          <p style={{ marginTop: 34, fontSize: 13.5, color: '#78836F', maxWidth: '62ch' }}>{dict.disclaimer}</p>
+        </div>
+      </section>
+
+      {/* ── 8. chiusura fotografica ── */}
+      <section className="end">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img className="bg" src="/bg2.webp" alt="" loading="lazy" />
+        <div className="ov"></div>
+        <div className="w">
+          <h2 className="r">{dict.ctaTitolo}</h2>
+          <p className="r d1">{dict.ctaTesto}</p>
+          <div className="acts r d2">
+            <a className="b1" href={trialUrl}>{dict.ctaBottone}</a>
+            <a className="b2" href={hubHref}>{dict.scegliPaese}</a>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }
 
@@ -233,28 +321,25 @@ function Contatto({
     // `data-verificato-il` espone la data di verifica per tooling interno
     // (es. monitor di freschezza). Nessun effetto visivo: la staleness e una
     // preoccupazione di report, non un allarme per l'utente.
-    <div className="space-y-1" data-verificato-il={contatto.verificatoIl}>
-      <p className="font-semibold text-slate-900">{loc(contatto.ente, locale)}</p>
+    <div data-verificato-il={contatto.verificatoIl}>
+      <p style={{ fontWeight: 600, color: 'var(--ink)' }}>{loc(contatto.ente, locale)}</p>
       {contatto.email && (
-        <p className="text-sm">
-          <a
-            href={`mailto:${contatto.email}`}
-            className="text-[#6a9a1f] underline underline-offset-2 hover:text-[#557d18]"
-          >
+        <p style={{ fontSize: 14, marginTop: 4 }}>
+          <a href={`mailto:${contatto.email}`} className="underline underline-offset-2" style={{ color: 'var(--seal)' }}>
             {contatto.email}
           </a>
         </p>
       )}
       {contatto.portale && (
-        <p className="text-sm">
+        <p style={{ fontSize: 14, marginTop: 4 }}>
           <ExternalLink href={contatto.portale}>{contatto.portale}</ExternalLink>
         </p>
       )}
-      <p className="text-sm">
+      <p style={{ fontSize: 14, marginTop: 4 }}>
         <ExternalLink href={contatto.urlFonte}>{contatto.urlFonte}</ExternalLink>
       </p>
-      {contatto.note && <p className="text-sm text-slate-500">{loc(contatto.note, locale)}</p>}
-      <p className="text-xs text-slate-400">
+      {contatto.note && <p style={{ fontSize: 14, marginTop: 4, color: '#78836F' }}>{loc(contatto.note, locale)}</p>}
+      <p style={{ fontSize: 12.5, marginTop: 6, color: '#9AA294' }}>
         {dict.verificatoIl} {formatDate(contatto.verificatoIl, locale)}
       </p>
     </div>

@@ -53,40 +53,40 @@ export default function RisorsaAttribuzione({ pageUrl, pageTitle, contactHref, l
   const Snippet = ({ value, which, formato }: { value: string; which: string; formato: string }) => (
     <div>
       <div className="flex items-center justify-between mb-1">
-        <span className="text-xs font-semibold uppercase tracking-wide text-slate-500">{formato}</span>
+        <span className="text-xs font-semibold uppercase tracking-wide text-[#78836F]">{formato}</span>
         <button
           type="button"
           onClick={() => copy(value, which)}
-          className="rounded-md bg-[#8FC436] hover:bg-[#7db02e] text-slate-900 text-xs font-bold px-3 py-1 transition-colors"
+          className="rounded-full bg-[#8FC436] hover:bg-[#7db02e] text-[#0E0E0C] text-xs font-bold px-3 py-1 transition-colors"
         >
           {copied === which ? labels.copiato : labels.copia}
         </button>
       </div>
-      <code className="block rounded-lg bg-white border border-slate-200 px-3 py-2 text-xs text-slate-700 break-all">
+      <code className="block bg-white border border-[rgba(14,14,12,.18)] px-3 py-2 text-xs text-[#3B4237] break-all">
         {value}
       </code>
     </div>
   );
 
   return (
-    <section className="mt-12 rounded-2xl border-2 border-[#8FC436]/50 bg-[#8FC436]/[0.07] p-6">
+    <section className="attribuzione mt-12 border border-[rgba(14,14,12,.18)] bg-[var(--paper,#F2F0E9)] p-6 sm:p-7">
       <div className="flex items-center gap-2 mb-1">
-        <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-[#8FC436]/20 text-[#6a9a1f]">
+        <span className="inline-flex h-9 w-9 items-center justify-center bg-[#8FC436]/15 text-[#0E0E0C]">
           <Quote size={18} />
         </span>
-        <h2 className="text-lg font-bold text-slate-900">{labels.titoloCita}</h2>
+        <h2 className="text-lg text-[#0E0E0C]">{labels.titoloCita}</h2>
       </div>
-      <p className="text-sm text-slate-600 leading-relaxed mb-4">{labels.liberoCitare}</p>
+      <p className="text-sm text-[#4A5244] leading-relaxed mb-4">{labels.liberoCitare}</p>
 
       <div className="space-y-3">
         <Snippet value={snippetTesto} which="testo" formato={labels.formatoTesto} />
         <Snippet value={snippetHtml} which="html" formato={labels.formatoHtml} />
       </div>
 
-      <p className="mt-4 pt-3 border-t border-[#8FC436]/30 text-xs text-slate-500 leading-relaxed">
-        <span className="font-semibold text-slate-600">© {anno} GeoTapp.</span> {labels.datiVerificati}{' '}
+      <p className="mt-4 pt-3 border-t border-[rgba(14,14,12,.14)] text-xs text-[#78836F] leading-relaxed">
+        <span className="font-semibold text-[#3B4237]">© {anno} GeoTapp.</span> {labels.datiVerificati}{' '}
         {labels.ripubblicazione}{' '}
-        <a href={contactHref} className="text-[#6a9a1f] underline underline-offset-2 hover:text-[#557d18]">
+        <a href={contactHref} className="text-[#0E0E0C] underline underline-offset-2 hover:text-[#557d18]">
           {labels.contattaci}
         </a>
         .

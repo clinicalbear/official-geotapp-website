@@ -1,0 +1,9 @@
+/* Vestiti pagina-specifici per l'hub Risorse (direzione L). Slug lp-risorse.
+   Le classi condivise (.ph .sec .res .fq .end .slab) vivono in l-mockup.css:
+   qui solo i ritocchi che servono a QUESTA pagina. */
+
+/* l'intro va su due righe come nel dizionario (contiene un \n) */
+.lp-risorse .ph .lede { white-space: pre-line; }
+
+/* le pagine figlie di /risorse/ restano fuori da questo file: le regole
+   sono scoperte solo dentro .lp-risorse, non toccano le pagine figlie. */

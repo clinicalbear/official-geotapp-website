@@ -1,0 +1,72 @@
+/* Vestito "direzione L" — autovalutazione dati dipendenti (questionario).
+   Tutte le regole sono prefissate .lp-risorsa-strumento per non uscire dallo scope. */
+
+/* ── domande + pulsanti-risposta (dentro .form scuro) ── */
+.lp-risorsa-strumento .av-list { list-style: none; margin: 0; padding: 0; }
+.lp-risorsa-strumento .av-q { font-weight: 600; line-height: 1.44; color: var(--paper); font-size: 15.5px; }
+.lp-risorsa-strumento .av-n { color: var(--lime); margin-right: 8px; font-variant-numeric: tabular-nums; }
+.lp-risorsa-strumento .av-opts { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+.lp-risorsa-strumento .av-opt {
+  padding: 11px 22px; font-size: 14px; font-weight: 500; border-radius: 99px;
+  border: 1px solid rgba(242, 240, 233, .28); background: transparent; color: rgba(242, 240, 233, .75);
+  cursor: pointer; transition: border-color .3s, background .3s, color .3s;
+}
+.lp-risorsa-strumento .av-opt:hover { border-color: var(--seal); color: var(--paper); }
+.lp-risorsa-strumento .av-opt.on { background: var(--seal); border-color: var(--seal); color: var(--ink); }
+
+.lp-risorsa-strumento .av-submit { border: 0; cursor: pointer; display: inline-flex; align-items: center; gap: 10px; }
+.lp-risorsa-strumento .av-submit:disabled { opacity: .4; cursor: not-allowed; transform: none; box-shadow: none; }
+.lp-risorsa-strumento .av-privacy {
+  margin-top: 22px; font-size: 13px; color: rgba(242, 240, 233, .55);
+  display: flex; align-items: flex-start; gap: 8px;
+}
+
+/* ── risultato (stesso pannello scuro) ── */
+.lp-risorsa-strumento .av-result-head {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+}
+.lp-risorsa-strumento .av-result-head h2 { font-size: clamp(22px, 3vw, 32px); margin: 0; color: var(--paper); }
+.lp-risorsa-strumento .av-score { font-size: 13px; color: rgba(242, 240, 233, .6); }
+.lp-risorsa-strumento .av-score b { color: var(--paper); font-weight: 600; font-variant-numeric: tabular-nums; }
+.lp-risorsa-strumento .av-bar { margin-top: 18px; height: 8px; width: 100%; background: rgba(242, 240, 233, .14); overflow: hidden; }
+.lp-risorsa-strumento .av-bar > div { height: 100%; transition: width .5s; }
+.lp-risorsa-strumento .av-fascia-testo { margin-top: 20px; color: rgba(242, 240, 233, .78); line-height: 1.65; }
+
+.lp-risorsa-strumento .av-aree { margin-top: 40px; }
+.lp-risorsa-strumento .av-aree h3 {
+  display: flex; align-items: center; gap: 8px; font-size: 12px; letter-spacing: .14em;
+  text-transform: uppercase; font-weight: 500; color: var(--lime); margin-bottom: 6px;
+}
+.lp-risorsa-strumento .av-aree ul { list-style: none; margin: 14px 0 0; padding: 0; border-top: 1px solid rgba(242, 240, 233, .18); }
+.lp-risorsa-strumento .av-aree li { padding: 18px 0; border-bottom: 1px solid rgba(242, 240, 233, .1); }
+.lp-risorsa-strumento .av-area-q { font-weight: 600; color: var(--paper); font-size: 15px; }
+.lp-risorsa-strumento .av-area-fb { margin-top: 6px; font-size: 14px; color: rgba(242, 240, 233, .7); line-height: 1.6; }
+
+.lp-risorsa-strumento .av-ok { margin-top: 30px; display: flex; align-items: flex-start; gap: 10px; color: rgba(242, 240, 233, .85); line-height: 1.6; }
+.lp-risorsa-strumento .av-ok svg { color: var(--seal); flex-shrink: 0; margin-top: 2px; }
+
+.lp-risorsa-strumento .av-risorse { margin-top: 40px; padding-top: 26px; border-top: 1px solid rgba(242, 240, 233, .16); }
+.lp-risorsa-strumento .av-risorse h3 {
+  font-size: 12px; letter-spacing: .14em; text-transform: uppercase; font-weight: 500;
+  color: var(--lime); margin-bottom: 14px;
+}
+.lp-risorsa-strumento .av-risorse-grid { display: grid; gap: 10px; grid-template-columns: 1fr 1fr; }
+.lp-risorsa-strumento .av-reslink {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  border: 1px solid rgba(242, 240, 233, .2); padding: 13px 16px; font-size: 14px; font-weight: 500;
+  color: rgba(242, 240, 233, .85); transition: border-color .3s, color .3s;
+}
+.lp-risorsa-strumento .av-reslink:hover { border-color: var(--seal); color: var(--paper); }
+.lp-risorsa-strumento .av-reslink svg { transition: transform .3s; flex-shrink: 0; }
+.lp-risorsa-strumento .av-reslink:hover svg { transform: translateX(4px); }
+
+.lp-risorsa-strumento .av-restart {
+  margin-top: 28px; border: 0; background: none; cursor: pointer; padding: 0;
+  display: inline-flex; align-items: center; gap: 8px; color: var(--lime);
+  font-size: 14px; font-weight: 500; transition: color .3s;
+}
+.lp-risorsa-strumento .av-restart:hover { color: var(--paper); }
+
+@media (max-width: 700px) {
+  .lp-risorsa-strumento .av-risorse-grid { grid-template-columns: 1fr; }
+}

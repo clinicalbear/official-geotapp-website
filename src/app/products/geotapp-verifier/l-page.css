@@ -1,0 +1,37 @@
+/* Direzione L — pagina prodotto GeoTapp Verifier.
+   Solo regole di dettaglio non gia' coperte da l-mockup.css, scopate su
+   .lp-prodotto-verifier per non sporcare il resto del sito. */
+
+.lp-prodotto-verifier .l-note { text-align: center; padding: 54px 0; }
+.lp-prodotto-verifier .l-note p { margin-top: 14px; font-size: 18px; color: #4A5244; max-width: 62ch; margin-left: auto; margin-right: auto; }
+
+.lp-prodotto-verifier .l-center { text-align: center; }
+.lp-prodotto-verifier .l-center p { color: #4A5244; margin-top: 18px; }
+.lp-prodotto-verifier .sec.ink .l-center p { color: rgba(242, 240, 233, .72); }
+
+.lp-prodotto-verifier .l-who { columns: 2; column-gap: 40px; }
+.lp-prodotto-verifier .l-who li { break-inside: avoid; }
+@media (max-width: 700px) { .lp-prodotto-verifier .l-who { columns: 1; } }
+
+.lp-prodotto-verifier .l-code-wrap { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 40px; }
+@media (max-width: 900px) { .lp-prodotto-verifier .l-code-wrap { grid-template-columns: 1fr; } }
+.lp-prodotto-verifier .l-code {
+  border-radius: 0; background: rgba(242, 240, 233, .06); border: 1px solid rgba(242, 240, 233, .16); overflow: hidden;
+}
+.lp-prodotto-verifier .l-code .hd {
+  display: flex; align-items: center; gap: 8px; padding: 12px 16px;
+  border-bottom: 1px solid rgba(242, 240, 233, .16); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: rgba(242, 240, 233, .55);
+}
+.lp-prodotto-verifier .l-code .hd i { width: 9px; height: 9px; border-radius: 50%; background: rgba(242, 240, 233, .25); display: block; }
+.lp-prodotto-verifier .l-code pre { margin: 0; padding: 20px; font-size: 13px; line-height: 1.6; color: var(--lime); overflow-x: auto; }
+
+.lp-prodotto-verifier .l-mods-ink .mods { background: rgba(242, 240, 233, .16); border-top-color: rgba(242, 240, 233, .16); border-bottom-color: rgba(242, 240, 233, .16); }
+.lp-prodotto-verifier .l-mods-ink .mods article { background: var(--ink); }
+.lp-prodotto-verifier .l-mods-ink .mods article:hover { background: #1B1F1A; }
+.lp-prodotto-verifier .l-mods-ink .mods p { color: rgba(242, 240, 233, .68); }
+.lp-prodotto-verifier .l-mods-ink .mods a.l-eco-link { display: block; color: inherit; }
+.lp-prodotto-verifier .l-eco-cta { margin-top: 12px; font-size: 13px; font-weight: 600; color: var(--lime); }
+
+@media (max-width: 700px) {
+  .lp-prodotto-verifier .split { grid-template-columns: 1fr; gap: 30px; }
+}

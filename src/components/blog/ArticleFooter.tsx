@@ -1,8 +1,6 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
 import { trackEvent } from '@/lib/analytics';
 import LicenzaContenuto from '@/components/LicenzaContenuto';
 
@@ -36,48 +34,23 @@ const FOOTER_LABELS: Record<string, { related: string; more: string; cta_title: 
   ru: { related: 'Похожие статьи', more: 'Читайте также', cta_title: 'Попробуйте GeoTapp бесплатно 14 дней', cta_desc: 'Без банковской карты. Запуск за 2 минуты.', cta_btn: 'Начать', read: 'Читать' },
 };
 
-function PostGrid({ posts, labels, startDelay = 0 }: { posts: RelatedPost[]; labels: typeof FOOTER_LABELS[string]; startDelay?: number }) {
+function formatDate(iso: string, locale: string): string {
+  try {
+    return new Date(iso).toLocaleDateString(locale, { timeZone: 'UTC', day: 'numeric', month: 'long', year: 'numeric' });
+  } catch {
+    return iso.slice(0, 10);
+  }
+}
+
+function PostGrid({ posts, locale }: { posts: RelatedPost[]; locale: string }) {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {posts.map((post, index) => (
-        <motion.div
-          key={post.id}
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-50px' }}
-          transition={{ duration: 0.4, delay: startDelay + index * 0.1 }}
-        >
-          <Link
-            href={post.url}
-            className="block rounded-2xl overflow-hidden bg-white shadow-sm border border-slate-100 hover:shadow-md transition-shadow h-full"
-          >
-            <div className="relative h-44 w-full">
-              {post.image ? (
-                <Image
-                  src={post.image}
-                  alt={post.title}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                />
-              ) : (
-                <div className="w-full h-full bg-slate-100" />
-              )}
-            </div>
-            <div className="p-5">
-              <time className="text-xs text-slate-400 font-mono">{post.date}</time>
-              <h3 className="text-lg font-bold text-slate-900 line-clamp-2 mt-1">
-                {post.title}
-              </h3>
-              <p className="text-sm text-slate-500 line-clamp-2 mt-2">
-                {post.excerpt}
-              </p>
-              <span className="inline-block text-sm font-semibold text-primary mt-3">
-                {labels.read} &rarr;
-              </span>
-            </div>
-          </Link>
-        </motion.div>
+    <div className="grid3">
+      {posts.map((post, i) => (
+        <Link key={post.id} href={post.url} className={`cardn r d${(i % 4) + 1}`}>
+          <span className="nn">{formatDate(post.date, locale)}</span>
+          <b>{post.title}</b>
+          {post.excerpt && <p>{post.excerpt}</p>}
+        </Link>
       ))}
     </div>
   );
@@ -88,62 +61,50 @@ export default function ArticleFooter({ relatedPosts, morePosts, locale }: Artic
 
   return (
     <>
-      {/* Related Posts */}
+      {/* Continua a leggere: correlati + altri articoli */}
       {relatedPosts.length > 0 && (
-        <section className="bg-white py-16">
-          <div className="max-w-6xl mx-auto px-6">
-            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-10">
-              {labels.related}
-            </h2>
-            <PostGrid posts={relatedPosts} labels={labels} />
+        <section className="sec warm">
+          <div className="w">
+            <div className="hd">
+              <h2 className="r">{labels.related}</h2>
+            </div>
+            <PostGrid posts={relatedPosts} locale={locale} />
           </div>
         </section>
       )}
 
-      {/* Read Also */}
       {morePosts.length > 0 && (
-        <section className="bg-slate-50 py-16">
-          <div className="max-w-6xl mx-auto px-6">
-            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-10">
-              {labels.more}
-            </h2>
-            <PostGrid posts={morePosts} labels={labels} startDelay={0.15} />
+        <section className="sec">
+          <div className="w">
+            <div className="hd">
+              <h2 className="r">{labels.more}</h2>
+            </div>
+            <PostGrid posts={morePosts} locale={locale} />
           </div>
         </section>
       )}
 
-      {/* CTA Banner */}
-      <CtaBanner labels={labels} locale={locale} />
+      {/* CTA di chiusura */}
+      <section className="end">
+        <img className="bg" src="/bg2.webp" alt="" loading="lazy" />
+        <div className="ov" />
+        <div className="w">
+          <h2 className="r">{labels.cta_title}</h2>
+          <p className="r d1">{labels.cta_desc}</p>
+          <div className="acts r d2">
+            <Link
+              className="b1"
+              href={`/${locale}/trial/`}
+              onClick={() => trackEvent('trial_click', { cta_source: 'blog_article_footer', cta_locale: locale })}
+            >
+              {labels.cta_btn}
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* Copyright + licenza d'uso del contenuto */}
       <LicenzaContenuto locale={locale} />
     </>
-  );
-}
-
-function CtaBanner({ labels, locale }: { labels: typeof FOOTER_LABELS[string]; locale: string }) {
-  return (
-    <section
-      style={{
-        background: 'linear-gradient(135deg, #2a8fc4 0%, #3BAEE0 50%, #2a8fc4 100%)',
-        boxShadow: 'inset 0 4px 12px rgba(0,0,0,0.15), inset 0 -4px 12px rgba(0,0,0,0.1)',
-      }}
-    >
-      <div className="max-w-4xl mx-auto text-center py-20 px-6">
-        <h2 className="text-3xl md:text-4xl font-display font-bold text-white">
-          {labels.cta_title}
-        </h2>
-        <p className="text-slate-900 text-lg mt-4">
-          {labels.cta_desc}
-        </p>
-        <Link
-          href={`/${locale}/trial/`}
-          onClick={() => trackEvent('trial_click', { cta_source: 'blog_article_footer', cta_locale: locale })}
-          className="btn-ring mt-8"
-        >
-          {labels.cta_btn}
-        </Link>
-      </div>
-    </section>
   );
 }

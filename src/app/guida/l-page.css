@@ -1,0 +1,14 @@
+/* Vestito direzione L per /guida — solo CSS, zero contenuti nuovi.
+   Regole scopate con .lp-guida, non toccano il resto del sito. */
+
+/* le liste puntate della guida (i markdown fetchati) non hanno una resa
+   propria in .gl .body: qui gli do lo stesso segno a filo delle .rows */
+.lp-guida .gl .body ul{margin:0 0 20px;max-width:72ch}
+.lp-guida .gl .body ul li{padding:7px 0 7px 22px;position:relative;color:#2E342A;font-size:16px;line-height:1.6}
+.lp-guida .gl .body ul li::before{content:'';position:absolute;left:0;top:16px;width:10px;height:1px;background:var(--seal)}
+.lp-guida .gl .body strong{color:var(--ink)}
+.lp-guida .gl .body hr{border:0;border-top:1px solid rgba(14,14,12,.16);margin:38px 0}
+.lp-guida .gl .body em{color:#4A5244}
+
+/* bottone di stampa nell'intestazione, stesso trattamento del .b1 ma come <button> */
+.lp-guida .ph button.b1{border:0;cursor:pointer;font-family:inherit}

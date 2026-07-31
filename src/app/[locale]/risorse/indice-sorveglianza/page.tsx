@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import { SUPPORTED_LOCALES } from '@/lib/i18n/config';
@@ -10,11 +11,16 @@ import IndiceSorveglianzaClient, {
 } from '@/components/risorse/IndiceSorveglianzaClient';
 import RisorsaAttribuzione from '@/components/risorse/RisorsaAttribuzione';
 import RisorsaFaq from '@/components/risorse/RisorsaFaq';
+import './l-page.css';
 
 /**
  * Tool "Indice della sorveglianza sul lavoro in Europa": classifica dei 39 Paesi
  * per severità del quadro su monitoraggio dei lavoratori. Derivato dai dossier
  * verificati (derive.ts). Route: /[locale]/risorse/indice-sorveglianza/.
+ *
+ * Vestito "direzione L" (docs/redesign-sito-2026-07/esplorazione/risorsa-strumento.html),
+ * slug .lp-risorsa-strumento: la logica di ordinamento della classifica
+ * (IndiceSorveglianzaClient) resta intatta, cambia solo la cornice attorno.
  */
 
 export { generateLocaleStaticParams as generateStaticParams } from '@/lib/i18n/static-params';
@@ -70,29 +76,54 @@ export default async function IndiceSorveglianzaPage({
     scheda: dict.scheda,
   };
 
+  const homeHref = `/${resolvedLocale}/`;
+
   return (
-    <main className="container mx-auto max-w-4xl px-4 py-12 md:py-16">
-      <header className="mb-10 text-center">
-        <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">{dict.h1}</h1>
-        <p className="text-slate-600 text-lg leading-relaxed max-w-2xl mx-auto">{dict.intro}</p>
-      </header>
+    <div className="lp-l lp-risorsa-strumento">
+      {/* ── testata scura ── */}
+      <section className="ph">
+        <div className="crumb">
+          <div className="w">
+            <Link href={homeHref}>GeoTapp</Link> / {d.navbar.resources} / {dict.h1}
+          </div>
+        </div>
+        <div className="w">
+          <p className="kk k"><s></s>{d.navbar.resources}</p>
+          <h1>{dict.h1}</h1>
+          <p className="lede">{dict.intro}</p>
+        </div>
+      </section>
 
-      <IndiceSorveglianzaClient rows={rows} labels={labels} />
+      {/* ── classifica: logica di ordinamento intatta, solo incorniciata ── */}
+      <section className="sec" id="classifica">
+        <div className="wn">
+          <IndiceSorveglianzaClient rows={rows} labels={labels} />
 
-      <div className="mt-8 rounded-xl bg-slate-50 border border-slate-200 p-5">
-        <p className="text-sm font-semibold text-slate-700 mb-1">{dict.metodologiaTitolo}</p>
-        <p className="text-sm text-slate-500 leading-relaxed">{dict.metodologia}</p>
-      </div>
+          <div className="metodo r">
+            <p className="metodo-t">{dict.metodologiaTitolo}</p>
+            <p className="metodo-p">{dict.metodologia}</p>
+          </div>
+        </div>
+      </section>
 
-      <RisorsaFaq title={dict.faq.title} items={dict.faq.items} />
+      <section className="fq fq-wrap">
+        <div className="w">
+          <RisorsaFaq title={dict.faq.title} items={dict.faq.items} />
+        </div>
+      </section>
 
-      <RisorsaAttribuzione
-        pageUrl={`https://geotapp.com${localizePath('/risorse/indice-sorveglianza/', resolvedLocale)}`}
-        pageTitle={d.risorseHub.cards.indice.title}
-        contactHref={localizePath('/contact', resolvedLocale)}
-        labels={d.attribuzione}
-        anno={2026}
-      />
-    </main>
+      {/* ── attribuzione: già restylata altrove, resta in fondo pagina ── */}
+      <section className="sec warm">
+        <div className="wn">
+          <RisorsaAttribuzione
+            pageUrl={`https://geotapp.com${localizePath('/risorse/indice-sorveglianza/', resolvedLocale)}`}
+            pageTitle={d.risorseHub.cards.indice.title}
+            contactHref={localizePath('/contact', resolvedLocale)}
+            labels={d.attribuzione}
+            anno={2026}
+          />
+        </div>
+      </section>
+    </div>
   );
 }

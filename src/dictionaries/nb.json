@@ -284,6 +284,11 @@
         "name": "Rørleggere",
         "desc": "Rørlegger, varme, kjeler. GPS-arbeidsrapporter med bilder før og etter, ingen tvister om utført arbeid.",
         "cta": "Bevis hvert arbeid"
+      },
+      "termoidraulici": {
+        "name": "VVS-installatør",
+        "desc": "GeoTapp registrerer hvert oppdrag på kjeler og varmeanlegg med GPS, bilder og verifiserbare tidsstempler. Kunden nekter utskiftede deler?",
+        "cta": "Bevis utskiftede deler"
       }
     },
     "app_mockup": {

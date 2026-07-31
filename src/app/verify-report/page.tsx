@@ -12,10 +12,21 @@
  * Qui si carica il pacchetto e si legge l'esito. La verifica gira sul
  * verificatore aperto, lo stesso che chiunque puo' scaricare: se un giorno
  * GeoTapp non c'e' piu', il documento si verifica comunque.
+ *
+ * Vestito nella direzione L (docs/redesign-sito-2026-07/esplorazione/
+ * verifica-report.html): hero .ph, zona di upload su nero, esiti nella
+ * griglia .vres. Logica, upload e messaggi di esito NON sono cambiati:
+ * il colore dell'esito resta guidato da `colore` (lo stesso oggetto COLORI
+ * di prima), mai fissato a verde per non mentire su un esito degraded o
+ * invalid. Niente animazioni "r/r-s" qui: questa pagina serve anche fuori
+ * da /[locale]/ (l'indirizzo stampato sui report), dove LEffetti non gira,
+ * e un elemento che aspetta un observer per diventare visibile e che non lo
+ * trova resterebbe invisibile.
  */
 
 import { Suspense, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
+import './l-page.css';
 
 interface Esito {
   status?: 'valid' | 'degraded' | 'invalid';
@@ -55,7 +66,7 @@ const COLORI = {
  */
 export default function PaginaVerifica() {
   return (
-    <Suspense fallback={<main className="mx-auto max-w-2xl px-6 py-14" />}>
+    <Suspense fallback={<div className="lp-l lp-verifica" />}>
       <VerificaReport />
     </Suspense>
   );
@@ -91,141 +102,131 @@ function VerificaReport() {
   const colore = stato ? COLORI[stato] : null;
 
   return (
-    <main className="mx-auto max-w-2xl px-6 py-14 text-[#101418]">
-      <h1 className="text-3xl font-semibold tracking-tight">
-        Verifica un report GeoTapp
-      </h1>
-      <p className="mt-3 text-[#4A5259]">
-        Il pacchetto firmato si verifica qui, oppure da soli con il verificatore
-        aperto: ricalcola le impronte di ogni evento e di ogni foto e controlla
-        la firma elettronica. Nessun file resta sui nostri server.
-      </p>
-
-      {/* Chi arriva dal vecchio indirizzo stampato in calce ai report:
-          `?id=...` da solo non basta, e va detto invece di lasciarlo davanti a
-          una pagina che sembra sbagliata. */}
-      {idStampato ? (
-        <div className="mt-6 rounded-xl border border-[#CFD1CC] bg-[#FBFBF9] p-5">
-          <p className="text-sm">
-            Il codice <span className="font-mono">{idStampato}</span> identifica
-            un documento, ma per verificarlo serve il file: l’identificativo da
-            solo non dimostra niente. Carica il pacchetto ZIP che hai ricevuto,
-            oppure aprilo dal codice a otto cifre stampato sul documento
-            (<span className="font-mono">geotapp.com/r/…</span>).
+    <div className="lp-l lp-verifica">
+      <section className="ph">
+        <div className="w">
+          <h1>Verifica un report GeoTapp</h1>
+          <p className="lede">
+            Il pacchetto firmato si verifica qui, oppure da soli con il verificatore
+            aperto: ricalcola le impronte di ogni evento e di ogni foto e controlla
+            la firma elettronica. Nessun file resta sui nostri server.
           </p>
         </div>
-      ) : null}
+      </section>
 
-      <div className="mt-8 rounded-xl border border-[#E3E4E0] bg-white p-6">
-        <label className="block text-[11px] uppercase tracking-wider text-[#7C858C]">
-          Pacchetto firmato (.zip)
-        </label>
-        <input
-          type="file"
-          accept=".zip,application/zip"
-          onChange={(e) => {
-            setFile(e.target.files?.[0] ?? null);
-            setEsito(null);
-          }}
-          className="mt-2 block w-full text-sm"
-        />
-        <button
-          type="button"
-          onClick={verifica}
-          disabled={!file || inCorso}
-          className="mt-4 rounded-xl bg-[#16327A] px-5 py-3 font-semibold text-white disabled:opacity-40"
-        >
-          {inCorso ? 'Verifica in corso…' : 'Verifica il documento'}
-        </button>
-        <p className="mt-3 text-xs text-[#7C858C]">
-          Massimo 25 MB. Il file viene letto per il tempo della verifica e non
-          viene conservato.
-        </p>
-      </div>
+      <section className="sec ink"><div className="w"><div className="vzone">
+        {/* Chi arriva dal vecchio indirizzo stampato in calce ai report:
+            `?id=...` da solo non basta, e va detto invece di lasciarlo davanti a
+            una pagina che sembra sbagliata. */}
+        {idStampato ? (
+          <div className="vnotice">
+            Il codice <span className="mono">{idStampato}</span> identifica
+            un documento, ma per verificarlo serve il file: l&rsquo;identificativo da
+            solo non dimostra niente. Carica il pacchetto ZIP che hai ricevuto,
+            oppure aprilo dal codice a otto cifre stampato sul documento
+            (<span className="mono">geotapp.com/r/&hellip;</span>).
+          </div>
+        ) : null}
 
-      {esito?.error ? (
-        <div className="mt-6 rounded-xl border border-[#C65246] bg-[#FAECEA] p-5 text-[#7C1F17]">
-          {esito.error}
+        <div className="form">
+          <div className="fld">
+            <label>Pacchetto firmato (.zip)</label>
+            <input
+              type="file"
+              accept=".zip,application/zip"
+              onChange={(e) => {
+                setFile(e.target.files?.[0] ?? null);
+                setEsito(null);
+              }}
+              className="in"
+            />
+          </div>
+          <button
+            type="button"
+            onClick={verifica}
+            disabled={!file || inCorso}
+            className="b1"
+            style={{ border: 0, cursor: !file || inCorso ? 'default' : 'pointer' }}
+          >
+            {inCorso ? 'Verifica in corso…' : 'Verifica il documento'}
+          </button>
+          <p className="hint">
+            Massimo 25 MB. Il file viene letto per il tempo della verifica e non
+            viene conservato.
+          </p>
         </div>
-      ) : null}
+
+        {esito?.error ? (
+          <div className="errbox">{esito.error}</div>
+        ) : null}
+      </div></div></section>
 
       {stato && colore ? (
-        <div
-          className="mt-6 rounded-xl border p-6"
-          style={{ borderColor: colore.bordo, background: colore.fondo }}
-        >
-          <h2
-            className="text-xl font-semibold"
-            style={{ color: colore.testo }}
+        <section className="sec"><div className="w">
+          <div
+            className="valid"
+            style={{ background: colore.fondo, color: colore.testo, borderLeft: `6px solid ${colore.bordo}` }}
           >
-            {stato === 'valid'
-              ? 'Documento integro'
-              : stato === 'degraded'
-                ? 'Documento integro, con riserve'
-                : 'Documento non integro'}
-          </h2>
+            <b>
+              {stato === 'valid'
+                ? 'Documento integro'
+                : stato === 'degraded'
+                  ? 'Documento integro, con riserve'
+                  : 'Documento non integro'}
+            </b>
+          </div>
 
-          <dl className="mt-4 grid gap-3 sm:grid-cols-2">
+          <div className="vres">
             <div>
-              <dt className="text-[11px] uppercase tracking-wider text-[#7C858C]">
-                Firma
-              </dt>
-              <dd className="font-mono text-sm">
-                {esito.signatureStatus ?? '—'}
-              </dd>
+              <p className="lb k">Firma</p>
+              <b>{esito?.signatureStatus ?? '—'}</b>
             </div>
             <div>
-              <dt className="text-[11px] uppercase tracking-wider text-[#7C858C]">
-                Sigillo
-              </dt>
-              <dd className="font-mono text-sm">{esito.sealStatus ?? '—'}</dd>
+              <p className="lb k">Sigillo</p>
+              <b>{esito?.sealStatus ?? '—'}</b>
             </div>
             <div>
-              <dt className="text-[11px] uppercase tracking-wider text-[#7C858C]">
-                Emesso da
-              </dt>
-              <dd className="text-sm">
-                {esito.issuerDisplayName ??
-                  esito.companyIdentity?.companyName ??
+              <p className="lb k">Emesso da</p>
+              <b>
+                {esito?.issuerDisplayName ??
+                  esito?.companyIdentity?.companyName ??
                   '—'}
-              </dd>
+              </b>
             </div>
             <div>
-              <dt className="text-[11px] uppercase tracking-wider text-[#7C858C]">
-                Eventi e foto
-              </dt>
-              <dd className="font-mono text-sm">
-                {esito.summary
+              <p className="lb k">Eventi e foto</p>
+              <b>
+                {esito?.summary
                   ? `${esito.summary.eventsCount} · ${esito.summary.photosCount}`
                   : '—'}
-              </dd>
+              </b>
             </div>
-          </dl>
+          </div>
 
-          {esito.summary && esito.summary.hashMismatches > 0 ? (
-            <p className="mt-4 text-sm" style={{ color: COLORI.invalid.testo }}>
+          {esito?.summary && esito.summary.hashMismatches > 0 ? (
+            <p style={{ marginTop: 22, color: COLORI.invalid.testo }}>
               Impronte che non tornano: {esito.summary.hashMismatches}. Il
               contenuto non è quello firmato.
             </p>
           ) : null}
 
-          {esito.warnings?.length ? (
-            <ul className="mt-4 list-disc pl-5 text-sm text-[#4A5259]">
+          {esito?.warnings?.length ? (
+            <ul className="warn-list">
               {esito.warnings.map((w) => (
                 <li key={w}>{w}</li>
               ))}
             </ul>
           ) : null}
 
-          {esito.errors?.length ? (
-            <ul className="mt-3 list-disc pl-5 text-sm text-[#7C1F17]">
+          {esito?.errors?.length ? (
+            <ul className="err-list" style={{ color: COLORI.invalid.testo }}>
               {esito.errors.map((e) => (
                 <li key={e}>{e}</li>
               ))}
             </ul>
           ) : null}
-        </div>
+        </div></section>
       ) : null}
-    </main>
+    </div>
   );
 }

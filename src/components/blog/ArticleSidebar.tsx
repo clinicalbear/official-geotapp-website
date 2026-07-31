@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { trackEvent } from '@/lib/analytics';
 
 interface ArticleSidebarProps {
@@ -151,21 +150,24 @@ export default function ArticleSidebar({ headings, locale, categories = [], date
     return () => observer.disconnect();
   }, [headings]);
 
-  const formattedDate = date
-    ? new Date(date).toLocaleDateString(locale, { timeZone: 'UTC', day: 'numeric', month: 'short', year: 'numeric' })
-    : '';
-
   return (
-    <aside className="sticky top-28 max-h-[calc(100vh-8rem)] overflow-y-auto pb-8">
-      {/* Digital clock-in stamp, light/airy */}
-      <div className="mb-6 rounded-xl border border-slate-200 bg-white p-4">
-        {/* Status */}
+    <aside className="side">
+      {/* Scritto da: nome e ruolo reali (schema Person della pagina), nessuna
+          etichetta "Scritto da" perche' non esiste ancora nei dizionari. */}
+      <div className="au">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/michele-petraroli.webp" alt="Michele Angelo Petraroli" />
+        <div>
+          <b>Michele Angelo Petraroli</b>
+          <span>GeoTapp</span>
+        </div>
+      </div>
+
+      {/* Timbratura digitale: data e tempo di lettura dell'articolo */}
+      <div className="panel" style={{ padding: '14px 16px', marginBottom: '30px' }}>
         <div className="flex items-center gap-2 mb-3">
-          <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-60" />
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500" />
-          </span>
-          <span className="text-[10px] font-mono uppercase tracking-widest text-green-500">Clock-in</span>
+          <span className="live" />
+          <span className="k" style={{ fontSize: '10px', color: 'var(--seal)' }}>Clock-in</span>
           {categories[0] && (
             <span
               className="ml-auto px-2 py-0.5 text-[8px] font-semibold rounded-full uppercase tracking-wider text-white"
@@ -175,103 +177,79 @@ export default function ArticleSidebar({ headings, locale, categories = [], date
             </span>
           )}
         </div>
-        {/* Data fields */}
         <div className="flex items-center gap-4">
           <div>
-            <span className="text-slate-400 text-[8px] font-mono uppercase tracking-widest block mb-0.5">Date</span>
-            <span className="text-slate-700 font-mono text-[13px] tracking-wide">
+            <span className="text-[8px] uppercase tracking-widest block mb-0.5" style={{ color: '#78836F' }}>Date</span>
+            <span className="text-[13px] tracking-wide">
               {date ? new Date(date).toLocaleDateString('en-GB', { timeZone: 'UTC', day: '2-digit', month: '2-digit', year: 'numeric' }).replace(/\//g, '.') : ''}
             </span>
           </div>
-          <div className="w-px h-8 bg-slate-200" />
+          <div className="w-px h-8" style={{ background: 'rgba(14,14,12,.14)' }} />
           <div>
-            <span className="text-slate-400 text-[8px] font-mono uppercase tracking-widest block mb-0.5">Duration</span>
-            <span className="text-slate-700 font-mono text-[13px] tracking-wide">
+            <span className="text-[8px] uppercase tracking-widest block mb-0.5" style={{ color: '#78836F' }}>Duration</span>
+            <span className="text-[13px] tracking-wide">
               00:{readingTime ? String(readingTime).padStart(2, '0') : '00'}:00
             </span>
           </div>
         </div>
       </div>
 
-      {/* Table of Contents */}
+      {/* Indice */}
       {headings.length > 0 && (
-        <nav className="mb-8 border-l-2 border-slate-200 pl-4">
-          <p className="text-[11px] font-bold uppercase tracking-widest text-slate-400 mb-4">
-            {labels.toc}
-          </p>
-          <ul className="space-y-2">
+        <>
+          <p className="lb k">{labels.toc}</p>
+          <nav className="toc">
             {headings.map((heading) => (
-              <li key={heading.id} className="relative">
-                {activeId === heading.id && (
-                  <span className="absolute -left-[18px] top-0 w-0.5 h-full bg-[#8FC436] rounded-full transition-all duration-300" />
-                )}
-                <a
-                  href={`#${heading.id}`}
-                  className={`block text-[13px] leading-snug transition-all duration-200 ${
-                    heading.level === 3 ? 'pl-3' : ''
-                  } ${
-                    activeId === heading.id
-                      ? 'text-slate-900 font-semibold'
-                      : 'text-slate-400 hover:text-slate-700'
-                  }`}
-                >
-                  {heading.text}
-                </a>
-              </li>
+              <a
+                key={heading.id}
+                href={`#${heading.id}`}
+                className={activeId === heading.id ? 'on' : ''}
+                style={heading.level === 3 ? { paddingLeft: '28px' } : undefined}
+              >
+                {heading.text}
+              </a>
             ))}
-          </ul>
-        </nav>
+          </nav>
+        </>
       )}
 
-      {/* Related Product, logo grande */}
-      <Link
-        href={`/${locale}${product.href}`}
-        className="block mb-6 p-6 rounded-2xl border border-slate-200 hover:border-slate-300 hover:shadow-md transition-all duration-200 group"
-      >
+      {/* Prodotto collegato alla categoria dell'articolo */}
+      <Link href={`/${locale}${product.href}`} className="panel" style={{ display: 'block', padding: '22px 20px', marginTop: '30px' }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={product.logo}
           alt={product.name}
-          className="max-h-12 max-w-[160px] w-auto mx-auto mb-4 group-hover:scale-105 transition-transform duration-200 object-contain"
+          style={{ maxHeight: '44px', maxWidth: '150px', width: 'auto', margin: '0 auto 14px', objectFit: 'contain' }}
         />
-        <p className="text-[12px] text-slate-500 leading-relaxed text-center">{labels.product_desc}</p>
-        <span className="mt-3 block text-center text-[12px] font-semibold text-[#8FC436] group-hover:translate-x-0.5 transition-transform">
+        <p className="text-[12px] text-center" style={{ color: '#4A5244' }}>{labels.product_desc}</p>
+        <span className="k" style={{ display: 'block', textAlign: 'center', marginTop: '10px', fontSize: '11px', color: 'var(--seal)' }}>
           {labels.product_btn} &rarr;
         </span>
       </Link>
 
       {/* Dati in Europa, residenza UE dei dati di lavoro */}
-      <Link
-        href={`/${locale}/privacy/`}
-        className="block mb-6 rounded-2xl border border-slate-200 hover:border-slate-300 hover:shadow-md transition-all duration-200 p-5 group"
-      >
-        <div className="flex items-center gap-2 mb-1.5">
-          <span className="text-[#1E40AF] shrink-0">
-            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg>
-          </span>
-          <p className="text-[13px] font-bold text-slate-800 leading-snug">{euBadge.title}</p>
-        </div>
-        <p className="text-[11px] text-slate-500 leading-relaxed">{euBadge.desc}</p>
+      <Link href={`/${locale}/privacy/`} className="panel" style={{ display: 'block', padding: '18px 20px', marginTop: '18px' }}>
+        <p className="text-[13px] font-bold leading-snug">{euBadge.title}</p>
+        <p className="text-[11px] mt-1" style={{ color: '#78836F' }}>{euBadge.desc}</p>
       </Link>
 
-      {/* CTA, leggero, arioso */}
-      <div className="mb-6 rounded-2xl border border-[#8FC436]/20 bg-[#8FC436]/5 p-5">
-        <p className="text-[13px] font-bold text-slate-800">{labels.cta_title}</p>
-        <p className="text-[11px] text-slate-500 mt-1.5 leading-relaxed">{labels.cta_desc}</p>
+      {/* CTA trial */}
+      <div className="panel" style={{ padding: '20px', marginTop: '18px', borderColor: 'var(--seal)' }}>
+        <p className="text-[13px] font-bold">{labels.cta_title}</p>
+        <p className="text-[11px] mt-1.5" style={{ color: '#4A5244' }}>{labels.cta_desc}</p>
         <Link
           href={`/${locale}/trial/`}
           onClick={() => trackEvent('trial_click', { cta_source: 'blog_sidebar', cta_locale: locale })}
-          className="btn-ring btn-ring-sm mt-4 w-full"
+          className="b1"
+          style={{ display: 'block', textAlign: 'center', marginTop: '14px', fontSize: '13px', padding: '12px 20px' }}
         >
           {labels.cta_btn}
         </Link>
       </div>
 
-      {/* Share, in fondo */}
-      <div className="pt-5 border-t border-slate-100">
-        <p className="text-[11px] font-bold uppercase tracking-widest text-slate-400 mb-3">
-          {labels.share}
-        </p>
+      {/* Condividi */}
+      <div className="share">
+        <p className="lb k">{labels.share}</p>
         <ShareButtons title={title} copiedLabel={labels.copied} />
       </div>
     </aside>

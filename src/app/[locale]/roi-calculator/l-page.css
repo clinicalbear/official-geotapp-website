@@ -1,0 +1,19 @@
+/* Vestiti pagina-specifici per il calcolatore ROI (direzione L). Slug lp-roi.
+   .ph .sec .fq .end .slab .form .fld .in .res2 vivono in l-mockup.css: qui
+   solo i ritocchi che servono a QUESTA pagina. Non tocca la modalita' embed
+   (l'iframe nel blog non entra mai in .lp-roi: vedi roi-calculator/page.tsx). */
+
+.lp-roi .sec .w { max-width: 640px; }
+
+/* il testo digitato nei campi resta leggibile sul fondo scuro; il ".in" del
+   mockup lo pensa come anteprima statica attenuata, qui e' un input vero */
+.lp-roi input.in { background: transparent; color: var(--paper); }
+.lp-roi input.in::placeholder { color: rgba(242, 240, 233, .45); }
+
+.lp-roi .roi-intro {
+  margin-top: 40px;
+  color: #4A5244;
+  font-size: 15.5px;
+  line-height: 1.65;
+  max-width: 60ch;
+}

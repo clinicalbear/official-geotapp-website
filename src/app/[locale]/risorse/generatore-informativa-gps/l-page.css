@@ -1,0 +1,89 @@
+/* Vestiti pagina-specifici per il generatore di informativa GPS (direzione L).
+   Slug .lp-risorsa-strumento. Le classi condivise (.ph .sec .tool .form .fld .in
+   .fq-wrap .end) vivono in l-mockup.css: qui solo i ritocchi che servono a
+   QUESTA pagina, dove per la prima volta il vestito .form si applica a un
+   form VERO (input/select/checkbox/file reali, non ai <div> segnaposto del
+   mockup statico). */
+
+/* niente anteprima statica a destra (vedi commento nella page): il form
+   scuro occupa da solo la colonna, non tutta la griglia a due colonne
+   pensata per form+anteprima. */
+.lp-risorsa-strumento .tool {
+  grid-template-columns: 1fr;
+  max-width: 700px;
+}
+
+/* i campi appaiati (paese/quando, conservazione/dpo) restano leggibili
+   sotto i 640px: .form .two non ha un fallback mobile in l-mockup.css
+   (nessun'altra pagina lo usa ancora su un form vero). */
+@media (max-width: 640px) {
+  .lp-risorsa-strumento .form .two {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── il vecchio strato redesign-l.css forza `label{color:#6B7563 !important}`
+   e `input,select,textarea{border-color:rgba(14,14,12,.22) !important}`
+   pensati per moduli su fondo chiaro: su un pannello .form (fondo quasi nero)
+   diventano illeggibili. Qui si ripristina il vestito scuro del mockup con
+   una specificità più alta, senza toccare redesign-l.css (condiviso). ── */
+.lp-risorsa-strumento .form label {
+  color: var(--lime) !important;
+}
+.lp-risorsa-strumento .form .in {
+  background: transparent !important;
+  border-color: rgba(242, 240, 233, 0.24) !important;
+  color: rgba(242, 240, 233, 0.92) !important;
+}
+.lp-risorsa-strumento .form .in::placeholder {
+  color: rgba(242, 240, 233, 0.5) !important;
+}
+.lp-risorsa-strumento .form select.in {
+  color-scheme: dark;
+}
+.lp-risorsa-strumento .form select.in option {
+  color: #0e0e0c;
+  background: #f2f0e9;
+}
+
+/* checkbox "controlli anti-manomissione": l'etichetta avvolge la frase intera
+   (non solo un campo), quindi resta minuscola e non allargata in spaziatura
+   come le label dei campi. */
+.lp-risorsa-strumento .form label.fchk {
+  display: flex !important;
+  align-items: flex-start;
+  gap: 12px;
+  cursor: pointer;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+  margin-bottom: 0 !important;
+  font-size: 14px !important;
+  font-weight: 400;
+  color: rgba(242, 240, 233, 0.85) !important;
+}
+.lp-risorsa-strumento .form label.fchk input[type='checkbox'] {
+  margin-top: 4px;
+  width: 16px;
+  height: 16px;
+  flex: none;
+  accent-color: var(--seal);
+}
+
+/* pulsante "carica logo": è un <label> che avvolge l'input file nascosto,
+   vestito come i campi .in ma inline e senza le maiuscole delle label
+   di campo (qui il testo è il nome del bottone, non un'etichetta sopra). */
+.lp-risorsa-strumento .form label.flogo {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 8px;
+  width: auto;
+  cursor: pointer;
+  border: 1px solid rgba(242, 240, 233, 0.24) !important;
+  padding: 11px 16px !important;
+  background: transparent !important;
+  font-size: 14px !important;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+  margin-bottom: 0 !important;
+  color: rgba(242, 240, 233, 0.85) !important;
+}

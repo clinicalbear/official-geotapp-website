@@ -7,9 +7,6 @@ import {
   ShieldCheck,
   MapPin,
   WifiOff,
-  ChevronDown,
-  Rocket,
-  CreditCard,
   Users,
   Mail,
 } from 'lucide-react';
@@ -17,7 +14,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Script from 'next/script';
 import { usePathname } from 'next/navigation';
 import { getDictionary } from '@/lib/i18n/dictionaries';
-import { getLocaleFromPathname } from '@/lib/i18n/locale-routing';
+import { getLocaleFromPathname, localizePath } from '@/lib/i18n/locale-routing';
 import Link from 'next/link';
 
 // Cloudflare Turnstile: captcha invisibile e gratuito. Se la sitekey non e' configurata
@@ -27,24 +24,21 @@ const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || '';
 import { trackEvent, consumeTrialSource } from '@/lib/analytics';
 import { buildTrialPayload } from '@/lib/trial/payload';
 import Reviews from '@/components/Reviews';
-import GeoBadge from '@/components/GeoBadge';
-
-const BENEFIT_ICONS = [
-  <Rocket size={20} className="text-primary" />,
-  <CreditCard size={20} className="text-emerald-500" />,
-  <ShieldCheck size={20} className="text-blue-500" />,
-];
+import LNastro from '@/components/LNastro';
+import ListedOn from '@/components/ListedOn';
+import FeaturedIn from '@/components/FeaturedIn';
 
 export default function TrialPage() {
   const pathname = usePathname();
   const locale = getLocaleFromPathname(pathname);
-  const d = getDictionary(locale).trial;
+  const dict = getDictionary(locale);
+  const d = dict.trial;
+  const nav = dict.navbar;
 
   const [submitted, setSubmitted] = useState(false);
   const [submittedEmail, setSubmittedEmail] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [openFaq, setOpenFaq] = useState<number | null>(0);
 
   const [email, setEmail] = useState('');
   // Honeypot anti-bot: hidden from humans, only bots fill it (server drops the signup).
@@ -165,254 +159,219 @@ export default function TrialPage() {
   };
 
   const localePrefix = locale !== 'it' ? `/${locale}` : '/it';
+  const l = locale || 'it';
 
   return (
-    <div className="pt-20 md:pt-5 pb-24 px-6 min-h-screen bg-white text-slate-900">
-      <div className="container mx-auto max-w-6xl">
-
-        {/* HEADER, compatto su mobile per portare il form above the fold */}
-        <div className="text-center mb-8 md:mb-12 max-w-3xl mx-auto">
-          <motion.span
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="inline-block mb-4 md:mb-6"
-          >
-            <GeoBadge>{d.badge}</GeoBadge>
-          </motion.span>
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-3xl md:text-6xl font-display font-bold text-slate-900 mb-3 md:mb-6 leading-tight"
-          >
-            {d.page_title}
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.1 }}
-            className="text-base md:text-xl text-slate-500 font-light leading-relaxed"
-          >
-            {d.page_subtitle}
-          </motion.p>
+    <div className="lp-l lp-trial">
+      {/* ── testata, sul nero ── */}
+      <section className="ph">
+        <div className="w">
+          <p className="kk k r"><s></s>{d.badge}</p>
+          <h1 className="r d1">{d.page_title}</h1>
+          <p className="lede r d2">{d.page_subtitle}</p>
+          <div className="acts r d3">
+            <a className="b1" href="#trial-form">{d.form_submit_simple}</a>
+            <a className="b2" href={localizePath('/pricing/', l)}>{nav.pricing}</a>
+          </div>
         </div>
+      </section>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
-
-          {/* LEFT: form */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.2 }}
-          >
-            <AnimatePresence mode="wait">
-              {submitted ? (
-                <motion.div
-                  key="success"
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  className="bg-emerald-50 border border-emerald-200 rounded-3xl p-10 text-center"
-                >
-                  <CheckCircle2 size={48} className="text-emerald-500 mx-auto mb-4" />
-                  <h2 className="text-2xl font-bold text-slate-900 mb-3">{d.success_title}</h2>
-                  <p className="text-slate-600 mb-1">
-                    {d.success_desc}<strong>{submittedEmail}</strong>
-                  </p>
-                  <p className="text-slate-600 mb-4">{d.success_desc2}</p>
-                  <div className="mt-6 bg-amber-50 border-2 border-amber-300 rounded-2xl p-5 text-left">
-                    <div className="flex items-start gap-3">
-                      <Mail size={24} className="text-amber-600 flex-shrink-0 mt-0.5" />
-                      <div className="flex-1">
-                        <p className="text-base font-semibold text-slate-900 mb-2">{d.success_spam}</p>
-                        <p className="text-sm text-slate-700">
-                          {d.success_sender}
-                          <br />
-                          <code className="inline-block mt-1 px-2 py-1 bg-white border border-amber-300 rounded font-mono text-amber-900 font-bold">no-reply@geotapp.com</code>
-                        </p>
+      {/* ── il form vero, vestito su nero, con a fianco cosa include ── */}
+      <section className="sec" id="trial-form">
+        <div className="w">
+          <div className="tr">
+            <div className="form r">
+              <AnimatePresence mode="wait">
+                {submitted ? (
+                  <motion.div
+                    key="success"
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    className="bg-emerald-50 border border-emerald-200 rounded-3xl p-10 text-center"
+                  >
+                    <CheckCircle2 size={48} className="text-emerald-500 mx-auto mb-4" />
+                    <h2 className="text-2xl font-bold text-slate-900 mb-3">{d.success_title}</h2>
+                    <p className="text-slate-600 mb-1">
+                      {d.success_desc}<strong>{submittedEmail}</strong>
+                    </p>
+                    <p className="text-slate-600 mb-4">{d.success_desc2}</p>
+                    <div className="mt-6 bg-amber-50 border-2 border-amber-300 rounded-2xl p-5 text-left">
+                      <div className="flex items-start gap-3">
+                        <Mail size={24} className="text-amber-600 flex-shrink-0 mt-0.5" />
+                        <div className="flex-1">
+                          <p className="text-base font-semibold text-slate-900 mb-2">{d.success_spam}</p>
+                          <p className="text-sm text-slate-700">
+                            {d.success_sender}
+                            <br />
+                            <code className="inline-block mt-1 px-2 py-1 bg-white border border-amber-300 rounded font-mono text-amber-900 font-bold">no-reply@geotapp.com</code>
+                          </p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </motion.div>
-              ) : (
-                <motion.form
-                  key="form"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  className="bg-white border border-slate-200 rounded-3xl p-8 shadow-xl shadow-slate-100/60 space-y-5"
-                  onSubmit={handleSubmit}
-                >
-                  <h2 className="text-lg font-bold text-slate-900 mb-2">{d.form_title}</h2>
-
-                  <div>
-                    <label className="block text-sm font-bold text-slate-700 mb-1.5">
-                      {d.form_email} <span className="text-red-500">*</span>
-                    </label>
-                    <input
-                      type="email"
-                      required
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      onFocus={() => trackFieldFocus('email')}
-                      placeholder={d.form_email_placeholder}
-                      className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
-                    />
-                    <p className="mt-1 text-xs text-slate-400">{d.form_email_hint}</p>
-                  </div>
-
-                  {/* Honeypot: invisibile e fuori dal tab order per gli umani; i bot che
-                      auto-riempiono i campi lo compilano e il server scarta il signup. */}
-                  <input
-                    type="text"
-                    name="company_website"
-                    tabIndex={-1}
-                    autoComplete="off"
-                    aria-hidden="true"
-                    value={hp}
-                    onChange={(e) => setHp(e.target.value)}
-                    style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, opacity: 0 }}
-                  />
-
-                  {/* Cloudflare Turnstile: captcha invisibile. Con rendering implicito
-                      inietta da se' l'input nascosto `cf-turnstile-response` dentro il
-                      form, che leggiamo al submit. Reso solo se la sitekey e' configurata. */}
-                  {TURNSTILE_SITE_KEY && (
-                    <>
-                      <Script
-                        src="https://challenges.cloudflare.com/turnstile/v0/api.js"
-                        strategy="afterInteractive"
-                        async
-                        defer
-                      />
-                      <div
-                        className="cf-turnstile"
-                        data-sitekey={TURNSTILE_SITE_KEY}
-                        data-theme="light"
-                        data-size="flexible"
-                      />
-                    </>
-                  )}
-
-                  {error && (
-                    <p className="rounded-lg border border-red-200 bg-red-50 text-red-700 px-4 py-3 text-sm">
-                      {error}
-                    </p>
-                  )}
-
-                  <button
-                    type="submit"
-                    disabled={loading}
-                    className="btn-ring w-full disabled:opacity-60 disabled:cursor-not-allowed"
+                  </motion.div>
+                ) : (
+                  <motion.form
+                    key="form"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    onSubmit={handleSubmit}
                   >
-                    <Send size={20} />
-                    {loading ? d.form_submitting : d.form_submit_simple}
-                  </button>
+                    <h2>{d.form_title}</h2>
 
-                  <p className="text-center text-sm text-slate-500">
-                    {d.form_response_time}
-                  </p>
-
-                  <p className="text-center text-xs text-slate-400">
-                    {d.form_privacy}{' '}
-                    <Link href={`${localePrefix}/privacy/`} className="underline hover:text-slate-600">
-                      {d.form_privacy_link}
-                    </Link>
-                    .
-                  </p>
-
-                  {d.form_usage_note && (
-                    <p className="text-center text-xs text-slate-400">
-                      {d.form_usage_note}
-                    </p>
-                  )}
-                </motion.form>
-              )}
-            </AnimatePresence>
-
-            {/* Trust strip */}
-            <div className="mt-6 flex flex-wrap gap-4 justify-center text-xs text-slate-500">
-              <span className="flex items-center gap-1.5">
-                <ShieldCheck size={14} className="text-emerald-500" /> GDPR Compliant
-              </span>
-              <span className="flex items-center gap-1.5">
-                <MapPin size={14} className="text-blue-500" /> {(d as any).trust_gps ?? 'Verified GPS tracking'}
-              </span>
-              <span className="flex items-center gap-1.5">
-                <WifiOff size={14} className="text-amber-500" /> {(d as any).trust_offline ?? 'Offline recording, auto sync'}
-              </span>
-              <span className="flex items-center gap-1.5">
-                <Users size={14} className="text-slate-400" /> {(d as any).trust_no_card ?? 'No credit card required'}
-              </span>
-            </div>
-          </motion.div>
-
-          {/* RIGHT: benefits + FAQ */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.3 }}
-            className="space-y-10"
-          >
-            {/* Benefits */}
-            <div>
-              <h2 className="text-xl font-bold text-slate-900 mb-6">{d.benefits_title}</h2>
-              <div className="space-y-5">
-                {d.benefits.map((item: { title: string; desc: string }, i: number) => (
-                  <div key={i} className="flex gap-4 p-5 bg-slate-50 rounded-2xl border border-slate-100">
-                    <div className="mt-0.5 shrink-0">{BENEFIT_ICONS[i]}</div>
-                    <div>
-                      <div className="font-bold text-slate-900 mb-1">{item.title}</div>
-                      <div className="text-sm text-slate-500 leading-relaxed">{item.desc}</div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* FAQ */}
-            <div>
-              <h2 className="text-xl font-bold text-slate-900 mb-5">FAQ</h2>
-              <div className="space-y-3">
-                {d.faq.map((item: { q: string; a: string }, i: number) => (
-                  <div key={i} className="border border-slate-200 rounded-2xl overflow-hidden">
-                    <button
-                      type="button"
-                      className="w-full flex items-center justify-between gap-4 px-5 py-4 text-left font-bold text-slate-900 hover:bg-slate-50 transition-colors"
-                      onClick={() => { setOpenFaq(openFaq === i ? null : i); trackEvent('trial_faq_click', { question: item.q.slice(0, 50), index: i.toString() }); }}
-                    >
-                      <span>{item.q}</span>
-                      <ChevronDown
-                        size={16}
-                        className={`shrink-0 text-slate-400 transition-transform ${openFaq === i ? 'rotate-180' : ''}`}
+                    <div className="fld">
+                      <label htmlFor="trial-email">
+                        {d.form_email} *
+                      </label>
+                      <input
+                        id="trial-email"
+                        type="email"
+                        required
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        onFocus={() => trackFieldFocus('email')}
+                        placeholder={d.form_email_placeholder}
+                        className="in"
                       />
-                    </button>
-                    <AnimatePresence>
-                      {openFaq === i && (
-                        <motion.div
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: 'auto', opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
-                          transition={{ duration: 0.2 }}
-                          className="overflow-hidden"
-                        >
-                          <p className="px-5 pb-4 text-sm text-slate-600 leading-relaxed">{item.a}</p>
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </motion.div>
-        </div>
+                      <p className="hint">{d.form_email_hint}</p>
+                    </div>
 
-        {/* Reviews sotto il form su TUTTI i device.
-            Pre-26/05/2026 erano sopra su desktop, ma l'analisi funnel GA4 ha
-            mostrato che 4 trial_page_view su 5 NON iniziano il form: il
-            blocco recensioni spingeva la CTA fuori dal fold sul desktop.
-            Form-first ovunque + social proof come supporto dopo. */}
-        <div className="mt-12">
-          <Reviews locale={locale || 'it'} />
+                    {/* Honeypot: invisibile e fuori dal tab order per gli umani; i bot che
+                        auto-riempiono i campi lo compilano e il server scarta il signup. */}
+                    <input
+                      type="text"
+                      name="company_website"
+                      tabIndex={-1}
+                      autoComplete="off"
+                      aria-hidden="true"
+                      value={hp}
+                      onChange={(e) => setHp(e.target.value)}
+                      style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, opacity: 0 }}
+                    />
+
+                    {/* Cloudflare Turnstile: captcha invisibile. Con rendering implicito
+                        inietta da se' l'input nascosto `cf-turnstile-response` dentro il
+                        form, che leggiamo al submit. Reso solo se la sitekey e' configurata. */}
+                    {TURNSTILE_SITE_KEY && (
+                      <>
+                        <Script
+                          src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+                          strategy="afterInteractive"
+                          async
+                          defer
+                        />
+                        <div
+                          className="cf-turnstile"
+                          data-sitekey={TURNSTILE_SITE_KEY}
+                          data-theme="light"
+                          data-size="flexible"
+                          style={{ marginTop: 18 }}
+                        />
+                      </>
+                    )}
+
+                    {error && (
+                      <p className="rounded-lg border border-red-200 bg-red-50 text-red-700 px-4 py-3 text-sm" style={{ marginTop: 18 }}>
+                        {error}
+                      </p>
+                    )}
+
+                    <button
+                      type="submit"
+                      disabled={loading}
+                      className="btn-ring w-full disabled:opacity-60 disabled:cursor-not-allowed"
+                    >
+                      <Send size={20} />
+                      {loading ? d.form_submitting : d.form_submit_simple}
+                    </button>
+
+                    <p className="after">
+                      {d.form_response_time}
+                    </p>
+
+                    <p className="legal">
+                      {d.form_privacy}{' '}
+                      <Link href={`${localePrefix}/privacy/`}>
+                        {d.form_privacy_link}
+                      </Link>
+                      .
+                    </p>
+
+                    {d.form_usage_note && (
+                      <p className="legal" style={{ borderTop: 0, paddingTop: 0, marginTop: 14 }}>
+                        {d.form_usage_note}
+                      </p>
+                    )}
+                  </motion.form>
+                )}
+              </AnimatePresence>
+            </div>
+
+            <div className="what r d1">
+              <p className="only k"><s></s>{d.benefits_title}</p>
+              <ul className="see">
+                {d.benefits.map((item: { title: string; desc: string }, i: number) => (
+                  <li key={i}>
+                    <b>{item.title}</b>
+                    <p>{item.desc}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          {/* Trust strip */}
+          <div className="mt-14 flex flex-wrap gap-4 justify-center text-xs text-slate-500">
+            <span className="flex items-center gap-1.5">
+              <ShieldCheck size={14} className="text-emerald-500" /> GDPR Compliant
+            </span>
+            <span className="flex items-center gap-1.5">
+              <MapPin size={14} className="text-blue-500" /> {(d as any).trust_gps ?? 'Verified GPS tracking'}
+            </span>
+            <span className="flex items-center gap-1.5">
+              <WifiOff size={14} className="text-amber-500" /> {(d as any).trust_offline ?? 'Offline recording, auto sync'}
+            </span>
+            <span className="flex items-center gap-1.5">
+              <Users size={14} className="text-slate-400" /> {(d as any).trust_no_card ?? 'No credit card required'}
+            </span>
+          </div>
         </div>
-      </div>
+      </section>
+
+      <LNastro />
+
+      {/* ── presenti su: directory e stampa vere del sito ── */}
+      <section className="dirs">
+        <div className="host">
+          <ListedOn locale={l} />
+          <FeaturedIn locale={l} />
+        </div>
+      </section>
+
+      {/* ── recensioni vere, sotto il form ── */}
+      <section className="sec">
+        <div className="w">
+          <Reviews locale={l} />
+        </div>
+      </section>
+
+      {/* ── domande frequenti vere, che si aprono con calma ── */}
+      <section className="fq">
+        <div className="w"><div className="g">
+          <h2 className="r">FAQ</h2>
+          <div className="r d1">
+            {d.faq.map((item: { q: string; a: string }, i: number) => (
+              <details
+                key={i}
+                open={i === 0}
+                onToggle={() => trackEvent('trial_faq_click', { question: item.q.slice(0, 50), index: i.toString() })}
+              >
+                <summary>{item.q}</summary>
+                <div className="ct"><p>{item.a}</p></div>
+              </details>
+            ))}
+          </div>
+        </div></div>
+      </section>
     </div>
   );
 }

@@ -284,6 +284,11 @@
         "name": "Canalizadores",
         "desc": "Canalização, aquecimento, caldeiras. Relatórios GPS com fotos antes e depois, zero disputas sobre trabalhos realizados.",
         "cta": "Prove cada trabalho"
+      },
+      "termoidraulici": {
+        "name": "Aquecimento e Canalização",
+        "desc": "GeoTapp regista cada intervenção em caldeiras e instalações com GPS, fotos e carimbos de tempo verificáveis. O cliente nega os materiais substituídos?",
+        "cta": "Prove os materiais substituídos"
       }
     },
     "app_mockup": {

@@ -1,0 +1,492 @@
+/* ============================================================================
+   Direzione L, strato grafico sopra il sito attuale.
+   Non tocca un solo contenuto: cambia solo come le cose sono vestite.
+   Caricato dopo globals.css, quindi vince sulle utility di Tailwind.
+   ========================================================================= */
+
+:root{
+  --l-ink:#0E0E0C;
+  --l-paper:#F2F0E9;
+  --l-warm:#EAE7DE;
+  --l-seal:#8FC436;
+  --l-lime:#B6E86A;
+  --l-sky:#3BAEE0;
+  --l-mute:#4A5244;
+}
+
+/* ── fondamenta ─────────────────────────────────────────────────────────── */
+html, body{ background:var(--l-paper) !important; color:var(--l-ink) !important; }
+body{ font-family:'Inter',system-ui,sans-serif !important; -webkit-font-smoothing:antialiased; }
+
+/* ── tipografia: i titoli passano ad Anton ──────────────────────────────── */
+h1:not(.lp-l *), h2:not(.lp-l *), h3:not(.lp-l *), .l-display{
+  font-family:var(--font-anton),'Anton',Impact,sans-serif !important;
+  font-weight:400 !important;
+  text-transform:uppercase !important;
+  letter-spacing:-.018em !important;
+  line-height:.92 !important;
+  color:var(--l-ink);
+}
+h1:not(.lp-l *){ font-size:clamp(34px,5.2vw,88px) !important; }
+h2:not(.lp-l *){ font-size:clamp(26px,3.6vw,58px) !important; }
+h3:not(.lp-l *){ font-size:clamp(19px,1.7vw,26px) !important; }
+h4, h5, h6{ letter-spacing:.02em; }
+/* i titoli dentro i moduli e le tabelle restano leggibili, non urlati */
+form h1, form h2, form h3,
+table h3, .prose h3{ text-transform:none !important; letter-spacing:0 !important; }
+
+/* niente gradienti sul testo: era la firma vecchia */
+[class*="bg-clip-text"]{
+  -webkit-background-clip:initial !important; background-clip:initial !important;
+  -webkit-text-fill-color:currentColor !important;
+  background-image:none !important;
+  color:var(--l-seal) !important;
+}
+
+/* ── angoli: il registro L e squadrato, tranne i pulsanti ──────────────── */
+[class*="rounded-3xl"],[class*="rounded-2xl"],[class*="rounded-xl"],[class*="rounded-lg"]{
+  border-radius:0 !important;
+}
+a[class*="rounded-full"], button[class*="rounded-full"], [class*="rounded-full"]{
+  border-radius:999px !important;
+}
+img[class*="rounded-full"]{ border-radius:50% !important; }
+
+/* ── superfici: via i pastello, restano avorio, caldo e nero ───────────── */
+[class*="bg-slate-50"],[class*="bg-gray-50"],[class*="bg-blue-50"],[class*="bg-indigo-50"],
+[class*="bg-sky-50"],[class*="bg-emerald-50"],[class*="bg-green-50"],[class*="bg-orange-50"],
+[class*="bg-amber-50"],[class*="bg-purple-50"],[class*="bg-rose-50"],[class*="bg-teal-50"]{
+  background-color:var(--l-warm) !important;
+}
+[class*="bg-slate-100"],[class*="bg-gray-100"]{ background-color:var(--l-warm) !important; }
+[class*="bg-white"]{ background-color:var(--l-paper) !important; }
+[class*="bg-slate-900"],[class*="bg-gray-900"],[class*="bg-black"],
+[class*="bg-slate-800"],[class*="bg-neutral-900"]{ background-color:var(--l-ink) !important; }
+
+/* ── ombre: una sola, discreta ─────────────────────────────────────────── */
+[class*="shadow-2xl"],[class*="shadow-xl"],[class*="shadow-lg"]{
+  box-shadow:0 30px 70px -40px rgba(14,14,12,.45) !important;
+}
+[class*="shadow-md"],[class*="shadow-sm"]{ box-shadow:none !important; }
+
+/* ── bordi a filo ──────────────────────────────────────────────────────── */
+[class*="border-slate-200"],[class*="border-gray-200"],[class*="border-slate-100"]{
+  border-color:rgba(14,14,12,.16) !important;
+}
+
+/* ── azione principale: pillola verde, testo scuro ─────────────────────── */
+a[class*="bg-blue-6"], a[class*="bg-blue-5"], button[class*="bg-blue-6"], button[class*="bg-blue-5"],
+a[class*="from-blue"], button[class*="from-blue"],
+a[class*="from-orange"], button[class*="from-orange"],
+a[class*="bg-indigo-6"], button[class*="bg-indigo-6"]{
+  background-image:none !important;
+  background-color:var(--l-seal) !important;
+  color:var(--l-ink) !important;
+  border-radius:999px !important;
+  font-weight:500 !important;
+  transition:transform .3s cubic-bezier(.2,.8,.25,1), box-shadow .3s !important;
+}
+a[class*="bg-blue-6"]:hover, button[class*="bg-blue-6"]:hover,
+a[class*="from-blue"]:hover, button[class*="from-blue"]:hover,
+a[class*="from-orange"]:hover, button[class*="from-orange"]:hover{
+  transform:translateY(-3px);
+  box-shadow:0 18px 34px -14px rgba(143,196,54,.6) !important;
+}
+/* azione secondaria */
+a[class*="bg-slate-900"], button[class*="bg-slate-900"]{
+  background-color:var(--l-ink) !important; color:var(--l-paper) !important; border-radius:999px !important;
+}
+
+/* ── accenti: il blu di sistema diventa verde marchio ──────────────────── */
+[class*="text-blue-6"],[class*="text-blue-5"],[class*="text-indigo-6"]{ color:#5E7C1E !important; }
+[class*="text-orange-"],[class*="text-amber-6"]{ color:#5E7C1E !important; }
+[class*="border-blue-"]{ border-color:var(--l-seal) !important; }
+
+/* ── barra in alto: negativo, con il marchio fuori dal negativo ────────── */
+header nav img[alt*="GeoTapp"], header img[alt*="GeoTapp"]{
+  height:46px !important; width:auto !important;
+}
+footer img[alt*="GeoTapp"]{ height:50px !important; width:auto !important; }
+
+/* ── coda ──────────────────────────────────────────────────────────────── */
+footer{ background:var(--l-ink) !important; color:#B4BFAE !important; }
+footer h4, footer h3, footer strong{ color:var(--l-paper) !important; text-transform:uppercase; letter-spacing:.16em; font-size:11px !important; }
+footer a{ color:#B4BFAE !important; transition:color .3s, transform .3s; display:inline-block; }
+footer a:hover{ color:var(--l-lime) !important; transform:translateX(4px); }
+
+/* ── elenchi a filo invece delle spunte colorate ───────────────────────── */
+ul li svg[class*="text-green"], ul li svg[class*="text-emerald"]{ color:var(--l-seal) !important; }
+
+/* ── moduli ────────────────────────────────────────────────────────────── */
+input, select, textarea{
+  border-radius:0 !important;
+  border-color:rgba(14,14,12,.22) !important;
+  font-family:'Inter',sans-serif !important;
+}
+input:focus, select:focus, textarea:focus{
+  outline:none !important; border-color:var(--l-seal) !important; box-shadow:0 0 0 3px rgba(143,196,54,.18) !important;
+}
+label{ font-size:12px !important; letter-spacing:.16em; text-transform:uppercase; color:#6B7563 !important; }
+
+/* ── il nastro che scorre, da mettere dove serve con <div class="l-tape"> ─ */
+.l-tape{ background:var(--l-ink); color:var(--l-paper); padding:22px 0; overflow:hidden; }
+.l-tape .run{ display:flex; width:max-content; gap:56px; white-space:nowrap;
+  font-family:var(--font-anton),'Anton',sans-serif; font-size:clamp(26px,3.8vw,62px);
+  text-transform:uppercase; animation:l-run 34s linear infinite; }
+.l-tape:hover .run{ animation-play-state:paused; }
+.l-tape .g{ color:var(--l-seal); } .l-tape .b{ color:var(--l-sky); }
+@keyframes l-run{ to{ transform:translateX(-50%); } }
+
+/* ── sipario di caricamento ────────────────────────────────────────────── */
+.l-load{ position:fixed; inset:0; z-index:9999; background:var(--l-ink);
+  display:grid; place-content:center; gap:26px;
+  animation:l-lift 1s cubic-bezier(.76,0,.24,1) 1.45s forwards; }
+.l-load img{ height:64px; width:auto; opacity:0; animation:l-fade .7s ease .2s forwards; }
+.l-load .bar{ width:220px; height:2px; background:rgba(255,255,255,.16); overflow:hidden; }
+.l-load .bar i{ display:block; height:100%; background:var(--l-lime);
+  transform:scaleX(0); transform-origin:left; animation:l-fill 1.3s cubic-bezier(.6,0,.2,1) .22s forwards; }
+@keyframes l-fill{ to{ transform:scaleX(1); } }
+@keyframes l-fade{ to{ opacity:1; } }
+@keyframes l-lift{ to{ transform:translateY(-101%); } }
+
+@media(prefers-reduced-motion:reduce){
+  .l-load{ display:none; }
+  .l-tape .run{ animation:none; }
+}
+
+/* ============================================================================
+   Barra in alto, registro L. Il marchio resta quello vero, grande.
+   ========================================================================= */
+nav.sticky.top-0{
+  background:var(--l-paper) !important;
+  backdrop-filter:none !important;
+  border-bottom:1px solid rgba(14,14,12,.14) !important;
+  box-shadow:none !important;
+  padding-top:18px !important; padding-bottom:18px !important;
+}
+nav.sticky.top-0 img[alt*="GeoTapp"],
+nav.sticky.top-0 a[href$="/"] img{
+  height:48px !important; width:auto !important; max-width:none !important;
+}
+/* voci di menu: minuscole, spaziate, come nella L */
+nav.sticky.top-0 a, nav.sticky.top-0 button{
+  font-size:12.5px !important; letter-spacing:.14em !important; text-transform:uppercase !important;
+  font-weight:500 !important;
+}
+/* l'azione principale nella barra resta una pillola verde piena */
+nav.sticky.top-0 a[class*="bg-primary"], nav.sticky.top-0 a[class*="bg-blue"],
+nav.sticky.top-0 a[class*="from-"]{
+  background:var(--l-seal) !important; color:var(--l-ink) !important;
+  border-radius:999px !important; padding:13px 26px !important;
+}
+
+/* ============================================================================
+   Eroe della home: il titolo lungo scende, quello corto sale.
+   Nessun testo tolto: cambia solo la gerarchia visiva.
+   ========================================================================= */
+
+
+/* ============================================================================
+   Correzione: i selettori veri del sito. Il progetto usa token semantici
+   (bg-background, bg-surface, bg-primary, text-text-*), non la tavolozza
+   standard di Tailwind. Le regole qui sotto agganciano quelli.
+   ========================================================================= */
+
+/* superfici bianche e grigie che restano in giro */
+[class*="bg-white"], [class*="bg-background"]{ background-color:var(--l-paper) !important; }
+[class*="bg-surface"], [class*="bg-card"]{ background-color:var(--l-warm) !important; }
+
+/* i gradienti decorativi di fondo spariscono: il registro L e' a campiture piene */
+[class*="bg-gradient-to"]{ background-image:none !important; }
+section[class*="gradient"], div[class*="gradient"]{ background-image:none !important; }
+/* i cerchi e le sfocature decorative dell'eroe */
+[class*="blur-3xl"], [class*="blur-2xl"], [class*="rounded-full"][class*="absolute"]{
+  display:none !important;
+}
+
+/* azione principale: il verde del marchio, pillola, testo scuro */
+a[class*="bg-primary"], button[class*="bg-primary"]{
+  background-color:var(--l-seal) !important; color:var(--l-ink) !important;
+  border-radius:999px !important; background-image:none !important;
+}
+/* azione secondaria: filo scuro, niente riempimento */
+a[class*="border-border"], a[class*="bg-white"][class*="border"]{
+  background:transparent !important; border:1px solid rgba(14,14,12,.28) !important;
+  border-radius:999px !important; color:var(--l-ink) !important;
+}
+
+/* testo di servizio */
+[class*="text-text-secondary"]{ color:var(--l-mute) !important; }
+[class*="text-text-muted"]{ color:#78836F !important; }
+[class*="text-primary"]{ color:#5E7C1E !important; }
+
+/* le sezioni scure del sito diventano il nero pieno della L */
+[class*="bg-text-primary"], [class*="bg-ink"]{ background-color:var(--l-ink) !important; color:var(--l-paper) !important; }
+
+/* schede: filo invece di ombra e angoli */
+[class*="border-border"]{ border-color:rgba(14,14,12,.16) !important; }
+
+/* ============================================================================
+   Apertura della home, direzione L: fotografia a tutto schermo.
+   ========================================================================= */
+.l-hero{ position:relative; background:#07090A; color:#F2F0E9; min-height:88svh;
+  display:flex; align-items:flex-end; }
+.l-hero-bg{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
+  object-position:60% 46%; filter:grayscale(.5) brightness(.44) contrast(1.05);
+  animation:l-kb 28s ease-in-out infinite alternate; }
+@keyframes l-kb{ from{ transform:scale(1.04); } to{ transform:scale(1.17); } }
+.l-hero-scrim{ position:absolute; inset:0;
+  background:linear-gradient(180deg,rgba(7,9,10,.72) 0%,rgba(7,9,10,.12) 32%,rgba(7,9,10,.55) 72%,rgba(7,9,10,.93) 100%); }
+.l-hero .container-geo{ width:100%; padding-bottom:40px; }
+.l-hero-top{ display:flex; flex-wrap:wrap; gap:14px 38px; padding-bottom:22px; margin-bottom:54px;
+  border-bottom:1px solid rgba(255,255,255,.22); }
+.l-hero-top span{ display:flex; align-items:center; gap:9px; font-size:12px;
+  letter-spacing:.16em; text-transform:uppercase; color:#B6E86A; }
+.l-hero-top svg{ color:#B6E86A; }
+.l-hero-h1{ font-family:var(--font-anton),'Anton',sans-serif !important;
+  font-size:clamp(34px,5.4vw,86px) !important; line-height:.94 !important;
+  text-transform:uppercase !important; letter-spacing:-.02em !important;
+  color:#fff !important; margin:0 0 22px !important; max-width:18ch; }
+.l-hero-claim{ font-family:var(--font-anton),'Anton',sans-serif !important;
+  font-size:clamp(17px,1.7vw,26px) !important; line-height:1.14 !important;
+  text-transform:uppercase !important; color:rgba(242,240,233,.9) !important;
+  margin:0 0 20px !important; max-width:44ch; }
+.l-hero-claim span{ color:#B6E86A; }
+.l-hero-lede{ font-size:17px; line-height:1.65; color:rgba(242,240,233,.78); max-width:52ch; margin-bottom:30px; }
+.l-hero .btn-ring{ background:#8FC436 !important; color:#0E0E0C !important; border-radius:999px !important; }
+.l-hero .btn-modern-ghost{ color:#fff !important; background:transparent !important;
+  border:1px solid rgba(255,255,255,.45) !important; border-radius:999px !important; }
+.l-hero .geo-aurora{ display:none !important; }
+@media(max-width:900px){ .l-hero{ min-height:auto; padding-top:110px; } .l-hero-top{ margin-bottom:34px; } }
+.l-hero-kicker{ font-size:12px; letter-spacing:.2em; text-transform:uppercase;
+  color:#B6E86A; margin-bottom:22px; }
+.l-hero-h1 span{ color:#B6E86A; }
+
+/* ============================================================================
+   Pagine che si appoggiano: l'effetto della direzione L sulle sezioni vere.
+   ========================================================================= */
+.l-pagina{ position:sticky; top:0; z-index:1;
+  border-radius:30px 30px 0 0; box-shadow:0 -26px 64px -18px rgba(0,0,0,.6); }
+.l-pagina.l-prima{ border-radius:0; }
+.l-pagina::before{ content:''; position:absolute; inset:0; z-index:60; pointer-events:none;
+  background:#05070A; opacity:calc(var(--cov,0) * .42); transition:opacity .1s linear; }
+.l-pagina > *{ transform:scale(calc(1 - var(--cov,0) * .07)); transform-origin:center 38%;
+  opacity:calc(1 - var(--cov,0) * .5); }
+@media(max-width:1000px){
+  .l-pagina{ position:static; border-radius:0; box-shadow:none; }
+  .l-pagina::before{ display:none; }
+  .l-pagina > *{ transform:none; opacity:1; }
+}
+
+/* ============================================================================
+   Barra in alto, direzione L: avorio a filo, marchio grande, voci maiuscole.
+   ========================================================================= */
+.l-nav{ background:var(--l-paper) !important; border-bottom:1px solid rgba(14,14,12,.14) !important;
+  box-shadow:none !important; backdrop-filter:none !important; }
+.l-nav.l-nav-scrolled{ background:rgba(242,240,233,.96) !important; backdrop-filter:blur(12px) !important; }
+.l-nav-logo{ height:48px !important; }
+.l-nav a, .l-nav button{ font-size:12.5px !important; letter-spacing:.14em !important;
+  text-transform:uppercase !important; font-weight:500 !important; color:var(--l-ink) !important; }
+.l-nav a:hover, .l-nav button:hover{ color:#5E7C1E !important; }
+/* la voce di azione resta pillola verde piena */
+.l-nav a[class*="btn"], .l-nav a[class*="bg-primary"]{
+  background:var(--l-seal) !important; color:var(--l-ink) !important;
+  border-radius:999px !important; padding:13px 26px !important; border:0 !important; }
+/* i menu a tendina: spigolo vivo, filo scuro */
+.l-nav .rounded-xl, .l-nav .rounded-lg{ border-radius:0 !important; }
+
+/* ============================================================================
+   Sezione settori, direzione L: sei riquadri con la foto che si accende.
+   ========================================================================= */
+.l-settori{ background:var(--l-paper); padding:104px 0 112px; }
+.l-settori-hd{ display:flex; justify-content:space-between; align-items:flex-end; gap:24px;
+  flex-wrap:wrap; margin-bottom:44px; }
+.l-settori-hd h2{ font-family:var(--font-anton),'Anton',sans-serif !important;
+  text-transform:uppercase !important; font-size:clamp(26px,3.6vw,58px) !important;
+  line-height:.92 !important; margin:0 !important; }
+.l-settori-all{ font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#5E7C1E; }
+.l-settori-g{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+.l-settore{ position:relative; display:block; overflow:hidden; color:#fff; }
+.l-settore img{ width:100%; aspect-ratio:4/5; object-fit:cover;
+  filter:brightness(.6) grayscale(.35);
+  transition:filter .7s, transform .9s cubic-bezier(.2,.8,.25,1); }
+.l-settore:hover img{ filter:brightness(.84) grayscale(0); transform:scale(1.05); }
+.l-settore-ov{ position:absolute; inset:0;
+  background:linear-gradient(0deg,rgba(7,9,10,.93),transparent 62%); }
+.l-settore-cp{ position:absolute; left:0; right:0; bottom:0; padding:30px; }
+.l-settore-cp b{ font-family:var(--font-anton),'Anton',sans-serif; font-weight:400;
+  text-transform:uppercase; font-size:26px; letter-spacing:-.01em; }
+@media(max-width:1000px){ .l-settori-g{ grid-template-columns:1fr 1fr; } }
+@media(max-width:700px){ .l-settori-g{ grid-template-columns:1fr; } }
+
+/* correzioni apertura: occhiello piccolo e verde, altezza contenuta */
+.l-hero .l-hero-kicker{ font-family:'Inter',sans-serif !important; font-size:12px !important;
+  font-weight:500 !important; letter-spacing:.2em !important; text-transform:uppercase !important;
+  color:#B6E86A !important; line-height:1.4 !important; margin:0 0 20px !important; }
+.l-hero{ min-height:0 !important; padding-top:120px !important; padding-bottom:64px !important; }
+.l-hero-top{ margin-bottom:38px !important; }
+.l-hero-h1{ font-size:clamp(30px,3.9vw,62px) !important; max-width:22ch; margin-bottom:20px !important; }
+.l-hero-lede{ font-size:16.5px; margin-bottom:26px; }
+/* l'occhiello non deve mai diventare un titolo */
+p.l-hero-kicker{ font-size:12px !important; line-height:1.4 !important;
+  font-family:'Inter',system-ui,sans-serif !important; font-weight:500 !important;
+  letter-spacing:.2em !important; color:#B6E86A !important; text-transform:uppercase !important; }
+
+/* ============================================================================
+   Apertura come nel mockup: una sola colonna, testo in basso sulla foto.
+   ========================================================================= */
+.l-hero{ min-height:92svh !important; display:flex !important; align-items:flex-end !important;
+  padding-top:120px !important; padding-bottom:64px !important; }
+.l-hero > .container-geo{ width:100%; }
+.l-hero .grid{ display:block !important; }
+.l-hero .grid > div:last-child{ display:none !important; }
+.l-hero .md\:hidden{ display:none !important; }
+.l-hero-h1{ font-size:clamp(38px,6.4vw,104px) !important; max-width:16ch !important;
+  color:#fff !important; margin-bottom:24px !important; }
+.l-hero-h1 span{ color:#B6E86A !important; }
+.l-hero-lede{ max-width:56ch; font-size:17px; }
+.l-hero-top{ margin-bottom:auto !important; }
+
+/* apertura: misura leggibile, testo in basso, niente titolo che invade lo schermo */
+.l-hero{ min-height:78svh !important; }
+.l-hero-h1{ font-size:clamp(32px,3.6vw,52px) !important; max-width:26ch !important;
+  line-height:1.02 !important; }
+.l-hero-lede{ font-size:16.5px; max-width:60ch; }
+
+/* ============================================================================
+   SEZIONI DELLA HOME NEL REGISTRO DEL MOCKUP
+   Contenuti e ordine invariati: cambia solo come sono vestiti.
+   ========================================================================= */
+
+/* --- titoli di sezione: Anton grande, a sinistra, occhiello verde --- */
+.l-body section h2{ font-family:var(--font-anton),'Anton',sans-serif !important;
+  font-weight:400 !important; text-transform:uppercase !important;
+  font-size:clamp(26px,3.6vw,58px) !important; line-height:.92 !important;
+  letter-spacing:-.018em !important; color:var(--l-ink) !important; text-align:left !important;
+  max-width:20ch; }
+.l-body section h3{ font-family:var(--font-anton),'Anton',sans-serif !important;
+  font-weight:400 !important; text-transform:uppercase !important;
+  font-size:clamp(18px,1.6vw,24px) !important; letter-spacing:-.01em !important; }
+.l-body section p{ text-align:left !important; }
+.l-body section .text-center{ text-align:left !important; }
+.l-body section .mx-auto{ margin-left:0 !important; margin-right:auto !important; }
+
+/* --- via gli angoli tondi e le ombre: il mockup e' a filo --- */
+.l-body section [class*="rounded"]:not(a):not(button):not(img){ border-radius:0 !important; }
+.l-body section [class*="shadow"]{ box-shadow:none !important; }
+.l-body section [class*="border"]{ border-color:rgba(14,14,12,.16) !important; }
+
+/* --- i cerchietti colorati con l'icona diventano quadrati a filo --- */
+.l-body section [class*="rounded-full"][class*="bg-"]{ border-radius:0 !important;
+  background:transparent !important; border:0 !important; width:auto !important; height:auto !important; padding:0 !important; }
+.l-body section [class*="rounded-full"] svg{ color:var(--l-seal) !important; }
+
+/* --- schede: niente riempimento, filo in alto come nel mockup --- */
+.l-body section [class*="bg-white"]:not(nav):not(header){
+  background:transparent !important; border:0 !important;
+  border-top:2px solid var(--l-ink) !important; border-radius:0 !important; padding-top:22px !important; }
+
+/* --- elenchi a filo con il trattino verde --- */
+.l-body section ul li{ position:relative; }
+.l-body section ul li svg{ color:var(--l-seal) !important; }
+
+/* --- sezioni scure: il nero pieno --- */
+.l-body section[class*="#0E0E0C"], .l-body section[class*="bg-\[\#0E0E0C\]"]{
+  background:var(--l-ink) !important; color:var(--l-paper) !important; }
+.l-body section[class*="#0E0E0C"] h2, .l-body section[class*="#0E0E0C"] h3{ color:var(--l-paper) !important; }
+
+/* --- recensioni: via il bordo tondo, righe a filo --- */
+.l-body [class*="review"] [class*="rounded"], .l-body section blockquote{ border-radius:0 !important; }
+.l-body section blockquote{ border:0 !important; border-top:1px solid rgba(14,14,12,.16) !important;
+  padding:30px 0 !important; background:transparent !important; }
+
+/* --- pulsanti nel corpo: pillola verde e filo --- */
+.l-body section a[class*="btn-ring"], .l-body section a[class*="bg-primary"]{
+  background:var(--l-seal) !important; color:var(--l-ink) !important; border-radius:999px !important; }
+.l-body section a[class*="ghost"]{ background:transparent !important;
+  border:1px solid rgba(14,14,12,.3) !important; border-radius:999px !important; color:var(--l-ink) !important; }
+
+/* ============================================================================
+   LISTA DIFFERENZE: punti 6, 13, 14, 15, 16, 17
+   ========================================================================= */
+
+/* 15 - piè di pagina nero con marchio grande */
+footer, footer > div, footer section{ background:var(--l-ink) !important; color:#B4BFAE !important; }
+footer *{ border-color:rgba(242,240,233,.14) !important; }
+footer img[alt*="GeoTapp"], footer img[src*="Logo"]{ height:52px !important; width:auto !important; }
+footer h4, footer h3, footer p strong{ color:var(--l-paper) !important;
+  font-size:11px !important; letter-spacing:.16em !important; text-transform:uppercase !important; }
+footer a{ color:#B4BFAE !important; }
+footer a:hover{ color:var(--l-lime) !important; }
+footer input, footer select{ background:transparent !important; color:#B4BFAE !important;
+  border-color:rgba(242,240,233,.24) !important; }
+
+/* 6 - loghi directory e stampa: grigio e hover a colori li gestiscono
+   ListedOn.tsx e FeaturedIn.tsx al loro interno (niente override qui:
+   i vecchi !important tenevano i loghi grigi anche al passaggio). */
+
+/* 13 - recensioni su nero, citazioni in Anton */
+[class*="Reviews"], section:has(> div [class*="review"]){ background:var(--l-ink) !important; color:var(--l-paper) !important; }
+[class*="Reviews"] h2, [class*="Reviews"] h3{ color:var(--l-paper) !important; }
+[class*="Reviews"] p, [class*="Reviews"] blockquote{ color:rgba(242,240,233,.9) !important; }
+[class*="Reviews"] blockquote, [class*="Reviews"] [class*="border"]{
+  background:transparent !important; border:0 !important;
+  border-top:1px solid rgba(242,240,233,.18) !important; border-radius:0 !important; }
+[class*="Reviews"] svg[class*="star"], [class*="Reviews"] [class*="text-yellow"]{ color:var(--l-seal) !important; }
+
+/* 16 - via i colori estranei da icone ed etichette */
+.l-body [class*="text-yellow"], .l-body [class*="text-amber"], .l-body [class*="text-orange"],
+.l-body [class*="text-sky"], .l-body [class*="text-cyan"], .l-body [class*="text-purple"],
+.l-body [class*="text-red-"], .l-body [class*="text-rose"]{ color:#5E7C1E !important; }
+.l-body [class*="bg-yellow"], .l-body [class*="bg-amber"], .l-body [class*="bg-orange"],
+.l-body [class*="bg-sky"], .l-body [class*="bg-cyan"], .l-body [class*="bg-purple"],
+.l-body [class*="bg-red-"], .l-body [class*="bg-rose"], .l-body [class*="bg-blue-1"]{
+  background:transparent !important; }
+
+/* 14 + 17 - la chiusura torna fotografica, e il nero pesa nel ritmo */
+.l-body section[class*="0E0E0C"]{ position:relative; }
+.l-body section[class*="0E0E0C"]::before{ content:''; position:absolute; inset:0;
+  background:url('/bg2.webp') center 58%/cover no-repeat;
+  filter:grayscale(.5) brightness(.36); z-index:0; }
+.l-body section[class*="0E0E0C"] > *{ position:relative; z-index:2; }
+
+/* 18 - impaginazione a filo, niente centrato */
+.l-body section [class*="text-center"]{ text-align:left !important; }
+.l-body section [class*="justify-center"]{ justify-content:flex-start !important; }
+.l-body section[class*="0E0E0C"] [class*="text-center"]{ text-align:left !important; }
+
+/* 2 - azione principale come nel mockup: pillola piena, niente alone */
+a[class*="btn-ring"]{ background:var(--l-seal) !important; color:var(--l-ink) !important;
+  border-radius:999px !important; box-shadow:none !important; border:0 !important; }
+a[class*="btn-ring"]::before, a[class*="btn-ring"]::after{ display:none !important; }
+a[class*="btn-modern-ghost"]{ background:transparent !important; border:0 !important;
+  border-bottom:1px solid currentColor !important; border-radius:0 !important; padding:6px 2px !important; }
+
+/* cerchi decorativi: via del tutto */
+.l-body [class*="rounded-full"][class*="border"]:not(a):not(button):not(img):empty,
+.l-body div[class*="rounded-full"][class*="absolute"],
+.l-body span[class*="rounded-full"][class*="absolute"]{ display:none !important; }
+.l-body [class*="rounded-full"][class*="border"]:not(a):not(button):not(img){
+  border:0 !important; border-radius:0 !important; }
+
+/* titoli di scheda tutti dello stesso colore, come nel mockup */
+.l-body section h3, .l-body section h3 *{ color:var(--l-ink) !important; }
+.l-body section[class*="0E0E0C"] h3, .l-body section[class*="0E0E0C"] h3 *{ color:var(--l-paper) !important; }
+footer h3, footer h4{ color:var(--l-paper) !important; }
+
+/* loghi directory: grigi e grandi ovunque siano */
+footer svg[class*="logo"], footer a svg,
+section:has(> div > *:is(p,div):is([class*="PRESENTE"],[class*="presente"])) svg{
+  filter:grayscale(1) !important; opacity:.6 !important; }
+footer a:hover svg{ filter:none !important; opacity:1 !important; }
+/* la riga "Presente su": tutti i marchi in grigio, si accendono al passaggio */
+footer a[href*="capterra"] svg, footer a[href*="getapp"] svg, footer a[href*="g2"] svg,
+footer a[href*="producthunt"] svg, footer a[href*="sourceforge"] svg, footer a[href*="slashdot"] svg,
+footer a[href*="saashub"] svg, footer a[href*="alternativeto"] svg, footer a[href*="trustradius"] svg,
+footer a[href*="softwareadvice"] svg, footer a[href*="saasworthy"] svg{
+  height:34px !important; width:auto !important; }
+
+/* la pillola dell'azione perde l'alone anche nella barra */
+.l-nav a[class*="btn-ring"], .l-nav a[class*="ring"]{ box-shadow:none !important;
+  background:var(--l-seal) !important; color:var(--l-ink) !important; }
+.l-nav a[class*="btn-ring"]::before, .l-nav a[class*="btn-ring"]::after{ display:none !important; }

@@ -1,0 +1,51 @@
+/* Direzione L — hub blog (/[locale]/blog/). Solo vestito: le classi base
+   (.ph .sec .feat .cats .posts .pag .end .w ecc.) sono gia' in l-mockup.css.
+   Qui SOLO cio' che serve in piu' per questa pagina: i pulsanti di filtro
+   categoria e paginazione sono <button>, il mockup li disegna come <a>. */
+.lp-blog .cats button {
+  border: 1px solid rgba(14, 14, 12, 0.2);
+  padding: 9px 18px;
+  font-size: 13.5px;
+  background: none;
+  color: inherit;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+.lp-blog .cats button:hover,
+.lp-blog .cats button.on {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.lp-blog .pag button {
+  border: 1px solid rgba(14, 14, 12, 0.2);
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-content: center;
+  font-size: 14px;
+  background: none;
+  color: inherit;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+.lp-blog .pag button:hover,
+.lp-blog .pag button.on {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+/* Il post in evidenza e le card della griglia sono <Link> (= <a>): il
+   mockup gia' stila `.feat` e `.posts a`, qui solo l'assenza di immagine
+   (WP puo' non avere featured image) perche' non lasci un buco vuoto. */
+.lp-blog .feat .tx {
+  min-width: 0;
+}
+.lp-blog .posts a {
+  display: block;
+}
+.lp-blog .posts .m span:last-child {
+  margin-left: auto;
+}

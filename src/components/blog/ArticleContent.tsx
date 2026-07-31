@@ -11,7 +11,7 @@ interface ArticleContentProps {
   locale?: string;
 }
 
-const CTA_LABELS: Record<string, { title: string; desc: string; btn: string }> = {
+export const CTA_LABELS: Record<string, { title: string; desc: string; btn: string }> = {
   it: { title: 'Prova GeoTapp gratis per 14 giorni', desc: 'Nessuna carta di credito. Inizia in 2 minuti.', btn: 'Inizia la prova gratuita' },
   en: { title: 'Try GeoTapp free for 14 days', desc: 'No credit card required. Get started in 2 minutes.', btn: 'Start free trial' },
   de: { title: 'GeoTapp 14 Tage kostenlos testen', desc: 'Keine Kreditkarte erforderlich. In 2 Minuten starten.', btn: 'Kostenlos testen' },
@@ -89,9 +89,9 @@ export default function ArticleContent({ html, newsletter, locale = 'it' }: Arti
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, delay: 0.15 }}
-      className="flex-1 min-w-0"
+      className="body"
     >
-      <div className="max-w-3xl mx-auto px-6 py-16">
+      <div className="py-16">
         <div
           key="article-first"
           className="article-content"

@@ -21,15 +21,19 @@ const DISCLAIMERS: Record<string, { label: string; text: string }> = {
 export default function ArticleDisclaimer({ locale = 'it' }: { locale?: string }) {
   const d = DISCLAIMERS[locale] ?? DISCLAIMERS.en;
   return (
-    <div className="bg-white">
-      <aside
-        role="note"
-        className="max-w-3xl mx-auto px-6 mt-4 mb-12"
+    <aside role="note" className="wt" style={{ margin: '0 auto 56px' }}>
+      <div
+        style={{
+          borderLeft: '3px solid var(--seal)',
+          background: 'rgba(143,196,54,.06)',
+          padding: '16px 20px',
+          fontSize: '14px',
+          lineHeight: 1.6,
+          color: '#4A5244',
+        }}
       >
-        <div className="border-l-4 border-primary bg-[#f6f8f2] rounded-lg px-5 py-4 text-sm leading-relaxed text-slate-600">
-          <strong className="text-slate-700">{d.label}.</strong> {d.text}
-        </div>
-      </aside>
-    </div>
+        <strong style={{ color: 'var(--ink)' }}>{d.label}.</strong> {d.text}
+      </div>
+    </aside>
   );
 }

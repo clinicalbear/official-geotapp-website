@@ -7,6 +7,14 @@ import Link from 'next/link';
  * Indice della sorveglianza sul lavoro in Europa: classifica dei 39 Paesi per
  * "indice di severità" (più adempimenti obbligatori = quadro più stringente),
  * derivato dai dossier verificati. Tabella ordinabile. Nessun dato inventato.
+ *
+ * Vestito "direzione L": la classe globale `.tbl` (l-mockup.css) è pensata per
+ * un confronto sì/no a 3 colonne (div-based grid, non <table>). Qui lo schema
+ * colonne è adattato a 6 colonne per una classifica numerica (# / Paese /
+ * Indice / Obblighi / Sanzione / Scheda) via regole scopate in ./l-page.css
+ * sotto .lp-risorsa-strumento .idx-tbl. La struttura resta div+grid come nel
+ * mockup, con ruoli ARIA da tabella per mantenere la semantica accessibile
+ * che aveva la <table> originale.
  */
 
 export interface IndiceRow {
@@ -47,61 +55,74 @@ export default function IndiceSorveglianzaClient({
     return r;
   }, [rows, sort]);
 
-  const Th = ({ k, children, className = '' }: { k?: SortKey; children?: React.ReactNode; className?: string }) => (
-    <th
-      className={`px-3 py-2 text-left text-xs font-semibold uppercase tracking-wide text-slate-500 ${k ? 'cursor-pointer select-none hover:text-slate-800' : ''} ${className}`}
+  const Th = ({
+    k,
+    children,
+    className = '',
+  }: {
+    k?: SortKey;
+    children?: React.ReactNode;
+    className?: string;
+  }) => (
+    <div
+      role="columnheader"
+      className={`${k ? 'sortable' : ''} ${className}`}
       onClick={k ? () => setSort(k) : undefined}
+      onKeyDown={
+        k
+          ? (e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                setSort(k);
+              }
+            }
+          : undefined
+      }
+      tabIndex={k ? 0 : undefined}
       aria-sort={k && sort === k ? 'descending' : undefined}
     >
       {children}
       {k && sort === k ? ' ▾' : ''}
-    </th>
+    </div>
   );
 
   return (
-    <div className="overflow-x-auto rounded-2xl border border-slate-200">
-      <table className="w-full min-w-[640px] border-collapse bg-white text-sm">
-        <thead className="bg-slate-50 border-b border-slate-200">
-          <tr>
-            <Th>#</Th>
-            <Th k="nome">{labels.colPaese}</Th>
-            <Th k="severita">{labels.colIndice}</Th>
-            <Th k="numObblighi" className="hidden sm:table-cell">{labels.colObblighi}</Th>
-            <Th className="hidden md:table-cell">{labels.colSanzione}</Th>
-            <Th></Th>
-          </tr>
-        </thead>
-        <tbody>
-          {sorted.map((r, i) => (
-            <tr key={r.codiceISO} className="border-b border-slate-100 last:border-0 hover:bg-slate-50">
-              <td className="px-3 py-2 text-slate-400 tabular-nums">{i + 1}</td>
-              <td className="px-3 py-2 font-medium text-slate-900 whitespace-nowrap">
-                <span aria-hidden="true">{r.bandiera}</span> {r.nome}
-              </td>
-              <td className="px-3 py-2">
-                <div className="flex items-center gap-2">
-                  <div className="h-2 w-20 rounded-full bg-slate-100 overflow-hidden">
-                    <div
-                      className="h-full rounded-full bg-[#8FC436]"
-                      style={{ width: `${r.severita}%` }}
-                    />
-                  </div>
-                  <span className="tabular-nums text-slate-700 font-semibold w-9">{r.severita}</span>
-                </div>
-              </td>
-              <td className="px-3 py-2 text-slate-600 tabular-nums hidden sm:table-cell">
-                {r.numObblighi}/{r.totaleAdempimenti}
-              </td>
-              <td className="px-3 py-2 text-slate-600 hidden md:table-cell whitespace-nowrap">{r.sanzioneImporto}</td>
-              <td className="px-3 py-2 text-right">
-                <Link href={r.href} className="text-[#6a9a1f] font-semibold hover:text-[#557d18] whitespace-nowrap">
-                  {labels.scheda} →
-                </Link>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+    <div className="tbl-wrap">
+      <div className="tbl idx-tbl" role="table" aria-label={labels.colPaese}>
+        <div className="rw hd2" role="row">
+          <Th className="c-num">#</Th>
+          <Th k="nome" className="c-paese">{labels.colPaese}</Th>
+          <Th k="severita" className="c-idx">{labels.colIndice}</Th>
+          <Th k="numObblighi" className="c-obb">{labels.colObblighi}</Th>
+          <Th className="c-san">{labels.colSanzione}</Th>
+          <Th className="c-link" />
+        </div>
+        {sorted.map((r, i) => (
+          <div key={r.codiceISO} className="rw" role="row">
+            <div role="cell" className="c-num">{i + 1}</div>
+            <div role="cell" className="lab c-paese">
+              <span aria-hidden="true">{r.bandiera}</span> {r.nome}
+            </div>
+            <div role="cell" className="c-idx">
+              <div className="idx-bar">
+                <span className="idx-track">
+                  <span className="idx-fill" style={{ width: `${r.severita}%` }} />
+                </span>
+                <b>{r.severita}</b>
+              </div>
+            </div>
+            <div role="cell" className="c-obb">
+              {r.numObblighi}/{r.totaleAdempimenti}
+            </div>
+            <div role="cell" className="c-san">{r.sanzioneImporto}</div>
+            <div role="cell" className="c-link">
+              <Link href={r.href} className="go">
+                {labels.scheda} →
+              </Link>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

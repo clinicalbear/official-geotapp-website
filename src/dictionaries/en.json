@@ -284,6 +284,11 @@
         "name": "Plumbers",
         "desc": "Plumbing, heating, boilers. GPS job reports with before-and-after photos, zero disputes about work completed.",
         "cta": "Prove every job done"
+      },
+      "termoidraulici": {
+        "name": "Heating & Plumbing",
+        "desc": "GeoTapp records every boiler and heating job with GPS, photos and verifiable timestamps. Client disputes parts replaced?",
+        "cta": "Prove replaced parts"
       }
     },
     "app_mockup": {

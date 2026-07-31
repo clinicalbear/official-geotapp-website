@@ -1,0 +1,40 @@
+/* Direzione L — variante success → .lp-success (pagina di ringraziamento
+   post-pagamento: transitoria, niente hero .ph, solo il vestito della card). */
+.lp-success{padding-top:100px}
+.lp-success .card{
+  min-height:calc(100svh - 100px);display:flex;align-items:center;justify-content:center;
+  padding:48px 16px;background:var(--ink);color:var(--paper);
+}
+.lp-success .box{
+  padding:52px 44px;max-width:440px;width:100%;text-align:center;
+  background:rgba(242,240,233,.05);border:1px solid rgba(242,240,233,.1);
+}
+.lp-success .ico{
+  width:76px;height:76px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  margin:0 auto 26px;background:rgba(143,196,54,.16);color:var(--seal);font-size:34px;
+}
+.lp-success .box h1{font-size:clamp(26px,3vw,36px);margin-bottom:16px}
+.lp-success .msg{color:rgba(242,240,233,.75);font-size:15.5px;line-height:1.6}
+.lp-success .msg p{margin-bottom:6px}
+.lp-success .msg .wait{color:var(--lime)}
+.lp-success .msg .ready{color:#a8e6b0}
+.lp-success .msg .err{color:#f0a3a3}
+.lp-success .stack{display:flex;flex-direction:column;gap:14px;margin-top:26px}
+.lp-success .pill-ok{
+  background:linear-gradient(135deg,var(--seal),var(--lime));color:var(--ink);
+  padding:16px 26px;border-radius:999px;font-weight:600;display:block;transition:transform .3s;
+}
+.lp-success .pill-ok:hover{transform:translateY(-2px)}
+.lp-success .pill-mute{
+  background:rgba(242,240,233,.08);color:var(--paper);padding:16px 26px;border-radius:999px;
+  font-weight:500;display:block;transition:background .3s;
+}
+.lp-success .pill-mute:hover{background:rgba(242,240,233,.14)}
+.lp-success .pill-ghost{
+  border:1px solid rgba(242,240,233,.3);color:var(--paper);padding:15px 26px;border-radius:999px;
+  font-weight:500;display:block;
+}
+.lp-success .pill-disabled{
+  background:rgba(242,240,233,.06);color:rgba(242,240,233,.4);padding:16px 26px;border-radius:999px;
+  font-weight:500;display:block;text-align:center;cursor:not-allowed;
+}

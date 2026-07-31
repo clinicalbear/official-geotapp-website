@@ -2,10 +2,14 @@
 //          Also injects locale-specific SoftwareApplication JSON-LD.
 
 import type { ReactNode } from 'react';
-import { Inter, Poppins } from 'next/font/google';
+import { Inter, Poppins, Anton } from 'next/font/google';
 import '../globals.css';
+import '../redesign-l.css';
+import '../l-mockup.css';
 import { clsx } from 'clsx';
 import Navbar from '@/components/Navbar';
+import LSipario from '@/components/LSipario';
+import LEffetti from '@/components/LEffetti';
 import Footer from '@/components/Footer';
 import { Toaster } from 'react-hot-toast';
 import CartDrawer from '@/components/CartDrawer';
@@ -42,6 +46,8 @@ const poppins = Poppins({
   variable: '--font-poppins',
   display: 'optional',
 });
+
+const anton = Anton({ subsets: ['latin'], weight: '400', variable: '--font-anton', display: 'swap' });
 
 type LocaleSchemaData = {
   description: string;
@@ -298,9 +304,12 @@ export default async function LocaleLayout({ children, params }: Props) {
         className={clsx(
           inter.variable,
           poppins.variable,
+          anton.variable,
           'bg-background text-text-primary font-sans antialiased selection:bg-primary selection:text-black',
         )}
       >
+        <LSipario />
+        <LEffetti />
         {/* ── Organization schema ───────────────────────────────────────────
             Standalone entity for Google Knowledge Graph. @id anchors all
             other schemas (SoftwareApplication.publisher) to this entity.
@@ -522,7 +531,9 @@ export default async function LocaleLayout({ children, params }: Props) {
             Saves ~75-90ms TBT across all non-blog pages. */}
         {/* Navbar FUORI dal wrapper overflow: un antenato con overflow!=visible rompe position:sticky */}
         <Navbar />
-        <div className="relative min-h-screen overflow-hidden">
+        {/* overflow-x-clip (non hidden): clip non crea uno scroll container,
+            quindi position:sticky dei parallax (seq/deck) continua a funzionare */}
+        <div className="relative min-h-screen overflow-x-clip">
           {/* Background Glow Effects - CSS radial-gradient instead of
               filter:blur() to avoid GPU compositing overhead on mobile.
               Visual output is identical; no per-frame repaint cost. */}

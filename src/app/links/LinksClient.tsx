@@ -20,7 +20,10 @@ export type Article = {
   sector?: Sector | null;
 };
 
-type Props = { articles: Article[]; locale?: string };
+// variant 'l': usato SOLO da /[locale]/links (registro "direzione L", con il CSS
+// del sito caricato dal layout locale). Il default resta quello di sempre, usato
+// da /links senza locale (bio Instagram, layout separato, minimale, invariato).
+type Props = { articles: Article[]; locale?: string; variant?: 'legacy' | 'l' };
 
 // ─── Localized UI texts (11 languages) ───────────────────────────────────────
 
@@ -413,15 +416,23 @@ function ArticleCard({ article, sectorLabel, index, campaign }: {
   );
 }
 
-function QuickLink({ label, href }: { label: string; href: string }) {
+function QuickLink({ label, href, rowStyle = false }: { label: string; href: string; rowStyle?: boolean }) {
+  // Variante "direzione L" (solo /[locale]/links): stesso link, a filo invece
+  // che a pillola. /links senza locale (bio Instagram, layout separato senza
+  // il CSS del registro) resta col vestito originale: cambia solo la classe,
+  // il tag <li> e il contenuto (href, label, icona) sono identici nei due casi.
   return (
-    <motion.div variants={fadeUp}>
+    <motion.li variants={fadeUp}>
       <Link href={href}
-        className="group flex items-center justify-between w-full px-5 py-3.5 rounded-xl bg-slate-50 border border-transparent hover:border-slate-200 hover:bg-white text-sm font-medium text-slate-600 hover:text-slate-900 transition-all duration-150 active:scale-[0.98]">
+        className={
+          rowStyle
+            ? 'group flex items-center justify-between w-full text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors duration-150'
+            : 'group flex items-center justify-between w-full px-5 py-3.5 rounded-xl bg-slate-50 border border-transparent hover:border-slate-200 hover:bg-white text-sm font-medium text-slate-600 hover:text-slate-900 transition-all duration-150 active:scale-[0.98]'
+        }>
         {label}
-        <ArrowRight size={14} className="text-slate-300 group-hover:text-slate-400 group-hover:translate-x-0.5 transition-all duration-150" />
+        <ArrowRight size={14} className={rowStyle ? 'text-slate-300 group-hover:text-primary group-hover:translate-x-0.5 transition-all duration-150' : 'text-slate-300 group-hover:text-slate-400 group-hover:translate-x-0.5 transition-all duration-150'} />
       </Link>
-    </motion.div>
+    </motion.li>
   );
 }
 
@@ -443,10 +454,11 @@ const FEATURED: Record<string, { label: string; sub: string }> = {
   ru: { label: 'О нас пишет AZ Big Media', sub: 'Микеле об автоматизации процессов' },
 };
 
-export default function LinksClient({ articles, locale = 'it' }: Props) {
+export default function LinksClient({ articles, locale = 'it', variant = 'legacy' }: Props) {
   const t = UI[locale] ?? UI['it'];
   const survey = SURVEY[locale] ?? SURVEY['it'];
   const langPath = locale === 'it' ? 'it' : locale;
+  const isL = variant === 'l';
 
   const trialHref = `https://geotapp.com/${langPath}/trial/`;
   const demoHref = `https://geotapp.com/${langPath}/contact/`;
@@ -458,7 +470,7 @@ export default function LinksClient({ articles, locale = 'it' }: Props) {
   };
 
   return (
-    <div className="min-h-screen bg-white selection:bg-primary/20 selection:text-slate-900">
+    <div className={`min-h-screen bg-white selection:bg-primary/20 selection:text-slate-900${isL ? ' lp-links-inner' : ''}`}>
 
       <div aria-hidden="true" className="pointer-events-none fixed inset-0 overflow-hidden">
         <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[480px] h-[480px] rounded-full bg-primary/5 blur-3xl" />
@@ -680,12 +692,12 @@ export default function LinksClient({ articles, locale = 'it' }: Props) {
           viewport={{ once: true, margin: '-30px' }} transition={{ duration: 0.4 }}>
           <p className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.14em] mb-3.5">{t.quickLabel}</p>
         </motion.div>
-        <motion.div initial="hidden" whileInView="show" viewport={{ once: true, margin: '-20px' }}
-          variants={stagger} className="space-y-2">
-          <QuickLink label={t.pricing} href={withUtm(`https://geotapp.com/${langPath}/pricing/`, 'ig_links_nav', 'quick_pricing')} />
-          <QuickLink label={t.contact} href={withUtm(`https://geotapp.com/${langPath}/contact/`, 'ig_links_nav', 'quick_contact')} />
-          <QuickLink label={t.mainSite} href={withUtm('https://geotapp.com', 'ig_links_nav', 'quick_main')} />
-        </motion.div>
+        <motion.ul initial="hidden" whileInView="show" viewport={{ once: true, margin: '-20px' }}
+          variants={stagger} className={isL ? 'rows' : 'space-y-2'}>
+          <QuickLink rowStyle={isL} label={t.pricing} href={withUtm(`https://geotapp.com/${langPath}/pricing/`, 'ig_links_nav', 'quick_pricing')} />
+          <QuickLink rowStyle={isL} label={t.contact} href={withUtm(`https://geotapp.com/${langPath}/contact/`, 'ig_links_nav', 'quick_contact')} />
+          <QuickLink rowStyle={isL} label={t.mainSite} href={withUtm('https://geotapp.com', 'ig_links_nav', 'quick_main')} />
+        </motion.ul>
       </section>
 
       {/* SOCIAL */}

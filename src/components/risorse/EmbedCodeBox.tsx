@@ -44,19 +44,19 @@ export default function EmbedCodeBox({ embedUrl, pageUrl, pageTitle, labels }: P
   };
 
   return (
-    <section className="mt-10 rounded-2xl border border-slate-200 bg-slate-50 p-6">
+    <section className="mt-10 border border-[rgba(14,14,12,.18)] bg-white p-6">
       <div className="flex items-center gap-2 mb-1">
-        <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-slate-200 text-slate-700">
+        <span className="inline-flex h-9 w-9 items-center justify-center bg-[rgba(14,14,12,.08)] text-[#0E0E0C]">
           <Code2 size={18} />
         </span>
-        <h2 className="text-lg font-bold text-slate-900">{labels.titolo}</h2>
+        <h2 className="text-lg text-[#0E0E0C]">{labels.titolo}</h2>
       </div>
-      <p className="text-sm text-slate-600 leading-relaxed mb-4">{labels.desc}</p>
+      <p className="text-sm text-[#4A5244] leading-relaxed mb-4">{labels.desc}</p>
       <div className="flex items-center justify-end mb-1">
         <button
           type="button"
           onClick={copy}
-          className="rounded-md bg-[#8FC436] hover:bg-[#7db02e] text-slate-900 text-xs font-bold px-3 py-1 transition-colors"
+          className="rounded-full bg-[#8FC436] hover:bg-[#7db02e] text-[#0E0E0C] text-xs font-bold px-3 py-1 transition-colors"
         >
           {copied ? labels.copiato : labels.copia}
         </button>
@@ -66,7 +66,7 @@ export default function EmbedCodeBox({ embedUrl, pageUrl, pageTitle, labels }: P
         value={code}
         rows={4}
         onFocus={(e) => e.currentTarget.select()}
-        className="w-full rounded-lg bg-white border border-slate-200 px-3 py-2 text-xs font-mono text-slate-700 resize-none"
+        className="w-full bg-[#F7F6F2] border border-[rgba(14,14,12,.18)] px-3 py-2 text-xs font-mono text-[#3B4237] resize-none"
       />
     </section>
   );

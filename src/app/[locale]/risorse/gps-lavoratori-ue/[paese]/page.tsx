@@ -152,6 +152,9 @@ export default async function SchedaPaesePage({
         locale={resolvedLocale}
         trialUrl={trialUrl}
         nomePaese={nomePaese}
+        hubHref={localizePath('/risorse/gps-lavoratori-ue/', resolvedLocale)}
+        homeHref={`/${resolvedLocale}/`}
+        resourcesLabel={fullDict.navbar.resources}
         attribuzione={
           <RisorsaAttribuzione
             pageUrl={`https://geotapp.com${currentHref}`}

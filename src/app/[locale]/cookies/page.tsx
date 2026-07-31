@@ -35,5 +35,12 @@ export default async function LocaleCookiesPage({ params }: { params: Promise<{ 
   const { locale } = await params;
   const meta = META[locale] ?? META.en;
   const content = getCookiesContent(locale as AppLocale);
-  return LegalMarkdownPage({ markdownContent: content, title: meta.pageTitle, subtitle: meta.subtitle });
+  return LegalMarkdownPage({
+    markdownContent: content,
+    title: meta.pageTitle,
+    subtitle: meta.subtitle,
+    description: meta.description,
+    slug: 'cookies',
+    locale: locale as AppLocale,
+  });
 }

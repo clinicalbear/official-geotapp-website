@@ -1,0 +1,36 @@
+/* CSS di pagina per il template condiviso delle pagine di confronto singole
+   (le route "geotapp-vs-" e /confronto/dinamico/). Scopato con lp-confronto-vs,
+   non tocca l-mockup.css/redesign-l.css/globals.css. */
+
+.lp-confronto-vs .note {
+  border-left: 3px solid var(--sky);
+  background: rgba(59, 174, 224, 0.08);
+  padding: 20px 26px;
+  margin-bottom: 34px;
+  border-radius: 4px;
+}
+.lp-confronto-vs .note .t { margin-bottom: 6px; }
+.lp-confronto-vs .note p { font-size: 15px; color: #3B4237; margin: 0; }
+.lp-confronto-vs .note p + p { margin-top: 6px; }
+
+.lp-confronto-vs .takeaway {
+  margin-top: 24px;
+  padding: 16px 20px;
+  border: 1px solid rgba(14, 14, 12, 0.12);
+  border-radius: 8px;
+  background: rgba(14, 14, 12, 0.03);
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: #3B4237;
+}
+
+.lp-confronto-vs .foot {
+  margin-top: 30px;
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: rgba(14, 14, 12, 0.55);
+  max-width: 86ch;
+}
+
+.lp-confronto-vs .end .blog-link { margin-top: 26px; }
+.lp-confronto-vs .end .blog-link a { color: var(--lime); }

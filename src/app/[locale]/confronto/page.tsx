@@ -1,10 +1,17 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 import { TrialCTALink } from '@/components/analytics/TrialCTALink';
 import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
 import { translatePath } from '@/lib/i18n/slug-map';
 import type { AppLocale } from '@/lib/i18n/config';
+import { HOME_LABEL } from '@/lib/seo/comparisonSchema';
+import LNastro from '@/components/LNastro';
+import './l-page.css';
 export { generateLocaleStaticParams as generateStaticParams } from '@/lib/i18n/static-params';
+
+const ListedOn = dynamic(() => import('@/components/ListedOn'), { ssr: true });
+const FeaturedIn = dynamic(() => import('@/components/FeaturedIn'), { ssr: true });
 
 const PATHNAME = '/confronto/';
 
@@ -237,116 +244,98 @@ export default async function ConfrontoIndexPage({ params }: { params: Promise<{
     ],
   };
 
+  const homeLabel = HOME_LABEL[locale] ?? HOME_LABEL.en;
+
+  const dynamicTitle = {
+    it: '🆕 Comparativa Dinamica, confronta TUTTI in una pagina',
+    en: '🆕 Live Comparison, compare ALL competitors in one place',
+    de: '🆕 Dynamischer Vergleich, alle Konkurrenten auf einer Seite',
+    fr: '🆕 Comparatif Dynamique, tous les concurrents sur une page',
+    es: '🆕 Comparativa Dinámica, todos los competidores en una página',
+    nl: '🆕 Dynamische Vergelijking, alle concurrenten op één pagina',
+    pt: '🆕 Comparação Dinâmica, todos os concorrentes numa página',
+    da: '🆕 Dynamisk sammenligning, alle konkurrenter på én side',
+    sv: '🆕 Dynamisk jämförelse, alla konkurrenter på en sida',
+    nb: '🆕 Dynamisk sammenligning, alle konkurrenter på én side',
+    ru: '🆕 Динамическое сравнение, все конкуренты на одной странице',
+  }[locale] ?? '🆕 Live Comparison, compare ALL competitors in one place';
+
+  const dynamicSubtitle = {
+    it: 'Selettore competitor + tabella 12 feature aggiornata in tempo reale. Tutte le alternative confrontate in un solo posto.',
+    en: 'Competitor selector + 12-feature table updated in real time. All alternatives compared in one place.',
+    de: 'Konkurrenten-Auswahl + 12-Feature-Tabelle in Echtzeit. Alle Alternativen auf einer Seite.',
+    fr: 'Sélecteur de concurrents + tableau 12 fonctions en temps réel. Toutes les alternatives au même endroit.',
+    es: 'Selector de competidores + tabla de 12 funciones en tiempo real. Todas las alternativas en un solo lugar.',
+    nl: 'Concurrent-selector + tabel met 12 functies in real time. Alle alternatieven op één plek.',
+    pt: 'Seletor de concorrentes + tabela de 12 funções em tempo real. Todas as alternativas num só lugar.',
+    da: 'Konkurrentvælger + tabel med 12 funktioner opdateret i realtid. Alle alternativer ét sted.',
+    sv: 'Konkurrentväljare + tabell med 12 funktioner uppdaterad i realtid. Alla alternativ på ett ställe.',
+    nb: 'Konkurrentvelger + tabell med 12 funksjoner oppdatert i sanntid. Alle alternativer på ett sted.',
+    ru: 'Выбор конкурента + таблица из 12 функций в реальном времени. Все альтернативы в одном месте.',
+  }[locale] ?? 'Competitor selector + 12-feature table updated in real time.';
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
 
-      <div className="min-h-screen pt-5 pb-20 px-6">
-        <div className="container mx-auto max-w-4xl">
-
-          <div className="text-center mb-16">
-            <span className="inline-block text-xs font-semibold tracking-widest uppercase text-primary mb-4">
-              {c.badge}
-            </span>
-            <h1 className="text-4xl md:text-5xl font-display font-bold mb-6">
-              GeoTapp vs{' '}
-              <span className="text-primary">
-                {c.title_suffix}
-              </span>
-            </h1>
-            <p className="text-lg text-text-secondary max-w-2xl mx-auto">
-              {c.intro}
-            </p>
-          </div>
-
-          <Link
-            href={`/${locale}/confronto/dinamico/`}
-            className="block group mb-8 bg-gradient-to-br from-primary/20 via-primary/10 to-purple-500/10 border border-primary/40 hover:border-primary/70 rounded-2xl p-6 transition-all duration-200"
-          >
-            <div className="flex items-start justify-between gap-4">
-              <div className="flex-1">
-                <div className="flex items-center gap-3 mb-2">
-                  <span className="font-bold text-lg">
-                    {{
-                      it: '🆕 Comparativa Dinamica, confronta TUTTI in una pagina',
-                      en: '🆕 Live Comparison, compare ALL competitors in one place',
-                      de: '🆕 Dynamischer Vergleich, alle Konkurrenten auf einer Seite',
-                      fr: '🆕 Comparatif Dynamique, tous les concurrents sur une page',
-                      es: '🆕 Comparativa Dinámica, todos los competidores en una página',
-                      nl: '🆕 Dynamische Vergelijking, alle concurrenten op één pagina',
-                      pt: '🆕 Comparação Dinâmica, todos os concorrentes numa página',
-                      da: '🆕 Dynamisk sammenligning, alle konkurrenter på én side',
-                      sv: '🆕 Dynamisk jämförelse, alla konkurrenter på en sida',
-                      nb: '🆕 Dynamisk sammenligning, alle konkurrenter på én side',
-                      ru: '🆕 Динамическое сравнение, все конкуренты на одной странице',
-                    }[locale] ?? '🆕 Live Comparison, compare ALL competitors in one place'}
-                  </span>
-                </div>
-                <p className="text-text-secondary text-sm">
-                  {{
-                    it: 'Selettore competitor + tabella 12 feature aggiornata in tempo reale. Tutte le alternative confrontate in un solo posto.',
-                    en: 'Competitor selector + 12-feature table updated in real time. All alternatives compared in one place.',
-                    de: 'Konkurrenten-Auswahl + 12-Feature-Tabelle in Echtzeit. Alle Alternativen auf einer Seite.',
-                    fr: 'Sélecteur de concurrents + tableau 12 fonctions en temps réel. Toutes les alternatives au même endroit.',
-                    es: 'Selector de competidores + tabla de 12 funciones en tiempo real. Todas las alternativas en un solo lugar.',
-                    nl: 'Concurrent-selector + tabel met 12 functies in real time. Alle alternatieven op één plek.',
-                    pt: 'Seletor de concorrentes + tabela de 12 funções em tempo real. Todas as alternativas num só lugar.',
-                    da: 'Konkurrentvælger + tabel med 12 funktioner opdateret i realtid. Alle alternativer ét sted.',
-                    sv: 'Konkurrentväljare + tabell med 12 funktioner uppdaterad i realtid. Alla alternativ på ett ställe.',
-                    nb: 'Konkurrentvelger + tabell med 12 funksjoner oppdatert i sanntid. Alle alternativer på ett sted.',
-                    ru: 'Выбор конкурента + таблица из 12 функций в реальном времени. Все альтернативы в одном месте.',
-                  }[locale] ?? 'Competitor selector + 12-feature table updated in real time.'}
-                </p>
-              </div>
-              <span className="text-primary text-xl group-hover:translate-x-1 transition-transform mt-1">→</span>
+      <div className="lp-l lp-confronto">
+        <section className="ph">
+          <div className="crumb"><div className="w">
+            <Link href={`/${locale}/`}>{homeLabel}</Link> / {c.breadcrumb}
+          </div></div>
+          <div className="w">
+            <p className="kk k"><s />{c.badge}</p>
+            <h1>GeoTapp vs<br /><em>{c.title_suffix}</em></h1>
+            <p className="lede">{c.intro}</p>
+            <div className="acts">
+              <TrialCTALink href={`/${locale}/trial/`} source="confronto_index" className="b1">{c.cta_btn}</TrialCTALink>
             </div>
-          </Link>
+          </div>
+        </section>
 
-          <div className="space-y-4">
-            {COMPARISONS.map((item: any) => {
+        <section className="sec"><div className="w">
+          <div className="vs">
+            <Link href={`/${locale}/confronto/dinamico/`} className="r d1 hi">
+              <h3><span className="live" /> {dynamicTitle}</h3>
+              <p>{dynamicSubtitle}</p>
+              <span className="go">&rarr;</span>
+            </Link>
+            {COMPARISONS.map((item: any, i: number) => {
               const loc = item[locale] ?? item.en;
               return (
                 <Link
                   key={item.slug}
                   href={`/${locale}${translatePath(`/confronto/${item.slug}/`, locale as AppLocale)}`}
-                  className="block group bg-white/5 hover:bg-white/8 border border-white/10 hover:border-primary/30 rounded-2xl p-6 transition-all duration-200"
+                  className={`r d${Math.min(i + 2, 4)}`}
                 >
-                  <div className="flex items-start justify-between gap-4">
-                    <div className="flex-1">
-                      <div className="flex items-center gap-3 mb-2">
-                        <span className="font-bold text-lg">GeoTapp vs {item.competitor}</span>
-                        <span className="text-xs text-primary border border-primary/30 rounded-full px-2 py-0.5">
-                          {loc.tagline}
-                        </span>
-                      </div>
-                      <p className="text-text-secondary text-sm">
-                        {loc.highlight}
-                      </p>
-                    </div>
-                    <span className="text-primary text-xl group-hover:translate-x-1 transition-transform mt-1">→</span>
-                  </div>
+                  <h3>GeoTapp vs {item.competitor}</h3>
+                  <p className="tag">{loc.tagline}</p>
+                  <p>{loc.highlight}</p>
+                  <span className="go">&rarr;</span>
                 </Link>
               );
             })}
           </div>
+        </div></section>
 
-          <div className="mt-16 text-center bg-gradient-to-br from-primary/20 to-purple-500/10 border border-primary/20 rounded-2xl p-10">
-            <h2 className="text-2xl font-bold mb-3">
-              {c.cta_title}
-            </h2>
-            <p className="text-text-secondary mb-6">
-              {c.cta_desc}
-            </p>
-            <TrialCTALink
-              href={`/${locale}/trial/`}
-              source="confronto_index"
-              className="btn-ring"
-            >
-              {c.cta_btn}
-            </TrialCTALink>
+        <LNastro />
+
+        <section className="dirs">
+          <div className="host"><ListedOn locale={locale} /><FeaturedIn locale={locale} /></div>
+        </section>
+
+        <section className="end">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img className="bg" src="/bg2.webp" alt="" loading="lazy" />
+          <div className="ov" />
+          <div className="w">
+            <h2 className="r">{c.cta_title}</h2>
+            <p className="r d1">{c.cta_desc}</p>
+            <div className="acts r d2">
+              <TrialCTALink href={`/${locale}/trial/`} source="confronto_index" className="b1">{c.cta_btn}</TrialCTALink>
+            </div>
           </div>
-
-        </div>
+        </section>
       </div>
     </>
   );

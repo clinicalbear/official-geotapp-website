@@ -5,7 +5,7 @@ import { PRESS_COVERAGE, hasPress, pressRel } from '@/lib/press/data';
 
 // Media/press credibility bar ("cited by"). Localized idiomatically per market
 // (a literal "cited on" reads wrong in EN/DE), mirroring the ListedOn label set.
-const LABEL: Record<string, string> = {
+export const FEATURED_LABEL: Record<string, string> = {
   it: 'Citati su',
   en: 'Featured in',
   de: 'Bekannt aus',
@@ -75,7 +75,7 @@ const styles = `
 export default function FeaturedIn({ locale }: { locale: string }) {
   // Same data source as /stampa: add a PressItem there and it shows up here too.
   if (!hasPress(PRESS_COVERAGE)) return null;
-  const label = LABEL[locale] ?? LABEL.en;
+  const label = FEATURED_LABEL[locale] ?? FEATURED_LABEL.en;
 
   return (
     <motion.section
@@ -94,29 +94,7 @@ export default function FeaturedIn({ locale }: { locale: string }) {
     >
       <style dangerouslySetInnerHTML={{ __html: styles }} />
 
-      {/* Watermark label, same treatment as the "Listed on" bar */}
-      <span
-        aria-hidden="true"
-        style={{
-          position: 'absolute',
-          top: '25px',
-          left: '50%',
-          transform: 'translateX(-50%)',
-          fontFamily: 'var(--font-poppins, Poppins, sans-serif)',
-          fontSize: 'clamp(19px, 3.7vw, 43px)',
-          fontWeight: 900,
-          color: 'rgba(51, 51, 51, 0.10)',
-          textTransform: 'uppercase',
-          letterSpacing: '0.04em',
-          whiteSpace: 'nowrap',
-          pointerEvents: 'none',
-          userSelect: 'none',
-          lineHeight: 1,
-          zIndex: 0,
-        }}
-      >
-        {label}
-      </span>
+      {/* Watermark rimosso 31/07: l'etichetta la da' l'occhiello della sezione */}
 
       {/* Loghi nudi (niente riquadri) su una striscia che scorre in continuo.
           Il set e' ripetuto 3 volte: la copia 1 sono i link veri, le altre due

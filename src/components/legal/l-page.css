@@ -1,0 +1,22 @@
+/* Vestito direzione L per privacy/terms/cookies — solo CSS, zero contenuti
+   nuovi: il markdown legale (privacy-i18n.ts, terms-i18n.ts, cookies-i18n.ts)
+   resta identico, parola per parola, clausola per clausola. Scopato con
+   .lp-legale, non tocca il resto del sito. */
+
+.lp-legale .gl .body h1{font-size:clamp(24px,2.8vw,38px);margin:0 0 8px}
+.lp-legale .gl .body h3{font-size:19px;margin:32px 0 12px;text-transform:none;letter-spacing:0;font-family:'Inter',system-ui,sans-serif;font-weight:600}
+.lp-legale .gl .body ul{margin:0 0 20px;max-width:72ch}
+.lp-legale .gl .body ul li{padding:6px 0 6px 22px;position:relative;color:#2E342A;font-size:15.5px;line-height:1.6}
+.lp-legale .gl .body ul li::before{content:'';position:absolute;left:0;top:15px;width:10px;height:1px;background:var(--seal)}
+.lp-legale .gl .body strong{color:var(--ink)}
+.lp-legale .gl .body hr{border:0;border-top:1px solid rgba(14,14,12,.16);margin:34px 0}
+.lp-legale .gl .body blockquote{border-left:2px solid var(--seal);padding:4px 0 4px 20px;margin:20px 0;color:#4A5244;max-width:70ch}
+.lp-legale .gl .body code{background:#EAE7DE;padding:2px 6px;border-radius:4px;font-size:14px}
+.lp-legale .gl .body table{width:100%;border-collapse:collapse;margin:24px 0 30px;font-size:14.5px}
+.lp-legale .gl .body th,.lp-legale .gl .body td{text-align:left;padding:11px 14px;border-bottom:1px solid rgba(14,14,12,.12);vertical-align:top}
+.lp-legale .gl .body th{font-weight:600;color:var(--ink);border-bottom:2px solid rgba(14,14,12,.3)}
+.lp-legale .gl .body a{border-bottom:1px solid currentColor;opacity:.85}
+.lp-legale .gl .body a:hover{opacity:1;color:var(--seal)}
+@media(max-width:700px){
+  .lp-legale .gl .body table{display:block;overflow-x:auto}
+}
