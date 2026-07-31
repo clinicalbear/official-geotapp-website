@@ -1058,3 +1058,6 @@ a[class*="bg-emerald-500"]{background-color:#10b981 !important;color:#fff !impor
 /* blocco 01-02-03: restano solo il filo alto del contenitore, niente altri bordi */
 .lp-home .pg2 .three, .lp-home .pg2 .three article{border-left:0 !important;
   border-right:0 !important;border-bottom:0 !important}
+/* dentro i form, .two e' solo una griglia: niente cornici del pannello doppio */
+.form .two{gap:20px;background:transparent}
+.form .two>div{background:transparent;padding:0}

@@ -178,8 +178,10 @@ export function DynamicComparison({ locale, copy, initialId }: Props) {
       </div>
 
       {/* CTA */}
-      <div className="rounded-2xl bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-10 text-center">
-        <h2 className="mb-3 text-2xl font-bold text-white sm:text-3xl">
+      {/* fondo nero pieno esplicito: i gradienti vengono azzerati dallo strato L
+          e il testo bianco restava su avorio, illeggibile */}
+      <div className="rounded-2xl p-10 text-center" style={{ background: '#0E0E0C' }}>
+        <h2 className="mb-3 text-2xl font-bold text-white sm:text-3xl" style={{ lineHeight: 1.05 }}>
           {copy.ctaTitle}
         </h2>
         <p className="mb-6 text-base text-slate-300">{copy.ctaDesc}</p>
