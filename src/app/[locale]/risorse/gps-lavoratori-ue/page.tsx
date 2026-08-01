@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
+import { buildLocaleAlternates, buildCanonicalUrl } from '@/lib/i18n/locale-metadata';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import { SUPPORTED_LOCALES } from '@/lib/i18n/config';
 import type { AppLocale } from '@/lib/i18n/config';
@@ -46,6 +46,13 @@ export async function generateMetadata({
     title: { absolute: dict.metaTitleSelettore },
     description: dict.metaDescSelettore,
     alternates: buildLocaleAlternates(locale, '/risorse/gps-lavoratori-ue/'),
+    openGraph: {
+      url: buildCanonicalUrl(locale, '/risorse/gps-lavoratori-ue/'),
+      type: 'website',
+      title: dict.metaTitleSelettore,
+      description: dict.metaDescSelettore,
+      images: [{ url: '/og-default.png', width: 1200, height: 630, alt: dict.metaTitleSelettore }],
+    },
   };
 }
 

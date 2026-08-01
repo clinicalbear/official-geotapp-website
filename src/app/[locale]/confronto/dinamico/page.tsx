@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
+import { buildLocaleAlternates, buildCanonicalUrl } from '@/lib/i18n/locale-metadata';
 import { DynamicComparison } from '@/components/DynamicComparison';
 import { TrialCTALink } from '@/components/analytics/TrialCTALink';
 import LNastro from '@/components/LNastro';
@@ -299,10 +299,11 @@ export async function generateMetadata({
     description: m.description,
     alternates: buildLocaleAlternates(locale, PATHNAME),
     openGraph: {
-      url: `https://geotapp.com/${locale}${PATHNAME}`,
+      url: buildCanonicalUrl(locale, PATHNAME),
       type: 'website',
       title: m.title,
       description: m.description,
+      images: [{ url: '/og-default.png', width: 1200, height: 630, alt: m.title }],
     },
     twitter: {
       card: 'summary_large_image',

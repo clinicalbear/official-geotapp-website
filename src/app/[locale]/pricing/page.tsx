@@ -1,7 +1,7 @@
 
 
 import type { Metadata } from 'next';
-import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
+import { buildLocaleAlternates, buildCanonicalUrl } from '@/lib/i18n/locale-metadata';
 import {
   EUR_PRICES,
   convertEurToLocale,
@@ -193,8 +193,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     description: meta.description,
     alternates: buildLocaleAlternates(locale, '/pricing/'),
     openGraph: {
-      url: `https://geotapp.com/${locale}/pricing/`,
+      url: buildCanonicalUrl(locale, '/pricing/'),
       type: 'website',
+      images: [{ url: '/og-default.png', width: 1200, height: 630, alt: meta.title }],
       title: meta.title,
       description: meta.description,
     },

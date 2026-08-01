@@ -315,7 +315,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: meta.title,
       description: meta.description,
-      url: `${BASE_URL}/${locale}/`,
+      // og:url deve coincidere col canonical (regionali EN comprese); un blocco
+      // openGraph dichiarato qui SOSTITUISCE quello del layout, quindi le images
+      // vanno ridichiarate o la card social esce nuda.
+      url: `${BASE_URL}/${canonicalLocale}/`,
+      images: [{ url: '/og-default.png', width: 1200, height: 630, alt: meta.title }],
     },
     twitter: {
       title: meta.title,

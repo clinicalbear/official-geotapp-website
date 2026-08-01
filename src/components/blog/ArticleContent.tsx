@@ -45,13 +45,13 @@ function MidArticleCta({ locale }: { locale: string }) {
 export default function ArticleContent({ html, newsletter, locale = 'it' }: ArticleContentProps) {
   // Split content roughly in half at a paragraph boundary to insert mid-article CTA
   const [firstHalf, secondHalf] = useMemo(() => {
-    // WP avvolge il contenuto in <article class="zenith-imported-content">...</article>.
-    // Va rimosso PRIMA dello split: altrimenti la prima metà resta con <article> aperto
-    // e la seconda con </article> orfano, che il browser chiude contro il motion.article
-    // che avvolge tutto → ristrutturazione DOM → hydration mismatch sulla newsletter.
-    const clean = html
-      .replace(/^\s*<article\b[^>]*>/i, '')
-      .replace(/<\/article>\s*$/i, '');
+    // WP avvolge il contenuto in <article class="zenith-imported-content">...</article>,
+    // ma il </article> NON è sempre in fondo: la pipeline appende CTA e paragrafi dopo
+    // la chiusura, e un </article> orfano a metà contenuto fa chiudere al browser il
+    // motion.article che avvolge tutto (con py-16 e article-content chiusi per
+    // implicazione) → il widget newsletter risale a div.w → hydration mismatch #418.
+    // Dentro il corpo un tag <article> non ha comunque motivo di esistere: si tolgono TUTTI.
+    const clean = html.replace(/<\/?article\b[^>]*>/gi, '');
     const paragraphs = clean.split('</p>');
     if (paragraphs.length < 6) return [clean, ''];
     const midIndex = Math.floor(paragraphs.length / 2);

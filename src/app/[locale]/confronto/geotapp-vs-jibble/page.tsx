@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import ComparisonPageL from '@/components/ComparisonPageL';
-import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
+import { buildLocaleAlternates, buildCanonicalUrl } from '@/lib/i18n/locale-metadata';
 import {
   buildComparisonArticle,
   buildComparisonBreadcrumb,
@@ -339,7 +339,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     title: { absolute: m.title },
     description: m.description,
     alternates: buildLocaleAlternates(locale, PATHNAME),
-    openGraph: { url: `https://geotapp.com/${locale}${PATHNAME}`, type: 'website', title: m.title, description: m.description },
+    openGraph: { url: buildCanonicalUrl(locale, PATHNAME), type: 'website', title: m.title, description: m.description, images: [{ url: '/og-default.png', width: 1200, height: 630, alt: m.title }] },
     twitter: { card: 'summary_large_image', title: m.title, description: m.description },
   };
 }

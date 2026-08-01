@@ -1,7 +1,7 @@
 
 
 import type { Metadata } from 'next';
-import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
+import { buildLocaleAlternates, buildCanonicalUrl } from '@/lib/i18n/locale-metadata';
 
 const GUIDA_META: Record<string, { title: string; description: string }> = {
   it: { title: 'Guida utente GeoTapp - Come iniziare | GeoTapp', description: 'Guida completa a GeoTapp: come configurare il team, avviare le timbrature GPS, generare report verificabili e usare il Verifier. Per amministratori e operatori.' },
@@ -24,6 +24,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     title: { absolute: meta.title },
     description: meta.description,
     alternates: buildLocaleAlternates(locale, '/guida/'),
+    openGraph: {
+      url: buildCanonicalUrl(locale, '/guida/'),
+      type: 'website',
+      title: meta.title,
+      description: meta.description,
+      images: [{ url: '/og-default.png', width: 1200, height: 630, alt: meta.title }],
+    },
   };
 }
 export { generateLocaleStaticParams as generateStaticParams } from '@/lib/i18n/static-params';

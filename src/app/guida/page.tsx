@@ -49,6 +49,8 @@ export default function GuidePage() {
   }, [content]);
 
   const components: Components = {
+    /* la H1 della pagina e' nella testata: il titolo del markdown scende a h2 per non duplicare il tag */
+    h1: ({ children }) => <h2>{children}</h2>,
     h2: ({ children }) => {
       const text = String(Array.isArray(children) ? children.join('') : children);
       return <h2 id={slugify(text)}>{children}</h2>;

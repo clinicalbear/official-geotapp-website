@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import './l-page.css';
 import { getDictionary } from '@/lib/i18n/dictionaries';
-import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
+import { buildLocaleAlternates, buildCanonicalUrl } from '@/lib/i18n/locale-metadata';
 import { generateLocaleStaticParams as generateStaticParams } from '@/lib/i18n/static-params';
 import type { AppLocale } from '@/lib/i18n/config';
 import BlogClient, { type Post } from './BlogClient';
@@ -238,10 +238,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     description: b.meta_desc,
     alternates: buildLocaleAlternates(locale, '/blog/'),
     openGraph: {
-      url: `https://geotapp.com/${locale}/blog/`,
+      url: buildCanonicalUrl(locale, '/blog/'),
       type: 'website',
       title: b.meta_title,
       description: b.meta_desc,
+      images: [{ url: '/og-default.png', width: 1200, height: 630, alt: b.meta_title }],
     },
   };
 }

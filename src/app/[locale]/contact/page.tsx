@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
+import { buildLocaleAlternates, buildCanonicalUrl } from '@/lib/i18n/locale-metadata';
 
 const CONTACT_META: Record<string, { title: string; description: string }> = {
   it: { title: 'Contatta GeoTapp - Supporto clienti | GeoTapp', description: 'Hai domande su GeoTapp? Scrivici. Il team risponde in italiano e inglese per supporto, partnership e informazioni commerciali.' },
@@ -23,8 +23,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     description: meta.description,
     alternates: buildLocaleAlternates(locale, '/contact/'),
     openGraph: {
-      url: `https://geotapp.com/${locale}/contact/`,
+      url: buildCanonicalUrl(locale, '/contact/'),
       type: 'website',
+      images: [{ url: '/og-default.png', width: 1200, height: 630, alt: meta.title }],
       title: meta.title,
       description: meta.description,
     },
