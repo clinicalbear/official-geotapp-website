@@ -25,6 +25,8 @@ export interface IndiceRow {
   numObblighi: number;
   totaleAdempimenti: number;
   sanzioneImporto: string;
+  /** Stima in euro dell'importo, solo per ordinare (mai mostrata). */
+  sanzioneVal: number;
   href: string;
 }
 
@@ -36,7 +38,7 @@ export interface IndiceLabels {
   scheda: string;
 }
 
-type SortKey = 'severita' | 'nome' | 'numObblighi';
+type SortKey = 'severita' | 'nome' | 'numObblighi' | 'sanzione';
 
 export default function IndiceSorveglianzaClient({
   rows,
@@ -53,6 +55,7 @@ export default function IndiceSorveglianzaClient({
     const r = [...rows];
     if (sort === 'nome') r.sort((a, b) => a.nome.localeCompare(b.nome));
     else if (sort === 'numObblighi') r.sort((a, b) => b.numObblighi - a.numObblighi || b.severita - a.severita);
+    else if (sort === 'sanzione') r.sort((a, b) => b.sanzioneVal - a.sanzioneVal || b.severita - a.severita);
     else r.sort((a, b) => b.severita - a.severita || a.nome.localeCompare(b.nome));
     return r;
   }, [rows, sort]);
@@ -96,7 +99,7 @@ export default function IndiceSorveglianzaClient({
           <Th k="nome" className="c-paese">{labels.colPaese}</Th>
           <Th k="severita" className="c-idx">{labels.colIndice}</Th>
           <Th k="numObblighi" className="c-obb">{labels.colObblighi}</Th>
-          <Th className="c-san">{labels.colSanzione}</Th>
+          <Th k="sanzione" className="c-san">{labels.colSanzione}</Th>
           <Th className="c-link" />
         </div>
         {sorted.map((r, i) => (

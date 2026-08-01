@@ -30,6 +30,30 @@ export interface PaeseSeverita {
   sanzioneImporto: import('./types').TestoLoc;
   sanzioneCaso: import('./types').TestoLoc;
   sanzioneUrlFonte: string;
+  /** Stima in euro della sanzione, SOLO per ordinare la classifica (mai mostrata). */
+  sanzioneVal: number;
+}
+
+/**
+ * Stima in EURO dell'importo citato nel testo italiano canonico della sanzione,
+ * usata soltanto come chiave di ordinamento della classifica (non compare mai
+ * in pagina). Regole: si prende il numero più alto con contesto in euro
+ * ("120.000 €", "circa 4.400 €", "20 milioni di euro"); le percentuali sul
+ * fatturato si ignorano (nessun assoluto); sterline e CHF convertiti con cambi
+ * approssimati, il BAM col suo peg fisso all'euro; "senza multa" vale 0.
+ */
+export function stimaEuroSanzione(testoIt: string): number {
+  const s = testoIt.toLowerCase();
+  let max = 0;
+  const num = (x: string) => parseFloat(x.replace(/\./g, '').replace(',', '.')) || 0;
+  const push = (v: number) => { if (v > max) max = v; };
+  for (const m of s.matchAll(/([\d.,]+)\s*milion\w*\s*(?:di\s*)?(euro|€|sterline|bam)/g)) {
+    const fx = m[2] === 'sterline' ? 1.17 : m[2] === 'bam' ? 0.511 : 1;
+    push(num(m[1]) * 1_000_000 * fx);
+  }
+  for (const m of s.matchAll(/([\d.][\d.,]*)\s*(?:€|euro\b)/g)) push(num(m[1]));
+  for (const m of s.matchAll(/([\d.][\d.,]*)\s*chf\b/g)) push(num(m[1]) * 1.06);
+  return Math.round(max);
 }
 
 function calcSeverita(checklist: VoceChecklist[]): {
@@ -62,6 +86,7 @@ export function getPaesiSeverita(): PaeseSeverita[] {
       sanzioneImporto: p.sanzioneMax.importo,
       sanzioneCaso: p.sanzioneMax.casoCitato,
       sanzioneUrlFonte: p.sanzioneMax.urlFonte,
+      sanzioneVal: stimaEuroSanzione(loc(p.sanzioneMax.importo, 'it')),
     };
   });
 }
@@ -79,6 +104,7 @@ export interface PaeseSeveritaLoc {
   sanzioneImporto: string;
   sanzioneCaso: string;
   sanzioneUrlFonte: string;
+  sanzioneVal: number;
 }
 
 /** Paese -> autorità di controllo competente (per il generatore informativa). */
@@ -112,5 +138,6 @@ export function localizePaesiSeverita(
     sanzioneImporto: loc(p.sanzioneImporto, locale),
     sanzioneCaso: loc(p.sanzioneCaso, locale),
     sanzioneUrlFonte: p.sanzioneUrlFonte,
+    sanzioneVal: p.sanzioneVal,
   }));
 }

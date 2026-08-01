@@ -65,6 +65,7 @@ export default async function IndiceSorveglianzaPage({
     numObblighi: p.obbligatori.length,
     totaleAdempimenti: p.totaleAdempimenti,
     sanzioneImporto: p.sanzioneImporto,
+    sanzioneVal: p.sanzioneVal,
     href: localizePath(`/risorse/gps-lavoratori-ue/${p.slugCanonico}/`, resolvedLocale),
   }));
 
