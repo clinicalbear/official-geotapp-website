@@ -9,20 +9,20 @@ export { generateLocaleStaticParams as generateStaticParams } from '@/lib/i18n/s
 
 const PATHNAME = '/confronto/geotapp-vs-hubstaff/';
 const ARTICLE_DATE_PUBLISHED = '2025-09-01';
-const ARTICLE_DATE_MODIFIED = '2026-05-23';
+const ARTICLE_DATE_MODIFIED = '2026-08-01';
 
 const META: Record<string, { title: string; description: string }> = {
-  it: { title: 'GeoTapp vs Hubstaff - Confronto 2025 | GeoTapp', description: 'GeoTapp vs Hubstaff: quale scegliere per aziende con operatori sul campo in Italia? Confronto su GPS verificato, report sigillati, prove fotografiche e conformità GDPR.' },
-  en: { title: 'GeoTapp vs Hubstaff - Comparison 2025 | GeoTapp', description: 'GeoTapp vs Hubstaff: which is better for field service companies? Compare verified GPS, sealed reports, photo evidence and GDPR compliance.' },
-  de: { title: 'GeoTapp vs Hubstaff - Vergleich 2025 | GeoTapp', description: 'GeoTapp vs Hubstaff: Welches ist besser für Außendienstunternehmen? Vergleich von GPS-Verifizierung, versiegelten Berichten, Fotobeweisen und DSGVO-Konformität.' },
-  nl: { title: 'GeoTapp vs Hubstaff - Vergelijking 2025 | GeoTapp', description: 'GeoTapp vs Hubstaff: wat is beter voor bedrijven met buitendienstmedewerkers? Vergelijk geverifieerd GPS, verzegelde rapporten, fotobewijs en AVG-conformiteit.' },
-  fr: { title: 'GeoTapp vs Hubstaff - Comparaison 2025 | GeoTapp', description: 'GeoTapp vs Hubstaff : lequel choisir pour les entreprises avec des intervenants sur le terrain ? Comparez GPS vérifié, rapports scellés, preuves photo et conformité RGPD.' },
-  es: { title: 'GeoTapp vs Hubstaff - Comparación 2025 | GeoTapp', description: 'GeoTapp vs Hubstaff: ¿cuál elegir para empresas con operarios en campo? Compara GPS verificado, informes sellados, pruebas fotográficas y conformidad con el RGPD.' },
-  pt: { title: 'GeoTapp vs Hubstaff - Comparação 2025 | GeoTapp', description: 'GeoTapp vs Hubstaff: qual escolher para empresas com operadores no terreno? Compare GPS verificado, relatórios selados, provas fotográficas e conformidade com o RGPD.' },
-  da: { title: 'GeoTapp vs Hubstaff - Sammenligning 2025 | GeoTapp', description: 'GeoTapp vs Hubstaff: hvad er bedst for virksomheder med medarbejdere i marken? Sammenlign verificeret GPS, forseglede rapporter, fotobeviser og GDPR-overholdelse.' },
-  sv: { title: 'GeoTapp vs Hubstaff - Jämförelse 2025 | GeoTapp', description: 'GeoTapp vs Hubstaff: vad är bäst för företag med personal ute i fält? Jämför verifierad GPS, förseglade rapporter, fotobevis och GDPR-efterlevnad.' },
-  nb: { title: 'GeoTapp vs Hubstaff - Sammenligning 2025 | GeoTapp', description: 'GeoTapp vs Hubstaff: hva er best for bedrifter med ansatte ute i felt? Sammenlign verifisert GPS, forseglede rapporter, fotobevis og GDPR-samsvar.' },
-  ru: { title: 'GeoTapp vs Hubstaff, Сравнение 2025 | GeoTapp', description: 'GeoTapp vs Hubstaff: что выбрать для компаний с сотрудниками на выезде? Сравните проверенный GPS, опечатанные отчёты, фотодоказательства и соответствие GDPR.' },
+  it: { title: 'GeoTapp vs Hubstaff - Confronto 2026 | GeoTapp', description: 'GeoTapp vs Hubstaff: quale scegliere per aziende con operatori sul campo in Italia? Confronto su GPS verificato, report sigillati, prove fotografiche e conformità GDPR.' },
+  en: { title: 'GeoTapp vs Hubstaff - Comparison 2026 | GeoTapp', description: 'GeoTapp vs Hubstaff: which is better for field service companies? Compare verified GPS, sealed reports, photo evidence and GDPR compliance.' },
+  de: { title: 'GeoTapp vs Hubstaff - Vergleich 2026 | GeoTapp', description: 'GeoTapp vs Hubstaff: Welches ist besser für Außendienstunternehmen? Vergleich von GPS-Verifizierung, versiegelten Berichten, Fotobeweisen und DSGVO-Konformität.' },
+  nl: { title: 'GeoTapp vs Hubstaff - Vergelijking 2026 | GeoTapp', description: 'GeoTapp vs Hubstaff: wat is beter voor bedrijven met buitendienstmedewerkers? Vergelijk geverifieerd GPS, verzegelde rapporten, fotobewijs en AVG-conformiteit.' },
+  fr: { title: 'GeoTapp vs Hubstaff - Comparaison 2026 | GeoTapp', description: 'GeoTapp vs Hubstaff : lequel choisir pour les entreprises avec des intervenants sur le terrain ? Comparez GPS vérifié, rapports scellés, preuves photo et conformité RGPD.' },
+  es: { title: 'GeoTapp vs Hubstaff - Comparación 2026 | GeoTapp', description: 'GeoTapp vs Hubstaff: ¿cuál elegir para empresas con operarios en campo? Compara GPS verificado, informes sellados, pruebas fotográficas y conformidad con el RGPD.' },
+  pt: { title: 'GeoTapp vs Hubstaff - Comparação 2026 | GeoTapp', description: 'GeoTapp vs Hubstaff: qual escolher para empresas com operadores no terreno? Compare GPS verificado, relatórios selados, provas fotográficas e conformidade com o RGPD.' },
+  da: { title: 'GeoTapp vs Hubstaff - Sammenligning 2026 | GeoTapp', description: 'GeoTapp vs Hubstaff: hvad er bedst for virksomheder med medarbejdere i marken? Sammenlign verificeret GPS, forseglede rapporter, fotobeviser og GDPR-overholdelse.' },
+  sv: { title: 'GeoTapp vs Hubstaff - Jämförelse 2026 | GeoTapp', description: 'GeoTapp vs Hubstaff: vad är bäst för företag med personal ute i fält? Jämför verifierad GPS, förseglade rapporter, fotobevis och GDPR-efterlevnad.' },
+  nb: { title: 'GeoTapp vs Hubstaff - Sammenligning 2026 | GeoTapp', description: 'GeoTapp vs Hubstaff: hva er best for bedrifter med ansatte ute i felt? Sammenlign verifisert GPS, forseglede rapporter, fotobevis og GDPR-samsvar.' },
+  ru: { title: 'GeoTapp vs Hubstaff, Сравнение 2026 | GeoTapp', description: 'GeoTapp vs Hubstaff: что выбрать для компаний с сотрудниками на выезде? Сравните проверенный GPS, опечатанные отчёты, фотодоказательства и соответствие GDPR.' },
 };
 
 type FaqItem = { q: string; a: string };

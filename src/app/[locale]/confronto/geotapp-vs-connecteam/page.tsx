@@ -9,20 +9,20 @@ export { generateLocaleStaticParams as generateStaticParams } from '@/lib/i18n/s
 
 const PATHNAME = '/confronto/geotapp-vs-connecteam/';
 const ARTICLE_DATE_PUBLISHED = '2025-09-01';
-const ARTICLE_DATE_MODIFIED = '2026-05-23';
+const ARTICLE_DATE_MODIFIED = '2026-08-01';
 
 const META: Record<string, { title: string; description: string }> = {
-  it: { title: 'GeoTapp vs Connecteam - Confronto 2025 | GeoTapp', description: 'GeoTapp vs Connecteam: quale scegliere per aziende con operatori sul campo? Confronto completo su prove del lavoro, GPS verificato, report sigillati e certificazione interventi.' },
-  en: { title: 'GeoTapp vs Connecteam - Comparison 2025 | GeoTapp', description: 'GeoTapp vs Connecteam: which is better for field service companies? Complete comparison on work proof, verified GPS, sealed reports and job certification.' },
-  de: { title: 'GeoTapp vs Connecteam - Vergleich 2025 | GeoTapp', description: 'GeoTapp vs Connecteam: Welches ist besser für Unternehmen mit Außendienstmitarbeitern? Vollständiger Vergleich zu Arbeitsnachweisen, GPS-Verifizierung und versiegelten Berichten.' },
-  fr: { title: 'GeoTapp vs Connecteam - Comparaison 2025 | GeoTapp', description: 'GeoTapp vs Connecteam : lequel choisir pour les entreprises avec des équipes sur le terrain ? Comparatif complet sur les preuves de travail, le GPS vérifié et les rapports scellés.' },
-  es: { title: 'GeoTapp vs Connecteam - Comparación 2025 | GeoTapp', description: 'GeoTapp vs Connecteam: ¿cuál elegir para empresas con operarios en campo? Comparación completa sobre pruebas del trabajo, GPS verificado, informes sellados y certificación de intervenciones.' },
-  pt: { title: 'GeoTapp vs Connecteam - Comparação 2025 | GeoTapp', description: 'GeoTapp vs Connecteam: qual escolher para empresas com equipas no terreno? Comparação completa sobre provas do trabalho, GPS verificado, relatórios selados e certificação de intervenções.' },
-  nl: { title: 'GeoTapp vs Connecteam - Vergelijking 2025 | GeoTapp', description: 'GeoTapp vs Connecteam: welke kiezen voor bedrijven met buitendienstmedewerkers? Volledige vergelijking over werkbewijs, geverifieerd GPS, verzegelde rapporten en opdrachtcertificering.' },
-  da: { title: 'GeoTapp vs Connecteam - Sammenligning 2025 | GeoTapp', description: 'GeoTapp vs Connecteam: hvilken skal du vælge til virksomheder med medarbejdere i marken? Fuld sammenligning af arbejdsbeviser, verificeret GPS, forseglede rapporter og opgavecertificering.' },
-  sv: { title: 'GeoTapp vs Connecteam - Jämförelse 2025 | GeoTapp', description: 'GeoTapp vs Connecteam: vilken ska du välja för företag med personal i fält? Fullständig jämförelse av arbetsbevis, verifierad GPS, förseglade rapporter och uppdragscertifiering.' },
-  nb: { title: 'GeoTapp vs Connecteam - Sammenligning 2025 | GeoTapp', description: 'GeoTapp vs Connecteam: hvilken skal du velge for bedrifter med ansatte ute i felt? Full sammenligning av arbeidsbevis, verifisert GPS, forseglede rapporter og oppdragssertifisering.' },
-  ru: { title: 'GeoTapp vs Connecteam, Сравнение 2025 | GeoTapp', description: 'GeoTapp vs Connecteam: что выбрать для компаний с выездными сотрудниками? Полное сравнение по доказательствам работы, проверенному GPS, опечатанным отчётам и сертификации выездов.' },
+  it: { title: 'GeoTapp vs Connecteam - Confronto 2026 | GeoTapp', description: 'GeoTapp vs Connecteam: quale scegliere per aziende con operatori sul campo? Confronto completo su prove del lavoro, GPS verificato, report sigillati e certificazione interventi.' },
+  en: { title: 'GeoTapp vs Connecteam - Comparison 2026 | GeoTapp', description: 'GeoTapp vs Connecteam: which is better for field service companies? Complete comparison on work proof, verified GPS, sealed reports and job certification.' },
+  de: { title: 'GeoTapp vs Connecteam - Vergleich 2026 | GeoTapp', description: 'GeoTapp vs Connecteam: Welches ist besser für Unternehmen mit Außendienstmitarbeitern? Vollständiger Vergleich zu Arbeitsnachweisen, GPS-Verifizierung und versiegelten Berichten.' },
+  fr: { title: 'GeoTapp vs Connecteam - Comparaison 2026 | GeoTapp', description: 'GeoTapp vs Connecteam : lequel choisir pour les entreprises avec des équipes sur le terrain ? Comparatif complet sur les preuves de travail, le GPS vérifié et les rapports scellés.' },
+  es: { title: 'GeoTapp vs Connecteam - Comparación 2026 | GeoTapp', description: 'GeoTapp vs Connecteam: ¿cuál elegir para empresas con operarios en campo? Comparación completa sobre pruebas del trabajo, GPS verificado, informes sellados y certificación de intervenciones.' },
+  pt: { title: 'GeoTapp vs Connecteam - Comparação 2026 | GeoTapp', description: 'GeoTapp vs Connecteam: qual escolher para empresas com equipas no terreno? Comparação completa sobre provas do trabalho, GPS verificado, relatórios selados e certificação de intervenções.' },
+  nl: { title: 'GeoTapp vs Connecteam - Vergelijking 2026 | GeoTapp', description: 'GeoTapp vs Connecteam: welke kiezen voor bedrijven met buitendienstmedewerkers? Volledige vergelijking over werkbewijs, geverifieerd GPS, verzegelde rapporten en opdrachtcertificering.' },
+  da: { title: 'GeoTapp vs Connecteam - Sammenligning 2026 | GeoTapp', description: 'GeoTapp vs Connecteam: hvilken skal du vælge til virksomheder med medarbejdere i marken? Fuld sammenligning af arbejdsbeviser, verificeret GPS, forseglede rapporter og opgavecertificering.' },
+  sv: { title: 'GeoTapp vs Connecteam - Jämförelse 2026 | GeoTapp', description: 'GeoTapp vs Connecteam: vilken ska du välja för företag med personal i fält? Fullständig jämförelse av arbetsbevis, verifierad GPS, förseglade rapporter och uppdragscertifiering.' },
+  nb: { title: 'GeoTapp vs Connecteam - Sammenligning 2026 | GeoTapp', description: 'GeoTapp vs Connecteam: hvilken skal du velge for bedrifter med ansatte ute i felt? Full sammenligning av arbeidsbevis, verifisert GPS, forseglede rapporter og oppdragssertifisering.' },
+  ru: { title: 'GeoTapp vs Connecteam, Сравнение 2026 | GeoTapp', description: 'GeoTapp vs Connecteam: что выбрать для компаний с выездными сотрудниками? Полное сравнение по доказательствам работы, проверенному GPS, опечатанным отчётам и сертификации выездов.' },
 };
 
 type FaqItem = { q: string; a: string };

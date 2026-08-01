@@ -181,7 +181,7 @@ export default function Navbar() {
             {products.map((p) => (
               <Link key={p.name} href={p.href} className="itm">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={p.iconSrc} alt="" loading="lazy" />
+                <img src={p.iconSrc} alt="" aria-hidden="true" loading="lazy" />
                 {/* il logo fuori scala che abita la card: sfonda i bordi alto
                     e basso sulla destra, il taglio lo fa l'overflow della card */}
                 {/* eslint-disable-next-line @next/next/no-img-element */}
