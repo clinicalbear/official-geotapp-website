@@ -45,7 +45,9 @@ export default function IndiceSorveglianzaClient({
   rows: IndiceRow[];
   labels: IndiceLabels;
 }) {
-  const [sort, setSort] = useState<SortKey>('severita');
+  // Ordine di partenza ALFABETICO (scelta di Mike, 01/08/2026): il lettore cerca
+  // prima il proprio Paese; la classifica per severità resta a un click sull'header.
+  const [sort, setSort] = useState<SortKey>('nome');
 
   const sorted = useMemo(() => {
     const r = [...rows];
