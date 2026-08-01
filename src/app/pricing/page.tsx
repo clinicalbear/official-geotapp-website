@@ -9,7 +9,9 @@ import dynamic from 'next/dynamic';
 // pulled framer-motion into the pricing route bundle (~50KB gz) and contributed
 // to mobile TBT ~430ms. Replaced with a pure CSS keyframe + animation-delay,
 // visually identical, zero JS cost.
-const PricingCalculator = dynamic(() => import('@/components/PricingCalculator'), { ssr: false });
+// ssr attivo: i prezzi per posto TimeTracker devono stare nell'HTML servito,
+// non solo dopo l'hydration (crawler e motori AI leggono senza JavaScript).
+const PricingCalculator = dynamic(() => import('@/components/PricingCalculator'), { ssr: true });
 import { useCart } from '@/store/cart';
 import { usePathname } from 'next/navigation';
 import { getDictionary } from '@/lib/i18n/dictionaries';

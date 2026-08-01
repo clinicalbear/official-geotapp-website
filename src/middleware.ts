@@ -548,6 +548,12 @@ export async function middleware(req: NextRequest) {
     return NextResponse.next();
   }
 
+  // 0b-bis. llms.txt: file statico in public/, pass through. Senza questo
+  // ramo il path finiva nel routing per locale e rispondeva la home (soft-404).
+  if (pathname === '/llms.txt' || pathname === '/llms.txt/') {
+    return NextResponse.next();
+  }
+
   // 0b2. Download pages are intentionally de-published:
   // return 410 Gone (root + all locale variants) and noindex to accelerate deindexing.
   if (isDepublishedDownloadPath(pathname)) {

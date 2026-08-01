@@ -1,0 +1,44 @@
+# GeoTapp
+
+> GeoTapp is a work-proof platform for companies with field teams (cleaning, installers, electricians, plumbers, HVAC, security, construction). GPS-verified clock-ins, photo evidence and time logs are sealed into a tamper-evident job report that the end client can verify independently. Built in Italy, EU-hosted data, GDPR-first. 14-day free trial, no credit card required.
+
+Three tools, one cycle: the field records, the office sees, the client verifies. The website is available in 11 languages (IT, EN, DE, FR, ES, PT, NL, DA, SV, NB, RU); the links below point to the English versions, each page links its translations.
+
+## Products
+
+- [GeoTapp TimeTracker](https://geotapp.com/en/products/geotapp-timetracker/): native mobile app for GPS-verified time tracking and proof capture in the field
+- [GeoTapp Flow](https://geotapp.com/en/products/geotapp-flow/): web back office with CRM, quotes, team and job management
+- [GeoTapp Verifier](https://geotapp.com/en/products/geotapp-verifier/): free independent verification of sealed reports, no account needed
+- [What is GeoTapp](https://geotapp.com/en/what-is-geotapp/): plain-language overview of the whole platform
+
+## Pricing
+
+- [Pricing](https://geotapp.com/en/pricing/): Flow plans (Solo, Team, Business) billed monthly or annually; TimeTracker licensed per active operator with volume tiers. All prices are published on the page. Every trial includes the full Business feature set for 14 days.
+- [ROI calculator](https://geotapp.com/en/roi-calculator/): estimate the hidden cost of paperwork, disputes and verbal coordination
+
+## Guides and resources
+
+- [GPS tracking of field workers in the EU](https://geotapp.com/en/resources/gps-workers-eu/): country-by-country legal map, 39 countries
+- [GPS penalties calculator](https://geotapp.com/en/resources/gps-penalties/): sanctions for unlawful employee tracking
+- [Workplace surveillance index](https://geotapp.com/en/resources/surveillance-index/): 39 countries ranked by surveillance rules and maximum fines
+- [Employee GPS notice generator](https://geotapp.com/en/resources/gps-notice-generator/): free GDPR privacy notice template generator
+- [Employee data compliance check](https://geotapp.com/en/resources/employee-data-compliance-check/): self-assessment for employers
+- [Data retention policy generator](https://geotapp.com/en/resources/data-retention-policy-generator/)
+- [Guide](https://geotapp.com/en/guide/): how GeoTapp works, step by step
+- [Report verification](https://geotapp.com/en/verify-report/): how sealed reports are checked
+- [Blog](https://geotapp.com/en/blog/): guides on work proof, GDPR and field teams
+
+## Comparisons
+
+- [GeoTapp vs alternatives](https://geotapp.com/en/compare/): side-by-side comparisons with Connecteam, Jibble, Clockify, Hubstaff, Libemax, Personio, Sage HR, NoBadge, PicaPonto and Blink
+
+## Sectors
+
+- [Sectors overview](https://geotapp.com/en/sectors/): cleaning, installers, security, electricians, plumbers, HVAC, construction
+
+## Company
+
+- [About us](https://geotapp.com/en/about-us/): founder story, Michele Angelo Petraroli
+- [Press](https://geotapp.com/en/press/): media coverage and press kit
+- [Contact](https://geotapp.com/en/contact/)
+- [Free trial](https://geotapp.com/en/trial/): 14 days, full features, no credit card
