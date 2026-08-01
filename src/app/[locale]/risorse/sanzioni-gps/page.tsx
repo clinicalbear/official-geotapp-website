@@ -7,8 +7,10 @@ import type { AppLocale } from '@/lib/i18n/config';
 import { localizePath } from '@/lib/i18n/locale-routing';
 import { getPaesiSeverita, localizePaesiSeverita } from '@/lib/risorse/gps-lavoratori-ue/derive';
 import CalcolatoreSanzioniClient from '@/components/risorse/CalcolatoreSanzioniClient';
+import PannelloStrumento from '@/components/risorse/PannelloStrumento';
 import RisorsaAttribuzione from '@/components/risorse/RisorsaAttribuzione';
 import RisorsaFaq from '@/components/risorse/RisorsaFaq';
+import '../tside.css';
 import './l-page.css';
 
 /**
@@ -106,7 +108,10 @@ export default async function CalcolatoreSanzioniPage({
       {/* ── il calcolatore vero: intatto, solo incorniciato ── */}
       <section className="sec">
         <div className="w" id="calcolatore">
-          <CalcolatoreSanzioniClient paesi={paesi} labels={labels} hrefPerIso={hrefPerIso} />
+          <div className="tool">
+            <CalcolatoreSanzioniClient paesi={paesi} labels={labels} hrefPerIso={hrefPerIso} />
+            <PannelloStrumento tool="sanzioni-gps" locale={resolvedLocale} />
+          </div>
         </div>
       </section>
 

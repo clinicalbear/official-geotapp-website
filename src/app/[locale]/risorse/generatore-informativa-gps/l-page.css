@@ -5,13 +5,9 @@
    form VERO (input/select/checkbox/file reali, non ai <div> segnaposto del
    mockup statico). */
 
-/* niente anteprima statica a destra (vedi commento nella page): il form
-   scuro occupa da solo la colonna, non tutta la griglia a due colonne
-   pensata per form+anteprima. */
-.lp-risorsa-strumento .tool {
-  grid-template-columns: 1fr;
-  max-width: 700px;
-}
+/* la griglia .tool resta a due colonne (l-mockup): form scuro a sinistra,
+   pannello .tside (cosa fa e perché serve) a destra. Niente anteprima
+   statica del documento: quello vero lo genera già il tool. */
 
 /* i campi appaiati (paese/quando, conservazione/dpo) restano leggibili
    sotto i 640px: .form .two non ha un fallback mobile in l-mockup.css

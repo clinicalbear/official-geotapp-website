@@ -7,9 +7,13 @@
 /* la tabella può restare più larga della colonna .wn su schermi stretti */
 .lp-risorsa-strumento .tbl-wrap { overflow-x: auto; }
 
-/* schema colonne: sostituisce l'1.6fr/.7fr/.7fr pensato per il sì/no */
+/* schema colonne: sostituisce l'1.6fr/.7fr/.7fr pensato per il sì/no.
+   Ogni riga è una griglia a sé: senza minmax(0,) il pavimento min-content
+   delle celle (sanzioni lunghe in nowrap) allargava la colonna SOLO nella
+   propria riga e la tabella usciva sfasata. Con minmax(0, Xfr) le colonne
+   hanno la stessa larghezza su tutte le righe, sempre. */
 .lp-risorsa-strumento .idx-tbl .rw {
-  grid-template-columns: .5fr 2fr 1.6fr 1.1fr 1.3fr .9fr;
+  grid-template-columns: 56px minmax(0, 1.9fr) minmax(0, 1.6fr) minmax(0, 1fr) minmax(0, 1.5fr) minmax(0, .8fr);
   min-width: 720px;
 }
 .lp-risorsa-strumento .idx-tbl .rw > * { padding: 16px 18px; }
@@ -38,8 +42,14 @@
 }
 .lp-risorsa-strumento .idx-tbl .rw:not(.hd2) .c-link .go:hover { color: var(--ink); }
 .lp-risorsa-strumento .idx-tbl .rw:not(.hd2):hover { background: rgba(143, 196, 54, .08); }
-.lp-risorsa-strumento .idx-tbl .rw:not(.hd2) .c-paese { white-space: nowrap; font-weight: 500; }
-.lp-risorsa-strumento .idx-tbl .rw:not(.hd2) .c-san { white-space: nowrap; color: #4A5244; font-size: 14.5px; }
+.lp-risorsa-strumento .idx-tbl .rw:not(.hd2) .c-paese {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 500;
+}
+/* la sanzione va a capo dentro la sua colonna fissa invece di allargarla */
+.lp-risorsa-strumento .idx-tbl .rw:not(.hd2) .c-san { color: #4A5244; font-size: 14.5px; }
 .lp-risorsa-strumento .idx-tbl .rw:not(.hd2) .c-obb { color: #4A5244; font-size: 14.5px; }
 
 /* barra della severità: sottile e piatta, niente rounded-full */
@@ -89,9 +99,9 @@
 
 @media (max-width: 900px) {
   .lp-risorsa-strumento .idx-tbl .c-san { display: none; }
-  .lp-risorsa-strumento .idx-tbl .rw { grid-template-columns: .5fr 1.8fr 1.5fr 1fr .9fr; min-width: 560px; }
+  .lp-risorsa-strumento .idx-tbl .rw { grid-template-columns: 48px minmax(0, 1.8fr) minmax(0, 1.5fr) minmax(0, 1fr) minmax(0, .9fr); min-width: 560px; }
 }
 @media (max-width: 700px) {
   .lp-risorsa-strumento .idx-tbl .c-obb { display: none; }
-  .lp-risorsa-strumento .idx-tbl .rw { grid-template-columns: .5fr 1.7fr 1.4fr .9fr; min-width: 460px; }
+  .lp-risorsa-strumento .idx-tbl .rw { grid-template-columns: 44px minmax(0, 1.7fr) minmax(0, 1.4fr) minmax(0, .9fr); min-width: 460px; }
 }

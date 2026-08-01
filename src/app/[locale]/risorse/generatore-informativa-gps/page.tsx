@@ -10,8 +10,10 @@ import {
   buildBreadcrumbJsonLd,
 } from '@/lib/risorse/gps-lavoratori-ue/jsonLd';
 import GeneratoreInformativaClient from '@/components/risorse/GeneratoreInformativaClient';
+import PannelloStrumento from '@/components/risorse/PannelloStrumento';
 import RisorsaFaq from '@/components/risorse/RisorsaFaq';
 import LicenzaContenuto from '@/components/LicenzaContenuto';
+import '../tside.css';
 import './l-page.css';
 
 /**
@@ -121,6 +123,7 @@ export default async function GeneratoreInformativaPage({
           <div className="w">
             <div className="tool" id="tool">
               <GeneratoreInformativaClient locale={rl} paesi={paesi} labels={l.form} />
+              <PannelloStrumento tool="generatore-informativa" locale={rl} />
             </div>
           </div>
         </section>

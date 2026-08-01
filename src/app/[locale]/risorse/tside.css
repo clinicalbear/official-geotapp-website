@@ -1,0 +1,29 @@
+/* Pannello laterale degli strumenti risorse (direzione L): titolo + spiegazione
+   accanto allo strumento, dove prima la colonna destra della griglia .tool
+   restava vuota. Condiviso dalle 4 pagine strumento (generatore informativa,
+   sanzioni, autovalutazione, conservazione). */
+
+.lp-risorsa-strumento .tside {
+  padding-top: 8px;
+}
+.lp-risorsa-strumento .tside h2 {
+  font-family: var(--font-anton), 'Anton', sans-serif;
+  text-transform: uppercase;
+  font-size: clamp(24px, 2.6vw, 34px);
+  line-height: 1.05;
+  color: var(--ink);
+  margin: 0 0 18px;
+}
+.lp-risorsa-strumento .tside p {
+  font-size: 16px;
+  line-height: 1.65;
+  color: #4a5244;
+  margin: 0 0 14px;
+  max-width: 52ch;
+}
+@media (max-width: 900px) {
+  /* sotto i 900px .tool collassa a una colonna: il pannello scende sotto lo strumento */
+  .lp-risorsa-strumento .tside {
+    padding-top: 0;
+  }
+}

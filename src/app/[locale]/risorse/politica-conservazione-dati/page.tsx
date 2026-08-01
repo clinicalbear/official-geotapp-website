@@ -8,8 +8,10 @@ import { getPaesiAutorita } from '@/lib/risorse/gps-lavoratori-ue/derive';
 import { absoluteLocalizedUrl, buildBreadcrumbJsonLd } from '@/lib/risorse/gps-lavoratori-ue/jsonLd';
 import { getConservazione } from '@/lib/risorse/conservazione-dati-rh';
 import ConservazioneClient from '@/components/risorse/ConservazioneClient';
+import PannelloStrumento from '@/components/risorse/PannelloStrumento';
 import RisorsaFaq from '@/components/risorse/RisorsaFaq';
 import LicenzaContenuto from '@/components/LicenzaContenuto';
+import '../tside.css';
 import './l-page.css';
 
 /**
@@ -93,8 +95,11 @@ export default async function ConservazionePage({
 
         {/* ── strumento: form scuro, logica intatta ── */}
         <section className="sec">
-          <div className="wn" id="tool">
-            <ConservazioneClient locale={rl} contenuto={c} paesi={paesi} />
+          <div className="w" id="tool">
+            <div className="tool">
+              <ConservazioneClient locale={rl} contenuto={c} paesi={paesi} />
+              <PannelloStrumento tool="conservazione" locale={rl} />
+            </div>
           </div>
         </section>
 

@@ -8,8 +8,10 @@ import type { AppLocale } from '@/lib/i18n/config';
 import { absoluteLocalizedUrl, buildBreadcrumbJsonLd } from '@/lib/risorse/gps-lavoratori-ue/jsonLd';
 import { getAutovalutazione } from '@/lib/risorse/autovalutazione-dati-rh';
 import AutovalutazioneClient from '@/components/risorse/AutovalutazioneClient';
+import PannelloStrumento from '@/components/risorse/PannelloStrumento';
 import RisorsaFaq from '@/components/risorse/RisorsaFaq';
 import LicenzaContenuto from '@/components/LicenzaContenuto';
+import '../tside.css';
 import './l-page.css';
 
 /**
@@ -97,8 +99,11 @@ export default async function AutovalutazionePage({
 
         {/* ── il questionario: intatto, solo incorniciato ── */}
         <section className="sec">
-          <div className="wn" id="quiz">
-            <AutovalutazioneClient locale={rl} contenuto={c} hrefs={hrefs} />
+          <div className="w" id="quiz">
+            <div className="tool">
+              <AutovalutazioneClient locale={rl} contenuto={c} hrefs={hrefs} />
+              <PannelloStrumento tool="autovalutazione" locale={rl} />
+            </div>
           </div>
         </section>
 
