@@ -422,6 +422,17 @@ export default function Home({ jrSlot, fqSlot }: { jrSlot?: ReactNode; fqSlot?: 
         </div></section>
       </div>
 
+      {/* ── il calcolatore vero e il report demo, subito dopo "il conto":
+             il pannello pg3 pone la domanda, qui c'e' lo strumento che risponde ── */}
+      <section className="roi-wrap">
+        <div className="wn">
+          <RoiMini dict={dict} locale={currentLocale} />
+          <div style={{ marginTop: 40 }}>
+            <DemoReportBanner />
+          </div>
+        </div>
+      </section>
+
       {/* ── i tre strumenti: pannelli che si aprono ── */}
       <section className="acc" ref={accRef}>
         {prodotti.map((p) => (
@@ -447,16 +458,6 @@ export default function Home({ jrSlot, fqSlot }: { jrSlot?: ReactNode; fqSlot?: 
             </div>
           </div>
         ))}
-      </section>
-
-      {/* ── il calcolatore vero e il report demo, contenuti del sito ── */}
-      <section className="roi-wrap">
-        <div className="wn">
-          <RoiMini dict={dict} locale={currentLocale} />
-          <div style={{ marginTop: 40 }}>
-            <DemoReportBanner />
-          </div>
-        </div>
       </section>
 
       {/* ── fascia trial (testi del sito online) ── */}
