@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react';
+import { headers } from 'next/headers';
 import { Inter, Poppins, Anton } from 'next/font/google';
 import '../globals.css';
 // Sistema grafico "direzione L": qui SOLO per le route del blog headless
@@ -36,10 +37,11 @@ const poppins = Poppins({
 const anton = Anton({ subsets: ['latin'], weight: '400', variable: '--font-anton', display: 'swap' });
 
 export default async function BlogLayout({ children }: { children: ReactNode }) {
-  // Detect locale from the URL at render time is not possible in a layout
-  // without params. Default to 'en' for the blog article pages, the Navbar
-  // and Footer will show English labels. The LanguageSwitcher still works.
-  const locale = 'en';
+  // Il layout non riceve params: la lingua dell'articolo arriva dal middleware
+  // via header x-blog-locale (parsata dal path /blog/{lang}/...). Le route blog
+  // sono force-dynamic, quindi headers() qui non cambia il modello di rendering.
+  // Fallback 'en' per le route senza header (es. /blog/author/).
+  const locale = (await headers()).get('x-blog-locale') ?? 'en';
 
   return (
     <html lang={locale}>

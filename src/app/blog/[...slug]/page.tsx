@@ -78,6 +78,9 @@ interface WPPost {
   featured_media: number;
   categories: number[];
   meta?: { yoast_wpseo_title?: string; yoast_wpseo_metadesc?: string };
+  // Mappa lingua => permalink delle traduzioni Polylang (include il post stesso).
+  // Esposta dal mu-plugin gt-rest-translations.php sul WordPress.
+  gt_translations?: Record<string, string>;
   // Yoast espone i metadati QUI (i campi `_yoast_wpseo_*` sono protetti e non
   // arrivano in `meta` sulla REST pubblica). E' questa la fonte vera dello snippet.
   yoast_head_json?: { title?: string; description?: string };
@@ -247,10 +250,22 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { title, yoastTitle, yoastDesc, featuredImage } = resolvePostData(post, locale);
   const canonical = `https://geotapp.com${canonicalBlogPath(post)}`;
 
+  // hreflang reciproci tra le versioni tradotte: la mappa di Polylang include
+  // il post stesso, quindi si emette solo se esiste almeno un'altra lingua.
+  const languages: Record<string, string> = {};
+  for (const [lang, link] of Object.entries(post.gt_translations ?? {})) {
+    try {
+      const u = new URL(link);
+      const path = u.hostname === 'blog.geotapp.com' ? `/blog${u.pathname}` : u.pathname;
+      languages[lang] = `https://geotapp.com${path}`;
+    } catch { /* permalink malformato: si salta la lingua */ }
+  }
+  const hasTranslations = Object.keys(languages).length > 1;
+
   return {
     title: { absolute: yoastTitle },
     description: yoastDesc,
-    alternates: { canonical },
+    alternates: { canonical, ...(hasTranslations ? { languages } : {}) },
     openGraph: {
       url: canonical,
       type: 'article',

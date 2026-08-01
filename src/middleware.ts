@@ -911,7 +911,13 @@ export async function middleware(req: NextRequest) {
   // These have the locale embedded in the path (/blog/en/2026/...) not as a prefix.
   // Bypass locale routing so they don't get /it/ prepended.
   if (/^\/blog\/(?:[a-z]{2}\/)?20\d{2}\//.test(pathname)) {
-    const response = NextResponse.next();
+    // Lingua dell'articolo dal path (/blog/da/... → da; nessun prefisso → it):
+    // il layout del blog non vede l'URL e la legge da questo header per
+    // impostare <html lang> (prima era fisso a "en" su ogni articolo).
+    const langMatch = pathname.match(/^\/blog\/([a-z]{2})\//);
+    const requestHeaders = new Headers(req.headers);
+    requestHeaders.set('x-blog-locale', langMatch ? langMatch[1] : 'it');
+    const response = NextResponse.next({ request: { headers: requestHeaders } });
     applySecurityHeaders(response, req);
     return response;
   }
