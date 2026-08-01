@@ -54,6 +54,19 @@ summary::-webkit-details-marker{display:none}
   .r,.r-l,.r-r,.r-s,.rule{opacity:1 !important;transform:none !important;transition:none}
   .marq>div,.live::after{animation:none}
 }
+/* ── LCP mobile (01/08/2026): su schermi piccoli il testo sopra la piega non
+   può aspettare il JS né i tempi teatrali dell'intro. Il reveal .r della
+   testata .ph dipingeva la H1 solo dopo hydration+observer (pricing mobile
+   ~6-7,5s), e l'intro della home teneva la riga H1 fuori scena per 1,78s.
+   Sotto i 900px: testata subito visibile e intro accorciata; il desktop,
+   dove l'LCP è verde, resta cinematografico com'era. ── */
+@media(max-width:900px){
+  .ph .r,.ph .r-l,.ph .r-r,.ph .r-s{opacity:1;transform:none;transition:none}
+  .op h1 span b{animation-delay:.12s}
+  .op .top{animation-delay:.4s}
+  .op .low{animation-delay:.55s}
+  .op .cue{animation-delay:.75s}
+}
 :root{--ink:#0E0E0C;--paper:#F2F0E9;--seal:#8FC436;--lime:#B6E86A;--sky:#3BAEE0}
 h1,h2,h3,.big{font-family:var(--font-anton),'Anton',Impact,sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:-.018em;line-height:.9}
 .k{font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:500}
