@@ -2,11 +2,14 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'Cleaning Company Software | GeoTapp - Certify Every Job',
-    description: 'GeoTapp is the cleaning company management software that certifies every job: tamper-proof reports with GPS and photos, zero disputes. GDPR compliant. Try free.',
+    // "cleaners" (chi pulisce) non compariva mai e "GPS tracking" una volta
+    // sola: cercano "gps tracking cleaners" e la pagina parlava solo di
+    // "cleaning company". 70 impressioni a posizione 68.
+    title: 'GPS Tracking for Cleaners: Proof of Every Job Done',
+    description: 'GPS tracking for cleaners and cleaning companies: your operatives clock in on site, the office sees the hours straight away, with photo proof of the work.',
   },
   hero: {
-    badge: 'Software for Cleaning Companies, Facility Services and FM Contractors',
+    badge: 'GPS tracking for cleaners, cleaning companies and FM contractors',
     h1_line1: 'Cleaning company software:',
     h1_line2: 'shift records, photo proof and verified hours, every site',
     subtitle: 'GeoTapp connects Flow + TimeTracker for teams spread across multiple buildings and floors. Operatives clock in with GPS-verified smartphones; the office sees who cleaned what, where and when, with photo evidence attached. No more disputes, full NMW and Agency Workers Regulations compliance.',

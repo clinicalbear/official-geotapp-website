@@ -2,11 +2,16 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App GPS para electricistas e instaladores | GeoTapp',
-    description: 'App de geolocalización GPS para electricistas e instaladores: informes verificados, fotos de obra y registros inviolables. Cierra disputas. Prueba gratis.',
+    // "e instaladores" tolto da title e badge: questa pagina prendeva 726
+    // impressioni su query "instaladores" (e le teneva a pos 51-73) contro 14
+    // sulle proprie, rubando il posto a /es/sectores/instaladores/ che le stessa
+    // query le ha a pos 29. Stesso intervento del 28/06 sulla pagina EN
+    // plumbers, dove si tolse "HVAC" per deconflittare dai termoidraulici.
+    title: 'App para electricistas: partes de trabajo y prueba GPS',
+    description: 'App GPS para electricistas: cada intervención queda registrada con fotos y hora verificada. El cliente discute el trabajo, tú enseñas el parte. Prueba gratis.',
   },
   hero: {
-    badge: 'App para Electricistas e Instaladores Eléctricos',
+    badge: 'App para electricistas y empresas de instalaciones eléctricas',
     h1_line1: 'App para electricistas:',
     h1_line2: 'informes GPS, pruebas fotográficas y cero disputas.',
     subtitle: 'GeoTapp registra cada intervención eléctrica con GPS, fotos y marcas de tiempo verificables. ¿El cliente disputa el trabajo? Muestra el informe, sin discusión. Tus técnicos están protegidos, tus facturas también.',

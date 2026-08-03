@@ -2,11 +2,14 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'Software voor Elektrotechnici en Installateurs | Werkbonbeheer | GeoTapp',
-    description: 'GeoTapp voor elektrotechnici, installateurs en onderhoudsbedrijven: werkbonbeheer, GPS-urenregistratie, controleerbare werkrapporten en fotobewijs. Conform CAO Elektrotechnisch.',
+    // "installatietechniek" era ASSENTE dalla pagina: 68 impressioni a posizione
+    // 81 su una parola che non dicevamo mai. Aggiunta a title e badge, il resto
+    // resta com'era.
+    title: 'Installatietechniek app: werkbonnen, uren en fotobewijs',
+    description: 'App voor installatietechniek en elektrotechniek: de monteur vult de werkbon in op locatie, met uren en fotobewijs. Het kantoor ziet het meteen. Conform CAO.',
   },
   hero: {
-    badge: 'Software voor Elektrotechnici, Installateurs en Onderhoudsteams',
+    badge: 'Software voor installatietechniek, elektrotechniek en onderhoudsteams',
     h1_line1: 'Buitendienst onder controle:',
     h1_line2: 'werkbonnen, uren en bewijs op één plek',
     subtitle: 'GeoTapp verbindt Flow + TimeTracker voor bedrijven die werken tussen busjes, bouwplaatsen en eindklanten. Android- en iOS-apps ondersteunen de monteur in het veld; het kantoor ziet de opdracht, tijden, fotobewijs en notities zonder achter iemand aan te bellen. AVG-conform, CAO Elektrotechnisch-geschikt.',

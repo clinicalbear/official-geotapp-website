@@ -2,12 +2,16 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'Programvara för Städföretag och Facility Management | Skiftdokumentation | GeoTapp',
-    description: 'GeoTapp för städföretag och facility management: GPS-verifierad tidregistrering, fotodokumentation av städade utrymmen, tillsyn av utspridda team och efterlevnad av Städ- och serviceentreprenadavtalet.',
+    // In svedese cercano "städbolag", non "städföretag": la parola cercata era
+    // ASSENTE dalla pagina, che parlava solo del sinonimo. 96 impressioni a
+    // posizione 57. Stesso difetto trovato sul tedesco il 03/08, dove mancava
+    // meta' della query. Adesso ci sono tutte e due le parole.
+    title: 'App för städbolag: tidrapportering och fotobevis per objekt',
+    description: 'App för städbolag och städföretag: personalen stämplar in med GPS på objektet, kontoret ser timmarna direkt, med fotobevis på vad som är städat.',
   },
   hero: {
-    badge: 'Programvara för Städföretag, Facility Management och Serviceentreprenader',
-    h1_line1: 'Programvara för städföretag:',
+    badge: 'App för städbolag, städföretag och serviceentreprenader',
+    h1_line1: 'Tidrapportering för städbolag:',
     h1_line2: 'scheman, fotodokumentation och verifierade timmar, på varje objekt',
     subtitle: 'GeoTapp kopplar samman Flow + TimeTracker för team fördelade på flera byggnader och våningar. Era städare stämplar in med GPS-verifierad smartphone; kontoret ser vem som städat vad, var och när, med bifogad fotodokumentation. Inga tvister, full efterlevnad av Städ- och serviceentreprenadavtalet.',
     cta_primary: 'Begär en demo',
