@@ -22,7 +22,8 @@ import {
   convertEurToLocale,
   getCurrencyForLocale,
 } from '@/lib/pricing';
-import type { AppLocale } from '@/lib/i18n/config';
+import { notFound } from 'next/navigation';
+import { SUPPORTED_LOCALES, type AppLocale } from '@/lib/i18n/config';
 import { buildConsentDefaultScript } from '@/lib/consent-mode';
 
 const BASE_URL = 'https://geotapp.com';
@@ -227,6 +228,18 @@ type Props = {
 
 export default async function LocaleLayout({ children, params }: Props) {
   const { locale } = await params;
+
+  // [SOFT 404 2026-08-03] Il segmento [locale] cattura QUALSIASI prima parte di
+  // URL, anche "file-inesistente.pdf" o un refuso. Senza questo controllo il
+  // fallback qui sotto ripiegava su 'en' e serviva la HOME con status 200: un
+  // indirizzo inventato diventava una copia indicizzabile della home, e Google
+  // poteva riempirsi di pagine fantasma tutte uguali. I file statici veri non
+  // passano di qui (li serve il Worker), quindi arrivare fin qui con un nome
+  // che non e' una lingua significa che quella pagina non esiste.
+  if (!(SUPPORTED_LOCALES as readonly string[]).includes(locale)) {
+    notFound();
+  }
+
   const data = LOCALE_SCHEMA[locale] ?? LOCALE_SCHEMA.en;
   const localeUrl = `${BASE_URL}/${locale}/`;
 
