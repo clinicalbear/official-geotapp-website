@@ -1229,7 +1229,38 @@
       ]
     },
     "mappaFonte": "Mappa:",
-    "mappaDi": "di"
+    "mappaDi": "di",
+    "regoleComuni": {
+      "titolo": "Le regole che valgono in tutta Europa",
+      "intro": "Prima di guardare il singolo paese conviene sapere cosa non cambia mai. Il GDPR si applica identico in tutti gli Stati membri, e questi sei principi reggono ovunque: sopra ci si aggiunge il diritto del lavoro nazionale, che e' quello che cambia da confine a confine.",
+      "regole": [
+        {
+          "titolo": "Una finalita legittima, dichiarata prima",
+          "testo": "Organizzare il lavoro, tutelare la sicurezza, documentare la prestazione. Mai 'controllare la persona': quella non e' una finalita ammessa (artt. 5 e 6 GDPR)."
+        },
+        {
+          "titolo": "Solo i dati necessari, e solo quando servono",
+          "testo": "E' il principio di minimizzazione (art. 5.1.c). Rilevare la posizione all'inizio e alla fine del lavoro documenta; rilevarla ogni minuto sorveglia, ed e' il motivo piu' ricorrente delle sanzioni in Europa."
+        },
+        {
+          "titolo": "Trasparenza prima, non dopo",
+          "testo": "Il lavoratore deve sapere in anticipo cosa viene registrato, quando, perche' e per quanto (artt. 12 e 13). Un'informativa generica o disallineata dal sistema reale vale come non averla."
+        },
+        {
+          "titolo": "Conservazione per un tempo definito",
+          "testo": "I dati si tengono per il periodo necessario alla finalita, deciso e scritto in anticipo, non 'finche' servono' (art. 5.1.e)."
+        },
+        {
+          "titolo": "Valutazione d'impatto quando il rischio e alto",
+          "testo": "Il monitoraggio sistematico dei lavoratori rientra tipicamente nei casi che richiedono una DPIA (art. 35), da fare prima di accendere il sistema, non a posteriori."
+        },
+        {
+          "titolo": "I dati raccolti per uno scopo non si riusano per un altro",
+          "testo": "E' la limitazione della finalita (art. 5.1.b). Posizioni raccolte per documentare il lavoro non diventano automaticamente prove per un procedimento disciplinare."
+        }
+      ],
+      "nota": "Poi c'e' l'articolo 88 del GDPR, che lascia a ogni Stato la facolta di aggiungere regole proprie sul trattamento dei dati nel rapporto di lavoro. E' per questo che esistono le schede-paese qui sotto: cambia chi deve autorizzare, non il principio."
+    }
   },
   "sanzioniGps": {
     "metaTitle": "Calcolatore sanzioni GPS: quanto rischi a tracciare i lavoratori, Paese per Paese",

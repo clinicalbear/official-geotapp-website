@@ -1229,7 +1229,38 @@
       ]
     },
     "mappaFonte": "Carte :",
-    "mappaDi": "par"
+    "mappaDi": "par",
+    "regoleComuni": {
+      "titolo": "Les regles qui valent dans toute l'Europe",
+      "intro": "Avant de regarder un pays en particulier, il est utile de savoir ce qui ne change jamais. Le RGPD s'applique de la meme facon dans tous les Etats membres, et ces six principes tiennent partout. Au-dessus se greffe le droit du travail national, et c'est lui qui change a chaque frontiere.",
+      "regole": [
+        {
+          "titolo": "Une finalite legitime, annoncee avant",
+          "testo": "Organiser le travail, proteger la securite, documenter la prestation. Jamais 'controler la personne' : ce n'est pas une finalite admissible (articles 5 et 6 RGPD)."
+        },
+        {
+          "titolo": "Seulement les donnees necessaires, et seulement quand elles le sont",
+          "testo": "C'est la minimisation (article 5.1.c). Relever la position au debut et a la fin de l'intervention documente ; la relever chaque minute surveille, et c'est le motif de sanction le plus frequent en Europe."
+        },
+        {
+          "titolo": "Transparence avant, pas apres",
+          "testo": "Le salarie doit savoir a l'avance ce qui est enregistre, quand, pourquoi et pour combien de temps (articles 12 et 13). Une information generique, ou decalee par rapport au systeme reel, equivaut a une absence d'information."
+        },
+        {
+          "titolo": "Une conservation pour une duree definie",
+          "testo": "Les donnees sont conservees le temps necessaire a la finalite, decide et ecrit a l'avance, et non 'tant qu'elles servent' (article 5.1.e)."
+        },
+        {
+          "titolo": "Une analyse d'impact quand le risque est eleve",
+          "testo": "La surveillance systematique des salaries releve typiquement des cas exigeant une AIPD (article 35), a realiser avant la mise en service, pas apres."
+        },
+        {
+          "titolo": "Les donnees collectees pour une finalite ne se reutilisent pas pour une autre",
+          "testo": "C'est la limitation des finalites (article 5.1.b). Des positions collectees pour documenter le travail ne deviennent pas automatiquement des preuves dans une procedure disciplinaire."
+        }
+      ],
+      "nota": "Vient ensuite l'article 88 du RGPD, qui laisse a chaque Etat la faculte d'ajouter ses propres regles sur le traitement des donnees dans la relation de travail. C'est pourquoi les fiches par pays existent ci-dessous : ce qui change, c'est qui doit vous autoriser, pas le principe."
+    }
   },
   "sanzioniGps": {
     "metaTitle": "Calculateur d'amendes GPS : combien vous risquez à surveiller vos salariés, pays par pays",

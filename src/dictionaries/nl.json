@@ -1229,7 +1229,38 @@
       ]
     },
     "mappaFonte": "Kaart:",
-    "mappaDi": "door"
+    "mappaDi": "door",
+    "regoleComuni": {
+      "titolo": "De regels die in heel Europa gelden",
+      "intro": "Voordat je naar een afzonderlijk land kijkt, is het nuttig te weten wat nooit verandert. De AVG geldt in elke lidstaat gelijk, en deze zes beginselen houden overal stand. Daarbovenop komt het nationale arbeidsrecht, en juist dat verschilt per grens.",
+      "regole": [
+        {
+          "titolo": "Een legitiem doel, vooraf benoemd",
+          "testo": "Werk organiseren, veiligheid beschermen, de prestatie vastleggen. Nooit 'de persoon controleren': dat is geen toelaatbaar doel (artikelen 5 en 6 AVG)."
+        },
+        {
+          "titolo": "Alleen de gegevens die nodig zijn, en alleen wanneer ze nodig zijn",
+          "testo": "Dit is dataminimalisatie (artikel 5, lid 1, onder c). De positie bij begin en einde van de klus vastleggen documenteert; elke minuut vastleggen volgt de persoon, en dat is de meest voorkomende reden voor boetes in Europa."
+        },
+        {
+          "titolo": "Transparantie vooraf, niet achteraf",
+          "testo": "Werknemers moeten vooraf weten wat wordt vastgelegd, wanneer, waarom en hoe lang (artikelen 12 en 13). Een algemene verklaring, of een die niet klopt met het echte systeem, telt als geen verklaring."
+        },
+        {
+          "titolo": "Bewaring voor een vastgestelde termijn",
+          "testo": "Gegevens worden bewaard voor de periode die het doel vereist, vooraf bepaald en vastgelegd, niet 'zolang ze van pas komen' (artikel 5, lid 1, onder e)."
+        },
+        {
+          "titolo": "Een effectbeoordeling waar het risico hoog is",
+          "testo": "Systematische monitoring van werknemers valt doorgaans onder de gevallen die een DPIA vereisen (artikel 35), uit te voeren voordat het systeem aangaat, niet erna."
+        },
+        {
+          "titolo": "Gegevens voor het ene doel worden niet hergebruikt voor het andere",
+          "testo": "Dit is doelbinding (artikel 5, lid 1, onder b). Posities die zijn verzameld om werk vast te leggen worden niet automatisch bewijs in een disciplinaire zaak."
+        }
+      ],
+      "nota": "Daarnaast staat artikel 88 AVG elke staat toe eigen regels toe te voegen voor gegevensverwerking in de arbeidsverhouding. Daarom bestaan de landkaarten hieronder: wat verandert is wie toestemming moet geven, niet het beginsel."
+    }
   },
   "sanzioniGps": {
     "metaTitle": "GPS-boetecalculator: hoeveel je riskeert bij het monitoren van werknemers, land voor land",

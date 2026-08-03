@@ -1229,7 +1229,38 @@
       ]
     },
     "mappaFonte": "Mapa:",
-    "mappaDi": "de"
+    "mappaDi": "de",
+    "regoleComuni": {
+      "titolo": "Las reglas que valen en toda Europa",
+      "intro": "Antes de mirar un pais concreto conviene saber que es lo que nunca cambia. El RGPD se aplica igual en todos los Estados miembros, y estos seis principios se sostienen en cualquier sitio. Encima se anade el derecho laboral nacional, que es lo que cambia en cada frontera.",
+      "regole": [
+        {
+          "titolo": "Una finalidad legitima, declarada antes",
+          "testo": "Organizar el trabajo, proteger la seguridad, documentar la prestacion. Nunca 'controlar a la persona': esa no es una finalidad admisible (articulos 5 y 6 RGPD)."
+        },
+        {
+          "titolo": "Solo los datos necesarios, y solo cuando hacen falta",
+          "testo": "Es la minimizacion (articulo 5.1.c). Registrar la posicion al inicio y al final del servicio documenta; registrarla cada minuto vigila, y es el motivo de sancion mas frecuente en Europa."
+        },
+        {
+          "titolo": "Transparencia antes, no despues",
+          "testo": "El trabajador debe saber de antemano que se registra, cuando, por que y durante cuanto tiempo (articulos 12 y 13). Una informacion generica, o que no coincide con el sistema real, equivale a no tenerla."
+        },
+        {
+          "titolo": "Conservacion por un plazo definido",
+          "testo": "Los datos se guardan el tiempo necesario para la finalidad, decidido y escrito de antemano, no 'mientras sirvan' (articulo 5.1.e)."
+        },
+        {
+          "titolo": "Evaluacion de impacto cuando el riesgo es alto",
+          "testo": "La monitorizacion sistematica de los trabajadores entra tipicamente entre los casos que exigen una EIPD (articulo 35), a realizar antes de encender el sistema, no despues."
+        },
+        {
+          "titolo": "Los datos recogidos para un fin no se reutilizan para otro",
+          "testo": "Es la limitacion de la finalidad (articulo 5.1.b). Las posiciones recogidas para documentar el trabajo no se convierten automaticamente en pruebas de un procedimiento disciplinario."
+        }
+      ],
+      "nota": "Luego esta el articulo 88 del RGPD, que permite a cada Estado anadir sus propias reglas sobre el tratamiento de datos en la relacion laboral. Por eso existen las fichas por pais de aqui abajo: cambia quien tiene que autorizarte, no el principio."
+    }
   },
   "sanzioniGps": {
     "metaTitle": "Calculadora de sanciones GPS: cuánto te arriesgas al monitorizar trabajadores, país por país",

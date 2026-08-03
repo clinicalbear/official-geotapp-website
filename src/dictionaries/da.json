@@ -1336,6 +1336,37 @@
       ]
     },
     "mappaFonte": "Kort:",
-    "mappaDi": "af"
+    "mappaDi": "af",
+    "regoleComuni": {
+      "titolo": "De regler, der gaelder i hele Europa",
+      "intro": "Foer man kigger paa et enkelt land, er det nyttigt at vide, hvad der aldrig aendrer sig. Databeskyttelsesforordningen gaelder ens i alle medlemsstater, og disse seks principper holder overalt. Ovenpaa ligger den nationale arbejdsret, og det er den, der skifter ved hver graense.",
+      "regole": [
+        {
+          "titolo": "Et legitimt formaal, oplyst paa forhaand",
+          "testo": "At organisere arbejdet, beskytte sikkerheden, dokumentere ydelsen. Aldrig 'at kontrollere personen': det er ikke et lovligt formaal (artikel 5 og 6)."
+        },
+        {
+          "titolo": "Kun de noedvendige data, og kun naar de er noedvendige",
+          "testo": "Det er dataminimering (artikel 5, stk. 1, litra c). At registrere positionen ved start og slut dokumenterer; at registrere hvert minut overvaager, og det er den hyppigste boedegrund i Europa."
+        },
+        {
+          "titolo": "Aabenhed foerst, ikke bagefter",
+          "testo": "Medarbejderen skal paa forhaand vide, hvad der registreres, hvornaar, hvorfor og hvor laenge (artikel 12 og 13). En generisk oplysning, eller en der ikke passer med det faktiske system, taeller som ingen oplysning."
+        },
+        {
+          "titolo": "Opbevaring i en fastlagt periode",
+          "testo": "Data gemmes i den periode, formaalet kraever, besluttet og skrevet ned paa forhaand, ikke 'saa laenge de er nyttige' (artikel 5, stk. 1, litra e)."
+        },
+        {
+          "titolo": "Konsekvensanalyse hvor risikoen er hoej",
+          "testo": "Systematisk overvaagning af medarbejdere hoerer typisk til de tilfaelde, der kraever en DPIA (artikel 35), og den skal laves foer systemet taendes, ikke bagefter."
+        },
+        {
+          "titolo": "Data indsamlet til et formaal genbruges ikke til et andet",
+          "testo": "Det er formaalsbegraensning (artikel 5, stk. 1, litra b). Positioner indsamlet for at dokumentere arbejde bliver ikke automatisk beviser i en personalesag."
+        }
+      ],
+      "nota": "Dertil kommer artikel 88, som lader hver stat tilfoeje sine egne regler om databehandling i ansaettelsesforhold. Derfor findes landekortene herunder: det, der skifter, er hvem der skal godkende, ikke princippet."
+    }
   }
 }

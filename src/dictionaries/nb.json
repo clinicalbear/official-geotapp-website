@@ -1336,6 +1336,37 @@
       ]
     },
     "mappaFonte": "Kart:",
-    "mappaDi": "av"
+    "mappaDi": "av",
+    "regoleComuni": {
+      "titolo": "Reglene som gjelder i hele Europa",
+      "intro": "For du ser paa et enkelt land, er det nyttig aa vite hva som aldri endrer seg. Personvernforordningen gjelder likt i alle medlemsstater, og disse seks prinsippene holder overalt. Oppaa ligger nasjonal arbeidsrett, og det er den som skifter ved hver grense.",
+      "regole": [
+        {
+          "titolo": "Et berettiget formaal, oppgitt paa forhaand",
+          "testo": "Aa organisere arbeidet, ivareta sikkerheten, dokumentere leveransen. Aldri 'aa kontrollere personen': det er ikke et lovlig formaal (artikkel 5 og 6)."
+        },
+        {
+          "titolo": "Bare de noedvendige opplysningene, og bare naar de trengs",
+          "testo": "Det er dataminimering (artikkel 5 nr. 1 bokstav c). Aa registrere posisjonen ved start og slutt dokumenterer; aa registrere hvert minutt overvaaker, og det er den vanligste grunnen til gebyr i Europa."
+        },
+        {
+          "titolo": "Aapenhet foerst, ikke etterpaa",
+          "testo": "Den ansatte skal paa forhaand vite hva som registreres, naar, hvorfor og hvor lenge (artikkel 12 og 13). En generisk informasjon, eller en som ikke stemmer med det faktiske systemet, teller som ingen informasjon."
+        },
+        {
+          "titolo": "Lagring i en fastsatt periode",
+          "testo": "Opplysningene lagres saa lenge formaalet krever, bestemt og nedskrevet paa forhaand, ikke 'saa lenge de er nyttige' (artikkel 5 nr. 1 bokstav e)."
+        },
+        {
+          "titolo": "Vurdering av personvernkonsekvenser naar risikoen er hoey",
+          "testo": "Systematisk overvaaking av ansatte hoerer typisk til tilfellene som krever DPIA (artikkel 35), og den skal gjoeres for systemet slaas paa, ikke etterpaa."
+        },
+        {
+          "titolo": "Opplysninger samlet inn til ett formaal gjenbrukes ikke til et annet",
+          "testo": "Det er formaalsbegrensning (artikkel 5 nr. 1 bokstav b). Posisjoner samlet inn for aa dokumentere arbeid blir ikke automatisk bevis i en personalsak."
+        }
+      ],
+      "nota": "I tillegg kommer artikkel 88, som lar hver stat legge til egne regler om behandling av personopplysninger i arbeidsforhold. Derfor finnes landkortene nedenfor: det som endres er hvem som maa godkjenne, ikke prinsippet."
+    }
   }
 }

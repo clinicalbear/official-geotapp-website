@@ -1336,6 +1336,37 @@
       ]
     },
     "mappaFonte": "Mapa:",
-    "mappaDi": "por"
+    "mappaDi": "por",
+    "regoleComuni": {
+      "titolo": "As regras que valem em toda a Europa",
+      "intro": "Antes de olhar para um pais em concreto convem saber o que nunca muda. O RGPD aplica-se de forma igual em todos os Estados-Membros, e estes seis principios valem em qualquer lado. Por cima acrescenta-se o direito do trabalho nacional, e e esse que muda em cada fronteira.",
+      "regole": [
+        {
+          "titolo": "Uma finalidade legitima, declarada antes",
+          "testo": "Organizar o trabalho, proteger a seguranca, documentar a prestacao. Nunca 'controlar a pessoa': essa nao e uma finalidade admissivel (artigos 5 e 6 do RGPD)."
+        },
+        {
+          "titolo": "Apenas os dados necessarios, e so quando sao precisos",
+          "testo": "E a minimizacao (artigo 5.1.c). Registar a posicao no inicio e no fim do servico documenta; registar a cada minuto vigia, e e o motivo de coima mais frequente na Europa."
+        },
+        {
+          "titolo": "Transparencia antes, nao depois",
+          "testo": "O trabalhador tem de saber com antecedencia o que e registado, quando, porque e por quanto tempo (artigos 12 e 13). Uma informacao generica, ou desalinhada do sistema real, equivale a nao existir."
+        },
+        {
+          "titolo": "Conservacao por um prazo definido",
+          "testo": "Os dados guardam-se pelo tempo necessario a finalidade, decidido e escrito antes, e nao 'enquanto forem uteis' (artigo 5.1.e)."
+        },
+        {
+          "titolo": "Avaliacao de impacto quando o risco e elevado",
+          "testo": "A monitorizacao sistematica dos trabalhadores cai tipicamente nos casos que exigem uma AIPD (artigo 35), a fazer antes de ligar o sistema, nao depois."
+        },
+        {
+          "titolo": "Dados recolhidos para um fim nao se reutilizam para outro",
+          "testo": "E a limitacao da finalidade (artigo 5.1.b). Posicoes recolhidas para documentar o trabalho nao se tornam automaticamente prova num procedimento disciplinar."
+        }
+      ],
+      "nota": "Depois ha o artigo 88 do RGPD, que permite a cada Estado acrescentar regras proprias sobre o tratamento de dados na relacao de trabalho. E por isso que existem as fichas por pais aqui em baixo: muda quem tem de autorizar, nao o principio."
+    }
   }
 }

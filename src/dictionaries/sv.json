@@ -1336,6 +1336,37 @@
       ]
     },
     "mappaFonte": "Karta:",
-    "mappaDi": "av"
+    "mappaDi": "av",
+    "regoleComuni": {
+      "titolo": "Reglerna som galler i hela Europa",
+      "intro": "Innan du tittar pa ett enskilt land ar det bra att veta vad som aldrig andras. Dataskyddsforordningen galler lika i alla medlemsstater, och dessa sex principer haller overallt. Ovanpa ligger den nationella arbetsratten, och det ar den som skiftar vid varje grans.",
+      "regole": [
+        {
+          "titolo": "Ett berattigat andamal, angivet i forvag",
+          "testo": "Att organisera arbetet, skydda sakerheten, dokumentera prestationen. Aldrig 'att kontrollera personen': det ar inte ett tillatet andamal (artiklarna 5 och 6)."
+        },
+        {
+          "titolo": "Bara de uppgifter som behovs, och bara nar de behovs",
+          "testo": "Det ar uppgiftsminimering (artikel 5.1 c). Att registrera positionen vid start och slut dokumenterar; att registrera varje minut overvakar, och det ar det vanligaste skalet till sanktioner i Europa."
+        },
+        {
+          "titolo": "Oppenhet forst, inte efterat",
+          "testo": "Medarbetaren ska i forvag veta vad som registreras, nar, varfor och hur lange (artiklarna 12 och 13). En generisk information, eller en som inte stammer med det verkliga systemet, raknas som ingen information."
+        },
+        {
+          "titolo": "Lagring under en bestamd tid",
+          "testo": "Uppgifter sparas den tid andamalet kraver, bestamd och nedskriven i forvag, inte 'sa lange de ar till nytta' (artikel 5.1 e)."
+        },
+        {
+          "titolo": "Konsekvensbedomning nar risken ar hog",
+          "testo": "Systematisk overvakning av anstallda hor typiskt till de fall som kraver en DPIA (artikel 35), och den ska goras innan systemet slas pa, inte efterat."
+        },
+        {
+          "titolo": "Uppgifter insamlade for ett andamal ateranvands inte for ett annat",
+          "testo": "Det ar andamalsbegransning (artikel 5.1 b). Positioner som samlats in for att dokumentera arbete blir inte automatiskt bevis i ett arbetsrattsligt arende."
+        }
+      ],
+      "nota": "Sedan finns artikel 88, som later varje stat lagga till egna regler om behandling av personuppgifter i anstallningsforhallanden. Darfor finns landkorten harunder: det som andras ar vem som ska godkanna, inte principen."
+    }
   }
 }

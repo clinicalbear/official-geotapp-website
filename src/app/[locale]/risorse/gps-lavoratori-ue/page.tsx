@@ -137,6 +137,27 @@ export default async function SelettorePaesiPage({
           </div>
         </section>
 
+        {/* ── regole comuni a tutta l'Europa ──
+            La mappa raccontava solo cio' che cambia da paese a paese. Il GDPR pero'
+            si applica identico ovunque: questi sei principi sono il pavimento comune,
+            e le schede-paese sono cio' che ci sta sopra (art. 88 GDPR). */}
+        <section className="sec" id="regole-comuni">
+          <div className="w">
+            <h2>{dict.regoleComuni.titolo}</h2>
+            <p className="lede">{dict.regoleComuni.intro}</p>
+            <ul className="rows r d1" style={{ marginTop: 28 }}>
+              {dict.regoleComuni.regole.map((regola) => (
+                <li key={regola.titolo} style={{ padding: '14px 0 14px 22px' }}>
+                  <strong>{regola.titolo}</strong>
+                  <br />
+                  {regola.testo}
+                </li>
+              ))}
+            </ul>
+            <p className="r d2" style={{ marginTop: 24 }}>{dict.regoleComuni.nota}</p>
+          </div>
+        </section>
+
         <section className="sec warm">
           <div className="w">
             <EmbedCodeBox

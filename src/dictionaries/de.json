@@ -1229,7 +1229,38 @@
       ]
     },
     "mappaFonte": "Karte:",
-    "mappaDi": "von"
+    "mappaDi": "von",
+    "regoleComuni": {
+      "titolo": "Die Regeln, die in ganz Europa gelten",
+      "intro": "Bevor man auf ein einzelnes Land schaut, lohnt sich der Blick auf das, was nie anders ist. Die DSGVO gilt in jedem Mitgliedstaat gleich, und diese sechs Grundsaetze tragen ueberall. Darauf sitzt das nationale Arbeitsrecht, und genau das aendert sich an jeder Grenze.",
+      "regole": [
+        {
+          "titolo": "Ein legitimer, vorab benannter Zweck",
+          "testo": "Arbeit organisieren, Sicherheit schuetzen, Leistung dokumentieren. Niemals 'die Person kontrollieren': das ist kein zulaessiger Zweck (Art. 5 und 6 DSGVO)."
+        },
+        {
+          "titolo": "Nur die noetigen Daten, und nur wenn sie noetig sind",
+          "testo": "Das ist die Datenminimierung (Art. 5 Abs. 1 lit. c). Die Position zu Beginn und Ende des Einsatzes zu erfassen dokumentiert; sie im Minutentakt zu erfassen ueberwacht, und das ist der haeufigste Bussgeldgrund in Europa."
+        },
+        {
+          "titolo": "Transparenz vorher, nicht hinterher",
+          "testo": "Beschaeftigte muessen vorab wissen, was erfasst wird, wann, warum und wie lange (Art. 12 und 13). Eine pauschale oder vom tatsaechlichen System abweichende Information gilt wie keine."
+        },
+        {
+          "titolo": "Speicherung fuer eine festgelegte Dauer",
+          "testo": "Daten werden fuer den zweckgebundenen Zeitraum aufbewahrt, vorab festgelegt und dokumentiert, nicht 'solange sie nuetzlich sind' (Art. 5 Abs. 1 lit. e)."
+        },
+        {
+          "titolo": "Folgenabschaetzung bei hohem Risiko",
+          "testo": "Die systematische Ueberwachung von Beschaeftigten faellt typischerweise unter die Faelle mit DSFA-Pflicht (Art. 35), durchzufuehren vor der Inbetriebnahme, nicht danach."
+        },
+        {
+          "titolo": "Fuer einen Zweck erhobene Daten werden nicht fuer einen anderen genutzt",
+          "testo": "Das ist die Zweckbindung (Art. 5 Abs. 1 lit. b). Zur Dokumentation der Arbeit erhobene Positionen werden nicht automatisch zu Beweisen in einem Disziplinarverfahren."
+        }
+      ],
+      "nota": "Dazu kommt Art. 88 DSGVO, der jedem Staat erlaubt, eigene Regeln fuer die Datenverarbeitung im Beschaeftigungsverhaeltnis zu ergaenzen. Deshalb gibt es die Laenderkarten unten: es aendert sich, wer zustimmen muss, nicht der Grundsatz."
+    }
   },
   "sanzioniGps": {
     "metaTitle": "GPS-Bußgeldrechner: wie viel Sie bei Mitarbeiterüberwachung riskieren, Land für Land",

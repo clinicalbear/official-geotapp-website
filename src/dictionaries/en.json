@@ -1229,7 +1229,38 @@
       ]
     },
     "mappaFonte": "Map:",
-    "mappaDi": "by"
+    "mappaDi": "by",
+    "regoleComuni": {
+      "titolo": "The rules that apply across the whole of Europe",
+      "intro": "Before looking at a single country it helps to know what never changes. The GDPR applies identically in every member state, and these six principles hold everywhere. National employment law sits on top, and that is the part that changes at every border.",
+      "regole": [
+        {
+          "titolo": "A legitimate purpose, declared up front",
+          "testo": "Organising work, protecting safety, documenting the job. Never 'checking up on the person': that is not an admissible purpose (Articles 5 and 6 GDPR)."
+        },
+        {
+          "titolo": "Only the data you need, only when you need it",
+          "testo": "This is data minimisation (Article 5(1)(c)). Recording position at the start and end of a job documents it; recording every minute monitors the person, and it is the most frequent reason for fines in Europe."
+        },
+        {
+          "titolo": "Transparency before, not after",
+          "testo": "Workers must know in advance what is recorded, when, why and for how long (Articles 12 and 13). A generic notice, or one that does not match the real system, counts as no notice at all."
+        },
+        {
+          "titolo": "Retention for a defined period",
+          "testo": "Data is kept for the period necessary for the purpose, decided and written down in advance, not 'for as long as it is useful' (Article 5(1)(e))."
+        },
+        {
+          "titolo": "An impact assessment where the risk is high",
+          "testo": "Systematic monitoring of workers typically falls among the cases requiring a DPIA (Article 35), to be carried out before the system is switched on, not afterwards."
+        },
+        {
+          "titolo": "Data collected for one purpose is not reused for another",
+          "testo": "This is purpose limitation (Article 5(1)(b)). Positions collected to document work do not automatically become evidence in a disciplinary case."
+        }
+      ],
+      "nota": "Then there is Article 88 GDPR, which lets each state add its own rules on data processing in the employment relationship. That is why the country cards below exist: what changes is who has to authorise you, not the principle."
+    }
   },
   "sanzioniGps": {
     "metaTitle": "GPS penalty calculator: how much you risk monitoring workers, country by country",
