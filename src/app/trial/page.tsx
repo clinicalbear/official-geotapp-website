@@ -130,6 +130,20 @@ export default function TrialPage() {
     setLoading(true);
     const elapsedMs = Date.now() - pageLoadTime.current;
     const timeOnPage = Math.round(elapsedMs / 1000);
+    // `trial_form_start` nasceva solo dal focus su un campo, ma chi compila con
+    // l'autocompletamento del browser o un gestore di password non fa mai focus:
+    // arrivava al submit senza aver mai "iniziato". Da qui i 7 submit contro 6
+    // start visti dal 30/07, che per costruzione non possono esistere e
+    // rendevano inutilizzabile il worst_step del funnel. Se non e' partito, lo
+    // si emette adesso, cosi' start <= submit e' sempre vero.
+    if (!formStarted.current) {
+      formStarted.current = true;
+      trackEvent('trial_form_start', {
+        first_field: 'autofill',
+        cta_locale: locale || 'it',
+        ...(trialSource.current ? { cta_source: trialSource.current } : {}),
+      });
+    }
     trackEvent('trial_form_submit', {
       fields_touched: touchedFields.current.size.toString(),
       time_to_submit: timeOnPage.toString(),

@@ -222,7 +222,16 @@ const nextConfig = {
   // Cap static-generation workers: a full clean build renders ~1435 pages, and 11
   // parallel workers OOM (SIGKILL) on a RAM-constrained builder. 4 workers fit and
   // still build in reasonable time. See deploy notes 2026-07-13.
-  experimental: { cpus: 4 },
+  // inlineCss: il CSS critico entra nell'HTML invece di essere un file a parte.
+  // Misurato con CDP il 04/08 (emulazione moto g power, 4G lento, CPU 4x): sulla
+  // home mobile FCP e LCP coincidono a 2288 ms, cioe' la pagina non dipinge NULLA
+  // fino ad allora e il primo pixel e' gia' l'elemento piu' grande. Il motivo non
+  // e' l'immagine hero (l'elemento LCP e' il claim in grassetto, testo) ne' i font
+  // (zero font scaricati prima del paint, display:swap fa il suo lavoro): sono i
+  // due CSS bloccanti da 17 e 14 KB, pronti solo a 1976 e 1826 ms. Il download
+  // pesa ~85 ms, il resto e' la catena HTML -> parse -> richiesta -> risposta.
+  // Inlinandoli quella catena sparisce.
+  experimental: { cpus: 4, inlineCss: true },
   trailingSlash: true,
   async rewrites() {
     return [...buildCompoundRewrites(), ...buildRewrites()];
