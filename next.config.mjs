@@ -222,16 +222,16 @@ const nextConfig = {
   // Cap static-generation workers: a full clean build renders ~1435 pages, and 11
   // parallel workers OOM (SIGKILL) on a RAM-constrained builder. 4 workers fit and
   // still build in reasonable time. See deploy notes 2026-07-13.
-  // inlineCss: il CSS critico entra nell'HTML invece di essere un file a parte.
-  // Misurato con CDP il 04/08 (emulazione moto g power, 4G lento, CPU 4x): sulla
-  // home mobile FCP e LCP coincidono a 2288 ms, cioe' la pagina non dipinge NULLA
-  // fino ad allora e il primo pixel e' gia' l'elemento piu' grande. Il motivo non
-  // e' l'immagine hero (l'elemento LCP e' il claim in grassetto, testo) ne' i font
-  // (zero font scaricati prima del paint, display:swap fa il suo lavoro): sono i
-  // due CSS bloccanti da 17 e 14 KB, pronti solo a 1976 e 1826 ms. Il download
-  // pesa ~85 ms, il resto e' la catena HTML -> parse -> richiesta -> risposta.
-  // Inlinandoli quella catena sparisce.
-  experimental: { cpus: 4, inlineCss: true },
+  // 🔴 NON riattivare `inlineCss: true`: PROVATO E MISURATO il 04/08, peggiora.
+  // L'idea era togliere la catena HTML -> parse -> richiesta CSS -> risposta,
+  // visto che i due CSS bloccanti (17 e 14 KB) erano pronti solo a ~1900 ms
+  // mentre il download loro vale si' e no 85 ms. Ma Next inlinea TUTTO il CSS del
+  // bundle, non solo il critico: l'HTML della home e' passato a 528 KB, e su 4G
+  // lento sono circa 2,6 s di solo scaricamento prima di poter dipingere
+  // qualsiasi cosa. LCP mobile da 2288 ms a 4744 ms, misurato due volte con la
+  // cache calda (il TTFB era tornato a 288 ms, quindi non era cache fredda).
+  // Se un giorno si riprova, serve estrarre il CSS critico VERO, non tutto.
+  experimental: { cpus: 4 },
   trailingSlash: true,
   async rewrites() {
     return [...buildCompoundRewrites(), ...buildRewrites()];
