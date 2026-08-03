@@ -261,6 +261,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     } catch { /* permalink malformato: si salta la lingua */ }
   }
   const hasTranslations = Object.keys(languages).length > 1;
+  // x-default per chi non combacia con nessuna lingua: l'inglese se c'è, altrimenti
+  // l'italiano, altrimenti la pagina stessa. Allinea il blog alle pagine del sito,
+  // che l'x-default lo emettono già.
+  if (hasTranslations) {
+    languages['x-default'] = languages.en ?? languages.it ?? canonical;
+  }
 
   return {
     title: { absolute: yoastTitle },
