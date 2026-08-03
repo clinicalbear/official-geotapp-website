@@ -277,20 +277,20 @@ export const moldova: SchedaPaese = {
 
   sanzioneMax: {
     importo: {
-      it: 'fino a 20 milioni di euro o 4% del fatturato con la nuova legge in stile GDPR (dal 23 agosto 2026)',
-      en: 'up to 20 million euro or 4% of turnover under the new GDPR-style law (from 23 August 2026)',
-      de: 'bis zu 20 Millionen Euro oder 4% des Umsatzes nach dem neuen, an die DSGVO angelehnten Gesetz (ab 23. August 2026)',
-      fr: "jusqu'a 20 millions d'euros ou 4% du chiffre d'affaires avec la nouvelle loi de type RGPD (a partir du 23 aout 2026)",
-      es: 'hasta 20 millones de euros o el 4% de la facturacion con la nueva ley de estilo RGPD (a partir del 23 de agosto de 2026)',
-      nl: 'tot 20 miljoen euro of 4% van de omzet onder de nieuwe, op de AVG gebaseerde wet (vanaf 23 augustus 2026)',
+      it: 'fino a 2.000.000 MDL (circa 100.000 euro) o 2% del fatturato con la nuova legge 195/2024, in vigore dal 23 agosto 2026',
+      en: 'up to MDL 2,000,000 (about EUR 100,000) or 2% of turnover under the new Law 195/2024, in force from 23 August 2026',
+      de: 'bis zu 2.000.000 MDL (rund 100.000 EUR) oder 2% des Umsatzes nach dem neuen Gesetz 195/2024, in Kraft ab 23. August 2026',
+      fr: "jusqu'a 2 000 000 MDL (environ 100 000 EUR) ou 2% du chiffre d'affaires avec la nouvelle loi 195/2024, en vigueur au 23 aout 2026",
+      es: 'hasta 2.000.000 MDL (unos 100.000 EUR) o el 2% de la facturacion con la nueva ley 195/2024, en vigor desde el 23 de agosto de 2026',
+      nl: 'tot 2.000.000 MDL (ongeveer 100.000 EUR) of 2% van de omzet onder de nieuwe wet 195/2024, van kracht vanaf 23 augustus 2026',
     },
     casoCitato: {
-      it: "Non risulta una decisione del CNPDCP specifica e pubblicata sul GPS sui dipendenti. La legge in vigore (133/2011) prevede sanzioni più' contenute; la nuova legge 195/2024, in vigore dal 23 agosto 2026, allinea il quadro al GDPR (fino a 20 milioni di euro o 4% del fatturato).",
-      en: 'There is no specific, published CNPDCP decision on GPS tracking of employees. The law in force (133/2011) provides for lower penalties; the new law 195/2024, in force from 23 August 2026, aligns the framework with the GDPR (up to 20 million euro or 4% of turnover).',
-      de: 'Es gibt keine spezifische, veroeffentlichte Entscheidung des CNPDCP zur GPS-Ortung von Beschaeftigten. Das geltende Gesetz (133/2011) sieht geringere Sanktionen vor; das neue Gesetz 195/2024, das ab dem 23. August 2026 gilt, gleicht den Rahmen an die DSGVO an (bis zu 20 Millionen Euro oder 4% des Umsatzes).',
-      fr: "Il n'existe pas de decision specifique et publiee du CNPDCP sur le suivi GPS des salaries. La loi en vigueur (133/2011) prevoit des sanctions plus limitees; la nouvelle loi 195/2024, en vigueur a partir du 23 aout 2026, aligne le cadre sur le RGPD (jusqu'a 20 millions d'euros ou 4% du chiffre d'affaires).",
-      es: 'No consta una decision especifica y publicada del CNPDCP sobre el seguimiento por GPS de los empleados. La ley en vigor (133/2011) preve sanciones mas reducidas; la nueva ley 195/2024, en vigor desde el 23 de agosto de 2026, alinea el marco con el RGPD (hasta 20 millones de euros o el 4% de la facturacion).',
-      nl: 'Er is geen specifiek, gepubliceerd besluit van het CNPDCP over GPS-tracking van werknemers. De geldende wet (133/2011) voorziet in lagere sancties; de nieuwe wet 195/2024, van kracht vanaf 23 augustus 2026, brengt het kader in lijn met de AVG (tot 20 miljoen euro of 4% van de omzet).',
+      it: "Non risulta una decisione del CNPDCP specifica e pubblicata sul GPS sui dipendenti. La legge in vigore (133/2011) prevede sanzioni piu contenute. La nuova legge 195/2024, applicabile dal 23 agosto 2026, recepisce il GDPR ma con un proprio impianto sanzionatorio, fino a 1.000.000 MDL o 1% del fatturato per le violazioni meno gravi e fino a 2.000.000 MDL o 2% per quelle piu gravi, con applicazione progressiva nei primi anni. Non valgono quindi i massimali europei da 20 milioni di euro.",
+      en: 'No specific published CNPDCP decision on employee GPS. The law in force (133/2011) provides for lower penalties. The new Law 195/2024, applicable from 23 August 2026, transposes the GDPR but with its own sanction scheme, up to MDL 1,000,000 or 1% of turnover for less serious breaches and up to MDL 2,000,000 or 2% for the more serious ones, phased in over the first years. The European ceilings of EUR 20 million therefore do not apply.',
+      de: 'Es liegt keine spezifische veroeffentlichte Entscheidung des CNPDCP zu GPS bei Beschaeftigten vor. Das geltende Gesetz (133/2011) sieht geringere Sanktionen vor. Das neue Gesetz 195/2024, anwendbar ab 23. August 2026, setzt die DSGVO um, jedoch mit eigenem Sanktionsrahmen: bis zu 1.000.000 MDL oder 1% des Umsatzes bei leichteren Verstoessen und bis zu 2.000.000 MDL oder 2% bei schwereren, mit schrittweiser Anwendung in den ersten Jahren. Die europaeischen Obergrenzen von 20 Millionen Euro gelten hier also nicht.',
+      fr: "Aucune decision publiee du CNPDCP specifique au GPS des salaries. La loi en vigueur (133/2011) prevoit des sanctions plus faibles. La nouvelle loi 195/2024, applicable au 23 aout 2026, transpose le RGPD mais avec son propre bareme: jusqu'a 1 000 000 MDL ou 1% du chiffre d'affaires pour les manquements les moins graves et jusqu'a 2 000 000 MDL ou 2% pour les plus graves, avec une application progressive les premieres annees. Les plafonds europeens de 20 millions d'euros ne s'appliquent donc pas.",
+      es: 'No consta una resolucion publicada del CNPDCP especifica sobre el GPS de los empleados. La ley vigente (133/2011) preve sanciones mas bajas. La nueva ley 195/2024, aplicable desde el 23 de agosto de 2026, transpone el RGPD pero con su propio regimen sancionador: hasta 1.000.000 MDL o el 1% de la facturacion para las infracciones menos graves y hasta 2.000.000 MDL o el 2% para las mas graves, con aplicacion progresiva en los primeros anos. Los techos europeos de 20 millones de euros no se aplican.',
+      nl: 'Er is geen specifiek gepubliceerd CNPDCP-besluit over gps bij werknemers. De geldende wet (133/2011) kent lagere sancties. De nieuwe wet 195/2024, van toepassing vanaf 23 augustus 2026, zet de AVG om maar met een eigen sanctiestelsel: tot 1.000.000 MDL of 1% van de omzet voor lichtere inbreuken en tot 2.000.000 MDL of 2% voor de zwaardere, gefaseerd ingevoerd in de eerste jaren. De Europese plafonds van 20 miljoen euro gelden hier dus niet.',
     },
     urlFonte: FONTE_DLA_PIPER.url,
   },
@@ -303,5 +303,5 @@ export const moldova: SchedaPaese = {
     FONTE_GDPR,
   ],
 
-  aggiornatoIl: '2026-06-15',
+  aggiornatoIl: '2026-08-03',
 };

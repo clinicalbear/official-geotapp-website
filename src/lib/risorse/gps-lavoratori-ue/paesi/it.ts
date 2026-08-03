@@ -19,8 +19,19 @@ const FONTE_PROVV_AUTOTRASPORTI = {
   url: 'https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10112287',
 };
 const FONTE_PROVV_ARSAC = {
-  titolo: 'Garante Privacy, Provvedimento del 13 marzo 2025, n. 10128005',
+  titolo:
+    'Garante Privacy, Provvedimento n. 135 del 13 marzo 2025 (doc-web 10128005), annullato dal Tribunale di Cosenza con sentenza n. 972 del 1° luglio 2026',
   url: 'https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10128005',
+};
+const FONTE_PROVV_PIONEER = {
+  titolo:
+    'Garante Privacy, Provvedimento n. 755 del 18 dicembre 2025, n. 10213711 (Pioneer Hi-Bred Italia Sementi)',
+  url: 'https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10213711',
+};
+const FONTE_PROVV_ATS_LIGURIA = {
+  titolo:
+    'Garante Privacy, Provvedimento n. 382 del 28 maggio 2026, n. 10259916 (Azienda di Tutela della Salute per la Liguria)',
+  url: 'https://www.garanteprivacy.it/web/guest/home/docweb/-/docweb-display/docweb/10259916',
 };
 const FONTE_STATUTO_ART4 = {
   titolo: 'Legge 20 maggio 1970, n. 300 (Statuto dei Lavoratori), art. 4',
@@ -98,6 +109,26 @@ export const italia: SchedaPaese = {
     },
     {
       voce: {
+        it: 'Rilevazione della posizione solo al timbro, senza monitoraggio continuo',
+        en: 'Location recorded only at clock-in and clock-out, with no continuous monitoring',
+        de: 'Standorterfassung nur beim Ein- und Ausstempeln, ohne fortlaufende Überwachung',
+        fr: "Position relevée uniquement au pointage, sans suivi continu",
+        es: 'Posición registrada solo al fichar, sin seguimiento continuo',
+        nl: 'Locatie alleen bij het in- en uitklokken vastgelegd, zonder doorlopende monitoring',
+      },
+      risposta: 'si',
+      dettaglio: {
+        it: "E il confine che separa la registrazione delle presenze dal controllo a distanza. Il Tribunale di Cosenza, con sentenza n. 972 del 1° luglio 2026, ha annullato una sanzione del Garante da 50.000 euro proprio perche il sistema registrava giorno, orario, coordinate e sede soltanto al momento della timbratura, senza consentire un monitoraggio continuo degli spostamenti: cosi configurato rientra fra gli strumenti di registrazione degli accessi e delle presenze dell'art. 4, comma 2. Attenzione, e una sentenza di primo grado e non una pronuncia della Cassazione, e non elimina gli altri obblighi. All'opposto, rilevare la posizione ogni sessanta secondi con visualizzazione in tempo reale e costato una sanzione a un'azienda sanitaria nel maggio 2026.",
+        en: 'This is the line between recording attendance and remote monitoring. The Court of Cosenza, judgment no. 972 of 1 July 2026, annulled a EUR 50,000 fine by the Garante precisely because the system recorded date, time, coordinates and site only at the moment of clocking, without allowing continuous tracking of movements: configured that way it falls among the access and attendance recording tools of Article 4, paragraph 2. Note that this is a first-instance ruling, not a Supreme Court decision, and it does not remove the other obligations. At the opposite end, recording the position every sixty seconds with real-time display cost a health authority a fine in May 2026.',
+        de: 'Das ist die Grenze zwischen Anwesenheitserfassung und Fernüberwachung. Das Gericht von Cosenza hat mit Urteil Nr. 972 vom 1. Juli 2026 ein Bußgeld der Garante über 50.000 Euro gerade deshalb aufgehoben, weil das System Datum, Uhrzeit, Koordinaten und Standort nur im Moment des Stempelns erfasste, ohne eine fortlaufende Verfolgung der Bewegungen zu ermöglichen: so konfiguriert zählt es zu den Zugangs- und Anwesenheitserfassungssystemen nach Artikel 4 Absatz 2. Zu beachten: es handelt sich um ein erstinstanzliches Urteil, nicht um eine Entscheidung des Kassationshofs, und die übrigen Pflichten bleiben bestehen. Umgekehrt kostete die Erfassung der Position im Sechzig-Sekunden-Takt mit Echtzeitanzeige eine Gesundheitsbehörde im Mai 2026 ein Bußgeld.',
+        fr: "C'est la frontière entre l'enregistrement des présences et le contrôle à distance. Le Tribunal de Cosenza, par le jugement n. 972 du 1er juillet 2026, a annulé une sanction du Garante de 50 000 euros précisément parce que le système enregistrait date, heure, coordonnées et site uniquement au moment du pointage, sans permettre un suivi continu des déplacements : ainsi configuré, il relève des outils d'enregistrement des accès et des présences de l'article 4, paragraphe 2. Attention, il s'agit d'un jugement de première instance et non d'un arrêt de la Cour de cassation, et les autres obligations demeurent. À l'inverse, relever la position toutes les soixante secondes avec affichage en temps réel a valu une sanction à une agence de santé en mai 2026.",
+        es: 'Es la frontera entre registrar la presencia y controlar a distancia. El Tribunal de Cosenza, sentencia n. 972 de 1 de julio de 2026, anuló una sanción del Garante de 50.000 euros precisamente porque el sistema registraba fecha, hora, coordenadas y sede solo en el momento de fichar, sin permitir un seguimiento continuo de los desplazamientos: así configurado entra entre los instrumentos de registro de accesos y presencias del artículo 4, apartado 2. Ojo, es una sentencia de primera instancia y no del Tribunal Supremo, y no elimina las demás obligaciones. En el extremo opuesto, registrar la posición cada sesenta segundos con visualización en tiempo real le costó una sanción a una agencia sanitaria en mayo de 2026.',
+        nl: 'Dit is de grens tussen aanwezigheidsregistratie en toezicht op afstand. De rechtbank van Cosenza vernietigde met vonnis nr. 972 van 1 juli 2026 een boete van 50.000 euro van de Garante juist omdat het systeem datum, tijd, coördinaten en locatie alleen op het moment van klokken vastlegde, zonder doorlopende volging van verplaatsingen: zo ingericht valt het onder de toegangs- en aanwezigheidsregistratie van artikel 4, lid 2. Let op: het is een uitspraak in eerste aanleg, geen arrest van het hooggerechtshof, en de overige verplichtingen blijven gelden. Aan de andere kant kostte het vastleggen van de positie elke zestig seconden met realtime weergave een zorginstelling in mei 2026 een boete.',
+      },
+      fonte: FONTE_PROVV_ARSAC,
+    },
+    {
+      voce: {
         it: 'Informativa scritta ai lavoratori, completa e veritiera (art. 13 GDPR)',
         en: 'Written privacy notice to workers, complete and truthful (Article 13 GDPR)',
         de: 'Schriftliche Datenschutzinformation für die Beschäftigten, vollständig und wahrheitsgemäß (Artikel 13 DSGVO)',
@@ -147,14 +178,14 @@ export const italia: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "I dati di posizione vanno usati solo per la finalita per cui sono stati raccolti. Riutilizzarli per un altro scopo (per esempio dati raccolti per verificare la sede di lavoro e poi usati per avviare un procedimento disciplinare) e uno sviamento di finalita, e il Garante lo colpisce sempre. E l'errore costato caro all'ente pubblico nel caso ARSAC.",
-        en: "Location data must be used only for the purpose for which it was collected. Reusing it for another purpose (for example data collected to verify the workplace and then used to start a disciplinary procedure) is a misuse of purpose, and the Garante always sanctions it. It is the mistake that cost the public body dearly in the ARSAC case.",
-        de: 'Standortdaten dürfen nur für den Zweck genutzt werden, für den sie erhoben wurden. Sie für einen anderen Zweck weiterzuverwenden (etwa zur Überprüfung des Arbeitsorts erhobene Daten, die dann für die Einleitung eines Disziplinarverfahrens genutzt werden) ist eine Zweckentfremdung, und die Garante ahndet das stets. Es ist der Fehler, der die öffentliche Einrichtung im Fall ARSAC teuer zu stehen kam.',
-        fr: "Les données de position ne doivent être utilisées que pour la finalité pour laquelle elles ont été collectées. Les réutiliser à une autre fin (par exemple des données collectées pour vérifier le lieu de travail puis utilisées pour engager une procédure disciplinaire) constitue un détournement de finalité, et le Garante le sanctionne toujours. C'est l'erreur qui a coûté cher à l'organisme public dans l'affaire ARSAC.",
-        es: 'Los datos de posición deben usarse solo para la finalidad para la que se recogieron. Reutilizarlos con otro fin (por ejemplo, datos recogidos para verificar el lugar de trabajo y luego usados para iniciar un procedimiento disciplinario) es una desviación de finalidad, y el Garante siempre la sanciona. Es el error que le salió caro al organismo público en el caso ARSAC.',
-        nl: 'Locatiegegevens mogen alleen worden gebruikt voor het doel waarvoor ze zijn verzameld. Ze hergebruiken voor een ander doel (bijvoorbeeld gegevens verzameld om de werkplek te controleren en vervolgens gebruikt om een disciplinaire procedure te starten) is een doelafwijking, en de Garante bestraft dat altijd. Het is de fout die het overheidsorgaan in de ARSAC-zaak duur kwam te staan.',
+        it: 'I dati di posizione vanno usati solo per la finalita per cui sono stati raccolti (art. 5 GDPR, limitazione della finalita). Riutilizzarli per un altro scopo, per esempio dati raccolti per documentare la prestazione e poi usati per avviare un procedimento disciplinare, e uno sviamento di finalita. Vale anche per il perimetro della raccolta: nel caso Pioneer il punteggio sullo stile di guida veniva calcolato anche sui viaggi privati e fuori orario, e i dati erano accessibili a personale di altre societa del gruppo senza accordi ex art. 28.',
+        en: 'Location data must be used only for the purpose for which it was collected (Article 5 GDPR, purpose limitation). Reusing it for another purpose, for example data collected to document the work and then used to start a disciplinary procedure, is a misuse of purpose. The same applies to the scope of collection: in the Pioneer case the driving-style score was calculated on private and off-duty trips as well, and staff of other group companies could access the data without Article 28 agreements.',
+        de: 'Standortdaten dürfen nur für den Zweck genutzt werden, für den sie erhoben wurden (Artikel 5 DSGVO, Zweckbindung). Sie für einen anderen Zweck weiterzuverwenden, etwa zur Dokumentation der Arbeitsleistung erhobene Daten für die Einleitung eines Disziplinarverfahrens, ist eine Zweckentfremdung. Das gilt auch für den Umfang der Erhebung: im Fall Pioneer floss in den Fahrstil-Score auch das private Fahrverhalten außerhalb der Arbeitszeit ein, und Beschäftigte anderer Konzerngesellschaften konnten ohne Vereinbarung nach Artikel 28 auf die Daten zugreifen.',
+        fr: "Les données de position ne doivent être utilisées que pour la finalité pour laquelle elles ont été collectées (article 5 RGPD, limitation des finalités). Les réutiliser à une autre fin, par exemple des données collectées pour documenter le travail puis utilisées pour engager une procédure disciplinaire, constitue un détournement de finalité. Cela vaut aussi pour le périmètre de la collecte : dans l'affaire Pioneer, le score de conduite intégrait également les trajets privés et hors temps de travail, et des personnes d'autres sociétés du groupe accédaient aux données sans accord au titre de l'article 28.",
+        es: 'Los datos de posición deben usarse solo para la finalidad para la que se recogieron (artículo 5 RGPD, limitación de la finalidad). Reutilizarlos con otro fin, por ejemplo datos recogidos para documentar el trabajo y luego usados para iniciar un procedimiento disciplinario, es una desviación de finalidad. Lo mismo vale para el alcance de la recogida: en el caso Pioneer la puntuación sobre el estilo de conducción se calculaba también con los viajes privados y fuera de horario, y personal de otras sociedades del grupo accedía a los datos sin acuerdos del artículo 28.',
+        nl: 'Locatiegegevens mogen alleen worden gebruikt voor het doel waarvoor ze zijn verzameld (artikel 5 AVG, doelbinding). Ze hergebruiken voor een ander doel, bijvoorbeeld gegevens verzameld om het werk te documenteren en vervolgens gebruikt om een disciplinaire procedure te starten, is een doelafwijking. Hetzelfde geldt voor de reikwijdte van de verzameling: in de zaak Pioneer werd de rijstijlscore ook op privéritten en buiten werktijd berekend, en medewerkers van andere groepsvennootschappen hadden toegang tot de gegevens zonder overeenkomsten op grond van artikel 28.',
       },
-      fonte: FONTE_PROVV_ARSAC,
+      fonte: FONTE_PROVV_PIONEER,
     },
     {
       voce: {
@@ -167,14 +198,14 @@ export const italia: SchedaPaese = {
       },
       risposta: 'dipende',
       dettaglio: {
-        it: 'Per un trattamento di questo tipo serve la DPIA (art. 35 GDPR) quando il rischio è elevato. Ometterla, come nel caso dell’ente pubblico, è di per sé una violazione.',
-        en: 'For processing of this kind a DPIA (Article 35 GDPR) is required when the risk is high. Omitting it, as in the public body case, is in itself a violation.',
-        de: 'Für eine Verarbeitung dieser Art ist bei hohem Risiko eine DSFA (Artikel 35 DSGVO) erforderlich. Sie wegzulassen, wie im Fall der öffentlichen Einrichtung, stellt für sich genommen einen Verstoß dar.',
-        fr: "Pour un traitement de ce type, l'AIPD (article 35 RGPD) est requise lorsque le risque est élevé. L'omettre, comme dans l'affaire de l'organisme public, constitue en soi une violation.",
-        es: 'Para un tratamiento de este tipo se requiere la EIPD (artículo 35 RGPD) cuando el riesgo es elevado. Omitirla, como en el caso del organismo público, es de por sí una infracción.',
-        nl: 'Voor een verwerking van dit type is een DPIA (artikel 35 AVG) vereist wanneer het risico hoog is. Deze weglaten, zoals in de zaak van het overheidsorgaan, is op zichzelf al een schending.',
+        it: "Per un trattamento di questo tipo serve la DPIA (art. 35 GDPR), espressamente prevista dall'elenco allegato al Provvedimento del Garante n. 467 dell'11 ottobre 2018 per i sistemi tecnologici nel rapporto di lavoro, geolocalizzazione compresa. Va fatta prima di accendere il sistema: nel caso dell'azienda sanitaria ligure la valutazione mancante e finita tra le contestazioni.",
+        en: 'For processing of this kind a DPIA (Article 35 GDPR) is required, expressly listed in the annex to the Garante decision no. 467 of 11 October 2018 for technological systems in the employment relationship, geolocation included. It must be done before switching the system on: in the Ligurian health authority case the missing assessment was among the findings.',
+        de: 'Für eine Verarbeitung dieser Art ist eine DSFA (Artikel 35 DSGVO) erforderlich, ausdrücklich in der Anlage zum Bescheid der Garante Nr. 467 vom 11. Oktober 2018 für technische Systeme im Arbeitsverhältnis einschließlich Geolokalisierung aufgeführt. Sie muss vor der Inbetriebnahme erfolgen: im Fall der ligurischen Gesundheitsbehörde zählte die fehlende Bewertung zu den Beanstandungen.',
+        fr: "Pour un traitement de ce type, l'AIPD (article 35 RGPD) est requise et figure expressément dans l'annexe à la décision du Garante n. 467 du 11 octobre 2018 pour les systèmes technologiques dans la relation de travail, géolocalisation comprise. Elle doit être réalisée avant la mise en service : dans l'affaire de l'agence de santé ligure, l'analyse manquante figurait parmi les griefs.",
+        es: 'Para un tratamiento de este tipo se requiere la EIPD (artículo 35 RGPD), prevista expresamente en el anexo de la resolución del Garante n. 467 de 11 de octubre de 2018 para sistemas tecnológicos en la relación laboral, incluida la geolocalización. Debe hacerse antes de encender el sistema: en el caso de la agencia sanitaria ligur la evaluación ausente estuvo entre los reproches.',
+        nl: 'Voor een verwerking van dit type is een DPIA (artikel 35 AVG) vereist, uitdrukkelijk opgenomen in de bijlage bij besluit nr. 467 van 11 oktober 2018 van de Garante voor technologische systemen in de arbeidsverhouding, geolocatie inbegrepen. Zij moet vóór ingebruikname worden uitgevoerd: in de zaak van de Ligurische zorginstelling behoorde de ontbrekende beoordeling tot de verwijten.',
       },
-      fonte: FONTE_PROVV_ARSAC,
+      fonte: FONTE_PROVV_ATS_LIGURIA,
     },
     {
       voce: {
@@ -335,27 +366,25 @@ export const italia: SchedaPaese = {
       nl: '120.000 EUR',
     },
     casoCitato: {
-      it: 'Garante Privacy, newsletter del 29 gennaio 2026: società del settore sementi, 5 dipendenti, dispositivi sui veicoli che monitoravano lo stile di guida dei lavoratori.',
-      en: 'Garante Privacy, newsletter of 29 January 2026: a company in the seed sector, 5 employees, devices on vehicles that monitored the workers\' driving style.',
-      de: 'Garante Privacy, Newsletter vom 29. Januar 2026: ein Unternehmen aus der Saatgutbranche, 5 Beschäftigte, Geräte in den Fahrzeugen, die den Fahrstil der Beschäftigten überwachten.',
-      fr: "Garante Privacy, newsletter du 29 janvier 2026 : une société du secteur des semences, 5 salariés, des dispositifs sur les véhicules qui surveillaient le style de conduite des travailleurs.",
-      es: 'Garante Privacy, boletín del 29 de enero de 2026: una empresa del sector de las semillas, 5 empleados, dispositivos en los vehículos que monitorizaban el estilo de conducción de los trabajadores.',
-      nl: 'Garante Privacy, nieuwsbrief van 29 januari 2026: een bedrijf in de zaadsector, 5 werknemers, apparaten in de voertuigen die de rijstijl van de werknemers monitorden.',
+      it: 'Garante Privacy, Provvedimento n. 755 del 18 dicembre 2025 (Pioneer Hi-Bred Italia Sementi, doc-web 10213711), reso noto con la newsletter n. 542 del 29 gennaio 2026: 5 dipendenti, dispositivi telematici sui veicoli con punteggio sullo stile di guida calcolato anche sui viaggi privati.',
+      en: 'Garante Privacy, decision no. 755 of 18 December 2025 (Pioneer Hi-Bred Italia Sementi, doc-web 10213711), made public with newsletter no. 542 of 29 January 2026: 5 employees, telematics devices on vehicles with a driving-style score calculated on private trips as well.',
+      de: 'Garante Privacy, Bescheid Nr. 755 vom 18. Dezember 2025 (Pioneer Hi-Bred Italia Sementi, doc-web 10213711), bekannt gemacht mit Newsletter Nr. 542 vom 29. Januar 2026: 5 Beschäftigte, Telematikgeräte in den Fahrzeugen mit einem Fahrstil-Score, der auch Privatfahrten einbezog.',
+      fr: "Garante Privacy, décision n. 755 du 18 décembre 2025 (Pioneer Hi-Bred Italia Sementi, doc-web 10213711), rendue publique par la newsletter n. 542 du 29 janvier 2026 : 5 salariés, dispositifs télématiques sur les véhicules avec un score de conduite calculé aussi sur les trajets privés.",
+      es: 'Garante Privacy, resolución n. 755 de 18 de diciembre de 2025 (Pioneer Hi-Bred Italia Sementi, doc-web 10213711), difundida con el boletín n. 542 de 29 de enero de 2026: 5 empleados, dispositivos telemáticos en los vehículos con una puntuación de conducción calculada también sobre los viajes privados.',
+      nl: 'Garante Privacy, besluit nr. 755 van 18 december 2025 (Pioneer Hi-Bred Italia Sementi, doc-web 10213711), bekendgemaakt met nieuwsbrief nr. 542 van 29 januari 2026: 5 werknemers, telematica-apparatuur in de voertuigen met een rijstijlscore die ook privéritten meetelde.',
     },
-    urlFonte: 'https://www.garanteprivacy.it',
+    urlFonte:
+      'https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10213711',
   },
 
   fonti: [
     FONTE_PROVV_AUTOTRASPORTI,
+    FONTE_PROVV_PIONEER,
+    FONTE_PROVV_ATS_LIGURIA,
     FONTE_PROVV_ARSAC,
-    {
-      titolo:
-        'Garante Privacy, newsletter del 29 gennaio 2026 (sanzione settore sementi)',
-      url: 'https://www.garanteprivacy.it',
-    },
     FONTE_STATUTO_ART4,
     FONTE_GDPR,
   ],
 
-  aggiornatoIl: '2026-06-15',
+  aggiornatoIl: '2026-08-03',
 };

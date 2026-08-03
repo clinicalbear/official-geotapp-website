@@ -284,12 +284,12 @@ export const lituania: SchedaPaese = {
       nl: 'tot 20 miljoen euro of 4% van de omzet (AVG)',
     },
     casoCitato: {
-      it: 'Non risulta una multa del VDAI specifica e pubblicata per il GPS sui dipendenti. In una decisione del 7 ottobre 2022 il VDAI ha ritenuto illecito il trattamento della corrispondenza personale di un dipendente (esaminata e usata per un procedimento disciplinare) senza una base giuridica ai sensi dell\'art. 6 GDPR. Il VDAI ha inoltre ritenuto sproporzionato il tracciamento GPS continuo dei dipendenti. Il rischio sanzionatorio resta quello generale del GDPR (art. 83).',
-      en: 'There is no specific, published VDAI fine for GPS on employees. In a decision of 7 October 2022 the VDAI held unlawful the processing of an employee personal correspondence (examined and used for a disciplinary proceeding) without a legal basis under art. 6 GDPR. The VDAI also held continuous GPS tracking of employees to be disproportionate. The sanction risk remains the general one under the GDPR (art. 83).',
-      de: 'Es gibt keine spezifische, veroeffentlichte VDAI-Geldbusse fuer GPS bei Beschaeftigten. In einer Entscheidung vom 7. Oktober 2022 hat das VDAI die Verarbeitung der persoenlichen Korrespondenz eines Beschaeftigten (die geprueft und fuer ein Disziplinarverfahren verwendet wurde) ohne Rechtsgrundlage nach Art. 6 DSGVO fuer rechtswidrig erklaert. Das VDAI hat zudem die kontinuierliche GPS-Verfolgung von Beschaeftigten als unverhaeltnismaessig angesehen. Das Sanktionsrisiko bleibt das allgemeine der DSGVO (Art. 83).',
-      fr: "Il n existe pas d amende specifique et publiee du VDAI pour le GPS sur les salaries. Dans une decision du 7 octobre 2022, le VDAI a juge illicite le traitement de la correspondance personnelle d un salarie (examinee et utilisee pour une procedure disciplinaire) sans base juridique au sens de l art. 6 RGPD. Le VDAI a en outre juge disproportionne le suivi GPS continu des salaries. Le risque de sanction reste celui, general, du RGPD (art. 83).",
-      es: 'No consta una multa especifica y publicada del VDAI por el GPS sobre los empleados. En una decision de 7 de octubre de 2022 el VDAI considero ilicito el tratamiento de la correspondencia personal de un empleado (examinada y utilizada para un procedimiento disciplinario) sin una base juridica con arreglo al art. 6 RGPD. El VDAI considero ademas desproporcionado el seguimiento GPS continuo de los empleados. El riesgo sancionador sigue siendo el general del RGPD (art. 83).',
-      nl: 'Er is geen specifieke, gepubliceerde VDAI-boete voor GPS op werknemers. In een besluit van 7 oktober 2022 oordeelde het VDAI dat de verwerking van de persoonlijke correspondentie van een werknemer (onderzocht en gebruikt voor een tuchtprocedure) zonder rechtsgrondslag op grond van art. 6 AVG onrechtmatig was. Het VDAI achtte bovendien continue GPS-tracking van werknemers onevenredig. Het sanctierisico blijft het algemene risico van de AVG (art. 83).',
+      it: 'Non risulta una multa del VDAI specifica e pubblicata per il GPS sui dipendenti. Il rischio sanzionatorio resta quello generale del GDPR (art. 83).',
+      en: 'There is no specific, published VDAI fine for GPS on employees. The sanction risk remains the general one under the GDPR (Art. 83).',
+      de: 'Es gibt kein spezifisches, veroeffentlichtes VDAI-Bussgeld zu GPS bei Beschaeftigten. Das Sanktionsrisiko bleibt das allgemeine der DSGVO (Art. 83).',
+      fr: "Il n'existe pas d'amende du VDAI specifique et publiee pour le GPS des salaries. Le risque de sanction reste celui, general, du RGPD (art. 83).",
+      es: 'No consta una multa del VDAI especifica y publicada por el GPS de los empleados. El riesgo sancionador sigue siendo el general del RGPD (art. 83).',
+      nl: 'Er is geen specifieke, gepubliceerde VDAI-boete voor gps bij werknemers. Het sanctierisico blijft het algemene van de AVG (art. 83).',
     },
     urlFonte: FONTE_VDAI_CORRISPONDENZA.url,
   },
@@ -302,5 +302,5 @@ export const lituania: SchedaPaese = {
     FONTE_GDPR,
   ],
 
-  aggiornatoIl: '2026-06-15',
+  aggiornatoIl: '2026-08-03',
 };

@@ -22,7 +22,7 @@ import type { SchedaPaese } from '../types';
 // URL delle fonti primarie citate.
 const FONTE_LPDP = {
   titolo: 'Legge sulla protezione dei dati (LPDP, 87/2018) - testo ufficiale',
-  url: 'https://www.poverenik.rs/en/закони4/2970-закон-о-заштити-података-о-личности-сл-гласник-рс-бр-87-2018-од-13-11-2018.html',
+  url: 'https://poverenik.rs/en/data-protection/',
 };
 const FONTE_LISTA_DPIA = {
   titolo:
@@ -36,7 +36,7 @@ const FONTE_PR_LEGAL = {
 };
 const FONTE_POVERENIK = {
   titolo: 'Poverenik (Garante serbo), competenze e contatti',
-  url: 'https://www.poverenik.rs/en/o-nama/authority.html',
+  url: 'https://poverenik.rs/en/about-us/about-the-commissioner/',
 };
 const FONTE_N1_MEDIANA = {
   titolo:

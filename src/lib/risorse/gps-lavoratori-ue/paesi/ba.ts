@@ -286,7 +286,7 @@ export const bosnia: SchedaPaese = {
       nl: 'tot 40 miljoen BAM of 4% van de omzet (nieuwe wet in AVG-stijl)',
     },
     casoCitato: {
-      it: "Non risulta una multa dell'AZLP specifica e pubblicata per il GPS sui dipendenti. Con la nuova legge del 2025 le sanzioni sono in stile GDPR: fino a 40 milioni di BAM o il 4% del fatturato annuo mondiale. L'AZLP ha classificato il monitoraggio dei dipendenti tramite GPS come trattamento ad alto rischio che richiede una valutazione d'impatto.",
+      it: "Non risulta una multa dell'AZLP specifica e pubblicata per il GPS sui dipendenti. Con la nuova legge, in vigore da marzo 2025 e applicabile dal 4 ottobre 2025, le sanzioni sono in stile GDPR: fino a 40 milioni di BAM o il 4% del fatturato annuo mondiale. L'AZLP ha classificato il monitoraggio dei dipendenti tramite GPS come trattamento ad alto rischio che richiede una valutazione d'impatto.",
       en: "There is no specific, published AZLP fine for GPS tracking of employees. Under the new 2025 law, penalties are GDPR-style: up to 40 million BAM or 4% of annual worldwide turnover. The AZLP has classified the monitoring of employees via GPS as a high-risk processing that requires an impact assessment.",
       de: "Eine spezifische, veroeffentlichte Geldbusse der AZLP fuer die GPS-Ortung von Beschaeftigten ist nicht bekannt. Mit dem neuen Gesetz von 2025 sind die Sanktionen im DSGVO-Stil: bis zu 40 Millionen BAM oder 4 % des weltweiten Jahresumsatzes. Die AZLP hat die Ueberwachung von Beschaeftigten per GPS als Verarbeitung mit hohem Risiko eingestuft, die eine Folgenabschaetzung erfordert.",
       fr: "Il n'existe pas d'amende specifique et publiee de l'AZLP pour le suivi GPS des employes. Avec la nouvelle loi de 2025, les sanctions sont de type RGPD : jusqu'a 40 millions de BAM ou 4 % du chiffre d'affaires annuel mondial. L'AZLP a classe la surveillance des employes par GPS comme un traitement a haut risque qui exige une analyse d'impact.",
@@ -305,5 +305,5 @@ export const bosnia: SchedaPaese = {
     FONTE_GDPR,
   ],
 
-  aggiornatoIl: '2026-06-15',
+  aggiornatoIl: '2026-08-03',
 };

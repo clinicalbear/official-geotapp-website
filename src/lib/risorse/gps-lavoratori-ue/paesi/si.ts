@@ -30,7 +30,7 @@ const FONTE_ZDR1_48 = {
 };
 const FONTE_IPRS_DPIA = {
   titolo: "IP-RS, valutazione d'impatto sulla protezione dei dati",
-  url: 'https://www.ip-rs.si/zakonodaja/reforma-evropskega-zakonodajnega-okvira-za-varstvo-osebnih-podatkov/kljucna-podrocja-uredbe/ocena-ucinka-v-zvezi-z-varstvom-podatkov/',
+  url: 'https://www.ip-rs.si/publikacije/priro%C4%8Dniki-in-smernice/smernice-po-splo%C5%A1ni-uredbi-o-varstvu-podatkov-gdpr/smernice-ocene-u%C4%8Dinkov-na-varstvo-osebnih-podatkov',
 };
 const FONTE_IPRS_SEGNALAZIONE = {
   titolo: 'IP-RS, presentare una segnalazione',

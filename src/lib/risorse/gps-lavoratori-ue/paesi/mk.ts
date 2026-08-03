@@ -273,25 +273,25 @@ export const macedoniaDelNord: SchedaPaese = {
 
   sanzioneMax: {
     importo: {
-      it: 'fino al 4% del fatturato annuo; violazioni della videosorveglianza da 1.000 a 10.000 euro',
-      en: 'up to 4% of annual turnover; video surveillance breaches from 1,000 to 10,000 euros',
-      de: 'bis zu 4 % des Jahresumsatzes; Verstoesse bei der Videoueberwachung von 1.000 bis 10.000 Euro',
-      fr: "jusqu'a 4 % du chiffre d'affaires annuel ; infractions a la videosurveillance de 1 000 a 10 000 euros",
-      es: 'hasta el 4% de la facturacion anual; infracciones de videovigilancia de 1.000 a 10.000 euros',
-      nl: 'tot 4% van de jaaromzet; overtredingen bij cameratoezicht van 1.000 tot 10.000 euro',
+      it: 'fino al 4% del fatturato annuo',
+      en: 'up to 4% of annual turnover',
+      de: 'bis zu 4% des Jahresumsatzes',
+      fr: "jusqu'a 4% du chiffre d'affaires annuel",
+      es: 'hasta el 4% de la facturacion anual',
+      nl: 'tot 4% van de jaaromzet',
     },
     casoCitato: {
-      it: "Non risulta una multa dell'AZLP specifica e pubblicata per il GPS sui dipendenti. Le sanzioni generali arrivano fino al 4% del fatturato annuo; le violazioni delle norme sulla videosorveglianza sono punite con una sanzione da 1.000 a 10.000 euro per la persona giuridica. La blacklist AZLP classifica il tracciamento GPS dei lavoratori come trattamento che richiede una valutazione d'impatto.",
-      en: 'There is no specific, published AZLP fine for GPS on employees. General penalties reach up to 4% of annual turnover; breaches of the video surveillance rules are punished with a fine of 1,000 to 10,000 euros for the legal person. The AZLP blacklist classifies GPS tracking of workers as processing that requires an impact assessment.',
-      de: 'Es ist keine spezifische, veroeffentlichte Geldbusse der AZLP zu GPS bei Beschaeftigten bekannt. Allgemeine Sanktionen reichen bis zu 4 % des Jahresumsatzes; Verstoesse gegen die Vorschriften zur Videoueberwachung werden bei der juristischen Person mit einer Geldbusse von 1.000 bis 10.000 Euro geahndet. Die AZLP-Blacklist stuft die GPS-Ortung von Beschaeftigten als Verarbeitung ein, die eine Folgenabschaetzung erfordert.',
+      it: "Non risulta una multa dell'AZLP specifica e pubblicata per il GPS sui dipendenti. La blacklist AZLP classifica il tracciamento GPS dei lavoratori come trattamento che richiede una valutazione d'impatto.",
+      en: 'There is no specific, published AZLP fine for GPS on employees. The AZLP blacklist classifies GPS tracking of workers as processing that requires an impact assessment.',
+      de: 'Es ist keine spezifische, veroeffentlichte Geldbusse der AZLP zu GPS bei Beschaeftigten bekannt. Die AZLP-Blacklist stuft die GPS-Ortung von Beschaeftigten als Verarbeitung ein, die eine Folgenabschaetzung erfordert.',
       fr: "Aucune amende specifique et publiee de l'AZLP n'est connue pour le GPS sur les salaries. Les sanctions generales atteignent jusqu'a 4 % du chiffre d'affaires annuel ; les infractions aux regles de videosurveillance sont punies d'une amende de 1 000 a 10 000 euros pour la personne morale. La liste noire de l'AZLP classe le suivi GPS des travailleurs parmi les traitements qui necessitent une analyse d'impact.",
-      es: 'No consta una multa especifica y publicada de la AZLP por el GPS sobre los empleados. Las sanciones generales llegan hasta el 4% de la facturacion anual; las infracciones de las normas de videovigilancia se castigan con una multa de 1.000 a 10.000 euros para la persona juridica. La lista negra de la AZLP clasifica el seguimiento GPS de los trabajadores como tratamiento que requiere una evaluacion de impacto.',
-      nl: 'Er is geen specifieke, gepubliceerde boete van de AZLP bekend voor GPS op werknemers. Algemene sancties lopen op tot 4% van de jaaromzet; overtredingen van de regels voor cameratoezicht worden bestraft met een boete van 1.000 tot 10.000 euro voor de rechtspersoon. De AZLP-blacklist classificeert GPS-tracking van werknemers als verwerking die een effectbeoordeling vereist.',
+      es: 'No consta una multa especifica y publicada de la AZLP por el GPS sobre los empleados. La lista negra de la AZLP clasifica el seguimiento GPS de los trabajadores como tratamiento que requiere una evaluacion de impacto.',
+      nl: 'Er is geen specifieke, gepubliceerde boete van de AZLP bekend voor GPS op werknemers. De AZLP-blacklist classificeert GPS-tracking van werknemers als verwerking die een effectbeoordeling vereist.',
     },
     urlFonte: FONTE_SCHOENHERR.url,
   },
 
   fonti: [FONTE_LPDP, FONTE_AZLP_DPIA, FONTE_AZLP, FONTE_SCHOENHERR, FONTE_GDPR],
 
-  aggiornatoIl: '2026-06-15',
+  aggiornatoIl: '2026-08-03',
 };

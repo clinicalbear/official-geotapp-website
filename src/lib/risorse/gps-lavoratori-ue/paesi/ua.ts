@@ -282,7 +282,7 @@ export const ucraina: SchedaPaese = {
       nl: 'momenteel bescheiden boetes (ongeveer 150 - 380 euro)',
     },
     casoCitato: {
-      it: "Non risulta una decisione ucraina specifica e pubblicata sul GPS sui dipendenti, e l'applicazione e' limitata. Le sanzioni amministrative attuali sono modeste (circa 150 - 380 euro). La riforma in attesa (ddl 8153) porterebbe sanzioni in stile GDPR (fino a 150 milioni di UAH o 8% del fatturato), ma non e' in vigore.",
+      it: "Non risulta una decisione ucraina specifica e pubblicata sul GPS sui dipendenti, e l'applicazione e' limitata. Le sanzioni amministrative attuali sono modeste (circa 150 - 380 euro). La riforma in attesa (ddl 8153, approvato in prima lettura il 20 novembre 2024 e in attesa della seconda) porterebbe sanzioni in stile GDPR (fino a 150 milioni di UAH o 8% del fatturato), ma non e' in vigore.",
       en: 'There is no specific published Ukrainian decision on GPS tracking of employees, and enforcement is limited. The current administrative fines are modest (around 150 - 380 euros). The pending reform (bill 8153) would bring GDPR-style fines (up to 150 million UAH or 8% of turnover), but it is not in force.',
       de: 'Eine spezifische, veroeffentlichte ukrainische Entscheidung zur GPS-Ueberwachung von Beschaeftigten ist nicht ersichtlich, und der Vollzug ist begrenzt. Die derzeitigen Bussgelder sind moderat (etwa 150 - 380 Euro). Die ausstehende Reform (Gesetzentwurf 8153) wuerde Bussgelder im DSGVO-Stil bringen (bis zu 150 Millionen UAH oder 8 % des Umsatzes), ist aber nicht in Kraft.',
       fr: "Il n'existe pas de decision ukrainienne specifique et publiee sur le GPS des salaries, et l'application est limitee. Les amendes administratives actuelles sont modestes (environ 150 - 380 euros). La reforme en attente (projet de loi 8153) introduirait des amendes de type RGPD (jusqu'a 150 millions de UAH ou 8 % du chiffre d'affaires), mais elle n'est pas en vigueur.",
@@ -294,5 +294,5 @@ export const ucraina: SchedaPaese = {
 
   fonti: [FONTE_LEGGE_2297, FONTE_OMBUDSMAN, FONTE_ICLG, FONTE_GDPR],
 
-  aggiornatoIl: '2026-06-15',
+  aggiornatoIl: '2026-08-03',
 };

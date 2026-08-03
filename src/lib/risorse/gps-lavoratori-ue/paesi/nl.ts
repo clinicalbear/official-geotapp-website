@@ -284,20 +284,20 @@ export const olanda: SchedaPaese = {
 
   sanzioneMax: {
     importo: {
-      it: '725.000 €',
-      en: 'EUR 725,000',
-      de: '725.000 EUR',
-      fr: '725 000 EUR',
-      es: '725.000 EUR',
-      nl: '725.000 EUR',
+      it: '725.000 € (ridotta a 50.000 € in opposizione)',
+      en: 'EUR 725,000 (reduced to EUR 50,000 on objection)',
+      de: '725.000 EUR (im Widerspruchsverfahren auf 50.000 EUR reduziert)',
+      fr: '725 000 EUR (ramenée à 50 000 EUR sur opposition)',
+      es: '725.000 EUR (reducida a 50.000 EUR tras oposición)',
+      nl: '725.000 EUR (in bezwaar verlaagd naar 50.000 EUR)',
     },
     casoCitato: {
-      it: "Sanzione dell'Autoriteit Persoonsgegevens (2020) a un'azienda per il trattamento delle impronte digitali dei dipendenti per la rilevazione delle presenze: dato biometrico (art. 9 GDPR) trattato senza una base valida, perché il consenso dei dipendenti non e considerato libero per lo squilibrio di potere. Non e un caso di GPS ma e il caso faro olandese sul controllo presenze dei dipendenti. L'importo potrebbe essere stato ridotto in sede di opposizione: da verificare alla fonte ufficiale.",
-      en: "Fine from the Autoriteit Persoonsgegevens (2020) against a company for processing employees' fingerprints for attendance recording: biometric data (art. 9 GDPR) processed without a valid basis, because the employees' consent is not regarded as freely given owing to the imbalance of power. It is not a GPS case but it is the Dutch landmark case on employee attendance monitoring. The amount may have been reduced on objection: check against the official source.",
-      de: "Bussgeld der Autoriteit Persoonsgegevens (2020) gegen ein Unternehmen wegen der Verarbeitung der Fingerabdruecke von Beschaeftigten zur Zeiterfassung: biometrische Daten (Art. 9 DSGVO), die ohne gueltige Grundlage verarbeitet wurden, da die Einwilligung der Beschaeftigten wegen des Machtungleichgewichts nicht als freiwillig gilt. Es handelt sich nicht um einen GPS-Fall, aber um den niederlaendischen Leitfall zur Anwesenheitskontrolle von Beschaeftigten. Der Betrag koennte im Widerspruchsverfahren verringert worden sein: an der offiziellen Quelle zu pruefen.",
-      fr: "Sanction de l'Autoriteit Persoonsgegevens (2020) contre une entreprise pour le traitement des empreintes digitales des salaries aux fins de releve des presences: donnee biometrique (art. 9 RGPD) traitee sans base valable, car le consentement des salaries n'est pas considere comme libre en raison du desequilibre de pouvoir. Ce n'est pas un cas de GPS mais c'est le cas de reference neerlandais sur le controle des presences des salaries. Le montant a pu etre reduit a la suite d'une opposition: a verifier a la source officielle.",
-      es: "Sancion de la Autoriteit Persoonsgegevens (2020) a una empresa por el tratamiento de las huellas dactilares de los empleados para el registro de la asistencia: dato biometrico (art. 9 RGPD) tratado sin una base valida, porque el consentimiento de los empleados no se considera libre por el desequilibrio de poder. No es un caso de GPS, pero es el caso de referencia neerlandes sobre el control de la asistencia de los empleados. El importe podria haberse reducido tras una oposicion: comprobarlo en la fuente oficial.",
-      nl: "Boete van de Autoriteit Persoonsgegevens (2020) aan een bedrijf voor de verwerking van de vingerafdrukken van werknemers voor de aanwezigheidsregistratie: biometrisch gegeven (art. 9 AVG) verwerkt zonder een geldige grondslag, omdat de toestemming van de werknemers niet als vrij wordt beschouwd vanwege de machtsongelijkheid. Het is geen GPS-zaak, maar het is de Nederlandse richtinggevende zaak over de aanwezigheidscontrole van werknemers. Het bedrag kan in bezwaar zijn verlaagd: te controleren bij de officiele bron.",
+      it: "Sanzione dell'Autoriteit Persoonsgegevens a un'azienda per il trattamento delle impronte digitali dei dipendenti per la rilevazione delle presenze: dato biometrico (art. 9 GDPR) trattato senza una base valida, perché il consenso dei dipendenti non e considerato libero per lo squilibrio di potere. Non e un caso di GPS ma e il caso faro olandese sul controllo presenze dei dipendenti. La multa iniziale di 725.000 € e stata ridotta a 50.000 € nel novembre 2020, in sede di opposizione, per la limitata capacita finanziaria dell'azienda durante la crisi da coronavirus.",
+      en: "Fine from the Autoriteit Persoonsgegevens against a company for processing employees' fingerprints for attendance recording: biometric data (art. 9 GDPR) processed without a valid basis, because the employees' consent is not regarded as freely given owing to the imbalance of power. It is not a GPS case but it is the Dutch landmark case on employee attendance monitoring. The initial EUR 725,000 fine was reduced to EUR 50,000 in November 2020, on objection, because of the company's limited financial capacity during the coronavirus crisis.",
+      de: "Bussgeld der Autoriteit Persoonsgegevens gegen ein Unternehmen wegen der Verarbeitung der Fingerabdruecke von Beschaeftigten zur Zeiterfassung: biometrische Daten (Art. 9 DSGVO), die ohne gueltige Grundlage verarbeitet wurden, da die Einwilligung der Beschaeftigten wegen des Machtungleichgewichts nicht als freiwillig gilt. Es handelt sich nicht um einen GPS-Fall, aber um den niederlaendischen Leitfall zur Anwesenheitskontrolle von Beschaeftigten. Das anfaengliche Bussgeld von 725.000 EUR wurde im November 2020 im Widerspruchsverfahren wegen der begrenzten Leistungsfaehigkeit des Unternehmens waehrend der Corona-Krise auf 50.000 EUR reduziert.",
+      fr: "Sanction de l'Autoriteit Persoonsgegevens contre une entreprise pour le traitement des empreintes digitales des salaries aux fins de releve des presences: donnee biometrique (art. 9 RGPD) traitee sans base valable, car le consentement des salaries n'est pas considere comme libre en raison du desequilibre de pouvoir. Ce n'est pas un cas de GPS mais c'est le cas de reference neerlandais sur le controle des presences des salaries. L'amende initiale de 725 000 EUR a ete ramenee a 50 000 EUR en novembre 2020, sur opposition, en raison des capacites financieres limitees de l'entreprise pendant la crise du coronavirus.",
+      es: "Sancion de la Autoriteit Persoonsgegevens a una empresa por el tratamiento de las huellas dactilares de los empleados para el registro de la asistencia: dato biometrico (art. 9 RGPD) tratado sin una base valida, porque el consentimiento de los empleados no se considera libre por el desequilibrio de poder. No es un caso de GPS, pero es el caso de referencia neerlandes sobre el control de la asistencia de los empleados. La multa inicial de 725.000 EUR se redujo a 50.000 EUR en noviembre de 2020, tras la oposicion, por la limitada capacidad economica de la empresa durante la crisis del coronavirus.",
+      nl: "Boete van de Autoriteit Persoonsgegevens aan een bedrijf voor de verwerking van de vingerafdrukken van werknemers voor de aanwezigheidsregistratie: biometrisch gegeven (art. 9 AVG) verwerkt zonder een geldige grondslag, omdat de toestemming van de werknemers niet als vrij wordt beschouwd vanwege de machtsongelijkheid. Het is geen GPS-zaak, maar het is de Nederlandse richtinggevende zaak over de aanwezigheidscontrole van werknemers. De oorspronkelijke boete van 725.000 EUR is in november 2020 in bezwaar verlaagd naar 50.000 EUR, vanwege de beperkte draagkracht van het bedrijf tijdens de coronacrisis.",
     },
     urlFonte: FONTE_AP_IMPRONTE.url,
   },
@@ -311,5 +311,5 @@ export const olanda: SchedaPaese = {
     FONTE_GDPR,
   ],
 
-  aggiornatoIl: '2026-06-15',
+  aggiornatoIl: '2026-08-03',
 };

@@ -287,12 +287,12 @@ export const lettonia: SchedaPaese = {
       nl: 'tot 20 miljoen euro of 4% van de omzet (AVG)',
     },
     casoCitato: {
-      it: 'Non risulta una multa del DVI specifica e pubblicata per il GPS sui dipendenti. In un caso del 2023 il DVI ha indagato la società QUANTRUM per una videosorveglianza che registrava anche l\'audio e ha ordinato di cessare la registrazione audio (provvedimento correttivo, senza multa). Il rischio sanzionatorio resta quello generale del GDPR (art. 83).',
-      en: 'There is no specific, published DVI fine for GPS tracking of employees. In a 2023 case the DVI investigated the company QUANTRUM for video surveillance that also recorded audio and ordered it to stop the audio recording (corrective measure, without a fine). The penalty risk remains the general one under the GDPR (Art. 83).',
-      de: 'Es ist keine spezifische, veroeffentlichte Geldbusse der DVI fuer GPS-Tracking von Beschaeftigten bekannt. In einem Fall aus dem Jahr 2023 untersuchte die DVI das Unternehmen QUANTRUM wegen einer Videoueberwachung, die auch Audio aufzeichnete, und ordnete an, die Audioaufzeichnung einzustellen (korrektive Massnahme, ohne Geldbusse). Das Sanktionsrisiko bleibt das allgemeine der DSGVO (Art. 83).',
-      fr: "Il n'existe pas d'amende de la DVI specifique et publiee pour le suivi GPS des salaries. Dans une affaire de 2023, la DVI a enquete sur la societe QUANTRUM pour une videosurveillance qui enregistrait aussi l'audio et lui a ordonne de cesser l'enregistrement audio (mesure corrective, sans amende). Le risque de sanction reste celui, general, du RGPD (art. 83).",
-      es: "No consta una multa del DVI especifica y publicada por el GPS de los empleados. En un caso de 2023 el DVI investigo a la empresa QUANTRUM por una videovigilancia que tambien grababa el audio y ordeno cesar la grabacion de audio (medida correctiva, sin multa). El riesgo sancionador sigue siendo el general del RGPD (art. 83).",
-      nl: 'Er is geen specifieke, gepubliceerde boete van de DVI voor GPS-tracking van werknemers. In een zaak uit 2023 onderzocht de DVI het bedrijf QUANTRUM wegens cameratoezicht dat ook audio opnam en gelastte het de audio-opname te staken (corrigerende maatregel, zonder boete). Het sanctierisico blijft het algemene risico van de AVG (art. 83).',
+      it: 'Non risulta una multa del DVI specifica e pubblicata per il GPS sui dipendenti. Il rischio sanzionatorio resta quello generale del GDPR (art. 83).',
+      en: 'There is no specific, published DVI fine for GPS tracking of employees. The penalty risk remains the general one under the GDPR (Art. 83).',
+      de: 'Es ist keine spezifische, veroeffentlichte Geldbusse der DVI fuer GPS-Tracking von Beschaeftigten bekannt. Das Sanktionsrisiko bleibt das allgemeine der DSGVO (Art. 83).',
+      fr: "Il n'existe pas d'amende de la DVI specifique et publiee pour le suivi GPS des salaries. Le risque de sanction reste celui, general, du RGPD (art. 83).",
+      es: "No consta una multa del DVI especifica y publicada por el GPS de los empleados. El riesgo sancionador sigue siendo el general del RGPD (art. 83).",
+      nl: 'Er is geen specifieke, gepubliceerde boete van de DVI voor GPS-tracking van werknemers. Het sanctierisico blijft het algemene risico van de AVG (art. 83).',
     },
     urlFonte: FONTE_DVI_GPS.url,
   },
@@ -306,5 +306,5 @@ export const lettonia: SchedaPaese = {
     FONTE_GDPR,
   ],
 
-  aggiornatoIl: '2026-06-15',
+  aggiornatoIl: '2026-08-03',
 };
