@@ -2,14 +2,14 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'Software für Gebäudereinigung und Facility Management | Schichtnachweise | GeoTapp',
-    description: 'GeoTapp für Gebäudereiniger und Facility-Management-Unternehmen: GPS-Zeiterfassung nach MiLoG, Fotodokumentation gereinigter Bereiche, Kontrolle verteilter Teams und Konformität mit dem Rahmentarifvertrag Gebäudereinigung.',
+    title: 'Digitale Zeiterfassung Gebäudereinigung: Nachweis je Objekt',
+    description: 'Digitale Zeiterfassung für die Gebäudereinigung: per GPS am Objekt stempeln, Stunden sofort im Büro, mit Fotobeweis. Nach §17 MiLoG.',
   },
   hero: {
-    badge: 'Software für Gebäudereinigung, Facility Management und Unterhaltsreinigung',
-    h1_line1: 'Gebäudereinigung im Griff:',
+    badge: 'Digitale Zeiterfassung für Gebäudereinigung, Facility Management und Unterhaltsreinigung',
+    h1_line1: 'Zeiterfassung in der Gebäudereinigung:',
     h1_line2: 'Schichten, Fotodokumentation und geprüfte Stunden, auf jedem Objekt',
-    subtitle: 'GeoTapp verbindet Flow + TimeTracker für Teams, die auf mehrere Gebäude und Etagen verteilt sind. Ihre Reinigungskräfte stempeln per GPS-verifiziertem Smartphone; das Büro sieht, wer was, wo und wann gereinigt hat, mit Fotobeweisen. Keine Streitigkeiten mehr, volle Konformität mit dem Rahmentarifvertrag Gebäudereinigung und §17 MiLoG.',
+    subtitle: 'GeoTapp verbindet Flow + TimeTracker für Teams, die auf mehrere Gebäude und Etagen verteilt sind. Ihre Reinigungskräfte stempeln per GPS-verifiziertem Smartphone; die digitale Zeiterfassung läuft je Objekt, und das Büro sieht, wer was, wo und wann gereinigt hat, mit Fotobeweisen. Keine Streitigkeiten mehr, volle Konformität mit dem Rahmentarifvertrag Gebäudereinigung und §17 MiLoG.',
     cta_primary: 'Demo anfragen',
     cta_note: 'Keine Bindung. Antwort innerhalb von 12 Geschäftsstunden.',
   },
@@ -74,6 +74,10 @@ const content: SettoreContent = {
     title: 'Häufige Fragen',
     subtitle: 'Was uns am häufigsten vor dem Start gefragt wird.',
     items: [
+      {
+        q: 'Was bringt eine digitale Zeiterfassung in der Gebäudereinigung?',
+        a: 'Sie ersetzt den Stundenzettel auf Papier, der erst am Monatsende im Büro ankommt und dann niemand mehr belegen kann. Die Reinigungskraft stempelt per Smartphone am Objekt, mit GPS-Nachweis; die Stunden stehen sofort im Büro, je Objekt getrennt, mit Fotos der gereinigten Bereiche. Am Monatsende ist die Abrechnung schon fertig, und wenn der Auftraggeber eine Leistung bestreitet, liegt der Nachweis bereits vor. Das erfüllt zugleich die Aufzeichnungspflicht nach §17 MiLoG und den Rahmentarifvertrag Gebäudereinigung.',
+      },
       {
         q: 'Ist GeoTapp für Gebäudereinigungsunternehmen und Facility-Management-Betriebe geeignet?',
         a: 'Ja. GeoTapp hilft Gebäudereinigern, FM-Dienstleistern und Unterhaltsreinigungsbetrieben bei der Verwaltung von Schichten auf mehreren Objekten, der Dokumentation mit GPS-Zeiterfassung und Fotobeweisen sowie der Einhaltung des Rahmentarifvertrags Gebäudereinigung und §17 MiLoG.',
