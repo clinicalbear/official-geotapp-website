@@ -523,6 +523,38 @@ export async function middleware(req: NextRequest) {
     }
   }
 
+  // 0a4. Slug "come funziona": pagina che su questo sito non e' MAI esistita.
+  // 53 articoli del blog la linkavano in relativo (/come-funziona, /how-it-works,
+  // /wie-es-funktioniert): ogni click o passaggio di crawler pagava 308 (slash finale)
+  // + 302 (lingua) e finiva comunque su un 404. I link nel WordPress sono stati
+  // corretti; questa resta la rete per le copie in cache, i feed e i link esterni.
+  // Destinazione: la pagina equivalente che esiste davvero, "cos'e GeoTapp",
+  // gia' localizzata dallo SLUG_MAP (was-ist-geotapp, wat-is-geotapp, ...).
+  {
+    const HOW_IT_WORKS_LEGACY = new Set(['come-funziona', 'how-it-works', 'wie-es-funktioniert']);
+    const bare = pathname.replace(/^\/|\/$/g, '');
+    const withLocale = pathname.match(/^\/([a-z]{2}(?:-[a-z]{2})?)\/([a-z-]+)\/?$/);
+    const supported = SUPPORTED_LOCALES as readonly string[];
+    if (withLocale && HOW_IT_WORKS_LEGACY.has(withLocale[2]) && supported.includes(withLocale[1])) {
+      // Con locale: equivalenza stabile per qualunque visitatore → 301.
+      const target = translatePath('/cos-e-geotapp/', withLocale[1] as AppLocale);
+      return NextResponse.redirect(new URL(`/${withLocale[1]}${target}`, req.url), 301);
+    }
+    if (HOW_IT_WORKS_LEGACY.has(bare)) {
+      // Senza locale: la destinazione dipende dal visitatore → 302, come /blog e /survey.
+      const detected = resolveLocale({
+        cookieLocale: req.cookies.get(LOCALE_COOKIE_NAME)?.value,
+        countryCode:
+          req.headers.get('cf-ipcountry') || req.headers.get('x-vercel-ip-country') || null,
+        acceptLanguage: req.headers.get('accept-language'),
+      });
+      const target = translatePath('/cos-e-geotapp/', detected);
+      const legacyRedirect = NextResponse.redirect(new URL(`/${detected}${target}`, req.url), 302);
+      legacyRedirect.headers.set('X-Robots-Tag', 'noindex, follow');
+      return legacyRedirect;
+    }
+  }
+
   // 0. Sitemap, serve complete XML directly from middleware.
   //
   // Root cause: OpenNext/Cloudflare Workers does not map the virtual /sitemap.xml
@@ -1032,7 +1064,19 @@ export async function middleware(req: NextRequest) {
   const url = req.nextUrl.clone();
   url.pathname = localizePath(pathname, resolvedLocale);
 
-  const response = NextResponse.redirect(url, 308);
+  // 302 e NON 308: la destinazione dipende da cookie + Accept-Language + paese,
+  // quindi varia per visitatore. E' la stessa regola gia' applicata a /blog e a
+  // /survey piu' sopra; qui era rimasta un 308 permanente, che e' una contraddizione:
+  //   - i motori cachano "geotapp.com/ -> /it/" come definitivo per TUTTO il mondo
+  //     (la prima destinazione vista dal crawler), e la radice del dominio e' l'URL
+  //     piu' linkato da stampa, directory e firme email;
+  //   - i browser cachano il 308 senza scadenza, quindi chi atterra una volta sulla
+  //     radice resta inchiodato a quella lingua e le richieste successive non
+  //     arrivano nemmeno piu' al server: il cookie di lingua non puo' correggerlo.
+  // noindex, follow sulla risposta di redirect: la radice non e' in sitemap e non e'
+  // x-default (x-default = /en/), quindi non deve competere con le pagine localizzate.
+  const response = NextResponse.redirect(url, 302);
+  response.headers.set('X-Robots-Tag', 'noindex, follow');
   response.cookies.set(LOCALE_COOKIE_NAME, resolvedLocale, {
     path: '/',
     sameSite: 'lax',
