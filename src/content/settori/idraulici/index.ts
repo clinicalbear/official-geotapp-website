@@ -1,5 +1,6 @@
 import type { AppLocale } from '@/lib/i18n/config';
 import type { SettoreContent } from '../types';
+import { REGIONAL_META } from './regional-meta';
 
 const map: Partial<Record<AppLocale, () => Promise<{ default: SettoreContent }>>> = {
   it: () => import('./it'),
@@ -23,5 +24,10 @@ const map: Partial<Record<AppLocale, () => Promise<{ default: SettoreContent }>>
 export async function getIdrauliciContent(locale: AppLocale): Promise<SettoreContent> {
   const loader = (map[locale] ?? map['en'])!;
   const mod = await loader();
-  return mod.default;
+  // Le varianti regionali EN condividono il corpo inglese ma hanno un blocco di
+  // conformita' proprio (UPC/IPC, WRAS, Gas Safe): dove esiste, lo snippet lo dice
+  // invece di ripetere quello generico. Vedi regional-meta.ts per la misura.
+  const regional = REGIONAL_META[locale];
+  if (!regional) return mod.default;
+  return { ...mod.default, meta: regional };
 }
