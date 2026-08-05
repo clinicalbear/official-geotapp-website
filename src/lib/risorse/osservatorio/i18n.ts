@@ -1,0 +1,202 @@
+import type { AppLocale } from '@/lib/i18n/config';
+
+/**
+ * Testi della risorsa "Osservatorio europeo" nelle undici lingue del sito.
+ *
+ * I nomi dei paesi restano in codice ISO (IT, FR, DE...) perche' sono neutri e leggibili
+ * in ogni lingua, e il nome dell'autorita' resta nella SUA lingua: "Garante per la
+ * protezione dei dati personali" non si traduce, e' il nome proprio di un ente.
+ */
+
+export interface OsservatorioStrings {
+  kicker: string;
+  h1: string;
+  lede: string;
+  conteggio: (voci: number, paesi: number, data: string) => string;
+  quadroNota: string;
+  thData: string;
+  thPaese: string;
+  thAutorita: string;
+  thProvvedimento: string;
+  thTemi: string;
+  thSanzione: string;
+  chiusura: string;
+  metaTitle: string;
+  metaDesc: string;
+  avviso: string;
+  temi: Record<string, string>;
+}
+
+const it: OsservatorioStrings = {
+  kicker: 'Risorse',
+  h1: 'Osservatorio europeo dei provvedimenti sul controllo dei lavoratori',
+  lede: 'Le autorita’ per la protezione dei dati decidono ogni settimana su geolocalizzazione, videosorveglianza e rilevazione delle presenze, e quelle decisioni stanno sparse su ventisei siti ufficiali in nove lingue. Qui sono in una tabella sola, ognuna con il collegamento al documento originale.',
+  conteggio: (v, p, d) => `${v} provvedimenti da ${p} paesi. Aggiornato il ${d}.`,
+  quadroNota: 'Le decisioni britanniche e svizzere nascono sotto un quadro normativo diverso dal Regolamento europeo, ed e’ indicato riga per riga.',
+  thData: 'Data', thPaese: 'Paese', thAutorita: 'Autorita’',
+  thProvvedimento: 'Provvedimento', thTemi: 'Temi', thSanzione: 'Sanzione',
+  chiusura: 'Ogni voce e’ raccolta dal sito ufficiale dell’autorita’ che l’ha emessa. Gli importi compaiono solo dove la fonte li scrive per esteso, i titoli non sono riscritti e nessuna sintesi e’ interpretata: quello che si legge qui si puo’ verificare in un clic.',
+  metaTitle: 'Osservatorio europeo: provvedimenti su controllo e presenze dei lavoratori',
+  metaDesc: 'I provvedimenti delle autorita’ europee su geolocalizzazione, videosorveglianza e presenze dei lavoratori, con il link al documento ufficiale.',
+  avviso: 'Due autorita’ mancano all’appello, la Renania Settentrionale-Vestfalia e l’Austria: i loro siti non rispondono, per un motivo tecnico che sta dalla loro parte e non dalla nostra. Il sistema ci bussa ogni mattina e le aggiunge il giorno che tornano raggiungibili.',
+  temi: { geolocalizzazione: 'geolocalizzazione', controllo_a_distanza: 'controllo a distanza', presenze_orario: 'presenze e orario', email_dipendenti: 'posta dei dipendenti', lavoro_agile: 'lavoro agile' },
+};
+
+const en: OsservatorioStrings = {
+  kicker: 'Resources',
+  h1: 'European register of rulings on monitoring at work',
+  lede: 'Data protection authorities decide on location tracking, camera surveillance and attendance records every week, and those decisions sit on twenty-six official sites in nine languages. Here they are in one table, each with a link to the original document.',
+  conteggio: (v, p, d) => `${v} rulings from ${p} countries. Updated ${d}.`,
+  quadroNota: 'UK and Swiss decisions come from a different legal framework than the EU Regulation, and that is marked on every row.',
+  thData: 'Date', thPaese: 'Country', thAutorita: 'Authority',
+  thProvvedimento: 'Ruling', thTemi: 'Topics', thSanzione: 'Fine',
+  chiusura: 'Every entry is collected from the official site of the authority that issued it. Amounts appear only where the source writes them out, titles are not rewritten and nothing is interpreted: everything here can be checked in one click.',
+  metaTitle: 'European register: rulings on worker monitoring and attendance',
+  metaDesc: 'Rulings from European data protection authorities on GPS, camera surveillance and attendance tracking at work, each linked to the official document.',
+  avviso: 'Two authorities are missing, North Rhine-Westphalia and Austria. Their sites are not responding, for a technical reason on their side rather than ours. The system knocks every morning and will add them the day they come back.',
+  temi: { geolocalizzazione: 'location tracking', controllo_a_distanza: 'remote monitoring', presenze_orario: 'attendance and hours', email_dipendenti: 'employee email', lavoro_agile: 'remote work' },
+};
+
+const de: OsservatorioStrings = {
+  kicker: 'Ressourcen',
+  h1: 'Europaeisches Register der Entscheidungen zur Kontrolle am Arbeitsplatz',
+  lede: 'Die Datenschutzbehoerden entscheiden woechentlich ueber Standortdaten, Videoueberwachung und Zeiterfassung, und diese Entscheidungen liegen auf sechsundzwanzig amtlichen Webseiten in neun Sprachen. Hier stehen sie in einer einzigen Tabelle, jede mit dem Link zum Originaldokument.',
+  conteggio: (v, p, d) => `${v} Entscheidungen aus ${p} Laendern. Stand ${d}.`,
+  quadroNota: 'Britische und schweizerische Entscheidungen beruhen auf einem anderen Rechtsrahmen als die EU-Verordnung, und das ist in jeder Zeile vermerkt.',
+  thData: 'Datum', thPaese: 'Land', thAutorita: 'Behoerde',
+  thProvvedimento: 'Entscheidung', thTemi: 'Themen', thSanzione: 'Bussgeld',
+  chiusura: 'Jeder Eintrag stammt von der amtlichen Seite der Behoerde, die ihn erlassen hat. Betraege erscheinen nur dort, wo die Quelle sie ausschreibt, Titel werden nicht umformuliert und nichts wird gedeutet: alles hier ist mit einem Klick pruefbar.',
+  metaTitle: 'Europaeisches Register: Entscheidungen zu Ueberwachung und Zeiterfassung',
+  metaDesc: 'Entscheidungen europaeischer Datenschutzbehoerden zu GPS, Videoueberwachung und Zeiterfassung am Arbeitsplatz, jeweils mit Link zum amtlichen Dokument.',
+  avviso: 'Zwei Behörden fehlen, Nordrhein-Westfalen und Österreich. Ihre Server antworten nicht, aus einem technischen Grund auf ihrer Seite und nicht auf unserer. Das System klopft jeden Morgen an und nimmt sie auf, sobald sie wieder erreichbar sind.',
+  temi: { geolocalizzazione: 'Standortdaten', controllo_a_distanza: 'Fernueberwachung', presenze_orario: 'Anwesenheit und Arbeitszeit', email_dipendenti: 'dienstliche E-Mail', lavoro_agile: 'mobiles Arbeiten' },
+};
+
+const fr: OsservatorioStrings = {
+  kicker: 'Ressources',
+  h1: 'Registre europeen des decisions sur le controle au travail',
+  lede: 'Les autorites de protection des donnees tranchent chaque semaine sur la geolocalisation, la videosurveillance et le releve des presences, et ces decisions se trouvent sur vingt-six sites officiels en neuf langues. Elles sont ici dans un seul tableau, chacune avec le lien vers le document d’origine.',
+  conteggio: (v, p, d) => `${v} decisions provenant de ${p} pays. Mis a jour le ${d}.`,
+  quadroNota: 'Les decisions britanniques et suisses relevent d’un cadre juridique different du Reglement europeen, et cela est indique ligne par ligne.',
+  thData: 'Date', thPaese: 'Pays', thAutorita: 'Autorite',
+  thProvvedimento: 'Decision', thTemi: 'Themes', thSanzione: 'Amende',
+  chiusura: 'Chaque entree provient du site officiel de l’autorite qui l’a rendue. Les montants ne figurent que la ou la source les ecrit en toutes lettres, les titres ne sont pas reecrits et rien n’est interprete: tout se verifie en un clic.',
+  metaTitle: 'Registre europeen: decisions sur le controle et les presences des salaries',
+  metaDesc: 'Les decisions des autorites europeennes sur le GPS, la videosurveillance et le releve des presences au travail, avec le lien vers le document officiel.',
+  avviso: 'Deux autorités manquent, la Rhénanie-du-Nord-Westphalie et l’Autriche. Leurs sites ne répondent pas, pour une raison technique qui se trouve de leur côté et non du nôtre. Le système frappe chaque matin et les ajoutera dès qu’elles répondront.',
+  temi: { geolocalizzazione: 'geolocalisation', controllo_a_distanza: 'controle a distance', presenze_orario: 'presences et horaires', email_dipendenti: 'messagerie professionnelle', lavoro_agile: 'teletravail' },
+};
+
+const es: OsservatorioStrings = {
+  kicker: 'Recursos',
+  h1: 'Registro europeo de resoluciones sobre el control en el trabajo',
+  lede: 'Las autoridades de proteccion de datos resuelven cada semana sobre geolocalizacion, videovigilancia y registro de jornada, y esas resoluciones estan repartidas en veintiseis sitios oficiales en nueve idiomas. Aqui estan en una sola tabla, cada una con el enlace al documento original.',
+  conteggio: (v, p, d) => `${v} resoluciones de ${p} paises. Actualizado el ${d}.`,
+  quadroNota: 'Las resoluciones britanicas y suizas nacen de un marco legal distinto del Reglamento europeo, y se indica en cada fila.',
+  thData: 'Fecha', thPaese: 'Pais', thAutorita: 'Autoridad',
+  thProvvedimento: 'Resolucion', thTemi: 'Temas', thSanzione: 'Multa',
+  chiusura: 'Cada entrada procede del sitio oficial de la autoridad que la dicto. Los importes aparecen solo donde la fuente los escribe, los titulos no se reescriben y nada se interpreta: todo se puede comprobar en un clic.',
+  metaTitle: 'Registro europeo: resoluciones sobre control y jornada de los trabajadores',
+  metaDesc: 'Resoluciones de las autoridades europeas sobre GPS, videovigilancia y registro de jornada, con enlace al documento oficial.',
+  avviso: 'Faltan dos autoridades, Renania del Norte-Westfalia y Austria. Sus sitios no responden, por un motivo técnico que está de su lado y no del nuestro. El sistema llama cada mañana y las añadirá el día que vuelvan.',
+  temi: { geolocalizzazione: 'geolocalizacion', controllo_a_distanza: 'control a distancia', presenze_orario: 'jornada y presencia', email_dipendenti: 'correo del trabajador', lavoro_agile: 'teletrabajo' },
+};
+
+const pt: OsservatorioStrings = {
+  kicker: 'Recursos',
+  h1: 'Registo europeu das decisoes sobre controlo no trabalho',
+  lede: 'As autoridades de protecao de dados decidem todas as semanas sobre geolocalizacao, videovigilancia e registo de assiduidade, e essas decisoes estao espalhadas por vinte e seis sites oficiais em nove linguas. Aqui estao numa so tabela, cada uma com a ligacao ao documento original.',
+  conteggio: (v, p, d) => `${v} decisoes de ${p} paises. Atualizado a ${d}.`,
+  quadroNota: 'As decisoes britanicas e suicas nascem de um quadro legal diferente do Regulamento europeu, e isso e indicado linha a linha.',
+  thData: 'Data', thPaese: 'Pais', thAutorita: 'Autoridade',
+  thProvvedimento: 'Decisao', thTemi: 'Temas', thSanzione: 'Coima',
+  chiusura: 'Cada entrada vem do site oficial da autoridade que a emitiu. Os montantes aparecem apenas onde a fonte os escreve, os titulos nao sao reescritos e nada e interpretado: tudo se verifica num clique.',
+  metaTitle: 'Registo europeu: decisoes sobre controlo e assiduidade dos trabalhadores',
+  metaDesc: 'Decisoes das autoridades europeias sobre GPS, videovigilancia e registo de assiduidade, com ligacao ao documento oficial.',
+  avviso: 'Faltam duas autoridades, a Renânia do Norte-Vestefália e a Áustria. Os seus sites não respondem, por um motivo técnico que está do lado deles e não do nosso. O sistema bate todas as manhãs e acrescenta-as no dia em que voltarem.',
+  temi: { geolocalizzazione: 'geolocalizacao', controllo_a_distanza: 'controlo a distancia', presenze_orario: 'assiduidade e horario', email_dipendenti: 'correio do trabalhador', lavoro_agile: 'teletrabalho' },
+};
+
+const nl: OsservatorioStrings = {
+  kicker: 'Bronnen',
+  h1: 'Europees register van besluiten over controle op het werk',
+  lede: 'Toezichthouders beslissen elke week over locatiegegevens, cameratoezicht en urenregistratie, en die besluiten staan verspreid over zesentwintig officiele sites in negen talen. Hier staan ze in een tabel, elk met de link naar het oorspronkelijke document.',
+  conteggio: (v, p, d) => `${v} besluiten uit ${p} landen. Bijgewerkt op ${d}.`,
+  quadroNota: 'Britse en Zwitserse besluiten komen uit een ander wettelijk kader dan de Europese verordening, en dat staat per regel vermeld.',
+  thData: 'Datum', thPaese: 'Land', thAutorita: 'Toezichthouder',
+  thProvvedimento: 'Besluit', thTemi: 'Onderwerpen', thSanzione: 'Boete',
+  chiusura: 'Elke regel komt van de officiele site van de toezichthouder die het besluit nam. Bedragen verschijnen alleen waar de bron ze voluit schrijft, titels worden niet herschreven en niets wordt uitgelegd: alles is met een klik te controleren.',
+  metaTitle: 'Europees register: besluiten over controle en urenregistratie',
+  metaDesc: 'Besluiten van Europese toezichthouders over GPS, cameratoezicht en urenregistratie op het werk, met link naar het officiele document.',
+  avviso: 'Twee toezichthouders ontbreken, Noordrijn-Westfalen en Oostenrijk. Hun sites reageren niet, om een technische reden die aan hun kant ligt en niet aan de onze. Het systeem klopt elke ochtend aan en voegt ze toe zodra ze weer bereikbaar zijn.',
+  temi: { geolocalizzazione: 'locatiegegevens', controllo_a_distanza: 'toezicht op afstand', presenze_orario: 'aanwezigheid en uren', email_dipendenti: 'zakelijke e-mail', lavoro_agile: 'thuiswerken' },
+};
+
+const sv: OsservatorioStrings = {
+  kicker: 'Resurser',
+  h1: 'Europeiskt register over beslut om kontroll i arbetslivet',
+  lede: 'Dataskyddsmyndigheterna beslutar varje vecka om positionsdata, kamerabevakning och narvaroregistrering, och besluten ligger utspridda pa tjugosex officiella webbplatser pa nio sprak. Har finns de i en enda tabell, var och en med lank till originaldokumentet.',
+  conteggio: (v, p, d) => `${v} beslut fran ${p} lander. Uppdaterat ${d}.`,
+  quadroNota: 'Brittiska och schweiziska beslut vilar pa ett annat regelverk an EU-forordningen, och det anges rad for rad.',
+  thData: 'Datum', thPaese: 'Land', thAutorita: 'Myndighet',
+  thProvvedimento: 'Beslut', thTemi: 'Amnen', thSanzione: 'Sanktionsavgift',
+  chiusura: 'Varje rad kommer fran den beslutande myndighetens egen webbplats. Belopp visas bara dar kallan skriver ut dem, rubriker skrivs inte om och inget tolkas: allt gar att kontrollera med ett klick.',
+  metaTitle: 'Europeiskt register: beslut om overvakning och narvaro i arbetslivet',
+  metaDesc: 'Beslut fran europeiska dataskyddsmyndigheter om GPS, kamerabevakning och narvaroregistrering, med lank till originaldokumentet.',
+  avviso: 'Två myndigheter saknas, Nordrhein-Westfalen och Österrike. Deras webbplatser svarar inte, av ett tekniskt skäl som ligger på deras sida och inte på vår. Systemet knackar varje morgon och lägger till dem den dag de kommer tillbaka.',
+  temi: { geolocalizzazione: 'positionsdata', controllo_a_distanza: 'overvakning pa distans', presenze_orario: 'narvaro och arbetstid', email_dipendenti: 'arbetsmejl', lavoro_agile: 'distansarbete' },
+};
+
+const da: OsservatorioStrings = {
+  kicker: 'Ressourcer',
+  h1: 'Europaeisk register over afgorelser om kontrol pa arbejdspladsen',
+  lede: 'Datatilsynene traeffer hver uge afgorelser om lokationsdata, videoovervagning og tidsregistrering, og de ligger spredt pa seksogtyve officielle sider pa ni sprog. Her er de samlet i en tabel, hver med link til det oprindelige dokument.',
+  conteggio: (v, p, d) => `${v} afgorelser fra ${p} lande. Opdateret ${d}.`,
+  quadroNota: 'Britiske og schweiziske afgorelser bygger pa en anden retlig ramme end EU-forordningen, og det er anfort linje for linje.',
+  thData: 'Dato', thPaese: 'Land', thAutorita: 'Myndighed',
+  thProvvedimento: 'Afgorelse', thTemi: 'Emner', thSanzione: 'Bode',
+  chiusura: 'Hver post stammer fra den myndigheds egen hjemmeside, der traf afgorelsen. Belob vises kun, hvor kilden skriver dem, titler omskrives ikke, og intet fortolkes: alt kan kontrolleres med et klik.',
+  metaTitle: 'Europaeisk register: afgorelser om overvagning og tidsregistrering',
+  metaDesc: 'Afgorelser fra europaeiske datatilsyn om GPS, videoovervagning og tidsregistrering pa arbejdet, med link til det officielle dokument.',
+  avviso: 'To myndigheder mangler, Nordrhein-Westfalen og Østrig. Deres sider svarer ikke, af en teknisk årsag der ligger hos dem og ikke hos os. Systemet banker på hver morgen og tilføjer dem den dag de vender tilbage.',
+  temi: { geolocalizzazione: 'lokationsdata', controllo_a_distanza: 'fjernovervagning', presenze_orario: 'fremmode og arbejdstid', email_dipendenti: 'arbejdsmail', lavoro_agile: 'hjemmearbejde' },
+};
+
+const nb: OsservatorioStrings = {
+  kicker: 'Ressurser',
+  h1: 'Europeisk register over vedtak om kontroll i arbeidslivet',
+  lede: 'Datatilsynene avgjor hver uke saker om posisjonsdata, kameraovervaking og tidsregistrering, og vedtakene ligger spredt pa tjueseks offisielle nettsteder pa ni sprak. Her er de i en tabell, hvert med lenke til originaldokumentet.',
+  conteggio: (v, p, d) => `${v} vedtak fra ${p} land. Oppdatert ${d}.`,
+  quadroNota: 'Britiske og sveitsiske vedtak bygger pa et annet regelverk enn EU-forordningen, og det star linje for linje.',
+  thData: 'Dato', thPaese: 'Land', thAutorita: 'Tilsyn',
+  thProvvedimento: 'Vedtak', thTemi: 'Temaer', thSanzione: 'Gebyr',
+  chiusura: 'Hver oppforing kommer fra nettstedet til tilsynet som fattet vedtaket. Belop vises bare der kilden skriver dem, titler skrives ikke om og ingenting tolkes: alt kan kontrolleres med ett klikk.',
+  metaTitle: 'Europeisk register: vedtak om overvaking og tidsregistrering',
+  metaDesc: 'Vedtak fra europeiske datatilsyn om GPS, kameraovervaking og tidsregistrering i arbeidslivet, med lenke til originaldokumentet.',
+  avviso: 'To myndigheter mangler, Nordrhein-Westfalen og Østerrike. Nettstedene deres svarer ikke, av en teknisk årsak som ligger hos dem og ikke hos oss. Systemet banker på hver morgen og legger dem til den dagen de er tilbake.',
+  temi: { geolocalizzazione: 'posisjonsdata', controllo_a_distanza: 'fjernovervaking', presenze_orario: 'oppmote og arbeidstid', email_dipendenti: 'jobb-epost', lavoro_agile: 'hjemmekontor' },
+};
+
+const ru: OsservatorioStrings = {
+  kicker: 'Ресурсы',
+  h1: 'Европейский реестр решений о контроле на работе',
+  lede: 'Надзорные органы каждую неделю решают вопросы геолокации, видеонаблюдения и учёта рабочего времени. Здесь они собраны в одну таблицу со ссылкой на оригинал.',
+  conteggio: (v, p, d) => `${v} решений из ${p} стран. Обновлено ${d}.`,
+  quadroNota: 'Решения Великобритании и Швейцарии относятся к иной правовой системе, что указано в каждой строке.',
+  thData: 'Дата', thPaese: 'Страна', thAutorita: 'Орган',
+  thProvvedimento: 'Решение', thTemi: 'Темы', thSanzione: 'Штраф',
+  chiusura: 'Каждая запись взята с официального сайта органа, вынесшего решение. Суммы указаны только там, где их пишет источник.',
+  metaTitle: 'Европейский реестр решений о контроле работников',
+  metaDesc: 'Решения европейских надзорных органов о GPS, видеонаблюдении и учёте времени с ссылками на документы.',
+  avviso: 'Двух органов не хватает, Северного Рейна-Вестфалии и Австрии. Их сайты не отвечают по технической причине, которая находится на их стороне, а не на нашей. Система стучится каждое утро и добавит их в тот день, когда они вернутся.',
+  temi: { geolocalizzazione: 'геолокация', controllo_a_distanza: 'дистанционный контроль', presenze_orario: 'учёт рабочего времени', email_dipendenti: 'рабочая почта', lavoro_agile: 'удалённая работа' },
+};
+
+const BY_LOCALE: Record<AppLocale, OsservatorioStrings> = {
+  it, en, de, fr, es, pt, nl, sv, da, nb, ru,
+  'en-us': en, 'en-gb': en, 'en-au': en, 'en-ie': en, 'en-ca': en,
+};
+
+export function osservatorioStrings(locale: AppLocale): OsservatorioStrings {
+  return BY_LOCALE[locale] ?? it;
+}

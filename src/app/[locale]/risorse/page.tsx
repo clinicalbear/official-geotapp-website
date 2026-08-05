@@ -41,6 +41,7 @@ const CARDS = [
   { key: 'generatore', path: '/risorse/generatore-informativa-gps/' },
   { key: 'conservazione', path: '/risorse/politica-conservazione-dati/' },
   { key: 'sanzioni', path: '/risorse/sanzioni-gps/' },
+  { key: 'osservatorio', path: '/risorse/osservatorio/' },
   { key: 'indice', path: '/risorse/indice-sorveglianza/' },
   { key: 'roi', path: '/roi-calculator/' },
   { key: 'survey', path: '/survey/' },

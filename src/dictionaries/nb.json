@@ -59,6 +59,10 @@
         "title": "GPS-botkalkulator",
         "desc": "Velg et land og finn ut hvor mye du risikerer ved å overvåke ansatte: reell maksimal bot og plikter som eksponerer deg."
       },
+      "osservatorio": {
+        "title": "Europeisk observatorium",
+        "desc": "Vedtak fra europeiske tilsynsmyndigheter om posisjonsdata, kameraovervåkning og tidsregistrering, hvert med lenke til den offisielle kilden."
+      },
       "indice": {
         "title": "Indeks for ansattovervåking i Europa",
         "desc": "Rangeringen av 39 europeiske land etter hvor strengt rammeverket for ansattovervåking er."

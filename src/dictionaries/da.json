@@ -59,6 +59,10 @@
         "title": "GPS-bødeberegner",
         "desc": "Vælg et land og find ud af, hvor meget du risikerer ved at overvåge medarbejdere: reel maksimal bøde og forpligtelser, der udsætter dig."
       },
+      "osservatorio": {
+        "title": "Europæisk observatorium",
+        "desc": "Afgørelser fra europæiske tilsynsmyndigheder om lokationsdata, tv-overvågning og tidsregistrering, hver med link til den officielle kilde."
+      },
       "indice": {
         "title": "Indeks for medarbejderovervågning i Europa",
         "desc": "Rangeringen af 39 europæiske lande efter hvor strengt deres regelsæt for medarbejderovervågning er."

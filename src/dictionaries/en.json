@@ -59,6 +59,10 @@
         "title": "GPS penalty calculator",
         "desc": "Pick a country and find out how much you risk monitoring workers: real maximum fine and the obligations that expose you."
       },
+      "osservatorio": {
+        "title": "European observatory",
+        "desc": "Decisions from Europe's data protection authorities on location tracking, CCTV and time recording at work, each one linked to its official source."
+      },
       "indice": {
         "title": "Worker surveillance index in Europe",
         "desc": "The ranking of 39 European countries by how strict their worker-monitoring framework is."

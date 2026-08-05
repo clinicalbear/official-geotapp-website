@@ -59,6 +59,10 @@
         "title": "GPS-Bußgeldrechner",
         "desc": "Land wählen und sehen, wie viel Sie bei Mitarbeiterüberwachung riskieren: reales Höchstbußgeld und exponierende Pflichten."
       },
+      "osservatorio": {
+        "title": "Europäische Beobachtungsstelle",
+        "desc": "Entscheidungen europäischer Datenschutzbehörden zu Standortdaten, Videoüberwachung und Zeiterfassung, jede mit Link zur amtlichen Quelle."
+      },
       "indice": {
         "title": "Index der Arbeitnehmerüberwachung in Europa",
         "desc": "Das Ranking von 39 europäischen Ländern nach Strenge des Mitarbeiterüberwachungs-Rahmens."

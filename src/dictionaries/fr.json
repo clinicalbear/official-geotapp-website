@@ -59,6 +59,10 @@
         "title": "Calculateur d'amendes GPS",
         "desc": "Choisissez le pays et découvrez combien vous risquez à surveiller vos salariés : amende maximale réelle et obligations qui vous exposent."
       },
+      "osservatorio": {
+        "title": "Observatoire européen",
+        "desc": "Les décisions des autorités européennes sur la géolocalisation, la vidéosurveillance et le temps de travail, chacune avec le lien vers la source officielle."
+      },
       "indice": {
         "title": "Indice de surveillance des travailleurs en Europe",
         "desc": "Le classement de 39 pays européens selon la rigueur de leur cadre de surveillance des salariés."

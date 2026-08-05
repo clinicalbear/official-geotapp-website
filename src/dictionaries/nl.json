@@ -59,6 +59,10 @@
         "title": "GPS-boetecalculator",
         "desc": "Kies een land en ontdek hoeveel je riskeert bij het monitoren van werknemers: reële maximumboete en verplichtingen die je blootstellen."
       },
+      "osservatorio": {
+        "title": "Europees observatorium",
+        "desc": "Besluiten van Europese privacytoezichthouders over locatiegegevens, cameratoezicht en tijdregistratie, elk met de link naar de officiële bron."
+      },
       "indice": {
         "title": "Index werknemerstoezicht in Europa",
         "desc": "De ranglijst van 39 Europese landen naar hoe streng hun kader voor werknemersmonitoring is."

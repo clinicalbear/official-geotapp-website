@@ -59,6 +59,10 @@
         "title": "GPS-bötesräknare",
         "desc": "Välj ett land och ta reda på hur mycket du riskerar genom att övervaka anställda: verklig maxbot och skyldigheter som exponerar dig."
       },
+      "osservatorio": {
+        "title": "Europeiskt observatorium",
+        "desc": "Beslut från europeiska tillsynsmyndigheter om positionsuppgifter, kamerabevakning och tidsregistrering, var och en med länk till källan."
+      },
       "indice": {
         "title": "Index för medarbetarövervakning i Europa",
         "desc": "Rangordningen av 39 europeiska länder efter hur strängt deras ramverk för medarbetarövervakning är."

@@ -1,0 +1,974 @@
+{
+ "aggiornato": "2026-08-05",
+ "voci": [
+  {
+   "country": "FR",
+   "authority": "Commission Nationale de l'Informatique et des Libertés",
+   "framework": "gdpr",
+   "title": "Travail, ressources humaines : le contrôle de l’activité des personnes employées",
+   "published_at": "2026-07-09",
+   "source_url": "https://www.cnil.fr/fr/controle-de-lactivite-des-personnes-employees",
+   "topics": [
+    "controllo_a_distanza",
+    "geolocalizzazione",
+    "lavoro_agile",
+    "presenze_orario"
+   ],
+   "amount_eur": null,
+   "doc_number": "",
+   "lang": "fr"
+  },
+  {
+   "country": "FR",
+   "authority": "Commission Nationale de l'Informatique et des Libertés",
+   "framework": "gdpr",
+   "title": "Véhicules connectés : la CNIL publie sa recommandation sur l’utilisation des données de localisation",
+   "published_at": "2026-06-30",
+   "source_url": "https://www.cnil.fr/fr/recommandation-vehicules-connectes-localisation",
+   "topics": [
+    "geolocalizzazione"
+   ],
+   "amount_eur": null,
+   "doc_number": "",
+   "lang": "fr"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Provvedimento del 18 giugno 2026 [10268633]",
+   "published_at": "2026-06-18",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10268633",
+   "topics": [
+    "presenze_orario"
+   ],
+   "amount_eur": 6600,
+   "doc_number": "462/2026",
+   "lang": "it"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Provvedimento del 18 giugno 2026 [10272529]",
+   "published_at": "2026-06-18",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10272529",
+   "topics": [
+    "email_dipendenti"
+   ],
+   "amount_eur": 460000,
+   "doc_number": "476/2026",
+   "lang": "it"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Provvedimento del 18 giugno 2026 [10267254 ] - Comune di Vasto",
+   "published_at": "2026-06-18",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10267254",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": 5000,
+   "doc_number": "457/2026",
+   "lang": "it"
+  },
+  {
+   "country": "SE",
+   "authority": "Integritetsskyddsmyndigheten",
+   "framework": "gdpr",
+   "title": "IMY kritiserar Securitas för kamerabevakning i bil av anställda",
+   "published_at": "2026-06-16",
+   "source_url": "https://www.imy.se/nyheter/imy-kritiserar-securitas-for-kamerabevakning-i-bil-av-anstallda/",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": null,
+   "doc_number": "",
+   "lang": "sv"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Provvedimento dell'11 giugno 2026 [10269684]",
+   "published_at": "2026-06-11",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10269684",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": 1000,
+   "doc_number": "10269684",
+   "lang": "it"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Provvedimento dell'11 giugno 2026 [10277202]",
+   "published_at": "2026-06-11",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10277202",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": null,
+   "doc_number": "10277202",
+   "lang": "it"
+  },
+  {
+   "country": "ES",
+   "authority": "Agencia Española de Protección de Datos",
+   "framework": "gdpr",
+   "title": "La AEPD publica unas orientaciones sobre el uso de videocámaras en el hogar de personas mayores para compatibilizar cuidados y privacidad",
+   "published_at": "2026-06-08",
+   "source_url": "https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/aepd-publica-unas-orientaciones-sobre-uso-videocamaras-hogar",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": null,
+   "doc_number": "",
+   "lang": "es"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Provvedimento del 28 maggio 2026 [10259916]",
+   "published_at": "2026-05-28",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10259916",
+   "topics": [
+    "controllo_a_distanza",
+    "geolocalizzazione"
+   ],
+   "amount_eur": 6000,
+   "doc_number": "382/2026",
+   "lang": "it"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Provvedimento del 28 maggio 2026 [10265423]",
+   "published_at": "2026-05-28",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10265423",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": 1400,
+   "doc_number": "395/2026",
+   "lang": "it"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Provvedimento del 28 maggio 2026 [10265450]",
+   "published_at": "2026-05-28",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10265450",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": null,
+   "doc_number": "396/2026",
+   "lang": "it"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Provvedimento del 14 maggio 2026 [10268800]",
+   "published_at": "2026-05-14",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10268800",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": 43000,
+   "doc_number": "356/2026",
+   "lang": "it"
+  },
+  {
+   "country": "ES",
+   "authority": "Agencia Española de Protección de Datos",
+   "framework": "gdpr",
+   "title": "La Agencia recibió más de 30.000 reclamaciones en 2025, un 64% más que el año anterior",
+   "published_at": "2026-05-06",
+   "source_url": "https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/la-agencia-recibio-mas-de-30.000-reclamaciones-en-2025-un-64-mas",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": null,
+   "doc_number": "",
+   "lang": "es"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Provvedimento del 17 aprile 2026 [10250265]",
+   "published_at": "2026-04-17",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10250265",
+   "topics": [
+    "email_dipendenti"
+   ],
+   "amount_eur": 5000,
+   "doc_number": "278/2026",
+   "lang": "it"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Provvedimento del 17 aprile 2026 [10256825]",
+   "published_at": "2026-04-17",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10256825",
+   "topics": [
+    "controllo_a_distanza",
+    "geolocalizzazione"
+   ],
+   "amount_eur": 4000,
+   "doc_number": "271/2026",
+   "lang": "it"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Provvedimento del 12 marzo 2026 [10240451]",
+   "published_at": "2026-03-12",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10240451",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": 2000,
+   "doc_number": "167/2026",
+   "lang": "it"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Provvedimento del 12 marzo 2026 [10233328]",
+   "published_at": "2026-03-12",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10233328",
+   "topics": [
+    "controllo_a_distanza",
+    "email_dipendenti"
+   ],
+   "amount_eur": 50000,
+   "doc_number": "165/2026",
+   "lang": "it"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Provvedimento del 26 febbraio 2026 [10233224]",
+   "published_at": "2026-02-26",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10233224",
+   "topics": [
+    "presenze_orario"
+   ],
+   "amount_eur": 15000,
+   "doc_number": "122/2026",
+   "lang": "it"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Provvedimento del 26 febbraio 2026 [10234928] - Dedalus Italia S.p.A.",
+   "published_at": "2026-02-26",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10234928",
+   "topics": [
+    "presenze_orario"
+   ],
+   "amount_eur": 32000,
+   "doc_number": "119/2026",
+   "lang": "it"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Provvedimento del 24 febbraio 2026 [10224096]",
+   "published_at": "2026-02-24",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10224096",
+   "topics": [
+    "presenze_orario"
+   ],
+   "amount_eur": null,
+   "doc_number": "107/2026",
+   "lang": "it"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Provvedimento del 12 febbraio 2026 [10230220]",
+   "published_at": "2026-02-12",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10230220",
+   "topics": [
+    "email_dipendenti"
+   ],
+   "amount_eur": 12000,
+   "doc_number": "82/2026",
+   "lang": "it"
+  },
+  {
+   "country": "FR",
+   "authority": "Commission Nationale de l'Informatique et des Libertés",
+   "framework": "gdpr",
+   "title": "Sanctions et mesures correctrices : la CNIL présente le bilan 2025",
+   "published_at": "2026-02-09",
+   "source_url": "https://www.cnil.fr/fr/bilan-sanctions-2025",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": null,
+   "doc_number": "",
+   "lang": "fr"
+  },
+  {
+   "country": "NL",
+   "authority": "Autoriteit Persoonsgegevens",
+   "framework": "gdpr",
+   "title": "Cameratoezicht in ov: chauffeurs mogen niet permanent in beeld",
+   "published_at": "2026-01-28",
+   "source_url": "https://autoriteitpersoonsgegevens.nl/actueel/cameratoezicht-in-ov-chauffeurs-mogen-niet-permanent-in-beeld",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": null,
+   "doc_number": "",
+   "lang": "nl"
+  },
+  {
+   "country": "ES",
+   "authority": "Agencia Española de Protección de Datos",
+   "framework": "gdpr",
+   "title": "La AEPD publica un decálogo con recomendaciones para proteger la privacidad al usar herramientas de IA",
+   "published_at": "2026-01-27",
+   "source_url": "https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/aepd-publica-decalogo-recomendaciones-proteger-privacidad-al-usar-ia",
+   "topics": [
+    "geolocalizzazione"
+   ],
+   "amount_eur": null,
+   "doc_number": "",
+   "lang": "es"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Provvedimento del 18 dicembre 2025 [10216459]",
+   "published_at": "2025-12-18",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10216459",
+   "topics": [
+    "email_dipendenti"
+   ],
+   "amount_eur": 40000,
+   "doc_number": "808/2025",
+   "lang": "it"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Provvedimento del 18 dicembre 2025 [10213711]",
+   "published_at": "2025-12-18",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10213711",
+   "topics": [
+    "geolocalizzazione"
+   ],
+   "amount_eur": 120000,
+   "doc_number": "755/2025",
+   "lang": "it"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Provvedimento del 18 dicembre 2025 [10213574]",
+   "published_at": "2025-12-18",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10213574",
+   "topics": [
+    "email_dipendenti"
+   ],
+   "amount_eur": 40000,
+   "doc_number": "754/2025",
+   "lang": "it"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Provvedimento del 9 ottobre 2025 [10185435]",
+   "published_at": "2025-10-09",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10185435",
+   "topics": [
+    "email_dipendenti"
+   ],
+   "amount_eur": 500000,
+   "doc_number": "613/2025",
+   "lang": "it"
+  },
+  {
+   "country": "DK",
+   "authority": "Datatilsynet (Danmark)",
+   "framework": "gdpr",
+   "title": "Tv-overvågning af medarbejdere hos DSB Service & Retail A/S",
+   "published_at": "2025-09-30",
+   "source_url": "https://www.datatilsynet.dk/afgoerelser/afgoerelser/2025/sep/tv-overvaagning-af-medarbejdere-hos-dsb-service-and-retail-a/s",
+   "topics": [
+    "controllo_a_distanza",
+    "presenze_orario"
+   ],
+   "amount_eur": null,
+   "doc_number": "",
+   "lang": "da"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Provvedimento del 25 settembre 2025 [10184744] - Vimar S.p.A.",
+   "published_at": "2025-09-25",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10184744",
+   "topics": [
+    "email_dipendenti"
+   ],
+   "amount_eur": 15000,
+   "doc_number": "534/2025",
+   "lang": "it"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Provvedimento del 17 luglio 2025 [10182762]",
+   "published_at": "2025-07-17",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10182762",
+   "topics": [
+    "email_dipendenti"
+   ],
+   "amount_eur": 8000,
+   "doc_number": "427/2025",
+   "lang": "it"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Provvedimento del 23 giugno 2025 [10161563]",
+   "published_at": "2025-06-23",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10161563",
+   "topics": [
+    "email_dipendenti"
+   ],
+   "amount_eur": null,
+   "doc_number": "364/2025",
+   "lang": "it"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Provvedimento del 4 giugno 2025 [10164273]",
+   "published_at": "2025-06-04",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10164273",
+   "topics": [
+    "geolocalizzazione"
+   ],
+   "amount_eur": 15000,
+   "doc_number": "324/2025",
+   "lang": "it"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Provvedimento del 21 maggio 2025 [10162944]",
+   "published_at": "2025-05-21",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10162944",
+   "topics": [
+    "geolocalizzazione"
+   ],
+   "amount_eur": 20000,
+   "doc_number": "289/2025",
+   "lang": "it"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Provvedimento del 21 maggio 2025 [10143261]",
+   "published_at": "2025-05-21",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10143261",
+   "topics": [
+    "email_dipendenti",
+    "geolocalizzazione"
+   ],
+   "amount_eur": null,
+   "doc_number": "288/2025",
+   "lang": "it"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Provvedimento del 10 aprile 2025 [10144203]",
+   "published_at": "2025-04-10",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10144203",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": 5000,
+   "doc_number": "208/2025",
+   "lang": "it"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Provvedimento del 13 marzo 2025 [10138760]",
+   "published_at": "2025-03-13",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10138760",
+   "topics": [
+    "email_dipendenti"
+   ],
+   "amount_eur": 20000,
+   "doc_number": "153/2025",
+   "lang": "it"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Provvedimento del 13 febbraio 2025 [10113552]",
+   "published_at": "2025-02-13",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10113552",
+   "topics": [
+    "email_dipendenti"
+   ],
+   "amount_eur": 20000,
+   "doc_number": "63/2025",
+   "lang": "it"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Provvedimento del 13 febbraio 2025 [10138744]",
+   "published_at": "2025-02-13",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10138744",
+   "topics": [
+    "email_dipendenti"
+   ],
+   "amount_eur": null,
+   "doc_number": "84/2025",
+   "lang": "it"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Provvedimento del 16 gennaio 2025 [10110927] - Sicurnet Liguria S.r.l.",
+   "published_at": "2025-01-16",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10110927",
+   "topics": [
+    "email_dipendenti"
+   ],
+   "amount_eur": 8000,
+   "doc_number": "8/2025",
+   "lang": "it"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Provvedimento del 16 gennaio 2025 [10112287]",
+   "published_at": "2025-01-16",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10112287",
+   "topics": [
+    "controllo_a_distanza",
+    "geolocalizzazione",
+    "presenze_orario"
+   ],
+   "amount_eur": 50000,
+   "doc_number": "7/2025",
+   "lang": "it"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Provvedimento del 19 dicembre 2024 [10105535]",
+   "published_at": "2024-12-19",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10105535",
+   "topics": [
+    "geolocalizzazione"
+   ],
+   "amount_eur": 5000000,
+   "doc_number": "818/2024",
+   "lang": "it"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Provvedimento del 12 dicembre 2024 [10107187] - BDM Banca S.p.A.",
+   "published_at": "2024-12-12",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10107187",
+   "topics": [
+    "presenze_orario"
+   ],
+   "amount_eur": 20000,
+   "doc_number": "833/2024",
+   "lang": "it"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Provvedimento del 12 dicembre 2024 [10096474]",
+   "published_at": "2024-12-12",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10096474",
+   "topics": [
+    "controllo_a_distanza",
+    "email_dipendenti",
+    "presenze_orario"
+   ],
+   "amount_eur": 20000,
+   "doc_number": "771/2024",
+   "lang": "it"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Provvedimento del 27 novembre 2024 [10101221]",
+   "published_at": "2024-11-27",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10101221",
+   "topics": [
+    "email_dipendenti"
+   ],
+   "amount_eur": 40000,
+   "doc_number": "732/2024",
+   "lang": "it"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Provvedimento del 26 settembre 2024 [10066287]",
+   "published_at": "2024-09-26",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10066287",
+   "topics": [
+    "geolocalizzazione",
+    "presenze_orario"
+   ],
+   "amount_eur": 4000,
+   "doc_number": "589/2024",
+   "lang": "it"
+  },
+  {
+   "country": "DE",
+   "authority": "Berliner Beauftragte für Datenschutz und Informationsfreiheit",
+   "framework": "gdpr",
+   "title": "BlnBDI PM Jahresbericht 2023",
+   "published_at": "2024-09-17",
+   "source_url": "https://www.datenschutz-berlin.de/fileadmin/user_upload/pdf/pressemitteilungen/2024/20240917-BlnBDI-PM-Jahresbericht-2023.pdf",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": null,
+   "doc_number": "",
+   "lang": "de"
+  },
+  {
+   "country": "DK",
+   "authority": "Datatilsynet (Danmark)",
+   "framework": "gdpr",
+   "title": "Samtykke til ansigtsgenkendelse i fitnesscenter var gyldigt",
+   "published_at": "2024-07-03",
+   "source_url": "https://www.datatilsynet.dk/afgoerelser/afgoerelser/2024/jul/samtykke-til-ansigtsgenkendelse-i-fitnesscenter-var-gyldigt",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": null,
+   "doc_number": "",
+   "lang": "da"
+  },
+  {
+   "country": "DK",
+   "authority": "Datatilsynet (Danmark)",
+   "framework": "gdpr",
+   "title": "Natklub får alvorlig kritik: Manglende indsigt i og sletning af tv-overvågningsoptagelser",
+   "published_at": "2024-06-24",
+   "source_url": "https://www.datatilsynet.dk/afgoerelser/afgoerelser/2024/jun/natklub-faar-alvorlig-kritik-manglende-indsigt-i-og-sletning-af-tv-overvaagningsoptagelser",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": null,
+   "doc_number": "",
+   "lang": "da"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Provvedimento del 6 giugno 2024 [10029500]",
+   "published_at": "2024-06-06",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10029500",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": 120000,
+   "doc_number": "338/2024",
+   "lang": "it"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Provvedimento del 22 febbraio 2024 [9995701]",
+   "published_at": "2024-02-22",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9995701",
+   "topics": [
+    "presenze_orario"
+   ],
+   "amount_eur": 5000,
+   "doc_number": "106/2024",
+   "lang": "it"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Provvedimento del 22 febbraio 2024 [9995741]",
+   "published_at": "2024-02-22",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9995741",
+   "topics": [
+    "presenze_orario"
+   ],
+   "amount_eur": 6000,
+   "doc_number": "107/2024",
+   "lang": "it"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Provvedimento del 24 gennaio 2024 [9993105]",
+   "published_at": "2024-01-24",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9993105",
+   "topics": [
+    "email_dipendenti"
+   ],
+   "amount_eur": 15000,
+   "doc_number": "40/2024",
+   "lang": "it"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Provvedimento del 30 novembre 2023 [9970864]",
+   "published_at": "2023-11-30",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9970864",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": null,
+   "doc_number": "559/2023",
+   "lang": "it"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Provvedimento del 12 ottobre 2023 [9965598] - S.T.A. Società Trattamento Acque s.r.l.",
+   "published_at": "2023-10-12",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9965598",
+   "topics": [
+    "lavoro_agile"
+   ],
+   "amount_eur": 75000,
+   "doc_number": "475/2023",
+   "lang": "it"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Provvedimento del 14 settembre 2023 [9940565]",
+   "published_at": "2023-09-14",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9940565",
+   "topics": [
+    "controllo_a_distanza",
+    "presenze_orario"
+   ],
+   "amount_eur": 5000,
+   "doc_number": "404/2023",
+   "lang": "it"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Provvedimento del 14 settembre 2023 [9936174] - Shardana Working Società Coop. a r.l.",
+   "published_at": "2023-09-14",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9936174",
+   "topics": [
+    "geolocalizzazione"
+   ],
+   "amount_eur": 20000,
+   "doc_number": "403/2023",
+   "lang": "it"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Provvedimento del 22 giugno 2023 [9920814]",
+   "published_at": "2023-06-22",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9920814",
+   "topics": [
+    "email_dipendenti"
+   ],
+   "amount_eur": 5000,
+   "doc_number": "263/2023",
+   "lang": "it"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Provvedimento del 27 aprile 2023 [9909235]",
+   "published_at": "2023-04-27",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9909235",
+   "topics": [
+    "email_dipendenti"
+   ],
+   "amount_eur": 40000,
+   "doc_number": "171/2023",
+   "lang": "it"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Provvedimento del 13 aprile 2023 [9891673 ]",
+   "published_at": "2023-04-13",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9891673",
+   "topics": [
+    "email_dipendenti"
+   ],
+   "amount_eur": 15000,
+   "doc_number": "127/2023",
+   "lang": "it"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Ordinanza ingiunzione nei confronti di Banca Cambiano 1884 S.p.A. - 9...",
+   "published_at": "2023-03-09",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9877728",
+   "topics": [
+    "lavoro_agile"
+   ],
+   "amount_eur": 10000,
+   "doc_number": "67/2023",
+   "lang": "it"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Provvedimento del 2 marzo 2023 [9880398]",
+   "published_at": "2023-03-02",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9880398",
+   "topics": [
+    "controllo_a_distanza",
+    "presenze_orario"
+   ],
+   "amount_eur": 50000,
+   "doc_number": "58/2023",
+   "lang": "it"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Ordinanza ingiunzione nei confronti di Giessegi Industria Mobili S.p.A. - 15...",
+   "published_at": "2022-12-15",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9861249",
+   "topics": [
+    "geolocalizzazione"
+   ],
+   "amount_eur": 50000,
+   "doc_number": "428/2022",
+   "lang": "it"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Ordinanza ingiunzione nei confronti di Verizon Connect Italy S.p.A. - 15...",
+   "published_at": "2022-12-15",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9856694",
+   "topics": [
+    "geolocalizzazione"
+   ],
+   "amount_eur": 30000,
+   "doc_number": "427/2022",
+   "lang": "it"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Ordinanza ingiunzione nei confronti di Amazon Italia Logistica s.r.l. - 1...",
+   "published_at": "2022-12-01",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9843805",
+   "topics": [
+    "presenze_orario"
+   ],
+   "amount_eur": 20000,
+   "doc_number": "406/2022",
+   "lang": "it"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Ordinanza ingiunzione nei confronti di Deca s.r.l. - 9 marzo 2023 [9874604]",
+   "published_at": "2022-03-09",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9874604",
+   "topics": [
+    "controllo_a_distanza",
+    "lavoro_agile",
+    "presenze_orario"
+   ],
+   "amount_eur": 1600,
+   "doc_number": "66/2022",
+   "lang": "it"
+  },
+  {
+   "country": "DE",
+   "authority": "Datenschutzaufsicht Baden-Württemberg",
+   "framework": "gdpr",
+   "title": "Orientierungshilfe 3G Arbeitsplatz",
+   "published_at": "2021-11-22",
+   "source_url": "https://www.baden-wuerttemberg.datenschutz.de/wp-content/uploads/2021/11/Orientierungshilfe-3G_Arbeitsplatz.pdf",
+   "topics": [
+    "lavoro_agile"
+   ],
+   "amount_eur": null,
+   "doc_number": "",
+   "lang": "de"
+  }
+ ]
+}

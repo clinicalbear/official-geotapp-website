@@ -59,6 +59,10 @@
         "title": "Calculadora de sanciones GPS",
         "desc": "Elige el país y descubre cuánto te arriesgas al monitorizar trabajadores: sanción máxima real y obligaciones que te exponen."
       },
+      "osservatorio": {
+        "title": "Observatorio europeo",
+        "desc": "Las resoluciones de las autoridades europeas sobre geolocalización, videovigilancia y registro de jornada, cada una con el enlace a la fuente oficial."
+      },
       "indice": {
         "title": "Índice de vigilancia laboral en Europa",
         "desc": "La clasificación de 39 países europeos según lo estricto de su marco de monitorización de trabajadores."

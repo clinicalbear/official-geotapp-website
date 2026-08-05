@@ -193,6 +193,12 @@ export const SLUG_MAP: Record<string, Partial<Record<AppLocale, string>>> = {
     da: 'ressourcer', sv: 'resurser', nb: 'ressurser', ru: 'resursy',
     'en-us': 'resources', 'en-gb': 'resources', 'en-au': 'resources', 'en-ie': 'resources', 'en-ca': 'resources',
   },
+  'osservatorio': {
+    it: 'osservatorio', en: 'observatory', de: 'beobachtungsstelle', nl: 'observatorium',
+    fr: 'observatoire', es: 'observatorio', pt: 'observatorio',
+    da: 'observatorium', sv: 'observatorium', nb: 'observatorium', ru: 'observatoriya',
+    'en-us': 'observatory', 'en-gb': 'observatory', 'en-au': 'observatory', 'en-ie': 'observatory', 'en-ca': 'observatory',
+  },
   'sanzioni-gps': {
     it: 'sanzioni-gps', en: 'gps-penalties', de: 'gps-bussgelder', nl: 'gps-boetes',
     fr: 'amendes-gps', es: 'sanciones-gps', pt: 'sancoes-gps',
