@@ -92,7 +92,11 @@ export default async function OsservatorioPage({
   const dataBreve = new Intl.DateTimeFormat(intl, {
     day: '2-digit', month: '2-digit', year: 'numeric',
   });
-  const importo = new Intl.NumberFormat(intl, { maximumFractionDigits: 0 });
+  // useGrouping esplicito: in automatico Intl omette il separatore sotto le cinque
+  // cifre, e in colonna "6600" accanto a "460.000" sembrava un refuso.
+  const importo = new Intl.NumberFormat(intl, {
+    maximumFractionDigits: 0, useGrouping: true,
+  });
 
   return (
     <div className="lp-l lp-risorsa-strumento lp-osservatorio">
