@@ -1,0 +1,171 @@
+/* Vestiti della tabella dell'osservatorio. La pagina riusa .ph/.sec globali, ma la
+   tabella non aveva NESSUNA regola: sessantotto righe su sei colonne senza bordi,
+   senza righe alternate e con le intestazioni allineate al contrario del contenuto.
+   Ogni regola e' prefissata .lp-osservatorio per non toccare le altre risorse. */
+
+.lp-osservatorio .oss-nota {
+  max-width: 760px;
+}
+
+.lp-osservatorio .oss-avviso {
+  max-width: 760px;
+  margin: 14px 0 30px;
+  padding: 14px 18px;
+  border-left: 3px solid var(--seal, #8fc436);
+  background: rgba(143, 196, 54, 0.08);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+/* Il contenitore scorre in orizzontale solo quando serve davvero, e lo dichiara
+   con un'ombra sul bordo destro invece di lasciare la tabella tagliata a secco. */
+.lp-osservatorio .oss-scroll {
+  overflow-x: auto;
+  border: 1px solid rgba(14, 14, 12, 0.14);
+  border-radius: 10px;
+  background: #fff;
+  -webkit-overflow-scrolling: touch;
+}
+
+.lp-osservatorio .oss-tab {
+  width: 100%;
+  min-width: 880px;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.lp-osservatorio .oss-tab thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: #12210f;
+  color: #f4f7f0;
+  text-align: left;              /* le intestazioni seguono il contenuto, non il contrario */
+  font-weight: 600;
+  font-size: 0.74rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 12px 14px;
+  white-space: nowrap;
+}
+
+.lp-osservatorio .oss-tab tbody td {
+  padding: 12px 14px;
+  vertical-align: top;
+  border-top: 1px solid rgba(14, 14, 12, 0.09);
+}
+
+.lp-osservatorio .oss-tab tbody tr:nth-child(even) {
+  background: rgba(14, 14, 12, 0.028);
+}
+
+.lp-osservatorio .oss-tab tbody tr:hover {
+  background: rgba(143, 196, 54, 0.11);
+}
+
+/* Data e importo sono numeri: cifre a larghezza fissa e mai spezzati a meta'.
+   Prima "2026-07-09" andava a capo dopo il trattino e si leggeva "2026- / 07-09". */
+.lp-osservatorio .oss-data,
+.lp-osservatorio .oss-imp {
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.lp-osservatorio .oss-imp {
+  text-align: right;
+  font-weight: 600;
+}
+
+.lp-osservatorio .oss-paese {
+  white-space: nowrap;
+}
+
+.lp-osservatorio .oss-quadro {
+  display: block;
+  font-size: 0.76rem;
+  opacity: 0.62;
+}
+
+.lp-osservatorio .oss-aut {
+  font-size: 0.86rem;
+  opacity: 0.85;
+}
+
+.lp-osservatorio .oss-tit a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-color: rgba(143, 196, 54, 0.75);
+}
+.lp-osservatorio .oss-tit a:hover {
+  text-decoration-color: currentColor;
+}
+
+/* I temi sono etichette, non prosa: a pastiglia si contano a colpo d'occhio. */
+.lp-osservatorio .oss-temi {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.lp-osservatorio .oss-tema {
+  display: inline-block;
+  padding: 2px 9px;
+  border-radius: 999px;
+  background: rgba(14, 14, 12, 0.06);
+  font-size: 0.74rem;
+  white-space: nowrap;
+}
+
+/* Sotto i 900px sei colonne non ci stanno in nessun modo: ogni riga diventa una
+   scheda, con l'etichetta della colonna davanti al dato. Cosi' si legge col pollice
+   invece di trascinare la tabella a destra e sinistra. */
+@media (max-width: 900px) {
+  .lp-osservatorio .oss-scroll {
+    overflow-x: visible;
+    border: 0;
+    background: transparent;
+  }
+  .lp-osservatorio .oss-tab {
+    min-width: 0;
+    display: block;
+  }
+  .lp-osservatorio .oss-tab thead {
+    display: none;
+  }
+  .lp-osservatorio .oss-tab tbody,
+  .lp-osservatorio .oss-tab tbody tr {
+    display: block;
+  }
+  .lp-osservatorio .oss-tab tbody tr {
+    border: 1px solid rgba(14, 14, 12, 0.14);
+    border-radius: 10px;
+    background: #fff;
+    padding: 6px 4px;
+    margin-bottom: 12px;
+  }
+  .lp-osservatorio .oss-tab tbody tr:nth-child(even) {
+    background: #fff;
+  }
+  .lp-osservatorio .oss-tab tbody td {
+    display: grid;
+    grid-template-columns: 8.5rem 1fr;
+    gap: 10px;
+    border: 0;
+    padding: 6px 12px;
+  }
+  .lp-osservatorio .oss-tab tbody td::before {
+    content: attr(data-col);
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    opacity: 0.55;
+    padding-top: 2px;
+  }
+  .lp-osservatorio .oss-tab tbody td:empty {
+    display: none;                /* niente riga "Sanzione" vuota su due terzi delle schede */
+  }
+  .lp-osservatorio .oss-imp {
+    text-align: left;
+  }
+}

@@ -7,6 +7,7 @@ import type { AppLocale } from '@/lib/i18n/config';
 import { osservatorioStrings } from '@/lib/risorse/osservatorio/i18n';
 import registro from '@/lib/risorse/osservatorio/data.json';
 import '../sanzioni-gps/l-page.css';
+import './l-page.css';
 
 /**
  * Risorsa "Osservatorio europeo": i provvedimenti delle autorita' per la protezione
@@ -42,6 +43,22 @@ const LOCALE_DATA: Record<string, string> = {
   nl: 'nl-NL', sv: 'sv-SE', da: 'da-DK', nb: 'nb-NO', ru: 'ru-RU',
 };
 
+// Il registro usa UK, ma il codice ISO del Regno Unito e' GB: senza la mappa
+// Intl non lo riconosce e la colonna resterebbe con la sigla nuda.
+const ISO_REGIONE: Record<string, string> = { UK: 'GB' };
+
+/** Nome del paese nella lingua del lettore, dal codice ISO. Cosi' la colonna dice
+ *  "Paesi Bassi" a un italiano e "Niederlande" a un tedesco, senza tenere a mano
+ *  quindici nomi per undici lingue. Se il codice non si risolve, resta la sigla. */
+function nomePaese(codice: string, intl: string): string {
+  try {
+    const dn = new Intl.DisplayNames([intl], { type: 'region' });
+    return dn.of(ISO_REGIONE[codice] ?? codice) ?? codice;
+  } catch {
+    return codice;
+  }
+}
+
 export async function generateMetadata({
   params,
 }: {
@@ -72,8 +89,13 @@ export default async function OsservatorioPage({
   const aggiornato = new Date(registro.aggiornato).toLocaleDateString(intl);
   const homeHref = `/${resolvedLocale}/`;
 
+  const dataBreve = new Intl.DateTimeFormat(intl, {
+    day: '2-digit', month: '2-digit', year: 'numeric',
+  });
+  const importo = new Intl.NumberFormat(intl, { maximumFractionDigits: 0 });
+
   return (
-    <div className="lp-l lp-risorsa-strumento">
+    <div className="lp-l lp-risorsa-strumento lp-osservatorio">
       <section className="ph">
         <div className="crumb">
           <div className="w">
@@ -89,48 +111,68 @@ export default async function OsservatorioPage({
 
       <section className="sec">
         <div className="w">
-          <p>
+          <p className="oss-nota">
             <strong>{s.conteggio(voci.length, paesi.length, aggiornato)}</strong>{' '}
             {s.quadroNota}
           </p>
 
-          <p><em>{s.avviso}</em></p>
+          <p className="oss-avviso">{s.avviso}</p>
 
-          <div style={{ overflowX: 'auto' }}>
-            <table>
+          <div className="oss-scroll">
+            <table className="oss-tab">
+              <colgroup>
+                <col style={{ width: '7.5rem' }} />
+                <col style={{ width: '9.5rem' }} />
+                <col style={{ width: '20%' }} />
+                <col />
+                <col style={{ width: '15%' }} />
+                <col style={{ width: '7.5rem' }} />
+              </colgroup>
               <thead>
                 <tr>
-                  <th>{s.thData}</th>
-                  <th>{s.thPaese}</th>
-                  <th>{s.thAutorita}</th>
-                  <th>{s.thProvvedimento}</th>
-                  <th>{s.thTemi}</th>
-                  <th>{s.thSanzione}</th>
+                  <th scope="col">{s.thData}</th>
+                  <th scope="col">{s.thPaese}</th>
+                  <th scope="col">{s.thAutorita}</th>
+                  <th scope="col">{s.thProvvedimento}</th>
+                  <th scope="col">{s.thTemi}</th>
+                  <th scope="col">{s.thSanzione}</th>
                 </tr>
               </thead>
               <tbody>
                 {voci.map((v) => (
                   <tr key={v.source_url + v.title}>
-                    <td>{v.published_at}</td>
-                    <td>
-                      {v.country}
-                      {v.framework !== 'gdpr' ? ` (${QUADRO[v.framework] ?? v.framework})` : ''}
+                    <td className="oss-data" data-col={s.thData}>
+                      {dataBreve.format(new Date(v.published_at))}
                     </td>
-                    <td>{v.authority}</td>
-                    <td>
+                    <td className="oss-paese" data-col={s.thPaese}>
+                      {nomePaese(v.country, intl)}
+                      {v.framework !== 'gdpr' ? (
+                        <span className="oss-quadro">{QUADRO[v.framework] ?? v.framework}</span>
+                      ) : null}
+                    </td>
+                    <td className="oss-aut" data-col={s.thAutorita}>{v.authority}</td>
+                    <td className="oss-tit" data-col={s.thProvvedimento}>
                       <a href={v.source_url} rel="nofollow noopener" target="_blank">
                         {v.title.slice(0, 150)}
                       </a>
                     </td>
-                    <td>{v.topics.map((t) => s.temi[t] ?? t).join(', ')}</td>
-                    <td>{v.amount_eur ? `${v.amount_eur.toLocaleString(intl)} €` : ''}</td>
+                    <td data-col={s.thTemi}>
+                      <span className="oss-temi">
+                        {v.topics.map((t) => (
+                          <span className="oss-tema" key={t}>{s.temi[t] ?? t}</span>
+                        ))}
+                      </span>
+                    </td>
+                    <td className="oss-imp" data-col={s.thSanzione}>
+                      {v.amount_eur ? `${importo.format(v.amount_eur)} €` : ''}
+                    </td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
 
-          <p>{s.chiusura}</p>
+          <p className="oss-nota">{s.chiusura}</p>
         </div>
       </section>
 
