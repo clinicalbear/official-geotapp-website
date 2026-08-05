@@ -30,6 +30,8 @@ export interface PaeseSeverita {
   sanzioneImporto: import('./types').TestoLoc;
   sanzioneCaso: import('./types').TestoLoc;
   sanzioneUrlFonte: string;
+  /** Che cosa e' l'importo: caso GPS, caso affine o massimale di legge. */
+  sanzioneTipo: import('./types').TipoImporto;
   /** Stima in euro della sanzione, SOLO per ordinare la classifica (mai mostrata). */
   sanzioneVal: number;
 }
@@ -86,6 +88,7 @@ export function getPaesiSeverita(): PaeseSeverita[] {
       sanzioneImporto: p.sanzioneMax.importo,
       sanzioneCaso: p.sanzioneMax.casoCitato,
       sanzioneUrlFonte: p.sanzioneMax.urlFonte,
+      sanzioneTipo: p.sanzioneMax.tipoImporto,
       sanzioneVal: stimaEuroSanzione(loc(p.sanzioneMax.importo, 'it')),
     };
   });
@@ -104,6 +107,8 @@ export interface PaeseSeveritaLoc {
   sanzioneImporto: string;
   sanzioneCaso: string;
   sanzioneUrlFonte: string;
+  /** Che cosa e' l'importo: caso GPS, caso affine o massimale di legge. */
+  sanzioneTipo: import('./types').TipoImporto;
   sanzioneVal: number;
 }
 
@@ -138,6 +143,7 @@ export function localizePaesiSeverita(
     sanzioneImporto: loc(p.sanzioneImporto, locale),
     sanzioneCaso: loc(p.sanzioneCaso, locale),
     sanzioneUrlFonte: p.sanzioneUrlFonte,
+    sanzioneTipo: p.sanzioneTipo,
     sanzioneVal: p.sanzioneVal,
   }));
 }

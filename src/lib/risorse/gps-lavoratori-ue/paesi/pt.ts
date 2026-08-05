@@ -73,7 +73,7 @@ export const portogallo: SchedaPaese = {
     urlFonte: FONTE_CNPD_SEGNALAZIONI.url,
     verificatoIl: '2026-06-15',
     note: {
-      it: "Il Portogallo ha un'unica autorita nazionale, la CNPD; nessuna ripartizione regionale.",
+      it: "Il Portogallo ha un'unica autorità nazionale, la CNPD; nessuna ripartizione regionale.",
       en: 'Portugal has a single national authority, the CNPD; there is no regional breakdown.',
       de: 'Portugal hat eine einzige nationale Behoerde, die CNPD; es gibt keine regionale Aufteilung.',
       fr: 'Le Portugal dispose d\'une seule autorite nationale, la CNPD; il n\'y a pas de repartition regionale.',
@@ -85,7 +85,7 @@ export const portogallo: SchedaPaese = {
   checklist: [
     {
       voce: {
-        it: "Informazione ai lavoratori sull'esistenza e finalita della sorveglianza (art. 20 Codigo do Trabalho)",
+        it: "Informazione ai lavoratori sull'esistenza e finalità della sorveglianza (art. 20 Codigo do Trabalho)",
         en: 'Informing workers of the existence and purpose of the surveillance (art. 20 Codigo do Trabalho)',
         de: 'Unterrichtung der Arbeitnehmer ueber Bestehen und Zweck der Ueberwachung (Art. 20 Codigo do Trabalho)',
         fr: 'Information des travailleurs sur l\'existence et la finalite de la surveillance (art. 20 Codigo do Trabalho)',
@@ -125,7 +125,7 @@ export const portogallo: SchedaPaese = {
     },
     {
       voce: {
-        it: "Autorizzazione preventiva di un'autorita prima di installare",
+        it: "Autorizzazione preventiva di un'autorità prima di installare",
         en: 'Prior authorisation from an authority before installation',
         de: 'Vorherige Genehmigung einer Behoerde vor der Installation',
         fr: 'Autorisation prealable d\'une autorite avant l\'installation',
@@ -220,7 +220,7 @@ export const portogallo: SchedaPaese = {
     {
       passo: 2,
       descrizione: {
-        it: 'Verifica la finalita: ammessa solo per sicurezza di persone/beni o esigenze particolari dell\'attività, mai per controllare il rendimento.',
+        it: 'Verifica la finalità: ammessa solo per sicurezza di persone/beni o esigenze particolari dell\'attività, mai per controllare il rendimento.',
         en: 'Check the purpose: allowed only for the safety of people/property or particular needs of the activity, never to monitor performance.',
         de: 'Pruefen Sie den Zweck: nur zur Sicherheit von Personen/Sachen oder fuer besondere Erfordernisse der Taetigkeit zulaessig, niemals zur Leistungskontrolle.',
         fr: 'Verifiez la finalite: admise uniquement pour la securite des personnes/biens ou des besoins particuliers de l\'activite, jamais pour controler le rendement.',
@@ -303,6 +303,7 @@ export const portogallo: SchedaPaese = {
       nl: 'Een echte, door de rechter bevestigde zaak: het hof van beroep van Lissabon (2026) bevestigde de door de ACT opgelegde boete van 14.790 EUR aan een wijnbedrijf dat gps had geinstalleerd in de auto van een verkoopster en haar routes vergeleek met de dagrapporten van klantbezoeken. De CNPD publiceert daarentegen geen individuele sanctiebesluiten, dus het plafond blijft dat van de AVG (art. 83).',
     },
     urlFonte: FONTE_GDPR.url,
+    tipoImporto: 'massimale',
   },
 
   fonti: [

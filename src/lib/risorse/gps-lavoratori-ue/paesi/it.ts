@@ -169,7 +169,7 @@ export const italia: SchedaPaese = {
     },
     {
       voce: {
-        it: 'Uso dei dati per la sola finalita dichiarata, senza riuso per sanzioni disciplinari',
+        it: 'Uso dei dati per la sola finalità dichiarata, senza riuso per sanzioni disciplinari',
         en: 'Use of data only for the declared purpose, with no reuse for disciplinary sanctions',
         de: 'Nutzung der Daten ausschließlich für den erklärten Zweck, ohne Weiterverwendung für Disziplinarmaßnahmen',
         fr: "Utilisation des données uniquement pour la finalité déclarée, sans réutilisation à des fins de sanctions disciplinaires",
@@ -178,7 +178,7 @@ export const italia: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: 'I dati di posizione vanno usati solo per la finalita per cui sono stati raccolti (art. 5 GDPR, limitazione della finalita). Riutilizzarli per un altro scopo, per esempio dati raccolti per documentare la prestazione e poi usati per avviare un procedimento disciplinare, e uno sviamento di finalita. Vale anche per il perimetro della raccolta: nel caso Pioneer il punteggio sullo stile di guida veniva calcolato anche sui viaggi privati e fuori orario, e i dati erano accessibili a personale di altre societa del gruppo senza accordi ex art. 28.',
+        it: 'I dati di posizione vanno usati solo per la finalità per cui sono stati raccolti (art. 5 GDPR, limitazione della finalità). Riutilizzarli per un altro scopo, per esempio dati raccolti per documentare la prestazione e poi usati per avviare un procedimento disciplinare, e uno sviamento di finalità. Vale anche per il perimetro della raccolta: nel caso Pioneer il punteggio sullo stile di guida veniva calcolato anche sui viaggi privati e fuori orario, e i dati erano accessibili a personale di altre società del gruppo senza accordi ex art. 28.',
         en: 'Location data must be used only for the purpose for which it was collected (Article 5 GDPR, purpose limitation). Reusing it for another purpose, for example data collected to document the work and then used to start a disciplinary procedure, is a misuse of purpose. The same applies to the scope of collection: in the Pioneer case the driving-style score was calculated on private and off-duty trips as well, and staff of other group companies could access the data without Article 28 agreements.',
         de: 'Standortdaten dürfen nur für den Zweck genutzt werden, für den sie erhoben wurden (Artikel 5 DSGVO, Zweckbindung). Sie für einen anderen Zweck weiterzuverwenden, etwa zur Dokumentation der Arbeitsleistung erhobene Daten für die Einleitung eines Disziplinarverfahrens, ist eine Zweckentfremdung. Das gilt auch für den Umfang der Erhebung: im Fall Pioneer floss in den Fahrstil-Score auch das private Fahrverhalten außerhalb der Arbeitszeit ein, und Beschäftigte anderer Konzerngesellschaften konnten ohne Vereinbarung nach Artikel 28 auf die Daten zugreifen.',
         fr: "Les données de position ne doivent être utilisées que pour la finalité pour laquelle elles ont été collectées (article 5 RGPD, limitation des finalités). Les réutiliser à une autre fin, par exemple des données collectées pour documenter le travail puis utilisées pour engager une procédure disciplinaire, constitue un détournement de finalité. Cela vaut aussi pour le périmètre de la collecte : dans l'affaire Pioneer, le score de conduite intégrait également les trajets privés et hors temps de travail, et des personnes d'autres sociétés du groupe accédaient aux données sans accord au titre de l'article 28.",
@@ -229,7 +229,7 @@ export const italia: SchedaPaese = {
     },
     {
       voce: {
-        it: 'Finalita legittima e dichiarata (organizzativa, di sicurezza, di tutela del patrimonio)',
+        it: 'Finalità legittima e dichiarata (organizzativa, di sicurezza, di tutela del patrimonio)',
         en: 'Legitimate and declared purpose (organisational, safety, protection of company assets)',
         de: 'Legitimer und erklärter Zweck (organisatorisch, Sicherheit, Schutz des Betriebsvermögens)',
         fr: "Finalité légitime et déclarée (organisationnelle, de sécurité, de protection du patrimoine)",
@@ -375,6 +375,7 @@ export const italia: SchedaPaese = {
     },
     urlFonte:
       'https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10213711',
+    tipoImporto: 'caso-gps',
   },
 
   fonti: [

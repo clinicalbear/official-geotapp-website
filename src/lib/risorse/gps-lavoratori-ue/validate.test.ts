@@ -38,6 +38,7 @@ function baseScheda(): SchedaPaese {
       importo: '20.000.000 €',
       casoCitato: 'GDPR art. 83',
       urlFonte: 'https://eur-lex.europa.eu/',
+      tipoImporto: 'massimale',
     },
     fonti: [{ titolo: 'GDPR', url: 'https://eur-lex.europa.eu/' }],
     aggiornatoIl: '2026-06-13',

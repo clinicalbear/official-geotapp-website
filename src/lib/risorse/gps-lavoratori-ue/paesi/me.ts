@@ -85,7 +85,7 @@ export const montenegro: SchedaPaese = {
     urlFonte: FONTE_AZLP_CONTATTI.url,
     verificatoIl: '2026-06-15',
     note: {
-      it: "Il Montenegro e' un paese candidato, fuori dall'UE, con una legge solo parzialmente allineata al GDPR. Unica autorita' nazionale, l'AZLP. Particolarita': serve il consenso preventivo dell'autorita' prima di costituire l'archivio dati (art. 27).",
+      it: "Il Montenegro è un paese candidato, fuori dall'UE, con una legge solo parzialmente allineata al GDPR. Unica autorità nazionale, l'AZLP. Particolarità: serve il consenso preventivo dell'autorità prima di costituire l'archivio dati (art. 27).",
       en: 'Montenegro is a candidate country, outside the EU, with a law only partially aligned with the GDPR. There is a single national authority, the AZLP. Distinctive feature: prior authorisation from the authority is required before setting up the data filing system (art. 27).',
       de: 'Montenegro ist ein Beitrittskandidat ausserhalb der EU mit einem Gesetz, das nur teilweise an die DSGVO angeglichen ist. Es gibt eine einzige nationale Behoerde, die AZLP. Besonderheit: Bevor Sie das Datenarchiv anlegen, benoetigen Sie die vorherige Zustimmung der Behoerde (Art. 27).',
       fr: "Le Monténégro est un pays candidat, hors de l'UE, doté d'une loi seulement partiellement alignée sur le RGPD. Il existe une seule autorité nationale, l'AZLP. Particularité : avant de constituer le fichier de données, vous devez obtenir l'autorisation préalable de l'autorité (art. 27).",
@@ -106,7 +106,7 @@ export const montenegro: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "Il datore deve informare i lavoratori su finalita', metodi, dati raccolti e diritti, e adottare regole interne sul trattamento GPS con una valutazione preliminare delle misure di sicurezza.",
+        it: "Il datore deve informare i lavoratori su finalità, metodi, dati raccolti e diritti, e adottare regole interne sul trattamento GPS con una valutazione preliminare delle misure di sicurezza.",
         en: 'The employer must inform workers about the purposes, methods, data collected and rights, and adopt internal rules on GPS processing together with a preliminary assessment of the security measures.',
         de: 'Der Arbeitgeber muss die Beschaeftigten ueber Zwecke, Methoden, erhobene Daten und Rechte informieren und interne Regeln zur GPS-Verarbeitung samt einer vorherigen Bewertung der Sicherheitsmassnahmen erlassen.',
         fr: "L'employeur doit informer les travailleurs sur les finalités, les méthodes, les données collectées et les droits, et adopter des règles internes sur le traitement GPS avec une évaluation préalable des mesures de sécurité.",
@@ -117,7 +117,7 @@ export const montenegro: SchedaPaese = {
     },
     {
       voce: {
-        it: 'Consenso preventivo dell\'autorita\' garante prima di costituire l\'archivio dati (ZZPL art. 27)',
+        it: 'Consenso preventivo dell\'autorità garante prima di costituire l\'archivio dati (ZZPL art. 27)',
         en: 'Prior authorisation from the supervisory authority before setting up the data filing system (ZZPL art. 27)',
         de: 'Vorherige Zustimmung der Aufsichtsbehoerde vor dem Anlegen des Datenarchivs (ZZPL Art. 27)',
         fr: 'Autorisation préalable de l\'autorité de contrôle avant de constituer le fichier de données (ZZPL art. 27)',
@@ -126,7 +126,7 @@ export const montenegro: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "A differenza del GDPR, il Montenegro mantiene un'autorizzazione ex ante: prima di costituire un archivio di dati il titolare deve ottenere il consenso dell'autorita' garante (se non risponde in 30 giorni, il consenso si intende dato).",
+        it: "A differenza del GDPR, il Montenegro mantiene un'autorizzazione ex ante: prima di costituire un archivio di dati il titolare deve ottenere il consenso dell'autorità garante (se non risponde in 30 giorni, il consenso si intende dato).",
         en: 'Unlike the GDPR, Montenegro retains an ex ante authorisation: before setting up a data filing system the controller must obtain the consent of the supervisory authority (if it does not reply within 30 days, consent is deemed granted).',
         de: 'Anders als die DSGVO behaelt Montenegro eine vorgelagerte Genehmigung bei: Bevor der Verantwortliche ein Datenarchiv anlegt, muss er die Zustimmung der Aufsichtsbehoerde einholen (antwortet sie nicht innerhalb von 30 Tagen, gilt die Zustimmung als erteilt).',
         fr: "À la différence du RGPD, le Monténégro maintient une autorisation ex ante : avant de constituer un fichier de données, le responsable du traitement doit obtenir l'accord de l'autorité de contrôle (si elle ne répond pas dans les 30 jours, l'accord est réputé donné).",
@@ -146,7 +146,7 @@ export const montenegro: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "La base e' l'interesse legittimo; per i veicoli privati usati a fini di servizio serve il consenso scritto del lavoratore e il GPS va limitato all'orario di lavoro.",
+        it: "La base è l'interesse legittimo; per i veicoli privati usati a fini di servizio serve il consenso scritto del lavoratore e il GPS va limitato all'orario di lavoro.",
         en: 'The basis is legitimate interest; for private vehicles used for work purposes the worker\'s written consent is required and the GPS must be limited to working hours.',
         de: 'Die Grundlage ist das berechtigte Interesse; bei Privatfahrzeugen, die fuer dienstliche Zwecke genutzt werden, ist die schriftliche Einwilligung des Beschaeftigten erforderlich und das GPS ist auf die Arbeitszeit zu beschraenken.',
         fr: "La base est l'intérêt légitime ; pour les véhicules privés utilisés à des fins de service, le consentement écrit du travailleur est requis et le GPS doit être limité aux heures de travail.",
@@ -166,7 +166,7 @@ export const montenegro: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "Le decisioni su risultati, affidabilità' o comportamento dei dipendenti non possono basarsi unicamente su un trattamento automatizzato; il lavoratore deve poter esprimere la propria posizione.",
+        it: "Le decisioni su risultati, affidabilità o comportamento dei dipendenti non possono basarsi unicamente su un trattamento automatizzato; il lavoratore deve poter esprimere la propria posizione.",
         en: 'Decisions about employees\' performance, reliability or conduct cannot be based solely on automated processing; the worker must be able to express their own position.',
         de: 'Entscheidungen ueber Leistung, Zuverlaessigkeit oder Verhalten der Beschaeftigten duerfen nicht allein auf automatisierter Verarbeitung beruhen; der Beschaeftigte muss seinen Standpunkt darlegen koennen.',
         fr: "Les décisions sur les résultats, la fiabilité ou le comportement des salariés ne peuvent reposer uniquement sur un traitement automatisé ; le travailleur doit pouvoir exprimer sa propre position.",
@@ -186,7 +186,7 @@ export const montenegro: SchedaPaese = {
       },
       risposta: 'dipende',
       dettaglio: {
-        it: "La legge attuale non prevede una DPIA formale in stile GDPR; il sostituto e' l'autorizzazione preventiva dell'art. 27 più' le misure di sicurezza e la valutazione preliminare di adeguatezza (artt. 24 e 26).",
+        it: "La legge attuale non prevede una DPIA formale in stile GDPR; il sostituto è l'autorizzazione preventiva dell'art. 27 più le misure di sicurezza e la valutazione preliminare di adeguatezza (artt. 24 e 26).",
         en: 'The current law does not provide for a formal GDPR-style DPIA; the substitute is the prior authorisation under art. 27 plus the security measures and the preliminary adequacy assessment (arts. 24 and 26).',
         de: 'Das geltende Gesetz sieht keine foermliche DSFA nach Vorbild der DSGVO vor; an ihre Stelle treten die vorherige Genehmigung nach Art. 27 sowie die Sicherheitsmassnahmen und die vorlaeufige Angemessenheitsbewertung (Art. 24 und 26).',
         fr: "La loi actuelle ne prévoit pas d'AIPD formelle de type RGPD ; elle est remplacée par l'autorisation préalable de l'art. 27 ainsi que par les mesures de sécurité et l'évaluation préalable d'adéquation (art. 24 et 26).",
@@ -201,7 +201,7 @@ export const montenegro: SchedaPaese = {
     {
       passo: 1,
       descrizione: {
-        it: "Definisci finalita' e metodi del GPS e adotta regole interne con valutazione preliminare delle misure di sicurezza.",
+        it: "Definisci finalità e metodi del GPS e adotta regole interne con valutazione preliminare delle misure di sicurezza.",
         en: 'Define the purposes and methods of the GPS and adopt internal rules with a preliminary assessment of the security measures.',
         de: 'Legen Sie Zwecke und Methoden des GPS fest und erlassen Sie interne Regeln samt einer vorherigen Bewertung der Sicherheitsmassnahmen.',
         fr: 'Définissez les finalités et les méthodes du GPS et adoptez des règles internes avec une évaluation préalable des mesures de sécurité.',
@@ -212,7 +212,7 @@ export const montenegro: SchedaPaese = {
     {
       passo: 2,
       descrizione: {
-        it: "Ottieni il consenso preventivo dell'autorita' garante prima di costituire l'archivio dati (art. 27).",
+        it: "Ottieni il consenso preventivo dell'autorità garante prima di costituire l'archivio dati (art. 27).",
         en: 'Obtain the prior authorisation of the supervisory authority before setting up the data filing system (art. 27).',
         de: 'Holen Sie vor dem Anlegen des Datenarchivs die vorherige Zustimmung der Aufsichtsbehoerde ein (Art. 27).',
         fr: "Obtenez l'autorisation préalable de l'autorité de contrôle avant de constituer le fichier de données (art. 27).",
@@ -245,7 +245,7 @@ export const montenegro: SchedaPaese = {
     {
       passo: 5,
       descrizione: {
-        it: "Limita il GPS all'orario e alla finalita' dichiarata.",
+        it: "Limita il GPS all'orario e alla finalità dichiarata.",
         en: 'Limit the GPS to working hours and to the declared purpose.',
         de: 'Beschraenken Sie das GPS auf die Arbeitszeit und den angegebenen Zweck.',
         fr: 'Limitez le GPS aux heures de travail et à la finalité déclarée.',
@@ -287,7 +287,7 @@ export const montenegro: SchedaPaese = {
       nl: 'tot 20 miljoen euro of 4% van de omzet (algemeen risico)',
     },
     casoCitato: {
-      it: "Non risulta una multa dell'AZLP specifica e pubblicata per il GPS sui dipendenti. La posizione di riferimento e' quella del Consiglio dell'AZLP del 2025: il GPS sui veicoli di servizio e' un controllo legittimo, ma serve definirne finalita' e metodi, informare i lavoratori, adottare regole interne e ottenere il consenso preventivo dell'autorita' per l'archivio dati.",
+      it: "Non risulta una multa dell'AZLP specifica e pubblicata per il GPS sui dipendenti. La posizione di riferimento è quella del Consiglio dell'AZLP del 2025: il GPS sui veicoli di servizio è un controllo legittimo, ma serve definirne finalità e metodi, informare i lavoratori, adottare regole interne e ottenere il consenso preventivo dell'autorità per l'archivio dati.",
       en: 'There is no specific, published AZLP fine for GPS tracking of employees. The reference position is that of the AZLP Council of 2025: GPS on service vehicles is legitimate monitoring, but its purposes and methods must be defined, workers must be informed, internal rules must be adopted and the prior authorisation of the authority for the data filing system must be obtained.',
       de: 'Eine spezifische, veroeffentlichte Geldbusse der AZLP fuer die GPS-Ueberwachung von Beschaeftigten ist nicht bekannt. Massgeblich ist die Position des AZLP-Rates von 2025: GPS in Dienstfahrzeugen ist eine legitime Kontrolle, doch muessen Zwecke und Methoden festgelegt, die Beschaeftigten informiert, interne Regeln erlassen und die vorherige Zustimmung der Behoerde fuer das Datenarchiv eingeholt werden.',
       fr: "Il n'existe pas d'amende spécifique et publiée de l'AZLP pour le suivi GPS des salariés. La position de référence est celle du Conseil de l'AZLP de 2025 : le GPS sur les véhicules de service est un contrôle légitime, mais il faut en définir les finalités et les méthodes, informer les travailleurs, adopter des règles internes et obtenir l'autorisation préalable de l'autorité pour le fichier de données.",
@@ -295,6 +295,7 @@ export const montenegro: SchedaPaese = {
       nl: 'Er is geen specifieke, gepubliceerde boete van de AZLP voor GPS-tracking van werknemers. De maatgevende positie is die van de AZLP-Raad uit 2025: GPS in dienstvoertuigen is een legitieme controle, maar de doeleinden en methoden moeten worden vastgelegd, de werknemers moeten worden geïnformeerd, er moeten interne regels worden vastgesteld en de voorafgaande toestemming van de autoriteit voor het gegevensbestand moet worden verkregen.',
     },
     urlFonte: FONTE_AZLP_GPS.url,
+    tipoImporto: 'massimale',
   },
 
   fonti: [

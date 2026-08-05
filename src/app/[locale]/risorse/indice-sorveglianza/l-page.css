@@ -50,6 +50,9 @@
 }
 /* la sanzione va a capo dentro la sua colonna fissa invece di allargarla */
 .lp-risorsa-strumento .idx-tbl .rw:not(.hd2) .c-san { color: #4A5244; font-size: 14.5px; }
+/* Qualifica dell'importo: 29 righe su 39 non vengono da un caso GPS, la cifra
+   da sola prometteva una multa che non esiste. */
+.lp-risorsa-strumento .idx-tbl .c-san-q { display: block; margin-top: 2px; font-size: 12px; line-height: 1.3; color: #7A8274; }
 .lp-risorsa-strumento .idx-tbl .rw:not(.hd2) .c-obb { color: #4A5244; font-size: 14.5px; }
 
 /* barra della severità: sottile e piatta, niente rounded-full */

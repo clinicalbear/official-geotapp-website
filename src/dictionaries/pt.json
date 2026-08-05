@@ -1367,6 +1367,9 @@
         }
       ],
       "nota": "Depois ha o artigo 88 do RGPD, que permite a cada Estado acrescentar regras proprias sobre o tratamento de dados na relacao de trabalho. E por isso que existem as fichas por pais aqui em baixo: muda quem tem de autorizar, nao o principio."
-    }
+    },
+    "sanzioneTipoCasoGps": "de um caso real de GPS",
+    "sanzioneTipoCasoAffine": "caso afim, não GPS",
+    "sanzioneTipoMassimale": "máximo legal, não uma coima aplicada"
   }
 }

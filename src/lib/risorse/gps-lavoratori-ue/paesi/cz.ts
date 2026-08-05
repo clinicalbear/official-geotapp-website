@@ -72,7 +72,7 @@ export const repubblicaCeca: SchedaPaese = {
     urlFonte: FONTE_UOOU_SEGNALAZIONE.url,
     verificatoIl: '2026-06-15',
     note: {
-      it: "La Repubblica Ceca ha un'unica autorita' nazionale, l'UOOU; nessuna ripartizione regionale.",
+      it: "La Repubblica Ceca ha un'unica autorità nazionale, l'UOOU; nessuna ripartizione regionale.",
       en: 'The Czech Republic has a single national authority, the UOOU; there is no regional breakdown.',
       de: 'Die Tschechische Republik hat eine einzige nationale Behoerde, die UOOU; es gibt keine regionale Aufteilung.',
       fr: "La République tchèque dispose d'une seule autorité nationale, l'UOOU; il n'y a aucune répartition régionale.",
@@ -84,7 +84,7 @@ export const repubblicaCeca: SchedaPaese = {
   checklist: [
     {
       voce: {
-        it: 'Informazione diretta ai lavoratori su portata e modalita del monitoraggio (Zakonik prace art. 316)',
+        it: 'Informazione diretta ai lavoratori su portata e modalità del monitoraggio (Zakonik prace art. 316)',
         en: 'Direct information to workers on the scope and manner of the monitoring (Zakonik prace art. 316)',
         de: 'Direkte Information der Arbeitnehmer ueber Umfang und Art der Ueberwachung (Zakonik prace Art. 316)',
         fr: 'Information directe des travailleurs sur la portée et les modalités de la surveillance (Zakonik prace art. 316)',
@@ -93,7 +93,7 @@ export const repubblicaCeca: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: 'Se sussiste un motivo serio per il monitoraggio, il datore e\' obbligato a informare direttamente i lavoratori sulla portata del controllo e sul modo in cui viene svolto.',
+        it: 'Se sussiste un motivo serio per il monitoraggio, il datore è obbligato a informare direttamente i lavoratori sulla portata del controllo e sul modo in cui viene svolto.',
         en: 'If there is a serious reason for the monitoring, the employer is required to inform workers directly about the scope of the control and the way in which it is carried out.',
         de: 'Liegt ein schwerwiegender Grund fuer die Ueberwachung vor, ist der Arbeitgeber verpflichtet, die Arbeitnehmer unmittelbar ueber den Umfang der Kontrolle und die Art ihrer Durchfuehrung zu informieren.',
         fr: "S'il existe un motif sérieux justifiant la surveillance, l'employeur est tenu d'informer directement les travailleurs de la portée du contrôle et de la manière dont il est exercé.",
@@ -113,7 +113,7 @@ export const repubblicaCeca: SchedaPaese = {
       },
       risposta: 'no',
       dettaglio: {
-        it: 'Il datore non può\', senza un motivo serio inerente alla particolare natura della sua attività\', ledere la privacy del lavoratore sottoponendolo a sorveglianza aperta o occulta (incluso il tracciamento).',
+        it: 'Il datore non può, senza un motivo serio inerente alla particolare natura della sua attività, ledere la privacy del lavoratore sottoponendolo a sorveglianza aperta o occulta (incluso il tracciamento).',
         en: 'Without a serious reason inherent to the particular nature of its activity, the employer may not infringe the worker\'s privacy by subjecting them to open or covert surveillance (including tracking).',
         de: 'Ohne einen schwerwiegenden, in der besonderen Art seiner Taetigkeit liegenden Grund darf der Arbeitgeber die Privatsphaere des Arbeitnehmers nicht verletzen, indem er ihn einer offenen oder verdeckten Ueberwachung (einschliesslich Ortung) unterwirft.',
         fr: "Sans un motif sérieux inhérent à la nature particulière de son activité, l'employeur ne peut pas porter atteinte à la vie privée du travailleur en le soumettant à une surveillance ouverte ou occulte (y compris la géolocalisation).",
@@ -124,7 +124,7 @@ export const repubblicaCeca: SchedaPaese = {
     },
     {
       voce: {
-        it: "Autorizzazione preventiva di un'autorita prima di installare",
+        it: "Autorizzazione preventiva di un'autorità prima di installare",
         en: 'Prior authorisation from an authority before installation',
         de: 'Vorherige Genehmigung einer Behoerde vor der Installation',
         fr: "Autorisation préalable d'une autorité avant l'installation",
@@ -133,7 +133,7 @@ export const repubblicaCeca: SchedaPaese = {
       },
       risposta: 'no',
       dettaglio: {
-        it: "Non serve un'autorizzazione preventiva dell'UOOU; il titolare valuta da se' base giuridica e proporzionalita', con DPIA quando richiesta.",
+        it: "Non serve un'autorizzazione preventiva dell'UOOU; il titolare valuta da sé base giuridica e proporzionalità, con DPIA quando richiesta.",
         en: 'No prior authorisation from the UOOU is required; the controller assesses the legal basis and proportionality itself, with a DPIA where required.',
         de: 'Eine vorherige Genehmigung der UOOU ist nicht erforderlich; der Verantwortliche bewertet Rechtsgrundlage und Verhaeltnismaessigkeit selbst, mit einer DSFA, sofern erforderlich.',
         fr: "Aucune autorisation préalable de l'UOOU n'est nécessaire; le responsable du traitement évalue lui-même la base juridique et la proportionnalité, avec une AIPD lorsqu'elle est requise.",
@@ -153,7 +153,7 @@ export const repubblicaCeca: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "Per l'UOOU il GPS e' ammesso soprattutto per la protezione del patrimonio e il registro dei viaggi, non per un controllo intensivo o costante dei lavoratori; per l'uso privato del veicolo si raccomanda la disattivazione (opt-out).",
+        it: "Per l'UOOU il GPS è ammesso soprattutto per la protezione del patrimonio e il registro dei viaggi, non per un controllo intensivo o costante dei lavoratori; per l'uso privato del veicolo si raccomanda la disattivazione (opt-out).",
         en: 'For the UOOU, GPS is permitted mainly for asset protection and the trip logbook, not for intensive or constant monitoring of workers; for private use of the vehicle, deactivation (opt-out) is recommended.',
         de: 'Fuer die UOOU ist GPS vor allem zum Schutz des Vermoegens und fuer das Fahrtenbuch zulaessig, nicht zur intensiven oder staendigen Ueberwachung der Arbeitnehmer; fuer die private Nutzung des Fahrzeugs wird die Deaktivierung (Opt-out) empfohlen.',
         fr: "Pour l'UOOU, le GPS est admis surtout pour la protection du patrimoine et le carnet de bord, et non pour un contrôle intensif ou constant des travailleurs; pour l'usage privé du véhicule, la désactivation (opt-out) est recommandée.",
@@ -188,7 +188,7 @@ export const repubblicaCeca: SchedaPaese = {
     {
       passo: 1,
       descrizione: {
-        it: "Verifica un motivo serio inerente alla natura della tua attività' per il monitoraggio (art. 316).",
+        it: "Verifica un motivo serio inerente alla natura della tua attività per il monitoraggio (art. 316).",
         en: 'Verify a serious reason inherent to the nature of your activity for the monitoring (art. 316).',
         de: 'Pruefen Sie einen schwerwiegenden, in der Art Ihrer Taetigkeit liegenden Grund fuer die Ueberwachung (Art. 316).',
         fr: "Vérifiez l'existence d'un motif sérieux inhérent à la nature de votre activité pour la surveillance (art. 316).",
@@ -221,7 +221,7 @@ export const repubblicaCeca: SchedaPaese = {
     {
       passo: 4,
       descrizione: {
-        it: "Informa direttamente i lavoratori su portata e modalita' del controllo (art. 316 + art. 13 GDPR).",
+        it: "Informa direttamente i lavoratori su portata e modalità del controllo (art. 316 + art. 13 GDPR).",
         en: 'Inform workers directly about the scope and manner of the control (art. 316 + art. 13 GDPR).',
         de: 'Informieren Sie die Arbeitnehmer unmittelbar ueber Umfang und Art der Kontrolle (Art. 316 + Art. 13 DSGVO).',
         fr: 'Informez directement les travailleurs de la portée et des modalités du contrôle (art. 316 + art. 13 RGPD).',
@@ -282,6 +282,7 @@ export const repubblicaCeca: SchedaPaese = {
       nl: 'UOOU tegen Ceska posta (Tsjechische Post): tussen maart 2012 en februari 2013 had het bedrijf 7.770 postbodes uitgerust met GPS-trackers die de volledige route tijdens de dienst registreerden; een onevenredige verwerking die te lang duurde en te veel mensen betrof. Boete 80.000 CZK. Beslist onder de oude wet van voor de AVG, maar het beginsel blijft overeind.',
     },
     urlFonte: FONTE_UOOU_CESKA_POSTA.url,
+    tipoImporto: 'caso-gps',
   },
 
   fonti: [

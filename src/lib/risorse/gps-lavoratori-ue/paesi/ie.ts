@@ -77,7 +77,7 @@ export const irlanda: SchedaPaese = {
     urlFonte: FONTE_DPC_RECLAMI.url,
     verificatoIl: '2026-06-15',
     note: {
-      it: "L'Irlanda ha un'unica autorita nazionale, il DPC; nessuna ripartizione regionale.",
+      it: "L'Irlanda ha un'unica autorità nazionale, il DPC; nessuna ripartizione regionale.",
       en: 'Ireland has a single national authority, the DPC; no regional subdivision.',
       de: 'Irland hat eine einzige nationale Behoerde, die DPC; keine regionale Aufteilung.',
       fr: "L'Irlande dispose d'une seule autorite nationale, la DPC; aucune repartition regionale.",
@@ -89,7 +89,7 @@ export const irlanda: SchedaPaese = {
   checklist: [
     {
       voce: {
-        it: 'Informazione preventiva dei lavoratori sull\'esistenza, il funzionamento e tutte le finalita del tracciamento (art. 13 GDPR)',
+        it: 'Informazione preventiva dei lavoratori sull\'esistenza, il funzionamento e tutte le finalità del tracciamento (art. 13 GDPR)',
         en: 'Prior notice to workers of the existence, operation and all purposes of the tracking (art. 13 GDPR)',
         de: 'Vorherige Information der Arbeitnehmer ueber Bestehen, Funktionsweise und alle Zwecke der Ortung (Art. 13 DSGVO)',
         fr: "Information prealable des travailleurs sur l'existence, le fonctionnement et toutes les finalites du suivi (art. 13 RGPD)",
@@ -98,7 +98,7 @@ export const irlanda: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "Il lavoratore va informato prima dell'attivazione dell'esistenza del tracciamento, di come funziona e di tutte le finalita.",
+        it: "Il lavoratore va informato prima dell'attivazione dell'esistenza del tracciamento, di come funziona e di tutte le finalità.",
         en: 'The worker must be informed, before activation, of the existence of the tracking, how it works and all its purposes.',
         de: 'Der Arbeitnehmer ist vor der Aktivierung ueber das Bestehen der Ortung, ihre Funktionsweise und alle Zwecke zu informieren.',
         fr: "Le travailleur doit etre informe, avant l'activation, de l'existence du suivi, de son fonctionnement et de toutes ses finalites.",
@@ -118,7 +118,7 @@ export const irlanda: SchedaPaese = {
       },
       risposta: 'no',
       dettaglio: {
-        it: "L'Irlanda non ha un meccanismo di consenso sindacale che condiziona il monitoraggio; il controllo passa per base giuridica, trasparenza, proporzionalita e DPIA. Il consenso del lavoratore e' valido solo in casi eccezionali.",
+        it: "L'Irlanda non ha un meccanismo di consenso sindacale che condiziona il monitoraggio; il controllo passa per base giuridica, trasparenza, proporzionalità e DPIA. Il consenso del lavoratore è valido solo in casi eccezionali.",
         en: 'Ireland has no trade-union consent mechanism that conditions monitoring; control runs through legal basis, transparency, proportionality and DPIA. The worker\'s consent is valid only in exceptional cases.',
         de: 'Irland kennt keinen Mechanismus der Gewerkschaftszustimmung, der die Ueberwachung an Bedingungen knuepft; die Kontrolle laeuft ueber Rechtsgrundlage, Transparenz, Verhaeltnismaessigkeit und DSFA. Die Einwilligung des Arbeitnehmers ist nur in Ausnahmefaellen gueltig.',
         fr: "L'Irlande ne dispose d'aucun mecanisme de consentement syndical conditionnant la surveillance; le controle passe par la base legale, la transparence, la proportionnalite et l'AIPD. Le consentement du travailleur n'est valable que dans des cas exceptionnels.",
@@ -129,7 +129,7 @@ export const irlanda: SchedaPaese = {
     },
     {
       voce: {
-        it: 'Autorizzazione preventiva di un\'autorita prima di installare',
+        it: 'Autorizzazione preventiva di un\'autorità prima di installare',
         en: "Prior authorisation from an authority before installation",
         de: 'Vorherige Genehmigung einer Behoerde vor der Installation',
         fr: "Autorisation prealable d'une autorite avant l'installation",
@@ -138,7 +138,7 @@ export const irlanda: SchedaPaese = {
       },
       risposta: 'no',
       dettaglio: {
-        it: "Non serve un'autorizzazione preventiva del DPC; l'autorita va consultata prima solo se la DPIA evidenzia un rischio elevato non mitigabile.",
+        it: "Non serve un'autorizzazione preventiva del DPC; l'autorità va consultata prima solo se la DPIA evidenzia un rischio elevato non mitigabile.",
         en: 'No prior authorisation from the DPC is needed; the authority must be consulted beforehand only if the DPIA reveals a high risk that cannot be mitigated.',
         de: 'Eine vorherige Genehmigung der DPC ist nicht erforderlich; die Behoerde ist nur dann vorab zu konsultieren, wenn die DSFA ein hohes, nicht beherrschbares Risiko aufzeigt.',
         fr: "Aucune autorisation prealable de la DPC n'est requise; l'autorite ne doit etre consultee au prealable que si l'AIPD revele un risque eleve impossible a attenuer.",
@@ -158,7 +158,7 @@ export const irlanda: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "La base usuale e' l'interesse legittimo (art. 6.1.f), che deve essere strettamente necessario e proporzionato e bilanciato coi diritti del lavoratore, soggetto al diritto di opposizione (art. 21).",
+        it: "La base usuale è l'interesse legittimo (art. 6.1.f), che deve essere strettamente necessario e proporzionato e bilanciato coi diritti del lavoratore, soggetto al diritto di opposizione (art. 21).",
         en: "The usual basis is legitimate interest (art. 6(1)(f)), which must be strictly necessary and proportionate and balanced against the worker's rights, subject to the right to object (art. 21).",
         de: 'Die uebliche Grundlage ist das berechtigte Interesse (Art. 6 Abs. 1 lit. f), das unbedingt erforderlich und verhaeltnismaessig sein und gegen die Rechte des Arbeitnehmers abgewogen werden muss, vorbehaltlich des Widerspruchsrechts (Art. 21).',
         fr: "La base habituelle est l'interet legitime (art. 6, par. 1, point f), qui doit etre strictement necessaire et proportionne et mis en balance avec les droits du travailleur, sous reserve du droit d'opposition (art. 21).",
@@ -178,7 +178,7 @@ export const irlanda: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "Il tracciamento non può' servire a monitorare in generale il personale; e' improbabile che sia lecito fuori orario, e serve un opt-out (interruttore privacy) se il veicolo e' usato anche privatamente.",
+        it: "Il tracciamento non può servire a monitorare in generale il personale; è improbabile che sia lecito fuori orario, e serve un opt-out (interruttore privacy) se il veicolo è usato anche privatamente.",
         en: 'The tracking cannot be used to monitor staff in general; it is unlikely to be lawful outside working hours, and an opt-out (privacy switch) is needed if the vehicle is also used privately.',
         de: 'Die Ortung darf nicht der allgemeinen Ueberwachung des Personals dienen; ausserhalb der Arbeitszeit ist sie kaum rechtmaessig, und es ist ein Opt-out (Privatsphaere-Schalter) erforderlich, wenn das Fahrzeug auch privat genutzt wird.',
         fr: "Le suivi ne peut pas servir a surveiller le personnel de maniere generale; il est peu probable qu'il soit licite en dehors des heures de travail, et une option de desactivation (interrupteur de confidentialite) est necessaire si le vehicule est aussi utilise a titre prive.",
@@ -213,7 +213,7 @@ export const irlanda: SchedaPaese = {
     {
       passo: 1,
       descrizione: {
-        it: 'Informa i lavoratori, prima dell\'attivazione, di esistenza, funzionamento e finalita del tracciamento.',
+        it: 'Informa i lavoratori, prima dell\'attivazione, di esistenza, funzionamento e finalità del tracciamento.',
         en: 'Inform workers, before activation, of the existence, operation and purposes of the tracking.',
         de: 'Informieren Sie die Arbeitnehmer vor der Aktivierung ueber Bestehen, Funktionsweise und Zwecke der Ortung.',
         fr: "Informez les travailleurs, avant l'activation, de l'existence, du fonctionnement et des finalites du suivi.",
@@ -296,6 +296,7 @@ export const irlanda: SchedaPaese = {
       nl: 'Er is geen boete van de DPC bekend die specifiek betrekking heeft op gps bij werknemers. Relevante richtinggevende zaak: DPC tegen Limerick City and County Council (december 2021), 110.000 euro voor een verwerking zonder rechtsgrondslag via camera\'s, kentekenherkenning en drones (een overheidsinstantie, geen werknemers). De rechtspraak (Doolin) heeft bovendien bepaald dat gegevens die voor beveiliging zijn verzameld, niet mogen worden hergebruikt om werknemers te monitoren en te bestraffen.',
     },
     urlFonte: FONTE_DPC_LIMERICK.url,
+    tipoImporto: 'massimale',
   },
 
   fonti: [

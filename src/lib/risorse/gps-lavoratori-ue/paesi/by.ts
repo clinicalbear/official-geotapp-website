@@ -83,7 +83,7 @@ export const bielorussia: SchedaPaese = {
     urlFonte: FONTE_NPDPC.url,
     verificatoIl: '2026-06-15',
     note: {
-      it: "La Bielorussia e' fuori dall'UE e non applica il GDPR. Vale la Legge 99-Z del 2021, basata sul consenso. Contesto autoritario e trasparenza limitata sull'applicazione. Unica autorita' nazionale, l'NPDPC.",
+      it: "La Bielorussia è fuori dall'UE e non applica il GDPR. Vale la Legge 99-Z del 2021, basata sul consenso. Contesto autoritario e trasparenza limitata sull'applicazione. Unica autorità nazionale, l'NPDPC.",
       en: "Belarus is outside the EU and does not apply the GDPR. The Law 99-Z of 2021 applies, based on consent. The context is authoritarian and transparency over enforcement is limited. The only national authority is the NPDPC.",
       de: "Belarus liegt ausserhalb der EU und wendet die DSGVO nicht an. Es gilt das Gesetz 99-Z von 2021, das auf der Einwilligung beruht. Der Kontext ist autoritaer und die Transparenz ueber die Durchsetzung ist begrenzt. Die einzige nationale Behoerde ist das NPDPC.",
       fr: "La Bielorussie se trouve hors de l'UE et n'applique pas le RGPD. C'est la loi 99-Z de 2021 qui s'applique, fondee sur le consentement. Le contexte est autoritaire et la transparence sur l'application des regles est limitee. L'unique autorite nationale est le NPDPC.",
@@ -104,7 +104,7 @@ export const bielorussia: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "Il modello bielorusso si basa sul consenso; per il GPS conviene il consenso separato e specifico del lavoratore, con un'informazione dettagliata (titolare, finalita', elenco dei dati, durata, soggetti che trattano, diritti). L'eccezione per i rapporti di lavoro copre la gestione ordinaria del rapporto, non una sorveglianza GPS continua.",
+        it: "Il modello bielorusso si basa sul consenso; per il GPS conviene il consenso separato e specifico del lavoratore, con un'informazione dettagliata (titolare, finalità, elenco dei dati, durata, soggetti che trattano, diritti). L'eccezione per i rapporti di lavoro copre la gestione ordinaria del rapporto, non una sorveglianza GPS continua.",
         en: "The Belarusian model is based on consent; for GPS it is advisable to obtain separate and specific consent from the worker, with detailed notice (controller, purposes, list of data, duration, parties who process the data, rights). The exception for employment relationships covers the ordinary management of the relationship, not continuous GPS surveillance.",
         de: "Das belarussische Modell beruht auf der Einwilligung; fuer GPS empfiehlt sich die gesonderte und spezifische Einwilligung des Mitarbeiters, mit einer detaillierten Information (Verantwortlicher, Zwecke, Liste der Daten, Dauer, verarbeitende Stellen, Rechte). Die Ausnahme fuer Arbeitsverhaeltnisse deckt die gewoehnliche Verwaltung des Verhaeltnisses ab, nicht eine fortlaufende GPS-Ueberwachung.",
         fr: "Le modele bielorusse repose sur le consentement; pour le GPS, il convient d'obtenir le consentement separe et specifique du salarie, avec une information detaillee (responsable du traitement, finalites, liste des donnees, duree, intervenants qui traitent les donnees, droits). L'exception pour les relations de travail couvre la gestion ordinaire de la relation, et non une surveillance GPS continue.",
@@ -115,7 +115,7 @@ export const bielorussia: SchedaPaese = {
     },
     {
       voce: {
-        it: "Autorizzazione o registrazione preventiva di un'autorita' prima di installare",
+        it: "Autorizzazione o registrazione preventiva di un'autorità prima di installare",
         en: "Prior authorisation or registration with an authority before installing",
         de: 'Vorherige Genehmigung oder Registrierung bei einer Behoerde vor der Installation',
         fr: "Autorisation ou enregistrement prealable aupres d'une autorite avant l'installation",
@@ -124,7 +124,7 @@ export const bielorussia: SchedaPaese = {
       },
       risposta: 'dipende',
       dettaglio: {
-        it: "Non serve un'autorizzazione preventiva generale; l'iscrizione al registro degli operatori e' richiesta solo per categorie a rischio (dati biometrici/genetici, trasferimenti speciali, 100.000+ interessati). Un datore che fa GPS sul proprio personale di norma resta sotto soglia.",
+        it: "Non serve un'autorizzazione preventiva generale; l'iscrizione al registro degli operatori è richiesta solo per categorie a rischio (dati biometrici/genetici, trasferimenti speciali, 100.000+ interessati). Un datore che fa GPS sul proprio personale di norma resta sotto soglia.",
         en: "No general prior authorisation is required; registration in the register of operators is required only for high-risk categories (biometric/genetic data, special transfers, 100,000+ data subjects). An employer using GPS on its own staff normally stays below the threshold.",
         de: "Eine allgemeine vorherige Genehmigung ist nicht erforderlich; die Eintragung in das Register der Betreiber ist nur fuer risikoreiche Kategorien erforderlich (biometrische/genetische Daten, besondere Uebermittlungen, 100.000+ Betroffene). Ein Arbeitgeber, der GPS bei eigenem Personal einsetzt, bleibt in der Regel unter der Schwelle.",
         fr: "Aucune autorisation prealable generale n'est requise; l'inscription au registre des operateurs n'est exigee que pour les categories a risque (donnees biometriques/genetiques, transferts speciaux, 100 000+ personnes concernees). Un employeur qui utilise le GPS sur son propre personnel reste en regle generale sous le seuil.",
@@ -144,7 +144,7 @@ export const bielorussia: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "A differenza del GDPR, la base principale e' il consenso del lavoratore, e serve un consenso per ciascuna finalita' del trattamento.",
+        it: "A differenza del GDPR, la base principale è il consenso del lavoratore, e serve un consenso per ciascuna finalità del trattamento.",
         en: "Unlike the GDPR, the main legal basis is the worker's consent, and a separate consent is needed for each purpose of the processing.",
         de: "Anders als bei der DSGVO ist die Hauptrechtsgrundlage die Einwilligung des Mitarbeiters, und es ist eine Einwilligung fuer jeden Zweck der Verarbeitung erforderlich.",
         fr: "Contrairement au RGPD, la base principale est le consentement du salarie, et un consentement est requis pour chaque finalite du traitement.",
@@ -155,7 +155,7 @@ export const bielorussia: SchedaPaese = {
     },
     {
       voce: {
-        it: 'Niente trattamento oltre la finalita; consenso per ogni finalita',
+        it: 'Niente trattamento oltre la finalità; consenso per ogni finalità',
         en: "No processing beyond the purpose; consent for each purpose",
         de: 'Keine Verarbeitung ueber den Zweck hinaus; Einwilligung fuer jeden Zweck',
         fr: "Pas de traitement au-dela de la finalite; consentement pour chaque finalite",
@@ -164,7 +164,7 @@ export const bielorussia: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "Il trattamento va limitato alle finalita' dichiarate, con un consenso separato per ciascuna; il titolare deve informare i lavoratori e cessare il trattamento quando viene meno la base.",
+        it: "Il trattamento va limitato alle finalità dichiarate, con un consenso separato per ciascuna; il titolare deve informare i lavoratori e cessare il trattamento quando viene meno la base.",
         en: "Processing must be limited to the declared purposes, with a separate consent for each; the controller must inform the workers and stop the processing when the legal basis no longer applies.",
         de: "Die Verarbeitung ist auf die angegebenen Zwecke zu beschraenken, mit einer gesonderten Einwilligung fuer jeden Zweck; der Verantwortliche muss die Mitarbeiter informieren und die Verarbeitung beenden, wenn die Rechtsgrundlage entfaellt.",
         fr: "Le traitement doit etre limite aux finalites declarees, avec un consentement separe pour chacune; le responsable du traitement doit informer les salaries et cesser le traitement lorsque la base disparait.",
@@ -184,7 +184,7 @@ export const bielorussia: SchedaPaese = {
       },
       risposta: 'no',
       dettaglio: {
-        it: "La legge bielorussa non prevede una valutazione d'impatto in stile GDPR; prevede pero' l'obbligo di un responsabile della protezione dei dati e la notifica delle violazioni entro 3 giorni lavorativi.",
+        it: "La legge bielorussa non prevede una valutazione d'impatto in stile GDPR; prevede però l'obbligo di un responsabile della protezione dei dati e la notifica delle violazioni entro 3 giorni lavorativi.",
         en: "Belarusian law does not provide for a GDPR-style impact assessment; it does, however, require a data protection officer and notification of breaches within 3 working days.",
         de: "Das belarussische Recht sieht keine Folgenabschaetzung nach Art der DSGVO vor; es verlangt jedoch einen Datenschutzbeauftragten und die Meldung von Verletzungen innerhalb von 3 Werktagen.",
         fr: "Le droit bielorusse ne prevoit pas d'analyse d'impact de type RGPD; il impose toutefois un delegue a la protection des donnees et la notification des violations dans un delai de 3 jours ouvrables.",
@@ -210,7 +210,7 @@ export const bielorussia: SchedaPaese = {
     {
       passo: 2,
       descrizione: {
-        it: "Informa in dettaglio (titolare, finalita', elenco dei dati, durata, soggetti che trattano, diritti).",
+        it: "Informa in dettaglio (titolare, finalità, elenco dei dati, durata, soggetti che trattano, diritti).",
         en: "Provide detailed notice (controller, purposes, list of data, duration, parties who process the data, rights).",
         de: "Informieren Sie detailliert (Verantwortlicher, Zwecke, Liste der Daten, Dauer, verarbeitende Stellen, Rechte).",
         fr: "Informez en detail (responsable du traitement, finalites, liste des donnees, duree, intervenants qui traitent les donnees, droits).",
@@ -243,7 +243,7 @@ export const bielorussia: SchedaPaese = {
     {
       passo: 5,
       descrizione: {
-        it: "Limita il trattamento alle finalita' dichiarate e cessa quando viene meno la base.",
+        it: "Limita il trattamento alle finalità dichiarate e cessa quando viene meno la base.",
         en: "Limit the processing to the declared purposes and stop it when the legal basis no longer applies.",
         de: "Beschraenken Sie die Verarbeitung auf die angegebenen Zwecke und beenden Sie sie, wenn die Rechtsgrundlage entfaellt.",
         fr: "Limitez le traitement aux finalites declarees et cessez-le lorsque la base disparait.",
@@ -277,7 +277,7 @@ export const bielorussia: SchedaPaese = {
 
   sanzioneMax: {
     importo: {
-      it: 'fino a circa 200 unita\' base (circa 2.600 euro), oltre alla possibile responsabilità\' penale',
+      it: 'fino a circa 200 unità base (circa 2.600 euro), oltre alla possibile responsabilità penale',
       en: "up to about 200 base units (around 2,600 euros), in addition to possible criminal liability",
       de: 'bis zu etwa 200 Basiseinheiten (rund 2.600 Euro), zusaetzlich zur moeglichen strafrechtlichen Haftung',
       fr: "jusqu'a environ 200 unites de base (environ 2 600 euros), en plus de la possible responsabilite penale",
@@ -285,7 +285,7 @@ export const bielorussia: SchedaPaese = {
       nl: 'tot ongeveer 200 basiseenheden (ongeveer 2.600 euro), naast de mogelijke strafrechtelijke aansprakelijkheid',
     },
     casoCitato: {
-      it: "Non risulta una decisione bielorussa specifica e pubblicata sul GPS sui dipendenti, e la trasparenza sull'applicazione e' limitata. Le sanzioni amministrative massime per violazioni sui dati arrivano a circa 200 unita' base (circa 2.600 euro), con possibile responsabilità' penale nei casi più' gravi.",
+      it: "Non risulta una decisione bielorussa specifica e pubblicata sul GPS sui dipendenti, e la trasparenza sull'applicazione è limitata. Le sanzioni amministrative massime per violazioni sui dati arrivano a circa 200 unità base (circa 2.600 euro), con possibile responsabilità penale nei casi più gravi.",
       en: "There is no specific, published Belarusian decision on GPS on employees, and transparency over enforcement is limited. The maximum administrative penalties for data violations reach about 200 base units (around 2,600 euros), with possible criminal liability in the most serious cases.",
       de: "Eine spezifische, veroeffentlichte belarussische Entscheidung zu GPS bei Mitarbeitern ist nicht ersichtlich, und die Transparenz ueber die Durchsetzung ist begrenzt. Die hoechsten verwaltungsrechtlichen Sanktionen fuer Datenverstoesse erreichen etwa 200 Basiseinheiten (rund 2.600 Euro), mit moeglicher strafrechtlicher Haftung in den schwersten Faellen.",
       fr: "Il n'existe pas de decision bielorusse specifique et publiee sur le GPS appliquee aux salaries, et la transparence sur l'application des regles est limitee. Les sanctions administratives maximales pour les violations relatives aux donnees atteignent environ 200 unites de base (environ 2 600 euros), avec une possible responsabilite penale dans les cas les plus graves.",
@@ -293,6 +293,7 @@ export const bielorussia: SchedaPaese = {
       nl: "Er is geen specifieke, gepubliceerde Belarussische beslissing over GPS bij werknemers bekend, en de transparantie over de handhaving is beperkt. De maximale bestuurlijke sancties voor gegevensinbreuken bedragen ongeveer 200 basiseenheden (ongeveer 2.600 euro), met mogelijke strafrechtelijke aansprakelijkheid in de ernstigste gevallen.",
     },
     urlFonte: FONTE_DLA_PIPER.url,
+    tipoImporto: 'massimale',
   },
 
   fonti: [

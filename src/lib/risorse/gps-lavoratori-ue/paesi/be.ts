@@ -71,7 +71,7 @@ export const belgio: SchedaPaese = {
 
   autoritaCompetente: {
     ente: {
-      it: 'Autorita per la protezione dei dati (APD/GBA)',
+      it: 'Autorità per la protezione dei dati (APD/GBA)',
       en: 'Data Protection Authority (APD/GBA)',
       de: 'Datenschutzbehörde (APD/GBA)',
       fr: 'Autorité de protection des données (APD/GBA)',
@@ -87,7 +87,7 @@ export const belgio: SchedaPaese = {
     urlFonte: FONTE_APD_RECLAMO.url,
     verificatoIl: '2026-06-15',
     note: {
-      it: "Il Belgio e' federale ma ha un'unica autorita' garante nazionale, l'APD/GBA: nessuna ripartizione regionale.",
+      it: "Il Belgio è federale ma ha un'unica autorità garante nazionale, l'APD/GBA: nessuna ripartizione regionale.",
       en: 'Belgium is federal but has a single national data protection authority, the APD/GBA: there is no regional division.',
       de: 'Belgien ist ein Bundesstaat, hat jedoch nur eine einzige nationale Datenschutzbehörde, die APD/GBA: Es gibt keine regionale Aufteilung.',
       fr: "La Belgique est un État fédéral mais dispose d'une seule autorité de protection des données nationale, l'APD/GBA : il n'y a aucune répartition régionale.",
@@ -119,7 +119,7 @@ export const belgio: SchedaPaese = {
     },
     {
       voce: {
-        it: "Autorizzazione preventiva di un'autorita prima di installare",
+        it: "Autorizzazione preventiva di un'autorità prima di installare",
         en: 'Prior authorisation from an authority before installing',
         de: 'Vorherige Genehmigung einer Behörde vor der Installation',
         fr: "Autorisation préalable d'une autorité avant l'installation",
@@ -128,7 +128,7 @@ export const belgio: SchedaPaese = {
       },
       risposta: 'no',
       dettaglio: {
-        it: "Non serve un'autorizzazione preventiva dell'APD/GBA; vale la responsabilizzazione, con valutazione d'impatto quando il rischio e' elevato e consultazione dell'autorita' solo se resta un rischio residuo elevato.",
+        it: "Non serve un'autorizzazione preventiva dell'APD/GBA; vale la responsabilizzazione, con valutazione d'impatto quando il rischio è elevato e consultazione dell'autorità solo se resta un rischio residuo elevato.",
         en: "No prior authorisation from the APD/GBA is required; the accountability principle applies, with an impact assessment when the risk is high and consultation of the authority only if a high residual risk remains.",
         de: "Eine vorherige Genehmigung der APD/GBA ist nicht erforderlich; es gilt der Grundsatz der Rechenschaftspflicht, mit einer Folgenabschätzung bei hohem Risiko und einer Konsultation der Behörde nur dann, wenn ein hohes Restrisiko verbleibt.",
         fr: "Aucune autorisation préalable de l'APD/GBA n'est requise ; le principe de responsabilisation s'applique, avec une analyse d'impact lorsque le risque est élevé et une consultation de l'autorité uniquement s'il subsiste un risque résiduel élevé.",
@@ -148,7 +148,7 @@ export const belgio: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "Il datore deve comunicare prima la base giuridica del trattamento, le finalita' e i diritti dei lavoratori; la base non e' di norma il consenso ma il legittimo interesse o la necessita' contrattuale/legale.",
+        it: "Il datore deve comunicare prima la base giuridica del trattamento, le finalità e i diritti dei lavoratori; la base non è di norma il consenso ma il legittimo interesse o la necessità contrattuale/legale.",
         en: "The employer must communicate beforehand the legal basis of the processing, the purposes and the workers' rights; the basis is not usually consent but legitimate interest or contractual/legal necessity.",
         de: "Der Arbeitgeber muss zuvor die Rechtsgrundlage der Verarbeitung, die Zwecke und die Rechte der Arbeitnehmer mitteilen; die Grundlage ist in der Regel nicht die Einwilligung, sondern das berechtigte Interesse oder die vertragliche/gesetzliche Erforderlichkeit.",
         fr: "L'employeur doit communiquer au préalable la base juridique du traitement, les finalités et les droits des travailleurs ; la base n'est généralement pas le consentement mais l'intérêt légitime ou la nécessité contractuelle/légale.",
@@ -168,7 +168,7 @@ export const belgio: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "Per l'APD un controllo permanente con lettura sistematica dei dati di localizzazione e' in linea di principio sproporzionato; il sistema deve poter essere disattivato quando il veicolo e' usato fuori dall'orario di lavoro.",
+        it: "Per l'APD un controllo permanente con lettura sistematica dei dati di localizzazione è in linea di principio sproporzionato; il sistema deve poter essere disattivato quando il veicolo è usato fuori dall'orario di lavoro.",
         en: "According to the APD, permanent monitoring with systematic reading of location data is in principle disproportionate; the system must be able to be deactivated when the vehicle is used outside working hours.",
         de: "Nach Auffassung der APD ist eine dauerhafte Überwachung mit systematischer Auswertung der Standortdaten grundsätzlich unverhältnismäßig; das System muss abgeschaltet werden können, wenn das Fahrzeug außerhalb der Arbeitszeit genutzt wird.",
         fr: "Pour l'APD, un contrôle permanent avec lecture systématique des données de localisation est en principe disproportionné ; le système doit pouvoir être désactivé lorsque le véhicule est utilisé en dehors des heures de travail.",
@@ -188,7 +188,7 @@ export const belgio: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "Serve una valutazione d'impatto quando il trattamento e' suscettibile di comportare un rischio elevato, come una sorveglianza sistematica su larga scala.",
+        it: "Serve una valutazione d'impatto quando il trattamento è suscettibile di comportare un rischio elevato, come una sorveglianza sistematica su larga scala.",
         en: 'An impact assessment is required when the processing is likely to result in a high risk, such as large-scale systematic monitoring.',
         de: 'Eine Folgenabschätzung ist erforderlich, wenn die Verarbeitung voraussichtlich ein hohes Risiko mit sich bringt, etwa eine systematische Überwachung in großem Umfang.',
         fr: "Une analyse d'impact est requise lorsque le traitement est susceptible d'engendrer un risque élevé, comme une surveillance systématique à grande échelle.",
@@ -214,7 +214,7 @@ export const belgio: SchedaPaese = {
     {
       passo: 2,
       descrizione: {
-        it: 'Individua una base giuridica valida (legittimo interesse o necessita contrattuale/legale), non il consenso.',
+        it: 'Individua una base giuridica valida (legittimo interesse o necessità contrattuale/legale), non il consenso.',
         en: 'Identify a valid legal basis (legitimate interest or contractual/legal necessity), not consent.',
         de: 'Ermitteln Sie eine gültige Rechtsgrundlage (berechtigtes Interesse oder vertragliche/gesetzliche Erforderlichkeit), nicht die Einwilligung.',
         fr: "Déterminez une base juridique valable (intérêt légitime ou nécessité contractuelle/légale), et non le consentement.",
@@ -225,7 +225,7 @@ export const belgio: SchedaPaese = {
     {
       passo: 3,
       descrizione: {
-        it: "Informa preventivamente i lavoratori su base giuridica, finalita' e diritti.",
+        it: "Informa preventivamente i lavoratori su base giuridica, finalità e diritti.",
         en: 'Inform the workers beforehand about the legal basis, the purposes and their rights.',
         de: 'Informieren Sie die Arbeitnehmer im Voraus über die Rechtsgrundlage, die Zwecke und ihre Rechte.',
         fr: 'Informez au préalable les travailleurs sur la base juridique, les finalités et les droits.',
@@ -289,7 +289,7 @@ export const belgio: SchedaPaese = {
       nl: '45.000 euro',
     },
     casoCitato: {
-      it: "Chambre Contentieuse dell'APD/GBA, decisione 114/2024 del 6 settembre 2024: un datore usava le impronte digitali dei dipendenti per la rilevazione delle presenze, su una base (il consenso) non valida nel rapporto di lavoro e in violazione della minimizzazione (esistevano mezzi meno intrusivi). Non e' un caso di GPS, ma e' il caso belga di riferimento sul controllo delle presenze dei dipendenti.",
+      it: "Chambre Contentieuse dell'APD/GBA, decisione 114/2024 del 6 settembre 2024: un datore usava le impronte digitali dei dipendenti per la rilevazione delle presenze, su una base (il consenso) non valida nel rapporto di lavoro e in violazione della minimizzazione (esistevano mezzi meno intrusivi). Non è un caso di GPS, ma è il caso belga di riferimento sul controllo delle presenze dei dipendenti.",
       en: "Chambre Contentieuse of the APD/GBA, decision 114/2024 of 6 September 2024: an employer used employees' fingerprints for attendance recording, on a basis (consent) that is not valid in the employment relationship and in breach of data minimisation (less intrusive means existed). It is not a GPS case, but it is the Belgian benchmark case on monitoring employees' attendance.",
       de: "Chambre Contentieuse der APD/GBA, Beschluss 114/2024 vom 6. September 2024: Ein Arbeitgeber nutzte die Fingerabdrücke der Beschäftigten zur Anwesenheitserfassung, auf einer im Arbeitsverhältnis ungültigen Grundlage (der Einwilligung) und unter Verstoß gegen die Datenminimierung (es gab weniger eingriffsintensive Mittel). Es handelt sich nicht um einen GPS-Fall, aber um den belgischen Referenzfall zur Anwesenheitskontrolle der Beschäftigten.",
       fr: "Chambre Contentieuse de l'APD/GBA, décision 114/2024 du 6 septembre 2024 : un employeur utilisait les empreintes digitales des employés pour le pointage des présences, sur une base (le consentement) non valable dans la relation de travail et en violation de la minimisation (des moyens moins intrusifs existaient). Ce n'est pas un cas de GPS, mais c'est le cas belge de référence sur le contrôle des présences des employés.",
@@ -297,6 +297,7 @@ export const belgio: SchedaPaese = {
       nl: "Chambre Contentieuse van de APD/GBA, beslissing 114/2024 van 6 september 2024: een werkgever gebruikte de vingerafdrukken van werknemers voor de aanwezigheidsregistratie, op een in de arbeidsverhouding ongeldige grondslag (de toestemming) en in strijd met de minimalisatie (er waren minder ingrijpende middelen). Het is geen GPS-zaak, maar het is de Belgische referentiezaak over de controle van de aanwezigheid van werknemers.",
     },
     urlFonte: FONTE_DECISIONE_114_2024.url,
+    tipoImporto: 'caso-affine',
   },
 
   fonti: [

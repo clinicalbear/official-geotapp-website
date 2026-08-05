@@ -72,7 +72,7 @@ export const malta: SchedaPaese = {
     urlFonte: FONTE_IDPC_RECLAMO.url,
     verificatoIl: '2026-06-15',
     note: {
-      it: "Malta ha un'unica autorita nazionale, l'IDPC; nessuna ripartizione regionale.",
+      it: "Malta ha un'unica autorità nazionale, l'IDPC; nessuna ripartizione regionale.",
       en: 'Malta has a single national authority, the IDPC; there is no regional breakdown.',
       de: 'Malta hat eine einzige nationale Behoerde, den IDPC; es gibt keine regionale Aufgliederung.',
       fr: "Malte dispose d'une seule autorite nationale, l'IDPC ; il n'y a pas de repartition regionale.",
@@ -104,7 +104,7 @@ export const malta: SchedaPaese = {
     },
     {
       voce: {
-        it: "Autorizzazione preventiva di un'autorita prima di installare",
+        it: "Autorizzazione preventiva di un'autorità prima di installare",
         en: 'Prior authorisation from an authority before installation',
         de: 'Vorherige Genehmigung einer Behoerde vor der Installation',
         fr: "Autorisation prealable d'une autorite avant l'installation",
@@ -282,6 +282,7 @@ export const malta: SchedaPaese = {
       nl: "Er is geen specifieke, gepubliceerde boete van de IDPC voor de GPS-tracking van werknemers bekend. In een zaak (CDP/COMP/426/2022) achtte de IDPC het cameratoezicht in de bedrijfskantine, dat werknemers tijdens hun pauze filmde en in een tuchtprocedure werd gebruikt, buitensporig en onevenredig. Het is geen GPS-zaak. Het sanctierisico blijft het algemene risico onder de AVG (art. 83).",
     },
     urlFonte: FONTE_IDPC_DECISIONE.url,
+    tipoImporto: 'massimale',
   },
 
   fonti: [

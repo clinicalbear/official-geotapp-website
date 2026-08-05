@@ -1260,7 +1260,10 @@
         }
       ],
       "nota": "Daarnaast staat artikel 88 AVG elke staat toe eigen regels toe te voegen voor gegevensverwerking in de arbeidsverhouding. Daarom bestaan de landkaarten hieronder: wat verandert is wie toestemming moet geven, niet het beginsel."
-    }
+    },
+    "sanzioneTipoCasoGps": "uit een echte GPS-zaak",
+    "sanzioneTipoCasoAffine": "verwante zaak, geen GPS",
+    "sanzioneTipoMassimale": "wettelijk maximum, geen opgelegde boete"
   },
   "sanzioniGps": {
     "metaTitle": "GPS-boetecalculator: hoeveel je riskeert bij het monitoren van werknemers, land voor land",

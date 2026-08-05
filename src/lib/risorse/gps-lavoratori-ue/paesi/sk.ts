@@ -75,7 +75,7 @@ export const slovacchia: SchedaPaese = {
     urlFonte: FONTE_UOOU_PROCEDURA.url,
     verificatoIl: '2026-06-15',
     note: {
-      it: "La Slovacchia ha un'unica autorita nazionale, l'UOOU SR; nessuna ripartizione regionale.",
+      it: "La Slovacchia ha un'unica autorità nazionale, l'UOOU SR; nessuna ripartizione regionale.",
       en: 'Slovakia has a single national authority, the UOOU SR; there is no regional split.',
       de: 'Die Slowakei hat eine einzige nationale Behoerde, die UOOU SR; es gibt keine regionale Aufteilung.',
       fr: "La Slovaquie dispose d'une unique autorite nationale, l'UOOU SR ; il n'y a pas de repartition regionale.",
@@ -87,7 +87,7 @@ export const slovacchia: SchedaPaese = {
   checklist: [
     {
       voce: {
-        it: 'Discussione coi rappresentanti dei lavoratori su portata, modalita e durata del controllo, e informazione preventiva (Zakonnik prace art. 13 par. 4)',
+        it: 'Discussione coi rappresentanti dei lavoratori su portata, modalità e durata del controllo, e informazione preventiva (Zakonnik prace art. 13 par. 4)',
         en: 'Discussion with the workers representatives on the scope, manner and duration of the monitoring, and prior information (Zakonnik prace art. 13 par. 4)',
         de: 'Eroerterung mit den Arbeitnehmervertretern ueber Umfang, Art und Dauer der Kontrolle sowie vorherige Information (Zakonnik prace Art. 13 Abs. 4)',
         fr: "Discussion avec les representants des travailleurs sur la portee, les modalites et la duree du controle, et information prealable (Zakonnik prace art. 13 par. 4)",
@@ -96,7 +96,7 @@ export const slovacchia: SchedaPaese = {
       },
       risposta: 'dipende',
       dettaglio: {
-        it: "Se introduce un meccanismo di controllo, il datore deve discutere con i rappresentanti dei lavoratori portata, modalita e durata del controllo e informarne i lavoratori. La discussione coi rappresentanti vale dove esistono; l'informazione ai lavoratori vale sempre.",
+        it: "Se introduce un meccanismo di controllo, il datore deve discutere con i rappresentanti dei lavoratori portata, modalità e durata del controllo e informarne i lavoratori. La discussione coi rappresentanti vale dove esistono; l'informazione ai lavoratori vale sempre.",
         en: 'If the employer introduces a monitoring mechanism, it must discuss with the workers representatives the scope, manner and duration of the monitoring and inform the workers about it. The discussion with the representatives applies where they exist; the information to the workers always applies.',
         de: 'Fuehrt der Arbeitgeber einen Kontrollmechanismus ein, muss er Umfang, Art und Dauer der Kontrolle mit den Arbeitnehmervertretern eroertern und die Arbeitnehmer darueber informieren. Die Eroerterung mit den Vertretern gilt dort, wo solche vorhanden sind; die Information der Arbeitnehmer gilt immer.',
         fr: "Si l'employeur introduit un mecanisme de controle, il doit discuter avec les representants des travailleurs de la portee, des modalites et de la duree du controle et en informer les travailleurs. La discussion avec les representants vaut la ou ils existent ; l'information des travailleurs vaut toujours.",
@@ -127,7 +127,7 @@ export const slovacchia: SchedaPaese = {
     },
     {
       voce: {
-        it: "Autorizzazione preventiva di un'autorita prima di installare",
+        it: "Autorizzazione preventiva di un'autorità prima di installare",
         en: 'Prior authorisation from an authority before installation',
         de: 'Vorherige Genehmigung einer Behoerde vor der Installation',
         fr: "Autorisation prealable d'une autorite avant l'installation",
@@ -136,7 +136,7 @@ export const slovacchia: SchedaPaese = {
       },
       risposta: 'no',
       dettaglio: {
-        it: "Non serve un'autorizzazione preventiva dell'UOOU SR; il titolare agisce sotto la propria responsabilità, con DPIA quando richiesta, e l'autorita interviene successivamente.",
+        it: "Non serve un'autorizzazione preventiva dell'UOOU SR; il titolare agisce sotto la propria responsabilità, con DPIA quando richiesta, e l'autorità interviene successivamente.",
         en: 'No prior authorisation from the UOOU SR is needed; the controller acts under its own responsibility, with a DPIA where required, and the authority intervenes afterwards.',
         de: 'Eine vorherige Genehmigung der UOOU SR ist nicht erforderlich; der Verantwortliche handelt in eigener Verantwortung, mit DSFA wo erforderlich, und die Behoerde greift nachtraeglich ein.',
         fr: "Aucune autorisation prealable de l'UOOU SR n'est necessaire ; le responsable du traitement agit sous sa propre responsabilite, avec une AIPD lorsqu'elle est requise, et l'autorite intervient a posteriori.",
@@ -202,7 +202,7 @@ export const slovacchia: SchedaPaese = {
     {
       passo: 2,
       descrizione: {
-        it: 'Discuti con i rappresentanti dei lavoratori portata, modalita e durata del controllo, e informa i lavoratori in anticipo.',
+        it: 'Discuti con i rappresentanti dei lavoratori portata, modalità e durata del controllo, e informa i lavoratori in anticipo.',
         en: 'Discuss with the workers representatives the scope, manner and duration of the monitoring, and inform the workers in advance.',
         de: 'Eroertere mit den Arbeitnehmervertretern Umfang, Art und Dauer der Kontrolle und informiere die Arbeitnehmer im Voraus.',
         fr: "Discutez avec les representants des travailleurs de la portee, des modalites et de la duree du controle, et informez les travailleurs a l'avance.",
@@ -285,6 +285,7 @@ export const slovacchia: SchedaPaese = {
       nl: "Er is geen specifieke, gepubliceerde boete van de UOOU SR voor GPS op werknemers bekend. Verwant geval: januari 2022, een boete van 40.000 euro aan de afdeling personeelszaken van een bedrijf voor de psychodiagnostische beoordeling van werknemers op basis van een in de arbeidsverhouding ongeldige toestemming. Het betreft werknemersgegevens, niet GPS.",
     },
     urlFonte: FONTE_HAVEL.url,
+    tipoImporto: 'caso-affine',
   },
 
   fonti: [

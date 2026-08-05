@@ -84,7 +84,7 @@ export const estonia: SchedaPaese = {
     urlFonte: FONTE_AKI_RECLAMO.url,
     verificatoIl: '2026-06-15',
     note: {
-      it: "L'Estonia ha un'unica autorita nazionale, l'AKI; nessuna ripartizione regionale. Particolarita: le multe GDPR passano per la procedura per contravvenzioni; dal novembre 2023 il tetto e allineato al GDPR.",
+      it: "L'Estonia ha un'unica autorità nazionale, l'AKI; nessuna ripartizione regionale. Particolarità: le multe GDPR passano per la procedura per contravvenzioni; dal novembre 2023 il tetto e allineato al GDPR.",
       en: 'Estonia has a single national authority, the AKI; no regional division. A particularity: GDPR fines go through the misdemeanour procedure; since November 2023 the cap is aligned with the GDPR.',
       de: 'Estland hat eine einzige nationale Behoerde, die AKI; keine regionale Aufteilung. Eine Besonderheit: DSGVO-Geldbussen laufen ueber das Ordnungswidrigkeitenverfahren; seit November 2023 ist die Obergrenze an die DSGVO angeglichen.',
       fr: "L'Estonie a une seule autorite nationale, l'AKI; aucune repartition regionale. Une particularite: les amendes RGPD passent par la procedure pour contraventions; depuis novembre 2023 le plafond est aligne sur le RGPD.",
@@ -125,7 +125,7 @@ export const estonia: SchedaPaese = {
       },
       risposta: 'no',
       dettaglio: {
-        it: "L'Estonia non prevede un consenso obbligatorio di un consiglio aziendale; i filtri sono il GDPR, le linee guida dell'AKI e il principio di necessita e proporzionalita.",
+        it: "L'Estonia non prevede un consenso obbligatorio di un consiglio aziendale; i filtri sono il GDPR, le linee guida dell'AKI e il principio di necessità e proporzionalità.",
         en: "Estonia does not require mandatory consent from a works council; the filters are the GDPR, the AKI's guidelines and the principle of necessity and proportionality.",
         de: 'Estland sieht keine verpflichtende Zustimmung eines Betriebsrats vor; die Pruefkriterien sind die DSGVO, die Leitlinien der AKI und der Grundsatz der Erforderlichkeit und Verhaeltnismaessigkeit.',
         fr: "L'Estonie ne prevoit pas de consentement obligatoire d'un comite d'entreprise; les filtres sont le RGPD, les lignes directrices de l'AKI et le principe de necessite et de proportionnalite.",
@@ -136,7 +136,7 @@ export const estonia: SchedaPaese = {
     },
     {
       voce: {
-        it: "Autorizzazione preventiva di un'autorita prima di installare",
+        it: "Autorizzazione preventiva di un'autorità prima di installare",
         en: 'Prior authorisation from an authority before installing',
         de: 'Vorherige Genehmigung einer Behoerde vor der Installation',
         fr: "Autorisation prealable d'une autorite avant l'installation",
@@ -145,7 +145,7 @@ export const estonia: SchedaPaese = {
       },
       risposta: 'no',
       dettaglio: {
-        it: "Non serve un'autorizzazione preventiva dell'AKI; il titolare valuta da se base giuridica e proporzionalita.",
+        it: "Non serve un'autorizzazione preventiva dell'AKI; il titolare valuta da se base giuridica e proporzionalità.",
         en: 'No prior authorisation from the AKI is required; the controller assesses the legal basis and proportionality on its own.',
         de: 'Eine vorherige Genehmigung der AKI ist nicht erforderlich; der Verantwortliche beurteilt Rechtsgrundlage und Verhaeltnismaessigkeit selbst.',
         fr: "Aucune autorisation prealable de l'AKI n'est necessaire; le responsable du traitement evalue lui-meme la base juridique et la proportionnalite.",
@@ -294,6 +294,7 @@ export const estonia: SchedaPaese = {
       nl: "Er is geen specifieke, gepubliceerde boete van de AKI voor GPS bij werknemers bekend. In Estland lopen AVG-boetes via de overtredingsprocedure en zijn ze historisch laag geweest; sinds november 2023 is het plafond afgestemd op de AVG (tot 20 miljoen euro of 4% van de omzet). De AKI houdt in het bijzonder toezicht op cameratoezicht en het monitoren van werknemers.",
     },
     urlFonte: FONTE_AKI_UFFICIALE.url,
+    tipoImporto: 'massimale',
   },
 
   fonti: [

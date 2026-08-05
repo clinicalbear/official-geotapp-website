@@ -79,7 +79,7 @@ export const macedoniaDelNord: SchedaPaese = {
     urlFonte: FONTE_AZLP.url,
     verificatoIl: '2026-06-15',
     note: {
-      it: "La Macedonia del Nord e' un paese candidato, fuori dall'UE, con una legge del 2020 allineata al GDPR. Unica autorita' nazionale, l'AZLP; nessuna ripartizione regionale.",
+      it: "La Macedonia del Nord è un paese candidato, fuori dall'UE, con una legge del 2020 allineata al GDPR. Unica autorità nazionale, l'AZLP; nessuna ripartizione regionale.",
       en: 'North Macedonia is a candidate country, outside the EU, with a 2020 law aligned with the GDPR. There is a single national authority, the AZLP, with no regional breakdown.',
       de: 'Nordmazedonien ist ein Beitrittskandidat ausserhalb der EU mit einem an die DSGVO angeglichenen Gesetz von 2020. Es gibt nur eine nationale Behoerde, die AZLP, ohne regionale Untergliederung.',
       fr: "La Macedoine du Nord est un pays candidat, hors de l'UE, dotee d'une loi de 2020 alignee sur le RGPD. Il existe une seule autorite nationale, l'AZLP, sans subdivision regionale.",
@@ -111,7 +111,7 @@ export const macedoniaDelNord: SchedaPaese = {
     },
     {
       voce: {
-        it: "Autorizzazione preventiva di un'autorita prima di installare",
+        it: "Autorizzazione preventiva di un'autorità prima di installare",
         en: 'Prior authorisation from an authority before installing',
         de: 'Vorherige Genehmigung einer Behoerde vor der Installation',
         fr: "Autorisation prealable d'une autorite avant l'installation",
@@ -120,7 +120,7 @@ export const macedoniaDelNord: SchedaPaese = {
       },
       risposta: 'no',
       dettaglio: {
-        it: "La legge del 2020 rispecchia il modello di responsabilizzazione del GDPR; la vecchia registrazione e' stata abolita. La consultazione preventiva dell'autorita' scatta solo se una DPIA evidenzia un rischio residuo elevato.",
+        it: "La legge del 2020 rispecchia il modello di responsabilizzazione del GDPR; la vecchia registrazione è stata abolita. La consultazione preventiva dell'autorità scatta solo se una DPIA evidenzia un rischio residuo elevato.",
         en: 'The 2020 law mirrors the GDPR accountability model; the old registration has been abolished. Prior consultation of the authority is triggered only if a DPIA shows a high residual risk.',
         de: 'Das Gesetz von 2020 entspricht dem Rechenschaftsmodell der DSGVO; die alte Registrierung wurde abgeschafft. Eine vorherige Konsultation der Behoerde ist nur erforderlich, wenn eine DSFA ein hohes Restrisiko aufzeigt.',
         fr: "La loi de 2020 reprend le modele de responsabilisation du RGPD ; l'ancien enregistrement a ete supprime. La consultation prealable de l'autorite n'intervient que si une AIPD revele un risque residuel eleve.",
@@ -140,7 +140,7 @@ export const macedoniaDelNord: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "La base usuale e' l'interesse legittimo, con test di bilanciamento; il consenso nel rapporto di lavoro non e' di norma valido per lo squilibrio di potere.",
+        it: "La base usuale è l'interesse legittimo, con test di bilanciamento; il consenso nel rapporto di lavoro non è di norma valido per lo squilibrio di potere.",
         en: 'The usual basis is legitimate interest, with a balancing test; consent in the employment relationship is normally not valid because of the imbalance of power.',
         de: 'Die uebliche Grundlage ist das berechtigte Interesse mit einer Abwaegungspruefung; die Einwilligung im Beschaeftigungsverhaeltnis ist wegen des Machtungleichgewichts in der Regel nicht wirksam.',
         fr: "La base habituelle est l'interet legitime, avec un test de mise en balance ; dans la relation de travail, le consentement n'est en principe pas valable en raison du desequilibre de pouvoir.",
@@ -160,7 +160,7 @@ export const macedoniaDelNord: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "Il tracciamento continuo della posizione e' la forma più' intrusiva e va sottoposto alla più' stretta valutazione di necessita' e proporzionalita'; valgono minimizzazione e limitazione della finalita'.",
+        it: "Il tracciamento continuo della posizione è la forma più intrusiva e va sottoposto alla più stretta valutazione di necessità e proporzionalità; valgono minimizzazione e limitazione della finalità.",
         en: 'Continuous location tracking is the most intrusive form and must undergo the strictest assessment of necessity and proportionality; data minimisation and purpose limitation apply.',
         de: 'Die kontinuierliche Standortverfolgung ist die eingriffsintensivste Form und unterliegt der strengsten Pruefung von Erforderlichkeit und Verhaeltnismaessigkeit; Datenminimierung und Zweckbindung gelten.',
         fr: "Le suivi continu de la localisation est la forme la plus intrusive et doit faire l'objet de l'evaluation la plus stricte de necessite et de proportionnalite ; la minimisation des donnees et la limitation des finalites s'appliquent.",
@@ -239,7 +239,7 @@ export const macedoniaDelNord: SchedaPaese = {
     {
       passo: 5,
       descrizione: {
-        it: "Configura il sistema rispettando minimizzazione e limitazione della finalita'.",
+        it: "Configura il sistema rispettando minimizzazione e limitazione della finalità.",
         en: 'Configure the system in line with data minimisation and purpose limitation.',
         de: 'Konfigurieren Sie das System unter Beachtung von Datenminimierung und Zweckbindung.',
         fr: "Configurez le systeme en respectant la minimisation des donnees et la limitation des finalites.",
@@ -289,6 +289,7 @@ export const macedoniaDelNord: SchedaPaese = {
       nl: 'Er is geen specifieke, gepubliceerde boete van de AZLP bekend voor GPS op werknemers. De AZLP-blacklist classificeert GPS-tracking van werknemers als verwerking die een effectbeoordeling vereist.',
     },
     urlFonte: FONTE_SCHOENHERR.url,
+    tipoImporto: 'massimale',
   },
 
   fonti: [FONTE_LPDP, FONTE_AZLP_DPIA, FONTE_AZLP, FONTE_SCHOENHERR, FONTE_GDPR],

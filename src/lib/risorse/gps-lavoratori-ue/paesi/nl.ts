@@ -79,7 +79,7 @@ export const olanda: SchedaPaese = {
     urlFonte: FONTE_AP_CONDIZIONI.url,
     verificatoIl: '2026-06-15',
     note: {
-      it: "I Paesi Bassi hanno un'unica autorita nazionale, l'AP; nessuna ripartizione regionale.",
+      it: "I Paesi Bassi hanno un'unica autorità nazionale, l'AP; nessuna ripartizione regionale.",
       en: 'The Netherlands has a single national authority, the AP; there is no regional breakdown.',
       de: 'Die Niederlande haben eine einzige nationale Behoerde, die AP; es gibt keine regionale Aufteilung.',
       fr: "Les Pays-Bas disposent d'une seule autorite nationale, l'AP; il n'y a pas de repartition regionale.",
@@ -111,7 +111,7 @@ export const olanda: SchedaPaese = {
     },
     {
       voce: {
-        it: "Autorizzazione di un'autorita del lavoro prima di installare",
+        it: "Autorizzazione di un'autorità del lavoro prima di installare",
         en: 'Authorisation from a labour authority before installing',
         de: 'Genehmigung einer Arbeitsbehoerde vor der Installation',
         fr: "Autorisation d'une autorite du travail avant l'installation",
@@ -120,7 +120,7 @@ export const olanda: SchedaPaese = {
       },
       risposta: 'no',
       dettaglio: {
-        it: "I Paesi Bassi non prevedono un'autorizzazione preventiva di un'autorita del lavoro. I filtri sono il consenso dell'OR e il GDPR. L'autorita garante (AP) va consultata prima solo nel caso dell'art. 36 GDPR, cioe se la DPIA evidenzia un rischio elevato non mitigabile.",
+        it: "I Paesi Bassi non prevedono un'autorizzazione preventiva di un'autorità del lavoro. I filtri sono il consenso dell'OR e il GDPR. L'autorità garante (AP) va consultata prima solo nel caso dell'art. 36 GDPR, cioe se la DPIA evidenzia un rischio elevato non mitigabile.",
         en: 'The Netherlands does not require prior authorisation from a labour authority. The gatekeepers are OR consent and the GDPR. The data protection authority (AP) must be consulted beforehand only in the case of art. 36 GDPR, that is, if the DPIA reveals a high risk that cannot be mitigated.',
         de: 'Die Niederlande sehen keine vorherige Genehmigung durch eine Arbeitsbehoerde vor. Die Filter sind die Zustimmung des OR und die DSGVO. Die Datenschutzbehoerde (AP) ist nur im Fall des Art. 36 DSGVO vorab zu konsultieren, das heisst, wenn die DSFA ein hohes, nicht zu minderndes Risiko aufzeigt.',
         fr: "Les Pays-Bas ne prevoient pas d'autorisation prealable d'une autorite du travail. Les filtres sont l'accord de l'OR et le RGPD. L'autorite de protection des donnees (AP) ne doit etre consultee au prealable que dans le cas de l'art. 36 RGPD, c'est-a-dire si l'AIPD revele un risque eleve qui ne peut etre attenue.",
@@ -300,6 +300,7 @@ export const olanda: SchedaPaese = {
       nl: "Boete van de Autoriteit Persoonsgegevens aan een bedrijf voor de verwerking van de vingerafdrukken van werknemers voor de aanwezigheidsregistratie: biometrisch gegeven (art. 9 AVG) verwerkt zonder een geldige grondslag, omdat de toestemming van de werknemers niet als vrij wordt beschouwd vanwege de machtsongelijkheid. Het is geen GPS-zaak, maar het is de Nederlandse richtinggevende zaak over de aanwezigheidscontrole van werknemers. De oorspronkelijke boete van 725.000 EUR is in november 2020 in bezwaar verlaagd naar 50.000 EUR, vanwege de beperkte draagkracht van het bedrijf tijdens de coronacrisis.",
     },
     urlFonte: FONTE_AP_IMPRONTE.url,
+    tipoImporto: 'caso-affine',
   },
 
   fonti: [

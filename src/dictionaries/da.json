@@ -1367,6 +1367,9 @@
         }
       ],
       "nota": "Dertil kommer artikel 88, som lader hver stat tilfoeje sine egne regler om databehandling i ansaettelsesforhold. Derfor findes landekortene herunder: det, der skifter, er hvem der skal godkende, ikke princippet."
-    }
+    },
+    "sanzioneTipoCasoGps": "fra en reel GPS-sag",
+    "sanzioneTipoCasoAffine": "beslægtet sag, ikke GPS",
+    "sanzioneTipoMassimale": "lovens maksimum, ikke en pålagt bøde"
   }
 }

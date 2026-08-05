@@ -76,7 +76,7 @@ export const lussemburgo: SchedaPaese = {
     urlFonte: FONTE_CNPD_RECLAMO.url,
     verificatoIl: '2026-06-15',
     note: {
-      it: "Il Lussemburgo ha un'unica autorita nazionale, la CNPD; nessuna ripartizione regionale.",
+      it: "Il Lussemburgo ha un'unica autorità nazionale, la CNPD; nessuna ripartizione regionale.",
       en: 'Luxembourg has a single national authority, the CNPD; no regional division.',
       de: 'Luxemburg hat eine einzige nationale Behoerde, die CNPD; keine regionale Aufteilung.',
       fr: 'Le Luxembourg a une seule autorite nationale, la CNPD; aucune repartition regionale.',
@@ -97,7 +97,7 @@ export const lussemburgo: SchedaPaese = {
       },
       risposta: 'dipende',
       dettaglio: {
-        it: "Prima di installare il monitoraggio, il datore deve informare preventivamente la delegazione del personale; per le finalita previste la messa in opera e soggetta a codecisione con la delegazione. Vale dove esiste una delegazione del personale.",
+        it: "Prima di installare il monitoraggio, il datore deve informare preventivamente la delegazione del personale; per le finalità previste la messa in opera e soggetta a codecisione con la delegazione. Vale dove esiste una delegazione del personale.",
         en: 'Before installing monitoring, the employer must inform the staff delegation in advance; for the purposes provided for, deployment is subject to codecision with the delegation. This applies where a staff delegation exists.',
         de: 'Vor der Installation der Ueberwachung muss der Arbeitgeber die Personaldelegation vorab informieren; fuer die vorgesehenen Zwecke unterliegt die Einfuehrung der Mitentscheidung mit der Delegation. Dies gilt, wo eine Personaldelegation besteht.',
         fr: "Avant d'installer la surveillance, l'employeur doit informer prealablement la delegation du personnel; pour les finalites prevues, la mise en oeuvre est soumise a codecision avec la delegation. Cela vaut la ou une delegation du personnel existe.",
@@ -128,7 +128,7 @@ export const lussemburgo: SchedaPaese = {
     },
     {
       voce: {
-        it: "Autorizzazione preventiva di un'autorita prima di installare",
+        it: "Autorizzazione preventiva di un'autorità prima di installare",
         en: 'Prior authorisation from an authority before installing',
         de: 'Vorherige Genehmigung einer Behoerde vor der Installation',
         fr: "Autorisation prealable d'une autorite avant l'installation",
@@ -286,6 +286,7 @@ export const lussemburgo: SchedaPaese = {
       nl: 'CNPD, besluit 11FR/2021 van 8 april 2021: een sanctie tegen een onderneming voor een onrechtmatig geexploiteerd geolocatiesysteem voor dienstvoertuigen, met buitensporige gegevensbewaring (2 jaar en 4 maanden), gebrekkige informatie aan de werknemers (art. 13) en onvoldoende beveiliging (art. 32). Boete van 2.800 euro.',
     },
     urlFonte: FONTE_CNPD_DECISIONE_11FR.url,
+    tipoImporto: 'caso-gps',
   },
 
   fonti: [

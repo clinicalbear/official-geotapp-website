@@ -57,7 +57,12 @@ describe('schedeDaRicontrollare', () => {
       procedura: [],
       contatti: [],
       modelloPdf: null,
-      sanzioneMax: { importo: '0', casoCitato: '', urlFonte: 'https://example.test' },
+      sanzioneMax: {
+        importo: '0',
+        casoCitato: '',
+        urlFonte: 'https://example.test',
+        tipoImporto: 'massimale',
+      },
       fonti: [],
       aggiornatoIl: '2026-06-15',
       ...over,

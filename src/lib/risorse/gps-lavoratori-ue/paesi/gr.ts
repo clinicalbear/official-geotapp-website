@@ -87,7 +87,7 @@ export const grecia: SchedaPaese = {
     urlFonte: FONTE_HDPA.url,
     verificatoIl: '2026-06-15',
     note: {
-      it: "La Grecia ha un'unica autorita nazionale, l'HDPA; nessuna ripartizione regionale.",
+      it: "La Grecia ha un'unica autorità nazionale, l'HDPA; nessuna ripartizione regionale.",
       en: 'Greece has a single national authority, the HDPA; there is no regional breakdown.',
       de: 'Griechenland hat eine einzige nationale Behörde, die HDPA; es gibt keine regionale Aufteilung.',
       fr: "La Grèce dispose d'une seule autorité nationale, l'HDPA; il n'y a pas de répartition régionale.",
@@ -99,7 +99,7 @@ export const grecia: SchedaPaese = {
   checklist: [
     {
       voce: {
-        it: 'Informazione ai lavoratori su finalita, tipo di dati raccolti e durata di conservazione',
+        it: 'Informazione ai lavoratori su finalità, tipo di dati raccolti e durata di conservazione',
         en: 'Informing workers about the purposes, type of data collected and retention period',
         de: 'Information der Arbeitnehmer über die Zwecke, die Art der erhobenen Daten und die Speicherdauer',
         fr: 'Information des travailleurs sur les finalités, le type de données collectées et la durée de conservation',
@@ -139,7 +139,7 @@ export const grecia: SchedaPaese = {
     },
     {
       voce: {
-        it: "Autorizzazione preventiva di un'autorita prima di installare",
+        it: "Autorizzazione preventiva di un'autorità prima di installare",
         en: 'Prior authorisation from an authority before installation',
         de: 'Vorherige Genehmigung einer Behörde vor der Installation',
         fr: "Autorisation préalable d'une autorité avant l'installation",
@@ -208,7 +208,7 @@ export const grecia: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "nel rapporto di lavoro il consenso non e considerato liberamente prestato per lo squilibrio di potere; la base e l'interesse legittimo e la necessita per il contratto.",
+        it: "nel rapporto di lavoro il consenso non e considerato liberamente prestato per lo squilibrio di potere; la base e l'interesse legittimo e la necessità per il contratto.",
         en: 'in the employment relationship consent is not considered freely given because of the power imbalance; the basis is legitimate interest and the necessity for the contract.',
         de: 'Im Arbeitsverhältnis gilt die Einwilligung wegen des Machtgefälles nicht als freiwillig erteilt; die Grundlage ist das berechtigte Interesse und die Erforderlichkeit für den Vertrag.',
         fr: "dans la relation de travail, le consentement n'est pas considéré comme librement donné en raison du déséquilibre de pouvoir; la base est l'intérêt légitime et la nécessité pour le contrat.",
@@ -223,7 +223,7 @@ export const grecia: SchedaPaese = {
     {
       passo: 1,
       descrizione: {
-        it: 'Informa i lavoratori su finalita, dati raccolti e durata di conservazione.',
+        it: 'Informa i lavoratori su finalità, dati raccolti e durata di conservazione.',
         en: 'Inform workers about the purposes, data collected and retention period.',
         de: 'Informieren Sie die Arbeitnehmer über die Zwecke, die erhobenen Daten und die Speicherdauer.',
         fr: 'Informez les travailleurs sur les finalités, les données collectées et la durée de conservation.',
@@ -309,7 +309,7 @@ export const grecia: SchedaPaese = {
       nl: '2.000 €',
     },
     casoCitato: {
-      it: "HDPA (Garante greco), decisione n. 6/2024 del 16 febbraio 2024: un datore aveva usato il GPS del veicolo aziendale per localizzare un dipendente mentre era in congedo legittimo, fuori dall'orario di lavoro. Multa 2.000 euro per violazione di liceita e trasparenza, più un'ammonizione e l'ordine di adottare sistemi disattivabili dagli utenti.",
+      it: "HDPA (Garante greco), decisione n. 6/2024 del 16 febbraio 2024: un datore aveva usato il GPS del veicolo aziendale per localizzare un dipendente mentre era in congedo legittimo, fuori dall'orario di lavoro. Multa 2.000 euro per violazione di liceità e trasparenza, più un'ammonizione e l'ordine di adottare sistemi disattivabili dagli utenti.",
       en: 'HDPA (Greek data protection authority), decision no. 6/2024 of 16 February 2024: an employer had used the company vehicle GPS to locate an employee while they were on legitimate leave, outside working hours. A fine of 2,000 euros for breach of lawfulness and transparency, plus a reprimand and an order to adopt systems that users can deactivate.',
       de: 'HDPA (griechische Datenschutzbehörde), Entscheidung vom 16. Februar 2024: Ein Arbeitgeber hatte das GPS des Firmenfahrzeugs genutzt, um einen Beschäftigten während eines rechtmäßigen Urlaubs außerhalb der Arbeitszeit zu orten. Geldbuße von 2.000 Euro wegen Verstoßes gegen Rechtmäßigkeit und Transparenz, zudem eine Verwarnung und die Anordnung, von den Nutzern deaktivierbare Systeme einzuführen.',
       fr: "HDPA (autorité grecque de protection des données), décision du 16 février 2024: un employeur avait utilisé le GPS du véhicule de l'entreprise pour localiser un salarié alors qu'il était en congé légitime, en dehors des heures de travail. Amende de 2 000 euros pour manquement à la licéité et à la transparence, ainsi qu'un avertissement et l'ordre d'adopter des systèmes désactivables par les utilisateurs.",
@@ -317,6 +317,7 @@ export const grecia: SchedaPaese = {
       nl: 'HDPA (Griekse gegevensbeschermingsautoriteit), besluit van 16 februari 2024: een werkgever had de gps van het bedrijfsvoertuig gebruikt om een werknemer te lokaliseren terwijl deze met rechtmatig verlof was, buiten werktijd. Een boete van 2.000 euro wegens schending van rechtmatigheid en transparantie, plus een berisping en het bevel om systemen in te voeren die door gebruikers kunnen worden uitgeschakeld.',
     },
     urlFonte: FONTE_HDPA_SANZIONE.url,
+    tipoImporto: 'caso-gps',
   },
 
   fonti: [

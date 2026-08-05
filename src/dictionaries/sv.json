@@ -1367,6 +1367,9 @@
         }
       ],
       "nota": "Sedan finns artikel 88, som later varje stat lagga till egna regler om behandling av personuppgifter i anstallningsforhallanden. Darfor finns landkorten harunder: det som andras ar vem som ska godkanna, inte principen."
-    }
+    },
+    "sanzioneTipoCasoGps": "från ett verkligt GPS-fall",
+    "sanzioneTipoCasoAffine": "närliggande fall, inte GPS",
+    "sanzioneTipoMassimale": "lagens maxbelopp, inte ett utdömt vite"
   }
 }

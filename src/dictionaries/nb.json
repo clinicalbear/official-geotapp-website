@@ -1367,6 +1367,9 @@
         }
       ],
       "nota": "I tillegg kommer artikkel 88, som lar hver stat legge til egne regler om behandling av personopplysninger i arbeidsforhold. Derfor finnes landkortene nedenfor: det som endres er hvem som maa godkjenne, ikke prinsippet."
-    }
+    },
+    "sanzioneTipoCasoGps": "fra en reell GPS-sak",
+    "sanzioneTipoCasoAffine": "beslektet sak, ikke GPS",
+    "sanzioneTipoMassimale": "lovens maksimum, ikke et ilagt gebyr"
   }
 }

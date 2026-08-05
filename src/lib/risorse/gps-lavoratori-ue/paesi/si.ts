@@ -72,7 +72,7 @@ export const slovenia: SchedaPaese = {
     urlFonte: FONTE_IPRS_SEGNALAZIONE.url,
     verificatoIl: '2026-06-15',
     note: {
-      it: "La Slovenia ha un'unica autorita' nazionale, l'IP-RS; nessuna ripartizione regionale. La legge nazionale ZVOP-2 e' recente (2023), quindi le sanzioni pubblicate sono ancora poche.",
+      it: "La Slovenia ha un'unica autorità nazionale, l'IP-RS; nessuna ripartizione regionale. La legge nazionale ZVOP-2 è recente (2023), quindi le sanzioni pubblicate sono ancora poche.",
       en: 'Slovenia has a single national authority, the IP-RS; there is no regional breakdown. The national law ZVOP-2 is recent (2023), so the published fines are still few.',
       de: 'Slowenien hat eine einzige nationale Behoerde, die IP-RS; es gibt keine regionale Aufteilung. Das nationale Gesetz ZVOP-2 ist neu (2023), daher sind die veroeffentlichten Bussgelder noch gering.',
       fr: "La Slovenie a une seule autorite nationale, l'IP-RS; il n'y a pas de repartition regionale. La loi nationale ZVOP-2 est recente (2023), de sorte que les amendes publiees sont encore peu nombreuses.",
@@ -84,7 +84,7 @@ export const slovenia: SchedaPaese = {
   checklist: [
     {
       voce: {
-        it: 'Test di proporzionalita: il tracciamento indiscriminato dei dipendenti non ha base giuridica (IP-RS)',
+        it: 'Test di proporzionalità: il tracciamento indiscriminato dei dipendenti non ha base giuridica (IP-RS)',
         en: 'Proportionality test: indiscriminate tracking of employees has no legal basis (IP-RS)',
         de: 'Verhaeltnismaessigkeitspruefung: die wahllose Ueberwachung von Beschaeftigten hat keine Rechtsgrundlage (IP-RS)',
         fr: 'Test de proportionnalite: le suivi indiscrimine des salaries n\'a pas de base juridique (IP-RS)',
@@ -93,7 +93,7 @@ export const slovenia: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "Per il Garante sloveno il tracciamento indiscriminato dei lavoratori tramite GPS non raggiunge lo standard di necessita' per l'esercizio di diritti e obblighi del rapporto di lavoro: in tal caso manca la base giuridica. Serve superare il test di proporzionalita' (necessita', idoneita', proporzionalita' in senso stretto).",
+        it: "Per il Garante sloveno il tracciamento indiscriminato dei lavoratori tramite GPS non raggiunge lo standard di necessità per l'esercizio di diritti e obblighi del rapporto di lavoro: in tal caso manca la base giuridica. Serve superare il test di proporzionalità (necessità, idoneità, proporzionalità in senso stretto).",
         en: "For the Slovenian authority, indiscriminate tracking of workers via GPS does not meet the necessity standard for exercising the rights and obligations of the employment relationship: in that case the legal basis is missing. It is necessary to pass the proportionality test (necessity, suitability, proportionality in the strict sense).",
         de: "Nach Auffassung der slowenischen Behoerde erfuellt die wahllose Ortung von Arbeitnehmern per GPS nicht den Erforderlichkeitsmassstab fuer die Ausuebung der Rechte und Pflichten des Arbeitsverhaeltnisses: in diesem Fall fehlt die Rechtsgrundlage. Die Verhaeltnismaessigkeitspruefung (Erforderlichkeit, Geeignetheit, Verhaeltnismaessigkeit im engeren Sinne) muss bestanden werden.",
         fr: "Pour l'autorite slovene, le suivi indiscrimine des salaries par GPS n'atteint pas le standard de necessite pour l'exercice des droits et obligations de la relation de travail: dans ce cas, la base juridique fait defaut. Il faut reussir le test de proportionnalite (necessite, aptitude, proportionnalite au sens strict).",
@@ -113,7 +113,7 @@ export const slovenia: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "La base e' l'esecuzione del rapporto di lavoro (art. 48 ZDR-1) o il legittimo interesse; il consenso del dipendente difficilmente e' valido per lo squilibrio di potere.",
+        it: "La base è l'esecuzione del rapporto di lavoro (art. 48 ZDR-1) o il legittimo interesse; il consenso del dipendente difficilmente è valido per lo squilibrio di potere.",
         en: "The basis is the performance of the employment relationship (art. 48 ZDR-1) or the legitimate interest; the employee's consent is hardly valid due to the imbalance of power.",
         de: "Grundlage ist die Erfuellung des Arbeitsverhaeltnisses (Art. 48 ZDR-1) oder das berechtigte Interesse; die Einwilligung des Beschaeftigten ist wegen des Machtungleichgewichts kaum wirksam.",
         fr: "La base est l'execution de la relation de travail (art. 48 ZDR-1) ou l'interet legitime; le consentement du salarie est difficilement valable en raison du desequilibre de pouvoir.",
@@ -124,7 +124,7 @@ export const slovenia: SchedaPaese = {
     },
     {
       voce: {
-        it: "Autorizzazione preventiva di un'autorita prima di installare",
+        it: "Autorizzazione preventiva di un'autorità prima di installare",
         en: 'Prior authorisation from an authority before installing',
         de: 'Vorherige Genehmigung einer Behoerde vor der Installation',
         fr: "Autorisation prealable d'une autorite avant l'installation",
@@ -133,7 +133,7 @@ export const slovenia: SchedaPaese = {
       },
       risposta: 'no',
       dettaglio: {
-        it: "Non serve un'autorizzazione preventiva dell'IP-RS; il titolare valuta da se' base giuridica, proporzionalita' e DPIA.",
+        it: "Non serve un'autorizzazione preventiva dell'IP-RS; il titolare valuta da sé base giuridica, proporzionalità e DPIA.",
         en: "No prior authorisation from the IP-RS is required; the controller assesses on its own the legal basis, proportionality and DPIA.",
         de: "Eine vorherige Genehmigung der IP-RS ist nicht erforderlich; der Verantwortliche beurteilt selbst Rechtsgrundlage, Verhaeltnismaessigkeit und DSFA.",
         fr: "Aucune autorisation prealable de l'IP-RS n'est requise; le responsable evalue lui-meme la base juridique, la proportionnalite et l'AIPD.",
@@ -153,7 +153,7 @@ export const slovenia: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "Per l'IP-RS non e' proporzionato il tracciamento continuo quando basterebbero dati puntuali o in tempo reale senza conservazione; un dispositivo per la sola sicurezza deve poter restare disattivato finche' il lavoratore non lo attiva.",
+        it: "Per l'IP-RS non è proporzionato il tracciamento continuo quando basterebbero dati puntuali o in tempo reale senza conservazione; un dispositivo per la sola sicurezza deve poter restare disattivato finché il lavoratore non lo attiva.",
         en: "For the IP-RS, continuous tracking is not proportionate when point-in-time or real-time data without storage would suffice; a device meant solely for safety must be able to stay switched off until the worker activates it.",
         de: "Fuer die IP-RS ist eine kontinuierliche Ortung nicht verhaeltnismaessig, wenn punktuelle oder Echtzeitdaten ohne Speicherung ausreichen wuerden; ein Geraet, das nur der Sicherheit dient, muss ausgeschaltet bleiben koennen, bis der Beschaeftigte es aktiviert.",
         fr: "Pour l'IP-RS, le suivi continu n'est pas proportionne lorsque des donnees ponctuelles ou en temps reel sans conservation suffiraient; un dispositif destine uniquement a la securite doit pouvoir rester desactive tant que le salarie ne l'active pas.",
@@ -208,7 +208,7 @@ export const slovenia: SchedaPaese = {
     {
       passo: 1,
       descrizione: {
-        it: 'Supera il test di proporzionalita: niente tracciamento indiscriminato, scegli il mezzo meno invasivo.',
+        it: 'Supera il test di proporzionalità: niente tracciamento indiscriminato, scegli il mezzo meno invasivo.',
         en: 'Pass the proportionality test: no indiscriminate tracking, choose the least intrusive means.',
         de: 'Bestehen Sie die Verhaeltnismaessigkeitspruefung: keine wahllose Ortung, waehlen Sie das mildeste Mittel.',
         fr: "Reussissez le test de proportionnalite: pas de suivi indiscrimine, choisissez le moyen le moins intrusif.",
@@ -294,7 +294,7 @@ export const slovenia: SchedaPaese = {
       nl: 'tot 20 miljoen euro of 4% van de omzet (AVG)',
     },
     casoCitato: {
-      it: "La legge nazionale ZVOP-2 e' entrata in vigore nel 2023, quindi non risulta ancora una multa pubblicata specifica per il GPS sui dipendenti. Il Garante (IP-RS) ha pero' già' stabilito in più' pareri che il tracciamento indiscriminato dei lavoratori e' privo di base giuridica. Il rischio sanzionatorio resta quello generale del GDPR (art. 83).",
+      it: "La legge nazionale ZVOP-2 è entrata in vigore nel 2023, quindi non risulta ancora una multa pubblicata specifica per il GPS sui dipendenti. Il Garante (IP-RS) ha però già stabilito in più pareri che il tracciamento indiscriminato dei lavoratori è privo di base giuridica. Il rischio sanzionatorio resta quello generale del GDPR (art. 83).",
       en: "The national law ZVOP-2 entered into force in 2023, so no published fine specific to GPS on employees is yet on record. The authority (IP-RS) has however already established in several opinions that indiscriminate tracking of workers lacks a legal basis. The risk of sanctions remains the general one under the GDPR (art. 83).",
       de: "Das nationale Gesetz ZVOP-2 ist 2023 in Kraft getreten, daher ist noch kein veroeffentlichtes Bussgeld speziell zu GPS bei Beschaeftigten verzeichnet. Die Behoerde (IP-RS) hat jedoch bereits in mehreren Stellungnahmen festgestellt, dass die wahllose Ortung von Arbeitnehmern keine Rechtsgrundlage hat. Das Sanktionsrisiko bleibt das allgemeine der DSGVO (Art. 83).",
       fr: "La loi nationale ZVOP-2 est entree en vigueur en 2023, de sorte qu'aucune amende publiee specifique au GPS sur les salaries n'est encore recensee. L'autorite (IP-RS) a toutefois deja etabli dans plusieurs avis que le suivi indiscrimine des salaries est depourvu de base juridique. Le risque de sanction reste celui, general, du RGPD (art. 83).",
@@ -302,6 +302,7 @@ export const slovenia: SchedaPaese = {
       nl: "De nationale wet ZVOP-2 is in 2023 in werking getreden, dus er is nog geen gepubliceerde boete specifiek voor GPS bij werknemers bekend. De autoriteit (IP-RS) heeft echter in meerdere adviezen al vastgesteld dat het ongedifferentieerd volgen van werknemers geen rechtsgrondslag heeft. Het sanctierisico blijft het algemene risico op grond van de AVG (art. 83).",
     },
     urlFonte: FONTE_IPRS_SLEDENJE.url,
+    tipoImporto: 'massimale',
   },
 
   fonti: [

@@ -1170,14 +1170,14 @@
   },
   "risorseGps": {
     "metaTitleSelettore": "GPS e monitoraggio dei lavoratori in Europa: cosa serve per essere a norma, paese per paese",
-    "metaDescSelettore": "Scegli il paese e scopri cosa serve per mettere a norma GPS e monitoraggio dei lavoratori: adempimenti, procedura, autorita e modello da scaricare.",
+    "metaDescSelettore": "Scegli il paese e scopri cosa serve per mettere a norma GPS e monitoraggio dei lavoratori: adempimenti, procedura, autorità e modello da scaricare.",
     "h1Selettore": "GPS e monitoraggio dei lavoratori, paese per paese",
     "introSelettore": "Stessa Europa, regole diverse. Mandi una squadra a montare, pulire o sorvegliare in un altro Paese e dai per scontato che le regole su GPS e controllo dei lavoratori siano quelle di casa. Non lo sono. Ogni Stato ha le sue, e valgono dove si lavora: la tua azienda italiana con un cantiere in Germania segue quelle tedesche, anche se gli operai sono li solo in trasferta. Scegli la destinazione e ti diciamo cosa serve per essere a norma: gli adempimenti, la procedura, a chi rivolgerti e il modello da scaricare.",
     "scegliPaese": "Scegli il paese",
     "inArrivo": "In arrivo",
     "inArrivoNota": "Stiamo preparando la scheda di questo paese.",
     "metaTitleScheda": "GPS e monitoraggio dei lavoratori in {paese}: cosa serve per essere a norma",
-    "metaDescScheda": "Cosa serve per mettere a norma GPS e monitoraggio dei lavoratori in {paese}: adempimenti, procedura, autorita competente, sanzioni e modello da scaricare.",
+    "metaDescScheda": "Cosa serve per mettere a norma GPS e monitoraggio dei lavoratori in {paese}: adempimenti, procedura, autorità competente, sanzioni e modello da scaricare.",
     "sezioneCosaServe": "Cosa serve",
     "sezioneProcedura": "La procedura, passo per passo",
     "sezioneAChiInviare": "A chi rivolgerti",
@@ -1194,7 +1194,7 @@
     "verificatoIl": "Verificato il",
     "aggiornatoIl": "Aggiornato il",
     "scaricaModello": "Scarica il modello",
-    "autoritaCompetente": "Autorita competente",
+    "autoritaCompetente": "Autorità competente",
     "disclaimer": "Questa e una risorsa informativa, non una consulenza legale. Prima di attivare un sistema di monitoraggio fai verificare la tua situazione da un professionista.",
     "ctaTitolo": "Vuoi un sistema già a norma?",
     "ctaTesto": "GeoTapp registra la posizione solo alla timbratura, non in continuo, e genera l'informativa da far firmare. Provalo gratis.",
@@ -1232,23 +1232,23 @@
     "mappaDi": "di",
     "regoleComuni": {
       "titolo": "Le regole che valgono in tutta Europa",
-      "intro": "Prima di guardare il singolo paese conviene sapere cosa non cambia mai. Il GDPR si applica identico in tutti gli Stati membri, e questi sei principi reggono ovunque: sopra ci si aggiunge il diritto del lavoro nazionale, che e' quello che cambia da confine a confine.",
+      "intro": "Prima di guardare il singolo paese conviene sapere cosa non cambia mai. Il GDPR si applica identico in tutti gli Stati membri, e questi sei principi reggono ovunque: sopra ci si aggiunge il diritto del lavoro nazionale, che è quello che cambia da confine a confine.",
       "regole": [
         {
-          "titolo": "Una finalita legittima, dichiarata prima",
-          "testo": "Organizzare il lavoro, tutelare la sicurezza, documentare la prestazione. Mai 'controllare la persona': quella non e' una finalita ammessa (artt. 5 e 6 GDPR)."
+          "titolo": "Una finalità legittima, dichiarata prima",
+          "testo": "Organizzare il lavoro, tutelare la sicurezza, documentare la prestazione. Mai 'controllare la persona': quella non è una finalità ammessa (artt. 5 e 6 GDPR)."
         },
         {
           "titolo": "Solo i dati necessari, e solo quando servono",
-          "testo": "E' il principio di minimizzazione (art. 5.1.c). Rilevare la posizione all'inizio e alla fine del lavoro documenta; rilevarla ogni minuto sorveglia, ed e' il motivo piu' ricorrente delle sanzioni in Europa."
+          "testo": "È il principio di minimizzazione (art. 5.1.c). Rilevare la posizione all'inizio e alla fine del lavoro documenta; rilevarla ogni minuto sorveglia, ed è il motivo più ricorrente delle sanzioni in Europa."
         },
         {
           "titolo": "Trasparenza prima, non dopo",
-          "testo": "Il lavoratore deve sapere in anticipo cosa viene registrato, quando, perche' e per quanto (artt. 12 e 13). Un'informativa generica o disallineata dal sistema reale vale come non averla."
+          "testo": "Il lavoratore deve sapere in anticipo cosa viene registrato, quando, perché e per quanto (artt. 12 e 13). Un'informativa generica o disallineata dal sistema reale vale come non averla."
         },
         {
           "titolo": "Conservazione per un tempo definito",
-          "testo": "I dati si tengono per il periodo necessario alla finalita, deciso e scritto in anticipo, non 'finche' servono' (art. 5.1.e)."
+          "testo": "I dati si tengono per il periodo necessario alla finalità, deciso e scritto in anticipo, non 'finché servono' (art. 5.1.e)."
         },
         {
           "titolo": "Valutazione d'impatto quando il rischio e alto",
@@ -1256,11 +1256,14 @@
         },
         {
           "titolo": "I dati raccolti per uno scopo non si riusano per un altro",
-          "testo": "E' la limitazione della finalita (art. 5.1.b). Posizioni raccolte per documentare il lavoro non diventano automaticamente prove per un procedimento disciplinare."
+          "testo": "È la limitazione della finalità (art. 5.1.b). Posizioni raccolte per documentare il lavoro non diventano automaticamente prove per un procedimento disciplinare."
         }
       ],
-      "nota": "Poi c'e' l'articolo 88 del GDPR, che lascia a ogni Stato la facolta di aggiungere regole proprie sul trattamento dei dati nel rapporto di lavoro. E' per questo che esistono le schede-paese qui sotto: cambia chi deve autorizzare, non il principio."
-    }
+      "nota": "Poi c'è l'articolo 88 del GDPR, che lascia a ogni Stato la facolta di aggiungere regole proprie sul trattamento dei dati nel rapporto di lavoro. È per questo che esistono le schede-paese qui sotto: cambia chi deve autorizzare, non il principio."
+    },
+    "sanzioneTipoCasoGps": "da un caso GPS reale",
+    "sanzioneTipoCasoAffine": "caso affine, non GPS",
+    "sanzioneTipoMassimale": "massimale di legge, non una multa inflitta"
   },
   "sanzioniGps": {
     "metaTitle": "Calcolatore sanzioni GPS: quanto rischi a tracciare i lavoratori, Paese per Paese",

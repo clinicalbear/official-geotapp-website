@@ -92,7 +92,7 @@ export const serbia: SchedaPaese = {
     urlFonte: FONTE_POVERENIK.url,
     verificatoIl: '2026-06-15',
     note: {
-      it: 'La Serbia e un paese candidato, fuori dall\'UE, con una legge (LPDP) che rispecchia il GDPR. Unica autorita nazionale, il Poverenik; nessuna ripartizione regionale.',
+      it: 'La Serbia e un paese candidato, fuori dall\'UE, con una legge (LPDP) che rispecchia il GDPR. Unica autorità nazionale, il Poverenik; nessuna ripartizione regionale.',
       en: 'Serbia is a candidate country, outside the EU, with a law (LPDP) that mirrors the GDPR. The only national authority is the Poverenik; there is no regional subdivision.',
       de: 'Serbien ist ein Beitrittskandidat ausserhalb der EU mit einem Gesetz (LPDP), das die DSGVO widerspiegelt. Die einzige nationale Behoerde ist der Poverenik; es gibt keine regionale Aufteilung.',
       fr: 'La Serbie est un pays candidat, hors de l\'UE, doté d\'une loi (LPDP) qui reflète le RGPD. La seule autorité nationale est le Poverenik; il n\'y a aucune répartition régionale.',
@@ -113,7 +113,7 @@ export const serbia: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: 'I lavoratori che useranno i veicoli vanno informati in dettaglio sul trattamento: titolare, finalita, base giuridica, destinatari, conservazione e diritti.',
+        it: 'I lavoratori che useranno i veicoli vanno informati in dettaglio sul trattamento: titolare, finalità, base giuridica, destinatari, conservazione e diritti.',
         en: 'Workers who will use the vehicles must be informed in detail about the processing: controller, purposes, legal basis, recipients, retention and rights.',
         de: 'Beschaeftigte, die die Fahrzeuge nutzen werden, muessen ausfuehrlich ueber die Verarbeitung informiert werden: Verantwortlicher, Zwecke, Rechtsgrundlage, Empfaenger, Speicherdauer und Rechte.',
         fr: 'Les salariés qui utiliseront les véhicules doivent être informés en détail du traitement: responsable, finalités, base juridique, destinataires, conservation et droits.',
@@ -124,7 +124,7 @@ export const serbia: SchedaPaese = {
     },
     {
       voce: {
-        it: 'Autorizzazione o registrazione preventiva di un\'autorita prima di installare',
+        it: 'Autorizzazione o registrazione preventiva di un\'autorità prima di installare',
         en: 'Authorisation or prior registration with an authority before installing',
         de: 'Genehmigung oder vorherige Registrierung bei einer Behoerde vor der Installation',
         fr: 'Autorisation ou enregistrement préalable auprès d\'une autorité avant l\'installation',
@@ -164,7 +164,7 @@ export const serbia: SchedaPaese = {
     },
     {
       voce: {
-        it: 'Niente tracciamento continuo (grave ingerenza); solo orario e finalita',
+        it: 'Niente tracciamento continuo (grave ingerenza); solo orario e finalità',
         en: 'No continuous tracking (serious interference); only working hours and purpose',
         de: 'Keine kontinuierliche Ortung (schwerwiegender Eingriff); nur Arbeitszeit und Zweck',
         fr: 'Pas de suivi continu (ingérence grave); uniquement horaires de travail et finalité',
@@ -241,7 +241,7 @@ export const serbia: SchedaPaese = {
     {
       passo: 4,
       descrizione: {
-        it: 'Limita il GPS all\'orario e alla finalita: niente tracciamento continuo.',
+        it: 'Limita il GPS all\'orario e alla finalità: niente tracciamento continuo.',
         en: 'Limit GPS to working hours and the purpose: no continuous tracking.',
         de: 'Beschraenken Sie das GPS auf die Arbeitszeit und den Zweck: keine kontinuierliche Ortung.',
         fr: 'Limitez le GPS aux horaires de travail et à la finalité: pas de suivi continu.',
@@ -302,6 +302,7 @@ export const serbia: SchedaPaese = {
       nl: 'Er is geen specifieke, gepubliceerde boete van de Poverenik voor GPS op werknemers bekend. In 2026 opende de Poverenik een buitengewone inspectie van JKP Mediana in Nis, dat 80 GPS-apparaten op de afvalcontainers had geïnstalleerd, aangevochten door de schoonmaakmedewerkers omdat ze indirect hun bewegingen volgden. Het niet uitvoeren van de DPIA of het niet inwinnen van het advies wordt bestraft met een boete van 50.000 tot 2.000.000 RSD voor de rechtspersoon.',
     },
     urlFonte: FONTE_N1_MEDIANA.url,
+    tipoImporto: 'massimale',
   },
 
   fonti: [

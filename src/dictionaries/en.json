@@ -1260,7 +1260,10 @@
         }
       ],
       "nota": "Then there is Article 88 GDPR, which lets each state add its own rules on data processing in the employment relationship. That is why the country cards below exist: what changes is who has to authorise you, not the principle."
-    }
+    },
+    "sanzioneTipoCasoGps": "from a real GPS case",
+    "sanzioneTipoCasoAffine": "related case, not GPS",
+    "sanzioneTipoMassimale": "statutory maximum, not a fine issued"
   },
   "sanzioniGps": {
     "metaTitle": "GPS penalty calculator: how much you risk monitoring workers, country by country",

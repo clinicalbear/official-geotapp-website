@@ -88,7 +88,7 @@ export const islanda: SchedaPaese = {
     urlFonte: 'https://www.personuvernd.is/',
     verificatoIl: '2026-06-15',
     note: {
-      it: "L'Islanda (SEE) ha un'unica autorita nazionale, il Persuvernd; nessuna ripartizione regionale.",
+      it: "L'Islanda (SEE) ha un'unica autorità nazionale, il Persuvernd; nessuna ripartizione regionale.",
       en: 'Iceland (EEA) has a single national authority, the Persuvernd; no regional breakdown.',
       de: 'Island (EWR) hat eine einzige nationale Behorde, die Persuvernd; keine regionale Aufteilung.',
       fr: "L'Islande (EEE) dispose d'une seule autorite nationale, le Persuvernd; aucune repartition regionale.",
@@ -109,7 +109,7 @@ export const islanda: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "La sorveglianza elettronica richiede una finalita chiara e lecita; chi sorveglia deve dare avviso con un cartello o in altro modo evidente prima che la persona entri nell'area sorvegliata.",
+        it: "La sorveglianza elettronica richiede una finalità chiara e lecita; chi sorveglia deve dare avviso con un cartello o in altro modo evidente prima che la persona entri nell'area sorvegliata.",
         en: 'Electronic monitoring requires a clear and lawful purpose; whoever monitors must give notice with a sign or in another evident way before the person enters the monitored area.',
         de: 'Die elektronische Uberwachung erfordert einen klaren und rechtmassigen Zweck; wer uberwacht, muss durch ein Schild oder auf andere offensichtliche Weise Hinweis geben, bevor die Person den uberwachten Bereich betritt.',
         fr: "La surveillance electronique exige une finalite claire et licite; celui qui surveille doit en avertir par un panneau ou d'une autre maniere evidente avant que la personne entre dans la zone surveillee.",
@@ -120,7 +120,7 @@ export const islanda: SchedaPaese = {
     },
     {
       voce: {
-        it: "Autorizzazione preventiva di un'autorita prima di installare",
+        it: "Autorizzazione preventiva di un'autorità prima di installare",
         en: 'Prior authorisation from an authority before installing',
         de: 'Vorherige Genehmigung einer Behorde vor der Installation',
         fr: "Autorisation prealable d'une autorite avant l'installation",
@@ -129,7 +129,7 @@ export const islanda: SchedaPaese = {
       },
       risposta: 'no',
       dettaglio: {
-        it: "Non serve un'autorizzazione preventiva del Persuvernd; il titolare valuta da se e documenta la liceita, con DPIA quando richiesta.",
+        it: "Non serve un'autorizzazione preventiva del Persuvernd; il titolare valuta da se e documenta la liceità, con DPIA quando richiesta.",
         en: 'No prior authorisation from the Persuvernd is required; the controller assesses on its own and documents lawfulness, with a DPIA where required.',
         de: 'Eine vorherige Genehmigung der Persuvernd ist nicht erforderlich; der Verantwortliche beurteilt selbst und dokumentiert die Rechtmassigkeit, mit einer DSFA, sofern erforderlich.',
         fr: "Aucune autorisation prealable du Persuvernd n'est requise; le responsable evalue lui-meme et documente la liceite, avec une AIPD lorsque cela est requis.",
@@ -169,7 +169,7 @@ export const islanda: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "L'uso di cronotachigrafi o dispositivi di localizzazione richiede un bisogno particolare; va rispettata la proporzionalita ed evitata la sorveglianza continua dei lavoratori; fuori orario il lavoratore deve poterlo disattivare.",
+        it: "L'uso di cronotachigrafi o dispositivi di localizzazione richiede un bisogno particolare; va rispettata la proporzionalità ed evitata la sorveglianza continua dei lavoratori; fuori orario il lavoratore deve poterlo disattivare.",
         en: 'The use of tachographs or location devices requires a particular need; proportionality must be respected and continuous monitoring of workers avoided; outside working hours the worker must be able to switch it off.',
         de: 'Die Nutzung von Fahrtenschreibern oder Ortungsgeraten erfordert einen besonderen Bedarf; die Verhaltnismassigkeit ist zu wahren und eine standige Uberwachung der Beschaftigten zu vermeiden; ausserhalb der Arbeitszeit muss der Beschaftigte es abschalten konnen.',
         fr: "L'utilisation de chronotachygraphes ou de dispositifs de localisation exige un besoin particulier; la proportionnalite doit etre respectee et la surveillance continue des travailleurs evitee; en dehors des heures de travail, le travailleur doit pouvoir le desactiver.",
@@ -204,7 +204,7 @@ export const islanda: SchedaPaese = {
     {
       passo: 1,
       descrizione: {
-        it: 'Verifica un bisogno particolare e una finalita chiara e lecita per il GPS (Regole 50/2023).',
+        it: 'Verifica un bisogno particolare e una finalità chiara e lecita per il GPS (Regole 50/2023).',
         en: 'Verify a particular need and a clear and lawful purpose for the GPS (Rules 50/2023).',
         de: 'Prufen Sie einen besonderen Bedarf und einen klaren und rechtmassigen Zweck fur das GPS (Regeln 50/2023).',
         fr: 'Verifiez un besoin particulier et une finalite claire et licite pour le GPS (Regles 50/2023).',
@@ -248,7 +248,7 @@ export const islanda: SchedaPaese = {
     {
       passo: 5,
       descrizione: {
-        it: 'Configura il sistema: niente sorveglianza continua, disattivabile fuori orario, niente riuso per altre finalita senza preavviso.',
+        it: 'Configura il sistema: niente sorveglianza continua, disattivabile fuori orario, niente riuso per altre finalità senza preavviso.',
         en: 'Configure the system: no continuous monitoring, switchable off outside working hours, no reuse for other purposes without prior notice.',
         de: 'Konfigurieren Sie das System: keine standige Uberwachung, ausserhalb der Arbeitszeit abschaltbar, keine Weiterverwendung fur andere Zwecke ohne vorherige Ankundigung.',
         fr: "Configurez le systeme: pas de surveillance continue, desactivable en dehors des heures de travail, pas de reutilisation a d'autres fins sans preavis.",
@@ -282,7 +282,7 @@ export const islanda: SchedaPaese = {
 
   sanzioneMax: {
     importo: {
-      it: 'illiceita dichiarata, senza multa',
+      it: 'illiceità dichiarata, senza multa',
       en: 'unlawfulness declared, with no fine',
       de: 'Rechtswidrigkeit festgestellt, ohne Geldbusse',
       fr: 'illiceite declaree, sans amende',
@@ -290,7 +290,7 @@ export const islanda: SchedaPaese = {
       nl: 'onrechtmatigheid vastgesteld, zonder boete',
     },
     casoCitato: {
-      it: "Persuvernd, decisione 2022050836 dell'8 dicembre 2023: Islandspostur (Poste islandesi) aveva usato i dati del cronotachigrafo/GPS di un veicolo aziendale per valutare il rendimento di un dipendente e giustificarne il licenziamento, cambiando la finalita (il dispositivo era stato presentato per sicurezza e qualità del servizio) senza preavviso. Trattamento dichiarato illecito, senza multa.",
+      it: "Persuvernd, decisione 2022050836 dell'8 dicembre 2023: Islandspostur (Poste islandesi) aveva usato i dati del cronotachigrafo/GPS di un veicolo aziendale per valutare il rendimento di un dipendente e giustificarne il licenziamento, cambiando la finalità (il dispositivo era stato presentato per sicurezza e qualità del servizio) senza preavviso. Trattamento dichiarato illecito, senza multa.",
       en: 'Persuvernd, decision 2022050836 of 8 December 2023: Islandspostur (Iceland Post) had used the tachograph/GPS data of a company vehicle to assess an employee performance and justify dismissal, changing the purpose (the device had been presented for safety and service quality) without prior notice. Processing declared unlawful, with no fine.',
       de: 'Persuvernd, Entscheidung 2022050836 vom 8. Dezember 2023: Islandspostur (Islandische Post) hatte die Fahrtenschreiber-/GPS-Daten eines Firmenfahrzeugs genutzt, um die Leistung eines Beschaftigten zu bewerten und dessen Kundigung zu rechtfertigen, wobei der Zweck (das Gerat war fur Sicherheit und Servicequalitat vorgestellt worden) ohne vorherige Ankundigung geandert wurde. Die Verarbeitung wurde fur rechtswidrig erklart, ohne Geldbusse.',
       fr: "Persuvernd, decision 2022050836 du 8 decembre 2023: Islandspostur (Poste islandaise) avait utilise les donnees du chronotachygraphe/GPS d'un vehicule de societe pour evaluer le rendement d'un salarie et justifier son licenciement, en changeant la finalite (le dispositif avait ete presente pour la securite et la qualite du service) sans preavis. Traitement declare illicite, sans amende.",
@@ -298,6 +298,7 @@ export const islanda: SchedaPaese = {
       nl: 'Persuvernd, beslissing 2022050836 van 8 december 2023: Islandspostur (IJslandse Post) had de tachograaf-/GPS-gegevens van een bedrijfsvoertuig gebruikt om de prestaties van een werknemer te beoordelen en zijn ontslag te rechtvaardigen, waarbij het doel (het apparaat was gepresenteerd voor veiligheid en servicekwaliteit) zonder voorafgaande kennisgeving werd gewijzigd. De verwerking werd onrechtmatig verklaard, zonder boete.',
     },
     urlFonte: FONTE_PERSUVERND_ISLANDSPOSTUR.url,
+    tipoImporto: 'caso-gps',
   },
 
   fonti: [

@@ -85,7 +85,7 @@ export const lettonia: SchedaPaese = {
     urlFonte: FONTE_DVI_RECLAMO.url,
     verificatoIl: '2026-06-15',
     note: {
-      it: "La Lettonia ha un'unica autorita nazionale, il DVI; nessuna ripartizione regionale.",
+      it: "La Lettonia ha un'unica autorità nazionale, il DVI; nessuna ripartizione regionale.",
       en: 'Latvia has a single national authority, the DVI; there is no regional split.',
       de: 'Lettland hat eine einzige nationale Behoerde, die DVI; es gibt keine regionale Aufteilung.',
       fr: "La Lettonie dispose d'une seule autorite nationale, la DVI; il n'existe pas de repartition regionale.",
@@ -137,7 +137,7 @@ export const lettonia: SchedaPaese = {
     },
     {
       voce: {
-        it: "Autorizzazione preventiva di un'autorita prima di installare",
+        it: "Autorizzazione preventiva di un'autorità prima di installare",
         en: 'Prior authorisation from an authority before installing',
         de: 'Vorherige Genehmigung einer Behoerde vor der Installation',
         fr: "Autorisation prealable d'une autorite avant l'installation",
@@ -146,7 +146,7 @@ export const lettonia: SchedaPaese = {
       },
       risposta: 'no',
       dettaglio: {
-        it: 'La legge lettone sul trattamento dei dati non prevede un\'autorizzazione preventiva del DVI; il titolare valuta da se la liceita.',
+        it: 'La legge lettone sul trattamento dei dati non prevede un\'autorizzazione preventiva del DVI; il titolare valuta da se la liceità.',
         en: 'Latvian data processing law does not provide for a prior authorisation by the DVI; the controller assesses lawfulness on its own.',
         de: 'Das lettische Datenschutzrecht sieht keine vorherige Genehmigung durch die DVI vor; der Verantwortliche beurteilt die Rechtmaessigkeit selbst.',
         fr: "La loi lettone sur le traitement des donnees ne prevoit pas d'autorisation prealable de la DVI; le responsable du traitement evalue lui-meme la liceite.",
@@ -295,6 +295,7 @@ export const lettonia: SchedaPaese = {
       nl: 'Er is geen specifieke, gepubliceerde boete van de DVI voor GPS-tracking van werknemers. Het sanctierisico blijft het algemene risico van de AVG (art. 83).',
     },
     urlFonte: FONTE_DVI_GPS.url,
+    tipoImporto: 'massimale',
   },
 
   fonti: [

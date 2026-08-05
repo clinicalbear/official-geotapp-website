@@ -77,7 +77,7 @@ export const austria: SchedaPaese = {
     urlFonte: FONTE_DSB_RECLAMO.url,
     verificatoIl: '2026-06-15',
     note: {
-      it: "L'Austria e' uno Stato federale ma ha un'unica autorita garante nazionale, la DSB con sede a Vienna: nessuna ripartizione per Land (a differenza della Germania).",
+      it: "L'Austria è uno Stato federale ma ha un'unica autorità garante nazionale, la DSB con sede a Vienna: nessuna ripartizione per Land (a differenza della Germania).",
       en: 'Austria is a federal state but has a single national supervisory authority, the DSB based in Vienna: there is no breakdown by Land (unlike Germany).',
       de: 'Österreich ist ein Bundesstaat, verfügt jedoch über eine einzige nationale Aufsichtsbehörde, die DSB mit Sitz in Wien: Es gibt keine Aufteilung nach Bundesland (anders als in Deutschland).',
       fr: "L'Autriche est un État fédéral mais dispose d'une seule autorité de contrôle nationale, la DSB basée à Vienne : il n'y a pas de répartition par Land (contrairement à l'Allemagne).",
@@ -129,7 +129,7 @@ export const austria: SchedaPaese = {
     },
     {
       voce: {
-        it: "Autorizzazione preventiva di un'autorita prima di installare",
+        it: "Autorizzazione preventiva di un'autorità prima di installare",
         en: 'Prior authorisation from an authority before installation',
         de: 'Vorherige Genehmigung einer Behörde vor der Installation',
         fr: "Autorisation préalable d'une autorité avant l'installation",
@@ -138,7 +138,7 @@ export const austria: SchedaPaese = {
       },
       risposta: 'no',
       dettaglio: {
-        it: "Non serve un'autorizzazione preventiva: il vecchio registro DVR e' stato abolito col GDPR; vale la responsabilizzazione (registro dei trattamenti e valutazione d'impatto quando richiesta).",
+        it: "Non serve un'autorizzazione preventiva: il vecchio registro DVR è stato abolito col GDPR; vale la responsabilizzazione (registro dei trattamenti e valutazione d'impatto quando richiesta).",
         en: 'No prior authorisation is needed: the old DVR register was abolished with the GDPR; the accountability principle applies (records of processing activities and a data protection impact assessment where required).',
         de: 'Eine vorherige Genehmigung ist nicht erforderlich: Das alte DVR-Register wurde mit der DSGVO abgeschafft; es gilt die Rechenschaftspflicht (Verzeichnis der Verarbeitungstätigkeiten und Datenschutz-Folgenabschätzung, sofern erforderlich).',
         fr: "Aucune autorisation préalable n'est nécessaire : l'ancien registre DVR a été supprimé avec le RGPD ; le principe de responsabilité s'applique (registre des activités de traitement et analyse d'impact lorsqu'elle est requise).",
@@ -287,6 +287,7 @@ export const austria: SchedaPaese = {
       nl: 'Datenschutzbehorde, beslissing van 1 maart 2022 (2022-0.021.739): een onderneming had permanente GPS-trackers geïnstalleerd op 15 bedrijfsvoertuigen voor gemengd gebruik; de DSB achtte de verwerking onrechtmatig omdat het doel met minder ingrijpende middelen kon worden bereikt en gelastte de onmiddellijke beëindiging ervan, zonder geldboete.',
     },
     urlFonte: FONTE_DSB_DECISIONE.url,
+    tipoImporto: 'caso-gps',
   },
 
   fonti: [

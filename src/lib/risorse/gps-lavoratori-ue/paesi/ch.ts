@@ -89,7 +89,7 @@ export const svizzera: SchedaPaese = {
     urlFonte: FONTE_FDPIC_SORVEGLIANZA.url,
     verificatoIl: '2026-06-15',
     note: {
-      it: "La Svizzera e' fuori dall'UE. Per i datori privati e' competente l'autorita' federale (PFPDT/FDPIC); le autorita' cantonali coprono gli enti pubblici cantonali.",
+      it: "La Svizzera è fuori dall'UE. Per i datori privati è competente l'autorità federale (PFPDT/FDPIC); le autorità cantonali coprono gli enti pubblici cantonali.",
       en: 'Switzerland is outside the EU. For private employers the competent body is the federal authority (PFPDT/FDPIC); the cantonal authorities cover cantonal public bodies.',
       de: 'Die Schweiz liegt ausserhalb der EU. Fuer private Arbeitgeber ist die Bundesbehoerde (EDOEB/FDPIC) zustaendig; die kantonalen Behoerden decken die kantonalen oeffentlichen Stellen ab.',
       fr: "La Suisse est en dehors de l'UE. Pour les employeurs prives, l'autorite competente est l'autorite federale (PFPDT/FDPIC); les autorites cantonales couvrent les organismes publics cantonaux.",
@@ -110,7 +110,7 @@ export const svizzera: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "Regola cardine svizzera, più' severa del GDPR: e' vietato usare sistemi destinati a sorvegliare il comportamento dei lavoratori sul posto di lavoro. Se servono per altri motivi (sicurezza, produzione, organizzazione), vanno concepiti in modo da non ledere salute e libertà' di movimento, e un sistema e' vietato se mira unicamente o essenzialmente a sorvegliare il comportamento.",
+        it: "Regola cardine svizzera, più severa del GDPR: è vietato usare sistemi destinati a sorvegliare il comportamento dei lavoratori sul posto di lavoro. Se servono per altri motivi (sicurezza, produzione, organizzazione), vanno concepiti in modo da non ledere salute e libertà di movimento, e un sistema è vietato se mira unicamente o essenzialmente a sorvegliare il comportamento.",
         en: 'A cornerstone Swiss rule, stricter than the GDPR: it is forbidden to use systems intended to monitor the behaviour of workers at the workplace. If they are needed for other reasons (safety, production, organisation), they must be designed so as not to harm health and freedom of movement, and a system is forbidden if it aims solely or essentially at monitoring behaviour.',
         de: 'Eine zentrale Schweizer Regel, strenger als die DSGVO: Es ist verboten, Systeme einzusetzen, die das Verhalten der Arbeitnehmenden am Arbeitsplatz ueberwachen sollen. Werden sie aus anderen Gruenden benoetigt (Sicherheit, Produktion, Organisation), muessen sie so gestaltet sein, dass sie Gesundheit und Bewegungsfreiheit nicht beeintraechtigen, und ein System ist verboten, wenn es ausschliesslich oder im Wesentlichen darauf abzielt, das Verhalten zu ueberwachen.',
         fr: "Regle cardinale suisse, plus stricte que le RGPD: il est interdit d'utiliser des systemes destines a surveiller le comportement des travailleurs sur le lieu de travail. S'ils sont necessaires pour d'autres raisons (securite, production, organisation), ils doivent etre concus de maniere a ne pas porter atteinte a la sante et a la liberte de mouvement, et un systeme est interdit s'il vise uniquement ou essentiellement a surveiller le comportement.",
@@ -121,7 +121,7 @@ export const svizzera: SchedaPaese = {
     },
     {
       voce: {
-        it: "Trattamento dei dati solo se riguarda l'idoneita' al lavoro o e' necessario al contratto (CO art. 328b)",
+        it: "Trattamento dei dati solo se riguarda l'idoneità al lavoro o è necessario al contratto (CO art. 328b)",
         en: 'Data processing only if it concerns suitability for the job or is necessary for the contract (CO art. 328b)',
         de: 'Datenbearbeitung nur, wenn sie die Eignung fuer die Arbeit betrifft oder fuer den Vertrag erforderlich ist (OR Art. 328b)',
         fr: "Traitement des donnees uniquement s'il concerne l'aptitude au travail ou est necessaire au contrat (CO art. 328b)",
@@ -130,7 +130,7 @@ export const svizzera: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "Il datore può' trattare i dati del lavoratore solo se riguardano la sua idoneita' all'impiego o sono necessari all'esecuzione del contratto, nel rispetto di buona fede e proporzionalita'.",
+        it: "Il datore può trattare i dati del lavoratore solo se riguardano la sua idoneità all'impiego o sono necessari all'esecuzione del contratto, nel rispetto di buona fede e proporzionalità.",
         en: 'The employer may process the worker data only if it concerns their suitability for employment or is necessary for performing the contract, in compliance with good faith and proportionality.',
         de: 'Der Arbeitgeber darf die Daten der Arbeitnehmenden nur bearbeiten, wenn sie deren Eignung fuer das Arbeitsverhaeltnis betreffen oder zur Durchfuehrung des Vertrags erforderlich sind, unter Wahrung von Treu und Glauben und Verhaeltnismaessigkeit.',
         fr: "L'employeur ne peut traiter les donnees du travailleur que si elles concernent son aptitude a l'emploi ou sont necessaires a l'execution du contrat, dans le respect de la bonne foi et de la proportionnalite.",
@@ -141,7 +141,7 @@ export const svizzera: SchedaPaese = {
     },
     {
       voce: {
-        it: "Autorizzazione preventiva di un'autorita' prima di installare",
+        it: "Autorizzazione preventiva di un'autorità prima di installare",
         en: 'Prior authorisation from an authority before installing',
         de: 'Vorgaengige Bewilligung einer Behoerde vor der Installation',
         fr: "Autorisation prealable d'une autorite avant l'installation",
@@ -150,7 +150,7 @@ export const svizzera: SchedaPaese = {
       },
       risposta: 'no',
       dettaglio: {
-        it: "Non serve un'autorizzazione preventiva del PFPDT; il datore valuta da se' liceita' e proporzionalita'.",
+        it: "Non serve un'autorizzazione preventiva del PFPDT; il datore valuta da sé liceità e proporzionalità.",
         en: 'No prior authorisation from the PFPDT/FDPIC is needed; the employer assesses lawfulness and proportionality on its own.',
         de: 'Eine vorgaengige Bewilligung des EDOEB/FDPIC ist nicht erforderlich; der Arbeitgeber beurteilt Rechtmaessigkeit und Verhaeltnismaessigkeit selbst.',
         fr: "Aucune autorisation prealable du PFPDT/FDPIC n'est requise; l'employeur evalue lui-meme la liceite et la proportionnalite.",
@@ -170,7 +170,7 @@ export const svizzera: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "I lavoratori vanno informati in anticipo; e' vietata una sorveglianza continua, periodica o a campione volta a controllare il comportamento; va scelto il mezzo proporzionato e meno lesivo.",
+        it: "I lavoratori vanno informati in anticipo; è vietata una sorveglianza continua, periodica o a campione volta a controllare il comportamento; va scelto il mezzo proporzionato e meno lesivo.",
         en: 'Workers must be informed in advance; continuous, periodic or sample-based surveillance aimed at monitoring behaviour is forbidden; the proportionate and least intrusive means must be chosen.',
         de: 'Die Arbeitnehmenden muessen im Voraus informiert werden; eine dauernde, periodische oder stichprobenartige Ueberwachung zur Kontrolle des Verhaltens ist verboten; es ist das verhaeltnismaessige und am wenigsten beeintraechtigende Mittel zu waehlen.',
         fr: "Les travailleurs doivent etre informes au prealable; une surveillance continue, periodique ou par echantillonnage visant a controler le comportement est interdite; il faut choisir le moyen proportionne et le moins attentatoire.",
@@ -190,7 +190,7 @@ export const svizzera: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "La nLPD impone una valutazione d'impatto quando il trattamento e' suscettibile di comportare un rischio elevato per la personalita' o i diritti fondamentali, come la sorveglianza sistematica.",
+        it: "La nLPD impone una valutazione d'impatto quando il trattamento è suscettibile di comportare un rischio elevato per la personalità o i diritti fondamentali, come la sorveglianza sistematica.",
         en: 'The nLPD/revFADP requires an impact assessment when the processing is likely to entail a high risk to personality or fundamental rights, such as systematic surveillance.',
         de: 'Das nDSG/revFADP verlangt eine Folgenabschaetzung, wenn die Bearbeitung voraussichtlich ein hohes Risiko fuer die Persoenlichkeit oder die Grundrechte mit sich bringt, etwa eine systematische Ueberwachung.',
         fr: "La nLPD/revFADP impose une analyse d'impact lorsque le traitement est susceptible d'entrainer un risque eleve pour la personnalite ou les droits fondamentaux, comme une surveillance systematique.",
@@ -205,7 +205,7 @@ export const svizzera: SchedaPaese = {
     {
       passo: 1,
       descrizione: {
-        it: 'Verifica che il sistema non sia destinato a sorvegliare il comportamento dei lavoratori (OLT 3 art. 26): se lo e\', e\' vietato.',
+        it: 'Verifica che il sistema non sia destinato a sorvegliare il comportamento dei lavoratori (OLT 3 art. 26): se lo è, è vietato.',
         en: 'Check that the system is not intended to monitor the behaviour of workers (OLT 3 art. 26): if it is, it is forbidden.',
         de: 'Pruefen Sie, dass das System nicht dazu bestimmt ist, das Verhalten der Arbeitnehmenden zu ueberwachen (ArGV 3 Art. 26): ist dies der Fall, ist es verboten.',
         fr: "Verifiez que le systeme n'est pas destine a surveiller le comportement des travailleurs (OLT 3 art. 26): si c'est le cas, il est interdit.",
@@ -216,7 +216,7 @@ export const svizzera: SchedaPaese = {
     {
       passo: 2,
       descrizione: {
-        it: "Accertati che i dati trattati riguardino l'idoneita' al lavoro o siano necessari al contratto (CO art. 328b).",
+        it: "Accertati che i dati trattati riguardino l'idoneità al lavoro o siano necessari al contratto (CO art. 328b).",
         en: 'Make sure the data processed concerns suitability for the job or is necessary for the contract (CO art. 328b).',
         de: 'Stellen Sie sicher, dass die bearbeiteten Daten die Eignung fuer die Arbeit betreffen oder fuer den Vertrag erforderlich sind (OR Art. 328b).',
         fr: "Assurez-vous que les donnees traitees concernent l'aptitude au travail ou sont necessaires au contrat (CO art. 328b).",
@@ -291,7 +291,7 @@ export const svizzera: SchedaPaese = {
       nl: 'tot 250.000 CHF, ten laste van de verantwoordelijke natuurlijke persoon (niet het bedrijf), opgelegd door de kantonale rechtbanken',
     },
     casoCitato: {
-      it: "Tribunale federale, ATF 130 II 425: il GPS sui veicoli aziendali e' ammesso solo se proporzionato, per ragioni legittime e con informazione preventiva, ed e' vietato se mira unicamente o essenzialmente a sorvegliare il comportamento del lavoratore (OLT 3 art. 26, più' severo del GDPR). In Svizzera le multe della nLPD arrivano a 250.000 CHF e colpiscono la persona fisica responsabile, non l'impresa.",
+      it: "Tribunale federale, ATF 130 II 425: il GPS sui veicoli aziendali è ammesso solo se proporzionato, per ragioni legittime e con informazione preventiva, ed è vietato se mira unicamente o essenzialmente a sorvegliare il comportamento del lavoratore (OLT 3 art. 26, più severo del GDPR). In Svizzera le multe della nLPD arrivano a 250.000 CHF e colpiscono la persona fisica responsabile, non l'impresa.",
       en: 'Federal Supreme Court, ATF 130 II 425: GPS on company vehicles is allowed only if proportionate, for legitimate reasons and with prior information, and it is forbidden if it aims solely or essentially at monitoring the worker behaviour (OLT 3 art. 26, stricter than the GDPR). In Switzerland the nLPD/revFADP fines reach 250,000 CHF and target the responsible natural person, not the company.',
       de: 'Bundesgericht, BGE 130 II 425: GPS an Firmenfahrzeugen ist nur zulaessig, wenn es verhaeltnismaessig ist, aus legitimen Gruenden erfolgt und vorab informiert wird, und es ist verboten, wenn es ausschliesslich oder im Wesentlichen darauf abzielt, das Verhalten der Arbeitnehmenden zu ueberwachen (ArGV 3 Art. 26, strenger als die DSGVO). In der Schweiz erreichen die Bussen nach nDSG/revFADP 250.000 CHF und treffen die verantwortliche natuerliche Person, nicht das Unternehmen.',
       fr: "Tribunal federal, ATF 130 II 425: le GPS sur les vehicules de l entreprise n est admis que s il est proportionne, pour des raisons legitimes et avec information prealable, et il est interdit s il vise uniquement ou essentiellement a surveiller le comportement du travailleur (OLT 3 art. 26, plus strict que le RGPD). En Suisse, les amendes de la nLPD/revFADP atteignent 250 000 CHF et frappent la personne physique responsable, et non l entreprise.",
@@ -299,6 +299,7 @@ export const svizzera: SchedaPaese = {
       nl: 'Federaal Hooggerechtshof, ATF 130 II 425: gps op bedrijfsvoertuigen is alleen toegestaan als het evenredig is, om legitieme redenen en met voorafgaande informatie, en het is verboden als het uitsluitend of in wezen gericht is op het bewaken van het gedrag van de werknemer (OLT 3 art. 26, strenger dan de AVG). In Zwitserland reiken de boetes van de nLPD/revFADP tot 250.000 CHF en treffen ze de verantwoordelijke natuurlijke persoon, niet het bedrijf.',
     },
     urlFonte: FONTE_ATF_130_II_425.url,
+    tipoImporto: 'massimale',
   },
 
   fonti: [

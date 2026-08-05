@@ -71,7 +71,7 @@ export const albania: SchedaPaese = {
     urlFonte: FONTE_IDP_UFFICIALE.url,
     verificatoIl: '2026-06-15',
     note: {
-      it: "L'Albania e' un paese candidato, fuori dall'UE, con una legge propria allineata al GDPR (Legge 124/2024). Unica autorita' nazionale, l'IDP; nessuna ripartizione regionale.",
+      it: "L'Albania è un paese candidato, fuori dall'UE, con una legge propria allineata al GDPR (Legge 124/2024). Unica autorità nazionale, l'IDP; nessuna ripartizione regionale.",
       en: 'Albania is a candidate country, outside the EU, with its own national law aligned with the GDPR (Law 124/2024). A single national authority, the IDP; no regional breakdown.',
       de: 'Albanien ist ein Beitrittskandidat ausserhalb der EU mit einem eigenen, an die DSGVO angeglichenen nationalen Gesetz (Gesetz 124/2024). Eine einzige nationale Behoerde, die IDP; keine regionale Aufteilung.',
       fr: "L'Albanie est un pays candidat, hors de l'UE, dote de sa propre loi nationale alignee sur le RGPD (loi 124/2024). Une seule autorite nationale, l'IDP ; aucune repartition regionale.",
@@ -92,7 +92,7 @@ export const albania: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "Il lavoratore va informato prima della raccolta dei dati su finalita' e base giuridica; serve una delle basi dell'art. 7 (in pratica l'interesse legittimo).",
+        it: "Il lavoratore va informato prima della raccolta dei dati su finalità e base giuridica; serve una delle basi dell'art. 7 (in pratica l'interesse legittimo).",
         en: 'The worker must be informed of the purposes and legal basis before data is collected; one of the bases under art. 7 is required (in practice, legitimate interest).',
         de: 'Die beschaeftigte Person ist vor der Datenerhebung ueber Zwecke und Rechtsgrundlage zu informieren; erforderlich ist eine der Grundlagen nach Art. 7 (in der Praxis das berechtigte Interesse).',
         fr: "Le travailleur doit etre informe des finalites et de la base legale avant la collecte des donnees ; l'une des bases de l'art. 7 est requise (en pratique, l'interet legitime).",
@@ -103,7 +103,7 @@ export const albania: SchedaPaese = {
     },
     {
       voce: {
-        it: "Notifica o autorizzazione preventiva di un'autorita' prima di installare",
+        it: "Notifica o autorizzazione preventiva di un'autorità prima di installare",
         en: 'Prior notification to or authorisation by an authority before installation',
         de: 'Vorherige Meldung an eine Behoerde oder deren Genehmigung vor der Installation',
         fr: "Notification prealable a une autorite ou autorisation de celle-ci avant l'installation",
@@ -112,7 +112,7 @@ export const albania: SchedaPaese = {
       },
       risposta: 'no',
       dettaglio: {
-        it: "La vecchia notifica/registrazione all'IDP e' stata abolita con la Legge 124/2024; il titolare tiene un registro interno dei trattamenti.",
+        it: "La vecchia notifica/registrazione all'IDP è stata abolita con la Legge 124/2024; il titolare tiene un registro interno dei trattamenti.",
         en: 'The old notification/registration with the IDP was abolished by Law 124/2024; the controller keeps an internal record of processing activities.',
         de: 'Die fruehere Meldung/Registrierung bei der IDP wurde mit dem Gesetz 124/2024 abgeschafft; der Verantwortliche fuehrt ein internes Verzeichnis der Verarbeitungstaetigkeiten.',
         fr: "L'ancienne notification/enregistrement aupres de l'IDP a ete abolie par la loi 124/2024 ; le responsable du traitement tient un registre interne des traitements.",
@@ -132,7 +132,7 @@ export const albania: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "La base usuale e' l'interesse legittimo (art. 7), non il consenso, che nel rapporto di lavoro difficilmente e' libero.",
+        it: "La base usuale è l'interesse legittimo (art. 7), non il consenso, che nel rapporto di lavoro difficilmente è libero.",
         en: 'The usual basis is legitimate interest (art. 7), not consent, which in the employment relationship can hardly be freely given.',
         de: 'Die uebliche Grundlage ist das berechtigte Interesse (Art. 7), nicht die Einwilligung, die im Arbeitsverhaeltnis kaum freiwillig sein kann.',
         fr: "La base habituelle est l'interet legitime (art. 7), et non le consentement, qui dans la relation de travail peut difficilement etre libre.",
@@ -143,7 +143,7 @@ export const albania: SchedaPaese = {
     },
     {
       voce: {
-        it: 'Mezzo meno intrusivo, finalita specifica e conservazione minima (linea guida IDP)',
+        it: 'Mezzo meno intrusivo, finalità specifica e conservazione minima (linea guida IDP)',
         en: 'Least intrusive means, specific purpose and minimal retention (IDP guideline)',
         de: 'Am wenigsten eingreifendes Mittel, spezifischer Zweck und minimale Speicherung (IDP-Leitlinie)',
         fr: 'Moyen le moins intrusif, finalite specifique et conservation minimale (ligne directrice IDP)',
@@ -152,7 +152,7 @@ export const albania: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "Per l'IDP la sorveglianza deve usare il mezzo meno intrusivo, essere giustificata da un bisogno specifico e con conservazione il più' breve possibile; va informato chi e' sorvegliato.",
+        it: "Per l'IDP la sorveglianza deve usare il mezzo meno intrusivo, essere giustificata da un bisogno specifico e con conservazione il più breve possibile; va informato chi è sorvegliato.",
         en: 'For the IDP, surveillance must use the least intrusive means, be justified by a specific need and with retention as short as possible; the person under surveillance must be informed.',
         de: 'Nach Auffassung der IDP muss die Ueberwachung das am wenigsten eingreifende Mittel verwenden, durch einen konkreten Bedarf gerechtfertigt und so kurz wie moeglich gespeichert sein; die ueberwachte Person ist zu informieren.',
         fr: "Pour l'IDP, la surveillance doit recourir au moyen le moins intrusif, etre justifiee par un besoin specifique et avec une conservation aussi breve que possible ; la personne surveillee doit etre informee.",
@@ -172,7 +172,7 @@ export const albania: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "Serve una valutazione d'impatto quando il trattamento e' suscettibile di comportare un rischio elevato, incluso il monitoraggio sistematico su larga scala.",
+        it: "Serve una valutazione d'impatto quando il trattamento è suscettibile di comportare un rischio elevato, incluso il monitoraggio sistematico su larga scala.",
         en: 'An impact assessment is required where the processing is likely to entail a high risk, including systematic large-scale monitoring.',
         de: 'Eine Folgenabschaetzung ist erforderlich, wenn die Verarbeitung voraussichtlich ein hohes Risiko mit sich bringt, einschliesslich systematischer Ueberwachung in grossem Umfang.',
         fr: "Une analyse d'impact est requise lorsque le traitement est susceptible d'entrainer un risque eleve, y compris la surveillance systematique a grande echelle.",
@@ -209,7 +209,7 @@ export const albania: SchedaPaese = {
     {
       passo: 3,
       descrizione: {
-        it: "Verifica il mezzo meno intrusivo e una finalita' specifica.",
+        it: "Verifica il mezzo meno intrusivo e una finalità specifica.",
         en: 'Check for the least intrusive means and a specific purpose.',
         de: 'Pruefen Sie das am wenigsten eingreifende Mittel und einen spezifischen Zweck.',
         fr: 'Verifiez le moyen le moins intrusif et une finalite specifique.',
@@ -273,7 +273,7 @@ export const albania: SchedaPaese = {
       nl: '460.000 ALL (ongeveer 4.400 EUR)',
     },
     casoCitato: {
-      it: "IDP, decisione 49/1 dell'8 gennaio 2024: sanzione a EuroCom CX per aver monitorato i dipendenti tramite videosorveglianza installata negli uffici a loro insaputa, in violazione dell'obbligo di informazione. Non e' un caso di GPS, ed e' stato deciso sotto la legge precedente (9887/2008), poi abrogata dalla Legge 124/2024.",
+      it: "IDP, decisione 49/1 dell'8 gennaio 2024: sanzione a EuroCom CX per aver monitorato i dipendenti tramite videosorveglianza installata negli uffici a loro insaputa, in violazione dell'obbligo di informazione. Non è un caso di GPS, ed è stato deciso sotto la legge precedente (9887/2008), poi abrogata dalla Legge 124/2024.",
       en: 'IDP, decision 49/1 of 8 January 2024: a fine against EuroCom CX for monitoring employees through video surveillance installed in the offices without their knowledge, in breach of the duty to inform. It is not a GPS case, and it was decided under the previous law (9887/2008), later repealed by Law 124/2024.',
       de: 'IDP, Entscheidung 49/1 vom 8. Januar 2024: Geldbusse gegen EuroCom CX, weil Beschaeftigte ohne ihr Wissen durch in den Bueros installierte Videoueberwachung ueberwacht wurden, unter Verstoss gegen die Informationspflicht. Es handelt sich nicht um einen GPS-Fall, und er wurde nach dem fruheren Gesetz (9887/2008) entschieden, das spaeter durch das Gesetz 124/2024 aufgehoben wurde.',
       fr: "IDP, decision 49/1 du 8 janvier 2024 : sanction a l'encontre d'EuroCom CX pour avoir surveille ses salaries au moyen d'une videosurveillance installee dans les bureaux a leur insu, en violation de l'obligation d'information. Il ne s'agit pas d'un cas de GPS, et la decision a ete prise sous l'ancienne loi (9887/2008), abrogee par la suite par la loi 124/2024.",
@@ -281,6 +281,7 @@ export const albania: SchedaPaese = {
       nl: 'IDP, besluit 49/1 van 8 januari 2024: boete tegen EuroCom CX wegens het volgen van werknemers via cameratoezicht dat zonder hun medeweten in de kantoren was geinstalleerd, in strijd met de informatieplicht. Het is geen GPS-zaak, en de beslissing werd genomen onder de vorige wet (9887/2008), die later is ingetrokken door Wet 124/2024.',
     },
     urlFonte: FONTE_IDP_EUROCOM.url,
+    tipoImporto: 'caso-affine',
   },
 
   fonti: [

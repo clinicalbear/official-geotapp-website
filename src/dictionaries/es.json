@@ -1260,7 +1260,10 @@
         }
       ],
       "nota": "Luego esta el articulo 88 del RGPD, que permite a cada Estado anadir sus propias reglas sobre el tratamiento de datos en la relacion laboral. Por eso existen las fichas por pais de aqui abajo: cambia quien tiene que autorizarte, no el principio."
-    }
+    },
+    "sanzioneTipoCasoGps": "de un caso real de GPS",
+    "sanzioneTipoCasoAffine": "caso afín, no GPS",
+    "sanzioneTipoMassimale": "máximo legal, no una multa impuesta"
   },
   "sanzioniGps": {
     "metaTitle": "Calculadora de sanciones GPS: cuánto te arriesgas al monitorizar trabajadores, país por país",

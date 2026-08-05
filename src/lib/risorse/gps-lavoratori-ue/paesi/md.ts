@@ -83,7 +83,7 @@ export const moldova: SchedaPaese = {
     urlFonte: FONTE_CNPDCP_RECLAMI.url,
     verificatoIl: '2026-06-15',
     note: {
-      it: "La Moldova e' un paese candidato, fuori dall'UE; la legge in vigore e' la 133/2011, mentre una nuova legge allineata al GDPR (195/2024) entra in vigore il 23 agosto 2026. Unica autorita' nazionale, il CNPDCP; nessuna ripartizione regionale.",
+      it: "La Moldova è un paese candidato, fuori dall'UE; la legge in vigore è la 133/2011, mentre una nuova legge allineata al GDPR (195/2024) entra in vigore il 23 agosto 2026. Unica autorità nazionale, il CNPDCP; nessuna ripartizione regionale.",
       en: 'Moldova is a candidate country, outside the EU; the law in force is 133/2011, while a new law aligned with the GDPR (195/2024) comes into force on 23 August 2026. There is a single national authority, the CNPDCP; no regional breakdown.',
       de: 'Die Republik Moldau ist ein Kandidatenland ausserhalb der EU; das geltende Gesetz ist das Gesetz 133/2011, waehrend ein neues, an die DSGVO angelehntes Gesetz (195/2024) am 23. August 2026 in Kraft tritt. Es gibt nur eine nationale Behoerde, das CNPDCP; keine regionale Aufteilung.',
       fr: "La Moldavie est un pays candidat, hors de l'UE; la loi en vigueur est la loi 133/2011, tandis qu'une nouvelle loi alignee sur le RGPD (195/2024) entre en vigueur le 23 aout 2026. Il existe une seule autorite nationale, le CNPDCP; aucune repartition regionale.",
@@ -104,7 +104,7 @@ export const moldova: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "Il monitoraggio dei lavoratori (video, internet e per estensione GPS) e' disciplinato dalla Legge 133/2011 e dal Codice del lavoro (artt. 91-94); i lavoratori vanno informati su chi accede ai dati e su quali dati si raccolgono.",
+        it: "Il monitoraggio dei lavoratori (video, internet e per estensione GPS) è disciplinato dalla Legge 133/2011 e dal Codice del lavoro (artt. 91-94); i lavoratori vanno informati su chi accede ai dati e su quali dati si raccolgono.",
         en: 'The monitoring of workers (video, internet and, by extension, GPS) is governed by Law 133/2011 and the Labour Code (art. 91-94); workers must be informed about who accesses the data and what data is collected.',
         de: 'Die Ueberwachung der Arbeitnehmer (Video, Internet und im weiteren Sinne GPS) ist durch das Gesetz 133/2011 und das Arbeitsgesetzbuch (Art. 91-94) geregelt; die Arbeitnehmer muessen darueber informiert werden, wer auf die Daten zugreift und welche Daten erhoben werden.',
         fr: "La surveillance des travailleurs (video, internet et, par extension, GPS) est regie par la loi 133/2011 et le Code du travail (art. 91-94); les travailleurs doivent etre informes de qui accede aux donnees et de quelles donnees sont collectees.",
@@ -115,7 +115,7 @@ export const moldova: SchedaPaese = {
     },
     {
       voce: {
-        it: "Notifica o registrazione preventiva di un'autorita prima di installare",
+        it: "Notifica o registrazione preventiva di un'autorità prima di installare",
         en: 'Prior notification or registration with an authority before installing',
         de: 'Vorherige Meldung oder Registrierung bei einer Behoerde vor der Installation',
         fr: "Notification ou enregistrement prealable aupres d'une autorite avant l'installation",
@@ -124,7 +124,7 @@ export const moldova: SchedaPaese = {
       },
       risposta: 'no',
       dettaglio: {
-        it: "L'obbligo di notifica/registrazione dei sistemi di dati al CNPDCP e' stato abolito dal 10 gennaio 2022 ed e' stato sostituito da una valutazione d'impatto a carico del titolare.",
+        it: "L'obbligo di notifica/registrazione dei sistemi di dati al CNPDCP è stato abolito dal 10 gennaio 2022 ed è stato sostituito da una valutazione d'impatto a carico del titolare.",
         en: 'The obligation to notify/register data systems with the CNPDCP was abolished on 10 January 2022 and replaced by an impact assessment carried out by the controller.',
         de: 'Die Pflicht zur Meldung/Registrierung von Datensystemen beim CNPDCP wurde zum 10. Januar 2022 abgeschafft und durch eine vom Verantwortlichen durchzufuehrende Folgenabschaetzung ersetzt.',
         fr: "L'obligation de notifier/enregistrer les systemes de donnees aupres du CNPDCP a ete abolie le 10 janvier 2022 et remplacee par une analyse d'impact realisee par le responsable du traitement.",
@@ -155,7 +155,7 @@ export const moldova: SchedaPaese = {
     },
     {
       voce: {
-        it: 'Minimizzazione e limitazione della finalita; niente tracciamento eccessivo fuori orario',
+        it: 'Minimizzazione e limitazione della finalità; niente tracciamento eccessivo fuori orario',
         en: 'Minimisation and purpose limitation; no excessive tracking outside working hours',
         de: 'Datenminimierung und Zweckbindung; keine uebermaessige Ortung ausserhalb der Arbeitszeit',
         fr: 'Minimisation et limitation des finalites; pas de suivi excessif en dehors des heures de travail',
@@ -164,7 +164,7 @@ export const moldova: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "Valgono i principi di minimizzazione e limitazione della finalita'; un tracciamento GPS continuo o fuori dall'orario di lavoro e' sproporzionato.",
+        it: "Valgono i principi di minimizzazione e limitazione della finalità; un tracciamento GPS continuo o fuori dall'orario di lavoro è sproporzionato.",
         en: 'The principles of data minimisation and purpose limitation apply; continuous GPS tracking or tracking outside working hours is disproportionate.',
         de: 'Es gelten die Grundsaetze der Datenminimierung und der Zweckbindung; eine kontinuierliche GPS-Ortung oder eine Ortung ausserhalb der Arbeitszeit ist unverhaeltnismaessig.',
         fr: "Les principes de minimisation des donnees et de limitation des finalites s'appliquent; un suivi GPS continu ou en dehors des heures de travail est disproportionne.",
@@ -184,7 +184,7 @@ export const moldova: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "Dal 2022 il titolare deve svolgere una valutazione d'impatto (che ha sostituito la registrazione), descrivendo i trattamenti previsti, la finalita' e l'interesse legittimo.",
+        it: "Dal 2022 il titolare deve svolgere una valutazione d'impatto (che ha sostituito la registrazione), descrivendo i trattamenti previsti, la finalità e l'interesse legittimo.",
         en: 'Since 2022 the controller must carry out an impact assessment (which has replaced registration), describing the intended processing, the purpose and the legitimate interest.',
         de: 'Seit 2022 muss der Verantwortliche eine Folgenabschaetzung durchfuehren (die die Registrierung ersetzt hat) und darin die geplanten Verarbeitungen, den Zweck und das berechtigte Interesse beschreiben.',
         fr: "Depuis 2022, le responsable du traitement doit realiser une analyse d'impact (qui a remplace l'enregistrement), decrivant les traitements prevus, la finalite et l'interet legitime.",
@@ -232,7 +232,7 @@ export const moldova: SchedaPaese = {
     {
       passo: 4,
       descrizione: {
-        it: 'Applica minimizzazione e limitazione della finalita.',
+        it: 'Applica minimizzazione e limitazione della finalità.',
         en: 'Apply data minimisation and purpose limitation.',
         de: 'Wenden Sie Datenminimierung und Zweckbindung an.',
         fr: 'Appliquez la minimisation des donnees et la limitation des finalites.',
@@ -293,6 +293,7 @@ export const moldova: SchedaPaese = {
       nl: 'Er is geen specifiek gepubliceerd CNPDCP-besluit over gps bij werknemers. De geldende wet (133/2011) kent lagere sancties. De nieuwe wet 195/2024, van toepassing vanaf 23 augustus 2026, zet de AVG om maar met een eigen sanctiestelsel: tot 1.000.000 MDL of 1% van de omzet voor lichtere inbreuken en tot 2.000.000 MDL of 2% voor de zwaardere, gefaseerd ingevoerd in de eerste jaren. De Europese plafonds van 20 miljoen euro gelden hier dus niet.',
     },
     urlFonte: FONTE_DLA_PIPER.url,
+    tipoImporto: 'massimale',
   },
 
   fonti: [

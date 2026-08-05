@@ -84,7 +84,7 @@ export const bosnia: SchedaPaese = {
     urlFonte: 'https://azlp.ba/',
     verificatoIl: '2026-06-15',
     note: {
-      it: "La Bosnia ed Erzegovina e' un paese candidato, fuori dall'UE; dal 2025 ha una nuova legge allineata al GDPR. Unica autorita' nazionale, l'AZLP; nessuna ripartizione per entita'.",
+      it: "La Bosnia ed Erzegovina è un paese candidato, fuori dall'UE; dal 2025 ha una nuova legge allineata al GDPR. Unica autorità nazionale, l'AZLP; nessuna ripartizione per entità.",
       en: 'Bosnia and Herzegovina is a candidate country, outside the EU; since 2025 it has a new law aligned with the GDPR. A single national authority, the AZLP; no division by entity.',
       de: 'Bosnien und Herzegowina ist ein Beitrittskandidat ausserhalb der EU; seit 2025 gilt ein neues, an die DSGVO angeglichenes Gesetz. Es gibt eine einzige nationale Behoerde, die AZLP; keine Aufteilung nach Entitaeten.',
       fr: "La Bosnie-Herzegovine est un pays candidat, hors de l'UE ; depuis 2025, elle dispose d'une nouvelle loi alignee sur le RGPD. Une seule autorite nationale, l'AZLP ; aucune repartition par entite.",
@@ -116,7 +116,7 @@ export const bosnia: SchedaPaese = {
     },
     {
       voce: {
-        it: "Autorizzazione o registrazione preventiva di un'autorita prima di installare",
+        it: "Autorizzazione o registrazione preventiva di un'autorità prima di installare",
         en: 'Prior authorisation or registration with an authority before installing',
         de: 'Vorherige Genehmigung oder Registrierung bei einer Behoerde vor der Installation',
         fr: "Autorisation ou enregistrement prealable aupres d'une autorite avant l'installation",
@@ -145,7 +145,7 @@ export const bosnia: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "La base usuale e' l'interesse legittimo; nel rapporto di lavoro il consenso e' una base debole per lo squilibrio di potere.",
+        it: "La base usuale è l'interesse legittimo; nel rapporto di lavoro il consenso è una base debole per lo squilibrio di potere.",
         en: 'The usual basis is legitimate interest; in the employment relationship consent is a weak basis because of the imbalance of power.',
         de: 'Die uebliche Grundlage ist das berechtigte Interesse; im Arbeitsverhaeltnis ist die Einwilligung wegen des Machtungleichgewichts eine schwache Grundlage.',
         fr: "La base habituelle est l'interet legitime ; dans la relation de travail, le consentement est une base faible en raison du desequilibre des pouvoirs.",
@@ -156,7 +156,7 @@ export const bosnia: SchedaPaese = {
     },
     {
       voce: {
-        it: 'Proporzionalita e minimizzazione del trattamento',
+        it: 'Proporzionalità e minimizzazione del trattamento',
         en: 'Proportionality and data minimisation of the processing',
         de: 'Verhaeltnismaessigkeit und Datenminimierung der Verarbeitung',
         fr: 'Proportionnalite et minimisation des donnees du traitement',
@@ -165,7 +165,7 @@ export const bosnia: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "Il trattamento deve rispettare la minimizzazione e la proporzionalita, in linea con l'allineamento al GDPR.",
+        it: "Il trattamento deve rispettare la minimizzazione e la proporzionalità, in linea con l'allineamento al GDPR.",
         en: 'The processing must respect minimisation and proportionality, in line with the alignment to the GDPR.',
         de: 'Die Verarbeitung muss die Datenminimierung und die Verhaeltnismaessigkeit beachten, im Einklang mit der Angleichung an die DSGVO.',
         fr: "Le traitement doit respecter la minimisation et la proportionnalite, conformement a l'alignement sur le RGPD.",
@@ -233,7 +233,7 @@ export const bosnia: SchedaPaese = {
     {
       passo: 4,
       descrizione: {
-        it: 'Applica minimizzazione e proporzionalita.',
+        it: 'Applica minimizzazione e proporzionalità.',
         en: 'Apply minimisation and proportionality.',
         de: 'Wenden Sie Datenminimierung und Verhaeltnismaessigkeit an.',
         fr: 'Appliquez la minimisation et la proportionnalite.',
@@ -244,7 +244,7 @@ export const bosnia: SchedaPaese = {
     {
       passo: 5,
       descrizione: {
-        it: 'Configura il sistema in modo proporzionato alla finalita dichiarata.',
+        it: 'Configura il sistema in modo proporzionato alla finalità dichiarata.',
         en: 'Configure the system in a way proportionate to the stated purpose.',
         de: 'Konfigurieren Sie das System verhaeltnismaessig zum angegebenen Zweck.',
         fr: 'Configurez le systeme de maniere proportionnee a la finalite declaree.',
@@ -295,6 +295,7 @@ export const bosnia: SchedaPaese = {
     },
     urlFonte:
       'https://parser.hr/en/new-law-on-personal-data-protection-in-bosnia-and-herzegovina/',
+    tipoImporto: 'massimale',
   },
 
   fonti: [

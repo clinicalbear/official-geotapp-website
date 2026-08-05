@@ -58,10 +58,25 @@ export interface ModelloPdf {
   url: string;
 }
 
+/**
+ * Che cosa e' davvero l'importo mostrato. Aggiunto il 05/08/2026 perche' la
+ * striscia di riepilogo in cima alla scheda mostrava il numero da solo, sotto
+ * l'etichetta "Quanto si rischia", mentre il chiarimento stava molto piu' giu':
+ * chi leggeva la Germania portava via "35,3 milioni" come se fosse la sanzione
+ * per il GPS, quando e' la multa H&M per la schedatura della vita privata.
+ *
+ * - `caso-gps`    l'esito viene da un caso reale di GPS sui lavoratori
+ * - `caso-affine` viene da un caso reale di controllo dei lavoratori, ma non GPS
+ * - `massimale`   non c'e' un caso: e' il tetto previsto dalla legge
+ */
+export type TipoImporto = 'caso-gps' | 'caso-affine' | 'massimale';
+
 export interface SanzioneMax {
   importo: TestoLoc;
   casoCitato: TestoLoc;
   urlFonte: string;
+  /** Qualifica l'IMPORTO mostrato, non il caso citato: sono cose diverse. */
+  tipoImporto: TipoImporto;
 }
 
 export interface SchedaPaese {

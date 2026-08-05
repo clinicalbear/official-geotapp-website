@@ -80,7 +80,7 @@ export const ucraina: SchedaPaese = {
     urlFonte: FONTE_OMBUDSMAN.url,
     verificatoIl: '2026-06-15',
     note: {
-      it: "L'Ucraina e' un paese candidato, fuori dall'UE, e non applica il GDPR. Vale la Legge 2297-VI del 2010, consent-centric; una riforma allineata al GDPR e' in attesa. Autorita': il Difensore civico (Ombudsman). Contesto di guerra: l'applicazione e' limitata e irregolare.",
+      it: "L'Ucraina è un paese candidato, fuori dall'UE, e non applica il GDPR. Vale la Legge 2297-VI del 2010, consent-centric; una riforma allineata al GDPR è in attesa. Autorità: il Difensore civico (Ombudsman). Contesto di guerra: l'applicazione è limitata e irregolare.",
       en: 'Ukraine is a candidate country, outside the EU, and does not apply the GDPR. Law 2297-VI of 2010 applies, and it is consent-centric; a reform aligned with the GDPR is pending. The supervisory authority is the Ombudsman. War context: enforcement is limited and irregular.',
       de: 'Die Ukraine ist ein Beitrittskandidat, liegt ausserhalb der EU und wendet die DSGVO nicht an. Es gilt das Gesetz 2297-VI von 2010, das stark auf der Einwilligung beruht; eine an die DSGVO angeglichene Reform steht noch aus. Aufsichtsbehoerde ist der Ombudsmann (Buergerbeauftragte). Kriegskontext: Der Vollzug ist begrenzt und unregelmaessig.',
       fr: "L'Ukraine est un pays candidat, hors de l'UE, et n'applique pas le RGPD. C'est la loi 2297-VI de 2010 qui s'applique, fortement axee sur le consentement ; une reforme alignee sur le RGPD est en attente. L'autorite est le Defenseur des droits (Ombudsman). Contexte de guerre : l'application est limitee et irreguliere.",
@@ -101,7 +101,7 @@ export const ucraina: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "Il trattamento dei dati dei lavoratori (incluso il GPS) richiede una delle sei basi dell'art. 11 della Legge 2297-VI; i lavoratori vanno informati su titolare, dati, finalita', diritti e destinatari, alla raccolta o entro 30 giorni lavorativi.",
+        it: "Il trattamento dei dati dei lavoratori (incluso il GPS) richiede una delle sei basi dell'art. 11 della Legge 2297-VI; i lavoratori vanno informati su titolare, dati, finalità, diritti e destinatari, alla raccolta o entro 30 giorni lavorativi.",
         en: 'Processing of workers data (including GPS) requires one of the six legal bases under art. 11 of Law 2297-VI; workers must be informed about the controller, the data, the purposes, their rights and the recipients, at the time of collection or within 30 working days.',
         de: 'Die Verarbeitung von Beschaeftigtendaten (einschliesslich GPS) erfordert eine der sechs Rechtsgrundlagen nach Art. 11 des Gesetzes 2297-VI; die Beschaeftigten sind ueber den Verantwortlichen, die Daten, die Zwecke, ihre Rechte und die Empfaenger zu informieren, bei der Erhebung oder innerhalb von 30 Arbeitstagen.',
         fr: "Le traitement des donnees des travailleurs (y compris le GPS) requiert l'une des six bases de l'art. 11 de la loi 2297-VI ; les travailleurs doivent etre informes sur le responsable, les donnees, les finalites, leurs droits et les destinataires, lors de la collecte ou dans un delai de 30 jours ouvrables.",
@@ -112,7 +112,7 @@ export const ucraina: SchedaPaese = {
     },
     {
       voce: {
-        it: "Autorizzazione o registrazione preventiva di un'autorita' prima di installare",
+        it: "Autorizzazione o registrazione preventiva di un'autorità prima di installare",
         en: 'Prior authorisation or registration with an authority before installing',
         de: 'Vorherige Genehmigung oder Registrierung bei einer Behoerde vor der Installation',
         fr: "Autorisation ou enregistrement prealable aupres d'une autorite avant l'installation",
@@ -121,7 +121,7 @@ export const ucraina: SchedaPaese = {
       },
       risposta: 'no',
       dettaglio: {
-        it: "La registrazione obbligatoria delle banche dati e' stata abolita dal 1 gennaio 2014; la notifica dei trattamenti a rischio non si applica ai dati del rapporto di lavoro (esenti).",
+        it: "La registrazione obbligatoria delle banche dati è stata abolita dal 1 gennaio 2014; la notifica dei trattamenti a rischio non si applica ai dati del rapporto di lavoro (esenti).",
         en: 'The mandatory registration of databases was abolished as of 1 January 2014; the notification of high-risk processing does not apply to employment relationship data (which are exempt).',
         de: 'Die Pflicht zur Registrierung von Datenbanken wurde zum 1. Januar 2014 abgeschafft; die Meldung risikobehafteter Verarbeitungen gilt nicht fuer Daten des Arbeitsverhaeltnisses (diese sind ausgenommen).',
         fr: "L'enregistrement obligatoire des bases de donnees a ete supprime au 1er janvier 2014 ; la notification des traitements a risque ne s'applique pas aux donnees de la relation de travail (qui en sont exemptees).",
@@ -141,7 +141,7 @@ export const ucraina: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "A differenza del GDPR, la legge ucraina si basa molto sul consenso come base principale; per il GPS conviene informare in anticipo e documentare il consenso, oltre a definire una finalita' scritta.",
+        it: "A differenza del GDPR, la legge ucraina si basa molto sul consenso come base principale; per il GPS conviene informare in anticipo e documentare il consenso, oltre a definire una finalità scritta.",
         en: 'Unlike the GDPR, Ukrainian law relies heavily on consent as the main basis; for GPS it is advisable to inform in advance and document the consent, as well as to set out a written purpose.',
         de: 'Anders als die DSGVO stuetzt sich das ukrainische Recht stark auf die Einwilligung als wichtigste Grundlage; fuer GPS empfiehlt es sich, vorab zu informieren und die Einwilligung zu dokumentieren sowie einen schriftlichen Zweck festzulegen.',
         fr: "Contrairement au RGPD, le droit ukrainien repose largement sur le consentement comme base principale ; pour le GPS, il convient d'informer a l'avance et de documenter le consentement, ainsi que de definir une finalite ecrite.",
@@ -152,7 +152,7 @@ export const ucraina: SchedaPaese = {
     },
     {
       voce: {
-        it: 'Trattamento limitato alla finalita\' dichiarata (limitazione della finalita\')',
+        it: 'Trattamento limitato alla finalità dichiarata (limitazione della finalità)',
         en: 'Processing limited to the stated purpose (purpose limitation)',
         de: 'Auf den angegebenen Zweck beschraenkte Verarbeitung (Zweckbindung)',
         fr: 'Traitement limite a la finalite declaree (limitation de la finalite)',
@@ -161,7 +161,7 @@ export const ucraina: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "I dati vanno trattati solo nei limiti della finalita' dichiarata; i dipendenti del titolare possono usarli solo per i propri compiti professionali.",
+        it: "I dati vanno trattati solo nei limiti della finalità dichiarata; i dipendenti del titolare possono usarli solo per i propri compiti professionali.",
         en: 'Data must be processed only within the limits of the stated purpose; the controller employees may use it only for their own professional tasks.',
         de: 'Die Daten duerfen nur im Rahmen des angegebenen Zwecks verarbeitet werden; die Mitarbeiter des Verantwortlichen duerfen sie nur fuer ihre eigenen beruflichen Aufgaben nutzen.',
         fr: "Les donnees ne doivent etre traitees que dans les limites de la finalite declaree ; les salaries du responsable ne peuvent les utiliser que pour leurs propres taches professionnelles.",
@@ -181,7 +181,7 @@ export const ucraina: SchedaPaese = {
       },
       risposta: 'no',
       dettaglio: {
-        it: "La legge attuale non richiede una valutazione d'impatto; lo prevedera' solo l'eventuale riforma allineata al GDPR (ddl 8153), non ancora in vigore.",
+        it: "La legge attuale non richiede una valutazione d'impatto; lo prevederà solo l'eventuale riforma allineata al GDPR (ddl 8153), non ancora in vigore.",
         en: 'The current law does not require an impact assessment; it will be required only by the possible reform aligned with the GDPR (bill 8153), which is not yet in force.',
         de: 'Das geltende Recht verlangt keine Folgenabschaetzung; vorgesehen ist sie erst durch die etwaige an die DSGVO angeglichene Reform (Gesetzentwurf 8153), die noch nicht in Kraft ist.',
         fr: "La loi actuelle n'exige pas d'analyse d'impact ; elle ne sera prevue que par l'eventuelle reforme alignee sur le RGPD (projet de loi 8153), pas encore en vigueur.",
@@ -196,7 +196,7 @@ export const ucraina: SchedaPaese = {
     {
       passo: 1,
       descrizione: {
-        it: "Individua una base giuridica valida (di norma il consenso) e definisci una finalita' scritta.",
+        it: "Individua una base giuridica valida (di norma il consenso) e definisci una finalità scritta.",
         en: 'Identify a valid legal basis (as a rule, consent) and define a written purpose.',
         de: 'Bestimmen Sie eine gueltige Rechtsgrundlage (in der Regel die Einwilligung) und legen Sie einen schriftlichen Zweck fest.',
         fr: 'Determinez une base juridique valable (en regle generale le consentement) et definissez une finalite ecrite.',
@@ -207,7 +207,7 @@ export const ucraina: SchedaPaese = {
     {
       passo: 2,
       descrizione: {
-        it: "Informa i lavoratori su dati, finalita', diritti e destinatari (alla raccolta o entro 30 giorni lavorativi).",
+        it: "Informa i lavoratori su dati, finalità, diritti e destinatari (alla raccolta o entro 30 giorni lavorativi).",
         en: 'Inform workers about the data, the purposes, their rights and the recipients (at the time of collection or within 30 working days).',
         de: 'Informieren Sie die Beschaeftigten ueber die Daten, die Zwecke, ihre Rechte und die Empfaenger (bei der Erhebung oder innerhalb von 30 Arbeitstagen).',
         fr: 'Informez les travailleurs sur les donnees, les finalites, leurs droits et les destinataires (lors de la collecte ou dans un delai de 30 jours ouvrables).',
@@ -229,7 +229,7 @@ export const ucraina: SchedaPaese = {
     {
       passo: 4,
       descrizione: {
-        it: "Limita il trattamento alla sola finalita' dichiarata.",
+        it: "Limita il trattamento alla sola finalità dichiarata.",
         en: 'Limit the processing to the stated purpose only.',
         de: 'Beschraenken Sie die Verarbeitung ausschliesslich auf den angegebenen Zweck.',
         fr: 'Limitez le traitement a la seule finalite declaree.',
@@ -240,7 +240,7 @@ export const ucraina: SchedaPaese = {
     {
       passo: 5,
       descrizione: {
-        it: "Tieni presente la riforma in arrivo (ddl 8153): se entra in vigore, introdurra' regole in stile GDPR (informazione preventiva, niente decisioni solo automatizzate, DPIA).",
+        it: "Tieni presente la riforma in arrivo (ddl 8153): se entra in vigore, introdurrà regole in stile GDPR (informazione preventiva, niente decisioni solo automatizzate, DPIA).",
         en: 'Bear in mind the upcoming reform (bill 8153): if it comes into force, it will introduce GDPR-style rules (prior information, no solely automated decisions, DPIA).',
         de: 'Beachten Sie die bevorstehende Reform (Gesetzentwurf 8153): Tritt sie in Kraft, fuehrt sie Regeln im DSGVO-Stil ein (vorherige Information, keine ausschliesslich automatisierten Entscheidungen, DSFA).',
         fr: "Gardez a l'esprit la reforme a venir (projet de loi 8153) : si elle entre en vigueur, elle introduira des regles de type RGPD (information prealable, pas de decisions uniquement automatisees, AIPD).",
@@ -282,7 +282,7 @@ export const ucraina: SchedaPaese = {
       nl: 'momenteel bescheiden boetes (ongeveer 150 - 380 euro)',
     },
     casoCitato: {
-      it: "Non risulta una decisione ucraina specifica e pubblicata sul GPS sui dipendenti, e l'applicazione e' limitata. Le sanzioni amministrative attuali sono modeste (circa 150 - 380 euro). La riforma in attesa (ddl 8153, approvato in prima lettura il 20 novembre 2024 e in attesa della seconda) porterebbe sanzioni in stile GDPR (fino a 150 milioni di UAH o 8% del fatturato), ma non e' in vigore.",
+      it: "Non risulta una decisione ucraina specifica e pubblicata sul GPS sui dipendenti, e l'applicazione è limitata. Le sanzioni amministrative attuali sono modeste (circa 150 - 380 euro). La riforma in attesa (ddl 8153, approvato in prima lettura il 20 novembre 2024 e in attesa della seconda) porterebbe sanzioni in stile GDPR (fino a 150 milioni di UAH o 8% del fatturato), ma non è in vigore.",
       en: 'There is no specific published Ukrainian decision on GPS tracking of employees, and enforcement is limited. The current administrative fines are modest (around 150 - 380 euros). The pending reform (bill 8153) would bring GDPR-style fines (up to 150 million UAH or 8% of turnover), but it is not in force.',
       de: 'Eine spezifische, veroeffentlichte ukrainische Entscheidung zur GPS-Ueberwachung von Beschaeftigten ist nicht ersichtlich, und der Vollzug ist begrenzt. Die derzeitigen Bussgelder sind moderat (etwa 150 - 380 Euro). Die ausstehende Reform (Gesetzentwurf 8153) wuerde Bussgelder im DSGVO-Stil bringen (bis zu 150 Millionen UAH oder 8 % des Umsatzes), ist aber nicht in Kraft.',
       fr: "Il n'existe pas de decision ukrainienne specifique et publiee sur le GPS des salaries, et l'application est limitee. Les amendes administratives actuelles sont modestes (environ 150 - 380 euros). La reforme en attente (projet de loi 8153) introduirait des amendes de type RGPD (jusqu'a 150 millions de UAH ou 8 % du chiffre d'affaires), mais elle n'est pas en vigueur.",
@@ -290,6 +290,7 @@ export const ucraina: SchedaPaese = {
       nl: 'Er is geen specifieke, gepubliceerde Oekraiense beslissing over GPS-volging van werknemers, en de handhaving is beperkt. De huidige administratieve boetes zijn bescheiden (ongeveer 150 - 380 euro). De aanhangige hervorming (wetsvoorstel 8153) zou boetes in AVG-stijl invoeren (tot 150 miljoen UAH of 8% van de omzet), maar is niet van kracht.',
     },
     urlFonte: FONTE_ICLG.url,
+    tipoImporto: 'massimale',
   },
 
   fonti: [FONTE_LEGGE_2297, FONTE_OMBUDSMAN, FONTE_ICLG, FONTE_GDPR],

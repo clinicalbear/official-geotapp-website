@@ -84,7 +84,7 @@ export const ungheria: SchedaPaese = {
     urlFonte: FONTE_NAIH.url,
     verificatoIl: '2026-06-15',
     note: {
-      it: "L'Ungheria ha un'unica autorita nazionale, il NAIH; nessuna ripartizione regionale.",
+      it: "L'Ungheria ha un'unica autorità nazionale, il NAIH; nessuna ripartizione regionale.",
       en: 'Hungary has a single national authority, the NAIH; there is no regional breakdown.',
       de: 'Ungarn hat eine einzige nationale Behörde, die NAIH; es gibt keine regionale Aufteilung.',
       fr: "La Hongrie dispose d'une seule autorité nationale, la NAIH; il n'y a pas de répartition régionale.",
@@ -136,7 +136,7 @@ export const ungheria: SchedaPaese = {
     },
     {
       voce: {
-        it: "Autorizzazione preventiva di un'autorita prima di installare",
+        it: "Autorizzazione preventiva di un'autorità prima di installare",
         en: 'Prior authorisation from an authority before installing',
         de: 'Vorherige Genehmigung einer Behörde vor der Installation',
         fr: "Autorisation préalable d'une autorité avant l'installation",
@@ -145,7 +145,7 @@ export const ungheria: SchedaPaese = {
       },
       risposta: 'no',
       dettaglio: {
-        it: 'Non serve un\'autorizzazione preventiva del NAIH; il datore valuta da se base giuridica e proporzionalita prima dell\'introduzione.',
+        it: 'Non serve un\'autorizzazione preventiva del NAIH; il datore valuta da se base giuridica e proporzionalità prima dell\'introduzione.',
         en: 'No prior authorisation from the NAIH is required; the employer assesses the legal basis and proportionality itself before introduction.',
         de: 'Eine vorherige Genehmigung der NAIH ist nicht erforderlich; der Arbeitgeber prüft die Rechtsgrundlage und die Verhältnismäßigkeit vor der Einführung selbst.',
         fr: "Aucune autorisation préalable de la NAIH n'est nécessaire; l'employeur évalue lui-même la base juridique et la proportionnalité avant l'introduction.",
@@ -286,7 +286,7 @@ export const ungheria: SchedaPaese = {
       nl: '15.000.000 HUF (ongeveer 37.500 euro)',
     },
     casoCitato: {
-      it: "NAIH contro Auchan Magyarorszag (gennaio 2018, caso NAIH/2018/412/2/H): videosorveglianza sul luogo di lavoro senza una base giuridica adeguata, informazione carente ai lavoratori e violazione della limitazione della finalita. Multa 15.000.000 HUF. Non e un caso di GPS, ma e la sanzione di riferimento del NAIH sul monitoraggio dei dipendenti.",
+      it: "NAIH contro Auchan Magyarorszag (gennaio 2018, caso NAIH/2018/412/2/H): videosorveglianza sul luogo di lavoro senza una base giuridica adeguata, informazione carente ai lavoratori e violazione della limitazione della finalità. Multa 15.000.000 HUF. Non e un caso di GPS, ma e la sanzione di riferimento del NAIH sul monitoraggio dei dipendenti.",
       en: 'NAIH versus Auchan Magyarorszag (January 2018, case NAIH/2018/412/2/H): video surveillance in the workplace without an adequate legal basis, inadequate information to workers and breach of the purpose limitation principle. Fine 15,000,000 HUF. It is not a GPS case, but it is the NAIH reference penalty on employee monitoring.',
       de: 'NAIH gegen Auchan Magyarorszag (Januar 2018, Fall NAIH/2018/412/2/H): Videoüberwachung am Arbeitsplatz ohne angemessene Rechtsgrundlage, unzureichende Information der Arbeitnehmer und Verstoß gegen die Zweckbindung. Geldbuße 15.000.000 HUF. Es handelt sich nicht um einen GPS-Fall, aber es ist die maßgebliche Sanktion der NAIH zur Überwachung von Beschäftigten.',
       fr: "NAIH contre Auchan Magyarorszag (janvier 2018, affaire NAIH/2018/412/2/H): vidéosurveillance sur le lieu de travail sans base juridique adéquate, information insuffisante des travailleurs et violation de la limitation des finalités. Amende de 15 000 000 HUF. Ce n'est pas une affaire de GPS, mais c'est la sanction de référence de la NAIH en matière de surveillance des salariés.",
@@ -294,6 +294,7 @@ export const ungheria: SchedaPaese = {
       nl: 'NAIH tegen Auchan Magyarorszag (januari 2018, zaak NAIH/2018/412/2/H): videobewaking op de werkplek zonder een adequate rechtsgrondslag, gebrekkige informatie aan werknemers en schending van de doelbinding. Boete 15.000.000 HUF. Het is geen GPS-zaak, maar het is de referentiesanctie van de NAIH inzake de monitoring van werknemers.',
     },
     urlFonte: FONTE_NAIH_AUCHAN.url,
+    tipoImporto: 'caso-affine',
   },
 
   fonti: [

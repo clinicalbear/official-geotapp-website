@@ -89,7 +89,7 @@ export const finlandia: SchedaPaese = {
     urlFonte: FONTE_GARANTE_SEGNALAZIONE.url,
     verificatoIl: '2026-06-15',
     note: {
-      it: "La Finlandia ha un'unica autorita' nazionale, il Garante (Tietosuojavaltuutettu); nessuna ripartizione regionale.",
+      it: "La Finlandia ha un'unica autorità nazionale, il Garante (Tietosuojavaltuutettu); nessuna ripartizione regionale.",
       en: 'Finland has a single national authority, the Data Protection Ombudsman (Tietosuojavaltuutettu); there is no regional subdivision.',
       de: 'Finnland hat eine einzige nationale Behoerde, den Datenschutzbeauftragten (Tietosuojavaltuutettu); es gibt keine regionale Untergliederung.',
       fr: "La Finlande dispose d'une seule autorite nationale, le Mediateur a la protection des donnees (Tietosuojavaltuutettu); il n'existe aucune subdivision regionale.",
@@ -110,7 +110,7 @@ export const finlandia: SchedaPaese = {
       },
       risposta: 'dipende',
       dettaglio: {
-        it: "La determinazione della posizione dei dipendenti e' una forma di sorveglianza tecnica che va trattata nella procedura di cooperazione sul luogo di lavoro prima dell'adozione. La negoziazione vale sopra una soglia dimensionale (50 dipendenti dal 1 luglio 2025); sotto, resta comunque un diritto dei lavoratori di essere sentiti.",
+        it: "La determinazione della posizione dei dipendenti è una forma di sorveglianza tecnica che va trattata nella procedura di cooperazione sul luogo di lavoro prima dell'adozione. La negoziazione vale sopra una soglia dimensionale (50 dipendenti dal 1 luglio 2025); sotto, resta comunque un diritto dei lavoratori di essere sentiti.",
         en: 'Determining the location of employees is a form of technical monitoring that must be addressed in the workplace cooperation procedure before it is adopted. The negotiation applies above a size threshold (50 employees from 1 July 2025); below it, employees still retain the right to be heard.',
         de: 'Die Standortbestimmung von Beschaeftigten ist eine Form der technischen Ueberwachung, die vor ihrer Einfuehrung im betrieblichen Kooperationsverfahren behandelt werden muss. Die Verhandlung gilt oberhalb einer Groessenschwelle (50 Beschaeftigte ab dem 1. Juli 2025); darunter bleibt den Beschaeftigten gleichwohl das Recht, angehoert zu werden.',
         fr: "La determination de la position des salaries est une forme de surveillance technique qui doit etre traitee dans la procedure de cooperation sur le lieu de travail avant son adoption. La negociation s'applique au-dela d'un seuil d'effectif (50 salaries a compter du 1er juillet 2025); en deca, les salaries conservent neanmoins le droit d'etre entendus.",
@@ -121,7 +121,7 @@ export const finlandia: SchedaPaese = {
     },
     {
       voce: {
-        it: 'Solo dati direttamente necessari al rapporto di lavoro; il requisito di necessita non si deroga col consenso (Legge 759/2004)',
+        it: 'Solo dati direttamente necessari al rapporto di lavoro; il requisito di necessità non si deroga col consenso (Legge 759/2004)',
         en: 'Only data directly necessary for the employment relationship; the necessity requirement cannot be waived by consent (Act 759/2004)',
         de: 'Nur Daten, die fuer das Arbeitsverhaeltnis unmittelbar erforderlich sind; das Erforderlichkeitsgebot kann nicht durch Einwilligung umgangen werden (Gesetz 759/2004)',
         fr: "Uniquement les donnees directement necessaires a la relation de travail; l'exigence de necessite ne peut etre ecartee par le consentement (Loi 759/2004)",
@@ -130,7 +130,7 @@ export const finlandia: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "Il datore può' trattare solo i dati direttamente necessari al rapporto di lavoro; nemmeno il consenso del lavoratore autorizza il trattamento di dati che non soddisfano questo requisito.",
+        it: "Il datore può trattare solo i dati direttamente necessari al rapporto di lavoro; nemmeno il consenso del lavoratore autorizza il trattamento di dati che non soddisfano questo requisito.",
         en: 'The employer may process only data directly necessary for the employment relationship; not even the employee consent authorises the processing of data that does not meet this requirement.',
         de: 'Der Arbeitgeber darf nur Daten verarbeiten, die fuer das Arbeitsverhaeltnis unmittelbar erforderlich sind; auch die Einwilligung des Arbeitnehmers berechtigt nicht zur Verarbeitung von Daten, die diese Anforderung nicht erfuellen.',
         fr: "L'employeur ne peut traiter que les donnees directement necessaires a la relation de travail; meme le consentement du salarie n'autorise pas le traitement de donnees qui ne remplissent pas cette exigence.",
@@ -141,7 +141,7 @@ export const finlandia: SchedaPaese = {
     },
     {
       voce: {
-        it: "Autorizzazione preventiva di un'autorita prima di installare",
+        it: "Autorizzazione preventiva di un'autorità prima di installare",
         en: 'Prior authorisation from an authority before installation',
         de: 'Vorherige Genehmigung durch eine Behoerde vor der Installation',
         fr: "Autorisation prealable d'une autorite avant l'installation",
@@ -150,7 +150,7 @@ export const finlandia: SchedaPaese = {
       },
       risposta: 'no',
       dettaglio: {
-        it: "Non serve un'autorizzazione preventiva del Garante; la vigilanza e' successiva.",
+        it: "Non serve un'autorizzazione preventiva del Garante; la vigilanza è successiva.",
         en: 'No prior authorisation from the Ombudsman is required; oversight is carried out afterwards.',
         de: 'Eine vorherige Genehmigung des Datenschutzbeauftragten ist nicht erforderlich; die Aufsicht erfolgt nachgelagert.',
         fr: "Aucune autorisation prealable du Mediateur n'est requise; le controle s'exerce a posteriori.",
@@ -161,7 +161,7 @@ export const finlandia: SchedaPaese = {
     },
     {
       voce: {
-        it: 'La localizzazione non va usata per il controllo dell\'orario salvo casi limitati; proporzionalita',
+        it: 'La localizzazione non va usata per il controllo dell\'orario salvo casi limitati; proporzionalità',
         en: 'Location tracking should not be used for working-time control except in limited cases; proportionality',
         de: 'Die Standortbestimmung sollte ausser in begrenzten Faellen nicht zur Arbeitszeitkontrolle verwendet werden; Verhaeltnismaessigkeit',
         fr: "La geolocalisation ne doit pas servir au controle du temps de travail, sauf cas limites; proportionnalite",
@@ -170,7 +170,7 @@ export const finlandia: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "Per il Garante i dati di posizione non vanno usati di norma per monitorare l'orario di lavoro, salvo casi limitati (es. lavoro da remoto senza alternative meno invasive), e solo con una base e una necessita' adeguate.",
+        it: "Per il Garante i dati di posizione non vanno usati di norma per monitorare l'orario di lavoro, salvo casi limitati (es. lavoro da remoto senza alternative meno invasive), e solo con una base e una necessità adeguate.",
         en: 'According to the Ombudsman, location data should not as a rule be used to monitor working time, except in limited cases (e.g. remote work with no less intrusive alternatives), and only with an adequate legal basis and necessity.',
         de: 'Nach Auffassung des Datenschutzbeauftragten sollten Standortdaten in der Regel nicht zur Ueberwachung der Arbeitszeit verwendet werden, ausser in begrenzten Faellen (z. B. Telearbeit ohne weniger eingriffsintensive Alternativen) und nur mit einer angemessenen Rechtsgrundlage und Erforderlichkeit.',
         fr: "Selon le Mediateur, les donnees de localisation ne doivent en principe pas servir a surveiller le temps de travail, sauf cas limites (par exemple le travail a distance sans alternatives moins intrusives), et uniquement avec une base et une necessite adequates.",
@@ -238,7 +238,7 @@ export const finlandia: SchedaPaese = {
     {
       passo: 4,
       descrizione: {
-        it: 'Informa i lavoratori del contenuto della decisione e delle modalita di sorveglianza.',
+        it: 'Informa i lavoratori del contenuto della decisione e delle modalità di sorveglianza.',
         en: 'Inform employees of the content of the decision and of the monitoring methods.',
         de: 'Informieren Sie die Beschaeftigten ueber den Inhalt der Entscheidung und die Ueberwachungsmethoden.',
         fr: 'Informez les salaries du contenu de la decision et des modalites de surveillance.',
@@ -291,7 +291,7 @@ export const finlandia: SchedaPaese = {
       nl: 'EUR 25.000',
     },
     casoCitato: {
-      it: "Garante finlandese (collegio sanzioni), 2021: a un istituto di istruzione superiore e' stata inflitta una multa di 25.000 euro per aver trattato i dati di localizzazione dei dipendenti senza necessita' e senza base giuridica, tramite un'app destinata alla registrazione dell'orario di lavoro; ordinata anche la cessazione del trattamento.",
+      it: "Garante finlandese (collegio sanzioni), 2021: a un istituto di istruzione superiore è stata inflitta una multa di 25.000 euro per aver trattato i dati di localizzazione dei dipendenti senza necessità e senza base giuridica, tramite un'app destinata alla registrazione dell'orario di lavoro; ordinata anche la cessazione del trattamento.",
       en: 'Finnish Data Protection Ombudsman (sanctions board), 2021: a higher education institution was fined 25,000 euro for processing employees location data without necessity and without a legal basis, through an app intended for recording working time; the processing was also ordered to cease.',
       de: 'Finnischer Datenschutzbeauftragter (Sanktionskollegium), 2021: Gegen eine Hochschule wurde ein Bussgeld von 25.000 Euro verhaengt, weil sie die Standortdaten der Beschaeftigten ohne Erforderlichkeit und ohne Rechtsgrundlage ueber eine zur Arbeitszeiterfassung bestimmte App verarbeitet hatte; zudem wurde die Einstellung der Verarbeitung angeordnet.',
       fr: "Mediateur finlandais a la protection des donnees (college des sanctions), 2021: un etablissement d'enseignement superieur s'est vu infliger une amende de 25 000 euros pour avoir traite les donnees de localisation de ses salaries sans necessite et sans base juridique, au moyen d'une application destinee a l'enregistrement du temps de travail; la cessation du traitement a egalement ete ordonnee.",
@@ -299,6 +299,7 @@ export const finlandia: SchedaPaese = {
       nl: 'Finse Ombudsman voor gegevensbescherming (sanctiecollege), 2021: aan een instelling voor hoger onderwijs werd een boete van 25.000 euro opgelegd voor het verwerken van de locatiegegevens van werknemers zonder noodzaak en zonder rechtsgrondslag, via een app bedoeld voor de registratie van de arbeidstijd; tevens werd de beeindiging van de verwerking gelast.',
     },
     urlFonte: FONTE_GARANTE_SANZIONE.url,
+    tipoImporto: 'caso-gps',
   },
 
   fonti: [

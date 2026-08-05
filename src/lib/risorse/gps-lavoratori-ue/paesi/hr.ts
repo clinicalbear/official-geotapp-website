@@ -72,7 +72,7 @@ export const croazia: SchedaPaese = {
     urlFonte: FONTE_AZOP_RECLAMO.url,
     verificatoIl: '2026-06-15',
     note: {
-      it: "La Croazia ha un'unica autorita nazionale, l'AZOP; nessuna ripartizione regionale.",
+      it: "La Croazia ha un'unica autorità nazionale, l'AZOP; nessuna ripartizione regionale.",
       en: 'Croatia has a single national authority, the AZOP; there is no regional breakdown.',
       de: 'Kroatien hat eine einzige nationale Behoerde, die AZOP; es gibt keine regionale Aufteilung.',
       fr: "La Croatie dispose d'une seule autorite nationale, l'AZOP; il n'y a aucune repartition regionale.",
@@ -124,7 +124,7 @@ export const croazia: SchedaPaese = {
     },
     {
       voce: {
-        it: "Autorizzazione preventiva di un'autorita prima di installare",
+        it: "Autorizzazione preventiva di un'autorità prima di installare",
         en: 'Prior authorisation from an authority before installing',
         de: 'Vorherige Genehmigung einer Behoerde vor der Installation',
         fr: "Autorisation prealable d'une autorite avant l'installation",
@@ -144,7 +144,7 @@ export const croazia: SchedaPaese = {
     },
     {
       voce: {
-        it: 'Base = interesse legittimo (non il consenso) e proporzionalita; niente tracciamento fuori orario senza base',
+        it: 'Base = interesse legittimo (non il consenso) e proporzionalità; niente tracciamento fuori orario senza base',
         en: 'Basis = legitimate interest (not consent) and proportionality; no tracking outside working hours without a basis',
         de: 'Grundlage = berechtigtes Interesse (nicht die Einwilligung) und Verhaeltnismaessigkeit; keine Ortung ausserhalb der Arbeitszeit ohne Grundlage',
         fr: "Base = interet legitime (et non le consentement) et proportionnalite; pas de suivi en dehors des heures de travail sans base",
@@ -282,6 +282,7 @@ export const croazia: SchedaPaese = {
       nl: 'Er is geen specifieke en gepubliceerde boete van de AZOP voor GPS bij werknemers bekend. De sterke bescherming ligt in de regel van art. 43 van de arbeidsveiligheidswet: toezicht dat alle bewegingen gedurende de hele werktijd volgt, vereist de voorafgaande toestemming van de ondernemingsraad. Het sanctierisico blijft het algemene van de AVG (art. 83).',
     },
     urlFonte: FONTE_AZOP_GPS.url,
+    tipoImporto: 'massimale',
   },
 
   fonti: [

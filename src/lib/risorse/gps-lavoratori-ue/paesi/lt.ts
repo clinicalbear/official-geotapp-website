@@ -82,7 +82,7 @@ export const lituania: SchedaPaese = {
     urlFonte: FONTE_VDAI_SERVIZI.url,
     verificatoIl: '2026-06-15',
     note: {
-      it: "La Lituania ha un'unica autorita nazionale, il VDAI; nessuna ripartizione regionale.",
+      it: "La Lituania ha un'unica autorità nazionale, il VDAI; nessuna ripartizione regionale.",
       en: 'Lithuania has a single national authority, the VDAI; there is no regional split.',
       de: 'Litauen hat eine einzige nationale Behoerde, das VDAI; es gibt keine regionale Aufteilung.',
       fr: 'La Lituanie dispose d une seule autorite nationale, le VDAI; il n y a pas de repartition regionale.',
@@ -114,7 +114,7 @@ export const lituania: SchedaPaese = {
     },
     {
       voce: {
-        it: "Autorizzazione preventiva di un'autorita prima di installare",
+        it: "Autorizzazione preventiva di un'autorità prima di installare",
         en: 'Prior authorisation from an authority before installing',
         de: 'Vorherige Genehmigung einer Behoerde vor der Installation',
         fr: "Autorisation prealable d une autorite avant l installation",
@@ -292,6 +292,7 @@ export const lituania: SchedaPaese = {
       nl: 'Er is geen specifieke, gepubliceerde VDAI-boete voor gps bij werknemers. Het sanctierisico blijft het algemene van de AVG (art. 83).',
     },
     urlFonte: FONTE_VDAI_CORRISPONDENZA.url,
+    tipoImporto: 'massimale',
   },
 
   fonti: [

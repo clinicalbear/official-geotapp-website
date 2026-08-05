@@ -77,7 +77,7 @@ export const polonia: SchedaPaese = {
     urlFonte: FONTE_UODO_RECLAMO.url,
     verificatoIl: '2026-06-15',
     note: {
-      it: "La Polonia ha un'unica autorita nazionale, l'UODO; nessuna ripartizione regionale.",
+      it: "La Polonia ha un'unica autorità nazionale, l'UODO; nessuna ripartizione regionale.",
       en: "Poland has a single national authority, the UODO; no regional breakdown.",
       de: 'Polen hat eine einzige nationale Behoerde, die UODO; keine regionale Aufteilung.',
       fr: "La Pologne dispose d'une seule autorite nationale, l'UODO; aucune repartition regionale.",
@@ -89,7 +89,7 @@ export const polonia: SchedaPaese = {
   checklist: [
     {
       voce: {
-        it: 'Finalita, portata e modalita del monitoraggio fissate in contratto collettivo, regolamento del lavoro o avviso (Kodeks pracy art. 22(2)/22(3))',
+        it: 'Finalità, portata e modalità del monitoraggio fissate in contratto collettivo, regolamento del lavoro o avviso (Kodeks pracy art. 22(2)/22(3))',
         en: 'Purpose, scope and methods of monitoring set out in a collective agreement, work regulations or a notice (Kodeks pracy art. 22(2)/22(3))',
         de: 'Zweck, Umfang und Art der Ueberwachung in einem Tarifvertrag, einer Arbeitsordnung oder einer Bekanntmachung festgelegt (Kodeks pracy Art. 22(2)/22(3))',
         fr: 'Finalite, portee et modalites de la surveillance fixees dans une convention collective, le reglement du travail ou un avis (Kodeks pracy art. 22(2)/22(3))',
@@ -98,7 +98,7 @@ export const polonia: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "il Codice del lavoro polacco disciplina espressamente il monitoraggio: finalita, portata e modalita vanno stabilite nel contratto collettivo, nel regolamento del lavoro o in un avviso, e le regole sul monitoraggio video si applicano anche alle altre forme (GPS incluso).",
+        it: "il Codice del lavoro polacco disciplina espressamente il monitoraggio: finalità, portata e modalità vanno stabilite nel contratto collettivo, nel regolamento del lavoro o in un avviso, e le regole sul monitoraggio video si applicano anche alle altre forme (GPS incluso).",
         en: 'the Polish Labour Code expressly governs monitoring: purpose, scope and methods must be set out in the collective agreement, the work regulations or a notice, and the rules on video monitoring also apply to other forms (GPS included).',
         de: 'das polnische Arbeitsgesetzbuch regelt die Ueberwachung ausdruecklich: Zweck, Umfang und Art muessen im Tarifvertrag, in der Arbeitsordnung oder in einer Bekanntmachung festgelegt werden, und die Regeln zur Videoueberwachung gelten auch fuer andere Formen (GPS eingeschlossen).',
         fr: "le Code du travail polonais regit expressement la surveillance: la finalite, la portee et les modalites doivent etre fixees dans la convention collective, le reglement du travail ou un avis, et les regles sur la videosurveillance s'appliquent aussi aux autres formes (GPS compris).",
@@ -129,7 +129,7 @@ export const polonia: SchedaPaese = {
     },
     {
       voce: {
-        it: "Autorizzazione preventiva di un'autorita prima di installare",
+        it: "Autorizzazione preventiva di un'autorità prima di installare",
         en: 'Prior authorisation from an authority before installing',
         de: 'Vorherige Genehmigung einer Behoerde vor der Installation',
         fr: "Autorisation prealable d'une autorite avant l'installation",
@@ -149,7 +149,7 @@ export const polonia: SchedaPaese = {
     },
     {
       voce: {
-        it: 'Niente tracciamento degli spostamenti privati o fuori orario; proporzionalita (UODO)',
+        it: 'Niente tracciamento degli spostamenti privati o fuori orario; proporzionalità (UODO)',
         en: 'No tracking of private movements or outside working hours; proportionality (UODO)',
         de: 'Keine Verfolgung privater Bewegungen oder ausserhalb der Arbeitszeit; Verhaeltnismaessigkeit (UODO)',
         fr: 'Aucun suivi des deplacements prives ou hors des heures de travail; proportionnalite (UODO)',
@@ -193,7 +193,7 @@ export const polonia: SchedaPaese = {
     {
       passo: 1,
       descrizione: {
-        it: 'Fissa finalita, portata e modalita del monitoraggio nel contratto collettivo, nel regolamento del lavoro o in un avviso.',
+        it: 'Fissa finalità, portata e modalità del monitoraggio nel contratto collettivo, nel regolamento del lavoro o in un avviso.',
         en: 'Set out the purpose, scope and methods of monitoring in the collective agreement, the work regulations or a notice.',
         de: 'Legen Sie Zweck, Umfang und Art der Ueberwachung im Tarifvertrag, in der Arbeitsordnung oder in einer Bekanntmachung fest.',
         fr: 'Fixez la finalite, la portee et les modalites de la surveillance dans la convention collective, le reglement du travail ou un avis.',
@@ -237,7 +237,7 @@ export const polonia: SchedaPaese = {
     {
       passo: 5,
       descrizione: {
-        it: 'Configura il sistema: niente tracciamento privato/fuori orario, finalita coincidente con l\'uso reale.',
+        it: 'Configura il sistema: niente tracciamento privato/fuori orario, finalità coincidente con l\'uso reale.',
         en: 'Configure the system: no private/off-hours tracking, purpose matching actual use.',
         de: 'Konfigurieren Sie das System: keine private Verfolgung/ausserhalb der Arbeitszeit, Zweck deckungsgleich mit der tatsaechlichen Nutzung.',
         fr: "Configurez le systeme: aucun suivi prive/hors des heures, finalite correspondant a l'usage reel.",
@@ -287,6 +287,7 @@ export const polonia: SchedaPaese = {
       nl: 'UODO tegen Centrum Medyczne Ujastek (Krakau, besluit DKN.5131.4.2024): cameratoezicht geinstalleerd in twee neonatologieruimtes zonder dat patienten noch werknemers daarvan op de hoogte werden gebracht, plus onvoldoende beveiliging van de opnamen. Totale boete van 1.145.891 PLN (ongeveer 266.000 euro). Het is geen GPS-zaak, maar het betreft niet-meegedeelde monitoring van werknemers.',
     },
     urlFonte: FONTE_UODO_UJASTEK.url,
+    tipoImporto: 'caso-affine',
   },
 
   fonti: [

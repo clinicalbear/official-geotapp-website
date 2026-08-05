@@ -72,7 +72,7 @@ export const regnoUnito: SchedaPaese = {
     urlFonte: FONTE_ICO_SEGNALAZIONI.url,
     verificatoIl: '2026-06-15',
     note: {
-      it: "Il Regno Unito ha un'unica autorita nazionale, l'ICO, per Inghilterra, Scozia, Galles e Irlanda del Nord: nessuna ripartizione regionale.",
+      it: "Il Regno Unito ha un'unica autorità nazionale, l'ICO, per Inghilterra, Scozia, Galles e Irlanda del Nord: nessuna ripartizione regionale.",
       en: 'The United Kingdom has a single national authority, the ICO, for England, Scotland, Wales and Northern Ireland: no regional split.',
       de: 'Das Vereinigte Königreich hat eine einzige nationale Behörde, das ICO, für England, Schottland, Wales und Nordirland: keine regionale Aufteilung.',
       fr: "Le Royaume-Uni dispose d'une seule autorité nationale, l'ICO, pour l'Angleterre, l'Écosse, le pays de Galles et l'Irlande du Nord : aucune répartition régionale.",
@@ -104,7 +104,7 @@ export const regnoUnito: SchedaPaese = {
     },
     {
       voce: {
-        it: "Autorizzazione preventiva di un'autorita prima di installare",
+        it: "Autorizzazione preventiva di un'autorità prima di installare",
         en: 'Prior authorisation from an authority before installation',
         de: 'Vorherige Genehmigung einer Behörde vor der Installation',
         fr: "Autorisation préalable d'une autorité avant l'installation",
@@ -274,7 +274,7 @@ export const regnoUnito: SchedaPaese = {
       nl: 'handhavingsbevel + waarschuwing (geen boete); UK GDPR-risico tot 17,5 miljoen pond of 4% van de omzet',
     },
     casoCitato: {
-      it: "ICO contro l'Home Office (1 marzo 2024): provvedimento di enforcement e diffida per non aver valutato a sufficienza l'intrusivita del tracciamento GPS continuo (cavigliera su persone in regime di immigrazione), DPIA inadeguata, niente prova di necessita e proporzionalita. Non e un caso di dipendenti, ma il ragionamento dell'ICO sul tracciamento GPS continuo e direttamente trasferibile.",
+      it: "ICO contro l'Home Office (1 marzo 2024): provvedimento di enforcement e diffida per non aver valutato a sufficienza l'intrusivita del tracciamento GPS continuo (cavigliera su persone in regime di immigrazione), DPIA inadeguata, niente prova di necessità e proporzionalità. Non e un caso di dipendenti, ma il ragionamento dell'ICO sul tracciamento GPS continuo e direttamente trasferibile.",
       en: "ICO against the Home Office (1 March 2024): enforcement notice and warning for failing to adequately assess the intrusiveness of continuous GPS tracking (ankle tag on people under immigration powers), inadequate DPIA, no evidence of necessity and proportionality. It is not an employee case, but the ICO's reasoning on continuous GPS tracking is directly transferable.",
       de: "ICO gegen das Home Office (1. März 2024): Anordnung zur Durchsetzung und Verwarnung, weil die Eingriffsintensität der kontinuierlichen GPS-Ortung (Fußfessel bei Personen im Rahmen der Einwanderungsbehörde) nicht ausreichend bewertet wurde, unzureichende DPIA, kein Nachweis von Erforderlichkeit und Verhältnismäßigkeit. Es handelt sich nicht um einen Fall von Beschäftigten, aber die Argumentation des ICO zur kontinuierlichen GPS-Ortung ist direkt übertragbar.",
       fr: "ICO contre le Home Office (1er mars 2024) : mise en demeure d'exécution et avertissement pour ne pas avoir suffisamment évalué le caractère intrusif du suivi GPS continu (bracelet à la cheville sur des personnes relevant du régime d'immigration), DPIA inadéquate, aucune preuve de nécessité et de proportionnalité. Il ne s'agit pas d'un cas de salariés, mais le raisonnement de l'ICO sur le suivi GPS continu est directement transposable.",
@@ -282,6 +282,7 @@ export const regnoUnito: SchedaPaese = {
       nl: "ICO tegen het Home Office (1 maart 2024): handhavingsbevel en waarschuwing wegens het onvoldoende beoordelen van de indringendheid van continue GPS-tracking (enkelband bij personen onder het immigratieregime), ontoereikende DPIA, geen bewijs van noodzaak en evenredigheid. Het is geen werknemerszaak, maar de redenering van de ICO over continue GPS-tracking is direct overdraagbaar.",
     },
     urlFonte: FONTE_ICO_HOME_OFFICE.url,
+    tipoImporto: 'caso-affine',
   },
 
   fonti: [

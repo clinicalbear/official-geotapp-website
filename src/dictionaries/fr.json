@@ -1260,7 +1260,10 @@
         }
       ],
       "nota": "Vient ensuite l'article 88 du RGPD, qui laisse a chaque Etat la faculte d'ajouter ses propres regles sur le traitement des donnees dans la relation de travail. C'est pourquoi les fiches par pays existent ci-dessous : ce qui change, c'est qui doit vous autoriser, pas le principe."
-    }
+    },
+    "sanzioneTipoCasoGps": "issu d'une affaire GPS réelle",
+    "sanzioneTipoCasoAffine": "affaire connexe, pas GPS",
+    "sanzioneTipoMassimale": "plafond légal, pas une amende infligée"
   },
   "sanzioniGps": {
     "metaTitle": "Calculateur d'amendes GPS : combien vous risquez à surveiller vos salariés, pays par pays",

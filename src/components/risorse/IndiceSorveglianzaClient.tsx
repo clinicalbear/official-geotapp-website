@@ -25,6 +25,8 @@ export interface IndiceRow {
   numObblighi: number;
   totaleAdempimenti: number;
   sanzioneImporto: string;
+  /** Che cosa e' quell'importo: caso GPS, caso affine o massimale di legge. */
+  sanzioneQualifica: string;
   /** Stima in euro dell'importo, solo per ordinare (mai mostrata). */
   sanzioneVal: number;
   href: string;
@@ -119,7 +121,12 @@ export default function IndiceSorveglianzaClient({
             <div role="cell" className="c-obb">
               {r.numObblighi}/{r.totaleAdempimenti}
             </div>
-            <div role="cell" className="c-san">{r.sanzioneImporto}</div>
+            <div role="cell" className="c-san">
+              {r.sanzioneImporto}
+              {/* La cifra da sola mentiva: 29 righe su 39 mostrano un importo che
+                  non viene da un caso GPS (05/08/2026). */}
+              <span className="c-san-q">{r.sanzioneQualifica}</span>
+            </div>
             <div role="cell" className="c-link">
               <Link href={r.href} className="go">
                 {labels.scheda} →

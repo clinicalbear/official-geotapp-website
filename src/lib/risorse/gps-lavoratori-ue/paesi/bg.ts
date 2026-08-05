@@ -72,7 +72,7 @@ export const bulgaria: SchedaPaese = {
     urlFonte: FONTE_CPDP_SITO.url,
     verificatoIl: '2026-06-15',
     note: {
-      it: "La Bulgaria ha un'unica autorita nazionale, il CPDP; nessuna ripartizione regionale.",
+      it: "La Bulgaria ha un'unica autorità nazionale, il CPDP; nessuna ripartizione regionale.",
       en: 'Bulgaria has a single national authority, the CPDP; there is no regional breakdown.',
       de: 'Bulgarien hat eine einzige nationale Behoerde, die CPDP; es gibt keine regionale Aufteilung.',
       fr: "La Bulgarie dispose d'une seule autorite nationale, la CPDP; il n'y a pas de repartition regionale.",
@@ -113,7 +113,7 @@ export const bulgaria: SchedaPaese = {
       },
       risposta: 'dipende',
       dettaglio: {
-        it: 'Per il monitoraggio sistematico su larga scala di zone accessibili al pubblico, inclusa la videosorveglianza, servono regole speciali su basi giuridiche, finalita, ambito, conservazione e informazione.',
+        it: 'Per il monitoraggio sistematico su larga scala di zone accessibili al pubblico, inclusa la videosorveglianza, servono regole speciali su basi giuridiche, finalità, ambito, conservazione e informazione.',
         en: 'For large-scale systematic monitoring of publicly accessible areas, including video surveillance, special rules are required on legal bases, purposes, scope, retention and information.',
         de: 'Fuer die systematische Ueberwachung oeffentlich zugaenglicher Bereiche in grossem Umfang, einschliesslich Videoueberwachung, sind Sonderregeln zu Rechtsgrundlagen, Zwecken, Umfang, Speicherung und Information erforderlich.',
         fr: 'Pour la surveillance systematique a grande echelle de zones accessibles au public, y compris la videosurveillance, des regles speciales sont requises concernant les bases juridiques, les finalites, la portee, la conservation et l\'information.',
@@ -124,7 +124,7 @@ export const bulgaria: SchedaPaese = {
     },
     {
       voce: {
-        it: "Autorizzazione preventiva di un'autorita prima di installare",
+        it: "Autorizzazione preventiva di un'autorità prima di installare",
         en: 'Prior authorisation from an authority before installing',
         de: 'Vorherige Genehmigung einer Behoerde vor der Installation',
         fr: "Autorisation prealable d'une autorite avant l'installation",
@@ -144,7 +144,7 @@ export const bulgaria: SchedaPaese = {
     },
     {
       voce: {
-        it: "Base = interesse legittimo (non il consenso, per lo squilibrio di potere); proporzionalita; niente tracciamento durante l'uso privato del veicolo",
+        it: "Base = interesse legittimo (non il consenso, per lo squilibrio di potere); proporzionalità; niente tracciamento durante l'uso privato del veicolo",
         en: 'Basis = legitimate interest (not consent, due to the imbalance of power); proportionality; no tracking during private use of the vehicle',
         de: 'Grundlage = berechtigtes Interesse (nicht die Einwilligung, wegen des Machtungleichgewichts); Verhaeltnismaessigkeit; keine Ortung waehrend der privaten Nutzung des Fahrzeugs',
         fr: "Base = interet legitime (non le consentement, en raison du desequilibre de pouvoir); proportionnalite; pas de suivi pendant l'usage prive du vehicule",
@@ -199,7 +199,7 @@ export const bulgaria: SchedaPaese = {
     {
       passo: 2,
       descrizione: {
-        it: 'Individua una base giuridica valida (interesse legittimo, non il consenso) e documenta la proporzionalita.',
+        it: 'Individua una base giuridica valida (interesse legittimo, non il consenso) e documenta la proporzionalità.',
         en: 'Identify a valid legal basis (legitimate interest, not consent) and document the proportionality.',
         de: 'Ermitteln Sie eine gueltige Rechtsgrundlage (berechtigtes Interesse, nicht die Einwilligung) und dokumentieren Sie die Verhaeltnismaessigkeit.',
         fr: "Identifiez une base juridique valable (interet legitime, non le consentement) et documentez la proportionnalite.",
@@ -232,7 +232,7 @@ export const bulgaria: SchedaPaese = {
     {
       passo: 5,
       descrizione: {
-        it: "Configura il sistema: niente tracciamento durante l'uso privato del veicolo, solo per le finalita dichiarate.",
+        it: "Configura il sistema: niente tracciamento durante l'uso privato del veicolo, solo per le finalità dichiarate.",
         en: 'Configure the system: no tracking during private use of the vehicle, only for the stated purposes.',
         de: 'Konfigurieren Sie das System: keine Ortung waehrend der privaten Nutzung des Fahrzeugs, nur fuer die angegebenen Zwecke.',
         fr: "Configurez le systeme: pas de suivi pendant l'usage prive du vehicule, uniquement pour les finalites declarees.",
@@ -282,6 +282,7 @@ export const bulgaria: SchedaPaese = {
       nl: 'Er is geen specifieke, gepubliceerde boete van de CPDP voor gps bij werknemers. In een advies van 24 november 2023 achtte de CPDP het hergebruik van cameratoezichtopnamen om de prestaties van werknemers van LUKOIL Bulgarije te beoordelen ontoelaatbaar (onverenigbaar hergebruik, art. 6 lid 4 AVG), zonder boete. Het sanctierisico blijft het algemene risico van de AVG (art. 83).',
     },
     urlFonte: FONTE_CPDP_LUKOIL.url,
+    tipoImporto: 'massimale',
   },
 
   fonti: [

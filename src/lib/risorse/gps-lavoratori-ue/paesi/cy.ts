@@ -81,7 +81,7 @@ export const cipro: SchedaPaese = {
     urlFonte: FONTE_GARANTE_CY.url,
     verificatoIl: '2026-06-15',
     note: {
-      it: "Cipro ha un'unica autorita nazionale, il Garante (Commissioner for Personal Data Protection); nessuna ripartizione regionale.",
+      it: "Cipro ha un'unica autorità nazionale, il Garante (Commissioner for Personal Data Protection); nessuna ripartizione regionale.",
       en: 'Cyprus has a single national authority, the Commissioner for Personal Data Protection; there is no regional split.',
       de: 'Zypern hat eine einzige nationale Behoerde, den Commissioner for Personal Data Protection; es gibt keine regionale Aufteilung.',
       fr: "Chypre dispose d'une unique autorite nationale, le Commissioner for Personal Data Protection; il n'existe aucune repartition regionale.",
@@ -102,7 +102,7 @@ export const cipro: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "il lavoratore va informato prima dell'inizio del monitoraggio su titolare, finalita e base giuridica; non esiste una legge cipriota specifica sul GPS, vale il quadro GDPR e la Legge 125(I)/2018.",
+        it: "il lavoratore va informato prima dell'inizio del monitoraggio su titolare, finalità e base giuridica; non esiste una legge cipriota specifica sul GPS, vale il quadro GDPR e la Legge 125(I)/2018.",
         en: 'the worker must be informed before monitoring begins about the controller, purposes and legal basis; there is no specific Cypriot law on GPS, the GDPR framework and Law 125(I)/2018 apply.',
         de: 'die beschaeftigte Person ist vor Beginn der Ueberwachung ueber den Verantwortlichen, die Zwecke und die Rechtsgrundlage zu informieren; es gibt kein spezifisches zypriotisches GPS-Gesetz, es gelten der DSGVO-Rahmen und das Gesetz 125(I)/2018.',
         fr: "le travailleur doit etre informe avant le debut de la surveillance sur le responsable, les finalites et la base juridique; il n'existe pas de loi chypriote specifique sur le GPS, le cadre du RGPD et la Loi 125(I)/2018 s'appliquent.",
@@ -113,7 +113,7 @@ export const cipro: SchedaPaese = {
     },
     {
       voce: {
-        it: "Autorizzazione preventiva di un'autorita prima di installare",
+        it: "Autorizzazione preventiva di un'autorità prima di installare",
         en: 'Prior authorisation from an authority before installation',
         de: 'Vorherige Genehmigung einer Behoerde vor der Installation',
         fr: "Autorisation prealable d'une autorite avant l'installation",
@@ -182,7 +182,7 @@ export const cipro: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: 'una DPIA e necessaria quando il monitoraggio dei dipendenti e sistematico; il Garante valuta caso per caso la proporzionalita.',
+        it: 'una DPIA e necessaria quando il monitoraggio dei dipendenti e sistematico; il Garante valuta caso per caso la proporzionalità.',
         en: 'a DPIA is required when employee monitoring is systematic; the Commissioner assesses proportionality case by case.',
         de: 'eine DSFA ist erforderlich, wenn die Ueberwachung der Beschaeftigten systematisch ist; der Commissioner prueft die Verhaeltnismaessigkeit im Einzelfall.',
         fr: "une AIPD est necessaire lorsque la surveillance des salaries est systematique; le Commissioner apprecie la proportionnalite au cas par cas.",
@@ -291,6 +291,7 @@ export const cipro: SchedaPaese = {
       nl: "Cypriotische Commissioner tegen de Louis-groep (besluit van 25 oktober 2019, in januari 2020 bekendgemaakt): gebruik van een geautomatiseerd instrument (Bradford Factor) om de ziekteverzuim-afwezigheden van 818 werknemers te profileren, zonder geldige rechtsgrond en over gezondheidsgegevens (art. 6 en 9 AVG); de afweging van het gerechtvaardigd belang is mislukt. Totale boete 82.000 euro (70.000 + 10.000 + 2.000 tegen drie vennootschappen van de groep). Het is geen GPS-zaak, maar het is de toonaangevende Cypriotische sanctie inzake de monitoring van werknemers.",
     },
     urlFonte: FONTE_LOUIS.url,
+    tipoImporto: 'caso-affine',
   },
 
   fonti: [FONTE_EUROFOUND, FONTE_GDPR_13, FONTE_GARANTE_CY, FONTE_LOUIS, FONTE_GDPR],

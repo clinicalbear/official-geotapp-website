@@ -84,7 +84,7 @@ export const francia: SchedaPaese = {
     urlFonte: FONTE_CNIL_GEOLOCALIZZAZIONE.url,
     verificatoIl: '2026-06-15',
     note: {
-      it: "La Francia ha un'unica autorita nazionale, la CNIL; nessuna ripartizione regionale.",
+      it: "La Francia ha un'unica autorità nazionale, la CNIL; nessuna ripartizione regionale.",
       en: 'France has a single national authority, the CNIL; there is no regional split.',
       de: 'Frankreich hat eine einzige nationale Behoerde, die CNIL; es gibt keine regionale Aufteilung.',
       fr: 'La France a une seule autorite nationale, la CNIL; il n y a pas de repartition regionale.',
@@ -116,7 +116,7 @@ export const francia: SchedaPaese = {
     },
     {
       voce: {
-        it: "Autorizzazione di un'autorita del lavoro prima di installare",
+        it: "Autorizzazione di un'autorità del lavoro prima di installare",
         en: 'Authorisation from a labour authority before installing',
         de: 'Genehmigung einer Arbeitsbehoerde vor der Installation',
         fr: 'Autorisation d une autorite du travail avant l installation',
@@ -125,7 +125,7 @@ export const francia: SchedaPaese = {
       },
       risposta: 'no',
       dettaglio: {
-        it: "La Francia non prevede un'autorizzazione preventiva di un'autorita del lavoro, ne più' dichiarazioni preventive alla CNIL (abolite dal 25 maggio 2018 col GDPR). Il modello e basato sulla responsabilizzazione: registro dei trattamenti e AIPD quando il rischio e elevato.",
+        it: "La Francia non prevede un'autorizzazione preventiva di un'autorità del lavoro, ne più dichiarazioni preventive alla CNIL (abolite dal 25 maggio 2018 col GDPR). Il modello e basato sulla responsabilizzazione: registro dei trattamenti e AIPD quando il rischio e elevato.",
         en: 'France does not require prior authorisation from a labour authority, nor any further prior declarations to the CNIL (abolished on 25 May 2018 with the GDPR). The model is based on accountability: a record of processing activities and a DPIA where the risk is high.',
         de: 'Frankreich sieht keine vorherige Genehmigung einer Arbeitsbehoerde vor und auch keine vorherigen Meldungen an die CNIL mehr (seit dem 25. Mai 2018 mit der DSGVO abgeschafft). Das Modell beruht auf Rechenschaftspflicht: Verzeichnis der Verarbeitungstaetigkeiten und DSFA, wenn das Risiko hoch ist.',
         fr: "La France ne prevoit pas d autorisation prealable d une autorite du travail, ni de declarations prealables a la CNIL (supprimees depuis le 25 mai 2018 avec le RGPD). Le modele repose sur la responsabilisation: registre des traitements et AIPD lorsque le risque est eleve.",
@@ -145,7 +145,7 @@ export const francia: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: 'Nessun dato può essere raccolto da un dispositivo non portato preventivamente a conoscenza del lavoratore; ognuno va informato su titolare, finalita, destinatari e diritti.',
+        it: 'Nessun dato può essere raccolto da un dispositivo non portato preventivamente a conoscenza del lavoratore; ognuno va informato su titolare, finalità, destinatari e diritti.',
         en: 'No data may be collected from a device not brought to the worker s knowledge in advance; each worker must be informed of the controller, the purposes, the recipients and their rights.',
         de: 'Es duerfen keine Daten von einem Geraet erhoben werden, das dem Beschaeftigten nicht vorab zur Kenntnis gebracht wurde; jeder ist ueber den Verantwortlichen, die Zwecke, die Empfaenger und seine Rechte zu informieren.',
         fr: "Aucune donnee ne peut etre collectee par un dispositif non porte prealablement a la connaissance du salarie; chacun doit etre informe du responsable, des finalites, des destinataires et de ses droits.",
@@ -242,7 +242,7 @@ export const francia: SchedaPaese = {
     {
       passo: 3,
       descrizione: {
-        it: 'Verifica la sussidiarieta: la geolocalizzazione non e ammessa se esiste già un mezzo meno intrusivo per la stessa finalita.',
+        it: 'Verifica la sussidiarieta: la geolocalizzazione non e ammessa se esiste già un mezzo meno intrusivo per la stessa finalità.',
         en: 'Check subsidiarity: geolocation is not allowed if a less intrusive means already exists for the same purpose.',
         de: 'Pruefen Sie die Subsidiaritaet: Geolokalisierung ist nicht zulaessig, wenn fuer denselben Zweck bereits ein weniger eingriffsintensives Mittel besteht.',
         fr: "Verifiez la subsidiarite: la geolocalisation n est pas admise s il existe deja un moyen moins intrusif pour la meme finalite.",
@@ -325,6 +325,7 @@ export const francia: SchedaPaese = {
       nl: 'CNIL tegen UBEEQO International, 7 juli 2022: bijna permanente geolocatie in strijd met de minimalisering, de bewaartermijn en de informatieplicht. Het betrof huurvoertuigen (klanten), niet de werknemers in strikte zin, maar het is de Franse toonaangevende boete inzake buitensporige continue geolocatie. In 2025 beboette de CNIL bovendien meerdere werkgevers voor de continue geolocatie van de voertuigen van werknemers zonder mogelijkheid tot opschorting tijdens de pauzes.',
     },
     urlFonte: FONTE_EDPB_UBEEQO.url,
+    tipoImporto: 'caso-affine',
   },
 
   fonti: [

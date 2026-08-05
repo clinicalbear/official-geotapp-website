@@ -1260,7 +1260,10 @@
         }
       ],
       "nota": "Dazu kommt Art. 88 DSGVO, der jedem Staat erlaubt, eigene Regeln fuer die Datenverarbeitung im Beschaeftigungsverhaeltnis zu ergaenzen. Deshalb gibt es die Laenderkarten unten: es aendert sich, wer zustimmen muss, nicht der Grundsatz."
-    }
+    },
+    "sanzioneTipoCasoGps": "aus einem echten GPS-Fall",
+    "sanzioneTipoCasoAffine": "verwandter Fall, nicht GPS",
+    "sanzioneTipoMassimale": "gesetzlicher Höchstbetrag, kein verhängtes Bußgeld"
   },
   "sanzioniGps": {
     "metaTitle": "GPS-Bußgeldrechner: wie viel Sie bei Mitarbeiterüberwachung riskieren, Land für Land",

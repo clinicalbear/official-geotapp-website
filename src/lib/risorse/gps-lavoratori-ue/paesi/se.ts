@@ -75,7 +75,7 @@ export const svezia: SchedaPaese = {
 
   autoritaCompetente: {
     ente: {
-      it: 'IMY (Integritetsskyddsmyndigheten, autorita garante svedese)',
+      it: 'IMY (Integritetsskyddsmyndigheten, autorità garante svedese)',
       en: 'IMY (Integritetsskyddsmyndigheten, Swedish data protection authority)',
       de: 'IMY (Integritetsskyddsmyndigheten, schwedische Datenschutzbehörde)',
       fr: 'IMY (Integritetsskyddsmyndigheten, autorité suédoise de protection des données)',
@@ -91,7 +91,7 @@ export const svezia: SchedaPaese = {
     urlFonte: FONTE_IMY_RECLAMO.url,
     verificatoIl: '2026-06-15',
     note: {
-      it: "La Svezia ha un'unica autorita nazionale, l'IMY (già Datainspektionen); nessuna ripartizione regionale.",
+      it: "La Svezia ha un'unica autorità nazionale, l'IMY (già Datainspektionen); nessuna ripartizione regionale.",
       en: 'Sweden has a single national authority, the IMY (formerly Datainspektionen); there is no regional split.',
       de: 'Schweden hat eine einzige nationale Behorde, die IMY (fruher Datainspektionen); es gibt keine regionale Aufteilung.',
       fr: "La Suede dispose d'une seule autorite nationale, l'IMY (anciennement Datainspektionen); il n'existe aucune repartition regionale.",
@@ -123,7 +123,7 @@ export const svezia: SchedaPaese = {
     },
     {
       voce: {
-        it: "Autorizzazione preventiva di un'autorita prima di installare",
+        it: "Autorizzazione preventiva di un'autorità prima di installare",
         en: 'Prior authorisation from an authority before installing',
         de: 'Vorherige Genehmigung einer Behorde vor der Installation',
         fr: "Autorisation prealable d'une autorite avant l'installation",
@@ -301,6 +301,7 @@ export const svezia: SchedaPaese = {
       nl: 'IMY tegen de gemeente Skelleftea (2019): een school gebruikte cameragebaseerde gezichtsherkenning om de aanwezigheid van leerlingen te registreren, een onrechtmatige biometrische verwerking (toestemming is niet geldig in een gezagsverhouding). Het is geen GPS-zaak, maar het is de toonaangevende Zweedse zaak over biometrische aanwezigheidscontrole.',
     },
     urlFonte: FONTE_IMY_SKELLEFTEA.url,
+    tipoImporto: 'caso-affine',
   },
 
   fonti: [

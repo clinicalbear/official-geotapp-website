@@ -21,6 +21,21 @@ import LNastro from '@/components/LNastro';
 
 type RisorseGpsDict = SiteDictionary['risorseGps'];
 
+/**
+ * Etichetta che dice CHE COSA e' l'importo mostrato.
+ *
+ * Serve perche' la striscia in cima mostra solo la cifra, sotto "Quanto si
+ * rischia", mentre il caso citato per esteso sta molto piu' giu' nella pagina:
+ * senza qualifica, la Germania prometteva "35,3 milioni" come sanzione per il
+ * GPS, quando quella multa (H&M) riguarda la schedatura della vita privata.
+ * 29 schede su 39 mostrano un importo che NON viene da un caso GPS.
+ */
+function qualificaImporto(tipo: SchedaPaese['sanzioneMax']['tipoImporto'], dict: RisorseGpsDict): string {
+  if (tipo === 'caso-gps') return dict.sanzioneTipoCasoGps;
+  if (tipo === 'caso-affine') return dict.sanzioneTipoCasoAffine;
+  return dict.sanzioneTipoMassimale;
+}
+
 interface SchedaPaeseViewProps {
   scheda: SchedaPaese;
   dict: RisorseGpsDict;
@@ -158,6 +173,7 @@ export default function SchedaPaeseView({
             <div>
               <p className="lb k">{dict.sezioneSanzione}</p>
               <b>{loc(scheda.sanzioneMax.importo, locale)}</b>
+              <p>{qualificaImporto(scheda.sanzioneMax.tipoImporto, dict)}</p>
               <p>{dict.aggiornatoIl} {formatDate(scheda.aggiornatoIl, locale)}</p>
             </div>
             <div>

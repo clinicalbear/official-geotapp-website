@@ -75,7 +75,7 @@ export const romania: SchedaPaese = {
     urlFonte: FONTE_ANSPDCP_RECLAMI.url,
     verificatoIl: '2026-06-15',
     note: {
-      it: "La Romania ha un'unica autorita nazionale, l'ANSPDCP; nessuna ripartizione regionale.",
+      it: "La Romania ha un'unica autorità nazionale, l'ANSPDCP; nessuna ripartizione regionale.",
       en: 'Romania has a single national authority, the ANSPDCP; there is no regional division.',
       de: 'Rumänien hat eine einzige nationale Behörde, die ANSPDCP; es gibt keine regionale Aufteilung.',
       fr: "La Roumanie dispose d'une seule autorité nationale, l'ANSPDCP; il n'y a aucune répartition régionale.",
@@ -127,7 +127,7 @@ export const romania: SchedaPaese = {
     },
     {
       voce: {
-        it: "Autorizzazione preventiva di un'autorita prima di installare",
+        it: "Autorizzazione preventiva di un'autorità prima di installare",
         en: 'Prior authorisation from an authority before installation',
         de: 'Vorherige Genehmigung durch eine Behörde vor der Installation',
         fr: "Autorisation préalable d'une autorité avant l'installation",
@@ -255,7 +255,7 @@ export const romania: SchedaPaese = {
     {
       passo: 5,
       descrizione: {
-        it: 'Limita la conservazione a 30 giorni salvo eccezioni giustificate; usa i dati solo per la finalita dichiarata.',
+        it: 'Limita la conservazione a 30 giorni salvo eccezioni giustificate; usa i dati solo per la finalità dichiarata.',
         en: 'Limit retention to 30 days save justified exceptions; use the data only for the stated purpose.',
         de: 'Begrenzen Sie die Speicherung auf 30 Tage außer bei begründeten Ausnahmen; verwenden Sie die Daten nur für den angegebenen Zweck.',
         fr: 'Limitez la conservation à 30 jours sauf exceptions justifiées; utilisez les données uniquement pour la finalité déclarée.',
@@ -305,6 +305,7 @@ export const romania: SchedaPaese = {
       nl: 'ANSPDCP tegen Tehnoplus Industry SRL (23 maart 2023): GPS-tracking van een aan een werknemer toegewezen bedrijfsvoertuig, met buitensporige verwerking van locatiegegevens buiten diensttijd, zonder eerst minder ingrijpende methoden te hebben uitgeput, zonder de werknemer te informeren en met bewaring langer dan 30 dagen. Totale boete 5.000 euro (3.000 + 2.000).',
     },
     urlFonte: FONTE_ANSPDCP_TEHNOPLUS.url,
+    tipoImporto: 'caso-gps',
   },
 
   fonti: [

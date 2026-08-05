@@ -72,7 +72,7 @@ export const norvegia: SchedaPaese = {
 
   autoritaCompetente: {
     ente: {
-      it: 'Datatilsynet (autorita garante norvegese)',
+      it: 'Datatilsynet (autorità garante norvegese)',
       en: 'Datatilsynet (Norwegian data protection authority)',
       de: 'Datatilsynet (norwegische Datenschutzbehörde)',
       fr: 'Datatilsynet (autorité norvégienne de protection des données)',
@@ -88,7 +88,7 @@ export const norvegia: SchedaPaese = {
     urlFonte: FONTE_DATATILSYNET.url,
     verificatoIl: '2026-06-15',
     note: {
-      it: "La Norvegia (SEE) ha un'unica autorita nazionale, il Datatilsynet; nessuna ripartizione regionale.",
+      it: "La Norvegia (SEE) ha un'unica autorità nazionale, il Datatilsynet; nessuna ripartizione regionale.",
       en: 'Norway (EEA) has a single national authority, the Datatilsynet; there is no regional breakdown.',
       de: 'Norwegen (EWR) hat eine einzige nationale Behoerde, das Datatilsynet; es gibt keine regionale Aufteilung.',
       fr: "La Norvege (EEE) dispose d'une seule autorite nationale, le Datatilsynet; il n'y a aucune repartition regionale.",
@@ -140,7 +140,7 @@ export const norvegia: SchedaPaese = {
     },
     {
       voce: {
-        it: "Autorizzazione preventiva di un'autorita prima di installare",
+        it: "Autorizzazione preventiva di un'autorità prima di installare",
         en: 'Prior authorization from an authority before installing',
         de: 'Vorherige Genehmigung einer Behoerde vor der Installation',
         fr: "Autorisation prealable d'une autorite avant l'installation",
@@ -149,7 +149,7 @@ export const norvegia: SchedaPaese = {
       },
       risposta: 'no',
       dettaglio: {
-        it: 'Il capitolo 9 non prevede alcuna autorizzazione preventiva del Datatilsynet; la liceita e responsabilità del titolare.',
+        it: 'Il capitolo 9 non prevede alcuna autorizzazione preventiva del Datatilsynet; la liceità e responsabilità del titolare.',
         en: 'Chapter 9 provides for no prior authorization from the Datatilsynet; lawfulness is the responsibility of the controller.',
         de: 'Kapitel 9 sieht keine vorherige Genehmigung des Datatilsynet vor; die Rechtmaessigkeit liegt in der Verantwortung des Verantwortlichen.',
         fr: 'Le chapitre 9 ne prevoit aucune autorisation prealable du Datatilsynet; la liceite releve de la responsabilite du responsable du traitement.',
@@ -180,7 +180,7 @@ export const norvegia: SchedaPaese = {
     },
     {
       voce: {
-        it: 'GPS sui veicoli solo per la finalita dichiarata, senza riuso per valutare il rendimento',
+        it: 'GPS sui veicoli solo per la finalità dichiarata, senza riuso per valutare il rendimento',
         en: 'GPS on vehicles only for the stated purpose, with no reuse to assess performance',
         de: 'GPS in Fahrzeugen nur fuer den angegebenen Zweck, ohne Weiterverwendung zur Leistungsbewertung',
         fr: 'GPS sur les vehicules uniquement pour la finalite declaree, sans reutilisation pour evaluer le rendement',
@@ -268,7 +268,7 @@ export const norvegia: SchedaPaese = {
     {
       passo: 5,
       descrizione: {
-        it: 'Configura il sistema: solo finalita dichiarata, niente riuso per valutare il rendimento.',
+        it: 'Configura il sistema: solo finalità dichiarata, niente riuso per valutare il rendimento.',
         en: 'Configure the system: stated purpose only, no reuse to assess performance.',
         de: 'Konfigurieren Sie das System: nur fuer den angegebenen Zweck, keine Weiterverwendung zur Leistungsbewertung.',
         fr: 'Configurez le systeme: finalite declaree uniquement, aucune reutilisation pour evaluer le rendement.',
@@ -318,6 +318,7 @@ export const norvegia: SchedaPaese = {
       nl: 'Personvernnemnda, PVN-2017-07: een werkgever vergeleek de GPS-gegevens van het bedrijfsvoertuig zonder medeweten van de werknemer met diens urenstaten om te controleren of deze de opgegeven uren had gewerkt, waarbij de gegevens zonder rechtsgrond voor een nieuw doel werden hergebruikt. Beslist onder de oude wet van voor de AVG, maar het beginsel (het hergebruik van GPS om de uren te controleren is verboden) wordt bevestigd door de huidige richtlijnen van het Datatilsynet.',
     },
     urlFonte: FONTE_PVN_2017_07.url,
+    tipoImporto: 'caso-gps',
   },
 
   fonti: [

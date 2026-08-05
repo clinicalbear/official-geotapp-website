@@ -57,6 +57,15 @@ export default async function IndiceSorveglianzaPage({
 
   const sev = getPaesiSeverita();
   const loc = localizePaesiSeverita(sev, resolvedLocale);
+  // La colonna "Sanzione massima" mostrava la cifra nuda per tutte e 39 le righe:
+  // 29 su 39 sono un importo che NON viene da un caso GPS. Qui la cifra si porta
+  // dietro la sua qualifica (05/08/2026).
+  const qualifica = (tipo: (typeof loc)[number]['sanzioneTipo']) =>
+    tipo === 'caso-gps'
+      ? d.risorseGps.sanzioneTipoCasoGps
+      : tipo === 'caso-affine'
+        ? d.risorseGps.sanzioneTipoCasoAffine
+        : d.risorseGps.sanzioneTipoMassimale;
   const rows: IndiceRow[] = loc.map((p) => ({
     codiceISO: p.codiceISO,
     nome: p.nome,
@@ -65,6 +74,7 @@ export default async function IndiceSorveglianzaPage({
     numObblighi: p.obbligatori.length,
     totaleAdempimenti: p.totaleAdempimenti,
     sanzioneImporto: p.sanzioneImporto,
+    sanzioneQualifica: qualifica(p.sanzioneTipo),
     sanzioneVal: p.sanzioneVal,
     href: localizePath(`/risorse/gps-lavoratori-ue/${p.slugCanonico}/`, resolvedLocale),
   }));

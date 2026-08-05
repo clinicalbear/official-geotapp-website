@@ -68,7 +68,7 @@ export const danimarca: SchedaPaese = {
 
   autoritaCompetente: {
     ente: {
-      it: 'Datatilsynet (autorita garante danese)',
+      it: 'Datatilsynet (autorità garante danese)',
       en: 'Datatilsynet (Danish data protection authority)',
       de: 'Datatilsynet (dänische Datenschutzbehörde)',
       fr: 'Datatilsynet (autorité danoise de protection des données)',
@@ -84,7 +84,7 @@ export const danimarca: SchedaPaese = {
     urlFonte: FONTE_DATATILSYNET.url,
     verificatoIl: '2026-06-15',
     note: {
-      it: "La Danimarca ha un'unica autorita nazionale, il Datatilsynet. Particolarita: le multe non le impone l'autorita, ma i tribunali su segnalazione del Datatilsynet alla polizia.",
+      it: "La Danimarca ha un'unica autorità nazionale, il Datatilsynet. Particolarità: le multe non le impone l'autorità, ma i tribunali su segnalazione del Datatilsynet alla polizia.",
       en: 'Denmark has a single national authority, the Datatilsynet. A particularity: fines are not imposed by the authority but by the courts, following a report from the Datatilsynet to the police.',
       de: 'Dänemark hat eine einzige nationale Behörde, das Datatilsynet. Eine Besonderheit: Bußgelder werden nicht von der Behörde verhängt, sondern von den Gerichten, nachdem das Datatilsynet den Fall bei der Polizei angezeigt hat.',
       fr: "Le Danemark dispose d'une seule autorité nationale, le Datatilsynet. Particularité : les amendes ne sont pas imposées par l'autorité, mais par les tribunaux, à la suite d'un signalement du Datatilsynet à la police.",
@@ -96,7 +96,7 @@ export const danimarca: SchedaPaese = {
   checklist: [
     {
       voce: {
-        it: 'Motivo oggettivo (saglig grund) e proporzionalita del controllo',
+        it: 'Motivo oggettivo (saglig grund) e proporzionalità del controllo',
         en: 'Objective reason (saglig grund) and proportionality of the monitoring',
         de: 'Sachlicher Grund (saglig grund) und Verhältnismäßigkeit der Kontrolle',
         fr: 'Motif objectif (saglig grund) et proportionnalité du contrôle',
@@ -136,7 +136,7 @@ export const danimarca: SchedaPaese = {
     },
     {
       voce: {
-        it: "Autorizzazione preventiva di un'autorita prima di installare",
+        it: "Autorizzazione preventiva di un'autorità prima di installare",
         en: 'Prior authorisation from an authority before installation',
         de: 'Vorherige Genehmigung einer Behörde vor der Installation',
         fr: "Autorisation préalable d'une autorité avant l'installation",
@@ -176,7 +176,7 @@ export const danimarca: SchedaPaese = {
     },
     {
       voce: {
-        it: 'GPS solo per finalita legittima, senza riuso per sorvegliare comportamento o posizione del conducente; disattivabile in uso privato',
+        it: 'GPS solo per finalità legittima, senza riuso per sorvegliare comportamento o posizione del conducente; disattivabile in uso privato',
         en: 'GPS only for a legitimate purpose, with no reuse to monitor the driver behaviour or location; switchable off for private use',
         de: 'GPS nur für einen berechtigten Zweck, ohne Weiterverwendung zur Überwachung von Verhalten oder Standort des Fahrers; bei privater Nutzung abschaltbar',
         fr: 'GPS uniquement à une fin légitime, sans réutilisation pour surveiller le comportement ou la position du conducteur ; désactivable en usage privé',
@@ -220,7 +220,7 @@ export const danimarca: SchedaPaese = {
     {
       passo: 1,
       descrizione: {
-        it: 'Verifica un motivo oggettivo (saglig grund) e la proporzionalita del controllo.',
+        it: 'Verifica un motivo oggettivo (saglig grund) e la proporzionalità del controllo.',
         en: 'Verify an objective reason (saglig grund) and the proportionality of the monitoring.',
         de: 'Prüfen Sie einen sachlichen Grund (saglig grund) und die Verhältnismäßigkeit der Kontrolle.',
         fr: 'Vérifiez un motif objectif (saglig grund) et la proportionnalité du contrôle.',
@@ -264,7 +264,7 @@ export const danimarca: SchedaPaese = {
     {
       passo: 5,
       descrizione: {
-        it: 'Configura il sistema: solo finalita dichiarata, niente riuso per sorvegliare il conducente, spegnimento in uso privato.',
+        it: 'Configura il sistema: solo finalità dichiarata, niente riuso per sorvegliare il conducente, spegnimento in uso privato.',
         en: 'Configure the system: declared purpose only, no reuse to monitor the driver, switch-off for private use.',
         de: 'Konfigurieren Sie das System: nur der angegebene Zweck, keine Weiterverwendung zur Überwachung des Fahrers, Abschaltung bei privater Nutzung.',
         fr: "Configurez le système : finalité déclarée uniquement, aucune réutilisation pour surveiller le conducteur, extinction en usage privé.",
@@ -306,7 +306,7 @@ export const danimarca: SchedaPaese = {
       nl: 'vastgesteld door de rechtbanken (tot 20 miljoen euro of 4% van de omzet, art. 83 AVG)',
     },
     casoCitato: {
-      it: "In Danimarca le sanzioni GDPR non le impone l'autorita garante: il Datatilsynet segnala il caso alla polizia e il tribunale fissa la multa. Nei controlli del 2020 su GPS e videosorveglianza dei dipendenti senza informativa il Datatilsynet ha espresso 'critica seria' (alvorlig kritik) in tre casi su cinque, senza multe in denaro. Attenzione al 2026: il controllo e la sorveglianza dei dipendenti, GPS sui veicoli aziendali compreso, sono tra i temi dei controlli programmati dell'anno, con attenzione a finalita, proporzionalita e trasparenza.",
+      it: "In Danimarca le sanzioni GDPR non le impone l'autorità garante: il Datatilsynet segnala il caso alla polizia e il tribunale fissa la multa. Nei controlli del 2020 su GPS e videosorveglianza dei dipendenti senza informativa il Datatilsynet ha espresso 'critica seria' (alvorlig kritik) in tre casi su cinque, senza multe in denaro. Attenzione al 2026: il controllo e la sorveglianza dei dipendenti, GPS sui veicoli aziendali compreso, sono tra i temi dei controlli programmati dell'anno, con attenzione a finalità, proporzionalità e trasparenza.",
       en: "In Denmark GDPR fines are not imposed by the supervisory authority: the Datatilsynet reports the case to the police and the court sets the fine. In the 2020 inspections on GPS and video surveillance of employees without a privacy notice, the Datatilsynet issued 'serious criticism' (alvorlig kritik) in three cases out of five, with no monetary fines. Watch out for 2026: monitoring and control of employees, including GPS on company vehicles, is among this year's planned inspection topics, with a focus on purpose, proportionality and transparency.",
       de: "In Daenemark verhaengt nicht die Aufsichtsbehoerde die DSGVO-Bussgelder: das Datatilsynet meldet den Fall der Polizei, das Gericht setzt die Geldbusse fest. Bei den Pruefungen 2020 zu GPS und Videoueberwachung von Beschaeftigten ohne Datenschutzinformation sprach das Datatilsynet in drei von fuenf Faellen 'ernste Kritik' (alvorlig kritik) aus, ohne Geldbussen. Achtung 2026: Kontrolle und Ueberwachung von Beschaeftigten, einschliesslich GPS in Firmenfahrzeugen, gehoert zu den geplanten Pruefungsschwerpunkten des Jahres, mit Blick auf Zweckbindung, Verhaeltnismaessigkeit und Transparenz.",
       fr: "Au Danemark, ce n'est pas l'autorite de controle qui inflige les amendes RGPD: le Datatilsynet signale l'affaire a la police et le tribunal fixe le montant. Lors des controles de 2020 sur le GPS et la videosurveillance des salaries sans information prealable, le Datatilsynet a exprime une 'critique serieuse' (alvorlig kritik) dans trois cas sur cinq, sans amende. A noter pour 2026: le controle et la surveillance des salaries, GPS des vehicules de societe compris, figurent parmi les themes de controle programmes de l'annee, avec une attention portee a la finalite, a la proportionnalite et a la transparence.",
@@ -314,6 +314,7 @@ export const danimarca: SchedaPaese = {
       nl: "In Denemarken legt niet de toezichthouder de AVG-boetes op: het Datatilsynet meldt de zaak bij de politie en de rechter bepaalt de boete. Bij de inspecties van 2020 naar gps en cameratoezicht op werknemers zonder privacyverklaring uitte het Datatilsynet in drie van de vijf gevallen 'ernstige kritiek' (alvorlig kritik), zonder geldboetes. Let op in 2026: controle en monitoring van werknemers, inclusief gps in bedrijfsvoertuigen, hoort bij de geplande inspectiethema's van dit jaar, met aandacht voor doelbinding, proportionaliteit en transparantie.",
     },
     urlFonte: FONTE_DATATILSYNET_CONTROLLI_2020.url,
+    tipoImporto: 'massimale',
   },
 
   fonti: [
