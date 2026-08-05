@@ -7,7 +7,7 @@
  * trattamenti che richiedono una DPIA), sanzione HDPA del 16 febbraio 2024 per
  * geolocalizzazione di un dipendente, pagina ufficiale dell'HDPA e GDPR.
  *
- * La Grecia ha un'unica autorita nazionale, l'HDPA; non ci sono ripartizioni
+ * La Grecia ha un'unica autorità nazionale, l'HDPA; non ci sono ripartizioni
  * regionali. Nessun numero, URL o autorita e' inventato qui.
  */
 

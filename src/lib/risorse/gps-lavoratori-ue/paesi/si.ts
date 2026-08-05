@@ -6,7 +6,7 @@
  * e sul tracciamento dei dipendenti, art. 48 ZDR-1 (dati dei lavoratori), pagina
  * IP-RS sulla valutazione d'impatto, modulo IP-RS per le segnalazioni e GDPR.
  *
- * La Slovenia ha un'unica autorita' nazionale, l'IP-RS, senza ripartizione
+ * La Slovenia ha un'unica autorità' nazionale, l'IP-RS, senza ripartizione
  * regionale. La legge nazionale ZVOP-2 e' recente (2023), quindi le sanzioni
  * pubblicate specifiche per il GPS sono ancora poche. Nessun numero, URL o
  * autorita' e' inventato qui.

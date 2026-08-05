@@ -7,7 +7,7 @@
  * VDAI del 2022 sulla corrispondenza personale di un dipendente, servizi e
  * reclami del VDAI e GDPR.
  *
- * La Lituania ha un'unica autorita' nazionale, il VDAI, senza ripartizione
+ * La Lituania ha un'unica autorità' nazionale, il VDAI, senza ripartizione
  * regionale. Nessun numero, URL o autorita' e' inventato qui.
  */
 

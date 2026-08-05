@@ -7,7 +7,7 @@
  * ICO sul tracciamento GPS dell'Home Office (2024), pagina ICO per le
  * segnalazioni e il GDPR recepito come UK GDPR.
  *
- * Il Regno Unito ha un'unica autorita nazionale, l'ICO, per Inghilterra,
+ * Il Regno Unito ha un'unica autorità nazionale, l'ICO, per Inghilterra,
  * Scozia, Galles e Irlanda del Nord: nessuna ripartizione regionale.
  * Nessun numero, URL o autorita e' inventato qui.
  */

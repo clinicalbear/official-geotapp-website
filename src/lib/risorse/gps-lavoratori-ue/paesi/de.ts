@@ -44,7 +44,7 @@ const FONTE_LISTA_DSK_DPIA = {
 };
 const FONTE_BFDI_LISTA_LAND = {
   titolo:
-    'BfDI, elenco delle autorita garanti per la protezione dei dati dei Land',
+    'BfDI, elenco delle autorità garanti per la protezione dei dati dei Land',
   url: 'https://www.bfdi.bund.de/DE/Service/Anschriften/Laender/Laender-node.html',
 };
 const FONTE_HM_AMBURGO = {
@@ -53,11 +53,11 @@ const FONTE_HM_AMBURGO = {
   url: 'https://datenschutz-hamburg.de/fileadmin/user_upload/HmbBfDI/Pressemitteilungen/2020/2020-10-01-H_M.pdf',
 };
 const FONTE_BAYLDA = {
-  titolo: 'BayLDA, autorita garante della Baviera',
+  titolo: 'BayLDA, autorità garante della Baviera',
   url: 'https://www.lda.bayern.de/de/index.html',
 };
 const FONTE_BLNBDI = {
-  titolo: 'BlnBDI, autorita garante di Berlino',
+  titolo: 'BlnBDI, autorità garante di Berlino',
   url: 'https://www.datenschutz-berlin.de/',
 };
 
@@ -318,7 +318,7 @@ export const germania: SchedaPaese = {
 
   contatti: [
     {
-      ente: "BfDI, elenco delle autorita' dei Land (per trovare la tua)",
+      ente: "BfDI, elenco delle autorità dei Land (per trovare la tua)",
       portale: FONTE_BFDI_LISTA_LAND.url,
       urlFonte: FONTE_BFDI_LISTA_LAND.url,
       verificatoIl: '2026-06-15',

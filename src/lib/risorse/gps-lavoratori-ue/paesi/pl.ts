@@ -7,7 +7,7 @@
  * richiedono una DPIA, pagina UODO per i reclami, decisione UODO contro Centrum
  * Medyczne Ujastek e GDPR.
  *
- * La Polonia ha un'unica autorita' nazionale, l'UODO, senza ripartizione
+ * La Polonia ha un'unica autorità' nazionale, l'UODO, senza ripartizione
  * regionale. Nessun numero, URL o autorita' e' inventato qui.
  */
 

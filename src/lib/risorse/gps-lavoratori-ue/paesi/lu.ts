@@ -23,7 +23,7 @@ const FONTE_L261_1 = {
 };
 const FONTE_CNPD_GEOLOC = {
   titolo:
-    'CNPD, geolocalizzazione dei veicoli: necessita e proporzionalita',
+    'CNPD, geolocalizzazione dei veicoli: necessità e proporzionalità',
   url: 'https://cnpd.public.lu/fr/dossiers-thematiques/surveillance/geolocalisation-vehicules/necessite-proportionnalite.html',
 };
 const FONTE_CNPD_AIPD = {

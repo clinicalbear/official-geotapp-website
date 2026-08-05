@@ -9,8 +9,8 @@
  * Contenuti basati su fonti verificate e citate nella sezione "Fonti": nuova legge
  * 12/25, lista AZLP dei trattamenti che richiedono una DPIA (novembre 2025, include
  * il monitoraggio dei dipendenti e il GPS), pagina ufficiale dell'AZLP, analisi DLA
- * Piper sul quadro bosniaco e GDPR come riferimento comparativo. L'autorita' garante
- * e' unica e nazionale (AZLP); non c'e' ripartizione per entita'. Nessun numero, URL
+ * Piper sul quadro bosniaco e GDPR come riferimento comparativo. L'autorità' garante
+ * e' unica e nazionale (AZLP); non c'e' ripartizione per entità'. Nessun numero, URL
  * o autorita' e' inventato qui.
  */
 

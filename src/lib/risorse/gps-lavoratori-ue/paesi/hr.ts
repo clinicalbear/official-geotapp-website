@@ -7,7 +7,7 @@
  * tramite GPS, lista AZOP dei trattamenti che richiedono una DPIA, pagina AZOP
  * per i reclami e GDPR.
  *
- * La Croazia ha un'unica autorita nazionale, l'AZOP: nessuna ripartizione
+ * La Croazia ha un'unica autorità nazionale, l'AZOP: nessuna ripartizione
  * regionale. Nessun numero, URL o autorita e' inventato qui.
  */
 

@@ -7,7 +7,7 @@
  * reclamo, decisione IDPC CDP/COMP/426/2022 sulla videosorveglianza dei
  * dipendenti, Data Protection Act (Cap. 586) e GDPR.
  *
- * Malta ha un'unica autorita nazionale, l'IDPC: nessuna ripartizione regionale.
+ * Malta ha un'unica autorità nazionale, l'IDPC: nessuna ripartizione regionale.
  * Nessun numero, URL o autorita e' inventato qui.
  */
 

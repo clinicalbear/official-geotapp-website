@@ -8,7 +8,7 @@
  * nei rapporti di lavoro, sanzione AEPD contro Ares Capital (PS/00454/2024) e GDPR.
  *
  * La Spagna non e' uno Stato federale: per le aziende private vigila sempre
- * l'AEPD nazionale. Nessun numero, URL o autorita' e' inventato qui.
+ * l'AEPD nazionale. Nessun numero, URL o autorità' e' inventato qui.
  */
 
 import type { SchedaPaese } from '../types';

@@ -32,7 +32,7 @@ const FONTE_DATATILSYNET_CONTROLLI_2020 = {
   url: 'https://www.datatilsynet.dk/presse-og-nyheder/nyhedsarkiv/2020/aug/nye-afgoerelser-tilsyn-med-efterlevelse-af-oplysningspligten-',
 };
 const FONTE_DATATILSYNET = {
-  titolo: 'Datatilsynet (autorita garante danese)',
+  titolo: 'Datatilsynet (autorità garante danese)',
   url: 'https://www.datatilsynet.dk/english',
 };
 const FONTE_GDPR = {

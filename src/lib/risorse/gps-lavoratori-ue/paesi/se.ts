@@ -7,7 +7,7 @@
  * localizzazione GPS e valutazione d'impatto, GDPR e il caso del Comune di
  * Skelleftea sul riconoscimento facciale per le presenze.
  *
- * La Svezia ha un'unica autorita nazionale per la protezione dei dati, l'IMY
+ * La Svezia ha un'unica autorità nazionale per la protezione dei dati, l'IMY
  * (gia Datainspektionen); non esiste alcuna ripartizione regionale.
  * Nessun numero, URL o autorita e' inventato qui.
  */

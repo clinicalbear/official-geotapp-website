@@ -10,7 +10,7 @@
  * Contenuti basati su fonti citate nella sezione "Fonti": Legge 99-Z e
  * informazioni dell'NPDPC (Centro nazionale per la protezione dei dati
  * personali), analisi GRATA sulla privacy dei dipendenti e scheda DLA Piper
- * sull'applicazione. Nessun numero, URL o autorita' e' inventato qui.
+ * sull'applicazione. Nessun numero, URL o autorità' e' inventato qui.
  */
 
 import type { SchedaPaese } from '../types';

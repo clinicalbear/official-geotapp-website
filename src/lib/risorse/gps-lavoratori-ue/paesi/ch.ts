@@ -13,7 +13,7 @@
  * dati da parte del datore (CO art. 328b) e sulla valutazione d'impatto (nLPD
  * art. 22), oltre al GDPR come riferimento comparativo.
  *
- * Per i datori privati vigila l'autorita' federale (PFPDT/FDPIC); le autorita'
+ * Per i datori privati vigila l'autorità' federale (PFPDT/FDPIC); le autorita'
  * cantonali coprono gli enti pubblici cantonali. Nessun numero, URL o autorita'
  * e' inventato qui.
  */

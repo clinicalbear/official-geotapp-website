@@ -31,7 +31,7 @@ const FONTE_DATATILSYNET_DPIA = {
   url: 'https://www.datatilsynet.no/rettigheter-og-plikter/virksomhetenes-plikter/vurdering-av-personvernkonsekvenser/nar-ma-man-gjennomfore-en-vurdering-av-personvernkonsekvenser/',
 };
 const FONTE_DATATILSYNET = {
-  titolo: 'Datatilsynet (autorita garante norvegese)',
+  titolo: 'Datatilsynet (autorità garante norvegese)',
   url: 'https://www.datatilsynet.no/en/',
 };
 const FONTE_PVN_2017_07 = {

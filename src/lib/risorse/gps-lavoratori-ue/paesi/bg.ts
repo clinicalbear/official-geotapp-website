@@ -6,7 +6,7 @@
  * sulla privacy sul luogo di lavoro, lista CPDP dei trattamenti che richiedono una
  * DPIA, parere CPDP sul caso LUKOIL e GDPR.
  *
- * La Bulgaria ha un'unica autorita' nazionale, il CPDP: nessuna ripartizione
+ * La Bulgaria ha un'unica autorità' nazionale, il CPDP: nessuna ripartizione
  * regionale. Nessun numero, URL o autorita' e' inventato qui.
  */
 

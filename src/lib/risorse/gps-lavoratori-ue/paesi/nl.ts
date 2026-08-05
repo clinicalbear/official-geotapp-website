@@ -7,7 +7,7 @@
  * il controllo dei dipendenti, comunicato AP sulla sanzione per le impronte digitali,
  * scheda Eurofound sul monitoraggio dei lavoratori nei Paesi Bassi e GDPR.
  *
- * I Paesi Bassi hanno un'unica autorita nazionale, l'AP, senza ripartizione
+ * I Paesi Bassi hanno un'unica autorità nazionale, l'AP, senza ripartizione
  * regionale. Nessun numero, URL o autorita e' inventato qui.
  */
 
