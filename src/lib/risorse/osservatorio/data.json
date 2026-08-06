@@ -3181,6 +3181,20 @@
    "lang": "es"
   },
   {
+   "country": "NL",
+   "authority": "Autoriteit Persoonsgegevens",
+   "framework": "gdpr",
+   "title": "Boete vingerafdrukken personeel",
+   "published_at": "2020-04-30",
+   "source_url": "https://autoriteitpersoonsgegevens.nl/documenten/boete-vingerafdrukken-personeel",
+   "topics": [
+    "presenze_orario"
+   ],
+   "amount_eur": 725000,
+   "doc_number": "",
+   "lang": "nl"
+  },
+  {
    "country": "IE",
    "authority": "Data Protection Commission",
    "framework": "gdpr",
