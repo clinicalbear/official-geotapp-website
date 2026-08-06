@@ -3067,6 +3067,20 @@
    "lang": "sv"
   },
   {
+   "country": "DE",
+   "authority": "Die Landesbeauftragte für den Datenschutz Niedersachsen",
+   "framework": "gdpr",
+   "title": "LfD Niedersachsen verhängt Bußgeld über 10,4 Millionen Euro gegen notebooksbilliger.de",
+   "published_at": "2021-01-08",
+   "source_url": "https://lfd.niedersachsen.de/startseite/infothek/presseinformationen/lfd-niedersachsen-verhaengt-bussgeld-gegen-notebooksbilliger-de-196019.html",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": 10400000,
+   "doc_number": "",
+   "lang": "de"
+  },
+  {
    "country": "ES",
    "authority": "Agencia Española de Protección de Datos",
    "framework": "gdpr",
