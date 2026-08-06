@@ -17,6 +17,67 @@
   line-height: 1.55;
 }
 
+/* Filtro per nazione. E' una fila di pastiglie e non un menu a tendina perche' i paesi
+   sono pochi e il numero accanto a ognuno dice, prima ancora di premere, quanto e'
+   coperto quel paese: e' la prima cosa che si vuole sapere guardando un registro. */
+.lp-osservatorio .oss-filtro {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 18px;
+}
+
+.lp-osservatorio .oss-filtro-tit {
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.55;
+  margin-right: 4px;
+}
+
+.lp-osservatorio .oss-chip {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  padding: 6px 13px;
+  border: 1px solid rgba(14, 14, 12, 0.18);
+  border-radius: 999px;
+  background: #fff;
+  color: inherit;
+  font: inherit;
+  font-size: 0.86rem;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.lp-osservatorio .oss-chip:hover {
+  border-color: rgba(14, 14, 12, 0.38);
+  background: rgba(143, 196, 54, 0.1);
+}
+
+.lp-osservatorio .oss-chip.is-on {
+  background: #12210f;
+  border-color: #12210f;
+  color: #f4f7f0;
+}
+
+.lp-osservatorio .oss-chip-n {
+  font-size: 0.74rem;
+  font-variant-numeric: tabular-nums;
+  opacity: 0.6;
+}
+
+.lp-osservatorio .oss-chip.is-on .oss-chip-n {
+  opacity: 0.8;
+}
+
+.lp-osservatorio .oss-chip:focus-visible {
+  outline: 2px solid var(--seal, #8fc436);
+  outline-offset: 2px;
+}
+
 /* Il contenitore scorre in orizzontale solo quando serve davvero, e lo dichiara
    con un'ombra sul bordo destro invece di lasciare la tabella tagliata a secco. */
 .lp-osservatorio .oss-scroll {

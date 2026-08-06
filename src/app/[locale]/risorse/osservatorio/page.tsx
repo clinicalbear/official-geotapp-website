@@ -6,6 +6,8 @@ import { SUPPORTED_LOCALES } from '@/lib/i18n/config';
 import type { AppLocale } from '@/lib/i18n/config';
 import { osservatorioStrings } from '@/lib/risorse/osservatorio/i18n';
 import registro from '@/lib/risorse/osservatorio/data.json';
+import TabellaOsservatorio, { LOCALE_DATA } from './tabella';
+import type { Voce } from './tabella';
 import '../sanzioni-gps/l-page.css';
 import './l-page.css';
 
@@ -22,6 +24,9 @@ import './l-page.css';
  * Tutti i testi passano da lib/risorse/osservatorio/i18n: la pagina esce in undici
  * lingue. I nomi delle autorita' restano nella loro, perche' "Garante per la protezione
  * dei dati personali" non si traduce, e' il nome proprio di un ente.
+ *
+ * Tabella e filtro per nazione stanno in ./tabella, che e' l'unico pezzo con il
+ * browser dentro: il resto resta statico.
  */
 
 export { generateLocaleStaticParams as generateStaticParams } from '@/lib/i18n/static-params';
@@ -30,33 +35,6 @@ function safeLocale(locale: string): AppLocale {
   return (SUPPORTED_LOCALES as readonly string[]).includes(locale)
     ? (locale as AppLocale)
     : ('it' as AppLocale);
-}
-
-// Il quadro normativo va etichettato: Regno Unito e Svizzera non stanno sotto il
-// Regolamento europeo, e metterli in fila senza dirlo sarebbe fuorviante.
-const QUADRO: Record<string, string> = {
-  gdpr: 'GDPR', uk_gdpr: 'UK GDPR', ch_lpd: 'LPD/DSG',
-};
-
-const LOCALE_DATA: Record<string, string> = {
-  it: 'it-IT', en: 'en-GB', de: 'de-DE', fr: 'fr-FR', es: 'es-ES', pt: 'pt-PT',
-  nl: 'nl-NL', sv: 'sv-SE', da: 'da-DK', nb: 'nb-NO', ru: 'ru-RU',
-};
-
-// Il registro usa UK, ma il codice ISO del Regno Unito e' GB: senza la mappa
-// Intl non lo riconosce e la colonna resterebbe con la sigla nuda.
-const ISO_REGIONE: Record<string, string> = { UK: 'GB' };
-
-/** Nome del paese nella lingua del lettore, dal codice ISO. Cosi' la colonna dice
- *  "Paesi Bassi" a un italiano e "Niederlande" a un tedesco, senza tenere a mano
- *  quindici nomi per undici lingue. Se il codice non si risolve, resta la sigla. */
-function nomePaese(codice: string, intl: string): string {
-  try {
-    const dn = new Intl.DisplayNames([intl], { type: 'region' });
-    return dn.of(ISO_REGIONE[codice] ?? codice) ?? codice;
-  } catch {
-    return codice;
-  }
 }
 
 export async function generateMetadata({
@@ -84,19 +62,9 @@ export default async function OsservatorioPage({
   const s = osservatorioStrings(resolvedLocale);
   const intl = LOCALE_DATA[resolvedLocale] ?? 'it-IT';
 
-  const voci = registro.voci;
-  const paesi = Array.from(new Set(voci.map((v) => v.country))).sort();
+  const voci = registro.voci as Voce[];
   const aggiornato = new Date(registro.aggiornato).toLocaleDateString(intl);
   const homeHref = `/${resolvedLocale}/`;
-
-  const dataBreve = new Intl.DateTimeFormat(intl, {
-    day: '2-digit', month: '2-digit', year: 'numeric',
-  });
-  // useGrouping esplicito: in automatico Intl omette il separatore sotto le cinque
-  // cifre, e in colonna "6600" accanto a "460.000" sembrava un refuso.
-  const importo = new Intl.NumberFormat(intl, {
-    maximumFractionDigits: 0, useGrouping: true,
-  });
 
   return (
     <div className="lp-l lp-risorsa-strumento lp-osservatorio">
@@ -115,66 +83,9 @@ export default async function OsservatorioPage({
 
       <section className="sec">
         <div className="w">
-          <p className="oss-nota">
-            <strong>{s.conteggio(voci.length, paesi.length, aggiornato)}</strong>{' '}
-            {s.quadroNota}
-          </p>
-
           <p className="oss-avviso">{s.avviso}</p>
 
-          <div className="oss-scroll">
-            <table className="oss-tab">
-              <colgroup>
-                <col style={{ width: '7.5rem' }} />
-                <col style={{ width: '9.5rem' }} />
-                <col style={{ width: '20%' }} />
-                <col />
-                <col style={{ width: '15%' }} />
-                <col style={{ width: '7.5rem' }} />
-              </colgroup>
-              <thead>
-                <tr>
-                  <th scope="col">{s.thData}</th>
-                  <th scope="col">{s.thPaese}</th>
-                  <th scope="col">{s.thAutorita}</th>
-                  <th scope="col">{s.thProvvedimento}</th>
-                  <th scope="col">{s.thTemi}</th>
-                  <th scope="col">{s.thSanzione}</th>
-                </tr>
-              </thead>
-              <tbody>
-                {voci.map((v) => (
-                  <tr key={v.source_url + v.title}>
-                    <td className="oss-data" data-col={s.thData}>
-                      {dataBreve.format(new Date(v.published_at))}
-                    </td>
-                    <td className="oss-paese" data-col={s.thPaese}>
-                      {nomePaese(v.country, intl)}
-                      {v.framework !== 'gdpr' ? (
-                        <span className="oss-quadro">{QUADRO[v.framework] ?? v.framework}</span>
-                      ) : null}
-                    </td>
-                    <td className="oss-aut" data-col={s.thAutorita}>{v.authority}</td>
-                    <td className="oss-tit" data-col={s.thProvvedimento}>
-                      <a href={v.source_url} rel="nofollow noopener" target="_blank">
-                        {v.title.slice(0, 150)}
-                      </a>
-                    </td>
-                    <td data-col={s.thTemi}>
-                      <span className="oss-temi">
-                        {v.topics.map((t) => (
-                          <span className="oss-tema" key={t}>{s.temi[t] ?? t}</span>
-                        ))}
-                      </span>
-                    </td>
-                    <td className="oss-imp" data-col={s.thSanzione}>
-                      {v.amount_eur ? `${importo.format(v.amount_eur)} €` : ''}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+          <TabellaOsservatorio voci={voci} locale={resolvedLocale} aggiornato={aggiornato} />
 
           <p className="oss-nota">{s.chiusura}</p>
         </div>
