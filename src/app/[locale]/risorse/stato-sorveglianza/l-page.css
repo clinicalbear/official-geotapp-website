@@ -1,0 +1,108 @@
+/* "La sorveglianza sul lavoro in numeri". Grafici a magnitudine, un solo colore: il
+   registro non e' una classifica, e le barre sono sempre etichettate direttamente, cosi'
+   il numero si legge senza passare col mouse. Verde scuro su chiaro (contrasto verificato),
+   verde brand su scuro. */
+
+:root {
+  --st-bar: #4c8c2b;          /* verde scuro: passa il contrasto su superficie chiara */
+  --st-bar-soft: rgba(76, 140, 43, 0.16);
+  --st-ink: #12210f;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --st-bar: #8fc436; --st-bar-soft: rgba(143, 196, 54, 0.16); --st-ink: #f4f7f0; }
+}
+:root[data-theme='dark'] { --st-bar: #8fc436; --st-bar-soft: rgba(143, 196, 54, 0.16); --st-ink: #f4f7f0; }
+:root[data-theme='light'] { --st-bar: #4c8c2b; --st-bar-soft: rgba(76, 140, 43, 0.16); --st-ink: #12210f; }
+
+/* numeri chiave */
+.lp-stato .st-tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 14px;
+  margin: 8px 0 34px;
+}
+.lp-stato .st-tile {
+  border: 1px solid rgba(14, 14, 12, 0.14);
+  border-radius: 12px;
+  padding: 18px 18px 16px;
+  background: var(--st-bar-soft);
+}
+.lp-stato .st-num {
+  display: block;
+  font-size: 1.9rem;
+  font-weight: 800;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+  color: var(--st-ink);
+}
+.lp-stato .st-lab { display: block; margin-top: 4px; font-size: 0.95rem; }
+.lp-stato .st-sub { display: block; margin-top: 6px; font-size: 0.78rem; opacity: 0.65; line-height: 1.35; }
+
+/* figure */
+.lp-stato .st-fig { margin: 0 0 40px; }
+.lp-stato .st-fig figcaption { max-width: 720px; margin-bottom: 16px; }
+.lp-stato .st-fig h2 { margin: 0 0 4px; font-size: 1.2rem; }
+.lp-stato .st-fig figcaption p { margin: 0; font-size: 0.92rem; opacity: 0.75; line-height: 1.5; }
+.lp-stato .st-note { margin: 8px 0 0; font-size: 0.78rem; opacity: 0.6; }
+
+/* barre verticali: provvedimenti per anno */
+.lp-stato .st-anni {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  align-items: end;
+  gap: 8px;
+  min-height: 200px;
+  padding-top: 10px;
+}
+.lp-stato .st-col { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 6px; }
+.lp-stato .st-colval { font-size: 0.82rem; font-weight: 700; font-variant-numeric: tabular-nums; color: var(--st-ink); }
+.lp-stato .st-bar-v {
+  width: 100%;
+  max-width: 46px;
+  background: var(--st-bar);
+  border-radius: 5px 5px 0 0;
+  transition: opacity 0.15s ease;
+}
+.lp-stato .st-bar-v:hover { opacity: 0.82; }
+/* l'anno in corso e' parziale: tratteggio, cosi' non lo si legge come un calo */
+.lp-stato .st-parziale {
+  background: repeating-linear-gradient(
+    135deg, var(--st-bar) 0 6px, transparent 6px 11px);
+  border: 1px solid var(--st-bar);
+  box-sizing: border-box;
+}
+.lp-stato .st-collab { font-size: 0.76rem; opacity: 0.7; font-variant-numeric: tabular-nums; }
+
+/* barre orizzontali: temi e multe */
+.lp-stato .st-rows { display: flex; flex-direction: column; gap: 10px; }
+.lp-stato .st-row {
+  display: grid;
+  grid-template-columns: minmax(9rem, 15rem) 1fr auto;
+  align-items: center;
+  gap: 12px;
+}
+.lp-stato .st-rlab { font-size: 0.9rem; min-width: 0; }
+.lp-stato .st-row-multa .st-rlab { display: flex; flex-direction: column; gap: 1px; }
+.lp-stato .st-paese { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.6; }
+.lp-stato .st-row-multa .st-rlab a {
+  color: inherit; text-decoration: underline; text-underline-offset: 2px;
+  text-decoration-color: rgba(76, 140, 43, 0.6);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.lp-stato .st-track { background: var(--st-bar-soft); border-radius: 999px; height: 14px; overflow: hidden; }
+.lp-stato .st-bar-h { height: 100%; background: var(--st-bar); border-radius: 999px; min-width: 4px; }
+.lp-stato .st-rval { font-size: 0.9rem; font-weight: 700; font-variant-numeric: tabular-nums; text-align: right; color: var(--st-ink); }
+.lp-stato .st-rval-eur { white-space: nowrap; }
+
+.lp-stato .st-cta { margin-top: 22px; }
+.lp-stato .st-cta a { font-weight: 700; color: var(--st-bar); text-decoration: none; }
+.lp-stato .st-cta a:hover { text-decoration: underline; }
+
+/* sotto i 620px l'etichetta della riga va sopra la barra, non si comprime */
+@media (max-width: 620px) {
+  .lp-stato .st-row { grid-template-columns: 1fr auto; }
+  .lp-stato .st-rlab { grid-column: 1 / -1; }
+  .lp-stato .st-anni { overflow-x: auto; }
+  .lp-stato .st-col { min-width: 26px; }
+}

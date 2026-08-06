@@ -6,6 +6,7 @@ import { getDictionary } from '@/lib/i18n/dictionaries';
 import { SUPPORTED_LOCALES } from '@/lib/i18n/config';
 import type { AppLocale } from '@/lib/i18n/config';
 import { osservatorioStrings } from '@/lib/risorse/osservatorio/i18n';
+import { statoStrings } from '@/lib/risorse/stato-sorveglianza/i18n';
 import registro from '@/lib/risorse/osservatorio/data.json';
 import TabellaOsservatorio, { LOCALE_DATA } from './tabella';
 import Incorpora from './incorpora';
@@ -90,6 +91,12 @@ export default async function OsservatorioPage({
           <TabellaOsservatorio voci={voci} locale={resolvedLocale} aggiornato={aggiornato} />
 
           <p className="oss-nota">{s.chiusura}</p>
+
+          <p className="oss-nota">
+            <Link href={`/${resolvedLocale}/${SLUG_MAP.risorse?.[resolvedLocale] ?? 'risorse'}/${SLUG_MAP['stato-sorveglianza']?.[resolvedLocale] ?? 'stato-sorveglianza'}/`}>
+              {statoStrings(resolvedLocale).nomeBreve} &rarr;
+            </Link>
+          </p>
 
           <Incorpora
             locale={resolvedLocale}

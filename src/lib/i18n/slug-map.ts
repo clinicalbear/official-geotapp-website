@@ -229,6 +229,12 @@ export const SLUG_MAP: Record<string, Partial<Record<AppLocale, string>>> = {
     da: 'overvaagningsindeks', sv: 'overvakningsindex', nb: 'overvakingsindeks', ru: 'indeks-nablyudeniya',
     'en-us': 'surveillance-index', 'en-gb': 'surveillance-index', 'en-au': 'surveillance-index', 'en-ie': 'surveillance-index', 'en-ca': 'surveillance-index',
   },
+  'stato-sorveglianza': {
+    it: 'stato-sorveglianza', en: 'enforcement-in-numbers', de: 'ueberwachung-in-zahlen', nl: 'handhaving-in-cijfers',
+    fr: 'surveillance-en-chiffres', es: 'vigilancia-en-cifras', pt: 'vigilancia-em-numeros',
+    da: 'haandhaevelse-i-tal', sv: 'tillsyn-i-siffror', nb: 'tilsyn-i-tall', ru: 'nadzor-v-tsifrah',
+    'en-us': 'enforcement-in-numbers', 'en-gb': 'enforcement-in-numbers', 'en-au': 'enforcement-in-numbers', 'en-ie': 'enforcement-in-numbers', 'en-ca': 'enforcement-in-numbers',
+  },
   'edilizia': {
     it: 'edilizia', en: 'construction', de: 'bauwesen', nl: 'bouw',
     fr: 'construction', es: 'construccion', pt: 'construcao',
