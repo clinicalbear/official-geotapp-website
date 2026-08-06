@@ -113,6 +113,8 @@ export default async function StatoSorveglianzaPage({
   const oss = osservatorioStrings(loc);
   const intl = LOCALE_DATA[loc] ?? 'it-IT';
   const nf = new Intl.NumberFormat(intl, { maximumFractionDigits: 0 });
+  // un decimale per i milioni: 35.258.707 -> "35,3 mln", non "35 mln" (perde la cifra)
+  const nf1 = new Intl.NumberFormat(intl, { minimumFractionDigits: 1, maximumFractionDigits: 1 });
   const dati = calcola(registro.voci as Voce[]);
   const homeHref = `/${loc}/`;
   const ossHref = `/${loc}/${SLUG_MAP.risorse?.[loc] ?? 'risorse'}/${SLUG_MAP.osservatorio?.[loc] ?? 'osservatorio'}/`;
@@ -124,7 +126,7 @@ export default async function StatoSorveglianzaPage({
   // importo compatto: "35,3 mln" invece di "35.258.707", che in una barra non si legge
   const compatto = (v: number) =>
     v >= 1_000_000
-      ? `${nf.format(Math.round(v / 100_000) / 10)} ${loc === 'it' ? 'mln' : 'M'} €`
+      ? `${nf1.format(Math.round(v / 100_000) / 10)} ${loc === 'it' ? 'mln' : 'M'} €`
       : `${nf.format(v)} €`;
 
   return (
