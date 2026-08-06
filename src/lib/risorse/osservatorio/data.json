@@ -3095,6 +3095,20 @@
    "lang": "es"
   },
   {
+   "country": "DE",
+   "authority": "Der Hamburgische Beauftragte für Datenschutz und Informationsfreiheit",
+   "framework": "gdpr",
+   "title": "35,3 Millionen Euro Bußgeld wegen Datenschutzverstößen im Servicecenter von H&M",
+   "published_at": "2020-10-01",
+   "source_url": "https://datenschutz-hamburg.de/fileadmin/user_upload/HmbBfDI/Pressemitteilungen/2020/2020-10-01-H_M.pdf",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": 35258707,
+   "doc_number": "",
+   "lang": "de"
+  },
+  {
    "country": "ES",
    "authority": "Agencia Española de Protección de Datos",
    "framework": "gdpr",
