@@ -67,7 +67,7 @@ summary::-webkit-details-marker{display:none}
   .op .low{animation-delay:.55s}
   .op .cue{animation-delay:.75s}
 }
-:root{--ink:#0E0E0C;--paper:#F2F0E9;--seal:#8FC436;--lime:#B6E86A;--sky:#3BAEE0}
+:root{--ink:#0E0E0C;--paper:#F2F0E9;--seal:#8FC436;--lime:#B6E86A;--sky:#2DA4E4}
 h1,h2,h3,.big{font-family:var(--font-anton),'Anton',Impact,sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:-.018em;line-height:.9}
 .k{font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:500}
 .w{max-width:1500px;margin:0 auto;padding:0 46px}
@@ -96,7 +96,9 @@ h1,h2,h3,.big{font-family:var(--font-anton),'Anton',Impact,sans-serif;font-weigh
   .mn,.ne .lk{display:none}
 }
 .b1{background:var(--seal);color:var(--ink);padding:17px 34px;border-radius:99px;font-size:15.5px;font-weight:500; display:inline-block;transition:transform .3s cubic-bezier(.2,.8,.25,1),box-shadow .3s}
-.b1:hover{transform:translateY(-3px);box-shadow:0 18px 34px -14px rgba(143,196,54,.6)}
+/* `color` esplicito: senza, la scritta del pulsante prendeva l'azzurro di
+   `a:hover` di globals.css e sulla pillola verde stonava. */
+.b1:hover{transform:translateY(-3px);box-shadow:0 18px 34px -14px rgba(143,196,54,.6);color:var(--ink)}
 .b2{font-size:15.5px;border-bottom:1px solid currentColor;padding-bottom:3px;opacity:.8}
 .b2:hover{opacity:1;color:var(--seal)}
 .b3{background:var(--ink);color:var(--paper);padding:17px 34px;border-radius:99px;font-size:15.5px;font-weight:500; display:inline-block;transition:transform .3s}
@@ -151,6 +153,13 @@ h1,h2,h3,.big{font-family:var(--font-anton),'Anton',Impact,sans-serif;font-weigh
 .cardn p{font-size:15.5px;color:#4A5244;line-height:1.6}
 .ink .cardn{border-top-color:var(--lime)}
 .ink .cardn p{color:rgba(242,240,233,.7)}
+/* Schede-link (articoli correlati, elenco del blog, articolo in evidenza):
+   il titolo NON prende l'azzurro di `a:hover` di globals.css, che vale per i
+   link senza vestito proprio. Dentro una scheda il testo resta del colore
+   della sezione; il segnale del passaggio e' quello del mockup, il filo
+   verde in alto per .cardn e la foto che si avvicina per .feat e .posts. */
+a.cardn:hover{color:inherit;border-top-color:var(--seal)}
+a.feat:hover,.posts a:hover{color:inherit}
 @media(max-width:1000px){
   .grid3,.grid4{grid-template-columns:1fr 1fr}
 }

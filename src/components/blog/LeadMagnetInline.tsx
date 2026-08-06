@@ -80,7 +80,7 @@ export default function LeadMagnetInline({ magnet, locale }: Props) {
   }
 
   return (
-    <div className="my-12 rounded-2xl border border-[#3BAEE0]/25 bg-[#3BAEE0]/5 p-8 text-center">
+    <div className="my-12 rounded-2xl border border-[#2DA4E4]/25 bg-[#2DA4E4]/5 p-8 text-center">
       <p className="text-lg font-bold text-slate-900">{t.title}</p>
       <p className="text-sm text-slate-500 mt-2 max-w-md mx-auto">{t.desc}</p>
 
@@ -92,13 +92,13 @@ export default function LeadMagnetInline({ magnet, locale }: Props) {
         href={asset.file}
         target="_blank"
         rel="noopener"
-        className="mt-5 inline-block px-6 py-3 text-sm font-semibold text-white bg-[#3BAEE0] rounded-xl hover:bg-[#2f97c4] transition-colors"
+        className="mt-5 inline-block px-6 py-3 text-sm font-semibold text-white bg-[#2DA4E4] rounded-xl hover:bg-[#2f97c4] transition-colors"
       >
         {t.download}
       </a>
 
       {/* Iscrizione FACOLTATIVA sotto */}
-      <div className="mt-6 pt-5 border-t border-[#3BAEE0]/15 max-w-sm mx-auto">
+      <div className="mt-6 pt-5 border-t border-[#2DA4E4]/15 max-w-sm mx-auto">
         {status === 'success' ? (
           <p className="text-sm font-semibold text-[#8FC436]">{t.success}</p>
         ) : (
@@ -110,12 +110,12 @@ export default function LeadMagnetInline({ magnet, locale }: Props) {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder={t.placeholder}
-                className="flex-1 min-w-0 px-4 py-2.5 text-sm rounded-xl border border-slate-200 bg-white text-slate-700 placeholder:text-slate-400 outline-none focus:border-[#3BAEE0] transition-colors"
+                className="flex-1 min-w-0 px-4 py-2.5 text-sm rounded-xl border border-slate-200 bg-white text-slate-700 placeholder:text-slate-400 outline-none focus:border-[#2DA4E4] transition-colors"
               />
               <button
                 type="submit"
                 disabled={status === 'loading'}
-                className="shrink-0 px-5 py-2.5 text-sm font-semibold text-slate-700 bg-white border border-slate-200 rounded-xl hover:border-[#3BAEE0] transition-colors disabled:opacity-70 disabled:cursor-not-allowed"
+                className="shrink-0 px-5 py-2.5 text-sm font-semibold text-slate-700 bg-white border border-slate-200 rounded-xl hover:border-[#2DA4E4] transition-colors disabled:opacity-70 disabled:cursor-not-allowed"
               >
                 {status === 'loading' ? '...' : t.btn}
               </button>

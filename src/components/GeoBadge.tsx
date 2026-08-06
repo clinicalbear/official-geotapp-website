@@ -14,7 +14,7 @@ export default function GeoBadge({
     <span className={`geo-status ${className}`}>
       <span
         className="w-2 h-2 rounded-full animate-pulse"
-        style={{ background: 'linear-gradient(135deg,#8FC436,#3BAEE0)' }}
+        style={{ background: 'linear-gradient(135deg,#8FC436,#2DA4E4)' }}
       />
       <span className="text-geo-gradient geo-underline">{children}</span>
     </span>

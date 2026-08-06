@@ -498,15 +498,15 @@ export default function LinksClient({ articles, locale = 'it', variant = 'legacy
           href={withUtm(`https://geotapp.com/${langPath}/survey/`, 'ig_links_survey', 'survey_top')}
           target="_blank" rel="noopener noreferrer"
           onClick={() => trackEvent('survey_click', { cta_source: 'links_top', cta_locale: locale })}
-          className="group flex items-center gap-3.5 p-4 rounded-2xl border border-[#3BAEE0]/25 bg-gradient-to-r from-[#3BAEE0]/8 to-primary/8 hover:border-[#3BAEE0]/45 transition-all duration-200 active:scale-[0.98]">
-          <div className="shrink-0 w-11 h-11 rounded-xl bg-[#3BAEE0]/12 border border-[#3BAEE0]/20 flex items-center justify-center text-[#3BAEE0]">
+          className="group flex items-center gap-3.5 p-4 rounded-2xl border border-[#2DA4E4]/25 bg-gradient-to-r from-[#2DA4E4]/8 to-primary/8 hover:border-[#2DA4E4]/45 transition-all duration-200 active:scale-[0.98]">
+          <div className="shrink-0 w-11 h-11 rounded-xl bg-[#2DA4E4]/12 border border-[#2DA4E4]/20 flex items-center justify-center text-[#2DA4E4]">
             <ClipboardList size={20} strokeWidth={2} />
           </div>
           <div className="flex-1 min-w-0">
             <h3 className="font-semibold text-[14px] leading-tight text-slate-800 group-hover:text-[#2f97c4] transition-colors duration-150">{survey.label}</h3>
             <p className="text-[11.5px] text-slate-400 leading-snug mt-0.5 line-clamp-1">{survey.note}</p>
           </div>
-          <div className="shrink-0 text-[#3BAEE0]/50 group-hover:text-[#3BAEE0] group-hover:translate-x-0.5 transition-all duration-150">
+          <div className="shrink-0 text-[#2DA4E4]/50 group-hover:text-[#2DA4E4] group-hover:translate-x-0.5 transition-all duration-150">
             <ArrowRight size={15} />
           </div>
         </Link>

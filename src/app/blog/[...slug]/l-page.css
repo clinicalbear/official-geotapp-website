@@ -108,6 +108,52 @@
   padding: 2px 6px;
 }
 
+/* CTA dentro il corpo dell'articolo: il pulsante e' quello del template
+   (".b1" di l-mockup.css, pillola piena senza alone). La pillola con l'anello
+   che pulsa resta definita in globals.css perche' la usa il resto del sito,
+   dove pero' redesign-l.css la spegne; sulle route /blog/* quel foglio non
+   viene caricato (vedi src/app/blog/layout.tsx) e la pulsazione arrivava fin
+   dentro gli articoli. Il markup del box vive dentro post_content di
+   WordPress in due varianti, entrambe ancora in uso: il box .article-cta con
+   `btn-ring btn-ring-sm` (dal 27/07/2026) e il vecchio .my-12.rounded-2xl con
+   `btn-modern-sm`. Si vestono da qui invece di riscrivere i post.
+
+   Qui NON si tocca `display`: i vecchi pulsanti trial nel corpo WP sono
+   nascosti da globals.css (`.article-content a.btn-modern-sm[href*="/trial"]`,
+   scelta di Mike del 31/07/2026) e devono restare nascosti. Un `display` qui
+   avrebbe specificita' maggiore e li avrebbe fatti riapparire. */
+.lp-articolo .art .body .article-content a.btn-ring,
+.lp-articolo .art .body .article-content a.btn-modern-sm {
+  padding: 17px 34px;
+  border: 0;
+  border-radius: 99px;
+  background: var(--seal);
+  color: var(--ink);
+  font-size: 15.5px;
+  font-weight: 500;
+  letter-spacing: normal;
+  text-transform: none;
+  text-decoration: none;
+  box-shadow: none;
+  filter: none;
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.25, 1), box-shadow 0.3s;
+}
+.lp-articolo .art .body .article-content a.btn-ring::before,
+.lp-articolo .art .body .article-content a.btn-ring::after,
+.lp-articolo .art .body .article-content a.btn-modern-sm::before,
+.lp-articolo .art .body .article-content a.btn-modern-sm::after {
+  content: none;
+  display: none;
+  animation: none;
+}
+.lp-articolo .art .body .article-content a.btn-ring:hover,
+.lp-articolo .art .body .article-content a.btn-modern-sm:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 34px -14px rgba(143, 196, 54, 0.6);
+  color: var(--ink);
+  filter: none;
+}
+
 /* Sidebar (ArticleSidebar.tsx): sul mockup e' solo "scritto da" + indice +
    condividi. Qui restano anche i pannelli extra (timbratura, prodotto,
    dati in Europa, CTA): funzionalita' che "resta", vestita in coerenza col

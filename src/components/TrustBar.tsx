@@ -69,8 +69,8 @@ const COPY: Record<string, {
 };
 
 const CLAIM_ICONS = [ShieldCheck, FileCheck, MapPin];
-const ICON_COLORS = ['#8FC436', '#3BAEE0', '#F97316'];
-const ICON_BG = ['rgba(143,196,54,0.12)', 'rgba(59,174,224,0.12)', 'rgba(249,115,22,0.12)'];
+const ICON_COLORS = ['#8FC436', '#2DA4E4', '#F97316'];
+const ICON_BG = ['rgba(143,196,54,0.12)', 'rgba(45,164,228,0.12)', 'rgba(249,115,22,0.12)'];
 
 export default function TrustBar({ locale }: { locale: string }) {
   const c = COPY[locale] ?? COPY.en;

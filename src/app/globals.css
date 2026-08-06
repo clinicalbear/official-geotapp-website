@@ -315,12 +315,19 @@ h6,
 }
 
 a {
-  color: #6a7dfc;
+  color: #2da4e4;
   text-decoration: none;
 }
 
+/* #2DA4E4 e' l'azzurro del logo misurato sul file: mediana dei pixel pieni
+   della scritta "GeoTapp" in public/LogoGeoTapp.webp (06/08/2026). Lo stesso
+   valore sta in `brand-blue` di tailwind.config.ts, in --sky del sistema L e
+   in --geo-blue: prima era #3BAEE0, vicino ma non quello del marchio.
+   Qui c'era #49e2d6, un turchese verdastro rimasto dal template di partenza:
+   usciva su tutti i link senza una regola propria (loghi directory,
+   "Featured in", fonti in calce) e col marchio non c'entrava niente. */
 a:hover {
-  color: #49e2d6;
+  color: #2da4e4;
 }
 
 /* jQuery Reveal Animations */
@@ -352,8 +359,8 @@ a:hover {
 .section-lg  { padding-top: 8rem;  padding-bottom: 8rem;  }
 
 /* ===== BRAND COLOR UTILITIES ===== */
-.text-brand-blue  { color: #3BAEE0; }
-.bg-brand-blue    { background-color: #3BAEE0; }
+.text-brand-blue  { color: #2DA4E4; }
+.bg-brand-blue    { background-color: #2DA4E4; }
 .text-brand-green { color: #52C065; }
 .bg-brand-green   { background-color: #52C065; }
 
@@ -775,7 +782,7 @@ a:hover {
 
 /* ════════════════════════════════════════════════════════════════════
    GEOTAPP BRAND SYSTEM v1 (2026-06-03)
-   Identità: verde lime #8FC436 (firma) + blu #3BAEE0 (logo) come gradiente
+   Identità: verde lime #8FC436 (firma) + blu #2DA4E4 (logo) come gradiente
    brand. Bottone primario di proprietà, accenti gradiente, ombre verdi.
    ════════════════════════════════════════════════════════════════════ */
 
@@ -783,8 +790,8 @@ a:hover {
 :root {
   --geo-green: #8FC436;
   --geo-green-deep: #6fa028;
-  --geo-blue: #3BAEE0;
-  --geo-grad: linear-gradient(135deg, #8FC436 0%, #5cc08a 50%, #3BAEE0 115%);
+  --geo-blue: #2DA4E4;
+  --geo-grad: linear-gradient(135deg, #8FC436 0%, #5cc08a 50%, #2DA4E4 115%);
   --geo-ink: #0e2a05; /* testo near-black verde per contrasto su lime */
 }
 
@@ -967,7 +974,7 @@ a:hover {
 .geo-aurora { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
 .geo-aurora span { position: absolute; border-radius: 9999px; filter: blur(90px); opacity: 0.55; will-change: transform; }
 .geo-aurora .a1 { width: 46vw; height: 46vw; top: -14%; right: -8%; background: radial-gradient(circle, rgba(143,196,54,0.55), transparent 70%); animation: geo-aurora-1 16s ease-in-out infinite; }
-.geo-aurora .a2 { width: 42vw; height: 42vw; bottom: -18%; left: -10%; background: radial-gradient(circle, rgba(59,174,224,0.5), transparent 70%); animation: geo-aurora-2 20s ease-in-out infinite; }
+.geo-aurora .a2 { width: 42vw; height: 42vw; bottom: -18%; left: -10%; background: radial-gradient(circle, rgba(45,164,228,0.5), transparent 70%); animation: geo-aurora-2 20s ease-in-out infinite; }
 .geo-aurora .a3 { width: 34vw; height: 34vw; top: 20%; left: 30%; background: radial-gradient(circle, rgba(92,192,138,0.4), transparent 70%); animation: geo-aurora-3 24s ease-in-out infinite; }
 
 .geo-float { animation: geo-float 7s ease-in-out infinite; }
@@ -975,7 +982,7 @@ a:hover {
 .geo-pin-drop { animation: geo-pin-drop 0.7s cubic-bezier(0.34,1.56,0.64,1) 0.4s both; }
 .geo-pin-ring { animation: geo-pin-pulse 2.4s ease-out infinite; }
 
-.geo-glass { background: rgba(255,255,255,0.65); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border: 1px solid rgba(255,255,255,0.7); box-shadow: 0 30px 70px -20px rgba(15,23,42,0.35), 0 10px 30px -15px rgba(59,174,224,0.25); }
+.geo-glass { background: rgba(255,255,255,0.65); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border: 1px solid rgba(255,255,255,0.7); box-shadow: 0 30px 70px -20px rgba(15,23,42,0.35), 0 10px 30px -15px rgba(45,164,228,0.25); }
 
 .btn-modern {
   display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
@@ -1005,11 +1012,11 @@ a:hover {
 }
 .card-modern:hover {
   transform: translateY(-6px);
-  box-shadow: 0 1px 2px rgba(15,23,42,0.04), 0 28px 54px -22px rgba(59,174,224,0.3);
+  box-shadow: 0 1px 2px rgba(15,23,42,0.04), 0 28px 54px -22px rgba(45,164,228,0.3);
   border-color: rgba(143,196,54,0.45);
 }
 /* Cerchio icona con gradiente brand morbido */
-.icon-grad-green { background: linear-gradient(135deg, rgba(143,196,54,0.18), rgba(59,174,224,0.14)); color: #5a9e2a; }
+.icon-grad-green { background: linear-gradient(135deg, rgba(143,196,54,0.18), rgba(45,164,228,0.14)); color: #5a9e2a; }
 .icon-grad-rose { background: linear-gradient(135deg, rgba(244,63,94,0.14), rgba(249,115,22,0.12)); color: #e11d48; }
 
 /* ── Larghezza contenuti standard (desktop/tablet); mobile invariato ── */
@@ -1035,7 +1042,7 @@ a:hover {
 
 /* Sottolineatura premium componibile (per la 6) */
 .geo-underline { position: relative; display: inline-block; padding-bottom: 6px; }
-.geo-underline::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; border-radius: 9999px; background: var(--geo-grad); box-shadow: 0 2px 10px rgba(59,174,224,0.35); }
+.geo-underline::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; border-radius: 9999px; background: var(--geo-grad); box-shadow: 0 2px 10px rgba(45,164,228,0.35); }
 
 /* Bottone moderno compatto (navbar, CTA piccoli) */
 .btn-modern-sm {
@@ -1108,9 +1115,9 @@ a:hover {
 /* Variante azzurra, per quando il verde sta su fondo verde */
 .btn-ring-blue {
   color: #062E45;
-  background: #3BAEE0;
-  background: linear-gradient(90deg, #7FD9F2 0%, #3BAEE0 100%);
-  box-shadow: 12px 12px 24px rgba(59,174,224,0.55);
+  background: #2DA4E4;
+  background: linear-gradient(90deg, #7FD9F2 0%, #2DA4E4 100%);
+  box-shadow: 12px 12px 24px rgba(45,164,228,0.55);
 }
 .btn-ring-blue::before, .btn-ring-blue::after { border-color: #12A0DC; }
 .btn-ring-blue::before { box-shadow: 0 0 60px rgba(18,160,220,0.5); }
@@ -1139,7 +1146,7 @@ a:hover {
   padding: 2rem;
   border: 1px solid rgba(143,196,54,0.28);
   border-radius: 1.25rem;
-  background: linear-gradient(90deg, rgba(143,196,54,0.08) 0%, rgba(59,174,224,0.08) 100%);
+  background: linear-gradient(90deg, rgba(143,196,54,0.08) 0%, rgba(45,164,228,0.08) 100%);
   text-align: center;
 }
 .article-cta > p:first-child {
@@ -1156,7 +1163,7 @@ a:hover {
    restano quelli generici. Si potranno togliere il giorno in cui i vecchi post
    verranno riscritti. */
 .article-content .my-12.rounded-2xl.text-center {
-  background: linear-gradient(90deg, rgba(143,196,54,0.08) 0%, rgba(59,174,224,0.08) 100%);
+  background: linear-gradient(90deg, rgba(143,196,54,0.08) 0%, rgba(45,164,228,0.08) 100%);
   border-color: rgba(143,196,54,0.28);
   border-radius: 1.25rem;
 }
