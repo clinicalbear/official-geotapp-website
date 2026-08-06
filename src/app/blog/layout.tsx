@@ -6,6 +6,10 @@ import '../globals.css';
 // (/blog/*, senza prefisso locale), che non passano da [locale]/layout.tsx
 // e quindi non lo caricherebbero altrimenti.
 import '../l-mockup.css';
+// La coda: stesso foglio del resto del sito, cosi' il footer del blog e quello
+// del sito non possono divergere (le regole stavano in redesign-l.css, che qui
+// non si carica, e il blog usciva coi link piu' spenti e i loghi a colori).
+import '../l-footer.css';
 import { clsx } from 'clsx';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';

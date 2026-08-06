@@ -1,0 +1,45 @@
+/* ============================================================================
+   Coda del sito (components/Footer.tsx) — foglio CONDIVISO.
+
+   Queste regole stavano in redesign-l.css, che pero' le route /blog/* non
+   caricano (vedi src/app/blog/layout.tsx: li' arrivano solo globals.css e
+   l-mockup.css). Risultato: la coda del blog non era identica a quella del
+   sito, link piu' spenti (#8A937F invece di #B4BFAE) e loghi delle directory
+   a colori invece che grigi, e la riga dei marchi 2px piu' bassa.
+
+   Da qui le carica chiunque monti <Footer />, cosi' la coda resta una cosa
+   sola: chi tocca questo file cambia la coda di TUTTO il sito, blog compreso.
+   Le variabili sono quelle di l-mockup.css, caricato su entrambi i lati; in
+   redesign-l.css restano solo le regole che NON riguardano la coda.
+   ========================================================================= */
+
+footer, footer > div, footer section{ background:var(--ink) !important; color:#B4BFAE !important; }
+footer *{ border-color:rgba(242,240,233,.14) !important; }
+footer img[alt*="GeoTapp"], footer img[src*="Logo"]{ height:52px !important; width:auto !important; }
+footer h4, footer h3, footer strong, footer p strong{ color:var(--paper) !important;
+  font-size:11px !important; letter-spacing:.16em !important; text-transform:uppercase !important; }
+footer a{ color:#B4BFAE !important; transition:color .3s, transform .3s; display:inline-block; }
+footer a:hover{ color:var(--lime) !important; transform:translateX(4px); }
+footer input, footer select{ background:transparent !important; color:#B4BFAE !important;
+  border-color:rgba(242,240,233,.24) !important; }
+
+/* Il titolo della fascia newsletter. Sul sito la misura la detta la scala
+   globale dei titoli di redesign-l.css (`h2:not(.lp-l *)`, clamp 26/3.6vw/58,
+   con !important), che sul blog non c'e': li' restava quella di l-mockup
+   (clamp 22/2.6vw/40) e a 1280px il titolo usciva 33px invece di 46px. Qui
+   vale per tutti e due. La specificita' basta a superare `.ft .news h2` di
+   l-mockup; sul sito continua a vincere la regola !important, stesso valore.
+   Stessa storia per l'interlinea: .92 dallo strato globale del sito, .95 da
+   l-mockup, ed era quel pixel di differenza che restava in fondo. */
+footer.ft .news h2{ font-size:clamp(26px, 3.6vw, 58px); line-height:.92; }
+
+/* Loghi delle directory: grigi in riposo, a colori al passaggio. Le altezze
+   sono dichiarate marchio per marchio perche' gli SVG arrivano con viewBox
+   diversi e senza questa riga la fila esce a scalini. */
+footer svg[class*="logo"], footer a svg{ filter:grayscale(1) !important; opacity:.6 !important; }
+footer a:hover svg{ filter:none !important; opacity:1 !important; }
+footer a[href*="capterra"] svg, footer a[href*="getapp"] svg, footer a[href*="g2"] svg,
+footer a[href*="producthunt"] svg, footer a[href*="sourceforge"] svg, footer a[href*="slashdot"] svg,
+footer a[href*="saashub"] svg, footer a[href*="alternativeto"] svg, footer a[href*="trustradius"] svg,
+footer a[href*="softwareadvice"] svg, footer a[href*="saasworthy"] svg{
+  height:34px !important; width:auto !important; }

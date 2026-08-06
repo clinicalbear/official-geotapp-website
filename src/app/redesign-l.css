@@ -106,13 +106,11 @@ a[class*="bg-slate-900"], button[class*="bg-slate-900"]{
 header nav img[alt*="GeoTapp"], header img[alt*="GeoTapp"]{
   height:46px !important; width:auto !important;
 }
-footer img[alt*="GeoTapp"]{ height:50px !important; width:auto !important; }
 
 /* ── coda ──────────────────────────────────────────────────────────────── */
-footer{ background:var(--l-ink) !important; color:#B4BFAE !important; }
-footer h4, footer h3, footer strong{ color:var(--l-paper) !important; text-transform:uppercase; letter-spacing:.16em; font-size:11px !important; }
-footer a{ color:#B4BFAE !important; transition:color .3s, transform .3s; display:inline-block; }
-footer a:hover{ color:var(--l-lime) !important; transform:translateX(4px); }
+/* Le regole della coda sono in l-footer.css, foglio condiviso: qui non
+   possono stare, perche' le route /blog/* non caricano questo file e la coda
+   del blog usciva diversa da quella del sito. */
 
 /* ── elenchi a filo invece delle spunte colorate ───────────────────────── */
 ul li svg[class*="text-green"], ul li svg[class*="text-emerald"]{ color:var(--l-seal) !important; }
@@ -397,16 +395,7 @@ p.l-hero-kicker{ font-size:12px !important; line-height:1.4 !important;
    LISTA DIFFERENZE: punti 6, 13, 14, 15, 16, 17
    ========================================================================= */
 
-/* 15 - piè di pagina nero con marchio grande */
-footer, footer > div, footer section{ background:var(--l-ink) !important; color:#B4BFAE !important; }
-footer *{ border-color:rgba(242,240,233,.14) !important; }
-footer img[alt*="GeoTapp"], footer img[src*="Logo"]{ height:52px !important; width:auto !important; }
-footer h4, footer h3, footer p strong{ color:var(--l-paper) !important;
-  font-size:11px !important; letter-spacing:.16em !important; text-transform:uppercase !important; }
-footer a{ color:#B4BFAE !important; }
-footer a:hover{ color:var(--l-lime) !important; }
-footer input, footer select{ background:transparent !important; color:#B4BFAE !important;
-  border-color:rgba(242,240,233,.24) !important; }
+/* 15 - piè di pagina nero con marchio grande: in l-footer.css, condiviso col blog */
 
 /* 6 - loghi directory e stampa: grigio e hover a colori li gestiscono
    ListedOn.tsx e FeaturedIn.tsx al loro interno (niente override qui:
@@ -459,19 +448,11 @@ a[class*="btn-modern-ghost"]{ background:transparent !important; border:0 !impor
 /* titoli di scheda tutti dello stesso colore, come nel mockup */
 .l-body section h3, .l-body section h3 *{ color:var(--l-ink) !important; }
 .l-body section[class*="0E0E0C"] h3, .l-body section[class*="0E0E0C"] h3 *{ color:var(--l-paper) !important; }
-footer h3, footer h4{ color:var(--l-paper) !important; }
 
-/* loghi directory: grigi e grandi ovunque siano */
-footer svg[class*="logo"], footer a svg,
+/* loghi directory FUORI dalla coda ("Presente su" dentro le pagine): grigi.
+   Quelli dentro <footer> stanno in l-footer.css, condiviso col blog. */
 section:has(> div > *:is(p,div):is([class*="PRESENTE"],[class*="presente"])) svg{
   filter:grayscale(1) !important; opacity:.6 !important; }
-footer a:hover svg{ filter:none !important; opacity:1 !important; }
-/* la riga "Presente su": tutti i marchi in grigio, si accendono al passaggio */
-footer a[href*="capterra"] svg, footer a[href*="getapp"] svg, footer a[href*="g2"] svg,
-footer a[href*="producthunt"] svg, footer a[href*="sourceforge"] svg, footer a[href*="slashdot"] svg,
-footer a[href*="saashub"] svg, footer a[href*="alternativeto"] svg, footer a[href*="trustradius"] svg,
-footer a[href*="softwareadvice"] svg, footer a[href*="saasworthy"] svg{
-  height:34px !important; width:auto !important; }
 
 /* la pillola dell'azione perde l'alone anche nella barra */
 .l-nav a[class*="btn-ring"], .l-nav a[class*="ring"]{ box-shadow:none !important;

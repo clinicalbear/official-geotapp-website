@@ -6,6 +6,9 @@ import { Inter, Poppins, Anton } from 'next/font/google';
 import '../globals.css';
 import '../redesign-l.css';
 import '../l-mockup.css';
+// La coda vive in un foglio a parte perche' la carica anche blog/layout.tsx:
+// vedi src/app/l-footer.css.
+import '../l-footer.css';
 import { clsx } from 'clsx';
 import Navbar from '@/components/Navbar';
 import LEffetti from '@/components/LEffetti';
