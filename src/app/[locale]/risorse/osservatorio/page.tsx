@@ -1,12 +1,14 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
+import { SLUG_MAP } from '@/lib/i18n/slug-map';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import { SUPPORTED_LOCALES } from '@/lib/i18n/config';
 import type { AppLocale } from '@/lib/i18n/config';
 import { osservatorioStrings } from '@/lib/risorse/osservatorio/i18n';
 import registro from '@/lib/risorse/osservatorio/data.json';
 import TabellaOsservatorio, { LOCALE_DATA } from './tabella';
+import Incorpora from './incorpora';
 import type { Voce } from './tabella';
 import '../sanzioni-gps/l-page.css';
 import './l-page.css';
@@ -71,7 +73,7 @@ export default async function OsservatorioPage({
       <section className="ph">
         <div className="crumb">
           <div className="w">
-            <Link href={homeHref}>GeoTapp</Link> / {d.navbar.resources} / {s.kicker}
+            <Link href={homeHref}>GeoTapp</Link> / {d.navbar.resources} / {s.nomeBreve}
           </div>
         </div>
         <div className="w">
@@ -88,6 +90,11 @@ export default async function OsservatorioPage({
           <TabellaOsservatorio voci={voci} locale={resolvedLocale} aggiornato={aggiornato} />
 
           <p className="oss-nota">{s.chiusura}</p>
+
+          <Incorpora
+            locale={resolvedLocale}
+            src={`https://geotapp.com/embed/${SLUG_MAP.osservatorio?.[resolvedLocale] ?? 'osservatorio'}/`}
+          />
         </div>
       </section>
 

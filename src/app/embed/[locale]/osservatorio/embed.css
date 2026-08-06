@@ -1,0 +1,32 @@
+/* Il widget vive dentro l'iframe di un altro sito: niente margini di pagina, niente
+   colonna centrata. Solo un po' d'aria, perche' incollato al bordo si legge male. */
+
+.oss-embed {
+  padding: 14px 16px 18px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.oss-embed .oss-nota {
+  margin: 0 0 12px;
+  font-size: 0.9rem;
+}
+
+.oss-embed .oss-credito {
+  margin: 14px 0 0;
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.oss-embed .oss-credito a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* Dentro un iframe la tabella non deve reggersi sull'altezza della finestra: le
+   intestazioni appiccicate in cima si incollerebbero al bordo dell'iframe e non alla
+   vista di chi legge, che e' la pagina ospite. */
+.oss-embed .oss-tab thead th {
+  position: static;
+}

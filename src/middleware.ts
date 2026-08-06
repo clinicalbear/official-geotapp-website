@@ -462,6 +462,52 @@ export async function middleware(req: NextRequest) {
   // framabili (niente X-Frame-Options: SAMEORIGIN) e restano fuori dal routing
   // locale (gestiscono il locale come parametro di route). Cambio confinato a /embed/.
   if (pathname.startsWith('/embed/')) {
+    // /embed/osservatorio/ SENZA lingua: la sceglie il visitatore, non chi ha incollato
+    // il codice. Un registro europeo incorporato su un sito tedesco deve uscire in
+    // tedesco anche se lo snippet l'ha copiato un italiano. Rewrite e non redirect,
+    // cosi' l'indirizzo dentro l'attributo src resta uno solo, e Vary: Accept-Language
+    // perche' la stessa URL ha undici risposte diverse.
+    const senzaBarra = pathname.replace(/\/+$/, '');
+    const pezzi = senzaBarra.split('/').filter(Boolean);        // ['embed', ...]
+    // Il nome della risorsa nell'indirizzo del widget vale in tutte e undici le lingue:
+    // /embed/beobachtungsstelle/ e /embed/observatoire/ sono la stessa cosa di
+    // /embed/osservatorio/. Chi incorpora il registro sul proprio sito copia un
+    // indirizzo che legge, non una parola italiana che non gli dice niente.
+    const SLUG_OSSERVATORIO = new Set(Object.values(SLUG_MAP.osservatorio ?? {}));
+    SLUG_OSSERVATORIO.add('osservatorio');
+
+    // /embed/<lingua>/<nome tradotto> → la rotta unica, nella lingua chiesta
+    if (pezzi.length === 3
+        && (SUPPORTED_LOCALES as readonly string[]).includes(pezzi[1])
+        && SLUG_OSSERVATORIO.has(pezzi[2])
+        && pezzi[2] !== 'osservatorio') {
+      const url = req.nextUrl.clone();
+      url.pathname = `/embed/${pezzi[1]}/osservatorio/`;
+      const res = NextResponse.rewrite(url);
+      res.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
+      res.headers.set('X-Content-Type-Options', 'nosniff');
+      res.headers.set('Content-Security-Policy', 'frame-ancestors *');
+      return res;
+    }
+
+    if (pezzi.length === 2 && SLUG_OSSERVATORIO.has(pezzi[1])) {
+      const scelta = resolveLocale({
+        // dentro l'iframe di un sito terzo il nostro cookie non viaggia: restano
+        // la lingua del browser e il paese, che e' esattamente quello che serve.
+        cookieLocale: undefined,
+        countryCode:
+          req.headers.get('cf-ipcountry') || req.headers.get('x-vercel-ip-country') || null,
+        acceptLanguage: req.headers.get('accept-language'),
+      });
+      const url = req.nextUrl.clone();
+      url.pathname = `/embed/${scelta}/osservatorio/`;
+      const tradotto = NextResponse.rewrite(url);
+      tradotto.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
+      tradotto.headers.set('X-Content-Type-Options', 'nosniff');
+      tradotto.headers.set('Content-Security-Policy', 'frame-ancestors *');
+      tradotto.headers.set('Vary', 'Accept-Language');
+      return tradotto;
+    }
     const res = NextResponse.next();
     res.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
     res.headers.set('X-Content-Type-Options', 'nosniff');
