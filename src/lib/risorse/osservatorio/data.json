@@ -970,6 +970,20 @@
    "lang": "it"
   },
   {
+   "country": "FR",
+   "authority": "Commission Nationale de l'Informatique et des Libertés",
+   "framework": "gdpr",
+   "title": "SOCIETE EXPLOITANT UN GRAND MAGASIN - Obligation de traiter les données de façon licite et principe de responsabilité (vidéosurveillance) Minimisation des données (vidéosurveillance) Obligation de notifier une violation de données à l'autorité de contrôle Obligation d'associer le délégué à la protec",
+   "published_at": "2025-09-18",
+   "source_url": "https://www.legifrance.gouv.fr/cnil/id/CNILTEXT000052266505",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": 100000,
+   "doc_number": "",
+   "lang": "fr"
+  },
+  {
    "country": "BE",
    "authority": "Autorité de protection des données",
    "framework": "gdpr",
@@ -1464,6 +1478,22 @@
     "geolocalizzazione"
    ],
    "amount_eur": null,
+   "doc_number": "",
+   "lang": "fr"
+  },
+  {
+   "country": "FR",
+   "authority": "Commission Nationale de l'Informatique et des Libertés",
+   "framework": "gdpr",
+   "title": "SOCIETE EXERCANT UNE ACTIVITE D'AGENCE IMMOBILIERE - Minimisation des données (vidéosurveillance) Obligation de traiter les données de façon licite (vidéosurveillance) Information des personnes Défaut de sécurité des données Obligation de réaliser une analyse d'impact",
+   "published_at": "2024-12-19",
+   "source_url": "https://www.legifrance.gouv.fr/cnil/id/CNILTEXT000051120331",
+   "topics": [
+    "controllo_a_distanza",
+    "lavoro_agile",
+    "presenze_orario"
+   ],
+   "amount_eur": 40000,
    "doc_number": "",
    "lang": "fr"
   },
@@ -2009,6 +2039,21 @@
    "lang": "es"
   },
   {
+   "country": "FR",
+   "authority": "Commission Nationale de l'Informatique et des Libertés",
+   "framework": "gdpr",
+   "title": "SOCIETE DE SUPPORT LOGISTIQUE - Défaut de base légale Minimisation des données Information des personnes et transparence Défaut de sécurité des données",
+   "published_at": "2023-12-27",
+   "source_url": "https://www.legifrance.gouv.fr/cnil/id/CNILTEXT000048989272",
+   "topics": [
+    "controllo_a_distanza",
+    "presenze_orario"
+   ],
+   "amount_eur": 32000000,
+   "doc_number": "",
+   "lang": "fr"
+  },
+  {
    "country": "IT",
    "authority": "Garante per la protezione dei dati personali",
    "framework": "gdpr",
@@ -2277,6 +2322,20 @@
    "lang": "es"
   },
   {
+   "country": "FR",
+   "authority": "Commission Nationale de l'Informatique et des Libertés",
+   "framework": "gdpr",
+   "title": "SOCIETE DE LOCATION DE SCOOTERS ELECTRIQUES EN LIBRE-SERVICE - Non respect du principe de minimisation des données Information des personnes Encadrement des relations entre le responsable de traitement et le sous-traitant",
+   "published_at": "2023-03-16",
+   "source_url": "https://www.legifrance.gouv.fr/cnil/id/CNILTEXT000047346903",
+   "topics": [
+    "geolocalizzazione"
+   ],
+   "amount_eur": 125000,
+   "doc_number": "",
+   "lang": "fr"
+  },
+  {
    "country": "ES",
    "authority": "Agencia Española de Protección de Datos",
    "framework": "gdpr",
@@ -2535,6 +2594,20 @@
    "lang": "es"
   },
   {
+   "country": "FR",
+   "authority": "Commission Nationale de l'Informatique et des Libertés",
+   "framework": "gdpr",
+   "title": "SOCIETE DEVELOPPANT UN LOGICIEL DE RECONNAISSANCE FACIALE - Défaut de base légale Non respect du droit d'accès Non respect du droit à l'effacement Défaut de coopération avec la CNIL",
+   "published_at": "2022-10-17",
+   "source_url": "https://www.legifrance.gouv.fr/cnil/id/CNILTEXT000046444859",
+   "topics": [
+    "geolocalizzazione"
+   ],
+   "amount_eur": 20000000,
+   "doc_number": "",
+   "lang": "fr"
+  },
+  {
    "country": "ES",
    "authority": "Agencia Española de Protección de Datos",
    "framework": "gdpr",
@@ -2631,6 +2704,20 @@
    "amount_eur": 20000,
    "doc_number": "PS-00178-2022",
    "lang": "es"
+  },
+  {
+   "country": "FR",
+   "authority": "Commission Nationale de l'Informatique et des Libertés",
+   "framework": "gdpr",
+   "title": "SOCIETE DE LOCATION DE VEHICULES - Non respect du principe de minimisation des données Durée de conservation Défaut d'information",
+   "published_at": "2022-07-07",
+   "source_url": "https://www.legifrance.gouv.fr/cnil/id/CNILTEXT000046070924",
+   "topics": [
+    "geolocalizzazione"
+   ],
+   "amount_eur": 175000,
+   "doc_number": "",
+   "lang": "fr"
   },
   {
    "country": "BE",
@@ -2864,6 +2951,20 @@
    "lang": "es"
   },
   {
+   "country": "FR",
+   "authority": "Commission Nationale de l'Informatique et des Libertés",
+   "framework": "gdpr",
+   "title": "SOCIÉTÉ SPECIALISÉE DANS LES BIOTECHNOLOGIES AGRICOLES - Défaut d'information des personnes Obligation d’encadrer les relations avec un sous-traitant",
+   "published_at": "2021-07-26",
+   "source_url": "https://www.legifrance.gouv.fr/cnil/id/CNILTEXT000043860997",
+   "topics": [
+    "email_dipendenti"
+   ],
+   "amount_eur": 400000,
+   "doc_number": "",
+   "lang": "fr"
+  },
+  {
    "country": "ES",
    "authority": "Agencia Española de Protección de Datos",
    "framework": "gdpr",
@@ -3084,13 +3185,42 @@
    "country": "FR",
    "authority": "Commission Nationale de l'Informatique et des Libertés",
    "framework": "gdpr",
+   "title": "SOCIETE DE TELESURVEILLANCE D’ASCENCEURS ET DE PARKINGS - Caractère excessif des données, défaut d'information des personnes, défaut de sécurité et de confidentialité des données Enregistrement des communications téléphoniques / Biométrie",
+   "published_at": "2018-09-06",
+   "source_url": "https://www.legifrance.gouv.fr/cnil/id/CNILTEXT000037413673",
+   "topics": [
+    "controllo_a_distanza",
+    "presenze_orario"
+   ],
+   "amount_eur": 3000000,
+   "doc_number": "",
+   "lang": "fr"
+  },
+  {
+   "country": "FR",
+   "authority": "Commission Nationale de l'Informatique et des Libertés",
+   "framework": "gdpr",
+   "title": "LOCATION DE VEHICILES - Défaut de sécurité des données",
+   "published_at": "2017-07-20",
+   "source_url": "https://www.legifrance.gouv.fr/cnil/id/CNILTEXT000035272571",
+   "topics": [
+    "geolocalizzazione"
+   ],
+   "amount_eur": null,
+   "doc_number": "",
+   "lang": "fr"
+  },
+  {
+   "country": "FR",
+   "authority": "Commission Nationale de l'Informatique et des Libertés",
+   "framework": "gdpr",
    "title": "CONSTRUCTION - Vidéosurveillance de salariés",
    "published_at": "2017-06-15",
    "source_url": "https://www.legifrance.gouv.fr/cnil/id/CNILTEXT000035175069",
    "topics": [
     "controllo_a_distanza"
    ],
-   "amount_eur": null,
+   "amount_eur": 1000,
    "doc_number": "",
    "lang": "fr"
   },
@@ -3107,6 +3237,34 @@
    "amount_eur": null,
    "doc_number": "E-00593-2016",
    "lang": "es"
+  },
+  {
+   "country": "FR",
+   "authority": "Commission Nationale de l'Informatique et des Libertés",
+   "framework": "gdpr",
+   "title": "SOCIETE DE COMMERCE (TELEPHONIE MOBILE) - Vidéosurveillance",
+   "published_at": "2013-10-24",
+   "source_url": "https://www.legifrance.gouv.fr/cnil/id/CNILTEXT000028450683",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": 10000,
+   "doc_number": "",
+   "lang": "fr"
+  },
+  {
+   "country": "FR",
+   "authority": "Commission Nationale de l'Informatique et des Libertés",
+   "framework": "gdpr",
+   "title": "SOCIETE DE COMMERCE (TELEPHONIE MOBILE) - Vidéosurveillance",
+   "published_at": "2013-10-24",
+   "source_url": "https://www.legifrance.gouv.fr/cnil/id/CNILTEXT000028450682",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": 10000,
+   "doc_number": "",
+   "lang": "fr"
   }
  ]
 }
