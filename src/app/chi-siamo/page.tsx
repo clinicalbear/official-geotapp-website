@@ -136,7 +136,7 @@ export default function AboutPage() {
           <div className="acts" style={{ marginTop: 26 }}>
             <a
               className="b2"
-              href="https://www.linkedin.com/in/michele-petraroli-532545397/"
+              href="https://www.linkedin.com/in/mikepetraroli/"
               target="_blank"
               rel="noopener noreferrer nofollow me"
             >

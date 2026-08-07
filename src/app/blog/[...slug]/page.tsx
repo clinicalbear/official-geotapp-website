@@ -327,7 +327,7 @@ export default async function BlogArticlePage({ params }: Props) {
       alternateName: ['Michele Petraroli', 'Mike Petraroli'],
       url: 'https://geotapp.com/chi-siamo/',
       sameAs: [
-        'https://www.linkedin.com/in/michele-petraroli-532545397/',
+        'https://www.linkedin.com/in/mikepetraroli/',
         'https://featured.com/p/michele-petraroli',
       ],
     },

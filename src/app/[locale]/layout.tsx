@@ -395,7 +395,7 @@ export default async function LocaleLayout({ children, params }: Props) {
               url: 'https://geotapp.com/chi-siamo/',
               sameAs: [
                 'https://featured.com/p/michele-petraroli',
-                'https://www.linkedin.com/in/michele-petraroli-532545397/',
+                'https://www.linkedin.com/in/mikepetraroli/',
               ],
             }),
           }}

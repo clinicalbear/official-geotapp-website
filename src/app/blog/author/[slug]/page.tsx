@@ -177,7 +177,7 @@ export default async function AuthorPage({
   const avatar = user.avatar_urls['96'] || user.avatar_urls['48'] || '';
 
   const featuredUrl = user.url && user.url.includes('featured.com') ? user.url : 'https://featured.com/p/michele-petraroli';
-  const linkedinUrl = 'https://www.linkedin.com/in/michele-petraroli-532545397/';
+  const linkedinUrl = 'https://www.linkedin.com/in/mikepetraroli/';
 
   const personSchema = {
     '@context': 'https://schema.org',
