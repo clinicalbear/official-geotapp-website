@@ -19,7 +19,7 @@ footer img[alt*="GeoTapp"], footer img[src*="Logo"]{ height:52px !important; wid
 footer h4, footer h3, footer strong, footer p strong{ color:var(--paper) !important;
   font-size:11px !important; letter-spacing:.16em !important; text-transform:uppercase !important; }
 footer a{ color:#B4BFAE !important; transition:color .3s, transform .3s; display:inline-block; }
-footer a:hover{ color:var(--lime) !important; transform:translateX(4px); }
+footer a:hover{ color:var(--sky) !important; transform:translateX(4px); }
 footer input, footer select{ background:transparent !important; color:#B4BFAE !important;
   border-color:rgba(242,240,233,.24) !important; }
 
