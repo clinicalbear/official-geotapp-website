@@ -25,7 +25,9 @@
   flex-wrap: wrap;
   align-items: center;
   gap: 8px;
-  margin: 0 0 18px;
+  /* stacca il filtro dal blocco "N provvedimenti da N paesi..." che gli sta sopra:
+     attaccati si leggevano come una cosa sola. */
+  margin: 32px 0 18px;
 }
 
 .lp-osservatorio .oss-filtro-tit {
