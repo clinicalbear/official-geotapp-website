@@ -154,12 +154,11 @@ h1,h2,h3,.big{font-family:var(--font-anton),'Anton',Impact,sans-serif;font-weigh
 .ink .cardn{border-top-color:var(--lime)}
 .ink .cardn p{color:rgba(242,240,233,.7)}
 /* Schede-link (articoli correlati, elenco del blog, articolo in evidenza):
-   il titolo NON prende l'azzurro di `a:hover` di globals.css, che vale per i
-   link senza vestito proprio. Dentro una scheda il testo resta del colore
-   della sezione; il segnale del passaggio e' quello del mockup, il filo
-   verde in alto per .cardn e la foto che si avvicina per .feat e .posts. */
-a.cardn:hover{color:inherit;border-top-color:var(--seal)}
-a.feat:hover,.posts a:hover{color:inherit}
+   al passaggio il titolo va sull'azzurro del marchio, --sky (#2DA4E4). E'
+   dichiarato qui e non lasciato al generico `a:hover` di globals.css perche'
+   sulle schede e' una scelta, non un ripiego: se un giorno quel generico
+   cambia o si scopa, i titoli del blog restano azzurri. */
+a.cardn:hover,a.feat:hover,.posts a:hover{color:var(--sky)}
 @media(max-width:1000px){
   .grid3,.grid4{grid-template-columns:1fr 1fr}
 }
