@@ -4,7 +4,7 @@
  * Contenuti basati su fonti primarie verificate e citate nella sezione "Fonti":
  * § 96 e § 96a dell'Arbeitsverfassungsgesetz (ArbVG) sulle misure di controllo e
  * sui sistemi che trattano dati dei lavoratori, regolamento DSFA-V sulla
- * valutazione d'impatto, decisione della Datenschutzbehorde (DSB) 2022-0.021.739
+ * valutazione d'impatto, decisione della Datenschutzbehörde (DSB) 2022-0.021.739
  * sul GPS dei veicoli aziendali, procedura di reclamo della DSB e GDPR.
  *
  * L'Austria e' uno Stato federale ma ha un'unica autorita garante nazionale, la
@@ -33,11 +33,11 @@ const FONTE_DSFA_V = {
 };
 const FONTE_DSB_DECISIONE = {
   titolo:
-    'Datenschutzbehorde (DSB), decisione 2022-0.021.739 (stop al GPS sui veicoli aziendali)',
+    'Datenschutzbehörde (DSB), decisione 2022-0.021.739 (stop al GPS sui veicoli aziendali)',
   url: 'https://ris.bka.gv.at/Dokumente/Dsk/DSBT_20220301_2022_0_021_739_00/DSBT_20220301_2022_0_021_739_00.html',
 };
 const FONTE_DSB_RECLAMO = {
-  titolo: 'Datenschutzbehorde (DSB), procedura di reclamo',
+  titolo: 'Datenschutzbehörde (DSB), procedura di reclamo',
   url: 'https://dsb.gv.at/ueber-die-datenschutzbehoerde/beschwerdeverfahren',
 };
 const FONTE_GDPR = {
@@ -72,7 +72,7 @@ export const austria: SchedaPaese = {
   stato: 'scheda-senza-pdf',
 
   autoritaCompetente: {
-    ente: 'Datenschutzbehorde (DSB)',
+    ente: 'Datenschutzbehörde (DSB)',
     portale: FONTE_DSB_RECLAMO.url,
     urlFonte: FONTE_DSB_RECLAMO.url,
     verificatoIl: '2026-06-15',
@@ -260,7 +260,7 @@ export const austria: SchedaPaese = {
 
   contatti: [
     {
-      ente: 'Datenschutzbehorde (DSB), reclamo',
+      ente: 'Datenschutzbehörde (DSB), reclamo',
       portale: FONTE_DSB_RECLAMO.url,
       urlFonte: FONTE_DSB_RECLAMO.url,
       verificatoIl: '2026-06-15',
@@ -279,12 +279,12 @@ export const austria: SchedaPaese = {
       nl: 'bevel tot beëindiging (geen geldboete); AVG-risico tot 20 miljoen euro of 4% van de omzet (art. 83)',
     },
     casoCitato: {
-      it: "Datenschutzbehorde, decisione del 1 marzo 2022 (2022-0.021.739): un'azienda aveva installato tracker GPS permanenti su 15 veicoli aziendali a uso misto; la DSB ha ritenuto il trattamento illecito perché lo scopo era raggiungibile con mezzi più miti e ne ha ordinato la cessazione immediata, senza multa in denaro.",
-      en: 'Datenschutzbehorde, decision of 1 March 2022 (2022-0.021.739): a company had installed permanent GPS trackers on 15 company vehicles used for mixed purposes; the DSB found the processing unlawful because the purpose could be achieved by less intrusive means and ordered its immediate cessation, without a monetary fine.',
+      it: "Datenschutzbehörde, decisione del 1 marzo 2022 (2022-0.021.739): un'azienda aveva installato tracker GPS permanenti su 15 veicoli aziendali a uso misto; la DSB ha ritenuto il trattamento illecito perché lo scopo era raggiungibile con mezzi più miti e ne ha ordinato la cessazione immediata, senza multa in denaro.",
+      en: 'Datenschutzbehörde, decision of 1 March 2022 (2022-0.021.739): a company had installed permanent GPS trackers on 15 company vehicles used for mixed purposes; the DSB found the processing unlawful because the purpose could be achieved by less intrusive means and ordered its immediate cessation, without a monetary fine.',
       de: 'Datenschutzbehörde, Entscheidung vom 1. März 2022 (2022-0.021.739): Ein Unternehmen hatte dauerhafte GPS-Tracker an 15 gemischt genutzten Firmenfahrzeugen installiert; die DSB hielt die Verarbeitung für rechtswidrig, weil der Zweck mit milderen Mitteln erreichbar war, und ordnete deren sofortige Einstellung an, ohne Geldbuße.',
-      fr: "Datenschutzbehorde, décision du 1er mars 2022 (2022-0.021.739) : une entreprise avait installé des traceurs GPS permanents sur 15 véhicules de société à usage mixte ; la DSB a jugé le traitement illicite parce que la finalité pouvait être atteinte par des moyens moins intrusifs et en a ordonné la cessation immédiate, sans amende pécuniaire.",
-      es: 'Datenschutzbehorde, decisión de 1 de marzo de 2022 (2022-0.021.739): una empresa había instalado rastreadores GPS permanentes en 15 vehículos de empresa de uso mixto; la DSB consideró el tratamiento ilícito porque la finalidad podía alcanzarse con medios menos intrusivos y ordenó su cese inmediato, sin multa pecuniaria.',
-      nl: 'Datenschutzbehorde, beslissing van 1 maart 2022 (2022-0.021.739): een onderneming had permanente GPS-trackers geïnstalleerd op 15 bedrijfsvoertuigen voor gemengd gebruik; de DSB achtte de verwerking onrechtmatig omdat het doel met minder ingrijpende middelen kon worden bereikt en gelastte de onmiddellijke beëindiging ervan, zonder geldboete.',
+      fr: "Datenschutzbehörde, décision du 1er mars 2022 (2022-0.021.739) : une entreprise avait installé des traceurs GPS permanents sur 15 véhicules de société à usage mixte ; la DSB a jugé le traitement illicite parce que la finalité pouvait être atteinte par des moyens moins intrusifs et en a ordonné la cessation immédiate, sans amende pécuniaire.",
+      es: 'Datenschutzbehörde, decisión de 1 de marzo de 2022 (2022-0.021.739): una empresa había instalado rastreadores GPS permanentes en 15 vehículos de empresa de uso mixto; la DSB consideró el tratamiento ilícito porque la finalidad podía alcanzarse con medios menos intrusivos y ordenó su cese inmediato, sin multa pecuniaria.',
+      nl: 'Datenschutzbehörde, beslissing van 1 maart 2022 (2022-0.021.739): een onderneming had permanente GPS-trackers geïnstalleerd op 15 bedrijfsvoertuigen voor gemengd gebruik; de DSB achtte de verwerking onrechtmatig omdat het doel met minder ingrijpende middelen kon worden bereikt en gelastte de onmiddellijke beëindiging ervan, zonder geldboete.',
     },
     urlFonte: FONTE_DSB_DECISIONE.url,
     tipoImporto: 'caso-gps',

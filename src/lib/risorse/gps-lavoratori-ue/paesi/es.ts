@@ -41,7 +41,7 @@ const FONTE_AEPD_ARES = {
   url: 'https://www.aepd.es/documento/ps-00454-2024.pdf',
 };
 const FONTE_AEPD = {
-  titolo: 'AEPD, Agencia Espanola de Proteccion de Datos',
+  titolo: 'AEPD, Agencia Española de Protección de Datos',
   url: 'https://www.aepd.es/',
 };
 const FONTE_GDPR = {

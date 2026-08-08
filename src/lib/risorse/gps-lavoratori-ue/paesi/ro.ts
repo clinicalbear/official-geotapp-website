@@ -70,7 +70,7 @@ export const romania: SchedaPaese = {
   stato: 'scheda-senza-pdf',
 
   autoritaCompetente: {
-    ente: 'ANSPDCP (Autoritatea Nationala de Supraveghere a Prelucrarii Datelor cu Caracter Personal)',
+    ente: 'ANSPDCP (Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal)',
     portale: FONTE_ANSPDCP_RECLAMI.url,
     urlFonte: FONTE_ANSPDCP_RECLAMI.url,
     verificatoIl: '2026-06-15',

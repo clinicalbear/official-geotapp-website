@@ -66,7 +66,7 @@ export const albania: SchedaPaese = {
   stato: 'scheda-senza-pdf',
 
   autoritaCompetente: {
-    ente: 'IDP (Komisioneri per te Drejten e Informimit dhe Mbrojtjen e te Dhenave Personale)',
+    ente: 'IDP (Komisioneri për të Drejtën e Informimit dhe Mbrojtjen e të Dhënave Personale)',
     portale: FONTE_IDP_UFFICIALE.url,
     urlFonte: FONTE_IDP_UFFICIALE.url,
     verificatoIl: '2026-06-15',

@@ -68,7 +68,7 @@ export const slovenia: SchedaPaese = {
   stato: 'scheda-senza-pdf',
 
   autoritaCompetente: {
-    ente: 'Informacijski pooblascenec (IP-RS)',
+    ente: 'Informacijski pooblaščenec (IP-RS)',
     urlFonte: FONTE_IPRS_SEGNALAZIONE.url,
     verificatoIl: '2026-06-15',
     note: {

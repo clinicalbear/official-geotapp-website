@@ -2,13 +2,13 @@
  * Scheda-paese Islanda per la risorsa "GPS sui lavoratori in UE".
  *
  * Contenuti basati su fonti primarie verificate e citate nella sezione "Fonti":
- * Regole n. 50/2023 sulla sorveglianza elettronica, FAQ del Persuvernd (Garante
- * islandese) sul GPS, lista Persuvernd dei trattamenti che richiedono una DPIA
- * (Auglysing nr. 828/2019), pagina dei reclami al Persuvernd, decisione
+ * Regole n. 50/2023 sulla sorveglianza elettronica, FAQ del Persónuvernd (Garante
+ * islandese) sul GPS, lista Persónuvernd dei trattamenti che richiedono una DPIA
+ * (Auglýsing nr. 828/2019), pagina dei reclami al Persónuvernd, decisione
  * Islandspostur sull'uso illecito del GPS su un dipendente e GDPR.
  *
  * L'Islanda fa parte del SEE e applica il GDPR; ha un'unica autorita nazionale,
- * il Persuvernd, senza ripartizione regionale. Nessun numero, URL o autorita e
+ * il Persónuvernd, senza ripartizione regionale. Nessun numero, URL o autorita e
  * inventato qui.
  */
 
@@ -22,21 +22,21 @@ const FONTE_REGOLE_50_2023 = {
 };
 const FONTE_PERSUVERND_GPS = {
   titolo:
-    'Persuvernd (Garante islandese), FAQ sul GPS e i dispositivi di localizzazione',
+    'Persónuvernd (Garante islandese), FAQ sul GPS e i dispositivi di localizzazione',
   url: 'https://www.personuvernd.is/einstaklingar/spurt-og-svarad/allar-spurningar-og-svor/hvada-reglur-gilda-um-okurita-og-annan-rafraenan-stadsetningarbunad',
 };
 const FONTE_PERSUVERND_DPIA = {
   titolo:
-    'Persuvernd, lista dei trattamenti che richiedono una DPIA (Auglysing nr. 828/2019)',
+    'Persónuvernd, lista dei trattamenti che richiedono una DPIA (Auglýsing nr. 828/2019)',
   url: 'https://island.is/stjornartidindi/nr/7034a38d-0b61-4f7a-b3ef-a63252df0d6e',
 };
 const FONTE_PERSUVERND_RECLAMO = {
-  titolo: 'Persuvernd, presentare un reclamo',
+  titolo: 'Persónuvernd, presentare un reclamo',
   url: 'https://island.is/kvortun-til-personuverndar',
 };
 const FONTE_PERSUVERND_ISLANDSPOSTUR = {
   titolo:
-    'Persuvernd, decisione Islandspostur (uso illecito del GPS su un dipendente)',
+    'Persónuvernd, decisione Islandspostur (uso illecito del GPS su un dipendente)',
   url: 'https://www.personuvernd.is/urlausnir/rafraen-voktun-af-halfu-islandsposts',
 };
 const FONTE_GDPR = {
@@ -72,28 +72,28 @@ export const islanda: SchedaPaese = {
 
   autoritaCompetente: {
     ente: {
-      it: 'Persuvernd (Garante islandese per la protezione dei dati)',
-      en: 'Persuvernd (Icelandic Data Protection Authority)',
-      de: 'Persuvernd (Isländische Datenschutzbehörde)',
-      fr: 'Persuvernd (Autorité islandaise de protection des données)',
-      es: 'Persuvernd (Autoridad islandesa de protección de datos)',
-      nl: 'Persuvernd (IJslandse gegevensbeschermingsautoriteit)',
-      pt: 'Persuvernd (Autoridade islandesa de proteção de dados)',
-      da: 'Persuvernd (Islandsk databeskyttelsesmyndighed)',
-      sv: 'Persuvernd (Isländska dataskyddsmyndigheten)',
-      nb: 'Persuvernd (Islandsk datatilsyn)',
-      ru: 'Persuvernd (Исландский орган по защите данных)',
+      it: 'Persónuvernd (Garante islandese per la protezione dei dati)',
+      en: 'Persónuvernd (Icelandic Data Protection Authority)',
+      de: 'Persónuvernd (Isländische Datenschutzbehörde)',
+      fr: 'Persónuvernd (Autorité islandaise de protection des données)',
+      es: 'Persónuvernd (Autoridad islandesa de protección de datos)',
+      nl: 'Persónuvernd (IJslandse gegevensbeschermingsautoriteit)',
+      pt: 'Persónuvernd (Autoridade islandesa de proteção de dados)',
+      da: 'Persónuvernd (Islandsk databeskyttelsesmyndighed)',
+      sv: 'Persónuvernd (Isländska dataskyddsmyndigheten)',
+      nb: 'Persónuvernd (Islandsk datatilsyn)',
+      ru: 'Persónuvernd (Исландский орган по защите данных)',
     },
     portale: FONTE_PERSUVERND_RECLAMO.url,
     urlFonte: 'https://www.personuvernd.is/',
     verificatoIl: '2026-06-15',
     note: {
-      it: "L'Islanda (SEE) ha un'unica autorità nazionale, il Persuvernd; nessuna ripartizione regionale.",
-      en: 'Iceland (EEA) has a single national authority, the Persuvernd; no regional breakdown.',
-      de: 'Island (EWR) hat eine einzige nationale Behorde, die Persuvernd; keine regionale Aufteilung.',
-      fr: "L'Islande (EEE) dispose d'une seule autorite nationale, le Persuvernd; aucune repartition regionale.",
-      es: 'Islandia (EEE) tiene una unica autoridad nacional, el Persuvernd; sin reparto regional.',
-      nl: 'IJsland (EER) heeft een enkele nationale autoriteit, de Persuvernd; geen regionale opdeling.',
+      it: "L'Islanda (SEE) ha un'unica autorità nazionale, il Persónuvernd; nessuna ripartizione regionale.",
+      en: 'Iceland (EEA) has a single national authority, the Persónuvernd; no regional breakdown.',
+      de: 'Island (EWR) hat eine einzige nationale Behorde, die Persónuvernd; keine regionale Aufteilung.',
+      fr: "L'Islande (EEE) dispose d'une seule autorite nationale, le Persónuvernd; aucune repartition regionale.",
+      es: 'Islandia (EEE) tiene una unica autoridad nacional, el Persónuvernd; sin reparto regional.',
+      nl: 'IJsland (EER) heeft een enkele nationale autoriteit, de Persónuvernd; geen regionale opdeling.',
     },
   },
 
@@ -129,12 +129,12 @@ export const islanda: SchedaPaese = {
       },
       risposta: 'no',
       dettaglio: {
-        it: "Non serve un'autorizzazione preventiva del Persuvernd; il titolare valuta da se e documenta la liceità, con DPIA quando richiesta.",
-        en: 'No prior authorisation from the Persuvernd is required; the controller assesses on its own and documents lawfulness, with a DPIA where required.',
-        de: 'Eine vorherige Genehmigung der Persuvernd ist nicht erforderlich; der Verantwortliche beurteilt selbst und dokumentiert die Rechtmassigkeit, mit einer DSFA, sofern erforderlich.',
-        fr: "Aucune autorisation prealable du Persuvernd n'est requise; le responsable evalue lui-meme et documente la liceite, avec une AIPD lorsque cela est requis.",
-        es: 'No se necesita autorizacion previa del Persuvernd; el responsable evalua por si mismo y documenta la licitud, con una EIPD cuando se requiera.',
-        nl: 'Er is geen voorafgaande toestemming van de Persuvernd nodig; de verwerkingsverantwoordelijke beoordeelt zelf en documenteert de rechtmatigheid, met een DPIA waar vereist.',
+        it: "Non serve un'autorizzazione preventiva del Persónuvernd; il titolare valuta da se e documenta la liceità, con DPIA quando richiesta.",
+        en: 'No prior authorisation from the Persónuvernd is required; the controller assesses on its own and documents lawfulness, with a DPIA where required.',
+        de: 'Eine vorherige Genehmigung der Persónuvernd ist nicht erforderlich; der Verantwortliche beurteilt selbst und dokumentiert die Rechtmassigkeit, mit einer DSFA, sofern erforderlich.',
+        fr: "Aucune autorisation prealable du Persónuvernd n'est requise; le responsable evalue lui-meme et documente la liceite, avec une AIPD lorsque cela est requis.",
+        es: 'No se necesita autorizacion previa del Persónuvernd; el responsable evalua por si mismo y documenta la licitud, con una EIPD cuando se requiera.',
+        nl: 'Er is geen voorafgaande toestemming van de Persónuvernd nodig; de verwerkingsverantwoordelijke beoordeelt zelf en documenteert de rechtmatigheid, met een DPIA waar vereist.',
       },
       fonte: FONTE_PERSUVERND_GPS,
     },
@@ -180,21 +180,21 @@ export const islanda: SchedaPaese = {
     },
     {
       voce: {
-        it: "Valutazione d'impatto (DPIA) per il monitoraggio del rendimento o del comportamento dei dipendenti (lista Persuvernd)",
-        en: 'Impact assessment (DPIA) for monitoring employees performance or behaviour (Persuvernd list)',
-        de: 'Datenschutz-Folgenabschatzung (DSFA) zur Uberwachung der Leistung oder des Verhaltens der Beschaftigten (Persuvernd-Liste)',
-        fr: "Analyse d'impact (AIPD) pour le suivi du rendement ou du comportement des salaries (liste Persuvernd)",
-        es: 'Evaluacion de impacto (EIPD) para el seguimiento del rendimiento o el comportamiento de los empleados (lista Persuvernd)',
-        nl: 'Effectbeoordeling (DPIA) voor het monitoren van prestaties of gedrag van werknemers (Persuvernd-lijst)',
+        it: "Valutazione d'impatto (DPIA) per il monitoraggio del rendimento o del comportamento dei dipendenti (lista Persónuvernd)",
+        en: 'Impact assessment (DPIA) for monitoring employees performance or behaviour (Persónuvernd list)',
+        de: 'Datenschutz-Folgenabschatzung (DSFA) zur Uberwachung der Leistung oder des Verhaltens der Beschaftigten (Persónuvernd-Liste)',
+        fr: "Analyse d'impact (AIPD) pour le suivi du rendement ou du comportement des salaries (liste Persónuvernd)",
+        es: 'Evaluacion de impacto (EIPD) para el seguimiento del rendimiento o el comportamiento de los empleados (lista Persónuvernd)',
+        nl: 'Effectbeoordeling (DPIA) voor het monitoren van prestaties of gedrag van werknemers (Persónuvernd-lijst)',
       },
       risposta: 'si',
       dettaglio: {
-        it: "La lista Persuvernd include il trattamento che comporta il monitoraggio del rendimento o del comportamento dei dipendenti tra i casi che richiedono sempre una valutazione d'impatto.",
-        en: 'The Persuvernd list includes processing that involves monitoring employees performance or behaviour among the cases that always require an impact assessment.',
-        de: 'Die Persuvernd-Liste fuhrt die Verarbeitung, die mit der Uberwachung der Leistung oder des Verhaltens der Beschaftigten verbunden ist, unter den Fallen auf, die stets eine Folgenabschatzung erfordern.',
-        fr: "La liste Persuvernd inclut le traitement impliquant le suivi du rendement ou du comportement des salaries parmi les cas qui exigent toujours une analyse d'impact.",
-        es: 'La lista Persuvernd incluye el tratamiento que implica el seguimiento del rendimiento o el comportamiento de los empleados entre los casos que siempre requieren una evaluacion de impacto.',
-        nl: 'De Persuvernd-lijst rekent de verwerking die het monitoren van prestaties of gedrag van werknemers omvat tot de gevallen die altijd een effectbeoordeling vereisen.',
+        it: "La lista Persónuvernd include il trattamento che comporta il monitoraggio del rendimento o del comportamento dei dipendenti tra i casi che richiedono sempre una valutazione d'impatto.",
+        en: 'The Persónuvernd list includes processing that involves monitoring employees performance or behaviour among the cases that always require an impact assessment.',
+        de: 'Die Persónuvernd-Liste fuhrt die Verarbeitung, die mit der Uberwachung der Leistung oder des Verhaltens der Beschaftigten verbunden ist, unter den Fallen auf, die stets eine Folgenabschatzung erfordern.',
+        fr: "La liste Persónuvernd inclut le traitement impliquant le suivi du rendement ou du comportement des salaries parmi les cas qui exigent toujours une analyse d'impact.",
+        es: 'La lista Persónuvernd incluye el tratamiento que implica el seguimiento del rendimiento o el comportamiento de los empleados entre los casos que siempre requieren una evaluacion de impacto.',
+        nl: 'De Persónuvernd-lijst rekent de verwerking die het monitoren van prestaties of gedrag van werknemers omvat tot de gevallen die altijd een effectbeoordeling vereisen.',
       },
       fonte: FONTE_PERSUVERND_DPIA,
     },
@@ -271,7 +271,7 @@ export const islanda: SchedaPaese = {
 
   contatti: [
     {
-      ente: 'Persuvernd, reclami',
+      ente: 'Persónuvernd, reclami',
       portale: FONTE_PERSUVERND_RECLAMO.url,
       urlFonte: FONTE_PERSUVERND_RECLAMO.url,
       verificatoIl: '2026-06-15',
@@ -290,12 +290,12 @@ export const islanda: SchedaPaese = {
       nl: 'onrechtmatigheid vastgesteld, zonder boete',
     },
     casoCitato: {
-      it: "Persuvernd, decisione 2022050836 dell'8 dicembre 2023: Islandspostur (Poste islandesi) aveva usato i dati del cronotachigrafo/GPS di un veicolo aziendale per valutare il rendimento di un dipendente e giustificarne il licenziamento, cambiando la finalità (il dispositivo era stato presentato per sicurezza e qualità del servizio) senza preavviso. Trattamento dichiarato illecito, senza multa.",
-      en: 'Persuvernd, decision 2022050836 of 8 December 2023: Islandspostur (Iceland Post) had used the tachograph/GPS data of a company vehicle to assess an employee performance and justify dismissal, changing the purpose (the device had been presented for safety and service quality) without prior notice. Processing declared unlawful, with no fine.',
-      de: 'Persuvernd, Entscheidung 2022050836 vom 8. Dezember 2023: Islandspostur (Islandische Post) hatte die Fahrtenschreiber-/GPS-Daten eines Firmenfahrzeugs genutzt, um die Leistung eines Beschaftigten zu bewerten und dessen Kundigung zu rechtfertigen, wobei der Zweck (das Gerat war fur Sicherheit und Servicequalitat vorgestellt worden) ohne vorherige Ankundigung geandert wurde. Die Verarbeitung wurde fur rechtswidrig erklart, ohne Geldbusse.',
-      fr: "Persuvernd, decision 2022050836 du 8 decembre 2023: Islandspostur (Poste islandaise) avait utilise les donnees du chronotachygraphe/GPS d'un vehicule de societe pour evaluer le rendement d'un salarie et justifier son licenciement, en changeant la finalite (le dispositif avait ete presente pour la securite et la qualite du service) sans preavis. Traitement declare illicite, sans amende.",
-      es: 'Persuvernd, decision 2022050836 de 8 de diciembre de 2023: Islandspostur (Correos de Islandia) habia usado los datos del tacografo/GPS de un vehiculo de empresa para evaluar el rendimiento de un empleado y justificar su despido, cambiando la finalidad (el dispositivo se habia presentado para la seguridad y la calidad del servicio) sin previo aviso. Tratamiento declarado ilicito, sin multa.',
-      nl: 'Persuvernd, beslissing 2022050836 van 8 december 2023: Islandspostur (IJslandse Post) had de tachograaf-/GPS-gegevens van een bedrijfsvoertuig gebruikt om de prestaties van een werknemer te beoordelen en zijn ontslag te rechtvaardigen, waarbij het doel (het apparaat was gepresenteerd voor veiligheid en servicekwaliteit) zonder voorafgaande kennisgeving werd gewijzigd. De verwerking werd onrechtmatig verklaard, zonder boete.',
+      it: "Persónuvernd, decisione 2022050836 dell'8 dicembre 2023: Islandspostur (Poste islandesi) aveva usato i dati del cronotachigrafo/GPS di un veicolo aziendale per valutare il rendimento di un dipendente e giustificarne il licenziamento, cambiando la finalità (il dispositivo era stato presentato per sicurezza e qualità del servizio) senza preavviso. Trattamento dichiarato illecito, senza multa.",
+      en: 'Persónuvernd, decision 2022050836 of 8 December 2023: Islandspostur (Iceland Post) had used the tachograph/GPS data of a company vehicle to assess an employee performance and justify dismissal, changing the purpose (the device had been presented for safety and service quality) without prior notice. Processing declared unlawful, with no fine.',
+      de: 'Persónuvernd, Entscheidung 2022050836 vom 8. Dezember 2023: Islandspostur (Islandische Post) hatte die Fahrtenschreiber-/GPS-Daten eines Firmenfahrzeugs genutzt, um die Leistung eines Beschaftigten zu bewerten und dessen Kundigung zu rechtfertigen, wobei der Zweck (das Gerat war fur Sicherheit und Servicequalitat vorgestellt worden) ohne vorherige Ankundigung geandert wurde. Die Verarbeitung wurde fur rechtswidrig erklart, ohne Geldbusse.',
+      fr: "Persónuvernd, decision 2022050836 du 8 decembre 2023: Islandspostur (Poste islandaise) avait utilise les donnees du chronotachygraphe/GPS d'un vehicule de societe pour evaluer le rendement d'un salarie et justifier son licenciement, en changeant la finalite (le dispositif avait ete presente pour la securite et la qualite du service) sans preavis. Traitement declare illicite, sans amende.",
+      es: 'Persónuvernd, decision 2022050836 de 8 de diciembre de 2023: Islandspostur (Correos de Islandia) habia usado los datos del tacografo/GPS de un vehiculo de empresa para evaluar el rendimiento de un empleado y justificar su despido, cambiando la finalidad (el dispositivo se habia presentado para la seguridad y la calidad del servicio) sin previo aviso. Tratamiento declarado ilicito, sin multa.',
+      nl: 'Persónuvernd, beslissing 2022050836 van 8 december 2023: Islandspostur (IJslandse Post) had de tachograaf-/GPS-gegevens van een bedrijfsvoertuig gebruikt om de prestaties van een werknemer te beoordelen en zijn ontslag te rechtvaardigen, waarbij het doel (het apparaat was gepresenteerd voor veiligheid en servicekwaliteit) zonder voorafgaande kennisgeving werd gewijzigd. De verwerking werd onrechtmatig verklaard, zonder boete.',
     },
     urlFonte: FONTE_PERSUVERND_ISLANDSPOSTUR.url,
     tipoImporto: 'caso-gps',

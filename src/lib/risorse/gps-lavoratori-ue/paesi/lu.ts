@@ -71,7 +71,7 @@ export const lussemburgo: SchedaPaese = {
   stato: 'scheda-senza-pdf',
 
   autoritaCompetente: {
-    ente: 'CNPD (Commission nationale pour la protection des donnees)',
+    ente: 'CNPD (Commission nationale pour la protection des données)',
     portale: FONTE_CNPD_RECLAMO.url,
     urlFonte: FONTE_CNPD_RECLAMO.url,
     verificatoIl: '2026-06-15',

@@ -2,7 +2,7 @@
  * Scheda-paese Croazia per la risorsa "GPS sui lavoratori in UE".
  *
  * Contenuti basati su fonti primarie verificate e citate nella sezione "Fonti":
- * art. 43 della Zakon o zastiti na radu (legge sulla sicurezza sul lavoro) sui
+ * art. 43 della Zakon o zaštiti na radu (legge sulla sicurezza sul lavoro) sui
  * dispositivi di sorveglianza, guida AZOP sul trattamento dei dati dei dipendenti
  * tramite GPS, lista AZOP dei trattamenti che richiedono una DPIA, pagina AZOP
  * per i reclami e GDPR.
@@ -16,7 +16,7 @@ import type { SchedaPaese } from '../types';
 // URL delle fonti primarie citate.
 const FONTE_ZZR_43 = {
   titolo:
-    'Zakon o zastiti na radu (legge sicurezza sul lavoro), art. 43 (dispositivi di sorveglianza)',
+    'Zakon o zaštiti na radu (legge sicurezza sul lavoro), art. 43 (dispositivi di sorveglianza)',
   url: 'https://www.zakon.hr/z/167/zakon-o-zastiti-na-radu',
 };
 const FONTE_AZOP_GPS = {
@@ -68,7 +68,7 @@ export const croazia: SchedaPaese = {
   stato: 'scheda-senza-pdf',
 
   autoritaCompetente: {
-    ente: 'AZOP (Agencija za zastitu osobnih podataka)',
+    ente: 'AZOP (Agencija za zaštitu osobnih podataka)',
     urlFonte: FONTE_AZOP_RECLAMO.url,
     verificatoIl: '2026-06-15',
     note: {
@@ -84,12 +84,12 @@ export const croazia: SchedaPaese = {
   checklist: [
     {
       voce: {
-        it: "Consenso preventivo del consiglio dei lavoratori se la sorveglianza segue tutti i movimenti per l'intero orario (Zakon o zastiti na radu, art. 43)",
-        en: 'Prior consent of the works council if the surveillance follows all movements for the entire working time (Zakon o zastiti na radu, art. 43)',
-        de: 'Vorherige Zustimmung des Betriebsrats, wenn die Ueberwachung alle Bewegungen waehrend der gesamten Arbeitszeit verfolgt (Zakon o zastiti na radu, Art. 43)',
-        fr: "Consentement prealable du conseil des travailleurs si la surveillance suit tous les mouvements pendant toute la duree du travail (Zakon o zastiti na radu, art. 43)",
-        es: 'Consentimiento previo del consejo de trabajadores si la vigilancia sigue todos los movimientos durante toda la jornada (Zakon o zastiti na radu, art. 43)',
-        nl: 'Voorafgaande toestemming van de ondernemingsraad als het toezicht alle bewegingen gedurende de hele werktijd volgt (Zakon o zastiti na radu, art. 43)',
+        it: "Consenso preventivo del consiglio dei lavoratori se la sorveglianza segue tutti i movimenti per l'intero orario (Zakon o zaštiti na radu, art. 43)",
+        en: 'Prior consent of the works council if the surveillance follows all movements for the entire working time (Zakon o zaštiti na radu, art. 43)',
+        de: 'Vorherige Zustimmung des Betriebsrats, wenn die Ueberwachung alle Bewegungen waehrend der gesamten Arbeitszeit verfolgt (Zakon o zaštiti na radu, Art. 43)',
+        fr: "Consentement prealable du conseil des travailleurs si la surveillance suit tous les mouvements pendant toute la duree du travail (Zakon o zaštiti na radu, art. 43)",
+        es: 'Consentimiento previo del consejo de trabajadores si la vigilancia sigue todos los movimientos durante toda la jornada (Zakon o zaštiti na radu, art. 43)',
+        nl: 'Voorafgaande toestemming van de ondernemingsraad als het toezicht alle bewegingen gedurende de hele werktijd volgt (Zakon o zaštiti na radu, art. 43)',
       },
       risposta: 'dipende',
       dettaglio: {
