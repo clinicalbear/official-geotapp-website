@@ -76,7 +76,7 @@ export const spagna: SchedaPaese = {
   stato: 'scheda-senza-pdf',
 
   autoritaCompetente: {
-    ente: 'AEPD (Agencia Espanola de Proteccion de Datos)',
+    ente: 'AEPD (Agencia Española de Protección de Datos)',
     portale: FONTE_AEPD.url,
     urlFonte: FONTE_AEPD.url,
     verificatoIl: '2026-06-15',

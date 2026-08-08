@@ -68,7 +68,7 @@ export const portogallo: SchedaPaese = {
   stato: 'scheda-senza-pdf',
 
   autoritaCompetente: {
-    ente: 'CNPD (Comissao Nacional de Protecao de Dados)',
+    ente: 'CNPD (Comissão Nacional de Proteção de Dados)',
     portale: FONTE_CNPD_SEGNALAZIONI.url,
     urlFonte: FONTE_CNPD_SEGNALAZIONI.url,
     verificatoIl: '2026-06-15',

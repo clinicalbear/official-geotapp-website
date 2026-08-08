@@ -283,8 +283,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 // Articoli che mostrano un lead magnet al posto della newsletter generica.
+// Il fac-simile dell'informativa GPS esiste in undici lingue, una per mercato,
+// e ogni articolo consegna il PDF con la legge del proprio Paese (vedi
+// LEAD_MAGNETS in LeadMagnetInline.tsx): il file lo sceglie la lingua del post.
 const ARTICLE_LEAD_MAGNETS: Record<string, string> = {
   'fac-simile-informativa-gps-dipendenti-2026': 'informativa-gps',
+  'gps-employee-privacy-notice-template': 'informativa-gps',
+  'gps-datenschutzerklaerung-mitarbeiter-muster': 'informativa-gps',
+  'modele-information-geolocalisation-salaries-gps': 'informativa-gps',
+  'modelo-informacion-gps-empleados': 'informativa-gps',
+  'voorbeeld-privacyverklaring-gps-werknemers': 'informativa-gps',
+  'modelo-informacao-gps-trabalhadores': 'informativa-gps',
+  'gps-persondatapolitik-medarbejdere-facsimile': 'informativa-gps',
+  'gps-integritetspolicy-anstallda-mall': 'informativa-gps',
+  'facsimile-gps-personvernerklaering-ansatte': 'informativa-gps',
+  'obrazec-uvedomleniya-gps-sotrudniki': 'informativa-gps',
 };
 
 export default async function BlogArticlePage({ params }: Props) {
