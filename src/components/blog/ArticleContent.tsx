@@ -8,6 +8,14 @@ import { trackEvent } from '@/lib/analytics';
 interface ArticleContentProps {
   html: string;
   newsletter?: React.ReactNode;
+  /**
+   * Blocco del lead magnet. Va IN ALTO, dopo i primi due paragrafi, non in coda:
+   * su telefono il bottone di download stava a 12.000px, cioe' quattordici
+   * schermate sotto, su un articolo il cui unico scopo e' far scaricare quel
+   * documento (misurato il 09/08/2026 a 390x844). Quando c'e' questo, il blocco
+   * newsletter generico non si mostra: il magnet contiene gia' l'iscrizione.
+   */
+  leadMagnet?: React.ReactNode;
   locale?: string;
 }
 
@@ -46,9 +54,9 @@ function MidArticleCta({ locale }: { locale: string }) {
   );
 }
 
-export default function ArticleContent({ html, newsletter, locale = 'it' }: ArticleContentProps) {
+export default function ArticleContent({ html, newsletter, leadMagnet, locale = 'it' }: ArticleContentProps) {
   // Split content roughly in half at a paragraph boundary to insert mid-article CTA
-  const [firstHalf, secondHalf] = useMemo(() => {
+  const [apertura, firstHalf, secondHalf] = useMemo(() => {
     // WP avvolge il contenuto in <article class="zenith-imported-content">...</article>,
     // ma il </article> NON è sempre in fondo: la pipeline appende CTA e paragrafi dopo
     // la chiusura, e un </article> orfano a metà contenuto fa chiudere al browser il
@@ -57,12 +65,17 @@ export default function ArticleContent({ html, newsletter, locale = 'it' }: Arti
     // Dentro il corpo un tag <article> non ha comunque motivo di esistere: si tolgono TUTTI.
     const clean = html.replace(/<\/?article\b[^>]*>/gi, '');
     const paragraphs = clean.split('</p>');
-    if (paragraphs.length < 6) return [clean, ''];
+    if (paragraphs.length < 6) return ['', clean, ''];
     const midIndex = Math.floor(paragraphs.length / 2);
     const first = paragraphs.slice(0, midIndex).join('</p>') + '</p>';
     const second = paragraphs.slice(midIndex).join('</p>');
-    return [first, second];
-  }, [html]);
+    // Con un lead magnet il corpo si apre con i primi due paragrafi: chi arriva
+    // legge la scena, poi trova subito il documento. Senza, resta tutto com'era.
+    if (!leadMagnet) return ['', first, second];
+    const testa = paragraphs.slice(0, 2).join('</p>') + '</p>';
+    const resto = paragraphs.slice(2, midIndex).join('</p>') + '</p>';
+    return [testa, resto, second];
+  }, [html, leadMagnet]);
 
   // Tracciamento download lead magnet via DELEGAZIONE: cattura il click su QUALSIASI
   // link a un PDF / cartella /downloads/ dentro l'articolo, sia quello grezzo nel
@@ -96,6 +109,15 @@ export default function ArticleContent({ html, newsletter, locale = 'it' }: Arti
       className="body"
     >
       <div className="py-16">
+        {apertura && (
+          <div
+            key="article-open"
+            className="article-content"
+            suppressHydrationWarning
+            dangerouslySetInnerHTML={{ __html: apertura }}
+          />
+        )}
+        {leadMagnet}
         <div
           key="article-first"
           className="article-content"
@@ -111,7 +133,7 @@ export default function ArticleContent({ html, newsletter, locale = 'it' }: Arti
             dangerouslySetInnerHTML={{ __html: secondHalf }}
           />
         )}
-        {newsletter}
+        {!leadMagnet && newsletter}
       </div>
     </motion.article>
   );

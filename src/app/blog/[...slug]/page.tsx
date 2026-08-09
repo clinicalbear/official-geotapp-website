@@ -407,11 +407,12 @@ export default async function BlogArticlePage({ params }: Props) {
             <ArticleContent
               html={contentWithIds}
               locale={locale}
-              newsletter={
+              leadMagnet={
                 ARTICLE_LEAD_MAGNETS[articleSlug]
                   ? <LeadMagnetInline key="lead-magnet" magnet={ARTICLE_LEAD_MAGNETS[articleSlug]} locale={locale} />
-                  : <NewsletterInline key="newsletter" locale={locale} />
+                  : undefined
               }
+              newsletter={<NewsletterInline key="newsletter" locale={locale} />}
             />
           </div>
         </div>
