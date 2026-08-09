@@ -237,7 +237,7 @@ export const ungheria: SchedaPaese = {
         en: 'Limit the GPS to locating the vehicle for work: only during working hours, no monitoring off duty.',
         de: 'Beschränken Sie das GPS auf die Ortung des Fahrzeugs für die Arbeit: nur während der Arbeitszeit, keine Überwachung außerhalb der Dienstzeit.',
         fr: 'Limitez le GPS à la localisation du véhicule pour le travail: uniquement pendant les heures de travail, aucun contrôle hors service.',
-        es: 'Limite el GPS a la localización del vehículo para el trabajo: solo en horario de trabajo, sin control fuera de servicio.',
+        es: 'Límite el GPS a la localización del vehículo para el trabajo: solo en horario de trabajo, sin control fuera de servicio.',
         nl: 'Beperk het GPS tot het lokaliseren van het voertuig voor het werk: alleen tijdens werktijd, geen controle buiten diensttijd.',
       },
     },

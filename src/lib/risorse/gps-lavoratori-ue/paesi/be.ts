@@ -131,7 +131,7 @@ export const belgio: SchedaPaese = {
         it: "Non serve un'autorizzazione preventiva dell'APD/GBA; vale la responsabilizzazione, con valutazione d'impatto quando il rischio è elevato e consultazione dell'autorità solo se resta un rischio residuo elevato.",
         en: "No prior authorisation from the APD/GBA is required; the accountability principle applies, with an impact assessment when the risk is high and consultation of the authority only if a high residual risk remains.",
         de: "Eine vorherige Genehmigung der APD/GBA ist nicht erforderlich; es gilt der Grundsatz der Rechenschaftspflicht, mit einer Folgenabschätzung bei hohem Risiko und einer Konsultation der Behörde nur dann, wenn ein hohes Restrisiko verbleibt.",
-        fr: "Aucune autorisation préalable de l'APD/GBA n'est requise ; le principe de responsabilisation s'applique, avec une analyse d'impact lorsque le risque est élevé et une consultation de l'autorité uniquement s'il subsiste un risque résiduel élevé.",
+        fr: "Aucune autorisation préalable de l'APD/GBA n'est requise ; le principe de responsabilisation s'appliqué, avec une analyse d'impact lorsque le risque est élevé et une consultation de l'autorité uniquement s'il subsiste un risque résiduel élevé.",
         es: "No se requiere una autorización previa de la APD/GBA; rige el principio de responsabilidad proactiva, con una evaluación de impacto cuando el riesgo es elevado y consulta a la autoridad solo si subsiste un riesgo residual elevado.",
         nl: "Een voorafgaande toestemming van de APD/GBA is niet nodig; het verantwoordingsbeginsel geldt, met een effectbeoordeling wanneer het risico hoog is en raadpleging van de autoriteit alleen als er een hoog restrisico blijft bestaan.",
       },

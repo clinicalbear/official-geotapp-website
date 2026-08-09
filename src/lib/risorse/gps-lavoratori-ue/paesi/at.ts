@@ -141,7 +141,7 @@ export const austria: SchedaPaese = {
         it: "Non serve un'autorizzazione preventiva: il vecchio registro DVR è stato abolito col GDPR; vale la responsabilizzazione (registro dei trattamenti e valutazione d'impatto quando richiesta).",
         en: 'No prior authorisation is needed: the old DVR register was abolished with the GDPR; the accountability principle applies (records of processing activities and a data protection impact assessment where required).',
         de: 'Eine vorherige Genehmigung ist nicht erforderlich: Das alte DVR-Register wurde mit der DSGVO abgeschafft; es gilt die Rechenschaftspflicht (Verzeichnis der Verarbeitungstätigkeiten und Datenschutz-Folgenabschätzung, sofern erforderlich).',
-        fr: "Aucune autorisation préalable n'est nécessaire : l'ancien registre DVR a été supprimé avec le RGPD ; le principe de responsabilité s'applique (registre des activités de traitement et analyse d'impact lorsqu'elle est requise).",
+        fr: "Aucune autorisation préalable n'est nécessaire : l'ancien registre DVR a été supprimé avec le RGPD ; le principe de responsabilité s'appliqué (registre des activités de traitement et analyse d'impact lorsqu'elle est requise).",
         es: 'No se necesita autorización previa: el antiguo registro DVR fue suprimido con el RGPD; rige el principio de responsabilidad proactiva (registro de las actividades de tratamiento y evaluación de impacto cuando sea necesaria).',
         nl: 'Een voorafgaande toestemming is niet nodig: het oude DVR-register is met de AVG afgeschaft; het verantwoordingsbeginsel geldt (register van verwerkingsactiviteiten en gegevensbeschermingseffectbeoordeling indien vereist).',
       },
