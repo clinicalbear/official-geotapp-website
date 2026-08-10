@@ -289,6 +289,17 @@ const NL_RELANG_REDIRECTS: Record<string, string> = {
   '/blog/2026/05/14/personeelsbeheer-software-schoonmaak/': '/blog/nl/2026/05/14/personeelsbeheer-software-schoonmaak/',
 };
 
+// Post assorbiti in un altro pezzo: 301 verso quello che li ha assorbiti, non
+// verso l'hub. Il contenuto e' stato innestato nella destinazione PRIMA del
+// redirect, quindi chi arriva trova esattamente cio' che cercava.
+// Va qui e non in next.config: su /blog/* passa prima il middleware, e un
+// redirect dichiarato la' non arriva mai a sparare (verificato 10/08/2026, la
+// URL rispondeva 404 dal proxy WordPress).
+const BLOG_CONSOLIDATI: Record<string, string> = {
+  '/blog/2026/04/13/garante-privacy-geolocalizzazione-dipendenti-2026/':
+    '/blog/2025/11/20/geolocalizzazione-dipendenti-gdpr-guida-legale/',
+};
+
 // Codici PAESE -> codice LINGUA del sito (308 permanente).
 //
 // Il sito e' organizzato per LINGUA, non per paese: la Norvegia e' /nb/ (bokmal),
@@ -544,6 +555,10 @@ export async function middleware(req: NextRequest) {
     const relangTarget = NL_RELANG_REDIRECTS[normalizedRelang];
     if (relangTarget) {
       return NextResponse.redirect(new URL(relangTarget, req.url), 301);
+    }
+    const consolidato = BLOG_CONSOLIDATI[normalizedRelang];
+    if (consolidato) {
+      return NextResponse.redirect(new URL(consolidato, req.url), 301);
     }
   }
 
