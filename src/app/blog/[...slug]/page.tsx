@@ -42,7 +42,10 @@ function extractHeadings(html: string): Array<{ id: string; text: string; level:
   let match;
   while ((match = regex.exec(html)) !== null) {
     const level = parseInt(match[1]);
-    const text = match[3].replace(/<[^>]*>/g, '').trim();
+    // stripHtml e non solo il taglio dei tag: il titolo di sezione arriva da WP con le
+    // entita' (&#8217; per l'apostrofo), e React poi ne ri-scappa la & , quindi
+    // nell'indice si leggeva "l&#8217;accordo". Si vedeva solo sui titoli con apostrofo.
+    const text = stripHtml(match[3]);
     const id = match[2] || text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
     headings.push({ id, text, level });
   }
