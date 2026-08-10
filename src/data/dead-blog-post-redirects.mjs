@@ -2,6 +2,12 @@
 // Sorgente: GSC Coverage 404 drilldown 2026-06-25 (128 post). Ognuno -> hub blog della sua lingua.
 // Generato per spegnere i 404 e recuperare l'equity residua. NON tocca i post vivi (match esatto).
 export const deadBlogPostRedirects = [
+  // 10/08/2026: consolidato nella guida GDPR di novembre. Fuori dall'indice dal 29/06
+  // (37 giorni a zero impressioni, "crawled - currently not indexed"), stesso territorio
+  // della guida e keyphrase con zero domanda misurata. I paragrafi sull'art. 4 sono stati
+  // innestati nella guida prima del redirect, quindi il contenuto non si perde.
+  { source: "/blog/2026/04/13/garante-privacy-geolocalizzazione-dipendenti-2026/", destination: "/blog/2025/11/20/geolocalizzazione-dipendenti-gdpr-guida-legale/", permanent: true },
+  { source: "/blog/2026/04/13/garante-privacy-geolocalizzazione-dipendenti-2026", destination: "/blog/2025/11/20/geolocalizzazione-dipendenti-gdpr-guida-legale/", permanent: true },
   { source: "/blog/de/2026/03/31/unsichtbarer-spielraum-wie-viel-kosten-sie-mikroverzogerungen-vor-ort-wirklich/", destination: "/de/blog/", permanent: true },
   { source: "/blog/de/2026/03/31/unsichtbarer-spielraum-wie-viel-kosten-sie-mikroverzogerungen-vor-ort-wirklich", destination: "/de/blog/", permanent: true },
   { source: "/blog/fr/2026/03/24/comment-demontrer-chaque-intervention-a-des-clients-sceptiques/", destination: "/fr/blog/", permanent: true },

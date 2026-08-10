@@ -198,7 +198,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
         label: 'Geolocalizzazione dipendenti e GDPR: cosa è permesso e cosa no' },
       { href: '/blog/2026/04/22/fac-simile-informativa-gps-dipendenti-2026/',
         label: 'Fac-simile informativa GPS dipendenti 2026' },
-      { href: '/blog/2026/04/13/garante-privacy-geolocalizzazione-dipendenti-2026/',
+      { href: '/blog/2025/11/20/geolocalizzazione-dipendenti-gdpr-guida-legale/',
         label: 'Garante Privacy e geolocalizzazione: linee guida 2026' },
     ],
     en: [
