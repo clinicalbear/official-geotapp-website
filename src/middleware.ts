@@ -691,6 +691,9 @@ export async function middleware(req: NextRequest) {
   // /blog/{locale} or /blog/{locale}/ → 301 → /{locale}/blog/         (stable equivalence)
   //
   // Article URLs (/blog/en/2026/...) and WP assets (/blog/wp-*) NOT redirected.
+  // I consolidamenti fra post che si mangiano a vicenda NON stanno qui: vivono in
+  // src/data/dead-blog-post-redirects.mjs, che next.config.mjs applica PRIMA del
+  // middleware. Aggiungerne uno anche qui e' codice morto che non scatta mai.
   if (pathname.startsWith('/blog')) {
     // Skip WP admin/api/assets/login
     if (pathname.startsWith('/blog/wp-')) {

@@ -562,7 +562,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
             <p className="r d1" style={{ marginBottom: 20, color: '#4A5244' }}>{content.faq.subtitle}</p>
             {content.faq.items.map((item, i) => (
               <details key={i} className="r" open={i === 0}>
-                <summary>{item.q}</summary>
+                <summary><h3>{item.q}</h3></summary>
                 <div className="ct"><p>{item.a}</p></div>
               </details>
             ))}
@@ -572,7 +572,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
                 <h3 style={{ marginTop: 56, marginBottom: 8 }}>{regionalTitle}</h3>
                 {regionalItems.map((item, i) => (
                   <details key={`regional-${i}`} className="r">
-                    <summary>{item.q}</summary>
+                    <summary><h3>{item.q}</h3></summary>
                     <div className="ct"><p>{item.a}</p></div>
                   </details>
                 ))}

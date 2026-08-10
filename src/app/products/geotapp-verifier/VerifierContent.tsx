@@ -355,7 +355,7 @@ console.log(result.integrityLevel);`}</pre>
           {copy.faqs.map((faq, i) => (
             <div key={faq.q} className={`r d${Math.min(i + 1, 4)}`}>
               <details>
-                <summary>{faq.q}</summary>
+                <summary><h3>{faq.q}</h3></summary>
                 <div className="ct"><p>{faq.a}</p></div>
               </details>
             </div>

@@ -121,7 +121,7 @@ export default async function RoiCalculatorPage({
               <div>
                 {roi.faq.map((item, i) => (
                   <details key={i}>
-                    <summary>{item.q}</summary>
+                    <summary><h3>{item.q}</h3></summary>
                     <div className="ct"><p>{item.a}</p></div>
                   </details>
                 ))}

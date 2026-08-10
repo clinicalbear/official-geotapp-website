@@ -251,7 +251,7 @@ export default function DemoPage() {
           <div className="r d1">
             {d.faq.map((item: { q: string; a: string }, i: number) => (
               <details key={i} open={i === 0}>
-                <summary>{item.q}</summary>
+                <summary><h3>{item.q}</h3></summary>
                 <div className="ct"><p>{item.a}</p></div>
               </details>
             ))}

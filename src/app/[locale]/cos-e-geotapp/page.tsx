@@ -590,7 +590,7 @@ export default async function CosEGeoTappPage({ params }: { params: Promise<{ lo
           <div className="r d1">
             {copy.faq.map((f, i) => (
               <details key={i} open={i === 0}>
-                <summary>{f.q}</summary>
+                <summary><h3>{f.q}</h3></summary>
                 <div className="ct"><p>{f.a}</p></div>
               </details>
             ))}

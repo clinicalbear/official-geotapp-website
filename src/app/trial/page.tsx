@@ -379,7 +379,7 @@ export default function TrialPage() {
                 open={i === 0}
                 onToggle={() => trackEvent('trial_faq_click', { question: item.q.slice(0, 50), index: i.toString() })}
               >
-                <summary>{item.q}</summary>
+                <summary><h3>{item.q}</h3></summary>
                 <div className="ct"><p>{item.a}</p></div>
               </details>
             ))}

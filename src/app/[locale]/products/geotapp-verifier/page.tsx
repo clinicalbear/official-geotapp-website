@@ -8,17 +8,17 @@ import { type AppLocale } from '@/lib/i18n/config';
 import { getCurrencyForLocale } from '@/lib/pricing';
 
 const verifierMeta: Record<string, { title: string; description: string }> = {
-  it: { title: 'GeoTapp Verifier - Verifica Indipendente dei Report di Lavoro', description: 'GeoTapp Verifier certifica ogni intervento con dati GPS sigillati, prove fotografiche con timestamp e report non alterabili. Verifica indipendente per aziende che devono difendere il lavoro svolto.' },
-  en: { title: 'GeoTapp Verifier - Independent Field Work Report Verification', description: 'GeoTapp Verifier certifies every job with sealed GPS data, timestamped photo evidence and tamper-proof reports. Independent verification for companies that need to defend completed work.' },
-  de: { title: 'GeoTapp Verifier - Unabhängige Überprüfung von Arbeitsberichten', description: 'GeoTapp Verifier zertifiziert jeden Einsatz mit versiegelten GPS-Daten, zeitgestempelten Fotobeweisen und manipulationssicheren Berichten.' },
-  fr: { title: "GeoTapp Verifier - Vérification Indépendante des Rapports d'Intervention", description: 'GeoTapp Verifier certifie chaque intervention avec des données GPS scellées, des preuves photographiques horodatées et des rapports inaltérables.' },
-  es: { title: 'GeoTapp Verifier - Verificación Independiente de Informes de Trabajo', description: 'GeoTapp Verifier certifica cada intervención con datos GPS sellados, pruebas fotográficas con marca de tiempo e informes a prueba de manipulaciones.' },
-  nl: { title: 'GeoTapp Verifier - Onafhankelijke Verificatie van Werkrapporten', description: 'GeoTapp Verifier certificeert elke interventie met verzegelde GPS-gegevens, getimestampte fotobewijs en fraudebestendige rapporten.' },
-  pt: { title: 'GeoTapp Verifier - Verificação Independente de Relatórios de Trabalho', description: 'GeoTapp Verifier certifica cada intervenção com dados GPS selados, provas fotográficas com carimbo de data/hora e relatórios à prova de adulteração.' },
-  sv: { title: 'GeoTapp Verifier - Oberoende Verifiering av Arbetsrapporter', description: 'GeoTapp Verifier certifierar varje insats med förseglad GPS-data, tidsstämplad fotodokumentation och manipuleringssäkra rapporter.' },
-  da: { title: 'GeoTapp Verifier - Uafhængig Verifikation af Arbejdsrapporter', description: 'GeoTapp Verifier certificerer hvert job med forseglet GPS-data, tidsstemplede fotobeviser og manipulationssikre rapporter.' },
-  nb: { title: 'GeoTapp Verifier - Uavhengig Verifisering av Arbeidsrapporter', description: 'GeoTapp Verifier sertifiserer hvert oppdrag med forseglet GPS-data, tidsstemplede fotobevis og manipuleringssikre rapporter.' },
-  ru: { title: 'GeoTapp Verifier, Независимая Проверка Отчётов о Работе', description: 'GeoTapp Verifier сертифицирует каждый выезд с помощью запечатанных GPS-данных, фотодоказательств с временными метками и защищённых от изменений отчётов.' },
+  it: { title: "GeoTapp Verifier: verifica indipendente dei report", description: "Verifier certifica ogni intervento con GPS sigillato, foto con orario e report non alterabili. Il committente controlla da solo, senza account." },
+  en: { title: "GeoTapp Verifier: independent work report verification", description: "Verifier certifies every job with sealed GPS, timestamped photos and tamper-proof reports. Your client checks the work alone, with no account." },
+  de: { title: "GeoTapp Verifier: unabhängige Prüfung von Arbeitsberichten", description: "Verifier zertifiziert jeden Einsatz mit versiegelten GPS-Daten, Fotos mit Zeitstempel und manipulationssicheren Berichten. Ihr Kunde prüft selbst." },
+  fr: { title: "GeoTapp Verifier: vérification indépendante des rapports", description: "Verifier certifie chaque intervention avec un GPS scellé, des photos horodatées et des rapports inaltérables. Votre client vérifie seul, sans compte." },
+  es: { title: "GeoTapp Verifier: verificación independiente de informes", description: "Verifier certifica cada intervención con GPS sellado, fotos con marca de tiempo e informes inalterables. Tu cliente lo comprueba solo, sin cuenta." },
+  nl: { title: "GeoTapp Verifier: onafhankelijke verificatie van rapporten", description: "Verifier certificeert elke interventie met verzegelde GPS, foto's met tijdstempel en fraudebestendige rapporten. Uw klant controleert het zelf." },
+  pt: { title: "GeoTapp Verifier: verificação independente de relatórios", description: "O Verifier certifica cada intervenção com GPS selado, fotos com data e hora e relatórios inalteráveis. O seu cliente confirma sozinho, sem conta." },
+  sv: { title: "GeoTapp Verifier: oberoende verifiering av rapporter", description: "Verifier certifierar varje insats med förseglad GPS, tidsstämplade foton och manipuleringssäkra rapporter. Din kund kontrollerar själv, utan konto." },
+  da: { title: "GeoTapp Verifier: uafhængig verifikation af rapporter", description: "Verifier certificerer hvert job med forseglet GPS, tidsstemplede fotos og manipulationssikre rapporter. Din kunde tjekker det selv, uden konto." },
+  nb: { title: "GeoTapp Verifier: uavhengig verifisering av rapporter", description: "Verifier sertifiserer hvert oppdrag med forseglet GPS, tidsstemplede bilder og manipuleringssikre rapporter. Kunden din sjekker selv, uten konto." },
+  ru: { title: "GeoTapp Verifier: независимая проверка отчётов о работе", description: "Verifier заверяет каждый выезд запечатанными GPS-данными, фото с отметкой времени и неизменяемыми отчётами. Заказчик проверяет сам, без аккаунта." },
 };
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {

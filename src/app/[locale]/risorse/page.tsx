@@ -134,7 +134,7 @@ export default async function RisorseHubPage({
               <div>
                 {faqItems.map((item, i) => (
                   <details key={i}>
-                    <summary>{item.q}</summary>
+                    <summary><h3>{item.q}</h3></summary>
                     <div className="ct"><p>{item.a}</p></div>
                   </details>
                 ))}

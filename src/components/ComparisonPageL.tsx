@@ -172,7 +172,7 @@ export default function ComparisonPageL({
           {faqItems.map((item, i) => (
             <div className={`r d${Math.min(i + 1, 4)}`} key={i}>
               <details open={i === 0}>
-                <summary>{item.q}</summary>
+                <summary><h3>{item.q}</h3></summary>
                 <div className="ct"><p>{item.a}</p></div>
               </details>
             </div>
