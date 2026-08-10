@@ -2,7 +2,8 @@
 // Sorgente: GSC Coverage 404 drilldown 2026-06-25 (128 post). Ognuno -> hub blog della sua lingua.
 // Generato per spegnere i 404 e recuperare l'equity residua. NON tocca i post vivi (match esatto).
 export const deadBlogPostRedirects = [
-  // 10/08/2026: consolidato nella guida GDPR di novembre. Fuori dall'indice dal 29/06
+  // 10/08/2026: consolidato nella guida GDPR di novembre. Esce come 308 (Next emette
+  // 308 per permanent: true), verificato live. Fuori dall'indice dal 29/06
   // (37 giorni a zero impressioni, "crawled - currently not indexed"), stesso territorio
   // della guida e keyphrase con zero domanda misurata. I paragrafi sull'art. 4 sono stati
   // innestati nella guida prima del redirect, quindi il contenuto non si perde.
