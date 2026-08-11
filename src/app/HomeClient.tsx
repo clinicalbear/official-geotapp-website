@@ -99,6 +99,9 @@ const SETTORI_IMGS: Record<string, { img: string; pos: string }> = {
   elettricisti: { img: '/settore-elettricisti.webp', pos: 'center 40%' },
   idraulici: { img: '/settore-idraulici.webp', pos: 'center 42%' },
   termoidraulici: { img: '/settore-termoidraulici.webp', pos: 'center 38%' },
+  edilizia: { img: '/settore-edilizia.webp', pos: 'center 38%' },
+  manutenzione: { img: '/settore-manutenzione.webp', pos: 'center 42%' },
+  impianti: { img: '/settore-impianti.webp', pos: 'center 40%' },
 };
 
 export default function Home({ jrSlot, fqSlot }: { jrSlot?: ReactNode; fqSlot?: ReactNode } = {}) {
@@ -266,7 +269,8 @@ export default function Home({ jrSlot, fqSlot }: { jrSlot?: ReactNode; fqSlot?: 
     },
   ];
 
-  const sectorSlugs = ['installatori', 'pulizie', 'sicurezza', 'elettricisti', 'idraulici', 'termoidraulici'];
+  const sectorSlugs = ['installatori', 'pulizie', 'sicurezza', 'elettricisti', 'idraulici',
+    'termoidraulici', 'edilizia', 'manutenzione', 'impianti'];
 
   return (
     <div className="lp-l lp-home">

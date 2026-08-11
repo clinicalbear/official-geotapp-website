@@ -293,6 +293,18 @@
         "name": "Plomberie-Chauffage",
         "desc": "GeoTapp enregistre chaque intervention sur chaudière et installation avec GPS, photos et horodatages vérifiables. Le client conteste les pièces remplacées ?",
         "cta": "Prouvez les pièces remplacées"
+      },
+      "edilizia": {
+        "desc": "Bâtiment, Rénovation, Sous-traitance. Heures et présences sur chantier documentées, situations de travaux qui résistent à la contestation.",
+        "cta": "Défendez vos situations"
+      },
+      "manutenzione": {
+        "desc": "Installations, Ascenseurs, Facility. Chaque intervention et chaque visite avec GPS et photos: le rapport n'est plus contesté.",
+        "cta": "Mettez fin aux litiges"
+      },
+      "impianti": {
+        "desc": "Mécanique, Électricité, Incendie. Essais et mise en service certifiés avec heure et position, preuve prête pour le maître d'ouvrage.",
+        "cta": "Certifiez vos essais"
       }
     },
     "app_mockup": {

@@ -52,9 +52,9 @@ const CARD_IMG: Record<string, { img: string; pos: string }> = {
   elettricisti: { img: '/settore-elettricisti.webp', pos: 'center 40%' },
   idraulici: { img: '/settore-idraulici.webp', pos: 'center 42%' },
   termoidraulici: { img: '/settore-termoidraulici.webp', pos: 'center 42%' },
-  edilizia: { img: '/bg2.webp', pos: '30% 55%' },
-  manutenzione: { img: '/bg3.webp', pos: '70% 50%' },
-  impianti: { img: '/bg1.webp', pos: '75% 60%' },
+  edilizia: { img: '/settore-edilizia.webp', pos: 'center 38%' },
+  manutenzione: { img: '/settore-manutenzione.webp', pos: 'center 42%' },
+  impianti: { img: '/settore-impianti.webp', pos: 'center 40%' },
 };
 
 // Divide un titolo reale "Frase uno. Frase due." nelle due righe dell'h1

@@ -293,6 +293,18 @@
         "name": "VVS-installatør",
         "desc": "GeoTapp registrerer hvert oppdrag på kjeler og varmeanlegg med GPS, bilder og verifiserbare tidsstempler. Kunden nekter utskiftede deler?",
         "cta": "Bevis utskiftede deler"
+      },
+      "edilizia": {
+        "desc": "Nybygg, Rehabilitering, Underentreprise. Timer og oppmøte på byggeplassen dokumentert, avregninger som holder ved tvist.",
+        "cta": "Forsvar avregningene dine"
+      },
+      "manutenzione": {
+        "desc": "Anlegg, Heiser, Facility. Hver utrykning og hvert besøk med GPS og bilder: servicerapporten bestrides ikke lenger.",
+        "cta": "Avslutt tvistene"
+      },
+      "impianti": {
+        "desc": "Mekanikk, Elektro, Brannsikring. Testing og idriftsettelse dokumentert med tid og posisjon, bevis klart for byggherren.",
+        "cta": "Dokumentér testingen"
       }
     },
     "app_mockup": {

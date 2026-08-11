@@ -293,6 +293,18 @@
         "name": "CV & Sanitair",
         "desc": "GeoTapp registreert elke cv-ketel en verwarmingsklus met GPS, foto's en verifieerbare tijdstempels. Klant ontkent vervangen onderdelen?",
         "cta": "Bewijs vervangen onderdelen"
+      },
+      "edilizia": {
+        "desc": "Nieuwbouw, Renovatie, Onderaanneming. Uren en aanwezigheid op de bouwplaats gedocumenteerd, termijnstaten die stand houden.",
+        "cta": "Verdedig je termijnstaten"
+      },
+      "manutenzione": {
+        "desc": "Installaties, Liften, Facility. Elke oproep en elk bezoek met GPS en foto's: de werkbon wordt niet meer betwist.",
+        "cta": "Sluit de discussies"
+      },
+      "impianti": {
+        "desc": "Werktuigbouw, Elektro, Brandbeveiliging. Testen en inbedrijfstelling gecertificeerd met tijd en locatie, bewijs klaar voor de opdrachtgever.",
+        "cta": "Certificeer je testen"
       }
     },
     "app_mockup": {

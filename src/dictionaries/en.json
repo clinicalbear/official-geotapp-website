@@ -293,6 +293,18 @@
         "name": "Heating & Plumbing",
         "desc": "GeoTapp records every boiler and heating job with GPS, photos and verifiable timestamps. Client disputes parts replaced?",
         "cta": "Prove replaced parts"
+      },
+      "edilizia": {
+        "desc": "Building, Renovation, Subcontracting. Hours and site attendance documented, progress reports that hold up when challenged.",
+        "cta": "Defend your progress reports"
+      },
+      "manutenzione": {
+        "desc": "Plant, Lifts, Facility. Every call-out and site visit with GPS and photos: the service report stops being disputed.",
+        "cta": "Close the disputes"
+      },
+      "impianti": {
+        "desc": "Mechanical, Electrical, Fire safety. Testing and commissioning certified with time and location, proof ready for the client.",
+        "cta": "Certify your commissioning"
       }
     },
     "app_mockup": {

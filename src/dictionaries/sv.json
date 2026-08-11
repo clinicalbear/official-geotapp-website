@@ -293,6 +293,18 @@
         "name": "VVS-tekniker",
         "desc": "GeoTapp registrerar varje uppdrag på pannor och värmesystem med GPS, foton och verifierbara tidsstämplar. Kunden nekar utbytta delar?",
         "cta": "Bevisa utbytta delar"
+      },
+      "edilizia": {
+        "desc": "Nybyggnad, Renovering, Underentreprenad. Timmar och närvaro på bygget dokumenterade, avstämningar som håller vid tvist.",
+        "cta": "Försvara dina avstämningar"
+      },
+      "manutenzione": {
+        "desc": "Anläggningar, Hissar, Facility. Varje utryckning och varje besök med GPS och foton: arbetsrapporten ifrågasätts inte längre.",
+        "cta": "Avsluta tvisterna"
+      },
+      "impianti": {
+        "desc": "Mekanik, El, Brandskydd. Provning och driftsättning intygade med tid och position, bevis klart för beställaren.",
+        "cta": "Intyga provningen"
       }
     },
     "app_mockup": {

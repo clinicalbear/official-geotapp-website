@@ -293,6 +293,18 @@
         "name": "Termoidraulici",
         "desc": "GeoTapp registra ogni intervento su caldaie e impianti con GPS, foto e timestamp verificabili. Il cliente nega i materiali sostituiti?",
         "cta": "Prova i materiali sostituiti"
+      },
+      "edilizia": {
+        "desc": "Costruzioni, Ristrutturazioni, Subappalti. Ore e presenze in cantiere documentate, SAL che reggono alla contestazione.",
+        "cta": "Difendi i tuoi SAL"
+      },
+      "manutenzione": {
+        "desc": "Impianti, Ascensori, Facility. Ogni chiamata e ogni sopralluogo con GPS e foto: il rapportino non si contesta piu'.",
+        "cta": "Chiudi le contestazioni"
+      },
+      "impianti": {
+        "desc": "Meccanici, Elettrici, Antincendio. Collaudi e messa in servizio certificati con ora e posizione, prova pronta per il committente.",
+        "cta": "Certifica i collaudi"
       }
     },
     "app_mockup": {

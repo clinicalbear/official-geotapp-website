@@ -293,6 +293,18 @@
         "name": "Heizung & Sanitär",
         "desc": "GeoTapp erfasst jeden Heizungs- und Sanitäreinsatz mit GPS, Fotos und verifizierbaren Zeitstempeln. Der Kunde bestreitet ausgetauschte Teile?",
         "cta": "Ersetzte Teile nachweisen"
+      },
+      "edilizia": {
+        "desc": "Hochbau, Sanierung, Nachunternehmer. Stunden und Anwesenheit auf der Baustelle dokumentiert, Aufmaße die einer Beanstandung standhalten.",
+        "cta": "Baufortschritt belegen"
+      },
+      "manutenzione": {
+        "desc": "Anlagen, Aufzüge, Facility. Jeder Einsatz und jede Begehung mit GPS und Fotos: der Servicebericht wird nicht mehr bestritten.",
+        "cta": "Streitfälle beenden"
+      },
+      "impianti": {
+        "desc": "Mechanik, Elektro, Brandschutz. Prüfungen und Inbetriebnahme mit Zeit und Ort belegt, Nachweis fertig für den Auftraggeber.",
+        "cta": "Inbetriebnahme belegen"
       }
     },
     "app_mockup": {

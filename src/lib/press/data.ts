@@ -23,6 +23,23 @@ export function pressRel(_item: PressItem): string {
 export const PRESS_RELEASES: PressItem[] = [];
 export const PRESS_COVERAGE: PressItem[] = [
   {
+    date: '2026-08-11',
+    outlet: 'COO Insider',
+    title: 'How operations leaders win adoption for process changes without disrupting the day',
+    url: 'https://cooinsider.com/qa/how-operations-leaders-win-adoption-for-process-changes-without-disrupting-the-day#answer1167',
+    locale: 'en',
+    logo: '/press/cooinsider.png',
+    follow: true, // Ci linkano in dofollow: rel="" verificato nel DOM sull'ancora "GeoTapp" ->
+                  // https://geotapp.com/. Nella stessa pagina i profili LinkedIn degli altri
+                  // esperti sono rel="nofollow", quindi e' una scelta, non distrazione.
+                  // NB: dal 13/07/2026 il flag NON concede piu' dofollow in uscita.
+                  // ⚠️ Testata di PROPRIETA' della piattaforma: la pagina "about" di COO Insider
+                  // dice "Driving the content excellence at COO Insider is Featured" (Featured =
+                  // vecchio nome di Connectively) e gli articoli sono firmati Brett Farmiloe,
+                  // CEO di Connectively. Stessa cosa per Small Business Leader. Vale come
+                  // menzione, NON come stampa indipendente: l'unica indipendente qui e' AZ Big Media.
+  },
+  {
     date: '2026-07-24',
     outlet: 'GPO Magazine',
     title: "GPS et salariés : ce n'est pas de la surveillance si c'est une preuve du travail effectué",

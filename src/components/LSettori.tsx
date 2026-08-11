@@ -17,9 +17,9 @@ const SETTORI = [
   { slug: 'elettricisti',   img: '/bg1.webp', pos: '26% 62%' },
   { slug: 'idraulici',      img: '/bg1.webp', pos: '84% 44%' },
   { slug: 'termoidraulici', img: '/bg1.webp', pos: '62% 74%' },
-  { slug: 'edilizia',       img: '/bg2.webp', pos: '30% 55%' },
-  { slug: 'manutenzione',   img: '/bg3.webp', pos: '70% 50%' },
-  { slug: 'impianti',       img: '/bg2.webp', pos: '75% 60%' },
+  { slug: 'edilizia',       img: '/settore-edilizia.webp', pos: 'center 38%' },
+  { slug: 'manutenzione',   img: '/settore-manutenzione.webp', pos: 'center 42%' },
+  { slug: 'impianti',       img: '/settore-impianti.webp', pos: 'center 40%' },
 ] as const;
 
 export default function LSettori() {

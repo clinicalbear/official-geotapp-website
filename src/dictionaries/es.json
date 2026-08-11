@@ -293,6 +293,18 @@
         "name": "Calefacción y Fontanería",
         "desc": "GeoTapp registra cada intervención en calderas e instalaciones con GPS, fotos y marcas de tiempo verificables. ¿El cliente niega los materiales sustituidos?",
         "cta": "Demuestra los materiales sustituidos"
+      },
+      "edilizia": {
+        "desc": "Obra, Reformas, Subcontratación. Horas y presencias en obra documentadas, certificaciones que resisten la impugnación.",
+        "cta": "Defiende tus certificaciones"
+      },
+      "manutenzione": {
+        "desc": "Instalaciones, Ascensores, Facility. Cada aviso y cada visita con GPS y fotos: el parte de trabajo deja de discutirse.",
+        "cta": "Cierra las disputas"
+      },
+      "impianti": {
+        "desc": "Mecánicas, Eléctricas, Contra incendios. Pruebas y puesta en marcha certificadas con hora y posición, prueba lista para la propiedad.",
+        "cta": "Certifica las pruebas"
       }
     },
     "app_mockup": {

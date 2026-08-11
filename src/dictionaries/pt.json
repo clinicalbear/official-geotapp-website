@@ -293,6 +293,18 @@
         "name": "Aquecimento e Canalização",
         "desc": "GeoTapp regista cada intervenção em caldeiras e instalações com GPS, fotos e carimbos de tempo verificáveis. O cliente nega os materiais substituídos?",
         "cta": "Prove os materiais substituídos"
+      },
+      "edilizia": {
+        "desc": "Obra, Renovação, Subcontratação. Horas e presenças em obra documentadas, autos de medição que resistem à contestação.",
+        "cta": "Defenda os seus autos"
+      },
+      "manutenzione": {
+        "desc": "Instalações, Elevadores, Facility. Cada chamada e cada visita com GPS e fotos: o relatório deixa de ser contestado.",
+        "cta": "Feche as contestações"
+      },
+      "impianti": {
+        "desc": "Mecânicas, Elétricas, Incêndio. Ensaios e colocação em serviço certificados com hora e posição, prova pronta para o dono da obra.",
+        "cta": "Certifique os ensaios"
       }
     },
     "app_mockup": {
