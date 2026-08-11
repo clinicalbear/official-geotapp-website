@@ -6,7 +6,7 @@ import { getDictionary } from '@/lib/i18n/dictionaries';
 import { DEFAULT_LOCALE, getLocaleFromPathname, localizePath } from '@/lib/i18n/locale-routing';
 
 /**
- * Sezione settori della direzione L: sei riquadri verticali con la foto che
+ * Sezione settori della direzione L: nove riquadri verticali con la foto che
  * si accende al passaggio. I nomi sono quelli del menu del sito, i link
  * puntano alle pagine settore vere.
  */
@@ -17,6 +17,9 @@ const SETTORI = [
   { slug: 'elettricisti',   img: '/bg1.webp', pos: '26% 62%' },
   { slug: 'idraulici',      img: '/bg1.webp', pos: '84% 44%' },
   { slug: 'termoidraulici', img: '/bg1.webp', pos: '62% 74%' },
+  { slug: 'edilizia',       img: '/bg2.webp', pos: '30% 55%' },
+  { slug: 'manutenzione',   img: '/bg3.webp', pos: '70% 50%' },
+  { slug: 'impianti',       img: '/bg2.webp', pos: '75% 60%' },
 ] as const;
 
 export default function LSettori() {
