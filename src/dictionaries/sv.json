@@ -133,10 +133,10 @@
     "features_title": "Från uppdrag till verifierbart bevis",
     "features_subtitle": "Tre integrerade verktyg: fältet registrerar, kontoret kontrollerar, kunden verifierar.",
     "cta_title": "Arbetet hände. Bevisa det nu.",
-    "cta_subtitle": "Företag som använder GeoTapp förlorar inte längre odokumenterade uppdrag. Varje timme är verifierbar. Varje rapport är försvarbar.",
+    "cta_subtitle": "Inget uppdrag lämnas utan dokumentation, och varje timme som kommer in från fältet kommer redan verifierbar.",
     "cta_button": "Boka 30-minuters demo",
     "problem_title": "Problemet du redan känner till",
-    "problem_subtitle": "Det är inte ett organiseringsproblem. Det är ett bevisproblem.",
+    "problem_subtitle": "Den som har beviset behöver inte förklara, den som förklarar har inget bevis.",
     "problem_items": [
       {
         "title": "Kunden förnekar. Du har inga bevis.",
@@ -153,7 +153,7 @@
     ],
     "report_section_title": "Rapporten. Inte en sammanfattning. Ett bevis.",
     "report_section_subtitle": "Varje GeoTapp-rapport genereras automatiskt från verkliga fältdata.",
-    "report_section_body": "GPS-tidsstämplar, foton med tidsstämpel, operationella anteckningar. Systemet applicerar ett kryptografiskt sigill som gör varje ändring spårbar. Resultatet är inte ett dokument att skicka till kunden, det är ett bevis som kunden kan verifiera själv.",
+    "report_section_body": "GPS-stämplingar, foton med tiden på, fältanteckningar. Uppgifterna låses när rapporten skapas och efter det rör ingen dem. När tvivlet kommer förklarar du inte, du visar, och det du visar är inte ett dokument till kunden, det är slutet på diskussionen.",
     "report_feature_1": "Inte redigerbar efter generering, varje ändring upptäcks",
     "report_feature_2": "Verifierbar utan konto, av vem som helst, självständigt",
     "report_feature_3": "GPS- och fotodata integrerade och oskiljaktiga",
@@ -188,7 +188,7 @@
       "email_err": "Något gick fel. Försök igen.",
       "pitch_kicker": "ROI-kalkylator",
       "pitch_title": "Siffrorna du inte tittar på är de som kostar dig.",
-      "pitch_body": "Timmarna i pappersarbete, reklamationerna du betalar själv, samordningen som sköts muntligt. Du känner inte hur de lämnar kontot, men det gör de. Lägg in tre siffror och se vad det blir på ett år: oftast överraskar det, och inte till det bättre.",
+      "pitch_body": "Timmarna i byråkrati, tvisterna du själv betalar, samordningen muntligt. Du märker dem inte lämna kontot, men det gör de. Fyll i tre siffror och se vad ett år går på. Det brukar överraska, och inte positivt.",
       "pitch_points": [
         "Varje obetald reklamation väger, tolv månader om året",
         "Timmar på kontoret är timmar du inte fakturerar",
@@ -210,7 +210,7 @@
     "app": {
       "badge": "GeoTapp TimeTracker",
       "title": "Teknikern registrerar. Kontoret kontrollerar.",
-      "subtitle": "TimeTracker är mobilappen som fälttekniker använder för att registrera fältaktivitet. Instämpling, utstämpling, foton och anteckningar kopplade till varje arbetsorder. <strong>Tillgänglig på Android och iOS.</strong>",
+      "subtitle": "TimeTracker är mobilappen som samlar in beviset från fältet, in, ut, foton med tiden på, anteckningar. Allt kopplat till uppdraget, allt förseglat. <strong>Finns för Android och iOS.</strong>",
       "card_gps": {
         "title": "GPS-tidregistrering",
         "desc": "Verifierad position"
@@ -224,7 +224,7 @@
     "verifier": {
       "badge": "GeoTapp Verifier",
       "title": "Du behöver inte att de litar på dig.",
-      "subtitle": "Kunden har rapporten. Han verifierar den själv utan att öppna GeoTapp. Om uppgifterna stämmer med det verkliga arbetet håller sigillet. Om någon har ändrat dokumentet bryts sigillet. Ingen överklagande.",
+      "subtitle": "Ditt ord kommer aldrig in i diskussionen. Kunden öppnar rapporten och kontrollerar själv, utan att logga in i GeoTapp. Stämmer uppgifterna med det verkliga arbetet håller rapporten. Har någon ändrat dokumentet håller den inte längre. Utan överklagande.",
       "features": {
         "integrity": "<strong>Oföränderliga data:</strong> Rapporten genereras på verkliga fältdata och låses. Varje ändring ogiltigförklarar den, utan undantag.",
         "independent": "<strong>Autonom verifiering:</strong> Vem som helst med rapporten kan verifiera dess äkthet, inget konto, ingen plattformsåtkomst."
@@ -256,7 +256,7 @@
     },
     "footer_cta": {
       "title": "Jobbet är bevisat. Åk hem nu.",
-      "subtitle": "Ett tryck på plats förseglar beviset, och rapporten skriver sig själv, klar för kunden. Slut med fredagskvällar där du bygger upp veckan ur minnet: när du stämplar ut är du faktiskt klar, och kvällen är din igen.",
+      "subtitle": "Ett tryck på plats förseglar beviset, och rapporten skriver sig själv, klar för kunden. Slut med fredagskvällar där du bygger upp veckan ur minnet. När du stämplar ut är du faktiskt klar, och kvällen är din igen.",
       "button": "Kontakta oss",
       "pricing_link": "Se planer och priser →"
     },
@@ -330,7 +330,7 @@
           {
             "name": "GeoTapp TimeTracker",
             "tagline": "Från och med",
-            "desc": "Den kompletta lösningen för att spåra närvaro, fältaktivitet och arbetsbevis. Pris per användare/år.",
+            "desc": "Närvaro, fältaktivitet och bevis för utfört arbete, på ett ställe. Pris per användare och år.",
             "features": [
               "Android/iOS-app",
               "GPS-instämpling",
@@ -347,7 +347,7 @@
           {
             "name": "GeoTapp Flow Business",
             "tagline": "För strukturerade företag.",
-            "desc": "Den kompletta lösningen för strukturerade företag och komplexa organisationer.",
+            "desc": "För företag med flera lag, flera uppdrag och ett kontor som ska hålla ihop alltihop.",
             "features": [
               "Obegränsade team (inte timetracker-användare)",
               "API",
@@ -827,13 +827,16 @@
     "badge": "Vår historia",
     "hero_title_line1": "Födda i fält,",
     "hero_title_line2": "inte på kontor.",
-    "hero_desc": "GeoTapp uppfanns inte av investerare eller analytiker. Det föddes ur den verkliga frustrationen hos någon som arbetar varje dag bland deadlines, byggarbetsplatser och krävande kunder.",
+    "hero_desc": "Produkten började med ett pappersark med en månads timmar på och summor som aldrig gick ihop.",
     "story": [
-      "Det var 2024. Michele Angelo Petraroli, vår grundare, arbetade som anställd och hade ett till synes trivialt men otroligt kostsamt problem: <strong>att bevisa sitt eget arbete.</strong>",
-      "I slutet av månaden stämde timregistreringen aldrig. Jobb gjorda i farten mellan kunder glömdes bort. Papper gick förlorade, WhatsApp-meddelanden grävdes ner. Det var en tyst källa till bortkastade tid och pengar.",
-      "Han sökte en lösning. Han hittade bara komplexa, dyra program fulla av onödiga grafer och fattiga på substans. Program gjorda av folk som aldrig hade stämplat in eller utfärdat en faktura i nödsituation från en skåpbil.",
-      "Så beslöt Michele att bygga verktyget själv som han hade velat ha: enkelt, mobilt, med verifierbara bevis. Inte för investerare, för företag som hans.",
-      "Åh, och det stavas GeoTapp, med två P. Ser du ett med bara ett P därute, så är det inte vi, men vi klandrar dem inte."
+      "Det finns ett arbete som ingen någonsin har fått betalt för, och det är att skriva ner sina egna timmar. Datum, start, slut, summa. Varje dag, och vid månadens slut går sammanställningen till chefen.",
+      "<strong>Michele Angelo Petraroli</strong> arbetade med evenemangssäkerhet, som anställd, och han fyllde i det där bladet som alla fyller i det, alltså dåligt. Summorna stämde nästan aldrig, delvis också hans eget fel, för det är mänskligt att skjuta upp det tråkiga och sedan rekonstruera det ur minnet en vecka senare. Kollegerna som inte skickade in sina timmar alls arbetade tydligen för att de var rika och gjorde det av lust.",
+      "Han letade efter en app som kunde ta bort besväret. De var alla likadana, och alla bad om exakt det han redan gjorde för hand, datum, start, slut, summa. Samma möda, snyggare knappar.",
+      "Så han byggde en själv, på semestern. En webbsida och två handgrepp, tryck när du börjar och tryck när du slutar, och resten hamnade prydligt i ett arkiv som var färdigt att skicka vid månadens slut.",
+      "Sedan kom tanken som ändrade allt, hjälper det mig så hjälper det kollegerna också. Och hjälper det chefen måste flödet vändas, för det är inte han som ska springa efter folk för att få timmarna, det är timmarna som ska nå honom varje dag av sig själva.",
+      "Därifrån växte verktyget bara i en riktning. Först laglig positionering, avläst när passet öppnas och när det stängs, aldrig löpande. Sedan automatisk dokumentation av utfört arbete, för det verkliga problemet var aldrig att räkna timmarna, det var att bevisa dem när någon ifrågasatte dem.",
+      "Just det, och det stavas GeoTapp, med två P. Hittar du ett med bara ett någonstans är det inte vi, men vi bär inget agg.",
+      "Namnet har för övrigt allt i sig. Positionen, ett tap, en app."
     ],
     "values_title": "Våra värderingar",
     "values": [
@@ -847,15 +850,15 @@
       },
       {
         "title": "Privacy by Design",
-        "desc": "Vi säljer inte data, vi spårar inte kontinuerligt. GPS bara vid instämpling, noll övervakning."
+        "desc": "Data säljs inte, och positionen läses två gånger under ett pass, när du öppnar det och när du stänger det. Däremellan vet verktyget inte var du är."
       },
       {
         "title": "Made in Italy",
         "desc": "Utvecklat i Italien för den italienska och europeiska marknaden. GDPR-regler, arbetskultur och lokala regler finns i produktens DNA."
       }
     ],
-    "cta_title": "Gå med i den enkla revolutionen",
-    "cta_desc": "Vi är inte ett otillgängligt Big Tech-företag. Vi är riktiga människor som bygger mjukvara för riktiga människor.",
+    "cta_title": "I andra änden sitter en människa",
+    "cta_desc": "Ett litet företag som bygger ett verktyg åt företag med folk ute på fältet. Skriver du får du svar av någon som själv har haft problemet.",
     "cta_btn": "Skicka oss ett meddelande",
     "stats": [
       {
@@ -863,12 +866,12 @@
         "label": "Grundat"
       },
       {
-        "number": "100%",
-        "label": "Byggt för fältet"
+        "number": "11",
+        "label": "Språk i produkten"
       },
       {
-        "number": "GDPR",
-        "label": "Certifierad integritet"
+        "number": "EU",
+        "label": "Var data stannar"
       }
     ],
     "mission_quote": "Fältarbete förtjänar samma transparensverktyg som ett kontor.",

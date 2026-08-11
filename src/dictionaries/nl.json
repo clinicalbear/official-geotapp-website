@@ -133,10 +133,10 @@
     "features_title": "Van interventie naar verifieerbaar bewijs",
     "features_subtitle": "Drie geïntegreerde tools: het veld registreert, het kantoor controleert, de klant verifieert.",
     "cta_title": "Het werk is gedaan. Bewijs het nu.",
-    "cta_subtitle": "Bedrijven die GeoTapp gebruiken verliezen geen ongedocumenteerde opdrachten meer. Elk uur is verifieerbaar. Elk rapport is verdedigbaar.",
+    "cta_subtitle": "Geen enkele klus blijft zonder documentatie, en elk uur dat uit het veld komt, komt al verifieerbaar binnen.",
     "cta_button": "30-minuten demo boeken",
     "problem_title": "Het probleem dat je al kent",
-    "problem_subtitle": "Het is geen organisatieprobleem. Het is een bewijsprobleem.",
+    "problem_subtitle": "Wie het bewijs heeft hoeft niets uit te leggen, wie iets uitlegt heeft geen bewijs.",
     "problem_items": [
       {
         "title": "De klant ontkent het. Jij hebt geen bewijs.",
@@ -153,7 +153,7 @@
     ],
     "report_section_title": "Het rapport. Geen samenvatting. Een bewijs.",
     "report_section_subtitle": "Elk GeoTapp-rapport wordt automatisch gegenereerd uit echte veldgegevens.",
-    "report_section_body": "GPS-tijdregistraties, foto's met tijdstempel, operationele notities. Het systeem brengt een cryptografisch zegel aan waardoor elke wijziging detecteerbaar is. Het resultaat is geen document om naar de klant te sturen, het is een bewijs dat de klant zelf kan verifiëren.",
+    "report_section_body": "GPS-registraties, foto's met de tijd erop, veldnotities. De gegevens sluiten zich bij het genereren en daarna raakt niemand ze meer aan. Als de twijfel komt legt u niets uit, u laat het zien, en wat u laat zien is geen document voor de klant, het is het einde van de discussie.",
     "report_feature_1": "Niet wijzigbaar na aanmaak, elke wijziging is detecteerbaar",
     "report_feature_2": "Verifieerbaar zonder account, door iedereen, zelfstandig",
     "report_feature_3": "GPS- en fotogegevens geïntegreerd en onscheidbaar",
@@ -188,7 +188,7 @@
       "email_err": "Er ging iets mis. Probeer het opnieuw.",
       "pitch_kicker": "ROI-calculator",
       "pitch_title": "De cijfers die je niet bekijkt, zijn de cijfers die je geld kosten.",
-      "pitch_body": "De uren papierwerk, de betwistingen die je zelf betaalt, de coördinatie die mondeling gaat. Je voelt het niet van de rekening gaan, maar het gaat eraf. Vul drie cijfers in en kijk wat het over een jaar wordt: meestal verrast het, en niet ten goede.",
+      "pitch_body": "De uren aan administratie, de geschillen die u betaalt, de coördinatie op de gang. U voelt ze niet van de rekening gaan, maar ze gaan. Vul drie cijfers in en zie wat een jaar oplevert. Meestal verrast het, en niet positief.",
       "pitch_points": [
         "Elke onbetaalde betwisting weegt, twaalf maanden per jaar",
         "Uren op kantoor zijn uren die je niet factureert",
@@ -210,7 +210,7 @@
     "app": {
       "badge": "GeoTapp TimeTracker",
       "title": "De monteur registreert. Het kantoor controleert.",
-      "subtitle": "TimeTracker is de mobiele app die monteurs gebruiken om buitendienstactiviteit te registreren. In- en uitklokken, foto's en notities gekoppeld aan elke werkbeurt. <strong>Beschikbaar op Android en iOS.</strong>",
+      "subtitle": "TimeTracker is de mobiele app die het bewijs uit het veld verzamelt, aanmelden, afmelden, foto's met de tijd erop, notities. Alles gekoppeld aan de klus, alles verzegeld. <strong>Beschikbaar voor Android en iOS.</strong>",
       "card_gps": {
         "title": "GPS-tijdregistratie",
         "desc": "Geverifieerde locatie"
@@ -224,7 +224,7 @@
     "verifier": {
       "badge": "GeoTapp Verifier",
       "title": "U hoeft niet dat ze u vertrouwen.",
-      "subtitle": "De klant heeft het rapport. Hij verifieert het zelf, zonder GeoTapp te openen. Als de gegevens overeenkomen met het echte werk, houdt het zegel stand. Als iemand het document heeft gewijzigd, breekt het zegel. Geen beroep.",
+      "subtitle": "Uw woord komt er niet aan te pas. De klant opent het rapport en controleert het zelf, zonder in te loggen bij GeoTapp. Kloppen de gegevens met het echte werk, dan houdt het rapport stand. Heeft iemand het document aangepast, dan houdt het geen stand meer. Zonder beroep.",
       "features": {
         "integrity": "<strong>Niet-aanpasbare gegevens:</strong> Het rapport wordt gegenereerd op echte veldgegevens en vergrendeld. Elke wijziging maakt het ongeldig, zonder beroep.",
         "independent": "<strong>Autonome verificatie:</strong> Iedereen met het rapport kan de authenticiteit controleren, geen account, geen platformtoegang."
@@ -256,7 +256,7 @@
     },
     "footer_cta": {
       "title": "Het werk is bewezen. Ga nu naar huis.",
-      "subtitle": "Eén tik op locatie verzegelt het bewijs, en het rapport schrijft zichzelf, klaar voor de klant. Geen vrijdagavonden meer om de week uit je geheugen te reconstrueren: als je uitklokt, ben je echt klaar, en de avond is weer van jou.",
+      "subtitle": "Eén tik op locatie verzegelt het bewijs, en het rapport schrijft zichzelf, klaar voor de klant. Geen vrijdagavonden meer om de week uit je geheugen te reconstrueren. Als je uitklokt, ben je echt klaar, en de avond is weer van jou.",
       "button": "Neem contact op",
       "pricing_link": "Zie plannen en prijzen →"
     },
@@ -330,7 +330,7 @@
           {
             "name": "GeoTapp TimeTracker",
             "tagline": "Vanaf",
-            "desc": "De complete oplossing voor het bijhouden van aanwezigheid, buitendienstactiviteit en werkbewijs. Prijs per gebruiker/jaar.",
+            "desc": "Aanwezigheid, buitendienstactiviteit en bewijs van het uitgevoerde werk, op één plek. Prijs per gebruiker per jaar.",
             "features": [
               "Android/iOS-app",
               "GPS-inklokken",
@@ -347,7 +347,7 @@
           {
             "name": "GeoTapp Flow Business",
             "tagline": "Voor gestructureerde bedrijven.",
-            "desc": "De complete oplossing voor gestructureerde bedrijven en complexe organisaties.",
+            "desc": "Voor bedrijven met meerdere ploegen, meerdere opdrachten en een kantoor dat alles bij elkaar moet houden.",
             "features": [
               "Onbeperkte teams (geen timetracker-gebruikers)",
               "API",
@@ -896,13 +896,16 @@
     "badge": "Ons verhaal",
     "hero_title_line1": "Geboren in het veld,",
     "hero_title_line2": "niet op kantoor.",
-    "hero_desc": "GeoTapp is niet uitgevonden door investeerders of analisten. Het is ontstaan uit de echte frustratie van iemand die elke dag werkt tussen deadlines, bouwplaatsen en veeleisende klanten.",
+    "hero_desc": "Het product begon met een vel papier met een maand aan uren erop, en totalen die nooit klopten.",
     "story": [
-      "Het was 2024. Michele Angelo Petraroli, onze oprichter, werkte als werknemer en had een schijnbaar triviaal maar ongelooflijk kostbaar probleem: <strong>zijn eigen werk bewijzen.</strong>",
-      "Aan het einde van de maand klopten de urencijfers nooit. Klussen die onderweg tussen klanten waren gedaan werden vergeten. Papier raakte kwijt, WhatsApp-berichten raakten begraven. Het was een stille ader van verspild tijd en geld.",
-      "Hij zocht een oplossing. Hij vond alleen complexe, dure software vol nutteloze grafieken en weinig inhoud. Software gemaakt door mensen die nooit een prikkaart hadden gestempeld of een factuur hadden uitgeschreven vanuit een bestelbus.",
-      "Dus besloot Michele zelf het gereedschap te bouwen dat hij had gewild: eenvoudig, mobiel, met verifieerbaar bewijs. Niet voor investeerders, voor bedrijven zoals het zijne.",
-      "Oh, en het is GeoTapp, met twee P's. Kom je er ergens een tegen met één P, dan zijn wij dat niet, maar we nemen het ze niet kwalijk."
+      "Er is één klus waarvoor nooit iemand betaald is, en dat is het opschrijven van je eigen uren. Datum, begin, einde, totaal. Elke dag, en aan het eind van de maand gaat het overzicht naar de baas.",
+      "<strong>Michele Angelo Petraroli</strong> werkte in de evenementenbeveiliging, in loondienst, en hij vulde dat blad in zoals iedereen het invult, namelijk slecht. De totalen klopten bijna nooit, deels ook zijn eigen schuld, want het is menselijk om saaie dingen uit te stellen en ze een week later uit je hoofd te reconstrueren. De collega's die hun uren helemaal niet doorgaven, werkten kennelijk omdat ze rijk waren en het uit liefhebberij deden.",
+      "Hij zocht een app die hem dat karwei uit handen nam. Ze waren allemaal hetzelfde, en ze vroegen precies wat hij al met de hand deed, datum, begin, einde, totaal. Dezelfde moeite, mooiere knoppen.",
+      "Dus bouwde hij er zelf een, in zijn vakantie. Een webpagina en twee handelingen, drukken als je begint en drukken als je stopt, en de rest belandde netjes in een bestand dat aan het eind van de maand zo verstuurd kon worden.",
+      "Toen kwam de gedachte die alles veranderde, als het mij helpt, helpt het de ploeg ook. En als het de baas helpt, dan moet de stroom worden omgedraaid, want niet hij hoort achter mensen aan te lopen voor hun uren, de uren horen elke dag vanzelf bij hem aan te komen.",
+      "Vanaf daar groeide het gereedschap maar in één richting. Eerst de wettelijk toegestane locatiebepaling, uitgelezen bij het openen en het sluiten van de dienst, nooit doorlopend. Daarna de automatische certificering van het uitgevoerde werk, want het echte probleem was nooit het tellen van de uren, het was het bewijzen ervan zodra iemand ze in twijfel trok.",
+      "O ja, en het wordt geschreven als GeoTapp, met twee P's. Kom je er ergens een tegen met één P, dan zijn wij dat niet, maar we nemen het niemand kwalijk.",
+      "De naam heeft het trouwens allemaal al in zich. De locatie, een tap, een app."
     ],
     "values_title": "Onze waarden",
     "values": [
@@ -916,15 +919,15 @@
       },
       {
         "title": "Privacy by Design",
-        "desc": "We verkopen geen gegevens, we tracken niet continu. GPS alleen op het moment van inklokken, nul surveillance."
+        "desc": "De gegevens worden niet verkocht, en de positie wordt twee keer per dienst gelezen, bij het openen en bij het sluiten. Daartussen weet het gereedschap niet waar u bent."
       },
       {
         "title": "Made in Italy",
         "desc": "Ontwikkeld in Italië voor de Italiaanse en Europese markt. AVG-regels, werkcultuur en lokale regelgeving zitten in het DNA van het product."
       }
     ],
-    "cta_title": "Sluit je aan bij de Eenvoudige Revolutie",
-    "cta_desc": "We zijn geen onbereikbaar Big Tech-bedrijf. We zijn echte mensen die software bouwen voor echte mensen.",
+    "cta_title": "Aan de andere kant zit een mens",
+    "cta_desc": "Een klein bedrijf dat gereedschap bouwt voor bedrijven met ploegen buiten de deur. Wie schrijft, krijgt antwoord van iemand die het probleem zelf heeft gehad.",
     "cta_btn": "Stuur ons een Bericht",
     "stats": [
       {
@@ -932,12 +935,12 @@
         "label": "Opgericht"
       },
       {
-        "number": "100%",
-        "label": "Gebouwd voor het veld"
+        "number": "11",
+        "label": "Talen in het product"
       },
       {
-        "number": "GDPR",
-        "label": "Gecertificeerde privacy"
+        "number": "EU",
+        "label": "Waar de data blijven"
       }
     ],
     "mission_quote": "Veldwerk verdient dezelfde transparantie-tools als een kantoor.",

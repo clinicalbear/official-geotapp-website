@@ -133,10 +133,10 @@
     "features_title": "Del trabajo a la prueba verificable",
     "features_subtitle": "Tres herramientas integradas: el campo registra, la oficina controla, el cliente verifica.",
     "cta_title": "El trabajo ocurrió. Ahora demuéstralo.",
-    "cta_subtitle": "Las empresas que usan GeoTapp ya no pierden trabajos no documentados. Cada hora es verificable. Cada informe es defendible.",
+    "cta_subtitle": "Ninguna intervención se queda sin documentación, y cada hora que llega del campo llega ya verificable.",
     "cta_button": "Reservar demo de 30 minutos",
     "problem_title": "El problema que ya conoces",
-    "problem_subtitle": "No es un problema de organización. Es un problema de prueba.",
+    "problem_subtitle": "Quien tiene la prueba no explica, quien explica no tiene la prueba.",
     "problem_items": [
       {
         "title": "El cliente lo niega. Tú no tienes pruebas.",
@@ -153,7 +153,7 @@
     ],
     "report_section_title": "El informe. No un resumen. Una prueba.",
     "report_section_subtitle": "Cada informe GeoTapp se genera automáticamente a partir de datos reales del campo.",
-    "report_section_body": "Registros GPS, fotos con marca de tiempo, notas operativas. El sistema aplica un sello criptográfico que hace detectable cualquier modificación. El resultado no es un documento para enviar al cliente, es una prueba que el cliente puede verificar por sí mismo.",
+    "report_section_body": "Fichajes GPS, fotos con la hora, notas de campo. Los datos se cierran al generar el informe y a partir de ahí nadie los toca. Cuando llega la duda no explicas, muestras, y lo que muestras no es un documento enviado al cliente, es el final de la discusión.",
     "report_feature_1": "No modificable tras la generación, cualquier alteración es detectable",
     "report_feature_2": "Verificable sin cuenta, por cualquiera, de forma autónoma",
     "report_feature_3": "Datos GPS y fotográficos integrados e inseparables",
@@ -188,7 +188,7 @@
       "email_err": "Algo no ha funcionado. Inténtalo de nuevo.",
       "pitch_kicker": "Calculadora de ROI",
       "pitch_title": "Los números que no miras son los que te cuestan.",
-      "pitch_body": "Las horas de papeleo, las reclamaciones que pagas tú, la coordinación hecha de viva voz. No los sientes salir de la caja, pero salen. Pon tres números y mira cuánto sale en un año: normalmente sorprende, y no para bien.",
+      "pitch_body": "Las horas de burocracia, las disputas que pagas tú, la coordinación de viva voz. No los sientes salir de la cuenta, pero salen. Pon tres números y mira cuánto suma en un año. Suele sorprender, y no para bien.",
       "pitch_points": [
         "Cada reclamación que no cobras pesa, doce meses al año",
         "Las horas que pasas en la oficina son horas que no facturas",
@@ -210,7 +210,7 @@
     "app": {
       "badge": "GeoTapp TimeTracker",
       "title": "El técnico registra. La oficina controla.",
-      "subtitle": "TimeTracker es la aplicación móvil utilizada por los técnicos para registrar la actividad de campo. Entrada, salida, fotos y notas vinculadas a cada trabajo. <strong>Disponible en Android e iOS.</strong>",
+      "subtitle": "TimeTracker es la app móvil que recoge la prueba desde el campo, entrada, salida, fotos con la hora, notas. Todo ligado a la intervención, todo sellado. <strong>Disponible en Android e iOS.</strong>",
       "card_gps": {
         "title": "Control de presencia GPS",
         "desc": "Ubicación verificada"
@@ -224,7 +224,7 @@
     "verifier": {
       "badge": "GeoTapp Verifier",
       "title": "No necesitas que confíen en ti.",
-      "subtitle": "El cliente tiene el informe. Lo verifica él mismo, sin acceder a GeoTapp. Si los datos corresponden al trabajo real, el sello aguanta. Si alguien ha modificado el documento, el sello se rompe. Sin apelación.",
+      "subtitle": "Tu palabra no entra en la discusión. El cliente abre el informe y lo comprueba solo, sin acceder a GeoTapp. Si los datos coinciden con el trabajo real, el informe se sostiene. Si alguien ha modificado el documento, deja de sostenerse. Sin apelación.",
       "features": {
         "integrity": "<strong>Datos no alterables:</strong> El informe se genera sobre los datos reales de campo y queda bloqueado. Cualquier modificación lo invalida, sin apelación.",
         "independent": "<strong>Verificación autónoma:</strong> Cualquiera con el informe puede verificar su autenticidad, sin cuenta, sin acceso a la plataforma."
@@ -256,7 +256,7 @@
     },
     "footer_cta": {
       "title": "El trabajo está probado. Ahora vete a casa.",
-      "subtitle": "Un toque en la obra sella la prueba, y el informe se escribe solo, listo para el cliente. Se acabaron los viernes por la noche reconstruyendo la semana de memoria: cuando fichas la salida, has terminado de verdad, y la tarde vuelve a ser tuya.",
+      "subtitle": "Un toque en la obra sella la prueba, y el informe se escribe solo, listo para el cliente. Se acabaron los viernes por la noche reconstruyendo la semana de memoria. Cuando fichas la salida, has terminado de verdad, y la tarde vuelve a ser tuya.",
       "button": "Habla con nosotros",
       "pricing_link": "Ver planes y precios →"
     },
@@ -330,7 +330,7 @@
           {
             "name": "GeoTapp TimeTracker",
             "tagline": "Desde",
-            "desc": "La solución completa para registrar presencias, actividad de campo y pruebas de trabajo. Precio por usuario/año.",
+            "desc": "Presencias, actividad de campo y prueba del trabajo realizado, en un solo sitio. Precio por usuario y año.",
             "features": [
               "App Android/iOS",
               "Fichaje GPS",
@@ -347,7 +347,7 @@
           {
             "name": "GeoTapp Flow Business",
             "tagline": "Para empresas estructuradas.",
-            "desc": "La solución completa para empresas estructuradas y organizaciones complejas.",
+            "desc": "Para empresas con varios equipos, varios encargos y una oficina que debe mantenerlo todo unido.",
             "features": [
               "Equipos ilimitados (no usuarios timetracker)",
               "API",
@@ -827,13 +827,16 @@
     "badge": "Nuestra historia",
     "hero_title_line1": "Nacidos en el campo,",
     "hero_title_line2": "no en una oficina.",
-    "hero_desc": "GeoTapp no fue inventada por inversores o analistas. Nació de la frustración real de alguien que trabaja cada día entre plazos, obras y clientes exigentes.",
+    "hero_desc": "El producto nació de una hoja de papel con las horas de un mes y de unas cuentas que nunca cuadraban.",
     "story": [
-      "Era 2024. Michele Angelo Petraroli, nuestro fundador, trabajaba como empleado y tenía un problema aparentemente trivial pero increíblemente costoso: <strong>demostrar su propio trabajo.</strong>",
-      "A fin de mes, las cuentas de horas nunca cuadraban. Las intervenciones hechas corriendo entre clientes se olvidaban. El papel se perdía, los mensajes de WhatsApp quedaban enterrados. Era una hemorragia silenciosa de tiempo y dinero.",
-      "Buscó una solución. Solo encontró software complejos, caros, llenos de gráficos inútiles y pobres en sustancia. Software hecho por personas que nunca habían fichado o emitido una factura de emergencia desde la furgoneta.",
-      "Así que Michele decidió construir él mismo la herramienta que hubiera querido tener: simple, móvil, con pruebas verificables. No para inversores, para empresas como la suya.",
-      "Ah, y se escribe GeoTapp, con dos P. Si por ahí ves uno con una sola P, no somos nosotros, aunque no se lo tenemos en cuenta."
+      "Hay un trabajo por el que nunca han pagado a nadie, y es apuntar las horas que has trabajado. Fecha, hora de entrada, hora de salida, total. Cada día, y a fin de mes la cuenta al jefe.",
+      "<strong>Michele Angelo Petraroli</strong> trabajaba en seguridad de eventos, por cuenta ajena, y rellenaba esa hoja como la rellena todo el mundo, es decir mal. Los totales casi nunca cuadraban, en parte también por culpa suya, porque es humano dejar para después las cosas aburridas y reconstruirlas de memoria una semana más tarde. Y los compañeros que directamente no mandaban las horas, evidentemente trabajaban porque eran ricos y lo hacían por afición.",
+      "Buscó una aplicación que le quitara ese engorro. Las encontró todas iguales, y todas le pedían exactamente lo que ya hacía a mano, fecha, entrada, salida, total. El mismo esfuerzo, con botones más bonitos.",
+      "Así que, de vacaciones, se la desarrolló él mismo. Una página web y dos gestos, pulsas cuando empiezas y pulsas cuando terminas, y el resto acababa ordenado en un archivo listo para enviar a fin de mes.",
+      "Después llegó la idea que lo cambió todo, si me sirve a mí les sirve también a los compañeros. Y si le sirve al jefe, entonces hay que dar la vuelta al flujo, porque no es él quien debe perseguir a la gente para tener las horas, son las horas las que llegan solas hasta él, cada día.",
+      "A partir de ahí la herramienta creció en una sola dirección. Primero la geolocalización conforme a la ley, leída al abrir y al cerrar el turno, nunca en continuo. Luego la certificación automática del trabajo realizado, porque el problema de verdad nunca fue contar las horas, sino demostrarlas cuando alguien las ponía en duda.",
+      "Ah, y se escribe GeoTapp, con dos P. Si te encuentras alguno con una sola por ahí, no somos nosotros, pero no se lo tenemos en cuenta.",
+      "El nombre, por cierto, ya lo lleva todo dentro. La geolocalización, un tap, una app."
     ],
     "values_title": "Nuestros valores",
     "values": [
@@ -847,15 +850,15 @@
       },
       {
         "title": "Privacy by Design",
-        "desc": "No vendemos datos, no rastreamos continuamente. GPS solo en el momento del fichaje, cero vigilancia."
+        "desc": "Los datos no se venden, y la posición se lee dos veces por turno, cuando lo abres y cuando lo cierras. En medio, la herramienta no sabe dónde estás."
       },
       {
         "title": "Hecho en Italia",
         "desc": "Desarrollado en Italia para el mercado italiano y europeo. Las normas GDPR, la cultura laboral y las regulaciones locales están en el ADN del producto."
       }
     ],
-    "cta_title": "Únete a la Revolución Simple",
-    "cta_desc": "No somos una gran empresa tecnológica inalcanzable. Somos personas reales que construyen software para personas reales.",
+    "cta_title": "Al otro lado hay una persona",
+    "cta_desc": "Una empresa pequeña que desarrolla una herramienta para empresas con equipos fuera de la oficina. Si escribes, te responde alguien que ha tenido ese problema.",
     "cta_btn": "Escríbenos un Mensaje",
     "stats": [
       {
@@ -863,12 +866,12 @@
         "label": "Fundada"
       },
       {
-        "number": "100%",
-        "label": "Diseñado para el campo"
+        "number": "11",
+        "label": "Idiomas del producto"
       },
       {
-        "number": "GDPR",
-        "label": "Privacidad certificada"
+        "number": "UE",
+        "label": "Dónde se quedan los datos"
       }
     ],
     "mission_quote": "El trabajo en campo merece las mismas herramientas de transparencia que una oficina.",

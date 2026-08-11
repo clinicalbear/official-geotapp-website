@@ -141,10 +141,10 @@
     "features_title": "From job to verifiable proof",
     "features_subtitle": "Three integrated tools: the field records, the office controls, the client verifies.",
     "cta_title": "The work happened. Now prove it.",
-    "cta_subtitle": "Companies using GeoTapp no longer lose undocumented jobs. Every hour is verifiable. Every report is defensible.",
+    "cta_subtitle": "No job is left without documentation, and every hour that comes off the field arrives already verifiable.",
     "cta_button": "Start free trial",
     "problem_title": "The problem you already know",
-    "problem_subtitle": "It's not an organisation problem. It's a proof problem.",
+    "problem_subtitle": "Whoever has the proof never explains, whoever explains never had the proof.",
     "problem_items": [
       {
         "title": "The client denies it. You have no proof.",
@@ -161,7 +161,7 @@
     ],
     "report_section_title": "The report. Not a summary. A proof.",
     "report_section_subtitle": "Every GeoTapp report is generated automatically from real field data.",
-    "report_section_body": "GPS clock-ins, timestamped photos, operational notes. The system applies a cryptographic seal that makes any modification detectable. The result is not a document to send to the client. It's proof the client can verify independently.",
+    "report_section_body": "GPS clock-ins, photos with the time on them, field notes. The data closes when the report is generated and from there nobody touches it again. When the doubt arrives you do not explain, you show, and what you show is not a document sent to the client, it is the end of the argument.",
     "report_feature_1": "Tamper-proof after generation, any modification is detectable",
     "report_feature_2": "Verifiable without an account, by anyone, independently",
     "report_feature_3": "GPS and photo data integrated and inseparable",
@@ -188,7 +188,7 @@
       "email_err": "Something went wrong. Try again.",
       "pitch_kicker": "ROI Calculator",
       "pitch_title": "The numbers you don't look at are the ones costing you.",
-      "pitch_body": "The hours lost to paperwork, the disputes you end up paying for, the coordination done by word of mouth. You don't feel them leaving the books, but they do. Drop in three numbers and see what it adds up to in a year: it usually surprises you, and not for the better.",
+      "pitch_body": "Hours lost to paperwork, disputes you end up paying, coordination done out loud. You don't feel them leaving the account, but they do. Put in three numbers and see what a year adds up to. It usually surprises, and not in a good way.",
       "pitch_points": [
         "Every unpaid dispute weighs on you, twelve months out of twelve",
         "Hours spent in the office are hours you don't bill",
@@ -210,7 +210,7 @@
     "app": {
       "badge": "GeoTapp TimeTracker",
       "title": "The technician records. The proof forms.",
-      "subtitle": "TimeTracker is the mobile app that collects evidence from the field: clock-in, clock-out, photo proof, notes. All linked to the job, all sealed. <strong>Available on Android and iOS.</strong>",
+      "subtitle": "TimeTracker is the mobile app that collects the proof from the field, clock in, clock out, photos with the time on them, notes. All tied to the job, all sealed. <strong>Available on Android and iOS.</strong>",
       "card_gps": {
         "title": "GPS Proof",
         "desc": "Verified location and timestamp"
@@ -224,7 +224,7 @@
     "verifier": {
       "badge": "GeoTapp Verifier",
       "title": "You don't need them to trust you.",
-      "subtitle": "The client has the report. They verify it themselves, without accessing GeoTapp. If the data matches the real work, the seal holds. If anyone has modified the document, the seal breaks. No appeal.",
+      "subtitle": "Your word never enters the conversation. The client opens the report and checks it alone, without logging into GeoTapp. If the data matches the real work, the report holds. If someone altered the document, it stops holding. No appeal.",
       "features": {
         "integrity": "<strong>Tamper-proof data:</strong> The report is generated from real field data and locked. Any modification makes it invalid, no appeal.",
         "independent": "<strong>Autonomous verification:</strong> Anyone with the report can verify its authenticity, no account, no platform access needed."
@@ -256,7 +256,7 @@
     },
     "footer_cta": {
       "title": "The work is proven. Now go home.",
-      "subtitle": "One tap on site seals the proof, and the report writes itself, ready for the client. No more Friday nights rebuilding the week from memory: when you clock out, you are actually done, and the evening is yours again.",
+      "subtitle": "One tap on site seals the proof, and the report writes itself, ready for the client. No more Friday nights rebuilding the week from memory. When you clock out, you are actually done, and the evening is yours again.",
       "button": "Talk to Us",
       "pricing_link": "See plans and pricing →"
     },
@@ -330,7 +330,7 @@
           {
             "name": "GeoTapp TimeTracker",
             "tagline": "Starting at",
-            "desc": "The complete solution to track attendance, field activity and work proof. Price per user/year.",
+            "desc": "Attendance, field activity and proof of the work done, in one place. Price per user per year.",
             "features": [
               "Android/iOS App",
               "GPS Clock-in",
@@ -347,7 +347,7 @@
           {
             "name": "GeoTapp Flow Business",
             "tagline": "For structured businesses.",
-            "desc": "The complete solution for structured companies and complex organisations.",
+            "desc": "For companies with several crews, several jobs and an office that has to hold it all together.",
             "features": [
               "Unlimited teams (not timetracker users)",
               "API",
@@ -896,13 +896,16 @@
     "badge": "Our Story",
     "hero_title_line1": "Born in the Field,",
     "hero_title_line2": "Not in an Office.",
-    "hero_desc": "GeoTapp was not invented by investors or analysts. It was born from the real frustration of someone who works every day amid deadlines, job sites and demanding clients.",
+    "hero_desc": "The product started from a sheet of paper with a month of hours on it, and totals that never added up.",
     "story": [
-      "It was 2024. Michele Angelo Petraroli, our founder, was working as an employee and had an apparently trivial but incredibly costly problem: <strong>proving his own work.</strong>",
-      "At the end of the month, the hour counts never added up. Jobs done on the run between clients were forgotten. Paper got lost, WhatsApp messages got buried. It was a silent drain of time and money.",
-      "He looked for a solution. He found only complex, expensive software full of useless charts and lacking substance. Software built by people who had never clocked in or issued an invoice in an emergency from a van.",
-      "So Michele decided to build the tool he wished he'd had himself: simple, mobile, with verifiable proof. Not for investors, for companies like his.",
-      "Oh, and it's spelled GeoTapp, with two P's. If you spot one with a single P out there, that's not us, though no hard feelings."
+      "There is one job nobody has ever been paid to do, and it is writing down the hours you worked. Date, start, end, total. Every day, and at the end of the month the tally goes to the boss.",
+      "<strong>Michele Angelo Petraroli</strong> worked event security, as an employee, and he filled in that sheet the way everybody fills it in, which is badly. The totals almost never matched, partly his own fault, because it is human to put off the boring things and rebuild them from memory a week later. The colleagues who never sent their hours at all were evidently rich and doing the job for the love of it.",
+      "He went looking for an app to take the chore away. They were all the same, and every one of them asked for exactly what he was already doing by hand, date, start, end, total. Same effort, nicer buttons.",
+      "So he built one himself, on holiday. A web page and two gestures, press when you start and press when you stop, and the rest landed tidy in a file already fit to send at the end of the month.",
+      "Then came the thought that changed everything, if it helps me it helps the crew. And if it helps the boss, the flow has to be turned around, because it should not be him chasing people for their hours, it should be the hours reaching him every day on their own.",
+      "From there the tool grew in one direction only. First lawful geolocation, read when the shift opens and when it closes, never continuously. Then automatic certification of the work done, because the real problem was never counting the hours, it was proving them when somebody questioned them.",
+      "Oh, and it is spelled GeoTapp, with two P's. If you find one with a single P out there, that is not us, though we hold no grudge.",
+      "The name has it all in it, really. Geolocation, a tap, an app."
     ],
     "values_title": "Our Values",
     "values": [
@@ -916,15 +919,15 @@
       },
       {
         "title": "Privacy by Design",
-        "desc": "We do not sell data, we do not track continuously. GPS only at the moment of clock-in, zero surveillance."
+        "desc": "The data is never sold, and the position is read twice in a shift, when you open it and when you close it. In between, the tool has no idea where you are."
       },
       {
         "title": "Made in Italy",
         "desc": "Developed in Italy for the Italian and European market. GDPR rules, work culture and local regulations are in the product's DNA."
       }
     ],
-    "cta_title": "Join the Simple Revolution",
-    "cta_desc": "We're not an unreachable Big Tech company. We're real people building software for real people.",
+    "cta_title": "There is a person on the other end",
+    "cta_desc": "A small company building a tool for firms whose crews work off site. Write to us and the answer comes from someone who has had the problem.",
     "cta_btn": "Send Us a Message",
     "stats": [
       {
@@ -932,12 +935,12 @@
         "label": "Founded"
       },
       {
-        "number": "100%",
-        "label": "Built for the field"
+        "number": "11",
+        "label": "Product languages"
       },
       {
-        "number": "GDPR",
-        "label": "Certified privacy"
+        "number": "EU",
+        "label": "Where the data stays"
       }
     ],
     "mission_quote": "Field work deserves the same transparency tools as an office.",
