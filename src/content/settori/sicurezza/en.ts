@@ -3,7 +3,7 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'Security Company Software | GeoTapp - Certify Every Shift',
-    description: 'GeoTapp is the security company management software that certifies every shift: GPS-verified attendance, documented rounds and photo evidence. GDPR compliant. Try free.',
+    description: 'Security company software that certifies every shift: GPS-verified attendance, documented rounds and photo evidence. GDPR compliant. Try free.',
   },
   hero: {
     badge: 'Software for Security Guards, Stewarding & Events Security',

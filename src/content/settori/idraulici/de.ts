@@ -2,8 +2,8 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App für Klempner & Heizungstechniker | GeoTapp - GPS-Berichte',
-    description: 'GeoTapp ist die App für Klempner und Heizungstechniker: GPS-verifizierte Einsatzberichte, Anlagenfotos und manipulationssichere Nachweise. Streitigkeiten mit echten Beweisen abschließen. Gratis testen.',
+    title: 'App für Klempner & Heizungstechniker | GeoTapp GPS-Berichte',
+    description: 'App für Klempner und Heizungstechniker: GPS-verifizierte Einsatzberichte, Anlagenfotos und manipulationssichere Nachweise. Gratis testen.',
   },
   hero: {
     badge: 'App für Klempner, Heizungstechniker und SHK-Betriebe',

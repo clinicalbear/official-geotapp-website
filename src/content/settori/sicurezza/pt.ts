@@ -2,8 +2,8 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'Software para Segurança Privada e Vigilantes | Presenças Verificadas | GeoTapp',
-    description: 'Gestão de pessoal para empresas de segurança privada, vigilantes e segurança em eventos: presenças GPS verificadas, relatórios de incidentes geolocalizados e rastreamento de cartões profissionais conforme Lei 34/2013.',
+    title: 'Software para Segurança Privada | GeoTapp - Presenças GPS',
+    description: 'Gestão de pessoal para segurança privada e vigilantes: presenças GPS verificadas, relatórios de incidentes e cartões conforme Lei 34/2013.',
   },
   hero: {
     badge: 'Software para Segurança Privada, Vigilantes e Segurança em Eventos',

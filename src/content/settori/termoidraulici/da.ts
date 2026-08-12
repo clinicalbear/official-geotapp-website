@@ -2,8 +2,8 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App til VVS-installatører | GeoTapp - GPS, Rapporter & Dokumentation',
-    description: 'GeoTapp er appen til VVS-installatører: GPS-verificerede rapporter, fotos af installationer og uændrelig dokumentation. Løs tvister med reel dokumentation. Prøv gratis.',
+    title: 'App til VVS-installatører | GeoTapp GPS-rapporter',
+    description: 'App til VVS-installatører: GPS-verificerede rapporter, fotos af installationer og uændrelig dokumentation. Løs tvister med reel dokumentation. Prøv gratis.',
   },
   hero: {
     badge: 'App til VVS-installatører og Varmeanlægsinstallatører',

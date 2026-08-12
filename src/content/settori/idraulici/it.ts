@@ -2,8 +2,8 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App per Idraulici e Termoidraulici | GeoTapp - GPS e Rapportini',
-    description: 'GeoTapp è l\'app per idraulici e termoidraulici: rapportini GPS verificati, foto degli impianti e report non alterabili. Chiudi le contestazioni con prove reali. Prova gratis.',
+    title: 'App per Idraulici e Termoidraulici | GeoTapp Rapportini GPS',
+    description: 'App per idraulici e termoidraulici: rapportini GPS verificati, foto degli impianti e report non alterabili. Chiudi le contestazioni. Prova gratis.',
   },
   hero: {
     badge: 'App per Idraulici, Termoidraulici e Impiantisti',

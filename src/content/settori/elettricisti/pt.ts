@@ -3,7 +3,7 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'App para Eletricistas | GeoTapp - Relatórios GPS e Provas',
-    description: 'GeoTapp é a app para eletricistas: relatórios GPS verificados, fotos de instalações e registos invioláveis. Encerre disputas com provas reais. Experimente grátis.',
+    description: 'App para eletricistas: relatórios GPS verificados, fotos de instalações e registos invioláveis. Encerre disputas com provas reais. Experimente grátis.',
   },
   hero: {
     badge: 'App para Eletricistas e Instaladores Elétricos',
