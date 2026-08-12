@@ -231,7 +231,6 @@ const SITEMAP_ROUTES: SitemapRouteEntry[] = [
   { path: '/settori/edilizia/', priority: 0.9, changeFrequency: 'weekly' },
   { path: '/settori/impianti/', priority: 0.9, changeFrequency: 'weekly' },
   { path: '/settori/manutenzione/', priority: 0.9, changeFrequency: 'weekly' },
-  { path: '/settori/impresa-di-pulizie/', priority: 0.9, changeFrequency: 'weekly' },
   { path: '/settori/pulizie/risorse/', priority: 0.85, changeFrequency: 'monthly' },
   { path: '/settori/installatori/risorse/', priority: 0.85, changeFrequency: 'monthly' },
   { path: '/settori/sicurezza/risorse/', priority: 0.85, changeFrequency: 'monthly' },
@@ -566,6 +565,27 @@ export async function middleware(req: NextRequest) {
     }
     if (pathname === '/pricing/bundle' || pathname === '/pricing/bundle/') {
       return NextResponse.redirect(new URL('/en/pricing/', req.url), 301);
+    }
+  }
+
+  // 0a4. Doppione settore ritirato: /{settori}/impresa-di-pulizie/ → /{settori}/pulizie/.
+  // Le due pagine puntavano alla stessa chiave ("app per impresa di pulizie") e si
+  // cannibalizzavano. Sopravvive `pulizie`, che e' quella collegata da navbar, footer,
+  // griglia della home e hub. Copre tutti i locale e gli slug tradotti (cleaning-company,
+  // reinigungsunternehmen, schoonmaakbedrijf, ...).
+  {
+    const m = pathname.match(/^\/([a-z]{2}(?:-[a-z]{2})?)\/([a-z-]+)\/([a-z-]+)\/?$/);
+    if (m) {
+      const [, loc, parent, child] = m;
+      const sectorsSlug = (SLUG_MAP['settori'] as Record<string, string>)?.[loc];
+      const deadSlug = (SLUG_MAP['impresa-di-pulizie'] as Record<string, string>)?.[loc];
+      const liveSlug = (SLUG_MAP['pulizie'] as Record<string, string>)?.[loc];
+      if (sectorsSlug && deadSlug && liveSlug && parent === sectorsSlug && child === deadSlug) {
+        return NextResponse.redirect(new URL(`/${loc}/${sectorsSlug}/${liveSlug}/`, req.url), 301);
+      }
+    }
+    if (pathname === '/settori/impresa-di-pulizie' || pathname === '/settori/impresa-di-pulizie/') {
+      return NextResponse.redirect(new URL('/it/settori/pulizie/', req.url), 301);
     }
   }
 
