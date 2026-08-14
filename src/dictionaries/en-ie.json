@@ -1,6 +1,7 @@
 {
   "landing": {
     "us_badge": "🇮🇪 Serving Irish teams - Organisation of Working Time Act compliant. EUR billing native.",
-    "proof_note": "Evidence captured by camera only, no continuous tracking. 100% DPC compliant."
+    "proof_note": "Evidence captured by camera only, no continuous tracking.",
+    "proof_claim": "100% DPC compliant."
   }
 }

@@ -195,7 +195,8 @@
         "To sekunder og ingen e-mail for at se tallet"
       ]
     },
-    "proof_note": "Beviser indsamles kun via kameraet, ingen løbende sporing. 100% i overensstemmelse med Datatilsynet."
+    "proof_note": "Beviser indsamles kun via kameraet, ingen løbende sporing.",
+    "proof_claim": "100% i overensstemmelse med Datatilsynet."
   },
   "home_sections": {
     "flow": {

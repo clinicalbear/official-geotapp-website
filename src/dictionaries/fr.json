@@ -195,7 +195,8 @@
         "Deux secondes et aucun e-mail pour voir le chiffre"
       ]
     },
-    "proof_note": "Preuves recueillies uniquement par l'appareil photo, aucun suivi continu. 100% conforme aux recommandations de la CNIL."
+    "proof_note": "Preuves recueillies uniquement par l'appareil photo, aucun suivi continu.",
+    "proof_claim": "100% conforme aux recommandations de la CNIL."
   },
   "home_sections": {
     "flow": {

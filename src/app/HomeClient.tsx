@@ -289,20 +289,23 @@ export default function Home({ jrSlot, fqSlot }: { jrSlot?: ReactNode; fqSlot?: 
           <h1><span><b>{L.h1a}</b></span><span><b>{L.h1b}</b></span></h1>
           <div className="low">
             <p>{L.lede}</p>
-            <div className="actw">
-              <div className="acts">
-                <Link className="b1" href={getLink('/trial')} onClick={() => trackEvent('trial_click', { cta_source: 'homepage_hero', cta_locale: currentLocale })}>
-                  {dict.landing.hero_cta_primary}
-                </Link>
-                <Link className="b2" href={getLink('/settori')}>{dict.landing.hero_cta_secondary}</Link>
-              </div>
-              {/* Il fatto tecnico che regge tutto il resto, localizzato per mercato:
-                  la seconda meta' nomina l'autorita' del paese (ICO, Garante, CNIL...),
-                  presa dalle schede paese verificate. Vedi landing.proof_note nei
-                  dizionari e src/lib/risorse/gps-lavoratori-ue/paesi/*.ts */}
-              <p className="pnote">{dict.landing.proof_note}</p>
+            <div className="acts">
+              <Link className="b1" href={getLink('/trial')} onClick={() => trackEvent('trial_click', { cta_source: 'homepage_hero', cta_locale: currentLocale })}>
+                {dict.landing.hero_cta_primary}
+              </Link>
+              <Link className="b2" href={getLink('/settori')}>{dict.landing.hero_cta_secondary}</Link>
             </div>
           </div>
+          {/* Il fatto tecnico che regge tutto il resto, a tutta larghezza sotto le
+              CTA perche' si veda: la seconda meta' nomina l'autorita' del mercato
+              (ICO, Garante, CNIL...), presa dalle schede paese verificate.
+              Vedi landing.proof_note / proof_claim nei dizionari e
+              src/lib/risorse/gps-lavoratori-ue/paesi/*.ts */}
+          <p className="pnote">
+            <i aria-hidden="true">✓</i>
+            <span>{dict.landing.proof_note}</span>{' '}
+            <b>{dict.landing.proof_claim}</b>
+          </p>
         </div>
         <p className="cue k"><s />{L.scroll}</p>
       </section>

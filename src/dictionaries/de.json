@@ -195,7 +195,8 @@
         "Zwei Sekunden und keine E-Mail, um die Zahl zu sehen"
       ]
     },
-    "proof_note": "Nachweise ausschließlich per Kamera erfasst, keine dauerhafte Ortung. 100% DSGVO-konform."
+    "proof_note": "Nachweise ausschließlich per Kamera erfasst, keine dauerhafte Ortung.",
+    "proof_claim": "100% DSGVO-konform."
   },
   "home_sections": {
     "flow": {

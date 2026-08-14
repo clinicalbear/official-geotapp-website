@@ -195,7 +195,8 @@
         "Due secondi e nessuna email per vedere il numero"
       ]
     },
-    "proof_note": "Prove raccolte solo tramite fotocamera, nessun tracciamento continuo. 100% conforme alle linee guida del Garante."
+    "proof_note": "Prove raccolte solo tramite fotocamera, nessun tracciamento continuo.",
+    "proof_claim": "100% conforme alle linee guida del Garante."
   },
   "home_sections": {
     "flow": {

@@ -195,7 +195,8 @@
         "Two seconds and no email to see the number"
       ]
     },
-    "proof_note": "Evidence captured by camera only, no continuous tracking. 100% GDPR compliant."
+    "proof_note": "Evidence captured by camera only, no continuous tracking.",
+    "proof_claim": "100% GDPR compliant."
   },
   "home_sections": {
     "flow": {

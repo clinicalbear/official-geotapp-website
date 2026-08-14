@@ -195,7 +195,8 @@
         "Twee seconden en geen e-mail om het cijfer te zien"
       ]
     },
-    "proof_note": "Bewijs uitsluitend via de camera vastgelegd, geen continue tracking. 100% conform de Autoriteit Persoonsgegevens."
+    "proof_note": "Bewijs uitsluitend via de camera vastgelegd, geen continue tracking.",
+    "proof_claim": "100% conform de Autoriteit Persoonsgegevens."
   },
   "home_sections": {
     "flow": {

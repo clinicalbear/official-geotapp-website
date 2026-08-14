@@ -195,7 +195,8 @@
         "Dois segundos e nenhum email para ver o número"
       ]
     },
-    "proof_note": "Provas recolhidas apenas pela câmara, sem rastreio contínuo. 100% conforme à CNPD."
+    "proof_note": "Provas recolhidas apenas pela câmara, sem rastreio contínuo.",
+    "proof_claim": "100% conforme à CNPD."
   },
   "home_sections": {
     "flow": {
