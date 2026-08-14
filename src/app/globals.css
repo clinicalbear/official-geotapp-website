@@ -588,6 +588,16 @@ a:hover {
   color: #0f172a;
 }
 
+/* Una tabella larga dentro un articolo non deve trascinarsi dietro la pagina:
+   sotto i 700px scorre nel suo riquadro, come gia' fanno le pagine legali. */
+@media (max-width: 700px) {
+  .article-content table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
 .article-content figure {
   margin: 2rem 0;
 }
