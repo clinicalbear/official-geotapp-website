@@ -263,7 +263,11 @@ const SITEMAP_ROUTES: SitemapRouteEntry[] = [
   { path: '/risorse/politica-conservazione-dati/', priority: 0.85, changeFrequency: 'monthly' },
   { path: '/risorse/dossier-conformita/', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/roi-calculator/', priority: 0.75, changeFrequency: 'monthly' },
-  { path: '/survey/', priority: 0.6, changeFrequency: 'monthly' },
+  // /survey/ NON va in sitemap: le sue pagine sono noindex (una per lingua, 16 URL).
+  // Chiedere a Google di indicizzare una pagina che gli dice di non indicizzarsi e'
+  // un segnale contraddittorio, e Ahrefs lo contava come errore critico
+  // ("Noindex page in sitemap", 16, crawl 13/08/2026). Il link alla survey resta
+  // raggiungibile dalle mail e da /it/risorse/, che e' come viene distribuita.
   // 39 schede-paese GPS (× 11 lingue con hreflang, via il loop sotto).
   ...GPS_SCHEDE_SLUGS.map((slug) => ({
     path: `/risorse/gps-lavoratori-ue/${slug}/`,

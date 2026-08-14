@@ -33,57 +33,6 @@ export const HREFLANG: Record<string, string> = {
   ru: 'ru-RU',
 };
 
-/**
- * Regional EN variants (en-us, en-gb, en-au, en-ie, en-ca) renderizzano prezzi
- * in valuta locale (USD/GBP/AUD/CAD), vedi LOCALE_CURRENCY in lib/pricing.ts.
- *
- * Strategia canonical IBRIDA (audit 2026-06-02):
- *  - Pagine BRAND/entity (home, what-is-geotapp, about-us): canonical → `/en/`
- *    per consolidare authority sulla query "geotapp" (incidente pos 4→12 del
- *    13-25/05/2026, causato da pagine inglesi quasi-duplicate in competizione).
- *  - Pagine COMMERCIALI (pricing, products, settori, roi-calculator): canonical
- *    = self, così la variante in valuta locale è indicizzabile e ranka nel suo
- *    mercato (un inglese trova £, un americano $, non il prezzo in €). Hreflang
- *    cluster resta completo → Google serve la variante giusta per geo.
- *
- * ⚠️ CORREZIONE 16/07/2026 — il criterio è il CONTENUTO, non la valuta.
- * La regola precedente consolidava en-ie su /en/ per OGNI path, motivandolo con
- * "en-ie renderizza EUR → byte-identica a /en/". È vero per pricing/products/
- * roi-calculator, ma FALSO per le pagine settore: `content/settori/*\/regional-faq.ts`
- * dà a en-ie una FAQ legale irlandese sua (Contract Cleaning ERO, OWTA s.18C, WRC,
- * Sick Leave Act 2022) su tutti e 10 i settori, contenuto che su /en/ NON ESISTE.
- * Consolidarle diceva a Google "questa è un duplicato di /en/" indicando una pagina
- * che quel contenuto non ce l'ha → l'unica pagina che risponde al mercato irlandese
- * veniva soppressa. Verificato live: /en-ie/sectors/cleaning/ rende ERO/OWTA/WRC,
- * /en/sectors/cleaning/ non rende alcuna FAQ regionale.
- * Le valute differenziano il PREZZO; le leggi differenziano il MERCATO.
- */
-const REGIONAL_EN_VARIANTS = new Set(['en-us', 'en-gb', 'en-au', 'en-ie', 'en-ca']);
-
-// en-ie usa EUR come /en/ (LOCALE_CURRENCY): il prezzo NON la differenzia.
-const EUR_REGIONAL_EN = new Set(['en-ie']);
-
-// Prefissi delle pagine commerciali con prezzo in valuta locale: qui le varianti
-// regionali (USD/GBP/AUD/CAD) fanno canonical su se stesse per rankare nel mercato.
-// Tutto il resto (brand/entity/info/legal) resta consolidato su /en/.
-const REGIONAL_SELF_CANONICAL_PREFIXES = ['/pricing', '/products/', '/settori', '/roi-calculator'];
-
-// Varianti EN che condividono la valuta con /en/ (oggi solo en-ie): si differenziano
-// per LEGGE, non per prezzo → self-canonical solo dove esiste contenuto regionale
-// proprio (le pagine settore, via regional-faq.ts). Altrove restano consolidate.
-const EUR_REGIONAL_EN_SELF_PREFIXES = ['/settori'];
-
-/**
- * Per la `locale` data e il `path` (senza prefisso locale), il canonical punta
- * a se stesso (true) o consolida su /en/ (false, solo per varianti EN regionali).
- */
-function regionalSelfCanonical(locale: string, path: string): boolean {
-  if (!REGIONAL_EN_VARIANTS.has(locale)) return true; // locale primarie: sempre self
-  const prefixes = EUR_REGIONAL_EN.has(locale)
-    ? EUR_REGIONAL_EN_SELF_PREFIXES
-    : REGIONAL_SELF_CANONICAL_PREFIXES;
-  return prefixes.some((p) => path.startsWith(p));
-}
 
 /**
  * Builds canonical + hreflang alternates for a locale-prefixed page.
@@ -97,13 +46,39 @@ function regionalSelfCanonical(locale: string, path: string): boolean {
  * (e.g. /en/sectors/cleaning/, /de/branchen/reinigung/) instead of partially-
  * translated ones (e.g. /en/sectors/pulizie/) that trigger a redirect chain.
  *
- * Canonical strategy (IBRIDA, vedi regionalSelfCanonical sopra):
- * - Locale primary (it, en, de, fr, es, nl, pt, da, sv, nb, ru): canonical = self
- * - Regional EN su pagine commerciali (pricing/products/settori/roi): canonical = self
- *   (ranka con valuta locale; hreflang cluster resta completo)
- * - Regional EN su pagine brand/entity/info + en-ie: canonical = /en/{path}
- *   (consolida authority sul brand)
+ * Canonical: sempre self, per ogni locale. Vedi il blocco sopra buildCanonicalUrl().
  */
+
+/**
+ * CANONICAL = SEMPRE SE STESSA, per ogni locale e per ogni path.
+ *
+ * Decisione di Mike, 14/08/2026: «sono pagine vere e localizzate in base alla
+ * loro lingua». Le varianti EN regionali (en-us, en-gb, en-au, en-ie, en-ca)
+ * non sono duplicati di /en/: rendono prezzi in valuta locale (LOCALE_CURRENCY
+ * in lib/pricing.ts) e, per en-ie, una FAQ legale irlandese propria che su /en/
+ * non esiste (content/settori/*\/regional-faq.ts: Contract Cleaning ERO, OWTA
+ * s.18C, WRC, Sick Leave Act 2022).
+ *
+ * Verificato live prima di cambiare (14/08/2026, con cache-buster): /en-gb/
+ * rende £189.99 e £1,905, /en-us/ $126.99 e $1,266.49, /en-ca/ $137.49, dove
+ * /en/ rende €198.00 e €1,990. Anche le home differiscono nelle cifre convertite.
+ *
+ * Cosa c'era prima e perche' e' stato tolto: una regola IBRIDA (audit 02/06/2026,
+ * corretta il 16/07/2026) che consolidava su /en/ le pagine brand/entity (home,
+ * what-is-geotapp, about-us) lasciando self-canonical solo quelle commerciali.
+ * Nasceva dall'incidente 13-25/05/2026, quando la query "geotapp" e' scesa da
+ * posizione 4 a 12 con pagine inglesi quasi-duplicate in competizione. Il costo
+ * di quella regola era che sitemap e hreflang dichiaravano 430 URL che poi si
+ * dichiaravano non canoniche: Ahrefs le contava come errore (crawl 13/08/2026,
+ * 867 "hreflang to non-canonical") e Google riceveva due segnali opposti sulla
+ * stessa pagina.
+ *
+ * ⚠️ Se la posizione sulla query di brand dovesse riscendere, il primo sospetto
+ * e' questa riga. Il rimedio non e' tornare a consolidare, ma differenziare
+ * davvero i testi brand per mercato, oppure togliere le varianti da sitemap e
+ * hreflang: le tre strade sono alternative, mescolarle e' quello che rompe.
+ */
+
 /**
  * L'URL canonico di una pagina, con la stessa identica logica di
  * buildLocaleAlternates(). Serve per og:url, che DEVE combaciare col canonical.
@@ -120,8 +95,7 @@ function regionalSelfCanonical(locale: string, path: string): boolean {
  * Regola: og:url non si scrive a mano, si chiede a questa funzione.
  */
 export function buildCanonicalUrl(locale: string, path: string): string {
-  const canonicalLocale = regionalSelfCanonical(locale, path) ? locale : 'en';
-  return `${BASE}/${canonicalLocale}${translatePath(path, canonicalLocale as AppLocale)}`;
+  return `${BASE}/${locale}${translatePath(path, locale as AppLocale)}`;
 }
 
 export function buildLocaleAlternates(
@@ -139,8 +113,8 @@ export function buildLocaleAlternates(
   // The bare canonical path (e.g. /chi-siamo/) triggers a 308 → /it/ leaking link equity.
   languages['x-default'] = `${BASE}/en${translatePath(path, 'en')}`;
 
-  // Hybrid canonical: commercial regional-EN pages self-canonical (rank with local
-  // currency); brand/entity/info pages + en-ie consolidate to /en/ (brand authority).
+  // Canonical self per ogni locale: ogni URL dichiarata in hreflang e in sitemap
+  // e' anche la canonical di se stessa, quindi i due segnali non si contraddicono.
   // Una sola fonte di verita', condivisa con og:url: vedi buildCanonicalUrl().
   return {
     canonical: buildCanonicalUrl(locale, path),
