@@ -194,7 +194,8 @@
         "Timmar på kontoret är timmar du inte fakturerar",
         "Två sekunder och inget mejl för att se siffran"
       ]
-    }
+    },
+    "proof_note": "Bevis samlas in enbart via kameran, ingen kontinuerlig spårning. 100% i linje med IMY."
   },
   "home_sections": {
     "flow": {

@@ -194,7 +194,8 @@
         "Timer på kontoret er timer, du ikke fakturerer",
         "To sekunder og ingen e-mail for at se tallet"
       ]
-    }
+    },
+    "proof_note": "Beviser indsamles kun via kameraet, ingen løbende sporing. 100% i overensstemmelse med Datatilsynet."
   },
   "home_sections": {
     "flow": {

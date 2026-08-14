@@ -194,7 +194,8 @@
         "Les heures passées au bureau sont des heures que tu ne factures pas",
         "Deux secondes et aucun e-mail pour voir le chiffre"
       ]
-    }
+    },
+    "proof_note": "Preuves recueillies uniquement par l'appareil photo, aucun suivi continu. 100% conforme aux recommandations de la CNIL."
   },
   "home_sections": {
     "flow": {

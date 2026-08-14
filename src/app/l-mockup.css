@@ -780,6 +780,12 @@ details.closing .ct>p{padding-bottom:0;opacity:0;transition:padding-bottom .55s 
 
 /* varianti index → .lp-home */
 .lp-home .acts{display:flex;gap:22px;align-items:center}
+.lp-home .actw{display:flex;flex-direction:column;align-items:flex-end;gap:14px}
+.lp-home .pnote{max-width:46ch;text-align:right;font-size:13.5px;line-height:1.5;color:rgba(255,255,255,.72)}
+@media(max-width:900px){
+  .lp-home .actw{align-items:flex-start}
+  .lp-home .pnote{text-align:left}
+}
 .lp-home .b1{background:var(--seal);color:var(--ink);padding:17px 34px;border-radius:99px;font-size:15.5px;font-weight:500; transition:transform .3s cubic-bezier(.2,.8,.25,1),box-shadow .3s}
 .lp-home .b2{color:#fff;font-size:15.5px;border-bottom:1px solid rgba(255,255,255,.42);padding-bottom:3px}
 .lp-home .b2:hover{border-color:var(--lime);color:var(--lime)}
