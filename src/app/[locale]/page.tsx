@@ -291,13 +291,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   ) as Record<string, string>;
   languages['x-default'] = `${BASE_URL}/en/`;
 
-  // Regional EN variants (en-us, en-gb, en-au, en-ie, en-ca) sono "alternate
-  // regional content" del locale canonical /en/. Canonical → /en/ per
-  // consolidare authority sul brand. Hreflang resta regionale → Google
-  // serve la variant giusta per geo IP utente. Fix audit 2026-05-25
-  // (drop "geotapp" pos 4→12 causato da split authority).
-  const REGIONAL_EN = new Set(['en-us', 'en-gb', 'en-au', 'en-ie', 'en-ca']);
-  const canonicalLocale = REGIONAL_EN.has(locale) ? 'en' : locale;
+  // Canonical self anche qui, varianti EN regionali comprese (decisione di Mike,
+  // 14/08/2026: sono pagine vere, con prezzi in valuta locale gia' in home).
+  // Questa riga consolidava su /en/ mentre hreflang e sitemap continuavano a
+  // dichiarare le varianti: due segnali opposti sulla stessa pagina. La stessa
+  // regola vive in buildCanonicalUrl() (lib/i18n/locale-metadata.ts), dov'e'
+  // scritto anche il perche' storico e cosa guardare se il brand riscende.
+  const canonicalLocale = locale;
 
   return {
     // Use absolute title to bypass the root layout template ("%s | GeoTapp").
