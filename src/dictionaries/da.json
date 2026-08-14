@@ -121,7 +121,7 @@
     "hero_badge": "Arbejdet skete. Gør det nu bevisbart.",
     "hero_title": "Hvis du ikke kan bevise det, siger kunden, at det aldrig skete.",
     "hero_subtitle": "GeoTapp omdanner hvert feltebesøg til objektive beviser: forseglede rapporter med rigtige GPS-data, tidsstemplede fotobeviser og dokumentation, som enhver kan verificere uafhængigt, uden tillid, uden tvister.",
-    "hero_cta_primary": "Book 30-minutters demo",
+    "hero_cta_primary": "Start gratis prøveperiode",
     "hero_cta_secondary": "Udforsk sektorer",
     "trust_gdpr": "GDPR-overensstemmelse",
     "trust_gdpr_desc": "Kun tidsstempler ved ind- og udtjekning",
@@ -196,7 +196,8 @@
       ]
     },
     "proof_note": "Beviser indsamles kun via kameraet, ingen løbende sporing.",
-    "proof_claim": "100% i overensstemmelse med Datatilsynet."
+    "proof_claim": "100% i overensstemmelse med Datatilsynets vejledning.",
+    "sticky_cta_subtitle": "14 dage gratis, intet kreditkort"
   },
   "home_sections": {
     "flow": {

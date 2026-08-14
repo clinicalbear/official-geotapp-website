@@ -121,7 +121,7 @@
     "hero_badge": "Le travail a eu lieu. Rendez-le maintenant prouvable.",
     "hero_title": "Si vous ne pouvez pas le prouver, le client dit que ça n'a jamais eu lieu.",
     "hero_subtitle": "GeoTapp transforme chaque intervention terrain en preuve objective : rapports scellés avec de vraies données GPS, preuves photographiques horodatées et documentation vérifiable par n'importe qui, sans faire confiance, sans contestations.",
-    "hero_cta_primary": "Réserver une démo 30 min",
+    "hero_cta_primary": "Démarrer l'essai gratuit",
     "hero_cta_secondary": "Explorer les secteurs",
     "trust_gdpr": "Conforme RGPD",
     "trust_gdpr_desc": "Horodatage uniquement à l'entrée et la sortie",
@@ -196,7 +196,8 @@
       ]
     },
     "proof_note": "Preuves recueillies uniquement par l'appareil photo, aucun suivi continu.",
-    "proof_claim": "100% conforme aux recommandations de la CNIL."
+    "proof_claim": "100% conforme aux recommandations de la CNIL.",
+    "sticky_cta_subtitle": "14 jours gratuits, sans carte bancaire"
   },
   "home_sections": {
     "flow": {

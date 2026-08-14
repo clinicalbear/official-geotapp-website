@@ -121,7 +121,7 @@
     "hero_badge": "O trabalho aconteceu. Agora torne-o demonstrável.",
     "hero_title": "Se não puder provar, o cliente diz que nunca aconteceu.",
     "hero_subtitle": "GeoTapp transforma cada intervenção em campo em evidência objectiva: relatórios selados com dados GPS reais, provas fotográficas com marca de tempo e documentação verificável por qualquer pessoa, sem confiar, sem contestações.",
-    "hero_cta_primary": "Agendar demo de 30 minutos",
+    "hero_cta_primary": "Iniciar teste grátis",
     "hero_cta_secondary": "Explorar setores",
     "trust_gdpr": "Conforme RGPD",
     "trust_gdpr_desc": "Só registo de entrada e saída",
@@ -196,7 +196,8 @@
       ]
     },
     "proof_note": "Provas recolhidas apenas pela câmara, sem rastreio contínuo.",
-    "proof_claim": "100% conforme à CNPD."
+    "proof_claim": "100% em conformidade com as orientações da CNPD.",
+    "sticky_cta_subtitle": "14 dias grátis, sem cartão de crédito"
   },
   "home_sections": {
     "flow": {

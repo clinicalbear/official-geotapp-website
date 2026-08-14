@@ -121,7 +121,7 @@
     "hero_badge": "Arbetet hände. Gör det nu bevisbart.",
     "hero_title": "Om du inte kan bevisa det, säger kunden att det aldrig hände.",
     "hero_subtitle": "GeoTapp förvandlar varje fältuppdrag till objektiva bevis: förseglade rapporter med verkliga GPS-data, tidsstämplade fotobevis och dokumentation som vem som helst kan verifiera oberoende, utan att lita på, utan tvister.",
-    "hero_cta_primary": "Boka 30-minuters demo",
+    "hero_cta_primary": "Starta gratis provperiod",
     "hero_cta_secondary": "Utforska sektorer",
     "trust_gdpr": "GDPR-kompatibel",
     "trust_gdpr_desc": "Tidsstämplar endast vid in- och utcheckning",
@@ -196,7 +196,8 @@
       ]
     },
     "proof_note": "Bevis samlas in enbart via kameran, ingen kontinuerlig spårning.",
-    "proof_claim": "100% i linje med IMY."
+    "proof_claim": "100% i linje med IMY:s vägledning.",
+    "sticky_cta_subtitle": "14 dagar gratis, inget kreditkort"
   },
   "home_sections": {
     "flow": {

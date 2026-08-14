@@ -121,7 +121,7 @@
     "hero_badge": "Het werk is gedaan. Maak het nu bewijsbaar.",
     "hero_title": "Als u het niet kunt bewijzen, zegt de klant dat het nooit is gebeurd.",
     "hero_subtitle": "GeoTapp verandert elke velddienst in objectief bewijs: verzegelde rapporten met echte GPS-gegevens, tijdgestempeld fotobewijs en documentatie die iedereen onafhankelijk kan verifiëren, zonder vertrouwen, zonder geschillen.",
-    "hero_cta_primary": "30-minuten demo boeken",
+    "hero_cta_primary": "Start gratis proefperiode",
     "hero_cta_secondary": "Sectoren ontdekken",
     "trust_gdpr": "AVG-conform",
     "trust_gdpr_desc": "Alleen tijdstempel bij in- en uitklokken",
@@ -195,8 +195,9 @@
         "Twee seconden en geen e-mail om het cijfer te zien"
       ]
     },
-    "proof_note": "Bewijs uitsluitend via de camera vastgelegd, geen continue tracking.",
-    "proof_claim": "100% conform de Autoriteit Persoonsgegevens."
+    "proof_note": "Bewijs uitsluitend via de camera vastgelegd, geen doorlopende tracking.",
+    "proof_claim": "100% conform de richtsnoeren van de Autoriteit Persoonsgegevens.",
+    "sticky_cta_subtitle": "14 dagen gratis, geen creditcard"
   },
   "home_sections": {
     "flow": {
