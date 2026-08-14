@@ -84,7 +84,7 @@ export function DynamicComparison({ locale, copy, initialId }: Props) {
       </div>
 
       {/* Comparison table */}
-      <div className="mb-8 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+      <div className="mb-8 overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-sm">
         <table className="w-full">
           <thead className="bg-slate-50">
             <tr>

@@ -309,4 +309,13 @@
   .lp-osservatorio .oss-imp {
     text-align: left;
   }
+  /* Nella scheda la colonna dati e' stretta: il nowrap pensato per la riga di
+     tabella qui fa sbordare "Paese + quadro" oltre il bordo. Si va a capo. */
+  .lp-osservatorio .oss-tab tbody td.oss-paese {
+    white-space: normal;
+  }
+  .lp-osservatorio .oss-tab tbody td {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
 }
