@@ -9,6 +9,7 @@ import { localizePath } from '@/lib/i18n/locale-routing';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import type { AppLocale } from '@/lib/i18n/config';
 import type { SettoreContent, SettoreSlug } from '@/content/settori/types';
+import { haPaginaRisorse } from '@/content/settori/risorse-disponibili';
 import {
   ALL_REGIONAL_FAQ,
   ALL_REGIONAL_FAQ_TITLES,
@@ -302,9 +303,11 @@ export default function SettorePageLayout({ content, locale, settore, children }
             >
               {content.hero.cta_primary}
             </Link>
-            <Link href={`/${locale}/settori/${settore}/risorse/`} className="b2">
-              {RISORSE_LABELS[locale] ?? RISORSE_LABELS['en']}
-            </Link>
+            {haPaginaRisorse(settore) && (
+              <Link href={localizePath(`/settori/${settore}/risorse/`, locale)} className="b2">
+                {RISORSE_LABELS[locale] ?? RISORSE_LABELS['en']}
+              </Link>
+            )}
           </div>
           <p style={{ marginTop: 16, fontSize: 13.5, color: 'rgba(242,240,233,.6)' }}>{content.hero.cta_note}</p>
           {content.pricing_hint && (

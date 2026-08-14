@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
 import { DEFAULT_LOCALE, SUPPORTED_LOCALES, type AppLocale } from '@/lib/i18n/config';
 import { localizePath } from '@/lib/i18n/locale-routing';
+import { SETTORI_CON_RISORSE } from '@/content/settori/risorse-disponibili';
 
 const WP = 'https://blog.geotapp.com';
 const HEADERS = { host: 'blog.geotapp.com', 'x-geotapp-proxy': '1', 'x-forwarded-proto': 'https' };
@@ -320,6 +321,20 @@ async function fetchAllPostsForCategory(locale: string, categoryId: number) {
 type Params = { locale: string; settore: string };
 
 export async function generateStaticParams(): Promise<Params[]> {
+  /* Guardia di build: SETTORI_CON_RISORSE decide quali settori mostrano il pulsante
+   * "Guide e articoli" nell'hero (SettorePageLayout). Se qualcuno ci aggiunge un
+   * settore che qui non ha una voce in SETTORE_CONFIG, la build si ferma invece di
+   * pubblicare un pulsante che porta in 404, com'e' successo il 13/08/2026 (96 URL
+   * rotte, 6 settori x 16 lingue). Un controllo a livello di tipi qui non serve:
+   * SETTORE_CONFIG e' dichiarato Record<string, ...> e quindi accetta ogni chiave. */
+  const senzaContenuto = SETTORI_CON_RISORSE.filter((s) => !SETTORE_CONFIG[s]);
+  if (senzaContenuto.length > 0) {
+    throw new Error(
+      `SETTORI_CON_RISORSE elenca settori senza voce in SETTORE_CONFIG: ${senzaContenuto.join(', ')}. ` +
+        'Aggiungi il contenuto qui oppure toglili da src/content/settori/risorse-disponibili.ts.'
+    );
+  }
+
   const settori = Object.keys(SETTORE_CONFIG);
   return SUPPORTED_LOCALES.flatMap((locale) =>
     settori.map((settore) => ({ locale, settore }))
