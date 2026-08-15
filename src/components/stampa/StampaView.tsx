@@ -164,6 +164,15 @@ export default function StampaView({
           <a href="/michele-petraroli.webp" download className="b2" style={{ fontSize: 13, textAlign: 'center' }}>
             {d.photo_download}
           </a>
+          <Image
+            src="/michele-petraroli-2.webp"
+            alt="Michele Angelo Petraroli, fondatore di GeoTapp, sul palco"
+            width={640}
+            height={640}
+          />
+          <a href="/michele-petraroli-2.webp" download className="b2" style={{ fontSize: 13, textAlign: 'center' }}>
+            {d.photo_download_2}
+          </a>
         </div>
         <div className="r d1">
           <p className="kk k" style={{ color: 'var(--seal)' }}>{d.founder_label}</p>
@@ -197,6 +206,14 @@ export default function StampaView({
               <img src="/michele-petraroli.webp" alt={d.photo_download} loading="lazy" style={{ objectFit: 'cover', borderRadius: 8 }} />
             </span>
             <b>{d.photo_download}</b>
+            <span>.webp</span>
+          </a>
+          <a href="/michele-petraroli-2.webp" download>
+            <span className="thumb">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/michele-petraroli-2.webp" alt={d.photo_download_2} loading="lazy" style={{ objectFit: 'cover', borderRadius: 8 }} />
+            </span>
+            <b>{d.photo_download_2}</b>
             <span>.webp</span>
           </a>
           <a href={localizePath('/risorse/gps-lavoratori-ue/', locale)}>
