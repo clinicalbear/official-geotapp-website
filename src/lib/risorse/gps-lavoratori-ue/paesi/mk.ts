@@ -10,7 +10,7 @@
  * inventato qui.
  */
 
-import type { SchedaPaese } from '../types';
+import type { SchedaPaese , Fonte} from '../types';
 
 // URL delle fonti primarie citate.
 const FONTE_LPDP = {
@@ -26,9 +26,9 @@ const FONTE_AZLP = {
   titolo: 'AZLP (Garante macedone), pagina ufficiale e reclami',
   url: 'https://azlp.mk/en/',
 };
-const FONTE_SCHOENHERR = {
+const FONTE_SCHOENHERR: Fonte = {
   titolo: 'Schoenherr, la legge macedone sulla protezione dei dati (sanzioni)',
-  url: 'https://www.schoenherr.eu/content/north-macedonia-s-data-protection-law-ten-months-to-comply',
+  url: 'https://www.schoenherr.eu/content/north-macedonia-s-data-protection-law-ten-months-to-comply', nonUfficiale: 'studio-legale',
 };
 const FONTE_GDPR = {
   titolo: 'Regolamento UE 2016/679 (GDPR) - riferimento comparativo',

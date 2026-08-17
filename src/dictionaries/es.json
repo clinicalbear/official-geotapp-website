@@ -1286,7 +1286,13 @@
     },
     "sanzioneTipoCasoGps": "de un caso real de GPS",
     "sanzioneTipoCasoAffine": "caso afín, no GPS",
-    "sanzioneTipoMassimale": "máximo legal, no una multa impuesta"
+    "sanzioneTipoMassimale": "máximo legal, no una multa impuesta",
+    "fonteNonUfficialeEtichetta": "fuente no oficial",
+    "fonteNonUfficialeAvviso": "Este dato no procede de una fuente oficial. Abajo esta el enlace directo a la fuente que hemos utilizado. Al no poder contrastarla con la autoridad competente, no podemos garantizar que sea correcta ni coherente.",
+    "fonteNonUfficialeTipo_studio_legale": "despacho de abogados",
+    "fonteNonUfficialeTipo_stampa": "medio de comunicacion",
+    "fonteNonUfficialeTipo_banca_dati": "base de datos juridica privada",
+    "fonteNonUfficialeTipo_compilazione": "recopilacion privada"
   },
   "sanzioniGps": {
     "metaTitle": "Calculadora de sanciones GPS: cuánto te arriesgas al monitorizar trabajadores, país por país",

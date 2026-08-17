@@ -11,7 +11,7 @@
  * autorita' nazionale, l'UOOU SR. Nessun numero, URL o autorita' e' inventato qui.
  */
 
-import type { SchedaPaese } from '../types';
+import type { SchedaPaese , Fonte} from '../types';
 
 // URL delle fonti primarie citate.
 const FONTE_ZP_13 = {
@@ -24,18 +24,13 @@ const FONTE_UOOU_PROCEDURA = {
   url: 'https://www.dataprotection.gov.sk/sk/urad/konanie-ochrane-osobnych-udajov/',
 };
 const FONTE_PODNIKAJTE = {
-  titolo: 'podnikajte.sk, monitoraggio dei veicoli aziendali e GDPR',
-  url: 'https://www.podnikajte.sk/zakonne-povinnosti-podnikatela/monitorovanie-sluzobnych-vozidiel-gdpr',
+  titolo: 'UOOU SR, modello di informativa al dipendente',
+  url: 'https://dataprotection.gov.sk/sk/ine/vzory-formulare-stiahnutie/vzor-informacnej-povinnosti-zamestnanca/',
 };
 const FONTE_UOOU_RECLAMO = {
   titolo:
     'UOOU SR, presentare una proposta di avvio del procedimento (reclamo)',
   url: 'https://www.dataprotection.gov.sk/sk/ine/vyhladavanie-sluzby-formulara-elektronicku-komunikaciu/podavanie-navrhu-zacatie-konania/',
-};
-const FONTE_HAVEL = {
-  titolo:
-    'Havel & Partners, rassegna sanzioni UOOU SR (caso HR psicodiagnostica 40.000 euro)',
-  url: 'https://www.havelpartners.sk/4-roky-s-gdpr-za-ake-porusenia-udeloval-uoou-najcastejsie-pokuty/',
 };
 const FONTE_GDPR = {
   titolo: 'Regolamento UE 2016/679 (GDPR)',
@@ -269,23 +264,23 @@ export const slovacchia: SchedaPaese = {
 
   sanzioneMax: {
     importo: {
-      it: '40.000 € (caso affine, non GPS)',
-      en: '40,000 EUR (related case, not GPS)',
-      de: '40.000 EUR (verwandter Fall, nicht GPS)',
-      fr: '40 000 EUR (cas connexe, pas GPS)',
-      es: '40.000 EUR (caso afín, no GPS)',
-      nl: '40.000 EUR (verwant geval, geen GPS)',
+      it: '20 milioni di € o il 4% del fatturato mondiale annuo',
+      en: 'EUR 20 million or 4% of total annual worldwide turnover',
+      de: '20 Millionen EUR oder 4% des weltweiten Jahresumsatzes',
+      fr: '20 millions EUR ou 4% du chiffre d affaires mondial annuel',
+      es: '20 millones de EUR o el 4% de la facturación mundial anual',
+      nl: '20 miljoen EUR of 4% van de wereldwijde jaaromzet',
     },
     casoCitato: {
-      it: "Non risulta una multa dell'UOOU SR specifica e pubblicata per il GPS sui dipendenti. Caso affine: gennaio 2022, multa di 40.000 euro al reparto risorse umane di un'azienda per la valutazione psicodiagnostica dei dipendenti fondata su un consenso non valido nel rapporto di lavoro. Riguarda i dati dei dipendenti, non il GPS.",
-      en: "No specific, published UOOU SR fine for GPS on employees is on record. Related case: January 2022, a 40,000 euro fine to a company human resources department for the psychodiagnostic assessment of employees based on consent that is not valid in the employment relationship. It concerns employee data, not GPS.",
-      de: "Eine spezifische, veröffentlichte Geldbusse der UOOU SR für GPS bei Beschäftigten ist nicht bekannt. Verwandter Fall: Januar 2022, eine Geldbusse von 40.000 Euro gegen die Personalabteilung eines Unternehmens für die psychodiagnostische Beurteilung von Beschäftigten auf der Grundlage einer im Arbeitsverhältnis ungültigen Einwilligung. Er betrifft Beschaeftigtendaten, nicht GPS.",
-      fr: "Aucune amende spécifique et publiée de l'UOOU SR pour le GPS sur les salaries n'est connue. Cas connexe : janvier 2022, une amende de 40 000 euros au service des ressources humaines d'une entreprise pour l'évaluation psychodiagnostique des salaries fondée sur un consentement non valable dans la relation de travail. Elle porte sur les données des salaries, non sur le GPS.",
-      es: "No consta una multa especifica y publicada de la UOOU SR por el GPS sobre los empleados. Caso afín: enero de 2022, una multa de 40.000 euros al departamento de recursos humanos de una empresa por la evaluación psicodiagnostica de los empleados basada en un consentimiento no valido en la relación laboral. Se refiere a los datos de los empleados, no al GPS.",
-      nl: "Er is geen specifieke, gepubliceerde boete van de UOOU SR voor GPS op werknemers bekend. Verwant geval: januari 2022, een boete van 40.000 euro aan de afdeling personeelszaken van een bedrijf voor de psychodiagnostische beoordeling van werknemers op basis van een in de arbeidsverhouding ongeldige toestemming. Het betreft werknemersgegevens, niet GPS.",
+      it: 'Massimale di legge, non una multa inflitta. Vale l art. 83 GDPR, applicabile in Slovacchia. Non risulta pubblicata dall UOOU SR una sanzione specifica sul GPS applicato ai dipendenti, e la relazione annuale 2024 dell autorita non ne riporta.',
+      en: 'Statutory ceiling, not a fine that was imposed. Article 83 GDPR applies in Slovakia. No specific UOOU SR fine on GPS applied to employees is published, and the authority annual report for 2024 does not record one.',
+      de: 'Gesetzlicher Hoechstbetrag, keine verhaengte Geldbusse. Es gilt Art. 83 DSGVO, der in der Slowakei anwendbar ist. Eine spezifische Geldbusse der UOOU SR zu GPS bei Beschaeftigten ist nicht veroeffentlicht, und der Jahresbericht 2024 der Behoerde nennt keine.',
+      fr: 'Plafond legal, et non une amende infligee. L article 83 du RGPD s applique en Slovaquie. Aucune amende specifique de l UOOU SR sur le GPS applique aux salaries n est publiee, et le rapport annuel 2024 de l autorite n en mentionne aucune.',
+      es: 'Tope legal, no una multa impuesta. Se aplica el art. 83 del RGPD en Eslovaquia. No consta publicada una sanción especifica de la UOOU SR sobre el GPS aplicado a los empleados, y la memoria anual de 2024 de la autoridad no recoge ninguna.',
+      nl: 'Wettelijk maximum, geen opgelegde boete. Artikel 83 AVG geldt in Slowakije. Een specifieke boete van de UOOU SR over GPS bij werknemers is niet gepubliceerd, en het jaarverslag 2024 van de autoriteit vermeldt er geen.',
     },
-    urlFonte: FONTE_HAVEL.url,
-    tipoImporto: 'caso-affine',
+    urlFonte: 'https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679',
+    tipoImporto: 'massimale',
   },
 
   fonti: [
@@ -293,7 +288,6 @@ export const slovacchia: SchedaPaese = {
     FONTE_UOOU_PROCEDURA,
     FONTE_PODNIKAJTE,
     FONTE_UOOU_RECLAMO,
-    FONTE_HAVEL,
     FONTE_GDPR,
   ],
 

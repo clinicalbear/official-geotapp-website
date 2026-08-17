@@ -14,26 +14,26 @@
  * o autorita' e' inventato qui.
  */
 
-import type { SchedaPaese } from '../types';
+import type { SchedaPaese , Fonte} from '../types';
 
 // URL delle fonti citate.
 const FONTE_LEGGE_12_25 = {
   titolo:
-    'Nuova Legge sulla protezione dei dati personali (Gazzetta BiH 12/25, in vigore 2025)',
-  url: 'https://parser.hr/en/new-law-on-personal-data-protection-in-bosnia-and-herzegovina/',
+    'Legge sulla protezione dei dati personali (Gazzetta BiH 12/25), testo pubblicato dall AZLP',
+  url: 'https://azlp.ba/propisi/default.aspx?id=4546&langTag=bs-BA',
 };
-const FONTE_AZLP_DPIA = {
+const FONTE_AZLP_DPIA: Fonte = {
   titolo:
     'AZLP, lista dei trattamenti che richiedono una DPIA (novembre 2025, include il monitoraggio dei dipendenti e il GPS)',
-  url: 'https://bdkadvokati.com/bosnian-data-protection-agency-issues-a-list-of-processing-operations-requiring-a-dpia/',
+  url: 'https://bdkadvokati.com/bosnian-data-protection-agency-issues-a-list-of-processing-operations-requiring-a-dpia/', nonUfficiale: 'studio-legale',
 };
 const FONTE_AZLP = {
   titolo: 'AZLP (Garante bosniaco), pagina ufficiale',
   url: 'https://azlp.ba/',
 };
 const FONTE_DLA_PIPER = {
-  titolo: 'DLA Piper, protezione dei dati in Bosnia ed Erzegovina',
-  url: 'https://www.dlapiperdataprotection.com/?t=law&c=BA',
+  titolo: 'Legge sulla protezione dei dati personali, Gazzetta ufficiale BiH 12/25',
+  url: 'https://www.sluzbenilist.ba/page/akt/aCRNh0ohz4nh78h77P7BE=',
 };
 const FONTE_GDPR = {
   titolo: 'Regolamento UE 2016/679 (GDPR) - riferimento comparativo',

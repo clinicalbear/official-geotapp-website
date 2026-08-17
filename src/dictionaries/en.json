@@ -1286,7 +1286,13 @@
     },
     "sanzioneTipoCasoGps": "from a real GPS case",
     "sanzioneTipoCasoAffine": "related case, not GPS",
-    "sanzioneTipoMassimale": "statutory maximum, not a fine issued"
+    "sanzioneTipoMassimale": "statutory maximum, not a fine issued",
+    "fonteNonUfficialeEtichetta": "unofficial source",
+    "fonteNonUfficialeAvviso": "This entry does not come from an official source. The link below goes straight to the source we used. Since it cannot be checked against the competent authority, we cannot guarantee that it is correct or consistent.",
+    "fonteNonUfficialeTipo_studio_legale": "law firm",
+    "fonteNonUfficialeTipo_stampa": "news outlet",
+    "fonteNonUfficialeTipo_banca_dati": "private legal database",
+    "fonteNonUfficialeTipo_compilazione": "private compilation"
   },
   "sanzioniGps": {
     "metaTitle": "GPS penalty calculator: how much you risk monitoring workers, country by country",

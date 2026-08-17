@@ -13,7 +13,7 @@
  * sull'applicazione. Nessun numero, URL o autorità' e' inventato qui.
  */
 
-import type { SchedaPaese } from '../types';
+import type { SchedaPaese , Fonte} from '../types';
 
 // URL delle fonti citate.
 const FONTE_LEGGE_99Z = {
@@ -25,14 +25,14 @@ const FONTE_NPDPC = {
   titolo: 'NPDPC (Garante bielorusso), informazioni e contatti',
   url: 'https://cpd.by/en/about-center/',
 };
-const FONTE_GRATA = {
+const FONTE_GRATA: Fonte = {
   titolo:
     'GRATA, protezione dei dati e privacy dei dipendenti in Bielorussia',
-  url: 'https://gratanet.com/publications/data-protection-and-employee-privacy-in-belarus',
+  url: 'https://gratanet.com/publications/data-protection-and-employee-privacy-in-belarus', nonUfficiale: 'studio-legale',
 };
-const FONTE_DLA_PIPER = {
+const FONTE_DLA_PIPER: Fonte = {
   titolo: 'DLA Piper, applicazione e sanzioni in Bielorussia',
-  url: 'https://www.dlapiperdataprotection.com/?t=enforcement&c=BY',
+  url: 'https://www.dlapiperdataprotection.com/?t=enforcement&c=BY', nonUfficiale: 'compilazione',
 };
 const FONTE_GDPR = {
   titolo: 'Regolamento UE 2016/679 (GDPR) - riferimento comparativo lontano',

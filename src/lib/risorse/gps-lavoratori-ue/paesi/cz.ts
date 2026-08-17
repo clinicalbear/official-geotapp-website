@@ -20,8 +20,8 @@ const FONTE_ZP_316 = {
   url: 'https://www.zakonyprolidi.cz/cs/2006-262',
 };
 const FONTE_UOOU_GPS = {
-  titolo: 'UOOU/gdpr.cz, monitoraggio dei veicoli aziendali tramite GPS',
-  url: 'https://www.gdpr.cz/monitorovani-sluzebnich-vozidel-pomoci-gps',
+  titolo: 'Stanovisko 2/2017 sul trattamento dei dati sul posto di lavoro, pubblicato dall UOOU',
+  url: 'https://uoou.gov.cz/media/zahranici/dokumenty/ostatni-dokumenty-sboru/stanovisko-2-2017-ke-zpracovani-udaju-na-pracovisti.pdf',
 };
 const FONTE_UOOU_DPIA = {
   titolo: 'UOOU, lista dei trattamenti che richiedono una DPIA',
@@ -32,8 +32,8 @@ const FONTE_UOOU_SEGNALAZIONE = {
   url: 'https://uoou.gov.cz/verejnost/stiznost-na-spravce-nebo-zpracovatele',
 };
 const FONTE_UOOU_CESKA_POSTA = {
-  titolo: 'UOOU, sanzione Ceska posta (GPS portalettere)',
-  url: 'https://www.epravo.cz/top/clanky/gps-monitoring-zamestnancu-podruhe-106141.html',
+  titolo: 'Tribunale municipale di Praga 6 A 42/2013 (Ceska posta, GPS sui portalettere), sentenza',
+  url: 'https://www.nssoud.cz/stazeni-dokumentu?filepath=EVIDENCNI_LIST/2013/6A_42_2013_48_20170614165604_prevedeno.pdf',
 };
 const FONTE_GDPR = {
   titolo: 'Regolamento UE 2016/679 (GDPR)',

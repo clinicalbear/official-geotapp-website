@@ -13,7 +13,7 @@
  * Nessun numero, URL o autorita' e' inventato qui.
  */
 
-import type { SchedaPaese } from '../types';
+import type { SchedaPaese , Fonte} from '../types';
 
 // URL delle fonti primarie citate.
 const FONTE_LEGGE_124_2024 = {
@@ -28,11 +28,6 @@ const FONTE_IDP_LINEA_GUIDA = {
 const FONTE_IDP_UFFICIALE = {
   titolo: 'IDP (Garante albanese), pagina ufficiale',
   url: 'https://idp.al/en/',
-};
-const FONTE_IDP_EUROCOM = {
-  titolo:
-    'IDP, sanzione EuroCom CX (videosorveglianza dei dipendenti)',
-  url: 'https://www.dataguidance.com/news/albania-idp-fines-eurocom-all-460000-unlawful-video',
 };
 const FONTE_GDPR = {
   titolo: 'Regolamento UE 2016/679 (GDPR) - riferimento comparativo',
@@ -265,30 +260,29 @@ export const albania: SchedaPaese = {
 
   sanzioneMax: {
     importo: {
-      it: '460.000 ALL (circa 4.400 €)',
-      en: '460,000 ALL (about EUR 4,400)',
-      de: '460.000 ALL (rund 4.400 EUR)',
-      fr: '460 000 ALL (environ 4 400 EUR)',
-      es: '460.000 ALL (unos 4.400 EUR)',
-      nl: '460.000 ALL (ongeveer 4.400 EUR)',
+      it: '2 miliardi di ALL (circa 19 milioni di €) o il 4% del fatturato mondiale annuo',
+      en: 'ALL 2 billion (about EUR 19 million) or 4% of total annual worldwide turnover',
+      de: '2 Milliarden ALL (rund 19 Millionen EUR) oder 4% des weltweiten Jahresumsatzes',
+      fr: '2 milliards ALL (environ 19 millions EUR) ou 4% du chiffre d affaires mondial annuel',
+      es: '2.000 millones de ALL (unos 19 millones de EUR) o el 4% de la facturación mundial anual',
+      nl: '2 miljard ALL (ongeveer 19 miljoen EUR) of 4% van de wereldwijde jaaromzet',
     },
     casoCitato: {
-      it: "IDP, decisione 49/1 dell'8 gennaio 2024: sanzione a EuroCom CX per aver monitorato i dipendenti tramite videosorveglianza installata negli uffici a loro insaputa, in violazione dell'obbligo di informazione. Non è un caso di GPS, ed è stato deciso sotto la legge precedente (9887/2008), poi abrogata dalla Legge 124/2024.",
-      en: 'IDP, decision 49/1 of 8 January 2024: a fine against EuroCom CX for monitoring employees through video surveillance installed in the offices without their knowledge, in breach of the duty to inform. It is not a GPS case, and it was decided under the previous law (9887/2008), later repealed by Law 124/2024.',
-      de: 'IDP, Entscheidung 49/1 vom 8. Januar 2024: Geldbusse gegen EuroCom CX, weil Beschäftigte ohne ihr Wissen durch in den Büros installierte Videoüberwachung überwacht wurden, unter Verstoß gegen die Informationspflicht. Es handelt sich nicht um einen GPS-Fall, und er wurde nach dem früheren Gesetz (9887/2008) entschieden, das später durch das Gesetz 124/2024 aufgehoben wurde.',
-      fr: "IDP, décision 49/1 du 8 janvier 2024 : sanction a l'encontre d'EuroCom CX pour avoir surveille ses salaries au moyen d'une vidéosurveillance installée dans les bureaux a leur insu, en violation de l'obligation d'information. Il ne s'agit pas d'un cas de GPS, et la décision a été prise sous l'ancienne loi (9887/2008), abrogée par la suite par la loi 124/2024.",
-      es: 'IDP, decisión 49/1 de 8 de enero de 2024: sanción a EuroCom CX por vigilar a los empleados mediante videovigilancia instalada en las oficinas sin su conocimiento, en infracción del deber de información. No es un caso de GPS, y se resolvió bajo la ley anterior (9887/2008), después derogada por la Ley 124/2024.',
-      nl: 'IDP, besluit 49/1 van 8 januari 2024: boete tegen EuroCom CX wegens het volgen van werknemers via cameratoezicht dat zonder hun medeweten in de kantoren was geinstalleerd, in strijd met de informatieplicht. Het is geen GPS-zaak, en de beslissing werd genomen onder de vorige wet (9887/2008), die later is ingetrokken door Wet 124/2024.',
+      it: 'Massimale di legge, non una multa inflitta. Legge 124/2024, che per le violazioni piu gravi prevede fino a 2.000.000.000 di lek oppure, per le societa commerciali, il 4% del fatturato mondiale annuo dell esercizio precedente, se superiore. Un secondo scaglione si ferma a 1 miliardo di lek o al 2%. Non risulta pubblicata dall IDP una sanzione specifica sul GPS applicato ai dipendenti.',
+      en: 'Statutory ceiling, not a fine that was imposed. Law 124/2024 provides, for the most serious breaches, up to ALL 2,000,000,000 or, for commercial companies, 4% of total annual worldwide turnover of the preceding financial year, whichever is higher. A second tier stops at ALL 1 billion or 2%. No specific IDP fine on GPS applied to employees is published.',
+      de: 'Gesetzlicher Hoechstbetrag, keine verhaengte Geldbusse. Das Gesetz 124/2024 sieht fuer die schwersten Verstoesse bis zu 2.000.000.000 ALL oder, bei Handelsgesellschaften, 4% des weltweiten Jahresumsatzes des Vorjahres vor, je nachdem, welcher Betrag hoeher ist. Eine zweite Stufe endet bei 1 Milliarde ALL oder 2%. Eine spezifische Geldbusse der IDP zu GPS bei Beschaeftigten ist nicht veroeffentlicht.',
+      fr: 'Plafond legal, et non une amende infligee. La loi 124/2024 prevoit, pour les manquements les plus graves, jusqu a 2 000 000 000 ALL ou, pour les societes commerciales, 4% du chiffre d affaires mondial annuel de l exercice precedent, le montant le plus eleve etant retenu. Un second palier s arrete a 1 milliard ALL ou 2%. Aucune amende specifique de l IDP sur le GPS applique aux salaries n est publiee.',
+      es: 'Tope legal, no una multa impuesta. La Ley 124/2024 prevé, para las infracciones mas graves, hasta 2.000.000.000 de ALL o, para las sociedades mercantiles, el 4% de la facturación mundial anual del ejercicio anterior, la cantidad que sea mayor. Un segundo tramo se detiene en 1.000 millones de ALL o el 2%. No consta publicada una sanción especifica de la IDP sobre el GPS aplicado a los empleados.',
+      nl: 'Wettelijk maximum, geen opgelegde boete. Wet 124/2024 voorziet voor de zwaarste inbreuken in ten hoogste ALL 2.000.000.000 of, voor handelsvennootschappen, 4% van de wereldwijde jaaromzet van het voorgaande boekjaar, als dat hoger is. Een tweede trap stopt bij ALL 1 miljard of 2%. Een specifieke boete van de IDP over GPS bij werknemers is niet gepubliceerd.',
     },
-    urlFonte: FONTE_IDP_EUROCOM.url,
-    tipoImporto: 'caso-affine',
+    urlFonte: 'https://idp.al/wp-content/uploads/2025/03/Law-no.124-2024.pdf',
+    tipoImporto: 'massimale',
   },
 
   fonti: [
     FONTE_LEGGE_124_2024,
     FONTE_IDP_LINEA_GUIDA,
     FONTE_IDP_UFFICIALE,
-    FONTE_IDP_EUROCOM,
     FONTE_GDPR,
   ],
 

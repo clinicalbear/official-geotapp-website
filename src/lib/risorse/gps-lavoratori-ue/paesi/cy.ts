@@ -20,8 +20,8 @@ const FONTE_EUROFOUND = {
   url: 'https://apps.eurofound.europa.eu/legislationdb/employee-monitoring-and-surveillance/cyprus',
 };
 const FONTE_GDPR_13 = {
-  titolo: 'GDPR, art. 13 (informazione)',
-  url: 'https://gdpr-info.eu/art-13-gdpr/',
+  titolo: 'GDPR, art. 13 (informazione), testo ufficiale EUR-Lex',
+  url: 'https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679',
 };
 const FONTE_GARANTE_CY = {
   titolo: 'Garante cipriota, pagina ufficiale',

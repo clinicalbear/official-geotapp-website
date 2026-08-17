@@ -1286,7 +1286,13 @@
     },
     "sanzioneTipoCasoGps": "aus einem echten GPS-Fall",
     "sanzioneTipoCasoAffine": "verwandter Fall, nicht GPS",
-    "sanzioneTipoMassimale": "gesetzlicher Höchstbetrag, kein verhängtes Bußgeld"
+    "sanzioneTipoMassimale": "gesetzlicher Höchstbetrag, kein verhängtes Bußgeld",
+    "fonteNonUfficialeEtichetta": "keine amtliche Quelle",
+    "fonteNonUfficialeAvviso": "Diese Angabe stammt nicht aus einer amtlichen Quelle. Unten steht der direkte Link zu der Quelle, die wir verwendet haben. Da sie bei der zustandigen Behorde nicht uberpruft werden kann, konnen wir Richtigkeit und Stimmigkeit nicht garantieren.",
+    "fonteNonUfficialeTipo_studio_legale": "Anwaltskanzlei",
+    "fonteNonUfficialeTipo_stampa": "Presse",
+    "fonteNonUfficialeTipo_banca_dati": "private Rechtsdatenbank",
+    "fonteNonUfficialeTipo_compilazione": "private Zusammenstellung"
   },
   "sanzioniGps": {
     "metaTitle": "GPS-Bußgeldrechner: wie viel Sie bei Mitarbeiterüberwachung riskieren, Land für Land",

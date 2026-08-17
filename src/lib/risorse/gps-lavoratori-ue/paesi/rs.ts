@@ -17,7 +17,7 @@
  * ripartizione regionale. Nessun numero, URL o autorita' e' inventato qui.
  */
 
-import type { SchedaPaese } from '../types';
+import type { SchedaPaese , Fonte} from '../types';
 
 // URL delle fonti primarie citate.
 const FONTE_LPDP = {
@@ -31,17 +31,17 @@ const FONTE_LISTA_DPIA = {
 };
 const FONTE_PR_LEGAL = {
   titolo:
-    'PR Legal, GPS sui veicoli aziendali (lista DPIA, voce monitoraggio dipendenti)',
-  url: 'https://www.prlegal.rs/sr/da-li-pratite-kretanje-kompanijskih-vozila-gps-om/',
+    'Odluka sulla lista dei trattamenti che richiedono DPIA (Sl. glasnik RS 45/2019)',
+  url: 'https://www.pravno-informacioni-sistem.rs/SlGlasnikPortal/eli/rep/sgrs/drugidrzavniorganiorganizacije/odluka/2019/45/1',
 };
 const FONTE_POVERENIK = {
   titolo: 'Poverenik (Garante serbo), competenze e contatti',
   url: 'https://poverenik.rs/en/about-us/about-the-commissioner/',
 };
-const FONTE_N1_MEDIANA = {
+const FONTE_N1_MEDIANA: Fonte = {
   titolo:
     'N1, GPS su 80 cassonetti del JKP Mediana di Nis (ispezione del Poverenik)',
-  url: 'https://n1info.rs/vesti/u-nisu-postavljeni-gps-uredjaji-za-pracenje-kanti-za-djubre-radnici-higijene-se-bune/',
+  url: 'https://n1info.rs/vesti/u-nisu-postavljeni-gps-uredjaji-za-pracenje-kanti-za-djubre-radnici-higijene-se-bune/', nonUfficiale: 'stampa',
 };
 const FONTE_GDPR = {
   titolo: 'Regolamento UE 2016/679 (GDPR) - riferimento comparativo',

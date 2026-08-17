@@ -35,8 +35,8 @@ const FONTE_APD_RECLAMO = {
 };
 const FONTE_DECISIONE_114_2024 = {
   titolo:
-    'Chambre Contentieuse APD/GBA, decisione 114/2024 (impronte per le presenze, 45.000 euro)',
-  url: 'https://www.claeysengels.be/fr-be/nouvelles-evenements/traitement-des-donnees-biometriques-au-travail-lutilisation-dun-systeme',
+    'Chambre Contentieuse APD/GBA, decisione 114/2024 (impronte per le presenze, 45.000 euro), testo integrale',
+  url: 'https://www.dataprotectionauthority.be/publications/decision-quant-au-fond-n0-114-2024-fr.pdf',
 };
 const FONTE_GDPR = {
   titolo: 'Regolamento UE 2016/679 (GDPR)',

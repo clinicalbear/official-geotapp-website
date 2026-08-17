@@ -49,7 +49,13 @@ describe('tipoImporto', () => {
       return acc;
     }, {});
 
-    expect(conta).toEqual({ 'caso-gps': 10, 'caso-affine': 11, massimale: 18 });
+    // Aggiornato di proposito il 17/08/2026: Albania e Slovacchia sono passate
+    // da 'caso-affine' a 'massimale'. Le due cifre mostrate (460.000 ALL per
+    // EuroCom CX, 40.000 EUR per la psicodiagnostica) poggiavano su un'unica
+    // fonte non ufficiale e NON risultano nelle relazioni annuali delle
+    // rispettive autorita, controllate una per una. Meglio il massimale di
+    // legge, che e documentato, di una cifra che non sappiamo provare.
+    expect(conta).toEqual({ 'caso-gps': 10, 'caso-affine': 9, massimale: 20 });
   });
 
   it('la maggioranza delle schede NON poggia su un caso GPS: e il motivo per cui la qualifica esiste', () => {

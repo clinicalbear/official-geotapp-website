@@ -31,8 +31,8 @@ const FONTE_CNPDCP_RECLAMI = {
 };
 const FONTE_DLA_PIPER = {
   titolo:
-    'DLA Piper, protezione dei dati in Moldova (DPIA, registrazione abolita)',
-  url: 'https://www.dlapiperdataprotection.com/?t=law&c=MD',
+    'Legge 195/2024 sulla protezione dei dati personali (art. 38 DPIA), testo ufficiale',
+  url: 'https://datepersonale.md/wp-content/uploads/2024/09/Law-no.-195-2024-on-personal-data-protection-1.pdf',
 };
 const FONTE_GDPR = {
   titolo: 'Regolamento UE 2016/679 (GDPR) - riferimento comparativo',

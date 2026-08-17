@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import type { SchedaPaese, RispostaChecklist } from '@/lib/risorse/gps-lavoratori-ue/types';
+import type { SchedaPaese, RispostaChecklist, Fonte } from '@/lib/risorse/gps-lavoratori-ue/types';
 import type { AppLocale } from '@/lib/i18n/config';
 import type { SiteDictionary } from '@/lib/i18n/dictionaries';
 import { loc } from '@/lib/risorse/gps-lavoratori-ue/localize';
@@ -30,6 +30,50 @@ type RisorseGpsDict = SiteDictionary['risorseGps'];
  * GPS, quando quella multa (H&M) riguarda la schedatura della vita privata.
  * 29 schede su 39 mostrano un importo che NON viene da un caso GPS.
  */
+/**
+ * Fonte, con avviso quando NON e' ufficiale.
+ * Regola (Mike, 17/08/2026): dove non esiste una fonte ufficiale verificabile
+ * non si nasconde e non si finge. Si dichiara che cosa e', si da il
+ * collegamento diretto, e si avvisa che correttezza e coerenza non sono
+ * garantite. Chiarezza e onesta valgono piu di un link che sembra autorevole.
+ */
+function FonteConAvviso({
+  fonte,
+  dict,
+}: {
+  fonte: Fonte;
+  dict: RisorseGpsDict;
+}) {
+  const link = <ExternalLink href={fonte.url}>{fonte.titolo}</ExternalLink>;
+  if (!fonte.nonUfficiale) return link;
+  const d = dict as unknown as Record<string, string>;
+  const tipo = d['fonteNonUfficialeTipo_' + fonte.nonUfficiale.replace(/-/g, '_')] ?? '';
+  return (
+    <span>
+      {link}{' '}
+      <span
+        style={{
+          display: 'inline-block',
+          fontSize: 12,
+          lineHeight: '18px',
+          padding: '0 8px',
+          borderRadius: 999,
+          border: '1px solid #C9A227',
+          color: '#8A6D1B',
+          whiteSpace: 'nowrap',
+          verticalAlign: 'middle',
+        }}
+      >
+        {d.fonteNonUfficialeEtichetta}
+        {tipo ? ' \u00b7 ' + tipo : ''}
+      </span>
+      <span style={{ display: 'block', fontSize: 13, color: '#78836F', marginTop: 4, maxWidth: '62ch' }}>
+        {d.fonteNonUfficialeAvviso}
+      </span>
+    </span>
+  );
+}
+
 function qualificaImporto(tipo: SchedaPaese['sanzioneMax']['tipoImporto'], dict: RisorseGpsDict): string {
   if (tipo === 'caso-gps') return dict.sanzioneTipoCasoGps;
   if (tipo === 'caso-affine') return dict.sanzioneTipoCasoAffine;
@@ -214,7 +258,7 @@ export default function SchedaPaeseView({
                 </div>
                 <p style={{ marginBottom: 8 }}>{loc(item.dettaglio, locale)}</p>
                 <p style={{ fontSize: 14 }}>
-                  <ExternalLink href={item.fonte.url}>{item.fonte.titolo}</ExternalLink>
+                  <FonteConAvviso fonte={item.fonte} dict={dict} />
                 </p>
               </li>
             ))}
@@ -296,7 +340,7 @@ export default function SchedaPaeseView({
           <ul className="rows r d1">
             {scheda.fonti.map((fonte, i) => (
               <li key={i}>
-                <ExternalLink href={fonte.url}>{fonte.titolo}</ExternalLink>
+                <FonteConAvviso fonte={fonte} dict={dict} />
               </li>
             ))}
           </ul>

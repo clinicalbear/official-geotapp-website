@@ -15,12 +15,12 @@ import type { SchedaPaese } from '../types';
 
 // URL delle fonti primarie citate.
 const FONTE_KP_22_2 = {
-  titolo: 'Kodeks pracy, art. 22(2) (monitoraggio)',
-  url: 'https://lexlege.pl/kp/art-22-2/',
+  titolo: 'Kodeks pracy, art. 22(2) (monitoraggio), testo consolidato ISAP (Sejm)',
+  url: 'https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20250000277',
 };
 const FONTE_KP_22_3 = {
-  titolo: 'Kodeks pracy, art. 22(3) (altre forme di monitoraggio, incl. GPS)',
-  url: 'https://lexlege.pl/kp/art-22-3/',
+  titolo: 'Kodeks pracy, art. 22(3) (altre forme di monitoraggio, incl. GPS), testo consolidato ISAP (Sejm)',
+  url: 'https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20250000277',
 };
 const FONTE_UODO_GUIDA = {
   titolo: 'UODO, guida alla protezione dei dati sul luogo di lavoro',

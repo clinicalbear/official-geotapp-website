@@ -21,8 +21,8 @@ const FONTE_HDPA_FAQ = {
 };
 const FONTE_LEGGE_4624 = {
   titolo:
-    'Legge 4624/2019, art. 27 (dati dei dipendenti) - traduzione ufficiale HDPA',
-  url: 'https://www.dataguidance.com/sites/default/files/law_4624_2019_en_translated_by_the_hdpa_0.pdf',
+    'Legge 4624/2019, art. 27 (dati dei dipendenti), traduzione ufficiale HDPA',
+  url: 'https://www.dpa.gr/sites/default/files/2020-08/LAW%204624_2019_EN_TRANSLATED%20BY%20THE%20HDPA.PDF',
 };
 const FONTE_HDPA_DPIA = {
   titolo:

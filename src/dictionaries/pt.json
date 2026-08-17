@@ -1393,6 +1393,12 @@
     },
     "sanzioneTipoCasoGps": "de um caso real de GPS",
     "sanzioneTipoCasoAffine": "caso afim, não GPS",
-    "sanzioneTipoMassimale": "máximo legal, não uma coima aplicada"
+    "sanzioneTipoMassimale": "máximo legal, não uma coima aplicada",
+    "fonteNonUfficialeEtichetta": "fonte nao oficial",
+    "fonteNonUfficialeAvviso": "Este dado nao provem de uma fonte oficial. Abaixo esta a ligacao direta para a fonte que utilizamos. Nao a podendo confirmar junto da autoridade competente, nao garantimos que seja correta nem coerente.",
+    "fonteNonUfficialeTipo_studio_legale": "sociedade de advogados",
+    "fonteNonUfficialeTipo_stampa": "orgao de imprensa",
+    "fonteNonUfficialeTipo_banca_dati": "base de dados juridica privada",
+    "fonteNonUfficialeTipo_compilazione": "compilacao privada"
   }
 }

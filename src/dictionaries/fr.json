@@ -1286,7 +1286,13 @@
     },
     "sanzioneTipoCasoGps": "issu d'une affaire GPS réelle",
     "sanzioneTipoCasoAffine": "affaire connexe, pas GPS",
-    "sanzioneTipoMassimale": "plafond légal, pas une amende infligée"
+    "sanzioneTipoMassimale": "plafond légal, pas une amende infligée",
+    "fonteNonUfficialeEtichetta": "source non officielle",
+    "fonteNonUfficialeAvviso": "Cette donnee ne provient pas d'une source officielle. Le lien ci-dessous renvoie directement a la source utilisee. Ne pouvant la verifier aupres de l'autorite competente, nous ne pouvons en garantir l'exactitude ni la coherence.",
+    "fonteNonUfficialeTipo_studio_legale": "cabinet d'avocats",
+    "fonteNonUfficialeTipo_stampa": "organe de presse",
+    "fonteNonUfficialeTipo_banca_dati": "base de donnees juridique privee",
+    "fonteNonUfficialeTipo_compilazione": "compilation privee"
   },
   "sanzioniGps": {
     "metaTitle": "Calculateur d'amendes GPS : combien vous risquez à surveiller vos salariés, pays par pays",

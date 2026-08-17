@@ -1393,6 +1393,12 @@
     },
     "sanzioneTipoCasoGps": "fra en reell GPS-sak",
     "sanzioneTipoCasoAffine": "beslektet sak, ikke GPS",
-    "sanzioneTipoMassimale": "lovens maksimum, ikke et ilagt gebyr"
+    "sanzioneTipoMassimale": "lovens maksimum, ikke et ilagt gebyr",
+    "fonteNonUfficialeEtichetta": "ikke en offisiell kilde",
+    "fonteNonUfficialeAvviso": "Denne opplysningen kommer ikke fra en offisiell kilde. Nedenfor finner du den direkte lenken til kilden vi har brukt. Siden den ikke kan etterproves hos rette myndighet, kan vi ikke garantere at den er riktig og konsistent.",
+    "fonteNonUfficialeTipo_studio_legale": "advokatfirma",
+    "fonteNonUfficialeTipo_stampa": "nyhetsmedium",
+    "fonteNonUfficialeTipo_banca_dati": "privat juridisk database",
+    "fonteNonUfficialeTipo_compilazione": "privat samling"
   }
 }

@@ -1393,6 +1393,12 @@
     },
     "sanzioneTipoCasoGps": "från ett verkligt GPS-fall",
     "sanzioneTipoCasoAffine": "närliggande fall, inte GPS",
-    "sanzioneTipoMassimale": "lagens maxbelopp, inte ett utdömt vite"
+    "sanzioneTipoMassimale": "lagens maxbelopp, inte ett utdömt vite",
+    "fonteNonUfficialeEtichetta": "inte en officiell kalla",
+    "fonteNonUfficialeAvviso": "Denna uppgift kommer inte fran en officiell kalla. Nedan finns den direkta lanken till kallan vi har anvant. Eftersom den inte kan kontrolleras hos behorig myndighet kan vi inte garantera att den ar korrekt och konsekvent.",
+    "fonteNonUfficialeTipo_studio_legale": "advokatbyra",
+    "fonteNonUfficialeTipo_stampa": "nyhetsmedium",
+    "fonteNonUfficialeTipo_banca_dati": "privat rattsdatabas",
+    "fonteNonUfficialeTipo_compilazione": "privat sammanstallning"
   }
 }

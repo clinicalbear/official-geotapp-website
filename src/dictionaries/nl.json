@@ -1286,7 +1286,13 @@
     },
     "sanzioneTipoCasoGps": "uit een echte GPS-zaak",
     "sanzioneTipoCasoAffine": "verwante zaak, geen GPS",
-    "sanzioneTipoMassimale": "wettelijk maximum, geen opgelegde boete"
+    "sanzioneTipoMassimale": "wettelijk maximum, geen opgelegde boete",
+    "fonteNonUfficialeEtichetta": "geen officiele bron",
+    "fonteNonUfficialeAvviso": "Dit gegeven komt niet uit een officiele bron. Hieronder staat de directe link naar de bron die wij hebben gebruikt. Omdat die niet bij de bevoegde autoriteit te controleren is, kunnen wij juistheid en samenhang niet garanderen.",
+    "fonteNonUfficialeTipo_studio_legale": "advocatenkantoor",
+    "fonteNonUfficialeTipo_stampa": "nieuwsmedium",
+    "fonteNonUfficialeTipo_banca_dati": "private juridische databank",
+    "fonteNonUfficialeTipo_compilazione": "private verzameling"
   },
   "sanzioniGps": {
     "metaTitle": "GPS-boetecalculator: hoeveel je riskeert bij het monitoren van werknemers, land voor land",

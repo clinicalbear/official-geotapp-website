@@ -1286,7 +1286,13 @@
     },
     "sanzioneTipoCasoGps": "da un caso GPS reale",
     "sanzioneTipoCasoAffine": "caso affine, non GPS",
-    "sanzioneTipoMassimale": "massimale di legge, non una multa inflitta"
+    "sanzioneTipoMassimale": "massimale di legge, non una multa inflitta",
+    "fonteNonUfficialeEtichetta": "fonte non ufficiale",
+    "fonteNonUfficialeAvviso": "Questo dato non proviene da una fonte ufficiale. Qui sotto trovi il collegamento diretto alla fonte che abbiamo usato. Non potendo verificarla presso l'autorita competente, non possiamo garantirne correttezza e coerenza.",
+    "fonteNonUfficialeTipo_studio_legale": "studio legale",
+    "fonteNonUfficialeTipo_stampa": "testata giornalistica",
+    "fonteNonUfficialeTipo_banca_dati": "banca dati giuridica privata",
+    "fonteNonUfficialeTipo_compilazione": "raccolta privata"
   },
   "sanzioniGps": {
     "metaTitle": "Calcolatore sanzioni GPS: quanto rischi a tracciare i lavoratori, Paese per Paese",

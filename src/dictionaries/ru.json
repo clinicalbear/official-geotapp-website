@@ -1393,6 +1393,12 @@
     },
     "sanzioneTipoCasoGps": "из реального дела о GPS",
     "sanzioneTipoCasoAffine": "смежное дело, не GPS",
-    "sanzioneTipoMassimale": "максимум по закону, а не наложенный штраф"
+    "sanzioneTipoMassimale": "максимум по закону, а не наложенный штраф",
+    "fonteNonUfficialeEtichetta": "неофициальный источник",
+    "fonteNonUfficialeAvviso": "Эти сведения получены не из официального источника. Ниже прямая ссылка на источник, которым мы пользовались. Поскольку проверить его в компетентном органе невозможно, мы не можем гарантировать точность и непротиворечивость данных.",
+    "fonteNonUfficialeTipo_studio_legale": "юридическая фирма",
+    "fonteNonUfficialeTipo_stampa": "СМИ",
+    "fonteNonUfficialeTipo_banca_dati": "частная правовая база",
+    "fonteNonUfficialeTipo_compilazione": "частная подборка"
   }
 }

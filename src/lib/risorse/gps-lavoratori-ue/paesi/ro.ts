@@ -21,8 +21,8 @@ const FONTE_LEGGE_190_ART5 = {
   url: 'https://legislatie.just.ro/Public/DetaliiDocument/203151',
 };
 const FONTE_CODUL_MUNCII_40 = {
-  titolo: 'Codul Muncii, art. 40 (obblighi del datore, riservatezza dati)',
-  url: 'https://www.codulmuncii.eu/titlu-2/capitol-2/articol-40.html',
+  titolo: 'Codul Muncii, art. 40 (obblighi del datore), Portal Legislativ',
+  url: 'https://legislatie.just.ro/Public/DetaliiDocument/128647',
 };
 const FONTE_ANSPDCP_TEHNOPLUS = {
   titolo:
@@ -31,8 +31,8 @@ const FONTE_ANSPDCP_TEHNOPLUS = {
 };
 const FONTE_ANSPDCP_DPIA = {
   titolo:
-    'ANSPDCP, Decizia 174/2018 (lista trattamenti che richiedono DPIA)',
-  url: 'https://lege5.ro/Gratuit/gmydoobxhe3q/decizia-nr-174-2018-privind-lista-operatiunilor-pentru-care-este-obligatorie-realizarea-evaluarii-impactului-asupra-protectiei-datelor-cu-caracter-personal',
+    'ANSPDCP, Decizia 174/2018 (lista trattamenti che richiedono DPIA), sito ufficiale',
+  url: 'https://www.dataprotection.ro/index.jsp?page=decizia_174_2018&lang=ro',
 };
 const FONTE_ANSPDCP_RECLAMI = {
   titolo: 'ANSPDCP, presentazione dei reclami',

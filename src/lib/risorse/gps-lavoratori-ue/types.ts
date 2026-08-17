@@ -20,9 +20,24 @@ export type RispostaChecklist = 'si' | 'no' | 'dipende';
  */
 export type TestoLoc = string | ({ it: string } & Partial<Record<AppLocale, string>>);
 
+/** Perche' una fonte non e' ufficiale. Serve a dirlo al lettore in chiaro,
+ *  non a nasconderlo: la scheda mostra l'avviso e il link diretto alla fonte. */
+export type TipoFonteNonUfficiale =
+  | 'studio-legale'
+  | 'stampa'
+  | 'banca-dati'
+  | 'compilazione';
+
 export interface Fonte {
   titolo: string;
   url: string;
+  /** Presente SOLO se la fonte NON e' ufficiale (non e' la legge, un tribunale,
+   *  un'autorita' di controllo o un atto in gazzetta). Quando c'e', la scheda
+   *  stampa un avviso accanto alla fonte: il dato non proviene da fonte
+   *  ufficiale, il link e' quello diretto, e correttezza e coerenza non sono
+   *  garantite. Si usa quando la fonte ufficiale non esiste o non e'
+   *  raggiungibile, mai per pigrizia. */
+  nonUfficiale?: TipoFonteNonUfficiale;
 }
 
 export interface Contatto {

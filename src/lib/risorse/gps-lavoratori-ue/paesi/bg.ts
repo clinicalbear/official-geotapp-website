@@ -15,8 +15,8 @@ import type { SchedaPaese } from '../types';
 // URL delle fonti primarie citate.
 const FONTE_ZZLD_25ZH = {
   titolo:
-    'Legge sulla protezione dei dati (ZZLD), art. 25ж e 25и (controllo sul lavoro e monitoraggio su larga scala)',
-  url: 'https://www.apis.bg/uploads/assets/Konsolidiran_ZZLD.pdf',
+    'Legge sulla protezione dei dati (ZZLD), testo consolidato',
+  url: 'https://rta.government.bg/upload/5773/zzld.pdf',
 };
 const FONTE_CPDP_GUIDA = {
   titolo: 'CPDP (Garante bulgaro), guida sulla privacy sul luogo di lavoro (GPS)',

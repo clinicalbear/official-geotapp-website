@@ -14,7 +14,7 @@
  * numero, URL o autorita' e' inventato qui.
  */
 
-import type { SchedaPaese } from '../types';
+import type { SchedaPaese , Fonte} from '../types';
 
 // URL delle fonti citate.
 const FONTE_LEGGE_2297 = {
@@ -26,10 +26,10 @@ const FONTE_OMBUDSMAN = {
   titolo: 'Difensore civico (Garante ucraino), protezione dei dati personali',
   url: 'https://ombudsman.gov.ua/en/zahist-personalnih-danih',
 };
-const FONTE_ICLG = {
+const FONTE_ICLG: Fonte = {
   titolo:
     'ICLG, protezione dei dati in Ucraina (basi giuridiche, DPIA)',
-  url: 'https://iclg.com/practice-areas/data-protection-laws-and-regulations/ukraine/',
+  url: 'https://iclg.com/practice-areas/data-protection-laws-and-regulations/ukraine/', nonUfficiale: 'compilazione',
 };
 const FONTE_GDPR = {
   titolo: 'Regolamento UE 2016/679 (GDPR) - riferimento comparativo',

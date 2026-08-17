@@ -35,7 +35,7 @@ const PAESI_DIR = join(__dirname, '..', 'src', 'lib', 'risorse', 'gps-lavoratori
 
 const DRY_RUN = process.argv.includes('--dry-run');
 const MESI_SOGLIA = 6;
-const TIMEOUT_MS = 20000;
+const TIMEOUT_MS = 60000; // azlp.mk (autorita macedone) impiega ~50s: sotto i 60 e un falso allarme
 
 // ─── Raccolta URL + date dai dossier (scanning testuale, read-only) ───────────
 function raccogliDossier() {
@@ -59,21 +59,106 @@ function raccogliDossier() {
 }
 
 // ─── 1) Raggiungibilita degli URL ─────────────────────────────────────────────
-async function checkUrl(url) {
+// 🔴 Senza User-Agent da browser questo controllo e' una macchina da falsi
+// allarmi: molti portali pubblici (IMY svedese in testa) rispondono 403 a Node
+// e 200 a un browser. Verificato il 05/08/2026 su tutte e 200 le fonti.
+const UA =
+  'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36';
+
+// Host che rispondono 403/timeout a qualunque agente automatico ma che sono
+// VIVI da browser. Un loro 403 non e' una fonte morta: si registra a parte e
+// NON fa scattare l'allarme. Elenco chiuso e motivato, non una scorciatoia.
+const ANTI_BOT = [
+  'legifrance.gouv.fr',   // verifica Cloudflare, non passa nemmeno col browser visibile
+  'dataprotection.ie',    // DPC irlandese
+  'vdai.lrv.lt',          // autorita lituana
+  'legis.md',             // Moldova
+  'cpdp.bg',              // catena SSL incompleta
+  'dsb.gv.at',            // Austria, connessione rifiutata
+  'legislatie.just.ro',   // HTTP/2 capriccioso
+  'zakon.rada.gov.ua',    // TLS troncato
+];
+
+// Host semplicemente LENTISSIMI, non ostili: l'autorita macedone risponde 200
+// ma ci mette una cinquantina di secondi (misurato 17/08/2026), e sotto richieste
+// parallele anche di piu. Non e' una fonte morta, e' un server lento.
+const LENTI = ['azlp.mk'];
+const TIMEOUT_LENTO_MS = 150000;
+
+function isLento(url) {
   try {
-    // Alcuni portali rifiutano HEAD: si prova HEAD, fallback a GET.
-    let res = await fetch(url, {
-      method: 'HEAD',
-      redirect: 'follow',
-      signal: AbortSignal.timeout(TIMEOUT_MS),
-    });
-    if (res.status === 405 || res.status === 501) {
-      res = await fetch(url, { method: 'GET', redirect: 'follow', signal: AbortSignal.timeout(TIMEOUT_MS) });
+    const h = new URL(url).hostname;
+    return LENTI.some((d) => h === d || h.endsWith('.' + d));
+  } catch {
+    return false;
+  }
+}
+
+function isAntiBot(url) {
+  try {
+    const h = new URL(url).hostname;
+    return ANTI_BOT.some((d) => h === d || h.endsWith('.' + d));
+  } catch {
+    return false;
+  }
+}
+
+async function checkUrl(url, tentativo = 0) {
+  const opts = {
+    redirect: 'follow',
+    signal: AbortSignal.timeout(isLento(url) ? TIMEOUT_LENTO_MS : TIMEOUT_MS),
+    headers: {
+      'User-Agent': UA,
+      Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+      'Accept-Language': 'en;q=0.9,it;q=0.8',
+    },
+  };
+  try {
+    // HEAD prima, ma diversi portali pubblici lo rifiutano (il BfDI tedesco
+    // risponde 400 a HEAD e 200 a GET): su qualunque 4xx si riprova con GET.
+    let res = await fetch(url, { ...opts, method: 'HEAD' });
+    if (res.status >= 400 && res.status < 500) {
+      res = await fetch(url, { ...opts, method: 'GET' });
     }
-    const ok = res.status >= 200 && res.status < 400;
-    return { url, ok, reason: ok ? `HTTP ${res.status}` : `HTTP ${res.status}` };
+    if (res.status >= 200 && res.status < 400) return { url, ok: true, reason: `HTTP ${res.status}` };
+
+    // 🔴 Il codice di stato NON e' la prova. L'IMY svedese risponde 404 anche
+    // sulla propria home e intanto serve la pagina intera (verificato il
+    // 17/08/2026: 541 KB, titolo corretto, GPS citato otto volte). Quando lo
+    // stato e' d'errore si guarda il CORPO: se torna una pagina vera e non un
+    // messaggio di errore, la fonte e' viva.
+    if (res.status >= 400) {
+      try {
+        const g = res.bodyUsed ? null : await fetch(url, { ...opts, method: 'GET' });
+        if (g) {
+          const html = await g.text();
+          const titolo = (html.match(/<title[^>]*>([^<]{3,})<\/title>/i) || [])[1] || '';
+          const paginaVera =
+            html.length > 20000 &&
+            titolo &&
+            !/not\s*found|kunde inte hittas|non trovat|nicht gefunden|no encontrad|error\s*40/i.test(titolo);
+          if (paginaVera) {
+            return { url, ok: true, statoBugiardo: true, reason: `HTTP ${res.status} ma pagina viva ("${titolo.trim().slice(0, 48)}")` };
+          }
+        }
+      } catch { /* si ricade sul fallimento sotto */ }
+    }
+
+    // 5xx spesso e' passeggero (il BOE spagnolo dava 502 e due secondi dopo 200).
+    if (res.status >= 500 && tentativo < 2) {
+      await new Promise((r) => setTimeout(r, 3000));
+      return checkUrl(url, tentativo + 1);
+    }
+    if (isAntiBot(url)) return { url, ok: true, bloccato: true, reason: `HTTP ${res.status} (anti-bot noto)` };
+    return { url, ok: false, reason: `HTTP ${res.status}` };
   } catch (e) {
-    return { url, ok: false, reason: `irraggiungibile: ${e?.message || e}` };
+    const msg = e?.message || String(e);
+    if (tentativo < 2) {
+      await new Promise((r) => setTimeout(r, 3000));
+      return checkUrl(url, tentativo + 1);
+    }
+    if (isAntiBot(url)) return { url, ok: true, bloccato: true, reason: `${msg} (anti-bot noto)` };
+    return { url, ok: false, reason: `irraggiungibile: ${msg}` };
   }
 }
 
