@@ -2,12 +2,12 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'Software para Instaladores Eléctricos y Fontaneros | Gestión de Intervenciones | GeoTapp',
-    description: 'GeoTapp para instaladores eléctricos, fontaneros y empresas de mantenimiento: gestión de partes de trabajo, control horario GPS y pruebas fotográficas. Conforme al Convenio colectivo construcción.',
+    title: 'App de Geolocalización para Instaladores | GeoTapp',
+    description: 'App de geolocalización para instaladores: control horario GPS, partes de trabajo y pruebas fotográficas del equipo en campo. Conforme al RGPD.',
   },
   hero: {
     badge: 'Software para Instaladores Eléctricos, Fontaneros y Equipos de Mantenimiento',
-    h1_line1: 'Trabajos en campo bajo control:',
+    h1_line1: 'App de geolocalización para instaladores:',
     h1_line2: 'partes, horas y pruebas en un solo lugar',
     subtitle: 'GeoTapp conecta Flow + TimeTracker para empresas que trabajan entre furgonetas, obras y clientes finales. Las apps para Android e iOS ayudan al técnico en campo; la oficina ve el parte, los tiempos, las pruebas fotográficas y las notas sin tener que llamar a nadie. Conforme al RGPD y al Convenio colectivo de construcción.',
     cta_primary: 'Solicitar una demo',
