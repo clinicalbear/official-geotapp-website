@@ -550,7 +550,7 @@ export default async function RisorseSettorePage({ params }: { params: Promise<P
 
         <section className="end">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img className="bg" src={endBg} alt="" loading="lazy" />
+          <img className="bg" src={endBg} alt="" aria-hidden="true" loading="lazy" />
           <div className="ov" />
           <div className="w">
             <p className="kk k">{productPageLabel}</p>

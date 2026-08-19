@@ -366,7 +366,7 @@ console.log(result.integrityLevel);`}</pre>
       {/* CHIUSURA */}
       <section className="end">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className="bg" src="/bg3.webp" alt="" loading="lazy" />
+        <img className="bg" src="/bg3.webp" alt="" aria-hidden="true" loading="lazy" />
         <div className="ov" />
         <div className="w">
           <h2 className="r">{copy.cta_title}</h2>

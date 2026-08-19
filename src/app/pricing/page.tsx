@@ -476,7 +476,7 @@ export default function Pricing() {
       </section>
 
       <section className="end">
-        <img className="bg" src="/bg2.webp" alt="" loading="lazy" />
+        <img className="bg" src="/bg2.webp" alt="" aria-hidden="true" loading="lazy" />
         <div className="ov"></div>
         <div className="w">
           <h2 className="r">

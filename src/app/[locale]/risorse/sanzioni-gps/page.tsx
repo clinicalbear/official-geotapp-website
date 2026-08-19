@@ -136,7 +136,7 @@ export default async function CalcolatoreSanzioniPage({
       {/* ── chiusura fotografica ── */}
       <section className="end">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className="bg" src="/bg1.webp" alt="" loading="lazy" />
+        <img className="bg" src="/bg1.webp" alt="" aria-hidden="true" loading="lazy" />
         <div className="ov"></div>
         <div className="w">
           <h2 className="r">{shared.ctaTitolo}</h2>

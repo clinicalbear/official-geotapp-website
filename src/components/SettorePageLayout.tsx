@@ -284,7 +284,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
       {/* ── HERO fotografico ── */}
       <section className="ph img">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className="bg" src={bg.img} alt="" style={{ objectPosition: bg.pos }} loading="lazy" />
+        <img className="bg" src={bg.img} alt="" aria-hidden="true" style={{ objectPosition: bg.pos }} loading="lazy" />
         <div className="sc" />
         <div className="crumb">
           <div className="w">
@@ -621,7 +621,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
       {/* ── CTA FINALE ── */}
       <section className="end">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className="bg" src="/bg2.webp" alt="" loading="lazy" />
+        <img className="bg" src="/bg2.webp" alt="" aria-hidden="true" loading="lazy" />
         <div className="ov" />
         <div className="w">
           <h2 className="r">{content.cta.title}</h2>

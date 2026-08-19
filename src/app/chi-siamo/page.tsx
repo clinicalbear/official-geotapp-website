@@ -48,7 +48,7 @@ export default function AboutPage() {
       {/* ── testata ── */}
       <section className="ph img">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className="bg" src="/bg1.webp" alt="" fetchPriority="high" />
+        <img className="bg" src="/bg1.webp" alt="" aria-hidden="true" fetchPriority="high" />
         <div className="sc" />
         <div className="crumb"><div className="w"><Link href={getLink('/')}>Home</Link> / {crumb}</div></div>
         <div className="w">
@@ -162,7 +162,7 @@ export default function AboutPage() {
       {/* ── chiusura ── */}
       <section className="end">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className="bg" src="/bg2.webp" alt="" loading="lazy" />
+        <img className="bg" src="/bg2.webp" alt="" aria-hidden="true" loading="lazy" />
         <div className="ov" />
         <div className="w">
           <h2 className="r">{cs.cta_title}</h2>

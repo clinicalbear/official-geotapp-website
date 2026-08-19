@@ -38,7 +38,7 @@ export default function ArticleHero({
 
   return (
     <section className={`ph${image ? ' img' : ''}`}>
-      {image && <img className="bg" src={image} alt="" fetchPriority="high" />}
+      {image && <img className="bg" src={image} alt="" aria-hidden="true" fetchPriority="high" />}
       <div className="sc" />
       <div className="crumb">
         <div className="w">

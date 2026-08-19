@@ -2,6 +2,14 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
+    // 2026-08-19: tolto "e instaladores" anche dalla FAQ, ultima rivendicazione
+    // esplicita rimasta. Il fix del 04/08 aveva ripulito solo title e badge, ma
+    // GSC al 17/08 dice che questa pagina serve ancora 857 impressioni su query
+    // "instalad*" (85% del suo totale) a pos 5,3 sulla query di punta, mentre
+    // /es/sectores/instaladores/ per la stessa query sta a 55,3: cannibalizzazione
+    // ancora aperta, 1.880 impressioni e ZERO click sul cluster.
+    // "instalaciones electricas" resta: e' il mestiere dell'elettricista.
+    // ---
     // "e instaladores" tolto da title e badge: questa pagina prendeva 726
     // impressioni su query "instaladores" (e le teneva a pos 51-73) contro 14
     // sulle proprie, rubando il posto a /es/sectores/instaladores/ che le stessa
@@ -93,7 +101,7 @@ const content: SettoreContent = {
     items: [
       {
         q: '¿GeoTapp es adecuada como app para electricistas?',
-        a: 'Sí. GeoTapp gestiona intervenciones, partes de trabajo, asistencia y documentación fotográfica de instalaciones para electricistas e instaladores.',
+        a: 'Sí. GeoTapp gestiona intervenciones, partes de trabajo, asistencia y documentación fotográfica para electricistas y empresas de instalaciones eléctricas.',
       },
       {
         q: '¿GeoTapp ayuda a resolver disputas con clientes?',

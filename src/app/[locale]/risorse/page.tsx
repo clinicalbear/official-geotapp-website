@@ -147,7 +147,7 @@ export default async function RisorseHubPage({
 
       <section className="end">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className="bg" src="/bg2.webp" alt="" loading="lazy" />
+        <img className="bg" src="/bg2.webp" alt="" aria-hidden="true" loading="lazy" />
         <div className="ov" />
         <div className="w">
           <h2 className="r" dangerouslySetInnerHTML={{ __html: dict.home_sections.footer_cta.title }} />

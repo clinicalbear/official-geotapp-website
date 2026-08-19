@@ -322,7 +322,7 @@ export default function StampaView({
       {/* ── chiusura ── */}
       <section className="end">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className="bg" src="/bg2.webp" alt="" loading="lazy" />
+        <img className="bg" src="/bg2.webp" alt="" aria-hidden="true" loading="lazy" />
         <div className="ov" />
         <div className="w">
           <p className="big r" style={{ fontSize: 'clamp(30px,5.2vw,72px)', maxWidth: '17ch', marginBottom: 24, color: 'var(--lime)' }}>
