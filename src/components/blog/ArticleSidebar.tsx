@@ -156,7 +156,7 @@ export default function ArticleSidebar({ headings, locale, categories = [], date
           etichetta "Scritto da" perche' non esiste ancora nei dizionari. */}
       <div className="au">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/michele-petraroli.webp" alt="Michele Angelo Petraroli" />
+        <img src="/michele-petraroli.webp?v=2" alt="Michele Angelo Petraroli" />
         <div>
           <b>Michele Angelo Petraroli</b>
           <span>GeoTapp</span>

@@ -156,12 +156,12 @@ export default function StampaView({
       <section className="sec warm"><div className="w"><div className="fnd">
         <div className="r-s" style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
           <Image
-            src="/michele-petraroli.webp"
+            src="/michele-petraroli.webp?v=2"
             alt="Michele Angelo Petraroli, fondatore di GeoTapp"
             width={640}
             height={640}
           />
-          <a href="/michele-petraroli.webp" download className="b2" style={{ fontSize: 13, textAlign: 'center' }}>
+          <a href="/michele-petraroli.webp?v=2" download className="b2" style={{ fontSize: 13, textAlign: 'center' }}>
             {d.photo_download}
           </a>
           <Image
@@ -200,10 +200,10 @@ export default function StampaView({
               <span>{d.logo_download}</span>
             </a>
           ))}
-          <a href="/michele-petraroli.webp" download>
+          <a href="/michele-petraroli.webp?v=2" download>
             <span className="thumb">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/michele-petraroli.webp" alt={d.photo_download} loading="lazy" style={{ objectFit: 'cover', borderRadius: 8 }} />
+              <img src="/michele-petraroli.webp?v=2" alt={d.photo_download} loading="lazy" style={{ objectFit: 'cover', borderRadius: 8 }} />
             </span>
             <b>{d.photo_download}</b>
             <span>.webp</span>
