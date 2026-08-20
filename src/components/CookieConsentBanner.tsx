@@ -423,11 +423,17 @@ export default function CookieConsentBanner({ locale }: { locale: string }) {
               &times;
             </button>
 
+            {/* Inter esplicito: gli h2 del sito prendono il font display
+                maiuscolo, che qui manda il titolo a capo dentro la card. */}
             <h2
               style={{
                 margin: '0 0 8px 0',
+                fontFamily: 'var(--font-inter, Inter, sans-serif)',
                 fontSize: '1.02rem',
                 fontWeight: 700,
+                letterSpacing: 'normal',
+                textTransform: 'none',
+                lineHeight: 1.3,
                 color: 'white',
                 paddingRight: 40,
               }}
