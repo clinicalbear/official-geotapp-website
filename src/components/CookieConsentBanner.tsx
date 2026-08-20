@@ -423,23 +423,24 @@ export default function CookieConsentBanner({ locale }: { locale: string }) {
               &times;
             </button>
 
-            {/* Inter esplicito: gli h2 del sito prendono il font display
-                maiuscolo, che qui manda il titolo a capo dentro la card. */}
-            <h2
+            {/* Heading ARIA e non <h2>: redesign-l.css impone agli h2 Anton
+                maiuscolo con clamp(26px,3.6vw,58px) e !important, che vince
+                sullo stile inline e dentro la card manda il titolo a capo. */}
+            <p
+              role="heading"
+              aria-level={2}
               style={{
                 margin: '0 0 8px 0',
                 fontFamily: 'var(--font-inter, Inter, sans-serif)',
                 fontSize: '1.02rem',
                 fontWeight: 700,
-                letterSpacing: 'normal',
-                textTransform: 'none',
                 lineHeight: 1.3,
                 color: 'white',
                 paddingRight: 40,
               }}
             >
               🍪 {t.modalTitle}
-            </h2>
+            </p>
             <p style={{ margin: '0 0 16px 0', fontSize: '0.84rem', color: '#cbd5e1', lineHeight: 1.5 }}>
               {t.body}{' '}
               <a
