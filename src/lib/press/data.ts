@@ -23,6 +23,22 @@ export function pressRel(_item: PressItem): string {
 export const PRESS_RELEASES: PressItem[] = [];
 export const PRESS_COVERAGE: PressItem[] = [
   {
+    date: '2026-08-20',
+    outlet: 'Personnel Today',
+    title: 'Can GPS at work ever protect workers as well as bosses?',
+    url: 'https://www.personneltoday.com/hr/gps-at-work/',
+    locale: 'en',
+    logo: '/press/personneltoday.png',
+    follow: true, // Dofollow verificato sull'HTML grezzo: <a href="https://geotapp.com/en-gb/">GeoTapp</a>
+                  // nella bio autore, senza rel. Nella stessa pagina xperthr.co.uk e brightmine.com
+                  // sono rel="sponsored", quindi il dofollow a noi e' una scelta della redazione.
+                  // NB: dal 13/07/2026 il flag NON concede piu' dofollow in uscita.
+                  // ✅ Testata INDIPENDENTE (ProMedia Group UK Ltd), nessun rapporto con
+                  // Featured/Connectively. Articolo COMMISSIONATO a firma di Michele, non un
+                  // roundup. Esclusiva di pubblicazione a loro: il testo non si ripubblica sul
+                  // nostro blog in nessuna lingua, e la condivisione social linka sempre loro.
+  },
+  {
     date: '2026-08-11',
     outlet: 'COO Insider',
     title: 'How operations leaders win adoption for process changes without disrupting the day',
