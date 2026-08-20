@@ -6,6 +6,8 @@ export type PressItem = {
   title: string;
   url: string;
   locale: AppLocale;  // lingua del pezzo
+  country?: string;   // ISO 3166-1 alpha-2 della nazione della TESTATA (it, fr, gb, us...):
+                      // mostra la bandiera in pagina. Serve l'SVG in /public/flags/<country>.svg
   logo?: string;      // path in /public del logo della testata (opzionale)
   follow?: boolean;   // reciprocità rel: true = diamo dofollow SOLO a chi ci ha dato un link dofollow;
                       // assente/false = nofollow (chi ci cita in nofollow o senza link). Fonti autorevoli solo.
@@ -28,6 +30,7 @@ export const PRESS_COVERAGE: PressItem[] = [
     title: 'Can GPS at work ever protect workers as well as bosses?',
     url: 'https://www.personneltoday.com/hr/gps-at-work/',
     locale: 'en',
+    country: 'gb',
     logo: '/press/personneltoday.png',
     follow: true, // Dofollow verificato sull'HTML grezzo: <a href="https://geotapp.com/en-gb/">GeoTapp</a>
                   // nella bio autore, senza rel. Nella stessa pagina xperthr.co.uk e brightmine.com
@@ -44,6 +47,7 @@ export const PRESS_COVERAGE: PressItem[] = [
     title: 'How operations leaders win adoption for process changes without disrupting the day',
     url: 'https://cooinsider.com/qa/how-operations-leaders-win-adoption-for-process-changes-without-disrupting-the-day#answer1167',
     locale: 'en',
+    country: 'us',
     logo: '/press/cooinsider.png',
     follow: true, // Ci linkano in dofollow: rel="" verificato nel DOM sull'ancora "GeoTapp" ->
                   // https://geotapp.com/. Nella stessa pagina i profili LinkedIn degli altri
@@ -61,6 +65,7 @@ export const PRESS_COVERAGE: PressItem[] = [
     title: "GPS et salariés : ce n'est pas de la surveillance si c'est une preuve du travail effectué",
     url: 'https://www.gpomag.fr/gps-et-salaries-ce-nest-pas-de-la-surveillance-si-cest-une-preuve-du-travail-effectue/',
     locale: 'fr',
+    country: 'fr',
     logo: '/press/gpomag.png',
     // Tribuna firmata, non promozionale: ci citano come "Michele Angelo Petraroli,
     // fondateur de GeoTapp" ma SENZA link (menzione non linkata, per accordo editoriale).
@@ -71,6 +76,7 @@ export const PRESS_COVERAGE: PressItem[] = [
     title: 'Stop scope creep in service work: boundaries that protect margin and relationships',
     url: 'https://smallbizleader.com/qa/stop-scope-creep-in-service-work-boundaries-that-protect-margin-and-relationships/',
     locale: 'en',
+    country: 'us',
     logo: '/press/smallbizleader.png',
     // NIENTE follow: ci linkano in dofollow (rel="" verificato nel DOM), ma il dominio ha
     // Spam Score Moz 37% (fascia media) -> non ricambiamo. Reversibile in ogni momento.
@@ -81,6 +87,7 @@ export const PRESS_COVERAGE: PressItem[] = [
     title: 'Workflow automation: How leaders pick first-win pilots without hurting quality',
     url: 'https://azbigmedia.com/business/workflow-automation-how-leaders-pick-first-win-pilots-without-hurting-quality/#answer7',
     locale: 'en',
+    country: 'us',
     logo: '/press/azbigmedia.png',
     follow: true, // AZ Big Media ci linka in dofollow (rel="noopener", verificato).
                   // NB: dal 13/07/2026 questo flag NON concede piu' dofollow (pressRel torna
@@ -92,6 +99,7 @@ export const PRESS_COVERAGE: PressItem[] = [
     title: 'GPS e vigilanza privata, prova del servizio o controllo del lavoratore?',
     url: 'https://www.vigilanzaprivataonline.com/vigilanza-tecnologica/gps-e-vigilanza-privata-prova-del-servizio-o-controllo-del-lavoratore-3560.html',
     locale: 'it',
+    country: 'it',
     logo: '/press/vigilanzaprivataonline-v2.png',
   },
   {
@@ -100,6 +108,7 @@ export const PRESS_COVERAGE: PressItem[] = [
     title: 'Presenze, GPS e art. 4: dove finisce la prova e dove comincia la sorveglianza',
     url: 'https://www.risorseumane-hr.it/presenze-gps-articolo-4/',
     locale: 'it',
+    country: 'it',
     logo: '/press/logoHR.png',
   },
 ];

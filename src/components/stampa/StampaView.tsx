@@ -289,6 +289,12 @@ export default function StampaView({
                       <img src={item.logo} alt={item.outlet} loading="lazy" />
                     )}
                   </span>
+                  <span className="fl">
+                    {item.country && (
+                      /* eslint-disable-next-line @next/next/no-img-element */
+                      <img src={`/flags/${item.country}.svg`} alt="" aria-hidden="true" loading="lazy" />
+                    )}
+                  </span>
                   <time dateTime={item.date}>{fmtPressDate(item.date)}</time>
                   <span className="k out">{item.outlet}</span>
                   <span className="ti">{item.title}</span>
