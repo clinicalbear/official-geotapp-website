@@ -22,11 +22,24 @@ export const FEATURED_LABEL: Record<string, string> = {
 const styles = `
 /* display via classe e non inline: lo style inline vincerebbe sul display:none
    con cui, a reduced-motion, si nascondono le copie del set. */
+/* Ogni logo sta dentro una cella IDENTICA agli altri. Senza, normalizzando la
+   sola altezza, i loghi lunghi (Personnel Today, ratio 7:1) uscivano quattro
+   volte piu' larghi di quelli quasi quadrati (Risorse Umane HR, 1,7:1) e la
+   fascia sembrava sbilanciata. La cella e' la stessa della pagina stampa:
+   la misura sta in --press-logo-w/h, definite in l-mockup.css. */
 .featured-in-logo {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  width: var(--press-logo-w, 150px);
+  height: var(--press-logo-h, 44px);
 }
 .featured-in-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
   filter: brightness(0) invert(0.2);
   transition: filter .3s ease;
 }
@@ -127,13 +140,10 @@ export default function FeaturedIn({ locale }: { locale: string }) {
                     // duplicato, non è mai l'elemento LCP. Fix 2026-07-27.
                     loading="lazy"
                     decoding="async"
-                    style={{
-                      height: 'clamp(34px, 4.4vw, 52px)',
-                      width: 'auto',
-                      maxWidth: '240px',
-                      objectFit: 'contain',
-                      display: 'block',
-                    }}
+                    // La taglia sta nella cella .featured-in-logo, non qui: uno style
+                    // inline vincerebbe sul CSS della cella e rimetterebbe i loghi
+                    // a larghezze diverse fra loro.
+                    style={{ display: 'block' }}
                   />
                 ) : (
                   <span style={{ fontWeight: 700, color: '#3f5220', fontSize: '1.05rem' }}>
