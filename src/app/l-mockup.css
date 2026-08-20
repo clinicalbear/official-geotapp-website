@@ -243,7 +243,7 @@ details.closing .ct>p{padding-bottom:0;opacity:0;transition:padding-bottom .55s 
 .art .side{position:sticky;top:130px}
 .art .side .lb{color:#78836F;margin-bottom:14px}
 .art .side .au{display:flex;gap:14px;align-items:center;margin-bottom:30px}
-.art .side .au img{width:52px;height:52px;border-radius:50%;object-fit:cover}
+.art .side .au img{width:52px;height:52px;border-radius:50%;object-fit:cover;border:1px solid rgba(14,14,12,.18)}
 .art .side .au b{display:block;font-family:var(--font-anton),'Anton',sans-serif;font-weight:400;text-transform:uppercase;font-size:16px}
 .art .side .au span{font-size:13px;color:#78836F}
 .art .side .toc a{display:block;padding:9px 0 9px 16px;border-left:2px solid rgba(14,14,12,.14);font-size:14.5px;color:#4A5244;transition:border-color .3s,color .3s}
@@ -306,7 +306,7 @@ details.closing .ct>p{padding-bottom:0;opacity:0;transition:padding-bottom .55s 
 .story strong{font-weight:600}
 .quote{font-family:var(--font-anton),'Anton',sans-serif;text-transform:uppercase;font-size:clamp(24px,3.4vw,52px);line-height:1.06; letter-spacing:-.018em;max-width:20ch;border-left:4px solid var(--seal);padding-left:34px}
 .fnd{display:grid;grid-template-columns:.34fr 1fr;gap:56px;align-items:center}
-.fnd img{width:100%;aspect-ratio:1/1;object-fit:cover;filter:grayscale(.3)}
+.fnd img{width:100%;aspect-ratio:1/1;object-fit:cover;filter:grayscale(.3);border:1px solid rgba(14,14,12,.18)}
 @media(max-width:900px){
   .stats{grid-template-columns:1fr}
   .fnd{grid-template-columns:1fr;gap:28px}
@@ -1008,7 +1008,7 @@ main:has(> .lp-l){padding-top:0}
 /* ── il fondatore, nel registro ── */
 .fdr{padding:106px 0}
 .fdr .g{display:grid;grid-template-columns:auto 1fr;gap:70px;align-items:center}
-.fdr img{width:290px;height:290px;object-fit:cover;filter:grayscale(.15);border-radius:34px}
+.fdr img{width:290px;height:290px;object-fit:cover;filter:grayscale(.15);border-radius:34px;border:1px solid rgba(14,14,12,.18)}
 .fdr blockquote{margin:0}
 .fdr blockquote p{font-family:var(--font-anton),'Anton',sans-serif;font-weight:400;text-transform:uppercase;
   font-size:clamp(26px,3.2vw,54px);line-height:1.06;letter-spacing:-.015em;max-width:none}
