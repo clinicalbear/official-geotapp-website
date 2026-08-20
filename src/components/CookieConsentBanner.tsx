@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { trackEvent } from '@/lib/analytics';
 
 const STORAGE_KEY = 'gtapp_cookie_consent';
@@ -19,6 +19,9 @@ type Texts = {
   catAnalyticsDesc: string;
   save: string;
   close: string;
+  closeRefuse: string;
+  dismissHint: string;
+  policyLabel: string;
 };
 
 const TEXTS: Record<string, Texts> = {
@@ -36,6 +39,9 @@ const TEXTS: Record<string, Texts> = {
     catAnalyticsDesc: 'Google Analytics: capire quali pagine funzionano. Dati anonimi. Niente pubblicità.',
     save: 'Salva preferenze',
     close: 'Chiudi',
+    closeRefuse: 'Chiudi e rifiuta',
+    dismissHint: 'Chiudendo con la X continui a navigare rifiutando i cookie non necessari.',
+    policyLabel: 'Cookie policy',
   },
   en: {
     body: 'We use cookies to understand what works on the site. No advertising.',
@@ -51,6 +57,9 @@ const TEXTS: Record<string, Texts> = {
     catAnalyticsDesc: 'Google Analytics: understand which pages work. Anonymous data. No advertising.',
     save: 'Save preferences',
     close: 'Close',
+    closeRefuse: 'Close and refuse',
+    dismissHint: 'Closing with the X lets you keep browsing while refusing non-essential cookies.',
+    policyLabel: 'Cookie policy',
   },
   de: {
     body: 'Wir verwenden Cookies, um zu verstehen, was auf der Website funktioniert. Keine Werbung.',
@@ -66,6 +75,9 @@ const TEXTS: Record<string, Texts> = {
     catAnalyticsDesc: 'Google Analytics: verstehen, welche Seiten funktionieren. Anonyme Daten. Keine Werbung.',
     save: 'Einstellungen speichern',
     close: 'Schließen',
+    closeRefuse: 'Schließen und ablehnen',
+    dismissHint: 'Wenn Sie mit dem X schließen, surfen Sie weiter und lehnen nicht notwendige Cookies ab.',
+    policyLabel: 'Cookie-Richtlinie',
   },
   fr: {
     body: 'Nous utilisons des cookies pour comprendre ce qui fonctionne sur le site. Pas de publicité.',
@@ -81,6 +93,9 @@ const TEXTS: Record<string, Texts> = {
     catAnalyticsDesc: 'Google Analytics : comprendre quelles pages fonctionnent. Données anonymes. Pas de publicité.',
     save: 'Enregistrer',
     close: 'Fermer',
+    closeRefuse: 'Fermer et refuser',
+    dismissHint: 'En fermant avec la croix, vous continuez la navigation en refusant les cookies non nécessaires.',
+    policyLabel: 'Politique cookies',
   },
   es: {
     body: 'Usamos cookies para entender qué funciona en el sitio. Sin publicidad.',
@@ -96,6 +111,9 @@ const TEXTS: Record<string, Texts> = {
     catAnalyticsDesc: 'Google Analytics: entender qué páginas funcionan. Datos anónimos. Sin publicidad.',
     save: 'Guardar preferencias',
     close: 'Cerrar',
+    closeRefuse: 'Cerrar y rechazar',
+    dismissHint: 'Al cerrar con la X sigues navegando y rechazas las cookies no necesarias.',
+    policyLabel: 'Política de cookies',
   },
   pt: {
     body: 'Usamos cookies para perceber o que funciona no site. Sem publicidade.',
@@ -111,6 +129,9 @@ const TEXTS: Record<string, Texts> = {
     catAnalyticsDesc: 'Google Analytics: perceber quais páginas funcionam. Dados anónimos. Sem publicidade.',
     save: 'Guardar preferências',
     close: 'Fechar',
+    closeRefuse: 'Fechar e recusar',
+    dismissHint: 'Ao fechar no X continua a navegar recusando os cookies não necessários.',
+    policyLabel: 'Política de cookies',
   },
   nl: {
     body: 'We gebruiken cookies om te begrijpen wat werkt op de site. Geen advertenties.',
@@ -126,6 +147,9 @@ const TEXTS: Record<string, Texts> = {
     catAnalyticsDesc: 'Google Analytics: begrijpen welke pagina\'s werken. Anonieme gegevens. Geen advertenties.',
     save: 'Voorkeuren opslaan',
     close: 'Sluiten',
+    closeRefuse: 'Sluiten en weigeren',
+    dismissHint: 'Sluit u met de X, dan gaat u verder en weigert u niet-noodzakelijke cookies.',
+    policyLabel: 'Cookiebeleid',
   },
   da: {
     body: 'Vi bruger cookies for at forstå hvad der virker på siden. Ingen reklamer.',
@@ -141,6 +165,9 @@ const TEXTS: Record<string, Texts> = {
     catAnalyticsDesc: 'Google Analytics: forstå hvilke sider der virker. Anonyme data. Ingen reklamer.',
     save: 'Gem præferencer',
     close: 'Luk',
+    closeRefuse: 'Luk og afvis',
+    dismissHint: 'Lukker du med X, fortsætter du og afviser ikke-nødvendige cookies.',
+    policyLabel: 'Cookiepolitik',
   },
   sv: {
     body: 'Vi använder cookies för att förstå vad som fungerar på webbplatsen. Inga annonser.',
@@ -156,6 +183,9 @@ const TEXTS: Record<string, Texts> = {
     catAnalyticsDesc: 'Google Analytics: förstå vilka sidor som fungerar. Anonyma data. Inga annonser.',
     save: 'Spara inställningar',
     close: 'Stäng',
+    closeRefuse: 'Stäng och avvisa',
+    dismissHint: 'Stänger du med X fortsätter du och avvisar icke nödvändiga kakor.',
+    policyLabel: 'Cookiepolicy',
   },
   nb: {
     body: 'Vi bruker informasjonskapsler for å forstå hva som fungerer på nettstedet. Ingen reklame.',
@@ -171,6 +201,9 @@ const TEXTS: Record<string, Texts> = {
     catAnalyticsDesc: 'Google Analytics: forstå hvilke sider som fungerer. Anonyme data. Ingen reklame.',
     save: 'Lagre innstillinger',
     close: 'Lukk',
+    closeRefuse: 'Lukk og avslå',
+    dismissHint: 'Lukker du med X, fortsetter du og avslår ikke-nødvendige informasjonskapsler.',
+    policyLabel: 'Cookie-erklæring',
   },
   ru: {
     body: 'Мы используем cookie, чтобы понять, что работает на сайте. Без рекламы.',
@@ -186,6 +219,9 @@ const TEXTS: Record<string, Texts> = {
     catAnalyticsDesc: 'Google Analytics: понимать, какие страницы работают. Анонимные данные. Без рекламы.',
     save: 'Сохранить настройки',
     close: 'Закрыть',
+    closeRefuse: 'Закрыть и отклонить',
+    dismissHint: 'Закрыв крестиком, вы продолжите просмотр, отклонив необязательные файлы cookie.',
+    policyLabel: 'Политика cookie',
   },
 };
 
@@ -205,12 +241,48 @@ function updateConsent(analytics: boolean) {
   });
 }
 
+/**
+ * Conteggio della scelta verso il nostro endpoint, indipendente da GA4.
+ *
+ * Serve perche' il rifiuto in GA4 non esiste: con analytics_storage 'denied'
+ * gtag manda solo cookieless ping, che nei report non compaiono. Verificato
+ * sui dati il 20/08/2026: in 90 giorni consent_choice risulta 98 volte, tutte
+ * con action 'accept_all'. Senza denominatore l'accept rate non e' calcolabile.
+ *
+ * Manda solo il nome dell'azione e la lingua. Nessun cookie, nessun
+ * identificatore: lato server diventa un contatore per giorno/paese/azione
+ * (src/app/api/consent/route.ts). Chi rifiuta non viene tracciato, viene
+ * contato.
+ */
+function reportConsent(action: string, locale: string): void {
+  if (typeof window === 'undefined') return;
+  if ((window as unknown as { __gtSkip?: boolean }).__gtSkip === true) return;
+  const payload = JSON.stringify({ action, locale });
+  try {
+    if (typeof navigator.sendBeacon === 'function') {
+      // sendBeacon sopravvive alla chiusura della scheda: e' il caso di chi
+      // sceglie e se ne va subito, quello che con la coda di gtag si perdeva.
+      const blob = new Blob([payload], { type: 'application/json' });
+      if (navigator.sendBeacon('/api/consent', blob)) return;
+    }
+    void fetch('/api/consent', {
+      method: 'POST',
+      body: payload,
+      headers: { 'Content-Type': 'application/json' },
+      keepalive: true,
+    }).catch(() => {});
+  } catch {
+    /* mai far fallire il banner per la telemetria */
+  }
+}
+
 type StoredConsent = { analytics: boolean; ts: number; action: string };
 
 export default function CookieConsentBanner({ locale }: { locale: string }) {
   const [visible, setVisible] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
   const [analyticsToggle, setAnalyticsToggle] = useState(true);
+  const persistRef = useRef<((analytics: boolean, action: string) => void) | null>(null);
   const t = TEXTS[locale] ?? TEXTS.en;
 
   useEffect(() => {
@@ -233,11 +305,30 @@ export default function CookieConsentBanner({ locale }: { locale: string }) {
       return;
     }
     setVisible(true);
-    // Misuriamo gli "ignorers": il banner è apparso, l'utente non ha ancora scelto.
-    // Combinato con consent_choice, accept rate = consent_choice / banner_shown.
-    // banner_shown viene buffered finché gtag carica (analytics.ts gestisce la coda).
+    // Denominatore dell'accept rate. Va al nostro endpoint, non a GA4: in stato
+    // denied gtag non riporta nulla, e chi se ne va prima che gtag.js finisca di
+    // caricare (lazyOnload, coda di 10s in analytics.ts) sparisce del tutto.
+    // trackEvent resta per chi accetta, cosi' il dato storico non si spezza.
+    reportConsent('shown', locale);
     trackEvent('banner_shown', { locale });
   }, [locale]);
+
+  // Con la scelta a schermo il fondo non deve scorrere, altrimenti l'overlay
+  // e' aggirabile e la scelta torna ignorabile. Escape vale come la X, cioe'
+  // rifiuto: una via d'uscita da tastiera deve esserci.
+  useEffect(() => {
+    if (!visible) return;
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') persistRef.current?.(false, 'dismissed_x');
+    };
+    document.addEventListener('keydown', onKey);
+    return () => {
+      document.body.style.overflow = prevOverflow;
+      document.removeEventListener('keydown', onKey);
+    };
+  }, [visible]);
 
   function persist(analytics: boolean, action: string) {
     try {
@@ -247,85 +338,144 @@ export default function CookieConsentBanner({ locale }: { locale: string }) {
       /* ignore */
     }
     updateConsent(analytics);
-    // L'evento consent_choice viene emesso DOPO updateConsent. Se l'utente
-    // ha negato analytics, il gtag.js droppa l'evento e in GA4 lo vediamo
-    // come "non emesso", è semanticamente corretto (chi nega analytics non
-    // vuole essere tracciato neanche per misurare il rifiuto).
+    // Il conteggio aggregato parte SEMPRE, anche sul rifiuto: e' l'unico modo
+    // di conoscere il denominatore. Non traccia la persona, conta la scelta.
+    reportConsent(action, locale);
+    // consent_choice resta per continuita' con lo storico GA4. Se l'utente ha
+    // negato, gtag non lo riporta: e' atteso, e per questo esiste il beacon.
     trackEvent('consent_choice', { action, analytics: analytics ? 'granted' : 'denied' });
     setVisible(false);
     setModalOpen(false);
   }
+  persistRef.current = persist;
 
   if (!visible) return null;
 
   return (
     <>
-      {/* Banner principale */}
+      {/* Scelta obbligata (20/08/2026).
+          NON e' un cookie wall: rifiutare da' accesso identico al sito, quindi
+          il consenso resta libero (art. 4 n. 11 e art. 7 par. 4 GDPR, EDPB
+          05/2020). L'overlay serve solo a impedire che la scelta venga
+          ignorata, perche' chi ignora resta in 'denied' e per noi diventa
+          invisibile.
+          La X in alto a destra e' li' per le Linee guida cookie del Garante
+          (10/06/2021, provv. 231): deve esistere un comando, di pari evidenza
+          visiva, per chiudere il banner SENZA prestare consenso. Vale come
+          rifiuto e viene ricordata come le altre scelte, quindi il banner non
+          si ripresenta. */}
       {!modalOpen && (
         <div
           role="dialog"
-          aria-live="polite"
+          aria-modal="true"
           aria-label={t.modalTitle}
           style={{
-            // Barra sottile a filo del bordo inferiore: copre il meno possibile
-            // (il vecchio formato a card flottante nascondeva la CTA hero su mobile).
             position: 'fixed',
-            bottom: 0,
-            left: 0,
-            right: 0,
+            inset: 0,
             zIndex: 9999,
-            background: 'rgba(15, 23, 42, 0.97)',
-            backdropFilter: 'blur(12px)',
-            WebkitBackdropFilter: 'blur(12px)',
-            borderTop: '1px solid rgba(255,255,255,0.08)',
-            padding: '8px 16px',
+            background: 'rgba(15, 23, 42, 0.6)',
+            backdropFilter: 'blur(4px)',
+            WebkitBackdropFilter: 'blur(4px)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: 16,
           }}
         >
           <div
             style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'space-between',
-              gap: 12,
-              flexWrap: 'wrap',
-              maxWidth: 1120,
-              margin: '0 auto',
+              position: 'relative',
+              maxWidth: 460,
+              width: '100%',
+              background: 'rgba(15, 23, 42, 0.98)',
+              borderRadius: 20,
+              border: '1px solid rgba(255,255,255,0.08)',
+              padding: '26px 24px 22px',
+              boxShadow: '0 32px 80px rgba(15, 23, 42, 0.5)',
+              color: '#e2e8f0',
+              fontFamily: 'var(--font-inter, Inter, sans-serif)',
             }}
           >
-            <p
+            {/* Rifiuto a un clic, stessa evidenza visiva dei pulsanti. */}
+            <button
+              type="button"
+              aria-label={t.closeRefuse}
+              title={t.closeRefuse}
+              onClick={() => persist(false, 'dismissed_x')}
               style={{
-                margin: 0,
-                fontFamily: 'var(--font-inter, Inter, sans-serif)',
-                fontSize: '0.8rem',
+                position: 'absolute',
+                top: 12,
+                right: 12,
+                width: 32,
+                height: 32,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                borderRadius: 10,
+                border: '1px solid rgba(148,163,184,0.35)',
+                background: 'transparent',
                 color: '#cbd5e1',
-                lineHeight: 1.4,
-                flex: '1 1 240px',
-                minWidth: 0,
+                fontSize: 18,
+                lineHeight: 1,
+                cursor: 'pointer',
               }}
             >
-              🍪 {t.body}
+              &times;
+            </button>
+
+            <h2
+              style={{
+                margin: '0 0 8px 0',
+                fontSize: '1.02rem',
+                fontWeight: 700,
+                color: 'white',
+                paddingRight: 40,
+              }}
+            >
+              🍪 {t.modalTitle}
+            </h2>
+            <p style={{ margin: '0 0 16px 0', fontSize: '0.84rem', color: '#cbd5e1', lineHeight: 1.5 }}>
+              {t.body}{' '}
+              <a
+                href={`/${locale}/cookies/`}
+                style={{ color: '#8FC436', textDecoration: 'underline', textUnderlineOffset: 3 }}
+              >
+                {t.policyLabel}
+              </a>
             </p>
-            <div style={{ display: 'flex', gap: 6, flexShrink: 0, flexWrap: 'wrap' }}>
+
+            <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
               <button
                 type="button"
                 onClick={() => persist(false, 'necessary_only')}
-                style={btnSecondaryStyle}
+                style={{ ...btnChoiceBase, ...btnChoiceSecondary }}
               >
                 {t.necessaryOnly}
               </button>
               <button
                 type="button"
-                onClick={() => setModalOpen(true)}
-                style={btnGhostStyle}
-              >
-                {t.customize}
-              </button>
-              <button
-                type="button"
                 onClick={() => persist(true, 'accept_all')}
-                style={btnPrimaryStyle}
+                style={{ ...btnChoiceBase, ...btnChoicePrimary }}
               >
                 {t.acceptAll}
+              </button>
+            </div>
+
+            <div
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                gap: 12,
+                marginTop: 14,
+                flexWrap: 'wrap',
+              }}
+            >
+              <p style={{ margin: 0, fontSize: '0.7rem', color: '#94a3b8', lineHeight: 1.4, flex: '1 1 200px' }}>
+                {t.dismissHint}
+              </p>
+              <button type="button" onClick={() => setModalOpen(true)} style={btnGhostStyle}>
+                {t.customize}
               </button>
             </div>
           </div>
@@ -533,6 +683,32 @@ function Toggle({
     </button>
   );
 }
+
+/* Accetta e rifiuta devono costare lo stesso clic e pesare lo stesso a
+   schermo (EDPB 05/2020, Linee guida Garante 231/2021): stessa dimensione,
+   stesso font-weight, stesso raggio. Cambia solo il colore. */
+const btnChoiceBase: React.CSSProperties = {
+  flex: '1 1 140px',
+  padding: '11px 16px',
+  borderRadius: 12,
+  fontFamily: 'var(--font-inter, Inter, sans-serif)',
+  fontSize: '0.85rem',
+  fontWeight: 700,
+  cursor: 'pointer',
+  transition: 'all 180ms ease',
+};
+
+const btnChoicePrimary: React.CSSProperties = {
+  border: '1px solid #8FC436',
+  background: '#8FC436',
+  color: '#0f172a',
+};
+
+const btnChoiceSecondary: React.CSSProperties = {
+  border: '1px solid rgba(148,163,184,0.45)',
+  background: 'transparent',
+  color: '#e2e8f0',
+};
 
 const btnPrimaryStyle: React.CSSProperties = {
   padding: '6px 14px',
