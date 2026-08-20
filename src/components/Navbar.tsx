@@ -224,7 +224,7 @@ export default function Navbar() {
         <a className="big" href={getLink('/confronto')}>{dict.compare}</a>
         <a className="big" href={getLink('/risorse')}>{dict.resources}</a>
         <a className="big" href={getLink('/contact')}>{dict.contact}</a>
-        <a className="big" href="/blog">{dict.blog}</a>
+        <a className="big" href={getLink('/blog')}>{dict.blog}</a>
         <p className="kk k">{dict.products}</p>
         <div className="sub">
           {products.map((p) => <a key={p.name} href={p.href}>{p.name}</a>)}

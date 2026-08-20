@@ -3,6 +3,8 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { trackEvent } from '@/lib/analytics';
+import { localizePath } from '@/lib/i18n/locale-routing';
+import type { AppLocale } from '@/lib/i18n/config';
 
 interface ArticleSidebarProps {
   headings: Array<{ id: string; text: string; level: number }>;
@@ -214,7 +216,7 @@ export default function ArticleSidebar({ headings, locale, categories = [], date
       )}
 
       {/* Prodotto collegato alla categoria dell'articolo */}
-      <Link href={`/${locale}${product.href}`} className="panel" style={{ display: 'block', padding: '22px 20px', marginTop: '30px' }}>
+      <Link href={localizePath(product.href, locale as AppLocale)} className="panel" style={{ display: 'block', padding: '22px 20px', marginTop: '30px' }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={product.logo}

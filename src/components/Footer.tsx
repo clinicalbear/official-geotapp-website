@@ -113,7 +113,7 @@ export default function Footer() {
             <Link href={getLink('/blog')}>{t.blog}</Link>
             <Link href={getLink('/guida')}>{t.guide}</Link>
             <Link href={getLink('/roi-calculator')}>{t.roi}</Link>
-            <Link href={getLink('/demo')}>{t.demo}</Link>
+            <Link href={getLink('/trial')}>{t.demo}</Link>
           </div>
 
           <div>

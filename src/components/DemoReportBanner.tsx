@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { ShieldCheck, Download } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { getDictionary } from '@/lib/i18n/dictionaries';
-import { getLocaleFromPathname } from '@/lib/i18n/locale-routing';
+import { DEFAULT_LOCALE, getLocaleFromPathname, localizePath } from '@/lib/i18n/locale-routing';
 
 const DEMO_REPORT_ID = 'GT-2026-0322-4472';
 const DEMO_ZIP_URL =
@@ -58,7 +58,7 @@ export default function DemoReportBanner() {
           {d.btn_download}
         </a>
         <Link
-          href={`/${locale}/products/geotapp-verifier`}
+          href={localizePath('/products/geotapp-verifier', locale ?? DEFAULT_LOCALE)}
           className="flex items-center justify-center gap-2 px-5 py-2.5 text-emerald-600 font-semibold rounded-xl text-sm border border-emerald-200 hover:bg-emerald-50 transition-all"
         >
           <ShieldCheck size={16} />
