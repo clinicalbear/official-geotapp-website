@@ -19,9 +19,20 @@ import { rateLimitOk, clientIp } from '@/lib/rate-limit';
  * come arriva a qualsiasi richiesta HTTP, viene usato in memoria per il
  * rate limit e non viene mai scritto.
  *
- * DOVE FINISCE: KV namespace CONSENT_STATS, una chiave per giorno.
- *   d:2026-08-20 -> {"IT":{"shown":12,"accept_all":7,"necessary_only":4,"dismissed_x":1}}
- * Lettura: npx wrangler kv key get --remote --binding CONSENT_STATS d:2026-08-20
+ * DOVE FINISCE: KV namespace CONSENT_STATS, UNA CHIAVE PER EVENTO, valore
+ * vuoto, il conteggio sta nel nome:
+ *   e:2026-08-20:IT:it:accept_all:<uuid>
+ * Il primo tentativo era una chiave al giorno con dentro i contatori, ma
+ * leggi-somma-riscrivi su KV perde gli incrementi concorrenti: misurato in
+ * produzione il 20/08/2026, sei richieste ravvicinate contate cinque. Con una
+ * scrittura per evento non c'e' niente da sovrascrivere. La lettura aggrega i
+ * nomi delle chiavi (scripts/fetch_consent_stats.py nella skill /google).
+ *
+ * LIMITE: il piano Free consente 1000 scritture KV al giorno. Ai volumi
+ * attuali (decine) siamo larghi. Se il banner arrivasse a comparire mille
+ * volte al giorno, questo va spostato su un Durable Object. Se la quota si
+ * esaurisce la put fallisce, il catch la ingoia e il banner continua a
+ * funzionare: si perde il conteggio, non la scelta dell'utente.
  */
 
 const ACTIONS = new Set([
@@ -34,12 +45,9 @@ const ACTIONS = new Set([
   'dismissed_x',
 ]);
 
-type DayStats = Record<string, Record<string, number>>;
-
 /** Superficie KV minima: evita di dipendere dai global di workers-types,
  *  che non sono nei "types" del tsconfig. */
 type KvLike = {
-  get(key: string): Promise<string | null>;
   put(key: string, value: string, options?: { expirationTtl?: number }): Promise<void>;
 };
 
@@ -72,19 +80,13 @@ export async function POST(req: NextRequest) {
   if (!kv) return new NextResponse(null, { status: 204 });
 
   const country = (req.headers.get('cf-ipcountry') || 'XX').slice(0, 2).toUpperCase();
-  const key = `d:${new Date().toISOString().slice(0, 10)}`;
+  const day = new Date().toISOString().slice(0, 10);
+  const lang = locale.replace(/[^a-z-]/gi, '') || 'xx';
+  const key = `e:${day}:${country}:${lang}:${action}:${crypto.randomUUID()}`;
 
   try {
-    const raw = await kv.get(key);
-    const stats: DayStats = raw ? (JSON.parse(raw) as DayStats) : {};
-    const bucket = (stats[country] ??= {});
-    bucket[action] = (bucket[action] ?? 0) + 1;
-    if (locale) {
-      const lb = (stats[`lang:${locale}`] ??= {});
-      lb[action] = (lb[action] ?? 0) + 1;
-    }
     // 400 giorni: tiene un anno di confronti stagionali e poi si pulisce da solo.
-    await kv.put(key, JSON.stringify(stats), { expirationTtl: 400 * 24 * 60 * 60 });
+    await kv.put(key, '', { expirationTtl: 400 * 24 * 60 * 60 });
   } catch {
     return new NextResponse(null, { status: 204 });
   }
