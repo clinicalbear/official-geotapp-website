@@ -14,3 +14,7 @@
 .lp-verifica .vres dd{font-family:monospace}
 .lp-verifica .warn-list,.lp-verifica .err-list{margin-top:22px;padding-left:20px;font-size:14.5px;line-height:1.7}
 .lp-verifica .warn-list li,.lp-verifica .err-list li{list-style:disc}
+/* Il link per scaricare il verificatore offline deve sembrare un link: dentro il
+   riquadro grigio prendeva lo stesso colore del testo e nessuno lo cliccava. */
+.lp-verifica .vnotice a{color:var(--lime);text-decoration:underline;text-underline-offset:3px}
+.lp-verifica .vnotice a:hover{text-decoration-thickness:2px}
