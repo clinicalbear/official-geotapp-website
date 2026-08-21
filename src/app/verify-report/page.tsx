@@ -156,6 +156,23 @@ function VerificaReport() {
           </p>
         </div>
 
+        {/* Questa pagina fa il controllo sui nostri server. Va bene per comodita',
+            ma chi deve fidarsi di una prova non dovrebbe dipendere da chi l'ha
+            prodotta: per questo lo stesso verificatore si scarica e si esegue in
+            casa propria. */}
+        <div className="vnotice" style={{ marginTop: 22 }}>
+          <b>Preferisci non passare da noi?</b> Questa pagina esegue il controllo
+          sui nostri server. Lo stesso verificatore, identico, puoi scaricarlo ed
+          eseguirlo sul tuo computer: non contatta nessun sistema, non chiede un
+          account e non ha bisogno di collegamento a internet. Ti serve solo
+          Node.js 18 o superiore.{' '}
+          <a href="/geotapp-report-verifier-offline.zip" download>
+            Scarica il verificatore offline (90 KB)
+          </a>
+          . Dentro trovi le istruzioni e l&rsquo;impronta SHA-256 del file, per
+          controllare di aver ricevuto proprio il nostro.
+        </div>
+
         {esito?.error ? (
           <div className="errbox">{esito.error}</div>
         ) : null}
