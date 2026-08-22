@@ -150,9 +150,9 @@ function VerificaReport() {
         <div className="w">
           <h1>Verifica un report GeoTapp</h1>
           <p className="lede">
-            Il pacchetto firmato si verifica qui, oppure da soli con il verificatore
-            aperto: ricalcola le impronte di ogni evento e di ogni foto e controlla
-            la firma elettronica. Nessun file resta sui nostri server.
+            Carica il pacchetto firmato e questa pagina ricalcola le impronte di
+            ogni evento e di ogni foto e controlla la firma elettronica. Il
+            controllo gira nel tuo browser: il file non ci viene inviato.
           </p>
         </div>
       </section>
