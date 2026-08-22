@@ -1,4 +1,101 @@
-"use strict";
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GeoTapp · Verifica di un rapporto</title>
+<!--
+  Verificatore di rapporti GeoTapp, in un file solo.
+
+  Si apre con doppio clic. Non ha bisogno di installazione, di un account, di
+  collegamento a internet, ne' dei permessi di amministratore: sono le quattro
+  cose che impediscono a una persona in un ente pubblico di controllare da se'
+  un documento. Non c'e' nemmeno una riga di rete: il programma di verifica e'
+  scritto qui dentro, e il file scelto non lascia questo computer.
+
+  Serve anche a un'altra cosa: chi lo conserva puo' verificare il rapporto fra
+  dieci anni, anche se GeoTapp nel frattempo non esiste piu'.
+-->
+<style>
+  :root {
+    --inchiostro: #12140f;
+    --carta: #F2F0E9;
+    --tenue: rgba(242, 240, 233, .62);
+    --bordo: rgba(242, 240, 233, .18);
+    --lime: #8FC436;
+    --azzurro: #2DA4E4;
+    --verde-f: #EAF2EC; --verde-t: #144A27; --verde-b: #3F8C5A;
+    --ambra-f: #FBF1E3; --ambra-t: #7A4900; --ambra-b: #C98A28;
+    --rosso-f: #FAECEA; --rosso-t: #7C1F17; --rosso-b: #C65246;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--inchiostro); color: var(--carta);
+    font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    padding: 44px 20px 70px;
+  }
+  .w { max-width: 680px; margin: 0 auto; }
+  h1 { font-size: clamp(28px, 5vw, 42px); line-height: 1.05; margin: 0 0 14px; font-weight: 600; letter-spacing: -.02em; }
+  .lede { color: var(--tenue); margin: 0 0 30px; font-size: 15.5px; }
+  .lingue { text-align: right; margin-bottom: 18px; }
+  .lingue select {
+    background: transparent; color: var(--tenue); border: 1px solid var(--bordo);
+    padding: 5px 9px; border-radius: 6px; font-size: 13px; font-family: inherit;
+  }
+  .lingue option { background: var(--inchiostro); color: var(--carta); }
+  .zona {
+    border: 1px dashed var(--bordo); border-radius: 12px; padding: 40px 24px;
+    text-align: center; cursor: pointer; transition: border-color .15s, background .15s;
+  }
+  .zona:hover, .zona.sopra { border-color: var(--lime); background: rgba(143, 196, 54, .06); }
+  .zona b { display: block; font-size: 17px; margin-bottom: 6px; }
+  .zona span { color: var(--tenue); font-size: 14px; }
+  #scelta { display: none; }
+  .nome { margin-top: 16px; font-size: 14px; color: var(--tenue); word-break: break-all; }
+  button {
+    margin-top: 20px; width: 100%; padding: 15px; border: 0; border-radius: 999px;
+    background: var(--lime); color: #14311f; font: 600 16px inherit; cursor: pointer;
+  }
+  button:disabled { opacity: .35; cursor: default; }
+  .esito { margin-top: 30px; border-radius: 12px; padding: 24px; border-left: 6px solid; }
+  .esito h2 { margin: 0 0 8px; font-size: 21px; }
+  .esito p { margin: 0; font-size: 15px; }
+  .esito.valid { background: var(--verde-f); color: var(--verde-t); border-color: var(--verde-b); }
+  .esito.degraded { background: var(--ambra-f); color: var(--ambra-t); border-color: var(--ambra-b); }
+  .esito.invalid { background: var(--rosso-f); color: var(--rosso-t); border-color: var(--rosso-b); }
+  dl { display: grid; grid-template-columns: minmax(120px, auto) 1fr; gap: 9px 20px; margin: 22px 0 0; font-size: 14px; }
+  dt { color: var(--tenue); }
+  dd { margin: 0; word-break: break-all; }
+  .elenco { margin: 20px 0 0; padding-left: 20px; font-size: 14px; }
+  .elenco li { margin-bottom: 5px; }
+  .nota { margin-top: 34px; padding-top: 20px; border-top: 1px solid var(--bordo); color: var(--tenue); font-size: 13.5px; }
+  .nota b { color: var(--carta); }
+  .errore { margin-top: 26px; border: 1px solid var(--rosso-b); background: rgba(198, 82, 70, .12); color: #F3C9C4; padding: 18px; border-radius: 10px; font-size: 14.5px; }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+<div class="w">
+  <div class="lingue"><select id="lingua" aria-label="Lingua"></select></div>
+
+  <h1 id="t-titolo"></h1>
+  <p class="lede" id="t-intro"></p>
+
+  <div class="zona" id="zona" role="button" tabindex="0">
+    <b id="t-trascina"></b>
+    <span id="t-oppure"></span>
+    <div class="nome" id="nome"></div>
+  </div>
+  <input type="file" id="scelta" accept=".zip,application/zip">
+
+  <button id="vai" disabled></button>
+
+  <div id="uscita"></div>
+
+  <p class="nota" id="t-nota"></p>
+</div>
+
+<script>"use strict";
 var GeoTappVerifier = (() => {
   var __create = Object.create;
   var __defProp = Object.defineProperty;
@@ -5759,3 +5856,420 @@ LNmrFIBX8cXgPYWilkbIuy0+s+8Kts7r20MPs8ZhOnJjE2AKpVTgykv45Q==
   }
   return __toCommonJS(entry_exports);
 })();
+</script>
+<script>
+// ---------------------------------------------------------------------------
+// Testi. Le stesse undici lingue dei rapporti: chi riceve un documento deve
+// poterlo controllare nella propria, altrimenti la verifica resta un gesto di
+// fiducia verso chi gliel'ha mandato.
+// ---------------------------------------------------------------------------
+const T = {
+  it: {
+    nome: 'Italiano',
+    titolo: 'Verifica un rapporto GeoTapp',
+    intro: 'Apri il pacchetto che hai ricevuto e questo programma ricalcola le impronte di ogni evento e di ogni foto e controlla la firma elettronica. Non serve installare niente e non serve internet: il file non lascia questo computer.',
+    trascina: 'Trascina qui il pacchetto .zip',
+    oppure: 'oppure fai clic per sceglierlo',
+    vai: 'Verifica il documento',
+    corso: 'Verifica in corso…',
+    valid: 'Documento integro',
+    validSpiega: 'Tutte le impronte corrispondono e la firma elettronica è valida. Il pacchetto è quello originale: niente è stato cambiato.',
+    partial: 'Documento integro, senza sigillo',
+    partialSpiega: 'Le impronte corrispondono, ma il pacchetto non porta il sigillo di chiusura. I dati non risultano alterati; manca la firma che ne certifica la chiusura definitiva.',
+    legacy: 'Documento anteriore alle impronte',
+    legacySpiega: 'Questo rapporto è stato prodotto prima che venissero introdotte le impronte. È leggibile, ma non si può ricalcolare fino in fondo.',
+    invalid: 'Documento non integro',
+    invalidSpiega: 'Qualcosa non torna: una catena interrotta o un’impronta che non corrisponde. Il pacchetto non è identico a quello emesso. Sotto trovi il punto preciso.',
+    firma: 'Firma elettronica', sigillo: 'Sigillo', emesso: 'Emesso da',
+    azienda: 'Azienda', identificativo: 'Identificativo', eventi: 'Eventi e foto',
+    fVerified: 'verificata', fInvalid: 'non valida', fAbsent: 'assente',
+    sSealed: 'presente', sHash: 'solo impronte', sAbsent: 'assente',
+    problemi: 'Cosa non torna', avvisi: 'Da sapere',
+    nonZip: 'Il file deve essere il pacchetto .zip che hai ricevuto.',
+    rotto: 'Non sono riuscito a leggere il pacchetto',
+    nota: '<b>Cosa viene controllato.</b> L’impronta di ogni evento e il suo legame con quello precedente, l’impronta della sequenza temporale, quella dell’insieme delle foto, l’impronta complessiva del rapporto, i byte reali di ogni immagine contenuta nel pacchetto e infine il sigillo di chiusura, con firma ECDSA P-256. La chiave pubblica è dentro questo file: la verifica resta possibile anche fra molti anni, e anche se GeoTapp non ci fosse più.'
+  },
+  en: {
+    nome: 'English',
+    titolo: 'Verify a GeoTapp report',
+    intro: 'Open the package you received and this program recomputes the fingerprint of every event and every photo and checks the electronic signature. Nothing to install, no internet needed: the file never leaves this computer.',
+    trascina: 'Drop the .zip package here',
+    oppure: 'or click to choose it',
+    vai: 'Verify the document',
+    corso: 'Verifying…',
+    valid: 'Document intact',
+    validSpiega: 'Every fingerprint matches and the electronic signature is valid. This is the original package: nothing has been changed.',
+    partial: 'Document intact, no seal',
+    partialSpiega: 'The fingerprints match, but the package carries no closing seal. The data is unaltered; what is missing is the signature certifying final closure.',
+    legacy: 'Document predates fingerprinting',
+    legacySpiega: 'This report was produced before fingerprints were introduced. It is readable, but it cannot be fully recomputed.',
+    invalid: 'Document not intact',
+    invalidSpiega: 'Something does not add up: a broken chain or a fingerprint that does not match. This package is not identical to the one issued. The exact point is below.',
+    firma: 'Electronic signature', sigillo: 'Seal', emesso: 'Issued by',
+    azienda: 'Company', identificativo: 'Identifier', eventi: 'Events and photos',
+    fVerified: 'verified', fInvalid: 'invalid', fAbsent: 'absent',
+    sSealed: 'present', sHash: 'fingerprints only', sAbsent: 'absent',
+    problemi: 'What does not add up', avvisi: 'Worth knowing',
+    nonZip: 'The file must be the .zip package you received.',
+    rotto: 'I could not read the package',
+    nota: '<b>What is checked.</b> The fingerprint of every event and its link to the previous one, the fingerprint of the whole timeline, the one of the photo bundle, the overall report fingerprint, the actual bytes of every image in the package, and finally the closing seal, with an ECDSA P-256 signature. The public key is inside this file: verification stays possible many years from now, and even if GeoTapp no longer exists.'
+  },
+  de: {
+    nome: 'Deutsch',
+    titolo: 'Einen GeoTapp-Bericht prüfen',
+    intro: 'Öffnen Sie das erhaltene Paket: dieses Programm berechnet die Prüfsumme jedes Ereignisses und jedes Fotos neu und prüft die elektronische Signatur. Keine Installation, kein Internet nötig – die Datei verlässt diesen Rechner nicht.',
+    trascina: 'Das .zip-Paket hierher ziehen',
+    oppure: 'oder klicken, um es auszuwählen',
+    vai: 'Dokument prüfen',
+    corso: 'Prüfung läuft …',
+    valid: 'Dokument unverändert',
+    validSpiega: 'Alle Prüfsummen stimmen und die elektronische Signatur ist gültig. Das Paket ist das ursprüngliche: nichts wurde geändert.',
+    partial: 'Dokument unverändert, ohne Siegel',
+    partialSpiega: 'Die Prüfsummen stimmen, das Paket trägt aber kein Abschlusssiegel. Die Daten sind unverändert; es fehlt die Signatur, die den endgültigen Abschluss bestätigt.',
+    legacy: 'Dokument aus der Zeit vor den Prüfsummen',
+    legacySpiega: 'Dieser Bericht entstand, bevor Prüfsummen eingeführt wurden. Er ist lesbar, aber nicht durchgängig nachrechenbar.',
+    invalid: 'Dokument nicht unverändert',
+    invalidSpiega: 'Etwas stimmt nicht: eine unterbrochene Kette oder eine abweichende Prüfsumme. Dieses Paket ist nicht identisch mit dem ausgestellten. Die genaue Stelle steht unten.',
+    firma: 'Elektronische Signatur', sigillo: 'Siegel', emesso: 'Ausgestellt von',
+    azienda: 'Unternehmen', identificativo: 'Kennung', eventi: 'Ereignisse und Fotos',
+    fVerified: 'geprüft', fInvalid: 'ungültig', fAbsent: 'nicht vorhanden',
+    sSealed: 'vorhanden', sHash: 'nur Prüfsummen', sAbsent: 'nicht vorhanden',
+    problemi: 'Was nicht stimmt', avvisi: 'Zur Kenntnis',
+    nonZip: 'Die Datei muss das erhaltene .zip-Paket sein.',
+    rotto: 'Das Paket konnte nicht gelesen werden',
+    nota: '<b>Was geprüft wird.</b> Die Prüfsumme jedes Ereignisses und dessen Verkettung mit dem vorhergehenden, die Prüfsumme des gesamten Zeitverlaufs, die des Fotobündels, die Gesamtprüfsumme des Berichts, die tatsächlichen Bilddaten jedes im Paket enthaltenen Fotos und schließlich das Abschlusssiegel mit ECDSA-P-256-Signatur. Der öffentliche Schlüssel steckt in dieser Datei: die Prüfung bleibt auch in vielen Jahren möglich, und selbst dann, wenn es GeoTapp nicht mehr gibt.'
+  },
+  fr: {
+    nome: 'Français',
+    titolo: 'Vérifier un rapport GeoTapp',
+    intro: 'Ouvrez le paquet reçu : ce programme recalcule l’empreinte de chaque événement et de chaque photo et contrôle la signature électronique. Rien à installer, pas besoin d’internet : le fichier ne quitte pas cet ordinateur.',
+    trascina: 'Déposez ici le paquet .zip',
+    oppure: 'ou cliquez pour le choisir',
+    vai: 'Vérifier le document',
+    corso: 'Vérification en cours…',
+    valid: 'Document intact',
+    validSpiega: 'Toutes les empreintes correspondent et la signature électronique est valide. C’est le paquet d’origine : rien n’a été modifié.',
+    partial: 'Document intact, sans sceau',
+    partialSpiega: 'Les empreintes correspondent, mais le paquet ne porte pas de sceau de clôture. Les données ne sont pas altérées ; il manque la signature qui atteste la clôture définitive.',
+    legacy: 'Document antérieur aux empreintes',
+    legacySpiega: 'Ce rapport a été produit avant l’introduction des empreintes. Il est lisible, mais il ne peut pas être recalculé entièrement.',
+    invalid: 'Document non intact',
+    invalidSpiega: 'Quelque chose ne va pas : une chaîne rompue ou une empreinte qui ne correspond pas. Ce paquet n’est pas identique à celui qui a été émis. Le point précis figure ci-dessous.',
+    firma: 'Signature électronique', sigillo: 'Sceau', emesso: 'Émis par',
+    azienda: 'Entreprise', identificativo: 'Identifiant', eventi: 'Événements et photos',
+    fVerified: 'vérifiée', fInvalid: 'invalide', fAbsent: 'absente',
+    sSealed: 'présent', sHash: 'empreintes seules', sAbsent: 'absent',
+    problemi: 'Ce qui ne va pas', avvisi: 'À savoir',
+    nonZip: 'Le fichier doit être le paquet .zip que vous avez reçu.',
+    rotto: 'Impossible de lire le paquet',
+    nota: '<b>Ce qui est contrôlé.</b> L’empreinte de chaque événement et son lien avec le précédent, l’empreinte de toute la chronologie, celle de l’ensemble des photos, l’empreinte globale du rapport, les octets réels de chaque image contenue dans le paquet et enfin le sceau de clôture, avec signature ECDSA P-256. La clé publique est à l’intérieur de ce fichier : la vérification reste possible dans de nombreuses années, et même si GeoTapp n’existe plus.'
+  },
+  es: {
+    nome: 'Español',
+    titolo: 'Verifica un informe de GeoTapp',
+    intro: 'Abre el paquete recibido: este programa recalcula la huella de cada evento y de cada foto y comprueba la firma electrónica. No hay que instalar nada ni hace falta internet: el archivo no sale de este ordenador.',
+    trascina: 'Arrastra aquí el paquete .zip',
+    oppure: 'o haz clic para elegirlo',
+    vai: 'Verificar el documento',
+    corso: 'Verificando…',
+    valid: 'Documento íntegro',
+    validSpiega: 'Todas las huellas coinciden y la firma electrónica es válida. Es el paquete original: no se ha cambiado nada.',
+    partial: 'Documento íntegro, sin sello',
+    partialSpiega: 'Las huellas coinciden, pero el paquete no lleva sello de cierre. Los datos no están alterados; falta la firma que certifica el cierre definitivo.',
+    legacy: 'Documento anterior a las huellas',
+    legacySpiega: 'Este informe se produjo antes de que se introdujeran las huellas. Se puede leer, pero no se puede recalcular del todo.',
+    invalid: 'Documento no íntegro',
+    invalidSpiega: 'Algo no cuadra: una cadena rota o una huella que no coincide. Este paquete no es idéntico al emitido. Abajo está el punto exacto.',
+    firma: 'Firma electrónica', sigillo: 'Sello', emesso: 'Emitido por',
+    azienda: 'Empresa', identificativo: 'Identificador', eventi: 'Eventos y fotos',
+    fVerified: 'verificada', fInvalid: 'no válida', fAbsent: 'ausente',
+    sSealed: 'presente', sHash: 'sólo huellas', sAbsent: 'ausente',
+    problemi: 'Qué no cuadra', avvisi: 'Conviene saber',
+    nonZip: 'El archivo debe ser el paquete .zip que has recibido.',
+    rotto: 'No he podido leer el paquete',
+    nota: '<b>Qué se comprueba.</b> La huella de cada evento y su enlace con el anterior, la huella de toda la cronología, la del conjunto de fotos, la huella global del informe, los bytes reales de cada imagen del paquete y, por último, el sello de cierre, con firma ECDSA P-256. La clave pública está dentro de este archivo: la verificación sigue siendo posible dentro de muchos años, incluso si GeoTapp ya no existe.'
+  },
+  pt: {
+    nome: 'Português',
+    titolo: 'Verificar um relatório GeoTapp',
+    intro: 'Abra o pacote recebido: este programa recalcula a impressão de cada evento e de cada foto e verifica a assinatura eletrónica. Não é preciso instalar nada nem ter internet: o ficheiro não sai deste computador.',
+    trascina: 'Arraste para aqui o pacote .zip',
+    oppure: 'ou clique para o escolher',
+    vai: 'Verificar o documento',
+    corso: 'A verificar…',
+    valid: 'Documento íntegro',
+    validSpiega: 'Todas as impressões correspondem e a assinatura eletrónica é válida. É o pacote original: nada foi alterado.',
+    partial: 'Documento íntegro, sem selo',
+    partialSpiega: 'As impressões correspondem, mas o pacote não tem selo de fecho. Os dados não estão alterados; falta a assinatura que certifica o fecho definitivo.',
+    legacy: 'Documento anterior às impressões',
+    legacySpiega: 'Este relatório foi produzido antes de existirem impressões. É legível, mas não pode ser recalculado por completo.',
+    invalid: 'Documento não íntegro',
+    invalidSpiega: 'Algo não bate certo: uma cadeia interrompida ou uma impressão que não corresponde. Este pacote não é igual ao emitido. O ponto exato está abaixo.',
+    firma: 'Assinatura eletrónica', sigillo: 'Selo', emesso: 'Emitido por',
+    azienda: 'Empresa', identificativo: 'Identificador', eventi: 'Eventos e fotos',
+    fVerified: 'verificada', fInvalid: 'inválida', fAbsent: 'ausente',
+    sSealed: 'presente', sHash: 'apenas impressões', sAbsent: 'ausente',
+    problemi: 'O que não bate certo', avvisi: 'A saber',
+    nonZip: 'O ficheiro tem de ser o pacote .zip que recebeu.',
+    rotto: 'Não consegui ler o pacote',
+    nota: '<b>O que é verificado.</b> A impressão de cada evento e a sua ligação ao anterior, a impressão de toda a cronologia, a do conjunto de fotos, a impressão global do relatório, os bytes reais de cada imagem contida no pacote e, por fim, o selo de fecho, com assinatura ECDSA P-256. A chave pública está dentro deste ficheiro: a verificação continua possível daqui a muitos anos, mesmo que a GeoTapp deixe de existir.'
+  },
+  nl: {
+    nome: 'Nederlands',
+    titolo: 'Een GeoTapp-rapport verifiëren',
+    intro: 'Open het ontvangen pakket: dit programma berekent de vingerafdruk van elke gebeurtenis en elke foto opnieuw en controleert de elektronische handtekening. Niets te installeren, geen internet nodig: het bestand verlaat deze computer niet.',
+    trascina: 'Sleep het .zip-pakket hierheen',
+    oppure: 'of klik om het te kiezen',
+    vai: 'Document verifiëren',
+    corso: 'Bezig met verifiëren…',
+    valid: 'Document ongewijzigd',
+    validSpiega: 'Alle vingerafdrukken kloppen en de elektronische handtekening is geldig. Dit is het originele pakket: er is niets veranderd.',
+    partial: 'Document ongewijzigd, zonder zegel',
+    partialSpiega: 'De vingerafdrukken kloppen, maar het pakket draagt geen afsluitzegel. De gegevens zijn niet gewijzigd; wat ontbreekt is de handtekening die de definitieve afsluiting bevestigt.',
+    legacy: 'Document van vóór de vingerafdrukken',
+    legacySpiega: 'Dit rapport is gemaakt voordat vingerafdrukken bestonden. Het is leesbaar, maar niet volledig herberekenbaar.',
+    invalid: 'Document niet ongewijzigd',
+    invalidSpiega: 'Er klopt iets niet: een onderbroken keten of een vingerafdruk die niet overeenkomt. Dit pakket is niet identiek aan het uitgegeven pakket. Het precieze punt staat hieronder.',
+    firma: 'Elektronische handtekening', sigillo: 'Zegel', emesso: 'Uitgegeven door',
+    azienda: 'Bedrijf', identificativo: 'Kenmerk', eventi: 'Gebeurtenissen en foto’s',
+    fVerified: 'geverifieerd', fInvalid: 'ongeldig', fAbsent: 'afwezig',
+    sSealed: 'aanwezig', sHash: 'alleen vingerafdrukken', sAbsent: 'afwezig',
+    problemi: 'Wat er niet klopt', avvisi: 'Goed om te weten',
+    nonZip: 'Het bestand moet het ontvangen .zip-pakket zijn.',
+    rotto: 'Het pakket kon niet gelezen worden',
+    nota: '<b>Wat er gecontroleerd wordt.</b> De vingerafdruk van elke gebeurtenis en de koppeling met de vorige, de vingerafdruk van de hele tijdlijn, die van de fotobundel, de totale vingerafdruk van het rapport, de werkelijke bytes van elke afbeelding in het pakket en ten slotte het afsluitzegel, met ECDSA P-256-handtekening. De publieke sleutel zit in dit bestand: verificatie blijft ook over vele jaren mogelijk, en zelfs als GeoTapp niet meer bestaat.'
+  },
+  da: {
+    nome: 'Dansk',
+    titolo: 'Verificér en GeoTapp-rapport',
+    intro: 'Åbn den modtagne pakke: dette program genberegner aftrykket for hver hændelse og hvert foto og kontrollerer den elektroniske signatur. Intet skal installeres, og internet er ikke nødvendigt: filen forlader ikke denne computer.',
+    trascina: 'Træk .zip-pakken hertil',
+    oppure: 'eller klik for at vælge den',
+    vai: 'Verificér dokumentet',
+    corso: 'Verificerer…',
+    valid: 'Dokumentet er uændret',
+    validSpiega: 'Alle aftryk stemmer, og den elektroniske signatur er gyldig. Det er den originale pakke: intet er ændret.',
+    partial: 'Dokumentet er uændret, uden segl',
+    partialSpiega: 'Aftrykkene stemmer, men pakken bærer intet afslutningssegl. Data er uændrede; det er signaturen for den endelige afslutning, der mangler.',
+    legacy: 'Dokument fra før aftrykkene',
+    legacySpiega: 'Denne rapport blev lavet, før aftryk blev indført. Den kan læses, men ikke genberegnes fuldt ud.',
+    invalid: 'Dokumentet er ikke uændret',
+    invalidSpiega: 'Noget stemmer ikke: en brudt kæde eller et aftryk, der ikke passer. Denne pakke er ikke identisk med den udstedte. Det præcise sted står nedenfor.',
+    firma: 'Elektronisk signatur', sigillo: 'Segl', emesso: 'Udstedt af',
+    azienda: 'Virksomhed', identificativo: 'Identifikator', eventi: 'Hændelser og fotos',
+    fVerified: 'verificeret', fInvalid: 'ugyldig', fAbsent: 'mangler',
+    sSealed: 'til stede', sHash: 'kun aftryk', sAbsent: 'mangler',
+    problemi: 'Hvad der ikke stemmer', avvisi: 'Værd at vide',
+    nonZip: 'Filen skal være den .zip-pakke, du har modtaget.',
+    rotto: 'Pakken kunne ikke læses',
+    nota: '<b>Hvad der kontrolleres.</b> Aftrykket for hver hændelse og dens kæde til den foregående, aftrykket for hele tidslinjen, for fotosamlingen, rapportens samlede aftryk, de faktiske bytes i hvert billede i pakken og til sidst afslutningsseglet med ECDSA P-256-signatur. Den offentlige nøgle ligger i denne fil: verifikation er mulig mange år frem, også hvis GeoTapp ikke findes mere.'
+  },
+  sv: {
+    nome: 'Svenska',
+    titolo: 'Verifiera en GeoTapp-rapport',
+    intro: 'Öppna det mottagna paketet: programmet räknar om avtrycket för varje händelse och varje foto och kontrollerar den elektroniska signaturen. Inget behöver installeras och internet behövs inte: filen lämnar inte den här datorn.',
+    trascina: 'Dra .zip-paketet hit',
+    oppure: 'eller klicka för att välja det',
+    vai: 'Verifiera dokumentet',
+    corso: 'Verifierar…',
+    valid: 'Dokumentet är oförändrat',
+    validSpiega: 'Alla avtryck stämmer och den elektroniska signaturen är giltig. Det är originalpaketet: ingenting har ändrats.',
+    partial: 'Dokumentet är oförändrat, utan sigill',
+    partialSpiega: 'Avtrycken stämmer, men paketet saknar avslutande sigill. Uppgifterna är oförändrade; det som saknas är signaturen som intygar slutlig stängning.',
+    legacy: 'Dokument från tiden före avtrycken',
+    legacySpiega: 'Rapporten skapades innan avtryck infördes. Den går att läsa men inte att räkna om fullt ut.',
+    invalid: 'Dokumentet är inte oförändrat',
+    invalidSpiega: 'Något stämmer inte: en bruten kedja eller ett avtryck som inte matchar. Paketet är inte identiskt med det utfärdade. Exakt var står nedan.',
+    firma: 'Elektronisk signatur', sigillo: 'Sigill', emesso: 'Utfärdat av',
+    azienda: 'Företag', identificativo: 'Identifierare', eventi: 'Händelser och foton',
+    fVerified: 'verifierad', fInvalid: 'ogiltig', fAbsent: 'saknas',
+    sSealed: 'finns', sHash: 'endast avtryck', sAbsent: 'saknas',
+    problemi: 'Vad som inte stämmer', avvisi: 'Bra att veta',
+    nonZip: 'Filen måste vara det .zip-paket du har fått.',
+    rotto: 'Paketet gick inte att läsa',
+    nota: '<b>Vad som kontrolleras.</b> Avtrycket för varje händelse och dess länk till den föregående, avtrycket för hela tidslinjen, för fotosamlingen, rapportens samlade avtryck, de faktiska byten i varje bild i paketet och slutligen det avslutande sigillet med ECDSA P-256-signatur. Den publika nyckeln finns i den här filen: verifiering går att göra många år framgent, även om GeoTapp inte finns kvar.'
+  },
+  nb: {
+    nome: 'Norsk',
+    titolo: 'Verifiser en GeoTapp-rapport',
+    intro: 'Åpne pakken du har mottatt: programmet regner ut avtrykket for hver hendelse og hvert bilde på nytt og kontrollerer den elektroniske signaturen. Ingenting skal installeres, og internett trengs ikke: filen forlater ikke denne maskinen.',
+    trascina: 'Dra .zip-pakken hit',
+    oppure: 'eller klikk for å velge den',
+    vai: 'Verifiser dokumentet',
+    corso: 'Verifiserer…',
+    valid: 'Dokumentet er uendret',
+    validSpiega: 'Alle avtrykk stemmer og den elektroniske signaturen er gyldig. Dette er den opprinnelige pakken: ingenting er endret.',
+    partial: 'Dokumentet er uendret, uten segl',
+    partialSpiega: 'Avtrykkene stemmer, men pakken har ikke avslutningssegl. Dataene er uendret; det som mangler er signaturen som bekrefter endelig avslutning.',
+    legacy: 'Dokument fra før avtrykkene',
+    legacySpiega: 'Rapporten ble laget før avtrykk ble innført. Den kan leses, men ikke regnes helt ut på nytt.',
+    invalid: 'Dokumentet er ikke uendret',
+    invalidSpiega: 'Noe stemmer ikke: en brutt kjede eller et avtrykk som ikke passer. Pakken er ikke identisk med den utstedte. Nøyaktig hvor står nedenfor.',
+    firma: 'Elektronisk signatur', sigillo: 'Segl', emesso: 'Utstedt av',
+    azienda: 'Selskap', identificativo: 'Identifikator', eventi: 'Hendelser og bilder',
+    fVerified: 'verifisert', fInvalid: 'ugyldig', fAbsent: 'mangler',
+    sSealed: 'finnes', sHash: 'bare avtrykk', sAbsent: 'mangler',
+    problemi: 'Hva som ikke stemmer', avvisi: 'Verdt å vite',
+    nonZip: 'Filen må være .zip-pakken du har mottatt.',
+    rotto: 'Klarte ikke å lese pakken',
+    nota: '<b>Hva som kontrolleres.</b> Avtrykket for hver hendelse og koblingen til den forrige, avtrykket for hele tidslinjen, for bildesamlingen, rapportens samlede avtrykk, de faktiske bytene i hvert bilde i pakken og til slutt avslutningsseglet med ECDSA P-256-signatur. Den offentlige nøkkelen ligger i denne filen: verifisering er mulig mange år fram i tid, også hvis GeoTapp ikke finnes lenger.'
+  },
+  ru: {
+    nome: 'Русский',
+    titolo: 'Проверка отчёта GeoTapp',
+    intro: 'Откройте полученный пакет: программа заново вычислит отпечаток каждого события и каждого фото и проверит электронную подпись. Устанавливать ничего не нужно, интернет не требуется: файл не покидает этот компьютер.',
+    trascina: 'Перетащите сюда пакет .zip',
+    oppure: 'или нажмите, чтобы выбрать',
+    vai: 'Проверить документ',
+    corso: 'Идёт проверка…',
+    valid: 'Документ не изменён',
+    validSpiega: 'Все отпечатки совпадают, электронная подпись действительна. Это исходный пакет: ничего не менялось.',
+    partial: 'Документ не изменён, без печати',
+    partialSpiega: 'Отпечатки совпадают, но на пакете нет завершающей печати. Данные не изменены; не хватает подписи о закрытии.',
+    legacy: 'Документ до введения отпечатков',
+    legacySpiega: 'Отчёт создан до появления отпечатков. Его можно читать, но нельзя проверить полностью.',
+    invalid: 'Документ изменён',
+    invalidSpiega: 'Что-то не сходится: разорвана цепочка или отпечаток не совпадает. Пакет не идентичен выданному. Точное место — ниже.',
+    firma: 'Электронная подпись', sigillo: 'Печать', emesso: 'Выдан',
+    azienda: 'Компания', identificativo: 'Идентификатор', eventi: 'События и фото',
+    fVerified: 'проверена', fInvalid: 'недействительна', fAbsent: 'отсутствует',
+    sSealed: 'есть', sHash: 'только отпечатки', sAbsent: 'отсутствует',
+    problemi: 'Что не сходится', avvisi: 'Стоит знать',
+    nonZip: 'Файл должен быть полученным пакетом .zip.',
+    rotto: 'Не удалось прочитать пакет',
+    nota: '<b>Что проверяется.</b> Отпечаток каждого события и его связь с предыдущим, отпечаток всей хронологии, отпечаток набора фото, общий отпечаток отчёта, реальные байты каждого изображения и наконец завершающая печать с подписью ECDSA P-256. Открытый ключ находится внутри этого файла: проверка останется возможной и через много лет, даже если GeoTapp больше не будет.'
+  }
+};
+
+// --- lingua ----------------------------------------------------------------
+const LINGUE = Object.keys(T);
+function linguaIniziale() {
+  for (const l of (navigator.languages || [navigator.language || 'it'])) {
+    const corta = String(l).slice(0, 2).toLowerCase();
+    const chiave = corta === 'no' ? 'nb' : corta;
+    if (T[chiave]) return chiave;
+  }
+  return 'it';
+}
+let L = linguaIniziale();
+
+const sel = document.getElementById('lingua');
+for (const k of LINGUE) {
+  const o = document.createElement('option');
+  o.value = k; o.textContent = T[k].nome;
+  sel.appendChild(o);
+}
+sel.value = L;
+sel.addEventListener('change', () => { L = sel.value; scriviTesti(); if (ultimo) mostra(ultimo); });
+
+function scriviTesti() {
+  const t = T[L];
+  document.documentElement.lang = L;
+  document.title = 'GeoTapp · ' + t.titolo;
+  document.getElementById('t-titolo').textContent = t.titolo;
+  document.getElementById('t-intro').textContent = t.intro;
+  document.getElementById('t-trascina').textContent = t.trascina;
+  document.getElementById('t-oppure').textContent = t.oppure;
+  document.getElementById('t-nota').innerHTML = t.nota;
+  const b = document.getElementById('vai');
+  if (!b.dataset.corso) b.textContent = t.vai;
+}
+
+// --- interazione -----------------------------------------------------------
+const zona = document.getElementById('zona');
+const scelta = document.getElementById('scelta');
+const bottone = document.getElementById('vai');
+const uscita = document.getElementById('uscita');
+const nome = document.getElementById('nome');
+let file = null;
+let ultimo = null;
+
+zona.addEventListener('click', () => scelta.click());
+zona.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); scelta.click(); } });
+scelta.addEventListener('change', () => prendi(scelta.files[0]));
+['dragenter', 'dragover'].forEach((e) =>
+  zona.addEventListener(e, (ev) => { ev.preventDefault(); zona.classList.add('sopra'); }));
+['dragleave', 'drop'].forEach((e) =>
+  zona.addEventListener(e, (ev) => { ev.preventDefault(); zona.classList.remove('sopra'); }));
+zona.addEventListener('drop', (ev) => prendi(ev.dataTransfer.files[0]));
+
+function prendi(f) {
+  if (!f) return;
+  file = f;
+  nome.textContent = f.name;
+  uscita.innerHTML = '';
+  ultimo = null;
+  bottone.disabled = !/\.zip$/i.test(f.name);
+  if (bottone.disabled) uscita.innerHTML = '<div class="errore">' + esc(T[L].nonZip) + '</div>';
+}
+
+bottone.addEventListener('click', async () => {
+  if (!file) return;
+  bottone.disabled = true;
+  bottone.dataset.corso = '1';
+  bottone.textContent = T[L].corso;
+  uscita.innerHTML = '';
+  try {
+    const byte = new Uint8Array(await file.arrayBuffer());
+    ultimo = await GeoTappVerifier.verificaPacchetto(byte);
+    mostra(ultimo);
+  } catch (err) {
+    uscita.innerHTML = '<div class="errore">' + esc(T[L].rotto + ': ' + (err && err.message ? err.message : '')) + '</div>';
+  } finally {
+    delete bottone.dataset.corso;
+    bottone.textContent = T[L].vai;
+    bottone.disabled = false;
+  }
+});
+
+function esc(s) {
+  return String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+}
+
+function mostra(r) {
+  const t = T[L];
+  // Il titolo segue il livello, non solo lo stato: "integro ma senza sigillo"
+  // e "prodotto prima delle impronte" sono due cose diverse, e chiamarle
+  // entrambe "con riserve" lascerebbe la persona senza sapere cosa fare.
+  let chiave = r.status === 'valid' ? 'valid' : r.status === 'invalid' ? 'invalid' : 'partial';
+  if (r.integrityLevel === 'legacy') chiave = 'legacy';
+  if (r.integrityLevel === 'partial' && r.status !== 'invalid') chiave = 'partial';
+  const classe = r.status === 'valid' ? 'valid' : r.status === 'invalid' ? 'invalid' : 'degraded';
+
+  const firma = { verified: t.fVerified, invalid: t.fInvalid, absent: t.fAbsent }[r.signatureStatus] || r.signatureStatus;
+  const sigillo = { sealed: t.sSealed, 'hash-only': t.sHash, absent: t.sAbsent }[r.sealStatus] || r.sealStatus;
+  const id = r.companyIdentity || {};
+  const s = r.summary || {};
+
+  let html = '<div class="esito ' + classe + '">' +
+    '<h2>' + esc(t[chiave]) + '</h2>' +
+    '<p>' + esc(t[chiave + 'Spiega']) + '</p></div>';
+
+  html += '<dl>' +
+    riga(t.firma, firma) +
+    riga(t.sigillo, sigillo) +
+    (r.issuerDisplayName ? riga(t.emesso, r.issuerDisplayName) : '') +
+    (id.companyName ? riga(t.azienda, id.companyName) : '') +
+    (id.reportId ? riga(t.identificativo, id.reportId) : '') +
+    riga(t.eventi, (s.eventsCount || 0) + ' · ' + (s.photosCount || 0)) +
+    '</dl>';
+
+  if (r.errors && r.errors.length) {
+    html += '<p style="margin:22px 0 0;font-weight:600">' + esc(t.problemi) + '</p><ul class="elenco">' +
+      r.errors.map((e) => '<li>' + esc(e) + '</li>').join('') + '</ul>';
+  }
+  if (r.warnings && r.warnings.length) {
+    html += '<p style="margin:22px 0 0;font-weight:600">' + esc(t.avvisi) + '</p><ul class="elenco">' +
+      r.warnings.map((e) => '<li>' + esc(e) + '</li>').join('') + '</ul>';
+  }
+  uscita.innerHTML = html;
+}
+
+function riga(k, v) {
+  return '<dt>' + esc(k) + '</dt><dd>' + esc(v) + '</dd>';
+}
+
+scriviTesti();
+</script>
+</body>
+</html>
