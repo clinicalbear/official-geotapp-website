@@ -207,19 +207,18 @@ function VerificaReport() {
           tuo browser: le impronte e la firma elettronica le ricalcola questo
           computer, non i nostri server. Non ci arriva il file, non ci arrivano
           le foto.{' '}
-          <a href="/verificatore-geotapp.html" download>
+          <a href="/geotapp-report-verifier-offline.zip" download>
             Puoi anche scaricare il verificatore
           </a>{' '}
-          e tenerlo. È un file solo: si apre con doppio clic, ci trascini dentro
-          il pacchetto e ti dice se è integro. Niente da installare, nessun
-          account, nessun collegamento a internet, e non servono i permessi di
-          amministratore. Serve a questo: fra dieci anni, anche se questa pagina
-          non ci fosse più, quel documento resta verificabile.{' '}
-          <a href="/geotapp-report-verifier-offline.zip" download>
-            Per chi lo vuole da riga di comando
-          </a>{' '}
-          c&rsquo;è lo stesso programma per Node.js, con le istruzioni e le
-          impronte SHA-256 per controllare di aver ricevuto proprio i nostri.
+          e tenerlo. Dentro l&rsquo;archivio c&rsquo;è{' '}
+          <span className="mono">verificatore-geotapp.html</span>: si apre con
+          doppio clic, ci trascini dentro il pacchetto e ti dice se è integro.
+          Niente da installare, nessun account, nessun collegamento a internet, e
+          non servono i permessi di amministratore. C&rsquo;è anche la versione
+          da riga di comando per Node.js, le istruzioni e le impronte SHA-256 per
+          controllare di aver ricevuto proprio i nostri file. Serve a questo: fra
+          dieci anni, anche se questa pagina non ci fosse più, quel documento
+          resta verificabile.
         </div>
 
         {esito?.error ? (
