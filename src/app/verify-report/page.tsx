@@ -72,6 +72,34 @@ export default function PaginaVerifica() {
   );
 }
 
+interface Verificatore {
+  verificaPacchetto: (byte: Uint8Array) => Promise<Esito>;
+}
+
+/**
+ * Carica il verificatore compilato per il browser, una volta sola.
+ *
+ * Si usa un tag `<script>` e non un `import()` dinamico per due motivi: il
+ * bundler proverebbe a risolvere `/verifier-geotapp.js` a compilazione e la
+ * build muore, e la via con `Function('return import(u)')` chiede
+ * `unsafe-eval`, che questo sito non concede. Sono 270 KB caricati solo
+ * quando qualcuno preme il pulsante, non a ogni apertura della pagina.
+ */
+function caricaVerificatore(): Promise<Verificatore> {
+  const g = window as unknown as { GeoTappVerifier?: Verificatore };
+  if (g.GeoTappVerifier) return Promise.resolve(g.GeoTappVerifier);
+  return new Promise((risolvi, rifiuta) => {
+    const tag = document.createElement('script');
+    tag.src = '/verifier-geotapp.js';
+    tag.onload = () => {
+      if (g.GeoTappVerifier) risolvi(g.GeoTappVerifier);
+      else rifiuta(new Error('verificatore caricato ma non disponibile'));
+    };
+    tag.onerror = () => rifiuta(new Error('verificatore non raggiungibile'));
+    document.head.appendChild(tag);
+  });
+}
+
 function VerificaReport() {
   const parametri = useSearchParams();
   const idStampato = parametri.get('id');
@@ -79,20 +107,35 @@ function VerificaReport() {
   const [inCorso, setInCorso] = useState(false);
   const [esito, setEsito] = useState<Esito | null>(null);
 
+  /**
+   * La verifica gira QUI, nel browser di chi legge, e il pacchetto non parte
+   * mai da questo computer.
+   *
+   * Prima si mandava il file a `/api/verify-report`, che lo verificava sui
+   * nostri server e rispondeva `verificationMode: "online"`. Funzionava, ma
+   * era la cosa che noi stessi scriviamo essere sbagliata: chi ha prodotto
+   * la prova non puo' essere anche l'unico che la ricontrolla. E per un
+   * committente pubblico caricare il pacchetto significa rimandarci foto e
+   * dati del personale.
+   *
+   * Il modulo e' lo stesso identico verificatore, compilato per il browser:
+   * le impronte e la firma le ricalcola la macchina di chi verifica.
+   */
   async function verifica() {
     if (!file || inCorso) return;
     setInCorso(true);
     setEsito(null);
     try {
-      const corpo = new FormData();
-      corpo.append('file', file);
-      const r = await fetch('/api/verify-report', {
-        method: 'POST',
-        body: corpo,
+      const byte = new Uint8Array(await file.arrayBuffer());
+      const verificatore = await caricaVerificatore();
+      setEsito(await verificatore.verificaPacchetto(byte));
+    } catch (err) {
+      const messaggio = err instanceof Error ? err.message : '';
+      setEsito({
+        error: messaggio
+          ? `Verifica non riuscita: ${messaggio}`
+          : 'Verifica non riuscita: controlla che il file sia il pacchetto .zip ricevuto.',
       });
-      setEsito((await r.json()) as Esito);
-    } catch {
-      setEsito({ error: 'Verifica non riuscita: riprova.' });
     } finally {
       setInCorso(false);
     }
@@ -151,26 +194,27 @@ function VerificaReport() {
             {inCorso ? 'Verifica in corso…' : 'Verifica il documento'}
           </button>
           <p className="hint">
-            Massimo 25 MB. Il file viene letto per il tempo della verifica e non
-            viene conservato.
+            Il file non lascia questo computer: la verifica avviene nel tuo
+            browser.
           </p>
         </div>
 
-        {/* Questa pagina fa il controllo sui nostri server. Va bene per comodita',
-            ma chi deve fidarsi di una prova non dovrebbe dipendere da chi l'ha
-            prodotta: per questo lo stesso verificatore si scarica e si esegue in
-            casa propria. */}
+        {/* Chi deve fidarsi di una prova non puo' dipendere da chi l'ha
+            prodotta. Per questo il controllo gira nel browser di chi legge, e
+            lo stesso verificatore si puo' portare via e conservare. */}
         <div className="vnotice" style={{ marginTop: 22 }}>
-          <b>Preferisci non passare da noi?</b> Questa pagina esegue il controllo
-          sui nostri server. Lo stesso verificatore, identico, puoi scaricarlo ed
-          eseguirlo sul tuo computer: non contatta nessun sistema, non chiede un
-          account e non ha bisogno di collegamento a internet. Ti serve solo
-          Node.js 18 o superiore.{' '}
+          <b>Il pacchetto non ci viene inviato.</b> Il controllo gira dentro il
+          tuo browser: le impronte e la firma elettronica le ricalcola questo
+          computer, non i nostri server. Non ci arriva il file, non ci arrivano
+          le foto.{' '}
           <a href="/geotapp-report-verifier-offline.zip" download>
-            Scarica il verificatore offline (90 KB)
-          </a>
-          . Dentro trovi le istruzioni e l&rsquo;impronta SHA-256 del file, per
-          controllare di aver ricevuto proprio il nostro.
+            Puoi anche scaricare il verificatore
+          </a>{' '}
+          e tenerlo: è lo stesso programma, gira da riga di comando con Node.js
+          18, senza account e senza collegamento a internet. Dentro trovi le
+          istruzioni e l&rsquo;impronta SHA-256 del file, per controllare di aver
+          ricevuto proprio il nostro. Serve a questo: fra dieci anni, anche senza
+          di noi, quel documento resta verificabile.
         </div>
 
         {esito?.error ? (
