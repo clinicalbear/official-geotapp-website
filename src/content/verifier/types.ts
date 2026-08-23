@@ -51,7 +51,8 @@ export interface VerifierCopy {
   download_badge: string;
   download_title: string;
   download_desc: string;
-  download_btn: string;
+  download_btn_cli: string;
+  download_btn_html: string;
   download_version: string;
   download_requirements: string;
   download_cli_title: string;

@@ -8,7 +8,9 @@ import {
   CheckCircle2,
   Database,
   Download,
+  FileCode,
   Smartphone,
+  Terminal,
   Upload,
   XCircle,
 } from 'lucide-react';
@@ -18,7 +20,13 @@ import DemoReportBanner from '@/components/DemoReportBanner';
 import type { AppLocale } from '@/lib/i18n/config';
 import type { VerifierCopy } from '@/content/verifier/types';
 
-const VERIFIER_DOWNLOAD_URL = '/downloads/report-verifier-0.2.1.zip';
+// Due file distinti, non uno zip: il .cjs si lancia con Node, l'.html si apre
+// con un doppio clic. Impacchettarli insieme (come nel vecchio
+// report-verifier-0.2.1.zip, che era addirittura il sorgente TypeScript del
+// pacchetto npm, non uno strumento pronto all'uso) costringeva chi cerca la
+// versione locale a scaricare anche la CLI che non gli serve, e viceversa.
+const VERIFIER_DOWNLOAD_CLI_URL = '/downloads/geotapp-report-verify.cjs';
+const VERIFIER_DOWNLOAD_HTML_URL = '/downloads/verificatore-geotapp.html';
 
 // Kicker "La prova" (stessa parola gia' approvata su HomeClient, L_COPY.la_prova)
 // e "Presenti su" non servono qui: Verifier non ha una sezione directory dedicata
@@ -154,7 +162,7 @@ export default function VerifierContent({ copy, locale }: VerifierContentProps) 
           </h1>
           <p className="lede">{copy.hero_subtitle}</p>
           <div className="acts">
-            <a className="b1" href={VERIFIER_DOWNLOAD_URL} download>
+            <a className="b1" href="#download">
               <Download size={18} style={{ display: 'inline', verticalAlign: '-3px', marginRight: 8 }} />{copy.hero_cta_download}
             </a>
             <Link className="b2" href={getLink('/contact')}>{copy.hero_cta_primary}</Link>
@@ -217,8 +225,11 @@ export default function VerifierContent({ copy, locale }: VerifierContentProps) 
           <h2 className="r">{copy.download_title}</h2>
           <p>{copy.download_desc}</p>
           <div className="acts" style={{ justifyContent: 'center', marginTop: 30 }}>
-            <a className="b1" href={VERIFIER_DOWNLOAD_URL} download>
-              <Download size={18} style={{ display: 'inline', verticalAlign: '-3px', marginRight: 8 }} />{copy.download_btn}
+            <a className="b1" href={VERIFIER_DOWNLOAD_HTML_URL} download>
+              <FileCode size={18} style={{ display: 'inline', verticalAlign: '-3px', marginRight: 8 }} />{copy.download_btn_html}
+            </a>
+            <a className="b1" href={VERIFIER_DOWNLOAD_CLI_URL} download>
+              <Terminal size={18} style={{ display: 'inline', verticalAlign: '-3px', marginRight: 8 }} />{copy.download_btn_cli}
             </a>
           </div>
           <p style={{ marginTop: 16, fontSize: 13, color: 'rgba(242,240,233,.5)' }}>{copy.download_version}</p>
@@ -288,7 +299,7 @@ console.log(result.integrityLevel);`}</pre>
       {/* COSA VERIFICA */}
       <section className="sec"><div className="w">
         <p className="kk k r" style={{ color: 'var(--seal)' }}>{copy.features_badge}</p>
-        <h2 className="r d1" style={{ marginTop: 14, marginBottom: 32, maxWidth: '22ch' }}>{copy.features_title}</h2>
+        <h2 className="r d1" style={{ marginTop: 14, maxWidth: '22ch' }}>{copy.features_title}</h2>
       </div>
         <div className="mods">
           {copy.features.map((feat, i) => (
@@ -372,7 +383,7 @@ console.log(result.integrityLevel);`}</pre>
           <h2 className="r">{copy.cta_title}</h2>
           <p className="r d1">{copy.cta_subtitle}</p>
           <div className="acts r d2">
-            <a className="b1" href={VERIFIER_DOWNLOAD_URL} download>
+            <a className="b1" href="#download">
               <Download size={18} style={{ display: 'inline', verticalAlign: '-3px', marginRight: 8 }} />{copy.cta_download}
             </a>
             <Link className="b2" href={getLink('/contact')}>{copy.cta_primary}</Link>

@@ -16,11 +16,11 @@
 .lp-prodotto-verifier .l-code-wrap { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 40px; }
 @media (max-width: 900px) { .lp-prodotto-verifier .l-code-wrap { grid-template-columns: 1fr; } }
 .lp-prodotto-verifier .l-code {
-  border-radius: 0; background: rgba(242, 240, 233, .06); border: 1px solid rgba(242, 240, 233, .16); overflow: hidden;
+  border-radius: 0; background: rgba(242, 240, 233, .06); overflow: hidden;
 }
 .lp-prodotto-verifier .l-code .hd {
   display: flex; align-items: center; gap: 8px; padding: 12px 16px;
-  border-bottom: 1px solid rgba(242, 240, 233, .16); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: rgba(242, 240, 233, .55);
+  font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: rgba(242, 240, 233, .55);
 }
 .lp-prodotto-verifier .l-code .hd i { width: 9px; height: 9px; border-radius: 50%; background: rgba(242, 240, 233, .25); display: block; }
 .lp-prodotto-verifier .l-code pre { margin: 0; padding: 20px; font-size: 13px; line-height: 1.6; color: var(--lime); overflow-x: auto; }
@@ -35,3 +35,18 @@
 @media (max-width: 700px) {
   .lp-prodotto-verifier .split { grid-template-columns: 1fr; gap: 30px; }
 }
+
+/* Piu' margine fra il titolo di sezione e il blocco sotto: il markup mette
+   la griglia .mods come sorella diretta di .w, senza nessuno spazio fra le
+   due (Mike, richiesta esplicita). */
+.lp-prodotto-verifier .w + .mods { margin-top: 56px; }
+
+/* Via tutti i bordi della pagina (Mike, richiesta esplicita): il giro sui
+   .mods l'ha gia' fatto lui in l-mockup.css (globale, tutto il sito). Qui
+   restano liste .rows/.l-who, FAQ ad accordion, box di codice CLI/API,
+   scoperti solo su questa pagina. Il contrasto fra i blocchi resta sul
+   colore di sfondo, non su una linea. */
+.lp-prodotto-verifier .rows { border-top: 0; }
+.lp-prodotto-verifier .rows li { border-bottom: 0; }
+.lp-prodotto-verifier details { border-top: 0; }
+.lp-prodotto-verifier details:last-of-type { border-bottom: 0; }
