@@ -27,6 +27,10 @@ jobs:
     env:
       CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
       CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+      # npm run deploy chiama gia' scripts/purge-cloudflare.mjs al suo interno
+      # (dopo wrangler deploy): senza questo, su CI il file locale col token
+      # non esiste e il purge veniva saltato in silenzio a ogni deploy.
+      CLOUDFLARE_PURGE_TOKEN: ${{ secrets.CLOUDFLARE_PURGE_TOKEN }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -51,18 +55,6 @@ jobs:
       - name: Healthcheck
         id: health
         run: bash ci/healthcheck.sh
-
-      # Senza questo step l'HTML in cache al bordo Cloudflare resta quello del
-      # deploy precedente per la durata dello stale-while-revalidate: punta ad
-      # asset /_next/static col vecchio hash, che il deploy nuovo non serve piu'
-      # (404) -> pagina senza CSS finche' la cache non si rinfresca da sola
-      # (un paio di refresh, empiricamente). Il purge sfratta subito l'HTML
-      # vecchio: vedi scripts/purge-cloudflare.mjs.
-      - name: Purge Cloudflare cache
-        if: ${{ steps.health.outcome == 'success' }}
-        env:
-          CLOUDFLARE_PURGE_TOKEN: ${{ secrets.CLOUDFLARE_PURGE_TOKEN }}
-        run: node scripts/purge-cloudflare.mjs
 
       - name: Rollback on failure
         if: ${{ failure() && steps.health.outcome == 'failure' }}
