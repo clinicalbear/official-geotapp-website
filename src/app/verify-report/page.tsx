@@ -200,25 +200,45 @@ function VerificaReport() {
         </div>
 
         {/* Chi deve fidarsi di una prova non puo' dipendere da chi l'ha
-            prodotta. Per questo il controllo gira nel browser di chi legge, e
-            lo stesso verificatore si puo' portare via e conservare. */}
+            prodotta. Per questo il controllo gira nel browser di chi legge. */}
         <div className="vnotice" style={{ marginTop: 22 }}>
-          <b>Il pacchetto non ci viene inviato.</b> Il controllo gira dentro il
-          tuo browser: le impronte e la firma elettronica le ricalcola questo
-          computer, non i nostri server. Non ci arriva il file, non ci arrivano
-          le foto.{' '}
-          <a href="/geotapp-report-verifier-offline.zip" download>
-            Puoi anche scaricare il verificatore
-          </a>{' '}
-          e tenerlo. Dentro l&rsquo;archivio c&rsquo;è{' '}
-          <span className="mono">verificatore-geotapp.html</span>: si apre con
-          doppio clic, ci trascini dentro il pacchetto e ti dice se è integro.
-          Niente da installare, nessun account, nessun collegamento a internet, e
-          non servono i permessi di amministratore. C&rsquo;è anche la versione
-          da riga di comando per Node.js, le istruzioni e le impronte SHA-256 per
-          controllare di aver ricevuto proprio i nostri file. Serve a questo: fra
-          dieci anni, anche se questa pagina non ci fosse più, quel documento
-          resta verificabile.
+          <b>Il pacchetto non ci viene inviato.</b> Il controllo qui sopra gira
+          dentro il tuo browser: le impronte e la firma elettronica le
+          ricalcola questo computer, non i nostri server. Non ci arriva il
+          file, non ci arrivano le foto.
+        </div>
+
+        {/* Bottone vero, non un link infilato in un paragrafo: nel vecchio
+            riquadro grigio prendeva lo stesso colore del testo e nessuno lo
+            cliccava. Chi scarica un .zip deve capire cos'è prima di
+            scaricarlo, non dopo: spiegazione, poi l'avviso che è un file
+            locale, poi il bottone. */}
+        <div className="voffline">
+          <h2>Il verificatore da tenere</h2>
+          <p>
+            È lo stesso controllo qui sopra, in un file solo che ti porti via:{' '}
+            <span className="mono">verificatore-geotapp.html</span>. Lo scarichi
+            una volta e resta tuo: si apre con un doppio clic come una pagina
+            qualsiasi, ci trascini dentro il pacchetto ricevuto e ti dice se è
+            integro. Dentro l&rsquo;archivio c&rsquo;è anche la versione da riga
+            di comando per Node.js, le istruzioni e le impronte SHA-256 per
+            controllare di aver ricevuto proprio i nostri file.
+          </p>
+          <p className="voffline-warn">
+            <b>È un file, non un programma da installare.</b> Non è un
+            eseguibile e non chiede permessi di amministratore: è una pagina
+            HTML che gira sul tuo computer, dentro il tuo browser, senza
+            bisogno di internet una volta scaricata. Non manda niente a noi.
+            Serve a questo: anche fra dieci anni, se questa pagina non ci fosse
+            più, il documento resta verificabile.
+          </p>
+          <a
+            href="/geotapp-report-verifier-offline.zip"
+            download
+            className="b1 voffline-btn"
+          >
+            Scarica il verificatore offline (.zip)
+          </a>
         </div>
 
         {esito?.error ? (

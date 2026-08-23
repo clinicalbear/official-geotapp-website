@@ -18,3 +18,13 @@
    riquadro grigio prendeva lo stesso colore del testo e nessuno lo cliccava. */
 .lp-verifica .vnotice a{color:var(--lime);text-decoration:underline;text-underline-offset:3px}
 .lp-verifica .vnotice a:hover{text-decoration-thickness:2px}
+/* Il verificatore offline: box a parte con spiegazione, avviso "è un file
+   locale" e bottone vero (.b1), non un link infilato nel paragrafo. */
+.lp-verifica .voffline{border:1px solid rgba(143,196,54,.35);padding:34px 36px;margin-top:30px}
+.lp-verifica .voffline h2{font-size:clamp(21px,2.4vw,30px);margin-bottom:18px;color:var(--paper)}
+.lp-verifica .voffline p{font-size:14.5px;line-height:1.7;color:rgba(242,240,233,.75);margin-bottom:20px}
+.lp-verifica .voffline .mono{font-family:monospace;color:var(--lime)}
+.lp-verifica .voffline-warn{border-left:3px solid var(--seal);padding-left:18px;color:rgba(242,240,233,.92)}
+.lp-verifica .voffline-warn b{color:var(--lime)}
+.lp-verifica .voffline-btn{margin-top:4px;border:0}
+.lp-verifica .voffline-btn:hover{color:var(--ink)}
