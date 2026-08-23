@@ -9,19 +9,28 @@
 // Nota (reference_cloudflare_purge): il blog è servito dal Worker Next.js, quindi
 // il purge per singola URL NON sfratta (chiave cache diversa). Serve
 // purge_everything. Il token OAuth di wrangler NON ha il permesso Purge: si usa
-// il token dedicato "GeoTapp WAF (Claude CLI)" nel file qui sotto.
+// il token dedicato "GeoTapp WAF (Claude CLI)".
+//
+// In CI (deploy.yml) il token arriva da CLOUDFLARE_PURGE_TOKEN (GitHub Secret):
+// prima del 23/08/2026 il deploy automatico via push non purgava mai, quindi
+// ogni visitatore che apriva il sito nella finestra post-deploy (fino a
+// stale-while-revalidate) rischiava di beccare un HTML vecchio con asset
+// nuovi mancanti — pagina senza CSS finché la cache non si rinfrescava da
+// sola. In locale resta il file qui sotto come fallback.
 
 import { readFileSync } from 'node:fs';
 
 const ZONE_ID = '3d039a58aa0e80a71ce223b1565e343c';
 const TOKEN_PATH = '/home/mike/.config/geotapp/cloudflare-token';
 
-let token;
-try {
-  token = readFileSync(TOKEN_PATH, 'utf8').trim();
-} catch (e) {
-  console.warn(`[cf-purge] token non leggibile (${TOKEN_PATH}): ${e.message}. Salto il purge (il deploy resta valido).`);
-  process.exit(0); // non far fallire il deploy per il purge
+let token = process.env.CLOUDFLARE_PURGE_TOKEN;
+if (!token) {
+  try {
+    token = readFileSync(TOKEN_PATH, 'utf8').trim();
+  } catch (e) {
+    console.warn(`[cf-purge] token non leggibile (${TOKEN_PATH}): ${e.message}. Salto il purge (il deploy resta valido).`);
+    process.exit(0); // non far fallire il deploy per il purge
+  }
 }
 
 try {

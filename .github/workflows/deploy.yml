@@ -5,8 +5,10 @@ name: Deploy site (Cloudflare Workers)
 # First run is launched by hand from the Actions tab, AFTER the secrets exist.
 #
 # REQUIRED SECRETS (repo Settings → Secrets and variables → Actions):
-#   CLOUDFLARE_API_TOKEN  (token with "Edit Cloudflare Workers")
-#   CF_ACCOUNT_ID         (34a3e90dabdb6c10eb33f37259fafca4)
+#   CLOUDFLARE_API_TOKEN   (token with "Edit Cloudflare Workers")
+#   CF_ACCOUNT_ID          (34a3e90dabdb6c10eb33f37259fafca4)
+#   CLOUDFLARE_PURGE_TOKEN (token with "Zone.Cache Purge" — CLOUDFLARE_API_TOKEN
+#                           above is a wrangler OAuth token and can't purge)
 #
 # GO LIVE: after a clean dispatch run, uncomment the `push:` block to auto-deploy.
 
@@ -49,6 +51,18 @@ jobs:
       - name: Healthcheck
         id: health
         run: bash ci/healthcheck.sh
+
+      # Senza questo step l'HTML in cache al bordo Cloudflare resta quello del
+      # deploy precedente per la durata dello stale-while-revalidate: punta ad
+      # asset /_next/static col vecchio hash, che il deploy nuovo non serve piu'
+      # (404) -> pagina senza CSS finche' la cache non si rinfresca da sola
+      # (un paio di refresh, empiricamente). Il purge sfratta subito l'HTML
+      # vecchio: vedi scripts/purge-cloudflare.mjs.
+      - name: Purge Cloudflare cache
+        if: ${{ steps.health.outcome == 'success' }}
+        env:
+          CLOUDFLARE_PURGE_TOKEN: ${{ secrets.CLOUDFLARE_PURGE_TOKEN }}
+        run: node scripts/purge-cloudflare.mjs
 
       - name: Rollback on failure
         if: ${{ failure() && steps.health.outcome == 'failure' }}
