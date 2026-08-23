@@ -25,7 +25,7 @@
 .lp-prodotto-verifier .l-code .hd i { width: 9px; height: 9px; border-radius: 50%; background: rgba(242, 240, 233, .25); display: block; }
 .lp-prodotto-verifier .l-code pre { margin: 0; padding: 20px; font-size: 13px; line-height: 1.6; color: var(--lime); overflow-x: auto; }
 
-.lp-prodotto-verifier .l-mods-ink .mods { background: rgba(242, 240, 233, .16); border-top-color: rgba(242, 240, 233, .16); border-bottom-color: rgba(242, 240, 233, .16); }
+.lp-prodotto-verifier .l-mods-ink .mods { background: transparent; }
 .lp-prodotto-verifier .l-mods-ink .mods article { background: var(--ink); }
 .lp-prodotto-verifier .l-mods-ink .mods article:hover { background: #1B1F1A; }
 .lp-prodotto-verifier .l-mods-ink .mods p { color: rgba(242, 240, 233, .68); }

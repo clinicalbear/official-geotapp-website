@@ -288,7 +288,7 @@ console.log(result.integrityLevel);`}</pre>
       {/* COSA VERIFICA */}
       <section className="sec"><div className="w">
         <p className="kk k r" style={{ color: 'var(--seal)' }}>{copy.features_badge}</p>
-        <h2 className="r d1" style={{ marginTop: 14, maxWidth: '22ch' }}>{copy.features_title}</h2>
+        <h2 className="r d1" style={{ marginTop: 14, marginBottom: 32, maxWidth: '22ch' }}>{copy.features_title}</h2>
       </div>
         <div className="mods">
           {copy.features.map((feat, i) => (
