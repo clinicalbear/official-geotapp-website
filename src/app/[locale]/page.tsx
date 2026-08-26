@@ -7,6 +7,7 @@ import { HREFLANG } from '@/lib/i18n/locale-metadata';
 import HomeClient from '../HomeClient';
 import BlogHighlights from '@/components/BlogHighlights';
 import FaqFromSchema from '@/components/FaqFromSchema';
+import LocaleSuggestionBanner from '@/components/LocaleSuggestionBanner';
 import { REVIEWS } from '@/data/reviews';
 import { buildReviewsSchema } from '@/lib/seo/reviewsSchema';
 
@@ -263,6 +264,11 @@ export default async function LocalePage({ params }: Props) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewsSchema) }}
         />
       )}
+      {/* Suggerimento IT per chi arriva su una pagina EN (generica o regionale)
+          con browser in italiano. Il redirect geo del middleware non tocca gli
+          URL EN espliciti di proposito (SEO/hreflang): qui la scelta resta
+          all'utente. Vedi src/components/LocaleSuggestionBanner.tsx. */}
+      {locale.startsWith('en') && <LocaleSuggestionBanner />}
       {/* FAQ e blog entrano DENTRO la home come slot server, cosi' seguono
           l'ordine del mockup (letture → domande → ultima inquadratura).
           Lo schema FAQPage resta iniettato da RisorsaFaq dentro lo slot. */}
