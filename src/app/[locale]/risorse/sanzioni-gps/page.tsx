@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
+import { buildLocaleAlternates, buildCanonicalUrl } from '@/lib/i18n/locale-metadata';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import { SUPPORTED_LOCALES } from '@/lib/i18n/config';
 import type { AppLocale } from '@/lib/i18n/config';
@@ -43,6 +43,13 @@ export async function generateMetadata({
     title: { absolute: dict.metaTitle },
     description: dict.metaDesc,
     alternates: buildLocaleAlternates(locale, '/risorse/sanzioni-gps/'),
+    openGraph: {
+      url: buildCanonicalUrl(locale, '/risorse/sanzioni-gps/'),
+      type: 'website',
+      title: dict.metaTitle,
+      description: dict.metaDesc,
+      images: [{ url: '/og-default.png', width: 1200, height: 630, alt: dict.metaTitle }],
+    },
   };
 }
 

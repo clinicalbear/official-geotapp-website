@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
+import { buildLocaleAlternates, buildCanonicalUrl } from '@/lib/i18n/locale-metadata';
 import { SLUG_MAP } from '@/lib/i18n/slug-map';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import { SUPPORTED_LOCALES } from '@/lib/i18n/config';
@@ -51,6 +51,13 @@ export async function generateMetadata({
     title: { absolute: s.metaTitle },
     description: s.metaDesc,
     alternates: buildLocaleAlternates(locale, '/risorse/osservatorio/'),
+    openGraph: {
+      url: buildCanonicalUrl(locale, '/risorse/osservatorio/'),
+      type: 'website',
+      title: s.metaTitle,
+      description: s.metaDesc,
+      images: [{ url: '/og-default.png', width: 1200, height: 630, alt: s.metaTitle }],
+    },
   };
 }
 
