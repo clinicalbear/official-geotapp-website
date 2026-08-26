@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     template: '%s | GeoTapp',
   },
   description:
-    'GeoTapp: GPS-verified field work documentation. Sealed reports, timestamped photo evidence and tamper-proof records anyone can verify independently. GDPR compliant.',
+    'GeoTapp: sealed field work reports with GPS-tagged timestamps and live-camera photo evidence. Sessions are locked after closing, and the seal can be verified independently by anyone. GDPR compliant.',
   // No global canonical, each page sets its own via generateMetadata.
   // A hardcoded canonical:'/' here would poison every locale page as a
   // duplicate of the homepage and prevent Google from indexing them.
@@ -42,14 +42,14 @@ export const metadata: Metadata = {
     siteName: 'GeoTapp',
     title: 'GeoTapp - Field Work Verification Platform',
     description:
-      'GPS-verified attendance, tamper-proof reports and photo evidence for field service companies. GDPR compliant. Zero disputes.',
+      'GPS-tagged attendance, sealed reports and live-camera photo evidence for field service companies. GDPR compliant. Fewer disputes.',
     images: [{ url: '/og-default.png', width: 1200, height: 630, alt: 'GeoTapp - GPS Field Work Verification Platform' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'GeoTapp - Field Work Verification Platform',
     description:
-      'GPS-verified attendance, tamper-proof reports and photo evidence for field service companies. GDPR compliant. Zero disputes.',
+      'GPS-tagged attendance, sealed reports and live-camera photo evidence for field service companies. GDPR compliant. Fewer disputes.',
     images: ['/logoFlow.webp'],
   },
   icons: {
