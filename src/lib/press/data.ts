@@ -25,6 +25,21 @@ export function pressRel(_item: PressItem): string {
 export const PRESS_RELEASES: PressItem[] = [];
 export const PRESS_COVERAGE: PressItem[] = [
   {
+    date: '2026-08-27',
+    outlet: 'PME Magazine',
+    title: 'Geolocalização no trabalho: onde acaba a prova e começa o controlo',
+    url: 'https://pmemagazine.sapo.pt/geolocalizacao-no-trabalho-onde-acaba-a-prova-e-comeca-o-controlo/',
+    locale: 'pt',
+    country: 'pt',
+    logo: '/press/pmemagazine.png',
+    // Opinião a firma di Michele Angelo Petraroli, CEO GeoTapp (nao una citazione dentro
+    // un pezzo altrui). NIENTE link a geotapp.com: verificato sull'HTML grezzo (0 occorrenze
+    // di "geotapp.com" nel documento), coerente con quanto Daniela Felicio (Redacao) aveva
+    // gia' anticipato il 23/07: il link nel pezzo e' riservato ai contenuti sponsorizzati.
+    // Menzione/autorita', NON backlink. Editore Massive Media, Lda. (PT), nessun rapporto
+    // con Featured/Connectively.
+  },
+  {
     date: '2026-08-20',
     outlet: 'Personnel Today',
     title: 'Can GPS at work ever protect workers as well as bosses?',
