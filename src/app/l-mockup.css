@@ -1090,6 +1090,9 @@ main:has(> .lp-l){padding-top:0}
    qui l'altezza lasciando libera la larghezza e' precisamente cio' che rendeva
    Personnel Today quattro volte piu' largo di Risorse Umane HR. */
 .dirs .featured-in-logo{--press-logo-w:150px;--press-logo-h:44px}
+/* solo in home: qui la fascia "citati su" e' sola (niente piu' "presente su"
+   sopra, gia' nel footer), quindi i loghi possono essere piu' grandi */
+.dirs-home .featured-in-logo{--press-logo-w:190px;--press-logo-h:58px}
 /* il device nei pannelli sta piu' in basso: non copre i volti delle foto */
 .acc .dev{top:63% !important}
 /* pannello Flow: foto a specchio, il volto sta a sinistra e si vede anche a pannello chiuso */
