@@ -236,7 +236,7 @@ export default function ArticleSidebar({ headings, locale, categories = [], date
       </Link>
 
       {/* CTA trial */}
-      <div className="panel" style={{ padding: '20px', marginTop: '18px', borderColor: 'var(--seal)' }}>
+      <div className="panel" style={{ padding: '20px', marginTop: '18px' }}>
         <p className="text-[13px] font-bold">{labels.cta_title}</p>
         <p className="text-[11px] mt-1.5" style={{ color: '#4A5244' }}>{labels.cta_desc}</p>
         <Link
