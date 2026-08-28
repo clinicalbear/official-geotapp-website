@@ -21,9 +21,32 @@ check_one() {
     code="$(curl -s -o /tmp/_site_body -w '%{http_code}' --max-time 10 "$url" 2>/dev/null || true)"
   fi
   body="$(cat /tmp/_site_body 2>/dev/null || true)"
-  # Real success: 200 + the site actually rendered.
-  if [ "$code" = "200" ] && echo "$body" | grep -qi 'geotapp'; then
-    return 0
+  # Real success: 200 + the site actually rendered + its CSS/JS chunks resolve.
+  # A stale-HTML-cache hit right after deploy still returns 200 + "geotapp" in
+  # the body (the text renders fine) while pointing at chunk hashes the new
+  # deploy already replaced -> 404 -> unstyled page with giant stacked logos
+  # until the visitor reloads. Checking the string alone missed this every time.
+  # Note: use here-strings (<<<), never `echo "$body" | grep`, anywhere on $body.
+  # Piping a large string into `grep -q` races an early match (which closes the
+  # pipe) against `echo` still writing it: under `pipefail` the SIGPIPE echo
+  # gets from the closed pipe outranks grep's own (successful) exit status, so
+  # the whole condition silently reads as "no match" on a perfectly healthy page.
+  if [ "$code" = "200" ] && grep -qi 'geotapp' <<< "$body"; then
+    # Only the render-blocking stylesheets matter for this check: the body also
+    # embeds route-prefetch manifests referencing JS chunks for OTHER pages that
+    # can legitimately 404 (lazy/speculative, never render-blocking) without any
+    # visible breakage. Checking those too gave false failures on a healthy page.
+    local rel asset_url asset_code broken=0
+    for rel in $(grep -oE '<link[^>]*rel="stylesheet"[^>]*>' <<< "$body" | grep -oE 'href="[^"]+"' | sed -E 's/href="([^"]+)"/\1/' | sort -u); do
+      asset_url="$(echo "$url" | sed -E 's#(https?://[^/]+).*#\1#')${rel}"
+      asset_code="$(curl -s -o /dev/null -w '%{http_code}' --max-time 10 "$asset_url" 2>/dev/null || true)"
+      if [ "$asset_code" != "200" ]; then
+        echo "   $url -> stale HTML: stylesheet $rel returned ${asset_code:-none} (expected 200)"
+        broken=1
+      fi
+    done
+    [ "$broken" = "0" ] && return 0
+    return 1
   fi
   # Cloudflare Bot Fight Mode challenges datacenter IPs (GitHub runners) with 403
   # even when the site is perfectly healthy for real users. A 403 means the edge IS
