@@ -499,7 +499,7 @@ export default function Home({ jrSlot, fqSlot }: { jrSlot?: ReactNode; fqSlot?: 
             <p className="kk k r" style={{ color: '#5E7C1E', marginBottom: 34 }}>{f.section_label}</p>
             <div className="g">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img className="r-s" src="/michele-petraroli.webp?v=2" alt={`${f.name}, ${f.role} GeoTapp`} loading="lazy" />
+              <img className="r-s" src="/michele-petraroli-3.webp" alt={`${f.name}, ${f.role} GeoTapp`} loading="lazy" />
               <blockquote className="r d1">
                 <p>&ldquo;{dict.chi_siamo.mission_quote}&rdquo;</p>
                 <cite><b>{f.name}</b><span>{f.role}</span></cite>

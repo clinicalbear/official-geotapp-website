@@ -156,13 +156,22 @@ export default function StampaView({
       <section className="sec warm"><div className="w"><div className="fnd">
         <div className="r-s" style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
           <Image
-            src="/michele-petraroli.webp?v=2"
+            src="/michele-petraroli-3.webp"
             alt="Michele Angelo Petraroli, fondatore di GeoTapp"
             width={640}
             height={640}
           />
-          <a href="/michele-petraroli.webp?v=2" download className="b2" style={{ fontSize: 13, textAlign: 'center' }}>
-            {d.photo_download}
+          <a href="/michele-petraroli-3.webp" download className="b2" style={{ fontSize: 13, textAlign: 'center' }}>
+            {d.photo_download_3}
+          </a>
+          <Image
+            src="/michele-petraroli-wide.webp"
+            alt="Michele Angelo Petraroli, fondatore di GeoTapp"
+            width={1535}
+            height={1024}
+          />
+          <a href="/michele-petraroli-wide.webp" download className="b2" style={{ fontSize: 13, textAlign: 'center' }}>
+            {d.photo_download_wide}
           </a>
           <Image
             src="/michele-petraroli-2.webp"
@@ -200,12 +209,20 @@ export default function StampaView({
               <span>{d.logo_download}</span>
             </a>
           ))}
-          <a href="/michele-petraroli.webp?v=2" download>
+          <a href="/michele-petraroli-3.webp" download>
             <span className="thumb">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/michele-petraroli.webp?v=2" alt={d.photo_download} loading="lazy" style={{ objectFit: 'cover', borderRadius: 8 }} />
+              <img src="/michele-petraroli-3.webp" alt={d.photo_download_3} loading="lazy" style={{ objectFit: 'cover', borderRadius: 8 }} />
             </span>
-            <b>{d.photo_download}</b>
+            <b>{d.photo_download_3}</b>
+            <span>.webp</span>
+          </a>
+          <a href="/michele-petraroli-wide.webp" download>
+            <span className="thumb">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/michele-petraroli-wide.webp" alt={d.photo_download_wide} loading="lazy" style={{ objectFit: 'cover', borderRadius: 8 }} />
+            </span>
+            <b>{d.photo_download_wide}</b>
             <span>.webp</span>
           </a>
           <a href="/michele-petraroli-2.webp" download>
