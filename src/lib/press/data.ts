@@ -25,6 +25,22 @@ export function pressRel(_item: PressItem): string {
 export const PRESS_RELEASES: PressItem[] = [];
 export const PRESS_COVERAGE: PressItem[] = [
   {
+    date: '2026-09-01',
+    outlet: 'ClockOn',
+    title: '11 Payroll Checks Before Finalising a Pay Run',
+    url: 'https://www.clockon.com.au/blog/11-payroll-checks-before-finalising-a-pay-run',
+    locale: 'en',
+    country: 'au',
+    logo: '/press/clockon.png',
+    // Citazione (non a firma) di Michele Angelo Petraroli, CEO & Founder GeoTapp, tra 11
+    // esperti payroll/finance/HR interpellati da ClockOn (Clockon Pty Ltd, azienda payroll/time
+    // & attendance australiana indipendente, nessun rapporto con Featured/Connectively).
+    // Foto usata nel riquadro esperto proviene dal profilo Connectively di Michele: la citazione
+    // e' arrivata tramite una media query Connectively, non un contatto diretto con ClockOn.
+    // NIENTE link a geotapp.com: verificato su HTML grezzo (0 occorrenze di "geotapp.com" nel
+    // documento). Nessun giornalista/autore individuale in byline (autore pagina: "ClockOn").
+  },
+  {
     date: '2026-08-27',
     outlet: 'PME Magazine',
     title: 'Geolocalização no trabalho: onde acaba a prova e começa o controlo',
