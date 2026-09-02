@@ -3,8 +3,6 @@
 import { useState } from 'react';
 import { trackEvent } from '@/lib/analytics';
 
-type Status = 'idle' | 'loading' | 'success' | 'error';
-
 interface LeadMagnetCopy {
   title: string;
   desc: string;
@@ -175,6 +173,33 @@ export const LEAD_MAGNETS: Record<string, LeadMagnetAsset> = {
   },
 };
 
+/**
+ * L'invito che prende il posto dell'iscrizione newsletter (Mike, 02/09/2026).
+ * Chi ha appena ricevuto il modello e' nel momento migliore per rispondere:
+ * gli abbiamo appena dato qualcosa, e la domanda parla del suo mestiere.
+ * Il download NON e' mai condizionato: il PDF parte comunque.
+ */
+type Ask = { prima: string; dopo: string; cta: string };
+
+const ASK: Record<string, Ask> = {
+  it: { prima: 'Prima di andare, una domanda veloce.', dopo: 'Fatto, il modello è tuo. Adesso una domanda a te, che quel lavoro lo fai: due minuti, anonimo.', cta: 'Rispondi al sondaggio' },
+  en: { prima: 'Before you go, one quick question.', dopo: 'Done, the template is yours. Now a question for you, who does that work: two minutes, anonymous.', cta: 'Answer the survey' },
+  de: { prima: 'Bevor Sie gehen, eine kurze Frage.', dopo: 'Fertig, die Vorlage gehört Ihnen. Jetzt eine Frage an Sie, die diese Arbeit machen: zwei Minuten, anonym.', cta: 'An der Umfrage teilnehmen' },
+  fr: { prima: 'Avant de partir, une question rapide.', dopo: 'Voilà, le modèle est à vous. Maintenant une question pour vous, qui faites ce travail : deux minutes, anonyme.', cta: 'Répondre à l’enquête' },
+  nl: { prima: 'Voordat je gaat, één korte vraag.', dopo: 'Klaar, het model is van jou. Nu een vraag aan jou, die dat werk doet: twee minuten, anoniem.', cta: 'Doe mee aan de enquête' },
+  es: { prima: 'Antes de irte, una pregunta rápida.', dopo: 'Listo, la plantilla es tuya. Ahora una pregunta para ti, que haces ese trabajo: dos minutos, anónimo.', cta: 'Responde a la encuesta' },
+  pt: { prima: 'Antes de saíres, uma pergunta rápida.', dopo: 'Pronto, o modelo é teu. Agora uma pergunta para ti, que fazes esse trabalho: dois minutos, anónimo.', cta: 'Responde ao inquérito' },
+  da: { prima: 'Inden du går, et hurtigt spørgsmål.', dopo: 'Så er skabelonen din. Nu et spørgsmål til dig, der udfører arbejdet: to minutter, anonymt.', cta: 'Besvar undersøgelsen' },
+  sv: { prima: 'Innan du går, en snabb fråga.', dopo: 'Klart, mallen är din. Nu en fråga till dig som utför jobbet: två minuter, anonymt.', cta: 'Svara på undersökningen' },
+  nb: { prima: 'Før du går, et raskt spørsmål.', dopo: 'Ferdig, malen er din. Nå et spørsmål til deg som gjør jobben: to minutter, anonymt.', cta: 'Svar på undersøkelsen' },
+  ru: { prima: 'Перед уходом один быстрый вопрос.', dopo: 'Готово, шаблон ваш. Теперь вопрос к вам, кто эту работу делает: две минуты, анонимно.', cta: 'Пройти опрос' },
+};
+
+function pickAsk(locale: string): Ask {
+  const lc = (locale || 'en').toLowerCase();
+  return ASK[lc] ?? ASK[lc.split('-')[0]] ?? ASK.en;
+}
+
 interface Props {
   magnet: string;   // chiave di LEAD_MAGNETS
   locale: string;
@@ -182,36 +207,15 @@ interface Props {
 
 export default function LeadMagnetInline({ magnet, locale }: Props) {
   const asset = LEAD_MAGNETS[magnet];
-  const [email, setEmail] = useState('');
-  const [status, setStatus] = useState<Status>('idle');
+  const [scaricato, setScaricato] = useState(false);
   if (!asset) return null;
   const t = asset.copy[locale] || asset.copy.en || asset.copy.it;
   // Il PDF segue la lingua dell'ARTICOLO, non quella del browser: un pezzo in
   // olandese deve consegnare il modello con l'AVG e l'Autoriteit Persoonsgegevens.
   const file = asset.files[locale] || asset.fileFallback;
 
-  // Iscrizione newsletter FACOLTATIVA: non blocca il download.
-  async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    if (!email) return;
-    setStatus('loading');
-    trackEvent('lead_magnet_submit', { magnet, locale });
-    try {
-      const res = await fetch('/api/newsletter', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, locale, leadMagnet: asset.id }),
-      });
-      if (res.ok) {
-        setStatus('success');
-        trackEvent('lead_magnet_success', { magnet, locale });
-      } else {
-        setStatus('error');
-      }
-    } catch {
-      setStatus('error');
-    }
-  }
+  const ask = pickAsk(locale);
+  const surveyHref = `/${locale}/survey/`;
 
   return (
     <div className="my-12 rounded-2xl border border-[#2DA4E4]/25 bg-[#2DA4E4]/5 p-8 text-center">
@@ -226,38 +230,28 @@ export default function LeadMagnetInline({ magnet, locale }: Props) {
         href={file}
         target="_blank"
         rel="noopener"
+        onClick={() => setScaricato(true)}
         className="mt-5 inline-block px-6 py-3 text-sm font-semibold text-white bg-[#2DA4E4] rounded-xl hover:bg-[#2f97c4] transition-colors"
       >
         {t.download}
       </a>
 
-      {/* Iscrizione FACOLTATIVA sotto */}
-      <div className="mt-6 pt-5 border-t border-[#2DA4E4]/15 max-w-sm mx-auto">
-        {status === 'success' ? (
-          <p className="text-sm font-semibold text-[#8FC436]">{t.success}</p>
-        ) : (
-          <>
-            <p className="text-xs text-slate-500 mb-3">{t.newsletterPrompt}</p>
-            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder={t.placeholder}
-                className="flex-1 min-w-0 px-4 py-2.5 text-sm rounded-xl border border-slate-200 bg-white text-slate-700 placeholder:text-slate-400 outline-none focus:border-[#2DA4E4] transition-colors"
-              />
-              <button
-                type="submit"
-                disabled={status === 'loading'}
-                className="shrink-0 px-5 py-2.5 text-sm font-semibold text-slate-700 bg-white border border-slate-200 rounded-xl hover:border-[#2DA4E4] transition-colors disabled:opacity-70 disabled:cursor-not-allowed"
-              >
-                {status === 'loading' ? '...' : t.btn}
-              </button>
-            </form>
-            <p className="text-xs text-slate-400 mt-2">{t.consent}</p>
-            {status === 'error' && <p className="text-xs text-red-500 mt-1">{t.error}</p>}
-          </>
-        )}
+      {/* Al posto dell'iscrizione: l'invito al sondaggio. Prima del download resta
+          una riga discreta, dopo il click diventa la richiesta vera, che e' il
+          momento in cui abbiamo appena dato qualcosa. */}
+      <div className="mt-6 pt-5 border-t border-[#2DA4E4]/15 max-w-md mx-auto">
+        <p className="text-sm text-slate-600">{scaricato ? ask.dopo : ask.prima}</p>
+        <a
+          href={surveyHref}
+          onClick={() => trackEvent('survey_cta_click', { locale, placement: scaricato ? 'lead_magnet_post_download' : 'lead_magnet' })}
+          className={`mt-3 inline-block rounded-xl px-5 py-2.5 text-sm font-semibold no-underline transition-colors ${
+            scaricato
+              ? 'bg-[#8FC436] text-white hover:brightness-105'
+              : 'border border-slate-200 bg-white text-slate-700 hover:border-[#2DA4E4]'
+          }`}
+        >
+          {ask.cta}
+        </a>
       </div>
     </div>
   );
