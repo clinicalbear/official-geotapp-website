@@ -2,11 +2,20 @@
 
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
+import { trackEvent } from '@/lib/analytics';
 
-// Flag proprio + flag condiviso con NewsletterModal: durante la campagna sondaggio
-// esce SOLO questo modale (priorità), mai due insieme.
+// Chiave PROPRIA (permanente): l'unica che spegne il modale per sempre.
 const STORAGE_KEY = 'gtapp_survey_modal_seen';
+// Chiave condivisa con NewsletterModal, che la legge da localStorage: continuiamo a
+// scriverla quando usciamo noi, così la newsletter tace (la campagna sondaggio ha la
+// precedenza). NON la leggiamo più come blocco permanente: fino al 02/09/2026 lo era,
+// e chiunque avesse già visto il modale newsletter non avrebbe MAI visto il sondaggio.
 const SHARED_KEY = 'gtapp_modal_seen';
+// Vincolo "mai due modali nella stessa visita": vive nella sessione, non per sempre.
+const VISIT_KEY = 'gtapp_modal_open_visit';
+// Il banner cookie è a scelta obbligata: finché non ha deciso, non gli si mette
+// davanti un secondo modale.
+const CONSENT_KEY = 'gtapp_cookie_consent';
 
 type Copy = { title: string; body: string; cta: string };
 
@@ -32,33 +41,53 @@ function pickCopy(): Copy {
   return COPY[base] ?? COPY.en;
 }
 
+/** La pagina vive sotto il prefisso lingua. Senza prefisso ci pensa il middleware,
+ *  ma se la lingua la sappiamo già evitiamo un redirect in più. */
+function surveyHref(): string {
+  if (typeof document === 'undefined') return '/survey/';
+  const lang = (document.documentElement.lang || '').toLowerCase();
+  return lang ? `/${lang}/survey/` : '/survey/';
+}
+
 export default function SurveyInvite() {
   const [visible, setVisible] = useState(false);
-  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   useEffect(() => {
-    if (localStorage.getItem(STORAGE_KEY) || localStorage.getItem(SHARED_KEY)) return;
+    if (localStorage.getItem(STORAGE_KEY)) return;
+    if (sessionStorage.getItem(VISIT_KEY)) return;
 
     let shown = false;
     const show = () => {
-      if (shown || localStorage.getItem(SHARED_KEY)) return;
+      if (shown || sessionStorage.getItem(VISIT_KEY)) return;
+      // Il banner cookie chiede una scelta obbligata: aspettiamo che sia fatta.
+      if (!localStorage.getItem(CONSENT_KEY)) return;
       shown = true;
-      localStorage.setItem(SHARED_KEY, '1'); // blocca l'altro modale per questa visita
+      sessionStorage.setItem(VISIT_KEY, '1'); // un solo modale in questa visita
+      localStorage.setItem(SHARED_KEY, '1'); // la newsletter cede la precedenza
       setVisible(true);
+      trackEvent('survey_modal_view', { locale: document.documentElement.lang || 'en' });
       window.removeEventListener('scroll', onScroll);
-      if (timerRef.current) clearTimeout(timerRef.current);
+      if (timerRef.current) clearInterval(timerRef.current);
     };
     const onScroll = () => {
       const ratio = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight;
       if (ratio >= 0.35) show();
     };
     window.addEventListener('scroll', onScroll, { passive: true });
-    // fallback: anche senza scroll (pagine corte) compare dopo 8s
-    timerRef.current = setTimeout(show, 8000);
+    // Fallback per le pagine corte, e ripasso: al primo giro il consenso cookie
+    // può non essere ancora stato dato, e senza ripasso il modale non uscirebbe
+    // mai a chi decide il cookie e poi resta fermo sulla pagina.
+    let giri = 0;
+    timerRef.current = setInterval(() => {
+      giri += 1;
+      show();
+      if (giri >= 15 && timerRef.current) clearInterval(timerRef.current);
+    }, 8000);
 
     return () => {
       window.removeEventListener('scroll', onScroll);
-      if (timerRef.current) clearTimeout(timerRef.current);
+      if (timerRef.current) clearInterval(timerRef.current);
     };
   }, []);
 
@@ -108,7 +137,7 @@ export default function SurveyInvite() {
         <div style={{ padding: '24px' }}>
           <p id="survey-modal-title" style={{ fontSize: 20, fontWeight: 800, color: '#0f172a', margin: '0 0 8px' }}>{c.title}</p>
           <p style={{ fontSize: 15, color: '#475569', margin: '0 0 20px', lineHeight: 1.5 }}>{c.body}</p>
-          <a href="/survey" onClick={dismiss} style={{
+          <a href={surveyHref()} onClick={() => { trackEvent('survey_cta_click', { locale: (typeof document !== 'undefined' ? document.documentElement.lang : 'en') || 'en', placement: 'modal' }); dismiss(); }} style={{
             display: 'block', textAlign: 'center', background: '#8FC436', color: '#fff',
             fontWeight: 800, fontSize: 16, padding: '14px 20px', borderRadius: 999, textDecoration: 'none',
           }}>{c.cta}</a>

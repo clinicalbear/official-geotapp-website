@@ -10,6 +10,7 @@ import ArticleFooter from '@/components/blog/ArticleFooter';
 import ReadingProgress from '@/components/blog/ReadingProgress';
 import BackToTop from '@/components/blog/BackToTop';
 import NewsletterInline from '@/components/blog/NewsletterInline';
+import SurveyInline from '@/components/blog/SurveyInline';
 import LeadMagnetInline from '@/components/blog/LeadMagnetInline';
 import MapBackground from '@/components/blog/MapBackground';
 import Comments, { type CommentItem } from '@/components/blog/Comments';
@@ -416,6 +417,7 @@ export default async function BlogArticlePage({ params }: Props) {
                   : undefined
               }
               newsletter={<NewsletterInline key="newsletter" locale={locale} />}
+              survey={<SurveyInline key="survey" locale={locale} />}
             />
           </div>
         </div>

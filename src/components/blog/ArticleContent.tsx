@@ -16,6 +16,12 @@ interface ArticleContentProps {
    * newsletter generico non si mostra: il magnet contiene gia' l'iscrizione.
    */
   leadMagnet?: React.ReactNode;
+  /**
+   * Invito al sondaggio pubblico, in coda all'articolo. Ha la precedenza sul
+   * blocco newsletter generico: raccoglie anche lui l'email, e per la durata
+   * della campagna la risposta al sondaggio vale piu' di un'iscrizione.
+   */
+  survey?: React.ReactNode;
   locale?: string;
 }
 
@@ -54,7 +60,7 @@ function MidArticleCta({ locale }: { locale: string }) {
   );
 }
 
-export default function ArticleContent({ html, newsletter, leadMagnet, locale = 'it' }: ArticleContentProps) {
+export default function ArticleContent({ html, newsletter, leadMagnet, survey, locale = 'it' }: ArticleContentProps) {
   // Split content roughly in half at a paragraph boundary to insert mid-article CTA
   const [apertura, firstHalf, secondHalf] = useMemo(() => {
     // WP avvolge il contenuto in <article class="zenith-imported-content">...</article>,
@@ -133,7 +139,8 @@ export default function ArticleContent({ html, newsletter, leadMagnet, locale = 
             dangerouslySetInnerHTML={{ __html: secondHalf }}
           />
         )}
-        {!leadMagnet && newsletter}
+        {survey}
+        {!leadMagnet && !survey && newsletter}
       </div>
     </motion.article>
   );

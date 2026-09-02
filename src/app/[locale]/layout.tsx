@@ -20,6 +20,7 @@ import CookieConsentBanner from '@/components/CookieConsentBanner';
 import ChatWidget from '@/components/kairos/ChatWidget';
 import SiteAnalytics from '@/components/SiteAnalytics';
 import InternalTrafficBadge from '@/components/InternalTrafficBadge';
+import SurveyInvite from '@/components/SurveyInvite';
 import {
   EUR_PRICES,
   convertEurToLocale,
@@ -582,6 +583,10 @@ export default async function LocaleLayout({ children, params }: Props) {
         />
         <SiteAnalytics />
         <CookieConsentBanner locale={locale} />
+        {/* Invito al sondaggio pubblico: fino al 02/09/2026 stava SOLO sul blog,
+            quindi le pagine più viste del sito (home, trial, prodotti) non lo
+            mostravano mai. Esce dopo la scelta sui cookie, una volta per browser. */}
+        <SurveyInvite />
         <ChatWidget />
         <InternalTrafficBadge />
       </body>
