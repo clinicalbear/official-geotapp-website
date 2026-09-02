@@ -312,6 +312,23 @@ function VerificaReport() {
           ) : null}
         </div></section>
       ) : null}
+
+      {/* Solo a verifica fatta: prima la pagina serve a chi deve controllare un
+          documento, e non le si mette davanti nient'altro. Chi arriva fin qui e'
+          quasi sempre il committente, cioe' il lato del sondaggio che ci manca. */}
+      {esito ? (
+        <section className="vsurvey">
+          <div className="w">
+            <h2>Una domanda a chi il lavoro lo commissiona</h2>
+            <p>
+              Stiamo raccogliendo, in tutta Europa, quanto spesso un lavoro pagato
+              viene messo in dubbio e cosa succede dopo. Due minuti, anonimo,
+              nessun dato obbligatorio.
+            </p>
+            <a href="/it/survey/">Rispondi al sondaggio</a>
+          </div>
+        </section>
+      ) : null}
     </div>
   );
 }

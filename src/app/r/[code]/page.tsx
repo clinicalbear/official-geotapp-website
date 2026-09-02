@@ -67,6 +67,11 @@ interface Testi {
   verifyTitle: string;
   verifyBody: string;
   verifyCta: string;
+  /** Invito al sondaggio pubblico: qui atterra chi il lavoro lo COMMISSIONA,
+   *  cioe' il lato B, che nelle risposte raccolte finora manca del tutto. */
+  surveyTitle: string;
+  surveyBody: string;
+  surveyCta: string;
   revokedTitle: string;
   revokedBody: string;
   unknownTitle: string;
@@ -96,6 +101,10 @@ const TESTI: Record<string, Testi> = {
     verifyBody:
       'Il pacchetto si verifica anche senza GeoTapp, con il verificatore aperto: ricalcola le impronte e controlla la firma.',
     verifyCta: 'Vai alla verifica',
+    surveyTitle: 'Una domanda a chi il lavoro lo commissiona',
+    surveyBody:
+      'Stiamo raccogliendo, in tutta Europa, quanto spesso un lavoro pagato viene messo in dubbio e cosa succede dopo. Due minuti, anonimo, nessun dato obbligatorio.',
+    surveyCta: 'Rispondi al sondaggio',
     revokedTitle: 'Codice revocato',
     revokedBody:
       'Questo documento c’era, ma chi lo ha emesso ha revocato il collegamento. Per averne una copia bisogna chiederla a chi ha svolto il lavoro.',
@@ -124,6 +133,10 @@ const TESTI: Record<string, Testi> = {
     verifyBody:
       'The package can be verified without GeoTapp, with the open verifier: it recomputes the hashes and checks the signature.',
     verifyCta: 'Go to verification',
+    surveyTitle: 'A question for whoever commissions the work',
+    surveyBody:
+      'Across Europe we are collecting how often a job that was paid for gets questioned, and what happens next. Two minutes, anonymous, nothing required.',
+    surveyCta: 'Answer the survey',
     revokedTitle: 'Code revoked',
     revokedBody:
       'This document existed, but whoever issued it revoked the link. To get a copy you have to ask the company that did the work.',
@@ -152,6 +165,10 @@ const TESTI: Record<string, Testi> = {
     verifyBody:
       'Das Paket lässt sich auch ohne GeoTapp prüfen, mit dem offenen Prüfwerkzeug: es berechnet die Hashes neu und prüft die Signatur.',
     verifyCta: 'Zur Prüfung',
+    surveyTitle: 'Eine Frage an alle, die Arbeit beauftragen',
+    surveyBody:
+      'Wir sammeln europaweit, wie oft eine bezahlte Leistung angezweifelt wird und was danach passiert. Zwei Minuten, anonym, keine Pflichtangaben.',
+    surveyCta: 'An der Umfrage teilnehmen',
     revokedTitle: 'Code widerrufen',
     revokedBody:
       'Dieses Dokument gab es, aber der Aussteller hat den Link widerrufen. Für eine Kopie wenden Sie sich an die Firma, die die Arbeit ausgeführt hat.',
@@ -180,6 +197,10 @@ const TESTI: Record<string, Testi> = {
     verifyBody:
       'Le paquet se vérifie même sans GeoTapp, avec le vérificateur ouvert : il recalcule les empreintes et contrôle la signature.',
     verifyCta: 'Aller à la vérification',
+    surveyTitle: 'Une question à ceux qui commandent le travail',
+    surveyBody:
+      'Partout en Europe, nous recueillons la fréquence à laquelle un travail payé est remis en cause, et ce qui se passe ensuite. Deux minutes, anonyme, rien d’obligatoire.',
+    surveyCta: 'Répondre à l’enquête',
     revokedTitle: 'Code révoqué',
     revokedBody:
       "Ce document a existé, mais son émetteur a révoqué le lien. Pour en obtenir une copie, il faut la demander à l'entreprise qui a fait le travail.",
@@ -208,6 +229,10 @@ const TESTI: Record<string, Testi> = {
     verifyBody:
       'El paquete se verifica incluso sin GeoTapp, con el verificador abierto: recalcula las huellas y comprueba la firma.',
     verifyCta: 'Ir a la verificación',
+    surveyTitle: 'Una pregunta para quien encarga el trabajo',
+    surveyBody:
+      'En toda Europa estamos recogiendo con qué frecuencia se pone en duda un trabajo ya pagado, y qué pasa después. Dos minutos, anónimo, nada obligatorio.',
+    surveyCta: 'Responde a la encuesta',
     revokedTitle: 'Código revocado',
     revokedBody:
       'Este documento existió, pero quien lo emitió revocó el enlace. Para obtener una copia hay que pedirla a la empresa que hizo el trabajo.',
@@ -375,6 +400,22 @@ export default async function PaginaCodice({
             className="font-semibold text-[#16327A] underline"
           >
             {t.verifyCta}
+          </a>
+        </p>
+      </div>
+
+      {/* Ultimo, dopo che la pagina ha fatto il suo lavoro. Nessun UTM e nessun
+          conteggio: qui vale la stessa regola del QR, e' un codice di verifica,
+          non un pixel. */}
+      <div className={`mt-4 ${filo}`}>
+        <h2 className="font-semibold">{t.surveyTitle}</h2>
+        <p className="mt-1 text-sm text-[#4A5259]">{t.surveyBody}</p>
+        <p className="mt-3">
+          <a
+            href={`/${String(locale).split('-')[0]}/survey/`}
+            className="font-semibold text-[#16327A] underline"
+          >
+            {t.surveyCta}
           </a>
         </p>
       </div>

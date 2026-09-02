@@ -28,3 +28,15 @@
 .lp-verifica .voffline-warn b{color:var(--lime)}
 .lp-verifica .voffline-btn{margin-top:4px;border:0}
 .lp-verifica .voffline-btn:hover{color:var(--ink)}
+
+
+/* Invito al sondaggio, in coda alla verifica (02/09/2026). Sobrio: questa pagina
+   serve a controllare un documento, l'invito viene dopo e non deve gridare. */
+.vsurvey { padding: 40px 0 64px; }
+.vsurvey h2 { font-size: 20px; font-weight: 800; margin: 0 0 8px; }
+.vsurvey p { margin: 0 0 16px; max-width: 62ch; line-height: 1.6; color: #4A5259; }
+.vsurvey a {
+  display: inline-block; background: #8FC436; color: #fff; text-decoration: none;
+  font-weight: 700; font-size: 15px; padding: 12px 22px; border-radius: 999px;
+}
+.vsurvey a:hover { filter: brightness(1.05); }
