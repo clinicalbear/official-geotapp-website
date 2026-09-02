@@ -106,10 +106,16 @@ describe('/links page (root, IT) locale filtering', () => {
 // i campi che servono a riconoscere la lingua vanno chiesti li'.
 describe('shared WP post index', () => {
   it('requests the language fields needed by detectPostLocale', () => {
-    const fields = /INDEX_FIELDS\s*=\s*'([^']+)'/.exec(postIndexLib)?.[1] ?? '';
-    expect(fields).toContain('class_list');
-    expect(fields).toContain('gtmsa_lang');
-    expect(postIndexLib).toMatch(/_fields=\$\{INDEX_FIELDS\}/);
+    // Entrambi i set di campi: l'indice leggero (filtra) e quello coi contenuti (mostra).
+    for (const nome of ['INDEX_FIELDS', 'POST_FIELDS']) {
+      const fields = new RegExp(`${nome}\\s*=\\s*'([^']+)'`).exec(postIndexLib)?.[1] ?? '';
+      expect(fields, nome).toContain('class_list');
+      expect(fields, nome).toContain('gtmsa_lang');
+    }
+    // Nessuna fetch di post deve elencare i campi a mano invece di usare quelle costanti.
+    for (const m of postIndexLib.matchAll(/wp\/v2\/posts\/\?[^`]*_fields=([^&`]+)/g)) {
+      expect(m[1]).toMatch(/^\$\{(fields|POST_FIELDS)\}$/);
+    }
   });
 
   it('uses trailing-slash REST endpoints (without it the Worker subrequest gets 404)', () => {

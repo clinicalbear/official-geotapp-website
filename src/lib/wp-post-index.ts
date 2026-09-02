@@ -10,9 +10,20 @@
 // Funzionano: paginazione, `_fields`, `include`, `_embed`, `search`.
 // Quindi: si scarica l'indice una volta e si filtra qui.
 //
+// PERCHE' SI LEGGE A RUNTIME E NON IN BUILD
+// Dal runner GitHub il blog risponde 403 (Cloudflare, 282 casi nel deploy del 02/09/2026):
+// in CI i dati non arrivano, e una pagina prerenderizzata li' nascerebbe vuota. Con
+// `cache: 'no-store'` Next non prerenderizza queste pagine e le rende nel Worker, dove la
+// fetch funziona: e' lo stesso motivo per cui l'hub blog fa cosi'. La cache in memoria
+// (un'ora) evita di ripaginare a ogni richiesta.
+//
 // CONTRATTO WORKER (vedi AGENTS.md): trailing slash sull'endpoint, header di proxy,
-// cache: 'no-store' con cache in memoria a parte (con next.revalidate il data cache del
-// Worker deduplica la fetch e l'AbortSignal non si propaga).
+// `cache: 'no-store'` PIU' AbortSignal (con next.revalidate il data cache del Worker
+// deduplica la fetch e il signal non si propaga).
+//
+// L'indice porta solo i campi che servono a filtrare: titoli ed estratti dei 1197 post
+// sarebbero megabyte da scaricare e parsare a ogni render. I contenuti si prendono dopo,
+// per i soli id scelti, con `include=`.
 
 import { detectPostLocale, toBlogLocale } from '@/lib/blog-locale';
 
@@ -23,47 +34,37 @@ const WP_HEADERS = {
   'x-forwarded-proto': 'https',
 };
 
-const INDEX_FIELDS = 'id,slug,title,excerpt,date,link,featured_media,categories,class_list,gtmsa_lang';
+const INDEX_FIELDS = 'id,slug,date,link,categories,class_list,gtmsa_lang';
+const POST_FIELDS = 'id,slug,title,excerpt,date,link,featured_media,categories,class_list,gtmsa_lang';
 const PER_PAGE = 100;
 const MAX_PAGES = 25;
 const CACHE_TTL_MS = 60 * 60 * 1000;
-const REVALIDATE_S = 3600;
 
-export interface WpIndexPost {
+/** Riga dell'indice: il minimo per decidere lingua e categoria. */
+export interface WpIndexEntry {
   id: number;
   slug: string;
-  title: { rendered: string };
-  excerpt: { rendered: string };
   date: string;
   link: string;
-  featured_media?: number;
   categories?: number[];
   class_list?: string[];
   gtmsa_lang?: string;
 }
 
-/**
- * Due modi di leggere dal blog, e non sono intercambiabili:
- *
- *  - `next: { revalidate }` SENZA AbortSignal, per le pagine statiche. Con `no-store` il
- *    build esce dal rendering statico (DYNAMIC_SERVER_USAGE) e la fetch fallisce proprio
- *    li': le sezioni blog finirebbero vuote nell'HTML generato.
- *  - `cache: 'no-store'` PIU' AbortSignal, per le pagine force-dynamic (/links). Li' il
- *    revalidate del data cache del Worker deduplica la fetch e il signal non si propaga.
- */
-interface FetchMode {
-  noStore?: boolean;
+/** Post con i campi da mostrare. */
+export interface WpIndexPost extends WpIndexEntry {
+  title: { rendered: string };
+  excerpt: { rendered: string };
+  featured_media?: number;
 }
 
-function requestInit({ noStore }: FetchMode, timeoutMs: number): RequestInit {
-  return noStore
-    ? { headers: WP_HEADERS, cache: 'no-store', signal: AbortSignal.timeout(timeoutMs) }
-    : { headers: WP_HEADERS, next: { revalidate: REVALIDATE_S } };
+function requestInit(timeoutMs: number): RequestInit {
+  return { headers: WP_HEADERS, cache: 'no-store', signal: AbortSignal.timeout(timeoutMs) };
 }
 
-async function wpJson<T>(path: string, mode: FetchMode = {}, timeoutMs = 8000): Promise<T | null> {
+async function wpJson<T>(path: string, timeoutMs = 8000): Promise<T | null> {
   try {
-    const res = await fetch(`${WP}${path}`, requestInit(mode, timeoutMs));
+    const res = await fetch(`${WP}${path}`, requestInit(timeoutMs));
     if (!res.ok) {
       console.error(`wp-post-index: HTTP ${res.status} per ${path}`);
       return null;
@@ -77,11 +78,10 @@ async function wpJson<T>(path: string, mode: FetchMode = {}, timeoutMs = 8000): 
 
 async function wpJsonWithHeaders<T>(
   path: string,
-  mode: FetchMode = {},
   timeoutMs = 8000,
 ): Promise<{ data: T; headers: Headers } | null> {
   try {
-    const res = await fetch(`${WP}${path}`, requestInit(mode, timeoutMs));
+    const res = await fetch(`${WP}${path}`, requestInit(timeoutMs));
     if (!res.ok) {
       console.error(`wp-post-index: HTTP ${res.status} per ${path}`);
       return null;
@@ -95,7 +95,7 @@ async function wpJsonWithHeaders<T>(
 
 // Cache per numero di pagine richieste: le pagine statiche vogliono l'archivio intero,
 // quelle force-dynamic solo i post recenti e non devono pagare 12 subrequest a richiesta.
-const indexCache = new Map<number, { at: number; posts: WpIndexPost[] }>();
+const indexCache = new Map<number, { at: number; posts: WpIndexEntry[] }>();
 
 /** Svuota le cache in memoria. Serve ai test. */
 export function resetWpPostIndexCache(): void {
@@ -104,25 +104,34 @@ export function resetWpPostIndexCache(): void {
   categoryIdCache.clear();
 }
 
-export interface PostIndexOptions extends FetchMode {
+export interface PostIndexOptions {
   /** Quante pagine da 100 post scaricare. Default: tutto l'archivio. */
   maxPages?: number;
+  /** Porta anche titolo, estratto e immagine. Costa molto di piu': solo per pochi post. */
+  withContent?: boolean;
 }
 
 /**
- * Post pubblicati, dal piu' recente. Per default scarica tutto l'archivio in modalita'
- * statica: serve alle pagine generate in build, che devono elencare anche i pezzi vecchi
- * di una categoria. Chi rende a ogni richiesta passa `maxPages` basso e `noStore`.
+ * Post pubblicati, dal piu' recente. Per default l'archivio intero, con i soli campi che
+ * servono a filtrare: le pagine risorse devono trovare anche i pezzi vecchi di una
+ * categoria. Chi mostra solo i piu' recenti passa `maxPages` basso.
  */
-export async function getPostIndex(options: PostIndexOptions = {}): Promise<WpIndexPost[]> {
-  const { maxPages = MAX_PAGES, noStore = false } = options;
+export function getPostIndex(
+  options: PostIndexOptions & { withContent: true },
+): Promise<WpIndexPost[]>;
+export function getPostIndex(
+  options?: PostIndexOptions & { withContent?: false },
+): Promise<WpIndexEntry[]>;
+export async function getPostIndex(options: PostIndexOptions = {}): Promise<WpIndexEntry[]> {
+  const { maxPages = MAX_PAGES, withContent = false } = options;
   const cap = Math.max(1, Math.min(maxPages, MAX_PAGES));
-  const cached = indexCache.get(cap);
+  const fields = withContent ? POST_FIELDS : INDEX_FIELDS;
+  const cacheKey = withContent ? -cap : cap;
+  const cached = indexCache.get(cacheKey);
   if (cached && Date.now() - cached.at < CACHE_TTL_MS) return cached.posts;
 
-  const first = await wpJsonWithHeaders<WpIndexPost[]>(
-    `/wp-json/wp/v2/posts/?per_page=${PER_PAGE}&page=1&status=publish&orderby=date&order=desc&_fields=${INDEX_FIELDS}`,
-    { noStore },
+  const first = await wpJsonWithHeaders<WpIndexEntry[]>(
+    `/wp-json/wp/v2/posts/?per_page=${PER_PAGE}&page=1&status=publish&orderby=date&order=desc&_fields=${fields}`,
   );
   // Su fallimento si tiene quello che c'era: meglio un indice vecchio di un'ora che una
   // sezione vuota, che e' esattamente il modo in cui questo bug e' passato inosservato.
@@ -133,13 +142,12 @@ export async function getPostIndex(options: PostIndexOptions = {}): Promise<WpIn
     cap,
   );
 
-  const posts = [...first.data];
+  const posts: WpIndexEntry[] = [...first.data];
   if (totalPages > 1) {
     const rest = await Promise.all(
       Array.from({ length: totalPages - 1 }, (_, i) =>
-        wpJson<WpIndexPost[]>(
-          `/wp-json/wp/v2/posts/?per_page=${PER_PAGE}&page=${i + 2}&status=publish&orderby=date&order=desc&_fields=${INDEX_FIELDS}`,
-          { noStore },
+        wpJson<WpIndexEntry[]>(
+          `/wp-json/wp/v2/posts/?per_page=${PER_PAGE}&page=${i + 2}&status=publish&orderby=date&order=desc&_fields=${fields}`,
         ),
       ),
     );
@@ -149,7 +157,7 @@ export async function getPostIndex(options: PostIndexOptions = {}): Promise<WpIn
   const seen = new Set<number>();
   const unique = posts.filter((p) => (seen.has(p.id) ? false : (seen.add(p.id), true)));
 
-  indexCache.set(cap, { at: Date.now(), posts: unique });
+  indexCache.set(cacheKey, { at: Date.now(), posts: unique });
   return unique;
 }
 
@@ -209,12 +217,12 @@ export async function localizeCategoryId(baseCategoryId: number, locale: string)
 }
 
 /** Post di quelle categorie, nella lingua richiesta, dal piu' recente. */
-export function filterPosts(
-  posts: WpIndexPost[],
+export function filterPosts<T extends WpIndexEntry>(
+  posts: T[],
   categoryIds: number[],
   locale: string,
   limit?: number,
-): WpIndexPost[] {
+): T[] {
   const lang = toBlogLocale(locale);
   const wanted = new Set(categoryIds);
   const out = posts.filter(
@@ -234,10 +242,22 @@ export async function getPostsInCategory(
   locale: string,
   limit?: number,
 ): Promise<WpIndexPost[]> {
-  const [categoryId, posts] = await Promise.all([
+  const [categoryId, index] = await Promise.all([
     localizeCategoryId(baseCategoryId, locale),
     getPostIndex(),
   ]);
   if (categoryId === null) return [];
-  return filterPosts(posts, [categoryId], locale, limit);
+  const scelti = filterPosts(index, [categoryId], locale, limit);
+  return hydratePosts(scelti.map((p) => p.id));
+}
+
+/** Scarica titolo, estratto e immagine dei soli post scelti, nell'ordine dato. */
+export async function hydratePosts(ids: number[]): Promise<WpIndexPost[]> {
+  if (ids.length === 0) return [];
+  const data = await wpJson<WpIndexPost[]>(
+    `/wp-json/wp/v2/posts/?include=${ids.join(',')}&per_page=${ids.length}&_fields=${POST_FIELDS}`,
+  );
+  if (!data) return [];
+  const byId = new Map(data.map((p) => [p.id, p]));
+  return ids.map((id) => byId.get(id)).filter((p): p is WpIndexPost => Boolean(p));
 }

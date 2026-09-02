@@ -147,9 +147,11 @@ async function resolveCategoryIds(slugs: string[]): Promise<Record<string, numbe
 // Entrambe leggono dallo stesso indice: `?categories=` sul blog risponde sempre vuoto
 // (verificato 02/09/2026), quindi la categoria si filtra qui. In piu' l'indice copre
 // tutti i post e non solo gli ultimi 50, che in 11 lingue lasciavano 2-3 pezzi per locale.
-// 3 pagine = i 300 post piu' recenti: la pagina rende a ogni richiesta e non deve
-// scaricare tutto l'archivio, ma con 11 lingue servono piu' dei 50 di prima.
-const LINKS_INDEX_PAGES = 3;
+// 2 pagine = i 200 post piu' recenti CON titolo ed estratto (la pagina cerca per parole
+// chiave nel titolo): con 11 lingue restano ~18 pezzi per lingua, contro i 50 totali
+// di prima che ne lasciavano 2-3. La pagina rende a ogni richiesta, non si scarica
+// tutto l'archivio.
+const LINKS_INDEX_PAGES = 2;
 
 function asWpPosts(posts: WpIndexPost[]): WpPost[] {
   return posts.map((p) => ({ ...p, featured_media: p.featured_media ?? 0 }));
@@ -158,12 +160,12 @@ function asWpPosts(posts: WpIndexPost[]): WpPost[] {
 async function fetchPostsInCategories(ids: number[]): Promise<WpPost[]> {
   if (ids.length === 0) return [];
   const wanted = new Set(ids);
-  const index = await getPostIndex({ maxPages: LINKS_INDEX_PAGES, noStore: true });
+  const index = await getPostIndex({ maxPages: LINKS_INDEX_PAGES, withContent: true });
   return asWpPosts(index.filter((p) => (p.categories ?? []).some((id) => wanted.has(id))));
 }
 
 async function fetchLatestPosts(): Promise<WpPost[]> {
-  return asWpPosts(await getPostIndex({ maxPages: LINKS_INDEX_PAGES, noStore: true }));
+  return asWpPosts(await getPostIndex({ maxPages: LINKS_INDEX_PAGES, withContent: true }));
 }
 
 async function fetchMediaMap(ids: number[]): Promise<Record<number, string>> {

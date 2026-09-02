@@ -46,8 +46,8 @@ describe.skipIf(!live)('dry run sezioni blog del sito', () => {
 describe.skipIf(!live)('indice ridotto delle pagine /links (force-dynamic)', () => {
   it('con 3 pagine restano abbastanza post per ogni lingua', async () => {
     resetWpPostIndexCache();
-    const ridotto = await getPostIndex({ maxPages: 3 });
-    console.log(`\nIndice ridotto: ${ridotto.length} post`);
+    const ridotto = await getPostIndex({ maxPages: 2, withContent: true });
+    console.log(`\nIndice ridotto (con contenuti): ${ridotto.length} post`);
 
     const perLingua: Record<string, number> = {};
     for (const p of ridotto) {

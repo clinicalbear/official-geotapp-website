@@ -87,7 +87,7 @@ async function getLatestArticles(): Promise<Article[]> {
     // Worker deduplica il fetch e il signal non si propaga → fetch sempre fallita.
     // Indice condiviso: l'endpoint /posts SENZA trailing slash faceva 404 dalla
     // subrequest del Worker (contratto in AGENTS.md), quindi qui non arrivava mai niente.
-    const raw = await getPostIndex({ maxPages: 3, noStore: true });
+    const raw = await getPostIndex({ maxPages: 2, withContent: true });
 
     // Filtro IT e prendi i 4 più recenti. La lingua si rileva con detectPostLocale
     // (gtmsa_lang, poi categoria, poi permalink), NON dal prefisso dell'URL: diversi
