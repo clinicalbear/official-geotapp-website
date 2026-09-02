@@ -263,6 +263,8 @@ const SITEMAP_ROUTES: SitemapRouteEntry[] = [
   { path: '/risorse/politica-conservazione-dati/', priority: 0.85, changeFrequency: 'monthly' },
   { path: '/risorse/dossier-conformita/', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/roi-calculator/', priority: 0.75, changeFrequency: 'monthly' },
+  // Pagina di iscrizione alla newsletter: indicizzabile, a differenza di /survey/.
+  { path: '/newsletter/', priority: 0.6, changeFrequency: 'monthly' },
   // /survey/ NON va in sitemap: le sue pagine sono noindex (una per lingua, 16 URL).
   // Chiedere a Google di indicizzare una pagina che gli dice di non indicizzarsi e'
   // un segnale contraddittorio, e Ahrefs lo contava come errore critico
