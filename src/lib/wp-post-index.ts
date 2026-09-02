@@ -371,10 +371,24 @@ export async function getPostsInCategory(
 /** Scarica titolo, estratto e immagine dei soli post scelti, nell'ordine dato. */
 export async function hydratePosts(ids: number[]): Promise<WpIndexPost[]> {
   if (ids.length === 0) return [];
-  const data = await wpJson<WpIndexPost[]>(
-    `/wp-json/wp/v2/posts/?include=${ids.join(',')}&per_page=${ids.length}&_fields=${POST_FIELDS}`,
+
+  // WP rifiuta per_page oltre 100 con un 400: chiedere piu' post in un colpo solo non
+  // dava una lista tagliata, dava zero post. La pagina autore ci era finita dentro.
+  const blocchi: number[][] = [];
+  for (let i = 0; i < ids.length; i += PER_PAGE) blocchi.push(ids.slice(i, i + PER_PAGE));
+
+  const risposte = await Promise.all(
+    blocchi.map((blocco) =>
+      wpJson<WpIndexPost[]>(
+        `/wp-json/wp/v2/posts/?include=${blocco.join(',')}&per_page=${blocco.length}&_fields=${POST_FIELDS}`,
+      ),
+    ),
   );
-  if (!data) return [];
-  const byId = new Map(data.map((p) => [p.id, p]));
+
+  const byId = new Map<number, WpIndexPost>();
+  for (const data of risposte) {
+    if (!data) continue;
+    for (const p of data) byId.set(p.id, p);
+  }
   return ids.map((id) => byId.get(id)).filter((p): p is WpIndexPost => Boolean(p));
 }

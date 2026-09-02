@@ -23,6 +23,7 @@ export const dynamic = 'force-dynamic';
 // La foto non e' piu' disponibile da WordPress (niente avatar_urls): si usa il ritratto
 // del sito, lo stesso di /chi-siamo.
 const AUTHOR_PHOTO = '/michele-petraroli-3.webp';
+const ARTICLES_SHOWN = 24;
 
 function detectLocale(headerStore: Headers, cookieValue: string | undefined): AppLocale {
   // 1. Cookie wins
@@ -103,7 +104,9 @@ export default async function AuthorPage({
   };
 
   // La lingua la decide detectPostLocale dentro l'indice, non il prefisso del permalink.
-  const posts: WpIndexPost[] = await getPostsByAuthor(user.id, locale);
+  // Il tetto e' di pagina, non tecnico: l'autore ha centinaia di pezzi per lingua e la
+  // griglia non e' paginata.
+  const posts: WpIndexPost[] = await getPostsByAuthor(user.id, locale, ARTICLES_SHOWN);
   const covers = await getMediaUrls(posts.map((p) => p.featured_media ?? 0));
   const avatar = AUTHOR_PHOTO;
 

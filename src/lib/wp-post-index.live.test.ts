@@ -82,10 +82,17 @@ describe.skipIf(!live)('pagina autore', () => {
     expect(sconosciuto).toBeNull();
 
     for (const locale of ['it', 'de', 'en-us']) {
-      const posts = await getPostsByAuthor(perEsteso!.id, locale, 3);
+      const posts = await getPostsByAuthor(perEsteso!.id, locale, 24);
       console.log(`── ${locale}: ${posts.length} articoli`);
-      for (const p of posts) console.log(`   ${p.link}`);
+      for (const p of posts.slice(0, 2)) console.log(`   ${p.link}`);
       expect(posts.length).toBeGreaterThan(0);
     }
+
+    // Senza tetto sono centinaia di post: WP taglia per_page a 100 e chi non spezza
+    // la richiesta non riceve una lista corta, riceve zero. La pagina autore ci era
+    // finita dentro e mostrava "nessun articolo".
+    const tutti = await getPostsByAuthor(perEsteso!.id, 'it');
+    console.log(`── it senza tetto: ${tutti.length} articoli`);
+    expect(tutti.length).toBeGreaterThan(100);
   }, 120_000);
 });
