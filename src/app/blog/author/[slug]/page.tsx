@@ -6,90 +6,23 @@ import { Linkedin, BadgeCheck, ExternalLink } from 'lucide-react';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import { SUPPORTED_LOCALES, DEFAULT_LOCALE, type AppLocale } from '@/lib/i18n/config';
 import { sanitizeWpHtml } from '@/lib/sanitize-wp';
+import {
+  findAuthorBySlug,
+  getPostsByAuthor,
+  getMediaUrls,
+  blogPostPath,
+  type BlogAuthor,
+  type WpIndexPost,
+} from '@/lib/wp-post-index';
 
 export const dynamic = 'force-dynamic';
 
-// Fetch directly from the WordPress origin (blog.geotapp.com) instead of
-// going through the geotapp.com/blog/ proxy. Otherwise the Cloudflare Worker
-// would recursively call itself when rendering this server component,
-// hitting subrequest limits and timing out the request.
-const WP_BASE = 'https://blog.geotapp.com/wp-json/wp/v2';
-const WP_HEADERS = {
-  'x-geotapp-proxy': '1',
-  // Bypass the blog.geotapp.com → geotapp.com/blog/ 301 redirect at the
-  // Apache .htaccess layer: the proxy header tells Apache this is the
-  // canonical fetch, not a user browser that should be redirected.
-};
-
-interface WPUser {
-  id: number;
-  name: string;
-  slug: string;
-  description: string;
-  url: string;
-  avatar_urls: Record<string, string>;
-}
-
-interface WPPostLite {
-  id: number;
-  date: string;
-  link: string;
-  slug: string;
-  title: { rendered: string };
-  excerpt: { rendered: string };
-  featured_media: number;
-  _embedded?: {
-    'wp:featuredmedia'?: Array<{ source_url: string; alt_text?: string }>;
-  };
-}
-
-async function fetchUser(slug: string): Promise<WPUser | null> {
-  const res = await fetch(
-    `${WP_BASE}/users/?slug=${encodeURIComponent(slug)}&per_page=1`,
-    { headers: WP_HEADERS, cache: 'no-store', signal: AbortSignal.timeout(10000) },
-  );
-  if (!res.ok) return null;
-  const arr = (await res.json()) as WPUser[];
-  return arr?.[0] ?? null;
-}
-
-async function fetchPosts(authorId: number): Promise<WPPostLite[]> {
-  // Fetch a wide page (the WP REST API doesn't filter by Polylang language
-  // out of the box on this install). Locale filtering happens below by
-  // parsing the permalink: Polylang prefixes non-default locales as
-  // /blog/{lang}/YYYY/..., the default locale (it) has no prefix.
-  const res = await fetch(
-    `${WP_BASE}/posts/?author=${authorId}&per_page=100&_embed=wp:featuredmedia&orderby=date&order=desc`,
-    { headers: WP_HEADERS, cache: 'no-store', signal: AbortSignal.timeout(15000) },
-  );
-  if (!res.ok) return [];
-  return (await res.json()) as WPPostLite[];
-}
-
-/** Map an AppLocale to the Polylang language slug used in permalinks. */
-function languageCodeFor(locale: AppLocale): string {
-  // Regional EN variants share the 'en' set of articles.
-  if (locale === 'en' || locale.startsWith('en-')) return 'en';
-  return locale; // it, de, fr, es, pt, nl, da, sv, nb, ru - Polylang slugs match
-}
-
-/** Read the language slug embedded in a WordPress permalink. */
-function postLanguageFromLink(link: string): string {
-  try {
-    const u = new URL(link);
-    // Patterns: /blog/{slug}/, /blog/YYYY/.../, /blog/{lang}/{slug}/, /blog/{lang}/YYYY/...
-    const segments = u.pathname.split('/').filter(Boolean);
-    // segments[0] is "blog"
-    const second = segments[1];
-    if (!second) return 'it';
-    if (/^\d{4}$/.test(second)) return 'it'; // year segment → default IT
-    if (/^[a-z]{2}$/.test(second)) return second;
-    // Slug-only URL (no date archive) → also IT
-    return 'it';
-  } catch {
-    return 'it';
-  }
-}
+// L'endpoint /wp-json/wp/v2/users/ del blog risponde 404 (hardening) e `?author=<id>`
+// filtra a vuoto: questa pagina restava quindi sempre in notFound(). Autore e articoli
+// arrivano ora dall'indice condiviso, che ricava il nome da Yoast e filtra in codice.
+// La foto non e' piu' disponibile da WordPress (niente avatar_urls): si usa il ritratto
+// del sito, lo stesso di /chi-siamo.
+const AUTHOR_PHOTO = '/michele-petraroli-3.webp';
 
 function detectLocale(headerStore: Headers, cookieValue: string | undefined): AppLocale {
   // 1. Cookie wins
@@ -134,12 +67,11 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const user = await fetchUser(slug);
-  if (!user) return {};
+  const author = await findAuthorBySlug(slug);
+  if (!author) return {};
   return {
-    title: `${user.name} - GeoTapp`,
-    description: stripHtml(user.description).slice(0, 160),
-    alternates: { canonical: `https://geotapp.com/blog/author/${user.slug}/` },
+    title: `${author.name} - GeoTapp`,
+    alternates: { canonical: `https://geotapp.com/blog/author/${author.slug}/` },
   };
 }
 
@@ -149,12 +81,13 @@ export default async function AuthorPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const [user, headerStore, cookieStore] = await Promise.all([
-    fetchUser(slug),
+  const [author, headerStore, cookieStore] = await Promise.all([
+    findAuthorBySlug(slug),
     headers(),
     cookies(),
   ]);
-  if (!user) notFound();
+  if (!author) notFound();
+  const user: BlogAuthor = author;
 
   const locale = detectLocale(headerStore, cookieStore.get('geotapp_locale')?.value);
   const dict = getDictionary(locale);
@@ -169,14 +102,12 @@ export default async function AuthorPage({
     no_articles: 'No articles yet.',
   };
 
-  const allPosts = await fetchPosts(user.id);
-  const wantedLang = languageCodeFor(locale);
-  const posts = allPosts.filter(
-    (p) => postLanguageFromLink(p.link) === wantedLang,
-  );
-  const avatar = user.avatar_urls['96'] || user.avatar_urls['48'] || '';
+  // La lingua la decide detectPostLocale dentro l'indice, non il prefisso del permalink.
+  const posts: WpIndexPost[] = await getPostsByAuthor(user.id, locale);
+  const covers = await getMediaUrls(posts.map((p) => p.featured_media ?? 0));
+  const avatar = AUTHOR_PHOTO;
 
-  const featuredUrl = user.url && user.url.includes('featured.com') ? user.url : 'https://featured.com/p/michele-petraroli';
+  const featuredUrl = 'https://featured.com/p/michele-petraroli';
   const linkedinUrl = 'https://www.linkedin.com/in/mikepetraroli/';
 
   const personSchema = {
@@ -186,7 +117,7 @@ export default async function AuthorPage({
     name: user.name,
     alternateName: ['Michele Petraroli', 'Mike Petraroli'],
     jobTitle: t.job_title,
-    description: stripHtml(t.bio || user.description),
+    description: stripHtml(t.bio),
     image: avatar,
     url: `https://geotapp.com/blog/author/${user.slug}/`,
     sameAs: [featuredUrl, linkedinUrl],
@@ -263,18 +194,8 @@ export default async function AuthorPage({
           ) : (
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {posts.map((p) => {
-                const cover =
-                  p._embedded?.['wp:featuredmedia']?.[0]?.source_url ?? '';
-                // Use WP's canonical permalink, already includes the
-                // language prefix where applicable. Strip the origin so
-                // the link stays internal to the Next.js app.
-                let href = `/blog/${p.slug}/`;
-                try {
-                  const u = new URL(p.link);
-                  href = u.pathname;
-                } catch {
-                  /* fall back to slug */
-                }
+                const cover = covers.get(p.featured_media ?? 0) ?? '';
+                const href = blogPostPath(p.link, p.slug);
                 return (
                   <Link
                     key={p.id}

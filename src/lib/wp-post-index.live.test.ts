@@ -6,7 +6,7 @@
 // Fuori da quel comando il file si salta, per non appendere la suite alla rete.
 
 import { describe, it, expect } from 'vitest';
-import { getPostIndex, getPostsInCategory, localizeCategoryId, resetWpPostIndexCache } from './wp-post-index';
+import { findAuthorBySlug, getAuthors, getPostIndex, getPostsByAuthor, getPostsInCategory, localizeCategoryId, resetWpPostIndexCache } from './wp-post-index';
 import { detectPostLocale, toBlogLocale } from './blog-locale';
 
 const live = process.env.LIVE_WP === '1';
@@ -59,6 +59,33 @@ describe.skipIf(!live)('indice ridotto delle pagine /links (force-dynamic)', () 
     // Le pagine /links mostrano 4 articoli per lingua piu' i pinnati di settore.
     for (const lang of ['it', 'en', 'de', 'fr', 'es', 'pt', 'nl', 'da', 'sv', 'nb', 'ru']) {
       expect(perLingua[lang] ?? 0).toBeGreaterThanOrEqual(4);
+    }
+  }, 120_000);
+});
+
+describe.skipIf(!live)('pagina autore', () => {
+  it('trova l autore dai post e i suoi articoli per lingua', async () => {
+    const autori = await getAuthors();
+    console.log(`\nAutori con almeno un post: ${autori.map((a) => `${a.slug} (${a.postCount})`).join(', ')}`);
+    expect(autori.length).toBeGreaterThan(0);
+
+    // Le forme abbreviate delle vecchie URL devono cadere sullo stesso autore.
+    const perEsteso = await findAuthorBySlug('michele-angelo-petraroli');
+    const abbreviato = await findAuthorBySlug('michele-petraroli');
+    const solo = await findAuthorBySlug('michele');
+    expect(perEsteso?.id).toBeDefined();
+    expect(abbreviato?.id).toBe(perEsteso?.id);
+    expect(solo?.id).toBe(perEsteso?.id);
+    expect(perEsteso?.name).toBe('Michele Angelo Petraroli');
+
+    const sconosciuto = await findAuthorBySlug('chi-non-esiste');
+    expect(sconosciuto).toBeNull();
+
+    for (const locale of ['it', 'de', 'en-us']) {
+      const posts = await getPostsByAuthor(perEsteso!.id, locale, 3);
+      console.log(`── ${locale}: ${posts.length} articoli`);
+      for (const p of posts) console.log(`   ${p.link}`);
+      expect(posts.length).toBeGreaterThan(0);
     }
   }, 120_000);
 });

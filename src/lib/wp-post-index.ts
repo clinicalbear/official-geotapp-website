@@ -34,8 +34,8 @@ const WP_HEADERS = {
   'x-forwarded-proto': 'https',
 };
 
-const INDEX_FIELDS = 'id,slug,date,link,categories,class_list,gtmsa_lang';
-const POST_FIELDS = 'id,slug,title,excerpt,date,link,featured_media,categories,class_list,gtmsa_lang';
+const INDEX_FIELDS = 'id,slug,date,link,categories,class_list,gtmsa_lang,author,yoast_head_json.author';
+const POST_FIELDS = 'id,slug,title,excerpt,date,link,featured_media,categories,class_list,gtmsa_lang,author,yoast_head_json.author';
 const PER_PAGE = 100;
 const MAX_PAGES = 25;
 const CACHE_TTL_MS = 60 * 60 * 1000;
@@ -49,6 +49,9 @@ export interface WpIndexEntry {
   categories?: number[];
   class_list?: string[];
   gtmsa_lang?: string;
+  /** Id dell'autore. Il nome arriva da Yoast: l'endpoint /users/ del blog e' 404. */
+  author?: number;
+  yoast_head_json?: { author?: string };
 }
 
 /** Post con i campi da mostrare. */
@@ -159,6 +162,120 @@ export async function getPostIndex(options: PostIndexOptions = {}): Promise<WpIn
 
   indexCache.set(cacheKey, { at: Date.now(), posts: unique });
   return unique;
+}
+
+// ─── Autori ──────────────────────────────────────────────────────────────────
+//
+// L'endpoint /wp-json/wp/v2/users/ risponde 404 (hardening del blog) e `?author=<id>`
+// filtra a vuoto come tutte le query per tassonomia. L'autore si ricava quindi dai post:
+// ogni post porta l'id (`author`) e il nome per esteso (`yoast_head_json.author`).
+
+export interface BlogAuthor {
+  id: number;
+  slug: string;
+  name: string;
+  postCount: number;
+}
+
+/** Slug di un nome: "Michele Angelo Petraroli" → "michele-angelo-petraroli". */
+export function authorSlug(name: string): string {
+  return name
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
+/** Gli autori che hanno almeno un post, dal piu' prolifico. */
+export async function getAuthors(): Promise<BlogAuthor[]> {
+  const index = await getPostIndex();
+  const perId = new Map<number, { name: string; count: number }>();
+
+  for (const p of index) {
+    if (typeof p.author !== 'number') continue;
+    const name = p.yoast_head_json?.author?.trim();
+    const found = perId.get(p.author);
+    if (found) {
+      found.count += 1;
+      if (!found.name && name) found.name = name;
+    } else {
+      perId.set(p.author, { name: name ?? '', count: 1 });
+    }
+  }
+
+  return [...perId.entries()]
+    .filter(([, v]) => v.name.length > 0)
+    .map(([id, v]) => ({ id, slug: authorSlug(v.name), name: v.name, postCount: v.count }))
+    .sort((a, b) => b.postCount - a.postCount);
+}
+
+/**
+ * Autore per slug. Accetta anche le forme abbreviate con cui le vecchie URL WordPress
+ * lo nominano ("michele", "michele-petraroli" per "michele-angelo-petraroli"): le parole
+ * chieste devono comparire, in ordine, in quelle del nome.
+ */
+export async function findAuthorBySlug(slug: string): Promise<BlogAuthor | null> {
+  const wanted = authorSlug(slug).split('-').filter(Boolean);
+  if (wanted.length === 0) return null;
+
+  const authors = await getAuthors();
+  const exact = authors.find((a) => a.slug === wanted.join('-'));
+  if (exact) return exact;
+
+  return (
+    authors.find((a) => {
+      const parts = a.slug.split('-');
+      let i = 0;
+      for (const part of parts) if (i < wanted.length && part === wanted[i]) i += 1;
+      return i === wanted.length;
+    }) ?? null
+  );
+}
+
+/** Post di un autore, nella lingua richiesta, gia' completi di titolo ed estratto. */
+export async function getPostsByAuthor(
+  authorId: number,
+  locale: string,
+  limit?: number,
+): Promise<WpIndexPost[]> {
+  const index = await getPostIndex();
+  const lang = toBlogLocale(locale);
+  const scelti = index
+    .filter((p) => p.author === authorId && detectPostLocale(p) === lang)
+    .slice(0, limit ?? undefined);
+  return hydratePosts(scelti.map((p) => p.id));
+}
+
+/**
+ * URL delle immagini in evidenza. Sta a parte perche' `_fields` e `_embed` insieme non
+ * restituiscono `_embedded`: chi vuole le immagini chiede gli id qui, e solo per i post
+ * che mostra davvero.
+ */
+export async function getMediaUrls(ids: number[]): Promise<Map<number, string>> {
+  const map = new Map<number, string>();
+  const wanted = [...new Set(ids.filter((id) => id > 0))];
+  if (wanted.length === 0) return map;
+
+  const data = await wpJson<Array<{
+    id: number;
+    source_url?: string;
+    media_details?: { sizes?: Record<string, { source_url?: string }> };
+  }>>(
+    `/wp-json/wp/v2/media/?include=${wanted.join(',')}&per_page=${wanted.length}&_fields=id,source_url,media_details`,
+  );
+  if (!data) return map;
+
+  for (const m of data) {
+    const sizes = m.media_details?.sizes ?? {};
+    const url =
+      sizes.medium_large?.source_url ??
+      sizes.large?.source_url ??
+      sizes.medium?.source_url ??
+      m.source_url;
+    if (url) map.set(m.id, url);
+  }
+  return map;
 }
 
 /**

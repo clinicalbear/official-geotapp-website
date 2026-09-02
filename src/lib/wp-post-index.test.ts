@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { blogPostPath, filterPosts, type WpIndexPost } from './wp-post-index';
+import { authorSlug, blogPostPath, filterPosts, type WpIndexPost } from './wp-post-index';
 import { toBlogLocale } from './blog-locale';
 
 const post = (over: Partial<WpIndexPost>): WpIndexPost => ({
@@ -82,5 +82,19 @@ describe('toBlogLocale', () => {
   it('su una lingua sconosciuta ripiega sull inglese', () => {
     expect(toBlogLocale('zz')).toBe('en');
     expect(toBlogLocale('')).toBe('en');
+  });
+});
+
+describe('authorSlug', () => {
+  it('normalizza il nome per esteso', () => {
+    expect(authorSlug('Michele Angelo Petraroli')).toBe('michele-angelo-petraroli');
+  });
+
+  it('toglie accenti e punteggiatura', () => {
+    expect(authorSlug("Renée O'Connor-Bianchi")).toBe('renee-o-connor-bianchi');
+  });
+
+  it('non lascia trattini in testa o in coda', () => {
+    expect(authorSlug('  Mario  Rossi  ')).toBe('mario-rossi');
   });
 });
