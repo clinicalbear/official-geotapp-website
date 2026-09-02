@@ -5,9 +5,7 @@ import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
 import { DEFAULT_LOCALE, SUPPORTED_LOCALES, type AppLocale } from '@/lib/i18n/config';
 import { localizePath } from '@/lib/i18n/locale-routing';
 import { SETTORI_CON_RISORSE } from '@/content/settori/risorse-disponibili';
-
-const WP = 'https://blog.geotapp.com';
-const HEADERS = { host: 'blog.geotapp.com', 'x-geotapp-proxy': '1', 'x-forwarded-proto': 'https' };
+import { blogPostPath, getPostsInCategory } from '@/lib/wp-post-index';
 
 const CTA_LABELS: Record<string, { discover: string; cta: string }> = {
   it: { discover: 'Scopri', cta: 'Vai al prodotto →' },
@@ -280,42 +278,17 @@ function stripHtml(html: string): string {
   return html.replace(/<[^>]*>/g, '').replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#8217;/g, '\u2019').replace(/&#8220;/g, '\u201C').replace(/&#8221;/g, '\u201D').replace(/&nbsp;/g, ' ').trim();
 }
 
-function isLocalePost(link: string, locale: string): boolean {
-  try {
-    const afterBlog = new URL(link).pathname.replace(/^\/blog\//, '');
-    if (locale === 'it') return !/^[a-z]{2}\//.test(afterBlog);
-    return afterBlog.startsWith(`${locale}/`);
-  } catch { return false; }
-}
-
-function normalizeUrl(link: string, slug: string): string {
-  try {
-    const p = new URL(link);
-    if (p.hostname === 'blog.geotapp.com') return `/blog${p.pathname}`;
-  } catch {}
-  return `/blog/${slug}/`;
-}
-
+// ?categories= sul blog risponde sempre vuoto e la categoria qui e' quella ITALIANA:
+// getPostsInCategory traduce la categoria nella lingua della pagina e filtra sull'indice.
 async function fetchAllPostsForCategory(locale: string, categoryId: number) {
-  try {
-    const res = await fetch(
-      `${WP}/wp-json/wp/v2/posts?categories=${categoryId}&per_page=100&_fields=id,slug,title,excerpt,date,link&status=publish`,
-      { headers: HEADERS, next: { revalidate: 7200 }, signal: AbortSignal.timeout(8000) },
-    );
-    if (!res.ok) return [];
-    const raw = await res.json() as Array<{ id: number; slug: string; title: { rendered: string }; excerpt: { rendered: string }; date: string; link: string }>;
-    return raw
-      .filter((p) => isLocalePost(p.link ?? '', locale))
-      .map((p) => ({
-        id: p.id,
-        title: stripHtml(p.title?.rendered ?? ''),
-        excerpt: stripHtml(p.excerpt?.rendered ?? '').slice(0, 180),
-        url: normalizeUrl(p.link, p.slug),
-        date: p.date,
-      }));
-  } catch {
-    return [];
-  }
+  const posts = await getPostsInCategory(categoryId, locale);
+  return posts.map((p) => ({
+    id: p.id,
+    title: stripHtml(p.title?.rendered ?? ''),
+    excerpt: stripHtml(p.excerpt?.rendered ?? '').slice(0, 180),
+    url: blogPostPath(p.link, p.slug),
+    date: p.date,
+  }));
 }
 
 type Params = { locale: string; settore: string };

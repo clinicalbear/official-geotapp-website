@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './l-page.css';
 import LinksClient, { type Article, type Sector } from '../../links/LinksClient';
 import { detectPostLocale } from '@/lib/blog-locale';
+import { getPostIndex, type WpIndexPost } from '@/lib/wp-post-index';
 export { generateLocaleStaticParams as generateStaticParams } from '@/lib/i18n/static-params';
 
 // Render on demand (stesso pattern dell'hub blog): con ISR la pagina veniva
@@ -143,23 +144,26 @@ async function resolveCategoryIds(slugs: string[]): Promise<Record<string, numbe
   return Object.fromEntries(data.map(c => [c.slug, c.id]));
 }
 
-async function fetchPostsInCategories(ids: number[]): Promise<WpPost[]> {
-  if (ids.length === 0) return [];
-  const data = await wpJson<WpPost[]>(
-    `https://blog.geotapp.com/wp-json/wp/v2/posts/?categories=${ids.join(',')}` +
-      `&per_page=20&status=publish&orderby=date&order=desc` +
-      `&_fields=id,slug,title,excerpt,date,link,featured_media,categories,class_list`,
-  );
-  return data ?? [];
+// Entrambe leggono dallo stesso indice: `?categories=` sul blog risponde sempre vuoto
+// (verificato 02/09/2026), quindi la categoria si filtra qui. In piu' l'indice copre
+// tutti i post e non solo gli ultimi 50, che in 11 lingue lasciavano 2-3 pezzi per locale.
+// 3 pagine = i 300 post piu' recenti: la pagina rende a ogni richiesta e non deve
+// scaricare tutto l'archivio, ma con 11 lingue servono piu' dei 50 di prima.
+const LINKS_INDEX_PAGES = 3;
+
+function asWpPosts(posts: WpIndexPost[]): WpPost[] {
+  return posts.map((p) => ({ ...p, featured_media: p.featured_media ?? 0 }));
 }
 
-// 50 post: il blog pubblica in 11 lingue, con 20 ne restavano solo 2-3 per locale.
+async function fetchPostsInCategories(ids: number[]): Promise<WpPost[]> {
+  if (ids.length === 0) return [];
+  const wanted = new Set(ids);
+  const index = await getPostIndex({ maxPages: LINKS_INDEX_PAGES, noStore: true });
+  return asWpPosts(index.filter((p) => (p.categories ?? []).some((id) => wanted.has(id))));
+}
+
 async function fetchLatestPosts(): Promise<WpPost[]> {
-  const data = await wpJson<WpPost[]>(
-    'https://blog.geotapp.com/wp-json/wp/v2/posts/?per_page=50&status=publish' +
-      '&_fields=id,slug,title,excerpt,date,link,featured_media,categories,class_list',
-  );
-  return data ?? [];
+  return asWpPosts(await getPostIndex({ maxPages: LINKS_INDEX_PAGES, noStore: true }));
 }
 
 async function fetchMediaMap(ids: number[]): Promise<Record<number, string>> {

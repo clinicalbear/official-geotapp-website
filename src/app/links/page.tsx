@@ -19,6 +19,7 @@
 import type { Metadata } from 'next';
 import LinksClient, { type Article } from './LinksClient';
 import { detectPostLocale } from '@/lib/blog-locale';
+import { blogPostPath, getPostIndex } from '@/lib/wp-post-index';
 
 // Render on demand (stesso pattern dell'hub blog): con ISR la pagina veniva
 // pre-renderizzata in build, dove le fetch WP falliscono → cache vuota per 1h
@@ -27,17 +28,6 @@ import { detectPostLocale } from '@/lib/blog-locale';
 export const dynamic = 'force-dynamic';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
-
-type WpPost = {
-  id: number;
-  slug: string;
-  title: { rendered: string };
-  excerpt: { rendered: string };
-  date: string;
-  link: string;
-  featured_media: number;
-  class_list?: string[];
-};
 
 type WpMedia = {
   id: number;
@@ -72,12 +62,7 @@ function stripHtml(html: string): string {
 }
 
 function resolveUrl(link: string, slug: string): string {
-  try {
-    const { pathname } = new URL(link);
-    return `https://geotapp.com/blog${pathname}`;
-  } catch {
-    return `https://geotapp.com/blog/${slug}`;
-  }
+  return `https://geotapp.com${blogPostPath(link, slug)}`;
 }
 
 function truncate(text: string, max = 110): string {
@@ -100,36 +85,25 @@ async function getLatestArticles(): Promise<Article[]> {
     // Recuperiamo 50 post: il blog pubblica in 11 lingue, servono ≥ 4 IT dopo il filtro.
     // cache: 'no-store' come l'hub blog: con next.revalidate il data-cache del
     // Worker deduplica il fetch e il signal non si propaga → fetch sempre fallita.
-    const res = await fetch(
-      'https://blog.geotapp.com/wp-json/wp/v2/posts' +
-        '?per_page=50&status=publish' +
-        '&_fields=id,slug,title,excerpt,date,link,featured_media,class_list',
-      {
-        headers: WP_HEADERS,
-        cache: 'no-store',
-        signal: AbortSignal.timeout(6000),
-      }
-    );
+    // Indice condiviso: l'endpoint /posts SENZA trailing slash faceva 404 dalla
+    // subrequest del Worker (contratto in AGENTS.md), quindi qui non arrivava mai niente.
+    const raw = await getPostIndex({ maxPages: 3, noStore: true });
 
-    if (!res.ok) return ARTICLE_CACHE?.articles ?? [];
-
-    const raw: WpPost[] = await res.json();
-
-    // Filtro IT e prendi i 4 più recenti. La lingua si rileva da class_list
-    // (detectPostLocale), NON dal prefisso del permalink: diversi post NL/DE
-    // sono pubblicati senza prefisso lingua nell'URL.
+    // Filtro IT e prendi i 4 più recenti. La lingua si rileva con detectPostLocale
+    // (gtmsa_lang, poi categoria, poi permalink), NON dal prefisso dell'URL: diversi
+    // post NL/DE sono pubblicati senza prefisso lingua.
     const itPosts = raw.filter(p => detectPostLocale(p) === 'it').slice(0, 4);
     if (itPosts.length === 0) return ARTICLE_CACHE?.articles ?? [];
 
     // Recupera immagini in parallelo
-    const mediaIds = itPosts.map(p => p.featured_media).filter(Boolean);
+    const mediaIds = itPosts.map(p => p.featured_media).filter((id): id is number => Boolean(id));
     const mediaMap: Record<number, string> = {};
 
     if (mediaIds.length > 0) {
       try {
         const mRes = await fetch(
-          `https://blog.geotapp.com/wp-json/wp/v2/media` +
-            `?include=${mediaIds.join(',')}&_fields=id,media_details,source_url`,
+          `https://blog.geotapp.com/wp-json/wp/v2/media/` +
+            `?include=${mediaIds.join(',')}&_fields=id,media_details,source_url&per_page=20`,
           { headers: WP_HEADERS, cache: 'no-store', signal: AbortSignal.timeout(6000) }
         );
         if (mRes.ok) {
@@ -156,7 +130,7 @@ async function getLatestArticles(): Promise<Article[]> {
       excerpt: truncate(stripHtml(p.excerpt.rendered)),
       date: p.date,
       url: resolveUrl(p.link, p.slug),
-      image: mediaMap[p.featured_media] ?? null,
+      image: p.featured_media ? mediaMap[p.featured_media] ?? null : null,
     }));
     ARTICLE_CACHE = { articles, ts: Date.now() };
     return articles;

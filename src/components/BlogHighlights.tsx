@@ -1,8 +1,6 @@
 import Link from 'next/link';
 import type { AppLocale } from '@/lib/i18n/config';
-
-const WP = 'https://blog.geotapp.com';
-const HEADERS = { host: 'blog.geotapp.com', 'x-geotapp-proxy': '1', 'x-forwarded-proto': 'https' };
+import { blogPostPath, getPostsInCategory } from '@/lib/wp-post-index';
 
 export interface BlogPost {
   id: number;
@@ -22,53 +20,18 @@ function stripHtml(html: string): string {
     .trim();
 }
 
-function isLocalePost(link: string, locale: string): boolean {
-  try {
-    const afterBlog = new URL(link).pathname.replace(/^\/blog\//, '');
-    if (locale === 'it') return !/^[a-z]{2}\//.test(afterBlog);
-    return afterBlog.startsWith(`${locale}/`);
-  } catch {
-    return false;
-  }
-}
-
-function normalizeUrl(link: string, slug: string): string {
-  try {
-    const p = new URL(link);
-    if (p.hostname === 'blog.geotapp.com') return `/blog${p.pathname}`;
-    if (p.hostname === 'geotapp.com') return p.pathname;
-  } catch { /* fallback */ }
-  return `/blog/${slug}/`;
-}
-
+// La categoria arriva come id ITALIANO dalle pagine: getPostsInCategory la traduce
+// nella gemella della lingua e filtra sull'indice, perche' ?categories= sul blog
+// risponde sempre vuoto (vedi wp-post-index.ts).
 async function fetchBlogPosts(locale: AppLocale, categoryId: number, limit = 3): Promise<BlogPost[]> {
-  try {
-    const res = await fetch(
-      // per_page=20 intentionally larger than limit=3, locale filtering happens after fetch
-      // (WP REST API does not support per-language filtering via query param)
-      `${WP}/wp-json/wp/v2/posts?categories=${categoryId}&per_page=20&_fields=id,slug,title,excerpt,date,link&status=publish`,
-      {
-        headers: HEADERS,
-        next: { revalidate: 3600 },
-        // AbortSignal.timeout is available in CF Workers (compatibility date >= 2022-01-31)
-        signal: AbortSignal.timeout(5000),
-      },
-    );
-    if (!res.ok) return [];
-    const raw = await res.json() as Array<{ id: number; slug: string; title: { rendered: string }; excerpt: { rendered: string }; date: string; link: string }>;
-    return raw
-      .filter((p) => isLocalePost(p.link ?? '', locale))
-      .slice(0, limit)
-      .map((p) => ({
-        id: p.id,
-        title: stripHtml(p.title?.rendered ?? ''),
-        excerpt: stripHtml(p.excerpt?.rendered ?? '').slice(0, 140),
-        url: normalizeUrl(p.link, p.slug),
-        date: p.date,
-      }));
-  } catch {
-    return [];
-  }
+  const posts = await getPostsInCategory(categoryId, locale, limit);
+  return posts.map((p) => ({
+    id: p.id,
+    title: stripHtml(p.title?.rendered ?? ''),
+    excerpt: stripHtml(p.excerpt?.rendered ?? '').slice(0, 140),
+    url: blogPostPath(p.link, p.slug),
+    date: p.date,
+  }));
 }
 
 const SECTION_LABELS: Record<AppLocale, string> = {

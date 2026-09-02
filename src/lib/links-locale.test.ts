@@ -8,8 +8,26 @@ import { join } from 'node:path';
 import { detectPostLocale } from './blog-locale';
 
 const ROOT = join(__dirname, '..', '..');
-const localeLinksPage = readFileSync(join(ROOT, 'src/app/[locale]/links/page.tsx'), 'utf8');
-const rootLinksPage = readFileSync(join(ROOT, 'src/app/links/page.tsx'), 'utf8');
+// Le URL nel sorgente sono spezzate su piu' stringhe concatenate: un `?` finito nel
+// pezzo successivo faceva passare il controllo sul trailing slash mentre l'endpoint
+// vero era senza (e dal Worker rispondeva 404). Si ricuciono prima di controllare.
+function joinConcatenatedStrings(src: string): string {
+  return src
+    // via i commenti: parlano dei parametri rotti, non li usano
+    .replace(/^\s*\/\/.*$/gm, '')
+    .replace(/\/\*[\s\S]*?\*\//g, '')
+    .replace(/['"`]\s*\+\s*['"`]/g, '');
+}
+
+const localeLinksPage = joinConcatenatedStrings(
+  readFileSync(join(ROOT, 'src/app/[locale]/links/page.tsx'), 'utf8'),
+);
+const rootLinksPage = joinConcatenatedStrings(
+  readFileSync(join(ROOT, 'src/app/links/page.tsx'), 'utf8'),
+);
+const postIndexLib = joinConcatenatedStrings(
+  readFileSync(join(ROOT, 'src/lib/wp-post-index.ts'), 'utf8'),
+);
 
 describe('detectPostLocale on prefix-less translated posts', () => {
   it('detects German from class_list even when the permalink has no /de/ prefix', () => {
@@ -40,8 +58,8 @@ describe('/[locale]/links page locale filtering', () => {
     expect(localeLinksPage).toMatch(/detectPostLocale/);
   });
 
-  it('requests class_list from the WP REST API (needed by detectPostLocale)', () => {
-    expect(localeLinksPage).toMatch(/_fields=[^'"`]*class_list/);
+  it('takes posts from the shared index, which is where the language fields are requested', () => {
+    expect(localeLinksPage).toMatch(/from '@\/lib\/wp-post-index'/);
   });
 
   it('no longer filters by permalink prefix alone', () => {
@@ -65,8 +83,8 @@ describe('/links page (root, IT) locale filtering', () => {
     expect(rootLinksPage).toMatch(/detectPostLocale/);
   });
 
-  it('requests class_list from the WP REST API (needed by detectPostLocale)', () => {
-    expect(rootLinksPage).toMatch(/_fields=[^'"`]*class_list/);
+  it('takes posts from the shared index, which is where the language fields are requested', () => {
+    expect(rootLinksPage).toMatch(/from '@\/lib\/wp-post-index'/);
   });
 
   it('no longer filters by permalink prefix alone', () => {
@@ -81,5 +99,26 @@ describe('/links page (root, IT) locale filtering', () => {
 
   it('uses trailing-slash REST endpoints (without it the Worker subrequest gets 404)', () => {
     expect(rootLinksPage).not.toMatch(/wp\/v2\/(posts|categories|media)\?/);
+  });
+});
+
+// L'indice condiviso e' l'unico posto che parla col blog per conto di queste pagine:
+// i campi che servono a riconoscere la lingua vanno chiesti li'.
+describe('shared WP post index', () => {
+  it('requests the language fields needed by detectPostLocale', () => {
+    const fields = /INDEX_FIELDS\s*=\s*'([^']+)'/.exec(postIndexLib)?.[1] ?? '';
+    expect(fields).toContain('class_list');
+    expect(fields).toContain('gtmsa_lang');
+    expect(postIndexLib).toMatch(/_fields=\$\{INDEX_FIELDS\}/);
+  });
+
+  it('uses trailing-slash REST endpoints (without it the Worker subrequest gets 404)', () => {
+    expect(postIndexLib).not.toMatch(/wp\/v2\/(posts|categories|media)\?/);
+  });
+
+  it('never filters by taxonomy server-side: the blog answers [] to ?categories= and ?tags=', () => {
+    for (const src of [postIndexLib, localeLinksPage, rootLinksPage]) {
+      expect(src).not.toMatch(/[?&](categories|tags)=/);
+    }
   });
 });
