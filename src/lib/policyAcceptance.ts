@@ -1,7 +1,7 @@
 
 
-export const TERMS_VERSION = '1.2';
-export const PRIVACY_VERSION = '1.0';
+export const TERMS_VERSION = '1.5';
+export const PRIVACY_VERSION = '1.2';
 export const TERMS_URL = 'https://geotapp.com/terms';
 export const PRIVACY_URL = 'https://geotapp.com/privacy';
 

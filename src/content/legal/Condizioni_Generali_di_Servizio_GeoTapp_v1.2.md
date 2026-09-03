@@ -36,9 +36,9 @@ GeoTapp utilizza **field-level encryption client-side** con chiavi derivate loca
 
 - **Bundle Flow + TimeTracker:** sconto **15%**.
 - **Pagamento annuale = 2 mensilità in omaggio** rispetto al mensile.
-- **Servizio B2B: identificativo fiscale aziendale obbligatorio. Durata minima 12 mesi** (vedi §10.1).
+- **Servizio B2B:** identificativo fiscale aziendale obbligatorio (vedi §10.1). **Nessuna durata minima vincolante.**
 
-**Pagamenti:** Stripe, rinnovo automatico. Fatturazione conforme alla normativa IVA UE applicabile (operazioni B2B). Recesso, durata minima e rinuncia: vedi §10.1.
+**Pagamenti:** Stripe, rinnovo automatico. Fatturazione conforme alla normativa IVA UE applicabile (operazioni B2B). Disdetta: vedi §10.1.
 
 ### 3. REQUISITI D'ACCESSO
 - Età 18+, aziende UE/SEE.  
@@ -68,7 +68,7 @@ GeoTapp utilizza **field-level encryption client-side** con chiavi derivate loca
 - **Uptime:** 99.9% mensile (Firebase SLA)
 - **Crediti:** 10% abbonamento per downtime >0.1%
 - **Manutenzione:** Notifica 48h anticipata
-- **Supporto:** Email info@geotapp.com (risposta 15gg lavorativi)
+- **Supporto:** Email info@geotapp.com (risposta entro 2 giorni lavorativi)
 - **⚠️ Zero Knowledge Limitation:** Supporto NON include recupero dati crittografati persi
 
 ### 6. PROPRIETÀ INTELLETTUALE
@@ -202,10 +202,12 @@ Diritto accesso/portabilità su dati crittografati limitato a export encrypted. 
 
 ### 10. RECESSO E TERMINAZIONE
 
-#### 10.1 Recesso, durata minima e rinuncia (aggiornato 24/06/2026)
+#### 10.1 Disdetta e durata (aggiornato 03/09/2026)
 - **Servizio B2B:** l'accesso richiede un **identificativo fiscale aziendale valido**, obbligatorio alla conversione da trial ad abbonamento: partita IVA per i Clienti stabiliti nell'Unione Europea, verificata sul registro VIES, oppure l'identificativo fiscale nazionale equivalente per i Clienti di altri Paesi. Il servizio non è destinato ai consumatori.
-- **Durata minima 12 mesi:** sottoscrivendo, il Cliente approva specificamente la clausola di durata minima di 12 (dodici) mesi e l'obbligo di corrispondere i canoni per l'intero periodo anche in caso di disdetta anticipata. In caso di pagamento mensile, le rate restano dovute fino al termine dei 12 mesi, con **facoltà di saldare in un'unica soluzione l'importo residuo, scontato del 10%**.
-- **Rinuncia al recesso e attivazione immediata (clausola RINUNCIO):** il Cliente può chiedere l'attivazione immediata del servizio dichiarando espressamente di rinunciare al diritto di recesso di 14 giorni; una volta iniziata l'erogazione, tale diritto non potrà più essere esercitato. Se il Cliente **non** rinuncia, mantiene il diritto di ripensamento e il servizio a pagamento si attiva dopo 14 giorni.
+- **Nessun vincolo di durata:** l'abbonamento si rinnova automaticamente per il periodo scelto e si disdice quando si vuole, con effetto dal termine del periodo in corso. **Non sono dovuti canoni per i periodi successivi alla disdetta.**
+- **Abbonamento mensile:** si disdice entro la fine del mese in corso; nessun importo residuo resta dovuto.
+- **Abbonamento annuale:** copre i 12 mesi pagati e resta utilizzabile fino alla scadenza; disdicendo entro tale data non si rinnova.
+- **Attivazione immediata:** il servizio si attiva al momento del pagamento. Trattandosi di un contratto fra professionisti, non si applica il diritto di recesso di 14 giorni che il Codice del Consumo riconosce ai consumatori, e non è quindi richiesta alcuna rinuncia. La prova gratuita di 14 giorni resta disponibile prima di qualsiasi pagamento.
 - **Migrazione dati:** export CSV/Firestore (**i dati crittografati client-side richiedono la chiave/password dell'utente**).
 
 #### 10.2 Terminazione GeoTapp
@@ -231,8 +233,8 @@ P.IVA: IT04183990987
 
 **Email:** info@geotapp.com  
 - DPO / GDPR Representative UE  
-- Supporto tecnico (risposta 15gg)  
-- Reclami (risposta 15gg)  
+- Supporto tecnico (risposta entro 2 giorni lavorativi)  
+- Reclami (risposta entro 2 giorni lavorativi)  
 - **NON per:** Recupero dati crittografati (impossibile)
 
 **Sito:** https://geotapp.com  
@@ -320,7 +322,7 @@ Adottate SCC Decisione Commissione UE 2021/914:
 - IP: {user_ip}  
 - Data/Ora: {timestamp}  
 - User-Agent: {user_agent}  
-- Versione ToS: 1.3 (10 Marzo 2026)
+- Versione ToS: 1.5 (3 settembre 2026)
 
 ---
 

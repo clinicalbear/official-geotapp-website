@@ -22,20 +22,11 @@ const PLANS = [
 const TT_ANNUAL = 36; // € per seat / year
 const TT_MONTHLY = 3; // € per seat / month
 
-// Binding clauses A and B are shown verbatim in Italian (lawyer-approved wording).
-// Only the surrounding UI chrome is localized.
-const CLAUSE_RINUNCIO =
-  'Chiedo l’attivazione immediata del servizio e dichiaro espressamente di rinunciare al diritto di recesso di 14 giorni, prendendo atto che, una volta iniziata l’erogazione, tale diritto non potrà più essere esercitato. Per confermare, scrivi RINUNCIO qui sotto.';
-const CLAUSE_MIN_TERM =
-  'Approvo specificamente la clausola di durata minima di 12 (dodici) mesi e l’obbligo di corrispondere i canoni per l’intero periodo anche in caso di disdetta anticipata; in caso di pagamento mensile, verserò le rate fino al termine dei 12 mesi, con facoltà di saldare in un’unica soluzione l’importo residuo, scontato del 10%.';
-
 type Strings = {
   title: string;
   subtitle: string;
   vatLabel: string;
   vatPlaceholder: string;
-  rinuncioPlaceholder: string;
-  noWaiverHint: string;
   termsPrefix: string;
   termsLink: string;
   privacyPrefix: string;
@@ -43,7 +34,6 @@ type Strings = {
   submit: string;
   missingTenant: string;
   vatRequired: string;
-  minTermRequired: string;
   generic: string;
   suggestedBadge: string;
   recommendReason: (n: number) => string;
@@ -55,9 +45,6 @@ const UI: Record<'it' | 'en' | 'de', Strings> = {
     subtitle: 'Ancora un passaggio per attivare GeoTapp.',
     vatLabel: 'Partita IVA',
     vatPlaceholder: 'es. IT01234567890',
-    rinuncioPlaceholder: 'Scrivi RINUNCIO (lascia vuoto per mantenere i 14 giorni)',
-    noWaiverHint:
-      'Se lasci vuoto il campo, mantieni il diritto di ripensamento: il servizio a pagamento si attiverà dopo 14 giorni.',
     termsPrefix: 'Ho letto e accetto le',
     termsLink: 'Condizioni di servizio',
     privacyPrefix: 'Ho letto la',
@@ -65,7 +52,6 @@ const UI: Record<'it' | 'en' | 'de', Strings> = {
     submit: 'Vai al pagamento',
     missingTenant: 'Link non valido: manca il riferimento all’account.',
     vatRequired: 'Inserisci la partita IVA.',
-    minTermRequired: 'Devi approvare specificamente la clausola di durata minima.',
     generic: 'Qualcosa è andato storto. Riprova.',
     suggestedBadge: 'Consigliato per te',
     recommendReason: (n) =>
@@ -76,9 +62,6 @@ const UI: Record<'it' | 'en' | 'de', Strings> = {
     subtitle: 'One last step to activate GeoTapp.',
     vatLabel: 'VAT number',
     vatPlaceholder: 'e.g. IT01234567890',
-    rinuncioPlaceholder: 'Type RINUNCIO (leave empty to keep the 14 days)',
-    noWaiverHint:
-      'If you leave this empty you keep the cooling-off right: the paid service activates after 14 days.',
     termsPrefix: 'I have read and accept the',
     termsLink: 'Terms of Service',
     privacyPrefix: 'I have read the',
@@ -86,7 +69,6 @@ const UI: Record<'it' | 'en' | 'de', Strings> = {
     submit: 'Go to payment',
     missingTenant: 'Invalid link: the account reference is missing.',
     vatRequired: 'Please enter your VAT number.',
-    minTermRequired: 'You must specifically approve the minimum-term clause.',
     generic: 'Something went wrong. Please try again.',
     suggestedBadge: 'Recommended for you',
     recommendReason: (n) =>
@@ -97,9 +79,6 @@ const UI: Record<'it' | 'en' | 'de', Strings> = {
     subtitle: 'Nur noch ein Schritt, um GeoTapp zu aktivieren.',
     vatLabel: 'USt-IdNr.',
     vatPlaceholder: 'z. B. IT01234567890',
-    rinuncioPlaceholder: 'RINUNCIO eingeben (leer lassen, um die 14 Tage zu behalten)',
-    noWaiverHint:
-      'Wenn Sie das Feld leer lassen, behalten Sie das Widerrufsrecht: Der kostenpflichtige Dienst wird nach 14 Tagen aktiviert.',
     termsPrefix: 'Ich habe die',
     termsLink: 'Nutzungsbedingungen',
     privacyPrefix: 'Ich habe die',
@@ -107,7 +86,6 @@ const UI: Record<'it' | 'en' | 'de', Strings> = {
     submit: 'Zur Zahlung',
     missingTenant: 'Ungültiger Link: Der Kontobezug fehlt.',
     vatRequired: 'Bitte geben Sie Ihre USt-IdNr. ein.',
-    minTermRequired: 'Sie müssen die Mindestlaufzeit-Klausel ausdrücklich annehmen.',
     generic: 'Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.',
     suggestedBadge: 'Für Sie empfohlen',
     recommendReason: (n) =>
@@ -126,8 +104,6 @@ function CompletaInner() {
   const interval = search.get('interval') === 'monthly' ? 'monthly' : 'annual';
 
   const [vat, setVat] = useState('');
-  const [rinuncio, setRinuncio] = useState('');
-  const [minTerm, setMinTerm] = useState(false);
   const [terms, setTerms] = useState(false);
   const [privacy, setPrivacy] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -174,15 +150,14 @@ function CompletaInner() {
   const perLabel = interval === 'annual' ? 'anno' : 'mese';
 
   const canSubmit = useMemo(
-    () => Boolean(tenant && vat.trim() && minTerm && terms && privacy && !loading),
-    [tenant, vat, minTerm, terms, privacy, loading],
+    () => Boolean(tenant && vat.trim() && terms && privacy && !loading),
+    [tenant, vat, terms, privacy, loading],
   );
 
   async function handleSubmit() {
     setError(null);
     if (!tenant) return setError(t.missingTenant);
     if (!vat.trim()) return setError(t.vatRequired);
-    if (!minTerm) return setError(t.minTermRequired);
 
     setLoading(true);
     try {
@@ -198,10 +173,6 @@ function CompletaInner() {
           selectedPlan: plan,
           selectedTtSeats: ttSeats,
           vatNumber: vat.trim(),
-          minTermAccepted: true,
-          minTermAcceptedAt: now,
-          recessoWaiverText: rinuncio.trim(),
-          recessoWaivedAt: rinuncio.trim() ? now : '',
           ...policy,
         }),
       });
@@ -305,28 +276,6 @@ function CompletaInner() {
               className="in"
             />
           </div>
-
-          {/* Clause A: explicit RINUNCIO waiver */}
-          <div className="clause">
-            <p>{CLAUSE_RINUNCIO}</p>
-            <input
-              value={rinuncio}
-              onChange={(e) => setRinuncio(e.target.value.toUpperCase())}
-              placeholder={t.rinuncioPlaceholder}
-              className="in"
-            />
-            <p className="h">{t.noWaiverHint}</p>
-          </div>
-
-          {/* Clause B: specific acceptance of the 12-month minimum term (art. 1341 c.c.) */}
-          <label className="chk">
-            <input
-              type="checkbox"
-              checked={minTerm}
-              onChange={(e) => setMinTerm(e.target.checked)}
-            />
-            <span>{CLAUSE_MIN_TERM}</span>
-          </label>
 
           {/* Terms + privacy */}
           <div className="agree">
