@@ -36,9 +36,9 @@ GeoTapp utilizza **field-level encryption client-side** con chiavi derivate loca
 
 - **Bundle Flow + TimeTracker:** sconto **15%**.
 - **Pagamento annuale = 2 mensilità in omaggio** rispetto al mensile.
-- **Servizio B2B:** identificativo fiscale aziendale obbligatorio (vedi §10.1). **Nessuna durata minima vincolante.**
+- **Servizio B2B: identificativo fiscale aziendale obbligatorio. Durata minima 12 mesi** (vedi §10.1).
 
-**Pagamenti:** Stripe, rinnovo automatico. Fatturazione conforme alla normativa IVA UE applicabile (operazioni B2B). Disdetta: vedi §10.1.
+**Pagamenti:** Stripe, rinnovo automatico. Fatturazione conforme alla normativa IVA UE applicabile (operazioni B2B). Durata minima e disdetta: vedi §10.1.
 
 ### 3. REQUISITI D'ACCESSO
 - Età 18+, aziende UE/SEE.  
@@ -202,11 +202,9 @@ Diritto accesso/portabilità su dati crittografati limitato a export encrypted. 
 
 ### 10. RECESSO E TERMINAZIONE
 
-#### 10.1 Disdetta e durata (aggiornato 03/09/2026)
+#### 10.1 Durata minima e disdetta (aggiornato 03/09/2026)
 - **Servizio B2B:** l'accesso richiede un **identificativo fiscale aziendale valido**, obbligatorio alla conversione da trial ad abbonamento: partita IVA per i Clienti stabiliti nell'Unione Europea, verificata sul registro VIES, oppure l'identificativo fiscale nazionale equivalente per i Clienti di altri Paesi. Il servizio non è destinato ai consumatori.
-- **Nessun vincolo di durata:** l'abbonamento si rinnova automaticamente per il periodo scelto e si disdice quando si vuole, con effetto dal termine del periodo in corso. **Non sono dovuti canoni per i periodi successivi alla disdetta.**
-- **Abbonamento mensile:** si disdice entro la fine del mese in corso; nessun importo residuo resta dovuto.
-- **Abbonamento annuale:** copre i 12 mesi pagati e resta utilizzabile fino alla scadenza; disdicendo entro tale data non si rinnova.
+- **Durata minima 12 mesi:** sottoscrivendo, il Cliente approva specificamente la clausola di durata minima di 12 (dodici) mesi e l'obbligo di corrispondere i canoni per l'intero periodo anche in caso di disdetta anticipata. In caso di pagamento mensile, le rate restano dovute fino al termine dei 12 mesi, con **facoltà di saldare in un'unica soluzione l'importo residuo, scontato del 10%**.
 - **Attivazione immediata:** il servizio si attiva al momento del pagamento. Trattandosi di un contratto fra professionisti, non si applica il diritto di recesso di 14 giorni che il Codice del Consumo riconosce ai consumatori, e non è quindi richiesta alcuna rinuncia. La prova gratuita di 14 giorni resta disponibile prima di qualsiasi pagamento.
 - **Migrazione dati:** export CSV/Firestore (**i dati crittografati client-side richiedono la chiave/password dell'utente**).
 

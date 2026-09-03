@@ -22,6 +22,11 @@ const PLANS = [
 const TT_ANNUAL = 36; // € per seat / year
 const TT_MONTHLY = 3; // € per seat / month
 
+// La clausola vincolante (durata minima, art. 1341 c.c.) e' resa sempre in
+// italiano, testo approvato dal legale. Solo la cornice di UI e' localizzata.
+const CLAUSE_MIN_TERM =
+  'Approvo specificamente la clausola di durata minima di 12 (dodici) mesi e l’obbligo di corrispondere i canoni per l’intero periodo anche in caso di disdetta anticipata; in caso di pagamento mensile, verserò le rate fino al termine dei 12 mesi, con facoltà di saldare in un’unica soluzione l’importo residuo, scontato del 10%.';
+
 type Strings = {
   title: string;
   subtitle: string;
@@ -34,6 +39,7 @@ type Strings = {
   submit: string;
   missingTenant: string;
   vatRequired: string;
+  minTermRequired: string;
   generic: string;
   suggestedBadge: string;
   recommendReason: (n: number) => string;
@@ -52,6 +58,7 @@ const UI: Record<'it' | 'en' | 'de', Strings> = {
     submit: 'Vai al pagamento',
     missingTenant: 'Link non valido: manca il riferimento all’account.',
     vatRequired: 'Inserisci la partita IVA.',
+    minTermRequired: 'Devi approvare specificamente la clausola di durata minima.',
     generic: 'Qualcosa è andato storto. Riprova.',
     suggestedBadge: 'Consigliato per te',
     recommendReason: (n) =>
@@ -69,6 +76,7 @@ const UI: Record<'it' | 'en' | 'de', Strings> = {
     submit: 'Go to payment',
     missingTenant: 'Invalid link: the account reference is missing.',
     vatRequired: 'Please enter your VAT number.',
+    minTermRequired: 'You must specifically approve the minimum-term clause.',
     generic: 'Something went wrong. Please try again.',
     suggestedBadge: 'Recommended for you',
     recommendReason: (n) =>
@@ -86,6 +94,7 @@ const UI: Record<'it' | 'en' | 'de', Strings> = {
     submit: 'Zur Zahlung',
     missingTenant: 'Ungültiger Link: Der Kontobezug fehlt.',
     vatRequired: 'Bitte geben Sie Ihre USt-IdNr. ein.',
+    minTermRequired: 'Sie müssen die Mindestlaufzeit-Klausel ausdrücklich annehmen.',
     generic: 'Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.',
     suggestedBadge: 'Für Sie empfohlen',
     recommendReason: (n) =>
@@ -104,6 +113,7 @@ function CompletaInner() {
   const interval = search.get('interval') === 'monthly' ? 'monthly' : 'annual';
 
   const [vat, setVat] = useState('');
+  const [minTerm, setMinTerm] = useState(false);
   const [terms, setTerms] = useState(false);
   const [privacy, setPrivacy] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -150,14 +160,15 @@ function CompletaInner() {
   const perLabel = interval === 'annual' ? 'anno' : 'mese';
 
   const canSubmit = useMemo(
-    () => Boolean(tenant && vat.trim() && terms && privacy && !loading),
-    [tenant, vat, terms, privacy, loading],
+    () => Boolean(tenant && vat.trim() && minTerm && terms && privacy && !loading),
+    [tenant, vat, minTerm, terms, privacy, loading],
   );
 
   async function handleSubmit() {
     setError(null);
     if (!tenant) return setError(t.missingTenant);
     if (!vat.trim()) return setError(t.vatRequired);
+    if (!minTerm) return setError(t.minTermRequired);
 
     setLoading(true);
     try {
@@ -173,6 +184,8 @@ function CompletaInner() {
           selectedPlan: plan,
           selectedTtSeats: ttSeats,
           vatNumber: vat.trim(),
+          minTermAccepted: true,
+          minTermAcceptedAt: now,
           ...policy,
         }),
       });
@@ -276,6 +289,16 @@ function CompletaInner() {
               className="in"
             />
           </div>
+
+          {/* Accettazione specifica della durata minima di 12 mesi (art. 1341 c.c.) */}
+          <label className="chk">
+            <input
+              type="checkbox"
+              checked={minTerm}
+              onChange={(e) => setMinTerm(e.target.checked)}
+            />
+            <span>{CLAUSE_MIN_TERM}</span>
+          </label>
 
           {/* Terms + privacy */}
           <div className="agree">
