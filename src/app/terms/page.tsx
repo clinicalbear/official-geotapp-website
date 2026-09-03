@@ -11,6 +11,6 @@ export default function TermsPage() {
     slug: 'terms',
     locale: 'it',
     title: 'Condizioni Generali di Servizio',
-    subtitle: 'Aggiornato al 26 Giugno 2026',
+    subtitle: 'Aggiornato al 3 settembre 2026',
   });
 }

@@ -11,6 +11,6 @@ export default function PrivacyPage() {
     slug: 'privacy',
     locale: 'it',
     title: 'Informativa Privacy',
-    subtitle: 'Versione 1.1 - 29 luglio 2026',
+    subtitle: 'Versione 1.2 - 3 settembre 2026',
   });
 }
