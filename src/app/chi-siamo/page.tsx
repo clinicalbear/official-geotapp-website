@@ -17,8 +17,7 @@ import {
   localizePath,
 } from '@/lib/i18n/locale-routing';
 import { trackEvent } from '@/lib/analytics';
-import ListedOn from '@/components/ListedOn';
-import FeaturedIn from '@/components/FeaturedIn';
+import FeaturedIn, { FEATURED_LABEL } from '@/components/FeaturedIn';
 import LNastro from '@/components/LNastro';
 
 /** Etichetta breve per il fil di briciole: stessa traduzione gia' usata in Footer.tsx (voce "about"). */
@@ -28,11 +27,6 @@ const CRUMB_LABEL: Record<string, string> = {
 };
 
 /** "Presenti su": stessa etichetta gia' pubblicata in HomeClient.tsx. */
-const PRESENTI: Record<string, string> = {
-  it: 'Presenti su', en: 'Listed on', de: 'Gelistet auf', fr: 'Présents sur', es: 'Presentes en',
-  pt: 'Presentes em', nl: 'Vermeld op', da: 'Optaget på', sv: 'Listade på', nb: 'Oppført på', ru: 'Мы представлены на',
-};
-
 export default function AboutPage() {
   const pathname = usePathname();
   const currentLocale = getLocaleFromPathname(pathname) ?? DEFAULT_LOCALE;
@@ -41,7 +35,6 @@ export default function AboutPage() {
   const press = dict.stampa;
   const getLink = (path: string) => localizePath(path, currentLocale);
   const crumb = CRUMB_LABEL[currentLocale] ?? CRUMB_LABEL.en;
-  const presenti = PRESENTI[currentLocale] ?? PRESENTI.en;
 
   return (
     <div className="lp-l lp-chi-siamo">
@@ -150,11 +143,10 @@ export default function AboutPage() {
 
       <LNastro />
 
-      {/* ── presenti su ── */}
+      {/* ── citati su: solo stampa vera. "Presente su" (directory) resta nel footer, non si ripete qui ── */}
       <section className="dirs">
-        <div className="w"><p className="kk k r">{presenti}</p></div>
+        <div className="w"><p className="kk k r dirs-kk">{FEATURED_LABEL[currentLocale] ?? FEATURED_LABEL.en}</p></div>
         <div className="host">
-          <ListedOn locale={currentLocale} />
           <FeaturedIn locale={currentLocale} />
         </div>
       </section>

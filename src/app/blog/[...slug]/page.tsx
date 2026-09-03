@@ -425,7 +425,7 @@ export default async function BlogArticlePage({ params }: Props) {
 
       {/* Citazioni editoriali (testate, non directory): prova terza su ogni articolo */}
       <section className="dirs">
-        <div className="w"><p className="kk k dirs-kk">{FEATURED_LABEL[locale] ?? FEATURED_LABEL.en}</p></div>
+        <div className="w"><p className="kk k r dirs-kk">{FEATURED_LABEL[locale] ?? FEATURED_LABEL.en}</p></div>
         <div className="host">
           <FeaturedIn locale={locale} />
         </div>

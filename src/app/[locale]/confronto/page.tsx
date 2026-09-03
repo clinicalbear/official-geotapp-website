@@ -10,8 +10,8 @@ import LNastro from '@/components/LNastro';
 import './l-page.css';
 export { generateLocaleStaticParams as generateStaticParams } from '@/lib/i18n/static-params';
 
-const ListedOn = dynamic(() => import('@/components/ListedOn'), { ssr: true });
 const FeaturedIn = dynamic(() => import('@/components/FeaturedIn'), { ssr: true });
+import { FEATURED_LABEL } from '@/components/FeaturedIn';
 
 const PATHNAME = '/confronto/';
 
@@ -320,8 +320,12 @@ export default async function ConfrontoIndexPage({ params }: { params: Promise<{
 
         <LNastro />
 
+        {/* ── citati su: solo stampa vera. "Presente su" (directory) resta nel footer, non si ripete qui ── */}
         <section className="dirs">
-          <div className="host"><ListedOn locale={locale} /><FeaturedIn locale={locale} /></div>
+          <div className="w"><p className="kk k r dirs-kk">{FEATURED_LABEL[locale] ?? FEATURED_LABEL.en}</p></div>
+          <div className="host">
+            <FeaturedIn locale={locale} />
+          </div>
         </section>
 
         <section className="end">

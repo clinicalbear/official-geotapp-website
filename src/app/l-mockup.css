@@ -1083,16 +1083,13 @@ main:has(> .lp-l){padding-top:0}
 .acc .dev{z-index:1;max-width:46%;right:4%}
 .acc .dev .browser{width:min(560px,100%) !important}
 .acc .dev .phone{max-width:100%}
-/* taglia dei loghi nelle due fasce della home (il colore resta ai componenti) */
-.dirs .listed-on-logo svg{height:40px !important;width:auto !important}
 /* I loghi stampa NON si dimensionano piu' qui: ognuno riempie la cella comune
    .featured-in-logo, larga e alta uguale per tutti (--press-logo-w/h). Fissare
    qui l'altezza lasciando libera la larghezza e' precisamente cio' che rendeva
-   Personnel Today quattro volte piu' largo di Risorse Umane HR. */
-.dirs .featured-in-logo{--press-logo-w:150px;--press-logo-h:44px}
-/* solo in home: qui la fascia "citati su" e' sola (niente piu' "presente su"
-   sopra, gia' nel footer), quindi i loghi possono essere piu' grandi */
-.dirs-home .featured-in-logo{--press-logo-w:238px;--press-logo-h:73px}
+   Personnel Today quattro volte piu' largo di Risorse Umane HR.
+   La misura grande vale in tutte le pagine: la fascia "citati su" e' sola, le
+   directory stanno solo nel footer e non si ripetono nel corpo. */
+.dirs .featured-in-logo{--press-logo-w:238px;--press-logo-h:73px}
 /* il device nei pannelli sta piu' in basso: non copre i volti delle foto */
 .acc .dev{top:63% !important}
 /* pannello Flow: foto a specchio, il volto sta a sinistra e si vede anche a pannello chiuso */

@@ -18,8 +18,8 @@ import LNastro from '@/components/LNastro';
 import { BREADCRUMB_LABEL, HOME_LABEL } from '@/lib/seo/comparisonSchema';
 import './l-page-confronto-vs.css';
 
-const ListedOn = dynamic(() => import('@/components/ListedOn'), { ssr: true });
 const FeaturedIn = dynamic(() => import('@/components/FeaturedIn'), { ssr: true });
+import { FEATURED_LABEL } from '@/components/FeaturedIn';
 
 export type ComparisonRow = { feature: string; geotapp: boolean; competitor: boolean };
 export type ComparisonFaqItem = { q: string; a: string };
@@ -160,9 +160,12 @@ export default function ComparisonPageL({
       {/* ── il nastro ── */}
       <LNastro />
 
-      {/* ── presenti su ── */}
+      {/* ── citati su: solo stampa vera. "Presente su" (directory) resta nel footer, non si ripete qui ── */}
       <section className="dirs">
-        <div className="host"><ListedOn locale={locale} /><FeaturedIn locale={locale} /></div>
+        <div className="w"><p className="kk k r dirs-kk">{FEATURED_LABEL[locale] ?? FEATURED_LABEL.en}</p></div>
+        <div className="host">
+          <FeaturedIn locale={locale} />
+        </div>
       </section>
 
       {/* ── domande, che si aprono con calma ── */}

@@ -4,8 +4,7 @@ import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
 import { translatePath } from '@/lib/i18n/slug-map';
 import type { AppLocale } from '@/lib/i18n/config';
 import LNastro from '@/components/LNastro';
-import ListedOn from '@/components/ListedOn';
-import FeaturedIn from '@/components/FeaturedIn';
+import FeaturedIn, { FEATURED_LABEL } from '@/components/FeaturedIn';
 
 export { generateLocaleStaticParams as generateStaticParams } from '@/lib/i18n/static-params';
 
@@ -24,11 +23,6 @@ const MODULE_ICON: Record<string, string> = {
 };
 
 /* "Presenti su": stessa etichetta gia' pubblicata in HomeClient.tsx. */
-const PRESENTI: Record<string, string> = {
-  it: 'Presenti su', en: 'Listed on', de: 'Gelistet auf', fr: 'Présents sur', es: 'Presentes en',
-  pt: 'Presentes em', nl: 'Vermeld op', da: 'Optaget på', sv: 'Listade på', nb: 'Oppført på', ru: 'Мы представлены на',
-};
-
 type Copy = {
   title: string;
   description: string;
@@ -495,7 +489,6 @@ export default async function CosEGeoTappPage({ params }: { params: Promise<{ lo
 
   const pricingHref = `/${locale}${translatePath('/pricing/', locale as AppLocale)}`;
   const seePricing = SEE_PRICING[locale] ?? SEE_PRICING.en;
-  const presenti = PRESENTI[locale] ?? PRESENTI.en;
 
   return (
     <>
@@ -576,10 +569,10 @@ export default async function CosEGeoTappPage({ params }: { params: Promise<{ lo
         <LNastro />
 
         {/* ── presenti su ── */}
+        {/* ── citati su: solo stampa vera. "Presente su" (directory) resta nel footer, non si ripete qui ── */}
         <section className="dirs">
-          <div className="w"><p className="kk k r">{presenti}</p></div>
+          <div className="w"><p className="kk k r dirs-kk">{FEATURED_LABEL[locale] ?? FEATURED_LABEL.en}</p></div>
           <div className="host">
-            <ListedOn locale={locale} />
             <FeaturedIn locale={locale} />
           </div>
         </section>

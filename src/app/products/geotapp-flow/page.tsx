@@ -26,16 +26,9 @@ import {
 import { trackEvent } from '@/lib/analytics';
 import LNastro from '@/components/LNastro';
 
-const ListedOn = dynamic(() => import('@/components/ListedOn'), { ssr: true });
 const FeaturedIn = dynamic(() => import('@/components/FeaturedIn'), { ssr: true });
+import { FEATURED_LABEL } from '@/components/FeaturedIn';
 
-// Etichetta "Presenti su" gia' approvata e in uso su HomeClient (L_COPY.presenti):
-// stessa parola, stessa traduzione, riusata qui per coerenza.
-const PRESENTI: Record<string, string> = {
-  it: 'Presenti su', en: 'Listed on', de: 'Gelistet auf', fr: 'Présents sur', es: 'Presentes en',
-  pt: 'Presentes em', nl: 'Vermeld op', da: 'Optaget på', sv: 'Listade på', nb: 'Oppført på', ru: 'Мы представлены на',
-};
-// Kicker "La prova", idem (L_COPY.la_prova su HomeClient).
 const LA_PROVA: Record<string, string> = {
   it: 'La prova', en: 'The proof', de: 'Der Beweis', fr: 'La preuve', es: 'La prueba',
   pt: 'A prova', nl: 'Het bewijs', da: 'Beviset', sv: 'Beviset', nb: 'Beviset', ru: 'Доказательство',
@@ -490,11 +483,12 @@ export default function GeoTappApp() {
 
       <LNastro />
 
-      {/* PRESENTI SU: directory e stampa vere */}
+      {/* ── citati su: solo stampa vera. "Presente su" (directory) resta nel footer, non si ripete qui ── */}
       <section className="dirs">
-        <div className="w"><p className="kk k r">{PRESENTI[currentLocale] ?? PRESENTI.en}</p></div>
-        <ListedOn locale={currentLocale} />
-        <FeaturedIn locale={currentLocale} />
+        <div className="w"><p className="kk k r dirs-kk">{FEATURED_LABEL[currentLocale] ?? FEATURED_LABEL.en}</p></div>
+        <div className="host">
+          <FeaturedIn locale={currentLocale} />
+        </div>
       </section>
 
       {/* GRIGLIA SISTEMI: 9 moduli, 3 settori, stesso dossier al click */}

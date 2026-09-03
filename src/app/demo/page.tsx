@@ -16,8 +16,7 @@ import { usePathname } from 'next/navigation';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import { getLocaleFromPathname, localizePath } from '@/lib/i18n/locale-routing';
 import LNastro from '@/components/LNastro';
-import ListedOn from '@/components/ListedOn';
-import FeaturedIn from '@/components/FeaturedIn';
+import FeaturedIn, { FEATURED_LABEL } from '@/components/FeaturedIn';
 
 export default function DemoPage() {
   const pathname = usePathname();
@@ -236,10 +235,10 @@ export default function DemoPage() {
 
       <LNastro />
 
-      {/* ── presenti su: directory e stampa vere del sito ── */}
+      {/* ── citati su: solo stampa vera. "Presente su" (directory) resta nel footer, non si ripete qui ── */}
       <section className="dirs">
+        <div className="w"><p className="kk k r dirs-kk">{FEATURED_LABEL[l] ?? FEATURED_LABEL.en}</p></div>
         <div className="host">
-          <ListedOn locale={l} />
           <FeaturedIn locale={l} />
         </div>
       </section>

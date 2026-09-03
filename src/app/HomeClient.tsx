@@ -322,7 +322,7 @@ export default function Home({ jrSlot, fqSlot }: { jrSlot?: ReactNode; fqSlot?: 
       </div></section>
 
       {/* ── citati su: solo stampa vera. "Presente su" (directory) resta nel footer, non si ripete qui ── */}
-      <section className="dirs dirs-home">
+      <section className="dirs">
         <div className="w"><p className="kk k r dirs-kk">{FEATURED_LABEL[currentLocale] ?? FEATURED_LABEL.en}</p></div>
         <div className="host">
           <FeaturedIn locale={currentLocale} />
