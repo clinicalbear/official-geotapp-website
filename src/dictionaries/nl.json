@@ -776,6 +776,7 @@
     "success_spam": "Niet in je inbox? Controleer de map spam of promoties.",
     "error_message": "Activeringsfout. Probeer het opnieuw of stuur een e-mail naar info@geotapp.com.",
     "error_captcha": "De botcontrole is niet gelukt. Probeer het opnieuw, hij vernieuwt zichzelf. Blijft het misgaan, mail dan naar support@geotapp.com en wij zetten je account klaar.",
+    "error_captcha_pending": "Alleen de controle hierboven ontbreekt nog: vink \"Ik ben geen robot\" aan en druk opnieuw.",
     "benefits_title": "Wat zit er in de proefperiode",
     "benefits": [
       {

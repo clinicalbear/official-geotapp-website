@@ -101,7 +101,8 @@
     "form_plan_note": "The plan's user count refers to GeoTapp Flow (office management / CRM). GeoTapp Timetracker licenses for field operators are a separate subscription, with a maximum number included depending on the chosen plan.",
     "form_seats": "Timetracker licenses (optional)",
     "form_seats_hint": "Separate subscription for field operators (mobile app). Limit included in plan: Solo max 2, Team max 5, Business unlimited. You can adjust licenses after activation.",
-    "error_captcha": "The anti-bot check did not go through. Please try again, it refreshes on its own. If it keeps failing, write to support@geotapp.com and we will open your account for you."
+    "error_captcha": "The anti-bot check did not go through. Please try again, it refreshes on its own. If it keeps failing, write to support@geotapp.com and we will open your account for you.",
+    "error_captcha_pending": "One step left: tick the \"I am not a robot\" box above, then press again."
   },
   "features": {
     "cdn_desc": "Speed is geographic. Our static assets are replicated across 300+ data centers worldwide. Whether your client is in New York or Tokyo, your site loads as if the server were in the next room."

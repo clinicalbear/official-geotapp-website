@@ -1017,6 +1017,7 @@
     "success_spam": "Finner du den ikke i innboksen? Sjekk spam- eller kampanjemappen.",
     "error_message": "Aktiveringsfeil. Prøv igjen eller skriv til info@geotapp.com.",
     "error_captcha": "Botsjekken gikk ikke gjennom. Prøv igjen, den fornyer seg selv. Hvis det fortsetter, skriv til support@geotapp.com, så oppretter vi tilgangen for deg.",
+    "error_captcha_pending": "Det mangler bare kontrollen over: huk av \"Jeg er ikke en robot\", og trykk på nytt.",
     "benefits_title": "Hva er inkludert",
     "benefits": [
       {

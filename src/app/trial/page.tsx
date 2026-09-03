@@ -189,8 +189,12 @@ export default function TrialPage() {
     // fatto la persona) ma PRIMA della chiamata, aspettando che Turnstile sia pronto.
     const turnstileToken = TURNSTILE_SITE_KEY ? await readTurnstileToken(formEl) : '';
     if (TURNSTILE_SITE_KEY && !turnstileToken) {
-      resetTurnstile();
-      setError(d.error_captcha);
+      // Niente token e nessun reset: la sitekey e' in modalita' gestita, quindi a
+      // volte Cloudflare mostra la casella "non sono un robot" e aspetta un clic.
+      // Chi arriva qui, nove volte su dieci, ha premuto "Inizia" prima di averla
+      // spuntata: azzerare il widget gli butterebbe via la verifica in corso e lo
+      // rimanderebbe da capo. Gli si dice cosa manca e si lascia il widget dov'e'.
+      setError(d.error_captcha_pending);
       setLoading(false);
       trackEvent('trial_form_error', { error: 'turnstile_no_token', cta_locale: locale || 'it' });
       return;

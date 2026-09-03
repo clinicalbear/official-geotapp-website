@@ -776,6 +776,7 @@
     "success_spam": "Nicht im Posteingang? Sieh im Spam- oder Werbeordner nach.",
     "error_message": "Aktivierungsfehler. Bitte erneut versuchen oder an info@geotapp.com schreiben.",
     "error_captcha": "Die Bot-Prüfung ist nicht durchgelaufen. Bitte versuchen Sie es erneut, sie erneuert sich von selbst. Wenn es weiterhin nicht klappt, schreiben Sie an support@geotapp.com und wir richten Ihren Zugang ein.",
+    "error_captcha_pending": "Es fehlt nur noch die Prüfung darüber: Bitte das Kästchen „Ich bin kein Roboter“ anklicken und erneut senden.",
     "benefits_title": "Was enthalten ist",
     "benefits": [
       {

@@ -776,6 +776,7 @@
     "success_spam": "Can't find it in your inbox? Check your spam or promotions folder.",
     "error_message": "Activation error. Please try again or write to info@geotapp.com.",
     "error_captcha": "The anti-bot check did not go through. Please try again, it refreshes on its own. If it keeps failing, write to support@geotapp.com and we will open your account for you.",
+    "error_captcha_pending": "One step left: tick the \"I am not a robot\" box above, then press again.",
     "benefits_title": "What's included",
     "benefits": [
       {
