@@ -12,7 +12,8 @@ import {
 } from '@/lib/i18n/locale-routing';
 import { submitContact } from '@/lib/api';
 import LNastro from '@/components/LNastro';
-import FeaturedIn, { FEATURED_LABEL } from '@/components/FeaturedIn';
+import FeaturedIn from '@/components/FeaturedIn';
+import { featuredLabel } from '@/lib/press/labels';
 
 export default function ContactPage() {
   const pathname = usePathname();
@@ -274,7 +275,7 @@ export default function ContactPage() {
       {/* ── presenti su: directory e stampa vere del sito ── */}
       {/* ── citati su: solo stampa vera. "Presente su" (directory) resta nel footer, non si ripete qui ── */}
       <section className="dirs">
-        <div className="w"><p className="kk k r dirs-kk">{FEATURED_LABEL[currentLocale] ?? FEATURED_LABEL.en}</p></div>
+        <div className="w"><p className="kk k r dirs-kk">{featuredLabel(currentLocale)}</p></div>
         <div className="host">
           <FeaturedIn locale={currentLocale} />
         </div>

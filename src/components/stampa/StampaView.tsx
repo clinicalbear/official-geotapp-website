@@ -45,7 +45,8 @@ import type { AppLocale } from '@/lib/i18n/config';
 import { localizePath } from '@/lib/i18n/locale-routing';
 import { PRESS_RELEASES, PRESS_COVERAGE, hasPress, pressRel } from '@/lib/press/data';
 import LNastro from '@/components/LNastro';
-import FeaturedIn, { FEATURED_LABEL } from '@/components/FeaturedIn';
+import FeaturedIn from '@/components/FeaturedIn';
+import { featuredLabel } from '@/lib/press/labels';
 
 /** "Chi siamo": stessa traduzione gia' usata in Footer.tsx (voce "about"). */
 const ABOUT_LABEL: Record<string, string> = {
@@ -328,7 +329,7 @@ export default function StampaView({
 
       {/* ── citati su: solo stampa vera. "Presente su" (directory) resta nel footer, non si ripete qui ── */}
       <section className="dirs">
-        <div className="w"><p className="kk k r dirs-kk">{FEATURED_LABEL[locale] ?? FEATURED_LABEL.en}</p></div>
+        <div className="w"><p className="kk k r dirs-kk">{featuredLabel(locale)}</p></div>
         <div className="host">
           <FeaturedIn locale={locale} />
         </div>

@@ -27,7 +27,7 @@ import { trackEvent } from '@/lib/analytics';
 import LNastro from '@/components/LNastro';
 
 const FeaturedIn = dynamic(() => import('@/components/FeaturedIn'), { ssr: true });
-import { FEATURED_LABEL } from '@/components/FeaturedIn';
+import { featuredLabel } from '@/lib/press/labels';
 
 const LA_PROVA: Record<string, string> = {
   it: 'La prova', en: 'The proof', de: 'Der Beweis', fr: 'La preuve', es: 'La prueba',
@@ -485,7 +485,7 @@ export default function GeoTappApp() {
 
       {/* ── citati su: solo stampa vera. "Presente su" (directory) resta nel footer, non si ripete qui ── */}
       <section className="dirs">
-        <div className="w"><p className="kk k r dirs-kk">{FEATURED_LABEL[currentLocale] ?? FEATURED_LABEL.en}</p></div>
+        <div className="w"><p className="kk k r dirs-kk">{featuredLabel(currentLocale)}</p></div>
         <div className="host">
           <FeaturedIn locale={currentLocale} />
         </div>

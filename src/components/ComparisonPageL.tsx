@@ -19,7 +19,7 @@ import { BREADCRUMB_LABEL, HOME_LABEL } from '@/lib/seo/comparisonSchema';
 import './l-page-confronto-vs.css';
 
 const FeaturedIn = dynamic(() => import('@/components/FeaturedIn'), { ssr: true });
-import { FEATURED_LABEL } from '@/components/FeaturedIn';
+import { featuredLabel } from '@/lib/press/labels';
 
 export type ComparisonRow = { feature: string; geotapp: boolean; competitor: boolean };
 export type ComparisonFaqItem = { q: string; a: string };
@@ -162,7 +162,7 @@ export default function ComparisonPageL({
 
       {/* ── citati su: solo stampa vera. "Presente su" (directory) resta nel footer, non si ripete qui ── */}
       <section className="dirs">
-        <div className="w"><p className="kk k r dirs-kk">{FEATURED_LABEL[locale] ?? FEATURED_LABEL.en}</p></div>
+        <div className="w"><p className="kk k r dirs-kk">{featuredLabel(locale)}</p></div>
         <div className="host">
           <FeaturedIn locale={locale} />
         </div>

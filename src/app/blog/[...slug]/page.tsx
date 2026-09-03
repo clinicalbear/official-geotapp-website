@@ -4,7 +4,8 @@ import { notFound, permanentRedirect } from 'next/navigation';
 import ArticleHero from '@/components/blog/ArticleHero';
 import ArticleContent from '@/components/blog/ArticleContent';
 import ArticleDisclaimer from '@/components/blog/ArticleDisclaimer';
-import FeaturedIn, { FEATURED_LABEL } from '@/components/FeaturedIn';
+import FeaturedIn from '@/components/FeaturedIn';
+import { featuredLabel } from '@/lib/press/labels';
 import ArticleSidebar from '@/components/blog/ArticleSidebar';
 import ArticleFooter from '@/components/blog/ArticleFooter';
 import ReadingProgress from '@/components/blog/ReadingProgress';
@@ -425,7 +426,7 @@ export default async function BlogArticlePage({ params }: Props) {
 
       {/* Citazioni editoriali (testate, non directory): prova terza su ogni articolo */}
       <section className="dirs">
-        <div className="w"><p className="kk k r dirs-kk">{FEATURED_LABEL[locale] ?? FEATURED_LABEL.en}</p></div>
+        <div className="w"><p className="kk k r dirs-kk">{featuredLabel(locale)}</p></div>
         <div className="host">
           <FeaturedIn locale={locale} />
         </div>

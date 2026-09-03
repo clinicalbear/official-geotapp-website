@@ -25,7 +25,8 @@ import { trackEvent, consumeTrialSource } from '@/lib/analytics';
 import { buildTrialPayload } from '@/lib/trial/payload';
 import Reviews from '@/components/Reviews';
 import LNastro from '@/components/LNastro';
-import FeaturedIn, { FEATURED_LABEL } from '@/components/FeaturedIn';
+import FeaturedIn from '@/components/FeaturedIn';
+import { featuredLabel } from '@/lib/press/labels';
 
 export default function TrialPage() {
   const pathname = usePathname();
@@ -354,7 +355,7 @@ export default function TrialPage() {
 
       {/* ── citati su: solo stampa vera. "Presente su" (directory) resta nel footer, non si ripete qui ── */}
       <section className="dirs">
-        <div className="w"><p className="kk k r dirs-kk">{FEATURED_LABEL[l] ?? FEATURED_LABEL.en}</p></div>
+        <div className="w"><p className="kk k r dirs-kk">{featuredLabel(l)}</p></div>
         <div className="host">
           <FeaturedIn locale={l} />
         </div>

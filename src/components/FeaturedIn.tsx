@@ -2,22 +2,12 @@
 
 import { motion } from 'framer-motion';
 import { PRESS_COVERAGE, hasPress, pressRel } from '@/lib/press/data';
+import { FEATURED_LABEL, featuredLabel } from '@/lib/press/labels';
+
+export { FEATURED_LABEL };
 
 // Media/press credibility bar ("cited by"). Localized idiomatically per market
 // (a literal "cited on" reads wrong in EN/DE), mirroring the ListedOn label set.
-export const FEATURED_LABEL: Record<string, string> = {
-  it: 'Citati su',
-  en: 'Featured in',
-  de: 'Bekannt aus',
-  fr: 'Cités dans',
-  es: 'Citados en',
-  pt: 'Citados em',
-  nl: 'Bekend van',
-  ru: 'О нас пишут',
-  da: 'Omtalt i',
-  sv: 'Omtalade i',
-  nb: 'Omtalt i',
-};
 
 const styles = `
 /* display via classe e non inline: lo style inline vincerebbe sul display:none
@@ -88,7 +78,7 @@ const styles = `
 export default function FeaturedIn({ locale }: { locale: string }) {
   // Same data source as /stampa: add a PressItem there and it shows up here too.
   if (!hasPress(PRESS_COVERAGE)) return null;
-  const label = FEATURED_LABEL[locale] ?? FEATURED_LABEL.en;
+  const label = featuredLabel(locale);
 
   return (
     <motion.section

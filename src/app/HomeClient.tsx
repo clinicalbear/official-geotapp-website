@@ -21,10 +21,10 @@ import {
 import { trackEvent } from '@/lib/analytics';
 import { REVIEWS, resolveReviewText } from '@/data/reviews';
 import { SOURCE_LOGOS, REVIEWS_COPY } from '@/components/Reviews';
-import { FEATURED_LABEL } from '@/components/FeaturedIn';
 import LNastro from '@/components/LNastro';
 
 const FeaturedIn = dynamic(() => import('@/components/FeaturedIn'), { ssr: true });
+import { featuredLabel } from '@/lib/press/labels';
 const TrustBar = dynamic(() => import('@/components/TrustBar'), { ssr: true });
 const RoiMini = dynamic(() => import('@/components/RoiMini'), { ssr: true });
 const DemoReportBanner = dynamic(() => import('@/components/DemoReportBanner'), { ssr: true });
@@ -323,7 +323,7 @@ export default function Home({ jrSlot, fqSlot }: { jrSlot?: ReactNode; fqSlot?: 
 
       {/* ── citati su: solo stampa vera. "Presente su" (directory) resta nel footer, non si ripete qui ── */}
       <section className="dirs">
-        <div className="w"><p className="kk k r dirs-kk">{FEATURED_LABEL[currentLocale] ?? FEATURED_LABEL.en}</p></div>
+        <div className="w"><p className="kk k r dirs-kk">{featuredLabel(currentLocale)}</p></div>
         <div className="host">
           <FeaturedIn locale={currentLocale} />
         </div>
