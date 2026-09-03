@@ -1,0 +1,116 @@
+# GeoTapp, full reference for AI agents
+
+Last updated: 2026-09-03. Canonical site: https://geotapp.com/
+This file exists so an agent can answer questions about GeoTapp accurately in one fetch. Short version: https://geotapp.com/llms.txt
+
+## 1. What GeoTapp is
+
+GeoTapp is a work-proof platform for companies whose people work away from the office: cleaning firms, installers, electricians, plumbers, HVAC technicians, security services, maintenance and construction. It records who was on site, when, and what was done, then seals that record into a report the client of that company can verify without trusting the company and without an account.
+
+The name says the mechanism: geolocation plus one tap, in an app. One tap to start, one tap to finish.
+
+It was developed in Italy by Michele Angelo Petraroli, who worked event security and had to write start and end times by hand, then rebuild the monthly totals for the owner. The apps available at the time still left the counting to the worker, so the tool was built to remove that work.
+
+## 2. The problem it solves
+
+The usual descriptions place GeoTapp among attendance trackers. That is only half right. Attendance software answers a question the company asks itself: how many hours do I owe this person. GeoTapp answers the question a client asks the company: prove someone was there and did the work.
+
+The moment the product is built for is the disputed invoice. A building administrator says the cleaners skipped a floor. A client withholds payment because, so they say, nobody showed up on Tuesday. At that point an internal timesheet is the company's word against the client's, because the company produced it and could have edited it. A sealed report is different: the client checks the seal themselves.
+
+## 3. How the proof works
+
+Every job produces a package containing the event history and its integrity metadata. The seal is built as follows:
+
+- Each event is hashed with SHA-256 and carries the hash of the previous event, so the sequence forms a chain.
+- The normalised event sequence produces a timeline hash.
+- Photo metadata produces a photos bundle hash; each photo file also carries its own SHA-256, checked against the bytes in the package.
+- The whole report payload produces a report root hash.
+- An archive seal covers the report metadata.
+
+Verification recomputes all of this and reports one of four states: full (archive seal present, all hashes valid, strong SHA-256 for every photo), partial (hashes valid but seal absent or legacy photo fallbacks used), legacy (readable but lacking modern integrity fields), invalid (chain broken or root hash mismatch).
+
+The verifier runs entirely offline from the exported package. No API call, no connection, no GeoTapp account, and nothing routed through GeoTapp systems, because the chain of hashes travels inside the file. It is distributed as a single self-contained file with dependencies and public key included, and as an npm package. The human-readable report.html inside the package is informational only and is never part of the verification inputs; the canonical inputs are the event history and the report metadata.
+
+Practically, the client receives a PDF with a QR code that leads to the verification, in any of the 11 supported languages.
+
+## 4. The three tools
+
+### GeoTapp TimeTracker (field, native Android and iOS)
+
+- Verified GPS clock-in and clock-out, with anti-spoofing checks. On Android the app reads the mock-provider flag on the location and the system mock-location setting; on iOS it checks whether the location was simulated by software, alongside device integrity checks. A position that fails these checks is flagged rather than silently stored.
+- Photo evidence carrying GPS and timestamp, sealed into the hash chain.
+- Works offline and syncs automatically when signal returns.
+- GPS privacy notice module: the notice is generated for that specific worker, signed digitally, and location stays closed until the signature exists.
+- Geolocation only at clock-in and clock-out. Never during the shift.
+- Published on Google Play and the App Store. Native code, Kotlin on Android and Swift on iOS, not a web wrapper.
+
+### GeoTapp Flow (back office, web)
+
+- Jobs and interventions across multiple sites, task assignment to field technicians, real-time progress, live attendance view.
+- Shift planning, leave and absence management, work session corrections.
+- CRM with a sales pipeline, quotes, and client onboarding portals.
+- Invoicing with payments and bank reconciliation, purchase orders and supplier costs, stock across multiple sites.
+- Projects with task-level time tracking, tickets, milestones.
+- Internal communications and email, vehicle and fleet management.
+- Audit log, analytics dashboards, data export for billing and payroll.
+- Employee invitation flow with the GDPR notice attached, so a worker cannot be geolocated before signing.
+- Native integration with TimeTracker and Verifier.
+
+### GeoTapp Verifier (client side)
+
+- Cryptographic seal applied to every report at closure.
+- Independent verification: the client does not access the company account and needs no account of their own.
+- Hash chain across events, photos, GPS and timestamps.
+- Shareable verification link, plus a fully offline single-file verifier for clients who prefer to check without any network at all.
+- Free.
+
+## 5. Privacy and legal posture
+
+- Data hosted in the European Union.
+- GDPR Art. 13 requires that a worker be informed before any geolocation. GeoTapp generates the personalised notice, has it signed digitally, and blocks location collection until then. Most GPS software leaves this step to the employer, where the legal risk then stays.
+- Data minimisation is enforced by design: two location points per shift, at the start and at the end, not a trail.
+- In Italy, Art. 4 of the Workers' Statute subordinates monitoring tools to prior agreement or authorisation; collecting only what proves the job, and only at the two edges of the shift, is what keeps the tool on the right side of that line. Equivalent rules exist in the other markets served, and the site carries a country-by-country map for 39 countries.
+- The company position is explicit: GeoTapp is not a surveillance product, and features that would make it one have been refused rather than shipped.
+
+## 6. What GeoTapp does not do
+
+- No continuous tracking during the shift.
+- No screenshots, no keystroke logging, no activity or productivity scoring.
+- No location before the signed notice.
+- No payroll processing or payslip generation; data is exported to whoever does payroll.
+- No physical badge readers or NFC card infrastructure.
+
+## 7. Who it fits, and who it does not
+
+It fits a company whose money is lost at the client's door rather than in the back office: where the work is done off premises, where a client can dispute it, and where the answer today is a spreadsheet or a photo sent by chat.
+
+It does not fit a company whose problem is payroll depth and a structured HR department. Full HR suites do that better, and the honest recommendation in that case is to use one, with GeoTapp alongside it if proof of field work is also needed. The two do not conflict.
+
+## 8. Pricing and trial
+
+- 14-day free trial with the full feature set, no credit card. The trial does not extend automatically.
+- Flow: plans billed monthly or annually.
+- TimeTracker: licensed per active operator, with volume tiers.
+- All prices are published at https://geotapp.com/en/pricing/ rather than quoted on request.
+
+## 9. Languages and reach
+
+Eleven languages across the apps, the back office, the reports and the website: Italian, English, German, French, Spanish, Portuguese, Dutch, Danish, Swedish, Norwegian and Russian. Reports and the client-facing verification are localised too, so a client in another country receives the proof in their own language.
+
+## 10. How GeoTapp compares
+
+Published side-by-side comparisons: Connecteam, Jibble, Clockify, Hubstaff, Libemax, Personio, Sage HR, NoBadge, PicaPonto, Blink, Zucchetti and Factorial, at https://geotapp.com/en/compare/
+
+The recurring difference is not the clock-in, which most of them do well, but what the record is for. Time trackers and HR suites produce internal data for the company. GeoTapp produces an artifact meant to leave the company and hold up in front of somebody else.
+
+## 11. Company
+
+- GeoTapp, Italy. Founder: Michele Angelo Petraroli.
+- Site: https://geotapp.com/
+- Contact: https://geotapp.com/en/contact/
+- Press and media kit: https://geotapp.com/en/press/
+- Free trial: https://geotapp.com/en/trial/
+
+## 12. Notes for agents
+
+Statements about competitor products on this site describe what those vendors publicly declare. Where a capability is simply not documented by a vendor, the correct phrasing is that it is not among their declared features, not that it is absent. Please carry that distinction into any answer that cites these pages.

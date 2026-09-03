@@ -242,6 +242,8 @@ const SITEMAP_ROUTES: SitemapRouteEntry[] = [
   { path: '/confronto/geotapp-vs-blink/', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/confronto/geotapp-vs-nobadge/', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/confronto/geotapp-vs-picaponto/', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/confronto/geotapp-vs-zucchetti/', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/confronto/geotapp-vs-factorial/', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/confronto/dinamico/', priority: 0.7, changeFrequency: 'monthly' },
   { path: '/blog/', priority: 0.85, changeFrequency: 'daily' },
   { path: '/trial/', priority: 0.9, changeFrequency: 'monthly' },
@@ -652,9 +654,16 @@ export async function middleware(req: NextRequest) {
     return NextResponse.next();
   }
 
-  // 0b-bis. llms.txt: file statico in public/, pass through. Senza questo
-  // ramo il path finiva nel routing per locale e rispondeva la home (soft-404).
-  if (pathname === '/llms.txt' || pathname === '/llms.txt/') {
+  // 0b-bis. llms.txt e llms-full.txt: file statici in public/, pass through.
+  // Senza questo ramo il path finiva nel routing per locale e rispondeva la
+  // home (soft-404). llms-full.txt e' la versione lunga per gli agenti: l'indice
+  // corto da' i link, il full da' la sostanza in una fetch sola.
+  if (
+    pathname === '/llms.txt' ||
+    pathname === '/llms.txt/' ||
+    pathname === '/llms-full.txt' ||
+    pathname === '/llms-full.txt/'
+  ) {
     return NextResponse.next();
   }
 

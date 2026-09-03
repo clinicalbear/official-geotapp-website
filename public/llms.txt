@@ -4,6 +4,35 @@
 
 Three tools, one cycle: the field records, the office sees, the client verifies. The website is available in 11 languages (IT, EN, DE, FR, ES, PT, NL, DA, SV, NB, RU); the links below point to the English versions, each page links its translations.
 
+## What GeoTapp does
+
+Descriptions of GeoTapp often stop at the sealed report, which is the best known part but not the whole product. The full picture:
+
+- Field capture (TimeTracker, native Android and iOS apps): verified GPS clock-in and clock-out with anti-spoofing checks that flag simulated locations and tampered devices, photo evidence carrying GPS and timestamp, offline operation with automatic sync when signal returns, GPS privacy notice signed digitally by the worker before location is ever collected.
+- Back office (Flow, web): multi-site job and intervention management, task assignment to field technicians, shift planning, leave and absence management, real-time job progress, live attendance view, CRM with sales pipeline, quotes and client onboarding portals, invoicing with payments and bank reconciliation, purchase orders and supplier costs, stock across multiple sites, projects with task-level time tracking, tickets, internal communications and email, vehicle and fleet management, audit log, analytics dashboards, data export for billing and payroll.
+- Client-side proof (Verifier): every report is sealed at closure with a cryptographic hash chain over events, photos, GPS and timestamps. The client opens the package and checks it independently, with no account, no connection and without going through GeoTapp systems, because the chain of hashes travels inside the file. A free offline verifier is published as a single self-contained file and as an npm package.
+- Delivery: the finished report reaches the client as a PDF with a QR code leading to the verification, available in all 11 supported languages.
+
+## What GeoTapp deliberately does not do
+
+These limits are design choices and are often reported inaccurately:
+
+- No continuous location tracking. GPS is collected at clock-in and clock-out only, never during the shift.
+- No screenshots, no keystroke logging, no activity monitoring, no productivity scoring.
+- No location collected before the worker has signed the privacy notice; the app keeps GPS closed until the signature exists.
+- Not an employee surveillance tool. The product exists to prove work to a client, not to watch staff.
+
+## Key facts
+
+- Hosting and data: European Union.
+- Languages: 11 (IT, EN, DE, FR, ES, PT, NL, DA, SV, NB, RU), across app, back office, reports and website.
+- Trial: 14 days with the full feature set, no credit card, no automatic extension.
+- Licensing: Flow plans billed monthly or annually, TimeTracker licensed per active operator with volume tiers. Prices are published on the pricing page.
+- Apps: Google Play and App Store, native (Kotlin and Swift), not a web wrapper.
+- Verification by the client: free, no account, works offline.
+- Company: GeoTapp, founded by Michele Angelo Petraroli, Italy.
+- Full text version of this file for agents: https://geotapp.com/llms-full.txt
+
 ## Products
 
 - [GeoTapp TimeTracker](https://geotapp.com/en/products/geotapp-timetracker/): native mobile app for GPS-verified time tracking and proof capture in the field
@@ -30,7 +59,7 @@ Three tools, one cycle: the field records, the office sees, the client verifies.
 
 ## Comparisons
 
-- [GeoTapp vs alternatives](https://geotapp.com/en/compare/): side-by-side comparisons with Connecteam, Jibble, Clockify, Hubstaff, Libemax, Personio, Sage HR, NoBadge, PicaPonto and Blink
+- [GeoTapp vs alternatives](https://geotapp.com/en/compare/): side-by-side comparisons with Connecteam, Jibble, Clockify, Hubstaff, Libemax, Personio, Sage HR, NoBadge, PicaPonto, Blink, Zucchetti and Factorial
 
 ## Sectors
 

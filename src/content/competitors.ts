@@ -220,7 +220,7 @@ export interface Competitor {
 }
 
 /**
- * 9 competitor profiles. Data derived from public pricing pages + the existing
+ * 11 competitor profiles. Data derived from public pricing pages + the existing
  * static /confronto/geotapp-vs-{competitor}/ pages.
  */
 export const COMPETITORS: Competitor[] = [
@@ -445,6 +445,56 @@ export const COMPETITORS: Competitor[] = [
       payroll_export: true,
       free_plan: false,
       multi_site_jobs: false,
+      gdpr_geo_compliance: false,
+      auto_gps_notice_signed: false,
+    },
+  },
+  {
+    id: 'zucchetti',
+    name: 'Zucchetti',
+    homepage: 'https://www.zucchetti.it/',
+    pricingFromEur: null,
+    tagline: {
+      it: 'La suite HR italiana per eccellenza, dalle presenze al cedolino. Timbratura con geofence e badge NFC, niente prova per il committente.',
+      en: 'The Italian HR suite by definition, from attendance to payslip. Geofenced clock-in and NFC badges, no evidence for the client.',
+      de: 'Die italienische HR-Suite schlechthin, von der Zeiterfassung bis zum Lohnzettel. Stempelung mit Geofence, kein Nachweis für den Auftraggeber.',
+    },
+    features: {
+      gps_verified_at_site: true,
+      sealed_report: false,
+      geo_timestamped_photos: false,
+      client_verification: false,
+      time_tracking: true,
+      mobile_app: true,
+      builtin_messaging: true,
+      payroll_export: true,
+      free_plan: false,
+      multi_site_jobs: true,
+      gdpr_geo_compliance: false,
+      auto_gps_notice_signed: false,
+    },
+  },
+  {
+    id: 'factorial',
+    name: 'Factorial',
+    homepage: 'https://factorialhr.com/',
+    pricingFromEur: 6,
+    tagline: {
+      it: 'Piattaforma HR spagnola per le PMI, ferie e assenze in ordine. Geolocalizzazione facoltativa sulla timbratura, senza verifica del segnale.',
+      en: 'Spanish HR platform for SMEs, leave and absences kept in order. Optional geolocation on clock-in, with no check on the signal.',
+      de: 'Spanische HR-Plattform für KMU, Urlaub und Abwesenheiten im Griff. Ortung bei der Stempelung optional, ohne Prüfung des Signals.',
+    },
+    features: {
+      gps_verified_at_site: true,
+      sealed_report: false,
+      geo_timestamped_photos: false,
+      client_verification: false,
+      time_tracking: true,
+      mobile_app: true,
+      builtin_messaging: true,
+      payroll_export: true,
+      free_plan: false,
+      multi_site_jobs: true,
       gdpr_geo_compliance: false,
       auto_gps_notice_signed: false,
     },
