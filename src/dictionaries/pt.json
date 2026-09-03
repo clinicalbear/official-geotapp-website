@@ -1016,6 +1016,7 @@
     "success_desc2": "Clique no link para definir a sua palavra-passe e aceder ao seu teste.",
     "success_spam": "Não encontra na caixa de entrada? Verifique as pastas de spam ou promoções.",
     "error_message": "Erro durante a ativação. Tente novamente ou escreva para info@geotapp.com.",
+    "error_captcha": "A verificação anti-robô não foi concluída. Tente novamente, ela renova-se sozinha. Se continuar a falhar, escreva para support@geotapp.com e abrimos-lhe o acesso.",
     "benefits_title": "O que inclui o teste",
     "benefits": [
       {

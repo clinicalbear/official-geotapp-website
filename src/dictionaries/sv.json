@@ -1016,6 +1016,7 @@
     "success_desc2": "Klicka på länken för att ange ditt lösenord och komma åt din provperiod.",
     "success_spam": "Hittar du den inte i inkorgen? Kolla mappen för skräppost eller kampanjer.",
     "error_message": "Aktiveringsfel. Försök igen eller skriv till info@geotapp.com.",
+    "error_captcha": "Botkontrollen gick inte igenom. Försök igen, den förnyas av sig själv. Om det fortsätter, skriv till support@geotapp.com så öppnar vi kontot åt dig.",
     "benefits_title": "Vad ingår",
     "benefits": [
       {

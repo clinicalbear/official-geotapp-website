@@ -1016,6 +1016,7 @@
     "success_desc2": "Haz clic en el enlace para establecer tu contraseña y acceder a tu prueba.",
     "success_spam": "¿No lo encuentras en la bandeja de entrada? Revisa la carpeta de spam o promociones.",
     "error_message": "Error durante la activación. Inténtalo de nuevo o escribe a info@geotapp.com.",
+    "error_captcha": "La verificación anti-bot no se ha completado. Inténtalo de nuevo, se regenera sola. Si sigue fallando, escribe a support@geotapp.com y te abrimos el acceso nosotros.",
     "benefits_title": "Qué incluye la prueba",
     "benefits": [
       {

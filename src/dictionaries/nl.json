@@ -775,6 +775,7 @@
     "success_desc2": "Klik op de link om uw wachtwoord in te stellen en toegang te krijgen tot uw proefperiode.",
     "success_spam": "Niet in je inbox? Controleer de map spam of promoties.",
     "error_message": "Activeringsfout. Probeer het opnieuw of stuur een e-mail naar info@geotapp.com.",
+    "error_captcha": "De botcontrole is niet gelukt. Probeer het opnieuw, hij vernieuwt zichzelf. Blijft het misgaan, mail dan naar support@geotapp.com en wij zetten je account klaar.",
     "benefits_title": "Wat zit er in de proefperiode",
     "benefits": [
       {

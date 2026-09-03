@@ -775,6 +775,7 @@
     "success_desc2": "Clicca il link per impostare la password e accedere al tuo trial.",
     "success_spam": "Non lo trovi nella inbox? Controlla la cartella spam o promozioni.",
     "error_message": "Errore durante l'attivazione. Riprova o scrivi a info@geotapp.com.",
+    "error_captcha": "Il controllo anti-bot non è andato a buon fine. Riprova: si rigenera da solo. Se continua, scrivi a support@geotapp.com e ti apriamo noi l'accesso.",
     "benefits_title": "Cosa include il trial",
     "benefits": [
       {

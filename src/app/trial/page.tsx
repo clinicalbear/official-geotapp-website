@@ -109,6 +109,43 @@ export default function TrialPage() {
     };
   }, [locale, submitted]);
 
+  // --- Turnstile: il token e' MONOUSO e scade in 5 minuti ---
+  //
+  // Due difetti veri, misurati su `trial_signup_audit` il 03/09/2026 (25 tentativi in 90
+  // giorni, 11 respinti dal captcha, tutti da persone reali):
+  //
+  //  1. `timeout-or-duplicate` — dopo un submit fallito il widget non veniva mai resettato,
+  //     quindi ogni ritentativo rispediva lo stesso token gia' consumato e il server lo
+  //     respingeva. Da quel momento la persona era chiusa fuori fino a un ricaricamento
+  //     della pagina, che nessuno pensa di fare: il 25/08 un titolare ha riprovato otto
+  //     volte in nove minuti, con due indirizzi diversi, senza mai riuscirci.
+  //  2. `missing_token` — il submit leggeva l'input nascosto una volta sola. Se lo script
+  //     di Cloudflare non aveva ancora finito (rete lenta, compilazione veloce, autofill)
+  //     partiva con token vuoto e il server rispondeva `missing_token`. Tre iscrizioni
+  //     perse cosi', da tre paesi diversi.
+  //
+  // Rigenerare il token dopo ogni fallimento. Fallisce in silenzio se il widget non e'
+  // ancora montato: non c'e' niente da resettare ed e' lo stato giusto.
+  const resetTurnstile = () => {
+    try {
+      (window as unknown as { turnstile?: { reset: () => void } }).turnstile?.reset();
+    } catch {
+      /* widget non montato: nessun token da rigenerare */
+    }
+  };
+
+  // Aspetta che Turnstile abbia iniettato il suo input nascosto nel form invece di
+  // mandare un token vuoto. Il bottone e' gia' in stato `loading` mentre si aspetta.
+  const readTurnstileToken = async (formEl: HTMLFormElement): Promise<string> => {
+    for (let attempt = 0; attempt < 20; attempt++) {
+      const token =
+        (formEl.elements.namedItem('cf-turnstile-response') as HTMLInputElement | null)?.value || '';
+      if (token) return token;
+      await new Promise((resolve) => setTimeout(resolve, 250));
+    }
+    return '';
+  };
+
   const trackFieldFocus = (fieldName: string) => {
     if (!formStarted.current) {
       formStarted.current = true;
@@ -124,8 +161,6 @@ export default function TrialPage() {
     // Turnstile (rendering implicito) inietta da se' un input nascosto
     // `cf-turnstile-response` dentro il form: e' li' che vive il token.
     const formEl = e.currentTarget;
-    const turnstileToken =
-      (formEl.elements.namedItem('cf-turnstile-response') as HTMLInputElement | null)?.value || '';
     setError(null);
     setLoading(true);
     const elapsedMs = Date.now() - pageLoadTime.current;
@@ -150,6 +185,17 @@ export default function TrialPage() {
       locale: locale || 'it',
       ...(trialSource.current ? { cta_source: trialSource.current } : {}),
     });
+    // Il token si legge DOPO aver emesso il submit (cosi' l'evento resta fedele a cosa ha
+    // fatto la persona) ma PRIMA della chiamata, aspettando che Turnstile sia pronto.
+    const turnstileToken = TURNSTILE_SITE_KEY ? await readTurnstileToken(formEl) : '';
+    if (TURNSTILE_SITE_KEY && !turnstileToken) {
+      resetTurnstile();
+      setError(d.error_captcha);
+      setLoading(false);
+      trackEvent('trial_form_error', { error: 'turnstile_no_token', cta_locale: locale || 'it' });
+      return;
+    }
+
     try {
       const saasUrl = process.env.NEXT_PUBLIC_SAAS_URL || 'https://crm.geotapp.com';
       const res = await fetch(`${saasUrl}/api/trial/start`, {
@@ -160,11 +206,20 @@ export default function TrialPage() {
         ),
       });
       const data = await res.json();
-      if (!res.ok) throw new Error(data.error || d.error_message);
+      if (!res.ok) {
+        // 403 su questa rotta = solo Turnstile. Il server risponde con una frase fissa in
+        // italiano, che a un estone o a un portoghese non dice niente: qui si mostra il
+        // messaggio nella lingua della pagina.
+        throw new Error(res.status === 403 ? d.error_captcha : data.error || d.error_message);
+      }
       setSubmittedEmail(email);
       setSubmitted(true);
       trackEvent('trial_form_success', { cta_locale: locale || 'it', ...(trialSource.current ? { cta_source: trialSource.current } : {}) });
     } catch (err: any) {
+      // Qualunque sia il motivo del fallimento il token e' bruciato: senza questo reset il
+      // prossimo tentativo torna indietro come `timeout-or-duplicate` e la persona resta
+      // chiusa fuori.
+      resetTurnstile();
       setError(err.message);
       trackEvent('trial_form_error', { error: err.message, cta_locale: locale || 'it' });
     } finally {
@@ -278,6 +333,9 @@ export default function TrialPage() {
                           data-sitekey={TURNSTILE_SITE_KEY}
                           data-theme="light"
                           data-size="flexible"
+                          data-refresh-expired="auto"
+                          data-retry="auto"
+                          data-retry-interval={2000}
                           style={{ marginTop: 18 }}
                         />
                       </>

@@ -1016,6 +1016,7 @@
     "success_desc2": "Klik på linket for at angive din adgangskode og få adgang til din prøveperiode.",
     "success_spam": "Kan du ikke finde den i indbakken? Tjek spam- eller reklamemappen.",
     "error_message": "Aktiveringsfejl. Prøv igen eller skriv til info@geotapp.com.",
+    "error_captcha": "Bottjekket gik ikke igennem. Prøv igen, det fornyer sig selv. Bliver det ved, så skriv til support@geotapp.com, så opretter vi adgangen for dig.",
     "benefits_title": "Hvad er inkluderet",
     "benefits": [
       {
