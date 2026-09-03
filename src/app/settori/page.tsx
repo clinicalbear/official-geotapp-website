@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import FeaturedIn from '@/components/FeaturedIn';
+import { featuredLabel } from '@/lib/press/labels';
 import { DEFAULT_LOCALE, type AppLocale } from '@/lib/i18n/config';
 import { localizePath } from '@/lib/i18n/locale-routing';
 import { getDictionary } from '@/lib/i18n/dictionaries';
@@ -127,6 +129,14 @@ export default function SettoriPage({ locale }: Props) {
               );
             })}
           </div>
+        </div>
+      </section>
+
+      {/* ── citati su: solo stampa vera. "Presente su" (directory) resta nel footer, non si ripete qui ── */}
+      <section className="dirs">
+        <div className="w"><p className="kk k r dirs-kk">{featuredLabel(l)}</p></div>
+        <div className="host">
+          <FeaturedIn locale={l} />
         </div>
       </section>
 

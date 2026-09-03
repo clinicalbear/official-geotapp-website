@@ -1,6 +1,8 @@
 'use client';
 
 import React, { useEffect, useRef } from 'react';
+import FeaturedIn from '@/components/FeaturedIn';
+import { featuredLabel } from '@/lib/press/labels';
 import Link from 'next/link';
 import Script from 'next/script';
 import { ShieldCheck, Camera, MapPin, Clock } from 'lucide-react';
@@ -639,6 +641,14 @@ export default function SettorePageLayout({ content, locale, settore, children }
           <p style={{ marginTop: 20, fontSize: 13.5, color: 'rgba(255,255,255,.55)' }}>
             {sl.cta_note ?? 'No lock-in. No contract. We set up on your real case.'}
           </p>
+        </div>
+      </section>
+
+      {/* ── citati su: solo stampa vera. "Presente su" (directory) resta nel footer, non si ripete qui ── */}
+      <section className="dirs">
+        <div className="w"><p className="kk k r dirs-kk">{featuredLabel(locale)}</p></div>
+        <div className="host">
+          <FeaturedIn locale={locale} />
         </div>
       </section>
 

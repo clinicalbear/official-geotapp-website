@@ -8,6 +8,8 @@ import {
   Smartphone,
 } from 'lucide-react';
 import Link from 'next/link';
+import FeaturedIn from '@/components/FeaturedIn';
+import { featuredLabel } from '@/lib/press/labels';
 import { useState } from 'react';
 import { GEOTAPP_SYSTEMS, SystemDetail } from './systems-data';
 import { usePathname } from 'next/navigation';
@@ -326,6 +328,14 @@ export default function GeoTappApp() {
               <Smartphone size={18} style={{ display: 'inline', verticalAlign: '-3px', marginRight: 6 }} />{appDict.cta_button}
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* ── citati su: solo stampa vera. "Presente su" (directory) resta nel footer, non si ripete qui ── */}
+      <section className="dirs">
+        <div className="w"><p className="kk k r dirs-kk">{featuredLabel(currentLocale)}</p></div>
+        <div className="host">
+          <FeaturedIn locale={currentLocale} />
         </div>
       </section>
     </div>

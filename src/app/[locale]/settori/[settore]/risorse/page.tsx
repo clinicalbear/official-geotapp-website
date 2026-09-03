@@ -6,6 +6,8 @@ import { DEFAULT_LOCALE, SUPPORTED_LOCALES, type AppLocale } from '@/lib/i18n/co
 import { localizePath } from '@/lib/i18n/locale-routing';
 import { SETTORI_CON_RISORSE } from '@/content/settori/risorse-disponibili';
 import { blogPostPath, getPostsInCategory } from '@/lib/wp-post-index';
+import FeaturedIn from '@/components/FeaturedIn';
+import { featuredLabel } from '@/lib/press/labels';
 
 const CTA_LABELS: Record<string, { discover: string; cta: string }> = {
   it: { discover: 'Scopri', cta: 'Vai al prodotto →' },
@@ -531,6 +533,14 @@ export default async function RisorseSettorePage({ params }: { params: Promise<P
             <div className="acts r d1">
               <Link className="b1" href={productHref}>{ctaLabel.cta}</Link>
             </div>
+          </div>
+        </section>
+
+        {/* ── citati su: solo stampa vera. "Presente su" (directory) resta nel footer, non si ripete qui ── */}
+        <section className="dirs">
+          <div className="w"><p className="kk k r dirs-kk">{featuredLabel(resolvedLocale)}</p></div>
+          <div className="host">
+            <FeaturedIn locale={resolvedLocale} />
           </div>
         </section>
       </div>
