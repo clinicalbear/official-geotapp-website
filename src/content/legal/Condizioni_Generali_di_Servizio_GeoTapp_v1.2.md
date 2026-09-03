@@ -1,7 +1,6 @@
 # POLITICA DI UTILIZZO GEO TAPP FLOW & TIMETRACKER
-## Versione 1.4 - Giugno 2026 (Sede IT - Zero Knowledge Encryption)
-**Data ultima modifica:** 26 Giugno 2026  
-> ⚠️ **Bozza aggiornata, da rivalidare con il legale.** Modifiche v1.4: §2 prezzi reali (Flow 390/990/1990, licenze 36/30 per operatore); §10.1 recesso allineato (P.IVA obbligatoria, durata minima 12 mesi, saldo residuo -10%, clausola RINUNCIO); Allegato 1 DPA corretto (AES-256-GCM, residenza dati verificata: Firestore UE, foto/Functions USA con SCC+DPF). DPA separato `docs/legal/dpa-geotapp.md` fuso qui ed eliminato.  
+## Versione 1.5 - Settembre 2026 (Sede IT - Zero Knowledge Encryption)
+**Data ultima modifica:** 3 settembre 2026  
 **Titolare:** GeoTapp di Michele Angelo Petraroli - P.IVA IT04183990987  
 **Contatto GDPR/DPO/Rep UE:** info@geotapp.com  
 
@@ -169,7 +168,8 @@ GeoTapp è **PROCESSOR** (Art.28 GDPR). **Contatto unico:** info@geotapp.com
 Dati crittografati client-side conformi **Art. 32 GDPR** (sicurezza tecnica). Controller (Cliente) responsabile gestione chiavi come **misura sicurezza aggiuntiva**. GeoTapp Processor non ha accesso.
 
 #### 8.2 Trasferimenti Extra-UE
-- **Server Firebase:** US/EU con **SCC UE 2021** + **TIA**
+- **Server:** esclusivamente nell'Unione Europea (Firestore `eur3` ed `europe-west8`, Cloud Functions `europe-west1`, foto delle prove di lavoro `europe-west8`, Milano)
+- **Pagamenti:** Stripe (US/IE) tratta esclusivamente i dati di fatturazione, mai i dati di lavoro dei dipendenti, coperto da **SCC UE 2021** + **TIA**
 - **Sub-processor:** Google (Firebase/Firestore), Stripe (Pagamenti)
 - **Garanzie:** Encryption AES-256, SOC2 compliance
 - **Zero Knowledge:** Dati sensibili crittografati client-side, trasmessi encrypted
@@ -265,15 +265,15 @@ GeoTapp processa dati personali per conto Controller (Cliente) come da GDPR Art.
 - Firebase Security Rules multi-tenant (companyId filtering)
 - Audit logs completi (Firebase Auth)
 
-### A1.3 Sub-Processor Approvati e residenza dati (verificato 25/06/2026)
+### A1.3 Sub-Processor Approvati e residenza dati (verificato 03/09/2026)
 | Fornitore | Servizio | Residenza dati | Garanzia trasferimento | Certificazioni |
 |-----------|----------|----------------|------------------------|----------------|
-| Google (Firebase/Google Cloud) | Database Firestore (timbrature, orari, GPS) | **UE (multi-regione `eur3`)** | Resta in UE | SOC2, ISO 27001 |
-| Google (Firebase/Google Cloud) | Storage foto + Cloud Functions (elaborazione) | USA (`us-central1`) | SCC UE 2021 + EU-US DPF | SOC2, ISO 27001 |
+| Google (Firebase/Google Cloud) | Database Firestore (timbrature, orari, GPS) | **UE (`eur3` ed `europe-west8`, Milano)** | Resta in UE | SOC2, ISO 27001 |
+| Google (Firebase/Google Cloud) | Storage foto + Cloud Functions (elaborazione) | **UE (`europe-west8` Milano / `europe-west1`)** | Resta in UE | SOC2, ISO 27001 |
 | Stripe Payments Europe | Pagamenti (dati di fatturazione, non dei dipendenti) | UE/USA | SCC + DPF | PCI-DSS Level 1 |
 | Cloudflare | CDN/sicurezza del sito web (non dati dei dipendenti) | Edge globale | SCC + DPF | SOC2, ISO 27001 |
 
-> I **dati di lavoro strutturati** (timbrature, orari, posizioni) risiedono in **UE**. Sono negli USA solo le **fotografie** (Storage) e l'**elaborazione transitoria** (Cloud Functions), coperte da SCC + EU-US DPF.
+> Tutti i dati di lavoro (timbrature, orari, posizioni, fotografie) e la loro elaborazione risiedono **esclusivamente su server nell'Unione Europea**: nessun dato di lavoro dei dipendenti lascia l'UE. Fuori dall'UE resta soltanto Stripe, che tratta i soli dati di fatturazione.
 
 ### A1.4 Data Breach Notification
 - **Discovery → Cliente:** 24h
@@ -284,7 +284,7 @@ GeoTapp processa dati personali per conto Controller (Cliente) come da GDPR Art.
 ### A1.5 Transfer Impact Assessment (TIA)
 - **Rischio:** Basso (dati sensibili crittografati client-side)
 - **Safeguards:** SCC + Zero Knowledge + SOC2
-- **Conclusione:** Trasferimento US conforme GDPR
+- **Conclusione:** nessun dato di lavoro è trasferito fuori dall'UE; resta conforme al GDPR il solo trasferimento dei dati di fatturazione a Stripe
 
 ---
 
