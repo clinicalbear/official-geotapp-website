@@ -225,7 +225,20 @@ details.closing .ct>p{padding-bottom:0;opacity:0;transition:padding-bottom .55s 
 .form{background:var(--ink);color:var(--paper);padding:46px 42px}
 .form label{display:block;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--lime);margin-bottom:10px}
 .form .fld{margin-bottom:24px}
-.form .in{border:1px solid rgba(242,240,233,.24);padding:15px 16px;font-size:16px;color:rgba(242,240,233,.5)}
+/* 🔴 Il campo non aveva uno sfondo dichiarato, quindi restava BIANCO (quello di
+   default del browser) mentre il CSS ci scriveva sopra color crema al 50%: sul
+   modulo del trial quello che si digitava era illeggibile, si intuiva solo dal
+   correttore ortografico. Trovato il 03/09/2026 aprendo il modulo in Chrome.
+   Il pannello .form e' scuro, quindi il campo va reso trasparente e il testo
+   pieno; l'attenuazione resta dove serve, cioe' sul segnaposto. Il blocco
+   autofill serve perche' Chrome, quando riempie da se', forza sfondo e colore
+   suoi e riporterebbe il difetto esattamente com'era. */
+.form .in{border:1px solid rgba(242,240,233,.24);padding:15px 16px;font-size:16px;background:transparent;color:var(--paper);caret-color:var(--paper)}
+.form .in::placeholder{color:rgba(242,240,233,.45)}
+.form .in:-webkit-autofill,
+.form .in:-webkit-autofill:hover,
+.form .in:-webkit-autofill:focus{-webkit-text-fill-color:var(--paper);caret-color:var(--paper);-webkit-box-shadow:0 0 0 1000px var(--ink) inset;box-shadow:0 0 0 1000px var(--ink) inset}
+.form .in:focus{outline:2px solid var(--lime);outline-offset:2px;border-color:rgba(242,240,233,.5)}
 .form .two{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .sum{border:1px solid rgba(14,14,12,.18);padding:38px 34px}
 .sum .rw{display:flex;justify-content:space-between;padding:15px 0;border-bottom:1px solid rgba(14,14,12,.1);font-size:15.5px}
@@ -835,7 +848,7 @@ details.closing .ct>p{padding-bottom:0;opacity:0;transition:padding-bottom .55s 
 /* varianti risorsa-strumento → .lp-risorsa-strumento */
 .lp-risorsa-strumento .form{background:var(--ink);color:var(--paper);padding:44px 40px}
 .lp-risorsa-strumento .form .fld{margin-bottom:26px}
-.lp-risorsa-strumento .form .in{border:1px solid rgba(242,240,233,.24);padding:15px 16px;font-size:16px;color:rgba(242,240,233,.55)}
+.lp-risorsa-strumento .form .in{border:1px solid rgba(242,240,233,.24);padding:15px 16px;font-size:16px;color:var(--paper)}
 
 /* varianti trial → .lp-trial */
 /* Testata compatta: il form deve stare sopra la piega (il worst step del
@@ -853,7 +866,7 @@ details.closing .ct>p{padding-bottom:0;opacity:0;transition:padding-bottom .55s 
 }
 .lp-trial .form{background:var(--ink);color:var(--paper);padding:52px 46px}
 .lp-trial .form label{display:block;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--lime);margin-bottom:12px}
-.lp-trial .form .in{border:1px solid rgba(242,240,233,.26);padding:18px 18px;font-size:17px;color:rgba(242,240,233,.5)}
+.lp-trial .form .in{border:1px solid rgba(242,240,233,.26);padding:18px 18px;font-size:17px;color:var(--paper)}
 .lp-trial .form .b1{margin-top:30px;width:100%;text-align:center;font-size:17px;padding:20px 34px}
 /* ═══════════════════════════════════════════════════════════════
    ADATTAMENTO AL SITO VERO (non generato dal mockup)
