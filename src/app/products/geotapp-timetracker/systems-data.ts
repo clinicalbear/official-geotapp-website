@@ -23,189 +23,231 @@ export interface SystemDetail {
 }
 
 export const GEOTAPP_SYSTEMS: SystemDetail[] = [
-  // --- SECTOR 1: CORE OPERATIONS (Time, Schedule, People) ---
+  // --- Gruppo 1: il turno (timbratura, pianificazione, operatori) ---
   {
     id: 'timelock-alpha',
-    systemName: 'Timelock Alpha',
-    codeName: 'Session Core',
+    systemName: 'GPS Time Tracking',
+    codeName: 'Clock-in',
     icon: Timer,
     color: 'cyan',
     shortDescription:
-      'Timbrature smart geolocalizzate. Start/Stop su commessa precisi al secondo con verifica GPS.',
+      'Clock-in and clock-out linked to GPS position and precise timestamp. Every work session becomes a verifiable operational event.',
     fullDescription: `
-### Il Tempo è Denaro. Proteggilo.
+### Time is Verifiable.
 
-Basta fogli ore cartacei imprecisi. **Timelock Alpha** è il sistema definitivo per il tracciamento del lavoro su commessa.
+Timestamps without verification generate disputes.
+**GPS Time Tracking** makes every work session a reliable, defensible record.
 
-#### Smart Geofencing
-Il sistema permette l'inizio attività solo se il tecnico è effettivamente dal cliente. Niente più "Sono arrivato" dal bar.
+#### Geolocated Clock-in and Clock-out
 
-#### Session History
-Ogni sessione è un record immutabile: Orario Inizio, Orario Fine, Posizione GPS, Durata. Tutto assegnato alla commessa specifica.
+The technician records entry and exit from the field.
+Location, address and time are registered automatically.
+
+#### Immutable History
+
+Every session is a verifiable record: start time, end time, position, duration and associated job.
+The client asks when you arrived? The data is there, always.
         `,
   },
   {
     id: 'event-horizon',
-    systemName: 'Event Horizon',
-    codeName: 'Temporal Grid',
+    systemName: 'Shift Planning',
+    codeName: 'Scheduling',
     icon: CalendarDays,
     color: 'blue',
     shortDescription:
-      'Pianificazione turni e interventi. Visualizzazione mensile e settimanale con gestione disponibilità.',
+      'Manage shifts and staff availability. Weekly and monthly views for coordination without confusion or overlaps.',
     fullDescription: `
-### Sincronizzazione Totale.
+### No Shift Conflicts.
 
-Gestire il personale in movimento richiede precisione. **Event Horizon** offre una visione chiara di chi fa cosa, e quando.
+Organising mobile personnel requires clarity.
+**Shift Planning** gives the manager a precise, up-to-date view.
 
-#### Meeting Points
-Definisci punti di ritrovo e orari di partenza. L'app notifica alla squadra dove farsi trovare.
+#### Calendar View
 
-#### Disponibilità Live
-I dipendenti confermano la presenza o segnalano ferie direttamente dall'app. Il manager vede i buchi nella griglia prima che diventino problemi.
+See who works when.
+Identify absences, holidays and overlaps before they become operational problems.
+
+#### Real-time Availability
+
+Employees confirm attendance or report absences directly from the app.
+The manager sees gaps in the schedule before assigning new jobs.
         `,
   },
   {
     id: 'unit-matrix',
-    systemName: 'Unit Matrix',
-    codeName: 'Personnel Ops',
+    systemName: 'Operator Registry',
+    codeName: 'People',
     icon: Users,
     color: 'indigo',
     shortDescription:
-      'Anagrafica digitale completa. Gestione ruoli, certificazioni e inviti rapidi via WhatsApp.',
+      'Manage a complete record of your operators: roles, contacts, certifications and platform access.',
     fullDescription: `
-### Conosci la Tua Squadra.
+### Know Your Team.
 
-Ogni operatore è un nodo della rete. **Unit Matrix** centralizza tutte le informazioni vitali.
+Every operator is a key operational resource.
+**Operator Registry** centralises all vital information.
 
-#### Gestione Certificazioni
-Visualizza a colpo d'occhio chi ha il patentino aggiornato o l'abilitazione alla sicurezza necessaria per entrare in cantiere.
+#### Certification Management
 
-#### Onboarding Rapido
-Devi aggiungere un nuovo tecnico? Invia un link magico via WhatsApp. In 30 secondi è operativo.
+See at a glance who holds the required qualifications for a specific intervention or site.
+
+#### Rapid Onboarding
+
+Adding a new technician is simple.
+Send an invite link: within minutes they are operational on GeoTapp TimeTracker.
         `,
   },
 
-  // --- SECTOR 2: LOGISTICS & COMMS (Places, Fuel, Messages) ---
+  // --- Gruppo 2: il campo (sedi e cantieri, mezzi e spese, comunicazioni) ---
   {
     id: 'sector-grid',
-    systemName: 'Sector Grid',
-    codeName: 'Territory Ctrl',
+    systemName: 'Sites and Worksites',
+    codeName: 'Sites',
     icon: MapPin,
     color: 'emerald',
     shortDescription:
-      'Mappatura sedi e cantieri. Assegna le squadre alle zone operative corrette.',
+      'Create a database of operational sites and worksites. Link each intervention to the correct location and organise teams by zone.',
     fullDescription: `
-### Domina il Territorio.
+### Every Intervention in the Right Place.
 
-Non lasciare le squadre allo sbaraglio. **Sector Grid** definisce i confini operativi.
+Working without geographic reference generates confusion.
+**Sites and Worksites** brings operational clarity.
 
-#### Sedi & Cantieri
-Crea un database dei tuoi clienti e cantieri. Il sistema sa se un operatore sta lavorando nel posto giusto.
+#### Site Database
 
-#### Gruppi di Lavoro
-Organizza i tecnici in squadre (Alpha, Bravo, Charlie). Assegna compiti al gruppo, non al singolo. Massima efficienza.
+Create a catalogue of client sites, worksites and operational locations.
+The system automatically links technician activity to the intervention site.
+
+#### Zone-based Teams
+
+Organise technicians into teams by site or geographic area.
+Assign interventions to the correct team, not just the individual.
         `,
   },
   {
     id: 'energy-logistics',
-    systemName: 'Energy Logistics',
-    codeName: 'Fuel Tracking',
+    systemName: 'Vehicle and Expense Management',
+    codeName: 'Fleet',
     icon: Zap,
     color: 'orange',
     shortDescription:
-      'Controllo spese carburante e rimborsi km. Gestione smart delle auto in uso al personale.',
+      'Track company vehicle usage, fuel consumed and travel expenses for field staff.',
     fullDescription: `
-### Spese Sotto Controllo.
+### Every Trip Documented.
 
-Le spese di trasferta sono una voce critica. **Energy Logistics** monitora ogni centesimo.
+Travel expenses are a critical item for any company with mobile staff.
+**Vehicle Management** monitors every outgoing cost.
 
-#### Digital Fuel Log
-Il dipendente registra rifornimenti e costi direttamente alla pompa. Scatta una foto allo scontrino per l'archivio digitale.
+#### Vehicle Usage
 
-#### Gestione Auto in Uso
-Assegna temporaneamente un'auto a un dipendente per la trasferta. Saprai sempre chi la sta usando e per quale commessa.
+Temporarily assign a vehicle to an employee for an intervention.
+Always know who is using which vehicle and for which job.
+
+#### Fuel Expenses
+
+The employee records refuelling directly from the app with a receipt photo and amount.
+Everything archived, everything linked to the job.
         `,
   },
   {
     id: 'neural-link',
-    systemName: 'Neural Link',
-    codeName: 'Comms Array',
+    systemName: 'Operational Communications',
+    codeName: 'Comms',
     icon: MessageSquare,
     color: 'violet',
     shortDescription:
-      "Bacheca aziendale interna. Invia comunicazioni mirate a singoli gruppi o a tutta l'azienda.",
+      'Internal channel for company communications. Targeted messages to specific groups with read confirmations.',
     fullDescription: `
-### Silenzio Radio? Mai Più.
+### Clear Communications. No Background Noise.
 
-WhatsApp è caotico e si mischia con la vita privata. **Neural Link** è il canale ufficiale per le comunicazioni operative.
+WhatsApp mixes private and professional life and offers no control over read status.
+**Operational Communications** is the official company channel.
 
-#### Comunicazioni Mirate
-Devi avvisare solo la squadra di Roma di un cambio turno? Fallo con un click. Nessun rumore di fondo per gli altri.
+#### Targeted Messages
 
-#### Read Receipts
-Saprai sempre chi ha letto l'avviso e chi no. Responsabilità chiara e trasparente.
+Notify only the team that needs to know.
+Shift change at the Rome site? Only the assigned technicians receive the message.
+
+#### Read Confirmations
+
+Always know who read the communication and who did not.
+Clear and transparent accountability for everyone.
         `,
   },
 
-  // --- SECTOR 3: DATA & IDENTITY (Payroll, Reports, Branding) ---
+  // --- Gruppo 3: cosa esce (export presenze, report, personalizzazione) ---
   {
     id: 'payroll-bridge',
-    systemName: 'Payroll Bridge',
-    codeName: 'Studio Sync',
+    systemName: 'Attendance Export',
+    codeName: 'Payroll export',
     icon: Link,
     color: 'pink',
     shortDescription:
-      'Collegamento diretto con il consulente del lavoro. Export presenze compatibile Zucchetti/TeamSystem.',
+      'Export monthly attendance in formats compatible with the main payroll software. Less manual work, fewer errors.',
     fullDescription: `
-### Buste Paga Senza Mal di Testa.
+### Payroll Without Headaches.
 
-La fine del mese non deve essere un incubo. **Payroll Bridge** collega l'operatività all'amministrazione.
+Month end does not have to be an administrative nightmare.
+**Attendance Export** connects field operations to HR administration.
 
-#### Export Multi-Formato
-Genera file presenze pronti per l'importazione nei software paghe più diffusi (Zucchetti, INAZ, TeamSystem).
+#### Multi-Format
 
-#### Accesso Consulente
-Dai un accesso limitato al tuo studio paghe. Possono scaricare i dati che servono in autonomia, senza telefonarti.
+Generate attendance files ready for import into the main payroll software (Zucchetti, INAZ, TeamSystem).
+
+#### Consultant Access
+
+Give limited access to your payroll firm.
+They download the data they need independently, without calling you every month end.
         `,
   },
   {
     id: 'data-core',
-    systemName: 'Data Core',
-    codeName: 'Analytics',
+    systemName: 'Weekly Reports',
+    codeName: 'Reporting',
     icon: FileText,
     color: 'slate',
     shortDescription:
-      'Report settimanali dettagliati in CSV/Excel. Analisi ore lavorate per commessa.',
+      'Detailed reports on hours worked per job and per operator. Reliable data for internal control and billing.',
     fullDescription: `
-### I Dati Non Mentono.
+### Data Does Not Lie.
 
-Prendi decisioni basate sui fatti, non sulle sensazioni. **Data Core** estrae valore dalle operazioni quotidiane.
+Make decisions based on facts, not impressions.
+**Weekly Reports** extracts value from daily operations.
 
-#### Weekly Reports
-Ogni venerdì, un report completo sulla scrivania (digitale). Chi ha lavorato, dove e quanto.
+#### Detailed Reports
 
-#### Totale Trasparenza
-Dipendenti e Titolari scaricano lo stesso report mensile. Le ore contate sono identiche per tutti. Niente più contestazioni a fine mese.
+Every week, a complete picture: who worked, where, on which job and for how long.
+
+#### Full Transparency
+
+Employees and managers consult the same monthly report.
+Hours counted are identical for everyone.
+No disputes at month end.
         `,
   },
   {
     id: 'identity-forge',
-    systemName: 'Identity Forge',
-    codeName: 'Whitelabel',
+    systemName: 'Branded App',
+    codeName: 'Branding',
     icon: Palette,
     color: 'rose',
     shortDescription:
-      "La TUA app. Carica il tuo logo e scegli il tema colori aziendale per un'esperienza brandizzata.",
+      'Upload your logo and choose your company colours. Your operators use an app that reflects your brand identity.',
     fullDescription: `
-### Il Tuo Brand. La Tua App.
+### Your Company, Your App.
 
-Non usare un'app generica. Fai sentire i tuoi dipendenti parte della TUA azienda.
+Do not use a generic app.
+Make your employees feel part of YOUR company with a consistent visual experience.
 
-#### Upload Logo
-Il tuo logo troneggia nella schermata di login e nella dashboard.
+#### Company Logo
 
-#### Color Themes
-Scegli tra i temi predefiniti (Classic Blue, Emerald, Sunset, Slate, Violet) quello che più si adatta alla tua immagine coordinata.
+Your logo prominently displayed on the login screen and main dashboard.
+
+#### Company Colours
+
+Choose the colour theme that fits your corporate image.
+Professional, consistent, recognisable.
         `,
   },
 ];

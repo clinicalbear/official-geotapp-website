@@ -23,265 +23,237 @@ export interface SystemDetail {
 }
 
 export const GEOTAPP_SYSTEMS: SystemDetail[] = [
-  // --- SECTOR 1: REVENUE ENGINE (Sales, Onboarding, Finance) ---
+  // --- Gruppo 1: il lavoro (commesse, assegnazione, rendicontazione) ---
   {
     id: 'nexus-core',
-    systemName: 'Nexus CRM',
-    codeName: 'Sales Engine',
+    systemName: 'Job Management',
+    codeName: 'Operations',
     icon: Database, // Was Users
     color: 'blue',
     shortDescription:
-      'Pipeline di Vendita Sovrana. Gestisci Lead, Opportunità e Trattative per chiudere contratti alla velocità della luce.',
+      'Create and manage technical interventions. Assign tasks to technicians, monitor progress and keep everything tracked per job.',
     fullDescription: `
-### La Tua Macchina da Guerra Commerciale.
+### Central Job Control.
 
-Vendere non è fortuna. È ingegneria.
-**Nexus Core** struttura il tuo caos commerciale in una pipeline militare.
+Every intervention starts as a structured job.
+**Job Management** gives you a clear view of all work in progress.
 
-#### Pipeline Management
+#### Intervention Management
 
-Visualizza ogni trattativa. Sai esattamente dove si bloccano i soldi.
--   Lead (Contatto Freddo)
--   Meeting (In Negoziazione)
--   Proposal (Preventivo Inviato)
--   Won (Soldi in Banca)
+Create a job, assign the technician, define the site and date.
+Monitor status: Open, In Progress, Completed.
 
-#### Intelligenza Predittiva
+#### Operational History
 
-Nexus non ti dice solo "chi" chiamare, ma "quando".
-Traccia le aperture delle e-mail.
-Se un Lead apre il tuo preventivo 5 volte in un'ora, Nexus ti avvisa: "CHIAMA ORA".
-Trasforma i venditori in cecchini.
+Every job has a complete archive of activities, photo proofs, notes and timestamps.
+The client asks what was done? You have the data. Always.
         `,
   },
   {
     id: 'titan-flow',
-    systemName: 'Titan Flow',
-    codeName: 'Auto-Onboarding',
+    systemName: 'Task Assignment',
+    codeName: 'Dispatch',
     icon: Activity, // Was Zap
     color: 'cyan',
     shortDescription:
-      'Il Cliente firma, il sistema lavora. Generazione automatica di portali clienti, richiesta documenti e task di benvenuto.',
+      'Distribute work to technicians with precision. Communicate instructions, deadlines and operational priorities in a structured way.',
     fullDescription: `
-### L'Inizio Perfetto. Senza Sforzo.
+### The Right Job to the Right Technician.
 
-Hai chiuso il contratto. Ottimo. Ora inizia l'incubo burocratico: "Mandami il logo", "Compila il form", "Dov'è il contratto firmato?".
-**Titan Flow** automatizza la burocrazia.
+Confused task assignment generates delays and disputes.
+**Task Assignment** brings operational clarity.
 
-#### Zero-Touch Onboarding
+#### Precise Distribution
 
-Appena lo stato passa a "Deals Won", Titan si sveglia.
-1.  Invia una mail di benvenuto al cliente.
-2.  Genera un **Portale Cliente** sicuro.
-3.  Assegna task al cliente: "Carica Visura", "Firma NDA", "Carica Brand Assets".
+As soon as a job is opened, assign one or more technicians.
+Each technician sees their work on GeoTapp TimeTracker.
 
-#### Il "Cane da Guardia" Gentile
+#### Operational Communication
 
-Il cliente non carica i file? Tu non devi fare nulla.
-Titan gli manda solleciti automatici (e gentili) ogni 48 ore.
-Tu ricevi una notifica solo quando tutto è pronto per lavorare.
-Parti con il progetto solo quando hai tutti i pezzi. Mai più ritardi per colpa dei "materiali mancanti".
+Instructions, notes, technical attachments: everything reaches the technician before they leave for the field.
+Fewer calls, fewer misunderstandings, fewer delays.
         `,
   },
   {
     id: 'ledger-prime',
-    systemName: 'Ledger Prime',
-    codeName: 'Finance Command',
+    systemName: 'Reports and Billing',
+    codeName: 'Reporting',
     icon: CreditCard,
     color: 'yellow',
     shortDescription:
-      'Il Denaro non dorme mai. Generazione automatica di fatture, incassi via Stripe e riconciliazione bancaria in tempo reale.',
+      'Generate structured reports from every job. Export documentation and support billing with real field data.',
     fullDescription: `
-### Il Tuo CFO Digitale che Lavora 24/7.
+### From Work to Report, in an Orderly Way.
 
-La contabilità è noiosa. È pericolosa (se sbagli). Ed è lenta.
-**Ledger Prime** è la fine della contabilità manuale.
+Manual billing is slow and often incomplete.
+**Reports and Billing** closes the operational cycle.
 
-#### Quote-to-Cash (La Velocità del Soldo)
+#### Structured Reports
 
-Il ciclo è chiuso e blindato.
-1.  Crei un Preventivo (Quote) in 30 secondi selezionando prodotti dal listino.
-2.  Il cliente riceve un link sicuro. Firma digitalmente dal telefono.
-3.  **BAM**. Ledger Prime converte istantaneamente il Preventivo in una Fattura Pro-forma o Definitiva.
-4.  Se hai Stripe collegato, il cliente paga con carta di credito nello stesso istante.
+Every completed intervention generates documentation by collecting timestamps, photos and notes from the field.
+No data to enter manually, it all comes from TimeTracker.
 
-I soldi arrivano sul conto mentre tu stai ancora stringendo la mano.
+#### Billing Support
+
+Real job data supports more accurate quotes and invoices.
+Fewer errors, fewer disputes, faster administrative cycle.
         `,
   },
 
-  // --- SECTOR 2: SUPPLY & OPERATIONS (Logistics, Purchasing, Projects) ---
+  // --- Gruppo 2: l'organizzazione (calendario, risorse, pianificazione) ---
   {
     id: 'quantum-logistics',
-    systemName: 'Quantum Logistics',
-    codeName: 'Supply Chain',
+    systemName: 'Intervention Calendar',
+    codeName: 'Scheduling',
     icon: Box,
     color: 'green',
     shortDescription:
-      'Ogni atomo tracciato. Gestione Magazzino multi-sede con tracciamento movimenti e riordino predittivo.',
+      'Plan interventions, visualise the operational calendar and manage team availability without overlaps.',
     fullDescription: `
-### L'Onniscienza del Magazzino.
+### Full View of Planned Work.
 
-"Non so se ce l'ho in casa". Questa frase costa miliardi alle aziende ogni anno.
-Con **Quantum Logistics**, tu sai. Sempre.
+Without a shared calendar, planning becomes chaotic.
+**Intervention Calendar** gives you clear operational visibility.
 
-#### Live Stock Tracking
+#### Advanced Planning
 
-Ogni prodotto ha un'anima digitale.
-Quando crei una fattura di vendita, il magazzino scala automaticamente.
-Gestisci movimenti manuali, scarti, resi e trasferimenti tra sedi diverse.
+View all interventions on daily, weekly and monthly calendar views.
+Identify overlaps and optimise workload distribution.
 
-#### Riordino Predittivo (The Oracle)
+#### Team Availability
 
-Quantum non si limita a contare. Prevede.
-Imposta una "Scorta Minima" (Min Stock Level).
-Quando scendi sotto la soglia, il sistema ti avvisa e prepara già l'ordine al fornitore.
-Mai più vendite perse per "prodotto non disponibile".
+See who is available, who is on leave and who is already overloaded.
+Assign new interventions without creating operational conflicts.
         `,
   },
   {
     id: 'supply-command',
-    systemName: 'Supply Command',
-    codeName: 'Purchase Ops',
+    systemName: 'Resource Management',
+    codeName: 'Resources',
     icon: Layers, // Was Truck (which might be missing?) safely leverage Layers or similar
     color: 'red',
     shortDescription:
-      'Controllo Fornitori Totale. Genera Ordini di Acquisto, traccia le consegne e gestisce i costi in ingresso.',
+      'Control materials, equipment and operational resources needed for each field intervention. No surprises.',
     fullDescription: `
-### Tu Compri. Tu Comandi.
+### No Intervention Short of Resources.
 
-Per vendere devi comprare. Ma gli acquisti sono spesso caotici: email perse, prezzi sbagliati, consegne in ritardo.
-**Supply Command** mette il guinzaglio ai tuoi fornitori.
+Sending a technician to the field without the right materials is a costly mistake.
+**Resource Management** prevents operational surprises.
 
-#### Purchase Orders (L'Ordine Perfetto)
+#### Materials per Job
 
-Crea Ordini di Acquisto (PO) professionali in pochi clic.
-Inviali via mail direttamente dal sistema.
-Quando la merce arriva, la trasformi in un "Carico di Magazzino" con un tasto.
-Niente più "Ho ordinato 10, ne sono arrivati 9". Il sistema traccia le discrepanze.
+Link required resources to each job.
+The manager sees in advance what is needed and when.
 
-#### Supplier Intelligence
+#### Suppliers and Procurement
 
-Chi è il fornitore più puntuale? Chi ti ha alzato i prezzi di nascosto?
-Supply Command storicizza ogni transazione e ti dà il potere negoziale sui costi.
+Store contact details and terms for your regular suppliers.
+Reduce procurement time and keep costs under control.
         `,
   },
   {
     id: 'the-architect',
-    systemName: 'The Architect',
-    codeName: 'Project OS',
+    systemName: 'Work Planning',
+    codeName: 'Planning',
     icon: Layers,
     color: 'purple',
     shortDescription:
-      'Il tempo è la risorsa più scarsa. Gestisci Progetti, Task e Time Tracking per sapere esattamente quanto ti costa ogni lavoro.',
+      'Organise work into phases, tasks and deadlines. Keep the project under control without spreadsheets or WhatsApp messages.',
     fullDescription: `
-### Costruisci Cattedrali, Non Castelli di Sabbia.
+### Structure the Work. Control the Progress.
 
-Gestire progetti complessi via email o WhatsApp è suicidio professionale.
-**The Architect** porta ordine nel caos creativo.
+Complex jobs require structure.
+**Work Planning** brings operational order.
 
-#### Struttura Frattale
+#### Phases and Deadlines
 
-Ogni Cliente ha dei Progetti. Ogni Progetto ha dei Task. Ogni Task ha delle Scadenze.
-Tutto è nidificato. Tutto è visibile.
-Assegna compiti al team con un click. Definisci le priorità (Urgent, High, Low).
-Visualizza l'avanzamento su diagrammi di Gantt o Board Kanban.
+Structure complex interventions into operational phases with clear deadlines.
+Assign responsibilities to each team member.
 
-#### Profitability X-Ray (Raggi X della Redditività)
+#### Progress Monitoring
 
-Questa è la funzione che le agenzie temono e amano.
-I tuoi dipendenti tracciano il tempo (Time Logs) sui task.
-Tu hai impostato un costo orario per dipendente e un prezzo di vendita per il cliente.
-The Architect calcola in tempo reale il **Margine Reale** del progetto.
-Stai lavorando in perdita? Lo saprai *mentre* accade.
+Visualize progress in real time.
+Always know what has been done and what remains open.
+Act before a delay becomes a client problem.
         `,
   },
 
-  // --- SECTOR 3: CONTROL & EXPANSION (Expenses, Mobile, Analytics) ---
+  // --- Gruppo 3: la prova e il controllo (documentazione, campo-ufficio, visibilita') ---
   {
     id: 'the-auditor',
-    systemName: 'The Auditor',
-    codeName: 'Expense AI',
+    systemName: 'Intervention Documentation',
+    codeName: 'Evidence',
     icon: FileText, // Was Receipt
     color: 'fuchsia',
     shortDescription:
-      "La fine dei foglietti smarriti. I dipendenti fotografano gli scontrini, l'AI li digitalizza e li assegna ai progetti.",
+      'Collect photo evidence, operational notes and signed documents for every intervention. Work performed stays verifiable.',
     fullDescription: `
-### Zero Carta. Zero Frodi.
+### Real Proof for Every Intervention.
 
-Le note spese sono l'incubo di ogni amministrazione. Scontrini sbiaditi, persi, o peggio, "creativi".
-**The Auditor** è il revisore contabile spietato che vive nel cloud.
+Without documentation, completed work is contestable.
+**Intervention Documentation** makes every job verifiable.
 
-#### Snap & Forget
+#### Photo Evidence
 
-Il tuo tecnico invita un cliente a pranzo.
-1. Paga.
-2. Apre l'app GeoTapp.
-3. Fotografa lo scontrino.
-Finito. Può buttare la carta.
+Technicians take photos directly from GeoTapp TimeTracker on the field.
+Images are automatically linked to the job with timestamp and location.
 
-#### Project Allocation
+#### Digital Client Signature
 
-Il sistema chiede: "Per quale Progetto?".
-Il tecnico seleziona "Cliente X".
-La spesa viene immediatamente caricata sui costi di quel progetto (abbattendo il margine in tempo reale su The Architect).
-A fine mese, l'amministrazione ha un report PDF perfetto.
+The client can sign the work report directly on the technician's screen.
+The digital signature is included in the report and constitutes proof of service delivered.
         `,
   },
   {
     id: 'the-uplink',
-    systemName: 'The Uplink',
-    codeName: 'Mobile Command',
+    systemName: 'Field-to-Office Link',
+    codeName: 'Integration',
     icon: Smartphone,
     color: 'orange',
     shortDescription:
-      "L'ufficio è ovunque. App mobile nativa per i tecnici sul campo: foto, firme, rapportini e note spese in tempo reale.",
+      'Data collected by TimeTracker arrives in Flow in real time. Field and office work on the same operational data.',
     fullDescription: `
-### La Realtà è Fuori dall'Ufficio.
+### Office and Field, Finally Connected.
 
-Le aziende vere hanno persone sul campo. Tecnici, venditori, installatori.
-Se devono aspettare di tornare in ufficio per inserire i dati, hai perso mezza giornata di produttività.
-**The Uplink** è l'estensione neurale del sistema nel mondo fisico.
+The disconnect between field and office generates avoidable errors, delays and disputes.
+**Field-to-Office Link** closes the gap.
 
-#### Native Power (Flutter Engine)
+#### Real-time Synchronisation
 
-Non è un "sito responsive". È un'app mobile potente, veloce, che usa la fotocamera, il GPS e le notifiche push.
-Un tecnico finisce l'intervento:
-1.  Apre l'app.
-2.  Scatta foto del lavoro finito.
-3.  Registra le ore (Time Log).
-4.  Fa firmare il cliente col dito sullo schermo.
-5.  Invia.
+Every clock-in, photo and note recorded on TimeTracker arrives in Flow immediately.
+The manager has a live view without having to call the technician.
 
-#### Sync Istantaneo
+#### Reliable History
 
-Nello stesso secondo, in ufficio, The Architect riceve il time log. Ledger Prime prepara la fattura.
-Il ciclo è istantaneo.
+Everything the technician records on the field is archived and linked to the job.
+No data is lost. No information is missing when it is time to report.
         `,
   },
   {
     id: 'the-oracle',
-    systemName: 'The Oracle',
-    codeName: 'BI Analytics',
+    systemName: 'Operational Visibility',
+    codeName: 'Analytics',
     icon: BarChart3,
     color: 'indigo',
     shortDescription:
-      'Guardare il passato per predire il futuro. Dashboard analitiche in tempo reale per Cash Flow, Churn Rate e Performance.',
+      'Real-time operational dashboard. Always know how many interventions are open, in progress or completed today.',
     fullDescription: `
-### Dati, Non Opinioni.
+### Operational Data, Not Assumptions.
 
-"Penso che stiamo andando bene". "Mi sembra che le vendite salgano".
-Queste frasi sono proibite.
-**The Oracle** non ha opinioni. Ha grafici.
+Deciding without reliable data is dangerous.
+**Operational Visibility** turns field data into concrete information.
 
-#### La Dashboard Esecutiva
+#### Operational Dashboard
 
-Appena fai login, vedi la verità nuda e cruda:
-1.   **MRR (Monthly Recurring Revenue)**: Quanto fatturi automaticamente ogni mese.
-2.   **Churn Rate**: Quanti clienti stai perdendo.
-3.   **Cash Flow Forecast**: Quanti soldi avrai in banca tra 30 giorni basandosi sulle scadenze delle fatture.
+See in real time:
+- Open and in-progress interventions
+- Active technicians
+- Interventions completed today and this week
 
-Nessun foglio Excel da aggiornare. I dati sgorgano vivi dalle operazioni quotidiane.
-Guida la tua azienda guardando il cruscotto, non lo specchietto retrovisore.
+#### Periodic Reports
+
+Receive automated activity summaries.
+Compare periods, identify bottlenecks and optimise operations.
         `,
   },
 ];
