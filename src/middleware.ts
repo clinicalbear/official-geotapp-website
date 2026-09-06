@@ -1015,6 +1015,18 @@ export async function middleware(req: NextRequest) {
     return response;
   }
 
+  // 2b-bis. /s/<codice> — i link brevi incollati nei post dei gruppi.
+  //
+  // Locale-agnostici come /r/: la lingua di arrivo la decide la tabella in
+  // src/lib/link-brevi.ts, non l'Accept-Language di chi clicca. Se passassero
+  // di qui il middleware li riscriverebbe in /it/s/<codice>, il route handler
+  // non verrebbe mai eseguito e il conteggio delle aperture sparirebbe.
+  if (pathname.startsWith('/s/')) {
+    const response = NextResponse.next();
+    applySecurityHeaders(response, req);
+    return response;
+  }
+
   // 2c. /links - Instagram link-in-bio utility page. Locale-agnostic: bypass
   // locale detection and serve the page directly without locale prefix redirect.
   if (pathname === '/links' || pathname === '/links/') {
