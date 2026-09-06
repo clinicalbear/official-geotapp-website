@@ -78,6 +78,15 @@ export const LINK_BREVI: Record<string, LinkBreve> = {
   // Fuori dai social
   'x-email': { destinazione: '/it/survey/', nota: 'firma email e messaggi diretti' },
   'x-stampa': { destinazione: '/en/survey/', nota: 'pitch e uscite stampa' },
+  // Associazioni di categoria e sindacati: una riga per lingua, perche' la
+  // richiesta di girarlo ai soci parte da una mail sola e vogliamo sapere
+  // quale federazione l'ha davvero fatta circolare.
+  'x-assoc': { destinazione: '/en/survey/', nota: 'associazioni di categoria, inglese' },
+  'x-associt': { destinazione: '/it/survey/', nota: 'associazioni di categoria, Italia' },
+  'x-assocde': { destinazione: '/de/survey/', nota: 'associazioni di categoria, Germania' },
+  'x-assocfr': { destinazione: '/fr/survey/', nota: 'associazioni di categoria, Francia' },
+  'x-assocnl': { destinazione: '/nl/survey/', nota: 'associazioni di categoria, Paesi Bassi' },
+  'x-assoces': { destinazione: '/es/survey/', nota: 'associazioni di categoria, Spagna' },
 };
 
 /**
