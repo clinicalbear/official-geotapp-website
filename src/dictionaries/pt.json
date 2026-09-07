@@ -923,6 +923,10 @@
         "v": "Controlo de horas e prova de trabalho para equipas no terreno"
       },
       {
+        "k": "Qualquer um pode verificar",
+        "v": "A aplicação nunca pede permissão de localização em segundo plano: verifica-se no manifesto do APK ou na etiqueta de privacidade da loja. Não conseguiríamos seguir em contínuo nem que quiséssemos."
+      },
+      {
         "k": "Para quem",
         "v": "Empresas de limpeza, instaladores, segurança, manutenção, construção"
       },

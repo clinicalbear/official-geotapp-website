@@ -923,6 +923,10 @@
         "v": "Tidsregistrering og arbejdsbevis for feltteams"
       },
       {
+        "k": "Alle kan kontrollere det",
+        "v": "Appen beder aldrig om tilladelse til placering i baggrunden: det kan kontrolleres i APK-manifestet eller i butikkens privatlivsmærkat. Vi kunne ikke spore løbende, selv hvis vi ville."
+      },
+      {
         "k": "For hvem",
         "v": "Rengøringsfirmaer, installatører, sikkerhed, vedligeholdelse, byggeri"
       },

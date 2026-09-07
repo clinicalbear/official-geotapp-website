@@ -923,6 +923,10 @@
         "v": "Tidrapportering och arbetsproof för fältteam"
       },
       {
+        "k": "Vem som helst kan kontrollera",
+        "v": "Appen begär aldrig platsbehörighet i bakgrunden: det går att kontrollera i APK-manifestet eller i butikens integritetsetikett. Vi skulle inte kunna spåra löpande ens om vi ville."
+      },
+      {
         "k": "För vem",
         "v": "Städföretag, installatörer, säkerhet, underhåll, bygg"
       },

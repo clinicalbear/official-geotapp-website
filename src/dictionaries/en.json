@@ -994,6 +994,10 @@
         "v": "Time tracking and proof of work for field teams"
       },
       {
+        "k": "Anyone can check it",
+        "v": "The app never asks for background location permission: anyone can confirm it in the APK manifest or the store's privacy label. We could not track continuously even if we wanted to."
+      },
+      {
         "k": "For whom",
         "v": "Cleaning firms, installers, security, maintenance, construction"
       },

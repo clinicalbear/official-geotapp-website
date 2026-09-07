@@ -994,6 +994,10 @@
         "v": "Tijdregistratie en werkbewijs voor buitendienstteams"
       },
       {
+        "k": "Door iedereen te controleren",
+        "v": "De app vraagt geen locatietoestemming op de achtergrond: te controleren in het APK-manifest of op het privacylabel van de store. We zouden niet eens doorlopend kunnen volgen als we dat wilden."
+      },
+      {
         "k": "Voor wie",
         "v": "Schoonmaakbedrijven, installateurs, beveiliging, onderhoud, bouw"
       },

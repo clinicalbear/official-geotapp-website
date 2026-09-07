@@ -994,6 +994,10 @@
         "v": "Zeiterfassung und Arbeitsnachweis für Außendienstteams"
       },
       {
+        "k": "Von jedem überprüfbar",
+        "v": "Die App fordert keine Standortberechtigung im Hintergrund an: nachprüfbar im APK-Manifest oder im Datenschutzlabel des Stores. Wir könnten gar nicht dauerhaft verfolgen, selbst wenn wir wollten."
+      },
+      {
         "k": "Für wen",
         "v": "Reinigungsunternehmen, Installateure, Sicherheitsdienste, Wartung, Bau"
       },

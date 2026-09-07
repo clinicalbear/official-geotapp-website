@@ -923,6 +923,10 @@
         "v": "Suivi du temps et preuve du travail pour équipes terrain"
       },
       {
+        "k": "Vérifiable par n'importe qui",
+        "v": "L'application ne demande jamais l'autorisation de localisation en arrière-plan : cela se vérifie dans le manifeste de l'APK ou sur l'étiquette de confidentialité du store. Nous ne pourrions pas suivre en continu même si nous le voulions."
+      },
+      {
         "k": "Pour qui",
         "v": "Sociétés de nettoyage, installateurs, sécurité, maintenance, BTP"
       },

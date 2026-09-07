@@ -923,6 +923,10 @@
         "v": "Control horario y prueba de trabajo para equipos en campo"
       },
       {
+        "k": "Cualquiera puede comprobarlo",
+        "v": "La aplicación no pide permiso de ubicación en segundo plano: se comprueba en el manifiesto del APK o en la etiqueta de privacidad de la tienda. No podríamos rastrear de forma continua ni queriendo."
+      },
+      {
         "k": "Para quién",
         "v": "Empresas de limpieza, instaladores, seguridad, mantenimiento, construcción"
       },
