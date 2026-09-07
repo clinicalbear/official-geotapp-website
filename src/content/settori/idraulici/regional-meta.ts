@@ -29,6 +29,34 @@ import type { AppLocale } from '@/lib/i18n/config';
  *
  * en-au, en-ca e en-ie restano sull'inglese generico: hanno troppe poche
  * impressioni su queste query per poter misurare l'effetto di un cambio.
+ *
+ * ─────────────────────────────────────────────────────────────────────────────
+ * ESITO, misurato il 07/09/2026 (finestra 04/08→05/09 contro 04/07→03/08).
+ * L'esperimento e' FALSIFICATO, nel modo esatto previsto qui sopra.
+ *
+ *   `gps time tracking plumbers`        prima 0 click / 94 imp -> dopo 0 / 106
+ *      /en-gb/sectors/plumbers/         pos 2,9 -> 3,9, imp 14 -> 35, CTR 0%
+ *   `plumbing technician app with gps`  prima 0 click / 166 imp -> dopo 0 / 114
+ *      /en-us/sectors/plumbers/         pos 3,5 -> 3,0, imp 93 -> 106, CTR 0%
+ *
+ * Posizione TRE, centosei impressioni, zero click in un mese. A quella posizione
+ * un essere umano che cerca clicca. Quindi, come scritto nel criterio: il
+ * problema non e' lo snippet. Restano due spiegazioni, ed entrambe dicono di
+ * smettere di ritoccare i title:
+ *   1. quelle impressioni non sono umane. E' lo stesso fenomeno dello "stampo
+ *      macchina" gia' documentato sulle citazioni Copilot, che gonfia le
+ *      impressioni GSC senza poter produrre un click (vedi SKILL.md /google,
+ *      sezione fetch_ai_citations);
+ *   2. il nostro risultato non e' mai davvero visibile, perche' sopra c'e'
+ *      altro (AI Overview, pack) e la posizione 3 e' sotto la piega.
+ *
+ * COSA NON FARE: riscrivere altri title di settore "mettendo la parola chiave
+ * davanti" sperando nel CTR. E' gia' stato provato qui, su due query, per un
+ * mese, ed e' servito a migliorare la posizione e a portare zero click.
+ * COSA FARE: prima capire se quelle impressioni sono di qualcuno. Una query a
+ * posizione 3 con CTR 0% su 100+ impressioni va trattata come sospetta, non
+ * come domanda.
+ * ─────────────────────────────────────────────────────────────────────────────
  */
 export const REGIONAL_META: Partial<Record<AppLocale, { title: string; description: string }>> = {
   // Query di riferimento: `plumbing technician app with gps`, 265 imp, pos 4,4
