@@ -20,7 +20,8 @@ modo diverso e Google rifiuta i login.
 
 | File | Cosa dimostra |
 |---|---|
-| `trial-errori-lingua.js` | Che gli errori del modulo di prova escono nella lingua della pagina, non in italiano. Tre casi: server di oggi (codice tradotto), server vecchio (solo frase italiana, la riserva regge), codice non tradotto (esce la frase del server). |
+| `trial-errori-lingua.js` | Che gli errori del modulo di prova escono nella lingua della pagina, non in italiano. Tre casi su UNA lingua: server di oggi (codice tradotto), server vecchio (solo frase italiana, la riserva regge), codice non tradotto (esce la frase del server). |
+| `trial-errori-giro-lingue.js` | Che la frase giusta esce in TUTTE le lingue: it, en, en-gb, de, nl, fr, es, pt, da, sv, nb, ru. Ultimo giro 07/09/2026: 12/12. |
 
 ## Turnstile: perché una parte è simulata
 
