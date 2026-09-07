@@ -914,7 +914,7 @@
     "hero_title": "Pressrum",
     "hero_desc": "Allt du behöver för att skriva om GeoTapp: vilka vi är, vad vi gör och varför arbetsproof inte är övervakning. Material, fakta och kontakter för journalister och redaktioner.",
     "boilerplate_label": "Kort sagt",
-    "boilerplate_short": "GeoTapp är ett verktyg för tidrapportering och arbetsproof för företag med fältteam. Det registrerar plats och tidpunkt för en instämpling, enbart vid in- och utcheckning, aldrig som löpande övervakning, och producerar ett dokument som håller, i enlighet med reglerna för medarbetaruppföljning och GDPR.",
+    "boilerplate_short": "GeoTapp är ett verktyg för tidrapportering och arbetsproof för företag med fältteam. Det registrerar plats och tidpunkt för en instämpling, enbart vid in- och utcheckning, aldrig som löpande övervakning, och producerar ett dokument som kunden själv kan kontrollera, byggt för att hålla sig inom reglerna för medarbetaruppföljning och GDPR.",
     "boilerplate_long": "GeoTapp uppstod ur ett konkret problem: att bevisa att ett jobb utfördes, var och när, utan att förvandla folk till prickar på en karta som bevakas hela dagen. Verktyget registrerar platsen enbart vid in- och utcheckning, lägger till foton och anteckningar från fältet och förseglar varje session så att varje ändring är spårbar. Resultatet är ett bevis som kunden kan verifiera självständigt, ett som skyddar arbetsgivaren vid en tvist lika väl som den medarbetare som felaktigt anklagas för att inte ha dykt upp. Det är byggt för alla som skickar team utanför kontoret, städföretag, installatörer, säkerhet, underhåll, bygg, och utformat för att hålla sig inom gränserna för reglerna om medarbetaruppföljning och GDPR.",
     "facts_label": "Nyckelfakta",
     "facts": [

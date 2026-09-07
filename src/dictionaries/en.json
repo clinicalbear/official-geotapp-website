@@ -985,7 +985,7 @@
     "hero_title": "Press room",
     "hero_desc": "Everything you need to write about GeoTapp: who we are, what we do, and why proof of work is not surveillance. Materials, facts and contacts for journalists and newsrooms.",
     "boilerplate_label": "In short",
-    "boilerplate_short": "GeoTapp is a time-tracking and proof-of-work tool for companies with field teams. It records where and when a clock-in happens, only at clock-in and clock-out, never as continuous surveillance, and produces a document that holds up, in line with worker-monitoring law and the GDPR.",
+    "boilerplate_short": "GeoTapp is a time-tracking and proof-of-work tool for companies with field teams. It records where and when a clock-in happens, only at clock-in and clock-out, never as continuous surveillance, and produces a document the client can verify independently, built to work within worker-monitoring law and the GDPR.",
     "boilerplate_long": "GeoTapp started from a concrete problem: proving that a job was done, where and when, without turning people into dots on a map to be watched all day. The tool records location only at the moment of clock-in and clock-out, adds photos and notes from the field, and seals every session so that any change is detectable. The result is proof the client can verify independently, one that protects the employer facing a dispute as much as the worker wrongly accused of not showing up. It is built for anyone sending teams off-site, cleaning firms, installers, security, maintenance, construction, and designed to stay within the limits of worker-monitoring law and the GDPR.",
     "facts_label": "Key facts",
     "facts": [

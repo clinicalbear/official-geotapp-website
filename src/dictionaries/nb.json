@@ -914,7 +914,7 @@
     "hero_title": "Presserom",
     "hero_desc": "Alt du trenger for å skrive om GeoTapp: hvem vi er, hva vi gjør og hvorfor arbeidsbevis ikke er overvåking. Materiell, fakta og kontakter for journalister og redaksjoner.",
     "boilerplate_label": "Kort fortalt",
-    "boilerplate_short": "GeoTapp er et verktøy for tidsregistrering og arbeidsbevis for virksomheter med felteam. Det registrerer sted og tidspunkt for en stempling, utelukkende ved inn- og utsjekk, aldri som løpende overvåking, og produserer et dokument som holder, i tråd med reglene for arbeidstakeroppfølging og GDPR.",
+    "boilerplate_short": "GeoTapp er et verktøy for tidsregistrering og arbeidsbevis for virksomheter med felteam. Det registrerer sted og tidspunkt for en stempling, utelukkende ved inn- og utsjekk, aldri som løpende overvåking, og produserer et dokument som kunden selv kan kontrollere, bygget for å holde seg innenfor reglene for arbeidstakeroppfølging og GDPR.",
     "boilerplate_long": "GeoTapp oppstod fra et konkret problem: å bevise at et arbeid ble utført, hvor og når, uten å gjøre folk til prikker på et kart som overvåkes hele dagen. Verktøyet registrerer lokasjon kun på tidspunktet for inn- og utsjekk, legger til bilder og notater fra feltet og forsegler hver økt slik at enhver endring er sporbar. Resultatet er et bevis som kunden kan verifisere selvstendig, et som beskytter arbeidsgiveren i en tvist like mye som den ansatte som urettmessig anklages for ikke å ha møtt opp. Det er bygget for alle som sender team ut av kontoret, rengjøringsfirmaer, installatører, sikkerhet, vedlikehold, bygg, og utformet for å holde seg innenfor grensene for reglene om arbeidstakeroppfølging og GDPR.",
     "facts_label": "Nøkkelfakta",
     "facts": [
