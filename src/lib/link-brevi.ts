@@ -42,6 +42,7 @@ export const LINK_BREVI: Record<string, LinkBreve> = {
   // Facebook, resto d'Europa
   'fb-jimdo': { destinazione: '/de/survey/', nota: 'FB Selbststaendige und kleine Unternehmen (Jimdo)' },
   'fb-glas': { destinazione: '/de/survey/', nota: 'FB Glas- und Gebaeudereiniger' },
+  'fb-selbststaendige': { destinazione: '/de/survey/', nota: 'FB Selbststaendige, Freiberufler & Unternehmer' },
   'fb-renhold': { destinazione: '/nb/survey/', nota: 'FB Fagforum Renhold' },
   'fb-ondernemers': { destinazione: '/nl/survey/', nota: 'FB Ondernemers & ZZP-ers' },
   'fb-schoonmaak': { destinazione: '/nl/survey/', nota: 'FB Schoonmaak ZZP-ers' },
