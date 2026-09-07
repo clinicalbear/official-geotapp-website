@@ -777,6 +777,15 @@
     "error_message": "Errore durante l'attivazione. Riprova o scrivi a info@geotapp.com.",
     "error_captcha": "Il controllo anti-bot non è andato a buon fine. Riprova: si rigenera da solo. Se continua, scrivi a support@geotapp.com e ti apriamo noi l'accesso.",
     "error_captcha_pending": "Manca solo il controllo qui sopra: spunta la casella “Non sono un robot” e premi di nuovo.",
+    "error_email_required": "Manca l'indirizzo email.",
+    "error_invalid_email": "Questo indirizzo email non è scritto bene. Controllalo e riprova.",
+    "error_disposable_email": "Gli indirizzi email usa e getta non sono ammessi. Usa il tuo indirizzo vero.",
+    "error_domain_not_allowed": "Questo dominio email non è ammesso. Usa l'indirizzo della tua azienda.",
+    "error_trial_already_active": "Per questa email c'è già una prova attiva. Accedi su flow.geotapp.com o scrivi a support@geotapp.com.",
+    "error_trial_already_used": "Questa email ha già usato una prova GeoTapp. Scrivi a support@geotapp.com e vediamo insieme.",
+    "error_email_already_registered": "Questa email è già registrata. Accedi su flow.geotapp.com.",
+    "error_too_many_attempts": "Troppi tentativi da questo collegamento. Aspetta qualche minuto e riprova, oppure scrivi a support@geotapp.com.",
+    "error_bot_speed": "Il modulo è partito troppo in fretta. Riprova.",
     "benefits_title": "Cosa include il trial",
     "benefits": [
       {

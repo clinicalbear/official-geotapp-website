@@ -1022,6 +1022,15 @@
     "error_message": "Aktiveringsfel. Försök igen eller skriv till info@geotapp.com.",
     "error_captcha": "Botkontrollen gick inte igenom. Försök igen, den förnyas av sig själv. Om det fortsätter, skriv till support@geotapp.com så öppnar vi kontot åt dig.",
     "error_captcha_pending": "Bara kontrollen ovanför återstår: kryssa i \"Jag är ingen robot\" och tryck igen.",
+    "error_email_required": "E-postadressen saknas.",
+    "error_invalid_email": "Den här e-postadressen stämmer inte. Kontrollera den och försök igen.",
+    "error_disposable_email": "Engångsadresser accepteras inte. Använd din riktiga adress.",
+    "error_domain_not_allowed": "Den här e-postdomänen accepteras inte. Använd ditt företags adress.",
+    "error_trial_already_active": "Det finns redan en aktiv testperiod för den här e-postadressen. Logga in på flow.geotapp.com eller skriv till support@geotapp.com.",
+    "error_trial_already_used": "Den här e-postadressen har redan använt en GeoTapp-testperiod. Skriv till support@geotapp.com så löser vi det.",
+    "error_email_already_registered": "Den här e-postadressen är redan registrerad. Logga in på flow.geotapp.com.",
+    "error_too_many_attempts": "För många försök från den här anslutningen. Vänta några minuter och försök igen, eller skriv till support@geotapp.com.",
+    "error_bot_speed": "Formuläret skickades för snabbt. Försök igen.",
     "benefits_title": "Vad ingår",
     "benefits": [
       {

@@ -777,6 +777,15 @@
     "error_message": "Aktivierungsfehler. Bitte erneut versuchen oder an info@geotapp.com schreiben.",
     "error_captcha": "Die Bot-Prüfung ist nicht durchgelaufen. Bitte versuchen Sie es erneut, sie erneuert sich von selbst. Wenn es weiterhin nicht klappt, schreiben Sie an support@geotapp.com und wir richten Ihren Zugang ein.",
     "error_captcha_pending": "Es fehlt nur noch die Prüfung darüber: Bitte das Kästchen „Ich bin kein Roboter“ anklicken und erneut senden.",
+    "error_email_required": "Die E-Mail-Adresse fehlt.",
+    "error_invalid_email": "Diese E-Mail-Adresse stimmt so nicht. Bitte prüfen Sie sie und versuchen Sie es erneut.",
+    "error_disposable_email": "Wegwerf-Adressen sind nicht zugelassen. Bitte verwenden Sie Ihre echte Adresse.",
+    "error_domain_not_allowed": "Diese E-Mail-Domain ist nicht zugelassen. Bitte verwenden Sie die Adresse Ihres Unternehmens.",
+    "error_trial_already_active": "Für diese E-Mail läuft bereits ein Test. Melden Sie sich auf flow.geotapp.com an oder schreiben Sie an support@geotapp.com.",
+    "error_trial_already_used": "Diese E-Mail hat den GeoTapp-Test bereits genutzt. Schreiben Sie an support@geotapp.com, wir finden eine Lösung.",
+    "error_email_already_registered": "Diese E-Mail ist bereits registriert. Melden Sie sich auf flow.geotapp.com an.",
+    "error_too_many_attempts": "Zu viele Versuche von dieser Verbindung. Warten Sie ein paar Minuten und versuchen Sie es erneut, oder schreiben Sie an support@geotapp.com.",
+    "error_bot_speed": "Das Formular wurde zu schnell abgeschickt. Bitte versuchen Sie es erneut.",
     "benefits_title": "Was enthalten ist",
     "benefits": [
       {

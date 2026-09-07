@@ -1022,6 +1022,15 @@
     "error_message": "Erro durante a ativação. Tente novamente ou escreva para info@geotapp.com.",
     "error_captcha": "A verificação anti-robô não foi concluída. Tente novamente, ela renova-se sozinha. Se continuar a falhar, escreva para support@geotapp.com e abrimos-lhe o acesso.",
     "error_captcha_pending": "Falta apenas a verificação acima: marque a caixa \"Não sou um robô\" e carregue outra vez.",
+    "error_email_required": "Falta o endereço de email.",
+    "error_invalid_email": "Este endereço de email não está correto. Verifique-o e tente de novo.",
+    "error_disposable_email": "Não são aceites endereços descartáveis. Use o seu endereço real.",
+    "error_domain_not_allowed": "Este domínio de email não é aceite. Use o endereço da sua empresa.",
+    "error_trial_already_active": "Já existe um teste ativo para este email. Entre em flow.geotapp.com ou escreva para support@geotapp.com.",
+    "error_trial_already_used": "Este email já usou um teste GeoTapp. Escreva para support@geotapp.com e vemos juntos.",
+    "error_email_already_registered": "Este email já está registado. Entre em flow.geotapp.com.",
+    "error_too_many_attempts": "Demasiadas tentativas a partir desta ligação. Aguarde alguns minutos e tente de novo, ou escreva para support@geotapp.com.",
+    "error_bot_speed": "O formulário foi enviado demasiado depressa. Tente de novo.",
     "benefits_title": "O que inclui o teste",
     "benefits": [
       {

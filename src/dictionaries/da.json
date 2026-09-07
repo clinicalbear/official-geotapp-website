@@ -1022,6 +1022,15 @@
     "error_message": "Aktiveringsfejl. Prøv igen eller skriv til info@geotapp.com.",
     "error_captcha": "Bottjekket gik ikke igennem. Prøv igen, det fornyer sig selv. Bliver det ved, så skriv til support@geotapp.com, så opretter vi adgangen for dig.",
     "error_captcha_pending": "Der mangler kun kontrollen ovenfor: sæt flueben i \"Jeg er ikke en robot\", og tryk igen.",
+    "error_email_required": "E-mailadressen mangler.",
+    "error_invalid_email": "Denne e-mailadresse ser ikke rigtig ud. Tjek den, og prøv igen.",
+    "error_disposable_email": "Engangsadresser accepteres ikke. Brug din rigtige adresse.",
+    "error_domain_not_allowed": "Dette e-maildomæne accepteres ikke. Brug din virksomheds adresse.",
+    "error_trial_already_active": "Der er allerede en aktiv prøveperiode på denne e-mail. Log ind på flow.geotapp.com, eller skriv til support@geotapp.com.",
+    "error_trial_already_used": "Denne e-mail har allerede brugt en GeoTapp-prøveperiode. Skriv til support@geotapp.com, så finder vi ud af det.",
+    "error_email_already_registered": "Denne e-mail er allerede registreret. Log ind på flow.geotapp.com.",
+    "error_too_many_attempts": "For mange forsøg fra denne forbindelse. Vent et par minutter, og prøv igen, eller skriv til support@geotapp.com.",
+    "error_bot_speed": "Formularen blev sendt for hurtigt. Prøv igen.",
     "benefits_title": "Hvad er inkluderet",
     "benefits": [
       {

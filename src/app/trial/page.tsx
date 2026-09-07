@@ -23,6 +23,7 @@ import Link from 'next/link';
 const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || '';
 import { trackEvent, consumeTrialSource } from '@/lib/analytics';
 import { buildTrialPayload } from '@/lib/trial/payload';
+import { trialErrorMessage, trialErrorForAnalytics } from '@/lib/trial/errors';
 import Reviews from '@/components/Reviews';
 import LNastro from '@/components/LNastro';
 import FeaturedIn from '@/components/FeaturedIn';
@@ -211,10 +212,16 @@ export default function TrialPage() {
       });
       const data = await res.json();
       if (!res.ok) {
-        // 403 su questa rotta = solo Turnstile. Il server risponde con una frase fissa in
-        // italiano, che a un estone o a un portoghese non dice niente: qui si mostra il
-        // messaggio nella lingua della pagina.
-        throw new Error(res.status === 403 ? d.error_captcha : data.error || d.error_message);
+        // Il server risponde con un `code` stabile piu' una frase di riserva in italiano,
+        // che a un inglese o a un portoghese non dice niente (31/08/2026: tre tentativi da
+        // Manchester su una pagina en-gb, tre volte "Indirizzo email non valido"). Qui il
+        // codice diventa la frase della lingua della pagina. 403 su questa rotta = solo
+        // Turnstile, e resta il caso a parte perche' il messaggio nostro e' piu' utile.
+        const code = res.status === 403 ? 'captcha_failed' : (typeof data?.code === 'string' ? data.code : '');
+        throw Object.assign(
+          new Error(trialErrorMessage(code, d as unknown as Record<string, string>, data?.error)),
+          { code },
+        );
       }
       setSubmittedEmail(email);
       setSubmitted(true);
@@ -225,7 +232,12 @@ export default function TrialPage() {
       // chiusa fuori.
       resetTurnstile();
       setError(err.message);
-      trackEvent('trial_form_error', { error: err.message, cta_locale: locale || 'it' });
+      // In GA4 va il CODICE, non il testo tradotto: con il messaggio a schermo lo stesso
+      // guasto arriverebbe spezzato in undici lingue e non si potrebbe piu' contare.
+      trackEvent('trial_form_error', {
+        error: trialErrorForAnalytics(err?.code, err?.message),
+        cta_locale: locale || 'it',
+      });
     } finally {
       setLoading(false);
     }

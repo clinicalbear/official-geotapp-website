@@ -777,6 +777,15 @@
     "error_message": "Activation error. Please try again or write to info@geotapp.com.",
     "error_captcha": "The anti-bot check did not go through. Please try again, it refreshes on its own. If it keeps failing, write to support@geotapp.com and we will open your account for you.",
     "error_captcha_pending": "One step left: tick the \"I am not a robot\" box above, then press again.",
+    "error_email_required": "The email address is missing.",
+    "error_invalid_email": "That email address doesn't look right. Check it and try again.",
+    "error_disposable_email": "Throwaway email addresses aren't accepted. Please use your real address.",
+    "error_domain_not_allowed": "That email domain isn't accepted. Please use your company address.",
+    "error_trial_already_active": "There is already an active trial for this email. Sign in at flow.geotapp.com or write to support@geotapp.com.",
+    "error_trial_already_used": "This email has already used a GeoTapp trial. Write to support@geotapp.com and we will sort it out.",
+    "error_email_already_registered": "This email is already registered. Sign in at flow.geotapp.com.",
+    "error_too_many_attempts": "Too many attempts from this connection. Wait a few minutes and try again, or write to support@geotapp.com.",
+    "error_bot_speed": "The form was sent too fast. Please try again.",
     "benefits_title": "What's included",
     "benefits": [
       {
