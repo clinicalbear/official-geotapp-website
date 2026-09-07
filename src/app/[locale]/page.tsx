@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 import { SUPPORTED_LOCALES } from '@/lib/i18n/config';
 import type { AppLocale } from '@/lib/i18n/config';
 import { HREFLANG } from '@/lib/i18n/locale-metadata';
+import { HOME_META } from '@/lib/i18n/home-metadata';
 import HomeClient from '../HomeClient';
 import BlogHighlights from '@/components/BlogHighlights';
 import FaqFromSchema from '@/components/FaqFromSchema';
@@ -196,55 +197,9 @@ const HOMEPAGE_FAQ: Record<string, object> = {
 
 const BASE_URL = 'https://geotapp.com';
 
-// Locale-specific titles and descriptions for the home page.
-// Each title expresses the "verifiable work" concept in the target language -
-// this is the SEO anchor keyword for all locale variants.
-const LOCALE_META: Record<string, { title: string; description: string }> = {
-  it: {
-    title: 'GeoTapp | Cliente contesta il lavoro? Prova ogni intervento | Software GPS presenze',
-    description: 'Cliente contesta il servizio? GeoTapp registra GPS, foto, orario e rapportino non modificabile. Prova ogni intervento e fatturi senza dover discutere.',
-  },
-  en: {
-    title: 'GeoTapp | Client disputes the work? Prove every visit | GPS field service software',
-    description: 'Client claims the job was not done? GeoTapp logs GPS, timestamps, photos and tamper-proof reports. Prove every visit and get paid without argument.',
-  },
-  de: {
-    title: 'GeoTapp | Kunde bestreitet? Einsätze belegen | GPS-Software Außendienst',
-    description: 'Kunde bestreitet den Einsatz? GeoTapp erfasst GPS, Uhrzeit, Fotos und manipulationssichere Berichte. Arbeit belegen und ohne Diskussion bezahlt werden.',
-  },
-  fr: {
-    title: 'GeoTapp | Client conteste ? Prouvez le travail | Logiciel GPS terrain',
-    description: 'Client conteste ? GeoTapp enregistre GPS, heure, photos et rapport non modifiable. Prouvez le travail effectué et soyez payé sans discussion.',
-  },
-  es: {
-    title: 'GeoTapp | ¿Cliente reclama? Prueba el trabajo | Software GPS operarios',
-    description: '¿Cliente reclama? GeoTapp registra GPS, hora, fotos e informe no alterable. Demuestra el trabajo hecho y cobra sin discusiones.',
-  },
-  pt: {
-    title: 'GeoTapp | Cliente contesta? Prove o serviço | Software GPS campo',
-    description: 'Cliente contesta? GeoTapp registra GPS, hora, fotos e relatório não alterável. Prove o serviço feito e receba sem discussões.',
-  },
-  nl: {
-    title: 'GeoTapp | Klant betwist? Bewijs werk | GPS-software buitendienst',
-    description: 'Betwist de klant je werk? GeoTapp registreert GPS, tijd, foto\'s en een niet-wijzigbaar rapport. Bewijs wat gedaan is en word betaald zonder discussie.',
-  },
-  ru: {
-    title: 'GeoTapp | Клиент оспаривает? Докажите работы | GPS-программа выезда',
-    description: 'Клиент оспаривает работу? GeoTapp фиксирует GPS, время, фото и неизменяемый отчёт. Докажите выполненное и получите оплату без споров.',
-  },
-  da: {
-    title: 'GeoTapp | Kunde bestrider? Bevis arbejdet | GPS-software feltservice',
-    description: 'Kunden bestrider arbejdet? GeoTapp registrerer GPS, tid, fotos og en ikke-redigerbar rapport. Bevis opgaven og få betaling uden diskussion.',
-  },
-  sv: {
-    title: 'GeoTapp | Kund ifrågasätter? Bevisa jobbet | GPS-mjukvara fältservice',
-    description: 'Kunden ifrågasätter jobbet? GeoTapp loggar GPS, tid, foton och en ej ändringsbar rapport. Bevisa arbetet och få betalt utan diskussion.',
-  },
-  nb: {
-    title: 'GeoTapp | Kunden bestrider? Bevis jobben | GPS-programvare feltservice',
-    description: 'Kunden bestrider jobben? GeoTapp registrerer GPS, tid, bilder og en ikke-endringsbar rapport. Bevis arbeidet og få betalt uten diskusjon.',
-  },
-};
+// Title e description dell'homepage: vivono in lib/i18n/home-metadata.ts,
+// dove un test ne misura la lunghezza. Erano qui dentro, e nessuno si era
+// accorto che il taglio di Google si mangiava la parola chiave.
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -282,7 +237,7 @@ export default async function LocalePage({ params }: Props) {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  const meta = LOCALE_META[locale] ?? LOCALE_META.en;
+  const meta = HOME_META[locale] ?? HOME_META.en;
 
   // Build hreflang alternates dynamically from SUPPORTED_LOCALES.
   // All locale homepages use trailing slash (trailingSlash:true in next.config.mjs).
@@ -307,9 +262,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     // Use absolute title to bypass the root layout template ("%s | GeoTapp").
-    // Home page titles already include the brand name at the start
-    // (e.g. "GeoTapp | La piattaforma..."); without absolute the template
-    // would append "| GeoTapp" again → "GeoTapp | La piattaforma | GeoTapp".
+    // I title dell'homepage il marchio ce l'hanno gia', in coda (e.g.
+    // "Software GPS presenze: prova ogni intervento | GeoTapp"); senza absolute
+    // il template lo riattaccherebbe una seconda volta, e quei dieci caratteri
+    // di troppo sono esattamente quelli che mandano lo snippet oltre il taglio.
     title: { absolute: meta.title },
     description: meta.description,
     alternates: {
