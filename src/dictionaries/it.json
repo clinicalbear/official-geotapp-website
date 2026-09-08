@@ -364,12 +364,12 @@
             "tagline": "Per aziende strutturate.",
             "desc": "Per aziende con più squadre, più commesse e un ufficio che deve tenere insieme tutto.",
             "features": [
-              "Squadre illimitate (non utenti timetracker)",
+              "Squadre illimitate",
               "API",
               "Supporto prioritario",
               "Automazioni",
               "Report avanzati",
-              "TimeTracker: illimitati*"
+              "Postazioni TimeTracker attivabili: illimitate (non incluse nell'abbonamento)*"
             ]
           },
           {
@@ -377,12 +377,12 @@
             "tagline": "Per piccoli team operativi.",
             "desc": "Coordina e gestisci il tuo team operativo in tempo reale.",
             "features": [
-              "5 utenti Flow inclusi (non timetracker)",
+              "5 utenti Flow inclusi",
               "Gestione commesse",
               "Timbrature campo",
               "Report operativi",
               "Integrazioni",
-              "TimeTracker: max 5 utenti*"
+              "Postazioni TimeTracker attivabili: 5 (non incluse nell'abbonamento)*"
             ]
           },
           {
@@ -394,7 +394,7 @@
               "Gestione attività",
               "Report base",
               "Integrazioni essenziali",
-              "TimeTracker: max 2 utenti*"
+              "Postazioni TimeTracker attivabili: 2 (non incluse nell'abbonamento)*"
             ]
           }
         ]
@@ -484,7 +484,7 @@
     "annual_savings": "Risparmio annuale:",
     "no_monthly_option": "Nessuna opzione mensile",
     "add_btn": "Aggiungi",
-    "tracker_footnote": "* Numero massimo di utenti TimeTracker attivabili contemporaneamente nel piano Flow. Rimuovendo l'accesso a un dipendente il posto si libera subito.",
+    "tracker_footnote": "* Le postazioni TimeTracker si acquistano a parte. Il piano Flow stabilisce quante se ne possono tenere attive insieme, non quante sono comprese. Rimuovendo l'accesso a un dipendente il posto si libera subito.",
     "recommended": "Consigliato"
   },
   "contact": {

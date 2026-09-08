@@ -364,12 +364,12 @@
             "tagline": "Para empresas estructuradas.",
             "desc": "Para empresas con varios equipos, varios encargos y una oficina que debe mantenerlo todo unido.",
             "features": [
-              "Equipos ilimitados (no usuarios timetracker)",
+              "Equipos ilimitados",
               "API",
               "Soporte prioritario",
               "Automatizaciones",
               "Informes avanzados",
-              "TimeTracker: ilimitado*"
+              "Puestos TimeTracker activables: ilimitados (no incluidos en la suscripción)*"
             ]
           },
           {
@@ -377,12 +377,12 @@
             "tagline": "Para pequeños equipos operativos.",
             "desc": "Coordina y gestiona tu equipo operativo en tiempo real.",
             "features": [
-              "5 usuarios Flow incluidos (no timetracker)",
+              "5 usuarios Flow incluidos",
               "Gestión de trabajos",
               "Fichajes en campo",
               "Informes operativos",
               "Integraciones",
-              "TimeTracker: máx. 5 usuarios*"
+              "Puestos TimeTracker activables: 5 (no incluidos en la suscripción)*"
             ]
           },
           {
@@ -394,7 +394,7 @@
               "Gestión de tareas",
               "Informes básicos",
               "Integraciones esenciales",
-              "TimeTracker: máx. 2 usuarios*"
+              "Puestos TimeTracker activables: 2 (no incluidos en la suscripción)*"
             ]
           }
         ]
@@ -477,7 +477,7 @@
       "error_connection": "Error de conexión. Por favor, inténtalo de nuevo."
     },
     "intro_label": "Tarifa de lanzamiento 2026",
-    "tracker_footnote": "* Número máximo de usuarios TimeTracker activables simultáneamente en el plan Flow. Al eliminar el acceso de un empleado, el puesto queda libre de inmediato.",
+    "tracker_footnote": "* Los puestos TimeTracker se compran aparte. El plan Flow determina cuántos pueden estar activos a la vez, no cuántos están incluidos. Al eliminar el acceso de un empleado, el puesto queda libre de inmediato.",
     "per_year": "/año",
     "title_gradient": "Escala Tu Negocio.",
     "or_monthly": "o",

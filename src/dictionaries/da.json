@@ -364,12 +364,12 @@
             "tagline": "Til strukturerede virksomheder.",
             "desc": "Til virksomheder med flere sjak, flere opgaver og et kontor, der skal holde sammen på det hele.",
             "features": [
-              "Ubegrænsede teams (ikke timetracker-brugere)",
+              "Ubegrænsede teams",
               "API",
               "Prioritetssupport",
               "Automatiseringer",
               "Avancerede rapporter",
-              "TimeTracker: ubegrænset*"
+              "TimeTracker-pladser der kan aktiveres: ubegrænset (ikke inkluderet i abonnementet)*"
             ]
           },
           {
@@ -377,12 +377,12 @@
             "tagline": "Til små operative teams.",
             "desc": "Koordiner og administrer dit operative team i realtid.",
             "features": [
-              "5 Flow-brugere inkluderet (ikke timetracker)",
+              "5 Flow-brugere inkluderet",
               "Jobstyring",
               "Feltregistreringer",
               "Operative rapporter",
               "Integrationer",
-              "TimeTracker: maks 5 brugere*"
+              "TimeTracker-pladser der kan aktiveres: 5 (ikke inkluderet i abonnementet)*"
             ]
           },
           {
@@ -394,7 +394,7 @@
               "Opgavestyring",
               "Basisrapporter",
               "Grundlæggende integrationer",
-              "TimeTracker: maks 2 brugere*"
+              "TimeTracker-pladser der kan aktiveres: 2 (ikke inkluderet i abonnementet)*"
             ]
           }
         ]
@@ -477,7 +477,7 @@
       "error_connection": "Forbindelsesfejl. Prøv igen."
     },
     "intro_label": "Introduktionspris 2026",
-    "tracker_footnote": "* Maksimalt antal TimeTracker-brugere der kan aktiveres samtidigt i Flow-planen. Fjernelse af adgang for en medarbejder frigiver pladsen straks.",
+    "tracker_footnote": "* TimeTracker-pladser købes særskilt. Flow-planen fastsætter, hvor mange der kan være aktive samtidig, ikke hvor mange der er inkluderet. Fjernelse af adgang for en medarbejder frigiver pladsen straks.",
     "per_year": "/år",
     "title_gradient": "Skalér Din Forretning.",
     "or_monthly": "eller",

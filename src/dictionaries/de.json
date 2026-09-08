@@ -364,12 +364,12 @@
             "tagline": "Für strukturierte Unternehmen.",
             "desc": "Für Unternehmen mit mehreren Teams, mehreren Aufträgen und einem Büro, das alles zusammenhalten muss.",
             "features": [
-              "Unbegrenzte Teams (keine Timetracker-Nutzer)",
+              "Unbegrenzte Teams",
               "API",
               "Prioritätssupport",
               "Automatisierungen",
               "Erweiterte Berichte",
-              "TimeTracker: unbegrenzt*"
+              "Aktivierbare TimeTracker-Plätze: unbegrenzt (nicht im Abonnement enthalten)*"
             ]
           },
           {
@@ -377,12 +377,12 @@
             "tagline": "Für kleine operative Teams.",
             "desc": "Koordinieren und verwalten Sie Ihr operatives Team in Echtzeit.",
             "features": [
-              "5 Flow-Nutzer inklusive (keine Timetracker)",
+              "5 Flow-Nutzer inklusive",
               "Auftragsverwaltung",
               "Feld-Zeiterfassungen",
               "Operative Berichte",
               "Integrationen",
-              "TimeTracker: max. 5 Nutzer*"
+              "Aktivierbare TimeTracker-Plätze: 5 (nicht im Abonnement enthalten)*"
             ]
           },
           {
@@ -394,7 +394,7 @@
               "Aufgabenverwaltung",
               "Basisberichte",
               "Grundlegende Integrationen",
-              "TimeTracker: max. 2 Nutzer*"
+              "Aktivierbare TimeTracker-Plätze: 2 (nicht im Abonnement enthalten)*"
             ]
           }
         ]
@@ -484,7 +484,7 @@
     "annual_savings": "Jährliche Ersparnis:",
     "no_monthly_option": "Keine monatliche Option",
     "add_btn": "Hinzufügen",
-    "tracker_footnote": "* Maximale Anzahl gleichzeitig aktivierbarer TimeTracker-Nutzer im Flow-Plan. Das Entfernen des Mitarbeiterzugangs gibt den Platz sofort frei.",
+    "tracker_footnote": "* TimeTracker-Plätze werden gesondert erworben. Der Flow-Plan legt fest, wie viele gleichzeitig aktiv sein können, nicht wie viele enthalten sind. Das Entfernen des Mitarbeiterzugangs gibt den Platz sofort frei.",
     "recommended": "Empfohlen"
   },
   "contact": {

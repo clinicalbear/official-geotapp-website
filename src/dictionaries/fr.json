@@ -364,12 +364,12 @@
             "tagline": "Pour les entreprises structurées.",
             "desc": "Pour les entreprises avec plusieurs équipes, plusieurs chantiers et un bureau qui doit tout tenir ensemble.",
             "features": [
-              "Équipes illimitées (pas utilisateurs timetracker)",
+              "Équipes illimitées",
               "API",
               "Support prioritaire",
               "Automatisations",
               "Rapports avancés",
-              "TimeTracker: illimité*"
+              "Postes TimeTracker activables : illimités (non inclus dans l'abonnement)*"
             ]
           },
           {
@@ -377,12 +377,12 @@
             "tagline": "Pour les petites équipes opérationnelles.",
             "desc": "Coordonnez et gérez votre équipe opérationnelle en temps réel.",
             "features": [
-              "5 utilisateurs Flow inclus (pas timetracker)",
+              "5 utilisateurs Flow inclus",
               "Gestion des chantiers",
               "Pointages terrain",
               "Rapports opérationnels",
               "Intégrations",
-              "TimeTracker: max 5 utilisateurs*"
+              "Postes TimeTracker activables : 5 (non inclus dans l'abonnement)*"
             ]
           },
           {
@@ -394,7 +394,7 @@
               "Gestion des tâches",
               "Rapports de base",
               "Intégrations essentielles",
-              "TimeTracker: max 2 utilisateurs*"
+              "Postes TimeTracker activables : 2 (non inclus dans l'abonnement)*"
             ]
           }
         ]
@@ -477,7 +477,7 @@
       "error_connection": "Erreur de connexion. Veuillez réessayer."
     },
     "intro_label": "Tarif de lancement 2026",
-    "tracker_footnote": "* Nombre maximum d'utilisateurs TimeTracker activables simultanément dans le plan Flow. Supprimer l'accès d'un employé libère immédiatement la place.",
+    "tracker_footnote": "* Les postes TimeTracker s'achètent séparément. Le plan Flow fixe combien peuvent être actifs en même temps, pas combien sont inclus. Supprimer l'accès d'un employé libère la place immédiatement.",
     "per_year": "/an",
     "title_gradient": "Développez Votre Business.",
     "or_monthly": "ou",

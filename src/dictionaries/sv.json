@@ -364,12 +364,12 @@
             "tagline": "För strukturerade företag.",
             "desc": "För företag med flera lag, flera uppdrag och ett kontor som ska hålla ihop alltihop.",
             "features": [
-              "Obegränsade team (inte timetracker-användare)",
+              "Obegränsade team",
               "API",
               "Prioritetssupport",
               "Automatiseringar",
               "Avancerade rapporter",
-              "TimeTracker: obegränsat*"
+              "TimeTracker-platser som kan aktiveras: obegränsat (ingår inte i abonnemanget)*"
             ]
           },
           {
@@ -377,12 +377,12 @@
             "tagline": "För små operativa team.",
             "desc": "Koordinera och hantera ditt operativa team i realtid.",
             "features": [
-              "5 Flow-användare inkluderade (inte timetracker)",
+              "5 Flow-användare inkluderade",
               "Jobbhantering",
               "Fältregistreringar",
               "Operativa rapporter",
               "Integrationer",
-              "TimeTracker: max 5 användare*"
+              "TimeTracker-platser som kan aktiveras: 5 (ingår inte i abonnemanget)*"
             ]
           },
           {
@@ -394,7 +394,7 @@
               "Uppgiftshantering",
               "Grundrapporter",
               "Grundläggande integrationer",
-              "TimeTracker: max 2 användare*"
+              "TimeTracker-platser som kan aktiveras: 2 (ingår inte i abonnemanget)*"
             ]
           }
         ]
@@ -477,7 +477,7 @@
       "error_connection": "Anslutningsfel. Försök igen."
     },
     "intro_label": "Introduktionspris 2026",
-    "tracker_footnote": "* Maximalt antal TimeTracker-användare som kan aktiveras samtidigt i Flow-planen. Att ta bort åtkomst för en medarbetare frigör platsen omedelbart.",
+    "tracker_footnote": "* TimeTracker-platser köps separat. Flow-planen avgör hur många som kan vara aktiva samtidigt, inte hur många som ingår. Att ta bort åtkomst för en medarbetare frigör platsen omedelbart.",
     "per_year": "/år",
     "title_gradient": "Skala Ditt Företag.",
     "or_monthly": "eller",

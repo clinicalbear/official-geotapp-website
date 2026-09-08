@@ -364,12 +364,12 @@
             "tagline": "For structured businesses.",
             "desc": "For companies with several crews, several jobs and an office that has to hold it all together.",
             "features": [
-              "Unlimited teams (not timetracker users)",
+              "Unlimited teams",
               "API",
               "Priority support",
               "Automations",
               "Advanced reports",
-              "TimeTracker: unlimited*"
+              "TimeTracker seats you can activate: unlimited (not included in the subscription)*"
             ]
           },
           {
@@ -377,12 +377,12 @@
             "tagline": "For small operational teams.",
             "desc": "Coordinate and manage your operational team in real time.",
             "features": [
-              "5 Flow users included (not timetracker)",
+              "5 Flow users included",
               "Job management",
               "Field clock-ins",
               "Operational reports",
               "Integrations",
-              "TimeTracker: max 5 users*"
+              "TimeTracker seats you can activate: 5 (not included in the subscription)*"
             ]
           },
           {
@@ -394,7 +394,7 @@
               "Task management",
               "Basic reports",
               "Essential integrations",
-              "TimeTracker: max 2 users*"
+              "TimeTracker seats you can activate: 2 (not included in the subscription)*"
             ]
           }
         ]
@@ -484,7 +484,7 @@
     "annual_savings": "Annual savings:",
     "no_monthly_option": "No monthly option",
     "add_btn": "Add",
-    "tracker_footnote": "* Maximum number of TimeTracker users that can be activated simultaneously on the Flow plan. Removing an employee's access immediately frees the slot.",
+    "tracker_footnote": "* TimeTracker seats are purchased separately. The Flow plan sets how many can be active at the same time, not how many are included. Removing an employee's access frees the seat immediately.",
     "recommended": "Recommended"
   },
   "contact": {

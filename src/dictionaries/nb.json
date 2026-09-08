@@ -364,12 +364,12 @@
             "tagline": "For strukturerte bedrifter.",
             "desc": "For bedrifter med flere lag, flere oppdrag og et kontor som må holde alt sammen.",
             "features": [
-              "Ubegrenset teams (ikke timetracker-brukere)",
+              "Ubegrenset teams",
               "API",
               "Prioritetssupport",
               "Automatiseringer",
               "Avanserte rapporter",
-              "TimeTracker: ubegrenset*"
+              "TimeTracker-plasser som kan aktiveres: ubegrenset (ikke inkludert i abonnementet)*"
             ]
           },
           {
@@ -377,12 +377,12 @@
             "tagline": "For små operative team.",
             "desc": "Koordiner og administrer ditt operative team i sanntid.",
             "features": [
-              "5 Flow-brukere inkludert (ikke timetracker)",
+              "5 Flow-brukere inkludert",
               "Jobbstyring",
               "Feltregistreringer",
               "Operative rapporter",
               "Integrasjoner",
-              "TimeTracker: maks 5 brukere*"
+              "TimeTracker-plasser som kan aktiveres: 5 (ikke inkludert i abonnementet)*"
             ]
           },
           {
@@ -394,7 +394,7 @@
               "Oppgavestyring",
               "Basisrapporter",
               "Grunnleggende integrasjoner",
-              "TimeTracker: maks 2 brukere*"
+              "TimeTracker-plasser som kan aktiveres: 2 (ikke inkludert i abonnementet)*"
             ]
           }
         ]
@@ -477,7 +477,7 @@
       "error_connection": "Tilkoblingsfeil. Prøv igjen."
     },
     "intro_label": "Introduksjonspris 2026",
-    "tracker_footnote": "* Maksimalt antall TimeTracker-brukere som kan aktiveres samtidig i Flow-planen. Å fjerne tilgang for en ansatt frigjør plassen umiddelbart.",
+    "tracker_footnote": "* TimeTracker-plasser kjøpes separat. Flow-planen bestemmer hvor mange som kan være aktive samtidig, ikke hvor mange som er inkludert. Å fjerne tilgang for en ansatt frigjør plassen umiddelbart.",
     "per_year": "/år",
     "title_gradient": "Skalér Din Bedrift.",
     "or_monthly": "eller",

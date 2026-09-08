@@ -364,12 +364,12 @@
             "tagline": "Para empresas estruturadas.",
             "desc": "Para empresas com várias equipas, várias obras e um escritório que tem de manter tudo ligado.",
             "features": [
-              "Equipas ilimitadas (não utilizadores timetracker)",
+              "Equipas ilimitadas",
               "API",
               "Suporte prioritário",
               "Automatizações",
               "Relatórios avançados",
-              "TimeTracker: ilimitado*"
+              "Postos TimeTracker ativáveis: ilimitados (não incluídos na subscrição)*"
             ]
           },
           {
@@ -377,12 +377,12 @@
             "tagline": "Para pequenas equipas operacionais.",
             "desc": "Coordene e gira a sua equipa operacional em tempo real.",
             "features": [
-              "5 utilizadores Flow incluídos (não timetracker)",
+              "5 utilizadores Flow incluídos",
               "Gestão de trabalhos",
               "Registos em campo",
               "Relatórios operacionais",
               "Integrações",
-              "TimeTracker: máx. 5 utilizadores*"
+              "Postos TimeTracker ativáveis: 5 (não incluídos na subscrição)*"
             ]
           },
           {
@@ -394,7 +394,7 @@
               "Gestão de tarefas",
               "Relatórios básicos",
               "Integrações essenciais",
-              "TimeTracker: máx. 2 utilizadores*"
+              "Postos TimeTracker ativáveis: 2 (não incluídos na subscrição)*"
             ]
           }
         ]
@@ -477,7 +477,7 @@
       "error_connection": "Erro de conexão. Por favor, tente novamente."
     },
     "intro_label": "Tarifa de lançamento 2026",
-    "tracker_footnote": "* Número máximo de utilizadores TimeTracker que podem ser ativados simultaneamente no plano Flow. Ao remover o acesso de um funcionário, a vaga fica disponível de imediato.",
+    "tracker_footnote": "* Os postos TimeTracker são adquiridos à parte. O plano Flow define quantos podem estar ativos ao mesmo tempo, não quantos estão incluídos. Ao remover o acesso de um funcionário, a vaga fica livre de imediato.",
     "per_year": "/ano",
     "title_gradient": "Escale o Seu Negócio.",
     "or_monthly": "ou",
