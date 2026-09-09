@@ -25,6 +25,25 @@ export function pressRel(_item: PressItem): string {
 export const PRESS_RELEASES: PressItem[] = [];
 export const PRESS_COVERAGE: PressItem[] = [
   {
+    date: '2026-09-09',
+    outlet: 'Human Resources',
+    title: 'GPS e as equipas no terreno: porque quem é localizado o vive como uma perseguição',
+    url: 'https://hrportugal.sapo.pt/gps-e-as-equipas-no-terreno-porque-quem-e-localizado-o-vive-como-uma-perseguicao/',
+    locale: 'pt',
+    country: 'pt',
+    logo: '/press/hrportugal.png',
+    // Opiniao a firma di Michele Angelo Petraroli (byline in pagina: "Por Michele Angelo
+    // Petraroli, fundador e CEO da GeoTapp"), non una citazione dentro un pezzo altrui.
+    // Commissionata da Tania Reis (tania.reis@multipublicacoes.pt) il 23/07, vincoli della
+    // testata: contributo senza carattere commerciale, max 5.000 caratteri spazi inclusi.
+    // Uscita 09/09/2026 alle 11:00 di Lisbona, sezioni Opiniao / Noticias / SAPO Economia.
+    // NIENTE link a geotapp.com: verificato sull'HTML grezzo (0 ancore verso geotapp.com,
+    // l'unico link in uscita della pagina va a assinaturas.multipublicacoes.pt). Menzione
+    // con firma, NON backlink. Il 18/08 Michele aveva chiesto a Tania di aggiungere
+    // geotapp.com alla riga d'autore: mai risposto, ne' concesso ne' rifiutato.
+    // Testata del gruppo Multipublicacoes (PT), nessun rapporto con Featured/Connectively.
+  },
+  {
     date: '2026-09-01',
     outlet: 'ClockOn',
     title: '11 Payroll Checks Before Finalising a Pay Run',
