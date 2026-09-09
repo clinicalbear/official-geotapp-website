@@ -829,9 +829,14 @@ export async function middleware(req: NextRequest) {
   // proper E-E-A-T author profile.
   // Proxying the WP root (/) causes a redirect loop: WP responds with a redirect
   // to geotapp.com/blog/ which the middleware re-intercepts indefinitely.
+  // Exception: /blog/sindacazione/{...}/ rendered by Next.js. It is the same
+  // article stripped of sidebar, CTA boxes and comments, for platforms like
+  // Medium that import a whole page; it declares the real article as canonical
+  // and is noindex, so it never competes with the original post.
   const isArticleUrl = /^\/blog\/(?:[a-z]{2}\/)?20\d{2}\//.test(pathname);
   const isAuthorUrl = /^\/blog\/author\/[^/]+\/?$/.test(pathname);
-  if (pathname.startsWith('/blog') && pathname !== '/blog' && pathname !== '/blog/' && !isArticleUrl && !isAuthorUrl) {
+  const isSyndicationUrl = pathname.startsWith('/blog/sindacazione/');
+  if (pathname.startsWith('/blog') && pathname !== '/blog' && pathname !== '/blog/' && !isArticleUrl && !isAuthorUrl && !isSyndicationUrl) {
     const wpPath = pathname.slice(BLOG_BASE.length) || '/';
     const normalizedWpPath =
       wpPath === '/wp-sitemap.xml' ? '/wp-sitemap.xml/' : wpPath;
@@ -1010,6 +1015,16 @@ export async function middleware(req: NextRequest) {
     pathname.startsWith('/verify-report') ||
     pathname.startsWith('/r/')
   ) {
+    const response = NextResponse.next();
+    applySecurityHeaders(response, req);
+    return response;
+  }
+
+  // 2c. /blog/sindacazione/... — la resa spoglia dell'articolo per le piattaforme
+  // che importano una pagina intera (Medium). La lingua sta gia' dentro il path
+  // dell'articolo, quindi il prefisso di locale qui non aggiunge niente e anzi
+  // rompe l'URL che si consegna all'importatore.
+  if (pathname.startsWith('/blog/sindacazione/')) {
     const response = NextResponse.next();
     applySecurityHeaders(response, req);
     return response;
