@@ -32,15 +32,20 @@ export const PRESS_COVERAGE: PressItem[] = [
     locale: 'pt',
     country: 'pt',
     logo: '/press/hrportugal.png',
+    follow: true, // DOFOLLOW dal 10/09/2026: Tania Reis ha aggiunto geotapp.com alla riga
+                  // d'autore (post modificato alle 17:08 di Lisbona, otto minuti prima di
+                  // scriverlo). Verificato sul contenuto servito: <a href="http://geotapp.com/"
+                  // rel="noopener">GeoTapp</a> dentro "Por Michele Angelo Petraroli, fundador
+                  // e CEO da GeoTapp", nessun nofollow. Fino al 09/09 il pezzo era uscito
+                  // SENZA link (0 ancore verso di noi): la richiesta del 18/08 era rimasta
+                  // senza risposta e l'abbiamo ripetuta il 09/09.
+                  // NB: dal 13/07/2026 il flag NON concede piu' dofollow in uscita.
+                  // Dominio sapo.pt: Domain Authority 93, il piu' forte che abbiamo.
     // Opiniao a firma di Michele Angelo Petraroli (byline in pagina: "Por Michele Angelo
     // Petraroli, fundador e CEO da GeoTapp"), non una citazione dentro un pezzo altrui.
     // Commissionata da Tania Reis (tania.reis@multipublicacoes.pt) il 23/07, vincoli della
     // testata: contributo senza carattere commerciale, max 5.000 caratteri spazi inclusi.
     // Uscita 09/09/2026 alle 11:00 di Lisbona, sezioni Opiniao / Noticias / SAPO Economia.
-    // NIENTE link a geotapp.com: verificato sull'HTML grezzo (0 ancore verso geotapp.com,
-    // l'unico link in uscita della pagina va a assinaturas.multipublicacoes.pt). Menzione
-    // con firma, NON backlink. Il 18/08 Michele aveva chiesto a Tania di aggiungere
-    // geotapp.com alla riga d'autore: mai risposto, ne' concesso ne' rifiutato.
     // Testata del gruppo Multipublicacoes (PT), nessun rapporto con Featured/Connectively.
   },
   {
