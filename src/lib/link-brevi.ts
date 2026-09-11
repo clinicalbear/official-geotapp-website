@@ -90,6 +90,12 @@ export const LINK_BREVI: Record<string, LinkBreve> = {
   'x-assocfr': { destinazione: '/fr/survey/', nota: 'associazioni di categoria, Francia' },
   'x-assocnl': { destinazione: '/nl/survey/', nota: 'associazioni di categoria, Paesi Bassi' },
   'x-assoces': { destinazione: '/es/survey/', nota: 'associazioni di categoria, Spagna' },
+
+  // Link in bio dei profili social. Il codice serve a separare il traffico:
+  // /links e' la stessa pagina per tutti, ma senza un codice per piattaforma
+  // non si sa se chi arriva viene da TikTok o da Instagram, perche' l'app
+  // apre i link nel suo browser interno e il referrer si perde per strada.
+  'tt-bio': { destinazione: '/links/', nota: 'link in bio TikTok @geotapp' },
 };
 
 /**
