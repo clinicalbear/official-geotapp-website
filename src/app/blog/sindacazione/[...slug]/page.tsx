@@ -96,12 +96,27 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!post) return { title: 'Not found', robots: { index: false, follow: false } };
 
   const title = stripHtml(post.title.rendered);
-  const canonical = `https://geotapp.com${canonicalBlogPath(post)}`;
 
+  // NIENTE canonical, ed e' il punto di tutta la pagina.
+  //
+  // L'import di Medium risolve il rel=canonical PRIMA di scaricare: finche' qui
+  // dichiaravamo il canonical dell'articolo vero, Medium ignorava questa pagina
+  // e importava l'articolo, riportandosi dentro l'indice laterale, i riquadri di
+  // trial, il blocco sondaggio e la coda ripetuta tre volte. Verificato sulla
+  // storia del 09/09/2026, dove "Open your trial" compariva quattro volte; la
+  // loro Trust & Safety l'ha confermato il giorno 11 ("some elements aren't
+  // transferring properly"), pur dicendo che le CTA in se' non sono un problema.
+  //
+  // L'attribuzione non si perde: resta il link VISIBILE in fondo al corpo, che
+  // punta all'articolo esatto e che l'import conserva (verificato, nella storia
+  // pubblicata quel link arriva integro). Cambia solo cosa Medium segna come
+  // canonical della storia.
+  //
+  // La pagina resta noindex, quindi non compete con l'articolo e non puo'
+  // comparire in ricerca.
   return {
     title,
     description: stripHtml(post.excerpt.rendered).slice(0, 160),
-    alternates: { canonical },
     robots: { index: false, follow: false },
   };
 }
