@@ -395,37 +395,89 @@ async function buildFullSitemap(): Promise<string> {
     }
   }
 
-  // 2. Blog posts: all locales in parallel, deduplicated by URL.
-  //    Hreflang for blog posts is handled by WordPress/Polylang in page HTML.
+  // 2. Blog posts: un solo giro sull'indice WP, con le traduzioni raggruppate.
+  //
+  //    HREFLANG. Qui c'era scritto che ai post ci pensa WordPress/Polylang nell'HTML
+  //    della pagina. Non e' vero: i post del blog li rende Next (src/app/blog/[...slug]
+  //    /page.tsx) e l'HTML servito non contiene NESSUN <link rel="alternate">.
+  //    Verificato in produzione l'11/09/2026 su
+  //    /blog/es/2026/09/11/registro-horario-digital-estado-reforma/: zero "hreflang".
+  //    Le undici versioni di uno stesso articolo non erano quindi mai state dichiarate
+  //    come traduzioni, ne' qui ne' nell'HTML. Si dichiarano QUI, come per le pagine di
+  //    sito, usando `gtmsa_tgroup` (gruppo di traduzione) e `gtmsa_lang`, che WP espone
+  //    su ogni post. Il cluster esce solo se il gruppo ha davvero piu' di una lingua:
+  //    un hreflang che punta solo a se stesso non dice niente a Google, e un cluster
+  //    indovinato per data sarebbe peggio di nessun cluster.
+  //
+  //    UN SOLO GIRO, NON UNDICI. `?lang=` e' IGNORATO dalla REST di questo blog (stessa
+  //    trappola gia' annotata in src/lib/wp-post-index.ts per `?categories=`): verificato
+  //    l'11/09/2026, lang=it e lang=sv tornano gli stessi identici post. Le undici fetch
+  //    per locale erano la stessa fetch ripetuta undici volte, e in sitemap finivano solo
+  //    i 100 post piu' recenti su 1240. Ora si pagina sull'indice vero (x-wp-totalpages).
   const blogEntries: string[] = [];
   try {
-    const results = await Promise.all(
-      locales.map(async (locale) => {
-        try {
-          const q = new URLSearchParams({ per_page: '100', _fields: 'slug,modified,link', status: 'publish', lang: locale });
-          // Use wp-json path (not ?rest_route) with proxy header to bypass the
-          // Cloudflare CDN-level redirect that fires for blog.geotapp.com root path.
-          // ?rest_route=/ triggers a 301 redirect before Apache/WordPress sees the request.
-          const res = await fetch(`${WP_ORIGIN}/wp-json/wp/v2/posts/?${q.toString()}`, {
-            headers: {
-              host: new URL(WP_ORIGIN).host,
-              'x-geotapp-proxy': '1',
-              'x-forwarded-proto': 'https',
-            },
-          });
-          if (!res.ok) return [];
-          const rows = await res.json() as Array<{ slug?: string; modified?: string; link?: string }>;
-          return Array.isArray(rows) ? rows.filter((r) => r.slug && r.modified) : [];
-        } catch {
-          return [];
-        }
-      }),
-    );
+    const WP_PAGE_CAP = 20;
+    const WP_FIELDS = 'slug,modified,link,gtmsa_lang,gtmsa_tgroup';
+    type WpRow = {
+      slug?: string;
+      modified?: string;
+      link?: string;
+      gtmsa_lang?: string;
+      gtmsa_tgroup?: string | null;
+    };
 
-    const seen = new Set<string>();
-    for (const row of results.flat()) {
-      const slug = row.slug as string;
-      let url = `${SITEMAP_BASE_URL}/blog/${slug}/`;
+    // Use wp-json path (not ?rest_route) with proxy header to bypass the
+    // Cloudflare CDN-level redirect that fires for blog.geotapp.com root path.
+    // ?rest_route=/ triggers a 301 redirect before Apache/WordPress sees the request.
+    const fetchPage = async (page: number): Promise<Response | null> => {
+      const q = new URLSearchParams({
+        per_page: '100',
+        page: String(page),
+        _fields: WP_FIELDS,
+        status: 'publish',
+        orderby: 'date',
+        order: 'desc',
+      });
+      try {
+        const res = await fetch(`${WP_ORIGIN}/wp-json/wp/v2/posts/?${q.toString()}`, {
+          headers: {
+            host: new URL(WP_ORIGIN).host,
+            'x-geotapp-proxy': '1',
+            'x-forwarded-proto': 'https',
+          },
+        });
+        return res.ok ? res : null;
+      } catch {
+        return null;
+      }
+    };
+
+    const readRows = async (res: Response | null): Promise<WpRow[]> => {
+      if (!res) return [];
+      try {
+        const rows = await res.json() as WpRow[];
+        return Array.isArray(rows) ? rows.filter((r) => r.slug && r.modified) : [];
+      } catch {
+        return [];
+      }
+    };
+
+    const first = await fetchPage(1);
+    const rows: WpRow[] = await readRows(first);
+    if (first) {
+      const totalPages = Math.min(
+        Number(first.headers.get('x-wp-totalpages') ?? '1') || 1,
+        WP_PAGE_CAP,
+      );
+      const rest = await Promise.all(
+        Array.from({ length: Math.max(totalPages - 1, 0) }, (_, i) => fetchPage(i + 2)),
+      );
+      // Una pagina persa non deve far sparire le altre dalla sitemap.
+      for (const res of rest) rows.push(...(await readRows(res)));
+    }
+
+    const toUrl = (row: WpRow): string => {
+      let url = `${SITEMAP_BASE_URL}/blog/${row.slug as string}/`;
       if (row.link) {
         try {
           const parsed = new URL(row.link);
@@ -437,16 +489,56 @@ async function buildFullSitemap(): Promise<string> {
           }
         } catch { /* keep default */ }
       }
+      return url;
+    };
+
+    // Gruppi di traduzione: una sola URL per lingua, la prima incontrata
+    // (l'indice arriva dal post piu' recente al piu' vecchio).
+    const groups = new Map<string, Map<string, string>>();
+    for (const row of rows) {
+      const tgroup = row.gtmsa_tgroup;
+      const lang = row.gtmsa_lang;
+      if (!tgroup || !lang || !locales.includes(lang)) continue;
+      const url = toUrl(row);
+      if (isDepublishedBlogTestUrl(url)) continue;
+      let g = groups.get(tgroup);
+      if (!g) { g = new Map(); groups.set(tgroup, g); }
+      if (!g.has(lang)) g.set(lang, url);
+    }
+
+    const seen = new Set<string>();
+    for (const row of rows) {
+      const url = toUrl(row);
       if (isDepublishedBlogTestUrl(url)) continue;
       if (seen.has(url)) continue;
       seen.add(url);
       const lastmod = (row.modified as string).split('T')[0];
+
+      const g = row.gtmsa_tgroup ? groups.get(row.gtmsa_tgroup) : undefined;
+      let hreflangBlock = '';
+      // Il cluster si dichiara solo sul post che RAPPRESENTA la sua lingua nel gruppo.
+      // Un gruppo puo' contenere due post nella stessa lingua (succede: due traduzioni
+      // norvegesi della sentenza di Cosenza, agosto 2026); al secondo il cluster
+      // punterebbe il fratello e non lui, e il link di ritorno non tornerebbe. Meglio
+      // nessun hreflang che un hreflang che non chiude.
+      const rappresenta = !!g && !!row.gtmsa_lang && g.get(row.gtmsa_lang) === url;
+      if (g && g.size > 1 && rappresenta) {
+        const lines = [...g.entries()].map(([l, href]) =>
+          `    <xhtml:link rel="alternate" hreflang="${HREFLANG_MAP[l] ?? l}" href="${href}"/>`);
+        const enHref = g.get('en');
+        if (enHref) {
+          lines.push(`    <xhtml:link rel="alternate" hreflang="x-default" href="${enHref}"/>`);
+        }
+        hreflangBlock = `${lines.join('\n')}\n`;
+      }
+
       blogEntries.push(
         `  <url>\n` +
         `    <loc>${url}</loc>\n` +
         `    <lastmod>${lastmod}</lastmod>\n` +
         `    <changefreq>weekly</changefreq>\n` +
         `    <priority>0.75</priority>\n` +
+        hreflangBlock +
         `  </url>`,
       );
     }
