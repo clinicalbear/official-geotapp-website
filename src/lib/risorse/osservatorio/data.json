@@ -1096,6 +1096,20 @@
    "lang": "it"
   },
   {
+   "country": "FR",
+   "authority": "Commission nationale de l'informatique et des libertés",
+   "framework": "gdpr",
+   "title": "Délibération de la formation restreinte n°SAN-2025-008 du 18 septembre 2025 prononçant une sanction pécuniaire à l'encontre de la société SAMARITAINE SAS",
+   "published_at": "2025-09-18",
+   "source_url": "https://www.legifrance.gouv.fr/cnil/id/CNILTEXT000052266505",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": null,
+   "doc_number": "SAN-2025-008",
+   "lang": "fr"
+  },
+  {
    "country": "BE",
    "authority": "Autorité de protection des données",
    "framework": "gdpr",
@@ -1591,6 +1605,22 @@
    ],
    "amount_eur": null,
    "doc_number": "",
+   "lang": "fr"
+  },
+  {
+   "country": "FR",
+   "authority": "Commission nationale de l'informatique et des libertés",
+   "framework": "gdpr",
+   "title": "Délibération de la formation restreinte n°SAN-2024-021 du 19 décembre 2024 \nconcernant la société […]",
+   "published_at": "2024-12-19",
+   "source_url": "https://www.legifrance.gouv.fr/cnil/id/CNILTEXT000051120331",
+   "topics": [
+    "controllo_a_distanza",
+    "lavoro_agile",
+    "presenze_orario"
+   ],
+   "amount_eur": 40000,
+   "doc_number": "SAN-2024-021",
    "lang": "fr"
   },
   {
@@ -2096,6 +2126,20 @@
    "country": "ES",
    "authority": "Agencia Española de Protección de Datos",
    "framework": "gdpr",
+   "title": "La AEPD publica su Plan de acción en materia de Responsabilidad Social para 2024",
+   "published_at": "2024-02-20",
+   "source_url": "https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/la-aepd-publica-su-plan-de-accion-en-materia-de",
+   "topics": [
+    "lavoro_agile"
+   ],
+   "amount_eur": null,
+   "doc_number": "",
+   "lang": "es"
+  },
+  {
+   "country": "ES",
+   "authority": "Agencia Española de Protección de Datos",
+   "framework": "gdpr",
    "title": "PS-00170-2023 - RESOLUCIÓN DE PROCEDIMIENTO SANCIONADOR",
    "published_at": "2024-02-12",
    "source_url": "https://www.aepd.es/documento/ps-00170-2023.pdf",
@@ -2133,6 +2177,21 @@
    "amount_eur": null,
    "doc_number": "AI-00059-2023",
    "lang": "es"
+  },
+  {
+   "country": "FR",
+   "authority": "Commission nationale de l'informatique et des libertés",
+   "framework": "gdpr",
+   "title": "Délibération de la formation restreinte n°SAN-2023-021 du 27 décembre 2023 concernant la société X",
+   "published_at": "2023-12-27",
+   "source_url": "https://www.legifrance.gouv.fr/cnil/id/CNILTEXT000048989272",
+   "topics": [
+    "controllo_a_distanza",
+    "presenze_orario"
+   ],
+   "amount_eur": 32000000,
+   "doc_number": "SAN-2023-021",
+   "lang": "fr"
   },
   {
    "country": "IT",
@@ -2962,6 +3021,20 @@
    "lang": "es"
   },
   {
+   "country": "ES",
+   "authority": "Agencia Española de Protección de Datos",
+   "framework": "gdpr",
+   "title": "E-08211-2021 - RESOLUCIÓN DE ARCHIVO DE ACTUACIONES",
+   "published_at": "2022-02-11",
+   "source_url": "https://www.aepd.es/documento/e-08211-2021.pdf",
+   "topics": [
+    "presenze_orario"
+   ],
+   "amount_eur": null,
+   "doc_number": "E-08211-2021",
+   "lang": "es"
+  },
+  {
    "country": "IT",
    "authority": "Garante per la protezione dei dati personali",
    "framework": "gdpr",
@@ -3004,6 +3077,20 @@
    "lang": "fr"
   },
   {
+   "country": "ES",
+   "authority": "Agencia Española de Protección de Datos",
+   "framework": "gdpr",
+   "title": "E-02065-2021 - RESOLUCIÓN DE CADUCIDAD DE ACTUACIONES",
+   "published_at": "2022-01-27",
+   "source_url": "https://www.aepd.es/documento/e-02065-2021.pdf",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": null,
+   "doc_number": "E-02065-2021",
+   "lang": "es"
+  },
+  {
    "country": "IT",
    "authority": "Garante per la protezione dei dati personali",
    "framework": "gdpr",
@@ -3016,6 +3103,20 @@
    "amount_eur": 75000,
    "doc_number": "19/2022",
    "lang": "it"
+  },
+  {
+   "country": "ES",
+   "authority": "Agencia Española de Protección de Datos",
+   "framework": "gdpr",
+   "title": "PS-00337-2021 - RESOLUCIÓN DE PROCEDIMIENTO SANCIONADOR",
+   "published_at": "2022-01-24",
+   "source_url": "https://www.aepd.es/documento/ps-00337-2021.pdf",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": 10000,
+   "doc_number": "PS-00337-2021",
+   "lang": "es"
   },
   {
    "country": "ES",
@@ -3079,6 +3180,34 @@
    "country": "ES",
    "authority": "Agencia Española de Protección de Datos",
    "framework": "gdpr",
+   "title": "E-08989-2021 - RESOLUCIÓN DE ARCHIVO DE ACTUACIONES",
+   "published_at": "2021-10-27",
+   "source_url": "https://www.aepd.es/documento/e-08989-2021.pdf",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": null,
+   "doc_number": "E-08989-2021",
+   "lang": "es"
+  },
+  {
+   "country": "ES",
+   "authority": "Agencia Española de Protección de Datos",
+   "framework": "gdpr",
+   "title": "REPOSICION-PS-00093-2021",
+   "published_at": "2021-10-26",
+   "source_url": "https://www.aepd.es/documento/reposicion-ps-00093-2021.pdf",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": null,
+   "doc_number": "REPOSICION-PS-00093-2021",
+   "lang": "es"
+  },
+  {
+   "country": "ES",
+   "authority": "Agencia Española de Protección de Datos",
+   "framework": "gdpr",
    "title": "PS-00050-2021 - RESOLUCIÓN DE TERMINACIÓN DEL PROCEDIMIENTO POR PAGO VOLUNTARIO",
    "published_at": "2021-10-22",
    "source_url": "https://www.aepd.es/documento/ps-00050-2021.pdf",
@@ -3101,6 +3230,20 @@
    ],
    "amount_eur": null,
    "doc_number": "PS-00401-2021",
+   "lang": "es"
+  },
+  {
+   "country": "ES",
+   "authority": "Agencia Española de Protección de Datos",
+   "framework": "gdpr",
+   "title": "PS-00377-2021 - RESOLUCIÓN DE PROCEDIMIENTO SANCIONADOR",
+   "published_at": "2021-10-05",
+   "source_url": "https://www.aepd.es/documento/ps-00377-2021.pdf",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": null,
+   "doc_number": "PS-00377-2021",
    "lang": "es"
   },
   {
@@ -3158,6 +3301,34 @@
    "amount_eur": 2500,
    "doc_number": "322/2021",
    "lang": "it"
+  },
+  {
+   "country": "ES",
+   "authority": "Agencia Española de Protección de Datos",
+   "framework": "gdpr",
+   "title": "PS-00093-2021 - RESOLUCIÓN DE PROCEDIMIENTO SANCIONADOR",
+   "published_at": "2021-09-10",
+   "source_url": "https://www.aepd.es/documento/ps-00093-2021.pdf",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": 4000,
+   "doc_number": "PS-00093-2021",
+   "lang": "es"
+  },
+  {
+   "country": "ES",
+   "authority": "Agencia Española de Protección de Datos",
+   "framework": "gdpr",
+   "title": "REPOSICION-E-07911-2020",
+   "published_at": "2021-08-16",
+   "source_url": "https://www.aepd.es/documento/reposicion-e-07911-2020.pdf",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": null,
+   "doc_number": "REPOSICION-E-07911-2020",
+   "lang": "es"
   },
   {
    "country": "ES",
@@ -3548,6 +3719,20 @@
    "lang": "nl"
   },
   {
+   "country": "FR",
+   "authority": "Commission nationale de l'informatique et des libertés",
+   "framework": "gdpr",
+   "title": "Clôture de la décision n° MED-2019-025 prise le 5 novembre 2019 mettant en demeure la société X",
+   "published_at": "2020-04-06",
+   "source_url": "https://www.legifrance.gouv.fr/cnil/id/CNILTEXT000041787097",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": null,
+   "doc_number": "MED-2019-025",
+   "lang": "fr"
+  },
+  {
    "country": "IE",
    "authority": "Data Protection Commission",
    "framework": "gdpr",
@@ -3574,6 +3759,20 @@
    "amount_eur": 8000,
    "doc_number": "53/2020",
    "lang": "it"
+  },
+  {
+   "country": "FR",
+   "authority": "Commission nationale de l'informatique et des libertés",
+   "framework": "gdpr",
+   "title": "Clôture partielle de la décision n° MED-2019-025 prise le 5 novembre 2019 mettant en demeure la société X",
+   "published_at": "2020-02-20",
+   "source_url": "https://www.legifrance.gouv.fr/cnil/id/CNILTEXT000041647624",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": null,
+   "doc_number": "MED-2019-025",
+   "lang": "fr"
   },
   {
    "country": "IT",
@@ -3620,6 +3819,63 @@
    "lang": "it"
   },
   {
+   "country": "FR",
+   "authority": "Commission nationale de l'informatique et des libertés",
+   "framework": "gdpr",
+   "title": "Délibération du bureau de la Commission nationale de l’informatique et des libertés \nn°MEDP-2019-001 du 22 novembre 2019 décidant de rendre publique la mise en demeure no MED 2019-025 du 5 novembre 2019 prise à l’encontre de la société X",
+   "published_at": "2019-11-22",
+   "source_url": "https://www.legifrance.gouv.fr/cnil/id/CNILTEXT000039466238",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": null,
+   "doc_number": "MEDP-2019-001",
+   "lang": "fr"
+  },
+  {
+   "country": "FR",
+   "authority": "Commission nationale de l'informatique et des libertés",
+   "framework": "gdpr",
+   "title": "Décision n° MED 2019-025 du 5 novembre 2019 mettant en demeure la société X",
+   "published_at": "2019-11-05",
+   "source_url": "https://www.legifrance.gouv.fr/cnil/id/CNILTEXT000039466203",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": null,
+   "doc_number": "MED-2019-025",
+   "lang": "fr"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Telecamere, dibattitto sulla privacy - Intervista a Antonello Soro - Rai...",
+   "published_at": "2019-10-18",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9169559",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": null,
+   "doc_number": "9169559",
+   "lang": "it"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Parere su uno schema di decreto del Presidente del Consiglio dei ministri...",
+   "published_at": "2019-09-19",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9147290",
+   "topics": [
+    "controllo_a_distanza",
+    "presenze_orario"
+   ],
+   "amount_eur": null,
+   "doc_number": "167/2019",
+   "lang": "it"
+  },
+  {
    "country": "ES",
    "authority": "Agencia Española de Protección de Datos",
    "framework": "gdpr",
@@ -3647,6 +3903,21 @@
    "amount_eur": 12000,
    "doc_number": "PS-00401-2018",
    "lang": "es"
+  },
+  {
+   "country": "FR",
+   "authority": "Commission nationale de l'informatique et des libertés",
+   "framework": "gdpr",
+   "title": "Délibération de la formation restreinte n° SAN-2019-006 du 13 juin 2019 prononçant une sanction à l’encontre de la société X",
+   "published_at": "2019-06-13",
+   "source_url": "https://www.legifrance.gouv.fr/cnil/id/CNILTEXT000038629823",
+   "topics": [
+    "controllo_a_distanza",
+    "email_dipendenti"
+   ],
+   "amount_eur": null,
+   "doc_number": "SAN-2019-006",
+   "lang": "fr"
   },
   {
    "country": "ES",
@@ -3683,6 +3954,35 @@
    "country": "IT",
    "authority": "Garante per la protezione dei dati personali",
    "framework": "gdpr",
+   "title": "Trattamento di dati personali dei dipendenti mediante dispositivi...",
+   "published_at": "2019-02-28",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9094427",
+   "topics": [
+    "controllo_a_distanza",
+    "geolocalizzazione"
+   ],
+   "amount_eur": null,
+   "doc_number": "9094427",
+   "lang": "it"
+  },
+  {
+   "country": "FR",
+   "authority": "Commission nationale de l'informatique et des libertés",
+   "framework": "gdpr",
+   "title": "Délibération du bureau de la Commission nationale de l’informatique et des libertés no 2018-345 du 18 octobre 2018 décidant de rendre publique la mise en demeure no MED 2018-041 du 8 octobre 2018 prise à l’encontre de X",
+   "published_at": "2018-10-18",
+   "source_url": "https://www.legifrance.gouv.fr/cnil/id/CNILTEXT000037537453",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": null,
+   "doc_number": "2018-345",
+   "lang": "fr"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
    "title": "Provvedimento del 18 ottobre 2018 [9084531]",
    "published_at": "2018-10-18",
    "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9084531",
@@ -3692,6 +3992,34 @@
    "amount_eur": null,
    "doc_number": "471/2018",
    "lang": "it"
+  },
+  {
+   "country": "FR",
+   "authority": "Commission nationale de l'informatique et des libertés",
+   "framework": "gdpr",
+   "title": "Décision n° MED 2018-041 du 8 octobre 2018 mettant en demeure X",
+   "published_at": "2018-10-08",
+   "source_url": "https://www.legifrance.gouv.fr/cnil/id/CNILTEXT000037537391",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": null,
+   "doc_number": "MED-2018-041",
+   "lang": "fr"
+  },
+  {
+   "country": "FR",
+   "authority": "Commission nationale de l'informatique et des libertés",
+   "framework": "gdpr",
+   "title": "Délibération de la formation restreinte n° SAN-2018-009 du 6 septembre 2018 prononçant une sanction pécuniaire à l’encontre de la société X",
+   "published_at": "2018-09-06",
+   "source_url": "https://www.legifrance.gouv.fr/cnil/id/CNILTEXT000037413673",
+   "topics": [
+    "presenze_orario"
+   ],
+   "amount_eur": 3000000,
+   "doc_number": "SAN-2018-009",
+   "lang": "fr"
   },
   {
    "country": "IT",
@@ -3709,6 +4037,34 @@
    "lang": "it"
   },
   {
+   "country": "FR",
+   "authority": "Commission nationale de l'informatique et des libertés",
+   "framework": "gdpr",
+   "title": "Délibération du bureau de la Commission nationale de l’informatique et des libertés n°2018-299 du 12 juillet 2018 décidant de rendre publique la mise en demeure n°MED 2018-024 du 2 juillet 2018 prise à l’encontre de la société X",
+   "published_at": "2018-07-12",
+   "source_url": "https://www.legifrance.gouv.fr/cnil/id/CNILTEXT000037239148",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": null,
+   "doc_number": "2018-299",
+   "lang": "fr"
+  },
+  {
+   "country": "FR",
+   "authority": "Commission nationale de l'informatique et des libertés",
+   "framework": "gdpr",
+   "title": "Décision n° MED-2018-024 du 2 juillet 2018 mettant en demeure la société x",
+   "published_at": "2018-07-02",
+   "source_url": "https://www.legifrance.gouv.fr/cnil/id/CNILTEXT000037239127",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": null,
+   "doc_number": "MED-2018-024",
+   "lang": "fr"
+  },
+  {
    "country": "IT",
    "authority": "Garante per la protezione dei dati personali",
    "framework": "gdpr",
@@ -3722,6 +4078,21 @@
    "amount_eur": null,
    "doc_number": "396/2018",
    "lang": "it"
+  },
+  {
+   "country": "ES",
+   "authority": "Agencia Española de Protección de Datos",
+   "framework": "gdpr",
+   "title": "A-00123-2018 - RESOLUCIÓN: R/01183/2018",
+   "published_at": "2018-06-20",
+   "source_url": "https://www.aepd.es/documento/a-00123-2018.pdf",
+   "topics": [
+    "controllo_a_distanza",
+    "presenze_orario"
+   ],
+   "amount_eur": null,
+   "doc_number": "A-00123-2018",
+   "lang": "es"
   },
   {
    "country": "IT",
@@ -3752,6 +4123,50 @@
    "lang": "it"
   },
   {
+   "country": "ES",
+   "authority": "Agencia Española de Protección de Datos",
+   "framework": "gdpr",
+   "title": "AAPP-00065-2017 - RESOLUCIÓN: R/00566/2018",
+   "published_at": "2018-04-04",
+   "source_url": "https://www.aepd.es/documento/aapp-00065-2017.pdf",
+   "topics": [
+    "controllo_a_distanza",
+    "presenze_orario"
+   ],
+   "amount_eur": null,
+   "doc_number": "AAPP-00065-2017",
+   "lang": "es"
+  },
+  {
+   "country": "ES",
+   "authority": "Agencia Española de Protección de Datos",
+   "framework": "gdpr",
+   "title": "A-00457-2017",
+   "published_at": "2018-03-26",
+   "source_url": "https://www.aepd.es/documento/a-00457-2017.pdf",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": 40000,
+   "doc_number": "A-00457-2017",
+   "lang": "es"
+  },
+  {
+   "country": "ES",
+   "authority": "Agencia Española de Protección de Datos",
+   "framework": "gdpr",
+   "title": "AAPP-00006-2018 - RESOLUCIÓN: R/00298/2018",
+   "published_at": "2018-03-01",
+   "source_url": "https://www.aepd.es/documento/aapp-00006-2018.pdf",
+   "topics": [
+    "controllo_a_distanza",
+    "presenze_orario"
+   ],
+   "amount_eur": null,
+   "doc_number": "AAPP-00006-2018",
+   "lang": "es"
+  },
+  {
    "country": "IT",
    "authority": "Garante per la protezione dei dati personali",
    "framework": "gdpr",
@@ -3767,17 +4182,46 @@
    "lang": "it"
   },
   {
-   "country": "FR",
-   "authority": "Commission Nationale de l'Informatique et des Libertés",
+   "country": "ES",
+   "authority": "Agencia Española de Protección de Datos",
    "framework": "gdpr",
-   "title": "CONSTRUCTION - Vidéosurveillance de salariés",
+   "title": "E-06119-2017 - RESOLUCIÓN DE ARCHIVO DE ACTUACIONES",
+   "published_at": "2018-01-30",
+   "source_url": "https://www.aepd.es/documento/e-06119-2017.pdf",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": null,
+   "doc_number": "E-06119-2017",
+   "lang": "es"
+  },
+  {
+   "country": "ES",
+   "authority": "Agencia Española de Protección de Datos",
+   "framework": "gdpr",
+   "title": "E-01881-2017 - RESOLUCIÓN DE ARCHIVO DE ACTUACIONES",
+   "published_at": "2017-11-02",
+   "source_url": "https://www.aepd.es/documento/e-01881-2017.pdf",
+   "topics": [
+    "controllo_a_distanza",
+    "presenze_orario"
+   ],
+   "amount_eur": null,
+   "doc_number": "E-01881-2017",
+   "lang": "es"
+  },
+  {
+   "country": "FR",
+   "authority": "Commission nationale de l'informatique et des libertés",
+   "framework": "gdpr",
+   "title": "Délibération de la formation restreinte n°SAN-2017-009 du 15 juin 2017 prononçant une sanction pécuniaire à l’encontre de la société X",
    "published_at": "2017-06-15",
    "source_url": "https://www.legifrance.gouv.fr/cnil/id/CNILTEXT000035175069",
    "topics": [
     "controllo_a_distanza"
    ],
    "amount_eur": 1000,
-   "doc_number": "",
+   "doc_number": "SAN-2017-009",
    "lang": "fr"
   },
   {
@@ -3853,6 +4297,20 @@
    "lang": "it"
   },
   {
+   "country": "FR",
+   "authority": "Commission nationale de l'informatique et des libertés",
+   "framework": "gdpr",
+   "title": "Clôture de la mise en demeure n°2014-051 adoptée à l'encontre de la société X",
+   "published_at": "2015-03-19",
+   "source_url": "https://www.legifrance.gouv.fr/cnil/id/CNILTEXT000030403989",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": null,
+   "doc_number": "2014-051",
+   "lang": "fr"
+  },
+  {
    "country": "IT",
    "authority": "Garante per la protezione dei dati personali",
    "framework": "gdpr",
@@ -3865,6 +4323,347 @@
    "amount_eur": null,
    "doc_number": "65/2015",
    "lang": "it"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Provvedimento del 27 novembre 2014 [3718714]",
+   "published_at": "2014-11-27",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/3718714",
+   "topics": [
+    "email_dipendenti"
+   ],
+   "amount_eur": null,
+   "doc_number": "551/2014",
+   "lang": "it"
+  },
+  {
+   "country": "FR",
+   "authority": "Commission nationale de l'informatique et des libertés",
+   "framework": "gdpr",
+   "title": "Délibération du bureau de la Commission nationale de l’informatique et des \r\nlibertés n°2014-426 du 23 octobre 2014 décidant de rendre publique la mise en demeure n° 2014-051 du 14 octobre 2014 prise à l’encontre de la société X exploitant les magasins Y",
+   "published_at": "2014-10-23",
+   "source_url": "https://www.legifrance.gouv.fr/cnil/id/CNILTEXT000030066096",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": null,
+   "doc_number": "2014-426",
+   "lang": "fr"
+  },
+  {
+   "country": "FR",
+   "authority": "Commission nationale de l'informatique et des libertés",
+   "framework": "gdpr",
+   "title": "Décision n° 2014-051 du 14 octobre 2014 mettant en demeure la société X exploitant les magasins Y",
+   "published_at": "2014-10-14",
+   "source_url": "https://www.legifrance.gouv.fr/cnil/id/CNILTEXT000029753490",
+   "topics": [
+    "controllo_a_distanza",
+    "presenze_orario"
+   ],
+   "amount_eur": null,
+   "doc_number": "2014-051",
+   "lang": "fr"
+  },
+  {
+   "country": "FR",
+   "authority": "Commission nationale de l'informatique et des libertés",
+   "framework": "gdpr",
+   "title": "Délibération de la formation restreinte n° 2014-294 du 22 juillet 2014\r\nprononçant une sanction pécuniaire publique à l’encontre \r\nde la société X",
+   "published_at": "2014-07-22",
+   "source_url": "https://www.legifrance.gouv.fr/cnil/id/CNILTEXT000029298773",
+   "topics": [
+    "geolocalizzazione"
+   ],
+   "amount_eur": 5000,
+   "doc_number": "2014-294",
+   "lang": "fr"
+  },
+  {
+   "country": "FR",
+   "authority": "Commission nationale de l'informatique et des libertés",
+   "framework": "gdpr",
+   "title": "Délibération de la formation restreinte n°2014-307 du 17 juillet 2014 prononçant une sanction pécuniaire à l’encontre de la société X",
+   "published_at": "2014-07-17",
+   "source_url": "https://www.legifrance.gouv.fr/cnil/id/CNILTEXT000029302625",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": null,
+   "doc_number": "2014-307",
+   "lang": "fr"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Trattamento di dati personali sensibili di un dipendente attraverso il...",
+   "published_at": "2014-06-12",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/3318492",
+   "topics": [
+    "email_dipendenti",
+    "presenze_orario"
+   ],
+   "amount_eur": null,
+   "doc_number": "298/2014",
+   "lang": "it"
+  },
+  {
+   "country": "FR",
+   "authority": "Commission nationale de l'informatique et des libertés",
+   "framework": "gdpr",
+   "title": "Décision n° 2014-001 du 15 janvier 2014 mettant en demeure X qui exploite l’enseigne « Y » à SAINT MEDARD EN JALLES (N° MDM 131052)",
+   "published_at": "2014-01-15",
+   "source_url": "https://www.legifrance.gouv.fr/cnil/id/CNILTEXT000028557156",
+   "topics": [
+    "controllo_a_distanza",
+    "presenze_orario"
+   ],
+   "amount_eur": null,
+   "doc_number": "2014-001",
+   "lang": "fr"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Trattamento di dati personali raccolti a seguito della pubblicazione di...",
+   "published_at": "2014-01-09",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/2927804",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": null,
+   "doc_number": "13/2014",
+   "lang": "it"
+  },
+  {
+   "country": "FR",
+   "authority": "Commission nationale de l'informatique et des libertés",
+   "framework": "gdpr",
+   "title": "Délibération de la formation restreinte n°2013-400 du 12 décembre 2013 prononçant une sanction pécuniaire à l’encontre de la société X",
+   "published_at": "2013-12-12",
+   "source_url": "https://www.legifrance.gouv.fr/cnil/id/CNILTEXT000028450694",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": 10000,
+   "doc_number": "2013-400",
+   "lang": "fr"
+  },
+  {
+   "country": "FR",
+   "authority": "Commission nationale de l'informatique et des libertés",
+   "framework": "gdpr",
+   "title": "Délibération de la formation restreinte n°2013-366 du 23 novembre 2013 prononçant une sanction pécuniaire à l’encontre de la société X",
+   "published_at": "2013-11-23",
+   "source_url": "https://www.legifrance.gouv.fr/cnil/id/CNILTEXT000028450684",
+   "topics": [
+    "geolocalizzazione",
+    "presenze_orario"
+   ],
+   "amount_eur": null,
+   "doc_number": "2013-366",
+   "lang": "fr"
+  },
+  {
+   "country": "FR",
+   "authority": "Commission nationale de l'informatique et des libertés",
+   "framework": "gdpr",
+   "title": "Délibération de la formation restreinte n°2013-320 du 24 octobre 2013 prononçant une sanction pécuniaire à l’encontre de la société X",
+   "published_at": "2013-10-24",
+   "source_url": "https://www.legifrance.gouv.fr/cnil/id/CNILTEXT000028450683",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": 10000,
+   "doc_number": "2013-320",
+   "lang": "fr"
+  },
+  {
+   "country": "FR",
+   "authority": "Commission nationale de l'informatique et des libertés",
+   "framework": "gdpr",
+   "title": "Délibération de la formation restreinte n°2013-319 du 24 octobre 2013 prononçant une sanction pécuniaire à l’encontre de la société X",
+   "published_at": "2013-10-24",
+   "source_url": "https://www.legifrance.gouv.fr/cnil/id/CNILTEXT000028450682",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": 10000,
+   "doc_number": "2013-319",
+   "lang": "fr"
+  },
+  {
+   "country": "FR",
+   "authority": "Commission nationale de l'informatique et des libertés",
+   "framework": "gdpr",
+   "title": "Délibération du bureau de la Commission nationale de l’informatique et des libertés n° 2013-217 du 17 juillet 2013 décidant de rendre publique la mise en demeure n°2013-029 du 12 juillet 2013 prise à l’encontre de la société X exploitant l’enseigne « Y »",
+   "published_at": "2013-07-17",
+   "source_url": "https://www.legifrance.gouv.fr/cnil/id/CNILTEXT000033605858",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": null,
+   "doc_number": "2013-217",
+   "lang": "fr"
+  },
+  {
+   "country": "FR",
+   "authority": "Commission nationale de l'informatique et des libertés",
+   "framework": "gdpr",
+   "title": "Décision n° 2013-029 du 12 juillet 2013 mettant en demeure X qui exploite l’enseigne « Y » à BOURG-EN-BRESSE",
+   "published_at": "2013-07-12",
+   "source_url": "https://www.legifrance.gouv.fr/cnil/id/CNILTEXT000033605828",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": null,
+   "doc_number": "2013-029",
+   "lang": "fr"
+  },
+  {
+   "country": "FR",
+   "authority": "Commission nationale de l'informatique et des libertés",
+   "framework": "gdpr",
+   "title": "Délibération de la formation restreinte n°2013-139 du 30 mai 2013 prononçant une sanction pécuniaire à l’encontre de la société X",
+   "published_at": "2013-05-30",
+   "source_url": "https://www.legifrance.gouv.fr/cnil/id/CNILTEXT000027661220",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": null,
+   "doc_number": "2013-139",
+   "lang": "fr"
+  },
+  {
+   "country": "FR",
+   "authority": "Commission nationale de l'informatique et des libertés",
+   "framework": "gdpr",
+   "title": "Délibération de la formation restreinte n°2012-475 du 03 janvier 2013 SYNDICAT DES COPROPRIETAIRES X",
+   "published_at": "2013-01-03",
+   "source_url": "https://www.legifrance.gouv.fr/cnil/id/CNILTEXT000026971936",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": null,
+   "doc_number": "2012-475",
+   "lang": "fr"
+  },
+  {
+   "country": "FR",
+   "authority": "Commission nationale de l'informatique et des libertés",
+   "framework": "gdpr",
+   "title": "Délibération de la formation restreinte n°2012-213 du 22 juin 2012 portant sanction pécuniaire à l’encontre de la Société X",
+   "published_at": "2012-06-22",
+   "source_url": "https://www.legifrance.gouv.fr/cnil/id/CNILTEXT000026153467",
+   "topics": [
+    "geolocalizzazione"
+   ],
+   "amount_eur": null,
+   "doc_number": "2012-213",
+   "lang": "fr"
+  },
+  {
+   "country": "FR",
+   "authority": "Commission nationale de l'informatique et des libertés",
+   "framework": "gdpr",
+   "title": "Délibération du bureau de la Commission nationale de l'informatique et des libertés n°2012-012 du 17 janvier 2012 décidant de rendre publique la mise en demeure n°2011-036 du 16 décembre 2011 adoptée à l'encontre de la société X",
+   "published_at": "2012-01-17",
+   "source_url": "https://www.legifrance.gouv.fr/cnil/id/CNILTEXT000033605603",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": null,
+   "doc_number": "2012-012",
+   "lang": "fr"
+  },
+  {
+   "country": "FR",
+   "authority": "Commission nationale de l'informatique et des libertés",
+   "framework": "gdpr",
+   "title": "Décision n° 2011-036 du 16 décembre 2011 mettant en demeure la société X",
+   "published_at": "2011-12-16",
+   "source_url": "https://www.legifrance.gouv.fr/cnil/id/CNILTEXT000033605566",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": null,
+   "doc_number": "2011-036",
+   "lang": "fr"
+  },
+  {
+   "country": "FR",
+   "authority": "Commission nationale de l'informatique et des libertés",
+   "framework": "gdpr",
+   "title": "Délibération n°2010-112 du 22 avril 2010 de la formation restreinte décidant l’interruption d’un traitement mis en œuvre par la Société X…",
+   "published_at": "2010-04-22",
+   "source_url": "https://www.legifrance.gouv.fr/cnil/id/CNILTEXT000022913263",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": null,
+   "doc_number": "2010-112",
+   "lang": "fr"
+  },
+  {
+   "country": "FR",
+   "authority": "Commission nationale de l'informatique et des libertés",
+   "framework": "gdpr",
+   "title": "Délibération n° 2009-201 du 16 avril 2009 de la formation restreinte prononçant une sanction pécuniaire à l’encontre de la société X",
+   "published_at": "2009-04-16",
+   "source_url": "https://www.legifrance.gouv.fr/cnil/id/CNILTEXT000021123155",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": null,
+   "doc_number": "2009-201",
+   "lang": "fr"
+  },
+  {
+   "country": "FR",
+   "authority": "Commission nationale de l'informatique et des libertés",
+   "framework": "gdpr",
+   "title": "Délibération n° 2008-187 du 3 juillet 2008 prononçant une sanction pécuniaire à l’encontre de la société X",
+   "published_at": "2008-07-03",
+   "source_url": "https://www.legifrance.gouv.fr/cnil/id/CNILTEXT000019796260",
+   "topics": [
+    "controllo_a_distanza",
+    "presenze_orario"
+   ],
+   "amount_eur": 30000,
+   "doc_number": "2008-187",
+   "lang": "fr"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Provvedimento del 15 aprile 2008 [1514277]",
+   "published_at": "2008-04-15",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/1514277",
+   "topics": [
+    "presenze_orario"
+   ],
+   "amount_eur": null,
+   "doc_number": "1514277",
+   "lang": "it"
+  },
+  {
+   "country": "FR",
+   "authority": "Commission nationale de l'informatique et des libertés",
+   "framework": "gdpr",
+   "title": "Délibération adressant un avertissement à X",
+   "published_at": "2002-09-17",
+   "source_url": "https://www.legifrance.gouv.fr/cnil/id/CNILTEXT000017653618",
+   "topics": [
+    "presenze_orario"
+   ],
+   "amount_eur": null,
+   "doc_number": "02-058",
+   "lang": "fr"
   }
  ]
 }
