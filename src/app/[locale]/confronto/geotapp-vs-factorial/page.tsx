@@ -35,7 +35,7 @@ const FAQ: Record<string, FaqItem[]> = {
     { q: 'GeoTapp o Factorial per un\'impresa di pulizie?', a: 'Se il problema è tenere in ordine ferie, permessi e cedolini di una squadra che cresce, Factorial è comodo, chiaro e si attiva da solo. Se il problema è il committente che trattiene una fattura sostenendo che il servizio non è stato fatto, un riepilogo di presenze non ti difende. I due strumenti coprono due momenti diversi e possono stare insieme.' },
   ],
   en: [
-    { q: 'What is the main difference between GeoTapp and Factorial?', a: 'Factorial is an HR platform for small and medium companies, where leave, absences, org chart and clock-in all live in one place. GeoTapp certifies field work and turns every job into a sealed document the client verifies alone. One manages people inside the company, the other defends the work outside it.' },
+    { q: 'What is the main difference between GeoTapp and Factorial?', a: 'Factorial is an HR platform for small and medium companies, where leave, absences, org chart and clock-in all live in one place. GeoTapp seals field work and turns every job into a sealed document the client verifies alone. One manages people inside the company, the other defends the work outside it.' },
     { q: 'Does Factorial check GPS for spoofing?', a: 'Factorial clock-in records the position when the company switches the option on, and geolocation stays an optional part of the time tracking module. A check on the authenticity of the signal, the one that catches fake location apps and tampered devices, is not listed among the declared features. In GeoTapp that check runs at every clock-in.' },
     { q: 'Can the client verify the reports independently?', a: 'Factorial summaries serve the HR office and payroll, and they stay internal documents. GeoTapp produces a sealed package the end client opens and checks alone, with no account, no connection and no need to come through our systems, because the hash chain travels inside the file.' },
     { q: 'GeoTapp or Factorial for a cleaning company?', a: 'If the problem is keeping leave, time off and payslips in order for a growing team, Factorial is comfortable, clear and you can set it up yourself. If the problem is a client holding back an invoice claiming the service was never delivered, an attendance summary will not defend you. The two tools cover two different moments and can sit together.' },
@@ -47,7 +47,7 @@ const FAQ: Record<string, FaqItem[]> = {
     { q: 'GeoTapp oder Factorial für ein Reinigungsunternehmen?', a: 'Wenn es darum geht, Urlaub, Freizeitausgleich und Lohnzettel eines wachsenden Teams in Ordnung zu halten, ist Factorial bequem, klar und selbst einzurichten. Wenn ein Auftraggeber eine Rechnung zurückhält und behauptet, die Leistung sei nie erbracht worden, verteidigt Sie keine Anwesenheitsübersicht. Die beiden Werkzeuge decken zwei verschiedene Momente ab und können nebeneinander laufen.' },
   ],
   fr: [
-    { q: 'Quelle est la principale différence entre GeoTapp et Factorial ?', a: 'Factorial est une plateforme RH pour les PME, où congés, absences, organigramme et pointage tiennent au même endroit. GeoTapp certifie le travail sur le terrain et transforme chaque intervention en un document scellé que le donneur d\'ordre vérifie seul. L\'une gère les personnes dans l\'entreprise, l\'autre défend le travail au dehors.' },
+    { q: 'Quelle est la principale différence entre GeoTapp et Factorial ?', a: 'Factorial est une plateforme RH pour les PME, où congés, absences, organigramme et pointage tiennent au même endroit. GeoTapp scelle le travail sur le terrain et transforme chaque intervention en un document scellé que le donneur d\'ordre vérifie seul. L\'une gère les personnes dans l\'entreprise, l\'autre défend le travail au dehors.' },
     { q: 'Factorial vérifie-t-il la falsification du GPS ?', a: 'Le pointage de Factorial enregistre la position lorsque l\'entreprise active l\'option, et la géolocalisation reste une fonction facultative du module de temps. Un contrôle d\'authenticité du signal, celui qui démasque les applications de fausse position et les appareils modifiés, ne figure pas parmi les fonctions annoncées. Chez GeoTapp ce contrôle tourne à chaque pointage.' },
     { q: 'Le donneur d\'ordre peut-il vérifier les rapports lui-même ?', a: 'Les récapitulatifs de Factorial servent au service RH et à la paie, et restent des documents internes. GeoTapp produit un dossier scellé que le client final ouvre et contrôle seul, sans compte, sans connexion et sans passer par nos systèmes, car la chaîne de hachage voyage dans le fichier.' },
     { q: 'GeoTapp ou Factorial pour une entreprise de nettoyage ?', a: 'Si le problème est de tenir en ordre congés, absences et bulletins d\'une équipe qui grandit, Factorial est confortable, clair et se met en route tout seul. Si le problème est un client qui retient une facture en affirmant que la prestation n\'a jamais eu lieu, aucun récapitulatif de pointage ne vous défend. Les deux outils couvrent deux moments différents et peuvent cohabiter.' },
@@ -138,7 +138,7 @@ const T: Record<string, Copy> = {
   },
   en: {
     badge: 'App Comparison', h1sub: 'the HR office or the job site?',
-    desc: 'Factorial puts leave, absences, org chart and clock-in inside one HR platform, with public pricing and quick setup. GeoTapp certifies the single job, with verified GPS, sealed photos and a report the end client checks alone.',
+    desc: 'Factorial puts leave, absences, org chart and clock-in inside one HR platform, with public pricing and quick setup. GeoTapp seals the single job, with verified GPS, sealed photos and a report the end client checks alone.',
     summary: 'In short:',
     summaryText: 'Factorial solves the work of the HR office, and it solves it well, with an interface people understand on the first try. GeoTapp solves the moment a client claims the service was never delivered, and that moment is not solved by an attendance summary.',
     noteTitle: 'Geolocation is a checkbox, the risk stays with the employer',
@@ -168,7 +168,7 @@ const T: Record<string, Copy> = {
   },
   fr: {
     badge: 'Comparatif App', h1sub: 'le service RH ou le chantier ?',
-    desc: 'Factorial réunit congés, absences, organigramme et pointage dans une seule plateforme RH, avec des tarifs publics et une mise en route rapide. GeoTapp certifie l\'intervention, avec un GPS vérifié, des photos scellées et un rapport que le client final contrôle seul.',
+    desc: 'Factorial réunit congés, absences, organigramme et pointage dans une seule plateforme RH, avec des tarifs publics et une mise en route rapide. GeoTapp scelle l\'intervention, avec un GPS vérifié, des photos scellées et un rapport que le client final contrôle seul.',
     summary: 'En résumé :',
     summaryText: 'Factorial résout le travail du service RH, et il le fait bien, avec une interface que l\'on comprend du premier coup. GeoTapp résout le moment où un client affirme que la prestation n\'a jamais eu lieu, et ce moment ne se règle pas avec un récapitulatif de pointages.',
     noteTitle: 'La géolocalisation est une case à cocher, le risque reste à l\'employeur',

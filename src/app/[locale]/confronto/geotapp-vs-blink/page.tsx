@@ -138,7 +138,7 @@ const T: Record<string, Copy> = {
   },
   en: {
     badge: 'App Comparison', h1sub: 'time tracking or certification?',
-    desc: 'Blink is Germany\'s #1 software for building cleaning. GeoTapp certifies every job with anti-spoofing GPS, cryptographically sealed photos and client-verifiable reports.',
+    desc: 'Blink is Germany\'s #1 software for building cleaning. GeoTapp seals every job with anti-spoofing GPS, cryptographically sealed photos and client-verifiable reports.',
     summary: 'Bottom line:',
     summaryText: 'Blink excels at time tracking and team communication for cleaning. But GPS is not verified (no anti-spoofing), photos are not cryptographically sealed and reports are not independently verifiable. GeoTapp fills exactly these gaps.',
     noteTitle: 'GPS check-in is not GPS verification',
@@ -168,7 +168,7 @@ const T: Record<string, Copy> = {
   },
   fr: {
     badge: 'Comparatif d\'applis', h1sub: 'pointage ou certification ?',
-    desc: 'Blink est le logiciel numéro 1 pour le nettoyage de bâtiments en Allemagne : GPS, QR code, NFC, gestion des tâches et communication d\'équipe. GeoTapp certifie chaque intervention avec un GPS anti-spoofing, des photos scellées cryptographiquement et des rapports que le client vérifie lui-même.',
+    desc: 'Blink est le logiciel numéro 1 pour le nettoyage de bâtiments en Allemagne : GPS, QR code, NFC, gestion des tâches et communication d\'équipe. GeoTapp scelle chaque intervention avec un GPS anti-spoofing, des photos scellées cryptographiquement et des rapports que le client vérifie lui-même.',
     summary: 'En résumé :',
     summaryText: 'Blink excelle dans le pointage et la communication d\'équipe pour le nettoyage en Allemagne. Mais le GPS n\'est pas vérifié (pas d\'anti-spoofing), les photos ne sont pas scellées cryptographiquement et les rapports ne sont pas vérifiables par le client. GeoTapp comble exactement ces lacunes.',
     noteTitle: 'Le pointage GPS n\'est pas la vérification GPS',

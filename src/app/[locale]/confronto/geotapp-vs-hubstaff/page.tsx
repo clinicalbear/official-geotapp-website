@@ -138,9 +138,9 @@ const T: Record<string, Copy> = {
   },
   en: {
     badge: 'App Comparison', h1sub: 'certification or monitoring?',
-    desc: 'Hubstaff monitors remote workers with screenshots and GPS. GeoTapp certifies every job with client-verifiable proof. Different orientations, different sectors.',
+    desc: 'Hubstaff monitors remote workers with screenshots and GPS. GeoTapp seals every job with client-verifiable proof. Different orientations, different sectors.',
     summary: 'Bottom line:',
-    summaryText: 'Hubstaff is designed to monitor digital remote workers (screenshots, productivity). GeoTapp is designed to certify physical field operators: tamper-proof reports with real GPS, photo evidence and independent client verification. Additionally, Hubstaff raises GDPR compliance questions in the Italian context that GeoTapp resolves by design.',
+    summaryText: 'Hubstaff is designed to monitor digital remote workers (screenshots, productivity). GeoTapp is designed to seal physical field operators: tamper-proof reports with real GPS, photo evidence and independent client verification. Additionally, Hubstaff raises GDPR compliance questions in the Italian context that GeoTapp resolves by design.',
     noteTitle: 'Important note for the Italian market',
     noteText: 'Continuous GPS location tracking and capturing employee screenshots fall within the scope of art. 4 of the Workers\' Statute and require a union agreement or authorisation from the Labour Inspectorate. GeoTapp is designed to be compliant: it tracks only during active working hours and provides all the necessary forms.',
     features: 'Key features comparison', feat: 'Feature', diff: 'Opposite orientations',
@@ -168,7 +168,7 @@ const T: Record<string, Copy> = {
   },
   fr: {
     badge: 'Comparatif d\'applis', h1sub: 'certification ou surveillance ?',
-    desc: 'Hubstaff surveille les travailleurs à distance avec des captures d\'écran et le GPS. GeoTapp certifie chaque intervention avec des preuves vérifiables par le client. Des orientations différentes, des secteurs différents.',
+    desc: 'Hubstaff surveille les travailleurs à distance avec des captures d\'écran et le GPS. GeoTapp scelle chaque intervention avec des preuves vérifiables par le client. Des orientations différentes, des secteurs différents.',
     summary: 'En résumé :',
     summaryText: 'Hubstaff est conçu pour surveiller des travailleurs numériques à distance (captures d\'écran, productivité). GeoTapp est conçu pour sceller des intervenants physiques sur le terrain : rapports infalsifiables avec GPS réel, preuves photographiques et vérification indépendante par le client. De plus, Hubstaff soulève des questions de conformité RGPD dans le contexte italien que GeoTapp résout par conception.',
     noteTitle: 'Note importante pour le marché italien',

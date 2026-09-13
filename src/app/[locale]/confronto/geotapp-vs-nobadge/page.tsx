@@ -41,7 +41,7 @@ const FAQ: Record<string, FaqItem[]> = {
     { q: 'GeoTapp or NoBadge for cleaning companies?', a: 'If you only need to track employee hours, NoBadge may suffice. If you need to prove to your client that the service was performed with tamper-proof evidence, verified GPS, sealed photos, reports with evidentiary value - GeoTapp is the only solution.' },
   ],
   de: [
-    { q: 'Was ist der Hauptunterschied zwischen GeoTapp und NoBadge?', a: 'NoBadge ist ein Anwesenheitserfassungssystem: Es registriert das Ein- und Ausstempeln per GPS oder QR-Code. GeoTapp ist ein System für versiegelte Nachweise für Arbeit vor Ort: Es erstellt versiegelte Berichte mit Anti-Spoofing-GPS und Fotobeweisen, die der Auftraggeber unabhängig verifizieren kann. Der Unterschied liegt zwischen dem Erfassen einer Anwesenheit und dem Zertifizieren eines Einsatzes.' },
+    { q: 'Was ist der Hauptunterschied zwischen GeoTapp und NoBadge?', a: 'NoBadge ist ein Anwesenheitserfassungssystem: Es registriert das Ein- und Ausstempeln per GPS oder QR-Code. GeoTapp ist ein System für versiegelte Nachweise für Arbeit vor Ort: Es erstellt versiegelte Berichte mit Anti-Spoofing-GPS und Fotobeweisen, die der Auftraggeber unabhängig verifizieren kann. Der Unterschied liegt zwischen dem Erfassen einer Anwesenheit und dem Versiegeln eines Einsatzes.' },
     { q: 'Hat NoBadge Anti-Spoofing-GPS?', a: 'Nein. NoBadge registriert die GPS-Position des Geräts, überprüft aber nicht, ob die Position echt oder gefälscht ist. GeoTapp verwendet aktive Anti-Spoofing-Prüfungen, die mehrere Signale abgleichen, um Manipulationsversuche zu erkennen.' },
     { q: 'Kann der Auftraggeber NoBadge-Berichte verifizieren?', a: 'NoBadge erstellt interne Berichte für die Verwaltung. GeoTapp erstellt Berichte mit kryptographischem Siegel, die der Auftraggeber unabhängig auf einem öffentlichen Portal verifizieren kann, ohne Konto und ohne dem Unternehmen vertrauen zu müssen.' },
     { q: 'GeoTapp oder NoBadge für Reinigungsunternehmen?', a: 'Wenn Sie nur Arbeitszeiten erfassen müssen, kann NoBadge ausreichen. Wenn Sie dem Auftraggeber beweisen müssen, dass der Service erbracht wurde, mit verifiziertem GPS, versiegelten Fotos und Berichten mit Beweiskraft, ist GeoTapp die einzige Lösung.' },
@@ -138,7 +138,7 @@ const T: Record<string, Copy> = {
   },
   en: {
     badge: 'App Comparison', h1sub: 'attendance or verifiable proof?',
-    desc: 'NoBadge tracks employee attendance via GPS and QR code. GeoTapp certifies every job with anti-spoofing GPS, cryptographically sealed photos and client-verifiable reports. Two very different approaches.',
+    desc: 'NoBadge tracks employee attendance via GPS and QR code. GeoTapp seals every job with anti-spoofing GPS, cryptographically sealed photos and client-verifiable reports. Two very different approaches.',
     summary: 'Bottom line:',
     summaryText: 'NoBadge is a solid attendance system for basic time tracking. GeoTapp is for companies that need to prove to their client that the work was done, with tamper-proof evidence, verified GPS and reports with evidentiary value that the client can check independently.',
     noteTitle: 'Why simple GPS attendance is not enough',
@@ -168,7 +168,7 @@ const T: Record<string, Copy> = {
   },
   fr: {
     badge: 'Comparatif d\'applis', h1sub: 'pointage ou certification ?',
-    desc: 'NoBadge enregistre les présences des salariés par GPS et QR code. GeoTapp certifie chaque intervention avec GPS anti-spoofing, photos scellées cryptographiquement et rapports vérifiables par le donneur d\'ordre. Deux approches très différentes.',
+    desc: 'NoBadge enregistre les présences des salariés par GPS et QR code. GeoTapp scelle chaque intervention avec GPS anti-spoofing, photos scellées cryptographiquement et rapports vérifiables par le donneur d\'ordre. Deux approches très différentes.',
     summary: 'En résumé :',
     summaryText: 'NoBadge est un bon système de pointage pour ceux qui ont seulement besoin d\'enregistrer les entrées et les sorties. GeoTapp est pour ceux qui doivent prouver à leur donneur d\'ordre que le travail a été fait, avec des preuves infalsifiables, un GPS vérifié et des rapports à valeur probante que le client peut contrôler lui-même.',
     noteTitle: 'Pourquoi le simple pointage GPS ne suffit pas',

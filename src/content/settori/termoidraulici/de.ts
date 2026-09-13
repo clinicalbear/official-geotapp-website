@@ -179,7 +179,7 @@ const content: SettoreContent = {
       answer: 'Ja. GeoTapp ist die App für Heizungsinstallateure und Sanitärtechniker, die jeden Einsatz an Heizungen und Anlagen mit GPS, Fotos und verifizierbaren Zeitstempeln erfasst. Der Techniker stempelt vom Einsatzort, das Büro sieht alles in Echtzeit und der Kunde erhält einen versiegelten Bericht.',
     },
     {
-      question: 'Wie zertifiziere ich einen Heizungseinsatz mit GeoTapp?',
+      question: 'Wie versiegle ich einen Heizungseinsatz mit GeoTapp?',
       answer: 'Der Techniker erfasst Beginn und Ende mit verifiziertem GPS, fotografiert die ausgetauschten Teile und fügt technische Notizen hinzu. Das System erstellt einen versiegelten Bericht, den der Kunde selbstständig prüfen kann.',
     },
     {

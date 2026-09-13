@@ -179,7 +179,7 @@ const content: SettoreContent = {
       answer: 'Ja. GeoTapp ist die App für Elektriker, die jeden Einsatz mit GPS, Fotos und verifizierbaren Zeitstempeln erfasst. Der Techniker stempelt vom Außendienst, das Büro sieht alles in Echtzeit, der Kunde erhält einen versiegelten Einsatzbericht.',
     },
     {
-      question: 'Wie zertifiziere ich einen Elektroeinsatz mit GeoTapp?',
+      question: 'Wie versiegle ich einen Elektroeinsatz mit GeoTapp?',
       answer: 'Der Techniker erfasst Start- und Endzeit mit verifiziertem GPS, fotografiert die Anlage und fügt technische Notizen hinzu. Das System erstellt einen versiegelten Bericht, den der Kunde unabhängig prüfen kann.',
     },
     {

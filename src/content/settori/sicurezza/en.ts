@@ -50,7 +50,7 @@ const content: SettoreContent = {
   },
   differenza: {
     title: 'Security company software: attendance log or verifiable proof?',
-    subtitle: 'Most software records shifts. GeoTapp certifies every attendance with defensible proof.',
+    subtitle: 'Most software records shifts. GeoTapp seals every attendance with defensible proof.',
     rows: [
       {
         label: 'What it records',

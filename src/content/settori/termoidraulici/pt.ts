@@ -179,7 +179,7 @@ const content: SettoreContent = {
       answer: 'Sim. GeoTapp é a app para técnicos de aquecimento e instaladores que regista cada intervenção em caldeiras e instalações com GPS, fotos e carimbos de tempo verificáveis. O técnico regista no local, o escritório vê tudo em tempo real e o cliente recebe um relatório selado.',
     },
     {
-      question: 'Como certifico uma intervenção em caldeira com o GeoTapp?',
+      question: 'Como selo uma intervenção em caldeira com o GeoTapp?',
       answer: 'O técnico regista início e fim com GPS verificado, fotografa os componentes substituídos e adiciona notas técnicas. O sistema gera um relatório selado que o cliente pode verificar de forma autónoma.',
     },
     {
