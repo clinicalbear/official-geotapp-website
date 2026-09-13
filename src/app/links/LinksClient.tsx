@@ -48,7 +48,7 @@ const UI: Record<string, UIStrings> = {
   it: {
     badge: 'Verifica lavoro sul campo',
     h1a: 'Prove GPS, foto e report', h1b: 'verificabili. Sul campo.',
-    sub: 'Certifica ogni intervento in tempo reale. Niente carta, niente dubbi, zero contestazioni.',
+    sub: 'Ogni intervento verificabile in tempo reale. Niente carta, niente dubbi.',
     ctaPrimary: 'Prova GeoTapp gratis',
     ctaPrimaryNote: 'Solo email · Nessuna carta · Pronto in 30 secondi',
     ctaSecondary: 'Prenota una demo',
@@ -140,7 +140,7 @@ const UI: Record<string, UIStrings> = {
   es: {
     badge: 'Verifica el trabajo de campo',
     h1a: 'Pruebas GPS, fotos e informes', h1b: 'verificables. En el campo.',
-    sub: 'Certifica cada intervención en tiempo real. Sin tarjeta, sin dudas, cero disputas.',
+    sub: 'Cada intervención verificable en tiempo real. Sin papel, sin dudas.',
     ctaPrimary: 'Prueba GeoTapp gratis',
     ctaPrimaryNote: 'Solo email · Sin tarjeta · Listo en 30 segundos',
     ctaSecondary: 'Solicita una demo',
@@ -186,7 +186,7 @@ const UI: Record<string, UIStrings> = {
   nl: {
     badge: 'Verifieer veldwerk',
     h1a: 'GPS-bewijs, foto\'s en rapporten', h1b: 'verifieerbaar. In het veld.',
-    sub: 'Certificeer elke opdracht in real time. Geen kaart, geen twijfels, geen disputen.',
+    sub: 'Elke opdracht in real time verifieerbaar. Geen papier, geen twijfels.',
     ctaPrimary: 'Probeer GeoTapp gratis',
     ctaPrimaryNote: 'Alleen e-mail · Geen creditcard · Klaar in 30 seconden',
     ctaSecondary: 'Demo boeken',
@@ -209,7 +209,7 @@ const UI: Record<string, UIStrings> = {
   da: {
     badge: 'Verificer feltarbejde',
     h1a: 'GPS-bevis, fotos og rapporter', h1b: 'verificerbare. I marken.',
-    sub: 'Certificer hver opgave i realtid. Intet kort, ingen tvivl, nul tvister.',
+    sub: 'Hver opgave verificerbar i realtid. Intet papir, ingen tvivl.',
     ctaPrimary: 'Prøv GeoTapp gratis',
     ctaPrimaryNote: 'Kun email · Intet kreditkort · Klar på 30 sekunder',
     ctaSecondary: 'Book en demo',
