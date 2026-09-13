@@ -179,7 +179,7 @@ const content: SettoreContent = {
       answer: 'Oui. GeoTapp est l\'app pour plombiers-chauffagistes et installateurs qui enregistre chaque intervention sur chaudière et installation avec GPS, photos et horodatages vérifiables. Le technicien pointe depuis le terrain, le bureau voit tout en temps réel et le client reçoit un rapport scellé.',
     },
     {
-      question: 'Comment certifier une intervention chaudière avec GeoTapp ?',
+      question: 'Comment sceller une intervention chaudière avec GeoTapp ?',
       answer: 'Le technicien enregistre le début et la fin avec GPS vérifié, photographie les pièces remplacées et ajoute des notes techniques. Le système génère un rapport scellé que le client peut vérifier de façon autonome.',
     },
     {

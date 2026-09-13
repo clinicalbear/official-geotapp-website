@@ -145,7 +145,7 @@ const content: SettoreContent = {
     items: [
       {
         q: 'Como funciona o registo GPS para empresas de limpeza?',
-        a: 'O operador regista entrada e saída a partir do smartphone. GeoTapp regista as coordenadas GPS nesse momento, não introduzidas manualmente. Cada registo é certificado com carimbo temporal e posição verificável pelo cliente.',
+        a: 'O operador regista entrada e saída a partir do smartphone. GeoTapp regista as coordenadas GPS nesse momento, não introduzidas manualmente. Cada registo é selado com carimbo temporal e posição verificável pelo cliente.',
       },
       {
         q: 'Posso provar ao cliente que o serviço foi realizado?',
@@ -190,7 +190,7 @@ const content: SettoreContent = {
     {
       question: 'Como funciona o registo GPS para empresas de limpeza?',
       answer:
-        'O operador regista a partir do smartphone. GeoTapp regista coordenadas GPS, não introduzidas manualmente. Cada registo é certificado com carimbo temporal e posição verificável pelo cliente.',
+        'O operador regista a partir do smartphone. GeoTapp regista coordenadas GPS, não introduzidas manualmente. Cada registo é selado com carimbo temporal e posição verificável pelo cliente.',
     },
     {
       question: 'Posso provar ao cliente que o serviço foi realizado?',

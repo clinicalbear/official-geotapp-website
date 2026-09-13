@@ -218,7 +218,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
       { href: '/blog/nl/2026/05/25/geotapp-updates-mei-2026/',
         label: 'GeoTapp mei 2026: facturatie, AVG, beveiliging, badges' },
       { href: '/blog/nl/2026/05/21/geotapp-vs-hubstaff-2026-surveillance-vs-certificering/',
-        label: 'GeoTapp vs Hubstaff: surveillance versus werkcertificering' },
+        label: 'GeoTapp vs Hubstaff: surveillance versus verzegeld werkbewijs' },
     ],
   };
   // Le 6 locale che NON hanno articoli normative tradotti ricadono su EN.

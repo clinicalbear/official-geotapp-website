@@ -51,9 +51,9 @@ const VERIFIER_FAQ: Record<string, object> = {
     mainEntity: [
       { '@type': 'Question', name: 'Come funziona la verifica di un report GeoTapp?', acceptedAnswer: { '@type': 'Answer', text: 'Ogni report GeoTapp è sigillato con un hash crittografico al momento della chiusura. Il cliente riceve un link univoco e può verificare indipendentemente su geotapp.com/products/geotapp-verifier che i dati GPS, le foto e i timestamp non siano stati modificati dopo la creazione.' } },
       { '@type': 'Question', name: 'Chi può verificare un report GeoTapp Verifier?', acceptedAnswer: { '@type': 'Answer', text: 'Chiunque abbia il link può verificare il report senza accedere all\'account aziendale. Il sistema confronta il sigillo digitale e conferma l\'integrità dei dati in modo completamente indipendente.' } },
-      { '@type': 'Question', name: 'Cosa succede se un cliente contesta il lavoro svolto?', acceptedAnswer: { '@type': 'Answer', text: 'Con GeoTapp Verifier puoi mostrare al cliente il link di verifica. Il report contiene GPS certificato, prove fotografiche con timestamp e firma digitale non alterabile, prove che reggono anche in sede legale.' } },
+      { '@type': 'Question', name: 'Cosa succede se un cliente contesta il lavoro svolto?', acceptedAnswer: { '@type': 'Answer', text: 'Con GeoTapp Verifier puoi mostrare al cliente il link di verifica. Il report contiene GPS sigillato, prove fotografiche con timestamp e firma digitale non alterabile, prove che reggono anche in sede legale.' } },
       { '@type': 'Question', name: 'GeoTapp Verifier è conforme al GDPR?', acceptedAnswer: { '@type': 'Answer', text: 'Sì. I dati registrati vengono trattati in conformità al GDPR. GeoTapp non raccoglie dati di posizione in modo continuo, solo al momento dell\'apertura e chiusura del turno o intervento.' } },
-      { '@type': 'Question', name: 'GeoTapp Verifier funziona con Flow e TimeTracker?', acceptedAnswer: { '@type': 'Answer', text: 'Sì. Verifier è il componente di certificazione che si integra nativamente con GeoTapp Flow (per la gestione operativa) e GeoTapp TimeTracker (per la timbratura GPS dei tecnici sul campo).' } },
+      { '@type': 'Question', name: 'GeoTapp Verifier funziona con Flow e TimeTracker?', acceptedAnswer: { '@type': 'Answer', text: 'Sì. Verifier è il componente di prova verificabile che si integra nativamente con GeoTapp Flow (per la gestione operativa) e GeoTapp TimeTracker (per la timbratura GPS dei tecnici sul campo).' } },
     ],
   },
   en: {
@@ -64,7 +64,7 @@ const VERIFIER_FAQ: Record<string, object> = {
       { '@type': 'Question', name: 'Who can verify a GeoTapp Verifier report?', acceptedAnswer: { '@type': 'Answer', text: 'Anyone with the link can verify the report without accessing your company account. The system compares the digital seal and confirms data integrity in a completely independent way.' } },
       { '@type': 'Question', name: 'What happens when a client disputes completed work?', acceptedAnswer: { '@type': 'Answer', text: 'With GeoTapp Verifier you can show the client the verification link. The report contains certified GPS, photo evidence with timestamps and an unalterable digital signature, evidence that holds up legally.' } },
       { '@type': 'Question', name: 'Is GeoTapp Verifier GDPR compliant?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Recorded data is processed in compliance with GDPR. GeoTapp does not collect location data continuously, only at shift or job opening and closing.' } },
-      { '@type': 'Question', name: 'Does GeoTapp Verifier work with Flow and TimeTracker?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Verifier is the certification component that integrates natively with GeoTapp Flow (for operational management) and GeoTapp TimeTracker (for GPS time tracking of field technicians).' } },
+      { '@type': 'Question', name: 'Does GeoTapp Verifier work with Flow and TimeTracker?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Verifier is the verifiable proof component that integrates natively with GeoTapp Flow (for operational management) and GeoTapp TimeTracker (for GPS time tracking of field technicians).' } },
     ],
   },
   de: {
@@ -73,9 +73,9 @@ const VERIFIER_FAQ: Record<string, object> = {
     mainEntity: [
       { '@type': 'Question', name: 'Wie funktioniert die Berichtsverifizierung mit GeoTapp Verifier?', acceptedAnswer: { '@type': 'Answer', text: 'Jeder GeoTapp-Bericht wird beim Abschluss mit einem kryptographischen Hash versiegelt. Der Kunde erhält einen eindeutigen Link und kann auf geotapp.com/products/geotapp-verifier unabhängig prüfen, ob GPS-Daten, Fotos und Zeitstempel nach der Erstellung unverändert geblieben sind.' } },
       { '@type': 'Question', name: 'Wer kann einen GeoTapp Verifier-Bericht prüfen?', acceptedAnswer: { '@type': 'Answer', text: 'Jeder mit dem Link kann den Bericht prüfen, ohne auf Ihr Unternehmenskonto zugreifen zu müssen.' } },
-      { '@type': 'Question', name: 'Was passiert, wenn ein Kunde die geleistete Arbeit bestreitet?', acceptedAnswer: { '@type': 'Answer', text: 'Mit GeoTapp Verifier können Sie dem Kunden den Verifikationslink zeigen, mit zertifiziertem GPS, Fotobeweisen mit Zeitstempel und nicht veränderbarer digitaler Signatur.' } },
+      { '@type': 'Question', name: 'Was passiert, wenn ein Kunde die geleistete Arbeit bestreitet?', acceptedAnswer: { '@type': 'Answer', text: 'Mit GeoTapp Verifier können Sie dem Kunden den Verifikationslink zeigen, mit versiegeltem GPS, Fotobeweisen mit Zeitstempel und nicht veränderbarer digitaler Signatur.' } },
       { '@type': 'Question', name: 'Ist GeoTapp Verifier DSGVO-konform?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. GeoTapp erfasst den Standort nur beim Ein- und Ausstempeln, nicht kontinuierlich. Die Daten werden DSGVO-konform verarbeitet.' } },
-      { '@type': 'Question', name: 'Funktioniert GeoTapp Verifier mit Flow und TimeTracker?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Verifier ist das Zertifizierungsmodul, das sich nativ in GeoTapp Flow und GeoTapp TimeTracker integriert.' } },
+      { '@type': 'Question', name: 'Funktioniert GeoTapp Verifier mit Flow und TimeTracker?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Verifier ist das Modul für versiegelte Nachweise, das sich nativ in GeoTapp Flow und GeoTapp TimeTracker integriert.' } },
     ],
   },
 };

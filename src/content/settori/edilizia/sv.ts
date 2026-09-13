@@ -9,7 +9,7 @@ const content: SettoreContent = {
     badge: 'App för byggföretag och byggarbetsplatser',
     h1_line1: 'Din byggarbetsplats under kontroll,',
     h1_line2: 'i realtid.',
-    subtitle: 'GPS-certifierade stämplingar, lagstyrning och automatiska rapporter. Inget pappersarbete, inga tvister. GeoTapp kopplar ihop Flow + TimeTracker för platschefer, underentreprenörer och projektledning.',
+    subtitle: 'GPS-förseglade stämplingar, lagstyrning och automatiska rapporter. Inget pappersarbete, inga tvister. GeoTapp kopplar ihop Flow + TimeTracker för platschefer, underentreprenörer och projektledning.',
     cta_primary: 'Testa GeoTapp gratis i 14 dagar',
     cta_note: 'Ingen bindning. Inget kreditkort krävs.',
   },
@@ -18,7 +18,7 @@ const content: SettoreContent = {
     items: [
       {
         title: 'Vem var på byggarbetsplatsen och när?',
-        desc: 'Varje GPS-stämpling är tidsstämplad och certifierad. GeoTapp registrerar verkliga koordinater vid stämplingen, inte manuellt inmatade. Data kan verifieras av projektledningen när som helst.',
+        desc: 'Varje GPS-stämpling är tidsstämplad och förseglad. GeoTapp registrerar verkliga koordinater vid stämplingen, inte manuellt inmatade. Data kan verifieras av projektledningen när som helst.',
       },
       {
         title: 'Hur hanterar du underentreprenörer?',
@@ -98,7 +98,7 @@ const content: SettoreContent = {
     title: 'Funktioner byggda för byggarbetsplatsen',
     items: [
       {
-        title: 'GPS-certifierad närvaro',
+        title: 'GPS-förseglad närvaro',
         desc: 'Varje in- och utpassering registreras med verklig GPS-position och tidsstämpel. Försvarbar inför projektledning, kunder och inspektörer.',
       },
       {
@@ -134,7 +134,7 @@ const content: SettoreContent = {
     items: [
       {
         q: 'Vem var på byggarbetsplatsen och när?',
-        a: 'Varje GPS-stämpling är tidsstämplad och certifierad. GeoTapp registrerar verkliga koordinater vid stämplingen, inte manuellt inmatade. Data kan verifieras av projektledningen när som helst.',
+        a: 'Varje GPS-stämpling är tidsstämplad och förseglad. GeoTapp registrerar verkliga koordinater vid stämplingen, inte manuellt inmatade. Data kan verifieras av projektledningen när som helst.',
       },
       {
         q: 'Hur hanterar du underentreprenörer på byggarbetsplatsen?',
@@ -161,7 +161,7 @@ const content: SettoreContent = {
   schema_faq: [
     {
       question: 'Vem var på byggarbetsplatsen och när?',
-      answer: 'Varje GPS-stämpling är tidsstämplad och certifierad. GeoTapp registrerar verkliga koordinater vid stämplingen, inte manuellt inmatade. Data kan verifieras av projektledningen när som helst.',
+      answer: 'Varje GPS-stämpling är tidsstämplad och förseglad. GeoTapp registrerar verkliga koordinater vid stämplingen, inte manuellt inmatade. Data kan verifieras av projektledningen när som helst.',
     },
     {
       question: 'Hur hanterar du underentreprenörer på byggarbetsplatsen?',

@@ -145,7 +145,7 @@ const content: SettoreContent = {
     items: [
       {
         q: '¿Cómo funciona el fichaje GPS para empresas de limpieza?',
-        a: 'El operario ficha entrada y salida desde el smartphone. GeoTapp registra las coordenadas GPS en ese momento, no se introducen a mano. Cada fichaje es certificado con marca de tiempo y posición verificable por el cliente.',
+        a: 'El operario ficha entrada y salida desde el smartphone. GeoTapp registra las coordenadas GPS en ese momento, no se introducen a mano. Cada fichaje es sellado con marca de tiempo y posición verificable por el cliente.',
       },
       {
         q: '¿Puedo demostrar al cliente que el servicio se realizó?',
@@ -190,7 +190,7 @@ const content: SettoreContent = {
     {
       question: '¿Cómo funciona el fichaje GPS para empresas de limpieza?',
       answer:
-        'El operario ficha desde el smartphone. GeoTapp registra coordenadas GPS, no se introducen a mano. Cada fichaje es certificado con marca de tiempo y posición verificable por el cliente.',
+        'El operario ficha desde el smartphone. GeoTapp registra coordenadas GPS, no se introducen a mano. Cada fichaje es sellado con marca de tiempo y posición verificable por el cliente.',
     },
     {
       question: '¿Puedo demostrar al cliente que el servicio se realizó?',

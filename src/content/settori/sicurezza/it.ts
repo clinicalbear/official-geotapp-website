@@ -9,7 +9,7 @@ const content: SettoreContent = {
     badge: 'Software per Vigilanza Privata, Guardie Giurate e Steward',
     h1_line1: 'Presenze e turni verificabili',
     h1_line2: 'per vigilanza e sicurezza privata',
-    subtitle: 'GeoTapp Flow e TimeTracker documentano la presenza delle guardie giurate ai posti assegnati con GPS verificato e timestamp immutabili. Conformità al CCNL Vigilanza Privata GPG, passaggio di consegne digitale e tracciamento qualifiche: tutto in un\'unica piattaforma. L\'app per vigilanza privata che certifica ogni turno, ogni ronda, ogni presenza.',
+    subtitle: 'GeoTapp Flow e TimeTracker documentano la presenza delle guardie giurate ai posti assegnati con GPS verificato e timestamp immutabili. Conformità al CCNL Vigilanza Privata GPG, passaggio di consegne digitale e tracciamento qualifiche: tutto in un\'unica piattaforma. L\'app per vigilanza privata che sigilla ogni turno, ogni ronda, ogni presenza.',
     cta_primary: 'Inizia subito gratuitamente!',
     cta_note: 'Nessun vincolo. Risposta entro 12 ore lavorative.',
   },
@@ -22,7 +22,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Report incidenti senza prova di posizione',
-        desc: 'Un rapporto di incidente scritto a mano non ha valore se non è collegato a una posizione GPS certificata e a un orario immutabile. I verbali cartacei sono troppo facili da contestare.',
+        desc: 'Un rapporto di incidente scritto a mano non ha valore se non è collegato a una posizione GPS sigillata e a un orario immutabile. I verbali cartacei sono troppo facili da contestare.',
       },
       {
         title: 'Passaggio di consegne ancora su carta',
@@ -50,7 +50,7 @@ const content: SettoreContent = {
   },
   differenza: {
     title: 'Software per aziende di sicurezza: registro presenze o prove verificabili?',
-    subtitle: 'La maggior parte dei software registra i turni. GeoTapp certifica ogni presenza con prove difendibili.',
+    subtitle: 'La maggior parte dei software registra i turni. GeoTapp sigilla ogni presenza con prove difendibili.',
     rows: [
       {
         label: 'Cosa registra',
@@ -158,7 +158,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Come aiuta GeoTapp nella gestione dei report incidenti?',
-        a: 'TimeTracker collega ogni evento a posizione GPS certificata e timestamp immutabile. Il report di incidente generato da GeoTapp include coordinate, ora e foto, rendendo il documento difendibile in sede legale e contrattuale.',
+        a: 'TimeTracker collega ogni evento a posizione GPS sigillata e timestamp immutabile. Il report di incidente generato da GeoTapp include coordinate, ora e foto, rendendo il documento difendibile in sede legale e contrattuale.',
       },
       {
         q: 'GeoTapp supporta il passaggio di consegne digitale tra guardie?',
@@ -182,7 +182,7 @@ const content: SettoreContent = {
   schema_faq: [
     {
       question: 'GeoTapp funziona per la gestione di guardie giurate e ronde di sicurezza?',
-      answer: 'Sì. GeoTapp permette alle aziende di sicurezza di certificare ogni turno e ogni ronda: le guardie timbrano con GPS verificato dallo smartphone, producendo prove documentabili del servizio svolto.',
+      answer: 'Sì. GeoTapp permette alle aziende di sicurezza di sigillare ogni turno e ogni ronda: le guardie timbrano con GPS verificato dallo smartphone, producendo prove documentabili del servizio svolto.',
     },
     {
       question: 'Come documento le ronde e i controlli periodici?',

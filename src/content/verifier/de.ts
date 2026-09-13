@@ -104,7 +104,7 @@ const de: VerifierCopy = {
   ecosystem_badge: 'GeoTapp-Ökosystem',
   ecosystem_title: 'Verifier arbeitet mit Flow und TimeTracker zusammen.',
   ecosystem_desc:
-    'GeoTapp Verifier ist kein eigenständiges Tool. Es ist der letzte Schritt eines integrierten Betriebszyklus: Daten werden im Feld mit TimeTracker erfasst, in Flow organisiert und dann von Verifier zertifiziert.',
+    'GeoTapp Verifier ist kein eigenständiges Tool. Es ist der letzte Schritt eines integrierten Betriebszyklus: Daten werden im Feld mit TimeTracker erfasst, in Flow organisiert und dann von Verifier versiegelt.',
   cta_title: 'Beginnen Sie mit der Erstellung verifizierbarer Berichte.',
   cta_subtitle:
     'Entdecken Sie, wie GeoTapp Verifier Ihrem Unternehmen helfen kann, Streitigkeiten zu reduzieren und die Glaubwürdigkeit bei Kunden zu steigern.',

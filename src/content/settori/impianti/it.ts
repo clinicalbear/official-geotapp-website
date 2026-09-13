@@ -18,7 +18,7 @@ const content: SettoreContent = {
     items: [
       {
         title: 'I clienti contestano le ore di intervento',
-        desc: 'Timbrature GPS timestampate come prova inconfutabile. Il dato è certificato al momento dell\'intervento, non modificabile.',
+        desc: 'Timbrature GPS timestampate come prova inconfutabile. Il dato è sigillato al momento dell\'intervento, non modificabile.',
       },
       {
         title: 'Rincorri i tecnici per sapere dove sono',
@@ -49,7 +49,7 @@ const content: SettoreContent = {
     ],
   },
   differenza: {
-    title: 'App per impiantisti: timbratura o certificazione?',
+    title: 'App per impiantisti: timbratura o prova verificabile?',
     subtitle: 'La maggior parte delle app registra l\'orario. GeoTapp produce prove verificabili.',
     rows: [
       {

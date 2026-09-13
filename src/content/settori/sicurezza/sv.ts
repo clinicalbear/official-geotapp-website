@@ -22,7 +22,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Incidentrapporter utan positionsbevis',
-        desc: 'En handskriven incidentrapport har lågt bevisvärde utan certifierad GPS-position och en manipuleringssäker tidsstämpel. Pappersloggar är för lätta att bestrida.',
+        desc: 'En handskriven incidentrapport har lågt bevisvärde utan förseglad GPS-position och en manipuleringssäker tidsstämpel. Pappersloggar är för lätta att bestrida.',
       },
       {
         title: 'Skiftöverlämning fortfarande på papper',
@@ -80,7 +80,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Hur hjälper GeoTapp med dokumentation av incidentrapporter?',
-        a: 'TimeTracker kopplar varje incident till en certifierad GPS-position och en oföränderlig tidsstämpel. Den genererade incidentrapporten innehåller koordinater, tid och foton, vilket gör den försvarbar i rättsliga och avtalsmässiga förfaranden.',
+        a: 'TimeTracker kopplar varje incident till en förseglad GPS-position och en oföränderlig tidsstämpel. Den genererade incidentrapporten innehåller koordinater, tid och foton, vilket gör den försvarbar i rättsliga och avtalsmässiga förfaranden.',
       },
       {
         q: 'Stödjer GeoTapp digital skiftöverlämning mellan ordningsvakter?',

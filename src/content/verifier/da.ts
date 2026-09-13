@@ -61,7 +61,7 @@ const da: VerifierCopy = {
     {
       num: '03',
       title: 'Verifier kontrollerer integriteten',
-      desc: 'Alle kan verificere rapporten med GeoTapp Verifier. Systemet sammenligner dokumentet med de registrerede operationelle data og certificerer, om rapporten er intakt og autentisk.',
+      desc: 'Alle kan verificere rapporten med GeoTapp Verifier. Systemet sammenligner dokumentet med de registrerede operationelle data og forsegler, om rapporten er intakt og autentisk.',
     },
   ],
   features_badge: 'Hvad verificeres',
@@ -104,7 +104,7 @@ const da: VerifierCopy = {
   ecosystem_badge: 'GeoTapp-økosystemet',
   ecosystem_title: 'Verifier arbejder med Flow og TimeTracker.',
   ecosystem_desc:
-    'GeoTapp Verifier er ikke et selvstændigt værktøj. Det er det sidste trin i en integreret operationel cyklus: data indsamles i marken med TimeTracker, organiseres i Flow og certificeres derefter af Verifier.',
+    'GeoTapp Verifier er ikke et selvstændigt værktøj. Det er det sidste trin i en integreret operationel cyklus: data indsamles i marken med TimeTracker, organiseres i Flow og forsegles derefter af Verifier.',
   cta_title: 'Begynd at producere verificerbare rapporter.',
   cta_subtitle:
     'Opdag, hvordan GeoTapp Verifier kan hjælpe din virksomhed med at reducere tvister og øge troværdigheden over for kunder.',

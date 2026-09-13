@@ -145,7 +145,7 @@ const content: SettoreContent = {
     items: [
       {
         q: 'Hvordan fungerer GPS-stempling for rengjøringsfirmaer?',
-        a: 'Renholderen stempler inn og ut fra smarttelefonen. GeoTapp registrerer GPS-koordinatene i det øyeblikket, ikke manuelt registrert. Hver stempling er sertifisert med tidsstempel og posisjon verifiserbar av kunden.',
+        a: 'Renholderen stempler inn og ut fra smarttelefonen. GeoTapp registrerer GPS-koordinatene i det øyeblikket, ikke manuelt registrert. Hver stempling er forseglet med tidsstempel og posisjon verifiserbar av kunden.',
       },
       {
         q: 'Kan jeg bevise overfor kunden at tjenesten ble utført?',
@@ -190,7 +190,7 @@ const content: SettoreContent = {
     {
       question: 'Hvordan fungerer GPS-stempling for rengjøringsfirmaer?',
       answer:
-        'Renholderen stempler fra smarttelefonen. GeoTapp registrerer GPS-koordinater, ikke manuelt registrert. Hver stempling er sertifisert med tidsstempel og posisjon verifiserbar av kunden.',
+        'Renholderen stempler fra smarttelefonen. GeoTapp registrerer GPS-koordinater, ikke manuelt registrert. Hver stempling er forseglet med tidsstempel og posisjon verifiserbar av kunden.',
     },
     {
       question: 'Kan jeg bevise overfor kunden at tjenesten ble utført?',

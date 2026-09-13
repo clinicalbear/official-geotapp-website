@@ -18,7 +18,7 @@ const content: SettoreContent = {
     items: [
       {
         title: 'Kunden bestreiten die geleisteten Stunden',
-        desc: 'GPS-Stempelungen mit Zeitstempel als unwiderlegbarer Nachweis. Die Daten werden zum Zeitpunkt des Einsatzes zertifiziert, nachträglich nicht änderbar.',
+        desc: 'GPS-Stempelungen mit Zeitstempel als unwiderlegbarer Nachweis. Die Daten werden zum Zeitpunkt des Einsatzes versiegelt, nachträglich nicht änderbar.',
       },
       {
         title: 'Techniker hinterhertelefonieren',

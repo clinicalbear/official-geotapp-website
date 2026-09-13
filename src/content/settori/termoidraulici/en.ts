@@ -49,7 +49,7 @@ const content: SettoreContent = {
     ],
   },
   differenza: {
-    title: 'App for heating engineers: time recording or job certification?',
+    title: 'App for heating engineers: time recording or verifiable proof of work?',
     subtitle: 'Most apps record the clock-in. GeoTapp produces verifiable proof.',
     rows: [
       {

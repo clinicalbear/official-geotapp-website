@@ -75,12 +75,12 @@ const content: SettoreContent = {
     subtitle: 'Was Teams uns am häufigsten vor dem Start fragen.',
     items: [
       {
-        q: 'Ist GeoTapp für §34a-zertifizierte Sicherheitsunternehmen geeignet?',
+        q: 'Ist GeoTapp für §34a-versiegelte Sicherheitsunternehmen geeignet?',
         a: 'Ja. GeoTapp wird von Sicherheitsunternehmen eingesetzt, um die Anwesenheit von Wachpersonal mit GPS-Nachweis zu dokumentieren, Schichtwechsel zu verwalten und §34a-Qualifikationsabläufe zu verfolgen.',
       },
       {
         q: 'Wie unterstützt GeoTapp die Dokumentation von Störungsberichten?',
-        a: 'TimeTracker verknüpft jeden Vorfall mit einem zertifizierten GPS-Standort und einem unveränderlichen Zeitstempel. Der generierte Störungsbericht enthält Koordinaten, Uhrzeit und Fotos, gerichtsverwertbar und auftraggebersicher.',
+        a: 'TimeTracker verknüpft jeden Vorfall mit einem versiegelten GPS-Standort und einem unveränderlichen Zeitstempel. Der generierte Störungsbericht enthält Koordinaten, Uhrzeit und Fotos, gerichtsverwertbar und auftraggebersicher.',
       },
       {
         q: 'Unterstützt GeoTapp die digitale Schichtübergabe zwischen Wachpersonen?',

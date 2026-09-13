@@ -179,7 +179,7 @@ const content: SettoreContent = {
       answer: 'Ja. GeoTapp er appen til VVS-installatører og varmeanlægsinstallatører, der registrerer hvert job på kedler og anlæg med GPS, fotos og verificerbare tidsstempler. Teknikeren stempler ind fra stedet, kontoret ser alt i realtid og kunden modtager en forseglet rapport.',
     },
     {
-      question: 'Hvordan certificerer jeg et kedelJob med GeoTapp?',
+      question: 'Hvordan forsegler jeg et kedelJob med GeoTapp?',
       answer: 'Teknikeren registrerer start og slut med verificeret GPS, fotograferer de udskiftede dele og tilføjer tekniske noter. Systemet genererer en forseglet rapport, som kunden kan verificere selvstændigt.',
     },
     {

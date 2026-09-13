@@ -145,7 +145,7 @@ const content: SettoreContent = {
     items: [
       {
         q: 'Hur fungerar GPS-stämpling för städföretag?',
-        a: 'Städaren stämplar in och ut från sin smartphone. GeoTapp registrerar GPS-koordinaterna i det ögonblicket, inte manuellt inmatade. Varje stämpling är certifierad med tidsstämpel och position verifierbar av kunden.',
+        a: 'Städaren stämplar in och ut från sin smartphone. GeoTapp registrerar GPS-koordinaterna i det ögonblicket, inte manuellt inmatade. Varje stämpling är förseglad med tidsstämpel och position verifierbar av kunden.',
       },
       {
         q: 'Kan jag bevisa för kunden att tjänsten utfördes?',
@@ -190,7 +190,7 @@ const content: SettoreContent = {
     {
       question: 'Hur fungerar GPS-stämpling för städföretag?',
       answer:
-        'Städaren stämplar från sin smartphone. GeoTapp registrerar GPS-koordinater, inte manuellt inmatade. Varje stämpling är certifierad med tidsstämpel och position verifierbar av kunden.',
+        'Städaren stämplar från sin smartphone. GeoTapp registrerar GPS-koordinater, inte manuellt inmatade. Varje stämpling är förseglad med tidsstämpel och position verifierbar av kunden.',
     },
     {
       question: 'Kan jag bevisa för kunden att tjänsten utfördes?',

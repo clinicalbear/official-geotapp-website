@@ -89,7 +89,7 @@ const content: SettoreContent = {
     ],
     dopo: [
       'Il cliente nega che la riparazione sia stata eseguita.',
-      'Apri il rapportino: foto GPS dell\'impianto, orario certificato, note tecniche.',
+      'Apri il rapportino: foto GPS dell\'impianto, orario sigillato, note tecniche.',
       'Glielo invii. La contestazione finisce in un minuto.',
       'Il pagamento è al sicuro. Il tecnico è tutelato.',
     ],
@@ -179,7 +179,7 @@ const content: SettoreContent = {
       answer: 'Sì. GeoTapp è l\'app per idraulici e termoidraulici che registra ogni intervento con GPS, foto e timestamp verificabili. Il tecnico timbra dal campo, l\'ufficio vede tutto in tempo reale, il cliente riceve un rapportino sigillato.',
     },
     {
-      question: 'Come certifico un intervento idraulico con GeoTapp?',
+      question: 'Come sigillo un intervento idraulico con GeoTapp?',
       answer: 'Il tecnico registra su GeoTapp l\'orario di inizio e fine con GPS verificato, le foto dell\'impianto prima e dopo, e le note tecniche sui materiali usati. Il sistema genera un rapportino sigillato che il cliente può verificare autonomamente.',
     },
     {

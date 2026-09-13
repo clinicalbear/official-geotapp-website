@@ -476,7 +476,7 @@ export default function GeoTappApp() {
         <div className="r-s d1" style={{ display: 'flex', justifyContent: 'center' }}>
           <div className="sheet">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/verifier-report.webp" alt="Report certificato GeoTapp" loading="lazy" />
+            <img src="/verifier-report.webp" alt="Report sigillato GeoTapp" loading="lazy" />
           </div>
         </div>
       </div></div></section>

@@ -22,7 +22,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Incidentrapporten zonder locatiebewijs',
-        desc: 'Een handgeschreven incidentrapport heeft weinig bewijswaarde zonder gecertificeerde GPS-positie en een manipulatiebestendige tijdstempel. Papieren logboeken zijn te gemakkelijk te betwisten.',
+        desc: 'Een handgeschreven incidentrapport heeft weinig bewijswaarde zonder verzegelde GPS-positie en een manipulatiebestendige tijdstempel. Papieren logboeken zijn te gemakkelijk te betwisten.',
       },
       {
         title: 'Dienstoverdracht nog op papier',
@@ -57,7 +57,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Diploma- en certificaatbeheer (CAO Particuliere Beveiliging)',
-        desc: 'Beheer beveiligingsdiploma\'s, BHV-certificaten en vervaldatums per medewerker. Geen niet-gecertificeerd personeel op dienst door een vergissing.',
+        desc: 'Beheer beveiligingsdiploma\'s, BHV-certificaten en vervaldatums per medewerker. Geen niet-verzegeld personeel op dienst door een vergissing.',
       },
       {
         title: 'Export compatibel met AFAS en Exact',
@@ -75,12 +75,12 @@ const content: SettoreContent = {
     subtitle: 'Wat teams ons het meest vragen voordat ze starten.',
     items: [
       {
-        q: 'Is GeoTapp geschikt voor beveiligingsbedrijven en gecertificeerde beveiligers?',
+        q: 'Is GeoTapp geschikt voor beveiligingsbedrijven en verzegelde beveiligers?',
         a: 'Ja. GeoTapp wordt gebruikt door beveiligingsbedrijven om de aanwezigheid van beveiligers op toegewezen posten met geverifieerde GPS te documenteren, dienstwisselingen te beheren en diplomavervaldata conform de CAO Particuliere Beveiliging bij te houden.',
       },
       {
         q: 'Hoe helpt GeoTapp bij het documenteren van incidentrapporten?',
-        a: 'TimeTracker koppelt elk incident aan een gecertificeerde GPS-positie en een onveranderlijke tijdstempel. Het gegenereerde incidentrapport bevat coördinaten, tijdstip en foto\'s, waardoor het verdedigbaar is in juridische en contractuele procedures.',
+        a: 'TimeTracker koppelt elk incident aan een verzegelde GPS-positie en een onveranderlijke tijdstempel. Het gegenereerde incidentrapport bevat coördinaten, tijdstip en foto\'s, waardoor het verdedigbaar is in juridische en contractuele procedures.',
       },
       {
         q: 'Ondersteunt GeoTapp digitale dienstoverdracht tussen beveiligers?',

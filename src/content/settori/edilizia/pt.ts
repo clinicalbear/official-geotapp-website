@@ -3,13 +3,13 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'App para Obras de Construção: Presenças GPS e Gestão de Equipas | GeoTapp',
-    description: 'Gerencie presenças, turnos e segurança em obra com GPS em tempo real. Registos certificados, relatórios automáticos. App conforme com RGPD para empresas de construção.',
+    description: 'Gerencie presenças, turnos e segurança em obra com GPS em tempo real. Registos selados, relatórios automáticos. App conforme com RGPD para empresas de construção.',
   },
   hero: {
     badge: 'App para empresas de construção e obras',
     h1_line1: 'A sua obra sob controlo,',
     h1_line2: 'em tempo real.',
-    subtitle: 'Registos GPS certificados, gestão de equipas e relatórios automáticos. Zero papel, zero disputas. GeoTapp liga Flow + TimeTracker para diretores de obra, subempreiteiros e fiscalização.',
+    subtitle: 'Registos GPS selados, gestão de equipas e relatórios automáticos. Zero papel, zero disputas. GeoTapp liga Flow + TimeTracker para diretores de obra, subempreiteiros e fiscalização.',
     cta_primary: 'Experimente GeoTapp grátis durante 14 dias',
     cta_note: 'Sem compromisso. Sem cartão de crédito.',
   },
@@ -18,7 +18,7 @@ const content: SettoreContent = {
     items: [
       {
         title: 'Quem esteve em obra e quando?',
-        desc: 'Cada registo GPS tem marca temporal e é certificado. GeoTapp regista coordenadas reais no momento do registo, não inseridas manualmente. Os dados são verificáveis pela fiscalização a qualquer momento.',
+        desc: 'Cada registo GPS tem marca temporal e é selado. GeoTapp regista coordenadas reais no momento do registo, não inseridas manualmente. Os dados são verificáveis pela fiscalização a qualquer momento.',
       },
       {
         title: 'Como gerir subempreiteiros?',
@@ -134,7 +134,7 @@ const content: SettoreContent = {
     items: [
       {
         q: 'Quem esteve em obra e quando?',
-        a: 'Cada registo GPS tem marca temporal e é certificado. GeoTapp regista coordenadas reais no momento do registo, não inseridas manualmente. Os dados são verificáveis pela fiscalização a qualquer momento.',
+        a: 'Cada registo GPS tem marca temporal e é selado. GeoTapp regista coordenadas reais no momento do registo, não inseridas manualmente. Os dados são verificáveis pela fiscalização a qualquer momento.',
       },
       {
         q: 'Como gerir subempreiteiros em obra?',
@@ -161,7 +161,7 @@ const content: SettoreContent = {
   schema_faq: [
     {
       question: 'Quem esteve em obra e quando?',
-      answer: 'Cada registo GPS tem marca temporal e é certificado. GeoTapp regista coordenadas reais no momento do registo, não inseridas manualmente. Os dados são verificáveis pela fiscalização a qualquer momento.',
+      answer: 'Cada registo GPS tem marca temporal e é selado. GeoTapp regista coordenadas reais no momento do registo, não inseridas manualmente. Os dados são verificáveis pela fiscalização a qualquer momento.',
     },
     {
       question: 'Como gerir subempreiteiros em obra?',

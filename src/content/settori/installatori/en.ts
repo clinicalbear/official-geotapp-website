@@ -49,7 +49,7 @@ const content: SettoreContent = {
     ],
   },
   differenza: {
-    title: 'App for installers: time tracking or job certification?',
+    title: 'App for installers: time tracking or verifiable proof of work?',
     subtitle: 'Most apps record the clock-in. GeoTapp produces verifiable proof.',
     rows: [
       {

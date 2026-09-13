@@ -18,7 +18,7 @@ const content: SettoreContent = {
     items: [
       {
         title: 'Kunder bestrider de arbejdede timer',
-        desc: 'GPS-stemplinger tidsstemplet som uigendriveligt bevis. Data certificeres i opgaveøjeblikket, kan ikke redigeres efterfølgende.',
+        desc: 'GPS-stemplinger tidsstemplet som uigendriveligt bevis. Data forsegles i opgaveøjeblikket, kan ikke redigeres efterfølgende.',
       },
       {
         title: 'Jagte teknikere for opdateringer',

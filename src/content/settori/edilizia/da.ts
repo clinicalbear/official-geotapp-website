@@ -3,13 +3,13 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'Byggeplads-app: GPS-fremmøde & Holdstyring | GeoTapp',
-    description: 'Administrer fremmøde, vagter og sikkerhed på byggepladsen med GPS i realtid. Certificerede stemplinger, automatiske rapporter. GDPR-kompatibel app for byggefirmaer.',
+    description: 'Administrer fremmøde, vagter og sikkerhed på byggepladsen med GPS i realtid. Forseglede stemplinger, automatiske rapporter. GDPR-kompatibel app for byggefirmaer.',
   },
   hero: {
     badge: 'App til byggefirmaer og byggepladser',
     h1_line1: 'Din byggeplads under kontrol,',
     h1_line2: 'i realtid.',
-    subtitle: 'GPS-certificerede stemplinger, holdstyring og automatiske rapporter. Intet papirarbejde, ingen tvister. GeoTapp forbinder Flow + TimeTracker for byggeledere, underentreprenører og projektledelse.',
+    subtitle: 'GPS-forseglede stemplinger, holdstyring og automatiske rapporter. Intet papirarbejde, ingen tvister. GeoTapp forbinder Flow + TimeTracker for byggeledere, underentreprenører og projektledelse.',
     cta_primary: 'Prøv GeoTapp gratis i 14 dage',
     cta_note: 'Ingen binding. Intet kreditkort påkrævet.',
   },
@@ -18,7 +18,7 @@ const content: SettoreContent = {
     items: [
       {
         title: 'Hvem var på byggepladsen og hvornår?',
-        desc: 'Hver GPS-stempling er tidsstemplet og certificeret. GeoTapp registrerer reelle koordinater i stemplingsøjeblikket, ikke indtastet manuelt. Data kan verificeres af byggeledelsen til enhver tid.',
+        desc: 'Hver GPS-stempling er tidsstemplet og forseglet. GeoTapp registrerer reelle koordinater i stemplingsøjeblikket, ikke indtastet manuelt. Data kan verificeres af byggeledelsen til enhver tid.',
       },
       {
         title: 'Hvordan styrer du underentreprenører?',
@@ -98,7 +98,7 @@ const content: SettoreContent = {
     title: 'Funktioner bygget til byggepladsen',
     items: [
       {
-        title: 'GPS-certificeret fremmøde',
+        title: 'GPS-forseglet fremmøde',
         desc: 'Hver ind- og udgang registreres med reel GPS-position og tidsstempel. Forsvarligt over for byggeledelse, kunder og inspektører.',
       },
       {
@@ -134,7 +134,7 @@ const content: SettoreContent = {
     items: [
       {
         q: 'Hvem var på byggepladsen og hvornår?',
-        a: 'Hver GPS-stempling er tidsstemplet og certificeret. GeoTapp registrerer reelle koordinater i stemplingsøjeblikket, ikke indtastet manuelt. Data kan verificeres af byggeledelsen til enhver tid.',
+        a: 'Hver GPS-stempling er tidsstemplet og forseglet. GeoTapp registrerer reelle koordinater i stemplingsøjeblikket, ikke indtastet manuelt. Data kan verificeres af byggeledelsen til enhver tid.',
       },
       {
         q: 'Hvordan styrer du underentreprenører på byggepladsen?',
@@ -161,7 +161,7 @@ const content: SettoreContent = {
   schema_faq: [
     {
       question: 'Hvem var på byggepladsen og hvornår?',
-      answer: 'Hver GPS-stempling er tidsstemplet og certificeret. GeoTapp registrerer reelle koordinater i stemplingsøjeblikket, ikke indtastet manuelt. Data kan verificeres af byggeledelsen til enhver tid.',
+      answer: 'Hver GPS-stempling er tidsstemplet og forseglet. GeoTapp registrerer reelle koordinater i stemplingsøjeblikket, ikke indtastet manuelt. Data kan verificeres af byggeledelsen til enhver tid.',
     },
     {
       question: 'Hvordan styrer du underentreprenører på byggepladsen?',

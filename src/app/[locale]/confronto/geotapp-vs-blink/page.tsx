@@ -12,16 +12,16 @@ const ARTICLE_DATE_PUBLISHED = '2026-02-01';
 const ARTICLE_DATE_MODIFIED = '2026-05-23';
 
 const META: Record<string, { title: string; description: string }> = {
-  de: { title: 'GeoTapp vs Blink - Vergleich 2026 | GeoTapp', description: 'GeoTapp vs Blink: Zeiterfassung oder Zertifizierung? Vergleich von Anti-Spoofing-GPS, kryptographisch versiegelten Berichten und fälschungssicheren Fotobeweisen für Gebäudereinigung.' },
-  it: { title: 'GeoTapp vs Blink - Confronto 2026 | GeoTapp', description: 'GeoTapp vs Blink: timbratura o certificazione? Confronto su GPS anti-spoofing, report sigillati crittograficamente e prove fotografiche per imprese di pulizie.' },
-  en: { title: 'GeoTapp vs Blink - Comparison 2026 | GeoTapp', description: 'GeoTapp vs Blink: time tracking or certification? Compare anti-spoofing GPS, cryptographically sealed reports and tamper-proof photo evidence for cleaning companies.' },
-  nl: { title: 'GeoTapp vs Blink - Vergelijking 2026 | GeoTapp', description: 'GeoTapp vs Blink: tijdregistratie of certificering? Vergelijk anti-spoofing GPS en cryptografisch verzegelde rapporten.' },
-  fr: { title: 'GeoTapp vs Blink - Comparaison 2026 | GeoTapp', description: 'GeoTapp vs Blink : pointage ou certification ? Comparez GPS anti-fraude et rapports scelles cryptographiquement.' },
-  es: { title: 'GeoTapp vs Blink - Comparacion 2026 | GeoTapp', description: 'GeoTapp vs Blink: fichaje o certificacion? Compara GPS anti-spoofing e informes sellados criptograficamente.' },
-  pt: { title: 'GeoTapp vs Blink - Comparacao 2026 | GeoTapp', description: 'GeoTapp vs Blink: registo ou certificacao? Compare GPS anti-spoofing e relatorios selados criptograficamente.' },
-  da: { title: 'GeoTapp vs Blink - Sammenligning 2026 | GeoTapp', description: 'GeoTapp vs Blink: tidsregistrering eller certificering? Sammenlign anti-spoofing GPS og kryptografisk forseglede rapporter.' },
-  sv: { title: 'GeoTapp vs Blink - Jamforelse 2026 | GeoTapp', description: 'GeoTapp vs Blink: tidrapportering eller certifiering? Jamfor anti-spoofing-GPS och kryptografiskt forseglade rapporter.' },
-  nb: { title: 'GeoTapp vs Blink - Sammenligning 2026 | GeoTapp', description: 'GeoTapp vs Blink: tidsregistrering eller sertifisering? Sammenlign anti-spoofing GPS og kryptografisk forseglede rapporter.' },
+  de: { title: 'GeoTapp vs Blink - Vergleich 2026 | GeoTapp', description: 'GeoTapp vs Blink: Zeiterfassung oder versiegelter Nachweis? Vergleich von Anti-Spoofing-GPS, kryptographisch versiegelten Berichten und fälschungssicheren Fotobeweisen für Gebäudereinigung.' },
+  it: { title: 'GeoTapp vs Blink - Confronto 2026 | GeoTapp', description: 'GeoTapp vs Blink: timbratura o prova verificabile? Confronto su GPS anti-spoofing, report sigillati crittograficamente e prove fotografiche per imprese di pulizie.' },
+  en: { title: 'GeoTapp vs Blink - Comparison 2026 | GeoTapp', description: 'GeoTapp vs Blink: time tracking or verifiable proof? Compare anti-spoofing GPS, cryptographically sealed reports and tamper-proof photo evidence for cleaning companies.' },
+  nl: { title: 'GeoTapp vs Blink - Vergelijking 2026 | GeoTapp', description: 'GeoTapp vs Blink: tijdregistratie of verzegeld bewijs? Vergelijk anti-spoofing GPS en cryptografisch verzegelde rapporten.' },
+  fr: { title: 'GeoTapp vs Blink - Comparaison 2026 | GeoTapp', description: 'GeoTapp vs Blink : pointage ou preuve vérifiable ? Comparez GPS anti-fraude et rapports scelles cryptographiquement.' },
+  es: { title: 'GeoTapp vs Blink - Comparacion 2026 | GeoTapp', description: 'GeoTapp vs Blink: fichaje o prueba verificable? Compara GPS anti-spoofing e informes sellados criptograficamente.' },
+  pt: { title: 'GeoTapp vs Blink - Comparacao 2026 | GeoTapp', description: 'GeoTapp vs Blink: registo ou prova verificavel? Compare GPS anti-spoofing e relatorios selados criptograficamente.' },
+  da: { title: 'GeoTapp vs Blink - Sammenligning 2026 | GeoTapp', description: 'GeoTapp vs Blink: tidsregistrering eller forseglet bevis? Sammenlign anti-spoofing GPS og kryptografisk forseglede rapporter.' },
+  sv: { title: 'GeoTapp vs Blink - Jamforelse 2026 | GeoTapp', description: 'GeoTapp vs Blink: tidrapportering eller förseglat bevis? Jamfor anti-spoofing-GPS och kryptografiskt forseglade rapporter.' },
+  nb: { title: 'GeoTapp vs Blink - Sammenligning 2026 | GeoTapp', description: 'GeoTapp vs Blink: tidsregistrering eller forseglet bevis? Sammenlign anti-spoofing GPS og kryptografisk forseglede rapporter.' },
   ru: { title: 'GeoTapp vs Blink - Sravnenie 2026 | GeoTapp', description: 'GeoTapp vs Blink: uchet vremeni ili sertifikaciya? Sravnenie anti-spoofing GPS i kriptograficheski zapechatannyh otchetov.' },
 };
 
@@ -29,61 +29,61 @@ type FaqItem = { q: string; a: string };
 
 const FAQ: Record<string, FaqItem[]> = {
   it: [
-    { q: 'Qual è la differenza principale tra GeoTapp e Blink?', a: 'Blink è il software leader per la Gebäudereinigung in Germania: timbratura GPS, QR code, NFC, gestione attività e comunicazione team. GeoTapp va oltre: è un sistema di certificazione che documenta ogni intervento con GPS anti-spoofing e foto sigillate crittograficamente. Il committente verifica da solo.' },
+    { q: 'Qual è la differenza principale tra GeoTapp e Blink?', a: 'Blink è il software leader per la Gebäudereinigung in Germania: timbratura GPS, QR code, NFC, gestione attività e comunicazione team. GeoTapp va oltre: è un sistema di prova verificabile che documenta ogni intervento con GPS anti-spoofing e foto sigillate crittograficamente. Il committente verifica da solo.' },
     { q: 'Blink ha il GPS anti-spoofing?', a: 'No. Blink confronta la posizione GPS con il luogo di lavoro preimpostato ma non verifica se la posizione è reale o falsificata. GeoTapp rileva i tentativi di falsificazione.' },
     { q: 'Il committente può verificare i report di Blink?', a: 'Blink genera report interni. GeoTapp genera report con sigillo crittografico verificabili dal committente in modo indipendente.' },
     { q: 'Blink è il numero 1 nella Gebäudereinigung. Perché scegliere GeoTapp?', a: 'Blink eccelle nella timbratura e comunicazione per il settore pulizie tedesco. Ma se dovete dimostrare al committente che il servizio è stato fatto con prove non alterabili, serve GeoTapp. Sono strumenti diversi per problemi diversi.' },
   ],
   en: [
-    { q: 'What is the main difference between GeoTapp and Blink?', a: 'Blink is Germany\'s leading time tracking software for building cleaning: GPS, QR code, NFC, task management and team communication. GeoTapp goes further: it\'s a certification system that documents every job with anti-spoofing GPS and cryptographically sealed photos. The client verifies the report independently.' },
+    { q: 'What is the main difference between GeoTapp and Blink?', a: 'Blink is Germany\'s leading time tracking software for building cleaning: GPS, QR code, NFC, task management and team communication. GeoTapp goes further: it\'s a verifiable proof system that documents every job with anti-spoofing GPS and cryptographically sealed photos. The client verifies the report independently.' },
     { q: 'Does Blink have anti-spoofing GPS?', a: 'No. Blink compares the GPS position with the preset work location but does not verify if the position is real or spoofed. GeoTapp detects spoofing attempts.' },
     { q: 'Can the client verify Blink reports?', a: 'Blink generates internal reports. GeoTapp generates reports with a cryptographic seal that clients can independently verify on a public portal.' },
     { q: 'Blink is #1 in Gebäudereinigung. Why choose GeoTapp?', a: 'Blink excels at time tracking and team communication for the German cleaning sector. But if you need to prove to your client that the service was performed with tamper-proof evidence, you need GeoTapp. Different tools for different problems.' },
   ],
   de: [
-    { q: 'Was ist der Hauptunterschied zwischen GeoTapp und Blink?', a: 'Blink ist die führende Zeiterfassungssoftware für die deutsche Gebäudereinigung: GPS, QR-Code, NFC, Aufgabenverwaltung und Teamkommunikation. GeoTapp geht einen Schritt weiter: Es ist ein Zertifizierungssystem für Arbeit vor Ort, das jeden Einsatz mit Anti-Spoofing-GPS und kryptographisch versiegelten Fotos fälschungssicher dokumentiert. Der Auftraggeber verifiziert den Bericht selbst, er muss Ihnen nicht glauben.' },
+    { q: 'Was ist der Hauptunterschied zwischen GeoTapp und Blink?', a: 'Blink ist die führende Zeiterfassungssoftware für die deutsche Gebäudereinigung: GPS, QR-Code, NFC, Aufgabenverwaltung und Teamkommunikation. GeoTapp geht einen Schritt weiter: Es ist ein System für versiegelte Nachweise für Arbeit vor Ort, das jeden Einsatz mit Anti-Spoofing-GPS und kryptographisch versiegelten Fotos fälschungssicher dokumentiert. Der Auftraggeber verifiziert den Bericht selbst, er muss Ihnen nicht glauben.' },
     { q: 'Hat Blink Anti-Spoofing-GPS?', a: 'Nein. Blink vergleicht beim Stempeln die GPS-Position mit dem eingestellten Arbeitsort, aber die GPS-Position selbst wird nicht auf Echtheit geprüft. Mit einer kostenlosen App kann die GPS-Position gefälscht werden - Blink erkennt das nicht. GeoTapp erkennt es.' },
     { q: 'Kann der Auftraggeber Blink-Berichte verifizieren?', a: 'Blink erstellt Berichte für die interne Verwaltung. GeoTapp erstellt Berichte mit einem kryptographischen Siegel, die der Auftraggeber unabhängig auf einem öffentlichen Portal verifizieren kann, ohne Konto, ohne dem Dienstleister vertrauen zu müssen.' },
     { q: 'Blink ist die Nr. 1 in der Gebäudereinigung. Warum GeoTapp wählen?', a: 'Blink ist hervorragend für Zeiterfassung und Teamkommunikation in der Reinigungsbranche. Wenn Sie aber dem Auftraggeber beweisen müssen, dass der Service erbracht wurde, mit Fotos die nicht verändert werden können und einem Bericht der Beweiskraft hat, dann brauchen Sie GeoTapp. Es sind zwei verschiedene Werkzeuge für zwei verschiedene Probleme.' },
   ],
   fr: [
-    { q: 'Quelle est la différence principale entre GeoTapp et Blink ?', a: 'Blink est le logiciel de pointage leader pour le nettoyage de bâtiments en Allemagne : GPS, QR code, NFC, gestion des tâches et communication d\'équipe. GeoTapp va plus loin : c\'est un système de certification qui documente chaque intervention avec un GPS anti-spoofing et des photos scellées cryptographiquement. Le client vérifie le rapport lui-même.' },
+    { q: 'Quelle est la différence principale entre GeoTapp et Blink ?', a: 'Blink est le logiciel de pointage leader pour le nettoyage de bâtiments en Allemagne : GPS, QR code, NFC, gestion des tâches et communication d\'équipe. GeoTapp va plus loin : c\'est un système de preuve vérifiable qui documente chaque intervention avec un GPS anti-spoofing et des photos scellées cryptographiquement. Le client vérifie le rapport lui-même.' },
     { q: 'Blink dispose-t-il d\'un GPS anti-spoofing ?', a: 'Non. Blink compare la position GPS avec le lieu de travail prédéfini mais ne vérifie pas si la position est réelle ou falsifiée. GeoTapp détecte les tentatives de falsification.' },
     { q: 'Le client peut-il vérifier les rapports de Blink ?', a: 'Blink génère des rapports internes. GeoTapp génère des rapports avec un sceau cryptographique que le client peut vérifier de façon indépendante sur un portail public.' },
     { q: 'Blink est le numéro 1 du nettoyage de bâtiments. Pourquoi choisir GeoTapp ?', a: 'Blink excelle dans le pointage et la communication d\'équipe pour le secteur du nettoyage allemand. Mais si vous devez prouver au client que le service a bien été effectué, avec des preuves infalsifiables, il vous faut GeoTapp. Ce sont deux outils différents pour deux problèmes différents.' },
   ],
   es: [
-    { q: '¿Cuál es la diferencia principal entre GeoTapp y Blink?', a: 'Blink es el software de fichaje líder para la limpieza de edificios en Alemania: GPS, código QR, NFC, gestión de tareas y comunicación de equipo. GeoTapp va más allá: es un sistema de certificación que documenta cada intervención con GPS anti-spoofing y fotos selladas criptográficamente. El cliente lo verifica por sí mismo.' },
+    { q: '¿Cuál es la diferencia principal entre GeoTapp y Blink?', a: 'Blink es el software de fichaje líder para la limpieza de edificios en Alemania: GPS, código QR, NFC, gestión de tareas y comunicación de equipo. GeoTapp va más allá: es un sistema de prueba verificable que documenta cada intervención con GPS anti-spoofing y fotos selladas criptográficamente. El cliente lo verifica por sí mismo.' },
     { q: '¿Tiene Blink GPS anti-spoofing?', a: 'No. Blink compara la posición GPS con el lugar de trabajo preconfigurado pero no verifica si la posición es real o falsificada. GeoTapp detecta los intentos de falsificación.' },
     { q: '¿Puede el cliente verificar los informes de Blink?', a: 'Blink genera informes internos. GeoTapp genera informes con sello criptográfico que el cliente puede verificar de forma independiente en un portal público.' },
     { q: 'Blink es el número 1 en limpieza de edificios. ¿Por qué elegir GeoTapp?', a: 'Blink destaca en el fichaje y la comunicación de equipo para el sector de la limpieza alemán. Pero si tienes que demostrar al cliente que el servicio se ha realizado, con pruebas inalterables, necesitas GeoTapp. Son herramientas distintas para problemas distintos.' },
   ],
   pt: [
-    { q: 'Qual é a diferença principal entre a GeoTapp e a Blink?', a: 'A Blink é o software de registo de presenças líder para a limpeza de edifícios na Alemanha: GPS, código QR, NFC, gestão de tarefas e comunicação de equipa. A GeoTapp vai mais longe: é um sistema de certificação que documenta cada intervenção com GPS anti-spoofing e fotos seladas criptograficamente. O cliente verifica o relatório sozinho.' },
+    { q: 'Qual é a diferença principal entre a GeoTapp e a Blink?', a: 'A Blink é o software de registo de presenças líder para a limpeza de edifícios na Alemanha: GPS, código QR, NFC, gestão de tarefas e comunicação de equipa. A GeoTapp vai mais longe: é um sistema de prova verificável que documenta cada intervenção com GPS anti-spoofing e fotos seladas criptograficamente. O cliente verifica o relatório sozinho.' },
     { q: 'A Blink tem GPS anti-spoofing?', a: 'Não. A Blink compara a posição GPS com o local de trabalho predefinido mas não verifica se a posição é real ou falsificada. A GeoTapp deteta as tentativas de falsificação.' },
     { q: 'O cliente pode verificar os relatórios da Blink?', a: 'A Blink gera relatórios internos. A GeoTapp gera relatórios com selo criptográfico que o cliente pode verificar de forma independente num portal público.' },
     { q: 'A Blink é a número 1 na limpeza de edifícios. Porquê escolher a GeoTapp?', a: 'A Blink destaca-se no registo de presenças e na comunicação de equipa para o setor da limpeza alemão. Mas se precisa de provar ao cliente que o serviço foi realizado, com provas inalteráveis, precisa da GeoTapp. São ferramentas diferentes para problemas diferentes.' },
   ],
   nl: [
-    { q: 'Wat is het belangrijkste verschil tussen GeoTapp en Blink?', a: 'Blink is de toonaangevende tijdregistratiesoftware voor gebouwreiniging in Duitsland: GPS, QR-code, NFC, taakbeheer en teamcommunicatie. GeoTapp gaat verder: het is een certificeringssysteem dat elke opdracht documenteert met anti-spoofing-GPS en cryptografisch verzegelde foto\'s. De opdrachtgever verifieert het rapport zelf.' },
+    { q: 'Wat is het belangrijkste verschil tussen GeoTapp en Blink?', a: 'Blink is de toonaangevende tijdregistratiesoftware voor gebouwreiniging in Duitsland: GPS, QR-code, NFC, taakbeheer en teamcommunicatie. GeoTapp gaat verder: het is een systeem voor verzegeld bewijs dat elke opdracht documenteert met anti-spoofing-GPS en cryptografisch verzegelde foto\'s. De opdrachtgever verifieert het rapport zelf.' },
     { q: 'Heeft Blink anti-spoofing-GPS?', a: 'Nee. Blink vergelijkt de GPS-positie met de vooraf ingestelde werklocatie, maar verifieert niet of de positie echt of vervalst is. GeoTapp detecteert pogingen tot vervalsing.' },
     { q: 'Kan de opdrachtgever de rapporten van Blink verifiëren?', a: 'Blink genereert interne rapporten. GeoTapp genereert rapporten met een cryptografisch zegel die de opdrachtgever onafhankelijk kan verifiëren op een openbaar portaal.' },
     { q: 'Blink is nummer 1 in gebouwreiniging. Waarom voor GeoTapp kiezen?', a: 'Blink blinkt uit in tijdregistratie en teamcommunicatie voor de Duitse schoonmaaksector. Maar als je de opdrachtgever moet bewijzen dat de dienst is uitgevoerd, met manipulatiebestendig bewijs, heb je GeoTapp nodig. Verschillende tools voor verschillende problemen.' },
   ],
   da: [
-    { q: 'Hvad er den vigtigste forskel mellem GeoTapp og Blink?', a: 'Blink er den førende software til tidsregistrering for bygningsrengøring i Tyskland: GPS, QR-kode, NFC, opgavestyring og teamkommunikation. GeoTapp går videre: det er et certificeringssystem, der dokumenterer hver opgave med anti-spoofing-GPS og kryptografisk forseglede fotos. Kunden verificerer rapporten selv.' },
+    { q: 'Hvad er den vigtigste forskel mellem GeoTapp og Blink?', a: 'Blink er den førende software til tidsregistrering for bygningsrengøring i Tyskland: GPS, QR-kode, NFC, opgavestyring og teamkommunikation. GeoTapp går videre: det er et system til forseglet bevis, der dokumenterer hver opgave med anti-spoofing-GPS og kryptografisk forseglede fotos. Kunden verificerer rapporten selv.' },
     { q: 'Har Blink anti-spoofing-GPS?', a: 'Nej. Blink sammenligner GPS-positionen med den forudindstillede arbejdsplads, men verificerer ikke, om positionen er ægte eller forfalsket. GeoTapp opdager forfalskningsforsøg.' },
     { q: 'Kan kunden verificere Blinks rapporter?', a: 'Blink genererer interne rapporter. GeoTapp genererer rapporter med et kryptografisk segl, som kunden uafhængigt kan verificere på en offentlig portal.' },
     { q: 'Blink er nummer 1 inden for bygningsrengøring. Hvorfor vælge GeoTapp?', a: 'Blink er fremragende til tidsregistrering og teamkommunikation for den tyske rengøringsbranche. Men hvis du skal bevise over for kunden, at servicen er udført, med beviser der ikke kan ændres, har du brug for GeoTapp. Forskellige værktøjer til forskellige problemer.' },
   ],
   sv: [
-    { q: 'Vad är den största skillnaden mellan GeoTapp och Blink?', a: 'Blink är den ledande programvaran för tidsrapportering inom byggnadsstädning i Tyskland: GPS, QR-kod, NFC, uppgiftshantering och teamkommunikation. GeoTapp går längre: det är ett certifieringssystem som dokumenterar varje uppdrag med anti-spoofing-GPS och kryptografiskt förseglade foton. Kunden verifierar rapporten själv.' },
+    { q: 'Vad är den största skillnaden mellan GeoTapp och Blink?', a: 'Blink är den ledande programvaran för tidsrapportering inom byggnadsstädning i Tyskland: GPS, QR-kod, NFC, uppgiftshantering och teamkommunikation. GeoTapp går längre: det är ett system för förseglat bevis som dokumenterar varje uppdrag med anti-spoofing-GPS och kryptografiskt förseglade foton. Kunden verifierar rapporten själv.' },
     { q: 'Har Blink anti-spoofing-GPS?', a: 'Nej. Blink jämför GPS-positionen med den förinställda arbetsplatsen men verifierar inte om positionen är äkta eller förfalskad. GeoTapp upptäcker förfalskningsförsök.' },
     { q: 'Kan kunden verifiera Blinks rapporter?', a: 'Blink genererar interna rapporter. GeoTapp genererar rapporter med ett kryptografiskt sigill som kunden kan verifiera oberoende på en offentlig portal.' },
     { q: 'Blink är nummer 1 inom byggnadsstädning. Varför välja GeoTapp?', a: 'Blink är utmärkt på tidsrapportering och teamkommunikation för den tyska städbranschen. Men om du måste bevisa för kunden att tjänsten har utförts, med bevis som inte kan ändras, behöver du GeoTapp. Olika verktyg för olika problem.' },
   ],
   nb: [
-    { q: 'Hva er den viktigste forskjellen mellom GeoTapp og Blink?', a: 'Blink er den ledende programvaren for tidsregistrering innen bygningsrenhold i Tyskland: GPS, QR-kode, NFC, oppgavestyring og teamkommunikasjon. GeoTapp går lenger: det er et sertifiseringssystem som dokumenterer hvert oppdrag med anti-spoofing-GPS og kryptografisk forseglede bilder. Oppdragsgiveren verifiserer rapporten selv.' },
+    { q: 'Hva er den viktigste forskjellen mellom GeoTapp og Blink?', a: 'Blink er den ledende programvaren for tidsregistrering innen bygningsrenhold i Tyskland: GPS, QR-kode, NFC, oppgavestyring og teamkommunikasjon. GeoTapp går lenger: det er et system for forseglet bevis som dokumenterer hvert oppdrag med anti-spoofing-GPS og kryptografisk forseglede bilder. Oppdragsgiveren verifiserer rapporten selv.' },
     { q: 'Har Blink anti-spoofing-GPS?', a: 'Nei. Blink sammenligner GPS-posisjonen med den forhåndsinnstilte arbeidsplassen, men verifiserer ikke om posisjonen er ekte eller forfalsket. GeoTapp oppdager forfalskningsforsøk.' },
     { q: 'Kan oppdragsgiveren verifisere Blinks rapporter?', a: 'Blink genererer interne rapporter. GeoTapp genererer rapporter med et kryptografisk segl som oppdragsgiveren kan verifisere uavhengig på en offentlig portal.' },
     { q: 'Blink er nummer 1 innen bygningsrenhold. Hvorfor velge GeoTapp?', a: 'Blink er utmerket på tidsregistrering og teamkommunikasjon for den tyske renholdsbransjen. Men hvis du må bevise overfor oppdragsgiveren at tjenesten er utført, med bevis som ikke kan endres, trenger du GeoTapp. Forskjellige verktøy for forskjellige problemer.' },
@@ -122,8 +122,8 @@ type Copy = {
 
 const T: Record<string, Copy> = {
   it: {
-    badge: 'Confronto App', h1sub: 'timbratura o certificazione?',
-    desc: 'Blink è il software numero 1 per la Gebäudereinigung in Germania. GeoTapp certifica ogni intervento con GPS anti-spoofing, foto sigillate crittograficamente e report verificabili dal committente.',
+    badge: 'Confronto App', h1sub: 'timbratura o prova verificabile?',
+    desc: 'Blink è il software numero 1 per la Gebäudereinigung in Germania. GeoTapp sigilla ogni intervento con GPS anti-spoofing, foto sigillate crittograficamente e report verificabili dal committente.',
     summary: 'In sintesi:',
     summaryText: 'Blink eccelle nella timbratura e comunicazione per le pulizie in Germania. Ma il GPS non è verificato (nessun anti-spoofing), le foto non sono sigillate crittograficamente e i report non sono verificabili dal committente. GeoTapp colma esattamente queste lacune.',
     noteTitle: 'Timbratura GPS non è verifica GPS',
@@ -153,7 +153,7 @@ const T: Record<string, Copy> = {
   },
   de: {
     badge: 'App-Vergleich', h1sub: 'Zeiterfassung oder Zertifizierung?',
-    desc: 'Blink ist die Nr. 1 Software für Gebäudereinigung in Deutschland: GPS, QR-Code, NFC, Aufgabenverwaltung und Teamkommunikation. GeoTapp zertifiziert jeden Einsatz mit Anti-Spoofing-GPS, kryptographisch versiegelten Fotos und Berichten die der Auftraggeber selbst verifiziert.',
+    desc: 'Blink ist die Nr. 1 Software für Gebäudereinigung in Deutschland: GPS, QR-Code, NFC, Aufgabenverwaltung und Teamkommunikation. GeoTapp versiegelt jeden Einsatz mit Anti-Spoofing-GPS, kryptographisch versiegelten Fotos und Berichten die der Auftraggeber selbst verifiziert.',
     summary: 'Fazit:',
     summaryText: 'Blink ist hervorragend für Zeiterfassung und Teamkommunikation in der Reinigungsbranche. Aber die GPS-Position wird nicht auf Echtheit geprüft (kein Anti-Spoofing), Fotos sind nicht kryptographisch versiegelt und die Berichte haben keine unabhängige Verifizierung für den Auftraggeber. GeoTapp schließt genau diese Lücken: Anti-Spoofing-GPS, kryptographisch versiegelte Hash-Kette für Fotos und Berichte mit Beweiskraft die der Auftraggeber selbst prüft.',
     noteTitle: 'GPS-Stempelung ist nicht GPS-Verifizierung',
@@ -182,8 +182,8 @@ const T: Record<string, Copy> = {
     footnote: '* Selon la loi (RGPD Art. 13), chaque salarié doit signer un avis de confidentialité avant d\'être géolocalisé. La plupart des logiciels GPS ne le gèrent pas : le risque juridique reste à l\'employeur. GeoTapp génère automatiquement l\'avis personnalisé, le fait signer numériquement par le salarié et bloque l\'accès GPS tant qu\'il n\'est pas signé. Aucun autre logiciel sur le marché ne le fait.',
   },
   es: {
-    badge: 'Comparativa de apps', h1sub: '¿fichaje o certificación?',
-    desc: 'Blink es el software número 1 para la limpieza de edificios en Alemania: GPS, código QR, NFC, gestión de tareas y comunicación de equipo. GeoTapp certifica cada intervención con GPS anti-spoofing, fotos selladas criptográficamente e informes que el cliente verifica por sí mismo.',
+    badge: 'Comparativa de apps', h1sub: '¿fichaje o prueba verificable?',
+    desc: 'Blink es el software número 1 para la limpieza de edificios en Alemania: GPS, código QR, NFC, gestión de tareas y comunicación de equipo. GeoTapp sella cada intervención con GPS anti-spoofing, fotos selladas criptográficamente e informes que el cliente verifica por sí mismo.',
     summary: 'En resumen:',
     summaryText: 'Blink destaca en el fichaje y la comunicación de equipo para la limpieza en Alemania. Pero el GPS no se verifica (sin anti-spoofing), las fotos no se sellan criptográficamente y los informes no son verificables por el cliente. GeoTapp cubre exactamente estas carencias.',
     noteTitle: 'El fichaje GPS no es verificación GPS',
@@ -198,7 +198,7 @@ const T: Record<string, Copy> = {
   },
   pt: {
     badge: 'Comparativo de apps', h1sub: 'registo ou certificação?',
-    desc: 'A Blink é o software número 1 para a limpeza de edifícios na Alemanha: GPS, código QR, NFC, gestão de tarefas e comunicação de equipa. A GeoTapp certifica cada intervenção com GPS anti-spoofing, fotos seladas criptograficamente e relatórios que o cliente verifica sozinho.',
+    desc: 'A Blink é o software número 1 para a limpeza de edifícios na Alemanha: GPS, código QR, NFC, gestão de tarefas e comunicação de equipa. A GeoTapp sela cada intervenção com GPS anti-spoofing, fotos seladas criptograficamente e relatórios que o cliente verifica sozinho.',
     summary: 'Em resumo:',
     summaryText: 'A Blink destaca-se no registo de presenças e na comunicação de equipa para a limpeza na Alemanha. Mas o GPS não é verificado (sem anti-spoofing), as fotos não são seladas criptograficamente e os relatórios não são verificáveis pelo cliente. A GeoTapp colmata exatamente estas lacunas.',
     noteTitle: 'Registo GPS não é verificação GPS',
@@ -213,7 +213,7 @@ const T: Record<string, Copy> = {
   },
   nl: {
     badge: 'App-vergelijking', h1sub: 'tijdregistratie of certificering?',
-    desc: 'Blink is de nummer 1 software voor gebouwreiniging in Duitsland: GPS, QR-code, NFC, taakbeheer en teamcommunicatie. GeoTapp certificeert elke opdracht met anti-spoofing-GPS, cryptografisch verzegelde foto\'s en rapporten die de opdrachtgever zelf verifieert.',
+    desc: 'Blink is de nummer 1 software voor gebouwreiniging in Duitsland: GPS, QR-code, NFC, taakbeheer en teamcommunicatie. GeoTapp verzegelt elke opdracht met anti-spoofing-GPS, cryptografisch verzegelde foto\'s en rapporten die de opdrachtgever zelf verifieert.',
     summary: 'Kort gezegd:',
     summaryText: 'Blink blinkt uit in tijdregistratie en teamcommunicatie voor de schoonmaak in Duitsland. Maar het GPS wordt niet geverifieerd (geen anti-spoofing), foto\'s worden niet cryptografisch verzegeld en de rapporten zijn niet verifieerbaar door de opdrachtgever. GeoTapp dicht precies deze gaten.',
     noteTitle: 'GPS-registratie is geen GPS-verificatie',
@@ -228,7 +228,7 @@ const T: Record<string, Copy> = {
   },
   da: {
     badge: 'App-sammenligning', h1sub: 'tidsregistrering eller certificering?',
-    desc: 'Blink er den førende software til bygningsrengøring i Tyskland: GPS, QR-kode, NFC, opgavestyring og teamkommunikation. GeoTapp certificerer hver opgave med anti-spoofing-GPS, kryptografisk forseglede fotos og rapporter, som kunden selv verificerer.',
+    desc: 'Blink er den førende software til bygningsrengøring i Tyskland: GPS, QR-kode, NFC, opgavestyring og teamkommunikation. GeoTapp forsegler hver opgave med anti-spoofing-GPS, kryptografisk forseglede fotos og rapporter, som kunden selv verificerer.',
     summary: 'Kort sagt:',
     summaryText: 'Blink er fremragende til tidsregistrering og teamkommunikation for rengøring i Tyskland. Men GPS\'en verificeres ikke (ingen anti-spoofing), fotos er ikke kryptografisk forseglet, og rapporterne kan ikke verificeres af kunden. GeoTapp lukker netop disse huller.',
     noteTitle: 'GPS-registrering er ikke GPS-verificering',
@@ -242,8 +242,8 @@ const T: Record<string, Copy> = {
     footnote: '* Ifølge loven (GDPR art. 13) skal hver medarbejder underskrive en privatlivserklæring, før vedkommende geolokaliseres. De fleste GPS-programmer håndterer ikke dette: den juridiske risiko forbliver hos arbejdsgiveren. GeoTapp genererer automatisk den personlige erklæring, får den underskrevet digitalt af medarbejderen og blokerer GPS-adgangen, indtil den er underskrevet. Ingen anden software på markedet gør dette.',
   },
   sv: {
-    badge: 'App-jämförelse', h1sub: 'tidrapportering eller certifiering?',
-    desc: 'Blink är den ledande programvaran för byggnadsstädning i Tyskland: GPS, QR-kod, NFC, uppgiftshantering och teamkommunikation. GeoTapp certifierar varje uppdrag med anti-spoofing-GPS, kryptografiskt förseglade foton och rapporter som kunden själv verifierar.',
+    badge: 'App-jämförelse', h1sub: 'tidrapportering eller förseglat bevis?',
+    desc: 'Blink är den ledande programvaran för byggnadsstädning i Tyskland: GPS, QR-kod, NFC, uppgiftshantering och teamkommunikation. GeoTapp förseglar varje uppdrag med anti-spoofing-GPS, kryptografiskt förseglade foton och rapporter som kunden själv verifierar.',
     summary: 'Kort sagt:',
     summaryText: 'Blink är utmärkt på tidsrapportering och teamkommunikation för städning i Tyskland. Men GPS:en verifieras inte (ingen anti-spoofing), foton förseglas inte kryptografiskt och rapporterna kan inte verifieras av kunden. GeoTapp täpper till just dessa luckor.',
     noteTitle: 'GPS-incheckning är inte GPS-verifiering',
@@ -258,7 +258,7 @@ const T: Record<string, Copy> = {
   },
   nb: {
     badge: 'App-sammenligning', h1sub: 'tidsregistrering eller sertifisering?',
-    desc: 'Blink er den ledende programvaren for bygningsrenhold i Tyskland: GPS, QR-kode, NFC, oppgavestyring og teamkommunikasjon. GeoTapp sertifiserer hvert oppdrag med anti-spoofing-GPS, kryptografisk forseglede bilder og rapporter som oppdragsgiveren selv verifiserer.',
+    desc: 'Blink er den ledende programvaren for bygningsrenhold i Tyskland: GPS, QR-kode, NFC, oppgavestyring og teamkommunikasjon. GeoTapp forsegler hvert oppdrag med anti-spoofing-GPS, kryptografisk forseglede bilder og rapporter som oppdragsgiveren selv verifiserer.',
     summary: 'Kort sagt:',
     summaryText: 'Blink er utmerket på tidsregistrering og teamkommunikasjon for renhold i Tyskland. Men GPS-en verifiseres ikke (ingen anti-spoofing), bilder forsegles ikke kryptografisk og rapportene kan ikke verifiseres av oppdragsgiveren. GeoTapp tetter nettopp disse hullene.',
     noteTitle: 'GPS-registrering er ikke GPS-verifisering',
@@ -273,7 +273,7 @@ const T: Record<string, Copy> = {
   },
   ru: {
     badge: 'Сравнение приложений', h1sub: 'учёт времени или сертификация?',
-    desc: 'Blink, ПО номер 1 для клининга зданий в Германии: GPS, QR-код, NFC, управление задачами и командное общение. GeoTapp сертифицирует каждый выезд анти-спуфинговым GPS, криптографически опечатанными фотографиями и отчётами, которые заказчик проверяет сам.',
+    desc: 'Blink, ПО номер 1 для клининга зданий в Германии: GPS, QR-код, NFC, управление задачами и командное общение. GeoTapp запечатывает каждый выезд анти-спуфинговым GPS, криптографически опечатанными фотографиями и отчётами, которые заказчик проверяет сам.',
     summary: 'Коротко:',
     summaryText: 'Blink превосходно справляется с учётом времени и командным общением для клининга в Германии. Но GPS не проверяется (нет анти-спуфинга), фотографии не опечатываются криптографически, а отчёты не проверяемы заказчиком. GeoTapp закрывает именно эти пробелы.',
     noteTitle: 'Отметка по GPS, это не проверка GPS',

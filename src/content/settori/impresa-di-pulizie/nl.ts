@@ -145,7 +145,7 @@ const content: SettoreContent = {
     items: [
       {
         q: 'Hoe werkt GPS-inklokking voor schoonmaakbedrijven?',
-        a: 'De schoonmaker klokt in en uit vanaf de smartphone. GeoTapp registreert de GPS-coördinaten op dat moment, niet handmatig ingevoerd. Elke inklokking is gecertificeerd met tijdstempel en positie verifieerbaar door de opdrachtgever.',
+        a: 'De schoonmaker klokt in en uit vanaf de smartphone. GeoTapp registreert de GPS-coördinaten op dat moment, niet handmatig ingevoerd. Elke inklokking is verzegeld met tijdstempel en positie verifieerbaar door de opdrachtgever.',
       },
       {
         q: 'Kan ik de klant bewijzen dat de dienst is geleverd?',
@@ -190,7 +190,7 @@ const content: SettoreContent = {
     {
       question: 'Hoe werkt GPS-inklokking voor schoonmaakbedrijven?',
       answer:
-        'De schoonmaker klokt in en uit vanaf de smartphone. GeoTapp registreert GPS-coördinaten, niet handmatig ingevoerd. Elke inklokking is gecertificeerd met tijdstempel en positie verifieerbaar door de opdrachtgever.',
+        'De schoonmaker klokt in en uit vanaf de smartphone. GeoTapp registreert GPS-coördinaten, niet handmatig ingevoerd. Elke inklokking is verzegeld met tijdstempel en positie verifieerbaar door de opdrachtgever.',
     },
     {
       question: 'Kan ik de klant bewijzen dat de dienst is geleverd?',

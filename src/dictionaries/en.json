@@ -929,7 +929,7 @@
       "He went looking for an app to take the chore away. They were all the same, and every one of them asked for exactly what he was already doing by hand, date, start, end, total. Same effort, nicer buttons.",
       "So he built one himself, on holiday. A web page and two gestures, press when you start and press when you stop, and the rest landed tidy in a file already fit to send at the end of the month.",
       "Then came the thought that changed everything, if it helps me it helps the crew. And if it helps the boss, the flow has to be turned around, because it should not be him chasing people for their hours, it should be the hours reaching him every day on their own.",
-      "From there the tool grew in one direction only. First lawful geolocation, read when the shift opens and when it closes, never continuously. Then automatic certification of the work done, because the real problem was never counting the hours, it was proving them when somebody questioned them.",
+      "From there the tool grew in one direction only. First lawful geolocation, read when the shift opens and when it closes, never continuously. Then automatic verifiable proof of the work done, because the real problem was never counting the hours, it was proving them when somebody questioned them.",
       "Oh, and it is spelled GeoTapp, with two P's. If you find one with a single P out there, that is not us, though we hold no grudge.",
       "The name has it all in it, really. Geolocation, a tap, an app."
     ],
@@ -1050,7 +1050,7 @@
     "cta_btn": "Start free trial",
     "schema_desc": "Guides and insights on field work certification, team management, GDPR and geolocation.",
     "meta_title": "Blog | GeoTapp - Field Work Verification",
-    "meta_desc": "Guides, insights and resources on team management, field work certification, GDPR and geolocation. From the GeoTapp team.",
+    "meta_desc": "Guides, insights and resources on team management, field verifiable proof of work, GDPR and geolocation. From the GeoTapp team.",
     "cat_all": "All",
     "toc_title": "Contents",
     "reading_time_suffix": "min read",

@@ -61,7 +61,7 @@ const nl: VerifierCopy = {
     {
       num: '03',
       title: 'Verifier controleert de integriteit',
-      desc: 'Iedereen kan het rapport verifiëren met GeoTapp Verifier. Het systeem vergelijkt het document met de geregistreerde operationele gegevens en certificeert of het rapport intact en authentiek is.',
+      desc: 'Iedereen kan het rapport verifiëren met GeoTapp Verifier. Het systeem vergelijkt het document met de geregistreerde operationele gegevens en verzegelt of het rapport intact en authentiek is.',
     },
   ],
   features_badge: 'Wat wordt geverifieerd',
@@ -104,7 +104,7 @@ const nl: VerifierCopy = {
   ecosystem_badge: 'GeoTapp-ecosysteem',
   ecosystem_title: 'Verifier werkt samen met Flow en TimeTracker.',
   ecosystem_desc:
-    'GeoTapp Verifier is geen op zichzelf staand hulpmiddel. Het is de laatste stap van een geïntegreerde operationele cyclus: gegevens worden in het veld verzameld met TimeTracker, georganiseerd in Flow en vervolgens gecertificeerd door Verifier.',
+    'GeoTapp Verifier is geen op zichzelf staand hulpmiddel. Het is de laatste stap van een geïntegreerde operationele cyclus: gegevens worden in het veld verzameld met TimeTracker, georganiseerd in Flow en vervolgens verzegeld door Verifier.',
   cta_title: 'Begin met het produceren van verifieerbare rapporten.',
   cta_subtitle:
     'Ontdek hoe GeoTapp Verifier uw bedrijf kan helpen geschillen te verminderen en geloofwaardigheid bij klanten te vergroten.',

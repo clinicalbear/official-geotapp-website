@@ -49,7 +49,7 @@ const content: SettoreContent = {
     ],
   },
   differenza: {
-    title: 'App für Elektriker: Zeiterfassung oder Einsatzzertifizierung?',
+    title: 'App für Elektriker: Zeiterfassung oder versiegelter Einsatznachweis?',
     subtitle: 'Die meisten Apps erfassen den Stempelvorgang. GeoTapp liefert verifizierbare Beweise.',
     rows: [
       {

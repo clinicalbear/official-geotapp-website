@@ -18,7 +18,7 @@ const content: SettoreContent = {
     items: [
       {
         title: 'Los clientes disputan las horas trabajadas',
-        desc: 'Fichajes GPS con marca de tiempo como prueba irrefutable. Los datos se certifican en el momento de la intervención, no modificables después.',
+        desc: 'Fichajes GPS con marca de tiempo como prueba irrefutable. Los datos se sellan en el momento de la intervención, no modificables después.',
       },
       {
         title: 'Perseguir a los técnicos para saber dónde están',

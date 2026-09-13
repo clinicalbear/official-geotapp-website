@@ -240,7 +240,7 @@ const SETTORE_CONFIG: Record<string, {
             'Localizzazione GPS degli agenti in tempo reale',
             'Registrazione timestampata di ogni ronda completata',
             'Segnalazione anomalie con foto e geolocalizzazione',
-            'Reportistica certificata esportabile per il cliente finale',
+            'Reportistica sigillata esportabile per il cliente finale',
             'Alert automatici in caso di mancata risposta o inattività',
           ],
         },

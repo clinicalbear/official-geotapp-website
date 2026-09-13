@@ -18,7 +18,7 @@ const content: SettoreContent = {
     items: [
       {
         title: 'Klanten betwisten de gewerkte uren',
-        desc: 'GPS-klokregistraties met tijdstempel als onweerlegbaar bewijs. De gegevens worden gecertificeerd op het moment van de opdracht, niet achteraf te wijzigen.',
+        desc: 'GPS-klokregistraties met tijdstempel als onweerlegbaar bewijs. De gegevens worden verzegeld op het moment van de opdracht, niet achteraf te wijzigen.',
       },
       {
         title: 'Monteurs achternazitten voor updates',

@@ -12,16 +12,16 @@ const ARTICLE_DATE_PUBLISHED = '2026-02-01';
 const ARTICLE_DATE_MODIFIED = '2026-05-23';
 
 const META: Record<string, { title: string; description: string }> = {
-  it: { title: 'GeoTapp vs NoBadge - Confronto 2026 | GeoTapp', description: 'GeoTapp vs NoBadge: timbratura o certificazione? Confronto su GPS anti-spoofing, report sigillati crittograficamente, prove fotografiche verificabili e conformità GDPR.' },
-  en: { title: 'GeoTapp vs NoBadge - Comparison 2026 | GeoTapp', description: 'GeoTapp vs NoBadge: attendance or certification? Compare anti-spoofing GPS, cryptographically sealed reports, verifiable photo evidence and GDPR compliance.' },
-  de: { title: 'GeoTapp vs NoBadge - Vergleich 2026 | GeoTapp', description: 'GeoTapp vs NoBadge: Zeiterfassung oder Zertifizierung? Vergleich von Anti-Spoofing-GPS, kryptographisch versiegelten Berichten und DSGVO-Konformität.' },
-  nl: { title: 'GeoTapp vs NoBadge - Vergelijking 2026 | GeoTapp', description: 'GeoTapp vs NoBadge: tijdregistratie of certificering? Vergelijk anti-spoofing GPS, cryptografisch verzegelde rapporten en AVG-compliance.' },
-  fr: { title: 'GeoTapp vs NoBadge - Comparaison 2026 | GeoTapp', description: 'GeoTapp vs NoBadge : pointage ou certification ? Comparez GPS anti-spoofing, rapports scellés cryptographiquement et conformité RGPD.' },
-  es: { title: 'GeoTapp vs NoBadge - Comparación 2026 | GeoTapp', description: 'GeoTapp vs NoBadge: ¿fichaje o certificación? Compara GPS anti-spoofing, informes sellados criptográficamente y cumplimiento del RGPD.' },
-  pt: { title: 'GeoTapp vs NoBadge - Comparação 2026 | GeoTapp', description: 'GeoTapp vs NoBadge: registo de presença ou certificação? Compare GPS anti-spoofing, relatórios selados criptograficamente e conformidade com o RGPD.' },
-  da: { title: 'GeoTapp vs NoBadge - Sammenligning 2026 | GeoTapp', description: 'GeoTapp vs NoBadge: tidsregistrering eller certificering? Sammenlign anti-spoofing-GPS, kryptografisk forseglede rapporter og GDPR-overholdelse.' },
-  sv: { title: 'GeoTapp vs NoBadge - Jämförelse 2026 | GeoTapp', description: 'GeoTapp vs NoBadge: tidsrapportering eller certifiering? Jämför anti-spoofing-GPS, kryptografiskt förseglade rapporter och GDPR-efterlevnad.' },
-  nb: { title: 'GeoTapp vs NoBadge - Sammenligning 2026 | GeoTapp', description: 'GeoTapp vs NoBadge: tidsregistrering eller sertifisering? Sammenlign anti-spoofing-GPS, kryptografisk forseglede rapporter og GDPR-samsvar.' },
+  it: { title: 'GeoTapp vs NoBadge - Confronto 2026 | GeoTapp', description: 'GeoTapp vs NoBadge: timbratura o prova verificabile? Confronto su GPS anti-spoofing, report sigillati crittograficamente, prove fotografiche verificabili e conformità GDPR.' },
+  en: { title: 'GeoTapp vs NoBadge - Comparison 2026 | GeoTapp', description: 'GeoTapp vs NoBadge: attendance or verifiable proof? Compare anti-spoofing GPS, cryptographically sealed reports, verifiable photo evidence and GDPR compliance.' },
+  de: { title: 'GeoTapp vs NoBadge - Vergleich 2026 | GeoTapp', description: 'GeoTapp vs NoBadge: Zeiterfassung oder versiegelter Nachweis? Vergleich von Anti-Spoofing-GPS, kryptographisch versiegelten Berichten und DSGVO-Konformität.' },
+  nl: { title: 'GeoTapp vs NoBadge - Vergelijking 2026 | GeoTapp', description: 'GeoTapp vs NoBadge: tijdregistratie of verzegeld bewijs? Vergelijk anti-spoofing GPS, cryptografisch verzegelde rapporten en AVG-compliance.' },
+  fr: { title: 'GeoTapp vs NoBadge - Comparaison 2026 | GeoTapp', description: 'GeoTapp vs NoBadge : pointage ou preuve vérifiable ? Comparez GPS anti-spoofing, rapports scellés cryptographiquement et conformité RGPD.' },
+  es: { title: 'GeoTapp vs NoBadge - Comparación 2026 | GeoTapp', description: 'GeoTapp vs NoBadge: ¿fichaje o prueba verificable? Compara GPS anti-spoofing, informes sellados criptográficamente y cumplimiento del RGPD.' },
+  pt: { title: 'GeoTapp vs NoBadge - Comparação 2026 | GeoTapp', description: 'GeoTapp vs NoBadge: registo de presença ou prova verificável? Compare GPS anti-spoofing, relatórios selados criptograficamente e conformidade com o RGPD.' },
+  da: { title: 'GeoTapp vs NoBadge - Sammenligning 2026 | GeoTapp', description: 'GeoTapp vs NoBadge: tidsregistrering eller forseglet bevis? Sammenlign anti-spoofing-GPS, kryptografisk forseglede rapporter og GDPR-overholdelse.' },
+  sv: { title: 'GeoTapp vs NoBadge - Jämförelse 2026 | GeoTapp', description: 'GeoTapp vs NoBadge: tidsrapportering eller förseglat bevis? Jämför anti-spoofing-GPS, kryptografiskt förseglade rapporter och GDPR-efterlevnad.' },
+  nb: { title: 'GeoTapp vs NoBadge - Sammenligning 2026 | GeoTapp', description: 'GeoTapp vs NoBadge: tidsregistrering eller forseglet bevis? Sammenlign anti-spoofing-GPS, kryptografisk forseglede rapporter og GDPR-samsvar.' },
   ru: { title: 'GeoTapp vs NoBadge, Сравнение 2026 | GeoTapp', description: 'GeoTapp vs NoBadge: учёт присутствия или сертификация? Сравните анти-спуфинговый GPS, криптографически опечатанные отчёты и соответствие GDPR.' },
 };
 
@@ -29,67 +29,67 @@ type FaqItem = { q: string; a: string };
 
 const FAQ: Record<string, FaqItem[]> = {
   it: [
-    { q: 'Qual è la differenza principale tra GeoTapp e NoBadge?', a: 'NoBadge è un sistema di rilevazione presenze: registra entrata e uscita dei dipendenti tramite GPS o QR code. GeoTapp è un sistema di certificazione del lavoro sul campo: produce report sigillati con GPS anti-spoofing e prove fotografiche che il committente verifica autonomamente. La differenza è tra registrare una presenza e certificare un intervento.' },
+    { q: 'Qual è la differenza principale tra GeoTapp e NoBadge?', a: 'NoBadge è un sistema di rilevazione presenze: registra entrata e uscita dei dipendenti tramite GPS o QR code. GeoTapp è un sistema di prova verificabile del lavoro sul campo: produce report sigillati con GPS anti-spoofing e prove fotografiche che il committente verifica autonomamente. La differenza è tra registrare una presenza e sigillare un intervento.' },
     { q: 'NoBadge ha il GPS anti-spoofing?', a: 'No. NoBadge registra la posizione GPS del dispositivo ma non verifica se la posizione è reale o falsificata. GeoTapp utilizza un controllo anti-spoofing attivo che incrocia più segnali per rilevare i tentativi di falsificazione della posizione.' },
     { q: 'Il committente può verificare i report di NoBadge?', a: 'NoBadge genera report interni per l\'amministrazione. GeoTapp genera report con sigillo crittografico che il committente può verificare in modo indipendente sul portale pubblico, senza bisogno di account o di fidarsi dell\'azienda.' },
     { q: 'GeoTapp o NoBadge per imprese di pulizie?', a: 'Se l\'obiettivo è solo registrare le ore dei dipendenti, NoBadge può bastare. Se l\'obiettivo è dimostrare al committente che il servizio è stato effettuato con prove non alterabili - GPS verificato, foto sigillate, report con valore probatorio - GeoTapp è l\'unica soluzione.' },
   ],
   en: [
-    { q: 'What is the main difference between GeoTapp and NoBadge?', a: 'NoBadge is an attendance tracking system: it records employee check-in/out via GPS or QR code. GeoTapp is a field work certification system: it produces sealed reports with anti-spoofing GPS and photo evidence that clients independently verify. The difference is between recording a presence and certifying a job.' },
+    { q: 'What is the main difference between GeoTapp and NoBadge?', a: 'NoBadge is an attendance tracking system: it records employee check-in/out via GPS or QR code. GeoTapp is a field verifiable proof of work system: it produces sealed reports with anti-spoofing GPS and photo evidence that clients independently verify. The difference is between recording a presence and certifying a job.' },
     { q: 'Does NoBadge have anti-spoofing GPS?', a: 'No. NoBadge records the device GPS position but does not verify if the position is real or spoofed. GeoTapp uses active anti-spoofing checks that cross-reference multiple signals to detect position falsification attempts.' },
     { q: 'Can the client verify NoBadge reports?', a: 'NoBadge generates internal reports for administration. GeoTapp generates reports with a cryptographic seal that clients can independently verify on a public portal, without needing an account or trusting the company.' },
     { q: 'GeoTapp or NoBadge for cleaning companies?', a: 'If you only need to track employee hours, NoBadge may suffice. If you need to prove to your client that the service was performed with tamper-proof evidence, verified GPS, sealed photos, reports with evidentiary value - GeoTapp is the only solution.' },
   ],
   de: [
-    { q: 'Was ist der Hauptunterschied zwischen GeoTapp und NoBadge?', a: 'NoBadge ist ein Anwesenheitserfassungssystem: Es registriert das Ein- und Ausstempeln per GPS oder QR-Code. GeoTapp ist ein Zertifizierungssystem für Arbeit vor Ort: Es erstellt versiegelte Berichte mit Anti-Spoofing-GPS und Fotobeweisen, die der Auftraggeber unabhängig verifizieren kann. Der Unterschied liegt zwischen dem Erfassen einer Anwesenheit und dem Zertifizieren eines Einsatzes.' },
+    { q: 'Was ist der Hauptunterschied zwischen GeoTapp und NoBadge?', a: 'NoBadge ist ein Anwesenheitserfassungssystem: Es registriert das Ein- und Ausstempeln per GPS oder QR-Code. GeoTapp ist ein System für versiegelte Nachweise für Arbeit vor Ort: Es erstellt versiegelte Berichte mit Anti-Spoofing-GPS und Fotobeweisen, die der Auftraggeber unabhängig verifizieren kann. Der Unterschied liegt zwischen dem Erfassen einer Anwesenheit und dem Zertifizieren eines Einsatzes.' },
     { q: 'Hat NoBadge Anti-Spoofing-GPS?', a: 'Nein. NoBadge registriert die GPS-Position des Geräts, überprüft aber nicht, ob die Position echt oder gefälscht ist. GeoTapp verwendet aktive Anti-Spoofing-Prüfungen, die mehrere Signale abgleichen, um Manipulationsversuche zu erkennen.' },
     { q: 'Kann der Auftraggeber NoBadge-Berichte verifizieren?', a: 'NoBadge erstellt interne Berichte für die Verwaltung. GeoTapp erstellt Berichte mit kryptographischem Siegel, die der Auftraggeber unabhängig auf einem öffentlichen Portal verifizieren kann, ohne Konto und ohne dem Unternehmen vertrauen zu müssen.' },
     { q: 'GeoTapp oder NoBadge für Reinigungsunternehmen?', a: 'Wenn Sie nur Arbeitszeiten erfassen müssen, kann NoBadge ausreichen. Wenn Sie dem Auftraggeber beweisen müssen, dass der Service erbracht wurde, mit verifiziertem GPS, versiegelten Fotos und Berichten mit Beweiskraft, ist GeoTapp die einzige Lösung.' },
   ],
   fr: [
-    { q: 'Quelle est la principale différence entre GeoTapp et NoBadge ?', a: 'NoBadge est un système de pointage : il enregistre les entrées et sorties des salariés par GPS ou QR code. GeoTapp est un système de certification du travail sur le terrain : il produit des rapports scellés avec GPS anti-spoofing et des preuves photographiques que le donneur d\'ordre vérifie lui-même. La différence est entre enregistrer une présence et certifier une intervention.' },
+    { q: 'Quelle est la principale différence entre GeoTapp et NoBadge ?', a: 'NoBadge est un système de pointage : il enregistre les entrées et sorties des salariés par GPS ou QR code. GeoTapp est un système de preuve vérifiable du travail sur le terrain : il produit des rapports scellés avec GPS anti-spoofing et des preuves photographiques que le donneur d\'ordre vérifie lui-même. La différence est entre enregistrer une présence et sceller une intervention.' },
     { q: 'NoBadge dispose-t-il du GPS anti-spoofing ?', a: 'Non. NoBadge enregistre la position GPS de l\'appareil mais ne vérifie pas si la position est réelle ou falsifiée. GeoTapp utilise un contrôle anti-spoofing actif qui croise plusieurs signaux pour détecter les tentatives de falsification de la position.' },
     { q: 'Le donneur d\'ordre peut-il vérifier les rapports de NoBadge ?', a: 'NoBadge génère des rapports internes pour l\'administration. GeoTapp génère des rapports avec sceau cryptographique que le donneur d\'ordre peut vérifier de façon indépendante sur le portail public, sans compte ni besoin de faire confiance à l\'entreprise.' },
     { q: 'GeoTapp ou NoBadge pour les entreprises de nettoyage ?', a: 'Si l\'objectif est seulement d\'enregistrer les heures des salariés, NoBadge peut suffire. Si l\'objectif est de prouver au donneur d\'ordre que le service a été effectué avec des preuves infalsifiables - GPS vérifié, photos scellées, rapports à valeur probante - GeoTapp est la seule solution.' },
   ],
   es: [
-    { q: '¿Cuál es la principal diferencia entre GeoTapp y NoBadge?', a: 'NoBadge es un sistema de control de presencia: registra la entrada y salida de los empleados mediante GPS o código QR. GeoTapp es un sistema de certificación del trabajo en campo: produce informes sellados con GPS anti-spoofing y pruebas fotográficas que el cliente verifica por su cuenta. La diferencia está entre registrar una presencia y certificar una intervención.' },
+    { q: '¿Cuál es la principal diferencia entre GeoTapp y NoBadge?', a: 'NoBadge es un sistema de control de presencia: registra la entrada y salida de los empleados mediante GPS o código QR. GeoTapp es un sistema de prueba verificable del trabajo en campo: produce informes sellados con GPS anti-spoofing y pruebas fotográficas que el cliente verifica por su cuenta. La diferencia está entre registrar una presencia y sellar una intervención.' },
     { q: '¿NoBadge tiene GPS anti-spoofing?', a: 'No. NoBadge registra la posición GPS del dispositivo pero no verifica si la posición es real o falsificada. GeoTapp utiliza un control anti-spoofing activo que cruza varias señales para detectar los intentos de falsificación de la posición.' },
     { q: '¿Puede el cliente verificar los informes de NoBadge?', a: 'NoBadge genera informes internos para la administración. GeoTapp genera informes con sello criptográfico que el cliente puede verificar de forma independiente en el portal público, sin necesidad de cuenta ni de fiarse de la empresa.' },
     { q: '¿GeoTapp o NoBadge para empresas de limpieza?', a: 'Si el objetivo es solo registrar las horas de los empleados, NoBadge puede bastar. Si el objetivo es demostrar al cliente que el servicio se realizó con pruebas inalterables - GPS verificado, fotos selladas, informes con valor probatorio - GeoTapp es la única solución.' },
   ],
   pt: [
-    { q: 'Qual é a principal diferença entre a GeoTapp e a NoBadge?', a: 'A NoBadge é um sistema de registo de presenças: regista a entrada e saída dos trabalhadores por GPS ou código QR. A GeoTapp é um sistema de certificação do trabalho no terreno: produz relatórios selados com GPS anti-spoofing e provas fotográficas que o cliente verifica sozinho. A diferença está entre registar uma presença e certificar uma intervenção.' },
+    { q: 'Qual é a principal diferença entre a GeoTapp e a NoBadge?', a: 'A NoBadge é um sistema de registo de presenças: regista a entrada e saída dos trabalhadores por GPS ou código QR. A GeoTapp é um sistema de prova verificável do trabalho no terreno: produz relatórios selados com GPS anti-spoofing e provas fotográficas que o cliente verifica sozinho. A diferença está entre registar uma presença e selar uma intervenção.' },
     { q: 'A NoBadge tem GPS anti-spoofing?', a: 'Não. A NoBadge regista a posição GPS do dispositivo mas não verifica se a posição é real ou falsificada. A GeoTapp utiliza um controlo anti-spoofing ativo que cruza vários sinais para detetar as tentativas de falsificação da posição.' },
     { q: 'O cliente pode verificar os relatórios da NoBadge?', a: 'A NoBadge gera relatórios internos para a administração. A GeoTapp gera relatórios com selo criptográfico que o cliente pode verificar de forma independente no portal público, sem precisar de conta nem de confiar na empresa.' },
     { q: 'GeoTapp ou NoBadge para empresas de limpeza?', a: 'Se o objetivo é apenas registar as horas dos trabalhadores, a NoBadge pode bastar. Se o objetivo é provar ao cliente que o serviço foi efetuado com provas inalteráveis - GPS verificado, fotos seladas, relatórios com valor probatório, a GeoTapp é a única solução.' },
   ],
   nl: [
-    { q: 'Wat is het belangrijkste verschil tussen GeoTapp en NoBadge?', a: 'NoBadge is een systeem voor tijdregistratie: het registreert het in- en uitchecken van werknemers via GPS of QR-code. GeoTapp is een systeem voor werkcertificering op locatie: het maakt verzegelde rapporten met anti-spoofing-GPS en fotobewijs dat de opdrachtgever zelf verifieert. Het verschil zit tussen het registreren van een aanwezigheid en het certificeren van een opdracht.' },
+    { q: 'Wat is het belangrijkste verschil tussen GeoTapp en NoBadge?', a: 'NoBadge is een systeem voor tijdregistratie: het registreert het in- en uitchecken van werknemers via GPS of QR-code. GeoTapp is een systeem voor verzegeld werkbewijs op locatie: het maakt verzegelde rapporten met anti-spoofing-GPS en fotobewijs dat de opdrachtgever zelf verifieert. Het verschil zit tussen het registreren van een aanwezigheid en het verzegelen van een opdracht.' },
     { q: 'Heeft NoBadge anti-spoofing-GPS?', a: 'Nee. NoBadge registreert de GPS-positie van het toestel maar verifieert niet of de positie echt of vervalst is. GeoTapp gebruikt een actieve anti-spoofing-controle die meerdere signalen combineert om pogingen tot vervalsing van de positie te detecteren.' },
     { q: 'Kan de opdrachtgever de rapporten van NoBadge verifiëren?', a: 'NoBadge genereert interne rapporten voor de administratie. GeoTapp genereert rapporten met een cryptografisch zegel die de opdrachtgever onafhankelijk kan verifiëren op het openbare portaal, zonder account en zonder het bedrijf te hoeven vertrouwen.' },
     { q: 'GeoTapp of NoBadge voor schoonmaakbedrijven?', a: 'Als het doel alleen is om de uren van werknemers te registreren, kan NoBadge volstaan. Als het doel is om de opdrachtgever te bewijzen dat de dienst is uitgevoerd met manipulatiebestendig bewijs, geverifieerd GPS, verzegelde foto\'s, rapporten met bewijskracht, is GeoTapp de enige oplossing.' },
   ],
   da: [
-    { q: 'Hvad er den vigtigste forskel mellem GeoTapp og NoBadge?', a: 'NoBadge er et system til tidsregistrering: det registrerer medarbejdernes ind- og udstempling via GPS eller QR-kode. GeoTapp er et system til arbejdscertificering i marken: det producerer forseglede rapporter med anti-spoofing-GPS og fotobeviser, som kunden selv verificerer. Forskellen er mellem at registrere en tilstedeværelse og at certificere en opgave.' },
+    { q: 'Hvad er den vigtigste forskel mellem GeoTapp og NoBadge?', a: 'NoBadge er et system til tidsregistrering: det registrerer medarbejdernes ind- og udstempling via GPS eller QR-kode. GeoTapp er et system til forseglet arbejdsbevis i marken: det producerer forseglede rapporter med anti-spoofing-GPS og fotobeviser, som kunden selv verificerer. Forskellen er mellem at registrere en tilstedeværelse og at forsegle en opgave.' },
     { q: 'Har NoBadge anti-spoofing-GPS?', a: 'Nej. NoBadge registrerer enhedens GPS-position, men verificerer ikke, om positionen er ægte eller forfalsket. GeoTapp bruger en aktiv anti-spoofing-kontrol, der krydstjekker flere signaler for at opdage forsøg på at forfalske positionen.' },
     { q: 'Kan kunden verificere NoBadges rapporter?', a: 'NoBadge genererer interne rapporter til administrationen. GeoTapp genererer rapporter med kryptografisk segl, som kunden uafhængigt kan verificere på den offentlige portal, uden konto og uden at skulle stole på virksomheden.' },
     { q: 'GeoTapp eller NoBadge til rengøringsfirmaer?', a: 'Hvis målet kun er at registrere medarbejdernes timer, kan NoBadge være nok. Hvis målet er at bevise over for kunden, at servicen blev udført med beviser, der ikke kan ændres, verificeret GPS, forseglede fotos, rapporter med bevisværdi, er GeoTapp den eneste løsning.' },
   ],
   sv: [
-    { q: 'Vad är den största skillnaden mellan GeoTapp och NoBadge?', a: 'NoBadge är ett system för tidsrapportering: det registrerar de anställdas in- och utcheckning via GPS eller QR-kod. GeoTapp är ett system för arbetscertifiering i fält: det producerar förseglade rapporter med anti-spoofing-GPS och fotobevis som kunden själv verifierar. Skillnaden ligger mellan att registrera en närvaro och att certifiera ett uppdrag.' },
+    { q: 'Vad är den största skillnaden mellan GeoTapp och NoBadge?', a: 'NoBadge är ett system för tidsrapportering: det registrerar de anställdas in- och utcheckning via GPS eller QR-kod. GeoTapp är ett system för förseglat arbetsbevis i fält: det producerar förseglade rapporter med anti-spoofing-GPS och fotobevis som kunden själv verifierar. Skillnaden ligger mellan att registrera en närvaro och att försegla ett uppdrag.' },
     { q: 'Har NoBadge anti-spoofing-GPS?', a: 'Nej. NoBadge registrerar enhetens GPS-position men verifierar inte om positionen är äkta eller förfalskad. GeoTapp använder en aktiv anti-spoofing-kontroll som korsar flera signaler för att upptäcka försök att förfalska positionen.' },
     { q: 'Kan kunden verifiera NoBadges rapporter?', a: 'NoBadge genererar interna rapporter för administrationen. GeoTapp genererar rapporter med ett kryptografiskt sigill som kunden oberoende kan verifiera på den offentliga portalen, utan konto och utan att behöva lita på företaget.' },
     { q: 'GeoTapp eller NoBadge för städföretag?', a: 'Om målet bara är att registrera de anställdas timmar kan NoBadge räcka. Om målet är att bevisa för kunden att tjänsten utfördes med bevis som inte kan ändras, verifierad GPS, förseglade foton, rapporter med bevisvärde, är GeoTapp den enda lösningen.' },
   ],
   nb: [
-    { q: 'Hva er den viktigste forskjellen mellom GeoTapp og NoBadge?', a: 'NoBadge er et system for tidsregistrering: det registrerer de ansattes inn- og utstempling via GPS eller QR-kode. GeoTapp er et system for arbeidssertifisering ute i felten: det produserer forseglede rapporter med anti-spoofing-GPS og fotobevis som oppdragsgiveren selv verifiserer. Forskjellen er mellom å registrere et oppmøte og å sertifisere et oppdrag.' },
+    { q: 'Hva er den viktigste forskjellen mellom GeoTapp og NoBadge?', a: 'NoBadge er et system for tidsregistrering: det registrerer de ansattes inn- og utstempling via GPS eller QR-kode. GeoTapp er et system for forseglet arbeidsbevis ute i felten: det produserer forseglede rapporter med anti-spoofing-GPS og fotobevis som oppdragsgiveren selv verifiserer. Forskjellen er mellom å registrere et oppmøte og å forsegle et oppdrag.' },
     { q: 'Har NoBadge anti-spoofing-GPS?', a: 'Nei. NoBadge registrerer enhetens GPS-posisjon, men verifiserer ikke om posisjonen er ekte eller forfalsket. GeoTapp bruker en aktiv anti-spoofing-kontroll som krysskobler flere signaler for å oppdage forsøk på å forfalske posisjonen.' },
     { q: 'Kan oppdragsgiveren verifisere NoBadge-rapportene?', a: 'NoBadge genererer interne rapporter for administrasjonen. GeoTapp genererer rapporter med kryptografisk segl som oppdragsgiveren uavhengig kan verifisere på den offentlige portalen, uten konto og uten å måtte stole på selskapet.' },
     { q: 'GeoTapp eller NoBadge for renholdsbedrifter?', a: 'Hvis målet bare er å registrere de ansattes timer, kan NoBadge være nok. Hvis målet er å bevise overfor oppdragsgiveren at tjenesten ble utført med bevis som ikke kan endres, verifisert GPS, forseglede bilder, rapporter med bevisverdi, er GeoTapp den eneste løsningen.' },
   ],
   ru: [
-    { q: 'В чём главное отличие GeoTapp от NoBadge?', a: 'NoBadge, это система учёта присутствия: она фиксирует приход и уход сотрудников через GPS или QR-код. GeoTapp, это система сертификации работы на объекте: она формирует опечатанные отчёты с анти-спуфинговым GPS и фотодоказательствами, которые заказчик проверяет сам. Разница между тем, чтобы зафиксировать присутствие, и тем, чтобы сертифицировать выполненную работу.' },
+    { q: 'В чём главное отличие GeoTapp от NoBadge?', a: 'NoBadge, это система учёта присутствия: она фиксирует приход и уход сотрудников через GPS или QR-код. GeoTapp, это система сертификации работы на объекте: она формирует опечатанные отчёты с анти-спуфинговым GPS и фотодоказательствами, которые заказчик проверяет сам. Разница между тем, чтобы зафиксировать присутствие, и тем, чтобы запечатать выполненную работу.' },
     { q: 'Есть ли у NoBadge анти-спуфинговый GPS?', a: 'Нет. NoBadge фиксирует GPS-позицию устройства, но не проверяет, реальна она или подделана. GeoTapp использует активную анти-спуфинговую проверку, которая сопоставляет несколько сигналов, чтобы выявить попытки подделки позиции.' },
     { q: 'Может ли заказчик проверить отчёты NoBadge?', a: 'NoBadge формирует внутренние отчёты для администрации. GeoTapp формирует отчёты с криптографической печатью, которые заказчик может независимо проверить на публичном портале, без учётной записи и без необходимости доверять компании.' },
     { q: 'GeoTapp или NoBadge для клининговых компаний?', a: 'Если цель, только учитывать часы сотрудников, NoBadge может быть достаточно. Если цель, доказать заказчику, что услуга была оказана, с доказательствами, которые нельзя подделать, проверенный GPS, опечатанные фото, отчёты с доказательной силой - GeoTapp единственное решение.' },
@@ -122,8 +122,8 @@ type Copy = {
 
 const T: Record<string, Copy> = {
   it: {
-    badge: 'Confronto App', h1sub: 'timbratura o certificazione?',
-    desc: 'NoBadge registra le presenze dei dipendenti con GPS e QR code. GeoTapp certifica ogni intervento con GPS anti-spoofing, foto sigillate crittograficamente e report verificabili dal committente. Due approcci molto diversi.',
+    badge: 'Confronto App', h1sub: 'timbratura o prova verificabile?',
+    desc: 'NoBadge registra le presenze dei dipendenti con GPS e QR code. GeoTapp sigilla ogni intervento con GPS anti-spoofing, foto sigillate crittograficamente e report verificabili dal committente. Due approcci molto diversi.',
     summary: 'In sintesi:',
     summaryText: 'NoBadge è un ottimo sistema di rilevazione presenze per chi ha bisogno solo di registrare entrate e uscite. GeoTapp è per chi ha bisogno di dimostrare al proprio committente che il lavoro è stato fatto, con prove non alterabili, GPS verificato e report con valore probatorio che il cliente può controllare da solo.',
     noteTitle: 'Perché la semplice timbratura GPS non basta',
@@ -137,7 +137,7 @@ const T: Record<string, Copy> = {
     footnote: '* Per legge (GDPR Art. 13 e, in Italia, Art. 4 Statuto dei Lavoratori), ogni dipendente deve firmare un\'informativa privacy prima di essere geolocalizzato. La maggior parte dei software GPS non lo gestisce: il rischio legale resta al titolare. GeoTapp genera automaticamente l\'informativa personalizzata, la fa firmare digitalmente al dipendente e blocca l\'accesso GPS finché non è firmata. Nessun altro software sul mercato lo fa.',
   },
   en: {
-    badge: 'App Comparison', h1sub: 'attendance or certification?',
+    badge: 'App Comparison', h1sub: 'attendance or verifiable proof?',
     desc: 'NoBadge tracks employee attendance via GPS and QR code. GeoTapp certifies every job with anti-spoofing GPS, cryptographically sealed photos and client-verifiable reports. Two very different approaches.',
     summary: 'Bottom line:',
     summaryText: 'NoBadge is a solid attendance system for basic time tracking. GeoTapp is for companies that need to prove to their client that the work was done, with tamper-proof evidence, verified GPS and reports with evidentiary value that the client can check independently.',
@@ -153,7 +153,7 @@ const T: Record<string, Copy> = {
   },
   de: {
     badge: 'App-Vergleich', h1sub: 'Zeiterfassung oder Zertifizierung?',
-    desc: 'NoBadge erfasst Anwesenheiten per GPS und QR-Code. GeoTapp zertifiziert jeden Einsatz mit Anti-Spoofing-GPS, kryptographisch versiegelten Fotos und vom Auftraggeber verifizierbaren Berichten. Zwei sehr unterschiedliche Ansätze.',
+    desc: 'NoBadge erfasst Anwesenheiten per GPS und QR-Code. GeoTapp versiegelt jeden Einsatz mit Anti-Spoofing-GPS, kryptographisch versiegelten Fotos und vom Auftraggeber verifizierbaren Berichten. Zwei sehr unterschiedliche Ansätze.',
     summary: 'Fazit:',
     summaryText: 'NoBadge ist ein gutes Anwesenheitssystem für reine Zeiterfassung. GeoTapp ist für Unternehmen, die ihrem Auftraggeber beweisen müssen, dass die Arbeit erbracht wurde, mit fälschungssicheren Beweisen, verifiziertem GPS und Berichten mit Beweiskraft, die der Auftraggeber selbst prüfen kann.',
     noteTitle: 'Warum einfache GPS-Zeiterfassung nicht ausreicht',
@@ -182,8 +182,8 @@ const T: Record<string, Copy> = {
     footnote: '* Selon la loi (RGPD Art. 13), chaque salarié doit signer un avis de confidentialité avant d\'être géolocalisé. La plupart des logiciels GPS ne le gèrent pas : le risque juridique reste à l\'employeur. GeoTapp génère automatiquement l\'avis personnalisé, le fait signer numériquement par le salarié et bloque l\'accès GPS tant qu\'il n\'est pas signé. Aucun autre logiciel sur le marché ne le fait.',
   },
   es: {
-    badge: 'Comparativa de apps', h1sub: '¿fichaje o certificación?',
-    desc: 'NoBadge registra las presencias de los empleados con GPS y código QR. GeoTapp certifica cada intervención con GPS anti-spoofing, fotos selladas criptográficamente e informes verificables por el cliente. Dos enfoques muy distintos.',
+    badge: 'Comparativa de apps', h1sub: '¿fichaje o prueba verificable?',
+    desc: 'NoBadge registra las presencias de los empleados con GPS y código QR. GeoTapp sella cada intervención con GPS anti-spoofing, fotos selladas criptográficamente e informes verificables por el cliente. Dos enfoques muy distintos.',
     summary: 'En resumen:',
     summaryText: 'NoBadge es un buen sistema de control de presencia para quien solo necesita registrar entradas y salidas. GeoTapp es para quien necesita demostrar a su cliente que el trabajo se hizo, con pruebas inalterables, GPS verificado e informes con valor probatorio que el cliente puede controlar por sí mismo.',
     noteTitle: 'Por qué el simple fichaje GPS no basta',
@@ -198,7 +198,7 @@ const T: Record<string, Copy> = {
   },
   pt: {
     badge: 'Comparativo de apps', h1sub: 'registo de presença ou certificação?',
-    desc: 'A NoBadge regista as presenças dos trabalhadores com GPS e código QR. A GeoTapp certifica cada intervenção com GPS anti-spoofing, fotos seladas criptograficamente e relatórios verificáveis pelo cliente. Duas abordagens muito diferentes.',
+    desc: 'A NoBadge regista as presenças dos trabalhadores com GPS e código QR. A GeoTapp sela cada intervenção com GPS anti-spoofing, fotos seladas criptograficamente e relatórios verificáveis pelo cliente. Duas abordagens muito diferentes.',
     summary: 'Em resumo:',
     summaryText: 'A NoBadge é um bom sistema de registo de presenças para quem só precisa de registar entradas e saídas. A GeoTapp é para quem precisa de provar ao seu cliente que o trabalho foi feito, com provas inalteráveis, GPS verificado e relatórios com valor probatório que o cliente pode controlar sozinho.',
     noteTitle: 'Porque é que o simples registo GPS não basta',
@@ -213,7 +213,7 @@ const T: Record<string, Copy> = {
   },
   nl: {
     badge: 'App-vergelijking', h1sub: 'tijdregistratie of certificering?',
-    desc: 'NoBadge registreert de aanwezigheid van werknemers via GPS en QR-code. GeoTapp certificeert elke opdracht met anti-spoofing-GPS, cryptografisch verzegelde foto\'s en door de opdrachtgever verifieerbare rapporten. Twee heel verschillende benaderingen.',
+    desc: 'NoBadge registreert de aanwezigheid van werknemers via GPS en QR-code. GeoTapp verzegelt elke opdracht met anti-spoofing-GPS, cryptografisch verzegelde foto\'s en door de opdrachtgever verifieerbare rapporten. Twee heel verschillende benaderingen.',
     summary: 'Kort gezegd:',
     summaryText: 'NoBadge is een goed aanwezigheidssysteem voor wie alleen in- en uitchecken hoeft te registreren. GeoTapp is voor wie aan zijn opdrachtgever moet bewijzen dat het werk is gedaan, met manipulatiebestendig bewijs, geverifieerd GPS en rapporten met bewijskracht die de klant zelf kan controleren.',
     noteTitle: 'Waarom eenvoudige GPS-registratie niet genoeg is',
@@ -228,7 +228,7 @@ const T: Record<string, Copy> = {
   },
   da: {
     badge: 'App-sammenligning', h1sub: 'tidsregistrering eller certificering?',
-    desc: 'NoBadge registrerer medarbejdernes tilstedeværelse via GPS og QR-kode. GeoTapp certificerer hver opgave med anti-spoofing-GPS, kryptografisk forseglede fotos og rapporter, kunden kan verificere. To meget forskellige tilgange.',
+    desc: 'NoBadge registrerer medarbejdernes tilstedeværelse via GPS og QR-kode. GeoTapp forsegler hver opgave med anti-spoofing-GPS, kryptografisk forseglede fotos og rapporter, kunden kan verificere. To meget forskellige tilgange.',
     summary: 'Kort sagt:',
     summaryText: 'NoBadge er et godt tilstedeværelsessystem for dem, der kun har brug for at registrere ind og ud. GeoTapp er for dem, der skal bevise over for deres kunde, at arbejdet er udført, med beviser, der ikke kan ændres, verificeret GPS og rapporter med bevisværdi, som kunden selv kan kontrollere.',
     noteTitle: 'Hvorfor simpel GPS-registrering ikke er nok',
@@ -242,8 +242,8 @@ const T: Record<string, Copy> = {
     footnote: '* Ifølge loven (GDPR art. 13) skal hver medarbejder underskrive en privatlivserklæring, før vedkommende geolokaliseres. De fleste GPS-programmer håndterer ikke dette: den juridiske risiko forbliver hos arbejdsgiveren. GeoTapp genererer automatisk den personlige erklæring, får den underskrevet digitalt af medarbejderen og blokerer GPS-adgangen, indtil den er underskrevet. Ingen anden software på markedet gør dette.',
   },
   sv: {
-    badge: 'App-jämförelse', h1sub: 'tidsrapportering eller certifiering?',
-    desc: 'NoBadge registrerar de anställdas närvaro via GPS och QR-kod. GeoTapp certifierar varje uppdrag med anti-spoofing-GPS, kryptografiskt förseglade foton och rapporter som kunden kan verifiera. Två mycket olika sätt att arbeta.',
+    badge: 'App-jämförelse', h1sub: 'tidsrapportering eller förseglat bevis?',
+    desc: 'NoBadge registrerar de anställdas närvaro via GPS och QR-kod. GeoTapp förseglar varje uppdrag med anti-spoofing-GPS, kryptografiskt förseglade foton och rapporter som kunden kan verifiera. Två mycket olika sätt att arbeta.',
     summary: 'Kort sagt:',
     summaryText: 'NoBadge är ett bra närvarosystem för den som bara behöver registrera in- och utcheckning. GeoTapp är för den som måste bevisa för sin kund att arbetet är utfört, med bevis som inte kan ändras, verifierad GPS och rapporter med bevisvärde som kunden själv kan kontrollera.',
     noteTitle: 'Varför enkel GPS-registrering inte räcker',
@@ -258,7 +258,7 @@ const T: Record<string, Copy> = {
   },
   nb: {
     badge: 'App-sammenligning', h1sub: 'tidsregistrering eller sertifisering?',
-    desc: 'NoBadge registrerer de ansattes oppmøte via GPS og QR-kode. GeoTapp sertifiserer hvert oppdrag med anti-spoofing-GPS, kryptografisk forseglede bilder og rapporter oppdragsgiveren kan verifisere. To svært forskjellige tilnærminger.',
+    desc: 'NoBadge registrerer de ansattes oppmøte via GPS og QR-kode. GeoTapp forsegler hvert oppdrag med anti-spoofing-GPS, kryptografisk forseglede bilder og rapporter oppdragsgiveren kan verifisere. To svært forskjellige tilnærminger.',
     summary: 'Kort sagt:',
     summaryText: 'NoBadge er et godt oppmøtesystem for dem som bare trenger å registrere inn og ut. GeoTapp er for dem som må bevise overfor oppdragsgiveren at arbeidet er utført, med bevis som ikke kan endres, verifisert GPS og rapporter med bevisverdi som kunden selv kan kontrollere.',
     noteTitle: 'Hvorfor enkel GPS-registrering ikke er nok',
@@ -273,7 +273,7 @@ const T: Record<string, Copy> = {
   },
   ru: {
     badge: 'Сравнение приложений', h1sub: 'учёт присутствия или сертификация?',
-    desc: 'NoBadge регистрирует присутствие сотрудников через GPS и QR-код. GeoTapp сертифицирует каждый выезд с помощью анти-спуфингового GPS, криптографически опечатанных фото и отчётов, проверяемых заказчиком. Два очень разных подхода.',
+    desc: 'NoBadge регистрирует присутствие сотрудников через GPS и QR-код. GeoTapp запечатывает каждый выезд с помощью анти-спуфингового GPS, криптографически опечатанных фото и отчётов, проверяемых заказчиком. Два очень разных подхода.',
     summary: 'Коротко:',
     summaryText: 'NoBadge, хорошая система учёта присутствия для тех, кому нужно только фиксировать приход и уход. GeoTapp, для тех, кому нужно доказать заказчику, что работа выполнена, с помощью доказательств, которые нельзя подделать, проверенного GPS и отчётов с доказательной силой, которые клиент может проверить сам.',
     noteTitle: 'Почему простой учёт по GPS недостаточен',

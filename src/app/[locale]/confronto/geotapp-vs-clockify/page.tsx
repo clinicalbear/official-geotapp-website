@@ -12,78 +12,78 @@ const ARTICLE_DATE_PUBLISHED = '2025-09-01';
 const ARTICLE_DATE_MODIFIED = '2026-08-01';
 
 const META: Record<string, { title: string; description: string }> = {
-  it: { title: 'GeoTapp vs Clockify - Confronto 2026 | GeoTapp', description: 'GeoTapp vs Clockify: differenze chiave per aziende con operatori sul campo. Clockify traccia le ore; GeoTapp certifica ogni intervento con GPS verificato, foto e report non alterabili.' },
+  it: { title: 'GeoTapp vs Clockify - Confronto 2026 | GeoTapp', description: 'GeoTapp vs Clockify: differenze chiave per aziende con operatori sul campo. Clockify traccia le ore; GeoTapp sigilla ogni intervento con GPS verificato, foto e report non alterabili.' },
   en: { title: 'GeoTapp vs Clockify - Comparison 2026 | GeoTapp', description: 'GeoTapp vs Clockify: key differences for field service companies. Clockify tracks hours; GeoTapp certifies every job with verified GPS, photos and tamper-proof reports.' },
-  de: { title: 'GeoTapp vs Clockify - Vergleich 2026 | GeoTapp', description: 'GeoTapp vs Clockify: Hauptunterschiede für Außendienstunternehmen. Clockify erfasst Stunden; GeoTapp zertifiziert jeden Einsatz mit verifizierten GPS-Daten, Fotos und manipulationssicheren Berichten.' },
-  nl: { title: 'GeoTapp vs Clockify - Vergelijking 2026 | GeoTapp', description: 'GeoTapp vs Clockify: belangrijke verschillen voor bedrijven met buitendienstmedewerkers. Clockify registreert uren; GeoTapp certificeert elke opdracht met geverifieerd GPS, foto\'s en manipulatiebestendige rapporten.' },
+  de: { title: 'GeoTapp vs Clockify - Vergleich 2026 | GeoTapp', description: 'GeoTapp vs Clockify: Hauptunterschiede für Außendienstunternehmen. Clockify erfasst Stunden; GeoTapp versiegelt jeden Einsatz mit verifizierten GPS-Daten, Fotos und manipulationssicheren Berichten.' },
+  nl: { title: 'GeoTapp vs Clockify - Vergelijking 2026 | GeoTapp', description: 'GeoTapp vs Clockify: belangrijke verschillen voor bedrijven met buitendienstmedewerkers. Clockify registreert uren; GeoTapp verzegelt elke opdracht met geverifieerd GPS, foto\'s en manipulatiebestendige rapporten.' },
   fr: { title: 'GeoTapp vs Clockify - Comparaison 2026 | GeoTapp', description: 'GeoTapp vs Clockify : différences clés pour les entreprises avec des opérateurs sur le terrain. Clockify suit les heures ; GeoTapp certifie chaque intervention avec GPS vérifié, photos et rapports infalsifiables.' },
-  es: { title: 'GeoTapp vs Clockify - Comparación 2026 | GeoTapp', description: 'GeoTapp vs Clockify: diferencias clave para empresas con operarios de campo. Clockify registra las horas; GeoTapp certifica cada intervención con GPS verificado, fotos e informes inalterables.' },
-  pt: { title: 'GeoTapp vs Clockify - Comparação 2026 | GeoTapp', description: 'GeoTapp vs Clockify: diferenças-chave para empresas com operadores no terreno. A Clockify regista as horas; a GeoTapp certifica cada intervenção com GPS verificado, fotos e relatórios inalteráveis.' },
-  da: { title: 'GeoTapp vs Clockify - Sammenligning 2026 | GeoTapp', description: 'GeoTapp vs Clockify: vigtige forskelle for virksomheder med medarbejdere i marken. Clockify registrerer timer; GeoTapp certificerer hver opgave med verificeret GPS, fotos og rapporter, der ikke kan ændres.' },
-  sv: { title: 'GeoTapp vs Clockify - Jämförelse 2026 | GeoTapp', description: 'GeoTapp vs Clockify: viktiga skillnader för företag med fältpersonal. Clockify registrerar timmar; GeoTapp certifierar varje uppdrag med verifierad GPS, foton och rapporter som inte kan ändras.' },
-  nb: { title: 'GeoTapp vs Clockify - Sammenligning 2026 | GeoTapp', description: 'GeoTapp vs Clockify: viktige forskjeller for bedrifter med feltarbeidere. Clockify registrerer timer; GeoTapp sertifiserer hvert oppdrag med verifisert GPS, bilder og rapporter som ikke kan endres.' },
-  ru: { title: 'GeoTapp vs Clockify, Сравнение 2026 | GeoTapp', description: 'GeoTapp vs Clockify: ключевые различия для компаний с выездными работниками. Clockify учитывает часы; GeoTapp сертифицирует каждое задание с проверенным GPS, фото и отчётами, которые нельзя подделать.' },
+  es: { title: 'GeoTapp vs Clockify - Comparación 2026 | GeoTapp', description: 'GeoTapp vs Clockify: diferencias clave para empresas con operarios de campo. Clockify registra las horas; GeoTapp sella cada intervención con GPS verificado, fotos e informes inalterables.' },
+  pt: { title: 'GeoTapp vs Clockify - Comparação 2026 | GeoTapp', description: 'GeoTapp vs Clockify: diferenças-chave para empresas com operadores no terreno. A Clockify regista as horas; a GeoTapp sela cada intervenção com GPS verificado, fotos e relatórios inalteráveis.' },
+  da: { title: 'GeoTapp vs Clockify - Sammenligning 2026 | GeoTapp', description: 'GeoTapp vs Clockify: vigtige forskelle for virksomheder med medarbejdere i marken. Clockify registrerer timer; GeoTapp forsegler hver opgave med verificeret GPS, fotos og rapporter, der ikke kan ændres.' },
+  sv: { title: 'GeoTapp vs Clockify - Jämförelse 2026 | GeoTapp', description: 'GeoTapp vs Clockify: viktiga skillnader för företag med fältpersonal. Clockify registrerar timmar; GeoTapp förseglar varje uppdrag med verifierad GPS, foton och rapporter som inte kan ändras.' },
+  nb: { title: 'GeoTapp vs Clockify - Sammenligning 2026 | GeoTapp', description: 'GeoTapp vs Clockify: viktige forskjeller for bedrifter med feltarbeidere. Clockify registrerer timer; GeoTapp forsegler hvert oppdrag med verifisert GPS, bilder og rapporter som ikke kan endres.' },
+  ru: { title: 'GeoTapp vs Clockify, Сравнение 2026 | GeoTapp', description: 'GeoTapp vs Clockify: ключевые различия для компаний с выездными работниками. Clockify учитывает часы; GeoTapp запечатывает каждое задание с проверенным GPS, фото и отчётами, которые нельзя подделать.' },
 };
 
 type FaqItem = { q: string; a: string };
 
 const FAQ: Record<string, FaqItem[]> = {
   it: [
-    { q: 'Qual è la differenza principale tra GeoTapp e Clockify?', a: 'Clockify è un time tracker: registra le ore lavorate manualmente o con timer. GeoTapp è un sistema di certificazione degli interventi: genera automaticamente report sigillati con GPS verificato, foto e firma digitale, prove che il cliente può controllare in autonomia.' },
+    { q: 'Qual è la differenza principale tra GeoTapp e Clockify?', a: 'Clockify è un time tracker: registra le ore lavorate manualmente o con timer. GeoTapp è un sistema di prova verificabile degli interventi: genera automaticamente report sigillati con GPS verificato, foto e firma digitale, prove che il cliente può controllare in autonomia.' },
     { q: 'Clockify ha il tracciamento GPS per i lavoratori sul campo?', a: 'Clockify non ha un sistema GPS verificato per operatori sul campo. La posizione non è parte del report e non è sigillata crittograficamente. GeoTapp registra la posizione GPS al momento dell\'apertura e chiusura di ogni intervento, inclusa nel report non alterabile.' },
     { q: 'GeoTapp o Clockify per chi fa interventi su commessa?', a: 'Clockify è adatto per team remoti che fatturano a ore. GeoTapp è progettato per chi deve dimostrare dove e quando ha lavorato, imprese di pulizie, manutentori, installatori. Se hai clienti che contestano, GeoTapp produce le prove; Clockify no.' },
     { q: 'Clockify è gratuito. Vale la pena pagare GeoTapp?', a: 'Clockify free ha senso per freelance e team di ufficio. Per aziende con operatori sul campo, il valore di GeoTapp sta nelle prove difendibili: un contratto salvato grazie a un report verificabile vale molte volte l\'abbonamento mensile.' },
   ],
   en: [
-    { q: 'What is the main difference between GeoTapp and Clockify?', a: 'Clockify is a time tracker: records hours worked manually or with a timer. GeoTapp is a job certification system: automatically generates sealed reports with verified GPS, photos and digital signature, proof clients can verify independently.' },
+    { q: 'What is the main difference between GeoTapp and Clockify?', a: 'Clockify is a time tracker: records hours worked manually or with a timer. GeoTapp is a verifiable proof of work system: automatically generates sealed reports with verified GPS, photos and digital signature, proof clients can verify independently.' },
     { q: 'Does Clockify have GPS tracking for field workers?', a: 'Clockify does not have a verified GPS system for field operators. Location is not part of the report and not cryptographically sealed. GeoTapp records GPS position at job opening and closing, included in the tamper-proof report.' },
     { q: 'GeoTapp or Clockify for job-based field work?', a: 'Clockify suits remote teams billing by the hour. GeoTapp is designed for those who must prove where and when they worked, cleaning companies, maintenance crews, installers. If clients dispute work, GeoTapp produces the proof; Clockify does not.' },
     { q: 'Clockify is free. Is GeoTapp worth paying for?', a: 'Clockify free makes sense for freelancers and office teams. For companies with field operators, the value of GeoTapp lies in defensible proof: a contract saved thanks to a verifiable report is worth many times the monthly subscription.' },
   ],
   de: [
-    { q: 'Was ist der Hauptunterschied zwischen GeoTapp und Clockify?', a: 'Clockify ist ein Time-Tracker: erfasst Arbeitsstunden manuell oder per Timer. GeoTapp ist ein Einsatzzertifizierungssystem: es erstellt automatisch versiegelte Berichte mit verifiziertem GPS, Fotos und digitaler Signatur - Beweise, die der Kunde eigenständig prüfen kann.' },
+    { q: 'Was ist der Hauptunterschied zwischen GeoTapp und Clockify?', a: 'Clockify ist ein Time-Tracker: erfasst Arbeitsstunden manuell oder per Timer. GeoTapp ist ein System für versiegelte Einsatznachweise: es erstellt automatisch versiegelte Berichte mit verifiziertem GPS, Fotos und digitaler Signatur - Beweise, die der Kunde eigenständig prüfen kann.' },
     { q: 'Hat Clockify GPS-Tracking für Außendienstmitarbeiter?', a: 'Clockify hat kein verifiziertes GPS-System für Außendienstkräfte. Der Standort ist nicht Teil des Berichts und nicht kryptographisch versiegelt. GeoTapp erfasst die GPS-Position bei Öffnung und Abschluss jedes Einsatzes, eingebettet im fälschungssicheren Bericht.' },
     { q: 'GeoTapp oder Clockify für auftragsbezogene Außeneinsätze?', a: 'Clockify eignet sich für Remote-Teams, die nach Stunden abrechnen. GeoTapp ist für jene gemacht, die beweisen müssen, wo und wann sie gearbeitet haben - Reinigungsfirmen, Wartungsteams, Installateure. Bei Streit mit Kunden liefert GeoTapp die Beweise; Clockify nicht.' },
     { q: 'Clockify ist kostenlos. Lohnt sich GeoTapp?', a: 'Clockify free ergibt Sinn für Freelancer und Büroteams. Für Unternehmen mit Außendienst liegt der Wert von GeoTapp in belastbaren Beweisen: ein dank eines verifizierbaren Berichts geretteter Auftrag ist ein Vielfaches des Monatsabos wert.' },
   ],
   fr: [
-    { q: 'Quelle est la principale différence entre GeoTapp et Clockify ?', a: 'Clockify est un suivi du temps : il enregistre les heures travaillées manuellement ou avec un chronomètre. GeoTapp est un système de certification des interventions : il génère automatiquement des rapports scellés avec GPS vérifié, photos et signature numérique, des preuves que le client peut contrôler en toute autonomie.' },
+    { q: 'Quelle est la principale différence entre GeoTapp et Clockify ?', a: 'Clockify est un suivi du temps : il enregistre les heures travaillées manuellement ou avec un chronomètre. GeoTapp est un système de preuve vérifiable des interventions : il génère automatiquement des rapports scellés avec GPS vérifié, photos et signature numérique, des preuves que le client peut contrôler en toute autonomie.' },
     { q: 'Clockify a-t-il un suivi GPS pour les travailleurs sur le terrain ?', a: 'Clockify n\'a pas de système GPS vérifié pour les opérateurs sur le terrain. La position ne fait pas partie du rapport et n\'est pas scellée cryptographiquement. GeoTapp enregistre la position GPS à l\'ouverture et à la clôture de chaque intervention, incluse dans le rapport infalsifiable.' },
     { q: 'GeoTapp ou Clockify pour les interventions sur commande ?', a: 'Clockify convient aux équipes à distance qui facturent à l\'heure. GeoTapp est conçu pour ceux qui doivent prouver où et quand ils ont travaillé, entreprises de nettoyage, agents de maintenance, installateurs. Si vos clients contestent, GeoTapp produit les preuves ; Clockify non.' },
     { q: 'Clockify est gratuit. GeoTapp vaut-il le coût ?', a: 'Clockify gratuit a du sens pour les indépendants et les équipes de bureau. Pour les entreprises avec des opérateurs sur le terrain, la valeur de GeoTapp réside dans des preuves défendables : un contrat sauvé grâce à un rapport vérifiable vaut bien des fois l\'abonnement mensuel.' },
   ],
   es: [
-    { q: '¿Cuál es la diferencia principal entre GeoTapp y Clockify?', a: 'Clockify es un control de tiempo: registra las horas trabajadas manualmente o con cronómetro. GeoTapp es un sistema de certificación de intervenciones: genera automáticamente informes sellados con GPS verificado, fotos y firma digital, pruebas que el cliente puede comprobar por sí mismo.' },
+    { q: '¿Cuál es la diferencia principal entre GeoTapp y Clockify?', a: 'Clockify es un control de tiempo: registra las horas trabajadas manualmente o con cronómetro. GeoTapp es un sistema de prueba verificable de intervenciones: genera automáticamente informes sellados con GPS verificado, fotos y firma digital, pruebas que el cliente puede comprobar por sí mismo.' },
     { q: '¿Tiene Clockify seguimiento GPS para trabajadores de campo?', a: 'Clockify no tiene un sistema GPS verificado para operarios de campo. La ubicación no forma parte del informe y no está sellada criptográficamente. GeoTapp registra la posición GPS al abrir y cerrar cada intervención, incluida en el informe inalterable.' },
     { q: '¿GeoTapp o Clockify para quien hace intervenciones por encargo?', a: 'Clockify es adecuado para equipos remotos que facturan por horas. GeoTapp está diseñado para quien debe demostrar dónde y cuándo trabajó, empresas de limpieza, técnicos de mantenimiento, instaladores. Si tienes clientes que reclaman, GeoTapp produce las pruebas; Clockify no.' },
     { q: 'Clockify es gratis. ¿Vale la pena pagar GeoTapp?', a: 'Clockify gratis tiene sentido para autónomos y equipos de oficina. Para empresas con operarios de campo, el valor de GeoTapp está en las pruebas defendibles: un contrato salvado gracias a un informe verificable vale muchas veces la suscripción mensual.' },
   ],
   pt: [
-    { q: 'Qual é a principal diferença entre a GeoTapp e a Clockify?', a: 'A Clockify é um controlo de tempo: regista as horas trabalhadas manualmente ou com cronómetro. A GeoTapp é um sistema de certificação de intervenções: gera automaticamente relatórios selados com GPS verificado, fotos e assinatura digital, provas que o cliente pode verificar sozinho.' },
+    { q: 'Qual é a principal diferença entre a GeoTapp e a Clockify?', a: 'A Clockify é um controlo de tempo: regista as horas trabalhadas manualmente ou com cronómetro. A GeoTapp é um sistema de prova verificável de intervenções: gera automaticamente relatórios selados com GPS verificado, fotos e assinatura digital, provas que o cliente pode verificar sozinho.' },
     { q: 'A Clockify tem rastreamento GPS para trabalhadores no terreno?', a: 'A Clockify não tem um sistema GPS verificado para operadores no terreno. A localização não faz parte do relatório e não é selada criptograficamente. A GeoTapp regista a posição GPS na abertura e no fecho de cada intervenção, incluída no relatório inalterável.' },
     { q: 'GeoTapp ou Clockify para quem faz intervenções por encomenda?', a: 'A Clockify é adequada para equipas remotas que faturam à hora. A GeoTapp foi concebida para quem tem de provar onde e quando trabalhou, empresas de limpeza, técnicos de manutenção, instaladores. Se tem clientes que contestam, a GeoTapp produz as provas; a Clockify não.' },
     { q: 'A Clockify é gratuita. Vale a pena pagar a GeoTapp?', a: 'A Clockify gratuita faz sentido para freelancers e equipas de escritório. Para empresas com operadores no terreno, o valor da GeoTapp está nas provas defensáveis: um contrato salvo graças a um relatório verificável vale muitas vezes a assinatura mensal.' },
   ],
   nl: [
-    { q: 'Wat is het belangrijkste verschil tussen GeoTapp en Clockify?', a: 'Clockify is een tijdregistratie: registreert gewerkte uren handmatig of met een timer. GeoTapp is een systeem voor opdrachtcertificering: genereert automatisch verzegelde rapporten met geverifieerd GPS, foto\'s en digitale handtekening, bewijs dat de klant zelf kan controleren.' },
+    { q: 'Wat is het belangrijkste verschil tussen GeoTapp en Clockify?', a: 'Clockify is een tijdregistratie: registreert gewerkte uren handmatig of met een timer. GeoTapp is een systeem voor verzegeld opdrachtbewijs: genereert automatisch verzegelde rapporten met geverifieerd GPS, foto\'s en digitale handtekening, bewijs dat de klant zelf kan controleren.' },
     { q: 'Heeft Clockify GPS-tracking voor buitendienstmedewerkers?', a: 'Clockify heeft geen geverifieerd GPS-systeem voor buitendienstmedewerkers. De locatie maakt geen deel uit van het rapport en is niet cryptografisch verzegeld. GeoTapp registreert de GPS-positie bij het openen en sluiten van elke opdracht, opgenomen in het manipulatiebestendige rapport.' },
     { q: 'GeoTapp of Clockify voor wie opdrachten op bestelling uitvoert?', a: 'Clockify past bij teams op afstand die per uur factureren. GeoTapp is ontworpen voor wie moet bewijzen waar en wanneer er is gewerkt, schoonmaakbedrijven, onderhoudsmonteurs, installateurs. Als klanten klagen, levert GeoTapp het bewijs; Clockify niet.' },
     { q: 'Clockify is gratis. Is GeoTapp het betalen waard?', a: 'Clockify gratis is logisch voor zzp\'ers en kantoorteams. Voor bedrijven met buitendienstmedewerkers zit de waarde van GeoTapp in verdedigbaar bewijs: een contract dat dankzij een verifieerbaar rapport gered wordt, is vele malen het maandabonnement waard.' },
   ],
   da: [
-    { q: 'Hvad er den vigtigste forskel mellem GeoTapp og Clockify?', a: 'Clockify er en tidsregistrering: registrerer arbejdstimer manuelt eller med en timer. GeoTapp er et system til opgavecertificering: genererer automatisk forseglede rapporter med verificeret GPS, fotos og digital signatur, beviser, som kunden selv kan kontrollere.' },
+    { q: 'Hvad er den vigtigste forskel mellem GeoTapp og Clockify?', a: 'Clockify er en tidsregistrering: registrerer arbejdstimer manuelt eller med en timer. GeoTapp er et system til forseglet opgavebevis: genererer automatisk forseglede rapporter med verificeret GPS, fotos og digital signatur, beviser, som kunden selv kan kontrollere.' },
     { q: 'Har Clockify GPS-sporing til medarbejdere i marken?', a: 'Clockify har ikke et verificeret GPS-system til feltmedarbejdere. Positionen er ikke en del af rapporten og er ikke kryptografisk forseglet. GeoTapp registrerer GPS-positionen ved åbning og lukning af hver opgave, inkluderet i den rapport, der ikke kan ændres.' },
     { q: 'GeoTapp eller Clockify til opgavebaseret arbejde i marken?', a: 'Clockify passer til fjernteams, der fakturerer pr. time. GeoTapp er lavet til dem, der skal bevise, hvor og hvornår de har arbejdet, rengøringsfirmaer, vedligeholdelsesfolk, montører. Hvis kunder klager, leverer GeoTapp beviset; Clockify gør ikke.' },
     { q: 'Clockify er gratis. Er GeoTapp pengene værd?', a: 'Clockify gratis giver mening for freelancere og kontorteams. For virksomheder med feltmedarbejdere ligger værdien af GeoTapp i forsvarlige beviser: en kontrakt reddet takket være en verificerbar rapport er mange gange det månedlige abonnement værd.' },
   ],
   sv: [
-    { q: 'Vad är den största skillnaden mellan GeoTapp och Clockify?', a: 'Clockify är en tidsregistrering: registrerar arbetade timmar manuellt eller med en timer. GeoTapp är ett system för uppdragscertifiering: genererar automatiskt förseglade rapporter med verifierad GPS, foton och digital signatur, bevis som kunden själv kan kontrollera.' },
+    { q: 'Vad är den största skillnaden mellan GeoTapp och Clockify?', a: 'Clockify är en tidsregistrering: registrerar arbetade timmar manuellt eller med en timer. GeoTapp är ett system för förseglat uppdragsbevis: genererar automatiskt förseglade rapporter med verifierad GPS, foton och digital signatur, bevis som kunden själv kan kontrollera.' },
     { q: 'Har Clockify GPS-spårning för fältpersonal?', a: 'Clockify har inget verifierat GPS-system för fältarbetare. Positionen är inte en del av rapporten och är inte kryptografiskt förseglad. GeoTapp registrerar GPS-positionen vid öppning och stängning av varje uppdrag, inkluderad i den rapport som inte kan ändras.' },
     { q: 'GeoTapp eller Clockify för uppdragsbaserat fältarbete?', a: 'Clockify passar fjärrteam som fakturerar per timme. GeoTapp är gjort för dem som måste bevisa var och när de arbetat, städföretag, underhållsteam, installatörer. Om kunder bestrider levererar GeoTapp beviset; Clockify gör inte det.' },
     { q: 'Clockify är gratis. Är GeoTapp värt att betala för?', a: 'Clockify gratis är vettigt för frilansare och kontorsteam. För företag med fältpersonal ligger värdet av GeoTapp i försvarbara bevis: ett kontrakt räddat tack vare en verifierbar rapport är värt många gånger månadsabonnemanget.' },
   ],
   nb: [
-    { q: 'Hva er hovedforskjellen mellom GeoTapp og Clockify?', a: 'Clockify er en tidsregistrering: registrerer arbeidstimer manuelt eller med en timer. GeoTapp er et system for oppdragssertifisering: genererer automatisk forseglede rapporter med verifisert GPS, bilder og digital signatur, bevis kunden kan kontrollere selv.' },
+    { q: 'Hva er hovedforskjellen mellom GeoTapp og Clockify?', a: 'Clockify er en tidsregistrering: registrerer arbeidstimer manuelt eller med en timer. GeoTapp er et system for forseglet oppdragsbevis: genererer automatisk forseglede rapporter med verifisert GPS, bilder og digital signatur, bevis kunden kan kontrollere selv.' },
     { q: 'Har Clockify GPS-sporing for feltarbeidere?', a: 'Clockify har ikke et verifisert GPS-system for feltarbeidere. Posisjonen er ikke en del av rapporten og er ikke kryptografisk forseglet. GeoTapp registrerer GPS-posisjonen ved åpning og lukking av hvert oppdrag, inkludert i rapporten som ikke kan endres.' },
     { q: 'GeoTapp eller Clockify for oppdragsbasert feltarbeid?', a: 'Clockify passer for fjernteam som fakturerer per time. GeoTapp er laget for dem som må bevise hvor og når de har jobbet, renholdsbedrifter, vedlikeholdsteam, montører. Hvis kunder klager, leverer GeoTapp beviset; Clockify gjør det ikke.' },
     { q: 'Clockify er gratis. Er GeoTapp verdt å betale for?', a: 'Clockify gratis gir mening for frilansere og kontorteam. For bedrifter med feltarbeidere ligger verdien av GeoTapp i forsvarlige bevis: en kontrakt reddet takket være en verifiserbar rapport er verdt mange ganger månedsabonnementet.' },
@@ -124,7 +124,7 @@ type Copy = {
 
 const T: Record<string, Copy> = {
   it: {
-    badge: 'Confronto App', h1sub: 'tracciare le ore o certificare gli interventi?',
+    badge: 'Confronto App', h1sub: 'tracciare le ore o sigillare gli interventi?',
     desc: 'Clockify registra il tempo. GeoTapp produce prove verificabili del lavoro svolto. Per chi lavora sul campo, la differenza cambia tutto.',
     summary: 'In sintesi:',
     summaryText: 'Clockify è eccellente per freelance e team di ufficio che tracciano ore per la fatturazione. Per operatori sul campo che devono dimostrare il lavoro svolto a un committente, GeoTapp produce report sigillati con GPS reale, foto e firma digitale - Clockify non ha queste funzionalità.',
@@ -172,13 +172,13 @@ const T: Record<string, Copy> = {
     ctaBtn: 'Jetzt kostenlos starten!',
   },
   fr: {
-    badge: 'Comparatif d\'applis', h1sub: 'suivre les heures ou certifier les interventions ?',
+    badge: 'Comparatif d\'applis', h1sub: 'suivre les heures ou sceller les interventions ?',
     desc: 'Clockify enregistre le temps. GeoTapp produit des preuves vérifiables du travail effectué. Pour ceux qui travaillent sur le terrain, la différence change tout.',
     summary: 'En résumé :',
     summaryText: 'Clockify excelle pour les indépendants et les équipes de bureau qui suivent les heures pour la facturation. Pour les opérateurs sur le terrain qui doivent prouver le travail effectué à un donneur d\'ordre, GeoTapp produit des rapports scellés avec GPS réel, photos et signature numérique, ces fonctionnalités manquent à Clockify.',
     footnote: '* Selon la loi (RGPD Art. 13), chaque salarié doit signer un avis de confidentialité avant d\'être géolocalisé. La plupart des logiciels GPS ne le gèrent pas : le risque juridique reste à l\'employeur. GeoTapp génère automatiquement l\'avis personnalisé, le fait signer numériquement par le salarié et bloque l\'accès GPS tant qu\'il n\'est pas signé. Aucun autre logiciel sur le marché ne le fait.',
     features: 'Comparaison des fonctionnalités clés', feat: 'Fonctionnalité',
-    diff: 'Suivi du temps vs certification du travail',
+    diff: 'Suivi du temps vs preuve vérifiable du travail',
     geo: ['GPS vérifié automatiquement, pas saisi à la main','Rapports scellés par hachage cryptographique à la clôture','Preuves photographiques intégrées au GPS et à l\'horodatage','Le donneur d\'ordre vérifie l\'authenticité en autonomie','Conçu pour les opérateurs sur le terrain (pas le bureau)'],
     comp: ['Excellent pour le suivi du temps et la facturation horaire','Aucun GPS vérifié ni scellé','Aucune preuve photographique liée à l\'intervention','Données non vérifiables par des tiers','Plan gratuit disponible (idéal pour les indépendants)'],
     useCasesTitle: 'Qui devrait choisir GeoTapp plutôt que Clockify',
@@ -194,7 +194,7 @@ const T: Record<string, Copy> = {
     summaryText: 'Clockify destaca para autónomos y equipos de oficina que registran horas para la facturación. Para operarios de campo que deben demostrar el trabajo realizado a un cliente, GeoTapp produce informes sellados con GPS real, fotos y firma digital - Clockify carece de estas funciones.',
     footnote: '* Por ley (RGPD Art. 13), cada empleado debe firmar un aviso de privacidad antes de ser geolocalizado. La mayoría del software GPS no lo gestiona: el riesgo legal recae en el empleador. GeoTapp genera automáticamente el aviso personalizado, hace que el empleado lo firme digitalmente y bloquea el acceso GPS hasta que esté firmado. Ningún otro software del mercado lo hace.',
     features: 'Comparación de funciones clave', feat: 'Función',
-    diff: 'Control de tiempo vs certificación del trabajo',
+    diff: 'Control de tiempo vs prueba verificable del trabajo',
     geo: ['GPS verificado automáticamente, no introducido a mano','Informes sellados con hash criptográfico al cierre','Pruebas fotográficas integradas con GPS y marca de tiempo','El cliente verifica la autenticidad por sí mismo','Diseñado para operarios de campo (no oficina)'],
     comp: ['Excelente para control de tiempo y facturación por horas','Sin GPS verificado ni sellado','Sin pruebas fotográficas vinculadas a la intervención','Los datos no son verificables por terceros','Plan gratuito disponible (ideal para autónomos)'],
     useCasesTitle: 'Quién debería elegir GeoTapp en lugar de Clockify',
@@ -210,7 +210,7 @@ const T: Record<string, Copy> = {
     summaryText: 'A Clockify destaca-se para freelancers e equipas de escritório que registam horas para a faturação. Para operadores no terreno que têm de demonstrar o trabalho realizado a um cliente, a GeoTapp produz relatórios selados com GPS real, fotos e assinatura digital, a Clockify não tem estas funcionalidades.',
     footnote: '* Por lei (RGPD Art. 13), cada trabalhador deve assinar um aviso de privacidade antes de ser geolocalizado. A maioria do software GPS não trata disto: o risco legal fica com o empregador. A GeoTapp gera automaticamente o aviso personalizado, fá-lo assinar digitalmente pelo trabalhador e bloqueia o acesso GPS até estar assinado. Nenhum outro software no mercado o faz.',
     features: 'Comparação das funcionalidades-chave', feat: 'Funcionalidade',
-    diff: 'Controlo de tempo vs certificação do trabalho',
+    diff: 'Controlo de tempo vs prova verificável do trabalho',
     geo: ['GPS verificado automaticamente, não inserido à mão','Relatórios selados com hash criptográfico no fecho','Provas fotográficas integradas com GPS e data/hora','O cliente verifica a autenticidade sozinho','Concebido para operadores no terreno (não escritório)'],
     comp: ['Ótimo para controlo de tempo e faturação à hora','Sem GPS verificado ou selado','Sem provas fotográficas ligadas à intervenção','Os dados não são verificáveis por terceiros','Plano gratuito disponível (ideal para freelancers)'],
     useCasesTitle: 'Quem deve escolher a GeoTapp em vez da Clockify',
@@ -220,7 +220,7 @@ const T: Record<string, Copy> = {
     ctaBtn: 'Comece grátis!',
   },
   nl: {
-    badge: 'App-vergelijking', h1sub: 'uren registreren of opdrachten certificeren?',
+    badge: 'App-vergelijking', h1sub: 'uren registreren of opdrachten verzegelen?',
     desc: 'Clockify registreert tijd. GeoTapp levert verifieerbaar bewijs van het uitgevoerde werk. Voor wie op locatie werkt, verandert het verschil alles.',
     summary: 'Kort gezegd:',
     summaryText: 'Clockify blinkt uit voor zzp\'ers en kantoorteams die uren registreren voor facturatie. Voor buitendienstmedewerkers die het uitgevoerde werk aan een opdrachtgever moeten bewijzen, levert GeoTapp verzegelde rapporten met echt GPS, foto\'s en digitale handtekening - Clockify mist deze functies.',
@@ -236,7 +236,7 @@ const T: Record<string, Copy> = {
     ctaBtn: 'Begin gratis!',
   },
   da: {
-    badge: 'App-sammenligning', h1sub: 'registrere timer eller certificere opgaver?',
+    badge: 'App-sammenligning', h1sub: 'registrere timer eller forsegle opgaver?',
     desc: 'Clockify registrerer tid. GeoTapp leverer verificerbart bevis på det udførte arbejde. For dem, der arbejder i marken, ændrer forskellen alt.',
     summary: 'Kort sagt:',
     summaryText: 'Clockify er fremragende for freelancere og kontorteams, der registrerer timer til fakturering. For feltmedarbejdere, der skal bevise det udførte arbejde over for en kunde, leverer GeoTapp forseglede rapporter med ægte GPS, fotos og digital signatur, disse funktioner mangler i Clockify.',
@@ -252,7 +252,7 @@ const T: Record<string, Copy> = {
     ctaBtn: 'Kom gratis i gang!',
   },
   sv: {
-    badge: 'App-jämförelse', h1sub: 'registrera timmar eller certifiera uppdrag?',
+    badge: 'App-jämförelse', h1sub: 'registrera timmar eller försegla uppdrag?',
     desc: 'Clockify registrerar tid. GeoTapp levererar verifierbara bevis på utfört arbete. För den som arbetar i fält ändrar skillnaden allt.',
     summary: 'Kort sagt:',
     summaryText: 'Clockify är utmärkt för frilansare och kontorsteam som registrerar timmar för fakturering. För fältpersonal som måste bevisa utfört arbete för en kund levererar GeoTapp förseglade rapporter med äkta GPS, foton och digital signatur, dessa funktioner saknas i Clockify.',
@@ -268,7 +268,7 @@ const T: Record<string, Copy> = {
     ctaBtn: 'Kom igång gratis!',
   },
   nb: {
-    badge: 'App-sammenligning', h1sub: 'registrere timer eller sertifisere oppdrag?',
+    badge: 'App-sammenligning', h1sub: 'registrere timer eller forsegle oppdrag?',
     desc: 'Clockify registrerer tid. GeoTapp leverer verifiserbart bevis på utført arbeid. For dem som jobber i felt, endrer forskjellen alt.',
     summary: 'Kort sagt:',
     summaryText: 'Clockify er utmerket for frilansere og kontorteam som registrerer timer for fakturering. For feltarbeidere som må bevise utført arbeid overfor en oppdragsgiver, leverer GeoTapp forseglede rapporter med ekte GPS, bilder og digital signatur, disse funksjonene mangler i Clockify.',

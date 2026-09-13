@@ -2,14 +2,14 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App per impresa di pulizie | GeoTapp - GPS, Presenze e Certificazione',
-    description: 'Smetti di rincorrere le squadre per telefono. GeoTapp è l\'app per impresa di pulizie che certifica presenze e interventi con GPS reale e prove fotografiche, in conformità al GDPR e al CCNL Multiservizi. Prova gratis.',
+    title: 'App per impresa di pulizie | GeoTapp - GPS, Presenze e Prova verificabile',
+    description: 'Smetti di rincorrere le squadre per telefono. GeoTapp è l\'app per impresa di pulizie che sigilla presenze e interventi con GPS reale e prove fotografiche, in conformità al GDPR e al CCNL Multiservizi. Prova gratis.',
   },
 
   hero: {
     badge: 'App per imprese di pulizie, Facility Management e Multiservizi',
     h1_line1: 'L\'app per impresa di pulizie',
-    h1_line2: 'che certifica ogni intervento.',
+    h1_line2: 'che sigilla ogni intervento.',
     subtitle:
       'GeoTapp è l\'app per impresa di pulizie che trasforma ogni intervento in prova difendibile. I clienti contestano. Gli operatori non sono verificabili. I report non bastano mai. GeoTapp risolve tutto con GPS reale, prove fotografiche e report non alterabili, che il committente può verificare da solo.',
     cta_primary: 'Inizia subito gratuitamente!',
@@ -57,7 +57,7 @@ const content: SettoreContent = {
   },
 
   differenza: {
-    title: 'Timbratura vs Certificazione del lavoro.',
+    title: 'Timbratura vs Prova verificabile del lavoro.',
     subtitle: 'La maggior parte delle app registra dati. GeoTapp produce prove.',
     rows: [
       {
@@ -95,7 +95,7 @@ const content: SettoreContent = {
 
   non_gestionale: {
     title: 'Non è un gestionale.',
-    subtitle: 'I gestionali organizzano il lavoro. GeoTapp lo certifica.',
+    subtitle: 'I gestionali organizzano il lavoro. GeoTapp lo sigilla.',
     items: [
       {
         label: 'Scopo principale',
@@ -223,7 +223,7 @@ const content: SettoreContent = {
     items: [
       {
         q: "GeoTapp è solo un'app di timbratura per imprese di pulizie?",
-        a: "No. GeoTapp è un sistema di certificazione del lavoro, non un'app di timbratura. Le app di timbratura registrano un orario. GeoTapp produce un report sigillato con GPS verificato, prove fotografiche e timestamp, che il committente può verificare autonomamente. La differenza tra \"c'è scritto\" e \"si può dimostrare\".",
+        a: "No. GeoTapp è un sistema di prova verificabile del lavoro, non un'app di timbratura. Le app di timbratura registrano un orario. GeoTapp produce un report sigillato con GPS verificato, prove fotografiche e timestamp, che il committente può verificare autonomamente. La differenza tra \"c'è scritto\" e \"si può dimostrare\".",
       },
       {
         q: 'È compatibile con il CCNL Multiservizi?',

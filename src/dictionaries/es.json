@@ -237,7 +237,7 @@
     "core": {
       "badge": "Plataforma GeoTapp",
       "title": "Un sistema, tres niveles de certeza",
-      "subtitle": "TimeTracker registra en campo. Flow organiza en la oficina. Verifier certifica que todo corresponde.",
+      "subtitle": "TimeTracker registra en campo. Flow organiza en la oficina. Verifier comprueba que todo corresponde.",
       "features": [
         {
           "title": "Operatividad móvil real",
@@ -318,7 +318,7 @@
     },
     "demo_banner": {
       "badge": "Ejemplo real",
-      "title": "Informe certificado, descargar y verificar",
+      "title": "Informe sellado, descargar y verificar",
       "field_operator": "Operario",
       "field_intervention": "Intervención",
       "field_intervention_value": "Sustitución del cuadro eléctrico",
@@ -813,7 +813,7 @@
     "title": "Descargar GeoTapp",
     "subtitle": "Elige la versión adecuada a tus necesidades.",
     "demo_report_badge": "Ejemplo real",
-    "demo_report_title": "Informe de intervención certificado",
+    "demo_report_title": "Informe de intervención sellado",
     "demo_report_desc": "Descarga un informe real generado por GeoTapp. Contiene GPS verificado, pruebas fotográficas, cadena hash de operadores y sellado criptográfico.",
     "demo_report_btn_download": "Descargar informe de ejemplo (.zip)",
     "demo_report_btn_verify": "Verificar autenticidad",
@@ -849,7 +849,7 @@
       "Buscó una aplicación que le quitara ese engorro. Las encontró todas iguales, y todas le pedían exactamente lo que ya hacía a mano, fecha, entrada, salida, total. El mismo esfuerzo, con botones más bonitos.",
       "Así que, de vacaciones, se la desarrolló él mismo. Una página web y dos gestos, pulsas cuando empiezas y pulsas cuando terminas, y el resto acababa ordenado en un archivo listo para enviar a fin de mes.",
       "Después llegó la idea que lo cambió todo, si me sirve a mí les sirve también a los compañeros. Y si le sirve al jefe, entonces hay que dar la vuelta al flujo, porque no es él quien debe perseguir a la gente para tener las horas, son las horas las que llegan solas hasta él, cada día.",
-      "A partir de ahí la herramienta creció en una sola dirección. Primero la geolocalización conforme a la ley, leída al abrir y al cerrar el turno, nunca en continuo. Luego la certificación automática del trabajo realizado, porque el problema de verdad nunca fue contar las horas, sino demostrarlas cuando alguien las ponía en duda.",
+      "A partir de ahí la herramienta creció en una sola dirección. Primero la geolocalización conforme a la ley, leída al abrir y al cerrar el turno, nunca en continuo. Luego la prueba verificable automática del trabajo realizado, porque el problema de verdad nunca fue contar las horas, sino demostrarlas cuando alguien las ponía en duda.",
       "Ah, y se escribe GeoTapp, con dos P. Si te encuentras alguno con una sola por ahí, no somos nosotros, pero no se lo tenemos en cuenta.",
       "El nombre, por cierto, ya lo lleva todo dentro. La geolocalización, un tap, una app."
     ],
@@ -968,9 +968,9 @@
     "cta_title": "Mantente informado",
     "cta_desc": "Sin spam, solo actualizaciones valiosas sobre el producto y el sector.",
     "cta_btn": "Contáctanos",
-    "schema_desc": "Guías y análisis sobre certificación del trabajo en campo, gestión de equipos, GDPR y geolocalización.",
+    "schema_desc": "Guías y análisis sobre prueba verificable del trabajo en campo, gestión de equipos, GDPR y geolocalización.",
     "meta_title": "Blog | GeoTapp - Verificación del trabajo en campo",
-    "meta_desc": "Guías, análisis y recursos sobre gestión de equipos, certificación de intervenciones, GDPR y geolocalización. Del equipo GeoTapp.",
+    "meta_desc": "Guías, análisis y recursos sobre gestión de equipos, prueba verificable de intervenciones, GDPR y geolocalización. Del equipo GeoTapp.",
     "cat_all": "Todos",
     "toc_title": "Indice",
     "reading_time_suffix": "min de lectura",
@@ -1147,7 +1147,7 @@
     ]
   },
   "settore_layout": {
-    "pain_subtitle": "Las apps de fichaje registran. No certifican. Hay una diferencia enorme, y cuando llega la disputa la sientes toda.",
+    "pain_subtitle": "Las apps de fichaje registran. No sellan. Hay una diferencia enorme, y cuando llega la disputa la sientes toda.",
     "before": "Antes",
     "after": "Con GeoTapp",
     "classic_app": "App genérica / Hoja de cálculo",

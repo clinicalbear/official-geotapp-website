@@ -22,7 +22,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Relatórios de incidentes sem prova de localização',
-        desc: 'Um relatório de incidente escrito à mão tem pouco valor probatório sem posição GPS certificada e timestamp inviolável. Os registos em papel são demasiado fáceis de contestar junto ao PSP ou em tribunal.',
+        desc: 'Um relatório de incidente escrito à mão tem pouco valor probatório sem posição GPS selada e timestamp inviolável. Os registos em papel são demasiado fáceis de contestar junto ao PSP ou em tribunal.',
       },
       {
         title: 'Passagem de turno ainda em papel',
@@ -80,7 +80,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Como ajuda o GeoTapp na documentação de relatórios de incidentes?',
-        a: 'O TimeTracker liga cada incidente a uma posição GPS certificada e um timestamp imutável. O relatório de incidente gerado inclui coordenadas, hora e fotografias, tornando-o defensável em procedimentos legais e contratuais.',
+        a: 'O TimeTracker liga cada incidente a uma posição GPS selada e um timestamp imutável. O relatório de incidente gerado inclui coordenadas, hora e fotografias, tornando-o defensável em procedimentos legais e contratuais.',
       },
       {
         q: 'O GeoTapp suporta a passagem de turno digital entre vigilantes?',

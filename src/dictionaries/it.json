@@ -134,7 +134,7 @@
     "trust_gdpr": "GDPR Compliant",
     "trust_gdpr_desc": "Solo timestamp all'ingresso e uscita",
     "trust_gps": "Prova GPS",
-    "trust_gps_desc": "Ogni intervento certificato con posizione e timestamp",
+    "trust_gps_desc": "Ogni intervento sigillato con posizione e timestamp",
     "trust_offline": "Funziona Offline",
     "trust_offline_desc": "Sincronizzazione automatica alla riconnessione",
     "trust_eu_data": "Dati in Europa",
@@ -237,7 +237,7 @@
     "core": {
       "badge": "Piattaforma GeoTapp",
       "title": "Un sistema, tre livelli di certezza",
-      "subtitle": "TimeTracker registra sul campo. Flow organizza in ufficio. Verifier certifica che tutto corrisponda. Un ciclo chiuso, senza falle.",
+      "subtitle": "TimeTracker registra sul campo. Flow organizza in ufficio. Verifier verifica che tutto corrisponda. Un ciclo chiuso, senza falle.",
       "features": [
         {
           "title": "Input reale dal campo",
@@ -318,7 +318,7 @@
     },
     "demo_banner": {
       "badge": "Esempio reale",
-      "title": "Report certificato da scaricare e verificare",
+      "title": "Report sigillato da scaricare e verificare",
       "field_operator": "Operatore",
       "field_intervention": "Intervento",
       "field_intervention_value": "Sostituzione quadro elettrico",
@@ -893,7 +893,7 @@
     "title": "Download GeoTapp",
     "subtitle": "Scegli la versione adatta alle tue esigenze.",
     "demo_report_badge": "Esempio reale",
-    "demo_report_title": "Report di intervento certificato",
+    "demo_report_title": "Report di intervento sigillato",
     "demo_report_desc": "Scarica un report reale generato da GeoTapp. Contiene GPS verificato, prove fotografiche, catena hash degli operatori e sigillatura crittografica. Puoi verificarne l'autenticità direttamente su geotapp.com.",
     "demo_report_btn_download": "Scarica Report di esempio (.zip)",
     "demo_report_btn_verify": "Verifica Autenticità",
@@ -929,7 +929,7 @@
       "Cercò un'applicazione che gli togliesse quella rogna. Le trovò tutte uguali, e tutte gli chiedevano esattamente quello che già faceva a mano, data, inizio, fine, totale. Stessa fatica, bottoni più belli.",
       "Così, in ferie, se la sviluppò da solo. Una pagina web e due gesti, premi quando cominci e premi quando smetti, e il resto finiva ordinato in un archivio già pronto da mandare a fine mese.",
       "Poi il pensiero che ha cambiato tutto, se serve a me serve anche ai colleghi. E se serve al titolare, allora il flusso va girato, perché non è lui che deve rincorrere le persone per avere le ore, sono le ore che arrivano a lui ogni giorno da sole.",
-      "Da lì lo strumento è cresciuto in una direzione sola. Prima la geolocalizzazione a norma di legge, letta solo all'apertura e alla chiusura del turno e mai in continuo. Poi la certificazione automatica del lavoro svolto, perché il problema vero non era contare le ore, era dimostrarle quando qualcuno le metteva in dubbio.",
+      "Da lì lo strumento è cresciuto in una direzione sola. Prima la geolocalizzazione a norma di legge, letta solo all'apertura e alla chiusura del turno e mai in continuo. Poi la prova verificabile automatica del lavoro svolto, perché il problema vero non era contare le ore, era dimostrarle quando qualcuno le metteva in dubbio.",
       "Ah, e si scrive GeoTapp, con due P. Se ne trovi una sola in giro, non siamo noi, ma non gliene vogliamo.",
       "Il nome del resto è tutto lì dentro. La geolocalizzazione, un tap, un'app."
     ],
@@ -1049,8 +1049,8 @@
     "cta_desc": "Accesso completo a tutti i moduli. Nessuna carta di credito, nessun impegno.",
     "cta_btn": "Inizia trial gratuito",
     "schema_desc": "Guide e approfondimenti su certificazione del lavoro sul campo, gestione squadre, GDPR e geolocalizzazione.",
-    "meta_title": "Blog | GeoTapp - Certificazione del lavoro sul campo",
-    "meta_desc": "Guide, approfondimenti e risorse su gestione squadre, certificazione interventi, GDPR e geolocalizzazione. Dal team GeoTapp.",
+    "meta_title": "Blog | GeoTapp - Prova verificabile del lavoro sul campo",
+    "meta_desc": "Guide, approfondimenti e risorse su gestione squadre, prova verificabile interventi, GDPR e geolocalizzazione. Dal team GeoTapp.",
     "cat_all": "Tutti",
     "toc_title": "Indice",
     "reading_time_suffix": "min di lettura",
@@ -1147,7 +1147,7 @@
     ]
   },
   "settore_layout": {
-    "pain_subtitle": "Le app di timbratura registrano. Non certificano. C'è una differenza enorme, e nel momento della contestazione la senti tutta.",
+    "pain_subtitle": "Le app di timbratura registrano. Non sigillano. C'è una differenza enorme, e nel momento della contestazione la senti tutta.",
     "before": "Prima",
     "after": "Con GeoTapp",
     "classic_app": "Gestionale / App classica",

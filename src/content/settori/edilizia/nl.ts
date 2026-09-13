@@ -3,13 +3,13 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'Bouwplaats-app: GPS-aanwezigheid & Ploegbeheer | GeoTapp',
-    description: 'Beheer aanwezigheid, diensten en veiligheid op de bouwplaats met realtime GPS. Gecertificeerde klokregistraties, automatische rapporten. AVG-conforme app voor bouwbedrijven.',
+    description: 'Beheer aanwezigheid, diensten en veiligheid op de bouwplaats met realtime GPS. Verzegelde klokregistraties, automatische rapporten. AVG-conforme app voor bouwbedrijven.',
   },
   hero: {
     badge: 'App voor bouwbedrijven en bouwplaatsen',
     h1_line1: 'Uw bouwplaats onder controle,',
     h1_line2: 'in realtime.',
-    subtitle: 'GPS-gecertificeerde klokregistraties, ploegbeheer en automatische rapporten. Geen papierwerk, geen geschillen. GeoTapp verbindt Flow + TimeTracker voor bouwplaatsmanagers, onderaannemers en projectleiding.',
+    subtitle: 'GPS-verzegelde klokregistraties, ploegbeheer en automatische rapporten. Geen papierwerk, geen geschillen. GeoTapp verbindt Flow + TimeTracker voor bouwplaatsmanagers, onderaannemers en projectleiding.',
     cta_primary: 'Probeer GeoTapp 14 dagen gratis',
     cta_note: 'Geen verplichtingen. Geen creditcard vereist.',
   },
@@ -18,7 +18,7 @@ const content: SettoreContent = {
     items: [
       {
         title: 'Wie was er op de bouwplaats en wanneer?',
-        desc: 'Elke GPS-klokregistratie heeft een tijdstempel en is gecertificeerd. GeoTapp registreert echte coördinaten op het moment van inklokken, niet handmatig ingevoerd. De gegevens zijn altijd verifieerbaar door de projectleiding.',
+        desc: 'Elke GPS-klokregistratie heeft een tijdstempel en is verzegeld. GeoTapp registreert echte coördinaten op het moment van inklokken, niet handmatig ingevoerd. De gegevens zijn altijd verifieerbaar door de projectleiding.',
       },
       {
         title: 'Hoe beheert u onderaannemers?',
@@ -98,7 +98,7 @@ const content: SettoreContent = {
     title: 'Functies gebouwd voor de bouwplaats',
     items: [
       {
-        title: 'GPS-gecertificeerde aanwezigheid',
+        title: 'GPS-verzegelde aanwezigheid',
         desc: 'Elke in- en uitgang wordt geregistreerd met echte GPS-positie en tijdstempel. Verdedigbaar voor projectleiding, opdrachtgevers en inspecteurs.',
       },
       {
@@ -134,7 +134,7 @@ const content: SettoreContent = {
     items: [
       {
         q: 'Wie was er op de bouwplaats en wanneer?',
-        a: 'Elke GPS-klokregistratie heeft een tijdstempel en is gecertificeerd. GeoTapp registreert echte coördinaten op het moment van inklokken, niet handmatig ingevoerd. De gegevens zijn altijd verifieerbaar door de projectleiding.',
+        a: 'Elke GPS-klokregistratie heeft een tijdstempel en is verzegeld. GeoTapp registreert echte coördinaten op het moment van inklokken, niet handmatig ingevoerd. De gegevens zijn altijd verifieerbaar door de projectleiding.',
       },
       {
         q: 'Hoe beheert u onderaannemers op de bouwplaats?',
@@ -161,7 +161,7 @@ const content: SettoreContent = {
   schema_faq: [
     {
       question: 'Wie was er op de bouwplaats en wanneer?',
-      answer: 'Elke GPS-klokregistratie heeft een tijdstempel en is gecertificeerd. GeoTapp registreert echte coördinaten op het moment van inklokken, niet handmatig ingevoerd. De gegevens zijn altijd verifieerbaar door de projectleiding.',
+      answer: 'Elke GPS-klokregistratie heeft een tijdstempel en is verzegeld. GeoTapp registreert echte coördinaten op het moment van inklokken, niet handmatig ingevoerd. De gegevens zijn altijd verifieerbaar door de projectleiding.',
     },
     {
       question: 'Hoe beheert u onderaannemers op de bouwplaats?',

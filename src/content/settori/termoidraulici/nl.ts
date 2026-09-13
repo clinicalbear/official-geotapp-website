@@ -179,7 +179,7 @@ const content: SettoreContent = {
       answer: 'Ja. GeoTapp is de app voor cv-monteurs en installateurs van verwarmingsinstallaties die elke ketel- en verwarmingsklus registreert met GPS, foto\'s en verifieerbare tijdstempels. De monteur clockt in vanuit het veld, het kantoor ziet alles in realtime en de klant ontvangt een verzegeld rapport.',
     },
     {
-      question: 'Hoe certificeer ik een ketelklus met GeoTapp?',
+      question: 'Hoe verzegel ik een ketelklus met GeoTapp?',
       answer: 'De monteur registreert begin- en eindtijd met geverifieerd GPS, fotografeert de vervangen onderdelen en voegt technische notities toe. Het systeem genereert een verzegeld rapport dat de klant zelfstandig kan verifiëren.',
     },
     {

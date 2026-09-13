@@ -179,7 +179,7 @@ const content: SettoreContent = {
       answer: 'Sì. GeoTapp è l\'app per termoidraulici e impiantisti che registra ogni intervento su caldaie e impianti con GPS, foto e timestamp verificabili. Il tecnico timbra dal campo, l\'ufficio vede tutto in tempo reale, il cliente riceve un rapportino sigillato.',
     },
     {
-      question: 'Come certifico un intervento su caldaia con GeoTapp?',
+      question: 'Come sigillo un intervento su caldaia con GeoTapp?',
       answer: 'Il tecnico registra su GeoTapp l\'orario di inizio e fine con GPS verificato, le foto dei componenti sostituiti e le note tecniche. Il sistema genera un rapportino sigillato che il cliente può verificare autonomamente.',
     },
     {

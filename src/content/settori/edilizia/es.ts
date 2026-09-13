@@ -3,13 +3,13 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'App para Obras de Construcción: Asistencia GPS y Gestión de Equipos | GeoTapp',
-    description: 'Gestiona asistencia, turnos y seguridad en obra con GPS en tiempo real. Fichajes certificados, informes automáticos. App conforme con RGPD para empresas constructoras.',
+    description: 'Gestiona asistencia, turnos y seguridad en obra con GPS en tiempo real. Fichajes sellados, informes automáticos. App conforme con RGPD para empresas constructoras.',
   },
   hero: {
     badge: 'App para empresas constructoras y obras',
     h1_line1: 'Tu obra bajo control,',
     h1_line2: 'en tiempo real.',
-    subtitle: 'Fichajes GPS certificados, gestión de equipos e informes automáticos. Cero papeleo, cero disputas. GeoTapp conecta Flow + TimeTracker para jefes de obra, subcontratistas y dirección de obra.',
+    subtitle: 'Fichajes GPS sellados, gestión de equipos e informes automáticos. Cero papeleo, cero disputas. GeoTapp conecta Flow + TimeTracker para jefes de obra, subcontratistas y dirección de obra.',
     cta_primary: 'Prueba GeoTapp gratis durante 14 días',
     cta_note: 'Sin compromiso. Sin tarjeta de crédito.',
   },
@@ -18,7 +18,7 @@ const content: SettoreContent = {
     items: [
       {
         title: '¿Quién estaba en obra y cuándo?',
-        desc: 'Cada fichaje GPS tiene marca de tiempo y está certificado. GeoTapp registra coordenadas reales en el momento del fichaje, no introducidas manualmente. Los datos son verificables por la dirección de obra en todo momento.',
+        desc: 'Cada fichaje GPS tiene marca de tiempo y está sellado. GeoTapp registra coordenadas reales en el momento del fichaje, no introducidas manualmente. Los datos son verificables por la dirección de obra en todo momento.',
       },
       {
         title: '¿Cómo gestionas a los subcontratistas?',
@@ -49,7 +49,7 @@ const content: SettoreContent = {
     ],
   },
   differenza: {
-    title: 'App de obra: ¿fichaje o certificación?',
+    title: 'App de obra: ¿fichaje o prueba verificable?',
     subtitle: 'La mayoría de apps registran la hora. GeoTapp produce pruebas verificables.',
     rows: [
       {
@@ -124,7 +124,7 @@ const content: SettoreContent = {
     ],
   },
   testimonial: {
-    quote: 'Desde que usamos GeoTapp, la dirección de obra ya no nos pide los partes de asistencia. Abrimos el informe y la certificación está lista.',
+    quote: 'Desde que usamos GeoTapp, la dirección de obra ya no nos pide los partes de asistencia. Abrimos el informe y la prueba verificable está lista.',
     author: 'José M.',
     role: 'Director, empresa constructora, 35 empleados',
   },
@@ -134,7 +134,7 @@ const content: SettoreContent = {
     items: [
       {
         q: '¿Quién estaba en obra y cuándo?',
-        a: 'Cada fichaje GPS tiene marca de tiempo y está certificado. GeoTapp registra coordenadas reales en el momento del fichaje, no introducidas manualmente. Los datos son verificables por la dirección de obra en todo momento.',
+        a: 'Cada fichaje GPS tiene marca de tiempo y está sellado. GeoTapp registra coordenadas reales en el momento del fichaje, no introducidas manualmente. Los datos son verificables por la dirección de obra en todo momento.',
       },
       {
         q: '¿Cómo gestionas a los subcontratistas en obra?',
@@ -161,7 +161,7 @@ const content: SettoreContent = {
   schema_faq: [
     {
       question: '¿Quién estaba en obra y cuándo?',
-      answer: 'Cada fichaje GPS tiene marca de tiempo y está certificado. GeoTapp registra coordenadas reales en el momento del fichaje, no introducidas manualmente. Los datos son verificables por la dirección de obra en todo momento.',
+      answer: 'Cada fichaje GPS tiene marca de tiempo y está sellado. GeoTapp registra coordenadas reales en el momento del fichaje, no introducidas manualmente. Los datos son verificables por la dirección de obra en todo momento.',
     },
     {
       question: '¿Cómo gestionas a los subcontratistas en obra?',

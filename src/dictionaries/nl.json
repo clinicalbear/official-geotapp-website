@@ -126,7 +126,7 @@
     "trust_gdpr": "AVG-conform",
     "trust_gdpr_desc": "Alleen tijdstempel bij in- en uitklokken",
     "trust_gps": "GPS-bewijs",
-    "trust_gps_desc": "Elke interventie gecertificeerd met locatie en tijdstempel",
+    "trust_gps_desc": "Elke interventie verzegeld met locatie en tijdstempel",
     "trust_offline": "Werkt offline",
     "trust_offline_desc": "Automatisch synchroniseren bij verbinding",
     "trust_eu_data": "Data in Europa",
@@ -306,7 +306,7 @@
         "cta": "Sluit de discussies"
       },
       "impianti": {
-        "desc": "Werktuigbouw, Elektro, Brandbeveiliging. Testen en inbedrijfstelling gecertificeerd met tijd en locatie, bewijs klaar voor de opdrachtgever.",
+        "desc": "Werktuigbouw, Elektro, Brandbeveiliging. Testen en inbedrijfstelling verzegeld met tijd en locatie, bewijs klaar voor de opdrachtgever.",
         "cta": "Certificeer je testen"
       }
     },
@@ -318,7 +318,7 @@
     },
     "demo_banner": {
       "badge": "Echt voorbeeld",
-      "title": "Gecertificeerd rapport, download en verifieer",
+      "title": "Verzegeld rapport, download en verifieer",
       "field_operator": "Medewerker",
       "field_intervention": "Interventie",
       "field_intervention_value": "Vervanging van de schakelkast",
@@ -893,7 +893,7 @@
     "title": "GeoTapp downloaden",
     "subtitle": "Kies de versie die bij uw behoeften past.",
     "demo_report_badge": "Echt voorbeeld",
-    "demo_report_title": "Gecertificeerd taakrapport",
+    "demo_report_title": "Verzegeld taakrapport",
     "demo_report_desc": "Download een echt rapport gegenereerd door GeoTapp. Bevat geverifieerde GPS, fotobewijs, operator-hashketen en cryptografische verzegeling.",
     "demo_report_btn_download": "Voorbeeldrapport downloaden (.zip)",
     "demo_report_btn_verify": "Authenticiteit verifiëren",
@@ -929,7 +929,7 @@
       "Hij zocht een app die hem dat karwei uit handen nam. Ze waren allemaal hetzelfde, en ze vroegen precies wat hij al met de hand deed, datum, begin, einde, totaal. Dezelfde moeite, mooiere knoppen.",
       "Dus bouwde hij er zelf een, in zijn vakantie. Een webpagina en twee handelingen, drukken als je begint en drukken als je stopt, en de rest belandde netjes in een bestand dat aan het eind van de maand zo verstuurd kon worden.",
       "Toen kwam de gedachte die alles veranderde, als het mij helpt, helpt het de ploeg ook. En als het de baas helpt, dan moet de stroom worden omgedraaid, want niet hij hoort achter mensen aan te lopen voor hun uren, de uren horen elke dag vanzelf bij hem aan te komen.",
-      "Vanaf daar groeide het gereedschap maar in één richting. Eerst de wettelijk toegestane locatiebepaling, uitgelezen bij het openen en het sluiten van de dienst, nooit doorlopend. Daarna de automatische certificering van het uitgevoerde werk, want het echte probleem was nooit het tellen van de uren, het was het bewijzen ervan zodra iemand ze in twijfel trok.",
+      "Vanaf daar groeide het gereedschap maar in één richting. Eerst de wettelijk toegestane locatiebepaling, uitgelezen bij het openen en het sluiten van de dienst, nooit doorlopend. Daarna de automatische verzegeld bewijs van het uitgevoerde werk, want het echte probleem was nooit het tellen van de uren, het was het bewijzen ervan zodra iemand ze in twijfel trok.",
       "O ja, en het wordt geschreven als GeoTapp, met twee P's. Kom je er ergens een tegen met één P, dan zijn wij dat niet, maar we nemen het niemand kwalijk.",
       "De naam heeft het trouwens allemaal al in zich. De locatie, een tap, een app."
     ],
@@ -1050,7 +1050,7 @@
     "cta_btn": "Neem contact op",
     "schema_desc": "Gidsen en inzichten over certificering van veldwerk, teambeheer, AVG en geolocatie.",
     "meta_title": "Blog | GeoTapp - Verificatie van veldwerk",
-    "meta_desc": "Gidsen, inzichten en bronnen over teambeheer, certificering van interventies, AVG en geolocatie. Van het GeoTapp-team.",
+    "meta_desc": "Gidsen, inzichten en bronnen over teambeheer, verzegeld bewijs van interventies, AVG en geolocatie. Van het GeoTapp-team.",
     "cat_all": "Alle",
     "toc_title": "Inhoud",
     "reading_time_suffix": "min leestijd",

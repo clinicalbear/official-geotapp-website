@@ -94,7 +94,7 @@ const UI: Record<string, UIStrings> = {
   de: {
     badge: 'Feldarbeit verifizieren',
     h1a: 'GPS-Nachweis, Fotos und Berichte', h1b: 'überprüfbar. Vor Ort.',
-    sub: 'Jeden Einsatz in Echtzeit zertifizieren. Keine Karte, keine Zweifel, null Streitigkeiten.',
+    sub: 'Jeden Einsatz in Echtzeit versiegeln. Keine Karte, keine Zweifel, null Streitigkeiten.',
     ctaPrimary: 'GeoTapp kostenlos testen',
     ctaPrimaryNote: 'Nur E-Mail · Keine Kreditkarte · In 30 Sekunden startklar',
     ctaSecondary: 'Demo buchen',
@@ -232,7 +232,7 @@ const UI: Record<string, UIStrings> = {
   sv: {
     badge: 'Verifiera fältarbete',
     h1a: 'GPS-bevis, foton och rapporter', h1b: 'verifierbara. På fältet.',
-    sub: 'Certifiera varje uppdrag i realtid. Inget kort, inga tvivel, noll tvister.',
+    sub: 'Försegla varje uppdrag i realtid. Inget kort, inga tvivel, noll tvister.',
     ctaPrimary: 'Prova GeoTapp gratis',
     ctaPrimaryNote: 'Endast e-post · Inget kreditkort · Klar på 30 sekunder',
     ctaSecondary: 'Boka en demo',
@@ -255,7 +255,7 @@ const UI: Record<string, UIStrings> = {
   nb: {
     badge: 'Verifiser feltarbeid',
     h1a: 'GPS-bevis, bilder og rapporter', h1b: 'verifiserbare. På feltet.',
-    sub: 'Sertifiser hvert oppdrag i sanntid. Ingen kort, ingen tvil, null tvister.',
+    sub: 'Forsegl hvert oppdrag i sanntid. Ingen kort, ingen tvil, null tvister.',
     ctaPrimary: 'Prøv GeoTapp gratis',
     ctaPrimaryNote: 'Bare e-post · Uten kredittkort · Klar på 30 sekunder',
     ctaSecondary: 'Bestill en demo',

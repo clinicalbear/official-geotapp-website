@@ -386,7 +386,7 @@ export default function Home({ jrSlot, fqSlot }: { jrSlot?: ReactNode; fqSlot?: 
             <div className="stage" ref={stageRef}>
               <div className="sheet">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/verifier-report.webp" alt="Report certificato GeoTapp" loading="lazy" />
+                <img src="/verifier-report.webp" alt="Report sigillato GeoTapp" loading="lazy" />
               </div>
             </div>
           </div>

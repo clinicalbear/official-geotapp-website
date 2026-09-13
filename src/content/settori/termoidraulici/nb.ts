@@ -179,7 +179,7 @@ const content: SettoreContent = {
       answer: 'Ja. GeoTapp er appen for rørleggere og VVS-teknikere som registrerer hvert oppdrag på kjeler og anlegg med GPS, bilder og verifiserbare tidsstempler. Teknikeren stemplet inn fra stedet, kontoret ser alt i sanntid og kunden mottar en forseglet rapport.',
     },
     {
-      question: 'Hvordan sertifiserer jeg et kjeloppdrag med GeoTapp?',
+      question: 'Hvordan forsegler jeg et kjeloppdrag med GeoTapp?',
       answer: 'Teknikeren registrerer start og slutt med verifisert GPS, fotograferer utskiftede deler og legger til tekniske notater. Systemet genererer en forseglet rapport som kunden kan bekrefte selvstendig.',
     },
     {

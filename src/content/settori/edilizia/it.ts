@@ -3,13 +3,13 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'App Cantiere per Edilizia: Presenze GPS e Gestione Squadre | GeoTapp',
-    description: 'Gestisci presenze, turni e sicurezza in cantiere con GPS in tempo reale. Timbrature certificate, report automatici. App GDPR-compliant per imprese edili.',
+    description: 'Gestisci presenze, turni e sicurezza in cantiere con GPS in tempo reale. Timbrature sigillate, report automatici. App GDPR-compliant per imprese edili.',
   },
   hero: {
     badge: 'App per imprese edili e cantieri',
     h1_line1: 'Il tuo cantiere sotto controllo,',
     h1_line2: 'in tempo reale.',
-    subtitle: 'Timbrature GPS certificate, gestione squadre e report automatici. Zero carte, zero contestazioni. GeoTapp unisce Flow + TimeTracker per chi gestisce cantieri edili, subappaltatori e direzione lavori.',
+    subtitle: 'Timbrature GPS sigillate, gestione squadre e report automatici. Zero carte, zero contestazioni. GeoTapp unisce Flow + TimeTracker per chi gestisce cantieri edili, subappaltatori e direzione lavori.',
     cta_primary: 'Prova GeoTapp gratis per 14 giorni',
     cta_note: 'Nessun vincolo. Nessuna carta di credito richiesta.',
   },
@@ -49,7 +49,7 @@ const content: SettoreContent = {
     ],
   },
   differenza: {
-    title: 'App cantiere: timbratura o certificazione?',
+    title: 'App cantiere: timbratura o prova verificabile?',
     subtitle: 'La maggior parte delle app registra l\'orario. GeoTapp produce prove verificabili.',
     rows: [
       {
@@ -98,7 +98,7 @@ const content: SettoreContent = {
     title: 'Funzionalità pensate per il cantiere edile',
     items: [
       {
-        title: 'Presenze GPS certificate',
+        title: 'Presenze GPS sigillate',
         desc: 'Ogni ingresso e uscita dal cantiere è registrato con posizione GPS reale e timestamp. Difendibile davanti a DL, committente e ispettorato.',
       },
       {

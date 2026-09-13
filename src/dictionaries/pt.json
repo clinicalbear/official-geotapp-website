@@ -237,7 +237,7 @@
     "core": {
       "badge": "Plataforma GeoTapp",
       "title": "Um sistema, três níveis de certeza",
-      "subtitle": "TimeTracker regista no campo. Flow organiza no escritório. Verifier certifica que tudo corresponde.",
+      "subtitle": "TimeTracker regista no campo. Flow organiza no escritório. Verifier verifica que tudo corresponde.",
       "features": [
         {
           "title": "Operabilidade móvel real",
@@ -318,7 +318,7 @@
     },
     "demo_banner": {
       "badge": "Exemplo real",
-      "title": "Relatório certificado, descarregar e verificar",
+      "title": "Relatório selado, descarregar e verificar",
       "field_operator": "Operador",
       "field_intervention": "Intervenção",
       "field_intervention_value": "Substituição do quadro elétrico",
@@ -813,7 +813,7 @@
     "title": "Descarregar GeoTapp",
     "subtitle": "Escolha a versão adequada às suas necessidades.",
     "demo_report_badge": "Exemplo real",
-    "demo_report_title": "Relatório de intervenção certificado",
+    "demo_report_title": "Relatório de intervenção selado",
     "demo_report_desc": "Descarregue um relatório real gerado pelo GeoTapp. Contém GPS verificado, provas fotográficas, cadeia hash de operadores e selagem criptográfica.",
     "demo_report_btn_download": "Descarregar relatório de exemplo (.zip)",
     "demo_report_btn_verify": "Verificar autenticidade",
@@ -849,7 +849,7 @@
       "Procurou uma aplicação que lhe tirasse aquela maçada. Encontrou-as todas iguais, e todas lhe pediam exatamente o que já fazia à mão, data, entrada, saída, total. O mesmo esforço, com botões mais bonitos.",
       "Por isso, de férias, desenvolveu-a sozinho. Uma página web e dois gestos, carrega quando começa e carrega quando acaba, e o resto ficava arrumado num ficheiro já pronto a enviar ao fim do mês.",
       "Depois veio o pensamento que mudou tudo, se me serve a mim serve também aos colegas. E se serve ao patrão, então o fluxo tem de ser virado, porque não é ele que deve andar atrás das pessoas para ter as horas, são as horas que chegam sozinhas até ele, todos os dias.",
-      "A partir daí a ferramenta cresceu numa só direção. Primeiro a geolocalização conforme a lei, lida na abertura e no fecho do turno e nunca em contínuo. Depois a certificação automática do trabalho realizado, porque o problema verdadeiro nunca foi contar as horas, foi prová-las quando alguém as punha em causa.",
+      "A partir daí a ferramenta cresceu numa só direção. Primeiro a geolocalização conforme a lei, lida na abertura e no fecho do turno e nunca em contínuo. Depois a prova verificável automática do trabalho realizado, porque o problema verdadeiro nunca foi contar as horas, foi prová-las quando alguém as punha em causa.",
       "Ah, e escreve-se GeoTapp, com dois P. Se encontrar por aí algum com um só, não somos nós, mas não lhe levamos a mal.",
       "O nome, aliás, já tem tudo lá dentro. A geolocalização, um tap, uma app."
     ],
@@ -968,9 +968,9 @@
     "cta_title": "Fique a par",
     "cta_desc": "Sem spam, apenas atualizações de valor sobre o produto e o sector.",
     "cta_btn": "Contacte-nos",
-    "schema_desc": "Guias e análises sobre certificação de trabalho em campo, gestão de equipas, RGPD e geolocalização.",
+    "schema_desc": "Guias e análises sobre prova verificável do trabalho em campo, gestão de equipas, RGPD e geolocalização.",
     "meta_title": "Blog | GeoTapp - Verificação do trabalho em campo",
-    "meta_desc": "Guias, análises e recursos sobre gestão de equipas, certificação de intervenções, RGPD e geolocalização. Da equipa GeoTapp.",
+    "meta_desc": "Guias, análises e recursos sobre gestão de equipas, prova verificável de intervenções, RGPD e geolocalização. Da equipa GeoTapp.",
     "cat_all": "Todos",
     "toc_title": "Indice",
     "reading_time_suffix": "min de leitura",

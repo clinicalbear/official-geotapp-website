@@ -22,7 +22,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Hendelsesrapporter uten posisjonsbevis',
-        desc: 'En håndskrevet hendelsesrapport har liten bevisverdi uten sertifisert GPS-posisjon og et manipulasjonssikkert tidsstempel. Papirlogger er for enkle å bestride.',
+        desc: 'En håndskrevet hendelsesrapport har liten bevisverdi uten forseglet GPS-posisjon og et manipulasjonssikkert tidsstempel. Papirlogger er for enkle å bestride.',
       },
       {
         title: 'Vaktoverdragelse fortsatt på papir',
@@ -80,7 +80,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Hvordan hjelper GeoTapp med dokumentasjon av hendelsesrapporter?',
-        a: 'TimeTracker kobler hver hendelse til en sertifisert GPS-posisjon og et uforanderlig tidsstempel. Den genererte hendelsesrapporten inneholder koordinater, tid og bilder, noe som gjør den forsvarbar i rettslige og kontraktsmessige prosedyrer.',
+        a: 'TimeTracker kobler hver hendelse til en forseglet GPS-posisjon og et uforanderlig tidsstempel. Den genererte hendelsesrapporten inneholder koordinater, tid og bilder, noe som gjør den forsvarbar i rettslige og kontraktsmessige prosedyrer.',
       },
       {
         q: 'Støtter GeoTapp digital vaktoverdragelse mellom vektere?',

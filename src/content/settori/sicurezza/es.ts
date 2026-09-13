@@ -80,7 +80,7 @@ const content: SettoreContent = {
       },
       {
         q: '¿Cómo ayuda GeoTapp a documentar los partes de incidencia?',
-        a: 'TimeTracker vincula cada incidente a una posición GPS certificada y una marca de tiempo inalterable. El parte de incidencia generado incluye coordenadas, hora y fotografías, haciéndolo defendible en procedimientos legales y contractuales.',
+        a: 'TimeTracker vincula cada incidente a una posición GPS sellada y una marca de tiempo inalterable. El parte de incidencia generado incluye coordenadas, hora y fotografías, haciéndolo defendible en procedimientos legales y contractuales.',
       },
       {
         q: '¿GeoTapp soporta el relevo digital de turno entre vigilantes?',

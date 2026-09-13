@@ -179,7 +179,7 @@ const content: SettoreContent = {
       answer: 'Ja. GeoTapp är appen för rörmokare och VVS-tekniker som registrerar varje uppdrag på pannor och anläggningar med GPS, foton och verifierbara tidsstämplar. Teknikern stämplar in från platsen, kontoret ser allt i realtid och kunden får en förseglad rapport.',
     },
     {
-      question: 'Hur certifierar jag ett pannuppdrag med GeoTapp?',
+      question: 'Hur förseglar jag ett pannuppdrag med GeoTapp?',
       answer: 'Teknikern registrerar start och slut med verifierat GPS, fotograferar utbytta delar och lägger till tekniska anteckningar. Systemet genererar en förseglad rapport som kunden kan verifiera självständigt.',
     },
     {
