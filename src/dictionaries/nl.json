@@ -823,7 +823,9 @@
     "success_sender": "De e-mail komt van:",
     "form_seats_required_note": "* Verplicht: vul 0 in als je geen TimeTracker-licenties nodig hebt.",
     "trust_gdpr": "Geen doorlopende tracking",
-    "trust_offline": "Offline verificatie"
+    "trust_offline": "Offline verificatie",
+    "form_field_employees": "Hoeveel mensen werken er in het veld?",
+    "form_field_employees_hint": "Optioneel. Zo schrijven we je over jouw situatie, niet over een algemene."
   },
   "demo": {
     "page_title": "Boek uw persoonlijke demo",

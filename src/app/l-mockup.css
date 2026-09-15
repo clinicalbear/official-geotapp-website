@@ -953,8 +953,12 @@ main:has(> .lp-l){padding-top:0}
 }
 
 /* ── menu mobile: sipario nero a tutto schermo ── */
-.nvh{display:none;margin-left:14px;background:none;border:0;color:#fff;cursor:pointer;padding:4px}
-@media(max-width:1080px){.nvh{display:block}}
+/* A13: l'area toccabile era circa 34px contro i 44 raccomandati. Si allarga
+   l'AREA, non l'icona: il disegno resta lo stesso, il bersaglio no.
+   Il margine negativo compensa il padding in piu' cosi' la barra non si
+   allarga e niente si sposta. */
+.nvh{display:none;margin-left:9px;background:none;border:0;color:#fff;cursor:pointer;padding:9px;min-width:44px;min-height:44px;align-items:center;justify-content:center}
+@media(max-width:1080px){.nvh{display:inline-flex}}
 .nvm{position:fixed;inset:0;z-index:95;background:#0E0E0C;color:#F2F0E9;overflow:auto;
   padding:24px 22px 44px;display:none}
 .nvm.on{display:block}

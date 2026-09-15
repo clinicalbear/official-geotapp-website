@@ -1189,3 +1189,52 @@ a:hover {
   .btn-ring::after { animation: none; opacity: 0; }
   .btn-ring:hover, .btn-ring:focus-visible { transform: none; }
 }
+
+/* ===== A13 — ACCESSIBILITA' (piano del 15/09/2026) ===== */
+
+/* Il salto al contenuto. Sta fuori schermo e compare solo col fuoco: chi usa
+   il mouse non lo vede mai, chi usa la tastiera lo trova al primo Tab. */
+.salta-al-contenuto {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  padding: 12px 20px;
+  background: #0B2E4F;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 0 0 10px 0;
+  text-decoration: none;
+}
+.salta-al-contenuto:focus {
+  left: 0;
+}
+/* main riceve il fuoco dopo il salto, ma non deve disegnarci un bordo intorno:
+   il contorno su un blocco grande quanto la pagina confonde invece di aiutare. */
+main:focus { outline: none; }
+
+/* Il fuoco visibile su TUTTO cio' che si puo' raggiungere da tastiera. Fino al
+   15/09/2026 esisteva solo sul pulsante del trial (.btn-ring) e sui campi del
+   modulo: su ogni altro link e bottone il fuoco era invisibile, cioe' chi
+   naviga da tastiera non sapeva dove si trovava.
+   #1F6FA3 e non l'azzurro del marchio: su fondo chiaro quello fa 2,63. */
+a:focus-visible,
+button:focus-visible,
+[role='button']:focus-visible,
+summary:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #1F6FA3;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+/* Sui fondi scuri l'azzurro scuro sparisce: li' serve il chiaro. */
+.l-l a:focus-visible,
+.l-l button:focus-visible,
+header a:focus-visible,
+header button:focus-visible,
+footer a:focus-visible,
+footer button:focus-visible {
+  outline-color: #8FC436;
+}

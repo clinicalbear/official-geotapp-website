@@ -22,7 +22,7 @@ import Link from 'next/link';
 // nessuna rottura dei signup veri prima che le chiavi siano in env.
 const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || '';
 import { trackEvent, consumeTrialSource } from '@/lib/analytics';
-import { buildTrialPayload } from '@/lib/trial/payload';
+import { FASCE_OPERATORI, type FasciaOperatori, buildTrialPayload } from '@/lib/trial/payload';
 import { trialErrorMessage, trialErrorForAnalytics } from '@/lib/trial/errors';
 import Reviews from '@/components/Reviews';
 import LNastro from '@/components/LNastro';
@@ -44,6 +44,7 @@ export default function TrialPage() {
   const [email, setEmail] = useState('');
   // Honeypot anti-bot: hidden from humans, only bots fill it (server drops the signup).
   const [hp, setHp] = useState('');
+  const [fascia, setFascia] = useState<FasciaOperatori | ''>('');
 
   // Localize the trial to the user, not just to the page default ('it').
   // An explicit non-it URL locale (e.g. /fr/trial) wins; otherwise fall back
@@ -207,7 +208,7 @@ export default function TrialPage() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(
-          buildTrialPayload(email, detectLanguage(), { hp, elapsedMs, turnstileToken }),
+          buildTrialPayload(email, detectLanguage(), { hp, elapsedMs, turnstileToken }, fascia),
         ),
       });
       const data = await res.json();
@@ -225,7 +226,7 @@ export default function TrialPage() {
       }
       setSubmittedEmail(email);
       setSubmitted(true);
-      trackEvent('trial_form_success', { cta_locale: locale || 'it', ...(trialSource.current ? { cta_source: trialSource.current } : {}) });
+      trackEvent('trial_form_success', { cta_locale: locale || 'it', fascia_operatori: fascia || 'non_risposto', ...(trialSource.current ? { cta_source: trialSource.current } : {}) });
     } catch (err: any) {
       // Qualunque sia il motivo del fallimento il token e' bruciato: senza questo reset il
       // prossimo tentativo torna indietro come `timeout-or-duplicate` e la persona resta
@@ -318,6 +319,41 @@ export default function TrialPage() {
                         className="in"
                       />
                       <p className="hint">{d.form_email_hint}</p>
+                    </div>
+
+                    {/* A19: quanti operai stanno sul campo. Facoltativo e su una
+                        riga sola: non allunga il modulo, ma senza non sappiamo
+                        se scriviamo a chi ne ha tre o a chi ne ha sessanta. */}
+                    <div className="fld">
+                      <label htmlFor="trial-fascia">{(d as any).form_field_employees ?? 'How many people work in the field?'}</label>
+                      <div
+                        id="trial-fascia"
+                        role="group"
+                        aria-label={(d as any).form_field_employees ?? 'How many people work in the field?'}
+                        style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}
+                      >
+                        {FASCE_OPERATORI.map((f) => (
+                          <button
+                            key={f}
+                            type="button"
+                            onClick={() => { trackFieldFocus('fascia_operatori'); setFascia(fascia === f ? '' : f); }}
+                            aria-pressed={fascia === f}
+                            style={{
+                              padding: '8px 16px',
+                              borderRadius: 10,
+                              border: fascia === f ? '2px solid #1F6FA3' : '1.5px solid #cbd5e1',
+                              background: fascia === f ? '#1F6FA3' : 'transparent',
+                              color: fascia === f ? '#fff' : 'inherit',
+                              fontWeight: 600,
+                              fontSize: 15,
+                              cursor: 'pointer',
+                            }}
+                          >
+                            {f}
+                          </button>
+                        ))}
+                      </div>
+                      <p className="hint">{(d as any).form_field_employees_hint ?? 'Optional. It helps us write to you about your case, not a generic one.'}</p>
                     </div>
 
                     {/* Honeypot: invisibile e fuori dal tab order per gli umani; i bot che

@@ -276,7 +276,23 @@ export default function Home({ jrSlot, fqSlot }: { jrSlot?: ReactNode; fqSlot?: 
       {/* ── apertura: la foto, e sopra la frase corta ── */}
       <section className="op">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className="bg" src="/bg1.webp" alt={L.alt_hero} fetchPriority="high" />
+        {/* A14: la foto dell'apertura pesava 144 KB e veniva scaricata intera
+            anche su un telefono da 390 punti, cioe' 1600 pixel di larghezza per
+            mostrarne 780. Con lo srcset un telefono prende la variante da 960
+            (58 KB) e il primo contenuto utile arriva prima. L'originale resta
+            per gli schermi grandi. width/height dichiarati: senza, il riquadro
+            nasce a zero e la pagina salta quando la foto arriva. */}
+        <img
+          className="bg"
+          src="/bg1.webp"
+          srcSet="/bg1-640.webp 640w, /bg1-960.webp 960w, /bg1-1280.webp 1280w, /bg1.webp 1600w"
+          sizes="100vw"
+          width={1600}
+          height={872}
+          alt={L.alt_hero}
+          fetchPriority="high"
+          decoding="async"
+        />
         <div className="sc" />
         <div className="w">
           <div className="top">

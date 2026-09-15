@@ -823,7 +823,9 @@
     "success_sender": "The email will arrive from:",
     "form_seats_required_note": "* Required: enter 0 if you don't need any TimeTracker seats.",
     "trust_gdpr": "No continuous tracking",
-    "trust_offline": "Offline verifier"
+    "trust_offline": "Offline verifier",
+    "form_field_employees": "How many people work in the field?",
+    "form_field_employees_hint": "Optional. It helps us write to you about your case, not a generic one."
   },
   "demo": {
     "page_title": "Book your Personalised Demo",

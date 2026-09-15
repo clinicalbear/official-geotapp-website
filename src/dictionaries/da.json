@@ -1069,7 +1069,9 @@
     "success_sender": "Mailen kommer fra:",
     "form_seats_required_note": "* Påkrævet: indtast 0, hvis du ikke har brug for TimeTracker-licenser.",
     "trust_gdpr": "Ingen løbende sporing",
-    "trust_offline": "Offline-kontrol"
+    "trust_offline": "Offline-kontrol",
+    "form_field_employees": "Hvor mange arbejder i marken?",
+    "form_field_employees_hint": "Frivilligt. Så skriver vi til dig om din situation, ikke en generisk."
   },
   "roi": {
     "meta_title": "GeoTapp ROI-beregner - Opdag dine reelle besparelser",

@@ -1069,7 +1069,9 @@
     "success_sender": "El correo llegará desde:",
     "form_seats_required_note": "* Obligatorio: introduce 0 si no necesitas licencias TimeTracker.",
     "trust_gdpr": "Sin seguimiento continuo",
-    "trust_offline": "Verificador sin conexión"
+    "trust_offline": "Verificador sin conexión",
+    "form_field_employees": "¿Cuántas personas trabajan en campo?",
+    "form_field_employees_hint": "Opcional. Nos sirve para escribirte sobre tu caso, no sobre uno genérico."
   },
   "roi": {
     "meta_title": "Calculadora ROI GeoTapp - Descubre tus ahorros reales",

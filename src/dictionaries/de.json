@@ -823,7 +823,9 @@
     "success_sender": "Die E-Mail kommt von:",
     "form_seats_required_note": "* Pflichtfeld: Geben Sie 0 ein, wenn Sie keine TimeTracker-Lizenzen benötigen.",
     "trust_gdpr": "Keine dauerhafte Ortung",
-    "trust_offline": "Offline-Prüfer"
+    "trust_offline": "Offline-Prüfer",
+    "form_field_employees": "Wie viele Personen arbeiten im Außendienst?",
+    "form_field_employees_hint": "Freiwillig. So schreiben wir Ihnen zu Ihrem Fall, nicht zu einem allgemeinen."
   },
   "demo": {
     "page_title": "Buchen Sie Ihre persönliche Demo",

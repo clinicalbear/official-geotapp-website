@@ -823,7 +823,9 @@
     "success_sender": "L'email arriverà da:",
     "form_seats_required_note": "* Campo obbligatorio: inserisci 0 se non ti servono licenze TimeTracker.",
     "trust_gdpr": "Niente tracciamento continuo",
-    "trust_offline": "Verificatore offline"
+    "trust_offline": "Verificatore offline",
+    "form_field_employees": "Quante persone lavorano sul campo?",
+    "form_field_employees_hint": "Facoltativo. Ci serve per scriverti del tuo caso, non di uno generico."
   },
   "demo": {
     "page_title": "Prenota la tua Demo Personalizzata",

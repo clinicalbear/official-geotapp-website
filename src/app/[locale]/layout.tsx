@@ -36,7 +36,15 @@ const BASE_URL = 'https://geotapp.com';
 // momento in cui il woff2 finiva di scaricare su rete mobile (~4,8s, PSI).
 // Con 'optional' l'LCP resta il primo paint col fallback (~1,2s); il font
 // brand entra dalla navigazione successiva, gia' in cache.
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'optional' });
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'optional',
+  // A14: il ripiego dichiarato. Senza, mentre il woff2 arriva il browser usa il
+  // suo carattere di sistema di riserva e al cambio la pagina si sposta.
+  fallback: ['system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+  adjustFontFallback: true,
+});
 // Poppins weights: only what is actually used as font-display.
 // font-display heading scale ranges from font-bold (700) to font-extrabold (800).
 // Weight 500 retained for the lone PricingSimulator label. 400 and 600 were
@@ -47,9 +55,21 @@ const poppins = Poppins({
   weight: ['500', '700', '800'],
   variable: '--font-poppins',
   display: 'optional',
+  fallback: ['system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+  adjustFontFallback: true,
 });
 
-const anton = Anton({ subsets: ['latin'], weight: '400', variable: '--font-anton', display: 'swap' });
+// Anton NON ha il cirillico: sulla home russa i titoli escono comunque con un
+// carattere di ripiego. Finche' non lo sostituiamo (A45), almeno il ripiego e'
+// scritto da noi e non lasciato al browser.
+const anton = Anton({
+  subsets: ['latin'],
+  weight: '400',
+  variable: '--font-anton',
+  display: 'swap',
+  fallback: ['Impact', 'Haettenschweiler', 'Franklin Gothic Bold', 'sans-serif'],
+  adjustFontFallback: false,
+});
 
 type LocaleSchemaData = {
   description: string;
@@ -229,6 +249,21 @@ type Props = {
   children: ReactNode;
   params: Promise<{ locale: string }>;
 };
+
+// A13: "salta al contenuto", nelle lingue che serviamo.
+const SALTA = {
+  it: 'Salta al contenuto',
+  en: 'Skip to content',
+  de: 'Zum Inhalt springen',
+  fr: 'Aller au contenu',
+  es: 'Saltar al contenido',
+  pt: 'Saltar para o conteúdo',
+  nl: 'Naar de inhoud',
+  da: 'Gå til indholdet',
+  sv: 'Hoppa till innehållet',
+  nb: 'Hopp til innholdet',
+  ru: 'Перейти к содержимому',
+} as const;
 
 export default async function LocaleLayout({ children, params }: Props) {
   const { locale } = await params;
@@ -566,7 +601,14 @@ export default async function LocaleLayout({ children, params }: Props) {
           <CartDrawer />
 
           <div className="relative z-10">
-            <main>{children}</main>
+            {/* A13: il salto al contenuto. Senza, chi naviga da tastiera o con
+                uno screen reader si rifa' tutta la barra a ogni pagina: sono
+                una dozzina di link prima di arrivare al testo. Sta fuori
+                schermo e compare solo quando prende il fuoco. */}
+            <a href="#contenuto" className="salta-al-contenuto">
+              {SALTA[locale as keyof typeof SALTA] ?? SALTA.en}
+            </a>
+            <main id="contenuto" tabIndex={-1}>{children}</main>
             <Footer />
           </div>
         </div>
