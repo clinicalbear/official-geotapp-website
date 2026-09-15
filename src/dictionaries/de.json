@@ -123,12 +123,13 @@
     "hero_subtitle": "GeoTapp verwandelt jeden Außendiensteinsatz in objektive Beweise: versiegelte Berichte mit echten GPS-Daten, zeitgestempelte Fotonachweise und Dokumentation, die jeder unabhängig prüfen kann, ohne Vertrauen, ohne Streit.",
     "hero_cta_primary": "Kostenlos testen",
     "hero_cta_secondary": "Branchen entdecken",
-    "trust_gdpr": "DSGVO-konform",
+    "hero_cta_report": "Einen versiegelten Nachweis ansehen",
+    "trust_gdpr": "Keine dauerhafte Ortung",
     "trust_gdpr_desc": "Zeitstempel nur bei An- und Abmeldung",
     "trust_gps": "GPS-Nachweis",
     "trust_gps_desc": "Jeder Einsatz mit Standort und Zeitstempel versiegelt",
-    "trust_offline": "Offline-fähig",
-    "trust_offline_desc": "Automatische Synchronisation bei Verbindung",
+    "trust_offline": "Offline-Prüfer",
+    "trust_offline_desc": "Eine Datei, ohne Konto und ohne Netz",
     "trust_eu_data": "Daten in Europa",
     "features_title": "Vom Einsatz zum verifizierbaren Nachweis",
     "features_subtitle": "Drei integrierte Werkzeuge: Das Feld erfasst, das Büro kontrolliert, der Kunde verifiziert.",
@@ -196,7 +197,7 @@
       ]
     },
     "proof_note": "Nachweise ausschließlich per Kamera erfasst, keine dauerhafte Ortung.",
-    "proof_claim": "100% DSGVO-konform.",
+    "proof_claim": "Zwischen Kommen und Gehen wird nichts aufgezeichnet.",
     "sticky_cta_subtitle": "14 Tage gratis, keine Kreditkarte"
   },
   "home_sections": {
@@ -219,7 +220,7 @@
         "desc": "Verifizierter Standort"
       },
       "card_gdpr": {
-        "title": "DSGVO-konform",
+        "title": "Keine dauerhafte Ortung",
         "desc": "Kein kontinuierliches Tracking"
       },
       "link": "GeoTapp TimeTracker entdecken"
@@ -245,7 +246,7 @@
         },
         {
           "title": "Datenschutz by Design",
-          "desc": "Der Standort wird <strong>nur</strong> beim Ein- und Ausstempeln erfasst. Kein kontinuierliches Tracking. Vollständig DSGVO-konform."
+          "desc": "Der Standort wird <strong>nur</strong> beim Ein- und Ausstempeln erfasst. Kein kontinuierliches Tracking."
         },
         {
           "title": "Echtzeit-Betriebskontrolle",
@@ -820,7 +821,9 @@
       }
     ],
     "success_sender": "Die E-Mail kommt von:",
-    "form_seats_required_note": "* Pflichtfeld: Geben Sie 0 ein, wenn Sie keine TimeTracker-Lizenzen benötigen."
+    "form_seats_required_note": "* Pflichtfeld: Geben Sie 0 ein, wenn Sie keine TimeTracker-Lizenzen benötigen.",
+    "trust_gdpr": "Keine dauerhafte Ortung",
+    "trust_offline": "Offline-Prüfer"
   },
   "demo": {
     "page_title": "Buchen Sie Ihre persönliche Demo",
@@ -884,10 +887,11 @@
     "urgent_contact": "Dringende Fragen? Schreiben Sie an",
     "no_spam": "Kein Spam. Ihre Daten werden gemäß unserer Datenschutzerklärung behandelt.",
     "trust_gps": "GPS-verifizierte Zeiterfassung",
-    "trust_offline": "Funktioniert offline",
+    "trust_offline": "Offline-Prüfer",
     "trust_response": "Antwort innerhalb von 1 Tag",
     "what_youll_see": "Was Sie in der Demo sehen werden",
-    "faq_title": "Häufig gestellte Fragen"
+    "faq_title": "Häufig gestellte Fragen",
+    "trust_gdpr": "Keine dauerhafte Ortung"
   },
   "download_page": {
     "title": "GeoTapp herunterladen",

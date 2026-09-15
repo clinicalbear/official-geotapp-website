@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { ShieldCheck, Download } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { getDictionary } from '@/lib/i18n/dictionaries';
+import { trackEvent } from '@/lib/analytics';
 import { DEFAULT_LOCALE, getLocaleFromPathname, localizePath } from '@/lib/i18n/locale-routing';
 
 const DEMO_REPORT_ID = 'GT-2026-0322-4472';
@@ -52,6 +53,12 @@ export default function DemoReportBanner() {
           href={DEMO_ZIP_URL}
           download
           rel="noopener noreferrer nofollow"
+          onClick={() =>
+            trackEvent('demo_report_download', {
+              report_id: DEMO_REPORT_ID,
+              locale: locale ?? DEFAULT_LOCALE,
+            })
+          }
           className="flex items-center justify-center gap-2 px-5 py-2.5 bg-emerald-500 text-white font-semibold rounded-xl text-sm hover:bg-emerald-600 transition-all hover:shadow-md"
         >
           <Download size={16} />

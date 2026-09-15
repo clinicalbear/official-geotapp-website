@@ -24,6 +24,10 @@ const config: Config = {
         },
         'brand-green': '#52C065', // Logo icon green (gradient top of G)
         'brand-blue': '#2DA4E4',  // Logo text blue ("GeoTapp")
+        // L'azzurro del marchio su fondo chiaro fa 2,63 contro il minimo di
+        // 4,5. Questa tinta ne tiene il tono e arriva a 5,15: si usa per il
+        // TESTO su fondo chiaro, mai per i fondi.
+        'brand-blue-ink': '#1F6FA3',
         flow: {
           DEFAULT: '#8B5CF6', // Flow purple/lilla
           glow: 'rgba(139, 92, 246, 0.2)',

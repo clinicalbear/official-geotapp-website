@@ -292,7 +292,17 @@ export default function Home({ jrSlot, fqSlot }: { jrSlot?: ReactNode; fqSlot?: 
               <Link className="b1" href={getLink('/trial')} onClick={() => trackEvent('trial_click', { cta_source: 'homepage_hero', cta_locale: currentLocale })}>
                 {dict.landing.hero_cta_primary}
               </Link>
-              <Link className="b2" href={getLink('/settori')}>{dict.landing.hero_cta_secondary}</Link>
+              {/* A11: 'Scopri i settori' non e' un desiderio di chi arriva; guardare
+                  un rapportino sigillato si', e chi lo scarica e' un contatto
+                  migliore di chi si iscrive per curiosita'. Porta al pannello
+                  del rapportino demo piu' in basso nella stessa pagina. */}
+              <a
+                className="b2"
+                href="#rapportino"
+                onClick={() => trackEvent('demo_report_cta', { cta_source: 'homepage_hero', cta_locale: currentLocale })}
+              >
+                {dict.landing.hero_cta_report}
+              </a>
             </div>
           </div>
           {/* Il fatto tecnico che regge tutto il resto, a tutta larghezza sotto le
@@ -312,6 +322,18 @@ export default function Home({ jrSlot, fqSlot }: { jrSlot?: ReactNode; fqSlot?: 
       {/* ── il nastro, nei tre colori del marchio ── */}
       <LNastro />
 
+      {/* ── A12: citati su. Le testate che ci hanno pubblicato sono l'unica prova
+             terza che abbiamo, e stavano in quarta posizione. Con due recensioni
+             su Capterra e zero loghi cliente, quella riga vale il doppio: sta
+             subito sotto la piega. Solo stampa vera; "Presente su" (le directory)
+             resta nel footer e non si ripete qui. ── */}
+      <section className="dirs">
+        <div className="w"><p className="kk k r dirs-kk">{featuredLabel(currentLocale)}</p></div>
+        <div className="host">
+          <FeaturedIn locale={currentLocale} />
+        </div>
+      </section>
+
       {/* ── il claim lungo ── */}
       <section className="cl"><div className="w">
         <h2 className="r"><span>{D.h2_1}</span><span className="s">{D.h2_2}</span></h2>
@@ -320,14 +342,6 @@ export default function Home({ jrSlot, fqSlot }: { jrSlot?: ReactNode; fqSlot?: 
           <p className="r d2" style={{ color: '#6B7563' }}>{L.cycle}</p>
         </div>
       </div></section>
-
-      {/* ── citati su: solo stampa vera. "Presente su" (directory) resta nel footer, non si ripete qui ── */}
-      <section className="dirs">
-        <div className="w"><p className="kk k r dirs-kk">{featuredLabel(currentLocale)}</p></div>
-        <div className="host">
-          <FeaturedIn locale={currentLocale} />
-        </div>
-      </section>
 
       {/* ── la sequenza: la foto resta, le scene cambiano ── */}
       <section className="seq" ref={seqRef} style={{ height: '340vh' }}>
@@ -436,7 +450,7 @@ export default function Home({ jrSlot, fqSlot }: { jrSlot?: ReactNode; fqSlot?: 
       <section className="roi-wrap">
         <div className="wn">
           <RoiMini dict={dict} locale={currentLocale} />
-          <div style={{ marginTop: 40 }}>
+          <div id="rapportino" style={{ marginTop: 40, scrollMarginTop: 90 }}>
             <DemoReportBanner />
           </div>
         </div>

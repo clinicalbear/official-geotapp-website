@@ -100,6 +100,7 @@ export default function ArticleContent({ html, newsletter, leadMagnet, survey, l
       const href = a.getAttribute('href') || '';
       if (/\.pdf(\?|#|$)/i.test(href) || href.includes('/downloads/')) {
         trackEvent('lead_magnet_download', { locale, href });
+        trackEvent('resource_download', { risorsa: 'lead-magnet', locale, href });
       }
     };
     root.addEventListener('click', onClick);

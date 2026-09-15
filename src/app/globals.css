@@ -360,6 +360,8 @@ a:hover {
 
 /* ===== BRAND COLOR UTILITIES ===== */
 .text-brand-blue  { color: #2DA4E4; }
+/* Testo azzurro su fondo chiaro: 2,63 non passa, questa fa 5,15. */
+.text-brand-blue-ink { color: #1F6FA3; }
 .bg-brand-blue    { background-color: #2DA4E4; }
 .text-brand-green { color: #52C065; }
 .bg-brand-green   { background-color: #52C065; }

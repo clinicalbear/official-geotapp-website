@@ -123,12 +123,13 @@
     "hero_subtitle": "GeoTapp omdanner hvert feltebesøg til objektive beviser: forseglede rapporter med rigtige GPS-data, tidsstemplede fotobeviser og dokumentation, som enhver kan verificere uafhængigt, uden tillid, uden tvister.",
     "hero_cta_primary": "Start gratis prøveperiode",
     "hero_cta_secondary": "Udforsk sektorer",
-    "trust_gdpr": "GDPR-overensstemmelse",
+    "hero_cta_report": "Se en forseglet rapport",
+    "trust_gdpr": "Ingen løbende sporing",
     "trust_gdpr_desc": "Kun tidsstempler ved ind- og udtjekning",
     "trust_gps": "GPS-bevis",
     "trust_gps_desc": "Hvert besøg certificeret med placering og tidsstempel",
-    "trust_offline": "Virker offline",
-    "trust_offline_desc": "Automatisk synkronisering ved forbindelsen",
+    "trust_offline": "Offline-kontrol",
+    "trust_offline_desc": "Én fil, uden konto og uden netværk",
     "trust_eu_data": "Data i Europa",
     "features_title": "Fra intervention til verificerbart bevis",
     "features_subtitle": "Tre integrerede værktøjer: marken registrerer, kontoret kontrollerer, kunden verificerer.",
@@ -196,7 +197,7 @@
       ]
     },
     "proof_note": "Beviser indsamles kun via kameraet, ingen løbende sporing.",
-    "proof_claim": "100% i overensstemmelse med Datatilsynets vejledning.",
+    "proof_claim": "Mellem ind- og udstempling registreres intet.",
     "sticky_cta_subtitle": "14 dage gratis, intet kreditkort"
   },
   "home_sections": {
@@ -219,7 +220,7 @@
         "desc": "Verificeret position"
       },
       "card_gdpr": {
-        "title": "GDPR-kompatibel",
+        "title": "Ingen løbende sporing",
         "desc": "Ingen kontinuerlig sporing"
       },
       "link": "Udforsk GeoTapp TimeTracker"
@@ -245,7 +246,7 @@
         },
         {
           "title": "Privacy by design",
-          "desc": "Placering registreres <strong>kun</strong> ved ind- og udstempling. Ingen kontinuerlig sporing. Fuldt GDPR-kompatibel."
+          "desc": "Placering registreres <strong>kun</strong> ved ind- og udstempling. Ingen kontinuerlig sporing."
         },
         {
           "title": "Operationel kontrol i realtid",
@@ -804,10 +805,11 @@
     "urgent_contact": "Presserende spørgsmål? Skriv til",
     "no_spam": "Ingen spam. Dine data behandles i henhold til vores",
     "trust_gps": "GPS-verificeret stempring",
-    "trust_offline": "Fungerer offline",
+    "trust_offline": "Offline-kontrol",
     "trust_response": "Svar inden for 1 dag",
     "what_youll_see": "Hvad du vil se i demoen",
-    "faq_title": "Ofte stillede spørgsmål"
+    "faq_title": "Ofte stillede spørgsmål",
+    "trust_gdpr": "Ingen løbende sporing"
   },
   "download_page": {
     "title": "Download GeoTapp",
@@ -1065,7 +1067,9 @@
       }
     ],
     "success_sender": "Mailen kommer fra:",
-    "form_seats_required_note": "* Påkrævet: indtast 0, hvis du ikke har brug for TimeTracker-licenser."
+    "form_seats_required_note": "* Påkrævet: indtast 0, hvis du ikke har brug for TimeTracker-licenser.",
+    "trust_gdpr": "Ingen løbende sporing",
+    "trust_offline": "Offline-kontrol"
   },
   "roi": {
     "meta_title": "GeoTapp ROI-beregner - Opdag dine reelle besparelser",

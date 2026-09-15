@@ -123,12 +123,13 @@
     "hero_subtitle": "GeoTapp transforma cada intervenção em campo em evidência objectiva: relatórios selados com dados GPS reais, provas fotográficas com marca de tempo e documentação verificável por qualquer pessoa, sem confiar, sem contestações.",
     "hero_cta_primary": "Iniciar teste grátis",
     "hero_cta_secondary": "Explorar setores",
-    "trust_gdpr": "Conforme RGPD",
+    "hero_cta_report": "Ver um relatório selado",
+    "trust_gdpr": "Sem rastreio contínuo",
     "trust_gdpr_desc": "Só registo de entrada e saída",
     "trust_gps": "Prova GPS",
     "trust_gps_desc": "Cada intervenção certificada com localização e marca de tempo",
-    "trust_offline": "Funciona offline",
-    "trust_offline_desc": "Sincronização automática ao reconectar",
+    "trust_offline": "Verificador offline",
+    "trust_offline_desc": "Um único ficheiro, sem conta nem rede",
     "trust_eu_data": "Dados na Europa",
     "features_title": "Do trabalho à prova verificável",
     "features_subtitle": "Três ferramentas integradas: o campo regista, o escritório controla, o cliente verifica.",
@@ -196,7 +197,7 @@
       ]
     },
     "proof_note": "Provas recolhidas apenas pela câmara, sem rastreio contínuo.",
-    "proof_claim": "100% em conformidade com as orientações da CNPD.",
+    "proof_claim": "Entre a entrada e a saída não se regista nada.",
     "sticky_cta_subtitle": "14 dias grátis, sem cartão de crédito"
   },
   "home_sections": {
@@ -219,7 +220,7 @@
         "desc": "Localização verificada"
       },
       "card_gdpr": {
-        "title": "Conforme com o RGPD",
+        "title": "Sem rastreio contínuo",
         "desc": "Sem rastreio contínuo"
       },
       "link": "Explorar GeoTapp TimeTracker"
@@ -245,7 +246,7 @@
         },
         {
           "title": "Privacidade por concepção",
-          "desc": "A localização é registada <strong>apenas</strong> no registo de entrada e saída. Sem rastreio contínuo. Totalmente conforme com o RGPD."
+          "desc": "A localização é registada <strong>apenas</strong> no registo de entrada e saída. Sem rastreio contínuo."
         },
         {
           "title": "Controlo operacional em tempo real",
@@ -804,10 +805,11 @@
     "urgent_contact": "Perguntas urgentes? Escreva para",
     "no_spam": "Sem spam. Os seus dados são tratados de acordo com a nossa",
     "trust_gps": "Registo GPS verificado",
-    "trust_offline": "Funciona offline",
+    "trust_offline": "Verificador offline",
     "trust_response": "Resposta em 1 dia",
     "what_youll_see": "O que verá na demo",
-    "faq_title": "Perguntas frequentes"
+    "faq_title": "Perguntas frequentes",
+    "trust_gdpr": "Sem rastreio contínuo"
   },
   "download_page": {
     "title": "Descarregar GeoTapp",
@@ -1065,7 +1067,9 @@
       }
     ],
     "success_sender": "O email chegará de:",
-    "form_seats_required_note": "* Obrigatório: indica 0 se não precisas de licenças TimeTracker."
+    "form_seats_required_note": "* Obrigatório: indica 0 se não precisas de licenças TimeTracker.",
+    "trust_gdpr": "Sem rastreio contínuo",
+    "trust_offline": "Verificador offline"
   },
   "roi": {
     "meta_title": "Calculadora ROI GeoTapp - Descubra as suas poupanças reais",

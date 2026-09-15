@@ -177,6 +177,12 @@ export default function Pricing() {
   >({});
   const [isLoadingStats, setIsLoadingStats] = useState(true);
 
+  // A18: chi guarda il listino e' il passo che mancava fra l'arrivo e il modulo.
+  // Senza, non si sa se chi non si iscrive il prezzo l'ha visto o no.
+  useEffect(() => {
+    trackEvent('pricing_view', { locale: currentLocale });
+  }, [currentLocale]);
+
   useEffect(() => {
     const fetchPromoStats = async () => {
       try {

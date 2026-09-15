@@ -123,12 +123,13 @@
     "hero_subtitle": "GeoTapp förvandlar varje fältuppdrag till objektiva bevis: förseglade rapporter med verkliga GPS-data, tidsstämplade fotobevis och dokumentation som vem som helst kan verifiera oberoende, utan att lita på, utan tvister.",
     "hero_cta_primary": "Starta gratis provperiod",
     "hero_cta_secondary": "Utforska sektorer",
-    "trust_gdpr": "GDPR-kompatibel",
+    "hero_cta_report": "Se en förseglad rapport",
+    "trust_gdpr": "Ingen löpande spårning",
     "trust_gdpr_desc": "Tidsstämplar endast vid in- och utcheckning",
     "trust_gps": "GPS-bevis",
     "trust_gps_desc": "Varje uppdrag förseglat med plats och tidsstämpel",
-    "trust_offline": "Fungerar offline",
-    "trust_offline_desc": "Automatisk synkronisering vid anslutning",
+    "trust_offline": "Offlinekontroll",
+    "trust_offline_desc": "En enda fil, utan konto och utan nät",
     "trust_eu_data": "Data i Europa",
     "features_title": "Från uppdrag till verifierbart bevis",
     "features_subtitle": "Tre integrerade verktyg: fältet registrerar, kontoret kontrollerar, kunden verifierar.",
@@ -196,7 +197,7 @@
       ]
     },
     "proof_note": "Bevis samlas in enbart via kameran, ingen kontinuerlig spårning.",
-    "proof_claim": "100% i linje med IMY:s vägledning.",
+    "proof_claim": "Mellan in- och utstämpling registreras ingenting.",
     "sticky_cta_subtitle": "14 dagar gratis, inget kreditkort"
   },
   "home_sections": {
@@ -219,7 +220,7 @@
         "desc": "Verifierad position"
       },
       "card_gdpr": {
-        "title": "GDPR-kompatibel",
+        "title": "Ingen löpande spårning",
         "desc": "Ingen kontinuerlig spårning"
       },
       "link": "Utforska GeoTapp TimeTracker"
@@ -245,7 +246,7 @@
         },
         {
           "title": "Privacy by design",
-          "desc": "Platsen registreras <strong>endast</strong> vid instämpling och utstämpling. Ingen kontinuerlig spårning. Helt GDPR-kompatibel."
+          "desc": "Platsen registreras <strong>endast</strong> vid instämpling och utstämpling. Ingen kontinuerlig spårning."
         },
         {
           "title": "Operationell kontroll i realtid",
@@ -804,10 +805,11 @@
     "urgent_contact": "Brådskande frågor? Skriv till",
     "no_spam": "Ingen spam. Dina uppgifter hanteras enligt vår",
     "trust_gps": "GPS-verifierad stämpling",
-    "trust_offline": "Fungerar offline",
+    "trust_offline": "Offlinekontroll",
     "trust_response": "Svar inom 1 dag",
     "what_youll_see": "Vad du kommer att se i demon",
-    "faq_title": "Vanliga frågor"
+    "faq_title": "Vanliga frågor",
+    "trust_gdpr": "Ingen löpande spårning"
   },
   "download_page": {
     "title": "Ladda ner GeoTapp",
@@ -1065,7 +1067,9 @@
       }
     ],
     "success_sender": "E-postmeddelandet kommer från:",
-    "form_seats_required_note": "* Obligatoriskt: ange 0 om du inte behöver några TimeTracker-licenser."
+    "form_seats_required_note": "* Obligatoriskt: ange 0 om du inte behöver några TimeTracker-licenser.",
+    "trust_gdpr": "Ingen löpande spårning",
+    "trust_offline": "Offlinekontroll"
   },
   "roi": {
     "meta_title": "GeoTapp ROI-kalkylator - Upptäck dina verkliga besparingar",

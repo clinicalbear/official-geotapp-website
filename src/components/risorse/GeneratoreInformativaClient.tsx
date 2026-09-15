@@ -76,6 +76,7 @@ export default function GeneratoreInformativaClient({ locale, paesi, labels }: P
     };
     const doc = buildInformativaDoc(infLocale(locale), inputs, paeseId);
     trackEvent('generatore_informativa', { locale, paese: paeseId });
+    trackEvent('resource_download', { risorsa: 'generatore-informativa', locale, paese: paeseId });
 
     const sezioniHtml = doc.sezioni
       .map((s) => `<h2>${esc(s.titolo)}</h2><p>${esc(s.testo)}</p>`)

@@ -123,12 +123,13 @@
     "hero_subtitle": "GeoTapp transforma cada intervención en campo en evidencia objetiva: informes sellados con datos GPS reales, pruebas fotográficas con marca de tiempo y documentación verificable por cualquiera, sin confiar, sin disputas.",
     "hero_cta_primary": "Empezar prueba gratis",
     "hero_cta_secondary": "Explorar sectores",
-    "trust_gdpr": "Conforme RGPD",
+    "hero_cta_report": "Ver un parte sellado",
+    "trust_gdpr": "Sin seguimiento continuo",
     "trust_gdpr_desc": "Solo marca de tiempo en entrada y salida",
     "trust_gps": "Prueba GPS",
     "trust_gps_desc": "Cada intervención certificada con ubicación y marca de tiempo",
-    "trust_offline": "Funciona sin conexión",
-    "trust_offline_desc": "Sincronización automática al reconectarse",
+    "trust_offline": "Verificador sin conexión",
+    "trust_offline_desc": "Un solo archivo, sin cuenta ni red",
     "trust_eu_data": "Datos en Europa",
     "features_title": "Del trabajo a la prueba verificable",
     "features_subtitle": "Tres herramientas integradas: el campo registra, la oficina controla, el cliente verifica.",
@@ -196,7 +197,7 @@
       ]
     },
     "proof_note": "Pruebas recogidas solo con la cámara, sin seguimiento continuo.",
-    "proof_claim": "100% conforme a las directrices de la AEPD.",
+    "proof_claim": "Entre la entrada y la salida no se registra nada.",
     "sticky_cta_subtitle": "14 días gratis, sin tarjeta de crédito"
   },
   "home_sections": {
@@ -219,7 +220,7 @@
         "desc": "Ubicación verificada"
       },
       "card_gdpr": {
-        "title": "Conforme al RGPD",
+        "title": "Sin seguimiento continuo",
         "desc": "Sin rastreo continuo"
       },
       "link": "Explorar GeoTapp TimeTracker"
@@ -245,7 +246,7 @@
         },
         {
           "title": "Privacidad por diseño",
-          "desc": "La ubicación se registra <strong>únicamente</strong> al marcar la entrada y la salida. Sin rastreo continuo. Totalmente conforme al RGPD."
+          "desc": "La ubicación se registra <strong>únicamente</strong> al marcar la entrada y la salida. Sin rastreo continuo."
         },
         {
           "title": "Control operativo en tiempo real",
@@ -804,10 +805,11 @@
     "urgent_contact": "¿Preguntas urgentes? Escribe a",
     "no_spam": "Sin spam. Tus datos se tratan según nuestra",
     "trust_gps": "Fichaje GPS verificado",
-    "trust_offline": "Funciona offline",
+    "trust_offline": "Verificador sin conexión",
     "trust_response": "Respuesta en 1 día",
     "what_youll_see": "Qué verás en la demo",
-    "faq_title": "Preguntas frecuentes"
+    "faq_title": "Preguntas frecuentes",
+    "trust_gdpr": "Sin seguimiento continuo"
   },
   "download_page": {
     "title": "Descargar GeoTapp",
@@ -1065,7 +1067,9 @@
       }
     ],
     "success_sender": "El correo llegará desde:",
-    "form_seats_required_note": "* Obligatorio: introduce 0 si no necesitas licencias TimeTracker."
+    "form_seats_required_note": "* Obligatorio: introduce 0 si no necesitas licencias TimeTracker.",
+    "trust_gdpr": "Sin seguimiento continuo",
+    "trust_offline": "Verificador sin conexión"
   },
   "roi": {
     "meta_title": "Calculadora ROI GeoTapp - Descubre tus ahorros reales",

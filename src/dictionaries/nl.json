@@ -123,12 +123,13 @@
     "hero_subtitle": "GeoTapp verandert elke velddienst in objectief bewijs: verzegelde rapporten met echte GPS-gegevens, tijdgestempeld fotobewijs en documentatie die iedereen onafhankelijk kan verifiëren, zonder vertrouwen, zonder geschillen.",
     "hero_cta_primary": "Start gratis proefperiode",
     "hero_cta_secondary": "Sectoren ontdekken",
-    "trust_gdpr": "AVG-conform",
+    "hero_cta_report": "Bekijk een verzegelde werkbon",
+    "trust_gdpr": "Geen doorlopende tracking",
     "trust_gdpr_desc": "Alleen tijdstempel bij in- en uitklokken",
     "trust_gps": "GPS-bewijs",
     "trust_gps_desc": "Elke interventie verzegeld met locatie en tijdstempel",
-    "trust_offline": "Werkt offline",
-    "trust_offline_desc": "Automatisch synchroniseren bij verbinding",
+    "trust_offline": "Offline verificatie",
+    "trust_offline_desc": "Eén bestand, zonder account en zonder netwerk",
     "trust_eu_data": "Data in Europa",
     "features_title": "Van interventie naar verifieerbaar bewijs",
     "features_subtitle": "Drie geïntegreerde tools: het veld registreert, het kantoor controleert, de klant verifieert.",
@@ -196,7 +197,7 @@
       ]
     },
     "proof_note": "Bewijs uitsluitend via de camera vastgelegd, geen doorlopende tracking.",
-    "proof_claim": "100% conform de richtsnoeren van de Autoriteit Persoonsgegevens.",
+    "proof_claim": "Tussen in- en uitklokken leggen we niets vast.",
     "sticky_cta_subtitle": "14 dagen gratis, geen creditcard"
   },
   "home_sections": {
@@ -219,7 +220,7 @@
         "desc": "Geverifieerde locatie"
       },
       "card_gdpr": {
-        "title": "AVG-conform",
+        "title": "Geen doorlopende tracking",
         "desc": "Geen continue tracking"
       },
       "link": "Ontdek GeoTapp TimeTracker"
@@ -245,7 +246,7 @@
         },
         {
           "title": "Privacy by design",
-          "desc": "Locatie wordt <strong>uitsluitend</strong> geregistreerd bij in- en uitklokken. Geen continue tracking. Volledig AVG-conform."
+          "desc": "Locatie wordt <strong>uitsluitend</strong> geregistreerd bij in- en uitklokken. Geen continue tracking."
         },
         {
           "title": "Realtime operationele controle",
@@ -820,7 +821,9 @@
       }
     ],
     "success_sender": "De e-mail komt van:",
-    "form_seats_required_note": "* Verplicht: vul 0 in als je geen TimeTracker-licenties nodig hebt."
+    "form_seats_required_note": "* Verplicht: vul 0 in als je geen TimeTracker-licenties nodig hebt.",
+    "trust_gdpr": "Geen doorlopende tracking",
+    "trust_offline": "Offline verificatie"
   },
   "demo": {
     "page_title": "Boek uw persoonlijke demo",
@@ -884,10 +887,11 @@
     "urgent_contact": "Dringende vragen? Schrijf naar",
     "no_spam": "Geen spam. Uw gegevens worden behandeld volgens ons",
     "trust_gps": "GPS-geverifieerde klok-in",
-    "trust_offline": "Werkt offline",
+    "trust_offline": "Offline verificatie",
     "trust_response": "Reactie binnen 1 dag",
     "what_youll_see": "Wat u in de demo ziet",
-    "faq_title": "Veelgestelde vragen"
+    "faq_title": "Veelgestelde vragen",
+    "trust_gdpr": "Geen doorlopende tracking"
   },
   "download_page": {
     "title": "GeoTapp downloaden",

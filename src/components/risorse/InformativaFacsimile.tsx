@@ -194,6 +194,7 @@ export default function InformativaFacsimile({ locale, countryName, authority, c
       footer: t.footer,
     });
     trackEvent('informativa_facsimile_download', { locale, paese: countryISO });
+    trackEvent('resource_download', { risorsa: 'informativa-facsimile', locale, paese: countryISO });
     const w = window.open('', '_blank');
     if (w) {
       w.document.open();

@@ -219,13 +219,13 @@ export default function DemoPage() {
           {/* Trust strip */}
           <div className="mt-14 flex flex-wrap gap-4 justify-center text-xs text-slate-500">
             <span className="flex items-center gap-1.5">
-              <ShieldCheck size={14} className="text-emerald-500" /> GDPR Compliant
+              <ShieldCheck size={14} className="text-emerald-500" /> {d.trust_gdpr ?? 'No continuous tracking'}
             </span>
             <span className="flex items-center gap-1.5">
               <MapPin size={14} className="text-blue-500" /> {d.trust_gps ?? 'GPS-verified clock-in'}
             </span>
             <span className="flex items-center gap-1.5">
-              <WifiOff size={14} className="text-amber-500" /> {d.trust_offline ?? 'Works offline'}
+              <WifiOff size={14} className="text-amber-500" /> {d.trust_offline ?? 'Offline verifier'}
             </span>
             <span className="flex items-center gap-1.5">
               <Clock size={14} className="text-slate-400" /> {d.trust_response ?? 'Response within 1 day'}

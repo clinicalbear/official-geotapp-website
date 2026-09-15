@@ -131,12 +131,13 @@
     "hero_subtitle": "GeoTapp trasforma ogni intervento in evidenza oggettiva: report sigillati con dati GPS reali, prove fotografiche con timestamp e documentazione verificabile da chiunque, senza fidarsi, senza contestazioni.",
     "hero_cta_primary": "Inizia trial gratuito",
     "hero_cta_secondary": "Scopri i Settori",
-    "trust_gdpr": "GDPR Compliant",
+    "hero_cta_report": "Guarda un rapportino sigillato",
+    "trust_gdpr": "Niente tracciamento continuo",
     "trust_gdpr_desc": "Solo timestamp all'ingresso e uscita",
     "trust_gps": "Prova GPS",
     "trust_gps_desc": "Ogni intervento sigillato con posizione e timestamp",
-    "trust_offline": "Funziona Offline",
-    "trust_offline_desc": "Sincronizzazione automatica alla riconnessione",
+    "trust_offline": "Verificatore offline",
+    "trust_offline_desc": "Un file solo, senza account ne rete",
     "trust_eu_data": "Dati in Europa",
     "features_title": "Da intervento a prova verificabile",
     "features_subtitle": "Tre strumenti integrati: il campo registra, l'ufficio controlla, il cliente verifica.",
@@ -196,7 +197,7 @@
       ]
     },
     "proof_note": "Prove raccolte solo tramite fotocamera, nessun tracciamento continuo.",
-    "proof_claim": "100% conforme alle linee guida del Garante della privacy.",
+    "proof_claim": "Fra l'entrata e l'uscita non registriamo niente.",
     "sticky_cta_subtitle": "14 giorni gratis, nessuna carta di credito"
   },
   "home_sections": {
@@ -219,7 +220,7 @@
         "desc": "Posizione e timestamp verificati"
       },
       "card_gdpr": {
-        "title": "GDPR Compliant",
+        "title": "Niente tracciamento continuo",
         "desc": "Nessun tracciamento continuo"
       },
       "link": "Scopri GeoTapp TimeTracker"
@@ -245,7 +246,7 @@
         },
         {
           "title": "Privacy rispettata",
-          "desc": "La posizione viene rilevata <strong>solo</strong> all'ingresso e all'uscita. Nessun tracciamento continuo. Conforme al GDPR."
+          "desc": "La posizione viene rilevata <strong>solo</strong> all'ingresso e all'uscita. Nessun tracciamento continuo."
         },
         {
           "title": "Controllo operativo in tempo reale",
@@ -820,7 +821,9 @@
       }
     ],
     "success_sender": "L'email arriverà da:",
-    "form_seats_required_note": "* Campo obbligatorio: inserisci 0 se non ti servono licenze TimeTracker."
+    "form_seats_required_note": "* Campo obbligatorio: inserisci 0 se non ti servono licenze TimeTracker.",
+    "trust_gdpr": "Niente tracciamento continuo",
+    "trust_offline": "Verificatore offline"
   },
   "demo": {
     "page_title": "Prenota la tua Demo Personalizzata",
@@ -884,10 +887,11 @@
     "urgent_contact": "Hai domande urgenti? Scrivi a",
     "no_spam": "Nessuno spam. I tuoi dati sono trattati secondo la nostra",
     "trust_gps": "Timbratura GPS verificata",
-    "trust_offline": "Funziona offline",
+    "trust_offline": "Verificatore offline",
     "trust_response": "Risposta entro 1 giorno",
     "what_youll_see": "Cosa vedrai nella demo",
-    "faq_title": "Domande frequenti"
+    "faq_title": "Domande frequenti",
+    "trust_gdpr": "Niente tracciamento continuo"
   },
   "download_page": {
     "title": "Download GeoTapp",

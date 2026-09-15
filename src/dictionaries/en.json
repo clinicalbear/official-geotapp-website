@@ -131,12 +131,13 @@
     "hero_subtitle": "GeoTapp turns every field job into objective evidence: sealed reports with real GPS data, timestamped photo proof and documentation anyone can verify, without trusting you, without disputes.",
     "hero_cta_primary": "Start free trial",
     "hero_cta_secondary": "Explore Sectors",
-    "trust_gdpr": "GDPR Compliant",
+    "hero_cta_report": "See a sealed report",
+    "trust_gdpr": "No continuous tracking",
     "trust_gdpr_desc": "Timestamps only at clock-in/out",
     "trust_gps": "GPS Proof",
     "trust_gps_desc": "Every job certified with location and timestamp",
-    "trust_offline": "Works Offline",
-    "trust_offline_desc": "Auto-sync when connection returns",
+    "trust_offline": "Offline verifier",
+    "trust_offline_desc": "One file, no account and no network",
     "trust_eu_data": "Data hosted in the EU",
     "features_title": "From job to verifiable proof",
     "features_subtitle": "Three integrated tools: the field records, the office controls, the client verifies.",
@@ -196,7 +197,7 @@
       ]
     },
     "proof_note": "Evidence captured by camera only, no continuous tracking.",
-    "proof_claim": "100% GDPR compliant.",
+    "proof_claim": "Nothing recorded between clock-in and clock-out.",
     "sticky_cta_subtitle": "14 days free, no credit card"
   },
   "home_sections": {
@@ -219,7 +220,7 @@
         "desc": "Verified location and timestamp"
       },
       "card_gdpr": {
-        "title": "GDPR Compliant",
+        "title": "No continuous tracking",
         "desc": "No continuous tracking"
       },
       "link": "Explore GeoTapp TimeTracker"
@@ -245,7 +246,7 @@
         },
         {
           "title": "Privacy by design",
-          "desc": "Location is recorded <strong>only</strong> at clock-in and clock-out. No continuous tracking. Fully GDPR compliant."
+          "desc": "Location is recorded <strong>only</strong> at clock-in and clock-out. No continuous tracking."
         },
         {
           "title": "Real-time operational control",
@@ -820,7 +821,9 @@
       }
     ],
     "success_sender": "The email will arrive from:",
-    "form_seats_required_note": "* Required: enter 0 if you don't need any TimeTracker seats."
+    "form_seats_required_note": "* Required: enter 0 if you don't need any TimeTracker seats.",
+    "trust_gdpr": "No continuous tracking",
+    "trust_offline": "Offline verifier"
   },
   "demo": {
     "page_title": "Book your Personalised Demo",
@@ -884,10 +887,11 @@
     "urgent_contact": "Urgent questions? Write to",
     "no_spam": "No spam. Your data is handled according to our",
     "trust_gps": "GPS-verified clock-in",
-    "trust_offline": "Works offline",
+    "trust_offline": "Offline verifier",
     "trust_response": "Response within 1 day",
     "what_youll_see": "What you'll see in the demo",
-    "faq_title": "Frequently asked questions"
+    "faq_title": "Frequently asked questions",
+    "trust_gdpr": "No continuous tracking"
   },
   "download_page": {
     "title": "Download GeoTapp",

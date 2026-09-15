@@ -46,7 +46,7 @@ export default function LocaleSuggestionBanner() {
       <Link
         href="/it/"
         onClick={dismiss}
-        className="font-semibold text-brand-blue hover:underline whitespace-nowrap"
+        className="font-semibold text-brand-blue-ink hover:underline whitespace-nowrap"
       >
         Vai alla versione italiana →
       </Link>
@@ -54,7 +54,7 @@ export default function LocaleSuggestionBanner() {
         type="button"
         onClick={dismiss}
         aria-label="Chiudi"
-        className="ml-2 text-slate-400 hover:text-slate-600 text-lg leading-none"
+        className="ml-2 text-slate-600 hover:text-slate-800 text-lg leading-none"
       >
         ×
       </button>

@@ -410,13 +410,13 @@ export default function TrialPage() {
           {/* Trust strip */}
           <div className="mt-14 flex flex-wrap gap-4 justify-center text-xs text-slate-500">
             <span className="flex items-center gap-1.5">
-              <ShieldCheck size={14} className="text-emerald-500" /> GDPR Compliant
+              <ShieldCheck size={14} className="text-emerald-500" /> {(d as any).trust_gdpr ?? 'No continuous tracking'}
             </span>
             <span className="flex items-center gap-1.5">
               <MapPin size={14} className="text-blue-500" /> {(d as any).trust_gps ?? 'Verified GPS tracking'}
             </span>
             <span className="flex items-center gap-1.5">
-              <WifiOff size={14} className="text-amber-500" /> {(d as any).trust_offline ?? 'Offline recording, auto sync'}
+              <WifiOff size={14} className="text-amber-500" /> {(d as any).trust_offline ?? 'Offline verifier'}
             </span>
             <span className="flex items-center gap-1.5">
               <Users size={14} className="text-slate-400" /> {(d as any).trust_no_card ?? 'No credit card required'}
