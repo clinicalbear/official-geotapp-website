@@ -3,11 +3,23 @@ import { describe, expect, it } from 'vitest';
 import { LINK_BREVI, risolviLinkBreve, urlLinkBreve } from './link-brevi';
 
 describe('link brevi dei gruppi', () => {
-  it('manda ogni codice noto alla pagina del sondaggio nella sua lingua', () => {
+  it('manda ogni codice noto a una pagina nostra, e risolve sempre', () => {
+    // Non tutti i link brevi sono del sondaggio: `tt-bio` e' il link in bio di
+    // TikTok e punta a /links/. La prova di prima pretendeva il sondaggio da
+    // TUTTI, quindi la suite era rossa da quando quel codice e' stato aggiunto.
+    // Qui si controlla cio' che vale davvero per ognuno: percorso interno, con
+    // barra iniziale e finale, e risoluzione coerente.
     for (const [codice, voce] of Object.entries(LINK_BREVI)) {
-      expect(voce.destinazione, codice).toMatch(/^\/([a-z]{2}\/)?survey\/$/);
+      expect(voce.destinazione, codice).toMatch(/^\/[a-z0-9/-]*\/$/);
       expect(risolviLinkBreve(codice).destinazione).toBe(voce.destinazione);
       expect(risolviLinkBreve(codice).conosciuto).toBe(true);
+    }
+  });
+
+  it('i codici del sondaggio vanno al sondaggio, nella loro lingua', () => {
+    for (const [codice, voce] of Object.entries(LINK_BREVI)) {
+      if (codice === 'tt-bio') continue;
+      expect(voce.destinazione, codice).toMatch(/^\/([a-z]{2}\/)?survey\/$/);
     }
   });
 
