@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import NewsletterForm from './NewsletterForm';
+import { ePaginaDiCompito } from '@/lib/pagine-di-compito';
 
 const STORAGE_KEY = 'gtapp_nl_modal_seen';
 
@@ -28,8 +29,11 @@ export default function NewsletterModal({ locale }: { locale: string }) {
     // gtapp_modal_seen = flag condiviso: se la campagna sondaggio ha già mostrato
     // il suo modale in questa visita, la newsletter cede la precedenza (mai due insieme).
     if (localStorage.getItem(STORAGE_KEY) || localStorage.getItem('gtapp_modal_seen')) return;
+    // Stessa regola del sondaggio: mai un modale sopra chi sta compilando.
+    if (ePaginaDiCompito(location.pathname)) return;
 
     function handleScroll() {
+      if (ePaginaDiCompito(location.pathname)) return;
       const scrollRatio =
         (window.scrollY + window.innerHeight) /
         document.documentElement.scrollHeight;

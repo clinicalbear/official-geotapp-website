@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { trackEvent } from '@/lib/analytics';
+import { ePaginaDiCompito } from '@/lib/pagine-di-compito';
 
 // Chiave PROPRIA (permanente): l'unica che spegne il modale per sempre.
 const STORAGE_KEY = 'gtapp_survey_modal_seen';
@@ -56,10 +57,16 @@ export default function SurveyInvite() {
   useEffect(() => {
     if (localStorage.getItem(STORAGE_KEY)) return;
     if (sessionStorage.getItem(VISIT_KEY)) return;
+    // Su una pagina di compito non si parte nemmeno.
+    if (ePaginaDiCompito(location.pathname)) return;
 
     let shown = false;
     const show = () => {
       if (shown || sessionStorage.getItem(VISIT_KEY)) return;
+      // Ricontrollato qui e non solo all'avvio: il layout di [locale] NON si
+      // rimonta quando si naviga dentro la stessa lingua, quindi chi arriva
+      // sulla home e poi va al trial avrebbe il timer gia' partito addosso.
+      if (ePaginaDiCompito(location.pathname)) return;
       // Il banner cookie chiede una scelta obbligata: aspettiamo che sia fatta.
       if (!localStorage.getItem(CONSENT_KEY)) return;
       shown = true;
