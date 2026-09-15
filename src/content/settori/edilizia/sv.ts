@@ -137,6 +137,10 @@ const content: SettoreContent = {
         a: 'Varje GPS-stämpling är tidsstämplad och förseglad. GeoTapp registrerar verkliga koordinater vid stämplingen, inte manuellt inmatade. Data kan verifieras av projektledningen när som helst.',
       },
       {
+        q: 'Ersätter GeoTapp den elektroniska personalliggaren?',
+        a: 'Nej, och det ska sägas rakt ut. Den elektroniska personalliggaren är reglerad i skatteförfarandelagstiftningen, byggherren anmäler byggarbetsplatsen till Skatteverket innan arbetet påbörjas och ansvarar för att utrustningen finns på plats. Kontrollavgifterna är kännbara, 25 000 kronor om byggarbetsplatsen inte har anmälts, 12 500 kronor om liggaren saknas eller inte förs på rätt sätt, och 2 500 kronor för varje person som är på plats utan att vara registrerad. GeoTapp är inget personalliggarsystem och tar inte över den skyldigheten. Det appen ger dig är din egen tidsregistrering per byggarbetsplats, med GPS-verifierad in- och utstämpling och oföränderliga tidsstämplar, så att du vet vilka av dina egna montörer som var var och när, även när underentreprenörerna är många.',
+      },
+      {
         q: 'Hur hanterar du underentreprenörer på byggarbetsplatsen?',
         a: 'GeoTapp spårar tillträde och närvaro för alla lag, inklusive underentreprenörer. Varje arbetare stämplar från sin smartphone och platschefen ser allt i realtid på en panel.',
       },

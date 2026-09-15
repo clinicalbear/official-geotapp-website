@@ -141,6 +141,10 @@ const content: SettoreContent = {
         a: 'GeoTapp verfolgt Zugang und Anwesenheit aller Teams, einschließlich Subunternehmer. Jeder Arbeiter stempelt vom Smartphone und der Bauleiter sieht alles in Echtzeit auf einem Dashboard.',
       },
       {
+        q: 'Wie erfüllen wir die Aufzeichnungspflicht nach §17 MiLoG auf der Baustelle?',
+        a: 'Das Baugewerbe ist in §2a SchwarzArbG aufgeführt, damit gilt §17 MiLoG für jeden Baubetrieb, unabhängig von der Mitarbeiterzahl: Beginn, Ende und Dauer der täglichen Arbeitszeit sind spätestens am siebten Kalendertag nach dem Arbeitstag aufzuzeichnen und zwei Jahre aufzubewahren. Verstöße ahndet §21 MiLoG mit einer Geldbuße bis zu 50.000 €. Mit GeoTapp entsteht diese Aufzeichnung beim Stempeln auf der Baustelle statt am Monatsende im Büro: GPS-geprüft, mit unveränderlichem Zeitstempel und als signiertes PDF für die Finanzkontrolle Schwarzarbeit (FKS) exportierbar.',
+      },
+      {
         q: 'Kosten Baustellenberichte stundenlange Handarbeit?',
         a: 'Nein. GeoTapp generiert Berichte automatisch mit GPS, Stunden und Anwesenheiten. Sie sind bereit für die Bauleitung und Aufmaße ohne manuelle Eingabe.',
       },

@@ -108,7 +108,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Welche Mindestlohngesetz-Pflichten (MiLoG, §17) löst GeoTapp automatisch?',
-        a: '§17 MiLoG schreibt für die Gebäudereinigung lückenlose Aufzeichnung von Beginn, Ende und Dauer der täglichen Arbeitszeit vor, spätestens am siebten Folgetag, aufbewahrungspflichtig zwei Jahre. GeoTapp erstellt diese Aufzeichnung in Echtzeit (nicht "nachträglich" wie bei Excel oder Papier), speichert sie mit unveränderbarem Zeitstempel und stellt sie für Zoll-Finanzkontrolle Schwarzarbeit (FKS) als signiertes PDF bereit. Bußgelder bis 500.000 € pro Verstoß werden so strukturell vermieden.',
+        a: '§17 MiLoG schreibt für die Gebäudereinigung lückenlose Aufzeichnung von Beginn, Ende und Dauer der täglichen Arbeitszeit vor, spätestens am siebten Folgetag, aufbewahrungspflichtig zwei Jahre. GeoTapp erstellt diese Aufzeichnung in Echtzeit (nicht "nachträglich" wie bei Excel oder Papier), speichert sie mit unveränderbarem Zeitstempel und stellt sie für Zoll-Finanzkontrolle Schwarzarbeit (FKS) als signiertes PDF bereit. Verstöße gegen diese Aufzeichnungspflicht ahndet § 21 MiLoG mit einer Geldbuße bis zu 50.000 €; eine lückenlose Echtzeit-Aufzeichnung vermeidet das strukturell.',
       },
       {
         q: 'Funktioniert GeoTapp mit Subunternehmern und Personaldienstleistern?',

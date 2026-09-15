@@ -83,6 +83,10 @@ const content: SettoreContent = {
         a: 'TimeTracker verknüpft jeden Vorfall mit einem versiegelten GPS-Standort und einem unveränderlichen Zeitstempel. Der generierte Störungsbericht enthält Koordinaten, Uhrzeit und Fotos, gerichtsverwertbar und auftraggebersicher.',
       },
       {
+        q: 'Gilt die Aufzeichnungspflicht nach §17 MiLoG auch für Sicherheitsunternehmen?',
+        a: 'Ja, und zwar unabhängig von der Betriebsgröße. Das Wach- und Sicherheitsgewerbe ist in §2a SchwarzArbG aufgeführt, damit greift §17 MiLoG: Beginn, Ende und Dauer der täglichen Arbeitszeit jeder Wachperson müssen spätestens am siebten Kalendertag nach dem Arbeitstag aufgezeichnet und zwei Jahre aufbewahrt werden. Verstöße gegen diese Pflicht ahndet §21 MiLoG mit einer Geldbuße bis zu 50.000 €. Mit GeoTapp entsteht die Aufzeichnung im Moment der Stempelung am Posten, GPS-geprüft und mit unveränderlichem Zeitstempel, und lässt sich für die Finanzkontrolle Schwarzarbeit (FKS) als signiertes PDF exportieren.',
+      },
+      {
         q: 'Unterstützt GeoTapp die digitale Schichtübergabe zwischen Wachpersonen?',
         a: 'Ja. Schichtwechsel werden digital mit Quittierung, Betriebshinweisen und Postenstatus erfasst. Der Einsatzleiter hat vollständige Transparenz über die Dienstkontinuität ohne Abhängigkeit von mündlichen Übergaben.',
       },

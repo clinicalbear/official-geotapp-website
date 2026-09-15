@@ -84,7 +84,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Unterstützt GeoTapp die Anforderungen nach §17 MiLoG?',
-        a: 'Ja. Die GPS-gestützte Arbeitszeiterfassung mit unveränderlichem Protokoll und Exportfunktion unterstützt die Dokumentationspflicht nach §17 MiLoG und den ArbZG-Vorschriften.',
+        a: 'Ja. §17 MiLoG gilt für die in §2a SchwarzArbG genannten Wirtschaftsbereiche, dazu zählt das Baugewerbe einschließlich des SHK-Handwerks: Beginn, Ende und Dauer der täglichen Arbeitszeit sind spätestens am siebten Kalendertag nach dem Arbeitstag aufzuzeichnen und zwei Jahre aufzubewahren. Die GPS-gestützte Arbeitszeiterfassung von GeoTapp erzeugt dieses Protokoll unveränderlich und exportierbar und unterstützt zugleich die Vorgaben des ArbZG.',
       },
       {
         q: 'Kann ich die Daten direkt in DATEV oder Lexware importieren?',
