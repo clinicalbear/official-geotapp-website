@@ -2,7 +2,7 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'Logiciel Nettoyage Industriel et Facility Management | Suivi Équipes | GeoTapp',
+    title: 'Bon d\'intervention nettoyage : logiciel de suivi des équipes avec preuve photo | GeoTapp',
     description: 'GeoTapp pour le nettoyage industriel et le facility management : pointage GPS vérifiable, preuves photographiques des zones nettoyées, supervision d\'équipes multi-sites et conformité CCN Nettoyage (IDCC 3043).',
   },
   hero: {

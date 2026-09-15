@@ -8,7 +8,7 @@ const content: SettoreContent = {
   // ed era proprio quella che meta e hero targetizzavano. Il corpo della pagina usava
   // gia' "schoonmaakbedrijf" 13 volte: era solo la vetrina a parlare un'altra parola.
   meta: {
-    title: 'Software voor schoonmaakbedrijven: uren en fotobewijs | GeoTapp',
+    title: 'Werkbon voor schoonmaakbedrijven: uren en fotobewijs per ruimte | GeoTapp',
     description: 'Software voor schoonmaakbedrijven: elk uur en elke ruimte met GPS en fotobewijs vastgelegd. De klant twijfelt, het bewijs niet. Naleving CAO Schoonmaak.',
   },
   hero: {

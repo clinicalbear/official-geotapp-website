@@ -578,7 +578,7 @@
   "product_pages": {
     "flow": {
       "hero_badge": "GeoTapp Flow - Gestione Operativa",
-      "hero_title": "GeoTapp Flow.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600\">Gestione Interventi e Squadre.</span>",
+      "hero_title": "GeoTapp Flow.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-slate-900\">Gestione Interventi e Squadre.</span>",
       "hero_subtitle": "Il centro operativo per gestire clienti, commesse, squadre e amministrazione in un unico ambiente. Flow è la piattaforma su cui si appoggia anche TimeTracker.",
       "visual_placeholder": "PANNELLO OPERATIVO",
       "grid_title": "Funzionalità operative",
@@ -646,7 +646,7 @@
     },
     "app": {
       "hero_badge": "GeoTapp TimeTracker - App per Tecnici",
-      "hero_title": "GeoTapp TimeTracker.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600\">Il Campo in Tasca.</span>",
+      "hero_title": "GeoTapp TimeTracker.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-slate-900\">Il Campo in Tasca.</span>",
       "hero_subtitle": "L'app mobile usata dai tecnici per registrare attività, raccogliere prove e mantenere il filo operativo direttamente dal campo. Disponibile su Android e iOS.",
       "visual_placeholder": "INTERFACCIA CAMPO",
       "grid_title": "Strumenti per il lavoro sul campo",

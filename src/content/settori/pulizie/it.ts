@@ -2,7 +2,7 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App per impresa di pulizie | GeoTapp - GPS, Presenze e Prova verificabile',
+    title: 'App per impresa di pulizie: il rapportino d\'intervento con foto e GPS | GeoTapp',
     description: 'Smetti di rincorrere le squadre per telefono. GeoTapp è l\'app per impresa di pulizie che sigilla presenze e interventi con GPS reale e prove fotografiche, in conformità al GDPR e al CCNL Multiservizi. Prova gratis.',
   },
 

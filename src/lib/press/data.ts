@@ -21,6 +21,28 @@ export function pressRel(_item: PressItem): string {
   return 'noopener noreferrer nofollow';
 }
 
+// ── Verifica del 15/09/2026 (A42 del piano). Ogni URL scaricato e letto sul
+// grezzo, non fidandosi di quello che il file dice gia'. Esito:
+//
+//   200, dofollow verso di noi   hrportugal (1 ancora), PME Magazine (4),
+//                                Personnel Today (1), AZ Big Media (1)
+//   200, ci nominano SENZA link  ClockOn (3 volte), GPO Magazine (4 volte)
+//   200, link ma nofollow        Vigilanza Privata Online (2 ancore, una
+//                                perfino con rel="sponsored")
+//   200, ma vedi sotto           Risorse Umane HR
+//   429                          COO Insider e Small Business Leader: non
+//                                sono morti, e' la protezione anti-bot della
+//                                piattaforma (stessa risposta da 32 KB per
+//                                entrambi). Vanno ricontrollati da Chrome vero.
+//
+// 🔴 Risorse Umane HR, 30/06/2026. Il pezzo e' vivo e a FIRMA di Michele Angelo
+// Petraroli (14 occorrenze del nome, titolo compreso), ma non nomina GeoTapp
+// nemmeno una volta: la bio dice «e' fondatore di un'azienda che sviluppa
+// strumenti per dimostrare il lavoro svolto». Zero occorrenze di "geotapp" in
+// tutta la pagina, e l'unico link della riga d'autore va a LinkedIn. E' un
+// pezzo nostro dove il marchio e' anonimo: il link piu' facile che abbiamo, e
+// basta chiederlo a chi ci ha gia' pubblicato. Vedi docs/backlink-outreach-log.md.
+
 // VUOTI al lancio. Aggiungere una voce = la sezione compare da sola in pagina.
 export const PRESS_RELEASES: PressItem[] = [];
 export const PRESS_COVERAGE: PressItem[] = [

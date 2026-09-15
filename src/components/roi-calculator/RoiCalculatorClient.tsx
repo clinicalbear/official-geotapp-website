@@ -498,11 +498,11 @@ export default function RoiCalculatorClient({ dict, locale, trialUrl, embed = fa
                       <p className={dark ? 'text-xs' : 'text-xs text-gray-500'} style={dark ? { color: 'rgba(242,240,233,.55)' } : undefined}>{dict.results_payback_unit}</p>
                     </div>
                     <div
-                      className={dark ? 'rounded-xl p-4 text-center' : 'rounded-xl bg-purple-50 border border-purple-200 p-4 text-center'}
+                      className={dark ? 'rounded-xl p-4 text-center' : 'rounded-xl bg-emerald-50 border border-emerald-200 p-4 text-center'}
                       style={dark ? { background: 'rgba(242,240,233,.05)', border: '1px solid rgba(242,240,233,.14)' } : undefined}
                     >
                       <p className={dark ? 'text-xs mb-1' : 'text-xs text-gray-500 mb-1'} style={dark ? { color: 'rgba(242,240,233,.55)' } : undefined}>{dict.results_roi}</p>
-                      <p className={dark ? 'text-2xl font-bold' : 'text-2xl font-bold text-purple-600'} style={dark ? { color: 'var(--sky)' } : undefined}>{result.roi_pct}%</p>
+                      <p className={dark ? 'text-2xl font-bold' : 'text-2xl font-bold text-emerald-700'} style={dark ? { color: 'var(--sky)' } : undefined}>{result.roi_pct}%</p>
                     </div>
                   </div>
                   <a
