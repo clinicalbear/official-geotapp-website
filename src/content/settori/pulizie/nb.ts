@@ -10,8 +10,8 @@ const content: SettoreContent = {
     h1_line1: 'Programvare for renholdsbedrifter:',
     h1_line2: 'vakter, fotodokumentasjon og verifiserte timer, på hvert bygg',
     subtitle: 'GeoTapp kobler Flow + TimeTracker for team spredt over flere bygg og etasjer. Dine renholdere stempler inn med GPS-verifisert smarttelefon; kontoret ser hvem som rengjorde hva, hvor og når, med fotodokumentasjon vedlagt. Ingen tvister, full etterlevelse av NHO Service-overenskomsten.',
-    cta_primary: 'Be om en demo',
-    cta_note: 'Ingen binding. Svar innen 12 arbeidstimer.',
+    cta_primary: 'Prøv det på et ekte oppdrag',
+    cta_note: '14 dager, opptil 50 medarbeidere i felt, uten kredittkort.',
   },
   pain: {
     title: 'Problemet du allerede kjenner',

@@ -10,8 +10,8 @@ const content: SettoreContent = {
     h1_line1: 'Tu obra bajo control,',
     h1_line2: 'en tiempo real.',
     subtitle: 'Fichajes GPS sellados, gestión de equipos e informes automáticos. Cero papeleo, cero disputas. GeoTapp conecta Flow + TimeTracker para jefes de obra, subcontratistas y dirección de obra.',
-    cta_primary: 'Prueba GeoTapp gratis durante 14 días',
-    cta_note: 'Sin compromiso. Sin tarjeta de crédito.',
+    cta_primary: 'Pruébalo en una obra real',
+    cta_note: '14 días, hasta 50 operarios de campo, sin tarjeta de crédito.',
   },
   pain: {
     title: 'Problemas que resolvemos cada día',

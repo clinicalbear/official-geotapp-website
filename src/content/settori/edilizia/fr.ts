@@ -10,8 +10,8 @@ const content: SettoreContent = {
     h1_line1: 'Votre chantier sous contrôle,',
     h1_line2: 'en temps réel.',
     subtitle: 'Pointages GPS certifiés, gestion des équipes et rapports automatiques. Zéro paperasse, zéro litiges. GeoTapp connecte Flow + TimeTracker pour les chefs de chantier, sous-traitants et maîtres d\'ouvrage.',
-    cta_primary: 'Essayez GeoTapp gratuitement pendant 14 jours',
-    cta_note: 'Sans engagement. Aucune carte bancaire requise.',
+    cta_primary: 'Essayez-le sur un vrai chantier',
+    cta_note: "14 jours, jusqu'à 50 intervenants sur le terrain, sans carte bancaire.",
   },
   pain: {
     title: 'Problèmes que nous résolvons chaque jour',

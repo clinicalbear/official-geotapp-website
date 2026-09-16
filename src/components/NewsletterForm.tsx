@@ -317,7 +317,7 @@ export default function NewsletterForm({
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8FC436" strokeWidth="2.5">
           <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"/>
         </svg>
-        <p style={{ margin: 0, fontFamily: 'var(--font-inter,Inter,sans-serif)', fontSize: '0.9rem', color: '#0f172a', fontWeight: 500 }}>
+        <p style={{ margin: 0, fontFamily: 'var(--font-body)', fontSize: '0.9rem', color: '#0f172a', fontWeight: 500 }}>
           {t.success}
         </p>
       </div>
@@ -330,10 +330,10 @@ export default function NewsletterForm({
     <div>
       {!isCompact && (
         <>
-          <h3 style={{ margin: '0 0 0.375rem', fontFamily: 'var(--font-poppins,Poppins,sans-serif)', fontSize: '1.25rem', fontWeight: 700, color: '#0f172a' }}>
+          <h3 style={{ margin: '0 0 0.375rem', fontFamily: 'var(--font-display)', fontSize: '1.25rem', fontWeight: 700, color: '#0f172a' }}>
             {t.title}
           </h3>
-          <p style={{ margin: '0 0 1.25rem', fontFamily: 'var(--font-inter,Inter,sans-serif)', fontSize: '0.875rem', color: '#64748b', lineHeight: 1.6 }}>
+          <p style={{ margin: '0 0 1.25rem', fontFamily: 'var(--font-body)', fontSize: '0.875rem', color: '#64748b', lineHeight: 1.6 }}>
             {t.subtitle}
           </p>
         </>
@@ -347,7 +347,7 @@ export default function NewsletterForm({
           style={{
             width: '100%', padding: '0.625rem 0.875rem', borderRadius: '10px',
             border: '1px solid #e2e8f0', background: '#fff', color: sector ? '#0f172a' : '#94a3b8',
-            fontFamily: 'var(--font-inter,Inter,sans-serif)', fontSize: '0.875rem', outline: 'none',
+            fontFamily: 'var(--font-body)', fontSize: '0.875rem', outline: 'none',
           }}
         >
           <option value="" disabled hidden>{t.sector_placeholder}</option>
@@ -367,7 +367,7 @@ export default function NewsletterForm({
             style={{
               flex: '1 1 200px', padding: '0.625rem 0.875rem', borderRadius: '10px',
               border: '1px solid #e2e8f0', background: '#fff',
-              fontFamily: 'var(--font-inter,Inter,sans-serif)', fontSize: '0.875rem',
+              fontFamily: 'var(--font-body)', fontSize: '0.875rem',
               outline: 'none', color: '#0f172a',
             }}
           />
@@ -377,7 +377,7 @@ export default function NewsletterForm({
             style={{
               padding: '0.625rem 1.25rem', borderRadius: '9999px', border: 'none',
               background: 'linear-gradient(120deg,#5a9e2a,#3a9e6f 48%,#2a8fc4)', color: '#fff', boxShadow: '0 6px 16px rgba(42,143,196,0.3)',
-              fontFamily: 'var(--font-inter,Inter,sans-serif)', fontSize: '0.875rem', fontWeight: 700,
+              fontFamily: 'var(--font-body)', fontSize: '0.875rem', fontWeight: 700,
               cursor: status === 'loading' ? 'not-allowed' : 'pointer',
               opacity: status === 'loading' ? 0.7 : 1, whiteSpace: 'nowrap',
             }}
@@ -387,12 +387,12 @@ export default function NewsletterForm({
         </div>
 
         {status === 'error' && (
-          <p style={{ margin: 0, fontSize: '0.8rem', color: '#ef4444', fontFamily: 'var(--font-inter,Inter,sans-serif)' }}>
+          <p style={{ margin: 0, fontSize: '0.8rem', color: '#ef4444', fontFamily: 'var(--font-body)' }}>
             {t.error}
           </p>
         )}
 
-        <p style={{ margin: 0, fontSize: '0.72rem', color: '#94a3b8', fontFamily: 'var(--font-inter,Inter,sans-serif)' }}>
+        <p style={{ margin: 0, fontSize: '0.72rem', color: '#94a3b8', fontFamily: 'var(--font-body)' }}>
           {t.privacy}
         </p>
       </form>

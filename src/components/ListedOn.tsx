@@ -43,7 +43,7 @@ const CapterraLogo = ({ scale }: { scale: number }) => (
     <rect x="14" y="10" width="4" height="16" rx="0.5" fill="#FF9D28"/>
     <rect x="20" y="6" width="4" height="20" rx="0.5" fill="#FF9D28"/>
     <rect x="0" y="26" width="26" height="3" rx="0.5" fill="#044D80"/>
-    <text x="32" y="23" fontFamily="var(--font-poppins, Poppins, sans-serif)" fontSize="18" fontWeight="700" fill="#044D80">Capterra</text>
+    <text x="32" y="23" fontFamily="var(--font-display)" fontSize="18" fontWeight="700" fill="#044D80">Capterra</text>
   </svg>
 );
 
@@ -53,7 +53,7 @@ const GetAppLogo = ({ scale }: { scale: number }) => (
     <circle cx="14" cy="16" r="12" stroke="#21B573" strokeWidth="3" fill="none"/>
     <path d="M14 16h10" stroke="#21B573" strokeWidth="3" strokeLinecap="round"/>
     <path d="M19 11l5 5-5 5" stroke="#21B573" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-    <text x="32" y="23" fontFamily="var(--font-poppins, Poppins, sans-serif)" fontSize="18" fontWeight="700" fill="#2D3A4A">GetApp</text>
+    <text x="32" y="23" fontFamily="var(--font-display)" fontSize="18" fontWeight="700" fill="#2D3A4A">GetApp</text>
   </svg>
 );
 
@@ -63,7 +63,7 @@ const SoftwareAdviceLogo = ({ scale }: { scale: number }) => (
     <rect x="1" y="4" width="22" height="18" rx="4" fill="#FF6B35"/>
     <polygon points="7,22 12,28 12,22" fill="#FF6B35"/>
     <polyline points="7,13 10.5,17 17,10" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-    <text x="30" y="23" fontFamily="var(--font-poppins, Poppins, sans-serif)" fontSize="17" fontWeight="600" fill="#1E3A5F">Software Advice</text>
+    <text x="30" y="23" fontFamily="var(--font-display)" fontSize="17" fontWeight="600" fill="#1E3A5F">Software Advice</text>
   </svg>
 );
 
@@ -86,7 +86,7 @@ const KompassLogo = ({ scale }: { scale: number }) => (
   <svg width={120 * scale} height={32 * scale} viewBox="0 0 120 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <circle cx="14" cy="16" r="11" stroke="#E30613" strokeWidth="2.5" fill="none"/>
     <path d="M14 7l2 7 6-3-5 5 3 6-7-2-2 7-2-7-7 2 5-5-3-6 6 3z" fill="#E30613"/>
-    <text x="32" y="23" fontFamily="var(--font-poppins, Poppins, sans-serif)" fontSize="17" fontWeight="700" fill="#1A1A1A">Kompass</text>
+    <text x="32" y="23" fontFamily="var(--font-display)" fontSize="17" fontWeight="700" fill="#1A1A1A">Kompass</text>
   </svg>
 );
 
@@ -94,8 +94,8 @@ const KompassLogo = ({ scale }: { scale: number }) => (
 const CylexLogo = ({ scale }: { scale: number }) => (
   <svg width={100 * scale} height={32 * scale} viewBox="0 0 100 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <circle cx="14" cy="16" r="10" fill="#0066CC"/>
-    <text x="8" y="21" fontFamily="var(--font-poppins, Poppins, sans-serif)" fontSize="13" fontWeight="800" fill="#fff">C</text>
-    <text x="30" y="23" fontFamily="var(--font-poppins, Poppins, sans-serif)" fontSize="18" fontWeight="700" fill="#0066CC">Cylex</text>
+    <text x="8" y="21" fontFamily="var(--font-display)" fontSize="13" fontWeight="800" fill="#fff">C</text>
+    <text x="30" y="23" fontFamily="var(--font-display)" fontSize="18" fontWeight="700" fill="#0066CC">Cylex</text>
   </svg>
 );
 
@@ -103,8 +103,8 @@ const CylexLogo = ({ scale }: { scale: number }) => (
 const HotfrogLogo = ({ scale }: { scale: number }) => (
   <svg width={120 * scale} height={32 * scale} viewBox="0 0 120 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <circle cx="14" cy="16" r="11" fill="#8DC63F"/>
-    <text x="9" y="22" fontFamily="var(--font-poppins, Poppins, sans-serif)" fontSize="16" fontWeight="800" fill="#fff">H</text>
-    <text x="30" y="23" fontFamily="var(--font-poppins, Poppins, sans-serif)" fontSize="17" fontWeight="700" fill="#333">Hotfrog</text>
+    <text x="9" y="22" fontFamily="var(--font-display)" fontSize="16" fontWeight="800" fill="#fff">H</text>
+    <text x="30" y="23" fontFamily="var(--font-display)" fontSize="17" fontWeight="700" fill="#333">Hotfrog</text>
   </svg>
 );
 
@@ -112,8 +112,8 @@ const HotfrogLogo = ({ scale }: { scale: number }) => (
 const SaaSHubLogo = ({ scale }: { scale: number }) => (
   <svg width={130 * scale} height={32 * scale} viewBox="0 0 130 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <path d="M14 4L24.5 9.5V20.5L14 26L3.5 20.5V9.5L14 4Z" fill="#6366F1"/>
-    <text x="9" y="19" fontFamily="var(--font-poppins, Poppins, sans-serif)" fontSize="10" fontWeight="800" fill="#fff">S</text>
-    <text x="30" y="23" fontFamily="var(--font-poppins, Poppins, sans-serif)" fontSize="17" fontWeight="700" fill="#6366F1">SaaSHub</text>
+    <text x="9" y="19" fontFamily="var(--font-display)" fontSize="10" fontWeight="800" fill="#fff">S</text>
+    <text x="30" y="23" fontFamily="var(--font-display)" fontSize="17" fontWeight="700" fill="#6366F1">SaaSHub</text>
   </svg>
 );
 
@@ -122,7 +122,7 @@ const TrustRadiusLogo = ({ scale }: { scale: number }) => (
   <svg width={150 * scale} height={32 * scale} viewBox="0 0 150 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <path d="M14 4 L24 8 V18 C24 22.5 19.5 25.5 14 28 C8.5 25.5 4 22.5 4 18 V8 Z" fill="#FF5C39"/>
     <path d="M9 16 L13 20 L20 12" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-    <text x="30" y="23" fontFamily="var(--font-poppins, Poppins, sans-serif)" fontSize="16" fontWeight="700" fill="#FF5C39">TrustRadius</text>
+    <text x="30" y="23" fontFamily="var(--font-display)" fontSize="16" fontWeight="700" fill="#FF5C39">TrustRadius</text>
   </svg>
 );
 
@@ -130,8 +130,8 @@ const TrustRadiusLogo = ({ scale }: { scale: number }) => (
 const G2Logo = ({ scale }: { scale: number }) => (
   <svg width={80 * scale} height={32 * scale} viewBox="0 0 80 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <rect x="2" y="4" width="24" height="24" rx="4" fill="#FF492C"/>
-    <text x="6" y="23" fontFamily="var(--font-poppins, Poppins, sans-serif)" fontSize="15" fontWeight="800" fill="#fff">G2</text>
-    <text x="32" y="23" fontFamily="var(--font-poppins, Poppins, sans-serif)" fontSize="17" fontWeight="700" fill="#FF492C">G2</text>
+    <text x="6" y="23" fontFamily="var(--font-display)" fontSize="15" fontWeight="800" fill="#fff">G2</text>
+    <text x="32" y="23" fontFamily="var(--font-display)" fontSize="17" fontWeight="700" fill="#FF492C">G2</text>
   </svg>
 );
 
@@ -140,7 +140,7 @@ const SourceForgeLogo = ({ scale }: { scale: number }) => (
   <svg width={160 * scale} height={32 * scale} viewBox="0 0 160 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <rect x="2" y="4" width="24" height="24" rx="4" fill="#EE7600"/>
     <path d="M9 11 L14 16 L9 21 M15 21 L20 16 L15 11" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-    <text x="32" y="23" fontFamily="var(--font-poppins, Poppins, sans-serif)" fontSize="16" fontWeight="700" fill="#1F2937">SourceForge</text>
+    <text x="32" y="23" fontFamily="var(--font-display)" fontSize="16" fontWeight="700" fill="#1F2937">SourceForge</text>
   </svg>
 );
 
@@ -148,8 +148,8 @@ const SourceForgeLogo = ({ scale }: { scale: number }) => (
 const SlashdotLogo = ({ scale }: { scale: number }) => (
   <svg width={130 * scale} height={32 * scale} viewBox="0 0 130 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <rect x="2" y="4" width="24" height="24" rx="4" fill="#006666"/>
-    <text x="7" y="22" fontFamily="var(--font-poppins, Poppins, sans-serif)" fontSize="16" fontWeight="800" fill="#fff" fontStyle="italic">/.</text>
-    <text x="32" y="23" fontFamily="var(--font-poppins, Poppins, sans-serif)" fontSize="16" fontWeight="700" fill="#006666">Slashdot</text>
+    <text x="7" y="22" fontFamily="var(--font-display)" fontSize="16" fontWeight="800" fill="#fff" fontStyle="italic">/.</text>
+    <text x="32" y="23" fontFamily="var(--font-display)" fontSize="16" fontWeight="700" fill="#006666">Slashdot</text>
   </svg>
 );
 
@@ -157,8 +157,8 @@ const SlashdotLogo = ({ scale }: { scale: number }) => (
 const TopBusinessSoftwareLogo = ({ scale }: { scale: number }) => (
   <svg width={210 * scale} height={32 * scale} viewBox="0 0 210 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <rect x="2" y="4" width="24" height="24" rx="4" fill="#1E40AF"/>
-    <text x="9" y="22" fontFamily="var(--font-poppins, Poppins, sans-serif)" fontSize="14" fontWeight="800" fill="#fff">TBS</text>
-    <text x="32" y="23" fontFamily="var(--font-poppins, Poppins, sans-serif)" fontSize="14" fontWeight="700" fill="#1E40AF">Top Business Software</text>
+    <text x="9" y="22" fontFamily="var(--font-display)" fontSize="14" fontWeight="800" fill="#fff">TBS</text>
+    <text x="32" y="23" fontFamily="var(--font-display)" fontSize="14" fontWeight="700" fill="#1E40AF">Top Business Software</text>
   </svg>
 );
 
@@ -167,7 +167,7 @@ const AlternativeToLogo = ({ scale }: { scale: number }) => (
   <svg width={170 * scale} height={32 * scale} viewBox="0 0 170 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <rect x="2" y="4" width="24" height="24" rx="4" fill="#F7941D"/>
     <path d="M8 14 L14 10 L14 12.5 L20 12.5 L20 15.5 L14 15.5 L14 18 Z" fill="#fff"/>
-    <text x="32" y="23" fontFamily="var(--font-poppins, Poppins, sans-serif)" fontSize="16" fontWeight="700" fill="#1F2937">AlternativeTo</text>
+    <text x="32" y="23" fontFamily="var(--font-display)" fontSize="16" fontWeight="700" fill="#1F2937">AlternativeTo</text>
   </svg>
 );
 
@@ -175,8 +175,8 @@ const AlternativeToLogo = ({ scale }: { scale: number }) => (
 const SaaSworthyLogo = ({ scale }: { scale: number }) => (
   <svg width={150 * scale} height={32 * scale} viewBox="0 0 150 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <rect x="2" y="4" width="24" height="24" rx="4" fill="#0FB6D8"/>
-    <text x="9" y="22" fontFamily="var(--font-poppins, Poppins, sans-serif)" fontSize="15" fontWeight="800" fill="#fff">S</text>
-    <text x="32" y="23" fontFamily="var(--font-poppins, Poppins, sans-serif)" fontSize="16" fontWeight="700" fill="#0FB6D8">SaaSworthy</text>
+    <text x="9" y="22" fontFamily="var(--font-display)" fontSize="15" fontWeight="800" fill="#fff">S</text>
+    <text x="32" y="23" fontFamily="var(--font-display)" fontSize="16" fontWeight="700" fill="#0FB6D8">SaaSworthy</text>
   </svg>
 );
 
@@ -184,8 +184,8 @@ const SaaSworthyLogo = ({ scale }: { scale: number }) => (
 const ProductHuntLogo = ({ scale }: { scale: number }) => (
   <svg width={170 * scale} height={32 * scale} viewBox="0 0 170 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <circle cx="14" cy="16" r="12" fill="#DA552F"/>
-    <text x="9.5" y="21" fontFamily="var(--font-poppins, Poppins, sans-serif)" fontSize="14" fontWeight="800" fill="#fff">P</text>
-    <text x="32" y="23" fontFamily="var(--font-poppins, Poppins, sans-serif)" fontSize="17" fontWeight="700" fill="#DA552F">Product Hunt</text>
+    <text x="9.5" y="21" fontFamily="var(--font-display)" fontSize="14" fontWeight="800" fill="#fff">P</text>
+    <text x="32" y="23" fontFamily="var(--font-display)" fontSize="17" fontWeight="700" fill="#DA552F">Product Hunt</text>
   </svg>
 );
 
@@ -218,7 +218,7 @@ function CompactListedOn({ locale }: { locale: string }) {
         borderRadius: '999px',
         background: '#f1f5f9',
         border: '1px solid #e2e8f0',
-        fontFamily: 'var(--font-inter, Inter, sans-serif)',
+        fontFamily: 'var(--font-body)',
         fontSize: '0.6rem',
         fontWeight: 700,
         color: '#64748b',

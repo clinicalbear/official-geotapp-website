@@ -43,9 +43,12 @@ const config: Config = {
           muted: '#78836F', // L: etichette
         },
       },
+      // A45: Manrope titoli, Source Sans 3 corpo, IBM Plex Mono codici e
+      // coordinate. Le variabili le mette src/lib/fonts.ts sul <body>.
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        display: ['var(--font-anton)', 'Anton', 'Impact', 'sans-serif'],
+        sans: ['var(--font-body)', 'Source Sans Pro', 'system-ui', 'sans-serif'],
+        display: ['var(--font-display)', 'Manrope', 'system-ui', 'sans-serif'],
+        mono: ['var(--font-mono)', 'IBM Plex Mono', 'ui-monospace', 'monospace'],
       },
       animation: {
         float: 'float 6s ease-in-out infinite',

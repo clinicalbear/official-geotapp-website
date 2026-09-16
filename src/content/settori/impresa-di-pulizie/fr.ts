@@ -13,8 +13,8 @@ const content: SettoreContent = {
     h1_line2: 'gérée en temps réel.',
     subtitle:
       'Pointage GPS, preuves de service automatiques et gestion des plannings dans une seule app. Fini les tableurs, fini les litiges. Le client conteste ? Envoyez le rapport et la discussion est close.',
-    cta_primary: 'Essayez GeoTapp gratuitement pendant 14 jours',
-    cta_note: 'Sans engagement. Aucune carte de crédit requise.',
+    cta_primary: 'Essayez-le sur un vrai contrat',
+    cta_note: "14 jours, jusqu'à 50 intervenants sur le terrain, sans carte bancaire.",
   },
 
   pain: {

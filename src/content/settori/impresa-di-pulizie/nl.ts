@@ -13,8 +13,8 @@ const content: SettoreContent = {
     h1_line2: 'in real-time beheerd.',
     subtitle:
       'GPS-inklokking, automatisch servicebewijs en dienstenbeheer in één app. Geen spreadsheets, geen geschillen. Klant klaagt? Stuur het rapport en de discussie is voorbij.',
-    cta_primary: 'Probeer GeoTapp 14 dagen gratis',
-    cta_note: 'Geen verplichtingen. Geen creditcard nodig.',
+    cta_primary: 'Probeer het op een echt contract',
+    cta_note: '14 dagen, tot 50 medewerkers in het veld, zonder creditcard.',
   },
 
   pain: {

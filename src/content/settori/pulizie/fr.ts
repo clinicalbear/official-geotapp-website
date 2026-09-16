@@ -10,8 +10,8 @@ const content: SettoreContent = {
     h1_line1: 'Logiciel pour entreprises de nettoyage :',
     h1_line2: 'plannings, preuves photo et heures vérifiées, sur chaque site',
     subtitle: 'GeoTapp relie Flow + TimeTracker pour les équipes réparties sur plusieurs bâtiments et étages. Vos agents pointent depuis leur smartphone avec GPS vérifié ; le bureau voit qui a nettoyé quoi, où et quand, avec les preuves photographiques jointes. Plus aucun litige, conformité CCN Nettoyage (IDCC 3043) assurée.',
-    cta_primary: 'Demander une démo',
-    cta_note: 'Sans engagement. Réponse sous 12 heures ouvrées.',
+    cta_primary: 'Essayez-le sur un vrai contrat',
+    cta_note: "14 jours, jusqu'à 50 intervenants sur le terrain, sans carte bancaire.",
   },
   pain: {
     title: 'Le problème que vous connaissez déjà',

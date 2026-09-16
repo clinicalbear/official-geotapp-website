@@ -5,6 +5,8 @@ import { ShieldCheck, Download } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import { trackEvent } from '@/lib/analytics';
+import { varianteBadge } from '@/lib/esperimento';
+import PastigliaStato from '@/components/PastigliaStato';
 import { DEFAULT_LOCALE, getLocaleFromPathname, localizePath } from '@/lib/i18n/locale-routing';
 
 const DEMO_REPORT_ID = 'GT-2026-0322-4472';
@@ -15,6 +17,11 @@ export default function DemoReportBanner() {
   const pathname = usePathname();
   const locale = getLocaleFromPathname(pathname);
   const d = getDictionary(locale).home_sections.demo_banner;
+  // A57, prova n.2: la pastiglia "Sigillato" con icona e parola contro il
+  // riquadro nudo. Si legge su `demo_report_download`, come tendenza.
+  // La variante la stampa sull'<html> lo script in lib/esperimento.ts prima
+  // del primo disegno, quindi qui e' gia' decisa e non fa saltare la pagina.
+  const conPastiglia = varianteBadge() === 'b';
 
   return (
     <div className="rounded-2xl border border-emerald-200 bg-white overflow-hidden shadow-sm">
@@ -27,8 +34,11 @@ export default function DemoReportBanner() {
           <div className="text-[10px] font-bold text-emerald-600 uppercase tracking-widest">
             {d.badge}
           </div>
-          <div className="text-slate-800 font-bold text-sm">
-            {d.title}
+          <div className="flex flex-wrap items-center gap-2">
+            <span className="text-slate-800 font-bold text-sm">{d.title}</span>
+            {conPastiglia && (
+              <PastigliaStato stato="sigillato" locale={locale ?? DEFAULT_LOCALE} />
+            )}
           </div>
         </div>
       </div>

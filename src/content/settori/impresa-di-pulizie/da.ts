@@ -13,8 +13,8 @@ const content: SettoreContent = {
     h1_line2: 'styret i realtid.',
     subtitle:
       'GPS-stempling, automatisk servicebevis og vagtstyring i én app. Ingen regneark, ingen tvister. Kunden klager? Send rapporten, og diskussionen er slut.',
-    cta_primary: 'Prøv GeoTapp gratis i 14 dage',
-    cta_note: 'Ingen binding. Intet kreditkort påkrævet.',
+    cta_primary: 'Prøv det på en rigtig kontrakt',
+    cta_note: '14 dage, op til 50 medarbejdere i marken, uden kreditkort.',
   },
 
   pain: {

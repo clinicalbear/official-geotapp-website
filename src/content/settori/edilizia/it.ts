@@ -10,8 +10,8 @@ const content: SettoreContent = {
     h1_line1: 'Il tuo cantiere sotto controllo,',
     h1_line2: 'in tempo reale.',
     subtitle: 'Timbrature GPS sigillate, gestione squadre e report automatici. Zero carte, zero contestazioni. GeoTapp unisce Flow + TimeTracker per chi gestisce cantieri edili, subappaltatori e direzione lavori.',
-    cta_primary: 'Prova GeoTapp gratis per 14 giorni',
-    cta_note: 'Nessun vincolo. Nessuna carta di credito richiesta.',
+    cta_primary: 'Provalo su un cantiere vero',
+    cta_note: '14 giorni, fino a 50 operatori sul campo, nessuna carta di credito.',
   },
   pain: {
     title: 'Problemi che risolviamo ogni giorno',

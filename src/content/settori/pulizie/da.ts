@@ -10,8 +10,8 @@ const content: SettoreContent = {
     h1_line1: 'Software til rengøringsvirksomheder:',
     h1_line2: 'vagter, fotodokumentation og verificerede timer, på hvert objekt',
     subtitle: 'GeoTapp forbinder Flow + TimeTracker for teams fordelt på flere bygninger og etager. Dine rengøringsassistenter stempler ind med GPS-verificeret smartphone; kontoret ser, hvem der rengorde hvad, hvor og hvornår, med fotodokumentation vedlagt. Ingen tvister mere, fuld overholdelse af Rengøringsoverenskomsten.',
-    cta_primary: 'Anmod om en demo',
-    cta_note: 'Ingen binding. Svar inden for 12 arbejdstimer.',
+    cta_primary: 'Prøv det på en rigtig kontrakt',
+    cta_note: '14 dage, op til 50 medarbejdere i marken, uden kreditkort.',
   },
   pain: {
     title: 'Problemet du allerede kender',

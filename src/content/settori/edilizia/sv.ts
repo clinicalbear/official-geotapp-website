@@ -10,8 +10,8 @@ const content: SettoreContent = {
     h1_line1: 'Din byggarbetsplats under kontroll,',
     h1_line2: 'i realtid.',
     subtitle: 'GPS-förseglade stämplingar, lagstyrning och automatiska rapporter. Inget pappersarbete, inga tvister. GeoTapp kopplar ihop Flow + TimeTracker för platschefer, underentreprenörer och projektledning.',
-    cta_primary: 'Testa GeoTapp gratis i 14 dagar',
-    cta_note: 'Ingen bindning. Inget kreditkort krävs.',
+    cta_primary: 'Testa det på en riktig byggarbetsplats',
+    cta_note: '14 dagar, upp till 50 medarbetare i fält, utan kreditkort.',
   },
   pain: {
     title: 'Problem vi löser varje dag',

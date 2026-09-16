@@ -13,8 +13,8 @@ const content: SettoreContent = {
     h1_line2: 'gerida em tempo real.',
     subtitle:
       'Registos GPS, provas de serviço automáticas e gestão de turnos numa só app. Sem folhas de cálculo, sem disputas. O cliente contesta? Envie o relatório e a discussão acaba.',
-    cta_primary: 'Experimente GeoTapp grátis durante 14 dias',
-    cta_note: 'Sem compromisso. Sem cartão de crédito.',
+    cta_primary: 'Experimente num contrato real',
+    cta_note: '14 dias, até 50 operacionais no terreno, sem cartão de crédito.',
   },
 
   pain: {

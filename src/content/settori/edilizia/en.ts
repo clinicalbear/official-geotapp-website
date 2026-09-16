@@ -10,8 +10,8 @@ const content: SettoreContent = {
     h1_line1: 'Your construction site under control,',
     h1_line2: 'in real time.',
     subtitle: 'GPS-certified clock-ins, crew management and automated reports. Zero paperwork, zero disputes. GeoTapp connects Flow + TimeTracker for construction site managers, subcontractors and project directors.',
-    cta_primary: 'Try GeoTapp free for 14 days',
-    cta_note: 'No commitment. No credit card required.',
+    cta_primary: 'Try it on a real site',
+    cta_note: '14 days, up to 50 field workers, no credit card.',
   },
   pain: {
     title: 'Problems we solve every day',

@@ -13,8 +13,8 @@ const content: SettoreContent = {
     h1_line2: 'hanterat i realtid.',
     subtitle:
       'GPS-stämpling, automatiskt servicebevis och schemahantering i en app. Inga kalkylblad, inga tvister. Kunden klagar? Skicka rapporten och diskussionen är över.',
-    cta_primary: 'Testa GeoTapp gratis i 14 dagar',
-    cta_note: 'Ingen bindning. Inget kreditkort krävs.',
+    cta_primary: 'Testa det på ett riktigt uppdrag',
+    cta_note: '14 dagar, upp till 50 medarbetare i fält, utan kreditkort.',
   },
 
   pain: {

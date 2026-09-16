@@ -13,8 +13,8 @@ const content: SettoreContent = {
     h1_line2: 'gestita in tempo reale.',
     subtitle:
       'Timbrature GPS, prove di servizio automatiche e gestione turni in un\'unica app. Zero Excel, zero contestazioni. Il cliente contesta? Mandi il report e la discussione finisce.',
-    cta_primary: 'Prova GeoTapp gratis per 14 giorni',
-    cta_note: 'Nessun vincolo. Nessuna carta di credito richiesta.',
+    cta_primary: 'Provalo su una commessa vera',
+    cta_note: '14 giorni, fino a 50 operatori sul campo, nessuna carta di credito.',
   },
 
   pain: {

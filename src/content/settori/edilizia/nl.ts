@@ -10,8 +10,8 @@ const content: SettoreContent = {
     h1_line1: 'Uw bouwplaats onder controle,',
     h1_line2: 'in realtime.',
     subtitle: 'GPS-verzegelde klokregistraties, ploegbeheer en automatische rapporten. Geen papierwerk, geen geschillen. GeoTapp verbindt Flow + TimeTracker voor bouwplaatsmanagers, onderaannemers en projectleiding.',
-    cta_primary: 'Probeer GeoTapp 14 dagen gratis',
-    cta_note: 'Geen verplichtingen. Geen creditcard vereist.',
+    cta_primary: 'Probeer het op een echte bouwplaats',
+    cta_note: '14 dagen, tot 50 medewerkers in het veld, zonder creditcard.',
   },
   pain: {
     title: 'Problemen die we dagelijks oplossen',

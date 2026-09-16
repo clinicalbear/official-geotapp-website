@@ -315,7 +315,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
           {content.pricing_hint && (
             <p style={{ marginTop: 18, fontSize: 14, color: 'rgba(242,240,233,.65)' }}>
               {content.pricing_hint.label}{' '}
-              <b style={{ color: 'var(--lime)', fontFamily: 'var(--font-anton), Anton, sans-serif' }}>{standardRate.formatted}</b>{' '}
+              <b style={{ color: 'var(--lime)', fontFamily: 'var(--font-display)' }}>{standardRate.formatted}</b>{' '}
               {content.pricing_hint.per} · {content.pricing_hint.note}
             </p>
           )}
@@ -374,7 +374,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
             </div>
             <p
               className="r d2"
-              style={{ marginTop: 26, fontFamily: 'var(--font-anton), Anton, sans-serif', textTransform: 'uppercase', fontSize: 26, textAlign: 'center' }}
+              style={{ marginTop: 26, fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 26, textAlign: 'center' }}
             >
               {content.scenario.resolution}
             </p>

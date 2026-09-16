@@ -10,8 +10,8 @@ const content: SettoreContent = {
     h1_line1: 'Ihre Baustelle unter Kontrolle,',
     h1_line2: 'in Echtzeit.',
     subtitle: 'GPS-versiegelte Stempelungen, Teamverwaltung und automatische Berichte. Kein Papierkram, keine Streitigkeiten. GeoTapp verbindet Flow + TimeTracker für Bauleiter, Subunternehmer und Projektleitung.',
-    cta_primary: 'GeoTapp 14 Tage kostenlos testen',
-    cta_note: 'Keine Verpflichtung. Keine Kreditkarte erforderlich.',
+    cta_primary: 'Auf einer echten Baustelle testen',
+    cta_note: '14 Tage, bis zu 50 Mitarbeiter im Außendienst, ohne Kreditkarte.',
   },
   pain: {
     title: 'Probleme, die wir täglich lösen',

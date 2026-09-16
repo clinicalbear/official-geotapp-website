@@ -30,7 +30,7 @@
 .lp-risorsa-strumento .idx-tbl .c-num { text-align: center; color: rgba(242, 240, 233, .5); }
 .lp-risorsa-strumento .idx-tbl .rw:not(.hd2) .c-num {
   color: #9AA491;
-  font-family: var(--font-anton), 'Anton', sans-serif;
+  font-family: var(--font-display);font-weight:800;
   font-size: 14px;
 }
 .lp-risorsa-strumento .idx-tbl .c-link { text-align: right; }
@@ -72,8 +72,7 @@
   background: var(--seal);
 }
 .lp-risorsa-strumento .idx-bar b {
-  font-family: var(--font-anton), 'Anton', sans-serif;
-  font-weight: 400;
+  font-family: var(--font-display);font-weight:800;
   font-size: 16px;
   min-width: 26px;
   text-align: right;

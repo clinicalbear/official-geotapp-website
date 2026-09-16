@@ -42,7 +42,7 @@ const CapterraLogo = () => (
     <rect x="14" y="10" width="4" height="16" rx="0.5" fill="#FF9D28"/>
     <rect x="20" y="6" width="4" height="20" rx="0.5" fill="#FF9D28"/>
     <rect x="0" y="26" width="26" height="3" rx="0.5" fill="#044D80"/>
-    <text x="32" y="23" fontFamily="var(--font-poppins, Poppins, sans-serif)" fontSize="18" fontWeight="700" fill="#044D80">Capterra</text>
+    <text x="32" y="23" fontFamily="var(--font-display)" fontSize="18" fontWeight="700" fill="#044D80">Capterra</text>
   </svg>
 );
 
@@ -50,15 +50,15 @@ const TrustpilotLogo = () => (
   <svg width={120} height={28} viewBox="0 0 120 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <rect x="2" y="4" width="20" height="20" rx="2" fill="#00B67A"/>
     <path d="M12 7l1.5 4.5h4.5l-3.7 2.7 1.4 4.3-3.7-2.7-3.7 2.7 1.4-4.3-3.7-2.7h4.5z" fill="#fff"/>
-    <text x="28" y="20" fontFamily="var(--font-poppins, Poppins, sans-serif)" fontSize="14" fontWeight="700" fill="#191919">Trustpilot</text>
+    <text x="28" y="20" fontFamily="var(--font-display)" fontSize="14" fontWeight="700" fill="#191919">Trustpilot</text>
   </svg>
 );
 
 const G2Logo = () => (
   <svg width={60} height={28} viewBox="0 0 60 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <rect x="2" y="2" width="24" height="24" rx="4" fill="#FF492C"/>
-    <text x="6" y="20" fontFamily="var(--font-poppins, Poppins, sans-serif)" fontSize="14" fontWeight="800" fill="#fff">G2</text>
-    <text x="32" y="20" fontFamily="var(--font-poppins, Poppins, sans-serif)" fontSize="12" fontWeight="700" fill="#191919">G2</text>
+    <text x="6" y="20" fontFamily="var(--font-display)" fontSize="14" fontWeight="800" fill="#fff">G2</text>
+    <text x="32" y="20" fontFamily="var(--font-display)" fontSize="12" fontWeight="700" fill="#191919">G2</text>
   </svg>
 );
 
@@ -67,7 +67,7 @@ const GetAppLogo = () => (
     <circle cx="14" cy="16" r="12" stroke="#21B573" strokeWidth="3" fill="none"/>
     <path d="M14 16h10" stroke="#21B573" strokeWidth="3" strokeLinecap="round"/>
     <path d="M19 11l5 5-5 5" stroke="#21B573" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-    <text x="32" y="23" fontFamily="var(--font-poppins, Poppins, sans-serif)" fontSize="18" fontWeight="700" fill="#2D3A4A">GetApp</text>
+    <text x="32" y="23" fontFamily="var(--font-display)" fontSize="18" fontWeight="700" fill="#2D3A4A">GetApp</text>
   </svg>
 );
 
@@ -76,7 +76,7 @@ const SoftwareAdviceLogo = () => (
     <rect x="1" y="4" width="22" height="18" rx="4" fill="#FF6B35"/>
     <polygon points="7,22 12,28 12,22" fill="#FF6B35"/>
     <polyline points="7,13 10.5,17 17,10" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-    <text x="30" y="23" fontFamily="var(--font-poppins, Poppins, sans-serif)" fontSize="17" fontWeight="600" fill="#1E3A5F">Software Advice</text>
+    <text x="30" y="23" fontFamily="var(--font-display)" fontSize="17" fontWeight="600" fill="#1E3A5F">Software Advice</text>
   </svg>
 );
 
@@ -106,7 +106,7 @@ export default function Reviews({ locale }: { locale: string }) {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3" style={{ fontFamily: 'var(--font-poppins, Poppins, sans-serif)' }}>
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3" style={{ fontFamily: 'var(--font-display)' }}>
             {c.heading}
           </h2>
           <p className="text-lg text-slate-500 max-w-2xl mx-auto">

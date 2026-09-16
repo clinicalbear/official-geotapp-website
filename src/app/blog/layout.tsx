@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 import { headers } from 'next/headers';
-import { Inter, Poppins, Anton } from 'next/font/google';
+import { fontiPerLingua } from '@/lib/fonts';
 import '../globals.css';
 // Sistema grafico "direzione L": qui SOLO per le route del blog headless
 // (/blog/*, senza prefisso locale), che non passano da [locale]/layout.tsx
@@ -22,23 +22,6 @@ import CookieConsentBanner from '@/components/CookieConsentBanner';
 import LEffetti from '@/components/LEffetti';
 import { buildConsentDefaultScript } from '@/lib/consent-mode';
 
-// display 'optional' (05/07): il repaint da font-swap aggiornava l'LCP al
-// momento in cui il woff2 finiva di scaricare su rete mobile (~4,8s, PSI).
-// Con 'optional' l'LCP resta il primo paint col fallback (~1,2s); il font
-// brand entra dalla navigazione successiva, gia' in cache.
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'optional' });
-// Poppins weights kept in sync with src/app/[locale]/layout.tsx, only the
-// subset of weights actually used in the codebase (500 for PricingSimulator,
-// 700 for headings, 800 for the homepage hero H1). Saves preload bandwidth.
-const poppins = Poppins({
-  subsets: ['latin'],
-  weight: ['500', '700', '800'],
-  variable: '--font-poppins',
-  display: 'optional',
-});
-// Titoli in maiuscolo della direzione L (.ph h1, .art .side .au b, ecc.),
-// stesso font-weight/variable di [locale]/layout.tsx.
-const anton = Anton({ subsets: ['latin'], weight: '400', variable: '--font-anton', display: 'swap' });
 
 export default async function BlogLayout({ children }: { children: ReactNode }) {
   // Il layout non riceve params: la lingua dell'articolo arriva dal middleware
@@ -71,7 +54,7 @@ export default async function BlogLayout({ children }: { children: ReactNode }) 
         {/* Adsense fully removed, owner decided not to configure ad inventory.
             Saves ~75-90ms TBT on every blog page on top of the main site. */}
       </head>
-      <body className={clsx(inter.variable, poppins.variable, anton.variable, 'font-sans bg-background text-text-primary antialiased')}>
+      <body className={clsx(...fontiPerLingua(locale), 'font-sans bg-background text-text-primary antialiased')}>
         <SiteAnalytics />
         {/* Navbar FUORI dal wrapper overflow: un antenato con overflow!=visible rompe position:sticky */}
         <Navbar />

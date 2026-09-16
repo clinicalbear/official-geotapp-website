@@ -16,8 +16,8 @@ const content: SettoreContent = {
     h1_line1: 'Software voor schoonmaakbedrijven:',
     h1_line2: 'dienstroosters, fotobewijs en gecontroleerde uren, op elk object',
     subtitle: 'GeoTapp verbindt Flow + TimeTracker voor teams verspreid over meerdere gebouwen en verdiepingen. Uw medewerkers klokken in via GPS-geverifieerde smartphone; het kantoor ziet wie wat, waar en wanneer heeft schoongemaakt, met bijgevoegd fotobewijs. Geen disputen meer, volledige naleving van de CAO Schoonmaak.',
-    cta_primary: 'Demo aanvragen',
-    cta_note: 'Geen verplichtingen. Antwoord binnen 12 werkuren.',
+    cta_primary: 'Probeer het op een echt contract',
+    cta_note: '14 dagen, tot 50 medewerkers in het veld, zonder creditcard.',
   },
   pain: {
     title: 'Het probleem dat u al kent',

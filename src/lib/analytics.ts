@@ -1,6 +1,8 @@
 // Buffer fired before gtag is ready. Without this, events fired in
 // useEffect at component mount (e.g. trial_page_view) are dropped silently
 // because gtag.js loads async and is not yet defined when the effect runs.
+import { parametriEsperimento } from './esperimento';
+
 type QueuedEvent = [string, Record<string, string | number> | undefined];
 const queue: QueuedEvent[] = [];
 let flushScheduled = false;
@@ -65,14 +67,18 @@ export function trackEvent(
     }
   }
 
+  // A57: ogni evento porta la variante cromatica del visitatore. Senza questo
+  // l'esperimento cambierebbe il colore e non produrrebbe nessun numero.
+  const conVariante = { ...parametriEsperimento(), ...(params ?? {}) };
+
   if (typeof window.gtag === 'function') {
-    window.gtag('event', eventName, params ?? {});
+    window.gtag('event', eventName, conVariante);
     // Also flush any queued events that may have accumulated before gtag loaded
     if (queue.length > 0) flushQueue();
     return;
   }
   // gtag not ready yet, buffer the event and schedule a flush.
-  queue.push([eventName, params]);
+  queue.push([eventName, conVariante]);
   scheduleFlush();
 }
 

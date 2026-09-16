@@ -13,8 +13,8 @@ const content: SettoreContent = {
     h1_line2: 'in Echtzeit verwaltet.',
     subtitle:
       'GPS-Stempelung, automatische Servicenachweise und Schichtverwaltung in einer App. Keine Tabellen, keine Streitigkeiten. Der Kunde beschwert sich? Senden Sie den Bericht und die Diskussion ist beendet.',
-    cta_primary: 'GeoTapp 14 Tage kostenlos testen',
-    cta_note: 'Keine Bindung. Keine Kreditkarte erforderlich.',
+    cta_primary: 'Auf einem echten Auftrag testen',
+    cta_note: '14 Tage, bis zu 50 Mitarbeiter im Außendienst, ohne Kreditkarte.',
   },
 
   pain: {

@@ -12,8 +12,8 @@ const content: SettoreContent = {
     h1_line2: 'che sigilla ogni intervento.',
     subtitle:
       'GeoTapp è l\'app per impresa di pulizie che trasforma ogni intervento in prova difendibile. I clienti contestano. Gli operatori non sono verificabili. I report non bastano mai. GeoTapp risolve tutto con GPS reale, prove fotografiche e report non alterabili, che il committente può verificare da solo.',
-    cta_primary: 'Inizia subito gratuitamente!',
-    cta_note: 'Nessun vincolo. Risposta entro 12 ore lavorative.',
+    cta_primary: 'Provalo su una commessa vera',
+    cta_note: '14 giorni, fino a 50 operatori sul campo, nessuna carta di credito.',
   },
 
   pain: {

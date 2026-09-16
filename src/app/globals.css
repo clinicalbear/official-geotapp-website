@@ -273,7 +273,7 @@ html {
 
 body {
   font-family:
-    var(--font-poppins),
+    var(--font-display),
     'Poppins',
     'Inter',
     system-ui,
@@ -306,7 +306,7 @@ h5,
 h6,
 .font-display {
   font-family:
-    var(--font-poppins),
+    var(--font-display),
     'Poppins',
     'Inter',
     system-ui,
@@ -453,14 +453,14 @@ a:hover {
 
 /* ─── Article Content Typography ─── */
 .article-content {
-  font-family: var(--font-inter, Inter, sans-serif);
+  font-family: var(--font-body);
   font-size: 1.125rem;
   line-height: 1.8;
   color: #334155; /* slate-700 */
 }
 
 .article-content h2 {
-  font-family: var(--font-poppins, Poppins, sans-serif);
+  font-family: var(--font-display);font-weight:800;
   font-size: 1.875rem;
   font-weight: 700;
   color: #0f172a;
@@ -470,7 +470,7 @@ a:hover {
 }
 
 .article-content h3 {
-  font-family: var(--font-poppins, Poppins, sans-serif);
+  font-family: var(--font-display);font-weight:800;
   font-size: 1.5rem;
   font-weight: 600;
   color: #0f172a;
@@ -480,7 +480,7 @@ a:hover {
 }
 
 .article-content h4 {
-  font-family: var(--font-poppins, Poppins, sans-serif);
+  font-family: var(--font-display);font-weight:800;
   font-size: 1.25rem;
   font-weight: 600;
   color: #1e293b;
@@ -892,7 +892,9 @@ a:hover {
    ════════════════════════════════════════════════════════════════════ */
 
 .font-mono-tech {
-  font-family: ui-monospace, 'JetBrains Mono', 'SF Mono', 'SFMono-Regular', Menlo, Consolas, 'Liberation Mono', monospace;
+  /* A45: il mono del sistema e' IBM Plex Mono, lo stesso del rapportino PDF
+     e del verificatore, cosi' il codice sigillo si legge uguale ovunque. */
+  font-family: var(--font-mono), 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
   font-feature-settings: 'tnum' 1;
 }
 
@@ -1238,3 +1240,80 @@ footer a:focus-visible,
 footer button:focus-visible {
   outline-color: #8FC436;
 }
+
+
+/* ══════════════════════════════════════════════════════════════════════
+   A45 · Regole multilingua della coppia tipografica (§11 del dossier)
+   Anton era condensato e perdonava le parole composte; Manrope no.
+   ══════════════════════════════════════════════════════════════════════ */
+
+h1, h2, h3, h4, .l-display, .big {
+  overflow-wrap: anywhere;
+  text-wrap: balance;
+}
+
+/* Sillabazione solo dove la lingua la sopporta e dove il testo e' lungo.
+   `lang` sta sull'<html>, lo mette [locale]/layout.tsx. */
+:lang(de) h1, :lang(de) h2, :lang(nl) h1, :lang(nl) h2,
+:lang(da) h1, :lang(da) h2, :lang(sv) h1, :lang(sv) h2, :lang(nb) h1, :lang(nb) h2 {
+  hyphens: auto;
+}
+
+/* Tedesco e olandese scendono di un gradino sull'apertura: "Arbeitszeiterfassung"
+   in un titolone non ci sta, e si prevede in partenza invece di scoprirlo dopo. */
+:lang(de) .l-hero-h1, :lang(nl) .l-hero-h1,
+:lang(de) .big, :lang(nl) .big {
+  font-size: clamp(28px, 4vw, 48px);
+}
+
+/* Le cifre si incolonnano: tabelle, prezzi, metriche. */
+table, .num, .prezzo, .calc .box, .stats b, .kpi {
+  font-variant-numeric: tabular-nums;
+}
+
+/* I pulsanti si dimensionano sul testo: il francese e lo spagnolo sono piu'
+   lunghi dell'italiano del 10-20%. Niente `min-width: max-content` globale,
+   che su 360px farebbe sbordare la pagina: si vieta la larghezza fissa e si
+   lascia andare a capo. */
+.b1, .b2, .btn-ring {
+  width: auto;
+  white-space: normal;
+}
+
+/* ══════════════════════════════════════════════════════════════════════
+   A57 · Esperimento cromatico sulla CTA (§10 del dossier, prova n.1)
+   A = lime #8FC436 con testo scuro, quello che c'e' oggi.
+   B = verde sigillo #1B7F4A con testo bianco (5,02:1), il colore che nel
+       resto del sistema vuol dire "sigillato / verificato".
+   La variante la stampa sull'<html> lo script in src/lib/esperimento.ts,
+   prima del primo disegno. Stesso testo, stessa posizione, stesso anello:
+   cambia solo il colore, altrimenti non si sta misurando il colore.
+   ══════════════════════════════════════════════════════════════════════ */
+
+[data-exp-cta='b'] .b1,
+[data-exp-cta='b'] .nv-cta,
+[data-exp-cta='b'] .btn-ring,
+[data-exp-cta='b'] .l-hero .btn-ring,
+[data-exp-cta='b'] a[class*='btn-ring'] {
+  background: #1b7f4a !important;
+  color: #ffffff !important;
+}
+
+[data-exp-cta='b'] .b1:hover,
+[data-exp-cta='b'] .nv-cta:hover,
+[data-exp-cta='b'] .btn-ring:hover,
+[data-exp-cta='b'] a[class*='btn-ring']:hover {
+  background: #156a3d !important;
+  color: #ffffff !important;
+}
+
+/* `.nv-cta` porta `color:#0E0E0C !important` nella sua regola: serve la stessa
+   forza, altrimenti nella variante B resterebbe testo scuro su verde scuro. */
+[data-exp-cta='b'] .nv-cta {
+  color: #ffffff !important;
+}
+
+/* Il pulsante secondario in apertura resta com'e': due pieni affiancati non
+   si fanno, e cambiare anche quello renderebbe il test illeggibile.
+   Restano lime anche i pallini, i trattini degli elenchi e il cursore del
+   calcolatore: non sono CTA, e il test misura il colore del pulsante. */

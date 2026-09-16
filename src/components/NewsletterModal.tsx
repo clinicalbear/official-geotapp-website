@@ -163,7 +163,7 @@ export default function NewsletterModal({ locale }: { locale: string }) {
             id="nl-modal-title"
             style={{
               margin: '0 0 16px',
-              fontFamily: 'var(--font-poppins, Poppins, sans-serif)',
+              fontFamily: 'var(--font-display)',
               fontSize: '1.2rem',
               fontWeight: 700,
               color: '#0f172a',

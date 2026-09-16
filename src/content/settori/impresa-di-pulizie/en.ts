@@ -13,8 +13,8 @@ const content: SettoreContent = {
     h1_line2: 'managed in real time.',
     subtitle:
       'GPS clock-ins, automatic proof of service and shift management in one app. No spreadsheets, no disputes. Client complains? Send the report and the discussion is over.',
-    cta_primary: 'Try GeoTapp free for 14 days',
-    cta_note: 'No commitment. No credit card required.',
+    cta_primary: 'Try it on a real contract',
+    cta_note: '14 days, up to 50 field workers, no credit card.',
   },
 
   pain: {

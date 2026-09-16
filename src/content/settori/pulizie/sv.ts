@@ -14,8 +14,8 @@ const content: SettoreContent = {
     h1_line1: 'Tidrapportering för städbolag:',
     h1_line2: 'scheman, fotodokumentation och verifierade timmar, på varje objekt',
     subtitle: 'GeoTapp kopplar samman Flow + TimeTracker för team fördelade på flera byggnader och våningar. Era städare stämplar in med GPS-verifierad smartphone; kontoret ser vem som städat vad, var och när, med bifogad fotodokumentation. Inga tvister, full efterlevnad av Städ- och serviceentreprenadavtalet.',
-    cta_primary: 'Begär en demo',
-    cta_note: 'Inga bindningar. Svar inom 12 arbetstimmar.',
+    cta_primary: 'Testa det på ett riktigt uppdrag',
+    cta_note: '14 dagar, upp till 50 medarbetare i fält, utan kreditkort.',
   },
   pain: {
     title: 'Problemet du redan känner igen',

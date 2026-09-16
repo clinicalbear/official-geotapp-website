@@ -2,7 +2,8 @@
 //          Also injects locale-specific SoftwareApplication JSON-LD.
 
 import type { ReactNode } from 'react';
-import { Inter, Poppins, Anton } from 'next/font/google';
+import { fontiPerLingua } from '@/lib/fonts';
+import { SCRIPT_VARIANTI } from '@/lib/esperimento';
 import '../globals.css';
 import '../redesign-l.css';
 import '../l-mockup.css';
@@ -32,44 +33,6 @@ import { buildConsentDefaultScript } from '@/lib/consent-mode';
 
 const BASE_URL = 'https://geotapp.com';
 
-// display 'optional' (05/07): il repaint da font-swap aggiornava l'LCP al
-// momento in cui il woff2 finiva di scaricare su rete mobile (~4,8s, PSI).
-// Con 'optional' l'LCP resta il primo paint col fallback (~1,2s); il font
-// brand entra dalla navigazione successiva, gia' in cache.
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-  display: 'optional',
-  // A14: il ripiego dichiarato. Senza, mentre il woff2 arriva il browser usa il
-  // suo carattere di sistema di riserva e al cambio la pagina si sposta.
-  fallback: ['system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
-  adjustFontFallback: true,
-});
-// Poppins weights: only what is actually used as font-display.
-// font-display heading scale ranges from font-bold (700) to font-extrabold (800).
-// Weight 500 retained for the lone PricingSimulator label. 400 and 600 were
-// preloaded but never used → dropped to save ~80KB woff2 on the mobile preload
-// budget, reducing contention with the LCP element on slow connections.
-const poppins = Poppins({
-  subsets: ['latin'],
-  weight: ['500', '700', '800'],
-  variable: '--font-poppins',
-  display: 'optional',
-  fallback: ['system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
-  adjustFontFallback: true,
-});
-
-// Anton NON ha il cirillico: sulla home russa i titoli escono comunque con un
-// carattere di ripiego. Finche' non lo sostituiamo (A45), almeno il ripiego e'
-// scritto da noi e non lasciato al browser.
-const anton = Anton({
-  subsets: ['latin'],
-  weight: '400',
-  variable: '--font-anton',
-  display: 'swap',
-  fallback: ['Impact', 'Haettenschweiler', 'Franklin Gothic Bold', 'sans-serif'],
-  adjustFontFallback: false,
-});
 
 type LocaleSchemaData = {
   description: string;
@@ -351,9 +314,7 @@ export default async function LocaleLayout({ children, params }: Props) {
       </head>
       <body
         className={clsx(
-          inter.variable,
-          poppins.variable,
-          anton.variable,
+          ...fontiPerLingua(locale),
           'bg-background text-text-primary font-sans antialiased selection:bg-primary selection:text-black',
         )}
       >
@@ -524,6 +485,13 @@ export default async function LocaleLayout({ children, params }: Props) {
             visits won't pollute GA4/GTM data). Visit ?gt_internal=off to
             re-enable. The flag persists in localStorage across sessions.
             Must run BEFORE gtag init so the GA script can read window.__gtSkip. */}
+        {/* A57 · le varianti cromatiche, stampate sull'<html> PRIMA del primo
+            disegno: se le assegnasse React dopo l'idratazione si vedrebbe il
+            pulsante cambiare colore sotto gli occhi. Gira dopo il toggle del
+            traffico interno, che e' quello che puo' spegnerlo. */}
+        <Script id="esperimenti-cromatici" strategy="beforeInteractive">
+          {SCRIPT_VARIANTI}
+        </Script>
         <Script id="internal-traffic-toggle" strategy="beforeInteractive">
           {`
             (function(){

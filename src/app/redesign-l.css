@@ -18,18 +18,16 @@
 html, body{ background:var(--l-paper) !important; color:var(--l-ink) !important; }
 body{ font-family:'Inter',system-ui,sans-serif !important; -webkit-font-smoothing:antialiased; }
 
-/* ── tipografia: i titoli passano ad Anton ──────────────────────────────── */
+/* ── tipografia: i titoli sono Manrope 800, mai in maiuscolo (A45) ─────── */
 h1:not(.lp-l *), h2:not(.lp-l *), h3:not(.lp-l *), .l-display{
-  font-family:var(--font-anton),'Anton',Impact,sans-serif !important;
-  font-weight:400 !important;
-  text-transform:uppercase !important;
+  font-family:var(--font-display) !important;font-weight:800 !important;
   letter-spacing:-.018em !important;
-  line-height:.92 !important;
+  line-height:1.06!important;
   color:var(--l-ink);
 }
-h1:not(.lp-l *){ font-size:clamp(34px,5.2vw,88px) !important; }
-h2:not(.lp-l *){ font-size:clamp(26px,3.6vw,58px) !important; }
-h3:not(.lp-l *){ font-size:clamp(19px,1.7vw,26px) !important; }
+h1:not(.lp-l *){ font-size:clamp(32px,4.2vw,52px) !important; }
+h2:not(.lp-l *){ font-size:clamp(26px,2.9vw,36px) !important; }
+h3:not(.lp-l *){ font-size:clamp(19px,1.6vw,24px) !important; }
 h4, h5, h6{ letter-spacing:.02em; }
 /* i titoli dentro i moduli e le tabelle restano leggibili, non urlati */
 form h1, form h2, form h3,
@@ -129,8 +127,7 @@ label{ font-size:12px !important; letter-spacing:.16em; text-transform:uppercase
 /* ── il nastro che scorre, da mettere dove serve con <div class="l-tape"> ─ */
 .l-tape{ background:var(--l-ink); color:var(--l-paper); padding:22px 0; overflow:hidden; }
 .l-tape .run{ display:flex; width:max-content; gap:56px; white-space:nowrap;
-  font-family:var(--font-anton),'Anton',sans-serif; font-size:clamp(26px,3.8vw,62px);
-  text-transform:uppercase; animation:l-run 34s linear infinite; }
+  font-family:var(--font-display);font-weight:800; font-size:clamp(24px,3vw,44px); animation:l-run 34s linear infinite; }
 .l-tape:hover .run{ animation-play-state:paused; }
 .l-tape .g{ color:var(--l-seal); } .l-tape .b{ color:var(--l-sky); }
 @keyframes l-run{ to{ transform:translateX(-50%); } }
@@ -228,13 +225,11 @@ a[class*="border-border"], a[class*="bg-white"][class*="border"]{
 .l-hero-top span{ display:flex; align-items:center; gap:9px; font-size:12px;
   letter-spacing:.16em; text-transform:uppercase; color:#B6E86A; }
 .l-hero-top svg{ color:#B6E86A; }
-.l-hero-h1{ font-family:var(--font-anton),'Anton',sans-serif !important;
-  font-size:clamp(34px,5.4vw,86px) !important; line-height:.94 !important;
-  text-transform:uppercase !important; letter-spacing:-.02em !important;
+.l-hero-h1{ font-family:var(--font-display) !important;font-weight:800 !important;
+  font-size:clamp(34px,4.6vw,60px) !important; line-height:1.06!important; letter-spacing:-.02em !important;
   color:#fff !important; margin:0 0 22px !important; max-width:18ch; }
-.l-hero-claim{ font-family:var(--font-anton),'Anton',sans-serif !important;
-  font-size:clamp(17px,1.7vw,26px) !important; line-height:1.14 !important;
-  text-transform:uppercase !important; color:rgba(242,240,233,.9) !important;
+.l-hero-claim{ font-family:var(--font-display) !important;font-weight:800 !important;
+  font-size:clamp(17px,1.7vw,26px) !important; line-height:1.14 !important; color:rgba(242,240,233,.9) !important;
   margin:0 0 20px !important; max-width:44ch; }
 .l-hero-claim span{ color:#B6E86A; }
 .l-hero-lede{ font-size:17px; line-height:1.65; color:rgba(242,240,233,.78); max-width:52ch; margin-bottom:30px; }
@@ -286,9 +281,8 @@ a[class*="border-border"], a[class*="bg-white"][class*="border"]{
 .l-settori{ background:var(--l-paper); padding:104px 0 112px; }
 .l-settori-hd{ display:flex; justify-content:space-between; align-items:flex-end; gap:24px;
   flex-wrap:wrap; margin-bottom:44px; }
-.l-settori-hd h2{ font-family:var(--font-anton),'Anton',sans-serif !important;
-  text-transform:uppercase !important; font-size:clamp(26px,3.6vw,58px) !important;
-  line-height:.92 !important; margin:0 !important; }
+.l-settori-hd h2{ font-family:var(--font-display) !important;font-weight:800 !important; font-size:clamp(26px,2.9vw,36px) !important;
+  line-height:1.06!important; margin:0 !important; }
 .l-settori-all{ font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#5E7C1E; }
 .l-settori-g{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
 .l-settore{ position:relative; display:block; overflow:hidden; color:#fff; }
@@ -299,8 +293,7 @@ a[class*="border-border"], a[class*="bg-white"][class*="border"]{
 .l-settore-ov{ position:absolute; inset:0;
   background:linear-gradient(0deg,rgba(7,9,10,.93),transparent 62%); }
 .l-settore-cp{ position:absolute; left:0; right:0; bottom:0; padding:30px; }
-.l-settore-cp b{ font-family:var(--font-anton),'Anton',sans-serif; font-weight:400;
-  text-transform:uppercase; font-size:26px; letter-spacing:-.01em; }
+.l-settore-cp b{ font-family:var(--font-display); font-weight:800; font-size:26px; letter-spacing:-.01em; }
 @media(max-width:1000px){ .l-settori-g{ grid-template-columns:1fr 1fr; } }
 @media(max-width:700px){ .l-settori-g{ grid-template-columns:1fr; } }
 
@@ -310,7 +303,7 @@ a[class*="border-border"], a[class*="bg-white"][class*="border"]{
   color:#B6E86A !important; line-height:1.4 !important; margin:0 0 20px !important; }
 .l-hero{ min-height:0 !important; padding-top:120px !important; padding-bottom:64px !important; }
 .l-hero-top{ margin-bottom:38px !important; }
-.l-hero-h1{ font-size:clamp(30px,3.9vw,62px) !important; max-width:22ch; margin-bottom:20px !important; }
+.l-hero-h1{ font-size:clamp(30px,3.4vw,48px) !important; max-width:22ch; margin-bottom:20px !important; }
 .l-hero-lede{ font-size:16.5px; margin-bottom:26px; }
 /* l'occhiello non deve mai diventare un titolo */
 p.l-hero-kicker{ font-size:12px !important; line-height:1.4 !important;
@@ -326,7 +319,7 @@ p.l-hero-kicker{ font-size:12px !important; line-height:1.4 !important;
 .l-hero .grid{ display:block !important; }
 .l-hero .grid > div:last-child{ display:none !important; }
 .l-hero .md\:hidden{ display:none !important; }
-.l-hero-h1{ font-size:clamp(38px,6.4vw,104px) !important; max-width:16ch !important;
+.l-hero-h1{ font-size:clamp(34px,4.8vw,64px) !important; max-width:16ch !important;
   color:#fff !important; margin-bottom:24px !important; }
 .l-hero-h1 span{ color:#B6E86A !important; }
 .l-hero-lede{ max-width:56ch; font-size:17px; }
@@ -334,7 +327,7 @@ p.l-hero-kicker{ font-size:12px !important; line-height:1.4 !important;
 
 /* apertura: misura leggibile, testo in basso, niente titolo che invade lo schermo */
 .l-hero{ min-height:78svh !important; }
-.l-hero-h1{ font-size:clamp(32px,3.6vw,52px) !important; max-width:26ch !important;
+.l-hero-h1{ font-size:clamp(30px,3.2vw,44px) !important; max-width:26ch !important;
   line-height:1.02 !important; }
 .l-hero-lede{ font-size:16.5px; max-width:60ch; }
 
@@ -344,13 +337,11 @@ p.l-hero-kicker{ font-size:12px !important; line-height:1.4 !important;
    ========================================================================= */
 
 /* --- titoli di sezione: Anton grande, a sinistra, occhiello verde --- */
-.l-body section h2{ font-family:var(--font-anton),'Anton',sans-serif !important;
-  font-weight:400 !important; text-transform:uppercase !important;
-  font-size:clamp(26px,3.6vw,58px) !important; line-height:.92 !important;
+.l-body section h2{ font-family:var(--font-display) !important;font-weight:800 !important;
+  font-size:clamp(26px,2.9vw,36px) !important; line-height:1.12!important;
   letter-spacing:-.018em !important; color:var(--l-ink) !important; text-align:left !important;
   max-width:20ch; }
-.l-body section h3{ font-family:var(--font-anton),'Anton',sans-serif !important;
-  font-weight:400 !important; text-transform:uppercase !important;
+.l-body section h3{ font-family:var(--font-display) !important;font-weight:800 !important;
   font-size:clamp(18px,1.6vw,24px) !important; letter-spacing:-.01em !important; }
 .l-body section p{ text-align:left !important; }
 .l-body section .text-center{ text-align:left !important; }

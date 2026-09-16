@@ -10,8 +10,8 @@ const content: SettoreContent = {
     h1_line1: 'Software para empresas de limpeza:',
     h1_line2: 'turnos, provas fotográficas e horas verificadas, em cada edifício',
     subtitle: 'GeoTapp liga Flow + TimeTracker para equipas distribuídas por vários edifícios e pisos. Os seus operacionais registam o ponto pelo smartphone com GPS verificado; o escritório vê quem limpou o quê, onde e quando, com provas fotográficas anexas. Sem litígios, com total conformidade com o CCT Limpeza e Higiene Urbana.',
-    cta_primary: 'Pedir uma demonstração',
-    cta_note: 'Sem compromisso. Resposta em 12 horas úteis.',
+    cta_primary: 'Experimente num contrato real',
+    cta_note: '14 dias, até 50 operacionais no terreno, sem cartão de crédito.',
   },
   pain: {
     title: 'O problema que já conhece',

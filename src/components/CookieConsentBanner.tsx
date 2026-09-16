@@ -393,7 +393,7 @@ export default function CookieConsentBanner({ locale }: { locale: string }) {
               padding: '26px 24px 22px',
               boxShadow: '0 32px 80px rgba(15, 23, 42, 0.5)',
               color: '#e2e8f0',
-              fontFamily: 'var(--font-inter, Inter, sans-serif)',
+              fontFamily: 'var(--font-body)',
             }}
           >
             {/* Rifiuto a un clic, stessa evidenza visiva dei pulsanti. */}
@@ -431,7 +431,7 @@ export default function CookieConsentBanner({ locale }: { locale: string }) {
               aria-level={2}
               style={{
                 margin: '0 0 8px 0',
-                fontFamily: 'var(--font-inter, Inter, sans-serif)',
+                fontFamily: 'var(--font-body)',
                 fontSize: '1.02rem',
                 fontWeight: 700,
                 lineHeight: 1.3,
@@ -523,7 +523,7 @@ export default function CookieConsentBanner({ locale }: { locale: string }) {
               padding: 28,
               boxShadow: '0 32px 80px rgba(15, 23, 42, 0.5)',
               color: '#e2e8f0',
-              fontFamily: 'var(--font-inter, Inter, sans-serif)',
+              fontFamily: 'var(--font-body)',
             }}
           >
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 6 }}>
@@ -698,7 +698,7 @@ const btnChoiceBase: React.CSSProperties = {
   flex: '1 1 140px',
   padding: '11px 16px',
   borderRadius: 12,
-  fontFamily: 'var(--font-inter, Inter, sans-serif)',
+  fontFamily: 'var(--font-body)',
   fontSize: '0.85rem',
   fontWeight: 700,
   cursor: 'pointer',
@@ -723,7 +723,7 @@ const btnPrimaryStyle: React.CSSProperties = {
   border: 'none',
   background: '#8FC436',
   color: '#0f172a',
-  fontFamily: 'var(--font-inter, Inter, sans-serif)',
+  fontFamily: 'var(--font-body)',
   fontSize: '0.8rem',
   fontWeight: 700,
   cursor: 'pointer',
@@ -737,7 +737,7 @@ const btnSecondaryStyle: React.CSSProperties = {
   border: '1px solid rgba(148,163,184,0.3)',
   background: 'transparent',
   color: '#cbd5e1',
-  fontFamily: 'var(--font-inter, Inter, sans-serif)',
+  fontFamily: 'var(--font-body)',
   fontSize: '0.8rem',
   fontWeight: 600,
   cursor: 'pointer',
@@ -750,7 +750,7 @@ const btnGhostStyle: React.CSSProperties = {
   border: 'none',
   background: 'transparent',
   color: '#94a3b8',
-  fontFamily: 'var(--font-inter, Inter, sans-serif)',
+  fontFamily: 'var(--font-body)',
   fontSize: '0.8rem',
   fontWeight: 600,
   cursor: 'pointer',

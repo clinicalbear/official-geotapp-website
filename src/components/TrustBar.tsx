@@ -107,7 +107,7 @@ export default function TrustBar({ locale }: { locale: string }) {
           transition={{ duration: 0.4 }}
           style={{
             margin: '0 0 56px',
-            fontFamily: 'var(--font-poppins, Poppins, sans-serif)',
+            fontFamily: 'var(--font-display)',
             fontSize: '1.25rem',
             fontWeight: 600,
             color: '#334155',
@@ -148,7 +148,7 @@ export default function TrustBar({ locale }: { locale: string }) {
                   <Icon size={34} color={ICON_COLORS[i]} strokeWidth={1.6} />
                 </div>
                 <span style={{
-                  fontFamily: 'var(--font-poppins, Poppins, sans-serif)',
+                  fontFamily: 'var(--font-display)',
                   fontSize: 'clamp(1.15rem, 2.2vw, 1.4rem)',
                   fontWeight: 700,
                   color: '#0f172a',
@@ -158,7 +158,7 @@ export default function TrustBar({ locale }: { locale: string }) {
                   {title}
                 </span>
                 <span style={{
-                  fontFamily: 'var(--font-inter, Inter, sans-serif)',
+                  fontFamily: 'var(--font-body)',
                   fontSize: '0.95rem',
                   color: '#64748b',
                   fontWeight: 500,
@@ -187,7 +187,7 @@ export default function TrustBar({ locale }: { locale: string }) {
             <span
               key={sector}
               style={{
-                fontFamily: 'var(--font-inter, Inter, sans-serif)',
+                fontFamily: 'var(--font-body)',
                 fontSize: '0.85rem',
                 color: '#475569',
                 fontWeight: 500,

@@ -10,8 +10,8 @@ const content: SettoreContent = {
     h1_line1: 'Zeiterfassung in der Gebäudereinigung:',
     h1_line2: 'Schichten, Fotodokumentation und geprüfte Stunden, auf jedem Objekt',
     subtitle: 'GeoTapp verbindet Flow + TimeTracker für Teams, die auf mehrere Gebäude und Etagen verteilt sind. Ihre Reinigungskräfte stempeln per GPS-verifiziertem Smartphone; die digitale Zeiterfassung läuft je Objekt, und das Büro sieht, wer was, wo und wann gereinigt hat, mit Fotobeweisen. Keine Streitigkeiten mehr, volle Konformität mit dem Rahmentarifvertrag Gebäudereinigung und §17 MiLoG.',
-    cta_primary: 'Demo anfragen',
-    cta_note: 'Keine Bindung. Antwort innerhalb von 12 Geschäftsstunden.',
+    cta_primary: 'Auf einem echten Auftrag testen',
+    cta_note: '14 Tage, bis zu 50 Mitarbeiter im Außendienst, ohne Kreditkarte.',
   },
   pain: {
     title: 'Das Problem, das Sie kennen',

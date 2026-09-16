@@ -13,8 +13,8 @@ const content: SettoreContent = {
     h1_line1: 'Cleaning company software:',
     h1_line2: 'shift records, photo proof and verified hours, every site',
     subtitle: 'GeoTapp connects Flow + TimeTracker for teams spread across multiple buildings and floors. Operatives clock in with GPS-verified smartphones; the office sees who cleaned what, where and when, with photo evidence attached. No more disputes, full NMW and Agency Workers Regulations compliance.',
-    cta_primary: 'Request a Demo',
-    cta_note: 'No commitment. Reply within 12 business hours.',
+    cta_primary: 'Try it on a real contract',
+    cta_note: '14 days, up to 50 field workers, no credit card.',
   },
   pain: {
     title: 'The problem you already know',

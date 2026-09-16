@@ -482,7 +482,7 @@ export default function RoiCalculatorClient({ dict, locale, trialUrl, embed = fa
                     <p className={dark ? 'text-sm mb-1' : 'text-sm opacity-80 mb-1'} style={dark ? { color: 'rgba(242,240,233,.65)' } : undefined}>{dict.results_total}</p>
                     <p
                       className={dark ? 'text-5xl' : 'text-4xl font-black'}
-                      style={dark ? { fontFamily: "var(--font-anton),'Anton',sans-serif", color: 'var(--lime)', textTransform: 'uppercase', letterSpacing: '-.02em' } : undefined}
+                      style={dark ? { fontFamily: "var(--font-display)", color: 'var(--lime)', textTransform: 'uppercase', letterSpacing: '-.02em' } : undefined}
                     >
                       <AnimatedTotal value={result.risparmio_totale} locale={locale} active={countActive} cur={cur} />
                     </p>
