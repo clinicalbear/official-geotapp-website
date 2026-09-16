@@ -27,59 +27,40 @@ import { IBM_Plex_Mono, Manrope, Source_Sans_3 } from 'next/font/google';
 // non la tocchiamo, altrimenti "l'apertura peggiora" (prova di fatto di A45).
 // Sui titoli 'swap', come faceva Anton.
 
-const titoliLatino = Manrope({
-  subsets: ['latin', 'latin-ext'],
-  variable: '--font-display',
-  display: 'swap',
-  fallback: ['system-ui', 'Segoe UI', 'Roboto', 'Arial', 'sans-serif'],
-  adjustFontFallback: false,
-});
-
-// `preload: false` sulle due istanze cirilliche, e non e' un dettaglio.
-// next/font emette un <link rel=preload> per OGNI istanza presente nel modulo,
-// non per quella che la pagina usa: misurato in produzione il 16/09/2026,
-// /it/ e /ru/ scaricavano gli STESSI sei file, cioe' le dieci lingue latine
-// pagavano i glifi russi. Senza preload il file cirillico arriva solo quando
-// il browser incontra un glifo di quell'intervallo, cioe' solo su /ru/.
-const titoliCirillico = Manrope({
+// UNA istanza per famiglia, con tutti e tre i sottoinsiemi.
+//
+// Ci sono arrivato dopo aver provato — e misurato — l'alternativa a due
+// istanze, una latina e una cirillica scelte dal locale. Non funziona con
+// next/font, e il motivo e' preciso: due istanze della stessa famiglia
+// emettono DUE `@font-face` con lo stesso nome ("Manrope") e lo stesso
+// `unicode-range`. Il `<link rel=preload>` punta a uno dei due file e la
+// cascata del CSS ne sceglie l'altro, quindi il browser li scarica ENTRAMBI e
+// il preload e' sprecato per intero: 53 KB a ogni visita a freddo.
+//
+// Misura a cache spenta (Chrome vero, /it/, /de/, /ru/):
+//     due istanze          it/de 6 file 178 KB, ru 8 file 210 KB
+//     una istanza (questa) tutte e tre 6 file 158 KB
+//
+// Il prezzo di questa scelta va detto: next/font precarica OGNI sottoinsieme
+// dichiarato, quindi anche le dieci lingue latine si portano i file cirillici.
+// Li pagano, ma pagano MENO di prima, perche' niente e' scaricato due volte.
+// L'idea di far pagare il cirillico al solo russo, che A45 prometteva, con
+// next/font non si ottiene: o si duplica, o si condivide.
+const titoli = Manrope({
   subsets: ['latin', 'latin-ext', 'cyrillic'],
   variable: '--font-display',
   display: 'swap',
   fallback: ['system-ui', 'Segoe UI', 'Roboto', 'Arial', 'sans-serif'],
   adjustFontFallback: false,
-  preload: false,
 });
 
-const corpoLatino = Source_Sans_3({
-  subsets: ['latin', 'latin-ext'],
-  variable: '--font-body',
-  display: 'optional',
-  fallback: ['Source Sans Pro', 'system-ui', 'Segoe UI', 'Roboto', 'Arial', 'sans-serif'],
-  adjustFontFallback: true,
-});
-
-const corpoCirillico = Source_Sans_3({
+const corpo = Source_Sans_3({
   subsets: ['latin', 'latin-ext', 'cyrillic'],
   variable: '--font-body',
   display: 'optional',
   fallback: ['Source Sans Pro', 'system-ui', 'Segoe UI', 'Roboto', 'Arial', 'sans-serif'],
   adjustFontFallback: true,
-  preload: false,
 });
-
-// ⚠️ NOTO E MISURATO, 16/09/2026: due istanze della stessa famiglia fanno
-// scaricare due volte le facce latine — 53 KB per visita a freddo, due file
-// con lo stesso hash di base, uno con `.p.` e uno senza. Provata l'alternativa
-// a UNA istanza con tutti i sottoinsiemi: pareggia a 158 KB per tutti, ma fa
-// scaricare il cirillico anche alle dieci lingue latine, cioe' rompe proprio
-// la cosa che A45 prometteva. Misura a cache spenta, /it/ e /de/:
-//     due istanze (questa)   6 file, 178 KB, zero cirillico
-//     una istanza sola       6 file, 158 KB, cirillico dentro
-//     /ru/ con due istanze   8 file, 210 KB
-// Tenuta questa. La via per togliere il doppione senza perdere la promessa
-// sarebbe un'istanza SOLO cirillica con una variabile sua, e la pila composta
-// in CSS su :lang(ru): vale 53 KB a freddo, e il freno vero dell'apertura e'
-// il JavaScript (1.150 ms di blocco, misurati il 15/09), non i font.
 
 // Il mono serve per il codice sigillo (8QK4-P2NX), gli hash e le coordinate:
 // sono cifre e lettere latine in tutte le lingue, quindi niente cirillico e
@@ -94,16 +75,10 @@ export const mono = IBM_Plex_Mono({
   preload: false,
 });
 
-/**
- * Le classi delle variabili CSS da mettere sul `<body>`.
- * Il cirillico entra solo su /ru/: e' l'unica delle undici lingue che lo usa.
- */
-export function fontiPerLingua(locale: string): string[] {
-  const cirillico = locale === 'ru';
-  const titoli = cirillico ? titoliCirillico : titoliLatino;
-  const corpo = cirillico ? corpoCirillico : corpoLatino;
+/** Le classi delle variabili CSS da mettere sul `<body>`. */
+export function fontiPerLingua(_locale: string): string[] {
   return [titoli.variable, corpo.variable, mono.variable];
 }
 
-/** Per le pagine fuori da /[locale]/ (blog, links): sempre latino. */
-export const fontiLatine = [titoliLatino.variable, corpoLatino.variable, mono.variable];
+/** Per le pagine fuori da /[locale]/ (blog, links): le stesse. */
+export const fontiLatine = [titoli.variable, corpo.variable, mono.variable];
