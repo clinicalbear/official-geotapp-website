@@ -1,18 +1,18 @@
 #!/usr/bin/env python3
 """Ripara le immagini rotte nei post del blog.
 
-Le immagini erano state convertite in .webp sul server, ma il contenuto dei post
-punta ancora ai vecchi .png, che rispondono 404. Verificato l'11/09/2026: 25 file
-rotti su 33 post (Ahrefs: "Page has broken image" +37).
+Alcuni <img> nel contenuto puntano a file che rispondono 404: parte sono .png
+convertiti in .webp sul server, parte hanno un percorso-mese sbagliato.
+Verificato l'11/09/2026: 25 file rotti, 162 occorrenze, 21 post.
 
-Sostituisce SOLO le coppie in cui il nome del file e' identico e cambia la sola
-estensione, e SOLO dopo aver verificato che la destinazione risponda 200. Le
-immagini con nome generico (8-1.png, 9-1.png, 10-1.png, 12-1.png) NON si toccano:
-il solo candidato sta in un'altra cartella-mese e potrebbe essere un'altra foto.
+NON si indovina il sostituto dal nome. Ogni <img> di WordPress porta la classe
+`wp-image-<id>`, cioe' l'ID dell'allegato: si chiede a WordPress qual e' oggi la
+`source_url` di quell'allegato e si usa quella. Se l'immagine non ha la classe, o
+se la destinazione non risponde 200, il tag si lascia com'e' e si segnala.
 
 Senza --scrivi non modifica niente: stampa cosa farebbe.
 """
-import base64, json, os, re, sys, urllib.parse, urllib.request
+import base64, json, re, sys, urllib.error, urllib.parse, urllib.request
 from pathlib import Path
 
 WP = "https://blog.geotapp.com"
@@ -21,8 +21,12 @@ UA = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/1
       "x-geotapp-proxy": "1", "x-forwarded-proto": "https"}
 SCRIVI = "--scrivi" in sys.argv
 
-# Nomi troppo generici per fidarsi di una corrispondenza fra cartelle diverse.
-AMBIGUI = re.compile(r"/\d{4}/\d{2}/\d{1,3}-\d+\.(png|jpe?g)$")
+TAG_IMG = re.compile(r'<img\b[^>]*>', re.I)
+ATTR_SRC = re.compile(r'\ssrc="([^"]+)"', re.I)
+ATTR_ID = re.compile(r'\bwp-image-(\d+)\b')
+
+_stato: dict[str, bool] = {}
+_media: dict[str, str | None] = {}
 
 
 def testa(auth=False):
@@ -50,46 +54,64 @@ def chiama(url, metodo="GET", corpo=None, auth=False):
         return json.load(r)
 
 
-def vivo(url):
-    req = urllib.request.Request(url, method="HEAD", headers=testa())
-    try:
-        with urllib.request.urlopen(req, timeout=25) as r:
-            return r.status == 200
-    except Exception:
-        return False
+def assoluto(src: str) -> str:
+    if src.startswith("//"):
+        return "https:" + src
+    if src.startswith("/"):
+        return "https://geotapp.com" + src
+    return src
+
+
+def vivo(src: str) -> bool:
+    url = assoluto(src)
+    if url not in _stato:
+        req = urllib.request.Request(url, method="HEAD", headers=testa())
+        try:
+            with urllib.request.urlopen(req, timeout=25) as r:
+                _stato[url] = r.status == 200
+        except Exception:
+            _stato[url] = False
+    return _stato[url]
+
+
+def sorgente_allegato(mid: str) -> str | None:
+    """La source_url che WordPress dichiara OGGI per quell'allegato."""
+    if mid not in _media:
+        try:
+            m = chiama(f"{WP}/wp-json/wp/v2/media/{mid}?_fields=id,source_url")
+            _media[mid] = m.get("source_url")
+        except Exception:
+            _media[mid] = None
+    return _media[mid]
+
+
+def ripara(html: str, esiti: list) -> str:
+    def sostituisci(m):
+        tag = m.group(0)
+        s = ATTR_SRC.search(tag)
+        if not s:
+            return tag
+        src = s.group(1)
+        if vivo(src):
+            return tag
+        i = ATTR_ID.search(tag)
+        if not i:
+            esiti.append(("SENZA-ID", src, None))
+            return tag
+        nuova = sorgente_allegato(i.group(1))
+        if not nuova or not vivo(nuova):
+            esiti.append(("IRRECUPERABILE", src, nuova))
+            return tag
+        if assoluto(nuova) == assoluto(src):
+            esiti.append(("IRRECUPERABILE", src, nuova))
+            return tag
+        esiti.append(("RIPARATA", src, nuova))
+        return tag[:s.start(1)] + nuova + tag[s.end(1):]
+    return TAG_IMG.sub(sostituisci, html)
 
 
 def main():
-    mappa_grezza = json.loads(Path(sys.argv[1]).read_text()) if len(sys.argv) > 1 and not sys.argv[1].startswith("--") \
-        else json.loads(Path("/tmp/immagini_mappa.json").read_text())
-
-    # 1. tieni solo le sostituzioni sicure
-    coppie = {}
-    for rotta, nuova in mappa_grezza.items():
-        if not nuova:
-            print("  salto (nessun candidato):", rotta)
-            continue
-        if AMBIGUI.search(urllib.parse.urlparse(rotta).path):
-            print("  salto (nome generico, da guardare a mano):", rotta)
-            continue
-        vecchio = re.sub(r"\.(png|jpe?g|webp)$", "", rotta.rsplit("/", 1)[-1])
-        nuovo = re.sub(r"\.(png|jpe?g|webp)$", "", nuova.rsplit("/", 1)[-1])
-        if nuovo not in (vecchio, re.sub(r"-\d+x\d+$", "", vecchio), re.sub(r"-\d+x\d+$", "", vecchio) + "-scaled"):
-            print("  salto (nome non corrispondente):", rotta, "->", nuova)
-            continue
-        if not vivo(nuova):
-            print("  salto (destinazione non risponde 200):", nuova)
-            continue
-        coppie[rotta] = nuova
-        # la stessa immagine compare sia come /blog/wp-content/... sia come host pieno
-        p = urllib.parse.urlparse(rotta).path
-        for variante in {f"https://geotapp.com{p}", f"https://blog.geotapp.com{p.replace('/blog', '', 1)}",
-                         p, p.replace("/blog", "", 1)}:
-            coppie.setdefault(variante, nuova)
-    print(f"\nsostituzioni sicure: {len(set(mappa_grezza) & set(coppie))} su {len(mappa_grezza)}\n")
-
-    # 2. trova i post che le contengono e riscrivili
-    pagina, toccati, cambi = 1, 0, 0
+    pagina, toccati, riparate, falliti = 1, 0, 0, []
     while True:
         q = urllib.parse.urlencode({"per_page": 100, "page": pagina, "status": "publish",
                                     "_fields": "id,link,content", "orderby": "date", "order": "desc"})
@@ -103,21 +125,32 @@ def main():
             break
         for p in posts:
             html = p["content"]["rendered"]
-            nuovo = html
-            for vecchia, nuova in coppie.items():
-                if vecchia in nuovo:
-                    nuovo = nuovo.replace(vecchia, nuova)
-            if nuovo == html:
+            if "<img" not in html:
                 continue
-            n = sum(1 for v in coppie if v in html)
+            esiti: list = []
+            nuovo = ripara(html, esiti)
+            ok = [e for e in esiti if e[0] == "RIPARATA"]
+            ko = [e for e in esiti if e[0] != "RIPARATA"]
+            falliti.extend((p["id"], *e) for e in ko)
+            if not ok:
+                continue
             toccati += 1
-            cambi += n
-            print(f"  post {p['id']:6}  {n} url  {p['link'][22:95]}")
+            riparate += len(ok)
+            print(f"  post {p['id']:6}  {len(ok):3} img  {p['link'][22:92]}")
+            for _, vecchia, nuova in ok[:2]:
+                print(f"           {vecchia[38:]}\n        -> {nuova[38:]}")
+            if len(ok) > 2:
+                print(f"           ... e altre {len(ok) - 2}")
             if SCRIVI:
                 chiama(f"{WP}/wp-json/wp/v2/posts/{p['id']}", "POST", {"content": nuovo}, auth=True)
         pagina += 1
-    print(f"\npost da correggere: {toccati} | url da sostituire: {cambi}")
-    print("SCRITTO su WordPress" if SCRIVI else "PROVA A VUOTO: non ho scritto niente (aggiungi --scrivi)")
+
+    print(f"\npost toccati: {toccati} | img riparate: {riparate}")
+    if falliti:
+        print(f"\nnon riparabili ({len(falliti)}), da guardare a mano:")
+        for pid, motivo, src, nuova in falliti:
+            print(f"  post {pid} {motivo}: {src[38:]}" + (f" -> {str(nuova)[38:]}" if nuova else ""))
+    print("\nSCRITTO su WordPress" if SCRIVI else "\nPROVA A VUOTO: non ho scritto niente (aggiungi --scrivi)")
 
 
 if __name__ == "__main__":

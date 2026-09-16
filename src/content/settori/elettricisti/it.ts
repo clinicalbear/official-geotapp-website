@@ -2,8 +2,8 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App per Elettricisti | GeoTapp - Rapportini GPS e Prove',
-    description: 'GeoTapp è l\'app per elettricisti: rapportini GPS verificati, foto degli impianti e report non alterabili. Chiudi le contestazioni con prove reali. Prova gratis.',
+    title: 'App per Elettricisti e Impiantisti | GeoTapp - Rapportini GPS',
+    description: 'GeoTapp è l\'app per elettricisti e impiantisti: rapportini GPS automatici, foto degli impianti e report non alterabili. Chiudi le contestazioni con prove reali. Prova gratis.',
   },
   hero: {
     badge: 'App per Elettricisti e Impiantisti Elettrici',
@@ -99,6 +99,23 @@ const content: SettoreContent = {
     body: 'Un cliente contesta il completamento dell\'impianto elettrico e rifiuta di pagare l\'ultima fattura. Con GeoTapp apri il rapportino: foto del quadro completato, orario GPS di inizio e fine lavori, note tecniche del tecnico, tutto generato in automatico dallo smartphone sul posto.',
     resolution: 'La contestazione cade. La fattura viene pagata per intero.',
   },
+  cosa_cambia: {
+    title: 'Cosa cambia davvero, dal primo intervento',
+    items: [
+      {
+        title: 'La sera non si ricopia più niente',
+        desc: 'Le ore non passano dal foglio, poi dal messaggio, poi dal gestionale. Nascono già sulla commessa giusta, con la posizione e l\'orario di quando sono state fatte, e a fine mese l\'export per le paghe è pronto senza che nessuno le ritrascriva.',
+      },
+      {
+        title: 'Il rapportino smette di essere una discussione',
+        desc: 'Quando il committente chiede quante ore sono state fatte sul suo impianto, la risposta non è la parola del tecnico contro la sua, è un documento sigillato con le foto del quadro, gli orari e le note tecniche, che può controllare da solo senza entrare nel tuo account.',
+      },
+      {
+        title: 'Anche il tecnico ha qualcosa in mano',
+        desc: 'Vale nelle due direzioni. Chi lavora bene e si sente dire che è arrivato tardi ha la prova dell\'orario, e non deve ricordarsi a memoria cosa ha fatto tre settimane fa per difendersi.',
+      },
+    ],
+  },
   features: {
     title: 'App per elettricisti: cosa trovi in GeoTapp.',
     items: [
@@ -159,6 +176,18 @@ const content: SettoreContent = {
         q: 'GeoTapp aiuta a risolvere le contestazioni dei clienti?',
         a: 'È esattamente il caso d\'uso principale: orario GPS, prove fotografiche e rapportino sigillato rendono ogni contestazione infondata risolvibile in pochi minuti.',
       },
+      {
+        q: 'Va bene anche come app per impiantisti, non solo per elettricisti?',
+        a: 'Sì. Impianti elettrici, termoidraulica, condizionamento, antincendio, fotovoltaico. Il mestiere cambia, il problema resta lo stesso, cioè dimostrare chi è andato dove, quanto ci è rimasto e cosa ha lasciato finito. Il rapportino esce uguale per tutti.',
+      },
+      {
+        q: 'Come funzionano i rapportini per gli impiantisti?',
+        a: 'Il tecnico chiude l\'intervento dal telefono e il rapportino è già scritto, con ore, posizione, foto dell\'impianto e note tecniche. Non resta il modulo da compilare la sera, che poi è il motivo per cui i rapportini arrivano in ritardo oppure non arrivano.',
+      },
+      {
+        q: 'Possiamo smettere di raccogliere ore e foto su WhatsApp?',
+        a: 'È il motivo per cui la maggior parte delle imprese ci arriva. In chat le ore si perdono fra i messaggi, le foto vengono compresse e a fine mese qualcuno deve ricopiare tutto a mano. Qui il dato nasce già collegato alla commessa e alla persona.',
+      },
     ],
   },
   cta: {
@@ -179,7 +208,7 @@ const content: SettoreContent = {
       answer: 'Sì. GeoTapp è l\'app per elettricisti e impiantisti che registra ogni intervento con GPS, foto e timestamp verificabili. Il tecnico timbra dal campo, l\'ufficio vede tutto in tempo reale, il cliente riceve un rapportino sigillato.',
     },
     {
-      question: 'Come certifico un intervento elettrico con GeoTapp?',
+      question: 'Come sigillo un intervento elettrico con GeoTapp?',
       answer: 'Il tecnico registra su GeoTapp l\'orario di inizio e fine con GPS verificato, le foto dell\'impianto e le note tecniche. Il sistema genera un rapportino sigillato che il cliente può verificare autonomamente.',
     },
     {
@@ -189,6 +218,14 @@ const content: SettoreContent = {
     {
       question: 'I rapportini GeoTapp sono accettati in caso di contestazione?',
       answer: 'I rapportini GeoTapp sono sigillati con GPS, timestamp e prove fotografiche. Sono stati usati con successo per risolvere contestazioni su lavori non riconosciuti dal cliente finale.',
+    },
+    {
+      question: 'GeoTapp funziona anche come app per impiantisti?',
+      answer: 'Sì. Oltre agli impianti elettrici copre termoidraulica, condizionamento, antincendio e fotovoltaico. Il tecnico registra l\'intervento dal campo con GPS e foto, e il rapportino viene generato allo stesso modo per ogni tipo di impianto.',
+    },
+    {
+      question: 'GeoTapp traccia la posizione dei tecnici durante la giornata?',
+      answer: 'No. La posizione viene registrata soltanto quando il tecnico apre e chiude l\'intervento. Fra un timbro e l\'altro non c\'è alcun tracciamento del percorso, e non è un limite tecnico, è il modo in cui lo strumento è stato sviluppato.',
     },
   ],
 };

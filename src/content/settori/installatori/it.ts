@@ -2,11 +2,11 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App per Installatori, Elettricisti e Termoidraulici | GeoTapp - Rapportini GPS',
-    description: 'GeoTapp è l\'app per installatori, elettricisti, idraulici e termoidraulici: rapportini GPS verificati, prove fotografiche e report non alterabili. Prova gratis.',
+    title: 'App per Installatori e Termoidraulici | GeoTapp - Rapportini GPS',
+    description: 'GeoTapp è l\'app per installatori, idraulici e termoidraulici: rapportini GPS verificati, prove fotografiche e report non alterabili. Prova gratis.',
   },
   hero: {
-    badge: 'App per Installatori, Elettricisti, Idraulici e Termoidraulici',
+    badge: 'App per Installatori, Idraulici e Termoidraulici',
     h1_line1: 'Il cliente contesta le ore?',
     h1_line2: 'Mostragli il rapportino GPS.',
     subtitle: 'I tuoi tecnici timbrano dallo smartphone in 5 secondi. Il sistema genera un rapportino con GPS verificato e foto, non alterabile. Quando il cliente chiede "quanto tempo ci avete messo?", hai la risposta pronta.',
@@ -103,7 +103,7 @@ const content: SettoreContent = {
   },
 
   features: {
-    title: 'App per installatori ed elettricisti: rapportini GPS e prove fotografiche.',
+    title: 'App per installatori e termoidraulici: rapportini GPS e prove fotografiche.',
     items: [
       {
         title: 'Timbratura GPS verificabile',
@@ -181,8 +181,8 @@ const content: SettoreContent = {
   schema_sector_name: 'Installatori',
   schema_faq: [
     {
-      question: 'GeoTapp funziona per elettricisti e idraulici in mobilità?',
-      answer: 'Sì. GeoTapp è l\'app per installatori ed elettricisti pensata per chi lavora su cantieri e abitazioni private. Con il software per gestione rapportini integrato, i tecnici registrano interventi, foto e ore direttamente dallo smartphone, senza tornare in ufficio.',
+      question: 'GeoTapp funziona per idraulici e termoidraulici in mobilità?',
+      answer: 'Sì. GeoTapp è l\'app per installatori e termoidraulici pensata per chi lavora su cantieri e abitazioni private. Con il software per gestione rapportini integrato, i tecnici registrano interventi, foto e ore direttamente dallo smartphone, senza tornare in ufficio.',
     },
     {
       question: 'Come certifico un intervento di manutenzione o installazione?',
