@@ -67,6 +67,20 @@ const corpoCirillico = Source_Sans_3({
   preload: false,
 });
 
+// ⚠️ NOTO E MISURATO, 16/09/2026: due istanze della stessa famiglia fanno
+// scaricare due volte le facce latine — 53 KB per visita a freddo, due file
+// con lo stesso hash di base, uno con `.p.` e uno senza. Provata l'alternativa
+// a UNA istanza con tutti i sottoinsiemi: pareggia a 158 KB per tutti, ma fa
+// scaricare il cirillico anche alle dieci lingue latine, cioe' rompe proprio
+// la cosa che A45 prometteva. Misura a cache spenta, /it/ e /de/:
+//     due istanze (questa)   6 file, 178 KB, zero cirillico
+//     una istanza sola       6 file, 158 KB, cirillico dentro
+//     /ru/ con due istanze   8 file, 210 KB
+// Tenuta questa. La via per togliere il doppione senza perdere la promessa
+// sarebbe un'istanza SOLO cirillica con una variabile sua, e la pila composta
+// in CSS su :lang(ru): vale 53 KB a freddo, e il freno vero dell'apertura e'
+// il JavaScript (1.150 ms di blocco, misurati il 15/09), non i font.
+
 // Il mono serve per il codice sigillo (8QK4-P2NX), gli hash e le coordinate:
 // sono cifre e lettere latine in tutte le lingue, quindi niente cirillico e
 // niente preload, cosi' non toglie banda all'elemento LCP.
