@@ -791,7 +791,7 @@
     "benefits": [
       {
         "title": "The biggest plan, not a demo",
-        "desc": "You try GeoTapp Flow at full power: every module, unlimited office users and 50 TimeTracker seats for your crew, active from day one."
+        "desc": "You try GeoTapp Flow at full power: every module is included, none of them costs extra, with unlimited office users and 50 TimeTracker seats active from day one. The only things paid separately are the clock-in seats, out in the field with TimeTracker and in the office inside Flow."
       },
       {
         "title": "No credit card required",
@@ -1427,7 +1427,6 @@
   "videoTutorial": {
     "title": "From first sign-in to first clock-in",
     "note": "Two minutes, no jargon: you set up Flow, invite your first employee, and watch the first clock-in appear on the map.",
-    "cta": "Watch the video, 2 minutes",
-    "privacy": "Starting the video loads it from"
+    "cta": "Watch the video, 2 minutes"
   }
 }

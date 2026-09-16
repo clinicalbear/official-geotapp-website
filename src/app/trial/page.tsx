@@ -301,7 +301,6 @@ export default function TrialPage() {
                         addosso. Prima qui c'era solo l'avviso sullo spam. */}
                     <VideoTutorial
                       locale={locale}
-                      campagna="trial-conferma"
                       className="mt-7 text-left"
                     />
                   </motion.div>
@@ -446,7 +445,6 @@ export default function TrialPage() {
                   minuti che cosa sta per ricevere. */}
               <VideoTutorial
                 locale={locale}
-                campagna="trial-modulo"
                 className="mb-10"
               />
               <p className="only k"><s></s>{d.benefits_title}</p>

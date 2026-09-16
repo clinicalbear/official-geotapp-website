@@ -1037,7 +1037,7 @@
     "benefits": [
       {
         "title": "El plan más grande, no una demo",
-        "desc": "Pruebas GeoTapp Flow a plena potencia: todos los módulos, usuarios de oficina ilimitados y 50 puestos TimeTracker para tu equipo, activos desde el primer día."
+        "desc": "Pruebas GeoTapp Flow a plena potencia: todos los módulos están incluidos, ninguno cuesta aparte, con usuarios de oficina ilimitados y 50 puestos TimeTracker activos desde el primer día. Aparte solo se pagan los puestos de fichaje, en el terreno con TimeTracker y en la oficina dentro de Flow."
       },
       {
         "title": "Sin tarjeta de crédito",
@@ -1427,7 +1427,6 @@
   "videoTutorial": {
     "title": "Del primer acceso al primer fichaje",
     "note": "Dos minutos, sin rodeos: configuras Flow, invitas al primer empleado y ves el primer fichaje aparecer en el mapa.",
-    "cta": "Ver el vídeo, 2 minutos",
-    "privacy": "Al iniciar el vídeo se carga desde"
+    "cta": "Ver el vídeo, 2 minutos"
   }
 }

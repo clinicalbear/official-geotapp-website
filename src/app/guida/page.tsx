@@ -86,7 +86,6 @@ export default function GuidePage() {
                   quaranta pagine lette. La guida resta sotto, intera. */}
               <VideoTutorial
                 locale={locale}
-                campagna="guida"
                 className="mb-12 print:hidden"
               />
               <ReactMarkdown components={components}>{content}</ReactMarkdown>

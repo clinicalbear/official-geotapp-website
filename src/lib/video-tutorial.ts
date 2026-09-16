@@ -42,11 +42,3 @@ export function videoTutorialId(locale?: AppLocale | string | null): string {
 export function videoTutorialPoster(locale?: AppLocale | string | null): string {
   return `/video/tutorial-${linguaVideo(locale)}.jpg`;
 }
-
-/** L'indirizzo pubblico, per chi preferisce aprirlo su YouTube. */
-export function videoTutorialUrl(
-  locale?: AppLocale | string | null,
-  campagna = 'sito',
-): string {
-  return `https://youtu.be/${videoTutorialId(locale)}?utm_source=geotapp.com&utm_medium=web&utm_campaign=${encodeURIComponent(campagna)}`;
-}

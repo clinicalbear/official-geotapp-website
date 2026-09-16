@@ -5,11 +5,7 @@ import Image from 'next/image';
 import { Play } from 'lucide-react';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import type { AppLocale } from '@/lib/i18n/config';
-import {
-  videoTutorialId,
-  videoTutorialPoster,
-  videoTutorialUrl,
-} from '@/lib/video-tutorial';
+import { videoTutorialId, videoTutorialPoster } from '@/lib/video-tutorial';
 
 /**
  * Il video di avvio, nella lingua di chi guarda.
@@ -20,17 +16,15 @@ import {
  * youtube-nocookie. Il sito ha un banner dei cookie: un iframe caricato subito
  * gli passerebbe davanti, e sarebbe una promessa rotta.
  *
- * Per questo il dominio e' `youtube-nocookie.com` e non `youtube.com`, e per
- * questo sotto c'e' scritto che avviando il video lo si carica da YouTube: chi
- * non vuole, non preme.
+ * Per questo il dominio e' `youtube-nocookie.com` e non `youtube.com`. Sotto
+ * NON c'e' scritto niente su YouTube: chi guarda un video sa gia' cosa succede
+ * quando preme play, e un avviso li' e' solo un ostacolo in piu'.
  */
 export default function VideoTutorial({
   locale,
-  campagna = 'sito',
   className = '',
 }: {
   locale: AppLocale | null;
-  campagna?: string;
   className?: string;
 }) {
   const [acceso, setAcceso] = useState(false);
@@ -73,17 +67,6 @@ export default function VideoTutorial({
       </div>
 
       <p className="mt-3 text-sm leading-relaxed text-slate-600">{t.note}</p>
-      <p className="mt-1 text-xs text-slate-400">
-        {t.privacy}{' '}
-        <a
-          href={videoTutorialUrl(locale, campagna)}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="underline underline-offset-2 hover:text-slate-600"
-        >
-          YouTube
-        </a>
-      </p>
     </div>
   );
 }

@@ -791,7 +791,7 @@
     "benefits": [
       {
         "title": "Il piano più grande, non una demo",
-        "desc": "Provi GeoTapp Flow al massimo: tutti i moduli, utenti ufficio illimitati e 50 postazioni TimeTracker per la squadra, attive da subito."
+        "desc": "Provi GeoTapp Flow al massimo: tutti i moduli sono compresi, nessuno costa a parte, con utenti ufficio illimitati e 50 postazioni TimeTracker attive da subito. A parte si pagano solo le postazioni di timbratura, sul campo con TimeTracker e in ufficio dentro Flow."
       },
       {
         "title": "Nessuna carta richiesta",
@@ -1427,7 +1427,6 @@
   "videoTutorial": {
     "title": "Dal primo accesso alla prima timbratura",
     "note": "Due minuti, senza giri di parole: configuri Flow, inviti il primo dipendente e vedi la prima timbratura comparire sulla mappa.",
-    "cta": "Guarda il video, 2 minuti",
-    "privacy": "Avviando il video lo si carica da"
+    "cta": "Guarda il video, 2 minuti"
   }
 }

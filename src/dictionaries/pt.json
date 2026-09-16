@@ -1037,7 +1037,7 @@
     "benefits": [
       {
         "title": "O maior plano, não uma demo",
-        "desc": "Experimentas o GeoTapp Flow no máximo: todos os módulos, utilizadores de escritório ilimitados e 50 postos TimeTracker para a tua equipa, ativos desde o primeiro dia."
+        "desc": "Experimentas o GeoTapp Flow no máximo: todos os módulos estão incluídos, nenhum custa à parte, com utilizadores de escritório ilimitados e 50 postos TimeTracker ativos desde o primeiro dia. À parte pagam-se apenas os postos de picagem, no terreno com o TimeTracker e no escritório dentro do Flow."
       },
       {
         "title": "Sem cartão de crédito",
@@ -1427,7 +1427,6 @@
   "videoTutorial": {
     "title": "Do primeiro acesso à primeira picagem",
     "note": "Dois minutos, sem rodeios: configuras o Flow, convidas o primeiro funcionário e vês a primeira picagem a aparecer no mapa.",
-    "cta": "Ver o vídeo, 2 minutos",
-    "privacy": "Ao iniciar, o vídeo é carregado do"
+    "cta": "Ver o vídeo, 2 minutos"
   }
 }

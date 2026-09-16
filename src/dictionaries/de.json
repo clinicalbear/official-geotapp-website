@@ -791,7 +791,7 @@
     "benefits": [
       {
         "title": "Der größte Plan, keine Demo",
-        "desc": "Sie testen GeoTapp Flow in vollem Umfang: alle Module, unbegrenzte Büro-Nutzer und 50 TimeTracker-Plätze für Ihr Team, sofort aktiv."
+        "desc": "Sie testen GeoTapp Flow in vollem Umfang: alle Module sind enthalten, keines kostet extra, dazu unbegrenzte Büro-Nutzer und 50 TimeTracker-Plätze, sofort aktiv. Separat bezahlt werden nur die Stempel-Plätze, draußen mit TimeTracker und im Büro in Flow."
       },
       {
         "title": "Keine Kreditkarte nötig",
@@ -1427,7 +1427,6 @@
   "videoTutorial": {
     "title": "Von der ersten Anmeldung bis zum ersten Stempeln",
     "note": "Zwei Minuten, ohne Umschweife: Sie richten Flow ein, laden den ersten Mitarbeiter ein und sehen die erste Stempelung auf der Karte erscheinen.",
-    "cta": "Video ansehen, 2 Minuten",
-    "privacy": "Beim Start wird das Video geladen von"
+    "cta": "Video ansehen, 2 Minuten"
   }
 }

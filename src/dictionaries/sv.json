@@ -1037,7 +1037,7 @@
     "benefits": [
       {
         "title": "Den största planen, inte en demo",
-        "desc": "Du provar GeoTapp Flow på full kraft: alla moduler, obegränsade kontorsanvändare och 50 TimeTracker-platser för ditt lag, aktiva från dag ett."
+        "desc": "Du provar GeoTapp Flow på full kraft: alla moduler ingår, ingen kostar extra, med obegränsade kontorsanvändare och 50 TimeTracker-platser aktiva från dag ett. Bara stämplingsplatserna betalas separat, ute i fält med TimeTracker och på kontoret inne i Flow."
       },
       {
         "title": "Inget kreditkort krävs",
@@ -1427,7 +1427,6 @@
   "videoTutorial": {
     "title": "Från första inloggningen till första stämplingen",
     "note": "Två minuter, utan omsvep: du ställer in Flow, bjuder in din första medarbetare och ser den första stämplingen dyka upp på kartan.",
-    "cta": "Se videon, 2 minuter",
-    "privacy": "När du startar videon hämtas den från"
+    "cta": "Se videon, 2 minuter"
   }
 }

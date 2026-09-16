@@ -791,7 +791,7 @@
     "benefits": [
       {
         "title": "Het grootste plan, geen demo",
-        "desc": "Je probeert GeoTapp Flow op volle kracht: alle modules, onbeperkte kantoorgebruikers en 50 TimeTracker-plekken voor je ploeg, direct actief."
+        "desc": "Je probeert GeoTapp Flow op volle kracht: alle modules zitten erbij, geen enkele kost extra, met onbeperkte kantoorgebruikers en 50 TimeTracker-plekken die meteen actief zijn. Apart betaal je alleen de klokplekken, in het veld met TimeTracker en op kantoor in Flow."
       },
       {
         "title": "Geen creditcard nodig",
@@ -1427,7 +1427,6 @@
   "videoTutorial": {
     "title": "Van de eerste aanmelding tot het eerste inklokken",
     "note": "Twee minuten, zonder omhaal: je richt Flow in, nodigt je eerste medewerker uit en ziet de eerste klokking op de kaart verschijnen.",
-    "cta": "Bekijk de video, 2 minuten",
-    "privacy": "Bij het starten wordt de video geladen van"
+    "cta": "Bekijk de video, 2 minuten"
   }
 }

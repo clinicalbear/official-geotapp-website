@@ -1037,7 +1037,7 @@
     "benefits": [
       {
         "title": "Le plus grand plan, pas une démo",
-        "desc": "Vous essayez GeoTapp Flow à pleine puissance : tous les modules, utilisateurs bureau illimités et 50 postes TimeTracker pour votre équipe, actifs dès le premier jour."
+        "desc": "Vous essayez GeoTapp Flow à pleine puissance : tous les modules sont inclus, aucun ne coûte en plus, avec des utilisateurs bureau illimités et 50 postes TimeTracker actifs dès le premier jour. On ne paie à part que les postes de pointage, sur le terrain avec TimeTracker et au bureau dans Flow."
       },
       {
         "title": "Aucune carte bancaire requise",
@@ -1427,7 +1427,6 @@
   "videoTutorial": {
     "title": "De la première connexion au premier pointage",
     "note": "Deux minutes, sans détour : tu configures Flow, tu invites ton premier salarié et tu vois le premier pointage apparaître sur la carte.",
-    "cta": "Regarder la vidéo, 2 minutes",
-    "privacy": "En lançant la vidéo, elle est chargée depuis"
+    "cta": "Regarder la vidéo, 2 minutes"
   }
 }
