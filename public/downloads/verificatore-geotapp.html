@@ -63,6 +63,16 @@
   .esito.valid { background: var(--verde-f); color: var(--verde-t); border-color: var(--verde-b); }
   .esito.degraded { background: var(--ambra-f); color: var(--ambra-t); border-color: var(--ambra-b); }
   .esito.invalid { background: var(--rosso-f); color: var(--rosso-t); border-color: var(--rosso-b); }
+  /* A47: colore PIU' icona PIU' parola, mai il colore da solo. Chi non
+     distingue il verde dal rosso legge comunque cosa e' successo. */
+  .stato-prova {
+    display: inline-flex; align-items: center; gap: 7px;
+    border: 1px solid currentColor; border-radius: 999px;
+    padding: 3px 11px 3px 9px; margin-bottom: 12px;
+    font-size: 13px; font-weight: 700; letter-spacing: .01em;
+    background: #fff;
+  }
+  .stato-prova svg { width: 15px; height: 15px; flex: none; }
   dl { display: grid; grid-template-columns: minmax(120px, auto) 1fr; gap: 9px 20px; margin: 22px 0 0; font-size: 14px; }
   dt { color: var(--tenue); }
   dd { margin: 0; word-break: break-all; }
@@ -5863,9 +5873,21 @@ LNmrFIBX8cXgPYWilkbIuy0+s+8Kts7r20MPs8ZhOnJjE2AKpVTgykv45Q==
 // poterlo controllare nella propria, altrimenti la verifica resta un gesto di
 // fiducia verso chi gliel'ha mandato.
 // ---------------------------------------------------------------------------
+// A47: le tre icone della prova, identiche a quelle del rapportino PDF
+// (firebase-functions-clean/src/lib/statiDellaProva.ts). Tratto 1,75,
+// currentColor, nessun riempimento: si leggono anche stampate.
+const ICONE_STATO = {
+  registrato: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/></svg>',
+  sigillato: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.6l2.2 1.7 2.7-.4 1 2.6 2.4 1.3-.7 2.7.7 2.7-2.4 1.3-1 2.6-2.7-.4L12 21.4l-2.2-1.7-2.7.4-1-2.6-2.4-1.3.7-2.7-.7-2.7 2.4-1.3 1-2.6 2.7.4z"/><path d="M8.6 12.1l2.3 2.3 4.5-4.6"/></svg>',
+  fallita: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M9.2 9.2l5.6 5.6M14.8 9.2l-5.6 5.6"/></svg>',
+};
+
 const T = {
   it: {
     nome: 'Italiano',
+    // A47: i tre stati della prova, le stesse parole del
+    // rapportino PDF e di Flow.
+    stRegistrato: 'Registrato', stSigillato: 'Sigillato', stFallita: 'Verifica fallita',
     titolo: 'Verifica un rapporto GeoTapp',
     intro: 'Apri il pacchetto che hai ricevuto e questo programma ricalcola le impronte di ogni evento e di ogni foto e controlla la firma elettronica. Non serve installare niente e non serve internet: il file non lascia questo computer.',
     trascina: 'Trascina qui il pacchetto .zip',
@@ -5891,6 +5913,9 @@ const T = {
   },
   en: {
     nome: 'English',
+    // A47: i tre stati della prova, le stesse parole del
+    // rapportino PDF e di Flow.
+    stRegistrato: 'Recorded', stSigillato: 'Sealed', stFallita: 'Verification failed',
     titolo: 'Verify a GeoTapp report',
     intro: 'Open the package you received and this program recomputes the fingerprint of every event and every photo and checks the electronic signature. Nothing to install, no internet needed: the file never leaves this computer.',
     trascina: 'Drop the .zip package here',
@@ -5916,6 +5941,9 @@ const T = {
   },
   de: {
     nome: 'Deutsch',
+    // A47: i tre stati della prova, le stesse parole del
+    // rapportino PDF e di Flow.
+    stRegistrato: 'Erfasst', stSigillato: 'Gesiegelt', stFallita: 'Prüfung fehlgeschlagen',
     titolo: 'Einen GeoTapp-Bericht prüfen',
     intro: 'Öffnen Sie das erhaltene Paket: dieses Programm berechnet die Prüfsumme jedes Ereignisses und jedes Fotos neu und prüft die elektronische Signatur. Keine Installation, kein Internet nötig – die Datei verlässt diesen Rechner nicht.',
     trascina: 'Das .zip-Paket hierher ziehen',
@@ -5941,6 +5969,9 @@ const T = {
   },
   fr: {
     nome: 'Français',
+    // A47: i tre stati della prova, le stesse parole del
+    // rapportino PDF e di Flow.
+    stRegistrato: 'Enregistré', stSigillato: 'Scellé', stFallita: 'Vérification échouée',
     titolo: 'Vérifier un rapport GeoTapp',
     intro: 'Ouvrez le paquet reçu : ce programme recalcule l’empreinte de chaque événement et de chaque photo et contrôle la signature électronique. Rien à installer, pas besoin d’internet : le fichier ne quitte pas cet ordinateur.',
     trascina: 'Déposez ici le paquet .zip',
@@ -5966,6 +5997,9 @@ const T = {
   },
   es: {
     nome: 'Español',
+    // A47: i tre stati della prova, le stesse parole del
+    // rapportino PDF e di Flow.
+    stRegistrato: 'Registrado', stSigillato: 'Sellado', stFallita: 'Verificación fallida',
     titolo: 'Verifica un informe de GeoTapp',
     intro: 'Abre el paquete recibido: este programa recalcula la huella de cada evento y de cada foto y comprueba la firma electrónica. No hay que instalar nada ni hace falta internet: el archivo no sale de este ordenador.',
     trascina: 'Arrastra aquí el paquete .zip',
@@ -5991,6 +6025,9 @@ const T = {
   },
   pt: {
     nome: 'Português',
+    // A47: i tre stati della prova, le stesse parole del
+    // rapportino PDF e di Flow.
+    stRegistrato: 'Registado', stSigillato: 'Selado', stFallita: 'Verificação falhada',
     titolo: 'Verificar um relatório GeoTapp',
     intro: 'Abra o pacote recebido: este programa recalcula a impressão de cada evento e de cada foto e verifica a assinatura eletrónica. Não é preciso instalar nada nem ter internet: o ficheiro não sai deste computador.',
     trascina: 'Arraste para aqui o pacote .zip',
@@ -6016,6 +6053,9 @@ const T = {
   },
   nl: {
     nome: 'Nederlands',
+    // A47: i tre stati della prova, le stesse parole del
+    // rapportino PDF e di Flow.
+    stRegistrato: 'Vastgelegd', stSigillato: 'Verzegeld', stFallita: 'Verificatie mislukt',
     titolo: 'Een GeoTapp-rapport verifiëren',
     intro: 'Open het ontvangen pakket: dit programma berekent de vingerafdruk van elke gebeurtenis en elke foto opnieuw en controleert de elektronische handtekening. Niets te installeren, geen internet nodig: het bestand verlaat deze computer niet.',
     trascina: 'Sleep het .zip-pakket hierheen',
@@ -6041,6 +6081,9 @@ const T = {
   },
   da: {
     nome: 'Dansk',
+    // A47: i tre stati della prova, le stesse parole del
+    // rapportino PDF e di Flow.
+    stRegistrato: 'Registreret', stSigillato: 'Forseglet', stFallita: 'Verifikation mislykkedes',
     titolo: 'Verificér en GeoTapp-rapport',
     intro: 'Åbn den modtagne pakke: dette program genberegner aftrykket for hver hændelse og hvert foto og kontrollerer den elektroniske signatur. Intet skal installeres, og internet er ikke nødvendigt: filen forlader ikke denne computer.',
     trascina: 'Træk .zip-pakken hertil',
@@ -6066,6 +6109,9 @@ const T = {
   },
   sv: {
     nome: 'Svenska',
+    // A47: i tre stati della prova, le stesse parole del
+    // rapportino PDF e di Flow.
+    stRegistrato: 'Registrerad', stSigillato: 'Plomberad', stFallita: 'Verifieringen misslyckades',
     titolo: 'Verifiera en GeoTapp-rapport',
     intro: 'Öppna det mottagna paketet: programmet räknar om avtrycket för varje händelse och varje foto och kontrollerar den elektroniska signaturen. Inget behöver installeras och internet behövs inte: filen lämnar inte den här datorn.',
     trascina: 'Dra .zip-paketet hit',
@@ -6091,6 +6137,9 @@ const T = {
   },
   nb: {
     nome: 'Norsk',
+    // A47: i tre stati della prova, le stesse parole del
+    // rapportino PDF e di Flow.
+    stRegistrato: 'Registrert', stSigillato: 'Forseglet', stFallita: 'Verifiseringen mislyktes',
     titolo: 'Verifiser en GeoTapp-rapport',
     intro: 'Åpne pakken du har mottatt: programmet regner ut avtrykket for hver hendelse og hvert bilde på nytt og kontrollerer den elektroniske signaturen. Ingenting skal installeres, og internett trengs ikke: filen forlater ikke denne maskinen.',
     trascina: 'Dra .zip-pakken hit',
@@ -6116,6 +6165,9 @@ const T = {
   },
   ru: {
     nome: 'Русский',
+    // A47: i tre stati della prova, le stesse parole del
+    // rapportino PDF e di Flow.
+    stRegistrato: 'Записано', stSigillato: 'Опечатано', stFallita: 'Проверка не пройдена',
     titolo: 'Проверка отчёта GeoTapp',
     intro: 'Откройте полученный пакет: программа заново вычислит отпечаток каждого события и каждого фото и проверит электронную подпись. Устанавливать ничего не нужно, интернет не требуется: файл не покидает этот компьютер.',
     trascina: 'Перетащите сюда пакет .zip',
@@ -6241,7 +6293,17 @@ function mostra(r) {
   const id = r.companyIdentity || {};
   const s = r.summary || {};
 
+  // A47: il titolo spiega il caso preciso, la pastiglia dice quale dei tre
+  // stati e', con le stesse parole che la persona ha gia' letto sul PDF.
+  // Lo stato lo decide il SIGILLO, non l'esito generale: un pacchetto integro
+  // ma senza firma e' "Registrato", e dirgli "Sigillato" contraddirebbe il
+  // titolo che sta due righe sotto.
+  const stato = r.status === 'invalid' ? 'fallita'
+    : r.sealStatus === 'sealed' ? 'sigillato' : 'registrato';
+  const parolaStato = { registrato: t.stRegistrato, sigillato: t.stSigillato, fallita: t.stFallita }[stato];
+
   let html = '<div class="esito ' + classe + '">' +
+    '<span class="stato-prova">' + ICONE_STATO[stato] + '<span>' + esc(parolaStato) + '</span></span>' +
     '<h2>' + esc(t[chiave]) + '</h2>' +
     '<p>' + esc(t[chiave + 'Spiega']) + '</p></div>';
 
