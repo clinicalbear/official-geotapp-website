@@ -35,12 +35,19 @@ const titoliLatino = Manrope({
   adjustFontFallback: false,
 });
 
+// `preload: false` sulle due istanze cirilliche, e non e' un dettaglio.
+// next/font emette un <link rel=preload> per OGNI istanza presente nel modulo,
+// non per quella che la pagina usa: misurato in produzione il 16/09/2026,
+// /it/ e /ru/ scaricavano gli STESSI sei file, cioe' le dieci lingue latine
+// pagavano i glifi russi. Senza preload il file cirillico arriva solo quando
+// il browser incontra un glifo di quell'intervallo, cioe' solo su /ru/.
 const titoliCirillico = Manrope({
   subsets: ['latin', 'latin-ext', 'cyrillic'],
   variable: '--font-display',
   display: 'swap',
   fallback: ['system-ui', 'Segoe UI', 'Roboto', 'Arial', 'sans-serif'],
   adjustFontFallback: false,
+  preload: false,
 });
 
 const corpoLatino = Source_Sans_3({
@@ -57,6 +64,7 @@ const corpoCirillico = Source_Sans_3({
   display: 'optional',
   fallback: ['Source Sans Pro', 'system-ui', 'Segoe UI', 'Roboto', 'Arial', 'sans-serif'],
   adjustFontFallback: true,
+  preload: false,
 });
 
 // Il mono serve per il codice sigillo (8QK4-P2NX), gli hash e le coordinate:
