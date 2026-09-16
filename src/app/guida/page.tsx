@@ -14,6 +14,7 @@ import type { Components } from 'react-markdown';
 import { usePathname } from 'next/navigation';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import { getLocaleFromPathname } from '@/lib/i18n/locale-routing';
+import VideoTutorial from '@/components/VideoTutorial';
 import './l-page.css';
 
 function slugify(text: string): string {
@@ -80,6 +81,14 @@ export default function GuidePage() {
               ))}
             </aside>
             <div className="body r d1">
+              {/* In cima alla guida scritta, non in fondo: chi arriva qui ha
+                  gia' una domanda, e due minuti guardati costano meno di
+                  quaranta pagine lette. La guida resta sotto, intera. */}
+              <VideoTutorial
+                locale={locale}
+                campagna="guida"
+                className="mb-12 print:hidden"
+              />
               <ReactMarkdown components={components}>{content}</ReactMarkdown>
             </div>
           </div>

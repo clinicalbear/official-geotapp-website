@@ -1423,5 +1423,11 @@
     "copia": "Copia il codice",
     "copiato": "Copiato!",
     "fonte": "Fonte:"
+  },
+  "videoTutorial": {
+    "title": "Dal primo accesso alla prima timbratura",
+    "note": "Due minuti, senza giri di parole: configuri Flow, inviti il primo dipendente e vedi la prima timbratura comparire sulla mappa.",
+    "cta": "Guarda il video, 2 minuti",
+    "privacy": "Avviando il video lo si carica da"
   }
 }

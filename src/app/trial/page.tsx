@@ -24,6 +24,7 @@ const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || '';
 import { trackEvent, consumeTrialSource } from '@/lib/analytics';
 import { FASCE_OPERATORI, type FasciaOperatori, buildTrialPayload } from '@/lib/trial/payload';
 import { trialErrorMessage, trialErrorForAnalytics } from '@/lib/trial/errors';
+import VideoTutorial from '@/components/VideoTutorial';
 import Reviews from '@/components/Reviews';
 import LNastro from '@/components/LNastro';
 import FeaturedIn from '@/components/FeaturedIn';
@@ -294,6 +295,15 @@ export default function TrialPage() {
                         </div>
                       </div>
                     </div>
+
+                    {/* I trenta-novanta secondi in cui aspetta la mail sono
+                        l'unico momento in cui e' fermo, deciso e con gli occhi
+                        addosso. Prima qui c'era solo l'avviso sullo spam. */}
+                    <VideoTutorial
+                      locale={locale}
+                      campagna="trial-conferma"
+                      className="mt-7 text-left"
+                    />
                   </motion.div>
                 ) : (
                   <motion.form
@@ -431,6 +441,14 @@ export default function TrialPage() {
             </div>
 
             <div className="what r d1">
+              {/* Accanto al modulo, non dentro: chi sta gia' scrivendo l'email
+                  non va interrotto, ma chi sta ancora decidendo qui vede in due
+                  minuti che cosa sta per ricevere. */}
+              <VideoTutorial
+                locale={locale}
+                campagna="trial-modulo"
+                className="mb-10"
+              />
               <p className="only k"><s></s>{d.benefits_title}</p>
               <ul className="see">
                 {d.benefits.map((item: { title: string; desc: string }, i: number) => (

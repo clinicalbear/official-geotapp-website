@@ -3,5 +3,11 @@
     "us_badge": "🇬🇧 Serving UK teams - UK GDPR + Working Time Regulations compliant. GBP invoicing on request.",
     "proof_note": "Evidence captured by camera only, no continuous tracking.",
     "proof_claim": "Nothing recorded between clock-in and clock-out."
+  },
+  "videoTutorial": {
+    "title": "From first sign-in to first clock-in",
+    "note": "Two minutes, no jargon: you set up Flow, invite your first employee, and watch the first clock-in appear on the map.",
+    "cta": "Watch the video, 2 minutes",
+    "privacy": "Starting the video loads it from"
   }
 }

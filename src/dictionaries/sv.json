@@ -1423,5 +1423,11 @@
     "fonteNonUfficialeTipo_stampa": "nyhetsmedium",
     "fonteNonUfficialeTipo_banca_dati": "privat rattsdatabas",
     "fonteNonUfficialeTipo_compilazione": "privat sammanstallning"
+  },
+  "videoTutorial": {
+    "title": "Från första inloggningen till första stämplingen",
+    "note": "Två minuter, utan omsvep: du ställer in Flow, bjuder in din första medarbetare och ser den första stämplingen dyka upp på kartan.",
+    "cta": "Se videon, 2 minuter",
+    "privacy": "När du startar videon hämtas den från"
   }
 }

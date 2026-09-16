@@ -1423,5 +1423,11 @@
     "copia": "Copier le code",
     "copiato": "Copié !",
     "fonte": "Source :"
+  },
+  "videoTutorial": {
+    "title": "De la première connexion au premier pointage",
+    "note": "Deux minutes, sans détour : tu configures Flow, tu invites ton premier salarié et tu vois le premier pointage apparaître sur la carte.",
+    "cta": "Regarder la vidéo, 2 minutes",
+    "privacy": "En lançant la vidéo, elle est chargée depuis"
   }
 }

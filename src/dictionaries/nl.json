@@ -1423,5 +1423,11 @@
     "copia": "Kopieer de code",
     "copiato": "Gekopieerd!",
     "fonte": "Bron:"
+  },
+  "videoTutorial": {
+    "title": "Van de eerste aanmelding tot het eerste inklokken",
+    "note": "Twee minuten, zonder omhaal: je richt Flow in, nodigt je eerste medewerker uit en ziet de eerste klokking op de kaart verschijnen.",
+    "cta": "Bekijk de video, 2 minuten",
+    "privacy": "Bij het starten wordt de video geladen van"
   }
 }

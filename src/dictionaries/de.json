@@ -1423,5 +1423,11 @@
     "copia": "Code kopieren",
     "copiato": "Kopiert!",
     "fonte": "Quelle:"
+  },
+  "videoTutorial": {
+    "title": "Von der ersten Anmeldung bis zum ersten Stempeln",
+    "note": "Zwei Minuten, ohne Umschweife: Sie richten Flow ein, laden den ersten Mitarbeiter ein und sehen die erste Stempelung auf der Karte erscheinen.",
+    "cta": "Video ansehen, 2 Minuten",
+    "privacy": "Beim Start wird das Video geladen von"
   }
 }

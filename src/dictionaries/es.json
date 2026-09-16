@@ -1423,5 +1423,11 @@
     "copia": "Copiar el código",
     "copiato": "¡Copiado!",
     "fonte": "Fuente:"
+  },
+  "videoTutorial": {
+    "title": "Del primer acceso al primer fichaje",
+    "note": "Dos minutos, sin rodeos: configuras Flow, invitas al primer empleado y ves el primer fichaje aparecer en el mapa.",
+    "cta": "Ver el vídeo, 2 minutos",
+    "privacy": "Al iniciar el vídeo se carga desde"
   }
 }
