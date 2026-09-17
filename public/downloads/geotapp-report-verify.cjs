@@ -12941,10 +12941,13 @@ function buildContext(artifact) {
     const rawMeta = rawEvent;
     const meta = Array.isArray(rawMeta.photosMeta) ? rawMeta.photosMeta : Array.isArray(rawMeta.metadata?.["photoFiles"]) ? rawMeta.metadata["photoFiles"] : [];
     if (!meta.length) continue;
+    const proofIdGrezzo = String(
+      rawMeta.metadata?.["proofId"] ?? rawEvent.eventId ?? ""
+    );
     for (let i = 0; i < meta.length; i++) {
       const pm = meta[i];
       photos.push({
-        proofId: String(rawEvent.eventId ?? ""),
+        proofId: proofIdGrezzo,
         proofTimestamp: normalizeTimestamp(String(rawEvent.timestamp ?? "")),
         photoOrder: i + 1,
         photoId: String(pm["photoId"] ?? ""),
