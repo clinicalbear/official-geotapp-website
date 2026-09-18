@@ -1,8 +1,16 @@
 /**
  * Il video di avvio: dal primo accesso alla prima timbratura, due minuti.
  *
- * Gli undici id sono quelli caricati sul canale GeoTapp Official il 16/09/2026,
- * letti dall'API del canale e non trascritti da una pagina aperta a mano.
+ * 🔴 Dal 18/09/2026 NON passa piu' da YouTube: il file lo serviamo noi da
+ * public/video/, come il giro completo. Cosi' chi apre la pagina del trial non
+ * finisce su Google nel momento in cui preme play, e il video resta nostro
+ * anche il giorno in cui il canale non c'e' piu'. Si rifanno con
+ * scripts/prepara-tutorial.py, che li prende dal montaggio in geotapp-reel.
+ *
+ * Gli undici id di YouTube restano qui perche' le stesse voci stanno anche
+ * sul canale, e servono a dichiarare `embedUrl` nei dati strutturati e a
+ * linkare la copia pubblica. Sono stati letti dall'API del canale, non
+ * trascritti da una pagina aperta a mano.
  *
  * Il sito ha sedici locali ma le lingue vere sono undici: le cinque varianti
  * inglesi (US, UK, AU, IE, CA) guardano lo stesso video inglese. Quindi la
@@ -38,7 +46,22 @@ export function videoTutorialId(locale?: AppLocale | string | null): string {
   return VIDEO_TUTORIAL_IDS[linguaVideo(locale)];
 }
 
-/** La locandina: un fotogramma vero del video di QUELLA lingua, servito da noi. */
+/** La locandina della lingua, disegnata (non e' un fotogramma) e servita da noi. */
 export function videoTutorialPoster(locale?: AppLocale | string | null): string {
   return `/video/tutorial-${linguaVideo(locale)}.jpg`;
+}
+
+/** Il file vero, quello che serviamo noi. */
+export function videoTutorialSrc(locale?: AppLocale | string | null): string {
+  return `/video/tutorial-${linguaVideo(locale)}.mp4`;
+}
+
+/** I sottotitoli, ricavati dal parlato e dai tempi del montaggio. */
+export function videoTutorialSottotitoli(locale?: AppLocale | string | null): string {
+  return `/video/tutorial-${linguaVideo(locale)}.vtt`;
+}
+
+/** La stessa voce su YouTube: si linka, non si incorpora. */
+export function videoTutorialYouTube(locale?: AppLocale | string | null): string {
+  return `https://www.youtube.com/watch?v=${videoTutorialId(locale)}`;
 }

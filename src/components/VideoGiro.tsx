@@ -13,6 +13,8 @@ import {
   orologio,
 } from '@/lib/video-giro';
 import { GIRO_CONTENUTI } from '@/lib/video-giro-contenuti';
+import { rendiScorribile, scorribile } from '@/lib/video-scorribile';
+import { contaVideo } from '@/lib/video-conteggio';
 
 /**
  * Il giro completo: ottanta secondi di turno vero, nella lingua di chi guarda.
@@ -74,53 +76,25 @@ export default function VideoGiro({
     }
   }, []);
 
-  /** Il video si puo' spostare? In produzione, appena servito, no. */
-  const scorribile = (el: HTMLVideoElement) =>
-    el.seekable.length > 0 && el.seekable.end(el.seekable.length - 1) > 1;
-
   /**
-   * Prende il file intero e ci passa sopra, cosi' il lettore si puo' spostare.
-   * Costa una fetch che la cache del browser serve da sola (il file e' marcato
-   * `immutable` per trenta giorni), e si fa una volta sola.
+   * La copia locale che rende il lettore scorribile: perche' serva, e perche'
+   * in locale non si veda, sta scritto in src/lib/video-scorribile.ts.
    */
-  const rendiScorribile = useCallback(async (secondo: number) => {
+  const rendiLocale = useCallback(async (secondo: number) => {
     const el = video.current;
     if (!el || blob.current || scorribile(el)) return false;
-    try {
-      const risposta = await fetch(giroVideoSrc(locale));
-      if (!risposta.ok) return false;
-      const dati = await risposta.blob();
-      if (!video.current) return false;
-      blob.current = URL.createObjectURL(dati);
-      const eraMuto = el.muted;
-      const dove = Math.max(secondo, el.currentTime);
-      const rete = giroVideoSrc(locale);
-      el.src = blob.current;
-      // Se il file locale non si apre entro cinque secondi si torna a quello
-      // di rete: meglio un video che non si sposta che un lettore nero.
-      const pronto = await new Promise<boolean>((risolvi) => {
-        const attesa = setTimeout(() => risolvi(false), 5000);
-        el.addEventListener('loadedmetadata', () => { clearTimeout(attesa); risolvi(true); }, { once: true });
-      });
-      if (!pronto) {
-        URL.revokeObjectURL(blob.current);
-        blob.current = null;
-        el.src = rete;
-        el.currentTime = 0;
-        sottotitoli(eraMuto);
-        await el.play().catch(() => undefined);
-        return false;
-      }
-      el.muted = eraMuto;
-      el.currentTime = dove;
-      // Cambiando sorgente la traccia dei sottotitoli riparte spenta.
-      sottotitoli(eraMuto);
-      await el.play().catch(() => undefined);
-      return true;
-    } catch {
-      return false;
-    }
+    const url = await rendiScorribile(el, giroVideoSrc(locale), secondo, () => sottotitoli(el.muted));
+    if (!url) return false;
+    blob.current = url;
+    return true;
   }, [locale, sottotitoli]);
+
+  // Quante volte parte e per quanto lo guardano: vedi src/lib/video-conteggio.ts.
+  useEffect(() => {
+    const el = video.current;
+    if (!el) return;
+    return contaVideo(el, 'giro', locale);
+  }, [locale]);
 
   useEffect(() => {
     const el = video.current;
@@ -148,12 +122,12 @@ export default function VideoGiro({
           // modo di aprire al secondo giusto invece che all'inizio. Gli altri
           // partono subito, e il file si sostituisce mentre guardano.
           if (inizio > 0) {
-            rendiScorribile(inizio).then((fatto) => {
+            rendiLocale(inizio).then((fatto) => {
               if (!fatto) el.play().catch(() => setFermo(true));
             });
           } else {
             el.play().catch(() => setFermo(true));
-            el.addEventListener('playing', () => { void rendiScorribile(0); }, { once: true });
+            el.addEventListener('playing', () => { void rendiLocale(0); }, { once: true });
           }
         } else if (!el.paused) {
           el.pause();
@@ -166,7 +140,7 @@ export default function VideoGiro({
       osservatore.disconnect();
       if (blob.current) URL.revokeObjectURL(blob.current);
     };
-  }, [sottotitoli, inizio, rendiScorribile]);
+  }, [sottotitoli, inizio, rendiLocale]);
 
   const accendi = () => {
     const el = video.current;
@@ -186,7 +160,7 @@ export default function VideoGiro({
     gia.current = true;
     setFermo(false);
     if (!scorribile(el) && !blob.current) {
-      const fatto = await rendiScorribile(secondo);
+      const fatto = await rendiLocale(secondo);
       if (fatto) return;
     }
     el.currentTime = secondo;
