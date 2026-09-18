@@ -16,6 +16,13 @@ vuoti e non si leggono nemmeno.
 
 Fratello di fetch_consent_stats.py nella skill /google, stesso namespace e
 stesso modo di paginare; cambia solo il prefisso, `v:` invece di `e:`.
+
+🔴 Questo e' lo sguardo veloce da dentro il repo. Nel report SEO i numeri li
+porta la skill /google (STEP 2t), con
+`~/.claude/skills/google/scripts/fetch_video_stats.py`, che legge le stesse
+chiavi e le restituisce in JSON con mediane, percentuale di filmato guardato e
+quanti arrivano in fondo. Se si cambia la forma delle chiavi, vanno aggiornati
+tutti e due.
 """
 import argparse
 import collections
