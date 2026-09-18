@@ -25,8 +25,10 @@ import {
 } from '@/lib/i18n/locale-routing';
 import { trackEvent } from '@/lib/analytics';
 import LNastro from '@/components/LNastro';
+import { GIRO_INIZIO_FLOW } from '@/lib/video-giro';
 
 const FeaturedIn = dynamic(() => import('@/components/FeaturedIn'), { ssr: true });
+const VideoGiro = dynamic(() => import('@/components/VideoGiro'), { ssr: true });
 import { featuredLabel } from '@/lib/press/labels';
 
 const LA_PROVA: Record<string, string> = {
@@ -277,6 +279,7 @@ export default function GeoTappApp() {
       ];
 
   const c = GPS_PRIVACY_CONTENT[currentLocale] ?? GPS_PRIVACY_CONTENT['en']!;
+  const vg = dict.videoGiro;
   const complianceKicker = isItalian ? 'Compliance automatica' : 'Automatic compliance';
   const complianceTagline = isItalian
     ? 'Timbri in regola dal primo giorno, o non timbri.*'
@@ -392,6 +395,17 @@ export default function GeoTappApp() {
       <section className="shot"><div className="wn"><div className="frame r-s">
         <div className="browser"><ScreenCarousel isItalian={isItalian} /></div>
       </div></div></section>
+
+      {/* IL GIRO COMPLETO — entra dall'atto in cui la prova arriva in ufficio da
+          sola, che e' la cosa che riguarda Flow. Muto, parte da solo. */}
+      <section className="sec"><div className="wn">
+        <p className="kk k">{vg.kicker}</p>
+        <h2 className="r" style={{ fontSize: 'clamp(24px,2.6vw,38px)', margin: '10px 0 24px' }}>{vg.title}</h2>
+        <VideoGiro locale={currentLocale} inizio={GIRO_INIZIO_FLOW} />
+        <p style={{ marginTop: 16 }}>
+          <Link className="b2" href={getLink('/video')}>{vg.pageLink}</Link>
+        </p>
+      </div></section>
 
       {/* STATO PIATTAFORMA */}
       <section className="sec l-note" style={{ paddingBottom: 0 }}>

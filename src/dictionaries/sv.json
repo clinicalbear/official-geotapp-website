@@ -1428,5 +1428,33 @@
     "title": "Från första inloggningen till första stämplingen",
     "note": "Två minuter, utan omsvep: du ställer in Flow, bjuder in din första medarbetare och ser den första stämplingen dyka upp på kartan.",
     "cta": "Se videon, 2 minuter"
+  },
+  "videoGiro": {
+    "kicker": "Se det arbeta",
+    "title": "Ett skift, åttio sekunder, inget iscensatt",
+    "note": "En riktig telefon på platsen och en riktig skärm på kontoret, inspelade i samma ögonblick. Ljudet börjar avstängt, och undertexterna bär orden tills du skruvar upp.",
+    "audioOn": "Slå på ljudet",
+    "audioOff": "Stäng av ljudet",
+    "play": "Se filmen, 80 sekunder",
+    "chapters": "Hoppa till",
+    "pageLink": "Hela skiftet, akt för akt",
+    "youtube": "Se den på YouTube",
+    "posterAlt": "Ett skift med GeoTapp, från stämpling till förseglad rapport, på åttio sekunder",
+    "page": {
+      "metaTitle": "GeoTapp i arbete: ett helt skift på 80 sekunder",
+      "metaDescription": "En montör stämplar in, fotograferar ett fel, skickar beviset, stämplar ut. Uppdraget stängs och kunden kontrollerar själv den förseglade rapporten, offline.",
+      "h1": "Ett helt skift, från första trycket till rapporten kunden kontrollerar själv",
+      "intro": "Här är ingenting arrangerat. Telefonen filmades på platsen medan skärmen på kontoret gick i samma ögonblick, och de två inspelningarna lades på samma tidslinje efter klockan, så det du ser hända på fem sekunder tog fem sekunder.",
+      "intro2": "Ljudet börjar avstängt, för ingen vill ha en sida som börjar prata av sig själv. Orden kommer från undertexterna, tills du väljer att skruva upp.",
+      "actsTitle": "De sju akterna",
+      "transcriptTitle": "Vad filmen säger",
+      "transcriptNote": "Samma ord som rösten, att läsa.",
+      "honestyTitle": "Vad den här filmen är, och vad den inte är",
+      "honesty": "Skiftets data är testdata, och de två bilderna på elcentralen är utbytta i klippningen, eftersom bevisen togs med täckt objektiv. Programmets beteende är det verkliga, inspelat utan retusch. Positionen skrivs vid stämplingen och aldrig däremellan, och ett förseglat paket hjälper till att visa att det som lämnats inte har rörts, men utgör inte i sig ett absolut bevis för det underliggande förhållandet och är inte juridisk rådgivning.",
+      "ctaTitle": "Fjorton dagar, på dina egna skift",
+      "ctaText": "Samma skift går på dina uppdrag, med din telefon, i fjorton dagar och utan kort.",
+      "youtubeNote": "Den finns också på YouTube, på elva språk."
+    },
+    "captions": "Undertexter"
   }
 }

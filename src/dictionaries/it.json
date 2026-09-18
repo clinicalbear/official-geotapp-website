@@ -1428,5 +1428,33 @@
     "title": "Dal primo accesso alla prima timbratura",
     "note": "Due minuti, senza giri di parole: configuri Flow, inviti il primo dipendente e vedi la prima timbratura comparire sulla mappa.",
     "cta": "Guarda il video, 2 minuti"
+  },
+  "videoGiro": {
+    "kicker": "Guardalo funzionare",
+    "title": "Un turno, ottanta secondi, niente di ricostruito",
+    "note": "Un telefono vero in cantiere e uno schermo vero in ufficio, ripresi nello stesso momento. L'audio parte spento, e le parole le portano i sottotitoli finché non lo alzi.",
+    "audioOn": "Accendi l'audio",
+    "audioOff": "Togli l'audio",
+    "play": "Guarda il video, 80 secondi",
+    "chapters": "Salta a",
+    "pageLink": "Il giro intero, atto per atto",
+    "youtube": "Guardalo su YouTube",
+    "posterAlt": "Un turno su GeoTapp, dalla timbratura al report sigillato, in ottanta secondi",
+    "page": {
+      "metaTitle": "Guarda GeoTapp al lavoro: un turno intero in 80 secondi",
+      "metaDescription": "Un operaio timbra, fotografa un guasto, invia la prova, timbra l'uscita. La commessa si chiude e il cliente verifica da solo il report sigillato, offline. Ottanta secondi.",
+      "h1": "Un turno intero, dal primo tocco al report che il cliente verifica da solo",
+      "intro": "Qui dentro non c'è niente di finto. Il telefono è stato ripreso in cantiere mentre lo schermo dell'ufficio veniva ripreso nello stesso momento, e le due riprese sono state messe sulla stessa linea del tempo con l'orologio, così quello che vedi succedere in cinque secondi è durato cinque secondi.",
+      "intro2": "L'audio parte spento, perché una pagina che si mette a parlare da sola non la vuole nessuno. Le parole le portano i sottotitoli, finché non decidi tu di alzare il volume.",
+      "actsTitle": "I sette atti",
+      "transcriptTitle": "Quello che dice il video",
+      "transcriptNote": "Le stesse parole della voce, da leggere.",
+      "honestyTitle": "Cos'è questo video, e cosa non è",
+      "honesty": "I dati del turno sono di prova, e le due fotografie del quadro elettrico sono sostituite in montaggio, perché le prove sono state scattate con l'obiettivo coperto. Il comportamento del software è quello vero, ripreso senza ritocchi. La posizione si scrive all'atto della timbratura e mai nel mezzo, e un pacchetto sigillato aiuta a mostrare che quello che è stato consegnato non è stato toccato, ma da solo non è prova assoluta del fatto materiale e non è consulenza legale.",
+      "ctaTitle": "Quattordici giorni, sui tuoi turni",
+      "ctaText": "Lo stesso giro gira sulle tue commesse, col tuo telefono, per quattordici giorni e senza carta.",
+      "youtubeNote": "Sta anche su YouTube, in undici lingue."
+    },
+    "captions": "Sottotitoli"
   }
 }

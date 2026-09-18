@@ -1428,5 +1428,33 @@
     "title": "Fra første login til første stempling",
     "note": "To minutter, uden omsvøb: du sætter Flow op, inviterer din første medarbejder og ser den første stempling dukke op på kortet.",
     "cta": "Se videoen, 2 minutter"
+  },
+  "videoGiro": {
+    "kicker": "Se det arbejde",
+    "title": "En vagt, firs sekunder, intet iscenesat",
+    "note": "En rigtig telefon på pladsen og en rigtig skærm på kontoret, optaget i samme øjeblik. Lyden starter slukket, og underteksterne bærer ordene, indtil du skruer op.",
+    "audioOn": "Slå lyden til",
+    "audioOff": "Slå lyden fra",
+    "play": "Se videoen, 80 sekunder",
+    "chapters": "Hop til",
+    "pageLink": "Hele vagten, akt for akt",
+    "youtube": "Se den på YouTube",
+    "posterAlt": "En vagt med GeoTapp, fra stempling til forseglet rapport, på firs sekunder",
+    "page": {
+      "metaTitle": "GeoTapp i arbejde: en hel vagt på 80 sekunder",
+      "metaDescription": "En montør stempler ind, fotograferer en fejl, sender beviset, stempler ud. Opgaven lukkes, og kunden kontrollerer selv den forseglede rapport, offline.",
+      "h1": "En hel vagt, fra det første tryk til rapporten kunden selv kontrollerer",
+      "intro": "Her er intet stillet op. Telefonen blev filmet på pladsen, mens skærmen på kontoret kørte i samme øjeblik, og de to optagelser blev lagt på den samme tidslinje efter uret, så det du ser ske på fem sekunder også tog fem sekunder.",
+      "intro2": "Lyden starter slukket, for ingen har lyst til en side, der begynder at tale af sig selv. Ordene kommer fra underteksterne, indtil du selv skruer op.",
+      "actsTitle": "De syv akter",
+      "transcriptTitle": "Hvad videoen siger",
+      "transcriptNote": "De samme ord som stemmen, til at læse.",
+      "honestyTitle": "Hvad denne video er, og hvad den ikke er",
+      "honesty": "Vagtens data er testdata, og de to billeder af eltavlen er skiftet ud i klipningen, fordi beviserne blev taget med dækket objektiv. Softwarens adfærd er den rigtige, optaget uden retouchering. Positionen skrives ved stemplingen og aldrig derimellem, og en forseglet pakke hjælper med at vise, at der ikke er rørt ved det udleverede, men den er ikke i sig selv et absolut bevis for det underliggende forhold, og den er ikke juridisk rådgivning.",
+      "ctaTitle": "Fjorten dage, på dine egne vagter",
+      "ctaText": "Den samme vagt kører på dine opgaver, med din telefon, i fjorten dage og uden kort.",
+      "youtubeNote": "Den ligger også på YouTube, på elleve sprog."
+    },
+    "captions": "Undertekster"
   }
 }

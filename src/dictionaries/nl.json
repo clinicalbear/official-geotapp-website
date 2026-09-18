@@ -1428,5 +1428,33 @@
     "title": "Van de eerste aanmelding tot het eerste inklokken",
     "note": "Twee minuten, zonder omhaal: je richt Flow in, nodigt je eerste medewerker uit en ziet de eerste klokking op de kaart verschijnen.",
     "cta": "Bekijk de video, 2 minuten"
+  },
+  "videoGiro": {
+    "kicker": "Zie het werken",
+    "title": "Eén dienst, tachtig seconden, niets nagespeeld",
+    "note": "Een echte telefoon op de werf en een echt scherm op kantoor, op hetzelfde moment opgenomen. Het geluid begint uit, en de ondertitels dragen de woorden tot je het aanzet.",
+    "audioOn": "Geluid aanzetten",
+    "audioOff": "Geluid uitzetten",
+    "play": "Bekijk de video, 80 seconden",
+    "chapters": "Ga naar",
+    "pageLink": "De hele ronde, akte na akte",
+    "youtube": "Bekijk het op YouTube",
+    "posterAlt": "Een dienst met GeoTapp, van het inklokken tot het verzegelde rapport, in tachtig seconden",
+    "page": {
+      "metaTitle": "GeoTapp aan het werk: een hele dienst in 80 seconden",
+      "metaDescription": "Een monteur klokt in, fotografeert een defect, stuurt het bewijs, klokt uit. De klus sluit en de klant controleert het verzegelde rapport zelf, offline.",
+      "h1": "Een hele dienst, van de eerste tik tot het rapport dat de klant zelf controleert",
+      "intro": "Hier is niets in scène gezet. De telefoon is op de werf gefilmd terwijl het scherm op kantoor op datzelfde moment liep, en de twee opnames zijn met de klok op één tijdlijn gelegd, zodat wat je in vijf seconden ziet gebeuren ook vijf seconden duurde.",
+      "intro2": "Het geluid begint uit, want niemand wil een pagina die uit zichzelf begint te praten. De woorden komen van de ondertitels, tot jij besluit het volume open te draaien.",
+      "actsTitle": "De zeven aktes",
+      "transcriptTitle": "Wat de video zegt",
+      "transcriptNote": "Dezelfde woorden als de stem, om te lezen.",
+      "honestyTitle": "Wat deze video is, en wat niet",
+      "honesty": "De dienstgegevens zijn testgegevens, en de twee foto's van de verdeelkast zijn in de montage vervangen, omdat de bewijzen met afgedekte lens zijn gemaakt. Het gedrag van de software is het echte, opgenomen zonder retouche. De locatie wordt bij het klokken weggeschreven en nooit daartussen, en een verzegeld pakket helpt te laten zien dat er aan het geleverde niets is veranderd, al is het op zichzelf geen absoluut bewijs van het onderliggende feit en geen juridisch advies.",
+      "ctaTitle": "Veertien dagen, op je eigen diensten",
+      "ctaText": "Dezelfde ronde loopt op jouw klussen, met jouw telefoon, veertien dagen lang en zonder kaart.",
+      "youtubeNote": "Hij staat ook op YouTube, in elf talen."
+    },
+    "captions": "Ondertiteling"
   }
 }

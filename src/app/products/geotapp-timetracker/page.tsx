@@ -20,6 +20,8 @@ import {
   localizePath,
 } from '@/lib/i18n/locale-routing';
 import { trackEvent } from '@/lib/analytics';
+import VideoGiro from '@/components/VideoGiro';
+import { GIRO_INIZIO_TIMETRACKER } from '@/lib/video-giro';
 
 // Kicker "La prova", stessa parola gia' approvata su HomeClient (L_COPY.la_prova).
 const LA_PROVA: Record<string, string> = {
@@ -54,6 +56,7 @@ export default function GeoTappApp() {
   });
   const getSystem = (id: string) => systems.find((s) => s.id === id)!;
   const getLink = (path: string) => localizePath(path, currentLocale);
+  const vg = dict.videoGiro;
 
   const releaseNote = isItalian
     ? 'Le app native Android e iOS sono disponibili sugli store e tengono i dati del campo collegati a Flow in tempo reale.'
@@ -193,6 +196,17 @@ export default function GeoTappApp() {
           <img src="/TT2.webp" alt="GeoTapp TimeTracker - Menu" loading="lazy" />
         </div></div>
       </div></div></section>
+
+      {/* IL GIRO COMPLETO — parte dall'atto del telefono, che e' questa app:
+          il tocco che apre il turno e l'ufficio che se ne accorge da solo. */}
+      <section className="sec"><div className="wn">
+        <p className="kk k">{vg.kicker}</p>
+        <h2 className="r" style={{ fontSize: 'clamp(24px,2.6vw,38px)', margin: '10px 0 24px' }}>{vg.title}</h2>
+        <VideoGiro locale={currentLocale} inizio={GIRO_INIZIO_TIMETRACKER} />
+        <p style={{ marginTop: 16 }}>
+          <Link className="b2" href={getLink('/video')}>{vg.pageLink}</Link>
+        </p>
+      </div></section>
 
       {/* STATO PIATTAFORMA */}
       <section className="sec l-note" style={{ paddingBottom: 0 }}>

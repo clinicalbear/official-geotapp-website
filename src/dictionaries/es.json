@@ -1428,5 +1428,33 @@
     "title": "Del primer acceso al primer fichaje",
     "note": "Dos minutos, sin rodeos: configuras Flow, invitas al primer empleado y ves el primer fichaje aparecer en el mapa.",
     "cta": "Ver el vídeo, 2 minutos"
+  },
+  "videoGiro": {
+    "kicker": "Míralo funcionar",
+    "title": "Una jornada, ochenta segundos, nada recreado",
+    "note": "Un teléfono real en la obra y una pantalla real en la oficina, grabados en el mismo momento. El sonido arranca apagado, y los subtítulos llevan las palabras hasta que lo subas.",
+    "audioOn": "Activar el sonido",
+    "audioOff": "Quitar el sonido",
+    "play": "Ver el vídeo, 80 segundos",
+    "chapters": "Ir a",
+    "pageLink": "La jornada entera, acto por acto",
+    "youtube": "Verlo en YouTube",
+    "posterAlt": "Una jornada con GeoTapp, del fichaje al informe sellado, en ochenta segundos",
+    "page": {
+      "metaTitle": "GeoTapp trabajando: una jornada entera en 80 segundos",
+      "metaDescription": "Un operario ficha, fotografía una avería, envía la prueba, ficha la salida. El trabajo se cierra y el cliente verifica solo el informe sellado, sin conexión.",
+      "h1": "Una jornada entera, del primer toque al informe que el cliente verifica solo",
+      "intro": "Aquí no hay nada de atrezo. El teléfono se grabó en la obra mientras la pantalla de la oficina se grababa en el mismo momento, y las dos tomas se pusieron en la misma línea de tiempo con el reloj, así que lo que ves pasar en cinco segundos duró cinco segundos.",
+      "intro2": "El sonido arranca apagado, porque nadie quiere una página que se ponga a hablar sola. Las palabras las llevan los subtítulos, hasta que decidas subir el volumen.",
+      "actsTitle": "Los siete actos",
+      "transcriptTitle": "Lo que dice el vídeo",
+      "transcriptNote": "Las mismas palabras de la voz, para leerlas.",
+      "honestyTitle": "Qué es este vídeo, y qué no es",
+      "honesty": "Los datos de la jornada son de prueba, y las dos fotografías del cuadro eléctrico están sustituidas en el montaje, porque las pruebas se hicieron con el objetivo tapado. El comportamiento del software es el real, grabado sin retoques. La ubicación se escribe en el momento del fichaje y nunca en medio, y un paquete sellado ayuda a mostrar que lo entregado no se ha tocado, aunque por sí solo no es prueba absoluta del hecho material ni asesoramiento legal.",
+      "ctaTitle": "Catorce días, sobre tus propias jornadas",
+      "ctaText": "La misma jornada corre sobre tus trabajos, con tu teléfono, durante catorce días y sin tarjeta.",
+      "youtubeNote": "También está en YouTube, en once idiomas."
+    },
+    "captions": "Subtítulos"
   }
 }

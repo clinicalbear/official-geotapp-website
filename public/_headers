@@ -2,9 +2,6 @@
 # so we avoid a catch-all /* and let unmatched paths fall through to Worker headers).
 # Global security header still applied via catch-all without Cache-Control.
 
-/videoHero.mp4
-  Cache-Control: public, max-age=2592000, immutable
-
 /screen_dashboard.png
   Cache-Control: public, max-age=2592000
 
@@ -21,6 +18,15 @@
   Cache-Control: public, max-age=2592000
 
 /*.svg
+  Cache-Control: public, max-age=2592000
+
+# Il giro completo: undici file da ~2,9 MB che non cambiano mai (se cambiano,
+# cambia anche il nome). Senza questa riga il bordo li riscarica, e su mobile
+# si paga due volte. I .jpg delle locandine li prende gia' la regola sopra.
+/*.mp4
+  Cache-Control: public, max-age=2592000, immutable
+
+/*.vtt
   Cache-Control: public, max-age=2592000
 
 /*.woff2

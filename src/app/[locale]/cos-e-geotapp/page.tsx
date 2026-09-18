@@ -1,9 +1,11 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
+import { getDictionary } from '@/lib/i18n/dictionaries';
 import { translatePath } from '@/lib/i18n/slug-map';
 import type { AppLocale } from '@/lib/i18n/config';
 import LNastro from '@/components/LNastro';
+import VideoGiro from '@/components/VideoGiro';
 import FeaturedIn from '@/components/FeaturedIn';
 import { featuredLabel } from '@/lib/press/labels';
 
@@ -425,6 +427,7 @@ export default async function CosEGeoTappPage({ params }: { params: Promise<{ lo
   const { locale } = await params;
   const copy = getCopy(locale);
   const trialHref = `/${locale}${translatePath('/trial/', locale as AppLocale)}`;
+  const vg = getDictionary(locale as AppLocale).videoGiro;
 
   const organizationSchema = {
     '@context': 'https://schema.org',
@@ -515,6 +518,17 @@ export default async function CosEGeoTappPage({ params }: { params: Promise<{ lo
             </div>
           </div>
         </section>
+
+        {/* ── il giro completo: la pagina spiega cos'e' GeoTapp a parole, e
+             questi ottanta secondi lo fanno vedere prima di spiegarlo ── */}
+        <section className="sec"><div className="wn">
+          <p className="kk k">{vg.kicker}</p>
+          <h2 className="r" style={{ fontSize: 'clamp(24px,2.6vw,38px)', margin: '10px 0 24px' }}>{vg.title}</h2>
+          <VideoGiro locale={locale as AppLocale} />
+          <p style={{ marginTop: 16 }}>
+            <Link className="b2" href={`/${locale}${translatePath('/video/', locale as AppLocale)}`}>{vg.pageLink}</Link>
+          </p>
+        </div></section>
 
         {/* ── i tre moduli (h2 + h3 invariati) ── */}
         <section className="sec warm"><div className="w">

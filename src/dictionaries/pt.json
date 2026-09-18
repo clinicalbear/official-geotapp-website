@@ -1428,5 +1428,33 @@
     "title": "Do primeiro acesso à primeira picagem",
     "note": "Dois minutos, sem rodeios: configuras o Flow, convidas o primeiro funcionário e vês a primeira picagem a aparecer no mapa.",
     "cta": "Ver o vídeo, 2 minutos"
+  },
+  "videoGiro": {
+    "kicker": "Vê-o a funcionar",
+    "title": "Um turno, oitenta segundos, nada recriado",
+    "note": "Um telefone real na obra e um ecrã real no escritório, gravados no mesmo momento. O som começa desligado, e as legendas levam as palavras até o subires.",
+    "audioOn": "Ligar o som",
+    "audioOff": "Desligar o som",
+    "play": "Ver o vídeo, 80 segundos",
+    "chapters": "Ir para",
+    "pageLink": "O turno inteiro, ato a ato",
+    "youtube": "Ver no YouTube",
+    "posterAlt": "Um turno com o GeoTapp, da picagem ao relatório selado, em oitenta segundos",
+    "page": {
+      "metaTitle": "GeoTapp a trabalhar: um turno inteiro em 80 segundos",
+      "metaDescription": "Um técnico pica, fotografa uma avaria, envia a prova, pica a saída. A obra fecha e o cliente verifica sozinho o relatório selado, offline.",
+      "h1": "Um turno inteiro, do primeiro toque ao relatório que o cliente verifica sozinho",
+      "intro": "Aqui não há nada encenado. O telefone foi filmado na obra enquanto o ecrã do escritório corria no mesmo momento, e as duas gravações foram postas na mesma linha de tempo pelo relógio, de modo que o que vês acontecer em cinco segundos demorou cinco segundos.",
+      "intro2": "O som começa desligado, porque ninguém quer uma página que se põe a falar sozinha. As palavras vêm das legendas, até decidires subir o volume.",
+      "actsTitle": "Os sete atos",
+      "transcriptTitle": "O que o vídeo diz",
+      "transcriptNote": "As mesmas palavras da voz, para ler.",
+      "honestyTitle": "O que este vídeo é, e o que não é",
+      "honesty": "Os dados do turno são de teste, e as duas fotografias do quadro elétrico estão substituídas na montagem, porque as provas foram tiradas com a objetiva tapada. O comportamento do software é o real, gravado sem retoques. A localização é escrita no momento da picagem e nunca pelo meio, e um pacote selado ajuda a mostrar que o que foi entregue não foi mexido, embora por si só não seja prova absoluta do facto material nem aconselhamento jurídico.",
+      "ctaTitle": "Catorze dias, nos teus próprios turnos",
+      "ctaText": "O mesmo turno corre nas tuas obras, com o teu telefone, durante catorze dias e sem cartão.",
+      "youtubeNote": "Está também no YouTube, em onze línguas."
+    },
+    "captions": "Legendas"
   }
 }

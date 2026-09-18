@@ -28,6 +28,7 @@ import { featuredLabel } from '@/lib/press/labels';
 const TrustBar = dynamic(() => import('@/components/TrustBar'), { ssr: true });
 const RoiMini = dynamic(() => import('@/components/RoiMini'), { ssr: true });
 const DemoReportBanner = dynamic(() => import('@/components/DemoReportBanner'), { ssr: true });
+const VideoGiro = dynamic(() => import('@/components/VideoGiro'), { ssr: true });
 
 const DIFF_COPY: Record<string, { h2_1: string; h2_2: string; desc: string; link: string }> = {
   it: { h2_1: 'Tutto quello che fanno loro, lo facciamo anche noi.', h2_2: 'Ma quello che facciamo noi, loro non possono.', desc: 'Timbratura GPS, CRM, gestione squadre: sì, facciamo tutto questo. Ma quando il cliente contesta, gli altri ti lasciano con un foglio Excel. Noi ti diamo un report sigillato, non alterabile, verificabile da chiunque, e la discussione finisce lì.', link: 'Scopri la differenza' },
@@ -110,6 +111,7 @@ export default function Home({ jrSlot, fqSlot }: { jrSlot?: ReactNode; fqSlot?: 
   const getLink = (path: string) => localizePath(path, currentLocale);
   const D = DIFF_COPY[currentLocale] ?? DIFF_COPY.en;
   const L = L_COPY[currentLocale] ?? L_COPY.en;
+  const VG = dict.videoGiro;
 
   const seqRef = useRef<HTMLElement>(null);
   const stickRef = useRef<HTMLDivElement>(null);
@@ -358,6 +360,23 @@ export default function Home({ jrSlot, fqSlot }: { jrSlot?: ReactNode; fqSlot?: 
           <p className="r d2" style={{ color: '#6B7563' }}>{L.cycle}</p>
         </div>
       </div></section>
+
+      {/* ── il giro completo: ottanta secondi di turno vero, prima del racconto.
+             Sta qui e non piu' in basso perche' la promessa l'abbiamo appena
+             fatta, e questo e' il punto in cui si dimostra. Parte da solo e
+             muto: la regia sta in VideoGiro.tsx. ── */}
+      <section className="sec" style={{ padding: '76px 0', borderTop: '1px solid rgba(14,14,12,.10)' }}>
+        <div className="w">
+          <p className="kk k">{VG.kicker}</p>
+          <h2 className="r" style={{ fontSize: 'clamp(26px,3vw,44px)', margin: '10px 0 26px', maxWidth: '22ch' }}>
+            {VG.title}
+          </h2>
+          <VideoGiro locale={currentLocale} capitoli />
+          <p style={{ marginTop: 18 }}>
+            <Link className="b2" href={getLink('/video')}>{VG.pageLink}</Link>
+          </p>
+        </div>
+      </section>
 
       {/* ── la sequenza: la foto resta, le scene cambiano ── */}
       <section className="seq" ref={seqRef} style={{ height: '340vh' }}>

@@ -1428,5 +1428,33 @@
     "title": "De la première connexion au premier pointage",
     "note": "Deux minutes, sans détour : tu configures Flow, tu invites ton premier salarié et tu vois le premier pointage apparaître sur la carte.",
     "cta": "Regarder la vidéo, 2 minutes"
+  },
+  "videoGiro": {
+    "kicker": "Regarde-le tourner",
+    "title": "Une journée, quatre-vingts secondes, rien de reconstitué",
+    "note": "Un vrai téléphone sur le chantier et un vrai écran au bureau, filmés au même moment. Le son démarre coupé, et les sous-titres portent les mots jusqu'à ce que tu le montes.",
+    "audioOn": "Activer le son",
+    "audioOff": "Couper le son",
+    "play": "Voir la vidéo, 80 secondes",
+    "chapters": "Aller à",
+    "pageLink": "La journée entière, acte par acte",
+    "youtube": "La voir sur YouTube",
+    "posterAlt": "Une journée avec GeoTapp, du pointage au rapport scellé, en quatre-vingts secondes",
+    "page": {
+      "metaTitle": "GeoTapp au travail : une journée entière en 80 secondes",
+      "metaDescription": "Un technicien pointe, photographie une panne, envoie la preuve, repointe. Le chantier se clôture et le client vérifie seul le rapport scellé, hors ligne.",
+      "h1": "Une journée entière, du premier geste au rapport que le client vérifie seul",
+      "intro": "Rien ici n'est une maquette. Le téléphone a été filmé sur le chantier pendant que l'écran du bureau tournait au même moment, et les deux prises ont été posées sur la même ligne de temps grâce à l'horloge, si bien que ce qui prend cinq secondes à l'écran a duré cinq secondes.",
+      "intro2": "Le son démarre coupé, parce que personne ne veut d'une page qui se met à parler toute seule. Les mots passent par les sous-titres, jusqu'au moment où tu décides de monter le volume.",
+      "actsTitle": "Les sept actes",
+      "transcriptTitle": "Ce que dit la vidéo",
+      "transcriptNote": "Les mots de la voix, à lire.",
+      "honestyTitle": "Ce qu'est cette vidéo, et ce qu'elle n'est pas",
+      "honesty": "Les données du poste sont des données de test, et les deux photographies du tableau électrique sont remplacées au montage, car les preuves ont été prises objectif couvert. Le comportement du logiciel est le vrai, filmé sans retouche. La position s'écrit au moment du pointage et jamais entre les deux, et un dossier scellé aide à montrer que ce qui a été remis n'a pas été modifié, sans constituer à lui seul une preuve absolue du fait matériel ni un conseil juridique.",
+      "ctaTitle": "Quatorze jours, sur tes propres journées",
+      "ctaText": "La même journée tourne sur tes chantiers, avec ton téléphone, pendant quatorze jours et sans carte.",
+      "youtubeNote": "Elle est aussi sur YouTube, en onze langues."
+    },
+    "captions": "Sous-titres"
   }
 }

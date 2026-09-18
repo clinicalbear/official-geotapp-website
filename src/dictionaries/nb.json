@@ -1428,5 +1428,33 @@
     "title": "Fra første innlogging til første stempling",
     "note": "To minutter, uten omsvøp: du setter opp Flow, inviterer den første ansatte og ser den første stemplingen dukke opp på kartet.",
     "cta": "Se videoen, 2 minutter"
+  },
+  "videoGiro": {
+    "kicker": "Se det arbeide",
+    "title": "Ett skift, åtti sekunder, ingenting iscenesatt",
+    "note": "En ekte telefon på anlegget og en ekte skjerm på kontoret, tatt opp i samme øyeblikk. Lyden starter av, og undertekstene bærer ordene til du skrur opp.",
+    "audioOn": "Slå på lyden",
+    "audioOff": "Slå av lyden",
+    "play": "Se filmen, 80 sekunder",
+    "chapters": "Hopp til",
+    "pageLink": "Hele skiftet, akt for akt",
+    "youtube": "Se den på YouTube",
+    "posterAlt": "Et skift med GeoTapp, fra stempling til forseglet rapport, på åtti sekunder",
+    "page": {
+      "metaTitle": "GeoTapp i arbeid: et helt skift på 80 sekunder",
+      "metaDescription": "En montør stempler inn, fotograferer en feil, sender beviset, stempler ut. Oppdraget lukkes, og kunden kontrollerer den forseglede rapporten selv, offline.",
+      "h1": "Et helt skift, fra det første trykket til rapporten kunden kontrollerer selv",
+      "intro": "Her er ingenting rigget til. Telefonen ble filmet på anlegget mens skjermen på kontoret gikk i samme øyeblikk, og de to opptakene ble lagt på den samme tidslinjen etter klokka, så det du ser skje på fem sekunder tok fem sekunder.",
+      "intro2": "Lyden starter av, for ingen vil ha en side som begynner å snakke av seg selv. Ordene kommer fra undertekstene, helt til du selv skrur opp.",
+      "actsTitle": "De sju aktene",
+      "transcriptTitle": "Hva filmen sier",
+      "transcriptNote": "De samme ordene som stemmen, til å lese.",
+      "honestyTitle": "Hva denne filmen er, og hva den ikke er",
+      "honesty": "Dataene fra skiftet er testdata, og de to bildene av eltavla er byttet ut i klippen, fordi bevisene ble tatt med tildekket objektiv. Programmets oppførsel er den ekte, tatt opp uten retusj. Posisjonen skrives ved stemplingen og aldri imellom, og en forseglet pakke hjelper med å vise at det som er levert ikke er rørt, men den er ikke alene et absolutt bevis for det underliggende forholdet, og den er ikke juridisk rådgivning.",
+      "ctaTitle": "Fjorten dager, på dine egne skift",
+      "ctaText": "Det samme skiftet går på oppdragene dine, med telefonen din, i fjorten dager og uten kort.",
+      "youtubeNote": "Den ligger også på YouTube, på elleve språk."
+    },
+    "captions": "Undertekster"
   }
 }

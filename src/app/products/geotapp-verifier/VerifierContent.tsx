@@ -19,6 +19,8 @@ import FeaturedIn from '@/components/FeaturedIn';
 import { featuredLabel } from '@/lib/press/labels';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import DemoReportBanner from '@/components/DemoReportBanner';
+import VideoGiro from '@/components/VideoGiro';
+import { GIRO_INIZIO_VERIFICATORE } from '@/lib/video-giro';
 import type { AppLocale } from '@/lib/i18n/config';
 import type { VerifierCopy } from '@/content/verifier/types';
 
@@ -145,6 +147,7 @@ function OnlineVerifier({ copy }: { copy: VerifierCopy }) {
 export default function VerifierContent({ copy, locale }: VerifierContentProps) {
   const getLink = (path: string) => localizePath(path, locale);
   const dict = getDictionary(locale);
+  const vg = dict.videoGiro;
   const heroTitle = copy.hero_title.split('\n');
 
   return (
@@ -180,6 +183,17 @@ export default function VerifierContent({ copy, locale }: VerifierContentProps) 
           <img src="/verifier-report.webp" alt="GeoTapp Verifier, report storico commessa con integrity check" loading="eager" fetchPriority="high" />
         </div></div>
       </div></div></section>
+
+      {/* IL GIRO COMPLETO — entra dall'ultimo atto, quello in cui il pacchetto
+          viene aperto e ricontrollato senza di noi. */}
+      <section className="sec"><div className="wn">
+        <p className="kk k">{vg.kicker}</p>
+        <h2 className="r" style={{ fontSize: 'clamp(24px,2.6vw,38px)', margin: '10px 0 24px' }}>{vg.title}</h2>
+        <VideoGiro locale={locale} inizio={GIRO_INIZIO_VERIFICATORE} />
+        <p style={{ marginTop: 16 }}>
+          <Link className="b2" href={getLink('/video')}>{vg.pageLink}</Link>
+        </p>
+      </div></section>
 
       {/* IL PROBLEMA */}
       <section className="sec"><div className="w">

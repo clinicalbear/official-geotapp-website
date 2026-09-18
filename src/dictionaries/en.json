@@ -1428,5 +1428,33 @@
     "title": "From first sign-in to first clock-in",
     "note": "Two minutes, no jargon: you set up Flow, invite your first employee, and watch the first clock-in appear on the map.",
     "cta": "Watch the video, 2 minutes"
+  },
+  "videoGiro": {
+    "kicker": "See it work",
+    "title": "One shift, eighty seconds, nothing reconstructed",
+    "note": "A real phone on site and a real screen in the office, recorded at the same moment. The sound starts off, and the subtitles carry the words until you turn it up.",
+    "audioOn": "Turn the sound on",
+    "audioOff": "Turn the sound off",
+    "play": "Play the video, 80 seconds",
+    "chapters": "Jump to",
+    "pageLink": "The whole round, act by act",
+    "youtube": "Watch it on YouTube",
+    "posterAlt": "A shift on GeoTapp, from clock-in to the sealed report, in eighty seconds",
+    "page": {
+      "metaTitle": "Watch GeoTapp work: a whole shift in 80 seconds",
+      "metaDescription": "A worker clocks in, photographs a fault, sends the proof, clocks out. The job closes and the client checks the sealed report alone, offline. Eighty seconds.",
+      "h1": "A whole shift, from the first tap to the report your client checks alone",
+      "intro": "Nothing in here is a mock-up. The phone was filmed on site while the office screen was filmed at the same moment, and the two recordings were laid on one timeline by the clock, so what you watch happening in five seconds took five seconds.",
+      "intro2": "The sound starts off, because nobody wants a page that talks at them. The subtitles carry the words until you decide to turn it up.",
+      "actsTitle": "The seven acts",
+      "transcriptTitle": "What the video says",
+      "transcriptNote": "The same words as the voice, for reading.",
+      "honestyTitle": "What this video is, and what it is not",
+      "honesty": "The shift is test data, and the two photographs of the electrical board are replaced in the edit, because the proofs were shot with the lens covered. The behaviour of the software is the real one, recorded without retouching. Position is written at the moment of clocking and never in between, and a sealed package helps to show that what was delivered has not been altered, though on its own it is not absolute proof of the underlying fact, and it is not legal advice.",
+      "ctaTitle": "Fourteen days, on your own shifts",
+      "ctaText": "The same round runs on your jobs, with your phone, for fourteen days and without a card.",
+      "youtubeNote": "It is on YouTube too, in eleven languages."
+    },
+    "captions": "Subtitles"
   }
 }

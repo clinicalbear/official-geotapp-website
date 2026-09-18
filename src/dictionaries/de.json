@@ -1428,5 +1428,33 @@
     "title": "Von der ersten Anmeldung bis zum ersten Stempeln",
     "note": "Zwei Minuten, ohne Umschweife: Sie richten Flow ein, laden den ersten Mitarbeiter ein und sehen die erste Stempelung auf der Karte erscheinen.",
     "cta": "Video ansehen, 2 Minuten"
+  },
+  "videoGiro": {
+    "kicker": "Sieh es arbeiten",
+    "title": "Eine Schicht, achtzig Sekunden, nichts nachgestellt",
+    "note": "Ein echtes Telefon auf der Baustelle und ein echter Bildschirm im Büro, im selben Moment aufgenommen. Der Ton startet aus, und die Untertitel tragen die Worte, bis du ihn aufdrehst.",
+    "audioOn": "Ton einschalten",
+    "audioOff": "Ton ausschalten",
+    "play": "Video ansehen, 80 Sekunden",
+    "chapters": "Springe zu",
+    "pageLink": "Die ganze Runde, Akt für Akt",
+    "youtube": "Auf YouTube ansehen",
+    "posterAlt": "Eine Schicht mit GeoTapp, vom Stempeln bis zum versiegelten Report, in achtzig Sekunden",
+    "page": {
+      "metaTitle": "GeoTapp bei der Arbeit: eine ganze Schicht in 80 Sekunden",
+      "metaDescription": "Ein Monteur stempelt ein, fotografiert einen Schaden, sendet den Nachweis, stempelt aus. Der Auftrag wird geschlossen, der Kunde prüft den versiegelten Report allein, offline.",
+      "h1": "Eine ganze Schicht, vom ersten Tippen bis zum Report, den der Kunde allein prüft",
+      "intro": "Hier ist nichts gestellt. Das Telefon wurde auf der Baustelle gefilmt, während im selben Moment der Bildschirm im Büro lief, und beide Aufnahmen wurden über die Uhr auf dieselbe Zeitlinie gelegt, so dass fünf Sekunden auf dem Schirm auch fünf Sekunden gedauert haben.",
+      "intro2": "Der Ton startet aus, weil niemand eine Seite will, die von selbst zu reden anfängt. Die Worte tragen die Untertitel, bis du entscheidest, lauter zu stellen.",
+      "actsTitle": "Die sieben Akte",
+      "transcriptTitle": "Was das Video sagt",
+      "transcriptNote": "Dieselben Worte wie die Stimme, zum Lesen.",
+      "honestyTitle": "Was dieses Video ist, und was nicht",
+      "honesty": "Die Schichtdaten sind Testdaten, und die beiden Fotos des Verteilers sind im Schnitt ersetzt, weil die Nachweise mit abgedecktem Objektiv entstanden sind. Das Verhalten der Software ist das echte, ohne Retusche aufgenommen. Der Standort wird beim Stempeln geschrieben und nie dazwischen, und ein versiegeltes Paket hilft zu zeigen, dass am Übergebenen nichts verändert wurde, ist für sich genommen aber kein absoluter Beweis des zugrunde liegenden Sachverhalts und keine Rechtsberatung.",
+      "ctaTitle": "Vierzehn Tage, auf deinen eigenen Schichten",
+      "ctaText": "Dieselbe Runde läuft auf deinen Aufträgen, mit deinem Telefon, vierzehn Tage lang und ohne Karte.",
+      "youtubeNote": "Es liegt auch auf YouTube, in elf Sprachen."
+    },
+    "captions": "Untertitel"
   }
 }

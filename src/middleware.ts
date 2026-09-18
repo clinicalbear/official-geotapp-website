@@ -247,6 +247,10 @@ const SITEMAP_ROUTES: SitemapRouteEntry[] = [
   { path: '/confronto/dinamico/', priority: 0.7, changeFrequency: 'monthly' },
   { path: '/blog/', priority: 0.85, changeFrequency: 'daily' },
   { path: '/trial/', priority: 0.9, changeFrequency: 'monthly' },
+  // Il giro completo: ottanta secondi di turno vero. E' la pagina con il
+  // VideoObject e i sette Clip, quindi e' quella che puo' prendersi il video
+  // in SERP; lo slug resta 'video' in tutte le lingue.
+  { path: '/video/', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/guida/', priority: 0.7, changeFrequency: 'monthly' },
   { path: '/contact/', priority: 0.65, changeFrequency: 'monthly' },
   { path: '/chi-siamo/', priority: 0.55, changeFrequency: 'monthly' },
