@@ -32,6 +32,15 @@ import { GIRO_CONTENUTI } from '@/lib/video-giro-contenuti';
  *     (`saveData`) non parte affatto;
  *  4. chi ha chiesto meno animazioni al sistema vede la locandina e il
  *     pulsante, e decide lui.
+ *
+ * 🔴 E poi c'e' la quinta, che non si vede leggendo: i nostri file escono da
+ * Cloudflare SENZA risposte parziali, e un video servito cosi' non si puo'
+ * spostare. In produzione `seekable` finisce a zero: la barra del lettore, i
+ * capitoli e il secondo d'ingresso delle pagine prodotto morivano tutti li',
+ * e tornavano all'inizio. Rimedio: appena il filmato parte lo si prende
+ * intero (e' gia' nella cache del browser, 2,8 MB) e si passa a un URL blob,
+ * che invece si sposta dove si vuole. Vedi
+ * memoria trappola_cloudflare_niente_risposte_parziali.
  */
 export default function VideoGiro({
   locale,
@@ -50,6 +59,7 @@ export default function VideoGiro({
 }) {
   const video = useRef<HTMLVideoElement>(null);
   const gia = useRef(false);
+  const blob = useRef<string | null>(null);
   const [acceso, setAcceso] = useState(false);
   const [fermo, setFermo] = useState(false);
   const t = getDictionary(locale).videoGiro;
@@ -63,6 +73,54 @@ export default function VideoGiro({
       tracce[i].mode = mostra ? 'showing' : 'hidden';
     }
   }, []);
+
+  /** Il video si puo' spostare? In produzione, appena servito, no. */
+  const scorribile = (el: HTMLVideoElement) =>
+    el.seekable.length > 0 && el.seekable.end(el.seekable.length - 1) > 1;
+
+  /**
+   * Prende il file intero e ci passa sopra, cosi' il lettore si puo' spostare.
+   * Costa una fetch che la cache del browser serve da sola (il file e' marcato
+   * `immutable` per trenta giorni), e si fa una volta sola.
+   */
+  const rendiScorribile = useCallback(async (secondo: number) => {
+    const el = video.current;
+    if (!el || blob.current || scorribile(el)) return false;
+    try {
+      const risposta = await fetch(giroVideoSrc(locale));
+      if (!risposta.ok) return false;
+      const dati = await risposta.blob();
+      if (!video.current) return false;
+      blob.current = URL.createObjectURL(dati);
+      const eraMuto = el.muted;
+      const dove = Math.max(secondo, el.currentTime);
+      const rete = giroVideoSrc(locale);
+      el.src = blob.current;
+      // Se il file locale non si apre entro cinque secondi si torna a quello
+      // di rete: meglio un video che non si sposta che un lettore nero.
+      const pronto = await new Promise<boolean>((risolvi) => {
+        const attesa = setTimeout(() => risolvi(false), 5000);
+        el.addEventListener('loadedmetadata', () => { clearTimeout(attesa); risolvi(true); }, { once: true });
+      });
+      if (!pronto) {
+        URL.revokeObjectURL(blob.current);
+        blob.current = null;
+        el.src = rete;
+        el.currentTime = 0;
+        sottotitoli(eraMuto);
+        await el.play().catch(() => undefined);
+        return false;
+      }
+      el.muted = eraMuto;
+      el.currentTime = dove;
+      // Cambiando sorgente la traccia dei sottotitoli riparte spenta.
+      sottotitoli(eraMuto);
+      await el.play().catch(() => undefined);
+      return true;
+    } catch {
+      return false;
+    }
+  }, [locale, sottotitoli]);
 
   useEffect(() => {
     const el = video.current;
@@ -81,7 +139,22 @@ export default function VideoGiro({
     const osservatore = new IntersectionObserver(
       ([voce]) => {
         if (voce.isIntersecting) {
-          el.play().catch(() => setFermo(true));
+          if (gia.current) {
+            el.play().catch(() => setFermo(true));
+            return;
+          }
+          gia.current = true;
+          // Chi entra da un atto preciso aspetta il file intero, che e' il solo
+          // modo di aprire al secondo giusto invece che all'inizio. Gli altri
+          // partono subito, e il file si sostituisce mentre guardano.
+          if (inizio > 0) {
+            rendiScorribile(inizio).then((fatto) => {
+              if (!fatto) el.play().catch(() => setFermo(true));
+            });
+          } else {
+            el.play().catch(() => setFermo(true));
+            el.addEventListener('playing', () => { void rendiScorribile(0); }, { once: true });
+          }
         } else if (!el.paused) {
           el.pause();
         }
@@ -89,24 +162,11 @@ export default function VideoGiro({
       { threshold: 0.5 },
     );
     osservatore.observe(el);
-    return () => osservatore.disconnect();
-  }, [sottotitoli]);
-
-  /**
-   * 🔴 Il frammento `#t=` NON basta: Cloudflare serve i nostri file senza
-   * risposte parziali (una richiesta con Range torna 200 e l'intero file), e
-   * senza quelle il browser ignora il frammento e parte da zero. Verificato in
-   * produzione il 18/09: la pagina del verificatore, che deve entrare al
-   * secondo 69, apriva sull'atto uno. Quindi il secondo d'ingresso lo
-   * scriviamo noi appena i metadati ci sono, una volta sola, per non
-   * ributtare indietro chi ha gia' saltato a un capitolo.
-   */
-  const suiMetadati = () => {
-    const el = video.current;
-    if (!el || gia.current || inizio <= 0) return;
-    gia.current = true;
-    if (el.currentTime < inizio) el.currentTime = inizio;
-  };
+    return () => {
+      osservatore.disconnect();
+      if (blob.current) URL.revokeObjectURL(blob.current);
+    };
+  }, [sottotitoli, inizio, rendiScorribile]);
 
   const accendi = () => {
     const el = video.current;
@@ -120,12 +180,16 @@ export default function VideoGiro({
     if (el.paused) el.play().catch(() => undefined);
   };
 
-  const saltaA = (secondo: number) => {
+  const saltaA = async (secondo: number) => {
     const el = video.current;
     if (!el) return;
     gia.current = true;
-    el.currentTime = secondo;
     setFermo(false);
+    if (!scorribile(el) && !blob.current) {
+      const fatto = await rendiScorribile(secondo);
+      if (fatto) return;
+    }
+    el.currentTime = secondo;
     el.play().catch(() => undefined);
   };
 
@@ -135,12 +199,9 @@ export default function VideoGiro({
         <video
           ref={video}
           className="absolute inset-0 h-full w-full"
-          // Il frammento temporale fa aprire il file dal secondo giusto senza
-          // che si veda il salto: currentTime scritto a mano arriva dopo.
-          src={inizio > 0 ? `${giroVideoSrc(locale)}#t=${inizio}` : giroVideoSrc(locale)}
+          src={giroVideoSrc(locale)}
           poster={giroLocandina(locale)}
           preload="none"
-          onLoadedMetadata={suiMetadati}
           muted
           playsInline
           controls
