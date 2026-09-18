@@ -49,6 +49,7 @@ export default function VideoGiro({
   id?: string;
 }) {
   const video = useRef<HTMLVideoElement>(null);
+  const gia = useRef(false);
   const [acceso, setAcceso] = useState(false);
   const [fermo, setFermo] = useState(false);
   const t = getDictionary(locale).videoGiro;
@@ -91,6 +92,22 @@ export default function VideoGiro({
     return () => osservatore.disconnect();
   }, [sottotitoli]);
 
+  /**
+   * 🔴 Il frammento `#t=` NON basta: Cloudflare serve i nostri file senza
+   * risposte parziali (una richiesta con Range torna 200 e l'intero file), e
+   * senza quelle il browser ignora il frammento e parte da zero. Verificato in
+   * produzione il 18/09: la pagina del verificatore, che deve entrare al
+   * secondo 69, apriva sull'atto uno. Quindi il secondo d'ingresso lo
+   * scriviamo noi appena i metadati ci sono, una volta sola, per non
+   * ributtare indietro chi ha gia' saltato a un capitolo.
+   */
+  const suiMetadati = () => {
+    const el = video.current;
+    if (!el || gia.current || inizio <= 0) return;
+    gia.current = true;
+    if (el.currentTime < inizio) el.currentTime = inizio;
+  };
+
   const accendi = () => {
     const el = video.current;
     if (!el) return;
@@ -106,6 +123,7 @@ export default function VideoGiro({
   const saltaA = (secondo: number) => {
     const el = video.current;
     if (!el) return;
+    gia.current = true;
     el.currentTime = secondo;
     setFermo(false);
     el.play().catch(() => undefined);
@@ -122,6 +140,7 @@ export default function VideoGiro({
           src={inizio > 0 ? `${giroVideoSrc(locale)}#t=${inizio}` : giroVideoSrc(locale)}
           poster={giroLocandina(locale)}
           preload="none"
+          onLoadedMetadata={suiMetadati}
           muted
           playsInline
           controls
