@@ -46,6 +46,23 @@ export function pressRel(_item: PressItem): string {
 // VUOTI al lancio. Aggiungere una voce = la sezione compare da sola in pagina.
 export const PRESS_RELEASES: PressItem[] = [];
 export const PRESS_COVERAGE: PressItem[] = [
+  // ⏳ PRONTA MA NON ATTIVA — ISPER HR Review, uscita prevista mercoledi' 7 ottobre 2026.
+  // Articolo a firma Michele Angelo Petraroli, concordato con Anna Manavella (isper.org).
+  // I due asset sono gia' in /public/press/ (isperhrreview.png 780x239 e isperhrreview-sig.png
+  // 235x72), forniti da lei il 21/09/2026 e non ritagliati da noi.
+  // 🔴 Si scommenta SOLO quando il pezzo e' ONLINE, mettendo l'URL vero e leggendo il `rel`
+  // dal tag della loro pagina: `follow: true` solo se ci danno un dofollow.
+  // {
+  //   date: '2026-10-07',
+  //   outlet: 'ISPER HR Review',
+  //   title: '',            // da riempire col titolo pubblicato
+  //   url: '',              // da riempire con l'URL vero
+  //   locale: 'it',
+  //   country: 'it',
+  //   logo: '/press/isperhrreview.png',
+  //   follow: false,        // da verificare sul rel della loro pagina
+  // },
+
   {
     date: '2026-09-09',
     outlet: 'Human Resources',

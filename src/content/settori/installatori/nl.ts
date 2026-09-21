@@ -4,9 +4,11 @@ const content: SettoreContent = {
   meta: {
     // "installatietechniek" era ASSENTE dalla pagina: 68 impressioni a posizione
     // 81 su una parola che non dicevamo mai. Aggiunta a title e badge, il resto
-    // resta com'era.
-    title: 'Installatietechniek app: werkbonnen, uren en fotobewijs',
-    description: 'App voor installatietechniek en elektrotechniek: de monteur vult de werkbon in op locatie, met uren en fotobewijs. Het kantoor ziet het meteen. Conform CAO.',
+    // resta com'era. Esito misurato il 21/09: da 58,0 a 52,5, cinque posizioni.
+    // Stessa cosa ora con "buitendienst": era solo nell'H1, e in 28 giorni la
+    // query e' passata da 7 a 131 impressioni a posizione 59,7, zero clic.
+    title: 'Buitendienst app voor installatietechniek: uren en fotobewijs',
+    description: 'App voor de buitendienst in de installatietechniek: de monteur vult de werkbon op locatie in, met uren en fotobewijs. Conform CAO.',
   },
   hero: {
     badge: 'Software voor installatietechniek, elektrotechniek en onderhoudsteams',
