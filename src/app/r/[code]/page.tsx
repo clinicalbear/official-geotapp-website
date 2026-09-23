@@ -48,7 +48,7 @@ type Esito =
       documentoUrl: string | null;
       scadeIlMs: number;
     }
-  | { stato: 'revocato'; revocatoIl: string | null }
+  | { stato: 'revocato'; motivo: 'revoca' | 'scadenza'; revocatoIl: string | null }
   | { stato: 'sconosciuto' };
 
 interface Testi {
@@ -72,8 +72,12 @@ interface Testi {
   surveyTitle: string;
   surveyBody: string;
   surveyCta: string;
+  /** Tolto dall'azienda che l'ha emesso: una copia si puo' ancora chiedere. */
   revokedTitle: string;
   revokedBody: string;
+  /** Cancellato a fine conservazione: non c'e' piu' niente da chiedere a nessuno. */
+  expiredTitle: string;
+  expiredBody: string;
   unknownTitle: string;
   unknownBody: string;
 }
@@ -108,6 +112,9 @@ const TESTI: Record<string, Testi> = {
     revokedTitle: 'Codice revocato',
     revokedBody:
       'Questo documento c’era, ma chi lo ha emesso ha revocato il collegamento. Per averne una copia bisogna chiederla a chi ha svolto il lavoro.',
+    expiredTitle: 'Documento non più disponibile',
+    expiredBody:
+      'Questo documento c’era e ha finito il suo periodo di conservazione: dopo cinque anni dalla data del lavoro il pacchetto viene cancellato, per obbligo di legge sui dati personali. Non c’è più una copia da chiedere a nessuno.',
     unknownTitle: 'Codice non trovato',
     unknownBody:
       'Il codice non corrisponde a nessun documento. Conviene ricontrollare le otto cifre: si confondono facilmente la S e la 5, la Z e la 2.',
@@ -140,6 +147,9 @@ const TESTI: Record<string, Testi> = {
     revokedTitle: 'Code revoked',
     revokedBody:
       'This document existed, but whoever issued it revoked the link. To get a copy you have to ask the company that did the work.',
+    expiredTitle: 'Document no longer available',
+    expiredBody:
+      'This document existed and has reached the end of its retention period: five years after the date of the work the package is deleted, as data protection law requires. There is no copy left to ask for.',
     unknownTitle: 'Code not found',
     unknownBody:
       'The code does not match any document. Worth double-checking the eight characters: S and 5, Z and 2 are easy to mix up.',
@@ -172,6 +182,9 @@ const TESTI: Record<string, Testi> = {
     revokedTitle: 'Code widerrufen',
     revokedBody:
       'Dieses Dokument gab es, aber der Aussteller hat den Link widerrufen. Für eine Kopie wenden Sie sich an die Firma, die die Arbeit ausgeführt hat.',
+    expiredTitle: 'Dokument nicht mehr verfügbar',
+    expiredBody:
+      'Dieses Dokument gab es, und seine Aufbewahrungsfrist ist abgelaufen: fünf Jahre nach dem Arbeitsdatum wird das Paket gelöscht, wie es der Datenschutz verlangt. Es gibt keine Kopie mehr, nach der man fragen könnte.',
     unknownTitle: 'Code nicht gefunden',
     unknownBody:
       'Der Code passt zu keinem Dokument. Prüfen Sie die acht Zeichen: S und 5, Z und 2 werden leicht verwechselt.',
@@ -204,6 +217,9 @@ const TESTI: Record<string, Testi> = {
     revokedTitle: 'Code révoqué',
     revokedBody:
       "Ce document a existé, mais son émetteur a révoqué le lien. Pour en obtenir une copie, il faut la demander à l'entreprise qui a fait le travail.",
+    expiredTitle: 'Document plus disponible',
+    expiredBody:
+      'Ce document a existé et sa durée de conservation est écoulée : cinq ans après la date des travaux, le paquet est supprimé, comme l’exige la protection des données. Il n’existe plus de copie à demander.',
     unknownTitle: 'Code introuvable',
     unknownBody:
       'Le code ne correspond à aucun document. Vérifiez les huit caractères : S et 5, Z et 2 se confondent facilement.',
@@ -236,6 +252,9 @@ const TESTI: Record<string, Testi> = {
     revokedTitle: 'Código revocado',
     revokedBody:
       'Este documento existió, pero quien lo emitió revocó el enlace. Para obtener una copia hay que pedirla a la empresa que hizo el trabajo.',
+    expiredTitle: 'Documento ya no disponible',
+    expiredBody:
+      'Este documento existió y ha agotado su periodo de conservación: cinco años después de la fecha del trabajo el paquete se elimina, como exige la protección de datos. Ya no queda ninguna copia que pedir.',
     unknownTitle: 'Código no encontrado',
     unknownBody:
       'El código no corresponde a ningún documento. Conviene revisar los ocho caracteres: la S y el 5, la Z y el 2 se confunden con facilidad.',
@@ -259,8 +278,20 @@ async function risolvi(codice: string): Promise<Esito> {
     );
     if (r.status === 404) return { stato: 'sconosciuto' };
     if (r.status === 410) {
-      const d = (await r.json()) as { revocatoIl?: string | null };
-      return { stato: 'revocato', revocatoIl: d.revocatoIl ?? null };
+      const d = (await r.json()) as {
+        revocatoIl?: string | null;
+        motivo?: string;
+      };
+      // 'scadenza' vuol dire che il pacchetto ha finito i cinque anni di
+      // conservazione, non che l'azienda l'ha tolto. Per chi ha il foglio in
+      // mano cambia tutto: nel primo caso non c'e' piu' niente da chiedere a
+      // nessuno, nel secondo si chiede all'impresa. Le funzioni piu' vecchie
+      // non mandavano questo campo: assente = revoca, come e' sempre stato.
+      return {
+        stato: 'revocato',
+        motivo: d.motivo === 'scadenza' ? 'scadenza' : 'revoca',
+        revocatoIl: d.revocatoIl ?? null,
+      };
     }
     if (!r.ok) return { stato: 'sconosciuto' };
     return (await r.json()) as Esito;
@@ -290,6 +321,21 @@ export default async function PaginaCodice({
 
   if (esito.stato === 'sconosciuto' || esito.stato === 'revocato') {
     const revocato = esito.stato === 'revocato';
+    // Tre esiti, non due. Un documento scaduto non e' un documento revocato:
+    // dirgli "l'azienda ha revocato il collegamento" manderebbe il committente
+    // a protestare per una cancellazione dovuta, di cui nessuno ha colpa e a
+    // cui nessuno puo' rimediare.
+    const scaduto = revocato && esito.motivo === 'scadenza';
+    const titolo = !revocato
+      ? t.unknownTitle
+      : scaduto
+        ? t.expiredTitle
+        : t.revokedTitle;
+    const corpo = !revocato
+      ? t.unknownBody
+      : scaduto
+        ? t.expiredBody
+        : t.revokedBody;
     return (
       <main className={scatola}>
         <div
@@ -299,12 +345,8 @@ export default async function PaginaCodice({
             background: revocato ? '#FBF1E3' : '#FBFBF9',
           }}
         >
-          <h1 className="text-xl font-semibold">
-            {revocato ? t.revokedTitle : t.unknownTitle}
-          </h1>
-          <p className="mt-2 text-[#4A5259]">
-            {revocato ? t.revokedBody : t.unknownBody}
-          </p>
+          <h1 className="text-xl font-semibold">{titolo}</h1>
+          <p className="mt-2 text-[#4A5259]">{corpo}</p>
           <p className="mt-4 font-mono text-sm text-[#7C858C]">
             {code.toUpperCase()}
           </p>
