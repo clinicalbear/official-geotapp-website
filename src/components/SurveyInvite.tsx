@@ -145,7 +145,11 @@ export default function SurveyInvite() {
           <p id="survey-modal-title" style={{ fontSize: 20, fontWeight: 800, color: '#0f172a', margin: '0 0 8px' }}>{c.title}</p>
           <p style={{ fontSize: 15, color: '#475569', margin: '0 0 20px', lineHeight: 1.5 }}>{c.body}</p>
           <a href={surveyHref()} onClick={() => { trackEvent('survey_cta_click', { locale: (typeof document !== 'undefined' ? document.documentElement.lang : 'en') || 'en', placement: 'modal' }); dismiss(); }} style={{
-            display: 'block', textAlign: 'center', background: '#8FC436', color: '#fff',
+            // 🔴 Bianco su lime fa 2,07:1. Il lime e' un colore da riempimento e vuole
+            // testo SCURO sopra (9,31:1), come la CTA principale del sito: cosi' il
+            // verde del marchio resta e il bottone si legge. Trovato collaudando sul
+            // telefono vero, non da scrivania. (Audit EAA del 23/09/2026.)
+            display: 'block', textAlign: 'center', background: '#8FC436', color: '#0E0E0C',
             fontWeight: 800, fontSize: 16, padding: '14px 20px', borderRadius: 999, textDecoration: 'none',
           }}>{c.cta}</a>
         </div>
