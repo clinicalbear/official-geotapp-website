@@ -18,7 +18,7 @@
   }
 }
 
-/* ── il vecchio strato redesign-l.css forza `label{color:#6B7563 !important}`
+/* ── il vecchio strato redesign-l.css forza `label{color:#4F5A49 !important}`
    e `input,select,textarea{border-color:rgba(14,14,12,.22) !important}`
    pensati per moduli su fondo chiaro: su un pannello .form (fondo quasi nero)
    diventano illeggibili. Qui si ripristina il vestito scuro del mockup con
@@ -62,7 +62,7 @@
   width: 16px;
   height: 16px;
   flex: none;
-  accent-color: var(--seal);
+  accent-color: var(--seal-testo);
 }
 
 /* pulsante "carica logo": è un <label> che avvolge l'input file nascosto,

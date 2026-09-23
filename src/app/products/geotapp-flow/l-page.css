@@ -32,10 +32,10 @@
 .lp-prodotto-flow .sec .mods + .w,
 .lp-prodotto-flow .sec .w + .w { margin-top: 46px; }
 
-.lp-prodotto-flow .l-tagline { margin-top: 16px; max-width: 42ch; font-weight: 600; color: var(--seal); font-size: 17px; }
+.lp-prodotto-flow .l-tagline { margin-top: 16px; max-width: 42ch; font-weight: 600; color: var(--seal-testo); font-size: 17px; }
 .lp-prodotto-flow .l-legal-box { margin-top: 30px; }
 .lp-prodotto-flow .l-legal-box p { color: #4A5244; }
-.lp-prodotto-flow .l-foot-note { margin-top: 34px; font-size: 12px; line-height: 1.6; color: #78836F; max-width: 90ch; }
+.lp-prodotto-flow .l-foot-note { margin-top: 34px; font-size: 12px; line-height: 1.6; color: #4F5A49; max-width: 90ch; }
 
 @media (max-width: 700px) {
   .lp-prodotto-flow .split { grid-template-columns: 1fr; gap: 30px; }

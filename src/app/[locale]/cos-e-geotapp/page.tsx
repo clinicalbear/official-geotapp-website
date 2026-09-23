@@ -435,7 +435,7 @@ export default async function CosEGeoTappPage({ params }: { params: Promise<{ lo
     name: 'GeoTapp',
     legalName: 'GeoTapp',
     url: `${BASE_URL}/${locale}/`,
-    logo: `${BASE_URL}/icon.png`,
+    logo: `${BASE_URL}/LogoGeoTapp.webp`,
     description: copy.description,
     foundingDate: '2024',
     founder: {

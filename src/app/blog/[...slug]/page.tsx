@@ -355,7 +355,7 @@ export default async function BlogArticlePage({ params }: Props) {
       url: 'https://geotapp.com',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://geotapp.com/logo.webp',
+        url: 'https://geotapp.com/LogoGeoTapp.webp',
       },
     },
     mainEntityOfPage: {

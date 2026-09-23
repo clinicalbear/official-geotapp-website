@@ -237,7 +237,7 @@ export default function ContactPage() {
             </motion.div>
 
             <div className="r d1">
-              <p className="kk k" style={{ color: 'var(--seal)' }}>{dict.channels_title}</p>
+              <p className="kk k" style={{ color: 'var(--seal-testo)' }}>{dict.channels_title}</p>
               <ul className="ch">
                 <li className="it">
                   <p className="lb k">{dict.email_label}</p>

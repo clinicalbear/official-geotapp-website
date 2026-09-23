@@ -114,7 +114,7 @@ export default function PricingCalculator() {
       </div>
 
       <div className="box">
-        <p className="k" style={{ color: 'var(--seal)', marginBottom: '8px' }}>
+        <p className="k" style={{ color: 'var(--seal-testo)', marginBottom: '8px' }}>
           {dict.pricing.simulator.section_title}
         </p>
         {quote && !quote.isCustom ? (

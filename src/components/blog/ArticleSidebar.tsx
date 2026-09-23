@@ -169,7 +169,7 @@ export default function ArticleSidebar({ headings, locale, categories = [], date
       <div className="panel" style={{ padding: '14px 16px', marginBottom: '30px' }}>
         <div className="flex items-center gap-2 mb-3">
           <span className="live" />
-          <span className="k" style={{ fontSize: '10px', color: 'var(--seal)' }}>Clock-in</span>
+          <span className="k" style={{ fontSize: '10px', color: 'var(--seal-testo)' }}>Clock-in</span>
           {categories[0] && (
             <span
               className="ml-auto px-2 py-0.5 text-[8px] font-semibold rounded-full uppercase tracking-wider text-white"
@@ -181,14 +181,14 @@ export default function ArticleSidebar({ headings, locale, categories = [], date
         </div>
         <div className="flex items-center gap-4">
           <div>
-            <span className="text-[8px] uppercase tracking-widest block mb-0.5" style={{ color: '#78836F' }}>Date</span>
+            <span className="text-[8px] uppercase tracking-widest block mb-0.5" style={{ color: '#4F5A49' }}>Date</span>
             <span className="text-[13px] tracking-wide">
               {date ? new Date(date).toLocaleDateString('en-GB', { timeZone: 'UTC', day: '2-digit', month: '2-digit', year: 'numeric' }).replace(/\//g, '.') : ''}
             </span>
           </div>
           <div className="w-px h-8" style={{ background: 'rgba(14,14,12,.14)' }} />
           <div>
-            <span className="text-[8px] uppercase tracking-widest block mb-0.5" style={{ color: '#78836F' }}>Duration</span>
+            <span className="text-[8px] uppercase tracking-widest block mb-0.5" style={{ color: '#4F5A49' }}>Duration</span>
             <span className="text-[13px] tracking-wide">
               00:{readingTime ? String(readingTime).padStart(2, '0') : '00'}:00
             </span>
@@ -224,7 +224,7 @@ export default function ArticleSidebar({ headings, locale, categories = [], date
           style={{ maxHeight: '44px', maxWidth: '150px', width: 'auto', margin: '0 auto 14px', objectFit: 'contain' }}
         />
         <p className="text-[12px] text-center" style={{ color: '#4A5244' }}>{labels.product_desc}</p>
-        <span className="k" style={{ display: 'block', textAlign: 'center', marginTop: '10px', fontSize: '11px', color: 'var(--seal)' }}>
+        <span className="k" style={{ display: 'block', textAlign: 'center', marginTop: '10px', fontSize: '11px', color: 'var(--seal-testo)' }}>
           {labels.product_btn} &rarr;
         </span>
       </Link>
@@ -232,7 +232,7 @@ export default function ArticleSidebar({ headings, locale, categories = [], date
       {/* Dati in Europa, residenza UE dei dati di lavoro */}
       <Link href={`/${locale}/privacy/`} className="panel" style={{ display: 'block', padding: '18px 20px', marginTop: '18px' }}>
         <p className="text-[13px] font-bold leading-snug">{euBadge.title}</p>
-        <p className="text-[11px] mt-1" style={{ color: '#78836F' }}>{euBadge.desc}</p>
+        <p className="text-[11px] mt-1" style={{ color: '#4F5A49' }}>{euBadge.desc}</p>
       </Link>
 
       {/* CTA trial */}

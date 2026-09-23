@@ -1456,5 +1456,21 @@
       "youtubeNote": "Está também no YouTube, em onze línguas."
     },
     "captions": "Legendas"
+  },
+  "accessibilita": {
+    "title": "Declaração de acessibilidade",
+    "intro": "A GeoTapp compromete-se a tornar este sítio acessível, em linha com a Diretiva (UE) 2019/882 (European Accessibility Act) e a norma EN 301 549, que remete para as WCAG 2.1 nível AA.",
+    "stato_t": "Estado de conformidade",
+    "stato": "Este sítio está **parcialmente conforme** com a EN 301 549 / WCAG 2.1 AA. «Parcialmente» significa que parte dos requisitos está cumprida e verificada, enquanto outros ainda não foram testados com métodos automáticos e manuais completos.",
+    "fatto_t": "O que foi verificado",
+    "fatto": "Uma análise automática com axe-core, executada num navegador real em 23 de setembro de 2026, em vinte e duas páginas nos onze idiomas publicados. Os problemas encontrados foram corrigidos: contraste do texto, nomes acessíveis dos campos de formulário, nomes das ligações, uso correto dos atributos ARIA. O sítio declara o idioma de cada página, oferece uma ligação «saltar para o conteúdo», usa marcos semânticos, torna visível o foco do teclado e respeita a preferência do sistema para reduzir animações.",
+    "limiti_t": "Limitações conhecidas",
+    "limiti": "Ainda não foi feita uma verificação manual completa com leitores de ecrã e apenas com teclado. O processo de compra está alojado num domínio distinto (crm.geotapp.com) e não é abrangido por esta declaração. Os conteúdos do blogue e os PDF descarregáveis não foram verificados um a um.",
+    "metodo_t": "Método de avaliação",
+    "metodo": "Autoavaliação realizada internamente, com ferramentas automáticas sobre páginas publicadas. Não foi realizada auditoria por terceiros.",
+    "segnala_t": "Comunicar um problema",
+    "segnala": "Se encontrar uma barreira neste sítio, escreva para info@geotapp.com indicando a página e o que não conseguiu fazer. Respondemos em trinta dias. Se a resposta não for satisfatória, pode dirigir-se à autoridade de fiscalização competente do seu país.",
+    "data_t": "Data",
+    "data": "Declaração redigida em 23 de setembro de 2026, com base na avaliação da mesma data."
   }
 }

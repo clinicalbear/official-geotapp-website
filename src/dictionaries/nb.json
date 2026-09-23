@@ -1456,5 +1456,21 @@
       "youtubeNote": "Den ligger også på YouTube, på elleve språk."
     },
     "captions": "Undertekster"
+  },
+  "accessibilita": {
+    "title": "Tilgjengelighetserklæring",
+    "intro": "GeoTapp arbeider for å gjøre dette nettstedet tilgjengelig, i tråd med direktiv (EU) 2019/882 (European Accessibility Act) og standarden EN 301 549, som viser til WCAG 2.1 nivå AA.",
+    "stato_t": "Status for samsvar",
+    "stato": "Dette nettstedet er **delvis i samsvar** med EN 301 549 / WCAG 2.1 AA. «Delvis» betyr at en del av kravene er oppfylt og kontrollert, mens andre ennå ikke er testet med fullstendige automatiske og manuelle metoder.",
+    "fatto_t": "Hva som er kontrollert",
+    "fatto": "En automatisk analyse med axe-core, utført i en ekte nettleser 23. september 2026 på tjueto sider på de elleve publiserte språkene. Feilene som ble funnet er rettet: tekstkontrast, tilgjengelige navn på skjemafelt, lenkenavn og riktig bruk av ARIA-attributter. Nettstedet angir språket på hver side, tilbyr en «hopp til innholdet»-lenke, bruker semantiske landemerker, viser tastaturfokus synlig og respekterer systeminnstillingen for redusert bevegelse.",
+    "limiti_t": "Kjente begrensninger",
+    "limiti": "En fullstendig manuell gjennomgang med skjermlesere og kun tastatur er ennå ikke gjennomført. Kjøpsløpet ligger på et eget domene (crm.geotapp.com) og omfattes ikke av denne erklæringen. Blogginnhold og nedlastbare PDF-dokumenter er ikke kontrollert enkeltvis.",
+    "metodo_t": "Vurderingsmetode",
+    "metodo": "Egenvurdering utført internt med automatiske verktøy på publiserte sider. Det er ikke gjennomført revisjon av tredjepart.",
+    "segnala_t": "Meld fra om et problem",
+    "segnala": "Møter du en barriere på dette nettstedet, skriv til info@geotapp.com og oppgi siden og hva du ikke fikk til. Vi svarer innen tretti dager. Er svaret ikke tilfredsstillende, kan du henvende deg til kompetent tilsynsmyndighet i landet ditt.",
+    "data_t": "Dato",
+    "data": "Erklæring utarbeidet 23. september 2026, på grunnlag av vurderingen samme dato."
   }
 }

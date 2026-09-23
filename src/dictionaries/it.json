@@ -1456,5 +1456,21 @@
       "youtubeNote": "Sta anche su YouTube, in undici lingue."
     },
     "captions": "Sottotitoli"
+  },
+  "accessibilita": {
+    "title": "Dichiarazione di accessibilità",
+    "intro": "GeoTapp si impegna a rendere il proprio sito accessibile, in linea con la direttiva (UE) 2019/882 (European Accessibility Act) e con lo standard EN 301 549, che rimanda alle linee guida WCAG 2.1 livello AA.",
+    "stato_t": "Stato di conformità",
+    "stato": "Questo sito è **parzialmente conforme** allo standard EN 301 549 / WCAG 2.1 AA. «Parzialmente» significa che una parte dei requisiti è soddisfatta e verificata, mentre altri non sono ancora stati provati con metodi automatici e manuali completi.",
+    "fatto_t": "Cosa è stato verificato",
+    "fatto": "Un'analisi automatica con axe-core eseguita su browser reale, il 23 settembre 2026, su ventidue pagine del sito nelle undici lingue pubblicate. Le violazioni rilevate sono state corrette: contrasto del testo, nomi accessibili dei campi di modulo, nomi dei collegamenti, uso corretto degli attributi ARIA. Il sito dichiara la lingua di ogni pagina, offre un collegamento «salta al contenuto», usa marcatori semantici di struttura, rende visibile il fuoco della tastiera e rispetta la preferenza di sistema per la riduzione delle animazioni.",
+    "limiti_t": "Limiti noti",
+    "limiti": "Non è ancora stata svolta una verifica manuale completa con lettori di schermo e con la sola tastiera. Il modulo di acquisto è ospitato su un dominio distinto (crm.geotapp.com) e non rientra in questa dichiarazione. I contenuti del blog e i documenti PDF scaricabili non sono stati verificati singolarmente.",
+    "metodo_t": "Metodo di valutazione",
+    "metodo": "Autovalutazione svolta internamente, con strumenti automatici su pagine pubblicate. Non è stato svolto un audit da parte di un soggetto terzo.",
+    "segnala_t": "Segnalare un problema",
+    "segnala": "Se incontri una barriera su questo sito, scrivi a info@geotapp.com indicando la pagina e cosa non è stato possibile fare. Rispondiamo entro trenta giorni. Se la risposta non è soddisfacente, è possibile rivolgersi all'autorità di controllo competente nel proprio Paese.",
+    "data_t": "Data",
+    "data": "Dichiarazione redatta il 23 settembre 2026, sulla base della valutazione della stessa data."
   }
 }

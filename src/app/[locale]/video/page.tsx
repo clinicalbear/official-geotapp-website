@@ -101,7 +101,7 @@ export default async function VideoPage({ params }: { params: Promise<{ locale: 
           <ol className="r d1" style={{ marginTop: 26, listStyle: 'none', padding: 0 }}>
             {contenuto.trascrizione.map((voce) => (
               <li key={voce.da} style={{ display: 'flex', gap: 16, padding: '7px 0', borderTop: '1px solid rgba(14,14,12,.08)' }}>
-                <span style={{ color: '#78836F', fontVariantNumeric: 'tabular-nums', minWidth: 46 }}>
+                <span style={{ color: '#4F5A49', fontVariantNumeric: 'tabular-nums', minWidth: 46 }}>
                   {orologio(voce.da)}
                 </span>
                 <span style={{ color: '#2C3328', lineHeight: 1.6 }}>{voce.testo}</span>
@@ -119,7 +119,7 @@ export default async function VideoPage({ params }: { params: Promise<{ locale: 
                 {/* Il minuto e' scritto, non linkato: i salti veri stanno sotto
                     al video, e un'ancora che porta al lettore senza spostarlo
                     prometterebbe una cosa che non fa. */}
-                <span style={{ color: '#78836F', fontVariantNumeric: 'tabular-nums', marginRight: 14 }}>
+                <span style={{ color: '#4F5A49', fontVariantNumeric: 'tabular-nums', marginRight: 14 }}>
                   {orologio(GIRO_CAPITOLI[i].da)}
                 </span>
                 {atto}

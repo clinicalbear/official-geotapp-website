@@ -52,7 +52,7 @@
 }
 .lp-risorsa-strumento .cd-tog.on {
   background: var(--seal);
-  border-color: var(--seal);
+  border-color: var(--seal-testo);
   color: var(--ink);
   font-weight: 600;
 }

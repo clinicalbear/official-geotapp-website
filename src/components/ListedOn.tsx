@@ -221,7 +221,8 @@ function CompactListedOn({ locale }: { locale: string }) {
         fontFamily: 'var(--font-body)',
         fontSize: '0.6rem',
         fontWeight: 700,
-        color: '#64748b',
+        // 4,34:1 su #f1f5f9, sotto il minimo di 4,5. (Audit EAA 23/09/2026.)
+        color: '#475569',
         textTransform: 'uppercase',
         letterSpacing: '0.14em',
         whiteSpace: 'nowrap',

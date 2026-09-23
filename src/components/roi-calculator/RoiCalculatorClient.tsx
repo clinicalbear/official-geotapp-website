@@ -135,7 +135,7 @@ function SliderField({
       />
       <div
         className={dark ? 'flex justify-between text-xs' : 'flex justify-between text-xs text-gray-400'}
-        style={dark ? { color: 'rgba(242,240,233,.45)' } : undefined}
+        style={dark ? { color: 'rgba(242,240,233,.68)' } : undefined}
       >
         <span>{isMoney ? `${symbol}${min}` : String(min)}</span>
         <span>{isMoney ? `${symbol}${max}` : String(max)}</span>
@@ -161,7 +161,7 @@ function ResultCard({
   return (
     <div className={`rounded-xl p-4 ${highlight ? 'bg-green-50 border-2 border-green-400' : 'bg-gray-50 border border-gray-200'}`}>
       <p className="text-sm text-gray-600 mb-1">{label}</p>
-      <p className={`font-bold ${highlight ? 'text-2xl text-green-600' : 'text-xl text-gray-800'}`}>
+      <p className={`font-bold ${highlight ? 'text-2xl text-green-700' : 'text-xl text-gray-800'}`}>
         {formatMoney(animated, cur, locale)}
       </p>
     </div>
@@ -436,12 +436,12 @@ export default function RoiCalculatorClient({ dict, locale, trialUrl, embed = fa
                     disabled={loading}
                     className={dark
                       ? `${b1Cls} w-full text-center disabled:opacity-60 disabled:cursor-not-allowed`
-                      : 'w-full py-3 rounded-xl font-bold text-white bg-green-600 hover:bg-green-700 disabled:opacity-60 disabled:cursor-not-allowed transition-colors text-base'}
+                      : 'w-full py-3 rounded-xl font-bold text-white bg-green-700 hover:bg-green-800 disabled:opacity-60 disabled:cursor-not-allowed transition-colors text-base'}
                     style={dark ? { border: 'none', cursor: 'pointer', font: 'inherit', fontWeight: 500 } : undefined}
                   >
                     {loading ? '...' : dict.cta_calcola}
                   </button>
-                  <p className={dark ? 'text-xs text-center leading-relaxed' : 'text-xs text-gray-400 text-center leading-relaxed'} style={dark ? { color: 'rgba(242,240,233,.45)' } : undefined}>{dict.consent_text}</p>
+                  <p className={dark ? 'text-xs text-center leading-relaxed' : 'text-xs text-gray-400 text-center leading-relaxed'} style={dark ? { color: 'rgba(242,240,233,.68)' } : undefined}>{dict.consent_text}</p>
                   <button
                     onClick={goBack}
                     className={dark ? 'w-full text-sm text-center' : 'w-full text-sm text-gray-500 hover:text-gray-700'}
@@ -460,7 +460,7 @@ export default function RoiCalculatorClient({ dict, locale, trialUrl, embed = fa
                       className={dark ? 'inline-flex items-center justify-center w-12 h-12 rounded-full mb-3' : 'inline-flex items-center justify-center w-12 h-12 rounded-full bg-green-100 mb-3'}
                       style={dark ? { background: 'rgba(143,196,54,.16)' } : undefined}
                     >
-                      <svg className={dark ? 'w-6 h-6' : 'w-6 h-6 text-green-600'} style={dark ? { color: 'var(--seal)' } : undefined} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className={dark ? 'w-6 h-6' : 'w-6 h-6 text-green-700'} style={dark ? { color: 'var(--seal-testo)' } : undefined} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                     </div>

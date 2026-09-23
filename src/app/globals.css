@@ -801,7 +801,7 @@ a:hover {
 /* Gradiente brand del logo (verde -> blu) */
 :root {
   --geo-green: #8FC436;
-  --geo-green-deep: #6fa028;
+  --geo-green-deep: #4a6317;
   --geo-blue: #2DA4E4;
   --geo-grad: linear-gradient(135deg, #8FC436 0%, #5cc08a 50%, #2DA4E4 115%);
   --geo-ink: #0e2a05; /* testo near-black verde per contrasto su lime */

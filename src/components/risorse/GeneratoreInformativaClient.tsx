@@ -120,14 +120,17 @@ export default function GeneratoreInformativaClient({ locale, paesi, labels }: P
   return (
     <div className="form r">
       <div className="fld">
-        <label>{labels.azienda} *</label>
-        <input className="in" value={azienda} onChange={(e) => setAzienda(e.target.value)} placeholder={labels.aziendaPlaceholder} />
+        <label htmlFor="info-azienda">{labels.azienda} *</label>
+        <input id="info-azienda" className="in" value={azienda} onChange={(e) => setAzienda(e.target.value)} placeholder={labels.aziendaPlaceholder} />
       </div>
 
       <div className="two">
         <div className="fld">
-          <label>{labels.paese}</label>
-          <select className="in" value={paeseId} onChange={(e) => setPaeseId(e.target.value)}>
+          {/* label associata al campo con htmlFor/id: una <label> che sta solo VICINO
+              al campo non lo etichetta, e chi usa uno screen reader sente un menu
+              senza nome. Associata, diventa anche cliccabile. (Audit EAA 23/09/2026.) */}
+          <label htmlFor="info-paese">{labels.paese}</label>
+          <select id="info-paese" className="in" value={paeseId} onChange={(e) => setPaeseId(e.target.value)}>
             {paesi.map((p) => (
               <option key={p.id} value={p.id}>{p.nome}</option>
             ))}
@@ -135,25 +138,25 @@ export default function GeneratoreInformativaClient({ locale, paesi, labels }: P
         </div>
 
         <div className="fld">
-          <label>{labels.quando} *</label>
-          <input className="in" value={quando} onChange={(e) => setQuando(e.target.value)} placeholder={labels.quandoPlaceholder} />
+          <label htmlFor="info-quando">{labels.quando} *</label>
+          <input id="info-quando" className="in" value={quando} onChange={(e) => setQuando(e.target.value)} placeholder={labels.quandoPlaceholder} />
         </div>
       </div>
 
       <div className="fld">
-        <label>{labels.finalita} *</label>
-        <input className="in" value={finalita} onChange={(e) => setFinalita(e.target.value)} placeholder={labels.finalitaPlaceholder} />
+        <label htmlFor="info-finalita">{labels.finalita} *</label>
+        <input id="info-finalita" className="in" value={finalita} onChange={(e) => setFinalita(e.target.value)} placeholder={labels.finalitaPlaceholder} />
       </div>
 
       <div className="two">
         <div className="fld">
-          <label>{labels.conservazione}</label>
-          <input className="in" value={conservazione} onChange={(e) => setConservazione(e.target.value)} placeholder={labels.conservazionePlaceholder} />
+          <label htmlFor="info-conservazione">{labels.conservazione}</label>
+          <input id="info-conservazione" className="in" value={conservazione} onChange={(e) => setConservazione(e.target.value)} placeholder={labels.conservazionePlaceholder} />
         </div>
 
         <div className="fld">
-          <label>{labels.dpo}</label>
-          <input className="in" value={dpo} onChange={(e) => setDpo(e.target.value)} placeholder={labels.dpoPlaceholder} />
+          <label htmlFor="info-dpo">{labels.dpo}</label>
+          <input id="info-dpo" className="in" value={dpo} onChange={(e) => setDpo(e.target.value)} placeholder={labels.dpoPlaceholder} />
         </div>
       </div>
 

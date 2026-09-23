@@ -229,7 +229,7 @@ export default function InformativaFacsimile({ locale, countryName, authority, c
   return (
     <div className="my-4 border border-[rgba(14,14,12,.18)] bg-white p-8 text-center">
       <p className="text-lg font-bold text-[#0E0E0C]">{t.title.replace('{paese}', countryName)}</p>
-      <p className="text-sm text-[#78836F] mt-2 max-w-md mx-auto">{t.desc}</p>
+      <p className="text-sm text-[#4F5A49] mt-2 max-w-md mx-auto">{t.desc}</p>
 
       {/* Download GRATUITO, nessun cancello email. */}
       <button
@@ -243,13 +243,15 @@ export default function InformativaFacsimile({ locale, countryName, authority, c
       {/* Iscrizione FACOLTATIVA sotto, dopo il download. */}
       <div className="mt-6 pt-5 border-t border-[rgba(14,14,12,.14)] max-w-sm mx-auto">
         {status === 'success' ? (
-          <p className="text-sm font-semibold text-[#5E7C1E]">{t.success}</p>
+          <p className="text-sm font-semibold text-[#4A6317]">{t.success}</p>
         ) : (
           <>
-            <p className="text-xs text-[#78836F] mb-3">{t.prompt}</p>
+            <p className="text-xs text-[#4F5A49] mb-3">{t.prompt}</p>
             <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
+              {/* Il segnaposto non conta come nome accessibile. (Audit EAA 23/09/2026.) */}
               <input
                 type="email"
+                aria-label={t.placeholder}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder={t.placeholder}

@@ -136,12 +136,12 @@ export default function ClockInDemo({ dict }: Props) {
                 transition={{ duration: 0.4 }}
                 className="absolute bottom-3 left-3 geo-glass rounded-2xl px-4 py-3 flex items-center gap-2.5"
               >
-                <div className="w-9 h-9 rounded-full bg-emerald-500 flex items-center justify-center shadow-md shadow-emerald-500/30">
+                <div className="w-9 h-9 rounded-full bg-emerald-700 flex items-center justify-center shadow-md shadow-emerald-500/30">
                   <ShieldCheck size={18} className="text-white" />
                 </div>
                 <div className="font-mono-tech text-[11px] leading-tight text-slate-600">
                   <div className="text-slate-900 font-bold flex items-center gap-1">
-                    <Lock size={11} className="text-emerald-600" />
+                    <Lock size={11} className="text-emerald-700" />
                     {t.step_sealed}
                   </div>
                   <div>
@@ -173,7 +173,7 @@ export default function ClockInDemo({ dict }: Props) {
               <span
                 key={i}
                 className={`h-1.5 rounded-full transition-all duration-300 ${
-                  i === step ? 'w-5 bg-emerald-500' : 'w-1.5 bg-white/60'
+                  i === step ? 'w-5 bg-emerald-700' : 'w-1.5 bg-white/60'
                 }`}
               />
             ))}
@@ -183,7 +183,7 @@ export default function ClockInDemo({ dict }: Props) {
         {/* Caption + replay affordance */}
         <div className="flex items-center gap-2 px-2 pt-3 pb-1">
           <p className="flex-1 text-[13px] leading-snug text-slate-600">{t.caption}</p>
-          <span className="flex items-center gap-1 text-xs font-semibold text-slate-500 shrink-0">
+          <span className="flex items-center gap-1 text-xs font-semibold text-slate-600 shrink-0">
             <RotateCcw size={13} />
             {t.replay}
           </span>

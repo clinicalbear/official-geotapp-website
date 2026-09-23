@@ -340,9 +340,16 @@ export default function NewsletterForm({
       )}
 
       <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '0.625rem' }}>
-        {/* Sector selector */}
+        {/* Selettore settore.
+            🔴 `aria-label` non e' un di piu': l'unica etichetta visibile e' la <option>
+            disabilitata che fa da segnaposto, e i segnaposto NON contano come nome
+            accessibile. Senza, axe lo marca `select-name` con gravita' CRITICA — ed era
+            su tutte e 18 le pagine provate, perche' questo modulo sta nel piede del sito.
+            Si riusa la stringa gia' tradotta in 11 lingue invece di aggiungerne una nuova.
+            (Audit EAA del 23/09/2026.) */}
         <select
           value={sector}
+          aria-label={t.sector_placeholder}
           onChange={e => setSector(e.target.value)}
           style={{
             width: '100%', padding: '0.625rem 0.875rem', borderRadius: '10px',
@@ -358,9 +365,12 @@ export default function NewsletterForm({
 
         {/* Email + submit row */}
         <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
+          {/* Il segnaposto non e' un nome accessibile: si riusa la stringa gia'
+              tradotta. (Audit EAA del 23/09/2026.) */}
           <input
             type="email"
             required
+            aria-label={t.email_placeholder}
             value={email}
             onChange={e => setEmail(e.target.value)}
             placeholder={t.email_placeholder}

@@ -139,7 +139,7 @@ export default function RoiMini({ dict, locale }: Props) {
         <ul className="space-y-4">
           {t.pitch_points.map((point) => (
             <li key={point} className="flex items-start gap-3">
-              <CheckCircle2 className="text-emerald-600 shrink-0 mt-0.5" size={22} />
+              <CheckCircle2 className="text-emerald-700 shrink-0 mt-0.5" size={22} />
               <span className="text-slate-700 text-base sm:text-lg leading-snug">{point}</span>
             </li>
           ))}
@@ -199,7 +199,7 @@ export default function RoiMini({ dict, locale }: Props) {
       <div className="mt-6 rounded-2xl bg-green-50 border border-green-200 p-5 text-center">
         <p className="text-base sm:text-lg text-text-secondary leading-snug" aria-live="polite">
           {t.result_prefix}{' '}
-          <span className="text-3xl sm:text-4xl font-extrabold text-green-600 align-middle">{money}</span>{' '}
+          <span className="text-3xl sm:text-4xl font-extrabold text-green-700 align-middle">{money}</span>{' '}
           {t.result_suffix}
         </p>
         <p className="mt-3 text-xs text-text-secondary">{t.disclaimer}</p>
@@ -246,11 +246,11 @@ export default function RoiMini({ dict, locale }: Props) {
         <button
           type="submit"
           disabled={status === 'loading'}
-          className="w-full py-3 rounded-xl font-bold text-white bg-green-600 hover:bg-green-700 disabled:opacity-60 disabled:cursor-not-allowed transition-colors text-base"
+          className="w-full py-3 rounded-xl font-bold text-white bg-green-700 hover:bg-green-800 disabled:opacity-60 disabled:cursor-not-allowed transition-colors text-base"
         >
           {t.email_cta}
         </button>
-        {status === 'ok' && <p className="text-sm text-green-600 text-center">{t.email_ok}</p>}
+        {status === 'ok' && <p className="text-sm text-green-700 text-center">{t.email_ok}</p>}
         {status === 'err' && <p className="text-sm text-red-600 text-center">{t.email_err}</p>}
         </form>
       </div>

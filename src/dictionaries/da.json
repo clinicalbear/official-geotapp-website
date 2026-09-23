@@ -1456,5 +1456,21 @@
       "youtubeNote": "Den ligger også på YouTube, på elleve sprog."
     },
     "captions": "Undertekster"
+  },
+  "accessibilita": {
+    "title": "Tilgængelighedserklæring",
+    "intro": "GeoTapp arbejder for at gøre dette websted tilgængeligt i overensstemmelse med direktiv (EU) 2019/882 (European Accessibility Act) og standarden EN 301 549, der henviser til WCAG 2.1 niveau AA.",
+    "stato_t": "Status for overholdelse",
+    "stato": "Dette websted er **delvist i overensstemmelse** med EN 301 549 / WCAG 2.1 AA. «Delvist» betyder, at en del af kravene er opfyldt og kontrolleret, mens andre endnu ikke er testet med fuldstændige automatiske og manuelle metoder.",
+    "fatto_t": "Hvad der er kontrolleret",
+    "fatto": "En automatisk analyse med axe-core, udført i en rigtig browser den 23. september 2026 på toogtyve sider i de elleve udgivne sprog. De fundne fejl er rettet: tekstkontrast, tilgængelige navne på formularfelter, linknavne og korrekt brug af ARIA-attributter. Webstedet angiver sproget på hver side, tilbyder et «gå til indholdet»-link, bruger semantiske landemærker, viser tastaturfokus synligt og respekterer systemets indstilling for reduceret bevægelse.",
+    "limiti_t": "Kendte begrænsninger",
+    "limiti": "En fuldstændig manuel gennemgang med skærmlæsere og kun tastatur er endnu ikke gennemført. Købsforløbet ligger på et separat domæne (crm.geotapp.com) og er ikke omfattet af denne erklæring. Blogindhold og PDF-dokumenter til download er ikke kontrolleret enkeltvis.",
+    "metodo_t": "Vurderingsmetode",
+    "metodo": "Selvvurdering foretaget internt med automatiske værktøjer på udgivne sider. Der er ikke foretaget revision af tredjepart.",
+    "segnala_t": "Meld et problem",
+    "segnala": "Støder du på en barriere på dette websted, så skriv til info@geotapp.com med angivelse af siden og hvad du ikke kunne gøre. Vi svarer inden for tredive dage. Er svaret ikke tilfredsstillende, kan du henvende dig til den kompetente tilsynsmyndighed i dit land.",
+    "data_t": "Dato",
+    "data": "Erklæring udarbejdet den 23. september 2026 på grundlag af vurderingen samme dato."
   }
 }

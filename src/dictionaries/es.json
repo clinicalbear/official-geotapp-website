@@ -1456,5 +1456,21 @@
       "youtubeNote": "También está en YouTube, en once idiomas."
     },
     "captions": "Subtítulos"
+  },
+  "accessibilita": {
+    "title": "Declaración de accesibilidad",
+    "intro": "GeoTapp se compromete a hacer accesible este sitio, conforme a la Directiva (UE) 2019/882 (European Accessibility Act) y a la norma EN 301 549, que remite a las WCAG 2.1 nivel AA.",
+    "stato_t": "Estado de conformidad",
+    "stato": "Este sitio es **parcialmente conforme** con EN 301 549 / WCAG 2.1 AA. «Parcialmente» significa que una parte de los requisitos se cumple y está verificada, mientras que otros aún no se han probado con métodos automáticos y manuales completos.",
+    "fatto_t": "Qué se ha verificado",
+    "fatto": "Un análisis automático con axe-core, realizado en un navegador real el 23 de septiembre de 2026, sobre veintidós páginas en los once idiomas publicados. Las incidencias detectadas se han corregido: contraste del texto, nombres accesibles de los campos de formulario, nombres de los enlaces, uso correcto de los atributos ARIA. El sitio declara el idioma de cada página, ofrece un enlace «saltar al contenido», usa marcas semánticas, hace visible el foco del teclado y respeta la preferencia del sistema de reducción de animaciones.",
+    "limiti_t": "Limitaciones conocidas",
+    "limiti": "Aún no se ha realizado una revisión manual completa con lectores de pantalla ni solo con teclado. El proceso de compra está alojado en un dominio distinto (crm.geotapp.com) y no entra en esta declaración. Los contenidos del blog y los PDF descargables no se han revisado uno a uno.",
+    "metodo_t": "Método de evaluación",
+    "metodo": "Autoevaluación realizada internamente, con herramientas automáticas sobre páginas publicadas. No se ha realizado una auditoría por parte de un tercero.",
+    "segnala_t": "Comunicar un problema",
+    "segnala": "Si encuentras una barrera en este sitio, escribe a info@geotapp.com indicando la página y lo que no pudiste hacer. Respondemos en treinta días. Si la respuesta no es satisfactoria, puedes dirigirte a la autoridad de control competente de tu país.",
+    "data_t": "Fecha",
+    "data": "Declaración redactada el 23 de septiembre de 2026, sobre la base de la evaluación de la misma fecha."
   }
 }

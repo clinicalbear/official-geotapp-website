@@ -53,7 +53,7 @@ export default function RisorsaAttribuzione({ pageUrl, pageTitle, contactHref, l
   const Snippet = ({ value, which, formato }: { value: string; which: string; formato: string }) => (
     <div>
       <div className="flex items-center justify-between mb-1">
-        <span className="text-xs font-semibold uppercase tracking-wide text-[#78836F]">{formato}</span>
+        <span className="text-xs font-semibold uppercase tracking-wide text-[#4F5A49]">{formato}</span>
         <button
           type="button"
           onClick={() => copy(value, which)}
@@ -83,7 +83,7 @@ export default function RisorsaAttribuzione({ pageUrl, pageTitle, contactHref, l
         <Snippet value={snippetHtml} which="html" formato={labels.formatoHtml} />
       </div>
 
-      <p className="mt-4 pt-3 border-t border-[rgba(14,14,12,.14)] text-xs text-[#78836F] leading-relaxed">
+      <p className="mt-4 pt-3 border-t border-[rgba(14,14,12,.14)] text-xs text-[#4F5A49] leading-relaxed">
         <span className="font-semibold text-[#3B4237]">© {anno} GeoTapp.</span> {labels.datiVerificati}{' '}
         {labels.ripubblicazione}{' '}
         <a href={contactHref} className="text-[#0E0E0C] underline underline-offset-2 hover:text-[#557d18]">

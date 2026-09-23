@@ -133,10 +133,6 @@ const content: SettoreContent = {
     subtitle: 'Vad folk frågar oss mest innan de börjar.',
     items: [
       {
-        q: 'Vilken byggarbetsplats app behöver jag för att veta vilka som var på plats?',
-        a: 'En app för byggarbetsplats som registrerar in- och utstämpling med GPS på plats, inte i efterhand och inte manuellt inmatad. Det är skillnaden som betyder något när någon frågar vilka av dina montörer som var på vilken byggarbetsplats en viss dag. GeoTapp stämplar från arbetarens egen telefon, låser koordinaterna och tiden vid stämplingsögonblicket och samlar allt per byggarbetsplats, så att timmarna går att följa tillbaka till en plats och en tidpunkt i stället för till en minneslista i slutet av månaden.',
-      },
-      {
         q: 'Vem var på byggarbetsplatsen och när?',
         a: 'Varje GPS-stämpling är tidsstämplad och förseglad. GeoTapp registrerar verkliga koordinater vid stämplingen, inte manuellt inmatade. Data kan verifieras av projektledningen när som helst.',
       },
@@ -167,14 +163,6 @@ const content: SettoreContent = {
   },
   schema_sector_name: 'Byggbranschen',
   schema_faq: [
-    {
-      question: 'Vilken byggarbetsplats app behöver jag för att veta vilka som var på plats?',
-      answer: 'En app för byggarbetsplats som registrerar in- och utstämpling med GPS på plats, inte i efterhand och inte manuellt inmatad. GeoTapp stämplar från arbetarens egen telefon, låser koordinaterna och tiden vid stämplingsögonblicket och samlar allt per byggarbetsplats, så att timmarna går att följa tillbaka till en plats och en tidpunkt.',
-    },
-    {
-      question: 'Ersätter GeoTapp den elektroniska personalliggaren?',
-      answer: 'Nej. Den elektroniska personalliggaren är reglerad i skatteförfarandelagstiftningen, byggherren anmäler byggarbetsplatsen till Skatteverket innan arbetet påbörjas och ansvarar för att utrustningen finns på plats. GeoTapp är inget personalliggarsystem och tar inte över den skyldigheten. Det appen ger dig är din egen tidsregistrering per byggarbetsplats, med GPS-verifierad in- och utstämpling och oföränderliga tidsstämplar.',
-    },
     {
       question: 'Vem var på byggarbetsplatsen och när?',
       answer: 'Varje GPS-stämpling är tidsstämplad och förseglad. GeoTapp registrerar verkliga koordinater vid stämplingen, inte manuellt inmatade. Data kan verifieras av projektledningen när som helst.',

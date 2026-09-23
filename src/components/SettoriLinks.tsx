@@ -40,7 +40,7 @@ export default function SettoriLinks({ locale, settori }: Props) {
   return (
     <div className="bg-slate-50 border-t border-slate-100 py-10 px-4">
       <div className="max-w-4xl mx-auto">
-        <p className="text-xs font-semibold text-slate-400 uppercase tracking-wide mb-4">{title}</p>
+        <p className="text-xs font-semibold text-slate-600 uppercase tracking-wide mb-4">{title}</p>
         <div className="flex flex-wrap gap-3">
           {settori.map((slug) => (
             <Link

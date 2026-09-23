@@ -1456,5 +1456,21 @@
       "youtubeNote": "Hij staat ook op YouTube, in elf talen."
     },
     "captions": "Ondertiteling"
+  },
+  "accessibilita": {
+    "title": "Toegankelijkheidsverklaring",
+    "intro": "GeoTapp zet zich in om deze website toegankelijk te maken, in lijn met richtlijn (EU) 2019/882 (European Accessibility Act) en de norm EN 301 549, die verwijst naar WCAG 2.1 niveau AA.",
+    "stato_t": "Status van naleving",
+    "stato": "Deze website voldoet **gedeeltelijk** aan EN 301 549 / WCAG 2.1 AA. «Gedeeltelijk» betekent dat een deel van de eisen is vervuld en gecontroleerd, terwijl andere nog niet met volledige automatische en handmatige methoden zijn getest.",
+    "fatto_t": "Wat is gecontroleerd",
+    "fatto": "Een automatische analyse met axe-core, uitgevoerd in een echte browser op 23 september 2026, op tweeëntwintig pagina's in de elf gepubliceerde talen. De gevonden problemen zijn opgelost: tekstcontrast, toegankelijke namen van formuliervelden, linknamen, correct gebruik van ARIA-attributen. De site vermeldt de taal van elke pagina, biedt een «naar de inhoud»-link, gebruikt semantische landmarks, toont de toetsenbordfocus zichtbaar en respecteert de systeemvoorkeur voor minder beweging.",
+    "limiti_t": "Bekende beperkingen",
+    "limiti": "Een volledige handmatige controle met schermlezers en alleen het toetsenbord is nog niet uitgevoerd. Het aankoopproces staat op een apart domein (crm.geotapp.com) en valt niet onder deze verklaring. Blog-inhoud en downloadbare PDF-documenten zijn niet afzonderlijk gecontroleerd.",
+    "metodo_t": "Beoordelingsmethode",
+    "metodo": "Zelfbeoordeling, intern uitgevoerd met automatische hulpmiddelen op gepubliceerde pagina's. Er is geen audit door een derde partij uitgevoerd.",
+    "segnala_t": "Een probleem melden",
+    "segnala": "Kom je een drempel tegen op deze site, schrijf dan naar info@geotapp.com met vermelding van de pagina en wat niet lukte. Wij antwoorden binnen dertig dagen. Is het antwoord niet bevredigend, dan kun je terecht bij de bevoegde toezichthouder in jouw land.",
+    "data_t": "Datum",
+    "data": "Verklaring opgesteld op 23 september 2026, op basis van de beoordeling van dezelfde datum."
   }
 }

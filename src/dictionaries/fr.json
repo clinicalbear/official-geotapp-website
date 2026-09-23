@@ -1456,5 +1456,21 @@
       "youtubeNote": "Elle est aussi sur YouTube, en onze langues."
     },
     "captions": "Sous-titres"
+  },
+  "accessibilita": {
+    "title": "Déclaration d'accessibilité",
+    "intro": "GeoTapp s'engage à rendre ce site accessible, conformément à la directive (UE) 2019/882 (European Accessibility Act) et à la norme EN 301 549, qui renvoie aux WCAG 2.1 niveau AA.",
+    "stato_t": "État de conformité",
+    "stato": "Ce site est **partiellement conforme** à la norme EN 301 549 / WCAG 2.1 AA. «Partiellement» signifie qu'une partie des exigences est satisfaite et vérifiée, tandis que d'autres n'ont pas encore été testées par des méthodes automatiques et manuelles complètes.",
+    "fatto_t": "Ce qui a été vérifié",
+    "fatto": "Une analyse automatique avec axe-core, effectuée sur un navigateur réel le 23 septembre 2026, sur vingt-deux pages dans les onze langues publiées. Les anomalies relevées ont été corrigées : contraste du texte, noms accessibles des champs de formulaire, noms des liens, usage correct des attributs ARIA. Le site déclare la langue de chaque page, propose un lien «aller au contenu», utilise des repères sémantiques, rend le focus clavier visible et respecte la préférence système de réduction des animations.",
+    "limiti_t": "Limites connues",
+    "limiti": "Une vérification manuelle complète avec lecteurs d'écran et au clavier seul n'a pas encore été menée. Le parcours d'achat est hébergé sur un domaine distinct (crm.geotapp.com) et n'entre pas dans cette déclaration. Les contenus du blog et les PDF téléchargeables n'ont pas été vérifiés un à un.",
+    "metodo_t": "Méthode d'évaluation",
+    "metodo": "Auto-évaluation réalisée en interne, avec des outils automatiques sur les pages publiées. Aucun audit par un tiers n'a été réalisé.",
+    "segnala_t": "Signaler un problème",
+    "segnala": "Si vous rencontrez un obstacle sur ce site, écrivez à info@geotapp.com en indiquant la page et ce que vous n'avez pas pu faire. Nous répondons sous trente jours. Si la réponse ne vous satisfait pas, vous pouvez saisir l'autorité de contrôle compétente de votre pays.",
+    "data_t": "Date",
+    "data": "Déclaration rédigée le 23 septembre 2026, sur la base de l'évaluation du même jour."
   }
 }

@@ -1456,5 +1456,21 @@
       "youtubeNote": "Den finns också på YouTube, på elva språk."
     },
     "captions": "Undertexter"
+  },
+  "accessibilita": {
+    "title": "Tillgänglighetsredogörelse",
+    "intro": "GeoTapp arbetar för att göra denna webbplats tillgänglig, i linje med direktiv (EU) 2019/882 (European Accessibility Act) och standarden EN 301 549, som hänvisar till WCAG 2.1 nivå AA.",
+    "stato_t": "Efterlevnadsstatus",
+    "stato": "Denna webbplats är **delvis förenlig** med EN 301 549 / WCAG 2.1 AA. «Delvis» betyder att en del av kraven är uppfyllda och kontrollerade, medan andra ännu inte har testats med fullständiga automatiska och manuella metoder.",
+    "fatto_t": "Vad som har kontrollerats",
+    "fatto": "En automatisk analys med axe-core, utförd i en riktig webbläsare den 23 september 2026 på tjugotvå sidor på de elva publicerade språken. De fel som hittades har rättats: textkontrast, tillgängliga namn på formulärfält, länknamn och korrekt användning av ARIA-attribut. Webbplatsen anger språket på varje sida, erbjuder en «hoppa till innehållet»-länk, använder semantiska landmärken, visar tangentbordsfokus synligt och respekterar systemets inställning för minskad rörelse.",
+    "limiti_t": "Kända begränsningar",
+    "limiti": "En fullständig manuell granskning med skärmläsare och enbart tangentbord har ännu inte genomförts. Köpflödet ligger på en separat domän (crm.geotapp.com) och omfattas inte av denna redogörelse. Blogginnehåll och nedladdningsbara PDF-dokument har inte granskats ett och ett.",
+    "metodo_t": "Bedömningsmetod",
+    "metodo": "Självbedömning utförd internt med automatiska verktyg på publicerade sidor. Ingen granskning av tredje part har gjorts.",
+    "segnala_t": "Rapportera ett problem",
+    "segnala": "Om du stöter på ett hinder på denna webbplats, skriv till info@geotapp.com och ange sidan och vad du inte kunde göra. Vi svarar inom trettio dagar. Är svaret inte tillfredsställande kan du vända dig till behörig tillsynsmyndighet i ditt land.",
+    "data_t": "Datum",
+    "data": "Redogörelse upprättad den 23 september 2026, på grundval av bedömningen samma datum."
   }
 }

@@ -107,7 +107,7 @@ export default function StampaView({
       {/* ── in breve + dati in breve ── */}
       <section className="sec"><div className="w"><div className="two2">
         <div className="r">
-          <p className="kk k" style={{ color: 'var(--seal)' }}>{d.boilerplate_label}</p>
+          <p className="kk k" style={{ color: 'var(--seal-testo)' }}>{d.boilerplate_label}</p>
           <div className="story">
             <p style={{ position: 'relative', paddingRight: 40 }}>
               {d.boilerplate_short}
@@ -115,7 +115,7 @@ export default function StampaView({
                 type="button"
                 aria-label="Copy"
                 onClick={() => copy('short', d.boilerplate_short)}
-                style={{ position: 'absolute', right: 0, top: 0, background: 'none', border: 0, cursor: 'pointer', color: copied === 'short' ? 'var(--seal)' : '#78836F' }}
+                style={{ position: 'absolute', right: 0, top: 0, background: 'none', border: 0, cursor: 'pointer', color: copied === 'short' ? 'var(--seal)' : '#4F5A49' }}
               >
                 {copied === 'short' ? <Check size={16} /> : <Copy size={16} />}
               </button>
@@ -126,7 +126,7 @@ export default function StampaView({
                 type="button"
                 aria-label="Copy"
                 onClick={() => copy('long', d.boilerplate_long)}
-                style={{ position: 'absolute', right: 0, top: 0, background: 'none', border: 0, cursor: 'pointer', color: copied === 'long' ? 'var(--seal)' : '#78836F' }}
+                style={{ position: 'absolute', right: 0, top: 0, background: 'none', border: 0, cursor: 'pointer', color: copied === 'long' ? 'var(--seal)' : '#4F5A49' }}
               >
                 {copied === 'long' ? <Check size={16} /> : <Copy size={16} />}
               </button>
@@ -134,7 +134,7 @@ export default function StampaView({
           </div>
         </div>
         <div className="r d1">
-          <p className="kk k" style={{ color: 'var(--seal)' }}>{d.facts_label}</p>
+          <p className="kk k" style={{ color: 'var(--seal-testo)' }}>{d.facts_label}</p>
           <div className="facts">
             {facts.map((f) => (
               <div className="rw" key={f.k}>
@@ -178,7 +178,7 @@ export default function StampaView({
           </a>
         </div>
         <div className="r d1">
-          <p className="kk k" style={{ color: 'var(--seal)' }}>{d.founder_label}</p>
+          <p className="kk k" style={{ color: 'var(--seal-testo)' }}>{d.founder_label}</p>
           <h2 style={{ fontSize: 'clamp(26px,3.2vw,46px)' }}>Michele Angelo Petraroli</h2>
           <p style={{ color: '#3B4237', marginTop: 22, maxWidth: '60ch' }}>{d.founder_bio}</p>
         </div>
@@ -276,8 +276,8 @@ export default function StampaView({
             {PRESS_RELEASES.map((item, i) => (
               <li key={i}>
                 <a href={item.url} target="_blank" rel={pressRel(item)} style={{ display: 'flex', flexWrap: 'wrap', gap: 16, alignItems: 'baseline' }}>
-                  <time dateTime={item.date} style={{ fontSize: 12.5, color: '#78836F', fontVariantNumeric: 'tabular-nums' }}>{fmtPressDate(item.date)}</time>
-                  <span className="k" style={{ color: 'var(--seal)', fontSize: 11 }}>{item.outlet}</span>
+                  <time dateTime={item.date} style={{ fontSize: 12.5, color: '#4F5A49', fontVariantNumeric: 'tabular-nums' }}>{fmtPressDate(item.date)}</time>
+                  <span className="k" style={{ color: 'var(--seal-testo)', fontSize: 11 }}>{item.outlet}</span>
                   <span style={{ flex: 1 }}>{item.title}</span>
                 </a>
               </li>

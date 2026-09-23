@@ -1456,5 +1456,21 @@
       "youtubeNote": "Es liegt auch auf YouTube, in elf Sprachen."
     },
     "captions": "Untertitel"
+  },
+  "accessibilita": {
+    "title": "Erklärung zur Barrierefreiheit",
+    "intro": "GeoTapp setzt sich dafür ein, diese Website barrierefrei zu gestalten, im Einklang mit der Richtlinie (EU) 2019/882 (European Accessibility Act) und der Norm EN 301 549, die auf die WCAG 2.1 Stufe AA verweist.",
+    "stato_t": "Stand der Konformität",
+    "stato": "Diese Website ist **teilweise konform** mit EN 301 549 / WCAG 2.1 AA. «Teilweise» bedeutet, dass ein Teil der Anforderungen erfüllt und geprüft ist, während andere noch nicht mit vollständigen automatischen und manuellen Verfahren getestet wurden.",
+    "fatto_t": "Was geprüft wurde",
+    "fatto": "Eine automatische Analyse mit axe-core, am 23. September 2026 in einem echten Browser auf zweiundzwanzig Seiten in den elf veröffentlichten Sprachen durchgeführt. Die gefundenen Verstöße wurden behoben: Textkontrast, zugängliche Namen von Formularfeldern, Linknamen, korrekte Verwendung von ARIA-Attributen. Die Website gibt die Sprache jeder Seite an, bietet einen «Zum Inhalt springen»-Link, verwendet semantische Landmarken, zeigt den Tastaturfokus sichtbar an und beachtet die Systemeinstellung für reduzierte Bewegung.",
+    "limiti_t": "Bekannte Einschränkungen",
+    "limiti": "Eine vollständige manuelle Prüfung mit Screenreadern und reiner Tastaturbedienung steht noch aus. Der Kaufvorgang liegt auf einer eigenen Domain (crm.geotapp.com) und ist von dieser Erklärung nicht erfasst. Blog-Inhalte und herunterladbare PDF-Dokumente wurden nicht einzeln geprüft.",
+    "metodo_t": "Bewertungsmethode",
+    "metodo": "Selbstbewertung, intern durchgeführt mit automatischen Werkzeugen auf veröffentlichten Seiten. Eine Prüfung durch Dritte fand nicht statt.",
+    "segnala_t": "Ein Problem melden",
+    "segnala": "Wenn Sie auf dieser Website auf eine Barriere stoßen, schreiben Sie an info@geotapp.com und nennen Sie die Seite und was nicht möglich war. Wir antworten innerhalb von dreißig Tagen. Ist die Antwort nicht zufriedenstellend, können Sie sich an die zuständige Durchsetzungsbehörde in Ihrem Land wenden.",
+    "data_t": "Datum",
+    "data": "Erklärung erstellt am 23. September 2026 auf Grundlage der Bewertung vom selben Tag."
   }
 }

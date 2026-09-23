@@ -97,7 +97,15 @@ export default function Reviews({ locale }: { locale: string }) {
   const avgStr = avg.toLocaleString(locale, { minimumFractionDigits: 1, maximumFractionDigits: 1 });
 
   return (
-    <section className="py-20 bg-white border-b border-slate-100" aria-label={c.heading}>
+    <section
+      // `recensioni-blocco` serve al CSS per NON rendere trasparente questo fondo:
+      // un override globale toglie lo sfondo ai blocchi `bg-white` dentro le
+      // sezioni, e il risultato era un riquadro trasparente sopra il nero della
+      // pagina, con dentro testo `text-slate-900` a 1,08:1, cioe' invisibile.
+      // (Audit EAA del 23/09/2026.)
+      className="py-20 border-b border-slate-100 recensioni-blocco"
+      aria-label={c.heading}
+    >
       <div className="container mx-auto px-6 max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 12 }}

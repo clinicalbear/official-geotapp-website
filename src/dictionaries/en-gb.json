@@ -8,5 +8,21 @@
     "title": "From first sign-in to first clock-in",
     "note": "Two minutes, no jargon: you set up Flow, invite your first employee, and watch the first clock-in appear on the map.",
     "cta": "Watch the video, 2 minutes"
+  },
+  "accessibilita": {
+    "title": "Accessibility statement",
+    "intro": "GeoTapp is committed to making this website accessible, in line with Directive (EU) 2019/882 (European Accessibility Act) and the EN 301 549 standard, which refers to the WCAG 2.1 level AA guidelines.",
+    "stato_t": "Conformance status",
+    "stato": "This website is **partially conformant** with EN 301 549 / WCAG 2.1 AA. «Partially» means that some requirements are met and verified, while others have not yet been tested with full automated and manual methods.",
+    "fatto_t": "What has been checked",
+    "fatto": "An automated analysis with axe-core, run in a real browser on 23 September 2026, across twenty-two pages in the eleven published languages. The issues found were fixed: text contrast, accessible names for form fields, link names, correct use of ARIA attributes. The site declares the language of each page, offers a «skip to content» link, uses semantic landmarks, shows a visible keyboard focus, and honours the system preference for reduced motion.",
+    "limiti_t": "Known limitations",
+    "limiti": "A full manual review with screen readers and keyboard-only navigation has not yet been carried out. The purchase flow is hosted on a separate domain (crm.geotapp.com) and is not covered by this statement. Blog content and downloadable PDF documents have not been checked individually.",
+    "metodo_t": "Assessment method",
+    "metodo": "Self-assessment carried out internally, using automated tools on published pages. No third-party audit has been performed.",
+    "segnala_t": "Reporting a problem",
+    "segnala": "If you encounter a barrier on this site, write to info@geotapp.com stating the page and what you were unable to do. We reply within thirty days. If the reply is not satisfactory, you may contact the competent enforcement authority in your country.",
+    "data_t": "Date",
+    "data": "Statement written on 23 September 2026, based on the assessment of the same date."
   }
 }

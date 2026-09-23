@@ -211,14 +211,14 @@ export default function GeoTappApp() {
       {/* STATO PIATTAFORMA */}
       <section className="sec l-note" style={{ paddingBottom: 0 }}>
         <div className="wn">
-          <p className="kk k" style={{ color: 'var(--seal)', justifyContent: 'center' }}>{isItalian ? 'Stato piattaforma' : 'Platform Status'}</p>
+          <p className="kk k" style={{ color: 'var(--seal-testo)', justifyContent: 'center' }}>{isItalian ? 'Stato piattaforma' : 'Platform Status'}</p>
           <p>{releaseNote}</p>
         </div>
       </section>
 
       {/* SCARICA */}
       <section className="sec"><div className="wn" style={{ textAlign: 'center' }}>
-        <p className="kk k" style={{ color: 'var(--seal)', justifyContent: 'center' }}>{isItalian ? 'App Mobile' : 'Mobile App'}</p>
+        <p className="kk k" style={{ color: 'var(--seal-testo)', justifyContent: 'center' }}>{isItalian ? 'App Mobile' : 'Mobile App'}</p>
         <h2 className="r" style={{ marginTop: 14 }}>
           {isItalian ? 'Scarica GeoTapp TimeTracker' : currentLocale === 'de' ? 'GeoTapp TimeTracker herunterladen' : 'Download GeoTapp TimeTracker'}
         </h2>
@@ -309,7 +309,7 @@ export default function GeoTappApp() {
         {sectorGroups.map(({ key, systems: group }, gi) => (
           <div key={key}>
             <div className="w" style={{ marginTop: gi === 0 ? 0 : 46, marginBottom: 14 }}>
-              <p className="kk k" style={{ color: 'var(--seal)' }}>{appDict.sectors[key]}</p>
+              <p className="kk k" style={{ color: 'var(--seal-testo)' }}>{appDict.sectors[key]}</p>
             </div>
             <div className="mods">
               {group.map((sys, i) => (
@@ -317,7 +317,7 @@ export default function GeoTappApp() {
                   <span className="nn">{String(i + 1).padStart(2, '0')} · {sys.codeName}</span>
                   <h3>{sys.systemName}</h3>
                   <p>{sys.shortDescription}</p>
-                  <span className="k" style={{ display: 'inline-block', marginTop: 12, fontSize: 11, color: '#5E7C1E' }}>
+                  <span className="k" style={{ display: 'inline-block', marginTop: 12, fontSize: 11, color: '#4A6317' }}>
                     [ {(sys as any).label_open || 'APRI DOSSIER'} ] &rarr;
                   </span>
                 </article>

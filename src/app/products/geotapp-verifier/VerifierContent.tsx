@@ -84,7 +84,7 @@ function OnlineVerifier({ copy }: { copy: VerifierCopy }) {
   function getResultLabel(r: Record<string, unknown>): { label: string; color: string } {
     if (r.status === 'invalid') return { label: copy.online_verify_result_invalid, color: 'text-red-600' };
     if (r.integrityLevel === 'legacy') return { label: copy.online_verify_result_legacy, color: 'text-yellow-600' };
-    if (r.signatureStatus === 'verified') return { label: copy.online_verify_result_valid_sealed, color: 'text-emerald-600' };
+    if (r.signatureStatus === 'verified') return { label: copy.online_verify_result_valid_sealed, color: 'text-emerald-700' };
     return { label: copy.online_verify_result_valid_unsigned, color: 'text-blue-600' };
   }
 
@@ -96,13 +96,13 @@ function OnlineVerifier({ copy }: { copy: VerifierCopy }) {
         onDragOver={(e) => e.preventDefault()}
         onDrop={(e) => { e.preventDefault(); const f = e.dataTransfer.files[0]; if (f) handleFile(f); }}
       >
-        <Upload size={36} className="mx-auto mb-3 text-slate-400" />
+        <Upload size={36} className="mx-auto mb-3 text-slate-600" />
         <p className="font-medium text-slate-700">{copy.online_verify_upload_label}</p>
-        <p className="text-sm text-slate-400 mt-1">{copy.online_verify_upload_hint}</p>
+        <p className="text-sm text-slate-600 mt-1">{copy.online_verify_upload_hint}</p>
         <input ref={inputRef} type="file" accept=".zip" className="hidden" onChange={(e) => { const f = e.target.files?.[0]; if (f) handleFile(f); }} />
       </div>
 
-      <p className="text-xs text-slate-400 text-center mt-3">{copy.online_verify_privacy_note}</p>
+      <p className="text-xs text-slate-600 text-center mt-3">{copy.online_verify_privacy_note}</p>
 
       {status === 'loading' && (
         <div className="mt-6 text-center text-slate-600 animate-pulse">Verifica in corso…</div>
@@ -127,14 +127,14 @@ function OnlineVerifier({ copy }: { copy: VerifierCopy }) {
             </div>
             <div className="grid grid-cols-2 gap-2 text-sm text-slate-700 font-mono">
               {!!(result.companyIdentity && (result.companyIdentity as Record<string, unknown>).companyId) && (
-                <><span className="text-slate-400">Azienda</span><span>{String((result.companyIdentity as Record<string, unknown>).companyName ?? (result.companyIdentity as Record<string, unknown>).companyId)}</span></>
+                <><span className="text-slate-600">Azienda</span><span>{String((result.companyIdentity as Record<string, unknown>).companyName ?? (result.companyIdentity as Record<string, unknown>).companyId)}</span></>
               )}
               {!!(result.companyIdentity && (result.companyIdentity as Record<string, unknown>).reportId) && (
-                <><span className="text-slate-400">Report ID</span><span className="truncate">{String((result.companyIdentity as Record<string, unknown>).reportId)}</span></>
+                <><span className="text-slate-600">Report ID</span><span className="truncate">{String((result.companyIdentity as Record<string, unknown>).reportId)}</span></>
               )}
-              <span className="text-slate-400">Integrità</span>
+              <span className="text-slate-600">Integrità</span>
               <span>{String(result.integrityLevel).toUpperCase()}</span>
-              <span className="text-slate-400">Firma</span>
+              <span className="text-slate-600">Firma</span>
               <span>{String(result.signatureStatus ?? 'absent')}</span>
             </div>
           </div>
@@ -197,7 +197,7 @@ export default function VerifierContent({ copy, locale }: VerifierContentProps) 
 
       {/* IL PROBLEMA */}
       <section className="sec"><div className="w">
-        <p className="kk k r" style={{ color: 'var(--seal)' }}>{copy.problem_badge}</p>
+        <p className="kk k r" style={{ color: 'var(--seal-testo)' }}>{copy.problem_badge}</p>
         <h2 className="r d1" style={{ marginTop: 14, maxWidth: '22ch' }}>{copy.problem_title}</h2>
       </div>
         <div className="mods">
@@ -213,14 +213,14 @@ export default function VerifierContent({ copy, locale }: VerifierContentProps) 
 
       {/* COS'E' VERIFIER */}
       <section className="sec warm"><div className="wt l-center">
-        <p className="kk k" style={{ justifyContent: 'center', color: 'var(--seal)' }}>{copy.what_badge}</p>
+        <p className="kk k" style={{ justifyContent: 'center', color: 'var(--seal-testo)' }}>{copy.what_badge}</p>
         <h2 className="r">{copy.what_title}</h2>
         <p>{copy.what_desc}</p>
       </div></section>
 
       {/* COME FUNZIONA */}
       <section id="how-it-works" className="sec"><div className="w">
-        <p className="kk k r" style={{ color: 'var(--seal)' }}>{copy.how_badge}</p>
+        <p className="kk k r" style={{ color: 'var(--seal-testo)' }}>{copy.how_badge}</p>
         <h2 className="r d1" style={{ marginTop: 14, maxWidth: '22ch' }}>{copy.how_title}</h2>
       </div>
         <div className="mods">
@@ -276,13 +276,13 @@ console.log(result.integrityLevel);`}</pre>
       {/* VERIFICA ONLINE (widget vero, invariato) */}
       <section id="verify-online" className="sec"><div className="wn">
         <div className="l-center" style={{ marginBottom: 40 }}>
-          <p className="kk k" style={{ justifyContent: 'center', color: 'var(--seal)' }}>{copy.online_verify_badge}</p>
+          <p className="kk k" style={{ justifyContent: 'center', color: 'var(--seal-testo)' }}>{copy.online_verify_badge}</p>
           <h2 className="r">{copy.online_verify_title}</h2>
           <p>{copy.online_verify_desc}</p>
         </div>
         <OnlineVerifier copy={copy} />
         <div style={{ marginTop: 40 }}>
-          <p style={{ textAlign: 'center', fontSize: 14, color: '#78836F', marginBottom: 16 }}>
+          <p style={{ textAlign: 'center', fontSize: 14, color: '#4F5A49', marginBottom: 16 }}>
             {locale === 'it' ? 'Non hai un report? Scarica questo esempio reale e prova subito il verificatore.' : 'No report handy? Download this real sample and try the verifier right away.'}
           </p>
           <DemoReportBanner />
@@ -309,12 +309,12 @@ console.log(result.integrityLevel);`}</pre>
             </ul>
           </div>
         </div>
-        <p style={{ textAlign: 'center', fontSize: 13, color: '#78836F', marginTop: 30 }}>{copy.compare_same_engine_note}</p>
+        <p style={{ textAlign: 'center', fontSize: 13, color: '#4F5A49', marginTop: 30 }}>{copy.compare_same_engine_note}</p>
       </div></section>
 
       {/* COSA VERIFICA */}
       <section className="sec"><div className="w">
-        <p className="kk k r" style={{ color: 'var(--seal)' }}>{copy.features_badge}</p>
+        <p className="kk k r" style={{ color: 'var(--seal-testo)' }}>{copy.features_badge}</p>
         <h2 className="r d1" style={{ marginTop: 14, maxWidth: '22ch' }}>{copy.features_title}</h2>
       </div>
         <div className="mods">
@@ -331,7 +331,7 @@ console.log(result.integrityLevel);`}</pre>
       {/* PER CHI E' PENSATO */}
       <section className="sec warm"><div className="w">
         <div className="l-center" style={{ marginBottom: 34 }}>
-          <p className="kk k" style={{ justifyContent: 'center', color: 'var(--seal)' }}>{copy.who_badge}</p>
+          <p className="kk k" style={{ justifyContent: 'center', color: 'var(--seal-testo)' }}>{copy.who_badge}</p>
           <h2 className="r">{copy.who_title}</h2>
         </div>
         <ul className="rows l-who">
@@ -375,7 +375,7 @@ console.log(result.integrityLevel);`}</pre>
       {/* FAQ */}
       <section className="fq"><div className="w"><div className="g">
         <div>
-          <p className="kk k r" style={{ color: '#5E7C1E', marginBottom: 14 }}>{copy.faq_badge}</p>
+          <p className="kk k r" style={{ color: '#4A6317', marginBottom: 14 }}>{copy.faq_badge}</p>
           <h2 className="r">{copy.faq_title}</h2>
         </div>
         <div>

@@ -107,12 +107,12 @@ export default function AboutPage() {
         </div>
         <div className="r d1">
           <FounderViewTracker source="chi_siamo" />
-          <p className="kk k" style={{ color: 'var(--seal)' }}>{cs.founder.section_label}</p>
+          <p className="kk k" style={{ color: 'var(--seal-testo)' }}>{cs.founder.section_label}</p>
           <h2 style={{ fontSize: 'clamp(26px,3.2vw,46px)' }}>{cs.founder.name}</h2>
-          <p style={{ color: '#6B7563', marginTop: 8 }}>{cs.founder.role}</p>
+          <p style={{ color: '#4F5A49', marginTop: 8 }}>{cs.founder.role}</p>
           <p style={{ color: '#3B4237', marginTop: 22, maxWidth: '60ch' }}>{cs.founder.bio}</p>
           <div style={{ marginTop: 24 }}>
-            <p className="k" style={{ color: '#78836F', marginBottom: 12 }}>{cs.founder.expertise_label}</p>
+            <p className="k" style={{ color: '#4F5A49', marginBottom: 12 }}>{cs.founder.expertise_label}</p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
               {cs.founder.expertise.map((e: string) => (
                 <span

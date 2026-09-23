@@ -307,7 +307,7 @@ export default function Pricing() {
           </div>
         )}
         {category.id === 'app' && (
-          <p className="k" style={{ fontSize: '11px', color: '#78836F', marginBottom: '10px' }}>
+          <p className="k" style={{ fontSize: '11px', color: '#4F5A49', marginBottom: '10px' }}>
             {category.description}
           </p>
         )}
@@ -354,7 +354,7 @@ export default function Pricing() {
           <span className="big" style={{ fontSize: '30px' }}>{annualPrice}</span>{' '}
           <span className="k" style={{ fontSize: '10.5px' }}>{periodLabel}</span>
           {!isOnce && (
-            <div className="k" style={{ fontSize: '10px', color: 'var(--seal)', marginTop: '6px' }}>
+            <div className="k" style={{ fontSize: '10px', color: 'var(--seal-testo)', marginTop: '6px' }}>
               {dict.pricing.intro_label}
             </div>
           )}
@@ -363,7 +363,7 @@ export default function Pricing() {
               {p.or_monthly ?? 'or'}{' '}
               <strong>{monthlyPrice}{p.per_month_short ?? '/month'}</strong>
               {savings && (
-                <span style={{ display: 'block', marginTop: '4px', color: 'var(--seal)' }}>
+                <span style={{ display: 'block', marginTop: '4px', color: 'var(--seal-testo)' }}>
                   {p.annual_savings ?? 'Annual savings:'} {savings}
                 </span>
               )}

@@ -97,7 +97,7 @@ export default async function DossierConformitaPage({
                 <li key={i}>{src}</li>
               ))}
             </ul>
-            <p style={{ marginTop: 26, fontSize: 13.5, color: '#78836F' }}>{copy.lastUpdated}</p>
+            <p style={{ marginTop: 26, fontSize: 13.5, color: '#4F5A49' }}>{copy.lastUpdated}</p>
           </div>
         </div>
       </section>

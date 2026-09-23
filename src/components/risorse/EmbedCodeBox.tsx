@@ -61,8 +61,11 @@ export default function EmbedCodeBox({ embedUrl, pageUrl, pageTitle, labels }: P
           {copied ? labels.copiato : labels.copia}
         </button>
       </div>
+      {/* Sola lettura, ma resta raggiungibile da tastiera: senza nome si annuncia
+          come "area di testo" e basta. (Audit EAA del 23/09/2026.) */}
       <textarea
         readOnly
+        aria-label={labels.copia}
         value={code}
         rows={4}
         onFocus={(e) => e.currentTarget.select()}

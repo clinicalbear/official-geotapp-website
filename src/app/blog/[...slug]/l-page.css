@@ -38,7 +38,7 @@
   text-underline-offset: 3px;
 }
 .lp-articolo .art .body .article-content a:hover {
-  color: var(--seal);
+  color: var(--seal-testo);
 }
 .lp-articolo .art .body .article-content strong,
 .lp-articolo .art .body .article-content b {

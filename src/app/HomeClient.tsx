@@ -357,7 +357,7 @@ export default function Home({ jrSlot, fqSlot }: { jrSlot?: ReactNode; fqSlot?: 
         <h2 className="r"><span>{D.h2_1}</span><span className="s">{D.h2_2}</span></h2>
         <div className="row">
           <p className="r d1">{D.desc}</p>
-          <p className="r d2" style={{ color: '#6B7563' }}>{L.cycle}</p>
+          <p className="r d2" style={{ color: '#4F5A49' }}>{L.cycle}</p>
         </div>
       </div></section>
 
@@ -545,7 +545,7 @@ export default function Home({ jrSlot, fqSlot }: { jrSlot?: ReactNode; fqSlot?: 
         return (
           <section className="fdr"><div className="wn">
             <FounderViewTracker source="homepage_block" />
-            <p className="kk k r" style={{ color: '#5E7C1E', marginBottom: 34 }}>{f.section_label}</p>
+            <p className="kk k r" style={{ color: '#4A6317', marginBottom: 34 }}>{f.section_label}</p>
             <div className="g">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img className="r-s" src="/michele-petraroli-3.webp" alt={`${f.name}, ${f.role} GeoTapp`} loading="lazy" />
@@ -583,7 +583,7 @@ export default function Home({ jrSlot, fqSlot }: { jrSlot?: ReactNode; fqSlot?: 
           })}
         </div>
         <div style={{ marginTop: 28 }}>
-          <Link href={getLink('/settori')} className="k" style={{ color: '#5E7C1E' }}>{settori.see_all} &rarr;</Link>
+          <Link href={getLink('/settori')} className="k" style={{ color: '#4A6317' }}>{settori.see_all} &rarr;</Link>
         </div>
       </div></section>
 
@@ -613,18 +613,39 @@ export default function Home({ jrSlot, fqSlot }: { jrSlot?: ReactNode; fqSlot?: 
               <cite>
                 <b>{r.reviewer.displayName}</b>
                 <span>{meta}</span>
-                <span className="stars" style={{ display: 'flex', flexDirection: 'row', gap: 3 }} aria-label={`${r.rating}/5`}>
+                {/* role="img" non e' decorazione: `aria-label` su uno <span> senza ruolo e'
+                    VIETATO dalle specifiche ARIA, e axe lo segnala come violazione seria.
+                    Con il ruolo, le cinque stelline diventano una sola immagine con il suo
+                    nome ("4/5") invece di cinque disegni muti. (Audit EAA del 23/09/2026.) */}
+                <span
+                  className="stars"
+                  role="img"
+                  aria-label={`${r.rating}/5`}
+                  style={{ display: 'flex', flexDirection: 'row', gap: 3 }}
+                >
                   {[1, 2, 3, 4, 5].map((n) => (
                     <svg key={n} width="15" height="15" viewBox="0 0 24 24" fill={n <= r.rating ? '#8FC436' : 'rgba(242,240,233,.22)'} aria-hidden="true"><path d="M12 0l2.927 8.986H24l-7.336 5.328 2.8 8.614L12 17.6l-7.464 5.328 2.8-8.614L0 8.986h9.073z"/></svg>
                   ))}
                 </span>
-                <a className="src" href={r.sourceUrl} target="_blank" rel="noopener noreferrer nofollow"><Logo /></a>
+                {/* Dentro c'e' solo il logo della fonte, che e' un SVG decorativo: senza
+                    questo nome il link si annuncia come "link" e basta, e chi usa uno
+                    screen reader non sa dove va. Si apre in una scheda nuova, e anche
+                    quello va detto. (Audit EAA del 23/09/2026.) */}
+                <a
+                  className="src"
+                  href={r.sourceUrl}
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  aria-label={`${r.reviewer.displayName} — ${r.source} (si apre in una nuova scheda)`}
+                >
+                  <Logo />
+                </a>
               </cite>
               <p>&ldquo;{text.quote}&rdquo;</p>
             </blockquote>
           );
         })}
-        <p className="r" style={{ marginTop: 26, fontSize: 13, color: 'rgba(242,240,233,.45)', maxWidth: '64ch' }}>
+        <p className="r" style={{ marginTop: 26, fontSize: 13, color: 'rgba(242,240,233,.68)', maxWidth: '64ch' }}>
           {(REVIEWS_COPY[currentLocale] ?? REVIEWS_COPY.en).translationNote}
         </p>
       </div></section>

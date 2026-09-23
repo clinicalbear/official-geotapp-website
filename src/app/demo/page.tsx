@@ -204,7 +204,7 @@ export default function DemoPage() {
             </div>
 
             <div className="r d1">
-              <p className="kk k" style={{ color: 'var(--seal)', marginBottom: 26 }}><s style={{ display: 'block', width: 52, height: 1, background: 'var(--seal)', textDecoration: 'none' }} />{d.what_youll_see ?? "What you'll see in the demo"}</p>
+              <p className="kk k" style={{ color: 'var(--seal-testo)', marginBottom: 26 }}><s style={{ display: 'block', width: 52, height: 1, background: 'var(--seal)', textDecoration: 'none' }} />{d.what_youll_see ?? "What you'll see in the demo"}</p>
               <ul className="see">
                 {d.cosa_vedrai.map((item: { title: string; desc: string }, i: number) => (
                   <li key={i}>

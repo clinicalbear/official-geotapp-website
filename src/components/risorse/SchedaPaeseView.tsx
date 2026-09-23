@@ -67,7 +67,7 @@ function FonteConAvviso({
         {d.fonteNonUfficialeEtichetta}
         {tipo ? ' \u00b7 ' + tipo : ''}
       </span>
-      <span style={{ display: 'block', fontSize: 13, color: '#78836F', marginTop: 4, maxWidth: '62ch' }}>
+      <span style={{ display: 'block', fontSize: 13, color: '#4F5A49', marginTop: 4, maxWidth: '62ch' }}>
         {d.fonteNonUfficialeAvviso}
       </span>
     </span>
@@ -99,7 +99,7 @@ interface SchedaPaeseViewProps {
 }
 
 const BADGE_COLOR: Record<RispostaChecklist, string> = {
-  si: '#5E7C1E',
+  si: '#4A6317',
   no: '#B3261E',
   dipende: '#8A6D1E',
 };
@@ -134,7 +134,7 @@ function ExternalLink({ href, children }: { href: string; children: React.ReactN
       target="_blank"
       rel="noopener noreferrer nofollow"
       className="underline underline-offset-2 break-words"
-      style={{ color: 'var(--seal)' }}
+      style={{ color: 'var(--seal-testo)' }}
     >
       {children}
     </a>
@@ -253,7 +253,7 @@ export default function SchedaPaeseView({
                     >
                       {rispostaLabel(dict, item.risposta)}
                     </span>
-                    <span style={{ fontSize: 13, color: '#78836F' }}>{serveGloss(dict, item.risposta)}</span>
+                    <span style={{ fontSize: 13, color: '#4F5A49' }}>{serveGloss(dict, item.risposta)}</span>
                   </span>
                 </div>
                 <p style={{ marginBottom: 8 }}>{loc(item.dettaglio, locale)}</p>
@@ -346,7 +346,7 @@ export default function SchedaPaeseView({
           </ul>
 
           {/* ── 7. disclaimer ── */}
-          <p style={{ marginTop: 34, fontSize: 13.5, color: '#78836F', maxWidth: '62ch' }}>{dict.disclaimer}</p>
+          <p style={{ marginTop: 34, fontSize: 13.5, color: '#4F5A49', maxWidth: '62ch' }}>{dict.disclaimer}</p>
         </div>
       </section>
 
@@ -385,7 +385,7 @@ function Contatto({
       <p style={{ fontWeight: 600, color: 'var(--ink)' }}>{loc(contatto.ente, locale)}</p>
       {contatto.email && (
         <p style={{ fontSize: 14, marginTop: 4 }}>
-          <a href={`mailto:${contatto.email}`} className="underline underline-offset-2" style={{ color: 'var(--seal)' }}>
+          <a href={`mailto:${contatto.email}`} className="underline underline-offset-2" style={{ color: 'var(--seal-testo)' }}>
             {contatto.email}
           </a>
         </p>
@@ -398,7 +398,7 @@ function Contatto({
       <p style={{ fontSize: 14, marginTop: 4 }}>
         <ExternalLink href={contatto.urlFonte}>{contatto.urlFonte}</ExternalLink>
       </p>
-      {contatto.note && <p style={{ fontSize: 14, marginTop: 4, color: '#78836F' }}>{loc(contatto.note, locale)}</p>}
+      {contatto.note && <p style={{ fontSize: 14, marginTop: 4, color: '#4F5A49' }}>{loc(contatto.note, locale)}</p>}
       <p style={{ fontSize: 12.5, marginTop: 6, color: '#9AA294' }}>
         {dict.verificatoIl} {formatDate(contatto.verificatoIl, locale)}
       </p>

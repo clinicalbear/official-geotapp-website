@@ -99,8 +99,9 @@ export default function ConservazioneClient({ locale, contenuto, paesi }: Props)
     <div className="form r">
       <div className="two">
         <div className="fld">
-          <label>{c.azienda}</label>
+          <label htmlFor="cons-azienda">{c.azienda}</label>
           <input
+            id="cons-azienda"
             className="in"
             value={azienda}
             onChange={(e) => setAzienda(e.target.value)}
@@ -108,8 +109,11 @@ export default function ConservazioneClient({ locale, contenuto, paesi }: Props)
           />
         </div>
         <div className="fld">
-          <label>{c.paese}</label>
-          <select className="in" value={paeseId} onChange={(e) => setPaeseId(e.target.value)}>
+          {/* label associata al campo con htmlFor/id: una <label> che sta solo VICINO
+              al campo non lo etichetta, e chi usa uno screen reader sente un menu
+              senza nome. Associata, diventa anche cliccabile. (Audit EAA 23/09/2026.) */}
+          <label htmlFor="cons-paese">{c.paese}</label>
+          <select id="cons-paese" className="in" value={paeseId} onChange={(e) => setPaeseId(e.target.value)}>
             {paesi.map((p) => (
               <option key={p.id} value={p.id}>{p.nome}</option>
             ))}
@@ -118,8 +122,11 @@ export default function ConservazioneClient({ locale, contenuto, paesi }: Props)
       </div>
 
       <div className="fld">
-        <label>{c.selezionaTipi}</label>
-        <div className="cd-tipi">
+        {/* Bottoni-interruttore, non un campo: una <label> non li etichetta. Il nome
+            del gruppo si da' con role="group" + aria-labelledby, cosi' chi naviga a
+            voce sente a cosa appartengono. (Audit EAA del 23/09/2026.) */}
+        <label id="cons-tipi-label">{c.selezionaTipi}</label>
+        <div className="cd-tipi" role="group" aria-labelledby="cons-tipi-label">
           {c.tipi.map((t) => {
             const on = !!selezione[t.id];
             return (
