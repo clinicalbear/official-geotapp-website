@@ -2,13 +2,19 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
+    // 2026-09-24: "arbeitszeiterfassung für installateure" sta fra pos 2 e 5 ogni giorno
+    // dal 25/08 (74 imp in 28gg, 104 su 105 imp della pagina coperte da query visibili)
+    // e fa ZERO click, dove a pos 4 se ne aspettano ~4. Il title apriva gia' con la
+    // query; non la diceva l'H1 ("Außendienst im Griff"), che e' cio' che Google usa
+    // quando riscrive il title. H1 allineato alla query; description che non ripete
+    // piu' il title e dice cosa si ottiene (GPS solo a entrata e uscita). Title invariato.
     title: 'Arbeitszeiterfassung für Installateure und Elektriker | GeoTapp',
-    description: 'Arbeitszeiterfassung für Installateure und Elektriker: GPS-geprüfte Zeiten, digitale Stundenzettel und Fotobeweise vom Einsatz. DSGVO-konform, §17 MiLoG.',
+    description: 'Stunden, Einsätze und Fotobeweise vom Monteur, GPS nur beim Ein- und Ausstempeln. Digitale Stundenzettel, DSGVO-konform und §17 MiLoG-tauglich.',
   },
   hero: {
     badge: 'Arbeitszeiterfassung und Einsatzverwaltung für Elektriker und Heizungsinstallateure',
-    h1_line1: 'Außendienst im Griff:',
-    h1_line2: 'Arbeitszeiterfassung, Einsätze und Nachweise klar dokumentiert',
+    h1_line1: 'Arbeitszeiterfassung für Installateure:',
+    h1_line2: 'Einsätze, Stunden und Nachweise klar dokumentiert',
     subtitle: 'GeoTapp verbindet Flow + TimeTracker für Handwerksbetriebe, die zwischen Baustellen, Fahrzeugen und Endkunden arbeiten. Die Android- und iOS-Apps unterstützen den Techniker im Außendienst; das Büro sieht Auftrag, Zeiten, Fotobeweise und Notizen ohne Nachfragen. Die Arbeitszeiterfassung läuft dabei mit, DSGVO-konform und §17 MiLoG-tauglich.',
     cta_primary: 'Demo anfragen',
     cta_note: 'Keine Bindung. Antwort innerhalb von 12 Geschäftsstunden.',

@@ -117,7 +117,22 @@ export default function SiteAnalytics() {
         // blog Article*) continuano a funzionare; resta una piccola
         // duplicazione su quei pochi, accettabile per il funnel.
         const trialHrefPattern = /\/trial\/?(?:[?#]|$)/;
-        if (trialHrefPattern.test(href)) {
+        // 2026-09-24: la "piccola duplicazione" di sopra non era innocua. Questo
+        // listener sta su document e React gestisce l'onClick sul root, quindi
+        // gira DOPO il trial_click esplicito del bottone e riscrive
+        // sessionStorage.trial_source col nome della pagina: la pagina trial
+        // vedeva sempre "home", mai "navbar" o "homepage_sticky" (30gg: 14 click
+        // espliciti con zero trial_page_view attribuiti, e ogni click contato
+        // due volte). Se un trial_click esplicito e' appena stato registrato,
+        // qui ci si fa da parte: questo resta la rete per i CTA senza onClick.
+        let esplicitoAppenaFatto = false;
+        try {
+          const ts = Number(sessionStorage.getItem('trial_source_ts') || 0);
+          esplicitoAppenaFatto = ts > 0 && Date.now() - ts < 1500;
+        } catch {
+          // sessionStorage bloccato: si torna al comportamento di prima
+        }
+        if (trialHrefPattern.test(href) && !esplicitoAppenaFatto) {
           const segments = pagePath.split('/').filter(Boolean);
           let source = 'unknown';
           if (segments.length === 0 || segments.length === 1) {
