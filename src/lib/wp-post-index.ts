@@ -312,23 +312,49 @@ export function blogPostPath(link: string, slug: string): string {
 const categorySlugCache = new Map<number, string | null>();
 const categoryIdCache = new Map<string, number | null>();
 
+/**
+ * Tutte le categorie, id -> slug, in una copia condivisa tra isolate.
+ *
+ * 24/09/2026: le query per singola categoria (`categories/?slug=...`) dal Worker non
+ * rispondevano e andavano in timeout dopo 8 s, a ogni render a freddo di home e pagine
+ * settore in lingua diversa dall'italiano (log del Worker: TimeoutError). Da fuori la
+ * stessa query risponde in 0,04 s. L'elenco completo (128 categorie, 2 pagine) funziona
+ * e costa meno: si scarica una volta e si risolve tutto qui.
+ */
+async function getCategoryList(): Promise<Array<{ id: number; slug: string }> | null> {
+  return sharedSWR(
+    'wp-categories',
+    async () => {
+      const out: Array<{ id: number; slug: string }> = [];
+      for (let page = 1; page <= 5; page++) {
+        const data = await wpJson<Array<{ id: number; slug: string }>>(
+          `/wp-json/wp/v2/categories/?per_page=100&page=${page}&_fields=id,slug`,
+        );
+        if (!Array.isArray(data)) return out.length > 0 ? out : null;
+        out.push(...data);
+        if (data.length < 100) break;
+      }
+      return out;
+    },
+    { freshMs: 6 * 60 * 60 * 1000, keep: (v) => v.length > 0 },
+  );
+}
+
 async function getCategorySlug(id: number): Promise<string | null> {
   const cached = categorySlugCache.get(id);
   if (cached !== undefined) return cached;
-  const data = await wpJson<{ slug?: string }>(`/wp-json/wp/v2/categories/${id}/?_fields=id,slug`);
-  const slug = data?.slug ?? null;
-  categorySlugCache.set(id, slug);
+  const list = await getCategoryList();
+  const slug = list ? (list.find((c) => c.id === id)?.slug ?? null) : null;
+  if (list) categorySlugCache.set(id, slug);
   return slug;
 }
 
 export async function getCategoryIdBySlug(slug: string): Promise<number | null> {
   const cached = categoryIdCache.get(slug);
   if (cached !== undefined) return cached;
-  const data = await wpJson<Array<{ id: number }>>(
-    `/wp-json/wp/v2/categories/?slug=${encodeURIComponent(slug)}&per_page=1&_fields=id`,
-  );
-  const id = data?.[0]?.id ?? null;
-  categoryIdCache.set(slug, id);
+  const list = await getCategoryList();
+  const id = list ? (list.find((c) => c.slug === slug)?.id ?? null) : null;
+  if (list) categoryIdCache.set(slug, id);
   return id;
 }
 
