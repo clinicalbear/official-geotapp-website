@@ -14,9 +14,9 @@
 export type StatoProva = 'registrato' | 'sigillato' | 'verifica-fallita';
 
 export const TINTE: Record<StatoProva, { fondo: string; inchiostro: string; bordo: string }> = {
-  registrato: { fondo: '#F2F2EE', inchiostro: '#4A5259', bordo: '#CFD1CC' },
-  sigillato: { fondo: '#EAF2EC', inchiostro: '#144A27', bordo: '#3F8C5A' },
-  'verifica-fallita': { fondo: '#FAECEA', inchiostro: '#7C1F17', bordo: '#C65246' },
+  registrato: { fondo: '#F7F9FC', inchiostro: '#475467', bordo: '#D0D5DD' },
+  sigillato: { fondo: '#F7F9FC', inchiostro: '#144A27', bordo: '#15803D' },
+  'verifica-fallita': { fondo: '#F7F9FC', inchiostro: '#7C1F17', bordo: '#C65246' },
 };
 
 export const PAROLE: Record<string, Record<StatoProva, string>> = {

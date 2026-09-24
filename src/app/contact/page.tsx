@@ -43,7 +43,7 @@ export default function ContactPage() {
   // poi verde/rosso in base alla validita'. Stessa logica di prima, solo
   // espressa come stile inline sopra la classe .in (che fissa il resto).
   const fieldBorder = (value: string) => {
-    if (!submitted) return 'rgba(242,240,233,.24)';
+    if (!submitted) return 'rgba(247,249,252,.24)';
     return isValid(value) ? 'var(--seal)' : '#f36a6a';
   };
 
@@ -104,7 +104,7 @@ export default function ContactPage() {
               animate={{ opacity: 1 }}
             >
               <form onSubmit={handleSubmit}>
-                <p className="k" style={{ color: 'rgba(242,240,233,.5)', marginBottom: 26 }}>{dict.form.all_required}</p>
+                <p className="k" style={{ color: 'rgba(247,249,252,.5)', marginBottom: 26 }}>{dict.form.all_required}</p>
 
                 <div className="two">
                   <div className="fld">
@@ -230,7 +230,7 @@ export default function ContactPage() {
                   <Send size={18} /> {loading ? dict.sending : dict.form.send}
                 </button>
 
-                <p style={{ marginTop: 20, fontSize: 13, color: 'rgba(242,240,233,.5)' }}>
+                <p style={{ marginTop: 20, fontSize: 13, color: 'rgba(247,249,252,.5)' }}>
                   {dict.privacy_note}
                 </p>
               </form>

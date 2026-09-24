@@ -49,11 +49,11 @@ export default function NewsletterInline({ locale }: NewsletterInlineProps) {
   }
 
   return (
-    <div className="my-12 rounded-2xl border border-[#8FC436]/20 bg-[#8FC436]/5 p-8 text-center">
+    <div className="my-12 rounded-2xl border border-[#22B573]/20 bg-[#22B573]/5 p-8 text-center">
       <p className="text-lg font-bold text-slate-900">{labels.title}</p>
       <p className="text-sm text-slate-500 mt-2 max-w-md mx-auto">{labels.desc}</p>
       {status === 'success' ? (
-        <p className="mt-4 text-sm font-semibold text-[#8FC436]">{labels.success}</p>
+        <p className="mt-4 text-sm font-semibold text-[#22B573]">{labels.success}</p>
       ) : (
         <form onSubmit={handleSubmit} className="mt-5 flex flex-col items-center gap-2 max-w-sm mx-auto">
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 w-full">
@@ -63,7 +63,7 @@ export default function NewsletterInline({ locale }: NewsletterInlineProps) {
               onChange={(e) => setEmail(e.target.value)}
               placeholder={labels.placeholder}
               required
-              className="flex-1 min-w-0 px-4 py-2.5 text-sm rounded-xl border border-slate-200 bg-white text-slate-700 placeholder:text-slate-400 outline-none focus:border-[#8FC436] transition-colors"
+              className="flex-1 min-w-0 px-4 py-2.5 text-sm rounded-xl border border-slate-200 bg-white text-slate-700 placeholder:text-slate-400 outline-none focus:border-[#22B573] transition-colors"
             />
             <button
               type="submit"

@@ -74,9 +74,9 @@ export default function ClockInDemo({ dict }: Props) {
                 className="absolute"
                 style={{ top: '34%', left: '44%' }}
               >
-                <span className="absolute -inset-3 rounded-full bg-[#8FC436]/40 geo-pin-ring" />
-                <div className="relative w-11 h-11 rounded-full bg-white shadow-lg shadow-[#8FC436]/40 flex items-center justify-center ring-2 ring-[#8FC436]">
-                  <MapPin size={22} className="text-[#5a9e2a]" />
+                <span className="absolute -inset-3 rounded-full bg-[#22B573]/40 geo-pin-ring" />
+                <div className="relative w-11 h-11 rounded-full bg-white shadow-lg shadow-[#22B573]/40 flex items-center justify-center ring-2 ring-[#22B573]">
+                  <MapPin size={22} className="text-[#15803d]" />
                 </div>
               </motion.div>
             )}
@@ -159,7 +159,7 @@ export default function ClockInDemo({ dict }: Props) {
               transition={{ duration: 1.1, repeat: reduced ? 0 : Infinity, ease: 'easeInOut' }}
               className={`flex items-center gap-2 rounded-full px-4 py-2 text-sm font-bold shadow-lg transition-colors ${
                 step === 0
-                  ? 'bg-[#8FC436] text-white shadow-[#8FC436]/40'
+                  ? 'bg-[#22B573] text-white shadow-[#22B573]/40'
                   : 'geo-glass text-slate-600'
               }`}
             >

@@ -63,19 +63,19 @@ export default function ConservazioneClient({ locale, contenuto, paesi }: Props)
 <style>
   @page { size: A4; margin: 20mm 18mm; }
   * { box-sizing: border-box; }
-  body { font-family: Georgia, 'Times New Roman', serif; color: #1e293b; line-height: 1.5; font-size: 11pt; margin: 0; }
-  .head { display: flex; align-items: center; gap: 16px; border-bottom: 2px solid #8FC436; padding-bottom: 14px; margin-bottom: 20px; }
+  body { font-family: Georgia, 'Times New Roman', serif; color: #101828; line-height: 1.5; font-size: 11pt; margin: 0; }
+  .head { display: flex; align-items: center; gap: 16px; border-bottom: 2px solid #22B573; padding-bottom: 14px; margin-bottom: 20px; }
   .logo { max-height: 60px; max-width: 190px; object-fit: contain; }
-  h1 { font-size: 16pt; margin: 0; color: #0f172a; }
+  h1 { font-size: 16pt; margin: 0; color: #0b1736; }
   .paese { color: #475569; font-size: 10pt; margin: 0 0 14px; }
   table { width: 100%; border-collapse: collapse; }
-  th, td { text-align: left; vertical-align: top; padding: 8px 10px; border-bottom: 1px solid #e2e8f0; }
-  th { background: #f1f5f9; font-size: 9.5pt; text-transform: uppercase; letter-spacing: .03em; color: #475569; }
+  th, td { text-align: left; vertical-align: top; padding: 8px 10px; border-bottom: 1px solid #f7f9fc; }
+  th { background: #f2f4f7; font-size: 9.5pt; text-transform: uppercase; letter-spacing: .03em; color: #475569; }
   td.tipo { font-weight: bold; width: 28%; }
   td.dur { width: 30%; }
   td.nota { color: #475569; }
-  .disc { margin-top: 18px; font-size: 9.5pt; color: #64748b; background: #f8fafc; border-left: 3px solid #cbd5e1; padding: 8px 12px; }
-  .foot { margin-top: 24px; padding-top: 12px; border-top: 1px solid #e2e8f0; font-size: 9pt; color: #94a3b8; }
+  .disc { margin-top: 18px; font-size: 9.5pt; color: #64748b; background: #f7f9fc; border-left: 3px solid #d0d5dd; padding: 8px 12px; }
+  .foot { margin-top: 24px; padding-top: 12px; border-top: 1px solid #f7f9fc; font-size: 9pt; color: #94a3b8; }
 </style></head><body onload="window.print()">
   <div class="head">${logoHtml}<h1>${esc(c.docTitolo)}</h1></div>
   ${paese ? `<p class="paese">${esc(c.paese)}: ${esc(paese.nome)}</p>` : ''}

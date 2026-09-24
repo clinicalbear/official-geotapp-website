@@ -49,12 +49,12 @@ export default function LoginPage() {
               transition={{ delay: 0.2 }}
               className="crd r-l"
             >
-              <div className="crd-i" style={{ background: 'rgba(45,164,228,.12)', color: '#2DA4E4' }}>
+              <div className="crd-i" style={{ background: 'rgba(25,181,216,.12)', color: '#19B5D8' }}>
                 <Database size={40} />
               </div>
               <h2>GeoTapp FLOW</h2>
               <p>{dict.flow.desc}</p>
-              <div className="crd-cta" style={{ color: '#2DA4E4' }}>
+              <div className="crd-cta" style={{ color: '#19B5D8' }}>
                 {dict.flow.btn}
                 <ArrowRight size={18} />
               </div>
@@ -68,12 +68,12 @@ export default function LoginPage() {
               transition={{ delay: 0.3 }}
               className="crd r-r"
             >
-              <div className="crd-i" style={{ background: 'rgba(143,196,54,.14)', color: '#5c8a1f' }}>
+              <div className="crd-i" style={{ background: 'rgba(34,181,115,.14)', color: '#15803d' }}>
                 <Smartphone size={40} />
               </div>
               <h2>GeoTapp TimeTracker</h2>
               <p>{dict.timetracker.desc}</p>
-              <div className="crd-cta" style={{ color: '#0E0E0C' }}>
+              <div className="crd-cta" style={{ color: '#0B1736' }}>
                 {dict.timetracker.btn}
                 <ArrowRight size={18} />
               </div>

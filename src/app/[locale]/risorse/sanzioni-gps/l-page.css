@@ -17,11 +17,11 @@
 .lp-risorsa-strumento .calc-sanzioni-select label {
   display: block;
   margin-bottom: 12px;
-  color: #4a6317;
+  color: #15803d;
 }
 .lp-risorsa-strumento .calc-sanzioni-in {
   width: 100%;
-  border: 1px solid rgba(14, 14, 12, 0.24);
+  border: 1px solid rgba(11, 23, 54, 0.24);
   background: #fff;
   color: var(--ink);
   padding: 15px 16px;
@@ -126,16 +126,16 @@
   color: #fff;
 }
 .lp-risorsa-strumento .calc-sanzioni-esposizione.is-ok {
-  background: rgba(143, 196, 54, 0.15);
+  background: rgba(34, 181, 115, 0.15);
   color: var(--ink);
 }
 
 .lp-risorsa-strumento .calc-sanzioni-disclaimer {
-  background: #eae7de;
-  border: 1px solid rgba(14, 14, 12, 0.14);
+  background: #eaecf0;
+  border: 1px solid rgba(11, 23, 54, 0.14);
   padding: 18px 20px;
   font-size: 13.5px;
-  color: #5a6353;
+  color: #667085;
   margin: 0;
 }
 

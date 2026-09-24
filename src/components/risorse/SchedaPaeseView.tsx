@@ -67,7 +67,7 @@ function FonteConAvviso({
         {d.fonteNonUfficialeEtichetta}
         {tipo ? ' \u00b7 ' + tipo : ''}
       </span>
-      <span style={{ display: 'block', fontSize: 13, color: '#4F5A49', marginTop: 4, maxWidth: '62ch' }}>
+      <span style={{ display: 'block', fontSize: 13, color: '#475467', marginTop: 4, maxWidth: '62ch' }}>
         {d.fonteNonUfficialeAvviso}
       </span>
     </span>
@@ -99,7 +99,7 @@ interface SchedaPaeseViewProps {
 }
 
 const BADGE_COLOR: Record<RispostaChecklist, string> = {
-  si: '#4A6317',
+  si: '#15803D',
   no: '#B3261E',
   dipende: '#8A6D1E',
 };
@@ -253,7 +253,7 @@ export default function SchedaPaeseView({
                     >
                       {rispostaLabel(dict, item.risposta)}
                     </span>
-                    <span style={{ fontSize: 13, color: '#4F5A49' }}>{serveGloss(dict, item.risposta)}</span>
+                    <span style={{ fontSize: 13, color: '#475467' }}>{serveGloss(dict, item.risposta)}</span>
                   </span>
                 </div>
                 <p style={{ marginBottom: 8 }}>{loc(item.dettaglio, locale)}</p>
@@ -346,7 +346,7 @@ export default function SchedaPaeseView({
           </ul>
 
           {/* ── 7. disclaimer ── */}
-          <p style={{ marginTop: 34, fontSize: 13.5, color: '#4F5A49', maxWidth: '62ch' }}>{dict.disclaimer}</p>
+          <p style={{ marginTop: 34, fontSize: 13.5, color: '#475467', maxWidth: '62ch' }}>{dict.disclaimer}</p>
         </div>
       </section>
 
@@ -398,8 +398,8 @@ function Contatto({
       <p style={{ fontSize: 14, marginTop: 4 }}>
         <ExternalLink href={contatto.urlFonte}>{contatto.urlFonte}</ExternalLink>
       </p>
-      {contatto.note && <p style={{ fontSize: 14, marginTop: 4, color: '#4F5A49' }}>{loc(contatto.note, locale)}</p>}
-      <p style={{ fontSize: 12.5, marginTop: 6, color: '#9AA294' }}>
+      {contatto.note && <p style={{ fontSize: 14, marginTop: 4, color: '#475467' }}>{loc(contatto.note, locale)}</p>}
+      <p style={{ fontSize: 12.5, marginTop: 6, color: '#B8C2D6' }}>
         {dict.verificatoIl} {formatDate(contatto.verificatoIl, locale)}
       </p>
     </div>

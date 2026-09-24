@@ -4,15 +4,15 @@
    verde brand su scuro. */
 
 :root {
-  --st-bar: #4c8c2b;          /* verde scuro: passa il contrasto su superficie chiara */
-  --st-bar-soft: rgba(76, 140, 43, 0.16);
-  --st-ink: #12210f;
+  --st-bar: #15803d;          /* verde scuro: passa il contrasto su superficie chiara */
+  --st-bar-soft: rgba(21, 128, 61, 0.16);
+  --st-ink: #0b1736;
 }
 @media (prefers-color-scheme: dark) {
-  :root { --st-bar: #8fc436; --st-bar-soft: rgba(143, 196, 54, 0.16); --st-ink: #f4f7f0; }
+  :root { --st-bar: #22b573; --st-bar-soft: rgba(34, 181, 115, 0.16); --st-ink: #f2f4f7; }
 }
-:root[data-theme='dark'] { --st-bar: #8fc436; --st-bar-soft: rgba(143, 196, 54, 0.16); --st-ink: #f4f7f0; }
-:root[data-theme='light'] { --st-bar: #4c8c2b; --st-bar-soft: rgba(76, 140, 43, 0.16); --st-ink: #12210f; }
+:root[data-theme='dark'] { --st-bar: #22b573; --st-bar-soft: rgba(34, 181, 115, 0.16); --st-ink: #f2f4f7; }
+:root[data-theme='light'] { --st-bar: #15803d; --st-bar-soft: rgba(21, 128, 61, 0.16); --st-ink: #0b1736; }
 
 /* numeri chiave */
 .lp-stato .st-tiles {
@@ -22,7 +22,7 @@
   margin: 8px 0 34px;
 }
 .lp-stato .st-tile {
-  border: 1px solid rgba(14, 14, 12, 0.14);
+  border: 1px solid rgba(11, 23, 54, 0.14);
   border-radius: 12px;
   padding: 18px 18px 16px;
   background: var(--st-bar-soft);
@@ -87,7 +87,7 @@
 .lp-stato .st-paese { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.6; }
 .lp-stato .st-row-multa .st-rlab a {
   color: inherit; text-decoration: underline; text-underline-offset: 2px;
-  text-decoration-color: rgba(76, 140, 43, 0.6);
+  text-decoration-color: rgba(21, 128, 61, 0.6);
   overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
 }
 .lp-stato .st-track { background: var(--st-bar-soft); border-radius: 999px; height: 14px; overflow: hidden; }

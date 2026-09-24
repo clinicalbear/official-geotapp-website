@@ -8,7 +8,7 @@ export default function ReadingProgress() {
 
   return (
     <motion.div
-      className="fixed top-0 left-0 right-0 h-[3px] bg-[#8FC436] origin-left z-50"
+      className="fixed top-0 left-0 right-0 h-[3px] bg-[#22B573] origin-left z-50"
       style={{ scaleX }}
     />
   );

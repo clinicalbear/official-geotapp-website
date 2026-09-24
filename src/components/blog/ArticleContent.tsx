@@ -46,7 +46,7 @@ export const CTA_LABELS: Record<string, { title: string; desc: string; btn: stri
 function MidArticleCta({ locale }: { locale: string }) {
   const labels = CTA_LABELS[locale] || CTA_LABELS.en;
   return (
-    <div className="my-12 rounded-2xl border border-primary/20 bg-gradient-to-r from-[#8FC436]/5 to-[#2DA4E4]/5 p-8 text-center">
+    <div className="my-12 rounded-2xl border border-primary/20 bg-gradient-to-r from-[#22B573]/5 to-[#19B5D8]/5 p-8 text-center">
       <p className="text-lg font-bold text-slate-900">{labels.title}</p>
       <p className="text-sm text-slate-500 mt-2">{labels.desc}</p>
       <Link

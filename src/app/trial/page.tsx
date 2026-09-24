@@ -350,8 +350,8 @@ export default function TrialPage() {
                             style={{
                               padding: '8px 16px',
                               borderRadius: 10,
-                              border: fascia === f ? '2px solid #1F6FA3' : '1.5px solid #cbd5e1',
-                              background: fascia === f ? '#1F6FA3' : 'transparent',
+                              border: fascia === f ? '2px solid #0E7C99' : '1.5px solid #d0d5dd',
+                              background: fascia === f ? '#0E7C99' : 'transparent',
                               color: fascia === f ? '#fff' : 'inherit',
                               fontWeight: 600,
                               fontSize: 15,

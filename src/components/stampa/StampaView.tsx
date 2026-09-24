@@ -115,7 +115,7 @@ export default function StampaView({
                 type="button"
                 aria-label="Copy"
                 onClick={() => copy('short', d.boilerplate_short)}
-                style={{ position: 'absolute', right: 0, top: 0, background: 'none', border: 0, cursor: 'pointer', color: copied === 'short' ? 'var(--seal)' : '#4F5A49' }}
+                style={{ position: 'absolute', right: 0, top: 0, background: 'none', border: 0, cursor: 'pointer', color: copied === 'short' ? 'var(--seal)' : '#475467' }}
               >
                 {copied === 'short' ? <Check size={16} /> : <Copy size={16} />}
               </button>
@@ -126,7 +126,7 @@ export default function StampaView({
                 type="button"
                 aria-label="Copy"
                 onClick={() => copy('long', d.boilerplate_long)}
-                style={{ position: 'absolute', right: 0, top: 0, background: 'none', border: 0, cursor: 'pointer', color: copied === 'long' ? 'var(--seal)' : '#4F5A49' }}
+                style={{ position: 'absolute', right: 0, top: 0, background: 'none', border: 0, cursor: 'pointer', color: copied === 'long' ? 'var(--seal)' : '#475467' }}
               >
                 {copied === 'long' ? <Check size={16} /> : <Copy size={16} />}
               </button>
@@ -180,7 +180,7 @@ export default function StampaView({
         <div className="r d1">
           <p className="kk k" style={{ color: 'var(--seal-testo)' }}>{d.founder_label}</p>
           <h2 style={{ fontSize: 'clamp(26px,3.2vw,46px)' }}>Michele Angelo Petraroli</h2>
-          <p style={{ color: '#3B4237', marginTop: 22, maxWidth: '60ch' }}>{d.founder_bio}</p>
+          <p style={{ color: '#344054', marginTop: 22, maxWidth: '60ch' }}>{d.founder_bio}</p>
         </div>
       </div></div></section>
 
@@ -259,7 +259,7 @@ export default function StampaView({
               aria-label={label}
               style={{
                 display: 'flex', alignItems: 'center', justifyContent: 'center', width: 42, height: 42,
-                borderRadius: '50%', border: '1px solid rgba(242,240,233,.22)', color: '#F2F0E9',
+                borderRadius: '50%', border: '1px solid rgba(247,249,252,.22)', color: '#F7F9FC',
               }}
             >
               <Icon size={18} />
@@ -276,7 +276,7 @@ export default function StampaView({
             {PRESS_RELEASES.map((item, i) => (
               <li key={i}>
                 <a href={item.url} target="_blank" rel={pressRel(item)} style={{ display: 'flex', flexWrap: 'wrap', gap: 16, alignItems: 'baseline' }}>
-                  <time dateTime={item.date} style={{ fontSize: 12.5, color: '#4F5A49', fontVariantNumeric: 'tabular-nums' }}>{fmtPressDate(item.date)}</time>
+                  <time dateTime={item.date} style={{ fontSize: 12.5, color: '#475467', fontVariantNumeric: 'tabular-nums' }}>{fmtPressDate(item.date)}</time>
                   <span className="k" style={{ color: 'var(--seal-testo)', fontSize: 11 }}>{item.outlet}</span>
                   <span style={{ flex: 1 }}>{item.title}</span>
                 </a>
@@ -344,7 +344,7 @@ export default function StampaView({
           <p className="big r" style={{ fontSize: 'clamp(30px,5.2vw,72px)', maxWidth: '17ch', marginBottom: 24, color: 'var(--lime)' }}>
             {d.contact_label}
           </p>
-          <p className="r d1" style={{ color: 'rgba(255,255,255,.8)', maxWidth: '58ch', marginBottom: 32 }}>{d.contact_office}</p>
+          <p className="r d1" style={{ color: 'rgba(247,249,252,.8)', maxWidth: '58ch', marginBottom: 32 }}>{d.contact_office}</p>
           <div className="acts r d2">
             <a className="b1" href={`mailto:${d.contact_email}`}>{d.contact_email}</a>
             <Link className="b2" href={localizePath('/chi-siamo/', locale)}>{about}</Link>

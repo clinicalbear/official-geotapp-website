@@ -90,16 +90,16 @@ export default function GeneratoreInformativaClient({ locale, paesi, labels }: P
 <style>
   @page { size: A4; margin: 22mm 20mm; }
   * { box-sizing: border-box; }
-  body { font-family: Georgia, 'Times New Roman', serif; color: #1e293b; line-height: 1.55; font-size: 12pt; margin: 0; }
-  .head { display: flex; align-items: center; gap: 16px; border-bottom: 2px solid #8FC436; padding-bottom: 14px; margin-bottom: 22px; }
+  body { font-family: Georgia, 'Times New Roman', serif; color: #101828; line-height: 1.55; font-size: 12pt; margin: 0; }
+  .head { display: flex; align-items: center; gap: 16px; border-bottom: 2px solid #22B573; padding-bottom: 14px; margin-bottom: 22px; }
   .logo { max-height: 64px; max-width: 200px; object-fit: contain; }
-  h1 { font-size: 17pt; margin: 0; color: #0f172a; }
-  h2 { font-size: 12.5pt; margin: 18px 0 4px; color: #0f172a; }
+  h1 { font-size: 17pt; margin: 0; color: #0b1736; }
+  h2 { font-size: 12.5pt; margin: 18px 0 4px; color: #0b1736; }
   p { margin: 0 0 8px; }
   .intro { margin-bottom: 6px; }
   .dpo { font-style: italic; color: #475569; }
-  .foot { margin-top: 26px; padding-top: 12px; border-top: 1px solid #e2e8f0; font-size: 9pt; color: #94a3b8; }
-  .disc { margin-top: 18px; font-size: 9.5pt; color: #64748b; background: #f8fafc; border-left: 3px solid #cbd5e1; padding: 8px 12px; }
+  .foot { margin-top: 26px; padding-top: 12px; border-top: 1px solid #f7f9fc; font-size: 9pt; color: #94a3b8; }
+  .disc { margin-top: 18px; font-size: 9.5pt; color: #64748b; background: #f7f9fc; border-left: 3px solid #d0d5dd; padding: 8px 12px; }
 </style></head><body onload="window.print()">
   <div class="head">${logoHtml}<h1>${esc(doc.titolo)}</h1></div>
   <p class="intro">${esc(doc.intro)}</p>

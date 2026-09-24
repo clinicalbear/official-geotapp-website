@@ -75,7 +75,7 @@ export default function GuidePage() {
         <div className="w">
           <div className="gl">
             <aside className="side r">
-              <p className="k" style={{ color: '#4F5A49', marginBottom: 14 }}>{g.page_title}</p>
+              <p className="k" style={{ color: '#475467', marginBottom: 14 }}>{g.page_title}</p>
               {headings.map((h) => (
                 <a key={h.id} href={`#${h.id}`}>{h.text}</a>
               ))}

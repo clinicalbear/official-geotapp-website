@@ -29,8 +29,8 @@ interface EuropaMappaProps {
   ariaLabel: string;
 }
 
-const FILL_INATTIVO = '#e2e8f0'; // slate-200, contesto non interattivo
-const STROKE = '#ffffff';
+const FILL_INATTIVO = '#f7f9fc'; // slate-200, contesto non interattivo
+const STROKE = '#f7f9fc';
 
 export default function EuropaMappa({
   statoPerIso,
@@ -54,7 +54,7 @@ export default function EuropaMappa({
         const inArrivo = stato === 'in-arrivo';
         const nome = nomePerIso[iso];
 
-        const fill = attivo ? '#8FC436' : inArrivo ? '#fbbf24' : FILL_INATTIVO;
+        const fill = attivo ? '#22B573' : inArrivo ? '#fbbf24' : FILL_INATTIVO;
         const interattivo = attivo;
 
         return (

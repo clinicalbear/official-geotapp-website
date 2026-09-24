@@ -10,7 +10,7 @@ import { MdEmail, MdPhone } from 'react-icons/md';
 
 export default function TopBar() {
   return (
-    <div className="bg-[#E6D8BA] text-gray-800 text-xs py-2 px-6 border-b border-[#d4c5a5]">
+    <div className="bg-[#D0D5DD] text-gray-800 text-xs py-2 px-6 border-b border-[#d0d5dd]">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
         {/* Contact Info */}
         <div className="flex items-center gap-6">

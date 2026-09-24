@@ -357,7 +357,7 @@ export default function Home({ jrSlot, fqSlot }: { jrSlot?: ReactNode; fqSlot?: 
         <h2 className="r"><span>{D.h2_1}</span><span className="s">{D.h2_2}</span></h2>
         <div className="row">
           <p className="r d1">{D.desc}</p>
-          <p className="r d2" style={{ color: '#4F5A49' }}>{L.cycle}</p>
+          <p className="r d2" style={{ color: '#475467' }}>{L.cycle}</p>
         </div>
       </div></section>
 
@@ -365,7 +365,7 @@ export default function Home({ jrSlot, fqSlot }: { jrSlot?: ReactNode; fqSlot?: 
              Sta qui e non piu' in basso perche' la promessa l'abbiamo appena
              fatta, e questo e' il punto in cui si dimostra. Parte da solo e
              muto: la regia sta in VideoGiro.tsx. ── */}
-      <section className="sec" style={{ padding: '76px 0', borderTop: '1px solid rgba(14,14,12,.10)' }}>
+      <section className="sec" style={{ padding: '76px 0', borderTop: '1px solid rgba(11,23,54,.10)' }}>
         <div className="w">
           <p className="kk k">{VG.kicker}</p>
           <h2 className="r" style={{ fontSize: 'clamp(26px,3vw,44px)', margin: '10px 0 26px', maxWidth: '22ch' }}>
@@ -519,12 +519,12 @@ export default function Home({ jrSlot, fqSlot }: { jrSlot?: ReactNode; fqSlot?: 
       </section>
 
       {/* ── fascia trial (testi del sito online) ── */}
-      <section style={{ padding: '72px 0', borderTop: '1px solid rgba(14,14,12,.14)' }}>
+      <section style={{ padding: '72px 0', borderTop: '1px solid rgba(11,23,54,.14)' }}>
         <div className="wn" style={{ textAlign: 'center' }}>
           <h2 className="r" style={{ fontSize: 'clamp(26px,3vw,48px)', marginBottom: 12 }}>
             {(dict.landing as any)?.trial_cta_headline ?? 'Provalo gratis per 14 giorni'}
           </h2>
-          <p className="r d1" style={{ color: '#4A5244', marginBottom: 26 }}>
+          <p className="r d1" style={{ color: '#475467', marginBottom: 26 }}>
             {(dict.landing as any)?.trial_cta_subtitle ?? 'Nessuna carta di credito richiesta'}
           </p>
           <div className="r d2" style={{ display: 'flex', justifyContent: 'center' }}>
@@ -545,7 +545,7 @@ export default function Home({ jrSlot, fqSlot }: { jrSlot?: ReactNode; fqSlot?: 
         return (
           <section className="fdr"><div className="wn">
             <FounderViewTracker source="homepage_block" />
-            <p className="kk k r" style={{ color: '#4A6317', marginBottom: 34 }}>{f.section_label}</p>
+            <p className="kk k r" style={{ color: '#15803D', marginBottom: 34 }}>{f.section_label}</p>
             <div className="g">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img className="r-s" src="/michele-petraroli-3.webp" alt={`${f.name}, ${f.role} GeoTapp`} loading="lazy" />
@@ -583,7 +583,7 @@ export default function Home({ jrSlot, fqSlot }: { jrSlot?: ReactNode; fqSlot?: 
           })}
         </div>
         <div style={{ marginTop: 28 }}>
-          <Link href={getLink('/settori')} className="k" style={{ color: '#4A6317' }}>{settori.see_all} &rarr;</Link>
+          <Link href={getLink('/settori')} className="k" style={{ color: '#15803D' }}>{settori.see_all} &rarr;</Link>
         </div>
       </div></section>
 
@@ -597,8 +597,8 @@ export default function Home({ jrSlot, fqSlot }: { jrSlot?: ReactNode; fqSlot?: 
           return (
             <div className="r d1" style={{ marginBottom: 40 }}>
               <h2 style={{ fontSize: 'clamp(24px,2.8vw,44px)', marginBottom: 12 }}>{rc.heading}</h2>
-              <p style={{ color: 'rgba(242,240,233,.66)', margin: 0 }}>{rc.subheading}</p>
-              <p className="k" style={{ color: '#8FC436', fontSize: 12, marginTop: 10 }}>
+              <p style={{ color: 'rgba(247,249,252,.66)', margin: 0 }}>{rc.subheading}</p>
+              <p className="k" style={{ color: '#22B573', fontSize: 12, marginTop: 10 }}>
                 {rc.aggregateLine.replace('{avg}', avgStr).replace('{count}', String(REVIEWS.length))}
               </p>
             </div>
@@ -624,7 +624,7 @@ export default function Home({ jrSlot, fqSlot }: { jrSlot?: ReactNode; fqSlot?: 
                   style={{ display: 'flex', flexDirection: 'row', gap: 3 }}
                 >
                   {[1, 2, 3, 4, 5].map((n) => (
-                    <svg key={n} width="15" height="15" viewBox="0 0 24 24" fill={n <= r.rating ? '#8FC436' : 'rgba(242,240,233,.22)'} aria-hidden="true"><path d="M12 0l2.927 8.986H24l-7.336 5.328 2.8 8.614L12 17.6l-7.464 5.328 2.8-8.614L0 8.986h9.073z"/></svg>
+                    <svg key={n} width="15" height="15" viewBox="0 0 24 24" fill={n <= r.rating ? '#22B573' : 'rgba(247,249,252,.22)'} aria-hidden="true"><path d="M12 0l2.927 8.986H24l-7.336 5.328 2.8 8.614L12 17.6l-7.464 5.328 2.8-8.614L0 8.986h9.073z"/></svg>
                   ))}
                 </span>
                 {/* Dentro c'e' solo il logo della fonte, che e' un SVG decorativo: senza
@@ -645,7 +645,7 @@ export default function Home({ jrSlot, fqSlot }: { jrSlot?: ReactNode; fqSlot?: 
             </blockquote>
           );
         })}
-        <p className="r" style={{ marginTop: 26, fontSize: 13, color: 'rgba(242,240,233,.68)', maxWidth: '64ch' }}>
+        <p className="r" style={{ marginTop: 26, fontSize: 13, color: 'rgba(247,249,252,.68)', maxWidth: '64ch' }}>
           {(REVIEWS_COPY[currentLocale] ?? REVIEWS_COPY.en).translationNote}
         </p>
       </div></section>
@@ -675,7 +675,7 @@ export default function Home({ jrSlot, fqSlot }: { jrSlot?: ReactNode; fqSlot?: 
             <Link className="b2" href={getLink('/contact')}>{dict.home_sections.footer_cta.button}</Link>
           </div>
           <div style={{ marginTop: 22 }}>
-            <Link href={getLink('/pricing')} className="k" style={{ color: 'rgba(255,255,255,.6)' }}>
+            <Link href={getLink('/pricing')} className="k" style={{ color: 'rgba(247,249,252,.6)' }}>
               {dict.home_sections.footer_cta.pricing_link}
             </Link>
           </div>

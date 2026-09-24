@@ -1,14 +1,14 @@
 /* ─────────────────────────────────────────────────────────────────────────
    CONTRASTO — audit EAA del 23/09/2026 (axe-core su Chrome, pagine vere)
    I verdi e i grigi tenui di questo file facevano da 2,52 a 4,23 sulla carta
-   (#F2F0E9), cioe' sotto il minimo WCAG AA di 4,5 per il testo. Sono stati
+   (#F7F9FC), cioe' sotto il minimo WCAG AA di 4,5 per il testo. Sono stati
    scuriti alla fonte, non pagina per pagina:
-     #5E7C1E -> #4A6317   (4,20 -> 5,96)
-     #78836F -> #4F5A49   (3,49 -> 6,37)
-     #6B7563 -> #4F5A49   (4,23 -> 6,37)
-     #7C8A78 -> #4F5A49   (3,35 -> 6,37)
-     #6FA028 -> #4A6317   (2,52 -> 5,96)
-   Misurati sui tre fondi chiari del sito: #F2F0E9, #EAE7DC, #F8F7F5.
+     #5E7C1E -> #15803D   (4,20 -> 5,96)
+     #667085 -> #475467   (3,49 -> 6,37)
+     #8391AD -> #475467   (4,23 -> 6,37)
+     #667085 -> #475467   (3,35 -> 6,37)
+     #15803D -> #15803D   (2,52 -> 5,96)
+   Misurati sui tre fondi chiari del sito: #F7F9FC, #EAECF0, #F7F9FC.
    Chi cambia uno di questi valori rimisura, oppure il sito torna indietro.
    ───────────────────────────────────────────────────────────────────────── */
 /* ============================================================================
@@ -18,13 +18,13 @@
    ========================================================================= */
 
 :root{
-  --l-ink:#0E0E0C;
-  --l-paper:#F2F0E9;
-  --l-warm:#EAE7DE;
-  --l-seal:#8FC436;
-  --l-lime:#B6E86A;
-  --l-sky:#2DA4E4;
-  --l-mute:#4A5244;
+  --l-ink:#0B1736;
+  --l-paper:#F7F9FC;
+  --l-warm:#EAECF0;
+  --l-seal:#22B573;
+  --l-lime:#22B573;
+  --l-sky:#19B5D8;
+  --l-mute:#475467;
 }
 
 /* ── fondamenta ─────────────────────────────────────────────────────────── */
@@ -76,13 +76,13 @@ img[class*="rounded-full"]{ border-radius:50% !important; }
 
 /* ── ombre: una sola, discreta ─────────────────────────────────────────── */
 [class*="shadow-2xl"],[class*="shadow-xl"],[class*="shadow-lg"]{
-  box-shadow:0 30px 70px -40px rgba(14,14,12,.45) !important;
+  box-shadow:0 30px 70px -40px rgba(11,23,54,.45) !important;
 }
 [class*="shadow-md"],[class*="shadow-sm"]{ box-shadow:none !important; }
 
 /* ── bordi a filo ──────────────────────────────────────────────────────── */
 [class*="border-slate-200"],[class*="border-gray-200"],[class*="border-slate-100"]{
-  border-color:rgba(14,14,12,.16) !important;
+  border-color:rgba(11,23,54,.16) !important;
 }
 
 /* ── azione principale: pillola verde, testo scuro ─────────────────────── */
@@ -101,7 +101,7 @@ a[class*="bg-blue-6"]:hover, button[class*="bg-blue-6"]:hover,
 a[class*="from-blue"]:hover, button[class*="from-blue"]:hover,
 a[class*="from-orange"]:hover, button[class*="from-orange"]:hover{
   transform:translateY(-3px);
-  box-shadow:0 18px 34px -14px rgba(143,196,54,.6) !important;
+  box-shadow:0 18px 34px -14px rgba(34,181,115,.6) !important;
 }
 /* azione secondaria */
 a[class*="bg-slate-900"], button[class*="bg-slate-900"]{
@@ -109,8 +109,8 @@ a[class*="bg-slate-900"], button[class*="bg-slate-900"]{
 }
 
 /* ── accenti: il blu di sistema diventa verde marchio ──────────────────── */
-[class*="text-blue-6"],[class*="text-blue-5"],[class*="text-indigo-6"]{ color:#4A6317 !important; }
-[class*="text-orange-"],[class*="text-amber-6"]{ color:#4A6317 !important; }
+[class*="text-blue-6"],[class*="text-blue-5"],[class*="text-indigo-6"]{ color:#15803D !important; }
+[class*="text-orange-"],[class*="text-amber-6"]{ color:#15803D !important; }
 [class*="border-blue-"]{ border-color:var(--l-seal) !important; }
 
 /* ── barra in alto: negativo, con il marchio fuori dal negativo ────────── */
@@ -129,13 +129,13 @@ ul li svg[class*="text-green"], ul li svg[class*="text-emerald"]{ color:var(--l-
 /* ── moduli ────────────────────────────────────────────────────────────── */
 input, select, textarea{
   border-radius:0 !important;
-  border-color:rgba(14,14,12,.22) !important;
+  border-color:rgba(11,23,54,.22) !important;
   font-family:'Inter',sans-serif !important;
 }
 input:focus, select:focus, textarea:focus{
-  outline:none !important; border-color:var(--l-seal) !important; box-shadow:0 0 0 3px rgba(143,196,54,.18) !important;
+  outline:none !important; border-color:var(--l-seal) !important; box-shadow:0 0 0 3px rgba(34,181,115,.18) !important;
 }
-label{ font-size:12px !important; letter-spacing:.16em; text-transform:uppercase; color:#4F5A49 !important; }
+label{ font-size:12px !important; letter-spacing:.16em; text-transform:uppercase; color:#475467 !important; }
 
 /* ── il nastro che scorre, da mettere dove serve con <div class="l-tape"> ─ */
 .l-tape{ background:var(--l-ink); color:var(--l-paper); padding:22px 0; overflow:hidden; }
@@ -155,7 +155,7 @@ label{ font-size:12px !important; letter-spacing:.16em; text-transform:uppercase
 nav.sticky.top-0{
   background:var(--l-paper) !important;
   backdrop-filter:none !important;
-  border-bottom:1px solid rgba(14,14,12,.14) !important;
+  border-bottom:1px solid rgba(11,23,54,.14) !important;
   box-shadow:none !important;
   padding-top:18px !important; padding-bottom:18px !important;
 }
@@ -206,63 +206,63 @@ a[class*="bg-primary"], button[class*="bg-primary"]{
 }
 /* azione secondaria: filo scuro, niente riempimento */
 a[class*="border-border"], a[class*="bg-white"][class*="border"]{
-  background:transparent !important; border:1px solid rgba(14,14,12,.28) !important;
+  background:transparent !important; border:1px solid rgba(11,23,54,.28) !important;
   border-radius:999px !important; color:var(--l-ink) !important;
 }
 
 /* testo di servizio */
 [class*="text-text-secondary"]{ color:var(--l-mute) !important; }
-[class*="text-text-muted"]{ color:#4F5A49 !important; }
-[class*="text-primary"]{ color:#4A6317 !important; }
+[class*="text-text-muted"]{ color:#475467 !important; }
+[class*="text-primary"]{ color:#15803D !important; }
 
 /* le sezioni scure del sito diventano il nero pieno della L */
 [class*="bg-text-primary"], [class*="bg-ink"]{ background-color:var(--l-ink) !important; color:var(--l-paper) !important; }
 
 /* schede: filo invece di ombra e angoli */
-[class*="border-border"]{ border-color:rgba(14,14,12,.16) !important; }
+[class*="border-border"]{ border-color:rgba(11,23,54,.16) !important; }
 
 /* ============================================================================
    Apertura della home, direzione L: fotografia a tutto schermo.
    ========================================================================= */
-.l-hero{ position:relative; background:#07090A; color:#F2F0E9; min-height:88svh;
+.l-hero{ position:relative; background:#0B1736; color:#F7F9FC; min-height:88svh;
   display:flex; align-items:flex-end; }
 .l-hero-bg{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
-  object-position:60% 46%; filter:grayscale(.5) brightness(.44) contrast(1.05);
+  object-position:60% 46%; filter:brightness(.44) contrast(1.05);
   animation:l-kb 28s ease-in-out infinite alternate; }
 @keyframes l-kb{ from{ transform:scale(1.04); } to{ transform:scale(1.17); } }
 .l-hero-scrim{ position:absolute; inset:0;
-  background:linear-gradient(180deg,rgba(7,9,10,.72) 0%,rgba(7,9,10,.12) 32%,rgba(7,9,10,.55) 72%,rgba(7,9,10,.93) 100%); }
+  background:linear-gradient(180deg,rgba(11,23,54,.72) 0%,rgba(11,23,54,.12) 32%,rgba(11,23,54,.55) 72%,rgba(11,23,54,.93) 100%); }
 .l-hero .container-geo{ width:100%; padding-bottom:40px; }
 .l-hero-top{ display:flex; flex-wrap:wrap; gap:14px 38px; padding-bottom:22px; margin-bottom:54px;
-  border-bottom:1px solid rgba(255,255,255,.22); }
+  border-bottom:1px solid rgba(247,249,252,.22); }
 .l-hero-top span{ display:flex; align-items:center; gap:9px; font-size:12px;
-  letter-spacing:.16em; text-transform:uppercase; color:#B6E86A; }
-.l-hero-top svg{ color:#B6E86A; }
+  letter-spacing:.16em; text-transform:uppercase; color:#22B573; }
+.l-hero-top svg{ color:#22B573; }
 .l-hero-h1{ font-family:var(--font-display) !important;font-weight:800 !important;
   font-size:clamp(34px,4.6vw,60px) !important; line-height:1.06!important; letter-spacing:-.02em !important;
   color:#fff !important; margin:0 0 22px !important; max-width:18ch; }
 .l-hero-claim{ font-family:var(--font-display) !important;font-weight:800 !important;
-  font-size:clamp(17px,1.7vw,26px) !important; line-height:1.14 !important; color:rgba(242,240,233,.9) !important;
+  font-size:clamp(17px,1.7vw,26px) !important; line-height:1.14 !important; color:rgba(247,249,252,.9) !important;
   margin:0 0 20px !important; max-width:44ch; }
-.l-hero-claim span{ color:#B6E86A; }
-.l-hero-lede{ font-size:17px; line-height:1.65; color:rgba(242,240,233,.78); max-width:52ch; margin-bottom:30px; }
-.l-hero .btn-ring{ background:#8FC436 !important; color:#0E0E0C !important; border-radius:999px !important; }
+.l-hero-claim span{ color:#22B573; }
+.l-hero-lede{ font-size:17px; line-height:1.65; color:rgba(247,249,252,.78); max-width:52ch; margin-bottom:30px; }
+.l-hero .btn-ring{ background:#22B573 !important; color:#0B1736 !important; border-radius:999px !important; }
 .l-hero .btn-modern-ghost{ color:#fff !important; background:transparent !important;
-  border:1px solid rgba(255,255,255,.45) !important; border-radius:999px !important; }
+  border:1px solid rgba(247,249,252,.45) !important; border-radius:999px !important; }
 .l-hero .geo-aurora{ display:none !important; }
 @media(max-width:900px){ .l-hero{ min-height:auto; padding-top:110px; } .l-hero-top{ margin-bottom:34px; } }
 .l-hero-kicker{ font-size:12px; letter-spacing:.2em; text-transform:uppercase;
-  color:#B6E86A; margin-bottom:22px; }
-.l-hero-h1 span{ color:#B6E86A; }
+  color:#22B573; margin-bottom:22px; }
+.l-hero-h1 span{ color:#22B573; }
 
 /* ============================================================================
    Pagine che si appoggiano: l'effetto della direzione L sulle sezioni vere.
    ========================================================================= */
 .l-pagina{ position:sticky; top:0; z-index:1;
-  border-radius:30px 30px 0 0; box-shadow:0 -26px 64px -18px rgba(0,0,0,.6); }
+  border-radius:30px 30px 0 0; box-shadow:0 -26px 64px -18px rgba(11,23,54,.6); }
 .l-pagina.l-prima{ border-radius:0; }
 .l-pagina::before{ content:''; position:absolute; inset:0; z-index:60; pointer-events:none;
-  background:#05070A; opacity:calc(var(--cov,0) * .42); transition:opacity .1s linear; }
+  background:#0B1736; opacity:calc(var(--cov,0) * .42); transition:opacity .1s linear; }
 .l-pagina > *{ transform:scale(calc(1 - var(--cov,0) * .07)); transform-origin:center 38%;
   opacity:calc(1 - var(--cov,0) * .5); }
 @media(max-width:1000px){
@@ -274,13 +274,13 @@ a[class*="border-border"], a[class*="bg-white"][class*="border"]{
 /* ============================================================================
    Barra in alto, direzione L: avorio a filo, marchio grande, voci maiuscole.
    ========================================================================= */
-.l-nav{ background:var(--l-paper) !important; border-bottom:1px solid rgba(14,14,12,.14) !important;
+.l-nav{ background:var(--l-paper) !important; border-bottom:1px solid rgba(11,23,54,.14) !important;
   box-shadow:none !important; backdrop-filter:none !important; }
-.l-nav.l-nav-scrolled{ background:rgba(242,240,233,.96) !important; backdrop-filter:blur(12px) !important; }
+.l-nav.l-nav-scrolled{ background:rgba(247,249,252,.96) !important; backdrop-filter:blur(12px) !important; }
 .l-nav-logo{ height:48px !important; }
 .l-nav a, .l-nav button{ font-size:12.5px !important; letter-spacing:.14em !important;
   text-transform:uppercase !important; font-weight:500 !important; color:var(--l-ink) !important; }
-.l-nav a:hover, .l-nav button:hover{ color:#4A6317 !important; }
+.l-nav a:hover, .l-nav button:hover{ color:#15803D !important; }
 /* la voce di azione resta pillola verde piena */
 .l-nav a[class*="btn"], .l-nav a[class*="bg-primary"]{
   background:var(--l-seal) !important; color:var(--l-ink) !important;
@@ -296,15 +296,15 @@ a[class*="border-border"], a[class*="bg-white"][class*="border"]{
   flex-wrap:wrap; margin-bottom:44px; }
 .l-settori-hd h2{ font-family:var(--font-display) !important;font-weight:800 !important; font-size:clamp(26px,2.9vw,36px) !important;
   line-height:1.06!important; margin:0 !important; }
-.l-settori-all{ font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#4A6317; }
+.l-settori-all{ font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#15803D; }
 .l-settori-g{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
 .l-settore{ position:relative; display:block; overflow:hidden; color:#fff; }
 .l-settore img{ width:100%; aspect-ratio:4/5; object-fit:cover;
-  filter:brightness(.6) grayscale(.35);
+  filter:brightness(.6) ;
   transition:filter .7s, transform .9s cubic-bezier(.2,.8,.25,1); }
-.l-settore:hover img{ filter:brightness(.84) grayscale(0); transform:scale(1.05); }
+.l-settore:hover img{ filter:brightness(.84) ; transform:scale(1.05); }
 .l-settore-ov{ position:absolute; inset:0;
-  background:linear-gradient(0deg,rgba(7,9,10,.93),transparent 62%); }
+  background:linear-gradient(0deg,rgba(11,23,54,.93),transparent 62%); }
 .l-settore-cp{ position:absolute; left:0; right:0; bottom:0; padding:30px; }
 .l-settore-cp b{ font-family:var(--font-display); font-weight:800; font-size:26px; letter-spacing:-.01em; }
 @media(max-width:1000px){ .l-settori-g{ grid-template-columns:1fr 1fr; } }
@@ -313,7 +313,7 @@ a[class*="border-border"], a[class*="bg-white"][class*="border"]{
 /* correzioni apertura: occhiello piccolo e verde, altezza contenuta */
 .l-hero .l-hero-kicker{ font-family:'Inter',sans-serif !important; font-size:12px !important;
   font-weight:500 !important; letter-spacing:.2em !important; text-transform:uppercase !important;
-  color:#B6E86A !important; line-height:1.4 !important; margin:0 0 20px !important; }
+  color:#22B573 !important; line-height:1.4 !important; margin:0 0 20px !important; }
 .l-hero{ min-height:0 !important; padding-top:120px !important; padding-bottom:64px !important; }
 .l-hero-top{ margin-bottom:38px !important; }
 .l-hero-h1{ font-size:clamp(30px,3.4vw,48px) !important; max-width:22ch; margin-bottom:20px !important; }
@@ -321,7 +321,7 @@ a[class*="border-border"], a[class*="bg-white"][class*="border"]{
 /* l'occhiello non deve mai diventare un titolo */
 p.l-hero-kicker{ font-size:12px !important; line-height:1.4 !important;
   font-family:'Inter',system-ui,sans-serif !important; font-weight:500 !important;
-  letter-spacing:.2em !important; color:#B6E86A !important; text-transform:uppercase !important; }
+  letter-spacing:.2em !important; color:#22B573 !important; text-transform:uppercase !important; }
 
 /* ============================================================================
    Apertura come nel mockup: una sola colonna, testo in basso sulla foto.
@@ -334,7 +334,7 @@ p.l-hero-kicker{ font-size:12px !important; line-height:1.4 !important;
 .l-hero .md\:hidden{ display:none !important; }
 .l-hero-h1{ font-size:clamp(34px,4.8vw,64px) !important; max-width:16ch !important;
   color:#fff !important; margin-bottom:24px !important; }
-.l-hero-h1 span{ color:#B6E86A !important; }
+.l-hero-h1 span{ color:#22B573 !important; }
 .l-hero-lede{ max-width:56ch; font-size:17px; }
 .l-hero-top{ margin-bottom:auto !important; }
 
@@ -363,7 +363,7 @@ p.l-hero-kicker{ font-size:12px !important; line-height:1.4 !important;
 /* --- via gli angoli tondi e le ombre: il mockup e' a filo --- */
 .l-body section [class*="rounded"]:not(a):not(button):not(img){ border-radius:0 !important; }
 .l-body section [class*="shadow"]{ box-shadow:none !important; }
-.l-body section [class*="border"]{ border-color:rgba(14,14,12,.16) !important; }
+.l-body section [class*="border"]{ border-color:rgba(11,23,54,.16) !important; }
 
 /* --- i cerchietti colorati con l'icona diventano quadrati a filo --- */
 .l-body section [class*="rounded-full"][class*="bg-"]{ border-radius:0 !important;
@@ -380,20 +380,20 @@ p.l-hero-kicker{ font-size:12px !important; line-height:1.4 !important;
 .l-body section ul li svg{ color:var(--l-seal) !important; }
 
 /* --- sezioni scure: il nero pieno --- */
-.l-body section[class*="#0E0E0C"], .l-body section[class*="bg-\[\#0E0E0C\]"]{
+.l-body section[class*="#0B1736"], .l-body section[class*="bg-\[\#0B1736\]"]{
   background:var(--l-ink) !important; color:var(--l-paper) !important; }
-.l-body section[class*="#0E0E0C"] h2, .l-body section[class*="#0E0E0C"] h3{ color:var(--l-paper) !important; }
+.l-body section[class*="#0B1736"] h2, .l-body section[class*="#0B1736"] h3{ color:var(--l-paper) !important; }
 
 /* --- recensioni: via il bordo tondo, righe a filo --- */
 .l-body [class*="review"] [class*="rounded"], .l-body section blockquote{ border-radius:0 !important; }
-.l-body section blockquote{ border:0 !important; border-top:1px solid rgba(14,14,12,.16) !important;
+.l-body section blockquote{ border:0 !important; border-top:1px solid rgba(11,23,54,.16) !important;
   padding:30px 0 !important; background:transparent !important; }
 
 /* --- pulsanti nel corpo: pillola verde e filo --- */
 .l-body section a[class*="btn-ring"], .l-body section a[class*="bg-primary"]{
   background:var(--l-seal) !important; color:var(--l-ink) !important; border-radius:999px !important; }
 .l-body section a[class*="ghost"]{ background:transparent !important;
-  border:1px solid rgba(14,14,12,.3) !important; border-radius:999px !important; color:var(--l-ink) !important; }
+  border:1px solid rgba(11,23,54,.3) !important; border-radius:999px !important; color:var(--l-ink) !important; }
 
 /* ============================================================================
    LISTA DIFFERENZE: punti 6, 13, 14, 15, 16, 17
@@ -408,16 +408,16 @@ p.l-hero-kicker{ font-size:12px !important; line-height:1.4 !important;
 /* 13 - recensioni su nero, citazioni in Anton */
 [class*="Reviews"], section:has(> div [class*="review"]){ background:var(--l-ink) !important; color:var(--l-paper) !important; }
 [class*="Reviews"] h2, [class*="Reviews"] h3{ color:var(--l-paper) !important; }
-[class*="Reviews"] p, [class*="Reviews"] blockquote{ color:rgba(242,240,233,.9) !important; }
+[class*="Reviews"] p, [class*="Reviews"] blockquote{ color:rgba(247,249,252,.9) !important; }
 [class*="Reviews"] blockquote, [class*="Reviews"] [class*="border"]{
   background:transparent !important; border:0 !important;
-  border-top:1px solid rgba(242,240,233,.18) !important; border-radius:0 !important; }
+  border-top:1px solid rgba(247,249,252,.18) !important; border-radius:0 !important; }
 [class*="Reviews"] svg[class*="star"], [class*="Reviews"] [class*="text-yellow"]{ color:var(--l-seal) !important; }
 
 /* 16 - via i colori estranei da icone ed etichette */
 .l-body [class*="text-yellow"], .l-body [class*="text-amber"], .l-body [class*="text-orange"],
 .l-body [class*="text-sky"], .l-body [class*="text-cyan"], .l-body [class*="text-purple"],
-.l-body [class*="text-red-"], .l-body [class*="text-rose"]{ color:#4A6317 !important; }
+.l-body [class*="text-red-"], .l-body [class*="text-rose"]{ color:#15803D !important; }
 .l-body [class*="bg-yellow"], .l-body [class*="bg-amber"], .l-body [class*="bg-orange"],
 .l-body [class*="bg-sky"], .l-body [class*="bg-cyan"], .l-body [class*="bg-purple"],
 .l-body [class*="bg-red-"], .l-body [class*="bg-rose"], .l-body [class*="bg-blue-1"]{
@@ -427,7 +427,7 @@ p.l-hero-kicker{ font-size:12px !important; line-height:1.4 !important;
 .l-body section[class*="0E0E0C"]{ position:relative; }
 .l-body section[class*="0E0E0C"]::before{ content:''; position:absolute; inset:0;
   background:url('/bg2.webp') center 58%/cover no-repeat;
-  filter:grayscale(.5) brightness(.36); z-index:0; }
+  filter:brightness(.36); z-index:0; }
 .l-body section[class*="0E0E0C"] > *{ position:relative; z-index:2; }
 
 /* 18 - impaginazione a filo, niente centrato */
@@ -456,7 +456,7 @@ a[class*="btn-modern-ghost"]{ background:transparent !important; border:0 !impor
 /* loghi directory FUORI dalla coda ("Presente su" dentro le pagine): grigi.
    Quelli dentro <footer> stanno in l-footer.css, condiviso col blog. */
 section:has(> div > *:is(p,div):is([class*="PRESENTE"],[class*="presente"])) svg{
-  filter:grayscale(1) !important; opacity:.6 !important; }
+  filter:none!important; opacity:.6 !important; }
 
 /* la pillola dell'azione perde l'alone anche nella barra */
 .l-nav a[class*="btn-ring"], .l-nav a[class*="ring"]{ box-shadow:none !important;
@@ -474,7 +474,7 @@ section:has(> div > *:is(p,div):is([class*="PRESENTE"],[class*="presente"])) svg
 [class*="text-slate-400"]{ color:#475569 !important; }
 [class*="text-slate-500"]{ color:#475569 !important; }
 
-/* emerald-700 fa 4,43 sulla carta scura #EAE7DC: manca un soffio, si scende di un tono. */
+/* emerald-700 fa 4,43 sulla carta scura #EAECF0: manca un soffio, si scende di un tono. */
 [class*="text-emerald-700"]{ color:#065F46 !important; }
 
 /* 🔴 Le due regressioni introdotte dalla prima passata: avevo scurito colori che
@@ -482,7 +482,7 @@ section:has(> div > *:is(p,div):is([class*="PRESENTE"],[class*="presente"])) svg
    Dentro i blocchi scuri il testo torna chiaro. */
 .ph label, .end label, .acc label, .rev label,
 .ph [class*="text-primary"], .end [class*="text-primary"],
-.acc [class*="text-primary"], .rev [class*="text-primary"]{ color:#E7E4DA !important; }
+.acc [class*="text-primary"], .rev [class*="text-primary"]{ color:#EAECF0 !important; }
 
 /* .b2 su fondo chiaro ereditava il bianco: 1,14:1, cioe' invisibile. */
 .sec .b2, .scr .sec .b2{ color:var(--ink); }
@@ -492,7 +492,7 @@ section:has(> div > *:is(p,div):is([class*="PRESENTE"],[class*="presente"])) svg
    problema qui dentro, dove il fondo e' gia' scuro. Si riportano chiari. */
 .ink label, .ink .l-tagline, .ink .kk, .ink .k,
 .ink [class*="text-primary"], .sec.ink label, .sec.ink .l-tagline{
-  color:#E7E4DA !important;
+  color:#EAECF0 !important;
 }
 /* Il verde come testo fuori da .sec/.scr: pagine prodotto (.l-note, .wn) e
    listino (.k dei piani). Su fondo chiaro fa 1,82 e non si legge. */
@@ -508,10 +508,10 @@ section:has(> div > *:is(p,div):is([class*="PRESENTE"],[class*="presente"])) svg
 
 /* Modulo contatti: sta su fondo scuro, e il grigio-verde delle label ci va
    sopra a 2,66:1. Le label li' devono essere chiare, non scure. */
-label[for^="ct-"]{ color:#E7E4DA !important; }
+label[for^="ct-"]{ color:#EAECF0 !important; }
 
 /* Tagline delle pagine prodotto: vive nell'apertura scura. */
-.lp-prodotto-timetracker .l-tagline{ color:#B6E86A !important; }
+.lp-prodotto-timetracker .l-tagline{ color:#22B573 !important; }
 
 /* Catenacci verdi dentro i blocchi larghi delle pagine prodotto (.w > .kk).
    🔴 `.w` sta ANCHE dentro l'apertura (.ph) e il piede (.ft), che sono scuri:
@@ -520,7 +520,7 @@ label[for^="ct-"]{ color:#E7E4DA !important; }
    chiaro. Due regole, non una. */
 .w .kk, .w .kk.k{ color:var(--seal-testo) !important; }
 .ph .kk, .ph .kk.k, .ft .kk, .ft .kk.k, .news .kk, .news .kk.k,
-.end .kk, .rev .kk, .acc .kk{ color:#B6E86A !important; }
+.end .kk, .rev .kk, .acc .kk{ color:#22B573 !important; }
 
 /* I badge store si correggono nel CSS della loro pagina: li' il problema non
    era il colore ma l'opacita' annidata. Vedi i due l-page.css delle pagine prodotto. */
@@ -528,7 +528,7 @@ label[for^="ct-"]{ color:#E7E4DA !important; }
 /* CTA nel blocco di chiusura (.low): il testo del bottone arrivava a 4,24:1,
    appena sotto il minimo, perche' fondo e testo sono entrambi attenuati dal
    contesto. Si fissano tutti e due. (Audit EAA del 23/09/2026.) */
-.low .acts .b1, .low .b1{ background:#B6E86A !important; color:#0E0E0C !important; opacity:1 !important; }
+.low .acts .b1, .low .b1{ background:#22B573 !important; color:#0B1736 !important; opacity:1 !important; }
 
 /* ═════════════════════════════════════════════════════════════════════════
    ULTIMA PAROLA SUI FONDI SCURI — audit EAA del 23/09/2026
@@ -547,14 +547,14 @@ label[for^="ct-"]{ color:#E7E4DA !important; }
 .ink .l-tagline, .sec.ink .kk, .sec.ink .kk.k, .sec.ink .nn,
 .ph .kk, .ph .kk.k, .ft .kk, .ft .kk.k, .news .kk, .news .kk.k,
 .end .kk, .rev .kk, .acc .kk{
-  color:#B6E86A !important;
+  color:#22B573 !important;
 }
 
 /* ── Moduli trial/demo: il form e il blocco recensioni stanno su fondo scuro ──
    Qui c'era il caso peggiore dell'audit: un <h2> con `text-slate-900` (quasi
    nero) dentro il blocco recensioni scuro, a 1,08:1 — praticamente invisibile,
    e proprio sulla pagina della prova gratuita. (Audit EAA del 23/09/2026.) */
-label[for^="trial-"]{ color:#E7E4DA !important; }
+label[for^="trial-"]{ color:#EAECF0 !important; }
 
 /* Blocco recensioni dentro le pagine trial/demo.
    Il fondo scuro qui e' VOLUTO — la sezione che lo contiene e' nera per
@@ -566,12 +566,12 @@ label[for^="trial-"]{ color:#E7E4DA !important; }
 .recensioni-blocco.recensioni-blocco.recensioni-blocco h3,
 .recensioni-blocco.recensioni-blocco.recensioni-blocco [class*="text-slate-9"],
 .recensioni-blocco.recensioni-blocco.recensioni-blocco [class*="text-slate-8"]{
-  color:#F5F3EC !important;
+  color:#F7F9FC !important;
 }
 .recensioni-blocco.recensioni-blocco.recensioni-blocco p,
 .recensioni-blocco.recensioni-blocco.recensioni-blocco [class*="text-slate-7"],
 .recensioni-blocco.recensioni-blocco.recensioni-blocco [class*="text-slate-6"],
 .recensioni-blocco.recensioni-blocco.recensioni-blocco [class*="text-slate-5"],
 .recensioni-blocco.recensioni-blocco.recensioni-blocco [class*="text-slate-4"]{
-  color:#D8D5C9 !important;
+  color:#D0D5DD !important;
 }

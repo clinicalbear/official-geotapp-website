@@ -39,7 +39,7 @@ export default function NotFound() {
   const p = (path: string) => `/${locale}${path}`;
 
   const link: React.CSSProperties = {
-    color: '#F2F0E9', fontSize: 16, borderBottom: '1px solid rgba(242,240,233,.42)',
+    color: '#F7F9FC', fontSize: 16, borderBottom: '1px solid rgba(247,249,252,.42)',
     paddingBottom: 3, textDecoration: 'none',
   };
 
@@ -47,7 +47,7 @@ export default function NotFound() {
     <html lang={locale}>
       <body style={{ margin: 0 }}>
         <div style={{
-          minHeight: '100vh', background: '#0E0E0C', color: '#F2F0E9',
+          minHeight: '100vh', background: '#0B1736', color: '#F7F9FC',
           display: 'grid', placeContent: 'center', textAlign: 'center',
           fontFamily: 'Inter, system-ui, sans-serif', padding: '32px 20px',
         }}>
@@ -57,13 +57,13 @@ export default function NotFound() {
             fontFamily: '"Anton", "Arial Narrow", Impact, sans-serif', fontSize: 'clamp(90px, 18vw, 190px)',
             lineHeight: 0.9, margin: 0, textTransform: 'uppercase', letterSpacing: '.01em',
           }}>
-            4<span style={{ color: '#B6E86A' }}>0</span>4
+            4<span style={{ color: '#22B573' }}>0</span>4
           </p>
           <p style={{ fontSize: 22, fontWeight: 700, margin: '34px 0 8px' }}>{t.lead}</p>
-          <p style={{ fontSize: 15.5, color: 'rgba(242,240,233,.7)', margin: '0 0 36px', maxWidth: '46ch' }}>{t.desc}</p>
+          <p style={{ fontSize: 15.5, color: 'rgba(247,249,252,.7)', margin: '0 0 36px', maxWidth: '46ch' }}>{t.desc}</p>
           <div style={{ display: 'flex', gap: 26, justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap' }}>
             <a href={p('/trial/')} style={{
-              background: '#8FC436', color: '#0E0E0C', padding: '15px 30px', borderRadius: 99,
+              background: '#22B573', color: '#0B1736', padding: '15px 30px', borderRadius: 99,
               fontSize: 15.5, fontWeight: 600, textDecoration: 'none',
             }}>{t.cta}</a>
             <a href={p('/')} style={link}>{t.home}</a>

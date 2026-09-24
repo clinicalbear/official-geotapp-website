@@ -316,8 +316,8 @@ export default async function PaginaCodice({
   const esito = await risolvi(code);
 
   const scatola =
-    'mx-auto max-w-2xl px-6 py-14 text-[#101418] font-sans';
-  const filo = 'rounded-xl border border-[#E3E4E0] bg-white p-6';
+    'mx-auto max-w-2xl px-6 py-14 text-[#0B1736] font-sans';
+  const filo = 'rounded-xl border border-[#EAECF0] bg-white p-6';
 
   if (esito.stato === 'sconosciuto' || esito.stato === 'revocato') {
     const revocato = esito.stato === 'revocato';
@@ -341,13 +341,13 @@ export default async function PaginaCodice({
         <div
           className="rounded-xl border p-6"
           style={{
-            borderColor: revocato ? '#C98A28' : '#CFD1CC',
-            background: revocato ? '#FBF1E3' : '#FBFBF9',
+            borderColor: revocato ? '#C98A28' : '#D0D5DD',
+            background: revocato ? '#F7F9FC' : '#F7F9FC',
           }}
         >
           <h1 className="text-xl font-semibold">{titolo}</h1>
-          <p className="mt-2 text-[#4A5259]">{corpo}</p>
-          <p className="mt-4 font-mono text-sm text-[#7C858C]">
+          <p className="mt-2 text-[#475467]">{corpo}</p>
+          <p className="mt-4 font-mono text-sm text-[#667085]">
             {code.toUpperCase()}
           </p>
         </div>
@@ -370,8 +370,8 @@ export default async function PaginaCodice({
       <div
         className="rounded-xl border p-6"
         style={{
-          borderColor: sigillato ? '#3F8C5A' : '#C98A28',
-          background: sigillato ? '#EAF2EC' : '#FBF1E3',
+          borderColor: sigillato ? '#15803D' : '#C98A28',
+          background: sigillato ? '#F7F9FC' : '#F7F9FC',
         }}
       >
         <h1
@@ -380,26 +380,26 @@ export default async function PaginaCodice({
         >
           {sigillato ? t.sealedTitle : t.draftTitle}
         </h1>
-        <p className="mt-2 text-sm text-[#101418]">
+        <p className="mt-2 text-sm text-[#0B1736]">
           {sigillato ? t.sealedBody : t.draftBody}
         </p>
       </div>
 
       <dl className="mt-6 grid gap-4 sm:grid-cols-3">
         <div>
-          <dt className="text-[11px] uppercase tracking-wider text-[#7C858C]">
+          <dt className="text-[11px] uppercase tracking-wider text-[#667085]">
             {t.issuedBy}
           </dt>
           <dd className="mt-1">{esito.aziendaNome || '—'}</dd>
         </div>
         <div>
-          <dt className="text-[11px] uppercase tracking-wider text-[#7C858C]">
+          <dt className="text-[11px] uppercase tracking-wider text-[#667085]">
             {t.job}
           </dt>
           <dd className="mt-1">{esito.commessa || '—'}</dd>
         </div>
         <div>
-          <dt className="text-[11px] uppercase tracking-wider text-[#7C858C]">
+          <dt className="text-[11px] uppercase tracking-wider text-[#667085]">
             {t.sealedOn}
           </dt>
           <dd className="mt-1">{data ?? '—'}</dd>
@@ -415,7 +415,7 @@ export default async function PaginaCodice({
             {t.downloadPackage}
           </a>
         ) : null}
-        <p className="mt-3 text-sm text-[#4A5259]">{t.downloadPackageHint}</p>
+        <p className="mt-3 text-sm text-[#475467]">{t.downloadPackageHint}</p>
         {esito.documentoUrl ? (
           <p className="mt-3">
             <a
@@ -426,16 +426,16 @@ export default async function PaginaCodice({
             </a>
           </p>
         ) : null}
-        <p className="mt-4 text-[11px] uppercase tracking-wider text-[#7C858C]">
+        <p className="mt-4 text-[11px] uppercase tracking-wider text-[#667085]">
           {t.fingerprint}
         </p>
         <p className="font-mono text-sm break-all">{coda(esito.zipSha256)}</p>
-        <p className="mt-3 text-xs text-[#7C858C]">{t.linkLife}</p>
+        <p className="mt-3 text-xs text-[#667085]">{t.linkLife}</p>
       </div>
 
       <div className={`mt-4 ${filo}`}>
         <h2 className="font-semibold">{t.verifyTitle}</h2>
-        <p className="mt-1 text-sm text-[#4A5259]">{t.verifyBody}</p>
+        <p className="mt-1 text-sm text-[#475467]">{t.verifyBody}</p>
         <p className="mt-3">
           <a
             href={`/${String(locale).split('-')[0]}/verify-report/`}
@@ -451,7 +451,7 @@ export default async function PaginaCodice({
           non un pixel. */}
       <div className={`mt-4 ${filo}`}>
         <h2 className="font-semibold">{t.surveyTitle}</h2>
-        <p className="mt-1 text-sm text-[#4A5259]">{t.surveyBody}</p>
+        <p className="mt-1 text-sm text-[#475467]">{t.surveyBody}</p>
         <p className="mt-3">
           <a
             href={`/${String(locale).split('-')[0]}/survey/`}

@@ -69,8 +69,8 @@ const COPY: Record<string, {
 };
 
 const CLAIM_ICONS = [ShieldCheck, FileCheck, MapPin];
-const ICON_COLORS = ['#8FC436', '#2DA4E4', '#F97316'];
-const ICON_BG = ['rgba(143,196,54,0.12)', 'rgba(45,164,228,0.12)', 'rgba(249,115,22,0.12)'];
+const ICON_COLORS = ['#22B573', '#19B5D8', '#F97316'];
+const ICON_BG = ['rgba(34,181,115,0.12)', 'rgba(25,181,216,0.12)', 'rgba(249,115,22,0.12)'];
 
 export default function TrustBar({ locale }: { locale: string }) {
   const c = COPY[locale] ?? COPY.en;
@@ -86,9 +86,9 @@ export default function TrustBar({ locale }: { locale: string }) {
       transition={{ duration: 0.6 }}
       className="relative overflow-hidden"
       style={{
-        background: 'linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #f8fafc 100%)',
-        borderTop: '1px solid #e2e8f0',
-        borderBottom: '1px solid #e2e8f0',
+        background: 'linear-gradient(135deg, #f7f9fc 0%, #f2f4f7 50%, #f7f9fc 100%)',
+        borderTop: '1px solid #f7f9fc',
+        borderBottom: '1px solid #f7f9fc',
         padding: '80px 24px 72px',
         textAlign: 'center',
       }}
@@ -96,7 +96,7 @@ export default function TrustBar({ locale }: { locale: string }) {
       {/* Subtle background decoration */}
       <div aria-hidden="true" style={{
         position: 'absolute', inset: 0, pointerEvents: 'none',
-        background: 'radial-gradient(ellipse 80% 60% at 50% 50%, rgba(143,196,54,0.06), transparent)',
+        background: 'radial-gradient(ellipse 80% 60% at 50% 50%, rgba(34,181,115,0.06), transparent)',
       }} />
 
       <div className="relative z-10">
@@ -151,7 +151,7 @@ export default function TrustBar({ locale }: { locale: string }) {
                   fontFamily: 'var(--font-display)',
                   fontSize: 'clamp(1.15rem, 2.2vw, 1.4rem)',
                   fontWeight: 700,
-                  color: '#0f172a',
+                  color: '#0b1736',
                   lineHeight: 1.2,
                   letterSpacing: '-0.01em',
                 }}>
@@ -194,19 +194,19 @@ export default function TrustBar({ locale }: { locale: string }) {
                 padding: '8px 18px',
                 borderRadius: '9999px',
                 background: 'white',
-                border: '1px solid #e2e8f0',
-                boxShadow: '0 2px 8px rgba(0,0,0,0.04)',
+                border: '1px solid #f7f9fc',
+                boxShadow: '0 2px 8px rgba(11,23,54,0.04)',
                 transition: 'all 0.2s',
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.borderColor = '#8FC436';
-                e.currentTarget.style.color = '#8FC436';
-                e.currentTarget.style.boxShadow = '0 4px 12px rgba(143,196,54,0.15)';
+                e.currentTarget.style.borderColor = '#22B573';
+                e.currentTarget.style.color = '#22B573';
+                e.currentTarget.style.boxShadow = '0 4px 12px rgba(34,181,115,0.15)';
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = '#e2e8f0';
+                e.currentTarget.style.borderColor = '#f7f9fc';
                 e.currentTarget.style.color = '#475569';
-                e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.04)';
+                e.currentTarget.style.boxShadow = '0 2px 8px rgba(11,23,54,0.04)';
               }}
             >
               {sector}

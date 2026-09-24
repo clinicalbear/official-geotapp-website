@@ -109,17 +109,17 @@ export default function AboutPage() {
           <FounderViewTracker source="chi_siamo" />
           <p className="kk k" style={{ color: 'var(--seal-testo)' }}>{cs.founder.section_label}</p>
           <h2 style={{ fontSize: 'clamp(26px,3.2vw,46px)' }}>{cs.founder.name}</h2>
-          <p style={{ color: '#4F5A49', marginTop: 8 }}>{cs.founder.role}</p>
-          <p style={{ color: '#3B4237', marginTop: 22, maxWidth: '60ch' }}>{cs.founder.bio}</p>
+          <p style={{ color: '#475467', marginTop: 8 }}>{cs.founder.role}</p>
+          <p style={{ color: '#344054', marginTop: 22, maxWidth: '60ch' }}>{cs.founder.bio}</p>
           <div style={{ marginTop: 24 }}>
-            <p className="k" style={{ color: '#4F5A49', marginBottom: 12 }}>{cs.founder.expertise_label}</p>
+            <p className="k" style={{ color: '#475467', marginBottom: 12 }}>{cs.founder.expertise_label}</p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
               {cs.founder.expertise.map((e: string) => (
                 <span
                   key={e}
                   style={{
-                    fontSize: 13.5, padding: '7px 14px', border: '1px solid rgba(14,14,12,.18)',
-                    color: '#3B4237', borderRadius: 999,
+                    fontSize: 13.5, padding: '7px 14px', border: '1px solid rgba(11,23,54,.18)',
+                    color: '#344054', borderRadius: 999,
                   }}
                 >
                   {e}

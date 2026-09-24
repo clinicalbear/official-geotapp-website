@@ -92,7 +92,7 @@ export default function FeaturedIn({ locale }: { locale: string }) {
         padding: '56px 24px 76px',
         position: 'relative',
         overflow: 'hidden',
-        background: 'linear-gradient(180deg, #e9ebee 0%, #f3f4f6 100%)',
+        background: 'linear-gradient(180deg, #f7f9fc 0%, #f2f4f7 100%)',
       }}
     >
       <style dangerouslySetInnerHTML={{ __html: styles }} />
@@ -136,7 +136,7 @@ export default function FeaturedIn({ locale }: { locale: string }) {
                     style={{ display: 'block' }}
                   />
                 ) : (
-                  <span style={{ fontWeight: 700, color: '#3f5220', fontSize: '1.05rem' }}>
+                  <span style={{ fontWeight: 700, color: '#15803d', fontSize: '1.05rem' }}>
                     {item.outlet}
                   </span>
                 )}

@@ -68,9 +68,9 @@ export default function MapBackground({ products }: MapBackgroundProps) {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         maskImage:
-          'linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 18%, transparent 32%, transparent 68%, rgba(0,0,0,0.5) 82%, rgba(0,0,0,1) 100%)',
+          'linear-gradient(to right, rgba(11,23,54,1) 0%, rgba(11,23,54,0.5) 18%, transparent 32%, transparent 68%, rgba(11,23,54,0.5) 82%, rgba(11,23,54,1) 100%)',
         WebkitMaskImage:
-          'linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 18%, transparent 32%, transparent 68%, rgba(0,0,0,0.5) 82%, rgba(0,0,0,1) 100%)',
+          'linear-gradient(to right, rgba(11,23,54,1) 0%, rgba(11,23,54,0.5) 18%, transparent 32%, transparent 68%, rgba(11,23,54,0.5) 82%, rgba(11,23,54,1) 100%)',
       }}
     />
   );

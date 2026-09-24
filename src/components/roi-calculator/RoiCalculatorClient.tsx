@@ -131,11 +131,11 @@ function SliderField({
         className={dark
           ? 'w-full h-2 rounded-full appearance-none cursor-pointer'
           : 'w-full h-2 bg-gray-200 rounded-full appearance-none cursor-pointer accent-blue-600'}
-        style={dark ? { background: 'rgba(242,240,233,.18)', accentColor: 'var(--seal)' } : undefined}
+        style={dark ? { background: 'rgba(247,249,252,.18)', accentColor: 'var(--seal)' } : undefined}
       />
       <div
         className={dark ? 'flex justify-between text-xs' : 'flex justify-between text-xs text-gray-400'}
-        style={dark ? { color: 'rgba(242,240,233,.68)' } : undefined}
+        style={dark ? { color: 'rgba(247,249,252,.68)' } : undefined}
       >
         <span>{isMoney ? `${symbol}${min}` : String(min)}</span>
         <span>{isMoney ? `${symbol}${max}` : String(max)}</span>
@@ -289,7 +289,7 @@ export default function RoiCalculatorClient({ dict, locale, trialUrl, embed = fa
               <div
                 key={i}
                 className={dark ? 'flex-1 h-1.5 rounded-full transition-colors duration-300' : `flex-1 h-1.5 rounded-full transition-colors duration-300 ${i <= step ? 'bg-blue-600' : 'bg-gray-200'}`}
-                style={dark ? { background: i <= step ? 'var(--seal)' : 'rgba(242,240,233,.18)' } : undefined}
+                style={dark ? { background: i <= step ? 'var(--seal)' : 'rgba(247,249,252,.18)' } : undefined}
               />
             ))}
           </div>
@@ -312,7 +312,7 @@ export default function RoiCalculatorClient({ dict, locale, trialUrl, embed = fa
                 <div className="space-y-6">
                   <div>
                     <h2 className={dark ? '' : 'text-xl font-bold text-gray-900'}>{dict.step1_title}</h2>
-                    <p className={dark ? 'mt-1' : 'text-gray-500 text-sm mt-1'} style={dark ? { color: 'rgba(242,240,233,.6)', fontSize: 14.5 } : undefined}>{dict.step1_subtitle}</p>
+                    <p className={dark ? 'mt-1' : 'text-gray-500 text-sm mt-1'} style={dark ? { color: 'rgba(247,249,252,.6)', fontSize: 14.5 } : undefined}>{dict.step1_subtitle}</p>
                   </div>
                   <div>
                     <p className={dark ? 'mb-3' : 'text-sm font-medium text-gray-700 mb-3'} style={dark ? { color: 'var(--lime)', fontSize: 12, letterSpacing: '.16em', textTransform: 'uppercase' } : undefined}>{dict.field_settore}</p>
@@ -329,9 +329,9 @@ export default function RoiCalculatorClient({ dict, locale, trialUrl, embed = fa
                                   : 'border-gray-200 text-gray-600 hover:border-blue-300'
                               }`}
                           style={dark ? {
-                            border: form.settore === s ? '1px solid var(--seal)' : '1px solid rgba(242,240,233,.22)',
-                            background: form.settore === s ? 'rgba(143,196,54,.14)' : 'transparent',
-                            color: form.settore === s ? 'var(--lime)' : 'rgba(242,240,233,.7)',
+                            border: form.settore === s ? '1px solid var(--seal)' : '1px solid rgba(247,249,252,.22)',
+                            background: form.settore === s ? 'rgba(34,181,115,.14)' : 'transparent',
+                            color: form.settore === s ? 'var(--lime)' : 'rgba(247,249,252,.7)',
                           } : undefined}
                         >
                           {dict[`settore_${s}` as keyof RoiDict] as string}
@@ -363,7 +363,7 @@ export default function RoiCalculatorClient({ dict, locale, trialUrl, embed = fa
                 <div className="space-y-6">
                   <div>
                     <h2 className={dark ? '' : 'text-xl font-bold text-gray-900'}>{dict.step2_title}</h2>
-                    <p className={dark ? 'mt-1' : 'text-gray-500 text-sm mt-1'} style={dark ? { color: 'rgba(242,240,233,.6)', fontSize: 14.5 } : undefined}>{dict.step2_subtitle}</p>
+                    <p className={dark ? 'mt-1' : 'text-gray-500 text-sm mt-1'} style={dark ? { color: 'rgba(247,249,252,.6)', fontSize: 14.5 } : undefined}>{dict.step2_subtitle}</p>
                   </div>
                   <SliderField label={dict.field_siti} value={form.siti} min={1} max={30} onChange={v => update('siti', v)} dark={dark} />
                   <SliderField label={dict.field_ore_admin} value={form.ore_admin} min={1} max={40} onChange={v => update('ore_admin', v)} dark={dark} />
@@ -373,7 +373,7 @@ export default function RoiCalculatorClient({ dict, locale, trialUrl, embed = fa
                     <button
                       onClick={goBack}
                       className={dark ? `${backCls} flex-1 text-center` : 'flex-1 py-3 rounded-xl font-semibold text-gray-600 border border-gray-300 hover:bg-gray-50 transition-colors'}
-                      style={dark ? { border: '1px solid rgba(242,240,233,.24)', borderRadius: 12, padding: '13px 0', cursor: 'pointer', background: 'none', font: 'inherit', fontWeight: 500 } : undefined}
+                      style={dark ? { border: '1px solid rgba(247,249,252,.24)', borderRadius: 12, padding: '13px 0', cursor: 'pointer', background: 'none', font: 'inherit', fontWeight: 500 } : undefined}
                     >
                       ← {dict.back}
                     </button>
@@ -393,7 +393,7 @@ export default function RoiCalculatorClient({ dict, locale, trialUrl, embed = fa
                 <div className="space-y-6">
                   <div>
                     <h2 className={dark ? '' : 'text-xl font-bold text-gray-900'}>{dict.step3_title}</h2>
-                    <p className={dark ? 'mt-1' : 'text-gray-500 text-sm mt-1'} style={dark ? { color: 'rgba(242,240,233,.6)', fontSize: 14.5 } : undefined}>{dict.step3_subtitle}</p>
+                    <p className={dark ? 'mt-1' : 'text-gray-500 text-sm mt-1'} style={dark ? { color: 'rgba(247,249,252,.6)', fontSize: 14.5 } : undefined}>{dict.step3_subtitle}</p>
                   </div>
                   <div className="space-y-4">
                     {/* Honeypot: offscreen (non display:none, così i bot lo riempiono). Gli umani non lo vedono. */}
@@ -427,7 +427,7 @@ export default function RoiCalculatorClient({ dict, locale, trialUrl, embed = fa
                       onChange={(e) => setSubscribeNewsletter(e.target.checked)}
                       className="mt-0.5 h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500 cursor-pointer flex-shrink-0"
                     />
-                    <span className={dark ? 'text-xs leading-relaxed' : 'text-xs text-gray-500 leading-relaxed'} style={dark ? { color: 'rgba(242,240,233,.55)' } : undefined}>
+                    <span className={dark ? 'text-xs leading-relaxed' : 'text-xs text-gray-500 leading-relaxed'} style={dark ? { color: 'rgba(247,249,252,.55)' } : undefined}>
                       {dict.newsletter_opt_in ?? 'Voglio anche ricevere la newsletter mensile con consigli pratici per realizzare il ROI calcolato (GPS, GDPR, gestione campo). Disiscrizione in 1 click.'}
                     </span>
                   </label>
@@ -441,11 +441,11 @@ export default function RoiCalculatorClient({ dict, locale, trialUrl, embed = fa
                   >
                     {loading ? '...' : dict.cta_calcola}
                   </button>
-                  <p className={dark ? 'text-xs text-center leading-relaxed' : 'text-xs text-gray-400 text-center leading-relaxed'} style={dark ? { color: 'rgba(242,240,233,.68)' } : undefined}>{dict.consent_text}</p>
+                  <p className={dark ? 'text-xs text-center leading-relaxed' : 'text-xs text-gray-400 text-center leading-relaxed'} style={dark ? { color: 'rgba(247,249,252,.68)' } : undefined}>{dict.consent_text}</p>
                   <button
                     onClick={goBack}
                     className={dark ? 'w-full text-sm text-center' : 'w-full text-sm text-gray-500 hover:text-gray-700'}
-                    style={dark ? { color: 'rgba(242,240,233,.55)', background: 'none', border: 'none', cursor: 'pointer', font: 'inherit' } : undefined}
+                    style={dark ? { color: 'rgba(247,249,252,.55)', background: 'none', border: 'none', cursor: 'pointer', font: 'inherit' } : undefined}
                   >
                     ← {dict.back}
                   </button>
@@ -458,14 +458,14 @@ export default function RoiCalculatorClient({ dict, locale, trialUrl, embed = fa
                   <div className="text-center">
                     <div
                       className={dark ? 'inline-flex items-center justify-center w-12 h-12 rounded-full mb-3' : 'inline-flex items-center justify-center w-12 h-12 rounded-full bg-green-100 mb-3'}
-                      style={dark ? { background: 'rgba(143,196,54,.16)' } : undefined}
+                      style={dark ? { background: 'rgba(34,181,115,.16)' } : undefined}
                     >
                       <svg className={dark ? 'w-6 h-6' : 'w-6 h-6 text-green-700'} style={dark ? { color: 'var(--seal-testo)' } : undefined} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
                     <h2 className={dark ? '' : 'text-xl font-bold text-gray-900'}>{dict.results_title}</h2>
-                    <p className={dark ? 'mt-1' : 'text-gray-500 text-sm mt-1'} style={dark ? { color: 'rgba(242,240,233,.6)', fontSize: 14.5 } : undefined}>{dict.results_subtitle}</p>
+                    <p className={dark ? 'mt-1' : 'text-gray-500 text-sm mt-1'} style={dark ? { color: 'rgba(247,249,252,.6)', fontSize: 14.5 } : undefined}>{dict.results_subtitle}</p>
                   </div>
                   <div className={dark ? 'res2' : 'grid grid-cols-1 gap-3'} style={dark ? { marginTop: 0 } : undefined}>
                     <ResultCard label={dict.results_admin} value={result.risparmio_admin} countActive={countActive} locale={locale} cur={cur} dark={dark} />
@@ -477,31 +477,31 @@ export default function RoiCalculatorClient({ dict, locale, trialUrl, embed = fa
                     animate={{ scale: 1, opacity: 1 }}
                     transition={{ delay: 0.3 }}
                     className={dark ? 'rounded-2xl p-6 text-center' : 'rounded-2xl bg-gradient-to-r from-green-500 to-emerald-600 p-6 text-white text-center'}
-                    style={dark ? { background: 'rgba(143,196,54,.12)', border: '1px solid rgba(143,196,54,.3)' } : undefined}
+                    style={dark ? { background: 'rgba(34,181,115,.12)', border: '1px solid rgba(34,181,115,.3)' } : undefined}
                   >
-                    <p className={dark ? 'text-sm mb-1' : 'text-sm opacity-80 mb-1'} style={dark ? { color: 'rgba(242,240,233,.65)' } : undefined}>{dict.results_total}</p>
+                    <p className={dark ? 'text-sm mb-1' : 'text-sm opacity-80 mb-1'} style={dark ? { color: 'rgba(247,249,252,.65)' } : undefined}>{dict.results_total}</p>
                     <p
                       className={dark ? 'text-5xl' : 'text-4xl font-black'}
                       style={dark ? { fontFamily: "var(--font-display)", color: 'var(--lime)', textTransform: 'uppercase', letterSpacing: '-.02em' } : undefined}
                     >
                       <AnimatedTotal value={result.risparmio_totale} locale={locale} active={countActive} cur={cur} />
                     </p>
-                    <p className={dark ? 'text-sm mt-1' : 'text-sm opacity-80 mt-1'} style={dark ? { color: 'rgba(242,240,233,.65)' } : undefined}>{dict.per_anno}</p>
+                    <p className={dark ? 'text-sm mt-1' : 'text-sm opacity-80 mt-1'} style={dark ? { color: 'rgba(247,249,252,.65)' } : undefined}>{dict.per_anno}</p>
                   </motion.div>
                   <div className="grid grid-cols-2 gap-3">
                     <div
                       className={dark ? 'rounded-xl p-4 text-center' : 'rounded-xl bg-blue-50 border border-blue-200 p-4 text-center'}
-                      style={dark ? { background: 'rgba(242,240,233,.05)', border: '1px solid rgba(242,240,233,.14)' } : undefined}
+                      style={dark ? { background: 'rgba(247,249,252,.05)', border: '1px solid rgba(247,249,252,.14)' } : undefined}
                     >
-                      <p className={dark ? 'text-xs mb-1' : 'text-xs text-gray-500 mb-1'} style={dark ? { color: 'rgba(242,240,233,.55)' } : undefined}>{dict.results_payback}</p>
+                      <p className={dark ? 'text-xs mb-1' : 'text-xs text-gray-500 mb-1'} style={dark ? { color: 'rgba(247,249,252,.55)' } : undefined}>{dict.results_payback}</p>
                       <p className={dark ? 'text-2xl font-bold' : 'text-2xl font-bold text-blue-600'} style={dark ? { color: 'var(--lime)' } : undefined}>{result.payback_mesi}</p>
-                      <p className={dark ? 'text-xs' : 'text-xs text-gray-500'} style={dark ? { color: 'rgba(242,240,233,.55)' } : undefined}>{dict.results_payback_unit}</p>
+                      <p className={dark ? 'text-xs' : 'text-xs text-gray-500'} style={dark ? { color: 'rgba(247,249,252,.55)' } : undefined}>{dict.results_payback_unit}</p>
                     </div>
                     <div
                       className={dark ? 'rounded-xl p-4 text-center' : 'rounded-xl bg-emerald-50 border border-emerald-200 p-4 text-center'}
-                      style={dark ? { background: 'rgba(242,240,233,.05)', border: '1px solid rgba(242,240,233,.14)' } : undefined}
+                      style={dark ? { background: 'rgba(247,249,252,.05)', border: '1px solid rgba(247,249,252,.14)' } : undefined}
                     >
-                      <p className={dark ? 'text-xs mb-1' : 'text-xs text-gray-500 mb-1'} style={dark ? { color: 'rgba(242,240,233,.55)' } : undefined}>{dict.results_roi}</p>
+                      <p className={dark ? 'text-xs mb-1' : 'text-xs text-gray-500 mb-1'} style={dark ? { color: 'rgba(247,249,252,.55)' } : undefined}>{dict.results_roi}</p>
                       <p className={dark ? 'text-2xl font-bold' : 'text-2xl font-bold text-emerald-700'} style={dark ? { color: 'var(--sky)' } : undefined}>{result.roi_pct}%</p>
                     </div>
                   </div>
@@ -512,7 +512,7 @@ export default function RoiCalculatorClient({ dict, locale, trialUrl, embed = fa
                   >
                     {dict.results_cta} →
                   </a>
-                  <p className={dark ? 'text-xs text-center' : 'text-xs text-gray-400 text-center'} style={dark ? { color: 'rgba(242,240,233,.4)' } : undefined}>{dict.results_disclaimer}</p>
+                  <p className={dark ? 'text-xs text-center' : 'text-xs text-gray-400 text-center'} style={dark ? { color: 'rgba(247,249,252,.4)' } : undefined}>{dict.results_disclaimer}</p>
                 </div>
               )}
             </motion.div>

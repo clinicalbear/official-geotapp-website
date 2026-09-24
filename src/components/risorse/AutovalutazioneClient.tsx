@@ -51,7 +51,7 @@ export default function AutovalutazioneClient({ locale, contenuto, hrefs }: Prop
   // colore della fascia in base alla soglia (rischio / medio / buono)
   const soglie = [...fasce].map((f) => f.min).sort((a, b) => a - b);
   const livello = soglie.indexOf(fascia.min); // 0,1,2
-  const barColor = livello === 2 ? '#8FC436' : livello === 1 ? '#f59e0b' : '#ef4444';
+  const barColor = livello === 2 ? '#22B573' : livello === 1 ? '#f59e0b' : '#ef4444';
 
   const optLabel: Record<AvRisposta, string> = { si: opt.si, parziale: opt.parziale, no: opt.no };
 

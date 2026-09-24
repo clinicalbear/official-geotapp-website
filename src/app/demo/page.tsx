@@ -145,7 +145,7 @@ export default function DemoPage() {
                             <option key={s}>{s}</option>
                           ))}
                         </select>
-                        <ChevronDown size={16} style={{ position: 'absolute', right: 16, top: '50%', transform: 'translateY(-50%)', color: 'rgba(242,240,233,.5)', pointerEvents: 'none' }} />
+                        <ChevronDown size={16} style={{ position: 'absolute', right: 16, top: '50%', transform: 'translateY(-50%)', color: 'rgba(247,249,252,.5)', pointerEvents: 'none' }} />
                       </div>
                     </div>
 
@@ -194,9 +194,9 @@ export default function DemoPage() {
                       {loading ? d.form_submitting : d.form_submit}
                     </button>
 
-                    <p style={{ marginTop: 20, fontSize: 13, color: 'rgba(242,240,233,.5)', textAlign: 'center' }}>
+                    <p style={{ marginTop: 20, fontSize: 13, color: 'rgba(247,249,252,.5)', textAlign: 'center' }}>
                       {d.no_spam ?? "No spam. Your data is handled according to our"}{' '}
-                      <a href={localizePath('/privacy/', l)} style={{ color: 'var(--lime)', borderBottom: '1px solid rgba(182,232,106,.4)' }}>Privacy Policy</a>.
+                      <a href={localizePath('/privacy/', l)} style={{ color: 'var(--lime)', borderBottom: '1px solid rgba(34,181,115,.4)' }}>Privacy Policy</a>.
                     </p>
                   </motion.form>
                 )}

@@ -218,7 +218,7 @@ export default function LeadMagnetInline({ magnet, locale }: Props) {
   const surveyHref = `/${locale}/survey/`;
 
   return (
-    <div className="my-12 rounded-2xl border border-[#2DA4E4]/25 bg-[#2DA4E4]/5 p-8 text-center">
+    <div className="my-12 rounded-2xl border border-[#19B5D8]/25 bg-[#19B5D8]/5 p-8 text-center">
       <p className="text-lg font-bold text-slate-900">{t.title}</p>
       <p className="text-sm text-slate-500 mt-2 max-w-md mx-auto">{t.desc}</p>
 
@@ -231,7 +231,7 @@ export default function LeadMagnetInline({ magnet, locale }: Props) {
         target="_blank"
         rel="noopener"
         onClick={() => setScaricato(true)}
-        className="mt-5 inline-block px-6 py-3 text-sm font-semibold text-white bg-[#2DA4E4] rounded-xl hover:bg-[#2f97c4] transition-colors"
+        className="mt-5 inline-block px-6 py-3 text-sm font-semibold text-white bg-[#19B5D8] rounded-xl hover:bg-[#0e7c99] transition-colors"
       >
         {t.download}
       </a>
@@ -239,15 +239,15 @@ export default function LeadMagnetInline({ magnet, locale }: Props) {
       {/* Al posto dell'iscrizione: l'invito al sondaggio. Prima del download resta
           una riga discreta, dopo il click diventa la richiesta vera, che e' il
           momento in cui abbiamo appena dato qualcosa. */}
-      <div className="mt-6 pt-5 border-t border-[#2DA4E4]/15 max-w-md mx-auto">
+      <div className="mt-6 pt-5 border-t border-[#19B5D8]/15 max-w-md mx-auto">
         <p className="text-sm text-slate-600">{scaricato ? ask.dopo : ask.prima}</p>
         <a
           href={surveyHref}
           onClick={() => trackEvent('survey_cta_click', { locale, placement: scaricato ? 'lead_magnet_post_download' : 'lead_magnet' })}
           className={`mt-3 inline-block rounded-xl px-5 py-2.5 text-sm font-semibold no-underline transition-colors ${
             scaricato
-              ? 'bg-[#8FC436] text-white hover:brightness-105'
-              : 'border border-slate-200 bg-white text-slate-700 hover:border-[#2DA4E4]'
+              ? 'bg-[#22B573] text-white hover:brightness-105'
+              : 'border border-slate-200 bg-white text-slate-700 hover:border-[#19B5D8]'
           }`}
         >
           {ask.cta}

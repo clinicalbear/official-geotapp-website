@@ -18,8 +18,8 @@
   }
 }
 
-/* ── il vecchio strato redesign-l.css forza `label{color:#4F5A49 !important}`
-   e `input,select,textarea{border-color:rgba(14,14,12,.22) !important}`
+/* ── il vecchio strato redesign-l.css forza `label{color:#475467 !important}`
+   e `input,select,textarea{border-color:rgba(11,23,54,.22) !important}`
    pensati per moduli su fondo chiaro: su un pannello .form (fondo quasi nero)
    diventano illeggibili. Qui si ripristina il vestito scuro del mockup con
    una specificità più alta, senza toccare redesign-l.css (condiviso). ── */
@@ -28,18 +28,18 @@
 }
 .lp-risorsa-strumento .form .in {
   background: transparent !important;
-  border-color: rgba(242, 240, 233, 0.24) !important;
-  color: rgba(242, 240, 233, 0.92) !important;
+  border-color: rgba(247, 249, 252, 0.24) !important;
+  color: rgba(247, 249, 252, 0.92) !important;
 }
 .lp-risorsa-strumento .form .in::placeholder {
-  color: rgba(242, 240, 233, 0.5) !important;
+  color: rgba(247, 249, 252, 0.5) !important;
 }
 .lp-risorsa-strumento .form select.in {
   color-scheme: dark;
 }
 .lp-risorsa-strumento .form select.in option {
-  color: #0e0e0c;
-  background: #f2f0e9;
+  color: #0b1736;
+  background: #f7f9fc;
 }
 
 /* checkbox "controlli anti-manomissione": l'etichetta avvolge la frase intera
@@ -55,7 +55,7 @@
   margin-bottom: 0 !important;
   font-size: 14px !important;
   font-weight: 400;
-  color: rgba(242, 240, 233, 0.85) !important;
+  color: rgba(247, 249, 252, 0.85) !important;
 }
 .lp-risorsa-strumento .form label.fchk input[type='checkbox'] {
   margin-top: 4px;
@@ -74,12 +74,12 @@
   gap: 8px;
   width: auto;
   cursor: pointer;
-  border: 1px solid rgba(242, 240, 233, 0.24) !important;
+  border: 1px solid rgba(247, 249, 252, 0.24) !important;
   padding: 11px 16px !important;
   background: transparent !important;
   font-size: 14px !important;
   text-transform: none !important;
   letter-spacing: normal !important;
   margin-bottom: 0 !important;
-  color: rgba(242, 240, 233, 0.85) !important;
+  color: rgba(247, 249, 252, 0.85) !important;
 }

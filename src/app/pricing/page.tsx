@@ -307,7 +307,7 @@ export default function Pricing() {
           </div>
         )}
         {category.id === 'app' && (
-          <p className="k" style={{ fontSize: '11px', color: '#4F5A49', marginBottom: '10px' }}>
+          <p className="k" style={{ fontSize: '11px', color: '#475467', marginBottom: '10px' }}>
             {category.description}
           </p>
         )}

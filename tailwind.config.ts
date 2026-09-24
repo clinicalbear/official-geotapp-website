@@ -11,23 +11,23 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: '#F2F0E9', // L: avorio
-        surface: '#EAE7DE', // L: avorio caldo per schede e sezioni
-        border: 'rgba(14,14,12,0.16)', // L: filo scuro invece del grigio azzurro
-        ink: '#0E0E0C', // L: nero pieno
-        lime: '#B6E86A', // L: verde chiaro su fondo scuro
+        background: '#F7F9FC', // L: avorio
+        surface: '#EAECF0', // L: avorio caldo per schede e sezioni
+        border: 'rgba(11,23,54,0.16)', // L: filo scuro invece del grigio azzurro
+        ink: '#0B1736', // L: nero pieno
+        lime: '#22B573', // L: verde chiaro su fondo scuro
 
         // Brand Colors (Adjusted for Light Mode visibility)
         primary: {
-          DEFAULT: '#8FC436', // GeoTapp Green
-          glow: 'rgba(143, 196, 54, 0.2)', // Lighter glow
+          DEFAULT: '#22B573', // GeoTapp Green
+          glow: 'rgba(34, 181, 115, 0.2)', // Lighter glow
         },
         'brand-green': '#52C065', // Logo icon green (gradient top of G)
-        'brand-blue': '#2DA4E4',  // Logo text blue ("GeoTapp")
+        'brand-blue': '#19B5D8',  // Logo text blue ("GeoTapp")
         // L'azzurro del marchio su fondo chiaro fa 2,63 contro il minimo di
         // 4,5. Questa tinta ne tiene il tono e arriva a 5,15: si usa per il
         // TESTO su fondo chiaro, mai per i fondi.
-        'brand-blue-ink': '#1F6FA3',
+        'brand-blue-ink': '#0E7C99',
         flow: {
           DEFAULT: '#8B5CF6', // Flow purple/lilla
           glow: 'rgba(139, 92, 246, 0.2)',
@@ -38,9 +38,9 @@ const config: Config = {
         },
 
         text: {
-          primary: '#0E0E0C', // L: nero pieno
-          secondary: '#4A5244', // L: verde grigio per il testo di servizio
-          muted: '#78836F', // L: etichette
+          primary: '#0B1736', // L: nero pieno
+          secondary: '#475467', // L: verde grigio per il testo di servizio
+          muted: '#667085', // L: etichette
         },
       },
       // A45: Manrope titoli, Source Sans 3 corpo, IBM Plex Mono codici e

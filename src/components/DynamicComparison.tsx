@@ -58,7 +58,7 @@ export function DynamicComparison({ locale, copy, initialId }: Props) {
             id="competitor-select"
             value={selected.id}
             onChange={(e) => handleChange(e.target.value)}
-            className="w-full appearance-none rounded-xl border border-slate-300 bg-white px-4 py-3 pr-10 text-lg font-semibold text-slate-900 shadow-sm focus:border-[#8FC436] focus:outline-none focus:ring-2 focus:ring-[#8FC436]/30"
+            className="w-full appearance-none rounded-xl border border-slate-300 bg-white px-4 py-3 pr-10 text-lg font-semibold text-slate-900 shadow-sm focus:border-[#22B573] focus:outline-none focus:ring-2 focus:ring-[#22B573]/30"
           >
             {COMPETITORS.map((c) => (
               <option key={c.id} value={c.id}>
@@ -93,7 +93,7 @@ export function DynamicComparison({ locale, copy, initialId }: Props) {
               </th>
               <th className="px-4 py-4 text-center text-sm font-bold text-slate-900 sm:px-6">
                 <div className="flex flex-col items-center gap-1">
-                  <span className="rounded-full bg-[#8FC436]/10 px-3 py-1 text-[#5a8521]">
+                  <span className="rounded-full bg-[#22B573]/10 px-3 py-1 text-[#15803d]">
                     GeoTapp
                   </span>
                   <span className="text-xs font-normal text-slate-500">
@@ -124,7 +124,7 @@ export function DynamicComparison({ locale, copy, initialId }: Props) {
                 <tr
                   key={key}
                   className={`border-t border-slate-100 ${
-                    onlyGeotapp ? 'bg-[#8FC436]/5' : ''
+                    onlyGeotapp ? 'bg-[#22B573]/5' : ''
                   } ${i % 2 === 1 && !onlyGeotapp ? 'bg-slate-50/40' : ''}`}
                 >
                   <td className="px-4 py-3 text-sm text-slate-700 sm:px-6">
@@ -134,7 +134,7 @@ export function DynamicComparison({ locale, copy, initialId }: Props) {
                     {geo ? (
                       <Check
                         size={20}
-                        className="inline-block text-[#5a8521]"
+                        className="inline-block text-[#15803d]"
                         aria-label="yes"
                       />
                     ) : (
@@ -168,7 +168,7 @@ export function DynamicComparison({ locale, copy, initialId }: Props) {
       </div>
 
       {/* Key difference callout */}
-      <div className="mb-8 rounded-2xl border border-[#8FC436]/30 bg-[#8FC436]/5 p-6">
+      <div className="mb-8 rounded-2xl border border-[#22B573]/30 bg-[#22B573]/5 p-6">
         <h3 className="mb-2 text-lg font-bold text-slate-900">
           {copy.keyDifference}
         </h3>
@@ -180,7 +180,7 @@ export function DynamicComparison({ locale, copy, initialId }: Props) {
       {/* CTA */}
       {/* fondo nero pieno esplicito: i gradienti vengono azzerati dallo strato L
           e il testo bianco restava su avorio, illeggibile */}
-      <div className="rounded-2xl p-10 text-center" style={{ background: '#0E0E0C' }}>
+      <div className="rounded-2xl p-10 text-center" style={{ background: '#0B1736' }}>
         <h2 className="mb-3 text-2xl font-bold text-white sm:text-3xl" style={{ lineHeight: 1.05 }}>
           {copy.ctaTitle}
         </h2>

@@ -231,7 +231,7 @@ export default function VideoGiro({
                 <button
                   type="button"
                   onClick={() => saltaA(c.da)}
-                  className="rounded-full border border-slate-300 px-3 py-1.5 text-sm text-slate-700 transition hover:border-[#2DA4E4] hover:text-[#123047]"
+                  className="rounded-full border border-slate-300 px-3 py-1.5 text-sm text-slate-700 transition hover:border-[#19B5D8] hover:text-[#123047]"
                 >
                   <span className="mr-2 tabular-nums text-slate-400">{orologio(c.da)}</span>
                   {contenuto.atti[i]}

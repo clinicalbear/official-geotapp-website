@@ -356,7 +356,7 @@ function SectorCard({
     <motion.div variants={fadeUp} custom={index}>
       <Link
         href={href}
-        className="group flex items-center gap-3.5 p-3.5 rounded-2xl border border-slate-100 hover:border-primary/30 hover:bg-[#fafff4] transition-all duration-200 active:scale-[0.98]"
+        className="group flex items-center gap-3.5 p-3.5 rounded-2xl border border-slate-100 hover:border-primary/30 hover:bg-[#f7f9fc] transition-all duration-200 active:scale-[0.98]"
       >
         <div className="shrink-0 w-11 h-11 rounded-xl bg-primary/8 border border-primary/12 flex items-center justify-center text-primary group-hover:bg-primary/15 transition-colors duration-150">
           <Icon size={20} strokeWidth={2} />
@@ -384,7 +384,7 @@ function ArticleCard({ article, sectorLabel, index, campaign }: {
         href={withUtm(article.url, campaign, `article_${article.slug}`)}
         target="_blank"
         rel="noopener noreferrer"
-        className="group flex gap-3.5 p-3 rounded-2xl border border-slate-100 hover:border-primary/25 hover:bg-[#fafff4] transition-all duration-200 active:scale-[0.98]"
+        className="group flex gap-3.5 p-3 rounded-2xl border border-slate-100 hover:border-primary/25 hover:bg-[#f7f9fc] transition-all duration-200 active:scale-[0.98]"
       >
         <div className="relative shrink-0 w-[72px] h-[60px] rounded-xl overflow-hidden bg-slate-100">
           {article.image ? (
@@ -483,8 +483,8 @@ export default function LinksClient({ articles, locale = 'it', variant = 'legacy
         <Link href={withUtm('https://geotapp.com', 'ig_links_nav', 'header_logo')}
           className="flex items-center gap-2 opacity-90 hover:opacity-100 transition-opacity" aria-label="GeoTapp, homepage">
           <svg width="110" height="24" viewBox="0 0 110 24" fill="none" aria-hidden="true">
-            <path d="M10 2C6.69 2 4 4.69 4 8c0 4.5 6 12 6 12s6-7.5 6-12c0-3.31-2.69-6-6-6zm0 8.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z" fill="#8FC436" />
-            <text x="22" y="17" fontFamily="'Poppins', sans-serif" fontWeight="700" fontSize="14" fill="#0f172a" letterSpacing="-0.3">GeoTapp</text>
+            <path d="M10 2C6.69 2 4 4.69 4 8c0 4.5 6 12 6 12s6-7.5 6-12c0-3.31-2.69-6-6-6zm0 8.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z" fill="#22B573" />
+            <text x="22" y="17" fontFamily="'Poppins', sans-serif" fontWeight="700" fontSize="14" fill="#0b1736" letterSpacing="-0.3">GeoTapp</text>
           </svg>
         </Link>
         <span className="text-[10px] font-semibold text-slate-400 tracking-[0.12em] uppercase">Instagram</span>
@@ -498,15 +498,15 @@ export default function LinksClient({ articles, locale = 'it', variant = 'legacy
           href={withUtm(`https://geotapp.com/${langPath}/survey/`, 'ig_links_survey', 'survey_top')}
           target="_blank" rel="noopener noreferrer"
           onClick={() => trackEvent('survey_click', { cta_source: 'links_top', cta_locale: locale })}
-          className="group flex items-center gap-3.5 p-4 rounded-2xl border border-[#2DA4E4]/25 bg-gradient-to-r from-[#2DA4E4]/8 to-primary/8 hover:border-[#2DA4E4]/45 transition-all duration-200 active:scale-[0.98]">
-          <div className="shrink-0 w-11 h-11 rounded-xl bg-[#2DA4E4]/12 border border-[#2DA4E4]/20 flex items-center justify-center text-[#2DA4E4]">
+          className="group flex items-center gap-3.5 p-4 rounded-2xl border border-[#19B5D8]/25 bg-gradient-to-r from-[#19B5D8]/8 to-primary/8 hover:border-[#19B5D8]/45 transition-all duration-200 active:scale-[0.98]">
+          <div className="shrink-0 w-11 h-11 rounded-xl bg-[#19B5D8]/12 border border-[#19B5D8]/20 flex items-center justify-center text-[#19B5D8]">
             <ClipboardList size={20} strokeWidth={2} />
           </div>
           <div className="flex-1 min-w-0">
-            <h3 className="font-semibold text-[14px] leading-tight text-slate-800 group-hover:text-[#2f97c4] transition-colors duration-150">{survey.label}</h3>
+            <h3 className="font-semibold text-[14px] leading-tight text-slate-800 group-hover:text-[#0e7c99] transition-colors duration-150">{survey.label}</h3>
             <p className="text-[11.5px] text-slate-400 leading-snug mt-0.5 line-clamp-1">{survey.note}</p>
           </div>
-          <div className="shrink-0 text-[#2DA4E4]/50 group-hover:text-[#2DA4E4] group-hover:translate-x-0.5 transition-all duration-150">
+          <div className="shrink-0 text-[#19B5D8]/50 group-hover:text-[#19B5D8] group-hover:translate-x-0.5 transition-all duration-150">
             <ArrowRight size={15} />
           </div>
         </Link>
@@ -521,11 +521,11 @@ export default function LinksClient({ articles, locale = 'it', variant = 'legacy
           target="_blank" rel="noopener noreferrer nofollow"
           onClick={() => trackEvent('press_click', { cta_source: 'links_featured_azbigmedia', cta_locale: locale })}
           className="group flex items-center gap-3.5 p-4 rounded-2xl border border-primary/25 bg-gradient-to-r from-primary/8 to-primary/5 hover:border-primary/45 transition-all duration-200 active:scale-[0.98]">
-          <div className="shrink-0 w-11 h-11 rounded-xl bg-primary/12 border border-primary/20 flex items-center justify-center text-[#6a9a1f]">
+          <div className="shrink-0 w-11 h-11 rounded-xl bg-primary/12 border border-primary/20 flex items-center justify-center text-[#15803d]">
             <Award size={20} strokeWidth={2} />
           </div>
           <div className="flex-1 min-w-0">
-            <h3 className="font-semibold text-[14px] leading-tight text-slate-800 group-hover:text-[#6a9a1f] transition-colors duration-150">{(FEATURED[locale] || FEATURED.en).label}</h3>
+            <h3 className="font-semibold text-[14px] leading-tight text-slate-800 group-hover:text-[#15803d] transition-colors duration-150">{(FEATURED[locale] || FEATURED.en).label}</h3>
             <p className="text-[11.5px] text-slate-400 leading-snug mt-0.5 line-clamp-1">{(FEATURED[locale] || FEATURED.en).sub}</p>
           </div>
           <div className="shrink-0 text-primary/50 group-hover:text-primary group-hover:translate-x-0.5 transition-all duration-150">
@@ -669,7 +669,7 @@ export default function LinksClient({ articles, locale = 'it', variant = 'legacy
       <section className="px-6 py-9 max-w-md mx-auto">
         <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-40px' }} transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-          className="relative overflow-hidden rounded-3xl border border-primary/20 bg-gradient-to-br from-[#fafff4] via-white to-[#f5fceb] p-6 text-center">
+          className="relative overflow-hidden rounded-3xl border border-primary/20 bg-gradient-to-br from-[#f7f9fc] via-white to-[#e7f7ef] p-6 text-center">
           <div aria-hidden="true" className="pointer-events-none absolute -top-12 -right-12 w-32 h-32 rounded-full bg-primary/15 blur-2xl" />
           <p className="relative text-[10px] font-bold text-primary uppercase tracking-[0.14em] mb-2">{t.bottomEyebrow}</p>
           <h3 className="relative font-display font-bold text-[20px] text-slate-900 leading-tight mb-2">
@@ -737,8 +737,8 @@ export default function LinksClient({ articles, locale = 'it', variant = 'legacy
         transition={{ duration: 0.5 }} className="px-6 pt-4 pb-10 max-w-md mx-auto text-center">
         <div className="h-px bg-gradient-to-r from-transparent via-slate-100 to-transparent mb-8" />
         <svg width="80" height="18" viewBox="0 0 80 18" fill="none" aria-hidden="true" className="mx-auto mb-3 opacity-30">
-          <path d="M8 1C5.24 1 3 3.24 3 6c0 3.75 5 10 5 10s5-6.25 5-10c0-2.76-2.24-5-5-5zm0 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" fill="#8FC436" />
-          <text x="17" y="13" fontFamily="'Poppins', sans-serif" fontWeight="700" fontSize="11" fill="#0f172a" letterSpacing="-0.2">GeoTapp</text>
+          <path d="M8 1C5.24 1 3 3.24 3 6c0 3.75 5 10 5 10s5-6.25 5-10c0-2.76-2.24-5-5-5zm0 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" fill="#22B573" />
+          <text x="17" y="13" fontFamily="'Poppins', sans-serif" fontWeight="700" fontSize="11" fill="#0b1736" letterSpacing="-0.2">GeoTapp</text>
         </svg>
         <p className="text-[11px] text-slate-400 space-x-2">
           <span>© {new Date().getFullYear()} GeoTapp</span>

@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { trackEvent } from '@/lib/analytics';
 import { SURVEY, type SurveyLocale, type SurveyContent } from '@/lib/survey/content';
 
-const ACCENT = '#8FC436';
+const ACCENT = '#22B573';
 
 /** Mappa un locale del sito (anche en-gb, en-us, ...) sul contenuto a 11 lingue. */
 function pickContent(locale: string): { key: SurveyLocale; c: SurveyContent } {

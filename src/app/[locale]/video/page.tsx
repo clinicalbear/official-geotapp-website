@@ -88,7 +88,7 @@ export default async function VideoPage({ params }: { params: Promise<{ locale: 
         {/* ── il video, alto nella pagina: chi e' arrivato qui e' venuto per questo ── */}
         <section className="sec"><div className="wn">
           <VideoGiro locale={locale as AppLocale} capitoli id="giro" />
-          <p className="r d1" style={{ color: '#4A5244', marginTop: 26, fontSize: 17.5, lineHeight: 1.7 }}>
+          <p className="r d1" style={{ color: '#475467', marginTop: 26, fontSize: 17.5, lineHeight: 1.7 }}>
             {t.page.intro2}
           </p>
         </div></section>
@@ -97,14 +97,14 @@ export default async function VideoPage({ params }: { params: Promise<{ locale: 
              ufficio senza cuffie ── */}
         <section className="sec warm"><div className="wt">
           <h2 className="r">{t.page.transcriptTitle}</h2>
-          <p className="r d1" style={{ color: '#4A5244', marginTop: 14 }}>{t.page.transcriptNote}</p>
+          <p className="r d1" style={{ color: '#475467', marginTop: 14 }}>{t.page.transcriptNote}</p>
           <ol className="r d1" style={{ marginTop: 26, listStyle: 'none', padding: 0 }}>
             {contenuto.trascrizione.map((voce) => (
-              <li key={voce.da} style={{ display: 'flex', gap: 16, padding: '7px 0', borderTop: '1px solid rgba(14,14,12,.08)' }}>
-                <span style={{ color: '#4F5A49', fontVariantNumeric: 'tabular-nums', minWidth: 46 }}>
+              <li key={voce.da} style={{ display: 'flex', gap: 16, padding: '7px 0', borderTop: '1px solid rgba(11,23,54,.08)' }}>
+                <span style={{ color: '#475467', fontVariantNumeric: 'tabular-nums', minWidth: 46 }}>
                   {orologio(voce.da)}
                 </span>
-                <span style={{ color: '#2C3328', lineHeight: 1.6 }}>{voce.testo}</span>
+                <span style={{ color: '#1D2939', lineHeight: 1.6 }}>{voce.testo}</span>
               </li>
             ))}
           </ol>
@@ -115,18 +115,18 @@ export default async function VideoPage({ params }: { params: Promise<{ locale: 
           <h2 className="r">{t.page.actsTitle}</h2>
           <ol className="r d1" style={{ marginTop: 22, paddingLeft: 0, listStyle: 'none' }}>
             {contenuto.atti.map((atto, i) => (
-              <li key={atto} style={{ padding: '9px 0', color: '#2C3328', fontSize: 17.5 }}>
+              <li key={atto} style={{ padding: '9px 0', color: '#1D2939', fontSize: 17.5 }}>
                 {/* Il minuto e' scritto, non linkato: i salti veri stanno sotto
                     al video, e un'ancora che porta al lettore senza spostarlo
                     prometterebbe una cosa che non fa. */}
-                <span style={{ color: '#4F5A49', fontVariantNumeric: 'tabular-nums', marginRight: 14 }}>
+                <span style={{ color: '#475467', fontVariantNumeric: 'tabular-nums', marginRight: 14 }}>
                   {orologio(GIRO_CAPITOLI[i].da)}
                 </span>
                 {atto}
               </li>
             ))}
           </ol>
-          <p className="r d1" style={{ color: '#4A5244', marginTop: 26, fontSize: 17.5, lineHeight: 1.7 }}>
+          <p className="r d1" style={{ color: '#475467', marginTop: 26, fontSize: 17.5, lineHeight: 1.7 }}>
             {prodotti.map((p, i) => (
               <span key={p.nome}>
                 {i > 0 ? ' · ' : ''}
@@ -139,8 +139,8 @@ export default async function VideoPage({ params }: { params: Promise<{ locale: 
         {/* ── quello che il video non è: sta scritto qui, non in una nota in fondo ── */}
         <section className="sec warm"><div className="wt">
           <h2 className="r">{t.page.honestyTitle}</h2>
-          <p className="r d1" style={{ color: '#4A5244', marginTop: 22, fontSize: 17.5, lineHeight: 1.7 }}>{t.page.honesty}</p>
-          <p className="r d1" style={{ color: '#4A5244', marginTop: 18 }}>
+          <p className="r d1" style={{ color: '#475467', marginTop: 22, fontSize: 17.5, lineHeight: 1.7 }}>{t.page.honesty}</p>
+          <p className="r d1" style={{ color: '#475467', marginTop: 18 }}>
             <a href={giroYouTube(locale)} target="_blank" rel="noopener" className="b2">{t.youtube}</a>
             {' '}{t.page.youtubeNote}
           </p>
@@ -150,7 +150,7 @@ export default async function VideoPage({ params }: { params: Promise<{ locale: 
 
         <section className="sec ink"><div className="wt">
           <h2 className="r">{t.page.ctaTitle}</h2>
-          <p className="r d1" style={{ color: 'rgba(242,240,233,.75)', marginTop: 22, fontSize: 17.5, lineHeight: 1.7 }}>{t.page.ctaText}</p>
+          <p className="r d1" style={{ color: 'rgba(247,249,252,.75)', marginTop: 22, fontSize: 17.5, lineHeight: 1.7 }}>{t.page.ctaText}</p>
           <div className="acts r d2" style={{ marginTop: 30 }}>
             <Link className="b1" href={trialHref}>{dict.landing.hero_cta_primary}</Link>
           </div>

@@ -222,7 +222,7 @@ export default function GeoTappApp() {
         <h2 className="r" style={{ marginTop: 14 }}>
           {isItalian ? 'Scarica GeoTapp TimeTracker' : currentLocale === 'de' ? 'GeoTapp TimeTracker herunterladen' : 'Download GeoTapp TimeTracker'}
         </h2>
-        <p style={{ marginTop: 16, color: '#4A5244' }}>
+        <p style={{ marginTop: 16, color: '#475467' }}>
           {isItalian ? 'Disponibile su Google Play e su App Store.' : currentLocale === 'de' ? 'Verfügbar auf Google Play und im App Store.' : 'Available on Google Play and on the App Store.'}
         </p>
         <div className="l-stores" style={{ justifyContent: 'center' }}>
@@ -282,7 +282,7 @@ export default function GeoTappApp() {
         <div className="r">
           <p className="kk k">{LA_PROVA[currentLocale] ?? LA_PROVA.en}</p>
           <h2>{dict.landing.report_section_title}</h2>
-          <p style={{ color: 'rgba(242,240,233,.72)', marginTop: 20, maxWidth: '48ch' }}>{dict.landing.report_section_body}</p>
+          <p style={{ color: 'rgba(247,249,252,.72)', marginTop: 20, maxWidth: '48ch' }}>{dict.landing.report_section_body}</p>
           <ul className="rows" style={{ marginTop: 30 }}>
             <li>{dict.landing.report_feature_1}</li>
             <li>{dict.landing.report_feature_2}</li>
@@ -317,7 +317,7 @@ export default function GeoTappApp() {
                   <span className="nn">{String(i + 1).padStart(2, '0')} · {sys.codeName}</span>
                   <h3>{sys.systemName}</h3>
                   <p>{sys.shortDescription}</p>
-                  <span className="k" style={{ display: 'inline-block', marginTop: 12, fontSize: 11, color: '#4A6317' }}>
+                  <span className="k" style={{ display: 'inline-block', marginTop: 12, fontSize: 11, color: '#15803D' }}>
                     [ {(sys as any).label_open || 'APRI DOSSIER'} ] &rarr;
                   </span>
                 </article>

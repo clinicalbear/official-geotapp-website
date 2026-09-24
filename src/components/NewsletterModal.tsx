@@ -92,7 +92,7 @@ export default function NewsletterModal({ locale }: { locale: string }) {
         style={{
           position: 'fixed',
           inset: 0,
-          background: 'rgba(0,0,0,0.55)',
+          background: 'rgba(11,23,54,0.55)',
           zIndex: 9998,
         }}
       />
@@ -108,18 +108,18 @@ export default function NewsletterModal({ locale }: { locale: string }) {
           left: '50%',
           transform: 'translate(-50%, -50%)',
           width: 'min(460px, calc(100vw - 32px))',
-          background: '#ffffff',
+          background: '#f7f9fc',
           borderRadius: 16,
           overflow: 'hidden',
           zIndex: 9999,
-          boxShadow: '0 20px 60px rgba(0,0,0,0.25)',
+          boxShadow: '0 20px 60px rgba(11,23,54,0.25)',
         }}
       >
         {/* Header */}
         <div
           style={{
             background:
-              'linear-gradient(135deg, #66d97a 0%, #46bdc0 50%, #2da5e4 100%)',
+              'linear-gradient(135deg, #66d97a 0%, #46bdc0 50%, #19b5d8 100%)',
             padding: '20px 24px',
             display: 'flex',
             flexDirection: 'row',
@@ -138,7 +138,7 @@ export default function NewsletterModal({ locale }: { locale: string }) {
             onClick={dismiss}
             aria-label="Close"
             style={{
-              background: 'rgba(255,255,255,0.25)',
+              background: 'rgba(247,249,252,0.25)',
               border: 'none',
               borderRadius: '50%',
               width: 32,
@@ -146,7 +146,7 @@ export default function NewsletterModal({ locale }: { locale: string }) {
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              color: '#ffffff',
+              color: '#f7f9fc',
               fontSize: 18,
               cursor: 'pointer',
               lineHeight: 1,
@@ -166,7 +166,7 @@ export default function NewsletterModal({ locale }: { locale: string }) {
               fontFamily: 'var(--font-display)',
               fontSize: '1.2rem',
               fontWeight: 700,
-              color: '#0f172a',
+              color: '#0b1736',
             }}
           >
             {headline}

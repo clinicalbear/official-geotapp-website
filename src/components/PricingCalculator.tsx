@@ -66,7 +66,7 @@ export default function PricingCalculator() {
       <div className="r">
         <p className="kk k">{dict.pricing.categories.app.title}</p>
         <h2>{pc.title}</h2>
-        <p style={{ color: 'rgba(242,240,233,.72)', marginTop: '18px', maxWidth: '46ch' }}>
+        <p style={{ color: 'rgba(247,249,252,.72)', marginTop: '18px', maxWidth: '46ch' }}>
           {pc.subtitle}
         </p>
         <div className="sl">
@@ -83,7 +83,7 @@ export default function PricingCalculator() {
               onChange={(e) => setEmployees(parseInt(e.target.value, 10))}
               aria-label={pc.active_users}
               style={{
-                background: `linear-gradient(90deg,#8FC436 0%,#8FC436 ${pct}%,rgba(242,240,233,.22) ${pct}%)`,
+                background: `linear-gradient(90deg,#22B573 0%,#22B573 ${pct}%,rgba(247,249,252,.22) ${pct}%)`,
               }}
             />
           </div>
@@ -108,7 +108,7 @@ export default function PricingCalculator() {
             <span>{pc.enterprise_plan}</span>
           </div>
         </div>
-        <p style={{ marginTop: '22px', fontSize: '13.5px', color: 'rgba(242,240,233,.55)' }}>
+        <p style={{ marginTop: '22px', fontSize: '13.5px', color: 'rgba(247,249,252,.55)' }}>
           {(dict.pricing as any).tracker_footnote}
         </p>
       </div>

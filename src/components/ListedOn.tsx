@@ -53,7 +53,7 @@ const GetAppLogo = ({ scale }: { scale: number }) => (
     <circle cx="14" cy="16" r="12" stroke="#21B573" strokeWidth="3" fill="none"/>
     <path d="M14 16h10" stroke="#21B573" strokeWidth="3" strokeLinecap="round"/>
     <path d="M19 11l5 5-5 5" stroke="#21B573" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-    <text x="32" y="23" fontFamily="var(--font-display)" fontSize="18" fontWeight="700" fill="#2D3A4A">GetApp</text>
+    <text x="32" y="23" fontFamily="var(--font-display)" fontSize="18" fontWeight="700" fill="#344054">GetApp</text>
   </svg>
 );
 
@@ -86,7 +86,7 @@ const KompassLogo = ({ scale }: { scale: number }) => (
   <svg width={120 * scale} height={32 * scale} viewBox="0 0 120 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <circle cx="14" cy="16" r="11" stroke="#E30613" strokeWidth="2.5" fill="none"/>
     <path d="M14 7l2 7 6-3-5 5 3 6-7-2-2 7-2-7-7 2 5-5-3-6 6 3z" fill="#E30613"/>
-    <text x="32" y="23" fontFamily="var(--font-display)" fontSize="17" fontWeight="700" fill="#1A1A1A">Kompass</text>
+    <text x="32" y="23" fontFamily="var(--font-display)" fontSize="17" fontWeight="700" fill="#16244A">Kompass</text>
   </svg>
 );
 
@@ -102,7 +102,7 @@ const CylexLogo = ({ scale }: { scale: number }) => (
 /* ── Hotfrog logo ── */
 const HotfrogLogo = ({ scale }: { scale: number }) => (
   <svg width={120 * scale} height={32 * scale} viewBox="0 0 120 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <circle cx="14" cy="16" r="11" fill="#8DC63F"/>
+    <circle cx="14" cy="16" r="11" fill="#22B573"/>
     <text x="9" y="22" fontFamily="var(--font-display)" fontSize="16" fontWeight="800" fill="#fff">H</text>
     <text x="30" y="23" fontFamily="var(--font-display)" fontSize="17" fontWeight="700" fill="#333">Hotfrog</text>
   </svg>
@@ -140,7 +140,7 @@ const SourceForgeLogo = ({ scale }: { scale: number }) => (
   <svg width={160 * scale} height={32 * scale} viewBox="0 0 160 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <rect x="2" y="4" width="24" height="24" rx="4" fill="#EE7600"/>
     <path d="M9 11 L14 16 L9 21 M15 21 L20 16 L15 11" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-    <text x="32" y="23" fontFamily="var(--font-display)" fontSize="16" fontWeight="700" fill="#1F2937">SourceForge</text>
+    <text x="32" y="23" fontFamily="var(--font-display)" fontSize="16" fontWeight="700" fill="#101828">SourceForge</text>
   </svg>
 );
 
@@ -167,7 +167,7 @@ const AlternativeToLogo = ({ scale }: { scale: number }) => (
   <svg width={170 * scale} height={32 * scale} viewBox="0 0 170 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <rect x="2" y="4" width="24" height="24" rx="4" fill="#F7941D"/>
     <path d="M8 14 L14 10 L14 12.5 L20 12.5 L20 15.5 L14 15.5 L14 18 Z" fill="#fff"/>
-    <text x="32" y="23" fontFamily="var(--font-display)" fontSize="16" fontWeight="700" fill="#1F2937">AlternativeTo</text>
+    <text x="32" y="23" fontFamily="var(--font-display)" fontSize="16" fontWeight="700" fill="#101828">AlternativeTo</text>
   </svg>
 );
 
@@ -216,12 +216,12 @@ function CompactListedOn({ locale }: { locale: string }) {
         display: 'inline-block',
         padding: '4px 12px',
         borderRadius: '999px',
-        background: '#f1f5f9',
-        border: '1px solid #e2e8f0',
+        background: '#f2f4f7',
+        border: '1px solid #f7f9fc',
         fontFamily: 'var(--font-body)',
         fontSize: '0.6rem',
         fontWeight: 700,
-        // 4,34:1 su #f1f5f9, sotto il minimo di 4,5. (Audit EAA 23/09/2026.)
+        // 4,34:1 su #f2f4f7, sotto il minimo di 4,5. (Audit EAA 23/09/2026.)
         color: '#475569',
         textTransform: 'uppercase',
         letterSpacing: '0.14em',

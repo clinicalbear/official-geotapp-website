@@ -216,7 +216,7 @@ export function LegalMarkdownPage({
         <div className="w">
           <div className="gl">
             <aside className="side r">
-              <p className="k" style={{ color: '#4F5A49', marginBottom: 14 }}>{title}</p>
+              <p className="k" style={{ color: '#475467', marginBottom: 14 }}>{title}</p>
               {docOrder.map((s) => (
                 <a
                   key={s}
@@ -227,7 +227,7 @@ export function LegalMarkdownPage({
                 </a>
               ))}
               {headings.length > 0 && (
-                <div style={{ marginTop: 26, paddingTop: 18, borderTop: '1px solid rgba(14,14,12,.14)' }}>
+                <div style={{ marginTop: 26, paddingTop: 18, borderTop: '1px solid rgba(11,23,54,.14)' }}>
                   {headings.map((h) => (
                     <a key={h.id} href={`#${h.id}`} style={{ fontSize: 13 }}>{h.text}</a>
                   ))}

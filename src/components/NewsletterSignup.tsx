@@ -58,7 +58,7 @@ export default function NewsletterSignup({ locale }: { locale: string }) {
             required
             autoComplete="email"
             aria-label={c.placeholder}
-            className="min-w-0 flex-1 rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-700 outline-none transition-colors placeholder:text-slate-400 focus:border-[#8FC436]"
+            className="min-w-0 flex-1 rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-700 outline-none transition-colors placeholder:text-slate-400 focus:border-[#22B573]"
           />
           <button
             type="submit"

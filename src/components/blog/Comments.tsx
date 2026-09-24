@@ -264,7 +264,7 @@ export default function Comments({ postId, locale, comments }: CommentsProps) {
   }
 
   const inputClass =
-    'w-full px-4 py-2.5 text-sm rounded-xl border border-slate-200 bg-white text-slate-700 placeholder:text-slate-400 outline-none focus:border-[#8FC436] transition-colors';
+    'w-full px-4 py-2.5 text-sm rounded-xl border border-slate-200 bg-white text-slate-700 placeholder:text-slate-400 outline-none focus:border-[#22B573] transition-colors';
 
   return (
     <section className="bg-white">
@@ -293,7 +293,7 @@ export default function Comments({ postId, locale, comments }: CommentsProps) {
                     loading="lazy"
                   />
                 ) : (
-                  <div className="h-10 w-10 rounded-full shrink-0 bg-[#8FC436]/15 text-[#8FC436] flex items-center justify-center text-sm font-bold">
+                  <div className="h-10 w-10 rounded-full shrink-0 bg-[#22B573]/15 text-[#22B573] flex items-center justify-center text-sm font-bold">
                     {c.author.charAt(0).toUpperCase()}
                   </div>
                 )}
@@ -303,7 +303,7 @@ export default function Comments({ postId, locale, comments }: CommentsProps) {
                     <span className="text-xs text-slate-400">{formatDate(c.date, locale)}</span>
                   </div>
                   <div
-                    className="mt-1 text-sm text-slate-600 leading-relaxed [&_a]:text-[#8FC436] [&_a]:underline"
+                    className="mt-1 text-sm text-slate-600 leading-relaxed [&_a]:text-[#22B573] [&_a]:underline"
                     dangerouslySetInnerHTML={{ __html: c.html }}
                   />
                 </div>
@@ -312,11 +312,11 @@ export default function Comments({ postId, locale, comments }: CommentsProps) {
           </ul>
         )}
 
-        <div className="mt-10 rounded-2xl border border-[#8FC436]/20 bg-[#8FC436]/5 p-6 sm:p-8">
+        <div className="mt-10 rounded-2xl border border-[#22B573]/20 bg-[#22B573]/5 p-6 sm:p-8">
           <p className="text-lg font-bold text-slate-900">{t.formTitle}</p>
 
           {status === 'success' ? (
-            <p className="mt-4 text-sm font-semibold text-[#8FC436]">{t.success}</p>
+            <p className="mt-4 text-sm font-semibold text-[#22B573]">{t.success}</p>
           ) : (
             <form onSubmit={handleSubmit} className="mt-5 space-y-3">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -363,7 +363,7 @@ export default function Comments({ postId, locale, comments }: CommentsProps) {
                   checked={consent}
                   onChange={(e) => setConsent(e.target.checked)}
                   required
-                  className="mt-0.5 accent-[#8FC436]"
+                  className="mt-0.5 accent-[#22B573]"
                 />
                 <span>
                   {t.consentPre}{' '}
@@ -371,7 +371,7 @@ export default function Comments({ postId, locale, comments }: CommentsProps) {
                     href={`/${locale}/privacy/`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#8FC436] underline"
+                    className="text-[#22B573] underline"
                   >
                     {t.privacy}
                   </a>

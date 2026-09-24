@@ -248,7 +248,7 @@ export default function VerifierContent({ copy, locale }: VerifierContentProps) 
               <Terminal size={18} style={{ display: 'inline', verticalAlign: '-3px', marginRight: 8 }} />{copy.download_btn_cli}
             </a>
           </div>
-          <p style={{ marginTop: 16, fontSize: 13, color: 'rgba(242,240,233,.5)' }}>{copy.download_version}</p>
+          <p style={{ marginTop: 16, fontSize: 13, color: 'rgba(247,249,252,.5)' }}>{copy.download_version}</p>
         </div>
 
         <div className="l-code-wrap">
@@ -282,7 +282,7 @@ console.log(result.integrityLevel);`}</pre>
         </div>
         <OnlineVerifier copy={copy} />
         <div style={{ marginTop: 40 }}>
-          <p style={{ textAlign: 'center', fontSize: 14, color: '#4F5A49', marginBottom: 16 }}>
+          <p style={{ textAlign: 'center', fontSize: 14, color: '#475467', marginBottom: 16 }}>
             {locale === 'it' ? 'Non hai un report? Scarica questo esempio reale e prova subito il verificatore.' : 'No report handy? Download this real sample and try the verifier right away.'}
           </p>
           <DemoReportBanner />
@@ -309,7 +309,7 @@ console.log(result.integrityLevel);`}</pre>
             </ul>
           </div>
         </div>
-        <p style={{ textAlign: 'center', fontSize: 13, color: '#4F5A49', marginTop: 30 }}>{copy.compare_same_engine_note}</p>
+        <p style={{ textAlign: 'center', fontSize: 13, color: '#475467', marginTop: 30 }}>{copy.compare_same_engine_note}</p>
       </div></section>
 
       {/* COSA VERIFICA */}
@@ -375,7 +375,7 @@ console.log(result.integrityLevel);`}</pre>
       {/* FAQ */}
       <section className="fq"><div className="w"><div className="g">
         <div>
-          <p className="kk k r" style={{ color: '#4A6317', marginBottom: 14 }}>{copy.faq_badge}</p>
+          <p className="kk k r" style={{ color: '#15803D', marginBottom: 14 }}>{copy.faq_badge}</p>
           <h2 className="r">{copy.faq_title}</h2>
         </div>
         <div>

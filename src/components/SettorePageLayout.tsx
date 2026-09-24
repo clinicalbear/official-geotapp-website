@@ -311,9 +311,9 @@ export default function SettorePageLayout({ content, locale, settore, children }
               </Link>
             )}
           </div>
-          <p style={{ marginTop: 16, fontSize: 13.5, color: 'rgba(242,240,233,.6)' }}>{content.hero.cta_note}</p>
+          <p style={{ marginTop: 16, fontSize: 13.5, color: 'rgba(247,249,252,.6)' }}>{content.hero.cta_note}</p>
           {content.pricing_hint && (
-            <p style={{ marginTop: 18, fontSize: 14, color: 'rgba(242,240,233,.65)' }}>
+            <p style={{ marginTop: 18, fontSize: 14, color: 'rgba(247,249,252,.65)' }}>
               {content.pricing_hint.label}{' '}
               <b style={{ color: 'var(--lime)', fontFamily: 'var(--font-display)' }}>{standardRate.formatted}</b>{' '}
               {content.pricing_hint.per} · {content.pricing_hint.note}
@@ -419,7 +419,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
         <div className="wt" style={{ textAlign: 'center' }}>
           <p className="kk k r" style={{ textAlign: 'center' }}>{sl.roi_badge ?? 'Calculate your ROI'}</p>
           <h2 className="r d1">{sl.roi_title ?? 'How much would you save with GeoTapp?'}</h2>
-          <p className="r d2" style={{ margin: '20px auto 0', maxWidth: '52ch', color: '#4A5244' }}>
+          <p className="r d2" style={{ margin: '20px auto 0', maxWidth: '52ch', color: '#475467' }}>
             {sl.roi_desc ?? 'Enter your team size and get an estimated ROI in 30 seconds. No registration, no email.'}
           </p>
           <Link href={`/${locale}/roi-calculator/`} className="b1 r d3" style={{ marginTop: 30, display: 'inline-block' }}>
@@ -506,7 +506,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
             <p>&ldquo;{content.testimonial.quote}&rdquo;</p>
             <cite>
               <b style={{ color: 'var(--lime)' }}>{content.testimonial.author}</b>
-              <span style={{ color: 'rgba(242,240,233,.7)' }}>{content.testimonial.role}</span>
+              <span style={{ color: 'rgba(247,249,252,.7)' }}>{content.testimonial.role}</span>
             </cite>
           </div>
         </div>
@@ -540,7 +540,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
                 <div className="row"><span>Luigi B.</span><span>{sl.mockup_status_active ?? 'Active'}</span></div>
                 <div className="row"><span>Sara M.</span><span>{sl.mockup_status_active ?? 'Active'}</span></div>
                 <div className="row"><span>Marco T.</span><span>{sl.mockup_status_completed ?? 'Completed'}</span></div>
-                <p style={{ marginTop: 16, fontSize: 13, color: 'rgba(242,240,233,.6)' }}>{sl.mockup_status_summary ?? '4 operators active on 6 sites'}</p>
+                <p style={{ marginTop: 16, fontSize: 13, color: 'rgba(247,249,252,.6)' }}>{sl.mockup_status_summary ?? '4 operators active on 6 sites'}</p>
               </div>
             </div>
           </div>
@@ -553,7 +553,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
           <div className="wt" style={{ textAlign: 'center' }}>
             <ShieldCheck className="r" style={{ margin: '0 auto 22px', color: 'var(--seal-testo)' }} size={44} />
             <h2 className="r d1">{content.trust.title}</h2>
-            <p className="r d2" style={{ margin: '20px auto 0', maxWidth: '64ch', color: '#4A5244' }}>{content.trust.body}</p>
+            <p className="r d2" style={{ margin: '20px auto 0', maxWidth: '64ch', color: '#475467' }}>{content.trust.body}</p>
             <div className="r d3" style={{ marginTop: 28 }}><GeoBadge>{content.trust.badge}</GeoBadge></div>
           </div>
         </section>
@@ -564,7 +564,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
         <div className="w"><div className="g">
           <h2 className="r">{content.faq.title}</h2>
           <div ref={fqRef}>
-            <p className="r d1" style={{ marginBottom: 20, color: '#4A5244' }}>{content.faq.subtitle}</p>
+            <p className="r d1" style={{ marginBottom: 20, color: '#475467' }}>{content.faq.subtitle}</p>
             {content.faq.items.map((item, i) => (
               <details key={i} className="r" open={i === 0}>
                 <summary><h3>{item.q}</h3></summary>
@@ -585,7 +585,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
             )}
 
             {normLinks && normLinks.length > 0 && (
-              <div style={{ marginTop: 56, paddingTop: 34, borderTop: '1px solid rgba(14,14,12,.16)' }}>
+              <div style={{ marginTop: 56, paddingTop: 34, borderTop: '1px solid rgba(11,23,54,.16)' }}>
                 <h3 style={{ marginBottom: 16 }}>{normTitle}</h3>
                 <ul className="rows">
                   {normLinks.map((link, i) => (
@@ -638,7 +638,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
             </Link>
             <Link href={pricingLink} className="b2">{content.cta.secondary}</Link>
           </div>
-          <p style={{ marginTop: 20, fontSize: 13.5, color: 'rgba(255,255,255,.55)' }}>
+          <p style={{ marginTop: 20, fontSize: 13.5, color: 'rgba(247,249,252,.55)' }}>
             {sl.cta_note ?? 'No lock-in. No contract. We set up on your real case.'}
           </p>
         </div>

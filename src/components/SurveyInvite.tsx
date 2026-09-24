@@ -117,7 +117,7 @@ export default function SurveyInvite() {
     <>
       <div
         onClick={dismiss}
-        style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.55)', zIndex: 9998 }}
+        style={{ position: 'fixed', inset: 0, background: 'rgba(11,23,54,0.55)', zIndex: 9998 }}
       />
       <div
         role="dialog"
@@ -125,31 +125,31 @@ export default function SurveyInvite() {
         aria-labelledby="survey-modal-title"
         style={{
           position: 'fixed', top: '50%', left: '50%', transform: 'translate(-50%, -50%)',
-          width: 'min(440px, calc(100vw - 32px))', background: '#ffffff', borderRadius: 16,
-          overflow: 'hidden', zIndex: 9999, boxShadow: '0 20px 60px rgba(0,0,0,0.25)',
+          width: 'min(440px, calc(100vw - 32px))', background: '#f7f9fc', borderRadius: 16,
+          overflow: 'hidden', zIndex: 9999, boxShadow: '0 20px 60px rgba(11,23,54,0.25)',
         }}
       >
         <div style={{
-          background: 'linear-gradient(135deg, #66d97a 0%, #46bdc0 50%, #2da5e4 100%)',
+          background: 'linear-gradient(135deg, #66d97a 0%, #46bdc0 50%, #19b5d8 100%)',
           padding: '18px 22px', display: 'flex', alignItems: 'center', justifyContent: 'space-between',
         }}>
           <Image src="/LogoGeoTapp.webp" alt="GeoTapp" width={140} height={48}
             style={{ filter: 'brightness(0) invert(1)', height: '36px', width: 'auto' }} />
           <button onClick={dismiss} aria-label="Close" style={{
-            background: 'rgba(255,255,255,0.25)', border: 'none', borderRadius: '50%',
+            background: 'rgba(247,249,252,0.25)', border: 'none', borderRadius: '50%',
             width: 30, height: 30, display: 'flex', alignItems: 'center', justifyContent: 'center',
             color: '#fff', fontSize: 18, cursor: 'pointer', lineHeight: 1,
           }}>×</button>
         </div>
         <div style={{ padding: '24px' }}>
-          <p id="survey-modal-title" style={{ fontSize: 20, fontWeight: 800, color: '#0f172a', margin: '0 0 8px' }}>{c.title}</p>
+          <p id="survey-modal-title" style={{ fontSize: 20, fontWeight: 800, color: '#0b1736', margin: '0 0 8px' }}>{c.title}</p>
           <p style={{ fontSize: 15, color: '#475569', margin: '0 0 20px', lineHeight: 1.5 }}>{c.body}</p>
           <a href={surveyHref()} onClick={() => { trackEvent('survey_cta_click', { locale: (typeof document !== 'undefined' ? document.documentElement.lang : 'en') || 'en', placement: 'modal' }); dismiss(); }} style={{
             // 🔴 Bianco su lime fa 2,07:1. Il lime e' un colore da riempimento e vuole
             // testo SCURO sopra (9,31:1), come la CTA principale del sito: cosi' il
             // verde del marchio resta e il bottone si legge. Trovato collaudando sul
             // telefono vero, non da scrivania. (Audit EAA del 23/09/2026.)
-            display: 'block', textAlign: 'center', background: '#8FC436', color: '#0E0E0C',
+            display: 'block', textAlign: 'center', background: '#22B573', color: '#0B1736',
             fontWeight: 800, fontSize: 16, padding: '14px 20px', borderRadius: 999, textDecoration: 'none',
           }}>{c.cta}</a>
         </div>

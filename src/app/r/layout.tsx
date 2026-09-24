@@ -23,7 +23,7 @@ export default function LayoutCodice({
 }) {
   return (
     <html lang="en">
-      <body className="bg-[#F7F7F4] antialiased">{children}</body>
+      <body className="bg-[#F2F4F7] antialiased">{children}</body>
     </html>
   );
 }

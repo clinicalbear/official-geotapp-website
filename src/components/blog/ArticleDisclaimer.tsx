@@ -25,11 +25,11 @@ export default function ArticleDisclaimer({ locale = 'it' }: { locale?: string }
       <div
         style={{
           borderLeft: '3px solid var(--seal)',
-          background: 'rgba(143,196,54,.06)',
+          background: 'rgba(34,181,115,.06)',
           padding: '16px 20px',
           fontSize: '14px',
           lineHeight: 1.6,
-          color: '#4A5244',
+          color: '#475467',
         }}
       >
         <strong style={{ color: 'var(--ink)' }}>{d.label}.</strong> {d.text}

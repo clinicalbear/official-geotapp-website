@@ -548,13 +548,13 @@ export default async function CosEGeoTappPage({ params }: { params: Promise<{ lo
         {/* ── GDPR e diritto del lavoro ── */}
         <section className="sec"><div className="wt">
           <h2 className="r">{copy.gdprHeading}</h2>
-          <p className="r d1" style={{ color: '#4A5244', marginTop: 22, fontSize: 17.5, lineHeight: 1.7 }}>{copy.gdprText}</p>
+          <p className="r d1" style={{ color: '#475467', marginTop: 22, fontSize: 17.5, lineHeight: 1.7 }}>{copy.gdprText}</p>
         </div></section>
 
         {/* ── trial gratuito ── */}
         <section className="sec ink"><div className="wt">
           <h2 className="r">{copy.trialHeading}</h2>
-          <p className="r d1" style={{ color: 'rgba(242,240,233,.75)', marginTop: 22, fontSize: 17.5, lineHeight: 1.7 }}>{copy.trialText}</p>
+          <p className="r d1" style={{ color: 'rgba(247,249,252,.75)', marginTop: 22, fontSize: 17.5, lineHeight: 1.7 }}>{copy.trialText}</p>
           <div className="acts r d2" style={{ marginTop: 30 }}>
             <Link className="b1" href={trialHref}>{copy.trialCta}</Link>
           </div>
@@ -563,7 +563,7 @@ export default async function CosEGeoTappPage({ params }: { params: Promise<{ lo
         {/* ── quanto costa ── */}
         <section className="sec"><div className="wt">
           <h2 className="r">{copy.pricingHeading}</h2>
-          <p className="r d1" style={{ color: '#4A5244', marginTop: 22, fontSize: 17.5, lineHeight: 1.7 }}>
+          <p className="r d1" style={{ color: '#475467', marginTop: 22, fontSize: 17.5, lineHeight: 1.7 }}>
             {copy.pricingText}{' '}
             <Link href={pricingHref} className="b2">{seePricing}</Link>
           </p>
@@ -572,13 +572,13 @@ export default async function CosEGeoTappPage({ params }: { params: Promise<{ lo
         {/* ── settori ── */}
         <section className="sec warm"><div className="wt">
           <h2 className="r">{copy.sectorsHeading}</h2>
-          <p className="r d1" style={{ color: '#4A5244', marginTop: 22, fontSize: 17.5, lineHeight: 1.7 }}>{copy.sectorsText}</p>
+          <p className="r d1" style={{ color: '#475467', marginTop: 22, fontSize: 17.5, lineHeight: 1.7 }}>{copy.sectorsText}</p>
         </div></section>
 
         {/* ── chi ha fondato GeoTapp ── */}
         <section className="sec"><div className="wt">
           <h2 className="r">{copy.founderHeading}</h2>
-          <p className="r d1" style={{ color: '#4A5244', marginTop: 22, fontSize: 17.5, lineHeight: 1.7 }}>{copy.founderText}</p>
+          <p className="r d1" style={{ color: '#475467', marginTop: 22, fontSize: 17.5, lineHeight: 1.7 }}>{copy.founderText}</p>
         </div></section>
 
         <LNastro />
@@ -614,7 +614,7 @@ export default async function CosEGeoTappPage({ params }: { params: Promise<{ lo
             <p className="big r" style={{ fontSize: 'clamp(30px,5.2vw,72px)', maxWidth: '17ch', marginBottom: 24, color: 'var(--lime)' }}>
               {copy.trialHeading}
             </p>
-            <p className="r d1" style={{ color: 'rgba(255,255,255,.8)', maxWidth: '58ch', marginBottom: 32 }}>{copy.trialText}</p>
+            <p className="r d1" style={{ color: 'rgba(247,249,252,.8)', maxWidth: '58ch', marginBottom: 32 }}>{copy.trialText}</p>
             <div className="acts r d2">
               <Link className="b1" href={trialHref}>{copy.trialCta}</Link>
               <Link className="b2" href={pricingHref}>{seePricing}</Link>

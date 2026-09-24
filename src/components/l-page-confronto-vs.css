@@ -4,31 +4,31 @@
 
 .lp-confronto-vs .note {
   border-left: 3px solid var(--sky);
-  background: rgba(45, 164, 228, 0.08);
+  background: rgba(25, 181, 216, 0.08);
   padding: 20px 26px;
   margin-bottom: 34px;
   border-radius: 4px;
 }
 .lp-confronto-vs .note .t { margin-bottom: 6px; }
-.lp-confronto-vs .note p { font-size: 15px; color: #3B4237; margin: 0; }
+.lp-confronto-vs .note p { font-size: 15px; color: #344054; margin: 0; }
 .lp-confronto-vs .note p + p { margin-top: 6px; }
 
 .lp-confronto-vs .takeaway {
   margin-top: 24px;
   padding: 16px 20px;
-  border: 1px solid rgba(14, 14, 12, 0.12);
+  border: 1px solid rgba(11, 23, 54, 0.12);
   border-radius: 8px;
-  background: rgba(14, 14, 12, 0.03);
+  background: rgba(11, 23, 54, 0.03);
   font-size: 14.5px;
   line-height: 1.6;
-  color: #3B4237;
+  color: #344054;
 }
 
 .lp-confronto-vs .foot {
   margin-top: 30px;
   font-size: 12.5px;
   line-height: 1.6;
-  color: rgba(14, 14, 12, 0.55);
+  color: rgba(11, 23, 54, 0.55);
   max-width: 86ch;
 }
 

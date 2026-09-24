@@ -42,7 +42,7 @@ export default function ContactForm() {
       <div>
         <label
           className="block text-sm font-medium mb-2"
-          style={{ color: '#e8ecf8' }}
+          style={{ color: '#f2f4f7' }}
         >
           {f.name}
         </label>
@@ -53,9 +53,9 @@ export default function ContactForm() {
           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
           className="w-full px-4 py-2 rounded-lg focus:outline-none focus:ring-2"
           style={{
-            background: 'rgba(255, 255, 255, 0.06)',
-            border: '1px solid rgba(255, 255, 255, 0.1)',
-            color: '#e8ecf8',
+            background: 'rgba(247, 249, 252, 0.06)',
+            border: '1px solid rgba(247, 249, 252, 0.1)',
+            color: '#f2f4f7',
           }}
           placeholder={f.name_placeholder}
         />
@@ -64,7 +64,7 @@ export default function ContactForm() {
       <div>
         <label
           className="block text-sm font-medium mb-2"
-          style={{ color: '#e8ecf8' }}
+          style={{ color: '#f2f4f7' }}
         >
           {f.email}
         </label>
@@ -75,9 +75,9 @@ export default function ContactForm() {
           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
           className="w-full px-4 py-2 rounded-lg focus:outline-none focus:ring-2"
           style={{
-            background: 'rgba(255, 255, 255, 0.06)',
-            border: '1px solid rgba(255, 255, 255, 0.1)',
-            color: '#e8ecf8',
+            background: 'rgba(247, 249, 252, 0.06)',
+            border: '1px solid rgba(247, 249, 252, 0.1)',
+            color: '#f2f4f7',
           }}
           placeholder={f.email_placeholder}
         />
@@ -86,7 +86,7 @@ export default function ContactForm() {
       <div>
         <label
           className="block text-sm font-medium mb-2"
-          style={{ color: '#e8ecf8' }}
+          style={{ color: '#f2f4f7' }}
         >
           {f.company}
         </label>
@@ -98,9 +98,9 @@ export default function ContactForm() {
           }
           className="w-full px-4 py-2 rounded-lg focus:outline-none focus:ring-2"
           style={{
-            background: 'rgba(255, 255, 255, 0.06)',
-            border: '1px solid rgba(255, 255, 255, 0.1)',
-            color: '#e8ecf8',
+            background: 'rgba(247, 249, 252, 0.06)',
+            border: '1px solid rgba(247, 249, 252, 0.1)',
+            color: '#f2f4f7',
           }}
           placeholder={f.company_placeholder}
         />
@@ -109,7 +109,7 @@ export default function ContactForm() {
       <div>
         <label
           className="block text-sm font-medium mb-2"
-          style={{ color: '#e8ecf8' }}
+          style={{ color: '#f2f4f7' }}
         >
           {f.message}
         </label>
@@ -121,9 +121,9 @@ export default function ContactForm() {
           }
           className="w-full px-4 py-2 rounded-lg focus:outline-none focus:ring-2 min-h-32"
           style={{
-            background: 'rgba(255, 255, 255, 0.06)',
-            border: '1px solid rgba(255, 255, 255, 0.1)',
-            color: '#e8ecf8',
+            background: 'rgba(247, 249, 252, 0.06)',
+            border: '1px solid rgba(247, 249, 252, 0.1)',
+            color: '#f2f4f7',
           }}
           placeholder={f.message_placeholder}
         />

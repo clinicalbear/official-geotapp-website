@@ -93,7 +93,7 @@ function ShareButtons({ title, copiedLabel }: { title: string; copiedLabel: stri
   const shareLinks = [
     { icon: <LinkedInIcon />, label: 'LinkedIn', href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, hoverColor: '#0A66C2' },
     { icon: <FacebookIcon />, label: 'Facebook', href: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`, hoverColor: '#1877F2' },
-    { icon: <XIcon />, label: 'X', href: `https://x.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(title)}`, hoverColor: '#000000' },
+    { icon: <XIcon />, label: 'X', href: `https://x.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(title)}`, hoverColor: '#0B1736' },
     { icon: <EmailIcon />, label: 'Email', href: `mailto:?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(url)}`, hoverColor: '#EA4335' },
   ];
 
@@ -117,7 +117,7 @@ function ShareButtons({ title, copiedLabel }: { title: string; copiedLabel: stri
         onClick={handleCopy}
         aria-label="Copy link"
         className={`p-2 rounded-lg transition-all duration-200 ${copied ? 'text-green-500 bg-green-50' : 'text-slate-400 hover:bg-slate-50'}`}
-        onMouseEnter={(e) => { if (!copied) e.currentTarget.style.color = '#8FC436'; }}
+        onMouseEnter={(e) => { if (!copied) e.currentTarget.style.color = '#22B573'; }}
         onMouseLeave={(e) => { if (!copied) e.currentTarget.style.color = ''; }}
       >
         {copied ? <CheckIcon /> : <LinkIcon />}
@@ -181,14 +181,14 @@ export default function ArticleSidebar({ headings, locale, categories = [], date
         </div>
         <div className="flex items-center gap-4">
           <div>
-            <span className="text-[8px] uppercase tracking-widest block mb-0.5" style={{ color: '#4F5A49' }}>Date</span>
+            <span className="text-[8px] uppercase tracking-widest block mb-0.5" style={{ color: '#475467' }}>Date</span>
             <span className="text-[13px] tracking-wide">
               {date ? new Date(date).toLocaleDateString('en-GB', { timeZone: 'UTC', day: '2-digit', month: '2-digit', year: 'numeric' }).replace(/\//g, '.') : ''}
             </span>
           </div>
-          <div className="w-px h-8" style={{ background: 'rgba(14,14,12,.14)' }} />
+          <div className="w-px h-8" style={{ background: 'rgba(11,23,54,.14)' }} />
           <div>
-            <span className="text-[8px] uppercase tracking-widest block mb-0.5" style={{ color: '#4F5A49' }}>Duration</span>
+            <span className="text-[8px] uppercase tracking-widest block mb-0.5" style={{ color: '#475467' }}>Duration</span>
             <span className="text-[13px] tracking-wide">
               00:{readingTime ? String(readingTime).padStart(2, '0') : '00'}:00
             </span>
@@ -223,7 +223,7 @@ export default function ArticleSidebar({ headings, locale, categories = [], date
           alt={product.name}
           style={{ maxHeight: '44px', maxWidth: '150px', width: 'auto', margin: '0 auto 14px', objectFit: 'contain' }}
         />
-        <p className="text-[12px] text-center" style={{ color: '#4A5244' }}>{labels.product_desc}</p>
+        <p className="text-[12px] text-center" style={{ color: '#475467' }}>{labels.product_desc}</p>
         <span className="k" style={{ display: 'block', textAlign: 'center', marginTop: '10px', fontSize: '11px', color: 'var(--seal-testo)' }}>
           {labels.product_btn} &rarr;
         </span>
@@ -232,13 +232,13 @@ export default function ArticleSidebar({ headings, locale, categories = [], date
       {/* Dati in Europa, residenza UE dei dati di lavoro */}
       <Link href={`/${locale}/privacy/`} className="panel" style={{ display: 'block', padding: '18px 20px', marginTop: '18px' }}>
         <p className="text-[13px] font-bold leading-snug">{euBadge.title}</p>
-        <p className="text-[11px] mt-1" style={{ color: '#4F5A49' }}>{euBadge.desc}</p>
+        <p className="text-[11px] mt-1" style={{ color: '#475467' }}>{euBadge.desc}</p>
       </Link>
 
       {/* CTA trial */}
       <div className="panel" style={{ padding: '20px', marginTop: '18px' }}>
         <p className="text-[13px] font-bold">{labels.cta_title}</p>
-        <p className="text-[11px] mt-1.5" style={{ color: '#4A5244' }}>{labels.cta_desc}</p>
+        <p className="text-[11px] mt-1.5" style={{ color: '#475467' }}>{labels.cta_desc}</p>
         <Link
           href={`/${locale}/trial/`}
           onClick={() => trackEvent('trial_click', { cta_source: 'blog_sidebar', cta_locale: locale })}

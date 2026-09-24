@@ -41,13 +41,13 @@
   height: 24px;
   width: 24px;
   border-radius: 50%;
-  background: #ffffff;
-  border: 2px solid #8fc436;
+  background: #f7f9fc;
+  border: 2px solid #22b573;
   /* GSAP/GeoTapp Green */
   cursor: pointer;
   margin-top: -9px;
   /* (ThumbHeight 24 - TrackHeight 6) / 2 * -1 = -9 */
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 5px rgba(11, 23, 54, 0.2);
   transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -55,20 +55,20 @@
   height: 24px;
   width: 24px;
   border-radius: 50%;
-  background: #ffffff;
-  border: 2px solid #8fc436;
+  background: #f7f9fc;
+  border: 2px solid #22b573;
   cursor: pointer;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 5px rgba(11, 23, 54, 0.2);
   transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 /* Active State (Pressing) */
 .ui-demo--range:active::-webkit-slider-thumb {
   transform: scale(1.1);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 8px rgba(11, 23, 54, 0.3);
 }
 
 .ui-demo--range:active::-moz-range-thumb {
   transform: scale(1.1);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 8px rgba(11, 23, 54, 0.3);
 }

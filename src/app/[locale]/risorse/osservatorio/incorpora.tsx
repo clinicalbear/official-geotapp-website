@@ -28,7 +28,7 @@ export default function Incorpora({
   const s = osservatorioStrings(locale);
   const [copiato, setCopiato] = useState(false);
 
-  const codice = `<iframe src="${src}" width="100%" height="720" style="border:1px solid #d8dcd4;border-radius:10px" `
+  const codice = `<iframe src="${src}" width="100%" height="720" style="border:1px solid #d0d5dd;border-radius:10px" `
     + `loading="lazy" title="${s.h1}"></iframe>`;
 
   async function copia() {

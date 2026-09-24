@@ -22,6 +22,7 @@ import type { ReactNode } from 'react';
 import '../globals.css';
 import '../redesign-l.css';
 import '../l-mockup.css';
+import '../l-palette.css';
 
 export default function LayoutVerifica({
   children,

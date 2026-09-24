@@ -98,13 +98,13 @@ export default function SurveyInline({ locale }: { locale: string }) {
       className="my-10 rounded-2xl border border-slate-200 bg-slate-50 p-6 sm:p-7"
       aria-label={c.kicker}
     >
-      <p className="text-xs font-bold uppercase tracking-wider text-[#2DA4E4]">{c.kicker}</p>
+      <p className="text-xs font-bold uppercase tracking-wider text-[#19B5D8]">{c.kicker}</p>
       <p className="mt-2 text-lg font-extrabold leading-snug text-slate-900 sm:text-xl">{c.title}</p>
       <p className="mt-2 text-sm leading-relaxed text-slate-600">{c.body}</p>
       <Link
         href={href}
         onClick={() => trackEvent('survey_cta_click', { locale, placement: 'article_inline' })}
-        className="mt-5 inline-block rounded-full bg-[#8FC436] px-6 py-3 text-sm font-bold text-white no-underline transition hover:brightness-105"
+        className="mt-5 inline-block rounded-full bg-[#22B573] px-6 py-3 text-sm font-bold text-white no-underline transition hover:brightness-105"
       >
         {c.cta}
       </Link>

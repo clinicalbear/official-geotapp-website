@@ -1,0 +1,22 @@
+/* ============================================================
+   PALETTE NAVY, promossa da Michele Angelo Petraroli il 24/09/2026.
+   Colori: navy #0B1736, bianco caldo #F7F9FC, ciano #19B5D8,
+   verde di verifica #22B573, arancione #FF8A34 solo per l'azione.
+   Qui sta una cosa sola: l'azione principale e' arancione con testo
+   navy (7,5:1). Tutto il resto della palette vive nei fogli di sempre,
+   convertiti colore per colore. Caricato per ultimo apposta: deve
+   vincere sulle pillole verdi di redesign-l.css e l-mockup.css.
+   ⚠️ L'esperimento `cta` (src/lib/esperimento.ts) mostra ora lo stesso
+   arancione in tutte e due le varianti: i suoi numeri da qui in poi non
+   misurano piu' niente.
+   ============================================================ */
+:root body :is(.b1, .nv-cta, .btn-ring, a[class*="btn-ring"], a[class*="bg-primary"], button[class*="bg-primary"],
+  .l-nav a[class*="btn"], .ft form button, .lp-abbonati .submit, .article-content a.btn-modern-sm, .vsurvey a),
+:root body .low .acts .b1, :root body .low .b1, :root body .l-hero .btn-ring{
+  background:#FF8A34 !important; background-image:none !important; color:#0B1736 !important;
+}
+:root body :is(.b1, .nv-cta, .btn-ring, a[class*="btn-ring"], a[class*="bg-primary"], button[class*="bg-primary"],
+  .l-nav a[class*="btn"], .ft form button, .lp-abbonati .submit, .article-content a.btn-modern-sm, .vsurvey a):hover,
+:root body .low .acts .b1:hover, :root body .low .b1:hover, :root body .l-hero .btn-ring:hover{
+  background:#F57A1F !important; color:#0B1736 !important;
+}

@@ -50,9 +50,9 @@ interface Esito {
 }
 
 const COLORI = {
-  valid: { bordo: '#3F8C5A', fondo: '#EAF2EC', testo: '#144A27' },
-  degraded: { bordo: '#C98A28', fondo: '#FBF1E3', testo: '#7A4900' },
-  invalid: { bordo: '#C65246', fondo: '#FAECEA', testo: '#7C1F17' },
+  valid: { bordo: '#15803D', fondo: '#F7F9FC', testo: '#144A27' },
+  degraded: { bordo: '#C98A28', fondo: '#F7F9FC', testo: '#7A4900' },
+  invalid: { bordo: '#C65246', fondo: '#F7F9FC', testo: '#7C1F17' },
 } as const;
 
 /**

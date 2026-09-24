@@ -52,7 +52,7 @@ export default function CambiaStatoSelect({
           width: '100%',
           maxWidth: 360,
           background: 'transparent',
-          border: '1px solid rgba(14,14,12,.2)',
+          border: '1px solid rgba(11,23,54,.2)',
           color: 'inherit',
           padding: '13px 16px',
           fontSize: 15,

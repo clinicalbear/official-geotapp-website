@@ -3,7 +3,7 @@
    Qui SOLO cio' che serve in piu' per questa pagina: i pulsanti di filtro
    categoria e paginazione sono <button>, il mockup li disegna come <a>. */
 .lp-blog .cats button {
-  border: 1px solid rgba(14, 14, 12, 0.2);
+  border: 1px solid rgba(11, 23, 54, 0.2);
   padding: 9px 18px;
   font-size: 13.5px;
   background: none;
@@ -19,7 +19,7 @@
 }
 
 .lp-blog .pag button {
-  border: 1px solid rgba(14, 14, 12, 0.2);
+  border: 1px solid rgba(11, 23, 54, 0.2);
   width: 44px;
   height: 44px;
   display: grid;

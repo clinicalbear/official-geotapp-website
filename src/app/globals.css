@@ -51,13 +51,13 @@ html {
   height: 24px;
   width: 24px;
   border-radius: 50%;
-  background: #ffffff;
-  border: 2px solid #8fc436;
+  background: #f7f9fc;
+  border: 2px solid #22b573;
   /* GSAP/GeoTapp Green */
   cursor: pointer;
   margin-top: -9px;
   /* (ThumbHeight 24 - TrackHeight 6) / 2 * -1 = -9 */
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 5px rgba(11, 23, 54, 0.2);
   transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -65,22 +65,22 @@ html {
   height: 24px;
   width: 24px;
   border-radius: 50%;
-  background: #ffffff;
-  border: 2px solid #8fc436;
+  background: #f7f9fc;
+  border: 2px solid #22b573;
   cursor: pointer;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 5px rgba(11, 23, 54, 0.2);
   transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 /* Active State (Pressing) */
 .ui-demo--range:active::-webkit-slider-thumb {
   transform: scale(1.1);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 8px rgba(11, 23, 54, 0.3);
 }
 
 .ui-demo--range:active::-moz-range-thumb {
   transform: scale(1.1);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 8px rgba(11, 23, 54, 0.3);
 }
 /* @import './gsap-slider.css'; */
 /* Removed, including inline to guarantee load */
@@ -89,9 +89,9 @@ html {
 :root {
   --slider-track-height: 1.5rem;
   --slider-thumb-size: 1.5rem;
-  --geotapp-primary: #8fc436;
-  --geotapp-primary-dark: #7ab325;
-  --geotapp-track-bg: #e5e7eb;
+  --geotapp-primary: #22b573;
+  --geotapp-primary-dark: #1e9e64;
+  --geotapp-track-bg: #eaecf0;
 }
 
 /* GLOBAL SLIDER STYLES (Moved from SAP slider css to guarantee loading) */
@@ -251,7 +251,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(11, 23, 54, 0.1);
 }
 
 /* The Text inside (Counter-Rotated) */
@@ -279,20 +279,20 @@ body {
     system-ui,
     -apple-system,
     sans-serif;
-  color: #212529;
-  background-color: #f8f9fa;
+  color: #101828;
+  background-color: #f7f9fc;
   background:
     radial-gradient(
       circle at 20% 20%,
-      rgba(143, 196, 54, 0.08),
+      rgba(34, 181, 115, 0.08),
       transparent 35%
     ),
     radial-gradient(
       circle at 80% 0%,
-      rgba(143, 196, 54, 0.05),
+      rgba(34, 181, 115, 0.05),
       transparent 40%
     ),
-    #f8f9fa;
+    #f7f9fc;
   line-height: 1.7;
   margin: 0;
   min-height: 100vh;
@@ -315,19 +315,19 @@ h6,
 }
 
 a {
-  color: #2da4e4;
+  color: #19b5d8;
   text-decoration: none;
 }
 
-/* #2DA4E4 e' l'azzurro del logo misurato sul file: mediana dei pixel pieni
+/* #19B5D8 e' l'azzurro del logo misurato sul file: mediana dei pixel pieni
    della scritta "GeoTapp" in public/LogoGeoTapp.webp (06/08/2026). Lo stesso
    valore sta in `brand-blue` di tailwind.config.ts, in --sky del sistema L e
-   in --geo-blue: prima era #3BAEE0, vicino ma non quello del marchio.
+   in --geo-blue: prima era #19B5D8, vicino ma non quello del marchio.
    Qui c'era #49e2d6, un turchese verdastro rimasto dal template di partenza:
    usciva su tutti i link senza una regola propria (loghi directory,
    "Featured in", fonti in calce) e col marchio non c'entrava niente. */
 a:hover {
-  color: #2da4e4;
+  color: #19b5d8;
 }
 
 /* jQuery Reveal Animations */
@@ -359,10 +359,10 @@ a:hover {
 .section-lg  { padding-top: 8rem;  padding-bottom: 8rem;  }
 
 /* ===== BRAND COLOR UTILITIES ===== */
-.text-brand-blue  { color: #2DA4E4; }
+.text-brand-blue  { color: #19B5D8; }
 /* Testo azzurro su fondo chiaro: 2,63 non passa, questa fa 5,15. */
-.text-brand-blue-ink { color: #1F6FA3; }
-.bg-brand-blue    { background-color: #2DA4E4; }
+.text-brand-blue-ink { color: #0E7C99; }
+.bg-brand-blue    { background-color: #19B5D8; }
 .text-brand-green { color: #52C065; }
 .bg-brand-green   { background-color: #52C065; }
 
@@ -377,7 +377,7 @@ a:hover {
 .gt-category-filter button {
   padding: 0.5rem 1.15rem;
   border-radius: 9999px;
-  border: 1px solid #e8edf3;
+  border: 1px solid #f7f9fc;
   background: #fff;
   font-size: 0.82rem;
   font-weight: 600;
@@ -386,16 +386,16 @@ a:hover {
   transition: transform 0.22s cubic-bezier(0.22,1,0.36,1), box-shadow 0.22s ease, border-color 0.22s ease, color 0.22s ease, background 0.22s ease;
 }
 .gt-category-filter button:hover {
-  border-color: rgba(143,196,54,0.45);
-  color: #5a9e2a;
+  border-color: rgba(34,181,115,0.45);
+  color: #15803d;
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(143,196,54,0.14);
+  box-shadow: 0 4px 12px rgba(34,181,115,0.14);
 }
 .gt-category-filter button.active {
   border-color: transparent;
-  background: linear-gradient(120deg,#5a9e2a 0%,#3a9e6f 48%,#2a8fc4 100%);
+  background: linear-gradient(120deg,#15803d 0%,#15803d 48%,#0e7c99 100%);
   color: #fff;
-  box-shadow: 0 6px 16px rgba(42,143,196,0.32);
+  box-shadow: 0 6px 16px rgba(14,124,153,0.32);
 }
 
 /* ===== BLOG — CARD CATEGORY SHADOW ===== */
@@ -403,7 +403,7 @@ a:hover {
   transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }
 .group:hover .cat-card {
-  box-shadow: 0 6px 28px var(--cat-shadow, rgba(143,196,54,0.5));
+  box-shadow: 0 6px 28px var(--cat-shadow, rgba(34,181,115,0.5));
   border-color: transparent;
 }
 
@@ -430,8 +430,8 @@ a:hover {
 .group:hover .blog-card {
   transform: translateY(-6px);
   box-shadow:
-    0 12px 40px var(--cat-shadow, rgba(143,196,54,0.35)),
-    0 4px 12px rgba(0,0,0,0.08);
+    0 12px 40px var(--cat-shadow, rgba(34,181,115,0.35)),
+    0 4px 12px rgba(11,23,54,0.08);
   border-color: transparent;
 }
 .blog-card-img {
@@ -463,7 +463,7 @@ a:hover {
   font-family: var(--font-display);font-weight:800;
   font-size: 1.875rem;
   font-weight: 700;
-  color: #0f172a;
+  color: #0b1736;
   margin-top: 3rem;
   margin-bottom: 1rem;
   line-height: 1.3;
@@ -473,7 +473,7 @@ a:hover {
   font-family: var(--font-display);font-weight:800;
   font-size: 1.5rem;
   font-weight: 600;
-  color: #0f172a;
+  color: #0b1736;
   margin-top: 2.5rem;
   margin-bottom: 0.75rem;
   line-height: 1.3;
@@ -483,7 +483,7 @@ a:hover {
   font-family: var(--font-display);font-weight:800;
   font-size: 1.25rem;
   font-weight: 600;
-  color: #1e293b;
+  color: #101828;
   margin-top: 2rem;
   margin-bottom: 0.5rem;
 }
@@ -493,7 +493,7 @@ a:hover {
 }
 
 .article-content a {
-  color: #8FC436;
+  color: #22B573;
   text-decoration: none;
   transition: text-decoration 0.2s;
 }
@@ -508,14 +508,14 @@ a:hover {
   margin: 2rem 0;
   max-width: 100%;
   height: auto;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 20px rgba(11, 23, 54, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease, clip-path 0s;
   clip-path: inset(0 round 0.75rem);
 }
 
 .article-content img:hover {
   transform: scale(1.04) rotate(0.8deg);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 8px 30px rgba(11, 23, 54, 0.12);
   clip-path: inset(0 round 0.75rem);
 }
 
@@ -538,7 +538,7 @@ a:hover {
 }
 
 .article-content blockquote {
-  border-left: 4px solid #8FC436;
+  border-left: 4px solid #22B573;
   padding-left: 1.5rem;
   margin: 2rem 0;
   font-style: italic;
@@ -546,7 +546,7 @@ a:hover {
 }
 
 .article-content pre {
-  background: #f1f5f9;
+  background: #f2f4f7;
   border-radius: 0.5rem;
   padding: 1.25rem;
   overflow-x: auto;
@@ -557,7 +557,7 @@ a:hover {
 }
 
 .article-content code {
-  background: #f1f5f9;
+  background: #f2f4f7;
   padding: 0.15rem 0.4rem;
   border-radius: 0.25rem;
   font-family: ui-monospace, SFMono-Regular, monospace;
@@ -579,15 +579,15 @@ a:hover {
 
 .article-content th,
 .article-content td {
-  border: 1px solid #e2e8f0;
+  border: 1px solid #f7f9fc;
   padding: 0.75rem 1rem;
   text-align: left;
 }
 
 .article-content th {
-  background: #f8fafc;
+  background: #f7f9fc;
   font-weight: 600;
-  color: #0f172a;
+  color: #0b1736;
 }
 
 /* Una tabella larga dentro un articolo non deve trascinarsi dietro la pagina:
@@ -735,23 +735,23 @@ a:hover {
 
 /* Etched-in-glass text effect */
 .hero-glass-text {
-  color: rgba(15, 23, 42, 0.75);
+  color: rgba(11, 23, 54, 0.75);
   text-shadow:
-    0 1px 1px rgba(255,255,255,0.8),
-    0 -1px 1px rgba(0,0,0,0.12);
+    0 1px 1px rgba(247,249,252,0.8),
+    0 -1px 1px rgba(11,23,54,0.12);
 }
 .hero-glass-text-green {
-  color: rgba(143, 196, 54, 0.8);
+  color: rgba(34, 181, 115, 0.8);
   text-shadow:
-    0 1px 1px rgba(255,255,255,0.7),
-    0 -1px 1px rgba(0,0,0,0.1);
+    0 1px 1px rgba(247,249,252,0.7),
+    0 -1px 1px rgba(11,23,54,0.1);
 }
 .hero-glass-sub {
-  color: rgba(15, 23, 42, 0.85);
+  color: rgba(11, 23, 54, 0.85);
   text-shadow:
-    0 1px 1px rgba(255,255,255,0.9),
-    0 -1px 1px rgba(0,0,0,0.1),
-    0 0 8px rgba(255,255,255,0.6);
+    0 1px 1px rgba(247,249,252,0.9),
+    0 -1px 1px rgba(11,23,54,0.1),
+    0 0 8px rgba(247,249,252,0.6);
 }
 
 /* Hero animated background */
@@ -777,10 +777,10 @@ a:hover {
 /* Typing cursor for hero badge */
 @keyframes typing-cursor {
   0%, 100% { border-right-color: transparent; }
-  50% { border-right-color: #8FC436; }
+  50% { border-right-color: #22B573; }
 }
 .typing-cursor {
-  border-right: 2px solid #8FC436;
+  border-right: 2px solid #22B573;
   animation: typing-cursor 0.8s step-end infinite;
   padding-right: 2px;
 }
@@ -794,17 +794,17 @@ a:hover {
 
 /* ════════════════════════════════════════════════════════════════════
    GEOTAPP BRAND SYSTEM v1 (2026-06-03)
-   Identità: verde lime #8FC436 (firma) + blu #2DA4E4 (logo) come gradiente
+   Identità: verde lime #22B573 (firma) + blu #19B5D8 (logo) come gradiente
    brand. Bottone primario di proprietà, accenti gradiente, ombre verdi.
    ════════════════════════════════════════════════════════════════════ */
 
 /* Gradiente brand del logo (verde -> blu) */
 :root {
-  --geo-green: #8FC436;
-  --geo-green-deep: #4a6317;
-  --geo-blue: #2DA4E4;
-  --geo-grad: linear-gradient(135deg, #8FC436 0%, #5cc08a 50%, #2DA4E4 115%);
-  --geo-ink: #0e2a05; /* testo near-black verde per contrasto su lime */
+  --geo-green: #22B573;
+  --geo-green-deep: #15803d;
+  --geo-blue: #19B5D8;
+  --geo-grad: linear-gradient(135deg, #22B573 0%, #22b573 50%, #19B5D8 115%);
+  --geo-ink: #0b1736; /* testo near-black verde per contrasto su lime */
 }
 
 /* Bottone primario brand: lime pieno, testo scuro (accessibile + moderno),
@@ -821,13 +821,13 @@ a:hover {
   line-height: 1;
   color: var(--geo-ink);
   background: var(--geo-green);
-  box-shadow: 0 8px 22px rgba(143, 196, 54, 0.38), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  box-shadow: 0 8px 22px rgba(34, 181, 115, 0.38), inset 0 1px 0 rgba(247, 249, 252, 0.35);
   transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.22s ease, background 0.22s ease;
 }
 .btn-geo:hover {
-  background: #9ed13f;
+  background: #22b573;
   transform: translateY(-2px);
-  box-shadow: 0 14px 30px rgba(143, 196, 54, 0.48), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  box-shadow: 0 14px 30px rgba(34, 181, 115, 0.48), inset 0 1px 0 rgba(247, 249, 252, 0.4);
 }
 .btn-geo:active { transform: translateY(0); }
 
@@ -843,10 +843,10 @@ a:hover {
   font-size: 1.0625rem;
   color: #334155;
   background: #fff;
-  border: 1.5px solid #e2e8f0;
+  border: 1.5px solid #f7f9fc;
   transition: all 0.2s ease;
 }
-.btn-geo-ghost:hover { border-color: var(--geo-green); color: var(--geo-green-deep); box-shadow: 0 6px 18px rgba(143, 196, 54, 0.15); }
+.btn-geo-ghost:hover { border-color: var(--geo-green); color: var(--geo-green-deep); box-shadow: 0 6px 18px rgba(34, 181, 115, 0.15); }
 
 /* Testo con gradiente brand (per parole chiave nei titoli) */
 .text-geo-gradient {
@@ -901,15 +901,15 @@ a:hover {
 /* Griglia tecnica di sfondo (sottile) */
 .tech-grid {
   background-image:
-    linear-gradient(rgba(15, 23, 42, 0.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(15, 23, 42, 0.045) 1px, transparent 1px);
+    linear-gradient(rgba(11, 23, 54, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(11, 23, 54, 0.045) 1px, transparent 1px);
   background-size: 34px 34px;
   background-position: center;
 }
 
 /* Cornice tecnica (bordo netto, sottile) */
 .tech-frame {
-  border: 1px solid #0f172a;
+  border: 1px solid #0b1736;
   border-radius: 2px;
 }
 
@@ -928,12 +928,12 @@ a:hover {
   text-transform: uppercase;
   color: var(--geo-ink);
   background: var(--geo-green);
-  border: 1.5px solid #0f172a;
-  box-shadow: 4px 4px 0 0 #0f172a;
+  border: 1.5px solid #0b1736;
+  box-shadow: 4px 4px 0 0 #0b1736;
   transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.15s ease;
 }
-.btn-tech:hover { transform: translate(2px, 2px); box-shadow: 2px 2px 0 0 #0f172a; background: #9ed13f; }
-.btn-tech:active { transform: translate(4px, 4px); box-shadow: 0 0 0 0 #0f172a; }
+.btn-tech:hover { transform: translate(2px, 2px); box-shadow: 2px 2px 0 0 #0b1736; background: #22b573; }
+.btn-tech:active { transform: translate(4px, 4px); box-shadow: 0 0 0 0 #0b1736; }
 
 .btn-tech-ghost {
   display: inline-flex;
@@ -947,13 +947,13 @@ a:hover {
   font-size: 0.9rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: #0f172a;
+  color: #0b1736;
   background: #fff;
-  border: 1.5px solid #0f172a;
-  box-shadow: 4px 4px 0 0 #cbd5e1;
+  border: 1.5px solid #0b1736;
+  box-shadow: 4px 4px 0 0 #d0d5dd;
   transition: transform 0.12s ease, box-shadow 0.12s ease;
 }
-.btn-tech-ghost:hover { transform: translate(2px, 2px); box-shadow: 2px 2px 0 0 #cbd5e1; }
+.btn-tech-ghost:hover { transform: translate(2px, 2px); box-shadow: 2px 2px 0 0 #d0d5dd; }
 
 /* Chip-etichetta monospace tipo strumento di misura */
 .tech-chip {
@@ -966,7 +966,7 @@ a:hover {
   text-transform: uppercase;
   color: #475569;
   background: #fff;
-  border: 1px solid #cbd5e1;
+  border: 1px solid #d0d5dd;
   border-radius: 2px;
   padding: 0.3rem 0.6rem;
 }
@@ -987,50 +987,50 @@ a:hover {
 
 .geo-aurora { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
 .geo-aurora span { position: absolute; border-radius: 9999px; filter: blur(90px); opacity: 0.55; will-change: transform; }
-.geo-aurora .a1 { width: 46vw; height: 46vw; top: -14%; right: -8%; background: radial-gradient(circle, rgba(143,196,54,0.55), transparent 70%); animation: geo-aurora-1 16s ease-in-out infinite; }
-.geo-aurora .a2 { width: 42vw; height: 42vw; bottom: -18%; left: -10%; background: radial-gradient(circle, rgba(45,164,228,0.5), transparent 70%); animation: geo-aurora-2 20s ease-in-out infinite; }
-.geo-aurora .a3 { width: 34vw; height: 34vw; top: 20%; left: 30%; background: radial-gradient(circle, rgba(92,192,138,0.4), transparent 70%); animation: geo-aurora-3 24s ease-in-out infinite; }
+.geo-aurora .a1 { width: 46vw; height: 46vw; top: -14%; right: -8%; background: radial-gradient(circle, rgba(34,181,115,0.55), transparent 70%); animation: geo-aurora-1 16s ease-in-out infinite; }
+.geo-aurora .a2 { width: 42vw; height: 42vw; bottom: -18%; left: -10%; background: radial-gradient(circle, rgba(25,181,216,0.5), transparent 70%); animation: geo-aurora-2 20s ease-in-out infinite; }
+.geo-aurora .a3 { width: 34vw; height: 34vw; top: 20%; left: 30%; background: radial-gradient(circle, rgba(34,181,115,0.4), transparent 70%); animation: geo-aurora-3 24s ease-in-out infinite; }
 
 .geo-float { animation: geo-float 7s ease-in-out infinite; }
 .geo-float-chip { animation: geo-float-chip 4.5s ease-in-out infinite; }
 .geo-pin-drop { animation: geo-pin-drop 0.7s cubic-bezier(0.34,1.56,0.64,1) 0.4s both; }
 .geo-pin-ring { animation: geo-pin-pulse 2.4s ease-out infinite; }
 
-.geo-glass { background: rgba(255,255,255,0.65); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border: 1px solid rgba(255,255,255,0.7); box-shadow: 0 30px 70px -20px rgba(15,23,42,0.35), 0 10px 30px -15px rgba(45,164,228,0.25); }
+.geo-glass { background: rgba(247,249,252,0.65); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border: 1px solid rgba(247,249,252,0.7); box-shadow: 0 30px 70px -20px rgba(11,23,54,0.35), 0 10px 30px -15px rgba(25,181,216,0.25); }
 
 .btn-modern {
   display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
   padding: 1rem 2rem; border-radius: 9999px; font-weight: 700; font-size: 1.0625rem; color: #fff;
-  background: linear-gradient(120deg, #5a9e2a 0%, #3a9e6f 48%, #2a8fc4 100%);
-  box-shadow: 0 12px 30px rgba(42,143,196,0.35), 0 4px 10px rgba(90,158,42,0.25);
+  background: linear-gradient(120deg, #15803d 0%, #15803d 48%, #0e7c99 100%);
+  box-shadow: 0 12px 30px rgba(14,124,153,0.35), 0 4px 10px rgba(21,128,61,0.25);
   transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
 }
-.btn-modern:hover { transform: translateY(-3px); box-shadow: 0 20px 44px rgba(42,143,196,0.45), 0 6px 16px rgba(90,158,42,0.3); filter: brightness(1.06); }
+.btn-modern:hover { transform: translateY(-3px); box-shadow: 0 20px 44px rgba(14,124,153,0.45), 0 6px 16px rgba(21,128,61,0.3); filter: brightness(1.06); }
 
 .btn-modern-ghost {
   display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
   padding: 1rem 2rem; border-radius: 9999px; font-weight: 700; font-size: 1.0625rem; color: #334155;
-  background: rgba(255,255,255,0.7); backdrop-filter: blur(8px); border: 1px solid #e2e8f0;
+  background: rgba(247,249,252,0.7); backdrop-filter: blur(8px); border: 1px solid #f7f9fc;
   transition: all 0.25s ease;
 }
-.btn-modern-ghost:hover { border-color: var(--geo-green); color: var(--geo-green-deep); transform: translateY(-2px); box-shadow: 0 10px 24px rgba(143,196,54,0.18); }
+.btn-modern-ghost:hover { border-color: var(--geo-green); color: var(--geo-green-deep); transform: translateY(-2px); box-shadow: 0 10px 24px rgba(34,181,115,0.18); }
 
 /* Card moderna coerente con l'hero: ombra morbida a strati, hover che si
    solleva con glow brand, bordo che vira al verde. */
 .card-modern {
   background: #fff;
-  border: 1px solid #eef2f7;
+  border: 1px solid #f2f4f7;
   border-radius: 26px;
-  box-shadow: 0 1px 2px rgba(15,23,42,0.04), 0 14px 34px -20px rgba(15,23,42,0.14);
+  box-shadow: 0 1px 2px rgba(11,23,54,0.04), 0 14px 34px -20px rgba(11,23,54,0.14);
   transition: transform 0.32s cubic-bezier(0.22,1,0.36,1), box-shadow 0.32s ease, border-color 0.32s ease;
 }
 .card-modern:hover {
   transform: translateY(-6px);
-  box-shadow: 0 1px 2px rgba(15,23,42,0.04), 0 28px 54px -22px rgba(45,164,228,0.3);
-  border-color: rgba(143,196,54,0.45);
+  box-shadow: 0 1px 2px rgba(11,23,54,0.04), 0 28px 54px -22px rgba(25,181,216,0.3);
+  border-color: rgba(34,181,115,0.45);
 }
 /* Cerchio icona con gradiente brand morbido */
-.icon-grad-green { background: linear-gradient(135deg, rgba(143,196,54,0.18), rgba(45,164,228,0.14)); color: #5a9e2a; }
+.icon-grad-green { background: linear-gradient(135deg, rgba(34,181,115,0.18), rgba(25,181,216,0.14)); color: #15803d; }
 .icon-grad-rose { background: linear-gradient(135deg, rgba(244,63,94,0.14), rgba(249,115,22,0.12)); color: #e11d48; }
 
 /* ── Larghezza contenuti standard (desktop/tablet); mobile invariato ── */
@@ -1044,10 +1044,10 @@ a:hover {
 
 /* ── Tinte d'area che sfumano (zone di colore diversificate) ── */
 :root {
-  --area-mint: #f0f8e6; /* verde tenue */
-  --area-sky:  #e9f3fb; /* blu tenue */
-  --area-warm: #fbf0ee; /* caldo/rosa tenue */
-  --area-lilac:#f3f0fb; /* lilla tenue (Flow) */
+  --area-mint: #e7f7ef; /* verde tenue */
+  --area-sky:  #f2f4f7; /* blu tenue */
+  --area-warm: #f2f4f7; /* caldo/rosa tenue */
+  --area-lilac:#f2f4f7; /* lilla tenue (Flow) */
 }
 
 /* 6 — Status minimale (pallino gradiente + testo gradiente) */
@@ -1056,18 +1056,18 @@ a:hover {
 
 /* Sottolineatura premium componibile (per la 6) */
 .geo-underline { position: relative; display: inline-block; padding-bottom: 6px; }
-.geo-underline::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; border-radius: 9999px; background: var(--geo-grad); box-shadow: 0 2px 10px rgba(45,164,228,0.35); }
+.geo-underline::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; border-radius: 9999px; background: var(--geo-grad); box-shadow: 0 2px 10px rgba(25,181,216,0.35); }
 
 /* Bottone moderno compatto (navbar, CTA piccoli) */
 .btn-modern-sm {
   display: inline-flex; align-items: center; gap: 0.4rem;
   padding: 0.6rem 1.15rem; border-radius: 9999px;
   font-weight: 700; font-size: 0.875rem; color: #fff;
-  background: linear-gradient(120deg, #5a9e2a 0%, #3a9e6f 48%, #2a8fc4 100%);
-  box-shadow: 0 6px 16px rgba(42,143,196,0.3);
+  background: linear-gradient(120deg, #15803d 0%, #15803d 48%, #0e7c99 100%);
+  box-shadow: 0 6px 16px rgba(14,124,153,0.3);
   transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
 }
-.btn-modern-sm:hover { transform: translateY(-2px); box-shadow: 0 10px 22px rgba(42,143,196,0.42); filter: brightness(1.06); }
+.btn-modern-sm:hover { transform: translateY(-2px); box-shadow: 0 10px 22px rgba(14,124,153,0.42); filter: brightness(1.06); }
 
 /* ── CTA del TRIAL: pillola con anello che pulsa ──────────────────────────────
    Usato SOLO per i pulsanti che portano al trial, su pagine, confronti, blog e
@@ -1099,7 +1099,7 @@ a:hover {
      (navbar stretta, bottoni w-full) le singole righe seguono `text-align`, che
      di default parte da sinistra: senza questa riga il testo esce a bandiera. */
   text-align: center;
-  color: #0B3D1A;
+  color: #0B1736;
   background: #69DB7B;
   background: linear-gradient(90deg, #8CE7A0 0%, #69DB7B 100%);
   box-shadow: 12px 12px 24px rgba(105,219,123,0.55);
@@ -1129,12 +1129,12 @@ a:hover {
 /* Variante azzurra, per quando il verde sta su fondo verde */
 .btn-ring-blue {
   color: #062E45;
-  background: #2DA4E4;
-  background: linear-gradient(90deg, #7FD9F2 0%, #2DA4E4 100%);
-  box-shadow: 12px 12px 24px rgba(45,164,228,0.55);
+  background: #19B5D8;
+  background: linear-gradient(90deg, #7FD9F2 0%, #19B5D8 100%);
+  box-shadow: 12px 12px 24px rgba(25,181,216,0.55);
 }
-.btn-ring-blue::before, .btn-ring-blue::after { border-color: #12A0DC; }
-.btn-ring-blue::before { box-shadow: 0 0 60px rgba(18,160,220,0.5); }
+.btn-ring-blue::before, .btn-ring-blue::after { border-color: #19B5D8; }
+.btn-ring-blue::before { box-shadow: 0 0 60px rgba(25,181,216,0.5); }
 
 /* Versione compatta: sidebar articoli, CTA in linea, navbar */
 .btn-ring-sm,
@@ -1151,20 +1151,20 @@ a:hover {
    ⚠️ Perché è CSS scritto a mano e non utility Tailwind: il markup di questo box
    vive dentro `post_content` di WordPress, e Tailwind scansiona solo il codice
    sorgente. Le utility con valore arbitrario usate prima
-   (`from-[#8FC436]/5`, `to-[#3BAEE0]/5`) venivano quindi eliminate dal purge e
+   (`from-[#22B573]/5`, `to-[#19B5D8]/5`) venivano quindi eliminate dal purge e
    il box usciva senza sfondo, slavato (visto in produzione il 27/07/2026).
    Con una classe unica il rischio sparisce: qui dentro non si mettono utility.
    ────────────────────────────────────────────────────────────────────────── */
 .article-cta {
   margin: 3rem 0;
   padding: 2rem;
-  border: 1px solid rgba(143,196,54,0.28);
+  border: 1px solid rgba(34,181,115,0.28);
   border-radius: 1.25rem;
-  background: linear-gradient(90deg, rgba(143,196,54,0.08) 0%, rgba(45,164,228,0.08) 100%);
+  background: linear-gradient(90deg, rgba(34,181,115,0.08) 0%, rgba(25,181,216,0.08) 100%);
   text-align: center;
 }
 .article-cta > p:first-child {
-  margin: 0; font-size: 1.125rem; line-height: 1.55; font-weight: 700; color: #0f172a;
+  margin: 0; font-size: 1.125rem; line-height: 1.55; font-weight: 700; color: #0b1736;
 }
 .article-cta > p + p { margin: 0.5rem 0 0; font-size: 0.875rem; color: #64748b; }
 .article-cta .btn-ring { margin-top: 1.35rem; }
@@ -1177,8 +1177,8 @@ a:hover {
    restano quelli generici. Si potranno togliere il giorno in cui i vecchi post
    verranno riscritti. */
 .article-content .my-12.rounded-2xl.text-center {
-  background: linear-gradient(90deg, rgba(143,196,54,0.08) 0%, rgba(45,164,228,0.08) 100%);
-  border-color: rgba(143,196,54,0.28);
+  background: linear-gradient(90deg, rgba(34,181,115,0.08) 0%, rgba(25,181,216,0.08) 100%);
+  border-color: rgba(34,181,115,0.28);
   border-radius: 1.25rem;
 }
 
@@ -1219,7 +1219,7 @@ main:focus { outline: none; }
    15/09/2026 esisteva solo sul pulsante del trial (.btn-ring) e sui campi del
    modulo: su ogni altro link e bottone il fuoco era invisibile, cioe' chi
    naviga da tastiera non sapeva dove si trovava.
-   #1F6FA3 e non l'azzurro del marchio: su fondo chiaro quello fa 2,63. */
+   #0E7C99 e non l'azzurro del marchio: su fondo chiaro quello fa 2,63. */
 a:focus-visible,
 button:focus-visible,
 [role='button']:focus-visible,
@@ -1227,7 +1227,7 @@ summary:focus-visible,
 input:focus-visible,
 select:focus-visible,
 textarea:focus-visible {
-  outline: 3px solid #1F6FA3;
+  outline: 3px solid #0E7C99;
   outline-offset: 2px;
   border-radius: 4px;
 }
@@ -1238,7 +1238,7 @@ header a:focus-visible,
 header button:focus-visible,
 footer a:focus-visible,
 footer button:focus-visible {
-  outline-color: #8FC436;
+  outline-color: #22B573;
 }
 
 
@@ -1282,8 +1282,8 @@ table, .num, .prezzo, .calc .box, .stats b, .kpi {
 
 /* ══════════════════════════════════════════════════════════════════════
    A57 · Esperimento cromatico sulla CTA (§10 del dossier, prova n.1)
-   A = lime #8FC436 con testo scuro, quello che c'e' oggi.
-   B = verde sigillo #1B7F4A con testo bianco (5,02:1), il colore che nel
+   A = lime #22B573 con testo scuro, quello che c'e' oggi.
+   B = verde sigillo #15803D con testo bianco (5,02:1), il colore che nel
        resto del sistema vuol dire "sigillato / verificato".
    La variante la stampa sull'<html> lo script in src/lib/esperimento.ts,
    prima del primo disegno. Stesso testo, stessa posizione, stesso anello:
@@ -1295,22 +1295,22 @@ table, .num, .prezzo, .calc .box, .stats b, .kpi {
 [data-exp-cta='b'] .btn-ring,
 [data-exp-cta='b'] .l-hero .btn-ring,
 [data-exp-cta='b'] a[class*='btn-ring'] {
-  background: #1b7f4a !important;
-  color: #ffffff !important;
+  background: #15803d !important;
+  color: #f7f9fc !important;
 }
 
 [data-exp-cta='b'] .b1:hover,
 [data-exp-cta='b'] .nv-cta:hover,
 [data-exp-cta='b'] .btn-ring:hover,
 [data-exp-cta='b'] a[class*='btn-ring']:hover {
-  background: #156a3d !important;
-  color: #ffffff !important;
+  background: #15803d !important;
+  color: #f7f9fc !important;
 }
 
-/* `.nv-cta` porta `color:#0E0E0C !important` nella sua regola: serve la stessa
+/* `.nv-cta` porta `color:#0B1736 !important` nella sua regola: serve la stessa
    forza, altrimenti nella variante B resterebbe testo scuro su verde scuro. */
 [data-exp-cta='b'] .nv-cta {
-  color: #ffffff !important;
+  color: #f7f9fc !important;
 }
 
 /* Il pulsante secondario in apertura resta com'e': due pieni affiancati non

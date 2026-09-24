@@ -315,7 +315,7 @@ export default function PricingSimulator() {
                     style={{
                       width: `${sliderPercent}%`,
                       background:
-                        'linear-gradient(90deg, #005cbb 0%, #8FC436 100%)',
+                        'linear-gradient(90deg, #005cbb 0%, #22B573 100%)',
                     }}
                   />
                 </div>

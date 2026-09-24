@@ -10,6 +10,7 @@ import '../l-mockup.css';
 // La coda vive in un foglio a parte perche' la carica anche blog/layout.tsx:
 // vedi src/app/l-footer.css.
 import '../l-footer.css';
+import '../l-palette.css';
 import { clsx } from 'clsx';
 import Navbar from '@/components/Navbar';
 import LEffetti from '@/components/LEffetti';
@@ -585,9 +586,9 @@ export default async function LocaleLayout({ children, params }: Props) {
           toastOptions={{
             style: {
               background: '#fff',
-              color: '#0f172a',
-              border: '1px solid #e2e8f0',
-              boxShadow: '0 4px 12px rgba(0,0,0,0.05)',
+              color: '#0b1736',
+              border: '1px solid #f7f9fc',
+              boxShadow: '0 4px 12px rgba(11,23,54,0.05)',
             },
           }}
         />

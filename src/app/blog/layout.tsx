@@ -10,6 +10,7 @@ import '../l-mockup.css';
 // del sito non possono divergere (le regole stavano in redesign-l.css, che qui
 // non si carica, e il blog usciva coi link piu' spenti e i loghi a colori).
 import '../l-footer.css';
+import '../l-palette.css';
 import { clsx } from 'clsx';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';

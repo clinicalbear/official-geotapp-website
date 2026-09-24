@@ -115,7 +115,7 @@ export default function SelettorePaesiClient({
           id="selettore-paese"
           defaultValue=""
           onChange={onSelectChange}
-          className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 shadow-sm focus:border-[#8FC436] focus:outline-none focus:ring-2 focus:ring-[#8FC436]/40"
+          className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 shadow-sm focus:border-[#22B573] focus:outline-none focus:ring-2 focus:ring-[#22B573]/40"
         >
           <option value="" disabled>
             {dict.scegliPaese}

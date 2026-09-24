@@ -373,7 +373,7 @@ export default function CookieConsentBanner({ locale }: { locale: string }) {
             position: 'fixed',
             inset: 0,
             zIndex: 9999,
-            background: 'rgba(15, 23, 42, 0.6)',
+            background: 'rgba(11, 23, 54, 0.6)',
             backdropFilter: 'blur(4px)',
             WebkitBackdropFilter: 'blur(4px)',
             display: 'flex',
@@ -387,12 +387,12 @@ export default function CookieConsentBanner({ locale }: { locale: string }) {
               position: 'relative',
               maxWidth: 460,
               width: '100%',
-              background: 'rgba(15, 23, 42, 0.98)',
+              background: 'rgba(11, 23, 54, 0.98)',
               borderRadius: 20,
-              border: '1px solid rgba(255,255,255,0.08)',
+              border: '1px solid rgba(247,249,252,0.08)',
               padding: '26px 24px 22px',
-              boxShadow: '0 32px 80px rgba(15, 23, 42, 0.5)',
-              color: '#e2e8f0',
+              boxShadow: '0 32px 80px rgba(11, 23, 54, 0.5)',
+              color: '#f7f9fc',
               fontFamily: 'var(--font-body)',
             }}
           >
@@ -414,7 +414,7 @@ export default function CookieConsentBanner({ locale }: { locale: string }) {
                 borderRadius: 10,
                 border: '1px solid rgba(148,163,184,0.35)',
                 background: 'transparent',
-                color: '#cbd5e1',
+                color: '#d0d5dd',
                 fontSize: 18,
                 lineHeight: 1,
                 cursor: 'pointer',
@@ -441,11 +441,11 @@ export default function CookieConsentBanner({ locale }: { locale: string }) {
             >
               🍪 {t.modalTitle}
             </p>
-            <p style={{ margin: '0 0 16px 0', fontSize: '0.84rem', color: '#cbd5e1', lineHeight: 1.5 }}>
+            <p style={{ margin: '0 0 16px 0', fontSize: '0.84rem', color: '#d0d5dd', lineHeight: 1.5 }}>
               {t.body}{' '}
               <a
                 href={`/${locale}/cookies/`}
-                style={{ color: '#8FC436', textDecoration: 'underline', textUnderlineOffset: 3 }}
+                style={{ color: '#22B573', textDecoration: 'underline', textUnderlineOffset: 3 }}
               >
                 {t.policyLabel}
               </a>
@@ -499,7 +499,7 @@ export default function CookieConsentBanner({ locale }: { locale: string }) {
             position: 'fixed',
             inset: 0,
             zIndex: 10000,
-            background: 'rgba(15, 23, 42, 0.55)',
+            background: 'rgba(11, 23, 54, 0.55)',
             backdropFilter: 'blur(4px)',
             WebkitBackdropFilter: 'blur(4px)',
             display: 'flex',
@@ -515,14 +515,14 @@ export default function CookieConsentBanner({ locale }: { locale: string }) {
             style={{
               maxWidth: 480,
               width: '100%',
-              background: 'rgba(15, 23, 42, 0.98)',
+              background: 'rgba(11, 23, 54, 0.98)',
               backdropFilter: 'blur(20px)',
               WebkitBackdropFilter: 'blur(20px)',
               borderRadius: 20,
-              border: '1px solid rgba(255,255,255,0.08)',
+              border: '1px solid rgba(247,249,252,0.08)',
               padding: 28,
-              boxShadow: '0 32px 80px rgba(15, 23, 42, 0.5)',
-              color: '#e2e8f0',
+              boxShadow: '0 32px 80px rgba(11, 23, 54, 0.5)',
+              color: '#f7f9fc',
               fontFamily: 'var(--font-body)',
             }}
           >
@@ -616,7 +616,7 @@ function CategoryRow({
         alignItems: 'flex-start',
         gap: 16,
         padding: '14px 0',
-        borderTop: '1px solid rgba(255,255,255,0.06)',
+        borderTop: '1px solid rgba(247,249,252,0.06)',
       }}
     >
       <div style={{ flex: 1, minWidth: 0 }}>
@@ -626,8 +626,8 @@ function CategoryRow({
             <span
               style={{
                 fontSize: '0.65rem',
-                color: '#8FC436',
-                background: 'rgba(143, 196, 54, 0.12)',
+                color: '#22B573',
+                background: 'rgba(34, 181, 115, 0.12)',
                 padding: '2px 8px',
                 borderRadius: 99,
                 fontWeight: 600,
@@ -666,7 +666,7 @@ function Toggle({
         height: 22,
         borderRadius: 999,
         border: 'none',
-        background: checked ? '#8FC436' : '#334155',
+        background: checked ? '#22B573' : '#334155',
         position: 'relative',
         cursor: disabled ? 'not-allowed' : 'pointer',
         opacity: disabled ? 0.6 : 1,
@@ -684,7 +684,7 @@ function Toggle({
           borderRadius: 99,
           background: 'white',
           transition: 'left 180ms ease',
-          boxShadow: '0 1px 3px rgba(0,0,0,0.3)',
+          boxShadow: '0 1px 3px rgba(11,23,54,0.3)',
         }}
       />
     </button>
@@ -706,29 +706,29 @@ const btnChoiceBase: React.CSSProperties = {
 };
 
 const btnChoicePrimary: React.CSSProperties = {
-  border: '1px solid #8FC436',
-  background: '#8FC436',
-  color: '#0f172a',
+  border: '1px solid #22B573',
+  background: '#22B573',
+  color: '#0b1736',
 };
 
 const btnChoiceSecondary: React.CSSProperties = {
   border: '1px solid rgba(148,163,184,0.45)',
   background: 'transparent',
-  color: '#e2e8f0',
+  color: '#f7f9fc',
 };
 
 const btnPrimaryStyle: React.CSSProperties = {
   padding: '6px 14px',
   borderRadius: 10,
   border: 'none',
-  background: '#8FC436',
-  color: '#0f172a',
+  background: '#22B573',
+  color: '#0b1736',
   fontFamily: 'var(--font-body)',
   fontSize: '0.8rem',
   fontWeight: 700,
   cursor: 'pointer',
   transition: 'all 180ms ease',
-  boxShadow: '0 2px 8px rgba(143, 196, 54, 0.3)',
+  boxShadow: '0 2px 8px rgba(34, 181, 115, 0.3)',
 };
 
 const btnSecondaryStyle: React.CSSProperties = {
@@ -736,7 +736,7 @@ const btnSecondaryStyle: React.CSSProperties = {
   borderRadius: 10,
   border: '1px solid rgba(148,163,184,0.3)',
   background: 'transparent',
-  color: '#cbd5e1',
+  color: '#d0d5dd',
   fontFamily: 'var(--font-body)',
   fontSize: '0.8rem',
   fontWeight: 600,
