@@ -5,7 +5,6 @@ import { ShieldCheck, Download } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import { trackEvent } from '@/lib/analytics';
-import { varianteBadge } from '@/lib/esperimento';
 import PastigliaStato from '@/components/PastigliaStato';
 import { DEFAULT_LOCALE, getLocaleFromPathname, localizePath } from '@/lib/i18n/locale-routing';
 
@@ -19,9 +18,11 @@ export default function DemoReportBanner() {
   const d = getDictionary(locale).home_sections.demo_banner;
   // A57, prova n.2: la pastiglia "Sigillato" con icona e parola contro il
   // riquadro nudo. Si legge su `demo_report_download`, come tendenza.
-  // La variante la stampa sull'<html> lo script in lib/esperimento.ts prima
-  // del primo disegno, quindi qui e' gia' decisa e non fa saltare la pagina.
-  const conPastiglia = varianteBadge() === 'b';
+  // 24/09/2026: la pastiglia si rende SEMPRE e la mostra solo il CSS
+  // ([data-exp-badge='b'] .exp-badge-b in globals.css). Prima la decideva il
+  // render leggendo l'attributo: il server non lo conosce, quindi per meta' dei
+  // visitatori l'HTML non coincideva (React #418) e React ricostruiva tutta la
+  // home nel browser, con il costo in caricamento che ne segue.
 
   return (
     <div className="rounded-2xl border border-emerald-200 bg-white overflow-hidden shadow-sm">
@@ -36,9 +37,9 @@ export default function DemoReportBanner() {
           </div>
           <div className="flex flex-wrap items-center gap-2">
             <span className="text-slate-800 font-bold text-sm">{d.title}</span>
-            {conPastiglia && (
+            <span className="exp-badge-b">
               <PastigliaStato stato="sigillato" locale={locale ?? DEFAULT_LOCALE} />
-            )}
+            </span>
           </div>
         </div>
       </div>

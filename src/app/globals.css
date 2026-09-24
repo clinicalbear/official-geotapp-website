@@ -1290,6 +1290,10 @@ table, .num, .prezzo, .calc .box, .stats b, .kpi {
    cambia solo il colore, altrimenti non si sta misurando il colore.
    ══════════════════════════════════════════════════════════════════════ */
 
+/* Esperimento badge: la pastiglia esiste sempre nell'HTML, la variante la accende. */
+.exp-badge-b { display: none; }
+[data-exp-badge='b'] .exp-badge-b { display: inline-flex; }
+
 [data-exp-cta='b'] .b1,
 [data-exp-cta='b'] .nv-cta,
 [data-exp-cta='b'] .btn-ring,
