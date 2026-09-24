@@ -521,10 +521,12 @@ export default async function LocaleLayout({ children, params }: Props) {
         <Script id="google-consent-default" strategy="beforeInteractive">
           {buildConsentDefaultScript()}
         </Script>
-        <Script
-          strategy="lazyOnload"
-          src="https://www.googletagmanager.com/gtag/js?id=G-87PN0GEMW4"
-        />
+        {/* gtag.js (191 KB, ~0,6 s di main thread su mobile) parte alla prima interazione o
+            4 s dopo il load: prima bloccava il telefono proprio mentre la pagina compariva.
+            I comandi gtag() nel frattempo si accodano in dataLayer, niente va perso. */}
+        <Script id="gtag-loader" strategy="afterInteractive">
+          {`(function(){var done=false;function go(){if(done)return;done=true;['scroll','pointerdown','keydown','touchstart'].forEach(function(e){removeEventListener(e,go,true)});var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-87PN0GEMW4';document.head.appendChild(s);}['scroll','pointerdown','keydown','touchstart'].forEach(function(e){addEventListener(e,go,{capture:true,passive:true,once:true})});if(document.readyState==='complete'){setTimeout(go,4000)}else{addEventListener('load',function(){setTimeout(go,4000)})}})();`}
+        </Script>
         <Script id="google-analytics" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];

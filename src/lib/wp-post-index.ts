@@ -26,6 +26,7 @@
 // per i soli id scelti, con `include=`.
 
 import { detectPostLocale, toBlogLocale } from '@/lib/blog-locale';
+import { resetSharedSWR, sharedSWR } from '@/lib/shared-swr';
 
 const WP = 'https://blog.geotapp.com';
 const WP_HEADERS = {
@@ -103,6 +104,7 @@ const indexCache = new Map<number, { at: number; posts: WpIndexEntry[] }>();
 /** Svuota le cache in memoria. Serve ai test. */
 export function resetWpPostIndexCache(): void {
   indexCache.clear();
+  resetSharedSWR();
   categorySlugCache.clear();
   categoryIdCache.clear();
 }
@@ -128,17 +130,30 @@ export function getPostIndex(
 export async function getPostIndex(options: PostIndexOptions = {}): Promise<WpIndexEntry[]> {
   const { maxPages = MAX_PAGES, withContent = false } = options;
   const cap = Math.max(1, Math.min(maxPages, MAX_PAGES));
-  const fields = withContent ? POST_FIELDS : INDEX_FIELDS;
   const cacheKey = withContent ? -cap : cap;
   const cached = indexCache.get(cacheKey);
   if (cached && Date.now() - cached.at < CACHE_TTL_MS) return cached.posts;
+  // Copia condivisa tra isolate (shared-swr.ts): un isolate freddo non ripagina l'archivio.
+  const shared = await sharedSWR(`post-index:${cacheKey}`, () => loadPostIndex(cap, withContent), {
+    freshMs: CACHE_TTL_MS,
+    keep: (v) => v.length > 0,
+  });
+  if (shared && shared.length > 0) {
+    indexCache.set(cacheKey, { at: Date.now(), posts: shared });
+    return shared;
+  }
+  return cached?.posts ?? [];
+}
+
+async function loadPostIndex(cap: number, withContent: boolean): Promise<WpIndexEntry[] | null> {
+  const fields = withContent ? POST_FIELDS : INDEX_FIELDS;
 
   const first = await wpJsonWithHeaders<WpIndexEntry[]>(
     `/wp-json/wp/v2/posts/?per_page=${PER_PAGE}&page=1&status=publish&orderby=date&order=desc&_fields=${fields}`,
   );
-  // Su fallimento si tiene quello che c'era: meglio un indice vecchio di un'ora che una
-  // sezione vuota, che e' esattamente il modo in cui questo bug e' passato inosservato.
-  if (!first || !Array.isArray(first.data)) return cached?.posts ?? [];
+  // Su fallimento null: shared-swr tiene la copia vecchia invece di una sezione vuota,
+  // che e' esattamente il modo in cui questo bug era passato inosservato.
+  if (!first || !Array.isArray(first.data)) return null;
 
   const totalPages = Math.min(
     parseInt(first.headers.get('x-wp-totalpages') ?? '1', 10) || 1,
@@ -160,7 +175,6 @@ export async function getPostIndex(options: PostIndexOptions = {}): Promise<WpIn
   const seen = new Set<number>();
   const unique = posts.filter((p) => (seen.has(p.id) ? false : (seen.add(p.id), true)));
 
-  indexCache.set(cacheKey, { at: Date.now(), posts: unique });
   return unique;
 }
 

@@ -45,10 +45,10 @@ export default async function BlogLayout({ children }: { children: ReactNode }) 
         <Script id="google-consent-default" strategy="beforeInteractive">
           {buildConsentDefaultScript()}
         </Script>
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-87PN0GEMW4"
-          strategy="afterInteractive"
-        />
+        {/* gtag.js alla prima interazione o 4 s dopo il load (vedi [locale]/layout.tsx). */}
+        <Script id="gtag-loader" strategy="afterInteractive">
+          {`(function(){var done=false;function go(){if(done)return;done=true;['scroll','pointerdown','keydown','touchstart'].forEach(function(e){removeEventListener(e,go,true)});var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-87PN0GEMW4';document.head.appendChild(s);}['scroll','pointerdown','keydown','touchstart'].forEach(function(e){addEventListener(e,go,{capture:true,passive:true,once:true})});if(document.readyState==='complete'){setTimeout(go,4000)}else{addEventListener('load',function(){setTimeout(go,4000)})}})();`}
+        </Script>
         <Script id="gtag-init" strategy="afterInteractive">
           {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}var ua=navigator.userAgent||'';var isBot=/bot|crawl|spider|headless|phantom|puppet|selenium|playwright|wget|curl|python|scrapy|httpclient/i.test(ua)||!navigator.languages||navigator.languages.length===0||navigator.webdriver===true;if(!isBot&&window.__gtSkip!==true){gtag('js',new Date());gtag('config','G-87PN0GEMW4');}`}
         </Script>

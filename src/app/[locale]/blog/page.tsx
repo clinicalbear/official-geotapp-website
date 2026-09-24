@@ -7,6 +7,7 @@ import type { AppLocale } from '@/lib/i18n/config';
 import BlogClient, { type Post } from './BlogClient';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { detectPostLocale } from '@/lib/blog-locale';
+import { sharedSWR } from '@/lib/shared-swr';
 
 const WP = 'https://blog.geotapp.com';
 const HEADERS = { host: 'blog.geotapp.com', 'x-geotapp-proxy': '1', 'x-forwarded-proto': 'https' };
@@ -184,44 +185,39 @@ async function readSharedPosts(locale: string): Promise<Post[] | null> {
   }
 }
 
-async function writeSharedPosts(locale: string, posts: Post[]): Promise<void> {
-  try {
-    const cs = (globalThis as any).caches;
-    if (!cs?.default) return;
-    const res = new Response(JSON.stringify(posts), {
-      headers: { 'content-type': 'application/json', 'cache-control': 'max-age=86400' },
-    });
-    await cs.default.put(SHARED_KEY(locale), res);
-  } catch {
-    /* best-effort: la cache condivisa è un di più, non deve mai rompere la richiesta */
-  }
-}
-
 async function fetchPosts(locale: string): Promise<Post[]> {
   const cached = POST_CACHE.get(locale);
   if (cached && Date.now() - cached.ts < CACHE_TTL_MS) return cached.posts;
+  // Copia condivisa tra isolate con rinfresco in background (shared-swr.ts). Prima un
+  // isolate freddo riscaricava da WP i 1285 articoli completi: 18 secondi al cliente.
+  // Se WP fallisce e non esiste nessuna copia, loadPosts lancia -> 500 come prima
+  // (mai un 200 "blog vuoto", che Google leggerebbe come soft-404).
   try {
-    const all = await fetchAllPosts();
-    let posts = await buildPostList(all, locale);
-    // Fallback to English if no posts exist for this locale
-    if (posts.length === 0 && locale !== 'en') {
-      posts = await buildPostList(all, 'en');
-    }
-    if (posts.length > 0) {
+    const posts = await sharedSWR(`blog-index:${locale}`, () => loadPosts(locale), {
+      freshMs: 30 * 60 * 1000,
+      keep: (v) => v.length > 0,
+    });
+    if (posts && posts.length > 0) {
       POST_CACHE.set(locale, { posts, ts: Date.now() });
-      await writeSharedPosts(locale, posts);
-      return posts;
     }
-    // WP ha risposto correttamente ma non risultano post: empty-state legittimo, HTTP 200.
-    return [];
+    return posts ?? [];
   } catch {
-    // WP irraggiungibile/errore: serviamo stale, prima dalla in-memory poi dalla cache condivisa
-    // tra isolate; solo se non esiste NESSUNA copia buona si arriva al 500 (mai soft-404 vuoto).
     if (cached) return cached.posts;
     const shared = await readSharedPosts(locale);
     if (shared && shared.length > 0) return shared;
     throw new Error('Blog temporarily unavailable');
   }
+}
+
+async function loadPosts(locale: string): Promise<Post[]> {
+  const all = await fetchAllPosts();
+  let posts = await buildPostList(all, locale);
+  // Fallback to English if no posts exist for this locale
+  if (posts.length === 0 && locale !== 'en') {
+    posts = await buildPostList(all, 'en');
+  }
+  // WP ha risposto ma non risultano post: empty-state legittimo, HTTP 200.
+  return posts;
 }
 
 export { generateStaticParams };
