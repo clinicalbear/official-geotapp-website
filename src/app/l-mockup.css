@@ -64,9 +64,6 @@ summary::-webkit-details-marker{display:none}
    dove l'LCP è verde, resta cinematografico com'era. ── */
 @media(max-width:900px){
   .ph .r,.ph .r-l,.ph .r-r,.ph .r-s{opacity:1;transform:none;transition:none}
-  /* il titolo della home fermo e subito dipinto: e' l'LCP, e l'animazione su un telefono
-     lento partiva solo dopo gli script (LCP 4,3-5,3 s il 24/09/2026) */
-  .op h1 span b{animation:none;transform:none}
 }
 :root{--ink:#0B1736;--paper:#F7F9FC;--seal:#22B573;--lime:#22B573;--sky:#19B5D8;
 /* 🔴 --seal-testo: il verde QUANDO FA TESTO su fondo chiaro.
@@ -1240,3 +1237,11 @@ a[class*="bg-emerald-500"]{background-color:#10b981 !important;color:#fff !impor
 .lp-home .acc .dev .sheet img{aspect-ratio:auto;height:auto}
 .lp-home .acc .dev .sheet::after{content:'';position:absolute;left:0;right:0;bottom:0;height:70px;
   background:linear-gradient(180deg,rgba(255,255,255,0),#fff 85%);pointer-events:none}
+
+/* Titolo della home su telefono: fermo e subito dipinto, e' l'LCP (4,3-5,3 s il
+   24/09/2026 perche' l'animazione partiva solo dopo gli script). Sta IN FONDO al file:
+   la regola base .op h1 span b e' piu' in basso del blocco mobile in testa e lo
+   sovrascriveva, quindi anche l'accorciamento dell'01/08 non aveva mai effetto. */
+@media(max-width:900px){
+  .op h1 span b{animation:none;transform:none}
+}
