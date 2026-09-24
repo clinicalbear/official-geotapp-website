@@ -50,3 +50,11 @@
 .lp-prodotto-verifier .rows li { border-bottom: 0; }
 .lp-prodotto-verifier details { border-top: 0; }
 .lp-prodotto-verifier details:last-of-type { border-bottom: 0; }
+
+/* Chiusura: la foto del committente scende di 130px, altrimenti la testa resta
+   tagliata (Michele Angelo Petraroli, 24/09/2026). Solo da tablet in su: sul
+   telefono la foto non sborda in altezza e lo spostamento lascerebbe una
+   striscia vuota. A 1440px restano ~9px scoperti, coperti dallo zoom di kb. */
+@media (min-width:901px){
+  .lp-prodotto-verifier .end img.bg{object-position:center calc(58% + 130px)}
+}
