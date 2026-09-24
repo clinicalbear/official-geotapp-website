@@ -118,3 +118,39 @@ export function resetSharedSWR(): void {
   memory.clear();
   inFlight.clear();
 }
+
+/**
+ * Come sharedSWR ma non aspetta mai il loader: se non esiste nessuna copia la prepara
+ * dopo la risposta e intanto restituisce null. Per i dati accessori (es. tempi di
+ * lettura) che non devono rallentare la pagina.
+ */
+export async function sharedPeek<T>(
+  key: string,
+  loader: () => Promise<T | null>,
+  { freshMs, keep = () => true }: SwrOptions<T>,
+): Promise<T | null> {
+  const now = Date.now();
+  const mem = memory.get(key) as Entry<T> | undefined;
+  const entry = mem ?? (await readShared<T>(key));
+  if (entry) {
+    if (!mem) memory.set(key, entry);
+    if (now - entry.ts > freshMs) refreshLater(key, loader, keep as (v: never) => boolean);
+    return entry.value;
+  }
+  refreshLater(key, loader, keep as (v: never) => boolean);
+  return null;
+}
+
+/** Esegue fn su tutti gli elementi, al massimo `limit` alla volta, mantenendo l'ordine. */
+export async function mapLimit<I, O>(items: I[], limit: number, fn: (item: I) => Promise<O>): Promise<O[]> {
+  const out = new Array<O>(items.length);
+  let next = 0;
+  const workers = Array.from({ length: Math.min(limit, items.length) }, async () => {
+    while (next < items.length) {
+      const i = next++;
+      out[i] = await fn(items[i]);
+    }
+  });
+  await Promise.all(workers);
+  return out;
+}

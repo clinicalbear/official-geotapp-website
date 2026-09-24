@@ -26,7 +26,7 @@
 // per i soli id scelti, con `include=`.
 
 import { detectPostLocale, toBlogLocale } from '@/lib/blog-locale';
-import { resetSharedSWR, sharedSWR } from '@/lib/shared-swr';
+import { mapLimit, resetSharedSWR, sharedSWR } from '@/lib/shared-swr';
 
 const WP = 'https://blog.geotapp.com';
 const WP_HEADERS = {
@@ -162,12 +162,15 @@ async function loadPostIndex(cap: number, withContent: boolean): Promise<WpIndex
 
   const posts: WpIndexEntry[] = [...first.data];
   if (totalPages > 1) {
-    const rest = await Promise.all(
-      Array.from({ length: totalPages - 1 }, (_, i) =>
+    // Tre alla volta: con 12 richieste insieme WordPress ne lasciava cadere alcune in
+    // timeout (log del Worker 24/09/2026) e l'indice restava bucato.
+    const rest = await mapLimit(
+      Array.from({ length: totalPages - 1 }, (_, i) => i + 2),
+      3,
+      (page) =>
         wpJson<WpIndexEntry[]>(
-          `/wp-json/wp/v2/posts/?per_page=${PER_PAGE}&page=${i + 2}&status=publish&orderby=date&order=desc&_fields=${fields}`,
+          `/wp-json/wp/v2/posts/?per_page=${PER_PAGE}&page=${page}&status=publish&orderby=date&order=desc&_fields=${fields}`,
         ),
-      ),
     );
     for (const page of rest) if (Array.isArray(page)) posts.push(...page);
   }

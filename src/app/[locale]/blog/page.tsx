@@ -7,7 +7,7 @@ import type { AppLocale } from '@/lib/i18n/config';
 import BlogClient, { type Post } from './BlogClient';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { detectPostLocale } from '@/lib/blog-locale';
-import { sharedSWR } from '@/lib/shared-swr';
+import { mapLimit, sharedPeek, sharedSWR } from '@/lib/shared-swr';
 
 const WP = 'https://blog.geotapp.com';
 const HEADERS = { host: 'blog.geotapp.com', 'x-geotapp-proxy': '1', 'x-forwarded-proto': 'https' };
@@ -58,7 +58,9 @@ function normalizeUrl(link: string, slug: string): string {
 
 async function fetchAllPosts(): Promise<{ id: number; slug: string; title: any; excerpt: any; date: string; link: string; featured_media: number; categories: number[]; class_list?: string[]; content?: any }[]> {
   // class_list carries the language-suffixed category used by detectPostLocale.
-  const FIELDS = 'id,slug,title,excerpt,content,date,link,featured_media,categories,class_list';
+  // Senza `content`: il testo intero dei 1285 articoli erano ~14 MB a ogni render a freddo,
+  // solo per il tempo di lettura. Ora quello arriva da readingTimes() in background.
+  const FIELDS = 'id,slug,title,excerpt,date,link,featured_media,categories,class_list';
   // Lancia su fallimento (rete/non-200): distingue "WP irraggiungibile" da "WP ok ma 0 post".
   const first = await wpFetchOrThrow(
     `${WP}/wp-json/wp/v2/posts/?per_page=100&page=1&_fields=${FIELDS}&status=publish`,
@@ -67,12 +69,13 @@ async function fetchAllPosts(): Promise<{ id: number; slug: string; title: any; 
   const firstData = await first.json();
 
   const rest = totalPages > 1
-    ? await Promise.all(
-        Array.from({ length: totalPages - 1 }, (_, i) =>
-          wpFetch(`${WP}/wp-json/wp/v2/posts/?per_page=100&page=${i + 2}&_fields=${FIELDS}&status=publish`)
+    ? await mapLimit(
+        Array.from({ length: totalPages - 1 }, (_, i) => i + 2),
+        3,
+        (page) =>
+          wpFetch(`${WP}/wp-json/wp/v2/posts/?per_page=100&page=${page}&_fields=${FIELDS}&status=publish`)
             .then((r) => r.ok ? r.json() : [])
             .catch(() => [])
-        )
       )
     : [];
 
@@ -128,17 +131,47 @@ async function fetchMediaMap(ids: number[]): Promise<Map<number, string>> {
 }
 
 
+/**
+ * Minuti di lettura per id, calcolati dal testo intero ma FUORI dalla richiesta: la prima
+ * volta la pagina esce senza minuti e la mappa si prepara dopo la risposta (shared-swr).
+ */
+async function readingTimes(): Promise<Record<number, number> | null> {
+  return sharedPeek<Record<number, number>>(
+    'blog-reading-times',
+    async () => {
+      const first = await wpFetch(`${WP}/wp-json/wp/v2/posts/?per_page=100&page=1&_fields=id,content&status=publish`);
+      if (!first.ok) return null;
+      const totalPages = parseInt(first.headers.get('x-wp-totalpages') ?? '1', 10);
+      const pages: Array<Array<{ id: number; content?: { rendered?: string } }>> = [await first.json()];
+      const rest = await mapLimit(
+        Array.from({ length: Math.max(0, totalPages - 1) }, (_, i) => i + 2),
+        2,
+        (page) =>
+          wpFetch(`${WP}/wp-json/wp/v2/posts/?per_page=100&page=${page}&_fields=id,content&status=publish`)
+            .then((r) => (r.ok ? r.json() : []))
+            .catch(() => []),
+      );
+      pages.push(...rest);
+      const out: Record<number, number> = {};
+      for (const p of pages.flat()) {
+        const words = stripHtml(p.content?.rendered ?? '').trim().split(/\s+/).filter(Boolean).length;
+        out[p.id] = Math.max(1, Math.ceil(words / 200));
+      }
+      return out;
+    },
+    { freshMs: 6 * 60 * 60 * 1000, keep: (v) => Object.keys(v).length > 0 },
+  );
+}
+
 async function buildPostList(all: Awaited<ReturnType<typeof fetchAllPosts>>, locale: string): Promise<Post[]> {
   const catMap = await fetchCategoryMap(locale);
   const filtered = all.filter((p) => detectPostLocale(p) === locale);
   if (filtered.length === 0) return [];
   const mediaIds = [...new Set(filtered.map((p) => p.featured_media).filter((id) => id > 0))];
-  const mediaMap = await fetchMediaMap(mediaIds);
+  const [mediaMap, minutes] = await Promise.all([fetchMediaMap(mediaIds), readingTimes()]);
 
   return filtered.map((p) => {
-    const contentText = stripHtml(p.content?.rendered ?? '');
-    const wordCount = contentText.trim() ? contentText.trim().split(/\s+/).length : 0;
-    const readingTime = Math.max(1, Math.ceil(wordCount / 200));
+    const readingTime = minutes?.[p.id] ?? 0;
     const cats = (p.categories ?? [])
       .map((id: number) => catMap.get(id))
       .filter(Boolean) as Array<{ slug: string; name: string }>;
