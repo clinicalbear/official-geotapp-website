@@ -1220,3 +1220,22 @@ a[class*="bg-emerald-500"]{background-color:#10b981 !important;color:#fff !impor
 /* dentro i form, .two e' solo una griglia: niente cornici del pannello doppio */
 .form .two{gap:20px;background:transparent}
 .form .two>div{background:transparent;padding:0}
+/* Pannelli prodotto della home: il device sta DENTRO il pannello, con margine.
+   Prima era ancorato a top:63% e dimensionato in pixel fissi: telefono (560px) e
+   rapportino (555px) uscivano dal fondo del pannello e venivano tagliati, e il
+   rapportino era largo 248px, illeggibile. Adesso l'area del device va dal
+   margine alto al margine basso del pannello, il device ci sta centrato e si
+   misura sull'altezza disponibile. Il rapportino e' piu' largo e mostra la
+   parte alta (intestazione e riquadro di verifica col QR), sfumando in fondo. */
+.lp-home .acc{--acc-m:56px}
+.lp-home .acc .dev{top:var(--acc-m) !important;bottom:var(--acc-m);right:4%;max-width:42%;
+  display:flex;align-items:center;justify-content:flex-end;transform:scale(.94)}
+.lp-home .acc .p:first-child .dev,.lp-home .acc .p:hover .dev{transform:scale(1)}
+.lp-home .acc:hover .p .dev{transform:scale(.94)}
+.lp-home .acc:hover .p:hover .dev{transform:scale(1)}
+.lp-home .acc .dev .phone{height:min(560px,100%);width:auto;max-width:100%}
+.lp-home .acc .dev .browser{width:min(600px,100%) !important}
+.lp-home .acc .dev .sheet{width:min(440px,100%);max-height:100%;overflow:hidden;position:relative}
+.lp-home .acc .dev .sheet img{aspect-ratio:auto;height:auto}
+.lp-home .acc .dev .sheet::after{content:'';position:absolute;left:0;right:0;bottom:0;height:70px;
+  background:linear-gradient(180deg,rgba(255,255,255,0),#fff 85%);pointer-events:none}
