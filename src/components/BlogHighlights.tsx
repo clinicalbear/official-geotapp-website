@@ -104,7 +104,7 @@ export default async function BlogHighlights({ locale, categoryId, className = '
             <Link
               key={post.id}
               href={post.url}
-              className="group flex flex-col rounded-2xl border border-slate-200 bg-white p-7 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+              className="group flex flex-col rounded-2xl bg-white p-7 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
             >
               <p className="text-sm text-slate-400 mb-3 font-medium">
                 {new Date(post.date).toLocaleDateString(locale, { day: 'numeric', month: 'long', year: 'numeric' })}

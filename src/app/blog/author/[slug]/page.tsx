@@ -203,7 +203,7 @@ export default async function AuthorPage({
                   <Link
                     key={p.id}
                     href={href}
-                    className="group flex flex-col rounded-2xl overflow-hidden border border-slate-200 hover:border-slate-400 transition-colors bg-white"
+                    className="group flex flex-col rounded-2xl overflow-hidden transition-colors bg-white"
                   >
                     {cover && (
                       <div className="aspect-[16/9] overflow-hidden bg-slate-100">
