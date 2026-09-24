@@ -48,15 +48,15 @@ const HUB_COPY: Record<
 // Stesse foto della griglia settori della home (HomeClient.tsx SETTORI_IMGS):
 // solo bg1/bg2/bg3 disponibili, riusate con object-position diversa per varietà.
 const CARD_IMG: Record<string, { img: string; pos: string }> = {
-  installatori: { img: '/bg1.webp', pos: 'center 42%' },
-  pulizie: { img: '/bg2.webp', pos: 'center 38%' },
-  sicurezza: { img: '/bg3.webp', pos: 'center 40%' },
-  elettricisti: { img: '/settore-elettricisti.webp', pos: 'center 40%' },
-  idraulici: { img: '/settore-idraulici.webp', pos: 'center 42%' },
-  termoidraulici: { img: '/settore-termoidraulici.webp', pos: 'center 42%' },
-  edilizia: { img: '/settore-edilizia.webp', pos: 'center 38%' },
-  manutenzione: { img: '/settore-manutenzione.webp', pos: 'center 42%' },
-  impianti: { img: '/settore-impianti.webp', pos: 'center 40%' },
+  installatori: { img: '/settori/installatori.webp', pos: '62% 30%' },
+  pulizie: { img: '/settori/pulizie.webp', pos: '74% 35%' },
+  sicurezza: { img: '/settori/sicurezza.webp', pos: '62% 30%' },
+  elettricisti: { img: '/settori/elettricisti.webp', pos: '67% 30%' },
+  idraulici: { img: '/settori/idraulici.webp', pos: '72% 35%' },
+  termoidraulici: { img: '/settori/termoidraulici.webp', pos: '72% 30%' },
+  edilizia: { img: '/settori/edilizia.webp', pos: '55% 35%' },
+  manutenzione: { img: '/settori/manutenzione.webp', pos: '47% 30%' },
+  impianti: { img: '/settori/impianti.webp', pos: '72% 30%' },
 };
 
 // Divide un titolo reale "Frase uno. Frase due." nelle due righe dell'h1

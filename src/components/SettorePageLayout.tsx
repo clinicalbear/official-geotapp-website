@@ -37,16 +37,16 @@ interface Props {
 // bg1 (installatore) / bg2 (pulizie) / bg3 (sicurezza), riusate con
 // object-position diversa per dare identità ai settori senza foto propria.
 const SETTORE_BG: Record<SettoreSlug, { img: string; pos: string }> = {
-  installatori:         { img: '/bg1.webp', pos: 'center 42%' },
-  pulizie:              { img: '/bg2.webp', pos: 'center 38%' },
-  sicurezza:            { img: '/bg3.webp', pos: 'center 40%' },
-  elettricisti:         { img: '/settore-elettricisti.webp', pos: 'center 40%' },
-  idraulici:            { img: '/settore-idraulici.webp', pos: 'center 42%' },
-  termoidraulici:       { img: '/settore-termoidraulici.webp', pos: 'center 38%' },
-  edilizia:             { img: '/bg1.webp', pos: '50% 30%' },
-  impianti:             { img: '/bg1.webp', pos: '70% 55%' },
-  manutenzione:         { img: '/bg3.webp', pos: '55% 50%' },
-  'impresa-di-pulizie': { img: '/bg2.webp', pos: 'center 45%' },
+  installatori:         { img: '/settori/installatori.webp', pos: '62% 30%' },
+  pulizie:              { img: '/settori/pulizie.webp', pos: '74% 35%' },
+  sicurezza:            { img: '/settori/sicurezza.webp', pos: '62% 30%' },
+  elettricisti:         { img: '/settori/elettricisti.webp', pos: '67% 30%' },
+  idraulici:            { img: '/settori/idraulici.webp', pos: '72% 35%' },
+  termoidraulici:       { img: '/settori/termoidraulici.webp', pos: '72% 30%' },
+  edilizia:             { img: '/settori/edilizia.webp', pos: '55% 35%' },
+  impianti:             { img: '/settori/impianti.webp', pos: '72% 30%' },
+  manutenzione:         { img: '/settori/manutenzione.webp', pos: '47% 30%' },
+  'impresa-di-pulizie': { img: '/settori/pulizie.webp', pos: '74% 35%' },
 };
 
 const RISORSE_LABELS: Record<string, string> = {

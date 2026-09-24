@@ -11,15 +11,15 @@ import { DEFAULT_LOCALE, getLocaleFromPathname, localizePath } from '@/lib/i18n/
  * puntano alle pagine settore vere.
  */
 const SETTORI = [
-  { slug: 'installatori',   img: '/bg1.webp', pos: 'center 42%' },
-  { slug: 'pulizie',        img: '/bg2.webp', pos: 'center 38%' },
-  { slug: 'sicurezza',      img: '/bg3.webp', pos: 'center 40%' },
-  { slug: 'elettricisti',   img: '/bg1.webp', pos: '26% 62%' },
-  { slug: 'idraulici',      img: '/bg1.webp', pos: '84% 44%' },
-  { slug: 'termoidraulici', img: '/bg1.webp', pos: '62% 74%' },
-  { slug: 'edilizia',       img: '/settore-edilizia.webp', pos: 'center 38%' },
-  { slug: 'manutenzione',   img: '/settore-manutenzione.webp', pos: 'center 42%' },
-  { slug: 'impianti',       img: '/settore-impianti.webp', pos: 'center 40%' },
+  { slug: 'installatori',   img: '/settori/installatori.webp', pos: '62% 30%' },
+  { slug: 'pulizie',        img: '/settori/pulizie.webp', pos: '74% 35%' },
+  { slug: 'sicurezza',      img: '/settori/sicurezza.webp', pos: '62% 30%' },
+  { slug: 'elettricisti',   img: '/settori/elettricisti.webp', pos: '67% 30%' },
+  { slug: 'idraulici',      img: '/settori/idraulici.webp', pos: '72% 35%' },
+  { slug: 'termoidraulici', img: '/settori/termoidraulici.webp', pos: '72% 30%' },
+  { slug: 'edilizia',       img: '/settori/edilizia.webp', pos: '55% 35%' },
+  { slug: 'manutenzione',   img: '/settori/manutenzione.webp', pos: '47% 30%' },
+  { slug: 'impianti',       img: '/settori/impianti.webp', pos: '72% 30%' },
 ] as const;
 
 export default function LSettori() {
