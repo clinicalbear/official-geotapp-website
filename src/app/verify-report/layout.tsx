@@ -19,8 +19,6 @@
  */
 
 import type { ReactNode } from 'react';
-import DictionaryBridge from '@/lib/i18n/DictionaryBridge';
-import { getDictionary } from '@/lib/i18n/dictionaries';
 import '../globals.css';
 import '../redesign-l.css';
 import '../l-mockup.css';
@@ -34,9 +32,7 @@ export default function LayoutVerifica({
   return (
     <html lang="en">
       <body className="antialiased">
-        <DictionaryBridge locale="en" dict={getDictionary('en')}>
         <main>{children}</main>
-        </DictionaryBridge>
       </body>
     </html>
   );

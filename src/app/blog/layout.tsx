@@ -22,9 +22,6 @@ import InternalTrafficBadge from '@/components/InternalTrafficBadge';
 import CookieConsentBanner from '@/components/CookieConsentBanner';
 import LEffetti from '@/components/LEffetti';
 import { buildConsentDefaultScript } from '@/lib/consent-mode';
-import DictionaryBridge from '@/lib/i18n/DictionaryBridge';
-import { getDictionary } from '@/lib/i18n/dictionaries';
-import type { AppLocale } from '@/lib/i18n/config';
 
 
 export default async function BlogLayout({ children }: { children: ReactNode }) {
@@ -59,7 +56,6 @@ export default async function BlogLayout({ children }: { children: ReactNode }) 
             Saves ~75-90ms TBT on every blog page on top of the main site. */}
       </head>
       <body className={clsx(...fontiPerLingua(locale), 'font-sans bg-background text-text-primary antialiased')}>
-        <DictionaryBridge locale={locale} dict={getDictionary(locale as AppLocale)}>
         <SiteAnalytics />
         {/* Navbar FUORI dal wrapper overflow: un antenato con overflow!=visible rompe position:sticky */}
         <Navbar />
@@ -75,7 +71,6 @@ export default async function BlogLayout({ children }: { children: ReactNode }) 
         <NewsletterModal locale={locale} />
         <InternalTrafficBadge />
         <CookieConsentBanner locale={locale} />
-              </DictionaryBridge>
       </body>
     </html>
   );

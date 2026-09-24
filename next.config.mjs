@@ -232,14 +232,6 @@ const nextConfig = {
   // cache calda (il TTFB era tornato a 288 ms, quindi non era cache fredda).
   // Se un giorno si riprova, serve estrarre il CSS critico VERO, non tutto.
   experimental: { cpus: 4 },
-  // Nel browser getDictionary legge il dizionario consegnato dal server invece di
-  // importare tutti gli 11 JSON (~1 MB, 303 KB compressi a ogni prima visita).
-  // Vedi src/lib/i18n/client-dictionary-store.ts. Il server usa sempre dictionaries.ts.
-  turbopack: {
-    resolveAlias: {
-      '@/lib/i18n/dictionaries': { browser: './src/lib/i18n/dictionaries.browser.ts' },
-    },
-  },
   trailingSlash: true,
   async rewrites() {
     return [...buildCompoundRewrites(), ...buildRewrites()];
