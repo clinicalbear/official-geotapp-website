@@ -286,7 +286,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
       {/* ── HERO fotografico ── */}
       <section className="ph img">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className="bg" src={bg.img} alt="" aria-hidden="true" style={{ objectPosition: bg.pos }} loading="lazy" />
+        <img className="bg" src={bg.img} srcSet={`${bg.img.replace('.webp', '-800.webp')} 800w, ${bg.img} 1600w`} sizes="100vw" alt="" aria-hidden="true" style={{ objectPosition: bg.pos }} loading="lazy" />
         <div className="sc" />
         <div className="crumb">
           <div className="w">

@@ -119,7 +119,7 @@ export default function SettoriPage({ locale }: Props) {
                   href={localizePath(`/settori/${c.slug}`, l)}
                 >
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={img.img} alt={c.label} loading="lazy" style={{ objectPosition: img.pos }} />
+                  <img src={img.img} srcSet={`${img.img.replace('.webp', '-800.webp')} 800w, ${img.img} 1600w`} sizes="(max-width: 900px) 100vw, 34vw" alt={c.label} loading="lazy" style={{ objectPosition: img.pos }} />
                   <div className="cp">
                     <h3>{c.label}</h3>
                     <p>{c.desc}</p>

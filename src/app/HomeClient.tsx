@@ -384,7 +384,7 @@ export default function Home({ jrSlot, fqSlot }: { jrSlot?: ReactNode; fqSlot?: 
           {seqImgs.map((src, i) => (
             <div key={src} className={`fr${scene === i ? ' on' : ''}`}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={src} alt={seqAlts[i]} loading="lazy" />
+              <img src={src} srcSet={`${src.replace('.webp', '-800.webp')} 800w, ${src} 1600w`} sizes="100vw" alt={seqAlts[i]} loading="lazy" />
             </div>
           ))}
           <div className="veil" />
@@ -496,7 +496,7 @@ export default function Home({ jrSlot, fqSlot }: { jrSlot?: ReactNode; fqSlot?: 
         {prodotti.map((p) => (
           <div className="p" key={p.kk}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img className="bg" src={p.bg} alt={p.bgAlt} loading="lazy" />
+            <img className="bg" src={p.bg} srcSet={`${p.bg.replace('.webp', '-800.webp')} 800w, ${p.bg} 1600w`} sizes="(max-width: 900px) 100vw, 70vw" alt={p.bgAlt} loading="lazy" />
             <div className="sh" />
             <div className="dev">{p.dev}</div>
             <div className="ct">
@@ -572,7 +572,7 @@ export default function Home({ jrSlot, fqSlot }: { jrSlot?: ReactNode; fqSlot?: 
             return (
               <Link key={slug} className={`r-s d${Math.min(i + 1, 4)}`} href={getLink(`/settori/${slug}`)}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={img.img} alt={s?.name ?? sectorNames[slug] ?? slug} loading="lazy" style={{ objectPosition: img.pos }} />
+                <img src={img.img} srcSet={`${img.img.replace('.webp', '-800.webp')} 800w, ${img.img} 1600w`} sizes="(max-width: 900px) 100vw, 34vw" alt={s?.name ?? sectorNames[slug] ?? slug} loading="lazy" style={{ objectPosition: img.pos }} />
                 <div className="cp">
                   <h3>{s?.name ?? sectorNames[slug] ?? slug}</h3>
                   {s?.desc && <p>{s.desc}</p>}
@@ -663,7 +663,7 @@ export default function Home({ jrSlot, fqSlot }: { jrSlot?: ReactNode; fqSlot?: 
       {/* ── ultima inquadratura ── */}
       <section className="end" id="home-end">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className="bg" src="/geo-fine-serata.webp" alt={L.alt_end} loading="lazy" />
+        <img className="bg" src="/geo-fine-serata.webp" srcSet="/geo-fine-serata-800.webp 800w, /geo-fine-serata.webp 1600w" sizes="100vw" alt={L.alt_end} loading="lazy" />
         <div className="ov" />
         <div className="w">
           <h2 className="r" dangerouslySetInnerHTML={{ __html: dict.home_sections.footer_cta.title }} />

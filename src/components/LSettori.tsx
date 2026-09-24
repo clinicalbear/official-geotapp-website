@@ -42,7 +42,7 @@ export default function LSettori() {
           {SETTORI.map((s) => (
             <Link key={s.slug} href={link(`/settori/${s.slug}`)} className="l-settore">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={s.img} alt="" loading="lazy" style={{ objectPosition: s.pos }} />
+              <img src={s.img} srcSet={`${s.img.replace('.webp', '-800.webp')} 800w, ${s.img} 1600w`} sizes="(max-width: 900px) 100vw, 12vw" alt="" loading="lazy" style={{ objectPosition: s.pos }} />
               <span className="l-settore-ov" />
               <span className="l-settore-cp">
                 <b>{nomi[s.slug] ?? s.slug}</b>
