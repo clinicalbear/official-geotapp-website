@@ -46,8 +46,17 @@ import { IBM_Plex_Mono, Manrope, Source_Sans_3 } from 'next/font/google';
 // Li pagano, ma pagano MENO di prima, perche' niente e' scaricato due volte.
 // L'idea di far pagare il cirillico al solo russo, che A45 prometteva, con
 // next/font non si ottiene: o si duplica, o si condivide.
+//
+// 24/09/2026, e invece si ottiene: `subsets` decide SOLO cosa si precarica. Il CSS
+// generato contiene comunque tutti i blocchi `@font-face` (latin, latin-ext, cyrillic,
+// greek...) con il loro `unicode-range`, verificato leggendo il CSS della build. Quindi
+// con `subsets: ['latin']` le dieci lingue latine precaricano 2 file invece di 6 (circa
+// 100 KB in meno prima del titolo, e Lighthouse mobile li contava tutti), e il russo
+// scarica i file cirillici appena il browser trova il testo, senza precaricarli: al primo
+// arrivo il titolo russo passa dal ripiego a Manrope, il corpo resta sul ripiego
+// (display optional). latin-ext serve solo a caratteri che le nostre lingue non usano.
 const titoli = Manrope({
-  subsets: ['latin', 'latin-ext', 'cyrillic'],
+  subsets: ['latin'],
   variable: '--font-display',
   display: 'swap',
   fallback: ['system-ui', 'Segoe UI', 'Roboto', 'Arial', 'sans-serif'],
@@ -55,7 +64,7 @@ const titoli = Manrope({
 });
 
 const corpo = Source_Sans_3({
-  subsets: ['latin', 'latin-ext', 'cyrillic'],
+  subsets: ['latin'],
   variable: '--font-body',
   display: 'optional',
   fallback: ['Source Sans Pro', 'system-ui', 'Segoe UI', 'Roboto', 'Arial', 'sans-serif'],

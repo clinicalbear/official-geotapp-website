@@ -1,6 +1,8 @@
 'use client';
 
-import { motion } from 'framer-motion';
+// 24/09/2026: niente piu' framer-motion qui. Il nastro dei loghi sta nel footer di ogni
+// pagina e la sua dissolvenza d'ingresso da 0,3 s si portava dietro 34 KB di libreria a
+// ogni prima visita.
 
 const logoStyles = `
 .listed-on-wrapper {
@@ -277,11 +279,7 @@ function FullListedOn({ locale }: { locale: string }) {
   ];
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 12 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-40px' }}
-      transition={{ duration: 0.3 }}
+    <div
       aria-label={label}
       style={{ textAlign: 'center', padding: '40px 0 52px', position: 'relative', overflow: 'hidden' }}
     >
@@ -306,7 +304,7 @@ function FullListedOn({ locale }: { locale: string }) {
           ))}
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
 

@@ -20,7 +20,7 @@ import {
 } from '@/lib/i18n/locale-routing';
 import { trackEvent } from '@/lib/analytics';
 import { REVIEWS, resolveReviewText } from '@/data/reviews';
-import { SOURCE_LOGOS, REVIEWS_COPY } from '@/components/Reviews';
+import { SOURCE_LOGOS, REVIEWS_COPY } from '@/components/reviews-copy';
 import LNastro from '@/components/LNastro';
 
 const FeaturedIn = dynamic(() => import('@/components/FeaturedIn'), { ssr: true });

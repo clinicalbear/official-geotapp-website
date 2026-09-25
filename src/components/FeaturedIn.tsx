@@ -1,6 +1,7 @@
 'use client';
 
-import { motion } from 'framer-motion';
+// 24/09/2026: le entrate non usano piu' framer-motion (34 KB a ogni prima visita per una
+// dissolvenza) ma le classi .r di LEffetti, che fanno lo stesso in CSS su tutto il sito.
 import { PRESS_COVERAGE, hasPress, pressRel } from '@/lib/press/data';
 import { FEATURED_LABEL, featuredLabel } from '@/lib/press/labels';
 
@@ -81,11 +82,8 @@ export default function FeaturedIn({ locale }: { locale: string }) {
   const label = featuredLabel(locale);
 
   return (
-    <motion.section
-      initial={{ opacity: 0, y: 12 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-40px' }}
-      transition={{ duration: 0.3 }}
+    <section
+      className="r"
       aria-label={label}
       style={{
         textAlign: 'center',
@@ -145,6 +143,6 @@ export default function FeaturedIn({ locale }: { locale: string }) {
           )}
         </div>
       </div>
-    </motion.section>
+    </section>
   );
 }

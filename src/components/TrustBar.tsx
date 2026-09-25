@@ -1,7 +1,8 @@
 'use client';
 
 import { useRef } from 'react';
-import { motion } from 'framer-motion';
+// 24/09/2026: le entrate non usano piu' framer-motion (34 KB a ogni prima visita per una
+// dissolvenza) ma le classi .r di LEffetti, che fanno lo stesso in CSS su tutto il sito.
 import { ShieldCheck, MapPin, FileCheck } from 'lucide-react';
 
 // Claim qualitativi VERIFICABILI (no metriche inventate): i tre differenziatori
@@ -77,14 +78,10 @@ export default function TrustBar({ locale }: { locale: string }) {
   const ref = useRef<HTMLElement>(null);
 
   return (
-    <motion.section
+    <section
       ref={ref}
       aria-label="Trust signals"
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true, margin: '-60px' }}
-      transition={{ duration: 0.6 }}
-      className="relative overflow-hidden"
+      className="r relative overflow-hidden"
       style={{
         background: 'linear-gradient(135deg, #f7f9fc 0%, #f2f4f7 50%, #f7f9fc 100%)',
         borderTop: '1px solid #f7f9fc',
@@ -100,11 +97,8 @@ export default function TrustBar({ locale }: { locale: string }) {
       }} />
 
       <div className="relative z-10">
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4 }}
+        <p
+          className="r"
           style={{
             margin: '0 0 56px',
             fontFamily: 'var(--font-display)',
@@ -115,7 +109,7 @@ export default function TrustBar({ locale }: { locale: string }) {
           }}
         >
           {c.headline}
-        </motion.p>
+        </p>
 
         <div style={{
           display: 'flex',
@@ -127,13 +121,10 @@ export default function TrustBar({ locale }: { locale: string }) {
           {c.claims.map(({ title, sub }, i) => {
             const Icon = CLAIM_ICONS[i];
             return (
-              <motion.div
+              <div
                 key={title}
-                initial={{ opacity: 0, scale: 0.8, y: 20 }}
-                whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.18, type: 'spring', stiffness: 100 }}
-                style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '14px', maxWidth: '260px' }}
+                className="r-s"
+                style={{ transitionDelay: `${i * 0.18}s`, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '14px', maxWidth: '260px' }}
               >
                 <div style={{
                   width: '72px',
@@ -166,17 +157,14 @@ export default function TrustBar({ locale }: { locale: string }) {
                 }}>
                   {sub}
                 </span>
-              </motion.div>
+              </div>
             );
           })}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4, delay: 0.6 }}
-          style={{
+        <div
+          className="r"
+          style={{ transitionDelay: '.6s',
             display: 'flex',
             justifyContent: 'center',
             gap: '10px',
@@ -212,8 +200,8 @@ export default function TrustBar({ locale }: { locale: string }) {
               {sector}
             </span>
           ))}
-        </motion.div>
+        </div>
       </div>
-    </motion.section>
+    </section>
   );
 }
