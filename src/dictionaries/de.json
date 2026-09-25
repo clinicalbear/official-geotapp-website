@@ -43,6 +43,10 @@
         "title": "Konformitätsdossier",
         "desc": "Was GeoTapp tut und was nicht, mit DSGVO, Mitbestimmung und klar benannten Grenzen."
       },
+      "gpsPresenze": {
+        "title": "GPS-Zeiterfassung ohne Überwachung",
+        "desc": "Geht Standorterfassung nur beim Stempeln, ohne die Mitarbeitenden zu überwachen? Ja: was ein italienisches Gericht entschied und was GeoTapp wirklich speichert."
+      },
       "autovalutazione": {
         "title": "Sind Sie datenkonform?",
         "desc": "Schneller Test mit 9 Fragen zum Schutz von Mitarbeiterdaten: Punktzahl und zu behebende Bereiche. Kostenlos, im Browser."

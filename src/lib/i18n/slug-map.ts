@@ -229,6 +229,12 @@ export const SLUG_MAP: Record<string, Partial<Record<AppLocale, string>>> = {
     da: 'overvaagningsindeks', sv: 'overvakningsindex', nb: 'overvakingsindeks', ru: 'indeks-nablyudeniya',
     'en-us': 'surveillance-index', 'en-gb': 'surveillance-index', 'en-au': 'surveillance-index', 'en-ie': 'surveillance-index', 'en-ca': 'surveillance-index',
   },
+  'gps-presenze-senza-tracciamento': {
+    it: 'gps-presenze-senza-tracciamento', en: 'gps-attendance-without-tracking', de: 'gps-zeiterfassung-ohne-ueberwachung', nl: 'gps-aanwezigheid-zonder-volgen',
+    fr: 'gps-presence-sans-surveillance', es: 'gps-fichaje-sin-vigilancia', pt: 'gps-ponto-sem-vigilancia',
+    da: 'gps-fremmode-uden-sporing', sv: 'gps-narvaro-utan-sparning', nb: 'gps-oppmote-uten-sporing', ru: 'gps-otmetki-bez-slezhki',
+    'en-us': 'gps-attendance-without-tracking', 'en-gb': 'gps-attendance-without-tracking', 'en-au': 'gps-attendance-without-tracking', 'en-ie': 'gps-attendance-without-tracking', 'en-ca': 'gps-attendance-without-tracking',
+  },
   'stato-sorveglianza': {
     it: 'stato-sorveglianza', en: 'enforcement-in-numbers', de: 'ueberwachung-in-zahlen', nl: 'handhaving-in-cijfers',
     fr: 'surveillance-en-chiffres', es: 'vigilancia-en-cifras', pt: 'vigilancia-em-numeros',

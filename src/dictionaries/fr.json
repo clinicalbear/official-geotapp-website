@@ -43,6 +43,10 @@
         "title": "Dossier de conformité",
         "desc": "Ce que GeoTapp fait et ne fait pas, avec le RGPD, le Code du travail et les limites dites clairement."
       },
+      "gpsPresenze": {
+        "title": "GPS pour le pointage, sans surveillance",
+        "desc": "Peut-on relever la position seulement au pointage sans surveiller les salariés ? Oui : ce qu'a jugé un tribunal italien, et ce que GeoTapp enregistre réellement."
+      },
       "autovalutazione": {
         "title": "Êtes-vous conforme sur les données ?",
         "desc": "Test rapide de 9 questions sur la protection des données des salariés : score et points à corriger. Gratuit, dans votre navigateur."

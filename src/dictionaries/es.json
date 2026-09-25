@@ -43,6 +43,10 @@
         "title": "Dossier de cumplimiento",
         "desc": "Lo que GeoTapp hace y no hace, con el RGPD, el Estatuto y los límites dichos con claridad."
       },
+      "gpsPresenze": {
+        "title": "GPS para el fichaje, sin vigilar",
+        "desc": "¿Se puede registrar la posición solo al fichar sin vigilar a los empleados? Sí: qué dictaminó un tribunal italiano y qué registra realmente GeoTapp."
+      },
       "autovalutazione": {
         "title": "¿Cumples con los datos?",
         "desc": "Test rápido de 9 preguntas sobre la protección de los datos de los empleados: puntuación y áreas a corregir. Gratis, en tu navegador."

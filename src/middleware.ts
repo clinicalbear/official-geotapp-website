@@ -268,6 +268,7 @@ const SITEMAP_ROUTES: SitemapRouteEntry[] = [
   { path: '/risorse/autovalutazione-dati-dipendenti/', priority: 0.85, changeFrequency: 'monthly' },
   { path: '/risorse/politica-conservazione-dati/', priority: 0.85, changeFrequency: 'monthly' },
   { path: '/risorse/dossier-conformita/', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/risorse/gps-presenze-senza-tracciamento/', priority: 0.85, changeFrequency: 'monthly' },
   { path: '/roi-calculator/', priority: 0.75, changeFrequency: 'monthly' },
   // Pagina di iscrizione alla newsletter: indicizzabile, a differenza di /survey/.
   { path: '/newsletter/', priority: 0.6, changeFrequency: 'monthly' },
