@@ -1249,3 +1249,14 @@ a[class*="bg-emerald-500"]{background-color:#10b981 !important;color:#fff !impor
 /* 25/09/2026, home componente server: se il blog non risponde BlogHighlights rende null,
    ma la sezione che lo contiene resta nell'HTML. Prima React la scartava; qui la si nasconde. */
 .jr-wrap:has(> .w:empty){display:none}
+
+/* 25/09/2026, sequenza "Il problema che conosci già" su telefono: il titolo della
+   sezione (.hd) e' fissato in alto, il blocco con l'occhiello (.hold) era centrato in
+   altezza. Sui telefoni bassi (360x640, 390x664 con la barra del browser) l'occhiello
+   saliva fino a 94 px DENTRO il titolo. Qui i due stanno nel flusso, uno sotto l'altro,
+   con la stessa distanza in ogni lingua; foto, velo, barra, contatore restano sopra. */
+@media(max-width:900px){
+  .seq .stick{display:flex;flex-direction:column}
+  .seq .hd{position:relative}
+  .seq .hold{position:relative;inset:auto;flex:1;align-items:flex-start;padding-top:40px;z-index:4}
+}
