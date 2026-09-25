@@ -9,7 +9,7 @@ const content: SettoreContent = {
     badge: 'Programvare for Renholdsbedrifter, Facility Management og Serviceentreprenører',
     h1_line1: 'Programvare for renholdsbedrifter:',
     h1_line2: 'vakter, fotodokumentasjon og verifiserte timer, på hvert bygg',
-    subtitle: 'GeoTapp kobler Flow + TimeTracker for team spredt over flere bygg og etasjer. Dine renholdere stempler inn med GPS-verifisert smarttelefon; kontoret ser hvem som rengjorde hva, hvor og når, med fotodokumentasjon vedlagt. Ingen tvister, full etterlevelse av NHO Service-overenskomsten.',
+    subtitle: 'GeoTapp kobler Flow + TimeTracker for team spredt over flere bygg og etasjer. Dine renholdere stempler inn med GPS-verifisert smarttelefon; kontoret ser hvem som rengjorde hva, hvor og når, med fotodokumentasjon vedlagt. Data klare til enhver tvist, full etterlevelse av NHO Service-overenskomsten.',
     cta_primary: 'Prøv det på et ekte oppdrag',
     cta_note: '14 dager, opptil 50 medarbeidere i felt, uten kredittkort.',
   },
@@ -57,7 +57,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Fotodokumentasjon før og etter',
-        desc: 'Renholderne fotograferer direkte fra appen. Bilder med dato, klokkeslett og GPS: uomtvistelig bevis for levert tjeneste.',
+        desc: 'Renholderne fotograferer direkte fra appen. Bilder med dato, klokkeslett og GPS: verifiserbart bevis for levert tjeneste.',
       },
       {
         title: 'Lønnseksport for Visma Lønn og Tripletex',
@@ -89,7 +89,7 @@ const content: SettoreContent = {
     ],
   },
   cta: {
-    title: 'Slutt med tvister. Begynn å bevise.',
+    title: 'Svar på enhver tvist med data. Begynn nå.',
     subtitle: 'GeoTapp Flow og TimeTracker gir renholdsbedriften din den operative kontrollen og bevisene du virkelig trenger.',
     primary: 'Be om en demo',
     secondary: 'Se priser',

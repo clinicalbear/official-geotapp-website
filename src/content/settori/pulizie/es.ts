@@ -9,7 +9,7 @@ const content: SettoreContent = {
     badge: 'Software para Empresas de Limpieza, Facility Management y Servicios Auxiliares',
     h1_line1: 'Software para empresas de limpieza:',
     h1_line2: 'turnos, pruebas fotográficas y horas verificadas, en cada edificio',
-    subtitle: 'GeoTapp conecta Flow + TimeTracker para equipos distribuidos en múltiples edificios y plantas. Sus operarios fichan desde el móvil con GPS verificado; la oficina ve quién limpió qué, dónde y cuándo, con evidencia fotográfica adjunta. Sin disputas, con cumplimiento total del Convenio colectivo de limpieza de edificios.',
+    subtitle: 'GeoTapp conecta Flow + TimeTracker para equipos distribuidos en múltiples edificios y plantas. Sus operarios fichan desde el móvil con GPS verificado; la oficina ve quién limpió qué, dónde y cuándo, con evidencia fotográfica adjunta. Con los datos listos para cualquier disputa, y cumplimiento total del Convenio colectivo de limpieza de edificios.',
     cta_primary: 'Pruébalo en un contrato real',
     cta_note: '14 días, hasta 50 operarios de campo, sin tarjeta de crédito.',
   },
@@ -57,7 +57,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Evidencia fotográfica antes y después',
-        desc: 'Los operarios hacen fotos directamente desde la app. Imágenes con fecha, hora y GPS: prueba irrefutable del servicio prestado.',
+        desc: 'Los operarios hacen fotos directamente desde la app. Imágenes con fecha, hora y GPS: prueba verificable del servicio prestado.',
       },
       {
         title: 'Exportación de nóminas para A3nómina y Sage',
@@ -89,7 +89,7 @@ const content: SettoreContent = {
     ],
   },
   cta: {
-    title: 'Fin a las disputas. Empieza a demostrar.',
+    title: 'Responde a cada disputa con datos. Empieza ahora.',
     subtitle: 'GeoTapp Flow y TimeTracker dan a tu empresa de limpieza el control operativo y las pruebas que realmente necesitas.',
     primary: 'Solicitar una demo',
     secondary: 'Ver precios',

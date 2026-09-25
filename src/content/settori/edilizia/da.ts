@@ -36,7 +36,7 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'Medarbejderen stempler ind ved byggepladsen',
-        desc: 'Starter vagten fra smartphonen. GeoTapp registrerer reelle GPS-koordinater, tidsstempel og, om nødvendigt, fotos. Fuldautomatisk, manipulationssikkert.',
+        desc: 'Starter vagten fra smartphonen. GeoTapp registrerer reelle GPS-koordinater, tidsstempel og, om nødvendigt, fotos. Fuldautomatisk, enhver ændring kan spores.',
       },
       {
         title: 'Byggeledelsen ser alt i realtid',
@@ -49,7 +49,7 @@ const content: SettoreContent = {
     ],
   },
   differenza: {
-    title: 'Byggeplads-app: tidsregistrering eller certificering?',
+    title: 'Byggeplads-app: tidsregistrering eller verificerbart bevis?',
     subtitle: 'De fleste apps registrerer blot tidspunktet. GeoTapp producerer verificerbart bevis.',
     rows: [
       {
@@ -65,7 +65,7 @@ const content: SettoreContent = {
       {
         label: 'Ved tvist',
         competitor: 'Data ikke forsvarligt',
-        geotapp: 'Forseglet rapport, manipulationssikker',
+        geotapp: 'Forseglet rapport, enhver ændring kan spores',
       },
       {
         label: 'Byggepladsrapport',
@@ -115,7 +115,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Forseglet fotobevis',
-        desc: 'Medarbejdere tager fotos fra appen. Hvert billede er knyttet til byggepladsen med GPS og tidsstempel, manipulationssikkert efter generering.',
+        desc: 'Medarbejdere tager fotos fra appen. Hvert billede er knyttet til byggepladsen med GPS og tidsstempel, enhver ændring kan spores efter generering.',
       },
       {
         title: 'Indbygget GDPR-overholdelse',

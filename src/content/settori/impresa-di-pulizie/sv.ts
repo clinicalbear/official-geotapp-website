@@ -115,7 +115,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Försvarbara rapporter överallt',
-        desc: 'Varje rapport är digitalt signerad och manipuleringssäker. Giltig inför en kund, en inspektör eller en advokat.',
+        desc: 'Varje rapport är digitalt signerad och varje ändring kan upptäckas. En kund, en inspektör eller en advokat kan själv kontrollera den.',
       },
       {
         title: 'Schema- och teamhantering',

@@ -9,7 +9,7 @@ const content: SettoreContent = {
     badge: 'Software voor Beveiligingsbedrijven, Beveiligers en Evenementenbeveiliging',
     h1_line1: 'Aantoonbare aanwezigheid en dienstregistratie',
     h1_line2: 'voor beveiligers en beveiligingsbedrijven',
-    subtitle: 'GeoTapp Flow en TimeTracker documenteren de aanwezigheid van beveiligers op toegewezen posten met geverifieerde GPS en onveranderlijke tijdstempels. Diplomabeheer conform de CAO Particuliere Beveiliging, digitale dienstoverdracht en geogelokaliseerde incidentrapporten, alles op één platform.',
+    subtitle: 'GeoTapp Flow en TimeTracker documenteren de aanwezigheid van beveiligers op toegewezen posten met geverifieerde GPS en verzegelde tijdstempels. Diplomabeheer conform de CAO Particuliere Beveiliging, digitale dienstoverdracht en geogelokaliseerde incidentrapporten, alles op één platform.',
     cta_primary: 'Demo Aanvragen',
     cta_note: 'Vrijblijvend. Reactie binnen 12 werkuren.',
   },
@@ -18,11 +18,11 @@ const content: SettoreContent = {
     items: [
       {
         title: 'Aantonen dat beveiligers op de juiste post aanwezig waren',
-        desc: 'Een klant betwist of een beveiliger op een bepaalde tijd aanwezig was. Zonder geverifieerde GPS en onveranderlijke tijdstempels blijft het conflict open en is contractnaleving onmogelijk aan te tonen.',
+        desc: 'Een klant betwist of een beveiliger op een bepaalde tijd aanwezig was. Zonder geverifieerde GPS en verzegelde tijdstempels blijft het conflict open en is contractnaleving onmogelijk aan te tonen.',
       },
       {
         title: 'Incidentrapporten zonder locatiebewijs',
-        desc: 'Een handgeschreven incidentrapport heeft weinig bewijswaarde zonder verzegelde GPS-positie en een manipulatiebestendige tijdstempel. Papieren logboeken zijn te gemakkelijk te betwisten.',
+        desc: 'Een handgeschreven incidentrapport heeft weinig bewijswaarde zonder verzegelde GPS-positie en een verzegelde tijdstempel. Papieren logboeken zijn te gemakkelijk te betwisten.',
       },
       {
         title: 'Dienstoverdracht nog op papier',
@@ -36,7 +36,7 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'De beveiliger klokt in op de toegewezen post',
-        desc: 'GeoTapp TimeTracker registreert in- en uitklokken, GPS-positie en foto\'s met onveranderlijke tijdstempels. Elke ronde wordt automatisch gelogd via de smartphone van de beveiliger.',
+        desc: 'GeoTapp TimeTracker registreert in- en uitklokken, GPS-positie en foto\'s met verzegelde tijdstempels. Elke ronde wordt automatisch gelogd via de smartphone van de beveiliger.',
       },
       {
         title: 'De leidinggevende ziet alle posten in real time',
@@ -75,12 +75,12 @@ const content: SettoreContent = {
     subtitle: 'Wat teams ons het meest vragen voordat ze starten.',
     items: [
       {
-        q: 'Is GeoTapp geschikt voor beveiligingsbedrijven en verzegelde beveiligers?',
+        q: 'Is GeoTapp geschikt voor beveiligingsbedrijven en gecertificeerde beveiligers?',
         a: 'Ja. GeoTapp wordt gebruikt door beveiligingsbedrijven om de aanwezigheid van beveiligers op toegewezen posten met geverifieerde GPS te documenteren, dienstwisselingen te beheren en diplomavervaldata conform de CAO Particuliere Beveiliging bij te houden.',
       },
       {
         q: 'Hoe helpt GeoTapp bij het documenteren van incidentrapporten?',
-        a: 'TimeTracker koppelt elk incident aan een verzegelde GPS-positie en een onveranderlijke tijdstempel. Het gegenereerde incidentrapport bevat coördinaten, tijdstip en foto\'s, waardoor het verdedigbaar is in juridische en contractuele procedures.',
+        a: 'TimeTracker koppelt elk incident aan een verzegelde GPS-positie en een verzegelde tijdstempel. Het gegenereerde incidentrapport bevat coördinaten, tijdstip en foto\'s, waardoor het verdedigbaar is in juridische en contractuele procedures.',
       },
       {
         q: 'Ondersteunt GeoTapp digitale dienstoverdracht tussen beveiligers?',

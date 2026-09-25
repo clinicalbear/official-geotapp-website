@@ -3,13 +3,13 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'App per Installatori e Termoidraulici | GeoTapp - Rapportini GPS',
-    description: 'GeoTapp è l\'app per installatori, idraulici e termoidraulici: rapportini GPS verificati, prove fotografiche e report non alterabili. Prova gratis.',
+    description: 'GeoTapp è l\'app per installatori, idraulici e termoidraulici: rapportini GPS verificati, prove fotografiche e report dove ogni modifica è rilevabile. Prova gratis.',
   },
   hero: {
     badge: 'App per Installatori, Idraulici e Termoidraulici',
     h1_line1: 'Il cliente contesta le ore?',
     h1_line2: 'Mostragli il rapportino GPS.',
-    subtitle: 'I tuoi tecnici timbrano dallo smartphone in 5 secondi. Il sistema genera un rapportino con GPS verificato e foto, non alterabile. Quando il cliente chiede "quanto tempo ci avete messo?", hai la risposta pronta.',
+    subtitle: 'I tuoi tecnici timbrano dallo smartphone in 5 secondi. Il sistema genera un rapportino con GPS verificato e foto: ogni modifica è rilevabile. Quando il cliente chiede "quanto tempo ci avete messo?", hai la risposta pronta.',
     cta_primary: 'Prova gratis 14 giorni',
     cta_note: 'Nessuna carta di credito. Operativi dal primo giorno.',
   },
@@ -44,12 +44,12 @@ const content: SettoreContent = {
       },
       {
         title: 'Il report è la tua prova, da mostrare al cliente',
-        desc: 'A fine intervento il report è generato con dati GPS reali e prove fotografiche, non alterabile. Qualsiasi modifica è rilevabile. Il cliente può verificare l\'autenticità da solo. Quando nasce un dubbio, non devi spiegare. Devi mostrare.',
+        desc: 'A fine intervento il report è generato con dati GPS reali e prove fotografiche. Qualsiasi modifica è rilevabile. Il cliente può verificare l\'autenticità da solo. Quando nasce un dubbio, non devi spiegare. Devi mostrare.',
       },
     ],
   },
   differenza: {
-    title: 'App per installatori: timbratura o certificazione?',
+    title: 'App per installatori: timbratura o prova verificabile?',
     subtitle: 'La maggior parte delle app registra l\'orario. GeoTapp produce prove verificabili.',
     rows: [
       {
@@ -65,7 +65,7 @@ const content: SettoreContent = {
       {
         label: 'In caso di contestazione',
         competitor: 'Dato non difendibile',
-        geotapp: 'Report sigillato, non alterabile',
+        geotapp: 'Report sigillato, ogni modifica è rilevabile',
       },
       {
         label: 'Rapportino intervento',
@@ -111,7 +111,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Prove fotografiche sigillate',
-        desc: 'Il tecnico scatta foto dall\'app. Ogni immagine è collegata all\'intervento con GPS e timestamp, poi inclusa nel report, non alterabile dopo la generazione. Nessuno può modificarle senza che il sistema lo rilevi.',
+        desc: 'Il tecnico scatta foto dall\'app. Ogni immagine è collegata all\'intervento con GPS e timestamp, poi inclusa nel report. Nessuno può modificarle senza che il sistema lo rilevi.',
       },
       {
         title: 'Export per la paga',
@@ -139,7 +139,7 @@ const content: SettoreContent = {
   },
 
   trust: {
-    title: 'I nostri report non si possono alterare. Non da te. Non da noi.',
+    title: 'I nostri report: ogni modifica è rilevabile. Non da te. Non da noi.',
     body: 'I report GeoTapp sono generati dal sistema nel momento dell\'intervento. Non esiste un pannello dove "correggere" un orario o spostare una foto. Il dato è quello, firmato digitalmente, con GPS reale. Quando lo mostri a un cliente o a un avvocato, regge.',
     badge: 'Verificabile da chiunque, senza accesso al tuo account',
   },

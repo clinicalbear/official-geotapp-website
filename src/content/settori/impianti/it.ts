@@ -3,7 +3,7 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'App per Installatori e Impiantisti: Gestione Interventi GPS | GeoTapp',
-    description: 'Traccia interventi, ore e materiali per installatori e impiantisti con GPS. Prove di servizio automatiche, zero contestazioni clienti. Prova GeoTapp gratis.',
+    description: 'Traccia interventi, ore e materiali per installatori e impiantisti con GPS. Prove di servizio automatiche, dati pronti per rispondere a ogni contestazione. Prova GeoTapp gratis.',
   },
   hero: {
     badge: 'App per installatori, impiantisti e tecnici',
@@ -18,7 +18,7 @@ const content: SettoreContent = {
     items: [
       {
         title: 'I clienti contestano le ore di intervento',
-        desc: 'Timbrature GPS timestampate come prova inconfutabile. Il dato è sigillato al momento dell\'intervento, non modificabile.',
+        desc: 'Timbrature GPS timestampate come prova verificabile. Il dato è sigillato al momento dell\'intervento: ogni modifica successiva è rilevabile.',
       },
       {
         title: 'Rincorri i tecnici per sapere dove sono',
@@ -36,7 +36,7 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'Il tecnico timbra GPS all\'inizio intervento',
-        desc: 'Apre la commessa dallo smartphone. GeoTapp registra coordinate GPS reali, timestamp e foto, tutto automatico, non modificabile.',
+        desc: 'Apre la commessa dallo smartphone. GeoTapp registra coordinate GPS reali, timestamp e foto, tutto automatico: ogni modifica è rilevabile.',
       },
       {
         title: 'Le ore si registrano automaticamente per commessa',
@@ -65,7 +65,7 @@ const content: SettoreContent = {
       {
         label: 'In caso di contestazione',
         competitor: 'Dato non difendibile',
-        geotapp: 'Report sigillato, non alterabile',
+        geotapp: 'Report sigillato, ogni modifica è rilevabile',
       },
       {
         label: 'Rapportino intervento',
@@ -103,7 +103,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Prove fotografiche sigillate',
-        desc: 'Il tecnico scatta foto dall\'app. Ogni immagine è collegata all\'intervento con GPS e timestamp, non alterabile dopo la generazione.',
+        desc: 'Il tecnico scatta foto dall\'app. Ogni immagine è collegata all\'intervento con GPS e timestamp: ogni modifica successiva alla generazione è rilevabile.',
       },
       {
         title: 'Gestione commesse multi-cantiere',
@@ -134,7 +134,7 @@ const content: SettoreContent = {
     items: [
       {
         q: 'I clienti contestano le ore di intervento?',
-        a: 'Con GeoTapp le timbrature GPS sono timestampate al momento dell\'intervento e non modificabili. Costituiscono una prova inconfutabile delle ore svolte, eliminando qualsiasi contestazione.',
+        a: 'Con GeoTapp le timbrature GPS sono timestampate al momento dell\'intervento e ogni modifica è rilevabile. Sono una prova verificabile delle ore svolte quando qualcuno le mette in dubbio.',
       },
       {
         q: 'Come monitoro più squadre su commesse diverse?',
@@ -161,7 +161,7 @@ const content: SettoreContent = {
   schema_faq: [
     {
       question: 'I clienti contestano le ore di intervento?',
-      answer: 'Con GeoTapp le timbrature GPS sono timestampate al momento dell\'intervento e non modificabili. Costituiscono una prova inconfutabile delle ore svolte, eliminando qualsiasi contestazione.',
+      answer: 'Con GeoTapp le timbrature GPS sono timestampate al momento dell\'intervento e ogni modifica è rilevabile. Sono una prova verificabile delle ore svolte quando qualcuno le mette in dubbio.',
     },
     {
       question: 'Come monitoro più squadre su commesse diverse?',

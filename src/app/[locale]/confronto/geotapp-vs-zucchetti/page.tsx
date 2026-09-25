@@ -138,7 +138,7 @@ const T: Record<string, Copy> = {
   },
   en: {
     badge: 'App Comparison', h1sub: 'HR suite or proof of work?',
-    desc: 'Zucchetti runs attendance, badges, geofencing and payslips for a large share of Italian companies, all inside one ecosystem. GeoTapp does one thing, it certifies the job on site with verified GPS, sealed photos and a report the client checks alone.',
+    desc: 'Zucchetti runs attendance, badges, geofencing and payslips for a large share of Italian companies, all inside one ecosystem. GeoTapp does one thing, it seals the job on site with verified GPS, sealed photos and a report the client checks alone.',
     summary: 'In short:',
     summaryText: 'Zucchetti is the natural choice when the problem starts in the back office, with attendance to close, payroll to run and an HR department to keep moving. GeoTapp is for when the problem starts outside, at the door of a client holding an invoice because, so they say, nobody showed up on Tuesday.',
     noteTitle: 'A geofence tells you where the dot fell, not whether the dot is real',
@@ -168,7 +168,7 @@ const T: Record<string, Copy> = {
   },
   fr: {
     badge: 'Comparatif App', h1sub: 'suite RH ou preuve du travail ?',
-    desc: 'Zucchetti gère le personnel, les badges, le geofence et les bulletins dans un seul écosystème. GeoTapp fait une seule chose, il certifie l\'intervention sur le terrain avec un GPS vérifié, des photos scellées et un rapport que le donneur d\'ordre contrôle lui-même.',
+    desc: 'Zucchetti gère le personnel, les badges, le geofence et les bulletins dans un seul écosystème. GeoTapp fait une seule chose, il scelle l\'intervention sur le terrain avec un GPS vérifié, des photos scellées et un rapport que le donneur d\'ordre contrôle lui-même.',
     summary: 'En résumé :',
     summaryText: 'Zucchetti est le choix naturel quand le problème naît au bureau, avec des pointages à clôturer, une paie à produire et un service RH à faire tourner. GeoTapp sert quand le problème naît dehors, à la porte d\'un client qui retient une facture parce que, selon lui, personne n\'est passé mardi.',
     noteTitle: 'Le geofence dit où tombe le point, pas si le point est vrai',

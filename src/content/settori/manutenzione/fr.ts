@@ -41,7 +41,7 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'Le technicien pointe GPS à l\'arrivée',
-        desc: 'Il ouvre l\'intervention depuis son smartphone. GeoTapp enregistre les coordonnées GPS réelles, l\'horodatage et les photos, entièrement automatique, infalsifiable.',
+        desc: 'Il ouvre l\'intervention depuis son smartphone. GeoTapp enregistre les coordonnées GPS réelles, l\'horodatage et les photos, entièrement automatique, scellé.',
       },
       {
         title: 'Les heures et l\'intervention sont enregistrées automatiquement',
@@ -59,14 +59,14 @@ const content: SettoreContent = {
     items: [
       {
         title: 'Présence vérifiée par GPS',
-        desc: 'Chaque arrivée et départ est certifié avec GPS réel, horodatage et site assigné. Défendable face au client et aux inspecteurs.',
+        desc: 'Chaque arrivée et départ est scellé avec GPS réel, horodatage et site assigné. Défendable face au client et aux inspecteurs.',
       },
       {
         title: 'Historique de maintenance par installation',
         desc: 'Chaque intervention est liée au site ou à l\'installation. L\'historique complet est consultable et téléchargeable.',
       },
       {
-        title: 'Rapports automatiques infalsifiables',
+        title: 'Rapports automatiques scellés',
         desc: 'Après chaque intervention, le système génère un rapport scellé : heures, GPS, photos et signature numérique.',
       },
       {

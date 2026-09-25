@@ -327,7 +327,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
         <div className="w">
           <div className="hd">
             <h2 className="r">{content.pain.title}</h2>
-            <p className="r d1">{sl.pain_subtitle ?? "Clock-in apps record. They don't certify. There's an enormous difference, and you feel it the moment a dispute arises."}</p>
+            <p className="r d1">{sl.pain_subtitle ?? "Clock-in apps record. They don't seal the proof. There's an enormous difference, and you feel it the moment a dispute arises."}</p>
           </div>
           <div className="mods">
             {content.pain.items.map((item, i) => (
@@ -533,7 +533,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
                 <div className="row"><span>GPS</span><span>✓ verificato</span></div>
                 <p style={{ marginTop: 16, fontSize: 13, color: 'var(--lime)', fontWeight: 600 }}>
                   <ShieldCheck size={14} style={{ display: 'inline', marginRight: 6, verticalAlign: -2 }} />
-                  {sl.mockup_sealed ?? 'Not editable after closure'}
+                  {sl.mockup_sealed ?? 'Sealed after closure'}
                 </p>
               </div>
               <div className="mock r-s d3">

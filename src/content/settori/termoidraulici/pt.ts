@@ -3,7 +3,7 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'App para Técnicos de Aquecimento | GeoTapp - GPS, Relatórios e Provas',
-    description: 'GeoTapp é a app para instaladores termossanitários: relatórios GPS verificados, fotos de instalações e documentação inalterável. Resolva reclamações com provas reais. Experimente grátis.',
+    description: 'GeoTapp é a app para instaladores termossanitários: relatórios GPS verificados, fotos de instalações e documentação selada. Resolva reclamações com provas reais. Experimente grátis.',
   },
   hero: {
     badge: 'App para Técnicos de Aquecimento e Instaladores Termossanitários',
@@ -44,12 +44,12 @@ const content: SettoreContent = {
       },
       {
         title: 'O relatório é a sua prova',
-        desc: 'No final da intervenção o sistema gera um relatório selado: hora GPS, fotos da instalação e componentes, notas técnicas. Inalterável. O cliente pode verificá-lo de forma autónoma.',
+        desc: 'No final da intervenção o sistema gera um relatório selado: hora GPS, fotos da instalação e componentes, notas técnicas. Qualquer modificação é detetável. O cliente pode verificá-lo de forma autónoma.',
       },
     ],
   },
   differenza: {
-    title: 'App para técnicos de aquecimento: registo ou certificação?',
+    title: 'App para técnicos de aquecimento: registo ou prova verificável?',
     subtitle: 'A maioria das apps regista o ponto. GeoTapp produz provas verificáveis.',
     rows: [
       {
@@ -60,7 +60,7 @@ const content: SettoreContent = {
       {
         label: 'Em caso de reclamação',
         competitor: 'Dado não defensável',
-        geotapp: 'Relatório selado, inalterável',
+        geotapp: 'Relatório selado, modificação detetável',
       },
       {
         label: 'Documentação da intervenção',
@@ -108,7 +108,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Provas fotográficas da instalação',
-        desc: 'O técnico fotografa a partir da app durante e após a intervenção. Cada imagem está ligada a GPS e carimbo de tempo, inalterável após a geração.',
+        desc: 'O técnico fotografa a partir da app durante e após a intervenção. Cada imagem está ligada a GPS e carimbo de tempo, selada após a geração.',
       },
       {
         title: 'Relatórios digitais automáticos',
@@ -134,7 +134,7 @@ const content: SettoreContent = {
     cta: 'Comece grátis agora!',
   },
   trust: {
-    title: 'Os nossos relatórios não podem ser alterados. Não por si. Não por nós.',
+    title: 'Qualquer modificação nos nossos relatórios é visível. Não por si. Não por nós.',
     body: 'Os relatórios GeoTapp são gerados pelo sistema no momento da intervenção. Não existe nenhum painel para "corrigir" uma hora ou mover uma foto. O dado é esse, assinado digitalmente, com GPS real.',
     badge: 'Verificável por qualquer pessoa, sem acesso à sua conta',
   },
@@ -153,7 +153,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Posso usar o GeoTapp para documentar a substituição de componentes em caldeiras?',
-        a: 'Sim. O técnico fotografa a partir da app o componente retirado e o instalado. Cada imagem está ligada a GPS, carimbo de tempo e obra, incluída no relatório inalterável.',
+        a: 'Sim. O técnico fotografa a partir da app o componente retirado e o instalado. Cada imagem está ligada a GPS, carimbo de tempo e obra, incluída no relatório selado.',
       },
       {
         q: 'O GeoTapp ajuda a resolver reclamações de clientes sobre instalações?',

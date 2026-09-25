@@ -3,7 +3,7 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'Baustellen-App: GPS-Anwesenheit & Teamverwaltung | GeoTapp',
-    description: 'Verwalten Sie Anwesenheiten, Schichten und Sicherheit auf der Baustelle mit Echtzeit-GPS. Zertifizierte Stempelungen, automatische Berichte. DSGVO-konforme App für Bauunternehmen.',
+    description: 'Verwalten Sie Anwesenheiten, Schichten und Sicherheit auf der Baustelle mit Echtzeit-GPS. Versiegelte Stempelungen, automatische Berichte. DSGVO-konforme App für Bauunternehmen.',
   },
   hero: {
     badge: 'App für Bauunternehmen und Baustellen',
@@ -18,7 +18,7 @@ const content: SettoreContent = {
     items: [
       {
         title: 'Wer war auf der Baustelle und wann?',
-        desc: 'Jede GPS-Stempelung ist mit Zeitstempel und Zertifikat versehen. GeoTapp erfasst reale Koordinaten zum Zeitpunkt der Stempelung, nicht manuell eingetragen. Die Daten sind jederzeit von der Bauleitung überprüfbar.',
+        desc: 'Jede GPS-Stempelung ist mit Zeitstempel versehen und versiegelt. GeoTapp erfasst reale Koordinaten zum Zeitpunkt der Stempelung, nicht manuell eingetragen. Die Daten sind jederzeit von der Bauleitung überprüfbar.',
       },
       {
         title: 'Wie verwalten Sie Subunternehmer?',
@@ -36,7 +36,7 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'Der Arbeiter stempelt am Baustelleneingang',
-        desc: 'Startet die Schicht vom Smartphone. GeoTapp erfasst reale GPS-Koordinaten, Zeitstempel und, bei Bedarf - Fotos. Vollautomatisch, manipulationssicher.',
+        desc: 'Startet die Schicht vom Smartphone. GeoTapp erfasst reale GPS-Koordinaten, Zeitstempel und, bei Bedarf - Fotos. Vollautomatisch; jede Änderung ist erkennbar.',
       },
       {
         title: 'Der Bauleiter sieht alles in Echtzeit',
@@ -49,7 +49,7 @@ const content: SettoreContent = {
     ],
   },
   differenza: {
-    title: 'Baustellen-App: Zeiterfassung oder Zertifizierung?',
+    title: 'Baustellen-App: Zeiterfassung oder überprüfbarer Nachweis?',
     subtitle: 'Die meisten Apps erfassen nur die Uhrzeit. GeoTapp liefert überprüfbare Nachweise.',
     rows: [
       {
@@ -65,7 +65,7 @@ const content: SettoreContent = {
       {
         label: 'Bei Streitigkeiten',
         competitor: 'Daten nicht belastbar',
-        geotapp: 'Versiegelter Bericht, manipulationssicher',
+        geotapp: 'Versiegelter Bericht, Änderungen erkennbar',
       },
       {
         label: 'Baustellenbericht',
@@ -98,7 +98,7 @@ const content: SettoreContent = {
     title: 'Funktionen für die Baustelle',
     items: [
       {
-        title: 'GPS-zertifizierte Anwesenheit',
+        title: 'GPS-versiegelte Anwesenheit',
         desc: 'Jeder Ein- und Austritt wird mit realer GPS-Position und Zeitstempel erfasst. Belastbar vor Bauleitung, Auftraggeber und Behörden.',
       },
       {
@@ -115,7 +115,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Versiegelte Fotonachweise',
-        desc: 'Arbeiter fotografieren direkt aus der App. Jedes Bild ist mit GPS und Zeitstempel an die Baustelle gekoppelt, nach Erstellung manipulationssicher.',
+        desc: 'Arbeiter fotografieren direkt aus der App. Jedes Bild ist mit GPS und Zeitstempel an die Baustelle gekoppelt; nachträgliche Änderungen sind erkennbar.',
       },
       {
         title: 'Integrierte DSGVO-Konformität',
@@ -134,7 +134,7 @@ const content: SettoreContent = {
     items: [
       {
         q: 'Wer war auf der Baustelle und wann?',
-        a: 'Jede GPS-Stempelung ist mit Zeitstempel und Zertifikat versehen. GeoTapp erfasst reale Koordinaten zum Zeitpunkt der Stempelung, nicht manuell eingetragen. Die Daten sind jederzeit von der Bauleitung überprüfbar.',
+        a: 'Jede GPS-Stempelung ist mit Zeitstempel versehen und versiegelt. GeoTapp erfasst reale Koordinaten zum Zeitpunkt der Stempelung, nicht manuell eingetragen. Die Daten sind jederzeit von der Bauleitung überprüfbar.',
       },
       {
         q: 'Wie verwalten Sie Subunternehmer auf der Baustelle?',
@@ -142,7 +142,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Wie erfüllen wir die Aufzeichnungspflicht nach §17 MiLoG auf der Baustelle?',
-        a: 'Das Baugewerbe ist in §2a SchwarzArbG aufgeführt, damit gilt §17 MiLoG für jeden Baubetrieb, unabhängig von der Mitarbeiterzahl: Beginn, Ende und Dauer der täglichen Arbeitszeit sind spätestens am siebten Kalendertag nach dem Arbeitstag aufzuzeichnen und zwei Jahre aufzubewahren. Verstöße ahndet §21 MiLoG mit einer Geldbuße bis zu 50.000 €. Mit GeoTapp entsteht diese Aufzeichnung beim Stempeln auf der Baustelle statt am Monatsende im Büro: GPS-geprüft, mit unveränderlichem Zeitstempel und als signiertes PDF für die Finanzkontrolle Schwarzarbeit (FKS) exportierbar.',
+        a: 'Das Baugewerbe ist in §2a SchwarzArbG aufgeführt, damit gilt §17 MiLoG für jeden Baubetrieb, unabhängig von der Mitarbeiterzahl: Beginn, Ende und Dauer der täglichen Arbeitszeit sind spätestens am siebten Kalendertag nach dem Arbeitstag aufzuzeichnen und zwei Jahre aufzubewahren. Verstöße ahndet §21 MiLoG mit einer Geldbuße bis zu 50.000 €. Mit GeoTapp entsteht diese Aufzeichnung beim Stempeln auf der Baustelle statt am Monatsende im Büro: GPS-geprüft, mit versiegeltem Zeitstempel (jede nachträgliche Änderung ist nachweisbar) und als signiertes PDF für die Finanzkontrolle Schwarzarbeit (FKS) exportierbar.',
       },
       {
         q: 'Kosten Baustellenberichte stundenlange Handarbeit?',
@@ -165,7 +165,7 @@ const content: SettoreContent = {
   schema_faq: [
     {
       question: 'Wer war auf der Baustelle und wann?',
-      answer: 'Jede GPS-Stempelung ist mit Zeitstempel und Zertifikat versehen. GeoTapp erfasst reale Koordinaten zum Zeitpunkt der Stempelung, nicht manuell eingetragen. Die Daten sind jederzeit von der Bauleitung überprüfbar.',
+      answer: 'Jede GPS-Stempelung ist mit Zeitstempel versehen und versiegelt. GeoTapp erfasst reale Koordinaten zum Zeitpunkt der Stempelung, nicht manuell eingetragen. Die Daten sind jederzeit von der Bauleitung überprüfbar.',
     },
     {
       question: 'Wie verwalten Sie Subunternehmer auf der Baustelle?',

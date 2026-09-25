@@ -3,7 +3,7 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'App für Heizungsinstallateure | GeoTapp - GPS, Auftragsberichte & Nachweise',
-    description: 'GeoTapp ist die App für Sanitär- und Heizungstechniker: GPS-verifizierte Auftragsberichte, Anlagenfotos und fälschungssichere Dokumentation. Kundenbeschwerden mit echten Beweisen lösen. Kostenlos testen.',
+    description: 'GeoTapp ist die App für Sanitär- und Heizungstechniker: GPS-verifizierte Auftragsberichte, Anlagenfotos und versiegelte Dokumentation. Kundenbeschwerden mit echten Beweisen lösen. Kostenlos testen.',
   },
   hero: {
     badge: 'App für Heizungsinstallateure und Sanitär- und Heizungstechniker',
@@ -44,7 +44,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Der Auftragsbericht ist Ihr Beweis',
-        desc: 'Nach dem Einsatz erstellt das System einen versiegelten Bericht: GPS-Zeitstempel, Anlagenfotos und Teile, technische Notizen. Fälschungssicher. Der Kunde kann ihn selbstständig prüfen.',
+        desc: 'Nach dem Einsatz erstellt das System einen versiegelten Bericht: GPS-Zeitstempel, Anlagenfotos und Teile, technische Notizen. Jede Änderung ist erkennbar. Der Kunde kann ihn selbstständig prüfen.',
       },
     ],
   },
@@ -60,7 +60,7 @@ const content: SettoreContent = {
       {
         label: 'Im Streitfall',
         competitor: 'Daten nicht verteidigbar',
-        geotapp: 'Versiegelter Bericht, fälschungssicher',
+        geotapp: 'Versiegelter Bericht, jede Änderung erkennbar',
       },
       {
         label: 'Auftragsdokumentation',
@@ -108,7 +108,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Versiegelte Anlagenfotos',
-        desc: 'Der Techniker fotografiert aus der App während und nach dem Einsatz. Jedes Bild ist mit GPS und Zeitstempel verknüpft, nach der Erstellung fälschungssicher.',
+        desc: 'Der Techniker fotografiert aus der App während und nach dem Einsatz. Jedes Bild ist mit GPS und Zeitstempel verknüpft, nach der Erstellung versiegelt.',
       },
       {
         title: 'Automatische digitale Auftragsberichte',
@@ -134,7 +134,7 @@ const content: SettoreContent = {
     cta: 'Jetzt kostenlos starten!',
   },
   trust: {
-    title: 'Unsere Berichte können nicht verändert werden. Nicht von Ihnen. Nicht von uns.',
+    title: 'Wird einer unserer Berichte verändert, sieht man es. Auch wenn wir es sind.',
     body: 'GeoTapp-Berichte werden vom System im Moment des Einsatzes generiert. Es gibt kein Panel, um eine Zeit zu "korrigieren" oder ein Foto zu verschieben. Die Daten sind wie sie sind, digital signiert, mit echtem GPS.',
     badge: 'Von jedem prüfbar, ohne Zugriff auf Ihr Konto',
   },
@@ -153,7 +153,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Kann ich GeoTapp verwenden, um ausgetauschte Teile an Heizungen zu dokumentieren?',
-        a: 'Ja. Der Techniker fotografiert das ausgebaute und das neu eingebaute Teil aus der App. Jedes Bild ist mit GPS, Zeitstempel und Auftrag verknüpft, im fälschungssicheren Bericht enthalten.',
+        a: 'Ja. Der Techniker fotografiert das ausgebaute und das neu eingebaute Teil aus der App. Jedes Bild ist mit GPS, Zeitstempel und Auftrag verknüpft, im versiegelten Bericht enthalten.',
       },
       {
         q: 'Hilft GeoTapp bei der Beilegung von Kundenstreitigkeiten über Heizungsarbeiten?',

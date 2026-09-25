@@ -163,7 +163,7 @@
     "report_section_title": "Il report. Non un riepilogo. Una prova.",
     "report_section_subtitle": "Ogni report GeoTapp è generato automaticamente dai dati reali del campo.",
     "report_section_body": "Timbrature GPS, foto con l'ora, note operative. I dati si chiudono alla generazione e da lì non si toccano più. Quando arriva il dubbio non devi spiegare, devi mostrare, e quello che mostri non è un documento mandato al cliente, è la fine della discussione.",
-    "report_feature_1": "Non modificabile dopo la generazione, qualsiasi alterazione è rilevabile",
+    "report_feature_1": "Sigillato alla generazione, qualsiasi alterazione è rilevabile",
     "report_feature_2": "Verificabile senza account, da chiunque, in autonomia",
     "report_feature_3": "Dati GPS e fotografici integrati e non separabili",
     "report_feature_4": "Generato automaticamente, nessuna compilazione manuale",
@@ -230,7 +230,7 @@
       "title": "Non hai bisogno che si fidino di te.",
       "subtitle": "La tua parola non entra nel discorso. Il cliente apre il report e controlla da solo, senza accedere a GeoTapp. Se i dati corrispondono al lavoro reale, il report regge. Se qualcuno ha modificato il documento, non regge più. Senza appello.",
       "features": {
-        "integrity": "<strong>Dati non alterabili:</strong> Il report è generato sui dati reali di campo e bloccato. Qualsiasi modifica lo rende non valido, senza appello.",
+        "integrity": "<strong>Dati sigillati:</strong> Il report è generato sui dati reali di campo e bloccato. Qualsiasi modifica lo rende non valido, senza appello.",
         "independent": "<strong>Verifica autonoma:</strong> Chiunque abbia il report può verificarne l'autenticità, senza account, senza accesso alla piattaforma."
       },
       "link": "Scopri GeoTapp Verifier"
@@ -270,7 +270,7 @@
       "see_all": "Vedi tutti i settori supportati",
       "installatori": {
         "name": "Installatori",
-        "desc": "Elettricisti, Idraulici, Impiantisti. Ogni intervento documentato con GPS e foto, dati non alterabili, verificabili dal cliente.",
+        "desc": "Elettricisti, Idraulici, Impiantisti. Ogni intervento documentato con GPS e foto, dati sigillati, verificabili dal cliente.",
         "cta": "Dimostra ogni intervento"
       },
       "sicurezza": {
@@ -285,7 +285,7 @@
       },
       "elettricisti": {
         "name": "Elettricisti",
-        "desc": "Impianti elettrici, quadri, cablaggi. Ogni intervento documentato con GPS e foto, prove inviolabili per chiudere ogni contestazione.",
+        "desc": "Impianti elettrici, quadri, cablaggi. Ogni intervento documentato con GPS e foto, prove sigillate per chiudere ogni contestazione.",
         "cta": "Documenta ogni intervento"
       },
       "idraulici": {
@@ -307,8 +307,8 @@
         "cta": "Chiudi le contestazioni"
       },
       "impianti": {
-        "desc": "Meccanici, Elettrici, Antincendio. Collaudi e messa in servizio certificati con ora e posizione, prova pronta per il committente.",
-        "cta": "Certifica i collaudi"
+        "desc": "Meccanici, Elettrici, Antincendio. Collaudi e messa in servizio sigillati con ora e posizione, prova pronta per il committente.",
+        "cta": "Sigilla i collaudi"
       }
     },
     "app_mockup": {
@@ -668,7 +668,7 @@
         "timelock-alpha": {
           "name": "Timbratura GPS",
           "short": "Ingresso e uscita collegati a posizione GPS e orario preciso. Ogni sessione di lavoro diventa un evento operativo verificabile.",
-          "full": "### Il Tempo è Verificabile.\n\nTimbrature senza verifica generano contestazioni.\n**Timbratura GPS** rende ogni sessione di lavoro un dato affidabile e difendibile.\n\n#### Ingresso e Uscita Geolocati\n\nIl tecnico registra ingresso e uscita dal campo.\nPosizione, indirizzo e orario vengono registrati automaticamente.\n\n#### Storico Immutabile\n\nOgni sessione è un record verificabile: ora di inizio, ora di fine, posizione, durata e commessa associata.\nIl cliente chiede quando siete arrivati? Il dato c'è, sempre."
+          "full": "### Il Tempo è Verificabile.\n\nTimbrature senza verifica generano contestazioni.\n**Timbratura GPS** rende ogni sessione di lavoro un dato affidabile e difendibile.\n\n#### Ingresso e Uscita Geolocati\n\nIl tecnico registra ingresso e uscita dal campo.\nPosizione, indirizzo e orario vengono registrati automaticamente.\n\n#### Storico Sigillato\n\nOgni sessione è un record verificabile: ora di inizio, ora di fine, posizione, durata e commessa associata.\nIl cliente chiede quando siete arrivati? Il dato c'è, sempre."
         },
         "event-horizon": {
           "name": "Pianificazione Turni",
@@ -844,7 +844,7 @@
       },
       {
         "title": "Report verificabili",
-        "desc": "Come ogni intervento genera un report con prove fotografiche, firma digitale e hash immutabile che puoi mostrare al cliente."
+        "desc": "Come ogni intervento genera un report con prove fotografiche, firma digitale e hash sigillato che puoi mostrare al cliente."
       },
       {
         "title": "Gestione squadre da Flow",
@@ -1048,13 +1048,13 @@
   },
   "blog": {
     "hero_title": "Guide su prova del lavoro, GDPR e squadre sul campo.",
-    "hero_desc": "Non scriviamo per riempire pagine. Scriviamo per condividere ciò che impariamo costruendo il futuro del lavoro certificabile.",
+    "hero_desc": "Non scriviamo per riempire pagine. Scriviamo per condividere ciò che impariamo costruendo il futuro del lavoro verificabile.",
     "no_posts": "Nessun articolo disponibile al momento.",
     "read_article": "Leggi l'articolo →",
     "cta_title": "Prova GeoTapp gratis per 14 giorni",
     "cta_desc": "Accesso completo a tutti i moduli. Nessuna carta di credito, nessun impegno.",
     "cta_btn": "Inizia trial gratuito",
-    "schema_desc": "Guide e approfondimenti su certificazione del lavoro sul campo, gestione squadre, GDPR e geolocalizzazione.",
+    "schema_desc": "Guide e approfondimenti su prova verificabile del lavoro sul campo, gestione squadre, GDPR e geolocalizzazione.",
     "meta_title": "Blog | GeoTapp - Prova verificabile del lavoro sul campo",
     "meta_desc": "Guide, approfondimenti e risorse su gestione squadre, prova verificabile interventi, GDPR e geolocalizzazione. Dal team GeoTapp.",
     "cat_all": "Tutti",
@@ -1165,7 +1165,7 @@
     "mockup_gps": "GPS verificato",
     "mockup_photos": "Foto allegate",
     "mockup_photos_count": "3 foto georeferenziate",
-    "mockup_sealed": "Non modificabile dopo la chiusura",
+    "mockup_sealed": "Sigillato alla chiusura: ogni modifica si vede",
     "mockup_status_active": "Attivo",
     "mockup_status_completed": "Completato",
     "mockup_status_summary": "4 operatori attivi su 6 siti",

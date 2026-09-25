@@ -41,7 +41,7 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'O técnico regista GPS à chegada',
-        desc: 'Abre a intervenção a partir do smartphone. GeoTapp regista coordenadas GPS reais, carimbo temporal e fotos, tudo automático e inalterável.',
+        desc: 'Abre a intervenção a partir do smartphone. GeoTapp regista coordenadas GPS reais, carimbo temporal e fotos, tudo automático e selado.',
       },
       {
         title: 'As horas e a intervenção são registadas automaticamente',
@@ -59,14 +59,14 @@ const content: SettoreContent = {
     items: [
       {
         title: 'Presença verificada por GPS',
-        desc: 'Cada chegada e partida é certificada com GPS real, carimbo temporal e sede atribuída. Defendível perante o cliente e inspetores.',
+        desc: 'Cada chegada e partida é selada com GPS real, carimbo temporal e sede atribuída. Defendível perante o cliente e inspetores.',
       },
       {
         title: 'Histórico de manutenção por instalação',
         desc: 'Cada intervenção está ligada à sede ou instalação. O histórico completo é consultável e descarregável.',
       },
       {
-        title: 'Relatórios automáticos e inalteráveis',
+        title: 'Relatórios automáticos e selados',
         desc: 'Após cada intervenção, o sistema gera um relatório selado: horas, GPS, fotos e assinatura digital.',
       },
       {

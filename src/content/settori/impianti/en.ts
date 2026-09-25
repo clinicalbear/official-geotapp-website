@@ -18,7 +18,7 @@ const content: SettoreContent = {
     items: [
       {
         title: 'Clients dispute the hours worked',
-        desc: 'GPS clock-ins timestamped as irrefutable proof. The data is certified at the moment of the job, not editable afterwards.',
+        desc: 'GPS clock-ins timestamped as verifiable proof. The data is sealed at the moment of the job, and any change afterwards is detectable.',
       },
       {
         title: 'Chasing technicians for updates',
@@ -36,7 +36,7 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'The technician clocks in via GPS at the start',
-        desc: 'Opens the job from their smartphone. GeoTapp records real GPS coordinates, timestamp and photos, fully automatic, tamper-proof.',
+        desc: 'Opens the job from their smartphone. GeoTapp records real GPS coordinates, timestamp and photos, fully automatic, tamper-evident.',
       },
       {
         title: 'Hours are recorded automatically per job',
@@ -49,7 +49,7 @@ const content: SettoreContent = {
     ],
   },
   differenza: {
-    title: 'Installer app: time tracking or certification?',
+    title: 'Installer app: time tracking or verifiable proof?',
     subtitle: 'Most apps record the clock-in. GeoTapp produces verifiable proof.',
     rows: [
       {
@@ -65,7 +65,7 @@ const content: SettoreContent = {
       {
         label: 'In case of dispute',
         competitor: 'Data not defensible',
-        geotapp: 'Sealed report, tamper-proof',
+        geotapp: 'Sealed report, tamper-evident',
       },
       {
         label: 'Job report',
@@ -103,7 +103,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Sealed photo evidence',
-        desc: 'The technician takes photos from the app. Every image is linked to the job with GPS and timestamp, tamper-proof after generation.',
+        desc: 'The technician takes photos from the app. Every image is linked to the job with GPS and timestamp, tamper-evident after generation.',
       },
       {
         title: 'Multi-site job management',
@@ -134,7 +134,7 @@ const content: SettoreContent = {
     items: [
       {
         q: 'Do clients dispute the hours worked on a job?',
-        a: 'With GeoTapp, GPS clock-ins are timestamped at the moment of the job and cannot be edited. They constitute irrefutable proof of hours worked, eliminating any dispute.',
+        a: 'With GeoTapp, GPS clock-ins are timestamped at the moment of the job and any change is detectable. They are verifiable proof of hours worked when someone questions them.',
       },
       {
         q: 'How do I monitor multiple teams on different jobs?',
@@ -161,7 +161,7 @@ const content: SettoreContent = {
   schema_faq: [
     {
       question: 'Do clients dispute the hours worked on a job?',
-      answer: 'With GeoTapp, GPS clock-ins are timestamped at the moment of the job and cannot be edited. They constitute irrefutable proof of hours worked, eliminating any dispute.',
+      answer: 'With GeoTapp, GPS clock-ins are timestamped at the moment of the job and any change is detectable. They are verifiable proof of hours worked when someone questions them.',
     },
     {
       question: 'How do I monitor multiple teams on different jobs?',

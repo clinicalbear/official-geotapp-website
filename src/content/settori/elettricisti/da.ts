@@ -3,7 +3,7 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'App til Elektrikere | GeoTapp - GPS Arbejdsrapporter & Bevis',
-    description: 'App til elektrikere: GPS-verificerede arbejdsrapporter, installationsbilleder og manipulationssikre registreringer. Luk tvister med beviser. Prøv gratis.',
+    description: 'App til elektrikere: GPS-verificerede arbejdsrapporter, installationsbilleder og registreringer hvor enhver ændring kan spores. Luk tvister med beviser. Prøv gratis.',
   },
   hero: {
     badge: 'App til Elektrikere og El-installatører',
@@ -44,7 +44,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Rapporten er dit bevis',
-        desc: 'Ved afslutningen genererer systemet en forseglet rapport: GPS-tidsstempel, installationsbilleder, tekniske noter. Umanipulerbar. Kunden kan verificere den selvstændigt.',
+        desc: 'Ved afslutningen genererer systemet en forseglet rapport: GPS-tidsstempel, installationsbilleder, tekniske noter. Enhver ændring kan spores. Kunden kan verificere den selvstændigt.',
       },
     ],
   },
@@ -57,7 +57,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Forseglede installationsbilleder',
-        desc: 'Teknikeren fotograferer fra appen. Hvert billede er knyttet til GPS og tidsstempel, umanipulerbart.',
+        desc: 'Teknikeren fotograferer fra appen. Hvert billede er knyttet til GPS og tidsstempel; enhver ændring kan spores.',
       },
       {
         title: 'Automatiske digitale arbejdsrapporter',
@@ -100,7 +100,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Hvordan håndterer GeoTapp Arbejdsmiljølovens §38 om dokumentation af arbejdstid for elektrikere?',
-        a: 'Arbejdsmiljøloven §38 og bekendtgørelse om hvileperiode kræver, at arbejdsgiveren registrerer daglig start, slut og pauser for hver medarbejder, uændret tilgængelig for Arbejdstilsynet i mindst fem år. GeoTapp registrerer hver stempling med GPS-tidsstempel og kryptografisk segl, som ikke kan ændres efterfølgende. Når Arbejdstilsynet kommer på inspektion, eksporterer du PDF-rapporten direkte fra dashboardet, ingen Excel, intet papir, ingen efterrationaliseringer.',
+        a: 'Arbejdsmiljøloven §38 og bekendtgørelse om hvileperiode kræver, at arbejdsgiveren registrerer daglig start, slut og pauser for hver medarbejder, uændret tilgængelig for Arbejdstilsynet i mindst fem år. GeoTapp registrerer hver stempling med GPS-tidsstempel og kryptografisk segl, hvor enhver efterfølgende ændring kan spores. Når Arbejdstilsynet kommer på inspektion, eksporterer du PDF-rapporten direkte fra dashboardet, ingen Excel, intet papir, ingen efterrationaliseringer.',
       },
       {
         q: 'Opfylder GeoTapp dokumentationskravene fra Sikkerhedsstyrelsen for el-installationsvirksomheder?',
@@ -108,7 +108,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Hvordan opfylder GeoTapp DS/EN 50110 om sikkerhed ved elektrisk arbejde?',
-        a: 'DS/EN 50110-1 (drift af elektriske installationer) kræver dokumentation af arbejdsmetode, sikkerhedsforanstaltninger og udførende person ved hver intervention på spændingsførende anlæg. GeoTapp lader medarbejderen vedhæfte foto før, under og efter arbejdet, registrere sikkerhedsbarriere (frakobling, jording, afskærmning) i en tjekliste, og signere digitalt. Hele revisionssporet er manipulationssikret og tilgængeligt i op til 10 år, overgår den lovpligtige 5-årige opbevaringsfrist.',
+        a: 'DS/EN 50110-1 (drift af elektriske installationer) kræver dokumentation af arbejdsmetode, sikkerhedsforanstaltninger og udførende person ved hver intervention på spændingsførende anlæg. GeoTapp lader medarbejderen vedhæfte foto før, under og efter arbejdet, registrere sikkerhedsbarriere (frakobling, jording, afskærmning) i en tjekliste, og signere digitalt. Hele revisionssporet har sporbare ændringer og er tilgængeligt i op til 10 år, overgår den lovpligtige 5-årige opbevaringsfrist.',
       },
       {
         q: 'Hvordan håndteres tvister med kunder om timeforbrug og udført arbejde på el-installationer?',

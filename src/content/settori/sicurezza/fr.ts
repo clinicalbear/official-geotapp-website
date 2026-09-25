@@ -9,7 +9,7 @@ const content: SettoreContent = {
     badge: 'Logiciel pour Agents de Sécurité, SSIAP et Sécurité Événementielle',
     h1_line1: 'Présences vérifiées et rapports de rondes',
     h1_line2: 'pour agents de sécurité et SSIAP',
-    subtitle: 'GeoTapp Flow et TimeTracker documentent la présence des agents aux postes assignés avec GPS vérifié et horodatages inaltérables. Suivi des agréments CNAPS, passation de consignes numérique et rapports d\'incidents géolocalisés, tout sur une seule plateforme.',
+    subtitle: 'GeoTapp Flow et TimeTracker documentent la présence des agents aux postes assignés avec GPS vérifié et horodatages scellés. Suivi des agréments CNAPS, passation de consignes numérique et rapports d\'incidents géolocalisés, tout sur une seule plateforme.',
     cta_primary: 'Demander une Démo',
     cta_note: 'Sans engagement. Réponse sous 12 heures ouvrées.',
   },
@@ -18,11 +18,11 @@ const content: SettoreContent = {
     items: [
       {
         title: 'Prouver la présence aux postes au moment contractuel',
-        desc: 'Un client conteste la présence d\'un agent à une heure précise. Sans GPS vérifié ni horodatage inaltérable, le différend reste ouvert et la conformité contractuelle est impossible à démontrer.',
+        desc: 'Un client conteste la présence d\'un agent à une heure précise. Sans GPS vérifié ni horodatage scellé, le différend reste ouvert et la conformité contractuelle est impossible à démontrer.',
       },
       {
         title: 'Rapports d\'incidents sans preuve de localisation',
-        desc: 'Un rapport d\'incident rédigé à la main a peu de valeur probante sans position GPS certifiée ni horodatage infalsifiable. Les registres papier sont trop faciles à contester devant le CNAPS ou en justice.',
+        desc: 'Un rapport d\'incident rédigé à la main a peu de valeur probante sans position GPS scellée ni horodatage scellé. Les registres papier sont trop faciles à contester devant le CNAPS ou en justice.',
       },
       {
         title: 'Passation de consignes encore sur papier',
@@ -36,7 +36,7 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'L\'agent pointe au poste assigné',
-        desc: 'GeoTapp TimeTracker enregistre l\'entrée, la sortie, la position GPS et des photos avec horodatages inaltérables. Chaque ronde est journalisée automatiquement depuis le smartphone de l\'agent.',
+        desc: 'GeoTapp TimeTracker enregistre l\'entrée, la sortie, la position GPS et des photos avec horodatages scellés. Chaque ronde est journalisée automatiquement depuis le smartphone de l\'agent.',
       },
       {
         title: 'Le responsable voit tous les postes en temps réel',
@@ -80,7 +80,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Comment GeoTapp aide-t-il à documenter les rapports d\'incidents ?',
-        a: 'TimeTracker lie chaque incident à une position GPS certifiée et un horodatage inaltérable. Le rapport d\'incident généré par GeoTapp contient les coordonnées, l\'heure et des photos, le rendant défendable en procédure judiciaire et contractuelle.',
+        a: 'TimeTracker lie chaque incident à une position GPS scellée et un horodatage scellé. Le rapport d\'incident généré par GeoTapp contient les coordonnées, l\'heure et des photos, le rendant défendable en procédure judiciaire et contractuelle.',
       },
       {
         q: 'GeoTapp prend-il en charge la passation de consignes numérique entre agents ?',

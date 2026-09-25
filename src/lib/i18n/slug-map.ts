@@ -518,7 +518,7 @@ export const SLUG_MAP: Record<string, Partial<Record<AppLocale, string>>> = {
     da: 'hviderusland', sv: 'vitryssland', nb: 'hviterussland', ru: 'belarus',
     'en-us': 'belarus', 'en-gb': 'belarus', 'en-au': 'belarus', 'en-ie': 'belarus', 'en-ca': 'belarus',
   },
-  // ───────���──────────────────────────────��────────────────────────────���────────
+  // ─────────────────────────────────────────────────────────────────────────────────
   'download': {
     it: 'download',
     en: 'download',

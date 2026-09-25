@@ -9,7 +9,7 @@ const content: SettoreContent = {
     badge: 'Digitale Zeiterfassung für Gebäudereinigung, Facility Management und Unterhaltsreinigung',
     h1_line1: 'Zeiterfassung in der Gebäudereinigung:',
     h1_line2: 'Schichten, Fotodokumentation und geprüfte Stunden, auf jedem Objekt',
-    subtitle: 'GeoTapp verbindet Flow + TimeTracker für Teams, die auf mehrere Gebäude und Etagen verteilt sind. Ihre Reinigungskräfte stempeln per GPS-verifiziertem Smartphone; die digitale Zeiterfassung läuft je Objekt, und das Büro sieht, wer was, wo und wann gereinigt hat, mit Fotobeweisen. Keine Streitigkeiten mehr, volle Konformität mit dem Rahmentarifvertrag Gebäudereinigung und §17 MiLoG.',
+    subtitle: 'GeoTapp verbindet Flow + TimeTracker für Teams, die auf mehrere Gebäude und Etagen verteilt sind. Ihre Reinigungskräfte stempeln per GPS-verifiziertem Smartphone; die digitale Zeiterfassung läuft je Objekt, und das Büro sieht, wer was, wo und wann gereinigt hat, mit Fotobeweisen. Daten griffbereit für jede Streitigkeit, volle Konformität mit dem Rahmentarifvertrag Gebäudereinigung und §17 MiLoG.',
     cta_primary: 'Auf einem echten Auftrag testen',
     cta_note: '14 Tage, bis zu 50 Mitarbeiter im Außendienst, ohne Kreditkarte.',
   },
@@ -57,7 +57,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Vorher-Nachher-Fotodokumentation',
-        desc: 'Reinigungskräfte fotografieren direkt aus der App. Bilder mit Datum, Uhrzeit und GPS, unwiderlegbarer Nachweis der erbrachten Dienstleistung.',
+        desc: 'Reinigungskräfte fotografieren direkt aus der App. Bilder mit Datum, Uhrzeit und GPS, überprüfbarer Nachweis der erbrachten Dienstleistung.',
       },
       {
         title: 'Lohnexport für DATEV und Personio',
@@ -100,7 +100,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Was passiert, wenn die Berufsgenossenschaft (BG BAU oder BGW) einen Unfall auf einem Objekt prüft?',
-        a: 'Sie können in unter 60 Sekunden nachweisen, welcher Mitarbeiter an welchem Ort, zu welcher Zeit, mit welchen Tätigkeiten betraut war. GeoTapp speichert GPS-Zeitstempel, Fotos der Arbeitsbereiche und durchgeführte Aufgaben, manipulationssicher und exportierbar als PDF mit kryptographischer Signatur. Die BG BAU-Inspektoren akzeptieren dieses Format als Nachweis nach §28 SGB VII.',
+        a: 'Sie können in unter 60 Sekunden nachweisen, welcher Mitarbeiter an welchem Ort, zu welcher Zeit, mit welchen Tätigkeiten betraut war. GeoTapp speichert GPS-Zeitstempel, Fotos der Arbeitsbereiche und durchgeführte Aufgaben; jede Änderung ist nachweisbar, exportierbar als PDF mit kryptographischer Signatur. Die BG BAU-Inspektoren akzeptieren dieses Format als Nachweis nach §28 SGB VII.',
       },
       {
         q: 'Wie verhindert GeoTapp den klassischen "Geisterreiniger"-Betrug (Mitarbeiter stempelt ein, ist aber nicht vor Ort)?',
@@ -108,7 +108,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Welche Mindestlohngesetz-Pflichten (MiLoG, §17) löst GeoTapp automatisch?',
-        a: '§17 MiLoG schreibt für die Gebäudereinigung lückenlose Aufzeichnung von Beginn, Ende und Dauer der täglichen Arbeitszeit vor, spätestens am siebten Folgetag, aufbewahrungspflichtig zwei Jahre. GeoTapp erstellt diese Aufzeichnung in Echtzeit (nicht "nachträglich" wie bei Excel oder Papier), speichert sie mit unveränderbarem Zeitstempel und stellt sie für Zoll-Finanzkontrolle Schwarzarbeit (FKS) als signiertes PDF bereit. Verstöße gegen diese Aufzeichnungspflicht ahndet § 21 MiLoG mit einer Geldbuße bis zu 50.000 €; eine lückenlose Echtzeit-Aufzeichnung vermeidet das strukturell.',
+        a: '§17 MiLoG schreibt für die Gebäudereinigung lückenlose Aufzeichnung von Beginn, Ende und Dauer der täglichen Arbeitszeit vor, spätestens am siebten Folgetag, aufbewahrungspflichtig zwei Jahre. GeoTapp erstellt diese Aufzeichnung in Echtzeit (nicht "nachträglich" wie bei Excel oder Papier), speichert sie mit einem Zeitstempel, bei dem jede Änderung nachweisbar ist, und stellt sie für Zoll-Finanzkontrolle Schwarzarbeit (FKS) als signiertes PDF bereit. Verstöße gegen diese Aufzeichnungspflicht ahndet § 21 MiLoG mit einer Geldbuße bis zu 50.000 €; eine lückenlose Echtzeit-Aufzeichnung vermeidet das strukturell.',
       },
       {
         q: 'Funktioniert GeoTapp mit Subunternehmern und Personaldienstleistern?',
@@ -117,7 +117,7 @@ const content: SettoreContent = {
     ],
   },
   cta: {
-    title: 'Schluss mit Streitigkeiten. Fangen Sie an, Leistungen nachzuweisen.',
+    title: 'Antworten Sie auf jede Streitigkeit mit Daten. Fangen Sie jetzt an.',
     subtitle: 'GeoTapp Flow und TimeTracker geben Ihrem Reinigungsunternehmen die operative Kontrolle und Nachweise, die Sie wirklich brauchen.',
     primary: 'Demo anfragen',
     secondary: 'Preise ansehen',

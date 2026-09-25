@@ -26,7 +26,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Les feuilles de présence papier sont peu fiables ?',
-        desc: 'Suivi automatique depuis le smartphone, aucune saisie manuelle. Les données sont ce qu\'elles sont, et ne peuvent pas être modifiées.',
+        desc: 'Suivi automatique depuis le smartphone, aucune saisie manuelle. Les données sont ce qu\'elles sont, et toute modification est détectable.',
       },
       {
         title: 'Difficile de coordonner plusieurs équipes ?',
@@ -57,7 +57,7 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'L\'agent pointe avec GPS',
-        desc: 'Ouvre et ferme son service depuis le smartphone. GeoTapp enregistre les coordonnées GPS réelles, photos et horodatage, entièrement automatique, infalsifiable.',
+        desc: 'Ouvre et ferme son service depuis le smartphone. GeoTapp enregistre les coordonnées GPS réelles, photos et horodatage, entièrement automatique, et toute modification est détectable.',
       },
       {
         title: 'Le responsable voit tout en temps réel',
@@ -87,7 +87,7 @@ const content: SettoreContent = {
       {
         label: 'En cas de litige',
         competitor: 'Données non défendables',
-        geotapp: 'Rapport scellé, infalsifiable',
+        geotapp: 'Rapport scellé, toute modification détectable',
       },
       {
         label: 'Preuve photographique',
@@ -115,7 +115,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Rapports défendables partout',
-        desc: 'Chaque rapport est signé numériquement et infalsifiable. Valable devant un client, un inspecteur ou un avocat.',
+        desc: 'Chaque rapport est signé numériquement, et toute modification est détectable. Un client, un inspecteur ou un avocat peut le vérifier lui-même.',
       },
       {
         title: 'Gestion des plannings et équipes',
@@ -145,7 +145,7 @@ const content: SettoreContent = {
     items: [
       {
         q: 'Comment fonctionne le pointage GPS pour les entreprises de nettoyage ?',
-        a: 'L\'agent pointe entrée et sortie depuis son smartphone. GeoTapp enregistre les coordonnées GPS à ce moment, pas de saisie manuelle. Chaque pointage est certifié avec horodatage et position vérifiable par le donneur d\'ordre.',
+        a: 'L\'agent pointe entrée et sortie depuis son smartphone. GeoTapp enregistre les coordonnées GPS à ce moment, pas de saisie manuelle. Chaque pointage est scellé avec horodatage et position vérifiable par le donneur d\'ordre.',
       },
       {
         q: 'Puis-je prouver au client que le service a été effectué ?',
@@ -190,7 +190,7 @@ const content: SettoreContent = {
     {
       question: 'Comment fonctionne le pointage GPS pour les entreprises de nettoyage ?',
       answer:
-        'L\'agent pointe depuis son smartphone. GeoTapp enregistre les coordonnées GPS, pas de saisie manuelle. Chaque pointage est certifié avec horodatage et position vérifiable par le donneur d\'ordre.',
+        'L\'agent pointe depuis son smartphone. GeoTapp enregistre les coordonnées GPS, pas de saisie manuelle. Chaque pointage est scellé avec horodatage et position vérifiable par le donneur d\'ordre.',
     },
     {
       question: 'Puis-je prouver au client que le service a été effectué ?',

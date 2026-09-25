@@ -57,7 +57,7 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'El operario ficha con GPS',
-        desc: 'Abre y cierra su turno desde el smartphone. GeoTapp registra coordenadas GPS reales, fotos y marca de tiempo, todo automático e inalterable.',
+        desc: 'Abre y cierra su turno desde el smartphone. GeoTapp registra coordenadas GPS reales, fotos y marca de tiempo, todo automático y sellado.',
       },
       {
         title: 'El responsable ve todo en tiempo real',
@@ -87,7 +87,7 @@ const content: SettoreContent = {
       {
         label: 'En caso de disputa',
         competitor: 'Datos no defendibles',
-        geotapp: 'Informe sellado, inalterable',
+        geotapp: 'Informe sellado, cualquier cambio es detectable',
       },
       {
         label: 'Prueba fotográfica',
@@ -115,7 +115,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Informes defendibles en cualquier ámbito',
-        desc: 'Cada informe está firmado digitalmente y es inalterable. Válido ante un cliente, un inspector o un abogado.',
+        desc: 'Cada informe está firmado digitalmente y cualquier cambio es detectable. Un cliente, un inspector o un abogado pueden comprobarlo por su cuenta.',
       },
       {
         title: 'Gestión de turnos y equipos',
@@ -148,7 +148,7 @@ const content: SettoreContent = {
         a: 'El operario ficha entrada y salida desde el smartphone. GeoTapp registra las coordenadas GPS en ese momento, no se introducen a mano. Cada fichaje es sellado con marca de tiempo y posición verificable por el cliente.',
       },
       {
-        q: '¿Puedo demostrar al cliente que el servicio se realizó?',
+        q: '¿Puedo mostrar al cliente pruebas verificables del servicio?',
         a: 'Sí. GeoTapp genera automáticamente un informe sellado con GPS, fotos y marca de tiempo al final de cada intervención. El cliente lo recibe y verifica de forma autónoma.',
       },
       {
@@ -193,7 +193,7 @@ const content: SettoreContent = {
         'El operario ficha desde el smartphone. GeoTapp registra coordenadas GPS, no se introducen a mano. Cada fichaje es sellado con marca de tiempo y posición verificable por el cliente.',
     },
     {
-      question: '¿Puedo demostrar al cliente que el servicio se realizó?',
+      question: '¿Puedo mostrar al cliente pruebas verificables del servicio?',
       answer:
         'Sí. GeoTapp genera automáticamente un informe sellado con GPS, fotos y marca de tiempo. El cliente lo recibe y verifica de forma autónoma.',
     },

@@ -3,13 +3,13 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'Construction Site App: GPS Attendance & Crew Management | GeoTapp',
-    description: 'Manage attendance, shifts and safety on construction sites with real-time GPS. Certified clock-ins, automated reports. GDPR-compliant app for construction companies.',
+    description: 'Manage attendance, shifts and safety on construction sites with real-time GPS. Sealed clock-ins, automated reports. GDPR-compliant app for construction companies.',
   },
   hero: {
     badge: 'App for construction companies and building sites',
     h1_line1: 'Your construction site under control,',
     h1_line2: 'in real time.',
-    subtitle: 'GPS-certified clock-ins, crew management and automated reports. Zero paperwork, zero disputes. GeoTapp connects Flow + TimeTracker for construction site managers, subcontractors and project directors.',
+    subtitle: 'GPS-sealed clock-ins, crew management and automated reports. Zero paperwork, zero disputes. GeoTapp connects Flow + TimeTracker for construction site managers, subcontractors and project directors.',
     cta_primary: 'Try it on a real site',
     cta_note: '14 days, up to 50 field workers, no credit card.',
   },
@@ -18,7 +18,7 @@ const content: SettoreContent = {
     items: [
       {
         title: 'Who was on site and when?',
-        desc: 'Every GPS clock-in is timestamped and certified. GeoTapp records real coordinates at the moment of clocking, not entered manually. The data is verifiable by project management at any time.',
+        desc: 'Every GPS clock-in is timestamped and sealed. GeoTapp records real coordinates at the moment of clocking, not entered manually. The data is verifiable by project management at any time.',
       },
       {
         title: 'How do you manage subcontractors?',
@@ -36,7 +36,7 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'The worker clocks in at the site entrance',
-        desc: 'Opens the shift from their smartphone. GeoTapp records real GPS coordinates, timestamp and, if needed, photos. Fully automatic, tamper-proof.',
+        desc: 'Opens the shift from their smartphone. GeoTapp records real GPS coordinates, timestamp and, if needed, photos. Fully automatic, tamper-evident.',
       },
       {
         title: 'The site manager sees everything in real time',
@@ -49,7 +49,7 @@ const content: SettoreContent = {
     ],
   },
   differenza: {
-    title: 'Construction site app: time tracking or certification?',
+    title: 'Construction site app: time tracking or verifiable proof?',
     subtitle: 'Most apps record the clock-in. GeoTapp produces verifiable proof.',
     rows: [
       {
@@ -65,7 +65,7 @@ const content: SettoreContent = {
       {
         label: 'In case of dispute',
         competitor: 'Data not defensible',
-        geotapp: 'Sealed report, tamper-proof',
+        geotapp: 'Sealed report, tamper-evident',
       },
       {
         label: 'Site report',
@@ -98,7 +98,7 @@ const content: SettoreContent = {
     title: 'Features built for construction sites',
     items: [
       {
-        title: 'GPS-certified attendance',
+        title: 'GPS-sealed attendance',
         desc: 'Every entry and exit from the site is recorded with real GPS position and timestamp. Defensible before project directors, clients and inspectors.',
       },
       {
@@ -115,7 +115,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Sealed photo evidence',
-        desc: 'Workers take photos from the app. Every image is linked to the site with GPS and timestamp, tamper-proof after generation.',
+        desc: 'Workers take photos from the app. Every image is linked to the site with GPS and timestamp, tamper-evident after generation.',
       },
       {
         title: 'Built-in GDPR compliance',
@@ -134,7 +134,7 @@ const content: SettoreContent = {
     items: [
       {
         q: 'Who was on site and when?',
-        a: 'Every GPS clock-in is timestamped and certified. GeoTapp records real coordinates at the moment of clocking, not entered manually. The data is verifiable by project management at any time.',
+        a: 'Every GPS clock-in is timestamped and sealed. GeoTapp records real coordinates at the moment of clocking, not entered manually. The data is verifiable by project management at any time.',
       },
       {
         q: 'How do you manage subcontractors on site?',
@@ -161,7 +161,7 @@ const content: SettoreContent = {
   schema_faq: [
     {
       question: 'Who was on site and when?',
-      answer: 'Every GPS clock-in is timestamped and certified. GeoTapp records real coordinates at the moment of clocking, not entered manually. The data is verifiable by project management at any time.',
+      answer: 'Every GPS clock-in is timestamped and sealed. GeoTapp records real coordinates at the moment of clocking, not entered manually. The data is verifiable by project management at any time.',
     },
     {
       question: 'How do you manage subcontractors on site?',

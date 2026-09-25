@@ -3,7 +3,7 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'App for Rørleggere og VVS-teknikere | GeoTapp - GPS, Rapporter & Dokumentasjon',
-    description: 'GeoTapp er appen for rørleggere og VVS-teknikere: GPS-verifiserte rapporter, bilder av installasjoner og uforanderlig dokumentasjon. Løs tvister med ekte bevis. Prøv gratis.',
+    description: 'GeoTapp er appen for rørleggere og VVS-teknikere: GPS-verifiserte rapporter, bilder av installasjoner og forseglet dokumentasjon. Løs tvister med ekte bevis. Prøv gratis.',
   },
   hero: {
     badge: 'App for Rørleggere og VVS-teknikere',
@@ -44,12 +44,12 @@ const content: SettoreContent = {
       },
       {
         title: 'Rapporten er ditt bevis',
-        desc: 'Etter oppdraget genererer systemet en forseglet rapport: GPS-tidsstempel, anleggsbilder og deler, tekniske notater. Uforanderlig. Kunden kan bekrefte den selvstendig.',
+        desc: 'Etter oppdraget genererer systemet en forseglet rapport: GPS-tidsstempel, anleggsbilder og deler, tekniske notater. Enhver endring kan oppdages. Kunden kan bekrefte den selvstendig.',
       },
     ],
   },
   differenza: {
-    title: 'App for rørleggere: tidsregistrering eller jobbsertifisering?',
+    title: 'App for rørleggere: tidsregistrering eller verifiserbar dokumentasjon?',
     subtitle: 'De fleste apper registrerer innstempling. GeoTapp produserer verifiserbar dokumentasjon.',
     rows: [
       {
@@ -60,7 +60,7 @@ const content: SettoreContent = {
       {
         label: 'Ved tvist',
         competitor: 'Data ikke forsvarbar',
-        geotapp: 'Forseglet rapport, uforanderlig',
+        geotapp: 'Forseglet rapport, endring oppdages',
       },
       {
         label: 'Jobbdokumentasjon',
@@ -108,7 +108,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Forseglede anleggsbilder',
-        desc: 'Teknikeren fotograferer fra appen under og etter oppdraget. Hvert bilde er knyttet til GPS og tidsstempel, uforanderlig etter generering.',
+        desc: 'Teknikeren fotograferer fra appen under og etter oppdraget. Hvert bilde er knyttet til GPS og tidsstempel, forseglet etter generering.',
       },
       {
         title: 'Automatiske digitale jobbrapporter',
@@ -134,7 +134,7 @@ const content: SettoreContent = {
     cta: 'Kom i gang gratis!',
   },
   trust: {
-    title: 'Rapportene våre kan ikke endres. Ikke av deg. Ikke av oss.',
+    title: 'Enhver endring i rapportene våre synes. Ikke av deg. Ikke av oss.',
     body: 'GeoTapp-rapporter genereres av systemet i øyeblikket for oppdraget. Det er ingen panel for å "korrigere" et tidspunkt eller flytte et bilde. Dataene er som de er, digitalt signert, med ekte GPS.',
     badge: 'Verifiserbar av alle, uten tilgang til din konto',
   },
@@ -153,7 +153,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Kan jeg bruke GeoTapp til å dokumentere utskifting av deler på kjeler?',
-        a: 'Ja. Teknikeren fotograferer fra appen den fjernede og den installerte delen. Hvert bilde er knyttet til GPS, tidsstempel og sak, inkludert i den uforanderlige rapporten.',
+        a: 'Ja. Teknikeren fotograferer fra appen den fjernede og den installerte delen. Hvert bilde er knyttet til GPS, tidsstempel og sak, inkludert i den forseglede rapporten.',
       },
       {
         q: 'Hjelper GeoTapp med å løse kundetvister om installasjoner?',

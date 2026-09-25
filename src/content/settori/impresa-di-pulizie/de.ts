@@ -57,7 +57,7 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'Reinigungskraft stempelt mit GPS',
-        desc: 'Öffnet und schließt die Schicht vom Smartphone. GeoTapp erfasst echte GPS-Koordinaten, Fotos und Zeitstempel, vollautomatisch, fälschungssicher.',
+        desc: 'Öffnet und schließt die Schicht vom Smartphone. GeoTapp erfasst echte GPS-Koordinaten, Fotos und Zeitstempel, vollautomatisch und versiegelt.',
       },
       {
         title: 'Der Verantwortliche sieht alles in Echtzeit',
@@ -87,7 +87,7 @@ const content: SettoreContent = {
       {
         label: 'Im Streitfall',
         competitor: 'Daten nicht verteidigbar',
-        geotapp: 'Versiegelter Bericht, fälschungssicher',
+        geotapp: 'Versiegelter Bericht, jede Änderung erkennbar',
       },
       {
         label: 'Fotonachweis',
@@ -115,7 +115,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Verteidigbare Berichte überall',
-        desc: 'Jeder Bericht ist digital signiert und fälschungssicher. Gültig vor Kunden, Inspektoren und Anwälten.',
+        desc: 'Jeder Bericht ist digital signiert und jede Änderung ist erkennbar. Kunden, Prüfer und Anwälte können ihn selbst prüfen.',
       },
       {
         title: 'Schicht- und Teamverwaltung',

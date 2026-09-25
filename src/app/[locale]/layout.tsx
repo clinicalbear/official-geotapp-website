@@ -46,11 +46,11 @@ type LocaleSchemaData = {
 const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
   it: {
     description:
-      'GeoTapp genera prove verificabili del lavoro svolto sul campo: report sigillati con dati GPS reali, prove fotografiche con timestamp e documentazione non modificabile verificabile da chiunque. SaaS GDPR-compliant per aziende con operatori in mobilità.',
+      'GeoTapp genera prove verificabili del lavoro svolto sul campo: report sigillati con dati GPS reali, prove fotografiche con timestamp e documentazione con ogni modifica rilevabile, verificabile da chiunque. SaaS GDPR-compliant per aziende con operatori in mobilità.',
     featureList: [
-      'Report di lavoro non modificabili, verificabili indipendentemente da chiunque',
+      'Report di lavoro con ogni modifica rilevabile, verificabili indipendentemente da chiunque',
       'Prove fotografiche collegate a timestamp GPS e commessa',
-      'Documentazione interventi non modificabile, ogni alterazione è rilevabile',
+      'Documentazione interventi: ogni alterazione è rilevabile',
       'Prova del lavoro svolto: evidenza oggettiva per ogni intervento sul campo',
       'Timbratura geolocalizzata tramite GPS',
       'Gestione commesse e interventi tecnici',
@@ -61,11 +61,11 @@ const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
   },
   en: {
     description:
-      'GeoTapp generates verifiable proof of field work: sealed reports with real GPS data, timestamped photo evidence and tamper-proof documentation anyone can verify independently. GDPR-compliant SaaS for companies with mobile operators.',
+      'GeoTapp generates verifiable proof of field work: sealed reports with real GPS data, timestamped photo evidence and tamper-evident documentation anyone can verify independently. GDPR-compliant SaaS for companies with mobile operators.',
     featureList: [
-      'Tamper-proof work reports, independently verifiable by anyone',
+      'Tamper-evident work reports, independently verifiable by anyone',
       'Photo evidence linked to GPS timestamp and job',
-      'Tamper-proof job documentation, any modification is detectable',
+      'Job documentation: any modification is detectable',
       'Work proof: objective evidence for every field intervention',
       'GPS-based verifiable time tracking',
       'Job and technical intervention management',
@@ -76,11 +76,11 @@ const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
   },
   de: {
     description:
-      'GeoTapp erzeugt verifizierbare Nachweise für geleistete Außendienstarbeit: versiegelte Berichte mit echten GPS-Daten, zeitgestempelte Fotobelege und manipulationssichere Dokumentation, die jeder unabhängig prüfen kann.',
+      'GeoTapp erzeugt verifizierbare Nachweise für geleistete Außendienstarbeit: versiegelte Berichte mit echten GPS-Daten, zeitgestempelte Fotobelege und Dokumentation mit Manipulationsnachweis, die jeder unabhängig prüfen kann.',
     featureList: [
-      'Nicht veränderbare Arbeitsberichte, unabhängig verifizierbar',
+      'Arbeitsberichte mit Manipulationsnachweis, unabhängig verifizierbar',
       'Fotobelege verknüpft mit GPS-Zeitstempel und Auftrag',
-      'Manipulationssichere Auftragsdokumentation, jede Änderung ist erkennbar',
+      'Auftragsdokumentation: jede Änderung ist erkennbar',
       'Arbeitsnachweis: objektive Beweise für jeden Außendiensteinsatz',
       'GPS-basierte verifizierbare Zeiterfassung',
       'Auftrags- und Einsatzverwaltung',
@@ -91,11 +91,11 @@ const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
   },
   fr: {
     description:
-      'GeoTapp génère des preuves vérifiables du travail effectué sur le terrain : rapports scellés avec données GPS réelles, preuves photographiques horodatées et documentation inviolable vérifiable par n\'importe qui.',
+      'GeoTapp génère des preuves vérifiables du travail effectué sur le terrain : rapports scellés avec données GPS réelles, preuves photographiques horodatées et documentation aux modifications traçables, vérifiable par n\'importe qui.',
     featureList: [
-      'Rapports de travail non modifiables, vérifiables indépendamment par n\'importe qui',
+      'Rapports de travail aux modifications traçables, vérifiables indépendamment par n\'importe qui',
       'Preuves photographiques liées au timestamp GPS et à l\'intervention',
-      'Documentation d\'intervention inviolable, toute modification est détectable',
+      'Documentation d\'intervention : toute modification est détectable',
       'Preuve du travail : evidence objective pour chaque intervention terrain',
       'Pointage vérifiable par GPS',
       'Gestion des ordres de travail et interventions',
@@ -106,11 +106,11 @@ const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
   },
   es: {
     description:
-      'GeoTapp genera pruebas verificables del trabajo realizado en campo: informes sellados con datos GPS reales, evidencias fotográficas con marca de tiempo y documentación a prueba de manipulaciones que cualquiera puede verificar.',
+      'GeoTapp genera pruebas verificables del trabajo realizado en campo: informes sellados con datos GPS reales, evidencias fotográficas con marca de tiempo y documentación con alteraciones detectables que cualquiera puede verificar.',
     featureList: [
-      'Informes de trabajo no modificables, verificables independientemente por cualquiera',
+      'Informes de trabajo con alteraciones detectables, verificables independientemente por cualquiera',
       'Evidencias fotográficas vinculadas a timestamp GPS y trabajo',
-      'Documentación de intervenciones a prueba de manipulaciones, cualquier cambio es detectable',
+      'Documentación de intervenciones: cualquier cambio es detectable',
       'Prueba del trabajo: evidencia objetiva para cada intervención en campo',
       'Fichaje verificable por GPS',
       'Gestión de órdenes de trabajo e intervenciones',
@@ -121,11 +121,11 @@ const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
   },
   pt: {
     description:
-      'GeoTapp gera provas verificáveis do trabalho realizado em campo: relatórios selados com dados GPS reais, provas fotográficas com marca de tempo e documentação inviolável que qualquer pessoa pode verificar.',
+      'GeoTapp gera provas verificáveis do trabalho realizado em campo: relatórios selados com dados GPS reais, provas fotográficas com marca de tempo e documentação com alterações detetáveis que qualquer pessoa pode verificar.',
     featureList: [
-      'Relatórios de trabalho não modificáveis, verificáveis independentemente por qualquer pessoa',
+      'Relatórios de trabalho com alterações detetáveis, verificáveis independentemente por qualquer pessoa',
       'Provas fotográficas ligadas a timestamp GPS e intervenção',
-      'Documentação de intervenções inviolável, qualquer alteração é detectável',
+      'Documentação de intervenções: qualquer alteração é detectável',
       'Prova do trabalho: evidência objectiva para cada intervenção em campo',
       'Marcação de ponto verificável por GPS',
       'Gestão de ordens de trabalho e intervenções',
@@ -136,11 +136,11 @@ const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
   },
   nl: {
     description:
-      'GeoTapp genereert verifieerbaar bewijs van uitgevoerd veldwerk: verzegelde rapporten met echte GPS-gegevens, tijdgestempeld fotobewijs en onvervalsbare documentatie die iedereen onafhankelijk kan controleren.',
+      'GeoTapp genereert verifieerbaar bewijs van uitgevoerd veldwerk: verzegelde rapporten met echte GPS-gegevens, tijdgestempeld fotobewijs en documentatie met detecteerbare wijzigingen die iedereen onafhankelijk kan controleren.',
     featureList: [
-      'Niet wijzigbare werkrapporten, onafhankelijk verifieerbaar door iedereen',
+      'Werkrapporten met detecteerbare wijzigingen, onafhankelijk verifieerbaar door iedereen',
       'Fotobewijs gekoppeld aan GPS-tijdstempel en opdracht',
-      'Onvervalsbare opdrachtdocumentatie, elke wijziging is detecteerbaar',
+      'Opdrachtdocumentatie: elke wijziging is detecteerbaar',
       'Werkbewijs: objectief bewijs voor elke velddienst',
       'Verifieerbare GPS-tijdregistratie',
       'Werkorder- en interventiebeheer',
@@ -151,11 +151,11 @@ const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
   },
   ru: {
     description:
-      'GeoTapp генерирует верифицируемые доказательства выполненной полевой работы: запечатанные отчёты с реальными GPS-данными, фотодоказательства с временными метками и защищённая от изменений документация, проверяемая кем угодно.',
+      'GeoTapp генерирует верифицируемые доказательства выполненной полевой работы: запечатанные отчёты с реальными GPS-данными, фотодоказательства с временными метками и документация с обнаруживаемыми изменениями, проверяемая кем угодно.',
     featureList: [
-      'Неизменяемые рабочие отчёты, независимо верифицируемые кем угодно',
+      'Рабочие отчёты с обнаруживаемыми изменениями, независимо верифицируемые кем угодно',
       'Фотодоказательства привязаны к GPS-временной метке и заявке',
-      'Неизменяемая документация выездов, любая модификация обнаруживается',
+      'Документация выездов: любая модификация обнаруживается',
       'Доказательство работы: объективные свидетельства каждого выезда',
       'Верифицируемый GPS-учёт рабочего времени',
       'Управление заявками и техническими вмешательствами',
@@ -166,11 +166,11 @@ const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
   },
   da: {
     description:
-      'GeoTapp genererer verificerbare beviser for udført feltarbejde: forseglede rapporter med reelle GPS-data, tidsstemplede fotobeviser og uforanderlig dokumentation, som enhver kan verificere uafhængigt.',
+      'GeoTapp genererer verificerbare beviser for udført feltarbejde: forseglede rapporter med reelle GPS-data, tidsstemplede fotobeviser og dokumentation med sporbare ændringer, som enhver kan verificere uafhængigt.',
     featureList: [
-      'Ikke-redigerbare arbejdsrapporter, uafhængigt verificerbare af enhver',
+      'Arbejdsrapporter med sporbare ændringer, uafhængigt verificerbare af enhver',
       'Fotobeviser bundet til GPS-tidsstempel og arbejdsordre',
-      'Uforanderlig dokumentation af udkald, enhver ændring opdages',
+      'Dokumentation af udkald: enhver ændring opdages',
       'Arbejdsbevis: objektive beviser for hvert feltbesøg',
       'Verificerbar GPS-tidsregistrering',
       'Håndtering af arbejdsordrer og interventioner',
@@ -181,11 +181,11 @@ const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
   },
   sv: {
     description:
-      'GeoTapp genererar verifierbara bevis för utfört fältarbete: förseglade rapporter med verkliga GPS-data, tidsstämplade fotobevis och oföränderlig dokumentation som vem som helst kan verifiera oberoende.',
+      'GeoTapp genererar verifierbara bevis för utfört fältarbete: förseglade rapporter med verkliga GPS-data, tidsstämplade fotobevis och dokumentation med spårbara ändringar som vem som helst kan verifiera oberoende.',
     featureList: [
-      'Oföränderliga arbetsrapporter, oberoende verifierbara av vem som helst',
+      'Arbetsrapporter med spårbara ändringar, oberoende verifierbara av vem som helst',
       'Fotobevis kopplade till GPS-tidsstämpel och arbetsorder',
-      'Oföränderlig dokumentation av utryckningar, varje ändring upptäcks',
+      'Dokumentation av utryckningar: varje ändring upptäcks',
       'Arbetsproof: objektiva bevis för varje fältuppdrag',
       'Verifierbar GPS-tidregistrering',
       'Hantering av arbetsorder och interventioner',
@@ -196,11 +196,11 @@ const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
   },
   nb: {
     description:
-      'GeoTapp genererer verifiserbare bevis for utført feltarbeid: forseglede rapporter med ekte GPS-data, tidsstemplede fotobevis og uforanderlig dokumentasjon som hvem som helst kan verifisere uavhengig.',
+      'GeoTapp genererer verifiserbare bevis for utført feltarbeid: forseglede rapporter med ekte GPS-data, tidsstemplede fotobevis og dokumentasjon med sporbare endringer som hvem som helst kan verifisere uavhengig.',
     featureList: [
-      'Ikke-redigerbare arbeidsrapporter, uavhengig verifiserbare av hvem som helst',
+      'Arbeidsrapporter med sporbare endringer, uavhengig verifiserbare av hvem som helst',
       'Fotobevis bundet til GPS-tidsstempel og arbeidsordre',
-      'Uforanderlig dokumentasjon av utrykning, enhver endring oppdages',
+      'Dokumentasjon av utrykning: enhver endring oppdages',
       'Arbeidsbevis: objektive beviser for hvert feltoppdrag',
       'Verifiserbar GPS-tidsregistrering',
       'Håndtering av arbeidsordrer og intervensjoner',

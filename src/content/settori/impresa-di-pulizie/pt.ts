@@ -57,7 +57,7 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'O operador regista com GPS',
-        desc: 'Abre e fecha o turno a partir do smartphone. GeoTapp regista coordenadas GPS reais, fotos e carimbo temporal, tudo automático e inalterável.',
+        desc: 'Abre e fecha o turno a partir do smartphone. GeoTapp regista coordenadas GPS reais, fotos e carimbo temporal, tudo automático e selado.',
       },
       {
         title: 'O responsável vê tudo em tempo real',
@@ -87,7 +87,7 @@ const content: SettoreContent = {
       {
         label: 'Em caso de disputa',
         competitor: 'Dados não defensáveis',
-        geotapp: 'Relatório selado, inalterável',
+        geotapp: 'Relatório selado, qualquer alteração é detetável',
       },
       {
         label: 'Prova fotográfica',
@@ -115,7 +115,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Relatórios defensáveis em qualquer âmbito',
-        desc: 'Cada relatório é assinado digitalmente e inalterável. Válido perante um cliente, um inspetor ou um advogado.',
+        desc: 'Cada relatório é assinado digitalmente qualquer alteração é detetável. Um cliente, um inspetor ou um advogado podem verificá-lo sozinhos.',
       },
       {
         title: 'Gestão de turnos e equipas',

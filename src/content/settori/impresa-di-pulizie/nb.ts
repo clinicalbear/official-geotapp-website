@@ -26,7 +26,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Papirtimelister er upålitelige?',
-        desc: 'Automatisk registrering fra smarttelefonen, ingen manuelle registreringer. Dataene er hva de er, og kan ikke endres.',
+        desc: 'Automatisk registrering fra smarttelefonen, ingen manuelle registreringer. Dataene er hva de er, og enhver endring kan oppdages.',
       },
       {
         title: 'Vanskelig å koordinere flere team?',
@@ -57,7 +57,7 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'Renholderen stempler med GPS',
-        desc: 'Åpner og lukker vakten fra smarttelefonen. GeoTapp registrerer ekte GPS-koordinater, bilder og tidsstempel, helautomatisk, manipuleringssikkert.',
+        desc: 'Åpner og lukker vakten fra smarttelefonen. GeoTapp registrerer ekte GPS-koordinater, bilder og tidsstempel, helautomatisk, og enhver endring kan oppdages.',
       },
       {
         title: 'Lederen ser alt i sanntid',
@@ -87,7 +87,7 @@ const content: SettoreContent = {
       {
         label: 'Ved tvister',
         competitor: 'Data ikke forsvarlige',
-        geotapp: 'Forseglet rapport, manipuleringssikker',
+        geotapp: 'Forseglet rapport, enhver endring kan oppdages',
       },
       {
         label: 'Fotobevis',
@@ -115,7 +115,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Forsvarlige rapporter overalt',
-        desc: 'Hver rapport er digitalt signert og manipuleringssikker. Gyldig overfor en kunde, en inspektør eller en advokat.',
+        desc: 'Hver rapport er digitalt signert, og enhver endring kan oppdages. En kunde, en inspektør eller en advokat kan selv kontrollere den.',
       },
       {
         title: 'Vakt- og teamstyring',

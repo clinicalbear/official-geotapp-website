@@ -3,7 +3,7 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'App per Termoidraulici | GeoTapp - GPS, Rapportini e Prove Intervento',
-    description: 'GeoTapp è l\'app per termoidraulici: rapportini GPS verificati, foto degli impianti e report non alterabili. Chiudi le contestazioni su caldaie e impianti con prove reali. Prova gratis.',
+    description: 'GeoTapp è l\'app per termoidraulici: rapportini GPS verificati, foto degli impianti e report sigillati. Chiudi le contestazioni su caldaie e impianti con prove reali. Prova gratis.',
   },
   hero: {
     badge: 'App per Termoidraulici e Impiantisti Termosanitari',
@@ -44,12 +44,12 @@ const content: SettoreContent = {
       },
       {
         title: 'Il rapportino è la tua prova',
-        desc: 'A fine intervento il sistema genera un report sigillato: orario GPS, foto impianto e componenti, note tecniche. Non alterabile. Il cliente può verificarlo in autonomia.',
+        desc: 'A fine intervento il sistema genera un report sigillato: orario GPS, foto impianto e componenti, note tecniche. Ogni modifica è rilevabile. Il cliente può verificarlo in autonomia.',
       },
     ],
   },
   differenza: {
-    title: 'App per termoidraulici: registrazione o certificazione?',
+    title: 'App per termoidraulici: registrazione o prova verificabile?',
     subtitle: 'La maggior parte delle app registra l\'orario. GeoTapp produce prove verificabili.',
     rows: [
       {
@@ -60,7 +60,7 @@ const content: SettoreContent = {
       {
         label: 'In caso di contestazione',
         competitor: 'Dato non difendibile',
-        geotapp: 'Report sigillato, non alterabile',
+        geotapp: 'Report sigillato, ogni modifica rilevabile',
       },
       {
         label: 'Documentazione intervento',
@@ -108,7 +108,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Prove fotografiche dell\'impianto',
-        desc: 'Il tecnico scatta foto dall\'app durante e dopo l\'intervento. Ogni immagine è collegata a GPS e timestamp, non alterabile dopo la generazione.',
+        desc: 'Il tecnico scatta foto dall\'app durante e dopo l\'intervento. Ogni immagine è collegata a GPS e timestamp, sigillata dopo la generazione.',
       },
       {
         title: 'Rapportini digitali automatici',
@@ -134,7 +134,7 @@ const content: SettoreContent = {
     cta: 'Inizia subito gratuitamente!',
   },
   trust: {
-    title: 'I nostri report non si possono alterare. Non da te. Non da noi.',
+    title: 'Ogni modifica ai nostri report si vede. Non da te. Non da noi.',
     body: 'I report GeoTapp sono generati dal sistema nel momento dell\'intervento. Non esiste un pannello per "correggere" un orario o spostare una foto. Il dato è quello, firmato digitalmente, con GPS reale.',
     badge: 'Verificabile da chiunque, senza accesso al tuo account',
   },
@@ -153,7 +153,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Posso usare GeoTapp per documentare la sostituzione di componenti su caldaie?',
-        a: 'Sì. Il tecnico scatta foto dall\'app del componente rimosso e di quello installato. Ogni immagine è collegata a GPS, timestamp e commessa, inclusa nel rapportino non alterabile.',
+        a: 'Sì. Il tecnico scatta foto dall\'app del componente rimosso e di quello installato. Ogni immagine è collegata a GPS, timestamp e commessa, inclusa nel rapportino sigillato.',
       },
       {
         q: 'GeoTapp aiuta a risolvere le contestazioni dei clienti sugli impianti?',

@@ -262,7 +262,7 @@ const SETTORE_CONFIG: Record<string, {
             'Real-time GPS location of all agents',
             'Timestamped logging of every completed patrol',
             'Incident reporting with photos and geolocation',
-            'Exportable certified reports for end clients',
+            'Exportable, tamper-evident reports for end clients',
             'Automatic alerts for non-response or inactivity events',
           ],
         },

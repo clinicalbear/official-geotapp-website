@@ -18,7 +18,7 @@ const content: SettoreContent = {
     items: [
       {
         title: 'Kunder bestrider de arbetade timmarna',
-        desc: 'GPS-stämplingar tidsstämplade som obestridligt bevis. Data förseglas vid uppdragstillfället, kan inte redigeras i efterhand.',
+        desc: 'GPS-stämplingar tidsstämplade som verifierbart bevis. Data förseglas vid uppdragstillfället, och varje ändring i efterhand kan upptäckas.',
       },
       {
         title: 'Jaga tekniker för uppdateringar',
@@ -36,7 +36,7 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'Teknikern stämplar in via GPS vid start',
-        desc: 'Öppnar uppdraget från sin smartphone. GeoTapp registrerar verkliga GPS-koordinater, tidsstämpel och foton, helt automatiskt, manipuleringssäkert.',
+        desc: 'Öppnar uppdraget från sin smartphone. GeoTapp registrerar verkliga GPS-koordinater, tidsstämpel och foton, helt automatiskt, och varje ändring kan upptäckas.',
       },
       {
         title: 'Timmar registreras automatiskt per uppdrag',
@@ -49,7 +49,7 @@ const content: SettoreContent = {
     ],
   },
   differenza: {
-    title: 'Installatörs-app: tidsregistrering eller certifiering?',
+    title: 'Installatörs-app: tidsregistrering eller verifierbart bevis?',
     subtitle: 'De flesta appar registrerar bara tiden. GeoTapp producerar verifierbart bevis.',
     rows: [
       {
@@ -65,7 +65,7 @@ const content: SettoreContent = {
       {
         label: 'Vid tvist',
         competitor: 'Data inte försvarbar',
-        geotapp: 'Förseglad rapport, manipuleringssäker',
+        geotapp: 'Förseglad rapport, varje ändring kan upptäckas',
       },
       {
         label: 'Uppdragsrapport',
@@ -103,7 +103,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Förseglade fotobevis',
-        desc: 'Teknikern fotograferar direkt från appen. Varje bild är kopplad till uppdraget med GPS och tidsstämpel, manipuleringssäker efter generering.',
+        desc: 'Teknikern fotograferar direkt från appen. Varje bild är kopplad till uppdraget med GPS och tidsstämpel, och varje ändring efter generering kan upptäckas.',
       },
       {
         title: 'Multi-plats uppdragsstyrning',
@@ -134,7 +134,7 @@ const content: SettoreContent = {
     items: [
       {
         q: 'Bestrider kunder de arbetade timmarna på ett uppdrag?',
-        a: 'Med GeoTapp tidsstämplas GPS-stämplingar vid uppdragstillfället och kan inte redigeras. De utgör obestridligt bevis för arbetade timmar och eliminerar varje tvist.',
+        a: 'Med GeoTapp tidsstämplas GPS-stämplingar vid uppdragstillfället, och varje ändring kan upptäckas. De är ett verifierbart bevis på arbetade timmar när någon ifrågasätter dem.',
       },
       {
         q: 'Hur övervakar jag flera team på olika uppdrag?',
@@ -161,7 +161,7 @@ const content: SettoreContent = {
   schema_faq: [
     {
       question: 'Bestrider kunder de arbetade timmarna på ett uppdrag?',
-      answer: 'Med GeoTapp tidsstämplas GPS-stämplingar vid uppdragstillfället och kan inte redigeras. De utgör obestridligt bevis för arbetade timmar och eliminerar varje tvist.',
+      answer: 'Med GeoTapp tidsstämplas GPS-stämplingar vid uppdragstillfället, och varje ändring kan upptäckas. De är ett verifierbart bevis på arbetade timmar när någon ifrågasätter dem.',
     },
     {
       question: 'Hur övervakar jag flera team på olika uppdrag?',

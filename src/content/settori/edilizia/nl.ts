@@ -36,7 +36,7 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'De medewerker klokt in bij de bouwplaats',
-        desc: 'Start de dienst vanaf de smartphone. GeoTapp registreert echte GPS-coördinaten, tijdstempel en, indien nodig, foto\'s. Volledig automatisch, manipulatiebestendig.',
+        desc: 'Start de dienst vanaf de smartphone. GeoTapp registreert echte GPS-coördinaten, tijdstempel en, indien nodig, foto\'s. Volledig automatisch, elke wijziging is aantoonbaar.',
       },
       {
         title: 'De uitvoerder ziet alles in realtime',
@@ -49,7 +49,7 @@ const content: SettoreContent = {
     ],
   },
   differenza: {
-    title: 'Bouwplaats-app: tijdregistratie of certificering?',
+    title: 'Bouwplaats-app: tijdregistratie of verifieerbaar bewijs?',
     subtitle: 'De meeste apps registreren alleen het inklokken. GeoTapp levert verifieerbaar bewijs.',
     rows: [
       {
@@ -65,7 +65,7 @@ const content: SettoreContent = {
       {
         label: 'Bij geschillen',
         competitor: 'Gegevens niet verdedigbaar',
-        geotapp: 'Verzegeld rapport, manipulatiebestendig',
+        geotapp: 'Verzegeld rapport, elke wijziging is aantoonbaar',
       },
       {
         label: 'Bouwplaatsrapport',
@@ -115,7 +115,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Verzegeld fotobewijs',
-        desc: 'Medewerkers maken foto\'s vanuit de app. Elk beeld is gekoppeld aan de bouwplaats met GPS en tijdstempel, manipulatiebestendig na generatie.',
+        desc: 'Medewerkers maken foto\'s vanuit de app. Elk beeld is gekoppeld aan de bouwplaats met GPS en tijdstempel, elke wijziging is aantoonbaar na generatie.',
       },
       {
         title: 'Ingebouwde AVG-conformiteit',

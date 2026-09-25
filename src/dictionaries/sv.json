@@ -155,7 +155,7 @@
     "report_section_title": "Rapporten. Inte en sammanfattning. Ett bevis.",
     "report_section_subtitle": "Varje GeoTapp-rapport genereras automatiskt från verkliga fältdata.",
     "report_section_body": "GPS-stämplingar, foton med tiden på, fältanteckningar. Uppgifterna låses när rapporten skapas och efter det rör ingen dem. När tvivlet kommer förklarar du inte, du visar, och det du visar är inte ett dokument till kunden, det är slutet på diskussionen.",
-    "report_feature_1": "Inte redigerbar efter generering, varje ändring upptäcks",
+    "report_feature_1": "Förseglad efter generering, varje ändring upptäcks",
     "report_feature_2": "Verifierbar utan konto, av vem som helst, självständigt",
     "report_feature_3": "GPS- och fotodata integrerade och oskiljaktiga",
     "report_feature_4": "Automatiskt genererad, ingen manuell ifyllning",
@@ -230,7 +230,7 @@
       "title": "Du behöver inte att de litar på dig.",
       "subtitle": "Ditt ord kommer aldrig in i diskussionen. Kunden öppnar rapporten och kontrollerar själv, utan att logga in i GeoTapp. Stämmer uppgifterna med det verkliga arbetet håller rapporten. Har någon ändrat dokumentet håller den inte längre. Utan överklagande.",
       "features": {
-        "integrity": "<strong>Oföränderliga data:</strong> Rapporten genereras på verkliga fältdata och låses. Varje ändring ogiltigförklarar den, utan undantag.",
+        "integrity": "<strong>Förseglade data:</strong> Rapporten genereras på verkliga fältdata och låses. Varje ändring ogiltigförklarar den, utan undantag.",
         "independent": "<strong>Autonom verifiering:</strong> Vem som helst med rapporten kan verifiera dess äkthet, inget konto, ingen plattformsåtkomst."
       },
       "link": "Utforska GeoTapp Verifier"
@@ -254,7 +254,7 @@
         },
         {
           "title": "Försvarbart bevis över tid",
-          "desc": "Varje rapport låses på verkliga fältdata, inte redigerbar efter generering. Tvist? Datan finns där. Verifierbar av vem som helst. Alltid."
+          "desc": "Varje rapport låses på verkliga fältdata, förseglad efter generering. Tvist? Datan finns där. Verifierbar av vem som helst. Alltid."
         }
       ]
     },
@@ -270,7 +270,7 @@
       "see_all": "Se alla stödda sektorer",
       "installatori": {
         "name": "Installatörer",
-        "desc": "Elektriker, VVS-installatörer, Tekniker. Varje uppdrag dokumenterat med GPS och foton, opåverkbara data, verifierbara av kunden.",
+        "desc": "Elektriker, VVS-installatörer, Tekniker. Varje uppdrag dokumenterat med GPS och foton, förseglade data, verifierbara av kunden.",
         "cta": "Bevisa varje uppdrag"
       },
       "sicurezza": {
@@ -285,7 +285,7 @@
       },
       "elettricisti": {
         "name": "Elektriker",
-        "desc": "Elinstallationer, el-tavlor, kabeldragning. Varje jobb dokumenterat med GPS och foton, manipuleringssäkra bevis för att stänga varje tvist.",
+        "desc": "Elinstallationer, el-tavlor, kabeldragning. Varje jobb dokumenterat med GPS och foton, förseglade bevis för att stänga varje tvist.",
         "cta": "Dokumentera varje jobb"
       },
       "idraulici": {
@@ -307,8 +307,8 @@
         "cta": "Avsluta tvisterna"
       },
       "impianti": {
-        "desc": "Mekanik, El, Brandskydd. Provning och driftsättning intygade med tid och position, bevis klart för beställaren.",
-        "cta": "Intyga provningen"
+        "desc": "Mekanik, El, Brandskydd. Provning och driftsättning förseglade med tid och position, bevis klart för beställaren.",
+        "cta": "Försegla provningen"
       }
     },
     "app_mockup": {
@@ -668,7 +668,7 @@
         "timelock-alpha": {
           "name": "GPS-tidregistrering",
           "short": "Instämpling och utstämpling kopplade till GPS-position och exakt tidsstämpel. Varje arbetspass blir en verifierbar operativ händelse.",
-          "full": "### Tid är verifierbar.\n\nTidsstämplar utan verifiering skapar tvister.\n**GPS-tidregistrering** gör varje arbetspass till ett tillförlitligt, försvarsbart register.\n\n#### Geolokaliserad instämpling och utstämpling\n\nTeknikern registrerar ankomst och avfärd från fält.\nPosition, adress och tid registreras automatiskt.\n\n#### Oföränderlig historik\n\nVarje pass är ett verifierbart register: starttid, sluttid, position, varaktighet och kopplad arbetsorder.\nKunden frågar när du anlände? Uppgifterna finns där, alltid."
+          "full": "### Tid är verifierbar.\n\nTidsstämplar utan verifiering skapar tvister.\n**GPS-tidregistrering** gör varje arbetspass till ett tillförlitligt, försvarsbart register.\n\n#### Geolokaliserad instämpling och utstämpling\n\nTeknikern registrerar ankomst och avfärd från fält.\nPosition, adress och tid registreras automatiskt.\n\n#### Förseglad historik\n\nVarje pass är ett verifierbart register: starttid, sluttid, position, varaktighet och kopplad arbetsorder.\nKunden frågar när du anlände? Uppgifterna finns där, alltid."
         },
         "event-horizon": {
           "name": "Schemaläggning",
@@ -760,7 +760,7 @@
       },
       {
         "title": "Verifierbara rapporter",
-        "desc": "Hur varje uppdrag genererar en rapport med fotodokumentation, digital signatur och oföränderlig hash som du kan visa kunden."
+        "desc": "Hur varje uppdrag genererar en rapport med fotodokumentation, digital signatur och förseglad hash som du kan visa kunden."
       },
       {
         "title": "Teamhantering via Flow",
@@ -970,7 +970,7 @@
     "cta_title": "Håll dig uppdaterad",
     "cta_desc": "Inget spam, bara värdefulla uppdateringar om produkten och branschen.",
     "cta_btn": "Kontakta oss",
-    "schema_desc": "Guider och insikter om certifiering av fältarbete, teamhantering, GDPR och geolokalisering.",
+    "schema_desc": "Guider och insikter om verifierbart bevis för fältarbete, teamhantering, GDPR och geolokalisering.",
     "meta_title": "Blogg | GeoTapp - Verifiering av fältarbete",
     "meta_desc": "Guider, insikter och resurser om teamhantering, förseglat bevis av interventioner, GDPR och geolokalisering. Från GeoTapp-teamet.",
     "cat_all": "Alla",
@@ -1165,7 +1165,7 @@
     "mockup_gps": "GPS verifierad",
     "mockup_photos": "Foton bifogade",
     "mockup_photos_count": "3 geolokaliserade foton",
-    "mockup_sealed": "Ej redigerbar efter stängning",
+    "mockup_sealed": "Förseglad efter stängning",
     "mockup_status_active": "Aktiv",
     "mockup_status_completed": "Slutförd",
     "mockup_status_summary": "4 operatörer aktiva på 6 platser",

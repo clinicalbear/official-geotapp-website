@@ -36,7 +36,7 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'El operario ficha en la entrada de la obra',
-        desc: 'Inicia el turno desde el smartphone. GeoTapp registra coordenadas GPS reales, marca de tiempo y, si es necesario, fotos. Totalmente automático, a prueba de manipulaciones.',
+        desc: 'Inicia el turno desde el smartphone. GeoTapp registra coordenadas GPS reales, marca de tiempo y, si es necesario, fotos. Totalmente automático; cualquier modificación es detectable.',
       },
       {
         title: 'El jefe de obra ve todo en tiempo real',
@@ -65,7 +65,7 @@ const content: SettoreContent = {
       {
         label: 'En caso de disputa',
         competitor: 'Datos no defendibles',
-        geotapp: 'Informe sellado, a prueba de manipulaciones',
+        geotapp: 'Informe sellado, cualquier cambio es detectable',
       },
       {
         label: 'Informe de obra',
@@ -98,7 +98,7 @@ const content: SettoreContent = {
     title: 'Funcionalidades diseñadas para la obra',
     items: [
       {
-        title: 'Asistencia certificada por GPS',
+        title: 'Asistencia sellada por GPS',
         desc: 'Cada entrada y salida se registra con posición GPS real y marca de tiempo. Defendible ante dirección de obra, clientes e inspectores.',
       },
       {
@@ -115,7 +115,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Pruebas fotográficas selladas',
-        desc: 'Los operarios toman fotos desde la app. Cada imagen está vinculada a la obra con GPS y marca de tiempo, a prueba de manipulaciones tras la generación.',
+        desc: 'Los operarios toman fotos desde la app. Cada imagen está vinculada a la obra con GPS y marca de tiempo, cualquier cambio es detectable tras la generación.',
       },
       {
         title: 'Conformidad RGPD integrada',

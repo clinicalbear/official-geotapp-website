@@ -12,7 +12,7 @@ const content: SettoreContent = {
     badge: 'GPS tracking for cleaners, cleaning companies and FM contractors',
     h1_line1: 'Cleaning company software:',
     h1_line2: 'shift records, photo proof and verified hours, every site',
-    subtitle: 'GeoTapp connects Flow + TimeTracker for teams spread across multiple buildings and floors. Operatives clock in with GPS-verified smartphones; the office sees who cleaned what, where and when, with photo evidence attached. No more disputes, full NMW and Agency Workers Regulations compliance.',
+    subtitle: 'GeoTapp connects Flow + TimeTracker for teams spread across multiple buildings and floors. Operatives clock in with GPS-verified smartphones; the office sees who cleaned what, where and when, with photo evidence attached. Data ready to answer any dispute, full NMW and Agency Workers Regulations compliance.',
     cta_primary: 'Try it on a real contract',
     cta_note: '14 days, up to 50 field workers, no credit card.',
   },
@@ -60,7 +60,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Before-and-after photo evidence',
-        desc: 'Operatives take photos directly from the app. Images timestamped with date, time and GPS: irrefutable proof that the service was delivered.',
+        desc: 'Operatives take photos directly from the app. Images timestamped with date, time and GPS: verifiable proof that the service was delivered.',
       },
       {
         title: 'Payroll export for Sage and BrightHR',
@@ -92,7 +92,7 @@ const content: SettoreContent = {
     ],
   },
   cta: {
-    title: 'End the disputes. Start proving the work.',
+    title: 'Answer every dispute with proof. Start now.',
     subtitle: 'GeoTapp Flow and TimeTracker give your cleaning company the operational control and evidence you actually need.',
     primary: 'Request a Demo',
     secondary: 'See Pricing',

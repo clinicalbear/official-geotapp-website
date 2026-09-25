@@ -127,7 +127,7 @@
     "trust_gdpr": "Sem rastreio contínuo",
     "trust_gdpr_desc": "Só registo de entrada e saída",
     "trust_gps": "Prova GPS",
-    "trust_gps_desc": "Cada intervenção certificada com localização e marca de tempo",
+    "trust_gps_desc": "Cada intervenção selada com localização e marca de tempo",
     "trust_offline": "Verificador offline",
     "trust_offline_desc": "Um único ficheiro, sem conta nem rede",
     "trust_eu_data": "Dados na Europa",
@@ -155,7 +155,7 @@
     "report_section_title": "O relatório. Não um resumo. Uma prova.",
     "report_section_subtitle": "Cada relatório GeoTapp é gerado automaticamente a partir de dados reais do campo.",
     "report_section_body": "Picagens GPS, fotografias com a hora, notas de terreno. Os dados fecham-se na geração e a partir daí ninguém lhes toca. Quando chega a dúvida não explica, mostra, e o que mostra não é um documento enviado ao cliente, é o fim da discussão.",
-    "report_feature_1": "Não modificável após geração, qualquer alteração é detetável",
+    "report_feature_1": "Selado após geração, qualquer alteração é detetável",
     "report_feature_2": "Verificável sem conta, por qualquer pessoa, de forma autônoma",
     "report_feature_3": "Dados GPS e fotográficos integrados e inseparáveis",
     "report_feature_4": "Gerado automaticamente, sem preenchimento manual",
@@ -230,7 +230,7 @@
       "title": "Não precisa que confiem em si.",
       "subtitle": "A sua palavra não entra na discussão. O cliente abre o relatório e verifica sozinho, sem aceder ao GeoTapp. Se os dados correspondem ao trabalho real, o relatório aguenta. Se alguém alterou o documento, deixa de aguentar. Sem recurso.",
       "features": {
-        "integrity": "<strong>Dados não alteráveis:</strong> O relatório é gerado sobre os dados reais de campo e bloqueado. Qualquer modificação torna-o inválido, sem recurso.",
+        "integrity": "<strong>Dados selados:</strong> O relatório é gerado sobre os dados reais de campo e bloqueado. Qualquer modificação torna-o inválido, sem recurso.",
         "independent": "<strong>Verificação autónoma:</strong> Qualquer pessoa com o relatório pode verificar a sua autenticidade, sem conta, sem acesso à plataforma."
       },
       "link": "Explorar GeoTapp Verifier"
@@ -254,7 +254,7 @@
         },
         {
           "title": "Prova defensável ao longo do tempo",
-          "desc": "Cada relatório fica bloqueado sobre dados reais de campo, não alterável após a geração. Contestação? O dado está lá. Verificável por qualquer pessoa. Sempre."
+          "desc": "Cada relatório fica selado sobre dados reais de campo. Contestação? O dado está lá. Verificável por qualquer pessoa. Sempre."
         }
       ]
     },
@@ -270,7 +270,7 @@
       "see_all": "Ver todos os setores suportados",
       "installatori": {
         "name": "Instaladores",
-        "desc": "Eletricistas, Canalizadores, Técnicos. Cada intervenção documentada com GPS e fotos, dados inalteráveis, verificáveis pelo cliente.",
+        "desc": "Eletricistas, Canalizadores, Técnicos. Cada intervenção documentada com GPS e fotos, dados selados, verificáveis pelo cliente.",
         "cta": "Comprovar cada intervenção"
       },
       "sicurezza": {
@@ -285,7 +285,7 @@
       },
       "elettricisti": {
         "name": "Eletricistas",
-        "desc": "Instalações elétricas, quadros, cablagem. Cada intervenção documentada com GPS e fotos, provas invioláveis para encerrar qualquer disputa.",
+        "desc": "Instalações elétricas, quadros, cablagem. Cada intervenção documentada com GPS e fotos, provas seladas para encerrar qualquer disputa.",
         "cta": "Documente cada intervenção"
       },
       "idraulici": {
@@ -307,8 +307,8 @@
         "cta": "Feche as contestações"
       },
       "impianti": {
-        "desc": "Mecânicas, Elétricas, Incêndio. Ensaios e colocação em serviço certificados com hora e posição, prova pronta para o dono da obra.",
-        "cta": "Certifique os ensaios"
+        "desc": "Mecânicas, Elétricas, Incêndio. Ensaios e colocação em serviço selados com hora e posição, prova pronta para o dono da obra.",
+        "cta": "Sele os ensaios"
       }
     },
     "app_mockup": {
@@ -668,7 +668,7 @@
         "timelock-alpha": {
           "name": "Registo de presença GPS",
           "short": "Registo de entrada e saída ligado à posição GPS e a uma marca de tempo precisa. Cada sessão de trabalho torna-se um evento operacional verificável.",
-          "full": "### O tempo é verificável.\n\nAs marcas de tempo sem verificação geram disputas.\nO **Registo de presença GPS** torna cada sessão de trabalho num registo fiável e incontestável.\n\n#### Registo geolocalizado de entrada e saída\n\nO técnico regista a entrada e saída do campo.\nLocalização, endereço e hora são registados automaticamente.\n\n#### Histórico imutável\n\nCada sessão é um registo verificável: hora de entrada, hora de saída, posição, duração e trabalho associado.\nO cliente pergunta quando chegou? Os dados estão lá, sempre."
+          "full": "### O tempo é verificável.\n\nAs marcas de tempo sem verificação geram disputas.\nO **Registo de presença GPS** torna cada sessão de trabalho num registo fiável e verificável.\n\n#### Registo geolocalizado de entrada e saída\n\nO técnico regista a entrada e saída do campo.\nLocalização, endereço e hora são registados automaticamente.\n\n#### Histórico selado\n\nCada sessão é um registo verificável: hora de entrada, hora de saída, posição, duração e trabalho associado.\nO cliente pergunta quando chegou? Os dados estão lá, sempre."
         },
         "event-horizon": {
           "name": "Planeamento de turnos",
@@ -760,7 +760,7 @@
       },
       {
         "title": "Relatórios verificáveis",
-        "desc": "Como cada intervenção gera um relatório com provas fotográficas, assinatura digital e hash imutável que pode mostrar ao cliente."
+        "desc": "Como cada intervenção gera um relatório com provas fotográficas, assinatura digital e hash selado que pode mostrar ao cliente."
       },
       {
         "title": "Gestão de equipas pelo Flow",
@@ -946,7 +946,7 @@
       }
     ],
     "founder_label": "O fundador",
-    "founder_bio": "Michele Angelo Petraroli trabalhava na segurança de eventos e odiava todos os dias a mesma tarefa: registar as horas à mão. As aplicações que experimentou faziam o mesmo trabalho com botões mais bonitos, por isso nas férias construiu a sua própria versão: carregar em iniciar, carregar em parar, um total mensal arrumado pronto no final do mês. Foi daí que surgiu GeoTapp, primeiro para os seus colegas, depois como sistema para provar que o trabalho foi feito sem vigiar as pessoas que o fazem, dentro das regras de monitorização de trabalhadores e do RGPD.",
+    "founder_bio": "Michele Angelo Petraroli trabalhava na segurança de eventos e odiava todos os dias a mesma tarefa: registar as horas à mão. As aplicações que experimentou faziam o mesmo trabalho com botões mais bonitos, por isso nas férias construiu a sua própria versão: carregar em iniciar, carregar em parar, um total mensal arrumado pronto no final do mês. Foi daí que surgiu GeoTapp, primeiro para os seus colegas, depois como sistema para documentar o trabalho feito sem vigiar as pessoas que o fazem, dentro das regras de monitorização de trabalhadores e do RGPD.",
     "resources_label": "Recursos de imprensa",
     "resources_intro": "Logótipo, foto e materiais prontos a usar, mais as ferramentas gratuitas que disponibilizamos a todos.",
     "logo_download": "Descarregar o logótipo",
@@ -1153,7 +1153,7 @@
     ]
   },
   "settore_layout": {
-    "pain_subtitle": "As apps de registo de ponto registam. Não certificam. A diferença é enorme, e no momento da disputa sente-a toda.",
+    "pain_subtitle": "As apps de registo de ponto registam. Não selam. A diferença é enorme, e no momento da disputa sente-a toda.",
     "before": "Antes",
     "after": "Com GeoTapp",
     "classic_app": "App genérica / Folha de cálculo",
@@ -1165,7 +1165,7 @@
     "mockup_gps": "GPS verificado",
     "mockup_photos": "Fotos anexadas",
     "mockup_photos_count": "3 fotos geolocalizadas",
-    "mockup_sealed": "Não editável após fecho",
+    "mockup_sealed": "Selado após fecho",
     "mockup_status_active": "Ativo",
     "mockup_status_completed": "Concluído",
     "mockup_status_summary": "4 operadores ativos em 6 locais",

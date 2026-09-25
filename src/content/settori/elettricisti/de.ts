@@ -3,7 +3,7 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'App für Elektriker | GeoTapp - GPS-Einsatzberichte & Beweise',
-    description: 'GeoTapp ist die App für Elektriker: GPS-verifizierte Einsatzberichte, Anlagenfotos und manipulationssichere Nachweise. Streitigkeiten mit echten Beweisen abschließen. Gratis testen.',
+    description: 'GeoTapp ist die App für Elektriker: GPS-verifizierte Einsatzberichte, Anlagenfotos und Nachweise, bei denen jede Änderung erkennbar ist. Streitigkeiten mit echten Beweisen abschließen. Gratis testen.',
   },
   hero: {
     badge: 'App für Elektriker und Elektroinstallationsbetriebe',
@@ -44,7 +44,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Der Einsatzbericht ist Ihr Nachweis',
-        desc: 'Am Ende des Einsatzes generiert das System einen versiegelten Bericht: GPS-Zeitstempel, Anlagenfotos, technische Notizen. Manipulationssicher. Der Kunde kann ihn unabhängig prüfen.',
+        desc: 'Am Ende des Einsatzes generiert das System einen versiegelten Bericht: GPS-Zeitstempel, Anlagenfotos, technische Notizen. Jede Änderung ist erkennbar. Der Kunde kann ihn unabhängig prüfen.',
       },
     ],
   },
@@ -60,7 +60,7 @@ const content: SettoreContent = {
       {
         label: 'Im Streitfall',
         competitor: 'Daten nicht verteidigbar',
-        geotapp: 'Versiegelter Bericht, manipulationssicher',
+        geotapp: 'Versiegelter Bericht, Änderungen erkennbar',
       },
       {
         label: 'Einsatzdokumentation',
@@ -89,7 +89,7 @@ const content: SettoreContent = {
     ],
     dopo: [
       'Kunde bestreitet, dass die Anlage fertiggestellt wurde.',
-      'Sie öffnen den Bericht: GPS-Foto der Anlage, zertifizierter Zeitstempel, Unterschrift.',
+      'Sie öffnen den Bericht: GPS-Foto der Anlage, versiegelter Zeitstempel, Unterschrift.',
       'Sie schicken ihn. Der Streit endet in einer Minute.',
       'Die Rechnung ist sicher. Der Techniker ist geschützt.',
     ],
@@ -108,7 +108,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Versiegelte Anlagenfotos',
-        desc: 'Der Techniker fotografiert aus der App am Ende des Einsatzes. Jedes Bild ist mit GPS und Zeitstempel verknüpft, nach der Erstellung manipulationssicher.',
+        desc: 'Der Techniker fotografiert aus der App am Ende des Einsatzes. Jedes Bild ist mit GPS und Zeitstempel verknüpft; nachträgliche Änderungen sind erkennbar.',
       },
       {
         title: 'Automatische digitale Einsatzberichte',
@@ -134,7 +134,7 @@ const content: SettoreContent = {
     cta: 'Jetzt kostenlos starten',
   },
   trust: {
-    title: 'Unsere Berichte können nicht verändert werden. Nicht von Ihnen. Nicht von uns.',
+    title: 'Wird einer unserer Berichte verändert, sieht man es. Auch wenn wir es sind.',
     body: 'GeoTapp-Berichte werden vom System im Moment des Einsatzes erstellt. Es gibt kein Panel, um eine Zeit zu "korrigieren" oder ein Foto zu verschieben. Die Daten sind wie sie sind, digital signiert, mit echtem GPS.',
     badge: 'Überprüfbar von jedem, ohne Zugang zu Ihrem Konto',
   },
@@ -153,7 +153,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Kann ich GeoTapp zur Dokumentation von Elektroanlagen einsetzen?',
-        a: 'Ja. Der Techniker fotografiert aus der App während oder am Ende des Einsatzes. Jedes Bild ist mit GPS, Zeitstempel und Auftrag verknüpft, im manipulationssicheren Bericht enthalten.',
+        a: 'Ja. Der Techniker fotografiert aus der App während oder am Ende des Einsatzes. Jedes Bild ist mit GPS, Zeitstempel und Auftrag verknüpft, im Bericht enthalten, in dem jede Änderung erkennbar ist.',
       },
       {
         q: 'Hilft GeoTapp bei der Lösung von Kundenstreitigkeiten?',

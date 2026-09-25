@@ -3,7 +3,7 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'App für Klempner & Heizungstechniker | GeoTapp GPS-Berichte',
-    description: 'App für Klempner und Heizungstechniker: GPS-verifizierte Einsatzberichte, Anlagenfotos und manipulationssichere Nachweise. Gratis testen.',
+    description: 'App für Klempner und Heizungstechniker: GPS-verifizierte Einsatzberichte, Anlagenfotos und Nachweise, bei denen jede Änderung erkennbar ist. Gratis testen.',
   },
   hero: {
     badge: 'App für Klempner, Heizungstechniker und SHK-Betriebe',
@@ -44,7 +44,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Der Einsatzbericht ist Ihr Nachweis',
-        desc: 'Am Ende des Einsatzes generiert das System einen versiegelten Bericht: GPS-Zeitstempel, Anlagenfotos, verwendete Materialien, technische Notizen. Manipulationssicher. Der Kunde kann ihn unabhängig prüfen.',
+        desc: 'Am Ende des Einsatzes generiert das System einen versiegelten Bericht: GPS-Zeitstempel, Anlagenfotos, verwendete Materialien, technische Notizen. Jede Änderung ist erkennbar. Der Kunde kann ihn unabhängig prüfen.',
       },
     ],
   },
@@ -60,7 +60,7 @@ const content: SettoreContent = {
       {
         label: 'Im Streitfall',
         competitor: 'Daten nicht verteidigbar',
-        geotapp: 'Versiegelter Bericht, manipulationssicher',
+        geotapp: 'Versiegelter Bericht, Änderungen erkennbar',
       },
       {
         label: 'Einsatzdokumentation',
@@ -89,7 +89,7 @@ const content: SettoreContent = {
     ],
     dopo: [
       'Kunde bestreitet, dass die Reparatur durchgeführt wurde.',
-      'Sie öffnen den Bericht: GPS-Fotos der Anlage, zertifizierter Zeitstempel, technische Notizen.',
+      'Sie öffnen den Bericht: GPS-Fotos der Anlage, versiegelter Zeitstempel, technische Notizen.',
       'Sie schicken ihn. Der Streit endet in einer Minute.',
       'Die Rechnung ist sicher. Der Techniker ist geschützt.',
     ],
@@ -108,7 +108,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Versiegelte Sanitär- und Heizungsanlagen-Fotos',
-        desc: 'Der Techniker fotografiert vor und nach dem Einsatz. Jedes Bild ist mit GPS und Zeitstempel verknüpft, nach der Erstellung manipulationssicher.',
+        desc: 'Der Techniker fotografiert vor und nach dem Einsatz. Jedes Bild ist mit GPS und Zeitstempel verknüpft; nachträgliche Änderungen sind erkennbar.',
       },
       {
         title: 'Automatische digitale Einsatzberichte',
@@ -134,7 +134,7 @@ const content: SettoreContent = {
     cta: 'Jetzt kostenlos starten',
   },
   trust: {
-    title: 'Unsere Berichte können nicht verändert werden. Nicht von Ihnen. Nicht von uns.',
+    title: 'Wird einer unserer Berichte verändert, sieht man es. Auch wenn wir es sind.',
     body: 'GeoTapp-Berichte werden vom System im Moment des Einsatzes erstellt. Es gibt kein Panel, um eine Zeit zu "korrigieren" oder ein Foto zu verschieben. Die Daten sind wie sie sind, digital signiert, mit echtem GPS.',
     badge: 'Überprüfbar von jedem, ohne Zugang zu Ihrem Konto',
   },
@@ -153,7 +153,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Kann ich GeoTapp zur Dokumentation von Sanitär- und Heizungseinsätzen einsetzen?',
-        a: 'Ja. Der Techniker fotografiert vor und nach dem Einsatz aus der App. Jedes Bild ist mit GPS, Zeitstempel und Auftrag verknüpft, im manipulationssicheren Bericht enthalten.',
+        a: 'Ja. Der Techniker fotografiert vor und nach dem Einsatz aus der App. Jedes Bild ist mit GPS, Zeitstempel und Auftrag verknüpft, im Bericht enthalten, in dem jede Änderung erkennbar ist.',
       },
       {
         q: 'Verwaltet GeoTapp Notfalleinsätze und geplante Wartungen?',

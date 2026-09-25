@@ -3,7 +3,7 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'App voor Loodgieters & Installateurs | GeoTapp - GPS Werkbonnen',
-    description: 'GeoTapp is de app voor loodgieters en cv-installateurs: GPS-geverifieerde werkbonnen, installatiefotos en manipulatiebestendige rapporten. Sluit geschillen af met echt bewijs. Gratis proberen.',
+    description: 'GeoTapp is de app voor loodgieters en cv-installateurs: GPS-geverifieerde werkbonnen, installatiefotos en verzegelde rapporten. Sluit geschillen af met echt bewijs. Gratis proberen.',
   },
   hero: {
     badge: 'App voor Loodgieters, CV-installateurs en Sanitair Technicians',

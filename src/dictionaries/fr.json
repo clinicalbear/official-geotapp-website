@@ -127,7 +127,7 @@
     "trust_gdpr": "Aucun suivi continu",
     "trust_gdpr_desc": "Horodatage uniquement à l'entrée et la sortie",
     "trust_gps": "Preuve GPS",
-    "trust_gps_desc": "Chaque intervention certifiée avec position et horodatage",
+    "trust_gps_desc": "Chaque intervention scellée avec position et horodatage",
     "trust_offline": "Vérificateur hors ligne",
     "trust_offline_desc": "Un seul fichier, sans compte ni réseau",
     "trust_eu_data": "Données en Europe",
@@ -155,7 +155,7 @@
     "report_section_title": "Le rapport. Pas un résumé. Une preuve.",
     "report_section_subtitle": "Chaque rapport GeoTapp est généré automatiquement à partir des données réelles du terrain.",
     "report_section_body": "Pointages GPS, photos horodatées, notes de terrain. Les données se ferment à la génération et plus personne n'y touche. Quand le doute arrive, vous n'expliquez pas, vous montrez, et ce que vous montrez n'est pas un document envoyé au client, c'est la fin de la discussion.",
-    "report_feature_1": "Non modifiable après génération, toute modification est détectable",
+    "report_feature_1": "Scellé après génération, toute modification est détectable",
     "report_feature_2": "Vérifiable sans compte, par n'importe qui, en autonomie",
     "report_feature_3": "Données GPS et photographiques intégrées et inséparables",
     "report_feature_4": "Généré automatiquement, aucune saisie manuelle",
@@ -230,7 +230,7 @@
       "title": "Vous n'avez pas besoin qu'ils vous fassent confiance.",
       "subtitle": "Votre parole n'entre pas dans la discussion. Le client ouvre le rapport et vérifie seul, sans accéder à GeoTapp. Si les données correspondent au travail réel, le rapport tient. Si quelqu'un a modifié le document, il ne tient plus. Sans appel.",
       "features": {
-        "integrity": "<strong>Données non modifiables :</strong> Le rapport est généré sur les données terrain réelles et verrouillé. Toute modification le rend invalide, sans appel.",
+        "integrity": "<strong>Données scellées :</strong> Le rapport est généré sur les données terrain réelles et verrouillé. Toute modification le rend invalide, sans appel.",
         "independent": "<strong>Vérification autonome :</strong> Toute personne possédant le rapport peut vérifier son authenticité, sans compte, sans accès à la plateforme."
       },
       "link": "Découvrir GeoTapp Verifier"
@@ -238,7 +238,7 @@
     "core": {
       "badge": "Plateforme GeoTapp",
       "title": "Un système, trois niveaux de certitude",
-      "subtitle": "TimeTracker enregistre sur le terrain. Flow organise au bureau. Verifier certifie que tout correspond.",
+      "subtitle": "TimeTracker enregistre sur le terrain. Flow organise au bureau. Verifier vérifie que tout correspond.",
       "features": [
         {
           "title": "Opérabilité mobile réelle",
@@ -254,7 +254,7 @@
         },
         {
           "title": "Preuve défendable dans le temps",
-          "desc": "Chaque rapport est verrouillé sur les données terrain réelles, non modifiable après génération. Contestation ? La donnée est là. Vérifiable par n'importe qui. Toujours."
+          "desc": "Chaque rapport est verrouillé sur les données terrain réelles, scellé après génération. Contestation ? La donnée est là. Vérifiable par n'importe qui. Toujours."
         }
       ]
     },
@@ -270,7 +270,7 @@
       "see_all": "Voir tous les secteurs supportés",
       "installatori": {
         "name": "Installateurs",
-        "desc": "Électriciens, Plombiers, Techniciens. Chaque intervention documentée avec GPS et photos, données inaltérables, vérifiables par le client.",
+        "desc": "Électriciens, Plombiers, Techniciens. Chaque intervention documentée avec GPS et photos, données scellées, vérifiables par le client.",
         "cta": "Prouver chaque intervention"
       },
       "sicurezza": {
@@ -285,7 +285,7 @@
       },
       "elettricisti": {
         "name": "Électriciens",
-        "desc": "Installations électriques, tableaux, câblage. Chaque intervention documentée avec GPS et photos, preuves inviolables pour clore tout litige.",
+        "desc": "Installations électriques, tableaux, câblage. Chaque intervention documentée avec GPS et photos, preuves scellées pour clore tout litige.",
         "cta": "Documentez chaque intervention"
       },
       "idraulici": {
@@ -307,8 +307,8 @@
         "cta": "Mettez fin aux litiges"
       },
       "impianti": {
-        "desc": "Mécanique, Électricité, Incendie. Essais et mise en service certifiés avec heure et position, preuve prête pour le maître d'ouvrage.",
-        "cta": "Certifiez vos essais"
+        "desc": "Mécanique, Électricité, Incendie. Essais et mise en service scellés avec heure et position, preuve prête pour le maître d'ouvrage.",
+        "cta": "Scellez vos essais"
       }
     },
     "app_mockup": {
@@ -668,7 +668,7 @@
         "timelock-alpha": {
           "name": "Pointage GPS",
           "short": "Pointage entrée et sortie lié à la position GPS et à un horodatage précis. Chaque session de travail devient un événement opérationnel vérifiable.",
-          "full": "### L'heure est vérifiable.\n\nLes horodatages sans vérification génèrent des litiges.\nLe **Pointage GPS** fait de chaque session de travail un enregistrement fiable et incontestable.\n\n#### Pointage géolocalisé entrée et sortie\n\nLe technicien enregistre l'entrée et la sortie du terrain.\nLa localisation, l'adresse et l'heure sont enregistrées automatiquement.\n\n#### Historique immuable\n\nChaque session est un enregistrement vérifiable : heure d'entrée, heure de sortie, position, durée et mission associée.\nLe client demande quand vous êtes arrivé ? Les données sont là, toujours."
+          "full": "### L'heure est vérifiable.\n\nLes horodatages sans vérification génèrent des litiges.\nLe **Pointage GPS** fait de chaque session de travail un enregistrement fiable et vérifiable.\n\n#### Pointage géolocalisé entrée et sortie\n\nLe technicien enregistre l'entrée et la sortie du terrain.\nLa localisation, l'adresse et l'heure sont enregistrées automatiquement.\n\n#### Historique scellé\n\nChaque session est un enregistrement vérifiable : heure d'entrée, heure de sortie, position, durée et mission associée.\nLe client demande quand vous êtes arrivé ? Les données sont là, toujours."
         },
         "event-horizon": {
           "name": "Planification des équipes",
@@ -760,7 +760,7 @@
       },
       {
         "title": "Rapports vérifiables",
-        "desc": "Comment chaque intervention génère un rapport avec preuves photographiques, signature numérique et hash immuable que vous pouvez montrer au client."
+        "desc": "Comment chaque intervention génère un rapport avec preuves photographiques, signature numérique et hash scellé que vous pouvez montrer au client."
       },
       {
         "title": "Gestion des équipes depuis Flow",
@@ -815,7 +815,7 @@
     "title": "Télécharger GeoTapp",
     "subtitle": "Choisissez la version adaptée à vos besoins.",
     "demo_report_badge": "Exemple réel",
-    "demo_report_title": "Rapport d'intervention certifié",
+    "demo_report_title": "Rapport d'intervention scellé",
     "demo_report_desc": "Téléchargez un rapport réel généré par GeoTapp. Il contient GPS vérifié, preuves photographiques, chaîne de hachage des opérateurs et scellement cryptographique.",
     "demo_report_btn_download": "Télécharger rapport d'exemple (.zip)",
     "demo_report_btn_verify": "Vérifier l'authenticité",
@@ -946,7 +946,7 @@
       }
     ],
     "founder_label": "Le fondateur",
-    "founder_bio": "Michele Angelo Petraroli travaillait dans la sécurité événementielle et détestait chaque jour la même corvée : noter ses heures à la main. Les applications qu'il essayait faisaient le même travail avec de plus jolis boutons, alors pendant ses vacances il a construit sa propre version : appuyer sur démarrer, appuyer sur arrêter, un total mensuel propre prêt à la fin du mois. C'est là qu'est né GeoTapp – d'abord pour ses collègues, puis comme système pour prouver que le travail a été accompli sans surveiller les personnes qui le font, dans le respect des règles encadrant la surveillance des salariés et du RGPD.",
+    "founder_bio": "Michele Angelo Petraroli travaillait dans la sécurité événementielle et détestait chaque jour la même corvée : noter ses heures à la main. Les applications qu'il essayait faisaient le même travail avec de plus jolis boutons, alors pendant ses vacances il a construit sa propre version : appuyer sur démarrer, appuyer sur arrêter, un total mensuel propre prêt à la fin du mois. C'est là qu'est né GeoTapp – d'abord pour ses collègues, puis comme système pour documenter le travail accompli sans surveiller les personnes qui le font, dans le respect des règles encadrant la surveillance des salariés et du RGPD.",
     "resources_label": "Ressources presse",
     "resources_intro": "Logo, photo et matériaux prêts à l'emploi, ainsi que les outils gratuits que nous mettons à disposition de tous.",
     "logo_download": "Télécharger le logo",
@@ -1153,7 +1153,7 @@
     ]
   },
   "settore_layout": {
-    "pain_subtitle": "Les apps de pointage enregistrent. Elles ne certifient pas. La différence est énorme, et on la ressent dès qu'un litige survient.",
+    "pain_subtitle": "Les apps de pointage enregistrent. Elles ne scellent pas. La différence est énorme, et on la ressent dès qu'un litige survient.",
     "before": "Avant",
     "after": "Avec GeoTapp",
     "classic_app": "Application classique / Tableur",
@@ -1165,7 +1165,7 @@
     "mockup_gps": "GPS vérifié",
     "mockup_photos": "Photos jointes",
     "mockup_photos_count": "3 photos géolocalisées",
-    "mockup_sealed": "Non modifiable après clôture",
+    "mockup_sealed": "Scellé après clôture",
     "mockup_status_active": "Actif",
     "mockup_status_completed": "Terminé",
     "mockup_status_summary": "4 opérateurs actifs sur 6 sites",

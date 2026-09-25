@@ -115,7 +115,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Forsvarlige rapporter overalt',
-        desc: 'Hver rapport er digitalt signeret og manipulationssikret. Gyldig over for en kunde, en inspektør eller en advokat.',
+        desc: 'Hver rapport er digitalt signeret og enhver ændring kan spores. En kunde, en inspektør eller en advokat kan selv kontrollere den.',
       },
       {
         title: 'Vagt- og teamstyring',

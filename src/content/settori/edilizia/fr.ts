@@ -3,13 +3,13 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'Application Chantier BTP : Pointage GPS & Gestion des Équipes | GeoTapp',
-    description: 'Gérez les présences, les équipes et la sécurité sur chantier avec le GPS en temps réel. Pointages certifiés, rapports automatiques. Application conforme RGPD pour entreprises du BTP.',
+    description: 'Gérez les présences, les équipes et la sécurité sur chantier avec le GPS en temps réel. Pointages scellés, rapports automatiques. Application conforme RGPD pour entreprises du BTP.',
   },
   hero: {
     badge: 'Application pour entreprises du BTP et chantiers',
     h1_line1: 'Votre chantier sous contrôle,',
     h1_line2: 'en temps réel.',
-    subtitle: 'Pointages GPS certifiés, gestion des équipes et rapports automatiques. Zéro paperasse, zéro litiges. GeoTapp connecte Flow + TimeTracker pour les chefs de chantier, sous-traitants et maîtres d\'ouvrage.',
+    subtitle: 'Pointages GPS scellés, gestion des équipes et rapports automatiques. Zéro paperasse, zéro litiges. GeoTapp connecte Flow + TimeTracker pour les chefs de chantier, sous-traitants et maîtres d\'ouvrage.',
     cta_primary: 'Essayez-le sur un vrai chantier',
     cta_note: "14 jours, jusqu'à 50 intervenants sur le terrain, sans carte bancaire.",
   },
@@ -18,7 +18,7 @@ const content: SettoreContent = {
     items: [
       {
         title: 'Qui était sur le chantier et quand ?',
-        desc: 'Chaque pointage GPS est horodaté et certifié. GeoTapp enregistre les coordonnées réelles au moment du pointage, pas saisies manuellement. Les données sont vérifiables à tout moment par la maîtrise d\'ouvrage.',
+        desc: 'Chaque pointage GPS est horodaté et scellé. GeoTapp enregistre les coordonnées réelles au moment du pointage, pas saisies manuellement. Les données sont vérifiables à tout moment par la maîtrise d\'ouvrage.',
       },
       {
         title: 'Comment gérer les sous-traitants ?',
@@ -36,7 +36,7 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'L\'ouvrier pointe à l\'entrée du chantier',
-        desc: 'Il démarre sa vacation depuis son smartphone. GeoTapp enregistre les coordonnées GPS réelles, l\'horodatage et, si besoin, des photos. Entièrement automatique, infalsifiable.',
+        desc: 'Il démarre sa vacation depuis son smartphone. GeoTapp enregistre les coordonnées GPS réelles, l\'horodatage et, si besoin, des photos. Entièrement automatique, toute modification est détectable.',
       },
       {
         title: 'Le chef de chantier voit tout en temps réel',
@@ -49,7 +49,7 @@ const content: SettoreContent = {
     ],
   },
   differenza: {
-    title: 'Application chantier : pointage ou certification ?',
+    title: 'Application chantier : pointage ou preuve vérifiable ?',
     subtitle: 'La plupart des applications enregistrent l\'heure. GeoTapp produit des preuves vérifiables.',
     rows: [
       {
@@ -65,7 +65,7 @@ const content: SettoreContent = {
       {
         label: 'En cas de litige',
         competitor: 'Données non défendables',
-        geotapp: 'Rapport scellé, infalsifiable',
+        geotapp: 'Rapport scellé, toute modification est détectable',
       },
       {
         label: 'Rapport de chantier',
@@ -98,7 +98,7 @@ const content: SettoreContent = {
     title: 'Fonctionnalités conçues pour le chantier BTP',
     items: [
       {
-        title: 'Présences certifiées par GPS',
+        title: 'Présences scellées par GPS',
         desc: 'Chaque entrée et sortie est enregistrée avec la position GPS réelle et l\'horodatage. Défendable devant maîtrise d\'ouvrage, clients et inspecteurs.',
       },
       {
@@ -115,7 +115,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Preuves photographiques scellées',
-        desc: 'Les ouvriers prennent des photos depuis l\'application. Chaque image est liée au chantier avec GPS et horodatage, infalsifiable après génération.',
+        desc: 'Les ouvriers prennent des photos depuis l\'application. Chaque image est liée au chantier avec GPS et horodatage, toute modification est détectable après génération.',
       },
       {
         title: 'Conformité RGPD intégrée',
@@ -134,7 +134,7 @@ const content: SettoreContent = {
     items: [
       {
         q: 'Qui était sur le chantier et quand ?',
-        a: 'Chaque pointage GPS est horodaté et certifié. GeoTapp enregistre les coordonnées réelles au moment du pointage, pas saisies manuellement. Les données sont vérifiables à tout moment par la maîtrise d\'ouvrage.',
+        a: 'Chaque pointage GPS est horodaté et scellé. GeoTapp enregistre les coordonnées réelles au moment du pointage, pas saisies manuellement. Les données sont vérifiables à tout moment par la maîtrise d\'ouvrage.',
       },
       {
         q: 'Comment gérer les sous-traitants sur le chantier ?',
@@ -161,7 +161,7 @@ const content: SettoreContent = {
   schema_faq: [
     {
       question: 'Qui était sur le chantier et quand ?',
-      answer: 'Chaque pointage GPS est horodaté et certifié. GeoTapp enregistre les coordonnées réelles au moment du pointage, pas saisies manuellement. Les données sont vérifiables à tout moment par la maîtrise d\'ouvrage.',
+      answer: 'Chaque pointage GPS est horodaté et scellé. GeoTapp enregistre les coordonnées réelles au moment du pointage, pas saisies manuellement. Les données sont vérifiables à tout moment par la maîtrise d\'ouvrage.',
     },
     {
       question: 'Comment gérer les sous-traitants sur le chantier ?',

@@ -155,7 +155,7 @@
     "report_section_title": "Het rapport. Geen samenvatting. Een bewijs.",
     "report_section_subtitle": "Elk GeoTapp-rapport wordt automatisch gegenereerd uit echte veldgegevens.",
     "report_section_body": "GPS-registraties, foto's met de tijd erop, veldnotities. De gegevens sluiten zich bij het genereren en daarna raakt niemand ze meer aan. Als de twijfel komt legt u niets uit, u laat het zien, en wat u laat zien is geen document voor de klant, het is het einde van de discussie.",
-    "report_feature_1": "Niet wijzigbaar na aanmaak, elke wijziging is detecteerbaar",
+    "report_feature_1": "Verzegeld na aanmaak, elke wijziging is detecteerbaar",
     "report_feature_2": "Verifieerbaar zonder account, door iedereen, zelfstandig",
     "report_feature_3": "GPS- en fotogegevens geïntegreerd en onscheidbaar",
     "report_feature_4": "Automatisch gegenereerd, geen handmatige invulling",
@@ -230,7 +230,7 @@
       "title": "U hoeft niet dat ze u vertrouwen.",
       "subtitle": "Uw woord komt er niet aan te pas. De klant opent het rapport en controleert het zelf, zonder in te loggen bij GeoTapp. Kloppen de gegevens met het echte werk, dan houdt het rapport stand. Heeft iemand het document aangepast, dan houdt het geen stand meer. Zonder beroep.",
       "features": {
-        "integrity": "<strong>Niet-aanpasbare gegevens:</strong> Het rapport wordt gegenereerd op echte veldgegevens en vergrendeld. Elke wijziging maakt het ongeldig, zonder beroep.",
+        "integrity": "<strong>Verzegelde gegevens:</strong> Het rapport wordt gegenereerd op echte veldgegevens en vergrendeld. Elke wijziging maakt het ongeldig, zonder beroep.",
         "independent": "<strong>Autonome verificatie:</strong> Iedereen met het rapport kan de authenticiteit controleren, geen account, geen platformtoegang."
       },
       "link": "Ontdek GeoTapp Verifier"
@@ -254,7 +254,7 @@
         },
         {
           "title": "Verdedigbaar bewijs over tijd",
-          "desc": "Elk rapport wordt vergrendeld op echte veldgegevens, niet wijzigbaar na aanmaak. Geschil? De data zijn er. Door iedereen verifieerbaar. Altijd."
+          "desc": "Elk rapport wordt vergrendeld op echte veldgegevens, verzegeld na aanmaak. Geschil? De data zijn er. Door iedereen verifieerbaar. Altijd."
         }
       ]
     },
@@ -270,7 +270,7 @@
       "see_all": "Alle ondersteunde sectoren bekijken",
       "installatori": {
         "name": "Installateurs",
-        "desc": "Elektriciens, Loodgieters, Installateurs. Elke opdracht gedocumenteerd met GPS en foto's, onvervalsbare data, controleerbaar door de klant.",
+        "desc": "Elektriciens, Loodgieters, Installateurs. Elke opdracht gedocumenteerd met GPS en foto's, verzegelde data, controleerbaar door de klant.",
         "cta": "Elke opdracht bewijzen"
       },
       "sicurezza": {
@@ -285,7 +285,7 @@
       },
       "elettricisti": {
         "name": "Elektriciens",
-        "desc": "Elektrische installaties, schakelkasten, bedrading. Elke klus vastgelegd met GPS en foto's, manipulatiebestendig bewijs om elk geschil te sluiten.",
+        "desc": "Elektrische installaties, schakelkasten, bedrading. Elke klus vastgelegd met GPS en foto's, verzegeld bewijs om elk geschil te sluiten.",
         "cta": "Documenteer elke klus"
       },
       "idraulici": {
@@ -308,7 +308,7 @@
       },
       "impianti": {
         "desc": "Werktuigbouw, Elektro, Brandbeveiliging. Testen en inbedrijfstelling verzegeld met tijd en locatie, bewijs klaar voor de opdrachtgever.",
-        "cta": "Certificeer je testen"
+        "cta": "Verzegel je testen"
       }
     },
     "app_mockup": {
@@ -668,7 +668,7 @@
         "timelock-alpha": {
           "name": "GPS-tijdregistratie",
           "short": "In- en uitklokken gekoppeld aan GPS-positie en nauwkeurig tijdstempel. Elke werksessie wordt een verifieerbare operationele gebeurtenis.",
-          "full": "### Tijd is verifieerbaar.\n\nTijdstempels zonder verificatie leiden tot geschillen.\n**GPS-tijdregistratie** maakt elke werksessie een betrouwbaar, verdedigbaar register.\n\n#### Geogelokaliseerd in- en uitklokken\n\nDe monteur registreert binnenkomst en vertrek vanuit het veld.\nLocatie, adres en tijd worden automatisch vastgelegd.\n\n#### Onveranderlijke geschiedenis\n\nElke sessie is een verifieerbaar register: begintijd, eindtijd, positie, duur en gekoppelde werkbeurt.\nDe klant vraagt wanneer u aankwam? De gegevens zijn er, altijd."
+          "full": "### Tijd is verifieerbaar.\n\nTijdstempels zonder verificatie leiden tot geschillen.\n**GPS-tijdregistratie** maakt elke werksessie een betrouwbaar, verdedigbaar register.\n\n#### Geogelokaliseerd in- en uitklokken\n\nDe monteur registreert binnenkomst en vertrek vanuit het veld.\nLocatie, adres en tijd worden automatisch vastgelegd.\n\n#### Verzegelde geschiedenis\n\nElke sessie is een verifieerbaar register: begintijd, eindtijd, positie, duur en gekoppelde werkbeurt.\nDe klant vraagt wanneer u aankwam? De gegevens zijn er, altijd."
         },
         "event-horizon": {
           "name": "Dienstroosters",
@@ -844,7 +844,7 @@
       },
       {
         "title": "Verifieerbare rapporten",
-        "desc": "Hoe elke opdracht een rapport genereert met fotobewijs, digitale handtekening en onveranderlijke hash die u aan de klant kunt tonen."
+        "desc": "Hoe elke opdracht een rapport genereert met fotobewijs, digitale handtekening en verzegelde hash die u aan de klant kunt tonen."
       },
       {
         "title": "Teambeheer via Flow",
@@ -1054,7 +1054,7 @@
     "cta_title": "Blijf op de hoogte",
     "cta_desc": "Geen spam, alleen waardevolle updates over het product en de sector.",
     "cta_btn": "Neem contact op",
-    "schema_desc": "Gidsen en inzichten over certificering van veldwerk, teambeheer, AVG en geolocatie.",
+    "schema_desc": "Gidsen en inzichten over verifieerbaar bewijs van veldwerk, teambeheer, AVG en geolocatie.",
     "meta_title": "Blog | GeoTapp - Verificatie van veldwerk",
     "meta_desc": "Gidsen, inzichten en bronnen over teambeheer, verzegeld bewijs van interventies, AVG en geolocatie. Van het GeoTapp-team.",
     "cat_all": "Alle",
@@ -1153,7 +1153,7 @@
     ]
   },
   "settore_layout": {
-    "pain_subtitle": "Klok-in apps registreren. Ze certificeren niet. Er is een enorm verschil, en bij een geschil voel je dat.",
+    "pain_subtitle": "Klok-in apps registreren. Ze verzegelen niet. Er is een enorm verschil, en bij een geschil voel je dat.",
     "before": "Voorheen",
     "after": "Met GeoTapp",
     "classic_app": "Standaard app / Spreadsheet",
@@ -1165,7 +1165,7 @@
     "mockup_gps": "GPS geverifieerd",
     "mockup_photos": "Foto's bijgevoegd",
     "mockup_photos_count": "3 gelokaliseerde foto's",
-    "mockup_sealed": "Niet bewerkbaar na sluiting",
+    "mockup_sealed": "Verzegeld na sluiting",
     "mockup_status_active": "Actief",
     "mockup_status_completed": "Voltooid",
     "mockup_status_summary": "4 medewerkers actief op 6 locaties",

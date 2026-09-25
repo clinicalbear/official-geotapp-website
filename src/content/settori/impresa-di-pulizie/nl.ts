@@ -26,7 +26,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Papieren urenstaten zijn onbetrouwbaar?',
-        desc: 'Automatische registratie vanaf de smartphone, geen handmatige invoer. De gegevens zijn wat ze zijn, en kunnen niet worden gewijzigd.',
+        desc: 'Automatische registratie vanaf de smartphone, geen handmatige invoer. De gegevens zijn wat ze zijn, en elke wijziging is detecteerbaar.',
       },
       {
         title: 'Moeilijk om meerdere teams te coördineren?',
@@ -57,7 +57,7 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'Schoonmaker klokt in met GPS',
-        desc: 'Opent en sluit de dienst vanaf de smartphone. GeoTapp registreert echte GPS-coördinaten, foto\'s en tijdstempel, volledig automatisch, niet te wijzigen.',
+        desc: 'Opent en sluit de dienst vanaf de smartphone. GeoTapp registreert echte GPS-coördinaten, foto\'s en tijdstempel, volledig automatisch, en elke wijziging is detecteerbaar.',
       },
       {
         title: 'De manager ziet alles in real-time',
@@ -87,7 +87,7 @@ const content: SettoreContent = {
       {
         label: 'Bij geschillen',
         competitor: 'Gegevens niet verdedigbaar',
-        geotapp: 'Verzegeld rapport, niet te vervalsen',
+        geotapp: 'Verzegeld rapport, elke wijziging is detecteerbaar',
       },
       {
         label: 'Fotobewijs',
@@ -115,7 +115,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Verdedigbare rapporten overal',
-        desc: 'Elk rapport is digitaal ondertekend en niet te vervalsen. Geldig tegenover klanten, inspecteurs en advocaten.',
+        desc: 'Elk rapport is digitaal ondertekend, en elke wijziging is detecteerbaar. Klanten, inspecteurs en advocaten kunnen het zelf controleren.',
       },
       {
         title: 'Diensten- en teambeheer',

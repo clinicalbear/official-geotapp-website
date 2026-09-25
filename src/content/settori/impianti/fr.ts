@@ -18,7 +18,7 @@ const content: SettoreContent = {
     items: [
       {
         title: 'Les clients contestent les heures d\'intervention',
-        desc: 'Pointages GPS horodatés comme preuve irréfutable. Les données sont certifiées au moment de l\'intervention, non modifiables après coup.',
+        desc: 'Pointages GPS horodatés comme preuve irréfutable. Les données sont scellées au moment de l\'intervention, et toute modification ultérieure est détectable.',
       },
       {
         title: 'Courir après les techniciens pour des nouvelles',
@@ -36,7 +36,7 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'Le technicien pointe par GPS au début de l\'intervention',
-        desc: 'Il ouvre la mission depuis son smartphone. GeoTapp enregistre les coordonnées GPS réelles, l\'horodatage et des photos, entièrement automatique, infalsifiable.',
+        desc: 'Il ouvre la mission depuis son smartphone. GeoTapp enregistre les coordonnées GPS réelles, l\'horodatage et des photos, entièrement automatique, et toute modification est détectable.',
       },
       {
         title: 'Les heures sont enregistrées automatiquement par mission',
@@ -49,7 +49,7 @@ const content: SettoreContent = {
     ],
   },
   differenza: {
-    title: 'Application installateurs : pointage ou certification ?',
+    title: 'Application installateurs : pointage ou preuve vérifiable ?',
     subtitle: 'La plupart des applications enregistrent l\'heure. GeoTapp produit des preuves vérifiables.',
     rows: [
       {
@@ -65,7 +65,7 @@ const content: SettoreContent = {
       {
         label: 'En cas de litige',
         competitor: 'Données non défendables',
-        geotapp: 'Rapport scellé, infalsifiable',
+        geotapp: 'Rapport scellé, toute modification détectable',
       },
       {
         label: 'Rapport d\'intervention',
@@ -103,7 +103,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Preuves photographiques scellées',
-        desc: 'Le technicien photographie depuis l\'application. Chaque image est liée à l\'intervention avec GPS et horodatage, infalsifiable après génération.',
+        desc: 'Le technicien photographie depuis l\'application. Chaque image est liée à l\'intervention avec GPS et horodatage, et toute modification après génération est détectable.',
       },
       {
         title: 'Gestion multi-sites des missions',
@@ -134,7 +134,7 @@ const content: SettoreContent = {
     items: [
       {
         q: 'Les clients contestent-ils les heures d\'intervention ?',
-        a: 'Avec GeoTapp, les pointages GPS sont horodatés au moment de l\'intervention et ne sont pas modifiables. Ils constituent une preuve irréfutable des heures travaillées, éliminant tout litige.',
+        a: 'Avec GeoTapp, les pointages GPS sont horodatés au moment de l\'intervention et toute modification est détectable. Ils constituent une preuve irréfutable des heures travaillées, éliminant tout litige.',
       },
       {
         q: 'Comment surveiller plusieurs équipes sur différentes missions ?',
@@ -161,7 +161,7 @@ const content: SettoreContent = {
   schema_faq: [
     {
       question: 'Les clients contestent-ils les heures d\'intervention ?',
-      answer: 'Avec GeoTapp, les pointages GPS sont horodatés au moment de l\'intervention et ne sont pas modifiables. Ils constituent une preuve irréfutable des heures travaillées, éliminant tout litige.',
+      answer: 'Avec GeoTapp, les pointages GPS sont horodatés au moment de l\'intervention et toute modification est détectable. Ils constituent une preuve irréfutable des heures travaillées, éliminant tout litige.',
     },
     {
       question: 'Comment surveiller plusieurs équipes sur différentes missions ?',

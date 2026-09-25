@@ -24,7 +24,7 @@ const it: VerifierCopy = {
     'Organizza commesse, squadre e genera i report strutturati e sigillati, pronti per la verifica.',
   ecosystem_flow_link: 'Scopri Flow',
   ecosystem_verifier_desc:
-    "Verifica l'integrità di ogni report. Confronta il documento con i dati originali e sigilla l'autenticità.",
+    "Verifica l'integrità di ogni report. Confronta il documento con i dati originali e verifica l'autenticità.",
   problem_badge: 'Il problema reale',
   problem_title: 'Un report non verificabile è un report contestabile.',
   problem_items: [
@@ -61,7 +61,7 @@ const it: VerifierCopy = {
     {
       num: '03',
       title: "Verifier controlla l'integrità",
-      desc: 'Chiunque può verificare il report con GeoTapp Verifier. Il sistema confronta il documento con i dati operativi registrati e sigilla se il report è integro e autentico.',
+      desc: 'Chiunque può verificare il report con GeoTapp Verifier. Il sistema confronta il documento con i dati operativi registrati e verifica se il report è integro e autentico.',
     },
   ],
   features_badge: 'Cosa verifica',
@@ -77,7 +77,7 @@ const it: VerifierCopy = {
     },
     {
       title: 'Integrità del documento',
-      desc: 'Certifica che il documento non sia stato modificato dopo la sua generazione. Qualsiasi alterazione viene rilevata.',
+      desc: 'Verifica che il documento non sia stato modificato dopo la sua generazione. Qualsiasi alterazione viene rilevata.',
     },
     {
       title: 'Autenticità dei dati',
@@ -104,7 +104,7 @@ const it: VerifierCopy = {
   ecosystem_badge: 'Ecosistema GeoTapp',
   ecosystem_title: 'Verifier funziona con Flow e TimeTracker.',
   ecosystem_desc:
-    "GeoTapp Verifier non è uno strumento isolato. È la parte finale di un ciclo operativo integrato: i dati vengono raccolti sul campo con TimeTracker, organizzati in Flow, e poi sigillati da Verifier.",
+    "GeoTapp Verifier non è uno strumento isolato. È la parte finale di un ciclo operativo integrato: i dati vengono raccolti sul campo con TimeTracker, organizzati in Flow, e poi verificati da Verifier.",
   cta_title: 'Inizia a produrre report verificabili.',
   cta_subtitle:
     'Scopri come GeoTapp Verifier può aiutare la tua azienda a ridurre le contestazioni e aumentare la credibilità verso i clienti.',

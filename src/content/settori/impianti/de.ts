@@ -18,7 +18,7 @@ const content: SettoreContent = {
     items: [
       {
         title: 'Kunden bestreiten die geleisteten Stunden',
-        desc: 'GPS-Stempelungen mit Zeitstempel als unwiderlegbarer Nachweis. Die Daten werden zum Zeitpunkt des Einsatzes versiegelt, nachträglich nicht änderbar.',
+        desc: 'GPS-Stempelungen mit Zeitstempel als überprüfbarer Nachweis. Die Daten werden zum Zeitpunkt des Einsatzes versiegelt, jede nachträgliche Änderung ist nachweisbar.',
       },
       {
         title: 'Techniker hinterhertelefonieren',
@@ -36,7 +36,7 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'Der Techniker stempelt per GPS beim Start',
-        desc: 'Öffnet den Auftrag vom Smartphone. GeoTapp erfasst reale GPS-Koordinaten, Zeitstempel und Fotos, vollautomatisch, manipulationssicher.',
+        desc: 'Öffnet den Auftrag vom Smartphone. GeoTapp erfasst reale GPS-Koordinaten, Zeitstempel und Fotos, vollautomatisch; jede Änderung ist nachweisbar.',
       },
       {
         title: 'Stunden werden automatisch pro Auftrag erfasst',
@@ -49,7 +49,7 @@ const content: SettoreContent = {
     ],
   },
   differenza: {
-    title: 'Anlagenbau-App: Zeiterfassung oder Zertifizierung?',
+    title: 'Anlagenbau-App: Zeiterfassung oder überprüfbarer Nachweis?',
     subtitle: 'Die meisten Apps erfassen nur die Uhrzeit. GeoTapp liefert überprüfbare Nachweise.',
     rows: [
       {
@@ -65,7 +65,7 @@ const content: SettoreContent = {
       {
         label: 'Bei Streitigkeiten',
         competitor: 'Daten nicht belastbar',
-        geotapp: 'Versiegelter Bericht, manipulationssicher',
+        geotapp: 'Versiegelter Bericht, jede Änderung ist nachweisbar',
       },
       {
         label: 'Einsatzbericht',
@@ -103,7 +103,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Versiegelte Fotonachweise',
-        desc: 'Der Techniker fotografiert direkt aus der App. Jedes Bild ist mit GPS und Zeitstempel an den Einsatz gekoppelt, nach Erstellung manipulationssicher.',
+        desc: 'Der Techniker fotografiert direkt aus der App. Jedes Bild ist mit GPS und Zeitstempel an den Einsatz gekoppelt; jede Änderung nach der Erstellung ist nachweisbar.',
       },
       {
         title: 'Multi-Standort-Auftragsverwaltung',
@@ -134,7 +134,7 @@ const content: SettoreContent = {
     items: [
       {
         q: 'Bestreiten Kunden die geleisteten Einsatzstunden?',
-        a: 'Mit GeoTapp werden GPS-Stempelungen zum Zeitpunkt des Einsatzes erfasst und sind nicht änderbar. Sie stellen einen unwiderlegbaren Nachweis der geleisteten Stunden dar und eliminieren jede Streitigkeit.',
+        a: 'Mit GeoTapp werden GPS-Stempelungen zum Zeitpunkt des Einsatzes erfasst, und jede Änderung ist nachweisbar. Sie sind ein überprüfbarer Nachweis der geleisteten Stunden, wenn jemand sie anzweifelt.',
       },
       {
         q: 'Wie überwache ich mehrere Teams auf verschiedenen Aufträgen?',
@@ -161,7 +161,7 @@ const content: SettoreContent = {
   schema_faq: [
     {
       question: 'Bestreiten Kunden die geleisteten Einsatzstunden?',
-      answer: 'Mit GeoTapp werden GPS-Stempelungen zum Zeitpunkt des Einsatzes erfasst und sind nicht änderbar. Sie stellen einen unwiderlegbaren Nachweis der geleisteten Stunden dar und eliminieren jede Streitigkeit.',
+      answer: 'Mit GeoTapp werden GPS-Stempelungen zum Zeitpunkt des Einsatzes erfasst, und jede Änderung ist nachweisbar. Sie sind ein überprüfbarer Nachweis der geleisteten Stunden, wenn jemand sie anzweifelt.',
     },
     {
       question: 'Wie überwache ich mehrere Teams auf verschiedenen Aufträgen?',

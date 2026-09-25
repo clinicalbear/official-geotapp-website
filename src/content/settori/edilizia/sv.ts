@@ -3,7 +3,7 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'Byggarbetsplats-app: GPS-närvaro & Lagstyrning | GeoTapp',
-    description: 'Hantera närvaro, skift och säkerhet på byggarbetsplatsen med GPS i realtid. Certifierade stämplingar, automatiska rapporter. GDPR-kompatibel app för byggföretag.',
+    description: 'Hantera närvaro, skift och säkerhet på byggarbetsplatsen med GPS i realtid. Förseglade stämplingar, automatiska rapporter. GDPR-kompatibel app för byggföretag.',
   },
   hero: {
     badge: 'App för byggföretag och byggarbetsplatser',
@@ -36,7 +36,7 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'Arbetaren stämplar in vid byggarbetsplatsen',
-        desc: 'Startar skiftet från sin smartphone. GeoTapp registrerar verkliga GPS-koordinater, tidsstämpel och, vid behov, foton. Helt automatiskt, manipuleringssäkert.',
+        desc: 'Startar skiftet från sin smartphone. GeoTapp registrerar verkliga GPS-koordinater, tidsstämpel och, vid behov, foton. Helt automatiskt, varje ändring syns.',
       },
       {
         title: 'Platschefen ser allt i realtid',
@@ -49,7 +49,7 @@ const content: SettoreContent = {
     ],
   },
   differenza: {
-    title: 'Byggarbetsplats-app: tidsregistrering eller certifiering?',
+    title: 'Byggarbetsplats-app: tidsregistrering eller verifierbart bevis?',
     subtitle: 'De flesta appar registrerar bara tiden. GeoTapp producerar verifierbart bevis.',
     rows: [
       {
@@ -65,7 +65,7 @@ const content: SettoreContent = {
       {
         label: 'Vid tvist',
         competitor: 'Data inte försvarbar',
-        geotapp: 'Förseglad rapport, manipuleringssäker',
+        geotapp: 'Förseglad rapport, varje ändring syns',
       },
       {
         label: 'Byggarbetsplatsrapport',
@@ -115,7 +115,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Förseglade fotobevis',
-        desc: 'Arbetare tar foton från appen. Varje bild är kopplad till byggarbetsplatsen med GPS och tidsstämpel, manipuleringssäker efter generering.',
+        desc: 'Arbetare tar foton från appen. Varje bild är kopplad till byggarbetsplatsen med GPS och tidsstämpel, varje ändring syns efter generering.',
       },
       {
         title: 'Inbyggd GDPR-efterlevnad',
@@ -142,7 +142,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Ersätter GeoTapp den elektroniska personalliggaren?',
-        a: 'Nej, och det ska sägas rakt ut. Den elektroniska personalliggaren är reglerad i skatteförfarandelagstiftningen, byggherren anmäler byggarbetsplatsen till Skatteverket innan arbetet påbörjas och ansvarar för att utrustningen finns på plats. Kontrollavgifterna är kännbara, 25 000 kronor om byggarbetsplatsen inte har anmälts, 12 500 kronor om liggaren saknas eller inte förs på rätt sätt, och 2 500 kronor för varje person som är på plats utan att vara registrerad. GeoTapp är inget personalliggarsystem och tar inte över den skyldigheten. Det appen ger dig är din egen tidsregistrering per byggarbetsplats, med GPS-verifierad in- och utstämpling och oföränderliga tidsstämplar, så att du vet vilka av dina egna montörer som var var och när, även när underentreprenörerna är många.',
+        a: 'Nej, och det ska sägas rakt ut. Den elektroniska personalliggaren är reglerad i skatteförfarandelagstiftningen, byggherren anmäler byggarbetsplatsen till Skatteverket innan arbetet påbörjas och ansvarar för att utrustningen finns på plats. Kontrollavgifterna är kännbara, 25 000 kronor om byggarbetsplatsen inte har anmälts, 12 500 kronor om liggaren saknas eller inte förs på rätt sätt, och 2 500 kronor för varje person som är på plats utan att vara registrerad. GeoTapp är inget personalliggarsystem och tar inte över den skyldigheten. Det appen ger dig är din egen tidsregistrering per byggarbetsplats, med GPS-verifierad in- och utstämpling och förseglade tidsstämplar där varje ändring syns, så att du vet vilka av dina egna montörer som var var och när, även när underentreprenörerna är många.',
       },
       {
         q: 'Hur hanterar du underentreprenörer på byggarbetsplatsen?',
@@ -173,7 +173,7 @@ const content: SettoreContent = {
     },
     {
       question: 'Ersätter GeoTapp den elektroniska personalliggaren?',
-      answer: 'Nej. Den elektroniska personalliggaren är reglerad i skatteförfarandelagstiftningen, byggherren anmäler byggarbetsplatsen till Skatteverket innan arbetet påbörjas och ansvarar för att utrustningen finns på plats. GeoTapp är inget personalliggarsystem och tar inte över den skyldigheten. Det appen ger dig är din egen tidsregistrering per byggarbetsplats, med GPS-verifierad in- och utstämpling och oföränderliga tidsstämplar.',
+      answer: 'Nej. Den elektroniska personalliggaren är reglerad i skatteförfarandelagstiftningen, byggherren anmäler byggarbetsplatsen till Skatteverket innan arbetet påbörjas och ansvarar för att utrustningen finns på plats. GeoTapp är inget personalliggarsystem och tar inte över den skyldigheten. Det appen ger dig är din egen tidsregistrering per byggarbetsplats, med GPS-verifierad in- och utstämpling och förseglade tidsstämplar där varje ändring syns.',
     },
     {
       question: 'Vem var på byggarbetsplatsen och när?',
