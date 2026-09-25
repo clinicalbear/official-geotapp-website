@@ -36,6 +36,11 @@ function CartButton() {
  */
 export default function Navbar() {
   const [open, setOpen] = useState<'' | 'products' | 'sectors'>('');
+  // Le icone dei prodotti (iconaFlow da sola pesa 60 KB) si montano solo dopo la prima
+  // apertura del menu: con il menu chiuso stavano comunque nello schermo, quindi il
+  // browser le scaricava subito e ad alta priorita', prima del titolo della pagina.
+  const [prodSeen, setProdSeen] = useState(false);
+  useEffect(() => { if (open === 'products') setProdSeen(true); }, [open]);
   const [mobile, setMobile] = useState(false);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const pathname = usePathname();
@@ -184,11 +189,11 @@ export default function Navbar() {
             {products.map((p) => (
               <Link key={p.name} href={p.href} className="itm">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={p.iconSrc} alt="" aria-hidden="true" loading="lazy" />
+                {prodSeen && <img src={p.iconSrc} alt="" aria-hidden="true" loading="lazy" />}
                 {/* il logo fuori scala che abita la card: sfonda i bordi alto
                     e basso sulla destra, il taglio lo fa l'overflow della card */}
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={p.iconSrc} alt="" className="art" aria-hidden="true" loading="lazy" />
+                {prodSeen && <img src={p.iconSrc} alt="" className="art" aria-hidden="true" loading="lazy" />}
                 <b>{p.name}</b>
                 <p>{p.desc}</p>
               </Link>

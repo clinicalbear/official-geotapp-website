@@ -48,6 +48,7 @@ export default function VideoGiro({
   locale,
   inizio = 0,
   capitoli = false,
+  subito = false,
   className = '',
   id,
 }: {
@@ -56,6 +57,8 @@ export default function VideoGiro({
   inizio?: number;
   /** Mostra i sette atti sotto al video, come salti. */
   capitoli?: boolean;
+  /** Locandina subito, senza aspettare che il riquadro si avvicini: per le pagine dove il video sta in cima. */
+  subito?: boolean;
   className?: string;
   id?: string;
 }) {
@@ -64,6 +67,20 @@ export default function VideoGiro({
   const blob = useRef<string | null>(null);
   const [acceso, setAcceso] = useState(false);
   const [fermo, setFermo] = useState(false);
+  // Locandina e sottotitoli si chiedono solo quando il riquadro si avvicina allo schermo:
+  // in home stavano fra i file scaricati prima del titolo (25 KB di jpg) pur essendo
+  // piu' in basso. Senza locandina il riquadro resta sul suo fondo scuro.
+  const [vicino, setVicino] = useState(subito);
+  useEffect(() => {
+    const el = video.current;
+    if (!el || vicino) return;
+    if (typeof IntersectionObserver === 'undefined') { setVicino(true); return; }
+    const io = new IntersectionObserver((es) => {
+      if (es.some((e) => e.isIntersecting)) { setVicino(true); io.disconnect(); }
+    }, { rootMargin: '800px 0px' });
+    io.observe(el);
+    return () => io.disconnect();
+  }, [vicino]);
   const t = getDictionary(locale).videoGiro;
   const lingua = linguaGiro(locale);
   const contenuto = GIRO_CONTENUTI[lingua];
@@ -174,7 +191,7 @@ export default function VideoGiro({
           ref={video}
           className="absolute inset-0 h-full w-full"
           src={giroVideoSrc(locale)}
-          poster={giroLocandina(locale)}
+          poster={vicino ? giroLocandina(locale) : undefined}
           preload="none"
           muted
           playsInline
@@ -182,13 +199,15 @@ export default function VideoGiro({
           controlsList="nodownload"
           aria-label={t.posterAlt}
         >
-          <track
-            kind="captions"
-            src={giroSottotitoli(locale)}
-            srcLang={lingua}
-            label={t.captions}
-            default
-          />
+          {vicino && (
+            <track
+              kind="captions"
+              src={giroSottotitoli(locale)}
+              srcLang={lingua}
+              label={t.captions}
+              default
+            />
+          )}
         </video>
 
         {/* 🔴 Le classi di posizione e forma stanno nello style, non fra le

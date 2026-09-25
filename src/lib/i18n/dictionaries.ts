@@ -97,3 +97,48 @@ export function getDictionary(locale?: AppLocale | null): SiteDictionary {
 // I18n note: locale overrides must remain additive with default fallback (1/2)
 
 // I18n note: locale overrides must remain additive with default fallback (2/2)
+
+// ── Il dizionario che viaggia verso il browser (25/09/2026) ──────────────────────────
+// Il layout di [locale] consegna al browser il dizionario della lingua dentro l'HTML
+// della pagina (DictionaryBridge). Intero sono ~86 KB di testo su OGNI pagina, anche
+// sezioni che servono a una pagina sola o a nessun componente client. Lighthouse
+// mobile conta quei byte prima del titolo.
+//
+// Qui le sezioni che il browser non riceve dal layout. Chi le usa in un componente
+// client le aggiunge dal proprio layout di rotta con sezioniDizionario():
+//   product_pages  -> [locale]/products/geotapp-flow|geotapp-timetracker/layout.tsx
+//   accessibilita  -> [locale]/accessibilita/layout.tsx
+//   risorseGps     -> [locale]/risorse/gps-lavoratori-ue/layout.tsx
+// Le altre le leggono solo componenti server, che usano getDictionary() qui sopra e
+// continuano a vedere tutto. Aggiungendo una di queste sezioni a un componente client
+// bisogna consegnarla dal layout della sua rotta, altrimenti nel browser e' undefined.
+export const SEZIONI_SOLO_SERVER_O_PAGINA = [
+  'product_pages',
+  'accessibilita',
+  'risorseGps',
+  'risorseHub',
+  'download_page',
+  'author_page',
+  'sanzioniGps',
+  'indiceSorveglianza',
+  'attribuzione',
+  'embedStrumento',
+] as const satisfies readonly (keyof SiteDictionary)[];
+
+/** Il dizionario per il browser, senza le sezioni qui sopra. */
+export function dizionarioComune(locale?: AppLocale | null): Partial<SiteDictionary> {
+  const out: Partial<SiteDictionary> = { ...getDictionary(locale) };
+  for (const k of SEZIONI_SOLO_SERVER_O_PAGINA) delete out[k];
+  return out;
+}
+
+/** Solo le sezioni indicate, da consegnare dal layout della rotta che le usa. */
+export function sezioniDizionario<K extends keyof SiteDictionary>(
+  locale: AppLocale | null | undefined,
+  keys: readonly K[],
+): Pick<SiteDictionary, K> {
+  const d = getDictionary(locale);
+  const out = {} as Pick<SiteDictionary, K>;
+  for (const k of keys) out[k] = d[k];
+  return out;
+}

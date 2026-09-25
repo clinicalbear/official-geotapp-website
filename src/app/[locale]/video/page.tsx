@@ -87,7 +87,7 @@ export default async function VideoPage({ params }: { params: Promise<{ locale: 
 
         {/* ── il video, alto nella pagina: chi e' arrivato qui e' venuto per questo ── */}
         <section className="sec"><div className="wn">
-          <VideoGiro locale={locale as AppLocale} capitoli id="giro" />
+          <VideoGiro locale={locale as AppLocale} capitoli subito id="giro" />
           <p className="r d1" style={{ color: '#475467', marginTop: 26, fontSize: 17.5, lineHeight: 1.7 }}>
             {t.page.intro2}
           </p>

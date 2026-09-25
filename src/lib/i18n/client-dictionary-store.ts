@@ -12,9 +12,13 @@ import type { SiteDictionary } from './dictionaries';
 const byLocale = new Map<string, SiteDictionary>();
 let latest: SiteDictionary | null = null;
 
-export function storeDictionary(locale: string, dict: SiteDictionary): void {
-  byLocale.set(locale, dict);
-  latest = dict;
+// Le sezioni si SOMMANO: il layout di [locale] consegna il dizionario comune, i layout di
+// alcune rotte aggiungono le sezioni che servono solo a loro (vedi dizionarioComune in
+// dictionaries.ts). Una consegna successiva non toglie mai quello che c'era.
+export function storeDictionary(locale: string, dict: Partial<SiteDictionary>): void {
+  const merged = { ...(byLocale.get(locale) ?? {}), ...dict } as SiteDictionary;
+  byLocale.set(locale, merged);
+  latest = merged;
 }
 
 export function readDictionary(locale?: string | null): SiteDictionary | null {

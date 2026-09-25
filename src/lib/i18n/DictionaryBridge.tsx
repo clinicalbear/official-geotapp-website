@@ -13,7 +13,7 @@ export default function DictionaryBridge({
   children,
 }: {
   locale: string;
-  dict: SiteDictionary;
+  dict: Partial<SiteDictionary>;
   children: ReactNode;
 }) {
   storeDictionary(locale, dict);

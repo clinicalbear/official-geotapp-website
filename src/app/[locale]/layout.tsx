@@ -32,7 +32,7 @@ import { notFound } from 'next/navigation';
 import { SUPPORTED_LOCALES, type AppLocale } from '@/lib/i18n/config';
 import { buildConsentDefaultScript } from '@/lib/consent-mode';
 import DictionaryBridge from '@/lib/i18n/DictionaryBridge';
-import { getDictionary } from '@/lib/i18n/dictionaries';
+import { dizionarioComune } from '@/lib/i18n/dictionaries';
 
 const BASE_URL = 'https://geotapp.com';
 
@@ -321,7 +321,7 @@ export default async function LocaleLayout({ children, params }: Props) {
           'bg-background text-text-primary font-sans antialiased selection:bg-primary selection:text-black',
         )}
       >
-        <DictionaryBridge locale={locale} dict={getDictionary(locale as AppLocale)}>
+        <DictionaryBridge locale={locale} dict={dizionarioComune(locale as AppLocale)}>
         <LEffetti />
         {/* ── Organization schema ───────────────────────────────────────────
             Standalone entity for Google Knowledge Graph. @id anchors all
