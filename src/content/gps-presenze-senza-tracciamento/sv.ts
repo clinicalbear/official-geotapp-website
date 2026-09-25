@@ -13,14 +13,14 @@ const sv: PresenzeCopy = {
       heading: 'När är GPS tillåtet för närvaroregistrering?',
       paragraphs: [
         'I de flesta EU-länder gäller samma princip: verktyg som skulle kunna möjliggöra löpande kontroll av en anställds beteende kräver, innan de tas i bruk, en överenskommelse med facklig representation eller tillstånd från behörig myndighet. I Italien fastställer artikel 4 i Arbetartadgan (lag nr 300/1970) detta krav för fjärrkontrollverktyg, medan verktyg som bara registrerar in- och utpassering samt närvaro uttryckligen undantas.',
-        'En italiensk dom av den 1 juli 2026 (domstolen i Cosenza, dom nr 972) drar gränsen för GPS-baserade stämplingsappar: när positionen bara fångas i det ögonblick man stämplar, utan löpande spårning av förflyttningar däremellan, klassas systemet som ett närvaroregistreringsverktyg och inte som fjärrövervakning. Domstolen upphävde därför ett bötesbelopp på 50 000 euro som den italienska dataskyddsmyndigheten hade ålagt en offentlig aktör, just av det skälet.',
+        'En italiensk dom av den 1 juli 2026 (domstolen i Cosenza, dom nr 972) anger var gränsen går för GPS-baserade stämplingsappar: när positionen bara fångas i det ögonblick man stämplar, utan löpande spårning av förflyttningar däremellan, klassas systemet som ett närvaroregistreringsverktyg och inte som fjärrövervakning. Domstolen upphävde därför ett bötesbelopp på 50 000 euro som den italienska dataskyddsmyndigheten hade ålagt en offentlig aktör, just av det skälet.',
         'Den praktiska regeln: en GPS-punkt tagen vid arbetspassets start och slut fångar ett ögonblick. Ett spår av punkter tagna varje minut följer en person. Samma satellitteknik, men två helt olika verktyg inför lagen.',
       ],
     },
     {
       heading: 'Vad registrerar GeoTapp, och vad registrerar det inte',
       paragraphs: [
-        'GeoTapp fångar bara position när en anställd utför en konkret handling: stämplar in, påbörjar eller avslutar en rast, stämplar ut, plus en punkt per live-taget arbetsbevisfoto. Mellan två stämplingar registreras inget automatiskt: inget spår av förflyttningar, ingen spårning i bakgrunden, ingen position insamlad utan den anställdes vetskap.',
+        'GeoTapp fångar bara position när en anställd utför en konkret handling: stämplar in, påbörjar eller avslutar en rast, stämplar ut, plus en punkt per arbetsbevisfoto. Mellan två stämplingar registreras inget automatiskt: inget spår av förflyttningar, ingen spårning i bakgrunden, ingen position insamlad utan den anställdes vetskap.',
       ],
     },
     {
@@ -33,7 +33,7 @@ const sv: PresenzeCopy = {
     {
       heading: 'Hur länge sparas insamlade positioner?',
       paragraphs: [
-        'I stämplingsloggen raderas koordinaterna efter tolv månader; ett företag kan förkorta perioden till trettio dagar. I rapporter som redan levererats till en kund kvarstår däremot positionerna: det är förseglade dokument som fungerar som bevis för utfört arbete, och de följer den lagringstid som gäller för den typen av dokumentation, inte loggens.',
+        'I stämplingsloggen raderas koordinaterna efter tolv månader; ett företag kan förkorta perioden till trettio dagar. I rapporter som redan levererats till en kund kvarstår däremot positionerna: det är förseglade dokument som dokumenterar det utförda arbetet, och de följer den lagringstid som gäller för den typen av dokumentation, inte loggens.',
         'Det är två olika regler för två olika saker. Driftloggen blir lättare med tiden; ett dokument som redan överlämnats till någon annan följer sina egna regler, precis som vilket dokument som helst när det väl lämnat våra system.',
       ],
     },
@@ -51,14 +51,13 @@ const sv: PresenzeCopy = {
     left: [
       'Position vid in- och utstämpling',
       'Position vid start och slut av varje rast',
-      'En GPS-punkt per arbetsbevisfoto, tagen live',
-      'En tidsstämpel genererad av servern, inte av den anställdes enhet',
+      'En GPS-punkt per arbetsbevisfoto',
+      'Tidsstämpeln för rapportens försegling, hämtad från serverns klocka',
     ],
     right: [
       'Ingen förflyttning under arbetspasset, mellan två stämplingar',
       'Ingen position utanför arbetspasset eller när appen är stängd',
       'Ingen poängsättning eller profilering av beteende',
-      'Ingen position från foton uppladdade från ett galleri: enbart livekamera',
     ],
   },
   sourcesTitle: 'Källor och referenser',
@@ -76,11 +75,11 @@ const sv: PresenzeCopy = {
     items: [
       {
         q: 'Är GPS-spårning av anställda förbjudet enligt GDPR?',
-        a: 'Nej. Tillsynsmyndigheter har aldrig förbjudit GPS på anställda som sådant. Det de bötfäller är kontinuerlig spårning, avsaknad av information, insamling av data som inte har med arbetet att göra: inte den enskilda positionsregistreringen vid stämpling.',
+        a: 'Nej. Tillsynsmyndigheter förbjuder inte GPS på anställda som sådant. Det de bötfäller är kontinuerlig spårning, avsaknad av information, insamling av data som inte har med arbetet att göra: inte den enskilda positionsregistreringen vid stämpling.',
       },
       {
         q: 'Krävs det alltid en överenskommelse med facklig representation för att använda GPS för närvaro?',
-        a: 'Det krävs där systemet kan möjliggöra löpande kontroll av den anställdes aktivitet. Domstolen i Cosenza slog dock fast att ett system som bara fångar position vid stämpling, utan löpande spårning, faller under närvaroregistreringsverktyg som inte kräver det förfarandet.',
+        a: 'Det krävs där systemet kan möjliggöra löpande kontroll av den anställdes aktivitet. Domstolen i Cosenza erkände dock att ett system som bara fångar position vid stämpling, utan löpande spårning, faller under närvaroregistreringsverktyg som inte kräver det förfarandet.',
       },
       {
         q: 'Vad händer om systemet även spårar under raster?',
@@ -92,7 +91,7 @@ const sv: PresenzeCopy = {
       },
       {
         q: 'Sparas insamlade positioner för alltid?',
-        a: 'Nej. I stämplingsloggen raderas de efter tolv månader, och ett företag kan förkorta perioden till trettio dagar. De kvarstår dock i rapporter som redan levererats till en kund, eftersom det är förseglade dokument som fungerar som bevis för utfört arbete.',
+        a: 'Nej. I stämplingsloggen raderas de efter tolv månader, och ett företag kan förkorta perioden till trettio dagar. De kvarstår dock i rapporter som redan levererats till en kund, eftersom det är förseglade dokument som dokumenterar det utförda arbetet.',
       },
     ],
   },

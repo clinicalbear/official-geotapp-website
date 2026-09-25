@@ -6,21 +6,21 @@ const it: PresenzeCopy = {
     'Sì, se la posizione si registra solo alla timbratura. Cosa dice il Tribunale di Cosenza, cosa sanziona il Garante Privacy, e cosa registra davvero un sistema di presenze GPS a norma.',
   h1: 'Si può usare il GPS per le presenze senza tracciare i dipendenti?',
   lede:
-    'Sì. Un sistema che rileva la posizione solo nel momento in cui il lavoratore timbra l\'entrata, la pausa o l\'uscita non sorveglia la persona: documenta un fatto. Lo ha stabilito il Tribunale di Cosenza nel 2026, e lo confermano i provvedimenti del Garante Privacy che puniscono invece il tracciamento continuo.',
+    'Sì. Un sistema che rileva la posizione solo nel momento in cui il lavoratore timbra l\'entrata, la pausa o l\'uscita non sorveglia la persona: documenta un fatto. Lo ha riconosciuto il Tribunale di Cosenza nel 2026, e lo confermano i provvedimenti del Garante Privacy che puniscono invece il tracciamento continuo.',
   updatedLabel: 'Aggiornato il 25 settembre 2026',
   sections: [
     {
       heading: 'Quando il GPS è ammesso per le presenze?',
       paragraphs: [
         'L\'articolo 4 dello Statuto dei Lavoratori (legge 20 maggio 1970, n. 300) distingue due categorie di strumenti. Al comma 1 mette i sistemi da cui può derivare un controllo a distanza dell\'attività: per questi serve l\'accordo sindacale con RSA o RSU, oppure l\'autorizzazione dell\'Ispettorato del Lavoro, prima di accenderli. Al comma 2 mette invece gli strumenti di registrazione degli accessi e delle presenze, che non hanno bisogno di quella procedura.',
-        'Il Tribunale di Cosenza, con la sentenza n. 972 del 1° luglio 2026, ha stabilito dove passa il confine tra le due categorie quando lo strumento è un\'app di timbratura con GPS. Ha annullato una sanzione da 50.000 euro che il Garante aveva inflitto a un ente pubblico, perché il sistema acquisiva la posizione esclusivamente nel momento della timbratura, senza consentire un monitoraggio continuo degli spostamenti: per il giudice questo lo rende uno strumento di registrazione degli accessi e delle presenze ai sensi del comma 2, non uno strumento di controllo a distanza.',
+        'Il Tribunale di Cosenza, con la sentenza n. 972 del 1° luglio 2026, ha indicato dove passa il confine tra le due categorie quando lo strumento è un\'app di timbratura con GPS. Ha annullato una sanzione da 50.000 euro che il Garante aveva inflitto a un ente pubblico, perché il sistema acquisiva la posizione esclusivamente nel momento della timbratura, senza consentire un monitoraggio continuo degli spostamenti: per il giudice questo lo rende uno strumento di registrazione degli accessi e delle presenze ai sensi del comma 2, non uno strumento di controllo a distanza.',
         'Il principio pratico: un punto GPS preso all\'inizio e alla fine del turno fotografa un momento. Una scia di punti presa ogni minuto segue una persona. È la stessa tecnologia satellitare, ma sono due strumenti diversi davanti alla legge.',
       ],
     },
     {
       heading: 'Cosa registra GeoTapp, e cosa no',
       paragraphs: [
-        'GeoTapp rileva la posizione solo quando è il lavoratore a compiere un gesto preciso: entrata, inizio e fine di ogni pausa, uscita, più un punto per ogni foto di prova del lavoro scattata dal vivo. Fra un timbro e l\'altro non viene registrato nulla in automatico: nessuna scia di spostamenti, nessun tracciamento in sottofondo, nessuna posizione raccolta a insaputa del lavoratore.',
+        'GeoTapp rileva la posizione solo quando è il lavoratore a compiere un gesto preciso: entrata, inizio e fine di ogni pausa, uscita, più un punto per ogni foto di prova del lavoro. Fra un timbro e l\'altro non viene registrato nulla in automatico: nessuna scia di spostamenti, nessun tracciamento in sottofondo, nessuna posizione raccolta a insaputa del lavoratore.',
       ],
     },
     {
@@ -33,7 +33,7 @@ const it: PresenzeCopy = {
     {
       heading: 'Per quanto tempo restano le posizioni raccolte?',
       paragraphs: [
-        'Nel registro delle timbrature le coordinate si cancellano dopo dodici mesi; l\'azienda può stringere il periodo fino a trenta giorni. Nei rapportini già consegnati al cliente, invece, le posizioni restano: sono documenti sigillati che servono come prova del lavoro svolto, e seguono il termine di conservazione previsto per quel tipo di documentazione, non quello del registro.',
+        'Nel registro delle timbrature le coordinate si cancellano dopo dodici mesi; l\'azienda può stringere il periodo fino a trenta giorni. Nei rapportini già consegnati al cliente, invece, le posizioni restano: sono documenti sigillati che documentano il lavoro svolto, e seguono il termine di conservazione previsto per quel tipo di documentazione, non quello del registro.',
         'Sono due regole diverse per due oggetti diversi. Il registro operativo si alleggerisce con il tempo; il documento già consegnato a qualcun altro segue le sue regole, come qualunque documento una volta uscito dai nostri sistemi.',
       ],
     },
@@ -51,14 +51,13 @@ const it: PresenzeCopy = {
     left: [
       'Posizione all\'entrata e all\'uscita del turno',
       'Posizione all\'inizio e alla fine di ogni pausa',
-      'Un punto GPS per ogni foto di prova del lavoro, scattata dal vivo',
-      'Orario generato dal server, non dal dispositivo del lavoratore',
+      'Un punto GPS per ogni foto di prova del lavoro',
+      'Orario del sigillo del rapportino preso dall\'orologio del server',
     ],
     right: [
       'Nessuno spostamento durante il turno, fra un timbro e l\'altro',
       'Nessuna posizione quando il dipendente è fuori orario o l\'app è chiusa',
       'Nessun punteggio o profilazione sui comportamenti',
-      'Nessuna posizione da foto caricate da una galleria: solo fotocamera dal vivo',
     ],
   },
   sourcesTitle: 'Fonti e riferimenti',
@@ -76,11 +75,11 @@ const it: PresenzeCopy = {
     items: [
       {
         q: 'Il GPS sui dipendenti è vietato dal GDPR?',
-        a: 'No. Il Garante Privacy non ha mai vietato il GPS sui lavoratori. Sanziona il tracciamento continuo, la mancanza di informativa, la raccolta di dati non pertinenti al lavoro: non la rilevazione puntuale della posizione al momento della timbratura.',
+        a: 'No. Il Garante Privacy non vieta il GPS sui lavoratori in quanto tale. Sanziona il tracciamento continuo, la mancanza di informativa, la raccolta di dati non pertinenti al lavoro: non la rilevazione puntuale della posizione al momento della timbratura.',
       },
       {
         q: 'Serve sempre l\'accordo sindacale per usare il GPS nelle presenze?',
-        a: 'Serve dove il sistema può comportare un controllo a distanza dell\'attività lavorativa. Il Tribunale di Cosenza ha però stabilito che un sistema che rileva la posizione solo alla timbratura, senza monitoraggio continuo, rientra fra gli strumenti di registrazione delle presenze del comma 2 dell\'art. 4, che non richiede quella procedura.',
+        a: 'Serve dove il sistema può comportare un controllo a distanza dell\'attività lavorativa. Il Tribunale di Cosenza ha però riconosciuto che un sistema che rileva la posizione solo alla timbratura, senza monitoraggio continuo, rientra fra gli strumenti di registrazione delle presenze del comma 2 dell\'art. 4, che non richiede quella procedura.',
       },
       {
         q: 'Cosa succede se il sistema traccia anche durante le pause?',
@@ -92,7 +91,7 @@ const it: PresenzeCopy = {
       },
       {
         q: 'Le posizioni raccolte restano per sempre?',
-        a: 'No. Nel registro delle timbrature si cancellano dopo dodici mesi, e l\'azienda può stringere il periodo fino a trenta giorni. Restano invece nei rapportini già consegnati al cliente, perché sono documenti sigillati che valgono come prova del lavoro svolto.',
+        a: 'No. Nel registro delle timbrature si cancellano dopo dodici mesi, e l\'azienda può stringere il periodo fino a trenta giorni. Restano invece nei rapportini già consegnati al cliente, perché sono documenti sigillati che documentano il lavoro svolto.',
       },
     ],
   },

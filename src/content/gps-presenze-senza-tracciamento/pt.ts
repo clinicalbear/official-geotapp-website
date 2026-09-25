@@ -13,14 +13,14 @@ const pt: PresenzeCopy = {
       heading: 'Quando é que o GPS é permitido para o controlo de presenças?',
       paragraphs: [
         'Na maioria dos países da UE vigora o mesmo princípio: as ferramentas que possam permitir um controlo contínuo da atividade do trabalhador exigem, antes de serem ativadas, um acordo com a representação dos trabalhadores ou uma autorização da autoridade competente. Em Itália, essa exigência está fixada no artigo 4.º do Estatuto dos Trabalhadores (lei n.º 300/1970) para os instrumentos de controlo à distância, exceptuando expressamente os instrumentos de simples registo de acessos e presenças.',
-        'Um acórdão proferido em Itália a 1 de julho de 2026 (Tribunal de Cosenza, acórdão n.º 972) traça o limite para as aplicações de ponto por GPS: quando a posição só é captada no momento do registo de ponto, sem monitorização contínua dos deslocamentos entre registos, o sistema é considerado uma ferramenta de registo de presenças, não de vigilância à distância. O tribunal anulou assim uma coima de 50.000 euros que a autoridade italiana de proteção de dados tinha aplicado a um organismo público, precisamente com esse fundamento.',
+        'Um acórdão proferido em Itália a 1 de julho de 2026 (Tribunal de Cosenza, acórdão n.º 972) indica onde está o limite para as aplicações de ponto por GPS: quando a posição só é captada no momento do registo de ponto, sem monitorização contínua dos deslocamentos entre registos, o sistema é considerado uma ferramenta de registo de presenças, não de vigilância à distância. O tribunal anulou assim uma coima de 50.000 euros que a autoridade italiana de proteção de dados tinha aplicado a um organismo público, precisamente com esse fundamento.',
         'A regra prática: um ponto GPS captado no início e no fim do turno regista um instante. Um rasto de pontos captado a cada minuto segue uma pessoa. É a mesma tecnologia de satélite, mas são duas ferramentas muito diferentes perante a lei.',
       ],
     },
     {
       heading: 'O que regista a GeoTapp, e o que não regista',
       paragraphs: [
-        'A GeoTapp só regista a posição quando o colaborador realiza uma ação concreta: bater o ponto de entrada, iniciar ou terminar cada pausa, bater o ponto de saída, mais um ponto por cada foto de prova de trabalho tirada ao vivo. Entre um registo de ponto e outro, nada é registado automaticamente: nenhum rasto de deslocações, nenhuma monitorização em segundo plano, nenhuma posição recolhida sem o conhecimento do colaborador.',
+        'A GeoTapp só regista a posição quando o colaborador realiza uma ação concreta: bater o ponto de entrada, iniciar ou terminar cada pausa, bater o ponto de saída, mais um ponto por cada foto de prova de trabalho. Entre um registo de ponto e outro, nada é registado automaticamente: nenhum rasto de deslocações, nenhuma monitorização em segundo plano, nenhuma posição recolhida sem o conhecimento do colaborador.',
       ],
     },
     {
@@ -33,7 +33,7 @@ const pt: PresenzeCopy = {
     {
       heading: 'Durante quanto tempo ficam guardadas as posições registadas?',
       paragraphs: [
-        'No registo de pontos, as coordenadas são eliminadas ao fim de doze meses; a empresa pode reduzir esse período até trinta dias. Nos relatórios já entregues a um cliente, pelo contrário, as posições mantêm-se: são documentos selados que servem como prova do trabalho realizado, e seguem o prazo de conservação próprio desse tipo de documentação, não o do registo.',
+        'No registo de pontos, as coordenadas são eliminadas ao fim de doze meses; a empresa pode reduzir esse período até trinta dias. Nos relatórios já entregues a um cliente, pelo contrário, as posições mantêm-se: são documentos selados que documentam o trabalho realizado, e seguem o prazo de conservação próprio desse tipo de documentação, não o do registo.',
         'São duas regras diferentes para dois objetos diferentes. O registo operacional torna-se mais leve com o tempo; um documento já entregue a terceiros segue as suas próprias regras, tal como qualquer documento depois de sair dos nossos sistemas.',
       ],
     },
@@ -51,14 +51,13 @@ const pt: PresenzeCopy = {
     left: [
       'Posição no registo de ponto de entrada e de saída',
       'Posição no início e no fim de cada pausa',
-      'Um ponto GPS por cada foto de prova de trabalho, tirada ao vivo',
-      'Uma hora gerada pelo servidor, não pelo dispositivo do colaborador',
+      'Um ponto GPS por cada foto de prova de trabalho',
+      'A hora do selo do relatório, obtida do relógio do servidor',
     ],
     right: [
       'Nenhuma deslocação durante o turno, entre um registo de ponto e outro',
       'Nenhuma posição fora do turno ou com a app fechada',
       'Nenhuma pontuação ou perfilamento de comportamentos',
-      'Nenhuma posição a partir de fotos carregadas de uma galeria: apenas câmara ao vivo',
     ],
   },
   sourcesTitle: 'Fontes e referências',
@@ -76,11 +75,11 @@ const pt: PresenzeCopy = {
     items: [
       {
         q: 'O GPS aos colaboradores é proibido pelo RGPD?',
-        a: 'Não. As autoridades de proteção de dados nunca proibiram o GPS nos trabalhadores como tal. O que sancionam é o rastreio contínuo, a falta de informação, a recolha de dados sem relação com o trabalho: não o registo pontual da posição no momento do ponto.',
+        a: 'Não. As autoridades de proteção de dados não proíbem o GPS nos trabalhadores como tal. O que sancionam é o rastreio contínuo, a falta de informação, a recolha de dados sem relação com o trabalho: não o registo pontual da posição no momento do ponto.',
       },
       {
         q: 'É sempre necessário o acordo da representação dos trabalhadores para usar o GPS no ponto?',
-        a: 'É necessário quando o sistema pode permitir um controlo contínuo da atividade do trabalhador. O Tribunal de Cosenza decidiu, no entanto, que um sistema que só regista a posição no momento do ponto, sem monitorização contínua, se enquadra nas ferramentas de registo de presenças que não exigem esse procedimento.',
+        a: 'É necessário quando o sistema pode permitir um controlo contínuo da atividade do trabalhador. O Tribunal de Cosenza reconheceu, no entanto, que um sistema que só regista a posição no momento do ponto, sem monitorização contínua, se enquadra nas ferramentas de registo de presenças que não exigem esse procedimento.',
       },
       {
         q: 'O que acontece se o sistema também rastrear durante as pausas?',
@@ -92,7 +91,7 @@ const pt: PresenzeCopy = {
       },
       {
         q: 'As posições registadas ficam guardadas para sempre?',
-        a: 'Não. No registo de pontos são eliminadas ao fim de doze meses, e a empresa pode reduzir esse prazo para trinta dias. Mantêm-se, no entanto, nos relatórios já entregues a um cliente, porque são documentos selados que servem como prova do trabalho realizado.',
+        a: 'Não. No registo de pontos são eliminadas ao fim de doze meses, e a empresa pode reduzir esse prazo para trinta dias. Mantêm-se, no entanto, nos relatórios já entregues a um cliente, porque são documentos selados que documentam o trabalho realizado.',
       },
     ],
   },

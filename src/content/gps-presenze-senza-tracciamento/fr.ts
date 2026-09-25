@@ -13,14 +13,14 @@ const fr: PresenzeCopy = {
       heading: 'Quand le GPS est-il autorisé pour le pointage ?',
       paragraphs: [
         'Dans la plupart des pays de l\'UE, le principe est le même : les outils susceptibles de permettre un contrôle continu de l\'activité d\'un salarié exigent, avant leur mise en service, une consultation du comité social et économique ou une autorisation de l\'autorité compétente. En Italie, c\'est l\'article 4 du Statut des travailleurs (loi n° 300/1970) qui pose cette exigence pour les outils de contrôle à distance, tout en exemptant explicitement les outils de simple enregistrement des accès et des présences.',
-        'Un jugement rendu en Italie le 1er juillet 2026 (tribunal de Cosenza, jugement n° 972) trace la limite pour les applications de pointage GPS : lorsque la position n\'est relevée qu\'au moment du pointage, sans suivi continu des déplacements entre deux pointages, le système est qualifié d\'outil d\'enregistrement des présences, pas d\'outil de surveillance à distance. Le tribunal a ainsi annulé une amende de 50 000 euros infligée par l\'autorité italienne de protection des données à un organisme public, précisément sur cette base.',
+        'Un jugement rendu en Italie le 1er juillet 2026 (tribunal de Cosenza, jugement n° 972) indique où se situe la limite pour les applications de pointage GPS : lorsque la position n\'est relevée qu\'au moment du pointage, sans suivi continu des déplacements entre deux pointages, le système est qualifié d\'outil d\'enregistrement des présences, pas d\'outil de surveillance à distance. Le tribunal a ainsi annulé une amende de 50 000 euros infligée par l\'autorité italienne de protection des données à un organisme public, précisément sur cette base.',
         'La règle pratique : un point GPS relevé au début et à la fin d\'un poste capture un instant. Une trace de points relevés minute par minute suit une personne. Même technologie satellite, mais deux outils très différents au regard du droit.',
       ],
     },
     {
       heading: 'Ce que GeoTapp enregistre, et ce qu\'il n\'enregistre pas',
       paragraphs: [
-        'GeoTapp ne relève la position que lorsqu\'un salarié effectue un geste précis : pointage d\'arrivée, début et fin de chaque pause, pointage de départ, plus un point par photo de preuve de travail prise en direct. Entre deux pointages, rien n\'est enregistré automatiquement : aucune trace de déplacement, aucun suivi en arrière-plan, aucune position relevée à l\'insu du salarié.',
+        'GeoTapp ne relève la position que lorsqu\'un salarié effectue un geste précis : pointage d\'arrivée, début et fin de chaque pause, pointage de départ, plus un point par photo de preuve de travail. Entre deux pointages, rien n\'est enregistré automatiquement : aucune trace de déplacement, aucun suivi en arrière-plan, aucune position relevée à l\'insu du salarié.',
       ],
     },
     {
@@ -33,7 +33,7 @@ const fr: PresenzeCopy = {
     {
       heading: 'Combien de temps les positions relevées sont-elles conservées ?',
       paragraphs: [
-        'Dans le registre de pointage, les coordonnées sont supprimées après douze mois ; l\'entreprise peut réduire cette durée jusqu\'à trente jours. Dans les rapports déjà remis à un client, en revanche, les positions restent : ce sont des documents scellés qui servent de preuve du travail effectué, et ils suivent la durée de conservation propre à ce type de document, pas celle du registre.',
+        'Dans le registre de pointage, les coordonnées sont supprimées après douze mois ; l\'entreprise peut réduire cette durée jusqu\'à trente jours. Dans les rapports déjà remis à un client, en revanche, les positions restent : ce sont des documents scellés qui documentent le travail effectué, et ils suivent la durée de conservation propre à ce type de document, pas celle du registre.',
         'Ce sont deux règles différentes pour deux objets différents. Le registre opérationnel s\'allège avec le temps ; un document déjà remis à un tiers suit ses propres règles, comme tout document une fois sorti de nos systèmes.',
       ],
     },
@@ -51,14 +51,13 @@ const fr: PresenzeCopy = {
     left: [
       'Position au pointage d\'arrivée et de départ',
       'Position au début et à la fin de chaque pause',
-      'Un point GPS par photo de preuve de travail, prise en direct',
-      'Une heure générée par le serveur, pas par l\'appareil du salarié',
+      'Un point GPS par photo de preuve de travail',
+      'L\'horodatage du scellement du rapport, relevé sur l\'horloge du serveur',
     ],
     right: [
       'Aucun déplacement pendant le poste, entre deux pointages',
       'Aucune position hors poste ou application fermée',
       'Aucun score ni profilage des comportements',
-      'Aucune position issue d\'une photo importée depuis une galerie : caméra en direct uniquement',
     ],
   },
   sourcesTitle: 'Sources et références',
@@ -76,11 +75,11 @@ const fr: PresenzeCopy = {
     items: [
       {
         q: 'Le suivi GPS des salariés est-il interdit par le RGPD ?',
-        a: 'Non. Les autorités de protection des données n\'ont jamais interdit le GPS pour les salariés en tant que tel. Ce qu\'elles sanctionnent, c\'est le suivi continu, l\'absence d\'information, la collecte de données sans lien avec le travail : pas le relevé ponctuel de position au moment du pointage.',
+        a: 'Non. Les autorités de protection des données n\'interdisent pas le GPS pour les salariés en tant que tel. Ce qu\'elles sanctionnent, c\'est le suivi continu, l\'absence d\'information, la collecte de données sans lien avec le travail : pas le relevé ponctuel de position au moment du pointage.',
       },
       {
         q: 'Faut-il toujours l\'accord du CSE pour utiliser le GPS dans le pointage ?',
-        a: 'Il est nécessaire lorsque le système peut permettre un contrôle continu de l\'activité du salarié. Le tribunal de Cosenza a toutefois jugé qu\'un système qui ne relève la position qu\'au pointage, sans suivi continu, relève des outils d\'enregistrement des présences qui n\'exigent pas cette procédure.',
+        a: 'Il est nécessaire lorsque le système peut permettre un contrôle continu de l\'activité du salarié. Le tribunal de Cosenza a toutefois reconnu qu\'un système qui ne relève la position qu\'au pointage, sans suivi continu, relève des outils d\'enregistrement des présences qui n\'exigent pas cette procédure.',
       },
       {
         q: 'Que se passe-t-il si le système suit aussi pendant les pauses ?',
@@ -92,7 +91,7 @@ const fr: PresenzeCopy = {
       },
       {
         q: 'Les positions relevées restent-elles conservées indéfiniment ?',
-        a: 'Non. Dans le registre de pointage, elles sont supprimées après douze mois, et l\'entreprise peut réduire ce délai à trente jours. Elles restent en revanche dans les rapports déjà remis à un client, car ce sont des documents scellés qui valent preuve du travail effectué.',
+        a: 'Non. Dans le registre de pointage, elles sont supprimées après douze mois, et l\'entreprise peut réduire ce délai à trente jours. Elles restent en revanche dans les rapports déjà remis à un client, car ce sont des documents scellés qui documentent le travail effectué.',
       },
     ],
   },

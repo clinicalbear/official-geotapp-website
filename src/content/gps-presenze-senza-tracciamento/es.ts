@@ -13,14 +13,14 @@ const es: PresenzeCopy = {
       heading: '¿Cuándo está permitido el GPS para el control de presencia?',
       paragraphs: [
         'En la mayoría de los países de la UE rige el mismo principio: las herramientas que podrían permitir un control continuo de la actividad del trabajador requieren, antes de activarse, un acuerdo con la representación de los trabajadores o una autorización de la autoridad competente. En Italia, esa exigencia la fija el artículo 4 del Estatuto de los Trabajadores (ley n.º 300/1970) para los instrumentos de control a distancia, exceptuando expresamente los instrumentos de simple registro de accesos y presencias.',
-        'Una sentencia dictada en Italia el 1 de julio de 2026 (Tribunal de Cosenza, sentencia n.º 972) marca dónde está el límite para las aplicaciones de fichaje por GPS: cuando la posición solo se capta en el momento del fichaje, sin seguimiento continuo de los desplazamientos entre fichajes, el sistema se considera una herramienta de registro de presencia, no de vigilancia a distancia. El tribunal anuló así una multa de 50.000 euros que la autoridad de protección de datos italiana había impuesto a un organismo público, precisamente por ese motivo.',
+        'Una sentencia dictada en Italia el 1 de julio de 2026 (Tribunal de Cosenza, sentencia n.º 972) indica dónde está el límite para las aplicaciones de fichaje por GPS: cuando la posición solo se capta en el momento del fichaje, sin seguimiento continuo de los desplazamientos entre fichajes, el sistema se considera una herramienta de registro de presencia, no de vigilancia a distancia. El tribunal anuló así una multa de 50.000 euros que la autoridad de protección de datos italiana había impuesto a un organismo público, precisamente por ese motivo.',
         'La regla práctica: un punto GPS tomado al inicio y al final del turno capta un instante. Una estela de puntos tomados cada minuto sigue a una persona. Es la misma tecnología por satélite, pero dos herramientas muy distintas ante la ley.',
       ],
     },
     {
       heading: 'Qué registra GeoTapp, y qué no registra',
       paragraphs: [
-        'GeoTapp solo capta la posición cuando el trabajador realiza una acción concreta: fichar la entrada, iniciar o terminar cada pausa, fichar la salida, más un punto por cada foto de prueba del trabajo tomada en directo. Entre un fichaje y otro no se registra nada de forma automática: ningún rastro de desplazamientos, ningún seguimiento en segundo plano, ninguna posición recogida sin conocimiento del trabajador.',
+        'GeoTapp solo capta la posición cuando el trabajador realiza una acción concreta: fichar la entrada, iniciar o terminar cada pausa, fichar la salida, más un punto por cada foto de prueba del trabajo. Entre un fichaje y otro no se registra nada de forma automática: ningún rastro de desplazamientos, ningún seguimiento en segundo plano, ninguna posición recogida sin conocimiento del trabajador.',
       ],
     },
     {
@@ -33,7 +33,7 @@ const es: PresenzeCopy = {
     {
       heading: '¿Durante cuánto tiempo se conservan las posiciones registradas?',
       paragraphs: [
-        'En el registro de fichajes, las coordenadas se eliminan después de doce meses; la empresa puede reducir ese periodo hasta treinta días. En los partes ya entregados a un cliente, en cambio, las posiciones permanecen: son documentos sellados que sirven como prueba del trabajo realizado, y siguen el plazo de conservación propio de ese tipo de documentación, no el del registro.',
+        'En el registro de fichajes, las coordenadas se eliminan después de doce meses; la empresa puede reducir ese periodo hasta treinta días. En los partes ya entregados a un cliente, en cambio, las posiciones permanecen: son documentos sellados que documentan el trabajo realizado, y siguen el plazo de conservación propio de ese tipo de documentación, no el del registro.',
         'Son dos reglas distintas para dos objetos distintos. El registro operativo se aligera con el tiempo; un documento ya entregado a un tercero sigue sus propias reglas, como cualquier documento una vez que ha salido de nuestros sistemas.',
       ],
     },
@@ -51,14 +51,13 @@ const es: PresenzeCopy = {
     left: [
       'Posición al fichar la entrada y la salida',
       'Posición al inicio y al final de cada pausa',
-      'Un punto GPS por cada foto de prueba del trabajo, tomada en directo',
-      'Una hora generada por el servidor, no por el dispositivo del trabajador',
+      'Un punto GPS por cada foto de prueba del trabajo',
+      'La hora del sellado del parte, tomada del reloj del servidor',
     ],
     right: [
       'Ningún desplazamiento durante el turno, entre un fichaje y otro',
       'Ninguna posición fuera del turno o con la app cerrada',
       'Ninguna puntuación ni perfilado de comportamiento',
-      'Ninguna posición a partir de fotos subidas desde una galería: solo cámara en directo',
     ],
   },
   sourcesTitle: 'Fuentes y referencias',
@@ -76,11 +75,11 @@ const es: PresenzeCopy = {
     items: [
       {
         q: '¿El GPS a los empleados está prohibido por el RGPD?',
-        a: 'No. Las autoridades de protección de datos nunca han prohibido el GPS en los trabajadores como tal. Lo que sancionan es el seguimiento continuo, la falta de información, la recogida de datos sin relación con el trabajo: no el registro puntual de la posición al fichar.',
+        a: 'No. Las autoridades de protección de datos no prohíben el GPS en los trabajadores como tal. Lo que sancionan es el seguimiento continuo, la falta de información, la recogida de datos sin relación con el trabajo: no el registro puntual de la posición al fichar.',
       },
       {
         q: '¿Siempre hace falta el acuerdo de la representación sindical para usar el GPS en el fichaje?',
-        a: 'Es necesario cuando el sistema puede permitir un control continuo de la actividad del trabajador. El Tribunal de Cosenza, sin embargo, resolvió que un sistema que solo capta la posición al fichar, sin seguimiento continuo, entra dentro de las herramientas de registro de presencia que no requieren ese procedimiento.',
+        a: 'Es necesario cuando el sistema puede permitir un control continuo de la actividad del trabajador. El Tribunal de Cosenza, sin embargo, reconoció que un sistema que solo capta la posición al fichar, sin seguimiento continuo, entra dentro de las herramientas de registro de presencia que no requieren ese procedimiento.',
       },
       {
         q: '¿Qué pasa si el sistema también rastrea durante las pausas?',
@@ -92,7 +91,7 @@ const es: PresenzeCopy = {
       },
       {
         q: '¿Las posiciones registradas se conservan para siempre?',
-        a: 'No. En el registro de fichajes se eliminan después de doce meses, y la empresa puede reducir ese plazo a treinta días. Permanecen, en cambio, en los partes ya entregados a un cliente, porque son documentos sellados que sirven como prueba del trabajo realizado.',
+        a: 'No. En el registro de fichajes se eliminan después de doce meses, y la empresa puede reducir ese plazo a treinta días. Permanecen, en cambio, en los partes ya entregados a un cliente, porque son documentos sellados que documentan el trabajo realizado.',
       },
     ],
   },

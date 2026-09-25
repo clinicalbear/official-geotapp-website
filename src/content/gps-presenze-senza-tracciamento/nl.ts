@@ -13,14 +13,14 @@ const nl: PresenzeCopy = {
       heading: 'Wanneer mag GPS worden gebruikt voor aanwezigheidsregistratie?',
       paragraphs: [
         'In de meeste EU-landen geldt hetzelfde principe: hulpmiddelen die een continue controle van het gedrag van een werknemer mogelijk zouden kunnen maken, vereisen vooraf instemming van de ondernemingsraad of een vergunning van de bevoegde instantie voordat ze in gebruik worden genomen. In Italië staat die eis in artikel 4 van het Werknemersstatuut (wet nr. 300/1970) voor instrumenten van controle op afstand, met een uitdrukkelijke uitzondering voor instrumenten die alleen toegang en aanwezigheid registreren.',
-        'Een Italiaanse rechterlijke uitspraak van 1 juli 2026 (rechtbank van Cosenza, uitspraak nr. 972) trekt de grens voor GPS-prikklok-apps: als de locatie uitsluitend op het moment van in- of uitklokken wordt vastgelegd, zonder continue volging van verplaatsingen daartussen, geldt het systeem als een instrument voor aanwezigheidsregistratie en niet als controle op afstand. De rechtbank vernietigde daarom een boete van 50.000 euro die de Italiaanse privacytoezichthouder had opgelegd aan een overheidsinstantie, precies om die reden.',
+        'Een Italiaanse rechterlijke uitspraak van 1 juli 2026 (rechtbank van Cosenza, uitspraak nr. 972) geeft aan waar de grens ligt voor GPS-prikklok-apps: als de locatie uitsluitend op het moment van in- of uitklokken wordt vastgelegd, zonder continue volging van verplaatsingen daartussen, geldt het systeem als een instrument voor aanwezigheidsregistratie en niet als controle op afstand. De rechtbank vernietigde daarom een boete van 50.000 euro die de Italiaanse privacytoezichthouder had opgelegd aan een overheidsinstantie, precies om die reden.',
         'De praktische regel: een GPS-punt aan het begin en einde van een dienst legt een moment vast. Een spoor van punten dat elke minuut wordt vastgelegd, volgt een persoon. Dezelfde satelliettechnologie, maar twee heel verschillende instrumenten voor de wet.',
       ],
     },
     {
       heading: 'Wat registreert GeoTapp, en wat niet',
       paragraphs: [
-        'GeoTapp legt de locatie alleen vast wanneer een medewerker een specifieke handeling verricht: inklokken, een pauze beginnen of beëindigen, uitklokken, plus één punt per live genomen werkbewijs-foto. Tussen twee kloktijden wordt niets automatisch geregistreerd: geen spoor van verplaatsingen, geen tracking op de achtergrond, geen locatie die zonder medeweten van de medewerker wordt verzameld.',
+        'GeoTapp legt de locatie alleen vast wanneer een medewerker een specifieke handeling verricht: inklokken, een pauze beginnen of beëindigen, uitklokken, plus één punt per werkbewijs-foto. Tussen twee kloktijden wordt niets automatisch geregistreerd: geen spoor van verplaatsingen, geen tracking op de achtergrond, geen locatie die zonder medeweten van de medewerker wordt verzameld.',
       ],
     },
     {
@@ -33,7 +33,7 @@ const nl: PresenzeCopy = {
     {
       heading: 'Hoe lang blijven de verzamelde locatiegegevens bewaard?',
       paragraphs: [
-        'In het prikklok-register worden de coördinaten na twaalf maanden verwijderd; een bedrijf kan die termijn verkorten tot dertig dagen. In rapporten die al aan een klant zijn geleverd, blijven de locatiegegevens echter bewaard: dat zijn verzegelde documenten die dienen als bewijs van uitgevoerd werk, en die volgen de bewaartermijn die voor dat type documentatie geldt, niet die van het register.',
+        'In het prikklok-register worden de coördinaten na twaalf maanden verwijderd; een bedrijf kan die termijn verkorten tot dertig dagen. In rapporten die al aan een klant zijn geleverd, blijven de locatiegegevens echter bewaard: dat zijn verzegelde documenten die het uitgevoerde werk documenteren, en die volgen de bewaartermijn die voor dat type documentatie geldt, niet die van het register.',
         'Het zijn twee verschillende regels voor twee verschillende zaken. Het operationele register wordt lichter naarmate de tijd verstrijkt; een document dat al aan iemand anders is overhandigd, volgt zijn eigen regels, net als elk document zodra het onze systemen heeft verlaten.',
       ],
     },
@@ -51,14 +51,13 @@ const nl: PresenzeCopy = {
     left: [
       'Locatie bij in- en uitklokken',
       'Locatie bij begin en einde van elke pauze',
-      'Eén GPS-punt per werkbewijs-foto, live genomen',
-      'Een tijdstip gegenereerd door de server, niet door het apparaat van de medewerker',
+      'Eén GPS-punt per werkbewijs-foto',
+      'Het tijdstip van de verzegeling van het rapport, overgenomen van de serverklok',
     ],
     right: [
       'Geen verplaatsing tijdens de dienst, tussen twee kloktijden',
       'Geen locatie buiten de dienst of wanneer de app gesloten is',
       'Geen scores of profilering van gedrag',
-      'Geen locatie van foto\'s die vanuit een galerij zijn geüpload: uitsluitend live camera',
     ],
   },
   sourcesTitle: 'Bronnen en referenties',
@@ -76,11 +75,11 @@ const nl: PresenzeCopy = {
     items: [
       {
         q: 'Is GPS-volgen van medewerkers verboden onder de AVG?',
-        a: 'Nee. Toezichthouders hebben GPS bij werknemers als zodanig nooit verboden. Wat zij beboeten is continue tracking, ontbrekende informatie, en het verzamelen van gegevens die niets met het werk te maken hebben: niet het momentopname-registreren van locatie bij het klokken.',
+        a: 'Nee. Toezichthouders verbieden GPS bij werknemers niet als zodanig. Wat zij beboeten is continue tracking, ontbrekende informatie, en het verzamelen van gegevens die niets met het werk te maken hebben: niet het momentopname-registreren van locatie bij het klokken.',
       },
       {
         q: 'Is instemming van de ondernemingsraad altijd nodig voor GPS bij aanwezigheidsregistratie?',
-        a: 'Die is nodig wanneer het systeem een continue controle van de activiteit van de werknemer mogelijk kan maken. De rechtbank van Cosenza oordeelde echter dat een systeem dat de locatie alleen bij het klokken vastlegt, zonder continue volging, valt onder aanwezigheidsregistratie-instrumenten waarvoor die procedure niet nodig is.',
+        a: 'Die is nodig wanneer het systeem een continue controle van de activiteit van de werknemer mogelijk kan maken. De rechtbank van Cosenza erkende echter dat een systeem dat de locatie alleen bij het klokken vastlegt, zonder continue volging, valt onder aanwezigheidsregistratie-instrumenten waarvoor die procedure niet nodig is.',
       },
       {
         q: 'Wat gebeurt er als het systeem ook tijdens pauzes volgt?',
@@ -92,7 +91,7 @@ const nl: PresenzeCopy = {
       },
       {
         q: 'Blijven verzamelde locatiegegevens voor altijd bewaard?',
-        a: 'Nee. In het prikklok-register worden ze na twaalf maanden verwijderd, en een bedrijf kan die termijn verkorten tot dertig dagen. Ze blijven echter bewaard in rapporten die al aan een klant zijn geleverd, omdat dat verzegelde documenten zijn die dienen als bewijs van uitgevoerd werk.',
+        a: 'Nee. In het prikklok-register worden ze na twaalf maanden verwijderd, en een bedrijf kan die termijn verkorten tot dertig dagen. Ze blijven echter bewaard in rapporten die al aan een klant zijn geleverd, omdat dat verzegelde documenten zijn die het uitgevoerde werk documenteren.',
       },
     ],
   },

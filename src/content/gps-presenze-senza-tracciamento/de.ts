@@ -20,7 +20,7 @@ const de: PresenzeCopy = {
     {
       heading: 'Was erfasst GeoTapp, und was nicht',
       paragraphs: [
-        'GeoTapp erfasst den Standort nur bei einer konkreten Handlung der Mitarbeiterin oder des Mitarbeiters: beim Einstempeln, bei Beginn und Ende jeder Pause, beim Ausstempeln, sowie einen Punkt pro live aufgenommenem Arbeitsnachweisfoto. Zwischen zwei Stempelvorgängen wird nichts automatisch aufgezeichnet: keine Bewegungsspur, kein Tracking im Hintergrund, kein Standort ohne Wissen der Mitarbeiterin oder des Mitarbeiters.',
+        'GeoTapp erfasst den Standort nur bei einer konkreten Handlung der Mitarbeiterin oder des Mitarbeiters: beim Einstempeln, bei Beginn und Ende jeder Pause, beim Ausstempeln, sowie einen Punkt pro Arbeitsnachweisfoto. Zwischen zwei Stempelvorgängen wird nichts automatisch aufgezeichnet: keine Bewegungsspur, kein Tracking im Hintergrund, kein Standort ohne Wissen der Mitarbeiterin oder des Mitarbeiters.',
       ],
     },
     {
@@ -33,7 +33,7 @@ const de: PresenzeCopy = {
     {
       heading: 'Wie lange bleiben die erfassten Standortdaten gespeichert?',
       paragraphs: [
-        'Im Zeiterfassungsprotokoll werden die Koordinaten nach zwölf Monaten gelöscht; ein Unternehmen kann diesen Zeitraum auf bis zu dreißig Tage verkürzen. In bereits an einen Kunden ausgelieferten Berichten bleiben die Standortdaten dagegen erhalten: Das sind versiegelte Dokumente, die als Nachweis der geleisteten Arbeit dienen und der für diese Art von Dokumentation geltenden Aufbewahrungsfrist folgen, nicht der des Protokolls.',
+        'Im Zeiterfassungsprotokoll werden die Koordinaten nach zwölf Monaten gelöscht; ein Unternehmen kann diesen Zeitraum auf bis zu dreißig Tage verkürzen. In bereits an einen Kunden ausgelieferten Berichten bleiben die Standortdaten dagegen erhalten: Das sind versiegelte Dokumente, die die geleistete Arbeit dokumentieren und der für diese Art von Dokumentation geltenden Aufbewahrungsfrist folgen, nicht der des Protokolls.',
         'Es sind zwei unterschiedliche Regeln für zwei unterschiedliche Dinge. Das Betriebsprotokoll wird mit der Zeit schlanker; ein bereits ausgehändigtes Dokument folgt seinen eigenen Regeln, wie jedes Dokument, das die eigenen Systeme einmal verlassen hat.',
       ],
     },
@@ -51,14 +51,13 @@ const de: PresenzeCopy = {
     left: [
       'Standort beim Ein- und Ausstempeln',
       'Standort bei Beginn und Ende jeder Pause',
-      'Ein GPS-Punkt pro live aufgenommenem Arbeitsnachweisfoto',
-      'Ein vom Server generierter Zeitstempel, nicht vom Gerät der Mitarbeiterin oder des Mitarbeiters',
+      'Ein GPS-Punkt pro Arbeitsnachweisfoto',
+      'Der Zeitstempel der Berichtsversiegelung, übernommen von der Serveruhr',
     ],
     right: [
       'Keine Bewegung während der Schicht, zwischen zwei Stempelvorgängen',
       'Kein Standort außerhalb der Schicht oder bei geschlossener App',
       'Keine Bewertung oder Profilbildung anhand von Verhalten',
-      'Kein Standort aus Fotos aus einer Galerie: nur live aufgenommene Kamerafotos',
     ],
   },
   sourcesTitle: 'Quellen und Verweise',
@@ -77,11 +76,11 @@ const de: PresenzeCopy = {
     items: [
       {
         q: 'Ist GPS-Ortung von Mitarbeitenden nach der DSGVO verboten?',
-        a: 'Nein. Datenschutzaufsichtsbehörden haben GPS bei Beschäftigten als solches nie verboten. Sanktioniert wird durchgehendes Tracking, eine fehlende oder unklare Information, sowie das Erfassen von Daten, die mit der Arbeit nichts zu tun haben: nicht die punktuelle Standorterfassung beim Stempeln.',
+        a: 'Nein. Datenschutzaufsichtsbehörden verbieten GPS bei Beschäftigten nicht als solches. Sanktioniert wird durchgehendes Tracking, eine fehlende oder unklare Information, sowie das Erfassen von Daten, die mit der Arbeit nichts zu tun haben: nicht die punktuelle Standorterfassung beim Stempeln.',
       },
       {
         q: 'Braucht man für GPS-Zeiterfassung immer eine Mitbestimmung des Betriebsrats?',
-        a: 'Sie ist dort nötig, wo das System eine durchgehende Verhaltens- oder Leistungskontrolle ermöglichen könnte. Ein italienisches Gericht hat jedoch entschieden, dass ein System, das den Standort nur beim Stempeln erfasst, ohne fortlaufende Verfolgung, unter die reine Zeiterfassung fällt, die dieses Verfahren nicht erfordert.',
+        a: 'Sie ist dort nötig, wo das System eine durchgehende Verhaltens- oder Leistungskontrolle ermöglichen könnte. Ein italienisches Gericht hat jedoch anerkannt, dass ein System, das den Standort nur beim Stempeln erfasst, ohne fortlaufende Verfolgung, unter die reine Zeiterfassung fällt, die dieses Verfahren nicht erfordert.',
       },
       {
         q: 'Was passiert, wenn das System auch während der Pausen ortet?',
@@ -93,7 +92,7 @@ const de: PresenzeCopy = {
       },
       {
         q: 'Bleiben die erfassten Standortdaten für immer gespeichert?',
-        a: 'Nein. Im Zeiterfassungsprotokoll werden sie nach zwölf Monaten gelöscht, ein Unternehmen kann diesen Zeitraum auf dreißig Tage verkürzen. Sie bleiben jedoch in bereits an einen Kunden ausgelieferten Berichten erhalten, weil das versiegelte Dokumente sind, die als Nachweis der geleisteten Arbeit gelten.',
+        a: 'Nein. Im Zeiterfassungsprotokoll werden sie nach zwölf Monaten gelöscht, ein Unternehmen kann diesen Zeitraum auf dreißig Tage verkürzen. Sie bleiben jedoch in bereits an einen Kunden ausgelieferten Berichten erhalten, weil das versiegelte Dokumente sind, die die geleistete Arbeit dokumentieren.',
       },
     ],
   },

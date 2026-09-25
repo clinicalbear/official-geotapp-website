@@ -13,14 +13,14 @@ const da: PresenzeCopy = {
       heading: 'Hvornår er GPS tilladt til fremmøderegistrering?',
       paragraphs: [
         'I de fleste EU-lande gælder samme princip: værktøjer, der kan muliggøre løbende kontrol med en medarbejders adfærd, kræver forudgående aftale med medarbejderrepræsentationen eller tilladelse fra den kompetente myndighed, før de tages i brug. I Italien er det artikel 4 i Arbejderstatutten (lov nr. 300/1970), der stiller dette krav til fjernkontrol-værktøjer, mens rene adgangs- og fremmøderegistreringsværktøjer udtrykkeligt er undtaget.',
-        'En italiensk dom af 1. juli 2026 (retten i Cosenza, dom nr. 972) trækker grænsen for GPS-baserede stempel-apps: når positionen udelukkende registreres i det øjeblik, der stemples, uden løbende sporing af bevægelser derimellem, betragtes systemet som et fremmøderegistreringsværktøj og ikke som fjernovervågning. Retten ophævede derfor en bøde på 50.000 euro, som den italienske databeskyttelsesmyndighed havde pålagt en offentlig instans, netop på det grundlag.',
+        'En italiensk dom af 1. juli 2026 (retten i Cosenza, dom nr. 972) angiver, hvor grænsen går for GPS-baserede stempel-apps: når positionen udelukkende registreres i det øjeblik, der stemples, uden løbende sporing af bevægelser derimellem, betragtes systemet som et fremmøderegistreringsværktøj og ikke som fjernovervågning. Retten ophævede derfor en bøde på 50.000 euro, som den italienske databeskyttelsesmyndighed havde pålagt en offentlig instans, netop på det grundlag.',
         'Den praktiske regel: et GPS-punkt taget ved vagtens start og slut fanger et øjeblik. Et spor af punkter taget hvert minut følger en person. Samme satellitteknologi, men to meget forskellige værktøjer set med lovens øjne.',
       ],
     },
     {
       heading: 'Hvad registrerer GeoTapp, og hvad registrerer det ikke',
       paragraphs: [
-        'GeoTapp registrerer kun positionen, når en medarbejder foretager en konkret handling: stempler ind, starter eller afslutter en pause, stempler ud, plus ét punkt pr. live-taget arbejdsbevis-foto. Mellem to stemplinger registreres intet automatisk: intet spor af bevægelser, ingen sporing i baggrunden, ingen position indsamlet uden medarbejderens vidende.',
+        'GeoTapp registrerer kun positionen, når en medarbejder foretager en konkret handling: stempler ind, starter eller afslutter en pause, stempler ud, plus ét punkt pr. arbejdsbevis-foto. Mellem to stemplinger registreres intet automatisk: intet spor af bevægelser, ingen sporing i baggrunden, ingen position indsamlet uden medarbejderens vidende.',
       ],
     },
     {
@@ -33,7 +33,7 @@ const da: PresenzeCopy = {
     {
       heading: 'Hvor længe opbevares de indsamlede positioner?',
       paragraphs: [
-        'I stempellogen slettes koordinaterne efter tolv måneder; en virksomhed kan afkorte perioden til helt ned til tredive dage. I rapporter, der allerede er leveret til en kunde, forbliver positionerne derimod: det er forseglede dokumenter, der fungerer som bevis for udført arbejde, og de følger den opbevaringsperiode, der gælder for den type dokumentation, ikke logens.',
+        'I stempellogen slettes koordinaterne efter tolv måneder; en virksomhed kan afkorte perioden til helt ned til tredive dage. I rapporter, der allerede er leveret til en kunde, forbliver positionerne derimod: det er forseglede dokumenter, der dokumenterer det udførte arbejde, og de følger den opbevaringsperiode, der gælder for den type dokumentation, ikke logens.',
         'Det er to forskellige regler for to forskellige ting. Driftsloggen bliver lettere med tiden; et dokument, der allerede er udleveret til en anden, følger sine egne regler, ligesom ethvert dokument, når det først har forladt vores systemer.',
       ],
     },
@@ -51,14 +51,13 @@ const da: PresenzeCopy = {
     left: [
       'Position ved ind- og udstempling',
       'Position ved start og slut af hver pause',
-      'Ét GPS-punkt pr. arbejdsbevis-foto, taget live',
-      'Et tidsstempel genereret af serveren, ikke af medarbejderens enhed',
+      'Ét GPS-punkt pr. arbejdsbevis-foto',
+      'Tidsstemplet for forseglingen af rapporten, taget fra serverens ur',
     ],
     right: [
       'Ingen bevægelse under vagten, mellem to stemplinger',
       'Ingen position uden for vagten eller når appen er lukket',
       'Ingen scoring eller profilering af adfærd',
-      'Ingen position fra fotos uploadet fra et galleri: kun live kamera',
     ],
   },
   sourcesTitle: 'Kilder og referencer',
@@ -76,11 +75,11 @@ const da: PresenzeCopy = {
     items: [
       {
         q: 'Er GPS-sporing af medarbejdere forbudt under GDPR?',
-        a: 'Nej. Tilsynsmyndigheder har aldrig forbudt GPS på medarbejdere som sådan. Det, de straffer, er kontinuerlig sporing, manglende information og indsamling af data, der ikke har noget med arbejdet at gøre: ikke det enkeltstående positionsopslag ved stempling.',
+        a: 'Nej. Tilsynsmyndigheder forbyder ikke GPS på medarbejdere som sådan. Det, de straffer, er kontinuerlig sporing, manglende information og indsamling af data, der ikke har noget med arbejdet at gøre: ikke det enkeltstående positionsopslag ved stempling.',
       },
       {
         q: 'Kræves der altid en aftale med medarbejderrepræsentationen for at bruge GPS til fremmøde?',
-        a: 'Det kræves, hvor systemet kan muliggøre løbende kontrol med medarbejderens aktivitet. Retten i Cosenza fastslog dog, at et system, der kun registrerer positionen ved stempling, uden løbende sporing, hører under fremmøderegistreringsværktøjer, der ikke kræver den procedure.',
+        a: 'Det kræves, hvor systemet kan muliggøre løbende kontrol med medarbejderens aktivitet. Retten i Cosenza anerkendte dog, at et system, der kun registrerer positionen ved stempling, uden løbende sporing, hører under fremmøderegistreringsværktøjer, der ikke kræver den procedure.',
       },
       {
         q: 'Hvad sker der, hvis systemet også sporer under pauser?',
@@ -92,7 +91,7 @@ const da: PresenzeCopy = {
       },
       {
         q: 'Opbevares indsamlede positioner for altid?',
-        a: 'Nej. I stempellogen slettes de efter tolv måneder, og en virksomhed kan afkorte perioden til tredive dage. De forbliver dog i rapporter, der allerede er leveret til en kunde, fordi det er forseglede dokumenter, der fungerer som bevis for udført arbejde.',
+        a: 'Nej. I stempellogen slettes de efter tolv måneder, og en virksomhed kan afkorte perioden til tredive dage. De forbliver dog i rapporter, der allerede er leveret til en kunde, fordi det er forseglede dokumenter, der dokumenterer det udførte arbejde.',
       },
     ],
   },
