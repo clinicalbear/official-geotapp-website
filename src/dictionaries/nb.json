@@ -43,6 +43,10 @@
         "title": "Samsvarsdossier",
         "desc": "Hva GeoTapp gjør og ikke gjør, med GDPR og grensene sagt tydelig."
       },
+      "gpsPresenze": {
+        "title": "GPS til oppmøte, uten sporing",
+        "desc": "Kan posisjonen bare registreres ved stempling uten å spore de ansatte? Ja: hva en italiensk domstol avgjorde, og hva GeoTapp faktisk registrerer."
+      },
       "autovalutazione": {
         "title": "Er du i samsvar med datakravene?",
         "desc": "Rask test med 9 spørsmål om beskyttelse av personaldata: poengsum og områder å rette. Gratis, i nettleseren din."

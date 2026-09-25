@@ -43,6 +43,10 @@
         "title": "Compliancedossier",
         "desc": "Wat GeoTapp wel en niet doet, met de AVG, medezeggenschap en grenzen die helder benoemd zijn."
       },
+      "gpsPresenze": {
+        "title": "GPS voor aanwezigheid, zonder volgen",
+        "desc": "Kan de locatie alleen bij het klokken worden vastgelegd zonder medewerkers te volgen? Ja: wat een Italiaanse rechter besliste en wat GeoTapp echt registreert."
+      },
       "autovalutazione": {
         "title": "Bent u in orde met de gegevens?",
         "desc": "Snelle test van 9 vragen over de bescherming van werknemersgegevens: score en te herstellen punten. Gratis, in uw browser."

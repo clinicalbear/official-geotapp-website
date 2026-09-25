@@ -43,6 +43,10 @@
         "title": "Dossiê de conformidade",
         "desc": "O que a GeoTapp faz e não faz, com o RGPD, o Código do Trabalho e os limites ditos com clareza."
       },
+      "gpsPresenze": {
+        "title": "GPS no ponto, sem vigiar",
+        "desc": "Pode registar-se a posição só no ponto sem vigiar os colaboradores? Sim: o que decidiu um tribunal italiano e o que a GeoTapp realmente regista."
+      },
       "autovalutazione": {
         "title": "Está em conformidade com os dados?",
         "desc": "Teste rápido de 9 perguntas sobre a proteção dos dados dos colaboradores: pontuação e áreas a corrigir. Grátis, no seu navegador."

@@ -43,6 +43,10 @@
         "title": "Dossier di conformità",
         "desc": "Cosa fa e cosa non fa GeoTapp, con GDPR, art. 4 e i limiti dichiarati senza giri di parole."
       },
+      "gpsPresenze": {
+        "title": "GPS per le presenze, senza tracciare",
+        "desc": "Si può rilevare la posizione solo alla timbratura senza sorvegliare i dipendenti? Sì: cosa dice il Tribunale di Cosenza e cosa registra davvero GeoTapp."
+      },
       "autovalutazione": {
         "title": "Sei conforme sui dati?",
         "desc": "Test veloce di 9 domande sulla protezione dei dati dei dipendenti: punteggio e aree da sistemare. Gratis, nel tuo browser."

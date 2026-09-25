@@ -43,6 +43,10 @@
         "title": "Efterlevnadsdossier",
         "desc": "Vad GeoTapp gör och inte gör, med GDPR och gränserna klart sagda."
       },
+      "gpsPresenze": {
+        "title": "GPS för närvaro, utan spårning",
+        "desc": "Kan positionen bara registreras vid stämpling utan att spåra de anställda? Ja: vad en italiensk domstol slog fast och vad GeoTapp verkligen registrerar."
+      },
       "autovalutazione": {
         "title": "Är du förenlig med datakraven?",
         "desc": "Snabbt test med 9 frågor om skyddet av personaldata: poäng och områden att åtgärda. Gratis, i din webbläsare."

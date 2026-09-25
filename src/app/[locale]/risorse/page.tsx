@@ -36,6 +36,7 @@ function safeLocale(locale: string): AppLocale {
 // Ordine e destinazioni delle card; testi (title/desc) dal dizionario per chiave.
 const CARDS = [
   { key: 'gps', path: '/risorse/gps-lavoratori-ue/' },
+  { key: 'gpsPresenze', path: '/risorse/gps-presenze-senza-tracciamento/' },
   { key: 'dossier', path: '/risorse/dossier-conformita/' },
   { key: 'autovalutazione', path: '/risorse/autovalutazione-dati-dipendenti/' },
   { key: 'generatore', path: '/risorse/generatore-informativa-gps/' },

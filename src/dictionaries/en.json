@@ -43,6 +43,10 @@
         "title": "Compliance dossier",
         "desc": "What GeoTapp does and does not do, with GDPR, worker-monitoring law and the limits stated plainly."
       },
+      "gpsPresenze": {
+        "title": "GPS for attendance, without tracking",
+        "desc": "Can you capture location only at clock-in without tracking employees? Yes: what an Italian court ruled, and what GeoTapp actually records."
+      },
       "autovalutazione": {
         "title": "Are you data-compliant?",
         "desc": "Quick 9-question test on protecting employee data: score and areas to fix. Free, in your browser."
