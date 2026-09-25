@@ -234,7 +234,7 @@
       "title": "Du trenger ikke at de stoler på deg.",
       "subtitle": "Ditt ord kommer ikke inn i diskusjonen i det hele tatt. Kunden åpner rapporten og sjekker selv, uten å logge inn i GeoTapp. Stemmer dataene med det virkelige arbeidet, holder rapporten. Har noen endret dokumentet, holder den ikke lenger. Uten anke.",
       "features": {
-        "integrity": "<strong>Uforanderlige data:</strong> Rapporten genereres på ekte feltdata og låses. Enhver endring gjør den ugyldig, uten unntak.",
+        "integrity": "<strong>Forseglede data:</strong> Rapporten genereres på ekte feltdata og låses. Enhver endring gjør den ugyldig, uten unntak.",
         "independent": "<strong>Autonom verifikasjon:</strong> Hvem som helst med rapporten kan verifisere dens autentisitet, ingen konto, ingen plattformtilgang."
       },
       "link": "Utforsk GeoTapp Verifier"

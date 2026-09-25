@@ -3,7 +3,7 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'App voor CV-monteurs | GeoTapp - GPS, Rapporten & Bewijs',
-    description: 'GeoTapp is de app voor installateurs van verwarmingsinstallaties: GPS-geverifieerde rapporten, foto\'s van installaties en onvervalsbare documentatie. Los geschillen op met echt bewijs. Gratis proberen.',
+    description: 'GeoTapp is de app voor installateurs van verwarmingsinstallaties: GPS-geverifieerde rapporten, foto\'s van installaties en verzegelde documentatie. Los geschillen op met echt bewijs. Gratis proberen.',
   },
   hero: {
     badge: 'App voor CV-monteurs en Installateurs Verwarmingsinstallaties',
@@ -44,12 +44,12 @@ const content: SettoreContent = {
       },
       {
         title: 'Het rapport is uw bewijs',
-        desc: 'Na de klus genereert het systeem een verzegeld rapport: GPS-tijdstempel, installatiefoto\'s en onderdelen, technische notities. Onvervalsbaar. De klant kan het zelfstandig verifiëren.',
+        desc: 'Na de klus genereert het systeem een verzegeld rapport: GPS-tijdstempel, installatiefoto\'s en onderdelen, technische notities. Elke wijziging is detecteerbaar. De klant kan het zelfstandig verifiëren.',
       },
     ],
   },
   differenza: {
-    title: 'App voor CV-monteurs: tijdregistratie of kluscertificering?',
+    title: 'App voor CV-monteurs: tijdregistratie of verifieerbaar bewijs?',
     subtitle: 'De meeste apps registreren de incheck. GeoTapp produceert verifieerbaar bewijs.',
     rows: [
       {
@@ -60,7 +60,7 @@ const content: SettoreContent = {
       {
         label: 'Bij een geschil',
         competitor: 'Gegevens niet verdedigbaar',
-        geotapp: 'Verzegeld rapport, onvervalsbaar',
+        geotapp: 'Verzegeld rapport, wijziging detecteerbaar',
       },
       {
         label: 'Klusdocumentatie',
@@ -108,7 +108,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Verzegelde installatiefoto\'s',
-        desc: 'De monteur fotografeert vanuit de app tijdens en na de klus. Elk beeld is gekoppeld aan GPS en tijdstempel, onvervalsbaar na aanmaak.',
+        desc: 'De monteur fotografeert vanuit de app tijdens en na de klus. Elk beeld is gekoppeld aan GPS en tijdstempel, verzegeld na aanmaak.',
       },
       {
         title: 'Automatische digitale klusrapporten',
@@ -134,7 +134,7 @@ const content: SettoreContent = {
     cta: 'Gratis starten!',
   },
   trust: {
-    title: 'Onze rapporten kunnen niet worden gewijzigd. Niet door u. Niet door ons.',
+    title: 'Wordt een van onze rapporten gewijzigd, dan zie je dat. Ook als wij het doen.',
     body: 'GeoTapp-rapporten worden door het systeem gegenereerd op het moment van de klus. Er is geen paneel om een tijd te "corrigeren" of een foto te verplaatsen. De gegevens zijn wat ze zijn, digitaal ondertekend, met echt GPS.',
     badge: 'Door iedereen verifieerbaar, zonder toegang tot uw account',
   },
@@ -153,7 +153,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Kan ik GeoTapp gebruiken om vervangen onderdelen op cv-ketels te documenteren?',
-        a: 'Ja. De monteur fotografeert het verwijderde en het nieuwe geplaatste onderdeel vanuit de app. Elk beeld is gekoppeld aan GPS, tijdstempel en opdrachtnummer, opgenomen in het onvervalsbare rapport.',
+        a: 'Ja. De monteur fotografeert het verwijderde en het nieuwe geplaatste onderdeel vanuit de app. Elk beeld is gekoppeld aan GPS, tijdstempel en opdrachtnummer, opgenomen in het verzegelde rapport.',
       },
       {
         q: 'Helpt GeoTapp bij het oplossen van klantgeschillen over verwarmingswerk?',

@@ -77,7 +77,7 @@ const pt: VerifierCopy = {
     },
     {
       title: 'Integridade do documento',
-      desc: 'Certifica que o documento não foi modificado após a sua geração. Qualquer alteração é detetada.',
+      desc: 'Verifica que o documento não foi modificado após a sua geração. Qualquer alteração é detetada.',
     },
     {
       title: 'Autenticidade dos dados',

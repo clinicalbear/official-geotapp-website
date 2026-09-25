@@ -71,7 +71,7 @@ const UI: Record<string, UIStrings> = {
   en: {
     badge: 'Verify field work',
     h1a: 'GPS proof, photos and reports', h1b: 'verifiable. On the field.',
-    sub: 'Certify every job in real time. No card, no doubts, zero disputes.',
+    sub: 'Seal every job in real time. No card, no doubts, zero disputes.',
     ctaPrimary: 'Try GeoTapp free',
     ctaPrimaryNote: 'Email only · No credit card · Ready in 30 seconds',
     ctaSecondary: 'Book a demo',
@@ -117,7 +117,7 @@ const UI: Record<string, UIStrings> = {
   fr: {
     badge: 'Vérifiez le travail terrain',
     h1a: 'Preuves GPS, photos et rapports', h1b: 'vérifiables. Sur le terrain.',
-    sub: 'Certifiez chaque intervention en temps réel. Pas de carte, pas de doute, zéro contestation.',
+    sub: 'Scellez chaque intervention en temps réel. Pas de carte, pas de doute, zéro contestation.',
     ctaPrimary: 'Essayer GeoTapp gratuitement',
     ctaPrimaryNote: 'Email seul · Sans carte bancaire · Prêt en 30 secondes',
     ctaSecondary: 'Réserver une démo',
@@ -163,7 +163,7 @@ const UI: Record<string, UIStrings> = {
   pt: {
     badge: 'Verifique o trabalho de campo',
     h1a: 'Provas GPS, fotos e relatórios', h1b: 'verificáveis. No campo.',
-    sub: 'Certifique cada intervenção em tempo real. Sem cartão, sem dúvidas, zero disputas.',
+    sub: 'Sele cada intervenção em tempo real. Sem cartão, sem dúvidas, zero disputas.',
     ctaPrimary: 'Experimente o GeoTapp grátis',
     ctaPrimaryNote: 'Só email · Sem cartão · Pronto em 30 segundos',
     ctaSecondary: 'Agendar uma demo',

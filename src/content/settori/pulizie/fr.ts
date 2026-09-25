@@ -9,7 +9,7 @@ const content: SettoreContent = {
     badge: 'Logiciel pour Entreprises de Nettoyage, Facility Management et Propreté Industrielle',
     h1_line1: 'Logiciel pour entreprises de nettoyage :',
     h1_line2: 'plannings, preuves photo et heures vérifiées, sur chaque site',
-    subtitle: 'GeoTapp relie Flow + TimeTracker pour les équipes réparties sur plusieurs bâtiments et étages. Vos agents pointent depuis leur smartphone avec GPS vérifié ; le bureau voit qui a nettoyé quoi, où et quand, avec les preuves photographiques jointes. Plus aucun litige, conformité CCN Nettoyage (IDCC 3043) assurée.',
+    subtitle: 'GeoTapp relie Flow + TimeTracker pour les équipes réparties sur plusieurs bâtiments et étages. Vos agents pointent depuis leur smartphone avec GPS vérifié ; le bureau voit qui a nettoyé quoi, où et quand, avec les preuves photographiques jointes. De quoi répondre à tout litige, conformité CCN Nettoyage (IDCC 3043) assurée.',
     cta_primary: 'Essayez-le sur un vrai contrat',
     cta_note: "14 jours, jusqu'à 50 intervenants sur le terrain, sans carte bancaire.",
   },
@@ -57,7 +57,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Preuves photographiques avant/après',
-        desc: 'Les agents photographient directement depuis l\'application. Images horodatées avec date, heure et GPS : preuve irréfutable de la prestation réalisée.',
+        desc: 'Les agents photographient directement depuis l\'application. Images horodatées avec date, heure et GPS : preuve vérifiable de la prestation réalisée.',
       },
       {
         title: 'Export paie compatible Silae et PayFit',
@@ -89,7 +89,7 @@ const content: SettoreContent = {
     ],
   },
   cta: {
-    title: 'Fini les litiges. Commencez à prouver.',
+    title: 'Répondez à chaque litige avec des preuves. Commencez maintenant.',
     subtitle: 'GeoTapp Flow et TimeTracker donnent à votre entreprise de nettoyage le contrôle opérationnel et les preuves dont vous avez vraiment besoin.',
     primary: 'Demander une démo',
     secondary: 'Voir les tarifs',

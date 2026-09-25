@@ -13,7 +13,7 @@ const content: SettoreContent = {
     badge: 'App för städbolag, städföretag och serviceentreprenader',
     h1_line1: 'Tidrapportering för städbolag:',
     h1_line2: 'scheman, fotodokumentation och verifierade timmar, på varje objekt',
-    subtitle: 'GeoTapp kopplar samman Flow + TimeTracker för team fördelade på flera byggnader och våningar. Era städare stämplar in med GPS-verifierad smartphone; kontoret ser vem som städat vad, var och när, med bifogad fotodokumentation. Inga tvister, full efterlevnad av Städ- och serviceentreprenadavtalet.',
+    subtitle: 'GeoTapp kopplar samman Flow + TimeTracker för team fördelade på flera byggnader och våningar. Era städare stämplar in med GPS-verifierad smartphone; kontoret ser vem som städat vad, var och när, med bifogad fotodokumentation. Redo med data för varje tvist, full efterlevnad av Städ- och serviceentreprenadavtalet.',
     cta_primary: 'Testa det på ett riktigt uppdrag',
     cta_note: '14 dagar, upp till 50 medarbetare i fält, utan kreditkort.',
   },
@@ -61,7 +61,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Fotodokumentation före och efter',
-        desc: 'Städarna fotograferar direkt från appen. Bilder med datum, tid och GPS: obestridligt bevis på utförd tjänst.',
+        desc: 'Städarna fotograferar direkt från appen. Bilder med datum, tid och GPS: verificerbart bevis på utförd tjänst.',
       },
       {
         title: 'Löneexport för Visma och Fortnox',
@@ -93,7 +93,7 @@ const content: SettoreContent = {
     ],
   },
   cta: {
-    title: 'Sluta med tvister. Börja bevisa.',
+    title: 'Svara på varje tvist med data. Börja nu.',
     subtitle: 'GeoTapp Flow och TimeTracker ger ditt städföretag den operativa kontroll och de bevis du verkligen behöver.',
     primary: 'Begär en demo',
     secondary: 'Se priser',

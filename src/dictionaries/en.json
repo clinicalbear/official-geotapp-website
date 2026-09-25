@@ -139,7 +139,7 @@
     "trust_gdpr": "No continuous tracking",
     "trust_gdpr_desc": "Timestamps only at clock-in/out",
     "trust_gps": "GPS Proof",
-    "trust_gps_desc": "Every job certified with location and timestamp",
+    "trust_gps_desc": "Every job sealed with location and timestamp",
     "trust_offline": "Offline verifier",
     "trust_offline_desc": "One file, no account and no network",
     "trust_eu_data": "Data hosted in the EU",
@@ -167,7 +167,7 @@
     "report_section_title": "The report. Not a summary. A proof.",
     "report_section_subtitle": "Every GeoTapp report is generated automatically from real field data.",
     "report_section_body": "GPS clock-ins, photos with the time on them, field notes. The data closes when the report is generated and from there nobody touches it again. When the doubt arrives you do not explain, you show, and what you show is not a document sent to the client, it is the end of the argument.",
-    "report_feature_1": "Tamper-proof after generation, any modification is detectable",
+    "report_feature_1": "Sealed at generation, any modification is detectable",
     "report_feature_2": "Verifiable without an account, by anyone, independently",
     "report_feature_3": "GPS and photo data integrated and inseparable",
     "report_feature_4": "Generated automatically, no manual form-filling",
@@ -234,7 +234,7 @@
       "title": "You don't need them to trust you.",
       "subtitle": "Your word never enters the conversation. The client opens the report and checks it alone, without logging into GeoTapp. If the data matches the real work, the report holds. If someone altered the document, it stops holding. No appeal.",
       "features": {
-        "integrity": "<strong>Tamper-proof data:</strong> The report is generated from real field data and locked. Any modification makes it invalid, no appeal.",
+        "integrity": "<strong>Sealed data:</strong> The report is generated from real field data and locked. Any modification makes it invalid, no appeal.",
         "independent": "<strong>Autonomous verification:</strong> Anyone with the report can verify its authenticity, no account, no platform access needed."
       },
       "link": "Explore GeoTapp Verifier"
@@ -242,7 +242,7 @@
     "core": {
       "badge": "GeoTapp Platform",
       "title": "One system, three levels of certainty",
-      "subtitle": "TimeTracker records on the field. Flow organises in the office. Verifier certifies everything matches. A closed loop, no gaps.",
+      "subtitle": "TimeTracker records on the field. Flow organises in the office. Verifier checks everything matches. A closed loop, no gaps.",
       "features": [
         {
           "title": "Real input from the field",
@@ -258,7 +258,7 @@
         },
         {
           "title": "Defensible proof over time",
-          "desc": "Every report is locked on real field data, not alterable after generation. Dispute? The data is there. Verifiable by anyone. Always."
+          "desc": "Every report is sealed on real field data. Dispute? The data is there. Verifiable by anyone. Always."
         }
       ]
     },
@@ -274,7 +274,7 @@
       "see_all": "See all supported sectors",
       "installatori": {
         "name": "Installers",
-        "desc": "Electricians, Plumbers, System Installers. Every job documented with GPS and photos, tamper-proof data, verifiable by the client.",
+        "desc": "Electricians, Plumbers, System Installers. Every job documented with GPS and photos, tamper-evident data, verifiable by the client.",
         "cta": "Prove every job"
       },
       "sicurezza": {
@@ -289,7 +289,7 @@
       },
       "elettricisti": {
         "name": "Electricians",
-        "desc": "Electrical installations, panels, cabling. Every job documented with GPS and photos, tamper-proof evidence to close any dispute.",
+        "desc": "Electrical installations, panels, cabling. Every job documented with GPS and photos, tamper-evident evidence to close any dispute.",
         "cta": "Document every job"
       },
       "idraulici": {
@@ -311,8 +311,8 @@
         "cta": "Close the disputes"
       },
       "impianti": {
-        "desc": "Mechanical, Electrical, Fire safety. Testing and commissioning certified with time and location, proof ready for the client.",
-        "cta": "Certify your commissioning"
+        "desc": "Mechanical, Electrical, Fire safety. Testing and commissioning sealed with time and location, proof ready for the client.",
+        "cta": "Seal your commissioning"
       }
     },
     "app_mockup": {
@@ -672,7 +672,7 @@
         "timelock-alpha": {
           "name": "GPS Time Tracking",
           "short": "Clock-in and clock-out linked to GPS position and precise timestamp. Every work session becomes a verifiable operational event.",
-          "full": "### Time is Verifiable.\n\nTimestamps without verification generate disputes.\n**GPS Time Tracking** makes every work session a reliable, defensible record.\n\n#### Geolocated Clock-in and Clock-out\n\nThe technician records entry and exit from the field.\nLocation, address and time are registered automatically.\n\n#### Immutable History\n\nEvery session is a verifiable record: start time, end time, position, duration and associated job.\nThe client asks when you arrived? The data is there, always."
+          "full": "### Time is Verifiable.\n\nTimestamps without verification generate disputes.\n**GPS Time Tracking** makes every work session a reliable, defensible record.\n\n#### Geolocated Clock-in and Clock-out\n\nThe technician records entry and exit from the field.\nLocation, address and time are registered automatically.\n\n#### Sealed History\n\nEvery session is a verifiable record: start time, end time, position, duration and associated job.\nThe client asks when you arrived? The data is there, always."
         },
         "event-horizon": {
           "name": "Shift Planning",
@@ -848,7 +848,7 @@
       },
       {
         "title": "Verifiable reports",
-        "desc": "How every job generates a report with photo evidence, digital signature and an immutable hash you can show to the client."
+        "desc": "How every job generates a report with photo evidence, digital signature and a sealed hash you can show to the client."
       },
       {
         "title": "Team management from Flow",
@@ -903,7 +903,7 @@
     "title": "Download GeoTapp",
     "subtitle": "Choose the version that fits your needs.",
     "demo_report_badge": "Real example",
-    "demo_report_title": "Certified job report",
+    "demo_report_title": "Sealed job report",
     "demo_report_desc": "Download a real report generated by GeoTapp. It contains verified GPS, photo evidence, operator hash chain and cryptographic seal. You can verify its authenticity directly on geotapp.com.",
     "demo_report_btn_download": "Download sample report (.zip)",
     "demo_report_btn_verify": "Verify Authenticity",
@@ -1058,7 +1058,7 @@
     "cta_title": "Try GeoTapp free for 14 days",
     "cta_desc": "Full access to all modules. No credit card, no commitment.",
     "cta_btn": "Start free trial",
-    "schema_desc": "Guides and insights on field work certification, team management, GDPR and geolocation.",
+    "schema_desc": "Guides and insights on verifiable proof of field work, team management, GDPR and geolocation.",
     "meta_title": "Blog | GeoTapp - Field Work Verification",
     "meta_desc": "Guides, insights and resources on team management, field verifiable proof of work, GDPR and geolocation. From the GeoTapp team.",
     "cat_all": "All",
@@ -1157,7 +1157,7 @@
     ]
   },
   "settore_layout": {
-    "pain_subtitle": "Clock-in apps record. They don't certify. There's an enormous difference, and you feel it the moment a dispute arises.",
+    "pain_subtitle": "Clock-in apps record. They don't seal. There's an enormous difference, and you feel it the moment a dispute arises.",
     "before": "Before",
     "after": "With GeoTapp",
     "classic_app": "Generic app / Spreadsheet",
@@ -1169,7 +1169,7 @@
     "mockup_gps": "GPS verified",
     "mockup_photos": "Photos attached",
     "mockup_photos_count": "3 geotagged photos",
-    "mockup_sealed": "Not editable after closure",
+    "mockup_sealed": "Sealed at closure: every change is visible",
     "mockup_status_active": "Active",
     "mockup_status_completed": "Completed",
     "mockup_status_summary": "4 operators active on 6 sites",

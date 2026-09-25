@@ -18,7 +18,7 @@ const content: SettoreContent = {
     items: [
       {
         title: 'Los clientes disputan las horas trabajadas',
-        desc: 'Fichajes GPS con marca de tiempo como prueba irrefutable. Los datos se sellan en el momento de la intervención, no modificables después.',
+        desc: 'Fichajes GPS con marca de tiempo como prueba verificable. Los datos se sellan en el momento de la intervención, y cualquier cambio es detectable.',
       },
       {
         title: 'Perseguir a los técnicos para saber dónde están',
@@ -36,7 +36,7 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'El técnico ficha por GPS al inicio de la intervención',
-        desc: 'Abre el proyecto desde el smartphone. GeoTapp registra coordenadas GPS reales, marca de tiempo y fotos, totalmente automático, a prueba de manipulaciones.',
+        desc: 'Abre el proyecto desde el smartphone. GeoTapp registra coordenadas GPS reales, marca de tiempo y fotos, totalmente automático, y cualquier cambio es detectable.',
       },
       {
         title: 'Las horas se registran automáticamente por proyecto',
@@ -49,7 +49,7 @@ const content: SettoreContent = {
     ],
   },
   differenza: {
-    title: 'App para instaladores: ¿fichaje o certificación?',
+    title: 'App para instaladores: ¿fichaje o prueba verificable?',
     subtitle: 'La mayoría de apps registran la hora. GeoTapp produce pruebas verificables.',
     rows: [
       {
@@ -65,7 +65,7 @@ const content: SettoreContent = {
       {
         label: 'En caso de disputa',
         competitor: 'Datos no defendibles',
-        geotapp: 'Informe sellado, a prueba de manipulaciones',
+        geotapp: 'Informe sellado, cualquier cambio es detectable',
       },
       {
         label: 'Parte de trabajo',
@@ -103,7 +103,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Pruebas fotográficas selladas',
-        desc: 'El técnico toma fotos desde la app. Cada imagen está vinculada a la intervención con GPS y marca de tiempo, a prueba de manipulaciones tras la generación.',
+        desc: 'El técnico toma fotos desde la app. Cada imagen está vinculada a la intervención con GPS y marca de tiempo; cualquier cambio tras la generación es detectable.',
       },
       {
         title: 'Gestión multi-sede de proyectos',
@@ -134,7 +134,7 @@ const content: SettoreContent = {
     items: [
       {
         q: '¿Los clientes disputan las horas de intervención?',
-        a: 'Con GeoTapp, los fichajes GPS se registran en el momento de la intervención y no son modificables. Constituyen una prueba irrefutable de las horas trabajadas, eliminando cualquier disputa.',
+        a: 'Con GeoTapp, los fichajes GPS se registran en el momento de la intervención y cualquier cambio es detectable. Son una prueba verificable de las horas trabajadas cuando alguien las pone en duda.',
       },
       {
         q: '¿Cómo superviso varios equipos en proyectos diferentes?',
@@ -161,7 +161,7 @@ const content: SettoreContent = {
   schema_faq: [
     {
       question: '¿Los clientes disputan las horas de intervención?',
-      answer: 'Con GeoTapp, los fichajes GPS se registran en el momento de la intervención y no son modificables. Constituyen una prueba irrefutable de las horas trabajadas, eliminando cualquier disputa.',
+      answer: 'Con GeoTapp, los fichajes GPS se registran en el momento de la intervención y cualquier cambio es detectable. Son una prueba verificable de las horas trabajadas cuando alguien las pone en duda.',
     },
     {
       question: '¿Cómo superviso varios equipos en proyectos diferentes?',

@@ -41,7 +41,7 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'Techniker stempelt GPS bei Ankunft',
-        desc: 'Öffnet den Einsatz vom Smartphone. GeoTapp erfasst echte GPS-Koordinaten, Zeitstempel und Fotos, vollautomatisch, fälschungssicher.',
+        desc: 'Öffnet den Einsatz vom Smartphone. GeoTapp erfasst echte GPS-Koordinaten, Zeitstempel und Fotos, vollautomatisch, versiegelt.',
       },
       {
         title: 'Stunden und Einsatz werden automatisch erfasst',
@@ -59,14 +59,14 @@ const content: SettoreContent = {
     items: [
       {
         title: 'GPS-verifizierte Anwesenheit',
-        desc: 'Jede An- und Abreise ist mit echtem GPS, Zeitstempel und zugewiesenem Standort zertifiziert. Verteidigbar gegenüber Kunden und Prüfern.',
+        desc: 'Jede An- und Abreise wird mit echtem GPS, Zeitstempel und zugewiesenem Standort versiegelt. Verteidigbar gegenüber Kunden und Prüfern.',
       },
       {
         title: 'Wartungshistorie pro Anlage',
         desc: 'Jeder Einsatz ist mit dem Standort oder der Anlage verknüpft. Die vollständige Historie ist durchsuchbar und herunterladbar.',
       },
       {
-        title: 'Automatische fälschungssichere Berichte',
+        title: 'Automatische versiegelte Berichte',
         desc: 'Nach jedem Einsatz erstellt das System einen versiegelten Bericht: Stunden, GPS, Fotos und digitale Signatur.',
       },
       {

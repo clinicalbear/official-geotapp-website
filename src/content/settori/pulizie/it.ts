@@ -11,7 +11,7 @@ const content: SettoreContent = {
     h1_line1: 'L\'app per impresa di pulizie',
     h1_line2: 'che sigilla ogni intervento.',
     subtitle:
-      'GeoTapp è l\'app per impresa di pulizie che trasforma ogni intervento in prova difendibile. I clienti contestano. Gli operatori non sono verificabili. I report non bastano mai. GeoTapp risolve tutto con GPS reale, prove fotografiche e report non alterabili, che il committente può verificare da solo.',
+      'GeoTapp è l\'app per impresa di pulizie che trasforma ogni intervento in prova difendibile. I clienti contestano. Gli operatori non sono verificabili. I report non bastano mai. GeoTapp risolve tutto con GPS reale, prove fotografiche e report sigillati, dove ogni modifica è rilevabile, che il committente può verificare da solo.',
     cta_primary: 'Provalo su una commessa vera',
     cta_note: '14 giorni, fino a 50 operatori sul campo, nessuna carta di credito.',
   },
@@ -45,7 +45,7 @@ const content: SettoreContent = {
     dopo: [
       'Il cliente chiama e dice che il bagno non è stato pulito.',
       'Apri il report dell\'intervento: foto del bagno pulito, ora, GPS.',
-      'Glielo mandi. La discussione finisce in trenta secondi.',
+      'Glielo mandi. Hai risposto con i dati, in trenta secondi.',
       'Il contratto è al sicuro. L\'operatore è tutelato.',
     ],
   },
@@ -53,7 +53,7 @@ const content: SettoreContent = {
   scenario: {
     title: 'Caso reale',
     body: 'Il cliente dice che il bagno non è stato pulito. Con GeoTapp apri il report e mostri la foto dell\'ambiente, l\'ora di scatto e la posizione GPS, tutto generato automaticamente dall\'app dell\'operatore al momento dell\'intervento.',
-    resolution: 'La discussione finisce lì.',
+    resolution: 'Hai risposto con i dati, non con una tua parola contro la sua.',
   },
 
   differenza: {
@@ -73,7 +73,7 @@ const content: SettoreContent = {
       {
         label: 'In caso di contestazione',
         competitor: 'Dato non difendibile',
-        geotapp: 'Report sigillato, non alterabile',
+        geotapp: 'Report sigillato, ogni modifica rilevabile',
       },
       {
         label: 'Prova fotografica',
@@ -130,15 +130,15 @@ const content: SettoreContent = {
     subtitle: 'Tre passi. Zero carta. Zero chiamate.',
     steps: [
       {
-        title: "L'operatore certifica sul posto",
-        desc: 'Con GeoTapp TimeTracker registra ingresso, uscita, foto degli ambienti e note dallo smartphone. Il GPS è verificato, non inserito a mano. Il dato è quello, e non si può cambiare.',
+        title: "L'operatore sigilla la prova sul posto",
+        desc: 'Con GeoTapp TimeTracker registra ingresso, uscita, foto degli ambienti e note dallo smartphone. Il GPS è verificato, non inserito a mano. Il dato è quello: ogni modifica è rilevabile.',
       },
       {
         title: "L'ufficio controlla in tempo reale",
         desc: 'Flow mostra in una dashboard unica chi è presente, dove e da quanto. Vedi lo stato di ogni edificio, ricevi alert su anomalie e assegni commesse, senza inseguire nessuno.',
       },
       {
-        title: 'Il report è già pronto. E non lo puoi modificare.',
+        title: 'Il report è già pronto. Sigillato: ogni modifica si vede.',
         desc: 'A fine turno il sistema genera automaticamente un report sigillato con GPS, foto e firma digitale. Il committente lo riceve e lo verifica da solo, senza accesso al tuo sistema, senza fidarsi della tua parola.',
       },
     ],
@@ -148,8 +148,8 @@ const content: SettoreContent = {
     title: 'App per imprese di pulizie: meno contestazioni, più controllo.',
     items: [
       {
-        title: 'Zero contestazioni scritte',
-        desc: 'Quando ogni intervento ha un report verificabile, il cliente non ha argomenti. Le dispute si chiudono con un file, non con una trattativa che dura settimane.',
+        title: 'Rispondi a ogni contestazione con i dati',
+        desc: 'Quando ogni intervento ha un report verificabile, hai la documentazione per rispondere subito. Niente più trattative a voce che durano settimane.',
       },
       {
         title: 'Controllo reale su tutti i siti',
@@ -157,7 +157,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Report difendibili in qualsiasi sede',
-        desc: 'Ogni report è firmato digitalmente e non alterabile. Vale davanti a un cliente, un ispettore o un avvocato, senza che tu debba spiegare niente.',
+        desc: 'Ogni report è firmato digitalmente: ogni modifica è rilevabile. Vale davanti a un cliente, un ispettore o un avvocato, senza che tu debba spiegare niente.',
       },
       {
         title: "Pronto per l'ispettorato",
@@ -205,13 +205,13 @@ const content: SettoreContent = {
 
   testimonial: {
     quote:
-      'Prima avevamo sempre qualche cliente che contestava. Da quando usiamo GeoTapp, basta mandare il report e la discussione finisce lì. In sei mesi non abbiamo perso un contratto per contestazione.',
+      'Prima avevamo sempre qualche cliente che contestava. Da quando usiamo GeoTapp, mandiamo il report e la conversazione cambia subito: si parla di dati, non di parole. Le discussioni si accorciano parecchio.',
     author: 'Roberta M.',
     role: 'Responsabile operativa, impresa di pulizie industriali - Nord Italia',
   },
 
   trust: {
-    title: 'I nostri report non si possono alterare. Non da te. Non da noi.',
+    title: 'Se un nostro report viene modificato, si vede. Anche se lo facciamo noi.',
     body:
       "I report GeoTapp sono generati dal sistema nel momento dell'intervento. Non esiste un pannello dove \"correggere\" un orario o spostare una foto. Il dato è quello, firmato digitalmente, con GPS reale. Quando lo mostri a un cliente, a un avvocato o a un ispettore, regge.",
     badge: 'Verificabile da chiunque, senza accesso al tuo account',
@@ -235,7 +235,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Come controllo che gli operatori abbiano eseguito il lavoro?',
-        a: 'Ogni intervento viene aperto e chiuso con GPS verificato dallo smartphone dell\'operatore. Puoi richiedere foto georeferenziate obbligatorie come prova dell\'esecuzione. Il report viene generato in automatico e non si può modificare dopo la chiusura.',
+        a: 'Ogni intervento viene aperto e chiuso con GPS verificato dallo smartphone dell\'operatore. Puoi richiedere foto georeferenziate obbligatorie come prova dell\'esecuzione. Il report viene generato in automatico ed è sigillato alla chiusura: ogni modifica si vede.',
       },
       {
         q: 'GeoTapp è conforme al GDPR per la geolocalizzazione dei dipendenti?',
@@ -283,7 +283,7 @@ const content: SettoreContent = {
     },
     {
       question: 'Come controllo che gli operatori abbiano davvero eseguito il lavoro?',
-      answer: 'Ogni intervento viene aperto e chiuso con GPS verificato. Puoi richiedere foto georeferenziate obbligatorie. Il report viene generato automaticamente e non si può modificare dopo la chiusura.',
+      answer: 'Ogni intervento viene aperto e chiuso con GPS verificato. Puoi richiedere foto georeferenziate obbligatorie. Il report viene generato automaticamente ed è sigillato alla chiusura: ogni modifica si vede.',
     },
     {
       question: 'GeoTapp è conforme al GDPR per la geolocalizzazione dei dipendenti?',

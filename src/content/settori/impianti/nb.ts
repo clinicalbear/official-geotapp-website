@@ -18,7 +18,7 @@ const content: SettoreContent = {
     items: [
       {
         title: 'Kunder bestrider de arbeidede timene',
-        desc: 'GPS-stemplinger tidsstemplet som ugjendrivelig bevis. Data forsegles i oppdragsøyeblikket, kan ikke redigeres i etterkant.',
+        desc: 'GPS-stemplinger med tidsstempel som verifiserbart bevis. Data forsegles i oppdragsøyeblikket, og enhver endring i etterkant kan oppdages.',
       },
       {
         title: 'Jage teknikere for oppdateringer',
@@ -134,7 +134,7 @@ const content: SettoreContent = {
     items: [
       {
         q: 'Bestrider kunder de arbeidede timene på et oppdrag?',
-        a: 'Med GeoTapp tidsstemples GPS-stemplinger i oppdragsøyeblikket og kan ikke redigeres. De utgjør ugjendrivelig bevis for arbeidede timer og eliminerer enhver tvist.',
+        a: 'Med GeoTapp tidsstemples GPS-stemplinger i oppdragsøyeblikket, og enhver endring kan oppdages. De gir deg et verifiserbart grunnlag for arbeidede timer når noen stiller spørsmål.',
       },
       {
         q: 'Hvordan overvåker jeg flere team på forskjellige oppdrag?',
@@ -161,7 +161,7 @@ const content: SettoreContent = {
   schema_faq: [
     {
       question: 'Bestrider kunder de arbeidede timene på et oppdrag?',
-      answer: 'Med GeoTapp tidsstemples GPS-stemplinger i oppdragsøyeblikket og kan ikke redigeres. De utgjør ugjendrivelig bevis for arbeidede timer og eliminerer enhver tvist.',
+      answer: 'Med GeoTapp tidsstemples GPS-stemplinger i oppdragsøyeblikket, og enhver endring kan oppdages. De gir deg et verifiserbart grunnlag for arbeidede timer når noen stiller spørsmål.',
     },
     {
       question: 'Hvordan overvåker jeg flere team på forskjellige oppdrag?',

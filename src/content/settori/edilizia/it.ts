@@ -18,7 +18,7 @@ const content: SettoreContent = {
     items: [
       {
         title: 'Chi era in cantiere e quando?',
-        desc: 'Ogni timbratura GPS è timestampata e certificata. GeoTapp registra coordinate reali al momento della timbratura, non inserite a mano. Il dato è verificabile dalla direzione lavori.',
+        desc: 'Ogni timbratura GPS è timestampata e sigillata. GeoTapp registra coordinate reali al momento della timbratura, non inserite a mano. Il dato è verificabile dalla direzione lavori.',
       },
       {
         title: 'Come gestisci i subappaltatori?',
@@ -36,7 +36,7 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'L\'operatore timbra all\'ingresso cantiere',
-        desc: 'Apre il turno dallo smartphone. GeoTapp registra coordinate GPS reali, timestamp e, se necessario, foto. Tutto automatico, non modificabile.',
+        desc: 'Apre il turno dallo smartphone. GeoTapp registra coordinate GPS reali, timestamp e, se necessario, foto. Tutto automatico, ogni modifica è rilevabile.',
       },
       {
         title: 'Il capo cantiere vede tutto in tempo reale',
@@ -65,7 +65,7 @@ const content: SettoreContent = {
       {
         label: 'In caso di contestazione',
         competitor: 'Dato non difendibile',
-        geotapp: 'Report sigillato, non alterabile',
+        geotapp: 'Report sigillato, ogni modifica rilevabile',
       },
       {
         label: 'Report di cantiere',
@@ -115,7 +115,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Prove fotografiche sigillate',
-        desc: 'Gli operatori scattano foto dall\'app. Ogni immagine è collegata al cantiere con GPS e timestamp, non alterabile dopo la generazione.',
+        desc: 'Gli operatori scattano foto dall\'app. Ogni immagine è collegata al cantiere con GPS e timestamp: ogni modifica successiva è rilevabile.',
       },
       {
         title: 'Conformità GDPR integrata',
@@ -134,7 +134,7 @@ const content: SettoreContent = {
     items: [
       {
         q: 'Chi era in cantiere e quando?',
-        a: 'Ogni timbratura GPS è timestampata e certificata. GeoTapp registra coordinate reali al momento della timbratura, non inserite a mano. Il dato è verificabile dalla direzione lavori.',
+        a: 'Ogni timbratura GPS è timestampata e sigillata. GeoTapp registra coordinate reali al momento della timbratura, non inserite a mano. Il dato è verificabile dalla direzione lavori.',
       },
       {
         q: 'Come gestisci i subappaltatori in cantiere?',
@@ -161,7 +161,7 @@ const content: SettoreContent = {
   schema_faq: [
     {
       question: 'Chi era in cantiere e quando?',
-      answer: 'Ogni timbratura GPS è timestampata e certificata. GeoTapp registra coordinate reali al momento della timbratura, non inserite a mano. Il dato è verificabile dalla direzione lavori.',
+      answer: 'Ogni timbratura GPS è timestampata e sigillata. GeoTapp registra coordinate reali al momento della timbratura, non inserite a mano. Il dato è verificabile dalla direzione lavori.',
     },
     {
       question: 'Come gestisci i subappaltatori in cantiere?',

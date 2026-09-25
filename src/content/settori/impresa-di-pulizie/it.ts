@@ -26,7 +26,7 @@ const content: SettoreContent = {
       },
       {
         title: 'I fogli presenze sono inaffidabili?',
-        desc: 'Tracciamento automatico da smartphone, niente inserimenti manuali. Il dato è quello, e non si può cambiare.',
+        desc: 'Tracciamento automatico da smartphone, niente inserimenti manuali. Il dato è quello: ogni modifica è rilevabile.',
       },
       {
         title: 'Difficile coordinare più squadre?',
@@ -57,7 +57,7 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'L\'operatore timbra con GPS',
-        desc: 'Apre e chiude il turno dallo smartphone. GeoTapp registra coordinate GPS reali, foto e timestamp, tutto automatico, non modificabile.',
+        desc: 'Apre e chiude il turno dallo smartphone. GeoTapp registra coordinate GPS reali, foto e timestamp, tutto automatico: ogni modifica è rilevabile.',
       },
       {
         title: 'Il responsabile vede tutto in tempo reale',
@@ -87,7 +87,7 @@ const content: SettoreContent = {
       {
         label: 'In caso di contestazione',
         competitor: 'Dato non difendibile',
-        geotapp: 'Report sigillato, non alterabile',
+        geotapp: 'Report sigillato, ogni modifica è rilevabile',
       },
       {
         label: 'Prova fotografica',
@@ -115,7 +115,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Report difendibili in qualsiasi sede',
-        desc: 'Ogni report è firmato digitalmente e non alterabile. Vale davanti a un cliente, un ispettore o un avvocato.',
+        desc: 'Ogni report è firmato digitalmente: ogni modifica è rilevabile. Vale davanti a un cliente, un ispettore o un avvocato.',
       },
       {
         title: 'Gestione turni e squadre',
@@ -145,7 +145,7 @@ const content: SettoreContent = {
     items: [
       {
         q: 'Come funziona la timbratura GPS per imprese di pulizie?',
-        a: "L'operatore timbra ingresso e uscita dallo smartphone. GeoTapp registra le coordinate GPS in quel momento, non inserite a mano. Ogni timbratura è certificata con timestamp e posizione verificabile dal committente.",
+        a: "L'operatore timbra ingresso e uscita dallo smartphone. GeoTapp registra le coordinate GPS in quel momento, non inserite a mano. Ogni timbratura è sigillata con timestamp e posizione verificabile dal committente.",
       },
       {
         q: 'Posso dimostrare al cliente che il servizio è stato eseguito?',

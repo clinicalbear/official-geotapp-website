@@ -18,7 +18,7 @@ const content: SettoreContent = {
     items: [
       {
         title: 'Klanten betwisten de gewerkte uren',
-        desc: 'GPS-klokregistraties met tijdstempel als onweerlegbaar bewijs. De gegevens worden verzegeld op het moment van de opdracht, niet achteraf te wijzigen.',
+        desc: 'GPS-klokregistraties met tijdstempel als verifieerbaar bewijs. De gegevens worden verzegeld op het moment van de opdracht, en elke wijziging achteraf is detecteerbaar.',
       },
       {
         title: 'Monteurs achternazitten voor updates',
@@ -36,7 +36,7 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'De monteur klokt in via GPS bij aanvang',
-        desc: 'Opent de opdracht vanaf de smartphone. GeoTapp registreert echte GPS-coördinaten, tijdstempel en foto\'s, volledig automatisch, manipulatiebestendig.',
+        desc: 'Opent de opdracht vanaf de smartphone. GeoTapp registreert echte GPS-coördinaten, tijdstempel en foto\'s, volledig automatisch, en elke wijziging is detecteerbaar.',
       },
       {
         title: 'Uren worden automatisch per opdracht geregistreerd',
@@ -49,7 +49,7 @@ const content: SettoreContent = {
     ],
   },
   differenza: {
-    title: 'Installateurs-app: tijdregistratie of certificering?',
+    title: 'Installateurs-app: tijdregistratie of verifieerbaar bewijs?',
     subtitle: 'De meeste apps registreren alleen het inklokken. GeoTapp levert verifieerbaar bewijs.',
     rows: [
       {
@@ -65,7 +65,7 @@ const content: SettoreContent = {
       {
         label: 'Bij geschillen',
         competitor: 'Gegevens niet verdedigbaar',
-        geotapp: 'Verzegeld rapport, manipulatiebestendig',
+        geotapp: 'Verzegeld rapport, elke wijziging is detecteerbaar',
       },
       {
         label: 'Werkbon',
@@ -103,7 +103,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Verzegeld fotobewijs',
-        desc: 'De monteur maakt foto\'s vanuit de app. Elk beeld is gekoppeld aan de opdracht met GPS en tijdstempel, manipulatiebestendig na generatie.',
+        desc: 'De monteur maakt foto\'s vanuit de app. Elk beeld is gekoppeld aan de opdracht met GPS en tijdstempel, en elke wijziging na generatie is detecteerbaar.',
       },
       {
         title: 'Multi-locatie opdrachtbeheer',
@@ -134,7 +134,7 @@ const content: SettoreContent = {
     items: [
       {
         q: 'Betwisten klanten de gewerkte uren op een opdracht?',
-        a: 'Met GeoTapp worden GPS-klokregistraties op het moment van de opdracht vastgelegd en zijn niet te wijzigen. Ze vormen onweerlegbaar bewijs van gewerkte uren en elimineren elk geschil.',
+        a: 'Met GeoTapp worden GPS-klokregistraties op het moment van de opdracht vastgelegd, en elke wijziging is detecteerbaar. Ze vormen verifieerbaar bewijs van gewerkte uren wanneer iemand die in twijfel trekt.',
       },
       {
         q: 'Hoe monitor ik meerdere teams op verschillende opdrachten?',
@@ -161,7 +161,7 @@ const content: SettoreContent = {
   schema_faq: [
     {
       question: 'Betwisten klanten de gewerkte uren op een opdracht?',
-      answer: 'Met GeoTapp worden GPS-klokregistraties op het moment van de opdracht vastgelegd en zijn niet te wijzigen. Ze vormen onweerlegbaar bewijs van gewerkte uren en elimineren elk geschil.',
+      answer: 'Met GeoTapp worden GPS-klokregistraties op het moment van de opdracht vastgelegd, en elke wijziging is detecteerbaar. Ze vormen verifieerbaar bewijs van gewerkte uren wanneer iemand die in twijfel trekt.',
     },
     {
       question: 'Hoe monitor ik meerdere teams op verschillende opdrachten?',

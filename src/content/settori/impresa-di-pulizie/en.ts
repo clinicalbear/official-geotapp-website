@@ -26,7 +26,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Paper timesheets are unreliable?',
-        desc: 'Automatic tracking from the smartphone, no manual entries. The data is what it is, and it cannot be changed.',
+        desc: 'Automatic tracking from the smartphone, no manual entries. The data is what it is: any change is detectable.',
       },
       {
         title: 'Hard to coordinate multiple crews?',
@@ -57,7 +57,7 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'Cleaner clocks in with GPS',
-        desc: 'Opens and closes the shift from their smartphone. GeoTapp records real GPS coordinates, photos and timestamp, fully automatic, tamper-proof.',
+        desc: 'Opens and closes the shift from their smartphone. GeoTapp records real GPS coordinates, photos and timestamp, fully automatic, tamper-evident.',
       },
       {
         title: 'Manager sees everything in real time',
@@ -87,7 +87,7 @@ const content: SettoreContent = {
       {
         label: 'In case of dispute',
         competitor: 'Data not defensible',
-        geotapp: 'Sealed report, tamper-proof',
+        geotapp: 'Sealed report, tamper-evident',
       },
       {
         label: 'Photo evidence',
@@ -115,7 +115,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Defensible reports anywhere',
-        desc: 'Every report is digitally signed and tamper-proof. Valid before a client, an inspector or a solicitor.',
+        desc: 'Every report is digitally signed, and any change is detectable. A client, an inspector or a solicitor can check it independently.',
       },
       {
         title: 'Shift and crew management',
@@ -145,7 +145,7 @@ const content: SettoreContent = {
     items: [
       {
         q: 'How does GPS clock-in work for cleaning companies?',
-        a: 'The cleaner clocks in and out from their smartphone. GeoTapp records the GPS coordinates at that moment, not entered manually. Every clock-in is certified with timestamp and position verifiable by the client.',
+        a: 'The cleaner clocks in and out from their smartphone. GeoTapp records the GPS coordinates at that moment, not entered manually. Every clock-in is sealed with timestamp and position verifiable by the client.',
       },
       {
         q: 'Can I prove to the client that the service was delivered?',
@@ -194,7 +194,7 @@ const content: SettoreContent = {
     {
       question: 'How does GPS clock-in work for cleaning companies?',
       answer:
-        'The cleaner clocks in and out from their smartphone. GeoTapp records GPS coordinates, not entered manually. Every clock-in is certified with timestamp and position verifiable by the client.',
+        'The cleaner clocks in and out from their smartphone. GeoTapp records GPS coordinates, not entered manually. Every clock-in is sealed with timestamp and position verifiable by the client.',
     },
     {
       question: 'Can I prove to the client that the service was delivered?',

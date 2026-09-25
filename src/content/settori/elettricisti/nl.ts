@@ -3,7 +3,7 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'App voor Elektriciens | GeoTapp - GPS Werkbonnen & Bewijs',
-    description: 'GeoTapp is de app voor elektriciens: GPS-geverifieerde werkbonnen, installatiefotos en manipulatiebestendige rapporten. Sluit geschillen af met echt bewijs. Gratis proberen.',
+    description: 'GeoTapp is de app voor elektriciens: GPS-geverifieerde werkbonnen, installatiefotos en verzegelde rapporten. Sluit geschillen af met echt bewijs. Gratis proberen.',
   },
   hero: {
     badge: 'App voor Elektriciens en Elektrotechnische Installateurs',

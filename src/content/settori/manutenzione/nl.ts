@@ -41,7 +41,7 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'Technicus klokt in met GPS bij aankomst',
-        desc: 'Opent de interventie vanaf de smartphone. GeoTapp registreert echte GPS-coördinaten, tijdstempel en foto\'s, volledig automatisch, niet te wijzigen.',
+        desc: 'Opent de interventie vanaf de smartphone. GeoTapp registreert echte GPS-coördinaten, tijdstempel en foto\'s, volledig automatisch, verzegeld.',
       },
       {
         title: 'Uren en interventie worden automatisch geregistreerd',
@@ -59,14 +59,14 @@ const content: SettoreContent = {
     items: [
       {
         title: 'GPS-geverifieerde aanwezigheid',
-        desc: 'Elke aankomst en vertrek is gecertificeerd met echte GPS, tijdstempel en toegewezen locatie. Verdedigbaar tegenover klanten en inspecteurs.',
+        desc: 'Elke aankomst en vertrek wordt verzegeld met echte GPS, tijdstempel en toegewezen locatie. Verdedigbaar tegenover klanten en inspecteurs.',
       },
       {
         title: 'Onderhoudshistorie per installatie',
         desc: 'Elke interventie is gekoppeld aan de locatie of installatie. Volledige historie is doorzoekbaar en downloadbaar.',
       },
       {
-        title: 'Automatische onvervalsbare rapporten',
+        title: 'Automatische verzegelde rapporten',
         desc: 'Na elke interventie genereert het systeem een verzegeld rapport: uren, GPS, foto\'s en digitale handtekening.',
       },
       {

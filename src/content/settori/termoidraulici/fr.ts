@@ -3,7 +3,7 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'App pour Plombiers-Chauffagistes | GeoTapp - GPS, Rapports & Preuves',
-    description: 'GeoTapp est l\'app pour installateurs de chauffage : rapports GPS vérifiés, photos d\'installations et documents infalsifiables. Résolvez les litiges avec de vraies preuves. Essayez gratuitement.',
+    description: 'GeoTapp est l\'app pour installateurs de chauffage : rapports GPS vérifiés, photos d\'installations et documents scellés. Résolvez les litiges avec de vraies preuves. Essayez gratuitement.',
   },
   hero: {
     badge: 'App pour Plombiers-Chauffagistes et Installateurs Thermosanitaires',
@@ -44,12 +44,12 @@ const content: SettoreContent = {
       },
       {
         title: 'Le rapport est votre preuve',
-        desc: 'En fin d\'intervention, le système génère un rapport scellé : horodatage GPS, photos de l\'installation et des pièces, notes techniques. Infalsifiable. Le client peut le vérifier de façon autonome.',
+        desc: 'En fin d\'intervention, le système génère un rapport scellé : horodatage GPS, photos de l\'installation et des pièces, notes techniques. Toute modification est détectable. Le client peut le vérifier de façon autonome.',
       },
     ],
   },
   differenza: {
-    title: 'App pour plombiers-chauffagistes : enregistrement ou certification ?',
+    title: 'App pour plombiers-chauffagistes : enregistrement ou preuve vérifiable ?',
     subtitle: 'La plupart des apps enregistrent l\'heure de pointage. GeoTapp produit des preuves vérifiables.',
     rows: [
       {
@@ -60,7 +60,7 @@ const content: SettoreContent = {
       {
         label: 'En cas de litige',
         competitor: 'Donnée non défendable',
-        geotapp: 'Rapport scellé, infalsifiable',
+        geotapp: 'Rapport scellé, modification détectable',
       },
       {
         label: 'Documentation de l\'intervention',
@@ -108,7 +108,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Photos d\'installation scellées',
-        desc: 'Le technicien photographie depuis l\'app pendant et après l\'intervention. Chaque image est liée au GPS et à l\'horodatage, infalsifiable après génération.',
+        desc: 'Le technicien photographie depuis l\'app pendant et après l\'intervention. Chaque image est liée au GPS et à l\'horodatage, scellée après génération.',
       },
       {
         title: 'Rapports d\'intervention numériques automatiques',
@@ -134,7 +134,7 @@ const content: SettoreContent = {
     cta: 'Démarrer gratuitement !',
   },
   trust: {
-    title: 'Nos rapports ne peuvent pas être modifiés. Ni par vous. Ni par nous.',
+    title: 'Si l\'un de nos rapports est modifié, cela se voit. Même si c\'est nous.',
     body: 'Les rapports GeoTapp sont générés par le système au moment de l\'intervention. Il n\'existe aucun panneau pour "corriger" une heure ou déplacer une photo. La donnée est celle-là, signée numériquement, avec un vrai GPS.',
     badge: 'Vérifiable par n\'importe qui, sans accès à votre compte',
   },
@@ -153,7 +153,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Puis-je utiliser GeoTapp pour documenter le remplacement de pièces sur chaudières ?',
-        a: 'Oui. Le technicien photographie depuis l\'app la pièce retirée et celle installée. Chaque image est liée au GPS, à l\'horodatage et au chantier, incluse dans le rapport infalsifiable.',
+        a: 'Oui. Le technicien photographie depuis l\'app la pièce retirée et celle installée. Chaque image est liée au GPS, à l\'horodatage et au chantier, incluse dans le rapport scellé.',
       },
       {
         q: 'GeoTapp aide-t-il à résoudre les litiges clients sur les installations ?',

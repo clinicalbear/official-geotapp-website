@@ -41,7 +41,7 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'El técnico ficha GPS al llegar',
-        desc: 'Abre la intervención desde su smartphone. GeoTapp registra coordenadas GPS reales, marca de tiempo y fotos, todo automático e inalterable.',
+        desc: 'Abre la intervención desde su smartphone. GeoTapp registra coordenadas GPS reales, marca de tiempo y fotos, todo automático y sellado.',
       },
       {
         title: 'Las horas y la intervención se registran automáticamente',
@@ -59,14 +59,14 @@ const content: SettoreContent = {
     items: [
       {
         title: 'Presencia verificada por GPS',
-        desc: 'Cada llegada y salida está certificada con GPS real, marca de tiempo y sede asignada. Defendible ante el cliente y ante inspecciones.',
+        desc: 'Cada llegada y salida queda sellada con GPS real, marca de tiempo y sede asignada. Defendible ante el cliente y ante inspecciones.',
       },
       {
         title: 'Historial de mantenimiento por instalación',
         desc: 'Cada intervención está vinculada a la sede o instalación. El historial completo es consultable y descargable.',
       },
       {
-        title: 'Informes automáticos e inalterables',
+        title: 'Informes automáticos y sellados',
         desc: 'Tras cada intervención, el sistema genera un informe sellado: horas, GPS, fotos y firma digital.',
       },
       {

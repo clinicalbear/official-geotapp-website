@@ -24,7 +24,7 @@ const nl: VerifierCopy = {
     'Organiseert opdrachten, teams en genereert gestructureerde rapporten met cryptografische identifier.',
   ecosystem_flow_link: 'Flow verkennen',
   ecosystem_verifier_desc:
-    'Verifieert de integriteit van elk rapport. Vergelijkt het document met de originele gegevens en certificeert de authenticiteit.',
+    'Verifieert de integriteit van elk rapport. Vergelijkt het document met de originele gegevens en verifieert de authenticiteit.',
   problem_badge: 'Het echte probleem',
   problem_title: 'Een niet-verifieerbaar rapport is een betwistbaar rapport.',
   problem_items: [
@@ -44,7 +44,7 @@ const nl: VerifierCopy = {
   what_badge: 'Wat is GeoTapp Verifier',
   what_title: 'Onafhankelijke verificatie van interventierapporten.',
   what_desc:
-    'GeoTapp Verifier is het systeem waarmee u de authenticiteit en integriteit van rapporten die door GeoTapp Flow en TimeTracker zijn gegenereerd kunt verifiëren. Het vergelijkt het document met de originele operationele gegevens - GPS-tijdstempels, locaties, fotobewijs, en certificeert dat het rapport niet is gewijzigd.',
+    'GeoTapp Verifier is het systeem waarmee u de authenticiteit en integriteit van rapporten die door GeoTapp Flow en TimeTracker zijn gegenereerd kunt verifiëren. Het vergelijkt het document met de originele operationele gegevens - GPS-tijdstempels, locaties, fotobewijs, en verifieert dat het rapport niet is gewijzigd.',
   how_badge: 'Hoe het werkt',
   how_title: 'Drie stappen. Één geverifieerd rapport.',
   how_steps: [
@@ -77,7 +77,7 @@ const nl: VerifierCopy = {
     },
     {
       title: 'Documentintegriteit',
-      desc: 'Certificeert dat het document na het aanmaken niet is gewijzigd. Elke wijziging wordt gedetecteerd.',
+      desc: 'Verifieert dat het document na het aanmaken niet is gewijzigd. Elke wijziging wordt gedetecteerd.',
     },
     {
       title: 'Gegevensauthenticiteit',

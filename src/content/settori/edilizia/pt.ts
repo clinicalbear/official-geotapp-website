@@ -36,7 +36,7 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'O operário regista à entrada da obra',
-        desc: 'Inicia o turno a partir do smartphone. GeoTapp regista coordenadas GPS reais, marca temporal e, se necessário, fotos. Totalmente automático, à prova de manipulação.',
+        desc: 'Inicia o turno a partir do smartphone. GeoTapp regista coordenadas GPS reais, marca temporal e, se necessário, fotos. Totalmente automático, qualquer alteração é detetável.',
       },
       {
         title: 'O diretor de obra vê tudo em tempo real',
@@ -49,7 +49,7 @@ const content: SettoreContent = {
     ],
   },
   differenza: {
-    title: 'App de obra: registo de horas ou certificação?',
+    title: 'App de obra: registo de horas ou prova verificável?',
     subtitle: 'A maioria das apps regista a hora. GeoTapp produz provas verificáveis.',
     rows: [
       {
@@ -65,7 +65,7 @@ const content: SettoreContent = {
       {
         label: 'Em caso de disputa',
         competitor: 'Dados não defensáveis',
-        geotapp: 'Relatório selado, à prova de manipulação',
+        geotapp: 'Relatório selado, qualquer alteração é detetável',
       },
       {
         label: 'Relatório de obra',
@@ -98,7 +98,7 @@ const content: SettoreContent = {
     title: 'Funcionalidades pensadas para a obra',
     items: [
       {
-        title: 'Presenças certificadas por GPS',
+        title: 'Presenças seladas por GPS',
         desc: 'Cada entrada e saída é registada com posição GPS real e marca temporal. Defensável perante fiscalização, clientes e inspetores.',
       },
       {
@@ -115,7 +115,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Provas fotográficas seladas',
-        desc: 'Os operários tiram fotos a partir da app. Cada imagem está ligada à obra com GPS e marca temporal, à prova de manipulação após geração.',
+        desc: 'Os operários tiram fotos a partir da app. Cada imagem está ligada à obra com GPS e marca temporal, qualquer alteração é detetável após geração.',
       },
       {
         title: 'Conformidade RGPD integrada',

@@ -41,7 +41,7 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'Technician clocks in with GPS on arrival',
-        desc: 'Opens the job from their smartphone. GeoTapp records real GPS coordinates, timestamp and photos, fully automatic, tamper-proof.',
+        desc: 'Opens the job from their smartphone. GeoTapp records real GPS coordinates, timestamp and photos, fully automatic, sealed.',
       },
       {
         title: 'Hours and job details are logged automatically',
@@ -59,14 +59,14 @@ const content: SettoreContent = {
     items: [
       {
         title: 'GPS-verified attendance',
-        desc: 'Every arrival and departure is certified with real GPS, timestamp and assigned site. Defensible with the client and with inspectors.',
+        desc: 'Every arrival and departure is sealed with real GPS, timestamp and assigned site. Defensible with the client and with inspectors.',
       },
       {
         title: 'Maintenance history per asset',
         desc: 'Every job is linked to the site or asset. Full history is searchable and downloadable, for you and for the client.',
       },
       {
-        title: 'Automated tamper-proof reports',
+        title: 'Automated sealed reports',
         desc: 'At the end of each job, the system generates a sealed report: hours, GPS, photos and digital signature. The client can verify it independently.',
       },
       {

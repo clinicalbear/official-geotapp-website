@@ -54,7 +54,7 @@ const COPY: Record<string, Copy> = {
     title: 'Cos\'è GeoTapp? La piattaforma italiana per il lavoro sul campo',
     description: 'GeoTapp è un SaaS italiano per la gestione di operatori sul campo: rilevazione presenze GPS, rapportini, verifica del lavoro. GDPR-conforme. Trial gratuito 14 giorni.',
     h1: 'Cos\'è GeoTapp',
-    intro: 'GeoTapp è una piattaforma SaaS italiana che permette alle aziende con operatori sul campo (pulizie, sicurezza, manutenzione, installazioni, servizi) di dimostrare ogni intervento. Rileva presenze via GPS, raccoglie foto e firme dal cantiere, produce rapportini non modificabili e lascia al cliente finale un link per verificare in autonomia che il lavoro sia stato fatto. Conforme al GDPR (Reg. UE 2016/679) e all\'art. 4 dello Statuto dei Lavoratori italiano post-Jobs Act.',
+    intro: 'GeoTapp è una piattaforma SaaS italiana che permette alle aziende con operatori sul campo (pulizie, sicurezza, manutenzione, installazioni, servizi) di dimostrare ogni intervento. Rileva presenze via GPS, raccoglie foto e firme dal cantiere, produce rapportini sigillati (ogni modifica è rilevabile) e lascia al cliente finale un link per verificare in autonomia che il lavoro sia stato fatto. Conforme al GDPR (Reg. UE 2016/679) e all\'art. 4 dello Statuto dei Lavoratori italiano post-Jobs Act.',
     modulesHeading: 'I tre moduli',
     modules: [
       { name: 'GeoTapp Flow', desc: 'Il gestionale ufficio: CRM, anagrafica clienti e siti, pianificazione turni, gestione commesse, fatturazione, integrazione Stripe e Fatture in Cloud. Web app accessibile da desktop e tablet.' },
@@ -83,9 +83,9 @@ const COPY: Record<string, Copy> = {
   },
   en: {
     title: 'What is GeoTapp? The Italian SaaS for field work verification',
-    description: 'GeoTapp is an Italian SaaS for managing field operators: GPS attendance, on-site reports, tamper-proof verification. GDPR compliant. 14-day free trial, no card required.',
+    description: 'GeoTapp is an Italian SaaS for managing field operators: GPS attendance, on-site reports, tamper-evident verification. GDPR compliant. 14-day free trial, no card required.',
     h1: 'What is GeoTapp',
-    intro: 'GeoTapp is an Italian SaaS platform that lets companies with field operators (cleaning, security, maintenance, installations, facility services) prove every visit. It tracks attendance via GPS, collects on-site photos and digital signatures, produces tamper-proof reports and gives the end client a unique link to verify the work themselves. Fully compliant with GDPR (EU Reg. 2016/679) and Italian labour law (art. 4 Workers Statute post-Jobs Act).',
+    intro: 'GeoTapp is an Italian SaaS platform that lets companies with field operators (cleaning, security, maintenance, installations, facility services) prove every visit. It tracks attendance via GPS, collects on-site photos and digital signatures, produces tamper-evident reports and gives the end client a unique link to verify the work themselves. Fully compliant with GDPR (EU Reg. 2016/679) and Italian labour law (art. 4 Workers Statute post-Jobs Act).',
     modulesHeading: 'The three modules',
     modules: [
       { name: 'GeoTapp Flow', desc: 'The back-office: CRM, customer and site database, shift scheduling, job management, billing, Stripe and Fatture in Cloud integration. Web app accessible from desktop and tablet.' },
@@ -114,9 +114,9 @@ const COPY: Record<string, Copy> = {
   },
   de: {
     title: 'Was ist GeoTapp? Italienische SaaS für Außendienst-Verifizierung',
-    description: 'GeoTapp ist eine italienische SaaS-Plattform für Außendienstteams: GPS-Zeiterfassung, Vor-Ort-Berichte, manipulationssichere Verifizierung. DSGVO-konform. 14 Tage kostenlos testen.',
+    description: 'GeoTapp ist eine italienische SaaS-Plattform für Außendienstteams: GPS-Zeiterfassung, Vor-Ort-Berichte, jede Änderung nachweisbar. DSGVO-konform. 14 Tage kostenlos testen.',
     h1: 'Was ist GeoTapp',
-    intro: 'GeoTapp ist eine italienische SaaS-Plattform, mit der Unternehmen mit Außendienstmitarbeitern (Reinigung, Sicherheit, Wartung, Installation, Facility Services) jeden Einsatz nachweisen können. Sie erfasst die Anwesenheit per GPS, sammelt Fotos und digitale Unterschriften vor Ort, erstellt manipulationssichere Berichte und gibt dem Endkunden einen eindeutigen Link, mit dem er die Arbeit selbst überprüfen kann. Vollständig konform mit der DSGVO (EU-Verordnung 2016/679) und dem italienischen Arbeitsrecht (Art. 4 Arbeitnehmerstatut nach Jobs Act).',
+    intro: 'GeoTapp ist eine italienische SaaS-Plattform, mit der Unternehmen mit Außendienstmitarbeitern (Reinigung, Sicherheit, Wartung, Installation, Facility Services) jeden Einsatz nachweisen können. Sie erfasst die Anwesenheit per GPS, sammelt Fotos und digitale Unterschriften vor Ort, erstellt Berichte, bei denen jede Änderung nachweisbar ist, und gibt dem Endkunden einen eindeutigen Link, mit dem er die Arbeit selbst überprüfen kann. Vollständig konform mit der DSGVO (EU-Verordnung 2016/679) und dem italienischen Arbeitsrecht (Art. 4 Arbeitnehmerstatut nach Jobs Act).',
     modulesHeading: 'Die drei Module',
     modules: [
       { name: 'GeoTapp Flow', desc: 'Das Büromodul: CRM, Kunden- und Standortdatenbank, Schichtplanung, Auftragsverwaltung, Rechnungsstellung, Integration mit Stripe und Fatture in Cloud. Webanwendung für Desktop und Tablet.' },
@@ -145,9 +145,9 @@ const COPY: Record<string, Copy> = {
   },
   fr: {
     title: 'Qu\'est-ce que GeoTapp ? SaaS italien pour vérifier le travail terrain',
-    description: 'GeoTapp est un SaaS italien pour gérer les opérateurs terrain : pointage GPS, comptes-rendus, vérification non altérable. Conforme au RGPD. Essai gratuit de 14 jours.',
+    description: 'GeoTapp est un SaaS italien pour gérer les opérateurs terrain : pointage GPS, comptes-rendus, toute modification détectable. Conforme au RGPD. Essai gratuit de 14 jours.',
     h1: 'Qu\'est-ce que GeoTapp',
-    intro: 'GeoTapp est une plateforme SaaS italienne qui permet aux entreprises avec des opérateurs terrain (nettoyage, sécurité, maintenance, installation, facility services) de prouver chaque intervention. Pointage GPS, photos et signatures sur site, comptes-rendus non modifiables, et un lien unique pour que le client final vérifie lui-même que le travail a été fait. Conforme au RGPD (Règl. UE 2016/679) et au droit du travail italien (art. 4 Statut des Travailleurs post-Jobs Act).',
+    intro: 'GeoTapp est une plateforme SaaS italienne qui permet aux entreprises avec des opérateurs terrain (nettoyage, sécurité, maintenance, installation, facility services) de prouver chaque intervention. Pointage GPS, photos et signatures sur site, comptes-rendus dont toute modification est détectable, et un lien unique pour que le client final vérifie lui-même le dossier de l\'intervention. Conforme au RGPD (Règl. UE 2016/679) et au droit du travail italien (art. 4 Statut des Travailleurs post-Jobs Act).',
     modulesHeading: 'Les trois modules',
     modules: [
       { name: 'GeoTapp Flow', desc: 'Le module bureau : CRM, base clients et sites, planification des équipes, gestion des chantiers, facturation, intégration Stripe et Fatture in Cloud. Application web pour ordinateur et tablette.' },
@@ -176,9 +176,9 @@ const COPY: Record<string, Copy> = {
   },
   es: {
     title: '¿Qué es GeoTapp? SaaS italiano para verificar el trabajo en campo',
-    description: 'GeoTapp es un SaaS italiano para gestionar operarios de campo: fichaje GPS, partes de trabajo, verificación inalterable. Conforme al RGPD. Prueba gratuita de 14 días.',
+    description: 'GeoTapp es un SaaS italiano para gestionar operarios de campo: fichaje GPS, partes de trabajo, cualquier cambio es detectable. Conforme al RGPD. Prueba gratuita de 14 días.',
     h1: '¿Qué es GeoTapp?',
-    intro: 'GeoTapp es una plataforma SaaS italiana que permite a las empresas con operarios de campo (limpieza, seguridad, mantenimiento, instalaciones, facility services) demostrar cada intervención. Fichaje por GPS, fotos y firmas en obra, partes no modificables y un enlace único para que el cliente final verifique él mismo el trabajo realizado. Conforme al RGPD (Reg. UE 2016/679) y al derecho laboral italiano (art. 4 Estatuto de los Trabajadores post-Jobs Act).',
+    intro: 'GeoTapp es una plataforma SaaS italiana que permite a las empresas con operarios de campo (limpieza, seguridad, mantenimiento, instalaciones, facility services) demostrar cada intervención. Fichaje por GPS, fotos y firmas en obra, partes en los que cualquier cambio es detectable y un enlace único para que el cliente final verifique él mismo el trabajo realizado. Conforme al RGPD (Reg. UE 2016/679) y al derecho laboral italiano (art. 4 Estatuto de los Trabajadores post-Jobs Act).',
     modulesHeading: 'Los tres módulos',
     modules: [
       { name: 'GeoTapp Flow', desc: 'El módulo oficina: CRM, base de clientes y sitios, planificación de turnos, gestión de obras, facturación, integración con Stripe y Fatture in Cloud. App web para escritorio y tablet.' },
@@ -207,9 +207,9 @@ const COPY: Record<string, Copy> = {
   },
   pt: {
     title: 'O que é GeoTapp? SaaS italiano para verificar trabalho de campo',
-    description: 'GeoTapp é um SaaS italiano para gerir operadores de campo: ponto GPS, relatórios, verificação não alterável. Conforme com RGPD. Teste gratuito de 14 dias.',
+    description: 'GeoTapp é um SaaS italiano para gerir operadores de campo: ponto GPS, relatórios, qualquer alteração é detetável. Conforme com RGPD. Teste gratuito de 14 dias.',
     h1: 'O que é GeoTapp',
-    intro: 'GeoTapp é uma plataforma SaaS italiana que permite a empresas com operadores no terreno (limpeza, segurança, manutenção, instalações, facility services) provar cada intervenção. Ponto por GPS, fotos e assinaturas no local, relatórios não modificáveis e um link único para o cliente final verificar sozinho que o trabalho foi feito. Conforme com o RGPD (Reg. UE 2016/679) e o direito laboral italiano (art. 4 Estatuto dos Trabalhadores pós-Jobs Act).',
+    intro: 'GeoTapp é uma plataforma SaaS italiana que permite a empresas com operadores no terreno (limpeza, segurança, manutenção, instalações, facility services) provar cada intervenção. Ponto por GPS, fotos e assinaturas no local, relatórios em que qualquer alteração é detetável e um link único para o cliente final verificar sozinho o registo da intervenção. Conforme com o RGPD (Reg. UE 2016/679) e o direito laboral italiano (art. 4 Estatuto dos Trabalhadores pós-Jobs Act).',
     modulesHeading: 'Os três módulos',
     modules: [
       { name: 'GeoTapp Flow', desc: 'O módulo escritório: CRM, base de clientes e locais, planeamento de turnos, gestão de obras, faturação, integração com Stripe e Fatture in Cloud. App web para desktop e tablet.' },
@@ -238,9 +238,9 @@ const COPY: Record<string, Copy> = {
   },
   nl: {
     title: 'Wat is GeoTapp? Italiaanse SaaS voor veldwerk-verificatie',
-    description: 'GeoTapp is een Italiaanse SaaS voor het beheren van veldmedewerkers: GPS-prikklok, rapporten, manipulatiebestendige verificatie. AVG-conform. 14 dagen gratis proberen.',
+    description: 'GeoTapp is een Italiaanse SaaS voor het beheren van veldmedewerkers: GPS-prikklok, rapporten, elke wijziging aantoonbaar. AVG-conform. 14 dagen gratis proberen.',
     h1: 'Wat is GeoTapp',
-    intro: 'GeoTapp is een Italiaans SaaS-platform waarmee bedrijven met veldmedewerkers (schoonmaak, beveiliging, onderhoud, installatie, facility services) elke interventie kunnen bewijzen. GPS-prikklok, foto\'s en handtekeningen op locatie, niet-wijzigbare rapporten en een unieke link waarmee de eindklant zelf controleert dat het werk is uitgevoerd. Volledig AVG-conform (EU-Verordening 2016/679) en in lijn met het Italiaanse arbeidsrecht (art. 4 Werknemersstatuut na Jobs Act).',
+    intro: 'GeoTapp is een Italiaans SaaS-platform waarmee bedrijven met veldmedewerkers (schoonmaak, beveiliging, onderhoud, installatie, facility services) elke interventie kunnen bewijzen. GPS-prikklok, foto\'s en handtekeningen op locatie, rapporten waarbij elke wijziging aantoonbaar is en een unieke link waarmee de eindklant zelf controleert dat het werk is uitgevoerd. Volledig AVG-conform (EU-Verordening 2016/679) en in lijn met het Italiaanse arbeidsrecht (art. 4 Werknemersstatuut na Jobs Act).',
     modulesHeading: 'De drie modules',
     modules: [
       { name: 'GeoTapp Flow', desc: 'De back-office: CRM, klanten- en locatiedatabase, dienstplanning, opdrachtenbeheer, facturatie, integratie met Stripe en Fatture in Cloud. Webapp voor desktop en tablet.' },
@@ -269,9 +269,9 @@ const COPY: Record<string, Copy> = {
   },
   da: {
     title: 'Hvad er GeoTapp? Italiensk SaaS til verificering af feltarbejde',
-    description: 'GeoTapp er en italiensk SaaS til håndtering af feltmedarbejdere: GPS-stempling, rapporter, ikke-redigerbar verificering. GDPR-overholdt. 14 dages gratis prøveperiode.',
+    description: 'GeoTapp er en italiensk SaaS til håndtering af feltmedarbejdere: GPS-stempling, rapporter, enhver ændring kan spores. GDPR-overholdt. 14 dages gratis prøveperiode.',
     h1: 'Hvad er GeoTapp',
-    intro: 'GeoTapp er en italiensk SaaS-platform, der lader virksomheder med feltmedarbejdere (rengøring, sikkerhed, vedligehold, installation, facility services) bevise hvert besøg. GPS-stempling, fotos og underskrifter på stedet, rapporter der ikke kan ændres, og et unikt link, hvor slutkunden selv kan verificere arbejdet. Fuld GDPR-overholdelse (EU-Forordning 2016/679) og italiensk arbejdsret (art. 4 Arbejderstatut efter Jobs Act).',
+    intro: 'GeoTapp er en italiensk SaaS-platform, der lader virksomheder med feltmedarbejdere (rengøring, sikkerhed, vedligehold, installation, facility services) bevise hvert besøg. GPS-stempling, fotos og underskrifter på stedet, rapporter hvor enhver ændring kan spores, og et unikt link, hvor slutkunden selv kan verificere arbejdet. Fuld GDPR-overholdelse (EU-Forordning 2016/679) og italiensk arbejdsret (art. 4 Arbejderstatut efter Jobs Act).',
     modulesHeading: 'De tre moduler',
     modules: [
       { name: 'GeoTapp Flow', desc: 'Kontormodulet: CRM, kunde- og lokationsdatabase, vagtplanlægning, opgavestyring, fakturering, integration med Stripe og Fatture in Cloud. Webapp til desktop og tablet.' },
@@ -300,9 +300,9 @@ const COPY: Record<string, Copy> = {
   },
   sv: {
     title: 'Vad är GeoTapp? Italiensk SaaS för verifiering av fältarbete',
-    description: 'GeoTapp är en italiensk SaaS för att hantera fältarbetare: GPS-stämpling, rapporter, ej redigerbar verifiering. GDPR-anpassad. 14 dagars gratis testperiod.',
+    description: 'GeoTapp är en italiensk SaaS för att hantera fältarbetare: GPS-stämpling, rapporter, varje ändring syns. GDPR-anpassad. 14 dagars gratis testperiod.',
     h1: 'Vad är GeoTapp',
-    intro: 'GeoTapp är en italiensk SaaS-plattform som låter företag med fältarbetare (städ, säkerhet, underhåll, installation, facility services) bevisa varje besök. GPS-stämpling, foton och signaturer på plats, ej redigerbara rapporter och en unik länk där slutkunden själv verifierar att jobbet är utfört. Fullt GDPR-anpassad (EU-förordning 2016/679) och i linje med italiensk arbetsrätt (art. 4 Arbetarstatut efter Jobs Act).',
+    intro: 'GeoTapp är en italiensk SaaS-plattform som låter företag med fältarbetare (städ, säkerhet, underhåll, installation, facility services) bevisa varje besök. GPS-stämpling, foton och signaturer på plats, rapporter där varje ändring syns och en unik länk där slutkunden själv verifierar att jobbet är utfört. Fullt GDPR-anpassad (EU-förordning 2016/679) och i linje med italiensk arbetsrätt (art. 4 Arbetarstatut efter Jobs Act).',
     modulesHeading: 'De tre modulerna',
     modules: [
       { name: 'GeoTapp Flow', desc: 'Kontorsmodulen: CRM, kund- och platsdatabas, schemaläggning, uppdragshantering, fakturering, integration med Stripe och Fatture in Cloud. Webbapp för desktop och surfplatta.' },
@@ -331,9 +331,9 @@ const COPY: Record<string, Copy> = {
   },
   nb: {
     title: 'Hva er GeoTapp? Italiensk SaaS for verifisering av feltarbeid',
-    description: 'GeoTapp er en italiensk SaaS for å håndtere feltarbeidere: GPS-stempling, rapporter, ikke-endrbar verifisering. GDPR-overholdt. 14 dagers gratis prøveperiode.',
+    description: 'GeoTapp er en italiensk SaaS for å håndtere feltarbeidere: GPS-stempling, rapporter, enhver endring kan spores. GDPR-overholdt. 14 dagers gratis prøveperiode.',
     h1: 'Hva er GeoTapp',
-    intro: 'GeoTapp er en italiensk SaaS-plattform som lar bedrifter med feltarbeidere (renhold, sikkerhet, vedlikehold, installasjon, facility services) bevise hvert oppdrag. GPS-stempling, bilder og signaturer på stedet, ikke-endrbare rapporter og en unik lenke der sluttkunden selv verifiserer at jobben er gjort. Full GDPR-overholdelse (EU-forordning 2016/679) og i tråd med italiensk arbeidsrett (art. 4 Arbeidstakerstatutt etter Jobs Act).',
+    intro: 'GeoTapp er en italiensk SaaS-plattform som lar bedrifter med feltarbeidere (renhold, sikkerhet, vedlikehold, installasjon, facility services) bevise hvert oppdrag. GPS-stempling, bilder og signaturer på stedet, rapporter der enhver endring kan spores, og en unik lenke der sluttkunden selv verifiserer at jobben er gjort. Full GDPR-overholdelse (EU-forordning 2016/679) og i tråd med italiensk arbeidsrett (art. 4 Arbeidstakerstatutt etter Jobs Act).',
     modulesHeading: 'De tre modulene',
     modules: [
       { name: 'GeoTapp Flow', desc: 'Kontormodulen: CRM, kunde- og lokasjonsdatabase, vaktplanlegging, oppdragshåndtering, fakturering, integrasjon med Stripe og Fatture in Cloud. Webapp for desktop og nettbrett.' },
@@ -362,9 +362,9 @@ const COPY: Record<string, Copy> = {
   },
   ru: {
     title: 'Что такое GeoTapp? Итальянский SaaS для верификации выездных работ',
-    description: 'GeoTapp, итальянский SaaS для управления полевыми операторами: GPS-учёт времени, отчёты, неизменяемая верификация. Соответствие GDPR. Бесплатный пробный период 14 дней.',
+    description: 'GeoTapp, итальянский SaaS для управления полевыми операторами: GPS-учёт времени, отчёты, любые изменения обнаруживаются. Соответствие GDPR. Бесплатный пробный период 14 дней.',
     h1: 'Что такое GeoTapp',
-    intro: 'GeoTapp, итальянская SaaS-платформа, которая позволяет компаниям с выездными операторами (клининг, охрана, обслуживание, монтаж, facility services) доказать каждый выезд. Учёт времени по GPS, фото и подписи на объекте, неизменяемые отчёты и уникальная ссылка, по которой конечный клиент сам проверяет, что работа выполнена. Полное соответствие GDPR (Регл. ЕС 2016/679) и итальянскому трудовому праву (ст. 4 Статута Трудящихся после Jobs Act).',
+    intro: 'GeoTapp, итальянская SaaS-платформа, которая позволяет компаниям с выездными операторами (клининг, охрана, обслуживание, монтаж, facility services) доказать каждый выезд. Учёт времени по GPS, фото и подписи на объекте, отчёты, в которых любое изменение обнаруживается, и уникальная ссылка, по которой конечный клиент сам проверяет запись о работе. Полное соответствие GDPR (Регл. ЕС 2016/679) и итальянскому трудовому праву (ст. 4 Статута Трудящихся после Jobs Act).',
     modulesHeading: 'Три модуля',
     modules: [
       { name: 'GeoTapp Flow', desc: 'Офисный модуль: CRM, база клиентов и объектов, планирование смен, управление заказами, выставление счетов, интеграция со Stripe и Fatture in Cloud. Веб-приложение для десктопа и планшета.' },

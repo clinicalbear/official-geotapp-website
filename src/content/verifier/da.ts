@@ -24,7 +24,7 @@ const da: VerifierCopy = {
     'Organiserer opgaver, hold og genererer strukturerede rapporter med kryptografisk identifikator.',
   ecosystem_flow_link: 'Udforsk Flow',
   ecosystem_verifier_desc:
-    'Verificerer integriteten af enhver rapport. Sammenligner dokumentet med de originale data og certificerer ægtheden.',
+    'Verificerer integriteten af enhver rapport. Sammenligner dokumentet med de originale data og verificerer ægtheden.',
   problem_badge: 'Det reelle problem',
   problem_title: 'En ikke-verificerbar rapport er en bestridelseværdig rapport.',
   problem_items: [
@@ -44,7 +44,7 @@ const da: VerifierCopy = {
   what_badge: 'Hvad er GeoTapp Verifier',
   what_title: 'Uafhængig verificering af interventionsrapporter.',
   what_desc:
-    'GeoTapp Verifier er det system, der gør det muligt at verificere ægtheden og integriteten af rapporter genereret af GeoTapp Flow og TimeTracker. Det sammenligner dokumentet med de originale operationelle data - GPS-tidsstempler, placeringer, fotodokumentation, og certificerer, at rapporten ikke er blevet ændret.',
+    'GeoTapp Verifier er det system, der gør det muligt at verificere ægtheden og integriteten af rapporter genereret af GeoTapp Flow og TimeTracker. Det sammenligner dokumentet med de originale operationelle data - GPS-tidsstempler, placeringer, fotodokumentation, og verificerer, at rapporten ikke er blevet ændret.',
   how_badge: 'Sådan fungerer det',
   how_title: 'Tre trin. Én verificeret rapport.',
   how_steps: [
@@ -61,7 +61,7 @@ const da: VerifierCopy = {
     {
       num: '03',
       title: 'Verifier kontrollerer integriteten',
-      desc: 'Alle kan verificere rapporten med GeoTapp Verifier. Systemet sammenligner dokumentet med de registrerede operationelle data og forsegler, om rapporten er intakt og autentisk.',
+      desc: 'Alle kan verificere rapporten med GeoTapp Verifier. Systemet sammenligner dokumentet med de registrerede operationelle data og verificerer, om rapporten er intakt og autentisk.',
     },
   ],
   features_badge: 'Hvad verificeres',
@@ -77,7 +77,7 @@ const da: VerifierCopy = {
     },
     {
       title: 'Dokumentintegritet',
-      desc: 'Certificerer, at dokumentet ikke er blevet ændret efter generering. Enhver ændring opdages.',
+      desc: 'Verificerer, at dokumentet ikke er blevet ændret efter generering. Enhver ændring opdages.',
     },
     {
       title: 'Dataautenticitet',

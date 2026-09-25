@@ -9,7 +9,7 @@ const content: SettoreContent = {
     badge: 'Software para Empresas de Limpeza, Higiene e Facility Management',
     h1_line1: 'Software para empresas de limpeza:',
     h1_line2: 'turnos, provas fotográficas e horas verificadas, em cada edifício',
-    subtitle: 'GeoTapp liga Flow + TimeTracker para equipas distribuídas por vários edifícios e pisos. Os seus operacionais registam o ponto pelo smartphone com GPS verificado; o escritório vê quem limpou o quê, onde e quando, com provas fotográficas anexas. Sem litígios, com total conformidade com o CCT Limpeza e Higiene Urbana.',
+    subtitle: 'GeoTapp liga Flow + TimeTracker para equipas distribuídas por vários edifícios e pisos. Os seus operacionais registam o ponto pelo smartphone com GPS verificado; o escritório vê quem limpou o quê, onde e quando, com provas fotográficas anexas. Com os dados prontos para qualquer litígio, e total conformidade com o CCT Limpeza e Higiene Urbana.',
     cta_primary: 'Experimente num contrato real',
     cta_note: '14 dias, até 50 operacionais no terreno, sem cartão de crédito.',
   },
@@ -57,7 +57,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Evidência fotográfica antes e depois',
-        desc: 'Os operacionais fotografam diretamente pela aplicação. Imagens com data, hora e GPS: prova irrefutável do serviço prestado.',
+        desc: 'Os operacionais fotografam diretamente pela aplicação. Imagens com data, hora e GPS: prova verificável do serviço prestado.',
       },
       {
         title: 'Exportação de salários para Primavera e PHC',
@@ -89,7 +89,7 @@ const content: SettoreContent = {
     ],
   },
   cta: {
-    title: 'Chega de litígios. Comece a provar.',
+    title: 'Responda a cada litígio com dados. Comece agora.',
     subtitle: 'O GeoTapp Flow e o TimeTracker dão à sua empresa de limpeza o controlo operacional e as provas de que realmente precisa.',
     primary: 'Pedir uma demonstração',
     secondary: 'Ver preços',

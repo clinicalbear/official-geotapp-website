@@ -159,7 +159,7 @@
     "report_section_title": "Der Bericht. Nicht eine Zusammenfassung. Ein Beweis.",
     "report_section_subtitle": "Jeder GeoTapp-Bericht wird automatisch aus echten Felddaten generiert.",
     "report_section_body": "GPS-Stempelungen, Fotos mit Uhrzeit, Einsatznotizen. Die Daten schließen sich bei der Erstellung, und danach rührt sie niemand mehr an. Wenn der Zweifel kommt, erklären Sie nicht, Sie zeigen, und was Sie zeigen, ist kein Dokument für den Kunden, es ist das Ende der Diskussion.",
-    "report_feature_1": "Nicht veränderbar nach Erstellung, jede Änderung ist erkennbar",
+    "report_feature_1": "Versiegelt nach Erstellung, jede Änderung ist erkennbar",
     "report_feature_2": "Prüfbar ohne Konto, von jedem, unabhängig",
     "report_feature_3": "GPS- und Fotodaten integriert und nicht trennbar",
     "report_feature_4": "Automatisch generiert, keine manuelle Erfassung",
@@ -234,7 +234,7 @@
       "title": "Sie brauchen kein Vertrauen.",
       "subtitle": "Ihr Wort kommt gar nicht erst ins Spiel. Der Kunde öffnet den Bericht und prüft ihn selbst, ohne Zugang zu GeoTapp. Stimmen die Daten mit der tatsächlichen Arbeit überein, hält der Bericht. Hat jemand das Dokument verändert, hält er nicht mehr. Ohne Berufung.",
       "features": {
-        "integrity": "<strong>Nicht veränderbare Daten:</strong> Der Bericht wird auf echten Felddaten generiert und gesperrt. Jede Änderung macht ihn ungültig, ohne Ausnahme.",
+        "integrity": "<strong>Versiegelte Daten:</strong> Der Bericht wird auf echten Felddaten generiert und gesperrt. Jede Änderung macht ihn ungültig, ohne Ausnahme.",
         "independent": "<strong>Autonome Prüfung:</strong> Jeder mit dem Bericht kann die Echtheit überprüfen, kein Konto, kein Plattformzugang."
       },
       "link": "GeoTapp Verifier entdecken"
@@ -258,7 +258,7 @@
         },
         {
           "title": "Verteidigbarer Nachweis über Zeit",
-          "desc": "Jeder Bericht ist auf echten Felddaten gesperrt und nicht veränderbar. Streit? Die Daten sind da. Von jedem verifizierbar. Immer."
+          "desc": "Jeder Bericht ist auf echten Felddaten versiegelt. Streit? Die Daten sind da. Von jedem verifizierbar. Immer."
         }
       ]
     },
@@ -274,7 +274,7 @@
       "see_all": "Alle unterstützten Sektoren anzeigen",
       "installatori": {
         "name": "Installateure",
-        "desc": "Elektriker, Installateure, Anlagentechniker. Jeder Einsatz mit GPS und Fotos dokumentiert, unveränderliche Daten, vom Kunden prüfbar.",
+        "desc": "Elektriker, Installateure, Anlagentechniker. Jeder Einsatz mit GPS und Fotos dokumentiert, Daten bei denen jede Änderung nachweisbar ist, vom Kunden prüfbar.",
         "cta": "Jeden Einsatz nachweisen"
       },
       "sicurezza": {
@@ -289,7 +289,7 @@
       },
       "elettricisti": {
         "name": "Elektriker",
-        "desc": "Elektroinstallationen, Schaltanlagen, Verkabelung. Jeder Einsatz mit GPS und Fotos dokumentiert, manipulationssichere Beweise für jeden Streitfall.",
+        "desc": "Elektroinstallationen, Schaltanlagen, Verkabelung. Jeder Einsatz mit GPS und Fotos dokumentiert, Beweise bei denen jede Manipulation erkennbar ist, für jeden Streitfall.",
         "cta": "Jeden Einsatz dokumentieren"
       },
       "idraulici": {
@@ -672,7 +672,7 @@
         "timelock-alpha": {
           "name": "GPS-Zeiterfassung",
           "short": "Ein- und Ausstempeln verknüpft mit GPS-Position und präzisem Zeitstempel. Jede Arbeitssitzung wird zu einem prüfbaren operativen Ereignis.",
-          "full": "### Zeit ist prüfbar.\n\nZeitstempel ohne Verifikation erzeugen Streitigkeiten.\n**GPS-Zeiterfassung** macht jede Arbeitssitzung zu einem zuverlässigen, verteidigbaren Datensatz.\n\n#### Geolokaliertes Ein- und Ausstempeln\n\nDer Techniker erfasst Beginn und Ende des Außeneinsatzes.\nStandort, Adresse und Zeit werden automatisch registriert.\n\n#### Unveränderliche Historie\n\nJede Sitzung ist ein prüfbarer Datensatz: Startzeit, Endzeit, Position, Dauer und zugehöriger Auftrag.\nDer Kunde fragt, wann Sie ankamen? Die Daten sind da, immer."
+          "full": "### Zeit ist prüfbar.\n\nZeitstempel ohne Verifikation erzeugen Streitigkeiten.\n**GPS-Zeiterfassung** macht jede Arbeitssitzung zu einem zuverlässigen, verteidigbaren Datensatz.\n\n#### Geolokaliertes Ein- und Ausstempeln\n\nDer Techniker erfasst Beginn und Ende des Außeneinsatzes.\nStandort, Adresse und Zeit werden automatisch registriert.\n\n#### Versiegelte Historie\n\nJede Sitzung ist ein prüfbarer Datensatz: Startzeit, Endzeit, Position, Dauer und zugehöriger Auftrag.\nDer Kunde fragt, wann Sie ankamen? Die Daten sind da, immer."
         },
         "event-horizon": {
           "name": "Schichtplanung",
@@ -848,7 +848,7 @@
       },
       {
         "title": "Verifizierbare Berichte",
-        "desc": "Wie jeder Einsatz einen Bericht mit Fotobeweis, digitaler Signatur und unveränderlichem Hash erzeugt, den Sie dem Kunden zeigen können."
+        "desc": "Wie jeder Einsatz einen Bericht mit Fotobeweis, digitaler Signatur und versiegeltem Hash erzeugt, den Sie dem Kunden zeigen können."
       },
       {
         "title": "Teamverwaltung über Flow",
@@ -903,7 +903,7 @@
     "title": "GeoTapp herunterladen",
     "subtitle": "Wählen Sie die Version, die Ihren Anforderungen entspricht.",
     "demo_report_badge": "Echtes Beispiel",
-    "demo_report_title": "Zertifizierter Einsatzbericht",
+    "demo_report_title": "Versiegelter Einsatzbericht",
     "demo_report_desc": "Laden Sie einen echten von GeoTapp generierten Bericht herunter. Er enthält verifizierten GPS, Fotobeweise, Operator-Hash-Kette und kryptografische Siegelung.",
     "demo_report_btn_download": "Beispielbericht herunterladen (.zip)",
     "demo_report_btn_verify": "Authentizität prüfen",
@@ -1058,7 +1058,7 @@
     "cta_title": "GeoTapp 14 Tage kostenlos testen",
     "cta_desc": "Vollständiger Zugang zu allen Modulen. Keine Kreditkarte, keine Verpflichtung.",
     "cta_btn": "Kostenlos testen",
-    "schema_desc": "Anleitungen und Einblicke zur versiegelte Außendienst-Nachweise, Teamverwaltung, DSGVO und Geolokalisierung.",
+    "schema_desc": "Anleitungen und Einblicke zu versiegelten Außendienst-Nachweisen, Teamverwaltung, DSGVO und Geolokalisierung.",
     "meta_title": "Blog | GeoTapp - Außendienst-Verifikation",
     "meta_desc": "Anleitungen, Einblicke und Ressourcen zu Teamverwaltung, versiegelte Außendienst-Nachweise, DSGVO und Geolokalisierung. Vom GeoTapp-Team.",
     "cat_all": "Alle",
@@ -1157,7 +1157,7 @@
     ]
   },
   "settore_layout": {
-    "pain_subtitle": "Stempelapps erfassen. Sie zertifizieren nicht. Der Unterschied ist gewaltig, und im Streitfall spürt man ihn sofort.",
+    "pain_subtitle": "Stempelapps erfassen. Sie versiegeln nicht. Der Unterschied ist gewaltig, und im Streitfall spürt man ihn sofort.",
     "before": "Vorher",
     "after": "Mit GeoTapp",
     "classic_app": "Standard-App / Tabellenkalkulation",
@@ -1169,7 +1169,7 @@
     "mockup_gps": "GPS verifiziert",
     "mockup_photos": "Fotos angehängt",
     "mockup_photos_count": "3 georeferenzierte Fotos",
-    "mockup_sealed": "Nach Abschluss nicht bearbeitbar",
+    "mockup_sealed": "Versiegelt nach Abschluss",
     "mockup_status_active": "Aktiv",
     "mockup_status_completed": "Abgeschlossen",
     "mockup_status_summary": "4 Mitarbeiter aktiv auf 6 Standorten",

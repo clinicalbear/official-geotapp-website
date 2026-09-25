@@ -41,7 +41,7 @@ const content: SettoreContent = {
     steps: [
       {
         title: "Il tecnico timbra GPS all'arrivo in sede",
-        desc: "Apre l'intervento dallo smartphone. GeoTapp registra coordinate GPS reali, timestamp e foto, tutto automatico, non modificabile.",
+        desc: "Apre l'intervento dallo smartphone. GeoTapp registra coordinate GPS reali, timestamp e foto, tutto automatico, sigillato.",
       },
       {
         title: "Le ore e l'intervento vengono registrati automaticamente",
@@ -59,14 +59,14 @@ const content: SettoreContent = {
     items: [
       {
         title: 'Presenze GPS verificate',
-        desc: "Ogni arrivo e partenza dall'impianto è certificato con GPS reale, timestamp e sede assegnata. Difendibile con il cliente e con l'ispettorato.",
+        desc: "Ogni arrivo e partenza dall'impianto è sigillato con GPS reale, timestamp e sede assegnata. Difendibile con il cliente e con l'ispettorato.",
       },
       {
         title: 'Storico manutenzione per impianto',
         desc: 'Ogni intervento è collegato alla sede o all\'impianto. Lo storico completo è consultabile e scaricabile, per te e per il cliente.',
       },
       {
-        title: 'Report automatici e non alterabili',
+        title: 'Report automatici e sigillati',
         desc: 'A fine intervento il sistema genera un report sigillato: ore, GPS, foto e firma digitale. Il cliente può verificarlo da solo.',
       },
       {

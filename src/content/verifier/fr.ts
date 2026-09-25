@@ -24,7 +24,7 @@ const fr: VerifierCopy = {
     "Organise les chantiers, les équipes et génère des rapports structurés avec identifiant cryptographique.",
   ecosystem_flow_link: "Découvrir Flow",
   ecosystem_verifier_desc:
-    "Vérifie l'intégrité de chaque rapport. Compare le document avec les données d'origine et certifie l'authenticité.",
+    "Vérifie l'intégrité de chaque rapport. Compare le document avec les données d'origine et vérifie l'authenticité.",
   problem_badge: 'Le vrai problème',
   problem_title: 'Un rapport invérifiable est un rapport contestable.',
   problem_items: [
@@ -44,7 +44,7 @@ const fr: VerifierCopy = {
   what_badge: "Qu'est-ce que GeoTapp Verifier",
   what_title: "Vérification indépendante des rapports d'intervention.",
   what_desc:
-    "GeoTapp Verifier est le système qui permet de vérifier l'authenticité et l'intégrité des rapports générés par GeoTapp Flow et TimeTracker. Il compare le document avec les données opérationnelles d'origine, horodatages GPS, localisations, preuves photographiques, et certifie que le rapport n'a pas été altéré.",
+    "GeoTapp Verifier est le système qui permet de vérifier l'authenticité et l'intégrité des rapports générés par GeoTapp Flow et TimeTracker. Il compare le document avec les données opérationnelles d'origine, horodatages GPS, localisations, preuves photographiques, et vérifie que le rapport n'a pas été altéré.",
   how_badge: 'Comment ça fonctionne',
   how_title: 'Trois étapes. Un rapport vérifié.',
   how_steps: [
@@ -61,7 +61,7 @@ const fr: VerifierCopy = {
     {
       num: '03',
       title: "Verifier vérifie l'intégrité",
-      desc: "N'importe qui peut vérifier le rapport avec GeoTapp Verifier. Le système compare le document avec les données opérationnelles enregistrées et certifie si le rapport est intact et authentique.",
+      desc: "N'importe qui peut vérifier le rapport avec GeoTapp Verifier. Le système compare le document avec les données opérationnelles enregistrées et vérifie si le rapport est intact et authentique.",
     },
   ],
   features_badge: 'Ce qui est vérifié',
@@ -77,7 +77,7 @@ const fr: VerifierCopy = {
     },
     {
       title: 'Intégrité du document',
-      desc: "Certifie que le document n'a pas été modifié après sa génération. Toute altération est détectée.",
+      desc: "Vérifie que le document n'a pas été modifié après sa génération. Toute altération est détectée.",
     },
     {
       title: 'Authenticité des données',
@@ -104,7 +104,7 @@ const fr: VerifierCopy = {
   ecosystem_badge: 'Écosystème GeoTapp',
   ecosystem_title: 'Verifier fonctionne avec Flow et TimeTracker.',
   ecosystem_desc:
-    "GeoTapp Verifier n'est pas un outil autonome. C'est la dernière étape d'un cycle opérationnel intégré : les données sont collectées sur le terrain avec TimeTracker, organisées dans Flow, puis certifiées par Verifier.",
+    "GeoTapp Verifier n'est pas un outil autonome. C'est la dernière étape d'un cycle opérationnel intégré : les données sont collectées sur le terrain avec TimeTracker, organisées dans Flow, puis vérifiées par Verifier.",
   cta_title: 'Commencez à produire des rapports vérifiables.',
   cta_subtitle:
     "Découvrez comment GeoTapp Verifier peut aider votre entreprise à réduire les litiges et à renforcer sa crédibilité auprès des clients.",

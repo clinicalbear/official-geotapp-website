@@ -9,7 +9,7 @@ const content: SettoreContent = {
     badge: 'Software de Gestión para Empresas de Seguridad Privada y Vigilancia',
     h1_line1: 'Presencias verificadas y registros de turno',
     h1_line2: 'para vigilantes de seguridad y seguridad privada',
-    subtitle: 'GeoTapp Flow y TimeTracker documentan la presencia de los vigilantes en los puestos asignados con GPS verificado y marcas de tiempo inmutables. Seguimiento de habilitaciones conforme a la Ley 5/2014, relevo digital de turno e informes de incidentes geolocalizados, todo en una sola plataforma.',
+    subtitle: 'GeoTapp Flow y TimeTracker documentan la presencia de los vigilantes en los puestos asignados con GPS verificado y marcas de tiempo selladas. Seguimiento de habilitaciones conforme a la Ley 5/2014, relevo digital de turno e informes de incidentes geolocalizados, todo en una sola plataforma.',
     cta_primary: 'Solicitar una Demo',
     cta_note: 'Sin compromiso. Respuesta en 12 horas laborables.',
   },
@@ -18,11 +18,11 @@ const content: SettoreContent = {
     items: [
       {
         title: 'Demostrar la presencia en los puestos en el momento contractual',
-        desc: 'Un cliente disputa si el vigilante estaba en su puesto a una hora concreta. Sin GPS verificado ni marcas de tiempo inmutables, el conflicto queda abierto y la conformidad contractual es imposible de acreditar.',
+        desc: 'Un cliente disputa si el vigilante estaba en su puesto a una hora concreta. Sin GPS verificado ni marcas de tiempo selladas, el conflicto queda abierto y la conformidad contractual es imposible de acreditar.',
       },
       {
         title: 'Partes de incidencia sin prueba de ubicación',
-        desc: 'Un parte de incidencia escrito a mano tiene poco valor probatorio sin una posición GPS certificada y una marca de tiempo inalterable. Los registros en papel son demasiado fáciles de impugnar.',
+        desc: 'Un parte de incidencia escrito a mano tiene poco valor probatorio sin una posición GPS sellada y una marca de tiempo sellada. Los registros en papel son demasiado fáciles de impugnar.',
       },
       {
         title: 'Relevo de turno todavía en papel',
@@ -36,7 +36,7 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'El vigilante ficha en el puesto asignado',
-        desc: 'GeoTapp TimeTracker registra entrada, salida, posición GPS y fotos con marcas de tiempo inmutables. Cada ronda queda registrada automáticamente desde el smartphone del vigilante.',
+        desc: 'GeoTapp TimeTracker registra entrada, salida, posición GPS y fotos con marcas de tiempo selladas. Cada ronda queda registrada automáticamente desde el smartphone del vigilante.',
       },
       {
         title: 'El responsable ve todos los puestos en tiempo real',
@@ -66,7 +66,7 @@ const content: SettoreContent = {
     ],
   },
   testimonial: {
-    quote: 'Con GeoTapp hemos eliminado las disputas sobre la cobertura de puestos. Los clientes reciben el registro de presencia con sello GPS y no hay nada que discutir.',
+    quote: 'Con GeoTapp respondemos a cada disputa sobre la cobertura de puestos con datos, no con explicaciones. Los clientes reciben el registro de presencia con sello GPS y lo verifican ellos mismos.',
     author: 'Carlos M.',
     role: 'Director de Operaciones, empresa de seguridad privada',
   },
@@ -80,7 +80,7 @@ const content: SettoreContent = {
       },
       {
         q: '¿Cómo ayuda GeoTapp a documentar los partes de incidencia?',
-        a: 'TimeTracker vincula cada incidente a una posición GPS sellada y una marca de tiempo inalterable. El parte de incidencia generado incluye coordenadas, hora y fotografías, haciéndolo defendible en procedimientos legales y contractuales.',
+        a: 'TimeTracker vincula cada incidente a una posición GPS sellada y una marca de tiempo sellada. El parte de incidencia generado incluye coordenadas, hora y fotografías, haciéndolo defendible en procedimientos legales y contractuales.',
       },
       {
         q: '¿GeoTapp soporta el relevo digital de turno entre vigilantes?',
@@ -88,12 +88,12 @@ const content: SettoreContent = {
       },
       {
         q: '¿Sirve GeoTapp como software para empresas de vigilancia y seguridad privada?',
-        a: 'Sí. GeoTapp es el software de gestión que usan las empresas de seguridad privada y de vigilancia para verificar la presencia de los vigilantes en cada puesto con GPS, controlar las habilitaciones TIP conforme a la Ley 5/2014 y entregar al cliente informes de presencia imposibles de impugnar.',
+        a: 'Sí. GeoTapp es el software de gestión que usan las empresas de seguridad privada y de vigilancia para verificar la presencia de los vigilantes en cada puesto con GPS, controlar las habilitaciones TIP conforme a la Ley 5/2014 y entregar al cliente informes de presencia que puede verificar por sí mismo.',
       },
     ],
   },
   cta: {
-    title: 'Fin a las disputas sobre la cobertura de puestos.',
+    title: 'Responde a cada disputa sobre la cobertura de puestos con datos.',
     subtitle: 'GeoTapp Flow y TimeTracker dan a tu empresa de seguridad las pruebas verificables que clientes y organismos reguladores exigen.',
     primary: 'Solicitar una Demo',
     secondary: 'Ver Precios',

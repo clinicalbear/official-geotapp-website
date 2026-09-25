@@ -15,7 +15,7 @@ const content: SettoreContent = {
     badge: 'Software voor schoonmaakbedrijven, facilitaire diensten en gebouwbeheer',
     h1_line1: 'Software voor schoonmaakbedrijven:',
     h1_line2: 'dienstroosters, fotobewijs en gecontroleerde uren, op elk object',
-    subtitle: 'GeoTapp verbindt Flow + TimeTracker voor teams verspreid over meerdere gebouwen en verdiepingen. Uw medewerkers klokken in via GPS-geverifieerde smartphone; het kantoor ziet wie wat, waar en wanneer heeft schoongemaakt, met bijgevoegd fotobewijs. Geen disputen meer, volledige naleving van de CAO Schoonmaak.',
+    subtitle: 'GeoTapp verbindt Flow + TimeTracker voor teams verspreid over meerdere gebouwen en verdiepingen. Uw medewerkers klokken in via GPS-geverifieerde smartphone; het kantoor ziet wie wat, waar en wanneer heeft schoongemaakt, met bijgevoegd fotobewijs. Met de data klaar voor elk dispuut, volledige naleving van de CAO Schoonmaak.',
     cta_primary: 'Probeer het op een echt contract',
     cta_note: '14 dagen, tot 50 medewerkers in het veld, zonder creditcard.',
   },
@@ -63,7 +63,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Voor-en-na fotobewijs',
-        desc: 'Medewerkers fotograferen rechtstreeks vanuit de app. Afbeeldingen met datum, tijd en GPS: onweerlegbaar bewijs van de geleverde dienst.',
+        desc: 'Medewerkers fotograferen rechtstreeks vanuit de app. Afbeeldingen met datum, tijd en GPS: verifieerbaar bewijs van de geleverde dienst.',
       },
       {
         title: 'Salarisexport voor AFAS en NMBRS',
@@ -102,7 +102,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Is GeoTapp schoonmaak software met fotobewijs?',
-        a: 'Ja. Bij elke dienst maakt de medewerker foto\'s van de gereinigde ruimtes rechtstreeks in de app. Elke foto krijgt datum, tijd en GPS en wordt aan het servicerapport gekoppeld. Zo levert de schoonmaak software onweerlegbaar bewijs richting de opdrachtgever.',
+        a: 'Ja. Bij elke dienst maakt de medewerker foto\'s van de gereinigde ruimtes rechtstreeks in de app. Elke foto krijgt datum, tijd en GPS en wordt aan het servicerapport gekoppeld. Zo levert de schoonmaak software verifieerbaar bewijs richting de opdrachtgever.',
       },
       {
         q: 'Werkt de software voor de schoonmaakbranche met AFAS en NMBRS?',
@@ -119,7 +119,7 @@ const content: SettoreContent = {
     ],
   },
   cta: {
-    title: 'Stop met discussies. Begin met bewijzen.',
+    title: 'Beantwoord elke discussie met bewijs. Begin nu.',
     subtitle: 'GeoTapp Flow en TimeTracker geven uw schoonmaakbedrijf de operationele controle en het bewijs dat u echt nodig heeft.',
     primary: 'Demo aanvragen',
     secondary: 'Prijzen bekijken',

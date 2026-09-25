@@ -41,7 +41,7 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'Teknikern stämplar GPS vid ankomst',
-        desc: 'Öppnar uppdraget från sin smartphone. GeoTapp registrerar äkta GPS-koordinater, tidsstämpel och foton, helautomatiskt, manipuleringssäkert.',
+        desc: 'Öppnar uppdraget från sin smartphone. GeoTapp registrerar äkta GPS-koordinater, tidsstämpel och foton, helautomatiskt, förseglat.',
       },
       {
         title: 'Timmar och uppdrag registreras automatiskt',
@@ -59,14 +59,14 @@ const content: SettoreContent = {
     items: [
       {
         title: 'GPS-verifierad närvaro',
-        desc: 'Varje ankomst och avfärd är certifierad med äkta GPS, tidsstämpel och tilldelad plats. Försvarbart gentemot kunder och inspektörer.',
+        desc: 'Varje ankomst och avfärd förseglas med äkta GPS, tidsstämpel och tilldelad plats. Försvarbart gentemot kunder och inspektörer.',
       },
       {
         title: 'Underhållshistorik per anläggning',
         desc: 'Varje uppdrag är kopplat till platsen eller anläggningen. Komplett historik är sökbar och nedladdningsbar.',
       },
       {
-        title: 'Automatiska manipuleringssäkra rapporter',
+        title: 'Automatiska förseglade rapporter',
         desc: 'Efter varje uppdrag genererar systemet en förseglad rapport: timmar, GPS, foton och digital signatur.',
       },
       {

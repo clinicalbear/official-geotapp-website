@@ -92,7 +92,7 @@ const content: SettoreContent = {
       },
       {
         q: '¿GeoTapp ayuda a resolver disputas con clientes?',
-        a: 'Es el uso principal: GPS, fotos e informes sellados resuelven cualquier disputa infundada en minutos.',
+        a: 'Es el uso principal: GPS, fotos e informes sellados te dan los datos para responder a una disputa infundada en minutos.',
       },
       {
         q: '¿GeoTapp cumple con el RGPD para geolocalización?',

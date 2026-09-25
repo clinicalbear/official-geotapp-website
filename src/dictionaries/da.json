@@ -131,7 +131,7 @@
     "trust_gdpr": "Ingen løbende sporing",
     "trust_gdpr_desc": "Kun tidsstempler ved ind- og udtjekning",
     "trust_gps": "GPS-bevis",
-    "trust_gps_desc": "Hvert besøg certificeret med placering og tidsstempel",
+    "trust_gps_desc": "Hvert besøg forseglet med placering og tidsstempel",
     "trust_offline": "Offline-kontrol",
     "trust_offline_desc": "Én fil, uden konto og uden netværk",
     "trust_eu_data": "Data i Europa",
@@ -159,7 +159,7 @@
     "report_section_title": "Rapporten. Ikke et resumé. Et bevis.",
     "report_section_subtitle": "Hver GeoTapp-rapport genereres automatisk fra reelle feltdata.",
     "report_section_body": "GPS-stemplinger, billeder med tidspunktet på, noter fra marken. Data lukkes ved genereringen, og derefter rører ingen dem. Når tvivlen kommer, forklarer du ikke, du viser, og det du viser er ikke et dokument til kunden, det er enden på diskussionen.",
-    "report_feature_1": "Ikke redigerbar efter generering, enhver ændring opdages",
+    "report_feature_1": "Forseglet efter generering, enhver ændring opdages",
     "report_feature_2": "Verificerbar uden konto, af hvem som helst, selvstændigt",
     "report_feature_3": "GPS- og fotodata integreret og uadskillelige",
     "report_feature_4": "Automatisk genereret, ingen manuel udfyldelse",
@@ -234,7 +234,7 @@
       "title": "Du behøver ikke, at de stoler på dig.",
       "subtitle": "Dit ord kommer slet ikke ind i diskussionen. Kunden åbner rapporten og tjekker selv, uden at logge ind i GeoTapp. Passer data med det virkelige arbejde, holder rapporten. Har nogen ændret dokumentet, holder den ikke længere. Uden appel.",
       "features": {
-        "integrity": "<strong>Uforanderlige data:</strong> Rapporten genereres på reelle feltdata og låses. Enhver ændring gør den ugyldig, uden undtagelse.",
+        "integrity": "<strong>Forseglede data:</strong> Rapporten genereres på reelle feltdata og låses. Enhver ændring gør den ugyldig, uden undtagelse.",
         "independent": "<strong>Autonom verifikation:</strong> Enhver med rapporten kan verificere dens ægthed, ingen konto, ingen platformsadgang."
       },
       "link": "Udforsk GeoTapp Verifier"
@@ -258,7 +258,7 @@
         },
         {
           "title": "Forsvarligt bevis over tid",
-          "desc": "Hver rapport låses på reelle feltdata, ikke redigerbar efter generering. Tvist? Dataene er der. Verificerbare af enhver. Altid."
+          "desc": "Hver rapport låses på reelle feltdata, forseglet efter generering. Tvist? Dataene er der. Verificerbare af enhver. Altid."
         }
       ]
     },
@@ -274,7 +274,7 @@
       "see_all": "Se alle understøttede sektorer",
       "installatori": {
         "name": "Installatører",
-        "desc": "Elektrikere, VVS-installatører, Teknikere. Hvert job dokumenteret med GPS og billeder, uændrede data, verificerbare af kunden.",
+        "desc": "Elektrikere, VVS-installatører, Teknikere. Hvert job dokumenteret med GPS og billeder, forseglede data, verificerbare af kunden.",
         "cta": "Dokumentér hvert job"
       },
       "sicurezza": {
@@ -289,7 +289,7 @@
       },
       "elettricisti": {
         "name": "Elektrikere",
-        "desc": "El-installationer, tavler, kabler. Hvert arbejde dokumenteret med GPS og billeder, manipulationssikkert bevis til at lukke enhver tvist.",
+        "desc": "El-installationer, tavler, kabler. Hvert arbejde dokumenteret med GPS og billeder, bevis hvor enhver manipulation kan opdages, til at lukke enhver tvist.",
         "cta": "Dokumentér hvert arbejde"
       },
       "idraulici": {
@@ -672,7 +672,7 @@
         "timelock-alpha": {
           "name": "GPS-tidsregistrering",
           "short": "Ind- og udstempling knyttet til GPS-position og præcist tidsstempel. Hvert arbejdsskift bliver en verificerbar operativ hændelse.",
-          "full": "### Tid er verificerbar.\n\nTidsstempler uden verifikation skaber tvister.\n**GPS-tidsregistrering** gør hvert arbejdsskift til et pålideligt, forsvarligt register.\n\n#### Geolokaliseret ind- og udstempling\n\nTeknikeren registrerer ankomst til og afgang fra feltet.\nPosition, adresse og tid registreres automatisk.\n\n#### Uforanderlig historik\n\nHvert skift er et verificerbart register: starttidspunkt, sluttidspunkt, position, varighed og tilknyttet arbejdsordre.\nKunden spørger, hvornår du ankom? Dataene er der, altid."
+          "full": "### Tid er verificerbar.\n\nTidsstempler uden verifikation skaber tvister.\n**GPS-tidsregistrering** gør hvert arbejdsskift til et pålideligt, forsvarligt register.\n\n#### Geolokaliseret ind- og udstempling\n\nTeknikeren registrerer ankomst til og afgang fra feltet.\nPosition, adresse og tid registreres automatisk.\n\n#### Forseglet historik\n\nHvert skift er et verificerbart register: starttidspunkt, sluttidspunkt, position, varighed og tilknyttet arbejdsordre.\nKunden spørger, hvornår du ankom? Dataene er der, altid."
         },
         "event-horizon": {
           "name": "Vagtplanlægning",
@@ -764,7 +764,7 @@
       },
       {
         "title": "Verificerbare rapporter",
-        "desc": "Hvordan hvert job genererer en rapport med fotodokumentation, digital signatur og uforanderlig hash, som du kan vise kunden."
+        "desc": "Hvordan hvert job genererer en rapport med fotodokumentation, digital signatur og forseglet hash, som du kan vise kunden."
       },
       {
         "title": "Teamstyring via Flow",
@@ -974,7 +974,7 @@
     "cta_title": "Hold dig opdateret",
     "cta_desc": "Ingen spam, kun værdifulde opdateringer om produktet og branchen.",
     "cta_btn": "Kontakt os",
-    "schema_desc": "Vejledninger og indsigt om certificering af feltarbejde, teamledelse, GDPR og geolokalisering.",
+    "schema_desc": "Vejledninger og indsigt om verificerbart bevis for feltarbejde, teamledelse, GDPR og geolokalisering.",
     "meta_title": "Blog | GeoTapp - Verificering af feltarbejde",
     "meta_desc": "Vejledninger, indsigt og ressourcer om teamledelse, forseglet bevis af interventioner, GDPR og geolokalisering. Fra GeoTapp-teamet.",
     "cat_all": "Alle",
@@ -1157,7 +1157,7 @@
     ]
   },
   "settore_layout": {
-    "pain_subtitle": "Stempel-apps registrerer. De certificerer ikke. Forskellen er enorm, og når tvisten kommer, mærker du den.",
+    "pain_subtitle": "Stempel-apps registrerer. De forsegler ikke. Forskellen er enorm, og når tvisten kommer, mærker du den.",
     "before": "Før",
     "after": "Med GeoTapp",
     "classic_app": "Standard app / Regneark",
@@ -1169,7 +1169,7 @@
     "mockup_gps": "GPS verificeret",
     "mockup_photos": "Fotos vedhæftet",
     "mockup_photos_count": "3 geolokaliserede fotos",
-    "mockup_sealed": "Ikke redigerbar efter lukning",
+    "mockup_sealed": "Forseglet efter lukning",
     "mockup_status_active": "Aktiv",
     "mockup_status_completed": "Afsluttet",
     "mockup_status_summary": "4 medarbejdere aktive på 6 lokationer",

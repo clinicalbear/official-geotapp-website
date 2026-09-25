@@ -46,46 +46,46 @@ export const HOME_TITLE_KEYWORD: Record<string, string> = {
 export const HOME_META: Record<string, { title: string; description: string }> = {
   it: {
     title: 'Software GPS presenze: prova ogni intervento | GeoTapp',
-    description: 'Cliente contesta il servizio? GeoTapp registra GPS, foto, orario e rapportino non modificabile. Prova ogni intervento e fatturi senza dover discutere.',
+    description: 'Cliente contesta il servizio? GeoTapp registra GPS, foto, orario e rapportino con ogni modifica rilevabile. Prova ogni intervento e fatturi senza dover discutere.',
   },
   en: {
     title: 'GPS field service software: prove every visit | GeoTapp',
-    description: 'Client claims the job was not done? GeoTapp logs GPS, timestamps, photos and tamper-proof reports. Prove every visit and get paid without argument.',
+    description: 'Client claims the job was not done? GeoTapp logs GPS, timestamps, photos and tamper-evident reports. Prove every visit and get paid without argument.',
   },
   de: {
     title: 'GPS-Software Außendienst: Einsätze belegen | GeoTapp',
-    description: 'Kunde bestreitet den Einsatz? GeoTapp erfasst GPS, Uhrzeit, Fotos und manipulationssichere Berichte. Arbeit belegen und ohne Diskussion bezahlt werden.',
+    description: 'Kunde bestreitet den Einsatz? GeoTapp erfasst GPS, Uhrzeit, Fotos und Berichte mit Manipulationsnachweis. Arbeit belegen und ohne Diskussion bezahlt werden.',
   },
   fr: {
     title: 'Logiciel GPS terrain : prouvez vos interventions | GeoTapp',
-    description: 'Client conteste ? GeoTapp enregistre GPS, heure, photos et rapport non modifiable. Prouvez le travail effectué et soyez payé sans discussion.',
+    description: 'Client conteste ? GeoTapp enregistre GPS, heure, photos et rapport aux modifications traçables. Prouvez le travail effectué et soyez payé sans discussion.',
   },
   es: {
     title: 'Software GPS operarios: prueba cada trabajo | GeoTapp',
-    description: '¿Cliente reclama? GeoTapp registra GPS, hora, fotos e informe no alterable. Demuestra el trabajo hecho y cobra sin discusiones.',
+    description: '¿Cliente reclama? GeoTapp registra GPS, hora, fotos e informe con alteraciones detectables. Demuestra el trabajo hecho y cobra sin discusiones.',
   },
   pt: {
     title: 'Software GPS campo: prove cada serviço | GeoTapp',
-    description: 'Cliente contesta? GeoTapp registra GPS, hora, fotos e relatório não alterável. Prove o serviço feito e receba sem discussões.',
+    description: 'Cliente contesta? GeoTapp registra GPS, hora, fotos e relatório com alterações detetáveis. Prove o serviço feito e receba sem discussões.',
   },
   nl: {
     title: 'GPS-software buitendienst: bewijs elk bezoek | GeoTapp',
-    description: 'Betwist de klant je werk? GeoTapp registreert GPS, tijd, foto\'s en een niet-wijzigbaar rapport. Bewijs wat gedaan is en word betaald zonder discussie.',
+    description: 'Betwist de klant je werk? GeoTapp registreert GPS, tijd, foto\'s en een rapport met detecteerbare wijzigingen. Bewijs wat gedaan is en word betaald zonder discussie.',
   },
   ru: {
     title: 'GPS-программа выезда: докажите работы | GeoTapp',
-    description: 'Клиент оспаривает работу? GeoTapp фиксирует GPS, время, фото и неизменяемый отчёт. Докажите выполненное и получите оплату без споров.',
+    description: 'Клиент оспаривает работу? GeoTapp фиксирует GPS, время, фото и отчёт с обнаруживаемыми изменениями. Докажите выполненное и получите оплату без споров.',
   },
   da: {
     title: 'GPS-software feltservice: bevis hvert besøg | GeoTapp',
-    description: 'Kunden bestrider arbejdet? GeoTapp registrerer GPS, tid, fotos og en ikke-redigerbar rapport. Bevis opgaven og få betaling uden diskussion.',
+    description: 'Kunden bestrider arbejdet? GeoTapp registrerer GPS, tid, fotos og en rapport med sporbare ændringer. Bevis opgaven og få betaling uden diskussion.',
   },
   sv: {
     title: 'GPS-mjukvara fältservice: bevisa varje jobb | GeoTapp',
-    description: 'Kunden ifrågasätter jobbet? GeoTapp loggar GPS, tid, foton och en ej ändringsbar rapport. Bevisa arbetet och få betalt utan diskussion.',
+    description: 'Kunden ifrågasätter jobbet? GeoTapp loggar GPS, tid, foton och en rapport med spårbara ändringar. Bevisa arbetet och få betalt utan diskussion.',
   },
   nb: {
     title: 'GPS-programvare feltservice: bevis hver jobb | GeoTapp',
-    description: 'Kunden bestrider jobben? GeoTapp registrerer GPS, tid, bilder og en ikke-endringsbar rapport. Bevis arbeidet og få betalt uten diskusjon.',
+    description: 'Kunden bestrider jobben? GeoTapp registrerer GPS, tid, bilder og en rapport med sporbare endringer. Bevis arbeidet og få betalt uten diskusjon.',
   },
 };

@@ -9,7 +9,7 @@ const content: SettoreContent = {
     badge: 'Software til Rengøringsvirksomheder, Facility Management og Serviceentreprenører',
     h1_line1: 'Software til rengøringsvirksomheder:',
     h1_line2: 'vagter, fotodokumentation og verificerede timer, på hvert objekt',
-    subtitle: 'GeoTapp forbinder Flow + TimeTracker for teams fordelt på flere bygninger og etager. Dine rengøringsassistenter stempler ind med GPS-verificeret smartphone; kontoret ser, hvem der rengorde hvad, hvor og hvornår, med fotodokumentation vedlagt. Ingen tvister mere, fuld overholdelse af Rengøringsoverenskomsten.',
+    subtitle: 'GeoTapp forbinder Flow + TimeTracker for teams fordelt på flere bygninger og etager. Dine rengøringsassistenter stempler ind med GPS-verificeret smartphone; kontoret ser, hvem der rengorde hvad, hvor og hvornår, med fotodokumentation vedlagt. Data klar til enhver tvist, fuld overholdelse af Rengøringsoverenskomsten.',
     cta_primary: 'Prøv det på en rigtig kontrakt',
     cta_note: '14 dage, op til 50 medarbejdere i marken, uden kreditkort.',
   },
@@ -57,7 +57,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Fotodokumentation før og efter',
-        desc: 'Rengøringsassistenterne fotograferer direkte fra appen. Billeder med dato, klokkeslæt og GPS: uomtvisteligt bevis for den leverede ydelse.',
+        desc: 'Rengøringsassistenterne fotograferer direkte fra appen. Billeder med dato, klokkeslæt og GPS: verificerbar dokumentation for den leverede ydelse.',
       },
       {
         title: 'Løneksport til Uniconta og Danløn',
@@ -89,7 +89,7 @@ const content: SettoreContent = {
     ],
   },
   cta: {
-    title: 'Stop med tvister. Begynd at bevise.',
+    title: 'Svar på enhver tvist med data. Begynd nu.',
     subtitle: 'GeoTapp Flow og TimeTracker giver din rengøringsvirksomhed den driftsmæssige kontrol og de beviser, du virkelig har brug for.',
     primary: 'Anmod om en demo',
     secondary: 'Se priser',

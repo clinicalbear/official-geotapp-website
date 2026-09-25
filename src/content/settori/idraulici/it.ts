@@ -3,7 +3,7 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'App per Idraulici e Termoidraulici | GeoTapp Rapportini GPS',
-    description: 'App per idraulici e termoidraulici: rapportini GPS verificati, foto degli impianti e report non alterabili. Chiudi le contestazioni. Prova gratis.',
+    description: 'App per idraulici e termoidraulici: rapportini GPS verificati, foto degli impianti e report dove ogni modifica è rilevabile. Chiudi le contestazioni. Prova gratis.',
   },
   hero: {
     badge: 'App per Idraulici, Termoidraulici e Impiantisti',
@@ -44,12 +44,12 @@ const content: SettoreContent = {
       },
       {
         title: 'Il rapportino è la tua prova',
-        desc: 'A fine intervento il sistema genera un report sigillato: orario GPS, foto impianto, materiali usati, note tecniche. Non alterabile. Il cliente può verificarlo in autonomia.',
+        desc: 'A fine intervento il sistema genera un report sigillato: orario GPS, foto impianto, materiali usati, note tecniche. Ogni modifica è rilevabile. Il cliente può verificarlo in autonomia.',
       },
     ],
   },
   differenza: {
-    title: 'App per idraulici: registrazione o certificazione?',
+    title: 'App per idraulici: registrazione o prova verificabile?',
     subtitle: 'La maggior parte delle app registra l\'orario. GeoTapp produce prove verificabili.',
     rows: [
       {
@@ -60,7 +60,7 @@ const content: SettoreContent = {
       {
         label: 'In caso di contestazione',
         competitor: 'Dato non difendibile',
-        geotapp: 'Report sigillato, non alterabile',
+        geotapp: 'Report sigillato, ogni modifica rilevabile',
       },
       {
         label: 'Documentazione intervento',
@@ -108,7 +108,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Foto impianti idraulici sigillate',
-        desc: 'Il tecnico scatta foto prima e dopo l\'intervento. Ogni immagine è collegata a GPS e timestamp, non alterabile dopo la generazione.',
+        desc: 'Il tecnico scatta foto prima e dopo l\'intervento. Ogni immagine è collegata a GPS e timestamp: ogni modifica successiva è rilevabile.',
       },
       {
         title: 'Rapportini digitali automatici',
@@ -134,7 +134,7 @@ const content: SettoreContent = {
     cta: 'Inizia subito gratuitamente!',
   },
   trust: {
-    title: 'I nostri report non si possono alterare. Non da te. Non da noi.',
+    title: 'I nostri report segnalano ogni modifica. Non da te. Non da noi.',
     body: 'I report GeoTapp sono generati dal sistema nel momento dell\'intervento. Non esiste un pannello per "correggere" un orario o spostare una foto. Il dato è quello, firmato digitalmente, con GPS reale.',
     badge: 'Verificabile da chiunque, senza accesso al tuo account',
   },
@@ -153,7 +153,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Posso usare GeoTapp per documentare interventi idraulici e termoidraulici?',
-        a: 'Sì. Il tecnico scatta foto prima e dopo l\'intervento dall\'app. Ogni immagine è collegata a GPS, timestamp e commessa, inclusa nel rapportino non alterabile.',
+        a: 'Sì. Il tecnico scatta foto prima e dopo l\'intervento dall\'app. Ogni immagine è collegata a GPS, timestamp e commessa, inclusa in un rapportino dove ogni modifica è rilevabile.',
       },
       {
         q: 'GeoTapp gestisce sia interventi d\'emergenza che manutenzione programmata?',

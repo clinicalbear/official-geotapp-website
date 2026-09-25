@@ -24,7 +24,7 @@ const sv: VerifierCopy = {
     'Organiserar uppdrag, team och genererar strukturerade rapporter med kryptografisk identifierare.',
   ecosystem_flow_link: 'Utforska Flow',
   ecosystem_verifier_desc:
-    'Verifierar integriteten hos varje rapport. Jämför dokumentet med originaldata och certifierar äkthet.',
+    'Verifierar integriteten hos varje rapport. Jämför dokumentet med originaldata och verifierar äktheten.',
   problem_badge: 'Det verkliga problemet',
   problem_title: 'En overifierbar rapport är en bestridbar rapport.',
   problem_items: [
@@ -44,7 +44,7 @@ const sv: VerifierCopy = {
   what_badge: 'Vad är GeoTapp Verifier',
   what_title: 'Oberoende verifiering av interventionsrapporter.',
   what_desc:
-    'GeoTapp Verifier är systemet som gör det möjligt att verifiera äktheten och integriteten hos rapporter genererade av GeoTapp Flow och TimeTracker. Det jämför dokumentet med den ursprungliga operativa datan - GPS-tidsstämplar, platser, fotodokumentation, och certifierar att rapporten inte har ändrats.',
+    'GeoTapp Verifier är systemet som gör det möjligt att verifiera äktheten och integriteten hos rapporter genererade av GeoTapp Flow och TimeTracker. Det jämför dokumentet med den ursprungliga operativa datan - GPS-tidsstämplar, platser, fotodokumentation, och verifierar att rapporten inte har ändrats.',
   how_badge: 'Hur det fungerar',
   how_title: 'Tre steg. En verifierad rapport.',
   how_steps: [
@@ -77,7 +77,7 @@ const sv: VerifierCopy = {
     },
     {
       title: 'Dokumentintegritet',
-      desc: 'Certifierar att dokumentet inte har ändrats efter generering. Varje ändring upptäcks.',
+      desc: 'Verifierar att dokumentet inte har ändrats efter generering. Varje ändring upptäcks.',
     },
     {
       title: 'Dataäkthet',

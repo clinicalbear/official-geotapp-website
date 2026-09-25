@@ -43,7 +43,7 @@ Timestamps without verification generate disputes.
 The technician records entry and exit from the field.
 Location, address and time are registered automatically.
 
-#### Immutable History
+#### Sealed History
 
 Every session is a verifiable record: start time, end time, position, duration and associated job.
 The client asks when you arrived? The data is there, always.
