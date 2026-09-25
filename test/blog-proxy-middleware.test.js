@@ -23,7 +23,9 @@ test('blog proxy middleware allows wp-admin/wp-login and forwards proxy headers'
 
   assert.match(middleware, /x-forwarded-host/i);
   assert.match(middleware, /x-forwarded-proto/i);
-  assert.match(middleware, /x-forwarded-prefix/i);
+  // x-forwarded-prefix non si passa piu': il blog e' servito da Next e /blog/wp-admin
+  // sta dietro Cloudflare Access (verificato il 25/09/2026: 302 al login Access,
+  // /blog/wp-login.php risponde 404 per l'hardening del blog).
 });
 
 test('blog proxy branch is evaluated before public file bypass', () => {
