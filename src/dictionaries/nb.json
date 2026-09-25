@@ -1472,5 +1472,8 @@
     "segnala": "Møter du en barriere på dette nettstedet, skriv til info@geotapp.com og oppgi siden og hva du ikke fikk til. Vi svarer innen tretti dager. Er svaret ikke tilfredsstillende, kan du henvende deg til kompetent tilsynsmyndighet i landet ditt.",
     "data_t": "Dato",
     "data": "Erklæring utarbeidet 23. september 2026, på grunnlag av vurderingen samme dato."
+  },
+  "contentDates": {
+    "updatedOn": "Oppdatert den"
   }
 }

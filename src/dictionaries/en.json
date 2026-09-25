@@ -1472,5 +1472,8 @@
     "segnala": "If you encounter a barrier on this site, write to info@geotapp.com stating the page and what you were unable to do. We reply within thirty days. If the reply is not satisfactory, you may contact the competent enforcement authority in your country.",
     "data_t": "Date",
     "data": "Statement written on 23 September 2026, based on the assessment of the same date."
+  },
+  "contentDates": {
+    "updatedOn": "Updated on"
   }
 }

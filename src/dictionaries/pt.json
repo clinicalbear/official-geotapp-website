@@ -1472,5 +1472,8 @@
     "segnala": "Se encontrar uma barreira neste sítio, escreva para info@geotapp.com indicando a página e o que não conseguiu fazer. Respondemos em trinta dias. Se a resposta não for satisfatória, pode dirigir-se à autoridade de fiscalização competente do seu país.",
     "data_t": "Data",
     "data": "Declaração redigida em 23 de setembro de 2026, com base na avaliação da mesma data."
+  },
+  "contentDates": {
+    "updatedOn": "Atualizado em"
   }
 }

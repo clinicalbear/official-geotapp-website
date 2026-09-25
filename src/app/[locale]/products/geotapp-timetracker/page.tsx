@@ -6,6 +6,7 @@ import AppPage from '../../../products/geotapp-timetracker/page';
 import BlogHighlights from '@/components/BlogHighlights';
 import SettoriLinks from '@/components/SettoriLinks';
 import FaqFromSchema from '@/components/FaqFromSchema';
+import UpdatedOnLine, { updatedIsoFor } from '@/components/seo/UpdatedOnLine';
 import { type AppLocale } from '@/lib/i18n/config';
 import {
   EUR_PRICES,
@@ -192,10 +193,23 @@ export default async function LocaleAppPage({ params }: Props) {
       { '@type': 'ListItem', position: 2, name: 'GeoTapp TimeTracker', item: `https://geotapp.com/${locale}/products/geotapp-timetracker/` },
     ],
   };
+  // Freschezza per AI/Google: data vera dell'ultimo commit sui file di questa
+  // pagina (vedi src/lib/seo/content-dates.ts), non la data di build.
+  const pageKey = 'products/geotapp-timetracker';
+  const m = appMeta[locale] ?? appMeta['it'];
+  const webPage = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: m.title,
+    description: m.description,
+    url: `https://geotapp.com/${locale}/products/geotapp-timetracker/`,
+    dateModified: updatedIsoFor(pageKey),
+  };
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(software) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPage) }} />
       <AppPage />
       {/* FAQ VISIBILE (H3) + schema FAQPage: FaqFromSchema rende entrambi, cosi' il
           testo e' citabile dagli AI (prima le FAQ vivevano solo nel <script> JSON-LD,
@@ -203,6 +217,7 @@ export default async function LocaleAppPage({ params }: Props) {
       {faq && <FaqFromSchema faq={faq} locale={locale} />}
       <BlogHighlights locale={locale as AppLocale} categoryId={108} />
       <SettoriLinks locale={locale as AppLocale} settori={['pulizie', 'sicurezza']} />
+      <UpdatedOnLine pageKey={pageKey} locale={locale} />
     </>
   );
 }

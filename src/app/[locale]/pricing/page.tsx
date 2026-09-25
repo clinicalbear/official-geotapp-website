@@ -8,6 +8,7 @@ import {
   getCurrencyForLocale,
 } from '@/lib/pricing';
 import type { AppLocale } from '@/lib/i18n/config';
+import UpdatedOnLine, { updatedIsoFor } from '@/components/seo/UpdatedOnLine';
 
 const PRICING_SCHEMA_NAME: Record<string, string> = {
   it: 'Prezzi GeoTapp', en: 'GeoTapp Pricing', de: 'GeoTapp Preise',
@@ -34,6 +35,9 @@ function buildPricingSchema(locale: AppLocale) {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
     'name': 'GeoTapp Pricing',
+    // Freschezza per AI/Google: data vera dell'ultimo commit su questa pagina
+    // (vedi src/lib/seo/content-dates.ts), non la data di build.
+    'dateModified': updatedIsoFor('pricing'),
     'mainEntity': {
       '@type': 'ItemList',
       'itemListElement': [
@@ -228,6 +232,7 @@ export default async function LocalePricingPage({ params }: { params: Promise<{ 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ ...pricingSchema, name: PRICING_SCHEMA_NAME[locale] ?? PRICING_SCHEMA_NAME.en }) }} />
       {faq && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />}
       <PricingPage />
+      <UpdatedOnLine pageKey="pricing" locale={locale as AppLocale} />
     </>
   );
 }

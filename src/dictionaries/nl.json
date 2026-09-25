@@ -1472,5 +1472,8 @@
     "segnala": "Kom je een drempel tegen op deze site, schrijf dan naar info@geotapp.com met vermelding van de pagina en wat niet lukte. Wij antwoorden binnen dertig dagen. Is het antwoord niet bevredigend, dan kun je terecht bij de bevoegde toezichthouder in jouw land.",
     "data_t": "Datum",
     "data": "Verklaring opgesteld op 23 september 2026, op basis van de beoordeling van dezelfde datum."
+  },
+  "contentDates": {
+    "updatedOn": "Bijgewerkt op"
   }
 }
