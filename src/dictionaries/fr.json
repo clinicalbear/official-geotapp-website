@@ -1476,5 +1476,8 @@
     "segnala": "Si vous rencontrez un obstacle sur ce site, écrivez à info@geotapp.com en indiquant la page et ce que vous n'avez pas pu faire. Nous répondons sous trente jours. Si la réponse ne vous satisfait pas, vous pouvez saisir l'autorité de contrôle compétente de votre pays.",
     "data_t": "Date",
     "data": "Déclaration rédigée le 23 septembre 2026, sur la base de l'évaluation du même jour."
+  },
+  "contentDates": {
+    "updatedOn": "Mis à jour le"
   }
 }

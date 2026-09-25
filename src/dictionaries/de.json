@@ -1476,5 +1476,8 @@
     "segnala": "Wenn Sie auf dieser Website auf eine Barriere stoßen, schreiben Sie an info@geotapp.com und nennen Sie die Seite und was nicht möglich war. Wir antworten innerhalb von dreißig Tagen. Ist die Antwort nicht zufriedenstellend, können Sie sich an die zuständige Durchsetzungsbehörde in Ihrem Land wenden.",
     "data_t": "Datum",
     "data": "Erklärung erstellt am 23. September 2026 auf Grundlage der Bewertung vom selben Tag."
+  },
+  "contentDates": {
+    "updatedOn": "Aktualisiert am"
   }
 }

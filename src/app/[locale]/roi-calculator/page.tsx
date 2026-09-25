@@ -7,6 +7,7 @@ import type { AppLocale } from '@/lib/i18n/config';
 import { localizePath } from '@/lib/i18n/locale-routing';
 import RoiCalculatorClient from '@/components/roi-calculator/RoiCalculatorClient';
 import LNastro from '@/components/LNastro';
+import UpdatedOnLine, { updatedIsoFor } from '@/components/seo/UpdatedOnLine';
 import './l-page.css';
 
 export { generateLocaleStaticParams as generateStaticParams } from '@/lib/i18n/static-params';
@@ -84,8 +85,24 @@ export default async function RoiCalculatorPage({
     );
   }
 
+  // Freschezza per AI/Google: data vera dell'ultimo commit su questa pagina
+  // (vedi src/lib/seo/content-dates.ts), non la data di build.
+  const pageKey = 'roi-calculator';
+  const webPageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: roi.hero_title,
+    description: roi.hero_subtitle,
+    url: `https://geotapp.com/${safeLocale}/roi-calculator/`,
+    dateModified: updatedIsoFor(pageKey),
+  };
+
   return (
     <div className="lp-l lp-roi">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       <section className="ph">
         <div className="w">
           <p className="kk k"><s />{dict.navbar.resources}</p>
@@ -150,6 +167,8 @@ export default async function RoiCalculatorPage({
           </div>
         </div>
       </section>
+
+      <UpdatedOnLine pageKey={pageKey} locale={safeLocale} />
     </div>
   );
 }

@@ -6,6 +6,7 @@ import FlowPage from '../../../products/geotapp-flow/page';
 import BlogHighlights from '@/components/BlogHighlights';
 import FaqFromSchema from '@/components/FaqFromSchema';
 import SettoriLinks from '@/components/SettoriLinks';
+import UpdatedOnLine, { updatedIsoFor } from '@/components/seo/UpdatedOnLine';
 import { type AppLocale } from '@/lib/i18n/config';
 import {
   EUR_PRICES,
@@ -208,17 +209,31 @@ export default async function LocaleFlowPage({ params }: Props) {
       { '@type': 'ListItem', position: 2, name: 'GeoTapp Flow', item: `https://geotapp.com/${locale}/products/geotapp-flow/` },
     ],
   };
+  // Freschezza per AI/Google: data vera dell'ultimo commit sui file di questa
+  // pagina (vedi src/lib/seo/content-dates.ts), non la data di build.
+  const pageKey = 'products/geotapp-flow';
+  const m = flowMeta[locale] ?? flowMeta['it'];
+  const webPage = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: m.title,
+    description: m.description,
+    url: `https://geotapp.com/${locale}/products/geotapp-flow/`,
+    dateModified: updatedIsoFor(pageKey),
+  };
   return (
     <>
       <link rel="preload" as="image" href="/logoFlow.webp" fetchPriority="high" />
       <link rel="preload" as="image" href="/screen_dashboard.webp" />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(software) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPage) }} />
       <FlowPage />
       {/* FAQ visibile (H3) + schema FAQPage da RisorsaFaq (niente <script> faq manuale). */}
       <FaqFromSchema faq={faq} locale={locale} />
       <BlogHighlights locale={locale as AppLocale} categoryId={65} />
       <SettoriLinks locale={locale as AppLocale} settori={['installatori']} />
+      <UpdatedOnLine pageKey={pageKey} locale={locale} />
     </>
   );
 }

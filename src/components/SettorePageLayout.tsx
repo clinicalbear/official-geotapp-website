@@ -17,6 +17,7 @@ import {
   ALL_REGIONAL_FAQ_TITLES,
 } from '@/content/settori/regional-faq-index';
 import { JsonLd } from '@/components/seo/JsonLd';
+import UpdatedOnLine, { updatedIsoFor } from '@/components/seo/UpdatedOnLine';
 import DemoReportBanner from '@/components/DemoReportBanner';
 import { trackEvent } from '@/lib/analytics';
 import {
@@ -153,6 +154,19 @@ export default function SettorePageLayout({ content, locale, settore, children }
     })),
   };
 
+  // Freschezza per AI/Google: data vera dell'ultimo commit sul contenuto di
+  // QUESTO settore (vedi src/lib/seo/content-dates.ts), non la data di build.
+  const pageKey = `settori/${settore}`;
+  const dateModified = updatedIsoFor(pageKey);
+  const webPageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: content.meta.title,
+    description: content.meta.description,
+    url: `https://geotapp.com/${locale}/settori/${settore}/`,
+    dateModified,
+  };
+
   // Sezione "Altri settori": stessa logica/dati di prima, solo vestita con .picker.
   const OTHER_SETTORI: Record<string, Record<SettoreSlug, string>> = {
     it: { pulizie: 'Imprese di pulizie', installatori: 'Installatori', sicurezza: 'Aziende di sicurezza', elettricisti: 'Elettricisti', idraulici: 'Idraulici', termoidraulici: 'Termoidraulici', edilizia: 'Edilizia', impianti: 'Impianti', manutenzione: 'Manutenzione', 'impresa-di-pulizie': 'Impresa di pulizie' },
@@ -239,6 +253,10 @@ export default function SettorePageLayout({ content, locale, settore, children }
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema).replace(/</g, '\\u003c') }}
       />
+      {/* JsonLd (plain <script>), NON <Script> di next/script: con strategy di default
+          next/script non finisce nell'HTML SSR, solo iniettato lato client dopo
+          l'idratazione. Un crawler/AI che non esegue JS non vedrebbe mai dateModified. */}
+      <JsonLd data={webPageSchema} />
       {!(content.schema_faq && content.schema_faq.length > 0) && (
         <Script
           id={`${settore}-faq-schema`}
@@ -651,6 +669,8 @@ export default function SettorePageLayout({ content, locale, settore, children }
           <FeaturedIn locale={locale} />
         </div>
       </section>
+
+      <UpdatedOnLine pageKey={pageKey} locale={locale} />
 
       {children}
     </div>

@@ -4,6 +4,7 @@ import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
 import VerifierPage from '../../../products/geotapp-verifier/page';
 import BlogHighlights from '@/components/BlogHighlights';
 import SettoriLinks from '@/components/SettoriLinks';
+import UpdatedOnLine, { updatedIsoFor } from '@/components/seo/UpdatedOnLine';
 import { type AppLocale } from '@/lib/i18n/config';
 import { getCurrencyForLocale } from '@/lib/pricing';
 
@@ -163,6 +164,18 @@ export default async function LocaleVerifierPage({ params }: Props) {
       { '@type': 'ListItem', position: 2, name: 'GeoTapp Verifier', item: `https://geotapp.com/${locale}/products/geotapp-verifier/` },
     ],
   };
+  // Freschezza per AI/Google: data vera dell'ultimo commit sui file di questa
+  // pagina (vedi src/lib/seo/content-dates.ts), non la data di build.
+  const pageKey = 'products/geotapp-verifier';
+  const m = verifierMeta[locale] ?? verifierMeta['it'];
+  const webPage = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: m.title,
+    description: m.description,
+    url: `https://geotapp.com/${locale}/products/geotapp-verifier/`,
+    dateModified: updatedIsoFor(pageKey),
+  };
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -170,9 +183,11 @@ export default async function LocaleVerifierPage({ params }: Props) {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       )}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(software) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPage) }} />
       <VerifierPage params={params} />
       <BlogHighlights locale={locale as AppLocale} categoryId={9} />
       <SettoriLinks locale={locale as AppLocale} settori={['pulizie', 'installatori', 'sicurezza']} />
+      <UpdatedOnLine pageKey={pageKey} locale={locale} />
     </>
   );
 }

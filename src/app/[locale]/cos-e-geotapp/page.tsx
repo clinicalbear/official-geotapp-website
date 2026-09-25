@@ -8,6 +8,7 @@ import LNastro from '@/components/LNastro';
 import VideoGiro from '@/components/VideoGiro';
 import FeaturedIn from '@/components/FeaturedIn';
 import { featuredLabel } from '@/lib/press/labels';
+import UpdatedOnLine, { updatedIsoFor } from '@/components/seo/UpdatedOnLine';
 
 export { generateLocaleStaticParams as generateStaticParams } from '@/lib/i18n/static-params';
 
@@ -494,11 +495,24 @@ export default async function CosEGeoTappPage({ params }: { params: Promise<{ lo
   const pricingHref = `/${locale}${translatePath('/pricing/', locale as AppLocale)}`;
   const seePricing = SEE_PRICING[locale] ?? SEE_PRICING.en;
 
+  // Freschezza per AI/Google: data vera dell'ultimo commit su questa pagina
+  // (vedi src/lib/seo/content-dates.ts), non la data di build.
+  const pageKey = 'cos-e-geotapp';
+  const webPageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: copy.title,
+    description: copy.description,
+    url: `${BASE_URL}/${locale}${translatePath('/cos-e-geotapp/', locale as AppLocale)}`,
+    dateModified: updatedIsoFor(pageKey),
+  };
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
 
       <div className="lp-l lp-cos-e">
         {/* ── testata: stesso h1 e stesso testo, solo vestito nuovo ── */}
@@ -621,6 +635,8 @@ export default async function CosEGeoTappPage({ params }: { params: Promise<{ lo
             </div>
           </div>
         </section>
+
+        <UpdatedOnLine pageKey={pageKey} locale={locale} />
       </div>
     </>
   );

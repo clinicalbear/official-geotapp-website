@@ -1476,5 +1476,8 @@
     "segnala": "Om du stöter på ett hinder på denna webbplats, skriv till info@geotapp.com och ange sidan och vad du inte kunde göra. Vi svarar inom trettio dagar. Är svaret inte tillfredsställande kan du vända dig till behörig tillsynsmyndighet i ditt land.",
     "data_t": "Datum",
     "data": "Redogörelse upprättad den 23 september 2026, på grundval av bedömningen samma datum."
+  },
+  "contentDates": {
+    "updatedOn": "Uppdaterad den"
   }
 }
