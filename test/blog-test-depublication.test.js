@@ -20,11 +20,9 @@ test('middleware de-publishes known test blog paths with 410 + noindex', () => {
 });
 
 test('sitemap generation excludes de-published test blog paths', () => {
+  // La sitemap vive nel middleware (src/app/sitemap.ts non esiste piu').
   const middleware = read('src', 'middleware.ts');
-  const appSitemap = read('src', 'app', 'sitemap.ts');
 
   assert.match(middleware, /isDepublishedBlogTestUrl/);
-  assert.match(appSitemap, /isDepublishedBlogTestUrl/);
   assert.match(middleware, /if \(isDepublishedBlogTestUrl\(url\)\) continue;/);
-  assert.match(appSitemap, /if \(isDepublishedBlogTestUrl\(url\)\) return;/);
 });

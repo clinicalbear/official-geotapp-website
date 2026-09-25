@@ -48,11 +48,16 @@ test('plugin wires translation queue, polylang relations, and SEO guardrails', (
   assert.match(plugin, /blog\.geotapp\.com/);
 });
 
-test('sitemap fetches localized blog post links and de-duplicates URLs', () => {
-  const sitemap = read('src', 'app', 'sitemap.ts');
+test('sitemap fetches blog posts once, de-duplicates URLs and clusters translations', () => {
+  // La sitemap vive nel middleware (src/app/sitemap.ts non esiste piu').
+  const sitemap = read('src', 'middleware.ts');
 
-  assert.match(sitemap, /_fields: 'slug,modified,link'/);
-  assert.match(sitemap, /query\.set\('lang', locale\)/);
-  assert.match(sitemap, /SUPPORTED_LOCALES\.map\(\(locale\) => fetchWpPostsForLocale\(locale\)\)/);
-  assert.match(sitemap, /const seenUrls = new Set<string>\(\)/);
+  // Un solo giro sull'indice WP (?lang= e' ignorato dalla REST del blog).
+  assert.match(sitemap, /const WP_FIELDS = 'slug,modified,link,gtmsa_lang,gtmsa_tgroup,gt_translations'/);
+  assert.match(sitemap, /x-wp-totalpages/);
+  assert.match(sitemap, /const seen = new Set<string>\(\)/);
+  // Cluster hreflang: prima le traduzioni Polylang (le stesse dell'HTML del post),
+  // poi il gruppo gtmsa_tgroup come riserva. 25/09/2026: 639 post collegati in
+  // Polylang uscivano dalla sitemap senza hreflang perche' si guardava solo il tgroup.
+  assert.match(sitemap, /reciprocalPolylang\(row\) \?\? \(row\.gtmsa_tgroup \? groups\.get\(row\.gtmsa_tgroup\) : undefined\)/);
 });

@@ -421,13 +421,16 @@ async function buildFullSitemap(): Promise<string> {
   const blogEntries: string[] = [];
   try {
     const WP_PAGE_CAP = 20;
-    const WP_FIELDS = 'slug,modified,link,gtmsa_lang,gtmsa_tgroup';
+    const WP_FIELDS = 'slug,modified,link,gtmsa_lang,gtmsa_tgroup,gt_translations';
     type WpRow = {
       slug?: string;
       modified?: string;
       link?: string;
       gtmsa_lang?: string;
       gtmsa_tgroup?: string | null;
+      // Traduzioni Polylang {lingua: permalink} (mu-plugin gt-rest-translations.php).
+      // E' la STESSA fonte da cui la pagina del post emette gli hreflang nell'HTML.
+      gt_translations?: Record<string, string> | null;
     };
 
     // Use wp-json path (not ?rest_route) with proxy header to bypass the
@@ -510,6 +513,38 @@ async function buildFullSitemap(): Promise<string> {
       if (!g.has(lang)) g.set(lang, url);
     }
 
+    // Fonte principale dei cluster: le traduzioni Polylang (`gt_translations`), le
+    // stesse che la pagina del post mette nell'HTML, cosi' sitemap e pagina dicono la
+    // stessa cosa. Verificato il 25/09/2026: 639 post avevano Polylang collegato ma
+    // `gtmsa_tgroup` vuoto, e uscivano dalla sitemap senza nessun hreflang. Riserva:
+    // il gruppo `gtmsa_tgroup` quando Polylang ha solo il post stesso.
+    const polylangGroup = (row: WpRow): Map<string, string> | undefined => {
+      const tr = row.gt_translations;
+      if (!tr || typeof tr !== 'object') return undefined;
+      const m = new Map<string, string>();
+      for (const [lang, link] of Object.entries(tr)) {
+        if (!locales.includes(lang) || typeof link !== 'string') continue;
+        const url = toUrl({ link, slug: 'x', modified: 'x' });
+        if (isDepublishedBlogTestUrl(url)) continue;
+        m.set(lang, url);
+      }
+      return m.size > 1 ? m : undefined;
+    };
+    // Un cluster Polylang vale solo se TUTTI i membri dichiarano lo stesso gruppo.
+    // Caso reale (25/09/2026): due post inglesi sul fac-simile GPS, 22/04 e 03/07;
+    // quello vecchio si dice traduzione dell'italiano, l'italiano indica il nuovo.
+    // Senza questo controllo il vecchio avrebbe un hreflang senza ritorno.
+    const polylangByUrl = new Map<string, Map<string, string> | undefined>();
+    for (const row of rows) polylangByUrl.set(toUrl(row), polylangGroup(row));
+    const sameGroup = (a: Map<string, string>, b?: Map<string, string>) =>
+      !!b && a.size === b.size && [...a].every(([l, u]) => b.get(l) === u);
+    const reciprocalPolylang = (row: WpRow): Map<string, string> | undefined => {
+      const g = polylangGroup(row);
+      if (!g) return undefined;
+      for (const target of g.values()) if (!sameGroup(g, polylangByUrl.get(target))) return undefined;
+      return g;
+    };
+
     const seen = new Set<string>();
     for (const row of rows) {
       const url = toUrl(row);
@@ -518,7 +553,7 @@ async function buildFullSitemap(): Promise<string> {
       seen.add(url);
       const lastmod = (row.modified as string).split('T')[0];
 
-      const g = row.gtmsa_tgroup ? groups.get(row.gtmsa_tgroup) : undefined;
+      const g = reciprocalPolylang(row) ?? (row.gtmsa_tgroup ? groups.get(row.gtmsa_tgroup) : undefined);
       let hreflangBlock = '';
       // Il cluster si dichiara solo sul post che RAPPRESENTA la sua lingua nel gruppo.
       // Un gruppo puo' contenere due post nella stessa lingua (succede: due traduzioni
