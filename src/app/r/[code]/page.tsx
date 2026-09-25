@@ -270,11 +270,23 @@ function coda(impronta: string): string {
   return impronta.length <= 12 ? impronta : `…${impronta.slice(-12)}`;
 }
 
-async function risolvi(codice: string): Promise<Esito> {
+async function risolvi(codice: string, visitatore: string | null): Promise<Esito> {
   try {
+    // La funzione ha un freno a trenta richieste al minuto per provenienza, e
+    // da qui la chiamata parte dal server di Cloudflare: senza queste due
+    // intestazioni tutti i visitatori del sito sarebbero un visitatore solo, e
+    // uno che martella chiuderebbe la pagina a tutti. L'indirizzo lo scrive
+    // Cloudflare (cf-connecting-ip); la chiave dice alla funzione che arriva
+    // davvero da qui. Senza chiave la funzione fa come prima.
+    const chiave = process.env.REPORT_LINK_PROXY_KEY;
+    const intestazioni: Record<string, string> = {};
+    if (chiave && visitatore) {
+      intestazioni['x-geotapp-proxy-key'] = chiave;
+      intestazioni['x-geotapp-visitor-ip'] = visitatore;
+    }
     const r = await fetch(
       `${ENDPOINT}?codice=${encodeURIComponent(codice)}`,
-      { cache: 'no-store' },
+      { cache: 'no-store', headers: intestazioni },
     );
     if (r.status === 404) return { stato: 'sconosciuto' };
     if (r.status === 410) {
@@ -313,7 +325,7 @@ export default async function PaginaCodice({
     acceptLanguage: intestazioni.get('accept-language'),
   });
   const t = testiPer(locale);
-  const esito = await risolvi(code);
+  const esito = await risolvi(code, intestazioni.get('cf-connecting-ip'));
 
   const scatola =
     'mx-auto max-w-2xl px-6 py-14 text-[#0B1736] font-sans';
