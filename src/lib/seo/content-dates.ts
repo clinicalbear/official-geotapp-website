@@ -5,21 +5,21 @@
 // Rigenerato l'ultima volta: 2026-09-25
 
 export const CONTENT_DATES: Record<string, string> = {
-  "settori/pulizie": "2026-09-16",
-  "settori/installatori": "2026-09-24",
-  "settori/sicurezza": "2026-09-15",
-  "settori/elettricisti": "2026-09-16",
-  "settori/idraulici": "2026-09-13",
-  "settori/termoidraulici": "2026-09-13",
-  "settori/edilizia": "2026-09-23",
-  "settori/impianti": "2026-09-13",
-  "settori/manutenzione": "2026-07-17",
-  "products/geotapp-flow": "2026-09-24",
-  "products/geotapp-timetracker": "2026-09-24",
-  "products/geotapp-verifier": "2026-09-24",
-  "cos-e-geotapp": "2026-09-24",
-  "pricing": "2026-09-24",
-  "roi-calculator": "2026-09-24"
+  "settori/pulizie": "2026-09-25",
+  "settori/installatori": "2026-09-25",
+  "settori/sicurezza": "2026-09-25",
+  "settori/elettricisti": "2026-09-25",
+  "settori/idraulici": "2026-09-25",
+  "settori/termoidraulici": "2026-09-25",
+  "settori/edilizia": "2026-09-25",
+  "settori/impianti": "2026-09-25",
+  "settori/manutenzione": "2026-09-25",
+  "products/geotapp-flow": "2026-09-25",
+  "products/geotapp-timetracker": "2026-09-25",
+  "products/geotapp-verifier": "2026-09-25",
+  "cos-e-geotapp": "2026-09-25",
+  "pricing": "2026-09-25",
+  "roi-calculator": "2026-09-25"
 };
 
 /** Data ISO (YYYY-MM-DD) dell'ultimo aggiornamento reale del contenuto di una pagina.
