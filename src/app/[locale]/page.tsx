@@ -5,7 +5,7 @@ import { SUPPORTED_LOCALES } from '@/lib/i18n/config';
 import type { AppLocale } from '@/lib/i18n/config';
 import { HREFLANG } from '@/lib/i18n/locale-metadata';
 import { HOME_META } from '@/lib/i18n/home-metadata';
-import HomeClient from '../HomeClient';
+import HomeServer from '../HomeServer';
 import BlogHighlights from '@/components/BlogHighlights';
 import FaqFromSchema from '@/components/FaqFromSchema';
 import LocaleSuggestionBanner from '@/components/LocaleSuggestionBanner';
@@ -220,7 +220,7 @@ export default async function LocalePage({ params }: Props) {
   return (
     <>
       {/* NB: nessun preload di bg1.webp. Il TTBgCarousel che la usa è `hidden md:block`
-          (solo desktop) e MOLTO sotto la fold (sezione TimeTracker, ~riga 528 di HomeClient).
+          (solo desktop) e MOLTO sotto la fold (sezione TimeTracker, ~riga 528 dell'allora HomeClient).
           Preloadarla ad alta priorità su mobile scaricava 147KB mai mostrati, rubando banda
           all'LCP reale (l'h1 dell'hero). Rimosso il 2026-06-06. */}
       {reviewsSchema && (
@@ -237,9 +237,13 @@ export default async function LocalePage({ params }: Props) {
       {/* FAQ e blog entrano DENTRO la home come slot server, cosi' seguono
           l'ordine del mockup (letture → domande → ultima inquadratura).
           Lo schema FAQPage resta iniettato da RisorsaFaq dentro lo slot. */}
-      <HomeClient
+      <HomeServer
+        locale={locale}
         jrSlot={<BlogHighlights locale={locale as AppLocale} categoryId={54} />}
-        fqSlot={<FaqFromSchema faq={faq} locale={locale} />}
+        // Senza FAQ per la lingua (le varianti inglesi regionali) lo slot resta vuoto:
+        // da quando la home e' un componente server un elemento che rende null lascerebbe
+        // comunque la sezione vuota nell'HTML, mentre prima React la scartava.
+        fqSlot={faq ? <FaqFromSchema faq={faq} locale={locale} /> : undefined}
       />
     </>
   );

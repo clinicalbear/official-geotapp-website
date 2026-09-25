@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import HomeClient from './HomeClient';
+import HomeServer from './HomeServer';
 
 // The bare `/` path is geo-redirected to `/{locale}/` by middleware (308).
 // This metadata is a safety net: if the redirect is somehow bypassed,
@@ -11,5 +11,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootPage() {
-  return <HomeClient />;
+  return <HomeServer />;
 }

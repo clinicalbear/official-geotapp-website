@@ -1245,3 +1245,7 @@ a[class*="bg-emerald-500"]{background-color:#10b981 !important;color:#fff !impor
 @media(max-width:900px){
   .op h1 span b{animation:none;transform:none}
 }
+
+/* 25/09/2026, home componente server: se il blog non risponde BlogHighlights rende null,
+   ma la sezione che lo contiene resta nell'HTML. Prima React la scartava; qui la si nasconde. */
+.jr-wrap:has(> .w:empty){display:none}

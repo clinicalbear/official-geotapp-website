@@ -1,16 +1,18 @@
-'use client';
-
 /**
  * Home nella direzione L, ricostruita sul mockup
  * docs/redesign-sito-2026-07/esplorazione/index.html.
  * I contenuti sono quelli veri del sito (dizionari): cambia come sono vestiti.
  * L'unico testo nuovo e' quello dell'apertura, come concordato.
+ *
+ * 25/09/2026: da componente client (HomeClient.tsx) a componente SERVER. L'HTML e'
+ * lo stesso di prima; nel browser non si ricostruisce piu' tutta la pagina, girano
+ * solo gli effetti (HomeEffetti.tsx) e i componenti che hanno vita propria (video,
+ * calcolo ROI, report demo, "Citati su", fiducia). I clic tracciati passano da
+ * data-traccia / data-fonte, letti da HomeEffetti, con gli stessi eventi di prima.
  */
 
-import { type ReactNode, useEffect, useRef, useState } from 'react';
+import type { ReactNode } from 'react';
 import Link from 'next/link';
-import dynamic from 'next/dynamic';
-import { usePathname } from 'next/navigation';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import FounderViewTracker from '@/components/analytics/FounderViewTracker';
 import {
@@ -18,17 +20,16 @@ import {
   getLocaleFromPathname,
   localizePath,
 } from '@/lib/i18n/locale-routing';
-import { trackEvent } from '@/lib/analytics';
 import { REVIEWS, resolveReviewText } from '@/data/reviews';
 import { SOURCE_LOGOS, REVIEWS_COPY } from '@/components/reviews-copy';
 import LNastro from '@/components/LNastro';
-
-const FeaturedIn = dynamic(() => import('@/components/FeaturedIn'), { ssr: true });
+import FeaturedIn from '@/components/FeaturedIn';
 import { featuredLabel } from '@/lib/press/labels';
-const TrustBar = dynamic(() => import('@/components/TrustBar'), { ssr: true });
-const RoiMini = dynamic(() => import('@/components/RoiMini'), { ssr: true });
-const DemoReportBanner = dynamic(() => import('@/components/DemoReportBanner'), { ssr: true });
-const VideoGiro = dynamic(() => import('@/components/VideoGiro'), { ssr: true });
+import TrustBar from '@/components/TrustBar';
+import RoiMini from '@/components/RoiMini';
+import DemoReportBanner from '@/components/DemoReportBanner';
+import VideoGiro from '@/components/VideoGiro';
+import HomeEffetti from './HomeEffetti';
 
 const DIFF_COPY: Record<string, { h2_1: string; h2_2: string; desc: string; link: string }> = {
   it: { h2_1: 'Tutto quello che fanno loro, lo facciamo anche noi.', h2_2: 'Ma quello che facciamo noi, loro non possono.', desc: 'Timbratura GPS, CRM, gestione squadre: sì, facciamo tutto questo. Ma quando il cliente contesta, gli altri ti lasciano con un foglio Excel. Noi ti diamo un report sigillato, non alterabile, verificabile da chiunque, e la discussione finisce lì.', link: 'Scopri la differenza' },
@@ -104,112 +105,17 @@ const SETTORI_IMGS: Record<string, { img: string; pos: string }> = {
   impianti: { img: '/settori/impianti.webp', pos: '72% 30%' },
 };
 
-export default function Home({ jrSlot, fqSlot }: { jrSlot?: ReactNode; fqSlot?: ReactNode } = {}) {
-  const pathname = usePathname();
-  const currentLocale = getLocaleFromPathname(pathname) ?? DEFAULT_LOCALE;
+export default function Home({ locale, jrSlot, fqSlot }: { locale?: string; jrSlot?: ReactNode; fqSlot?: ReactNode } = {}) {
+  // Stessa risoluzione di prima (usePathname), fatta sul segmento della rotta.
+  const currentLocale = getLocaleFromPathname(locale ? `/${locale}/` : '/') ?? DEFAULT_LOCALE;
   const dict = getDictionary(currentLocale);
   const getLink = (path: string) => localizePath(path, currentLocale);
   const D = DIFF_COPY[currentLocale] ?? DIFF_COPY.en;
   const L = L_COPY[currentLocale] ?? L_COPY.en;
   const VG = dict.videoGiro;
 
-  const seqRef = useRef<HTMLElement>(null);
-  const stickRef = useRef<HTMLDivElement>(null);
-  const stageRef = useRef<HTMLDivElement>(null);
-  const pg1Ref = useRef<HTMLElement>(null);
-  const pg2Ref = useRef<HTMLElement>(null);
-  const pg3Ref = useRef<HTMLElement>(null);
-  const accRef = useRef<HTMLElement>(null);
-  const [scene, setScene] = useState(0);
-
-  /* la sequenza: barra che si riempie, contatore che cambia;
-     il mazzo: quanto ogni pagina e' coperta da quella che le sale sopra */
-  useEffect(() => {
-    let tick = false;
-    let cur = -1;
-    const onScroll = () => {
-      if (tick) return; tick = true;
-      requestAnimationFrame(() => {
-        const seq = seqRef.current; const stick = stickRef.current;
-        if (seq && stick) {
-          const b = seq.getBoundingClientRect();
-          let p = (-b.top) / (b.height - innerHeight);
-          p = p < 0 ? 0 : (p > 1 ? 1 : p);
-          stick.style.setProperty('--p', p.toFixed(4));
-          const i = Math.min(2, Math.floor(p * 3));
-          if (i !== cur) { cur = i; setScene(i); }
-        }
-        const pages = [pg1Ref.current, pg2Ref.current, pg3Ref.current, accRef.current];
-        for (let i = 0; i < pages.length - 1; i++) {
-          const a = pages[i]; const nb = pages[i + 1];
-          if (!a || !nb) continue;
-          const r = nb.getBoundingClientRect();
-          const c = 1 - Math.min(1, Math.max(0, r.top / innerHeight));
-          a.style.setProperty('--cov', c.toFixed(3));
-        }
-        tick = false;
-      });
-    };
-    addEventListener('scroll', onScroll, { passive: true });
-    addEventListener('resize', onScroll);
-    onScroll();
-    return () => { removeEventListener('scroll', onScroll); removeEventListener('resize', onScroll); };
-  }, []);
-
-  /* il report ruota quando entra in campo */
-  useEffect(() => {
-    const st = stageRef.current;
-    if (!st) return;
-    const io = new IntersectionObserver((es) => {
-      es.forEach((e) => { if (e.isIntersecting) e.target.classList.add('in'); });
-    }, { threshold: 0.25 });
-    io.observe(st);
-    return () => io.disconnect();
-  }, []);
-
-  /* entrando nella pagina del report, un secondo di sosta perche' la si veda */
-  useEffect(() => {
-    const rep = pg1Ref.current;
-    if (!rep) return;
-    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    if (!matchMedia('(hover:hover)').matches) return;
-    let used = false;
-    const block = (e: Event) => e.preventDefault();
-    const io = new IntersectionObserver((es) => {
-      es.forEach((e) => {
-        if (!used && e.isIntersecting && e.intersectionRatio > 0.82) {
-          used = true;
-          rep.classList.add('hold');
-          addEventListener('wheel', block, { passive: false });
-          addEventListener('touchmove', block, { passive: false });
-          setTimeout(() => {
-            removeEventListener('wheel', block);
-            removeEventListener('touchmove', block);
-            rep.classList.remove('hold');
-          }, 1000);
-        }
-      });
-    }, { threshold: [0.82] });
-    io.observe(rep);
-    return () => {
-      io.disconnect();
-      removeEventListener('wheel', block);
-      removeEventListener('touchmove', block);
-    };
-  }, []);
-
-  /* la barra mobile fissa sparisce quando si arriva alla chiusura */
-  useEffect(() => {
-    const bar = document.getElementById('sticky-mobile-cta');
-    const end = document.getElementById('home-end');
-    if (!bar || !end) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => { bar.style.display = entry.isIntersecting ? 'none' : ''; },
-      { threshold: 0.3 }
-    );
-    observer.observe(end);
-    return () => observer.disconnect();
-  }, []);
+  // La sequenza parte sulla prima scena; le successive le accende HomeEffetti.
+  const scene = 0;
 
   const problems = dict.landing.problem_items as { title: string; desc: string }[];
   const core = dict.home_sections.core;
@@ -275,6 +181,7 @@ export default function Home({ jrSlot, fqSlot }: { jrSlot?: ReactNode; fqSlot?: 
 
   return (
     <div className="lp-l lp-home">
+      <HomeEffetti locale={currentLocale} />
       {/* ── apertura: la foto, e sopra la frase corta ── */}
       <section className="op">
         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -307,7 +214,7 @@ export default function Home({ jrSlot, fqSlot }: { jrSlot?: ReactNode; fqSlot?: 
           <div className="low">
             <p>{L.lede}</p>
             <div className="acts">
-              <Link className="b1" href={getLink('/trial')} onClick={() => trackEvent('trial_click', { cta_source: 'homepage_hero', cta_locale: currentLocale })}>
+              <Link className="b1" href={getLink('/trial')} data-traccia="trial_click" data-fonte="homepage_hero">
                 {dict.landing.hero_cta_primary}
               </Link>
               {/* A11: 'Scopri i settori' non e' un desiderio di chi arriva; guardare
@@ -317,7 +224,8 @@ export default function Home({ jrSlot, fqSlot }: { jrSlot?: ReactNode; fqSlot?: 
               <a
                 className="b2"
                 href="#rapportino"
-                onClick={() => trackEvent('demo_report_cta', { cta_source: 'homepage_hero', cta_locale: currentLocale })}
+                data-traccia="demo_report_cta"
+                data-fonte="homepage_hero"
               >
                 {dict.landing.hero_cta_report}
               </a>
@@ -379,8 +287,8 @@ export default function Home({ jrSlot, fqSlot }: { jrSlot?: ReactNode; fqSlot?: 
       </section>
 
       {/* ── la sequenza: la foto resta, le scene cambiano ── */}
-      <section className="seq" ref={seqRef} style={{ height: '340vh' }}>
-        <div className="stick" ref={stickRef}>
+      <section className="seq" style={{ height: '340vh' }}>
+        <div className="stick">
           {seqImgs.map((src, i) => (
             <div key={src} className={`fr${scene === i ? ' on' : ''}`}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -418,7 +326,7 @@ export default function Home({ jrSlot, fqSlot }: { jrSlot?: ReactNode; fqSlot?: 
 
       {/* ── le pagine che si impilano ── */}
       <div className="deck">
-        <section className="scr pg1" ref={pg1Ref}><div className="w">
+        <section className="scr pg1"><div className="w">
           <p className="kk k">{L.la_prova}</p>
           <div className="g">
             <div>
@@ -432,7 +340,7 @@ export default function Home({ jrSlot, fqSlot }: { jrSlot?: ReactNode; fqSlot?: 
                 <li>{dict.landing.report_feature_4}</li>
               </ul>
             </div>
-            <div className="stage" ref={stageRef}>
+            <div className="stage">
               <div className="sheet">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src="/verifier-report.webp" alt="Report sigillato GeoTapp" loading="lazy" />
@@ -441,7 +349,7 @@ export default function Home({ jrSlot, fqSlot }: { jrSlot?: ReactNode; fqSlot?: 
           </div>
         </div></section>
 
-        <section className="scr pg2" ref={pg2Ref}><div className="w">
+        <section className="scr pg2"><div className="w">
           <p className="kk k">{core.badge}</p>
           <div className="hd2">
             <div>
@@ -465,7 +373,7 @@ export default function Home({ jrSlot, fqSlot }: { jrSlot?: ReactNode; fqSlot?: 
           </div>
         </div></section>
 
-        <section className="scr pg3" ref={pg3Ref}><div className="w">
+        <section className="scr pg3"><div className="w">
           <p className="kk k">{L.il_conto}</p>
           <div className="g">
             <div>
@@ -484,7 +392,8 @@ export default function Home({ jrSlot, fqSlot }: { jrSlot?: ReactNode; fqSlot?: 
              il pannello pg3 pone la domanda, qui c'e' lo strumento che risponde ── */}
       <section className="roi-wrap">
         <div className="wn">
-          <RoiMini dict={dict} locale={currentLocale} />
+          {/* Solo le due sezioni che usa: il dizionario intero finirebbe nei dati della pagina. */}
+          <RoiMini dict={{ landing: { roi_mini: dict.landing.roi_mini }, roi: dict.roi }} locale={currentLocale} />
           <div id="rapportino" style={{ marginTop: 40, scrollMarginTop: 90 }}>
             <DemoReportBanner />
           </div>
@@ -492,7 +401,7 @@ export default function Home({ jrSlot, fqSlot }: { jrSlot?: ReactNode; fqSlot?: 
       </section>
 
       {/* ── i tre strumenti: pannelli che si aprono ── */}
-      <section className="acc" ref={accRef}>
+      <section className="acc">
         {prodotti.map((p) => (
           <div className="p" key={p.kk}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -528,7 +437,7 @@ export default function Home({ jrSlot, fqSlot }: { jrSlot?: ReactNode; fqSlot?: 
             {(dict.landing as any)?.trial_cta_subtitle ?? 'Nessuna carta di credito richiesta'}
           </p>
           <div className="r d2" style={{ display: 'flex', justifyContent: 'center' }}>
-            <Link className="b1" href={getLink('/trial')} onClick={() => trackEvent('trial_click', { cta_source: 'homepage_cta_band', cta_locale: currentLocale })}>
+            <Link className="b1" href={getLink('/trial')} data-traccia="trial_click" data-fonte="homepage_cta_band">
               {dict.landing.hero_cta_primary}
             </Link>
           </div>
@@ -669,7 +578,7 @@ export default function Home({ jrSlot, fqSlot }: { jrSlot?: ReactNode; fqSlot?: 
           <h2 className="r" dangerouslySetInnerHTML={{ __html: dict.home_sections.footer_cta.title }} />
           <p className="r d1">{dict.home_sections.footer_cta.subtitle}</p>
           <div className="acts r d2">
-            <Link className="b1" href={getLink('/trial')} onClick={() => trackEvent('trial_click', { cta_source: 'homepage_cta', cta_locale: currentLocale })}>
+            <Link className="b1" href={getLink('/trial')} data-traccia="trial_click" data-fonte="homepage_cta">
               {dict.landing.hero_cta_primary}
             </Link>
             <Link className="b2" href={getLink('/contact')}>{dict.home_sections.footer_cta.button}</Link>
@@ -692,7 +601,8 @@ export default function Home({ jrSlot, fqSlot }: { jrSlot?: ReactNode; fqSlot?: 
         </p>
         <Link
           href={getLink('/trial')}
-          onClick={() => trackEvent('trial_click', { cta_source: 'homepage_sticky', cta_locale: currentLocale })}
+          data-traccia="trial_click"
+          data-fonte="homepage_sticky"
           className="btn-ring w-full"
         >
           {dict.landing.hero_cta_primary}

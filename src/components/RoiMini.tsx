@@ -8,7 +8,9 @@ import { calcRoi } from '@/lib/roi';
 import { getCurrencyForLocale, FX_RATES_PER_EUR, FX_BUFFER } from '@/lib/pricing';
 
 interface Props {
-  dict: SiteDictionary;
+  // Solo le due sezioni che servono: la home (componente server) passa queste e non il
+  // dizionario intero, che altrimenti finirebbe per intero nei dati della pagina.
+  dict: { landing: Pick<SiteDictionary['landing'], 'roi_mini'>; roi: SiteDictionary['roi'] };
   locale: AppLocale;
 }
 
