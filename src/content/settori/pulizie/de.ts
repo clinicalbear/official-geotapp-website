@@ -2,7 +2,7 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'Leistungsnachweis Gebäudereinigung: digitale Zeiterfassung mit Fotobeweis je Objekt',
+    title: 'Mobile Zeiterfassung für Gebäudereinigung: GPS & Fotobeweis je Objekt',
     description: 'Digitale Zeiterfassung für die Gebäudereinigung: per GPS am Objekt stempeln, Stunden sofort im Büro, mit Fotobeweis. Nach §17 MiLoG.',
   },
   hero: {

@@ -2,7 +2,7 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'Logiciel pour Agents de Sécurité & SSIAP | Présences Vérifiées et Rapports | GeoTapp',
+    title: 'Pointeuse GPS pour agents de sécurité, suivi des cartes CNAPS',
     description: 'Gestion de la main-d\'œuvre pour sociétés de sécurité privée, agents SSIAP et sécurité événementielle : présences GPS vérifiées, rapports d\'incidents géolocalisés et suivi des agréments CNAPS.',
   },
   hero: {
