@@ -64,12 +64,12 @@ add_action('save_post_post', function ($post_id) {
 add_filter('notify_moderator', '__return_true');
 add_filter('notify_post_author', '__return_true');
 add_filter('comment_moderation_recipients', function ($emails) {
-    $emails[] = 'michele@geotapp.com';
-    return array_values(array_unique($emails));
+    // Solo press@: la casella dell'admin e quelle degli autori si perdono nel rumore.
+    return array('press@geotapp.com');
 });
 add_filter('comment_notification_recipients', function ($emails) {
-    $emails[] = 'michele@geotapp.com';
-    return array_values(array_unique($emails));
+    // Solo press@: la casella dell'admin e quelle degli autori si perdono nel rumore.
+    return array('press@geotapp.com');
 });
 
 add_action('rest_after_insert_comment', function ($comment, $request, $creating) {
