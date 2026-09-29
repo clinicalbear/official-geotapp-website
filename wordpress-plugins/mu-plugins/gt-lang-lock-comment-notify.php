@@ -131,3 +131,24 @@ add_action('pre_ping', function (&$links) {
         }
     }
 });
+
+// Una tantum (29/09/2026): i 197 pingback interni rimasti in attesa puntano ad articoli
+// cancellati, quindi la REST non li accetta. Vanno nel cestino solo se sono ancora
+// pingback in attesa, da geotapp.com, e l'articolo non esiste piu'.
+add_action('init', function () {
+    if (get_option('gt_orphan_pingbacks_v1')) {
+        return;
+    }
+    $ids = array(19,20,21,22,23,24,25,26,28,30,31,32,34,35,37,39,40,41,44,45,46,47,52,53,55,56,57,59,60,64,65,66,67,68,70,71,72,73,77,79,80,81,82,83,85,86,87,88,89,91,93,94,95,96,97,99,101,102,103,104,105,106,107,108,111,112,113,114,115,116,119,120,121,122,124,125,126,127,128,129,130,131,135,136,137,140,145,153,154,155,157,158,160,161,163,165,166,167,168,169,170,171,172,175,176,177,180,182,186,187,188,189,197,198,199,200,201,202,203,204,206,207,208,209,210,211,212,214,215,220,221,222,223,227,228,230,231,232,233,234,236,237,238,240,241,247,248,249,250,251,252,253,254,255,257,258,259,260,261,263,264,267,268,271,272,273,274,275,276,277,278,279,283,284,285,286,287,288,290,292,294,297,298,299,300,301,302,303,306,307,308,309,312,314,324,325,329);
+    $n = 0;
+    foreach ($ids as $id) {
+        $c = get_comment($id);
+        if ($c && $c->comment_type === 'pingback' && (string) $c->comment_approved === '0'
+            && strpos($c->comment_author_url, 'https://geotapp.com') === 0 && !get_post((int) $c->comment_post_ID)) {
+            if (wp_trash_comment($id)) {
+                $n++;
+            }
+        }
+    }
+    update_option('gt_orphan_pingbacks_v1', gmdate('c') . " trashed $n", false);
+});
