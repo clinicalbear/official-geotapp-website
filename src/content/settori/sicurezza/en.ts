@@ -3,7 +3,7 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'Security Company Software | GeoTapp - Seal Every Shift',
-    description: 'Security company software that seals every shift: GPS-verified attendance, documented rounds and photo evidence. GDPR compliant. Try free.',
+    description: 'Security company software that seals every shift: GPS-verified attendance, documented rounds and photo evidence. Built to stay within GDPR. Try free.',
   },
   hero: {
     badge: 'Software for Security Guards, Stewarding & Events Security',
@@ -39,7 +39,7 @@ const content: SettoreContent = {
         desc: 'GeoTapp TimeTracker records clock-in, clock-out, GPS position and photos with sealed timestamps. Every patrol round is logged automatically from the guard\'s smartphone.',
       },
       {
-        title: 'The manager sees all posts in real time',
+        title: 'The manager sees each post as it checks in',
         desc: 'Flow receives data instantly. The operations manager checks full post coverage, shift changes and any deviations without calling the field team.',
       },
       {
@@ -75,7 +75,7 @@ const content: SettoreContent = {
       {
         label: 'GDPR compliance',
         competitor: 'Often to verify',
-        geotapp: 'Compliant by design, forms included',
+        geotapp: 'Built to stay within GDPR, forms included',
       },
     ],
   },
@@ -122,8 +122,8 @@ const content: SettoreContent = {
         desc: 'Shift changeovers are recorded digitally: operational notes, post status and accountability. Critical information no longer gets lost between shifts.',
       },
       {
-        title: 'Multi-site real-time dashboard',
-        desc: 'The operations manager sees where all guards are, the status of every post and active shift changes, from any device, without phone calls.',
+        title: 'Multi-site dashboard, updated as it happens',
+        desc: 'The operations manager sees each post\'s status and active shift changes, from any device, without phone calls.',
       },
       {
         title: 'Reports defensible in audit and before regulators',

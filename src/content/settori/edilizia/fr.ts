@@ -3,12 +3,12 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'Application Chantier BTP : Pointage GPS & Gestion des Équipes | GeoTapp',
-    description: 'Gérez les présences, les équipes et la sécurité sur chantier avec le GPS en temps réel. Pointages scellés, rapports automatiques. Application conforme RGPD pour entreprises du BTP.',
+    description: 'Gérez présences, équipes et sécurité sur chantier avec pointage GPS scellé. Rapports automatiques. App conçue pour le RGPD, pour entreprises du BTP.',
   },
   hero: {
     badge: 'Application pour entreprises du BTP et chantiers',
     h1_line1: 'Votre chantier sous contrôle,',
-    h1_line2: 'en temps réel.',
+    h1_line2: 'dès le pointage.',
     subtitle: 'Pointages GPS scellés, gestion des équipes et rapports automatiques. Zéro paperasse, zéro litiges. GeoTapp connecte Flow + TimeTracker pour les chefs de chantier, sous-traitants et maîtres d\'ouvrage.',
     cta_primary: 'Essayez-le sur un vrai chantier',
     cta_note: "14 jours, jusqu'à 50 intervenants sur le terrain, sans carte bancaire.",
@@ -22,7 +22,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Comment gérer les sous-traitants ?',
-        desc: 'Suivez les accès et la présence de toutes les équipes, y compris les sous-traitants, depuis un tableau de bord unique en temps réel.',
+        desc: 'Suivez les accès et la présence de toutes les équipes, y compris les sous-traitants, depuis un tableau de bord unique, mis à jour à chaque pointage.',
       },
       {
         title: 'Les rapports de chantier prennent des heures ?',
@@ -39,7 +39,7 @@ const content: SettoreContent = {
         desc: 'Il démarre sa vacation depuis son smartphone. GeoTapp enregistre les coordonnées GPS réelles, l\'horodatage et, si besoin, des photos. Entièrement automatique, toute modification est détectable.',
       },
       {
-        title: 'Le chef de chantier voit tout en temps réel',
+        title: 'Le chef de chantier voit chaque pointage dès qu\'il arrive',
         desc: 'Un seul tableau de bord pour toutes les équipes et tous les chantiers. Qui est présent, où et depuis quand, sans courir après personne au téléphone.',
       },
       {
@@ -75,7 +75,7 @@ const content: SettoreContent = {
       {
         label: 'Conformité RGPD',
         competitor: 'Souvent douteuse',
-        geotapp: 'Conforme par conception, formulaires inclus',
+        geotapp: 'Conçu pour rester dans le cadre du RGPD, formulaires inclus',
       },
     ],
   },
@@ -103,7 +103,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Tableau de bord multi-chantiers',
-        desc: 'Supervisez plusieurs chantiers depuis un seul écran. Voyez en temps réel qui est présent, où et depuis quand, pour chaque chantier actif.',
+        desc: 'Supervisez plusieurs chantiers depuis un seul écran : qui a pointé, où et depuis quand, mis à jour à chaque badgeage, pour chaque chantier actif.',
       },
       {
         title: 'Rapports d\'avancement automatiques',
@@ -119,7 +119,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Conformité RGPD intégrée',
-        desc: 'Géolocalisation conforme par conception à la réglementation RGPD et aux directives de protection des données. Modèles de déclaration de confidentialité inclus.',
+        desc: 'Géolocalisation conçue pour rester dans le cadre du RGPD et des directives de protection des données. Modèles de déclaration de confidentialité inclus.',
       },
     ],
   },
@@ -138,7 +138,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Comment gérer les sous-traitants sur le chantier ?',
-        a: 'GeoTapp suit les accès et la présence de toutes les équipes, y compris les sous-traitants. Chaque ouvrier pointe depuis son smartphone et le chef de chantier voit tout en temps réel sur un seul tableau de bord.',
+        a: 'GeoTapp suit les accès et la présence de toutes les équipes, y compris les sous-traitants. Chaque ouvrier pointe depuis son smartphone et le chef de chantier voit chaque pointage dès qu\'il arrive, sur un seul tableau de bord.',
       },
       {
         q: 'Les rapports de chantier nécessitent des heures de travail manuel ?',
@@ -165,7 +165,7 @@ const content: SettoreContent = {
     },
     {
       question: 'Comment gérer les sous-traitants sur le chantier ?',
-      answer: 'GeoTapp suit les accès et la présence de toutes les équipes, y compris les sous-traitants. Chaque ouvrier pointe depuis son smartphone et le chef de chantier voit tout en temps réel sur un seul tableau de bord.',
+      answer: 'GeoTapp suit les accès et la présence de toutes les équipes, y compris les sous-traitants. Chaque ouvrier pointe depuis son smartphone et le chef de chantier voit chaque pointage dès qu\'il arrive, sur un seul tableau de bord.',
     },
     {
       question: 'Les rapports de chantier nécessitent des heures de travail manuel ?',

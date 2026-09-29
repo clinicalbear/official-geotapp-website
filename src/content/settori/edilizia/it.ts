@@ -3,13 +3,13 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'App Cantiere per Edilizia: Presenze GPS e Gestione Squadre | GeoTapp',
-    description: 'Gestisci presenze, turni e sicurezza in cantiere con GPS in tempo reale. Timbrature sigillate, report automatici. App GDPR-compliant per imprese edili.',
+    description: 'Gestisci presenze, turni e sicurezza in cantiere con le timbrature GPS. Report sigillati e automatici, pensati per il GDPR, per imprese edili.',
   },
   hero: {
     badge: 'App per imprese edili e cantieri',
     h1_line1: 'Il tuo cantiere sotto controllo,',
-    h1_line2: 'in tempo reale.',
-    subtitle: 'Timbrature GPS sigillate, gestione squadre e report automatici. Zero carte, zero contestazioni. GeoTapp unisce Flow + TimeTracker per chi gestisce cantieri edili, subappaltatori e direzione lavori.',
+    h1_line2: 'ad ogni timbratura.',
+    subtitle: 'Timbrature GPS sigillate, gestione squadre e report automatici. Zero carte, meno contestazioni. GeoTapp unisce Flow + TimeTracker per chi gestisce cantieri edili, subappaltatori e direzione lavori.',
     cta_primary: 'Provalo su un cantiere vero',
     cta_note: '14 giorni, fino a 50 operatori sul campo, nessuna carta di credito.',
   },
@@ -22,7 +22,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Come gestisci i subappaltatori?',
-        desc: 'Traccia accessi e presenze di tutte le squadre, inclusi i subappaltatori, da un\'unica dashboard in tempo reale.',
+        desc: 'Traccia accessi e presenze di tutte le squadre, inclusi i subappaltatori, da un\'unica dashboard aggiornata a ogni timbratura.',
       },
       {
         title: 'I report di cantiere richiedono ore?',
@@ -39,7 +39,7 @@ const content: SettoreContent = {
         desc: 'Apre il turno dallo smartphone. GeoTapp registra coordinate GPS reali, timestamp e, se necessario, foto. Tutto automatico, ogni modifica è rilevabile.',
       },
       {
-        title: 'Il capo cantiere vede tutto in tempo reale',
+        title: 'Il capo cantiere vede le timbrature appena arrivano',
         desc: 'Dashboard unica per tutte le squadre e tutti i cantieri. Chi è presente, dove e da quando, senza inseguire nessuno al telefono.',
       },
       {
@@ -75,7 +75,7 @@ const content: SettoreContent = {
       {
         label: 'Conformità GDPR',
         competitor: 'Spesso da verificare',
-        geotapp: 'Conforme per design, modulistica inclusa',
+        geotapp: 'Costruito per stare nei paletti del GDPR, modulistica inclusa',
       },
     ],
   },
@@ -103,7 +103,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Dashboard multi-cantiere',
-        desc: 'Monitora più cantieri da un\'unica schermata. Vedi in tempo reale chi è presente, dove e da quando, per ogni cantiere attivo.',
+        desc: 'Monitora più cantieri da un\'unica schermata. Vedi chi è presente, dove e da quando, appena timbra, per ogni cantiere attivo.',
       },
       {
         title: 'Report automatici per SAL',
@@ -119,7 +119,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Conformità GDPR integrata',
-        desc: 'Geolocalizzazione conforme per design alle normative GDPR e alle linee guida del Garante Privacy. Modulistica per l\'informativa ai dipendenti inclusa.',
+        desc: 'Geolocalizzazione costruita per stare dentro i paletti del GDPR e le linee guida del Garante Privacy. Modulistica per l\'informativa ai dipendenti inclusa.',
       },
     ],
   },
@@ -138,7 +138,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Come gestisci i subappaltatori in cantiere?',
-        a: 'GeoTapp traccia accessi e presenze di tutte le squadre, inclusi subappaltatori. Ogni operatore timbra dal proprio smartphone e il capo cantiere vede tutto in tempo reale da una dashboard unica.',
+        a: 'GeoTapp traccia accessi e presenze di tutte le squadre, inclusi subappaltatori. Ogni operatore timbra dal proprio smartphone e il capo cantiere vede le timbrature appena arrivano da una dashboard unica.',
       },
       {
         q: 'I report di cantiere richiedono ore di lavoro manuale?',
@@ -165,7 +165,7 @@ const content: SettoreContent = {
     },
     {
       question: 'Come gestisci i subappaltatori in cantiere?',
-      answer: 'GeoTapp traccia accessi e presenze di tutte le squadre, inclusi subappaltatori. Ogni operatore timbra dal proprio smartphone e il capo cantiere vede tutto in tempo reale da una dashboard unica.',
+      answer: 'GeoTapp traccia accessi e presenze di tutte le squadre, inclusi subappaltatori. Ogni operatore timbra dal proprio smartphone e il capo cantiere vede le timbrature appena arrivano da una dashboard unica.',
     },
     {
       question: 'I report di cantiere richiedono ore di lavoro manuale?',

@@ -53,7 +53,7 @@
       },
       "generatore": {
         "title": "Generatore informativa GPS",
-        "desc": "Crea il fac-simile dell'informativa privacy GPS personalizzato col tuo logo, conforme GDPR. Gratis, nel tuo browser."
+        "desc": "Crea il fac-simile dell'informativa privacy GPS personalizzato col tuo logo, pensato per rispettare il GDPR. Gratis, nel tuo browser."
       },
       "conservazione": {
         "title": "Politica di conservazione dati",
@@ -201,16 +201,16 @@
       ]
     },
     "proof_note": "Prove raccolte solo tramite fotocamera, nessun tracciamento continuo.",
-    "proof_claim": "Fra l'entrata e l'uscita non registriamo niente.",
+    "proof_claim": "Fra l'entrata e l'uscita non registriamo niente in automatico.",
     "sticky_cta_subtitle": "14 giorni gratis, nessuna carta di credito"
   },
   "home_sections": {
     "flow": {
       "badge": "GeoTapp Flow",
-      "title": "L'ufficio vede tutto. In tempo reale.",
+      "title": "L'ufficio vede tutto. Appena arriva.",
       "subtitle": "Flow è il centro operativo dell'ufficio: commesse, attività, avanzamento e report strutturati. <strong class=\"text-slate-900\">Il campo lavora. L'ufficio sa.</strong><br/><br/><em><strong>«La tua azienda è un organismo vivo. Ogni intervento, ogni commessa, ogni operatore è un battito. GeoTapp Flow li tiene tutti sincronizzati.»</strong></em>",
       "features": {
-        "crm": "<strong>Gestione Commesse:</strong> Ogni intervento nasce strutturato, con tecnico assegnato, sede e stato aggiornato in tempo reale.",
+        "crm": "<strong>Gestione Commesse:</strong> Ogni intervento nasce strutturato, con tecnico assegnato, sede e stato aggiornato subito.",
         "pipeline": "<strong>Documentazione automatica:</strong> Ogni intervento completato genera un report pronto, senza compilazione manuale, senza errori."
       },
       "link": "Scopri GeoTapp Flow"
@@ -253,8 +253,8 @@
           "desc": "La posizione viene rilevata <strong>solo</strong> all'ingresso e all'uscita. Nessun tracciamento continuo."
         },
         {
-          "title": "Controllo operativo in tempo reale",
-          "desc": "I dati del campo arrivano in Flow immediatamente. Il responsabile ha visibilità live senza dover chiamare nessuno."
+          "title": "Controllo operativo aggiornato a ogni timbratura",
+          "desc": "I dati del campo arrivano in Flow appena vengono registrati. Il responsabile ha visibilità sempre aggiornata senza dover chiamare nessuno."
         },
         {
           "title": "Prova difendibile nel tempo",
@@ -284,7 +284,7 @@
       },
       "pulizie": {
         "name": "Pulizie",
-        "desc": "Imprese di pulizia, Facility, Multiservizi. Ogni passaggio documentato e verificabile dal committente, zero contestazioni.",
+        "desc": "Imprese di pulizia, Facility, Multiservizi. Ogni passaggio documentato e verificabile dal committente, meno contestazioni.",
         "cta": "Evita contestazioni"
       },
       "elettricisti": {
@@ -294,7 +294,7 @@
       },
       "idraulici": {
         "name": "Idraulici",
-        "desc": "Impianti idraulici, riscaldamento, caldaie. Rapportini GPS con foto prima e dopo, zero contestazioni sui lavori eseguiti.",
+        "desc": "Impianti idraulici, riscaldamento, caldaie. Rapportini GPS con foto prima e dopo, meno contestazioni sui lavori eseguiti.",
         "cta": "Prova ogni lavoro eseguito"
       },
       "termoidraulici": {
@@ -380,7 +380,7 @@
           {
             "name": "GeoTapp Flow Team",
             "tagline": "Per piccoli team operativi.",
-            "desc": "Coordina e gestisci il tuo team operativo in tempo reale.",
+            "desc": "Coordina e gestisci il tuo team operativo, aggiornato a ogni timbratura.",
             "features": [
               "5 utenti Flow inclusi",
               "Gestione commesse",
@@ -629,22 +629,22 @@
         "the-architect": {
           "name": "Pianificazione Lavori",
           "short": "Organizza il lavoro in fasi, task e scadenze. Tieni il progetto sotto controllo senza fogli Excel o messaggi WhatsApp.",
-          "full": "### Struttura il Lavoro. Controlla il Progresso.\n\nI lavori complessi richiedono struttura.\n**Pianificazione Lavori** porta ordine operativo.\n\n#### Fasi e Scadenze\n\nStruttura ogni intervento complesso in fasi operative con scadenze chiare.\nAssegna responsabilità a ogni membro del team.\n\n#### Monitoraggio Avanzamento\n\nVisualizza il progresso in tempo reale.\nSai sempre cosa è stato fatto e cosa rimane aperto.\nIntervieni prima che un ritardo diventi un problema cliente."
+          "full": "### Struttura il Lavoro. Controlla il Progresso.\n\nI lavori complessi richiedono struttura.\n**Pianificazione Lavori** porta ordine operativo.\n\n#### Fasi e Scadenze\n\nStruttura ogni intervento complesso in fasi operative con scadenze chiare.\nAssegna responsabilità a ogni membro del team.\n\n#### Monitoraggio Avanzamento\n\nVisualizza il progresso, aggiornato passo dopo passo.\nSai sempre cosa è stato fatto e cosa rimane aperto.\nIntervieni prima che un ritardo diventi un problema cliente."
         },
         "the-auditor": {
           "name": "Documentazione Interventi",
-          "short": "Raccogli prove fotografiche, note operative e documenti firmati per ogni intervento. Il lavoro svolto resta verificabile.",
-          "full": "### Prove Reali per Ogni Intervento.\n\nSenza documentazione, il lavoro svolto è contestabile.\n**Documentazione Interventi** rende ogni intervento verificabile.\n\n#### Prove Fotografiche\n\nI tecnici scattano foto direttamente da GeoTapp TimeTracker sul campo.\nLe immagini vengono collegate automaticamente alla commessa con ora e posizione.\n\n#### Firma Digitale Cliente\n\nIl cliente può firmare il rapportino direttamente sullo schermo del tecnico.\nLa firma digitale è inclusa nel report e costituisce prova del servizio erogato."
+          "short": "Raccogli prove fotografiche, note operative e documenti per ogni intervento. Il lavoro svolto resta verificabile.",
+          "full": "### Prove Reali per Ogni Intervento.\n\nSenza documentazione, il lavoro svolto è contestabile.\n**Documentazione Interventi** rende ogni intervento verificabile.\n\n#### Prove Fotografiche\n\nI tecnici scattano foto direttamente da GeoTapp TimeTracker sul campo.\nLe immagini vengono collegate automaticamente alla commessa con ora e posizione.\n\n#### Report Sigillato\n\nA fine intervento il sistema genera un report sigillato digitalmente: ogni modifica successiva resta rilevabile.\nIl cliente può verificarlo in autonomia, senza bisogno di accedere a GeoTapp."
         },
         "the-uplink": {
           "name": "Collegamento Campo-Ufficio",
-          "short": "I dati raccolti da TimeTracker arrivano in Flow in tempo reale. Campo e ufficio lavorano sugli stessi dati operativi.",
-          "full": "### Ufficio e Campo, Finalmente Connessi.\n\nLa disconnessione tra campo e ufficio genera errori, ritardi e contestazioni evitabili.\n**Collegamento Campo-Ufficio** elimina il gap.\n\n#### Sincronizzazione in Tempo Reale\n\nOgni timbratura, foto e nota registrata su TimeTracker arriva in Flow immediatamente.\nIl responsabile ha una visione live senza dover chiamare il tecnico.\n\n#### Storico Affidabile\n\nTutto quello che il tecnico registra sul campo resta archiviato e collegato alla commessa.\nNessun dato si perde. Nessuna informazione manca al momento della rendicontazione."
+          "short": "I dati raccolti da TimeTracker arrivano in Flow appena registrati. Campo e ufficio lavorano sugli stessi dati operativi.",
+          "full": "### Ufficio e Campo, Finalmente Connessi.\n\nLa disconnessione tra campo e ufficio genera errori, ritardi e contestazioni evitabili.\n**Collegamento Campo-Ufficio** elimina il gap.\n\n#### Sincronizzazione Immediata\n\nOgni timbratura, foto e nota registrata su TimeTracker arriva in Flow appena viene inviata.\nIl responsabile ha una visione sempre aggiornata senza dover chiamare il tecnico.\n\n#### Storico Affidabile\n\nTutto quello che il tecnico registra sul campo resta archiviato e collegato alla commessa.\nNessun dato si perde. Nessuna informazione manca al momento della rendicontazione."
         },
         "the-oracle": {
           "name": "Visibilità Operativa",
-          "short": "Dashboard operativa in tempo reale. Sai sempre quanti interventi sono aperti, in lavorazione o completati oggi.",
-          "full": "### Dati Operativi, Non Supposizioni.\n\nDecidere senza dati affidabili è pericoloso.\n**Visibilità Operativa** trasforma i dati del campo in informazioni concrete.\n\n#### Dashboard Operativa\n\nVedi in tempo reale:\n- Interventi aperti e in lavorazione\n- Tecnici attivi\n- Interventi completati oggi e questa settimana\n\n#### Report Periodici\n\nRicevi automaticamente un riepilogo delle attività.\nConfronta periodi, identifica colli di bottiglia e ottimizza le operazioni."
+          "short": "Dashboard operativa aggiornata a ogni intervento. Sai sempre quanti interventi sono aperti, in lavorazione o completati oggi.",
+          "full": "### Dati Operativi, Non Supposizioni.\n\nDecidere senza dati affidabili è pericoloso.\n**Visibilità Operativa** trasforma i dati del campo in informazioni concrete.\n\n#### Dashboard Operativa\n\nVedi, aggiornati a ogni intervento:\n- Interventi aperti e in lavorazione\n- Tecnici attivi\n- Interventi completati oggi e questa settimana\n\n#### Report Periodici\n\nRicevi automaticamente un riepilogo delle attività.\nConfronta periodi, identifica colli di bottiglia e ottimizza le operazioni."
         }
       }
     },
@@ -677,7 +677,7 @@
         "event-horizon": {
           "name": "Pianificazione Turni",
           "short": "Gestisci turni e disponibilità del personale. Vista settimanale e mensile per un coordinamento senza confusione o sovrapposizioni.",
-          "full": "### Nessun Conflitto di Turno.\n\nOrganizzare personale mobile richiede chiarezza.\n**Pianificazione Turni** dà al responsabile una visione precisa e aggiornata.\n\n#### Vista Calendario\n\nVisualizza chi lavora quando.\nIdentifica assenze, festività e sovrapposizioni prima che diventino problemi operativi.\n\n#### Disponibilità in Tempo Reale\n\nI dipendenti confermano la presenza o segnalano assenze direttamente dall'app.\nIl responsabile vede i buchi nella griglia prima di assegnare nuovi incarichi."
+          "full": "### Nessun Conflitto di Turno.\n\nOrganizzare personale mobile richiede chiarezza.\n**Pianificazione Turni** dà al responsabile una visione precisa e aggiornata.\n\n#### Vista Calendario\n\nVisualizza chi lavora quando.\nIdentifica assenze, festività e sovrapposizioni prima che diventino problemi operativi.\n\n#### Disponibilità Sempre Aggiornata\n\nI dipendenti confermano la presenza o segnalano assenze direttamente dall'app.\nIl responsabile vede i buchi nella griglia prima di assegnare nuovi incarichi."
         },
         "unit-matrix": {
           "name": "Anagrafica Operatori",
@@ -939,7 +939,7 @@
       "Cercò un'applicazione che gli togliesse quella rogna. Le trovò tutte uguali, e tutte gli chiedevano esattamente quello che già faceva a mano, data, inizio, fine, totale. Stessa fatica, bottoni più belli.",
       "Così, in ferie, se la sviluppò da solo. Una pagina web e due gesti, premi quando cominci e premi quando smetti, e il resto finiva ordinato in un archivio già pronto da mandare a fine mese.",
       "Poi il pensiero che ha cambiato tutto, se serve a me serve anche ai colleghi. E se serve al titolare, allora il flusso va girato, perché non è lui che deve rincorrere le persone per avere le ore, sono le ore che arrivano a lui ogni giorno da sole.",
-      "Da lì lo strumento è cresciuto in una direzione sola. Prima la geolocalizzazione a norma di legge, letta solo all'apertura e alla chiusura del turno e mai in continuo. Poi la prova verificabile automatica del lavoro svolto, perché il problema vero non era contare le ore, era dimostrarle quando qualcuno le metteva in dubbio.",
+      "Da lì lo strumento è cresciuto in una direzione sola. Prima la geolocalizzazione pensata per stare dentro i paletti di legge, letta solo all'apertura e alla chiusura del turno e mai in continuo. Poi la prova verificabile automatica del lavoro svolto, perché il problema vero non era contare le ore, era dimostrarle quando qualcuno le metteva in dubbio.",
       "Ah, e si scrive GeoTapp, con due P. Se ne trovi una sola in giro, non siamo noi, ma non gliene vogliamo.",
       "Il nome del resto è tutto lì dentro. La geolocalizzazione, un tap, un'app."
     ],
@@ -984,7 +984,7 @@
       "section_label": "Il fondatore",
       "name": "Michele Angelo Petraroli",
       "role": "Founder & CEO",
-      "bio": "Michele Angelo Petraroli è founder e CEO di GeoTapp, SaaS italiano per la gestione delle squadre sul campo nelle PMI europee. Dall'esperienza diretta nelle PMI di servizi (pulizie, installatori, sicurezza) ha visto come si perdono soldi quando manca la prova del lavoro svolto. Ha fondato GeoTapp nel 2024 per risolvere il problema alla radice. Oggi GeoTapp aiuta le PMI europee con tracciabilità GPS conforme al GDPR, prove fotografiche e firme digitali che rendono ogni intervento verificabile.",
+      "bio": "Michele Angelo Petraroli è founder e CEO di GeoTapp, SaaS italiano per la gestione delle squadre sul campo nelle PMI europee. Dall'esperienza diretta nelle PMI di servizi (pulizie, installatori, sicurezza) ha visto come si perdono soldi quando manca la prova del lavoro svolto. Ha fondato GeoTapp nel 2024 per risolvere il problema alla radice. Oggi GeoTapp aiuta le PMI europee con tracciabilità GPS pensata per stare dentro i paletti del GDPR, prove fotografiche e firme digitali che rendono ogni intervento verificabile.",
       "expertise_label": "Aree di competenza",
       "expertise": [
         "Field Service Management",
@@ -1079,7 +1079,7 @@
   },
   "roi": {
     "meta_title": "Calcolatore ROI GeoTapp - Scopri il tuo risparmio reale",
-    "meta_desc": "Calcola in 2 minuti quanto risparmieresti con GeoTapp: meno burocrazia, zero contestazioni, operatori più produttivi. Senza email e senza account.",
+    "meta_desc": "Calcola in 2 minuti quanto risparmieresti con GeoTapp: meno burocrazia, meno contestazioni, operatori più produttivi. Senza email e senza account.",
     "hero_title": "Calcola il tuo ROI con GeoTapp",
     "hero_subtitle": "Inserisci i dati della tua azienda e scopri quanto puoi risparmiare ogni anno.",
     "step1_title": "La tua azienda",
@@ -1185,8 +1185,8 @@
     "offline_desc": "La connessione cade, il lavoro no. Abbiamo costruito un database locale sincronizzato (CRDT) che vive dentro l'app. I tuoi tecnici possono lavorare in un bunker sotterraneo; non appena vedranno uno specchio di cielo, i dati si allineeranno silenziosamente col cloud.",
     "encryption_title": "Military-Grade Encryption",
     "encryption_desc": "Dormi sonni tranquilli. Utilizziamo la crittografia AES-256 a riposo e TLS 1.3 in transito. Anche se un attaccante intercettasse i tuoi dati, vedrebbe solo rumore bianco. La privacy non è solo una checkbox legale, è matematica.",
-    "realtime_title": "Real-Time WebSocket",
-    "realtime_desc": "Basta premere F5. Grazie ai WebSocket, le informazioni viaggiano istantaneamente. Se un tecnico chiude un ticket a Roma, il manager a Milano vede il pallino diventare verde nello stesso millisecondo. È come essere ovunque contemporaneamente.",
+    "realtime_title": "Sincronizzazione Istantanea",
+    "realtime_desc": "Basta premere F5. I dati viaggiano in pochi istanti tra campo e ufficio. Se un tecnico chiude un intervento a Roma, il manager a Milano vede lo stato aggiornarsi in dashboard, senza dover chiamare nessuno.",
     "cms_title": "Headless CMS Integration",
     "cms_desc": "Il contenuto è liquido. La nostra architettura headless disaccoppia i dati dalla presentazione. Questo significa che puoi pubblicare un articolo sul blog, spararlo sull'app mobile e inviarlo via newsletter con un solo click.",
     "datalake_title": "Scalable Data Lake",
@@ -1246,7 +1246,7 @@
     "scaricaModello": "Scarica il modello",
     "autoritaCompetente": "Autorità competente",
     "disclaimer": "Questa e una risorsa informativa, non una consulenza legale. Prima di attivare un sistema di monitoraggio fai verificare la tua situazione da un professionista.",
-    "ctaTitolo": "Vuoi un sistema già a norma?",
+    "ctaTitolo": "Vuoi uno strumento pensato per il GDPR?",
     "ctaTesto": "GeoTapp registra la posizione solo alla timbratura, non in continuo, e genera l'informativa da far firmare. Provalo gratis.",
     "ctaBottone": "Prova GeoTapp gratis",
     "faq": {

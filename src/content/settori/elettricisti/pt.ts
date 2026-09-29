@@ -3,12 +3,12 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'App para Eletricistas | GeoTapp - Relatórios GPS e Provas',
-    description: 'App para eletricistas: relatórios GPS verificados, fotos de instalações e registos invioláveis. Encerre disputas com provas reais. Experimente grátis.',
+    description: 'App para eletricistas: relatórios GPS verificados, fotos de instalações e registos verificáveis. Encerre disputas com provas reais. Experimente grátis.',
   },
   hero: {
     badge: 'App para Eletricistas e Instaladores Elétricos',
     h1_line1: 'App para eletricistas:',
-    h1_line2: 'relatórios GPS, provas fotográficas e zero disputas.',
+    h1_line2: 'relatórios GPS, provas fotográficas e menos disputas.',
     subtitle: 'GeoTapp regista cada intervenção elétrica com GPS, fotos e carimbos de data/hora verificáveis. O cliente contesta o trabalho? Mostre o relatório, sem discussão. Os seus técnicos estão protegidos, as suas faturas também.',
     cta_primary: 'Começar grátis',
     cta_note: 'Sem compromisso. Resposta em 12 horas úteis.',
@@ -39,12 +39,12 @@ const content: SettoreContent = {
         desc: 'Com o GeoTapp TimeTracker regista entrada e saída com GPS, fotografa a instalação e adiciona notas técnicas a partir do telemóvel.',
       },
       {
-        title: 'O escritório vê tudo em tempo real',
+        title: 'O escritório vê tudo assim que chega',
         desc: 'O GeoTapp Flow recebe os dados instantaneamente. O responsável vê obra, técnico atribuído, progresso e provas fotográficas sem ligar.',
       },
       {
         title: 'O relatório é a sua prova',
-        desc: 'No final, o sistema gera um relatório selado: GPS, fotos da instalação, notas técnicas. Inviolável. O cliente pode verificá-lo de forma autónoma.',
+        desc: 'No final, o sistema gera um relatório selado: GPS, fotos da instalação, notas técnicas. Qualquer alteração é detetável. O cliente pode verificá-lo de forma autónoma.',
       },
     ],
   },
@@ -57,7 +57,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Fotos de instalação seladas',
-        desc: 'O técnico fotografa a partir da app. Cada imagem está ligada ao GPS e ao carimbo de data/hora, inviolável.',
+        desc: 'O técnico fotografa a partir da app. Cada imagem está ligada ao GPS e ao carimbo de data/hora; qualquer alteração é detetável.',
       },
       {
         title: 'Relatórios digitais automáticos',
@@ -96,7 +96,7 @@ const content: SettoreContent = {
       },
       {
         q: 'O GeoTapp cumpre com o RGPD para geolocalização de funcionários?',
-        a: 'Sim. O GeoTapp gere a geolocalização em conformidade com o RGPD e inclui os formulários de informação para trabalhadores.',
+        a: 'Sim. O GeoTapp foi pensado para ficar dentro do RGPD na gestão da geolocalização e inclui os formulários de informação para os trabalhadores.',
       },
     ],
   },

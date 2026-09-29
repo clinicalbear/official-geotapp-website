@@ -3,13 +3,13 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'App til VVS-installatører | GeoTapp GPS-rapporter',
-    description: 'App til VVS-installatører: GPS-verificerede rapporter, fotos af installationer og uændrelig dokumentation. Løs tvister med reel dokumentation. Prøv gratis.',
+    description: 'App til VVS-installatører: GPS-verificerede rapporter, fotos af installationer og forseglet dokumentation. Løs tvister med reel dokumentation. Prøv gratis.',
   },
   hero: {
     badge: 'App til VVS-installatører og Varmeanlægsinstallatører',
     h1_line1: 'App til VVS-installatører:',
-    h1_line2: 'GPS-rapporter, fotodokumentation og nul tvister.',
-    subtitle: 'GeoTapp registrerer hvert job på kedler og varmeanlæg med GPS, fotos og verificerbare tidsstempler. Kunden nægter udskiftede dele? Vis rapporten, ingen diskussion. Dine teknikere er beskyttet, din fakturering også.',
+    h1_line2: 'GPS-rapporter, fotodokumentation og færre tvister.',
+    subtitle: 'GeoTapp registrerer hvert job på kedler og varmeanlæg med GPS, fotos og verificerbare tidsstempler. Kunden nægter udskiftede dele? Vis rapporten: diskussionen afklares med dataene. Dine teknikere er beskyttet, din fakturering også.',
     cta_primary: 'Start gratis nu!',
     cta_note: 'Ingen binding. Svar inden for 12 arbejdstimer.',
   },
@@ -39,17 +39,17 @@ const content: SettoreContent = {
         desc: 'Med GeoTapp TimeTracker stempler han ind og ud med GPS, fotograferer anlægget og kedlen og tilføjer noter om udskiftede dele fra sin smartphone.',
       },
       {
-        title: 'Kontoret ser alt i realtid',
+        title: 'Kontoret ser det, så snart der stemples',
         desc: 'GeoTapp Flow modtager data øjeblikkeligt. Den ansvarlige ser sagen, den tildelte tekniker, fremskridt og fotodokumentation uden at ringe.',
       },
       {
         title: 'Rapporten er dit bevis',
-        desc: 'Efter jobbet genererer systemet en forseglet rapport: GPS-tidsstempel, anlægsfotos og dele, tekniske noter. Uændrelig. Kunden kan verificere den selvstændigt.',
+        desc: 'Efter jobbet genererer systemet en forseglet rapport: GPS-tidsstempel, anlægsfotos og dele, tekniske noter. Enhver ændring forbliver synlig. Kunden kan verificere den selvstændigt.',
       },
     ],
   },
   differenza: {
-    title: 'App til VVS-installatører: tidsregistrering eller jobcertificering?',
+    title: 'App til VVS-installatører: tidsregistrering eller verificerbar dokumentation?',
     subtitle: 'De fleste apps registrerer indtjek. GeoTapp producerer verificerbar dokumentation.',
     rows: [
       {
@@ -60,7 +60,7 @@ const content: SettoreContent = {
       {
         label: 'Ved tvist',
         competitor: 'Data ikke forsvarlig',
-        geotapp: 'Forseglet rapport, uændrelig',
+        geotapp: 'Forseglet rapport, enhver ændring synlig',
       },
       {
         label: 'Jobdokumentation',
@@ -75,7 +75,7 @@ const content: SettoreContent = {
       {
         label: 'GDPR-overholdelse',
         competitor: 'Ofte at verificere',
-        geotapp: 'Compliant by design, formularer inkluderet',
+        geotapp: 'Bygget til at holde sig inden for GDPR, formularer inkluderet',
       },
     ],
   },
@@ -90,14 +90,14 @@ const content: SettoreContent = {
     dopo: [
       'Kunden nægter, at ventilen blev udskiftet.',
       'Du åbner rapporten: foto af den fjernede del, den nye monterede, GPS-tidsstempel, tekniske noter.',
-      'Du sender den. Tvisten slutter på et minut.',
+      'Du sender den. Tvisten afklares på et minut.',
       'Betalingen er sikret. Teknikeren er beskyttet.',
     ],
   },
   scenario: {
     title: 'Virkelig sag',
     body: 'En kunde bestrider udskiftningen af en kedelbrænder og nægter at betale fakturaen. Med GeoTapp åbner du rapporten: foto af den defekte, fjernede del, den nye installerede, GPS-tidsstempel for jobbet og tekniske noter fra teknikeren, alt automatisk genereret fra smartphonen på stedet.',
-    resolution: 'Tvisten falder. Fakturaen betales fuldt ud.',
+    resolution: 'Tvisten afklares. Fakturaen betales fuldt ud.',
   },
   features: {
     title: 'App til VVS-installatører: hvad du finder i GeoTapp.',
@@ -108,7 +108,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Forseglede anlægsfotos',
-        desc: 'Teknikeren fotograferer fra appen under og efter jobbet. Hvert billede er knyttet til GPS og tidsstempel, uændrelig efter generering.',
+        desc: 'Teknikeren fotograferer fra appen under og efter jobbet. Hvert billede er knyttet til GPS og tidsstempel, og enhver ændring forbliver synlig efter generering.',
       },
       {
         title: 'Automatiske digitale jobrapporter',
@@ -134,12 +134,12 @@ const content: SettoreContent = {
     cta: 'Start gratis nu!',
   },
   trust: {
-    title: 'Vores rapporter kan ikke ændres. Ikke af dig. Ikke af os.',
+    title: 'Vores rapporter er forseglet. Enhver ændring forbliver synlig, for dig og for os.',
     body: 'GeoTapp-rapporter genereres af systemet i øjeblikket for jobbet. Der er intet panel til at "korrigere" et tidspunkt eller flytte et foto. Dataene er som de er, digitalt signeret, med rigtig GPS.',
     badge: 'Verificerbar af alle, uden adgang til din konto',
   },
   testimonial: {
-    quote: 'Med GeoTapp fotograferer mine teknikere anlægget før og efter hvert job. Tvister om dele er forsvundet. Fakturaer bliver betalt.',
+    quote: 'Med GeoTapp fotograferer mine teknikere anlægget før og efter hvert job. Tvister om dele er blevet sjældne. Fakturaer bliver betalt.',
     author: 'Marco S.',
     role: 'Ejer, bolig- og erhvervsvarmeinstallationer',
   },
@@ -153,7 +153,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Kan jeg bruge GeoTapp til at dokumentere udskiftning af dele på kedler?',
-        a: 'Ja. Teknikeren fotograferer fra appen den fjernede og den installerede del. Hvert billede er knyttet til GPS, tidsstempel og sag, inkluderet i den uændrede rapport.',
+        a: 'Ja. Teknikeren fotograferer fra appen den fjernede og den installerede del. Hvert billede er knyttet til GPS, tidsstempel og sag, inkluderet i den forseglede rapport.',
       },
       {
         q: 'Hjælper GeoTapp med at løse kundetvister om installationer?',
@@ -176,7 +176,7 @@ const content: SettoreContent = {
   schema_faq: [
     {
       question: 'Fungerer GeoTapp som app til VVS-installatører?',
-      answer: 'Ja. GeoTapp er appen til VVS-installatører og varmeanlægsinstallatører, der registrerer hvert job på kedler og anlæg med GPS, fotos og verificerbare tidsstempler. Teknikeren stempler ind fra stedet, kontoret ser alt i realtid og kunden modtager en forseglet rapport.',
+      answer: 'Ja. GeoTapp er appen til VVS-installatører og varmeanlægsinstallatører, der registrerer hvert job på kedler og anlæg med GPS, fotos og verificerbare tidsstempler. Teknikeren stempler ind fra stedet, kontoret ser det, så snart der stemples, og kunden modtager en forseglet rapport.',
     },
     {
       question: 'Hvordan forsegler jeg et kedelJob med GeoTapp?',
@@ -184,7 +184,7 @@ const content: SettoreContent = {
     },
     {
       question: 'Håndterer GeoTapp flere teams af VVS-installatører på forskellige jobs?',
-      answer: 'Ja. GeoTapp Flow lader ejeren koordinere flere teams, tildele akutjob, følge sagsstatus og indsamle fotodokumentation fra alle aktive steder i realtid.',
+      answer: 'Ja. GeoTapp Flow lader ejeren koordinere flere teams, tildele akutjob, følge sagsstatus og indsamle fotodokumentation fra alle aktive steder, så snart den uploades.',
     },
     {
       question: 'Accepteres GeoTapp-rapporter ved tvister om varmeinstallationer?',

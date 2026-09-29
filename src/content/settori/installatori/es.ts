@@ -3,13 +3,13 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'App de Geolocalización para Instaladores | GeoTapp',
-    description: 'App de geolocalización para instaladores: control horario GPS, partes de trabajo y pruebas fotográficas del equipo en campo. Conforme al RGPD.',
+    description: 'App de geolocalización para instaladores: control horario GPS, partes de trabajo y pruebas fotográficas del equipo en campo. Diseñada para el RGPD.',
   },
   hero: {
     badge: 'Software para Instaladores Eléctricos, Fontaneros y Equipos de Mantenimiento',
     h1_line1: 'App de geolocalización para instaladores:',
     h1_line2: 'partes, horas y pruebas en un solo lugar',
-    subtitle: 'GeoTapp conecta Flow + TimeTracker para empresas que trabajan entre furgonetas, obras y clientes finales. Las apps para Android e iOS ayudan al técnico en campo; la oficina ve el parte, los tiempos, las pruebas fotográficas y las notas sin tener que llamar a nadie. Conforme al RGPD y al Convenio colectivo de construcción.',
+    subtitle: 'GeoTapp conecta Flow + TimeTracker para empresas que trabajan entre furgonetas, obras y clientes finales. Las apps para Android e iOS ayudan al técnico en campo; la oficina ve el parte, los tiempos, las pruebas fotográficas y las notas sin tener que llamar a nadie. Diseñada para encajar en el RGPD y en el Convenio colectivo de construcción.',
     cta_primary: 'Solicitar una demo',
     cta_note: 'Sin compromiso. Respuesta en 12 horas hábiles.',
   },
@@ -36,10 +36,10 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'El técnico ficha en el lugar de trabajo',
-        desc: 'Con GeoTapp TimeTracker registra entrada, salida, fotos y notas directamente desde su smartphone. GPS verificado, RGPD cumplido.',
+        desc: 'Con GeoTapp TimeTracker registra entrada, salida, fotos y notas directamente desde su smartphone. GPS verificado, diseñado para el RGPD.',
       },
       {
-        title: 'La oficina lo ve todo en tiempo real',
+        title: 'La oficina lo sabe en cuanto se ficha',
         desc: 'Flow recibe los datos al instante. El responsable ve el parte, el avance, el técnico asignado y las pruebas fotográficas sin llamar.',
       },
       {
@@ -92,7 +92,7 @@ const content: SettoreContent = {
       },
       {
         q: '¿Es la geolocalización GPS conforme al RGPD y a la LOPDGDD?',
-        a: 'Sí. GeoTapp registra exclusivamente la entrada y la salida con validación GPS de la ubicación de trabajo, sin seguimiento continuo durante la jornada ni geolocalización fuera del horario laboral. La minimización de datos (art. 5.1.c RGPD) y la finalidad definida están integradas en la arquitectura del producto, no son ajustes opcionales. Los plazos de conservación cumplen el Estatuto de los Trabajadores y la LOPDGDD (art. 87-91 sobre derechos digitales).',
+        a: 'Sí. GeoTapp solo registra la posición cuando el trabajador hace un gesto: entrada, cada pausa, salida y la foto de prueba del trabajo, con validación GPS; nunca en seguimiento continuo durante la jornada ni geolocalización fuera del horario laboral. La minimización de datos (art. 5.1.c RGPD) y la finalidad definida están integradas en la arquitectura del producto, no son ajustes opcionales. Los plazos de conservación siguen el Estatuto de los Trabajadores y la LOPDGDD (art. 87-91 sobre derechos digitales).',
       },
       {
         q: '¿Cómo trata GeoTapp la privacidad del cliente final?',

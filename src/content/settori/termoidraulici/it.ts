@@ -8,7 +8,7 @@ const content: SettoreContent = {
   hero: {
     badge: 'App per Termoidraulici e Impiantisti Termosanitari',
     h1_line1: 'App per termoidraulici:',
-    h1_line2: 'rapportini GPS, prove fotografiche e zero contestazioni.',
+    h1_line2: 'rapportini GPS, prove fotografiche e meno contestazioni.',
     subtitle: 'GeoTapp registra ogni intervento su caldaie e impianti con GPS, foto e timestamp verificabili. Il cliente nega i materiali sostituiti? Mostri il rapportino, non discuti. Il tuo tecnico è protetto, il tuo fatturato anche.',
     cta_primary: 'Inizia subito gratuitamente!',
     cta_note: 'Nessun vincolo. Risposta entro 12 ore lavorative.',
@@ -39,7 +39,7 @@ const content: SettoreContent = {
         desc: 'Con GeoTapp TimeTracker timbra ingresso e uscita con GPS, scatta foto dell\'impianto e della caldaia, aggiunge note sui componenti sostituiti dallo smartphone.',
       },
       {
-        title: 'L\'ufficio vede tutto in tempo reale',
+        title: 'L\'ufficio vede tutto appena arriva',
         desc: 'GeoTapp Flow riceve i dati istantaneamente. Il responsabile vede commessa, tecnico assegnato, avanzamento e prove fotografiche senza chiamare.',
       },
       {
@@ -75,7 +75,7 @@ const content: SettoreContent = {
       {
         label: 'Conformità GDPR',
         competitor: 'Spesso da verificare',
-        geotapp: 'Conforme per design, modulistica inclusa',
+        geotapp: 'Costruito per stare nei paletti del GDPR, modulistica inclusa',
       },
     ],
   },
@@ -176,7 +176,7 @@ const content: SettoreContent = {
   schema_faq: [
     {
       question: 'GeoTapp funziona come app per termoidraulici?',
-      answer: 'Sì. GeoTapp è l\'app per termoidraulici e impiantisti che registra ogni intervento su caldaie e impianti con GPS, foto e timestamp verificabili. Il tecnico timbra dal campo, l\'ufficio vede tutto in tempo reale, il cliente riceve un rapportino sigillato.',
+      answer: 'Sì. GeoTapp è l\'app per termoidraulici e impiantisti che registra ogni intervento su caldaie e impianti con GPS, foto e timestamp verificabili. Il tecnico timbra dal campo, l\'ufficio vede tutto appena arriva, il cliente riceve un rapportino sigillato.',
     },
     {
       question: 'Come sigillo un intervento su caldaia con GeoTapp?',
@@ -184,7 +184,7 @@ const content: SettoreContent = {
     },
     {
       question: 'GeoTapp aiuta a gestire più squadre di termoidraulici su interventi diversi?',
-      answer: 'Sì. GeoTapp Flow permette al titolare di coordinare più squadre, assegnare commesse urgenti, seguire lo stato degli interventi e raccogliere prove fotografiche da tutti i cantieri attivi in tempo reale.',
+      answer: 'Sì. GeoTapp Flow permette al titolare di coordinare più squadre, assegnare commesse urgenti, seguire lo stato degli interventi e raccogliere prove fotografiche da tutti i cantieri attivi, appena vengono caricate.',
     },
     {
       question: 'I rapportini GeoTapp sono accettati in caso di contestazione su impianti termici?',

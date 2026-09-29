@@ -3,7 +3,7 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'App för Installatörer & Tekniker: GPS-uppdrags­spårning | GeoTapp',
-    description: 'Spåra uppdrag, timmar och material för VVS-, el- och rörinstallatörer med GPS. Automatiska tjänstebevis, inga kundtvister. Testa GeoTapp gratis.',
+    description: 'Spåra uppdrag, timmar och material för VVS-, el- och rörinstallatörer med GPS. Automatiska tjänstebevis, färre kundtvister. Testa GeoTapp gratis.',
   },
   hero: {
     badge: 'App för installatörer, tekniker och serviceteam',
@@ -22,7 +22,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Jaga tekniker för uppdateringar',
-        desc: 'Realtidskarta med status för varje uppdrag. Du vet var alla dina tekniker befinner sig utan att ringa ett enda samtal.',
+        desc: 'Uppdragsöversikt med status för varje uppdrag. Du ser var och när varje tekniker senast stämplade in, utan att ringa.',
       },
       {
         title: 'Ofullständiga eller saknade arbetsblad',
@@ -40,7 +40,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Timmar registreras automatiskt per uppdrag',
-        desc: 'Varje arbetad minut kopplas till rätt uppdrag. Chefen ser i realtid vem som arbetar var.',
+        desc: 'Varje arbetad minut kopplas till rätt uppdrag. Chefen ser var varje tekniker senast stämplade in.',
       },
       {
         title: 'Kundrapporten genereras utan att skriva något',
@@ -75,7 +75,7 @@ const content: SettoreContent = {
       {
         label: 'GDPR-efterlevnad',
         competitor: 'Ofta tveksam',
-        geotapp: 'Kompatibel by design, formulär inkluderade',
+        geotapp: 'Byggd för att hålla sig inom GDPR, formulär för anställdinformation ingår',
       },
     ],
   },
@@ -119,7 +119,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Inbyggd GDPR-efterlevnad',
-        desc: 'Geolokalisering kompatibel by design med GDPR-regler. Mallar för integritetsinformation till anställda inkluderade.',
+        desc: 'Geolokalisering byggd för att hålla sig inom GDPR:s regler. Mallar för integritetsinformation till anställda ingår.',
       },
     ],
   },
@@ -138,7 +138,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Hur övervakar jag flera team på olika uppdrag?',
-        a: 'GeoTapp erbjuder en realtidskarta med status för varje uppdrag. Du vet exakt var dina tekniker befinner sig och vilket uppdrag de arbetar på, utan att ringa.',
+        a: 'GeoTapp visar en uppdragsöversikt med status för varje uppdrag. Du ser var och när varje tekniker senast stämplade in, och vilket uppdrag de jobbar på, utan att ringa.',
       },
       {
         q: 'Hur snabbar jag upp faktureringen av avslutade uppdrag?',
@@ -165,7 +165,7 @@ const content: SettoreContent = {
     },
     {
       question: 'Hur övervakar jag flera team på olika uppdrag?',
-      answer: 'GeoTapp erbjuder en realtidskarta med status för varje uppdrag. Du vet exakt var dina tekniker befinner sig och vilket uppdrag de arbetar på, utan att ringa.',
+      answer: 'GeoTapp visar en uppdragsöversikt med status för varje uppdrag. Du ser var och när varje tekniker senast stämplade in, och vilket uppdrag de jobbar på, utan att ringa.',
     },
     {
       question: 'Hur snabbar jag upp faktureringen av avslutade uppdrag?',

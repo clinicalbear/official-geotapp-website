@@ -3,13 +3,13 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'Software para Segurança Privada | GeoTapp - Presenças GPS',
-    description: 'Gestão de pessoal para segurança privada e vigilantes: presenças GPS verificadas, relatórios de incidentes e cartões conforme Lei 34/2013.',
+    description: 'Gestão de pessoal para segurança privada e vigilantes: presenças GPS verificadas, relatórios de incidentes e cartões alinhados com a Lei 34/2013.',
   },
   hero: {
     badge: 'Software para Segurança Privada, Vigilantes e Segurança em Eventos',
     h1_line1: 'Presenças verificadas e registos de turno',
     h1_line2: 'para vigilantes e segurança privada',
-    subtitle: 'GeoTapp Flow e TimeTracker documentam a presença dos vigilantes nos postos atribuídos com GPS verificado e timestamps imutáveis. Rastreamento de cartões profissionais conforme Lei 34/2013, passagem de turno digital e relatórios de incidentes geolocalizados, tudo numa única plataforma.',
+    subtitle: 'GeoTapp Flow e TimeTracker documentam a presença dos vigilantes nos postos atribuídos com GPS verificado e timestamps selados. Rastreamento de cartões profissionais alinhado com a Lei 34/2013, passagem de turno digital e relatórios de incidentes geolocalizados, tudo numa única plataforma.',
     cta_primary: 'Solicitar uma Demo',
     cta_note: 'Sem compromisso. Resposta em 12 horas úteis.',
   },
@@ -18,11 +18,11 @@ const content: SettoreContent = {
     items: [
       {
         title: 'Provar a presença nos postos no momento contratual',
-        desc: 'Um cliente contesta se o vigilante estava no posto a uma hora específica. Sem GPS verificado e timestamps imutáveis, o litígio fica em aberto e a conformidade contratual é impossível de demonstrar.',
+        desc: 'Um cliente contesta se o vigilante estava no posto a uma hora específica. Sem provas GPS e timestamps verificáveis, o litígio fica em aberto e arrisca perder o contrato.',
       },
       {
         title: 'Relatórios de incidentes sem prova de localização',
-        desc: 'Um relatório de incidente escrito à mão tem pouco valor probatório sem posição GPS selada e timestamp inviolável. Os registos em papel são demasiado fáceis de contestar junto ao PSP ou em tribunal.',
+        desc: 'Um relatório de incidente escrito à mão tem pouco valor probatório sem posição GPS selada e timestamp verificável. Os registos em papel são demasiado fáceis de contestar junto ao PSP ou em tribunal.',
       },
       {
         title: 'Passagem de turno ainda em papel',
@@ -36,10 +36,10 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'O vigilante regista entrada no posto atribuído',
-        desc: 'GeoTapp TimeTracker regista entrada, saída, posição GPS e fotos com timestamps imutáveis. Cada ronda fica documentada automaticamente a partir do smartphone do vigilante.',
+        desc: 'GeoTapp TimeTracker regista entrada, saída, posição GPS e fotos com timestamps selados. Cada ronda fica documentada automaticamente a partir do smartphone do vigilante.',
       },
       {
-        title: 'O responsável vê todos os postos em tempo real',
+        title: 'O responsável vê todos os postos assim que são registados',
         desc: 'Flow recebe os dados instantaneamente. O chefe de operações verifica a cobertura completa dos postos, as rendições e quaisquer desvios sem necessidade de ligar para o terreno.',
       },
       {
@@ -57,7 +57,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Rastreamento de cartões profissionais (Lei 34/2013)',
-        desc: 'Gira cartões de identificação profissional, formações obrigatórias e datas de validade de cada vigilante. Nenhum trabalhador não habilitado em serviço por engano.',
+        desc: 'Gira cartões de identificação profissional, formações obrigatórias e datas de validade de cada vigilante. Reduz o risco de um trabalhador sem habilitação entrar em serviço por engano.',
       },
       {
         title: 'Export compatível com Primavera e TOConline',
@@ -66,7 +66,7 @@ const content: SettoreContent = {
     ],
   },
   testimonial: {
-    quote: 'Com o GeoTapp acabaram os litígios sobre cobertura de postos. Os clientes recebem o registo de presença com carimbo GPS e não há nada a discutir.',
+    quote: 'Com o GeoTapp os litígios sobre cobertura de postos tornaram-se raros. Os clientes recebem o registo de presença com carimbo GPS e há muito pouco a discutir.',
     author: 'Rui F.',
     role: 'Diretor de Operações, empresa de segurança privada',
   },
@@ -76,11 +76,11 @@ const content: SettoreContent = {
     items: [
       {
         q: 'O GeoTapp é adequado para empresas de segurança privada e vigilantes habilitados?',
-        a: 'Sim. O GeoTapp é utilizado por empresas de segurança privada para documentar a presença dos vigilantes nos postos atribuídos com GPS verificado, gerir rendições de turno e rastrear os cartões profissionais conforme a Lei 34/2013.',
+        a: 'Sim. O GeoTapp é utilizado por empresas de segurança privada para documentar a presença dos vigilantes nos postos atribuídos com GPS verificado, gerir rendições de turno e rastrear os cartões profissionais alinhados com a Lei 34/2013.',
       },
       {
         q: 'Como ajuda o GeoTapp na documentação de relatórios de incidentes?',
-        a: 'O TimeTracker liga cada incidente a uma posição GPS selada e um timestamp imutável. O relatório de incidente gerado inclui coordenadas, hora e fotografias, tornando-o defensável em procedimentos legais e contratuais.',
+        a: 'O TimeTracker liga cada incidente a uma posição GPS selada e um timestamp verificável. O relatório de incidente gerado inclui coordenadas, hora e fotografias, tornando-o defensável em procedimentos legais e contratuais.',
       },
       {
         q: 'O GeoTapp suporta a passagem de turno digital entre vigilantes?',
@@ -89,7 +89,7 @@ const content: SettoreContent = {
     ],
   },
   cta: {
-    title: 'Fim aos litígios sobre cobertura de postos.',
+    title: 'Menos litígios sobre cobertura de postos.',
     subtitle: 'GeoTapp Flow e TimeTracker dão à sua empresa de segurança as provas verificáveis que clientes e reguladores exigem.',
     primary: 'Solicitar uma Demo',
     secondary: 'Ver Preços',

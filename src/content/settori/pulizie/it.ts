@@ -83,10 +83,10 @@ const content: SettoreContent = {
       {
         label: 'Conformità GDPR',
         competitor: 'Spesso da verificare',
-        geotapp: 'Conforme per design, modulistica inclusa',
+        geotapp: 'Costruito per stare nei paletti del GDPR, modulistica inclusa',
       },
       {
-        label: 'Controllo in tempo reale',
+        label: 'Visibilità aggiornata a ogni timbratura',
         competitor: 'No',
         geotapp: 'Sì, tutti i siti, tutti gli operatori',
       },
@@ -134,7 +134,7 @@ const content: SettoreContent = {
         desc: 'Con GeoTapp TimeTracker registra ingresso, uscita, foto degli ambienti e note dallo smartphone. Il GPS è verificato, non inserito a mano. Il dato è quello: ogni modifica è rilevabile.',
       },
       {
-        title: "L'ufficio controlla in tempo reale",
+        title: "L'ufficio è aggiornato a ogni timbratura",
         desc: 'Flow mostra in una dashboard unica chi è presente, dove e da quanto. Vedi lo stato di ogni edificio, ricevi alert su anomalie e assegni commesse, senza inseguire nessuno.',
       },
       {
@@ -153,7 +153,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Controllo reale su tutti i siti',
-        desc: 'Non devi più sperare che i tuoi operatori siano dove devono essere. Lo vedi in tempo reale. Su tutti gli edifici contemporaneamente, da qualsiasi dispositivo.',
+        desc: 'Non devi più sperare che i tuoi operatori siano dove devono essere. Lo vedi appena timbrano. Su tutti gli edifici contemporaneamente, da qualsiasi dispositivo.',
       },
       {
         title: 'Report difendibili in qualsiasi sede',
@@ -161,7 +161,7 @@ const content: SettoreContent = {
       },
       {
         title: "Pronto per l'ispettorato",
-        desc: 'Orari, pause, straordinari, notturni, tutto tracciato e conforme al CCNL Multiservizi. In caso di controllo hai tutta la documentazione in ordine in tre clic.',
+        desc: 'Orari, pause, straordinari, notturni: tutto tracciato secondo le voci del CCNL Multiservizi. In caso di controllo hai tutta la documentazione in ordine in tre clic.',
       },
       {
         title: 'Gestione multi-sito senza chiamate',
@@ -227,11 +227,11 @@ const content: SettoreContent = {
       },
       {
         q: 'È compatibile con il CCNL Multiservizi?',
-        a: 'Sì. GeoTapp traccia orari, pause e straordinari in modo conforme al CCNL Multiservizi, inclusi notturni e festivi. I dati sono esportabili in formato compatibile con Zucchetti e INAZ per l\'elaborazione paghe. In caso di controllo ispettivo, hai tutta la documentazione pronta.',
+        a: 'Sì. GeoTapp traccia orari, pause e straordinari secondo le voci del CCNL Multiservizi, inclusi notturni e festivi. I dati sono esportabili in formato compatibile con Zucchetti e INAZ per l\'elaborazione paghe. In caso di controllo ispettivo, hai tutta la documentazione pronta.',
       },
       {
         q: 'Come gestisco squadre distribuite su più siti contemporaneamente?',
-        a: "Con GeoTapp Flow hai un'unica dashboard per tutti i siti. Vedi in tempo reale chi è attivo dove, puoi assegnare commesse e ricevere alert automatici se un intervento non viene aperto o chiuso nei tempi. Nessuna telefonata, nessuna email.",
+        a: "Con GeoTapp Flow hai un'unica dashboard per tutti i siti. Vedi chi è attivo dove appena timbra, puoi assegnare commesse e ricevere alert automatici se un intervento non viene aperto o chiuso nei tempi. Nessuna telefonata, nessuna email.",
       },
       {
         q: 'Come controllo che gli operatori abbiano eseguito il lavoro?',
@@ -239,7 +239,7 @@ const content: SettoreContent = {
       },
       {
         q: 'GeoTapp è conforme al GDPR per la geolocalizzazione dei dipendenti?',
-        a: "Sì. GeoTapp gestisce la geolocalizzazione in modo conforme al GDPR e alle linee guida del Garante Privacy italiano. Traccia la posizione solo durante l'orario di lavoro attivo, include la modulistica per l'informativa ai dipendenti e non raccoglie dati non necessari.",
+        a: "GeoTapp gestisce la geolocalizzazione in modo costruito per stare dentro i paletti del GDPR e le linee guida del Garante Privacy italiano. Traccia la posizione solo durante l'orario di lavoro attivo, include la modulistica per l'informativa ai dipendenti e non raccoglie dati non necessari.",
       },
       {
         q: 'Funziona anche per il facility management e il multiservizi?',
@@ -275,11 +275,11 @@ const content: SettoreContent = {
     },
     {
       question: 'È compatibile con il CCNL Multiservizi?',
-      answer: 'Sì. Traccia orari, pause e straordinari in modo conforme al CCNL Multiservizi con export compatibile Zucchetti/INAZ per l\'elaborazione paghe.',
+      answer: 'Sì. Traccia orari, pause e straordinari secondo le voci del CCNL Multiservizi, con export compatibile Zucchetti/INAZ per l\'elaborazione paghe.',
     },
     {
       question: 'Come gestisco più siti contemporaneamente?',
-      answer: 'Dashboard unica per tutti i siti. Vedi in tempo reale chi è attivo dove, assegni commesse e ricevi alert automatici su anomalie, senza telefonate.',
+      answer: 'Dashboard unica per tutti i siti. Vedi chi è attivo dove appena timbra, assegni commesse e ricevi alert automatici su anomalie, senza telefonate.',
     },
     {
       question: 'Come controllo che gli operatori abbiano davvero eseguito il lavoro?',
@@ -287,7 +287,7 @@ const content: SettoreContent = {
     },
     {
       question: 'GeoTapp è conforme al GDPR per la geolocalizzazione dei dipendenti?',
-      answer: "Sì. Conforme al GDPR e alle linee guida del Garante Privacy italiano. Traccia solo durante l'orario di lavoro attivo e include modulistica per l'informativa ai dipendenti.",
+      answer: "Costruito per stare dentro i paletti del GDPR e le linee guida del Garante Privacy italiano. Traccia solo durante l'orario di lavoro attivo e include modulistica per l'informativa ai dipendenti.",
     },
     {
       question: 'Funziona anche per il facility management e il multiservizi?',

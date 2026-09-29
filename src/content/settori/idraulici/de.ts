@@ -22,7 +22,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Keine Dokumentation der Anlage nach dem Einsatz',
-        desc: 'Der Techniker hat die Arbeit abgeschlossen, aber es gibt keine Fotodokumentation oder technische Notiz. Bei einem späteren Schaden wird die Rekonstruktion unmöglich.',
+        desc: 'Der Techniker hat die Arbeit abgeschlossen, aber es gibt keine Fotodokumentation oder technische Notiz. Bei einem späteren Schaden wird die Rekonstruktion sehr schwer.',
       },
       {
         title: 'Notfalleinsätze sind schwer zu dokumentieren',
@@ -39,7 +39,7 @@ const content: SettoreContent = {
         desc: 'Mit GeoTapp TimeTracker stempelt er Ein- und Ausgang mit GPS, fotografiert die Sanitär- oder Heizungsanlage und fügt technische Notizen vom Smartphone hinzu.',
       },
       {
-        title: 'Büro sieht alles in Echtzeit',
+        title: 'Büro sieht jede Stempelung sofort',
         desc: 'GeoTapp Flow empfängt die Daten sofort. Der Teamleiter sieht Auftrag, zugewiesenen Techniker, Fortschritt und Fotobeweise ohne anzurufen.',
       },
       {
@@ -75,7 +75,7 @@ const content: SettoreContent = {
       {
         label: 'DSGVO-Konformität',
         competitor: 'Oft zu prüfen',
-        geotapp: 'Konform by Design, Vorlagen inklusive',
+        geotapp: 'Für die DSGVO-Grenzen gebaut, Vorlagen inklusive',
       },
     ],
   },

@@ -53,7 +53,7 @@
       },
       "generatore": {
         "title": "GPS-meddelelse-generator",
-        "desc": "Lav dit eksempel på en GPS-privatlivsmeddelelse med dit logo, GDPR-konform. Gratis, i din browser."
+        "desc": "Lav dit eksempel på en GPS-privatlivsmeddelelse med dit logo, bygget til at følge GDPR-kravene. Gratis, i din browser."
       },
       "conservazione": {
         "title": "Politik for dataopbevaring",
@@ -201,7 +201,7 @@
       ]
     },
     "proof_note": "Beviser indsamles kun via kameraet, ingen løbende sporing.",
-    "proof_claim": "Mellem ind- og udstempling registreres intet.",
+    "proof_claim": "Mellem ind- og udstempling registreres der intet automatisk.",
     "sticky_cta_subtitle": "14 dage gratis, intet kreditkort"
   },
   "home_sections": {
@@ -380,7 +380,7 @@
           {
             "name": "GeoTapp Flow Team",
             "tagline": "Til små operative teams.",
-            "desc": "Koordiner og administrer dit operative team i realtid.",
+            "desc": "Koordiner og administrer dit operative team effektivt.",
             "features": [
               "5 Flow-brugere inkluderet",
               "Jobstyring",
@@ -871,7 +871,7 @@
       },
       {
         "title": "Privacy by Design",
-        "desc": "Data sælges ikke, og positionen aflæses to gange på en vagt, når du åbner den og når du lukker den. Indimellem ved værktøjet ikke, hvor du er."
+        "desc": "Data sælges ikke, og positionen registreres kun, når du selv stempler: ved start, ved hver pause og ved afslutning. Ind imellem ved værktøjet ikke, hvor du er."
       },
       {
         "title": "Made in Italy",
@@ -900,7 +900,7 @@
       "section_label": "Grundlæggeren",
       "name": "Michele Angelo Petraroli",
       "role": "Founder & CEO",
-      "bio": "Michele Angelo Petraroli er grundlægger og CEO af GeoTapp, et italiensk SaaS-firma til styring af feltarbejdere for europæiske SMV'er. Med en operationel baggrund så han på egen krop, hvordan rengøringsfirmaer, installatører og sikkerhedsfirmaer mister penge når beviset for arbejde mangler. Han grundlagde GeoTapp i 2024 for at løse problemet ved roden. I dag hjælper GeoTapp europæiske SMV'er med GDPR-konform GPS-sporing, fotobeviser og digitale underskrifter, der gør hvert feltjob verificerbart.",
+      "bio": "Michele Angelo Petraroli er grundlægger og CEO af GeoTapp, et italiensk SaaS-firma til styring af feltarbejdere for europæiske SMV'er. Med en operationel baggrund så han på egen krop, hvordan rengøringsfirmaer, installatører og sikkerhedsfirmaer mister penge når beviset for arbejde mangler. Han grundlagde GeoTapp i 2024 for at løse problemet ved roden. I dag hjælper GeoTapp europæiske SMV'er med GPS-sporing bygget til at holde sig inden for GDPR, fotobeviser og digitale underskrifter, der gør hvert feltjob verificerbart.",
       "expertise_label": "Ekspertiseområder",
       "expertise": [
         "Feltservice management",
@@ -1180,7 +1180,7 @@
     "title": "Kraft under motorhjelmen.",
     "subtitle": "Vi bygger ikke legetøj. GeoTapp er en enterprise-platform bygget til at skalere. Her er de teknologier, der gør magien mulig.",
     "gps_title": "GPS ved stempling, ikke hele dagen",
-    "gps_desc": "Placeringen registreres to gange: når vagten starter, og når den slutter. Ind imellem registreres der intet automatisk. Dagens stemplinger vises hver med GPS-koordinater, geofence-kontrol og anti-spoofing-beskyttelse: kontoret ved, hvem der startede hvor, uden at ringe, og holdet ved præcis, hvad der registreres, og hvornår.",
+    "gps_desc": "Placeringen registreres, når du selv stempler: ved start, ved hver pause og ved afslutning. Ind imellem registreres der intet automatisk. Dagens stemplinger vises hver med GPS-koordinater, geofence-kontrol og anti-spoofing-beskyttelse: kontoret ved, hvem der startede hvor, uden at ringe, og holdet ved præcis, hvad der registreres, og hvornår.",
     "offline_title": "Offline-First Architecture",
     "offline_desc": "Forbindelsen forsvinder, arbejdet gør ikke. Vi har bygget en lokalt synkroniseret database (CRDT), der lever inde i appen. Dine teknikere kan arbejde i en underjordisk bunker; så snart de ser et glimt af himmel, synkroniserer data lydløst med skyen.",
     "encryption_title": "Military-Grade Encryption",
@@ -1454,7 +1454,7 @@
       "transcriptTitle": "Hvad videoen siger",
       "transcriptNote": "De samme ord som stemmen, til at læse.",
       "honestyTitle": "Hvad denne video er, og hvad den ikke er",
-      "honesty": "Vagtens data er testdata, og de to billeder af eltavlen er skiftet ud i klipningen, fordi beviserne blev taget med dækket objektiv. Softwarens adfærd er den rigtige, optaget uden retouchering. Positionen skrives ved stemplingen og aldrig derimellem, og en forseglet pakke hjælper med at vise, at der ikke er rørt ved det udleverede, men den er ikke i sig selv et absolut bevis for det underliggende forhold, og den er ikke juridisk rådgivning.",
+      "honesty": "Vagtens data er testdata, og de to billeder af eltavlen er skiftet ud i klipningen, fordi beviserne blev taget med dækket objektiv. Softwarens adfærd er den rigtige, optaget uden retouchering. Positionen skrives, når nogen selv stempler ind, holder pause eller stempler ud, og aldrig automatisk derimellem, og en forseglet pakke hjælper med at vise, at der ikke er rørt ved det udleverede, men den er ikke i sig selv et absolut bevis for det underliggende forhold, og den er ikke juridisk rådgivning.",
       "ctaTitle": "Fjorten dage, på dine egne vagter",
       "ctaText": "Den samme vagt kører på dine opgaver, med din telefon, i fjorten dage og uden kort.",
       "youtubeNote": "Den ligger også på YouTube, på elleve sprog."

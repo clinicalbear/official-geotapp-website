@@ -3,13 +3,13 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'Bon d\'intervention nettoyage : logiciel de suivi des équipes avec preuve photo | GeoTapp',
-    description: 'GeoTapp pour le nettoyage industriel et le facility management : pointage GPS vérifiable, preuves photographiques des zones nettoyées, supervision d\'équipes multi-sites et conformité CCN Nettoyage (IDCC 3043).',
+    description: 'GeoTapp, nettoyage industriel et facility management : pointage GPS vérifiable, preuves photo, supervision multi-sites. Pensé pour la CCN Nettoyage (IDCC 3043).',
   },
   hero: {
     badge: 'Logiciel pour Entreprises de Nettoyage, Facility Management et Propreté Industrielle',
     h1_line1: 'Logiciel pour entreprises de nettoyage :',
     h1_line2: 'plannings, preuves photo et heures vérifiées, sur chaque site',
-    subtitle: 'GeoTapp relie Flow + TimeTracker pour les équipes réparties sur plusieurs bâtiments et étages. Vos agents pointent depuis leur smartphone avec GPS vérifié ; le bureau voit qui a nettoyé quoi, où et quand, avec les preuves photographiques jointes. De quoi répondre à tout litige, conformité CCN Nettoyage (IDCC 3043) assurée.',
+    subtitle: 'GeoTapp relie Flow + TimeTracker pour les équipes réparties sur plusieurs bâtiments et étages. Vos agents pointent depuis leur smartphone avec GPS vérifié ; le bureau voit qui a nettoyé quoi, où et quand, avec les preuves photographiques jointes. De quoi répondre à tout litige, pensé pour la CCN Nettoyage (IDCC 3043).',
     cta_primary: 'Essayez-le sur un vrai contrat',
     cta_note: "14 jours, jusqu'à 50 intervenants sur le terrain, sans carte bancaire.",
   },
@@ -36,10 +36,10 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'L\'agent pointe sur site',
-        desc: 'Avec GeoTapp TimeTracker, il enregistre arrivée, départ, photos des locaux et notes directement depuis son smartphone. GPS vérifié, conforme RGPD et CCN Nettoyage.',
+        desc: 'Avec GeoTapp TimeTracker, il enregistre arrivée, départ, photos des locaux et notes directement depuis son smartphone. GPS vérifié, conçu pour rester dans le cadre du RGPD et de la CCN Nettoyage.',
       },
       {
-        title: 'Le bureau voit tout en temps réel',
+        title: 'Le bureau voit chaque étape dès qu\'elle arrive',
         desc: 'Flow reçoit les données instantanément. Le responsable voit quel site a été traité, par qui, à quelle heure et avec quelles preuves photographiques, sans passer un seul appel.',
       },
       {
@@ -80,11 +80,11 @@ const content: SettoreContent = {
       },
       {
         q: 'Comment gérer des équipes réparties sur plusieurs bâtiments en même temps ?',
-        a: 'Flow affiche en temps réel le statut et la localisation de chaque agent par bâtiment. Vous pouvez affecter les vacations, vérifier la couverture et recevoir des alertes automatiques en cas d\'absences ou de retards.',
+        a: 'Flow affiche le statut et le dernier pointage de chaque agent par bâtiment, mis à jour à chaque badgeage. Vous pouvez affecter les vacations, vérifier la couverture et recevoir des alertes automatiques en cas d\'absences ou de retards.',
       },
       {
         q: 'GeoTapp aide-t-il à respecter la CCN Nettoyage pour les pauses et les heures supplémentaires ?',
-        a: 'Oui. Le système enregistre automatiquement les temps de pause, les heures supplémentaires et les roulements. L\'export mensuel est compatible avec Silae et PayFit pour un traitement de la paie conforme à la convention collective.',
+        a: 'Oui. Le système enregistre automatiquement les temps de pause, les heures supplémentaires et les roulements. L\'export mensuel est compatible avec Silae et PayFit pour un traitement de la paie aligné sur la convention collective.',
       },
     ],
   },

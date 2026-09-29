@@ -3,7 +3,7 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'App pour Électriciens | GeoTapp - Rapports GPS & Preuves',
-    description: 'GeoTapp est l\'app pour électriciens : rapports GPS vérifiés, photos d\'installation et comptes-rendus inviolables. Clôturez les litiges avec de vraies preuves. Essai gratuit.',
+    description: 'GeoTapp, l\'app pour électriciens : rapports GPS vérifiés, photos et comptes-rendus scellés. Répondez aux litiges avec de vraies preuves. Essai gratuit.',
   },
   hero: {
     badge: 'App pour Électriciens et Installateurs Électriques',
@@ -39,12 +39,12 @@ const content: SettoreContent = {
         desc: 'Avec GeoTapp TimeTracker, il pointe entrée et sortie avec GPS, photographie l\'installation et ajoute des notes techniques depuis son smartphone.',
       },
       {
-        title: 'Le bureau voit tout en temps réel',
+        title: 'Le bureau voit chaque étape dès qu\'elle arrive',
         desc: 'GeoTapp Flow reçoit les données instantanément. Le responsable voit le chantier, le technicien affecté, l\'avancement et les preuves photo sans appeler.',
       },
       {
         title: 'Le rapport d\'intervention est votre preuve',
-        desc: 'À la fin de l\'intervention, le système génère un rapport scellé : horodatage GPS, photos installation, notes techniques. Inviolable. Le client peut le vérifier de façon autonome.',
+        desc: 'À la fin de l\'intervention, le système génère un rapport scellé : horodatage GPS, photos installation, notes techniques. Toute modification reste visible. Le client peut le vérifier de façon autonome.',
       },
     ],
   },
@@ -57,7 +57,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Photos d\'installation scellées',
-        desc: 'Le technicien photographie depuis l\'app en fin d\'intervention. Chaque image est liée au GPS et à l\'horodatage, inviolable après génération.',
+        desc: 'Le technicien photographie depuis l\'app en fin d\'intervention. Chaque image est liée au GPS et à l\'horodatage ; toute modification après génération reste visible.',
       },
       {
         title: 'Rapports d\'intervention automatiques',
@@ -78,7 +78,7 @@ const content: SettoreContent = {
     ],
   },
   testimonial: {
-    quote: 'Avec GeoTapp, mes techniciens documentent l\'installation dès qu\'ils ont terminé. Aucun litige ne résiste au rapport. Les factures sont payées.',
+    quote: 'Avec GeoTapp, mes techniciens documentent l\'installation dès qu\'ils ont terminé. Le rapport règle la plupart des litiges en quelques minutes. Les factures sont payées.',
     author: 'Jean-Pierre M.',
     role: 'Gérant, installation électrique',
   },
@@ -95,8 +95,8 @@ const content: SettoreContent = {
         a: 'C\'est l\'usage principal : horodatages GPS, preuves photo et rapports scellés rendent tout litige infondé résolvable en quelques minutes.',
       },
       {
-        q: 'GeoTapp est-elle conforme au RGPD ?',
-        a: 'Oui. GeoTapp gère la géolocalisation des employés en conformité avec le RGPD. Les formulaires d\'information pour les collaborateurs sont fournis.',
+        q: 'GeoTapp est-elle conçue pour respecter le RGPD ?',
+        a: 'Oui. GeoTapp est conçue pour rester dans le cadre du RGPD pour la géolocalisation des employés. Les formulaires d\'information pour les collaborateurs sont fournis.',
       },
     ],
   },

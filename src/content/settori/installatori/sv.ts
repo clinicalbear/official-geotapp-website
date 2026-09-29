@@ -9,7 +9,7 @@ const content: SettoreContent = {
     badge: 'Programvara för Elektriker, Rörmokare och Installationsteam',
     h1_line1: 'Fältarbete under kontroll:',
     h1_line2: 'jobb, tidrapporter och bevis på ett ställe',
-    subtitle: 'GeoTapp kopplar samman Flow + TimeTracker för företag som arbetar mellan skåpbilar, arbetsplatser och slutkunder. Android- och iOS-apparna stödjer teknikern i fält; kontoret ser jobbet, tiderna, fotodokumentationen och anteckningarna utan att behöva ringa någon. GDPR-kompatibelt och enligt EIO/Installatörernas kollektivavtal.',
+    subtitle: 'GeoTapp kopplar samman Flow + TimeTracker för företag som arbetar mellan skåpbilar, arbetsplatser och slutkunder. Android- och iOS-apparna stödjer teknikern i fält; kontoret ser jobbet, tiderna, fotodokumentationen och anteckningarna utan att behöva ringa någon. Byggd för att hålla sig inom GDPR, och enligt EIO/Installatörernas kollektivavtal.',
     cta_primary: 'Begär en demo',
     cta_note: 'Ingen bindning. Svar inom 12 arbetstimmar.',
   },
@@ -36,15 +36,15 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'Teknikern stämplar in på arbetsplatsen',
-        desc: 'Med GeoTapp TimeTracker registrerar han start, slut, foton och anteckningar direkt från sin smartphone. GPS-verifierat, GDPR-kompatibelt.',
+        desc: 'Med GeoTapp TimeTracker registrerar han start, slut, foton och anteckningar direkt från sin smartphone. GPS-verifierat, byggd för att hålla sig inom GDPR.',
       },
       {
-        title: 'Kontoret ser allt i realtid',
+        title: 'Kontoret ser varje stämpling direkt',
         desc: 'Flow tar emot data direkt. Chefen ser jobb, framsteg, tilldelad tekniker och fotodokumentation utan att ringa.',
       },
       {
         title: 'Rapporten är redan klar',
-        desc: 'När jobbet är slut är arbetsrapporten redan strukturerad med verkliga data. Ingen manuell rekonstruktion. Ingen tvist utan svar.',
+        desc: 'När jobbet är slut är arbetsrapporten redan strukturerad med verkliga data. Ingen manuell rekonstruktion. Bevis redo om något ifrågasätts.',
       },
     ],
   },
@@ -57,7 +57,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Fotodokumentation från fältet',
-        desc: 'Teknikern fotograferar direkt från appen. Bilder kopplade till jobbet med datum och tid. Inget utrymme för tvist.',
+        desc: 'Teknikern fotograferar direkt från appen. Bilder kopplade till jobbet med datum och tid. Tydligt bevis om något ifrågasätts.',
       },
       {
         title: 'Export för lönehantering',

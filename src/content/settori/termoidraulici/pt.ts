@@ -8,7 +8,7 @@ const content: SettoreContent = {
   hero: {
     badge: 'App para Técnicos de Aquecimento e Instaladores Termossanitários',
     h1_line1: 'App para técnicos de aquecimento:',
-    h1_line2: 'relatórios GPS, provas fotográficas e zero reclamações.',
+    h1_line2: 'relatórios GPS, provas fotográficas e menos reclamações.',
     subtitle: 'GeoTapp regista cada intervenção em caldeiras e instalações com GPS, fotos e carimbos de tempo verificáveis. O cliente nega os materiais substituídos? Mostre o relatório, sem discussões. Os seus técnicos estão protegidos, o seu faturamento também.',
     cta_primary: 'Comece grátis agora!',
     cta_note: 'Sem compromisso. Resposta em 12 horas úteis.',
@@ -39,7 +39,7 @@ const content: SettoreContent = {
         desc: 'Com o GeoTapp TimeTracker regista entrada e saída com GPS, fotografa a instalação e a caldeira, adiciona notas sobre os componentes substituídos a partir do smartphone.',
       },
       {
-        title: 'O escritório vê tudo em tempo real',
+        title: 'O escritório vê tudo assim que chega',
         desc: 'O GeoTapp Flow recebe os dados instantaneamente. O responsável vê a obra, o técnico atribuído, o progresso e as provas fotográficas sem ligar.',
       },
       {
@@ -75,7 +75,7 @@ const content: SettoreContent = {
       {
         label: 'Conformidade RGPD',
         competitor: 'Frequentemente a verificar',
-        geotapp: 'Conforme por design, formulários incluídos',
+        geotapp: 'Pensado para ficar dentro do RGPD, formulários incluídos',
       },
     ],
   },
@@ -176,7 +176,7 @@ const content: SettoreContent = {
   schema_faq: [
     {
       question: 'O GeoTapp funciona como app para técnicos de aquecimento?',
-      answer: 'Sim. GeoTapp é a app para técnicos de aquecimento e instaladores que regista cada intervenção em caldeiras e instalações com GPS, fotos e carimbos de tempo verificáveis. O técnico regista no local, o escritório vê tudo em tempo real e o cliente recebe um relatório selado.',
+      answer: 'Sim. GeoTapp é a app para técnicos de aquecimento e instaladores que regista cada intervenção em caldeiras e instalações com GPS, fotos e carimbos de tempo verificáveis. O técnico regista no local, o escritório vê tudo assim que chega e o cliente recebe um relatório selado.',
     },
     {
       question: 'Como selo uma intervenção em caldeira com o GeoTapp?',
@@ -184,7 +184,7 @@ const content: SettoreContent = {
     },
     {
       question: 'O GeoTapp gere várias equipas de técnicos de aquecimento em intervenções diferentes?',
-      answer: 'Sim. O GeoTapp Flow permite ao titular coordenar várias equipas, atribuir obras urgentes, acompanhar o estado das intervenções e recolher provas fotográficas de todos os locais ativos em tempo real.',
+      answer: 'Sim. O GeoTapp Flow permite ao titular coordenar várias equipas, atribuir obras urgentes, acompanhar o estado das intervenções e recolher provas fotográficas de todos os locais ativos assim que chegam.',
     },
     {
       question: 'Os relatórios GeoTapp são aceites em caso de reclamação sobre instalações térmicas?',

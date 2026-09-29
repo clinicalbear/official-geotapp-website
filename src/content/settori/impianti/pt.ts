@@ -3,7 +3,7 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'App para Instaladores e Técnicos: Rastreamento GPS de Intervenções | GeoTapp',
-    description: 'Controle intervenções, horas e materiais para instaladores de AVAC, eletricistas e canalizadores com GPS. Provas de serviço automáticas, zero disputas com clientes. Experimente GeoTapp grátis.',
+    description: 'Controle intervenções, horas e materiais para instaladores de AVAC, eletricistas e canalizadores com GPS. Provas de serviço automáticas, menos reclamações de clientes. Experimente GeoTapp grátis.',
   },
   hero: {
     badge: 'App para instaladores, técnicos e equipas de serviço',
@@ -22,7 +22,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Perseguir técnicos para saber onde estão',
-        desc: 'Mapa em tempo real com o estado de cada intervenção. Sabe onde estão todos os seus técnicos sem fazer uma única chamada.',
+        desc: 'Cada registo do técnico chega imediatamente ao painel, com hora e posição. Sabe onde estiveram, sem fazer uma única chamada.',
       },
       {
         title: 'Relatórios incompletos ou nunca entregues',
@@ -40,7 +40,7 @@ const content: SettoreContent = {
       },
       {
         title: 'As horas registam-se automaticamente por projeto',
-        desc: 'Cada minuto trabalhado é associado ao projeto correto. O responsável vê em tempo real quem está a trabalhar onde.',
+        desc: 'Cada minuto trabalhado é associado ao projeto correto. O responsável vê, registo após registo, quem está a trabalhar onde.',
       },
       {
         title: 'O relatório para o cliente é gerado sem digitar nada',
@@ -75,7 +75,7 @@ const content: SettoreContent = {
       {
         label: 'Conformidade RGPD',
         competitor: 'Frequentemente duvidosa',
-        geotapp: 'Conforme por design, formulários incluídos',
+        geotapp: 'Pensado para ficar dentro do RGPD, formulários incluídos',
       },
     ],
   },
@@ -118,8 +118,8 @@ const content: SettoreContent = {
         desc: 'Exporte presenças mensais e horas por projeto. Processamento salarial e faturação passam a ser questão de minutos.',
       },
       {
-        title: 'Conformidade RGPD integrada',
-        desc: 'Geolocalização conforme por design com a regulamentação RGPD. Modelos de aviso de privacidade para funcionários incluídos.',
+        title: 'Geolocalização pensada para o RGPD',
+        desc: 'Geolocalização construída para ficar dentro dos limites do RGPD. Modelos de aviso de privacidade para funcionários incluídos.',
       },
     ],
   },
@@ -138,7 +138,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Como monitorizo várias equipas em projetos diferentes?',
-        a: 'GeoTapp oferece um mapa em tempo real com o estado de cada intervenção. Sabe exatamente onde estão os seus técnicos e em que projeto trabalham, sem fazer chamadas.',
+        a: 'GeoTapp mostra no mapa os registos de hoje, atualizados a cada intervenção aberta ou fechada. Sabe em que projeto estão a trabalhar os seus técnicos, sem fazer chamadas.',
       },
       {
         q: 'Como acelero a faturação de intervenções concluídas?',
@@ -165,7 +165,7 @@ const content: SettoreContent = {
     },
     {
       question: 'Como monitorizo várias equipas em projetos diferentes?',
-      answer: 'GeoTapp oferece um mapa em tempo real com o estado de cada intervenção. Sabe exatamente onde estão os seus técnicos e em que projeto trabalham, sem fazer chamadas.',
+      answer: 'GeoTapp mostra no mapa os registos de hoje, atualizados a cada intervenção aberta ou fechada. Sabe em que projeto estão a trabalhar os seus técnicos, sem fazer chamadas.',
     },
     {
       question: 'Como acelero a faturação de intervenções concluídas?',

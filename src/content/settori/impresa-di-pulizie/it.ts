@@ -4,15 +4,15 @@ const content: SettoreContent = {
   meta: {
     title: 'App per Impresa di Pulizie: Gestione Squadre con GPS | GeoTapp',
     description:
-      'Gestisci squadre, turni e presenze con GPS in tempo reale. Prove automatiche di servizio, zero contestazioni clienti. App GDPR-compliant per pulizie.',
+      'Gestisci squadre, turni e presenze con le timbrature GPS. Prove automatiche di servizio, meno contestazioni. App pensata per il GDPR, per le pulizie.',
   },
 
   hero: {
     badge: 'App per imprese di pulizie e multiservizi',
     h1_line1: 'La tua impresa di pulizie,',
-    h1_line2: 'gestita in tempo reale.',
+    h1_line2: 'gestita, timbratura dopo timbratura.',
     subtitle:
-      'Timbrature GPS, prove di servizio automatiche e gestione turni in un\'unica app. Zero Excel, zero contestazioni. Il cliente contesta? Mandi il report e la discussione finisce.',
+      'Timbrature GPS, prove di servizio automatiche e gestione turni in un\'unica app. Zero Excel, meno contestazioni. Il cliente contesta? Mandi il report e la discussione finisce.',
     cta_primary: 'Provalo su una commessa vera',
     cta_note: '14 giorni, fino a 50 operatori sul campo, nessuna carta di credito.',
   },
@@ -30,7 +30,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Difficile coordinare più squadre?',
-        desc: 'Vedi dove sono tutti in tempo reale, su tutti i siti, da un\'unica dashboard. Nessuna telefonata.',
+        desc: 'Vedi dove sono stati, appena timbrano, su tutti i siti, da un\'unica dashboard. Nessuna telefonata.',
       },
     ],
   },
@@ -60,7 +60,7 @@ const content: SettoreContent = {
         desc: 'Apre e chiude il turno dallo smartphone. GeoTapp registra coordinate GPS reali, foto e timestamp, tutto automatico: ogni modifica è rilevabile.',
       },
       {
-        title: 'Il responsabile vede tutto in tempo reale',
+        title: 'Il responsabile vede tutto appena arriva',
         desc: 'Dashboard unica per tutti i cantieri. Sai esattamente chi è presente, dove e da quando, senza inseguire nessuno.',
       },
       {
@@ -97,7 +97,7 @@ const content: SettoreContent = {
       {
         label: 'Conformità GDPR',
         competitor: 'Spesso da verificare',
-        geotapp: 'Conforme per design, modulistica inclusa',
+        geotapp: 'Costruito per stare nei paletti del GDPR, modulistica inclusa',
       },
     ],
   },
@@ -111,7 +111,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Controllo reale su tutti i siti',
-        desc: 'Vedi in tempo reale chi è attivo dove, su tutti gli edifici contemporaneamente. Nessuna telefonata, nessuna email.',
+        desc: 'Vedi chi è attivo dove, appena timbra, su tutti gli edifici contemporaneamente. Nessuna telefonata, nessuna email.',
       },
       {
         title: 'Report difendibili in qualsiasi sede',
@@ -153,11 +153,11 @@ const content: SettoreContent = {
       },
       {
         q: 'GeoTapp è conforme al GDPR per la geolocalizzazione dei dipendenti?',
-        a: "Sì. GeoTapp traccia la posizione solo durante l'orario di lavoro attivo, include modulistica per l'informativa ai dipendenti e non raccoglie dati non necessari. Conforme alle linee guida del Garante Privacy italiano.",
+        a: "GeoTapp è costruito per stare dentro i paletti del GDPR: traccia la posizione solo durante l'orario di lavoro attivo, include modulistica per l'informativa ai dipendenti e non raccoglie dati non necessari, secondo le linee guida del Garante Privacy italiano.",
       },
       {
         q: 'Come gestisco squadre distribuite su più siti contemporaneamente?',
-        a: "Con GeoTapp Flow hai un'unica dashboard per tutti i siti. Vedi in tempo reale chi è attivo dove, puoi assegnare commesse e ricevere alert automatici.",
+        a: "Con GeoTapp Flow hai un'unica dashboard per tutti i siti. Vedi chi è attivo dove appena timbra, puoi assegnare commesse e ricevere alert automatici.",
       },
       {
         q: 'I fogli presenze cartacei sono ancora necessari?',
@@ -173,7 +173,7 @@ const content: SettoreContent = {
   cta: {
     title: 'I tuoi operatori lavorano bene. Fai in modo che il cliente lo veda.',
     subtitle:
-      'Ogni intervento diventa una prova di servizio verificabile. Zero contestazioni, zero contratti persi.',
+      'Ogni intervento diventa una prova di servizio verificabile. Meno contestazioni, meno contratti persi.',
     primary: 'Inizia subito gratuitamente!',
     secondary: 'Vedi i Prezzi',
   },

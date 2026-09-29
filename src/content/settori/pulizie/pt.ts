@@ -9,7 +9,7 @@ const content: SettoreContent = {
     badge: 'Software para Empresas de Limpeza, Higiene e Facility Management',
     h1_line1: 'Software para empresas de limpeza:',
     h1_line2: 'turnos, provas fotográficas e horas verificadas, em cada edifício',
-    subtitle: 'GeoTapp liga Flow + TimeTracker para equipas distribuídas por vários edifícios e pisos. Os seus operacionais registam o ponto pelo smartphone com GPS verificado; o escritório vê quem limpou o quê, onde e quando, com provas fotográficas anexas. Com os dados prontos para qualquer litígio, e total conformidade com o CCT Limpeza e Higiene Urbana.',
+    subtitle: 'GeoTapp liga Flow + TimeTracker para equipas distribuídas por vários edifícios e pisos. Os seus operacionais registam o ponto pelo smartphone com GPS verificado; o escritório vê quem limpou o quê, onde e quando, com provas fotográficas anexas. Com os dados prontos para qualquer litígio, e pensado para respeitar o CCT Limpeza e Higiene Urbana.',
     cta_primary: 'Experimente num contrato real',
     cta_note: '14 dias, até 50 operacionais no terreno, sem cartão de crédito.',
   },
@@ -36,10 +36,10 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'O operacional regista o ponto no local',
-        desc: 'Com o GeoTapp TimeTracker regista entrada, saída, fotos da área e notas diretamente pelo smartphone. GPS verificado, conforme RGPD e CCT Limpeza.',
+        desc: 'Com o GeoTapp TimeTracker regista entrada, saída, fotos da área e notas diretamente pelo smartphone. GPS verificado, pensado para o RGPD e o CCT Limpeza.',
       },
       {
-        title: 'O escritório vê tudo em tempo real',
+        title: 'O escritório vê tudo assim que chega',
         desc: 'O Flow recebe os dados instantaneamente. O responsável vê qual o edifício atendido, por quem, a que horas e com que evidência fotográfica, sem fazer uma única chamada.',
       },
       {
@@ -66,7 +66,7 @@ const content: SettoreContent = {
     ],
   },
   testimonial: {
-    quote: 'Desde que usamos o GeoTapp não recebemos uma única reclamação escrita de um cliente. As fotos falam por si.',
+    quote: 'Desde que usamos o GeoTapp recebemos muito menos reclamações escritas de clientes. As fotos falam por si.',
     author: 'Sofia A.',
     role: 'Responsável operacional, empresa de limpeza e higiene',
   },
@@ -76,15 +76,15 @@ const content: SettoreContent = {
     items: [
       {
         q: 'O GeoTapp é adequado para empresas de limpeza e higiene e facility management?',
-        a: 'Sim. O GeoTapp ajuda empresas de limpeza, higiene urbana e facility management a gerir turnos em múltiplos locais, a documentar os serviços com marcação de ponto GPS e evidência fotográfica, e a cumprir os requisitos do CCT Limpeza e Higiene Urbana.',
+        a: 'Sim. O GeoTapp ajuda empresas de limpeza, higiene urbana e facility management a gerir turnos em múltiplos locais, a documentar os serviços com marcação de ponto GPS e evidência fotográfica, e a manter os registos que o CCT Limpeza e Higiene Urbana exige.',
       },
       {
         q: 'Como gerir equipas distribuídas por vários edifícios ao mesmo tempo?',
-        a: 'O Flow mostra em tempo real o estado e a localização de cada operacional por edifício. Pode atribuir turnos, verificar a cobertura e receber alertas automáticos em caso de faltas ou atrasos.',
+        a: 'O Flow mostra o estado e a localização de cada operacional por edifício, assim que regista o ponto. Pode atribuir turnos, verificar a cobertura e receber alertas automáticos em caso de faltas ou atrasos.',
       },
       {
         q: 'O GeoTapp ajuda a cumprir o CCT na gestão de pausas e horas extraordinárias?',
-        a: 'Sim. O sistema regista automaticamente os tempos de pausa, as horas extraordinárias e os turnos. A exportação mensal é compatível com Primavera e PHC para um processamento de salários conforme ao contrato coletivo.',
+        a: 'Sim. O sistema regista automaticamente os tempos de pausa, as horas extraordinárias e os turnos. A exportação mensal é compatível com Primavera e PHC para um processamento de salários alinhado com o contrato coletivo.',
       },
     ],
   },

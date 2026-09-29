@@ -177,7 +177,7 @@ const PRICING_BREADCRUMB: Record<string, object> = {
 
 const PRICING_META: Record<string, { title: string; description: string }> = {
   it: { title: 'Prezzi GeoTapp - Piani e abbonamenti | GeoTapp', description: 'Scopri i piani GeoTapp: prova gratuita 14 giorni, abbonamenti per team con timbratura GPS, gestione turni e verifica report. Nessun costo nascosto.' },
-  en: { title: 'GeoTapp Pricing - Plans & subscriptions | GeoTapp', description: 'Explore GeoTapp plans: 14-day free trial, monthly subscriptions for teams with GPS time tracking, shift management and report verification. No hidden fees.' },
+  en: { title: 'GeoTapp pricing: plans for field teams, 14-day free trial', description: 'Office plans for Flow, a seat for every worker on TimeTracker, 14 days free without a card. See what each plan includes before you start.' },
   de: { title: 'GeoTapp Preise - Pläne & Abonnements | GeoTapp', description: 'Entdecken Sie GeoTapp-Pläne: 14 Tage kostenlos testen, monatliche Abonnements für Teams mit GPS-Zeiterfassung, Schichtverwaltung und Berichtsprüfung.' },
   fr: { title: 'Tarifs GeoTapp - Plans et abonnements | GeoTapp', description: 'Découvrez les plans GeoTapp : plan de base gratuit, abonnements mensuels pour équipes avec pointage GPS, gestion des horaires et vérification des rapports.' },
   es: { title: 'Precios GeoTapp - Planes y suscripciones | GeoTapp', description: 'Conoce los planes GeoTapp: prueba gratuita 14 días, suscripciones mensuales para equipos con fichaje GPS, gestión de turnos y verificación de informes.' },

@@ -26,7 +26,7 @@ const content: SettoreContent = {
       },
       {
         title: '¿Los técnicos llegan realmente a tiempo?',
-        desc: 'Verificación en tiempo real sin llamadas. GPS y hora de llegada ya están disponibles en tu panel, por cada sede.',
+        desc: 'Verificación en cuanto el técnico ficha, sin llamadas. GPS y hora de llegada ya están disponibles en tu panel, por cada sede.',
       },
       {
         title: '¿Cómo demuestras el servicio prestado?',
@@ -45,7 +45,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Las horas y la intervención se registran automáticamente',
-        desc: 'Cada minuto trabajado se asocia a la sede y al tipo de intervención. El responsable ve el estado en tiempo real de cada visita.',
+        desc: 'Cada minuto trabajado se asocia a la sede y al tipo de intervención. El responsable ve el estado de cada visita en cuanto el técnico ficha.',
       },
       {
         title: 'El cliente recibe el informe firmado digitalmente',
@@ -101,7 +101,7 @@ const content: SettoreContent = {
       },
       {
         q: '¿Los técnicos llegan realmente a tiempo?',
-        a: 'Con GeoTapp puedes verificar la hora de llegada y la posición GPS de cada técnico en tiempo real. Sin necesidad de llamar.',
+        a: 'Con GeoTapp puedes verificar la hora de llegada y la posición GPS de cada técnico en cuanto ficha. Sin necesidad de llamar.',
       },
       {
         q: '¿Cómo demuestro al cliente el servicio de mantenimiento prestado?',
@@ -113,7 +113,7 @@ const content: SettoreContent = {
       },
       {
         q: '¿GeoTapp cumple con el RGPD?',
-        a: 'Sí. GeoTapp solo geolocaliza durante las horas de trabajo activas, incluye formularios de información al empleado y no recopila datos innecesarios.',
+        a: 'GeoTapp está diseñado para encajar en el RGPD: solo geolocaliza durante las horas de trabajo activas, incluye el modelo de información al trabajador y no recopila datos innecesarios.',
       },
       {
         q: '¿Cuánto cuesta GeoTapp para una empresa de mantenimiento?',
@@ -147,7 +147,7 @@ const content: SettoreContent = {
     {
       question: '¿Los técnicos llegan realmente a tiempo?',
       answer:
-        'Con GeoTapp puedes verificar la hora de llegada y la posición GPS de cada técnico en tiempo real. Los datos ya están en tu panel.',
+        'Con GeoTapp puedes verificar la hora de llegada y la posición GPS de cada técnico en cuanto ficha. Los datos ya están en tu panel.',
     },
     {
       question: '¿Cómo demuestro el servicio de mantenimiento prestado?',

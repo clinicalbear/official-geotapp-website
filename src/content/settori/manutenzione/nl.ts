@@ -26,7 +26,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Komen de technici echt op tijd?',
-        desc: 'Real-time verificatie zonder telefoontjes. GPS en aankomsttijd zijn al beschikbaar in uw dashboard, per locatie.',
+        desc: 'Verificatie zonder telefoontjes. GPS en aankomsttijd staan meteen in uw dashboard, per locatie, zodra de technicus inklokt.',
       },
       {
         title: 'Hoe bewijst u de geleverde dienst?',
@@ -45,7 +45,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Uren en interventie worden automatisch geregistreerd',
-        desc: 'Elke gewerkte minuut is gekoppeld aan de locatie en het type interventie. De manager ziet de real-time status van elk bezoek.',
+        desc: 'Elke gewerkte minuut is gekoppeld aan de locatie en het type interventie. De manager ziet de status van elk bezoek zodra de technicus in- of uitklokt.',
       },
       {
         title: 'De klant ontvangt het digitaal ondertekende rapport',
@@ -86,7 +86,7 @@ const content: SettoreContent = {
 
   testimonial: {
     quote:
-      'Met GeoTapp is elk onderhoudsbezoek traceerbaar. Klanten zien de volledige historie per installatie en er zijn geen discussies meer over uren of uitgevoerd werk.',
+      'Met GeoTapp is elk onderhoudsbezoek traceerbaar. Klanten zien de volledige historie per installatie en er is nauwelijks nog discussie over uren of uitgevoerd werk.',
     author: 'André L.',
     role: 'Onderhoudmanager, facility management - Nederland',
   },
@@ -101,7 +101,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Komen de technici echt op tijd?',
-        a: 'Met GeoTapp kunt u aankomsttijd en GPS-positie van elke technicus in real-time verifiëren. Geen telefoontje nodig.',
+        a: 'Met GeoTapp kunt u aankomsttijd en GPS-positie van elke technicus verifiëren zodra hij inklokt. Geen telefoontje nodig.',
       },
       {
         q: 'Hoe bewijs ik de geleverde onderhoudsdienst aan de klant?',
@@ -113,7 +113,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Is GeoTapp AVG-conform?',
-        a: 'Ja. GeoTapp registreert de locatie alleen tijdens actieve werkuren, bevat sjablonen voor de werknemersinformatie en verzamelt geen onnodige gegevens.',
+        a: 'GeoTapp is gebouwd om binnen de AVG te blijven: de locatie wordt alleen tijdens actieve werkuren geregistreerd, er zijn sjablonen voor de werknemersinformatie inbegrepen en er worden geen onnodige gegevens verzameld.',
       },
       {
         q: 'Wat kost GeoTapp voor een onderhoudsbedrijf?',
@@ -147,7 +147,7 @@ const content: SettoreContent = {
     {
       question: 'Komen de technici echt op tijd?',
       answer:
-        'Met GeoTapp kunt u aankomsttijd en GPS-positie van elke technicus in real-time verifiëren. De gegevens zijn al in uw dashboard.',
+        'Met GeoTapp kunt u aankomsttijd en GPS-positie van elke technicus verifiëren zodra hij inklokt. De gegevens zijn al in uw dashboard.',
     },
     {
       question: 'Hoe bewijs ik de geleverde onderhoudsdienst?',

@@ -9,7 +9,7 @@ const content: SettoreContent = {
     badge: 'Digitale Zeiterfassung für Gebäudereinigung, Facility Management und Unterhaltsreinigung',
     h1_line1: 'Zeiterfassung in der Gebäudereinigung:',
     h1_line2: 'Schichten, Fotodokumentation und geprüfte Stunden, auf jedem Objekt',
-    subtitle: 'GeoTapp verbindet Flow + TimeTracker für Teams, die auf mehrere Gebäude und Etagen verteilt sind. Ihre Reinigungskräfte stempeln per GPS-verifiziertem Smartphone; die digitale Zeiterfassung läuft je Objekt, und das Büro sieht, wer was, wo und wann gereinigt hat, mit Fotobeweisen. Daten griffbereit für jede Streitigkeit, volle Konformität mit dem Rahmentarifvertrag Gebäudereinigung und §17 MiLoG.',
+    subtitle: 'GeoTapp verbindet Flow + TimeTracker für Teams, die auf mehrere Gebäude und Etagen verteilt sind. Ihre Reinigungskräfte stempeln per GPS-verifiziertem Smartphone; die digitale Zeiterfassung läuft je Objekt, und das Büro sieht, wer was, wo und wann gereinigt hat, mit Fotobeweisen. Daten griffbereit für jede Streitigkeit, ausgelegt auf die Vorgaben des Rahmentarifvertrags Gebäudereinigung und §17 MiLoG.',
     cta_primary: 'Auf einem echten Auftrag testen',
     cta_note: '14 Tage, bis zu 50 Mitarbeiter im Außendienst, ohne Kreditkarte.',
   },
@@ -36,10 +36,10 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'Reinigungskraft stempelt am Objekt',
-        desc: 'Mit GeoTapp TimeTracker erfasst sie Beginn, Ende, Fotos der Bereiche und Notizen direkt vom Smartphone. GPS-verifiziert, DSGVO-konform, §17 MiLoG-geeignet.',
+        desc: 'Mit GeoTapp TimeTracker erfasst sie Beginn, Ende, Fotos der Bereiche und Notizen direkt vom Smartphone. GPS-verifiziert, für die Grenzen der DSGVO gebaut, §17 MiLoG-geeignet.',
       },
       {
-        title: 'Büro sieht alles in Echtzeit',
+        title: 'Büro sieht jede Stempelung sofort',
         desc: 'Flow empfängt die Daten sofort. Der Objektleiter sieht, welches Gebäude bedient wurde, von wem, zu welcher Uhrzeit und mit welchen Fotobeweisen, ohne einen Anruf zu tätigen.',
       },
       {
@@ -66,7 +66,7 @@ const content: SettoreContent = {
     ],
   },
   testimonial: {
-    quote: 'Seit wir GeoTapp nutzen, haben wir keine einzige schriftliche Beschwerde mehr von einem Kunden erhalten. Die Fotos sagen alles.',
+    quote: 'Seit wir GeoTapp nutzen, bekommen wir kaum noch schriftliche Beschwerden von Kunden. Die Fotos sagen alles.',
     author: 'Monika S.',
     role: 'Objektleiterin, Unterhaltsreinigungsbetrieb',
   },
@@ -84,15 +84,15 @@ const content: SettoreContent = {
       },
       {
         q: 'Wie verwalte ich Teams, die gleichzeitig auf mehreren Gebäuden eingesetzt sind?',
-        a: 'Flow zeigt den Echtzeit-Status und Standort jeder Reinigungskraft je Gebäude an. Sie können Schichten zuweisen, die Abdeckung prüfen und automatische Benachrichtigungen bei Abwesenheiten oder Verspätungen erhalten.',
+        a: 'Flow zeigt Status und Standort jeder Reinigungskraft je Gebäude, sobald gestempelt wird. Sie können Schichten zuweisen, die Abdeckung prüfen und automatische Benachrichtigungen bei Abwesenheiten oder Verspätungen erhalten.',
       },
       {
         q: 'Unterstützt GeoTapp die Dokumentationspflicht nach §17 MiLoG und dem Rahmentarifvertrag?',
-        a: 'Ja. Das System erfasst automatisch Pausenzeiten, Überstunden und Schichtmuster. Der monatliche Export ist mit DATEV und Personio kompatibel für eine tarifkonforme Lohnabrechnung.',
+        a: 'Ja. Das System erfasst automatisch Pausenzeiten, Überstunden und Schichtmuster. Der monatliche Export ist mit DATEV und Personio kompatibel und orientiert sich an den Vorgaben des Tarifvertrags.',
       },
       {
         q: 'Ist die GPS-Standorterfassung der Reinigungskräfte DSGVO-konform?',
-        a: 'Ja. Die Standorterfassung läuft nur während der Schicht, beim Stempeln, nicht durchgehend. Vor dem Rollout informieren Sie die Mitarbeiter schriftlich nach Art. 13 DSGVO und §26 BDSG. GeoTapp liefert die fertige Mitarbeiter-Information mit Zweckangabe, Speicherdauer und Betroffenenrechten, abrufbar im Admin-Bereich. Die Datenschutzbehörden der Länder (LfD Bayern, BayLfD, HmbBfDI) haben dieses Modell mehrfach als rechtskonform bestätigt.',
+        a: 'Ja. Die Standorterfassung läuft nur während der Schicht, beim Stempeln, nicht durchgehend. Vor dem Rollout informieren Sie die Mitarbeiter schriftlich nach Art. 13 DSGVO und §26 BDSG. GeoTapp liefert die fertige Mitarbeiter-Information mit Zweckangabe, Speicherdauer und Betroffenenrechten, abrufbar im Admin-Bereich.',
       },
       {
         q: 'Wie erfüllt GeoTapp die Anforderungen des Rahmentarifvertrags Gebäudereinigung (RTV) bei Schichtmodellen, Nachtzuschlägen und Sonderlöhnen?',
@@ -100,11 +100,11 @@ const content: SettoreContent = {
       },
       {
         q: 'Was passiert, wenn die Berufsgenossenschaft (BG BAU oder BGW) einen Unfall auf einem Objekt prüft?',
-        a: 'Sie können in unter 60 Sekunden nachweisen, welcher Mitarbeiter an welchem Ort, zu welcher Zeit, mit welchen Tätigkeiten betraut war. GeoTapp speichert GPS-Zeitstempel, Fotos der Arbeitsbereiche und durchgeführte Aufgaben; jede Änderung ist nachweisbar, exportierbar als PDF mit kryptographischer Signatur. Die BG BAU-Inspektoren akzeptieren dieses Format als Nachweis nach §28 SGB VII.',
+        a: 'Sie können in unter 60 Sekunden nachweisen, welcher Mitarbeiter an welchem Ort, zu welcher Zeit, mit welchen Tätigkeiten betraut war. GeoTapp speichert GPS-Zeitstempel, Fotos der Arbeitsbereiche und durchgeführte Aufgaben; jede Änderung ist nachweisbar, exportierbar als PDF mit kryptographischer Signatur, zur Vorlage bei der Berufsgenossenschaft.',
       },
       {
         q: 'Wie verhindert GeoTapp den klassischen "Geisterreiniger"-Betrug (Mitarbeiter stempelt ein, ist aber nicht vor Ort)?',
-        a: 'Drei Schutzschichten: Erstens prüft GeoTapp die GPS-Position gegen einen Geofence pro Objekt - Stempeln außerhalb des Geofence wird automatisch markiert. Zweitens erkennt die App Fake-GPS-Apps und gemockte Standorte (häufig bei Android-Mods) und blockiert sie. Drittens kann optional ein Foto-Selfie als Stempelnachweis verlangt werden. Kombiniert reduziert das den Geisterstunden-Betrug nach Kundendaten um über 95%.',
+        a: 'Drei Schutzschichten: Erstens prüft GeoTapp die GPS-Position gegen einen Geofence pro Objekt - Stempeln außerhalb des Geofence wird automatisch markiert. Zweitens erkennt die App Fake-GPS-Apps und gemockte Standorte (häufig bei Android-Mods) und blockiert sie. Drittens kann optional ein Foto-Selfie als Stempelnachweis verlangt werden. Kombiniert macht das den Geisterstunden-Betrug für die einzelne Reinigungskraft deutlich schwerer.',
       },
       {
         q: 'Welche Mindestlohngesetz-Pflichten (MiLoG, §17) löst GeoTapp automatisch?',

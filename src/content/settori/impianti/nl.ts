@@ -22,7 +22,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Monteurs achternazitten voor updates',
-        desc: 'Realtime kaart met de status van elke opdracht. U weet waar al uw monteurs zijn zonder een enkel telefoontje te plegen.',
+        desc: 'Een kaart die elke klokregistratie toont per opdracht. U weet waar uw monteurs zijn ingeklokt zonder een enkel telefoontje te plegen.',
       },
       {
         title: 'Onvolledige of ontbrekende werkbonnen',
@@ -40,7 +40,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Uren worden automatisch per opdracht geregistreerd',
-        desc: 'Elke gewerkte minuut wordt gekoppeld aan de juiste opdracht. De manager ziet in realtime wie waar werkt.',
+        desc: 'Elke gewerkte minuut wordt gekoppeld aan de juiste opdracht. De manager ziet bij elke klokregistratie wie waar werkt.',
       },
       {
         title: 'Het klantrapport wordt gegenereerd zonder iets te typen',
@@ -75,7 +75,7 @@ const content: SettoreContent = {
       {
         label: 'AVG-conformiteit',
         competitor: 'Vaak twijfelachtig',
-        geotapp: 'Conform by design, formulieren inbegrepen',
+        geotapp: 'Gebouwd om binnen de AVG te blijven, formulieren inbegrepen',
       },
     ],
   },
@@ -118,8 +118,8 @@ const content: SettoreContent = {
         desc: 'Exporteer maandelijkse aanwezigheden en uren per opdracht. Salarisadministratie en facturatie worden een kwestie van minuten.',
       },
       {
-        title: 'Ingebouwde AVG-conformiteit',
-        desc: 'Geolocatie conform by design met AVG-regelgeving. Sjablonen voor privacyverklaringen aan medewerkers inbegrepen.',
+        title: 'Gebouwd om binnen de AVG te blijven',
+        desc: 'Geolocatie ontworpen om te passen bij de AVG-regelgeving. Sjablonen voor privacyverklaringen aan medewerkers inbegrepen.',
       },
     ],
   },
@@ -138,7 +138,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Hoe monitor ik meerdere teams op verschillende opdrachten?',
-        a: 'GeoTapp biedt een realtime kaart met de status van elke opdracht. U weet precies waar uw monteurs zijn en aan welke opdracht ze werken, zonder te bellen.',
+        a: 'GeoTapp biedt een kaart die elke klokregistratie toont per opdracht. U weet waar uw monteurs zijn ingeklokt en aan welke opdracht ze werken, zonder te bellen.',
       },
       {
         q: 'Hoe versnel ik de facturatie van afgeronde opdrachten?',
@@ -165,7 +165,7 @@ const content: SettoreContent = {
     },
     {
       question: 'Hoe monitor ik meerdere teams op verschillende opdrachten?',
-      answer: 'GeoTapp biedt een realtime kaart met de status van elke opdracht. U weet precies waar uw monteurs zijn en aan welke opdracht ze werken, zonder te bellen.',
+      answer: 'GeoTapp biedt een kaart die elke klokregistratie toont per opdracht. U weet waar uw monteurs zijn ingeklokt en aan welke opdracht ze werken, zonder te bellen.',
     },
     {
       question: 'Hoe versnel ik de facturatie van afgeronde opdrachten?',

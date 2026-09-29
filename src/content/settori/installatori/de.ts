@@ -9,13 +9,13 @@ const content: SettoreContent = {
     // quando riscrive il title. H1 allineato alla query; description che non ripete
     // piu' il title e dice cosa si ottiene (GPS solo a entrata e uscita). Title invariato.
     title: 'Arbeitszeiterfassung für Installateure und Elektriker | GeoTapp',
-    description: 'Stunden, Einsätze und Fotobeweise vom Monteur, GPS nur beim Ein- und Ausstempeln. Digitale Stundenzettel, DSGVO-konform und §17 MiLoG-tauglich.',
+    description: 'Stunden, Einsätze und Fotobeweise vom Monteur, GPS nur beim Ein- und Ausstempeln. Digitale Stundenzettel, für die DSGVO-Grenzen gebaut, §17 MiLoG-tauglich.',
   },
   hero: {
     badge: 'Arbeitszeiterfassung und Einsatzverwaltung für Elektriker und Heizungsinstallateure',
     h1_line1: 'Arbeitszeiterfassung für Installateure:',
     h1_line2: 'Einsätze, Stunden und Nachweise klar dokumentiert',
-    subtitle: 'GeoTapp verbindet Flow + TimeTracker für Handwerksbetriebe, die zwischen Baustellen, Fahrzeugen und Endkunden arbeiten. Die Android- und iOS-Apps unterstützen den Techniker im Außendienst; das Büro sieht Auftrag, Zeiten, Fotobeweise und Notizen ohne Nachfragen. Die Arbeitszeiterfassung läuft dabei mit, DSGVO-konform und §17 MiLoG-tauglich.',
+    subtitle: 'GeoTapp verbindet Flow + TimeTracker für Handwerksbetriebe, die zwischen Baustellen, Fahrzeugen und Endkunden arbeiten. Die Android- und iOS-Apps unterstützen den Techniker im Außendienst; das Büro sieht Auftrag, Zeiten, Fotobeweise und Notizen ohne Nachfragen. Die Arbeitszeiterfassung läuft dabei mit, für die Grenzen der DSGVO gebaut und §17 MiLoG-tauglich.',
     cta_primary: 'Demo anfragen',
     cta_note: 'Keine Bindung. Antwort innerhalb von 12 Geschäftsstunden.',
   },
@@ -42,10 +42,10 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'Techniker stempelt im Außendienst',
-        desc: 'Mit GeoTapp TimeTracker erfasst er Beginn, Ende, Fotos und Notizen direkt vom Smartphone. GPS-verifiziert, DSGVO-konform, §17 MiLoG-geeignet.',
+        desc: 'Mit GeoTapp TimeTracker erfasst er Beginn, Ende, Fotos und Notizen direkt vom Smartphone. GPS-verifiziert, für die Grenzen der DSGVO gebaut, §17 MiLoG-geeignet.',
       },
       {
-        title: 'Büro sieht alles in Echtzeit',
+        title: 'Büro sieht jede Stempelung sofort',
         desc: 'Flow empfängt die Daten sofort. Der Teamleiter sieht Auftrag, Fortschritt, zugewiesenen Techniker und Fotobeweise ohne anzurufen.',
       },
       {
@@ -86,7 +86,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Ist GeoTapp für Elektriker und Heizungsinstallateure geeignet?',
-        a: 'Ja. GeoTapp hilft Elektrikern, Heizungsinstallateuren und Handwerksbetrieben bei der Einsatzverwaltung, Stundenzetteln, ArbZG-konformer Arbeitszeiterfassung und Außendienst-Koordination.',
+        a: 'Ja. GeoTapp hilft Elektrikern, Heizungsinstallateuren und Handwerksbetrieben bei der Einsatzverwaltung, Stundenzetteln, einer für das ArbZG ausgelegten Arbeitszeiterfassung und Außendienst-Koordination.',
       },
       {
         q: 'Unterstützt GeoTapp die Anforderungen nach §17 MiLoG?',

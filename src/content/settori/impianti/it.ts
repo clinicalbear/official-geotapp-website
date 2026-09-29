@@ -22,7 +22,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Rincorri i tecnici per sapere dove sono',
-        desc: 'Mappa in tempo reale con lo stato di ogni intervento. Sai dove sono tutti i tuoi tecnici senza fare una telefonata.',
+        desc: 'Ogni timbratura del tecnico arriva subito in dashboard, con orario e posizione. Sai dove sono stati senza fare una telefonata.',
       },
       {
         title: 'Rapportini incompleti o mai consegnati',
@@ -40,7 +40,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Le ore si registrano automaticamente per commessa',
-        desc: 'Ogni minuto lavorato viene associato alla commessa giusta. Il responsabile vede in tempo reale chi sta lavorando dove.',
+        desc: 'Ogni minuto lavorato viene associato alla commessa giusta. Il responsabile vede, timbratura dopo timbratura, chi sta lavorando dove.',
       },
       {
         title: 'Il report cliente è generato senza digitare nulla',
@@ -75,7 +75,7 @@ const content: SettoreContent = {
       {
         label: 'Conformità GDPR',
         competitor: 'Spesso da verificare',
-        geotapp: 'Conforme per design, modulistica inclusa',
+        geotapp: 'Costruito per stare nei paletti del GDPR, modulistica inclusa',
       },
     ],
   },
@@ -119,7 +119,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Conformità GDPR integrata',
-        desc: 'Geolocalizzazione conforme per design alle normative GDPR. Modulistica per l\'informativa ai dipendenti inclusa.',
+        desc: 'Geolocalizzazione costruita per stare dentro i paletti del GDPR. Modulistica per l\'informativa ai dipendenti inclusa.',
       },
     ],
   },
@@ -138,7 +138,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Come monitoro più squadre su commesse diverse?',
-        a: 'GeoTapp offre una mappa in tempo reale con lo stato di ogni intervento. Sai esattamente dove si trovano i tuoi tecnici e su quale commessa stanno lavorando, senza fare telefonate.',
+        a: 'GeoTapp mostra le timbrature di oggi su mappa, aggiornate a ogni intervento aperto o chiuso. Sai su quale commessa stanno lavorando i tuoi tecnici, senza fare telefonate.',
       },
       {
         q: 'Come velocizzare la fatturazione degli interventi?',
@@ -165,7 +165,7 @@ const content: SettoreContent = {
     },
     {
       question: 'Come monitoro più squadre su commesse diverse?',
-      answer: 'GeoTapp offre una mappa in tempo reale con lo stato di ogni intervento. Sai esattamente dove si trovano i tuoi tecnici e su quale commessa stanno lavorando, senza fare telefonate.',
+      answer: 'GeoTapp mostra le timbrature di oggi su mappa, aggiornate a ogni intervento aperto o chiuso. Sai su quale commessa stanno lavorando i tuoi tecnici, senza fare telefonate.',
     },
     {
       question: 'Come velocizzare la fatturazione degli interventi?',

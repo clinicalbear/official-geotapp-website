@@ -4,15 +4,15 @@ const content: SettoreContent = {
   meta: {
     title: 'Software voor Schoonmaakbedrijven: App & Servicebewijs | GeoTapp',
     description:
-      'Software voor schoonmaakbedrijven: GPS-urenregistratie, automatisch servicebewijs en teambeheer. Geen klantgeschillen, AVG-conform. Probeer gratis.',
+      'Software voor schoonmaakbedrijven: GPS-urenregistratie, automatisch servicebewijs en teambeheer. Minder klantgeschillen, gebouwd voor de AVG. Probeer gratis.',
   },
 
   hero: {
     badge: 'App voor schoonmaakbedrijven en facilitaire diensten',
     h1_line1: 'Uw schoonmaakbedrijf,',
-    h1_line2: 'in real-time beheerd.',
+    h1_line2: 'bij elke klokregistratie in beeld.',
     subtitle:
-      'GPS-inklokking, automatisch servicebewijs en dienstenbeheer in één app. Geen spreadsheets, geen geschillen. Klant klaagt? Stuur het rapport en de discussie is voorbij.',
+      'GPS-inklokking, automatisch servicebewijs en dienstenbeheer in één app. Geen spreadsheets, minder geschillen. Klant klaagt? Stuur het rapport en de discussie is voorbij.',
     cta_primary: 'Probeer het op een echt contract',
     cta_note: '14 dagen, tot 50 medewerkers in het veld, zonder creditcard.',
   },
@@ -30,7 +30,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Moeilijk om meerdere teams te coördineren?',
-        desc: 'Zie in real-time waar iedereen is, op alle locaties, vanuit één dashboard. Geen telefoontjes.',
+        desc: 'Zie bij elke klokregistratie waar iedereen is ingeklokt, op alle locaties, vanuit één dashboard. Geen telefoontjes.',
       },
     ],
   },
@@ -60,7 +60,7 @@ const content: SettoreContent = {
         desc: 'Opent en sluit de dienst vanaf de smartphone. GeoTapp registreert echte GPS-coördinaten, foto\'s en tijdstempel, volledig automatisch, en elke wijziging is detecteerbaar.',
       },
       {
-        title: 'De manager ziet alles in real-time',
+        title: 'De manager ziet elke klokregistratie meteen',
         desc: 'Eén dashboard voor alle locaties. Weet precies wie er is, waar en sinds wanneer, zonder iemand achterna te zitten.',
       },
       {
@@ -97,7 +97,7 @@ const content: SettoreContent = {
       {
         label: 'AVG-conformiteit',
         competitor: 'Vaak te controleren',
-        geotapp: 'Conform by design, formulieren inbegrepen',
+        geotapp: 'Gebouwd om binnen de AVG te blijven, formulieren inbegrepen',
       },
     ],
   },
@@ -111,7 +111,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Echte controle over alle locaties',
-        desc: 'Zie in real-time wie waar actief is, over alle gebouwen tegelijk. Geen telefoontjes, geen e-mails.',
+        desc: 'Zie bij elke klokregistratie wie waar actief is, over alle gebouwen tegelijk. Geen telefoontjes, geen e-mails.',
       },
       {
         title: 'Verdedigbare rapporten overal',
@@ -153,11 +153,11 @@ const content: SettoreContent = {
       },
       {
         q: 'Is GeoTapp AVG-conform voor GPS-registratie van medewerkers?',
-        a: 'Ja. GeoTapp registreert de locatie alleen tijdens actieve werkuren, bevat sjablonen voor werknemersinformatie en verzamelt geen onnodige gegevens.',
+        a: 'GeoTapp is gebouwd om binnen de AVG te blijven: de locatie wordt alleen tijdens actieve werkuren geregistreerd, er zijn sjablonen voor werknemersinformatie inbegrepen en er worden geen onnodige gegevens verzameld.',
       },
       {
         q: 'Hoe beheer ik teams op meerdere locaties tegelijk?',
-        a: 'Met GeoTapp Flow heeft u één dashboard voor alle locaties. Zie in real-time wie waar actief is, wijs opdrachten toe en ontvang automatische meldingen.',
+        a: 'Met GeoTapp Flow heeft u één dashboard voor alle locaties. Zie bij elke klokregistratie wie waar actief is, wijs opdrachten toe en ontvang automatische meldingen.',
       },
       {
         q: 'Zijn papieren urenstaten nog nodig?',
@@ -173,7 +173,7 @@ const content: SettoreContent = {
   cta: {
     title: 'Uw schoonmakers doen goed werk. Zorg dat de klant het ziet.',
     subtitle:
-      'Elke taak wordt verifieerbaar servicebewijs. Geen geschillen, geen verloren contracten.',
+      'Elke taak wordt verifieerbaar servicebewijs. Minder geschillen, minder verloren contracten.',
     primary: 'Nu gratis starten!',
     secondary: 'Bekijk Prijzen',
   },
@@ -200,7 +200,7 @@ const content: SettoreContent = {
     {
       question: 'Is GeoTapp AVG-conform voor GPS-registratie van medewerkers?',
       answer:
-        'Ja. GeoTapp registreert de locatie alleen tijdens actieve werkuren, bevat sjablonen voor werknemersinformatie en verzamelt geen onnodige gegevens.',
+        'GeoTapp is gebouwd om binnen de AVG te blijven: de locatie wordt alleen tijdens actieve werkuren geregistreerd, er zijn sjablonen voor werknemersinformatie inbegrepen en er worden geen onnodige gegevens verzameld.',
     },
   ],
 };

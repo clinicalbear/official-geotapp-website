@@ -8,7 +8,7 @@ const content: SettoreContent = {
   hero: {
     badge: 'App pour Plombiers-Chauffagistes et Installateurs Thermosanitaires',
     h1_line1: 'App pour plombiers-chauffagistes :',
-    h1_line2: 'rapports GPS, preuves photo et zéro litige.',
+    h1_line2: 'rapports GPS, preuves photo et moins de litiges.',
     subtitle: 'GeoTapp enregistre chaque intervention sur chaudière et installation avec GPS, photos et horodatages vérifiables. Le client conteste les pièces remplacées ? Montrez le rapport, pas de discussion. Vos techniciens sont protégés, vos factures aussi.',
     cta_primary: 'Démarrer gratuitement !',
     cta_note: 'Sans engagement. Réponse sous 12 heures ouvrables.',
@@ -39,7 +39,7 @@ const content: SettoreContent = {
         desc: 'Avec GeoTapp TimeTracker, il pointe l\'entrée et la sortie avec GPS, prend des photos de l\'installation et de la chaudière, ajoute des notes sur les pièces remplacées depuis son smartphone.',
       },
       {
-        title: 'Le bureau voit tout en temps réel',
+        title: 'Le bureau voit chaque étape dès qu\'elle arrive',
         desc: 'GeoTapp Flow reçoit les données instantanément. Le responsable voit le chantier, le technicien assigné, l\'avancement et les preuves photo sans appeler.',
       },
       {
@@ -75,7 +75,7 @@ const content: SettoreContent = {
       {
         label: 'Conformité RGPD',
         competitor: 'Souvent à vérifier',
-        geotapp: 'Conforme par conception, formulaires inclus',
+        geotapp: 'Conçu pour rester dans le cadre du RGPD, formulaires inclus',
       },
     ],
   },
@@ -139,7 +139,7 @@ const content: SettoreContent = {
     badge: 'Vérifiable par n\'importe qui, sans accès à votre compte',
   },
   testimonial: {
-    quote: 'Avec GeoTapp, mes techniciens photographient l\'installation avant et après chaque intervention. Les litiges sur les pièces ont disparu. Les factures sont payées.',
+    quote: 'Avec GeoTapp, mes techniciens photographient l\'installation avant et après chaque intervention. Les litiges sur les pièces ont beaucoup diminué. Les factures sont payées.',
     author: 'Marco S.',
     role: 'Gérant, installations thermosanitaires résidentielles et industrielles',
   },
@@ -176,7 +176,7 @@ const content: SettoreContent = {
   schema_faq: [
     {
       question: 'GeoTapp fonctionne-t-il comme app pour plombiers-chauffagistes ?',
-      answer: 'Oui. GeoTapp est l\'app pour plombiers-chauffagistes et installateurs qui enregistre chaque intervention sur chaudière et installation avec GPS, photos et horodatages vérifiables. Le technicien pointe depuis le terrain, le bureau voit tout en temps réel et le client reçoit un rapport scellé.',
+      answer: 'Oui. GeoTapp est l\'app pour plombiers-chauffagistes et installateurs qui enregistre chaque intervention sur chaudière et installation avec GPS, photos et horodatages vérifiables. Le technicien pointe depuis le terrain, le bureau voit chaque étape dès qu\'elle arrive et le client reçoit un rapport scellé.',
     },
     {
       question: 'Comment sceller une intervention chaudière avec GeoTapp ?',
@@ -184,7 +184,7 @@ const content: SettoreContent = {
     },
     {
       question: 'GeoTapp gère-t-il plusieurs équipes de plombiers-chauffagistes sur différentes interventions ?',
-      answer: 'Oui. GeoTapp Flow permet au dirigeant de coordonner plusieurs équipes, d\'assigner des interventions urgentes, de suivre l\'état des chantiers et de collecter les preuves photo de tous les sites actifs en temps réel.',
+      answer: 'Oui. GeoTapp Flow permet au dirigeant de coordonner plusieurs équipes, d\'assigner des interventions urgentes, de suivre l\'état des chantiers et de collecter les preuves photo de tous les sites actifs, au fur et à mesure.',
     },
     {
       question: 'Les rapports GeoTapp sont-ils acceptés en cas de litige sur installations thermiques ?',

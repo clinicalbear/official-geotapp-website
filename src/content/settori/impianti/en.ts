@@ -3,7 +3,7 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'App for HVAC, Electrical & Plumbing Installers: GPS Job Tracking | GeoTapp',
-    description: 'Track jobs, hours and materials for HVAC, electrical and plumbing installers with GPS. Automatic proof of service, zero client disputes. Try GeoTapp free.',
+    description: 'Track jobs, hours and materials for HVAC, electrical and plumbing installers with GPS. Automatic proof of service, fewer client disputes. Try GeoTapp free.',
   },
   hero: {
     badge: 'App for installers, technicians and service teams',
@@ -22,7 +22,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Chasing technicians for updates',
-        desc: 'Real-time map with the status of every job. You know where all your technicians are without making a single phone call.',
+        desc: 'Job status map, updated as each technician clocks in. You know which job everyone is on without making a single phone call.',
       },
       {
         title: 'Incomplete or missing job sheets',
@@ -40,7 +40,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Hours are recorded automatically per job',
-        desc: 'Every minute worked is linked to the right job. The manager sees in real time who is working where.',
+        desc: 'Every minute worked is linked to the right job. The manager sees who\'s clocked in on which job as it happens.',
       },
       {
         title: 'The client report is generated without typing a thing',
@@ -75,7 +75,7 @@ const content: SettoreContent = {
       {
         label: 'GDPR compliance',
         competitor: 'Often questionable',
-        geotapp: 'Compliant by design, forms included',
+        geotapp: 'Built to stay within GDPR, forms included',
       },
     ],
   },
@@ -119,7 +119,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Built-in GDPR compliance',
-        desc: 'Geolocation compliant by design with GDPR regulations. Employee privacy notice templates included.',
+        desc: 'Geolocation built to stay within GDPR regulations. Employee privacy notice templates included.',
       },
     ],
   },
@@ -138,7 +138,7 @@ const content: SettoreContent = {
       },
       {
         q: 'How do I monitor multiple teams on different jobs?',
-        a: 'GeoTapp offers a real-time map with the status of every job. You know exactly where your technicians are and which job they are working on, without making phone calls.',
+        a: 'GeoTapp offers a job status map, updated as each technician clocks in. You know exactly which job everyone is working on, without making phone calls.',
       },
       {
         q: 'How do I speed up invoicing for completed jobs?',
@@ -165,7 +165,7 @@ const content: SettoreContent = {
     },
     {
       question: 'How do I monitor multiple teams on different jobs?',
-      answer: 'GeoTapp offers a real-time map with the status of every job. You know exactly where your technicians are and which job they are working on, without making phone calls.',
+      answer: 'GeoTapp offers a job status map, updated as each technician clocks in. You know exactly which job everyone is working on, without making phone calls.',
     },
     {
       question: 'How do I speed up invoicing for completed jobs?',

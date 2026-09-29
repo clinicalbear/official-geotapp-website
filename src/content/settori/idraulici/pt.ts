@@ -8,7 +8,7 @@ const content: SettoreContent = {
   hero: {
     badge: 'App para Canalizadores, Técnicos AVAC e Aquecimento',
     h1_line1: 'App para canalizadores e técnicos AVAC:',
-    h1_line2: 'relatórios GPS, provas fotográficas e zero disputas.',
+    h1_line2: 'relatórios GPS, provas fotográficas e menos disputas.',
     subtitle: 'GeoTapp regista cada intervenção de canalização e aquecimento com GPS, fotos e carimbos de data/hora verificáveis. O cliente contesta? Mostre o relatório, sem discussão. Os seus técnicos estão protegidos, as suas faturas também.',
     cta_primary: 'Começar grátis',
     cta_note: 'Sem compromisso. Resposta em 12 horas úteis.',
@@ -39,12 +39,12 @@ const content: SettoreContent = {
         desc: 'Com GPS, fotografa o sistema antes e depois, adiciona notas técnicas a partir do telemóvel.',
       },
       {
-        title: 'O escritório vê tudo em tempo real',
+        title: 'O escritório vê tudo assim que chega',
         desc: 'O GeoTapp Flow recebe os dados instantaneamente. Atribuição, progresso e provas fotográficas sem telefonemas.',
       },
       {
         title: 'O relatório é a sua prova',
-        desc: 'Relatório selado com GPS, fotos, materiais usados e notas. Inviolável. O cliente pode verificá-lo.',
+        desc: 'Relatório selado com GPS, fotos, materiais usados e notas. Qualquer alteração é detetável. O cliente pode verificá-lo.',
       },
     ],
   },
@@ -57,7 +57,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Fotos seladas antes e depois',
-        desc: 'Imagens ligadas ao GPS e carimbo de data/hora, invioláveis.',
+        desc: 'Imagens ligadas ao GPS e carimbo de data/hora; qualquer alteração é detetável.',
       },
       {
         title: 'Relatórios automáticos',
@@ -96,7 +96,7 @@ const content: SettoreContent = {
       },
       {
         q: 'O GeoTapp cumpre com o RGPD para geolocalização?',
-        a: 'Sim. Gestão conforme ao RGPD com formulários de informação para trabalhadores incluídos.',
+        a: 'Sim. Gestão pensada para ficar dentro do RGPD, com formulários de informação para trabalhadores incluídos.',
       },
     ],
   },

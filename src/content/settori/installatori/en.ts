@@ -36,10 +36,10 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'Technician clocks in on site',
-        desc: 'With GeoTapp TimeTracker they record start, finish, photos and notes from their smartphone. GPS verified, GDPR compliant.',
+        desc: 'With GeoTapp TimeTracker they record start, finish, photos and notes from their smartphone. GPS verified, built to stay within GDPR.',
       },
       {
-        title: 'Office sees everything in real time',
+        title: 'Office sees each update as it happens',
         desc: 'Flow receives the data instantly. The manager sees job status, progress, assigned technician and photo evidence without calling.',
       },
       {
@@ -75,7 +75,7 @@ const content: SettoreContent = {
       {
         label: 'GDPR compliance',
         competitor: 'Often to verify',
-        geotapp: 'Compliant by design, forms included',
+        geotapp: 'Built to stay within GDPR, forms included',
       },
     ],
   },

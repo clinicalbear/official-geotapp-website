@@ -3,13 +3,13 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'Byggeplads-app: GPS-fremmøde & Holdstyring | GeoTapp',
-    description: 'Administrer fremmøde, vagter og sikkerhed på byggepladsen med GPS i realtid. Forseglede stemplinger, automatiske rapporter. GDPR-kompatibel app for byggefirmaer.',
+    description: 'Administrer fremmøde, vagter og sikkerhed på byggepladsen med GPS-stemplinger. Forseglede rapporter, bygget til at holde sig inden for GDPR.',
   },
   hero: {
     badge: 'App til byggefirmaer og byggepladser',
     h1_line1: 'Din byggeplads under kontrol,',
-    h1_line2: 'i realtid.',
-    subtitle: 'GPS-forseglede stemplinger, holdstyring og automatiske rapporter. Intet papirarbejde, ingen tvister. GeoTapp forbinder Flow + TimeTracker for byggeledere, underentreprenører og projektledelse.',
+    h1_line2: 'ved hver stempling.',
+    subtitle: 'GPS-forseglede stemplinger, holdstyring og automatiske rapporter. Intet papirarbejde, færre tvister. GeoTapp forbinder Flow + TimeTracker for byggeledere, underentreprenører og projektledelse.',
     cta_primary: 'Prøv det på en rigtig byggeplads',
     cta_note: '14 dage, op til 50 medarbejdere i marken, uden kreditkort.',
   },
@@ -22,7 +22,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Hvordan styrer du underentreprenører?',
-        desc: 'Spor adgang og fremmøde for alle hold, inklusive underentreprenører, fra ét realtidsdashboard.',
+        desc: 'Se adgang og fremmøde for alle hold, inklusive underentreprenører, i ét dashboard, opdateret ved hver stempling.',
       },
       {
         title: 'Tager byggepladsrapporter timer?',
@@ -39,7 +39,7 @@ const content: SettoreContent = {
         desc: 'Starter vagten fra smartphonen. GeoTapp registrerer reelle GPS-koordinater, tidsstempel og, om nødvendigt, fotos. Fuldautomatisk, enhver ændring kan spores.',
       },
       {
-        title: 'Byggeledelsen ser alt i realtid',
+        title: 'Byggeledelsen ser det, så snart der stemples',
         desc: 'Ét dashboard for alle hold og alle byggepladser. Hvem er til stede, hvor og siden hvornår, uden at jagte nogen over telefonen.',
       },
       {
@@ -103,7 +103,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Multi-byggeplads dashboard',
-        desc: 'Overvåg flere byggepladser fra én skærm. Se i realtid hvem der er til stede, hvor og siden hvornår, for hver aktiv byggeplads.',
+        desc: 'Overvåg flere byggepladser fra én skærm. Se, så snart der stemples, hvem der er til stede, hvor og siden hvornår, for hver aktiv byggeplads.',
       },
       {
         title: 'Automatiske fremdriftsrapporter',
@@ -138,7 +138,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Hvordan styrer du underentreprenører på byggepladsen?',
-        a: 'GeoTapp sporer adgang og fremmøde for alle hold, inklusive underentreprenører. Hver medarbejder stempler fra sin smartphone, og byggeledelsen ser alt i realtid på ét dashboard.',
+        a: 'GeoTapp registrerer adgang og fremmøde for alle hold, inklusive underentreprenører. Hver medarbejder stempler fra sin smartphone, og byggeledelsen ser det straks, når der stemples, i ét dashboard.',
       },
       {
         q: 'Kræver byggepladsrapporter timers manuelt arbejde?',
@@ -165,7 +165,7 @@ const content: SettoreContent = {
     },
     {
       question: 'Hvordan styrer du underentreprenører på byggepladsen?',
-      answer: 'GeoTapp sporer adgang og fremmøde for alle hold, inklusive underentreprenører. Hver medarbejder stempler fra sin smartphone, og byggeledelsen ser alt i realtid på ét dashboard.',
+      answer: 'GeoTapp registrerer adgang og fremmøde for alle hold, inklusive underentreprenører. Hver medarbejder stempler fra sin smartphone, og byggeledelsen ser det straks, når der stemples, i ét dashboard.',
     },
     {
       question: 'Kræver byggepladsrapporter timers manuelt arbejde?',

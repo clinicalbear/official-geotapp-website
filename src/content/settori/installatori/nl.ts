@@ -14,7 +14,7 @@ const content: SettoreContent = {
     badge: 'Software voor installatietechniek, elektrotechniek en onderhoudsteams',
     h1_line1: 'Buitendienst onder controle:',
     h1_line2: 'werkbonnen, uren en bewijs op één plek',
-    subtitle: 'GeoTapp verbindt Flow + TimeTracker voor bedrijven die werken tussen busjes, bouwplaatsen en eindklanten. Android- en iOS-apps ondersteunen de monteur in het veld; het kantoor ziet de opdracht, tijden, fotobewijs en notities zonder achter iemand aan te bellen. AVG-conform, CAO Elektrotechnisch-geschikt.',
+    subtitle: 'GeoTapp verbindt Flow + TimeTracker voor bedrijven die werken tussen busjes, bouwplaatsen en eindklanten. Android- en iOS-apps ondersteunen de monteur in het veld; het kantoor ziet de opdracht, tijden, fotobewijs en notities zonder achter iemand aan te bellen. Gebouwd om binnen de AVG te blijven, CAO Elektrotechnisch-geschikt.',
     cta_primary: 'Demo aanvragen',
     cta_note: 'Geen verplichtingen. Reactie binnen 12 werkuren.',
   },
@@ -41,15 +41,15 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'Monteur klokt in op locatie',
-        desc: 'Met GeoTapp TimeTracker registreert hij begin, einde, foto\'s en notities direct vanaf zijn smartphone. GPS-geverifieerd, AVG-conform.',
+        desc: 'Met GeoTapp TimeTracker registreert hij begin, einde, foto\'s en notities direct vanaf zijn smartphone. GPS-geverifieerd, gebouwd om binnen de AVG te blijven.',
       },
       {
-        title: 'Kantoor ziet alles in real time',
+        title: 'Kantoor ziet elke klokregistratie meteen',
         desc: 'Flow ontvangt de gegevens onmiddellijk. De leidinggevende ziet opdracht, voortgang, toegewezen monteur en fotobewijs zonder te bellen.',
       },
       {
         title: 'Het rapport is al klaar',
-        desc: 'Aan het einde van de klus is het werkrapport al gestructureerd met echte gegevens. Geen handmatige reconstructie. Geen geschil zonder antwoord.',
+        desc: 'Aan het einde van de klus is het werkrapport al gestructureerd met echte gegevens. Geen handmatige reconstructie. Bewijs binnen handbereik bij een geschil.',
       },
     ],
   },
@@ -93,11 +93,11 @@ const content: SettoreContent = {
       },
       {
         q: 'Heeft de ondernemingsraad instemmingsrecht bij invoering van GeoTapp?',
-        a: 'Ja. Onder art. 27 lid 1 sub l WOR (Wet op de ondernemingsraden) heeft de OR instemmingsrecht over een tijdregistratiesysteem of personeelsvolgsysteem. GeoTapp levert de DPIA en de OR-stukken kant-en-klaar mee, zodat de invoering technisch en juridisch in orde is voordat het systeem live gaat. Zonder OR-instemming geen rollout, dat is hoe wij het ontwerpen.',
+        a: 'Ja. Onder art. 27 lid 1 sub l WOR (Wet op de ondernemingsraden) heeft de OR instemmingsrecht over een tijdregistratiesysteem of personeelsvolgsysteem. GeoTapp levert de DPIA en de OR-stukken kant-en-klaar mee, zodat u goed voorbereid het gesprek met de OR aangaat voordat het systeem live gaat. Zonder OR-instemming geen rollout, dat is hoe wij het ontwerpen.',
       },
       {
         q: 'Is de GPS-registratie AVG-conform?',
-        a: 'Ja. GeoTapp registreert uitsluitend in- en uitklokken met GPS-validatie van de werklocatie, geen continue tracking, geen achtergrondvolging buiten dienst. De gegevensminimalisatie (art. 5 lid 1 sub c AVG) en doelbinding zijn structureel in de productarchitectuur ingebouwd, niet als optionele instelling. Bewaartermijnen zijn conform CAO Elektrotechnisch en de Arbeidstijdenwet.',
+        a: 'De GPS-registratie is gebouwd om binnen de AVG te blijven: GeoTapp registreert uitsluitend in- en uitklokken met GPS-validatie van de werklocatie, geen continue tracking, geen achtergrondvolging buiten dienst. Gegevensminimalisatie (art. 5 lid 1 sub c AVG) en doelbinding zijn structureel in de productarchitectuur ingebouwd, niet als optionele instelling. Bewaartermijnen zijn afgestemd op CAO Elektrotechnisch en de Arbeidstijdenwet.',
       },
       {
         q: 'Hoe gaat GeoTapp om met de privacy van de eindklant?',

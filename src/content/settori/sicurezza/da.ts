@@ -9,7 +9,7 @@ const content: SettoreContent = {
     badge: 'Software til Vagtvirksomheder, Vagtmænd og Eventvagtservice',
     h1_line1: 'Dokumenteret tilstedeværelse og vagtregistrering',
     h1_line2: 'for vagtmænd og vagtvirksomheder',
-    subtitle: 'GeoTapp Flow og TimeTracker dokumenterer vagtmændenes tilstedeværelse på tildelte poster med verificeret GPS og uforanderlige tidsstempler. Certifikathåndtering ifølge Vagtoverenskomsten, digital vagtafløsning og geolokaliserede hændelsesrapporter, alt på én platform.',
+    subtitle: 'GeoTapp Flow og TimeTracker dokumenterer vagtmændenes tilstedeværelse på tildelte poster med verificeret GPS og forseglede tidsstempler, hvor enhver ændring forbliver synlig. Certifikathåndtering ifølge Vagtoverenskomsten, digital vagtafløsning og geolokaliserede hændelsesrapporter, alt på én platform.',
     cta_primary: 'Book en Demo',
     cta_note: 'Ingen binding. Svar inden for 12 arbejdstimer.',
   },
@@ -18,11 +18,11 @@ const content: SettoreContent = {
     items: [
       {
         title: 'At bevise at vagtmænd var på tildelte poster til rette tid',
-        desc: 'En kunde bestrider, om en vagtmand var til stede på sin post på et bestemt tidspunkt. Uden verificeret GPS og uforanderlige tidsstempler forbliver tvisten åben og kontraktoverholdelse er umulig at dokumentere.',
+        desc: 'En kunde bestrider, om en vagtmand var til stede på sin post på et bestemt tidspunkt. Uden verificeret GPS og forseglede tidsstempler forbliver tvisten åben og kontraktoverholdelse er svær at dokumentere.',
       },
       {
         title: 'Hændelsesrapporter uden lokationsdokumentation',
-        desc: 'En håndskrevet hændelsesrapport har ringe bevisværdi uden forseglet GPS-position og et manipulationssikret tidsstempel. Papirlogboger er for nemme at bestride.',
+        desc: 'En håndskrevet hændelsesrapport har ringe bevisværdi uden forseglet GPS-position og et tidsstempel, hvor enhver ændring forbliver synlig. Papirlogboger er for nemme at bestride.',
       },
       {
         title: 'Vagtafløsning stadig på papir',
@@ -36,10 +36,10 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'Vagtmanden stempler ind på den tildelte post',
-        desc: 'GeoTapp TimeTracker registrerer ind- og udstemplingKort, GPS-position og fotos med uforanderlige tidsstempler. Hver runde logges automatisk fra vagtmandens smartphone.',
+        desc: 'GeoTapp TimeTracker registrerer ind- og udstemplingKort, GPS-position og fotos med forseglede tidsstempler. Hver runde logges automatisk fra vagtmandens smartphone.',
       },
       {
-        title: 'Lederen ser alle poster i realtid',
+        title: 'Lederen ser hver post, så snart der stemples',
         desc: 'Flow modtager data øjeblikkeligt. Driftslederen kontrollerer fuld postbemanding, vagtskifter og afvigelser uden at ringe til feltet.',
       },
       {
@@ -66,7 +66,7 @@ const content: SettoreContent = {
     ],
   },
   testimonial: {
-    quote: 'Med GeoTapp er tvister om postbemanding fortid. Kunder modtager en GPS-stemplet tilstedeværelsesprotokol og der er intet at diskutere.',
+    quote: 'Med GeoTapp har vi langt færre tvister om postbemanding. Kunder modtager en GPS-stemplet tilstedeværelsesprotokol, og diskussionen afklares med dataene.',
     author: 'Lars N.',
     role: 'Driftsleder, vagtvirksomhed',
   },
@@ -80,7 +80,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Hvordan hjælper GeoTapp med dokumentation af hændelsesrapporter?',
-        a: 'TimeTracker knytter hvert hændelse til en forseglet GPS-position og et uforanderligt tidsstempel. Den genererede hændelsesrapport indeholder koordinater, tid og fotos, hvilket gør den forsvarbar i retslige og kontraktmæssige procedurer.',
+        a: 'TimeTracker knytter hvert hændelse til en forseglet GPS-position og et forseglet tidsstempel, hvor enhver ændring forbliver synlig. Den genererede hændelsesrapport indeholder koordinater, tid og fotos, hvilket gør den forsvarbar i retslige og kontraktmæssige procedurer.',
       },
       {
         q: 'Understøtter GeoTapp digital vagtafløsning mellem vagtmænd?',

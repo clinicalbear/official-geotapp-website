@@ -53,7 +53,7 @@
       },
       "generatore": {
         "title": "GPS-verklaring-generator",
-        "desc": "Maak uw voorbeeld van een GPS-privacyverklaring met uw logo, AVG-conform. Gratis, in uw browser."
+        "desc": "Maak uw voorbeeld van een GPS-privacyverklaring met uw logo, opgesteld volgens de AVG-richtlijnen. Gratis, in uw browser."
       },
       "conservazione": {
         "title": "Bewaarbeleid voor gegevens",
@@ -210,7 +210,7 @@
       "title": "Coördineer de buitendienst vanuit één operationeel centrum.",
       "subtitle": "Flow is het systeem dat kantoor gebruikt om werkbeurten te beheren, activiteiten toe te wijzen, voortgang bij te houden en gestructureerde werkbonnen te genereren. <strong class=\"text-slate-900\">Minder interne wrijving, meer echte controle.</strong><br/><br/><em>Uw bedrijf is een levend organisme. Elke opdracht, elke taak, elke medewerker is een hartslag. GeoTapp Flow houdt ze allemaal gesynchroniseerd.</em>",
       "features": {
-        "crm": "<strong>Werkbeurtbeheer:</strong> Maak interventies aan, wijs monteurs toe en volg de voortgang in realtime.",
+        "crm": "<strong>Werkbeurtbeheer:</strong> Maak interventies aan, wijs monteurs toe en volg de voortgang zodra ze wordt bijgewerkt.",
         "pipeline": "<strong>Gestructureerde werkbonnen:</strong> Elke voltooide werkbeurt genereert traceerbare documentatie klaar voor de klant."
       },
       "link": "Ontdek GeoTapp Flow"
@@ -253,8 +253,8 @@
           "desc": "Locatie wordt <strong>uitsluitend</strong> geregistreerd bij in- en uitklokken. Geen continue tracking."
         },
         {
-          "title": "Realtime operationele controle",
-          "desc": "Veldgegevens komen direct in Flow aan. Het kantoor heeft live zichtbaarheid zonder iemand te bellen."
+          "title": "Operationele controle bij elke klokregistratie",
+          "desc": "Veldgegevens komen direct in Flow aan zodra ze worden vastgelegd. Het kantoor ziet elke klokregistratie zonder iemand te bellen."
         },
         {
           "title": "Verdedigbaar bewijs over tijd",
@@ -284,7 +284,7 @@
       },
       "pulizie": {
         "name": "Schoonmaak",
-        "desc": "Schoonmaakbedrijven, Facility, Multiservice. Elke ronde gedocumenteerd en controleerbaar door de opdrachtgever, nul geschillen.",
+        "desc": "Schoonmaakbedrijven, Facility, Multiservice. Elke ronde gedocumenteerd en controleerbaar door de opdrachtgever, minder geschillen.",
         "cta": "Geschillen vermijden"
       },
       "elettricisti": {
@@ -294,7 +294,7 @@
       },
       "idraulici": {
         "name": "Loodgieters",
-        "desc": "Sanitair, verwarming, ketels. GPS werkbonnen met voor-en-na foto's, geen geschillen over uitgevoerd werk.",
+        "desc": "Sanitair, verwarming, ketels. GPS werkbonnen met voor-en-na foto's, minder geschillen over uitgevoerd werk.",
         "cta": "Bewijs elke klus"
       },
       "termoidraulici": {
@@ -380,7 +380,7 @@
           {
             "name": "GeoTapp Flow Team",
             "tagline": "Voor kleine operationele teams.",
-            "desc": "Coördineer en beheer uw operationele team in realtime.",
+            "desc": "Coördineer en beheer uw operationele team met actuele gegevens.",
             "features": [
               "5 Flow-gebruikers inbegrepen",
               "Werkbeheer",
@@ -638,13 +638,13 @@
         },
         "the-uplink": {
           "name": "Koppeling veld-kantoor",
-          "short": "Gegevens verzameld door TimeTracker komen in realtime aan in Flow. Buitendienst en kantoor werken op dezelfde operationele gegevens.",
-          "full": "### Kantoor en buitendienst, eindelijk verbonden.\n\nDe kloof tussen buitendienst en kantoor genereert vermijdbare fouten, vertragingen en geschillen.\n**Koppeling veld-kantoor** sluit de kloof.\n\n#### Realtime synchronisatie\n\nElk in- en uitklokken, elke foto en notitie geregistreerd op TimeTracker komt direct in Flow aan.\nDe manager heeft een live overzicht zonder de monteur te hoeven bellen.\n\n#### Betrouwbare geschiedenis\n\nAlles wat de monteur in het veld registreert, wordt gearchiveerd en gekoppeld aan de werkbeurt.\nGeen gegevens gaan verloren. Geen informatie ontbreekt wanneer het tijd is om te rapporteren."
+          "short": "Gegevens verzameld door TimeTracker komen direct in Flow aan, zodra ze worden geregistreerd. Buitendienst en kantoor werken op dezelfde operationele gegevens.",
+          "full": "### Kantoor en buitendienst, eindelijk verbonden.\n\nDe kloof tussen buitendienst en kantoor genereert vermijdbare fouten, vertragingen en geschillen.\n**Koppeling veld-kantoor** sluit de kloof.\n\n#### Synchronisatie per gebeurtenis\n\nElk in- en uitklokken, elke foto en notitie geregistreerd op TimeTracker komt direct in Flow aan.\nDe manager ziet het zodra het gebeurt, zonder de monteur te hoeven bellen.\n\n#### Betrouwbare geschiedenis\n\nAlles wat de monteur in het veld registreert, wordt gearchiveerd en gekoppeld aan de werkbeurt.\nGeen gegevens gaan verloren. Geen informatie ontbreekt wanneer het tijd is om te rapporteren."
         },
         "the-oracle": {
           "name": "Operationele zichtbaarheid",
-          "short": "Operationeel dashboard in realtime. Altijd weten hoeveel interventies open, in uitvoering of vandaag voltooid zijn.",
-          "full": "### Operationele data, geen aannames.\n\nBeslissen zonder betrouwbare gegevens is gevaarlijk.\n**Operationele zichtbaarheid** zet veldgegevens om in concrete informatie.\n\n#### Operationeel dashboard\n\nZie in realtime:\n- Open en lopende interventies\n- Actieve monteurs\n- Vandaag en deze week voltooide interventies\n\n#### Periodieke rapporten\n\nOntvang geautomatiseerde activiteitensamenvattingen.\nVergelijk perioden, identificeer knelpunten en optimaliseer operaties."
+          "short": "Operationeel dashboard, altijd actueel. Altijd weten hoeveel interventies open, in uitvoering of vandaag voltooid zijn.",
+          "full": "### Operationele data, geen aannames.\n\nBeslissen zonder betrouwbare gegevens is gevaarlijk.\n**Operationele zichtbaarheid** zet veldgegevens om in concrete informatie.\n\n#### Operationeel dashboard\n\nZie in één overzicht:\n- Open en lopende interventies\n- Actieve monteurs\n- Vandaag en deze week voltooide interventies\n\n#### Periodieke rapporten\n\nOntvang geautomatiseerde activiteitensamenvattingen.\nVergelijk perioden, identificeer knelpunten en optimaliseer operaties."
         }
       }
     },
@@ -707,7 +707,7 @@
         "data-core": {
           "name": "Weekrapporten",
           "short": "Gedetailleerde rapporten over gewerkte uren per werkbeurt en per medewerker. Betrouwbare gegevens voor interne controle en facturering.",
-          "full": "### Gegevens liegen niet.\n\nNeem beslissingen op basis van feiten, niet op indrukken.\n**Weekrapporten** haalt waarde uit dagelijkse operaties.\n\n#### Gedetailleerde rapporten\n\nElke week een volledig beeld: wie heeft gewerkt, waar, op welke werkbeurt en hoe lang.\n\n#### Volledige transparantie\n\nMedewerkers en managers raadplegen hetzelfde maandrapport.\nGetelde uren zijn voor iedereen identiek.\nGeen geschillen aan het einde van de maand."
+          "full": "### Gegevens liegen niet.\n\nNeem beslissingen op basis van feiten, niet op indrukken.\n**Weekrapporten** haalt waarde uit dagelijkse operaties.\n\n#### Gedetailleerde rapporten\n\nElke week een volledig beeld: wie heeft gewerkt, waar, op welke werkbeurt en hoe lang.\n\n#### Volledige transparantie\n\nMedewerkers en managers raadplegen hetzelfde maandrapport.\nGetelde uren zijn voor iedereen identiek.\nMinder geschillen aan het einde van de maand."
         },
         "identity-forge": {
           "name": "Branded app",
@@ -984,7 +984,7 @@
       "section_label": "De oprichter",
       "name": "Michele Angelo Petraroli",
       "role": "Founder & CEO",
-      "bio": "Michele Angelo Petraroli is founder en CEO van GeoTapp, een Italiaanse SaaS voor het beheer van veldwerkers bij Europese MKB's. Vanuit zijn operationele ervaring zag hij hoe schoonmaakbedrijven, installateurs en beveiligingsdiensten geld verliezen als het bewijs van werk ontbreekt. Hij richtte GeoTapp op in 2024 om het probleem bij de wortel aan te pakken. Vandaag helpt GeoTapp Europese MKB's met AVG-conforme GPS-tracking, fotobewijs en digitale handtekeningen die elke opdracht verifieerbaar maken.",
+      "bio": "Michele Angelo Petraroli is founder en CEO van GeoTapp, een Italiaanse SaaS voor het beheer van veldwerkers bij Europese MKB's. Vanuit zijn operationele ervaring zag hij hoe schoonmaakbedrijven, installateurs en beveiligingsdiensten geld verliezen als het bewijs van werk ontbreekt. Hij richtte GeoTapp op in 2024 om het probleem bij de wortel aan te pakken. Vandaag helpt GeoTapp Europese MKB's met GPS-registratie die gebouwd is om binnen de AVG te blijven, fotobewijs en digitale handtekeningen die elke opdracht verifieerbaar maken.",
       "expertise_label": "Vakgebieden",
       "expertise": [
         "Veldservice management",
@@ -1079,7 +1079,7 @@
   },
   "roi": {
     "meta_title": "GeoTapp ROI-Calculator - Ontdek uw echte besparingen",
-    "meta_desc": "Bereken in 2 minuten hoeveel u bespaart met GeoTapp: minder administratie, nul geschillen, productievere medewerkers. Zonder e-mail en zonder account.",
+    "meta_desc": "Bereken in 2 minuten hoeveel u bespaart met GeoTapp: minder administratie, minder geschillen, productievere medewerkers. Zonder e-mail en zonder account.",
     "hero_title": "Bereken uw ROI met GeoTapp",
     "hero_subtitle": "Voer uw bedrijfsgegevens in en ontdek hoeveel u jaarlijks kunt besparen.",
     "step1_title": "Uw bedrijf",

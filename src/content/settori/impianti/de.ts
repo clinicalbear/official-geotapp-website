@@ -22,7 +22,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Techniker hinterhertelefonieren',
-        desc: 'Echtzeit-Karte mit dem Status jedes Einsatzes. Sie wissen, wo alle Ihre Techniker sind, ohne einen einzigen Anruf zu tätigen.',
+        desc: 'Karte mit dem Status jedes Einsatzes, aktualisiert bei jeder Stempelung. Sie sehen, wo Ihre Techniker zuletzt eingestempelt haben, ohne einen einzigen Anruf zu tätigen.',
       },
       {
         title: 'Unvollständige oder fehlende Arbeitsberichte',
@@ -40,7 +40,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Stunden werden automatisch pro Auftrag erfasst',
-        desc: 'Jede gearbeitete Minute wird dem richtigen Auftrag zugeordnet. Der Verantwortliche sieht in Echtzeit, wer wo arbeitet.',
+        desc: 'Jede gearbeitete Minute wird dem richtigen Auftrag zugeordnet. Der Verantwortliche sieht bei jeder Stempelung, wer wo arbeitet.',
       },
       {
         title: 'Der Kundenbericht wird automatisch generiert',
@@ -75,7 +75,7 @@ const content: SettoreContent = {
       {
         label: 'DSGVO-Konformität',
         competitor: 'Oft fraglich',
-        geotapp: 'Von Grund auf konform, Formulare enthalten',
+        geotapp: 'Für die Grenzen der DSGVO gebaut, Formulare enthalten',
       },
     ],
   },
@@ -118,8 +118,8 @@ const content: SettoreContent = {
         desc: 'Exportieren Sie monatliche Anwesenheiten und Stunden pro Auftrag. Lohnabrechnung und Fakturierung werden zur Sache von Minuten.',
       },
       {
-        title: 'Integrierte DSGVO-Konformität',
-        desc: 'Geolokalisierung von Grund auf DSGVO-konform. Vorlagen für Datenschutzhinweise an Mitarbeiter enthalten.',
+        title: 'Für die DSGVO-Grenzen gebaut',
+        desc: 'Geolokalisierung für die Grenzen der DSGVO gebaut. Vorlage für die Mitarbeiterinformation enthalten.',
       },
     ],
   },
@@ -138,7 +138,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Wie überwache ich mehrere Teams auf verschiedenen Aufträgen?',
-        a: 'GeoTapp bietet eine Echtzeit-Karte mit dem Status jedes Einsatzes. Sie wissen genau, wo Ihre Techniker sind und an welchem Auftrag sie arbeiten, ohne zu telefonieren.',
+        a: 'GeoTapp bietet eine Karte mit dem Status jedes Einsatzes, aktualisiert bei jeder Stempelung. Sie sehen, wo Ihre Techniker zuletzt eingestempelt haben und an welchem Auftrag sie arbeiten, ohne zu telefonieren.',
       },
       {
         q: 'Wie beschleunige ich die Fakturierung abgeschlossener Einsätze?',
@@ -165,7 +165,7 @@ const content: SettoreContent = {
     },
     {
       question: 'Wie überwache ich mehrere Teams auf verschiedenen Aufträgen?',
-      answer: 'GeoTapp bietet eine Echtzeit-Karte mit dem Status jedes Einsatzes. Sie wissen genau, wo Ihre Techniker sind und an welchem Auftrag sie arbeiten, ohne zu telefonieren.',
+      answer: 'GeoTapp bietet eine Karte mit dem Status jedes Einsatzes, aktualisiert bei jeder Stempelung. Sie sehen, wo Ihre Techniker zuletzt eingestempelt haben und an welchem Auftrag sie arbeiten, ohne zu telefonieren.',
     },
     {
       question: 'Wie beschleunige ich die Fakturierung abgeschlossener Einsätze?',

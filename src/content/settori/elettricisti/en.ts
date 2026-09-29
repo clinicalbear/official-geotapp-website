@@ -8,7 +8,7 @@ const content: SettoreContent = {
   hero: {
     badge: 'Time Tracking & Job Reports for Electricians and Electrical Contractors',
     h1_line1: 'App for electricians:',
-    h1_line2: 'GPS time tracking, job reports and zero disputes.',
+    h1_line2: 'GPS time tracking, job reports and fewer disputes.',
     subtitle: 'GeoTapp records every electrical job with GPS, photos and verifiable timestamps. Client disputes a job? Show them the report, no argument needed. Your engineers are protected, your invoices too.',
     cta_primary: 'Start free today',
     cta_note: 'No commitment. Response within 12 business hours.',
@@ -39,7 +39,7 @@ const content: SettoreContent = {
         desc: 'With GeoTapp TimeTracker they clock in and out with GPS, photograph the installation and add technical notes from their smartphone.',
       },
       {
-        title: 'Office sees everything in real time',
+        title: 'Office sees each update as it happens',
         desc: 'GeoTapp Flow receives the data instantly. The manager sees job status, assigned engineer, progress and photo evidence without calling.',
       },
       {
@@ -75,7 +75,7 @@ const content: SettoreContent = {
       {
         label: 'GDPR compliance',
         competitor: 'Often to verify',
-        geotapp: 'Compliant by design, forms included',
+        geotapp: 'Built to stay within GDPR, forms included',
       },
     ],
   },
@@ -149,7 +149,7 @@ const content: SettoreContent = {
     items: [
       {
         q: 'Can GeoTapp work as a construction app for electricians on building sites?',
-        a: 'Yes. On a construction site the electrician clocks in with GPS, logs the work order and photographs each stage of the installation. The site manager sees who is on which site in real time, and every job closes with a sealed report tied to location and time.',
+        a: 'Yes. On a construction site the electrician clocks in with GPS, logs the work order and photographs each stage of the installation. The site manager sees each clock-in as it happens, and every job closes with a sealed report tied to location and time.',
       },
       {
         q: 'Is GeoTapp suitable as an app for electricians?',
@@ -188,7 +188,7 @@ const content: SettoreContent = {
     },
     {
       question: 'Does GeoTapp work as an app for electricians?',
-      answer: 'Yes. GeoTapp is the app for electricians that records every job with GPS, photos and verifiable timestamps. The engineer clocks in from the field, the office sees everything in real time, and the client receives a sealed job report.',
+      answer: 'Yes. GeoTapp is the app for electricians that records every job with GPS, photos and verifiable timestamps. The engineer clocks in from the field, the office sees each clock-in as it happens, and the client receives a sealed job report.',
     },
     {
       question: 'How do I seal an electrical job with GeoTapp?',
@@ -196,7 +196,7 @@ const content: SettoreContent = {
     },
     {
       question: 'Does GeoTapp handle multiple teams of electricians on different sites?',
-      answer: 'Yes. GeoTapp Flow lets the owner coordinate multiple teams, assign jobs, track job status and collect photo evidence from all active sites in real time.',
+      answer: 'Yes. GeoTapp Flow lets the owner coordinate multiple teams, assign jobs, track job status and collect photo evidence from all active sites as it comes in.',
     },
     {
       question: 'Are GeoTapp job reports accepted in disputes?',

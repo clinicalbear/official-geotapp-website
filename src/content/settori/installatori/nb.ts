@@ -9,7 +9,7 @@ const content: SettoreContent = {
     badge: 'Programvare for Elektrikere, Rørleggere og Installasjonsteam',
     h1_line1: 'Feltarbeid under kontroll:',
     h1_line2: 'oppdrag, timelister og dokumentasjon samlet ett sted',
-    subtitle: 'GeoTapp kobler sammen Flow + TimeTracker for bedrifter som jobber mellom varebiler, byggeplasser og sluttkunder. Android- og iOS-apper støtter teknikeren i felt; kontoret ser oppdraget, tidene, fotodokumentasjonen og notatene uten å måtte ringe noen. GDPR-kompatibelt og i henhold til Fellesoverenskomsten for byggfag.',
+    subtitle: 'GeoTapp kobler sammen Flow + TimeTracker for bedrifter som jobber mellom varebiler, byggeplasser og sluttkunder. Android- og iOS-apper støtter teknikeren i felt; kontoret ser oppdraget, tidene, fotodokumentasjonen og notatene uten å måtte ringe noen. Bygget for å holde seg innenfor GDPR, og i henhold til Fellesoverenskomsten for byggfag.',
     cta_primary: 'Be om en demo',
     cta_note: 'Ingen binding. Svar innen 12 arbeidstimer.',
   },
@@ -36,15 +36,15 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'Teknikeren stempler inn på stedet',
-        desc: 'Med GeoTapp TimeTracker registrerer han start, slutt, bilder og notater direkte fra smarttelefonen. GPS-verifisert, GDPR-kompatibelt.',
+        desc: 'Med GeoTapp TimeTracker registrerer han start, slutt, bilder og notater direkte fra smarttelefonen. GPS-verifisert, bygget for å holde seg innenfor GDPR.',
       },
       {
-        title: 'Kontoret ser alt i sanntid',
+        title: 'Kontoret ser hver stempling med en gang',
         desc: 'Flow mottar dataene umiddelbart. Lederen ser oppdrag, fremdrift, tildelt tekniker og fotodokumentasjon uten å ringe.',
       },
       {
         title: 'Rapporten er allerede klar',
-        desc: 'Når oppdraget er ferdig, er arbeidsrapporten allerede strukturert med ekte data. Ingen manuell rekonstruksjon. Ingen tvist uten svar.',
+        desc: 'Når oppdraget er ferdig, er arbeidsrapporten allerede strukturert med ekte data. Ingen manuell rekonstruksjon. Svaret på en eventuell tvist ligger klart.',
       },
     ],
   },
@@ -57,7 +57,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Fotodokumentasjon fra feltet',
-        desc: 'Teknikeren fotograferer direkte fra appen. Bilder knyttet til oppdraget med dato og tid. Ingen rom for tvist.',
+        desc: 'Teknikeren fotograferer direkte fra appen. Bilder knyttet til oppdraget med dato og tid. Mindre rom for tvist.',
       },
       {
         title: 'Eksport for lønnsbehandling',

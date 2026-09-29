@@ -3,7 +3,7 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'App for Installatører & Teknikere: GPS-oppdragssporing | GeoTapp',
-    description: 'Spor oppdrag, timer og materialer for VVS-, elektro- og rørleggerinstallatører med GPS. Automatiske tjenestebevis, ingen kundetvister. Prøv GeoTapp gratis.',
+    description: 'Spor oppdrag, timer og materialer for VVS-, elektro- og rørleggerinstallatører med GPS. Automatiske tjenestebevis, færre kundetvister. Prøv GeoTapp gratis.',
   },
   hero: {
     badge: 'App for installatører, teknikere og serviceteam',
@@ -22,7 +22,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Jage teknikere for oppdateringer',
-        desc: 'Sanntidskart med status for hvert oppdrag. Du vet hvor alle teknikerne dine er uten å ringe en eneste samtale.',
+        desc: 'Oppdragskart som oppdateres ved hver stempling. Du vet hvor teknikerne dine sist stemplet inn, uten å ringe rundt.',
       },
       {
         title: 'Ufullstendige eller manglende arbeidssedler',
@@ -36,11 +36,11 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'Teknikeren stempler inn via GPS ved start',
-        desc: 'Åpner oppdraget fra smarttelefonen. GeoTapp registrerer reelle GPS-koordinater, tidsstempel og bilder, helautomatisk, manipulasjonssikkert.',
+        desc: 'Åpner oppdraget fra smarttelefonen. GeoTapp registrerer reelle GPS-koordinater, tidsstempel og bilder, helautomatisk, og forseglet med en gang.',
       },
       {
         title: 'Timer registreres automatisk per oppdrag',
-        desc: 'Hvert arbeidet minutt kobles til riktig oppdrag. Lederen ser i sanntid hvem som jobber hvor.',
+        desc: 'Hvert arbeidet minutt kobles til riktig oppdrag. Lederen ser med en gang hvem som stempler inn hvor.',
       },
       {
         title: 'Kunderapporten genereres uten å taste noe',
@@ -49,7 +49,7 @@ const content: SettoreContent = {
     ],
   },
   differenza: {
-    title: 'Installatør-app: tidsregistrering eller sertifisering?',
+    title: 'Installatør-app: tidsregistrering eller verifiserbart bevis?',
     subtitle: 'De fleste apper registrerer bare tidspunktet. GeoTapp produserer verifiserbart bevis.',
     rows: [
       {
@@ -65,7 +65,7 @@ const content: SettoreContent = {
       {
         label: 'Ved tvist',
         competitor: 'Data ikke forsvarlig',
-        geotapp: 'Forseglet rapport, manipulasjonssikker',
+        geotapp: 'Forseglet rapport, endring oppdages',
       },
       {
         label: 'Oppdragsrapport',
@@ -75,7 +75,7 @@ const content: SettoreContent = {
       {
         label: 'GDPR-samsvar',
         competitor: 'Ofte tvilsom',
-        geotapp: 'Kompatibel by design, skjemaer inkludert',
+        geotapp: 'Bygget for å holde seg innenfor GDPR, skjemaer inkludert',
       },
     ],
   },
@@ -89,7 +89,7 @@ const content: SettoreContent = {
     ],
     dopo: [
       'Kunden bestrider? Åpne rapporten: bilder, GPS, tidsstempel, digital signatur.',
-      'Du sender den. Tvisten er løst på et minutt.',
+      'Du sender den. Tvisten avklares raskt.',
       'Betalingen er sikret. Teknikeren er beskyttet.',
       'Ved månedens slutt er eksporten allerede klar, timer og oppdrag aggregert automatisk.',
     ],
@@ -103,7 +103,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Forseglet bildebevis',
-        desc: 'Teknikeren fotograferer direkte fra appen. Hvert bilde er koblet til oppdraget med GPS og tidsstempel, manipulasjonssikkert etter generering.',
+        desc: 'Teknikeren fotograferer direkte fra appen. Hvert bilde er koblet til oppdraget med GPS og tidsstempel, forseglet etter generering.',
       },
       {
         title: 'Multi-lokasjon oppdragsstyring',
@@ -119,12 +119,12 @@ const content: SettoreContent = {
       },
       {
         title: 'Innebygd GDPR-samsvar',
-        desc: 'Geolokalisering kompatibel by design med GDPR-regler. Maler for personvernerklæring til ansatte inkludert.',
+        desc: 'Geolokalisering bygget for å holde seg innenfor GDPR. Maler for personvernerklæring til ansatte inkludert.',
       },
     ],
   },
   testimonial: {
-    quote: 'Kunder bestrider ikke lenger timene. Vi åpner rapporten med GPS og bilder, og diskusjonen stopper der.',
+    quote: 'Kundene bestrider timene sjeldnere. Vi åpner rapporten med GPS og bilder, og diskusjonen stopper der.',
     author: 'Robert F.',
     role: 'Eier, installasjonsfirma, 20 teknikere',
   },
@@ -138,7 +138,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Hvordan overvåker jeg flere team på forskjellige oppdrag?',
-        a: 'GeoTapp tilbyr et sanntidskart med status for hvert oppdrag. Du vet nøyaktig hvor teknikerne dine er og hvilket oppdrag de jobber på, uten å ringe.',
+        a: 'GeoTapp tilbyr et oppdragskart oppdatert ved hver stempling. Du vet nøyaktig hvor teknikerne dine sist stemplet inn og på hvilket oppdrag, uten å ringe.',
       },
       {
         q: 'Hvordan fremskynder jeg fakturering av avsluttede oppdrag?',
@@ -165,7 +165,7 @@ const content: SettoreContent = {
     },
     {
       question: 'Hvordan overvåker jeg flere team på forskjellige oppdrag?',
-      answer: 'GeoTapp tilbyr et sanntidskart med status for hvert oppdrag. Du vet nøyaktig hvor teknikerne dine er og hvilket oppdrag de jobber på, uten å ringe.',
+      answer: 'GeoTapp tilbyr et oppdragskart oppdatert ved hver stempling. Du vet nøyaktig hvor teknikerne dine sist stemplet inn og på hvilket oppdrag, uten å ringe.',
     },
     {
       question: 'Hvordan fremskynder jeg fakturering av avsluttede oppdrag?',

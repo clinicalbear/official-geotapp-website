@@ -4,7 +4,7 @@
   },
   "landing": {
     "problem_subtitle": "It's not an organization problem. It's a proof problem.",
-    "us_badge": "🇨🇦 Serving Canadian teams, federal + provincial labour codes compliant. CAD invoicing on request.",
+    "us_badge": "🇨🇦 Serving Canadian teams, built to stay within federal and provincial labour codes. CAD invoicing on request.",
     "proof_note": "Evidence captured by camera only, no continuous tracking.",
     "proof_claim": "Nothing recorded between clock-in and clock-out."
   },
@@ -33,7 +33,7 @@
           {
             "name": "GeoTapp Flow Team",
             "tagline": "For small operational teams.",
-            "desc": "Coordinate and manage your operational team in real time.",
+            "desc": "Coordinate and manage your operational team as work happens.",
             "features": [
               "5 Flow users included",
               "Job management",

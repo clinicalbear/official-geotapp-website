@@ -2,14 +2,14 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'Byggarbetsplats-app: GPS-närvaro & Lagstyrning | GeoTapp',
-    description: 'Hantera närvaro, skift och säkerhet på byggarbetsplatsen med GPS i realtid. Förseglade stämplingar, automatiska rapporter. GDPR-kompatibel app för byggföretag.',
+    title: 'Byggplats app: närvaro med GPS vid in- och utstämpling',
+    description: 'Laget stämplar in vid grinden och ut på kvällen, platsen registreras vid in- och utstämpling. Förseglade tider. Prova gratis i 14 dagar.',
   },
   hero: {
     badge: 'App för byggföretag och byggarbetsplatser',
-    h1_line1: 'Din byggarbetsplats under kontroll,',
-    h1_line2: 'i realtid.',
-    subtitle: 'GPS-förseglade stämplingar, lagstyrning och automatiska rapporter. Inget pappersarbete, inga tvister. GeoTapp kopplar ihop Flow + TimeTracker för platschefer, underentreprenörer och projektledning.',
+    h1_line1: 'Byggplats app: vem var på bygget,',
+    h1_line2: 'och hur länge.',
+    subtitle: 'GPS-förseglade stämplingar, lagstyrning och automatiska rapporter. Inget pappersarbete, färre tvister. GeoTapp kopplar ihop Flow + TimeTracker för platschefer, underentreprenörer och projektledning.',
     cta_primary: 'Testa det på en riktig byggarbetsplats',
     cta_note: '14 dagar, upp till 50 medarbetare i fält, utan kreditkort.',
   },
@@ -22,7 +22,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Hur hanterar du underentreprenörer?',
-        desc: 'Spåra tillträde och närvaro för alla lag, inklusive underentreprenörer, från en enda realtidspanel.',
+        desc: 'Registrera tillträde och närvaro för alla lag, inklusive underentreprenörer, i en enda översikt över dagens stämplingar.',
       },
       {
         title: 'Tar byggarbetsplatsrapporter timmar?',
@@ -39,8 +39,8 @@ const content: SettoreContent = {
         desc: 'Startar skiftet från sin smartphone. GeoTapp registrerar verkliga GPS-koordinater, tidsstämpel och, vid behov, foton. Helt automatiskt, varje ändring syns.',
       },
       {
-        title: 'Platschefen ser allt i realtid',
-        desc: 'En panel för alla lag och alla byggarbetsplatser. Vem som är närvarande, var och sedan när, utan att jaga någon per telefon.',
+        title: 'Platschefen ser dagens stämplingar',
+        desc: 'En panel för alla lag och alla byggarbetsplatser. Vem som stämplade in, var och när, utan att jaga någon per telefon.',
       },
       {
         title: 'Rapporten är klar för delredovisningar',
@@ -75,7 +75,7 @@ const content: SettoreContent = {
       {
         label: 'GDPR-efterlevnad',
         competitor: 'Ofta tveksam',
-        geotapp: 'Kompatibel by design, formulär inkluderade',
+        geotapp: 'Byggd för att hålla sig inom GDPR, formulär för anställdinformation ingår',
       },
     ],
   },
@@ -103,7 +103,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Multi-byggarbetsplats-panel',
-        desc: 'Övervaka flera byggarbetsplatser från en enda skärm. Se i realtid vem som är närvarande, var och sedan när, för varje aktiv byggarbetsplats.',
+        desc: 'Övervaka flera byggarbetsplatser från en enda skärm. Se vem som stämplat in, var och när, så snart det sker, för varje aktiv byggarbetsplats.',
       },
       {
         title: 'Automatiska framstegsrapporter',
@@ -119,7 +119,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Inbyggd GDPR-efterlevnad',
-        desc: 'Geolokalisering kompatibel by design med GDPR-regler och integritetsriktlinjer. Mallar för integritetsinformation till anställda inkluderade.',
+        desc: 'Geolokalisering byggd för att hålla sig inom GDPR:s regler och integritetsriktlinjer. Mallar för integritetsinformation till anställda ingår.',
       },
     ],
   },
@@ -146,7 +146,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Hur hanterar du underentreprenörer på byggarbetsplatsen?',
-        a: 'GeoTapp spårar tillträde och närvaro för alla lag, inklusive underentreprenörer. Varje arbetare stämplar från sin smartphone och platschefen ser allt i realtid på en panel.',
+        a: 'GeoTapp spårar tillträde och närvaro för alla lag, inklusive underentreprenörer. Varje arbetare stämplar från sin smartphone och platschefen ser varje stämpling på en panel så snart den sker.',
       },
       {
         q: 'Kräver byggarbetsplatsrapporter timmars manuellt arbete?',
@@ -181,7 +181,7 @@ const content: SettoreContent = {
     },
     {
       question: 'Hur hanterar du underentreprenörer på byggarbetsplatsen?',
-      answer: 'GeoTapp spårar tillträde och närvaro för alla lag, inklusive underentreprenörer. Varje arbetare stämplar från sin smartphone och platschefen ser allt i realtid på en panel.',
+      answer: 'GeoTapp spårar tillträde och närvaro för alla lag, inklusive underentreprenörer. Varje arbetare stämplar från sin smartphone och platschefen ser varje stämpling på en panel så snart den sker.',
     },
     {
       question: 'Kräver byggarbetsplatsrapporter timmars manuellt arbete?',

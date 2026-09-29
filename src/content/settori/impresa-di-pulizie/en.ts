@@ -4,13 +4,13 @@ const content: SettoreContent = {
   meta: {
     title: 'Cleaning Company App: GPS Team Management & Proof of Service | GeoTapp',
     description:
-      'GPS tracking for cleaners: manage crews, shifts and attendance in real time. Automatic proof of service, zero client disputes. GDPR-compliant cleaning company app.',
+      'GPS tracking for cleaners: manage crews, shifts and attendance. Automatic proof of service, fewer disputes. Built to stay within GDPR.',
   },
 
   hero: {
     badge: 'App for cleaning companies and facility services',
     h1_line1: 'Your cleaning company,',
-    h1_line2: 'managed in real time.',
+    h1_line2: 'managed clock-in by clock-in.',
     subtitle:
       'GPS clock-ins, automatic proof of service and shift management in one app. No spreadsheets, no disputes. Client complains? Send the report and the discussion is over.',
     cta_primary: 'Try it on a real contract',
@@ -30,7 +30,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Hard to coordinate multiple crews?',
-        desc: 'See where everyone is in real time, across all sites, from a single dashboard. No phone calls.',
+        desc: 'See who\'s clocked in and where, across all sites, from a single dashboard. No phone calls.',
       },
     ],
   },
@@ -60,7 +60,7 @@ const content: SettoreContent = {
         desc: 'Opens and closes the shift from their smartphone. GeoTapp records real GPS coordinates, photos and timestamp, fully automatic, tamper-evident.',
       },
       {
-        title: 'Manager sees everything in real time',
+        title: 'Manager sees each clock-in as it happens',
         desc: 'Single dashboard for all sites. Know exactly who is on site, where and since when, without chasing anyone.',
       },
       {
@@ -97,7 +97,7 @@ const content: SettoreContent = {
       {
         label: 'GDPR compliance',
         competitor: 'Often needs checking',
-        geotapp: 'Compliant by design, forms included',
+        geotapp: 'Built to stay within GDPR, forms included',
       },
     ],
   },
@@ -111,7 +111,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Real control across all sites',
-        desc: 'See in real time who is active where, across all buildings simultaneously. No phone calls, no emails.',
+        desc: 'See who\'s clocked in and where, across all buildings, as it happens. No phone calls, no emails.',
       },
       {
         title: 'Defensible reports anywhere',
@@ -153,11 +153,11 @@ const content: SettoreContent = {
       },
       {
         q: 'Is GeoTapp GDPR compliant for employee GPS tracking?',
-        a: 'Yes. GeoTapp tracks location only during active working hours, includes employee privacy notice templates and collects no unnecessary data. Compliant with UK and EU data protection regulations.',
+        a: 'GeoTapp is built to stay within UK and EU data protection rules: it tracks location only during active working hours, includes employee privacy notice templates and collects no unnecessary data.',
       },
       {
         q: 'How do I manage crews spread across multiple sites?',
-        a: 'With GeoTapp Flow you have a single dashboard for all sites. See in real time who is active where, assign jobs and receive automatic alerts.',
+        a: 'With GeoTapp Flow you have a single dashboard for all sites. See who\'s clocked in and where, assign jobs and receive automatic alerts.',
       },
       {
         q: 'Are paper timesheets still needed?',
@@ -169,7 +169,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Does GeoTapp do GPS tracking for cleaners?',
-        a: 'Yes. GeoTapp provides GPS tracking for cleaners during active shifts: the cleaner clocks in and out from their smartphone and every entry is tied to verified GPS coordinates and a timestamp. It is location tracking for proof of attendance, not surveillance, and it runs only during working hours for GDPR compliance.',
+        a: 'Yes. GeoTapp provides GPS tracking for cleaners during active shifts: the cleaner clocks in and out from their smartphone and every entry is tied to verified GPS coordinates and a timestamp. It is location tracking for proof of attendance, not surveillance, and it runs only during working hours, built to stay within GDPR.',
       },
     ],
   },
@@ -177,7 +177,7 @@ const content: SettoreContent = {
   cta: {
     title: 'Your cleaners do good work. Make sure the client sees it.',
     subtitle:
-      'Every job becomes verifiable proof of service. Zero disputes, zero lost contracts.',
+      'Every job becomes verifiable proof of service. Fewer disputes, fewer lost contracts.',
     primary: 'Start free now!',
     secondary: 'See Pricing',
   },
@@ -204,12 +204,12 @@ const content: SettoreContent = {
     {
       question: 'Is GeoTapp GDPR compliant for employee GPS tracking?',
       answer:
-        'Yes. GeoTapp tracks location only during active working hours, includes employee privacy notice templates and collects no unnecessary data.',
+        'GeoTapp is built to stay within UK and EU data protection rules: it tracks location only during active working hours, includes employee privacy notice templates and collects no unnecessary data.',
     },
     {
       question: 'Does GeoTapp do GPS tracking for cleaners?',
       answer:
-        'Yes. GeoTapp provides GPS tracking for cleaners during active shifts: the cleaner clocks in from their smartphone and every entry is tied to verified GPS and a timestamp. It runs only during working hours for GDPR compliance.',
+        'Yes. GeoTapp provides GPS tracking for cleaners during active shifts: the cleaner clocks in from their smartphone and every entry is tied to verified GPS and a timestamp. It runs only during working hours, built to stay within GDPR.',
     },
   ],
 };

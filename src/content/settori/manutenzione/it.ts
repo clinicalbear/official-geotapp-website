@@ -26,7 +26,7 @@ const content: SettoreContent = {
       },
       {
         title: 'I tecnici arrivano davvero nei tempi previsti?',
-        desc: 'Verifica in tempo reale senza chiamate. GPS e orario di arrivo sono già disponibili in dashboard, per ogni sede.',
+        desc: 'Verifica appena il tecnico timbra, senza chiamate. GPS e orario di arrivo sono già disponibili in dashboard, per ogni sede.',
       },
       {
         title: 'Come dimostri il servizio erogato ai clienti?',
@@ -45,7 +45,7 @@ const content: SettoreContent = {
       },
       {
         title: "Le ore e l'intervento vengono registrati automaticamente",
-        desc: 'Ogni minuto lavorato è associato alla sede e al tipo di intervento. Il responsabile vede in tempo reale lo stato di ogni visita.',
+        desc: 'Ogni minuto lavorato è associato alla sede e al tipo di intervento. Il responsabile vede, a ogni timbratura, lo stato di ogni visita.',
       },
       {
         title: 'Il cliente riceve il report firmato digitalmente',
@@ -101,7 +101,7 @@ const content: SettoreContent = {
       },
       {
         q: 'I tecnici arrivano davvero nei tempi previsti?',
-        a: "Con GeoTapp puoi verificare in tempo reale l'orario di arrivo e la posizione GPS di ogni tecnico. Nessuna chiamata necessaria, il dato è già disponibile in dashboard.",
+        a: "Con GeoTapp verifichi l'orario di arrivo e la posizione GPS di ogni tecnico appena timbra. Nessuna chiamata necessaria, il dato è già disponibile in dashboard.",
       },
       {
         q: 'Come dimostro ai clienti il servizio di manutenzione erogato?',
@@ -113,7 +113,7 @@ const content: SettoreContent = {
       },
       {
         q: 'GeoTapp è conforme al GDPR per la geolocalizzazione?',
-        a: "Sì. GeoTapp traccia la posizione solo durante l'orario di lavoro attivo, include modulistica per l'informativa ai dipendenti e non raccoglie dati non necessari.",
+        a: "GeoTapp è costruito per stare dentro i paletti del GDPR: traccia la posizione solo durante l'orario di lavoro attivo, include modulistica per l'informativa ai dipendenti e non raccoglie dati non necessari.",
       },
       {
         q: 'Quanto costa GeoTapp per un\'azienda di manutenzione?',
@@ -147,7 +147,7 @@ const content: SettoreContent = {
     {
       question: 'I tecnici arrivano davvero nei tempi previsti?',
       answer:
-        "Con GeoTapp puoi verificare in tempo reale l'orario di arrivo e la posizione GPS di ogni tecnico. Il dato è già disponibile in dashboard, senza chiamate.",
+        "Con GeoTapp verifichi l'orario di arrivo e la posizione GPS di ogni tecnico appena timbra. Il dato è già disponibile in dashboard, senza chiamate.",
     },
     {
       question: 'Come dimostro ai clienti il servizio di manutenzione erogato?',

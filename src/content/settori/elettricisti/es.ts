@@ -21,7 +21,7 @@ const content: SettoreContent = {
   hero: {
     badge: 'App para electricistas y empresas de instalaciones eléctricas',
     h1_line1: 'App para electricistas:',
-    h1_line2: 'informes GPS, pruebas fotográficas y cero disputas.',
+    h1_line2: 'informes GPS, pruebas fotográficas y menos disputas.',
     subtitle: 'GeoTapp registra cada intervención eléctrica con GPS, fotos y marcas de tiempo verificables. ¿El cliente disputa el trabajo? Muestra el informe, sin discusión. Tus técnicos están protegidos, tus facturas también.',
     cta_primary: 'Empezar gratis',
     cta_note: 'Sin compromiso. Respuesta en 12 horas laborables.',
@@ -52,12 +52,12 @@ const content: SettoreContent = {
         desc: 'Con GeoTapp TimeTracker ficha entrada y salida con GPS, fotografía la instalación y añade notas técnicas desde el móvil.',
       },
       {
-        title: 'La oficina ve todo en tiempo real',
+        title: 'La oficina lo sabe en cuanto se ficha',
         desc: 'GeoTapp Flow recibe los datos al instante. El responsable ve obra, técnico asignado, avance y pruebas fotográficas sin llamar.',
       },
       {
         title: 'El informe es tu prueba',
-        desc: 'Al terminar, el sistema genera un informe sellado: GPS, fotos instalación, notas técnicas. Inviolable. El cliente puede verificarlo.',
+        desc: 'Al terminar, el sistema genera un informe sellado: GPS, fotos instalación, notas técnicas. Cualquier cambio posterior queda visible. El cliente puede verificarlo.',
       },
     ],
   },
@@ -70,7 +70,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Fotos de instalación selladas',
-        desc: 'El técnico fotografía desde la app. Cada imagen está vinculada a GPS y marca de tiempo, inviolable.',
+        desc: 'El técnico fotografía desde la app. Cada imagen está vinculada a GPS y marca de tiempo, y cualquier cambio posterior queda visible.',
       },
       {
         title: 'Informes digitales automáticos',
@@ -109,7 +109,7 @@ const content: SettoreContent = {
       },
       {
         q: '¿GeoTapp cumple con el RGPD para geolocalización de empleados?',
-        a: 'Sí. GeoTapp gestiona la geolocalización conforme al RGPD e incluye los formularios de información para trabajadores.',
+        a: 'Sí. GeoTapp está diseñado para encajar en el RGPD y la LOPDGDD, e incluye el modelo de información para los trabajadores.',
       },
     ],
   },

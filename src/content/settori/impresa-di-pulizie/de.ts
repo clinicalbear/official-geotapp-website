@@ -4,13 +4,13 @@ const content: SettoreContent = {
   meta: {
     title: 'App für Reinigungsunternehmen: GPS-Teamverwaltung & Servicenachweis | GeoTapp',
     description:
-      'Verwalten Sie Reinigungsteams, Schichten und Anwesenheit mit GPS in Echtzeit. Automatische Servicenachweise, keine Kundenstreitigkeiten. DSGVO-konforme Reinigungs-App.',
+      'Reinigungsteams, Schichten und Anwesenheit mit versiegelten GPS-Stempelungen verwalten. Servicenachweis automatisch, weniger Kundenstreit. Für die DSGVO gebaut.',
   },
 
   hero: {
     badge: 'App für Reinigungsunternehmen und Gebäudeservice',
     h1_line1: 'Ihr Reinigungsunternehmen,',
-    h1_line2: 'in Echtzeit verwaltet.',
+    h1_line2: 'auf einen Blick verwaltet.',
     subtitle:
       'GPS-Stempelung, automatische Servicenachweise und Schichtverwaltung in einer App. Keine Tabellen, keine Streitigkeiten. Der Kunde beschwert sich? Senden Sie den Bericht und die Diskussion ist beendet.',
     cta_primary: 'Auf einem echten Auftrag testen',
@@ -30,7 +30,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Schwierig, mehrere Teams zu koordinieren?',
-        desc: 'Sehen Sie in Echtzeit, wo alle sind, über alle Standorte hinweg, von einem einzigen Dashboard. Keine Anrufe.',
+        desc: 'Sehen Sie, sobald gestempelt wird, wer wo aktiv ist, über alle Standorte hinweg, in einem Dashboard. Keine Anrufe.',
       },
     ],
   },
@@ -60,7 +60,7 @@ const content: SettoreContent = {
         desc: 'Öffnet und schließt die Schicht vom Smartphone. GeoTapp erfasst echte GPS-Koordinaten, Fotos und Zeitstempel, vollautomatisch und versiegelt.',
       },
       {
-        title: 'Der Verantwortliche sieht alles in Echtzeit',
+        title: 'Der Verantwortliche sieht jede Stempelung sofort',
         desc: 'Ein Dashboard für alle Standorte. Sie wissen genau, wer vor Ort ist, wo und seit wann, ohne jemandem hinterherzulaufen.',
       },
       {
@@ -97,7 +97,7 @@ const content: SettoreContent = {
       {
         label: 'DSGVO-Konformität',
         competitor: 'Oft zu prüfen',
-        geotapp: 'Konform by Design, Formulare inklusive',
+        geotapp: 'Für die DSGVO-Grenzen gebaut, Formulare inklusive',
       },
     ],
   },
@@ -111,7 +111,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Echte Kontrolle über alle Standorte',
-        desc: 'Sehen Sie in Echtzeit, wer wo aktiv ist, über alle Gebäude gleichzeitig. Keine Anrufe, keine E-Mails.',
+        desc: 'Sehen Sie, sobald gestempelt wird, wer wo aktiv ist, über alle Gebäude gleichzeitig. Keine Anrufe, keine E-Mails.',
       },
       {
         title: 'Verteidigbare Berichte überall',
@@ -165,7 +165,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Wie verwalte ich Teams auf mehreren Standorten gleichzeitig?',
-        a: 'Mit GeoTapp Flow haben Sie ein Dashboard für alle Standorte. Sehen Sie in Echtzeit, wer wo aktiv ist, weisen Sie Aufträge zu und erhalten Sie automatische Benachrichtigungen.',
+        a: 'Mit GeoTapp Flow haben Sie ein Dashboard für alle Standorte. Sehen Sie, sobald gestempelt wird, wer wo aktiv ist, weisen Sie Aufträge zu und erhalten Sie automatische Benachrichtigungen.',
       },
       {
         q: 'Braucht man noch Papier-Stundenzettel?',

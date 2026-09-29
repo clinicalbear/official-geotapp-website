@@ -4,13 +4,13 @@ const content: SettoreContent = {
   meta: {
     title: 'App para Empresa de Limpieza: Gestión GPS de Equipos y Prueba de Servicio | GeoTapp',
     description:
-      'Gestiona equipos de limpieza, turnos y asistencia con GPS en tiempo real. Pruebas automáticas de servicio, cero disputas con clientes. App conforme con RGPD.',
+      'Gestiona equipos de limpieza, turnos y asistencia con fichajes GPS sellados. Pruebas automáticas de servicio, menos disputas. App diseñada para el RGPD.',
   },
 
   hero: {
     badge: 'App para empresas de limpieza y multiservicio',
     h1_line1: 'Tu empresa de limpieza,',
-    h1_line2: 'gestionada en tiempo real.',
+    h1_line2: 'controlada sin llamadas.',
     subtitle:
       'Fichajes GPS, pruebas de servicio automáticas y gestión de turnos en una sola app. Sin hojas de cálculo, sin disputas. ¿El cliente reclama? Envía el informe y la discusión termina.',
     cta_primary: 'Pruébalo en un contrato real',
@@ -30,7 +30,7 @@ const content: SettoreContent = {
       },
       {
         title: '¿Difícil coordinar varios equipos?',
-        desc: 'Mira dónde están todos en tiempo real, en todas las sedes, desde un único panel. Sin llamadas.',
+        desc: 'Mira quién ha fichado en cada sede, desde un único panel actualizado a cada fichaje. Sin llamadas.',
       },
     ],
   },
@@ -60,7 +60,7 @@ const content: SettoreContent = {
         desc: 'Abre y cierra su turno desde el smartphone. GeoTapp registra coordenadas GPS reales, fotos y marca de tiempo, todo automático y sellado.',
       },
       {
-        title: 'El responsable ve todo en tiempo real',
+        title: 'El responsable lo sabe en cuanto se ficha',
         desc: 'Un panel para todas las sedes. Sabes exactamente quién está en cada sitio, dónde y desde cuándo, sin perseguir a nadie.',
       },
       {
@@ -97,7 +97,7 @@ const content: SettoreContent = {
       {
         label: 'Conformidad RGPD',
         competitor: 'Frecuentemente por verificar',
-        geotapp: 'Conforme por diseño, formularios incluidos',
+        geotapp: 'Diseñado para el RGPD, con modelo de información incluido',
       },
     ],
   },
@@ -111,7 +111,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Control real sobre todas las sedes',
-        desc: 'Mira en tiempo real quién está activo dónde, en todos los edificios simultáneamente. Sin llamadas, sin emails.',
+        desc: 'Mira quién ha fichado y dónde, en todos los edificios, actualizado a cada fichaje. Sin llamadas, sin emails.',
       },
       {
         title: 'Informes defendibles en cualquier ámbito',
@@ -153,11 +153,11 @@ const content: SettoreContent = {
       },
       {
         q: '¿GeoTapp cumple con el RGPD para la geolocalización de empleados?',
-        a: 'Sí. GeoTapp solo geolocaliza durante las horas de trabajo activas, incluye formularios de información al empleado y no recopila datos innecesarios.',
+        a: 'GeoTapp está diseñado para encajar en el RGPD: solo geolocaliza durante las horas de trabajo activas, incluye el modelo de información al trabajador y no recopila datos innecesarios.',
       },
       {
         q: '¿Cómo gestiono equipos en varias sedes a la vez?',
-        a: 'Con GeoTapp Flow tienes un panel único para todas las sedes. Mira en tiempo real quién está activo dónde, asigna encargos y recibe alertas automáticas.',
+        a: 'Con GeoTapp Flow tienes un panel único para todas las sedes. Ves quién ha fichado y dónde, en cuanto sucede, asignas encargos y recibes alertas automáticas.',
       },
       {
         q: '¿Siguen siendo necesarias las hojas de presencia en papel?',
@@ -173,7 +173,7 @@ const content: SettoreContent = {
   cta: {
     title: 'Tus operarios trabajan bien. Haz que el cliente lo vea.',
     subtitle:
-      'Cada intervención se convierte en prueba de servicio verificable. Cero disputas, cero contratos perdidos.',
+      'Cada intervención se convierte en prueba de servicio verificable. Menos disputas, contratos más seguros.',
     primary: '¡Empieza gratis ahora!',
     secondary: 'Ver Precios',
   },
@@ -200,7 +200,7 @@ const content: SettoreContent = {
     {
       question: '¿GeoTapp cumple con el RGPD para la geolocalización de empleados?',
       answer:
-        'Sí. GeoTapp solo geolocaliza durante las horas de trabajo activas, incluye formularios de información al empleado y no recopila datos innecesarios.',
+        'GeoTapp está diseñado para encajar en el RGPD: solo geolocaliza durante las horas de trabajo activas, incluye el modelo de información al trabajador y no recopila datos innecesarios.',
     },
   ],
 };

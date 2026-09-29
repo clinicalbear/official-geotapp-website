@@ -3,13 +3,13 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'Bouwplaats-app: GPS-aanwezigheid & Ploegbeheer | GeoTapp',
-    description: 'Beheer aanwezigheid, diensten en veiligheid op de bouwplaats met realtime GPS. Verzegelde klokregistraties, automatische rapporten. AVG-conforme app voor bouwbedrijven.',
+    description: 'Beheer aanwezigheid en veiligheid op de bouwplaats met GPS bij elke klokregistratie. Verzegelde rapporten, gebouwd voor de AVG.',
   },
   hero: {
     badge: 'App voor bouwbedrijven en bouwplaatsen',
     h1_line1: 'Uw bouwplaats onder controle,',
-    h1_line2: 'in realtime.',
-    subtitle: 'GPS-verzegelde klokregistraties, ploegbeheer en automatische rapporten. Geen papierwerk, geen geschillen. GeoTapp verbindt Flow + TimeTracker voor bouwplaatsmanagers, onderaannemers en projectleiding.',
+    h1_line2: 'bij elke klokregistratie.',
+    subtitle: 'GPS-verzegelde klokregistraties, ploegbeheer en automatische rapporten. Geen papierwerk, minder geschillen. GeoTapp verbindt Flow + TimeTracker voor bouwplaatsmanagers, onderaannemers en projectleiding.',
     cta_primary: 'Probeer het op een echte bouwplaats',
     cta_note: '14 dagen, tot 50 medewerkers in het veld, zonder creditcard.',
   },
@@ -22,7 +22,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Hoe beheert u onderaannemers?',
-        desc: 'Volg toegang en aanwezigheid van alle ploegen, inclusief onderaannemers, vanuit één realtime dashboard.',
+        desc: 'Volg toegang en aanwezigheid van alle ploegen, inclusief onderaannemers, vanuit één dashboard: elke klokregistratie verschijnt zodra ze binnenkomt.',
       },
       {
         title: 'Kosten bouwplaatsrapporten uren werk?',
@@ -39,7 +39,7 @@ const content: SettoreContent = {
         desc: 'Start de dienst vanaf de smartphone. GeoTapp registreert echte GPS-coördinaten, tijdstempel en, indien nodig, foto\'s. Volledig automatisch, elke wijziging is aantoonbaar.',
       },
       {
-        title: 'De uitvoerder ziet alles in realtime',
+        title: 'De uitvoerder ziet elke klokregistratie meteen',
         desc: 'Eén dashboard voor alle ploegen en alle bouwplaatsen. Wie aanwezig is, waar en sinds wanneer, zonder iemand na te bellen.',
       },
       {
@@ -75,7 +75,7 @@ const content: SettoreContent = {
       {
         label: 'AVG-conformiteit',
         competitor: 'Vaak twijfelachtig',
-        geotapp: 'Conform by design, formulieren inbegrepen',
+        geotapp: 'Gebouwd om binnen de AVG te blijven, formulieren inbegrepen',
       },
     ],
   },
@@ -103,7 +103,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Multi-bouwplaats dashboard',
-        desc: 'Monitor meerdere bouwplaatsen vanaf één scherm. Zie in realtime wie aanwezig is, waar en sinds wanneer, voor elke actieve bouwplaats.',
+        desc: 'Eén scherm voor meerdere bouwplaatsen. Zie bij elke klokregistratie wie aanwezig is, waar en sinds wanneer, voor elke actieve bouwplaats.',
       },
       {
         title: 'Automatische voortgangsrapporten',
@@ -118,8 +118,8 @@ const content: SettoreContent = {
         desc: 'Medewerkers maken foto\'s vanuit de app. Elk beeld is gekoppeld aan de bouwplaats met GPS en tijdstempel, elke wijziging is aantoonbaar na generatie.',
       },
       {
-        title: 'Ingebouwde AVG-conformiteit',
-        desc: 'Geolocatie conform by design met AVG-regelgeving en privacyrichtlijnen. Sjablonen voor privacyverklaringen aan medewerkers inbegrepen.',
+        title: 'Gebouwd om binnen de AVG te blijven',
+        desc: 'Geolocatie ontworpen om te passen bij de AVG-regelgeving en privacyrichtlijnen. Sjablonen voor privacyverklaringen aan medewerkers inbegrepen.',
       },
     ],
   },
@@ -138,7 +138,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Hoe beheert u onderaannemers op de bouwplaats?',
-        a: 'GeoTapp volgt toegang en aanwezigheid van alle ploegen, inclusief onderaannemers. Elke medewerker klokt in vanaf de smartphone en de uitvoerder ziet alles in realtime op één dashboard.',
+        a: 'GeoTapp registreert toegang en aanwezigheid van alle ploegen, inclusief onderaannemers, bij elke klokregistratie. Elke medewerker klokt in vanaf de smartphone en de uitvoerder ziet het zodra het gebeurt, op één dashboard.',
       },
       {
         q: 'Kosten bouwplaatsrapporten uren handwerk?',
@@ -165,7 +165,7 @@ const content: SettoreContent = {
     },
     {
       question: 'Hoe beheert u onderaannemers op de bouwplaats?',
-      answer: 'GeoTapp volgt toegang en aanwezigheid van alle ploegen, inclusief onderaannemers. Elke medewerker klokt in vanaf de smartphone en de uitvoerder ziet alles in realtime op één dashboard.',
+      answer: 'GeoTapp registreert toegang en aanwezigheid van alle ploegen, inclusief onderaannemers, bij elke klokregistratie. Elke medewerker klokt in vanaf de smartphone en de uitvoerder ziet het zodra het gebeurt, op één dashboard.',
     },
     {
       question: 'Kosten bouwplaatsrapporten uren handwerk?',

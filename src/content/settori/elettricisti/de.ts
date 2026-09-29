@@ -22,7 +22,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Keine Dokumentation der Anlage nach dem Einsatz',
-        desc: 'Der Techniker hat die Arbeit abgeschlossen, aber es gibt keine Fotodokumentation oder technische Notiz. Die Rekonstruktion wird unmöglich.',
+        desc: 'Der Techniker hat die Arbeit abgeschlossen, aber es gibt keine Fotodokumentation oder technische Notiz. Die Rekonstruktion wird sehr schwer.',
       },
       {
         title: 'Büro weiß nicht, wo die Techniker sind',
@@ -39,7 +39,7 @@ const content: SettoreContent = {
         desc: 'Mit GeoTapp TimeTracker stempelt er Ein- und Ausgang mit GPS, fotografiert die Anlage und fügt technische Notizen vom Smartphone hinzu.',
       },
       {
-        title: 'Büro sieht alles in Echtzeit',
+        title: 'Büro sieht jede Stempelung sofort',
         desc: 'GeoTapp Flow empfängt die Daten sofort. Der Teamleiter sieht Auftrag, zugewiesenen Techniker, Fortschritt und Fotobeweise ohne anzurufen.',
       },
       {
@@ -75,7 +75,7 @@ const content: SettoreContent = {
       {
         label: 'DSGVO-Konformität',
         competitor: 'Oft zu prüfen',
-        geotapp: 'Konform by Design, Vorlagen inklusive',
+        geotapp: 'Für die DSGVO-Grenzen gebaut, Vorlagen inklusive',
       },
     ],
   },
@@ -176,7 +176,7 @@ const content: SettoreContent = {
   schema_faq: [
     {
       question: 'Funktioniert GeoTapp als App für Elektriker?',
-      answer: 'Ja. GeoTapp ist die App für Elektriker, die jeden Einsatz mit GPS, Fotos und verifizierbaren Zeitstempeln erfasst. Der Techniker stempelt vom Außendienst, das Büro sieht alles in Echtzeit, der Kunde erhält einen versiegelten Einsatzbericht.',
+      answer: 'Ja. GeoTapp ist die App für Elektriker, die jeden Einsatz mit GPS, Fotos und verifizierbaren Zeitstempeln erfasst. Der Techniker stempelt vom Außendienst, das Büro sieht jede Stempelung sofort, der Kunde erhält einen versiegelten Einsatzbericht.',
     },
     {
       question: 'Wie versiegle ich einen Elektroeinsatz mit GeoTapp?',
@@ -184,7 +184,7 @@ const content: SettoreContent = {
     },
     {
       question: 'Verwaltet GeoTapp mehrere Elektriker-Teams auf verschiedenen Baustellen?',
-      answer: 'Ja. GeoTapp Flow ermöglicht dem Inhaber, mehrere Teams zu koordinieren, Aufträge zuzuweisen, Einsatzstatus zu verfolgen und Fotobeweise von allen aktiven Baustellen in Echtzeit zu sammeln.',
+      answer: 'Ja. GeoTapp Flow ermöglicht dem Inhaber, mehrere Teams zu koordinieren, Aufträge zuzuweisen, Einsatzstatus zu verfolgen und Fotobeweise von allen aktiven Baustellen zu sammeln, sobald sie eintreffen.',
     },
     {
       question: 'Werden GeoTapp-Einsatzberichte bei Streitigkeiten anerkannt?',

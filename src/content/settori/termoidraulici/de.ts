@@ -2,13 +2,13 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App für Heizungsinstallateure | GeoTapp - GPS, Auftragsberichte & Nachweise',
-    description: 'GeoTapp ist die App für Sanitär- und Heizungstechniker: GPS-verifizierte Auftragsberichte, Anlagenfotos und versiegelte Dokumentation. Kundenbeschwerden mit echten Beweisen lösen. Kostenlos testen.',
+    title: 'Auftragsabwicklung Heizung: Einsatzbericht mit GPS und Fotos',
+    description: 'Ein Tipp bei Ankunft, einer beim Gehen, die Anlagenfotos hängen am Auftrag. Der Bericht ist fertig, bevor der Monteur wieder im Wagen sitzt. 14 Tage gratis.',
   },
   hero: {
     badge: 'App für Heizungsinstallateure und Sanitär- und Heizungstechniker',
     h1_line1: 'App für Heizungsinstallateure:',
-    h1_line2: 'GPS-Auftragsberichte, Fotodokumentation und null Streitigkeiten.',
+    h1_line2: 'GPS-Auftragsberichte, Fotodokumentation und weniger Streit.',
     subtitle: 'GeoTapp erfasst jeden Heizungs- und Sanitäreinsatz mit GPS, Fotos und verifizierbaren Zeitstempeln. Der Kunde bestreitet ausgetauschte Teile? Zeigen Sie den Auftragsbericht, kein Streit nötig. Ihre Techniker sind geschützt, Ihre Rechnungen auch.',
     cta_primary: 'Jetzt kostenlos starten!',
     cta_note: 'Keine Bindung. Antwort innerhalb von 12 Wertstunden.',
@@ -22,7 +22,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Keine Dokumentation der Anlage nach dem Einsatz',
-        desc: 'Der Techniker hat die Reparatur abgeschlossen, aber es gibt weder Fotonachweis noch technische Notiz. Wenn der Defekt wiederkehrt, ist es unmöglich zu rekonstruieren, was gemacht wurde.',
+        desc: 'Der Techniker hat die Reparatur abgeschlossen, aber es gibt weder Fotonachweis noch technische Notiz. Wenn der Defekt wiederkehrt, ist es sehr schwer zu rekonstruieren, was gemacht wurde.',
       },
       {
         title: 'Notfalleinsätze sind nicht nachvollziehbar',
@@ -39,7 +39,7 @@ const content: SettoreContent = {
         desc: 'Mit GeoTapp TimeTracker stempelt er Ein- und Ausgang mit GPS, fotografiert Anlage und Heizung und fügt Notizen zu ausgetauschten Teilen vom Smartphone hinzu.',
       },
       {
-        title: 'Büro sieht alles in Echtzeit',
+        title: 'Büro sieht jede Stempelung sofort',
         desc: 'GeoTapp Flow empfängt die Daten sofort. Der Verantwortliche sieht Auftrag, zugewiesenen Techniker, Fortschritt und Fotonachweise ohne anzurufen.',
       },
       {
@@ -49,7 +49,7 @@ const content: SettoreContent = {
     ],
   },
   differenza: {
-    title: 'App für Heizungsinstallateure: Zeiterfassung oder Auftragszertifizierung?',
+    title: 'App für Heizungsinstallateure: Zeiterfassung oder versiegelter Auftragsnachweis?',
     subtitle: 'Die meisten Apps erfassen die Stempelzeit. GeoTapp erstellt verifizierbare Nachweise.',
     rows: [
       {
@@ -75,7 +75,7 @@ const content: SettoreContent = {
       {
         label: 'DSGVO-Konformität',
         competitor: 'Oft zu prüfen',
-        geotapp: 'Konform by Design, Formulare inklusive',
+        geotapp: 'Für die DSGVO-Grenzen gebaut, Formulare inklusive',
       },
     ],
   },
@@ -139,7 +139,7 @@ const content: SettoreContent = {
     badge: 'Von jedem prüfbar, ohne Zugriff auf Ihr Konto',
   },
   testimonial: {
-    quote: 'Mit GeoTapp fotografieren meine Techniker die Anlage vor und nach jedem Einsatz. Streitigkeiten über Teile sind verschwunden. Die Rechnungen werden bezahlt.',
+    quote: 'Mit GeoTapp fotografieren meine Techniker die Anlage vor und nach jedem Einsatz. Streitigkeiten über Teile sind deutlich seltener geworden. Die Rechnungen werden bezahlt.',
     author: 'Marco S.',
     role: 'Inhaber, Wohn- und Gewerbeheizungsanlagen',
   },
@@ -176,7 +176,7 @@ const content: SettoreContent = {
   schema_faq: [
     {
       question: 'Funktioniert GeoTapp als App für Heizungsinstallateure?',
-      answer: 'Ja. GeoTapp ist die App für Heizungsinstallateure und Sanitärtechniker, die jeden Einsatz an Heizungen und Anlagen mit GPS, Fotos und verifizierbaren Zeitstempeln erfasst. Der Techniker stempelt vom Einsatzort, das Büro sieht alles in Echtzeit und der Kunde erhält einen versiegelten Bericht.',
+      answer: 'Ja. GeoTapp ist die App für Heizungsinstallateure und Sanitärtechniker, die jeden Einsatz an Heizungen und Anlagen mit GPS, Fotos und verifizierbaren Zeitstempeln erfasst. Der Techniker stempelt vom Einsatzort, das Büro sieht jede Stempelung sofort und der Kunde erhält einen versiegelten Bericht.',
     },
     {
       question: 'Wie versiegle ich einen Heizungseinsatz mit GeoTapp?',
@@ -184,7 +184,7 @@ const content: SettoreContent = {
     },
     {
       question: 'Verwaltet GeoTapp mehrere Teams von Heizungsinstallateuren bei verschiedenen Einsätzen?',
-      answer: 'Ja. GeoTapp Flow ermöglicht dem Inhaber, mehrere Teams zu koordinieren, dringende Einsätze zuzuweisen, den Auftragsstatus zu verfolgen und Fotonachweise von allen aktiven Baustellen in Echtzeit zu sammeln.',
+      answer: 'Ja. GeoTapp Flow ermöglicht dem Inhaber, mehrere Teams zu koordinieren, dringende Einsätze zuzuweisen, den Auftragsstatus zu verfolgen und Fotonachweise von allen aktiven Baustellen zu sammeln, sobald sie eintreffen.',
     },
     {
       question: 'Werden GeoTapp-Berichte bei Heizungsstreitigkeiten akzeptiert?',

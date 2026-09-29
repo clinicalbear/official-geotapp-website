@@ -53,7 +53,7 @@
       },
       "generatore": {
         "title": "GPS-erklæring-generator",
-        "desc": "Lag ditt eksempel på en GPS-personvernerklæring med din logo, GDPR-kompatibel. Gratis, i nettleseren din."
+        "desc": "Lag ditt eksempel på en GPS-personvernerklæring med din logo, bygget for å holde seg innenfor GDPR. Gratis, i nettleseren din."
       },
       "conservazione": {
         "title": "Retningslinje for dataoppbevaring",
@@ -201,7 +201,7 @@
       ]
     },
     "proof_note": "Bevis samles kun inn via kameraet, ingen kontinuerlig sporing.",
-    "proof_claim": "Mellom inn- og utstempling registreres ingenting.",
+    "proof_claim": "Mellom inn- og utstempling registreres ingenting automatisk.",
     "sticky_cta_subtitle": "14 dager gratis, ingen kredittkort"
   },
   "home_sections": {
@@ -232,7 +232,7 @@
     "verifier": {
       "badge": "GeoTapp Verifier",
       "title": "Du trenger ikke at de stoler på deg.",
-      "subtitle": "Ditt ord kommer ikke inn i diskusjonen i det hele tatt. Kunden åpner rapporten og sjekker selv, uten å logge inn i GeoTapp. Stemmer dataene med det virkelige arbeidet, holder rapporten. Har noen endret dokumentet, holder den ikke lenger. Uten anke.",
+      "subtitle": "Ditt ord kommer ikke inn i diskusjonen i det hele tatt. Kunden åpner rapporten og sjekker selv, uten å logge inn i GeoTapp. Har noen endret dokumentet etter forsegling, holder det ikke lenger. Etterprøvbart av hvem som helst.",
       "features": {
         "integrity": "<strong>Forseglede data:</strong> Rapporten genereres på ekte feltdata og låses. Enhver endring gjør den ugyldig, uten unntak.",
         "independent": "<strong>Autonom verifikasjon:</strong> Hvem som helst med rapporten kan verifisere dens autentisitet, ingen konto, ingen plattformtilgang."
@@ -258,7 +258,7 @@
         },
         {
           "title": "Forsvarbart bevis over tid",
-          "desc": "Hver rapport låses på ekte feltdata, ikke redigerbar etter generering. Tvist? Dataene er der. Verifiserbare av hvem som helst. Alltid."
+          "desc": "Hver rapport låses på ekte feltdata, ikke redigerbar etter generering. Ved tvist: dataene er der, verifiserbare av hvem som helst, når som helst."
         }
       ]
     },
@@ -274,7 +274,7 @@
       "see_all": "Se alle støttede sektorer",
       "installatori": {
         "name": "Installatører",
-        "desc": "Elektrikere, Rørleggere, Teknikere. Hvert oppdrag dokumentert med GPS og bilder, uforanderlige data, verifiserbare av kunden.",
+        "desc": "Elektrikere, Rørleggere, Teknikere. Hvert oppdrag dokumentert med GPS og bilder, forseglede data, verifiserbare av kunden.",
         "cta": "Bevis hvert oppdrag"
       },
       "sicurezza": {
@@ -284,7 +284,7 @@
       },
       "pulizie": {
         "name": "Rengjøring",
-        "desc": "Rengjøringsselskaper, Facility, Multiservice. Hvert gjennomgang dokumentert og verifiserbart av kunden, null tvister.",
+        "desc": "Rengjøringsselskaper, Facility, Multiservice. Hvert gjennomgang dokumentert og verifiserbart av kunden, færre tvister.",
         "cta": "Unngå tvister"
       },
       "elettricisti": {
@@ -672,7 +672,7 @@
         "timelock-alpha": {
           "name": "GPS-tidssporing",
           "short": "Innsjekk og utsjekk knyttet til GPS-posisjon og presist tidsstempel. Hver arbeidsøkt blir en verifiserbar operasjonell hendelse.",
-          "full": "### Tid er verifiserbar.\n\nTidsstempler uten verifisering genererer tvister.\n**GPS-tidssporing** gjør hver arbeidsøkt til et pålitelig, forsvarbart utlegg.\n\n#### Geolosert innsjekk og utsjekk\n\nFelttekniker registrerer inn- og utgang fra felt.\nPosisjon, adresse og tid registreres automatisk.\n\n#### Uforanderlig historikk\n\nHver økt er en verifiserbar post: starttid, sluttid, posisjon, varighet og tilknyttet arbeidsordre.\nKunden spør når du ankom? Dataene er der, alltid."
+          "full": "### Tid er verifiserbar.\n\nTidsstempler uten verifisering genererer tvister.\n**GPS-tidssporing** gjør hver arbeidsøkt til et pålitelig, forsvarbart utlegg.\n\n#### Geolosert innsjekk og utsjekk\n\nFelttekniker registrerer inn- og utgang fra felt.\nPosisjon, adresse og tid registreres automatisk.\n\n#### Forseglet historikk\n\nHver økt er en verifiserbar post: starttid, sluttid, posisjon, varighet og tilknyttet arbeidsordre.\nKunden spør når du ankom? Dataene er der, og enhver endring i etterkant blir synlig."
         },
         "event-horizon": {
           "name": "Skiftplanlegging",
@@ -707,7 +707,7 @@
         "data-core": {
           "name": "Ukentlige rapporter",
           "short": "Detaljerte rapporter over arbeidede timer per arbeidsordre og per operatør. Pålitelige data for intern kontroll og fakturering.",
-          "full": "### Data lyver ikke.\n\nTa beslutninger basert på fakta, ikke inntrykk.\n**Ukentlige rapporter** henter verdi ut av den daglige driften.\n\n#### Detaljerte rapporter\n\nHver uke, et komplett bilde: hvem som jobbet, hvor, på hvilken arbeidsordre og i hvor lang tid.\n\n#### Full transparens\n\nAnsatte og ledere konsulterer den samme månedlige rapporten.\nTimer talt er identiske for alle.\nIngen tvister ved månedsavslutning."
+          "full": "### Data lyver ikke.\n\nTa beslutninger basert på fakta, ikke inntrykk.\n**Ukentlige rapporter** henter verdi ut av den daglige driften.\n\n#### Detaljerte rapporter\n\nHver uke, et komplett bilde: hvem som jobbet, hvor, på hvilken arbeidsordre og i hvor lang tid.\n\n#### Full transparens\n\nAnsatte og ledere konsulterer den samme månedlige rapporten.\nTimer talt er identiske for alle.\nFærre tvister ved månedsavslutning."
         },
         "identity-forge": {
           "name": "Merkevaretilpasset app",
@@ -764,7 +764,7 @@
       },
       {
         "title": "Verifiserbare rapporter",
-        "desc": "Hvordan hvert oppdrag genererer en rapport med fotodokumentasjon, digital signatur og uforanderlig hash som du kan vise kunden."
+        "desc": "Hvordan hvert oppdrag genererer en rapport med fotodokumentasjon, digital signatur og verifiserbar hash som du kan vise kunden."
       },
       {
         "title": "Teamstyring via Flow",
@@ -900,7 +900,7 @@
       "section_label": "Grunnleggeren",
       "name": "Michele Angelo Petraroli",
       "role": "Founder & CEO",
-      "bio": "Michele Angelo Petraroli er grunnlegger og CEO av GeoTapp, et italiensk SaaS-selskap for håndtering av feltarbeidere for europeiske SMB-er. Fra operativ erfaring så han hvordan rengjøringsbedrifter, installatører og sikkerhetsselskaper taper penger når beviset på arbeid mangler. Han grunnla GeoTapp i 2024 for å løse problemet ved roten. I dag hjelper GeoTapp europeiske SMB-er med GDPR-kompatibel GPS-sporing, fotobevis og digitale signaturer som gjør hvert feltoppdrag verifiserbart.",
+      "bio": "Michele Angelo Petraroli er grunnlegger og CEO av GeoTapp, et italiensk SaaS-selskap for håndtering av feltarbeidere for europeiske SMB-er. Fra operativ erfaring så han hvordan rengjøringsbedrifter, installatører og sikkerhetsselskaper taper penger når beviset på arbeid mangler. Han grunnla GeoTapp i 2024 for å løse problemet ved roten. I dag hjelper GeoTapp europeiske SMB-er med GPS-sporing bygget for å holde seg innenfor GDPR, fotobevis og digitale signaturer som gjør hvert feltoppdrag verifiserbart.",
       "expertise_label": "Ekspertiseområder",
       "expertise": [
         "Feltservicehåndtering",
@@ -974,7 +974,7 @@
     "cta_title": "Hold deg oppdatert",
     "cta_desc": "Ingen spam, bare verdifulle oppdateringer om produktet og bransjen.",
     "cta_btn": "Kontakt oss",
-    "schema_desc": "Veiledninger og innsikt om sertifisering av feltarbeid, teamledelse, GDPR og geolokalisering.",
+    "schema_desc": "Veiledninger og innsikt om forseglet bevis for feltarbeid, teamledelse, GDPR og geolokalisering.",
     "meta_title": "Blogg | GeoTapp - Verifisering av feltarbeid",
     "meta_desc": "Veiledninger, innsikt og ressurser om teamledelse, forseglet bevis av oppdrag, GDPR og geolokalisering. Fra GeoTapp-teamet.",
     "cat_all": "Alle",
@@ -1079,7 +1079,7 @@
   },
   "roi": {
     "meta_title": "GeoTapp ROI-kalkulator - Oppdag dine reelle besparelser",
-    "meta_desc": "Beregn på 2 minutter hva du ville spare med GeoTapp: mindre byråkrati, null tvister, mer produktive operatører. Uten e-post og uten konto.",
+    "meta_desc": "Beregn på 2 minutter hva du ville spare med GeoTapp: mindre byråkrati, færre tvister, mer produktive operatører. Uten e-post og uten konto.",
     "hero_title": "Beregn din ROI med GeoTapp",
     "hero_subtitle": "Skriv inn bedriftsdataene dine og oppdag hvor mye du kan spare hvert år.",
     "step1_title": "Din bedrift",

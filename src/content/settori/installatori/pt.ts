@@ -3,13 +3,13 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'Software para Instaladores Elétricos e Canalizadores | Gestão de Intervenções | GeoTapp',
-    description: 'GeoTapp para instaladores elétricos, canalizadores e empresas de manutenção: gestão de ordens de trabalho, controlo de horas GPS e provas fotográficas. Conforme ao Código do Trabalho.',
+    description: 'GeoTapp para instaladores elétricos, canalizadores e empresas de manutenção: gestão de ordens de trabalho, controlo de horas GPS e provas fotográficas. Alinhado com o Código do Trabalho.',
   },
   hero: {
     badge: 'Software para Instaladores Elétricos, Canalizadores e Equipas de Manutenção',
     h1_line1: 'Trabalhos em campo sob controlo:',
     h1_line2: 'ordens, horas e provas num só lugar',
-    subtitle: 'GeoTapp liga o Flow + TimeTracker para empresas que trabalham entre carrinhas, obras e clientes finais. As apps Android e iOS apoiam o técnico em campo; o escritório vê a ordem de trabalho, os tempos, as provas fotográficas e as notas sem ter de ligar a ninguém. Conforme ao RGPD e ao Código do Trabalho.',
+    subtitle: 'GeoTapp liga o Flow + TimeTracker para empresas que trabalham entre carrinhas, obras e clientes finais. As apps Android e iOS apoiam o técnico em campo; o escritório vê a ordem de trabalho, os tempos, as provas fotográficas e as notas sem ter de ligar a ninguém. Pensado para ficar dentro do RGPD e do Código do Trabalho.',
     cta_primary: 'Solicitar uma demo',
     cta_note: 'Sem compromisso. Resposta em 12 horas úteis.',
   },
@@ -39,7 +39,7 @@ const content: SettoreContent = {
         desc: 'Com o GeoTapp TimeTracker, regista entrada, saída, fotos e notas diretamente no smartphone. GPS verificado, RGPD respeitado.',
       },
       {
-        title: 'O escritório vê tudo em tempo real',
+        title: 'O escritório vê tudo assim que chega',
         desc: 'O Flow recebe os dados instantaneamente. O responsável vê a ordem de trabalho, o progresso, o técnico atribuído e as provas fotográficas sem ligar.',
       },
       {
@@ -57,7 +57,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Provas fotográficas em campo',
-        desc: 'O técnico tira fotos diretamente na app. Imagens ligadas à intervenção com data e hora. Sem possibilidade de disputa.',
+        desc: 'O técnico tira fotos diretamente na app. Imagens ligadas à intervenção com data e hora. Menos espaço para disputas.',
       },
       {
         title: 'Exportação para processamento salarial',
@@ -76,7 +76,7 @@ const content: SettoreContent = {
     items: [
       {
         q: 'O GeoTapp é adequado para instaladores elétricos e canalizadores?',
-        a: 'Sim. O GeoTapp ajuda instaladores elétricos, canalizadores e empresas de manutenção a gerir ordens de trabalho, horários, presenças e provas de campo entre obra e escritório, em conformidade com o Código do Trabalho.',
+        a: 'Sim. O GeoTapp ajuda instaladores elétricos, canalizadores e empresas de manutenção a gerir ordens de trabalho, horários, presenças e provas de campo entre obra e escritório, alinhado com o Código do Trabalho.',
       },
       {
         q: 'Posso usar o GeoTapp para relatórios de intervenção e provas fotográficas?',

@@ -39,7 +39,7 @@ const content: SettoreContent = {
         desc: 'GeoTapp TimeTracker registreert in- en uitklokken, GPS-positie en foto\'s met verzegelde tijdstempels. Elke ronde wordt automatisch gelogd via de smartphone van de beveiliger.',
       },
       {
-        title: 'De leidinggevende ziet alle posten in real time',
+        title: 'De leidinggevende ziet elke post zodra er wordt ingeklokt',
         desc: 'Flow ontvangt data direct. De operationeel manager controleert de volledige postbezetting, dienstwisselingen en afwijkingen zonder het veld te bellen.',
       },
       {
@@ -66,7 +66,7 @@ const content: SettoreContent = {
     ],
   },
   testimonial: {
-    quote: 'Met GeoTapp zijn geschillen over postbezetting verleden tijd. Klanten ontvangen een GPS-gestempeld aanwezigheidslogboek en er valt niets meer te betwisten.',
+    quote: 'Met GeoTapp zijn geschillen over postbezetting sterk afgenomen. Klanten ontvangen een GPS-gestempeld aanwezigheidslogboek dat weinig ruimte laat voor discussie.',
     author: 'Mark V.',
     role: 'Operationeel Directeur, beveiligingsbedrijf',
   },
@@ -80,7 +80,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Hoe helpt GeoTapp bij het documenteren van incidentrapporten?',
-        a: 'TimeTracker koppelt elk incident aan een verzegelde GPS-positie en een verzegelde tijdstempel. Het gegenereerde incidentrapport bevat coördinaten, tijdstip en foto\'s, waardoor het verdedigbaar is in juridische en contractuele procedures.',
+        a: 'TimeTracker koppelt elk incident aan een verzegelde GPS-positie en een verzegelde tijdstempel. Het gegenereerde incidentrapport bevat coördinaten, tijdstip en foto\'s, waardoor het verdedigbaar is bij geschillen en tegenover toezichthouders.',
       },
       {
         q: 'Ondersteunt GeoTapp digitale dienstoverdracht tussen beveiligers?',
@@ -89,7 +89,7 @@ const content: SettoreContent = {
     ],
   },
   cta: {
-    title: 'Geen geschillen meer over postbezetting.',
+    title: 'Minder geschillen over postbezetting.',
     subtitle: 'GeoTapp Flow en TimeTracker geven uw beveiligingsbedrijf het aantoonbare bewijs dat klanten en toezichthouders eisen.',
     primary: 'Demo Aanvragen',
     secondary: 'Prijzen Bekijken',

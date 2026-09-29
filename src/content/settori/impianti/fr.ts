@@ -3,7 +3,7 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'Application pour Installateurs & Techniciens : Suivi GPS des Interventions | GeoTapp',
-    description: 'Suivez interventions, heures et matériaux pour installateurs CVC, électriciens et plombiers avec GPS. Preuves de service automatiques, zéro litiges clients. Essayez GeoTapp gratuitement.',
+    description: 'Suivez interventions, heures et matériaux pour installateurs CVC, électriciens et plombiers. Preuves de service automatiques, moins de litiges. Essai gratuit.',
   },
   hero: {
     badge: 'Application pour installateurs, techniciens et équipes de service',
@@ -18,11 +18,11 @@ const content: SettoreContent = {
     items: [
       {
         title: 'Les clients contestent les heures d\'intervention',
-        desc: 'Pointages GPS horodatés comme preuve irréfutable. Les données sont scellées au moment de l\'intervention, et toute modification ultérieure est détectable.',
+        desc: 'Pointages GPS horodatés et scellés au moment de l\'intervention. Toute modification ultérieure est détectable.',
       },
       {
         title: 'Courir après les techniciens pour des nouvelles',
-        desc: 'Carte en temps réel avec le statut de chaque intervention. Vous savez où se trouvent tous vos techniciens sans passer un seul appel.',
+        desc: 'Carte avec le statut de chaque intervention, mise à jour dès qu\'un technicien pointe. Vous savez où en est chaque mission sans passer un seul appel.',
       },
       {
         title: 'Rapports d\'intervention incomplets ou jamais remis',
@@ -40,7 +40,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Les heures sont enregistrées automatiquement par mission',
-        desc: 'Chaque minute travaillée est associée à la bonne mission. Le responsable voit en temps réel qui travaille où.',
+        desc: 'Chaque minute travaillée est associée à la bonne mission. Le responsable voit qui travaille où, dès que le pointage arrive.',
       },
       {
         title: 'Le rapport client est généré sans rien saisir',
@@ -75,7 +75,7 @@ const content: SettoreContent = {
       {
         label: 'Conformité RGPD',
         competitor: 'Souvent douteuse',
-        geotapp: 'Conforme par conception, formulaires inclus',
+        geotapp: 'Conçu pour rester dans le cadre du RGPD, formulaires inclus',
       },
     ],
   },
@@ -119,12 +119,12 @@ const content: SettoreContent = {
       },
       {
         title: 'Conformité RGPD intégrée',
-        desc: 'Géolocalisation conforme par conception à la réglementation RGPD. Modèles de déclaration de confidentialité pour les employés inclus.',
+        desc: 'Géolocalisation conçue pour rester dans le cadre du RGPD. Modèles de déclaration de confidentialité pour les employés inclus.',
       },
     ],
   },
   testimonial: {
-    quote: 'Les clients ne contestent plus les heures. Nous ouvrons le rapport avec GPS et photos et la discussion s\'arrête là.',
+    quote: 'Les clients contestent beaucoup moins les heures. Nous ouvrons le rapport avec GPS et photos et la discussion s\'arrête là.',
     author: 'Robert F.',
     role: 'Dirigeant, entreprise d\'installation, 20 techniciens',
   },
@@ -134,11 +134,11 @@ const content: SettoreContent = {
     items: [
       {
         q: 'Les clients contestent-ils les heures d\'intervention ?',
-        a: 'Avec GeoTapp, les pointages GPS sont horodatés au moment de l\'intervention et toute modification est détectable. Ils constituent une preuve irréfutable des heures travaillées, éliminant tout litige.',
+        a: 'Avec GeoTapp, les pointages GPS sont horodatés au moment de l\'intervention et toute modification est détectable. Ils constituent une preuve vérifiable des heures travaillées, utile en cas de litige.',
       },
       {
         q: 'Comment surveiller plusieurs équipes sur différentes missions ?',
-        a: 'GeoTapp offre une carte en temps réel avec le statut de chaque intervention. Vous savez exactement où se trouvent vos techniciens et sur quelle mission ils travaillent, sans téléphoner.',
+        a: 'GeoTapp offre une carte avec le statut de chaque intervention, mise à jour dès qu\'un technicien pointe. Vous savez sur quelle mission chacun travaille, sans téléphoner.',
       },
       {
         q: 'Comment accélérer la facturation des interventions terminées ?',
@@ -161,11 +161,11 @@ const content: SettoreContent = {
   schema_faq: [
     {
       question: 'Les clients contestent-ils les heures d\'intervention ?',
-      answer: 'Avec GeoTapp, les pointages GPS sont horodatés au moment de l\'intervention et toute modification est détectable. Ils constituent une preuve irréfutable des heures travaillées, éliminant tout litige.',
+      answer: 'Avec GeoTapp, les pointages GPS sont horodatés au moment de l\'intervention et toute modification est détectable. Ils constituent une preuve vérifiable des heures travaillées, utile en cas de litige.',
     },
     {
       question: 'Comment surveiller plusieurs équipes sur différentes missions ?',
-      answer: 'GeoTapp offre une carte en temps réel avec le statut de chaque intervention. Vous savez exactement où se trouvent vos techniciens et sur quelle mission ils travaillent, sans téléphoner.',
+      answer: 'GeoTapp offre une carte avec le statut de chaque intervention, mise à jour dès qu\'un technicien pointe. Vous savez sur quelle mission chacun travaille, sans téléphoner.',
     },
     {
       question: 'Comment accélérer la facturation des interventions terminées ?',

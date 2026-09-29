@@ -8,7 +8,7 @@ const content: SettoreContent = {
   hero: {
     badge: 'App para Fontaneros Calefactores e Instaladores Termosanitarios',
     h1_line1: 'App para fontaneros calefactores:',
-    h1_line2: 'informes GPS, pruebas fotográficas y cero reclamaciones.',
+    h1_line2: 'informes GPS, pruebas fotográficas y menos reclamaciones.',
     subtitle: 'GeoTapp registra cada intervención en calderas e instalaciones con GPS, fotos y marcas de tiempo verificables. ¿El cliente niega los materiales sustituidos? Muéstrale el informe, sin discusiones. Tus técnicos están protegidos, tu facturación también.',
     cta_primary: '¡Empieza gratis ahora!',
     cta_note: 'Sin compromiso. Respuesta en 12 horas laborables.',
@@ -39,7 +39,7 @@ const content: SettoreContent = {
         desc: 'Con GeoTapp TimeTracker ficha entrada y salida con GPS, fotografía la instalación y la caldera, añade notas sobre los componentes sustituidos desde el smartphone.',
       },
       {
-        title: 'La oficina lo ve todo en tiempo real',
+        title: 'La oficina lo sabe en cuanto se ficha',
         desc: 'GeoTapp Flow recibe los datos al instante. El responsable ve la obra, el técnico asignado, el avance y las pruebas fotográficas sin llamar.',
       },
       {
@@ -75,7 +75,7 @@ const content: SettoreContent = {
       {
         label: 'Conformidad RGPD',
         competitor: 'A menudo por verificar',
-        geotapp: 'Conforme por diseño, formularios incluidos',
+        geotapp: 'Diseñado para el RGPD, con modelo de información incluido',
       },
     ],
   },
@@ -176,7 +176,7 @@ const content: SettoreContent = {
   schema_faq: [
     {
       question: '¿GeoTapp funciona como app para fontaneros calefactores?',
-      answer: 'Sí. GeoTapp es la app para fontaneros calefactores e instaladores que registra cada intervención en calderas e instalaciones con GPS, fotos y marcas de tiempo verificables. El técnico ficha desde el lugar, la oficina lo ve todo en tiempo real y el cliente recibe un informe sellado.',
+      answer: 'Sí. GeoTapp es la app para fontaneros calefactores e instaladores que registra cada intervención en calderas e instalaciones con GPS, fotos y marcas de tiempo verificables. El técnico ficha desde el lugar, la oficina lo sabe en cuanto se ficha y el cliente recibe un informe sellado.',
     },
     {
       question: '¿Cómo sello una intervención en caldera con GeoTapp?',
@@ -184,7 +184,7 @@ const content: SettoreContent = {
     },
     {
       question: '¿GeoTapp gestiona varios equipos de fontaneros calefactores en intervenciones distintas?',
-      answer: 'Sí. GeoTapp Flow permite al titular coordinar varios equipos, asignar obras urgentes, seguir el estado de las intervenciones y recopilar pruebas fotográficas de todos los centros activos en tiempo real.',
+      answer: 'Sí. GeoTapp Flow permite al titular coordinar varios equipos, asignar obras urgentes, seguir el estado de las intervenciones y recopilar pruebas fotográficas de todos los centros activos, actualizado en cuanto se ficha.',
     },
     {
       question: '¿Los informes GeoTapp se aceptan en caso de reclamación sobre instalaciones térmicas?',

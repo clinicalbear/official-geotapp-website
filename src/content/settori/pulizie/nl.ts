@@ -15,7 +15,7 @@ const content: SettoreContent = {
     badge: 'Software voor schoonmaakbedrijven, facilitaire diensten en gebouwbeheer',
     h1_line1: 'Software voor schoonmaakbedrijven:',
     h1_line2: 'dienstroosters, fotobewijs en gecontroleerde uren, op elk object',
-    subtitle: 'GeoTapp verbindt Flow + TimeTracker voor teams verspreid over meerdere gebouwen en verdiepingen. Uw medewerkers klokken in via GPS-geverifieerde smartphone; het kantoor ziet wie wat, waar en wanneer heeft schoongemaakt, met bijgevoegd fotobewijs. Met de data klaar voor elk dispuut, volledige naleving van de CAO Schoonmaak.',
+    subtitle: 'GeoTapp verbindt Flow + TimeTracker voor teams verspreid over meerdere gebouwen en verdiepingen. Uw medewerkers klokken in via GPS-geverifieerde smartphone; het kantoor ziet wie wat, waar en wanneer heeft schoongemaakt, met bijgevoegd fotobewijs. Met de data klaar voor elk dispuut, gebouwd om de CAO Schoonmaak te ondersteunen.',
     cta_primary: 'Probeer het op een echt contract',
     cta_note: '14 dagen, tot 50 medewerkers in het veld, zonder creditcard.',
   },
@@ -42,10 +42,10 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'Medewerker klokt in op locatie',
-        desc: 'Met GeoTapp TimeTracker registreert hij aankomst, vertrek, foto\'s van de ruimtes en notities rechtstreeks via de smartphone. GPS-geverifieerd, AVG-conform, CAO Schoonmaak-geschikt.',
+        desc: 'Met GeoTapp TimeTracker registreert hij aankomst, vertrek, foto\'s van de ruimtes en notities rechtstreeks via de smartphone. GPS-geverifieerd, gebouwd om binnen de AVG te blijven, CAO Schoonmaak-geschikt.',
       },
       {
-        title: 'Kantoor ziet alles in real time',
+        title: 'Kantoor ziet elke klokregistratie meteen',
         desc: 'Flow ontvangt de gegevens direct. De objectleider ziet welk gebouw is bediend, door wie, op welk tijdstip en met welk fotobewijs, zonder een enkel telefoontje te plegen.',
       },
       {
@@ -90,11 +90,11 @@ const content: SettoreContent = {
       },
       {
         q: 'Hoe beheer ik teams verspreid over meerdere gebouwen tegelijk?',
-        a: 'Flow toont de realtime status en locatie van elke medewerker per gebouw. U kunt diensten toewijzen, de bezetting controleren en automatische meldingen ontvangen bij afwezigheid of te laat komen.',
+        a: 'Flow toont de status en locatie van elke medewerker per gebouw, bijgewerkt bij elke klokregistratie. U kunt diensten toewijzen, de bezetting controleren en automatische meldingen ontvangen bij afwezigheid of te laat komen.',
       },
       {
         q: 'Helpt GeoTapp bij naleving van de CAO Schoonmaak voor pauzes en overwerk?',
-        a: 'Ja. Het systeem registreert automatisch pauzetijden, overwerk en dienstroosters. De maandelijkse export is compatibel met AFAS en NMBRS voor CAO-conforme salarisverwerking.',
+        a: 'Ja. Het systeem registreert automatisch pauzetijden, overwerk en dienstroosters. De maandelijkse export is compatibel met AFAS en NMBRS, afgestemd op de CAO Schoonmaak.',
       },
       {
         q: 'Welke software voor schoonmaakbedrijven heb ik nodig?',
@@ -130,7 +130,7 @@ const content: SettoreContent = {
     rows: [
       { label: 'Wat het registreert', competitor: 'In- en uitkloktijd', geotapp: 'Tijd, geverifieerde GPS, foto\'s per ruimte en gedekte objecten' },
       { label: 'Wie kan verifiëren', competitor: 'Alleen uw kantoor', geotapp: 'U, de opdrachtgever en een derde partij, onafhankelijk' },
-      { label: 'Bij geschillen', competitor: 'Gegevens niet verdedigbaar', geotapp: 'Verzegeld rapport, niet te vervalsen' },
+      { label: 'Bij geschillen', competitor: 'Gegevens niet verdedigbaar', geotapp: 'Verzegeld rapport, elke wijziging blijft zichtbaar' },
       { label: 'CAO Schoonmaak', competitor: 'Handmatig bij te houden', geotapp: 'Pauzes en overwerk automatisch geregistreerd' },
       { label: 'Salarisexport', competitor: 'Los proces', geotapp: 'Compatibel met AFAS en NMBRS' },
     ],

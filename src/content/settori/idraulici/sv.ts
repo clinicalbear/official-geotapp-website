@@ -3,12 +3,12 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'App för Rörmokare & VVS-installatörer | GeoTapp - GPS',
-    description: 'GeoTapp är appen för rörmokare och VVS-installatörer: GPS-verifierade arbetsrapporter, installationsfoton och manipuleringssäkra register. Stäng tvister med riktiga bevis. Prova gratis.',
+    description: 'GeoTapp är appen för rörmokare och VVS: GPS-verifierade arbetsrapporter, installationsfoton och förseglade register. Färre tvister. Prova gratis.',
   },
   hero: {
     badge: 'App för Rörmokare, VVS-installatörer och Värmetekniker',
     h1_line1: 'App för rörmokare och VVS-installatörer:',
-    h1_line2: 'GPS-rapporter, fotobevis och noll tvister.',
+    h1_line2: 'GPS-rapporter, fotobevis och färre tvister.',
     subtitle: 'GeoTapp registrerar varje VVS- och värmejobb med GPS, foton och verifierbara tidsstämplar. Kunden bestrider arbetet? Visa rapporten, ingen diskussion. Dina tekniker är skyddade, dina fakturor också.',
     cta_primary: 'Börja gratis',
     cta_note: 'Utan åtagande. Svar inom 12 arbetstimmar.',
@@ -39,12 +39,12 @@ const content: SettoreContent = {
         desc: 'Med GPS fotograferar han systemet före och efter, lägger till tekniska anteckningar från sin smartphone.',
       },
       {
-        title: 'Kontoret ser allt i realtid',
+        title: 'Kontoret ser varje stämpling direkt',
         desc: 'GeoTapp Flow tar emot data omedelbart. Tilldelning, framsteg och fotobevis utan samtal.',
       },
       {
         title: 'Rapporten är ditt bevis',
-        desc: 'Förseglad rapport med GPS, foton, använda material och anteckningar. Manipuleringssäker. Kunden kan verifiera den.',
+        desc: 'Förseglad rapport med GPS, foton, använda material och anteckningar. Varje ändring syns. Kunden kan verifiera den.',
       },
     ],
   },
@@ -57,7 +57,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Förseglade foton före och efter',
-        desc: 'Bilder kopplade till GPS och tidsstämpel, manipuleringssäkra.',
+        desc: 'Bilder kopplade till GPS och tidsstämpel, varje ändring syns.',
       },
       {
         title: 'Automatiska rapporter',
@@ -92,11 +92,11 @@ const content: SettoreContent = {
       },
       {
         q: 'Hjälper GeoTapp med att lösa tvister med kunder?',
-        a: 'Det är den primära användningen: GPS, foton och förseglade rapporter löser alla ogrundade tvister på minuter.',
+        a: 'Det är den primära användningen: GPS, foton och förseglade rapporter hjälper lösa ogrundade tvister på minuter.',
       },
       {
         q: 'Uppfyller GeoTapp GDPR för geolokalisering?',
-        a: 'Ja. GDPR-konform hantering med informationsformulär till medarbetare inkluderade.',
+        a: 'Ja. Byggd för att hålla sig inom GDPR, informationsformulär till medarbetare ingår.',
       },
     ],
   },

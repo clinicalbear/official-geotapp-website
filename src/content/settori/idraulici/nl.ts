@@ -8,8 +8,8 @@ const content: SettoreContent = {
   hero: {
     badge: 'App voor Loodgieters, CV-installateurs en Sanitair Technicians',
     h1_line1: 'App voor loodgieters en cv-installateurs:',
-    h1_line2: 'GPS werkbonnen, fotobewijs en geen geschillen.',
-    subtitle: 'GeoTapp legt elke sanitair- en verwarmingsklus vast met GPS, foto\'s en verifieerbare tijdstempels. Klant betwist het werk? Toon het rapport, geen discussie nodig. Uw monteurs zijn beschermd, uw facturen ook.',
+    h1_line2: 'GPS werkbonnen, fotobewijs en minder geschillen.',
+    subtitle: 'GeoTapp legt elke sanitair- en verwarmingsklus vast met GPS, foto\'s en verifieerbare tijdstempels. Klant betwist het werk? Toon het rapport, minder discussie nodig. Uw monteurs zijn beschermd, uw facturen ook.',
     cta_primary: 'Gratis starten',
     cta_note: 'Geen verplichtingen. Reactie binnen 12 werkuren.',
   },
@@ -39,12 +39,12 @@ const content: SettoreContent = {
         desc: 'Met GeoTapp TimeTracker klokt hij in en uit met GPS, fotografeert het sanitair- of verwarmingssysteem en voegt technische notities toe vanaf zijn smartphone.',
       },
       {
-        title: 'Kantoor ziet alles in real time',
+        title: 'Kantoor ziet elke klokregistratie meteen',
         desc: 'GeoTapp Flow ontvangt de gegevens onmiddellijk. De leidinggevende ziet opdracht, toegewezen monteur, voortgang en fotobewijs zonder te bellen.',
       },
       {
         title: 'Het werkrapport is uw bewijs',
-        desc: 'Aan het einde van de klus genereert het systeem een verzegeld rapport: GPS-tijdstempel, systeemfotos, gebruikte materialen, technische notities. Manipulatiebestendig.',
+        desc: 'Aan het einde van de klus genereert het systeem een verzegeld rapport: GPS-tijdstempel, systeemfotos, gebruikte materialen, technische notities. Elke wijziging blijft zichtbaar.',
       },
     ],
   },
@@ -57,7 +57,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Verzegelde sanitair- en verwarmingssysteemfotos',
-        desc: 'De monteur fotografeert voor en na de klus. Elk beeld is gekoppeld aan GPS en tijdstempel, na generatie manipulatiebestendig.',
+        desc: 'De monteur fotografeert voor en na de klus. Elk beeld is gekoppeld aan GPS en tijdstempel; na generatie blijft elke wijziging zichtbaar.',
       },
       {
         title: 'Automatische digitale werkrapporten',
@@ -92,7 +92,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Kan ik GeoTapp gebruiken om sanitair- en verwarmingsklussen te documenteren?',
-        a: 'Ja. De monteur fotografeert voor en na de klus vanuit de app. Elk beeld is gekoppeld aan GPS, tijdstempel en opdracht, opgenomen in het manipulatiebestendige rapport.',
+        a: 'Ja. De monteur fotografeert voor en na de klus vanuit de app. Elk beeld is gekoppeld aan GPS, tijdstempel en opdracht, opgenomen in het verzegelde rapport waarin elke wijziging zichtbaar blijft.',
       },
       {
         q: 'Beheert GeoTapp spoedoproepen en gepland onderhoud?',

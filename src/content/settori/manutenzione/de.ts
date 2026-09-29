@@ -26,7 +26,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Kommen die Techniker wirklich pünktlich an?',
-        desc: 'Echtzeitüberprüfung ohne Anrufe. GPS und Ankunftszeit sind bereits im Dashboard verfügbar, für jeden Standort.',
+        desc: 'Sofortige Übersicht ohne Anrufe. GPS und Ankunftszeit stehen im Dashboard, sobald gestempelt wird, für jeden Standort.',
       },
       {
         title: 'Wie beweisen Sie die erbrachte Leistung?',
@@ -45,7 +45,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Stunden und Einsatz werden automatisch erfasst',
-        desc: 'Jede gearbeitete Minute ist mit Standort und Einsatztyp verknüpft. Der Verantwortliche sieht den Echtzeitstatus jedes Besuchs.',
+        desc: 'Jede gearbeitete Minute ist mit Standort und Einsatztyp verknüpft. Der Verantwortliche sieht den Status jedes Besuchs, sobald gestempelt wird.',
       },
       {
         title: 'Der Kunde erhält den digital signierten Bericht',
@@ -86,7 +86,7 @@ const content: SettoreContent = {
 
   testimonial: {
     quote:
-      'Mit GeoTapp ist jeder Wartungseinsatz nachvollziehbar. Die Kunden sehen die komplette Historie pro Anlage und es gibt keine Diskussionen mehr über Stunden oder erledigte Arbeiten.',
+      'Mit GeoTapp ist jeder Wartungseinsatz nachvollziehbar. Die Kunden sehen die komplette Historie pro Anlage und es gibt kaum noch Diskussionen über Stunden oder erledigte Arbeiten.',
     author: 'Andreas L.',
     role: 'Wartungsleiter, Facility Management - Deutschland',
   },
@@ -101,7 +101,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Kommen die Techniker wirklich pünktlich?',
-        a: 'Mit GeoTapp können Sie Ankunftszeit und GPS-Position jedes Technikers in Echtzeit überprüfen. Kein Anruf nötig.',
+        a: 'Mit GeoTapp sehen Sie Ankunftszeit und GPS-Position jedes Technikers, sobald er stempelt. Kein Anruf nötig.',
       },
       {
         q: 'Wie beweise ich dem Kunden den erbrachten Wartungsservice?',
@@ -147,7 +147,7 @@ const content: SettoreContent = {
     {
       question: 'Kommen die Techniker wirklich pünktlich?',
       answer:
-        'Mit GeoTapp können Sie Ankunftszeit und GPS-Position jedes Technikers in Echtzeit überprüfen. Der Daten sind bereits im Dashboard.',
+        'Mit GeoTapp sehen Sie Ankunftszeit und GPS-Position jedes Technikers, sobald er stempelt. Die Daten sind bereits im Dashboard.',
     },
     {
       question: 'Wie beweise ich den erbrachten Wartungsservice?',

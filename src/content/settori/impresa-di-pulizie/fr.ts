@@ -4,15 +4,15 @@ const content: SettoreContent = {
   meta: {
     title: 'App pour Entreprise de Nettoyage : Gestion GPS des Équipes & Preuve de Service | GeoTapp',
     description:
-      'Gérez équipes de nettoyage, plannings et présences avec GPS en temps réel. Preuves de service automatiques, zéro litiges clients. App conforme RGPD.',
+      'Gérez équipes de nettoyage, plannings et présences avec pointage GPS scellé. Preuves de service automatiques, moins de litiges. App conçue pour le RGPD.',
   },
 
   hero: {
     badge: 'App pour entreprises de nettoyage et multiservices',
     h1_line1: 'Votre entreprise de nettoyage,',
-    h1_line2: 'gérée en temps réel.',
+    h1_line2: 'suivie à chaque service.',
     subtitle:
-      'Pointage GPS, preuves de service automatiques et gestion des plannings dans une seule app. Fini les tableurs, fini les litiges. Le client conteste ? Envoyez le rapport et la discussion est close.',
+      'Pointage GPS, preuves de service automatiques et gestion des plannings dans une seule app. Fini les tableurs, moins de litiges. Le client conteste ? Envoyez le rapport et la discussion est close.',
     cta_primary: 'Essayez-le sur un vrai contrat',
     cta_note: "14 jours, jusqu'à 50 intervenants sur le terrain, sans carte bancaire.",
   },
@@ -30,7 +30,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Difficile de coordonner plusieurs équipes ?',
-        desc: 'Voyez où tout le monde se trouve en temps réel, sur tous les sites, depuis un tableau de bord unique. Aucun appel.',
+        desc: 'Voyez où chacun a pointé, sur tous les sites, depuis un tableau de bord unique mis à jour à chaque service. Aucun appel.',
       },
     ],
   },
@@ -60,7 +60,7 @@ const content: SettoreContent = {
         desc: 'Ouvre et ferme son service depuis le smartphone. GeoTapp enregistre les coordonnées GPS réelles, photos et horodatage, entièrement automatique, et toute modification est détectable.',
       },
       {
-        title: 'Le responsable voit tout en temps réel',
+        title: 'Le responsable voit chaque pointage dès qu\'il arrive',
         desc: 'Un seul tableau de bord pour tous les sites. Sachez exactement qui est sur place, où et depuis quand, sans courir après personne.',
       },
       {
@@ -97,7 +97,7 @@ const content: SettoreContent = {
       {
         label: 'Conformité RGPD',
         competitor: 'Souvent à vérifier',
-        geotapp: 'Conforme par conception, formulaires inclus',
+        geotapp: 'Conçu pour rester dans le cadre du RGPD, formulaires inclus',
       },
     ],
   },
@@ -111,7 +111,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Contrôle réel sur tous les sites',
-        desc: 'Voyez en temps réel qui est actif où, sur tous les bâtiments simultanément. Aucun appel, aucun e-mail.',
+        desc: 'Voyez qui est actif où, sur tous les bâtiments, mis à jour à chaque pointage. Aucun appel, aucun e-mail.',
       },
       {
         title: 'Rapports défendables partout',
@@ -152,12 +152,12 @@ const content: SettoreContent = {
         a: 'Oui. GeoTapp génère automatiquement un rapport scellé avec GPS, photos et horodatage à chaque fin d\'intervention. Le client le reçoit et vérifie de manière autonome.',
       },
       {
-        q: 'GeoTapp est-il conforme au RGPD pour la géolocalisation des salariés ?',
+        q: 'GeoTapp est-il conçu pour respecter le RGPD sur la géolocalisation des salariés ?',
         a: 'Oui. GeoTapp ne géolocalise que pendant les heures de travail actives, inclut les formulaires d\'information aux salariés et ne collecte aucune donnée inutile.',
       },
       {
         q: 'Comment gérer des équipes réparties sur plusieurs sites ?',
-        a: 'Avec GeoTapp Flow vous avez un seul tableau de bord pour tous les sites. Voyez en temps réel qui est actif où, assignez des missions et recevez des alertes automatiques.',
+        a: 'Avec GeoTapp Flow vous avez un seul tableau de bord pour tous les sites. Voyez qui est actif où, mis à jour à chaque pointage, assignez des missions et recevez des alertes automatiques.',
       },
       {
         q: 'Les feuilles de présence papier sont-elles encore nécessaires ?',
@@ -173,7 +173,7 @@ const content: SettoreContent = {
   cta: {
     title: 'Vos agents font du bon travail. Faites en sorte que le client le voie.',
     subtitle:
-      'Chaque intervention devient une preuve de service vérifiable. Zéro litige, zéro contrat perdu.',
+      'Chaque intervention devient une preuve de service vérifiable. Moins de litiges, moins de contrats perdus.',
     primary: 'Commencez gratuitement !',
     secondary: 'Voir les Tarifs',
   },
@@ -198,7 +198,7 @@ const content: SettoreContent = {
         'Oui. GeoTapp génère automatiquement un rapport scellé avec GPS, photos et horodatage. Le client le reçoit et vérifie de manière autonome.',
     },
     {
-      question: 'GeoTapp est-il conforme au RGPD pour la géolocalisation des salariés ?',
+      question: 'GeoTapp est-il conçu pour respecter le RGPD sur la géolocalisation des salariés ?',
       answer:
         'Oui. GeoTapp ne géolocalise que pendant les heures de travail actives, inclut les formulaires d\'information aux salariés et ne collecte aucune donnée inutile.',
     },

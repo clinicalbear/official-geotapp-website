@@ -9,7 +9,7 @@ const content: SettoreContent = {
     badge: 'Software de Gestión para Empresas de Seguridad Privada y Vigilancia',
     h1_line1: 'Presencias verificadas y registros de turno',
     h1_line2: 'para vigilantes de seguridad y seguridad privada',
-    subtitle: 'GeoTapp Flow y TimeTracker documentan la presencia de los vigilantes en los puestos asignados con GPS verificado y marcas de tiempo selladas. Seguimiento de habilitaciones conforme a la Ley 5/2014, relevo digital de turno e informes de incidentes geolocalizados, todo en una sola plataforma.',
+    subtitle: 'GeoTapp Flow y TimeTracker documentan la presencia de los vigilantes en los puestos asignados con GPS verificado y marcas de tiempo selladas. Seguimiento de habilitaciones según lo que exige la Ley 5/2014, relevo digital de turno e informes de incidentes geolocalizados, todo en una sola plataforma.',
     cta_primary: 'Solicitar una Demo',
     cta_note: 'Sin compromiso. Respuesta en 12 horas laborables.',
   },
@@ -39,7 +39,7 @@ const content: SettoreContent = {
         desc: 'GeoTapp TimeTracker registra entrada, salida, posición GPS y fotos con marcas de tiempo selladas. Cada ronda queda registrada automáticamente desde el smartphone del vigilante.',
       },
       {
-        title: 'El responsable ve todos los puestos en tiempo real',
+        title: 'El responsable ve la cobertura de todos los puestos en cuanto se ficha',
         desc: 'Flow recibe los datos al instante. El jefe de servicio comprueba la cobertura completa de puestos, los relevos y cualquier desviación sin necesidad de llamar al campo.',
       },
       {
@@ -76,7 +76,7 @@ const content: SettoreContent = {
     items: [
       {
         q: '¿Es GeoTapp adecuado para empresas de seguridad privada y vigilantes habilitados?',
-        a: 'Sí. GeoTapp es utilizado por empresas de seguridad privada para documentar la presencia de vigilantes en los puestos asignados con GPS verificado, gestionar los relevos y hacer seguimiento de las habilitaciones TIP conforme a la Ley 5/2014.',
+        a: 'Sí. GeoTapp es utilizado por empresas de seguridad privada para documentar la presencia de vigilantes en los puestos asignados con GPS verificado, gestionar los relevos y hacer seguimiento de las habilitaciones TIP según lo que exige la Ley 5/2014.',
       },
       {
         q: '¿Cómo ayuda GeoTapp a documentar los partes de incidencia?',
@@ -88,7 +88,7 @@ const content: SettoreContent = {
       },
       {
         q: '¿Sirve GeoTapp como software para empresas de vigilancia y seguridad privada?',
-        a: 'Sí. GeoTapp es el software de gestión que usan las empresas de seguridad privada y de vigilancia para verificar la presencia de los vigilantes en cada puesto con GPS, controlar las habilitaciones TIP conforme a la Ley 5/2014 y entregar al cliente informes de presencia que puede verificar por sí mismo.',
+        a: 'Sí. GeoTapp es el software de gestión que usan las empresas de seguridad privada y de vigilancia para verificar la presencia de los vigilantes en cada puesto con GPS, controlar las habilitaciones TIP según lo que exige la Ley 5/2014 y entregar al cliente informes de presencia que puede verificar por sí mismo.',
       },
     ],
   },

@@ -3,7 +3,7 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'App para Instaladores y Técnicos: Seguimiento GPS de Intervenciones | GeoTapp',
-    description: 'Controla intervenciones, horas y materiales para instaladores de climatización, electricistas y fontaneros con GPS. Pruebas de servicio automáticas, cero disputas con clientes. Prueba GeoTapp gratis.',
+    description: 'Controla intervenciones, horas y materiales de instaladores, electricistas y fontaneros con GPS. Pruebas automáticas, menos disputas. Prueba GeoTapp gratis.',
   },
   hero: {
     badge: 'App para instaladores, técnicos y equipos de servicio',
@@ -22,7 +22,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Perseguir a los técnicos para saber dónde están',
-        desc: 'Mapa en tiempo real con el estado de cada intervención. Sabes dónde están todos tus técnicos sin hacer una sola llamada.',
+        desc: 'Panel con el estado de cada intervención, actualizado en cuanto el técnico ficha entrada o salida. Sabes en qué trabaja cada uno sin hacer una sola llamada.',
       },
       {
         title: 'Partes de trabajo incompletos o nunca entregados',
@@ -40,7 +40,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Las horas se registran automáticamente por proyecto',
-        desc: 'Cada minuto trabajado se asocia al proyecto correcto. El responsable ve en tiempo real quién está trabajando dónde.',
+        desc: 'Cada minuto trabajado se asocia al proyecto correcto. El responsable ve, en cuanto se registra el fichaje, quién está trabajando en cada proyecto.',
       },
       {
         title: 'El informe para el cliente se genera sin teclear nada',
@@ -75,7 +75,7 @@ const content: SettoreContent = {
       {
         label: 'Conformidad RGPD',
         competitor: 'A menudo dudosa',
-        geotapp: 'Conforme por diseño, formularios incluidos',
+        geotapp: 'Diseñado para el RGPD, con modelo de información incluido',
       },
     ],
   },
@@ -118,8 +118,8 @@ const content: SettoreContent = {
         desc: 'Exporta asistencia mensual y horas por proyecto. Nóminas y facturación se convierten en cuestión de minutos.',
       },
       {
-        title: 'Conformidad RGPD integrada',
-        desc: 'Geolocalización conforme por diseño con la normativa RGPD. Plantillas de aviso de privacidad para empleados incluidas.',
+        title: 'Diseño alineado con el RGPD',
+        desc: 'Geolocalización diseñada para encajar en el RGPD. Plantillas de aviso de privacidad para los trabajadores incluidas.',
       },
     ],
   },
@@ -138,7 +138,7 @@ const content: SettoreContent = {
       },
       {
         q: '¿Cómo superviso varios equipos en proyectos diferentes?',
-        a: 'GeoTapp ofrece un mapa en tiempo real con el estado de cada intervención. Sabes exactamente dónde están tus técnicos y en qué proyecto trabajan, sin hacer llamadas.',
+        a: 'GeoTapp ofrece un panel con el estado de cada intervención, actualizado en cuanto el técnico ficha. Sabes en qué proyecto trabaja cada técnico sin hacer llamadas.',
       },
       {
         q: '¿Cómo agilizo la facturación de intervenciones terminadas?',
@@ -165,7 +165,7 @@ const content: SettoreContent = {
     },
     {
       question: '¿Cómo superviso varios equipos en proyectos diferentes?',
-      answer: 'GeoTapp ofrece un mapa en tiempo real con el estado de cada intervención. Sabes exactamente dónde están tus técnicos y en qué proyecto trabajan, sin hacer llamadas.',
+      answer: 'GeoTapp ofrece un panel con el estado de cada intervención, actualizado en cuanto el técnico ficha. Sabes en qué proyecto trabaja cada técnico sin hacer llamadas.',
     },
     {
       question: '¿Cómo agilizo la facturación de intervenciones terminadas?',

@@ -4,15 +4,15 @@ const content: SettoreContent = {
   meta: {
     title: 'App til Rengøringsfirma: GPS-Teamstyring & Servicebevis | GeoTapp',
     description:
-      'Styr rengøringsteams, vagtplaner og fremmøde med GPS i realtid. Automatisk servicebevis, nul kundetvister. GDPR-kompatibel rengørings-app.',
+      'Styr rengøringsteams, vagtplaner og fremmøde med GPS-stemplinger. Automatisk servicebevis, færre kundetvister. App bygget til at holde sig inden for GDPR.',
   },
 
   hero: {
     badge: 'App til rengøringsfirmaer og multiservice',
     h1_line1: 'Dit rengøringsfirma,',
-    h1_line2: 'styret i realtid.',
+    h1_line2: 'styret ved hver stempling.',
     subtitle:
-      'GPS-stempling, automatisk servicebevis og vagtstyring i én app. Ingen regneark, ingen tvister. Kunden klager? Send rapporten, og diskussionen er slut.',
+      'GPS-stempling, automatisk servicebevis og vagtstyring i én app. Ingen regneark, færre tvister. Kunden klager? Send rapporten, og diskussionen afklares med det samme.',
     cta_primary: 'Prøv det på en rigtig kontrakt',
     cta_note: '14 dage, op til 50 medarbejdere i marken, uden kreditkort.',
   },
@@ -22,15 +22,15 @@ const content: SettoreContent = {
     items: [
       {
         title: 'Kunder bestrider de arbejdede timer?',
-        desc: 'Hver stempling er GPS-verificeret og tidsstemplet. Send rapporten, og diskussionen slutter på tredive sekunder.',
+        desc: 'Hver stempling er GPS-verificeret og tidsstemplet. Send rapporten, og diskussionen afklares på tredive sekunder.',
       },
       {
         title: 'Papirtimesedler er upålidelige?',
-        desc: 'Automatisk registrering fra smartphonen, ingen manuelle indtastninger. Dataene er hvad de er, og kan ikke ændres.',
+        desc: 'Automatisk registrering fra smartphonen, ingen manuelle indtastninger. Dataene forsegles automatisk, og enhver ændring forbliver synlig.',
       },
       {
         title: 'Svært at koordinere flere teams?',
-        desc: 'Se hvor alle er i realtid, på alle lokationer, fra ét dashboard. Ingen opkald.',
+        desc: 'Se, så snart der stemples, hvor alle er, på alle lokationer, fra ét dashboard. Ingen opkald.',
       },
     ],
   },
@@ -46,7 +46,7 @@ const content: SettoreContent = {
     dopo: [
       'Kunden ringer og siger, at badeværelset ikke er gjort rent.',
       'Du åbner opgaverapporten: foto af det rene badeværelse, tidspunkt, GPS.',
-      'Du sender den. Diskussionen slutter på tredive sekunder.',
+      'Du sender den. Diskussionen afklares på tredive sekunder.',
       'Kontrakten er sikker. Medarbejderen er beskyttet.',
     ],
   },
@@ -57,10 +57,10 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'Medarbejderen stempler med GPS',
-        desc: 'Åbner og lukker vagten fra sin smartphone. GeoTapp registrerer ægte GPS-koordinater, fotos og tidsstempel, fuldautomatisk, manipulationssikret.',
+        desc: 'Åbner og lukker vagten fra sin smartphone. GeoTapp registrerer ægte GPS-koordinater, fotos og tidsstempel, fuldautomatisk; enhver ændring forbliver synlig.',
       },
       {
-        title: 'Lederen ser alt i realtid',
+        title: 'Lederen ser det, så snart der stemples',
         desc: 'Ét dashboard for alle lokationer. Vid præcis hvem der er på stedet, hvor og siden hvornår, uden at jage nogen.',
       },
       {
@@ -87,7 +87,7 @@ const content: SettoreContent = {
       {
         label: 'Ved tvister',
         competitor: 'Data ikke forsvarlige',
-        geotapp: 'Forseglet rapport, manipulationssikret',
+        geotapp: 'Forseglet rapport, enhver ændring synlig',
       },
       {
         label: 'Fotodokumentation',
@@ -97,7 +97,7 @@ const content: SettoreContent = {
       {
         label: 'GDPR-overholdelse',
         competitor: 'Ofte at kontrollere',
-        geotapp: 'Kompatibel by design, formularer inkluderet',
+        geotapp: 'Bygget til at holde sig inden for GDPR, formularer inkluderet',
       },
     ],
   },
@@ -111,7 +111,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Reel kontrol over alle lokationer',
-        desc: 'Se i realtid hvem der er aktiv hvor, på alle bygninger samtidig. Ingen opkald, ingen e-mails.',
+        desc: 'Se, så snart der stemples, hvem der er aktiv hvor, på alle bygninger samtidig. Ingen opkald, ingen e-mails.',
       },
       {
         title: 'Forsvarlige rapporter overalt',
@@ -134,7 +134,7 @@ const content: SettoreContent = {
 
   testimonial: {
     quote:
-      'Siden vi begyndte at bruge GeoTapp, løses kundetvister på et minut. Vi sender rapporten med fotos og GPS, og diskussionen stopper der. Vi har ikke mistet en eneste kontrakt på et år.',
+      'Siden vi begyndte at bruge GeoTapp, løses kundetvister på et minut. Vi sender rapporten med fotos og GPS, og diskussionen afklares med det samme. Vi mister sjældent en kontrakt nu.',
     author: 'Susanne M.',
     role: 'Ejer, erhvervsrengøringsfirma - Danmark',
   },
@@ -153,11 +153,11 @@ const content: SettoreContent = {
       },
       {
         q: 'Er GeoTapp GDPR-kompatibel til GPS-registrering af medarbejdere?',
-        a: 'Ja. GeoTapp sporer kun placering i aktiv arbejdstid, inkluderer skabeloner til medarbejderinformation og indsamler ikke unødvendige data.',
+        a: 'Ja, GeoTapp er bygget til at holde sig inden for GDPR: det sporer kun placering i aktiv arbejdstid, inkluderer skabeloner til medarbejderinformation og indsamler ikke unødvendige data.',
       },
       {
         q: 'Hvordan styrer jeg teams på flere lokationer samtidig?',
-        a: 'Med GeoTapp Flow har du ét dashboard for alle lokationer. Se i realtid hvem der er aktiv hvor, tildel opgaver og modtag automatiske advarsler.',
+        a: 'Med GeoTapp Flow har du ét dashboard for alle lokationer. Se, så snart der stemples, hvem der er aktiv hvor, tildel opgaver og modtag automatiske advarsler.',
       },
       {
         q: 'Er papirtimesedler stadig nødvendige?',
@@ -173,7 +173,7 @@ const content: SettoreContent = {
   cta: {
     title: 'Dine medarbejdere gør godt arbejde. Sørg for, at kunden ser det.',
     subtitle:
-      'Hver opgave bliver til verificerbart servicebevis. Nul tvister, nul tabte kontrakter.',
+      'Hver opgave bliver til verificerbart servicebevis, med færre tvister og færre tabte kontrakter.',
     primary: 'Start gratis nu!',
     secondary: 'Se Priser',
   },
@@ -200,7 +200,7 @@ const content: SettoreContent = {
     {
       question: 'Er GeoTapp GDPR-kompatibel til GPS-registrering af medarbejdere?',
       answer:
-        'Ja. GeoTapp sporer kun placering i aktiv arbejdstid, inkluderer skabeloner til medarbejderinformation og indsamler ikke unødvendige data.',
+        'Ja, GeoTapp er bygget til at holde sig inden for GDPR: det sporer kun placering i aktiv arbejdstid, inkluderer skabeloner til medarbejderinformation og indsamler ikke unødvendige data.',
     },
   ],
 };

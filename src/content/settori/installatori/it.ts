@@ -36,10 +36,10 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'Il tecnico timbra sul campo',
-        desc: 'Con GeoTapp TimeTracker registra ingresso, uscita, foto e note direttamente dallo smartphone. GPS verificato, GDPR rispettato.',
+        desc: 'Con GeoTapp TimeTracker registra ingresso, uscita, foto e note direttamente dallo smartphone. GPS verificato, pensato per il GDPR.',
       },
       {
-        title: 'L\'ufficio vede tutto in tempo reale',
+        title: 'L\'ufficio vede tutto appena arriva',
         desc: 'Flow riceve i dati istantaneamente. Il responsabile vede commessa, avanzamento, tecnico assegnato e prove fotografiche senza chiamare.',
       },
       {
@@ -75,7 +75,7 @@ const content: SettoreContent = {
       {
         label: 'Conformità GDPR',
         competitor: 'Spesso da verificare',
-        geotapp: 'Conforme per design, modulistica inclusa',
+        geotapp: 'Costruito per stare nei paletti del GDPR, modulistica inclusa',
       },
     ],
   },
@@ -185,12 +185,12 @@ const content: SettoreContent = {
       answer: 'Sì. GeoTapp è l\'app per installatori e termoidraulici pensata per chi lavora su cantieri e abitazioni private. Con il software per gestione rapportini integrato, i tecnici registrano interventi, foto e ore direttamente dallo smartphone, senza tornare in ufficio.',
     },
     {
-      question: 'Come certifico un intervento di manutenzione o installazione?',
+      question: 'Come documento un intervento di manutenzione o installazione?',
       answer: 'Al termine di ogni intervento, il tecnico registra su GeoTapp: orario di inizio e fine con GPS verificato, foto del lavoro eseguito e note tecniche. Il sistema produce un report sigillato che il cliente può verificare autonomamente.',
     },
     {
       question: 'Posso usare GeoTapp per gestire più squadre di installatori su cantieri diversi?',
-      answer: 'Sì. GeoTapp Flow permette al titolare di coordinare più squadre in tempo reale, assegnare commesse, seguire lo stato degli interventi e raccogliere prove fotografiche da tutti i cantieri attivi.',
+      answer: 'Sì. GeoTapp Flow permette al titolare di coordinare più squadre, assegnare commesse, seguire lo stato degli interventi e raccogliere prove fotografiche da tutti i cantieri attivi, appena arrivano.',
     },
     {
       question: 'I report sono accettati in caso di contestazione con il cliente?',
@@ -198,7 +198,7 @@ const content: SettoreContent = {
     },
     {
       question: 'È conforme al GDPR per la geolocalizzazione dei tecnici?',
-      answer: 'Sì. GeoTapp gestisce la geolocalizzazione dei dipendenti in modo conforme al GDPR e alle linee guida del Garante Privacy italiano. Fornisce la modulistica per l\'informativa ai dipendenti.',
+      answer: 'GeoTapp gestisce la geolocalizzazione dei dipendenti in modo costruito per stare dentro i paletti del GDPR e le linee guida del Garante Privacy italiano. Fornisce la modulistica per l\'informativa ai dipendenti.',
     },
   ],
 };

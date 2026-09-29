@@ -3,12 +3,12 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'App para Fontaneros y Técnicos HVAC | GeoTapp - GPS',
-    description: 'GeoTapp es la app para fontaneros y técnicos de calefacción: informes GPS verificados, fotos de instalaciones y registros inviolables. Cierra litigios con pruebas reales. Prueba gratis.',
+    description: 'App GPS para fontaneros y técnicos de calefacción: informes verificados, fotos y registros sellados. Cierra litigios con pruebas reales. Prueba gratis.',
   },
   hero: {
     badge: 'App para Fontaneros, Técnicos HVAC y Calefactores',
     h1_line1: 'App para fontaneros y técnicos HVAC:',
-    h1_line2: 'informes GPS, pruebas fotográficas y cero disputas.',
+    h1_line2: 'informes GPS, pruebas fotográficas y menos disputas.',
     subtitle: 'GeoTapp registra cada intervención de fontanería y calefacción con GPS, fotos y marcas de tiempo verificables. ¿El cliente disputa el trabajo? Muestra el informe, sin discusión.',
     cta_primary: 'Empezar gratis',
     cta_note: 'Sin compromiso. Respuesta en 12 horas laborables.',
@@ -39,12 +39,12 @@ const content: SettoreContent = {
         desc: 'Ficha con GPS, fotografía el sistema antes y después, añade notas técnicas desde el móvil.',
       },
       {
-        title: 'La oficina ve todo en tiempo real',
+        title: 'La oficina lo sabe en cuanto se ficha',
         desc: 'GeoTapp Flow recibe los datos al instante. Asignación, avance y pruebas fotográficas sin llamadas.',
       },
       {
         title: 'El informe es tu prueba',
-        desc: 'Informe sellado con GPS, fotos, materiales usados y notas. Inviolable. El cliente puede verificarlo.',
+        desc: 'Informe sellado con GPS, fotos, materiales usados y notas. Cualquier cambio posterior queda visible. El cliente puede verificarlo.',
       },
     ],
   },
@@ -57,7 +57,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Fotos selladas antes y después',
-        desc: 'Imágenes vinculadas a GPS y marca de tiempo, inviolables.',
+        desc: 'Imágenes vinculadas a GPS y marca de tiempo, con cualquier cambio posterior visible.',
       },
       {
         title: 'Informes automáticos',
@@ -96,7 +96,7 @@ const content: SettoreContent = {
       },
       {
         q: '¿GeoTapp cumple con el RGPD para geolocalización?',
-        a: 'Sí. Gestión conforme al RGPD con formularios de información para trabajadores incluidos.',
+        a: 'Sí. Gestión diseñada para encajar en el RGPD y la LOPDGDD, con modelo de información para los trabajadores incluido.',
       },
     ],
   },

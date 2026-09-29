@@ -8,8 +8,8 @@ const content: SettoreContent = {
   hero: {
     badge: 'App voor Elektriciens en Elektrotechnische Installateurs',
     h1_line1: 'App voor elektriciens:',
-    h1_line2: 'GPS werkbonnen, fotobewijs en geen geschillen.',
-    subtitle: 'GeoTapp legt elke elektrische klus vast met GPS, foto\'s en verifieerbare tijdstempels. Klant betwist de klus? Toon het rapport, geen discussie nodig. Uw monteurs zijn beschermd, uw facturen ook.',
+    h1_line2: 'GPS werkbonnen, fotobewijs en minder geschillen.',
+    subtitle: 'GeoTapp legt elke elektrische klus vast met GPS, foto\'s en verifieerbare tijdstempels. Klant betwist de klus? Toon het rapport, minder discussie nodig. Uw monteurs zijn beschermd, uw facturen ook.',
     cta_primary: 'Gratis starten',
     cta_note: 'Geen verplichtingen. Reactie binnen 12 werkuren.',
   },
@@ -39,12 +39,12 @@ const content: SettoreContent = {
         desc: 'Met GeoTapp TimeTracker klokt hij in en uit met GPS, fotografeert de installatie en voegt technische notities toe vanaf zijn smartphone.',
       },
       {
-        title: 'Kantoor ziet alles in real time',
+        title: 'Kantoor ziet elke klokregistratie meteen',
         desc: 'GeoTapp Flow ontvangt de gegevens onmiddellijk. De leidinggevende ziet opdracht, toegewezen monteur, voortgang en fotobewijs zonder te bellen.',
       },
       {
         title: 'Het werkrapport is uw bewijs',
-        desc: 'Aan het einde van de klus genereert het systeem een verzegeld rapport: GPS-tijdstempel, installatiefotos, technische notities. Manipulatiebestendig. De klant kan het onafhankelijk verifiëren.',
+        desc: 'Aan het einde van de klus genereert het systeem een verzegeld rapport: GPS-tijdstempel, installatiefotos, technische notities. Elke wijziging blijft zichtbaar. De klant kan het onafhankelijk verifiëren.',
       },
     ],
   },
@@ -57,7 +57,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Verzegelde installatiefotos',
-        desc: 'De monteur fotografeert vanuit de app aan het einde van de klus. Elk beeld is gekoppeld aan GPS en tijdstempel, na generatie manipulatiebestendig.',
+        desc: 'De monteur fotografeert vanuit de app aan het einde van de klus. Elk beeld is gekoppeld aan GPS en tijdstempel; na generatie blijft elke wijziging zichtbaar.',
       },
       {
         title: 'Automatische digitale werkrapporten',
@@ -92,7 +92,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Kan ik GeoTapp gebruiken om elektrische installaties te documenteren?',
-        a: 'Ja. De monteur fotografeert vanuit de app tijdens of aan het einde van de klus. Elk beeld is gekoppeld aan GPS, tijdstempel en opdracht, opgenomen in het manipulatiebestendige rapport.',
+        a: 'Ja. De monteur fotografeert vanuit de app tijdens of aan het einde van de klus. Elk beeld is gekoppeld aan GPS, tijdstempel en opdracht, opgenomen in het verzegelde rapport waarin elke wijziging zichtbaar blijft.',
       },
       {
         q: 'Helpt GeoTapp bij het oplossen van klantgeschillen?',

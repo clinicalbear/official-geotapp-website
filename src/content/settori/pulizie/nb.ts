@@ -9,7 +9,7 @@ const content: SettoreContent = {
     badge: 'Programvare for Renholdsbedrifter, Facility Management og Serviceentreprenører',
     h1_line1: 'Programvare for renholdsbedrifter:',
     h1_line2: 'vakter, fotodokumentasjon og verifiserte timer, på hvert bygg',
-    subtitle: 'GeoTapp kobler Flow + TimeTracker for team spredt over flere bygg og etasjer. Dine renholdere stempler inn med GPS-verifisert smarttelefon; kontoret ser hvem som rengjorde hva, hvor og når, med fotodokumentasjon vedlagt. Data klare til enhver tvist, full etterlevelse av NHO Service-overenskomsten.',
+    subtitle: 'GeoTapp kobler Flow + TimeTracker for team spredt over flere bygg og etasjer. Dine renholdere stempler inn med GPS-verifisert smarttelefon; kontoret ser hvem som rengjorde hva, hvor og når, med fotodokumentasjon vedlagt. Data klare ved tvist, i tråd med NHO Service-overenskomsten.',
     cta_primary: 'Prøv det på et ekte oppdrag',
     cta_note: '14 dager, opptil 50 medarbeidere i felt, uten kredittkort.',
   },
@@ -36,10 +36,10 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'Renholderen stempler inn på stedet',
-        desc: 'Med GeoTapp TimeTracker registrerer de start, slutt, bilder av arealene og notater direkte fra smarttelefonen. GPS-verifisert, GDPR-i­varetatt, overenskomst-egnet.',
+        desc: 'Med GeoTapp TimeTracker registrerer de start, slutt, bilder av arealene og notater direkte fra smarttelefonen. GPS-verifisert, bygget for å holde seg innenfor GDPR, egnet for overenskomsten.',
       },
       {
-        title: 'Kontoret ser alt i sanntid',
+        title: 'Kontoret ser hver stempling med en gang',
         desc: 'Flow mottar data øyeblikkelig. Driftslederen ser hvilket bygg som er betjent, av hvem, på hvilket tidspunkt og med hvilken fotodokumentasjon, uten et eneste anrop.',
       },
       {
@@ -80,7 +80,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Hvordan administrerer jeg team spredt over flere bygg samtidig?',
-        a: 'Flow viser sanntidsstatus og plassering for hver renholdsarbeider per bygg. Du kan tildele vakter, sjekke dekning og motta automatiske varsler ved fravær eller forsinkelser.',
+        a: 'Flow viser status og plassering for hver renholdsarbeider per bygg, oppdatert ved hver stempling. Du kan tildele vakter, sjekke dekning og motta automatiske varsler ved fravær eller forsinkelser.',
       },
       {
         q: 'Hjelper GeoTapp med etterlevelse av tariffavtalen for pauser og overtid?',
@@ -89,7 +89,7 @@ const content: SettoreContent = {
     ],
   },
   cta: {
-    title: 'Svar på enhver tvist med data. Begynn nå.',
+    title: 'Svar på tvister med data. Begynn nå.',
     subtitle: 'GeoTapp Flow og TimeTracker gir renholdsbedriften din den operative kontrollen og bevisene du virkelig trenger.',
     primary: 'Be om en demo',
     secondary: 'Se priser',

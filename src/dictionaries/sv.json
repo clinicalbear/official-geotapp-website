@@ -124,12 +124,12 @@
     "us_badge": "🇺🇸 Serving US teams, chat support 9am-6pm ET. USD invoicing available on request.",
     "hero_badge": "Arbetet hände. Gör det nu bevisbart.",
     "hero_title": "Om du inte kan bevisa det, säger kunden att det aldrig hände.",
-    "hero_subtitle": "GeoTapp förvandlar varje fältuppdrag till objektiva bevis: förseglade rapporter med verkliga GPS-data, tidsstämplade fotobevis och dokumentation som vem som helst kan verifiera oberoende, utan att lita på, utan tvister.",
+    "hero_subtitle": "GeoTapp förvandlar varje fältuppdrag till objektiva bevis: förseglade rapporter med verkliga GPS-data, tidsstämplade fotobevis och dokumentation som vem som helst kan verifiera oberoende, utan att behöva lita på ditt ord, med färre tvister.",
     "hero_cta_primary": "Starta gratis provperiod",
     "hero_cta_secondary": "Utforska sektorer",
     "hero_cta_report": "Se en förseglad rapport",
     "trust_gdpr": "Ingen löpande spårning",
-    "trust_gdpr_desc": "Tidsstämplar endast vid in- och utcheckning",
+    "trust_gdpr_desc": "Position registreras bara när medarbetaren stämplar: in, paus, ut, eller tar en bevisfoto",
     "trust_gps": "GPS-bevis",
     "trust_gps_desc": "Varje uppdrag förseglat med plats och tidsstämpel",
     "trust_offline": "Offlinekontroll",
@@ -250,11 +250,11 @@
         },
         {
           "title": "Privacy by design",
-          "desc": "Platsen registreras <strong>endast</strong> vid instämpling och utstämpling. Ingen kontinuerlig spårning."
+          "desc": "Platsen registreras <strong>endast</strong> vid instämpling, paus och utstämpling. Ingen kontinuerlig spårning."
         },
         {
-          "title": "Operationell kontroll i realtid",
-          "desc": "Fältdata anländer till Flow omedelbart. Kontoret har live synlighet utan att ringa någon."
+          "title": "Operationell kontroll, uppdaterad direkt",
+          "desc": "Fältdata anländer till Flow omedelbart. Kontoret ser varje uppdatering utan att ringa någon."
         },
         {
           "title": "Försvarbart bevis över tid",
@@ -284,17 +284,17 @@
       },
       "pulizie": {
         "name": "Städning",
-        "desc": "Städföretag, Facility, Multiservice. Varje omgång dokumenterad och verifierbar av uppdragsgivaren, noll tvister.",
+        "desc": "Städföretag, Facility, Multiservice. Varje omgång dokumenterad och verifierbar av uppdragsgivaren, färre tvister.",
         "cta": "Undvik tvister"
       },
       "elettricisti": {
         "name": "Elektriker",
-        "desc": "Elinstallationer, el-tavlor, kabeldragning. Varje jobb dokumenterat med GPS och foton, förseglade bevis för att stänga varje tvist.",
+        "desc": "Elinstallationer, el-tavlor, kabeldragning. Varje jobb dokumenterat med GPS och foton, förseglade bevis för att lösa tvister snabbt.",
         "cta": "Dokumentera varje jobb"
       },
       "idraulici": {
         "name": "Rörmokare",
-        "desc": "VVS, värme, pannor. GPS-arbetsrapporter med före-och-efter-foton, inga tvister om utfört arbete.",
+        "desc": "VVS, värme, pannor. GPS-arbetsrapporter med före-och-efter-foton, färre tvister om utfört arbete.",
         "cta": "Bevisa varje jobb"
       },
       "termoidraulici": {
@@ -307,8 +307,8 @@
         "cta": "Försvara dina avstämningar"
       },
       "manutenzione": {
-        "desc": "Anläggningar, Hissar, Facility. Varje utryckning och varje besök med GPS och foton: arbetsrapporten ifrågasätts inte längre.",
-        "cta": "Avsluta tvisterna"
+        "desc": "Anläggningar, Hissar, Facility. Varje utryckning och varje besök med GPS och foton: arbetsrapporten blir svår att ifrågasätta.",
+        "cta": "Minska tvisterna"
       },
       "impianti": {
         "desc": "Mekanik, El, Brandskydd. Provning och driftsättning förseglade med tid och position, bevis klart för beställaren.",
@@ -380,7 +380,7 @@
           {
             "name": "GeoTapp Flow Team",
             "tagline": "För små operativa team.",
-            "desc": "Koordinera och hantera ditt operativa team i realtid.",
+            "desc": "Koordinera och hantera ditt operativa team utan fördröjning.",
             "features": [
               "5 Flow-användare inkluderade",
               "Jobbhantering",
@@ -557,7 +557,7 @@
     "email_label": "Allmän E-post",
     "email_desc": "För information, offerter och support.",
     "hq_label": "Var vi arbetar",
-    "hq_city": "100% online, kunder i Italien och EU",
+    "hq_city": "Helt online, kunder i Italien och EU",
     "hq_note": "Inget publikt kontor: support och onboarding på distans.",
     "privacy_note": "Genom att skicka detta formulär godkänner du vår Integritetspolicy.",
     "map_title": "Var vi finns - Trenzano (BS), Italien",
@@ -639,7 +639,7 @@
         "the-uplink": {
           "name": "Fält-till-kontor-länk",
           "short": "Data som samlats in av TimeTracker anländer till Flow i realtid. Fält och kontor arbetar med samma operativa data.",
-          "full": "### Kontor och fält, äntligen sammankopplade.\n\nKlyftan mellan fält och kontor skapar undvikbara fel, förseningar och tvister.\n**Fält-till-kontor-länk** sluter gapet.\n\n#### Synkronisering i realtid\n\nVarje instämpling, foto och anteckning registrerad på TimeTracker anländer omedelbart till Flow.\nChefen har en livevy utan att behöva ringa teknikern.\n\n#### Tillförlitlig historik\n\nAllt teknikern registrerar i fält arkiveras och kopplas till arbetsordern.\nIngen data förloras. Ingen information saknas när det är dags att rapportera."
+          "full": "### Kontor och fält, äntligen sammankopplade.\n\nKlyftan mellan fält och kontor skapar undvikbara fel, förseningar och tvister.\n**Fält-till-kontor-länk** sluter gapet.\n\n#### Synkronisering i realtid\n\nVarje instämpling, foto och anteckning registrerad på TimeTracker anländer omedelbart till Flow.\nChefen ser varje registrering direkt utan att behöva ringa teknikern.\n\n#### Tillförlitlig historik\n\nAllt teknikern registrerar i fält arkiveras och kopplas till arbetsordern.\nIngen data förloras. Ingen information saknas när det är dags att rapportera."
         },
         "the-oracle": {
           "name": "Operativ synlighet",
@@ -707,7 +707,7 @@
         "data-core": {
           "name": "Veckоrapporter",
           "short": "Detaljerade rapporter om arbetade timmar per arbetsorder och per operatör. Tillförlitliga data för intern kontroll och fakturering.",
-          "full": "### Data ljuger inte.\n\nFatta beslut baserade på fakta, inte intryck.\n**Veckоrapporter** extraherar värde ur den dagliga verksamheten.\n\n#### Detaljerade rapporter\n\nVarje vecka en fullständig bild: vem som arbetade, var, på vilken arbetsorder och hur länge.\n\n#### Full transparens\n\nAnställda och chefer konsulterar samma månadsrapport.\nRäknade timmar är identiska för alla.\nInga tvister vid månadsslut."
+          "full": "### Data ljuger inte.\n\nFatta beslut baserade på fakta, inte intryck.\n**Veckоrapporter** extraherar värde ur den dagliga verksamheten.\n\n#### Detaljerade rapporter\n\nVarje vecka en fullständig bild: vem som arbetade, var, på vilken arbetsorder och hur länge.\n\n#### Full transparens\n\nAnställda och chefer konsulterar samma månadsrapport.\nRäknade timmar är identiska för alla.\nFärre tvister vid månadsslut."
         },
         "identity-forge": {
           "name": "Varumärkesapp",
@@ -900,7 +900,7 @@
       "section_label": "Grundaren",
       "name": "Michele Angelo Petraroli",
       "role": "Founder & CEO",
-      "bio": "Michele Angelo Petraroli är grundare och CEO för GeoTapp, ett italienskt SaaS-företag för hantering av fältarbetare hos europeiska SMF. Från operativ erfarenhet såg han hur städföretag, installatörer och säkerhetsfirmor förlorar pengar när bevis på arbete saknas. Han grundade GeoTapp 2024 för att lösa problemet vid roten. Idag hjälper GeoTapp europeiska SMF med GDPR-kompatibel GPS-spårning, fotobevis och digitala signaturer som gör varje fältjobb verifierbart.",
+      "bio": "Michele Angelo Petraroli är grundare och CEO för GeoTapp, ett italienskt SaaS-företag för hantering av fältarbetare hos europeiska SMF. Från operativ erfarenhet såg han hur städföretag, installatörer och säkerhetsfirmor förlorar pengar när bevis på arbete saknas. Han grundade GeoTapp 2024 för att lösa problemet vid roten. Idag hjälper GeoTapp europeiska SMF med GPS-spårning byggd för att hålla sig inom GDPR, fotobevis och digitala signaturer som gör varje fältjobb verifierbart.",
       "expertise_label": "Expertområden",
       "expertise": [
         "Fältservicehantering",
@@ -1079,7 +1079,7 @@
   },
   "roi": {
     "meta_title": "GeoTapp ROI-kalkylator - Upptäck dina verkliga besparingar",
-    "meta_desc": "Beräkna på 2 minuter hur mycket du skulle spara med GeoTapp: mindre byråkrati, noll tvister, mer produktiva operatörer. Utan e-post och utan konto.",
+    "meta_desc": "Beräkna på 2 minuter hur mycket du skulle spara med GeoTapp: mindre byråkrati, färre tvister, mer produktiva operatörer. Utan e-post och utan konto.",
     "hero_title": "Beräkna din ROI med GeoTapp",
     "hero_subtitle": "Ange dina företagsdata och upptäck hur mycket du kan spara varje år.",
     "step1_title": "Ditt företag",
@@ -1180,7 +1180,7 @@
     "title": "Kraft under huven.",
     "subtitle": "Vi bygger inte leksaker. GeoTapp är en enterprise-plattform byggd för att skala. Här är de teknologier som gör magin möjlig.",
     "gps_title": "GPS vid stämpling, inte hela dagen",
-    "gps_desc": "Positionen registreras vid två tillfällen: när passet börjar och när det slutar. Däremellan registreras ingenting automatiskt. Dagens stämplingar visas var och en med GPS-koordinater, geofence-kontroll och skydd mot spoofing: kontoret vet vem som började var utan att ringa, och teamet vet exakt vad som registreras, och när.",
+    "gps_desc": "Positionen registreras bara när medarbetaren stämplar: vid in- och utstämpling, vid varje paus och vid varje bevisfoto. Däremellan registreras ingenting automatiskt. Dagens stämplingar visas var och en med GPS-koordinater, geofence-kontroll och skydd mot spoofing: kontoret vet vem som började var utan att ringa, och teamet vet exakt vad som registreras, och när.",
     "offline_title": "Offline-First Architecture",
     "offline_desc": "Uppkopplingen försvinner, arbetet inte. Vi har byggt en lokalt synkroniserad databas (CRDT) som lever inuti appen. Dina tekniker kan arbeta i en underjordisk bunker; så fort de ser en bit himmel synkroniseras data tyst med molnet.",
     "encryption_title": "Military-Grade Encryption",

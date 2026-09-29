@@ -53,7 +53,7 @@
       },
       "generatore": {
         "title": "GPS-Hinweis-Generator",
-        "desc": "Erstellen Sie Ihre Muster-Datenschutzerklärung für GPS mit Ihrem Logo, DSGVO-konform. Kostenlos, in Ihrem Browser."
+        "desc": "Erstellen Sie Ihre Muster-Datenschutzerklärung für GPS mit Ihrem Logo, ausgelegt auf die DSGVO. Kostenlos, in Ihrem Browser."
       },
       "conservazione": {
         "title": "Aufbewahrungsrichtlinie für Daten",
@@ -210,7 +210,7 @@
       "title": "Außendienst aus einer Zentrale koordinieren.",
       "subtitle": "Flow ist das System, das das Büro nutzt, um Aufträge zu verwalten, Tätigkeiten zuzuweisen, Fortschritte zu überwachen und strukturierte Arbeitsberichte zu erstellen. <strong class=\"text-slate-900\">Weniger interne Reibung, mehr echte Kontrolle.</strong><br/><br/><em>Ihr Unternehmen ist ein lebendiger Organismus. Jeder Auftrag, jede Aufgabe, jeder Mitarbeiter ist ein Herzschlag. GeoTapp Flow hält sie alle synchron.</em>",
       "features": {
-        "crm": "<strong>Auftragsverwaltung:</strong> Einsätze erstellen, Techniker zuweisen und Fortschritte in Echtzeit überwachen.",
+        "crm": "<strong>Auftragsverwaltung:</strong> Einsätze erstellen, Techniker zuweisen und den Fortschritt laufend im Blick behalten.",
         "pipeline": "<strong>Strukturierte Berichte:</strong> Jeder abgeschlossene Auftrag erzeugt rückverfolgbare Dokumentation für den Kunden."
       },
       "link": "GeoTapp Flow entdecken"
@@ -253,8 +253,8 @@
           "desc": "Der Standort wird <strong>nur</strong> beim Ein- und Ausstempeln erfasst. Kein kontinuierliches Tracking."
         },
         {
-          "title": "Echtzeit-Betriebskontrolle",
-          "desc": "Felddaten kommen sofort in Flow an. Das Büro hat Live-Transparenz ohne jemanden anzurufen."
+          "title": "Sofortige Betriebstransparenz",
+          "desc": "Felddaten kommen sofort in Flow an. Das Büro hat sofortige Transparenz, ohne jemanden anzurufen."
         },
         {
           "title": "Verteidigbarer Nachweis über Zeit",
@@ -284,7 +284,7 @@
       },
       "pulizie": {
         "name": "Reinigung",
-        "desc": "Reinigungsunternehmen, Facility, Multiservice. Jeder Durchgang dokumentiert und vom Auftraggeber prüfbar, null Beschwerden.",
+        "desc": "Reinigungsunternehmen, Facility, Multiservice. Jeder Durchgang dokumentiert und vom Auftraggeber prüfbar, weniger Beschwerden.",
         "cta": "Beschwerden vermeiden"
       },
       "elettricisti": {
@@ -380,7 +380,7 @@
           {
             "name": "GeoTapp Flow Team",
             "tagline": "Für kleine operative Teams.",
-            "desc": "Koordinieren und verwalten Sie Ihr operatives Team in Echtzeit.",
+            "desc": "Koordinieren und verwalten Sie Ihr operatives Team auf einen Blick.",
             "features": [
               "5 Flow-Nutzer inklusive",
               "Auftragsverwaltung",
@@ -629,7 +629,7 @@
         "the-architect": {
           "name": "Arbeitsplanung",
           "short": "Arbeit in Phasen, Aufgaben und Fristen strukturieren. Projekte ohne Tabellen oder Messenger-Nachrichten unter Kontrolle halten.",
-          "full": "### Arbeit strukturieren. Fortschritt kontrollieren.\n\nKomplexe Aufträge erfordern Struktur.\n**Arbeitsplanung** schafft operative Ordnung.\n\n#### Phasen und Fristen\n\nKomplexe Einsätze in operative Phasen mit klaren Fristen strukturieren.\nVerantwortlichkeiten jedem Teammitglied zuweisen.\n\n#### Fortschrittsüberwachung\n\nFortschritt in Echtzeit visualisieren.\nImmer wissen, was erledigt wurde und was noch offen ist.\nHandeln, bevor eine Verzögerung zum Kundenproblem wird."
+          "full": "### Arbeit strukturieren. Fortschritt kontrollieren.\n\nKomplexe Aufträge erfordern Struktur.\n**Arbeitsplanung** schafft operative Ordnung.\n\n#### Phasen und Fristen\n\nKomplexe Einsätze in operative Phasen mit klaren Fristen strukturieren.\nVerantwortlichkeiten jedem Teammitglied zuweisen.\n\n#### Fortschrittsübersicht\n\nFortschritt auf einen Blick sehen.\nImmer wissen, was erledigt wurde und was noch offen ist.\nHandeln, bevor eine Verzögerung zum Kundenproblem wird."
         },
         "the-auditor": {
           "name": "Einsatzdokumentation",
@@ -639,12 +639,12 @@
         "the-uplink": {
           "name": "Außendienst-Büro-Verbindung",
           "short": "Von TimeTracker erfasste Daten gelangen in Echtzeit in Flow. Außendienst und Büro arbeiten mit denselben operativen Daten.",
-          "full": "### Büro und Außendienst, endlich verbunden.\n\nDie Trennung zwischen Außendienst und Büro erzeugt vermeidbare Fehler, Verzögerungen und Streitigkeiten.\n**Außendienst-Büro-Verbindung** schließt die Lücke.\n\n#### Echtzeitsynchronisation\n\nJedes Ein-/Ausstempeln, jedes Foto und jede Notiz in TimeTracker gelangt sofort in Flow.\nDer Manager hat eine Live-Ansicht, ohne den Techniker anrufen zu müssen.\n\n#### Zuverlässige Historie\n\nAlles, was der Techniker im Außendienst erfasst, wird archiviert und mit dem Auftrag verknüpft.\nKeine Daten gehen verloren. Keine Information fehlt, wenn es Zeit ist, Bericht zu erstatten."
+          "full": "### Büro und Außendienst, endlich verbunden.\n\nDie Trennung zwischen Außendienst und Büro erzeugt vermeidbare Fehler, Verzögerungen und Streitigkeiten.\n**Außendienst-Büro-Verbindung** schließt die Lücke.\n\n#### Echtzeitsynchronisation\n\nJedes Ein-/Ausstempeln, jedes Foto und jede Notiz in TimeTracker gelangt sofort in Flow.\nDer Manager sieht es sofort, ohne den Techniker anrufen zu müssen.\n\n#### Zuverlässige Historie\n\nAlles, was der Techniker im Außendienst erfasst, wird archiviert und mit dem Auftrag verknüpft.\nKeine Daten gehen verloren. Keine Information fehlt, wenn es Zeit ist, Bericht zu erstatten."
         },
         "the-oracle": {
           "name": "Operative Sichtbarkeit",
-          "short": "Echtzeit-Betriebsdashboard. Immer wissen, wie viele Einsätze heute offen, in Bearbeitung oder abgeschlossen sind.",
-          "full": "### Operative Daten, keine Annahmen.\n\nEntscheidungen ohne verlässliche Daten zu treffen ist gefährlich.\n**Operative Sichtbarkeit** wandelt Außendienstdaten in konkrete Informationen um.\n\n#### Betriebsdashboard\n\nIn Echtzeit sehen:\n- Offene und laufende Einsätze\n- Aktive Techniker\n- Heute und diese Woche abgeschlossene Einsätze\n\n#### Periodische Berichte\n\nAutomatisierte Aktivitätszusammenfassungen erhalten.\nZeiträume vergleichen, Engpässe erkennen und Abläufe optimieren."
+          "short": "Betriebsdashboard ohne Verzögerung. Immer wissen, wie viele Einsätze heute offen, in Bearbeitung oder abgeschlossen sind.",
+          "full": "### Operative Daten, keine Annahmen.\n\nEntscheidungen ohne verlässliche Daten zu treffen ist gefährlich.\n**Operative Sichtbarkeit** wandelt Außendienstdaten in konkrete Informationen um.\n\n#### Betriebsdashboard\n\nAuf einen Blick sehen:\n- Offene und laufende Einsätze\n- Aktive Techniker\n- Heute und diese Woche abgeschlossene Einsätze\n\n#### Periodische Berichte\n\nAutomatisierte Aktivitätszusammenfassungen erhalten.\nZeiträume vergleichen, Engpässe erkennen und Abläufe optimieren."
         }
       }
     },
@@ -677,7 +677,7 @@
         "event-horizon": {
           "name": "Schichtplanung",
           "short": "Schichten und Personalverfügbarkeit verwalten. Wochen- und Monatsansichten für Koordination ohne Verwirrung oder Überschneidungen.",
-          "full": "### Keine Schichtkonflikte.\n\nMobiles Personal zu organisieren erfordert Klarheit.\n**Schichtplanung** gibt dem Manager eine präzise, aktuelle Übersicht.\n\n#### Kalenderansicht\n\nSehen, wer wann arbeitet.\nFehlzeiten, Urlaub und Überschneidungen erkennen, bevor sie zu operativen Problemen werden.\n\n#### Echtzeitverfügbarkeit\n\nMitarbeiter bestätigen Anwesenheit oder melden Abwesenheiten direkt aus der App.\nDer Manager sieht Lücken im Dienstplan, bevor neue Aufträge vergeben werden."
+          "full": "### Keine Schichtkonflikte.\n\nMobiles Personal zu organisieren erfordert Klarheit.\n**Schichtplanung** gibt dem Manager eine präzise, aktuelle Übersicht.\n\n#### Kalenderansicht\n\nSehen, wer wann arbeitet.\nFehlzeiten, Urlaub und Überschneidungen erkennen, bevor sie zu operativen Problemen werden.\n\n#### Aktuelle Verfügbarkeit\n\nMitarbeiter bestätigen Anwesenheit oder melden Abwesenheiten direkt aus der App.\nDer Manager sieht Lücken im Dienstplan, bevor neue Aufträge vergeben werden."
         },
         "unit-matrix": {
           "name": "Mitarbeiterregister",
@@ -939,7 +939,7 @@
       "Er suchte eine App, die ihm diese Plage abnimmt. Sie waren alle gleich, und jede verlangte genau das, was er ohnehin von Hand machte, Datum, Beginn, Ende, Summe. Gleicher Aufwand, hübschere Knöpfe.",
       "Also entwickelte er sie im Urlaub selbst. Eine Webseite und zwei Handgriffe, drücken beim Anfangen und drücken beim Aufhören, und der Rest landete geordnet in einem Archiv, fertig zum Verschicken am Monatsende.",
       "Dann kam der Gedanke, der alles veränderte, wenn es mir hilft, hilft es auch den Kollegen. Und wenn es dem Chef hilft, muss der Ablauf umgedreht werden, denn nicht er sollte den Leuten hinterherlaufen, sondern die Stunden sollten jeden Tag von allein bei ihm ankommen.",
-      "Von dort wuchs das Werkzeug in nur eine Richtung. Zuerst die gesetzeskonforme Ortung, ausgelesen beim Beginn und beim Ende der Schicht und nie durchgehend. Dann die automatische Bestätigung der geleisteten Arbeit, denn das eigentliche Problem war nie das Zählen der Stunden, sondern der Nachweis, wenn jemand sie anzweifelte.",
+      "Von dort wuchs das Werkzeug in nur eine Richtung. Zuerst die Ortung innerhalb der gesetzlichen Grenzen, ausgelesen beim Beginn und beim Ende der Schicht und nie durchgehend. Dann die automatische Bestätigung der geleisteten Arbeit, denn das eigentliche Problem war nie das Zählen der Stunden, sondern der Nachweis, wenn jemand sie anzweifelte.",
       "Ach, und es schreibt sich GeoTapp, mit zwei P. Wenn Ihnen irgendwo eines mit nur einem P begegnet, das sind nicht wir, aber wir nehmen es niemandem übel.",
       "Der Name hat im Übrigen alles schon drin. Die Ortung, ein Tap, eine App."
     ],
@@ -984,7 +984,7 @@
       "section_label": "Der Gründer",
       "name": "Michele Angelo Petraroli",
       "role": "Founder & CEO",
-      "bio": "Michele Angelo Petraroli ist Gründer und CEO von GeoTapp, einem italienischen SaaS-Unternehmen, das Außendienst-Management-Software für europäische KMU entwickelt. Aus operativer Erfahrung wusste er, wie Reinigungsunternehmen, Installateure und Sicherheitsdienste Geld verlieren, wenn der Arbeitsnachweis fehlt. 2024 gründete er GeoTapp, um das Problem an der Wurzel zu lösen. Heute unterstützt GeoTapp europäische KMU mit DSGVO-konformer GPS-Verfolgung, Foto-Nachweisen und digitalen Unterschriften, die jeden Einsatz überprüfbar machen.",
+      "bio": "Michele Angelo Petraroli ist Gründer und CEO von GeoTapp, einem italienischen SaaS-Unternehmen, das Außendienst-Management-Software für europäische KMU entwickelt. Aus operativer Erfahrung wusste er, wie Reinigungsunternehmen, Installateure und Sicherheitsdienste Geld verlieren, wenn der Arbeitsnachweis fehlt. 2024 gründete er GeoTapp, um das Problem an der Wurzel zu lösen. Heute unterstützt GeoTapp europäische KMU mit GPS-Erfassung innerhalb der Grenzen der DSGVO, Foto-Nachweisen und digitalen Unterschriften, die jeden Einsatz überprüfbar machen.",
       "expertise_label": "Kompetenzbereiche",
       "expertise": [
         "Field Service Management",
@@ -1079,7 +1079,7 @@
   },
   "roi": {
     "meta_title": "GeoTapp ROI-Rechner - Entdecken Sie Ihre echten Einsparungen",
-    "meta_desc": "Berechnen Sie in 2 Minuten, wie viel Sie mit GeoTapp sparen: weniger Verwaltung, null Streitigkeiten, produktivere Mitarbeiter. Ohne E-Mail und ohne Konto.",
+    "meta_desc": "Berechnen Sie in 2 Minuten, wie viel Sie mit GeoTapp sparen: weniger Verwaltung, weniger Streit, produktivere Mitarbeiter. Ohne E-Mail und ohne Konto.",
     "hero_title": "Berechnen Sie Ihren ROI mit GeoTapp",
     "hero_subtitle": "Geben Sie Ihre Unternehmensdaten ein und entdecken Sie, wie viel Sie jährlich sparen können.",
     "step1_title": "Ihr Unternehmen",
@@ -1246,7 +1246,7 @@
     "scaricaModello": "Vorlage herunterladen",
     "autoritaCompetente": "Zuständige Behörde",
     "disclaimer": "Dies ist eine informative Ressource, keine Rechtsberatung. Bevor Sie ein Überwachungssystem aktivieren, lassen Sie Ihre Situation von einer Fachkraft prüfen.",
-    "ctaTitolo": "Möchten Sie ein System, das bereits konform ist?",
+    "ctaTitolo": "Möchten Sie ein System, das dafür gebaut ist?",
     "ctaTesto": "GeoTapp erfasst den Standort nur bei der Zeiterfassung, nicht durchgehend, und erstellt die zu unterzeichnende Datenschutzerklärung. Testen Sie es kostenlos.",
     "ctaBottone": "GeoTapp kostenlos testen",
     "faq": {

@@ -3,13 +3,13 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'App para Obras de Construcción: Asistencia GPS y Gestión de Equipos | GeoTapp',
-    description: 'Gestiona asistencia, turnos y seguridad en obra con GPS en tiempo real. Fichajes sellados, informes automáticos. App conforme con RGPD para empresas constructoras.',
+    description: 'Gestiona asistencia, turnos y seguridad en obra con fichajes GPS sellados e informes automáticos. App diseñada para el RGPD, para empresas constructoras.',
   },
   hero: {
     badge: 'App para empresas constructoras y obras',
     h1_line1: 'Tu obra bajo control,',
-    h1_line2: 'en tiempo real.',
-    subtitle: 'Fichajes GPS sellados, gestión de equipos e informes automáticos. Cero papeleo, cero disputas. GeoTapp conecta Flow + TimeTracker para jefes de obra, subcontratistas y dirección de obra.',
+    h1_line2: 'sin perseguir a nadie por teléfono.',
+    subtitle: 'Fichajes GPS sellados, gestión de equipos e informes automáticos. Cero papeleo, menos disputas. GeoTapp conecta Flow + TimeTracker para jefes de obra, subcontratistas y dirección de obra.',
     cta_primary: 'Pruébalo en una obra real',
     cta_note: '14 días, hasta 50 operarios de campo, sin tarjeta de crédito.',
   },
@@ -22,7 +22,7 @@ const content: SettoreContent = {
       },
       {
         title: '¿Cómo gestionas a los subcontratistas?',
-        desc: 'Controla accesos y asistencia de todos los equipos, incluidos subcontratistas, desde un único panel en tiempo real.',
+        desc: 'Controla accesos y asistencia de todos los equipos, incluidos subcontratistas, desde un único panel que se actualiza en cuanto alguien ficha.',
       },
       {
         title: '¿Los informes de obra llevan horas?',
@@ -39,7 +39,7 @@ const content: SettoreContent = {
         desc: 'Inicia el turno desde el smartphone. GeoTapp registra coordenadas GPS reales, marca de tiempo y, si es necesario, fotos. Totalmente automático; cualquier modificación es detectable.',
       },
       {
-        title: 'El jefe de obra ve todo en tiempo real',
+        title: 'El jefe de obra lo sabe en cuanto se ficha',
         desc: 'Un solo panel para todos los equipos y todas las obras. Quién está presente, dónde y desde cuándo, sin perseguir a nadie por teléfono.',
       },
       {
@@ -75,7 +75,7 @@ const content: SettoreContent = {
       {
         label: 'Conformidad RGPD',
         competitor: 'A menudo dudosa',
-        geotapp: 'Conforme por diseño, formularios incluidos',
+        geotapp: 'Diseñado para el RGPD, con modelo de información incluido',
       },
     ],
   },
@@ -103,7 +103,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Panel multi-obra',
-        desc: 'Supervisa varias obras desde una sola pantalla. Ve en tiempo real quién está presente, dónde y desde cuándo, para cada obra activa.',
+        desc: 'Supervisa varias obras desde una sola pantalla. Ve quién está presente, dónde y desde cuándo, para cada obra activa, actualizado a cada fichaje.',
       },
       {
         title: 'Informes de avance automáticos',
@@ -118,8 +118,8 @@ const content: SettoreContent = {
         desc: 'Los operarios toman fotos desde la app. Cada imagen está vinculada a la obra con GPS y marca de tiempo, cualquier cambio es detectable tras la generación.',
       },
       {
-        title: 'Conformidad RGPD integrada',
-        desc: 'Geolocalización conforme por diseño con la normativa RGPD y directrices de protección de datos. Plantillas de aviso de privacidad para empleados incluidas.',
+        title: 'Diseño alineado con el RGPD',
+        desc: 'Geolocalización diseñada para encajar en el RGPD y en las directrices de protección de datos. Plantillas de aviso de privacidad para los trabajadores incluidas.',
       },
     ],
   },
@@ -138,7 +138,7 @@ const content: SettoreContent = {
       },
       {
         q: '¿Cómo gestionas a los subcontratistas en obra?',
-        a: 'GeoTapp controla accesos y asistencia de todos los equipos, incluidos subcontratistas. Cada operario ficha desde su smartphone y el jefe de obra ve todo en tiempo real desde un único panel.',
+        a: 'GeoTapp controla accesos y asistencia de todos los equipos, incluidos subcontratistas. Cada operario ficha desde su smartphone y el jefe de obra lo ve todo desde un único panel, actualizado en cuanto alguien ficha.',
       },
       {
         q: '¿Los informes de obra requieren horas de trabajo manual?',
@@ -165,7 +165,7 @@ const content: SettoreContent = {
     },
     {
       question: '¿Cómo gestionas a los subcontratistas en obra?',
-      answer: 'GeoTapp controla accesos y asistencia de todos los equipos, incluidos subcontratistas. Cada operario ficha desde su smartphone y el jefe de obra ve todo en tiempo real desde un único panel.',
+      answer: 'GeoTapp controla accesos y asistencia de todos los equipos, incluidos subcontratistas. Cada operario ficha desde su smartphone y el jefe de obra lo ve todo desde un único panel, actualizado en cuanto alguien ficha.',
     },
     {
       question: '¿Los informes de obra requieren horas de trabajo manual?',

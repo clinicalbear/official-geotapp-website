@@ -3,13 +3,13 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'App for Elektrikere | GeoTapp - GPS Arbeidsrapporter & Bevis',
-    description: 'App for elektrikere: GPS-verifiserte arbeidsrapporter, installasjonsbilder og manipuleringssikre registreringer. Lukk tvister med ekte bevis. Prøv gratis.',
+    description: 'App for elektrikere: GPS-verifiserte arbeidsrapporter, installasjonsbilder og forseglede registreringer. Færre tvister med ekte bevis. Prøv gratis.',
   },
   hero: {
     badge: 'App for Elektrikere og El-installatører',
     h1_line1: 'App for elektrikere:',
-    h1_line2: 'GPS-rapporter, fotobevis og null tvister.',
-    subtitle: 'GeoTapp registrerer hvert elektrisk arbeid med GPS, bilder og verifiserbare tidsstempler. Kunden bestrider arbeidet? Vis rapporten, ingen diskusjon. Dine teknikere er beskyttet, dine fakturaer også.',
+    h1_line2: 'GPS-rapporter, fotobevis og færre tvister.',
+    subtitle: 'GeoTapp registrerer hvert elektrisk arbeid med GPS, bilder og verifiserbare tidsstempler. Kunden bestrider arbeidet? Vis rapporten, og saken avklares raskt. Dine teknikere er beskyttet, dine fakturaer også.',
     cta_primary: 'Start gratis',
     cta_note: 'Uten forpliktelse. Svar innen 12 arbeidstimer.',
   },
@@ -22,7 +22,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Ingen dokumentasjon av installasjonen etter jobben',
-        desc: 'Teknikeren er ferdig, men det finnes ingen fotodokumentasjon eller teknisk notat. Å rekonstruere hva som ble gjort blir umulig.',
+        desc: 'Teknikeren er ferdig, men det finnes ingen fotodokumentasjon eller teknisk notat. Å rekonstruere hva som ble gjort blir svært vanskelig.',
       },
       {
         title: 'Kontoret vet ikke hvor teknikerne er',
@@ -39,12 +39,12 @@ const content: SettoreContent = {
         desc: 'Med GeoTapp TimeTracker stempler han inn og ut med GPS, fotograferer installasjonen og legger til tekniske notater fra smarttelefonen.',
       },
       {
-        title: 'Kontoret ser alt i sanntid',
+        title: 'Kontoret ser hver stempling med en gang',
         desc: 'GeoTapp Flow mottar data øyeblikkelig. Den ansvarlige ser oppdraget, tildelt tekniker, fremdrift og fotobevis uten å ringe.',
       },
       {
         title: 'Rapporten er ditt bevis',
-        desc: 'Ved avslutning genererer systemet en forseglet rapport: GPS-tidsstempel, installasjonsbilder, tekniske notater. Umanipulerbar. Kunden kan verifisere den selvstendig.',
+        desc: 'Ved avslutning genererer systemet en forseglet rapport: GPS-tidsstempel, installasjonsbilder, tekniske notater. Enhver endring i etterkant er synlig. Kunden kan verifisere den selvstendig.',
       },
     ],
   },
@@ -57,7 +57,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Forseglede installasjonsbilder',
-        desc: 'Teknikeren fotograferer fra appen. Hvert bilde er koblet til GPS og tidsstempel, umanipulerbart.',
+        desc: 'Teknikeren fotograferer fra appen. Hvert bilde er koblet til GPS og tidsstempel, forseglet etter generering.',
       },
       {
         title: 'Automatiske digitale arbeidsrapporter',
@@ -78,7 +78,7 @@ const content: SettoreContent = {
     ],
   },
   testimonial: {
-    quote: 'Med GeoTapp dokumenterer teknikerne mine installasjonen så snart de er ferdige. Ingen tvist overlever rapporten. Fakturaene betales.',
+    quote: 'Med GeoTapp dokumenterer teknikerne mine installasjonen så snart de er ferdige. Tvistene blir sjeldne når rapporten er der. Fakturaene betales.',
     author: 'Karl M.',
     role: 'Eier, el-installasjoner',
   },
@@ -92,11 +92,11 @@ const content: SettoreContent = {
       },
       {
         q: 'Hjelper GeoTapp med å løse tvister med kunder?',
-        a: 'Det er den primære bruken: GPS, fotobevis og forseglede rapporter løser enhver grunnløs tvist på minutter.',
+        a: 'Det er den primære bruken: GPS, fotobevis og forseglede rapporter bidrar til å avklare grunnløse tvister raskt.',
       },
       {
         q: 'Overholder GeoTapp GDPR for medarbeidergeolokasjon?',
-        a: 'Ja. GeoTapp håndterer geolokasjon i samsvar med GDPR og inkluderer informasjonsskjemaer til medarbeidere.',
+        a: 'GeoTapp er bygget for å holde seg innenfor GDPR for medarbeidergeolokasjon, og maler for informasjon til ansatte følger med.',
       },
     ],
   },

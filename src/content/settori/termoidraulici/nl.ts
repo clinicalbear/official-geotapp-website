@@ -8,8 +8,8 @@ const content: SettoreContent = {
   hero: {
     badge: 'App voor CV-monteurs en Installateurs Verwarmingsinstallaties',
     h1_line1: 'App voor CV-monteurs:',
-    h1_line2: 'GPS-rapporten, fotobewijs en nul geschillen.',
-    subtitle: 'GeoTapp registreert elke cv-ketel en verwarmingsklus met GPS, foto\'s en verifieerbare tijdstempels. Klant ontkent vervangen onderdelen? Laat het rapport zien, geen discussie nodig. Uw monteurs zijn beschermd, uw facturen ook.',
+    h1_line2: 'GPS-rapporten, fotobewijs en minder geschillen.',
+    subtitle: 'GeoTapp registreert elke cv-ketel en verwarmingsklus met GPS, foto\'s en verifieerbare tijdstempels. Klant ontkent vervangen onderdelen? Laat het rapport zien, minder discussie nodig. Uw monteurs zijn beschermd, uw facturen ook.',
     cta_primary: 'Gratis starten!',
     cta_note: 'Geen verplichting. Reactie binnen 12 werkuren.',
   },
@@ -39,7 +39,7 @@ const content: SettoreContent = {
         desc: 'Met GeoTapp TimeTracker clockt hij in en uit met GPS, fotografeert de ketel en installatie en voegt notities toe over vervangen onderdelen vanaf zijn smartphone.',
       },
       {
-        title: 'Kantoor ziet alles in realtime',
+        title: 'Kantoor ziet elke klokregistratie meteen',
         desc: 'GeoTapp Flow ontvangt de gegevens direct. De verantwoordelijke ziet opdracht, toegewezen monteur, voortgang en fotobewijs zonder te hoeven bellen.',
       },
       {
@@ -75,7 +75,7 @@ const content: SettoreContent = {
       {
         label: 'AVG-conformiteit',
         competitor: 'Vaak te controleren',
-        geotapp: 'Conform by design, formulieren inbegrepen',
+        geotapp: 'Gebouwd om binnen de AVG te blijven, formulieren inbegrepen',
       },
     ],
   },
@@ -139,7 +139,7 @@ const content: SettoreContent = {
     badge: 'Door iedereen verifieerbaar, zonder toegang tot uw account',
   },
   testimonial: {
-    quote: 'Met GeoTapp fotograferen mijn monteurs de installatie voor en na elke klus. Geschillen over onderdelen zijn verdwenen. Facturen worden betaald.',
+    quote: 'Met GeoTapp fotograferen mijn monteurs de installatie voor en na elke klus. Geschillen over onderdelen zijn sterk afgenomen. Facturen worden betaald.',
     author: 'Marco S.',
     role: 'Eigenaar, woon- en commerciële verwarmingsinstallaties',
   },
@@ -176,7 +176,7 @@ const content: SettoreContent = {
   schema_faq: [
     {
       question: 'Werkt GeoTapp als app voor CV-monteurs?',
-      answer: 'Ja. GeoTapp is de app voor cv-monteurs en installateurs van verwarmingsinstallaties die elke ketel- en verwarmingsklus registreert met GPS, foto\'s en verifieerbare tijdstempels. De monteur clockt in vanuit het veld, het kantoor ziet alles in realtime en de klant ontvangt een verzegeld rapport.',
+      answer: 'Ja. GeoTapp is de app voor cv-monteurs en installateurs van verwarmingsinstallaties die elke ketel- en verwarmingsklus registreert met GPS, foto\'s en verifieerbare tijdstempels. De monteur klokt in vanuit het veld, het kantoor ziet elke klokregistratie meteen en de klant ontvangt een verzegeld rapport.',
     },
     {
       question: 'Hoe verzegel ik een ketelklus met GeoTapp?',
@@ -184,7 +184,7 @@ const content: SettoreContent = {
     },
     {
       question: 'Beheert GeoTapp meerdere teams van cv-monteurs op verschillende klussen?',
-      answer: 'Ja. GeoTapp Flow laat de eigenaar meerdere teams coördineren, dringende klussen toewijzen, de klustatus volgen en fotobewijs van alle actieve locaties in realtime verzamelen.',
+      answer: 'Ja. GeoTapp Flow laat de eigenaar meerdere teams coördineren, dringende klussen toewijzen, de klustatus volgen en fotobewijs verzamelen zodra het binnenkomt vanaf elke actieve locatie.',
     },
     {
       question: 'Worden GeoTapp-rapporten geaccepteerd bij verwarmingsgeschillen?',

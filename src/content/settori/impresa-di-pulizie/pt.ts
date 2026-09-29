@@ -4,13 +4,13 @@ const content: SettoreContent = {
   meta: {
     title: 'App para Empresa de Limpeza: Gestão GPS de Equipas & Prova de Serviço | GeoTapp',
     description:
-      'Gerencie equipas de limpeza, turnos e presenças com GPS em tempo real. Provas automáticas de serviço, zero disputas com clientes. App conforme com RGPD.',
+      'Gerencie equipas de limpeza, turnos e presenças com registos GPS a cada picagem. Provas automáticas de serviço, menos disputas, app pensada para o RGPD.',
   },
 
   hero: {
     badge: 'App para empresas de limpeza e multiservicos',
     h1_line1: 'A sua empresa de limpeza,',
-    h1_line2: 'gerida em tempo real.',
+    h1_line2: 'gerida, registo após registo.',
     subtitle:
       'Registos GPS, provas de serviço automáticas e gestão de turnos numa só app. Sem folhas de cálculo, sem disputas. O cliente contesta? Envie o relatório e a discussão acaba.',
     cta_primary: 'Experimente num contrato real',
@@ -26,11 +26,11 @@ const content: SettoreContent = {
       },
       {
         title: 'As folhas de presença em papel são pouco fiáveis?',
-        desc: 'Registo automático a partir do smartphone, sem introduções manuais. O dado é o que é, e não se pode alterar.',
+        desc: 'Registo automático a partir do smartphone, sem introduções manuais. O dado é o que é: qualquer alteração é detetável.',
       },
       {
         title: 'Difícil coordenar várias equipas?',
-        desc: 'Veja onde estão todos em tempo real, em todas as sedes, a partir de um único painel. Sem telefonemas.',
+        desc: 'Veja onde estiveram, assim que picam o ponto, em todas as sedes, a partir de um único painel. Sem telefonemas.',
       },
     ],
   },
@@ -60,7 +60,7 @@ const content: SettoreContent = {
         desc: 'Abre e fecha o turno a partir do smartphone. GeoTapp regista coordenadas GPS reais, fotos e carimbo temporal, tudo automático e selado.',
       },
       {
-        title: 'O responsável vê tudo em tempo real',
+        title: 'O responsável vê tudo assim que chega',
         desc: 'Um painel para todas as sedes. Sabe exatamente quem está em cada local, onde e desde quando, sem andar atrás de ninguém.',
       },
       {
@@ -97,7 +97,7 @@ const content: SettoreContent = {
       {
         label: 'Conformidade RGPD',
         competitor: 'Frequentemente por verificar',
-        geotapp: 'Conforme por design, formulários incluídos',
+        geotapp: 'Pensado para ficar dentro do RGPD, formulários incluídos',
       },
     ],
   },
@@ -111,7 +111,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Controlo real em todas as sedes',
-        desc: 'Veja em tempo real quem está ativo onde, em todos os edifícios simultaneamente. Sem telefonemas, sem emails.',
+        desc: 'Veja quem está ativo onde, assim que pica o ponto, em todos os edifícios simultaneamente. Sem telefonemas, sem emails.',
       },
       {
         title: 'Relatórios defensáveis em qualquer âmbito',
@@ -157,7 +157,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Como gerir equipas em várias sedes ao mesmo tempo?',
-        a: 'Com GeoTapp Flow tem um painel único para todas as sedes. Veja em tempo real quem está ativo onde, atribua encomendas e receba alertas automáticos.',
+        a: 'Com GeoTapp Flow tem um painel único para todas as sedes. Veja quem está ativo onde assim que pica o ponto, atribua encomendas e receba alertas automáticos.',
       },
       {
         q: 'As folhas de presença em papel ainda são necessárias?',
@@ -173,7 +173,7 @@ const content: SettoreContent = {
   cta: {
     title: 'Os seus operadores trabalham bem. Faça com que o cliente veja.',
     subtitle:
-      'Cada intervenção torna-se prova de serviço verificável. Zero disputas, zero contratos perdidos.',
+      'Cada intervenção torna-se prova de serviço verificável. Menos disputas, menos contratos perdidos.',
     primary: 'Comece grátis agora!',
     secondary: 'Ver Preços',
   },

@@ -39,10 +39,10 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'Operative clocks in on site',
-        desc: 'With GeoTapp TimeTracker they log start, finish, photos of the area and notes directly from their smartphone. GPS-verified, GDPR-compliant, NMW-ready.',
+        desc: 'With GeoTapp TimeTracker they log start, finish, photos of the area and notes directly from their smartphone. GPS-verified, built to stay within GDPR, NMW-ready.',
       },
       {
-        title: 'Office sees everything in real time',
+        title: 'Office sees each update as it happens',
         desc: 'Flow receives data instantly. The manager sees which site has been serviced, by whom, at what time and with what photographic evidence, without making a single call.',
       },
       {
@@ -83,11 +83,11 @@ const content: SettoreContent = {
       },
       {
         q: 'How do I manage teams spread across multiple buildings at the same time?',
-        a: 'Flow shows the real-time status and location of every operative by building. You can assign shifts, check coverage and receive automatic alerts for absences or late arrivals.',
+        a: 'Flow shows each operative\'s clock-in status and location by building, updated as it happens. You can assign shifts, check coverage and receive automatic alerts for absences or late arrivals.',
       },
       {
         q: 'Does GeoTapp help with NMW compliance and break-time records?',
-        a: 'Yes. The system automatically logs break times, overtime and shift patterns. The monthly export is compatible with Sage and BrightHR for compliant payroll processing under NMW and Agency Workers Regulations.',
+        a: 'Yes. The system automatically logs break times, overtime and shift patterns. The monthly export is compatible with Sage and BrightHR, to support payroll processing under NMW and Agency Workers Regulations.',
       },
     ],
   },

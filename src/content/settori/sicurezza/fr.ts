@@ -39,7 +39,7 @@ const content: SettoreContent = {
         desc: 'GeoTapp TimeTracker enregistre l\'entrée, la sortie, la position GPS et des photos avec horodatages scellés. Chaque ronde est journalisée automatiquement depuis le smartphone de l\'agent.',
       },
       {
-        title: 'Le responsable voit tous les postes en temps réel',
+        title: 'Le responsable voit chaque poste couvert dès que l\'agent pointe',
         desc: 'Flow reçoit les données instantanément. Le chef de site vérifie la couverture complète des postes, les relèves et les écarts sans appeler le terrain.',
       },
       {
@@ -66,7 +66,7 @@ const content: SettoreContent = {
     ],
   },
   testimonial: {
-    quote: 'Depuis GeoTapp, les litiges sur la couverture des postes ont disparu. Les clients reçoivent un registre de présence horodaté GPS, il n\'y a plus rien à discuter.',
+    quote: 'Depuis GeoTapp, les litiges sur la couverture des postes ont beaucoup diminué. Les clients reçoivent un registre de présence horodaté GPS, avec les données pour trancher rapidement.',
     author: 'Laurent D.',
     role: 'Directeur des Opérations, société de sécurité privée',
   },
@@ -89,7 +89,7 @@ const content: SettoreContent = {
     ],
   },
   cta: {
-    title: 'Fini les litiges sur la couverture des postes.',
+    title: 'Moins de litiges sur la couverture des postes.',
     subtitle: 'GeoTapp Flow et TimeTracker donnent à votre société de sécurité les preuves vérifiables que clients et régulateurs exigent.',
     primary: 'Demander une Démo',
     secondary: 'Voir les Tarifs',

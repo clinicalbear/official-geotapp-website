@@ -3,13 +3,13 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'Construction Site App: GPS Attendance & Crew Management | GeoTapp',
-    description: 'Manage attendance, shifts and safety on construction sites with real-time GPS. Sealed clock-ins, automated reports. GDPR-compliant app for construction companies.',
+    description: 'Manage attendance, shifts and safety on construction sites with GPS clock-ins, sealed records and automated reports. Built to stay within GDPR.',
   },
   hero: {
     badge: 'App for construction companies and building sites',
     h1_line1: 'Your construction site under control,',
-    h1_line2: 'in real time.',
-    subtitle: 'GPS-sealed clock-ins, crew management and automated reports. Zero paperwork, zero disputes. GeoTapp connects Flow + TimeTracker for construction site managers, subcontractors and project directors.',
+    h1_line2: 'clock-in by clock-in.',
+    subtitle: 'GPS-sealed clock-ins, crew management and automated reports. Zero paperwork, fewer disputes. GeoTapp connects Flow + TimeTracker for construction site managers, subcontractors and project directors.',
     cta_primary: 'Try it on a real site',
     cta_note: '14 days, up to 50 field workers, no credit card.',
   },
@@ -22,7 +22,7 @@ const content: SettoreContent = {
       },
       {
         title: 'How do you manage subcontractors?',
-        desc: 'Track access and attendance for all crews, including subcontractors, from a single real-time dashboard.',
+        desc: 'Track access and attendance for all crews, including subcontractors, from a single dashboard updated as each crew clocks in.',
       },
       {
         title: 'Do site reports take hours?',
@@ -39,7 +39,7 @@ const content: SettoreContent = {
         desc: 'Opens the shift from their smartphone. GeoTapp records real GPS coordinates, timestamp and, if needed, photos. Fully automatic, tamper-evident.',
       },
       {
-        title: 'The site manager sees everything in real time',
+        title: 'The site manager sees every clock-in as it happens',
         desc: 'Single dashboard for all crews and all sites. Who is present, where and since when, without chasing anyone by phone.',
       },
       {
@@ -75,7 +75,7 @@ const content: SettoreContent = {
       {
         label: 'GDPR compliance',
         competitor: 'Often questionable',
-        geotapp: 'Compliant by design, forms included',
+        geotapp: 'Built to stay within GDPR, notice templates included',
       },
     ],
   },
@@ -103,7 +103,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Multi-site dashboard',
-        desc: 'Monitor multiple construction sites from a single screen. See in real time who is present, where and since when, for every active site.',
+        desc: 'Follow multiple construction sites from a single screen. See who\'s clocked in, where and since when, for every active site.',
       },
       {
         title: 'Automated progress reports',
@@ -119,7 +119,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Built-in GDPR compliance',
-        desc: 'Geolocation compliant by design with GDPR regulations and privacy guidelines. Employee privacy notice templates included.',
+        desc: 'Geolocation built to stay within GDPR and privacy guidelines. Employee privacy notice templates included.',
       },
     ],
   },
@@ -138,7 +138,7 @@ const content: SettoreContent = {
       },
       {
         q: 'How do you manage subcontractors on site?',
-        a: 'GeoTapp tracks access and attendance of all crews, including subcontractors. Each worker clocks in from their smartphone and the site manager sees everything in real time from a single dashboard.',
+        a: 'GeoTapp tracks access and attendance of all crews, including subcontractors. Each worker clocks in from their smartphone, and the site manager sees each clock-in as soon as it happens, from a single dashboard.',
       },
       {
         q: 'Do site reports require hours of manual work?',
@@ -165,7 +165,7 @@ const content: SettoreContent = {
     },
     {
       question: 'How do you manage subcontractors on site?',
-      answer: 'GeoTapp tracks access and attendance of all crews, including subcontractors. Each worker clocks in from their smartphone and the site manager sees everything in real time from a single dashboard.',
+      answer: 'GeoTapp tracks access and attendance of all crews, including subcontractors. Each worker clocks in from their smartphone, and the site manager sees each clock-in as soon as it happens, from a single dashboard.',
     },
     {
       question: 'Do site reports require hours of manual work?',

@@ -53,7 +53,7 @@
       },
       "generatore": {
         "title": "Générateur d'avis GPS",
-        "desc": "Créez votre modèle d'avis de confidentialité GPS avec votre logo, conforme au RGPD. Gratuit, dans votre navigateur."
+        "desc": "Créez votre modèle d'avis de confidentialité GPS avec votre logo, conçu pour respecter le RGPD. Gratuit, dans votre navigateur."
       },
       "conservazione": {
         "title": "Politique de conservation des données",
@@ -174,7 +174,7 @@
       "step_gps": "GPS vérifié",
       "step_photo": "Photo sur place",
       "step_sealed": "Scellé",
-      "caption": "Un pointage. GPS, photo et heure, scellés. Impossible à refaire, impossible à contester.",
+      "caption": "Un pointage. GPS, photo et heure, scellés. Toute modification reste visible.",
       "replay": "Revoir"
     },
     "roi_mini": {
@@ -253,8 +253,8 @@
           "desc": "La localisation est enregistrée <strong>uniquement</strong> au pointage entrée et sortie. Aucun traçage continu."
         },
         {
-          "title": "Contrôle opérationnel en temps réel",
-          "desc": "Les données terrain arrivent dans Flow immédiatement. Le bureau a une visibilité en direct sans appeler personne."
+          "title": "Contrôle opérationnel, dès que le terrain pointe",
+          "desc": "Les données terrain arrivent dans Flow dès qu'elles sont enregistrées. Le bureau a une vision claire sans appeler personne."
         },
         {
           "title": "Preuve défendable dans le temps",
@@ -380,7 +380,7 @@
           {
             "name": "GeoTapp Flow Team",
             "tagline": "Pour les petites équipes opérationnelles.",
-            "desc": "Coordonnez et gérez votre équipe opérationnelle en temps réel.",
+            "desc": "Coordonnez et gérez votre équipe opérationnelle, mise à jour à chaque étape.",
             "features": [
               "5 utilisateurs Flow inclus",
               "Gestion des chantiers",
@@ -604,7 +604,7 @@
         "nexus-core": {
           "name": "Gestion des missions",
           "short": "Créez et gérez les interventions techniques. Affectez les tâches aux techniciens, suivez l'avancement et gardez tout tracé par mission.",
-          "full": "### Contrôle central des missions.\n\nChaque intervention commence comme une mission structurée.\nLa **Gestion des missions** vous donne une vue claire de tout le travail en cours.\n\n#### Gestion des interventions\n\nCréez une mission, affectez le technicien, définissez le site et la date.\nSuivez le statut : Ouverte, En cours, Terminée.\n\n#### Historique opérationnel\n\nChaque mission dispose d'une archive complète des activités, preuves photos, notes et horodatages.\nLe client demande ce qui a été fait ? Vous avez les données. Toujours."
+          "full": "### Contrôle central des missions.\n\nChaque intervention commence comme une mission structurée.\nLa **Gestion des missions** vous donne une vue claire de tout le travail en cours.\n\n#### Gestion des interventions\n\nCréez une mission, affectez le technicien, définissez le site et la date.\nSuivez le statut : Ouverte, En cours, Terminée.\n\n#### Historique opérationnel\n\nChaque mission dispose d'une archive complète des activités, preuves photos, notes et horodatages.\nLe client demande ce qui a été fait ? Vous avez les données pour répondre."
         },
         "titan-flow": {
           "name": "Affectation des tâches",
@@ -629,7 +629,7 @@
         "the-architect": {
           "name": "Planification du travail",
           "short": "Organisez le travail en phases, tâches et délais. Gardez le projet sous contrôle sans tableurs ni messages WhatsApp.",
-          "full": "### Structurez le travail. Contrôlez l'avancement.\n\nLes missions complexes nécessitent de la structure.\nLa **Planification du travail** apporte l'ordre opérationnel.\n\n#### Phases et délais\n\nStructurez les interventions complexes en phases opérationnelles avec des délais clairs.\nAttribuez les responsabilités à chaque membre de l'équipe.\n\n#### Suivi de l'avancement\n\nVisualisez l'avancement en temps réel.\nSachez toujours ce qui a été fait et ce qui reste ouvert.\nAgissez avant qu'un retard ne devienne un problème client."
+          "full": "### Structurez le travail. Contrôlez l'avancement.\n\nLes missions complexes nécessitent de la structure.\nLa **Planification du travail** apporte l'ordre opérationnel.\n\n#### Phases et délais\n\nStructurez les interventions complexes en phases opérationnelles avec des délais clairs.\nAttribuez les responsabilités à chaque membre de l'équipe.\n\n#### Suivi de l'avancement\n\nSuivez l'avancement à mesure qu'il se met à jour.\nSachez ce qui a été fait et ce qui reste ouvert.\nAgissez avant qu'un retard ne devienne un problème client."
         },
         "the-auditor": {
           "name": "Documentation des interventions",
@@ -643,7 +643,7 @@
         },
         "the-oracle": {
           "name": "Visibilité opérationnelle",
-          "short": "Tableau de bord opérationnel en temps réel. Sachez toujours combien d'interventions sont ouvertes, en cours ou terminées aujourd'hui.",
+          "short": "Tableau de bord opérationnel en temps réel. Suivez combien d'interventions sont ouvertes, en cours ou terminées aujourd'hui.",
           "full": "### Données opérationnelles, pas des suppositions.\n\nDécider sans données fiables est dangereux.\nLa **Visibilité opérationnelle** transforme les données terrain en informations concrètes.\n\n#### Tableau de bord opérationnel\n\nVoyez en temps réel :\n- Interventions ouvertes et en cours\n- Techniciens actifs\n- Interventions terminées aujourd'hui et cette semaine\n\n#### Rapports périodiques\n\nRecevez des résumés d'activité automatisés.\nComparez les périodes, identifiez les goulots d'étranglement et optimisez les opérations."
         }
       }
@@ -672,7 +672,7 @@
         "timelock-alpha": {
           "name": "Pointage GPS",
           "short": "Pointage entrée et sortie lié à la position GPS et à un horodatage précis. Chaque session de travail devient un événement opérationnel vérifiable.",
-          "full": "### L'heure est vérifiable.\n\nLes horodatages sans vérification génèrent des litiges.\nLe **Pointage GPS** fait de chaque session de travail un enregistrement fiable et vérifiable.\n\n#### Pointage géolocalisé entrée et sortie\n\nLe technicien enregistre l'entrée et la sortie du terrain.\nLa localisation, l'adresse et l'heure sont enregistrées automatiquement.\n\n#### Historique scellé\n\nChaque session est un enregistrement vérifiable : heure d'entrée, heure de sortie, position, durée et mission associée.\nLe client demande quand vous êtes arrivé ? Les données sont là, toujours."
+          "full": "### L'heure est vérifiable.\n\nLes horodatages sans vérification génèrent des litiges.\nLe **Pointage GPS** fait de chaque session de travail un enregistrement fiable et vérifiable.\n\n#### Pointage géolocalisé entrée et sortie\n\nLe technicien enregistre l'entrée et la sortie du terrain.\nLa localisation, l'adresse et l'heure sont enregistrées automatiquement.\n\n#### Historique scellé\n\nChaque session est un enregistrement vérifiable : heure d'entrée, heure de sortie, position, durée et mission associée.\nLe client demande quand vous êtes arrivé ? Les données sont là."
         },
         "event-horizon": {
           "name": "Planification des équipes",
@@ -692,12 +692,12 @@
         "energy-logistics": {
           "name": "Gestion des véhicules et des frais",
           "short": "Suivez l'utilisation des véhicules de société, le carburant consommé et les frais de déplacement du personnel terrain.",
-          "full": "### Chaque déplacement documenté.\n\nLes frais de déplacement sont un poste critique pour toute entreprise avec du personnel mobile.\nLa **Gestion des véhicules** surveille chaque coût sortant.\n\n#### Utilisation des véhicules\n\nAffectez temporairement un véhicule à un employé pour une intervention.\nSachez toujours qui utilise quel véhicule et pour quelle mission.\n\n#### Frais de carburant\n\nL'employé enregistre le plein directement depuis l'application avec une photo du reçu et le montant.\nTout archivé, tout lié à la mission."
+          "full": "### Chaque déplacement documenté.\n\nLes frais de déplacement sont un poste critique pour toute entreprise avec du personnel mobile.\nLa **Gestion des véhicules** surveille chaque coût sortant.\n\n#### Utilisation des véhicules\n\nAffectez temporairement un véhicule à un employé pour une intervention.\nSuivez qui utilise quel véhicule et pour quelle mission.\n\n#### Frais de carburant\n\nL'employé enregistre le plein directement depuis l'application avec une photo du reçu et le montant.\nTout archivé, tout lié à la mission."
         },
         "neural-link": {
           "name": "Communications opérationnelles",
           "short": "Canal interne pour les communications d'entreprise. Messages ciblés vers des groupes spécifiques avec confirmation de lecture.",
-          "full": "### Communications claires. Pas de bruit de fond.\n\nWhatsApp mélange vie privée et professionnelle et n'offre aucun contrôle sur l'état de lecture.\nLes **Communications opérationnelles** constituent le canal officiel de l'entreprise.\n\n#### Messages ciblés\n\nNotifiez uniquement l'équipe qui doit savoir.\nChangement d'équipe sur le site de Lyon ? Seuls les techniciens affectés reçoivent le message.\n\n#### Confirmations de lecture\n\nSachez toujours qui a lu la communication et qui ne l'a pas fait.\nUne responsabilité claire et transparente pour tous."
+          "full": "### Communications claires. Pas de bruit de fond.\n\nWhatsApp mélange vie privée et professionnelle et n'offre aucun contrôle sur l'état de lecture.\nLes **Communications opérationnelles** constituent le canal officiel de l'entreprise.\n\n#### Messages ciblés\n\nNotifiez uniquement l'équipe qui doit savoir.\nChangement d'équipe sur le site de Lyon ? Seuls les techniciens affectés reçoivent le message.\n\n#### Confirmations de lecture\n\nSuivez qui a lu la communication et qui ne l'a pas fait.\nUne responsabilité claire et transparente pour tous."
         },
         "payroll-bridge": {
           "name": "Export des présences",
@@ -855,7 +855,7 @@
       "Il a cherché une application qui lui enlève cette corvée. Elles étaient toutes pareilles, et toutes lui demandaient exactement ce qu'il faisait déjà à la main, date, début, fin, total. Même effort, plus jolis boutons.",
       "Alors il l'a développée lui-même, pendant ses vacances. Une page web et deux gestes, on appuie quand on commence et on appuie quand on s'arrête, et le reste atterrissait rangé dans un fichier déjà prêt à envoyer en fin de mois.",
       "Puis est venue la pensée qui a tout changé, si ça me sert, ça sert aussi aux collègues. Et si ça sert au patron, alors il faut retourner le flux, parce que ce n'est pas à lui de courir après les gens pour avoir les heures, ce sont les heures qui doivent arriver chez lui toutes seules, chaque jour.",
-      "À partir de là, l'outil n'a grandi que dans une direction. D'abord la géolocalisation conforme à la loi, relevée à l'ouverture et à la fermeture du poste, jamais en continu. Puis la preuve vérifiable automatique du travail effectué, parce que le vrai problème n'a jamais été de compter les heures, mais de les prouver quand quelqu'un les mettait en doute.",
+      "À partir de là, l'outil n'a grandi que dans une direction. D'abord la géolocalisation pensée pour rester dans le cadre de la loi, relevée à l'ouverture et à la fermeture du poste, jamais en continu. Puis la preuve vérifiable automatique du travail effectué, parce que le vrai problème n'a jamais été de compter les heures, mais de les prouver quand quelqu'un les mettait en doute.",
       "Ah, et cela s'écrit GeoTapp, avec deux P. Si vous en croisez un avec un seul P, ce n'est pas nous, mais on ne lui en veut pas.",
       "Le nom, d'ailleurs, contient déjà tout. La géolocalisation, un tap, une app."
     ],
@@ -900,7 +900,7 @@
       "section_label": "Le fondateur",
       "name": "Michele Angelo Petraroli",
       "role": "Founder & CEO",
-      "bio": "Michele Angelo Petraroli est founder et CEO de GeoTapp, SaaS italien pour la gestion des équipes terrain dans les PME européennes. Issu d'une expérience opérationnelle, il a vu directement comment les entreprises de nettoyage, les installateurs et les sociétés de sécurité perdent de l'argent quand la preuve du travail manque. Il a fondé GeoTapp en 2024 pour résoudre le problème à la racine. Aujourd'hui GeoTapp accompagne les PME européennes avec un suivi GPS conforme au RGPD, des preuves photographiques et des signatures numériques qui rendent chaque intervention vérifiable.",
+      "bio": "Michele Angelo Petraroli est founder et CEO de GeoTapp, SaaS italien pour la gestion des équipes terrain dans les PME européennes. Issu d'une expérience opérationnelle, il a vu directement comment les entreprises de nettoyage, les installateurs et les sociétés de sécurité perdent de l'argent quand la preuve du travail manque. Il a fondé GeoTapp en 2024 pour résoudre le problème à la racine. Aujourd'hui GeoTapp accompagne les PME européennes avec un suivi GPS pensé pour rester dans le cadre du RGPD, des preuves photographiques et des signatures numériques qui rendent chaque intervention vérifiable.",
       "expertise_label": "Domaines d'expertise",
       "expertise": [
         "Gestion service terrain",
@@ -1246,7 +1246,7 @@
     "scaricaModello": "Télécharger le modèle",
     "autoritaCompetente": "Autorité compétente",
     "disclaimer": "Ceci est une ressource informative, pas un conseil juridique. Avant d'activer un système de surveillance, faites vérifier votre situation par un professionnel.",
-    "ctaTitolo": "Vous voulez un système déjà conforme ?",
+    "ctaTitolo": "Vous voulez un système déjà pensé pour ça ?",
     "ctaTesto": "GeoTapp enregistre la position uniquement au pointage, pas en continu, et génère la notice d'information à faire signer. Essayez-le gratuitement.",
     "ctaBottone": "Essayer GeoTapp gratuitement",
     "faq": {

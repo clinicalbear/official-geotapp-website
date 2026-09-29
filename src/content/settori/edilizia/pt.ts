@@ -3,13 +3,13 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'App para Obras de Construção: Presenças GPS e Gestão de Equipas | GeoTapp',
-    description: 'Gerencie presenças, turnos e segurança em obra com GPS em tempo real. Registos selados, relatórios automáticos. App conforme com RGPD para empresas de construção.',
+    description: 'Gerencie presenças, turnos e segurança em obra com registos GPS a cada picagem. Registos selados e relatórios automáticos, pensados para o RGPD.',
   },
   hero: {
     badge: 'App para empresas de construção e obras',
     h1_line1: 'A sua obra sob controlo,',
-    h1_line2: 'em tempo real.',
-    subtitle: 'Registos GPS selados, gestão de equipas e relatórios automáticos. Zero papel, zero disputas. GeoTapp liga Flow + TimeTracker para diretores de obra, subempreiteiros e fiscalização.',
+    h1_line2: 'a cada picagem.',
+    subtitle: 'Registos GPS selados, gestão de equipas e relatórios automáticos. Zero papel, menos disputas. GeoTapp liga Flow + TimeTracker para diretores de obra, subempreiteiros e fiscalização.',
     cta_primary: 'Experimente numa obra real',
     cta_note: '14 dias, até 50 operacionais no terreno, sem cartão de crédito.',
   },
@@ -22,7 +22,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Como gerir subempreiteiros?',
-        desc: 'Controle acessos e presenças de todas as equipas, incluindo subempreiteiros, a partir de um único painel em tempo real.',
+        desc: 'Controle acessos e presenças de todas as equipas, incluindo subempreiteiros, a partir de um único painel atualizado a cada registo.',
       },
       {
         title: 'Os relatórios de obra demoram horas?',
@@ -39,7 +39,7 @@ const content: SettoreContent = {
         desc: 'Inicia o turno a partir do smartphone. GeoTapp regista coordenadas GPS reais, marca temporal e, se necessário, fotos. Totalmente automático, qualquer alteração é detetável.',
       },
       {
-        title: 'O diretor de obra vê tudo em tempo real',
+        title: 'O diretor de obra vê os registos assim que chegam',
         desc: 'Um único painel para todas as equipas e todas as obras. Quem está presente, onde e desde quando, sem perseguir ninguém ao telefone.',
       },
       {
@@ -75,7 +75,7 @@ const content: SettoreContent = {
       {
         label: 'Conformidade RGPD',
         competitor: 'Frequentemente duvidosa',
-        geotapp: 'Conforme por design, formulários incluídos',
+        geotapp: 'Pensado para ficar dentro do RGPD, formulários incluídos',
       },
     ],
   },
@@ -103,7 +103,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Painel multi-obra',
-        desc: 'Monitorize várias obras a partir de um único ecrã. Veja em tempo real quem está presente, onde e desde quando, para cada obra ativa.',
+        desc: 'Monitorize várias obras a partir de um único ecrã. Veja quem está presente, onde e desde quando, assim que regista o ponto, para cada obra ativa.',
       },
       {
         title: 'Relatórios de progresso automáticos',
@@ -118,8 +118,8 @@ const content: SettoreContent = {
         desc: 'Os operários tiram fotos a partir da app. Cada imagem está ligada à obra com GPS e marca temporal, qualquer alteração é detetável após geração.',
       },
       {
-        title: 'Conformidade RGPD integrada',
-        desc: 'Geolocalização conforme por design com a regulamentação RGPD e diretrizes de proteção de dados. Modelos de aviso de privacidade para funcionários incluídos.',
+        title: 'Geolocalização pensada para o RGPD',
+        desc: 'Geolocalização construída para ficar dentro dos limites do RGPD e das diretrizes de proteção de dados. Modelos de aviso de privacidade para funcionários incluídos.',
       },
     ],
   },
@@ -138,7 +138,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Como gerir subempreiteiros em obra?',
-        a: 'GeoTapp controla acessos e presenças de todas as equipas, incluindo subempreiteiros. Cada operário regista a partir do smartphone e o diretor de obra vê tudo em tempo real a partir de um único painel.',
+        a: 'GeoTapp controla acessos e presenças de todas as equipas, incluindo subempreiteiros. Cada operário regista a partir do smartphone e o diretor de obra vê os registos assim que chegam, a partir de um único painel.',
       },
       {
         q: 'Os relatórios de obra requerem horas de trabalho manual?',
@@ -165,7 +165,7 @@ const content: SettoreContent = {
     },
     {
       question: 'Como gerir subempreiteiros em obra?',
-      answer: 'GeoTapp controla acessos e presenças de todas as equipas, incluindo subempreiteiros. Cada operário regista a partir do smartphone e o diretor de obra vê tudo em tempo real a partir de um único painel.',
+      answer: 'GeoTapp controla acessos e presenças de todas as equipas, incluindo subempreiteiros. Cada operário regista a partir do smartphone e o diretor de obra vê os registos assim que chegam, a partir de um único painel.',
     },
     {
       question: 'Os relatórios de obra requerem horas de trabalho manual?',

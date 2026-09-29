@@ -3,12 +3,12 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'Baustellen-App: GPS-Anwesenheit & Teamverwaltung | GeoTapp',
-    description: 'Verwalten Sie Anwesenheiten, Schichten und Sicherheit auf der Baustelle mit Echtzeit-GPS. Versiegelte Stempelungen, automatische Berichte. DSGVO-konforme App für Bauunternehmen.',
+    description: 'Anwesenheiten, Schichten und Sicherheit auf der Baustelle mit versiegelten GPS-Stempelungen. Automatische Berichte. Für die Grenzen der DSGVO gebaut.',
   },
   hero: {
     badge: 'App für Bauunternehmen und Baustellen',
     h1_line1: 'Ihre Baustelle unter Kontrolle,',
-    h1_line2: 'in Echtzeit.',
+    h1_line2: 'auf einen Blick.',
     subtitle: 'GPS-versiegelte Stempelungen, Teamverwaltung und automatische Berichte. Kein Papierkram, keine Streitigkeiten. GeoTapp verbindet Flow + TimeTracker für Bauleiter, Subunternehmer und Projektleitung.',
     cta_primary: 'Auf einer echten Baustelle testen',
     cta_note: '14 Tage, bis zu 50 Mitarbeiter im Außendienst, ohne Kreditkarte.',
@@ -22,7 +22,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Wie verwalten Sie Subunternehmer?',
-        desc: 'Verfolgen Sie Zugang und Anwesenheit aller Teams, einschließlich Subunternehmer, über ein einziges Echtzeit-Dashboard.',
+        desc: 'Sehen Sie Zugang und Anwesenheit aller Teams, einschließlich Subunternehmer, sobald gestempelt wird, in einem Dashboard.',
       },
       {
         title: 'Baustellenberichte kosten Stunden?',
@@ -39,7 +39,7 @@ const content: SettoreContent = {
         desc: 'Startet die Schicht vom Smartphone. GeoTapp erfasst reale GPS-Koordinaten, Zeitstempel und, bei Bedarf - Fotos. Vollautomatisch; jede Änderung ist erkennbar.',
       },
       {
-        title: 'Der Bauleiter sieht alles in Echtzeit',
+        title: 'Der Bauleiter sieht jede Stempelung sofort',
         desc: 'Ein Dashboard für alle Teams und alle Baustellen. Wer anwesend ist, wo und seit wann, ohne jemanden telefonisch nachzujagen.',
       },
       {
@@ -75,7 +75,7 @@ const content: SettoreContent = {
       {
         label: 'DSGVO-Konformität',
         competitor: 'Oft fraglich',
-        geotapp: 'Von Grund auf konform, Formulare enthalten',
+        geotapp: 'Für die Grenzen der DSGVO gebaut, Formulare enthalten',
       },
     ],
   },
@@ -103,7 +103,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Multi-Baustellen-Dashboard',
-        desc: 'Überwachen Sie mehrere Baustellen auf einem Bildschirm. Sehen Sie in Echtzeit, wer anwesend ist, wo und seit wann, für jede aktive Baustelle.',
+        desc: 'Behalten Sie mehrere Baustellen auf einem Bildschirm im Blick. Sehen Sie, sobald gestempelt wird, wer anwesend ist, wo und seit wann, für jede aktive Baustelle.',
       },
       {
         title: 'Automatische Aufmaßberichte',
@@ -118,8 +118,8 @@ const content: SettoreContent = {
         desc: 'Arbeiter fotografieren direkt aus der App. Jedes Bild ist mit GPS und Zeitstempel an die Baustelle gekoppelt; nachträgliche Änderungen sind erkennbar.',
       },
       {
-        title: 'Integrierte DSGVO-Konformität',
-        desc: 'Geolokalisierung von Grund auf DSGVO-konform. Vorlagen für Datenschutzhinweise an Mitarbeiter enthalten.',
+        title: 'Für die DSGVO-Grenzen gebaut',
+        desc: 'Geolokalisierung für die Grenzen der DSGVO gebaut. Vorlage für die Mitarbeiterinformation enthalten.',
       },
     ],
   },
@@ -138,7 +138,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Wie verwalten Sie Subunternehmer auf der Baustelle?',
-        a: 'GeoTapp verfolgt Zugang und Anwesenheit aller Teams, einschließlich Subunternehmer. Jeder Arbeiter stempelt vom Smartphone und der Bauleiter sieht alles in Echtzeit auf einem Dashboard.',
+        a: 'GeoTapp erfasst Zugang und Anwesenheit aller Teams, einschließlich Subunternehmer. Jeder Arbeiter stempelt vom Smartphone, und der Bauleiter sieht jede Stempelung sofort im Dashboard.',
       },
       {
         q: 'Wie erfüllen wir die Aufzeichnungspflicht nach §17 MiLoG auf der Baustelle?',
@@ -169,7 +169,7 @@ const content: SettoreContent = {
     },
     {
       question: 'Wie verwalten Sie Subunternehmer auf der Baustelle?',
-      answer: 'GeoTapp verfolgt Zugang und Anwesenheit aller Teams, einschließlich Subunternehmer. Jeder Arbeiter stempelt vom Smartphone und der Bauleiter sieht alles in Echtzeit auf einem Dashboard.',
+      answer: 'GeoTapp erfasst Zugang und Anwesenheit aller Teams, einschließlich Subunternehmer. Jeder Arbeiter stempelt vom Smartphone, und der Bauleiter sieht jede Stempelung sofort im Dashboard.',
     },
     {
       question: 'Kosten Baustellenberichte stundenlange Handarbeit?',

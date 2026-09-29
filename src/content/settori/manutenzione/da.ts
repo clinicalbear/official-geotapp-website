@@ -26,7 +26,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Ankommer teknikerne virkelig til tiden?',
-        desc: 'Verifikation i realtid uden opkald. GPS og ankomsttid er allerede tilgængelige i dit dashboard, for hver lokation.',
+        desc: 'Verifikation uden opkald, så snart teknikeren stempler ind. GPS og ankomsttid er allerede tilgængelige i dit dashboard, for hver lokation.',
       },
       {
         title: 'Hvordan beviser du den leverede service?',
@@ -45,7 +45,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Timer og opgave registreres automatisk',
-        desc: 'Hvert arbejdet minut er knyttet til lokationen og opgavetypen. Lederen ser realtidsstatus for hvert besøg.',
+        desc: 'Hvert arbejdet minut er knyttet til lokationen og opgavetypen. Lederen ser status for hvert besøg, så snart der stemples.',
       },
       {
         title: 'Kunden modtager den digitalt signerede rapport',
@@ -101,7 +101,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Ankommer teknikerne virkelig til tiden?',
-        a: 'Med GeoTapp kan du verificere ankomsttid og GPS-position for hver tekniker i realtid. Intet opkald nødvendigt.',
+        a: 'Med GeoTapp kan du verificere ankomsttid og GPS-position for hver tekniker, så snart de stempler ind. Intet opkald nødvendigt.',
       },
       {
         q: 'Hvordan beviser jeg den leverede vedligeholdelsesservice over for kunden?',
@@ -113,7 +113,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Er GeoTapp GDPR-kompatibel?',
-        a: 'Ja. GeoTapp sporer kun placering i aktiv arbejdstid, inkluderer skabeloner til medarbejderinformation og indsamler ikke unødvendige data.',
+        a: 'Ja, GeoTapp er bygget til at holde sig inden for GDPR: det sporer kun placering i aktiv arbejdstid, inkluderer skabeloner til medarbejderinformation og indsamler ikke unødvendige data.',
       },
       {
         q: 'Hvad koster GeoTapp for en vedligeholdelsesvirksomhed?',
@@ -147,7 +147,7 @@ const content: SettoreContent = {
     {
       question: 'Ankommer teknikerne virkelig til tiden?',
       answer:
-        'Med GeoTapp kan du verificere ankomsttid og GPS-position for hver tekniker i realtid. Data er allerede i dit dashboard.',
+        'Med GeoTapp kan du verificere ankomsttid og GPS-position for hver tekniker, så snart de stempler ind. Data er allerede i dit dashboard.',
     },
     {
       question: 'Hvordan beviser jeg den leverede vedligeholdelsesservice?',

@@ -13,7 +13,7 @@ const content: SettoreContent = {
     badge: 'App för städbolag, städföretag och serviceentreprenader',
     h1_line1: 'Tidrapportering för städbolag:',
     h1_line2: 'scheman, fotodokumentation och verifierade timmar, på varje objekt',
-    subtitle: 'GeoTapp kopplar samman Flow + TimeTracker för team fördelade på flera byggnader och våningar. Era städare stämplar in med GPS-verifierad smartphone; kontoret ser vem som städat vad, var och när, med bifogad fotodokumentation. Redo med data för varje tvist, full efterlevnad av Städ- och serviceentreprenadavtalet.',
+    subtitle: 'GeoTapp kopplar samman Flow + TimeTracker för team fördelade på flera byggnader och våningar. Era städare stämplar in med GPS-verifierad smartphone; kontoret ser vem som städat vad, var och när, med bifogad fotodokumentation. Redo med data om en tvist uppstår, byggd för att hålla sig inom Städ- och serviceentreprenadavtalet.',
     cta_primary: 'Testa det på ett riktigt uppdrag',
     cta_note: '14 dagar, upp till 50 medarbetare i fält, utan kreditkort.',
   },
@@ -40,15 +40,15 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'Städaren stämplar in på plats',
-        desc: 'Med GeoTapp TimeTracker registrerar de start, slut, foton av utrymmena och anteckningar direkt från smartphones. GPS-verifierat, GDPR-anpassat, Städavtalet-kompatibelt.',
+        desc: 'Med GeoTapp TimeTracker registrerar de start, slut, foton av utrymmena och anteckningar direkt från smartphones. GPS-verifierat, byggt för att hålla sig inom GDPR och Städavtalet.',
       },
       {
-        title: 'Kontoret ser allt i realtid',
+        title: 'Kontoret ser varje stämpling direkt',
         desc: 'Flow tar emot data omedelbart. Objektansvarig ser vilken byggnad som betjänats, av vem, vid vilken tid och med vilka fotodokument, utan ett enda telefonsamtal.',
       },
       {
         title: 'Överlämningsrapporten är redan klar',
-        desc: 'I slutet av skiftet är servicerapporten redan strukturerad med verkliga data: arbetade timmar, raster, täckta utrymmen och foton. Ingen manuell rekonstruktion, inget obesvarat krav.',
+        desc: 'I slutet av skiftet är servicerapporten redan strukturerad med verkliga data: arbetade timmar, raster, täckta utrymmen och foton. Ingen manuell rekonstruktion, bevis redo vid krav.',
       },
     ],
   },
@@ -70,7 +70,7 @@ const content: SettoreContent = {
     ],
   },
   testimonial: {
-    quote: 'Sedan vi började använda GeoTapp har vi inte fått ett enda skriftligt klagomål från en kund. Fotona talar för sig.',
+    quote: 'Sedan vi började använda GeoTapp har vi fått betydligt färre skriftliga klagomål från kunder. Fotona talar för sig.',
     author: 'Anna-Lena K.',
     role: 'Driftchef, städentreprenad',
   },
@@ -84,7 +84,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Hur hanterar jag team fördelade på flera byggnader samtidigt?',
-        a: 'Flow visar realtidsstatus och position för varje städare per byggnad. Du kan tilldela skift, kontrollera täckning och få automatiska aviseringar vid frånvaro eller förseningar.',
+        a: 'Flow visar var varje städare senast stämplat in per byggnad. Du kan tilldela skift, kontrollera täckning och få automatiska aviseringar vid frånvaro eller förseningar.',
       },
       {
         q: 'Hjälper GeoTapp med efterlevnad av Städavtalet för raster och övertid?',
@@ -93,7 +93,7 @@ const content: SettoreContent = {
     ],
   },
   cta: {
-    title: 'Svara på varje tvist med data. Börja nu.',
+    title: 'Svara på tvister med data. Börja nu.',
     subtitle: 'GeoTapp Flow och TimeTracker ger ditt städföretag den operativa kontroll och de bevis du verkligen behöver.',
     primary: 'Begär en demo',
     secondary: 'Se priser',

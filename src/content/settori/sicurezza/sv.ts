@@ -9,7 +9,7 @@ const content: SettoreContent = {
     badge: 'Mjukvara för Bevakningsföretag, Ordningsvakter och Evenemangsbevakning',
     h1_line1: 'Verifierad närvaro och skiftdokumentation',
     h1_line2: 'för ordningsvakter och bevakningsföretag',
-    subtitle: 'GeoTapp Flow och TimeTracker dokumenterar ordningsvakternas närvaro på tilldelade poster med verifierad GPS och oföränderliga tidsstämplar. Certifikathantering enligt Bevakningsavtalet (Almega), digital skiftöverlämning och geolokaliserade incidentrapporter, allt på en plattform.',
+    subtitle: 'GeoTapp Flow och TimeTracker dokumenterar ordningsvakternas närvaro på tilldelade poster med verifierad GPS och förseglade tidsstämplar där varje ändring syns. Certifikathantering enligt Bevakningsavtalet (Almega), digital skiftöverlämning och geolokaliserade incidentrapporter, allt på en plattform.',
     cta_primary: 'Boka en Demo',
     cta_note: 'Utan bindning. Svar inom 12 arbetstimmar.',
   },
@@ -18,11 +18,11 @@ const content: SettoreContent = {
     items: [
       {
         title: 'Bevisa att vakter var på tilldelade poster vid rätt tidpunkt',
-        desc: 'En kund bestrider om en ordningsvakt befann sig på sin post vid en specifik tidpunkt. Utan verifierad GPS och oföränderliga tidsstämplar förblir tvisten öppen och kontraktsefterlevnad är omöjlig att styrka.',
+        desc: 'En kund bestrider om en ordningsvakt befann sig på sin post vid en specifik tidpunkt. Utan verifierad GPS och förseglade tidsstämplar förblir tvisten öppen och kontraktsefterlevnad är svår att styrka.',
       },
       {
         title: 'Incidentrapporter utan positionsbevis',
-        desc: 'En handskriven incidentrapport har lågt bevisvärde utan förseglad GPS-position och en manipuleringssäker tidsstämpel. Pappersloggar är för lätta att bestrida.',
+        desc: 'En handskriven incidentrapport har lågt bevisvärde utan förseglad GPS-position och en tidsstämpel där varje ändring syns. Pappersloggar är för lätta att bestrida.',
       },
       {
         title: 'Skiftöverlämning fortfarande på papper',
@@ -36,11 +36,11 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'Vakten stämplar in på tilldelad post',
-        desc: 'GeoTapp TimeTracker registrerar in- och utstämpling, GPS-position och foton med oföränderliga tidsstämplar. Varje rond loggas automatiskt från vaktens smartphone.',
+        desc: 'GeoTapp TimeTracker registrerar in- och utstämpling, GPS-position och foton med förseglade tidsstämplar där varje ändring syns. Varje rond loggas automatiskt från vaktens smartphone.',
       },
       {
-        title: 'Chefen ser alla poster i realtid',
-        desc: 'Flow tar emot data omedelbart. Driftchefen kontrollerar full postbeläggning, skiftbyten och avvikelser utan att ringa ut i fält.',
+        title: 'Chefen ser varje stämpling direkt',
+        desc: 'Flow tar emot data omedelbart. Driftchefen kontrollerar postbeläggning, skiftbyten och avvikelser utan att ringa ut i fält.',
       },
       {
         title: 'Nälvararapporten är klar för kunden',
@@ -57,7 +57,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Certifikat- och behörighetshantering (Bevakningsavtalet, Almega)',
-        desc: 'Hantera auktorisationsbevis, utbildningsintyg och förfallodatum för varje medarbetare. Ingen ocertifierad personal i tjänst av misstag.',
+        desc: 'Hantera auktorisationsbevis, utbildningsintyg och förfallodatum för varje medarbetare. Varningar innan certifikat eller behörighet löper ut.',
       },
       {
         title: 'Export kompatibel med Visma och Hogia',
@@ -66,7 +66,7 @@ const content: SettoreContent = {
     ],
   },
   testimonial: {
-    quote: 'Med GeoTapp har tvister om postbeläggning försvunnit. Kunder får ett GPS-stämplat nälvaraprotokoll och det finns ingenting att diskutera.',
+    quote: 'Med GeoTapp har tvister om postbeläggning minskat kraftigt. Kunder får ett GPS-stämplat nälvaraprotokoll som gör diskussionen kort.',
     author: 'Erik S.',
     role: 'Driftchef, bevakningsföretag',
   },
@@ -80,7 +80,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Hur hjälper GeoTapp med dokumentation av incidentrapporter?',
-        a: 'TimeTracker kopplar varje incident till en förseglad GPS-position och en oföränderlig tidsstämpel. Den genererade incidentrapporten innehåller koordinater, tid och foton, vilket gör den försvarbar i rättsliga och avtalsmässiga förfaranden.',
+        a: 'TimeTracker kopplar varje incident till en förseglad GPS-position och en tidsstämpel där varje ändring syns. Den genererade incidentrapporten innehåller koordinater, tid och foton, vilket gör den försvarbar i rättsliga och avtalsmässiga förfaranden.',
       },
       {
         q: 'Stödjer GeoTapp digital skiftöverlämning mellan ordningsvakter?',
@@ -89,7 +89,7 @@ const content: SettoreContent = {
     ],
   },
   cta: {
-    title: 'Slut på tvister om postbeläggning.',
+    title: 'Färre tvister om postbeläggning.',
     subtitle: 'GeoTapp Flow och TimeTracker ger ditt bevakningsföretag de verifierbara bevis som kunder och tillsynsmyndigheter kräver.',
     primary: 'Boka en Demo',
     secondary: 'Se Priser',

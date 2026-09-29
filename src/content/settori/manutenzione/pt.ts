@@ -26,7 +26,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Os técnicos chegam realmente a horas?',
-        desc: 'Verificação em tempo real sem chamadas. GPS e hora de chegada já estão disponíveis no painel, por cada sede.',
+        desc: 'Verificação assim que o técnico regista o ponto, sem chamadas. GPS e hora de chegada já estão disponíveis no painel, por cada sede.',
       },
       {
         title: 'Como prova o serviço prestado?',
@@ -45,7 +45,7 @@ const content: SettoreContent = {
       },
       {
         title: 'As horas e a intervenção são registadas automaticamente',
-        desc: 'Cada minuto trabalhado é associado à sede e ao tipo de intervenção. O responsável vê o estado em tempo real de cada visita.',
+        desc: 'Cada minuto trabalhado é associado à sede e ao tipo de intervenção. O responsável vê, a cada registo, o estado de cada visita.',
       },
       {
         title: 'O cliente recebe o relatório assinado digitalmente',
@@ -101,7 +101,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Os técnicos chegam realmente a horas?',
-        a: 'Com GeoTapp pode verificar a hora de chegada e a posição GPS de cada técnico em tempo real. Sem necessidade de ligar.',
+        a: 'Com GeoTapp verifica a hora de chegada e a posição GPS de cada técnico assim que regista o ponto. Sem necessidade de ligar, o dado já está disponível no painel.',
       },
       {
         q: 'Como provo ao cliente o serviço de manutenção prestado?',
@@ -147,7 +147,7 @@ const content: SettoreContent = {
     {
       question: 'Os técnicos chegam realmente a horas?',
       answer:
-        'Com GeoTapp pode verificar a hora de chegada e a posição GPS de cada técnico em tempo real. Os dados já estão no painel.',
+        'Com GeoTapp verifica a hora de chegada e a posição GPS de cada técnico assim que regista o ponto. Os dados já estão no painel, sem chamadas.',
     },
     {
       question: 'Como provo o serviço de manutenção prestado?',

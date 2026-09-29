@@ -8,8 +8,8 @@ const content: SettoreContent = {
   hero: {
     badge: 'App til Elektrikere og El-installatører',
     h1_line1: 'App til elektrikere:',
-    h1_line2: 'GPS-rapporter, fotobeviser og nul tvister.',
-    subtitle: 'GeoTapp registrerer hvert elektrisk arbejde med GPS, billeder og verificerbare tidsstempler. Kunden bestrider arbejdet? Vis rapporten, ingen diskussion. Dine teknikere er beskyttede, dine fakturaer også.',
+    h1_line2: 'GPS-rapporter, fotobeviser og færre tvister.',
+    subtitle: 'GeoTapp registrerer hvert elektrisk arbejde med GPS, billeder og verificerbare tidsstempler. Kunden bestrider arbejdet? Vis rapporten: diskussionen afklares med dataene. Dine teknikere er beskyttede, dine fakturaer også.',
     cta_primary: 'Start gratis',
     cta_note: 'Ingen forpligtelse. Svar inden for 12 arbejdstimer.',
   },
@@ -39,7 +39,7 @@ const content: SettoreContent = {
         desc: 'Med GeoTapp TimeTracker stempler han ind og ud med GPS, fotograferer installationen og tilføjer tekniske noter fra sin smartphone.',
       },
       {
-        title: 'Kontoret ser alt i realtid',
+        title: 'Kontoret ser det, så snart der stemples',
         desc: 'GeoTapp Flow modtager data øjeblikkeligt. Den ansvarlige ser opgaven, den tildelte tekniker, fremskridt og fotobeviser uden at ringe.',
       },
       {
@@ -78,7 +78,7 @@ const content: SettoreContent = {
     ],
   },
   testimonial: {
-    quote: 'Med GeoTapp dokumenterer mine teknikere installationen, så snart de er færdige. Ingen tvist overlever rapporten. Fakturaerne bliver betalt.',
+    quote: 'Med GeoTapp dokumenterer mine teknikere installationen, så snart de er færdige. Tvister afklares hurtigt, når rapporten er der. Fakturaerne bliver betalt.',
     author: 'Karl M.',
     role: 'Indehaver, el-installationer',
   },
@@ -96,7 +96,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Overholder GeoTapp GDPR for medarbejdergeolokation?',
-        a: 'Ja. GeoTapp håndterer geolokation i overensstemmelse med GDPR og inkluderer informationsformularer til medarbejdere.',
+        a: 'Ja, GeoTapp er bygget til at holde sig inden for GDPR: geolokation er begrænset til det nødvendige, og informationsformularer til medarbejdere er inkluderet.',
       },
       {
         q: 'Hvordan håndterer GeoTapp Arbejdsmiljølovens §38 om dokumentation af arbejdstid for elektrikere?',

@@ -10,7 +10,7 @@ const content: SettoreContent = {
   hero: {
     badge: 'Application pour équipes de maintenance',
     h1_line1: 'Votre équipe de maintenance,',
-    h1_line2: 'toujours sous contrôle.',
+    h1_line2: 'sous contrôle à chaque visite.',
     subtitle:
       'Suivez les interventions, planifiez les équipes et documentez chaque visite avec GPS réel et preuves photo. Historique complet par installation et client, sans saisie manuelle.',
     cta_primary: 'Essayez GeoTapp gratuitement pendant 14 jours',
@@ -26,7 +26,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Les techniciens arrivent-ils vraiment à l\'heure ?',
-        desc: 'Vérification en temps réel sans appels. GPS et heure d\'arrivée sont déjà disponibles dans votre tableau de bord, pour chaque site.',
+        desc: 'Vérification dès l\'arrivée, sans appels. GPS et heure d\'arrivée sont déjà disponibles dans votre tableau de bord, pour chaque site.',
       },
       {
         title: 'Comment prouvez-vous le service rendu ?',
@@ -45,7 +45,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Les heures et l\'intervention sont enregistrées automatiquement',
-        desc: 'Chaque minute travaillée est liée au site et au type d\'intervention. Le responsable voit l\'état en temps réel de chaque visite.',
+        desc: 'Chaque minute travaillée est liée au site et au type d\'intervention. Le responsable voit l\'état de chaque visite dès qu\'elle est pointée.',
       },
       {
         title: 'Le client reçoit le rapport signé numériquement',
@@ -86,7 +86,7 @@ const content: SettoreContent = {
 
   testimonial: {
     quote:
-      'Avec GeoTapp, chaque visite de maintenance est tracée. Les clients voient l\'historique complet par installation et il n\'y a plus de discussions sur les heures ou les travaux effectués.',
+      'Avec GeoTapp, chaque visite de maintenance est tracée. Les clients voient l\'historique complet par installation, et il y a beaucoup moins de discussions sur les heures ou les travaux effectués.',
     author: 'André L.',
     role: 'Responsable maintenance, facility management - France',
   },
@@ -101,7 +101,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Les techniciens arrivent-ils vraiment à l\'heure ?',
-        a: 'Avec GeoTapp, vous pouvez vérifier l\'heure d\'arrivée et la position GPS de chaque technicien en temps réel. Aucun appel nécessaire.',
+        a: 'Avec GeoTapp, vous retrouvez l\'heure d\'arrivée et la position GPS de chaque technicien dès qu\'il pointe. Aucun appel nécessaire.',
       },
       {
         q: 'Comment prouver au client le service de maintenance rendu ?',
@@ -112,7 +112,7 @@ const content: SettoreContent = {
         a: 'Oui. GeoTapp est utilisé par des entreprises de maintenance, de facility management et des organisations avec des équipes réparties. La plateforme s\'adapte de 3 à 300 techniciens.',
       },
       {
-        q: 'GeoTapp est-il conforme au RGPD ?',
+        q: 'GeoTapp est-il conçu pour respecter le RGPD ?',
         a: 'Oui. GeoTapp ne géolocalise que pendant les heures de travail actives, inclut les formulaires d\'information aux salariés et ne collecte aucune donnée inutile.',
       },
       {
@@ -147,7 +147,7 @@ const content: SettoreContent = {
     {
       question: 'Les techniciens arrivent-ils vraiment à l\'heure ?',
       answer:
-        'Avec GeoTapp, vous pouvez vérifier l\'heure d\'arrivée et la position GPS de chaque technicien en temps réel. Les données sont dans votre tableau de bord.',
+        'Avec GeoTapp, vous retrouvez l\'heure d\'arrivée et la position GPS de chaque technicien dès qu\'il pointe. Les données sont dans votre tableau de bord.',
     },
     {
       question: 'Comment prouver le service de maintenance rendu ?',

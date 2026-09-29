@@ -10,7 +10,7 @@ const content: SettoreContent = {
   hero: {
     badge: 'App for vedlikeholdsteam',
     h1_line1: 'Ditt vedlikeholdsteam,',
-    h1_line2: 'alltid under kontroll.',
+    h1_line2: 'under kontroll, oppdrag for oppdrag.',
     subtitle:
       'Registrer oppdrag, planlegg vakter og dokumenter hvert besøk med ekte GPS og fotodokumentasjon. Komplett historikk per anlegg og kunde, uten manuell registrering.',
     cta_primary: 'Prøv GeoTapp gratis i 14 dager',
@@ -26,7 +26,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Kommer teknikerne virkelig i tide?',
-        desc: 'Sanntidsverifisering uten oppringinger. GPS og ankomsttid er allerede tilgjengelig i dashboardet ditt, for hver lokasjon.',
+        desc: 'Verifisering uten oppringinger. GPS og ankomsttid dukker opp i dashboardet ditt så snart teknikeren stempler inn, for hver lokasjon.',
       },
       {
         title: 'Hvordan beviser du den leverte tjenesten?',
@@ -45,7 +45,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Timer og oppdrag registreres automatisk',
-        desc: 'Hvert arbeidet minutt er knyttet til lokasjonen og oppdragstypen. Lederen ser sanntidsstatus for hvert besøk.',
+        desc: 'Hvert arbeidet minutt er knyttet til lokasjonen og oppdragstypen. Lederen ser status for hvert besøk med en gang stemplingen skjer.',
       },
       {
         title: 'Kunden mottar den digitalt signerte rapporten',
@@ -86,7 +86,7 @@ const content: SettoreContent = {
 
   testimonial: {
     quote:
-      'Med GeoTapp er hvert vedlikeholdsbesøk sporbart. Kundene ser den komplette historikken per anlegg, og det er ikke lenger diskusjoner om timer eller utført arbeid.',
+      'Med GeoTapp er hvert vedlikeholdsbesøk sporbart. Kundene ser den komplette historikken per anlegg, og diskusjoner om timer eller utført arbeid blir sjeldnere.',
     author: 'Anders L.',
     role: 'Vedlikeholdsleder, facility management - Norge',
   },
@@ -101,7 +101,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Kommer teknikerne virkelig i tide?',
-        a: 'Med GeoTapp kan du verifisere ankomsttid og GPS-posisjon for hver tekniker i sanntid. Ingen oppringning nødvendig.',
+        a: 'Med GeoTapp kan du verifisere ankomsttid og GPS-posisjon for hver tekniker så snart de stempler inn. Ingen oppringning nødvendig.',
       },
       {
         q: 'Hvordan beviser jeg den leverte vedlikeholdstjenesten overfor kunden?',
@@ -113,7 +113,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Er GeoTapp GDPR-kompatibelt?',
-        a: 'Ja. GeoTapp sporer posisjon kun i aktiv arbeidstid, inkluderer maler for ansattinformasjon og samler ikke inn unødvendige data.',
+        a: 'GeoTapp er bygget for å holde seg innenfor GDPR: posisjon spores kun i aktiv arbeidstid, maler for ansattinformasjon følger med, og det samles ikke inn unødvendige data.',
       },
       {
         q: 'Hva koster GeoTapp for en vedlikeholdsbedrift?',
@@ -147,7 +147,7 @@ const content: SettoreContent = {
     {
       question: 'Kommer teknikerne virkelig i tide?',
       answer:
-        'Med GeoTapp kan du verifisere ankomsttid og GPS-posisjon for hver tekniker i sanntid. Dataene er allerede i dashboardet ditt.',
+        'Med GeoTapp kan du verifisere ankomsttid og GPS-posisjon for hver tekniker så snart de stempler inn. Dataene er allerede i dashboardet ditt.',
     },
     {
       question: 'Hvordan beviser jeg den leverte vedlikeholdstjenesten?',

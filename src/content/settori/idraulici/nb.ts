@@ -3,13 +3,13 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'App for Rørleggere & VVS-installatører | GeoTapp - GPS',
-    description: 'GeoTapp er appen for rørleggere og VVS-installatører: GPS-verifiserte arbeidsrapporter, installasjonsbilder og manipuleringssikre registreringer. Lukk tvister med ekte bevis. Prøv gratis.',
+    description: 'GeoTapp for rørleggere og VVS-installatører: GPS-verifiserte rapporter, installasjonsbilder og forseglede registreringer. Færre tvister med ekte bevis.',
   },
   hero: {
     badge: 'App for Rørleggere, VVS-installatører og Varmeteknikere',
     h1_line1: 'App for rørleggere og VVS-installatører:',
-    h1_line2: 'GPS-rapporter, fotobevis og null tvister.',
-    subtitle: 'GeoTapp registrerer hvert VVS- og varmearbeid med GPS, bilder og verifiserbare tidsstempler. Kunden bestrider arbeidet? Vis rapporten, ingen diskusjon. Dine teknikere er beskyttet, dine fakturaer også.',
+    h1_line2: 'GPS-rapporter, fotobevis og færre tvister.',
+    subtitle: 'GeoTapp registrerer hvert VVS- og varmearbeid med GPS, bilder og verifiserbare tidsstempler. Kunden bestrider arbeidet? Vis rapporten, og saken avklares raskt. Dine teknikere er beskyttet, dine fakturaer også.',
     cta_primary: 'Start gratis',
     cta_note: 'Uten forpliktelse. Svar innen 12 arbeidstimer.',
   },
@@ -22,10 +22,10 @@ const content: SettoreContent = {
       },
       {
         title: 'Ingen dokumentasjon etter arbeidet',
-        desc: 'Teknikeren er ferdig, men det finnes ingen fotodokumentasjon eller teknisk notat. Ved en senere feil blir rekonstruksjon umulig.',
+        desc: 'Teknikeren er ferdig, men det finnes ingen fotodokumentasjon eller teknisk notat. Ved en senere feil blir rekonstruksjon svært vanskelig.',
       },
       {
-        title: 'Akuttoppdrag er umulige å dokumentere',
+        title: 'Akuttoppdrag er vanskelige å dokumentere',
         desc: 'Teknikeren rykker raskt ut, arbeider uten papirarbeid, og etterpå er det ingenting å vise kunden.',
       },
     ],
@@ -39,12 +39,12 @@ const content: SettoreContent = {
         desc: 'Med GPS fotograferer han systemet før og etter, legger til tekniske notater fra smarttelefonen.',
       },
       {
-        title: 'Kontoret ser alt i sanntid',
+        title: 'Kontoret ser hver stempling med en gang',
         desc: 'GeoTapp Flow mottar data øyeblikkelig. Tildeling, fremdrift og fotobevis uten samtaler.',
       },
       {
         title: 'Rapporten er ditt bevis',
-        desc: 'Forseglet rapport med GPS, bilder, brukte materialer og notater. Umanipulerbar. Kunden kan verifisere den.',
+        desc: 'Forseglet rapport med GPS, bilder, brukte materialer og notater. Enhver endring i etterkant er synlig. Kunden kan verifisere den.',
       },
     ],
   },
@@ -57,7 +57,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Forseglede bilder før og etter',
-        desc: 'Bilder koblet til GPS og tidsstempel, umanipulerbare.',
+        desc: 'Bilder koblet til GPS og tidsstempel, forseglet etter generering.',
       },
       {
         title: 'Automatiske rapporter',
@@ -92,11 +92,11 @@ const content: SettoreContent = {
       },
       {
         q: 'Hjelper GeoTapp med å løse tvister med kunder?',
-        a: 'Det er den primære bruken: GPS, bilder og forseglede rapporter løser enhver grunnløs tvist på minutter.',
+        a: 'Det er den primære bruken: GPS, bilder og forseglede rapporter bidrar til å avklare grunnløse tvister raskt.',
       },
       {
         q: 'Overholder GeoTapp GDPR for geolokasjon?',
-        a: 'Ja. GDPR-konform håndtering med medarbeiderinformasjonsskjemaer inkludert.',
+        a: 'GeoTapp er bygget for å holde seg innenfor GDPR, med maler for medarbeiderinformasjon inkludert.',
       },
     ],
   },

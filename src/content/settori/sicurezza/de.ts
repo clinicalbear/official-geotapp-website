@@ -9,7 +9,7 @@ const content: SettoreContent = {
     badge: 'Software für Bewachungsgewerbe, Wachpersonal und Veranstaltungsschutz',
     h1_line1: 'Nachweisbare Anwesenheit und Schichtdokumentation',
     h1_line2: 'für Sicherheitsdienste und Wachpersonal',
-    subtitle: 'GeoTapp Flow und TimeTracker dokumentieren die Anwesenheit von Wachpersonal an zugewiesenen Posten mit verifizierten GPS-Daten und versiegelten Zeitstempeln. §34a GewO-konforme Qualifikationsverfolgung, digitale Schichtübergabe und geolokalisierte Störungsberichte, alles in einer Plattform.',
+    subtitle: 'GeoTapp Flow und TimeTracker dokumentieren die Anwesenheit von Wachpersonal an zugewiesenen Posten mit verifizierten GPS-Daten und versiegelten Zeitstempeln. Qualifikationsverfolgung ausgelegt auf die Vorgaben des §34a GewO, digitale Schichtübergabe und geolokalisierte Störungsberichte, alles in einer Plattform.',
     cta_primary: 'Demo anfordern',
     cta_note: 'Unverbindlich. Antwort innerhalb von 12 Arbeitsstunden.',
   },
@@ -39,7 +39,7 @@ const content: SettoreContent = {
         desc: 'GeoTapp TimeTracker erfasst Ein- und Ausstempelung, GPS-Position und Fotos mit versiegelten Zeitstempeln. Jeder Streifengang wird automatisch vom Smartphone der Wachperson protokolliert.',
       },
       {
-        title: 'Der Einsatzleiter sieht alle Posten in Echtzeit',
+        title: 'Der Einsatzleiter sieht jede Postenstempelung sofort',
         desc: 'Flow empfängt Daten sofort. Der Einsatzleiter überprüft die vollständige Posten­besetzung, Schichtwechsel und Abweichungen, ohne das Feld anzurufen.',
       },
       {
@@ -66,7 +66,7 @@ const content: SettoreContent = {
     ],
   },
   testimonial: {
-    quote: 'Mit GeoTapp haben wir Streitigkeiten über Postenstärken eliminiert. Auftraggeber erhalten ein GPS-gestempeltes Anwesenheitsprotokoll, da gibt es nichts mehr zu diskutieren.',
+    quote: 'Mit GeoTapp haben Streitigkeiten über Postenstärken stark abgenommen. Auftraggeber erhalten ein GPS-gestempeltes Anwesenheitsprotokoll, das lässt wenig Raum für Diskussionen.',
     author: 'Stefan K.',
     role: 'Betriebsleiter, Sicherheitsdienstleister',
   },

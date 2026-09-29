@@ -22,7 +22,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Jagte teknikere for opdateringer',
-        desc: 'Realtidskort med status for hver opgave. Du ved, hvor alle dine teknikere er, uden at foretage et eneste opkald.',
+        desc: 'Opgavekort med status for hver opgave, opdateret ved hver stempling. Du ved, hvor teknikeren sidst har stemplet ind, uden at foretage et eneste opkald.',
       },
       {
         title: 'Ufuldstændige eller manglende arbejdssedler',
@@ -40,7 +40,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Timer registreres automatisk per opgave',
-        desc: 'Hvert arbejdet minut knyttes til den rigtige opgave. Lederen ser i realtid, hvem der arbejder hvor.',
+        desc: 'Hvert arbejdet minut knyttes til den rigtige opgave. Lederen ser, så snart der stemples, hvem der arbejder hvor.',
       },
       {
         title: 'Kunderapporten genereres uden at taste noget',
@@ -75,7 +75,7 @@ const content: SettoreContent = {
       {
         label: 'GDPR-overholdelse',
         competitor: 'Ofte tvivlsom',
-        geotapp: 'Kompatibel by design, formularer inkluderet',
+        geotapp: 'Bygget til at holde sig inden for GDPR, formularer inkluderet',
       },
     ],
   },
@@ -89,7 +89,7 @@ const content: SettoreContent = {
     ],
     dopo: [
       'Kunden bestrider? Åbn rapporten: fotos, GPS, tidsstempel, digital signatur.',
-      'Du sender den. Tvisten er løst på et minut.',
+      'Du sender den. Tvisten afklares på et minut.',
       'Betalingen er sikret. Teknikeren er beskyttet.',
       'Ved månedens slutning er eksporten allerede klar, timer og opgaver aggregeret automatisk.',
     ],
@@ -119,12 +119,12 @@ const content: SettoreContent = {
       },
       {
         title: 'Indbygget GDPR-overholdelse',
-        desc: 'Geolokalisering kompatibel by design med GDPR-regler. Skabeloner til medarbejdernes privatlivserklæring inkluderet.',
+        desc: 'Geolokalisering bygget til at holde sig inden for GDPR-reglerne. Skabeloner til medarbejdernes privatlivserklæring inkluderet.',
       },
     ],
   },
   testimonial: {
-    quote: 'Kunder bestrider ikke længere timerne. Vi åbner rapporten med GPS og fotos, og diskussionen stopper der.',
+    quote: 'Kunder bestrider ikke længere timerne. Vi åbner rapporten med GPS og fotos, og diskussionen afklares med det samme.',
     author: 'Robert F.',
     role: 'Ejer, installationsfirma, 20 teknikere',
   },
@@ -138,7 +138,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Hvordan overvåger jeg flere teams på forskellige opgaver?',
-        a: 'GeoTapp tilbyder et realtidskort med status for hver opgave. Du ved præcis, hvor dine teknikere er, og hvilken opgave de arbejder på, uden at ringe.',
+        a: 'GeoTapp tilbyder et opgavekort med status for hver opgave, opdateret ved hver stempling. Du ved, hvor teknikeren sidst har stemplet ind, og hvilken opgave de arbejder på, uden at ringe.',
       },
       {
         q: 'Hvordan fremskynder jeg fakturering af afsluttede opgaver?',
@@ -165,7 +165,7 @@ const content: SettoreContent = {
     },
     {
       question: 'Hvordan overvåger jeg flere teams på forskellige opgaver?',
-      answer: 'GeoTapp tilbyder et realtidskort med status for hver opgave. Du ved præcis, hvor dine teknikere er, og hvilken opgave de arbejder på, uden at ringe.',
+      answer: 'GeoTapp tilbyder et opgavekort med status for hver opgave, opdateret ved hver stempling. Du ved, hvor teknikeren sidst har stemplet ind, og hvilken opgave de arbejder på, uden at ringe.',
     },
     {
       question: 'Hvordan fremskynder jeg fakturering af afsluttede opgaver?',

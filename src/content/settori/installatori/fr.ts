@@ -3,13 +3,13 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'Logiciel pour Électriciens et Plombiers | Gestion des Interventions | GeoTapp',
-    description: 'GeoTapp pour électriciens, plombiers et entreprises du bâtiment : gestion des interventions, pointage GPS, rapports d\'intervention vérifiables et preuves photographiques. Conforme CCN Bâtiment.',
+    description: 'GeoTapp pour électriciens, plombiers et entreprises du bâtiment : gestion des interventions, pointage GPS, rapports vérifiables. Pensé pour le CCN Bâtiment.',
   },
   hero: {
     badge: 'Logiciel pour Électriciens, Plombiers et Entreprises du Bâtiment',
     h1_line1: 'Interventions terrain sous contrôle :',
     h1_line2: 'rapports, heures et preuves enfin clairs',
-    subtitle: 'GeoTapp relie Flow + TimeTracker pour les entreprises qui travaillent entre camionnettes, chantiers et clients finaux. Les apps Android et iOS accompagnent le technicien sur le terrain ; le bureau voit l\'affaire, les temps, les preuves photographiques et les notes sans appeler personne. Conforme RGPD et CCN Bâtiment.',
+    subtitle: 'GeoTapp relie Flow + TimeTracker pour les entreprises qui travaillent entre camionnettes, chantiers et clients finaux. Les apps Android et iOS accompagnent le technicien sur le terrain ; le bureau voit l\'affaire, les temps, les preuves photographiques et les notes sans appeler personne. Conçu pour rester dans le cadre du RGPD et du CCN Bâtiment.',
     cta_primary: 'Demander une démo',
     cta_note: 'Sans engagement. Réponse sous 12 heures ouvrées.',
   },
@@ -39,7 +39,7 @@ const content: SettoreContent = {
         desc: 'Avec GeoTapp TimeTracker, il enregistre arrivée, départ, photos et notes directement depuis son smartphone. GPS vérifié, RGPD respecté.',
       },
       {
-        title: 'Le bureau voit tout en temps réel',
+        title: 'Le bureau voit chaque étape dès qu\'elle arrive',
         desc: 'Flow reçoit les données instantanément. Le responsable voit l\'affaire, l\'avancement, le technicien assigné et les preuves photographiques sans appeler.',
       },
       {
@@ -57,7 +57,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Preuves photographiques sur le terrain',
-        desc: 'Le technicien prend des photos directement depuis l\'app. Images liées à l\'intervention, avec date et heure. Aucune possibilité de contestation.',
+        desc: 'Le technicien prend des photos directement depuis l\'app. Images liées à l\'intervention, avec date et heure. Une preuve solide en cas de contestation.',
       },
       {
         title: 'Export pour la paie',

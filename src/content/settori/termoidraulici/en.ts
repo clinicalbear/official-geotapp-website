@@ -8,7 +8,7 @@ const content: SettoreContent = {
   hero: {
     badge: 'App for Plumbers and Heating Installers',
     h1_line1: 'App for heating engineers:',
-    h1_line2: 'GPS job reports, photo evidence and zero disputes.',
+    h1_line2: 'GPS job reports, photo evidence and fewer disputes.',
     subtitle: 'GeoTapp records every boiler and heating job with GPS, photos and verifiable timestamps. Client disputes parts replaced? Show them the report, no argument needed. Your engineers are protected, your invoices too.',
     cta_primary: 'Start free today',
     cta_note: 'No commitment. Response within 12 business hours.',
@@ -39,7 +39,7 @@ const content: SettoreContent = {
         desc: 'With GeoTapp TimeTracker they clock in and out with GPS, photograph the boiler and system, add notes on parts replaced, all from their smartphone.',
       },
       {
-        title: 'Office sees everything in real time',
+        title: 'Office sees each update as it happens',
         desc: 'GeoTapp Flow receives data instantly. The manager sees job reference, assigned engineer, progress and photo evidence without calling.',
       },
       {
@@ -75,7 +75,7 @@ const content: SettoreContent = {
       {
         label: 'GDPR compliance',
         competitor: 'Often to verify',
-        geotapp: 'Compliant by design, forms included',
+        geotapp: 'Built to stay within GDPR, forms included',
       },
     ],
   },
@@ -176,7 +176,7 @@ const content: SettoreContent = {
   schema_faq: [
     {
       question: 'Does GeoTapp work as an app for heating engineers?',
-      answer: 'Yes. GeoTapp is the app for plumbers and heating installers that records every boiler and heating job with GPS, photos and verifiable timestamps. The engineer clocks in from the field, the office sees everything in real time, and the client receives a sealed job report.',
+      answer: 'Yes. GeoTapp is the app for plumbers and heating installers that records every boiler and heating job with GPS, photos and verifiable timestamps. The engineer clocks in from the field, the office sees each clock-in as it happens, and the client receives a sealed job report.',
     },
     {
       question: 'How do I seal a boiler job with GeoTapp?',
@@ -184,7 +184,7 @@ const content: SettoreContent = {
     },
     {
       question: 'Does GeoTapp handle multiple teams of heating engineers on different jobs?',
-      answer: 'Yes. GeoTapp Flow lets the owner coordinate multiple teams, assign urgent call-outs, track job status and collect photo evidence from all active sites in real time.',
+      answer: 'Yes. GeoTapp Flow lets the owner coordinate multiple teams, assign urgent call-outs, track job status and collect photo evidence from all active sites as it comes in.',
     },
     {
       question: 'Are GeoTapp job reports accepted in heating disputes?',

@@ -53,7 +53,7 @@
       },
       "generatore": {
         "title": "Gerador de aviso GPS",
-        "desc": "Crie o seu modelo de aviso de privacidade GPS com o seu logótipo, conforme o RGPD. Grátis, no seu navegador."
+        "desc": "Crie o seu modelo de aviso de privacidade GPS com o seu logótipo, pensado para respeitar o RGPD. Grátis, no seu navegador."
       },
       "conservazione": {
         "title": "Política de conservação de dados",
@@ -201,7 +201,7 @@
       ]
     },
     "proof_note": "Provas recolhidas apenas pela câmara, sem rastreio contínuo.",
-    "proof_claim": "Entre a entrada e a saída não se regista nada.",
+    "proof_claim": "Entre a entrada e a saída não se regista nada automaticamente.",
     "sticky_cta_subtitle": "14 dias grátis, sem cartão de crédito"
   },
   "home_sections": {
@@ -210,7 +210,7 @@
       "title": "Coordene o campo a partir de um hub operacional único.",
       "subtitle": "O Flow é o sistema utilizado pelo escritório para gerir trabalhos, atribuir actividades, acompanhar o progresso e gerar relatórios de trabalho estruturados. <strong class=\"text-slate-900\">Menos fricção interna, mais controlo real.</strong><br/><br/><em>A sua empresa é um organismo vivo. Cada intervenção, cada tarefa, cada operador é um batimento. GeoTapp Flow mantém todos sincronizados.</em>",
       "features": {
-        "crm": "<strong>Gestão de trabalhos:</strong> Crie intervenções, atribua técnicos e monitorize o progresso em tempo real.",
+        "crm": "<strong>Gestão de trabalhos:</strong> Crie intervenções, atribua técnicos e acompanhe o progresso com o estado sempre atualizado.",
         "pipeline": "<strong>Relatórios estruturados:</strong> Cada trabalho concluído gera documentação rastreável pronta para o cliente."
       },
       "link": "Explorar GeoTapp Flow"
@@ -253,8 +253,8 @@
           "desc": "A localização é registada <strong>apenas</strong> no registo de entrada e saída. Sem rastreio contínuo."
         },
         {
-          "title": "Controlo operacional em tempo real",
-          "desc": "Os dados de campo chegam ao Flow imediatamente. O escritório tem visibilidade em directo sem ligar para ninguém."
+          "title": "Controlo operacional atualizado a cada registo",
+          "desc": "Os dados de campo chegam ao Flow assim que são registados. O escritório tem visibilidade sempre atualizada sem ligar para ninguém."
         },
         {
           "title": "Prova defensável ao longo do tempo",
@@ -284,7 +284,7 @@
       },
       "pulizie": {
         "name": "Limpeza",
-        "desc": "Empresas de limpeza, Facility, Multisserviços. Cada ronda documentada e verificável pelo cliente, zero disputas.",
+        "desc": "Empresas de limpeza, Facility, Multisserviços. Cada ronda documentada e verificável pelo cliente, menos disputas.",
         "cta": "Evitar disputas"
       },
       "elettricisti": {
@@ -294,7 +294,7 @@
       },
       "idraulici": {
         "name": "Canalizadores",
-        "desc": "Canalização, aquecimento, caldeiras. Relatórios GPS com fotos antes e depois, zero disputas sobre trabalhos realizados.",
+        "desc": "Canalização, aquecimento, caldeiras. Relatórios GPS com fotos antes e depois, menos disputas sobre trabalhos realizados.",
         "cta": "Prove cada trabalho"
       },
       "termoidraulici": {
@@ -380,7 +380,7 @@
           {
             "name": "GeoTapp Flow Team",
             "tagline": "Para pequenas equipas operacionais.",
-            "desc": "Coordene e gira a sua equipa operacional em tempo real.",
+            "desc": "Coordene e gira a sua equipa operacional, atualizada a cada registo.",
             "features": [
               "5 utilizadores Flow incluídos",
               "Gestão de trabalhos",
@@ -629,7 +629,7 @@
         "the-architect": {
           "name": "Planeamento do trabalho",
           "short": "Organize o trabalho em fases, tarefas e prazos. Mantenha o projecto sob controlo sem folhas de cálculo ou mensagens de WhatsApp.",
-          "full": "### Estruture o trabalho. Controle o progresso.\n\nOs trabalhos complexos requerem estrutura.\nO **Planeamento do trabalho** traz ordem operacional.\n\n#### Fases e prazos\n\nEstruture intervenções complexas em fases operacionais com prazos claros.\nAtribua responsabilidades a cada membro da equipa.\n\n#### Acompanhamento do progresso\n\nVisualize o progresso em tempo real.\nSaiba sempre o que foi feito e o que está em aberto.\nAja antes que um atraso se torne um problema para o cliente."
+          "full": "### Estruture o trabalho. Controle o progresso.\n\nOs trabalhos complexos requerem estrutura.\nO **Planeamento do trabalho** traz ordem operacional.\n\n#### Fases e prazos\n\nEstruture intervenções complexas em fases operacionais com prazos claros.\nAtribua responsabilidades a cada membro da equipa.\n\n#### Acompanhamento do progresso\n\nVisualize o progresso, atualizado passo a passo.\nSaiba sempre o que foi feito e o que está em aberto.\nAja antes que um atraso se torne um problema para o cliente."
         },
         "the-auditor": {
           "name": "Documentação de intervenções",
@@ -638,13 +638,13 @@
         },
         "the-uplink": {
           "name": "Ligação campo-escritório",
-          "short": "Os dados recolhidos pelo TimeTracker chegam ao Flow em tempo real. O campo e o escritório trabalham com os mesmos dados operacionais.",
-          "full": "### Escritório e campo, finalmente ligados.\n\nA desconexão entre campo e escritório gera erros evitáveis, atrasos e disputas.\nA **Ligação campo-escritório** fecha a lacuna.\n\n#### Sincronização em tempo real\n\nCada registo de presença, foto e nota registada no TimeTracker chega ao Flow de imediato.\nO responsável tem uma visão ao vivo sem ter de ligar ao técnico.\n\n#### Histórico fiável\n\nTudo o que o técnico regista no campo é arquivado e ligado ao trabalho.\nNenhum dado se perde. Nenhuma informação falta quando chega o momento de elaborar o relatório."
+          "short": "Os dados recolhidos pelo TimeTracker chegam ao Flow assim que são registados. O campo e o escritório trabalham com os mesmos dados operacionais.",
+          "full": "### Escritório e campo, finalmente ligados.\n\nA desconexão entre campo e escritório gera erros evitáveis, atrasos e disputas.\nA **Ligação campo-escritório** fecha a lacuna.\n\n#### Sincronização imediata\n\nCada registo de presença, foto e nota registada no TimeTracker chega ao Flow assim que é enviada.\nO responsável tem uma visão sempre atualizada sem ter de ligar ao técnico.\n\n#### Histórico fiável\n\nTudo o que o técnico regista no campo é arquivado e ligado ao trabalho.\nNenhum dado se perde. Nenhuma informação falta quando chega o momento de elaborar o relatório."
         },
         "the-oracle": {
           "name": "Visibilidade operacional",
-          "short": "Painel operacional em tempo real. Saiba sempre quantas intervenções estão abertas, em curso ou concluídas hoje.",
-          "full": "### Dados operacionais, não suposições.\n\nDecidir sem dados fiáveis é perigoso.\nA **Visibilidade operacional** converte os dados de campo em informação concreta.\n\n#### Painel operacional\n\nVeja em tempo real:\n- Intervenções abertas e em curso\n- Técnicos activos\n- Intervenções concluídas hoje e esta semana\n\n#### Relatórios periódicos\n\nReceba resumos de actividade automatizados.\nCompare períodos, identifique estrangulamentos e optimize as operações."
+          "short": "Painel operacional atualizado a cada intervenção. Saiba sempre quantas intervenções estão abertas, em curso ou concluídas hoje.",
+          "full": "### Dados operacionais, não suposições.\n\nDecidir sem dados fiáveis é perigoso.\nA **Visibilidade operacional** converte os dados de campo em informação concreta.\n\n#### Painel operacional\n\nVeja, atualizado a cada intervenção:\n- Intervenções abertas e em curso\n- Técnicos activos\n- Intervenções concluídas hoje e esta semana\n\n#### Relatórios periódicos\n\nReceba resumos de actividade automatizados.\nCompare períodos, identifique estrangulamentos e optimize as operações."
         }
       }
     },
@@ -677,7 +677,7 @@
         "event-horizon": {
           "name": "Planeamento de turnos",
           "short": "Gira turnos e disponibilidade do pessoal. Vistas semanais e mensais para coordenação sem confusão ou sobreposições.",
-          "full": "### Sem conflitos de turnos.\n\nOrganizar pessoal móvel requer clareza.\nO **Planeamento de turnos** dá ao responsável uma visão precisa e actualizada.\n\n#### Vista de calendário\n\nVeja quem trabalha quando.\nIdentifique ausências, férias e sobreposições antes de se tornarem problemas operacionais.\n\n#### Disponibilidade em tempo real\n\nOs colaboradores confirmam a presença ou reportam ausências directamente da aplicação.\nO responsável vê as lacunas no horário antes de atribuir novos trabalhos."
+          "full": "### Sem conflitos de turnos.\n\nOrganizar pessoal móvel requer clareza.\nO **Planeamento de turnos** dá ao responsável uma visão precisa e actualizada.\n\n#### Vista de calendário\n\nVeja quem trabalha quando.\nIdentifique ausências, férias e sobreposições antes de se tornarem problemas operacionais.\n\n#### Disponibilidade sempre actualizada\n\nOs colaboradores confirmam a presença ou reportam ausências directamente da aplicação.\nO responsável vê as lacunas no horário antes de atribuir novos trabalhos."
         },
         "unit-matrix": {
           "name": "Registo de operadores",
@@ -855,7 +855,7 @@
       "Procurou uma aplicação que lhe tirasse aquela maçada. Encontrou-as todas iguais, e todas lhe pediam exatamente o que já fazia à mão, data, entrada, saída, total. O mesmo esforço, com botões mais bonitos.",
       "Por isso, de férias, desenvolveu-a sozinho. Uma página web e dois gestos, carrega quando começa e carrega quando acaba, e o resto ficava arrumado num ficheiro já pronto a enviar ao fim do mês.",
       "Depois veio o pensamento que mudou tudo, se me serve a mim serve também aos colegas. E se serve ao patrão, então o fluxo tem de ser virado, porque não é ele que deve andar atrás das pessoas para ter as horas, são as horas que chegam sozinhas até ele, todos os dias.",
-      "A partir daí a ferramenta cresceu numa só direção. Primeiro a geolocalização conforme a lei, lida na abertura e no fecho do turno e nunca em contínuo. Depois a prova verificável automática do trabalho realizado, porque o problema verdadeiro nunca foi contar as horas, foi prová-las quando alguém as punha em causa.",
+      "A partir daí a ferramenta cresceu numa só direção. Primeiro a geolocalização pensada para respeitar a lei, lida na abertura e no fecho do turno e nunca em contínuo. Depois a prova verificável automática do trabalho realizado, porque o problema verdadeiro nunca foi contar as horas, foi prová-las quando alguém as punha em causa.",
       "Ah, e escreve-se GeoTapp, com dois P. Se encontrar por aí algum com um só, não somos nós, mas não lhe levamos a mal.",
       "O nome, aliás, já tem tudo lá dentro. A geolocalização, um tap, uma app."
     ],
@@ -900,7 +900,7 @@
       "section_label": "O fundador",
       "name": "Michele Angelo Petraroli",
       "role": "Founder & CEO",
-      "bio": "Michele Angelo Petraroli é founder e CEO da GeoTapp, SaaS italiano para a gestão de equipas em campo das PME europeias. A partir da experiência operacional, viu como empresas de limpeza, instaladores e serviços de segurança perdem dinheiro quando falta a prova do trabalho. Fundou a GeoTapp em 2024 para resolver o problema na raiz. Hoje a GeoTapp ajuda as PME europeias com rastreio GPS conforme ao RGPD, provas fotográficas e assinaturas digitais que tornam cada intervenção verificável.",
+      "bio": "Michele Angelo Petraroli é founder e CEO da GeoTapp, SaaS italiano para a gestão de equipas em campo das PME europeias. A partir da experiência operacional, viu como empresas de limpeza, instaladores e serviços de segurança perdem dinheiro quando falta a prova do trabalho. Fundou a GeoTapp em 2024 para resolver o problema na raiz. Hoje a GeoTapp ajuda as PME europeias com rastreio GPS pensado para o RGPD, provas fotográficas e assinaturas digitais que tornam cada intervenção verificável.",
       "expertise_label": "Áreas de competência",
       "expertise": [
         "Gestão de serviço em campo",
@@ -1079,7 +1079,7 @@
   },
   "roi": {
     "meta_title": "Calculadora ROI GeoTapp - Descubra as suas poupanças reais",
-    "meta_desc": "Calcule em 2 minutos quanto pouparia com o GeoTapp: menos burocracia, zero disputas, operadores mais produtivos. Sem email e sem conta.",
+    "meta_desc": "Calcule em 2 minutos quanto pouparia com o GeoTapp: menos burocracia, menos disputas, operadores mais produtivos. Sem email e sem conta.",
     "hero_title": "Calcule o seu ROI com o GeoTapp",
     "hero_subtitle": "Introduza os dados da sua empresa e descubra quanto pode poupar por ano.",
     "step1_title": "A sua empresa",
@@ -1353,7 +1353,7 @@
     "scaricaModello": "Descarregar o modelo",
     "autoritaCompetente": "Autoridade competente",
     "disclaimer": "Este é um recurso informativo, não um aconselhamento jurídico. Antes de ativar um sistema de monitorização, peça a um profissional que verifique a sua situação.",
-    "ctaTitolo": "Quer um sistema que já está em conformidade?",
+    "ctaTitolo": "Quer um sistema pensado para o RGPD?",
     "ctaTesto": "A GeoTapp regista a localização apenas no momento da picagem, nunca em contínuo, e gera o aviso para os trabalhadores assinarem. Experimente gratuitamente.",
     "ctaBottone": "Experimente a GeoTapp gratuitamente",
     "faq": {

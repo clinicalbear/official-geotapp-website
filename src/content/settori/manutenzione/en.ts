@@ -26,7 +26,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Do technicians actually arrive on time?',
-        desc: 'Real-time verification without phone calls. GPS and arrival time are already available in your dashboard, for every site.',
+        desc: 'Verify arrival without phone calls. GPS and arrival time land in your dashboard the moment they clock in, for every site.',
       },
       {
         title: 'How do you prove the service was delivered?',
@@ -45,7 +45,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Hours and job details are logged automatically',
-        desc: 'Every minute worked is linked to the site and job type. The manager sees the real-time status of every visit.',
+        desc: 'Every minute worked is linked to the site and job type. The manager sees the status of every visit as it happens.',
       },
       {
         title: 'Client receives a digitally signed report',
@@ -101,7 +101,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Do technicians actually arrive on time?',
-        a: 'With GeoTapp you can verify arrival time and GPS position of every technician in real time. No phone call needed, the data is already in your dashboard.',
+        a: 'With GeoTapp you can see arrival time and GPS position for every technician as they clock in. No phone call needed, the data is already in your dashboard.',
       },
       {
         q: 'How do I prove the maintenance service was delivered?',
@@ -113,7 +113,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Is GeoTapp GDPR compliant for GPS tracking?',
-        a: 'Yes. GeoTapp tracks location only during active working hours, includes employee privacy notice templates and collects no unnecessary data.',
+        a: 'GeoTapp is built to help you stay within GDPR for GPS tracking: it tracks location only during active working hours, includes employee privacy notice templates and collects no unnecessary data.',
       },
       {
         q: 'How much does GeoTapp cost for a maintenance company?',
@@ -147,7 +147,7 @@ const content: SettoreContent = {
     {
       question: 'Do technicians actually arrive on time?',
       answer:
-        'With GeoTapp you can verify arrival time and GPS position of every technician in real time. The data is already in your dashboard, no calls needed.',
+        'With GeoTapp you can see arrival time and GPS position for every technician as they clock in. The data is already in your dashboard, no calls needed.',
     },
     {
       question: 'How do I prove the maintenance service was delivered?',

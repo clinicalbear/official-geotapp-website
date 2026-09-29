@@ -8,7 +8,7 @@ const content: SettoreContent = {
   hero: {
     badge: 'App per Idraulici, Termoidraulici e Impiantisti',
     h1_line1: 'App per idraulici e termoidraulici:',
-    h1_line2: 'rapportini GPS, prove fotografiche e zero contestazioni.',
+    h1_line2: 'rapportini GPS, prove fotografiche e meno contestazioni.',
     subtitle: 'GeoTapp registra ogni intervento idraulico con GPS, foto e timestamp verificabili. Il cliente contesta? Mostri il rapportino, non discuti. Il tuo tecnico è protetto, il tuo fatturato anche.',
     cta_primary: 'Inizia subito gratuitamente!',
     cta_note: 'Nessun vincolo. Risposta entro 12 ore lavorative.',
@@ -39,7 +39,7 @@ const content: SettoreContent = {
         desc: 'Con GeoTapp TimeTracker timbra ingresso e uscita con GPS, scatta foto dell\'impianto idraulico e aggiunge note tecniche dallo smartphone.',
       },
       {
-        title: 'L\'ufficio vede tutto in tempo reale',
+        title: 'L\'ufficio vede tutto appena arriva',
         desc: 'GeoTapp Flow riceve i dati istantaneamente. Il responsabile vede commessa, tecnico assegnato, avanzamento e prove fotografiche senza chiamare.',
       },
       {
@@ -75,7 +75,7 @@ const content: SettoreContent = {
       {
         label: 'Conformità GDPR',
         competitor: 'Spesso da verificare',
-        geotapp: 'Conforme per design, modulistica inclusa',
+        geotapp: 'Costruito per stare nei paletti del GDPR, modulistica inclusa',
       },
     ],
   },
@@ -176,7 +176,7 @@ const content: SettoreContent = {
   schema_faq: [
     {
       question: 'GeoTapp funziona come app per idraulici e termoidraulici?',
-      answer: 'Sì. GeoTapp è l\'app per idraulici e termoidraulici che registra ogni intervento con GPS, foto e timestamp verificabili. Il tecnico timbra dal campo, l\'ufficio vede tutto in tempo reale, il cliente riceve un rapportino sigillato.',
+      answer: 'Sì. GeoTapp è l\'app per idraulici e termoidraulici che registra ogni intervento con GPS, foto e timestamp verificabili. Il tecnico timbra dal campo, l\'ufficio vede tutto appena arriva, il cliente riceve un rapportino sigillato.',
     },
     {
       question: 'Come sigillo un intervento idraulico con GeoTapp?',

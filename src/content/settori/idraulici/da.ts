@@ -3,13 +3,13 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'App til Blikkenslagere & VVS-installatører | GeoTapp - GPS',
-    description: 'GeoTapp er appen til blikkenslagere og VVS-installatører: GPS-verificerede arbejdsrapporter, installationsbilleder og manipulationssikre registreringer. Luk tvister med ægte beviser. Prøv gratis.',
+    description: 'GeoTapp: app til blikkenslagere og VVS-installatører med GPS-verificerede arbejdsrapporter og forseglede registreringer. Luk tvister med ægte beviser.',
   },
   hero: {
     badge: 'App til Blikkenslagere, VVS-installatører og Varmetekniker',
     h1_line1: 'App til blikkenslagere og VVS-installatører:',
-    h1_line2: 'GPS-rapporter, fotobeviser og nul tvister.',
-    subtitle: 'GeoTapp registrerer hvert VVS- og varmearbejde med GPS, billeder og verificerbare tidsstempler. Kunden bestrider arbejdet? Vis rapporten, ingen diskussion. Dine teknikere er beskyttede, dine fakturaer også.',
+    h1_line2: 'GPS-rapporter, fotobeviser og færre tvister.',
+    subtitle: 'GeoTapp registrerer hvert VVS- og varmearbejde med GPS, billeder og verificerbare tidsstempler. Kunden bestrider arbejdet? Vis rapporten: diskussionen afklares med dataene. Dine teknikere er beskyttede, dine fakturaer også.',
     cta_primary: 'Start gratis',
     cta_note: 'Ingen forpligtelse. Svar inden for 12 arbejdstimer.',
   },
@@ -39,12 +39,12 @@ const content: SettoreContent = {
         desc: 'Med GPS fotograferer han systemet før og efter, tilføjer tekniske noter fra sin smartphone.',
       },
       {
-        title: 'Kontoret ser alt i realtid',
+        title: 'Kontoret ser det, så snart der stemples',
         desc: 'GeoTapp Flow modtager data øjeblikkeligt. Tildeling, fremskridt og fotobeviser uden opkald.',
       },
       {
         title: 'Rapporten er dit bevis',
-        desc: 'Forseglet rapport med GPS, billeder, anvendte materialer og noter. Umanipulerbar. Kunden kan verificere den.',
+        desc: 'Forseglet rapport med GPS, billeder, anvendte materialer og noter. Enhver ændring forbliver synlig. Kunden kan verificere den.',
       },
     ],
   },
@@ -57,7 +57,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Forseglede billeder før og efter',
-        desc: 'Billeder knyttet til GPS og tidsstempel, umanipulerbare.',
+        desc: 'Billeder knyttet til GPS og tidsstempel; enhver ændring forbliver synlig.',
       },
       {
         title: 'Automatiske rapporter',
@@ -78,7 +78,7 @@ const content: SettoreContent = {
     ],
   },
   testimonial: {
-    quote: 'Jeg brugte timer på at forklare arbejde til kunder. Nu sender jeg rapporten, og diskussionen stopper der.',
+    quote: 'Jeg brugte timer på at forklare arbejde til kunder. Nu sender jeg rapporten, og diskussionen afklares med det samme.',
     author: 'Robert C.',
     role: 'Indehaver, VVS og varme',
   },
@@ -96,7 +96,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Overholder GeoTapp GDPR for geolokation?',
-        a: 'Ja. GDPR-konform håndtering med medarbejderinformationsformularer inkluderet.',
+        a: 'Ja, håndteringen er bygget til at holde sig inden for GDPR, med medarbejderinformationsformularer inkluderet.',
       },
     ],
   },

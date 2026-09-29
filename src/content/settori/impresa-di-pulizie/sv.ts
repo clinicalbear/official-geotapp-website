@@ -4,15 +4,15 @@ const content: SettoreContent = {
   meta: {
     title: 'App för Städföretag: GPS-Teamhantering & Servicebevis | GeoTapp',
     description:
-      'Hantera städteam, scheman och närvaro med GPS i realtid. Automatiskt servicebevis, inga kundtvister. GDPR-kompatibel städapp.',
+      'Hantera städteam, scheman och närvaro. Automatiskt servicebevis, färre kundtvister. Byggd för att hålla sig inom GDPR.',
   },
 
   hero: {
     badge: 'App för städföretag och fastighetsservice',
     h1_line1: 'Ditt städföretag,',
-    h1_line2: 'hanterat i realtid.',
+    h1_line2: 'med koll på varje stämpling.',
     subtitle:
-      'GPS-stämpling, automatiskt servicebevis och schemahantering i en app. Inga kalkylblad, inga tvister. Kunden klagar? Skicka rapporten och diskussionen är över.',
+      'GPS-stämpling, automatiskt servicebevis och schemahantering i en app. Inga kalkylblad, färre tvister. Kunden klagar? Skicka rapporten och diskussionen är över.',
     cta_primary: 'Testa det på ett riktigt uppdrag',
     cta_note: '14 dagar, upp till 50 medarbetare i fält, utan kreditkort.',
   },
@@ -26,11 +26,11 @@ const content: SettoreContent = {
       },
       {
         title: 'Papperstidrapporter är opålitliga?',
-        desc: 'Automatisk registrering från smartphonen, inga manuella inmatningar. Datan är vad den är, och kan inte ändras.',
+        desc: 'Automatisk registrering från smartphonen, inga manuella inmatningar. Datan är vad den är, och varje ändring syns i efterhand.',
       },
       {
         title: 'Svårt att samordna flera team?',
-        desc: 'Se var alla befinner sig i realtid, på alla platser, från en enda dashboard. Inga samtal.',
+        desc: 'Se var alla senast stämplat in, på alla platser, från en enda dashboard. Inga samtal.',
       },
     ],
   },
@@ -57,11 +57,11 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'Städaren stämplar med GPS',
-        desc: 'Öppnar och stänger passet från sin smartphone. GeoTapp registrerar äkta GPS-koordinater, foton och tidsstämpel, helautomatiskt, manipuleringssäkert.',
+        desc: 'Öppnar och stänger passet från sin smartphone. GeoTapp registrerar äkta GPS-koordinater, foton och tidsstämpel, helautomatiskt, och varje ändring syns.',
       },
       {
-        title: 'Ansvarig ser allt i realtid',
-        desc: 'En dashboard för alla platser. Vet exakt vem som är på plats, var och sedan när, utan att jaga någon.',
+        title: 'Ansvarig ser varje stämpling direkt',
+        desc: 'En dashboard för alla platser. Ser var varje städare senast stämplade in, utan att jaga någon.',
       },
       {
         title: 'Rapporten är klar automatiskt',
@@ -87,7 +87,7 @@ const content: SettoreContent = {
       {
         label: 'Vid tvist',
         competitor: 'Data inte försvarbar',
-        geotapp: 'Förseglad rapport, manipuleringssäker',
+        geotapp: 'Förseglad rapport, varje ändring syns',
       },
       {
         label: 'Fotobevis',
@@ -97,7 +97,7 @@ const content: SettoreContent = {
       {
         label: 'GDPR-kompatibilitet',
         competitor: 'Ofta att kontrollera',
-        geotapp: 'Kompatibelt by design, formulär inkluderade',
+        geotapp: 'Byggd för att hålla sig inom GDPR, formulär ingår',
       },
     ],
   },
@@ -111,7 +111,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Verklig kontroll över alla platser',
-        desc: 'Se i realtid vem som är aktiv var, över alla byggnader samtidigt. Inga samtal, inga e-postmeddelanden.',
+        desc: 'Se vem som senast stämplat in var, över alla byggnader samtidigt. Inga samtal, inga e-postmeddelanden.',
       },
       {
         title: 'Försvarbara rapporter överallt',
@@ -134,7 +134,7 @@ const content: SettoreContent = {
 
   testimonial: {
     quote:
-      'Sedan vi började använda GeoTapp löses kundtvister på en minut. Vi skickar rapporten med foton och GPS, och diskussionen slutar där. Vi har inte förlorat ett enda kontrakt på ett år.',
+      'Sedan vi började använda GeoTapp löses kundtvister på en minut. Vi skickar rapporten med foton och GPS, och diskussionen slutar där. Vi har tappat betydligt färre kontrakt sedan dess.',
     author: 'Susanne M.',
     role: 'Ägare, kommersiellt städföretag - Sverige',
   },
@@ -153,11 +153,11 @@ const content: SettoreContent = {
       },
       {
         q: 'Är GeoTapp GDPR-kompatibelt för GPS-registrering av anställda?',
-        a: 'Ja. GeoTapp spårar plats endast under aktiv arbetstid, inkluderar mallar för medarbetarinformation och samlar inte in onödiga data.',
+        a: 'GeoTapp är byggd för att hålla sig inom GDPR: spårar plats endast under aktiv arbetstid, mallar för medarbetarinformation ingår, och samlar inte in onödiga data.',
       },
       {
         q: 'Hur hanterar jag team på flera platser samtidigt?',
-        a: 'Med GeoTapp Flow har du en dashboard för alla platser. Se i realtid vem som är aktiv var, tilldela uppdrag och få automatiska varningar.',
+        a: 'Med GeoTapp Flow har du en dashboard för alla platser. Se vem som senast stämplat in var, tilldela uppdrag och få automatiska varningar.',
       },
       {
         q: 'Behövs papperstidrapporter fortfarande?',
@@ -173,7 +173,7 @@ const content: SettoreContent = {
   cta: {
     title: 'Dina städare gör bra arbete. Se till att kunden ser det.',
     subtitle:
-      'Varje uppdrag blir verifierbart servicebevis. Inga tvister, inga förlorade kontrakt.',
+      'Varje uppdrag blir verifierbart servicebevis. Färre tvister, färre förlorade kontrakt.',
     primary: 'Starta gratis nu!',
     secondary: 'Se Priser',
   },
@@ -200,7 +200,7 @@ const content: SettoreContent = {
     {
       question: 'Är GeoTapp GDPR-kompatibelt för GPS-registrering av anställda?',
       answer:
-        'Ja. GeoTapp spårar plats endast under aktiv arbetstid, inkluderar mallar för medarbetarinformation och samlar inte in onödiga data.',
+        'GeoTapp är byggd för att hålla sig inom GDPR: spårar plats endast under aktiv arbetstid, mallar för medarbetarinformation ingår, och samlar inte in onödiga data.',
     },
   ],
 };

@@ -9,7 +9,7 @@ const content: SettoreContent = {
     badge: 'Software til Elektrikere, VVS-montører og Installationsteams',
     h1_line1: 'Feltarbejde under kontrol:',
     h1_line2: 'opgaver, timesedler og dokumentation samlet ét sted',
-    subtitle: 'GeoTapp forbinder Flow + TimeTracker for virksomheder, der arbejder mellem varebiler, byggepladser og slutkunder. Android- og iOS-apps støtter teknikeren i felten; kontoret ser opgaven, tiderne, fotodokumentationen og noter uden at skulle ringe til nogen. GDPR-kompatibelt og i overensstemmelse med Industriens Overenskomst.',
+    subtitle: 'GeoTapp forbinder Flow + TimeTracker for virksomheder, der arbejder mellem varebiler, byggepladser og slutkunder. Android- og iOS-apps støtter teknikeren i felten; kontoret ser opgaven, tiderne, fotodokumentationen og noter uden at skulle ringe til nogen. Bygget til at holde sig inden for GDPR og Industriens Overenskomst.',
     cta_primary: 'Anmod om en demo',
     cta_note: 'Ingen binding. Svar inden for 12 arbejdstimer.',
   },
@@ -36,10 +36,10 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'Teknikeren stempler ind på stedet',
-        desc: 'Med GeoTapp TimeTracker registrerer han start, slut, fotos og noter direkte fra sin smartphone. GPS-verificeret, GDPR-kompatibelt.',
+        desc: 'Med GeoTapp TimeTracker registrerer han start, slut, fotos og noter direkte fra sin smartphone. GPS-verificeret, bygget til at holde sig inden for GDPR.',
       },
       {
-        title: 'Kontoret ser alt i realtid',
+        title: 'Kontoret ser det, så snart der stemples',
         desc: 'Flow modtager data med det samme. Lederen ser opgave, fremdrift, tildelt tekniker og fotodokumentation uden at ringe.',
       },
       {

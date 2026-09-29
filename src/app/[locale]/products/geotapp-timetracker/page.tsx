@@ -16,7 +16,7 @@ import {
 
 const appMeta: Record<string, { title: string; description: string }> = {
   it: { title: 'GeoTapp TimeTracker - App Timbratura GPS per Tecnici sul Campo', description: 'GeoTapp TimeTracker è l\'app mobile per tecnici che registra presenze, attività e prove fotografiche dal campo. Timbratura GPS, report settimanali e sincronizzazione in tempo reale con Flow.' },
-  en: { title: 'GeoTapp TimeTracker - GPS Time Tracking App for Field Workers', description: 'GeoTapp TimeTracker is the mobile app for field technicians. GPS clock-in/out, photo evidence, weekly reports and real-time sync with the Flow management platform.' },
+  en: { title: 'GeoTapp TimeTracker: GPS clock-in app for field crews', description: 'Location is recorded when your crew clocks in, takes a break or clocks out, and nothing automatically in between. Photos attach to the job. 14 days free.' },
   de: { title: 'GeoTapp TimeTracker - GPS-Zeiterfassungs-App für Außendienstmitarbeiter', description: 'GeoTapp TimeTracker ist die mobile App für Außendiensttechniker. GPS-Zeiterfassung, Fotobeweise, Wochenberichte und Echtzeitsynchronisation mit Flow.' },
   fr: { title: 'GeoTapp TimeTracker - App de Pointage GPS pour Techniciens Terrain', description: 'GeoTapp TimeTracker est l\'application mobile pour les techniciens terrain. Pointage GPS, preuves photographiques, rapports hebdomadaires et synchronisation en temps réel avec Flow.' },
   es: { title: 'GeoTapp TimeTracker - App de Fichaje GPS para Técnicos de Campo', description: 'GeoTapp TimeTracker es la app móvil para técnicos de campo. Fichaje GPS, pruebas fotográficas, informes semanales y sincronización en tiempo real con Flow.' },

@@ -53,7 +53,7 @@
       },
       "generatore": {
         "title": "GPS notice generator",
-        "desc": "Create your customised GPS privacy notice with your logo, GDPR-compliant. Free, in your browser."
+        "desc": "Create your customised GPS privacy notice with your logo, built to reflect GDPR requirements. Free, in your browser."
       },
       "conservazione": {
         "title": "Data retention policy",
@@ -201,13 +201,13 @@
       ]
     },
     "proof_note": "Evidence captured by camera only, no continuous tracking.",
-    "proof_claim": "Nothing recorded between clock-in and clock-out.",
+    "proof_claim": "Nothing automatically recorded between clock-in and clock-out.",
     "sticky_cta_subtitle": "14 days free, no credit card"
   },
   "home_sections": {
     "flow": {
       "badge": "GeoTapp Flow",
-      "title": "The office sees everything. In real time.",
+      "title": "The office sees every update. As it happens.",
       "subtitle": "Flow is the operational hub: jobs, tasks, progress and structured reports. <strong class=\"text-slate-900\">The field works. The office knows.</strong><br/><br/><em>Your company is a living organism. Every job, every task, every worker is a heartbeat. GeoTapp Flow keeps them all in sync.</em>",
       "features": {
         "crm": "<strong>Job Management:</strong> Every intervention is structured from the start, with assigned technician, location and live status.",
@@ -250,11 +250,11 @@
         },
         {
           "title": "Privacy by design",
-          "desc": "Location is recorded <strong>only</strong> at clock-in and clock-out. No continuous tracking."
+          "desc": "Location is recorded <strong>only</strong> when the worker clocks in, takes a break or clocks out. No continuous tracking."
         },
         {
-          "title": "Real-time operational control",
-          "desc": "Field data arrives in Flow immediately. The office has live visibility without calling anyone."
+          "title": "Operational control, updated as it happens",
+          "desc": "Field data arrives in Flow immediately. The office sees it without calling anyone."
         },
         {
           "title": "Defensible proof over time",
@@ -284,7 +284,7 @@
       },
       "pulizie": {
         "name": "Cleaning",
-        "desc": "Cleaning companies, Facility, Multiservice. Every round documented and verifiable by the client, zero disputes.",
+        "desc": "Cleaning companies, Facility, Multiservice. Every round documented and verifiable by the client, fewer disputes.",
         "cta": "Avoid disputes"
       },
       "elettricisti": {
@@ -294,7 +294,7 @@
       },
       "idraulici": {
         "name": "Plumbers",
-        "desc": "Plumbing, heating, boilers. GPS job reports with before-and-after photos, zero disputes about work completed.",
+        "desc": "Plumbing, heating, boilers. GPS job reports with before-and-after photos, fewer disputes about work completed.",
         "cta": "Prove every job done"
       },
       "termoidraulici": {
@@ -380,7 +380,7 @@
           {
             "name": "GeoTapp Flow Team",
             "tagline": "For small operational teams.",
-            "desc": "Coordinate and manage your operational team in real time.",
+            "desc": "Coordinate and manage your operational team as work happens.",
             "features": [
               "5 Flow users included",
               "Job management",
@@ -644,7 +644,7 @@
         "the-oracle": {
           "name": "Operational Visibility",
           "short": "Real-time operational dashboard. Always know how many interventions are open, in progress or completed today.",
-          "full": "### Operational Data, Not Assumptions.\n\nDeciding without reliable data is dangerous.\n**Operational Visibility** turns field data into concrete information.\n\n#### Operational Dashboard\n\nSee in real time:\n- Open and in-progress interventions\n- Active technicians\n- Interventions completed today and this week\n\n#### Periodic Reports\n\nReceive automated activity summaries.\nCompare periods, identify bottlenecks and optimise operations."
+          "full": "### Operational Data, Not Assumptions.\n\nDeciding without reliable data is dangerous.\n**Operational Visibility** turns field data into concrete information.\n\n#### Operational Dashboard\n\nSee at a glance:\n- Open and in-progress interventions\n- Active technicians\n- Interventions completed today and this week\n\n#### Periodic Reports\n\nReceive automated activity summaries.\nCompare periods, identify bottlenecks and optimise operations."
         }
       }
     },
@@ -984,7 +984,7 @@
       "section_label": "The Founder",
       "name": "Michele Angelo Petraroli",
       "role": "Founder & CEO",
-      "bio": "Michele Angelo Petraroli is the founder and CEO of GeoTapp, an Italian SaaS company building field workforce management software for European SMEs. Coming from an operational background where he saw firsthand how cleaning crews, installers and security teams lose money to missing proofs of work, he founded GeoTapp in 2024 to solve it at the source. Today GeoTapp helps European SMEs with GDPR-compliant GPS tracking, photographic evidence and digital signatures that make every field job verifiable.",
+      "bio": "Michele Angelo Petraroli is the founder and CEO of GeoTapp, an Italian SaaS company building field workforce management software for European SMEs. Coming from an operational background where he saw firsthand how cleaning crews, installers and security teams lose money to missing proofs of work, he founded GeoTapp in 2024 to solve it at the source. Today GeoTapp helps European SMEs with GPS tracking built to stay within GDPR, photographic evidence and digital signatures that make every field job verifiable.",
       "expertise_label": "Areas of expertise",
       "expertise": [
         "Field Service Management",
@@ -1079,7 +1079,7 @@
   },
   "roi": {
     "meta_title": "GeoTapp ROI Calculator - Discover Your Real Savings",
-    "meta_desc": "Calculate in 2 minutes how much you'd save with GeoTapp: less paperwork, zero disputes, more productive operators. No email, no account.",
+    "meta_desc": "Calculate in 2 minutes how much you'd save with GeoTapp: less paperwork, fewer disputes, more productive operators. No email, no account.",
     "hero_title": "Calculate Your ROI with GeoTapp",
     "hero_subtitle": "Enter your company data and discover how much you can save every year.",
     "step1_title": "Your Company",
@@ -1246,7 +1246,7 @@
     "scaricaModello": "Download the template",
     "autoritaCompetente": "Competent authority",
     "disclaimer": "This is an informational resource, not legal advice. Before activating a monitoring system, have your situation checked by a professional.",
-    "ctaTitolo": "Want a system that is already compliant?",
+    "ctaTitolo": "Want a system built to stay within the rules?",
     "ctaTesto": "GeoTapp records the location only at clock-in, not continuously, and generates the notice for workers to sign. Try it for free.",
     "ctaBottone": "Try GeoTapp for free",
     "faq": {

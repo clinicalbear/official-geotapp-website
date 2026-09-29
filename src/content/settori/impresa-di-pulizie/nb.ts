@@ -4,15 +4,15 @@ const content: SettoreContent = {
   meta: {
     title: 'App for Rengjøringsfirma: GPS-Teamstyring & Servicebevis | GeoTapp',
     description:
-      'Styr rengjøringsteam, vaktplaner og oppmøte med GPS i sanntid. Automatisk servicebevis, null kundetvister. GDPR-kompatibel rengjøringsapp.',
+      'Styr rengjøringsteam, vaktplaner og oppmøte med GPS-stempling. Automatisk servicebevis, færre kundetvister. Rengjøringsapp bygget for å holde seg innenfor GDPR.',
   },
 
   hero: {
     badge: 'App for rengjøringsfirmaer og multiservice',
     h1_line1: 'Ditt rengjøringsfirma,',
-    h1_line2: 'styrt i sanntid.',
+    h1_line2: 'styrt med hver stempling.',
     subtitle:
-      'GPS-stempling, automatisk servicebevis og vaktstyring i én app. Ingen regneark, ingen tvister. Kunden klager? Send rapporten, og diskusjonen er over.',
+      'GPS-stempling, automatisk servicebevis og vaktstyring i én app. Ingen regneark, færre tvister. Kunden klager? Send rapporten, og diskusjonen er raskt avklart.',
     cta_primary: 'Prøv det på et ekte oppdrag',
     cta_note: '14 dager, opptil 50 medarbeidere i felt, uten kredittkort.',
   },
@@ -30,7 +30,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Vanskelig å koordinere flere team?',
-        desc: 'Se hvor alle er i sanntid, på alle lokasjoner, fra ett dashboard. Ingen oppringinger.',
+        desc: 'Se hvem som har stemplet inn, hvor og når, på alle lokasjoner, fra ett dashboard. Ingen oppringinger.',
       },
     ],
   },
@@ -60,7 +60,7 @@ const content: SettoreContent = {
         desc: 'Åpner og lukker vakten fra smarttelefonen. GeoTapp registrerer ekte GPS-koordinater, bilder og tidsstempel, helautomatisk, og enhver endring kan oppdages.',
       },
       {
-        title: 'Lederen ser alt i sanntid',
+        title: 'Lederen ser hver stempling med en gang',
         desc: 'Ett dashboard for alle lokasjoner. Vet nøyaktig hvem som er på stedet, hvor og siden når, uten å jage noen.',
       },
       {
@@ -97,7 +97,7 @@ const content: SettoreContent = {
       {
         label: 'GDPR-overholdelse',
         competitor: 'Ofte å kontrollere',
-        geotapp: 'Kompatibel by design, skjemaer inkludert',
+        geotapp: 'Bygget for å holde seg innenfor GDPR, skjemaer inkludert',
       },
     ],
   },
@@ -111,7 +111,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Ekte kontroll over alle lokasjoner',
-        desc: 'Se i sanntid hvem som er aktiv hvor, på alle bygg samtidig. Ingen oppringinger, ingen e-poster.',
+        desc: 'Se hvem som er aktiv hvor, med status oppdatert ved hver stempling, på alle bygg samtidig. Ingen oppringinger, ingen e-poster.',
       },
       {
         title: 'Forsvarlige rapporter overalt',
@@ -134,7 +134,7 @@ const content: SettoreContent = {
 
   testimonial: {
     quote:
-      'Siden vi begynte å bruke GeoTapp, løses kundetvister på ett minutt. Vi sender rapporten med bilder og GPS, og diskusjonen stopper der. Vi har ikke mistet en eneste kontrakt på et år.',
+      'Siden vi begynte å bruke GeoTapp, avklares kundetvister raskt. Vi sender rapporten med bilder og GPS, og diskusjonen stopper der. Vi har ikke mistet en eneste kontrakt på et år.',
     author: 'Susanne M.',
     role: 'Eier, kommersielt rengjøringsfirma - Norge',
   },
@@ -153,11 +153,11 @@ const content: SettoreContent = {
       },
       {
         q: 'Er GeoTapp GDPR-kompatibelt for GPS-registrering av ansatte?',
-        a: 'Ja. GeoTapp sporer posisjon kun i aktiv arbeidstid, inkluderer maler for ansattinformasjon og samler ikke inn unødvendige data.',
+        a: 'GeoTapp er bygget for å holde seg innenfor GDPR: posisjon spores kun i aktiv arbeidstid, maler for ansattinformasjon følger med, og det samles ikke inn unødvendige data.',
       },
       {
         q: 'Hvordan styrer jeg team på flere lokasjoner samtidig?',
-        a: 'Med GeoTapp Flow har du ett dashboard for alle lokasjoner. Se i sanntid hvem som er aktiv hvor, tildel oppdrag og motta automatiske varsler.',
+        a: 'Med GeoTapp Flow har du ett dashboard for alle lokasjoner. Se hvem som er aktiv hvor, oppdatert ved hver stempling, tildel oppdrag og motta automatiske varsler.',
       },
       {
         q: 'Er papirtimelister fortsatt nødvendige?',
@@ -173,7 +173,7 @@ const content: SettoreContent = {
   cta: {
     title: 'Dine renholdere gjør godt arbeid. Sørg for at kunden ser det.',
     subtitle:
-      'Hvert oppdrag blir til verifiserbart servicebevis. Null tvister, null tapte kontrakter.',
+      'Hvert oppdrag blir til verifiserbart servicebevis. Færre tvister, tryggere kontrakter.',
     primary: 'Start gratis nå!',
     secondary: 'Se Priser',
   },
@@ -200,7 +200,7 @@ const content: SettoreContent = {
     {
       question: 'Er GeoTapp GDPR-kompatibelt for GPS-registrering av ansatte?',
       answer:
-        'Ja. GeoTapp sporer posisjon kun i aktiv arbeidstid, inkluderer maler for ansattinformasjon og samler ikke inn unødvendige data.',
+        'GeoTapp er bygget for å holde seg innenfor GDPR: posisjon spores kun i aktiv arbeidstid, maler for ansattinformasjon følger med, og det samles ikke inn unødvendige data.',
     },
   ],
 };

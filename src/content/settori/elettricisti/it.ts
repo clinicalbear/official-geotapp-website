@@ -2,13 +2,13 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App per Elettricisti e Impiantisti | GeoTapp - Rapportini GPS',
-    description: 'GeoTapp è l\'app per elettricisti e impiantisti: rapportini GPS automatici, foto degli impianti e report dove ogni modifica è rilevabile. Chiudi le contestazioni con prove reali. Prova gratis.',
+    title: 'App per elettricisti: rapportino con ora, posizione e foto',
+    description: 'Un tocco all\'arrivo, uno all\'uscita, le foto del quadro allegate all\'intervento. Il rapportino è pronto quando riparti. 14 giorni gratis.',
   },
   hero: {
     badge: 'App per Elettricisti e Impiantisti Elettrici',
     h1_line1: 'App per elettricisti:',
-    h1_line2: 'rapportini GPS, prove fotografiche e zero contestazioni.',
+    h1_line2: 'rapportini GPS, prove fotografiche e meno contestazioni.',
     subtitle: 'GeoTapp registra ogni intervento elettrico con GPS, foto e timestamp verificabili. Il cliente contesta? Mostri il rapportino, non discuti. Il tuo tecnico è protetto, il tuo fatturato anche.',
     cta_primary: 'Inizia subito gratuitamente!',
     cta_note: 'Nessun vincolo. Risposta entro 12 ore lavorative.',
@@ -39,7 +39,7 @@ const content: SettoreContent = {
         desc: 'Con GeoTapp TimeTracker timbra ingresso e uscita con GPS, scatta foto dell\'impianto e aggiunge note tecniche dallo smartphone.',
       },
       {
-        title: 'L\'ufficio vede tutto in tempo reale',
+        title: 'L\'ufficio vede tutto appena arriva',
         desc: 'GeoTapp Flow riceve i dati istantaneamente. Il responsabile vede commessa, tecnico assegnato, avanzamento e prove fotografiche senza chiamare.',
       },
       {
@@ -75,7 +75,7 @@ const content: SettoreContent = {
       {
         label: 'Conformità GDPR',
         competitor: 'Spesso da verificare',
-        geotapp: 'Conforme per design, modulistica inclusa',
+        geotapp: 'Costruito per stare nei paletti del GDPR, modulistica inclusa',
       },
     ],
   },
@@ -205,7 +205,7 @@ const content: SettoreContent = {
   schema_faq: [
     {
       question: 'GeoTapp funziona come app per elettricisti?',
-      answer: 'Sì. GeoTapp è l\'app per elettricisti e impiantisti che registra ogni intervento con GPS, foto e timestamp verificabili. Il tecnico timbra dal campo, l\'ufficio vede tutto in tempo reale, il cliente riceve un rapportino sigillato.',
+      answer: 'Sì. GeoTapp è l\'app per elettricisti e impiantisti che registra ogni intervento con GPS, foto e timestamp verificabili. Il tecnico timbra dal campo, l\'ufficio vede tutto appena arriva, il cliente riceve un rapportino sigillato.',
     },
     {
       question: 'Come sigillo un intervento elettrico con GeoTapp?',
@@ -213,7 +213,7 @@ const content: SettoreContent = {
     },
     {
       question: 'GeoTapp aiuta a gestire più squadre di elettricisti su cantieri diversi?',
-      answer: 'Sì. GeoTapp Flow permette al titolare di coordinare più squadre, assegnare commesse, seguire lo stato degli interventi e raccogliere prove fotografiche da tutti i cantieri attivi in tempo reale.',
+      answer: 'Sì. GeoTapp Flow permette al titolare di coordinare più squadre, assegnare commesse, seguire lo stato degli interventi e raccogliere prove fotografiche da tutti i cantieri attivi, appena vengono caricate.',
     },
     {
       question: 'I rapportini GeoTapp sono accettati in caso di contestazione?',

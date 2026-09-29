@@ -3,7 +3,7 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'App pour Plombiers & Chauffagistes | GeoTapp - GPS',
-    description: 'GeoTapp est l\'app pour plombiers et chauffagistes : rapports GPS vérifiés, photos d\'installation et comptes-rendus inviolables. Clôturez les litiges avec de vraies preuves. Essai gratuit.',
+    description: 'GeoTapp, l\'app plombiers et chauffagistes : rapports GPS vérifiés, photos et comptes-rendus scellés. Répondez aux litiges avec de vraies preuves. Essai gratuit.',
   },
   hero: {
     badge: 'App pour Plombiers, Chauffagistes et Techniciens CVC',
@@ -39,12 +39,12 @@ const content: SettoreContent = {
         desc: 'Avec GeoTapp TimeTracker, il pointe avec GPS, photographie le système avant et après, et ajoute des notes techniques depuis son smartphone.',
       },
       {
-        title: 'Le bureau voit tout en temps réel',
+        title: 'Le bureau voit chaque étape dès qu\'elle arrive',
         desc: 'GeoTapp Flow reçoit les données instantanément. Le responsable voit la mission, l\'avancement et les preuves photo sans appeler.',
       },
       {
         title: 'Le rapport est votre preuve',
-        desc: 'À la fin de l\'intervention, un rapport scellé est généré : horodatage GPS, photos système, matériaux utilisés. Inviolable. Le client peut le vérifier de façon autonome.',
+        desc: 'À la fin de l\'intervention, un rapport scellé est généré : horodatage GPS, photos système, matériaux utilisés. Toute modification reste visible. Le client peut le vérifier de façon autonome.',
       },
     ],
   },
@@ -57,7 +57,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Photos système scellées',
-        desc: 'Le technicien photographie avant et après l\'intervention. Chaque image est liée au GPS et à l\'horodatage, inviolable.',
+        desc: 'Le technicien photographie avant et après l\'intervention. Chaque image est liée au GPS et à l\'horodatage ; toute modification reste visible.',
       },
       {
         title: 'Rapports automatiques',

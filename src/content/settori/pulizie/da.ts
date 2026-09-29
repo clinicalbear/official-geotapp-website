@@ -36,10 +36,10 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'Rengøringsassistenten stempler ind på stedet',
-        desc: 'Med GeoTapp TimeTracker registrerer de start, slut, fotos af arealerne og noter direkte fra smartphonen. GPS-verificeret, GDPR-overensstemmende, Rengøringsoverenskomst-egnet.',
+        desc: 'Med GeoTapp TimeTracker registrerer de start, slut, fotos af arealerne og noter direkte fra smartphonen. GPS-verificeret, bygget til at holde sig inden for GDPR, Rengøringsoverenskomst-egnet.',
       },
       {
-        title: 'Kontoret ser alt i realtid',
+        title: 'Kontoret ser det, så snart der stemples',
         desc: 'Flow modtager data øjeblikkeligt. Driftlederen ser, hvilken bygning der er betjent, af hvem, på hvilket tidspunkt og med hvilken fotodokumentation, uden at foretage et eneste opkald.',
       },
       {
@@ -66,7 +66,7 @@ const content: SettoreContent = {
     ],
   },
   testimonial: {
-    quote: 'Siden vi begyndte at bruge GeoTapp, har vi ikke modtaget en eneste skriftlig klage fra en kunde. Billederne taler for sig selv.',
+    quote: 'Siden vi begyndte at bruge GeoTapp, modtager vi langt færre skriftlige klager fra kunder. Billederne taler for sig selv.',
     author: 'Kirsten H.',
     role: 'Driftsleder, rengøringsvirksomhed',
   },
@@ -80,7 +80,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Hvordan administrerer jeg teams spredt over flere bygninger på én gang?',
-        a: 'Flow viser realtidsstatus og position for hver rengøringsassistent pr. bygning. Du kan tildele vagter, kontrollere dækning og modtage automatiske advarsler ved fravær eller forsinkelser.',
+        a: 'Flow viser status og seneste stemplingssted for hver rengøringsassistent pr. bygning, opdateret ved hver stempling. Du kan tildele vagter, kontrollere dækning og modtage automatiske advarsler ved fravær eller forsinkelser.',
       },
       {
         q: 'Hjælper GeoTapp med overholdelse af Rengøringsoverenskomsten for pauser og overarbejde?',

@@ -12,7 +12,7 @@ const content: SettoreContent = {
   hero: {
     badge: 'App for Plumbers, HVAC Technicians and Heating Engineers',
     h1_line1: 'App for plumbers and HVAC technicians:',
-    h1_line2: 'GPS job reports, photo evidence and zero disputes.',
+    h1_line2: 'GPS job reports, photo evidence and fewer disputes.',
     subtitle: 'GeoTapp records every plumbing and heating job with GPS, photos and verifiable timestamps. Client disputes the work? Show them the report, no argument needed. Your engineers are protected, your invoices too.',
     cta_primary: 'Start free today',
     cta_note: 'No commitment. Response within 12 business hours.',
@@ -43,7 +43,7 @@ const content: SettoreContent = {
         desc: 'With GeoTapp TimeTracker they clock in and out with GPS, photograph the plumbing or heating system and add technical notes from their smartphone.',
       },
       {
-        title: 'Office sees everything in real time',
+        title: 'Office sees each update as it happens',
         desc: 'GeoTapp Flow receives the data instantly. The manager sees job status, assigned engineer, progress and photo evidence without calling.',
       },
       {
@@ -79,7 +79,7 @@ const content: SettoreContent = {
       {
         label: 'GDPR compliance',
         competitor: 'Often to verify',
-        geotapp: 'Compliant by design, forms included',
+        geotapp: 'Built to stay within GDPR, forms included',
       },
     ],
   },
@@ -188,7 +188,7 @@ const content: SettoreContent = {
     },
     {
       question: 'Does GeoTapp work as an app for plumbers and HVAC technicians?',
-      answer: 'Yes. GeoTapp is the app for plumbers and HVAC technicians that records every job with GPS, photos and verifiable timestamps. The engineer clocks in from the field, the office sees everything in real time, and the client receives a sealed job report.',
+      answer: 'Yes. GeoTapp is the app for plumbers and HVAC technicians that records every job with GPS, photos and verifiable timestamps. The engineer clocks in from the field, the office sees each clock-in as it happens, and the client receives a sealed job report.',
     },
     {
       question: 'How do I seal a plumbing or heating job with GeoTapp?',

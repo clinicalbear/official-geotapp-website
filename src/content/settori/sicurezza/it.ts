@@ -3,13 +3,13 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'Software Vigilanza Privata | GeoTapp - Turni GPS',
-    description: 'GeoTapp è il software per aziende di sicurezza e vigilanza privata: turni GPS, ronde documentate e prove fotografiche. Conforme GDPR. Prova gratis.',
+    description: 'GeoTapp è il software per aziende di sicurezza e vigilanza privata: turni GPS, ronde documentate e prove fotografiche. Pensato per il GDPR. Prova gratis.',
   },
   hero: {
     badge: 'Software per Vigilanza Privata, Guardie Giurate e Steward',
     h1_line1: 'Presenze e turni verificabili',
     h1_line2: 'per vigilanza e sicurezza privata',
-    subtitle: 'GeoTapp Flow e TimeTracker documentano la presenza delle guardie giurate ai posti assegnati con GPS verificato e timestamp sigillati. Conformità al CCNL Vigilanza Privata GPG, passaggio di consegne digitale e tracciamento qualifiche: tutto in un\'unica piattaforma. L\'app per vigilanza privata che sigilla ogni turno, ogni ronda, ogni presenza.',
+    subtitle: 'GeoTapp Flow e TimeTracker documentano la presenza delle guardie giurate ai posti assegnati con GPS verificato e timestamp sigillati. Tracciabilità secondo il CCNL Vigilanza Privata GPG, passaggio di consegne digitale e tracciamento qualifiche: tutto in un\'unica piattaforma. L\'app per vigilanza privata che sigilla ogni turno, ogni ronda, ogni presenza.',
     cta_primary: 'Inizia subito gratuitamente!',
     cta_note: 'Nessun vincolo. Risposta entro 12 ore lavorative.',
   },
@@ -39,8 +39,8 @@ const content: SettoreContent = {
         desc: 'GeoTapp TimeTracker registra ingresso, uscita, posizione GPS e foto con timestamp sigillati. Ogni ronda è documentata automaticamente dallo smartphone.',
       },
       {
-        title: 'Il responsabile vede i turni in tempo reale',
-        desc: 'Flow riceve i dati istantaneamente. Il responsabile operativo verifica la copertura di tutti i posti, i cambi turno e gli eventuali scostamenti senza chiamare il campo.',
+        title: 'Il responsabile vede i turni appena arrivano',
+        desc: 'Flow riceve i dati appena arrivano. Il responsabile operativo verifica la copertura di tutti i posti, i cambi turno e gli eventuali scostamenti senza chiamare il campo.',
       },
       {
         title: 'Il report è la tua prova, difendibile in audit',
@@ -75,7 +75,7 @@ const content: SettoreContent = {
       {
         label: 'Conformità GDPR',
         competitor: 'Spesso da verificare',
-        geotapp: 'Conforme per design, modulistica inclusa',
+        geotapp: 'Costruito per stare nei paletti del GDPR, modulistica inclusa',
       },
     ],
   },
@@ -122,8 +122,8 @@ const content: SettoreContent = {
         desc: 'Il cambio turno viene registrato digitalmente: note operative, stato dei posti e responsabilità. Informazioni critiche non si perdono più tra un turno e l\'altro.',
       },
       {
-        title: 'Dashboard multi-sito in tempo reale',
-        desc: 'Il responsabile vede dove sono tutte le guardie, lo stato di ogni posto e i cambi turno attivi, da qualsiasi dispositivo, senza telefonate.',
+        title: 'Dashboard multi-sito aggiornata a ogni timbratura',
+        desc: 'Il responsabile vede l\'ultima posizione timbrata di ogni guardia, lo stato di ogni posto e i cambi turno attivi, da qualsiasi dispositivo, senza telefonate.',
       },
       {
         title: 'Report difendibili in audit e in Prefettura',
@@ -186,7 +186,7 @@ const content: SettoreContent = {
     },
     {
       question: 'Come documento le ronde e i controlli periodici?',
-      answer: 'Ogni controllo viene registrato con GeoTapp TimeTracker: orario, posizione GPS verificata, foto del sito e note. Il report sigillato è disponibile per il committente in tempo reale o al termine del turno.',
+      answer: 'Ogni controllo viene registrato con GeoTapp TimeTracker: orario, posizione GPS verificata, foto del sito e note. Il report sigillato è disponibile per il committente appena generato, o al termine del turno.',
     },
     {
       question: 'Posso dimostrare al cliente che le ronde sono state effettuate regolarmente?',
@@ -194,11 +194,11 @@ const content: SettoreContent = {
     },
     {
       question: 'Il sistema è conforme alle normative sul lavoro notturno e ai CCNL della vigilanza?',
-      answer: 'GeoTapp traccia orari, straordinari e presenze in modo conforme ai principali CCNL del settore vigilanza e sicurezza, rispettando le normative GDPR sulla geolocalizzazione dei dipendenti.',
+      answer: 'GeoTapp traccia orari, straordinari e presenze secondo le voci dei principali CCNL del settore vigilanza e sicurezza, ed è costruito per stare dentro i paletti del GDPR per la geolocalizzazione dei dipendenti.',
     },
     {
       question: 'Funziona anche per coordinare più squadre su siti diversi?',
-      answer: 'Sì. Con GeoTapp Flow, il responsabile vede in tempo reale dove sono tutte le guardie, assegna i turni, gestisce le sostituzioni urgenti e raccoglie i report da tutti i siti in un\'unica dashboard.',
+      answer: 'Sì. Con GeoTapp Flow, il responsabile vede l\'ultima posizione timbrata di tutte le guardie, assegna i turni, gestisce le sostituzioni urgenti e raccoglie i report da tutti i siti in un\'unica dashboard.',
     },
   ],
 };
