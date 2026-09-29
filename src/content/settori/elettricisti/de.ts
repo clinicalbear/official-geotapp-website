@@ -8,8 +8,8 @@ const content: SettoreContent = {
   hero: {
     badge: 'App für Elektriker und Elektroinstallationsbetriebe',
     h1_line1: 'App für Elektriker:',
-    h1_line2: 'GPS-Einsatzberichte, Fotobeweise und keine Streitigkeiten.',
-    subtitle: 'GeoTapp erfasst jeden Elektroeinsatz mit GPS, Fotos und verifizierbaren Zeitstempeln. Kunde bestreitet den Einsatz? Zeigen Sie den Bericht, keine Diskussion nötig. Ihre Techniker sind geschützt, Ihre Rechnungen auch.',
+    h1_line2: 'GPS-Einsatzberichte, Fotobeweise und weniger Streit.',
+    subtitle: 'GeoTapp erfasst jeden Elektroeinsatz mit GPS, Fotos und verifizierbaren Zeitstempeln. Kunde bestreitet den Einsatz? Zeigen Sie den Bericht, der Streit klärt sich mit den Daten. Ihre Techniker sind geschützt, Ihre Rechnungen auch.',
     cta_primary: 'Jetzt kostenlos starten',
     cta_note: 'Keine Bindung. Antwort innerhalb von 12 Geschäftsstunden.',
   },
@@ -139,7 +139,7 @@ const content: SettoreContent = {
     badge: 'Überprüfbar von jedem, ohne Zugang zu Ihrem Konto',
   },
   testimonial: {
-    quote: 'Mit GeoTapp erfassen meine Techniker die Anlage sofort nach Abschluss. Kein Streit hält dem Bericht stand. Rechnungen werden bezahlt.',
+    quote: 'Mit GeoTapp erfassen meine Techniker die Anlage sofort nach Abschluss. Ein Streit ist mit dem Bericht schnell geklärt. Rechnungen werden bezahlt.',
     author: 'Klaus M.',
     role: 'Inhaber, Elektroinstallationsbetrieb',
   },

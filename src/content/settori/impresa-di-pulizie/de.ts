@@ -12,7 +12,7 @@ const content: SettoreContent = {
     h1_line1: 'Ihr Reinigungsunternehmen,',
     h1_line2: 'auf einen Blick verwaltet.',
     subtitle:
-      'GPS-Stempelung, automatische Servicenachweise und Schichtverwaltung in einer App. Keine Tabellen, keine Streitigkeiten. Der Kunde beschwert sich? Senden Sie den Bericht und die Diskussion ist beendet.',
+      'GPS-Stempelung, automatische Servicenachweise und Schichtverwaltung in einer App. Keine Tabellen, weniger Streit. Der Kunde beschwert sich? Senden Sie den Bericht und die Diskussion ist beendet.',
     cta_primary: 'Auf einem echten Auftrag testen',
     cta_note: '14 Tage, bis zu 50 Mitarbeiter im Außendienst, ohne Kreditkarte.',
   },
@@ -181,7 +181,7 @@ const content: SettoreContent = {
   cta: {
     title: 'Ihre Reinigungskräfte arbeiten gut. Sorgen Sie dafür, dass der Kunde es sieht.',
     subtitle:
-      'Jeder Einsatz wird zum verifizierbaren Servicenachweis. Keine Streitigkeiten, keine verlorenen Verträge.',
+      'Jeder Einsatz wird zum verifizierbaren Servicenachweis. Weniger Streit, weniger verlorene Verträge.',
     primary: 'Jetzt kostenlos starten!',
     secondary: 'Preise ansehen',
   },

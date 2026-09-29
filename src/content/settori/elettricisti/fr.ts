@@ -8,8 +8,8 @@ const content: SettoreContent = {
   hero: {
     badge: 'App pour Électriciens et Installateurs Électriques',
     h1_line1: 'App pour électriciens :',
-    h1_line2: 'rapports GPS, preuves photo et zéro litige.',
-    subtitle: 'GeoTapp enregistre chaque intervention électrique avec GPS, photos et horodatages vérifiables. Le client conteste ? Montrez le rapport, pas de discussion. Vos techniciens sont protégés, vos factures aussi.',
+    h1_line2: 'rapports GPS, preuves photo et moins de litiges.',
+    subtitle: 'GeoTapp enregistre chaque intervention électrique avec GPS, photos et horodatages vérifiables. Le client conteste ? Montrez le rapport, la discussion se règle avec les données. Vos techniciens sont protégés, vos factures aussi.',
     cta_primary: 'Commencer gratuitement',
     cta_note: 'Sans engagement. Réponse sous 12 heures ouvrées.',
   },

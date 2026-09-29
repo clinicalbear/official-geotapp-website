@@ -294,7 +294,7 @@
       },
       "idraulici": {
         "name": "Klempner",
-        "desc": "Sanitär, Heizung, Kessel. GPS-Arbeitsberichte mit Vorher-Nachher-Fotos, keine Streitigkeiten über ausgeführte Arbeiten.",
+        "desc": "Sanitär, Heizung, Kessel. GPS-Arbeitsberichte mit Vorher-Nachher-Fotos, weniger Streit über ausgeführte Arbeiten.",
         "cta": "Jeden Auftrag beweisen"
       },
       "termoidraulici": {
@@ -707,7 +707,7 @@
         "data-core": {
           "name": "Wochenberichte",
           "short": "Detaillierte Berichte über geleistete Stunden pro Auftrag und Mitarbeiter. Zuverlässige Daten für interne Kontrolle und Abrechnung.",
-          "full": "### Daten lügen nicht.\n\nEntscheidungen auf Fakten statt auf Gefühl basieren.\n**Wochenberichte** extrahiert Wert aus dem täglichen Betrieb.\n\n#### Detaillierte Berichte\n\nJede Woche ein vollständiges Bild: Wer hat wo, an welchem Auftrag und wie lange gearbeitet.\n\n#### Vollständige Transparenz\n\nMitarbeiter und Manager konsultieren denselben Monatsbericht.\nGezählte Stunden sind für alle identisch.\nKeine Streitigkeiten am Monatsende."
+          "full": "### Daten lügen nicht.\n\nEntscheidungen auf Fakten statt auf Gefühl basieren.\n**Wochenberichte** extrahiert Wert aus dem täglichen Betrieb.\n\n#### Detaillierte Berichte\n\nJede Woche ein vollständiges Bild: Wer hat wo, an welchem Auftrag und wie lange gearbeitet.\n\n#### Vollständige Transparenz\n\nMitarbeiter und Manager konsultieren denselben Monatsbericht.\nGezählte Stunden sind für alle identisch.\nWeniger Streit am Monatsende."
         },
         "identity-forge": {
           "name": "Marken-App",

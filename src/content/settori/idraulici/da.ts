@@ -2,12 +2,12 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App til Blikkenslagere & VVS-installatører | GeoTapp - GPS',
-    description: 'GeoTapp: app til blikkenslagere og VVS-installatører med GPS-verificerede arbejdsrapporter og forseglede registreringer. Luk tvister med ægte beviser.',
+    title: 'App til blikkenslagere: arbejdssedler med GPS og fotos',
+    description: 'Blikkenslageren stempler ind hos kunden, fotograferer arbejdet, og arbejdssedlen er klar med tid og sted. Prøv gratis i 14 dage.',
   },
   hero: {
-    badge: 'App til Blikkenslagere, VVS-installatører og Varmetekniker',
-    h1_line1: 'App til blikkenslagere og VVS-installatører:',
+    badge: 'App til blikkenslagere og VVS-montører',
+    h1_line1: 'App til blikkenslagere:',
     h1_line2: 'GPS-rapporter, fotobeviser og færre tvister.',
     subtitle: 'GeoTapp registrerer hvert VVS- og varmearbejde med GPS, billeder og verificerbare tidsstempler. Kunden bestrider arbejdet? Vis rapporten: diskussionen afklares med dataene. Dine teknikere er beskyttede, dine fakturaer også.',
     cta_primary: 'Start gratis',

@@ -294,7 +294,7 @@
       },
       "idraulici": {
         "name": "Plombiers",
-        "desc": "Plomberie, chauffage, chaudières. Rapports GPS avec photos avant/après, zéro litige sur les travaux réalisés.",
+        "desc": "Plomberie, chauffage, chaudières. Rapports GPS avec photos avant/après, moins de litiges sur les travaux réalisés.",
         "cta": "Prouvez chaque travail"
       },
       "termoidraulici": {
@@ -707,7 +707,7 @@
         "data-core": {
           "name": "Rapports hebdomadaires",
           "short": "Rapports détaillés sur les heures travaillées par mission et par opérateur. Données fiables pour le contrôle interne et la facturation.",
-          "full": "### Les données ne mentent pas.\n\nPrenez des décisions sur la base des faits, pas des impressions.\nLes **Rapports hebdomadaires** extraient de la valeur des opérations quotidiennes.\n\n#### Rapports détaillés\n\nChaque semaine, une image complète : qui a travaillé, où, sur quelle mission et pendant combien de temps.\n\n#### Transparence totale\n\nLes employés et les responsables consultent le même rapport mensuel.\nLes heures comptabilisées sont identiques pour tous.\nAucun litige en fin de mois."
+          "full": "### Les données ne mentent pas.\n\nPrenez des décisions sur la base des faits, pas des impressions.\nLes **Rapports hebdomadaires** extraient de la valeur des opérations quotidiennes.\n\n#### Rapports détaillés\n\nChaque semaine, une image complète : qui a travaillé, où, sur quelle mission et pendant combien de temps.\n\n#### Transparence totale\n\nLes employés et les responsables consultent le même rapport mensuel.\nLes heures comptabilisées sont identiques pour tous.\nMoins de litiges en fin de mois."
         },
         "identity-forge": {
           "name": "Application aux couleurs de l'entreprise",

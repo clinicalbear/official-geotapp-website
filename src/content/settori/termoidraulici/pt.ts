@@ -9,7 +9,7 @@ const content: SettoreContent = {
     badge: 'App para Técnicos de Aquecimento e Instaladores Termossanitários',
     h1_line1: 'App para técnicos de aquecimento:',
     h1_line2: 'relatórios GPS, provas fotográficas e menos reclamações.',
-    subtitle: 'GeoTapp regista cada intervenção em caldeiras e instalações com GPS, fotos e carimbos de tempo verificáveis. O cliente nega os materiais substituídos? Mostre o relatório, sem discussões. Os seus técnicos estão protegidos, o seu faturamento também.',
+    subtitle: 'GeoTapp regista cada intervenção em caldeiras e instalações com GPS, fotos e carimbos de tempo verificáveis. O cliente nega os materiais substituídos? Mostre o relatório e a discussão resolve-se com os dados. Os seus técnicos estão protegidos, o seu faturamento também.',
     cta_primary: 'Comece grátis agora!',
     cta_note: 'Sem compromisso. Resposta em 12 horas úteis.',
   },

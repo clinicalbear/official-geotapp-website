@@ -9,7 +9,7 @@ const content: SettoreContent = {
     badge: 'App para Fontaneros Calefactores e Instaladores Termosanitarios',
     h1_line1: 'App para fontaneros calefactores:',
     h1_line2: 'informes GPS, pruebas fotográficas y menos reclamaciones.',
-    subtitle: 'GeoTapp registra cada intervención en calderas e instalaciones con GPS, fotos y marcas de tiempo verificables. ¿El cliente niega los materiales sustituidos? Muéstrale el informe, sin discusiones. Tus técnicos están protegidos, tu facturación también.',
+    subtitle: 'GeoTapp registra cada intervención en calderas e instalaciones con GPS, fotos y marcas de tiempo verificables. ¿El cliente niega los materiales sustituidos? Muéstrale el informe y la discusión se resuelve con los datos. Tus técnicos están protegidos, tu facturación también.',
     cta_primary: '¡Empieza gratis ahora!',
     cta_note: 'Sin compromiso. Respuesta en 12 horas laborables.',
   },

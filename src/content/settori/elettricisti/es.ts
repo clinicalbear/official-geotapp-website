@@ -22,7 +22,7 @@ const content: SettoreContent = {
     badge: 'App para electricistas y empresas de instalaciones eléctricas',
     h1_line1: 'App para electricistas:',
     h1_line2: 'informes GPS, pruebas fotográficas y menos disputas.',
-    subtitle: 'GeoTapp registra cada intervención eléctrica con GPS, fotos y marcas de tiempo verificables. ¿El cliente disputa el trabajo? Muestra el informe, sin discusión. Tus técnicos están protegidos, tus facturas también.',
+    subtitle: 'GeoTapp registra cada intervención eléctrica con GPS, fotos y marcas de tiempo verificables. ¿El cliente disputa el trabajo? Muestra el informe y la discusión se resuelve con los datos. Tus técnicos están protegidos, tus facturas también.',
     cta_primary: 'Empezar gratis',
     cta_note: 'Sin compromiso. Respuesta en 12 horas laborables.',
   },

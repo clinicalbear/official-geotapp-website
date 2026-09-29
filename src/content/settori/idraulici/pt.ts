@@ -9,7 +9,7 @@ const content: SettoreContent = {
     badge: 'App para Canalizadores, Técnicos AVAC e Aquecimento',
     h1_line1: 'App para canalizadores e técnicos AVAC:',
     h1_line2: 'relatórios GPS, provas fotográficas e menos disputas.',
-    subtitle: 'GeoTapp regista cada intervenção de canalização e aquecimento com GPS, fotos e carimbos de data/hora verificáveis. O cliente contesta? Mostre o relatório, sem discussão. Os seus técnicos estão protegidos, as suas faturas também.',
+    subtitle: 'GeoTapp regista cada intervenção de canalização e aquecimento com GPS, fotos e carimbos de data/hora verificáveis. O cliente contesta? Mostre o relatório e a discussão resolve-se com os dados. Os seus técnicos estão protegidos, as suas faturas também.',
     cta_primary: 'Começar grátis',
     cta_note: 'Sem compromisso. Resposta em 12 horas úteis.',
   },

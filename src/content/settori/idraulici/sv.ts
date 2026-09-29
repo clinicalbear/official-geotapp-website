@@ -9,7 +9,7 @@ const content: SettoreContent = {
     badge: 'App för Rörmokare, VVS-installatörer och Värmetekniker',
     h1_line1: 'App för rörmokare och VVS-installatörer:',
     h1_line2: 'GPS-rapporter, fotobevis och färre tvister.',
-    subtitle: 'GeoTapp registrerar varje VVS- och värmejobb med GPS, foton och verifierbara tidsstämplar. Kunden bestrider arbetet? Visa rapporten, ingen diskussion. Dina tekniker är skyddade, dina fakturor också.',
+    subtitle: 'GeoTapp registrerar varje VVS- och värmejobb med GPS, foton och verifierbara tidsstämplar. Kunden bestrider arbetet? Visa rapporten, så reds diskussionen ut med uppgifterna. Dina tekniker är skyddade, dina fakturor också.',
     cta_primary: 'Börja gratis',
     cta_note: 'Utan åtagande. Svar inom 12 arbetstimmar.',
   },

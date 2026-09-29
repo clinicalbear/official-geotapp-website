@@ -2,14 +2,14 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App pour Plombiers-Chauffagistes | GeoTapp - GPS, Rapports & Preuves',
+    title: 'Application chauffagiste : interventions, GPS et photos',
     description: 'GeoTapp est l\'app pour installateurs de chauffage : rapports GPS vérifiés, photos d\'installations et documents scellés. Résolvez les litiges avec de vraies preuves. Essayez gratuitement.',
   },
   hero: {
     badge: 'App pour Plombiers-Chauffagistes et Installateurs Thermosanitaires',
-    h1_line1: 'App pour plombiers-chauffagistes :',
+    h1_line1: 'Application pour chauffagistes :',
     h1_line2: 'rapports GPS, preuves photo et moins de litiges.',
-    subtitle: 'GeoTapp enregistre chaque intervention sur chaudière et installation avec GPS, photos et horodatages vérifiables. Le client conteste les pièces remplacées ? Montrez le rapport, pas de discussion. Vos techniciens sont protégés, vos factures aussi.',
+    subtitle: 'GeoTapp enregistre chaque intervention sur chaudière et installation avec GPS, photos et horodatages vérifiables. Le client conteste les pièces remplacées ? Montrez le rapport, la discussion se règle avec les données. Vos techniciens sont protégés, vos factures aussi.',
     cta_primary: 'Démarrer gratuitement !',
     cta_note: 'Sans engagement. Réponse sous 12 heures ouvrables.',
   },

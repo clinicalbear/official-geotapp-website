@@ -156,7 +156,7 @@ const content: SettoreContent = {
     badge: 'Verificabile da chiunque, senza accesso al tuo account',
   },
   testimonial: {
-    quote: 'Con GeoTapp i miei tecnici registrano l\'impianto appena finito. Nessuna contestazione regge più. Le fatture vengono pagate.',
+    quote: 'Con GeoTapp i miei tecnici registrano l\'impianto appena finito. Le contestazioni si chiudono in fretta. Le fatture vengono pagate.',
     author: 'Luca M.',
     role: 'Titolare, impianti elettrici civili e industriali',
   },

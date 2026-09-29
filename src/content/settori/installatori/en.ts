@@ -44,7 +44,7 @@ const content: SettoreContent = {
       },
       {
         title: 'The report is already ready',
-        desc: 'At the end of the job the work report is already structured with real data. No manual reconstruction. No dispute without an answer.',
+        desc: 'At the end of the job the work report is already structured with real data. No manual reconstruction. An answer ready for every dispute.',
       },
     ],
   },

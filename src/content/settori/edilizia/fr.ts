@@ -9,7 +9,7 @@ const content: SettoreContent = {
     badge: 'Application pour entreprises du BTP et chantiers',
     h1_line1: 'Votre chantier sous contrôle,',
     h1_line2: 'dès le pointage.',
-    subtitle: 'Pointages GPS scellés, gestion des équipes et rapports automatiques. Zéro paperasse, zéro litiges. GeoTapp connecte Flow + TimeTracker pour les chefs de chantier, sous-traitants et maîtres d\'ouvrage.',
+    subtitle: 'Pointages GPS scellés, gestion des équipes et rapports automatiques. Zéro paperasse, moins de litiges. GeoTapp connecte Flow + TimeTracker pour les chefs de chantier, sous-traitants et maîtres d\'ouvrage.',
     cta_primary: 'Essayez-le sur un vrai chantier',
     cta_note: "14 jours, jusqu'à 50 intervenants sur le terrain, sans carte bancaire.",
   },

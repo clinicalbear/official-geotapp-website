@@ -9,7 +9,7 @@ const content: SettoreContent = {
     badge: 'App para Fontaneros, Técnicos HVAC y Calefactores',
     h1_line1: 'App para fontaneros y técnicos HVAC:',
     h1_line2: 'informes GPS, pruebas fotográficas y menos disputas.',
-    subtitle: 'GeoTapp registra cada intervención de fontanería y calefacción con GPS, fotos y marcas de tiempo verificables. ¿El cliente disputa el trabajo? Muestra el informe, sin discusión.',
+    subtitle: 'GeoTapp registra cada intervención de fontanería y calefacción con GPS, fotos y marcas de tiempo verificables. ¿El cliente disputa el trabajo? Muestra el informe y la discusión se resuelve con los datos.',
     cta_primary: 'Empezar gratis',
     cta_note: 'Sin compromiso. Respuesta en 12 horas laborables.',
   },

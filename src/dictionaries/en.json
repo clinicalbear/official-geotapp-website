@@ -707,7 +707,7 @@
         "data-core": {
           "name": "Weekly Reports",
           "short": "Detailed reports on hours worked per job and per operator. Reliable data for internal control and billing.",
-          "full": "### Data Does Not Lie.\n\nMake decisions based on facts, not impressions.\n**Weekly Reports** extracts value from daily operations.\n\n#### Detailed Reports\n\nEvery week, a complete picture: who worked, where, on which job and for how long.\n\n#### Full Transparency\n\nEmployees and managers consult the same monthly report.\nHours counted are identical for everyone.\nNo disputes at month end."
+          "full": "### Data Does Not Lie.\n\nMake decisions based on facts, not impressions.\n**Weekly Reports** extracts value from daily operations.\n\n#### Detailed Reports\n\nEvery week, a complete picture: who worked, where, on which job and for how long.\n\n#### Full Transparency\n\nEmployees and managers consult the same monthly report.\nHours counted are identical for everyone.\nFewer disputes at month end."
         },
         "identity-forge": {
           "name": "Branded App",

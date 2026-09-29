@@ -9,7 +9,7 @@ const content: SettoreContent = {
     badge: 'App für Heizungsinstallateure und Sanitär- und Heizungstechniker',
     h1_line1: 'App für Heizungsinstallateure:',
     h1_line2: 'GPS-Auftragsberichte, Fotodokumentation und weniger Streit.',
-    subtitle: 'GeoTapp erfasst jeden Heizungs- und Sanitäreinsatz mit GPS, Fotos und verifizierbaren Zeitstempeln. Der Kunde bestreitet ausgetauschte Teile? Zeigen Sie den Auftragsbericht, kein Streit nötig. Ihre Techniker sind geschützt, Ihre Rechnungen auch.',
+    subtitle: 'GeoTapp erfasst jeden Heizungs- und Sanitäreinsatz mit GPS, Fotos und verifizierbaren Zeitstempeln. Der Kunde bestreitet ausgetauschte Teile? Zeigen Sie den Auftragsbericht, der Streit klärt sich mit den Daten. Ihre Techniker sind geschützt, Ihre Rechnungen auch.',
     cta_primary: 'Jetzt kostenlos starten!',
     cta_note: 'Keine Bindung. Antwort innerhalb von 12 Wertstunden.',
   },

@@ -9,7 +9,7 @@ const content: SettoreContent = {
     badge: 'App för Elektriker och El-installatörer',
     h1_line1: 'App för elektriker:',
     h1_line2: 'GPS-rapporter, fotobevis och färre tvister.',
-    subtitle: 'GeoTapp registrerar varje elinstallation med GPS, foton och verifierbara tidsstämplar. Kunden bestrider arbetet? Visa rapporten, ingen diskussion. Dina tekniker är skyddade, dina fakturor också.',
+    subtitle: 'GeoTapp registrerar varje elinstallation med GPS, foton och verifierbara tidsstämplar. Kunden bestrider arbetet? Visa rapporten, så reds diskussionen ut med uppgifterna. Dina tekniker är skyddade, dina fakturor också.',
     cta_primary: 'Börja gratis',
     cta_note: 'Utan åtagande. Svar inom 12 arbetstimmar.',
   },

@@ -9,7 +9,7 @@ const content: SettoreContent = {
     badge: 'App für Bauunternehmen und Baustellen',
     h1_line1: 'Ihre Baustelle unter Kontrolle,',
     h1_line2: 'auf einen Blick.',
-    subtitle: 'GPS-versiegelte Stempelungen, Teamverwaltung und automatische Berichte. Kein Papierkram, keine Streitigkeiten. GeoTapp verbindet Flow + TimeTracker für Bauleiter, Subunternehmer und Projektleitung.',
+    subtitle: 'GPS-versiegelte Stempelungen, Teamverwaltung und automatische Berichte. Kein Papierkram, weniger Streit. GeoTapp verbindet Flow + TimeTracker für Bauleiter, Subunternehmer und Projektleitung.',
     cta_primary: 'Auf einer echten Baustelle testen',
     cta_note: '14 Tage, bis zu 50 Mitarbeiter im Außendienst, ohne Kreditkarte.',
   },

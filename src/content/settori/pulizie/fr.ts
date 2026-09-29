@@ -44,7 +44,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Le compte rendu de passation est déjà prêt',
-        desc: 'En fin de vacation, le bilan d\'intervention est déjà structuré avec des données réelles : heures travaillées, pauses, zones couvertes et photos. Aucune reconstruction manuelle, aucun litige sans réponse.',
+        desc: 'En fin de vacation, le bilan d\'intervention est déjà structuré avec des données réelles : heures travaillées, pauses, zones couvertes et photos. Aucune reconstruction manuelle, une réponse prête pour chaque litige.',
       },
     ],
   },

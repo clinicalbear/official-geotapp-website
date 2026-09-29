@@ -50,7 +50,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Bericht ist bereits fertig',
-        desc: 'Am Ende des Einsatzes ist der Stundenzettel bereits strukturiert mit echten Daten. Keine manuelle Nacharbeit. Kein Streit ohne Antwort.',
+        desc: 'Am Ende des Einsatzes ist der Stundenzettel bereits strukturiert mit echten Daten. Keine manuelle Nacharbeit. Für jeden Streit liegt eine Antwort bereit.',
       },
     ],
   },

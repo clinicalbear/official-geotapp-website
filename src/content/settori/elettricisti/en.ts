@@ -139,7 +139,7 @@ const content: SettoreContent = {
     badge: 'Verifiable by anyone, without access to your account',
   },
   testimonial: {
-    quote: 'With GeoTapp my engineers log the installation the moment they\'re done. No dispute survives the report. Invoices get paid.',
+    quote: 'With GeoTapp my engineers log the installation the moment they\'re done. Disputes get settled quickly with the report. Invoices get paid.',
     author: 'James H.',
     role: 'Owner, electrical installations',
   },

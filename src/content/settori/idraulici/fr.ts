@@ -2,14 +2,14 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App pour Plombiers & Chauffagistes | GeoTapp - GPS',
-    description: 'GeoTapp, l\'app plombiers et chauffagistes : rapports GPS vérifiés, photos et comptes-rendus scellés. Répondez aux litiges avec de vraies preuves. Essai gratuit.',
+    title: 'Application plombier : rapports GPS et photos du chantier',
+    description: 'Le plombier pointe chez le client, photographie l\'intervention, et le rapport part avec l\'heure et le lieu. Essai gratuit de 14 jours.',
   },
   hero: {
-    badge: 'App pour Plombiers, Chauffagistes et Techniciens CVC',
-    h1_line1: 'App pour plombiers et chauffagistes :',
-    h1_line2: 'rapports GPS, preuves photo et zéro litige.',
-    subtitle: 'GeoTapp enregistre chaque intervention plomberie et chauffage avec GPS, photos et horodatages vérifiables. Le client conteste ? Montrez le rapport, pas de discussion. Vos techniciens sont protégés, vos factures aussi.',
+    badge: 'Application pour plombiers et dépanneurs',
+    h1_line1: 'Application pour plombiers :',
+    h1_line2: 'rapports GPS, preuves photo et moins de litiges.',
+    subtitle: 'GeoTapp enregistre chaque intervention plomberie et chauffage avec GPS, photos et horodatages vérifiables. Le client conteste ? Montrez le rapport, la discussion se règle avec les données. Vos techniciens sont protégés, vos factures aussi.',
     cta_primary: 'Commencer gratuitement',
     cta_note: 'Sans engagement. Réponse sous 12 heures ouvrées.',
   },

@@ -8,8 +8,8 @@ const content: SettoreContent = {
   hero: {
     badge: 'App für Klempner, Heizungstechniker und SHK-Betriebe',
     h1_line1: 'App für Klempner und Heizungstechniker:',
-    h1_line2: 'GPS-Einsatzberichte, Fotobeweise und keine Streitigkeiten.',
-    subtitle: 'GeoTapp erfasst jeden Sanitär- und Heizungseinsatz mit GPS, Fotos und verifizierbaren Zeitstempeln. Kunde bestreitet die Arbeit? Zeigen Sie den Bericht, keine Diskussion nötig. Ihre Techniker sind geschützt, Ihre Rechnungen auch.',
+    h1_line2: 'GPS-Einsatzberichte, Fotobeweise und weniger Streit.',
+    subtitle: 'GeoTapp erfasst jeden Sanitär- und Heizungseinsatz mit GPS, Fotos und verifizierbaren Zeitstempeln. Kunde bestreitet die Arbeit? Zeigen Sie den Bericht, der Streit klärt sich mit den Daten. Ihre Techniker sind geschützt, Ihre Rechnungen auch.',
     cta_primary: 'Jetzt kostenlos starten',
     cta_note: 'Keine Bindung. Antwort innerhalb von 12 Geschäftsstunden.',
   },

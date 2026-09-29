@@ -2,7 +2,7 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App til VVS-installatører | GeoTapp GPS-rapporter',
+    title: 'App til VVS-installatører: rapporter med GPS og fotos',
     description: 'App til VVS-installatører: GPS-verificerede rapporter, fotos af installationer og forseglet dokumentation. Løs tvister med reel dokumentation. Prøv gratis.',
   },
   hero: {
