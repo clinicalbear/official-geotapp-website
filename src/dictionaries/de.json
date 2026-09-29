@@ -1179,8 +1179,8 @@
   "features": {
     "title": "Kraft unter der Haube.",
     "subtitle": "Wir bauen kein Spielzeug. GeoTapp ist eine Enterprise-Plattform, die für Skalierung gebaut wurde. Hier sind die Technologien, die die Magie möglich machen.",
-    "gps_title": "GPS-Tracking & Geografische Karten",
-    "gps_desc": "Wissen Sie, wo Ihr Team ist, in Echtzeit. Unsere Live-Karte zeigt jede Stempelung mit GPS-Koordinaten, Geofencing-Validierung und Anti-Spoofing-Schutz. Manager sehen auf einen Blick, wer vor Ort ist, ohne Anrufe, ohne Rätselraten.",
+    "gps_title": "GPS beim Stempeln, nicht den ganzen Tag",
+    "gps_desc": "Der Standort wird zweimal erfasst: wenn die Schicht beginnt und wenn sie endet. Dazwischen wird nichts automatisch aufgezeichnet. Die heutigen Stempelungen erscheinen jeweils mit GPS-Koordinaten, Geofence-Prüfung und Anti-Spoofing-Schutz: Das Büro weiß ohne Anruf, wer wo angefangen hat, und das Team weiß genau, was erfasst wird und wann.",
     "offline_title": "Offline-First Architecture",
     "offline_desc": "Die Verbindung bricht ab, die Arbeit nicht. Wir haben eine lokal synchronisierte Datenbank (CRDT) gebaut, die direkt in der App lebt. Ihre Techniker können in einem Kellerbunker arbeiten, sobald sie einen Streifen Himmel sehen, synchronisieren sich die Daten lautlos mit der Cloud.",
     "encryption_title": "Military-Grade Encryption",

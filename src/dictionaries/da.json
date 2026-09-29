@@ -1179,8 +1179,8 @@
   "features": {
     "title": "Kraft under motorhjelmen.",
     "subtitle": "Vi bygger ikke legetøj. GeoTapp er en enterprise-platform bygget til at skalere. Her er de teknologier, der gør magien mulig.",
-    "gps_title": "GPS-sporing & Geografiske Kort",
-    "gps_desc": "Ved, hvor dit team er, i realtid. Vores live-kort viser hvert stempel med GPS-koordinater, geofencing-validering og anti-spoofing-beskyttelse. Ledere ser med ét blik, hvem der er på stedet, ingen opkald, ingen gætterier.",
+    "gps_title": "GPS ved stempling, ikke hele dagen",
+    "gps_desc": "Placeringen registreres to gange: når vagten starter, og når den slutter. Ind imellem registreres der intet automatisk. Dagens stemplinger vises hver med GPS-koordinater, geofence-kontrol og anti-spoofing-beskyttelse: kontoret ved, hvem der startede hvor, uden at ringe, og holdet ved præcis, hvad der registreres, og hvornår.",
     "offline_title": "Offline-First Architecture",
     "offline_desc": "Forbindelsen forsvinder, arbejdet gør ikke. Vi har bygget en lokalt synkroniseret database (CRDT), der lever inde i appen. Dine teknikere kan arbejde i en underjordisk bunker; så snart de ser et glimt af himmel, synkroniserer data lydløst med skyen.",
     "encryption_title": "Military-Grade Encryption",

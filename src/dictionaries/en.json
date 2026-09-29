@@ -1179,8 +1179,8 @@
   "features": {
     "title": "Power Under the Hood.",
     "subtitle": "We don't build toys. GeoTapp is an enterprise platform built to scale. Here are the technologies that make the magic happen.",
-    "gps_title": "GPS Tracking & Geographic Maps",
-    "gps_desc": "Know where your team is, in real time. Our live map shows every clock-in with GPS coordinates, geofencing validation and anti-spoofing protection. Managers see who is on-site at a glance, no calls, no guesswork.",
+    "gps_title": "GPS at Clock-In, Not All Day",
+    "gps_desc": "The position is taken at two moments: when the shift opens and when it closes. Nothing is automatically recorded in between. Today's clock-ins show each one with its GPS coordinates, geofence check and anti-spoofing protection, so the office knows who started where without calling anyone, and the team knows exactly what is recorded, and when.",
     "offline_title": "Offline-First Architecture",
     "offline_desc": "Connection drops, work doesn't. We built a locally-synced database (CRDT) that lives inside the app. Your technicians can work in an underground bunker; as soon as they see a sliver of sky, data will silently sync with the cloud.",
     "encryption_title": "Military-Grade Encryption",

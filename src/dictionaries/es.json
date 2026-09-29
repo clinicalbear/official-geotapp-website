@@ -1179,8 +1179,8 @@
   "features": {
     "title": "Potencia bajo el capó.",
     "subtitle": "No construimos juguetes. GeoTapp es una plataforma empresarial diseñada para escalar. Estas son las tecnologías que hacen la magia posible.",
-    "gps_title": "Seguimiento GPS y Mapas Geográficos",
-    "gps_desc": "Sabe dónde está tu equipo, en tiempo real. Nuestro mapa en vivo muestra cada fichaje con coordenadas GPS, validación de geofencing y protección anti-spoofing. Los gerentes ven quién está en el lugar de un vistazo, sin llamadas, sin suposiciones.",
+    "gps_title": "GPS al fichar, no todo el día",
+    "gps_desc": "La ubicación se registra en dos momentos: cuando se abre el turno y cuando se cierra. Entre la entrada y la salida no se registra nada de forma automática. Los fichajes de hoy aparecen cada uno con sus coordenadas GPS, el control de geocerca y la protección anti-spoofing: la oficina sabe quién empezó dónde sin llamar a nadie, y el equipo sabe exactamente qué se registra y cuándo.",
     "offline_title": "Offline-First Architecture",
     "offline_desc": "La conexión falla, el trabajo no. Hemos construido una base de datos sincronizada en local (CRDT) que vive dentro de la aplicación. Tus técnicos pueden trabajar en un búnker subterráneo; en cuanto vean un resquicio de cielo, los datos se sincronizarán silenciosamente con la nube.",
     "encryption_title": "Military-Grade Encryption",

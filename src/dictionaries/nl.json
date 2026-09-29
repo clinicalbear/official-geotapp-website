@@ -1179,8 +1179,8 @@
   "features": {
     "title": "Kracht onder de motorkap.",
     "subtitle": "We bouwen geen speelgoed. GeoTapp is een enterprise platform gebouwd om te schalen. Dit zijn de technologieën die de magie mogelijk maken.",
-    "gps_title": "GPS-tracking & Geografische Kaarten",
-    "gps_desc": "Weet waar je team is, in realtime. Onze live kaart toont elke inklok met GPS-coördinaten, geofencing-validatie en anti-spoofing-bescherming. Managers zien in één oogopslag wie op locatie is, geen telefoontjes, geen giswerk.",
+    "gps_title": "GPS bij het inklokken, niet de hele dag",
+    "gps_desc": "De locatie wordt op twee momenten vastgelegd: als de dienst begint en als hij eindigt. Daartussen wordt niets automatisch geregistreerd. De inklokmomenten van vandaag staan er elk met GPS-coördinaten, geofence-controle en anti-spoofingbescherming: kantoor weet zonder te bellen wie waar begonnen is, en het team weet precies wat er wordt vastgelegd, en wanneer.",
     "offline_title": "Offline-First Architecture",
     "offline_desc": "Verbinding valt weg, werk niet. We hebben een lokaal gesynchroniseerde database (CRDT) gebouwd die in de app zelf leeft. Uw technici kunnen werken in een ondergrondse bunker, zodra ze een glimp hemel zien, synchroniseert de data stilletjes met de cloud.",
     "encryption_title": "Military-Grade Encryption",

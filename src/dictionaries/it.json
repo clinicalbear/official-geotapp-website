@@ -1179,8 +1179,8 @@
   "features": {
     "title": "Potenza Sotto il Cofano.",
     "subtitle": "Non costruiamo giocattoli. GeoTapp è una piattaforma enterprise concepita per scalare. Ecco le tecnologie che rendono possibile la magia.",
-    "gps_title": "Tracciamento GPS e Mappe Geografiche",
-    "gps_desc": "Sai dove si trova il tuo team, in tempo reale. La nostra mappa live mostra ogni timbratura con coordinate GPS, validazione geofencing e protezione anti-spoofing. I manager vedono chi è sul campo con un colpo d'occhio, senza chiamate, senza incertezze.",
+    "gps_title": "GPS alla timbratura, non tutto il giorno",
+    "gps_desc": "La posizione si registra in due momenti: quando il turno si apre e quando si chiude. Fra entrata e uscita non viene registrato nulla in automatico. Le Timbrature odierne mostrano ognuna con coordinate GPS, controllo geofence e protezione anti-spoofing: l'ufficio sa chi ha iniziato dove senza telefonare, e la squadra sa esattamente cosa viene registrato, e quando.",
     "offline_title": "Offline-First Architecture",
     "offline_desc": "La connessione cade, il lavoro no. Abbiamo costruito un database locale sincronizzato (CRDT) che vive dentro l'app. I tuoi tecnici possono lavorare in un bunker sotterraneo; non appena vedranno uno specchio di cielo, i dati si allineeranno silenziosamente col cloud.",
     "encryption_title": "Military-Grade Encryption",
