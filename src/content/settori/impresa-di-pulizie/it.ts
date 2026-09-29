@@ -203,9 +203,9 @@ const content: SettoreContent = {
         "L'app registra ingresso e uscita GPS, foto del lavoro fatto e nota libera. Il report PDF è firmato con marca temporale e arriva al cliente in automatico a fine intervento.",
     },
     {
-      question: "Posso usare l'app anche senza connessione internet sul cantiere?",
+      question: "Come funziona la timbratura sul cantiere?",
       answer:
-        "Sì, GeoTapp Flow lavora offline. I dati GPS e le foto restano sul telefono dell'addetto e si sincronizzano automaticamente al primo segnale, senza perdita.",
+        "L'addetto timbra l'ingresso con il GPS, segna le pause e la timbratura di uscita; ogni intervento può avere una foto allegata come prova del lavoro svolto. I dati arrivano in Flow, senza fogli da ricopiare a mano.",
     },
     {
       question: "Quanto tempo serve per attivare l'app sulla mia squadra?",

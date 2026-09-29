@@ -78,8 +78,8 @@ const content: SettoreContent = {
         desc: 'Techniker fotografieren direkt aus der App: vor, während und nach dem Einsatz. Jedes Bild ist mit GPS und Zeitstempel georeferenziert.',
       },
       {
-        title: 'Funktioniert auch offline',
-        desc: 'An Standorten ohne Netzabdeckung werden Daten lokal gespeichert und synchronisiert, sobald die Verbindung zurückkehrt.',
+        title: 'Stempeln mit einem Klick',
+        desc: 'Der Techniker stempelt mit GPS ein, markiert Pausen und schließt den Einsatz mit einem Klick ab. Jedes aufgenommene Foto bleibt mit dem Einsatz und seinen Zeiten verknüpft.',
       },
     ],
   },

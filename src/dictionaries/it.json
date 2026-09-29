@@ -246,7 +246,7 @@
       "features": [
         {
           "title": "Input reale dal campo",
-          "desc": "TimeTracker funziona anche offline e si sincronizza automaticamente. Ogni dato registrato sul campo è autentico, con posizione e timestamp."
+          "desc": "TimeTracker registra timbratura, pause e uscita con GPS. Ogni dato inviato dal campo è autentico, con posizione e timestamp."
         },
         {
           "title": "Privacy rispettata",
@@ -1181,8 +1181,8 @@
     "subtitle": "Non costruiamo giocattoli. GeoTapp è una piattaforma enterprise concepita per scalare. Ecco le tecnologie che rendono possibile la magia.",
     "gps_title": "GPS alla timbratura, non tutto il giorno",
     "gps_desc": "La posizione si registra in due momenti: quando il turno si apre e quando si chiude. Fra entrata e uscita non viene registrato nulla in automatico. Le Timbrature odierne mostrano ognuna con coordinate GPS, controllo geofence e protezione anti-spoofing: l'ufficio sa chi ha iniziato dove senza telefonare, e la squadra sa esattamente cosa viene registrato, e quando.",
-    "offline_title": "Offline-First Architecture",
-    "offline_desc": "La connessione cade, il lavoro no. Abbiamo costruito un database locale sincronizzato (CRDT) che vive dentro l'app. I tuoi tecnici possono lavorare in un bunker sotterraneo; non appena vedranno uno specchio di cielo, i dati si allineeranno silenziosamente col cloud.",
+    "offline_title": "Timbratura in un tocco",
+    "offline_desc": "Un tocco per timbrare l'inizio del turno con GPS, segnare le pause e chiudere la giornata. Ogni intervento può avere una foto allegata come prova del lavoro svolto, e tutto arriva dritto in Flow.",
     "encryption_title": "Military-Grade Encryption",
     "encryption_desc": "Dormi sonni tranquilli. Utilizziamo la crittografia AES-256 a riposo e TLS 1.3 in transito. Anche se un attaccante intercettasse i tuoi dati, vedrebbe solo rumore bianco. La privacy non è solo una checkbox legale, è matematica.",
     "realtime_title": "Sincronizzazione Istantanea",

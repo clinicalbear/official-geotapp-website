@@ -23,7 +23,7 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   it: [
     {
       q: 'Turni e ore secondo il CCNL Vigilanza Privata?',
-      a: 'Ore per guardia e per servizio, maggiorazioni notturne e festive e conservazione sul Libro Unico del Lavoro, con la copertura dei turni registrata in tempo reale.',
+      a: 'Ore per guardia e per servizio, maggiorazioni notturne e festive e conservazione sul Libro Unico del Lavoro, con la copertura dei turni aggiornata a ogni timbratura.',
     },
     {
       q: 'Geolocalizzazione delle guardie e art. 4 dello Statuto dei Lavoratori?',
@@ -37,7 +37,7 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   de: [
     {
       q: 'Dienste und Stunden nach dem Tarifvertrag Sicherheitsdienstleistungen?',
-      a: 'Stunden je Mitarbeiter und Objekt, Nacht- und Feiertagszuschläge und Aufbewahrung nach §16 ArbZG, mit Echtzeit-Schichtabdeckung.',
+      a: 'Stunden je Mitarbeiter und Objekt, Nacht- und Feiertagszuschläge und Aufbewahrung nach §16 ArbZG, mit Schichtabdeckung, die bei jeder Stempelung aktualisiert wird.',
     },
     {
       q: 'DSGVO und Betriebsrat bei GPS-Ortung der Sicherheitskräfte?',
@@ -51,7 +51,7 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   fr: [
     {
       q: 'Vacations et heures selon la convention prévention-sécurité ?',
-      a: 'Heures par agent et par site, majorations de nuit et jours fériés et conservation des données, avec couverture des vacations enregistrée en temps réel.',
+      a: 'Heures par agent et par site, majorations de nuit et jours fériés et conservation des données, avec couverture des vacations mise à jour à chaque pointage.',
     },
     {
       q: 'RGPD et CNIL pour la géolocalisation des agents ?',
@@ -65,7 +65,7 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   es: [
     {
       q: '¿Turnos y horas según el convenio de empresas de seguridad?',
-      a: 'Registro diario (art. 34.9 ET) por vigilante y servicio, pluses de nocturnidad y festivos y conservación de datos, con cobertura de turnos en tiempo real.',
+      a: 'Registro diario (art. 34.9 ET) por vigilante y servicio, pluses de nocturnidad y festivos y conservación de datos, con cobertura de turnos actualizada en cada fichaje.',
     },
     {
       q: '¿RGPD y AEPD para la geolocalización de vigilantes?',
@@ -79,11 +79,11 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   pt: [
     {
       q: 'Turnos e horas segundo a CCT da segurança privada?',
-      a: 'Horas por vigilante e por serviço, acréscimos noturnos e de feriado e conservação dos dados, com cobertura de turnos em tempo real.',
+      a: 'Horas por vigilante e por serviço, acréscimos noturnos e de feriado e conservação dos dados, com cobertura de turnos atualizada a cada registo de ponto.',
     },
     {
       q: 'RGPD e CNPD na geolocalização dos vigilantes?',
-      a: 'Geolocalização apenas durante o tempo de trabalho, com informação prévia, interesse legítimo e direito de acesso, conforme a CNPD.',
+      a: 'Geolocalização apenas durante o tempo de trabalho, com informação prévia, interesse legítimo e direito de acesso, dentro dos critérios da CNPD.',
     },
     {
       q: 'Lei 34/2013 e cartão profissional do vigilante?',
@@ -93,7 +93,7 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   nl: [
     {
       q: 'Diensten en uren volgens de CAO Particuliere Beveiliging?',
-      a: 'Uren per beveiliger en per object, nacht- en feestdagtoeslagen en de bewaartermijn uit de Arbeidstijdenwet, met dekking van diensten in realtime.',
+      a: 'Uren per beveiliger en per object, nacht- en feestdagtoeslagen en de bewaartermijn uit de Arbeidstijdenwet, met dekking van diensten bijgewerkt bij elke in- of uitklokactie.',
     },
     {
       q: 'AVG en de Autoriteit Persoonsgegevens bij GPS-tracking?',

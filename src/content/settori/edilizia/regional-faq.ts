@@ -83,7 +83,7 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
     },
     {
       q: 'RGPD e CNPD na geolocalização em obra?',
-      a: 'Geolocalização apenas durante o tempo de trabalho e na obra, com informação prévia, interesse legítimo e direito de acesso, conforme a CNPD.',
+      a: 'Geolocalização apenas durante o tempo de trabalho e na obra, com informação prévia, interesse legítimo e direito de acesso, dentro dos critérios da CNPD.',
     },
     {
       q: 'Comprovação na subcontratação e alvará IMPIC?',

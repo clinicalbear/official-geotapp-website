@@ -246,7 +246,7 @@
       "features": [
         {
           "title": "Verklig mobil operabilitet",
-          "desc": "TimeTracker fungerar utan anslutning och synkroniserar så snart fältet är online igen. Arbetet stannar aldrig."
+          "desc": "TimeTracker registrerar in- och utstämpling samt raster med GPS. Varje uppgift som skickas från fältet är autentisk, med plats och tidsstämpel."
         },
         {
           "title": "Privacy by design",
@@ -1181,8 +1181,8 @@
     "subtitle": "Vi bygger inte leksaker. GeoTapp är en enterprise-plattform byggd för att skala. Här är de teknologier som gör magin möjlig.",
     "gps_title": "GPS vid stämpling, inte hela dagen",
     "gps_desc": "Positionen registreras bara när medarbetaren stämplar: vid in- och utstämpling, vid varje paus och vid varje bevisfoto. Däremellan registreras ingenting automatiskt. Dagens stämplingar visas var och en med GPS-koordinater, geofence-kontroll och skydd mot spoofing: kontoret vet vem som började var utan att ringa, och teamet vet exakt vad som registreras, och när.",
-    "offline_title": "Offline-First Architecture",
-    "offline_desc": "Uppkopplingen försvinner, arbetet inte. Vi har byggt en lokalt synkroniserad databas (CRDT) som lever inuti appen. Dina tekniker kan arbeta i en underjordisk bunker; så fort de ser en bit himmel synkroniseras data tyst med molnet.",
+    "offline_title": "Stämpla in med ett klick",
+    "offline_desc": "Ett klick för att stämpla in med GPS, markera raster och avsluta dagen. Varje uppdrag kan få ett foto bifogat som bevis på utfört arbete, och allt hamnar direkt i Flow.",
     "encryption_title": "Military-Grade Encryption",
     "encryption_desc": "Sov lugnt. Vi använder AES-256-kryptering i vila och TLS 1.3 i transit. Även om en angripare lyckades fånga upp dina data skulle de bara se vitt brus. Integritet är inte bara en juridisk kryssruta, det är matematik.",
     "realtime_title": "Real-Time WebSocket",

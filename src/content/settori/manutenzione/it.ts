@@ -78,8 +78,8 @@ const content: SettoreContent = {
         desc: "I tecnici scattano foto direttamente dall'app: prima, durante e dopo l'intervento. Ogni immagine è georeferenziata con timestamp.",
       },
       {
-        title: 'Funziona anche offline',
-        desc: 'In cantieri o impianti senza copertura, i dati vengono salvati localmente e sincronizzati appena torna la connessione. Nessun dato perso.',
+        title: 'Timbratura in un tocco',
+        desc: "Il tecnico timbra l'arrivo con GPS, segna le pause e chiude l'intervento con un tocco. Ogni foto scattata resta collegata all'intervento e ai suoi orari.",
       },
     ],
   },

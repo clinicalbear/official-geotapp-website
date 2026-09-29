@@ -246,7 +246,7 @@
       "features": [
         {
           "title": "Echte mobiele operabiliteit",
-          "desc": "TimeTracker werkt zonder verbinding en synchroniseert zodra het veld weer online is. Het werk staat nooit stil."
+          "desc": "TimeTracker registreert in- en uitklokken en pauzes met GPS. Elk gegeven dat vanuit het veld wordt verzonden is authentiek, met locatie en tijdstempel."
         },
         {
           "title": "Privacy by design",
@@ -1181,8 +1181,8 @@
     "subtitle": "We bouwen geen speelgoed. GeoTapp is een enterprise platform gebouwd om te schalen. Dit zijn de technologieën die de magie mogelijk maken.",
     "gps_title": "GPS bij het inklokken, niet de hele dag",
     "gps_desc": "De locatie wordt op twee momenten vastgelegd: als de dienst begint en als hij eindigt. Daartussen wordt niets automatisch geregistreerd. De inklokmomenten van vandaag staan er elk met GPS-coördinaten, geofence-controle en anti-spoofingbescherming: kantoor weet zonder te bellen wie waar begonnen is, en het team weet precies wat er wordt vastgelegd, en wanneer.",
-    "offline_title": "Offline-First Architecture",
-    "offline_desc": "Verbinding valt weg, werk niet. We hebben een lokaal gesynchroniseerde database (CRDT) gebouwd die in de app zelf leeft. Uw technici kunnen werken in een ondergrondse bunker, zodra ze een glimp hemel zien, synchroniseert de data stilletjes met de cloud.",
+    "offline_title": "Inklokken met één tik",
+    "offline_desc": "Eén tik om met GPS in te klokken, pauzes te markeren en de dag af te sluiten. Bij elke opdracht kan een foto worden toegevoegd als bewijs van het werk, en alles komt rechtstreeks in Flow terecht.",
     "encryption_title": "Military-Grade Encryption",
     "encryption_desc": "Slaap gerust. We gebruiken AES-256-versleuteling in rust en TLS 1.3 in transit. Zelfs als een aanvaller uw data zou onderscheppen, ziet hij niets dan witte ruis. Privacy is geen juridisch vinkje, het is wiskunde.",
     "realtime_title": "Real-Time WebSocket",

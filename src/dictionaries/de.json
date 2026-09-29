@@ -246,7 +246,7 @@
       "features": [
         {
           "title": "Echte mobile Einsatzfähigkeit",
-          "desc": "TimeTracker funktioniert ohne Verbindung und synchronisiert, sobald das Feld wieder online ist. Die Arbeit stoppt nie."
+          "desc": "TimeTracker erfasst Kommen, Pausen und Gehen mit GPS. Jeder aus dem Feld gesendete Datenpunkt ist authentisch, mit Standort und Zeitstempel."
         },
         {
           "title": "Datenschutz by Design",
@@ -1181,8 +1181,8 @@
     "subtitle": "Wir bauen kein Spielzeug. GeoTapp ist eine Enterprise-Plattform, die für Skalierung gebaut wurde. Hier sind die Technologien, die die Magie möglich machen.",
     "gps_title": "GPS beim Stempeln, nicht den ganzen Tag",
     "gps_desc": "Der Standort wird zweimal erfasst: wenn die Schicht beginnt und wenn sie endet. Dazwischen wird nichts automatisch aufgezeichnet. Die heutigen Stempelungen erscheinen jeweils mit GPS-Koordinaten, Geofence-Prüfung und Anti-Spoofing-Schutz: Das Büro weiß ohne Anruf, wer wo angefangen hat, und das Team weiß genau, was erfasst wird und wann.",
-    "offline_title": "Offline-First Architecture",
-    "offline_desc": "Die Verbindung bricht ab, die Arbeit nicht. Wir haben eine lokal synchronisierte Datenbank (CRDT) gebaut, die direkt in der App lebt. Ihre Techniker können in einem Kellerbunker arbeiten, sobald sie einen Streifen Himmel sehen, synchronisieren sich die Daten lautlos mit der Cloud.",
+    "offline_title": "Stempeln mit einem Klick",
+    "offline_desc": "Ein Klick genügt, um mit GPS einzustempeln, Pausen zu markieren und den Tag abzuschließen. Jedem Einsatz kann ein Foto als Arbeitsnachweis beigefügt werden, alles landet direkt in Flow.",
     "encryption_title": "Military-Grade Encryption",
     "encryption_desc": "Schlafen Sie ruhig. Wir verwenden AES-256-Verschlüsselung im Ruhezustand und TLS 1.3 bei der Übertragung. Selbst wenn ein Angreifer Ihre Daten abfangen würde, sähe er nur weißes Rauschen. Datenschutz ist kein rechtliches Pflichtfeld, er ist Mathematik.",
     "realtime_title": "Real-Time WebSocket",

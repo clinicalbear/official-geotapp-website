@@ -78,8 +78,8 @@ const content: SettoreContent = {
         desc: 'Les techniciens prennent des photos directement depuis l\'app : avant, pendant et après l\'intervention. Chaque image est géolocalisée avec horodatage.',
       },
       {
-        title: 'Fonctionne hors ligne',
-        desc: 'Sur les sites sans connexion, les données sont sauvegardées localement et synchronisées dès le retour de la connexion.',
+        title: 'Pointage en un geste',
+        desc: "Le technicien pointe son arrivée avec le GPS, marque ses pauses et clôture l'intervention en un geste. Chaque photo prise reste liée à l'intervention et à ses horaires.",
       },
     ],
   },

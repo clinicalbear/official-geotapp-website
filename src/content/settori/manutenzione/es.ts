@@ -78,8 +78,8 @@ const content: SettoreContent = {
         desc: 'Los técnicos toman fotos directamente desde la app: antes, durante y después de la intervención. Cada imagen está geolocalizada con marca de tiempo.',
       },
       {
-        title: 'Funciona sin conexión',
-        desc: 'En sedes sin cobertura, los datos se guardan localmente y se sincronizan en cuanto vuelve la conexión.',
+        title: 'Fichaje en un toque',
+        desc: 'El técnico ficha la llegada con GPS, marca las pausas y cierra la intervención con un toque. Cada foto tomada queda vinculada a la intervención y a sus horarios.',
       },
     ],
   },

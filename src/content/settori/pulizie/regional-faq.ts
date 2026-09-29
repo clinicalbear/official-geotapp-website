@@ -97,7 +97,7 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
     },
     {
       q: 'AVG en de Autoriteit Persoonsgegevens bij GPS-tracking van schoonmakers?',
-      a: 'Privacyverklaring, gerechtvaardigd belang (art. 6 AVG) met belangenafweging en een DPIA per inzet, conform de richtsnoeren van de AP: geen tracking buiten werktijd en inzagerecht gewaarborgd.',
+      a: 'Privacyverklaring, gerechtvaardigd belang (art. 6 AVG) met belangenafweging en een DPIA per inzet, in lijn met de richtsnoeren van de AP: geen tracking buiten werktijd en inzagerecht gewaarborgd.',
     },
     {
       q: 'WML, vakantiegeld en zzp-inzet per schoonmaakmedewerker?',

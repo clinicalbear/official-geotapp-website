@@ -78,8 +78,8 @@ const content: SettoreContent = {
         desc: 'Os técnicos tiram fotos diretamente da app: antes, durante e depois da intervenção. Cada imagem é georreferenciada com carimbo temporal.',
       },
       {
-        title: 'Funciona offline',
-        desc: 'Em locais sem cobertura de rede, os dados são guardados localmente e sincronizados assim que a ligação regressa.',
+        title: 'Picar o ponto num toque',
+        desc: 'O técnico pica a chegada com GPS, marca as pausas e fecha a intervenção com um toque. Cada foto tirada fica ligada à intervenção e aos seus horários.',
       },
     ],
   },

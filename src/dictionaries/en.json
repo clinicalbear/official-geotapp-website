@@ -246,7 +246,7 @@
       "features": [
         {
           "title": "Real input from the field",
-          "desc": "TimeTracker works offline and syncs automatically. Every recorded data point is authentic, with location and timestamp."
+          "desc": "TimeTracker records clock-in, breaks and clock-out with GPS. Every data point sent from the field is authentic, with location and timestamp."
         },
         {
           "title": "Privacy by design",
@@ -1181,8 +1181,8 @@
     "subtitle": "We don't build toys. GeoTapp is an enterprise platform built to scale. Here are the technologies that make the magic happen.",
     "gps_title": "GPS at Clock-In, Not All Day",
     "gps_desc": "The position is taken at two moments: when the shift opens and when it closes. Nothing is automatically recorded in between. Today's clock-ins show each one with its GPS coordinates, geofence check and anti-spoofing protection, so the office knows who started where without calling anyone, and the team knows exactly what is recorded, and when.",
-    "offline_title": "Offline-First Architecture",
-    "offline_desc": "Connection drops, work doesn't. We built a locally-synced database (CRDT) that lives inside the app. Your technicians can work in an underground bunker; as soon as they see a sliver of sky, data will silently sync with the cloud.",
+    "offline_title": "One-tap clock-in",
+    "offline_desc": "One tap to clock in with GPS, mark breaks and clock out. Every job can have a photo attached as proof of work, and it all lands straight in Flow.",
     "encryption_title": "Military-Grade Encryption",
     "encryption_desc": "Sleep soundly. We use AES-256 encryption at rest and TLS 1.3 in transit. Even if an attacker intercepted your data, they would see nothing but white noise. Privacy isn't just a legal checkbox, it's mathematics.",
     "realtime_title": "Real-Time WebSocket",

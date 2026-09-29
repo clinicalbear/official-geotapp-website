@@ -55,7 +55,7 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
     },
     {
       q: 'Comment respecter le RGPD et la CNIL pour la géolocalisation ?',
-      a: 'Géolocalisation limitée au temps de travail, information préalable, intérêt légitime et consultation du CSE, conformément aux lignes directrices de la CNIL.',
+      a: 'Géolocalisation limitée au temps de travail, information préalable, intérêt légitime et consultation du CSE, en s\'appuyant sur les lignes directrices de la CNIL.',
     },
     {
       q: 'Comment prouver le respect du SMIC et des minima ?',
@@ -83,7 +83,7 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
     },
     {
       q: 'Como se cumpre o RGPD e a CNPD na geolocalização?',
-      a: 'Geolocalização apenas durante o tempo de trabalho, com informação prévia, interesse legítimo e direito de acesso do trabalhador, conforme a CNPD.',
+      a: 'Geolocalização apenas durante o tempo de trabalho, com informação prévia, interesse legítimo e direito de acesso do trabalhador, dentro dos critérios da CNPD.',
     },
     {
       q: 'Como se demonstra a RMMG e as tabelas da CCT?',

@@ -78,8 +78,8 @@ const content: SettoreContent = {
         desc: 'Technicians take photos directly from the app: before, during and after the job. Every image is geo-tagged with a timestamp.',
       },
       {
-        title: 'Works offline',
-        desc: 'In sites with no connectivity, data is saved locally and synced as soon as the connection returns. No data lost.',
+        title: 'One-tap clock-in',
+        desc: 'The technician clocks in with GPS, marks breaks and closes the job with one tap. Every photo taken stays linked to the job and its timestamps.',
       },
     ],
   },

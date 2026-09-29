@@ -78,8 +78,8 @@ const content: SettoreContent = {
         desc: 'Teknikere tager fotos direkte fra appen: før, under og efter opgaven. Hvert billede er geotagget med tidsstempel.',
       },
       {
-        title: 'Virker også offline',
-        desc: 'På lokationer uden netværksdækning gemmes data lokalt og synkroniseres, så snart forbindelsen vender tilbage.',
+        title: 'Stemple ind med ét tryk',
+        desc: 'Teknikeren stempler ind med GPS, markerer pauser og afslutter opgaven med ét tryk. Hvert foto, der tages, forbliver knyttet til opgaven og dens tidspunkter.',
       },
     ],
   },

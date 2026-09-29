@@ -78,8 +78,8 @@ const content: SettoreContent = {
         desc: 'Technici maken foto\'s rechtstreeks vanuit de app: voor, tijdens en na de interventie. Elk beeld is gegeotagd met een tijdstempel.',
       },
       {
-        title: 'Werkt ook offline',
-        desc: 'Op locaties zonder netwerkdekking worden gegevens lokaal opgeslagen en gesynchroniseerd zodra de verbinding terugkeert.',
+        title: 'Inklokken met één tik',
+        desc: 'De technicus klokt in met GPS, markeert pauzes en sluit de interventie af met één tik. Elke gemaakte foto blijft gekoppeld aan de interventie en de bijbehorende tijden.',
       },
     ],
   },
