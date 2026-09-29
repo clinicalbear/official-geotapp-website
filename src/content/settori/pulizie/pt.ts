@@ -2,8 +2,8 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'Software para Empresas de Limpeza e Higiene | Controlo de Turnos | GeoTapp',
-    description: 'GeoTapp para empresas de limpeza e higiene: marcação de ponto GPS verificável, evidência fotográfica das áreas limpas, supervisão de equipas em múltiplos edifícios e conformidade com o CCT Limpeza e Higiene Urbana.',
+    title: 'Software para empresas de limpeza: ponto GPS e fotos',
+    description: 'Registo de ponto com GPS no início e no fim do turno e fotos de cada área limpa: provas para mostrar ao cliente em caso de reclamação. Experimente grátis.',
   },
   hero: {
     badge: 'Software para Empresas de Limpeza, Higiene e Facility Management',

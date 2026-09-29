@@ -2,8 +2,8 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App para Fontaneros Calefactores | GeoTapp - GPS, Informes y Pruebas',
-    description: 'GeoTapp es la app para instaladores termosanitarios: informes GPS verificados, fotos de instalaciones y documentación sellada. Resuelve reclamaciones con pruebas reales. Prueba gratis.',
+    title: 'App para fontaneros y calefactores: GPS, partes y fotos',
+    description: 'Partes de trabajo con GPS al fichar y fotos de cada instalación: pruebas para cerrar reclamaciones sobre calderas y materiales. Prueba gratis 14 días.',
   },
   hero: {
     badge: 'App para Fontaneros Calefactores e Instaladores Termosanitarios',

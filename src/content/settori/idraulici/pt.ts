@@ -2,8 +2,8 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App para Canalizadores e Técnicos AVAC | GeoTapp - GPS',
-    description: 'GeoTapp é a app para canalizadores e técnicos de aquecimento: relatórios GPS verificados, fotos de instalações e registos invioláveis. Encerre disputas com provas reais. Experimente grátis.',
+    title: 'App para canalizadores e técnicos AVAC: GPS e fotos',
+    description: 'Relatórios com GPS no registo de ponto e fotos de cada instalação: provas para resolver reclamações sobre reparações e materiais. Experimente grátis.',
   },
   hero: {
     badge: 'App para Canalizadores, Técnicos AVAC e Aquecimento',

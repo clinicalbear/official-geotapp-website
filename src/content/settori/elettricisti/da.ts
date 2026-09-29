@@ -2,8 +2,8 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App til Elektrikere | GeoTapp - GPS Arbejdsrapporter & Bevis',
-    description: 'App til elektrikere: GPS-verificerede arbejdsrapporter, installationsbilleder og registreringer hvor enhver ændring kan spores. Luk tvister med beviser. Prøv gratis.',
+    title: 'App til elektrikere: GPS-arbejdsrapporter og billeder',
+    description: 'Arbejdsrapporter med GPS ved stempling og billeder af hver installation: beviser, når kunden bestrider timer eller arbejde. Prøv gratis i 14 dage.',
   },
   hero: {
     badge: 'App til Elektrikere og El-installatører',

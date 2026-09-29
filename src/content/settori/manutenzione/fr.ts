@@ -2,9 +2,9 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App Maintenance : Gestion des Équipes et Interventions GPS | GeoTapp',
+    title: 'App maintenance : équipes, interventions et pointage GPS',
     description:
-      'Gérez vos équipes de maintenance avec GPS : interventions, plannings, preuves de service. Historique complet par installation ou site client. Essayez GeoTapp gratuitement.',
+      'Pointage GPS au début et à la fin de chaque visite, photos et rapports d\'intervention pour prouver la maintenance périodique à vos clients. Essai gratuit.',
   },
 
   hero: {

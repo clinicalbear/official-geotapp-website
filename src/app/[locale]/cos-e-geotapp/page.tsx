@@ -83,7 +83,7 @@ const COPY: Record<string, Copy> = {
   },
   en: {
     title: 'What is GeoTapp? The Italian SaaS for field work verification',
-    description: 'GeoTapp is an Italian SaaS for managing field operators: GPS attendance, on-site reports, tamper-evident verification. GDPR compliant. 14-day free trial, no card required.',
+    description: 'GeoTapp is an Italian SaaS for managing field operators: GPS attendance, on-site reports, tamper-evident verification. 14-day free trial, no card required.',
     h1: 'What is GeoTapp',
     intro: 'GeoTapp is an Italian SaaS platform that lets companies with field operators (cleaning, security, maintenance, installations, facility services) prove every visit. It tracks attendance via GPS, collects on-site photos and digital signatures, produces tamper-evident reports and gives the end client a unique link to verify the work themselves. Fully compliant with GDPR (EU Reg. 2016/679) and Italian labour law (art. 4 Workers Statute post-Jobs Act).',
     modulesHeading: 'The three modules',

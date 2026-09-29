@@ -2,8 +2,8 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App per impresa di pulizie: il rapportino d\'intervento con foto e GPS | GeoTapp',
-    description: 'Smetti di rincorrere le squadre per telefono. GeoTapp è l\'app per impresa di pulizie che sigilla presenze e interventi con GPS reale e prove fotografiche, in conformità al GDPR e al CCNL Multiservizi. Prova gratis.',
+    title: 'App per imprese di pulizie: presenze GPS e foto per cantiere',
+    description: 'Timbrature con GPS solo all\'inizio e alla fine e foto di ogni intervento: le prove da mostrare al cliente quando contesta un servizio. 14 giorni gratis.',
   },
 
   hero: {

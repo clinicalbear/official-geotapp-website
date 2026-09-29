@@ -2,8 +2,8 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App per Termoidraulici | GeoTapp - GPS, Rapportini e Prove Intervento',
-    description: 'GeoTapp è l\'app per termoidraulici: rapportini GPS verificati, foto degli impianti e report sigillati. Chiudi le contestazioni su caldaie e impianti con prove reali. Prova gratis.',
+    title: 'App per termoidraulici: rapportini GPS e foto degli interventi',
+    description: 'Rapportini con GPS alla timbratura e foto di ogni impianto: le prove per chiudere le contestazioni su caldaie e materiali sostituiti. Prova gratis 14 giorni.',
   },
   hero: {
     badge: 'App per Termoidraulici e Impiantisti Termosanitari',
