@@ -186,7 +186,7 @@ export const slovenia: SchedaPaese = {
       voce: {
         it: "Valutazione d'impatto (DPIA) per la geolocalizzazione e i dati dei dipendenti (lista IP-RS)",
         en: 'Data protection impact assessment (DPIA) for geolocation and employee data (IP-RS list)',
-        de: 'Datenschutz-Folgenabschätzung (DSFA) für Geolokalisierung und Beschaeftigtendaten (Liste der IP-RS)',
+        de: 'Datenschutz-Folgenabschätzung (DSFA) für Geolokalisierung und Beschäftigtendaten (Liste der IP-RS)',
         fr: "Analyse d'impact (AIPD) pour la géolocalisation et les données des salaries (liste IP-RS)",
         es: 'Evaluación de impacto (EIPD) para la geolocalizacion y los datos de los empleados (lista IP-RS)',
         nl: 'Gegevensbeschermingseffectbeoordeling (DPIA) voor geolocatie en werknemersgegevens (lijst van de IP-RS)',
@@ -195,7 +195,7 @@ export const slovenia: SchedaPaese = {
       dettaglio: {
         it: "Il Garante raccomanda di svolgere una valutazione d'impatto prima di introdurre dispositivi GPS, e la geolocalizzazione e i dati dei dipendenti sono nella lista che la richiede.",
         en: "The authority recommends carrying out an impact assessment before introducing GPS devices, and geolocation and employee data are on the list that requires one.",
-        de: "Die Behörde empfiehlt, vor der Einführung von GPS-Geräten eine Folgenabschätzung durchzuführen, und Geolokalisierung sowie Beschaeftigtendaten stehen auf der Liste, die eine solche erfordert.",
+        de: "Die Behörde empfiehlt, vor der Einführung von GPS-Geräten eine Folgenabschätzung durchzuführen, und Geolokalisierung sowie Beschäftigtendaten stehen auf der Liste, die eine solche erfordert.",
         fr: "L'autorité recommandé de réaliser une analyse d'impact avant d'introduire des dispositifs GPS, et la géolocalisation et les données des salaries figurent sur la liste qui l'exige.",
         es: "La autoridad recomienda realizar una evaluación de impacto antes de introducir dispositivos GPS, y la geolocalizacion y los datos de los empleados están en la lista que la exige.",
         nl: "De autoriteit beveelt aan een effectbeoordeling uit te voeren voordat GPS-apparaten worden ingevoerd, en geolocatie en werknemersgegevens staan op de lijst die deze vereist.",

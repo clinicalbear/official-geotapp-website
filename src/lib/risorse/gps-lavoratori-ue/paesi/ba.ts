@@ -187,7 +187,7 @@ export const bosnia: SchedaPaese = {
       dettaglio: {
         it: "La lista AZLP include espressamente il trattamento dei dati dei dipendenti tramite app o sistemi di monitoraggio, inclusi i sistemi GPS sui veicoli, tra i casi che richiedono una valutazione d'impatto.",
         en: 'The AZLP list expressly includes the processing of employee data through apps or monitoring systems, including GPS systems on vehicles, among the cases that require an impact assessment.',
-        de: 'Die AZLP-Liste führt die Verarbeitung von Beschaeftigtendaten durch Apps oder Überwachungssysteme, einschließlich GPS-Systemen in Fahrzeugen, ausdrücklich unter den Fällen auf, die eine Folgenabschätzung erfordern.',
+        de: 'Die AZLP-Liste führt die Verarbeitung von Beschäftigtendaten durch Apps oder Überwachungssysteme, einschließlich GPS-Systemen in Fahrzeugen, ausdrücklich unter den Fällen auf, die eine Folgenabschätzung erfordern.',
         fr: "La liste de l'AZLP inclut expressément le traitement des données des employés via des applications ou des systèmes de surveillance, y compris les systèmes GPS sur les véhicules, parmi les cas qui exigent une analyse d'impact.",
         es: 'La lista de la AZLP incluye expresamente el tratamiento de los datos de los empleados mediante aplicaciones o sistemas de monitorización, incluidos los sistemas GPS en los vehículos, entre los casos que requieren una evaluación de impacto.',
         nl: 'De AZLP-lijst noemt uitdrukkelijk de verwerking van werknemersgegevens via apps of monitoringsystemen, inclusief GPS-systemen in voertuigen, onder de gevallen die een effectbeoordeling vereisen.',

@@ -185,7 +185,7 @@ export const lituania: SchedaPaese = {
       dettaglio: {
         it: "La lista VDAI dei trattamenti che richiedono una valutazione d'impatto include espressamente il trattamento dei dati dei dipendenti per il monitoraggio, inclusi comportamento, posizione o movimento.",
         en: 'The VDAI list of processing operations requiring a data protection impact assessment expressly includes the processing of employees data for monitoring, including behaviour, location or movement.',
-        de: 'Die VDAI-Liste der Verarbeitungsvorgänge, die eine Datenschutz-Folgenabschätzung erfordern, umfasst ausdrücklich die Verarbeitung von Beschaeftigtendaten zur Überwachung, einschließlich Verhalten, Standort oder Bewegung.',
+        de: 'Die VDAI-Liste der Verarbeitungsvorgänge, die eine Datenschutz-Folgenabschätzung erfordern, umfasst ausdrücklich die Verarbeitung von Beschäftigtendaten zur Überwachung, einschließlich Verhalten, Standort oder Bewegung.',
         fr: "La liste VDAI des traitements nécessitant une analyse d impact inclut expressément le traitement des données des salaries a des fins de surveillance, y compris le comportement, la position ou le mouvement.",
         es: 'La lista VDAI de los tratamientos que requieren una evaluación de impacto incluye expresamente el tratamiento de los datos de los empleados con fines de vigilancia, incluido el comportamiento, la posición o el movimiento.',
         nl: 'De VDAI-lijst van verwerkingen waarvoor een gegevensbeschermingseffectbeoordeling vereist is, omvat uitdrukkelijk de verwerking van werknemersgegevens voor monitoring, inclusief gedrag, locatie of beweging.',

@@ -45,7 +45,7 @@ const FONTE_LISTA_DSK_DPIA = {
 const FONTE_BFDI_LISTA_LAND = {
   titolo:
     'BfDI, elenco delle autorità garanti per la protezione dei dati dei Land',
-  url: 'https://www.bfdi.bund.de/DE/Service/Anschriften/Laender/Laender-node.html',
+  url: 'https://www.bfdi.bund.de/DE/Service/Anschriften/Länder/Länder-node.html',
 };
 const FONTE_HM_AMBURGO = {
   titolo:
