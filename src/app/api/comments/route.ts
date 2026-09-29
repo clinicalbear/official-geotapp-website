@@ -1,11 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { rateLimitOk, clientIp } from '@/lib/rate-limit';
+import { moderateComment } from '@/lib/comment-moderation';
 
 // Gateway commenti del blog (headless).
 // Il browser invia qui; questo endpoint valida, filtra lo spam e poi crea il
 // commento su WordPress con una chiamata AUTENTICATA server-to-server.
 // L'API di WordPress NON è esposta alla scrittura anonima: la credenziale
-// resta solo lato server e ogni commento nasce in stato "hold" (moderazione).
+// resta solo lato server. Lo stato lo decide moderateComment: link e volgarità
+// finiscono in spam, i commenti inerenti all'articolo sono approvati, gli altri
+// restano in attesa. Un controllo periodico sul VPS ripassa la coda (scripts/moderate-comments.mjs).
 
 const WP = 'https://blog.geotapp.com';
 const WP_HEADERS: Record<string, string> = {
@@ -69,8 +72,27 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'consent_required' }, { status: 400 });
   }
 
+  // Testo dell'articolo per giudicare la pertinenza. Se non arriva, il commento
+  // resta in attesa: meglio un commento in coda che uno pubblicato alla cieca.
+  let articleText = '';
   try {
-    const res = await fetch(`${WP}/wp-json/wp/v2/comments`, {
+    const pr = await fetch(`${WP}/wp-json/wp/v2/posts/${postId}/?_fields=title,content`, {
+      headers: WP_HEADERS,
+      cache: 'no-store',
+      signal: AbortSignal.timeout(6000),
+    });
+    if (pr.ok) {
+      const post = (await pr.json()) as { title?: { rendered?: string }; content?: { rendered?: string } };
+      articleText = `${post.title?.rendered ?? ''} ${(post.content?.rendered ?? '').slice(0, 20000)}`;
+    }
+  } catch {
+    articleText = '';
+  }
+  const { verdict, reason } = moderateComment({ content, authorName: name, articleText });
+  const status = verdict === 'approve' ? 'approve' : verdict === 'spam' ? 'spam' : 'hold';
+
+  try {
+    const res = await fetch(`${WP}/wp-json/wp/v2/comments/`, {
       method: 'POST',
       headers: {
         ...WP_HEADERS,
@@ -82,7 +104,7 @@ export async function POST(req: NextRequest) {
         author_name: name,
         author_email: email,
         content,
-        status: 'hold', // sempre in moderazione, nulla va online senza approvazione
+        status,
       }),
       signal: AbortSignal.timeout(10000),
     });
@@ -96,5 +118,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'submit_failed' }, { status: 502 });
   }
 
+  console.log('comment moderated', { postId, verdict, reason });
+  // Stessa risposta per tutti gli esiti: a chi manda spam non si dice che e' stato scartato.
   return NextResponse.json({ ok: true });
 }
