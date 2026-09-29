@@ -118,3 +118,16 @@ add_action('rest_api_init', function () {
         },
     ));
 });
+
+/* ---------- 3. Niente pingback fra i nostri articoli ---------- */
+
+// Un link da un articolo del blog a un altro generava un pingback in attesa:
+// 274 accumulati a marzo 2026. I link interni non devono pingare.
+add_action('pre_ping', function (&$links) {
+    $home = home_url();
+    foreach ($links as $i => $link) {
+        if (strpos($link, $home) === 0 || strpos($link, 'https://geotapp.com/') === 0) {
+            unset($links[$i]);
+        }
+    }
+});
