@@ -22,7 +22,7 @@ import Link from 'next/link';
 // nessuna rottura dei signup veri prima che le chiavi siano in env.
 const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || '';
 import { trackEvent, consumeTrialSource } from '@/lib/analytics';
-import { FASCE_OPERATORI, type FasciaOperatori, buildTrialPayload } from '@/lib/trial/payload';
+import { FASCE_OPERATORI, type FasciaOperatori, buildTrialPayload, leggiOrigine } from '@/lib/trial/payload';
 import { trialErrorMessage, trialErrorForAnalytics } from '@/lib/trial/errors';
 import VideoTutorial from '@/components/VideoTutorial';
 import Reviews from '@/components/Reviews';
@@ -209,7 +209,13 @@ export default function TrialPage() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(
-          buildTrialPayload(email, detectLanguage(), { hp, elapsedMs, turnstileToken }, fascia),
+          buildTrialPayload(
+            email,
+            detectLanguage(),
+            { hp, elapsedMs, turnstileToken },
+            fascia,
+            leggiOrigine(window.location.search, document.referrer, trialSource.current),
+          ),
         ),
       });
       const data = await res.json();
