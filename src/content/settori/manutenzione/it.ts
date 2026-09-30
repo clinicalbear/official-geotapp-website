@@ -109,7 +109,7 @@ const content: SettoreContent = {
       },
       {
         q: 'GeoTapp funziona per la manutenzione di impianti e facility?',
-        a: 'Sì. GeoTapp è usato da aziende di manutenzione, facility management e imprese con squadre distribuite su più sedi. Va bene dalla squadra di poche persone all'azienda con centinaia di tecnici.',
+        a: 'Sì. GeoTapp è usato da aziende di manutenzione, facility management e imprese con squadre distribuite su più sedi. Va bene dalla squadra di poche persone all\'azienda con centinaia di tecnici.',
       },
       {
         q: 'GeoTapp è conforme al GDPR per la geolocalizzazione?',
