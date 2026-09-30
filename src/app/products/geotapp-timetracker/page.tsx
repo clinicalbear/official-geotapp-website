@@ -113,8 +113,6 @@ const TT_COPY: Record<string, TtCopy> = {
     availableOn: 'Available on',
   },
 };
-TT_COPY.de.highlights = TT_COPY.en.highlights;
-TT_COPY.de.workflow = TT_COPY.en.workflow;
 
 export default function GeoTappApp() {
   const [selectedSystem, setSelectedSystem] = useState<SystemDetail | null>(null);

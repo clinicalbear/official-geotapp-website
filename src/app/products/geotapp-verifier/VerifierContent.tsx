@@ -144,6 +144,20 @@ function OnlineVerifier({ copy }: { copy: VerifierCopy }) {
   );
 }
 
+const NO_REPORT_HANDY: Record<string, string> = {
+  it: 'Non hai un report? Scarica questo esempio reale e prova subito il verificatore.',
+  en: 'No report handy? Download this real sample and try the verifier right away.',
+  de: 'Sie haben keinen Bericht zur Hand? Laden Sie dieses echte Beispiel herunter und probieren Sie den Verifier gleich aus.',
+  nl: 'Geen rapport bij de hand? Download dit echte voorbeeld en probeer de verifier meteen uit.',
+  fr: 'Pas de rapport sous la main ? Téléchargez cet exemple réel et essayez tout de suite le vérificateur.',
+  es: '¿No tiene un informe a mano? Descargue este ejemplo real y pruebe el verificador ahora mismo.',
+  pt: 'Não tem um relatório à mão? Descarregue este exemplo real e experimente já o verificador.',
+  da: 'Har du ikke en rapport ved hånden? Download dette rigtige eksempel og prøv verifikatoren med det samme.',
+  sv: 'Har du ingen rapport till hands? Ladda ner det här riktiga exemplet och prova verifieraren direkt.',
+  nb: 'Har du ingen rapport for hånden? Last ned dette ekte eksempelet og prøv verifikatoren med en gang.',
+  ru: 'Нет отчёта под рукой? Скачайте этот реальный пример и сразу попробуйте верификатор.',
+};
+
 export default function VerifierContent({ copy, locale }: VerifierContentProps) {
   const getLink = (path: string) => localizePath(path, locale);
   const dict = getDictionary(locale);
@@ -283,7 +297,7 @@ console.log(result.integrityLevel);`}</pre>
         <OnlineVerifier copy={copy} />
         <div style={{ marginTop: 40 }}>
           <p style={{ textAlign: 'center', fontSize: 14, color: '#475467', marginBottom: 16 }}>
-            {locale === 'it' ? 'Non hai un report? Scarica questo esempio reale e prova subito il verificatore.' : 'No report handy? Download this real sample and try the verifier right away.'}
+            {NO_REPORT_HANDY[locale] ?? NO_REPORT_HANDY[locale.split('-')[0]] ?? NO_REPORT_HANDY.en}
           </p>
           <DemoReportBanner />
         </div>
