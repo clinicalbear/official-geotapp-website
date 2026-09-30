@@ -17,11 +17,11 @@ const FOOTER_LABELS: Record<string, {
   flow: string; timetracker: string; verifier: string; pricing: string; bundle: string;
   blog: string; guide: string; video: string; roi: string; demo: string; comparisons: string; features: string;
   about: string; press: string; whatis: string; contact: string; trial: string; login: string;
-  privacy: string; terms: string; cookies: string; accessibility: string;
+  privacy: string; terms: string; cookies: string; accessibility: string; manageCookies?: string;
   sectors: string; cleaning: string; installers: string; security: string;
 }> = {
-  it: { products: 'Prodotti', solutions: 'Settori', resources: 'Risorse', company: 'Azienda', legal: 'Legale', flow: 'GeoTapp Flow', timetracker: 'TimeTracker', verifier: 'Verifier', pricing: 'Prezzi', bundle: 'Bundle', video: 'Video', blog: 'Blog', guide: 'Guida utente', roi: 'Calcolatore ROI', demo: 'Demo', comparisons: 'Confronti', features: 'Funzionalità', about: 'Chi siamo', press: 'Ufficio stampa', whatis: 'Cos\'è GeoTapp', contact: 'Contatti', trial: 'Prova gratuita', login: 'Accedi', privacy: 'Privacy Policy', terms: 'Termini di Servizio', cookies: 'Cookie Policy', accessibility: 'Accessibilità', sectors: 'Tutti i settori', cleaning: 'Pulizie', installers: 'Installatori', security: 'Sicurezza' },
-  en: { products: 'Products', solutions: 'Sectors', resources: 'Resources', company: 'Company', legal: 'Legal', flow: 'GeoTapp Flow', timetracker: 'TimeTracker', verifier: 'Verifier', pricing: 'Pricing', bundle: 'Bundle', video: 'Video', blog: 'Blog', guide: 'User guide', roi: 'ROI Calculator', demo: 'Demo', comparisons: 'Comparisons', features: 'Features', about: 'About us', press: 'Press', whatis: 'What is GeoTapp', contact: 'Contact', trial: 'Free trial', login: 'Log in', privacy: 'Privacy Policy', terms: 'Terms of Service', cookies: 'Cookie Policy', accessibility: 'Accessibility', sectors: 'All sectors', cleaning: 'Cleaning', installers: 'Installers', security: 'Security' },
+  it: { products: 'Prodotti', solutions: 'Settori', resources: 'Risorse', company: 'Azienda', legal: 'Legale', flow: 'GeoTapp Flow', timetracker: 'TimeTracker', verifier: 'Verifier', pricing: 'Prezzi', bundle: 'Bundle', video: 'Video', blog: 'Blog', guide: 'Guida utente', roi: 'Calcolatore ROI', demo: 'Demo', comparisons: 'Confronti', features: 'Funzionalità', about: 'Chi siamo', press: 'Ufficio stampa', whatis: 'Cos\'è GeoTapp', contact: 'Contatti', trial: 'Prova gratuita', login: 'Accedi', privacy: 'Informativa privacy', terms: 'Termini di servizio', cookies: 'Informativa cookie', accessibility: 'Accessibilità', manageCookies: 'Gestisci cookie', sectors: 'Tutti i settori', cleaning: 'Pulizie', installers: 'Installatori', security: 'Sicurezza' },
+  en: { products: 'Products', solutions: 'Sectors', resources: 'Resources', company: 'Company', legal: 'Legal', flow: 'GeoTapp Flow', timetracker: 'TimeTracker', verifier: 'Verifier', pricing: 'Pricing', bundle: 'Bundle', video: 'Video', blog: 'Blog', guide: 'User guide', roi: 'ROI Calculator', demo: 'Demo', comparisons: 'Comparisons', features: 'Features', about: 'About us', press: 'Press', whatis: 'What is GeoTapp', contact: 'Contact', trial: 'Free trial', login: 'Log in', privacy: 'Privacy Policy', terms: 'Terms of Service', cookies: 'Cookie Policy', accessibility: 'Accessibility', manageCookies: 'Manage cookies', sectors: 'All sectors', cleaning: 'Cleaning', installers: 'Installers', security: 'Security' },
   de: { products: 'Produkte', solutions: 'Branchen', resources: 'Ressourcen', company: 'Unternehmen', legal: 'Rechtliches', flow: 'GeoTapp Flow', timetracker: 'TimeTracker', verifier: 'Verifier', pricing: 'Preise', bundle: 'Bundle', video: 'Video', blog: 'Blog', guide: 'Benutzerhandbuch', roi: 'ROI-Rechner', demo: 'Demo', comparisons: 'Vergleiche', features: 'Funktionen', about: 'Über uns', press: 'Presse', whatis: 'Was ist GeoTapp', contact: 'Kontakt', trial: 'Kostenlos testen', login: 'Anmelden', privacy: 'Datenschutz', terms: 'AGB', cookies: 'Cookie-Richtlinie', accessibility: 'Barrierefreiheit', sectors: 'Alle Branchen', cleaning: 'Reinigung', installers: 'Installateure', security: 'Sicherheit' },
   fr: { products: 'Produits', solutions: 'Secteurs', resources: 'Ressources', company: 'Entreprise', legal: 'Juridique', flow: 'GeoTapp Flow', timetracker: 'TimeTracker', verifier: 'Verifier', pricing: 'Tarifs', bundle: 'Bundle', video: 'Vidéo', blog: 'Blog', guide: 'Guide utilisateur', roi: 'Calculateur ROI', demo: 'Démo', comparisons: 'Comparaisons', features: 'Fonctionnalités', about: 'À propos', press: 'Presse', whatis: 'Qu\'est-ce que GeoTapp', contact: 'Contact', trial: 'Essai gratuit', login: 'Connexion', privacy: 'Politique de confidentialité', terms: 'Conditions', cookies: 'Politique cookies', accessibility: 'Accessibilité', sectors: 'Tous les secteurs', cleaning: 'Nettoyage', installers: 'Installateurs', security: 'Sécurité' },
   es: { products: 'Productos', solutions: 'Sectores', resources: 'Recursos', company: 'Empresa', legal: 'Legal', flow: 'GeoTapp Flow', timetracker: 'TimeTracker', verifier: 'Verifier', pricing: 'Precios', bundle: 'Bundle', video: 'Vídeo', blog: 'Blog', guide: 'Guía de usuario', roi: 'Calculadora ROI', demo: 'Demo', comparisons: 'Comparaciones', features: 'Funcionalidades', about: 'Sobre nosotros', press: 'Prensa', whatis: 'Qué es GeoTapp', contact: 'Contacto', trial: 'Prueba gratuita', login: 'Iniciar sesión', privacy: 'Política de privacidad', terms: 'Términos', cookies: 'Política de cookies', accessibility: 'Accesibilidad', sectors: 'Todos los sectores', cleaning: 'Limpieza', installers: 'Instaladores', security: 'Seguridad' },
@@ -97,6 +97,7 @@ export default function Footer() {
             <Link href={getLink('/products/geotapp-verifier')}>{t.verifier}</Link>
             <Link href={getLink('/pricing')}>{t.pricing}</Link>
             <Link href={getLink('/features')}>{t.features}</Link>
+            <Link href={getLink('/confronto')}>{t.comparisons}</Link>
           </div>
 
           <div>
@@ -105,7 +106,6 @@ export default function Footer() {
             <Link href={getLink('/settori/pulizie')}>{t.cleaning}</Link>
             <Link href={getLink('/settori/installatori')}>{t.installers}</Link>
             <Link href={getLink('/settori/sicurezza')}>{t.security}</Link>
-            <Link href={getLink('/confronto')}>{t.comparisons}</Link>
           </div>
 
           <div>
@@ -114,7 +114,6 @@ export default function Footer() {
             <Link href={getLink('/guida')}>{t.guide}</Link>
             <Link href={getLink('/video')}>{t.video}</Link>
             <Link href={getLink('/roi-calculator')}>{t.roi}</Link>
-            <Link href={getLink('/trial')}>{t.demo}</Link>
           </div>
 
           <div>
@@ -135,6 +134,13 @@ export default function Footer() {
             {/* Dichiarazione di accessibilita': l'European Accessibility Act la
                 pretende raggiungibile, e chi verifica la cerca nel piede. */}
             <Link href={getLink('/accessibilita')}>{t.accessibility}</Link>
+            <button
+              type="button"
+              className="ft-cookie"
+              onClick={() => window.dispatchEvent(new Event('gtapp:cookie-preferences'))}
+            >
+              {t.manageCookies ?? FOOTER_LABELS.en.manageCookies}
+            </button>
           </div>
         </div>
 

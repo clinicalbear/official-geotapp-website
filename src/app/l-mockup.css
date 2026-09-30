@@ -1003,6 +1003,9 @@ main:has(> .lp-l){padding-top:0}
 .ft form button{background:#22B573 !important;color:#0B1736 !important;border-radius:99px !important;
   border:0 !important;padding:14px 28px !important;font-weight:600 !important;cursor:pointer}
 .ft .g a{font-size:14px}
+/* «Gestisci cookie» e' un bottone (riapre le preferenze), vestito come i link del piede */
+.ft .ft-cookie{display:block;margin:0 0 11px;padding:0;background:none;border:0;color:inherit;font:inherit;font-size:14px;text-align:left;cursor:pointer;transition:color .3s,transform .3s}
+.ft .ft-cookie:hover{color:var(--sky);transform:translateX(5px)}
 .ft .listed{padding:34px 0;border-top:1px solid rgba(247,249,252,.13);margin-top:56px}
 .ft .listed section{background:transparent !important;padding:0 !important;border:0 !important}
 

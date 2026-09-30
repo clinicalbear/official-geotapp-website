@@ -12,7 +12,7 @@ const ARTICLE_DATE_PUBLISHED = '2026-07-02';
 const ARTICLE_DATE_MODIFIED = '2026-07-02';
 
 const META: Record<string, { title: string; description: string }> = {
-  it: { title: 'GeoTapp vs Jibble - Confronto 2026 | GeoTapp', description: 'GeoTapp vs Jibble: differenze per aziende con operatori sul campo. Jibble conta le presenze con volto e GPS base; GeoTapp prova ogni intervento con GPS verificato, foto e report in cui qualsiasi modifica risulta evidente.' },
+  it: { title: 'GeoTapp vs Jibble - Confronto 2026 | GeoTapp', description: 'GeoTapp vs Jibble: differenze per aziende con operatori sul campo. Jibble conta le presenze con volto e GPS base; GeoTapp prova ogni intervento con posizione, ora, foto e report in cui ogni modifica successiva è rilevabile.' },
   en: { title: 'GeoTapp vs Jibble - Comparison 2026 | GeoTapp', description: 'GeoTapp vs Jibble: key differences for field service companies. Jibble logs attendance with face and basic GPS; GeoTapp proves every job with verified GPS, photos and tamper-evident reports.' },
   de: { title: 'GeoTapp vs Jibble - Vergleich 2026 | GeoTapp', description: 'GeoTapp vs Jibble: Hauptunterschiede für Außendienstunternehmen. Jibble erfasst Anwesenheit per Gesicht und Basis-GPS; GeoTapp belegt jeden Einsatz mit verifiziertem GPS, Fotos und Berichten, bei denen jede Änderung erkennbar ist.' },
   fr: { title: 'GeoTapp vs Jibble - Comparaison 2026 | GeoTapp', description: 'GeoTapp vs Jibble : différences clés pour les entreprises avec des opérateurs sur le terrain. Jibble pointe les présences avec visage et GPS basique ; GeoTapp prouve chaque intervention avec GPS vérifié, photos et rapports dont toute modification est détectable.' },
@@ -29,10 +29,10 @@ type FaqItem = { q: string; a: string };
 
 const FAQ: Record<string, FaqItem[]> = {
   it: [
-    { q: 'Qual è la differenza principale tra GeoTapp e Jibble?', a: 'Jibble è un sistema di rilevazione presenze: registra chi timbra, con riconoscimento facciale e GPS di base al momento della timbratura. GeoTapp è un sistema di prova del lavoro: genera report sigillati con GPS verificato, foto e firma digitale, prove che il cliente può controllare in autonomia. Jibble dice "c\'era"; GeoTapp dimostra "cosa ha fatto, dove e quando".' },
-    { q: 'Jibble ha il GPS. Non basta?', a: 'Jibble registra una posizione GPS di base alla timbratura, utile per sapere da dove si timbra. Non è però una prova sigillata dell\'intervento: la posizione non è legata a un report in cui qualsiasi modifica risulta evidente né a foto verificabili, e il cliente non può controllarla da sé. GeoTapp sigilla GPS, ora e foto in un report che regge a una contestazione.' },
+    { q: 'Qual è la differenza principale tra GeoTapp e Jibble?', a: 'Jibble è un sistema di rilevazione presenze: registra chi timbra, con riconoscimento facciale e GPS di base al momento della timbratura. GeoTapp è un sistema di prova del lavoro: genera report sigillati con posizione, ora e foto, prove che il cliente può controllare in autonomia. Jibble dice "c\'era"; GeoTapp dimostra "cosa ha fatto, dove e quando".' },
+    { q: 'Jibble ha il GPS. Non basta?', a: 'Jibble registra una posizione GPS di base alla timbratura, utile per sapere da dove si timbra. Non è però una prova sigillata dell\'intervento: la posizione non è legata a un report in cui ogni modifica successiva è rilevabile né a foto verificabili, e il cliente non può controllarla da sé. GeoTapp sigilla GPS, ora e foto in un report da mostrare quando qualcuno contesta.' },
     { q: 'GeoTapp o Jibble per chi lavora su commessa?', a: 'Jibble è adatto a chi vuole solo contare le presenze e le ore con un piano gratuito generoso. GeoTapp è pensato per imprese di pulizie, manutentori e installatori che devono dimostrare l\'intervento a un committente. Se hai clienti che contestano, GeoTapp produce le prove; Jibble registra la presenza ma non la prova del lavoro.' },
-    { q: 'Jibble ha un piano gratuito. Vale la pena pagare GeoTapp?', a: 'Il free plan di Jibble ha senso per chi cerca solo timbrature. Per aziende con operatori sul campo il valore di GeoTapp sta nelle prove difendibili: un contratto salvato grazie a un report verificabile vale molte volte l\'abbonamento mensile.' },
+    { q: 'Jibble ha un piano gratuito. Vale la pena pagare GeoTapp?', a: 'Il free plan di Jibble ha senso per chi cerca solo timbrature. Per aziende con operatori sul campo il valore di GeoTapp sta nella prova: quando un cliente contesta, hai un report sigillato da mostrare invece di una parola contro l\'altra.' },
   ],
   en: [
     { q: 'What is the main difference between GeoTapp and Jibble?', a: 'Jibble is an attendance system: it logs who clocks in, with face recognition and basic GPS at clock-in. GeoTapp is a proof-of-work system: it generates sealed reports with verified GPS, photos and digital signature, proof clients can check independently. Jibble says "they were here"; GeoTapp proves "what they did, where and when".' },
@@ -97,7 +97,7 @@ const FAQ: Record<string, FaqItem[]> = {
 };
 
 const ROWS_LABELS: Record<string, string[]> = {
-  it: ['GPS verificato al momento dell\'intervento','Report sigillato crittograficamente','Prove fotografiche collegate a GPS e timestamp','Verifica indipendente da parte del cliente','Tracciamento ore','App mobile Android/iOS','Messaggistica interna proprietaria','Export presenze/paghe','Piano gratuito','Gestione commesse multi-sito','Conformità GDPR geolocalizzazione','Informativa GPS automatica con firma digitale*'],
+  it: ['Posizione registrata e controllata a ogni timbratura','Report sigillato crittograficamente','Prove fotografiche collegate a GPS e timestamp','Verifica indipendente da parte del cliente','Tracciamento ore','App mobile Android/iOS','Messaggistica interna proprietaria','Export presenze/paghe','Piano gratuito','Gestione commesse multi-sito','Posizione rilevata solo quando si timbra, mai in continuo','Informativa GPS firmata nell\'app prima di timbrare*'],
   en: ['GPS verified at job site','Cryptographically sealed report','Photo evidence linked to GPS and timestamp','Independent verification by client','Time tracking','Mobile app Android/iOS','Built-in messaging','Payroll/attendance export','Free plan','Multi-site job management','GDPR-compliant geolocation','Automatic GPS privacy notice with digital signature*'],
   de: ['GPS verifiziert am Einsatzort','Kryptographisch versiegelter Bericht','Fotobeweise verknüpft mit GPS und Zeitstempel','Unabhängige Prüfung durch den Kunden','Zeiterfassung','Mobile App Android/iOS','Integrierte Nachrichten','Lohn-/Anwesenheitsexport','Kostenloser Plan','Standortübergreifende Auftragsverwaltung','DSGVO-konforme Geolokalisierung','Automatische GPS-Datenschutzerklärung mit digitaler Signatur*'],
   fr: ['GPS vérifié sur le lieu d\'intervention','Rapport scellé cryptographiquement','Preuves photographiques liées au GPS et à l\'horodatage','Vérification indépendante par le client','Suivi des heures','Application mobile Android/iOS','Messagerie interne intégrée','Export paie/présences','Plan gratuit','Gestion de chantiers multi-sites','Géolocalisation conforme au RGPD','Avis de confidentialité GPS automatique avec signature numérique*'],
@@ -140,7 +140,7 @@ type Copy = {
 };
 
 const FOOTNOTE: Record<string, string> = {
-  it: '* Per legge (GDPR Art. 13 e, in Italia, Art. 4 Statuto dei Lavoratori), ogni dipendente deve firmare un\'informativa privacy prima di essere geolocalizzato. La maggior parte dei software GPS non lo gestisce: il rischio legale resta al titolare. GeoTapp genera automaticamente l\'informativa personalizzata, la fa firmare digitalmente al dipendente e blocca l\'accesso GPS finché non è firmata.',
+  it: '* Per legge (art. 13 GDPR e, in Italia, art. 4 dello Statuto dei Lavoratori) ogni dipendente va informato prima di essere geolocalizzato. Se il software lascia questo passaggio al titolare, il rischio resta a lui. GeoTapp prepara l\'informativa personalizzata, la fa firmare per presa visione nell\'app e non lascia timbrare finché non è firmata.',
   en: '* By law (GDPR Art. 13, and in Italy Art. 4 of the Workers\' Statute), every employee must sign a privacy notice before being geolocated. Most GPS software does not handle this: the legal risk stays with the employer. GeoTapp automatically generates the personalized notice, has the employee sign it digitally, and blocks GPS access until it is signed.',
   de: '* Gesetzlich (DSGVO Art. 13, in Italien Art. 4 Arbeitnehmerstatut) muss jeder Mitarbeiter vor der Geolokalisierung eine Datenschutzerklärung unterschreiben. Die meisten GPS-Programme regeln das nicht: das rechtliche Risiko bleibt beim Arbeitgeber. GeoTapp erstellt die personalisierte Erklärung automatisch, lässt sie digital unterschreiben und sperrt den GPS-Zugriff, bis sie signiert ist.',
   fr: '* Par la loi (RGPD Art. 13, et en Italie Art. 4 du Statut des travailleurs), chaque employé doit signer un avis de confidentialité avant d\'être géolocalisé. La plupart des logiciels GPS ne le gèrent pas : le risque juridique reste à l\'employeur. GeoTapp génère automatiquement l\'avis personnalisé, le fait signer numériquement et bloque l\'accès GPS tant qu\'il n\'est pas signé.',
@@ -158,17 +158,17 @@ const T: Record<string, Copy> = {
     badge: 'Confronto App', h1sub: 'contare le presenze o provare il lavoro?',
     desc: 'Jibble registra chi c\'è, con volto e GPS di base. GeoTapp prova cosa è stato fatto, dove e quando. Per chi lavora sul campo, la differenza cambia tutto.',
     summary: 'In sintesi:',
-    summaryText: 'Jibble è ottimo per contare presenze e ore con un piano gratuito generoso. Per operatori sul campo che devono dimostrare l\'intervento a un committente, GeoTapp produce report sigillati con GPS verificato, foto e firma digitale, cose che Jibble non ha.',
+    summaryText: 'Jibble è ottimo per contare presenze e ore con un piano gratuito generoso. Per operatori sul campo che devono dimostrare l\'intervento a un committente, GeoTapp produce report sigillati con posizione, ora e foto, cose che Jibble non ha.',
     footnote: FOOTNOTE.it,
     features: 'Confronto funzionalità chiave', feat: 'Funzionalità',
     diff: 'Rilevazione presenze vs prova del lavoro',
-    geo: ['GPS verificato automaticamente, non inserito a mano','Report sigillati con hash crittografico alla chiusura dell\'intervento','Prove fotografiche integrate con GPS e timestamp','Il committente verifica l\'autenticità in autonomia','Progettato per operatori sul campo, non per l\'ufficio'],
+    geo: ['Posizione rilevata dal telefono a ogni timbratura, non inserita a mano','Report sigillati con hash crittografico alla chiusura dell\'intervento','Prove fotografiche integrate con GPS e timestamp','Il committente verifica da solo che il report non sia stato modificato','Progettato per operatori sul campo, non per l\'ufficio'],
     comp: ['Buona rilevazione presenze con riconoscimento facciale','GPS di base alla timbratura (non sigillato nell\'intervento)','Piano gratuito generoso, ideale per contare le ore','Nessun report sigillato né prova fotografica dell\'intervento','I dati non sono verificabili dal cliente'],
     useCasesTitle: 'Chi dovrebbe scegliere GeoTapp invece di Jibble',
-    useCases: ['Imprese di pulizie e facility management con clienti esigenti','Manutentori e installatori che devono difendere le ore fatturate','Aziende soggette a ispezioni CCNL o audit del committente','Chi ha già avuto contestazioni su interventi non riconosciuti','Aziende con più squadre distribuite su cantieri diversi'],
+    useCases: ['Imprese di pulizie e facility management con clienti esigenti','Manutentori e installatori che devono documentare le ore fatturate','Aziende soggette a ispezioni CCNL o audit del committente','Chi ha già avuto contestazioni su interventi non riconosciuti','Aziende con più squadre distribuite su cantieri diversi'],
     cta: 'Vuoi vedere la differenza in pratica?',
-    ctaDesc: 'Ti mostriamo come un intervento diventa una prova verificabile, in 20 minuti, senza impegno.',
-    ctaBtn: 'Inizia subito gratuitamente!',
+    ctaDesc: 'Provalo su un intervento vero: 14 giorni gratis, senza carta di credito.',
+    ctaBtn: 'Inizia la prova gratuita',
   },
   en: {
     badge: 'App Comparison', h1sub: 'counting attendance or proving the work?',

@@ -10,7 +10,7 @@ const META: Record<string, { title: string; description: string }> = {
   it: {
     title: 'Richiedi la cancellazione dell\'account | GeoTapp',
     description:
-      'Invia una richiesta per cancellare il tuo account GeoTapp e i tuoi dati personali. Elaboriamo tutte le richieste entro 30 giorni in conformità al GDPR.',
+      'Invia una richiesta per cancellare il tuo account GeoTapp e i tuoi dati personali. Le gestiamo entro 30 giorni, come prevede il GDPR.',
   },
   de: {
     title: 'Kontolöschung beantragen | GeoTapp',

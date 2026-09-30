@@ -125,26 +125,26 @@
     "hero_badge": "Il lavoro c'è stato. Ora rendilo dimostrabile.",
     "clockin_demo": {
       "step_clock": "Timbra",
-      "step_gps": "GPS verificato",
+      "step_gps": "Posizione controllata",
       "step_photo": "Foto sul posto",
       "step_sealed": "Sigillato",
-      "caption": "Una timbratura. GPS, foto e ora, sigillati. Non si rifà, non si discute.",
+      "caption": "Una timbratura: posizione, foto e ora, sigillate nel report. Ogni modifica successiva si vede.",
       "replay": "Rivedi"
     },
     "hero_title": "Se non puoi dimostrarlo, per il cliente non è mai successo.",
-    "hero_subtitle": "GeoTapp trasforma ogni intervento in evidenza oggettiva: report sigillati con dati GPS reali, prove fotografiche con timestamp e documentazione verificabile da chiunque, senza fidarsi, senza contestazioni.",
+    "hero_subtitle": "GeoTapp trasforma ogni intervento in una prova: report sigillati con posizione, foto e orari, che il cliente può verificare da solo, senza doversi fidare della tua parola.",
     "hero_cta_primary": "Inizia trial gratuito",
     "hero_cta_secondary": "Scopri i Settori",
     "hero_cta_report": "Guarda un rapportino sigillato",
     "trust_gdpr": "Niente tracciamento continuo",
-    "trust_gdpr_desc": "Solo timestamp all'ingresso e uscita",
+    "trust_gdpr_desc": "Posizione solo quando si timbra: entrata, pause, uscita",
     "trust_gps": "Prova GPS",
     "trust_gps_desc": "Ogni intervento sigillato con posizione e timestamp",
     "trust_offline": "Verificatore offline",
-    "trust_offline_desc": "Un file solo, senza account ne rete",
+    "trust_offline_desc": "Un file solo, senza account né rete",
     "trust_eu_data": "Dati in Europa",
     "features_title": "Da intervento a prova verificabile",
-    "features_subtitle": "Tre strumenti integrati: il campo registra, l'ufficio controlla, il cliente verifica.",
+    "features_subtitle": "Tre strumenti integrati: il campo registra, l'ufficio organizza, il cliente verifica.",
     "cta_title": "Il lavoro c'è stato. Ora dimostralo.",
     "cta_subtitle": "Nessun intervento resta senza documentazione, e ogni ora che passa dal campo arriva già verificabile.",
     "cta_button": "Inizia trial gratuito",
@@ -164,9 +164,9 @@
         "desc": "Ogni ora non documentata è un'ora non pagata. Ogni intervento senza prova è un intervento che il cliente può contestare."
       }
     ],
-    "report_section_title": "Il report. Non un riepilogo. Una prova.",
+    "report_section_title": "Il report non è un riepilogo: è una prova.",
     "report_section_subtitle": "Ogni report GeoTapp è generato automaticamente dai dati reali del campo.",
-    "report_section_body": "Timbrature GPS, foto con l'ora, note operative. I dati si chiudono alla generazione e da lì non si toccano più. Quando arriva il dubbio non devi spiegare, devi mostrare, e quello che mostri non è un documento mandato al cliente, è la fine della discussione.",
+    "report_section_body": "Timbrature con posizione, foto con l'ora, note operative. I dati si sigillano quando il report viene generato, e da lì ogni modifica è rilevabile. Quando arriva il dubbio non devi spiegare: mostri il report, e il cliente lo controlla da solo.",
     "report_feature_1": "Sigillato alla generazione, qualsiasi alterazione è rilevabile",
     "report_feature_2": "Verificabile senza account, da chiunque, in autonomia",
     "report_feature_3": "Dati GPS e fotografici integrati e non separabili",
@@ -179,13 +179,13 @@
     "hero_sectors_and": "e",
     "roi_mini": {
       "title": "Quanto ti costa non poterlo dimostrare?",
-      "subtitle": "Tre numeri, una stima onesta. In due secondi, senza email.",
+      "subtitle": "Tre numeri, una stima onesta. Subito, senza email.",
       "field_operatori": "Operatori",
       "field_costo": "Costo orario (€)",
       "field_contestazioni": "Contestazioni al mese",
       "result_prefix": "Stai lasciando sul tavolo circa",
       "result_suffix": "all'anno",
-      "disclaimer": "Stima minima (dispute + coordinamento). Il conto completo, voce per voce, è nel report.",
+      "disclaimer": "Stima minima (contestazioni + coordinamento). Il conto completo, voce per voce, è nel calcolatore ROI.",
       "email_label": "Vuoi il report dettagliato e il confronto col tuo settore?",
       "email_placeholder": "La tua email di lavoro",
       "email_cta": "Mandami il report + avvia il trial",
@@ -197,75 +197,77 @@
       "pitch_points": [
         "Ogni contestazione non pagata pesa, dodici mesi su dodici",
         "Le ore passate in ufficio sono ore che non fatturi",
-        "Due secondi e nessuna email per vedere il numero"
+        "Tre numeri e nessuna email per vedere il risultato"
       ]
     },
-    "proof_note": "Prove raccolte solo tramite fotocamera, nessun tracciamento continuo.",
+    "proof_note": "Foto di prova scattate dall'app, nessun tracciamento continuo.",
     "proof_claim": "Fra l'entrata e l'uscita non registriamo niente in automatico.",
-    "sticky_cta_subtitle": "14 giorni gratis, nessuna carta di credito"
+    "sticky_cta_subtitle": "14 giorni gratis, nessuna carta di credito",
+    "trial_cta_headline": "Provalo gratis per 14 giorni",
+    "trial_cta_subtitle": "Nessuna carta di credito richiesta"
   },
   "home_sections": {
     "flow": {
       "badge": "GeoTapp Flow",
-      "title": "L'ufficio vede tutto. Appena arriva.",
-      "subtitle": "Flow è il centro operativo dell'ufficio: commesse, attività, avanzamento e report strutturati. <strong class=\"text-slate-900\">Il campo lavora. L'ufficio sa.</strong><br/><br/><em><strong>«La tua azienda è un organismo vivo. Ogni intervento, ogni commessa, ogni operatore è un battito. GeoTapp Flow li tiene tutti sincronizzati.»</strong></em>",
+      "title": "L'ufficio vede ogni timbratura appena arriva.",
+      "subtitle": "Flow è il centro operativo dell'ufficio: commesse, attività, avanzamento e report strutturati. <strong class=\"text-slate-900\">Il campo lavora. L'ufficio sa.</strong>",
       "features": {
         "crm": "<strong>Gestione Commesse:</strong> Ogni intervento nasce strutturato, con tecnico assegnato, sede e stato aggiornato subito.",
-        "pipeline": "<strong>Documentazione automatica:</strong> Ogni intervento completato genera un report pronto, senza compilazione manuale, senza errori."
+        "pipeline": "<strong>Documentazione automatica:</strong> Ogni intervento completato genera un report pronto, senza compilazione manuale."
       },
       "link": "Scopri GeoTapp Flow"
     },
     "app": {
       "badge": "GeoTapp TimeTracker",
       "title": "Il tecnico registra. La prova si forma.",
-      "subtitle": "TimeTracker è l'app mobile che raccoglie la prova dal campo, ingresso, uscita, foto con l'ora, note. Tutto collegato all'intervento, tutto sigillato. <strong>Disponibile su Android e iOS.</strong>",
+      "subtitle": "TimeTracker è l'app mobile che raccoglie la prova dal campo: entrata, pause, uscita, foto con l'ora, note. Tutto collegato all'intervento e sigillato nel report. <strong>Disponibile su Android e iOS.</strong>",
       "card_gps": {
         "title": "Prova GPS",
-        "desc": "Posizione e timestamp verificati"
+        "desc": "Posizione e ora registrate a ogni timbratura"
       },
       "card_gdpr": {
         "title": "Niente tracciamento continuo",
-        "desc": "Nessun tracciamento continuo"
+        "desc": "Fra una timbratura e l'altra non si registra nulla in automatico"
       },
       "link": "Scopri GeoTapp TimeTracker"
     },
     "verifier": {
       "badge": "GeoTapp Verifier",
       "title": "Non hai bisogno che si fidino di te.",
-      "subtitle": "La tua parola non entra nel discorso. Il cliente apre il report e controlla da solo, senza accedere a GeoTapp. Se i dati corrispondono al lavoro reale, il report regge. Se qualcuno ha modificato il documento, non regge più. Senza appello.",
+      "subtitle": "La tua parola non entra nel discorso. Il cliente apre il report e lo controlla da solo, senza accedere a GeoTapp. Se nessuno ha toccato il documento, la verifica lo conferma. Se qualcuno lo ha modificato, la verifica lo segnala.",
       "features": {
-        "integrity": "<strong>Dati sigillati:</strong> Il report è generato sui dati reali di campo e bloccato. Qualsiasi modifica lo rende non valido, senza appello.",
-        "independent": "<strong>Verifica autonoma:</strong> Chiunque abbia il report può verificarne l'autenticità, senza account, senza accesso alla piattaforma."
+        "integrity": "<strong>Dati sigillati:</strong> Il report viene sigillato quando è generato. Qualsiasi modifica successiva viene segnalata dalla verifica.",
+        "independent": "<strong>Verifica autonoma:</strong> Chiunque abbia il report può verificarne l'integrità, senza account e senza accesso alla piattaforma."
       },
       "link": "Scopri GeoTapp Verifier"
     },
     "core": {
       "badge": "Piattaforma GeoTapp",
-      "title": "Un sistema, tre livelli di certezza",
-      "subtitle": "TimeTracker registra sul campo. Flow organizza in ufficio. Verifier verifica che tutto corrisponda. Un ciclo chiuso, senza falle.",
+      "title": "Un sistema, tre strumenti",
+      "subtitle": "TimeTracker registra sul campo. Flow organizza in ufficio. Verifier permette al cliente di controllare che il report non sia stato toccato. Un solo ciclo, dal campo al cliente.",
       "features": [
         {
-          "title": "Input reale dal campo",
-          "desc": "TimeTracker registra timbratura, pause e uscita con GPS. Ogni dato inviato dal campo è autentico, con posizione e timestamp."
+          "title": "I dati nascono sul campo",
+          "desc": "TimeTracker registra entrata, pause e uscita con posizione e ora, più le foto di prova del lavoro."
         },
         {
-          "title": "Privacy rispettata",
-          "desc": "La posizione viene rilevata <strong>solo</strong> all'ingresso e all'uscita. Nessun tracciamento continuo."
+          "title": "Posizione solo quando si timbra",
+          "desc": "La posizione viene rilevata <strong>solo</strong> quando il lavoratore timbra (entrata, pause, uscita) o scatta una foto di prova. Fra una timbratura e l'altra non si registra nulla in automatico."
         },
         {
           "title": "Controllo operativo aggiornato a ogni timbratura",
-          "desc": "I dati del campo arrivano in Flow appena vengono registrati. Il responsabile ha visibilità sempre aggiornata senza dover chiamare nessuno."
+          "desc": "I dati del campo arrivano in Flow appena vengono registrati. Il responsabile vede le timbrature senza dover chiamare nessuno."
         },
         {
-          "title": "Prova difendibile nel tempo",
-          "desc": "Ogni report è sigillato sui dati reali di campo. Contestazione? Il dato c'è. Verificabile da chiunque. Sempre."
+          "title": "Una prova che resta verificabile",
+          "desc": "Ogni report è sigillato sui dati raccolti sul campo. Se arriva una contestazione, il dato c'è, e chiunque può verificare che il report non sia stato modificato. Anche fra anni, anche senza di noi."
         }
       ]
     },
     "footer_cta": {
       "title": "Il lavoro è dimostrato. Adesso vai a casa.",
-      "subtitle": "Un tap in cantiere sigilla la prova, e il report si scrive da solo, pronto per il cliente. Basta venerdì sera passati a ricostruire la settimana a memoria. Quando stacchi, hai finito davvero, e la sera torna tua.",
-      "button": "Dimostra il tuo lavoro",
+      "subtitle": "Timbri in cantiere e il report si compone da solo con i dati del turno, pronto per il cliente. Basta venerdì sera passati a ricostruire la settimana a memoria. Quando stacchi, hai finito davvero, e la sera torna tua.",
+      "button": "Scrivici",
       "pricing_link": "Vedi i piani e prezzi →"
     },
     "settori": {
@@ -285,11 +287,11 @@
       "pulizie": {
         "name": "Pulizie",
         "desc": "Imprese di pulizia, Facility, Multiservizi. Ogni passaggio documentato e verificabile dal committente, meno contestazioni.",
-        "cta": "Evita contestazioni"
+        "cta": "Documenta ogni passaggio"
       },
       "elettricisti": {
         "name": "Elettricisti",
-        "desc": "Impianti elettrici, quadri, cablaggi. Ogni intervento documentato con GPS e foto, prove sigillate per chiudere ogni contestazione.",
+        "desc": "Impianti elettrici, quadri, cablaggi. Ogni intervento documentato con GPS e foto, in un report sigillato da mostrare quando qualcuno contesta.",
         "cta": "Documenta ogni intervento"
       },
       "idraulici": {
@@ -303,12 +305,12 @@
         "cta": "Prova i materiali sostituiti"
       },
       "edilizia": {
-        "desc": "Costruzioni, Ristrutturazioni, Subappalti. Ore e presenze in cantiere documentate, SAL che reggono alla contestazione.",
-        "cta": "Difendi i tuoi SAL"
+        "desc": "Costruzioni, ristrutturazioni, subappalti. Ore e presenze in cantiere documentate, SAL da mostrare al committente con le prove allegate.",
+        "cta": "Documenta i tuoi SAL"
       },
       "manutenzione": {
-        "desc": "Impianti, Ascensori, Facility. Ogni chiamata e ogni sopralluogo con GPS e foto: il rapportino non si contesta piu'.",
-        "cta": "Chiudi le contestazioni"
+        "desc": "Impianti, ascensori, facility. Ogni chiamata e ogni sopralluogo con GPS e foto, in un rapportino da mostrare quando serve.",
+        "cta": "Documenta ogni visita"
       },
       "impianti": {
         "desc": "Meccanici, Elettrici, Antincendio. Collaudi e messa in servizio sigillati con ora e posizione, prova pronta per il committente.",
@@ -328,7 +330,7 @@
       "field_intervention": "Intervento",
       "field_intervention_value": "Sostituzione quadro elettrico",
       "btn_download": "Scarica il report (.zip)",
-      "btn_verify": "Verifica autenticità →"
+      "btn_verify": "Come si verifica →"
     },
     "flow_mockup": {
       "pipeline_title": "Pipeline Vendite",
@@ -568,16 +570,18 @@
     "open_maps": "Apri in Google Maps ↗"
   },
   "login_hub": {
-    "title": "Accedi al tuo <span class=\"text-primary\">Account</span>.",
-    "subtitle": "Seleziona il prodotto a cui vuoi accedere.",
+    "title": "Accedi a <span class=\"text-primary\">GeoTapp</span>.",
+    "subtitle": "Scegli il prodotto: Flow per l'ufficio, TimeTracker per chi lavora sul campo.",
     "flow": {
       "desc": "Gestione operativa, commesse, coordinamento e report.",
       "btn": "Accedi a Flow"
     },
     "timetracker": {
-      "desc": "Presenze, attività sul campo e prove di lavoro.",
-      "btn": "Accedi a TimeTracker"
-    }
+      "desc": "Per gli operatori sul campo: l'accesso si fa dall'app, su Android e iOS.",
+      "btn": "Scarica l'app TimeTracker"
+    },
+    "meta_title": "Accedi | GeoTapp",
+    "meta_description": "Accedi a GeoTapp Flow dal browser, oppure scarica l'app TimeTracker per timbrare dal campo."
   },
   "product_pages": {
     "flow": {
@@ -929,33 +933,33 @@
     "wp_btn": "Scarica Plugin"
   },
   "chi_siamo": {
-    "badge": "La Nostra Storia",
-    "hero_title_line1": "Nati sul Campo,",
-    "hero_title_line2": "Non in un Ufficio.",
+    "badge": "La nostra storia",
+    "hero_title_line1": "Nati sul campo,",
+    "hero_title_line2": "non in un ufficio.",
     "hero_desc": "Il prodotto è nato da un foglio di carta con sopra le ore di un mese, e da dei conti che non tornavano mai.",
     "story": [
       "C'è un lavoro per cui nessuno è mai stato pagato, ed è segnare le ore che hai lavorato. Data, ora di inizio, ora di fine, totale. Ogni giorno, e a fine mese il conto al titolare.",
-      "<strong>Michele Angelo Petraroli</strong> faceva sicurezza agli eventi, da dipendente, e quel foglio lo compilava come lo compilano tutti, cioè male. I totali non tornavano quasi mai, un po' anche per colpa sua, perché è umano rimandare le cose noiose e poi ricostruirle a memoria una settimana dopo. Chi invece le ore non le mandava proprio, evidentemente lavorava perché era ricco e lo faceva per passione.",
-      "Cercò un'applicazione che gli togliesse quella rogna. Le trovò tutte uguali, e tutte gli chiedevano esattamente quello che già faceva a mano, data, inizio, fine, totale. Stessa fatica, bottoni più belli.",
-      "Così, in ferie, se la sviluppò da solo. Una pagina web e due gesti, premi quando cominci e premi quando smetti, e il resto finiva ordinato in un archivio già pronto da mandare a fine mese.",
-      "Poi il pensiero che ha cambiato tutto, se serve a me serve anche ai colleghi. E se serve al titolare, allora il flusso va girato, perché non è lui che deve rincorrere le persone per avere le ore, sono le ore che arrivano a lui ogni giorno da sole.",
-      "Da lì lo strumento è cresciuto in una direzione sola. Prima la geolocalizzazione pensata per stare dentro i paletti di legge, letta solo all'apertura e alla chiusura del turno e mai in continuo. Poi la prova verificabile automatica del lavoro svolto, perché il problema vero non era contare le ore, era dimostrarle quando qualcuno le metteva in dubbio.",
+      "<strong>Michele Angelo Petraroli</strong> faceva sicurezza agli eventi, da dipendente, e quel foglio lo compilava come lo compilano tutti, cioè male. I totali non tornavano quasi mai, un po' anche per colpa sua, perché è umano rimandare le cose noiose e poi ricostruirle a memoria una settimana dopo.",
+      "Cercò un'applicazione che gli togliesse quella rogna. Le trovò tutte uguali, e tutte gli chiedevano esattamente quello che già faceva a mano: data, inizio, fine, totale. Stessa fatica, bottoni più belli.",
+      "Così, in ferie, se la sviluppò da solo. Una pagina web e due gesti: premi quando cominci e premi quando smetti, e il resto finiva ordinato in un archivio già pronto da mandare a fine mese.",
+      "Poi il pensiero che ha cambiato tutto: se serve a me, serve anche ai colleghi. E se serve al titolare, allora il flusso va girato, perché non è lui che deve rincorrere le persone per avere le ore: sono le ore che arrivano a lui ogni giorno, da sole.",
+      "Da lì lo strumento è cresciuto in una direzione sola. Prima la geolocalizzazione pensata per stare dentro i paletti di legge: la posizione si legge solo quando il lavoratore timbra (entrata, pause, uscita) e mai in continuo. Poi la prova verificabile del lavoro svolto, perché il problema vero non era contare le ore, era dimostrarle quando qualcuno le metteva in dubbio.",
       "Ah, e si scrive GeoTapp, con due P. Se ne trovi una sola in giro, non siamo noi, ma non gliene vogliamo.",
-      "Il nome del resto è tutto lì dentro. La geolocalizzazione, un tap, un'app."
+      "Il nome, del resto, è tutto lì dentro: la geolocalizzazione, un tap, un'app."
     ],
-    "values_title": "I Nostri Valori",
+    "values_title": "I nostri valori",
     "values": [
       {
-        "title": "Missione Chiara",
+        "title": "Una missione chiara",
         "desc": "Rendere ogni intervento misurabile e verificabile. Il lavoro sul campo merita gli stessi strumenti di trasparenza di un ufficio."
       },
       {
-        "title": "Team Dedicato",
+        "title": "Un team piccolo",
         "desc": "Siamo un team piccolo ma ossessionato dal problema che risolviamo. Ogni funzionalità nasce da feedback reali, non da roadmap di marketing."
       },
       {
-        "title": "Privacy by Design",
-        "desc": "I dati non si vendono, e la posizione si legge due volte in un turno, quando lo apri e quando lo chiudi. In mezzo lo strumento non sa dove sei."
+        "title": "Privacy fin dal progetto",
+        "desc": "I dati non si vendono, e la posizione si legge solo quando timbri: all'entrata, alle pause, all'uscita, più la foto di prova se la scatti. Fra una timbratura e l'altra non si registra nulla in automatico."
       },
       {
         "title": "Fatto in Italia",
@@ -964,7 +968,7 @@
     ],
     "cta_title": "Dall'altra parte c'è una persona",
     "cta_desc": "Un'azienda piccola che sviluppa uno strumento per aziende che lavorano fuori sede. Se scrivi, ti risponde qualcuno che quel problema lo ha avuto.",
-    "cta_btn": "Scrivici un Messaggio",
+    "cta_btn": "Scrivici",
     "stats": [
       {
         "number": "2024",
@@ -983,14 +987,14 @@
     "founder": {
       "section_label": "Il fondatore",
       "name": "Michele Angelo Petraroli",
-      "role": "Founder & CEO",
-      "bio": "Michele Angelo Petraroli è founder e CEO di GeoTapp, SaaS italiano per la gestione delle squadre sul campo nelle PMI europee. Dall'esperienza diretta nelle PMI di servizi (pulizie, installatori, sicurezza) ha visto come si perdono soldi quando manca la prova del lavoro svolto. Ha fondato GeoTapp nel 2024 per risolvere il problema alla radice. Oggi GeoTapp aiuta le PMI europee con tracciabilità GPS pensata per stare dentro i paletti del GDPR, prove fotografiche e firme digitali che rendono ogni intervento verificabile.",
+      "role": "Fondatore",
+      "bio": "Michele Angelo Petraroli è il fondatore e titolare di GeoTapp, il software italiano che documenta il lavoro delle squadre sul campo nelle PMI europee. Dall'esperienza diretta nelle PMI di servizi (pulizie, installatori, sicurezza) ha visto quanti soldi si perdono quando manca la prova del lavoro svolto. Ha fondato GeoTapp nel 2024 per risolvere il problema alla radice. Oggi GeoTapp aiuta le PMI europee a dimostrare il lavoro fatto: posizione rilevata solo quando si timbra, foto di prova e report sigillati che il cliente verifica da solo.",
       "expertise_label": "Aree di competenza",
       "expertise": [
-        "Field Service Management",
-        "GDPR & Geolocalizzazione dipendenti",
-        "Workforce Management",
-        "B2B SaaS",
+        "Gestione delle squadre sul campo",
+        "GDPR e geolocalizzazione dei dipendenti",
+        "Organizzazione del lavoro",
+        "Software per le aziende",
         "PMI europee"
       ],
       "cta_linkedin": "LinkedIn",
@@ -1475,7 +1479,9 @@
     "segnala_t": "Segnalare un problema",
     "segnala": "Se incontri una barriera su questo sito, scrivi a info@geotapp.com indicando la pagina e cosa non è stato possibile fare. Rispondiamo entro trenta giorni. Se la risposta non è soddisfacente, è possibile rivolgersi all'autorità di controllo competente nel proprio Paese.",
     "data_t": "Data",
-    "data": "Dichiarazione redatta il 23 settembre 2026, sulla base della valutazione della stessa data."
+    "data": "Dichiarazione redatta il 23 settembre 2026, sulla base della valutazione della stessa data.",
+    "meta_title": "Dichiarazione di accessibilità | GeoTapp",
+    "meta_description": "Quanto è accessibile geotapp.com: cosa è stato verificato, con quale metodo, i limiti noti e come segnalare un problema."
   },
   "contentDates": {
     "updatedOn": "Aggiornato il"

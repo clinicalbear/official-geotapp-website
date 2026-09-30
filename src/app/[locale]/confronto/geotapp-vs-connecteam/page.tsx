@@ -12,7 +12,7 @@ const ARTICLE_DATE_PUBLISHED = '2025-09-01';
 const ARTICLE_DATE_MODIFIED = '2026-08-01';
 
 const META: Record<string, { title: string; description: string }> = {
-  it: { title: 'GeoTapp vs Connecteam - Confronto 2026 | GeoTapp', description: 'GeoTapp vs Connecteam: quale scegliere per aziende con operatori sul campo? Confronto completo su prove del lavoro, GPS verificato, report sigillati e prova verificabile interventi.' },
+  it: { title: 'GeoTapp vs Connecteam - Confronto 2026 | GeoTapp', description: 'GeoTapp vs Connecteam: quale scegliere per aziende con operatori sul campo? Confronto su prova del lavoro, posizione alla timbratura, report sigillati e verifica da parte del committente.' },
   en: { title: 'GeoTapp vs Connecteam - Comparison 2026 | GeoTapp', description: 'GeoTapp vs Connecteam: which is better for field service companies? Complete comparison on work proof, verified GPS, sealed reports and verifiable proof of work.' },
   de: { title: 'GeoTapp vs Connecteam - Vergleich 2026 | GeoTapp', description: 'GeoTapp vs Connecteam: Welches ist besser für Unternehmen mit Außendienstmitarbeitern? Vollständiger Vergleich zu Arbeitsnachweisen, GPS-Verifizierung und versiegelten Berichten.' },
   fr: { title: 'GeoTapp vs Connecteam - Comparaison 2026 | GeoTapp', description: 'GeoTapp vs Connecteam : lequel choisir pour les entreprises avec des équipes sur le terrain ? Comparatif complet sur les preuves de travail, le GPS vérifié et les rapports scellés.' },
@@ -29,10 +29,10 @@ type FaqItem = { q: string; a: string };
 
 const FAQ: Record<string, FaqItem[]> = {
   it: [
-    { q: 'Qual è la differenza principale tra GeoTapp e Connecteam?', a: 'Connecteam è uno strumento di comunicazione e gestione del personale. GeoTapp è un sistema di prova verificabile del lavoro: produce report sigillati con GPS verificato e prove fotografiche che il cliente può verificare in autonomia, senza accedere al tuo account.' },
-    { q: 'Connecteam ha la verifica GPS?', a: 'Connecteam registra la posizione GPS, ma i dati non sono sigillati crittograficamente né verificabili da terzi. GeoTapp produce report con hash crittografico: il committente può verificare che i dati non siano stati modificati dopo la chiusura dell\'intervento.' },
-    { q: 'GeoTapp o Connecteam per imprese di pulizie e facility management?', a: 'GeoTapp è progettato specificamente per settori dove la prova del lavoro svolto è critica (pulizie, manutenzione, facility). I report verificabili di GeoTapp risolvono le contestazioni istantaneamente, funzionalità che Connecteam non offre.' },
-    { q: 'Posso usare GeoTapp insieme a Connecteam?', a: 'Sì. GeoTapp si concentra sulla prova verificabile degli interventi e sulla produzione di prove verificabili; Connecteam può continuare a gestire comunicazione interna e pianificazione. I due strumenti risolvono problemi diversi.' },
+    { q: 'Qual è la differenza principale tra GeoTapp e Connecteam?', a: 'Connecteam è uno strumento di comunicazione e gestione del personale. GeoTapp è un sistema di prova verificabile del lavoro: produce report sigillati con posizione, ora e foto di prova che il cliente può verificare in autonomia, senza accedere al tuo account.' },
+    { q: 'Connecteam sigilla la posizione?', a: 'Connecteam registra la posizione GPS, ma i dati non finiscono in un report sigillato verificabile da terzi. GeoTapp produce report con hash crittografico: il committente può verificare che i dati non siano stati modificati dopo la chiusura dell\'intervento.' },
+    { q: 'GeoTapp o Connecteam per imprese di pulizie e facility management?', a: 'GeoTapp è progettato specificamente per settori dove la prova del lavoro svolto è critica (pulizie, manutenzione, facility). Quando arriva una contestazione, GeoTapp ti dà un report sigillato che il committente controlla da solo: una funzione che Connecteam non offre.' },
+    { q: 'Posso usare GeoTapp insieme a Connecteam?', a: 'Sì. GeoTapp si concentra sulla prova degli interventi; Connecteam può continuare a gestire comunicazione interna e pianificazione. I due strumenti risolvono problemi diversi.' },
   ],
   en: [
     { q: 'What is the main difference between GeoTapp and Connecteam?', a: 'Connecteam is a communication and workforce management tool. GeoTapp is a verifiable proof of work system: it produces sealed reports with verified GPS and photo evidence that clients can independently verify without accessing your account.' },
@@ -98,7 +98,7 @@ const FAQ: Record<string, FaqItem[]> = {
 
 // Etichette della tabella di confronto, per locale.
 const ROWS_LABELS: Record<string, string[]> = {
-  it: ['GPS verificato e sigillato','Report con hash crittografico, ogni modifica rilevabile','Verifica indipendente da parte del cliente','Prove fotografiche collegate a GPS e timestamp','Registrazione presenze base','App mobile Android/iOS','Dashboard gestione team','Messaggistica interna proprietaria','Conformità GDPR geolocalizzazione','Informativa GPS automatica con firma digitale*'],
+  it: ['Posizione alla timbratura, sigillata nel report','Report con hash crittografico, ogni modifica rilevabile','Verifica indipendente da parte del cliente','Prove fotografiche collegate a GPS e timestamp','Registrazione presenze base','App mobile Android/iOS','Dashboard gestione team','Messaggistica interna proprietaria','Posizione rilevata solo quando si timbra, mai in continuo','Informativa GPS firmata nell\'app prima di timbrare*'],
   en: ['Verified and sealed GPS','Tamper-evident reports with cryptographic hash','Independent verification by client','Photo evidence linked to GPS and timestamp','Basic attendance tracking','Mobile app Android/iOS','Team management dashboard','Built-in messaging','GDPR-compliant geolocation','Automatic GPS privacy notice with digital signature*'],
   de: ['Verifiziertes und versiegeltes GPS','Berichte mit kryptographischem Hash, jede Änderung erkennbar','Unabhängige Prüfung durch den Kunden','Fotobeweise verknüpft mit GPS und Zeitstempel','Einfache Zeiterfassung','Mobile App Android/iOS','Team-Management-Dashboard','Integrierte Messaging-Funktion','DSGVO-konforme Geolokalisierung','Automatische GPS-Datenschutzerklärung mit digitaler Signatur*'],
   fr: ['GPS vérifié et scellé','Rapports dont toute modification est détectable, avec hachage cryptographique','Vérification indépendante par le client','Preuves photographiques liées au GPS et à l\'horodatage','Pointage de base','Application mobile Android/iOS','Tableau de bord de gestion d\'équipe','Messagerie interne intégrée','Géolocalisation conforme RGPD','Avis de confidentialité GPS automatique avec signature numérique*'],
@@ -127,16 +127,16 @@ const T: Record<string, Copy> = {
     badge: 'Confronto App', h1sub: 'quale scegliere per il tuo settore?',
     desc: 'Connecteam gestisce la comunicazione del team. GeoTapp sigilla il lavoro svolto con prove verificabili. Sono strumenti diversi, ecco perché.',
     summary: 'In sintesi:',
-    summaryText: 'Se hai bisogno di mostrare al cliente le prove del lavoro, con prove GPS verificabili, report in cui qualsiasi modifica risulta evidente e foto con timestamp - GeoTapp è lo strumento giusto. Connecteam non produce prove verificabili: è un tool di comunicazione e scheduling, non di prova verificabile.',
-    features: 'Confronto funzionalità chiave', feat: 'Funzionalità', diff: 'La differenza che conta: prove verificabili vs comunicazione',
-    geo: ['Ogni intervento genera un report sigillato con GPS e foto','Il committente verifica l\'autenticità del report in autonomia','I dati sono firmati crittograficamente, qualsiasi modifica risulta evidente','Progettato per risolvere contestazioni con prove difendibili','Conforme GDPR per la geolocalizzazione dei dipendenti'],
-    comp: ['Ottimo per comunicazione interna e messaggistica del team','Registra presenze ma senza sigillo crittografico','I dati non sono verificabili da terzi in modo indipendente','Orientato allo scheduling e alla gestione del personale','Non produce prove difendibili in caso di contestazione'],
-    footnote: '* Per legge (GDPR Art. 13 e, in Italia, Art. 4 Statuto dei Lavoratori), ogni dipendente deve firmare un\'informativa privacy prima di essere geolocalizzato. La maggior parte dei software GPS non lo gestisce: il rischio legale resta al titolare. GeoTapp genera automaticamente l\'informativa personalizzata, la fa firmare digitalmente al dipendente e blocca l\'accesso GPS finché non è firmata. Nessun altro software sul mercato lo fa.',
+    summaryText: 'Se devi mostrare al cliente le prove del lavoro, con posizione e ora di ogni timbratura, foto di prova e un report in cui ogni modifica successiva è rilevabile, GeoTapp è lo strumento giusto. Connecteam è pensato per comunicazione e turni, non per produrre prove verificabili.',
+    features: 'Confronto funzionalità chiave', feat: 'Funzionalità', diff: 'La differenza che conta: prove verificabili o comunicazione',
+    geo: ['Ogni intervento genera un report sigillato con posizione e foto','Il committente verifica da solo che il report non sia stato modificato','Il report è sigillato crittograficamente: ogni modifica successiva è rilevabile','Pensato per avere una prova da mostrare quando qualcuno contesta','Posizione rilevata solo quando si timbra, mai in continuo'],
+    comp: ['Ottimo per comunicazione interna e messaggistica del team','Registra le presenze, senza sigillo crittografico','I dati non sono verificabili da terzi in modo indipendente','Orientato ai turni e alla gestione del personale','Nessun report sigillato da mostrare al committente'],
+    footnote: '* Per legge (art. 13 GDPR e, in Italia, art. 4 dello Statuto dei Lavoratori) ogni dipendente va informato prima di essere geolocalizzato. Se il software lascia questo passaggio al titolare, il rischio resta a lui. GeoTapp prepara l\'informativa personalizzata, la fa firmare per presa visione nell\'app e non lascia timbrare finché non è firmata.',
     whenTitle: 'Quando scegliere GeoTapp',
     when: ['Gestisci un\'impresa di pulizie, facility management o multiservizi','I tuoi clienti contestano l\'esecuzione degli interventi','Hai bisogno di prove fotografiche geolocalizzate per ogni intervento','Sei soggetto a ispezioni del lavoro o audit contrattuali','Vuoi report che il committente possa verificare in autonomia'],
     cta: 'Vuoi vedere GeoTapp in azione?',
-    ctaDesc: 'Ti mostriamo come un intervento diventa una prova verificabile, in 20 minuti, senza impegno.',
-    ctaBtn: 'Inizia subito gratuitamente!',
+    ctaDesc: 'Provalo su un intervento vero: 14 giorni gratis, senza carta di credito.',
+    ctaBtn: 'Inizia la prova gratuita',
   },
   en: {
     badge: 'App Comparison', h1sub: 'which one for your sector?',

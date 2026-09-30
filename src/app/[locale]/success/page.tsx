@@ -7,6 +7,12 @@ export { default } from '../../success/page';
 
 // Pagina di ringraziamento post-pagamento Stripe: noindex per non sporcare la sitemap
 // e non disperdere crawl budget su pagine senza valore SEO.
-export const metadata: Metadata = {
-  robots: { index: false, follow: false },
-};
+const TITOLI: Record<string, string> = { it: 'Pagamento riuscito | GeoTapp', en: 'Payment successful | GeoTapp' };
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  return {
+    title: { absolute: TITOLI[locale] ?? TITOLI[locale.split('-')[0]] ?? TITOLI.en },
+    robots: { index: false, follow: false },
+  };
+}

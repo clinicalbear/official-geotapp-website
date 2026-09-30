@@ -13,7 +13,7 @@ const ARTICLE_DATE_MODIFIED = '2026-05-23';
 
 const META: Record<string, { title: string; description: string }> = {
   de: { title: 'GeoTapp vs Blink - Vergleich 2026 | GeoTapp', description: 'GeoTapp vs Blink: Zeiterfassung oder versiegelter Nachweis? Vergleich von Anti-Spoofing-GPS, kryptographisch versiegelten Berichten und Fotobeweisen mit Manipulationserkennung für Gebäudereinigung.' },
-  it: { title: 'GeoTapp vs Blink - Confronto 2026 | GeoTapp', description: 'GeoTapp vs Blink: timbratura o prova verificabile? Confronto su GPS anti-spoofing, report sigillati crittograficamente e prove fotografiche per imprese di pulizie.' },
+  it: { title: 'GeoTapp vs Blink - Confronto 2026 | GeoTapp', description: 'GeoTapp vs Blink: timbratura o prova verificabile? Confronto su controllo della posizione alla timbratura, report sigillati e foto di prova per imprese di pulizie.' },
   en: { title: 'GeoTapp vs Blink - Comparison 2026 | GeoTapp', description: 'GeoTapp vs Blink: time tracking or verifiable proof? Compare anti-spoofing GPS, cryptographically sealed reports and tamper-evident photo evidence for cleaning companies.' },
   nl: { title: 'GeoTapp vs Blink - Vergelijking 2026 | GeoTapp', description: 'GeoTapp vs Blink: tijdregistratie of verzegeld bewijs? Vergelijk anti-spoofing GPS en cryptografisch verzegelde rapporten.' },
   fr: { title: 'GeoTapp vs Blink - Comparaison 2026 | GeoTapp', description: 'GeoTapp vs Blink : pointage ou preuve vérifiable ? Comparez GPS anti-fraude et rapports scelles cryptographiquement.' },
@@ -29,10 +29,10 @@ type FaqItem = { q: string; a: string };
 
 const FAQ: Record<string, FaqItem[]> = {
   it: [
-    { q: 'Qual è la differenza principale tra GeoTapp e Blink?', a: 'Blink è il software leader per la Gebäudereinigung in Germania: timbratura GPS, QR code, NFC, gestione attività e comunicazione team. GeoTapp va oltre: è un sistema di prova verificabile che documenta ogni intervento con GPS anti-spoofing e foto sigillate crittograficamente. Il committente verifica da solo.' },
-    { q: 'Blink ha il GPS anti-spoofing?', a: 'No. Blink confronta la posizione GPS con il luogo di lavoro preimpostato ma non verifica se la posizione è reale o falsificata. GeoTapp rileva i tentativi di falsificazione.' },
+    { q: 'Qual è la differenza principale tra GeoTapp e Blink?', a: 'Blink è un software molto diffuso tra le imprese di pulizia in Germania: timbratura GPS, QR code, NFC, gestione attività e comunicazione del team. GeoTapp fa un\'altra cosa: documenta ogni intervento con posizione controllata alla timbratura e foto di prova, e lo chiude in un report sigillato che il committente verifica da solo.' },
+    { q: 'Blink controlla se la posizione è falsificata?', a: 'Tra le funzioni che Blink dichiara c\'è il confronto della posizione con il luogo di lavoro impostato, non un controllo sulla posizione falsificata. GeoTapp, alla timbratura, rifiuta le posizioni simulate da app di finta posizione, quelle troppo imprecise e gli spostamenti impossibili.' },
     { q: 'Il committente può verificare i report di Blink?', a: 'Blink genera report interni. GeoTapp genera report con sigillo crittografico verificabili dal committente in modo indipendente.' },
-    { q: 'Blink è il numero 1 nella Gebäudereinigung. Perché scegliere GeoTapp?', a: 'Blink eccelle nella timbratura e comunicazione per il settore pulizie tedesco. Ma se dovete mostrare al committente le prove del servizio con prove in cui qualsiasi modifica risulta evidente, serve GeoTapp. Sono strumenti diversi per problemi diversi.' },
+    { q: 'Blink è molto diffuso tra le imprese di pulizia tedesche. Perché scegliere GeoTapp?', a: 'Blink è forte nella timbratura e nella comunicazione per le pulizie in Germania. Se però devi mostrare al committente le prove del servizio, in un report dove ogni modifica successiva è rilevabile, serve GeoTapp. Sono strumenti diversi per problemi diversi.' },
   ],
   en: [
     { q: 'What is the main difference between GeoTapp and Blink?', a: 'Blink is Germany\'s leading time tracking software for building cleaning: GPS, QR code, NFC, task management and team communication. GeoTapp goes further: it\'s a verifiable proof system that documents every job with anti-spoofing GPS and cryptographically sealed photos. The client verifies the report independently.' },
@@ -98,7 +98,7 @@ const FAQ: Record<string, FaqItem[]> = {
 
 // Etichette della tabella di confronto, per locale.
 const ROWS_LABELS: Record<string, string[]> = {
-  it: ['GPS anti-spoofing (rileva posizioni falsificate)','Report sigillato crittograficamente','Verifica indipendente da parte del committente','Foto con catena hash crittografata','Conformità GDPR','Timbratura GPS','Timbratura QR code / NFC','Gestione attività','Comunicazione team','Checklist digitali','App Android/iOS','Specializzato in pulizie civili','Informativa GPS automatica con firma digitale*'],
+  it: ['Controllo della posizione alla timbratura (rifiuta posizioni simulate)','Report sigillato crittograficamente','Verifica indipendente da parte del committente','Foto con impronta SHA-256 nel report','Posizione rilevata solo quando si timbra','Timbratura GPS','Timbratura QR code / NFC','Gestione attività','Comunicazione team','Checklist digitali','App Android/iOS','Specializzato in pulizie civili','Informativa GPS firmata nell\'app prima di timbrare*'],
   en: ['Anti-spoofing GPS (detects fake positions)','Cryptographically sealed report','Independent verification by client','Photos with cryptographic hash chain','GDPR compliant','GPS time tracking','QR code / NFC check-in','Task management','Team communication','Digital checklists','App Android/iOS','Specialized for building cleaning','Automatic GPS privacy notice with digital signature*'],
   de: ['Anti-Spoofing-GPS (erkennt gefälschte Positionen)','Kryptographisch versiegelter Bericht','Unabhängige Verifizierung durch den Auftraggeber','Fotos mit kryptographisch versiegelter Hash-Kette','DSGVO-konform','GPS-Zeiterfassung','QR-Code / NFC Stempelung','Aufgabenverwaltung','Teamkommunikation','Digitale Checklisten','App Android/iOS','Spezialisiert auf Gebäudereinigung','Automatische GPS-Datenschutzerklärung mit digitaler Unterschrift*'],
   fr: ['GPS anti-spoofing (détecte les positions falsifiées)','Rapport scellé cryptographiquement','Vérification indépendante par le client','Photos avec chaîne de hachage cryptographique','Conforme RGPD','Pointage GPS','Pointage QR code / NFC','Gestion des tâches','Communication d\'équipe','Checklists numériques','App Android/iOS','Spécialisé dans le nettoyage de bâtiments','Avis de confidentialité GPS automatique avec signature numérique*'],
@@ -111,7 +111,8 @@ const ROWS_LABELS: Record<string, string[]> = {
   ru: ['Анти-спуфинг GPS (выявляет подделанные позиции)','Криптографически опечатанный отчёт','Независимая проверка заказчиком','Фото с криптографической хеш-цепочкой','Соответствие GDPR','Учёт времени по GPS','Отметка по QR-коду / NFC','Управление задачами','Командное общение','Цифровые чек-листы','Приложение Android/iOS','Специализация на клининге зданий','Автоматическое уведомление о GPS с цифровой подписью*'],
 };
 
-const ROWS_GEO =  [true,true,true,true,true,true,true,true,true,true,true,true,true];
+// Valori riverificati sul prodotto il 30/09/2026: niente QR/NFC, niente checklist; i prezzi sono pubblici.
+const ROWS_GEO =  [true,true,true,true,true,true,false,true,true,false,true,false,true];
 const ROWS_COMP = [false,false,false,false,true,true,true,true,true,true,true,true,false];
 
 type Copy = {
@@ -123,18 +124,18 @@ type Copy = {
 const T: Record<string, Copy> = {
   it: {
     badge: 'Confronto App', h1sub: 'timbratura o prova verificabile?',
-    desc: 'Blink è il software numero 1 per la Gebäudereinigung in Germania. GeoTapp sigilla ogni intervento con GPS anti-spoofing, foto sigillate crittograficamente e report verificabili dal committente.',
+    desc: 'Blink è un software molto diffuso tra le imprese di pulizia in Germania. GeoTapp sigilla ogni intervento: posizione controllata alla timbratura, foto di prova e un report che il committente verifica da solo.',
     summary: 'In sintesi:',
-    summaryText: 'Blink eccelle nella timbratura e comunicazione per le pulizie in Germania. Ma il GPS non è verificato (nessun anti-spoofing), le foto non sono sigillate crittograficamente e i report non sono verificabili dal committente. GeoTapp colma esattamente queste lacune.',
+    summaryText: 'Blink è forte nella timbratura e nella comunicazione per le pulizie in Germania. Tra le sue funzioni dichiarate però non ci sono il controllo della posizione falsificata, le foto sigillate nel report e la verifica da parte del committente. GeoTapp copre proprio queste tre cose.',
     noteTitle: 'Timbratura GPS non è verifica GPS',
-    noteText: 'Blink confronta la posizione GPS con il luogo di lavoro impostato. Ma se un operatore falsifica il GPS con un\'app gratuita, Blink non lo rileva. GeoTapp usa tecnologia anti-spoofing che incrocia più segnali per rilevare posizioni false. In più ogni foto è sigillata con una catena hash crittografata.',
+    noteText: 'Confrontare la posizione con il luogo di lavoro dice se la coordinata cade nel posto giusto, non se è vera: una posizione si falsifica con un\'app gratuita. GeoTapp, alla timbratura, rifiuta le posizioni simulate, quelle troppo imprecise e gli spostamenti impossibili. In più ogni foto entra nel report con la sua impronta SHA-256: se qualcuno la modifica, la verifica lo segnala.',
     features: 'Confronto funzionalità chiave', feat: 'Funzionalità', diff: 'Due strumenti diversi',
     cta: 'Vuoi vedere GeoTapp in azione?',
-    ctaDesc: 'Ti mostriamo come un intervento diventa una prova verificabile, in 10 minuti, senza impegno.',
-    ctaBtn: 'Inizia subito gratuitamente!',
-    geo: ['GPS anti-spoofing: rileva posizioni falsificate','Foto sigillate con catena hash crittografata','Report con sigillo crittografico verificabile','Il committente verifica da solo sul portale pubblico','Non solo pulizie, tutti i settori con operatori sul campo'],
-    comp: ['Software numero 1 per pulizie in Germania','Timbratura GPS + QR code + NFC','Gestione attività e checklist digitali','Comunicazione team integrata','Nessun anti-spoofing, nessuna sigillatura crittografica'],
-    footnote: '* Per legge (GDPR Art. 13 e, in Italia, Art. 4 Statuto dei Lavoratori), ogni dipendente deve firmare un\'informativa privacy prima di essere geolocalizzato. La maggior parte dei software GPS non lo gestisce: il rischio legale resta al titolare. GeoTapp genera automaticamente l\'informativa personalizzata, la fa firmare digitalmente al dipendente e blocca l\'accesso GPS finché non è firmata. Nessun altro software sul mercato lo fa.',
+    ctaDesc: 'Provalo su un intervento vero: 14 giorni gratis, senza carta di credito.',
+    ctaBtn: 'Inizia la prova gratuita',
+    geo: ['Alla timbratura rifiuta le posizioni simulate','Foto con impronta SHA-256 dentro il report','Report con sigillo crittografico verificabile','Il committente verifica da solo, online o con il verificatore offline','Non solo pulizie: ogni settore con operatori sul campo'],
+    comp: ['Molto diffuso tra le pulizie in Germania','Timbratura GPS + QR code + NFC','Gestione attività e checklist digitali','Comunicazione del team integrata','Nessun report sigillato verificabile dal committente'],
+    footnote: '* Per legge (art. 13 GDPR e, in Italia, art. 4 dello Statuto dei Lavoratori) ogni dipendente va informato prima di essere geolocalizzato. Se il software lascia questo passaggio al titolare, il rischio resta a lui. GeoTapp prepara l\'informativa personalizzata, la fa firmare per presa visione nell\'app e non lascia timbrare finché non è firmata.',
   },
   en: {
     badge: 'App Comparison', h1sub: 'time tracking or verifiable proof?',

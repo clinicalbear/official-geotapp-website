@@ -14,10 +14,10 @@ export type TrustCopy = {
 export const TRUST_COPY: Record<string, TrustCopy> = {
 
   it: { headline: 'La prova del lavoro sul campo, verificabile da chiunque', claims: [
-    { title: 'Ogni manomissione è visibile', sub: 'Sigillo crittografico su ogni intervento' },
+    { title: 'Ogni modifica successiva si vede', sub: 'Sigillo crittografico su ogni report' },
     { title: 'Timbratura GPS reale', sub: 'Posizione e ora registrate sul posto' },
     { title: 'Verifica indipendente', sub: 'Il cliente controlla, senza account' },
-  ], sectors: 'Pulizie · Edilizia · Sicurezza · Installatori · Manutenzione · Impiantistica' },
+  ], sectors: 'Pulizie · Edilizia · Sicurezza · Installatori · Manutenzione · Impianti' },
   en: { headline: 'Proof of field work, verifiable by anyone', claims: [
     { title: 'Tamper-evident reports', sub: 'Cryptographic seal on every job' },
     { title: 'Real GPS clock-in', sub: 'Location and time logged on site' },

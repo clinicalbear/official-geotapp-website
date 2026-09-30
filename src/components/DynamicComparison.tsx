@@ -107,8 +107,9 @@ export function DynamicComparison({ locale, copy, initialId }: Props) {
                     {selected.name}
                   </span>
                   <span className="text-xs font-normal text-slate-500">
+                    {/* Prima era «da X€/u/mese» fisso, in italiano su tutte le lingue. */}
                     {selected.pricingFromEur != null
-                      ? `da ${selected.pricingFromEur}€/u/mese`
+                      ? copy.pricingLabel.replace('{eur}', String(selected.pricingFromEur))
                       : ''}
                   </span>
                 </div>

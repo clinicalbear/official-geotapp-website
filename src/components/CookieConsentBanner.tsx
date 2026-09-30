@@ -313,6 +313,17 @@ export default function CookieConsentBanner({ locale }: { locale: string }) {
     trackEvent('banner_shown', { locale });
   }, [locale]);
 
+  // Il link «Gestisci cookie» del piede riapre le preferenze: la cookie policy lo promette,
+  // e chi ha gia' scelto deve poter cambiare idea senza cancellare i dati del browser.
+  useEffect(() => {
+    const riapri = () => {
+      setVisible(true);
+      setModalOpen(true);
+    };
+    window.addEventListener('gtapp:cookie-preferences', riapri);
+    return () => window.removeEventListener('gtapp:cookie-preferences', riapri);
+  }, []);
+
   // Con la scelta a schermo il fondo non deve scorrere, altrimenti l'overlay
   // e' aggirabile e la scelta torna ignorabile. Escape vale come la X, cioe'
   // rifiuto: una via d'uscita da tastiera deve esserci.

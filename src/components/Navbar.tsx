@@ -153,10 +153,10 @@ export default function Navbar() {
             {mnLink(getLink('/confronto'), dict.compare)}
             {mnLink(getLink('/risorse'), dict.resources)}
             {mnLink(getLink('/contact'), dict.contact)}
-            {mnLink('/blog', dict.blog)}
+            {mnLink(getLink('/blog'), dict.blog)}
           </nav>
           <div className="ne">
-            <a className="lk" href="https://flow.geotapp.com" target="_blank" rel="noopener noreferrer">{dict.login}</a>
+            <Link className="lk" href={getLink('/login')}>{dict.login}</Link>
             <CartButton />
             <button className="nvh" aria-label="Menu" onClick={() => setMobile(true)}>
               <Menu size={26} />
@@ -240,7 +240,7 @@ export default function Navbar() {
         </div>
         <p className="kk k">{dict.login}</p>
         <div className="sub">
-          <a href="https://flow.geotapp.com" target="_blank" rel="noopener noreferrer">{dict.login}</a>
+          <a href={getLink('/login')}>{dict.login}</a>
         </div>
         <a
           className="b1"

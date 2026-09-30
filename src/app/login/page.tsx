@@ -8,6 +8,7 @@ import { getDictionary } from '@/lib/i18n/dictionaries';
 import {
   DEFAULT_LOCALE,
   getLocaleFromPathname,
+  localizePath,
 } from '@/lib/i18n/locale-routing';
 
 export default function LoginPage() {
@@ -41,9 +42,10 @@ export default function LoginPage() {
       <section className="sec">
         <div className="wn">
           <div className="grid2">
-            {/* Flow Card — link identico a prima, cambia solo il vestito */}
+            {/* Flow e' la web app: si entra da flow.geotapp.com. Senza la variabile d'ambiente
+                il link finiva su «#» in produzione. */}
             <motion.a
-              href={`${process.env.NEXT_PUBLIC_FLOW_URL || '#'}`}
+              href={process.env.NEXT_PUBLIC_FLOW_URL || 'https://flow.geotapp.com'}
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2 }}
@@ -60,9 +62,11 @@ export default function LoginPage() {
               </div>
             </motion.a>
 
-            {/* TimeTracker Card — link identico a prima, cambia solo il vestito */}
+            {/* TimeTracker e' un'app per telefono: l'accesso si fa dall'app. La card porta alla
+                pagina del prodotto, dove ci sono i link a Google Play e App Store.
+                (app.geotapp.com non esiste piu'.) */}
             <motion.a
-              href={`${process.env.NEXT_PUBLIC_TIMETRACKER_URL || '#'}`}
+              href={localizePath('/products/geotapp-timetracker', currentLocale)}
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.3 }}

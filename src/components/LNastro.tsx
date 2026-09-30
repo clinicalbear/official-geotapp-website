@@ -1,18 +1,31 @@
+'use client';
+
+import { usePathname } from 'next/navigation';
+import { getLocaleFromPathname } from '@/lib/i18n/locale-routing';
+
 /**
  * Nastro che scorre della direzione L, nei tre colori del marchio.
- * Le parole sono quelle delle garanzie gia' pubblicate sul sito.
+ * Le parole sono quelle delle garanzie gia' pubblicate sul sito, nella lingua della pagina.
+ * Offline e' il verificatore, non l'app: la voce lo dice.
  */
-const VOCI = [
-  ['PROVA GPS', ''],
-  ['REPORT SIGILLATO', 'g'],
-  ['VERIFICA INDIPENDENTE', 'b'],
-  ['NESSUNA SORVEGLIANZA', ''],
-  ['DATI IN EUROPA', 'g'],
-  ['FUNZIONA OFFLINE', 'b'],
-];
+type Voce = [string, '' | 'g' | 'b'];
+
+const VOCI: Record<string, string[]> = {
+  it: ['POSIZIONE SOLO ALLA TIMBRATURA', 'REPORT SIGILLATO', 'VERIFICA INDIPENDENTE', 'NESSUN TRACCIAMENTO CONTINUO', 'DATI IN EUROPA', 'VERIFICA ANCHE OFFLINE'],
+};
+
+const COLORI: Voce[1][] = ['', 'g', 'b', '', 'g', 'b'];
+
+function vociPer(locale: string): Voce[] {
+  const base = locale.split('-')[0];
+  const parole = VOCI[locale] ?? VOCI[base] ?? VOCI.it;
+  return parole.map((t, i) => [t, COLORI[i]]);
+}
 
 export default function LNastro() {
-  const giro = [...VOCI, ...VOCI];
+  const locale = getLocaleFromPathname(usePathname()) ?? 'it';
+  const voci = vociPer(locale);
+  const giro = [...voci, ...voci];
   return (
     <div className="l-tape">
       <div className="run">

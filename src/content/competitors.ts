@@ -34,7 +34,7 @@ export type FeatureKey = typeof FEATURE_KEYS[number];
 
 export const FEATURE_LABELS: Record<FeatureKey, LocalizedString> = {
   gps_verified_at_site: {
-    it: 'GPS verificato al momento dell\'intervento',
+    it: 'Posizione controllata a ogni timbratura',
     en: 'GPS verified at job site',
     de: 'GPS am Einsatzort verifiziert',
     fr: 'GPS vérifié sur le chantier',
@@ -60,7 +60,7 @@ export const FEATURE_LABELS: Record<FeatureKey, LocalizedString> = {
     ru: 'Криптографически защищённый отчёт',
   },
   geo_timestamped_photos: {
-    it: 'Foto con GPS e timestamp',
+    it: 'Foto di prova con posizione e ora',
     en: 'Photo evidence linked to GPS and timestamp',
     de: 'Fotos mit GPS und Zeitstempel',
     fr: 'Photos avec GPS et horodatage',
@@ -86,7 +86,7 @@ export const FEATURE_LABELS: Record<FeatureKey, LocalizedString> = {
     ru: 'Независимая проверка клиентом',
   },
   time_tracking: {
-    it: 'Tracciamento ore',
+    it: 'Registrazione delle ore',
     en: 'Time tracking',
     de: 'Zeiterfassung',
     fr: 'Suivi du temps',
@@ -164,7 +164,7 @@ export const FEATURE_LABELS: Record<FeatureKey, LocalizedString> = {
     ru: 'Управление мультисайтовыми работами',
   },
   gdpr_geo_compliance: {
-    it: 'Conformità GDPR geolocalizzazione',
+    it: 'Posizione solo alla timbratura, mai in continuo',
     en: 'GDPR-compliant geolocation',
     de: 'DSGVO-konforme Geolokalisierung',
     fr: 'Géolocalisation conforme RGPD',
@@ -177,7 +177,7 @@ export const FEATURE_LABELS: Record<FeatureKey, LocalizedString> = {
     ru: 'GDPR-совместимая геолокация',
   },
   auto_gps_notice_signed: {
-    it: 'Informativa GPS automatica firmata',
+    it: 'Informativa GPS firmata nell\'app prima di timbrare',
     en: 'Auto GPS notice with digital signature',
     de: 'Auto GPS-Datenschutzhinweis mit Unterschrift',
     fr: 'Notice GPS automatique avec signature',
@@ -230,7 +230,7 @@ export const COMPETITORS: Competitor[] = [
     homepage: 'https://connecteam.com/',
     pricingFromEur: 29,
     tagline: {
-      it: 'Comunicazione + HR + time tracking, all-in-one per il deskless worker. Forte sul mercato US.',
+      it: 'Comunicazione, gestione del personale e timbrature in un\'unica app per chi lavora fuori ufficio. Molto diffusa negli Stati Uniti.',
       en: 'All-in-one communication + HR + time tracking for the deskless workforce. Strong in the US.',
       de: 'Kommunikation + HR + Zeiterfassung für Außendienst-Teams. Starke US-Präsenz.',
     },
@@ -255,7 +255,7 @@ export const COMPETITORS: Competitor[] = [
     homepage: 'https://hubstaff.com/',
     pricingFromEur: 7,
     tagline: {
-      it: 'Time tracking con screenshot e activity monitoring. Pensato per team remoti, non per field service.',
+      it: 'Registrazione del tempo con screenshot e monitoraggio dell\'attività. Pensato per team remoti al computer, non per chi lavora sul campo.',
       en: 'Time tracking with screenshots and activity monitoring. Made for remote teams, not field service.',
       de: 'Zeiterfassung mit Screenshots und Aktivitätsüberwachung. Für Remote-Teams, nicht Außendienst.',
     },
@@ -280,7 +280,7 @@ export const COMPETITORS: Competitor[] = [
     homepage: 'https://clockify.me/',
     pricingFromEur: 4,
     tagline: {
-      it: 'Time tracking gratuito illimitato. Ottimo per freelance e team office, povero per il campo.',
+      it: 'Registrazione del tempo gratuita e senza limiti. Ottimo per freelance e uffici, poco adatto al lavoro sul campo.',
       en: 'Free unlimited time tracking. Great for freelancers and office teams, weak for field service.',
       de: 'Kostenlose unbegrenzte Zeiterfassung. Gut für Freelancer und Büroteams, schwach im Außendienst.',
     },
@@ -305,7 +305,7 @@ export const COMPETITORS: Competitor[] = [
     homepage: 'https://www.jibble.io/',
     pricingFromEur: 3,
     tagline: {
-      it: 'Time tracking con riconoscimento facciale e GPS basic. Free plan generoso ma niente prove di lavoro svolto.',
+      it: 'Presenze con riconoscimento facciale e GPS di base. Piano gratuito generoso, ma niente prova del lavoro svolto.',
       en: 'Time tracking with facial recognition and basic GPS. Generous free plan but no work proof.',
       de: 'Zeiterfassung mit Gesichtserkennung und GPS-Basics. Großzügiger Free Plan, kein Arbeitsnachweis.',
     },
@@ -380,7 +380,7 @@ export const COMPETITORS: Competitor[] = [
     homepage: 'https://www.libemax.com/',
     pricingFromEur: 12,
     tagline: {
-      it: 'Software italiano per imprese di pulizie e facility. Forte sulla parte gestionale, debole sulla prova del lavoro svolto.',
+      it: 'App italiana di rilevazione presenze molto diffusa: GPS, QR, NFC e geofence. Niente report sigillato per il committente.',
       en: 'Italian software for cleaning and facility companies. Strong on management, weak on work proof.',
       de: 'Italienische Software für Reinigung und Facility. Stark in Verwaltung, schwach beim Arbeitsnachweis.',
     },
@@ -402,10 +402,10 @@ export const COMPETITORS: Competitor[] = [
   {
     id: 'blink',
     name: 'Blink',
-    homepage: 'https://www.joinblink.com/',
-    pricingFromEur: 4,
+    homepage: 'https://www.blink.de/',
+    pricingFromEur: null,
     tagline: {
-      it: 'App di comunicazione per deskless workers, focus su engagement. Niente prove di lavoro svolto.',
+      it: 'Software tedesco per le imprese di pulizia: timbratura, attività e comunicazione del team. Niente report sigillato per il committente.',
       en: 'Communication app for deskless workers, focus on engagement. No work proof.',
       de: 'Kommunikations-App für Außendienst, Fokus auf Engagement. Kein Arbeitsnachweis.',
     },
@@ -414,12 +414,12 @@ export const COMPETITORS: Competitor[] = [
       sealed_report: false,
       geo_timestamped_photos: false,
       client_verification: false,
-      time_tracking: false,
+      time_tracking: true,
       mobile_app: true,
       builtin_messaging: true,
       payroll_export: false,
       free_plan: false,
-      multi_site_jobs: false,
+      multi_site_jobs: true,
       gdpr_geo_compliance: false,
       auto_gps_notice_signed: false,
     },
@@ -430,7 +430,7 @@ export const COMPETITORS: Competitor[] = [
     homepage: 'https://nobadge.com/',
     pricingFromEur: 5,
     tagline: {
-      it: 'Timbrature digitali italiane via QR/NFC. Semplice e leggero, ma niente prove fotografiche o sigillo.',
+      it: 'Timbrature digitali italiane con GPS e QR code. Semplice e leggero, ma niente foto di prova né sigillo.',
       en: 'Italian digital clock-in via QR/NFC. Simple and lightweight, no photo proof or seal.',
       de: 'Italienische digitale Stempelung via QR/NFC. Einfach und schlank, kein Foto-Nachweis.',
     },
@@ -480,7 +480,7 @@ export const COMPETITORS: Competitor[] = [
     homepage: 'https://factorialhr.com/',
     pricingFromEur: 6,
     tagline: {
-      it: 'Piattaforma HR spagnola per le PMI, ferie e assenze in ordine. Geolocalizzazione facoltativa sulla timbratura, senza verifica del segnale.',
+      it: 'Piattaforma HR spagnola per le PMI, con ferie e assenze in ordine. Geolocalizzazione facoltativa sulla timbratura, senza controllo delle posizioni simulate.',
       en: 'Spanish HR platform for SMEs, leave and absences kept in order. Optional geolocation on clock-in, with no check on the signal.',
       de: 'Spanische HR-Plattform für KMU, Urlaub und Abwesenheiten im Griff. Ortung bei der Stempelung optional, ohne Prüfung des Signals.',
     },

@@ -12,7 +12,7 @@ const ARTICLE_DATE_PUBLISHED = '2026-02-01';
 const ARTICLE_DATE_MODIFIED = '2026-05-23';
 
 const META: Record<string, { title: string; description: string }> = {
-  it: { title: 'GeoTapp vs Libemax - Confronto 2026 | GeoTapp', description: 'GeoTapp vs Libemax Rilevazione Presenze: geofence o anti-spoofing? Confronto su GPS verificato, report sigillati crittograficamente e prove fotografiche in cui qualsiasi modifica risulta evidente.' },
+  it: { title: 'GeoTapp vs Libemax - Confronto 2026 | GeoTapp', description: 'GeoTapp vs Libemax Rilevazione Presenze: geofence o controllo della posizione falsa? Confronto su timbratura, report sigillati crittograficamente e foto di prova in cui ogni modifica successiva è rilevabile.' },
   en: { title: 'GeoTapp vs Libemax - Comparison 2026 | GeoTapp', description: 'GeoTapp vs Libemax: geofence or anti-spoofing? Compare verified GPS, cryptographically sealed reports and tamper-evident photo evidence.' },
   de: { title: 'GeoTapp vs Libemax - Vergleich 2026 | GeoTapp', description: 'GeoTapp vs Libemax: Geofence oder Anti-Spoofing? Vergleich von verifiziertem GPS, kryptographisch versiegelten Berichten und Fotobeweisen mit Manipulationserkennung.' },
   nl: { title: 'GeoTapp vs Libemax - Vergelijking 2026 | GeoTapp', description: 'GeoTapp vs Libemax: geofence of anti-spoofing? Vergelijk geverifieerd GPS, cryptografisch verzegelde rapporten en fotobewijs waarvan elke wijziging detecteerbaar is.' },
@@ -29,10 +29,10 @@ type FaqItem = { q: string; a: string };
 
 const FAQ: Record<string, FaqItem[]> = {
   it: [
-    { q: 'Qual è la differenza tra il geofence di Libemax e l\'anti-spoofing di GeoTapp?', a: 'Il geofence di Libemax verifica solo che il dispositivo sia dentro un perimetro predefinito, ma la posizione GPS stessa può essere falsificata con un\'app gratuita. L\'anti-spoofing di GeoTapp va oltre: incrocia più segnali per verificare che la posizione sia reale e non simulata. È la differenza tra controllare dove il telefono dice di essere e verificare dove il telefono è davvero.' },
-    { q: 'Libemax ha 200.000 download. GeoTapp è affidabile?', a: 'Libemax è un\'ottima app di rilevazione presenze con una base utenti consolidata. GeoTapp risolve un problema diverso: non solo registra le presenze ma sigilla il lavoro con prove in cui qualsiasi modifica risulta evidente. Sono due categorie diverse, come confrontare un cronometro con un notaio.' },
-    { q: 'Perché le foto di GeoTapp sono diverse da quelle di Libemax?', a: 'Libemax permette di allegare foto ai rapportini. GeoTapp sigilla ogni foto con una catena hash crittografata nel momento stesso dello scatto: se qualcuno modifica la foto anche di un pixel, il sigillo si rompe e il sistema lo rileva. Le foto di GeoTapp sono prove verificabili, non semplici allegati.' },
-    { q: 'GeoTapp o Libemax per cooperative sociali e imprese di pulizie?', a: 'Se l\'obiettivo è la sola rilevazione presenze con NFC e geofence, Libemax è una scelta solida. Se l\'obiettivo è eliminare le contestazioni dei clienti con report verificabili e prove in cui qualsiasi modifica risulta evidente, GeoTapp è l\'unica soluzione, perché il committente può controllare tutto da solo senza dovervi credere sulla parola.' },
+    { q: 'Qual è la differenza tra il geofence di Libemax e il controllo di GeoTapp sulla posizione?', a: 'Il geofence controlla che il dispositivo sia dentro un perimetro predefinito, ma la posizione stessa si può falsificare con un\'app gratuita. GeoTapp, alla timbratura, controlla anche la posizione: rifiuta quelle simulate da app di finta posizione, quelle troppo imprecise e gli spostamenti impossibili. È la differenza tra controllare dove il telefono dice di essere e controllare se quel dato è credibile.' },
+    { q: 'Libemax ha 200.000 download. GeoTapp è affidabile?', a: 'Libemax è un\'ottima app di rilevazione presenze con una base utenti consolidata. GeoTapp risolve un problema diverso: non solo registra le presenze ma sigilla il lavoro in un report dove ogni modifica successiva è rilevabile. Sono due categorie diverse di strumento.' },
+    { q: 'Perché le foto di GeoTapp sono diverse da quelle di Libemax?', a: 'Libemax permette di allegare foto ai rapportini. In GeoTapp ogni foto entra nel report con la sua impronta SHA-256, sigillata insieme al resto: se qualcuno modifica la foto anche di un pixel, la verifica lo segnala. Le foto di GeoTapp sono prove verificabili, non semplici allegati.' },
+    { q: 'GeoTapp o Libemax per cooperative sociali e imprese di pulizie?', a: 'Se l\'obiettivo è la sola rilevazione presenze con NFC e geofence, Libemax è una scelta solida. Se l\'obiettivo è avere una prova da mostrare quando un cliente contesta, con report in cui ogni modifica successiva è rilevabile, serve GeoTapp: il committente controlla tutto da solo, senza doverti credere sulla parola.' },
   ],
   en: [
     { q: 'What is the difference between Libemax geofence and GeoTapp anti-spoofing?', a: 'Libemax geofence only checks if the device is within a predefined perimeter, but the GPS position itself can be spoofed with a free app. GeoTapp anti-spoofing goes further: it cross-references multiple signals to verify the position is real and not simulated. It is the difference between checking where the phone says it is and verifying where the phone really is.' },
@@ -98,7 +98,7 @@ const FAQ: Record<string, FaqItem[]> = {
 
 // Etichette della tabella di confronto, per locale.
 const ROWS_LABELS: Record<string, string[]> = {
-  it: ['GPS anti-spoofing (rileva posizioni falsificate)','Report sigillato crittograficamente','Verifica indipendente da parte del committente','Foto con catena hash crittografata','Conformità GDPR','Timbratura GPS','Timbratura QR code / NFC / Bluetooth','Geofence (perimetro)','Checklist e audit','App mobile Android/iOS','Dashboard gestione team','Settori: pulizie, edilizia, cooperative','Informativa GPS automatica con firma digitale*'],
+  it: ['Controllo della posizione alla timbratura (rifiuta posizioni simulate)','Report sigillato crittograficamente','Verifica indipendente da parte del committente','Foto con impronta SHA-256 nel report','Posizione rilevata solo quando si timbra','Timbratura GPS','Timbratura QR code / NFC / Bluetooth','Geofence (perimetro)','Checklist e audit','App mobile Android/iOS','Dashboard gestione team','Settori: pulizie, edilizia, cooperative','Informativa GPS firmata nell\'app prima di timbrare*'],
   en: ['Anti-spoofing GPS (detects spoofed positions)','Cryptographically sealed report','Independent verification by client','Photos with cryptographic hash chain','GDPR compliant','GPS check-in','QR code / NFC / Bluetooth check-in','Geofence (perimeter)','Checklists and audits','Mobile app Android/iOS','Team management dashboard','Sectors: cleaning, construction, cooperatives','Automatic GPS privacy notice with digital signature*'],
   de: ['Anti-Spoofing-GPS (erkennt gefälschte Positionen)','Kryptographisch versiegelter Bericht','Unabhängige Prüfung durch den Auftraggeber','Fotos mit kryptographischer Hash-Kette','DSGVO-konform','GPS-Stempelung','QR-Code / NFC / Bluetooth-Stempelung','Geofence (Perimeter)','Checklisten und Audits','Mobile App Android/iOS','Team-Management-Dashboard','Branchen: Reinigung, Bau, Genossenschaften','Automatische GPS-Datenschutzerklärung mit digitaler Signatur*'],
   fr: ['GPS anti-spoofing (détecte les positions falsifiées)','Rapport scellé cryptographiquement','Vérification indépendante par le client','Photos avec chaîne de hachage cryptographique','Conforme RGPD','Pointage GPS','Pointage QR code / NFC / Bluetooth','Geofence (périmètre)','Checklists et audits','Application mobile Android/iOS','Tableau de bord de gestion d\'équipe','Secteurs : nettoyage, BTP, coopératives','Avis de confidentialité GPS automatique avec signature numérique*'],
@@ -111,14 +111,15 @@ const ROWS_LABELS: Record<string, string[]> = {
   ru: ['Анти-спуфинг GPS (выявляет подделанные позиции)','Криптографически опечатанный отчёт','Независимая проверка заказчиком','Фото с криптографической хеш-цепочкой','Соответствие GDPR','Отметка по GPS','Отметка по QR-коду / NFC / Bluetooth','Геозона (периметр)','Чек-листы и аудиты','Мобильное приложение Android/iOS','Панель управления командой','Отрасли: клининг, строительство, кооперативы','Автоматическое уведомление о GPS с цифровой подписью*'],
 };
 
-const ROWS_GEO =  [true,true,true,true,true,true,true,true,true,true,true,true,true];
+// Valori riverificati sul prodotto il 30/09/2026: niente QR/NFC, niente checklist; i prezzi sono pubblici.
+const ROWS_GEO =  [true,true,true,true,true,true,false,true,false,true,true,true,true];
 const ROWS_COMP = [false,false,false,false,true,true,true,true,true,true,true,true,false];
 
 // Riassunto neutro ed estraibile, subito sotto la tabella: frase fattuale citabile
 // dai motori AI senza doverla ricostruire dalla tabella. Neutro per scelta: la
 // neutralita' e' cio' che ci fa citare, niente superlativi.
 const TABLE_TAKEAWAY: Record<string, string> = {
-  it: 'In breve: Libemax verifica la presenza con il geofence; GeoTapp aggiunge la verifica anti-spoofing del GPS, il report sigillato e la verifica del cliente, pensati per reggere una contestazione.',
+  it: 'In breve: Libemax verifica la presenza con il geofence; GeoTapp aggiunge il controllo della posizione falsa alla timbratura, il report sigillato e la verifica del cliente, pensati per quando qualcuno contesta.',
   en: 'In short: Libemax checks presence with geofencing; GeoTapp adds GPS anti-spoofing, the sealed report and client verification, built to hold up in a dispute.',
   de: 'Kurz gesagt: Libemax prüft die Anwesenheit per Geofence; GeoTapp ergänzt den GPS-Anti-Spoofing-Schutz, den versiegelten Bericht und die Kundenprüfung, ausgelegt darauf, einem Streit standzuhalten.',
   fr: 'En bref : Libemax vérifie la présence par géorepérage ; GeoTapp ajoute l\'anti-spoofing GPS, le rapport scellé et la vérification client, conçus pour résister à une contestation.',
@@ -139,19 +140,19 @@ type Copy = {
 
 const T: Record<string, Copy> = {
   it: {
-    badge: 'Confronto App', h1sub: 'geofence o anti-spoofing?',
-    desc: 'Libemax è l\'app di rilevazione presenze più scaricata in Italia con oltre 200.000 download. GeoTapp è un sistema di prova verificabile del lavoro con GPS anti-spoofing e report in cui qualsiasi modifica risulta evidente. Due approcci fondamentalmente diversi allo stesso problema.',
+    badge: 'Confronto App', h1sub: 'geofence o controllo della posizione falsa?',
+    desc: 'Libemax è un\'app di rilevazione presenze molto scaricata in Italia, con oltre 200.000 download. GeoTapp è un sistema di prova del lavoro: controlla la posizione alla timbratura e chiude tutto in un report dove ogni modifica successiva è rilevabile. Due approcci diversi allo stesso problema.',
     summary: 'In sintesi:',
-    summaryText: 'Libemax eccelle nella rilevazione presenze con molteplici metodi (GPS, QR, NFC, Bluetooth, geofence). Ma il geofence verifica solo il perimetro, non se la posizione è reale. GeoTapp va oltre: l\'anti-spoofing verifica che il GPS sia autentico, le foto sono sigillate crittograficamente e il report è verificabile, il committente lo verifica da solo.',
-    noteTitle: 'Geofence non è anti-spoofing',
-    noteText: 'Il geofence di Libemax controlla se lo smartphone è dentro un perimetro predefinito. Ma se la posizione GPS è falsificata con un\'app, il geofence viene ingannato: il telefono dice di essere dentro il perimetro anche se è a chilometri di distanza. L\'anti-spoofing di GeoTapp rileva proprio questo: verifica che il segnale GPS sia autentico, non solo che le coordinate cadano dentro un\'area.',
+    summaryText: 'Libemax eccelle nella rilevazione presenze con molteplici metodi (GPS, QR, NFC, Bluetooth, geofence). Ma il geofence controlla solo il perimetro, non se la posizione è vera. GeoTapp, alla timbratura, rifiuta le posizioni simulate; le foto entrano nel report con la loro impronta, e il committente verifica il report da solo.',
+    noteTitle: 'Un perimetro non dice se la posizione è vera',
+    noteText: 'Il geofence controlla se lo smartphone è dentro un perimetro predefinito. Ma se la posizione è falsificata con un\'app, il geofence viene ingannato: il telefono dice di essere dentro il perimetro anche se è a chilometri di distanza. GeoTapp alla timbratura guarda proprio questo: rifiuta le posizioni simulate, quelle troppo imprecise e gli spostamenti impossibili, non solo le coordinate fuori dall\'area.',
     features: 'Confronto funzionalità chiave', feat: 'Funzionalità', diff: 'Due filosofie diverse',
     cta: 'Vuoi vedere GeoTapp in azione?',
-    ctaDesc: 'Ti mostriamo come un intervento diventa una prova verificabile, in 10 minuti, senza impegno.',
-    ctaBtn: 'Inizia subito gratuitamente!',
-    geo: ['GPS anti-spoofing: verifica che la posizione sia reale','Foto sigillate con catena hash crittografata','Report con sigillo crittografico verificabile','Il committente verifica da solo','Prova verificabile, non solo rilevazione'],
-    comp: ['200.000+ download, 6.000+ aziende','GPS + QR + NFC + Bluetooth + geofence','Geofence: controlla il perimetro (non la veridicità GPS)','Checklist e audit per cantieri','Rilevazione presenze, non prova verificabile'],
-    footnote: '* Per legge (GDPR Art. 13 e, in Italia, Art. 4 Statuto dei Lavoratori), ogni dipendente deve firmare un\'informativa privacy prima di essere geolocalizzato. La maggior parte dei software GPS non lo gestisce: il rischio legale resta al titolare. GeoTapp genera automaticamente l\'informativa personalizzata, la fa firmare digitalmente al dipendente e blocca l\'accesso GPS finché non è firmata. Nessun altro software sul mercato lo fa.',
+    ctaDesc: 'Provalo su un intervento vero: 14 giorni gratis, senza carta di credito.',
+    ctaBtn: 'Inizia la prova gratuita',
+    geo: ['Alla timbratura rifiuta le posizioni simulate','Foto con impronta SHA-256 dentro il report','Report con sigillo crittografico verificabile','Il committente verifica da solo','Prova verificabile, non solo rilevazione'],
+    comp: ['200.000+ download, 6.000+ aziende','GPS + QR + NFC + Bluetooth + geofence','Geofence: controlla il perimetro, non se la posizione è vera','Checklist e audit per cantieri','Rilevazione presenze, non prova verificabile'],
+    footnote: '* Per legge (art. 13 GDPR e, in Italia, art. 4 dello Statuto dei Lavoratori) ogni dipendente va informato prima di essere geolocalizzato. Se il software lascia questo passaggio al titolare, il rischio resta a lui. GeoTapp prepara l\'informativa personalizzata, la fa firmare per presa visione nell\'app e non lascia timbrare finché non è firmata.',
   },
   en: {
     badge: 'App Comparison', h1sub: 'geofence or anti-spoofing?',

@@ -10,8 +10,8 @@ const PATHNAME = '/confronto/dinamico/';
 
 const META: Record<string, { title: string; description: string }> = {
   it: {
-    title: 'Confronta GeoTapp con Connecteam, Hubstaff, Jibble e altri - Comparativa Dinamica',
-    description: 'Confronta GeoTapp con i principali competitor del field service in tempo reale. 12 feature, 7 competitor, una sola tabella. Scopri perché GeoTapp è l\'unico che produce prove verificabili del lavoro svolto.',
+    title: 'Confronta GeoTapp con Connecteam, Hubstaff, Jibble e altri | GeoTapp',
+    description: 'Confronta GeoTapp con 11 concorrenti su 12 funzioni, in una sola tabella: chi registra solo ore e posizione, e chi produce una prova del lavoro che il committente verifica da solo.',
   },
   en: {
     title: 'Compare GeoTapp vs Connecteam, Hubstaff, Jibble and more - Live Comparison',
@@ -77,23 +77,23 @@ interface Copy {
 
 const COPY: Record<string, Copy> = {
   it: {
-    badge: 'Comparativa Dinamica',
-    title: 'GeoTapp vs il resto del mercato',
-    subtitle: 'Scegli un competitor dal menu, vedi il confronto su 12 feature chiave. Numeri reali, niente marketing fluff.',
+    badge: 'Confronto dinamico',
+    title: 'GeoTapp e il resto del mercato',
+    subtitle: 'Scegli un concorrente dal menu e vedi il confronto su 12 funzioni chiave. Dati presi dai siti dei concorrenti, senza giri di parole.',
     breadcrumbHome: 'Home',
     breadcrumbCompare: 'Confronti',
     breadcrumbDynamic: 'Comparativa dinamica',
-    chooseCompetitor: 'Scegli il competitor da confrontare',
+    chooseCompetitor: 'Scegli il concorrente da confrontare',
     geotappCol: 'GeoTapp',
     featureCol: 'Funzionalità',
     pricingLabel: 'Da {eur}€/utente/mese',
-    pricingTrial: 'Trial 14gg, no carta',
+    pricingTrial: 'Prova gratuita di 14 giorni, senza carta',
     visitWebsite: 'Visita il sito',
     ctaTitle: 'Provalo tu stesso in 14 giorni',
     ctaDesc: 'La differenza si vede al primo intervento documentato. Nessuna carta richiesta.',
     ctaBtn: 'Inizia il trial gratuito →',
     keyDifference: 'La differenza chiave',
-    differenceText: 'Tutti i competitor tracciano ore e posizione. Solo GeoTapp produce un report sigillato crittograficamente che il tuo cliente può verificare in modo indipendente. È la differenza tra "ti dico che ho lavorato" e "ti dimostro che ho lavorato".',
+    differenceText: 'Tutti questi strumenti registrano ore o presenze. Nessuno di quelli in tabella, tra le funzioni che dichiara, produce un report sigillato crittograficamente che il tuo cliente verifica da solo. GeoTapp sì. È la differenza tra «ti dico che ho lavorato» e «ti dimostro che ho lavorato».',
   },
   en: {
     badge: 'Live Comparison',

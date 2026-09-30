@@ -18,7 +18,7 @@ const PATHNAME = '/confronto/';
 const META: Record<string, { title: string; description: string }> = {
   it: {
     title: 'GeoTapp vs Competitor - Confronti Completi | GeoTapp',
-    description: 'Confronta GeoTapp con Connecteam, Clockify, Hubstaff e altri. Scopri perché GeoTapp è la scelta giusta per aziende con operatori sul campo che devono sigillare il lavoro svolto.',
+    description: 'Confronta GeoTapp con Connecteam, Clockify, Hubstaff, Zucchetti e altri: cosa registra ciascuno, e chi produce una prova del lavoro che il committente verifica da solo.',
   },
   en: {
     title: 'GeoTapp vs Competitors - Full Comparisons | GeoTapp',
@@ -63,7 +63,7 @@ const META: Record<string, { title: string; description: string }> = {
 };
 
 const COPY: Record<string, Record<string, string>> = {
-  it: { badge: 'Confronti', title_suffix: 'le alternative', intro: 'Non tutte le app sono uguali. GeoTapp è l\'unico sistema che produce prove verificabili del lavoro svolto, non solo registra ore e posizione.', cta_title: 'La prova migliore è vederlo dal vivo.', cta_desc: 'Ti mostriamo come un intervento diventa una prova verificabile, in 20 minuti, senza impegno.', cta_btn: 'Inizia subito gratuitamente!', breadcrumb: 'Confronti' },
+  it: { badge: 'Confronti', title_suffix: 'le alternative', intro: 'Non tutte le app fanno la stessa cosa. Molte registrano ore e posizione; GeoTapp chiude ogni intervento in un report sigillato che il committente verifica da solo.', cta_title: 'La prova migliore è provarlo.', cta_desc: 'Provalo su un intervento vero: 14 giorni gratis, senza carta di credito.', cta_btn: 'Inizia la prova gratuita', breadcrumb: 'Confronti' },
   en: { badge: 'Comparisons', title_suffix: 'the alternatives', intro: 'Not all apps are equal. GeoTapp is the only system that produces verifiable proof of completed work, not just records hours and location.', cta_title: 'The best proof is seeing it live.', cta_desc: 'We show you how a job becomes verifiable proof, in 20 minutes, no commitment.', cta_btn: 'Start for free!', breadcrumb: 'Compare' },
   de: { badge: 'Vergleiche', title_suffix: 'die Alternativen', intro: 'Nicht alle Apps sind gleich. GeoTapp ist das einzige System, das überprüfbare Nachweise der geleisteten Arbeit liefert, nicht nur Stunden und Standort erfasst.', cta_title: 'Der beste Beweis ist, es live zu sehen.', cta_desc: 'Wir zeigen Ihnen, wie ein Einsatz zum überprüfbaren Nachweis wird, in 20 Minuten, unverbindlich.', cta_btn: 'Jetzt kostenlos starten!', breadcrumb: 'Vergleiche' },
   fr: { badge: 'Comparaisons', title_suffix: 'les alternatives', intro: 'Toutes les applications ne se valent pas. GeoTapp est le seul système qui produit des preuves vérifiables du travail effectué.', cta_title: 'La meilleure preuve, c\'est de le voir en direct.', cta_desc: 'Nous vous montrons comment une intervention devient une preuve vérifiable, en 20 minutes, sans engagement.', cta_btn: 'Commencez gratuitement !', breadcrumb: 'Comparaisons' },
@@ -79,7 +79,7 @@ const COPY: Record<string, Record<string, string>> = {
 const COMPARISONS: Record<string, { tagline: string; highlight: string }>[] = [
   {
     slug: 'geotapp-vs-connecteam', competitor: 'Connecteam',
-    it: { tagline: 'Comunicazione team vs prova verificabile interventi', highlight: 'Connecteam gestisce la comunicazione. GeoTapp produce prove verificabili del lavoro.' },
+    it: { tagline: 'Comunicazione del team o prova degli interventi', highlight: 'Connecteam gestisce la comunicazione. GeoTapp produce prove verificabili del lavoro.' },
     en: { tagline: 'Team communication vs verifiable proof of work', highlight: 'Connecteam manages communication. GeoTapp produces verifiable proof of work.' },
     de: { tagline: 'Teamkommunikation vs versiegelter Einsatznachweis', highlight: 'Connecteam verwaltet Kommunikation. GeoTapp liefert überprüfbare Arbeitsnachweise.' },
     fr: { tagline: 'Communication d\'équipe vs preuve vérifiable des interventions', highlight: 'Connecteam gère la communication. GeoTapp produit des preuves vérifiables du travail.' },
@@ -93,7 +93,7 @@ const COMPARISONS: Record<string, { tagline: string; highlight: string }>[] = [
   } as any,
   {
     slug: 'geotapp-vs-clockify', competitor: 'Clockify',
-    it: { tagline: 'Time tracking vs prova del lavoro svolto', highlight: 'Clockify traccia le ore. GeoTapp sigilla ogni intervento con GPS sigillato e foto.' },
+    it: { tagline: 'Registrare il tempo o provare il lavoro', highlight: 'Clockify registra le ore. GeoTapp sigilla ogni intervento con posizione, ora e foto.' },
     en: { tagline: 'Time tracking vs proof of completed work', highlight: 'Clockify tracks hours. GeoTapp seals every job with sealed GPS and photos.' },
     de: { tagline: 'Zeiterfassung vs Arbeitsnachweis', highlight: 'Clockify erfasst Stunden. GeoTapp versiegelt jeden Einsatz mit versiegeltem GPS und Fotos.' },
     fr: { tagline: 'Suivi du temps vs preuve du travail effectué', highlight: 'Clockify suit les heures. GeoTapp scelle chaque intervention avec GPS scellé et photos.' },
@@ -107,7 +107,7 @@ const COMPARISONS: Record<string, { tagline: string; highlight: string }>[] = [
   } as any,
   {
     slug: 'geotapp-vs-jibble', competitor: 'Jibble',
-    it: { tagline: 'Rilevazione presenze vs prova del lavoro', highlight: 'Jibble conta le presenze con volto e GPS base. GeoTapp prova ogni intervento con GPS sigillato e foto.' },
+    it: { tagline: 'Rilevare le presenze o provare il lavoro', highlight: 'Jibble conta le presenze con volto e GPS di base. GeoTapp prova ogni intervento con posizione, ora e foto sigillate.' },
     en: { tagline: 'Attendance tracking vs proof of work', highlight: 'Jibble logs attendance with face and basic GPS. GeoTapp proves every job with sealed GPS and photos.' },
     de: { tagline: 'Anwesenheitserfassung vs Arbeitsnachweis', highlight: 'Jibble erfasst Anwesenheit per Gesicht und Basis-GPS. GeoTapp belegt jeden Einsatz mit versiegeltem GPS und Fotos.' },
     fr: { tagline: 'Suivi des présences vs preuve du travail', highlight: 'Jibble pointe les présences avec visage et GPS basique. GeoTapp prouve chaque intervention avec GPS scellé et photos.' },
@@ -121,7 +121,7 @@ const COMPARISONS: Record<string, { tagline: string; highlight: string }>[] = [
   } as any,
   {
     slug: 'geotapp-vs-personio', competitor: 'Personio',
-    it: { tagline: 'Gestione HR vs prova del lavoro sul campo', highlight: 'Personio gestisce HR, ferie e paghe. GeoTapp prova il lavoro sul campo con GPS sigillato e foto. Complementari.' },
+    it: { tagline: 'Gestire il personale o provare il lavoro sul campo', highlight: 'Personio gestisce personale, ferie e paghe. GeoTapp prova il lavoro sul campo con posizione, ora e foto sigillate. Si affiancano.' },
     en: { tagline: 'HR management vs proof of field work', highlight: 'Personio runs HR, leave and payroll. GeoTapp proves field work with sealed GPS and photos. Complementary.' },
     de: { tagline: 'HR-Verwaltung vs Nachweis der Außenarbeit', highlight: 'Personio verwaltet HR, Urlaub und Lohn. GeoTapp belegt Außenarbeit mit versiegeltem GPS und Fotos. Komplementär.' },
     fr: { tagline: 'Gestion RH vs preuve du travail terrain', highlight: 'Personio gère RH, congés et paie. GeoTapp prouve le travail terrain avec GPS scellé et photos. Complémentaires.' },
@@ -135,7 +135,7 @@ const COMPARISONS: Record<string, { tagline: string; highlight: string }>[] = [
   } as any,
   {
     slug: 'geotapp-vs-sage', competitor: 'Sage',
-    it: { tagline: 'Gestionale e paghe vs prova del lavoro', highlight: 'Sage gestisce contabilità e paghe. GeoTapp prova il lavoro sul campo con GPS sigillato e foto. Complementari.' },
+    it: { tagline: 'Gestionale e paghe o prova del lavoro', highlight: 'Sage gestisce contabilità e paghe. GeoTapp prova il lavoro sul campo con posizione, ora e foto sigillate. Si affiancano.' },
     en: { tagline: 'Business suite and payroll vs proof of work', highlight: 'Sage runs accounting and payroll. GeoTapp proves field work with sealed GPS and photos. Complementary.' },
     de: { tagline: 'Business-Suite und Lohn vs Arbeitsnachweis', highlight: 'Sage verwaltet Buchhaltung und Lohn. GeoTapp belegt Außenarbeit mit versiegeltem GPS und Fotos. Komplementär.' },
     fr: { tagline: 'Gestion et paie vs preuve du travail', highlight: 'Sage gère comptabilité et paie. GeoTapp prouve le travail terrain avec GPS scellé et photos. Complémentaires.' },
@@ -149,7 +149,7 @@ const COMPARISONS: Record<string, { tagline: string; highlight: string }>[] = [
   } as any,
   {
     slug: 'geotapp-vs-hubstaff', competitor: 'Hubstaff',
-    it: { tagline: 'Monitoraggio remoto vs prova verificabile sul campo', highlight: 'Hubstaff monitora i lavoratori remoti. GeoTapp sigilla operatori fisici sul campo, conforme GDPR.' },
+    it: { tagline: 'Monitorare le persone o provare il lavoro', highlight: 'Hubstaff monitora i lavoratori remoti. GeoTapp sigilla gli interventi sul campo, senza tracciamento continuo.' },
     en: { tagline: 'Remote monitoring vs sealed field proof', highlight: 'Hubstaff monitors remote workers. GeoTapp seals physical field operators - GDPR compliant.' },
     de: { tagline: 'Remote-Überwachung vs Feldzertifizierung', highlight: 'Hubstaff überwacht Remote-Arbeiter. GeoTapp versiegelt physische Feldmitarbeiter - DSGVO-konform.' },
     fr: { tagline: 'Surveillance à distance vs preuve vérifiable terrain', highlight: 'Hubstaff surveille les télétravailleurs. GeoTapp scelle les opérateurs physiques sur le terrain, conforme RGPD.' },
@@ -163,7 +163,7 @@ const COMPARISONS: Record<string, { tagline: string; highlight: string }>[] = [
   } as any,
   {
     slug: 'geotapp-vs-nobadge', competitor: 'NoBadge',
-    it: { tagline: 'Timbratura presenze vs prova verificabile interventi', highlight: 'NoBadge registra le presenze. GeoTapp sigilla il lavoro con GPS anti-spoofing e report verificabili.' },
+    it: { tagline: 'Timbrare le presenze o provare gli interventi', highlight: 'NoBadge registra le presenze. GeoTapp controlla la posizione alla timbratura e sigilla il lavoro in report verificabili.' },
     en: { tagline: 'Attendance tracking vs verifiable proof of work', highlight: 'NoBadge records attendance. GeoTapp seals work with anti-spoofing GPS and verifiable reports.' },
     de: { tagline: 'Anwesenheitserfassung vs versiegelter Einsatznachweis', highlight: 'NoBadge erfasst Anwesenheit. GeoTapp versiegelt Arbeit mit Anti-Spoofing-GPS und verifizierbaren Berichten.' },
     fr: { tagline: 'Pointage vs preuve vérifiable des interventions', highlight: 'NoBadge enregistre les présences. GeoTapp scelle le travail avec GPS anti-fraude et rapports vérifiables.' },
@@ -177,7 +177,7 @@ const COMPARISONS: Record<string, { tagline: string; highlight: string }>[] = [
   } as any,
   {
     slug: 'geotapp-vs-libemax', competitor: 'Libemax',
-    it: { tagline: 'Geofence vs anti-spoofing GPS', highlight: 'Libemax usa il geofence per la timbratura. GeoTapp verifica che il GPS sia reale con anti-spoofing, due livelli di sicurezza diversi.' },
+    it: { tagline: 'Geofence o controllo della posizione falsa', highlight: 'Libemax usa il geofence per la timbratura. GeoTapp alla timbratura rifiuta anche le posizioni simulate: due controlli diversi.' },
     en: { tagline: 'Geofence vs anti-spoofing GPS', highlight: 'Libemax uses geofence for check-in. GeoTapp verifies GPS is real with anti-spoofing, two different security levels.' },
     de: { tagline: 'Geofence vs Anti-Spoofing-GPS', highlight: 'Libemax nutzt Geofence. GeoTapp verifiziert GPS-Echtheit mit Anti-Spoofing, zwei verschiedene Sicherheitsstufen.' },
     fr: { tagline: 'Geofence vs anti-spoofing GPS', highlight: 'Libemax utilise le geofence. GeoTapp vérifie que le GPS est réel avec l\'anti-spoofing, deux niveaux de sécurité différents.' },
@@ -205,7 +205,7 @@ const COMPARISONS: Record<string, { tagline: string; highlight: string }>[] = [
   } as any,
   {
     slug: 'geotapp-vs-blink', competitor: 'Blink',
-    it: { tagline: 'Software pulizie DE vs prova sul campo', highlight: 'Blink è il numero 1 per le pulizie in Germania. GeoTapp aggiunge anti-spoofing e report verificabili.' },
+    it: { tagline: 'Software tedesco per le pulizie o prova sul campo', highlight: 'Blink è molto diffuso tra le pulizie in Germania. GeoTapp aggiunge il controllo della posizione alla timbratura e report verificabili.' },
     en: { tagline: 'Cleaning software DE vs sealed field proof', highlight: 'Blink is #1 for cleaning in Germany. GeoTapp adds anti-spoofing and verifiable reports.' },
     de: { tagline: 'Reinigungssoftware vs Feldzertifizierung', highlight: 'Blink ist Nr. 1 für Gebäudereinigung. GeoTapp ergänzt Anti-Spoofing und überprüfbare Berichte.' },
     fr: { tagline: 'Logiciel nettoyage DE vs preuve vérifiable terrain', highlight: 'Blink est le n°1 du nettoyage en Allemagne. GeoTapp ajoute l\'anti-spoofing et des rapports vérifiables.' },
@@ -233,7 +233,7 @@ const COMPARISONS: Record<string, { tagline: string; highlight: string }>[] = [
   } as any,
   {
     slug: 'geotapp-vs-factorial', competitor: 'Factorial',
-    it: { tagline: 'Piattaforma HR vs prova verificabile sul campo', highlight: 'Factorial tiene in ordine ferie, assenze e cedolini. GeoTapp difende la fattura quando il committente contesta il servizio.' },
+    it: { tagline: 'Piattaforma HR vs prova verificabile sul campo', highlight: 'Factorial tiene in ordine ferie, assenze e cedolini. GeoTapp documenta l\'intervento quando il committente contesta il servizio.' },
     en: { tagline: 'HR platform vs sealed field proof', highlight: 'Factorial keeps leave, absences and payslips in order. GeoTapp defends the invoice when a client disputes the service.' },
     de: { tagline: 'HR-Plattform vs Feldzertifizierung', highlight: 'Factorial hält Urlaub, Abwesenheiten und Lohnzettel in Ordnung. GeoTapp verteidigt die Rechnung, wenn der Auftraggeber die Leistung bestreitet.' },
     fr: { tagline: 'Plateforme RH vs preuve vérifiable terrain', highlight: 'Factorial tient congés, absences et bulletins en ordre. GeoTapp défend la facture quand le client conteste la prestation.' },
@@ -275,7 +275,7 @@ export default async function ConfrontoIndexPage({ params }: { params: Promise<{
   const homeLabel = HOME_LABEL[locale] ?? HOME_LABEL.en;
 
   const dynamicTitle = {
-    it: '🆕 Comparativa Dinamica, confronta TUTTI in una pagina',
+    it: '🆕 Confronto dinamico: tutti i concorrenti in una pagina',
     en: '🆕 Live Comparison, compare ALL competitors in one place',
     de: '🆕 Dynamischer Vergleich, alle Konkurrenten auf einer Seite',
     fr: '🆕 Comparatif Dynamique, tous les concurrents sur une page',
@@ -289,7 +289,7 @@ export default async function ConfrontoIndexPage({ params }: { params: Promise<{
   }[locale] ?? '🆕 Live Comparison, compare ALL competitors in one place';
 
   const dynamicSubtitle = {
-    it: 'Selettore competitor + tabella 12 feature aggiornata in tempo reale. Tutte le alternative confrontate in un solo posto.',
+    it: 'Scegli un concorrente e vedi la tabella con 12 funzioni. Tutte le alternative confrontate in un solo posto.',
     en: 'Competitor selector + 12-feature table updated in real time. All alternatives compared in one place.',
     de: 'Konkurrenten-Auswahl + 12-Feature-Tabelle in Echtzeit. Alle Alternativen auf einer Seite.',
     fr: 'Sélecteur de concurrents + tableau 12 fonctions en temps réel. Toutes les alternatives au même endroit.',

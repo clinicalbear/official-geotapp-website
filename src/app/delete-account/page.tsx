@@ -3,9 +3,69 @@
 import { FormEvent, useState } from 'react';
 import { Trash2, ShieldCheck, Clock, FileText, AlertTriangle } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { usePathname } from 'next/navigation';
+import { DEFAULT_LOCALE, getLocaleFromPathname } from '@/lib/i18n/locale-routing';
 
 const FIRESTORE_URL =
   'https://firestore.googleapis.com/v1/projects/geotap-v2/databases/(default)/documents/accountDeletionRequests';
+
+/**
+ * Testi della pagina nella lingua del sito. Fino al 30/09/2026 era tutta in inglese in
+ * ogni lingua. L'indirizzo per i diritti privacy e' info@geotapp.com, lo stesso
+ * dell'informativa (privacy@ non compare in nessun documento legale).
+ */
+type Testi = {
+  h1: string; intro: string;
+  b2bT: string; b2b: string;
+  keepT: string; keep: string;
+  rightsT: string; rights1: string; rights2: string;
+  doneT: string; done1: string; done30: string; done2: string;
+  name: string; email: string; company: string; notes: string; optional: string;
+  notesPh: string; companyPh: string; namePh: string; emailPh: string;
+  sending: string; submit: string; confirm: string; error: string;
+};
+const T: Record<string, Testi> = {
+  en: {
+    h1: 'Request account deletion',
+    intro: 'Use this form to ask us to delete your GeoTapp account and the personal data linked to it.',
+    b2bT: 'Your data is managed by your employer',
+    b2b: 'GeoTapp is a business platform. Your account and your work sessions belong to the company that activated your licence. When we receive your request, we inform that company\'s administrator and carry out the deletion as the law requires.',
+    keepT: 'Data the law requires us to keep',
+    keep: 'Some records (attendance logs, invoices, tax documents) may have to be kept for the period required by Italian and EU law, typically 10 years for accounting records. They are anonymised or deleted as soon as that period ends.',
+    rightsT: 'Your GDPR rights',
+    rights1: 'Under the GDPR (EU Regulation 2016/679) you have the right to erasure, to rectification and to data portability. For any privacy question you can also write to',
+    rights2: '.',
+    doneT: 'Request received',
+    done1: 'Your deletion request has been sent. We will handle it within',
+    done30: '30 days',
+    done2: 'and send a confirmation to your email address.',
+    name: 'Full name', email: 'Email you registered with', company: 'Company name', notes: 'Notes', optional: '(optional)',
+    notesPh: 'Anything else we should know about your request', companyPh: 'Company name', namePh: 'Jane Smith', emailPh: 'jane@company.com',
+    sending: 'Sending…', submit: 'Send deletion request',
+    confirm: 'By sending this form you confirm that you are the account holder. Handling time: up to 30 days.',
+    error: 'Something went wrong. Please try again or write to info@geotapp.com.',
+  },
+  it: {
+    h1: "Richiedi la cancellazione dell'account",
+    intro: "Con questo modulo ci chiedi di cancellare il tuo account GeoTapp e i dati personali collegati.",
+    b2bT: 'I tuoi dati li gestisce il tuo datore di lavoro',
+    b2b: "GeoTapp è una piattaforma per le aziende. Il tuo account e le tue sessioni di lavoro appartengono all'azienda che ha attivato la tua licenza. Quando riceviamo la richiesta avvisiamo l'amministratore di quell'azienda e procediamo alla cancellazione come prevede la legge.",
+    keepT: 'I dati che la legge ci obbliga a conservare',
+    keep: 'Alcuni documenti (registri presenze, fatture, documenti fiscali) possono dover essere conservati per il periodo richiesto dalla legge italiana ed europea, di solito 10 anni per le scritture contabili. Scaduto quel periodo vengono resi anonimi o cancellati.',
+    rightsT: 'I tuoi diritti secondo il GDPR',
+    rights1: 'Il GDPR (Regolamento UE 2016/679) ti dà il diritto alla cancellazione, alla rettifica e alla portabilità dei dati. Per qualsiasi domanda sulla privacy puoi scrivere anche a',
+    rights2: '.',
+    doneT: 'Richiesta ricevuta',
+    done1: 'La tua richiesta di cancellazione è stata inviata. La gestiamo entro',
+    done30: '30 giorni',
+    done2: 'e ti mandiamo una conferma al tuo indirizzo email.',
+    name: 'Nome e cognome', email: "Email con cui ti sei registrato", company: "Nome dell'azienda", notes: 'Note', optional: '(facoltativo)',
+    notesPh: 'Altro che dobbiamo sapere sulla tua richiesta', companyPh: 'Nome Azienda Srl', namePh: 'Mario Rossi', emailPh: 'mario@azienda.com',
+    sending: 'Invio in corso…', submit: 'Invia la richiesta di cancellazione',
+    confirm: "Inviando il modulo confermi di essere il titolare dell'account. Tempo di gestione: fino a 30 giorni.",
+    error: 'Qualcosa non ha funzionato. Riprova o scrivi a info@geotapp.com.',
+  },
+};
 
 async function submitDeletionRequest(data: {
   fullName: string;
@@ -33,6 +93,8 @@ async function submitDeletionRequest(data: {
 }
 
 export default function DeleteAccountPage() {
+  const locale = getLocaleFromPathname(usePathname()) ?? DEFAULT_LOCALE;
+  const t = T[locale] ?? T[locale.split('-')[0]] ?? T.en;
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -51,7 +113,7 @@ export default function DeleteAccountPage() {
       await submitDeletionRequest(formData);
       setSubmitted(true);
     } catch {
-      setError('Something went wrong. Please try again or contact support@geotapp.com.');
+      setError(t.error);
     } finally {
       setLoading(false);
     }
@@ -71,10 +133,10 @@ export default function DeleteAccountPage() {
             <Trash2 className="text-red-600" size={28} />
           </div>
           <h1 className="text-4xl md:text-5xl font-display font-bold text-slate-900 mb-4">
-            Request Account Deletion
+            {t.h1}
           </h1>
           <p className="text-slate-500 text-lg leading-relaxed max-w-xl mx-auto">
-            Submit this form to request the deletion of your GeoTapp account and associated personal data.
+            {t.intro}
           </p>
         </motion.div>
 
@@ -90,11 +152,9 @@ export default function DeleteAccountPage() {
               <ShieldCheck size={20} className="text-slate-700" />
             </div>
             <div>
-              <h3 className="font-bold text-slate-900 mb-1">B2B Platform - Data Managed by Your Employer</h3>
+              <h3 className="font-bold text-slate-900 mb-1">{t.b2bT}</h3>
               <p className="text-slate-500 text-sm leading-relaxed">
-                GeoTapp is a business-to-business platform. Your account and work-session data belong to the company
-                that activated your licence. Upon receiving your request, we will notify the responsible company
-                admin and process the deletion in accordance with applicable law.
+                {t.b2b}
               </p>
             </div>
           </div>
@@ -104,11 +164,9 @@ export default function DeleteAccountPage() {
               <Clock size={20} className="text-slate-700" />
             </div>
             <div>
-              <h3 className="font-bold text-slate-900 mb-1">Legal Data Retention</h3>
+              <h3 className="font-bold text-slate-900 mb-1">{t.keepT}</h3>
               <p className="text-slate-500 text-sm leading-relaxed">
-                Certain records (attendance logs, invoices, fiscal documents) may be retained for the period
-                required by Italian and EU law (typically 10 years for accounting records). These records will be
-                anonymised or deleted as soon as the retention period expires.
+                {t.keep}
               </p>
             </div>
           </div>
@@ -118,14 +176,13 @@ export default function DeleteAccountPage() {
               <FileText size={20} className="text-slate-700" />
             </div>
             <div>
-              <h3 className="font-bold text-slate-900 mb-1">Your GDPR Rights</h3>
+              <h3 className="font-bold text-slate-900 mb-1">{t.rightsT}</h3>
               <p className="text-slate-500 text-sm leading-relaxed">
-                Under GDPR (Regulation EU 2016/679) you have the right to erasure ("right to be forgotten"),
-                rectification, and data portability. You can also contact us at{' '}
-                <a href="mailto:privacy@geotapp.com" className="text-slate-700 underline hover:text-slate-900">
-                  privacy@geotapp.com
-                </a>{' '}
-                for any privacy-related enquiry.
+                {t.rights1}{' '}
+                <a href="mailto:info@geotapp.com" className="text-slate-700 underline hover:text-slate-900">
+                  info@geotapp.com
+                </a>
+                {t.rights2}
               </p>
             </div>
           </div>
@@ -143,17 +200,17 @@ export default function DeleteAccountPage() {
               <div className="inline-flex items-center justify-center w-14 h-14 bg-emerald-50 rounded-2xl mb-4">
                 <ShieldCheck size={26} className="text-emerald-600" />
               </div>
-              <h2 className="text-2xl font-bold text-slate-900 mb-3">Request Received</h2>
+              <h2 className="text-2xl font-bold text-slate-900 mb-3">{t.doneT}</h2>
               <p className="text-slate-500 leading-relaxed max-w-md mx-auto">
-                Your deletion request has been submitted. Our team will process it within{' '}
-                <strong className="text-slate-700">30 days</strong> and send a confirmation to your email address.
+                {t.done1}{' '}
+                <strong className="text-slate-700">{t.done30}</strong> {t.done2}
               </p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label className="block text-sm font-bold text-slate-700 mb-2">
-                  Full Name <span className="text-red-500">*</span>
+                  {t.name} <span className="text-red-500">*</span>
                 </label>
                 <input
                   type="text"
@@ -161,13 +218,13 @@ export default function DeleteAccountPage() {
                   value={formData.fullName}
                   onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                   className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 focus:border-red-400 focus:ring-2 focus:ring-red-100 outline-none transition-all"
-                  placeholder="Mario Rossi"
+                  placeholder={t.namePh}
                 />
               </div>
 
               <div>
                 <label className="block text-sm font-bold text-slate-700 mb-2">
-                  Registered Email <span className="text-red-500">*</span>
+                  {t.email} <span className="text-red-500">*</span>
                 </label>
                 <input
                   type="email"
@@ -175,33 +232,33 @@ export default function DeleteAccountPage() {
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 focus:border-red-400 focus:ring-2 focus:ring-red-100 outline-none transition-all"
-                  placeholder="mario@azienda.com"
+                  placeholder={t.emailPh}
                 />
               </div>
 
               <div>
                 <label className="block text-sm font-bold text-slate-700 mb-2">
-                  Company Name <span className="text-slate-400 font-normal">(optional)</span>
+                  {t.company} <span className="text-slate-400 font-normal">{t.optional}</span>
                 </label>
                 <input
                   type="text"
                   value={formData.companyName}
                   onChange={(e) => setFormData({ ...formData, companyName: e.target.value })}
                   className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 focus:border-red-400 focus:ring-2 focus:ring-red-100 outline-none transition-all"
-                  placeholder="Nome Azienda Srl"
+                  placeholder={t.companyPh}
                 />
               </div>
 
               <div>
                 <label className="block text-sm font-bold text-slate-700 mb-2">
-                  Additional Notes <span className="text-slate-400 font-normal">(optional)</span>
+                  {t.notes} <span className="text-slate-400 font-normal">{t.optional}</span>
                 </label>
                 <textarea
                   rows={4}
                   value={formData.notes}
                   onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
                   className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 focus:border-red-400 focus:ring-2 focus:ring-red-100 outline-none transition-all resize-none"
-                  placeholder="Any additional information about your request..."
+                  placeholder={t.notesPh}
                 />
               </div>
 
@@ -218,11 +275,11 @@ export default function DeleteAccountPage() {
                 className="w-full py-4 bg-red-600 text-white font-bold text-base rounded-xl hover:bg-red-700 transition-all shadow-lg shadow-red-100 flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
               >
                 <Trash2 size={18} />
-                {loading ? 'Submitting…' : 'Submit Deletion Request'}
+                {loading ? t.sending : t.submit}
               </button>
 
               <p className="text-center text-xs text-slate-400">
-                By submitting this form you confirm that you are the account holder. Processing time: up to 30 days.
+                {t.confirm}
               </p>
             </form>
           )}

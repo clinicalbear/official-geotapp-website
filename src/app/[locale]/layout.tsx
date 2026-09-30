@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 //          Moved here from app/layout.tsx so each locale gets the correct lang attribute.
 //          Also injects locale-specific SoftwareApplication JSON-LD.
 
@@ -46,18 +47,17 @@ type LocaleSchemaData = {
 const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
   it: {
     description:
-      'GeoTapp genera prove verificabili del lavoro svolto sul campo: report sigillati con dati GPS reali, prove fotografiche con timestamp e documentazione con ogni modifica rilevabile, verificabile da chiunque. SaaS GDPR-compliant per aziende con operatori in mobilità.',
+      'GeoTapp è il software per dimostrare il lavoro sul campo: a ogni timbratura registra posizione e ora, raccoglie le foto di prova e chiude tutto in un report sigillato che il cliente verifica da solo. La posizione si rileva solo quando il lavoratore timbra, mai in continuo.',
     featureList: [
-      'Report di lavoro con ogni modifica rilevabile, verificabili indipendentemente da chiunque',
-      'Prove fotografiche collegate a timestamp GPS e commessa',
-      'Documentazione interventi: ogni alterazione è rilevabile',
-      'Prova del lavoro svolto: evidenza oggettiva per ogni intervento sul campo',
-      'Timbratura geolocalizzata tramite GPS',
-      'Gestione commesse e interventi tecnici',
-      'GDPR compliant, nessun tracciamento continuo',
-      'App mobile Android e iOS (Flutter)',
+      'Report sigillati: ogni modifica successiva è rilevabile, e chiunque può verificarli senza account',
+      'Foto di prova collegate a ora, posizione e commessa',
+      'Timbratura con posizione a entrata, pause e uscita',
+      'Nessun tracciamento continuo: fra una timbratura e l\'altra non si registra nulla in automatico',
+      'Gestione di commesse, squadre e interventi dall\'ufficio (GeoTapp Flow, web)',
+      'App nativa per gli operatori su Android e iOS (GeoTapp TimeTracker)',
+      'Verificatore gratuito, anche offline (GeoTapp Verifier)',
     ],
-    offersDescription: 'Prova gratuita 14 giorni, piani a pagamento da {price}/operatore/mese via Stripe',
+    offersDescription: 'Prova gratuita di 14 giorni senza carta. Poi GeoTapp Flow da 39 € al mese e le postazioni TimeTracker da {price} per operatore al mese, abbonamento minimo 12 mesi',
   },
   en: {
     description:
@@ -230,6 +230,15 @@ const SALTA = {
   nb: 'Hopp til innholdet',
   ru: 'Перейти к содержимому',
 } as const;
+
+// Descrizione di ripiego nella lingua della pagina, per le pagine che non ne dichiarano una
+// propria (successo del pagamento, sondaggio...). Prima ereditavano quella inglese del layout
+// radice, che per giunta diceva «GDPR compliant» in forma assoluta.
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const data = LOCALE_SCHEMA[locale] ?? LOCALE_SCHEMA.en;
+  return { description: data.description };
+}
 
 export default async function LocaleLayout({ children, params }: Props) {
   const { locale } = await params;

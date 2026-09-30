@@ -20,7 +20,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   // 11 le lingue): ogni condivisione del questionario si presentava come una
   // pubblicità, proprio nei gruppi dove la pubblicità è vietata.
   return {
-    title: { absolute: 'GeoTapp' },
+    // Titolo e descrizione del sondaggio stesso, nella sua lingua (prima: «GeoTapp» e la
+    // descrizione inglese del sito).
+    title: { absolute: `${c.title} | GeoTapp` },
+    description: c.intro,
     robots: { index: false, follow: true },
     alternates: { canonical: url },
     openGraph: {

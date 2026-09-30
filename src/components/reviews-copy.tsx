@@ -9,10 +9,12 @@ type ReviewsCopy = {
   aggregateLine: string;
   starsAriaLabel: string;
   translationNote: string;
+  /** Per chi usa uno screen reader: il link alla fonte apre una scheda nuova. */
+  newTab?: string;
 };
 
 export const REVIEWS_COPY: Record<string, ReviewsCopy> = {
-  it: { heading: 'Ascolta chi ci usa ogni giorno', subheading: 'Recensioni reali da fonti verificate indipendenti', viewOn: 'Vedi su {source}', aggregateLine: 'Media {avg} stelle su {count} recensioni', starsAriaLabel: '{rating} stelle su 5', translationNote: 'Le recensioni sono tradotte per facilitarne la lettura. Clicca su una recensione per leggere l’originale verificato sulla fonte.' },
+  it: { heading: 'Ascolta chi ci usa ogni giorno', subheading: 'Recensioni reali da fonti verificate indipendenti', viewOn: 'Vedi su {source}', aggregateLine: 'Media {avg} stelle su {count} recensioni', starsAriaLabel: '{rating} stelle su 5', translationNote: 'Le recensioni sono tradotte per facilitarne la lettura. Clicca su una recensione per leggere l’originale verificato sulla fonte.', newTab: 'si apre in una nuova scheda' },
   en: { heading: 'What our customers say', subheading: 'Real reviews from verified independent sources', viewOn: 'View on {source}', aggregateLine: 'Average {avg} stars across {count} reviews', starsAriaLabel: '{rating} stars out of 5', translationNote: 'Reviews are translated for easier reading. Click any review to read the verified original on its source.' },
   de: { heading: 'Was unsere Kunden sagen', subheading: 'Echte Bewertungen aus unabhängig verifizierten Quellen', viewOn: 'Auf {source} ansehen', aggregateLine: 'Durchschnitt {avg} Sterne aus {count} Bewertungen', starsAriaLabel: '{rating} von 5 Sternen', translationNote: 'Die Bewertungen wurden zur besseren Lesbarkeit übersetzt. Klicken Sie auf eine Bewertung, um das verifizierte Original an der Quelle zu lesen.' },
   fr: { heading: 'Ce que disent nos clients', subheading: 'Avis réels issus de sources indépendantes vérifiées', viewOn: 'Voir sur {source}', aggregateLine: 'Moyenne {avg} étoiles sur {count} avis', starsAriaLabel: '{rating} étoiles sur 5', translationNote: 'Les avis sont traduits pour faciliter la lecture. Cliquez sur un avis pour lire l’original vérifié sur sa source.' },

@@ -12,7 +12,7 @@ const ARTICLE_DATE_PUBLISHED = '2026-02-01';
 const ARTICLE_DATE_MODIFIED = '2026-05-23';
 
 const META: Record<string, { title: string; description: string }> = {
-  it: { title: 'GeoTapp vs NoBadge - Confronto 2026 | GeoTapp', description: 'GeoTapp vs NoBadge: timbratura o prova verificabile? Confronto su GPS anti-spoofing, report sigillati crittograficamente, prove fotografiche verificabili e conformità GDPR.' },
+  it: { title: 'GeoTapp vs NoBadge - Confronto 2026 | GeoTapp', description: 'GeoTapp vs NoBadge: timbratura o prova verificabile? Confronto su controllo della posizione alla timbratura, report sigillati, foto di prova verificabili e informativa GPS.' },
   en: { title: 'GeoTapp vs NoBadge - Comparison 2026 | GeoTapp', description: 'GeoTapp vs NoBadge: attendance or verifiable proof? Compare anti-spoofing GPS, cryptographically sealed reports, verifiable photo evidence and GDPR compliance.' },
   de: { title: 'GeoTapp vs NoBadge - Vergleich 2026 | GeoTapp', description: 'GeoTapp vs NoBadge: Zeiterfassung oder versiegelter Nachweis? Vergleich von Anti-Spoofing-GPS, kryptographisch versiegelten Berichten und DSGVO-Konformität.' },
   nl: { title: 'GeoTapp vs NoBadge - Vergelijking 2026 | GeoTapp', description: 'GeoTapp vs NoBadge: tijdregistratie of verzegeld bewijs? Vergelijk anti-spoofing GPS, cryptografisch verzegelde rapporten en AVG-compliance.' },
@@ -29,10 +29,10 @@ type FaqItem = { q: string; a: string };
 
 const FAQ: Record<string, FaqItem[]> = {
   it: [
-    { q: 'Qual è la differenza principale tra GeoTapp e NoBadge?', a: 'NoBadge è un sistema di rilevazione presenze: registra entrata e uscita dei dipendenti tramite GPS o QR code. GeoTapp è un sistema di prova verificabile del lavoro sul campo: produce report sigillati con GPS anti-spoofing e prove fotografiche che il committente verifica autonomamente. La differenza è tra registrare una presenza e sigillare un intervento.' },
-    { q: 'NoBadge ha il GPS anti-spoofing?', a: 'No. NoBadge registra la posizione GPS del dispositivo ma non verifica se la posizione è reale o falsificata. GeoTapp utilizza un controllo anti-spoofing attivo che incrocia più segnali per rilevare i tentativi di falsificazione della posizione.' },
-    { q: 'Il committente può verificare i report di NoBadge?', a: 'NoBadge genera report interni per l\'amministrazione. GeoTapp genera report con sigillo crittografico che il committente può verificare in modo indipendente sul portale pubblico, senza bisogno di account o di fidarsi dell\'azienda.' },
-    { q: 'GeoTapp o NoBadge per imprese di pulizie?', a: 'Se l\'obiettivo è solo registrare le ore dei dipendenti, NoBadge può bastare. Se l\'obiettivo è mostrare al committente le prove del servizio con prove in cui qualsiasi modifica risulta evidente - GPS verificato, foto sigillate, report verificabili - GeoTapp è l\'unica soluzione.' },
+    { q: 'Qual è la differenza principale tra GeoTapp e NoBadge?', a: 'NoBadge è un sistema di rilevazione presenze: registra entrata e uscita dei dipendenti tramite GPS o QR code. GeoTapp è un sistema di prova verificabile del lavoro sul campo: produce report sigillati con posizione controllata alla timbratura e foto di prova che il committente verifica da solo. La differenza è tra registrare una presenza e sigillare un intervento.' },
+    { q: 'NoBadge controlla se la posizione è falsificata?', a: 'Tra le funzioni che NoBadge dichiara c\'è la registrazione della posizione del dispositivo, non un controllo sulle posizioni falsificate. GeoTapp, alla timbratura, rifiuta le posizioni simulate da app di finta posizione, quelle troppo imprecise e gli spostamenti impossibili.' },
+    { q: 'Il committente può verificare i report di NoBadge?', a: 'NoBadge genera report interni per l\'amministrazione. GeoTapp genera report con sigillo crittografico che il committente può verificare da solo, online o con il verificatore offline, senza account e senza doversi fidare dell\'azienda.' },
+    { q: 'GeoTapp o NoBadge per imprese di pulizie?', a: 'Se l\'obiettivo è solo registrare le ore dei dipendenti, NoBadge può bastare. Se l\'obiettivo è mostrare al committente le prove del servizio (posizione alla timbratura, foto di prova, un report dove ogni modifica successiva è rilevabile), serve GeoTapp.' },
   ],
   en: [
     { q: 'What is the main difference between GeoTapp and NoBadge?', a: 'NoBadge is an attendance tracking system: it records employee check-in/out via GPS or QR code. GeoTapp is a field verifiable proof of work system: it produces sealed reports with anti-spoofing GPS and photo evidence that clients independently verify. The difference is between recording a presence and sealing a job.' },
@@ -98,7 +98,7 @@ const FAQ: Record<string, FaqItem[]> = {
 
 // Etichette della tabella di confronto, per locale.
 const ROWS_LABELS: Record<string, string[]> = {
-  it: ['GPS anti-spoofing (rileva posizioni falsificate)','Report sigillato crittograficamente','Verifica indipendente da parte del committente','Prove fotografiche con catena hash crittografata','Conformità GDPR / Garante Privacy','Timbratura da smartphone','QR code check-in','Gestione ferie e permessi','App nativa Android/iOS','Dashboard gestione team','Multi-sede','Nessun hardware richiesto','Informativa GPS automatica con firma digitale*'],
+  it: ['Controllo della posizione alla timbratura (rifiuta posizioni simulate)','Report sigillato crittograficamente','Verifica indipendente da parte del committente','Foto con impronta SHA-256 nel report','Posizione solo alla timbratura, come chiede il Garante','Timbratura da smartphone','QR code check-in','Gestione ferie e permessi','App nativa Android/iOS','Dashboard gestione team','Multi-sede','Nessun hardware richiesto','Informativa GPS firmata nell\'app prima di timbrare*'],
   en: ['Anti-spoofing GPS (detects fake positions)','Cryptographically sealed report','Independent verification by client','Photo evidence with cryptographic hash chain','GDPR compliant','Smartphone check-in','QR code check-in','Leave management','Native app Android/iOS','Team management dashboard','Multi-site','No hardware required','Automatic GPS privacy notice with digital signature*'],
   de: ['Anti-Spoofing-GPS (erkennt gefälschte Positionen)','Kryptographisch versiegelter Bericht','Unabhängige Prüfung durch den Auftraggeber','Fotobeweise mit kryptographischer Hash-Kette','DSGVO-konform','Stempelung per Smartphone','QR-Code-Check-in','Urlaubs- und Abwesenheitsverwaltung','Native App Android/iOS','Team-Management-Dashboard','Mehrere Standorte','Keine Hardware erforderlich','Automatische GPS-Datenschutzerklärung mit digitaler Signatur*'],
   fr: ['GPS anti-spoofing (détecte les positions falsifiées)','Rapport scellé cryptographiquement','Vérification indépendante par le client','Preuves photographiques avec chaîne de hachage cryptographique','Conforme RGPD','Pointage depuis smartphone','Check-in par QR code','Gestion des congés et absences','Application native Android/iOS','Tableau de bord de gestion d\'équipe','Multi-sites','Aucun matériel requis','Avis de confidentialité GPS automatique avec signature numérique*'],
@@ -111,7 +111,8 @@ const ROWS_LABELS: Record<string, string[]> = {
   ru: ['Анти-спуфинг GPS (выявляет подделанные позиции)','Криптографически опечатанный отчёт','Независимая проверка заказчиком','Фотодоказательства с криптографической хеш-цепочкой','Соответствие GDPR','Отметка со смартфона','Отметка по QR-коду','Управление отпусками и отсутствиями','Нативное приложение Android/iOS','Панель управления командой','Несколько объектов','Не требуется оборудование','Автоматическое уведомление о GPS с цифровой подписью*'],
 };
 
-const ROWS_GEO =  [true,true,true,true,true,true,true,true,true,true,true,true,true];
+// Valori riverificati sul prodotto il 30/09/2026: niente QR/NFC, niente checklist; i prezzi sono pubblici.
+const ROWS_GEO =  [true,true,true,true,true,true,false,true,true,true,true,true,true];
 const ROWS_COMP = [false,false,false,false,true,true,true,true,false,true,true,true,false];
 
 type Copy = {
@@ -123,18 +124,18 @@ type Copy = {
 const T: Record<string, Copy> = {
   it: {
     badge: 'Confronto App', h1sub: 'timbratura o prova verificabile?',
-    desc: 'NoBadge registra le presenze dei dipendenti con GPS e QR code. GeoTapp sigilla ogni intervento con GPS anti-spoofing, foto sigillate crittograficamente e report verificabili dal committente. Due approcci molto diversi.',
+    desc: 'NoBadge registra le presenze dei dipendenti con GPS e QR code. GeoTapp sigilla ogni intervento: posizione controllata alla timbratura, foto di prova e un report che il committente verifica da solo. Due approcci molto diversi.',
     summary: 'In sintesi:',
-    summaryText: 'NoBadge è un ottimo sistema di rilevazione presenze per chi ha bisogno solo di registrare entrate e uscite. GeoTapp è per chi ha bisogno di mostrare al proprio committente le prove del lavoro, con prove sigillate, GPS verificato e report verificabili che il cliente può controllare da solo.',
+    summaryText: 'NoBadge è un ottimo sistema di rilevazione presenze per chi ha bisogno solo di registrare entrate e uscite. GeoTapp è per chi ha bisogno di mostrare al proprio committente le prove del lavoro, con posizione alla timbratura, foto di prova e un report sigillato che il cliente può controllare da solo.',
     noteTitle: 'Perché la semplice timbratura GPS non basta',
-    noteText: 'La posizione GPS di uno smartphone può essere falsificata con un\'app gratuita: l\'operatore risulta in cantiere mentre è a casa. NoBadge registra questa posizione senza verificarla. GeoTapp la verifica attivamente con un controllo anti-spoofing che incrocia più segnali, è impossibile ingannarlo. In più, ogni foto è sigillata con una catena hash crittografata: se qualcuno la modifica, il sistema lo rileva immediatamente.',
+    noteText: 'La posizione GPS di uno smartphone si può falsificare con un\'app gratuita: l\'operatore risulta in cantiere mentre è a casa. Registrare la posizione non basta a scoprirlo. GeoTapp, alla timbratura, rifiuta le posizioni simulate, quelle troppo imprecise e gli spostamenti impossibili. In più ogni foto entra nel report con la sua impronta SHA-256: se qualcuno la modifica, la verifica lo segnala.',
     features: 'Confronto funzionalità chiave', feat: 'Funzionalità', diff: 'Approcci diversi',
     cta: 'Vuoi vedere GeoTapp in azione?',
-    ctaDesc: 'Ti mostriamo come un intervento diventa una prova verificabile, in 10 minuti, senza impegno.',
-    ctaBtn: 'Inizia subito gratuitamente!',
-    geo: ['Report sigillato: prova difendibile per il committente','GPS anti-spoofing: impossibile falsificare la posizione','Foto sigillate con catena hash crittografata','Il committente verifica da solo, senza account','Progettato per pulizie, manutenzione, sicurezza, installatori'],
-    comp: ['Registra presenze con GPS e QR code','Nessun controllo anti-spoofing sul GPS','Nessuna sigillatura crittografica delle foto','Report interni, non verificabili dal committente','Orientato alla gestione HR, non alla prova verificabile'],
-    footnote: '* Per legge (GDPR Art. 13 e, in Italia, Art. 4 Statuto dei Lavoratori), ogni dipendente deve firmare un\'informativa privacy prima di essere geolocalizzato. La maggior parte dei software GPS non lo gestisce: il rischio legale resta al titolare. GeoTapp genera automaticamente l\'informativa personalizzata, la fa firmare digitalmente al dipendente e blocca l\'accesso GPS finché non è firmata. Nessun altro software sul mercato lo fa.',
+    ctaDesc: 'Provalo su un intervento vero: 14 giorni gratis, senza carta di credito.',
+    ctaBtn: 'Inizia la prova gratuita',
+    geo: ['Report sigillato da mostrare al committente','Alla timbratura rifiuta le posizioni simulate','Foto con impronta SHA-256 dentro il report','Il committente verifica da solo, senza account','Progettato per pulizie, manutenzione, sicurezza, installatori'],
+    comp: ['Registra presenze con GPS e QR code','Nessun controllo dichiarato sulle posizioni simulate','Nessuna foto sigillata in un report verificabile','Report interni, non verificabili dal committente','Orientato alla gestione HR, non alla prova verificabile'],
+    footnote: '* Per legge (art. 13 GDPR e, in Italia, art. 4 dello Statuto dei Lavoratori) ogni dipendente va informato prima di essere geolocalizzato. Se il software lascia questo passaggio al titolare, il rischio resta a lui. GeoTapp prepara l\'informativa personalizzata, la fa firmare per presa visione nell\'app e non lascia timbrare finché non è firmata.',
   },
   en: {
     badge: 'App Comparison', h1sub: 'attendance or verifiable proof?',

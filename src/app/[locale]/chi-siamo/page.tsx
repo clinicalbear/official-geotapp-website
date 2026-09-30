@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
 
 const CHI_SIAMO_META: Record<string, { title: string; description: string }> = {
-  it: { title: 'Chi siamo - Il team GeoTapp | GeoTapp', description: 'GeoTapp è un SaaS italiano per la verifica del lavoro sul campo. Scopri la nostra missione: rendere ogni intervento verificabile, riducendo le contestazioni per le aziende con operatori in mobilità.' },
+  it: { title: 'Chi siamo - Il team GeoTapp | GeoTapp', description: 'GeoTapp è un software italiano per dimostrare il lavoro sul campo. Scopri la nostra missione: rendere ogni intervento verificabile, riducendo le contestazioni per le aziende con operatori in mobilità.' },
   en: { title: 'About Us - The GeoTapp Team | GeoTapp', description: 'GeoTapp is a field work verification SaaS. Learn about our mission: making every field job provable and reducing disputes for companies with mobile operators.' },
   de: { title: 'Über uns - Das GeoTapp-Team | GeoTapp', description: 'GeoTapp ist eine SaaS-Plattform zur Verifikation von Außendienstarbeit. Erfahren Sie mehr über unsere Mission: jeden Außendiensteinsatz nachweisbar zu machen.' },
   fr: { title: 'À propos - L\'équipe GeoTapp | GeoTapp', description: 'GeoTapp est un SaaS de vérification du travail terrain. Découvrez notre mission : rendre chaque intervention vérifiable et réduire les litiges pour les entreprises avec des équipes mobiles.' },

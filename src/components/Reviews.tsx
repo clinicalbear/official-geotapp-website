@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Star, ExternalLink } from 'lucide-react';
-import { REVIEWS, resolveReviewText } from '@/data/reviews';
+import { REVIEWS, resolveReviewText, reviewerLine } from '@/data/reviews';
 
 import { REVIEWS_COPY, SOURCE_LOGOS, SOURCE_NAMES } from './reviews-copy';
 
@@ -64,7 +64,7 @@ export default function Reviews({ locale }: { locale: string }) {
                   href={r.sourceUrl}
                   target="_blank"
                   rel="noopener noreferrer nofollow"
-                  aria-label={isClone ? undefined : `${viewLabel}, ${r.reviewer.displayName}`}
+                  aria-label={isClone ? undefined : `${viewLabel}, ${reviewerLine(r, locale).name}`}
                   aria-hidden={isClone || undefined}
                   tabIndex={isClone ? -1 : undefined}
                   className="reviews-card group bg-white rounded-2xl border border-slate-200 p-8 shadow-sm hover:shadow-lg hover:-translate-y-1 hover:border-slate-300 transition-all flex flex-col gap-4 no-underline"
@@ -88,11 +88,11 @@ export default function Reviews({ locale }: { locale: string }) {
                   </p>
                   <div className="border-t border-slate-100 pt-4 mt-auto">
                     <div className="font-semibold text-slate-900 text-sm">
-                      {r.reviewer.displayName}
+                      {reviewerLine(r, locale).name}
                     </div>
-                    {(r.reviewer.industry || r.reviewer.companySize) && (
+                    {reviewerLine(r, locale).meta && (
                       <div className="text-xs text-slate-500 mt-1">
-                        {[r.reviewer.industry, r.reviewer.companySize].filter(Boolean).join(' · ')}
+                        {reviewerLine(r, locale).meta}
                       </div>
                     )}
                     <div className="inline-flex items-center gap-2 mt-3 text-xs text-slate-600 group-hover:text-slate-900 transition">

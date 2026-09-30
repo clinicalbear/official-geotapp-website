@@ -29,10 +29,10 @@ type FaqItem = { q: string; a: string };
 
 const FAQ: Record<string, FaqItem[]> = {
   it: [
-    { q: 'Qual e la differenza principale tra GeoTapp e PicaPonto?', a: 'PicaPonto e un sistema di rilevazione presenze: registra entrate e uscite con app, QR code, orologio fisico e biometria, a un prezzo pubblico molto basso. GeoTapp e un sistema di prova del lavoro: produce un report con GPS reale, hash crittografico e foto che il committente verifica da solo, e che non e modificabile nemmeno dall amministratore. La differenza e tra registrare una presenza e dimostrarla a un terzo.' },
-    { q: 'Quanto costa PicaPonto rispetto a GeoTapp?', a: 'PicaPonto pubblica i prezzi: 0,75 euro per collaboratore al mese nel piano Basic, 1,25 nel Premium, con minimi di 12,50 e 22,50 euro. E tra i piu bassi in Europa. Se il prezzo per collaboratore e il fattore decisivo, PicaPonto e molto competitivo. GeoTapp risolve un problema diverso, la prova verso il committente, non compete sul prezzo piu basso.' },
-    { q: 'PicaPonto ha piu metodi di timbratura di GeoTapp?', a: 'Si. PicaPonto offre app, browser, QR code, orologio marcatempo fisico, biometria e riconoscimento facciale. GeoTapp vive sullo smartphone. Se hai personale senza smartphone o una portineria con lettore a parete, PicaPonto copre quel caso e GeoTapp no.' },
-    { q: 'Il committente puo verificare i report?', a: 'PicaPonto genera report interni per l amministrazione e le buste paga. GeoTapp genera un report con sigillo crittografico che il committente verifica in modo indipendente, senza account e senza fidarsi dell azienda. Un registro che il datore di lavoro puo correggere non ha lo stesso peso di un report sigillato.' },
+    { q: 'Qual è la differenza principale tra GeoTapp e PicaPonto?', a: 'PicaPonto è un sistema di rilevazione presenze: registra entrate e uscite con app, QR code, orologio fisico e biometria, a un prezzo pubblico molto basso. GeoTapp è un sistema di prova del lavoro: produce un report con posizione, ora, impronte crittografiche e foto che il committente verifica da solo, e se qualcuno lo modifica, amministratore compreso, la verifica lo segnala. La differenza è tra registrare una presenza e dimostrarla a un terzo.' },
+    { q: 'Quanto costa PicaPonto rispetto a GeoTapp?', a: 'PicaPonto pubblica i prezzi: 0,75 euro per collaboratore al mese nel piano Basic, 1,25 nel Premium, con minimi di 12,50 e 22,50 euro. È tra i più bassi in Europa. Se il prezzo per collaboratore è il fattore decisivo, PicaPonto è molto competitivo. GeoTapp risolve un problema diverso, la prova verso il committente, e non compete sul prezzo più basso.' },
+    { q: 'PicaPonto ha più metodi di timbratura di GeoTapp?', a: 'Sì. PicaPonto offre app, browser, QR code, orologio marcatempo fisico, biometria e riconoscimento facciale. GeoTapp vive sullo smartphone. Se hai personale senza smartphone o una portineria con lettore a parete, PicaPonto copre quel caso e GeoTapp no.' },
+    { q: 'Il committente può verificare i report?', a: 'PicaPonto genera report interni per l\'amministrazione e le buste paga. GeoTapp genera un report con sigillo crittografico che il committente verifica da solo, senza account e senza doversi fidare dell\'azienda. Un registro che il datore di lavoro può correggere senza lasciare traccia non si può verificare allo stesso modo di un report sigillato.' },
   ],
   en: [
     { q: 'What is the main difference between GeoTapp and PicaPonto?', a: 'PicaPonto is an attendance system: it records clock-ins and clock-outs via app, QR code, physical clock and biometrics, at a very low public price. GeoTapp is a proof-of-work system: it produces a report with real GPS, a cryptographic hash and photos that the client verifies independently, and that not even the account administrator can edit. The difference is between recording a presence and proving it to a third party.' },
@@ -108,18 +108,18 @@ type Copy = {
 const T: Record<string, Copy> = {
   it: {
     badge: 'Confronto App', h1sub: 'registrare o dimostrare?',
-    desc: 'PicaPonto registra le presenze con app, QR code, orologio fisico e biometria, a un prezzo pubblico tra i piu bassi d Europa. GeoTapp produce un report con GPS reale, hash crittografico e foto che il committente verifica da solo e che nessuno puo modificare. Due approcci diversi.',
+    desc: 'PicaPonto registra le presenze con app, QR code, orologio fisico e biometria, a un prezzo pubblico tra i più bassi d\'Europa. GeoTapp produce un report con posizione, ora, impronte crittografiche e foto che il committente verifica da solo, e dove ogni modifica successiva è rilevabile. Due approcci diversi.',
     summary: 'In sintesi:',
-    summaryText: 'PicaPonto e un ottimo sistema di presenze per chi deve registrare le ore a basso costo, con molti metodi di timbratura e una forte leva sulla conformita. GeoTapp e per chi deve mostrare al committente le prove del lavoro, con un report sigillato che il cliente controlla da solo.',
+    summaryText: 'PicaPonto è un ottimo sistema di presenze per chi deve registrare le ore a basso costo, con molti metodi di timbratura e molta attenzione agli obblighi di legge sul registro presenze. GeoTapp è per chi deve mostrare al committente le prove del lavoro, con un report sigillato che il cliente controlla da solo.',
     noteTitle: 'La domanda che cambia la scelta',
-    noteText: 'PicaPonto risponde a "ho il registro in ordine se arriva l ispezione?". GeoTapp risponde a "come mostro al cliente le prove del lavoro?". Sembrano la stessa domanda e non lo sono: un registro presenze serve allo Stato e alla busta paga, un report sigillato serve per quella telefonata del venerdi sera in cui il cliente contesta la fattura. Nessuno dei due e migliore, risolvono perdite diverse.',
-    features: 'Confronto funzionalita chiave', feat: 'Funzionalita', diff: 'Approcci diversi',
+    noteText: 'PicaPonto risponde a «ho il registro in ordine se arriva l\'ispezione?». GeoTapp risponde a «come mostro al cliente le prove del lavoro?». Sembrano la stessa domanda e non lo sono: un registro presenze serve allo Stato e alla busta paga, un report sigillato serve per quella telefonata del venerdì sera in cui il cliente contesta la fattura. Nessuno dei due è migliore: risolvono perdite diverse.',
+    features: 'Confronto funzionalità chiave', feat: 'Funzionalità', diff: 'Approcci diversi',
     cta: 'Vuoi vedere GeoTapp in azione?',
-    ctaDesc: 'Ti mostriamo come un intervento diventa una prova verificabile, in 10 minuti, senza impegno.',
-    ctaBtn: 'Inizia subito gratuitamente!',
-    geo: ['Report sigillato: si vede anche una modifica dell amministratore','GPS reale con controllo anti-spoofing','Foto sigillate con catena hash crittografata','Il committente verifica da solo, senza account','Progettato per pulizie, manutenzione, sicurezza, installatori'],
-    comp: ['Prezzo pubblico bassissimo (0,75-1,25 euro per persona)','App, QR, orologio fisico, biometria, riconoscimento facciale','Forte leva sulla conformita (art. 202 Codigo do Trabalho)','Report interni per amministrazione e buste paga','Fornitore portoghese attivo dal 1988'],
-    footnote: '* Per legge (GDPR Art. 13 e, in Italia, Art. 4 Statuto dei Lavoratori), ogni dipendente deve firmare un informativa privacy prima di essere geolocalizzato. La maggior parte dei software GPS non lo gestisce: il rischio legale resta al titolare. GeoTapp genera automaticamente l informativa personalizzata, la fa firmare digitalmente al dipendente e blocca l accesso GPS finche non e firmata.',
+    ctaDesc: 'Provalo su un intervento vero: 14 giorni gratis, senza carta di credito.',
+    ctaBtn: 'Inizia la prova gratuita',
+    geo: ['Report sigillato: si vede anche una modifica dell\'amministratore','Alla timbratura rifiuta le posizioni simulate','Foto con impronta SHA-256 dentro il report','Il committente verifica da solo, senza account','Progettato per pulizie, manutenzione, sicurezza, installatori'],
+    comp: ['Prezzo pubblico bassissimo (0,75-1,25 euro per persona)','App, QR, orologio fisico, biometria, riconoscimento facciale','Pensato per il registro presenze che la legge portoghese impone (art. 202 del Código do Trabalho)','Report interni per amministrazione e buste paga','Fornitore portoghese attivo dal 1988'],
+    footnote: '* Per legge (art. 13 GDPR e, in Italia, art. 4 dello Statuto dei Lavoratori) ogni dipendente va informato prima di essere geolocalizzato. Se il software lascia questo passaggio al titolare, il rischio resta a lui. GeoTapp prepara l\'informativa personalizzata, la fa firmare per presa visione nell\'app e non lascia timbrare finché non è firmata.',
   },
   en: {
     badge: 'App Comparison', h1sub: 'recording or proving?',
@@ -274,7 +274,7 @@ const T: Record<string, Copy> = {
 };
 
 const ROWS_LABELS: Record<string, string[]> = {
-  it: ['GPS anti-spoofing (rileva posizioni falsificate)','Report sigillato crittograficamente','Verifica indipendente da parte del committente','Prove fotografiche con catena hash crittografata','Conformita GDPR / Garante Privacy','Timbratura da smartphone','QR code check-in','Timbratrice fisica / biometria','App nativa Android/iOS','Prezzo pubblico trasparente','Multi-sede','Report sigillato anche per l amministratore','Informativa GPS automatica con firma digitale*'],
+  it: ['Controllo della posizione alla timbratura (rifiuta posizioni simulate)','Report sigillato crittograficamente','Verifica indipendente da parte del committente','Foto con impronta SHA-256 nel report','Posizione solo alla timbratura, come chiede il Garante','Timbratura da smartphone','Timbratura con QR code','Timbratrice fisica / biometria','App nativa Android/iOS','Prezzo pubblico trasparente','Più sedi','Report sigillato anche per l\'amministratore','Informativa GPS firmata nell\'app prima di timbrare*'],
   en: ['Anti-spoofing GPS (detects fake positions)','Cryptographically sealed report','Independent verification by client','Photo evidence with cryptographic hash chain','GDPR compliant','Smartphone check-in','QR code check-in','Physical clock / biometrics','Native app Android/iOS','Transparent public pricing','Multi-site','Report not editable by administrator','Automatic GPS privacy notice with digital signature*'],
   de: ['Anti-Spoofing-GPS (erkennt gefalschte Positionen)','Kryptographisch versiegelter Bericht','Unabhangige Prufung durch den Auftraggeber','Fotobeweise mit kryptographischer Hash-Kette','DSGVO-konform','Stempelung per Smartphone','QR-Code-Check-in','Feste Stempeluhr / Biometrie','Native App Android/iOS','Transparenter offentlicher Preis','Mehrere Standorte','Bericht nicht vom Administrator anderbar','Automatische GPS-Datenschutzerklarung mit digitaler Signatur*'],
   fr: ['GPS anti-spoofing (detecte les positions falsifiees)','Rapport scelle cryptographiquement','Verification independante par le client','Preuves photographiques avec chaine de hachage cryptographique','Conforme RGPD','Pointage depuis smartphone','Check-in par QR code','Pointeuse physique / biometrie','Application native Android/iOS','Prix public transparent','Multi-sites','Rapport non modifiable par l administrateur','Avis de confidentialite GPS automatique avec signature numerique*'],
@@ -288,14 +288,15 @@ const ROWS_LABELS: Record<string, string[]> = {
 };
 // GeoTapp: tutto vero. PicaPonto: falso su prova/sigillo/verifica/foto/immutabile;
 // vero su GDPR, smartphone, QR, timbratrice fisica+biometria, app nativa, prezzo pubblico, multi-sede.
-const ROWS_GEO =  [true, true, true, true, true, true, true, false, true, false, true, true, true];
+// Valori riverificati sul prodotto il 30/09/2026: niente QR/NFC, niente checklist; i prezzi sono pubblici.
+const ROWS_GEO =  [true,true,true,true,true,true,false,false,true,true,true,true,true];
 const ROWS_COMP = [false,false,false,false,true, true, true, true,  true, true,  true, false,false];
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const m = META[locale] ?? META.en;
   return {
-    title: m.title,
+    title: { absolute: m.title },
     description: m.description,
     alternates: buildLocaleAlternates(locale, PATHNAME),
     openGraph: { url: buildCanonicalUrl(locale, PATHNAME), type: 'website', title: m.title, description: m.description, images: [{ url: '/og-default.png', width: 1200, height: 630, alt: m.title }] },

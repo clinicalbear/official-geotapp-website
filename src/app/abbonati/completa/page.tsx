@@ -26,12 +26,9 @@
 import './l-page.css';
 import { Suspense, useCallback, useEffect, useMemo, useState } from 'react';
 import { usePathname, useSearchParams } from 'next/navigation';
-import { getLocaleFromPathname } from '@/lib/i18n/locale-routing';
-import {
-  buildPolicyAcceptancePayload,
-  PRIVACY_URL,
-  TERMS_URL,
-} from '@/lib/policyAcceptance';
+import { getLocaleFromPathname, localizePath } from '@/lib/i18n/locale-routing';
+import type { AppLocale } from '@/lib/i18n/config';
+import { buildPolicyAcceptancePayload } from '@/lib/policyAcceptance';
 import { BCP47, pickLocale, UI } from './strings';
 
 const SAAS_URL = process.env.NEXT_PUBLIC_SAAS_URL || 'https://crm.geotapp.com';
@@ -491,7 +488,8 @@ function CompletaInner() {
               <input type="checkbox" checked={terms} onChange={(e) => setTerms(e.target.checked)} />
               <span>
                 {t.termsPrefix}{' '}
-                <a href={TERMS_URL} target="_blank" rel="noreferrer">
+                {/* Il link apre i termini nella lingua della pagina; TERMS_URL resta quello registrato nell'accettazione. */}
+                <a href={localizePath('/terms/', (getLocaleFromPathname(pathname || '') || 'it') as AppLocale)} target="_blank" rel="noreferrer">
                   {t.termsLink}
                 </a>
               </span>
@@ -504,7 +502,7 @@ function CompletaInner() {
               />
               <span>
                 {t.privacyPrefix}{' '}
-                <a href={PRIVACY_URL} target="_blank" rel="noreferrer">
+                <a href={localizePath('/privacy/', (getLocaleFromPathname(pathname || '') || 'it') as AppLocale)} target="_blank" rel="noreferrer">
                   {t.privacyLink}
                 </a>
               </span>

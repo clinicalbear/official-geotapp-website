@@ -202,7 +202,9 @@
     },
     "proof_note": "Evidence captured by camera only, no continuous tracking.",
     "proof_claim": "Nothing automatically recorded between clock-in and clock-out.",
-    "sticky_cta_subtitle": "14 days free, no credit card"
+    "sticky_cta_subtitle": "14 days free, no credit card",
+    "trial_cta_headline": "Try it free for 14 days",
+    "trial_cta_subtitle": "No credit card required"
   },
   "home_sections": {
     "flow": {
@@ -568,16 +570,18 @@
     "open_maps": "Open in Google Maps ↗"
   },
   "login_hub": {
-    "title": "Access your <span class=\"text-primary\">Account</span>.",
-    "subtitle": "Select the product you want to connect to.",
+    "title": "Log in to <span class=\"text-primary\">GeoTapp</span>.",
+    "subtitle": "Choose the product: Flow for the office, TimeTracker for the people in the field.",
     "flow": {
       "desc": "Operational management, jobs, coordination and reports.",
-      "btn": "Login to Flow"
+      "btn": "Log in to Flow"
     },
     "timetracker": {
-      "desc": "Attendance, field activity and work proof.",
-      "btn": "Login to TimeTracker"
-    }
+      "desc": "For field workers: you log in from the app, on Android and iOS.",
+      "btn": "Get the TimeTracker app"
+    },
+    "meta_title": "Log in | GeoTapp",
+    "meta_description": "Log in to GeoTapp Flow from your browser, or get the TimeTracker app to clock in from the field."
   },
   "product_pages": {
     "flow": {
@@ -1475,7 +1479,9 @@
     "segnala_t": "Reporting a problem",
     "segnala": "If you encounter a barrier on this site, write to info@geotapp.com stating the page and what you were unable to do. We reply within thirty days. If the reply is not satisfactory, you may contact the competent enforcement authority in your country.",
     "data_t": "Date",
-    "data": "Statement written on 23 September 2026, based on the assessment of the same date."
+    "data": "Statement written on 23 September 2026, based on the assessment of the same date.",
+    "meta_title": "Accessibility statement | GeoTapp",
+    "meta_description": "How accessible geotapp.com is: what was tested, how, the known limits and how to report a problem."
   },
   "contentDates": {
     "updatedOn": "Updated on"

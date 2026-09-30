@@ -46,7 +46,7 @@ export const HOME_TITLE_KEYWORD: Record<string, string> = {
 export const HOME_META: Record<string, { title: string; description: string }> = {
   it: {
     title: 'Software GPS presenze: prova ogni intervento | GeoTapp',
-    description: 'Cliente contesta il servizio? GeoTapp registra GPS, foto, orario e rapportino con ogni modifica rilevabile. Prova ogni intervento e fatturi senza discutere.',
+    description: 'Software per squadre sul campo: GeoTapp registra posizione, orari e foto a ogni timbratura e li sigilla in un report che il cliente verifica da solo.',
   },
   en: {
     title: 'GPS field service software: prove every visit | GeoTapp',

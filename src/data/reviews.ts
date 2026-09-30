@@ -20,11 +20,24 @@ export type Review = {
     companySize?: string;
     industry?: string;
   };
+  /**
+   * Nome e riga sotto il nome nella lingua della pagina. I campi `reviewer` sono
+   * quelli della fonte, spesso in inglese: senza questa mappa finivano tali e quali
+   * su ogni versione del sito.
+   */
+  reviewerLocalized?: Record<string, { name?: string; meta?: string }>;
   /** Verbatim original text as written by the reviewer. */
   original: LocalizedText;
   /** Translations keyed by BCP-47 locale. Does not include origLang. */
   translations: Record<string, LocalizedText>;
 };
+
+/** Nome e riga del recensore nella lingua della pagina, con ripiego sui dati della fonte. */
+export function reviewerLine(r: Review, locale: string): { name: string; meta: string } {
+  const loc = r.reviewerLocalized?.[locale] ?? r.reviewerLocalized?.[locale.split('-')[0]];
+  const raw = [r.reviewer.role, r.reviewer.industry, r.reviewer.companySize].filter(Boolean).join(' · ');
+  return { name: loc?.name ?? r.reviewer.displayName, meta: loc?.meta ?? raw };
+}
 
 /**
  * Resolve the text to display for a given page locale.
@@ -57,6 +70,9 @@ export const REVIEWS: Review[] = [
       role: 'Informatore Scientifico',
       industry: 'Medical devices',
       companySize: '1',
+    },
+    reviewerLocalized: {
+      it: { meta: 'Informatore scientifico · Dispositivi medici · Lavoratrice autonoma' },
     },
     original: {
       title: 'GeoTapp Flow è il top',
@@ -127,6 +143,9 @@ export const REVIEWS: Review[] = [
       displayName: 'Capterra verified reviewer',
       industry: 'Events services',
       companySize: '51-200',
+    },
+    reviewerLocalized: {
+      it: { name: 'Recensore verificato da Capterra', meta: 'Servizi per eventi · 51-200 dipendenti' },
     },
     original: {
       title: 'A good app for a good work',
