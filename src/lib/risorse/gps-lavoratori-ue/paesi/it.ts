@@ -270,7 +270,7 @@ export const italia: SchedaPaese = {
         de: 'Fällt das Instrument unter Artikel 4 Absatz 1 (es ist nicht bloß ein Anwesenheitserfassungs- oder Arbeitsmittel, Absatz 2), schließen Sie das Verfahren vorher ab, nicht danach: eine Vereinbarung mit den Gewerkschaftsvertretungen (RSA oder RSU) oder eine Genehmigung der nationalen Arbeitsaufsichtsbehörde. Ohne sie sind Sie schon ab der ersten Minute außen vor.',
         fr: "Si l'outil relève de l'article 4, alinéa 1 (il n'est pas seulement un outil d'enregistrement des présences ni un outil de travail, alinéa 2), achevez d'abord la procédure, pas après : un accord avec les représentations syndicales (RSA ou RSU) ou une autorisation de l'Inspection nationale du travail. Sans cela, vous êtes hors-jeu dès la première minute.",
         es: 'Si la herramienta entra en el artículo 4, apartado 1 (no es solo un registro de presencias ni un instrumento de trabajo, apartado 2), completa el procedimiento antes, no después: un acuerdo con las representaciones sindicales (RSA o RSU) o una autorización de la Inspección Nacional de Trabajo. Sin ello, estás fuera desde el primer minuto.',
-        nl: 'Valt het middel onder artikel 4, lid 1 (het is niet enkel een aanwezigheidsregistratie of werkmiddel, lid 2), voltooi de procedure dan eerst, niet later: een overeenkomst met de vakbondsvertegenwoordigingen (RSA of RSU) of toestemming van de nationale Arbeidsinspectie. Zonder die ben je vanaf de eerste minuut buitenspel.',
+        nl: 'Valt het middel onder artikel 4, lid 1 (het is niet enkel een aanwezigheidsregistratie of werkmiddel, lid 2), voltooi de procedure dan eerst, niet later: een overeenkomst met de vakbondsvertegenwoordigingen (RSA of RSU) of toestemming van de nationale Arbeidsinspectie. Zonder die bent u vanaf de eerste minuut buitenspel.',
       },
     },
     {
@@ -303,7 +303,7 @@ export const italia: SchedaPaese = {
         de: 'Wenden Sie die Datenminimierung an: erheben Sie nur die Daten, die Sie benötigen, und nur dann, wenn Sie sie benötigen. Keine Ortung während der Pausen, sehen Sie eine Abschaltmöglichkeit vor.',
         fr: "Appliquez la minimisation : ne collectez que les données nécessaires, uniquement quand elles sont nécessaires. Pas de suivi pendant les pauses, prévoyez la possibilité de désactivation.",
         es: 'Aplica la minimización: recoge solo los datos que necesitas, solo cuando los necesitas. Sin seguimiento durante las pausas, prevé la posibilidad de apagado.',
-        nl: 'Pas minimalisatie toe: verzamel alleen de gegevens die je nodig hebt, alleen wanneer je ze nodig hebt. Geen tracking tijdens pauzes, voorzie de mogelijkheid om het uit te schakelen.',
+        nl: 'Pas minimalisatie toe: verzamel alleen de gegevens die u nodig hebt, alleen wanneer u ze nodig hebt. Geen tracking tijdens pauzes, voorzie de mogelijkheid om het uit te schakelen.',
       },
     },
     {
@@ -347,7 +347,7 @@ export const italia: SchedaPaese = {
         de: 'Bei Systemwechsel: Wenn Sie Ihr Überwachungssystem oder Ihre Software wechseln, aktualisieren Sie die Datenschutzinformation und händigen Sie sie erneut aus, und prüfen Sie, falls das neue Instrument unter Absatz 1 von Art. 4 fällt, ob die Gewerkschaftsvereinbarung oder die Genehmigung der Arbeitsaufsichtsbehörde erneuert werden muss. Anbieter (Auftragsverarbeiter), erhobene Daten und Modalitäten ändern sich oft: die zuvor ausgehändigte genügt nicht.',
         fr: 'En cas de changement de système : si vous changez de système ou de logiciel de surveillance, mettez à jour et remettez l’information, et, si le nouvel outil relève de l’alinéa 1 de l’art. 4, vérifiez si l’accord syndical ou l’autorisation de l’Inspection du travail doit être renouvelé. Le fournisseur (sous-traitant), les données collectées et les modalités changent souvent : celle remise auparavant ne suffit pas.',
         es: 'En caso de cambio de sistema: si cambias de sistema o software de monitorización, actualiza y vuelve a entregar la información, y, si la nueva herramienta entra en el apartado 1 del art. 4, comprueba si debe renovarse el acuerdo sindical o la autorización de la Inspección de Trabajo. A menudo cambian el proveedor (encargado del tratamiento), los datos recogidos y las modalidades: la entregada antes no basta.',
-        nl: 'Bij een systeemwissel: als je van monitoringsysteem of -software verandert, werk de privacyverklaring bij en verstrek deze opnieuw, en controleer, als het nieuwe instrument onder lid 1 van art. 4 valt, of de vakbondsovereenkomst of de toestemming van de Arbeidsinspectie moet worden vernieuwd. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
+        nl: 'Bij een systeemwissel: als u van monitoringsysteem of -software verandert, werk de privacyverklaring bij en verstrek deze opnieuw, en controleer, als het nieuwe instrument onder lid 1 van art. 4 valt, of de vakbondsovereenkomst of de toestemming van de Arbeidsinspectie moet worden vernieuwd. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
       },
     },
   ],

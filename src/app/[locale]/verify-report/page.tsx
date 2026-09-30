@@ -20,12 +20,42 @@ const META: Record<string, { title: string; description: string }> = {
   fr: {
     title: 'Vérifier un rapport GeoTapp | GeoTapp',
     description:
-      "Chargez le paquet signé et vérifiez la signature électronique, la chaîne des événements et les empreintes des photos. La vérification tourne dans votre navigateur : le fichier ne nous est jamais envoyé.",
+      "Chargez le paquet signé et vérifiez la signature électronique, la chaîne des événements et les empreintes des photos. La vérification tourne dans votre navigateur : le fichier ne nous est jamais envoyé.",
   },
   es: {
     title: 'Verifica un informe de GeoTapp | GeoTapp',
     description:
       'Sube el paquete firmado y verifica la firma electrónica, la cadena de eventos y las huellas de las fotos. La verificación se ejecuta en tu navegador: el archivo no se nos envía.',
+  },
+  nl: {
+    title: 'Een GeoTapp-rapport controleren | GeoTapp',
+    description:
+      'Upload het ondertekende pakket en controleer de elektronische handtekening, de keten van gebeurtenissen en de vingerafdrukken van de foto’s. De controle draait in uw browser: het bestand wordt niet naar ons gestuurd.',
+  },
+  pt: {
+    title: 'Verificar um relatório GeoTapp | GeoTapp',
+    description:
+      'Carregue o pacote assinado e verifique a assinatura eletrónica, a cadeia de eventos e as impressões digitais das fotografias. A verificação corre no seu navegador: o ficheiro não nos é enviado.',
+  },
+  da: {
+    title: 'Kontrollér en GeoTapp-rapport | GeoTapp',
+    description:
+      'Upload den underskrevne pakke og kontrollér den elektroniske signatur, hændelseskæden og fotografiernes fingeraftryk. Kontrollen kører i din browser: filen bliver ikke sendt til os.',
+  },
+  sv: {
+    title: 'Kontrollera en GeoTapp-rapport | GeoTapp',
+    description:
+      'Ladda upp det signerade paketet och kontrollera den elektroniska signaturen, händelsekedjan och fotografiernas fingeravtryck. Kontrollen körs i din webbläsare: filen skickas inte till oss.',
+  },
+  nb: {
+    title: 'Kontroller en GeoTapp-rapport | GeoTapp',
+    description:
+      'Last opp den signerte pakken og kontroller den elektroniske signaturen, hendelseskjeden og fotografienes fingeravtrykk. Kontrollen kjører i nettleseren din: filen sendes ikke til oss.',
+  },
+  ru: {
+    title: 'Проверка отчёта GeoTapp | GeoTapp',
+    description:
+      'Загрузите подписанный пакет и проверьте электронную подпись, цепочку событий и отпечатки фотографий. Проверка выполняется в вашем браузере: файл нам не отправляется.',
   },
 };
 

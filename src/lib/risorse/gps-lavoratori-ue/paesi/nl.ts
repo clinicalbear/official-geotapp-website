@@ -201,7 +201,7 @@ export const olanda: SchedaPaese = {
         de: 'Wenn ein OR besteht, hole seine Zustimmung (instemmingsrecht) ein, bevor du das System aktivierst (WOR Art. 27).',
         fr: "Si un OR existe, obtenez son accord (instemmingsrecht) avant d'activer le système (WOR art. 27).",
         es: 'Si existe un OR, obtén su consentimiento (instemmingsrecht) antes de activar el sistema (WOR art. 27).',
-        nl: 'Als er een OR is, verkrijg dan de instemming ervan (instemmingsrecht) voordat je het systeem activeert (WOR art. 27).',
+        nl: 'Als er een OR is, verkrijg dan de instemming ervan (instemmingsrecht) voordat u het systeem activeert (WOR art. 27).',
       },
     },
     {
@@ -267,7 +267,7 @@ export const olanda: SchedaPaese = {
         de: 'Bei Systemwechsel: Wenn Sie Ihr Überwachungssystem oder Ihre Software wechseln, aktualisieren Sie die Datenschutzinformation und händigen Sie sie erneut aus, und prüfen Sie, ob Sie die Arbeitnehmervertretung erneut informieren oder beteiligen müssen, wo das Gesetz es vorsieht. Anbieter (Auftragsverarbeiter), erhobene Daten und Modalitäten ändern sich oft: die zuvor ausgehändigte genügt nicht.',
         fr: 'En cas de changement de système : si vous changez de système ou de logiciel de surveillance, mettez à jour et remettez l’information, et vérifiez si vous devez de nouveau informer ou consulter les représentants du personnel, lorsque la loi le prévoit. Le fournisseur (sous-traitant), les données collectées et les modalités changent souvent : celle remise auparavant ne suffit pas.',
         es: 'En caso de cambio de sistema: si cambias de sistema o software de monitorización, actualiza y vuelve a entregar la información, y comprueba si debes volver a informar o consultar a los representantes de los trabajadores, cuando la ley lo prevé. A menudo cambian el proveedor (encargado del tratamiento), los datos recogidos y las modalidades: la entregada antes no basta.',
-        nl: 'Bij een systeemwissel: als je van monitoringsysteem of -software verandert, werk de privacyverklaring bij en verstrek deze opnieuw, en controleer of je de werknemersvertegenwoordiging opnieuw moet informeren of raadplegen, waar de wet dat voorschrijft. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
+        nl: 'Bij een systeemwissel: als u van monitoringsysteem of -software verandert, werkt u de privacyverklaring bij en verstrekt u deze opnieuw, en controleert u of u de werknemersvertegenwoordiging opnieuw moet informeren of raadplegen, waar de wet dat voorschrijft. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
       },
     },
   ],
