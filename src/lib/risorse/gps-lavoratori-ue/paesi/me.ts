@@ -23,6 +23,11 @@ const FONTE_ZZPL = {
   titolo: 'Legge sulla protezione dei dati (ZZPL), testo ufficiale inglese',
   url: 'https://www.azlp.me/docs/zajednicka/zakoni/personaldataprotectionlaweng.pdf',
 };
+const FONTE_ZZPL_2024 = {
+  titolo:
+    'Legge sulla protezione dei dati personali, testo consolidato pubblicato dall\'AZLP (sanzioni, art. 74)',
+  url: 'https://www.azlp.me/storage/docs/zajednicka/zakoni/Zakon%20o%20zastiti%20podataka%20o%20licnosti%20-2024.pdf',
+};
 const FONTE_AZLP_GPS = {
   titolo:
     'AZLP, posizione del Consiglio sull\'uso del GPS nei veicoli di servizio (29.04.2025)',
@@ -279,26 +284,27 @@ export const montenegro: SchedaPaese = {
 
   sanzioneMax: {
     importo: {
-      it: 'fino a 20 milioni di euro o 4% del fatturato (rischio generale)',
-      en: 'up to 20 million euros or 4% of turnover (general risk)',
-      de: 'bis zu 20 Millionen Euro oder 4 % des Umsatzes (allgemeines Risiko)',
-      fr: "jusqu'à 20 millions d'euros ou 4 % du chiffre d'affaires (risque général)",
-      es: 'hasta 20 millones de euros o el 4 % de la facturación (riesgo general)',
-      nl: 'tot 20 miljoen euro of 4% van de omzet (algemeen risico)',
+      it: 'da 500 a 20.000 € per la persona giuridica',
+      en: 'from 500 to 20,000 euros for a legal person',
+      de: 'von 500 bis 20.000 Euro für eine juristische Person',
+      fr: "de 500 à 20 000 euros pour une personne morale",
+      es: 'de 500 a 20.000 euros para la persona jurídica',
+      nl: 'van 500 tot 20.000 euro voor een rechtspersoon',
     },
     casoCitato: {
-      it: "Non risulta una multa dell'AZLP specifica e pubblicata per il GPS sui dipendenti. La posizione di riferimento è quella del Consiglio dell'AZLP del 2025: il GPS sui veicoli di servizio è un controllo legittimo, ma serve definirne finalità e metodi, informare i lavoratori, adottare regole interne e ottenere il consenso preventivo dell'autorità per l'archivio dati.",
-      en: 'There is no specific, published AZLP fine for GPS tracking of employees. The reference position is that of the AZLP Council of 2025: GPS on service vehicles is legitimate monitoring, but its purposes and methods must be defined, workers must be informed, internal rules must be adopted and the prior authorisation of the authority for the data filing system must be obtained.',
-      de: 'Eine spezifische, veröffentlichte Geldbuße der AZLP für die GPS-Überwachung von Beschäftigten ist nicht bekannt. Maßgeblich ist die Position des AZLP-Rates von 2025: GPS in Dienstfahrzeugen ist eine legitime Kontrolle, doch müssen Zwecke und Methoden festgelegt, die Beschäftigten informiert, interne Regeln erlassen und die vorherige Zustimmung der Behörde für das Datenarchiv eingeholt werden.',
-      fr: "Il n'existe pas d'amende spécifique et publiée de l'AZLP pour le suivi GPS des salariés. La position de référence est celle du Conseil de l'AZLP de 2025 : le GPS sur les véhicules de service est un contrôle légitime, mais il faut en définir les finalités et les méthodes, informer les travailleurs, adopter des règles internes et obtenir l'autorisation préalable de l'autorité pour le fichier de données.",
-      es: 'No consta una multa específica y publicada de la AZLP por el GPS en los empleados. La posición de referencia es la del Consejo de la AZLP de 2025: el GPS en los vehículos de servicio es un control legítimo, pero hay que definir sus finalidades y métodos, informar a los trabajadores, adoptar normas internas y obtener la autorización previa de la autoridad para el archivo de datos.',
-      nl: 'Er is geen specifieke, gepubliceerde boete van de AZLP voor GPS-tracking van werknemers. De maatgevende positie is die van de AZLP-Raad uit 2025: GPS in dienstvoertuigen is een legitieme controle, maar de doeleinden en methoden moeten worden vastgelegd, de werknemers moeten worden geïnformeerd, er moeten interne regels worden vastgesteld en de voorafgaande toestemming van de autoriteit voor het gegevensbestand moet worden verkregen.',
+      it: "Non risulta una multa dell'AZLP specifica e pubblicata per il GPS sui dipendenti. La posizione di riferimento è quella del Consiglio dell'AZLP del 2025: il GPS sui veicoli di servizio è un controllo legittimo, ma serve definirne finalità e metodi, informare i lavoratori, adottare regole interne e ottenere il consenso preventivo dell'autorità per l'archivio dati. Il massimale mostrato è quello della legge sulla protezione dei dati oggi in vigore (art. 74 del testo consolidato pubblicato dall'AZLP): da 500 a 20.000 euro per la persona giuridica, da 150 a 6.000 euro per l'imprenditore individuale. Non sono cifre in stile GDPR: il Montenegro non è nell'UE.",
+      en: 'There is no specific, published AZLP fine for GPS tracking of employees. The reference position is that of the AZLP Council of 2025: GPS on service vehicles is legitimate monitoring, but its purposes and methods must be defined, workers must be informed, internal rules must be adopted and the prior authorisation of the authority for the data filing system must be obtained. The ceiling shown is the one in the data protection law in force today (art. 74 of the consolidated text published by the AZLP): 500 to 20,000 euros for a legal person, 150 to 6,000 euros for a sole trader. These are not GDPR-style figures: Montenegro is not in the EU.',
+      de: 'Eine spezifische, veröffentlichte Geldbuße der AZLP für die GPS-Überwachung von Beschäftigten ist nicht bekannt. Maßgeblich ist die Position des AZLP-Rates von 2025: GPS in Dienstfahrzeugen ist eine legitime Kontrolle, doch müssen Zwecke und Methoden festgelegt, die Beschäftigten informiert, interne Regeln erlassen und die vorherige Zustimmung der Behörde für das Datenarchiv eingeholt werden. Der angezeigte Höchstbetrag ist der des heute geltenden Datenschutzgesetzes (Art. 74 der von der AZLP veröffentlichten konsolidierten Fassung): 500 bis 20.000 Euro für eine juristische Person, 150 bis 6.000 Euro für Einzelunternehmer. Das sind keine DSGVO-Beträge: Montenegro gehört nicht zur EU.',
+      fr: "Il n'existe pas d'amende spécifique et publiée de l'AZLP pour le suivi GPS des salariés. La position de référence est celle du Conseil de l'AZLP de 2025 : le GPS sur les véhicules de service est un contrôle légitime, mais il faut en définir les finalités et les méthodes, informer les travailleurs, adopter des règles internes et obtenir l'autorisation préalable de l'autorité pour le fichier de données. Le plafond indiqué est celui de la loi sur la protection des données en vigueur aujourd'hui (art. 74 du texte consolidé publié par l'AZLP) : de 500 à 20 000 euros pour une personne morale, de 150 à 6 000 euros pour un entrepreneur individuel. Ce ne sont pas des montants de type RGPD : le Monténégro n'est pas dans l'UE.",
+      es: 'No consta una multa específica y publicada de la AZLP por el GPS en los empleados. La posición de referencia es la del Consejo de la AZLP de 2025: el GPS en los vehículos de servicio es un control legítimo, pero hay que definir sus finalidades y métodos, informar a los trabajadores, adoptar normas internas y obtener la autorización previa de la autoridad para el archivo de datos. El máximo indicado es el de la ley de protección de datos hoy vigente (art. 74 del texto consolidado publicado por la AZLP): de 500 a 20.000 euros para la persona jurídica, de 150 a 6.000 euros para el empresario individual. No son cifras al estilo del RGPD: Montenegro no está en la UE.',
+      nl: 'Er is geen specifieke, gepubliceerde boete van de AZLP voor GPS-tracking van werknemers. De maatgevende positie is die van de AZLP-Raad uit 2025: GPS in dienstvoertuigen is een legitieme controle, maar de doeleinden en methoden moeten worden vastgelegd, de werknemers moeten worden geïnformeerd, er moeten interne regels worden vastgesteld en de voorafgaande toestemming van de autoriteit voor het gegevensbestand moet worden verkregen. Het getoonde maximum is dat van de vandaag geldende wet op de gegevensbescherming (art. 74 van de door de AZLP gepubliceerde geconsolideerde tekst): 500 tot 20.000 euro voor een rechtspersoon, 150 tot 6.000 euro voor een eenmanszaak. Dit zijn geen AVG-bedragen: Montenegro is geen lid van de EU.',
     },
-    urlFonte: FONTE_AZLP_GPS.url,
+    urlFonte: FONTE_ZZPL_2024.url,
     tipoImporto: 'massimale',
   },
 
   fonti: [
+    FONTE_ZZPL_2024,
     FONTE_ZZPL,
     FONTE_AZLP_GPS,
     FONTE_AZLP_CONTATTI,
@@ -306,5 +312,5 @@ export const montenegro: SchedaPaese = {
     FONTE_GDPR,
   ],
 
-  aggiornatoIl: '2026-06-15',
+  aggiornatoIl: '2026-09-30',
 };

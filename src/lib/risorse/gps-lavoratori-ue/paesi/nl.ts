@@ -34,10 +34,6 @@ const FONTE_AP_IMPRONTE = {
     'Autoriteit Persoonsgegevens, sanzione per il trattamento delle impronte dei dipendenti',
   url: 'https://www.autoriteitpersoonsgegevens.nl/en/current/company-fined-for-processing-employees-fingerprint-data',
 };
-const FONTE_EUROFOUND = {
-  titolo: 'Eurofound, monitoraggio dei lavoratori nei Paesi Bassi',
-  url: 'https://apps.eurofound.europa.eu/legislationdb/employee-monitoring-and-surveillance/netherlands',
-};
 const FONTE_GDPR = {
   titolo: 'Regolamento UE 2016/679 (GDPR)',
   url: 'https://eur-lex.europa.eu/eli/reg/2016/679/oj',
@@ -127,7 +123,7 @@ export const olanda: SchedaPaese = {
         es: 'Los Países Bajos no exigen una autorización previa de una autoridad laboral. Los filtros son el consentimiento del OR y el RGPD. La autoridad de protección de datos (AP) solo debe consultarse de antemano en el caso del art. 36 RGPD, es decir, si la EIPD revela un riesgo elevado que no puede mitigarse.',
         nl: 'Nederland kent geen voorafgaande toestemming van een arbeidsautoriteit. De filters zijn de instemming van de OR en de AVG. De toezichthouder (AP) hoeft alleen vooraf te worden geraadpleegd in het geval van art. 36 AVG, dat wil zeggen als de DPIA een hoog risico aantoont dat niet kan worden beperkt.',
       },
-      fonte: FONTE_EUROFOUND,
+      fonte: FONTE_AP_CONDIZIONI,
     },
     {
       voce: {
@@ -308,9 +304,8 @@ export const olanda: SchedaPaese = {
     FONTE_AP_DPIA,
     FONTE_AP_CONDIZIONI,
     FONTE_AP_IMPRONTE,
-    FONTE_EUROFOUND,
     FONTE_GDPR,
   ],
 
-  aggiornatoIl: '2026-08-03',
+  aggiornatoIl: '2026-09-30',
 };

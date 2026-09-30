@@ -21,11 +21,6 @@
 import type { SchedaPaese } from '../types';
 
 // URL delle fonti primarie citate.
-const FONTE_ATF_130_II_425 = {
-  titolo:
-    'Tribunale federale, ATF 130 II 425 (GPS sui veicoli dei dipendenti; cita OLT 3 art. 26)',
-  url: 'https://www.bger.ch/ext/eurospider/live/fr/php/aza/http/index.php?highlight_docid=atf://130-II-425:fr&lang=fr&type=show_document&zoom=YES',
-};
 const FONTE_FDPIC_SORVEGLIANZA = {
   titolo: 'PFPDT/FDPIC, mezzi tecnici di sorveglianza sul luogo di lavoro',
   url: 'https://www.edoeb.admin.ch/fr/moyens-techniques-de-surveillance-sur-le-lieu-de-travail',
@@ -117,7 +112,7 @@ export const svizzera: SchedaPaese = {
         es: 'Regla cardinal suiza, mas estricta que el RGPD: esta prohibido usar sistemas destinados a vigilar el comportamiento de los trabajadores en el lugar de trabajo. Si se necesitan por otros motivos (seguridad, producción, organización), deben concebirse de modo que no lesionen la salud ni la libertad de movimiento, y un sistema esta prohibido si tiene como único o esencial fin vigilar el comportamiento.',
         nl: 'Een centrale Zwitserse regel, strenger dan de AVG: het is verboden systemen te gebruiken die bedoeld zijn om het gedrag van werknemers op de werkplek te bewaken. Als ze om andere redenen nodig zijn (veiligheid, productie, organisatie), moeten ze zo zijn ontworpen dat ze de gezondheid en de bewegingsvrijheid niet schaden, en een systeem is verboden als het uitsluitend of in wezen gericht is op het bewaken van gedrag.',
       },
-      fonte: FONTE_ATF_130_II_425,
+      fonte: FONTE_FDPIC_SORVEGLIANZA,
     },
     {
       voce: {
@@ -298,17 +293,16 @@ export const svizzera: SchedaPaese = {
       es: 'Tribunal Federal, ATF 130 II 425: el GPS en los vehículos de empresa solo se admite si es proporcionado, por razones legitimas y con información previa, y esta prohibido si tiene como único o esencial fin vigilar el comportamiento del trabajador (OLT 3 art. 26, mas estricto que el RGPD). En Suiza, las multas de la nLPD/revFADP alcanzan los 250.000 CHF y recaen sobre la persona física responsable, no sobre la empresa.',
       nl: 'Federaal Hooggerechtshof, ATF 130 II 425: gps op bedrijfsvoertuigen is alleen toegestaan als het evenredig is, om legitieme redenen en met voorafgaande informatie, en het is verboden als het uitsluitend of in wezen gericht is op het bewaken van het gedrag van de werknemer (OLT 3 art. 26, strenger dan de AVG). In Zwitserland reiken de boetes van de nLPD/revFADP tot 250.000 CHF en treffen ze de verantwoordelijke natuurlijke persoon, niet het bedrijf.',
     },
-    urlFonte: FONTE_ATF_130_II_425.url,
+    urlFonte: FONTE_FDPIC_SORVEGLIANZA.url,
     tipoImporto: 'massimale',
   },
 
   fonti: [
-    FONTE_ATF_130_II_425,
     FONTE_FDPIC_SORVEGLIANZA,
     FONTE_FDPIC_DATORE,
     FONTE_FDPIC_VALUTAZIONE,
     FONTE_GDPR,
   ],
 
-  aggiornatoIl: '2026-06-15',
+  aggiornatoIl: '2026-09-30',
 };
