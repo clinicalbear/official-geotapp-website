@@ -21,7 +21,7 @@ const flowMeta: Record<string, { title: string; description: string }> = {
   de: { title: 'GeoTapp Flow - Einsatzverwaltung für Teams im Außendienst', description: 'Die Web-App fürs Büro für Unternehmen mit Technikern im Außeneinsatz: Kunden, Aufträge, Teams, Schichten, Rechnungen und versiegelte Berichte, die der Kunde selbst prüft.' },
   fr: { title: 'GeoTapp Flow - Gestion Opérationnelle des Interventions', description: 'Système opérationnel pour entreprises avec techniciens terrain : commandes, tâches, suivi et rapports vérifiables en temps réel.' },
   es: { title: 'GeoTapp Flow - Gestión Operativa de Intervenciones', description: 'GeoTapp Flow es el sistema operativo para empresas con técnicos en campo. Gestiona pedidos, asigna tareas y genera informes verificables en tiempo real.' },
-  nl: { title: 'GeoTapp Flow - Operationeel Beheer van Interventies', description: 'GeoTapp Flow is het operationele systeem voor bedrijven met buitendiensttechnici. Beheer opdrachten, wijs taken toe en maak verifieerbare rapporten.' },
+  nl: { title: 'GeoTapp Flow - Operationeel beheer van klussen en teams', description: 'De webapp van het kantoor voor bedrijven met monteurs in het veld: klanten, opdrachten, teams, diensten, facturen en verzegelde rapporten die de klant zelf controleert.' },
   pt: { title: 'GeoTapp Flow - Gestão Operacional de Intervenções', description: 'GeoTapp Flow é o sistema operacional para empresas com técnicos de campo. Gerencie ordens de serviço, atribua tarefas e produza relatórios verificáveis.' },
   sv: { title: 'GeoTapp Flow - Operativ Hantering av Interventioner', description: 'GeoTapp Flow är det operativa systemet för företag med fälttekniker. Hantera uppdrag, tilldela uppgifter och skapa verifierbara rapporter.' },
   da: { title: 'GeoTapp Flow - Operationel Håndtering af Interventioner', description: 'GeoTapp Flow er det operative system for virksomheder med serviceteknikere. Administrer opgaver, tildel arbejde og generer verificerbare rapporter.' },
@@ -96,6 +96,20 @@ const FLOW_FAQ: Record<string, object> = {
       { '@type': 'Question', name: 'Wie weise ich Aufträge in GeoTapp Flow den Teams zu?', acceptedAnswer: { '@type': 'Answer', text: 'Sie legen den Auftrag im Büro an, weisen Techniker oder Team zu, und der Mitarbeiter findet ihn in der TimeTracker-App. Ist der Einsatz abgeschlossen, kommt der Bericht zurück in Flow, schon prüfbar, und Sie müssen niemandem hinterherlaufen, um zu erfahren, wie es gelaufen ist.' } },
     ],
   },
+  nl: {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: 'Wat is GeoTapp Flow?', acceptedAnswer: { '@type': 'Answer', text: 'GeoTapp Flow is de webapp van het kantoor voor bedrijven met monteurs in het veld. U kunt er opdrachten in aanmaken, taken toewijzen, de voortgang volgen en de klant verzegelde rapporten sturen die hij zelf kan controleren.' } },
+      { '@type': 'Question', name: 'Wat gebeurt er als er geen netwerk is?', acceptedAnswer: { '@type': 'Answer', text: 'Flow, het paneel van het kantoor, gebruikt u in de browser en heeft een verbinding nodig. In TimeTracker, de app van de monteurs, blijft de registratie op de telefoon bewaard als er geen netwerk is en wordt ze vanzelf verzonden zodra het signaal terugkomt, met het tijdstip waarop ze is gemaakt.' } },
+      { '@type': 'Question', name: 'Koppelt GeoTapp Flow met andere beheersoftware?', acceptedAnswer: { '@type': 'Answer', text: 'Ja: Flow exporteert de gegevens voor de facturering en voor de salarissen, en koppelt met Fatture in Cloud. Voor andere beheersystemen wordt de integratie op verzoek beoordeeld.' } },
+      { '@type': 'Question', name: 'Hoeveel monteurs kan GeoTapp Flow beheren?', acceptedAnswer: { '@type': 'Answer', text: 'Van het plan Solo, met één gebruiker op kantoor, tot het plan Business, met onbeperkte teams op meerdere locaties. De TimeTracker-plaatsen voor de medewerkers komen er apart bij, volgens het plan.' } },
+      { '@type': 'Question', name: 'Kan de klant de rapporten van Flow vertrouwen?', acceptedAnswer: { '@type': 'Answer', text: 'Hij hoeft niet te vertrouwen: hij kan controleren. GeoTapp-rapporten zijn cryptografisch verzegeld en de klant controleert de integriteit zelf met GeoTapp Verifier, zonder toegang tot uw account. De controle zegt of het document is gewijzigd; op zichzelf is ze geen absoluut bewijs van het feitelijke gebeuren en geen juridisch advies.' } },
+      { '@type': 'Question', name: 'Toont GeoTapp Flow waar de monteurs zijn, live?', acceptedAnswer: { '@type': 'Answer', text: 'Nee, en dat is geen vergetelheid. De locatie wordt alleen vastgelegd wanneer de monteur registreert (aankomst, pauzes, vertrek) of een bewijsfoto maakt, nooit doorlopend: Flow zegt u dat het werk op de juiste plek en hoe laat is begonnen, het laat u niet de hele dag een stipje op de kaart volgen. Dat is het verschil tussen bewijs van het werk en toezicht.' } },
+      { '@type': 'Question', name: 'Voor welke bedrijven is GeoTapp Flow bedoeld?', acceptedAnswer: { '@type': 'Answer', text: 'Voor wie teams heeft die buiten de deur werken: schoonmaakbedrijven, bewaking, onderhoud, installateurs, elektriciens, loodgieters en multiservicebedrijven. Brengen uw medewerkers de dag in het veld door en niet op kantoor, dan is Flow daarvoor gemaakt.' } },
+      { '@type': 'Question', name: 'Hoe wijs ik opdrachten toe aan teams met GeoTapp Flow?', acceptedAnswer: { '@type': 'Answer', text: 'U maakt de opdracht aan op kantoor, wijst de monteur of het team toe, en de medewerker vindt hem in de TimeTracker-app. Is de klus afgesloten, dan komt het rapport terug in Flow, al te controleren, zonder iemand achterna te hoeven zitten om te weten hoe het is gegaan.' } },
+    ],
+  },
 };
 
 const FLOW_DESCRIPTION: Record<string, string> = {
@@ -104,7 +118,7 @@ const FLOW_DESCRIPTION: Record<string, string> = {
   de: 'GeoTapp Flow ist die Web-App fürs Büro für Unternehmen mit Technikern im Außeneinsatz: Aufträge anlegen, Aufgaben zuweisen, den Fortschritt verfolgen und dem Kunden versiegelte Berichte schicken, die er selbst prüft.',
   fr: "GeoTapp Flow est la plateforme de gestion opérationnelle pour entreprises avec techniciens terrain : créer des commandes, assigner des tâches, suivre l'avancement et produire des rapports scellés vérifiables en temps réel.",
   es: 'GeoTapp Flow es la plataforma de gestión operativa para empresas con técnicos de campo: crea órdenes, asigna tareas, supervisa el progreso y produce informes sellados verificables en tiempo real.',
-  nl: 'GeoTapp Flow is het operationele beheersplatform voor bedrijven met buitendiensttechnici: maak opdrachten, wijs taken toe, volg voortgang en produceer verzegelde, verifieerbare rapporten in realtime.',
+  nl: 'GeoTapp Flow is het operationele systeem voor bedrijven met monteurs in het veld: maak opdrachten aan, wijs taken toe, volg de voortgang en maak verzegelde, controleerbare rapporten.',
   pt: 'GeoTapp Flow é a plataforma de gestão operacional para empresas com técnicos de campo: crie ordens, atribua tarefas, monitorize o progresso e produza relatórios selados verificáveis em tempo real.',
   da: 'GeoTapp Flow er den operationelle administrationsplatform til virksomheder med serviceteknikere: opret opgaver, tildel arbejde, overvåg fremskridt og generér forseglede, verificerbare rapporter i realtid.',
   sv: 'GeoTapp Flow är den operativa hanteringsplattformen för företag med fälttekniker: skapa uppdrag, tilldela uppgifter, övervaka framsteg och generera förseglade, verifierbara rapporter i realtid.',
@@ -142,6 +156,16 @@ const FLOW_FEATURES: Record<string, string[]> = {
     'Native Anbindung an GeoTapp TimeTracker und Verifier',
     'Datenexport für Rechnungsstellung und Lohnabrechnung',
     'GPS-Information, vor der ersten Buchung in der App als zur Kenntnis genommen bestätigt',
+  ],
+  nl: [
+    'Beheer van opdrachten en klussen op meerdere locaties',
+    'Taken toewijzen aan monteurs in het veld',
+    'Voortgang van het werk bijhouden',
+    'Cryptografisch verzegelde en controleerbare rapporten',
+    'Bewijsfoto\'s met gps en tijdstempel',
+    'Native integratie met GeoTapp TimeTracker en Verifier',
+    'Export van gegevens voor facturering en salarissen',
+    'Gebouwd met het oog op de AVG, GPS-privacyverklaring digitaal ondertekend',
   ],
 };
 

@@ -11,7 +11,7 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   fr: 'Conformité en France',
   es: 'Cumplimiento normativo en España',
   pt: 'Conformidade em Portugal',
-  nl: 'Compliance in Nederland',
+  nl: 'Regels en documentatie in Nederland',
   'en-us': 'Regional rules and records',
   'en-gb': 'Regional rules and records',
   'en-au': 'Regional rules and records',
@@ -92,16 +92,16 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   ],
   nl: [
     {
-      q: 'Uren en consignatie volgens de CAO Metaal en Techniek?',
-      a: 'Uren per elektricien en per opdracht, consignatie- en reisuren en de bewaartermijn uit de Arbeidstijdenwet, bij elke klus vastgelegd.',
+      q: 'Werktijden, bereikbaarheid en reizen bij elektrotechnisch werk?',
+      a: 'GeoTapp legt bij elke registratie begin, pauzes en einde vast met locatie en tijd, per elektricien en per bouwplaats, en exporteert ze als Excel- of CSV-bestand voor de salarisadministrateur. De toepassing van de cao (toeslagen, vergoedingen) en de salarisverwerking blijven bij die administrateur en bij het bedrijf.',
     },
     {
-      q: 'AVG en de Autoriteit Persoonsgegevens bij GPS-tracking?',
-      a: 'Locatie alleen tijdens werktijd, met privacyverklaring, belangenafweging (art. 6 AVG) en DPIA, volgens de richtsnoeren van de AP.',
+      q: 'Gps bij elektriciens: AVG en ondernemingsraad?',
+      a: 'De locatie wordt alleen vastgelegd bij het registreren en bij bewijsfoto\'s, nooit doorlopend, en de privacyverklaring voor de werknemers wordt in de app ondertekend voordat ze registreren. Of een belangenafweging op grond van art. 6 AVG en de instemming van de ondernemingsraad op grond van art. 27 WOR nodig zijn, beoordeelt de werkgever.',
     },
     {
-      q: 'NEN 3140 en aanwijzing (VOP/VP/VK)?',
-      a: 'Koppeling van elke klus aan de juiste NEN 3140-aanwijzing (VOP/VP/VK) en het inspectiedossier, per medewerker bijgehouden.',
+      q: 'NEN 3140 en de kwalificaties van elektrotechnisch personeel?',
+      a: 'GeoTapp controleert de kwalificaties van elektrotechnisch personeel niet en voert de keuringen volgens NEN 3140 niet uit, en maakt geen keuringsrapporten. Het legt tijd, locatie en foto\'s van elke klus vast, die de monteur bij zijn eigen documentatie kan voegen.',
     },
   ],
   'en-us': [

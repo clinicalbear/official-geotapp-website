@@ -11,7 +11,7 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   fr: 'Conformité en France',
   es: 'Cumplimiento normativo en España',
   pt: 'Conformidade em Portugal',
-  nl: 'Compliance in Nederland',
+  nl: 'Regels en documentatie in Nederland',
   'en-us': 'Regional rules and records',
   'en-gb': 'Regional rules and records',
   'en-au': 'Regional rules and records',
@@ -92,16 +92,16 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   ],
   nl: [
     {
-      q: 'Urenregistratie voor de CAO Bouw & Infra?',
-      a: 'Gewerkte uren per bouwplaats en medewerker, toeslagen en reisuren, vastgelegd volgens de CAO Bouw & Infra en de bewaartermijn van de Arbeidstijdenwet.',
+      q: 'Urenregistratie op de bouwplaats en de cao Bouw & Infra?',
+      a: 'GeoTapp is niet gekoppeld aan de sociale fondsen van de bouw en berekent geen toeslagen, vergoedingen of meldingen. Het legt uren en aanwezigheid per medewerker en per bouwplaats vast, die als Excel- of CSV-bestand kunnen worden geëxporteerd en als basis voor de aangifte dienen. De toepassing van de cao Bouw & Infra en de salarisverwerking blijven de taak van het bedrijf en zijn salarisadministrateur.',
     },
     {
-      q: 'AVG en de Autoriteit Persoonsgegevens bij GPS op de bouwplaats?',
-      a: 'Locatie alleen tijdens werktijd en op de bouwplaats, met privacyverklaring, belangenafweging (art. 6 AVG) en DPIA, volgens de richtsnoeren van de AP.',
+      q: 'Gps op de bouwplaats: AVG en ondernemingsraad?',
+      a: 'De locatie wordt alleen vastgelegd bij het registreren en bij bewijsfoto\'s, nooit doorlopend, en de privacyverklaring voor de werknemers wordt in de app ondertekend voordat ze registreren. Of een belangenafweging op grond van art. 6 AVG en de instemming van de ondernemingsraad op grond van art. 27 WOR nodig zijn, beoordeelt de werkgever.',
     },
     {
-      q: 'Ketenaansprakelijkheid en G-rekening bij onderaanneming?',
-      a: 'Sluitend uren- en loonoverzicht per onderaannemer voor de Wet ketenaansprakelijkheid, de G-rekening en de WAADI-toets.',
+      q: 'Verklaringen bij onderaanneming, ketenaansprakelijkheid en G-rekening?',
+      a: 'GeoTapp controleert geen lonen en beheert de G-rekening, de ketenaansprakelijkheid of de toets op grond van de WAADI niet. Het legt vast wie wanneer en waar heeft geregistreerd, ook voor de ploegen van onderaannemers, en die historie kunt u aan de opdrachtgever tonen. De verplichtingen rond documentatie blijven bij het bedrijf.',
     },
   ],
   'en-us': [

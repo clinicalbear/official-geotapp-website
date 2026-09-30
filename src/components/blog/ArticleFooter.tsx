@@ -25,7 +25,7 @@ const FOOTER_LABELS: Record<string, { related: string; more: string; cta_title: 
   en: { related: 'Related articles', more: 'Read also', cta_title: 'Try GeoTapp free for 14 days', cta_desc: 'No credit card required. Get started in 2 minutes.', cta_btn: 'Start now', read: 'Read' },
   de: { related: 'Verwandte Artikel', more: 'Lesen Sie auch', cta_title: 'GeoTapp 14 Tage kostenlos testen', cta_desc: 'Keine Kreditkarte erforderlich. In 2 Minuten starten.', cta_btn: 'Jetzt starten', read: 'Lesen' },
   fr: { related: 'Articles connexes', more: 'Lire aussi', cta_title: 'Essayez GeoTapp gratuitement pendant 14 jours', cta_desc: 'Aucune carte bancaire requise. Démarrez en 2 minutes.', cta_btn: 'Commencer maintenant', read: 'Lire' },
-  nl: { related: 'Gerelateerde artikelen', more: 'Lees ook', cta_title: 'Probeer GeoTapp 14 dagen gratis', cta_desc: 'Geen creditcard nodig. Klaar in 2 minuten.', cta_btn: 'Nu starten', read: 'Lezen' },
+  nl: { related: 'Gerelateerde artikelen', more: 'Lees ook', cta_title: 'Probeer GeoTapp 14 dagen gratis', cta_desc: 'Geen creditcard nodig. Begin in 2 minuten.', cta_btn: 'Nu beginnen', read: 'Lees' },
   es: { related: 'Artículos relacionados', more: 'Lee también', cta_title: 'Prueba GeoTapp gratis 14 días', cta_desc: 'Sin tarjeta de crédito. Empieza en 2 minutos.', cta_btn: 'Empieza ahora', read: 'Leer' },
   pt: { related: 'Artigos relacionados', more: 'Lê também', cta_title: 'Experimenta o GeoTapp grátis 14 dias', cta_desc: 'Sem cartão de crédito. Começa em 2 minutos.', cta_btn: 'Começar agora', read: 'Ler' },
   da: { related: 'Relaterede artikler', more: 'Læs også', cta_title: 'Prøv GeoTapp gratis i 14 dage', cta_desc: 'Intet kreditkort. Kom i gang på 2 minutter.', cta_btn: 'Start nu', read: 'Læs' },

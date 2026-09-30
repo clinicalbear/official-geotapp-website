@@ -42,9 +42,9 @@ const META: Record<string, { title: string; description: string }> = {
       'Registo de ponto com GPS e verificação de geofence, anti-spoofing, modo offline com sincronização automática, encriptação AES-256 e dados em tempo real.',
   },
   nl: {
-    title: 'GeoTapp-functies: GPS-inklokken, offline modus, versleuteling',
+    title: 'GeoTapp-functies: registreren met locatie en verzegelde rapporten',
     description:
-      'Inklokken met GPS en geofence-controle, anti-spoofing, een offline modus die synchroniseert zodra er bereik is, AES-256-versleuteling en realtime gegevens.',
+      'Locatie alleen bij het registreren, valse locaties worden geweigerd, registraties ook zonder netwerk bewaard, verzegelde rapporten die de klant zelf controleert, gegevens in Europa.',
   },
   da: {
     title: 'GeoTapp-funktioner: GPS-stempling, offline-tilstand, kryptering',

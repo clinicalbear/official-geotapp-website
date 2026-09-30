@@ -11,7 +11,7 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   fr: 'Conformité en France',
   es: 'Cumplimiento normativo en España',
   pt: 'Conformidade em Portugal',
-  nl: 'Compliance in Nederland',
+  nl: 'Regels en documentatie in Nederland',
   'en-us': 'Regional rules and records',
   'en-gb': 'Regional rules and records',
   'en-au': 'Regional rules and records',
@@ -92,16 +92,16 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   ],
   nl: [
     {
-      q: 'Diensten en uren volgens de CAO Particuliere Beveiliging?',
-      a: 'Uren per beveiliger en per object, nacht- en feestdagtoeslagen en de bewaartermijn uit de Arbeidstijdenwet, met dekking van diensten bijgewerkt bij elke in- of uitklokactie.',
+      q: 'Diensten en uren in de particuliere beveiliging?',
+      a: 'GeoTapp legt bij elke registratie begin, pauzes en einde vast per beveiliger en per dienst, met locatie en tijd, en exporteert ze als Excel- of CSV-bestand voor de salarisadministrateur. Toeslagen voor nacht- en feestdagenwerk en de toepassing van de cao blijven bij die administrateur en bij het bedrijf.',
     },
     {
-      q: 'AVG en de Autoriteit Persoonsgegevens bij GPS-tracking?',
-      a: 'Locatie alleen tijdens werktijd, met privacyverklaring, belangenafweging (art. 6 AVG) en DPIA, volgens de richtsnoeren van de AP.',
+      q: 'Gps bij beveiligers: AVG en ondernemingsraad?',
+      a: 'De locatie wordt alleen vastgelegd bij het registreren en bij bewijsfoto\'s, nooit doorlopend, en de privacyverklaring voor de werknemers wordt in de app ondertekend voordat ze registreren. Of een belangenafweging op grond van art. 6 AVG en de instemming van de ondernemingsraad op grond van art. 27 WOR nodig zijn, beoordeelt de werkgever.',
     },
     {
-      q: 'WPBR-vergunning (ND-nummer) en legitimatiebewijs?',
-      a: 'Koppeling van diensten aan beveiligers met geldig legitimatiebewijs (Justis) onder de WPBR-vergunning (ND-nummer), per dienst aantoonbaar.',
+      q: 'Vergunning en legitimatiebewijs volgens de Wpbr?',
+      a: 'GeoTapp beheert geen vergunningen, legitimatiebewijzen of opleidingseisen op grond van de Wet particuliere beveiligingsorganisaties en recherchebureaus (Wpbr) en doet geen meldingen aan autoriteiten. Het legt vast wie wanneer en waar voor elke dienst heeft geregistreerd, en die historie kunt u aan de klant tonen.',
     },
   ],
   'en-us': [

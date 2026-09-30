@@ -11,7 +11,7 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   fr: 'Conformité en France',
   es: 'Cumplimiento normativo en España',
   pt: 'Conformidade em Portugal',
-  nl: 'Compliance in Nederland',
+  nl: 'Regels en documentatie in Nederland',
   'en-us': 'Regional rules and records',
   'en-gb': 'Regional rules and records',
   'en-au': 'Regional rules and records',
@@ -92,16 +92,16 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   ],
   nl: [
     {
-      q: 'Urenregistratie bij onderhoud op meerdere locaties?',
-      a: 'Uren per technicus en per locatie, consignatie- en reisuren en de bewaartermijn uit de Arbeidstijdenwet, bij elke onderhoudsklus vastgelegd.',
+      q: 'Werktijden bij onderhoud op meerdere locaties?',
+      a: 'GeoTapp legt bij elke registratie begin, pauzes en einde vast met locatie en tijd, per monteur en per locatie, en exporteert ze als Excel- of CSV-bestand voor de salarisadministrateur. De toepassing van de cao (toeslagen, vergoedingen) en de salarisverwerking blijven bij die administrateur en bij het bedrijf.',
     },
     {
-      q: 'AVG en de Autoriteit Persoonsgegevens bij GPS-tracking?',
-      a: 'Locatie alleen tijdens werktijd, met privacyverklaring, belangenafweging (art. 6 AVG) en DPIA, volgens de richtsnoeren van de AP.',
+      q: 'Gps bij onderhoudsmonteurs: AVG en ondernemingsraad?',
+      a: 'De locatie wordt alleen vastgelegd bij het registreren en bij bewijsfoto\'s, nooit doorlopend, en de privacyverklaring voor de werknemers wordt in de app ondertekend voordat ze registreren. Of een belangenafweging op grond van art. 6 AVG en de instemming van de ondernemingsraad op grond van art. 27 WOR nodig zijn, beoordeelt de werkgever.',
     },
     {
-      q: 'RI&E (Arbowet) en periodieke keuringen?',
-      a: 'Koppeling van de RI&E en wettelijke keuringen aan de gecertificeerde technicus, met inspectiedossier per locatie.',
+      q: 'Arbeidsomstandigheden en periodieke keuringen (Arbobesluit)?',
+      a: 'GeoTapp beheert noch de geschiktheid van het personeel noch de RI&E (risico-inventarisatie en -evaluatie). Het legt elk bezoek vast met tijd, locatie en foto en bewaart de historie per locatie en per monteur, die u aan de klant kunt tonen.',
     },
   ],
   'en-us': [

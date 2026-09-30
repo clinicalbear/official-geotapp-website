@@ -12,7 +12,7 @@ const SETTORI_META: Record<string, { title: string; description: string }> = {
   fr: { title: 'Secteurs - Preuves vérifiables | GeoTapp', description: 'Du nettoyage à la sécurité : chaque intervention devient preuve vérifiable avec GPS et photos. Rapports scellés, zéro litige.' },
   es: { title: 'Sectores - Pruebas verificables | GeoTapp', description: 'De limpieza a seguridad: cada intervención se vuelve prueba verificable con GPS y fotos. Informes sellados, cero disputas.' },
   pt: { title: 'Setores - Provas verificáveis | GeoTapp', description: 'De limpeza a segurança: cada intervenção vira prova verificável com GPS e fotos. Relatórios selados, zero contestações.' },
-  nl: { title: 'Sectoren - Verifieerbaar bewijs | GeoTapp', description: 'Van schoonmaak tot beveiliging: elke interventie wordt verifieerbaar bewijs met GPS en foto\'s. Verzegelde rapporten.' },
+  nl: { title: 'Sectoren - Controleerbare documentatie | GeoTapp', description: 'Van schoonmaak tot beveiliging: elke klus wordt controleerbaar bewijs met gps en foto\'s. Verzegelde rapporten om te tonen wanneer iemand iets betwist.' },
   ru: { title: 'Отрасли, Верифицируемые доказательства | GeoTapp', description: 'От клининга до охраны: каждый выезд, верифицируемое доказательство с GPS и фото. Запечатанные отчёты, ноль споров.' },
   da: { title: 'Brancher - Verificerbare beviser | GeoTapp', description: 'Fra rengøring til sikkerhed: hvert feltbesøg bliver verificerbart bevis med GPS og fotos. Forseglede rapporter, nul tvister.' },
   sv: { title: 'Branscher - Verifierbara bevis | GeoTapp', description: 'Från städning till säkerhet: varje fältuppdrag blir verifierbart bevis med GPS och foton. Förseglade rapporter, noll tvister.' },

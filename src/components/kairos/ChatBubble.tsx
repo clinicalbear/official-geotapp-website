@@ -3,7 +3,7 @@
 import { usePathname } from 'next/navigation';
 import { getLocaleFromPathname } from '@/lib/i18n/locale-routing';
 
-const ARIA_OPEN: Record<string, string> = { de: 'Chat mit Kairos', it: 'Chat con Kairos' };
+const ARIA_OPEN: Record<string, string> = { de: 'Chat mit Kairos', it: 'Chat con Kairos', nl: 'Chat met Kairos' };
 
 interface ChatBubbleProps {
   onClick: () => void;

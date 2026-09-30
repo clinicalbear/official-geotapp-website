@@ -1,97 +1,97 @@
 import type { PresenzeCopy } from './types';
 
 const nl: PresenzeCopy = {
-  metaTitle: 'Kan GPS voor aanwezigheidsregistratie zonder medewerkers te volgen? - GeoTapp',
+  metaTitle: 'Kan gps voor aanwezigheid worden gebruikt zonder werknemers te volgen? - GeoTapp',
   metaDesc:
-    'Ja, als de locatie alleen bij het in- en uitklokken wordt vastgelegd. Wat een Italiaanse rechter in 2026 besliste, wat toezichthouders echt beboeten, en wat een conform GPS-prikklok-systeem registreert.',
-  h1: 'Kan GPS voor aanwezigheidsregistratie zonder medewerkers te volgen?',
+    'Ja, als de locatie alleen bij het registreren wordt vastgelegd. Wat de rechtbank van Cosenza zegt, wat de Italiaanse toezichthouder (Garante Privacy) bestraft en wat een gps-systeem voor aanwezigheid dat aan de regels voldoet echt vastlegt.',
+  h1: 'Kan gps voor aanwezigheid worden gebruikt zonder werknemers te volgen?',
   lede:
-    'Ja. Een systeem dat de locatie alleen vastlegt op het exacte moment waarop een medewerker in- of uitklokt of een pauze begint, houdt de persoon niet continu in de gaten: het legt een feit vast. Precies dat onderscheid bevestigde een Italiaanse rechter in 2026, en het komt overeen met wat toezichthouders daadwerkelijk beboeten: continue tracking, niet het momentopname-registreren van locatie.',
+    'Ja. Een systeem dat de locatie alleen vastlegt op het moment dat de medewerker zijn aankomst, pauze of vertrek registreert, bewaakt de persoon niet: het documenteert een feit. De rechtbank van Cosenza heeft dat in 2026 erkend, en de besluiten van de Garante Privacy, die juist doorlopende tracking bestraffen, bevestigen het.',
   updatedLabel: 'Bijgewerkt op 25 september 2026',
   sections: [
     {
-      heading: 'Wanneer mag GPS worden gebruikt voor aanwezigheidsregistratie?',
+      heading: 'Wanneer is gps toegestaan voor aanwezigheid?',
       paragraphs: [
-        'In de meeste EU-landen geldt hetzelfde principe: hulpmiddelen die een continue controle van het gedrag van een werknemer mogelijk zouden kunnen maken, vereisen vooraf instemming van de ondernemingsraad of een vergunning van de bevoegde instantie voordat ze in gebruik worden genomen. In Italië staat die eis in artikel 4 van het Werknemersstatuut (wet nr. 300/1970) voor instrumenten van controle op afstand, met een uitdrukkelijke uitzondering voor instrumenten die alleen toegang en aanwezigheid registreren.',
-        'Een Italiaanse rechterlijke uitspraak van 1 juli 2026 (rechtbank van Cosenza, uitspraak nr. 972) geeft aan waar de grens ligt voor GPS-prikklok-apps: als de locatie uitsluitend op het moment van in- of uitklokken wordt vastgelegd, zonder continue volging van verplaatsingen daartussen, geldt het systeem als een instrument voor aanwezigheidsregistratie en niet als controle op afstand. De rechtbank vernietigde daarom een boete van 50.000 euro die de Italiaanse privacytoezichthouder had opgelegd aan een overheidsinstantie, precies om die reden.',
-        'De praktische regel: een GPS-punt aan het begin en einde van een dienst legt een moment vast. Een spoor van punten dat elke minuut wordt vastgelegd, volgt een persoon. Dezelfde satelliettechnologie, maar twee heel verschillende instrumenten voor de wet.',
+        'Artikel 4 van het Italiaanse arbeidsstatuut (Statuto dei Lavoratori, wet van 20 mei 1970, nr. 300) maakt onderscheid tussen twee categorieën instrumenten. Lid 1 betreft de systemen waaruit controle op afstand van de activiteit kan voortvloeien: daarvoor is voordat ze worden ingeschakeld een akkoord met de vakbond (RSA of RSU) of een vergunning van de arbeidsinspectie nodig. Lid 2 betreft de instrumenten voor de registratie van toegang en aanwezigheid, waarvoor die procedure niet nodig is.',
+        'De rechtbank van Cosenza heeft met vonnis nr. 972 van 1 juli 2026 aangegeven waar de grens tussen de twee categorieën ligt wanneer het instrument een registratie-app met gps is. Ze vernietigde een boete van 50.000 euro die de Garante had opgelegd aan een overheidsinstelling, omdat het systeem de locatie uitsluitend op het moment van de registratie vastlegde, zonder doorlopende monitoring van de verplaatsingen mogelijk te maken: volgens de rechter maakt dat het een instrument voor de registratie van toegang en aanwezigheid in de zin van lid 2, en geen instrument voor controle op afstand.',
+        'Het praktische principe: een gps-punt aan het begin en aan het einde van de dienst legt een moment vast. Een reeks punten die elke minuut wordt genomen, volgt een persoon. Het is dezelfde satelliettechnologie, maar voor de wet zijn het twee verschillende instrumenten.',
       ],
     },
     {
-      heading: 'Wat registreert GeoTapp, en wat niet',
+      heading: 'Wat GeoTapp wel en niet vastlegt',
       paragraphs: [
-        'GeoTapp legt de locatie alleen vast wanneer een medewerker een specifieke handeling verricht: inklokken, een pauze beginnen of beëindigen, uitklokken, plus één punt per werkbewijs-foto. Tussen twee kloktijden wordt niets automatisch geregistreerd: geen spoor van verplaatsingen, geen tracking op de achtergrond, geen locatie die zonder medeweten van de medewerker wordt verzameld.',
+        'GeoTapp legt de locatie alleen vast wanneer de medewerker een precies gebaar maakt: aankomst, begin en einde van elke pauze, vertrek, plus een punt voor elke bewijsfoto van het werk. Tussen twee registraties in wordt er niets automatisch vastgelegd: geen spoor van verplaatsingen, geen tracking op de achtergrond, geen locatie die buiten medeweten van de medewerker wordt verzameld.',
       ],
     },
     {
-      heading: 'Hoe een OR-lid, een arbeidsrechtadvocaat of een FG dit kan controleren zonder ons iets te vragen',
+      heading: 'Hoe een arbeidsadviseur of een vakbondsvertegenwoordiger het kan controleren zonder ons iets te vragen',
       paragraphs: [
-        'U hoeft ons niet op ons woord te geloven: dit is onafhankelijk controleerbaar. In de Android-app declareert het manifest alleen de machtigingen ACCESS_FINE_LOCATION en ACCESS_COARSE_LOCATION. De machtiging ACCESS_BACKGROUND_LOCATION, nodig om een medewerker te volgen terwijl de app gesloten is, wordt niet aangevraagd, en er is geen voorgrondservice voor locatiegegevens: zonder die machtiging geeft het besturingssysteem simpelweg geen locatiegegevens door aan een app die niet actief geopend is. Op iOS vraagt de app alleen de machtiging "tijdens gebruik van de app" (requestWhenInUseAuthorization), nooit machtiging voor volgen op de achtergrond.',
-        'Dit is een controle die een OR-lid, een arbeidsrechtadvocaat of een functionaris gegevensbescherming zelf in een paar minuten kan uitvoeren, door het app-manifest of het privacylabel van de app store te lezen, nog voordat hij de privacyverklaring van het bedrijf leest.',
+        'Het is niet nodig ons op ons woord te geloven: u kunt het zelf controleren. In de Android-app verklaart het manifest alleen de rechten ACCESS_FINE_LOCATION en ACCESS_COARSE_LOCATION. ACCESS_BACKGROUND_LOCATION ontbreekt, het recht dat nodig zou zijn om een werknemer te volgen terwijl de app gesloten is, en er is geen service op de voorgrond die aan de locatie is gewijd: zonder dat recht levert het besturingssysteem de locatie niet aan een app die niet open op het scherm staat. In de iOS-app wordt alleen de toestemming "tijdens gebruik" gevraagd (requestWhenInUseAuthorization), nooit die voor tracking op de achtergrond.',
+        'Het is een controle die een vertegenwoordiger van de werknemers voor veiligheid, een arbeidsadviseur of een functionaris voor gegevensbescherming in een paar minuten zelf kan uitvoeren, door het manifest van de app of het privacylabel van de store te lezen, nog voordat hij de privacyverklaring leest die het bedrijf hem voorlegt.',
       ],
     },
     {
-      heading: 'Hoe lang blijven de verzamelde locatiegegevens bewaard?',
+      heading: 'Hoe lang blijven de verzamelde locaties bewaard?',
       paragraphs: [
-        'In het prikklok-register worden de coördinaten na twaalf maanden verwijderd; een bedrijf kan die termijn verkorten tot dertig dagen. In rapporten die al aan een klant zijn geleverd, blijven de locatiegegevens echter bewaard: dat zijn verzegelde documenten die het uitgevoerde werk documenteren, en die volgen de bewaartermijn die voor dat type documentatie geldt, niet die van het register.',
-        'Het zijn twee verschillende regels voor twee verschillende zaken. Het operationele register wordt lichter naarmate de tijd verstrijkt; een document dat al aan iemand anders is overhandigd, volgt zijn eigen regels, net als elk document zodra het onze systemen heeft verlaten.',
+        'In het register van de registraties worden de coördinaten na twaalf maanden gewist; het bedrijf kan de termijn verkorten tot dertig dagen. In de werkbonnen die al aan de klant zijn afgeleverd blijven de locaties daarentegen staan: het zijn verzegelde documenten die het uitgevoerde werk documenteren, en ze volgen de bewaartermijn die voor dat soort documentatie geldt, niet die van het register.',
+        'Het zijn twee verschillende regels voor twee verschillende objecten. Het operationele register wordt na verloop van tijd lichter; het document dat al aan iemand anders is afgeleverd, volgt zijn eigen regels, zoals elk document nadat het onze systemen heeft verlaten.',
       ],
     },
     {
       heading: 'En buiten Italië?',
       paragraphs: [
-        'De AVG (met name de artikelen 5, 6, 12-14 en 25 van EU-Verordening 2016/679) geldt in de hele Europese Unie en legt overal dezelfde beginselen op: gegevensminimalisatie, een vastgesteld doel, duidelijke informatie voor de werknemer. Wat van land tot land verschilt, is de procedure rond controle op afstand: het lokale equivalent van het Italiaanse artikel 4, de rol van de ondernemingsraad of vakbond, de bevoegde toezichthouder. Voor de situatie in een specifiek land verzamelt de kaart GPS en werknemers in de EU per land geverifieerde profielen.',
+        'De AVG (in het bijzonder art. 5, 6, 12-14 en 25 van Verordening (EU) 2016/679) geldt in de hele Europese Unie en legt overal hetzelfde beginsel op: minimale gegevensverwerking, een vooraf benoemd doel, een heldere privacyverklaring voor de werknemer. Wat van land tot land verschilt, is de procedure rond controle op afstand: het lokale equivalent van het Italiaanse artikel 4, de rol van de ondernemingsraad of de vakbond, de bevoegde toezichthouder. Voor de situatie van een afzonderlijk land bevat de kaart over gps bij werknemers in de EU de landpagina\'s, stuk voor stuk gecontroleerd.',
       ],
     },
   ],
   table: {
-    title: 'Wat wordt geregistreerd en wat niet',
-    colLeft: 'Registreert',
-    colRight: 'Registreert niet',
+    title: 'Wat wordt vastgelegd en wat niet',
+    colLeft: 'Legt vast',
+    colRight: 'Legt niet vast',
     left: [
-      'Locatie bij in- en uitklokken',
-      'Locatie bij begin en einde van elke pauze',
-      'Eén GPS-punt per werkbewijs-foto',
-      'Het tijdstip van de verzegeling van het rapport, overgenomen van de serverklok',
+      'Locatie bij aankomst en vertrek van de dienst',
+      'Locatie bij het begin en het einde van elke pauze',
+      'Een gps-punt bij elke bewijsfoto van het werk',
+      'Tijdstip van de verzegeling van de werkbon, afkomstig van de klok van de server',
     ],
     right: [
-      'Geen verplaatsing tijdens de dienst, tussen twee kloktijden',
-      'Geen locatie buiten de dienst of wanneer de app gesloten is',
-      'Geen scores of profilering van gedrag',
+      'Geen verplaatsing tijdens de dienst, tussen twee registraties in',
+      'Geen locatie wanneer de medewerker buiten werktijd is of de app gesloten is',
+      'Geen score of profilering van gedrag',
     ],
   },
-  sourcesTitle: 'Bronnen en referenties',
+  sourcesTitle: 'Bronnen en verwijzingen',
   sources: [
-    'Rechtbank van Cosenza (Italië), uitspraak nr. 972 van 1 juli 2026',
-    'Italiaanse privacytoezichthouder (Garante), besluit nr. 382 van 28 mei 2026 (doc-web 10259916)',
-    'Italiaanse privacytoezichthouder (Garante), besluit nr. 135 van 13 maart 2025 (doc-web 10128005), vernietigd door bovenstaande uitspraak',
-    'Italiaanse wet nr. 300 van 20 mei 1970 (Werknemersstatuut), art. 4',
+    'Rechtbank van Cosenza, vonnis nr. 972 van 1 juli 2026',
+    'Garante per la protezione dei dati personali (Italiaanse toezichthouder voor gegevensbescherming), besluit nr. 382 van 28 mei 2026 (doc-web 10259916)',
+    'Garante per la protezione dei dati personali, besluit nr. 135 van 13 maart 2025 (doc-web 10128005), vernietigd door het bovenstaande vonnis',
+    'Wet van 20 mei 1970, nr. 300 (Statuto dei Lavoratori, Italiaans arbeidsstatuut), art. 4',
     'Verordening (EU) 2016/679 (AVG), art. 5, 6, 12-14, 25',
   ],
   disclaimer:
-    'Deze pagina beschrijft algemene, bij de bron controleerbare beginselen en vormt geen juridisch advies: raadpleeg voor uw specifieke situatie een arbeidsrechtadvocaat of een functionaris gegevensbescherming.',
+    'Deze pagina beschrijft algemene beginselen, bij de bron te controleren, en vormt geen juridisch advies: controleer uw specifieke situatie met een arbeidsadviseur of een functionaris voor gegevensbescherming.',
   faq: {
     title: 'Veelgestelde vragen',
     items: [
       {
-        q: 'Is GPS-volgen van medewerkers verboden onder de AVG?',
-        a: 'Nee. Toezichthouders verbieden GPS bij werknemers niet als zodanig. Wat zij beboeten is continue tracking, ontbrekende informatie, en het verzamelen van gegevens die niets met het werk te maken hebben: niet het momentopname-registreren van locatie bij het klokken.',
+        q: 'Is gps bij werknemers verboden door de AVG?',
+        a: 'Nee. De Garante Privacy verbiedt gps bij werknemers niet als zodanig. Ze bestraft doorlopende tracking, het ontbreken van een privacyverklaring en het verzamelen van gegevens die niet relevant zijn voor het werk: niet het op één moment vastleggen van de locatie bij de registratie.',
       },
       {
-        q: 'Is instemming van de ondernemingsraad altijd nodig voor GPS bij aanwezigheidsregistratie?',
-        a: 'Die is nodig wanneer het systeem een continue controle van de activiteit van de werknemer mogelijk kan maken. De rechtbank van Cosenza erkende echter dat een systeem dat de locatie alleen bij het klokken vastlegt, zonder continue volging, valt onder aanwezigheidsregistratie-instrumenten waarvoor die procedure niet nodig is.',
+        q: 'Is altijd een akkoord met de vakbond nodig om gps voor aanwezigheid te gebruiken?',
+        a: 'Het is nodig waar het systeem controle op afstand van de werkzaamheden kan inhouden. De rechtbank van Cosenza heeft echter erkend dat een systeem dat de locatie alleen bij de registratie vastlegt, zonder doorlopende monitoring, valt onder de instrumenten voor de registratie van aanwezigheid van lid 2 van art. 4, waarvoor die procedure niet nodig is.',
       },
       {
-        q: 'Wat gebeurt er als het systeem ook tijdens pauzes volgt?',
-        a: 'Dat is een van de fouten die tot echte boetes heeft geleid: een transportbedrijf kreeg een boete van 50.000 euro, mede omdat het volgen tijdens pauzes doorging. Het beginsel van gegevensminimalisatie (art. 5 AVG) vereist dat de verzameling stopt wanneer de dienst stopt.',
+        q: 'Wat gebeurt er als het systeem ook tijdens de pauzes volgt?',
+        a: 'Het is een van de fouten die tot echte boetes hebben geleid: de Garante beboette een transportbedrijf voor 50.000 euro, mede omdat de tracking tijdens de pauzes doorliep. Het beginsel van minimale gegevensverwerking (art. 5 AVG) vraagt om te stoppen wanneer de dienst stopt.',
       },
       {
-        q: 'Kan GeoTapp een medewerker continu volgen als ik daarom vraag?',
-        a: 'Nee. De app vraagt nooit machtiging voor locatie op de achtergrond en heeft geen service die een apparaat volgt terwijl de app gesloten is: het is geen uitgeschakelde optie, het is een machtiging die de code nooit aanvraagt. Te controleren door het app-manifest of het privacylabel van de store te lezen.',
+        q: 'Kan GeoTapp een medewerker doorlopend volgen, als ik dat vraag?',
+        a: 'Nee. De app vraagt geen locatierecht op de achtergrond en heeft geen service die haar volgt terwijl de app gesloten is: het is geen uitgeschakelde optie, het is een recht dat de code niet vraagt. Het is te controleren door het manifest van de app of het privacylabel van de store te lezen.',
       },
       {
-        q: 'Blijven verzamelde locatiegegevens voor altijd bewaard?',
-        a: 'Nee. In het prikklok-register worden ze na twaalf maanden verwijderd, en een bedrijf kan die termijn verkorten tot dertig dagen. Ze blijven echter bewaard in rapporten die al aan een klant zijn geleverd, omdat dat verzegelde documenten zijn die het uitgevoerde werk documenteren.',
+        q: 'Blijven de verzamelde locaties voor altijd bewaard?',
+        a: 'Nee. In het register van de registraties worden ze na twaalf maanden gewist, en het bedrijf kan de termijn verkorten tot dertig dagen. Ze blijven wel staan in de werkbonnen die al aan de klant zijn afgeleverd, omdat het verzegelde documenten zijn die het uitgevoerde werk documenteren.',
       },
     ],
   },

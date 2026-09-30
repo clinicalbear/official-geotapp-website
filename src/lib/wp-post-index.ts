@@ -411,6 +411,13 @@ export const NON_IN_VETRINA = new Set<string>([
   'reinigungsfirma-wie-sehr-wurde-sich-ihr-leben-verandern-wenn-alle-eingriffe-endlich-unter-kontrolle-waren',
   'zeitverschwendung-im-unternehmen-wie-geotapp-timetracker-versteckte-ineffizienzen-von-tausenden-von-euro-pro-monat-aufdeckt',
   'von-excel-zum-gps-wie-ein-elektriker-12-000-e-pro-jahr-einsparen-kann',
+  // Versioni olandesi: titoli che promettono esiti o prova che la scheda claim vieta
+  // («niet vervalsbaar», «juridische bewijskracht», «werkcertificering», «win elk geschil»).
+  // Aggiunte il 30/09/2026.
+  'rapport-buitendienst-niet-vervalsbaar',
+  'geotapp-vs-hubstaff-2026-surveillance-vs-certificering',
+  'geotapp-vs-clockify-2026-tijdregistratie-certificering',
+  'fotobewijs-werkbonnen-schoonmaakbedrijven-2026',
 ]);
 
 export function filterPosts<T extends WpIndexEntry>(

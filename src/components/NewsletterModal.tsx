@@ -14,7 +14,7 @@ const HEADLINES: Record<string, string> = {
   fr: "Gardez une longueur d'avance",
   es: 'Mantente a la vanguardia',
   pt: 'Fique à frente no setor',
-  nl: 'Blijf voorop in jouw sector',
+  nl: 'Blijf op de hoogte van de toekomst van het werk',
   ru: 'Будь в курсе новостей отрасли',
   da: 'Hold dig foran i din branche',
   sv: 'Håll dig steget före',
@@ -136,7 +136,7 @@ export default function NewsletterModal({ locale }: { locale: string }) {
           />
           <button
             onClick={dismiss}
-            aria-label="Close"
+            aria-label={locale === 'nl' ? 'Sluiten' : 'Close'}
             style={{
               background: 'rgba(247,249,252,0.25)',
               border: 'none',

@@ -30,7 +30,7 @@ export const CTA_LABELS: Record<string, { title: string; desc: string; btn: stri
   en: { title: 'Try GeoTapp free for 14 days', desc: 'No credit card required. Get started in 2 minutes.', btn: 'Start free trial' },
   de: { title: 'GeoTapp 14 Tage kostenlos testen', desc: 'Keine Kreditkarte erforderlich. In 2 Minuten starten.', btn: 'Kostenlos testen' },
   fr: { title: 'Essayez GeoTapp gratuitement 14 jours', desc: 'Sans carte bancaire. Démarrez en 2 minutes.', btn: 'Essai gratuit' },
-  nl: { title: 'Probeer GeoTapp 14 dagen gratis', desc: 'Geen creditcard nodig. Klaar in 2 minuten.', btn: 'Gratis proberen' },
+  nl: { title: 'Probeer GeoTapp 14 dagen gratis', desc: 'Geen creditcard nodig. Begin in 2 minuten.', btn: 'Start de gratis proefperiode' },
   es: { title: 'Prueba GeoTapp gratis 14 días', desc: 'Sin tarjeta de crédito. Empieza en 2 minutos.', btn: 'Prueba gratis' },
   pt: { title: 'Experimenta o GeoTapp grátis 14 dias', desc: 'Sem cartão de crédito. Começa em 2 minutos.', btn: 'Teste grátis' },
   da: { title: 'Prøv GeoTapp gratis i 14 dage', desc: 'Intet kreditkort. Kom i gang på 2 minutter.', btn: 'Start gratis' },

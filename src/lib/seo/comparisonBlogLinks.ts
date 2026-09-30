@@ -44,8 +44,9 @@ export const COMPARISON_BLOG_LINKS: Record<string, Record<string, string>> = {
     nl: '/blog/nl/2026/05/18/geotapp-vs-jibble-2026-tijdregistratie-vergelijking/',
   },
   libemax: {
-    // Libemax ha solo l'articolo IT, ed e' la pagina con piu' citazioni AI del sito.
+    // Libemax ha l'articolo IT (piu' quello NL del 24/07/2026), ed e' la pagina con piu' citazioni AI del sito.
     it: '/blog/2026/05/15/geotapp-vs-libemax-2026-confronto-app-rilevazione-presenze/',
+    nl: '/blog/nl/2026/07/24/geotapp-vs-libemax-2026-urenregistratie-vergelijking/',
   },
   picaponto: {
     it: '/blog/2026/07/16/geotapp-vs-picaponto-2026-confronto-app-presenze/',

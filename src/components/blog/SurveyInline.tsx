@@ -41,10 +41,10 @@ const COPY: Record<string, Copy> = {
     cta: 'Donnez votre avis',
   },
   nl: {
-    kicker: 'Observatorium werkbewijs',
-    title: 'Is een klus die je had gedaan ooit betwist?',
-    body: 'We verzamelen wat er echt gebeurt op locatie, in heel Europa. Twee minuten, anoniem, niets verplicht.',
-    cta: 'Zeg wat je vindt',
+    kicker: 'Observatorium van het werkbewijs',
+    title: 'Is een klus die u had gedaan ooit betwist?',
+    body: 'We verzamelen wat er echt gebeurt in het veld, in heel Europa. Twee minuten, anoniem, geen verplichte gegevens.',
+    cta: 'Laat van u horen',
   },
   es: {
     kicker: 'Observatorio de la prueba del trabajo',

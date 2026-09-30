@@ -15,7 +15,7 @@ export const FEATURED_LABEL: Record<string, string> = {
   fr: 'Cités dans',
   es: 'Citados en',
   pt: 'Citados em',
-  nl: 'Bekend van',
+  nl: 'Geciteerd in',
   ru: 'О нас пишут',
   da: 'Omtalt i',
   sv: 'Omtalade i',

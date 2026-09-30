@@ -54,7 +54,7 @@ const SETTORE_BG: Record<SettoreSlug, { img: string; pos: string }> = {
 const RISORSE_LABELS: Record<string, string> = {
   it: 'Guide e articoli →', en: 'Guides & articles →', de: 'Leitfäden & Artikel →',
   fr: 'Guides & articles →', es: 'Guías y artículos →', pt: 'Guias & artigos →',
-  nl: 'Gidsen & artikelen →', da: 'Vejledninger & artikler →',
+  nl: 'Gidsen en artikelen →', da: 'Vejledninger & artikler →',
   sv: 'Guider & artiklar →', nb: 'Guider & artikler →', ru: 'Руководства & статьи →',
 };
 
@@ -87,6 +87,13 @@ function CmpTable({
     </div>
   );
 }
+
+const CLASSIC_CLOCKIN: Record<string, string> = {
+  it: 'App di timbratura classica',
+  en: 'Classic clock-in app',
+  de: 'Klassische Stempel-App',
+  nl: 'Klassieke registratie-app',
+};
 
 export default function SettorePageLayout({ content, locale, settore, children }: Props) {
   const trialLink = localizePath('/trial', locale);
@@ -204,7 +211,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
     fr: 'Approfondir la conformité',
     es: 'Profundizar en el cumplimiento',
     pt: 'Aprofundar a conformidade',
-    nl: 'Verdieping naleving',
+    nl: 'Verdiep u in de regelgeving',
     da: 'Gå dybere i compliance',
     sv: 'Fördjupa efterlevnaden',
     nb: 'Dybdedykk compliance',
@@ -228,12 +235,12 @@ export default function SettorePageLayout({ content, locale, settore, children }
         label: 'DSGVO-Muster-Datenschutzerklärung: GPS-Mitarbeiterortung 2026' },
     ],
     nl: [
-      { href: '/blog/nl/2026/05/30/software-schoonmaakbedrijven-avg-gps-2026/',
-        label: 'Software voor schoonmaakbedrijven: AVG, GPS en urenregistratie' },
-      { href: '/blog/nl/2026/05/25/geotapp-updates-mei-2026/',
-        label: 'GeoTapp mei 2026: facturatie, AVG, beveiliging, badges' },
-      { href: '/blog/nl/2026/05/21/geotapp-vs-hubstaff-2026-surveillance-vs-certificering/',
-        label: 'GeoTapp vs Hubstaff: surveillance versus verzegeld werkbewijs' },
+      { href: '/blog/nl/2026/06/03/gps-tracking-medewerkers-avg/',
+        label: 'GPS-tracking van medewerkers: de AVG-grenzen volgens de AP' },
+      { href: '/blog/nl/2026/07/03/voorbeeld-privacyverklaring-gps-werknemers/',
+        label: 'Voorbeeld privacyverklaring GPS werknemers, model 2026' },
+      { href: '/blog/nl/2026/09/14/or-instemmingsrecht-personeelsvolgsysteem/',
+        label: 'Wanneer moet de OR instemmen met een personeelsvolgsysteem' },
     ],
   };
   // Le 6 locale che NON hanno articoli normative tradotti ricadono su EN.
@@ -411,7 +418,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
               <p className="r d1">{content.differenza.subtitle}</p>
             </div>
             <CmpTable
-              headerLabel="App di timbratura classica"
+              headerLabel={CLASSIC_CLOCKIN[locale.split('-')[0]] ?? CLASSIC_CLOCKIN.en}
               rows={content.differenza.rows.map((r) => ({ label: r.label, other: r.competitor, geotapp: r.geotapp }))}
             />
           </div>

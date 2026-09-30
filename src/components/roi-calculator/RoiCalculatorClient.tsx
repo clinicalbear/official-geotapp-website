@@ -183,7 +183,7 @@ const ERROR_MSGS: Record<string, { required: string; network: string }> = {
   it: { required: 'Compila nome e email', network: 'Errore di rete. Riprova.' },
   en: { required: 'Please fill in name and email', network: 'Network error. Please try again.' },
   de: { required: 'Bitte Name und E-Mail ausfüllen', network: 'Netzwerkfehler. Bitte erneut versuchen.' },
-  nl: { required: 'Vul naam en e-mail in', network: 'Netwerkfout. Probeer opnieuw.' },
+  nl: { required: 'Vul uw naam en e-mailadres in', network: 'Netwerkfout. Probeer het opnieuw.' },
   fr: { required: "Renseignez le nom et l'email", network: 'Erreur réseau. Réessayez.' },
   es: { required: 'Completa nombre y email', network: 'Error de red. Inténtalo de nuevo.' },
   pt: { required: 'Preencha o nome e o email', network: 'Erro de rede. Tente novamente.' },

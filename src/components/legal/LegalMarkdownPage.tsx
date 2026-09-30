@@ -28,7 +28,7 @@ const LEGAL_NAV_LABELS: Record<LegalSlug, Record<string, string>> = {
   privacy: {
     it: 'Informativa Privacy', en: 'Privacy Policy', de: 'Datenschutzerklärung',
     fr: 'Politique de confidentialité', es: 'Política de privacidad', pt: 'Política de privacidade',
-    nl: 'Privacybeleid', da: 'Privatlivspolitik', nb: 'Personvernerklæring',
+    nl: 'Privacyverklaring', da: 'Privatlivspolitik', nb: 'Personvernerklæring',
     sv: 'Integritetspolicy', ru: 'Политика конфиденциальности',
   },
   terms: {
@@ -40,7 +40,7 @@ const LEGAL_NAV_LABELS: Record<LegalSlug, Record<string, string>> = {
   cookies: {
     it: 'Informativa Cookie', en: 'Cookie Policy', de: 'Cookie-Richtlinie',
     fr: 'Politique de cookies', es: 'Política de cookies', pt: 'Política de cookies',
-    nl: 'Cookiebeleid', da: 'Cookiepolitik', nb: 'Retningslinjer for informasjonskapsler',
+    nl: 'Cookieverklaring', da: 'Cookiepolitik', nb: 'Retningslinjer for informasjonskapsler',
     sv: 'Cookiepolicy', ru: 'Политика использования файлов cookie',
   },
 };

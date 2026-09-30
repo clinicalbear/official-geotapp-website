@@ -46,6 +46,8 @@ const CAROUSEL_SLIDES = [
     label_en: 'KPI Dashboard & Operational Modules',
     alt_de: 'GeoTapp Flow - Dashboard mit Kennzahlen und Einsatzmodulen',
     label_de: 'Dashboard mit Kennzahlen und Einsatzmodulen',
+    alt_nl: 'GeoTapp Flow - Dashboard met kengetallen en operationele modules',
+    label_nl: 'Dashboard met kengetallen en operationele modules',
   },
   {
     src: '/screen_live_map.webp',
@@ -55,6 +57,8 @@ const CAROUSEL_SLIDES = [
     label_en: 'Map of the positions recorded at clock-in',
     alt_de: 'GeoTapp Flow - Karte mit den bei den Buchungen erfassten Standorten',
     label_de: 'Karte der bei den Buchungen erfassten Standorte',
+    alt_nl: 'GeoTapp Flow - Kaart met de locaties die bij de registraties zijn vastgelegd',
+    label_nl: 'Kaart van de locaties die bij de registraties zijn vastgelegd',
   },
   {
     src: '/schermataFlow.webp',
@@ -64,6 +68,8 @@ const CAROUSEL_SLIDES = [
     label_en: 'Operational Dashboard',
     alt_de: 'GeoTapp Flow - Einsatzübersicht',
     label_de: 'Einsatzübersicht',
+    alt_nl: 'GeoTapp Flow - Operationeel paneel',
+    label_nl: 'Operationeel overzicht',
   },
 ];
 
@@ -145,9 +151,30 @@ const FLOW_COPY: Record<string, FlowCopy> = {
     legalKicker: 'Regeln vor Ort',
     trial: 'Flow 14 Tage kostenlos testen',
   },
+  nl: {
+    statusLabel: 'Waar u het gebruikt',
+    releaseNote: 'Flow is een webapp: u gebruikt hem in de browser, op computer en tablet, zonder iets te installeren. Wie in het veld werkt, gebruikt GeoTapp TimeTracker, de app die beschikbaar is op Google Play en de App Store, en wat daar wordt geregistreerd, komt in Flow aan.',
+    doesTitle: 'Wat GeoTapp Flow doet',
+    doesSub: 'Het is het beheersysteem van het kantoor, en het houdt bovendien het bewijs bij van wat het team heeft gedaan: planning, werk in het veld, afrekening en rapporten voor de klant.',
+    cards: [
+      { title: 'Operationeel centrum en beheersysteem', description: 'Flow geeft het kantoor één omgeving voor klanten, opdrachten, agenda, documenten, verlof en vrije dagen, administratie en coördinatie van de teams.' },
+      { title: 'Bewijs om aan de klant te tonen', description: 'Foto\'s, notities en registraties uit het veld blijven gekoppeld aan de opdracht, zodat het kantoor antwoordt met feiten en niet met aannames.' },
+      { title: 'Historie van de opdracht en export', description: 'Voor elke opdracht kunt u het pakket downloaden met de chronologie van de gebeurtenissen, de registraties met de locaties en de foto\'s, en de klant het verzegelde rapport sturen.' },
+      { title: 'Snellere facturering', description: 'Offertes, facturen en de koppeling met Fatture in Cloud werken met de echte gegevens van de opdracht: de afrekening is sneller gemaakt en er wordt minder gediscussieerd.' },
+    ],
+    blocks: [
+      { title: 'Bedoeld voor kantoor, administratie en coördinatie', description: 'Flow is voor eigenaren, administratie en verantwoordelijken die minder interne discussies willen, duidelijkere rollen en een helder overzicht van het uitgevoerde werk.' },
+      { title: 'Gekoppeld aan TimeTracker', description: 'Registraties, bewijsfoto\'s en voortgang van de opdracht komen in Flow aan zodra de medewerker ze vastlegt, klaar voor het rapport en voor de afrekening.' },
+    ],
+    complianceKicker: 'GPS-privacyverklaring',
+    complianceTagline: 'Eerst ondertekent men de verklaring, dan registreert men.*',
+    complianceFootnote: '* Volgens de wet (art. 13 AVG en, in Italië, art. 4 van het arbeidsstatuut) moet elke werknemer worden geïnformeerd voordat hij wordt gelokaliseerd. Laat de software deze stap aan de verantwoordelijke over, dan blijft het risico bij hem. GeoTapp maakt de persoonlijke privacyverklaring klaar, laat die in de app voor kennisgeving ondertekenen en laat niet registreren totdat ze is ondertekend.',
+    legalKicker: 'Lokale regelgeving',
+    trial: 'Probeer Flow 14 dagen gratis',
+  },
 };
 
-function ScreenCarousel({ isItalian, isGerman = false }: { isItalian: boolean; isGerman?: boolean }) {
+function ScreenCarousel({ isItalian, isGerman = false, isDutch = false }: { isItalian: boolean; isGerman?: boolean; isDutch?: boolean }) {
   const [current, setCurrent] = useState(0);
   const [isDesktop, setIsDesktop] = useState(false);
   const total = CAROUSEL_SLIDES.length;
@@ -174,7 +201,7 @@ function ScreenCarousel({ isItalian, isGerman = false }: { isItalian: boolean; i
   return (
     <>
       <div className="bar">
-        <i /><i /><i /><b>{isItalian ? slide.label_it : isGerman ? slide.label_de : slide.label_en}</b>
+        <i /><i /><i /><b>{isItalian ? slide.label_it : isGerman ? slide.label_de : isDutch ? slide.label_nl : slide.label_en}</b>
       </div>
       {isDesktop ? (
         <AnimatePresence mode="wait">
@@ -182,7 +209,7 @@ function ScreenCarousel({ isItalian, isGerman = false }: { isItalian: boolean; i
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={slide.src}
-              alt={isItalian ? slide.alt_it : isGerman ? slide.alt_de : slide.alt_en}
+              alt={isItalian ? slide.alt_it : isGerman ? slide.alt_de : isDutch ? slide.alt_nl : slide.alt_en}
               loading={current === 0 ? 'eager' : 'lazy'}
               fetchPriority={current === 0 ? 'high' : 'auto'}
             />
@@ -192,15 +219,15 @@ function ScreenCarousel({ isItalian, isGerman = false }: { isItalian: boolean; i
         // eslint-disable-next-line @next/next/no-img-element
         <img
           src={CAROUSEL_SLIDES[0].src}
-          alt={isItalian ? CAROUSEL_SLIDES[0].alt_it : isGerman ? CAROUSEL_SLIDES[0].alt_de : CAROUSEL_SLIDES[0].alt_en}
+          alt={isItalian ? CAROUSEL_SLIDES[0].alt_it : isGerman ? CAROUSEL_SLIDES[0].alt_de : isDutch ? CAROUSEL_SLIDES[0].alt_nl : CAROUSEL_SLIDES[0].alt_en}
           loading="eager"
           fetchPriority="high"
         />
       )}
-      <button type="button" onClick={prev} className="l-shot-nav l-shot-prev" aria-label={isItalian ? 'Precedente' : isGerman ? 'Zurück' : 'Previous'}>
+      <button type="button" onClick={prev} className="l-shot-nav l-shot-prev" aria-label={isItalian ? 'Precedente' : isGerman ? 'Zurück' : isDutch ? 'Vorige' : 'Previous'}>
         <ArrowRight size={18} style={{ transform: 'rotate(180deg)' }} />
       </button>
-      <button type="button" onClick={next} className="l-shot-nav l-shot-next" aria-label={isItalian ? 'Successiva' : isGerman ? 'Weiter' : 'Next'}>
+      <button type="button" onClick={next} className="l-shot-nav l-shot-next" aria-label={isItalian ? 'Successiva' : isGerman ? 'Weiter' : isDutch ? 'Volgende' : 'Next'}>
         <ArrowRight size={18} />
       </button>
       <div className="l-shot-dots">
@@ -210,7 +237,7 @@ function ScreenCarousel({ isItalian, isGerman = false }: { isItalian: boolean; i
             type="button"
             onClick={() => setCurrent(i)}
             className={i === current ? 'on' : ''}
-            aria-label={`${isItalian ? 'Schermata' : isGerman ? 'Ansicht' : 'Slide'} ${i + 1}`}
+            aria-label={`${isItalian ? 'Schermata' : isGerman ? 'Ansicht' : isDutch ? 'Weergave' : 'Slide'} ${i + 1}`}
           />
         ))}
       </div>
@@ -255,11 +282,11 @@ const GPS_PRIVACY_CONTENT: Record<string, {
     tags: ['RGPD conforme', 'CNIL', 'Code du travail', 'Signature numérique', 'PDF archivé', 'Zéro papier'],
   },
   nl: {
-    title: 'Automatische GPS-privacyverklaring voor elke medewerker',
-    p1: 'Wanneer u een nieuwe medewerker uitnodigt, genereert Flow automatisch een AVG-conforme GPS-privacyverklaring en stuurt deze ter digitale ondertekening. De medewerker vult zijn gegevens in, leest het document en ondertekent met één klik, alles online, zonder papier.',
-    p2: 'De ondertekende PDF wordt automatisch gearchiveerd en u ziet in realtime wie heeft getekend en wie niet. Geen losse papieren, geen risico op boetes: elke toestemming is vastgelegd met datum, tijd en digitale handtekening.',
-    legal: 'Conform de AVG en de richtlijnen van de Autoriteit Persoonsgegevens (AP). Een DPIA (Data Protection Impact Assessment) is standaard inbegrepen bij GPS-verwerking van werknemers.',
-    tags: ['AVG-conform', 'Autoriteit Persoonsgegevens', 'DPIA inbegrepen', 'Digitale handtekening', 'PDF gearchiveerd', 'Geen papier'],
+    title: 'De GPS-privacyverklaring, voor elke medewerker',
+    p1: 'Wanneer u een nieuwe medewerker uitnodigt, maakt Flow de privacyverklaring over de geolocatie klaar met de gegevens van uw bedrijf en stuurt die naar hem. De medewerker vult zijn gegevens in, leest het document en ondertekent het voor kennisgeving, alles vanaf de telefoon, zonder papier. Zolang hij niet heeft ondertekend, laat de app hem niet registreren.',
+    p2: 'Het ondertekende document blijft gearchiveerd, en in Flow ziet u wie heeft ondertekend en wie niet. Geen losse papieren meer: elke handtekening wordt vastgelegd met datum en tijd. De handtekening bewijst dat de verklaring is overhandigd; het is geen toestemming, en dat hoeft ook niet.',
+    legal: 'In Italië vraagt artikel 4 van het arbeidsstatuut, naast de privacyverklaring, een akkoord met de vakbond of een vergunning van de arbeidsinspectie voordat instrumenten worden gebruikt die controle op afstand mogelijk maken: die stap blijft bij de werkgever. GeoTapp is gebouwd om daarbinnen te blijven: locatie alleen bij het registreren, nooit doorlopend.',
+    tags: ['Art. 4 Italiaans arbeidsstatuut', 'Art. 13 AVG', 'Handtekening voor kennisgeving', 'Gearchiveerd document', 'Niet registreren vóór de handtekening', 'Geen papier'],
   },
   es: {
     title: 'Autorización GPS automática para cada empleado',
@@ -442,7 +469,7 @@ export default function GeoTappApp() {
 
       {/* SCHERMATA VERA */}
       <section className="shot"><div className="wn"><div className="frame r-s">
-        <div className="browser"><ScreenCarousel isItalian={isItalian} isGerman={currentLocale === 'de'} /></div>
+        <div className="browser"><ScreenCarousel isItalian={isItalian} isGerman={currentLocale === 'de'} isDutch={currentLocale === 'nl'} /></div>
       </div></div></section>
 
       {/* IL GIRO COMPLETO — entra dall'atto in cui la prova arriva in ufficio da

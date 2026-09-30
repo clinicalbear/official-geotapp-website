@@ -36,7 +36,7 @@ export const HOME_TITLE_KEYWORD: Record<string, string> = {
   fr: 'Logiciel GPS terrain',
   es: 'Software GPS operarios',
   pt: 'Software GPS campo',
-  nl: 'GPS-software buitendienst',
+  nl: 'GPS-software voor aanwezigheid',
   ru: 'GPS-программа выезда',
   da: 'GPS-software feltservice',
   sv: 'GPS-mjukvara fältservice',
@@ -69,8 +69,8 @@ export const HOME_META: Record<string, { title: string; description: string }> =
     description: 'Cliente contesta? GeoTapp registra GPS, hora, fotos e relatório com alterações detetáveis. Prove o serviço feito e receba sem discussões.',
   },
   nl: {
-    title: 'GPS-software buitendienst: bewijs elk bezoek | GeoTapp',
-    description: 'Betwist de klant je werk? GeoTapp legt GPS, tijd, foto\'s en rapport vast, elke wijziging zichtbaar. Bewijs wat gedaan is en word betaald zonder discussie.',
+    title: 'GPS-software voor aanwezigheid: bewijs elke klus | GeoTapp',
+    description: 'Software voor teams in het veld: GeoTapp legt bij elke registratie locatie, tijden en foto\'s vast en verzegelt ze in een rapport dat de klant zelf controleert.',
   },
   ru: {
     title: 'GPS-программа выезда: докажите работы | GeoTapp',

@@ -1,192 +1,301 @@
 import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
-  // Termine-bersaglio allineato alla domanda reale (GSC 90gg, verificato 16/07/2026):
-  // "software voor schoonmaakbedrijven" 429 imp, "schoonmaakbedrijf software" 229,
-  // "software schoonmaakbedrijf" 216, "app schoonmaakbedrijf" 61 = 935 imp sul lemma
-  // "schoonmaakbedrijf". Contro "schoonmaaksoftware": 51 imp, la variante MENO cercata,
-  // ed era proprio quella che meta e hero targetizzavano. Il corpo della pagina usava
-  // gia' "schoonmaakbedrijf" 13 volte: era solo la vetrina a parlare un'altra parola.
   meta: {
-    title: 'Werkbon voor schoonmaakbedrijven: uren en fotobewijs per ruimte | GeoTapp',
-    description: 'Software voor schoonmaakbedrijven: elk uur en elke ruimte met GPS en fotobewijs vastgelegd. De klant twijfelt, het bewijs niet. Naleving CAO Schoonmaak.',
+    title: 'App voor schoonmaakbedrijven: gps-aanwezigheid en foto\'s',
+    description: 'Registraties met gps alleen aan het begin en aan het einde en foto\'s van elke klus: het bewijs om aan de klant te tonen wanneer hij een dienst betwist. 14 dagen gratis.',
   },
+
   hero: {
-    badge: 'Software voor schoonmaakbedrijven, facilitaire diensten en gebouwbeheer',
-    h1_line1: 'Software voor schoonmaakbedrijven:',
-    h1_line2: 'dienstroosters, fotobewijs en gecontroleerde uren, op elk object',
-    subtitle: 'GeoTapp verbindt Flow + TimeTracker voor teams verspreid over meerdere gebouwen en verdiepingen. Uw medewerkers klokken in via GPS-geverifieerde smartphone; het kantoor ziet wie wat, waar en wanneer heeft schoongemaakt, met bijgevoegd fotobewijs. Met de data klaar voor elk dispuut, gebouwd om de CAO Schoonmaak te ondersteunen.',
-    cta_primary: 'Probeer het op een echt contract',
-    cta_note: '14 dagen, tot 50 medewerkers in het veld, zonder creditcard.',
+    badge: 'App voor schoonmaakbedrijven, facility management en multiservice',
+    h1_line1: 'De app voor schoonmaakbedrijven',
+    h1_line2: 'die elke klus verzegelt.',
+    subtitle:
+      'GeoTapp is de app voor schoonmaakbedrijven die van elke klus een bewijs maakt om te tonen. Klanten betwisten iets, en een opgeschreven tijd is niet genoeg. GeoTapp legt de locatie bij elke registratie vast, verzamelt de bewijsfoto\'s en sluit alles af in een verzegeld rapport, waarin elke wijziging zichtbaar is, dat de opdrachtgever zelf kan controleren.',
+    cta_primary: 'Probeer het op een echte opdracht',
+    cta_note: '14 dagen, tot 50 medewerkers in het veld, geen creditcard.',
   },
+
   pain: {
-    title: 'Het probleem dat u al kent',
+    title: 'Als u het niet kunt bewijzen, is het voor de klant nooit gebeurd.',
     items: [
       {
-        title: 'Geschillen over of ruimtes zijn schoongemaakt',
-        desc: 'De klant beweert dat een ruimte niet is schoongemaakt of betwist het tijdstip. Uw medewerkers hebben geen bewijs. Het geschil sleept aan en het contract staat op het spel.',
+        title: 'De klant ontkent de klus',
+        desc: 'Hij zegt dat de ruimte niet is schoongemaakt of dat de medewerker er niet was. U hebt een opgeschreven tijd, hij heeft zijn versie. Zonder controleerbaar bewijs riskeert u het contract.',
       },
       {
-        title: 'Toezicht op verspreid personeel over meerdere objecten',
-        desc: 'U heeft personeel op meerdere gebouwen, verdiepingen en dienstroosters tegelijk. Weten wie waar is en of de ronde is afgerond, wordt een aaneenschakeling van oproepen en berichten.',
+        title: 'Medewerkers in het veld die u niet kunt controleren',
+        desc: 'U kunt niet op alle locaties zijn. U weet niet of het werk is gedaan totdat de klant klaagt, en dan is het al te laat om nog iets te reconstrueren.',
       },
       {
-        title: 'Onvolledige dienst­overdrachten en CAO-verplichtingen',
-        desc: 'De dagdienst weet niet wat de avonddienst heeft gedaan. Papieren formulieren raken kwijt, berichten worden genegeerd, en de CAO Schoonmaak vereist controleerbare registraties van pauzes en overwerk.',
+        title: 'De arbeidsinspectie vraagt echte documentatie',
+        desc: 'Tijden, aanwezigheid, overuren, pauzes: de presentielijst is niet genoeg. Wie controleert wil vastgelegde tijden, niet uit het hoofd gereconstrueerde.',
       },
     ],
   },
-  workflow: {
-    title: 'Hoe het werkt in drie stappen',
-    subtitle: 'Van het gebouw naar het kantoor, zonder achter mensen aan te lopen.',
-    steps: [
-      {
-        title: 'Medewerker klokt in op locatie',
-        desc: 'Met GeoTapp TimeTracker registreert hij aankomst, vertrek, foto\'s van de ruimtes en notities rechtstreeks via de smartphone. GPS-geverifieerd, gebouwd om binnen de AVG te blijven, CAO Schoonmaak-geschikt.',
-      },
-      {
-        title: 'Kantoor ziet elke klokregistratie meteen',
-        desc: 'Flow ontvangt de gegevens direct. De objectleider ziet welk gebouw is bediend, door wie, op welk tijdstip en met welk fotobewijs, zonder een enkel telefoontje te plegen.',
-      },
-      {
-        title: 'Het overdrachtrapport is al klaar',
-        desc: 'Aan het einde van de dienst is het servicerapport al opgesteld met echte gegevens: gewerkte uren, pauzes, gedekte ruimtes en foto\'s. Geen handmatige reconstructie, geen onbeantwoord geschil.',
-      },
+
+  prima_dopo: {
+    title: 'Wat er nu gebeurt. Wat er met GeoTapp gebeurt.',
+    prima: [
+      'De klant belt en zegt dat het toilet niet is schoongemaakt.',
+      'De medewerker zegt "ik heb het gedaan". De klant zegt "hij heeft het niet gedaan".',
+      'U hebt niets in handen om iets aan te tonen.',
+      'De discussie duurt dagen. Soms verliest u het contract.',
+    ],
+    dopo: [
+      'De klant belt en zegt dat het toilet niet is schoongemaakt.',
+      'U opent het rapport van de klus: foto van het schone toilet, tijd, locatie.',
+      'U stuurt het door. U hebt met gegevens geantwoord, en hij controleert ze zelf.',
+      'U hebt een bewijs om te tonen. Ook de medewerker heeft iets in handen.',
     ],
   },
-  features: {
-    title: 'Wat u krijgt',
-    items: [
-      {
-        title: 'GPS-gebaseerde inklokregistratie per object',
-        desc: 'Elke start en stop is gekoppeld aan locatie, tijdstempel en toegewezen gebouw. Verdedigbaar tegenover de klant, de opdrachtgever en de Arbeidsinspectie.',
-      },
-      {
-        title: 'Voor-en-na fotobewijs',
-        desc: 'Medewerkers fotograferen rechtstreeks vanuit de app. Afbeeldingen met datum, tijd en GPS: verifieerbaar bewijs van de geleverde dienst.',
-      },
-      {
-        title: 'Salarisexport voor AFAS en NMBRS',
-        desc: 'Exporteer maandelijkse aanwezigheidsgegevens compatibel met AFAS, NMBRS en andere Nederlandse salarissoftware, met automatische scheiding van reguliere uren, overwerk en CAO-toeslagen.',
-      },
-      {
-        title: 'Urenregistratie zonder papier',
-        desc: 'De urenregistratie loopt automatisch mee met elke dienst: begintijd, eindtijd, pauzes en object. Geen briefjes meer aan het einde van de maand, geen reconstructies, de uren staan al klaar voor de loonadministratie.',
-      },
-    ],
+
+  scenario: {
+    title: 'Een typisch geval',
+    body: 'De klant zegt dat het toilet niet is schoongemaakt. Met GeoTapp opent u het rapport en toont u de foto van de ruimte, het tijdstip van de opname en de locatie, alles automatisch gemaakt door de app van de medewerker op het moment van de klus.',
+    resolution: 'U hebt met gegevens geantwoord, niet met uw woord tegen het zijne.',
   },
-  testimonial: {
-    quote: 'Sinds we GeoTapp gebruiken, hebben we geen enkele schriftelijke klacht meer ontvangen van een klant. De foto\'s spreken voor zich.',
-    author: 'Marianne V.',
-    role: 'Operationeel manager, schoonmaakbedrijf',
-  },
-  faq: {
-    title: 'Veelgestelde vragen',
-    subtitle: 'Wat ons het vaakst wordt gevraagd voordat men begint.',
-    items: [
-      {
-        q: 'Is GeoTapp geschikt voor schoonmaakbedrijven en facilitaire dienstverleners?',
-        a: 'Ja. GeoTapp helpt schoonmaakbedrijven, FM-dienstverleners en gebouwbeheerbedrijven bij het beheren van dienstroosters op meerdere objecten, het documenteren van services met GPS-inklokregistratie en fotobewijs, en het naleven van de CAO Schoonmaak.',
-      },
-      {
-        q: 'Hoe beheer ik teams verspreid over meerdere gebouwen tegelijk?',
-        a: 'Flow toont de status en locatie van elke medewerker per gebouw, bijgewerkt bij elke klokregistratie. U kunt diensten toewijzen, de bezetting controleren en automatische meldingen ontvangen bij afwezigheid of te laat komen.',
-      },
-      {
-        q: 'Helpt GeoTapp bij naleving van de CAO Schoonmaak voor pauzes en overwerk?',
-        a: 'Ja. Het systeem registreert automatisch pauzetijden, overwerk en dienstroosters. De maandelijkse export is compatibel met AFAS en NMBRS, afgestemd op de CAO Schoonmaak.',
-      },
-      {
-        q: 'Welke software voor schoonmaakbedrijven heb ik nodig?',
-        a: 'Een schoonmaakbedrijf heeft software nodig die meer doet dan uren registreren: GPS-geverifieerde inklok, fotobewijs per ruimte, dienstroosters over meerdere objecten en een salarisexport. GeoTapp combineert Flow en TimeTracker zodat u dat alles in één systeem heeft, inclusief naleving van de CAO Schoonmaak.',
-      },
-      {
-        q: 'Is GeoTapp schoonmaak software met fotobewijs?',
-        a: 'Ja. Bij elke dienst maakt de medewerker foto\'s van de gereinigde ruimtes rechtstreeks in de app. Elke foto krijgt datum, tijd en GPS en wordt aan het servicerapport gekoppeld. Zo levert de schoonmaak software verifieerbaar bewijs richting de opdrachtgever.',
-      },
-      {
-        q: 'Werkt de software voor de schoonmaakbranche met AFAS en NMBRS?',
-        a: 'Ja. De maandelijkse export is compatibel met AFAS, NMBRS en andere Nederlandse salarispakketten, met automatische scheiding van reguliere uren, overwerk en CAO-toeslagen.',
-      },
-      {
-        q: 'Hoe werkt urenregistratie voor een schoonmaakbedrijf?',
-        a: 'Elke medewerker klokt in en uit via de smartphone, per object. De urenregistratie gebeurt automatisch met GPS-verificatie en is direct zichtbaar voor het kantoor. Begintijd, eindtijd, pauzes en overwerk worden vastgelegd zoals de CAO Schoonmaak vereist, zonder papieren urenbriefjes.',
-      },
-      {
-        q: 'Wat kost software voor een schoonmaakbedrijf?',
-        a: 'GeoTapp begint bij enkele euro\'s per medewerker per maand, afhankelijk van teamgrootte en modules. U kunt 14 dagen gratis proberen, zonder creditcard en zonder verplichtingen, zo ziet u eerst of het werkt voor uw objecten.',
-      },
-    ],
-  },
-  cta: {
-    title: 'Beantwoord elke discussie met bewijs. Begin nu.',
-    subtitle: 'GeoTapp Flow en TimeTracker geven uw schoonmaakbedrijf de operationele controle en het bewijs dat u echt nodig heeft.',
-    primary: 'Demo aanvragen',
-    secondary: 'Prijzen bekijken',
-  },
+
   differenza: {
-    title: 'Tijdregistratie-software vs GeoTapp.',
-    subtitle: 'De meeste software voor schoonmaakbedrijven registreert alleen uren. GeoTapp levert bewijs van de geleverde dienst.',
+    title: 'Registratie vs controleerbaar bewijs van het werk.',
+    subtitle: 'De meeste apps leggen gegevens vast. GeoTapp levert bewijs.',
     rows: [
-      { label: 'Wat het registreert', competitor: 'In- en uitkloktijd', geotapp: 'Tijd, geverifieerde GPS, foto\'s per ruimte en gedekte objecten' },
-      { label: 'Wie kan verifiëren', competitor: 'Alleen uw kantoor', geotapp: 'U, de opdrachtgever en een derde partij, onafhankelijk' },
-      { label: 'Bij geschillen', competitor: 'Gegevens niet verdedigbaar', geotapp: 'Verzegeld rapport, elke wijziging blijft zichtbaar' },
-      { label: 'CAO Schoonmaak', competitor: 'Handmatig bij te houden', geotapp: 'Pauzes en overwerk automatisch geregistreerd' },
-      { label: 'Salarisexport', competitor: 'Los proces', geotapp: 'Compatibel met AFAS en NMBRS' },
+      {
+        label: 'Wat het vastlegt',
+        competitor: 'Tijd van aankomst/vertrek',
+        geotapp: 'Tijd + locatie bij de registratie + foto + uitgevoerde activiteit',
+      },
+      {
+        label: 'Wie kan controleren',
+        competitor: 'Alleen uw kantoor',
+        geotapp: 'U, de opdrachtgever, een derde partij, zelfstandig',
+      },
+      {
+        label: 'Bij een betwisting',
+        competitor: 'Alleen uw woord',
+        geotapp: 'Verzegeld rapport, elke wijziging zichtbaar',
+      },
+      {
+        label: 'Fotobewijs',
+        competitor: 'Afwezig of losgekoppeld',
+        geotapp: 'Bij het rapport gevoegd met tijd en locatie',
+      },
+      {
+        label: 'Naleving van de AVG',
+        competitor: 'Vaak nog te controleren',
+        geotapp: 'Gebouwd om binnen de kaders van de AVG te blijven, inclusief formulieren',
+      },
+      {
+        label: 'Overzicht bijgewerkt bij elke registratie',
+        competitor: 'Nee',
+        geotapp: 'Ja, alle locaties, alle medewerkers',
+      },
     ],
   },
+
   non_gestionale: {
-    title: 'Geen planningssoftware. Bewijssoftware.',
-    subtitle: 'Planningssoftware organiseert het werk. GeoTapp bewijst dat het is uitgevoerd.',
+    title: 'Het is niet alleen een beheersysteem.',
+    subtitle: 'Beheersystemen organiseren het werk. GeoTapp organiseert het en verzegelt het bovendien.',
     items: [
       {
         label: 'Hoofddoel',
-        gestionale: 'Roosters plannen en organiseren',
-        geotapp: 'Verifieerbaar bewijs per dienst genereren',
+        gestionale: 'Plannen en organiseren',
+        geotapp: 'Controleerbaar bewijs maken',
       },
       {
         label: 'Wat het oplevert',
-        gestionale: 'Gegevens in uw eigen systeem',
-        geotapp: 'Verzegelde rapporten die de opdrachtgever zelf controleert',
+        gestionale: 'Gegevens binnen uw eigen systeem',
+        geotapp: 'Verzegelde rapporten die derden kunnen controleren',
       },
       {
-        label: 'Bij een geschil',
-        gestionale: 'U toont cijfers die alleen u kunt lezen',
-        geotapp: 'U stuurt een rapport met GPS en foto\'s, discussie voorbij',
+        label: 'Bij een betwisting',
+        gestionale: 'U toont gegevens die alleen u kunt lezen',
+        geotapp: 'U stuurt een rapport dat de klant zelf controleert',
       },
       {
-        label: 'Naast uw huidige planning',
-        gestionale: 'Vervangt vaak het hele pakket',
-        geotapp: 'Werkt náást uw planningssoftware, export naar AFAS en NMBRS',
+        label: 'Waarde voor de klant',
+        gestionale: 'Geen, het is een intern hulpmiddel',
+        geotapp: 'Hoog: de klant controleert het zelf',
+      },
+      {
+        label: 'Fotobewijs',
+        gestionale: 'Niet voorzien of los',
+        geotapp: 'Geïntegreerd in het rapport met gps en tijdstempel',
       },
     ],
   },
-  pricing_hint: {
-    label: 'Vanaf',
-    per: 'medewerker/maand',
-    note: '14 dagen gratis proberen',
+
+  workflow: {
+    title: 'Van de werkplek naar het kantoor, elke klus wordt een bewijs.',
+    subtitle: 'Drie stappen. Geen papier. Geen telefoontjes.',
+    steps: [
+      {
+        title: 'De medewerker verzegelt het bewijs ter plaatse',
+        desc: 'Met GeoTapp TimeTracker legt hij aankomst, pauzes, vertrek, foto\'s van de ruimtes en notities vast vanaf zijn smartphone. De locatie wordt op dat moment door de telefoon bepaald, niet met de hand ingevoerd, en elke latere wijziging is zichtbaar.',
+      },
+      {
+        title: 'Het kantoor is bijgewerkt bij elke registratie',
+        desc: 'Flow toont op één scherm wie heeft geregistreerd, waar en hoe laat. U ziet de stand van elk gebouw, ontvangt een melding als een dienst open blijft staan en wijst opdrachten toe, zonder iemand achterna te zitten.',
+      },
+      {
+        title: 'Het rapport is al klaar. Verzegeld: elke wijziging is zichtbaar.',
+        desc: 'Aan het eind van de dienst maakt het systeem automatisch een verzegeld rapport met locaties, foto\'s en verzegeling. De opdrachtgever ontvangt het en controleert het zelf, zonder toegang tot uw systeem, zonder op uw woord te hoeven vertrouwen.',
+      },
+    ],
   },
+
+  features: {
+    title: 'App voor schoonmaakbedrijven: minder discussie, meer bewijs.',
+    items: [
+      {
+        title: 'Antwoord op elke betwisting met gegevens',
+        desc: 'Wanneer elke klus een controleerbaar rapport heeft, hebt u de documentatie om meteen te antwoorden. Minder mondelinge onderhandelingen die weken duren.',
+      },
+      {
+        title: 'Echt overzicht over alle locaties',
+        desc: 'U weet waar en hoe laat elke medewerker heeft geregistreerd, zodra de registratie binnenkomt, in alle gebouwen en vanaf elk apparaat. Tussen twee registraties in wordt niets automatisch vastgelegd.',
+      },
+      {
+        title: 'Rapporten die overal te verdedigen zijn',
+        desc: 'Elk rapport is verzegeld: elke wijziging is zichtbaar. Wie het ontvangt, klant, inspecteur of adviseur, kan het zelf controleren.',
+      },
+      {
+        title: 'Klaar voor de arbeidsinspectie',
+        desc: 'Tijden, pauzes, overuren en toeslagen worden dienst voor dienst vastgelegd en komen in het overzicht voor de salarisadministrateur. Bij een controle is de documentatie al op orde.',
+      },
+      {
+        title: 'Beheer van meerdere locaties zonder telefoontjes',
+        desc: 'Tientallen locaties, één scherm. U wijst opdrachten toe, ziet wie waar heeft geregistreerd en ontvangt een melding als een dienst open blijft staan.',
+      },
+      {
+        title: 'Uw personeel is beschermd',
+        desc: 'Een controleerbaar rapport geeft ook de medewerker iets in handen tegen ongegronde beschuldigingen. Wie goed werkt, toont het aan.',
+      },
+    ],
+  },
+
+  cosa_cambia: {
+    title: 'Wat er echt verandert.',
+    items: [
+      {
+        title: 'U hoeft de medewerkers niet meer te vertrouwen.',
+        desc: 'Niet omdat ze onbetrouwbaar zijn, maar omdat u dat niet hoeft te doen. Het systeem maakt het bewijs op het moment van de klus, onafhankelijk van wat ze u vertellen. Het gegeven blijft zoals het is vastgelegd.',
+      },
+      {
+        title: 'U hoeft u niet meer mondeling te verdedigen.',
+        desc: 'U hoeft niet meer uit te leggen, te rechtvaardigen, te herinneren. Wanneer een klant iets betwist, opent u het rapport en stuurt u het door. Het is niet uw woord tegen het zijne. Het is een controleerbaar document.',
+      },
+      {
+        title: 'U hebt controleerbaar bewijs. Altijd.',
+        desc: 'Elke afgesloten klus wordt automatisch een rapport: locaties, foto\'s, tijden en verzegeling. U hoeft niets extra te doen. Het systeem doet het terwijl uw medewerkers werken.',
+      },
+    ],
+  },
+
+  prova_visiva: {
+    title: 'Wat u ziet, wat de klant ziet.',
+    subtitle: 'De app voor wie in het veld werkt. Het rapport voor wie moet antwoorden.',
+  },
+
+  cta_mid: {
+    title: 'Wilt u zien hoe het werkt in een echt geval?',
+    body: 'Probeer het op een echte opdracht, van de medewerker die de klus opent tot het rapport dat de klant ontvangt: 14 dagen gratis, zonder creditcard.',
+    cta: 'Probeer het 14 dagen gratis',
+  },
+
+  testimonial: {
+    quote:
+      'Vroeger hadden we altijd wel een klant die iets betwistte. Sinds we GeoTapp gebruiken, sturen we het rapport en verandert het gesprek meteen: het gaat over gegevens, niet over woorden. De discussies worden een stuk korter.',
+    author: 'Roberta M.',
+    role: 'Operationeel verantwoordelijke, industrieel schoonmaakbedrijf - Noord-Italië',
+  },
+
+  trust: {
+    title: 'Als een rapport van ons wordt gewijzigd, is dat zichtbaar. Ook als wij het doen.',
+    body:
+      'GeoTapp-rapporten worden door het systeem gemaakt op het moment van de klus. Is het rapport eenmaal verzegeld, dan verbreekt het corrigeren van een tijd of het verplaatsen van een foto de verzegeling, en de controle meldt het. Wie het ontvangt, klant, inspecteur of adviseur, kan het zelf controleren.',
+    badge: 'Te controleren door iedereen, zonder toegang tot uw account',
+  },
+
+  faq: {
+    title: 'Veelgestelde vragen',
+    subtitle: 'Wat ons het vaakst wordt gevraagd voordat u begint.',
+    items: [
+      {
+        q: 'Is GeoTapp alleen een registratie-app voor schoonmaakbedrijven?',
+        a: 'Nee. GeoTapp is een systeem voor controleerbaar bewijs van het werk, niet alleen een registratie-app. Registratie-apps leggen een tijd vast. GeoTapp maakt een verzegeld rapport met de locatie, fotobewijzen en tijdstempel, dat de opdrachtgever zelfstandig kan controleren. Het verschil tussen "het staat er" en "het is aan te tonen".',
+      },
+      {
+        q: 'Is het compatibel met de cao voor multiservice (CCNL Multiservizi)?',
+        a: 'GeoTapp legt tijden, pauzes, overuren en toeslagen vast, nachtelijke en feestdagen inbegrepen, en exporteert ze in Excel of CSV voor de salarisadministrateur, die ze toepast volgens de Italiaanse cao voor multiservice (CCNL Multiservizi). Bij een inspectie hebt u alle documentatie klaar.',
+      },
+      {
+        q: 'Hoe beheer ik ploegen die over meerdere locaties tegelijk verdeeld zijn?',
+        a: 'Met GeoTapp Flow hebt u één scherm voor alle locaties. U ziet wie waar heeft geregistreerd zodra de registratie binnenkomt, wijst opdrachten toe en ontvangt een melding als een dienst open blijft staan. Geen telefoontjes, geen e-mails.',
+      },
+      {
+        q: 'Hoe controleer ik of de medewerkers het werk hebben uitgevoerd?',
+        a: 'Elke klus wordt geopend en afgesloten met een locatie die door de smartphone van de medewerker is vastgelegd. De medewerker stuurt de bewijsfoto\'s die aan de opdracht zijn gekoppeld, met tijd en locatie. Het rapport wordt automatisch gemaakt en is bij het afsluiten verzegeld: elke wijziging is zichtbaar.',
+      },
+      {
+        q: 'Is GeoTapp conform de AVG voor de geolocatie van werknemers?',
+        a: 'GeoTapp is gebouwd om binnen de kaders van de AVG en van de aanwijzingen van de Italiaanse toezichthouder (Garante Privacy) te blijven: het legt de locatie alleen vast wanneer de medewerker registreert (aankomst, pauzes, vertrek) of een bewijsfoto maakt, laat de privacyverklaring in de app ondertekenen voordat hij registreert en verzamelt geen onnodige gegevens.',
+      },
+      {
+        q: 'Werkt het ook voor facility management en multiservice?',
+        a: 'Ja. GeoTapp wordt gebruikt door schoonmaakbedrijven, multiservicebedrijven, facility management en elk bedrijf met medewerkers verdeeld over meerdere locaties. Het past van de ploeg van een paar mensen tot het bedrijf met honderden medewerkers, zonder ingewikkelde instellingen.',
+      },
+      {
+        q: 'Wat kost GeoTapp voor een schoonmaakbedrijf?',
+        a: 'GeoTapp Flow begint bij € 39 per maand; de TimeTracker-plaatsen voor de medewerkers kosten € 3 per maand per plaats tot 25, € 2,50 vanaf de zesentwintigste. Minimaal abonnement van 12 maanden. Eerst kunt u het 14 dagen gratis uitproberen, zonder creditcard.',
+      },
+    ],
+  },
+
+  cta: {
+    title: 'Uw medewerkers werken goed. Zorg dat het te zien is.',
+    subtitle:
+      'Elke dag wordt het werk gedaan. Het probleem is dat zonder controleerbaar bewijs, wanneer iemand iets betwist, uw woord tegen het zijne staat. GeoTapp maakt van elke klus documentatie om te tonen.',
+    primary: 'Probeer het 14 dagen gratis',
+    secondary: 'Bekijk de prijzen',
+  },
+
+  pricing_hint: {
+    label: 'TimeTracker-plaatsen vanaf',
+    per: 'per medewerker per maand, plus het Flow-plan vanaf € 39 per maand',
+    note: 'Gratis proefperiode van 14 dagen',
+  },
+
   schema_sector_name: 'Schoonmaakbedrijven',
+
   schema_faq: [
     {
-      question: 'Welke software voor schoonmaakbedrijven heb ik nodig?',
-      answer: 'Een schoonmaakbedrijf heeft software nodig die GPS-geverifieerde inklok, fotobewijs per ruimte, dienstroosters over meerdere objecten en een salarisexport combineert. GeoTapp verbindt Flow en TimeTracker in één systeem, inclusief naleving van de CAO Schoonmaak.',
+      question: 'Is GeoTapp alleen een registratie-app voor schoonmaakbedrijven?',
+      answer: 'Nee. GeoTapp is de app en software voor schoonmaak- en multiservicebedrijven die verder gaat dan registreren: het maakt verzegelde rapporten met locaties, foto\'s en tijden, die de opdrachtgever zelf controleert: geen simpel urenregister.',
     },
     {
-      question: 'Is GeoTapp schoonmaak software met fotobewijs?',
-      answer: 'Ja. Bij elke dienst fotografeert de medewerker de gereinigde ruimtes in de app. Elke foto krijgt datum, tijd en GPS en wordt aan het servicerapport gekoppeld als bewijs richting de opdrachtgever.',
+      question: 'Is het compatibel met de cao voor multiservice (CCNL Multiservizi)?',
+      answer: 'GeoTapp legt tijden, pauzes, overuren en toeslagen vast en exporteert ze in Excel of CSV voor de salarisadministrateur, die ze toepast volgens de Italiaanse cao voor multiservice (CCNL Multiservizi).',
     },
     {
-      question: 'Werkt de software voor de schoonmaakbranche met AFAS en NMBRS?',
-      answer: 'Ja. De maandelijkse export is compatibel met AFAS, NMBRS en andere Nederlandse salarispakketten, met automatische scheiding van reguliere uren, overwerk en CAO-toeslagen.',
+      question: 'Hoe beheer ik meerdere locaties tegelijk?',
+      answer: 'Eén scherm voor alle locaties. U ziet wie waar heeft geregistreerd zodra de registratie binnenkomt, wijst opdrachten toe en ontvangt een melding als een dienst open blijft staan, zonder telefoontjes.',
     },
     {
-      question: 'Hoe werkt urenregistratie voor een schoonmaakbedrijf?',
-      answer: 'Elke medewerker klokt in en uit via de smartphone, per object. De urenregistratie gebeurt automatisch met GPS-verificatie: begintijd, eindtijd, pauzes en overwerk worden vastgelegd zoals de CAO Schoonmaak vereist, zonder papieren urenbriefjes.',
+      question: 'Hoe documenteer ik dat het werk is uitgevoerd?',
+      answer: 'Elke klus wordt geopend en afgesloten met een vastgelegde locatie. De medewerker stuurt de bewijsfoto\'s die aan de opdracht zijn gekoppeld. Het rapport wordt automatisch gemaakt en is bij het afsluiten verzegeld: elke wijziging is zichtbaar.',
     },
     {
-      question: 'Wat kost software voor een schoonmaakbedrijf?',
-      answer: 'GeoTapp begint bij enkele euro\'s per medewerker per maand, afhankelijk van teamgrootte en modules. 14 dagen gratis proberen, zonder creditcard en zonder verplichtingen.',
+      question: 'Is GeoTapp conform de AVG voor de geolocatie van werknemers?',
+      answer: 'Gebouwd om binnen de kaders van de AVG te blijven: het legt de locatie alleen vast wanneer de medewerker registreert of een bewijsfoto maakt, nooit doorlopend, en laat de privacyverklaring in de app ondertekenen voordat hij registreert.',
+    },
+    {
+      question: 'Werkt het ook voor facility management en multiservice?',
+      answer: 'Ja. GeoTapp past bij schoonmaakbedrijven, multiservice en facility management, van de ploeg van een paar mensen tot het bedrijf met honderden medewerkers.',
+    },
+    {
+      question: 'Wat kost het?',
+      answer: 'GeoTapp Flow vanaf € 39 per maand, plus de TimeTracker-plaatsen vanaf € 3 per medewerker per maand. Minimaal abonnement van 12 maanden. Eerst kunt u het 14 dagen gratis uitproberen, zonder creditcard.',
     },
   ],
 };

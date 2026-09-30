@@ -254,7 +254,7 @@ const CONTENUTI: Record<AvLocale, AvContenuto> = {
     vediRisultato: 'Bekijk het resultaat',
     ricomincia: 'Opnieuw beginnen',
     punteggio: 'Score',
-    areeTitolo: 'Te herziene punten',
+    areeTitolo: 'Punten om te herzien',
     tuttoOk: 'U hebt overal "ja" geantwoord: een uitstekende basis. Houd wat u verklaart op termijn in lijn met wat u werkelijk doet.',
     privacyNote: 'Alles draait in uw browser: geen antwoord wordt verzonden of ergens opgeslagen. Het is hetzelfde minimalisatiebeginsel waar de vragen over gaan.',
     domande: [
@@ -262,7 +262,7 @@ const CONTENUTI: Record<AvLocale, AvContenuto> = {
       { id: 'minimizzazione', testo: 'Verzamelt u alleen de gegevens die strikt nodig zijn voor dat doel (bijv. de locatie alleen bij het inklokken, niet doorlopend)?', feedback: 'Houd alleen wat u echt nodig hebt. De hele dag de locatie volgen terwijl in- en uitkloktijden volstaan is het klassieke teveel dat boetes oplevert.' },
       { id: 'base-giuridica', testo: 'Hebt u een rechtsgrond anders dan toestemming bepaald (bijv. contractuele verplichting of gerechtvaardigd belang)?', feedback: 'In een arbeidsrelatie houdt toestemming bijna nooit stand, omdat de werknemer niet vrij is om nee te zeggen. Steun op het contract, een wettelijke verplichting of het gerechtvaardigd belang, en leg het schriftelijk vast.' },
       { id: 'informativa', testo: 'Hebt u werknemers een privacyverklaring gegeven die uitlegt wat u verzamelt, waarom en hoe lang (art. 13 AVG)?', feedback: 'Werknemers hebben het recht te weten wat u verwerkt en waarom. Hebt u geen verklaring, begin dan bij de generator hier bij de bronnen en overhandig ze voordat u het systeem inschakelt.' },
-      { id: 'conservazione', testo: 'Hebt u vastgelegd hoe lang u elk type gegeven bewaart en verwijdert u ze na afloop?', feedback: 'Gegevens bewaart men niet "voor altijd, je weet maar nooit". Stel voor elk type een termijn vast en verwijder na afloop: de generator voor het bewaarbeleid hiernaast geeft u indicatieve termijnen.' },
+      { id: 'conservazione', testo: 'Hebt u vastgelegd hoe lang u elk type gegeven bewaart en verwijdert u ze na afloop?', feedback: 'Gegevens bewaart men niet "voor altijd, het kan nooit kwaad". Stel voor elk type een termijn vast en verwijder na afloop: de generator voor het bewaarbeleid hiernaast geeft u indicatieve termijnen.' },
       { id: 'tracciamento', testo: 'Vermijdt u het registreren van de locatie buiten werktijd of tijdens pauzes?', feedback: 'De geolocatie stopt wanneer het werk stopt. Een werknemer in zijn vrije tijd of pauze volgen is een van de ernstigste en makkelijkst aanvechtbare misbruiken.' },
       { id: 'rappresentanza', testo: 'Hebt u, waar een werknemersvertegenwoordiging bestaat, deze betrokken vóór het activeren van het systeem?', feedback: 'Een systeem dat activiteit kan controleren wordt vooraf afgestemd, niet achteraf. Waar er een ondernemingsraad of vakbond is, moeten ze worden betrokken: in veel landen een verplichting, geen beleefdheid.' },
       { id: 'riutilizzo', testo: 'Vermijdt u de verzamelde gegevens te gebruiken voor andere dan het verklaarde doel (bijv. niet voorziene beoordelingen of maatregelen)?', feedback: 'Een gegeven dat is verzameld om de teams te organiseren kan niet het bewijs worden voor een verrassend ontslag. Gegevens gebruiken voor nieuwe, niet verklaarde doelen is een duidelijke schending.' },
@@ -276,7 +276,7 @@ const CONTENUTI: Record<AvLocale, AvContenuto> = {
     risorseTitolo: 'Hulpmiddelen om de leemtes te dichten',
     risorse: { mappa: 'Kaart: regels land per land in de EU', generatore: 'Genereer de privacyverklaring (art. 13)', conservazione: 'Genereer het bewaarbeleid', blog: 'Meer op de blog' },
     faq: { title: 'Veelgestelde vragen', items: [
-      { q: 'Heeft deze test juridische waarde?', a: 'Nee: het is een zelfdiagnose-instrument om te zien waar u staat, geen certificering. Het helpt leemtes te zien en te weten waaraan te werken. Een formele toetsing vereist een professional.' },
+      { q: 'Heeft deze test juridische waarde?', a: 'Nee: het is een zelfdiagnose-instrument om te zien waar u staat, geen keurmerk. Het helpt leemtes te zien en te weten waaraan te werken. Een formele toetsing vereist een professional.' },
       { q: 'Worden mijn antwoorden opgeslagen?', a: 'Nee. Alles draait in uw browser en wordt nergens verzonden of opgeslagen. Het is hetzelfde data-minimalisatiebeginsel waar de vragen over gaan.' },
       { q: 'Geldt het alleen voor wie gps gebruikt?', a: 'Nee. De vragen dekken alle personeelsgegevens — aanwezigheid, foto\'s, communicatie, beoordelingen — niet alleen de locatie. Ze passen bij elk bedrijf met werknemers.' },
     ] },

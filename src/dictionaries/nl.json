@@ -6,7 +6,7 @@
     "blog": "Blog",
     "contact": "Contact",
     "login": "Inloggen",
-    "cta": "Demo aanvragen",
+    "cta": "Start de gratis proefperiode",
     "cta_trial": "Gratis proberen",
     "cta_how": "Bekijk hoe het werkt",
     "cta_start": "Start proefperiode",
@@ -27,13 +27,16 @@
     "product_flow_desc": "Operationeel beheer van interventies en teams",
     "product_app_desc": "Mobiele app voor buitendiensttechnici",
     "product_verifier_desc": "Integriteitsverificatie van werkrapporten",
-    "compare": "Vergelijking"
+    "compare": "Vergelijking",
+    "aria_cart": "Winkelwagen",
+    "aria_menu": "Menu openen",
+    "aria_close": "Menu sluiten"
   },
   "risorseHub": {
     "metaTitle": "Bronnen - GeoTapp",
     "metaDesc": "Gratis tools en bronnen van GeoTapp: de gids over GPS-monitoring van werknemers in Europa, de ROI-calculator en de enquête over werkbewijs.",
     "h1": "Bronnen",
-    "intro": "Gratis tools, gidsen en data om veldwerk aantoonbaar te maken.\nWe houden ze actueel en voegen er nieuwe toe.",
+    "intro": "Gratis tools, gidsen en gegevens om werk in het veld aantoonbaar te maken.\nWe houden ze actueel en voegen er nieuwe toe.",
     "cards": {
       "gps": {
         "title": "GPS-monitoring van werknemers in de EU",
@@ -41,43 +44,43 @@
       },
       "dossier": {
         "title": "Compliancedossier",
-        "desc": "Wat GeoTapp wel en niet doet, met de AVG, medezeggenschap en grenzen die helder benoemd zijn."
+        "desc": "Wat GeoTapp wel en niet doet, met de AVG, artikel 4 van het Italiaanse arbeidsstatuut en de grenzen, zonder omwegen."
       },
       "gpsPresenze": {
         "title": "GPS voor aanwezigheid, zonder volgen",
-        "desc": "Kan de locatie alleen bij het klokken worden vastgelegd zonder medewerkers te volgen? Ja: wat een Italiaanse rechter besliste en wat GeoTapp echt registreert."
+        "desc": "Kan de locatie alleen bij het inklokken worden vastgelegd zonder medewerkers te volgen? Ja: wat de rechtbank van Cosenza zegt en wat GeoTapp echt registreert."
       },
       "autovalutazione": {
         "title": "Bent u in orde met de gegevens?",
-        "desc": "Snelle test van 9 vragen over de bescherming van werknemersgegevens: score en te herstellen punten. Gratis, in uw browser."
+        "desc": "Snelle test van 9 vragen over de bescherming van werknemersgegevens: score en punten om te verbeteren. Gratis, in uw browser."
       },
       "generatore": {
         "title": "GPS-verklaring-generator",
-        "desc": "Maak uw voorbeeld van een GPS-privacyverklaring met uw logo, opgesteld volgens de AVG-richtlijnen. Gratis, in uw browser."
+        "desc": "Maak een voorbeeld van een GPS-privacyverklaring met uw logo, opgesteld met het oog op de AVG. Gratis, in uw browser."
       },
       "conservazione": {
         "title": "Bewaarbeleid voor gegevens",
-        "desc": "Genereer de HR-bewaartabel per land: aanbevolen termijnen, juridische noot en export. Gratis, in uw browser."
+        "desc": "Genereer de bewaartabel voor personeelsgegevens per land: aanbevolen termijnen, juridische noot en export. Gratis, in uw browser."
       },
       "sanzioni": {
         "title": "GPS-boetecalculator",
-        "desc": "Kies een land en ontdek hoeveel je riskeert bij het monitoren van werknemers: reële maximumboete en verplichtingen die je blootstellen."
+        "desc": "Kies een land en zie hoeveel u riskeert als u werknemers monitort: de hoogste boete die echt is opgelegd of het wettelijk maximum, en de verplichtingen die u blootstellen."
       },
       "osservatorio": {
         "title": "Europees observatorium",
-        "desc": "Besluiten van Europese privacytoezichthouders over locatiegegevens, cameratoezicht en tijdregistratie, elk met de link naar de officiële bron."
+        "desc": "Besluiten van Europese toezichthouders over geolocatie, cameratoezicht en tijdregistratie op het werk, elk met de link naar het officiële document."
       },
       "indice": {
         "title": "Index werknemerstoezicht in Europa",
-        "desc": "De ranglijst van 39 Europese landen naar hoe streng hun kader voor werknemersmonitoring is."
+        "desc": "Wat de besluiten van Europese toezichthouders over het controleren van werknemers in cijfers zeggen: hoeveel, over welke onderwerpen, de hoogste boetes."
       },
       "roi": {
         "title": "ROI-calculator",
-        "desc": "Schat hoeveel tijd en geld je terugwint met GeoTapp in je veldwerk."
+        "desc": "Schat hoeveel tijd en geld u terugwint door GeoTapp te gebruiken bij uw werk in het veld."
       },
       "survey": {
         "title": "Enquête: het werkbewijs",
-        "desc": "Twee minuten, anoniem: vertrouw je op iemands woord of heb je bewijs nodig? Help ons een echt probleem te begrijpen."
+        "desc": "Twee minuten, anoniem: vertrouwt u op iemands woord of hebt u bewijs nodig? Help ons een echt probleem te begrijpen."
       }
     },
     "faq": {
@@ -85,85 +88,85 @@
       "items": [
         {
           "q": "Zijn de bronnen gratis?",
-          "a": "Ja, allemaal. De kaarten, de rekentools, de generator voor privacyverklaringen en de landendossiers zijn gratis te gebruiken. Zo delen we wat we hebben bestudeerd over het volgen van werknemers, ook als je nooit klant wordt."
+          "a": "Ja, allemaal. De kaarten, de rekentools, de generator voor de privacyverklaring en de dossiers per land zijn gratis te gebruiken. Zo stellen we beschikbaar wat we hebben uitgezocht over het monitoren van werknemers, ook als u nooit klant wordt."
         },
         {
-          "q": "Moet ik me aanmelden of mijn e-mail achterlaten om ze te gebruiken?",
-          "a": "Nee. Je opent de tool en gebruikt hem. De generator voor privacyverklaringen draait binnen je browser en stuurt je gegevens nergens heen; de andere tools vragen geen account. Wil je op de hoogte blijven, dan kun je je e-mail achterlaten, maar dat is jouw keuze, geen tol."
+          "q": "Moet ik me aanmelden of mijn e-mailadres achterlaten om ze te gebruiken?",
+          "a": "Nee. U opent de tool en gebruikt hem. De generator voor de privacyverklaring werkt in uw browser en stuurt uw gegevens nergens naartoe; de andere tools vragen geen account. Wilt u op de hoogte blijven, dan kunt u uw e-mailadres achterlaten, maar dat is uw keuze, geen toegangsprijs."
         },
         {
           "q": "Kan ik de juridische informatie hier vertrouwen?",
-          "a": "Ze is opgebouwd uit nationale wetgeving en echte beslissingen van de autoriteiten, met de bron erbij en een verificatiedatum. Toch blijft het een informatieve bron, geen juridisch advies: laat je situatie door een professional nakijken voordat je een toezichtsysteem aanzet."
+          "a": "Ze zijn gebouwd op nationale wetgeving en echte besluiten van toezichthouders, met de bron erbij en een controledatum. Toch blijven ze informatie en geen juridisch advies: laat uw situatie door een professional beoordelen voordat u een monitoringsysteem inschakelt."
         },
         {
           "q": "Mag ik deze tools op mijn eigen site gebruiken?",
-          "a": "Ja. De kaart met gps voor werknemers kun je insluiten met de code op de bijbehorende pagina, en de bronnen mag je citeren door naar de bron te linken. Heb je een vakblog of adviseer je bedrijven, dan zijn ze ook daarvoor bedoeld."
+          "a": "Ja. De kaart over gps bij werknemers kunt u insluiten met de code op de bijbehorende pagina, en de bronnen mag u citeren met een link naar de bron. Beheert u een vakblog of volgt u bedrijven, dan zijn ze daar ook voor bedoeld."
         },
         {
           "q": "Zijn ze alleen nuttig als ik GeoTapp gebruik?",
-          "a": "Nee, ze staan op zichzelf. We hebben ze gebouwd zodat iedereen die mensen het veld in stuurt begrijpt wat conformiteit vraagt, met of zonder GeoTapp. Wil je daarna een systeem dat al is ingesteld om de locatie alleen bij het inklokken vast te leggen en niet continu, dan is het er, maar de bronnen zijn hoe dan ook nuttig."
+          "a": "Nee, ze staan op zichzelf. We hebben ze gemaakt zodat iedereen die mensen het veld in stuurt begrijpt wat er nodig is om in orde te zijn, of u nu GeoTapp gebruikt of niet. Zoekt u daarna een systeem dat de locatie alleen bij het inklokken vastlegt en nooit doorlopend, dan is GeoTapp zo gebouwd; de bronnen blijven hoe dan ook nuttig."
         },
         {
           "q": "Voor wie zijn ze bedoeld?",
-          "a": "Voor iedereen met teams die buiten de deur werken: schoonmaakbedrijven, installateurs, beveiliging, onderhoud, bouw. Iedereen die moet bewijzen waar en wanneer een klus is gedaan, en dat wil doen zonder werknemers de hele dag in stipjes op een kaart te veranderen."
+          "a": "Voor wie teams heeft die buiten de deur werken: schoonmaakbedrijven, installateurs, beveiliging, onderhoud, bouw. Iedereen die moet aantonen waar en wanneer een klus is uitgevoerd, en dat wil doen zonder de medewerkers de hele dag tot stipjes op een kaart te maken."
         }
       ]
     }
   },
   "footer": {
-    "tagline": "Buitendienstactiviteit geregistreerd. Operaties georganiseerd. Rapporten verifieerbaar.",
-    "privacy": "Privacybeleid",
+    "tagline": "Veldwerk vastgelegd. Werkzaamheden georganiseerd. Verifieerbare rapporten.",
+    "privacy": "Privacyverklaring",
     "terms": "Gebruiksvoorwaarden",
     "rights": "Alle rechten voorbehouden.",
     "newsletter_title": "Blijf op de hoogte van de sector",
-    "newsletter_desc": "Geen spam, alleen waardevolle updates over operationeel beheer, HR en technologie voor het MKB.",
+    "newsletter_desc": "Geen spam, alleen waardevolle updates over het organiseren van veldwerk, personeelsbeheer en digitale tools voor kleine bedrijven.",
     "sectors": "Sectoren",
     "contact": "Contact"
   },
   "landing": {
-    "us_badge": "🇺🇸 Serving US teams, chat support 9am-6pm ET. USD invoicing available on request.",
-    "hero_badge": "Het werk is gedaan. Maak het nu bewijsbaar.",
-    "hero_title": "Als u het niet kunt bewijzen, zegt de klant dat het nooit is gebeurd.",
-    "hero_subtitle": "GeoTapp verandert elke velddienst in objectief bewijs: verzegelde rapporten met echte GPS-gegevens, tijdgestempeld fotobewijs en documentatie die iedereen onafhankelijk kan verifiëren, zonder vertrouwen, zonder geschillen.",
-    "hero_cta_primary": "Start gratis proefperiode",
+    "us_badge": "🇺🇸 Voor teams in de VS: chatsupport van 9.00 tot 18.00 uur ET, facturering in USD op aanvraag.",
+    "hero_badge": "Het werk is gedaan. Maak het nu aantoonbaar.",
+    "hero_title": "Als u het niet kunt bewijzen, is het voor de klant nooit gebeurd.",
+    "hero_subtitle": "GeoTapp maakt van elke klus een bewijs: verzegelde rapporten met locatie, foto's en tijden, die de klant zelf kan controleren, zonder op uw woord te hoeven vertrouwen.",
+    "hero_cta_primary": "Start de gratis proefperiode",
     "hero_cta_secondary": "Sectoren ontdekken",
     "hero_cta_report": "Bekijk een verzegelde werkbon",
     "trust_gdpr": "Geen doorlopende tracking",
-    "trust_gdpr_desc": "Alleen tijdstempel bij in- en uitklokken",
+    "trust_gdpr_desc": "Locatie alleen bij het inklokken: aankomst, pauzes, vertrek",
     "trust_gps": "GPS-bewijs",
     "trust_gps_desc": "Elke interventie verzegeld met locatie en tijdstempel",
     "trust_offline": "Offline verificatie",
     "trust_offline_desc": "Eén bestand, zonder account en zonder netwerk",
     "trust_eu_data": "Data in Europa",
     "features_title": "Van interventie naar verifieerbaar bewijs",
-    "features_subtitle": "Drie geïntegreerde tools: het veld registreert, het kantoor controleert, de klant verifieert.",
+    "features_subtitle": "Drie geïntegreerde tools: het veld registreert, het kantoor organiseert, de klant verifieert.",
     "cta_title": "Het werk is gedaan. Bewijs het nu.",
     "cta_subtitle": "Geen enkele klus blijft zonder documentatie, en elk uur dat uit het veld komt, komt al verifieerbaar binnen.",
-    "cta_button": "30-minuten demo boeken",
-    "problem_title": "Het probleem dat je al kent",
-    "problem_subtitle": "Wie het bewijs heeft hoeft niets uit te leggen, wie iets uitlegt heeft geen bewijs.",
+    "cta_button": "Start de gratis proefperiode",
+    "problem_title": "Het probleem dat u al kent",
+    "problem_subtitle": "Wie het bewijs heeft, hoeft niets uit te leggen; wie moet uitleggen, heeft het bewijs niet.",
     "problem_items": [
       {
-        "title": "De klant ontkent het. Jij hebt geen bewijs.",
-        "desc": "De werkzaamheid heeft plaatsgevonden. Maar zonder verifieerbare documentatie staat jouw woord tegen het zijne. En vaak wint hij."
+        "title": "De klant ontkent het. U hebt geen bewijs.",
+        "desc": "De klus is uitgevoerd. Maar zonder verifieerbare documentatie staat uw woord tegen het zijne. En vaak wint hij."
       },
       {
         "title": "Het rapport komt onvolledig, te laat of helemaal niet.",
-        "desc": "Papieren formulieren, WhatsApp, e-mails. Gegevens gaan verloren, worden aangepast, vergeten. Reconstructie achteraf is duur en onbetrouwbaar."
+        "desc": "Papieren formulieren, WhatsApp, e-mails. Gegevens gaan verloren, worden aangepast, worden vergeten. Achteraf reconstrueren is duur en onbetrouwbaar."
       },
       {
-        "title": "Niet-gedocumenteerd werk bestaat niet.",
-        "desc": "Elk niet-geregistreerd uur is een onbetaald uur. Elke werkzaamheid zonder bewijs is een werkzaamheid die de klant kan betwisten."
+        "title": "Werk dat niet gefactureerd is, bestaat niet.",
+        "desc": "Elk uur zonder documentatie is een onbetaald uur. Elke klus zonder bewijs is een klus die de klant kan betwisten."
       }
     ],
-    "report_section_title": "Het rapport. Geen samenvatting. Een bewijs.",
-    "report_section_subtitle": "Elk GeoTapp-rapport wordt automatisch gegenereerd uit echte veldgegevens.",
-    "report_section_body": "GPS-registraties, foto's met de tijd erop, veldnotities. De gegevens sluiten zich bij het genereren en daarna raakt niemand ze meer aan. Als de twijfel komt legt u niets uit, u laat het zien, en wat u laat zien is geen document voor de klant, het is het einde van de discussie.",
-    "report_feature_1": "Verzegeld na aanmaak, elke wijziging is detecteerbaar",
-    "report_feature_2": "Verifieerbaar zonder account, door iedereen, zelfstandig",
-    "report_feature_3": "GPS- en fotogegevens geïntegreerd en onscheidbaar",
-    "report_feature_4": "Automatisch gegenereerd, geen handmatige invulling",
-    "report_cta": "Zie hoe uw klant zelf verifieert",
+    "report_section_title": "Het rapport is geen samenvatting: het is bewijs.",
+    "report_section_subtitle": "Elk GeoTapp-rapport wordt automatisch opgebouwd uit de gegevens die in het veld zijn vastgelegd.",
+    "report_section_body": "Registraties met locatie, foto's met de tijd erop, notities uit het veld. De gegevens worden verzegeld zodra het rapport wordt gemaakt, en vanaf dan is elke wijziging zichtbaar. Komt er twijfel, dan hoeft u niets uit te leggen: u laat het rapport zien, en de klant controleert het zelf.",
+    "report_feature_1": "Verzegeld bij het aanmaken, elke wijziging is zichtbaar",
+    "report_feature_2": "Te controleren zonder account, door iedereen, zelfstandig",
+    "report_feature_3": "GPS- en fotogegevens geïntegreerd en niet te scheiden",
+    "report_feature_4": "Automatisch opgebouwd, niets handmatig invullen",
+    "report_cta": "Zie hoe de klant het zelf controleert",
     "hero_sectors_prefix": "Ideaal voor",
     "hero_sectors_pulizie": "schoonmaakbedrijven",
     "hero_sectors_installatori": "installateurs",
@@ -171,148 +174,150 @@
     "hero_sectors_and": "en",
     "clockin_demo": {
       "step_clock": "Inklokken",
-      "step_gps": "GPS gecontroleerd",
+      "step_gps": "Locatie gecontroleerd",
       "step_photo": "Foto ter plaatse",
       "step_sealed": "Verzegeld",
-      "caption": "Eén klokslag. GPS, foto en tijd, verzegeld. Niet over te doen, niet over te discussiëren.",
+      "caption": "Eén registratie: locatie, foto en tijd, verzegeld in het rapport. Elke latere wijziging is zichtbaar.",
       "replay": "Opnieuw bekijken"
     },
     "roi_mini": {
-      "title": "Wat kost het je als je het niet kunt bewijzen?",
-      "subtitle": "Drie cijfers, een eerlijke schatting. In twee seconden, zonder e-mail.",
+      "title": "Wat kost het u als u het niet kunt bewijzen?",
+      "subtitle": "Drie cijfers, een eerlijke schatting. Direct, zonder e-mailadres.",
       "field_operatori": "Medewerkers",
       "field_costo": "Uurtarief (€)",
       "field_contestazioni": "Geschillen per maand",
-      "result_prefix": "Je laat per jaar ongeveer",
-      "result_suffix": "liggen",
-      "disclaimer": "Minimale schatting (geschillen + coördinatie). De volledige rekening, post voor post, staat in het rapport.",
-      "email_label": "Wil je het gedetailleerde rapport en de vergelijking met jouw sector?",
-      "email_placeholder": "Je zakelijke e-mail",
-      "email_cta": "Stuur me het rapport + start de proef",
-      "email_ok": "Klaar. Kijk zo even in je mailbox.",
+      "result_prefix": "U laat ongeveer",
+      "result_suffix": "per jaar liggen",
+      "disclaimer": "Minimale schatting (geschillen + coördinatie). De volledige berekening, post voor post, staat in de ROI-calculator.",
+      "email_label": "Wilt u het gedetailleerde rapport en de vergelijking met uw sector?",
+      "email_placeholder": "Uw zakelijke e-mailadres",
+      "email_cta": "Stuur mij het rapport + start de proefperiode",
+      "email_ok": "Klaar. Kijk zo even in uw mailbox.",
       "email_err": "Er ging iets mis. Probeer het opnieuw.",
       "pitch_kicker": "ROI-calculator",
-      "pitch_title": "De cijfers die je niet bekijkt, zijn de cijfers die je geld kosten.",
-      "pitch_body": "De uren aan administratie, de geschillen die u betaalt, de coördinatie op de gang. U voelt ze niet van de rekening gaan, maar ze gaan. Vul drie cijfers in en zie wat een jaar oplevert. Meestal verrast het, en niet positief.",
+      "pitch_title": "De cijfers die u niet bekijkt, zijn de cijfers die u geld kosten.",
+      "pitch_body": "De uren aan administratie, de geschillen die u zelf betaalt, de coördinatie die mondeling gebeurt. U ziet ze niet van de rekening gaan, maar ze gaan wel. Vul drie cijfers in en kijk wat het op een jaar kost. Meestal valt het tegen.",
       "pitch_points": [
-        "Elke onbetaalde betwisting weegt, twaalf maanden per jaar",
-        "Uren op kantoor zijn uren die je niet factureert",
-        "Twee seconden en geen e-mail om het cijfer te zien"
+        "Elke betwisting die onbetaald blijft, weegt mee, twaalf maanden per jaar",
+        "Uren op kantoor zijn uren die u niet factureert",
+        "Drie cijfers en geen e-mailadres om het resultaat te zien"
       ]
     },
-    "proof_note": "Bewijs uitsluitend via de camera vastgelegd, geen doorlopende tracking.",
-    "proof_claim": "Tussen in- en uitklokken leggen we niets vast.",
-    "sticky_cta_subtitle": "14 dagen gratis, geen creditcard"
+    "proof_note": "Bewijsfoto's gemaakt in de app, geen doorlopende tracking.",
+    "proof_claim": "Tussen twee registraties in leggen we niets automatisch vast.",
+    "sticky_cta_subtitle": "14 dagen gratis, geen creditcard",
+    "trial_cta_headline": "Probeer het 14 dagen gratis",
+    "trial_cta_subtitle": "Geen creditcard nodig"
   },
   "home_sections": {
     "flow": {
       "badge": "GeoTapp Flow",
-      "title": "Coördineer de buitendienst vanuit één operationeel centrum.",
-      "subtitle": "Flow is het systeem dat kantoor gebruikt om werkbeurten te beheren, activiteiten toe te wijzen, voortgang bij te houden en gestructureerde werkbonnen te genereren. <strong class=\"text-slate-900\">Minder interne wrijving, meer echte controle.</strong><br/><br/><em>Uw bedrijf is een levend organisme. Elke opdracht, elke taak, elke medewerker is een hartslag. GeoTapp Flow houdt ze allemaal gesynchroniseerd.</em>",
+      "title": "Het kantoor ziet elke registratie zodra die binnenkomt.",
+      "subtitle": "Flow is het operationele centrum van het kantoor: opdrachten, taken, voortgang en gestructureerde rapporten. <strong class=\"text-slate-900\">Het veld werkt. Het kantoor weet.</strong>",
       "features": {
-        "crm": "<strong>Werkbeurtbeheer:</strong> Maak interventies aan, wijs monteurs toe en volg de voortgang zodra ze wordt bijgewerkt.",
-        "pipeline": "<strong>Gestructureerde werkbonnen:</strong> Elke voltooide werkbeurt genereert traceerbare documentatie klaar voor de klant."
+        "crm": "<strong>Opdrachtenbeheer:</strong> Elke klus wordt gestructureerd aangemaakt, met toegewezen monteur, locatie en direct bijgewerkte status.",
+        "pipeline": "<strong>Automatische documentatie:</strong> Elke afgeronde klus levert een kant-en-klaar rapport op, zonder handmatig invullen."
       },
       "link": "Ontdek GeoTapp Flow"
     },
     "app": {
       "badge": "GeoTapp TimeTracker",
-      "title": "De monteur registreert. Het kantoor controleert.",
-      "subtitle": "TimeTracker is de mobiele app die het bewijs uit het veld verzamelt, aanmelden, afmelden, foto's met de tijd erop, notities. Alles gekoppeld aan de klus, alles verzegeld. <strong>Beschikbaar voor Android en iOS.</strong>",
+      "title": "De monteur registreert. Het bewijs ontstaat.",
+      "subtitle": "TimeTracker is de mobiele app die het bewijs uit het veld verzamelt: aankomst, pauzes, vertrek, foto's met de tijd erop, notities. Alles gekoppeld aan de klus en verzegeld in het rapport. <strong>Beschikbaar op Android en iOS.</strong>",
       "card_gps": {
-        "title": "GPS-tijdregistratie",
-        "desc": "Geverifieerde locatie"
+        "title": "GPS-bewijs",
+        "desc": "Locatie en tijd vastgelegd bij elke registratie"
       },
       "card_gdpr": {
         "title": "Geen doorlopende tracking",
-        "desc": "Geen continue tracking"
+        "desc": "Tussen twee registraties in wordt niets automatisch vastgelegd"
       },
       "link": "Ontdek GeoTapp TimeTracker"
     },
     "verifier": {
       "badge": "GeoTapp Verifier",
-      "title": "U hoeft niet dat ze u vertrouwen.",
-      "subtitle": "Uw woord komt er niet aan te pas. De klant opent het rapport en controleert het zelf, zonder in te loggen bij GeoTapp. Kloppen de gegevens met het echte werk, dan houdt het rapport stand. Heeft iemand het document aangepast, dan houdt het geen stand meer. Zonder beroep.",
+      "title": "Ze hoeven u niet te vertrouwen.",
+      "subtitle": "Uw woord speelt geen rol. De klant opent het rapport en controleert het zelf, zonder in te loggen bij GeoTapp. Heeft niemand het document aangeraakt, dan bevestigt de controle dat. Heeft iemand het gewijzigd, dan meldt de controle dat.",
       "features": {
-        "integrity": "<strong>Verzegelde gegevens:</strong> Het rapport wordt gegenereerd op echte veldgegevens en vergrendeld. Elke wijziging maakt het ongeldig, zonder beroep.",
-        "independent": "<strong>Autonome verificatie:</strong> Iedereen met het rapport kan de authenticiteit controleren, geen account, geen platformtoegang."
+        "integrity": "<strong>Verzegelde gegevens:</strong> Het rapport wordt verzegeld op het moment dat het wordt gemaakt. Elke latere wijziging wordt door de controle gemeld.",
+        "independent": "<strong>Zelfstandige controle:</strong> Iedereen die het rapport heeft, kan de integriteit ervan controleren, zonder account en zonder toegang tot het platform."
       },
       "link": "Ontdek GeoTapp Verifier"
     },
     "core": {
       "badge": "GeoTapp-platform",
-      "title": "Eén systeem, drie niveaus van zekerheid",
-      "subtitle": "TimeTracker registreert in het veld. Flow organiseert op kantoor. Verifier bevestigt dat alles overeenkomt.",
+      "title": "Eén systeem, drie tools",
+      "subtitle": "TimeTracker registreert in het veld. Flow organiseert op kantoor. Met Verifier controleert de klant of het rapport niet is aangeraakt. Eén cyclus, van het veld tot de klant.",
       "features": [
         {
-          "title": "Echte mobiele operabiliteit",
-          "desc": "TimeTracker registreert in- en uitklokken en pauzes met GPS. Elk gegeven dat vanuit het veld wordt verzonden is authentiek, met locatie en tijdstempel."
+          "title": "De gegevens ontstaan in het veld",
+          "desc": "TimeTracker legt aankomst, pauzes en vertrek vast met locatie en tijd, plus de foto's die het werk bewijzen."
         },
         {
-          "title": "Privacy by design",
-          "desc": "Locatie wordt <strong>uitsluitend</strong> geregistreerd bij in- en uitklokken. Geen continue tracking."
+          "title": "Locatie alleen bij het inklokken",
+          "desc": "De locatie wordt <strong>alleen</strong> vastgelegd wanneer de medewerker registreert (aankomst, pauzes, vertrek) of een bewijsfoto maakt. Tussen twee registraties in wordt er niets automatisch vastgelegd."
         },
         {
-          "title": "Operationele controle bij elke klokregistratie",
-          "desc": "Veldgegevens komen direct in Flow aan zodra ze worden vastgelegd. Het kantoor ziet elke klokregistratie zonder iemand te bellen."
+          "title": "Operationeel overzicht bij elke registratie",
+          "desc": "De gegevens uit het veld komen in Flow binnen zodra ze worden vastgelegd. De verantwoordelijke ziet de registraties zonder iemand te hoeven bellen."
         },
         {
-          "title": "Verdedigbaar bewijs over tijd",
-          "desc": "Elk rapport wordt vergrendeld op echte veldgegevens, verzegeld na aanmaak. Geschil? De data zijn er. Door iedereen verifieerbaar. Altijd."
+          "title": "Bewijs dat controleerbaar blijft",
+          "desc": "Elk rapport wordt verzegeld op de gegevens uit het veld. Komt er een geschil, dan zijn de gegevens er, en iedereen kan controleren of het rapport niet is gewijzigd. Ook over jaren, ook zonder ons."
         }
       ]
     },
     "footer_cta": {
-      "title": "Het werk is bewezen. Ga nu naar huis.",
-      "subtitle": "Eén tik op locatie verzegelt het bewijs, en het rapport schrijft zichzelf, klaar voor de klant. Geen vrijdagavonden meer om de week uit je geheugen te reconstrueren. Als je uitklokt, ben je echt klaar, en de avond is weer van jou.",
-      "button": "Neem contact op",
-      "pricing_link": "Zie plannen en prijzen →"
+      "title": "Het werk is aangetoond. Ga nu naar huis.",
+      "subtitle": "U klokt in op de bouwplaats en het rapport stelt zichzelf samen uit de gegevens van de dienst, klaar voor de klant. Geen vrijdagavonden meer om de week uit het hoofd te reconstrueren. Als u uitklokt, bent u echt klaar, en is de avond weer van u.",
+      "button": "Schrijf ons",
+      "pricing_link": "Bekijk de abonnementen en prijzen →"
     },
     "settori": {
-      "title": "Verifieerbare documentatie voor elke sector - GeoTapp-oplossingen",
-      "subtitle": "Kies uw sector om te zien hoe GeoTapp werkbewijzen genereert, te tonen aan de klant bij een geschil.",
+      "title": "Verifieerbare documentatie voor elke sector",
+      "subtitle": "Kies uw sector en zie hoe GeoTapp bewijs van het uitgevoerde werk genereert, om aan de klant te tonen bij een geschil.",
       "see_all": "Alle ondersteunde sectoren bekijken",
       "installatori": {
         "name": "Installateurs",
-        "desc": "Elektriciens, Loodgieters, Installateurs. Elke opdracht gedocumenteerd met GPS en foto's, verzegelde data, controleerbaar door de klant.",
-        "cta": "Elke opdracht bewijzen"
+        "desc": "Elektriciens, loodgieters, installateurs. Elke klus vastgelegd met GPS en foto's, verzegelde gegevens, te controleren door de klant.",
+        "cta": "Toon elke klus aan"
       },
       "sicurezza": {
         "name": "Beveiliging",
-        "desc": "Bewakers, Stewards, Fiduciaire diensten. Controleerbare aanwezigheid, gedocumenteerde diensten met objectief bewijs.",
-        "cta": "Aanwezigheid bewijzen"
+        "desc": "Bewaking, stewards, vertrouwensdiensten. Controleerbare aanwezigheid, gedocumenteerde diensten met objectief bewijs.",
+        "cta": "Bewijs de aanwezigheid bij de klant"
       },
       "pulizie": {
         "name": "Schoonmaak",
-        "desc": "Schoonmaakbedrijven, Facility, Multiservice. Elke ronde gedocumenteerd en controleerbaar door de opdrachtgever, minder geschillen.",
-        "cta": "Geschillen vermijden"
+        "desc": "Schoonmaakbedrijven, facility, multiservice. Elke ronde gedocumenteerd en te controleren door de opdrachtgever, minder geschillen.",
+        "cta": "Documenteer elke ronde"
       },
       "elettricisti": {
         "name": "Elektriciens",
-        "desc": "Elektrische installaties, schakelkasten, bedrading. Elke klus vastgelegd met GPS en foto's, verzegeld bewijs om elk geschil te sluiten.",
+        "desc": "Elektrische installaties, schakelkasten, bekabeling. Elke klus gedocumenteerd met GPS en foto's, in een verzegeld rapport om te tonen als iemand het betwist.",
         "cta": "Documenteer elke klus"
       },
       "idraulici": {
         "name": "Loodgieters",
-        "desc": "Sanitair, verwarming, ketels. GPS werkbonnen met voor-en-na foto's, minder geschillen over uitgevoerd werk.",
-        "cta": "Bewijs elke klus"
+        "desc": "Sanitair, verwarming, ketels. GPS-werkbonnen met foto's van voor en na, minder geschillen over uitgevoerd werk.",
+        "cta": "Toon elke uitgevoerde klus aan"
       },
       "termoidraulici": {
         "name": "CV & Sanitair",
-        "desc": "GeoTapp registreert elke cv-ketel en verwarmingsklus met GPS, foto's en verifieerbare tijdstempels. Klant ontkent vervangen onderdelen?",
-        "cta": "Bewijs vervangen onderdelen"
+        "desc": "GeoTapp legt elke klus aan ketels en installaties vast met locatie, foto's en controleerbare tijden. Ontkent de klant dat onderdelen zijn vervangen?",
+        "cta": "Toon vervangen onderdelen aan"
       },
       "edilizia": {
-        "desc": "Nieuwbouw, Renovatie, Onderaanneming. Uren en aanwezigheid op de bouwplaats gedocumenteerd, termijnstaten die stand houden.",
-        "cta": "Verdedig je termijnstaten"
+        "desc": "Bouw, verbouwing, onderaanneming. Uren en aanwezigheid op de bouwplaats gedocumenteerd, termijnstaten om aan de opdrachtgever te tonen met het bewijs erbij.",
+        "cta": "Documenteer uw termijnstaten"
       },
       "manutenzione": {
-        "desc": "Installaties, Liften, Facility. Elke oproep en elk bezoek met GPS en foto's: de werkbon wordt niet meer betwist.",
-        "cta": "Sluit de discussies"
+        "desc": "Installaties, liften, facility. Elke oproep en elke inspectie met GPS en foto's, in een werkbon om te tonen wanneer het nodig is.",
+        "cta": "Documenteer elk bezoek"
       },
       "impianti": {
-        "desc": "Werktuigbouw, Elektro, Brandbeveiliging. Testen en inbedrijfstelling verzegeld met tijd en locatie, bewijs klaar voor de opdrachtgever.",
-        "cta": "Verzegel je testen"
+        "desc": "Mechanische, elektrische en brandbeveiligingsinstallaties. Keuringen en inbedrijfstelling verzegeld met tijd en locatie, bewijs klaar voor de opdrachtgever.",
+        "cta": "Verzegel de keuringen"
       }
     },
     "app_mockup": {
@@ -323,12 +328,12 @@
     },
     "demo_banner": {
       "badge": "Echt voorbeeld",
-      "title": "Verzegeld rapport, download en verifieer",
+      "title": "Verzegeld rapport om te downloaden en te controleren",
       "field_operator": "Medewerker",
       "field_intervention": "Interventie",
       "field_intervention_value": "Vervanging van de schakelkast",
       "btn_download": "Rapport downloaden (.zip)",
-      "btn_verify": "Authenticiteit verifiëren →"
+      "btn_verify": "Zo controleert u het →"
     },
     "flow_mockup": {
       "pipeline_title": "Verkooppijplijn",
@@ -340,29 +345,30 @@
   "pricing": {
     "badge": "GeoTapp Oplossingen",
     "title": "Kies het juiste product.",
-    "subtitle": "Praktische oplossingen voor bedrijven met monteurs en buitendienstmedewerkers.",
-    "vat_note": "Alle prijzen zijn exclusief btw. Facturering volgens de gebruiksvoorwaarden.",
+    "subtitle": "Concrete oplossingen voor bedrijven met monteurs en medewerkers in het veld.",
+    "vat_note": "Alle prijzen zijn exclusief btw. Het abonnement heeft een minimale looptijd van 12 maanden, te betalen in één jaarlijkse betaling of in maandelijkse termijnen. GeoTapp Verifier, de tool waarmee uw klanten de rapporten controleren, is gratis.",
     "categories": {
       "app": {
         "title": "GeoTapp TimeTracker",
-        "description": "Mobiele app voor buitendienstmonteurs",
+        "description": "Mobiele app voor monteurs in het veld",
         "products": [
           {
             "name": "GeoTapp TimeTracker",
             "tagline": "Vanaf",
-            "desc": "Aanwezigheid, buitendienstactiviteit en bewijs van het uitgevoerde werk, op één plek. Prijs per gebruiker per jaar.",
+            "desc": "Aanwezigheid, werk in het veld en bewijs van het uitgevoerde werk, op één plek. Prijs per gebruiker per jaar.",
             "features": [
-              "Android/iOS-app",
-              "GPS-inklokken",
+              "Native Android- en iOS-app",
+              "Registratie met locatie",
+              "Bewijsfoto's",
               "Weekrapporten"
             ],
-            "button": "Bekijk calculator"
+            "button": "Bekijk de calculator"
           }
         ]
       },
       "flow": {
         "title": "GeoTapp Flow",
-        "description": "Buitendienstbeheer en teambeheer",
+        "description": "Operationeel beheer van klussen en teams",
         "products": [
           {
             "name": "GeoTapp Flow Business",
@@ -371,7 +377,7 @@
             "features": [
               "Onbeperkte teams",
               "API",
-              "Prioriteitssupport",
+              "Prioritaire ondersteuning",
               "Automatiseringen",
               "Geavanceerde rapporten",
               "Activeerbare TimeTracker-plaatsen: onbeperkt (niet inbegrepen in het abonnement)*"
@@ -380,11 +386,11 @@
           {
             "name": "GeoTapp Flow Team",
             "tagline": "Voor kleine operationele teams.",
-            "desc": "Coördineer en beheer uw operationele team met actuele gegevens.",
+            "desc": "Coördineer en beheer uw operationele team, bijgewerkt bij elke registratie.",
             "features": [
               "5 Flow-gebruikers inbegrepen",
-              "Werkbeheer",
-              "Veldregistraties",
+              "Opdrachtenbeheer",
+              "Registraties in het veld",
               "Operationele rapporten",
               "Integraties",
               "Activeerbare TimeTracker-plaatsen: 5 (niet inbegrepen in het abonnement)*"
@@ -392,8 +398,8 @@
           },
           {
             "name": "GeoTapp Flow Solo",
-            "tagline": "Voor freelancers en micro-bedrijven.",
-            "desc": "Alles wat u nodig hebt om veldopdrachten zelfstandig te beheren.",
+            "tagline": "Voor zelfstandigen en micro-ondernemingen.",
+            "desc": "Alles wat u nodig hebt om klussen zelfstandig te beheren.",
             "features": [
               "1 gebruiker",
               "Taakbeheer",
@@ -406,47 +412,47 @@
       }
     },
     "calculator": {
-      "title": "TimeTracker Licentiecalculator",
-      "subtitle": "Schat uw jaarlijkse personeelsinvestering.",
-      "active_users": "Actieve gebruikers",
+      "title": "Calculator voor TimeTracker-licenties",
+      "subtitle": "Schat uw jaarlijkse investering in uw personeel.",
+      "active_users": "Actieve medewerkers",
       "discount_threshold": "Kortingsdrempel",
       "cost_per_user": "Gemiddelde kosten per gebruiker",
       "per_month": "/maand",
-      "standard_rate": "Standaardtarief (1–25 @ {price})",
+      "standard_rate": "Standaardtarief (1–25 tegen {price})",
       "mixed_rate": "Gemengd tarief (volumekorting toegepast)",
-      "annual_total": "Jaartotaal (+BTW)",
-      "annual_billing_note": "Eenmalige jaarfacturering",
-      "enterprise_plan": "Enterprise-plan",
-      "enterprise_desc": "Voor teams van meer dan 150 gebruikers bieden wij aangepaste SLA's en toegewijde accountbeheer.",
+      "annual_total": "Jaartotaal (+ btw)",
+      "annual_billing_note": "Jaarlijks in één keer gefactureerd",
+      "enterprise_plan": "Meer dan 150 plaatsen",
+      "enterprise_desc": "Boven de 150 plaatsen spreken we de prijs af: schrijf ons en we sturen u een offerte.",
       "request_quote": "Offerte aanvragen",
-      "add_to_cart": "App-licentie aan winkelwagen toevoegen",
-      "secure_payment": "Veilige betaling via Stripe. BTW berekend bij afrekenen."
+      "add_to_cart": "Voeg de plaatsen toe aan de winkelwagen",
+      "secure_payment": "Veilige betaling via Stripe. Btw wordt berekend bij het afrekenen."
     },
     "simulator": {
       "section_title": "Bereken uw offerte",
       "employees_label": "Aantal medewerkers:",
-      "one_employee": "1 Medewerker",
-      "many_employees": "150+ Medewerkers",
+      "one_employee": "1 medewerker",
+      "many_employees": "150+ medewerkers",
       "price_per_user": "Prijs per gebruiker",
       "annual_total": "Jaartotaal",
       "per_month": "/maand",
       "per_user_annual": "per gebruiker, jaarfacturering",
       "selected_badge": "Geselecteerd",
-      "enterprise_plan": "Enterprise-plan",
+      "enterprise_plan": "Meer dan 150 plaatsen",
       "enterprise_desc": "Voor grote organisaties bieden wij op maat gemaakte oplossingen.",
       "enterprise_cta": "Neem contact op voor een offerte",
       "company_placeholder": "Bedrijfsnaam",
-      "email_placeholder": "Beheerders-e-mail",
+      "email_placeholder": "E-mailadres beheerder",
       "email_error_format": "Voer een geldig e-mailadres in (bijv. naam@bedrijf.nl)",
       "email_error_placeholder": "Voer een echt zakelijk e-mailadres in.",
-      "terms_alert": "Om door te gaan moet u de Algemene voorwaarden accepteren en bevestigen dat u het Privacybeleid heeft gelezen.",
-      "processing": "Verwerken...",
+      "terms_alert": "Om door te gaan moet u de Voorwaarden accepteren en bevestigen dat u de privacyverklaring hebt gelezen.",
+      "processing": "Verwerken…",
       "request_info": "Informatie aanvragen",
       "buy_now": "Nu kopen",
-      "payment_note": "Veilige betaling via Stripe. Op elk moment opzegbaar.",
+      "payment_note": "Veilige betaling via Stripe. Abonnement met een minimale duur van 12 maanden.",
       "success_sent": "Aanvraag succesvol verzonden! We nemen binnenkort contact met u op.",
       "error_request": "Fout bij verzenden aanvraag",
-      "plus_vat": "+ BTW"
+      "plus_vat": "+ btw"
     },
     "bundle": {
       "title": "Bundelcalculator",
@@ -463,18 +469,18 @@
       "flowPrice": "GeoTapp Flow",
       "trackerPrice": "TimeTracker",
       "subtotal": "Subtotaal",
-      "bundleDiscount": "Bundle-korting (15% eerste jaar)",
+      "bundleDiscount": "Bundelkorting (15% eerste jaar)",
       "totalPrice": "Totaalprijs",
       "savings": "U bespaart",
       "perMonth": "/maand",
       "perYear": "/jaar",
-      "cta": "Bundle nu halen",
-      "notes": "Opmerking: Korting geldt voor de eerste 12 maanden",
+      "cta": "Neem de bundel",
+      "notes": "Opmerking: de korting geldt voor de eerste 12 maanden",
       "employees_unit": "medewerkers",
       "first_year_savings": "in het eerste jaar!",
       "loading": "Laden...",
-      "modal_title": "Voer uw e-mail in",
-      "modal_desc": "We hebben uw e-mail nodig om uw afrekenssessie aan te maken en u het ontvangstbewijs te sturen.",
+      "modal_title": "Vul uw e-mailadres in",
+      "modal_desc": "We hebben uw e-mailadres nodig om de afrekensessie aan te maken en u de ontvangstbevestiging te sturen.",
       "email_placeholder": "uw@email.com",
       "btn_cancel": "Annuleren",
       "btn_continue": "Doorgaan",
@@ -483,7 +489,7 @@
     },
     "intro_label": "Introductieprijs 2026",
     "per_year": "/jaar",
-    "title_gradient": "Gebruikers op kantoor, plus een plek per medewerker buiten.",
+    "title_gradient": "Gebruikers op kantoor en een plaats voor elke medewerker in het veld.",
     "or_monthly": "of",
     "per_month_short": "/maand",
     "annual_savings": "Jaarlijkse besparing:",
@@ -493,10 +499,10 @@
     "recommended": "Aanbevolen"
   },
   "contact": {
-    "title": "Laten we praten over <span class=\"text-primary\">zaken</span>.",
-    "subtitle": "U wilt weten of GeoTapp bij uw bedrijf past. Wij zijn er om concreet te antwoorden.",
-    "guarantee_title": "Reactiegarantie",
-    "guarantee_text": "Gemiddeld eerste reactie binnen 12 werkuren. Geen tickets die verloren gaan.",
+    "title": "Laten we praten over uw <span class=\"text-primary\">werk</span>.",
+    "subtitle": "Wilt u weten of GeoTapp bij uw bedrijf past? Schrijf ons: we antwoorden concreet.",
+    "guarantee_title": "Reactietijd",
+    "guarantee_text": "Gemiddelde reactie binnen 12 werkuren. Er antwoordt een mens.",
     "form": {
       "name": "Naam",
       "first_name": "Voornaam",
@@ -504,7 +510,7 @@
       "first_name_placeholder": "Jan",
       "last_name_placeholder": "Jansen",
       "sector": "Sector",
-      "sector_placeholder": "Selecteer je sector",
+      "sector_placeholder": "Selecteer uw sector",
       "sector_options": [
         {
           "value": "installatori",
@@ -512,11 +518,11 @@
         },
         {
           "value": "sicurezza",
-          "label": "Beveiliging & Bewaking"
+          "label": "Beveiliging en bewaking"
         },
         {
           "value": "pulizie",
-          "label": "Schoonmaak & Sanitatie"
+          "label": "Schoonmaak en ontsmetting"
         },
         {
           "value": "elettricisti",
@@ -537,63 +543,65 @@
       "message": "Bericht",
       "send": "Versturen",
       "reason_options": [
-        "Ik wil een GeoTapp Demo",
-        "Algemene informatie aanvragen",
-        "Samenwerking",
+        "Ik zou graag een demo van GeoTapp willen",
+        "Algemene informatie",
+        "Samenwerkingen",
         "Overig"
       ],
       "name_placeholder": "Uw naam",
       "email_placeholder": "u@email.com",
       "company_placeholder": "Bedrijfsnaam",
-      "message_placeholder": "Uw bericht...",
+      "message_placeholder": "Uw bericht…",
       "submit": "Bericht versturen",
-      "submitting": "Versturen...",
+      "submitting": "Versturen…",
       "all_required": "* Alle velden zijn verplicht",
       "reason_placeholder": "Selecteer een reden"
     },
     "hours": "Ma-Vr 9:00 - 18:00",
     "location_city": "Italië",
-    "channels_title": "Directe Kanalen",
-    "email_label": "Algemeen E-mailadres",
+    "channels_title": "Directe kanalen",
+    "email_label": "E-mail",
     "email_desc": "Voor informatie, offertes en ondersteuning.",
     "hq_label": "Waar we werken",
     "hq_city": "100% online, klanten in Italië en de EU",
     "hq_note": "Geen publiek kantoor: support en onboarding op afstand.",
-    "privacy_note": "Door dit formulier te verzenden gaat u akkoord met ons Privacybeleid.",
-    "map_title": "Onze locatie - Trenzano (BS), Italië",
-    "success": "Bericht succesvol verzonden. We nemen zo snel mogelijk contact met u op.",
+    "privacy_note": "Door het formulier te versturen verklaart u de privacyverklaring te hebben gelezen.",
+    "map_title": "Waar we zitten - Trenzano (BS), Italië",
+    "success": "Bericht verzonden. We antwoorden u zo snel mogelijk.",
     "error": "Fout bij verzenden. Probeer het later opnieuw.",
-    "sending": "Verzenden...",
+    "sending": "Versturen…",
     "map_unavailable": "Kaart niet beschikbaar",
     "open_maps": "Openen in Google Maps ↗"
   },
   "login_hub": {
-    "title": "Toegang tot uw <span class=\"text-primary\">account</span>.",
-    "subtitle": "Selecteer het product waarmee u verbinding wilt maken.",
+    "title": "Log in bij <span class=\"text-primary\">GeoTapp</span>.",
+    "subtitle": "Kies het product: Flow voor het kantoor, TimeTracker voor wie in het veld werkt.",
     "flow": {
-      "desc": "Operationeel beheer, werkbeurten, coördinatie en werkbonnen.",
+      "desc": "Operationeel beheer, opdrachten, coördinatie en rapporten.",
       "btn": "Inloggen bij Flow"
     },
     "timetracker": {
-      "desc": "Aanwezigheid, buitendienstactiviteit en werkbewijs.",
-      "btn": "Inloggen bij TimeTracker"
-    }
+      "desc": "Voor medewerkers in het veld: inloggen doet u in de app, op Android en iOS.",
+      "btn": "Download de TimeTracker-app"
+    },
+    "meta_title": "Inloggen | GeoTapp",
+    "meta_description": "Log in op GeoTapp Flow via de browser, of download de TimeTracker-app om in het veld te registreren."
   },
   "product_pages": {
     "flow": {
-      "hero_badge": "GeoTapp Flow - Beheer van buitendienstoperaties",
-      "hero_title": "GeoTapp Flow.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-slate-900\">Operationeel Beheer.</span>",
-      "hero_subtitle": "Het operationele centrum voor klanten, projecten, teams en administratie in één omgeving. Flow is het platform waarop ook TimeTracker draait.",
+      "hero_badge": "GeoTapp Flow - Operationeel beheer",
+      "hero_title": "GeoTapp Flow.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-slate-900\">Beheer van klussen en teams.</span>",
+      "hero_subtitle": "Het operationele centrum om klanten, opdrachten, teams en administratie in één omgeving te beheren. Flow is het platform waarop ook TimeTracker draait.",
       "visual_placeholder": "OPERATIEPANEEL",
-      "grid_title": "Operationele mogelijkheden",
-      "grid_subtitle": "Elke module is ontworpen voor echte controle over buitendienstwerk. Klik om te verkennen.",
+      "grid_title": "Operationele functies",
+      "grid_subtitle": "Elke module helpt om het werk in het veld te organiseren en te documenteren. Klik voor meer informatie.",
       "sectors": {
-        "1": "Werkbeurten en klanten",
+        "1": "Opdrachten en klanten",
         "2": "Planning en middelen",
-        "3": "Controle en zichtbaarheid"
+        "3": "Controle en overzicht"
       },
-      "cta_title": "Neem echte controle over uw buitendienst.",
-      "cta_button": "Bekijk tarieven",
+      "cta_title": "Breng orde in het werk in het veld.",
+      "cta_button": "Bekijk de prijzen",
       "modal": {
         "status": "SYSTEEMSTATUS: <span class=\"text-green-600\">OPERATIONEEL</span>",
         "encryption": "GEGEVENS: <span class=\"text-slate-400\">BEVEILIGD</span>",
@@ -602,66 +610,67 @@
       },
       "systems": {
         "nexus-core": {
-          "name": "Werkbeurtbeheer",
-          "short": "Maak en beheer technische interventies. Wijs taken toe aan monteurs, volg de voortgang en houd alles bijgehouden per werkbeurt.",
-          "full": "### Centraal werkbeurtbeheer.\n\nElke interventie begint als een gestructureerde werkbeurt.\n**Werkbeurtbeheer** geeft u een duidelijk overzicht van al het lopende werk.\n\n#### Interventiebeheer\n\nMaak een werkbeurt aan, wijs de monteur toe, definieer de locatie en datum.\nMonitor de status: Open, In uitvoering, Voltooid.\n\n#### Operationele geschiedenis\n\nElke werkbeurt heeft een volledig archief van activiteiten, fotobewijs, notities en tijdstempels.\nDe klant vraagt wat er is gedaan? U heeft de gegevens. Altijd."
+          "name": "Opdrachtenbeheer",
+          "short": "Maak en beheer technische klussen. Wijs taken toe aan monteurs, volg de voortgang en houd alles per opdracht bij.",
+          "full": "### Alle opdrachten op één plek.\n\nElke klus begint als een gestructureerde opdracht.\n**Opdrachtenbeheer** geeft u een helder overzicht van al het werk dat loopt.\n\n#### Klussenbeheer\n\nMaak een klus aan, wijs de monteur toe, bepaal locatie en datum.\nVolg de status: Open, In behandeling, Afgerond.\n\n#### Bedrijfshistorie\n\nElke opdracht heeft een volledig archief van activiteiten, bewijsfoto's, notities en registraties.\nVraagt de klant wat er is gedaan? U hebt de gegevens."
         },
         "titan-flow": {
-          "name": "Taakverdeling",
-          "short": "Verdeel werkbeurten aan monteurs met precisie. Communiceer instructies, deadlines en operationele prioriteiten op een gestructureerde manier.",
-          "full": "### De juiste werkbeurt aan de juiste monteur.\n\nVerwarring bij taakverdeling leidt tot vertragingen en geschillen.\n**Taakverdeling** brengt operationele duidelijkheid.\n\n#### Precieze verdeling\n\nZodra een werkbeurt is geopend, wijs één of meerdere monteurs toe.\nElke monteur ziet zijn werk op GeoTapp TimeTracker.\n\n#### Operationele communicatie\n\nInstructies, notities, technische bijlagen: alles bereikt de monteur voordat hij het veld ingaat.\nMinder telefoontjes, minder misverstanden, minder vertragingen."
+          "name": "Taaktoewijzing",
+          "short": "Verdeel het werk nauwkeurig over de monteurs. Communiceer instructies, deadlines en operationele prioriteiten op een gestructureerde manier.",
+          "full": "### De juiste klus voor de juiste monteur.\n\nWerk op een verwarde manier toewijzen leidt tot vertragingen en betwistingen.\n**Taaktoewijzing** brengt operationele duidelijkheid.\n\n#### Nauwkeurige verdeling\n\nZodra een opdracht wordt geopend, wijst u een of meer monteurs toe.\nElke monteur ziet zijn eigen werk in GeoTapp TimeTracker.\n\n#### Operationele communicatie\n\nInstructies, notities, technische bijlagen: alles komt bij de monteur aan voordat hij het veld in gaat.\nMinder telefoontjes, minder misverstanden, minder vertraging."
         },
         "ledger-prime": {
-          "name": "Werkbonnen en facturering",
-          "short": "Genereer gestructureerde werkbonnen van elke werkbeurt. Exporteer documentatie en ondersteun facturering met echte veldgegevens.",
-          "full": "### Van werk naar werkbon, op een ordelijke manier.\n\nHandmatige facturering is traag en vaak onvolledig.\n**Werkbonnen en facturering** sluit de operationele cyclus.\n\n#### Gestructureerde werkbonnen\n\nElke voltooide interventie genereert documentatie door tijdstempels, foto's en notities uit het veld te verzamelen.\nGeen gegevens handmatig invoeren, alles komt van TimeTracker.\n\n#### Ondersteuning bij facturering\n\nEchte werkbeurtgegevens ondersteunen nauwkeurigere offertes en facturen.\nMinder fouten, minder geschillen, snellere administratieve cyclus."
+          "name": "Rapporten en afrekening",
+          "short": "Maak gestructureerde rapporten van elke opdracht. Exporteer documentatie en ondersteun de facturering met echte gegevens uit het veld.",
+          "full": "### Van werk naar rapport, op een ordelijke manier.\n\nHandmatig afrekenen is traag en vaak onvolledig.\n**Rapporten en afrekening** sluit de operationele cyclus.\n\n#### Gestructureerde rapporten\n\nElke afgeronde klus levert documentatie op waarin registraties, foto's en notities uit het veld zijn verzameld.\nGeen gegevens handmatig invoeren: alles komt uit TimeTracker.\n\n#### Ondersteuning bij de facturering\n\nDe echte opdrachtgegevens ondersteunen nauwkeurigere offertes en facturen.\nMinder fouten, minder betwistingen, een snellere administratieve cyclus."
         },
         "quantum-logistics": {
-          "name": "Interventiekalender",
-          "short": "Plan interventies, visualiseer de operationele kalender en beheer teambeschikbaarheid zonder overlappingen.",
-          "full": "### Volledig overzicht van gepland werk.\n\nZonder gedeelde kalender wordt planning chaotisch.\n**Interventiekalender** geeft u duidelijke operationele zichtbaarheid.\n\n#### Geavanceerde planning\n\nBekijk alle interventies in dagelijkse, wekelijkse en maandelijkse kalenderweergaven.\nIdentificeer overlappingen en optimaliseer de werkverdeling.\n\n#### Teambeschikbaarheid\n\nZie wie beschikbaar is, wie verlof heeft en wie al overbelast is.\nWijs nieuwe interventies toe zonder operationele conflicten te creëren."
+          "name": "Klussenkalender",
+          "short": "Plan klussen, bekijk de operationele kalender en beheer de beschikbaarheid van uw team zonder overlappingen.",
+          "full": "### Volledig overzicht van het geplande werk.\n\nZonder gedeelde kalender wordt planning chaotisch.\n**Klussenkalender** geeft u een helder operationeel overzicht.\n\n#### Geavanceerde planning\n\nBekijk alle klussen op een dag-, week- en maandkalender.\nSignaleer overlappingen en optimaliseer de verdeling van het werk.\n\n#### Beschikbaarheid van het team\n\nZie wie beschikbaar is, wie met verlof is en wie al te veel werk heeft.\nWijs nieuwe klussen toe zonder operationele conflicten te veroorzaken."
         },
         "supply-command": {
           "name": "Middelenbeheer",
-          "short": "Beheers materialen, uitrusting en operationele middelen die nodig zijn voor elke buitendienstinterventie. Geen verrassingen.",
-          "full": "### Geen interventie zonder middelen.\n\nEen monteur het veld insturen zonder de juiste materialen is een kostbare fout.\n**Middelenbeheer** voorkomt operationele verrassingen.\n\n#### Materialen per werkbeurt\n\nKoppel benodigde middelen aan elke werkbeurt.\nDe manager ziet van tevoren wat nodig is en wanneer.\n\n#### Leveranciers en inkoop\n\nSla contactgegevens en voorwaarden op van uw vaste leveranciers.\nVerkort de inkooptijd en houd kosten onder controle."
+          "short": "Houd catalogus, leveranciers en materialen gekoppeld aan uw opdrachten, zodat de monteur vertrekt met wat nodig is.",
+          "full": "### Geen klus zonder de juiste middelen.\n\nEen monteur het veld in sturen zonder de juiste materialen is een dure fout.\n**Middelenbeheer** voorkomt operationele verrassingen.\n\n#### Catalogus en opdrachten\n\nHoud de productcatalogus in Flow bij en koppel hem aan offertes en opdrachten.\nDe verantwoordelijke ziet van tevoren wat er nodig is en wanneer.\n\n#### Leveranciers\n\nBewaar contactgegevens en voorwaarden van uw vaste leveranciers.\nVerkort de inkooptijden en houd de kosten onder controle."
         },
         "the-architect": {
           "name": "Werkplanning",
-          "short": "Organiseer werk in fasen, taken en deadlines. Houd het project onder controle zonder spreadsheets of WhatsApp-berichten.",
-          "full": "### Structureer het werk. Beheer de voortgang.\n\nComplexe werkbeurten vereisen structuur.\n**Werkplanning** brengt operationele orde.\n\n#### Fasen en deadlines\n\nStructureer complexe interventies in operationele fasen met duidelijke deadlines.\nWijs verantwoordelijkheden toe aan elk teamlid.\n\n#### Voortgangsmonitoring\n\nVisualiseer de voortgang in realtime.\nWeet altijd wat er is gedaan en wat nog openstaat.\nGrijp in voordat een vertraging een klantprobleem wordt."
+          "short": "Organiseer het werk in fasen, taken en deadlines. Houd het project onder controle zonder Excel-bestanden of WhatsApp-berichten.",
+          "full": "### Structureer het werk. Houd de voortgang in de hand.\n\nComplexe klussen vragen om structuur.\n**Werkplanning** brengt operationele orde.\n\n#### Fasen en deadlines\n\nStructureer elke complexe klus in operationele fasen met duidelijke deadlines.\nWijs verantwoordelijkheden toe aan elk teamlid.\n\n#### Voortgangsbewaking\n\nBekijk de voortgang, stap voor stap bijgewerkt.\nU weet altijd wat er gedaan is en wat nog openstaat.\nGrijp in voordat een vertraging een klantprobleem wordt."
         },
         "the-auditor": {
-          "name": "Interventiedocumentatie",
-          "short": "Verzamel fotobewijs, operationele notities en ondertekende documenten voor elke interventie. Uitgevoerd werk blijft verifieerbaar.",
-          "full": "### Echt bewijs voor elke interventie.\n\nZonder documentatie is voltooid werk aanvechtbaar.\n**Interventiedocumentatie** maakt elke werkbeurt verifieerbaar.\n\n#### Fotobewijs\n\nMonteurs maken foto's rechtstreeks vanuit GeoTapp TimeTracker in het veld.\nAfbeeldingen worden automatisch gekoppeld aan de werkbeurt met tijdstempel en locatie.\n\n#### Digitale handtekening van de klant\n\nDe klant kan de werkbon rechtstreeks op het scherm van de monteur ondertekenen.\nDe digitale handtekening wordt opgenomen in de werkbon en vormt bewijs van geleverde dienst."
+          "name": "Klusdocumentatie",
+          "short": "Verzamel bewijsfoto's, operationele notities en documenten voor elke klus. Het uitgevoerde werk blijft controleerbaar.",
+          "full": "### Echt bewijs bij elke klus.\n\nZonder documentatie is het uitgevoerde werk te betwisten.\n**Klusdocumentatie** maakt elke klus controleerbaar.\n\n#### Bewijsfoto's\n\nDe monteurs maken foto's rechtstreeks met GeoTapp TimeTracker in het veld.\nDe beelden worden automatisch aan de opdracht gekoppeld, met tijd en locatie.\n\n#### Verzegeld rapport\n\nAan het eind van de klus maakt het systeem een digitaal verzegeld rapport: elke latere wijziging blijft zichtbaar.\nDe klant kan het zelfstandig controleren, zonder in te hoeven loggen bij GeoTapp."
         },
         "the-uplink": {
           "name": "Koppeling veld-kantoor",
-          "short": "Gegevens verzameld door TimeTracker komen direct in Flow aan, zodra ze worden geregistreerd. Buitendienst en kantoor werken op dezelfde operationele gegevens.",
-          "full": "### Kantoor en buitendienst, eindelijk verbonden.\n\nDe kloof tussen buitendienst en kantoor genereert vermijdbare fouten, vertragingen en geschillen.\n**Koppeling veld-kantoor** sluit de kloof.\n\n#### Synchronisatie per gebeurtenis\n\nElk in- en uitklokken, elke foto en notitie geregistreerd op TimeTracker komt direct in Flow aan.\nDe manager ziet het zodra het gebeurt, zonder de monteur te hoeven bellen.\n\n#### Betrouwbare geschiedenis\n\nAlles wat de monteur in het veld registreert, wordt gearchiveerd en gekoppeld aan de werkbeurt.\nGeen gegevens gaan verloren. Geen informatie ontbreekt wanneer het tijd is om te rapporteren."
+          "short": "De gegevens die TimeTracker verzamelt, komen in Flow binnen zodra ze zijn vastgelegd. Veld en kantoor werken met dezelfde operationele gegevens.",
+          "full": "### Kantoor en veld, eindelijk verbonden.\n\nDe afstand tussen veld en kantoor veroorzaakt vermijdbare fouten, vertragingen en betwistingen.\n**Koppeling veld-kantoor** maakt die kleiner.\n\n#### Directe aankomst\n\nElke registratie, foto en notitie die in TimeTracker is vastgelegd, komt in Flow aan zodra die wordt verzonden.\nDe verantwoordelijke ziet de gegevens zonder de monteur te hoeven bellen.\n\n#### Betrouwbare historie\n\nAlles wat de monteur in het veld vastlegt, blijft gearchiveerd en gekoppeld aan de opdracht.\nOp het moment van de afrekening zijn de gegevens er al."
         },
         "the-oracle": {
-          "name": "Operationele zichtbaarheid",
-          "short": "Operationeel dashboard, altijd actueel. Altijd weten hoeveel interventies open, in uitvoering of vandaag voltooid zijn.",
-          "full": "### Operationele data, geen aannames.\n\nBeslissen zonder betrouwbare gegevens is gevaarlijk.\n**Operationele zichtbaarheid** zet veldgegevens om in concrete informatie.\n\n#### Operationeel dashboard\n\nZie in één overzicht:\n- Open en lopende interventies\n- Actieve monteurs\n- Vandaag en deze week voltooide interventies\n\n#### Periodieke rapporten\n\nOntvang geautomatiseerde activiteitensamenvattingen.\nVergelijk perioden, identificeer knelpunten en optimaliseer operaties."
+          "name": "Operationeel overzicht",
+          "short": "Operationeel dashboard dat bij elke klus wordt bijgewerkt. U weet altijd hoeveel klussen open, in behandeling of vandaag afgerond zijn.",
+          "full": "### Operationele gegevens, geen aannames.\n\nBeslissen zonder betrouwbare gegevens is gevaarlijk.\n**Operationeel overzicht** verandert de gegevens uit het veld in concrete informatie.\n\n#### Operationeel dashboard\n\nZie, bij elke klus bijgewerkt:\n- Open klussen en klussen in behandeling\n- Actieve monteurs\n- Klussen die vandaag en deze week zijn afgerond\n\n#### Periodieke rapporten\n\nOntvang automatisch een samenvatting van de activiteiten.\nVergelijk perioden, ontdek knelpunten en optimaliseer de werkzaamheden."
         }
-      }
+      },
+      "label_open": "Meer informatie"
     },
     "app": {
-      "hero_badge": "GeoTapp TimeTracker - App voor buitendienstmonteurs",
-      "hero_title": "GeoTapp TimeTracker.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-slate-900\">De buitendienst in uw zak.</span>",
-      "hero_subtitle": "De mobiele app die monteurs gebruiken om activiteit te registreren, bewijs te verzamelen en de operationele lijn te bewaken rechtstreeks vanuit het veld. Beschikbaar op Android en iOS.",
+      "hero_badge": "GeoTapp TimeTracker - App voor monteurs",
+      "hero_title": "GeoTapp TimeTracker.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-slate-900\">De app voor wie in het veld werkt.</span>",
+      "hero_subtitle": "De app waarmee monteurs registreren, bewijsfoto's maken en rechtstreeks vanuit het veld verbonden blijven met het kantoor. Beschikbaar op Android en iOS.",
       "visual_placeholder": "VELDINTERFACE",
-      "grid_title": "Tools voor buitendienstwerk",
-      "grid_subtitle": "Elke functie is ontworpen voor degenen die buiten kantoor werken en geen tijd te verliezen hebben. Klik om te verkennen.",
+      "grid_title": "Tools voor werk in het veld",
+      "grid_subtitle": "Elke functie is ontworpen voor wie buiten kantoor werkt en geen tijd te verliezen heeft. Klik voor meer informatie.",
       "sectors": {
-        "1": "Kernoperaties",
+        "1": "Kernfuncties",
         "2": "Logistiek en communicatie",
         "3": "Gegevens en administratie"
       },
       "cta_title": "Geef uw monteurs het juiste gereedschap.",
-      "cta_button": "Bekijk tarieven",
+      "cta_button": "Bekijk de prijzen",
       "modal": {
         "status": "SYSTEEMSTATUS: <span class=\"text-green-600\">OPERATIONEEL</span>",
         "encryption": "GEGEVENS: <span class=\"text-slate-400\">BEVEILIGD</span>",
@@ -670,51 +679,52 @@
       },
       "systems": {
         "timelock-alpha": {
-          "name": "GPS-tijdregistratie",
-          "short": "In- en uitklokken gekoppeld aan GPS-positie en nauwkeurig tijdstempel. Elke werksessie wordt een verifieerbare operationele gebeurtenis.",
-          "full": "### Tijd is verifieerbaar.\n\nTijdstempels zonder verificatie leiden tot geschillen.\n**GPS-tijdregistratie** maakt elke werksessie een betrouwbaar, verdedigbaar register.\n\n#### Geogelokaliseerd in- en uitklokken\n\nDe monteur registreert binnenkomst en vertrek vanuit het veld.\nLocatie, adres en tijd worden automatisch vastgelegd.\n\n#### Verzegelde geschiedenis\n\nElke sessie is een verifieerbaar register: begintijd, eindtijd, positie, duur en gekoppelde werkbeurt.\nDe klant vraagt wanneer u aankwam? De gegevens zijn er, altijd."
+          "name": "Registratie met locatie",
+          "short": "Aankomst, pauzes en vertrek leggen de locatie en het exacte tijdstip vast op het moment van de registratie. Elke dienst wordt een gegeven dat de klant kan controleren.",
+          "full": "### De juiste tijd, op de juiste plaats.\n\nRegistraties zonder controle leiden tot betwistingen.\n**Registratie met locatie** maakt van elke dienst een betrouwbaar gegeven.\n\n#### Aankomst, pauzes en vertrek\n\nDe monteur registreert vanaf de telefoon.\nLocatie, adres en tijdstip worden op dat moment vastgelegd, en alleen op dat moment: tussen twee registraties in wordt er niets automatisch vastgelegd.\n\n#### Verzegelde historie\n\nElke dienst is een record: begintijd, eindtijd, pauzes, locatie, duur en opdracht.\nIn het rapport dat aan de klant wordt afgeleverd is het verzegeld: elke latere wijziging is zichtbaar."
         },
         "event-horizon": {
           "name": "Dienstroosters",
-          "short": "Beheer dienstroosters en personeelsbeschikbaarheid. Wekelijkse en maandelijkse weergaven voor coördinatie zonder verwarring of overlappingen.",
-          "full": "### Geen roosterconflicten.\n\nHet organiseren van mobiel personeel vereist duidelijkheid.\n**Dienstroosters** geeft de manager een nauwkeurig, actueel overzicht.\n\n#### Kalenderweergave\n\nZie wie wanneer werkt.\nIdentificeer afwezigheden, vakanties en overlappingen voordat ze operationele problemen worden.\n\n#### Beschikbaarheid in realtime\n\nMedewerkers bevestigen aanwezigheid of melden afwezigheid rechtstreeks vanuit de app.\nDe manager ziet leemten in het rooster voordat hij nieuwe werkbeurten toewijst."
+          "short": "Beheer diensten en beschikbaarheid van het personeel. Week- en maandoverzicht voor coördinatie zonder verwarring of overlappingen.",
+          "full": "### Geen roosterconflicten.\n\nMobiel personeel organiseren vraagt om duidelijkheid.\n**Dienstroosters** geeft de verantwoordelijke een nauwkeurig, actueel overzicht.\n\n#### Kalenderweergave\n\nZie wie wanneer werkt.\nSignaleer afwezigheden, feestdagen en overlappingen voordat ze operationele problemen worden.\n\n#### Altijd actuele beschikbaarheid\n\nMedewerkers bevestigen hun aanwezigheid of melden afwezigheid rechtstreeks in de app.\nDe verantwoordelijke ziet de gaten in het rooster voordat hij nieuwe opdrachten toewijst."
         },
         "unit-matrix": {
-          "name": "Medewerkerregister",
-          "short": "Beheer een volledig register van uw medewerkers: rollen, contactgegevens, certificeringen en platformtoegang.",
-          "full": "### Ken uw team.\n\nElke medewerker is een essentiële operationele bron.\n**Medewerkerregister** centraliseert alle vitale informatie.\n\n#### Certificeringsbeheer\n\nZie in één oogopslag wie de vereiste kwalificaties heeft voor een specifieke interventie of locatie.\n\n#### Snelle onboarding\n\nEen nieuwe monteur toevoegen is eenvoudig.\nStuur een uitnodigingslink: binnen minuten is hij operationeel op GeoTapp TimeTracker."
+          "name": "Medewerkersregister",
+          "short": "Houd uw medewerkers op orde: rollen, contactgegevens en toegang tot het platform, met een nieuwe collega in een paar minuten aan boord.",
+          "full": "### Ken uw team.\n\nElke medewerker is een essentiële kracht.\n**Medewerkersregister** houdt de informatie bij elkaar die nodig is.\n\n#### Rollen en toegang\n\nBepaal wie wat ziet: beheerder, verantwoordelijke, medewerker.\nElke persoon heeft alleen toegang tot wat zijn rol voorschrijft.\n\n#### Snelle instroom\n\nEen nieuwe monteur toevoegen is eenvoudig.\nU stuurt een uitnodigingscode: hij ondertekent de GPS-verklaring en registreert binnen een paar minuten met GeoTapp TimeTracker."
         },
         "sector-grid": {
-          "name": "Locaties en werkplekken",
-          "short": "Maak een database van operationele locaties en werkplekken. Koppel elke interventie aan de juiste locatie en organiseer teams per zone.",
-          "full": "### Elke interventie op de juiste plaats.\n\nWerken zonder geografische referentie leidt tot verwarring.\n**Locaties en werkplekken** brengt operationele duidelijkheid.\n\n#### Locatiedatabase\n\nMaak een catalogus van klantlocaties, werkplekken en operationele locaties.\nHet systeem koppelt automatisch de activiteit van de monteur aan de interventielocatie.\n\n#### Teams per zone\n\nOrganiseer monteurs in teams per locatie of geografisch gebied.\nWijs interventies toe aan het juiste team, niet alleen aan de persoon."
+          "name": "Locaties en bouwplaatsen",
+          "short": "Maak een database van operationele locaties en bouwplaatsen. Koppel elke klus aan de juiste plaats en organiseer de teams per zone.",
+          "full": "### Elke klus op de juiste plaats.\n\nWerken zonder geografische referentie veroorzaakt verwarring.\n**Locatiebeheer** brengt operationele orde.\n\n#### Locaties en bouwplaatsen\n\nMaak een catalogus van klantlocaties, bouwplaatsen en operationele plekken.\nHet systeem koppelt de activiteit van de monteur automatisch aan de plaats van de klus.\n\n#### Teams per zone\n\nOrganiseer de monteurs in teams per locatie of geografisch gebied.\nWijs klussen toe aan het juiste team, niet alleen aan de individuele medewerker."
         },
         "energy-logistics": {
-          "name": "Voertuig- en onkostenbeheer",
-          "short": "Volg het gebruik van bedrijfsvoertuigen, verbruikte brandstof en reiskosten voor buitendienstmedewerkers.",
-          "full": "### Elke rit gedocumenteerd.\n\nReiskosten zijn een kritieke post voor elk bedrijf met mobiel personeel.\n**Voertuigbeheer** bewaakt elke uitgaande kosten.\n\n#### Voertuiggebruik\n\nWijs tijdelijk een voertuig toe aan een medewerker voor een interventie.\nWeet altijd wie welk voertuig gebruikt en voor welke werkbeurt.\n\n#### Brandstofkosten\n\nDe medewerker registreert het tanken rechtstreeks vanuit de app met een foto van het bonnetje en het bedrag.\nAlles gearchiveerd, alles gekoppeld aan de werkbeurt."
+          "name": "Voertuigen en onkostenvergoedingen",
+          "short": "Leg het gebruik van de bedrijfsauto tijdens de dienst vast, de tankbeurten en de reiskosten, met een foto van de bon.",
+          "full": "### Elke uitgave gedocumenteerd.\n\nReiskosten zijn een gevoelig hoofdstuk voor elk bedrijf met mobiel personeel.\n**Voertuigen en onkostenvergoedingen** brengt ze op orde.\n\n#### Gebruik van voertuigen\n\nWijs een voertuig toe aan een medewerker voor een klus, en de medewerker geeft in de app aan of hij tijdens de dienst de auto gebruikt.\nU weet wie welk voertuig heeft gebruikt en voor welke opdracht.\n\n#### Brandstofkosten\n\nDe medewerker registreert het tanken in de app, met een foto van de bon en het bedrag.\nHet kantoor keurt de vergoeding goed, en alles blijft gekoppeld aan de opdracht."
         },
         "neural-link": {
           "name": "Operationele communicatie",
-          "short": "Intern kanaal voor bedrijfscommunicatie. Gerichte berichten aan specifieke groepen met leesbevestigingen.",
-          "full": "### Duidelijke communicatie. Geen achtergrondlawaai.\n\nWhatsApp vermengt privé- en professioneel leven en biedt geen controle over leesstatus.\n**Operationele communicatie** is het officiële bedrijfskanaal.\n\n#### Gerichte berichten\n\nStel alleen het team op de hoogte dat het moet weten.\nDienstwijziging op de Rotterdam-locatie? Alleen de toegewezen monteurs ontvangen het bericht.\n\n#### Leesbevestigingen\n\nWeet altijd wie de communicatie heeft gelezen en wie niet.\nDuidelijke en transparante verantwoordelijkheid voor iedereen."
+          "short": "Intern kanaal voor bedrijfscommunicatie. Gerichte berichten aan specifieke groepen, met leesbevestigingen.",
+          "full": "### Heldere communicatie. Geen achtergrondlawaai.\n\nWhatsApp vermengt privéleven en werk en biedt geen controle over wie iets gelezen heeft.\n**Operationele communicatie** is het officiële kanaal van het bedrijf.\n\n#### Gerichte berichten\n\nU waarschuwt alleen het team dat het moet weten.\nDienstwijziging voor de bouwplaats in Rotterdam? Alleen de toegewezen monteurs ontvangen het bericht.\n\n#### Leesbevestigingen\n\nU weet altijd wie de mededeling heeft gelezen en wie niet.\nDuidelijke en transparante verantwoordelijkheid voor iedereen."
         },
         "payroll-bridge": {
-          "name": "Aanwezigheidsexport",
-          "short": "Exporteer maandelijkse aanwezigheid in formaten die compatibel zijn met de belangrijkste salarissoftware. Minder handmatig werk, minder fouten.",
-          "full": "### Salarisadministratie zonder hoofdpijn.\n\nEinde van de maand hoeft geen administratieve nachtmerrie te zijn.\n**Aanwezigheidsexport** verbindt buitendienstoperaties met HR-administratie.\n\n#### Multi-formaat\n\nGenereer aanwezigheidsbestanden klaar voor import in de belangrijkste Nederlandse salarissoftware (AFAS, NMBRS, Exact).\n\n#### Toegang voor de loonadministrateur\n\nGeef beperkte toegang aan uw salariskantoor.\nZij downloaden de gegevens die ze nodig hebben zelfstandig, zonder u elke maandafsluiting te bellen."
+          "name": "Export van aanwezigheid",
+          "short": "Exporteer de aanwezigheid van de maand in Excel of CSV, klaar voor de salarisadministrateur. Minder handwerk, minder fouten.",
+          "full": "### Salarisadministratie zonder hoofdpijn.\n\nHet einde van de maand hoeft geen administratieve nachtmerrie te zijn.\n**Export van aanwezigheid** verbindt het werk in het veld met de personeelsadministratie.\n\n#### Excel en CSV\n\nUren, overuren, toeslagen en afwezigheden komen in een Excel- of CSV-bestand dat u zo aan uw salarisadministrateur kunt doorgeven.\n\n#### Toegang voor de adviseur\n\nGeef uw salarisadministratiekantoor een aparte toegang, het portaal voor de boekhouder.\nZe downloaden zelfstandig de gegevens die ze nodig hebben, zonder dat ze u elke maandafsluiting hoeven te bellen."
         },
         "data-core": {
           "name": "Weekrapporten",
-          "short": "Gedetailleerde rapporten over gewerkte uren per werkbeurt en per medewerker. Betrouwbare gegevens voor interne controle en facturering.",
-          "full": "### Gegevens liegen niet.\n\nNeem beslissingen op basis van feiten, niet op indrukken.\n**Weekrapporten** haalt waarde uit dagelijkse operaties.\n\n#### Gedetailleerde rapporten\n\nElke week een volledig beeld: wie heeft gewerkt, waar, op welke werkbeurt en hoe lang.\n\n#### Volledige transparantie\n\nMedewerkers en managers raadplegen hetzelfde maandrapport.\nGetelde uren zijn voor iedereen identiek.\nMinder geschillen aan het einde van de maand."
+          "short": "Gedetailleerde rapporten over gewerkte uren per opdracht en per medewerker. Betrouwbare gegevens voor interne controle en verantwoording.",
+          "full": "### Beslis op feiten.\n\nBeslis op grond van gegevens, niet op indrukken.\n**Weekrapporten** brengt het werk van elke dag op een rij.\n\n#### Gedetailleerde rapporten\n\nElke week een volledig beeld: wie heeft gewerkt, waar, voor welke opdracht en hoeveel uur.\n\n#### Dezelfde cijfers voor iedereen\n\nMedewerkers en verantwoordelijken kijken naar hetzelfde rapport.\nDe getelde uren zijn voor iedereen hetzelfde, en aan het eind van de maand wordt er veel minder gediscussieerd."
         },
         "identity-forge": {
-          "name": "Branded app",
-          "short": "Upload uw logo en kies uw bedrijfskleuren. Uw medewerkers gebruiken een app die uw merkidentiteit weerspiegelt.",
-          "full": "### Uw bedrijf, uw app.\n\nGebruik geen generieke app.\nLaat uw medewerkers deel uitmaken van UW bedrijf met een consistente visuele ervaring.\n\n#### Bedrijfslogo\n\nUw logo prominent weergegeven op het inlogscherm en het hoofddashboard.\n\n#### Bedrijfskleuren\n\nKies het kleurthema dat past bij uw bedrijfsimago.\nProfessioneel, consistent, herkenbaar."
+          "name": "App met eigen huisstijl",
+          "short": "Upload uw logo en kies de kleuren van uw bedrijf. Uw medewerkers gebruiken een app die de identiteit van uw bedrijf weerspiegelt.",
+          "full": "### Uw bedrijf, uw app.\n\nGebruik geen generieke app.\nLaat uw medewerkers zich onderdeel voelen van UW bedrijf met een consistente visuele ervaring.\n\n#### Bedrijfslogo\n\nUw logo prominent op het inlogscherm en in het hoofddashboard.\n\n#### Bedrijfskleuren\n\nKies het kleurenthema dat bij het imago van uw bedrijf past.\nProfessioneel, consistent, herkenbaar."
         }
-      }
+      },
+      "label_open": "Meer informatie"
     }
   },
   "cart": {
@@ -726,98 +736,101 @@
     "per_year": "jaar",
     "total_monthly": "Maandelijks totaal",
     "total_yearly": "Jaarlijks totaal",
-    "vat_note": "BTW (berekend bij afrekenen)",
+    "vat_note": "Btw (berekend bij het afrekenen)",
     "email_label": "E-mail voor licenties en SaaS-toegang",
     "email_placeholder": "naam@bedrijf.com",
-    "email_hint": "Wij sturen hier uw licentiesleutels en toegangsgegevens naartoe.",
+    "email_hint": "We sturen uw licentiesleutels en toegangsgegevens naar dit adres.",
     "email_error_empty": "Vul een geldig e-mailadres in.",
     "email_error_invalid": "Vul een geldig e-mailadres in (bijv. naam@bedrijf.com).",
-    "terms_alert": "Om door te gaan moet u de Algemene Voorwaarden accepteren en bevestigen dat u het Privacybeleid heeft gelezen.",
+    "terms_alert": "Om door te gaan moet u de Voorwaarden accepteren en bevestigen dat u de privacyverklaring hebt gelezen.",
     "checkout_loading": "Verwerken...",
     "checkout_button": "Doorgaan naar Afrekenen",
     "checkout_error": "Er is een fout opgetreden. Probeer het opnieuw.",
     "policy_terms_prefix": "Ik heb de",
-    "policy_terms_link": "Algemene Servicevoorwaarden",
+    "policy_terms_link": "Gebruiksvoorwaarden",
     "policy_terms_suffix": "van GeoTapp gelezen en ga ermee akkoord.",
-    "policy_privacy_prefix": "Ik heb het",
-    "policy_privacy_link": "Privacybeleid",
+    "policy_privacy_prefix": "Ik heb de",
+    "policy_privacy_link": "Privacyverklaring",
     "policy_privacy_suffix": "van GeoTapp gelezen."
   },
   "guida": {
     "page_title": "Gebruikershandleiding",
-    "download_pdf": "Downloaden / Afdrukken als PDF"
+    "download_pdf": "Afdrukken of opslaan als pdf",
+    "box_note": "Opmerking",
+    "box_warning": "Let op",
+    "box_tip": "Tip"
   },
   "trial": {
-    "page_title": "Start uw gratis proefperiode van 14 dagen",
-    "page_subtitle": "Het volledige Business-plan voor 14 dagen: onbeperkte kantoorgebruikers en tot 50 medewerkers in het veld. Geen kaart, geen verplichting, en de dagen gaan pas lopen bij je eerste login, niet bij de aanmelding.",
+    "page_title": "14 dagen gratis. Geen creditcard.",
+    "page_subtitle": "Het complete Business-plan voor 14 dagen: onbeperkt aantal kantoorgebruikers en tot 50 medewerkers in het veld. Geen creditcard, geen verplichting, en de dagen gaan pas lopen vanaf uw eerste login, niet vanaf de aanmelding.",
     "badge": "Gratis proefperiode, 14 dagen",
     "form_title": "Maak uw account aan",
     "form_company": "Bedrijfsnaam",
     "form_company_placeholder": "Bijv. De Vries Installaties BV",
-    "form_vat": "Europees BTW-nummer",
+    "form_vat": "Europees btw-nummer",
     "form_vat_placeholder": "Bijv. NL123456789B01",
     "form_email": "Zakelijk e-mailadres",
     "form_email_placeholder": "Bijv. jan@bedrijf.nl",
     "form_fullname": "Volledige naam",
     "form_fullname_placeholder": "Bijv. Jan de Vries",
     "form_plan": "GeoTapp Flow-abonnement",
-    "form_plan_note": "Het aantal gebruikers van het plan verwijst naar GeoTapp Flow (kantoorbeheer / CRM). GeoTapp Timetracker-licenties voor buitendienstmedewerkers zijn een apart abonnement, met een maximum inbegrepen afhankelijk van het gekozen plan.",
+    "form_plan_note": "De gebruikers van het abonnement hebben betrekking op GeoTapp Flow (kantoorbeheer/CRM). De licenties voor GeoTapp TimeTracker voor medewerkers in het veld zijn een apart abonnement, met een maximaal aantal dat is inbegrepen volgens het gekozen plan.",
     "plan_solo": "Solo, 1 Flow-gebruiker",
     "plan_team": "Team, tot 5 Flow-gebruikers",
-    "plan_business": "Business, onbeperkt Flow-gebruikers",
-    "form_seats": "Timetracker-licenties (optioneel)",
-    "form_seats_hint": "Apart abonnement voor buitendienstmedewerkers (mobiele app). Limiet inbegrepen in plan: Solo max 2, Team max 5, Business onbeperkt. U kunt licenties aanpassen na activering.",
-    "form_submit": "Start de proefperiode",
-    "form_submit_simple": "Gratis starten",
+    "plan_business": "Business, onbeperkt aantal Flow-gebruikers",
+    "form_seats": "TimeTracker-licenties (optioneel)",
+    "form_seats_hint": "Apart abonnement voor medewerkers in het veld (mobiele app). Limiet die in het plan is inbegrepen: Solo max. 2, Team max. 5, Business onbeperkt. U kunt de licenties na de activering aanpassen.",
+    "form_submit": "Start de gratis proefperiode",
+    "form_submit_simple": "Gratis beginnen",
     "form_response_time": "U ontvangt de welkomstmail binnen enkele ogenblikken",
-    "form_submitting": "Bezig...",
+    "form_submitting": "Activeren…",
     "form_privacy": "Uw gegevens worden verwerkt volgens ons",
-    "form_privacy_link": "Privacybeleid",
-    "form_usage_note": "Tijdens de proefperiode verzamelen we gebruiksgegevens van de app (bezochte schermen, gebruikte functies) om je op weg te helpen en de dienst te verbeteren. Ze worden aan het einde van de proef verwijderd; we bewaren alleen geaggregeerde, anonieme statistieken.",
-    "form_email_hint": "Zakelijk e-mailadres aanbevolen. Persoonlijk (Gmail, Outlook, etc.) kan ook.",
+    "form_privacy_link": "privacyverklaring",
+    "form_usage_note": "Tijdens de proefperiode verzamelen we gegevens over het gebruik van de app (bezochte schermen, gebruikte functies) om u op weg te helpen en de dienst te verbeteren. Ze worden aan het einde van de proefperiode gewist; we bewaren alleen anonieme, geaggregeerde statistieken.",
+    "form_email_hint": "Een zakelijk e-mailadres wordt aanbevolen. Een persoonlijk adres (Gmail, Outlook, enz.) kan ook.",
     "success_title": "Controleer uw e-mail!",
     "success_desc": "We hebben de inloggegevens gestuurd naar ",
-    "success_desc2": "Daarin staat een tijdelijk wachtwoord: bij de eerste keer inloggen kies je je eigen.",
-    "success_spam": "Niet in je inbox? Controleer de map spam of promoties.",
-    "error_message": "Activeringsfout. Probeer het opnieuw of stuur een e-mail naar info@geotapp.com.",
-    "error_captcha": "De botcontrole is niet gelukt. Probeer het opnieuw, hij vernieuwt zichzelf. Blijft het misgaan, mail dan naar support@geotapp.com en wij zetten je account klaar.",
-    "error_captcha_pending": "Alleen de controle hierboven ontbreekt nog: vink \"Ik ben geen robot\" aan en druk opnieuw.",
+    "success_desc2": "Daarin staat een tijdelijk wachtwoord: bij de eerste keer inloggen kiest u een eigen wachtwoord.",
+    "success_spam": "Niet in uw inbox? Kijk in de map spam of promoties.",
+    "error_message": "Fout bij het activeren. Probeer het opnieuw of schrijf naar info@geotapp.com.",
+    "error_captcha": "De anti-botcontrole is niet gelukt. Probeer het opnieuw: hij vernieuwt zichzelf. Blijft het misgaan, schrijf dan naar support@geotapp.com en wij openen de toegang voor u.",
+    "error_captcha_pending": "Alleen de controle hierboven ontbreekt nog: vink “Ik ben geen robot” aan en druk opnieuw.",
     "error_email_required": "Het e-mailadres ontbreekt.",
-    "error_invalid_email": "Dit e-mailadres klopt niet. Controleer het en probeer het opnieuw.",
-    "error_disposable_email": "Wegwerpadressen worden niet geaccepteerd. Gebruik je echte adres.",
-    "error_domain_not_allowed": "Dit e-maildomein wordt niet geaccepteerd. Gebruik het adres van je bedrijf.",
+    "error_invalid_email": "Dit e-mailadres is niet goed geschreven. Controleer het en probeer het opnieuw.",
+    "error_disposable_email": "Wegwerpadressen zijn niet toegestaan. Gebruik uw echte adres.",
+    "error_domain_not_allowed": "Dit e-maildomein is niet toegestaan. Gebruik het adres van uw bedrijf.",
     "error_trial_already_active": "Voor dit e-mailadres loopt al een proefperiode. Log in op flow.geotapp.com of schrijf naar support@geotapp.com.",
-    "error_trial_already_used": "Dit e-mailadres heeft de GeoTapp-proefperiode al gebruikt. Schrijf naar support@geotapp.com, dan kijken we samen.",
+    "error_trial_already_used": "Dit e-mailadres heeft al een GeoTapp-proefperiode gebruikt. Schrijf naar support@geotapp.com, dan kijken we samen wat mogelijk is.",
     "error_email_already_registered": "Dit e-mailadres is al geregistreerd. Log in op flow.geotapp.com.",
     "error_too_many_attempts": "Te veel pogingen vanaf deze verbinding. Wacht een paar minuten en probeer het opnieuw, of schrijf naar support@geotapp.com.",
-    "error_bot_speed": "Het formulier is te snel verstuurd. Probeer het opnieuw.",
-    "benefits_title": "Wat zit er in de proefperiode",
+    "error_bot_speed": "Het formulier is te snel verzonden. Probeer het opnieuw.",
+    "benefits_title": "Wat de proefperiode omvat",
     "benefits": [
       {
-        "title": "Het grootste plan, geen demo",
-        "desc": "Je probeert GeoTapp Flow op volle kracht: alle modules zitten erbij, geen enkele kost extra, met onbeperkte kantoorgebruikers en 50 TimeTracker-plekken die meteen actief zijn. Apart betaal je alleen de klokplekken, in het veld met TimeTracker en op kantoor in Flow."
+        "title": "Het grootste plan, geen afgeslankte versie",
+        "desc": "U probeert GeoTapp Flow op volle kracht: alle modules, onbeperkt aantal kantoorgebruikers en 50 actieve TimeTracker-plaatsen vanaf het begin. Bij het abonnement zijn de modules van Flow inbegrepen in het plan; apart betaalt u alleen de registratieplaatsen, in het veld met TimeTracker en op kantoor in Flow."
       },
       {
         "title": "Geen creditcard nodig",
-        "desc": "Alleen je e-mail: account klaar in 2 minuten. De kaart komt pas in beeld als je besluit te blijven."
+        "desc": "Alleen uw e-mailadres: account klaar in 2 minuten. De creditcard komt pas in beeld als u besluit te blijven."
       },
       {
-        "title": "Data veilig, AVG vanaf dag één",
-        "desc": "Data in Europa, bewijs van werk en nooit surveillance. Ze blijven van jou: exporteren kan wanneer je wilt."
+        "title": "Gegevens veilig, AVG vanaf de eerste dag",
+        "desc": "Gegevens in Europa, bewijs van het werk en nooit toezicht. Ze blijven van u: u exporteert ze wanneer u wilt."
       }
     ],
     "faq": [
       {
         "q": "Wat gebeurt er na 14 dagen?",
-        "a": "U ontvangt een e-mail met een link om uw abonnement te activeren. Als u niets doet, wordt het account opgeschort zonder kosten."
+        "a": "U ontvangt een e-mail met de link om het abonnement te activeren. Doet u niets, dan wordt het account opgeschort zonder kosten."
       },
       {
         "q": "Moet ik een creditcard invoeren?",
-        "a": "Nee. De proefperiode is volledig gratis zonder creditcard. U voegt er alleen een toe als u besluit door te gaan."
+        "a": "Nee. De proefperiode is volledig gratis en zonder creditcard. U voert er alleen een in als u besluit door te gaan."
       },
       {
         "q": "Kan ik mijn team uitnodigen?",
-        "a": "Ja: tijdens de proefperiode kun je tot 50 veldmedewerkers activeren via het licentiepaneel. Meer nodig? Mail support@geotapp.com en we verhogen de limiet."
+        "a": "Ja: tijdens de proefperiode kunt u tot 50 medewerkers in het veld activeren via het licentiepaneel. Hebt u er meer nodig? Schrijf naar support@geotapp.com en we verhogen de limiet."
       },
       {
         "q": "Hoe lang duurt het om te beginnen?",
@@ -825,11 +838,13 @@
       }
     ],
     "success_sender": "De e-mail komt van:",
-    "form_seats_required_note": "* Verplicht: vul 0 in als je geen TimeTracker-licenties nodig hebt.",
+    "form_seats_required_note": "* Verplicht veld: vul 0 in als u geen TimeTracker-licenties nodig hebt.",
     "trust_gdpr": "Geen doorlopende tracking",
     "trust_offline": "Offline verificatie",
     "form_field_employees": "Hoeveel mensen werken er in het veld?",
-    "form_field_employees_hint": "Optioneel. Zo schrijven we je over jouw situatie, niet over een algemene."
+    "form_field_employees_hint": "Optioneel. Zo kunnen we u over uw situatie schrijven, niet over een algemene.",
+    "trust_gps": "Locatie alleen bij het inklokken",
+    "trust_no_card": "Geen creditcard"
   },
   "demo": {
     "page_title": "Boek uw persoonlijke demo",
@@ -843,26 +858,26 @@
     ],
     "cosa_vedrai": [
       {
-        "title": "GPS inklokken in actie",
-        "desc": "Hoe de technicus incheckt via de mobiele app en hoe het kantoor de geverifieerde locatie ziet, zonder continue tracking."
+        "title": "Registratie met locatie in actie",
+        "desc": "Hoe de monteur registreert via de mobiele app en hoe het kantoor de vastgelegde locatie ziet, zonder doorlopende tracking."
       },
       {
         "title": "Verifieerbare rapporten",
-        "desc": "Hoe elke opdracht een rapport genereert met fotobewijs, digitale handtekening en verzegelde hash die u aan de klant kunt tonen."
+        "desc": "Hoe elke klus een rapport oplevert met fotobewijs, cryptografische verzegeling en SHA-256-vingerafdrukken die u aan de klant kunt tonen."
       },
       {
-        "title": "Teambeheer via Flow",
-        "desc": "Hoe u taken toewijst, de voortgang bewaakt en wekelijkse rapporten produceert zonder Excel-sheets of telefoontjes."
+        "title": "Teambeheer vanuit Flow",
+        "desc": "Hoe u taken toewijst, de voortgang volgt en wekelijkse rapporten maakt zonder Excel-bestanden of telefoontjes."
       }
     ],
     "faq": [
       {
         "q": "Hoe lang duurt de demo?",
-        "a": "Precies 30 minuten. We tonen u het platform in echt gebruik en beantwoorden uw branchespecifieke vragen."
+        "a": "Precies 30 minuten. We laten het platform in echt gebruik zien en beantwoorden uw vragen over uw sector."
       },
       {
         "q": "Is voorbereiding nodig?",
-        "a": "Nee. Breng gewoon uw concrete situatie mee, hoeveel medewerkers u heeft en welke problemen u vandaag ervaart met uren of rapporten."
+        "a": "Nee. Breng gewoon uw concrete situatie mee: hoeveel medewerkers u hebt en welke problemen u nu hebt met uren of rapporten."
       },
       {
         "q": "Is de demo gratis?",
@@ -870,10 +885,10 @@
       },
       {
         "q": "Kan ik een collega uitnodigen?",
-        "a": "Absoluut. Vaak nemen de operationeel manager en de admin of HR samen deel."
+        "a": "Zeker. Vaak nemen de operationeel verantwoordelijke en de beheerder of HR samen deel."
       }
     ],
-    "form_name": "Volledige naam",
+    "form_name": "Voor- en achternaam",
     "form_name_placeholder": "Jan de Vries",
     "form_company": "Bedrijf",
     "form_company_placeholder": "Bedrijfsnaam",
@@ -882,20 +897,20 @@
     "form_email_placeholder": "jan@bedrijf.nl",
     "form_phone": "Telefoon (optioneel)",
     "form_phone_placeholder": "+31 6 12345678",
-    "form_submit": "Gratis demo boeken",
-    "form_submitting": "Versturen...",
+    "form_submit": "Boek de gratis demo",
+    "form_submitting": "Versturen…",
     "success_title": "Aanvraag ontvangen!",
     "success_desc": "We nemen binnen 1 werkdag contact met u op om de demo in te plannen.",
     "error_message": "Fout bij verzenden. Probeer het later opnieuw.",
-    "badge": "Demo GeoTapp, 30 Minuten",
-    "page_subtitle": "We laten u zien hoe GeoTapp geschillen over uren elimineert en elke opdracht gedocumenteerd en verifieerbaar maakt.",
+    "badge": "Demo GeoTapp, 30 minuten",
+    "page_subtitle": "We laten u zien hoe GeoTapp geschillen over uren voorkomt en elke klus gedocumenteerd en te controleren maakt.",
     "form_title": "Uw gegevens",
     "urgent_contact": "Dringende vragen? Schrijf naar",
-    "no_spam": "Geen spam. Uw gegevens worden behandeld volgens ons",
-    "trust_gps": "GPS-geverifieerde klok-in",
+    "no_spam": "Geen spam. Uw gegevens worden verwerkt volgens onze",
+    "trust_gps": "Locatie gecontroleerd bij het inklokken",
     "trust_offline": "Offline verificatie",
     "trust_response": "Reactie binnen 1 dag",
-    "what_youll_see": "Wat u in de demo ziet",
+    "what_youll_see": "Wat u in de demo te zien krijgt",
     "faq_title": "Veelgestelde vragen",
     "trust_gdpr": "Geen doorlopende tracking"
   },
@@ -903,12 +918,12 @@
     "title": "GeoTapp downloaden",
     "subtitle": "Kies de versie die bij uw behoeften past.",
     "demo_report_badge": "Echt voorbeeld",
-    "demo_report_title": "Verzegeld taakrapport",
-    "demo_report_desc": "Download een echt rapport gegenereerd door GeoTapp. Bevat geverifieerde GPS, fotobewijs, operator-hashketen en cryptografische verzegeling.",
+    "demo_report_title": "Verzegeld rapport van een klus",
+    "demo_report_desc": "Download een echt rapport dat door GeoTapp is gegenereerd. Het bevat de locatie die bij de registraties is vastgelegd, de bewijsfoto's en de cryptografische verzegeling. U kunt rechtstreeks op geotapp.com controleren of het niet is gewijzigd.",
     "demo_report_btn_download": "Voorbeeldrapport downloaden (.zip)",
-    "demo_report_btn_verify": "Authenticiteit verifiëren",
-    "demo_report_field_operator": "Operator",
-    "demo_report_field_type": "Taaktype",
+    "demo_report_btn_verify": "Authenticiteit controleren",
+    "demo_report_field_operator": "Medewerker",
+    "demo_report_field_type": "Soort klus",
     "windows_title": "GeoTapp voor Windows",
     "windows_desc": "De complete desktopapplicatie voor bedrijfsbeheer. Ideaal voor administratie en volledige controle.",
     "windows_features": [
@@ -932,89 +947,89 @@
     "badge": "Ons verhaal",
     "hero_title_line1": "Geboren in het veld,",
     "hero_title_line2": "niet op kantoor.",
-    "hero_desc": "Het product begon met een vel papier met een maand aan uren erop, en totalen die nooit klopten.",
+    "hero_desc": "Het product is ontstaan uit een vel papier met de uren van een maand erop, en uit totalen die nooit klopten.",
     "story": [
-      "Er is één klus waarvoor nooit iemand betaald is, en dat is het opschrijven van je eigen uren. Datum, begin, einde, totaal. Elke dag, en aan het eind van de maand gaat het overzicht naar de baas.",
-      "<strong>Michele Angelo Petraroli</strong> werkte in de evenementenbeveiliging, in loondienst, en hij vulde dat blad in zoals iedereen het invult, namelijk slecht. De totalen klopten bijna nooit, deels ook zijn eigen schuld, want het is menselijk om saaie dingen uit te stellen en ze een week later uit je hoofd te reconstrueren. De collega's die hun uren helemaal niet doorgaven, werkten kennelijk omdat ze rijk waren en het uit liefhebberij deden.",
-      "Hij zocht een app die hem dat karwei uit handen nam. Ze waren allemaal hetzelfde, en ze vroegen precies wat hij al met de hand deed, datum, begin, einde, totaal. Dezelfde moeite, mooiere knoppen.",
-      "Dus bouwde hij er zelf een, in zijn vakantie. Een webpagina en twee handelingen, drukken als je begint en drukken als je stopt, en de rest belandde netjes in een bestand dat aan het eind van de maand zo verstuurd kon worden.",
-      "Toen kwam de gedachte die alles veranderde, als het mij helpt, helpt het de ploeg ook. En als het de baas helpt, dan moet de stroom worden omgedraaid, want niet hij hoort achter mensen aan te lopen voor hun uren, de uren horen elke dag vanzelf bij hem aan te komen.",
-      "Vanaf daar groeide het gereedschap maar in één richting. Eerst de wettelijk toegestane locatiebepaling, uitgelezen bij het openen en het sluiten van de dienst, nooit doorlopend. Daarna de automatische verzegeld bewijs van het uitgevoerde werk, want het echte probleem was nooit het tellen van de uren, het was het bewijzen ervan zodra iemand ze in twijfel trok.",
-      "O ja, en het wordt geschreven als GeoTapp, met twee P's. Kom je er ergens een tegen met één P, dan zijn wij dat niet, maar we nemen het niemand kwalijk.",
-      "De naam heeft het trouwens allemaal al in zich. De locatie, een tap, een app."
+      "Er is een klus waarvoor nog nooit iemand betaald is, en dat is het noteren van de uren die men heeft gewerkt. Datum, begintijd, eindtijd, totaal. Elke dag, en aan het eind van de maand het overzicht naar de baas.",
+      "<strong>Michele Angelo Petraroli</strong> werkte als werknemer in de evenementenbeveiliging, en dat blad vulde hij in zoals iedereen het invult, dus slecht. De totalen klopten bijna nooit, deels ook door zijn eigen schuld, want het is menselijk om saaie dingen uit te stellen en ze een week later uit het hoofd te reconstrueren.",
+      "Hij zocht een app die hem van dat gedoe afhielp. Hij vond ze allemaal hetzelfde, en ze vroegen allemaal precies wat hij al met de hand deed: datum, begin, einde, totaal. Dezelfde moeite, mooiere knoppen.",
+      "Dus bouwde hij er in zijn vakantie zelf een. Een webpagina en twee handelingen: drukken bij het begin en drukken bij het einde, en de rest belandde netjes in een kant-en-klaar archief dat aan het eind van de maand verstuurd kon worden.",
+      "Toen kwam de gedachte die alles veranderde: als het mij helpt, helpt het ook mijn collega's. En als het de baas helpt, dan moet de stroom omgedraaid worden, want hij hoort niet achter mensen aan te lopen voor de uren: de uren komen elke dag vanzelf bij hem aan.",
+      "Vanaf dat moment groeide het hulpmiddel in één richting. Eerst de geolocatie, bedacht om binnen de wettelijke kaders te blijven: de locatie wordt alleen gelezen wanneer de medewerker registreert (aankomst, pauzes, vertrek) en nooit doorlopend. Daarna het controleerbare bewijs van het uitgevoerde werk, want het echte probleem was niet het tellen van de uren, maar ze aantonen wanneer iemand eraan twijfelde.",
+      "O ja, en het schrijft zich GeoTapp, met twee p's. Komt u ergens een versie met één p tegen, dan zijn wij dat niet, maar we nemen het niemand kwalijk.",
+      "De naam zegt trouwens alles: geolocatie, een tap, een app."
     ],
     "values_title": "Onze waarden",
     "values": [
       {
-        "title": "Duidelijke missie",
-        "desc": "Elke opdracht meetbaar en verifieerbaar maken. Veldwerk verdient dezelfde transparantie-instrumenten als een kantoor."
+        "title": "Een duidelijke missie",
+        "desc": "Elke klus meetbaar en controleerbaar maken. Werk in het veld verdient dezelfde transparantie als een kantoor."
       },
       {
-        "title": "Toegewijd team",
-        "desc": "We zijn een klein team dat geobsedeerd is door het probleem dat we oplossen. Elke functie komt voort uit echte feedback, niet uit marketingroadmaps."
+        "title": "Een klein team",
+        "desc": "We zijn een klein team, maar geobsedeerd door het probleem dat we oplossen. Elke functie komt voort uit echte feedback, niet uit marketingroadmaps."
       },
       {
-        "title": "Privacy by Design",
-        "desc": "De gegevens worden niet verkocht, en de positie wordt twee keer per dienst gelezen, bij het openen en bij het sluiten. Daartussen weet het gereedschap niet waar u bent."
+        "title": "Privacy vanaf het ontwerp",
+        "desc": "De gegevens worden niet verkocht, en de locatie wordt alleen gelezen wanneer u registreert: bij aankomst, bij de pauzes, bij vertrek, plus de bewijsfoto als u die maakt. Tussen twee registraties in wordt niets automatisch vastgelegd."
       },
       {
-        "title": "Made in Italy",
+        "title": "Gemaakt in Italië",
         "desc": "Ontwikkeld in Italië voor de Italiaanse en Europese markt. AVG-regels, werkcultuur en lokale regelgeving zitten in het DNA van het product."
       }
     ],
     "cta_title": "Aan de andere kant zit een mens",
-    "cta_desc": "Een klein bedrijf dat gereedschap bouwt voor bedrijven met ploegen buiten de deur. Wie schrijft, krijgt antwoord van iemand die het probleem zelf heeft gehad.",
-    "cta_btn": "Stuur ons een Bericht",
+    "cta_desc": "Een klein bedrijf dat een hulpmiddel ontwikkelt voor bedrijven die buiten de deur werken. Wie schrijft, krijgt antwoord van iemand die dat probleem zelf heeft gehad.",
+    "cta_btn": "Schrijf ons",
     "stats": [
       {
         "number": "2024",
-        "label": "Opgericht"
+        "label": "Oprichtingsjaar"
       },
       {
         "number": "11",
-        "label": "Talen in het product"
+        "label": "Talen van het product"
       },
       {
         "number": "EU",
-        "label": "Waar de data blijven"
+        "label": "Waar de gegevens blijven"
       }
     ],
-    "mission_quote": "Veldwerk verdient dezelfde transparantie-tools als een kantoor.",
+    "mission_quote": "Werk in het veld verdient dezelfde transparantie als een kantoor.",
     "founder": {
       "section_label": "De oprichter",
       "name": "Michele Angelo Petraroli",
-      "role": "Founder & CEO",
-      "bio": "Michele Angelo Petraroli is founder en CEO van GeoTapp, een Italiaanse SaaS voor het beheer van veldwerkers bij Europese MKB's. Vanuit zijn operationele ervaring zag hij hoe schoonmaakbedrijven, installateurs en beveiligingsdiensten geld verliezen als het bewijs van werk ontbreekt. Hij richtte GeoTapp op in 2024 om het probleem bij de wortel aan te pakken. Vandaag helpt GeoTapp Europese MKB's met GPS-registratie die gebouwd is om binnen de AVG te blijven, fotobewijs en digitale handtekeningen die elke opdracht verifieerbaar maken.",
+      "role": "Oprichter",
+      "bio": "Michele Angelo Petraroli is de oprichter en eigenaar van GeoTapp, de Italiaanse software die het werk van teams in het veld bij Europese MKB-bedrijven vastlegt. Uit eigen ervaring in dienstverlenende MKB-bedrijven (schoonmaak, installateurs, beveiliging) heeft hij gezien hoeveel geld er verloren gaat als het bewijs van het uitgevoerde werk ontbreekt. Hij richtte GeoTapp in 2024 op om het probleem bij de wortel aan te pakken. Vandaag helpt GeoTapp Europese MKB-bedrijven het verrichte werk aan te tonen: locatie die alleen bij het registreren wordt vastgelegd, bewijsfoto's en verzegelde rapporten die de klant zelf controleert.",
       "expertise_label": "Vakgebieden",
       "expertise": [
-        "Veldservice management",
-        "AVG & Werknemers geolocatie",
-        "Workforce Management",
-        "B2B SaaS",
-        "Europese MKB"
+        "Beheer van teams in het veld",
+        "AVG en geolocatie van werknemers",
+        "Werkorganisatie",
+        "Software voor bedrijven",
+        "Europese MKB-bedrijven"
       ],
       "cta_linkedin": "LinkedIn",
-      "cta_email": "Neem contact op"
+      "cta_email": "Schrijf mij"
     }
   },
   "stampa": {
-    "metaTitle": "GeoTapp Persruimte",
-    "metaDesc": "Persmateriaal voor GeoTapp: wie we zijn, de oprichter, verifieerbare feiten en downloadbare bronnen. Contact: press@geotapp.com.",
-    "badge": "PERS",
-    "hero_title": "Persruimte",
-    "hero_desc": "Alles wat u nodig heeft om over GeoTapp te schrijven: wie we zijn, wat we doen en waarom werkbewijzen geen bewaking zijn. Materialen, feiten en contactgegevens voor journalisten en redacties.",
-    "boilerplate_label": "Kort samengevat",
-    "boilerplate_short": "GeoTapp is een tijdregistratie- en werkbewijs-tool voor bedrijven met buitendienstteams. Het legt de locatie en het tijdstip van een klok-in alleen vast op het moment dat de medewerker zelf klokt, nooit doorlopend, en produceert een document dat de opdrachtgever zelf kan controleren.",
-    "boilerplate_long": "GeoTapp is ontstaan uit een concreet probleem: bewijzen dat een klus is gedaan, waar en wanneer, zonder mensen de hele dag als stippen op een kaart te volgen. Het systeem legt de locatie alleen vast op het moment van klokken, pauzes inbegrepen, voegt foto's en notities toe vanuit het veld en verzegelt elke sessie zodat elke wijziging detecteerbaar is. Het resultaat is een bewijs dat de opdrachtgever zelfstandig kan verifiëren en dat de werkgever beschermt bij een geschil én de werknemer die ten onrechte wordt beschuldigd niet op te zijn komen dagen. GeoTapp is gemaakt voor iedereen die teams de deur uit stuurt (schoonmaakbedrijven, installateurs, beveiliging, onderhoud, bouw) en is ontworpen om binnen de grenzen van de regels rond werknemerscontrole en de AVG te blijven.",
+    "metaTitle": "Persafdeling GeoTapp",
+    "metaDesc": "Persmateriaal over GeoTapp: wie we zijn, de oprichter, controleerbare gegevens en downloadbare bronnen. Contact: press@geotapp.com.",
+    "badge": "PERSAFDELING",
+    "hero_title": "Persafdeling",
+    "hero_desc": "Alles wat u nodig hebt om over GeoTapp te schrijven: wie we zijn, wat we doen en waarom een werkbewijs geen toezicht is. Materialen, gegevens en contactgegevens voor journalisten en redacties.",
+    "boilerplate_label": "In het kort",
+    "boilerplate_short": "GeoTapp is een tool voor tijdregistratie en bewijs van het uitgevoerde werk voor bedrijven met teams in het veld. Het legt alleen op het moment van de registratie vast waar en wanneer die plaatsvindt, nooit doorlopend, en levert een document op dat de opdrachtgever zelfstandig kan controleren.",
+    "boilerplate_long": "GeoTapp is ontstaan uit een concreet probleem: aantonen dat een klus is uitgevoerd, waar en wanneer, zonder mensen de hele dag tot stipjes op een kaart te maken die bewaakt worden. Het hulpmiddel legt de locatie alleen vast op het moment van de registratie, pauzes inbegrepen, voegt foto's en notities uit het veld toe en verzegelt elke sessie zodat elke wijziging zichtbaar is. Het resultaat is een bewijs dat de klant zelfstandig kan controleren en dat zowel de werkgever beschermt bij een betwisting als de werknemer die ten onrechte wordt beschuldigd. Het is bedoeld voor wie teams buiten de deur stuurt, schoonmaakbedrijven, installateurs, beveiliging, onderhoud, bouw, en is gebouwd binnen de kaders van artikel 4 van het Italiaanse arbeidsstatuut en van de AVG.",
     "facts_label": "Kerngegevens",
     "facts": [
       {
         "k": "Wat",
-        "v": "Tijdregistratie en werkbewijs voor buitendienstteams"
+        "v": "Tijdregistratie en bewijs van het uitgevoerde werk voor teams in het veld"
       },
       {
         "k": "Door iedereen te controleren",
-        "v": "De app vraagt geen locatietoestemming op de achtergrond: te controleren in het APK-manifest of op het privacylabel van de store. We zouden niet eens doorlopend kunnen volgen als we dat wilden."
+        "v": "De app vraagt geen locatietoestemming op de achtergrond: iedereen kan dat nagaan in het manifest van de APK of op het privacylabel van de store. We kunnen niet doorlopend volgen, ook al zouden we dat willen."
       },
       {
         "k": "Voor wie",
@@ -1025,43 +1040,43 @@
         "v": "Michele Angelo Petraroli"
       },
       {
-        "k": "Hoofdkantoor",
+        "k": "Vestiging",
         "v": "Trenzano (BS)"
       },
       {
-        "k": "Opgericht",
-        "v": "Idee in 2024, ontwikkeling voltooid in 2025"
+        "k": "Oprichting",
+        "v": "Idee in 2024, ontwikkeling afgerond in 2025"
       }
     ],
     "founder_label": "De oprichter",
-    "founder_bio": "Michele Angelo Petraroli werkte in de evenementenbeveiliging en had dagelijks een hekel aan dezelfde klus: zijn uren met de hand bijhouden. De apps die hij probeerde, deden hetzelfde werk met mooiere knoppen, dus bouwde hij in zijn vakantie zijn eigen versie: druk op start, druk op stop, een nette maandtotaal aan het eind. Zo ontstond GeoTapp, eerst voor zijn collega's, daarna als systeem om te bewijzen dat werk gedaan is zonder de mensen die het doen te bewaken.",
+    "founder_bio": "Michele Angelo Petraroli werkte in de evenementenbeveiliging en had elke dag een hekel aan hetzelfde: de uren met de hand noteren. De apps die hij probeerde deden hetzelfde met mooiere knoppen, dus ontwikkelde hij in zijn vakantie zijn eigen versie: druk om te beginnen, druk om te stoppen, het geordende totaal klaar aan het eind van de maand. Zo is GeoTapp ontstaan, eerst voor zijn collega's, daarna als systeem om het uitgevoerde werk aan te tonen zonder degene die het uitvoert te bewaken.",
     "resources_label": "Persbronnen",
-    "resources_intro": "Logo, foto en kant-en-klaar materiaal, plus de gratis tools die we voor iedereen beschikbaar stellen.",
+    "resources_intro": "Logo, foto's en kant-en-klaar materiaal, plus de tools die we voor iedereen beschikbaar stellen.",
     "logo_download": "Logo downloaden",
-    "photo_download": "Foto oprichter",
-    "photo_download_2": "Foto oprichter (op het podium)",
-    "photo_download_3": "Foto oprichter (close-up)",
-    "photo_download_wide": "Foto oprichter (breed formaat)",
-    "asset_map": "EU-werknemers GPS-kaart",
-    "asset_facsimile": "GPS-privacyverklaring sjabloon",
+    "photo_download": "Foto van de oprichter",
+    "photo_download_2": "Foto van de oprichter (op het podium)",
+    "photo_download_3": "Foto van de oprichter (close-up)",
+    "photo_download_wide": "Foto van de oprichter (breed formaat)",
+    "asset_map": "Kaart: gps bij werknemers in de EU",
+    "asset_facsimile": "Voorbeeld van een GPS-privacyverklaring",
     "contact_label": "Perscontact",
-    "contact_office": "GeoTapp Persafdeling",
+    "contact_office": "Persafdeling GeoTapp",
     "contact_email": "press@geotapp.com",
     "releases_label": "Persberichten",
-    "coverage_label": "In de media",
+    "coverage_label": "Ze hebben ons geciteerd",
     "coverage_note": "Koppen in de oorspronkelijke taal"
   },
   "blog": {
-    "hero_title": "Gidsen over werkbewijs, AVG en teams op locatie.",
-    "hero_desc": "We schrijven niet om pagina's te vullen. We schrijven om te delen wat we leren bij het bouwen van de toekomst van verifieerbaar werk.",
+    "hero_title": "Gidsen over werkbewijs, AVG en teams in het veld.",
+    "hero_desc": "Praktische gidsen voor wie teams het veld in stuurt: hoe u het gedane werk aantoont, wat de wet zegt over gps bij werknemers, hoe u uren en aanwezigheid op orde houdt.",
     "no_posts": "Momenteel geen artikelen beschikbaar.",
     "read_article": "Artikel lezen →",
-    "cta_title": "Blijf op de hoogte",
-    "cta_desc": "Geen spam, alleen waardevolle updates over het product en de sector.",
-    "cta_btn": "Neem contact op",
-    "schema_desc": "Gidsen en inzichten over verifieerbaar bewijs van veldwerk, teambeheer, AVG en geolocatie.",
-    "meta_title": "Blog | GeoTapp - Verificatie van veldwerk",
-    "meta_desc": "Gidsen, inzichten en bronnen over teambeheer, verzegeld bewijs van interventies, AVG en geolocatie. Van het GeoTapp-team.",
+    "cta_title": "Probeer GeoTapp 14 dagen gratis",
+    "cta_desc": "Volledige toegang tot alle modules. Geen creditcard, geen verplichting.",
+    "cta_btn": "Start de gratis proefperiode",
+    "schema_desc": "Gidsen en verdieping over controleerbaar bewijs van werk in het veld, teambeheer, AVG en geolocatie.",
+    "meta_title": "Blog | GeoTapp - Controleerbaar bewijs van werk in het veld",
+    "meta_desc": "Gidsen, verdieping en bronnen over teambeheer, controleerbaar bewijs van klussen, AVG en geolocatie. Van het GeoTapp-team.",
     "cat_all": "Alle",
     "toc_title": "Inhoud",
     "reading_time_suffix": "min leestijd",
@@ -1076,137 +1091,137 @@
     "next_step_text": "Ontdek hoe GeoTapp dit probleem oplost voor {sector}-bedrijven",
     "next_step_fallback": "Ontdek hoe GeoTapp werkt voor uw bedrijf",
     "next_step_cta": "Meer informatie",
-    "hero_tagline": "Gedachten & Vonken."
+    "hero_tagline": "Gidsen en nieuws."
   },
   "roi": {
-    "meta_title": "GeoTapp ROI-Calculator - Ontdek uw echte besparingen",
-    "meta_desc": "Bereken in 2 minuten hoeveel u bespaart met GeoTapp: minder administratie, minder geschillen, productievere medewerkers. Zonder e-mail en zonder account.",
+    "meta_title": "GeoTapp ROI-calculator: schat hoeveel u in een jaar bespaart",
+    "meta_desc": "Schat in een minuut hoeveel u zou besparen met GeoTapp: minder uren administratie, minder geschillen, minder mondeling coördineren. Zonder e-mailadres en zonder account.",
     "hero_title": "Bereken uw ROI met GeoTapp",
     "hero_subtitle": "Voer uw bedrijfsgegevens in en ontdek hoeveel u jaarlijks kunt besparen.",
     "step1_title": "Uw bedrijf",
-    "step1_subtitle": "Vertel ons iets over uzelf",
+    "step1_subtitle": "Vertel ons iets over uw bedrijf",
     "field_settore": "Sector",
     "field_operatori": "Aantal medewerkers",
-    "settore_installatori": "Installatie & Onderhoud",
-    "settore_pulizie": "Schoonmaak & Desinfectie",
-    "settore_sicurezza": "Beveiliging & Bewaking",
+    "settore_installatori": "Installateurs",
+    "settore_pulizie": "Schoonmaak en ontsmetting",
+    "settore_sicurezza": "Beveiliging en bewaking",
     "settore_altro": "Andere sector",
     "settore_elettricisti": "Elektriciens",
     "settore_idraulici": "Loodgieters",
-    "settore_termoidraulici": "Verwarming",
+    "settore_termoidraulici": "CV en sanitair",
     "settore_impianti": "Installaties / HVAC",
     "settore_edilizia": "Bouw",
     "settore_manutenzione": "Onderhoud",
     "step2_title": "Uw huidige situatie",
-    "step2_subtitle": "Wees precies: hoe nauwkeuriger de gegevens, hoe nauwkeuriger de berekening",
+    "step2_subtitle": "Wees nauwkeurig: hoe echter de gegevens, hoe nauwkeuriger de berekening",
     "field_siti": "Dagelijks bezochte locaties (per medewerker)",
-    "field_ore_admin": "Uur/week besteed aan administratie en rapportage",
-    "field_contestazioni": "Klantgeschillen per maand (onbetaald, claims, enz.)",
+    "field_ore_admin": "Uren per week aan administratie en rapportage",
+    "field_contestazioni": "Klantgeschillen per maand (onbetaald, betwistingen, enz.)",
     "field_costo_orario": "Gemiddelde uurkosten van een medewerker (€)",
     "step3_title": "Waar sturen we uw rapport naartoe?",
-    "step3_subtitle": "Uw gepersonaliseerde resultaten komen direct. Geen spam.",
+    "step3_subtitle": "Uw persoonlijke resultaten komen direct. Geen spam.",
     "field_nome": "Voor- en achternaam",
     "field_email": "Zakelijk e-mailadres",
     "field_telefono": "Telefoon (optioneel)",
     "cta_calcola": "Bereken mijn ROI",
-    "consent_text": "Door op 'Bereken mijn ROI' te klikken stemt u ermee in commerciële communicatie van GeoTapp te ontvangen. U kunt zich op elk moment afmelden.",
-    "newsletter_opt_in": "Stuur me ook de maandelijkse nieuwsbrief met praktische tips om de berekende ROI echt te realiseren (GPS, AVG, fieldservice). Uitschrijven met 1 klik.",
+    "consent_text": "Door op 'Bereken mijn ROI' te klikken, stemt u ermee in commerciële berichten van GeoTapp te ontvangen. U kunt zich op elk moment afmelden.",
+    "newsletter_opt_in": "Ik wil ook de maandelijkse nieuwsbrief ontvangen met praktische tips om de berekende ROI te realiseren (GPS, AVG, beheer van het veld). Uitschrijven met 1 klik.",
     "next": "Volgende",
     "back": "Terug",
     "results_title": "Uw geschatte besparingen met GeoTapp",
-    "results_subtitle": "Gebaseerd op de door u ingevoerde gegevens",
-    "results_admin": "Besparingen op administratie & rapportage",
-    "results_dispute": "Besparingen op geschillen & claims",
-    "results_coord": "Besparingen op teamcoördinatie",
-    "results_total": "Totale jaarlijkse besparingen",
+    "results_subtitle": "Gebaseerd op de gegevens die u hebt ingevoerd",
+    "results_admin": "Besparing op administratie en rapportage",
+    "results_dispute": "Besparing op geschillen en betwistingen",
+    "results_coord": "Besparing op teamcoördinatie",
+    "results_total": "Totale jaarlijkse besparing",
     "results_payback": "Geschatte terugverdientijd",
     "results_payback_unit": "maanden",
     "results_roi": "Geschatte ROI",
-    "results_cta": "Start uw gratis 14-daagse proefperiode",
-    "results_disclaimer": "Indicatieve schatting op basis van sectorgemiddelden. Werkelijke resultaten kunnen variëren.",
+    "results_cta": "Start de gratis proefperiode van 14 dagen",
+    "results_disclaimer": "Indicatieve schatting op basis van sectorgemiddelden. De werkelijke resultaten kunnen afwijken.",
     "per_anno": "/ jaar",
     "label_operators": "medewerkers",
     "embed_title": "GeoTapp ROI-Calculator",
-    "intro": "Deze rekentool schat hoeveel je bedrijf per jaar kan besparen door aanwezigheid, werkbonnen en bewijs van werk te automatiseren. Vul een paar gegevens in en zie in 30 seconden je jaarlijkse besparing, terugverdientijd en ROI, zonder registratie.",
+    "intro": "De rekentool schat hoeveel uw bedrijf per jaar kan besparen door aanwezigheid, werkbonnen en bewijs van werk in het veld te automatiseren. Vul een paar gegevens in en zie in een minuut de geschatte jaarlijkse besparing, de terugverdientijd en de ROI, zonder registratie.",
     "faq_title": "Veelgestelde vragen over de ROI-berekening",
-    "pricing_link": "Ontdek met de ROI-calculator hoeveel je kunt besparen",
+    "pricing_link": "Ontdek met de ROI-calculator hoeveel u kunt besparen",
     "faq": [
       {
-        "q": "Hoe wordt de ROI van een gps-urenregistratie-app berekend?",
-        "a": "De schatting is opgebouwd uit drie concrete posten: de administratie-uren die je maandelijks bespaart, de geschillen en onterechte overuren die je vermijdt dankzij gelokaliseerd bewijs, en de teruggewonnen coördinatietijd. Het jaartotaal wordt vergeleken met de abonnementskosten voor de ROI en terugverdientijd."
+        "q": "Hoe wordt de ROI van een gps-app voor tijdregistratie berekend?",
+        "a": "De schatting gaat uit van drie concrete posten: de uren administratief werk die u elke maand bespaart, de geschillen en onverschuldigde overuren die bewijs van het werk helpt te voorkomen, en de teruggewonnen coördinatietijd. Het jaartotaal wordt vergeleken met de kosten van het abonnement om de ROI en de terugverdientijd te bepalen."
       },
       {
         "q": "Moet ik me registreren of een e-mail achterlaten om het resultaat te zien?",
-        "a": "Nee. De berekening is direct en gratis: vul je gegevens in en zie meteen de schatting. E-mail is optioneel en wordt alleen gebruikt als je het gedetailleerde overzicht en praktische gidsen wilt."
+        "a": "Nee. De berekening is direct en gratis: vul uw gegevens in en zie meteen de schatting. Het e-mailadres is optioneel en dient alleen als u het detail en de praktische gidsen wilt ontvangen."
       },
       {
         "q": "Op welke gegevens is de geschatte besparing gebaseerd?",
-        "a": "Alleen op de waarden die je invult: aantal medewerkers, beheerde locaties of werven, uren besteed aan administratie, uurkosten en de geschillen die typisch zijn voor jouw sector. Hoe realistischer je invoer, hoe dichter de schatting bij jouw situatie ligt."
+        "a": "Alleen op de waarden die u zelf invult: aantal medewerkers, bezochte locaties of bouwplaatsen, uren besteed aan administratie, uurkosten en de geschillen die typisch zijn voor uw sector. Hoe realistischer de gegevens, hoe dichter de schatting bij uw situatie ligt."
       },
       {
         "q": "Zijn de abonnementskosten al verrekend in de geschatte besparing?",
-        "a": "Het bedrag dat je ziet is de brutobesparing. De terugverdientijd en het ROI-percentage vergelijken die wel met de jaarkosten van het gereedschap, berekend op het aantal medewerkers dat je hebt ingevuld. Het percentage is dus al netto, het totaal niet."
+        "a": "Het totaal dat u ziet is de bruto-besparing. De terugverdientijd en het ROI-percentage vergelijken die wel met de jaarkosten van het hulpmiddel, berekend op het aantal medewerkers dat u hebt ingevoerd. Het percentage is dus al netto, het totaal niet."
       },
       {
         "q": "Wat betekent de terugverdientijd in maanden?",
-        "a": "Het is het aantal maanden geschatte besparing dat nodig is om één jaar gereedschap te dekken. Blijft het onder de twaalf, dan betaalt het zichzelf binnen het eerste jaar terug en de rest is teruggewonnen marge."
+        "a": "Het is het aantal maanden geschatte besparing dat nodig is om een jaar van het hulpmiddel te dekken. Komt er een getal onder de twaalf uit, dan verdient het hulpmiddel zichzelf binnen het eerste jaar terug en is wat daarna komt teruggewonnen marge."
       },
       {
         "q": "Waarom haalt de berekening niet alle administratie-uren terug?",
-        "a": "Omdat ze bewust voorzichtig blijft: ze rekent ongeveer twee derde van die uren mee, niet alles. Een deel papierwerk blijft toch bestaan, en een schatting die honderd procent belooft is een verkooppraatje, geen prognose."
+        "a": "Omdat de berekening bewust voorzichtig is: van die uren telt ze ongeveer twee derde mee, niet alles. Een beetje papierwerk blijft altijd, en een schatting die honderd procent belooft zou een verkopersgetal zijn, geen prognose."
       }
     ]
   },
   "settore_layout": {
-    "pain_subtitle": "Klok-in apps registreren. Ze verzegelen niet. Er is een enorm verschil, en bij een geschil voel je dat.",
+    "pain_subtitle": "Apps voor tijdregistratie registreren. Ze verzegelen niet. Dat is een enorm verschil, en bij een geschil voelt u dat volledig.",
     "before": "Voorheen",
     "after": "Met GeoTapp",
-    "classic_app": "Standaard app / Spreadsheet",
+    "classic_app": "Beheersysteem / klassieke app",
     "roi_badge": "Bereken uw ROI",
     "roi_title": "Hoeveel zou u besparen met GeoTapp?",
-    "roi_desc": "Voer uw teamgrootte in en ontvang een ROI-schatting in 30 seconden. Zonder registratie, zonder e-mail.",
-    "roi_cta": "Bereken mijn ROI",
-    "mockup_title": "Opdracht open",
-    "mockup_gps": "GPS geverifieerd",
+    "roi_desc": "Vul de grootte van uw team in en zie in een minuut een schatting van het ROI. Zonder registratie, zonder e-mailadres.",
+    "roi_cta": "Bereken uw ROI",
+    "mockup_title": "Klus geopend",
+    "mockup_gps": "Locatie bij het registreren",
     "mockup_photos": "Foto's bijgevoegd",
-    "mockup_photos_count": "3 gelokaliseerde foto's",
-    "mockup_sealed": "Verzegeld na sluiting",
+    "mockup_photos_count": "3 foto's met locatie",
+    "mockup_sealed": "Verzegeld bij het afsluiten: elke wijziging is zichtbaar",
     "mockup_status_active": "Actief",
     "mockup_status_completed": "Voltooid",
     "mockup_status_summary": "4 medewerkers actief op 6 locaties",
     "see_real_report": "Bekijk een echt rapport",
-    "cta_note": "Geen binding. Geen contract. We configureren op uw echte situatie."
+    "cta_note": "Gratis proefperiode van 14 dagen, zonder creditcard."
   },
   "features": {
-    "title": "Kracht onder de motorkap.",
-    "subtitle": "We bouwen geen speelgoed. GeoTapp is een enterprise platform gebouwd om te schalen. Dit zijn de technologieën die de magie mogelijk maken.",
-    "gps_title": "GPS bij het inklokken, niet de hele dag",
-    "gps_desc": "De locatie wordt op twee momenten vastgelegd: als de dienst begint en als hij eindigt. Daartussen wordt niets automatisch geregistreerd. De inklokmomenten van vandaag staan er elk met GPS-coördinaten, geofence-controle en anti-spoofingbescherming: kantoor weet zonder te bellen wie waar begonnen is, en het team weet precies wat er wordt vastgelegd, en wanneer.",
-    "offline_title": "Inklokken met één tik",
-    "offline_desc": "Eén tik om met GPS in te klokken, pauzes te markeren en de dag af te sluiten. Bij elke opdracht kan een foto worden toegevoegd als bewijs van het werk, en alles komt rechtstreeks in Flow terecht.",
-    "encryption_title": "Military-Grade Encryption",
-    "encryption_desc": "Slaap gerust. We gebruiken AES-256-versleuteling in rust en TLS 1.3 in transit. Zelfs als een aanvaller uw data zou onderscheppen, ziet hij niets dan witte ruis. Privacy is geen juridisch vinkje, het is wiskunde.",
-    "realtime_title": "Real-Time WebSocket",
-    "realtime_desc": "Geen F5 meer nodig. Dankzij WebSockets reist informatie onmiddellijk. Als een technicus in Rotterdam een ticket sluit, ziet de manager in Amsterdam het stipje in diezelfde milliseconde groen worden. Alsof je overal tegelijk bent.",
-    "cms_title": "Headless CMS Integration",
-    "cms_desc": "Content is vloeibaar. Onze headless-architectuur ontkoppelt data van presentatie. Dat betekent: publiceer een blogpost, push hem naar de mobiele app en verstuur hem via nieuwsbrief, met één klik.",
-    "datalake_title": "Scalable Data Lake",
-    "datalake_desc": "Van 100 naar 100 miljoen records zonder moeite. We gebruiken gepartitioneerde PostgreSQL om enorme datavolumes te verwerken zonder vertraging. Uw geschiedenis is waardevol, we bewaren hem voor altijd, direct toegankelijk.",
-    "cdn_title": "Global CDN Edge",
-    "cdn_desc": "Snelheid is geografisch. Onze statische assets worden gerepliceerd over 300+ datacenters wereldwijd. Of uw klant nu in New York of Tokio zit, uw site laadt alsof de server in de kamer ernaast staat."
+    "title": "Wat GeoTapp doet, functie voor functie.",
+    "subtitle": "Van de registratie in het veld tot het rapport dat de klant zelf controleert. Dit zit erin, beschreven zoals het werkt.",
+    "gps_title": "Locatie alleen bij het registreren",
+    "gps_desc": "De locatie wordt vastgelegd wanneer de medewerker registreert (aankomst, pauzes, vertrek) en wanneer hij een bewijsfoto maakt. Tussen twee registraties in wordt er niets automatisch vastgelegd. In Flow toont het scherm met de registraties van vandaag elke registratie met haar locatie en de controle op de werkplek: het kantoor weet wie waar is begonnen zonder te bellen, en het team weet precies wat er wordt vastgelegd, en wanneer.",
+    "offline_title": "Registreren met één tik, ook zonder netwerk",
+    "offline_desc": "Eén tik om de dienst te beginnen, pauzes te markeren en de dienst af te sluiten. Bij elke klus kunnen bewijsfoto's horen. Is er geen netwerk, dan blijft de registratie op de telefoon bewaard en wordt ze vanzelf verzonden zodra het signaal terugkomt, met het tijdstip waarop ze is gemaakt.",
+    "encryption_title": "Valse locaties worden geweigerd",
+    "encryption_desc": "Bij het registreren weigert de app locaties die door nep-locatie-apps zijn gesimuleerd, te onnauwkeurige locaties en onmogelijke verplaatsingen. Bij foto's wordt niets geweigerd: er wordt een melding gemaakt door tijd en locatie van de opname te vergelijken met die van de registratie.",
+    "realtime_title": "Het rapport verzegelt zichzelf",
+    "realtime_desc": "Aan het eind van de klus wordt het rapport opgebouwd uit registraties, foto's en notities en verzegeld: een keten van SHA-256-vingerafdrukken verbindt elke gebeurtenis en elke foto, en de wortel wordt ondertekend met de sleutel van GeoTapp. Elke latere wijziging is zichtbaar.",
+    "cms_title": "Controleren zonder ons",
+    "cms_desc": "De opdrachtgever ontvangt een link en controleert het rapport zelf, online of met de offline verifier: één bestand dat geen verbinding met internet maakt en de openbare sleutel bij zich draagt. Het werkt ook over jaren, ook zonder GeoTapp.",
+    "datalake_title": "Gegevens in Europa, zo lang bewaard als nodig",
+    "datalake_desc": "De gegevens van de dienst staan op servers in de Europese Unie en worden versleuteld verzonden. In het register worden de locaties na twaalf maanden gewist, met een periode die het bedrijf kan verkorten tot dertig dagen; in rapporten die al zijn afgeleverd blijven ze staan, omdat het verzegelde documenten zijn, en na vijf jaar wordt het pakket gewist.",
+    "cdn_title": "Kantoor en veld verbonden",
+    "cdn_desc": "In Flow ziet het kantoor elke registratie zodra die binnenkomt, beheert het opdrachten, teams, diensten en verlof, en exporteert het de uren voor de salarisadministratie. De medewerkers ontvangen opdrachten en berichten rechtstreeks in de app."
   },
   "kairos": {
     "subtitle": "Uw GeoTapp-assistent",
-    "welcome": "Hoi! Ik ben Kairos, de GeoTapp-assistent. Hoe kan ik helpen?",
-    "placeholder": "Stel uw vraag...",
+    "welcome": "Hallo! Ik ben Kairos, de GeoTapp-assistent. Waarmee kan ik u helpen?",
+    "placeholder": "Schrijf uw vraag…",
     "send": "Verstuur",
     "quick_pricing": "Prijzen",
     "quick_how": "Hoe het werkt",
-    "quick_trial": "Gratis proberen",
-    "quick_contact": "Neem contact op",
-    "fallback": "Ik kon geen antwoord vinden. U kunt herformuleren of direct contact opnemen.",
-    "low_confidence": "Ik weet niet zeker of ik het goed begrepen heb. Wilt u het team contacteren?",
-    "contact_btn": "Contact",
+    "quick_trial": "Gratis proefperiode",
+    "quick_contact": "Praat met ons",
+    "fallback": "Ik heb geen antwoord gevonden. U kunt de vraag anders formuleren of rechtstreeks contact met ons opnemen.",
+    "low_confidence": "Ik weet niet zeker of ik het goed heb begrepen. Wilt u contact opnemen met het team?",
+    "contact_btn": "Neem contact op",
     "powered_by": "Powered by GeoTapp"
   },
   "author_page": {
@@ -1215,30 +1230,30 @@
     "bio": "Michele Angelo Petraroli, CEO en oprichter van GeoTapp. Geverifieerd expertprofiel op <a href=\"https://featured.com/p/michele-petraroli\" rel=\"me noopener\" target=\"_blank\">Featured.com</a>.",
     "articles_heading": "Artikelen van",
     "view_profile": "Bekijk geverifieerd profiel",
-    "follow_linkedin": "Maak contact op LinkedIn",
+    "follow_linkedin": "Maak contact via LinkedIn",
     "read_more": "Lees",
     "no_articles": "Nog geen artikelen."
   },
   "risorseGps": {
-    "metaTitleSelettore": "GPS en monitoring van werknemers in Europa: wat je nodig hebt om aan de regels te voldoen, land voor land",
-    "metaDescSelettore": "Kies een land en ontdek hoe je GPS en monitoring van werknemers in orde maakt: verplichtingen, procedure, autoriteit en sjabloon om te downloaden.",
+    "metaTitleSelettore": "GPS en monitoring van werknemers in Europa: wat nodig is om in orde te zijn, land voor land",
+    "metaDescSelettore": "Kies het land en zie wat nodig is om gps en monitoring van werknemers in orde te maken: verplichtingen, procedure, autoriteit en sjabloon om te downloaden.",
     "h1Selettore": "GPS en monitoring van werknemers, land voor land",
-    "introSelettore": "Zelfde Europa, andere regels. Je stuurt een ploeg om te monteren, schoon te maken of te bewaken in een ander land en gaat ervan uit dat de regels voor GPS en personeelscontrole dezelfde zijn als thuis. Dat zijn ze niet. Elke staat heeft zijn eigen regels, en die gelden waar het werk gebeurt: een bedrijf met een project in het buitenland volgt de lokale regels, ook al is de ploeg er alleen op detachering. Kies de bestemming en we vertellen je wat er nodig is om aan de regels te voldoen: de verplichtingen, de procedure, de juiste autoriteit en het sjabloon om te downloaden.",
+    "introSelettore": "Hetzelfde Europa, andere regels. U stuurt een ploeg om te monteren, schoon te maken of te bewaken in een ander land en gaat ervan uit dat de regels voor gps en controle op werknemers dezelfde zijn als thuis. Dat zijn ze niet. Elke staat heeft zijn eigen regels, en die gelden waar er gewerkt wordt: uw Nederlandse bedrijf met een bouwplaats in Duitsland volgt de Duitse regels, ook als de werknemers daar maar op detachering zijn. Kies de bestemming en wij vertellen wat nodig is om in orde te zijn: de verplichtingen, de procedure, bij wie u terechtkunt en het sjabloon om te downloaden.",
     "scegliPaese": "Kies een land",
     "inArrivo": "Binnenkort",
-    "inArrivoNota": "We zijn de pagina voor dit land aan het voorbereiden.",
-    "metaTitleScheda": "{paese}: GPS-tracking van werknemers, wat mag er",
-    "metaDescScheda": "{paese}: wanneer GPS-tracking van werknemers mag, wat je hen moet vertellen, welke toezichthouder controleert, sancties en een sjabloon.",
-    "sezioneCosaServe": "Wat je nodig hebt",
+    "inArrivoNota": "We bereiden de pagina van dit land voor.",
+    "metaTitleScheda": "{paese}: geolocatie van werknemers, wat is toegestaan",
+    "metaDescScheda": "{paese}: wanneer geolocatie van werknemers is toegestaan, wat u hen moet meedelen, wie toezicht houdt, de sancties en een sjabloon om te downloaden.",
+    "sezioneCosaServe": "Wat nodig is",
     "sezioneProcedura": "De procedure, stap voor stap",
-    "sezioneAChiInviare": "Tot wie je je moet wenden",
+    "sezioneAChiInviare": "Bij wie u terechtkunt",
     "sezioneModello": "Het sjabloon om te downloaden",
-    "sezioneSanzione": "Wat je riskeert",
+    "sezioneSanzione": "Wat u riskeert",
     "sezioneFonti": "Bronnen",
     "rispostaSi": "Ja",
     "rispostaNo": "Nee",
-    "rispostaDipende": "Het hangt ervan af",
-    "cosaServeLegenda": "Voor elke verplichting vertellen we je of die in dit land geldt: Ja betekent verplicht, Hangt ervan af alleen in bepaalde gevallen, Nee niet vereist.",
+    "rispostaDipende": "Hangt ervan af",
+    "cosaServeLegenda": "Bij elke verplichting zeggen we of die in dit land geldt: Ja betekent verplicht, Hangt ervan af alleen in bepaalde gevallen, Nee niet vereist.",
     "serveObbligatorio": "verplicht",
     "serveDipende": "alleen in bepaalde gevallen",
     "serveNonRichiesto": "niet vereist",
@@ -1246,175 +1261,175 @@
     "aggiornatoIl": "Bijgewerkt op",
     "scaricaModello": "Download het sjabloon",
     "autoritaCompetente": "Bevoegde autoriteit",
-    "disclaimer": "Dit is een informatieve bron, geen juridisch advies. Laat je situatie door een professional controleren voordat je een monitoringsysteem activeert.",
-    "ctaTitolo": "Wil je een systeem dat al voldoet aan de regels?",
-    "ctaTesto": "GeoTapp registreert de locatie alleen bij het inklokken, niet continu, en genereert de te ondertekenen verklaring. Probeer het gratis.",
+    "disclaimer": "Dit is een informatieve bron, geen juridisch advies. Laat uw situatie door een professional beoordelen voordat u een monitoringsysteem inschakelt.",
+    "ctaTitolo": "Wilt u een hulpmiddel dat is ontworpen met het oog op de AVG?",
+    "ctaTesto": "GeoTapp legt de locatie alleen vast wanneer er wordt geregistreerd of een bewijsfoto wordt gemaakt, nooit doorlopend, en laat de verklaring in de app ondertekenen vóór de eerste registratie. Probeer het gratis.",
     "ctaBottone": "Probeer GeoTapp gratis",
     "faq": {
       "title": "Veelgestelde vragen",
       "items": [
         {
-          "q": "Mag ik gps gebruiken om mijn ploeg in de gaten te houden terwijl ze werken?",
-          "a": "Gps op het werk is bijna overal in Europa toegestaan, op één voorwaarde: het moet het werk organiseren en bewijzen, niet de persoon bekijken. Het gaat om het hoe. De locatie vastleggen bij het inklokken, op het moment dat iemand een klus opent en afsluit, is iets heel anders dan iemand de hele dag in realtime volgen. Het eerste kan bijna altijd op de juiste manier, het tweede vrijwel nooit. Maar wat \"de juiste manier\" betekent verschilt per land, en het gaat niet alleen om papieren: soms is een akkoord met de personeelsvertegenwoordiging of een specifieke rechtsgrond nodig. De pagina van jouw land, hierboven, zegt wat er echt nodig is."
+          "q": "Mag ik gps gebruiken om mijn medewerkers te controleren terwijl ze werken?",
+          "a": "Gps op het werk is bijna overal in Europa toegestaan, op één voorwaarde: het moet dienen om het werk te organiseren en aan te tonen, niet om de persoon te bewaken. Het verschil zit in het hoe. De locatie vastleggen bij het registreren, wanneer de medewerker aankomt, pauze neemt en vertrekt, is heel iets anders dan hem de hele dag live volgen. Het eerste kan bijna altijd op de juiste manier, het tweede bijna nooit. Wat 'op de juiste manier' betekent, verschilt echter per land, en het is niet alleen een kwestie van documenten: soms is een akkoord met de werknemersvertegenwoordiging of een specifieke rechtsgrond nodig. De pagina van uw land, hierboven, zegt wat er echt nodig is."
         },
         {
-          "q": "Gelden de regels van mijn eigen land, of die van het land waar ik het team naartoe stuur?",
-          "a": "Het land waar het werk plaatsvindt. Zit je bedrijf in Ierland maar ligt de werf in Frankrijk, dan volg je de Franse regels, ook al is de ploeg er maar voor twee weken. Daarom vraagt deze pagina je eerst de bestemming te kiezen: de verplichtingen verschuiven van land tot land, en wat thuis volstaat kan over de grens tekortschieten."
+          "q": "Gelden de regels van mijn land of van het land waar ik het team naartoe stuur?",
+          "a": "Die van het land waar wordt gewerkt. Is uw bedrijf Nederlands maar ligt de bouwplaats in Duitsland, dan volgt u de Duitse regels, ook als de werknemers er maar twee weken zijn. Daarom laat deze pagina u eerst de bestemming kiezen: de verplichtingen verschillen van staat tot staat, en wat thuis volstaat, kan over de grens tekortschieten."
         },
         {
           "q": "Heb ik de toestemming van de werknemer nodig?",
-          "a": "Toestemming is zelden de juiste weg, en daar lopen veel mensen tegenaan. In een arbeidsrelatie geldt toestemming als niet vrij gegeven, omdat wie weigert bang is voor de gevolgen. Toezichthouders geven daarom de voorkeur aan andere grondslagen: het gerechtvaardigd belang van het bedrijf of een contractuele plicht, samen met een heldere privacyverklaring. In verschillende landen heb je bovendien een stap met de vakbond of een ondernemingsovereenkomst nodig voordat je iets aanzet."
+          "a": "Bijna nooit is toestemming de juiste weg, en dat verrast velen. In de arbeidsrelatie geldt toestemming als weinig vrijwillig, omdat wie nee zegt gevolgen vreest; daarom geven de toezichthouders de voorkeur aan andere grondslagen: het gerechtvaardigd belang van het bedrijf of een contractuele verplichting, vergezeld van een duidelijke privacyverklaring. In verschillende landen is bovendien een stap met de vakbond of een bedrijfsakkoord nodig voordat er een systeem wordt ingeschakeld."
         },
         {
-          "q": "Mag ik de locatie de hele dag in realtime volgen?",
-          "a": "Dat is precies wat de boetes uitlokt. Continue tracking wordt vrijwel overal als onevenredig beschouwd: je legt veel meer vast dan je nodig hebt om de uren uit te betalen of een klus te bewijzen. De praktische regel is om het minimum te verzamelen, de locatie op het moment dat telt, en niet een spoor dat de persoon van 's ochtends tot 's avonds achtervolgt."
+          "q": "Mag ik de locatie de hele dag live volgen?",
+          "a": "Dat is precies wat de boetes uitlokt. Doorlopende tracking wordt bijna overal als onevenredig beschouwd: u legt veel meer vast dan nodig is om de uren te betalen of een klus aan te tonen. De praktische regel is het minimum te verzamelen, de locatie op het moment dat het telt, niet een draad die de persoon van 's ochtends tot 's avonds volgt."
         },
         {
-          "q": "Wat riskeer ik als ik een systeem aanzet zonder dat het conform is?",
-          "a": "Dat hangt van het land af, maar AVG-boetes lopen op tot bedragen die geen klein bedrijf wil zien, en in sommige landen komen er arbeidsrechtelijke gevolgen bovenop. Het echte probleem is vaak niet de boete: het is dat data die op de verkeerde manier is verzameld nutteloos wordt net wanneer je het nodig hebt, in een geschil of tegenover een klant die de rekening betwist. Elke landenfiche toont de werkelijke maximumboete en de gevallen die op de teller staan."
+          "q": "Wat riskeer ik als ik een systeem inschakel zonder dat het in orde is?",
+          "a": "Dat hangt van het land af, maar de boetes van de AVG lopen op tot bedragen die geen klein bedrijf wil zien, en in sommige staten zijn er ook gevolgen op het gebied van het arbeidsrecht. Het echte probleem is vaak niet de boete: het is dat slecht verzamelde gegevens onbruikbaar worden precies wanneer u ze nodig hebt, in een rechtszaak of tegenover een klant die het betwist. Op de pagina van elk land vindt u het wettelijk maximum en, waar die er is, de boete die echt is opgelegd in een concrete zaak."
         },
         {
           "q": "Is GeoTapp een bewakingssysteem?",
-          "a": "Nee, en het is bewust zo gebouwd dat het dat niet is. De tool legt de locatie alleen vast bij het inklokken, wanneer iemand een klus opent of afsluit, nooit continu, en hij maakt de privacyverklaring aan die ze kunnen ondertekenen. Hij is er om te bewijzen wat er gedaan is en waar, niet om mensen te bekijken. Dat is het verschil tussen werkbewijs en een leiband."
+          "a": "Nee, het is niet bedoeld om te bewaken. Het legt de locatie vast bij elke registratie (aankomst, pauze, vertrek) en wanneer er een bewijsfoto wordt gemaakt; tussen twee registraties in legt het niets vast. En het maakt de verklaring die moet worden ondertekend. Het dient om aan te tonen wat er is gedaan en waar, niet om naar mensen te kijken. Dat is het verschil tussen een werkbewijs en een leiband."
         }
       ]
     },
     "mappaFonte": "Kaart:",
-    "mappaDi": "door",
+    "mappaDi": "van",
     "regoleComuni": {
       "titolo": "De regels die in heel Europa gelden",
-      "intro": "Voordat je naar een afzonderlijk land kijkt, is het nuttig te weten wat nooit verandert. De AVG geldt in elke lidstaat gelijk, en deze zes beginselen houden overal stand. Daarbovenop komt het nationale arbeidsrecht, en juist dat verschilt per grens.",
+      "intro": "Voordat u naar een afzonderlijk land kijkt, is het nuttig te weten wat nooit verandert. De AVG is in alle lidstaten identiek van toepassing, en deze zes beginselen gelden overal: daar komt het nationale arbeidsrecht bovenop, en dat verschilt van grens tot grens.",
       "regole": [
         {
           "titolo": "Een legitiem doel, vooraf benoemd",
-          "testo": "Werk organiseren, veiligheid beschermen, de prestatie vastleggen. Nooit 'de persoon controleren': dat is geen toelaatbaar doel (artikelen 5 en 6 AVG)."
+          "testo": "Het werk organiseren, de veiligheid beschermen, de prestatie vastleggen. Nooit 'de persoon controleren': dat is geen toegestaan doel (art. 5 en 6 AVG)."
         },
         {
           "titolo": "Alleen de gegevens die nodig zijn, en alleen wanneer ze nodig zijn",
-          "testo": "Dit is dataminimalisatie (artikel 5, lid 1, onder c). De positie bij begin en einde van de klus vastleggen documenteert; elke minuut vastleggen volgt de persoon, en dat is de meest voorkomende reden voor boetes in Europa."
+          "testo": "Dit is het beginsel van minimale gegevensverwerking (art. 5, lid 1, onder c). De locatie vastleggen bij het begin en het einde van het werk documenteert; haar elke minuut vastleggen bewaakt de persoon."
         },
         {
           "titolo": "Transparantie vooraf, niet achteraf",
-          "testo": "Werknemers moeten vooraf weten wat wordt vastgelegd, wanneer, waarom en hoe lang (artikelen 12 en 13). Een algemene verklaring, of een die niet klopt met het echte systeem, telt als geen verklaring."
+          "testo": "De werknemer moet vooraf weten wat er wordt vastgelegd, wanneer, waarom en hoe lang (art. 12 en 13). Een algemene verklaring, of een die niet aansluit bij het echte systeem, geldt als geen verklaring."
         },
         {
           "titolo": "Bewaring voor een vastgestelde termijn",
-          "testo": "Gegevens worden bewaard voor de periode die het doel vereist, vooraf bepaald en vastgelegd, niet 'zolang ze van pas komen' (artikel 5, lid 1, onder e)."
+          "testo": "Gegevens worden bewaard voor de periode die nodig is voor het doel, vooraf bepaald en opgeschreven, niet 'zolang ze nodig zijn' (art. 5, lid 1, onder e)."
         },
         {
-          "titolo": "Een effectbeoordeling waar het risico hoog is",
-          "testo": "Systematische monitoring van werknemers valt doorgaans onder de gevallen die een DPIA vereisen (artikel 35), uit te voeren voordat het systeem aangaat, niet erna."
+          "titolo": "Een effectbeoordeling wanneer het risico hoog is",
+          "testo": "Systematische monitoring van werknemers valt doorgaans onder de gevallen waarvoor een DPIA nodig is (art. 35), uit te voeren voordat het systeem wordt ingeschakeld, niet achteraf."
         },
         {
           "titolo": "Gegevens voor het ene doel worden niet hergebruikt voor het andere",
-          "testo": "Dit is doelbinding (artikel 5, lid 1, onder b). Posities die zijn verzameld om werk vast te leggen worden niet automatisch bewijs in een disciplinaire zaak."
+          "testo": "Dit is doelbinding (art. 5, lid 1, onder b). Locaties die zijn verzameld om het werk te documenteren, worden niet automatisch bewijs voor een tuchtprocedure."
         }
       ],
-      "nota": "Daarnaast staat artikel 88 AVG elke staat toe eigen regels toe te voegen voor gegevensverwerking in de arbeidsverhouding. Daarom bestaan de landkaarten hieronder: wat verandert is wie toestemming moet geven, niet het beginsel."
+      "nota": "Verder is er artikel 88 van de AVG, dat elke staat de mogelijkheid laat eigen regels toe te voegen voor de verwerking van gegevens in de arbeidsrelatie. Daarom bestaan de landpagina's hieronder: wat verandert is wie toestemming moet geven, niet het beginsel."
     },
-    "sanzioneTipoCasoGps": "uit een echte GPS-zaak",
-    "sanzioneTipoCasoAffine": "verwante zaak, geen GPS",
-    "sanzioneTipoMassimale": "wettelijk maximum, geen opgelegde boete",
-    "fonteNonUfficialeEtichetta": "geen officiele bron",
-    "fonteNonUfficialeAvviso": "Dit gegeven komt niet uit een officiele bron. Hieronder staat de directe link naar de bron die wij hebben gebruikt. Omdat die niet bij de bevoegde autoriteit te controleren is, kunnen wij juistheid en samenhang niet garanderen.",
+    "sanzioneTipoCasoGps": "uit een echte gps-zaak",
+    "sanzioneTipoCasoAffine": "verwante zaak, niet over gps bij werknemers",
+    "sanzioneTipoMassimale": "wettelijk maximum",
+    "fonteNonUfficialeEtichetta": "geen officiële bron",
+    "fonteNonUfficialeAvviso": "Dit gegeven komt niet uit een officiële bron. Hieronder vindt u de directe link naar de bron die wij hebben gebruikt. Omdat we die niet bij de bevoegde autoriteit kunnen controleren, kunnen we de juistheid en samenhang niet garanderen.",
     "fonteNonUfficialeTipo_studio_legale": "advocatenkantoor",
     "fonteNonUfficialeTipo_stampa": "nieuwsmedium",
     "fonteNonUfficialeTipo_banca_dati": "private juridische databank",
     "fonteNonUfficialeTipo_compilazione": "private verzameling"
   },
   "sanzioniGps": {
-    "metaTitle": "GPS-boetecalculator: hoeveel je riskeert bij het monitoren van werknemers, land voor land",
-    "metaDesc": "Kies een land en zie de reële maximumboete voor GPS-monitoring van werknemers en welke verplichtingen je blootstellen. Geverifieerde data, 39 Europese landen.",
-    "h1": "Hoeveel riskeer je met het volgen van je werknemers?",
-    "intro": "Kies een land, zie de hoogste werkelijk opgelegde boete en vink aan wat je al hebt: we vertellen hoe blootgesteld je bent. Brongeverifieerde data, 39 landen.",
-    "sanzioneMax": "Maximumboete",
-    "casoCitato": "Reële zaak",
+    "metaTitle": "GPS-boetecalculator: hoeveel u riskeert met het volgen van werknemers, land voor land",
+    "metaDesc": "Kies het land en zie de hoogste boete die echt is opgelegd, of het wettelijk maximum, voor gps-monitoring van werknemers en welke verplichtingen u blootstellen. Gecontroleerde gegevens, 39 Europese landen.",
+    "h1": "Hoeveel riskeert u met het volgen van werknemers?",
+    "intro": "Kies het land, bekijk de hoogste sanctie (die echt is opgelegd, waar er een openbare zaak is, anders het wettelijk maximum: de pagina zegt welke) en vink aan wat u al op orde hebt: wij vertellen hoe groot uw blootstelling is. Gegevens bij de bron gecontroleerd, 39 landen.",
+    "sanzioneMax": "Hoogste boete",
+    "casoCitato": "Echte zaak",
     "fonte": "Bekijk de bron",
-    "adempimentiTitolo": "Wat je moet hebben (vink aan wat je al hebt)",
+    "adempimentiTitolo": "Wat u op orde moet hebben (vink aan wat u al hebt)",
     "obbligatorio": "Verplicht",
     "condizionale": "Hangt ervan af",
-    "ceLHai": "Heb je dit?",
-    "espostoUno": "Je mist {n} verplichting van de {tot}: je bent blootgesteld tot",
-    "espostoMulti": "Je mist {n} verplichtingen van de {tot}: je bent blootgesteld tot",
-    "inRegola": "Geen verplichting ontbreekt: je zit goed.",
-    "vediScheda": "Open de volledige landpagina: {paese}",
+    "ceLHai": "Hebt u dit?",
+    "espostoUno": "U mist {n} verplichting van de {tot} verplichte: u loopt een risico tot",
+    "espostoMulti": "U mist {n} van de {tot} verplichte verplichtingen: u loopt een risico tot",
+    "inRegola": "Geen verplichte verplichting ontbreekt: u bent goed op weg.",
+    "vediScheda": "Open de volledige pagina: {paese}",
     "faq": {
       "title": "Veelgestelde vragen",
       "items": [
         {
-          "q": "Wat riskeer ik echt als de gps niet conform is?",
-          "a": "Dat hangt af van het land en van wat er misging, maar AVG-boetes zijn niet symbolisch: ze bereiken een percentage van de omzet dat een klein bedrijf op de knieën kan dwingen, en in verschillende landen komen er arbeidsrechtelijke gevolgen bovenop. Kies hierboven de bestemming en je ziet het werkelijke maximumbedrag, met het geval waar het uit komt."
+          "q": "Wat riskeer ik echt als de gps niet in orde is?",
+          "a": "Dat hangt af van het land en van wat u fout hebt gedaan, maar de boetes van de AVG zijn niet symbolisch: ze kunnen oplopen tot een percentage van de omzet, en in verschillende staten komen er gevolgen op het gebied van het arbeidsrecht bij. Kies hierboven het land en zie het hoogste bedrag, met de aanduiding of het een echt opgelegde boete is of het wettelijk maximum."
         },
         {
-          "q": "Treffen AVG-boetes echt ook kleine bedrijven?",
-          "a": "Ja, en het idee dat toezichthouders alleen achter de grote spelers aangaan is een van de overtuigingen die het meest kost. De gevallen op elke landenfiche omvatten bedrijfjes van een handvol mensen, beboet juist omdat ze personeel volgden zonder de papieren op orde. De omvang bepaalt het bedrag, niet of je in de vuurlinie ligt."
+          "q": "Treffen de boetes van de AVG echt ook kleine bedrijven?",
+          "a": "Ja, en het idee dat de toezichthouders alleen naar de grote bedrijven kijken, is een van de overtuigingen die het meest kosten. De zaken die op de pagina van elk land worden genoemd, omvatten bedrijven van een paar personen, beboet juist voor het monitoren van werknemers zonder dat de papieren in orde waren. De omvang bepaalt het bedrag, niet of u al dan niet in het vizier komt."
         },
         {
           "q": "Is de boete het enige risico?",
-          "a": "Nee, en vaak is het niet eens het ergste. Data die op de verkeerde manier is verzameld wordt nutteloos net wanneer je het nodig hebt, in een geschil met een werknemer of tegenover een klant die een factuur betwist. Je blijft achter met de boete én zonder het bewijs waarvan je dacht dat je het had."
+          "a": "Nee, en vaak is het zelfs niet het ergste. Gegevens die verkeerd zijn verzameld, worden onbruikbaar precies wanneer u ze nodig hebt, in een zaak met een werknemer of tegenover een klant die een factuur betwist. U blijft achter met de boete om te betalen en zonder het bewijs waarvan u dacht dat u het had."
         },
         {
-          "q": "Kan ik beboet worden ook als de werknemers akkoord gingen?",
-          "a": "Ja, want in een arbeidsrelatie telt toestemming weinig: er wordt aangenomen dat wie ze geeft niet echt vrij is om te weigeren. Toezichthouders kijken of de verwerking evenredig was en of je een stevige grondslag en een heldere privacyverklaring had, niet of iemand een papiertje heeft getekend. Het akkoord van de werknemers op zich beschermt je niet."
+          "q": "Kan ik ook beboet worden als de werknemers akkoord waren?",
+          "a": "Ja, want in de arbeidsrelatie telt toestemming weinig: er wordt aangenomen dat wie ze geeft niet echt vrij is om te weigeren. De toezichthouders kijken of de verwerking evenredig was en of u een solide grondslag en een duidelijke privacyverklaring had, niet of iemand een vel papier had ondertekend. Het akkoord van de werknemers alleen beschermt u niet."
         },
         {
           "q": "Waar komen deze cijfers vandaan?",
-          "a": "Uit echte beslissingen van gegevensbeschermingsautoriteiten en uit nationale wetgeving, niet uit schattingen. Elke fiche geeft de bron en het geval, zodat je het kunt herleiden tot het document. Dit is een informatieve bron, geen juridisch advies: laat je situatie door een professional nakijken voordat je een systeem aanzet."
+          "a": "Uit echte besluiten van de toezichthouders voor gegevensbescherming en uit nationale wetgeving, niet uit schattingen. Elke pagina geeft de bron en de zaak, zodat u kunt teruggaan naar het document. Het is een informatieve bron, geen juridisch advies: laat uw situatie door een professional beoordelen voordat u een systeem inschakelt."
         },
         {
-          "q": "Hoe verlaag ik het risico op een boete?",
-          "a": "Door alleen het strikt nodige te verzamelen: de locatie bij het inklokken, geen continue tracking, met een ondertekende privacyverklaring en een andere grondslag dan toestemming. Precies zo is GeoTapp gebouwd, en de generator voor privacyverklaringen hier bij de bronnen maakt het document klaar om te laten ondertekenen."
+          "q": "Hoe verklein ik het risico op een boete?",
+          "a": "Door het minimum te verzamelen dat u echt nodig hebt: de locatie op het moment van registreren, geen doorlopende tracking, met een ondertekende privacyverklaring en een andere grondslag dan toestemming. Precies zo is GeoTapp ontwikkeld, en de generator voor de privacyverklaring hier bij de bronnen maakt het document klaar om te laten ondertekenen."
         }
       ]
     }
   },
   "indiceSorveglianza": {
-    "metaTitle": "Index werknemerstoezicht in Europa: de ranglijst van 39 landen",
-    "metaDesc": "Welke Europese landen hebben de strengste regels voor het monitoren van werknemers? Ranglijst op strengheidsindex, met maximumboete en bron. 39 landen.",
-    "h1": "Index werknemerstoezicht in Europa",
-    "intro": "Europa behandelt toezicht op werknemers niet overal hetzelfde. We rangschikten 39 landen op hoe streng het kader is: meer verplichtingen, hogere index. Klik op de kolommen om te sorteren.",
+    "metaTitle": "Index van het toezicht op werknemers in Europa: de ranglijst van 39 landen",
+    "metaDesc": "Welke Europese landen hebben de strengste regels voor het monitoren van werknemers? De ranglijst op strengheidsindex, met hoogste boete en bron. 39 landen.",
+    "h1": "Index van het toezicht op werknemers in Europa",
+    "intro": "Niet heel Europa gaat op dezelfde manier om met toezicht op werknemers. We hebben 39 landen gerangschikt op hoe streng het kader is: hoe meer verplichte verplichtingen, hoe hoger de index. Klik op de kolommen om te sorteren.",
     "colPaese": "Land",
     "colIndice": "Strengheidsindex",
-    "colObblighi": "Verplichtingen",
-    "colSanzione": "Maximumboete",
+    "colObblighi": "Verplichte verplichtingen",
+    "colSanzione": "Hoogste boete",
     "scheda": "Pagina",
     "metodologiaTitolo": "Hoe de index wordt berekend",
-    "metodologia": "De index (0-100) meet hoeveel verplichtingen voor werknemersmonitoring in dat land verplicht zijn: score = verplichtingen + helft van de voorwaardelijke, gedeeld door het totaal. Hoger = strenger kader voor wie wil volgen. Data afgeleid van de brongeverifieerde landpagina's; het meet de nalevingslast, niet 'vrijheid'.",
+    "metodologia": "De index (0-100) meet hoeveel verplichtingen rond het monitoren van werknemers in dat land verplicht zijn: score = verplichte verplichtingen + de helft van de voorwaardelijke, gedeeld door het totaal. Hoger = strenger kader voor wie wil volgen. Gegevens afgeleid van de bij de bron gecontroleerde landpagina's; het meet de last van de verplichtingen, niet de «vrijheid».",
     "faq": {
       "title": "Veelgestelde vragen",
       "items": [
         {
           "q": "Wat meet de index voor werknemerstoezicht?",
-          "a": "Hoe streng het kader van elk land is over het volgen van werknemers: het aantal verplichte verplichtingen, de stappen die nodig zijn voordat je een systeem aanzet, en het gewicht van de boetes. Hoe hoger de score, hoe meer je op orde moet hebben voordat je gps of welk personeelstoezicht dan ook in dat land gebruikt."
+          "a": "Hoe streng het kader van elk land is voor het monitoren van werknemers: het aantal verplichte verplichtingen, de stappen die nodig zijn voordat een systeem wordt ingeschakeld en het gewicht van de boetes. Hoe hoger de score, hoe meer u op orde moet brengen voordat u in dat land gps of controles op werknemers gebruikt."
         },
         {
           "q": "Betekent een hoge score dat gps daar verboden is?",
-          "a": "Nee, het betekent dat er meer zorg nodig is, niet dat het verboden is. Bijna overal in Europa is gps op het werk toegestaan, zolang het wordt gebruikt om het werk te organiseren en te bewijzen en niet om de persoon te bekijken. Een hoge index zegt je alleen dat de verplichtingen zwaarder zijn en dat improviseren duur wordt."
+          "a": "Nee, het betekent dat er meer aandacht nodig is, niet dat het verboden is. Bijna overal in Europa kan gps op het werk worden gebruikt, mits het dient om het werk te organiseren en aan te tonen en niet om de persoon te bewaken. Een hoge index zegt alleen dat de verplichtingen zwaarder zijn en dat improviseren duur uitpakt."
         },
         {
           "q": "Waar komen de gegevens van de ranglijst vandaan?",
-          "a": "Uit de 39 landendossiers op de site, opgebouwd uit nationale wetgeving en echte beslissingen van de autoriteiten. De ranglijst destilleert ze tot een vergelijkbare score; klik op een land en je komt bij de fiche met de verplichtingen, de bevoegde autoriteit en de bronnen."
+          "a": "Uit de 39 landendossiers die u op de site vindt, opgebouwd uit nationale wetgeving en echte besluiten van de toezichthouders. De ranglijst vat ze samen in een vergelijkbare score; klikt u op een land, dan komt u op de pagina met de verplichtingen, de bevoegde autoriteit en de bronnen."
         },
         {
           "q": "Waarom scoren buurlanden zo verschillend?",
-          "a": "Omdat de AVG het kader bepaalt maar elk land er zijn eigen regels bovenop legt, en bij het volgen van werknemers zijn de verschillen scherp: waar een vakbondsovereenkomst nodig is, waar een privacyverklaring volstaat, waar de autoriteit feller optreedt. Daarom is uitgaan van je eigen thuisregels over de grens de fout die de boetes uitlokt."
+          "a": "Omdat de AVG het kader vastlegt maar elke staat er eigen regels bovenop zet, en juist bij het controleren van werknemers zijn de verschillen scherp: waar een akkoord met de vakbond nodig is, waar de privacyverklaring volstaat, waar de toezichthouder harder optreedt. Daarom is het over de grens als vanzelfsprekend aannemen van de regels van thuis de fout die boetes uitlokt."
         },
         {
           "q": "Hoe vaak wordt het bijgewerkt?",
-          "a": "De fiches dragen de verificatiedatum en worden herzien wanneer de wet verandert of er nieuwe beslissingen verschijnen. Dit is een informatieve bron, geen juridisch advies: laat je situatie door een professional nakijken voordat je een systeem aanzet."
+          "a": "De pagina's vermelden de controledatum en worden herzien wanneer de regels veranderen of er nieuwe besluiten verschijnen. Het is een informatieve bron, geen juridisch advies: laat uw situatie door een professional beoordelen voordat u een systeem inschakelt."
         },
         {
           "q": "Hoe gebruik ik de ranglijst als ik teams naar het buitenland stuur?",
-          "a": "Begin bij het land waar ze gaan werken, niet bij het jouwe: de regels daar zijn die welke gelden. Kijk naar de score om in te schatten hoeveel werk je voor de boeg hebt, open dan de fiche voor de precieze verplichtingen en maak de privacyverklaring klaar om te laten ondertekenen vóór het vertrek."
+          "a": "Begin bij het land waar ze gaan werken, niet bij het uwe: daar gelden de regels van ter plaatse. Kijk naar de score om te begrijpen hoeveel werk u te wachten staat, open dan de pagina voor de precieze verplichtingen en maak de privacyverklaring klaar om te laten ondertekenen vóór de werkreis."
         }
       ]
     }
   },
   "attribuzione": {
-    "datiVerificati": "Gegevens samengesteld en geverifieerd door GeoTapp.",
-    "liberoCitare": "Je mag ze vrij citeren, mits je de bron vermeldt met een link naar deze pagina.",
-    "ripubblicazione": "Voor volledige herpublicatie van de dataset of commercieel gebruik,",
-    "contattaci": "neem contact op",
+    "datiVerificati": "Gegevens verzameld en gecontroleerd door GeoTapp.",
+    "liberoCitare": "U mag het vrij citeren, mits u de bron vermeldt met een link naar deze pagina.",
+    "ripubblicazione": "Voor volledige herpublicatie van de dataset of voor commercieel gebruik,",
+    "contattaci": "neem contact met ons op",
     "titoloCita": "Citeer deze pagina",
     "formatoTesto": "Tekst",
     "formatoHtml": "HTML",
@@ -1423,60 +1438,62 @@
     "fonte": "Bron:"
   },
   "embedStrumento": {
-    "titolo": "Sluit deze tool in",
-    "desc": "Publiceer de interactieve kaart op je site of blog: kopieer de code. Bevat een link naar de bron.",
+    "titolo": "Sluit deze tool in op uw site",
+    "desc": "Publiceer de interactieve kaart op uw site of blog: kopieer de code. Bevat een link naar de bron.",
     "copia": "Kopieer de code",
     "copiato": "Gekopieerd!",
     "fonte": "Bron:"
   },
   "videoTutorial": {
-    "title": "Van de eerste aanmelding tot het eerste inklokken",
-    "note": "Twee minuten, zonder omhaal: je richt Flow in, nodigt je eerste medewerker uit en ziet de eerste klokking op de kaart verschijnen.",
+    "title": "Van de eerste aanmelding tot de eerste registratie",
+    "note": "Twee minuten, zonder omhaal: u richt Flow in, nodigt uw eerste medewerker uit en ziet zijn eerste registratie op kantoor binnenkomen, met tijd en locatie.",
     "cta": "Bekijk de video, 2 minuten"
   },
   "videoGiro": {
     "kicker": "Zie het werken",
-    "title": "Eén dienst, tachtig seconden, niets nagespeeld",
-    "note": "Een echte telefoon op de werf en een echt scherm op kantoor, op hetzelfde moment opgenomen. Het geluid begint uit, en de ondertitels dragen de woorden tot je het aanzet.",
+    "title": "Eén dienst, tachtig seconden, niets nagebouwd",
+    "note": "Een echte telefoon op de bouwplaats en een echt scherm op kantoor, op hetzelfde moment gefilmd. Het geluid begint uit, en de ondertitels dragen de woorden totdat u het aanzet.",
     "audioOn": "Geluid aanzetten",
     "audioOff": "Geluid uitzetten",
     "play": "Bekijk de video, 80 seconden",
     "chapters": "Ga naar",
-    "pageLink": "De hele ronde, akte na akte",
+    "pageLink": "De hele dienst, deel voor deel",
     "youtube": "Bekijk het op YouTube",
-    "posterAlt": "Een dienst met GeoTapp, van het inklokken tot het verzegelde rapport, in tachtig seconden",
+    "posterAlt": "Een dienst met GeoTapp, van de registratie tot het verzegelde rapport, in tachtig seconden",
     "page": {
       "metaTitle": "GeoTapp aan het werk: een hele dienst in 80 seconden",
-      "metaDescription": "Een monteur klokt in, fotografeert een defect, stuurt het bewijs, klokt uit. De klus sluit en de klant controleert het verzegelde rapport zelf, offline.",
+      "metaDescription": "Een medewerker registreert, fotografeert een defect en stuurt het bewijs. De klant controleert het verzegelde rapport zelf, offline. Tachtig seconden.",
       "h1": "Een hele dienst, van de eerste tik tot het rapport dat de klant zelf controleert",
-      "intro": "Hier is niets in scène gezet. De telefoon is op de werf gefilmd terwijl het scherm op kantoor op datzelfde moment liep, en de twee opnames zijn met de klok op één tijdlijn gelegd, zodat wat je in vijf seconden ziet gebeuren ook vijf seconden duurde.",
-      "intro2": "Het geluid begint uit, want niemand wil een pagina die uit zichzelf begint te praten. De woorden komen van de ondertitels, tot jij besluit het volume open te draaien.",
-      "actsTitle": "De zeven aktes",
+      "intro": "Hier is niets nagebouwd. De telefoon is op de bouwplaats gefilmd terwijl het scherm op kantoor op hetzelfde moment werd gefilmd, en de twee opnames zijn met de klok op dezelfde tijdlijn gezet, zodat wat u in vijf seconden ziet gebeuren ook vijf seconden heeft geduurd.",
+      "intro2": "Het geluid begint uit, want niemand wil een pagina die uit zichzelf begint te praten. De woorden komen van de ondertitels, totdat u besluit het volume omhoog te zetten.",
+      "actsTitle": "De zeven delen",
       "transcriptTitle": "Wat de video zegt",
       "transcriptNote": "Dezelfde woorden als de stem, om te lezen.",
       "honestyTitle": "Wat deze video is, en wat niet",
-      "honesty": "De dienstgegevens zijn testgegevens, en de twee foto's van de verdeelkast zijn in de montage vervangen, omdat de bewijzen met afgedekte lens zijn gemaakt. Het gedrag van de software is het echte, opgenomen zonder retouche. De locatie wordt bij het klokken weggeschreven en nooit daartussen, en een verzegeld pakket helpt te laten zien dat er aan het geleverde niets is veranderd, al is het op zichzelf geen absoluut bewijs van het onderliggende feit en geen juridisch advies.",
-      "ctaTitle": "Veertien dagen, op je eigen diensten",
-      "ctaText": "Dezelfde ronde loopt op jouw klussen, met jouw telefoon, veertien dagen lang en zonder kaart.",
+      "honesty": "De gegevens van de dienst zijn testgegevens, en de twee foto's van de schakelkast zijn bij de montage vervangen, omdat de bewijsfoto's met afgedekte lens zijn gemaakt. Het gedrag van de software is het echte, opgenomen zonder retouche. De locatie wordt vastgelegd op het moment van de registratie, en tussen twee registraties in wordt er niets automatisch vastgelegd; een verzegeld pakket helpt te laten zien dat wat is afgeleverd niet is aangeraakt, maar is op zichzelf geen absoluut bewijs van het feitelijke gebeuren en geen juridisch advies.",
+      "ctaTitle": "Veertien dagen, op uw eigen diensten",
+      "ctaText": "Dezelfde dienst draait op uw eigen klussen, met uw eigen telefoon, veertien dagen lang en zonder creditcard.",
       "youtubeNote": "Hij staat ook op YouTube, in elf talen."
     },
     "captions": "Ondertiteling"
   },
   "accessibilita": {
     "title": "Toegankelijkheidsverklaring",
-    "intro": "GeoTapp zet zich in om deze website toegankelijk te maken, in lijn met richtlijn (EU) 2019/882 (European Accessibility Act) en de norm EN 301 549, die verwijst naar WCAG 2.1 niveau AA.",
+    "intro": "GeoTapp streeft ernaar de eigen website toegankelijk te maken, in lijn met richtlijn (EU) 2019/882 (European Accessibility Act) en met de norm EN 301 549, die verwijst naar de WCAG 2.1-richtlijnen niveau AA.",
     "stato_t": "Status van naleving",
     "stato": "Deze website voldoet **gedeeltelijk** aan EN 301 549 / WCAG 2.1 AA. «Gedeeltelijk» betekent dat een deel van de eisen is vervuld en gecontroleerd, terwijl andere nog niet met volledige automatische en handmatige methoden zijn getest.",
     "fatto_t": "Wat is gecontroleerd",
     "fatto": "Een automatische analyse met axe-core, uitgevoerd in een echte browser op 23 september 2026, op tweeëntwintig pagina's in de elf gepubliceerde talen. De gevonden problemen zijn opgelost: tekstcontrast, toegankelijke namen van formuliervelden, linknamen, correct gebruik van ARIA-attributen. De site vermeldt de taal van elke pagina, biedt een «naar de inhoud»-link, gebruikt semantische landmarks, toont de toetsenbordfocus zichtbaar en respecteert de systeemvoorkeur voor minder beweging.",
     "limiti_t": "Bekende beperkingen",
-    "limiti": "Een volledige handmatige controle met schermlezers en alleen het toetsenbord is nog niet uitgevoerd. Het aankoopproces staat op een apart domein (crm.geotapp.com) en valt niet onder deze verklaring. Blog-inhoud en downloadbare PDF-documenten zijn niet afzonderlijk gecontroleerd.",
+    "limiti": "Er is nog geen volledige handmatige controle uitgevoerd met schermlezers en alleen met het toetsenbord. Het aankoopformulier staat op een apart domein (crm.geotapp.com) en valt niet onder deze verklaring. De inhoud van de blog en de downloadbare pdf-documenten zijn niet afzonderlijk gecontroleerd.",
     "metodo_t": "Beoordelingsmethode",
     "metodo": "Zelfbeoordeling, intern uitgevoerd met automatische hulpmiddelen op gepubliceerde pagina's. Er is geen audit door een derde partij uitgevoerd.",
     "segnala_t": "Een probleem melden",
-    "segnala": "Kom je een drempel tegen op deze site, schrijf dan naar info@geotapp.com met vermelding van de pagina en wat niet lukte. Wij antwoorden binnen dertig dagen. Is het antwoord niet bevredigend, dan kun je terecht bij de bevoegde toezichthouder in jouw land.",
+    "segnala": "Komt u op deze site een barrière tegen, schrijf dan naar info@geotapp.com met vermelding van de pagina en wat niet mogelijk was. We antwoorden binnen dertig dagen. Is het antwoord niet bevredigend, dan kunt u zich wenden tot de bevoegde toezichthouder in uw eigen land.",
     "data_t": "Datum",
-    "data": "Verklaring opgesteld op 23 september 2026, op basis van de beoordeling van dezelfde datum."
+    "data": "Verklaring opgesteld op 23 september 2026, op basis van de beoordeling van dezelfde datum.",
+    "meta_title": "Toegankelijkheidsverklaring | GeoTapp",
+    "meta_description": "Hoe toegankelijk geotapp.com is: wat is gecontroleerd, met welke methode, de bekende beperkingen en hoe u een probleem meldt."
   },
   "contentDates": {
     "updatedOn": "Bijgewerkt op"

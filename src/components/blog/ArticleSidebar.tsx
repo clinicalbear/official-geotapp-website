@@ -23,7 +23,7 @@ const SIDEBAR_LABELS: Record<string, {
   en: { toc: 'In this article', cta_title: 'Try GeoTapp free', cta_desc: '14-day free trial. No credit card required. Setup in 2 minutes.', cta_btn: 'Start now', share: 'Share', copied: 'Copied!', product_desc: 'See how GeoTapp solves this problem', product_btn: 'Learn more' },
   de: { toc: 'In diesem Artikel', cta_title: 'GeoTapp kostenlos testen', cta_desc: '14 Tage kostenlos. Keine Kreditkarte. Setup in 2 Minuten.', cta_btn: 'Jetzt starten', share: 'Teilen', copied: 'Kopiert!', product_desc: 'So löst GeoTapp dieses Problem', product_btn: 'Mehr erfahren' },
   fr: { toc: 'Dans cet article', cta_title: 'Essayez GeoTapp', cta_desc: '14 jours gratuits. Sans carte bancaire. Pret en 2 minutes.', cta_btn: 'Commencer', share: 'Partager', copied: 'Copie !', product_desc: 'Decouvrez comment GeoTapp resout ce probleme', product_btn: 'En savoir plus' },
-  nl: { toc: 'In dit artikel', cta_title: 'Probeer GeoTapp gratis', cta_desc: '14 dagen gratis proberen. Geen creditcard. Klaar in 2 minuten.', cta_btn: 'Nu starten', share: 'Delen', copied: 'Gekopieerd!', product_desc: 'Ontdek hoe GeoTapp dit oplost', product_btn: 'Meer weten' },
+  nl: { toc: 'In dit artikel', cta_title: 'Probeer GeoTapp gratis', cta_desc: '14 dagen gratis proberen. Geen creditcard. Klaar in 2 minuten.', cta_btn: 'Nu starten', share: 'Delen', copied: 'Gekopieerd!', product_desc: 'Ontdek hoe GeoTapp dit probleem oplost', product_btn: 'Meer informatie' },
   es: { toc: 'En este artículo', cta_title: 'Prueba GeoTapp gratis', cta_desc: '14 días gratis. Sin tarjeta de crédito. Listo en 2 minutos.', cta_btn: 'Empieza ahora', share: 'Compartir', copied: '¡Copiado!', product_desc: 'Descubre cómo GeoTapp resuelve esto', product_btn: 'Saber más' },
   pt: { toc: 'Neste artigo', cta_title: 'Experimenta o GeoTapp grátis', cta_desc: '14 dias grátis. Sem cartão de crédito. Pronto em 2 minutos.', cta_btn: 'Começar agora', share: 'Partilhar', copied: 'Copiado!', product_desc: 'Descobre como o GeoTapp resolve isto', product_btn: 'Saber mais' },
   da: { toc: 'I denne artikel', cta_title: 'Prøv GeoTapp gratis', cta_desc: '14 dages gratis prøve. Intet kreditkort. Klar på 2 minutter.', cta_btn: 'Start nu', share: 'Del', copied: 'Kopieret!', product_desc: 'Se hvordan GeoTapp løser dette', product_btn: 'Læs mere' },
@@ -37,7 +37,7 @@ const EU_BADGE: Record<string, { title: string; desc: string }> = {
   it: { title: 'I tuoi dati restano in Europa', desc: 'Timbrature, foto e anagrafiche su server in UE.' },
   en: { title: 'Your data stays in Europe', desc: 'Clock-ins, photos and records on EU servers.' },
   de: { title: 'Ihre Daten bleiben in Europa', desc: 'Zeiterfassung, Fotos und Daten auf EU-Servern.' },
-  nl: { title: 'Jouw gegevens blijven in Europa', desc: 'Tijdregistraties en gegevens op EU-servers.' },
+  nl: { title: 'Uw gegevens blijven in Europa', desc: 'Registraties, foto\'s en gegevens op servers in de EU.' },
   fr: { title: 'Vos données restent en Europe', desc: 'Pointages, photos et données sur serveurs UE.' },
   es: { title: 'Tus datos se quedan en Europa', desc: 'Fichajes, fotos y datos en servidores de la UE.' },
   pt: { title: 'Os teus dados ficam na Europa', desc: 'Registos, fotos e dados em servidores da UE.' },
@@ -78,7 +78,7 @@ const CheckIcon = () => (
   <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 13l4 4L19 7"/></svg>
 );
 
-function ShareButtons({ title, copiedLabel }: { title: string; copiedLabel: string }) {
+function ShareButtons({ title, copiedLabel, locale }: { title: string; copiedLabel: string; locale?: string }) {
   const [copied, setCopied] = useState(false);
 
   const [url, setUrl] = useState('');
@@ -115,7 +115,7 @@ function ShareButtons({ title, copiedLabel }: { title: string; copiedLabel: stri
       ))}
       <button
         onClick={handleCopy}
-        aria-label="Copy link"
+        aria-label={locale === 'nl' ? 'Link kopiëren' : 'Copy link'}
         className={`p-2 rounded-lg transition-all duration-200 ${copied ? 'text-green-500 bg-green-50' : 'text-slate-400 hover:bg-slate-50'}`}
         onMouseEnter={(e) => { if (!copied) e.currentTarget.style.color = '#22B573'; }}
         onMouseLeave={(e) => { if (!copied) e.currentTarget.style.color = ''; }}
@@ -252,7 +252,7 @@ export default function ArticleSidebar({ headings, locale, categories = [], date
       {/* Condividi */}
       <div className="share">
         <p className="lb k">{labels.share}</p>
-        <ShareButtons title={title} copiedLabel={labels.copied} />
+        <ShareButtons title={title} copiedLabel={labels.copied} locale={locale} />
       </div>
     </aside>
   );

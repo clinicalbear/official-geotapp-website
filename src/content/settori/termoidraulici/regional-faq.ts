@@ -11,7 +11,7 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   fr: 'Conformité en France',
   es: 'Cumplimiento normativo en España',
   pt: 'Conformidade em Portugal',
-  nl: 'Compliance in Nederland',
+  nl: 'Regels en documentatie in Nederland',
   'en-us': 'Regional rules and records',
   'en-gb': 'Regional rules and records',
   'en-au': 'Regional rules and records',
@@ -92,16 +92,16 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   ],
   nl: [
     {
-      q: 'Uren en consignatie volgens de CAO Metaal en Techniek?',
-      a: 'Uren per CV-monteur en per opdracht, consignatie- en reisuren en de bewaartermijn uit de Arbeidstijdenwet, bij elke klus vastgelegd.',
+      q: 'Werktijden en klussen in de verwarmingstechniek?',
+      a: 'GeoTapp legt bij elke registratie begin, pauzes en einde vast met locatie en tijd, per monteur en per opdracht, en exporteert ze als Excel- of CSV-bestand voor de salarisadministrateur. De toepassing van de cao (toeslagen, vergoedingen) en de salarisverwerking blijven bij die administrateur en bij het bedrijf.',
     },
     {
-      q: 'AVG en de Autoriteit Persoonsgegevens bij GPS-tracking?',
-      a: 'Locatie alleen tijdens werktijd, met privacyverklaring, belangenafweging (art. 6 AVG) en DPIA, volgens de richtsnoeren van de AP.',
+      q: 'Gps bij cv-monteurs: AVG en ondernemingsraad?',
+      a: 'De locatie wordt alleen vastgelegd bij het registreren en bij bewijsfoto\'s, nooit doorlopend, en de privacyverklaring voor de werknemers wordt in de app ondertekend voordat ze registreren. Of een belangenafweging op grond van art. 6 AVG en de instemming van de ondernemingsraad op grond van art. 27 WOR nodig zijn, beoordeelt de werkgever.',
     },
     {
-      q: 'F-gassen en STEK-certificering bij koel- en CV-werk?',
-      a: 'Koppeling van werk aan koel- en verwarmingsinstallaties aan de F-gassen / STEK-gecertificeerde monteur, met logboek per installatie.',
+      q: 'F-gassen en bewijzen van vakbekwaamheid (zoals STEK)?',
+      a: 'GeoTapp beheert geen bewijzen van vakbekwaamheid voor F-gassen, zoals het STEK-certificaat, en houdt geen installatieboeken bij. Het legt tijd, locatie, foto\'s en notities van elke klus aan ketels en verwarmingsinstallaties vast, die bij de documentatie van de installatie kunnen worden gevoegd.',
     },
   ],
   'en-us': [

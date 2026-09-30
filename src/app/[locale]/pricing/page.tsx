@@ -12,7 +12,7 @@ import UpdatedOnLine, { updatedIsoFor } from '@/components/seo/UpdatedOnLine';
 
 const PRICING_SCHEMA_NAME: Record<string, string> = {
   it: 'Prezzi GeoTapp', en: 'GeoTapp Pricing', de: 'GeoTapp Preise',
-  nl: 'GeoTapp Prijzen', fr: 'Tarifs GeoTapp', es: 'Precios GeoTapp',
+  nl: 'GeoTapp-prijzen', fr: 'Tarifs GeoTapp', es: 'Precios GeoTapp',
   pt: 'Preços GeoTapp', da: 'GeoTapp Priser', sv: 'GeoTapp Priser',
   nb: 'GeoTapp Priser', ru: 'Цены GeoTapp',
 };
@@ -170,6 +170,16 @@ function buildPricingFAQ(locale: AppLocale): Record<string, object> {
         { '@type': 'Question', name: 'Gibt es versteckte Kosten?', acceptedAnswer: { '@type': 'Answer', text: 'Nein. Support und Updates sind enthalten, und GeoTapp Verifier, mit dem Ihre Kunden die Berichte prüfen, ist kostenlos.' } },
       ],
     },
+    nl: {
+      '@context': 'https://schema.org', '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: 'Heeft GeoTapp een gratis proefperiode?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. De proefperiode duurt 14 dagen en vraagt geen creditcard.' } },
+        { '@type': 'Question', name: 'Wat kost GeoTapp?', acceptedAnswer: { '@type': 'Answer', text: `GeoTapp Flow, het webpaneel, kost € 39 per maand met het plan Solo, € 99 met Team en € 199 met Business (€ 390, € 990 en € 1.990 als u het jaar in één keer betaalt). De plaatsen van de TimeTracker-app komen er apart bij: ${monthlyRate} per medewerker per maand tot 25, € 2,50 vanaf de zesentwintigste. Prijzen exclusief btw.` } },
+        { '@type': 'Question', name: 'Wat kost het voor een ploeg van 5 medewerkers?', acceptedAnswer: { '@type': 'Answer', text: `Bij het gekozen Flow-plan komen 5 TimeTracker-plaatsen: ${fiveOpsMonthly} per maand, ${fiveOpsAnnual} per jaar als u het hele jaar betaalt. Er zijn geen activeringskosten.` } },
+        { '@type': 'Question', name: 'Is er een minimale looptijd?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Het abonnement loopt minimaal 12 maanden, te betalen in één keer of in maandelijkse termijnen. U kunt op elk moment via het paneel overstappen op een hoger plan.' } },
+        { '@type': 'Question', name: 'Zijn er verborgen kosten?', acceptedAnswer: { '@type': 'Answer', text: 'Nee. Ondersteuning en updates zijn inbegrepen, en GeoTapp Verifier, waarmee uw klanten de rapporten controleren, is gratis.' } },
+      ],
+    },
   };
 }
 
@@ -179,7 +189,7 @@ const PRICING_BREADCRUMB: Record<string, object> = {
   de: { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'GeoTapp', item: 'https://geotapp.com' }, { '@type': 'ListItem', position: 2, name: 'Preise', item: 'https://geotapp.com/de/preise/' }] },
   fr: { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'GeoTapp', item: 'https://geotapp.com' }, { '@type': 'ListItem', position: 2, name: 'Tarifs', item: 'https://geotapp.com/fr/tarifs/' }] },
   es: { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'GeoTapp', item: 'https://geotapp.com' }, { '@type': 'ListItem', position: 2, name: 'Precios', item: 'https://geotapp.com/es/precios/' }] },
-  nl: { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'GeoTapp', item: 'https://geotapp.com' }, { '@type': 'ListItem', position: 2, name: 'Prijzen', item: 'https://geotapp.com/nl/tarieven/' }] },
+  nl: { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'GeoTapp', item: 'https://geotapp.com' }, { '@type': 'ListItem', position: 2, name: 'Tarieven', item: 'https://geotapp.com/nl/tarieven/' }] },
   pt: { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'GeoTapp', item: 'https://geotapp.com' }, { '@type': 'ListItem', position: 2, name: 'Preços', item: 'https://geotapp.com/pt/precos/' }] },
   da: { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'GeoTapp', item: 'https://geotapp.com' }, { '@type': 'ListItem', position: 2, name: 'Priser', item: 'https://geotapp.com/da/priser/' }] },
   sv: { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'GeoTapp', item: 'https://geotapp.com' }, { '@type': 'ListItem', position: 2, name: 'Priser', item: 'https://geotapp.com/sv/priser/' }] },
@@ -194,7 +204,7 @@ const PRICING_META: Record<string, { title: string; description: string }> = {
   fr: { title: 'Tarifs GeoTapp - Plans et abonnements | GeoTapp', description: 'Découvrez les plans GeoTapp : plan de base gratuit, abonnements mensuels pour équipes avec pointage GPS, gestion des horaires et vérification des rapports.' },
   es: { title: 'Precios GeoTapp - Planes y suscripciones | GeoTapp', description: 'Conoce los planes GeoTapp: prueba gratuita 14 días, suscripciones mensuales para equipos con fichaje GPS, gestión de turnos y verificación de informes.' },
   pt: { title: 'Preços GeoTapp - Planos e subscrições | GeoTapp', description: 'Planos GeoTapp: avaliação 14 dias grátis, subscrições mensais para equipas com ponto GPS, turnos e relatórios verificáveis.' },
-  nl: { title: 'GeoTapp Prijzen - Plannen & abonnementen | GeoTapp', description: 'Ontdek GeoTapp-plannen: 14 dagen gratis proberen, maandelijkse abonnementen voor teams met GPS-tijdregistratie, planningsbeheer en rapportverificatie.' },
+  nl: { title: 'GeoTapp-prijzen - Abonnementen | GeoTapp', description: 'Ontdek de GeoTapp-abonnementen: 14 dagen gratis proberen, abonnementen voor teams met registratie met locatie, dienstbeheer en controle van rapporten. Geen verborgen kosten.' },
   ru: { title: 'Цены GeoTapp, Тарифы и подписки | GeoTapp', description: 'Изучите планы GeoTapp: бесплатный базовый план, ежемесячные подписки для команд с GPS-учётом времени, управлением сменами и проверкой отчётов.' },
   da: { title: 'GeoTapp Priser - Planer og abonnementer | GeoTapp', description: 'Udforsk GeoTapp-planer: 14 dages gratis prøveperiode, månedlige abonnementer for teams med GPS-tidsregistrering, vagtplanlægning og rapportverificering.' },
   sv: { title: 'GeoTapp Priser - Planer och abonnemang | GeoTapp', description: 'Utforska GeoTapp-planer: 14 dagars gratis provperiod, månadsabonnemang för team med GPS-tidregistrering, schemaläggning och rapportverifiering.' },

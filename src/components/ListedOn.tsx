@@ -76,7 +76,7 @@ const LABEL: Record<string, string> = {
   fr: 'Référencé sur',
   es: 'Presente en',
   pt: 'Presente em',
-  nl: 'Vermeld op',
+  nl: 'Te vinden op',
   ru: 'Размещено на',
   da: 'Opført på',
   sv: 'Listad på',

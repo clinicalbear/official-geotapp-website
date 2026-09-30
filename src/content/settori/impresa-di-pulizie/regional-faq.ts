@@ -11,7 +11,7 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   fr: 'Conformité en France',
   es: 'Cumplimiento normativo en España',
   pt: 'Conformidade em Portugal',
-  nl: 'Compliance in Nederland',
+  nl: 'Regels en documentatie in Nederland',
   'en-us': 'Regional rules and records',
   'en-gb': 'Regional rules and records',
   'en-au': 'Regional rules and records',
@@ -92,16 +92,16 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   ],
   nl: [
     {
-      q: 'Welke bewijzen vraagt de CAO Schoonmaak per medewerker?',
-      a: 'Gewerkte uren per object, onregelmatigheids- en nachttoeslagen en de bewaartermijn uit de Arbeidstijdenwet, conform het CAO-loongebouw.',
+      q: 'Welke urenregistratie heeft een schoonmaakbedrijf nodig?',
+      a: 'GeoTapp legt uren, pauzes en einde per medewerker en per object vast met locatie en tijd en exporteert ze als Excel- of CSV-bestand voor de salarisadministrateur. Toeslagen voor nacht- en feestdagenwerk, het minimumloon en de controles blijven bij die administrateur en bij het bedrijf, dat zo een tijdsregistratie heeft om van uit te gaan.',
     },
     {
-      q: 'Hoe wordt de AVG nageleefd bij GPS-tracking?',
-      a: 'Tracking alleen tijdens werktijd, met privacyverklaring, belangenafweging (art. 6 AVG) en een DPIA, volgens de richtsnoeren van de Autoriteit Persoonsgegevens.',
+      q: 'Gps bij schoonmakers: AVG en ondernemingsraad?',
+      a: 'De locatie wordt alleen vastgelegd bij het registreren en bij bewijsfoto\'s, nooit doorlopend, en de privacyverklaring voor de werknemers wordt in de app ondertekend voordat ze registreren. Of een belangenafweging op grond van art. 6 AVG en de instemming van de ondernemingsraad op grond van art. 27 WOR nodig zijn, beoordeelt de werkgever.',
     },
     {
-      q: 'Hoe toon je WML en vakantiegeld aan, ook bij zzp\'ers?',
-      a: 'Uren-naar-loon controle tegen het wettelijk minimumloon en de CAO-schalen, met 8% vakantiegeld en de Wet DBA-toets op schijnzelfstandigheid.',
+      q: 'Cao Schoonmaak en het minimumloon in de schoonmaak?',
+      a: 'GeoTapp berekent geen loon en past de cao voor het schoonmaak- en glazenwassersbedrijf niet toe. Het legt begin, pauzes en einde bij het registreren vast en bewaart uren en aanwezigheid per medewerker, te exporteren als Excel- of CSV-bestand. De toepassing van de regels blijft bij het bedrijf en zijn adviseur. GeoTapp is geen juridisch advies.',
     },
   ],
   'en-us': [

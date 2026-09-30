@@ -134,18 +134,17 @@ const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
   },
   nl: {
     description:
-      'GeoTapp genereert verifieerbaar bewijs van uitgevoerd veldwerk: verzegelde rapporten met echte GPS-gegevens, tijdgestempeld fotobewijs en documentatie met detecteerbare wijzigingen die iedereen onafhankelijk kan controleren.',
+      'GeoTapp is software om het werk in het veld aan te tonen: bij elke registratie legt het locatie en tijd vast, verzamelt het bewijsfoto\'s en sluit het alles af in een verzegeld rapport dat de klant zelf controleert. De locatie wordt alleen bepaald wanneer de medewerker registreert, nooit doorlopend.',
     featureList: [
-      'Werkrapporten met detecteerbare wijzigingen, onafhankelijk verifieerbaar door iedereen',
-      'Fotobewijs gekoppeld aan GPS-tijdstempel en opdracht',
-      'Opdrachtdocumentatie: elke wijziging is detecteerbaar',
-      'Werkbewijs: objectief bewijs voor elke velddienst',
-      'Verifieerbare GPS-tijdregistratie',
-      'Werkorder- en interventiebeheer',
-      'AVG-conform, geen continue tracking',
-      'Mobiele app voor Android en iOS (Flutter)',
+      'Verzegelde rapporten: elke latere wijziging is zichtbaar, en iedereen kan ze zonder account controleren',
+      'Bewijsfoto\'s gekoppeld aan tijd, locatie en opdracht',
+      'Registratie met locatie bij aankomst, pauzes en vertrek',
+      'Geen doorlopende tracking: tussen twee registraties in wordt er niets automatisch vastgelegd',
+      'Beheer van opdrachten, teams en klussen vanaf kantoor (GeoTapp Flow, web)',
+      'Native app voor medewerkers in het veld op Android en iOS (GeoTapp TimeTracker)',
+      'Gratis verifier, ook offline (GeoTapp Verifier)',
     ],
-    offersDescription: '14 dagen gratis proberen, betaalde plannen vanaf {price}/gebruiker/maand via Stripe',
+    offersDescription: '14 dagen gratis proberen, zonder creditcard. Daarna een GeoTapp Flow-abonnement vanaf € 39 per maand en TimeTracker-plaatsen vanaf {price} per medewerker per maand, minimale looptijd 12 maanden',
   },
   ru: {
     description:

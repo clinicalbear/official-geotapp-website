@@ -271,7 +271,7 @@ const CONTENUTI: Record<CdLocale, CdContenuto> = {
     ] },
   },
   nl: {
-    heading: 'Genereer uw bewaarbeleid voor HR-gegevens',
+    heading: 'Genereer uw bewaarbeleid voor personeelsgegevens',
     intro: 'Kies het land en de soorten personeelsgegevens die u beheert: u krijgt een bewaartabel met aanbevolen termijnen, een noot per regel en een PDF-export. De termijnen zijn indicatief — voor boekhoudkundige documenten gebruiken we de wet van het gekozen land. Alles gebeurt in uw browser.',
     azienda: 'Statutaire naam / bedrijfsnaam (optioneel)',
     aziendaPlaceholder: 'Bijv. Jansen Schoonmaak B.V.',
@@ -286,7 +286,7 @@ const CONTENUTI: Record<CdLocale, CdContenuto> = {
     colDurata: 'Aanbevolen termijn',
     colNota: 'Noot',
     notaLegale: 'Indicatieve termijnen, aan te passen aan uw geval en de nationale wet. Dit is een informatieve bron, geen juridisch advies.',
-    docTitolo: 'Bewaarbeleid voor HR-gegevens',
+    docTitolo: 'Bewaarbeleid voor personeelsgegevens',
     docFooter: 'Concept gratis gegenereerd met GeoTapp',
     unitAnni: 'jaar',
     perPaeseNota: 'Vastgesteld door de nationale boekhoud-/belastingwet',

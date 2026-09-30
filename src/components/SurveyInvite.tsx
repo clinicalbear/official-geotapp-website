@@ -25,7 +25,7 @@ const COPY: Record<string, Copy> = {
   en: { title: 'Quick question', body: '2 minutes to share your take on field work. Anonymous, no email.', cta: 'Take the survey' },
   de: { title: 'Kurze Frage', body: '2 Minuten für Ihre Meinung zur Arbeit vor Ort. Anonym, keine E-Mail.', cta: 'Zur Umfrage' },
   fr: { title: 'Une question rapide', body: '2 minutes pour ton avis sur le travail terrain. Anonyme, sans e-mail.', cta: 'Participer' },
-  nl: { title: 'Korte vraag', body: '2 minuten om je mening over werk op locatie te delen. Anoniem, geen e-mail.', cta: 'Doe mee' },
+  nl: { title: 'Een korte vraag', body: '2 minuten om ons uw mening te geven over werk in het veld. Anoniem, geen e-mailadres.', cta: 'Doe mee aan de enquête' },
   es: { title: 'Una pregunta rápida', body: '2 minutos para tu opinión sobre el trabajo de campo. Anónimo, sin correo.', cta: 'Participar' },
   pt: { title: 'Uma pergunta rápida', body: '2 minutos para a tua opinião sobre o trabalho no terreno. Anónimo, sem email.', cta: 'Participar' },
   da: { title: 'Et hurtigt spørgsmål', body: '2 minutter til din mening om markarbejde. Anonymt, ingen e-mail.', cta: 'Deltag' },

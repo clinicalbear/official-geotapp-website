@@ -43,11 +43,11 @@ export const TRUST_COPY: Record<string, TrustCopy> = {
     { title: 'Registo GPS real', sub: 'Local e hora registados no local' },
     { title: 'Verificação independente', sub: 'O cliente verifica, sem conta' },
   ], sectors: 'Limpeza · Construção · Segurança · Instaladores · Manutenção · AVAC' },
-  nl: { headline: 'Bewijs van werk in het veld, door iedereen te verifiëren', claims: [
-    { title: 'Elke wijziging is zichtbaar', sub: 'Cryptografisch zegel op elke opdracht' },
-    { title: 'Echte GPS-registratie', sub: 'Locatie en tijd ter plaatse vastgelegd' },
-    { title: 'Onafhankelijke verificatie', sub: 'De klant controleert, zonder account' },
-  ], sectors: 'Schoonmaak · Bouw · Beveiliging · Installateurs · Onderhoud · HVAC' },
+  nl: { headline: 'Het bewijs van werk in het veld, door iedereen te controleren', claims: [
+    { title: 'Elke latere wijziging is zichtbaar', sub: 'Cryptografische verzegeling op elk rapport' },
+    { title: 'Echte registratie met gps', sub: 'Locatie en tijd ter plaatse vastgelegd' },
+    { title: 'Onafhankelijke controle', sub: 'De klant controleert, zonder account' },
+  ], sectors: 'Schoonmaak · Bouw · Beveiliging · Installateurs · Onderhoud · Installaties' },
   ru: { headline: 'Доказательство полевой работы, которое может проверить каждый', claims: [
     { title: 'Любое изменение заметно', sub: 'Криптографическая печать на каждом выезде' },
     { title: 'Реальная GPS-отметка', sub: 'Место и время фиксируются на объекте' },

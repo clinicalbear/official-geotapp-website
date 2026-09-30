@@ -312,7 +312,7 @@ const META_TEXTS: Record<string, { title: string; description: string }> = {
   fr: { title: 'GeoTapp - Liens officiels', description: 'Preuves GPS, photos et rapports vérifiables. Essai gratuit, sans carte de crédit.' },
   es: { title: 'GeoTapp - Enlaces oficiales', description: 'Pruebas GPS, fotos e informes verificables. Prueba gratuita, sin tarjeta de crédito.' },
   pt: { title: 'GeoTapp - Links oficiais', description: 'Prova GPS, fotos e relatórios verificáveis. Teste grátis, sem cartão de crédito.' },
-  nl: { title: 'GeoTapp - Officiële links', description: 'GPS-bewijs, foto\'s en verifieerbare rapporten. Gratis proefversie, geen creditcard nodig.' },
+  nl: { title: 'GeoTapp - Officiële links', description: 'Bewijs met locatie, foto\'s en controleerbare rapporten. 14 dagen gratis proberen, zonder creditcard.' },
   da: { title: 'GeoTapp - Officielle links', description: 'GPS-bevis, fotos og verificerbare rapporter. Gratis prøveversion, intet kreditkort.' },
   sv: { title: 'GeoTapp - Officiella länkar', description: 'GPS-bevis, foton och verifierbara rapporter. Gratis testperiod, inget kreditkort.' },
   nb: { title: 'GeoTapp - Offisielle lenker', description: 'GPS-bevis, bilder og verifiserbare rapporter. Gratis prøveperiode, uten kredittkort.' },

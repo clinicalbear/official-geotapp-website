@@ -8,7 +8,7 @@ const DEMO_META: Record<string, { title: string; description: string }> = {
   fr: { title: 'Réserver une Démo Gratuite GeoTapp, 30 Minutes | GeoTapp', description: 'Découvrez comment GeoTapp élimine les litiges d\'heures et rend chaque intervention vérifiable. Démo gratuite de 30 minutes.' },
   es: { title: 'Reservar una Demo Gratuita de GeoTapp, 30 Minutos | GeoTapp', description: 'Descubre cómo GeoTapp elimina las disputas de horas y hace verificable cada intervención. Demo gratuita de 30 minutos.' },
   pt: { title: 'Agendar Demo Gratuita do GeoTapp, 30 Minutos | GeoTapp', description: 'Veja como o GeoTapp elimina conflitos de horas e torna cada intervenção verificável. Demo gratuita de 30 minutos.' },
-  nl: { title: 'Gratis GeoTapp Demo Boeken, 30 Minuten | GeoTapp', description: 'Ontdek hoe GeoTapp uurconflicten beëindigt en elke buitendienst opdracht verifieerbaar maakt. Gratis 30-minuten demo.' },
+  nl: { title: 'Boek een gratis GeoTapp-demo, 30 minuten | GeoTapp', description: 'Ontdek hoe GeoTapp geschillen over uren voorkomt en elke klus gedocumenteerd maakt. Gratis demo van 30 minuten met ons team.' },
   ru: { title: 'Записаться на бесплатное демо GeoTapp, 30 минут | GeoTapp', description: 'Узнайте, как GeoTapp устраняет споры по часам и делает каждый выезд верифицируемым. Бесплатное 30-минутное демо.' },
   da: { title: 'Book Gratis GeoTapp Demo, 30 Minutter | GeoTapp', description: 'Se hvordan GeoTapp stopper timetvister og gør hvert feltjob verificerbart. Gratis 30-minutters demo.' },
   sv: { title: 'Boka Gratis GeoTapp Demo, 30 Minuter | GeoTapp', description: 'Se hur GeoTapp stoppar arbetstidstvister och gör varje fältuppdrag verifierbart. Gratis 30-minuters demo.' },

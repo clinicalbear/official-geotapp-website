@@ -11,7 +11,7 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   fr: 'Conformité en France',
   es: 'Cumplimiento normativo en España',
   pt: 'Conformidade em Portugal',
-  nl: 'Compliance in Nederland',
+  nl: 'Regels en documentatie in Nederland',
   'en-us': 'Regional rules and records',
   'en-gb': 'Regional rules and records',
   'en-au': 'Regional rules and records',
@@ -92,16 +92,16 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   ],
   nl: [
     {
-      q: 'Welke urenregistratie eist de CAO Schoonmaak- en Glazenwassersbedrijf?',
-      a: 'Gewerkte uren per object, toeslagen voor onregelmatige en nachtdiensten en de bewaartermijn uit de Arbeidstijdenwet, per dienst vastgelegd volgens het CAO-loongebouw.',
+      q: 'Welke urenregistratie heeft een schoonmaakbedrijf nodig?',
+      a: 'GeoTapp legt uren, pauzes en einde per medewerker en per object vast met locatie en tijd en exporteert ze als Excel- of CSV-bestand voor de salarisadministrateur. Toeslagen voor nacht- en feestdagenwerk, minimumlonen en de toepassing van de cao blijven bij die administrateur en bij het bedrijf.',
     },
     {
-      q: 'AVG en de Autoriteit Persoonsgegevens bij GPS-tracking van schoonmakers?',
-      a: 'Privacyverklaring, gerechtvaardigd belang (art. 6 AVG) met belangenafweging en een DPIA per inzet, in lijn met de richtsnoeren van de AP: geen tracking buiten werktijd en inzagerecht gewaarborgd.',
+      q: 'AVG en ondernemingsraad bij gps bij schoonmakers?',
+      a: 'De locatie wordt alleen vastgelegd bij het registreren en bij bewijsfoto\'s, nooit doorlopend, en de privacyverklaring voor de werknemers wordt in de app ondertekend voordat ze registreren. Of een belangenafweging op grond van art. 6 AVG en de instemming van de ondernemingsraad op grond van art. 27 WOR nodig zijn, beoordeelt de werkgever.',
     },
     {
-      q: 'WML, vakantiegeld en zzp-inzet per schoonmaakmedewerker?',
-      a: 'Uren-naar-loon controle tegen het wettelijk minimumloon en de CAO-schalen, inclusief 8% vakantiegeld en de toets op schijnzelfstandigheid van zzp\'ers onder de Wet DBA.',
+      q: 'Overname van personeel bij opdrachtwisseling en minimumloon in de schoonmaak?',
+      a: 'GeoTapp regelt de overname van personeel bij opdrachtwisseling niet en berekent geen minimumlonen. Het bewaart uren en aanwezigheid van elke medewerker, te exporteren als Excel- of CSV-bestand: de toepassing van de cao voor het schoonmaak- en glazenwassersbedrijf blijft bij de salarisadministrateur.',
     },
   ],
   'en-us': [
