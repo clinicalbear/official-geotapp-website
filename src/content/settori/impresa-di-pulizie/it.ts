@@ -22,7 +22,7 @@ const content: SettoreContent = {
     items: [
       {
         title: 'I clienti contestano le ore lavorate?',
-        desc: 'Ogni timbratura è GPS-verificata e timestampata. Mandi il report e la discussione finisce in trenta secondi.',
+        desc: 'Ogni timbratura registra posizione e orario. Mandi il report e la discussione finisce in trenta secondi.',
       },
       {
         title: 'I fogli presenze sono inaffidabili?',
@@ -165,7 +165,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Quanto costa GeoTapp per un\'impresa di pulizie?',
-        a: 'I piani partono da pochi euro per operatore al mese. Prova gratis per 14 giorni, senza impegno.',
+        a: 'I piani partono da pochi euro per operatore al mese. Prova gratuita di 14 giorni, senza carta di credito.',
       },
     ],
   },
