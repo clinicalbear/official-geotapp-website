@@ -155,7 +155,7 @@ const FLOW_FAQ: Record<string, object> = {
 };
 
 const FLOW_DESCRIPTION: Record<string, string> = {
-  it: 'GeoTapp Flow è il sistema operativo per aziende con tecnici sul campo: crea commesse, assegna attività, monitora avanzamento e produce report sigillati e verificabili in tempo reale.',
+  it: 'GeoTapp Flow è il sistema operativo per aziende con tecnici sul campo: crea commesse, assegna attività, monitora avanzamento e produce report sigillati che il cliente può verificare da solo.',
   en: 'GeoTapp Flow is the office web app for companies with field technicians: create jobs, assign tasks, follow progress and send the client sealed reports that they verify alone.',
   de: 'GeoTapp Flow ist die Web-App fürs Büro für Unternehmen mit Technikern im Außeneinsatz: Aufträge anlegen, Aufgaben zuweisen, den Fortschritt verfolgen und dem Kunden versiegelte Berichte schicken, die er selbst prüft.',
   fr: "GeoTapp Flow est l'application web du bureau pour les entreprises avec des techniciens sur le terrain : créer des chantiers, assigner des tâches, suivre l'avancement et envoyer au client des rapports scellés qu'il vérifie lui-même.",
@@ -172,12 +172,12 @@ const FLOW_FEATURES: Record<string, string[]> = {
   it: [
     'Gestione commesse e interventi multi-sito',
     'Assegnazione attività ai tecnici sul campo',
-    'Avanzamento lavori in tempo reale',
-    'Report sigillati crittograficamente e verificabili',
-    'Prove fotografiche con GPS e timestamp',
+    'Avanzamento dei lavori seguito passo dopo passo',
+    'Report sigillati crittograficamente e verificabili in modo indipendente',
+    'Prove fotografiche con orario e posizione',
     'Integrazione nativa con GeoTapp TimeTracker e Verifier',
     'Export dati per fatturazione e paghe',
-    'GDPR compliant, informativa GPS firmata digitalmente',
+    'Informativa GPS firmata per presa visione nell\'app prima della prima timbratura',
   ],
   en: [
     'Multi-site job and intervention management',

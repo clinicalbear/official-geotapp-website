@@ -144,7 +144,7 @@ const APP_FAQ: Record<string, object> = {
 };
 
 const APP_DESCRIPTION: Record<string, string> = {
-  it: "GeoTapp TimeTracker è l'app mobile per tecnici sul campo: timbratura con posizione controllata, prove fotografiche, report settimanali e sincronizzazione in tempo reale con GeoTapp Flow. Funziona offline.",
+  it: "GeoTapp TimeTracker è l'app mobile per tecnici sul campo: timbratura con posizione controllata, prove fotografiche, report settimanali e invio delle timbrature a GeoTapp Flow. Funziona offline.",
   en: 'GeoTapp TimeTracker is the native Android and iOS app for field technicians: clock-in with location, proof photos, notes and weekly reports, connected to GeoTapp Flow. If there is no signal, clock-ins are saved on the phone and sent when it returns.',
   de: 'GeoTapp TimeTracker ist die native Android- und iOS-App für Techniker im Außendienst: Stempeln mit Standort, Nachweisfotos, Notizen und Wochenberichte, verbunden mit GeoTapp Flow. Ist kein Netz da, werden die Buchungen auf dem Telefon gespeichert und gesendet, sobald es wieder da ist.',
   fr: "GeoTapp TimeTracker est l'application native Android et iOS pour les techniciens sur le terrain : pointage avec position, photos de preuve, notes et rapports hebdomadaires, reliée à GeoTapp Flow. S'il n'y a pas de réseau, les pointages sont enregistrés sur le téléphone et envoyés dès que le signal revient.",
