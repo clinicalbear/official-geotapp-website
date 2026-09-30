@@ -104,7 +104,7 @@ const WP_HEADERS = {
 
 function stripHtml(html: string): string {
   return html.replace(/<[^>]*>/g, '').replace(/&amp;/g, '&').replace(/&lt;/g, '<')
-    .replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#039;/g, "'")
+    .replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#039;/g, "'").replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(Number(n))).replace(/&#x([0-9a-f]+);/gi, (_, n) => String.fromCodePoint(parseInt(n, 16)))
     .replace(/&nbsp;/g, ' ').trim();
 }
 
@@ -306,7 +306,7 @@ async function getArticles(locale: string): Promise<Article[]> {
 
 // ─── Localized texts ──────────────────────────────────────────────────────────
 const META_TEXTS: Record<string, { title: string; description: string }> = {
-  it: { title: 'GeoTapp - Link ufficiali', description: 'Prove GPS, foto e report verificabili. Prova il trial gratuito senza carta di credito.' },
+  it: { title: 'GeoTapp - Link ufficiali', description: 'Prove GPS, foto e report verificabili. Prova gratis per 14 giorni, senza carta di credito.' },
   en: { title: 'GeoTapp - Official Links', description: 'GPS proof, photos and verifiable reports. Try the free trial, no credit card required.' },
   de: { title: 'GeoTapp - Offizielle Links', description: 'GPS-Nachweis, Fotos und überprüfbare Berichte. Kostenlose Testversion, keine Kreditkarte erforderlich.' },
   fr: { title: 'GeoTapp - Liens officiels', description: 'Preuves GPS, photos et rapports vérifiables. Essai gratuit, sans carte de crédit.' },
