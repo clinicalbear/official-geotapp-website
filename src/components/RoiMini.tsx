@@ -70,6 +70,10 @@ export default function RoiMini({ dict, locale }: Props) {
     maximumFractionDigits: 0,
   }).format(localTotal);
 
+  // L'etichetta dice "(€)": con un'altra valuta si mette il simbolo giusto.
+  const curSym = new Intl.NumberFormat(locale, { style: 'currency', currency: cur, currencyDisplay: 'narrowSymbol' })
+    .formatToParts(0).find((p) => p.type === 'currency')?.value ?? cur;
+
   const settoreLabel = (key: SettoreKey): string => {
     const labels: Record<SettoreKey, string> = {
       installatori: r.settore_installatori,
@@ -170,7 +174,7 @@ export default function RoiMini({ dict, locale }: Props) {
         </div>
         <div>
           <label htmlFor="roi-mini-costo" className="block text-xs font-medium text-text-secondary mb-1">
-            {t.field_costo}
+            {t.field_costo.replace('€', curSym)}
           </label>
           <input
             id="roi-mini-costo"

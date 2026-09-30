@@ -107,7 +107,7 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   'en-us': [
     {
       q: 'Davis-Bacon and certified payroll records?',
-      a: 'GeoTapp does not apply Davis-Bacon or prepare certified payrolls (WH-347) and does not calculate entitlements under it. It records start, breaks and finish with position and time, per worker and per job, and exports them to Excel or CSV for your payroll provider or adviser, who apply the rules.',
+      a: 'GeoTapp does not apply Davis-Bacon or prepare certified payrolls (WH-347) and does not calculate entitlements under it. It records start, breaks and finish with position and time, per worker and per job, and exports them to Excel or CSV for your payroll provider or advisor, who apply the rules.',
     },
     {
       q: 'OSHA injury and illness recordkeeping?',
@@ -115,7 +115,7 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
     },
     {
       q: 'FLSA overtime and state overtime rules?',
-      a: 'GeoTapp records hours, breaks and overtime shift by shift, with position and time at each clock-in, and exports them to Excel or CSV. Applying the FLSA and state overtime rules stays with your payroll provider or adviser.',
+      a: 'GeoTapp records hours, breaks and overtime shift by shift, with position and time at each clock-in, and exports them to Excel or CSV. Applying the FLSA and state overtime rules stays with your payroll provider or advisor.',
     },
   ],
   'en-gb': [

@@ -1,4 +1,5 @@
 import type { AppLocale } from '@/lib/i18n/config';
+import { britishToVariant } from '@/lib/i18n/en-spelling';
 import itContent from './terms';
 
 const termsTranslations: Partial<Record<AppLocale, string>> = {
@@ -16,5 +17,5 @@ const termsTranslations: Partial<Record<AppLocale, string>> = {
 };
 
 export function getTermsContent(locale: AppLocale): string {
-  return (termsTranslations[locale] ?? termsTranslations.en ?? termsTranslations.it)!;
+  return britishToVariant((termsTranslations[locale] ?? termsTranslations.en ?? termsTranslations.it)!, locale);
 }

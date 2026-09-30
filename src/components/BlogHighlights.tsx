@@ -2,6 +2,7 @@ import Link from 'next/link';
 import type { AppLocale } from '@/lib/i18n/config';
 import { blogPostPath, getPostsInCategory } from '@/lib/wp-post-index';
 import { sharedSWR } from '@/lib/shared-swr';
+import { toBlogLocale } from '@/lib/blog-locale';
 
 export interface BlogPost {
   id: number;
@@ -46,7 +47,7 @@ async function fetchBlogPosts(locale: AppLocale, categoryId: number, limit = 3):
 }
 
 async function loadBlogPosts(locale: AppLocale, categoryId: number, limit: number): Promise<BlogPost[]> {
-  const posts = await getPostsInCategory(categoryId, locale, limit);
+  const posts = await getPostsInCategory(categoryId, toBlogLocale(locale), limit);
   return posts.map((p) => ({
     id: p.id,
     title: stripHtml(p.title?.rendered ?? ''),

@@ -1,4 +1,5 @@
 import type { AppLocale } from '@/lib/i18n/config';
+import { localizeEnglishDeep } from '@/lib/i18n/en-spelling';
 import type { SettoreContent } from '../types';
 
 const map: Partial<Record<AppLocale, () => Promise<{ default: SettoreContent }>>> = {
@@ -23,5 +24,5 @@ const map: Partial<Record<AppLocale, () => Promise<{ default: SettoreContent }>>
 export async function getTermoidrauliciContent(locale: AppLocale): Promise<SettoreContent> {
   const loader = (map[locale] ?? map['en'])!;
   const mod = await loader();
-  return mod.default;
+  return localizeEnglishDeep(mod.default, locale);
 }

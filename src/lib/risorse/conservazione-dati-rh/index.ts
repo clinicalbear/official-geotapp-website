@@ -8,6 +8,8 @@
  * (mappa STATUTORY_DOCUMENTI). Contenuti localizzati per le 11 lingue del sito.
  */
 
+import { localizeEnglishDeep } from '@/lib/i18n/en-spelling';
+
 export type CdLocale =
   | 'it' | 'en' | 'de' | 'fr' | 'es' | 'nl' | 'pt' | 'da' | 'sv' | 'nb' | 'ru';
 
@@ -481,5 +483,5 @@ export function cdLocale(locale: string): CdLocale {
 }
 
 export function getConservazione(locale: string): CdContenuto {
-  return CONTENUTI[cdLocale(locale)];
+  return localizeEnglishDeep(CONTENUTI[cdLocale(locale)], locale);
 }

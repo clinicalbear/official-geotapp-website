@@ -215,11 +215,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export { generateLocaleStaticParams as generateStaticParams } from '@/lib/i18n/static-params';
 
 import PricingPage from '../../pricing/page';
+import { localizeEnglishDeep } from '@/lib/i18n/en-spelling';
+import { localizeEurPricesDeep } from '@/lib/pricing';
 
 export default async function LocalePricingPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const pricingFaq = buildPricingFAQ(locale as AppLocale);
-  const faq = pricingFaq[locale] ?? pricingFaq['en'];
+  const faq = pricingFaq[locale] ?? (locale.startsWith('en-') ? localizeEnglishDeep(localizeEurPricesDeep(pricingFaq['en'], locale), locale) : pricingFaq['en']);
   const breadcrumb = PRICING_BREADCRUMB[locale] ?? {
     '@context': 'https://schema.org', '@type': 'BreadcrumbList',
     itemListElement: [

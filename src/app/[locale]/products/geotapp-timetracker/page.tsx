@@ -30,7 +30,7 @@ const appMeta: Record<string, { title: string; description: string }> = {
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
-  const m = appMeta[locale] ?? appMeta['it'];
+  const m = appMeta[locale] ?? appMeta[locale.startsWith('en-') ? 'en' : 'it'];
   return {
     title: { absolute: m.title },
     description: m.description,
@@ -196,7 +196,7 @@ export default async function LocaleAppPage({ params }: Props) {
   // Freschezza per AI/Google: data vera dell'ultimo commit sui file di questa
   // pagina (vedi src/lib/seo/content-dates.ts), non la data di build.
   const pageKey = 'products/geotapp-timetracker';
-  const m = appMeta[locale] ?? appMeta['it'];
+  const m = appMeta[locale] ?? appMeta[locale.startsWith('en-') ? 'en' : 'it'];
   const webPage = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',

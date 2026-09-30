@@ -22,6 +22,7 @@ import {
 import { trackEvent } from '@/lib/analytics';
 import VideoGiro from '@/components/VideoGiro';
 import { GIRO_INIZIO_TIMETRACKER } from '@/lib/video-giro';
+import { localizeEnglishDeep } from '@/lib/i18n/en-spelling';
 
 // Kicker "La prova", stessa parola gia' approvata su HomeClient (L_COPY.la_prova).
 const LA_PROVA: Record<string, string> = {
@@ -135,7 +136,7 @@ export default function GeoTappApp() {
   const getLink = (path: string) => localizePath(path, currentLocale);
   const vg = dict.videoGiro;
 
-  const tc = TT_COPY[currentLocale] ?? TT_COPY[currentLocale.split('-')[0]] ?? TT_COPY.en;
+  const tc = localizeEnglishDeep(TT_COPY[currentLocale] ?? TT_COPY[currentLocale.split('-')[0]] ?? TT_COPY.en, currentLocale);
   const trackerHighlights = tc.highlights;
   const trackerWorkflow = tc.workflow;
 

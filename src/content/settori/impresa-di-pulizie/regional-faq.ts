@@ -107,7 +107,7 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   'en-us': [
     {
       q: 'FLSA and state records for cleaning services?',
-      a: 'GeoTapp records hours, breaks and overtime shift by shift, with position and time at each clock-in, and exports them to Excel or CSV. Applying the FLSA, meal and rest-break rules or record-retention periods stays with your payroll provider or adviser.',
+      a: 'GeoTapp records hours, breaks and overtime shift by shift, with position and time at each clock-in, and exports them to Excel or CSV. Applying the FLSA, meal and rest-break rules or record-retention periods stays with your payroll provider or advisor.',
     },
     {
       q: 'OSHA hazard-communication and bloodborne-pathogen training?',
@@ -115,7 +115,7 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
     },
     {
       q: 'Service Contract Act wage records?',
-      a: 'GeoTapp does not apply Service Contract Act wage determinations or prepare certified payroll (WH-347) and does not calculate entitlements under it. It records start, breaks and finish with position and time, per worker and per job, and exports them to Excel or CSV for your payroll provider or adviser, who apply the rules.',
+      a: 'GeoTapp does not apply Service Contract Act wage determinations or prepare certified payroll (WH-347) and does not calculate entitlements under it. It records start, breaks and finish with position and time, per worker and per job, and exports them to Excel or CSV for your payroll provider or advisor, who apply the rules.',
     },
   ],
   'en-gb': [

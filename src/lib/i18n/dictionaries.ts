@@ -1,6 +1,7 @@
 
 
 import enDict from '@/dictionaries/en.json';
+import { localizeEnglishDeep } from './en-spelling';
 import enUsDict from '@/dictionaries/en-us.json';
 import enGbDict from '@/dictionaries/en-gb.json';
 import enAuDict from '@/dictionaries/en-au.json';
@@ -51,9 +52,11 @@ function deepMerge<T>(target: T, source: DeepPartial<T>): T {
   return output as T;
 }
 
-function withOverrides(overrides: DeepPartial<SiteDictionary>): SiteDictionary {
+function withOverrides(overrides: DeepPartial<SiteDictionary>, variant?: AppLocale): SiteDictionary {
   // Base EN clonata e poi override locale per mantenere parita chiavi cross-lingua.
-  return deepMerge(structuredClone(enDict), overrides);
+  const merged = deepMerge(structuredClone(enDict), overrides);
+  // La base e' in inglese britannico: en-us ed en-ca ricevono l'ortografia americana/canadese.
+  return variant ? localizeEnglishDeep(merged, variant) : merged;
 }
 
 // Centralized locale map used by both server and client rendering paths.
@@ -64,11 +67,11 @@ const DICTIONARIES: Record<AppLocale, SiteDictionary> = {
   // Regional English variants: tiny override files merged onto base en dictionary
   // (currency hint, support timezone, regional compliance language). This avoids
   // duplicating thousands of lines per region.
-  'en-us': withOverrides(enUsDict),
+  'en-us': withOverrides(enUsDict, 'en-us'),
   'en-gb': withOverrides(enGbDict),
   'en-au': withOverrides(enAuDict),
   'en-ie': withOverrides(enIeDict),
-  'en-ca': withOverrides(enCaDict),
+  'en-ca': withOverrides(enCaDict, 'en-ca'),
   // de.json is a full dictionary, but routed through withOverrides so that
   // newly-added base keys (e.g. landing.roi_mini, pending DE translation)
   // fall back to EN instead of breaking the SiteDictionary type contract.

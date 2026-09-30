@@ -10,8 +10,14 @@
 import type { AppLocale } from '@/lib/i18n/config';
 import type { TestoLoc } from './types';
 import { TESTI_EN } from './traduzioni-en';
+import { britishToVariant } from '@/lib/i18n/en-spelling';
 
 export function loc(testo: TestoLoc, locale: AppLocale): string {
+  // I testi inglesi sono in inglese britannico: en-us ed en-ca ricevono la propria ortografia.
+  return britishToVariant(locFallback(testo, locale), locale);
+}
+
+function locFallback(testo: TestoLoc, locale: AppLocale): string {
   if (typeof testo === 'string') {
     // Stringa semplice = italiano. Per le lingue inglesi i titoli delle fonti e i
     // nomi dei contatti hanno la resa in ./traduzioni-en.ts.

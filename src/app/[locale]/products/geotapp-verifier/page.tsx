@@ -24,7 +24,7 @@ const verifierMeta: Record<string, { title: string; description: string }> = {
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
-  const m = verifierMeta[locale] ?? verifierMeta['it'];
+  const m = verifierMeta[locale] ?? verifierMeta[locale.startsWith('en-') ? 'en' : 'it'];
   return {
     title: { absolute: m.title },
     description: m.description,
@@ -167,7 +167,7 @@ export default async function LocaleVerifierPage({ params }: Props) {
   // Freschezza per AI/Google: data vera dell'ultimo commit sui file di questa
   // pagina (vedi src/lib/seo/content-dates.ts), non la data di build.
   const pageKey = 'products/geotapp-verifier';
-  const m = verifierMeta[locale] ?? verifierMeta['it'];
+  const m = verifierMeta[locale] ?? verifierMeta[locale.startsWith('en-') ? 'en' : 'it'];
   const webPage = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',

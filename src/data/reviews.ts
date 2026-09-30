@@ -50,7 +50,7 @@ export function resolveReviewText(
   if (locale === r.origLang) {
     return { text: r.original, lang: r.origLang, isTranslated: false };
   }
-  const t = r.translations[locale];
+  const t = r.translations[locale] ?? r.translations[locale.split('-')[0]];
   if (t) {
     return { text: t, lang: locale, isTranslated: true };
   }

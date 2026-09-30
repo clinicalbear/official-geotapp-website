@@ -286,7 +286,7 @@ export default async function ConfrontoIndexPage({ params }: { params: Promise<{
     sv: '🆕 Dynamisk jämförelse, alla konkurrenter på en sida',
     nb: '🆕 Dynamisk sammenligning, alle konkurrenter på én side',
     ru: '🆕 Динамическое сравнение, все конкуренты на одной странице',
-  }[locale] ?? '🆕 Dynamic comparison: all competitors on one page';
+  }[locale.startsWith('en-') ? 'en' : locale] ?? '🆕 Dynamic comparison: all competitors on one page';
 
   const dynamicSubtitle = {
     it: 'Scegli un concorrente e vedi la tabella con 12 funzioni. Tutte le alternative confrontate in un solo posto.',
@@ -300,7 +300,7 @@ export default async function ConfrontoIndexPage({ params }: { params: Promise<{
     sv: 'Konkurrentväljare + tabell med 12 funktioner uppdaterad i realtid. Alla alternativ på ett ställe.',
     nb: 'Konkurrentvelger + tabell med 12 funksjoner oppdatert i sanntid. Alle alternativer på ett sted.',
     ru: 'Выбор конкурента + таблица из 12 функций в реальном времени. Все альтернативы в одном месте.',
-  }[locale] ?? 'Pick a competitor and see a table of 12 features.';
+  }[locale.startsWith('en-') ? 'en' : locale] ?? 'Pick a competitor and see a table of 12 features.';
 
   return (
     <>

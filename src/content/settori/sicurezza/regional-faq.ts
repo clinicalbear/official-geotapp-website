@@ -107,7 +107,7 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   'en-us': [
     {
       q: 'State security-officer licensing?',
-      a: 'GeoTapp does not verify or track state security licences (BSIS, DCJS, Florida Class D, TX DPS), training hours or firearms endorsements, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
+      a: 'GeoTapp does not verify or track state security licenses (BSIS, DCJS, Florida Class D, TX DPS), training hours or firearms endorsements, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
     {
       q: 'Pre-employment background checks?',

@@ -86,7 +86,7 @@ export function comparisonBlogLink(
   if (!byLocale) return null;
   // articolo nella lingua della pagina; fallback all'italiano (dove sta Libemax
   // e dove il grosso delle citazioni AI e' comunque concentrato).
-  const href = byLocale[locale] ?? byLocale.it;
+  const href = byLocale[locale] ?? (locale.startsWith('en-') ? byLocale.en : undefined) ?? byLocale.it;
   if (!href) return null;
   const label = ANCHOR[locale] ?? ANCHOR.en;
   return { href, label };

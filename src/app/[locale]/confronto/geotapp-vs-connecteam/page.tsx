@@ -5,6 +5,7 @@ import {
   buildComparisonArticle,
   buildComparisonBreadcrumb,
 } from '@/lib/seo/comparisonSchema';
+import { localizeEnglishDeep } from '@/lib/i18n/en-spelling';
 export { generateLocaleStaticParams as generateStaticParams } from '@/lib/i18n/static-params';
 
 const PATHNAME = '/confronto/geotapp-vs-connecteam/';
@@ -292,7 +293,7 @@ const T: Record<string, Copy> = {
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
-  const m = META[locale] ?? META.en;
+  const m = localizeEnglishDeep(META[locale] ?? META.en, locale);
   return {
     title: { absolute: m.title },
     description: m.description,
@@ -304,9 +305,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 export default async function GeoTappVsConnecteamPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  const t = T[locale] ?? T.en;
-  const faqItems = FAQ[locale] ?? FAQ.en;
-  const labels = ROWS_LABELS[locale] ?? ROWS_LABELS.en;
+  const t = localizeEnglishDeep(T[locale] ?? T.en, locale);
+  const faqItems = localizeEnglishDeep(FAQ[locale] ?? FAQ.en, locale);
+  const labels = localizeEnglishDeep(ROWS_LABELS[locale] ?? ROWS_LABELS.en, locale);
   const rows = labels.map((feature, i) => ({ feature, geotapp: ROWS_GEO[i], competitor: ROWS_COMP[i] }));
 
   const faqSchema = {
@@ -325,7 +326,7 @@ export default async function GeoTappVsConnecteamPage({ params }: { params: Prom
     competitorName: 'Connecteam',
   });
 
-  const meta = META[locale] ?? META.en;
+  const meta = localizeEnglishDeep(META[locale] ?? META.en, locale);
   const article = buildComparisonArticle({
     locale,
     pathname: PATHNAME,

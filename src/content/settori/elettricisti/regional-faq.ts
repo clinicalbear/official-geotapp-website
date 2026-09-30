@@ -107,15 +107,15 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   'en-us': [
     {
       q: 'NECA-style job-costing records?',
-      a: 'GeoTapp records hours per worker and per job, which you export to Excel or CSV. It does not apply NECA cost codes or prevailing-wage rules: your accounting system and adviser do that.',
+      a: 'GeoTapp records hours per worker and per job, which you export to Excel or CSV. It does not apply NECA cost codes or prevailing-wage rules: your accounting system and advisor do that.',
     },
     {
       q: 'OSHA electrical-safety training logs?',
       a: 'GeoTapp does not verify or track qualified-person status, lockout/tagout assignments or arc-flash PPE training, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
     {
-      q: 'State journeyman and master licence renewals?',
-      a: 'GeoTapp does not verify or track state licences, expiry dates or CEU completion, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
+      q: 'State journeyman and master license renewals?',
+      a: 'GeoTapp does not verify or track state licenses, expiry dates or CEU completion, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
   ],
   'en-gb': [

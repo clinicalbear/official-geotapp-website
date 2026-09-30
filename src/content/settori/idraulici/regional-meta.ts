@@ -62,15 +62,15 @@ export const REGIONAL_META: Partial<Record<AppLocale, { title: string; descripti
   // Query di riferimento: `plumbing technician app with gps`, 265 imp, pos 4,4
   // negli ultimi 7 giorni, 231 impressioni su 265 dagli Stati Uniti.
   'en-us': {
-    title: 'Plumbing Technician App with GPS: UPC/IPC Records | GeoTapp',
+    title: 'Plumbing Technician App with GPS Clock-ins | GeoTapp',
     description:
-      'GPS check-ins and photo proof on every plumbing job, with UPC or IPC inspection records and backflow tester IDs kept per worker for permit reconciliation.',
+      'GPS clock-ins and photo proof on every plumbing job. Hours per worker and per job export to Excel or CSV for payroll and your own permit paperwork.',
   },
   // Query di riferimento: `gps time tracking plumbers`, 124 imp, di cui 111 dal
   // Regno Unito, dove oggi rankano quattro nostre pagine diverse.
   'en-gb': {
-    title: 'GPS Time Tracking for Plumbers: WRAS & Gas Safe | GeoTapp',
+    title: 'Time Tracking for Plumbers with GPS Clock-ins | GeoTapp',
     description:
-      'Track plumber hours job by job with GPS and photo proof, with WRAS Approved Plumber and Gas Safe registrations held per worker and ready for audit.',
+      'Record plumber hours job by job, with position and photo proof at each clock-in, and export them to Excel or CSV for your payroll provider.',
   },
 };

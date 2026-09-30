@@ -38,6 +38,7 @@ const QUADRO: Record<string, string> = {
 export const LOCALE_DATA: Record<string, string> = {
   it: 'it-IT', en: 'en-GB', de: 'de-DE', fr: 'fr-FR', es: 'es-ES', pt: 'pt-PT',
   nl: 'nl-NL', sv: 'sv-SE', da: 'da-DK', nb: 'nb-NO', ru: 'ru-RU',
+  'en-us': 'en-US', 'en-gb': 'en-GB', 'en-au': 'en-AU', 'en-ie': 'en-IE', 'en-ca': 'en-CA',
 };
 
 // Il registro usa UK, ma il codice ISO del Regno Unito e' GB: senza la mappa

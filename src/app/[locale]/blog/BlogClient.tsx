@@ -7,6 +7,7 @@ import LNastro from '@/components/LNastro';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import type { AppLocale } from '@/lib/i18n/config';
 import { trackEvent } from '@/lib/analytics';
+import { britishToVariant } from '@/lib/i18n/en-spelling';
 
 const POSTS_PER_PAGE = 13; // 1 in evidenza + 12 in griglia
 
@@ -48,7 +49,7 @@ const ALIAS_CATEGORIE: Record<string, Record<string, string>> = {
 function nomeCategoria(nome: string, locale: string): string {
   const pulito = nome.replace(/&amp;/g, '&').trim();
   const alias = (ALIAS_CATEGORIE[locale] ?? ALIAS_CATEGORIE[locale.split('-')[0]])?.[pulito.toLowerCase()];
-  return alias ?? pulito;
+  return britishToVariant(alias ?? pulito, locale);
 }
 
 export default function BlogClient({ locale, posts }: { locale: AppLocale; posts: Post[] }) {

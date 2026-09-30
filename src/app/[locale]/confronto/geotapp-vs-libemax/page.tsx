@@ -5,6 +5,7 @@ import {
   buildComparisonArticle,
   buildComparisonBreadcrumb,
 } from '@/lib/seo/comparisonSchema';
+import { localizeEnglishDeep } from '@/lib/i18n/en-spelling';
 export { generateLocaleStaticParams as generateStaticParams } from '@/lib/i18n/static-params';
 
 const PATHNAME = '/confronto/geotapp-vs-libemax/';
@@ -308,7 +309,7 @@ const T: Record<string, Copy> = {
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
-  const m = META[locale] ?? META.en;
+  const m = localizeEnglishDeep(META[locale] ?? META.en, locale);
   return {
     title: { absolute: m.title }, description: m.description,
     alternates: buildLocaleAlternates(locale, PATHNAME),
@@ -319,15 +320,15 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 export default async function GeoTappVsLibemaxPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  const t = T[locale] ?? T.en;
-  const faqItems = FAQ[locale] ?? FAQ.en;
-  const labels = ROWS_LABELS[locale] ?? ROWS_LABELS.en;
-  const tableTakeaway = TABLE_TAKEAWAY[locale] ?? TABLE_TAKEAWAY.en;
+  const t = localizeEnglishDeep(T[locale] ?? T.en, locale);
+  const faqItems = localizeEnglishDeep(FAQ[locale] ?? FAQ.en, locale);
+  const labels = localizeEnglishDeep(ROWS_LABELS[locale] ?? ROWS_LABELS.en, locale);
+  const tableTakeaway = localizeEnglishDeep(TABLE_TAKEAWAY[locale] ?? TABLE_TAKEAWAY.en, locale);
   const rows = labels.map((feature, i) => ({ feature, geotapp: ROWS_GEO[i], competitor: ROWS_COMP[i] }));
 
   const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqItems.map((item) => ({ '@type': 'Question', name: item.q, acceptedAnswer: { '@type': 'Answer', text: item.a } })) };
   const breadcrumb = buildComparisonBreadcrumb({ locale, pathname: PATHNAME, competitorName: 'Libemax' });
-  const meta = META[locale] ?? META.en;
+  const meta = localizeEnglishDeep(META[locale] ?? META.en, locale);
   const article = buildComparisonArticle({ locale, pathname: PATHNAME, headline: meta.title, description: meta.description, datePublished: ARTICLE_DATE_PUBLISHED, dateModified: ARTICLE_DATE_MODIFIED });
 
   return (

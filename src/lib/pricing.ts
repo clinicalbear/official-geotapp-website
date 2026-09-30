@@ -483,3 +483,37 @@ export function calculatePricing(seats: number): Quote | null {
     isCustom: false,
   };
 }
+
+// ============================================================================
+// Testi inglesi con prezzi in euro scritti a mano
+// ============================================================================
+
+const EUR_IN_TEXT = /€\s?(\d{1,3}(?:,\d{3})+(?:\.\d+)?|\d+(?:\.\d+)?)/g;
+
+/**
+ * Nei testi in inglese "base" i prezzi dei piani stanno scritti in euro (€39, €2.50).
+ * Per le varianti con un'altra valuta (en-us, en-gb, en-au, en-ca) li converte con
+ * lo stesso cambio del listino, cosi' una pagina non mostra 39 € accanto a 49,99 $.
+ * Usare SOLO su testi che parlano dei prezzi GeoTapp, mai su multe o importi di altri.
+ */
+export function localizeEurPrices(text: string, locale: string | null | undefined): string {
+  const l = (locale ?? 'en') as AppLocale;
+  if (!l.startsWith('en') || getCurrencyForLocale(l) === 'EUR') return text;
+  return text.replace(EUR_IN_TEXT, (_m, n: string) => convertEurToLocale(parseFloat(n.replace(/,/g, '')), l).formatted);
+}
+
+export function localizeEurPricesDeep<T>(value: T, locale: string | null | undefined): T {
+  const l0 = (locale ?? 'en') as AppLocale;
+  if (!l0.startsWith('en') || getCurrencyForLocale(l0) === 'EUR') return value;
+  const walk = (v: unknown): unknown => {
+    if (typeof v === 'string') return localizeEurPrices(v, locale);
+    if (Array.isArray(v)) return v.map(walk);
+    if (v && typeof v === 'object') {
+      const o: Record<string, unknown> = {};
+      for (const [k, x] of Object.entries(v as Record<string, unknown>)) o[k] = walk(x);
+      return o;
+    }
+    return v;
+  };
+  return walk(value) as T;
+}

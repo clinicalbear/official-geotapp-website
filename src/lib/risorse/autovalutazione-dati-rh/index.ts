@@ -8,6 +8,8 @@
  * vivono nelle risorse collegate (mappa UE, generatore informativa).
  */
 
+import { localizeEnglishDeep } from '@/lib/i18n/en-spelling';
+
 export type AvLocale =
   | 'it' | 'en' | 'de' | 'fr' | 'es' | 'nl' | 'pt' | 'da' | 'sv' | 'nb' | 'ru';
 
@@ -458,5 +460,5 @@ export function avLocale(locale: string): AvLocale {
 }
 
 export function getAutovalutazione(locale: string): AvContenuto {
-  return CONTENUTI[avLocale(locale)];
+  return localizeEnglishDeep(CONTENUTI[avLocale(locale)], locale);
 }

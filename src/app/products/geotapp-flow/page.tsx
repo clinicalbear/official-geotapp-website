@@ -30,6 +30,7 @@ import { GIRO_INIZIO_FLOW } from '@/lib/video-giro';
 const FeaturedIn = dynamic(() => import('@/components/FeaturedIn'), { ssr: true });
 const VideoGiro = dynamic(() => import('@/components/VideoGiro'), { ssr: true });
 import { featuredLabel } from '@/lib/press/labels';
+import { localizeEnglishDeep } from '@/lib/i18n/en-spelling';
 
 const LA_PROVA: Record<string, string> = {
   it: 'La prova', en: 'The proof', de: 'Der Beweis', fr: 'La preuve', es: 'La prueba',
@@ -307,11 +308,11 @@ export default function GeoTappApp() {
   const getSystem = (id: string) => systems.find((s) => s.id === id)!;
   const getLink = (path: string) => localizePath(path, currentLocale);
 
-  const fc = FLOW_COPY[currentLocale] ?? FLOW_COPY[currentLocale.split('-')[0]] ?? FLOW_COPY.en;
+  const fc = localizeEnglishDeep(FLOW_COPY[currentLocale] ?? FLOW_COPY[currentLocale.split('-')[0]] ?? FLOW_COPY.en, currentLocale);
   const CARD_ICONS = [Database, Camera, FileArchive, CreditCard];
   const capabilityCards = fc.cards.map((card, i) => ({ icon: CARD_ICONS[i], ...card }));
   const flowTrackerBlocks = fc.blocks;
-  const c = GPS_PRIVACY_CONTENT[currentLocale] ?? GPS_PRIVACY_CONTENT['en']!;
+  const c = localizeEnglishDeep(GPS_PRIVACY_CONTENT[currentLocale] ?? GPS_PRIVACY_CONTENT['en']!, currentLocale);
   const vg = dict.videoGiro;
   const complianceKicker = fc.complianceKicker;
   const complianceTagline = fc.complianceTagline;

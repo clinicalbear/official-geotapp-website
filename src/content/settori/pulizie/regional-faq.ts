@@ -107,11 +107,11 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   'en-us': [
     {
       q: 'FLSA records for cleaning staff?',
-      a: 'GeoTapp records hours, breaks and overtime shift by shift, with position and time at each clock-in, and exports them to Excel or CSV. Applying the FLSA, tipped and non-tipped distinctions or record-retention periods stays with your payroll provider or adviser.',
+      a: 'GeoTapp records hours, breaks and overtime shift by shift, with position and time at each clock-in, and exports them to Excel or CSV. Applying the FLSA, tipped and non-tipped distinctions or record-retention periods stays with your payroll provider or advisor.',
     },
     {
       q: 'Janitorial wage orders in California, New York and Illinois?',
-      a: 'GeoTapp records hours, breaks and overtime shift by shift, with position and time at each clock-in, and exports them to Excel or CSV. Applying state wage orders and rest-day rules stays with your payroll provider or adviser.',
+      a: 'GeoTapp records hours, breaks and overtime shift by shift, with position and time at each clock-in, and exports them to Excel or CSV. Applying state wage orders and rest-day rules stays with your payroll provider or advisor.',
     },
     {
       q: 'OSHA hazard-communication training?',

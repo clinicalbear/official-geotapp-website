@@ -1,5 +1,7 @@
 import type { AppLocale } from '@/lib/i18n/config';
+import { localizeEnglishDeep } from '@/lib/i18n/en-spelling';
 import type { SettoreContent } from '../types';
+import { localizeEurPricesDeep } from '@/lib/pricing';
 
 const map: Partial<Record<AppLocale, () => Promise<{ default: SettoreContent }>>> = {
   it: () => import('./it'),
@@ -23,5 +25,5 @@ const map: Partial<Record<AppLocale, () => Promise<{ default: SettoreContent }>>
 export async function getManutenzioneContent(locale: AppLocale): Promise<SettoreContent> {
   const loader = (map[locale] ?? map['en'])!;
   const mod = await loader();
-  return mod.default;
+  return localizeEurPricesDeep(localizeEnglishDeep(mod.default, locale), locale);
 }

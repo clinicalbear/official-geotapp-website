@@ -20,7 +20,7 @@ const META: Record<string, { title: string; description: string; pageTitle: stri
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
-  const meta = META[locale] ?? META.it;
+  const meta = META[locale] ?? (locale.startsWith('en-') ? META.en : META.it);
   return {
     title: { absolute: meta.title },
     description: meta.description,
@@ -33,7 +33,7 @@ export { generateLocaleStaticParams as generateStaticParams } from '@/lib/i18n/s
 
 export default async function LocalePrivacyPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  const meta = META[locale] ?? META.it;
+  const meta = META[locale] ?? (locale.startsWith('en-') ? META.en : META.it);
   const content = getPrivacyContent(locale as AppLocale);
   return LegalMarkdownPage({
     markdownContent: content,

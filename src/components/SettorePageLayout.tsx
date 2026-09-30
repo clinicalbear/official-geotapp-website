@@ -20,6 +20,7 @@ import { JsonLd } from '@/components/seo/JsonLd';
 import UpdatedOnLine, { updatedIsoFor } from '@/components/seo/UpdatedOnLine';
 import DemoReportBanner from '@/components/DemoReportBanner';
 import { trackEvent } from '@/lib/analytics';
+import { localizeEnglishDeep } from '@/lib/i18n/en-spelling';
 import {
   EUR_PRICES,
   convertEurToLocale,
@@ -243,7 +244,8 @@ export default function SettorePageLayout({ content, locale, settore, children }
     ?? NORM_TITLE[locale.split('-')[0]]
     ?? NORM_TITLE.en;
 
-  const regionalItems = ALL_REGIONAL_FAQ[settore]?.[locale];
+  const regionalItemsRaw = ALL_REGIONAL_FAQ[settore]?.[locale];
+  const regionalItems = regionalItemsRaw ? localizeEnglishDeep(regionalItemsRaw, locale) : regionalItemsRaw;
   const regionalTitle = ALL_REGIONAL_FAQ_TITLES[settore]?.[locale] ?? 'Regional compliance';
 
   return (

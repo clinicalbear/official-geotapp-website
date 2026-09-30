@@ -1,4 +1,5 @@
 import type { AppLocale } from '@/lib/i18n/config';
+import { britishToVariant } from '@/lib/i18n/en-spelling';
 import itContent from './cookies';
 
 const cookiesTranslations: Partial<Record<AppLocale, string>> = {
@@ -16,5 +17,5 @@ const cookiesTranslations: Partial<Record<AppLocale, string>> = {
 };
 
 export function getCookiesContent(locale: AppLocale): string {
-  return (cookiesTranslations[locale] ?? cookiesTranslations.en ?? cookiesTranslations.it)!;
+  return britishToVariant((cookiesTranslations[locale] ?? cookiesTranslations.en ?? cookiesTranslations.it)!, locale);
 }

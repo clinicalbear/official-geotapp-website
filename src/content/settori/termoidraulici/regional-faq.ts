@@ -111,7 +111,7 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
     },
     {
       q: 'State HVAC contractor licensing?',
-      a: 'GeoTapp does not verify or track state HVAC licences, bonds, insurance or renewals, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
+      a: 'GeoTapp does not verify or track state HVAC licenses, bonds, insurance or renewals, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
     {
       q: 'Energy Star and AHRI commissioning?',

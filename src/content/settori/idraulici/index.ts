@@ -1,4 +1,5 @@
 import type { AppLocale } from '@/lib/i18n/config';
+import { localizeEnglishDeep } from '@/lib/i18n/en-spelling';
 import type { SettoreContent } from '../types';
 import { REGIONAL_META } from './regional-meta';
 
@@ -28,6 +29,6 @@ export async function getIdrauliciContent(locale: AppLocale): Promise<SettoreCon
   // conformita' proprio (UPC/IPC, WRAS, Gas Safe): dove esiste, lo snippet lo dice
   // invece di ripetere quello generico. Vedi regional-meta.ts per la misura.
   const regional = REGIONAL_META[locale];
-  if (!regional) return mod.default;
+  if (!regional) return localizeEnglishDeep(mod.default, locale);
   return { ...mod.default, meta: regional };
 }

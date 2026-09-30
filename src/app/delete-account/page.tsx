@@ -5,6 +5,7 @@ import { Trash2, ShieldCheck, Clock, FileText, AlertTriangle } from 'lucide-reac
 import { motion } from 'framer-motion';
 import { usePathname } from 'next/navigation';
 import { DEFAULT_LOCALE, getLocaleFromPathname } from '@/lib/i18n/locale-routing';
+import { localizeEnglishDeep } from '@/lib/i18n/en-spelling';
 
 const FIRESTORE_URL =
   'https://firestore.googleapis.com/v1/projects/geotap-v2/databases/(default)/documents/accountDeletionRequests';
@@ -94,7 +95,7 @@ async function submitDeletionRequest(data: {
 
 export default function DeleteAccountPage() {
   const locale = getLocaleFromPathname(usePathname()) ?? DEFAULT_LOCALE;
-  const t = T[locale] ?? T[locale.split('-')[0]] ?? T.en;
+  const t = localizeEnglishDeep(T[locale] ?? T[locale.split('-')[0]] ?? T.en, locale);
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState<string | null>(null);

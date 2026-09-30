@@ -17,7 +17,7 @@ const DEMO_META: Record<string, { title: string; description: string }> = {
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
-  const meta = DEMO_META[locale] ?? DEMO_META.it;
+  const meta = DEMO_META[locale] ?? DEMO_META[locale.startsWith('en-') ? 'en' : 'it'];
   return {
     title: { absolute: meta.title },
     description: meta.description,

@@ -9,6 +9,8 @@ import VideoGiro from '@/components/VideoGiro';
 import FeaturedIn from '@/components/FeaturedIn';
 import { featuredLabel } from '@/lib/press/labels';
 import UpdatedOnLine, { updatedIsoFor } from '@/components/seo/UpdatedOnLine';
+import { localizeEnglishDeep } from '@/lib/i18n/en-spelling';
+import { localizeEurPricesDeep } from '@/lib/pricing';
 
 export { generateLocaleStaticParams as generateStaticParams } from '@/lib/i18n/static-params';
 
@@ -397,7 +399,7 @@ const REGIONAL_EN_FALLBACK = ['en-us', 'en-gb', 'en-au', 'en-ie', 'en-ca'];
 
 function getCopy(locale: string): Copy {
   if (COPY[locale]) return COPY[locale];
-  if (REGIONAL_EN_FALLBACK.includes(locale)) return COPY.en;
+  if (REGIONAL_EN_FALLBACK.includes(locale)) return localizeEnglishDeep(localizeEurPricesDeep(COPY.en, locale), locale);
   return COPY.en;
 }
 

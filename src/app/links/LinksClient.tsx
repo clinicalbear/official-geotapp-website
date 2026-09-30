@@ -455,8 +455,10 @@ const FEATURED: Record<string, { label: string; sub: string }> = {
 };
 
 export default function LinksClient({ articles, locale = 'it', variant = 'legacy' }: Props) {
-  const t = UI[locale] ?? UI['it'];
-  const survey = SURVEY[locale] ?? SURVEY['it'];
+  // Le varianti regionali dell'inglese (en-us, en-gb...) usano i testi "en".
+  const textLocale = locale.startsWith('en-') ? 'en' : locale;
+  const t = UI[textLocale] ?? UI['it'];
+  const survey = SURVEY[textLocale] ?? SURVEY['it'];
   const langPath = locale === 'it' ? 'it' : locale;
   const isL = variant === 'l';
 
@@ -525,8 +527,8 @@ export default function LinksClient({ articles, locale = 'it', variant = 'legacy
             <Award size={20} strokeWidth={2} />
           </div>
           <div className="flex-1 min-w-0">
-            <h3 className="font-semibold text-[14px] leading-tight text-slate-800 group-hover:text-[#15803d] transition-colors duration-150">{(FEATURED[locale] || FEATURED.en).label}</h3>
-            <p className="text-[11.5px] text-slate-400 leading-snug mt-0.5 line-clamp-1">{(FEATURED[locale] || FEATURED.en).sub}</p>
+            <h3 className="font-semibold text-[14px] leading-tight text-slate-800 group-hover:text-[#15803d] transition-colors duration-150">{(FEATURED[textLocale] || FEATURED.en).label}</h3>
+            <p className="text-[11.5px] text-slate-400 leading-snug mt-0.5 line-clamp-1">{(FEATURED[textLocale] || FEATURED.en).sub}</p>
           </div>
           <div className="shrink-0 text-primary/50 group-hover:text-primary group-hover:translate-x-0.5 transition-all duration-150">
             <ArrowRight size={15} />

@@ -1,4 +1,5 @@
 import type { AppLocale } from '@/lib/i18n/config';
+import { localizeEnglishDeep } from '@/lib/i18n/en-spelling';
 import type { PresenzeCopy } from './types';
 
 const map: Partial<Record<AppLocale, () => Promise<{ default: PresenzeCopy }>>> = {
@@ -23,5 +24,5 @@ const map: Partial<Record<AppLocale, () => Promise<{ default: PresenzeCopy }>>> 
 export async function getPresenzeCopy(locale: AppLocale): Promise<PresenzeCopy> {
   const loader = map[locale] ?? map['it']!;
   const mod = await loader();
-  return mod.default;
+  return localizeEnglishDeep(mod.default, locale);
 }

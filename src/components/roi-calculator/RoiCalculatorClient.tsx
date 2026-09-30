@@ -236,7 +236,7 @@ export default function RoiCalculatorClient({ dict, locale, trialUrl, embed = fa
 
   const handleSubmit = async () => {
     if (!form.nome.trim() || !form.email.trim()) {
-      setError((ERROR_MSGS[locale] ?? ERROR_MSGS.it).required);
+      setError((ERROR_MSGS[locale] ?? ERROR_MSGS[locale.startsWith('en-') ? 'en' : 'it']).required);
       return;
     }
     setLoading(true);
@@ -254,7 +254,7 @@ export default function RoiCalculatorClient({ dict, locale, trialUrl, embed = fa
       setStep(3);
       setTimeout(() => setCountActive(true), 300);
     } catch {
-      setError((ERROR_MSGS[locale] ?? ERROR_MSGS.it).network);
+      setError((ERROR_MSGS[locale] ?? ERROR_MSGS[locale.startsWith('en-') ? 'en' : 'it']).network);
     } finally {
       setLoading(false);
     }
@@ -368,7 +368,7 @@ export default function RoiCalculatorClient({ dict, locale, trialUrl, embed = fa
                   <SliderField label={dict.field_siti} value={form.siti} min={1} max={30} onChange={v => update('siti', v)} dark={dark} />
                   <SliderField label={dict.field_ore_admin} value={form.ore_admin} min={1} max={40} onChange={v => update('ore_admin', v)} dark={dark} />
                   <SliderField label={dict.field_contestazioni} value={form.contestazioni} min={0} max={30} onChange={v => update('contestazioni', v)} dark={dark} />
-                  <SliderField label={dict.field_costo_orario} value={form.costo_orario} min={10} max={80} unit="money" symbol={curSymbol} onChange={v => update('costo_orario', v)} dark={dark} />
+                  <SliderField label={dict.field_costo_orario.replace('€', curSymbol)} value={form.costo_orario} min={10} max={80} unit="money" symbol={curSymbol} onChange={v => update('costo_orario', v)} dark={dark} />
                   <div className="flex gap-3">
                     <button
                       onClick={goBack}
