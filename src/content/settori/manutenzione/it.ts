@@ -10,11 +10,11 @@ const content: SettoreContent = {
   hero: {
     badge: 'App per squadre di manutenzione',
     h1_line1: 'La tua squadra di manutenzione,',
-    h1_line2: 'sempre sotto controllo.',
+    h1_line2: 'ogni visita documentata.',
     subtitle:
-      'Traccia interventi, pianifica turni e documenta ogni visita con GPS reale e prove fotografiche. Storico completo per impianti e clienti, senza nessun inserimento manuale.',
+      'Registra gli interventi, pianifica i turni e documenta ogni visita con la posizione alla timbratura e le foto di prova. Storico completo per impianti e clienti, senza nessun inserimento manuale.',
     cta_primary: 'Prova GeoTapp gratis per 14 giorni',
-    cta_note: 'Nessun vincolo. Nessuna carta di credito richiesta.',
+    cta_note: 'La prova non ti vincola a niente. Nessuna carta di credito richiesta.',
   },
 
   pain: {
@@ -26,7 +26,7 @@ const content: SettoreContent = {
       },
       {
         title: 'I tecnici arrivano davvero nei tempi previsti?',
-        desc: 'Verifica appena il tecnico timbra, senza chiamate. GPS e orario di arrivo sono già disponibili in dashboard, per ogni sede.',
+        desc: 'Lo vedi appena il tecnico timbra, senza chiamate: orario e posizione di arrivo sono già in Flow, per ogni sede.',
       },
       {
         title: 'Come dimostri il servizio erogato ai clienti?',
@@ -37,29 +37,29 @@ const content: SettoreContent = {
 
   workflow: {
     title: 'Come funziona',
-    subtitle: 'Tre step semplici. Zero carta. Zero chiamate.',
+    subtitle: 'Tre passi semplici. Zero carta. Zero chiamate.',
     steps: [
       {
         title: "Il tecnico timbra GPS all'arrivo in sede",
-        desc: "Apre l'intervento dallo smartphone. GeoTapp registra coordinate GPS reali, timestamp e foto, tutto automatico, sigillato.",
+        desc: "Apre l'intervento dallo smartphone. GeoTapp registra ora e posizione in quel momento, e le foto di prova. Fra una timbratura e l'altra non registra nulla in automatico.",
       },
       {
         title: "Le ore e l'intervento vengono registrati automaticamente",
-        desc: 'Ogni minuto lavorato è associato alla sede e al tipo di intervento. Il responsabile vede, a ogni timbratura, lo stato di ogni visita.',
+        desc: 'Le ore lavorate si associano alla sede e al tipo di intervento. Il responsabile vede, a ogni timbratura, lo stato di ogni visita.',
       },
       {
-        title: 'Il cliente riceve il report firmato digitalmente',
-        desc: "A fine intervento il sistema genera un report con GPS, ore e firma digitale. Il cliente lo verifica in autonomia, senza accesso al gestionale.",
+        title: 'Il cliente riceve il report sigillato',
+        desc: "A fine intervento il sistema genera un report con GPS, ore e sigillo. Il cliente lo verifica in autonomia, senza accesso al gestionale.",
       },
     ],
   },
 
   features: {
-    title: 'App per manutenzione: controllo totale su ogni intervento.',
+    title: 'App per manutenzione: ogni intervento documentato.',
     items: [
       {
-        title: 'Presenze GPS verificate',
-        desc: "Ogni arrivo e partenza dall'impianto è sigillato con GPS reale, timestamp e sede assegnata. Difendibile con il cliente e con l'ispettorato.",
+        title: 'Presenze con posizione e ora',
+        desc: "Ogni arrivo, pausa e partenza è registrato con posizione, ora e sede assegnata, e finisce nel report sigillato. Da mostrare al cliente o all'ispettorato quando serve.",
       },
       {
         title: 'Storico manutenzione per impianto',
@@ -67,11 +67,11 @@ const content: SettoreContent = {
       },
       {
         title: 'Report automatici e sigillati',
-        desc: 'A fine intervento il sistema genera un report sigillato: ore, GPS, foto e firma digitale. Il cliente può verificarlo da solo.',
+        desc: 'A fine intervento il sistema genera un report sigillato: ore, posizioni, foto e sigillo. Il cliente può verificarlo da solo.',
       },
       {
         title: 'Pianificazione turni e squadre',
-        desc: "Assegna interventi, gestisci turni e ricevi alert automatici se un'attività non viene aperta o chiusa nei tempi previsti.",
+        desc: "Assegna interventi, gestisci i turni e ricevi un avviso se un turno resta aperto.",
       },
       {
         title: 'Documentazione fotografica',
@@ -86,7 +86,7 @@ const content: SettoreContent = {
 
   testimonial: {
     quote:
-      'Con GeoTapp ogni intervento di manutenzione è tracciato. I clienti vedono lo storico completo di ogni impianto e non ci sono più discussioni sulle ore o sui lavori eseguiti.',
+      'Con GeoTapp ogni intervento di manutenzione è documentato, e ai clienti mandiamo il report di ogni visita.',
     author: 'Andrea L.',
     role: 'Responsabile manutenzione, facility management - Centro Italia',
   },
@@ -101,23 +101,23 @@ const content: SettoreContent = {
       },
       {
         q: 'I tecnici arrivano davvero nei tempi previsti?',
-        a: "Con GeoTapp verifichi l'orario di arrivo e la posizione GPS di ogni tecnico appena timbra. Nessuna chiamata necessaria, il dato è già disponibile in dashboard.",
+        a: "Con GeoTapp vedi l'orario di arrivo e la posizione di ogni tecnico nel momento in cui timbra. Nessuna chiamata: il dato è già in Flow.",
       },
       {
         q: 'Come dimostro ai clienti il servizio di manutenzione erogato?',
-        a: "GeoTapp mantiene uno storico completo scaricabile per ogni sede cliente: date, ore, GPS e foto di ogni intervento. Il cliente può verificare il servizio in autonomia senza accedere al tuo sistema.",
+        a: "GeoTapp mantiene uno storico completo scaricabile per ogni sede cliente: date, ore, GPS e foto di ogni intervento. Al cliente mandi il report sigillato, che verifica da solo senza accedere al tuo sistema.",
       },
       {
         q: 'GeoTapp funziona per la manutenzione di impianti e facility?',
-        a: 'Sì. GeoTapp è usato da aziende di manutenzione, facility management e imprese con squadre distribuite su più sedi. La piattaforma scala da 3 a 300 tecnici.',
+        a: 'Sì. GeoTapp è usato da aziende di manutenzione, facility management e imprese con squadre distribuite su più sedi. Va bene dalla squadra di poche persone all'azienda con centinaia di tecnici.',
       },
       {
         q: 'GeoTapp è conforme al GDPR per la geolocalizzazione?',
-        a: "GeoTapp è costruito per stare dentro i paletti del GDPR: traccia la posizione solo durante l'orario di lavoro attivo, include modulistica per l'informativa ai dipendenti e non raccoglie dati non necessari.",
+        a: "GeoTapp è costruito per stare dentro i paletti del GDPR: registra la posizione solo quando il tecnico timbra (entrata, pause, uscita) o scatta una foto di prova, fa firmare l'informativa nell'app prima di timbrare e non raccoglie dati non necessari.",
       },
       {
         q: 'Quanto costa GeoTapp per un\'azienda di manutenzione?',
-        a: 'I piani partono da pochi euro per operatore al mese. Prova gratis per 14 giorni, senza impegno.',
+        a: 'GeoTapp Flow parte da 39 € al mese; le postazioni TimeTracker per i tecnici costano 3 € al mese ciascuna fino a 25. Abbonamento minimo 12 mesi. Prima puoi provarlo gratis per 14 giorni, senza carta.',
       },
     ],
   },
@@ -125,14 +125,14 @@ const content: SettoreContent = {
   cta: {
     title: 'Ogni intervento di manutenzione merita una prova. GeoTapp la genera.',
     subtitle:
-      'Report verificabili, GPS reale, storico completo per ogni impianto. Il tuo lavoro diventa difendibile.',
-    primary: 'Inizia subito gratuitamente!',
+      'Report verificabili, posizione alle timbrature, storico completo per ogni impianto.',
+    primary: 'Prova gratis per 14 giorni',
     secondary: 'Vedi i Prezzi',
   },
 
   pricing_hint: {
-    label: 'A partire da',
-    per: 'operatore/mese',
+    label: 'Postazioni TimeTracker da',
+    per: 'operatore al mese, più il piano Flow da 39 €/mese',
     note: 'Prova gratuita 14 giorni',
   },
 
@@ -147,12 +147,12 @@ const content: SettoreContent = {
     {
       question: 'I tecnici arrivano davvero nei tempi previsti?',
       answer:
-        "Con GeoTapp verifichi l'orario di arrivo e la posizione GPS di ogni tecnico appena timbra. Il dato è già disponibile in dashboard, senza chiamate.",
+        "Con GeoTapp vedi l'orario di arrivo e la posizione di ogni tecnico nel momento in cui timbra. Il dato è già in Flow, senza chiamate.",
     },
     {
       question: 'Come dimostro ai clienti il servizio di manutenzione erogato?',
       answer:
-        'GeoTapp mantiene uno storico completo scaricabile per ogni sede cliente: date, ore, GPS e foto di ogni intervento. Il cliente verifica il servizio in autonomia.',
+        'GeoTapp mantiene uno storico completo scaricabile per ogni sede cliente: date, ore, GPS e foto di ogni intervento. Al cliente mandi il report sigillato, che verifica da solo.',
     },
   ],
 };

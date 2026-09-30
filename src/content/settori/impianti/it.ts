@@ -3,15 +3,15 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'App per Installatori e Impiantisti: Gestione Interventi GPS | GeoTapp',
-    description: 'Traccia interventi, ore e materiali per installatori e impiantisti con GPS. Prove di servizio automatiche, dati pronti per rispondere a ogni contestazione. Prova GeoTapp gratis.',
+    description: 'Documenta interventi, ore e materiali per installatori e impiantisti, con la posizione alle timbrature. Prove di servizio automatiche, pronte da mostrare quando qualcuno contesta. Prova GeoTapp gratis.',
   },
   hero: {
     badge: 'App per installatori, impiantisti e tecnici',
     h1_line1: 'Ogni intervento documentato,',
-    h1_line2: 'ogni ora tracciata.',
+    h1_line2: 'ogni ora registrata.',
     subtitle: 'Per installatori elettrici, idraulici, termotecnici e impiantisti. GeoTapp unisce Flow + TimeTracker per tracciare GPS, ore e foto per ogni commessa, dal furgone all\'ufficio senza telefonate.',
     cta_primary: 'Prova GeoTapp gratis per 14 giorni',
-    cta_note: 'Nessun vincolo. Nessuna carta di credito richiesta.',
+    cta_note: 'La prova non ti vincola a niente. Nessuna carta di credito richiesta.',
   },
   pain: {
     title: 'Problemi che risolviamo ogni giorno',
@@ -32,7 +32,7 @@ const content: SettoreContent = {
   },
   workflow: {
     title: 'Come funziona',
-    subtitle: 'Tre step semplici. Zero carta. Zero chiamate.',
+    subtitle: 'Tre passi semplici. Zero carta. Zero chiamate.',
     steps: [
       {
         title: 'Il tecnico timbra GPS all\'inizio intervento',
@@ -44,7 +44,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Il report cliente è generato senza digitare nulla',
-        desc: 'A fine intervento il sistema genera un report con GPS, ore e firma digitale. Il cliente lo riceve e lo verifica in autonomia.',
+        desc: 'A fine intervento il sistema genera un report con GPS, ore e sigillo. Il cliente lo riceve e lo verifica in autonomia.',
       },
     ],
   },
@@ -55,7 +55,7 @@ const content: SettoreContent = {
       {
         label: 'Cosa registra',
         competitor: 'Orario di entrata/uscita',
-        geotapp: 'Orario + GPS verificato + foto + attività svolta',
+        geotapp: 'Orario + posizione alla timbratura + foto + attività svolta',
       },
       {
         label: 'Chi può verificare',
@@ -64,7 +64,7 @@ const content: SettoreContent = {
       },
       {
         label: 'In caso di contestazione',
-        competitor: 'Dato non difendibile',
+        competitor: 'Solo la tua parola',
         geotapp: 'Report sigillato, ogni modifica è rilevabile',
       },
       {
@@ -88,9 +88,9 @@ const content: SettoreContent = {
       'A fine mese ricostruisci ore e commesse dai messaggi WhatsApp.',
     ],
     dopo: [
-      'Il cliente contesta? Apri il report: foto, GPS, orario, firma digitale.',
+      'Il cliente contesta? Apri il report: foto, posizione, orari, sigillo.',
       'Glielo mandi. La discussione finisce in un minuto.',
-      'Il pagamento è al sicuro. Il tecnico è tutelato.',
+      'Hai una prova da mostrare. Anche il tecnico ha qualcosa in mano.',
       'A fine mese l\'export è già pronto, ore e commesse aggregate automaticamente.',
     ],
   },
@@ -99,7 +99,7 @@ const content: SettoreContent = {
     items: [
       {
         title: 'Timbratura GPS verificabile',
-        desc: 'Ogni ingresso e uscita è collegato a posizione, timestamp e commessa. Difendibile davanti al cliente e all\'ispettorato.',
+        desc: 'Ogni entrata, pausa e uscita è collegata a posizione, ora e commessa. Da mostrare al cliente o all\'ispettorato quando serve.',
       },
       {
         title: 'Prove fotografiche sigillate',
@@ -107,24 +107,24 @@ const content: SettoreContent = {
       },
       {
         title: 'Gestione commesse multi-cantiere',
-        desc: 'Assegna commesse, monitora l\'avanzamento di ogni intervento e ricevi alert automatici se un lavoro non viene aperto o chiuso nei tempi previsti.',
+        desc: 'Assegna commesse, segui l\'avanzamento di ogni intervento e ricevi un avviso se un turno resta aperto.',
       },
       {
         title: 'Rapportini digitali automatici',
-        desc: 'A fine intervento il rapportino è già pronto: ore, foto, note e firma. Niente carta, niente chiamate. Il tecnico lo invia al cliente dall\'app.',
+        desc: 'A fine intervento il rapportino è già pronto: ore, foto e note. Niente carta, niente chiamate. L\'ufficio lo manda al cliente da Flow con un clic.',
       },
       {
         title: 'Export per la paga e fatturazione',
-        desc: 'Esporta presenze mensili e ore per commessa. L\'elaborazione paghe e la fatturazione diventano operazioni di pochi minuti.',
+        desc: 'Esporta presenze mensili e ore per commessa. Paghe e fatturazione partono dai dati già pronti, senza ricopiare niente.',
       },
       {
-        title: 'Conformità GDPR integrata',
-        desc: 'Geolocalizzazione costruita per stare dentro i paletti del GDPR. Modulistica per l\'informativa ai dipendenti inclusa.',
+        title: 'Posizione solo quando si timbra',
+        desc: 'Geolocalizzazione costruita per stare dentro i paletti del GDPR: mai in continuo, e informativa ai dipendenti firmata nell\'app prima di timbrare.',
       },
     ],
   },
   testimonial: {
-    quote: 'I clienti non contestano più le ore. Apriamo il report con GPS e foto e la discussione finisce lì.',
+    quote: 'Quando un cliente contesta le ore, apriamo il report con posizione e foto e lui lo controlla da solo.',
     author: 'Roberto F.',
     role: 'Titolare, azienda impiantistica, 20 tecnici',
   },
@@ -137,24 +137,24 @@ const content: SettoreContent = {
         a: 'Con GeoTapp le timbrature GPS sono timestampate al momento dell\'intervento e ogni modifica è rilevabile. Sono una prova verificabile delle ore svolte quando qualcuno le mette in dubbio.',
       },
       {
-        q: 'Come monitoro più squadre su commesse diverse?',
+        q: 'Come seguo più squadre su commesse diverse?',
         a: 'GeoTapp mostra le timbrature di oggi su mappa, aggiornate a ogni intervento aperto o chiuso. Sai su quale commessa stanno lavorando i tuoi tecnici, senza fare telefonate.',
       },
       {
         q: 'Come velocizzare la fatturazione degli interventi?',
-        a: 'GeoTapp genera automaticamente l\'export di ore e commesse pronto per il gestionale. Nessun inserimento manuale, nessun rischio di errori, la fatturazione diventa un click.',
+        a: 'GeoTapp genera automaticamente l\'export di ore e commesse pronto per il gestionale. Niente da ricopiare a mano: meno errori, e la fatturazione parte dai dati già pronti.',
       },
     ],
   },
   cta: {
     title: 'Prova GeoTapp gratis per 14 giorni',
-    subtitle: 'Nessun vincolo. Nessuna carta di credito richiesta. Risposta entro 12 ore lavorative.',
-    primary: 'Inizia subito gratuitamente',
+    subtitle: 'La prova non ti vincola a niente. Nessuna carta di credito richiesta.',
+    primary: 'Prova gratis per 14 giorni',
     secondary: 'Vedi i Prezzi',
   },
   pricing_hint: {
-    label: 'A partire da',
-    per: 'operatore/mese',
+    label: 'Postazioni TimeTracker da',
+    per: 'operatore al mese, più il piano Flow da 39 €/mese',
     note: 'Prova gratuita 14 giorni',
   },
   schema_sector_name: 'Impianti',
@@ -164,12 +164,12 @@ const content: SettoreContent = {
       answer: 'Con GeoTapp le timbrature GPS sono timestampate al momento dell\'intervento e ogni modifica è rilevabile. Sono una prova verificabile delle ore svolte quando qualcuno le mette in dubbio.',
     },
     {
-      question: 'Come monitoro più squadre su commesse diverse?',
+      question: 'Come seguo più squadre su commesse diverse?',
       answer: 'GeoTapp mostra le timbrature di oggi su mappa, aggiornate a ogni intervento aperto o chiuso. Sai su quale commessa stanno lavorando i tuoi tecnici, senza fare telefonate.',
     },
     {
       question: 'Come velocizzare la fatturazione degli interventi?',
-      answer: 'GeoTapp genera automaticamente l\'export di ore e commesse pronto per il gestionale. Nessun inserimento manuale, nessun rischio di errori, la fatturazione diventa un click.',
+      answer: 'GeoTapp genera automaticamente l\'export di ore e commesse pronto per il gestionale. Niente da ricopiare a mano: meno errori, e la fatturazione parte dai dati già pronti.',
     },
   ],
 };

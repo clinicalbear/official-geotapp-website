@@ -162,7 +162,7 @@ export const irlanda: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "La base usuale è l'interesse legittimo (art. 6.1.f), che deve essere strettamente necessario e proporzionato e bilanciato coi diritti del lavoratore, soggetto al diritto di opposizione (art. 21).",
+        it: "La base usuale è l'interesse legittimo (art. 6.1.f), che deve essere strettamente necessario è proporzionato e bilanciato coi diritti del lavoratore, soggetto al diritto di opposizione (art. 21).",
         en: "The usual basis is legitimate interest (art. 6(1)(f)), which must be strictly necessary and proportionate and balanced against the worker's rights, subject to the right to object (art. 21).",
         de: 'Die übliche Grundlage ist das berechtigte Interesse (Art. 6 Abs. 1 lit. f), das unbedingt erforderlich und verhältnismäßig sein und gegen die Rechte des Arbeitnehmers abgewogen werden muss, vorbehaltlich des Widerspruchsrechts (Art. 21).',
         fr: "La base habituelle est l'intérêt légitime (art. 6, par. 1, point f), qui doit être strictement nécessaire et proportionné et mis en balance avec les droits du travailleur, sous réservé du droit d'opposition (art. 21).",

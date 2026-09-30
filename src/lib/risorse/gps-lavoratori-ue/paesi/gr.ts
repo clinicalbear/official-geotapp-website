@@ -148,7 +148,7 @@ export const grecia: SchedaPaese = {
       },
       risposta: 'no',
       dettaglio: {
-        it: "non serve un'autorizzazione preventiva dell'HDPA; la consultazione preventiva e prevista solo se la DPIA evidenzia un rischio residuo elevato.",
+        it: "non serve un'autorizzazione preventiva dell'HDPA; la consultazione preventiva è prevista solo se la DPIA evidenzia un rischio residuo elevato.",
         en: 'no prior authorisation from the HDPA is required; prior consultation is only foreseen if the DPIA reveals a high residual risk.',
         de: 'Eine vorherige Genehmigung der HDPA ist nicht erforderlich; eine vorherige Konsultation ist nur vorgesehen, wenn die DSFA ein hohes Restrisiko aufzeigt.',
         fr: "aucune autorisation préalable de l'HDPA n'est nécessaire; la consultation préalable n'est prévue que si l'AIPD met en évidence un risque résiduel élevé.",

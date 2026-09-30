@@ -129,7 +129,7 @@ export const portogallo: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "La sorveglianza a distanza non può servire a controllare la prestazione professionale; e ammessa solo per la protezione e sicurezza di persone e beni o per particolari esigenze dell'attività.",
+        it: "La sorveglianza a distanza non può servire a controllare la prestazione professionale; è ammessa solo per la protezione e sicurezza di persone e beni o per particolari esigenze dell'attività.",
         en: 'Remote surveillance may not be used to monitor professional performance; it is allowed only for the protection and safety of people and property or for particular needs of the activity.',
         de: 'Die Fernüberwachung darf nicht zur Kontrolle der beruflichen Leistung dienen; sie ist nur zum Schutz und zur Sicherheit von Personen und Sachen oder für besondere Erfordernisse der Tätigkeit zulässig.',
         fr: 'La surveillance a distance ne peut servir a contrôler la prestation professionnelle; elle n\'est admise que pour la protection et la securite des personnes et des biens ou pour des besoins particuliers de l\'activité.',

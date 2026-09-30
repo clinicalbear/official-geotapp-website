@@ -70,7 +70,7 @@ const SETTORE_CONFIG: Record<string, {
         },
         {
           h2: 'Come funziona la timbratura GPS per le imprese di pulizie',
-          body: 'La timbratura GPS permette ai collaboratori di registrare entrata e uscita direttamente dallo smartphone, con posizione verificata in tempo reale. Non richiede hardware fisso e funziona su qualsiasi cantiere. Il responsabile vede le presenze in diretta dalla dashboard, con la possibilità di esportare report per il cliente a fine mese. GeoTapp TimeTracker aggiunge la possibilità di inviare foto dei lavori completati e comunicare con il coordinatore dallo stesso dispositivo.',
+          body: 'La timbratura GPS permette ai collaboratori di registrare entrata e uscita direttamente dallo smartphone, con la posizione registrata in quel momento, e solo in quel momento. Non richiede hardware fisso e funziona su qualsiasi cantiere. Il responsabile vede le timbrature appena arrivano e può esportare i report per il cliente a fine mese. GeoTapp TimeTracker aggiunge le foto di prova dei lavori completati e la comunicazione con il coordinatore dallo stesso telefono.',
           productLink: true,
         },
         {
@@ -78,7 +78,7 @@ const SETTORE_CONFIG: Record<string, {
           body: 'Non tutti i software di gestione presenze sono adatti al lavoro su cantieri distribuiti. Prima di scegliere, verifica che supporti:',
           listItems: [
             'Timbratura da smartphone, senza hardware aggiuntivo',
-            'Verifica GPS della posizione al momento della timbratura',
+            'Posizione registrata e controllata al momento della timbratura, mai in continuo',
             'Possibilità di allegare foto agli interventi',
             'Report esportabili per il cliente finale',
             'Comunicazione interna integrata tra collaboratori e ufficio',
@@ -130,7 +130,7 @@ const SETTORE_CONFIG: Record<string, {
       ru: { title: 'Ресурсы для монтажников - GeoTapp', description: 'Статьи и руководства для монтажников и выездных технических служб.', heading: 'Ресурсы для монтажников' },
     },
     intro: {
-      it: 'Coordinare tecnici sul campo significa sapere in ogni momento chi è dove, quale intervento ha appena chiuso e cosa è rimasto in sospeso. Con telefonate e messaggi WhatsApp il quadro è sempre incompleto: gli aggiornamenti arrivano in ritardo, le priorità cambiano senza che l\'ufficio lo sappia e la documentazione per il cliente è sempre un problema. Questi articoli raccolgono le pratiche operative più efficaci per aziende con tecnici sul campo.',
+      it: 'Coordinare tecnici sul campo significa sapere quale intervento è stato appena chiuso e cosa è rimasto in sospeso, senza rincorrere nessuno al telefono. Con telefonate e messaggi WhatsApp il quadro è sempre incompleto: gli aggiornamenti arrivano in ritardo, le priorità cambiano senza che l\'ufficio lo sappia e la documentazione per il cliente è sempre un problema. Questi articoli raccolgono le pratiche operative più efficaci per aziende con tecnici sul campo.',
       en: 'Coordinating field technicians means knowing at any moment who is where, which jobs have just been closed, and what\'s still pending. With phone calls and WhatsApp the picture is always incomplete: updates arrive late, priorities shift without the office knowing, and client documentation is always a last-minute scramble. These guides cover effective operational practices for field service companies.',
       de: 'Außendiensttechniker zu koordinieren bedeutet, jederzeit zu wissen, wer wo ist, welche Aufträge gerade abgeschlossen wurden und was noch aussteht. Mit Anrufen und WhatsApp-Nachrichten ist das Bild immer unvollständig. Diese Leitfäden decken bewährte Betriebspraktiken für Außendienstunternehmen ab.',
       fr: 'Coordonner des techniciens terrain signifie savoir à tout moment qui se trouve où, quelles interventions viennent d\'être clôturées et ce qui reste en suspens. Avec les appels et WhatsApp, le tableau est toujours incomplet. Ces guides couvrent les meilleures pratiques pour les entreprises avec techniciens terrain.',
@@ -146,11 +146,11 @@ const SETTORE_CONFIG: Record<string, {
       it: [
         {
           h2: 'Il problema di coordinamento nelle aziende con tecnici sul campo',
-          body: 'Quando un tecnico chiude un intervento e il sistema non si aggiorna in tempo reale, l\'ufficio non sa se mandare rinforzi o chiudere il ticket. Quando la documentazione è cartacea o via messaggio, ricostruire lo storico di un cliente richiede ore. Le aziende con 5-50 tecnici sul campo perdono in media 2-3 ore al giorno in coordinamento telefonico che si potrebbe eliminare completamente.',
+          body: 'Quando un tecnico chiude un intervento e l\'ufficio lo scopre solo a fine giornata, non sa se mandare rinforzi o chiudere la pratica. Quando la documentazione è cartacea o via messaggio, ricostruire lo storico di un cliente richiede ore, e il coordinamento telefonico si mangia una parte della giornata che si potrebbe recuperare.',
         },
         {
-          h2: 'Come gestire ordini di lavoro e interventi in tempo reale',
-          body: 'Un sistema di gestione interventi digitale permette di assegnare ordini di lavoro direttamente allo smartphone del tecnico, con priorità, istruzioni e storico del cliente già inclusi. Il tecnico chiude l\'intervento dall\'app, raccoglie la firma del cliente e il report viene generato automaticamente, senza passare dall\'ufficio. GeoTapp Flow è progettato per questo: assegnazione interventi, tracciamento in tempo reale, raccolta firme e reportistica automatica.',
+          h2: 'Come gestire ordini di lavoro e interventi senza telefonate',
+          body: 'Un sistema di gestione interventi digitale permette di assegnare ordini di lavoro direttamente allo smartphone del tecnico, con priorità, istruzioni e storico del cliente già inclusi. Il tecnico lavora con l\'app GeoTapp TimeTracker: timbra, scatta le foto di prova e scrive le note, e il report si compone da solo. Dall\'ufficio, GeoTapp Flow assegna gli interventi, riceve le timbrature appena arrivano e manda al cliente il report sigillato.',
           productLink: true,
         },
         {
@@ -158,8 +158,8 @@ const SETTORE_CONFIG: Record<string, {
           body: 'Prima di scegliere uno strumento di gestione per il tuo team di tecnici, verifica che supporti:',
           listItems: [
             'Assegnazione e modifica degli interventi da remoto',
-            'Visibilità in tempo reale sulla posizione dei tecnici',
-            'Raccolta della firma del cliente a fine lavoro',
+            'Posizione registrata solo alle timbrature, mai in continuo',
+            'Foto di prova collegate all\'intervento',
             'Reportistica automatica per ogni intervento chiuso',
             'Storico completo degli interventi per cliente',
           ],
@@ -197,7 +197,7 @@ const SETTORE_CONFIG: Record<string, {
   sicurezza: {
     categoryId: 9,
     labels: {
-      it: { title: 'Gestione presenze e tracciabilità per servizi di sicurezza - GeoTapp', description: 'Come gestire agenti, ronde e documentazione nei servizi di sicurezza con GPS in tempo reale.', heading: 'Gestione presenze e tracciabilità nei servizi di sicurezza' },
+      it: { title: 'Gestione presenze e documentazione per servizi di sicurezza - GeoTapp', description: 'Come documentare presenze, controlli e anomalie nei servizi di sicurezza, con la posizione solo alle timbrature.', heading: 'Gestione presenze e documentazione nei servizi di sicurezza' },
       en: { title: 'Attendance tracking and traceability for security services - GeoTapp', description: 'How to manage agents, patrols and documentation in security services with real-time GPS.', heading: 'Attendance tracking for security services' },
       de: { title: 'Anwesenheitsverfolgung für Sicherheitsdienste - GeoTapp', description: 'GPS-Nachverfolgung von Agenten, Runden und Dokumentation für Sicherheitsunternehmen.', heading: 'Anwesenheit und Nachverfolgbarkeit bei Sicherheitsdiensten' },
       fr: { title: 'Gestion des présences et traçabilité pour la sécurité - GeoTapp', description: 'Comment gérer agents, rondes et documentation dans les services de sécurité avec GPS en temps réel.', heading: 'Gestion des présences dans les services de sécurité' },
@@ -210,7 +210,7 @@ const SETTORE_CONFIG: Record<string, {
       ru: { title: 'Ресурсы для служб безопасности - GeoTapp', description: 'Статьи и руководства для охранных предприятий и служб наблюдения.', heading: 'Ресурсы для служб безопасности' },
     },
     intro: {
-      it: 'Nelle aziende di sicurezza ogni ronda deve essere documentata, ogni agente deve essere localizzabile e ogni anomalia deve essere segnalata immediatamente. Con sistemi basati su telefonate o report cartacei, la centrale operativa ha sempre un quadro parziale e ritardato. Questi articoli affrontano i temi operativi più rilevanti per responsabili di servizi di sicurezza.',
+      it: 'Nelle aziende di sicurezza ogni turno e ogni controllo vanno documentati, e ogni anomalia va segnalata subito. Con telefonate e report cartacei, la centrale operativa ha sempre un quadro parziale e in ritardo. Questi articoli affrontano i temi operativi più rilevanti per responsabili di servizi di sicurezza.',
       en: 'In security companies every patrol must be documented, every agent must be locatable, and every incident must be reported immediately. With phone-based or paper systems, the control center always has a partial and delayed picture. These guides cover the most relevant operational topics for security service managers.',
       de: 'In Sicherheitsunternehmen muss jede Runde dokumentiert, jeder Agent ortbar sein und jede Anomalie sofort gemeldet werden. Mit telefon- oder papiergestützten Systemen hat die Einsatzzentrale immer ein unvollständiges Bild. Diese Leitfäden behandeln die wichtigsten operativen Themen für Sicherheitsdienstleiter.',
       fr: 'Dans les entreprises de sécurité, chaque ronde doit être documentée, chaque agent doit être localisable et chaque anomalie doit être signalée immédiatement. Avec des systèmes basés sur les appels ou le papier, la centrale a toujours une vision partielle. Ces guides couvrent les thèmes opérationnels essentiels pour les responsables de sécurité.',
@@ -226,22 +226,22 @@ const SETTORE_CONFIG: Record<string, {
       it: [
         {
           h2: 'Le sfide operative dei servizi di sicurezza e vigilanza',
-          body: 'Senza un sistema digitale, la centrale operativa non sa in tempo reale se gli agenti sono al posto giusto, se una ronda è stata completata o se c\'è stata un\'anomalia. Il cliente finale non ha prove concrete del servizio erogato, e in caso di contestazione, non c\'è nulla da mostrare. La tracciabilità non è un optional: è il prodotto stesso che le aziende di sicurezza vendono ai loro clienti.',
+          body: 'Senza un sistema digitale, la centrale non sa se un agente ha preso servizio al posto giusto, se un controllo è stato fatto o se c\'è stata un\'anomalia, finché qualcuno non telefona. Il cliente finale non ha prove concrete del servizio, e in caso di contestazione non c\'è nulla da mostrare. Per un\'azienda di sicurezza, poter documentare il servizio fa parte del servizio stesso.',
         },
         {
-          h2: 'Come funziona la tracciabilità degli agenti di sicurezza',
-          body: 'Un sistema di tracciabilità GPS permette alla centrale di vedere in tempo reale la posizione di ogni agente, le ronde completate e le anomalie segnalate. Gli agenti registrano presenze, eventi e note direttamente dallo smartphone, con foto, timestamp e posizione verificata. GeoTapp TimeTracker è progettata per questo: registrazione presenze con GPS, documentazione ronde e comunicazione istantanea con la centrale.',
+          h2: 'Come si documenta il servizio senza sorvegliare gli agenti',
+          body: 'Gli agenti timbrano presa e fine servizio dallo smartphone e, ai punti di controllo, scattano la foto di prova: ogni gesto registra ora e posizione, e fra un gesto e l\'altro non si registra nulla in automatico. La centrale vede le timbrature appena arrivano e riceve le segnalazioni con foto. GeoTapp TimeTracker è progettato per questo: presenze con la posizione alla timbratura, foto dei controlli e messaggi con la centrale.',
           productLink: true,
         },
         {
           h2: 'Cosa deve garantire il software per servizi di sicurezza',
           body: 'Nella scelta di uno strumento per la gestione operativa dei servizi di sicurezza, verifica che supporti:',
           listItems: [
-            'Localizzazione GPS degli agenti in tempo reale',
-            'Registrazione timestampata di ogni ronda completata',
+            'Presa e fine servizio con posizione e ora registrate',
+            'Foto di prova con ora e posizione ai punti di controllo',
             'Segnalazione anomalie con foto e geolocalizzazione',
             'Reportistica sigillata esportabile per il cliente finale',
-            'Alert automatici in caso di mancata risposta o inattività',
+            'Avviso se un turno resta aperto',
           ],
         },
       ],
@@ -490,7 +490,8 @@ export default async function RisorseSettorePage({ params }: { params: Promise<P
               <h2>{section.h2}</h2>
               <p>
                 {section.body}{section.productLink && (
-                  <>, <Link href={productHref}>{config.product.name}</Link></>
+                  // Prima era «, Nome prodotto» attaccato al punto finale del paragrafo.
+                  <>{' '}<Link href={productHref}>{config.product.name}&nbsp;&rarr;</Link></>
                 )}
               </p>
               {section.listItems && (

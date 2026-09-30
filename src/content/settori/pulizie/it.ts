@@ -11,7 +11,7 @@ const content: SettoreContent = {
     h1_line1: 'L\'app per impresa di pulizie',
     h1_line2: 'che sigilla ogni intervento.',
     subtitle:
-      'GeoTapp è l\'app per impresa di pulizie che trasforma ogni intervento in prova difendibile. I clienti contestano. Gli operatori non sono verificabili. I report non bastano mai. GeoTapp risolve tutto con GPS reale, prove fotografiche e report sigillati, dove ogni modifica è rilevabile, che il committente può verificare da solo.',
+      'GeoTapp è l\'app per impresa di pulizie che trasforma ogni intervento in una prova da mostrare. I clienti contestano, e un orario scritto non basta. GeoTapp registra la posizione a ogni timbratura, raccoglie le foto di prova e chiude tutto in un report sigillato, dove ogni modifica è rilevabile, che il committente può verificare da solo.',
     cta_primary: 'Provalo su una commessa vera',
     cta_note: '14 giorni, fino a 50 operatori sul campo, nessuna carta di credito.',
   },
@@ -21,7 +21,7 @@ const content: SettoreContent = {
     items: [
       {
         title: "Il cliente nega l'intervento",
-        desc: "Dice che l'area non è stata pulita o che l'operatore non era presente. Tu hai un orario sul gestionale. Lui ha un avvocato. Senza prove difendibili, perdi il contratto.",
+        desc: "Dice che l'area non è stata pulita o che l'operatore non era presente. Tu hai un orario scritto, lui la sua versione. Senza prove verificabili, rischi il contratto.",
       },
       {
         title: "Operatori sul campo che non puoi verificare",
@@ -29,7 +29,7 @@ const content: SettoreContent = {
       },
       {
         title: "L'ispettorato chiede documentazione reale",
-        desc: "Orari, presenze, straordinari, pause, il foglio presenze non basta. Il CCNL Multiservizi richiede tracciabilità reale. \"C'è scritto sul telefono\" non è documentazione.",
+        desc: "Orari, presenze, straordinari, pause, il foglio presenze non basta. Chi controlla vuole orari registrati, non ricostruiti a memoria.",
       },
     ],
   },
@@ -44,15 +44,15 @@ const content: SettoreContent = {
     ],
     dopo: [
       'Il cliente chiama e dice che il bagno non è stato pulito.',
-      'Apri il report dell\'intervento: foto del bagno pulito, ora, GPS.',
-      'Glielo mandi. Hai risposto con i dati, in trenta secondi.',
-      'Il contratto è al sicuro. L\'operatore è tutelato.',
+      'Apri il report dell\'intervento: foto del bagno pulito, ora, posizione.',
+      'Glielo mandi. Hai risposto con i dati, e lui li verifica da solo.',
+      'Hai una prova da mostrare. Anche l\'operatore ha qualcosa in mano.',
     ],
   },
 
   scenario: {
-    title: 'Caso reale',
-    body: 'Il cliente dice che il bagno non è stato pulito. Con GeoTapp apri il report e mostri la foto dell\'ambiente, l\'ora di scatto e la posizione GPS, tutto generato automaticamente dall\'app dell\'operatore al momento dell\'intervento.',
+    title: 'Un caso tipico',
+    body: 'Il cliente dice che il bagno non è stato pulito. Con GeoTapp apri il report e mostri la foto dell\'ambiente, l\'ora di scatto e la posizione, tutto generato automaticamente dall\'app dell\'operatore al momento dell\'intervento.',
     resolution: 'Hai risposto con i dati, non con una tua parola contro la sua.',
   },
 
@@ -63,7 +63,7 @@ const content: SettoreContent = {
       {
         label: 'Cosa registra',
         competitor: 'Orario di entrata/uscita',
-        geotapp: 'Orario + GPS verificato + foto + attività svolta',
+        geotapp: 'Orario + posizione alla timbratura + foto + attività svolta',
       },
       {
         label: 'Chi può verificare',
@@ -72,13 +72,13 @@ const content: SettoreContent = {
       },
       {
         label: 'In caso di contestazione',
-        competitor: 'Dato non difendibile',
+        competitor: 'Solo la tua parola',
         geotapp: 'Report sigillato, ogni modifica rilevabile',
       },
       {
         label: 'Prova fotografica',
         competitor: 'Assente o scollegata',
-        geotapp: 'Allegata al report con timestamp e GPS',
+        geotapp: 'Allegata al report con ora e posizione',
       },
       {
         label: 'Conformità GDPR',
@@ -94,8 +94,8 @@ const content: SettoreContent = {
   },
 
   non_gestionale: {
-    title: 'Non è un gestionale.',
-    subtitle: 'I gestionali organizzano il lavoro. GeoTapp lo sigilla.',
+    title: 'Non è solo un gestionale.',
+    subtitle: 'I gestionali organizzano il lavoro. GeoTapp lo organizza e in più lo sigilla.',
     items: [
       {
         label: 'Scopo principale',
@@ -115,7 +115,7 @@ const content: SettoreContent = {
       {
         label: 'Valore verso il cliente',
         gestionale: 'Nessuno, è uno strumento interno',
-        geotapp: 'Massimo, è una prova indipendente',
+        geotapp: 'Alto: il cliente la verifica da solo',
       },
       {
         label: 'Prova fotografica',
@@ -131,45 +131,45 @@ const content: SettoreContent = {
     steps: [
       {
         title: "L'operatore sigilla la prova sul posto",
-        desc: 'Con GeoTapp TimeTracker registra ingresso, uscita, foto degli ambienti e note dallo smartphone. Il GPS è verificato, non inserito a mano. Il dato è quello: ogni modifica è rilevabile.',
+        desc: 'Con GeoTapp TimeTracker registra entrata, pause, uscita, foto degli ambienti e note dallo smartphone. La posizione è rilevata dal telefono in quel momento, non inserita a mano, e ogni modifica successiva è rilevabile.',
       },
       {
         title: "L'ufficio è aggiornato a ogni timbratura",
-        desc: 'Flow mostra in una dashboard unica chi è presente, dove e da quanto. Vedi lo stato di ogni edificio, ricevi alert su anomalie e assegni commesse, senza inseguire nessuno.',
+        desc: 'Flow mostra in una schermata unica chi ha timbrato, dove e a che ora. Vedi lo stato di ogni edificio, ricevi un avviso se un turno resta aperto e assegni le commesse, senza inseguire nessuno.',
       },
       {
         title: 'Il report è già pronto. Sigillato: ogni modifica si vede.',
-        desc: 'A fine turno il sistema genera automaticamente un report sigillato con GPS, foto e firma digitale. Il committente lo riceve e lo verifica da solo, senza accesso al tuo sistema, senza fidarsi della tua parola.',
+        desc: 'A fine turno il sistema genera automaticamente un report sigillato con posizioni, foto e sigillo. Il committente lo riceve e lo verifica da solo, senza accesso al tuo sistema, senza fidarsi della tua parola.',
       },
     ],
   },
 
   features: {
-    title: 'App per imprese di pulizie: meno contestazioni, più controllo.',
+    title: 'App per imprese di pulizie: meno discussioni, più prove.',
     items: [
       {
         title: 'Rispondi a ogni contestazione con i dati',
-        desc: 'Quando ogni intervento ha un report verificabile, hai la documentazione per rispondere subito. Niente più trattative a voce che durano settimane.',
+        desc: 'Quando ogni intervento ha un report verificabile, hai la documentazione per rispondere subito. Meno trattative a voce che durano settimane.',
       },
       {
         title: 'Controllo reale su tutti i siti',
-        desc: 'Non devi più sperare che i tuoi operatori siano dove devono essere. Lo vedi appena timbrano. Su tutti gli edifici contemporaneamente, da qualsiasi dispositivo.',
+        desc: 'Sai dove e a che ora ogni operatore ha timbrato, appena la timbratura arriva, su tutti gli edifici e da qualsiasi dispositivo. Fra una timbratura e l\'altra non si registra nulla in automatico.',
       },
       {
         title: 'Report difendibili in qualsiasi sede',
-        desc: 'Ogni report è firmato digitalmente: ogni modifica è rilevabile. Vale davanti a un cliente, un ispettore o un avvocato, senza che tu debba spiegare niente.',
+        desc: 'Ogni report è sigillato: ogni modifica è rilevabile. Chi lo riceve, cliente, ispettore o consulente, può controllarlo da solo.',
       },
       {
         title: "Pronto per l'ispettorato",
-        desc: 'Orari, pause, straordinari, notturni: tutto tracciato secondo le voci del CCNL Multiservizi. In caso di controllo hai tutta la documentazione in ordine in tre clic.',
+        desc: 'Orari, pause, straordinari e maggiorazioni sono registrati turno per turno ed escono nel riepilogo per il consulente del lavoro. In caso di controllo la documentazione è già in ordine.',
       },
       {
         title: 'Gestione multi-sito senza chiamate',
-        desc: "Decine di sedi, un'unica dashboard. Assegni commesse, vedi chi è attivo dove e ricevi alert automatici se un intervento non viene aperto o chiuso nei tempi.",
+        desc: "Decine di sedi, un'unica schermata. Assegni commesse, vedi chi ha timbrato dove e ricevi un avviso se un turno resta aperto.",
       },
       {
         title: 'Il tuo personale è protetto',
-        desc: 'Un report verificabile protegge anche l\'operatore da accuse infondate. Chi lavora bene lo dimostra. Nessuna zona grigia.',
+        desc: 'Un report verificabile dà anche all\'operatore qualcosa in mano contro le accuse infondate. Chi lavora bene lo dimostra.',
       },
     ],
   },
@@ -179,7 +179,7 @@ const content: SettoreContent = {
     items: [
       {
         title: 'Non devi più fidarti degli operatori.',
-        desc: 'Non perché non siano affidabili, ma perché non devi farlo. Il sistema genera la prova al momento dell\'intervento, indipendentemente da quello che ti dicono. Il dato è quello.',
+        desc: 'Non perché non siano affidabili, ma perché non devi farlo. Il sistema genera la prova al momento dell\'intervento, indipendentemente da quello che ti dicono. Il dato resta quello registrato.',
       },
       {
         title: 'Non devi più difenderti a voce.',
@@ -187,7 +187,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Hai prove verificabili. Sempre.',
-        desc: 'Ogni intervento chiuso diventa automaticamente un\'evidenza strutturata - GPS, foto, timestamp, firma. Non devi fare niente di extra. Il sistema lo fa mentre i tuoi operatori lavorano.',
+        desc: 'Ogni intervento chiuso diventa automaticamente un report: posizioni, foto, orari e sigillo. Non devi fare niente di extra. Il sistema lo fa mentre i tuoi operatori lavorano.',
       },
     ],
   },
@@ -199,8 +199,8 @@ const content: SettoreContent = {
 
   cta_mid: {
     title: 'Vuoi vedere come funziona su un caso reale?',
-    body: 'Ti mostriamo il flusso completo: dall\'operatore che apre l\'intervento al report che riceve il cliente. In 20 minuti capisci se fa per te, senza impegno.',
-    cta: 'Inizia subito gratuitamente!',
+    body: 'Provalo su una commessa vera, dall\'operatore che apre l\'intervento al report che riceve il cliente: 14 giorni gratis, senza carta di credito.',
+    cta: 'Prova gratis per 14 giorni',
   },
 
   testimonial: {
@@ -213,7 +213,7 @@ const content: SettoreContent = {
   trust: {
     title: 'Se un nostro report viene modificato, si vede. Anche se lo facciamo noi.',
     body:
-      "I report GeoTapp sono generati dal sistema nel momento dell'intervento. Non esiste un pannello dove \"correggere\" un orario o spostare una foto. Il dato è quello, firmato digitalmente, con GPS reale. Quando lo mostri a un cliente, a un avvocato o a un ispettore, regge.",
+      "I report GeoTapp sono generati dal sistema nel momento dell'intervento. Una volta sigillato il report, correggere un orario o spostare una foto rompe il sigillo, e la verifica lo segnala. Chi lo riceve, cliente, ispettore o consulente, può controllarlo da solo.",
     badge: 'Verificabile da chiunque, senza accesso al tuo account',
   },
 
@@ -223,31 +223,31 @@ const content: SettoreContent = {
     items: [
       {
         q: "GeoTapp è solo un'app di timbratura per imprese di pulizie?",
-        a: "No. GeoTapp è un sistema di prova verificabile del lavoro, non un'app di timbratura. Le app di timbratura registrano un orario. GeoTapp produce un report sigillato con GPS verificato, prove fotografiche e timestamp, che il committente può verificare autonomamente. La differenza tra \"c'è scritto\" e \"si può dimostrare\".",
+        a: "No. GeoTapp è un sistema di prova verificabile del lavoro, non solo un'app di timbratura. Le app di timbratura registrano un orario. GeoTapp produce un report sigillato con la posizione, prove fotografiche e timestamp, che il committente può verificare autonomamente. La differenza tra \"c'è scritto\" e \"si può dimostrare\".",
       },
       {
         q: 'È compatibile con il CCNL Multiservizi?',
-        a: 'Sì. GeoTapp traccia orari, pause e straordinari secondo le voci del CCNL Multiservizi, inclusi notturni e festivi. I dati sono esportabili in formato compatibile con Zucchetti e INAZ per l\'elaborazione paghe. In caso di controllo ispettivo, hai tutta la documentazione pronta.',
+        a: 'GeoTapp registra orari, pause, straordinari e maggiorazioni, inclusi notturni e festivi, e li esporta in Excel o CSV per il consulente del lavoro, che li applica secondo il CCNL Multiservizi. In caso di controllo ispettivo, hai tutta la documentazione pronta.',
       },
       {
         q: 'Come gestisco squadre distribuite su più siti contemporaneamente?',
-        a: "Con GeoTapp Flow hai un'unica dashboard per tutti i siti. Vedi chi è attivo dove appena timbra, puoi assegnare commesse e ricevere alert automatici se un intervento non viene aperto o chiuso nei tempi. Nessuna telefonata, nessuna email.",
+        a: "Con GeoTapp Flow hai un'unica schermata per tutti i siti. Vedi chi ha timbrato dove appena la timbratura arriva, assegni le commesse e ricevi un avviso se un turno resta aperto. Nessuna telefonata, nessuna email.",
       },
       {
         q: 'Come controllo che gli operatori abbiano eseguito il lavoro?',
-        a: 'Ogni intervento viene aperto e chiuso con GPS verificato dallo smartphone dell\'operatore. Puoi richiedere foto georeferenziate obbligatorie come prova dell\'esecuzione. Il report viene generato in automatico ed è sigillato alla chiusura: ogni modifica si vede.',
+        a: 'Ogni intervento viene aperto e chiuso con posizione registrata dallo smartphone dell\'operatore. L\'operatore invia le foto di prova collegate alla commessa, con ora e posizione. Il report viene generato in automatico ed è sigillato alla chiusura: ogni modifica si vede.',
       },
       {
         q: 'GeoTapp è conforme al GDPR per la geolocalizzazione dei dipendenti?',
-        a: "GeoTapp gestisce la geolocalizzazione in modo costruito per stare dentro i paletti del GDPR e le linee guida del Garante Privacy italiano. Traccia la posizione solo durante l'orario di lavoro attivo, include la modulistica per l'informativa ai dipendenti e non raccoglie dati non necessari.",
+        a: "GeoTapp è costruito per stare dentro i paletti del GDPR e delle indicazioni del Garante Privacy: registra la posizione solo quando l'operatore timbra (entrata, pause, uscita) o scatta una foto di prova, fa firmare l'informativa nell'app prima di timbrare e non raccoglie dati non necessari.",
       },
       {
         q: 'Funziona anche per il facility management e il multiservizi?',
-        a: 'Sì. GeoTapp è usato da imprese di pulizie, multiservizi, facility management e ogni realtà con operatori distribuiti su più siti. La piattaforma scala da 3 a 300 operatori senza configurazioni complesse.',
+        a: 'Sì. GeoTapp è usato da imprese di pulizie, multiservizi, facility management e ogni realtà con operatori distribuiti su più siti. Va bene dalla squadra di poche persone all\'azienda con centinaia di operatori, senza configurazioni complesse.',
       },
       {
         q: "Quanto costa GeoTapp per un'impresa di pulizie?",
-        a: 'I piani partono da pochi euro per operatore al mese. Il modo migliore è richiedere una demo: configuriamo il piano sul tuo numero di operatori e siti reali, senza impegno.',
+        a: 'GeoTapp Flow parte da 39 € al mese; le postazioni TimeTracker per gli operatori costano 3 € al mese ciascuna fino a 25, 2,50 € dalla ventiseiesima. Abbonamento minimo 12 mesi. Prima puoi provarlo gratis per 14 giorni, senza carta.',
       },
     ],
   },
@@ -255,14 +255,14 @@ const content: SettoreContent = {
   cta: {
     title: "I tuoi operatori lavorano bene. Fai in modo che si veda.",
     subtitle:
-      'Ogni giorno il lavoro viene fatto. Il problema è che senza prove verificabili, non vale niente quando qualcuno contesta. GeoTapp trasforma ogni intervento in documentazione difendibile.',
-    primary: 'Inizia subito gratuitamente!',
+      'Ogni giorno il lavoro viene fatto. Il problema è che, senza prove verificabili, quando qualcuno contesta resta la tua parola contro la sua. GeoTapp trasforma ogni intervento in documentazione da mostrare.',
+    primary: 'Prova gratis per 14 giorni',
     secondary: 'Vedi i Prezzi',
   },
 
   pricing_hint: {
-    label: 'A partire da',
-    per: 'operatore/mese',
+    label: 'Postazioni TimeTracker da',
+    per: 'operatore al mese, più il piano Flow da 39 €/mese',
     note: 'Prova gratuita 14 giorni',
   },
 
@@ -271,31 +271,31 @@ const content: SettoreContent = {
   schema_faq: [
     {
       question: "GeoTapp è solo un'app di timbratura per imprese di pulizie?",
-      answer: 'No. GeoTapp è l\'app e software per imprese di pulizie e multiservizi che va oltre la timbratura: produce report sigillati con GPS verificato, foto e timestamp verificabili autonomamente dal committente, non un semplice registro orari.',
+      answer: 'No. GeoTapp è l\'app e software per imprese di pulizie e multiservizi che va oltre la timbratura: produce report sigillati con posizioni, foto e orari, che il committente verifica da solo: non un semplice registro orari.',
     },
     {
       question: 'È compatibile con il CCNL Multiservizi?',
-      answer: 'Sì. Traccia orari, pause e straordinari secondo le voci del CCNL Multiservizi, con export compatibile Zucchetti/INAZ per l\'elaborazione paghe.',
+      answer: 'GeoTapp registra orari, pause, straordinari e maggiorazioni e li esporta in Excel o CSV per il consulente del lavoro, che li applica secondo il CCNL Multiservizi.',
     },
     {
       question: 'Come gestisco più siti contemporaneamente?',
-      answer: 'Dashboard unica per tutti i siti. Vedi chi è attivo dove appena timbra, assegni commesse e ricevi alert automatici su anomalie, senza telefonate.',
+      answer: 'Una schermata unica per tutti i siti. Vedi chi ha timbrato dove appena la timbratura arriva, assegni le commesse e ricevi un avviso se un turno resta aperto, senza telefonate.',
     },
     {
-      question: 'Come controllo che gli operatori abbiano davvero eseguito il lavoro?',
-      answer: 'Ogni intervento viene aperto e chiuso con GPS verificato. Puoi richiedere foto georeferenziate obbligatorie. Il report viene generato automaticamente ed è sigillato alla chiusura: ogni modifica si vede.',
+      question: 'Come documento che il lavoro è stato eseguito?',
+      answer: 'Ogni intervento viene aperto e chiuso con posizione registrata. L\'operatore invia le foto di prova collegate alla commessa. Il report viene generato automaticamente ed è sigillato alla chiusura: ogni modifica si vede.',
     },
     {
       question: 'GeoTapp è conforme al GDPR per la geolocalizzazione dei dipendenti?',
-      answer: "Costruito per stare dentro i paletti del GDPR e le linee guida del Garante Privacy italiano. Traccia solo durante l'orario di lavoro attivo e include modulistica per l'informativa ai dipendenti.",
+      answer: "Costruito per stare dentro i paletti del GDPR: registra la posizione solo quando l'operatore timbra o scatta una foto di prova, mai in continuo, e fa firmare l'informativa nell'app prima di timbrare.",
     },
     {
       question: 'Funziona anche per il facility management e il multiservizi?',
-      answer: 'Sì. GeoTapp scala da imprese di pulizie a multiservizi e facility management, da 3 a 300 operatori.',
+      answer: 'Sì. GeoTapp va bene per imprese di pulizie, multiservizi e facility management, dalla squadra di poche persone all\'azienda con centinaia di operatori.',
     },
     {
       question: 'Quanto costa?',
-      answer: 'Pochi euro per operatore al mese. Richiedi una demo per configurare il piano sul tuo caso specifico, senza impegno.',
+      answer: 'GeoTapp Flow da 39 € al mese, più le postazioni TimeTracker da 3 € per operatore al mese. Abbonamento minimo 12 mesi. Prima puoi provarlo gratis per 14 giorni, senza carta.',
     },
   ],
 };

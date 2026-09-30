@@ -98,7 +98,7 @@ export const lituania: SchedaPaese = {
   checklist: [
     {
       voce: {
-        it: 'Informazione preventiva e chiara ai lavoratori sul tracciamento (GDPR art. 13)',
+        it: 'Informazione preventiva è chiara ai lavoratori sul tracciamento (GDPR art. 13)',
         en: 'Clear prior information to workers about tracking (GDPR art. 13)',
         de: 'Klare vorherige Information der Arbeitnehmer über die Ortung (DSGVO Art. 13)',
         fr: 'Information préalable et claire des travailleurs sur le suivi (RGPD art. 13)',
@@ -147,7 +147,7 @@ export const lituania: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: 'Il monitoraggio e ammesso solo con uno scopo reale e giustificato; la base e l\'interesse legittimo, non il consenso, che nel rapporto di lavoro di norma non e liberamente prestato (WP249: e molto improbabile che il consenso sia una base valida).',
+        it: 'Il monitoraggio è ammesso solo con uno scopo reale e giustificato; la base e l\'interesse legittimo, non il consenso, che nel rapporto di lavoro di norma non è liberamente prestato (WP249: e molto improbabile che il consenso sia una base valida).',
         en: 'Monitoring is allowed only for a real and justified purpose; the basis is legitimate interest, not consent, which in the employment relationship is normally not freely given (WP249: consent is highly unlikely to be a valid basis).',
         de: 'Die Überwachung ist nur für einen tatsächlichen und gerechtfertigten Zweck zulässig; die Grundlage ist das berechtigte Interesse, nicht die Einwilligung, die im Arbeitsverhältnis in der Regel nicht freiwillig erteilt wird (WP249: Einwilligung ist höchst unwahrscheinlich eine gültige Grundlage).',
         fr: "La surveillance n est admise que pour une finalité réelle et justifiée; la base est l intérêt légitime, et non le consentement, qui dans la relation de travail n est en général pas librement donné (WP249 : le consentement est très improbable comme base valable).",
@@ -288,7 +288,7 @@ export const lituania: SchedaPaese = {
       nl: 'tot 20 miljoen euro of 4% van de omzet (AVG)',
     },
     casoCitato: {
-      it: 'Non risulta una multa del VDAI specifica e pubblicata per il GPS sui dipendenti. Il rischio sanzionatorio resta quello generale del GDPR (art. 83).',
+      it: 'Non risulta una multa del VDAI specifica è pubblicata per il GPS sui dipendenti. Il rischio sanzionatorio resta quello generale del GDPR (art. 83).',
       en: 'There is no specific, published VDAI fine for GPS on employees. The sanction risk remains the general one under the GDPR (Art. 83).',
       de: 'Es gibt kein spezifisches, veröffentlichtes VDAI-Bußgeld zu GPS bei Beschäftigten. Das Sanktionsrisiko bleibt das allgemeine der DSGVO (Art. 83).',
       fr: "Il n'existe pas d'amende du VDAI spécifique et publiée pour le GPS des salaries. Le risque de sanction reste celui, général, du RGPD (art. 83).",

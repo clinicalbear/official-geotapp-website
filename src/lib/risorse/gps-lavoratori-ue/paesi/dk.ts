@@ -129,7 +129,7 @@ export const danimarca: SchedaPaese = {
       },
       risposta: 'dipende',
       dettaglio: {
-        it: "Se un accordo collettivo sui controlli (es. l'accordo DA/LO) copre il monitoraggio, la base e la legge danese sulla protezione dei dati; in assenza, la base e il legittimo interesse del datore privato. Gli accordi collettivi impongono proprie regole di preavviso.",
+        it: "Se un accordo collettivo sui controlli (es. l'accordo DA/LO) copre il monitoraggio, la base e la legge danese sulla protezione dei dati; in assenza, la base è il legittimo interesse del datore privato. Gli accordi collettivi impongono proprie regole di preavviso.",
         en: 'If a collective agreement on monitoring (e.g. the DA/LO agreement) covers the surveillance, the basis is the Danish data protection law; in its absence, the basis is the legitimate interest of the private employer. Collective agreements impose their own notice rules.',
         de: 'Deckt ein Tarifvertrag über Kontrollmaßnahmen (z. B. der DA/LO-Tarifvertrag) die Überwachung ab, ist die Grundlage das dänische Datenschutzgesetz; fehlt ein solcher, ist die Grundlage das berechtigte Interesse des privaten Arbeitgebers. Tarifverträge legen eigene Ankündigungsregeln fest.',
         fr: "Si un accord collectif sur les contrôles (par ex. l'accord DA/LO) couvre la surveillance, la base est la loi danoise sur la protection des données ; à défaut, la base est l'intérêt légitime de l'employeur privé. Les accords collectifs imposent leurs propres règles de préavis.",
@@ -189,7 +189,7 @@ export const danimarca: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "Il GPS sui veicoli e ammesso per pianificare i percorsi, monitorare il trasporto o per la sicurezza dei dipendenti, ma i dati non possono essere riusati per sorvegliare comportamento o posizione del conducente; se l'uso privato e consentito, il dipendente deve poter spegnere il GPS.",
+        it: "Il GPS sui veicoli è ammesso per pianificare i percorsi, monitorare il trasporto o per la sicurezza dei dipendenti, ma i dati non possono essere riusati per sorvegliare comportamento o posizione del conducente; se l'uso privato è consentito, il dipendente deve poter spegnere il GPS.",
         en: 'GPS on vehicles is allowed to plan routes, monitor transport or for the safety of employees, but the data cannot be reused to monitor the driver behaviour or location; if private use is permitted, the employee must be able to switch the GPS off.',
         de: 'GPS in Fahrzeugen ist zur Routenplanung, zur Überwachung des Transports oder zur Sicherheit der Beschäftigten zulässig, die Daten dürfen jedoch nicht zur Überwachung von Verhalten oder Standort des Fahrers weiterverwendet werden; ist die private Nutzung erlaubt, muss der Beschäftigte das GPS abschalten können.',
         fr: "Le GPS sur les véhicules est admis pour planifier les itinéraires, surveiller le transport ou pour la sécurité des employés, mais les données ne peuvent pas être réutilisées pour surveiller le comportement ou la position du conducteur ; si l'usage privé est autorisé, le salarié doit pouvoir éteindre le GPS.",

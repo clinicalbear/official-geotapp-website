@@ -156,7 +156,7 @@ export const romania: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "il monitoraggio e ammesso solo se altre forme meno intrusive non si sono già rivelate efficaci e se l'interesse legittimo del datore prevale sui diritti dei lavoratori.",
+        it: "il monitoraggio è ammesso solo se altre forme meno intrusive non si sono già rivelate efficaci e se l'interesse legittimo del datore prevale sui diritti dei lavoratori.",
         en: "monitoring is permitted only if other less intrusive forms have not already proven effective and if the legitimate interest of the employer prevails over the rights of the workers.",
         de: 'die Überwachung ist nur zulässig, wenn andere weniger eingreifende Formen sich nicht bereits als wirksam erwiesen haben und wenn das berechtigte Interesse des Arbeitgebers gegenüber den Rechten der Arbeitnehmer überwiegt.',
         fr: "la surveillance n'est admise que si d'autres formes moins intrusives ne se sont pas déjà révélées efficaces et si l'intérêt légitime de l'employeur prévaut sur les droits des travailleurs.",

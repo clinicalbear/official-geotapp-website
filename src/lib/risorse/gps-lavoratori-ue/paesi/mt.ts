@@ -84,7 +84,7 @@ export const malta: SchedaPaese = {
   checklist: [
     {
       voce: {
-        it: 'Informazione preventiva ai lavoratori (art. 13) e misura strettamente necessaria e proporzionata',
+        it: 'Informazione preventiva ai lavoratori (art. 13) e misura strettamente necessaria è proporzionata',
         en: 'Prior information to workers (art. 13) and a strictly necessary and proportionate measure',
         de: 'Vorherige Information der Beschäftigten (Art. 13) und eine streng erforderliche und verhältnismäßige Maßnahme',
         fr: 'Information préalable des travailleurs (art. 13) et mesure strictement nécessaire et proportionnée',
@@ -93,7 +93,7 @@ export const malta: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "ogni misura di monitoraggio deve essere strettamente necessaria e proporzionata, scegliendo il mezzo meno invasivo, e i lavoratori vanno informati in modo chiaro prima dell'inizio del monitoraggio, mai dopo.",
+        it: "ogni misura di monitoraggio deve essere strettamente necessaria è proporzionata, scegliendo il mezzo meno invasivo, e i lavoratori vanno informati in modo chiaro prima dell'inizio del monitoraggio, mai dopo.",
         en: 'every monitoring measure must be strictly necessary and proportionate, choosing the least intrusive means, and workers must be clearly informed before the monitoring begins, never afterwards.',
         de: 'Jede Überwachungsmaßnahme muss streng erforderlich und verhältnismäßig sein, wobei das am wenigsten eingreifende Mittel zu wählen ist, und die Beschäftigten sind vor Beginn der Überwachung klar zu informieren, niemals danach.',
         fr: "toute mesure de surveillance doit être strictement nécessaire et proportionnée, en choisissant le moyen le moins intrusif, et les travailleurs doivent être clairement informes avant le début de la surveillance, jamais après.",
@@ -153,7 +153,7 @@ export const malta: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: 'va raccolto solo il minimo dei dati necessari, con la misura meno invasiva. L\'IDPC lo afferma per la sorveglianza continua con webcam (molto invasiva, di norma non giustificabile come necessaria e proporzionata) e nella decisione CDP/COMP/579/2025 per la ripresa continua di un\'area di riposo; sul GPS non ha una guida specifica, quindi per il tracciamento continuo il principio si applica per analogia.',
+        it: 'va raccolto solo il minimo dei dati necessari, con la misura meno invasiva. L\'IDPC lo afferma per la sorveglianza continua con webcam (molto invasiva, di norma non giustificabile come necessaria è proporzionata) e nella decisione CDP/COMP/579/2025 per la ripresa continua di un\'area di riposo; sul GPS non ha una guida specifica, quindi per il tracciamento continuo il principio si applica per analogia.',
         en: 'only the minimum of necessary data may be collected, using the least invasive measure. The IDPC says so for continuous webcam surveillance (highly invasive, in most cases not justifiable as necessary and proportionate) and, in decision CDP/COMP/579/2025, for continuous recording of a rest area; it has no specific guidance on GPS, so for continuous tracking the principle applies by analogy.',
         de: 'Es darf nur das Minimum der erforderlichen Daten erhoben werden, mit der am wenigsten eingreifenden Maßnahme. Der IDPC sagt dies für die kontinuierliche Webcam-Überwachung (stark eingreifend, meist nicht als erforderlich und verhältnismäßig zu rechtfertigen) und in der Entscheidung CDP/COMP/579/2025 für die dauerhafte Aufzeichnung eines Ruhebereichs; zu GPS gibt es keine spezifische Leitlinie, für die kontinuierliche Ortung gilt der Grundsatz daher entsprechend.',
         fr: 'seul le minimum de données nécessaires peut être collecté, avec la mesure la moins intrusive. L\'IDPC le dit pour la surveillance continue par webcam (très intrusive, le plus souvent non justifiable comme nécessaire et proportionnée) et, dans la décision CDP/COMP/579/2025, pour l\'enregistrement continu d\'une zone de repos ; il n\'a pas de guide spécifique sur le GPS, le principe s\'applique donc par analogie au suivi continu.',
@@ -188,7 +188,7 @@ export const malta: SchedaPaese = {
     {
       passo: 1,
       descrizione: {
-        it: 'Verifica che la misura sia strettamente necessaria e proporzionata e scegli il mezzo meno invasivo.',
+        it: 'Verifica che la misura sia strettamente necessaria è proporzionata e scegli il mezzo meno invasivo.',
         en: 'Check that the measure is strictly necessary and proportionate and choose the least intrusive means.',
         de: 'Prüfen Sie, ob die Maßnahme streng erforderlich und verhältnismäßig ist, und wählen Sie das am wenigsten eingreifende Mittel.',
         fr: 'Vérifiez que la mesure est strictement nécessaire et proportionnée et choisissez le moyen le moins intrusif.',

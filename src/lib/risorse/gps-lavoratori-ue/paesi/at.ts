@@ -93,7 +93,7 @@ export const austria: SchedaPaese = {
   checklist: [
     {
       voce: {
-        it: 'Consenso del consiglio aziendale (Betriebsrat) per misure di controllo che toccano la dignita (ArbVG § 96 Abs. 1 Z 3)',
+        it: 'Consenso del consiglio aziendale (Betriebsrat) per misure di controllo che toccano la dignità (ArbVG § 96 Abs. 1 Z 3)',
         en: 'Consent of the works council (Betriebsrat) for monitoring measures that affect human dignity (ArbVG § 96 Abs. 1 Z 3)',
         de: 'Zustimmung des Betriebsrats für Kontrollmaßnahmen, die die Menschenwürde berühren (ArbVG § 96 Abs. 1 Z 3)',
         fr: "Accord du comité d'entreprise (Betriebsrat) pour les mesures de contrôle qui touchent à la dignité humaine (ArbVG § 96 Abs. 1 Z 3)",
@@ -102,7 +102,7 @@ export const austria: SchedaPaese = {
       },
       risposta: 'dipende',
       dettaglio: {
-        it: "Le misure di controllo e i sistemi tecnici idonei a controllare i lavoratori che toccano la dignita umana richiedono il consenso del consiglio aziendale (Betriebsvereinbarung obbligatoria): senza, sono inammissibili. Vale dove esiste un Betriebsrat; in sua assenza serve un accordo individuale ex § 10 AVRAG.",
+        it: "Le misure di controllo e i sistemi tecnici idonei a controllare i lavoratori che toccano la dignità umana richiedono il consenso del consiglio aziendale (Betriebsvereinbarung obbligatoria): senza, sono inammissibili. Vale dove esiste un Betriebsrat; in sua assenza serve un accordo individuale ex § 10 AVRAG.",
         en: 'Monitoring measures and technical systems capable of controlling workers that affect human dignity require the consent of the works council (a Betriebsvereinbarung is mandatory): without it, they are inadmissible. This applies where a Betriebsrat exists; in its absence an individual agreement under § 10 AVRAG is required.',
         de: 'Kontrollmaßnahmen und technische Systeme, die zur Kontrolle der Arbeitnehmer geeignet sind und die Menschenwürde berühren, bedürfen der Zustimmung des Betriebsrats (eine Betriebsvereinbarung ist zwingend erforderlich): Ohne diese sind sie unzulässig. Dies gilt, wo ein Betriebsrat besteht; fehlt dieser, ist eine Einzelvereinbarung gemäß § 10 AVRAG erforderlich.',
         fr: "Les mesures de contrôle et les systèmes techniques susceptibles de contrôler les salariés qui touchent à la dignité humaine requièrent l'accord du comité d'entreprise (une Betriebsvereinbarung est obligatoire) : sans celui-ci, elles sont irrecevables. Cela vaut là où un Betriebsrat existe ; en son absence, un accord individuel au titre du § 10 AVRAG est nécessaire.",
@@ -153,7 +153,7 @@ export const austria: SchedaPaese = {
     },
     {
       voce: {
-        it: 'Il GPS sui lavoratori e ammesso solo se necessario: vietato se lo scopo e raggiungibile con mezzi meno invasivi',
+        it: 'Il GPS sui lavoratori è ammesso solo se necessario: vietato se lo scopo è raggiungibile con mezzi meno invasivi',
         en: 'GPS on workers is allowed only if necessary: banned where the purpose can be achieved by less intrusive means',
         de: 'GPS-Ortung von Arbeitnehmern nur zulässig, wenn erforderlich: unzulässig, wenn der Zweck mit milderen Mitteln erreichbar ist',
         fr: 'Le GPS sur les salariés n\'est admis que s\'il est nécessaire : interdit si la finalité peut être atteinte par des moyens moins intrusifs',

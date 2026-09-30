@@ -109,7 +109,7 @@ export const norvegia: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "Una misura di controllo (incluso il GPS) e ammessa solo se ha un motivo oggettivo nelle esigenze dell'impresa e non comporta un onere sproporzionato per il lavoratore.",
+        it: "Una misura di controllo (incluso il GPS) è ammessa solo se ha un motivo oggettivo nelle esigenze dell'impresa e non comporta un onere sproporzionato per il lavoratore.",
         en: "A control measure (including GPS) is permitted only if it has an objective reason rooted in the business's needs and does not impose a disproportionate burden on the worker.",
         de: 'Eine Kontrollmaßnahme (einschließlich GPS) ist nur zulässig, wenn sie einen sachlichen Grund in den Bedürfnissen des Unternehmens hat und keine unverhältnismäßige Belastung für den Arbeitnehmer darstellt.',
         fr: "Une mesure de contrôle (y compris le GPS) n'est admise que si elle repose sur un motif objectif lie aux besoins de l'entreprise et n'impose pas une charge disproportionnée au travailleur.",

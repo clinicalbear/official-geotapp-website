@@ -152,7 +152,7 @@ export const svezia: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: 'La base giuridica e di norma il bilanciamento di interessi, non il consenso del dipendente (rapporto di dipendenza); i lavoratori vanno informati in modo chiaro, al più tardi quando i dati sono raccolti.',
+        it: 'La base giuridica è di norma il bilanciamento di interessi, non il consenso del dipendente (rapporto di dipendenza); i lavoratori vanno informati in modo chiaro, al più tardi quando i dati sono raccolti.',
         en: 'The legal basis is normally the balancing of interests, not the employee consent (relationship of dependence); workers must be informed clearly, at the latest when the data is collected.',
         de: 'Rechtsgrundlage ist in der Regel die Interessenabwägung, nicht die Einwilligung des Beschäftigten (Abhangigkeitsverhaltnis); die Beschäftigten sind klar zu informieren, spätestens bei der Erhebung der Daten.',
         fr: "La base juridique est en principe la mise en balance des intérêts, non le consentement du salarie (lien de subordination); les salaries doivent être informes clairement, au plus tard lors de la collecte des données.",
@@ -172,7 +172,7 @@ export const svezia: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: 'La localizzazione e ammessa se motivata da un concreto bisogno aziendale; non per sorvegliare in tempo reale senza motivo, e i dati raccolti per un altro scopo (es. un registro di guida) non possono essere riusati per analizzare il rendimento.',
+        it: 'La localizzazione è ammessa se motivata da un concreto bisogno aziendale; non per sorvegliare in tempo reale senza motivo, e i dati raccolti per un altro scopo (es. un registro di guida) non possono essere riusati per analizzare il rendimento.',
         en: 'Location tracking is allowed if justified by a concrete business need; not to monitor in real time without reason, and data collected for another purpose (e.g. a driving log) cannot be reused to analyse performance.',
         de: 'Die Standortverfolgung ist zulässig, wenn sie durch einen konkreten betrieblichen Bedarf gerechtfertigt ist; nicht, um ohne Grund in Echtzeit zu überwachen, und für einen anderen Zweck erhobene Daten (z. B. ein Fahrtenbuch) dürfen nicht zur Leistungsanalyse weiterverwendet werden.',
         fr: "La géolocalisation est admise si elle est justifiée par un besoin concret de l'entreprise; non pour surveiller en temps réel sans raison, et les données collectées a une autre fin (par ex. un carnet de bord) ne peuvent pas être reutilisees pour analyser le rendement.",
@@ -293,7 +293,7 @@ export const svezia: SchedaPaese = {
       nl: '200.000 SEK (ongeveer 17.500 euro)',
     },
     casoCitato: {
-      it: "Datainspektionen (oggi IMY) contro il Comune di Skelleftea (decisione del 20 agosto 2019, confermata dai tribunali): una scuola usava il riconoscimento facciale tramite telecamera per registrare le presenze degli studenti, trattamento biometrico illecito (il consenso non e valido nel rapporto di dipendenza). Non è un caso di GPS, ma e il caso faro svedese sul monitoraggio biometrico delle presenze.",
+      it: "Datainspektionen (oggi IMY) contro il Comune di Skelleftea (decisione del 20 agosto 2019, confermata dai tribunali): una scuola usava il riconoscimento facciale tramite telecamera per registrare le presenze degli studenti, trattamento biometrico illecito (il consenso non è valido nel rapporto di dipendenza). Non è un caso di GPS, ma è il caso faro svedese sul monitoraggio biometrico delle presenze.",
       en: 'Datainspektionen (today IMY) v. the Municipality of Skelleftea (decision of 20 August 2019, upheld by the courts): a school used camera-based facial recognition to record student attendance, an unlawful biometric processing (consent is not valid in a relationship of dependence). It is not a GPS case, but it is the landmark Swedish case on biometric attendance monitoring.',
       de: 'Datainspektionen (heute IMY) gegen die Gemeinde Skelleftea (Beschluss vom 20. August 2019, von den Gerichten bestätigt): Eine Schule nutzte kamerabasierte Gesichtserkennung, um die Anwesenheit der Schüler zu erfassen, eine unzulässige biometrische Verarbeitung (die Einwilligung ist im Abhangigkeitsverhaltnis nicht gültig). Es ist kein GPS-Fall, aber der wegweisende schwedische Fall zur biometrischen Anwesenheitserfassung.',
       fr: "Datainspektionen (aujourd'hui IMY) contre la commune de Skelleftea (décision du 20 août 2019, confirmée par les tribunaux): une école utilisait la reconnaissance faciale par caméra pour enregistrer la présence des élèves, un traitement biométrique illicite (le consentement n'est pas valable dans un lien de subordination). Ce n'est pas une affaire de GPS, mais c'est l'affaire phare suédoise sur le contrôle biométrique des présences.",

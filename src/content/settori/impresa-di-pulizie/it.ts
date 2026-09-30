@@ -53,7 +53,7 @@ const content: SettoreContent = {
 
   workflow: {
     title: 'Come funziona',
-    subtitle: 'Tre step semplici. Zero carta. Zero chiamate.',
+    subtitle: 'Tre passi semplici. Zero carta. Zero chiamate.',
     steps: [
       {
         title: 'L\'operatore timbra con GPS',

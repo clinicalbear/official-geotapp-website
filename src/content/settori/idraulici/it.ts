@@ -3,15 +3,15 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'App per Idraulici e Termoidraulici | GeoTapp Rapportini GPS',
-    description: 'App per idraulici e termoidraulici: rapportini GPS verificati, foto degli impianti e report dove ogni modifica è rilevabile. Chiudi le contestazioni. Prova gratis.',
+    description: 'App per idraulici e termoidraulici: rapportini con posizione e foto, foto degli impianti e report dove ogni modifica è rilevabile. Da mostrare quando qualcuno contesta. Prova gratis.',
   },
   hero: {
     badge: 'App per Idraulici, Termoidraulici e Impiantisti',
     h1_line1: 'App per idraulici e termoidraulici:',
     h1_line2: 'rapportini GPS, prove fotografiche e meno contestazioni.',
-    subtitle: 'GeoTapp registra ogni intervento idraulico con GPS, foto e timestamp verificabili. Il cliente contesta? Mostri il rapportino, non discuti. Il tuo tecnico è protetto, il tuo fatturato anche.',
-    cta_primary: 'Inizia subito gratuitamente!',
-    cta_note: 'Nessun vincolo. Risposta entro 12 ore lavorative.',
+    subtitle: 'GeoTapp registra ogni intervento idraulico con GPS, foto e orari registrati. Il cliente contesta? Mostri il rapportino invece di discutere a voce.',
+    cta_primary: 'Prova gratis per 14 giorni',
+    cta_note: 'La prova non ti vincola a niente. Nessuna carta di credito.',
   },
   pain: {
     title: 'Il problema che ogni impresa idraulica conosce bene',
@@ -25,7 +25,7 @@ const content: SettoreContent = {
         desc: 'Il tecnico ha finito il lavoro, ma non c\'è traccia fotografica né nota tecnica. In caso di guasto successivo, ricostruire cosa è stato fatto diventa impossibile.',
       },
       {
-        title: 'Le urgenze non sono tracciabili',
+        title: 'Le urgenze restano senza documenti',
         desc: 'Gli interventi di emergenza sono i più difficili da documentare. Il tecnico parte di corsa, lavora senza carta, e poi non c\'è niente da mostrare al cliente.',
       },
     ],
@@ -36,11 +36,11 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'Il tecnico registra l\'intervento sul campo',
-        desc: 'Con GeoTapp TimeTracker timbra ingresso e uscita con GPS, scatta foto dell\'impianto idraulico e aggiunge note tecniche dallo smartphone.',
+        desc: 'Con GeoTapp TimeTracker timbra entrata, pause e uscita con la posizione, scatta foto dell\'impianto idraulico e aggiunge note tecniche dallo smartphone.',
       },
       {
         title: 'L\'ufficio vede tutto appena arriva',
-        desc: 'GeoTapp Flow riceve i dati istantaneamente. Il responsabile vede commessa, tecnico assegnato, avanzamento e prove fotografiche senza chiamare.',
+        desc: 'GeoTapp Flow riceve i dati appena il telefono ha rete. Il responsabile vede commessa, tecnico assegnato, avanzamento e prove fotografiche senza chiamare.',
       },
       {
         title: 'Il rapportino è la tua prova',
@@ -55,11 +55,11 @@ const content: SettoreContent = {
       {
         label: 'Cosa registra',
         competitor: 'Orario di entrata/uscita',
-        geotapp: 'Orario + GPS verificato + foto impianto + materiali e note',
+        geotapp: 'Orario + posizione alla timbratura + foto impianto + materiali e note',
       },
       {
         label: 'In caso di contestazione',
-        competitor: 'Dato non difendibile',
+        competitor: 'Solo la tua parola',
         geotapp: 'Report sigillato, ogni modifica rilevabile',
       },
       {
@@ -90,21 +90,21 @@ const content: SettoreContent = {
     dopo: [
       'Il cliente nega che la riparazione sia stata eseguita.',
       'Apri il rapportino: foto GPS dell\'impianto, orario sigillato, note tecniche.',
-      'Glielo invii. La contestazione finisce in un minuto.',
-      'Il pagamento è al sicuro. Il tecnico è tutelato.',
+      'Glielo invii, e lui lo verifica da solo.',
+      'Hai una prova da mostrare. Anche il tecnico ha qualcosa in mano.',
     ],
   },
   scenario: {
-    title: 'Caso reale',
+    title: 'Un caso tipico',
     body: 'Un cliente contesta un intervento termoidraulico urgente e rifiuta di pagare sostenendo che i lavori non siano stati completati. Con GeoTapp apri il rapportino: foto dell\'impianto prima e dopo, orario GPS di arrivo e fine lavori, note tecniche sui materiali sostituiti, tutto generato in automatico dallo smartphone del tecnico sul posto.',
-    resolution: 'La contestazione cade. La fattura viene pagata per intero.',
+    resolution: 'Invece di una parola contro l\'altra, c\'è un documento che il cliente controlla da solo.',
   },
   features: {
     title: 'App per idraulici e termoidraulici: cosa trovi in GeoTapp.',
     items: [
       {
         title: 'Timbratura GPS verificabile',
-        desc: 'Ogni accesso e uscita dall\'intervento è registrato con posizione, timestamp e commessa. Difendibile davanti al cliente e agli enti di controllo.',
+        desc: 'Ogni entrata, pausa e uscita è registrata con posizione, timestamp e commessa. Da mostrare al cliente quando serve.',
       },
       {
         title: 'Foto impianti idraulici sigillate',
@@ -112,7 +112,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Rapportini digitali automatici',
-        desc: 'A fine lavori il rapportino è già pronto: ore, foto, note tecniche, materiali e firma. Il tecnico lo invia al cliente direttamente dall\'app.',
+        desc: 'A fine lavori il rapportino è già pronto: ore, foto, note tecniche e materiali. L\'ufficio lo manda al cliente da Flow con un clic.',
       },
       {
         title: 'Gestione urgenze e manutenzione programmata',
@@ -120,26 +120,26 @@ const content: SettoreContent = {
       },
       {
         title: 'Export presenze per la paga',
-        desc: 'Esporta presenze mensili compatibili con Zucchetti, INAZ, TeamSystem. L\'elaborazione paghe diventa un\'operazione rapida.',
+        desc: 'Esporta le presenze del mese in Excel o CSV, pronte per il consulente del lavoro. L\'elaborazione paghe diventa un\'operazione rapida.',
       },
       {
         title: 'I tuoi idraulici sono protetti',
-        desc: 'Un report verificabile protegge il tecnico da accuse infondate su lavori non eseguiti o materiali non utilizzati.',
+        desc: 'Un report verificabile dà al tecnico qualcosa in mano contro le accuse infondate su lavori non eseguiti o materiali non utilizzati.',
       },
     ],
   },
   cta_mid: {
     title: 'Vuoi vedere come funziona su un intervento idraulico reale?',
-    body: 'Ti mostriamo il flusso completo: dall\'apertura commessa al rapportino che riceve il cliente. In 20 minuti capisci se fa per te.',
-    cta: 'Inizia subito gratuitamente!',
+    body: 'Provalo su un intervento vero, dall\'apertura della commessa al rapportino che riceve il cliente: 14 giorni gratis, senza carta di credito.',
+    cta: 'Prova gratis per 14 giorni',
   },
   trust: {
-    title: 'I nostri report segnalano ogni modifica. Non da te. Non da noi.',
-    body: 'I report GeoTapp sono generati dal sistema nel momento dell\'intervento. Non esiste un pannello per "correggere" un orario o spostare una foto. Il dato è quello, firmato digitalmente, con GPS reale.',
+    title: 'Nei nostri report ogni modifica si vede, anche se la fai tu o la facciamo noi.',
+    body: 'I report GeoTapp sono generati dal sistema nel momento dell\'intervento. Una volta sigillato il report, correggere un orario o spostare una foto rompe il sigillo, e la verifica lo segnala.',
     badge: 'Verificabile da chiunque, senza accesso al tuo account',
   },
   testimonial: {
-    quote: 'Prima perdevo ore a spiegare gli interventi ai clienti. Adesso mando il rapportino e la discussione finisce lì.',
+    quote: 'Prima perdevo ore a spiegare gli interventi ai clienti. Adesso mando il rapportino e il cliente lo controlla da solo.',
     author: 'Roberto C.',
     role: 'Titolare, impianti idraulici e termoidraulici',
   },
@@ -148,8 +148,8 @@ const content: SettoreContent = {
     subtitle: 'Quello che ci chiedono gli idraulici prima di iniziare.',
     items: [
       {
-        q: 'GeoTapp è adatta come app per idraulici e termoidraulici?',
-        a: 'Sì. GeoTapp è usata da idraulici e termoidraulici per gestire interventi, rapportini, ore e prove fotografiche degli impianti. Funziona sia per urgenze che per manutenzioni programmate.',
+        q: 'GeoTapp è adatto come app per idraulici e termoidraulici?',
+        a: 'Sì. GeoTapp è usato da idraulici e termoidraulici per gestire interventi, rapportini, ore e prove fotografiche degli impianti. Funziona sia per urgenze che per manutenzioni programmate.',
       },
       {
         q: 'Posso usare GeoTapp per documentare interventi idraulici e termoidraulici?',
@@ -163,32 +163,32 @@ const content: SettoreContent = {
   },
   cta: {
     title: 'Ogni intervento fatto bene merita una prova. GeoTapp la genera.',
-    subtitle: 'Report verificabili, GPS reale, foto sigillate. Il tuo lavoro è difendibile.',
-    primary: 'Inizia subito gratuitamente!',
+    subtitle: 'Report verificabili, posizione alle timbrature, foto sigillate nel report.',
+    primary: 'Prova gratis per 14 giorni',
     secondary: 'Vedi i Prezzi',
   },
   pricing_hint: {
-    label: 'A partire da',
-    per: 'operatore/mese',
+    label: 'Postazioni TimeTracker da',
+    per: 'operatore al mese, più il piano Flow da 39 €/mese',
     note: 'Prova gratuita 14 giorni',
   },
   schema_sector_name: 'Idraulici',
   schema_faq: [
     {
       question: 'GeoTapp funziona come app per idraulici e termoidraulici?',
-      answer: 'Sì. GeoTapp è l\'app per idraulici e termoidraulici che registra ogni intervento con GPS, foto e timestamp verificabili. Il tecnico timbra dal campo, l\'ufficio vede tutto appena arriva, il cliente riceve un rapportino sigillato.',
+      answer: 'Sì. GeoTapp è l\'app per idraulici e termoidraulici che registra ogni intervento con GPS, foto e orari registrati. Il tecnico timbra dal campo, l\'ufficio vede tutto appena arriva, il cliente riceve un rapportino sigillato.',
     },
     {
       question: 'Come sigillo un intervento idraulico con GeoTapp?',
-      answer: 'Il tecnico registra su GeoTapp l\'orario di inizio e fine con GPS verificato, le foto dell\'impianto prima e dopo, e le note tecniche sui materiali usati. Il sistema genera un rapportino sigillato che il cliente può verificare autonomamente.',
+      answer: 'Il tecnico registra su GeoTapp l\'orario di inizio e fine con la posizione, le foto dell\'impianto prima e dopo, e le note tecniche sui materiali usati. Il sistema genera un rapportino sigillato che il cliente può verificare autonomamente.',
     },
     {
       question: 'GeoTapp gestisce urgenze idrauliche e manutenzioni programmate?',
-      answer: 'Sì. Sia gli interventi d\'emergenza che le manutenzioni periodiche sono gestiti dalla stessa app. Ogni intervento genera uno storico con prove fotografiche e orari GPS verificabili.',
+      answer: 'Sì. Sia gli interventi d\'emergenza che le manutenzioni periodiche sono gestiti dalla stessa app. Ogni intervento genera uno storico con prove fotografiche e orari e posizioni registrati alle timbrature.',
     },
     {
       question: 'I rapportini GeoTapp sono accettati in caso di contestazione?',
-      answer: 'I rapportini GeoTapp sono sigillati con GPS, timestamp e prove fotografiche. Sono stati usati con successo per risolvere contestazioni su interventi non riconosciuti o materiali contestati dal cliente finale.',
+      answer: 'I rapportini GeoTapp sono sigillati con GPS, timestamp e prove fotografiche. Il cliente li verifica da solo. Aiutano a mostrare che il documento non è stato modificato; da soli non sono prova assoluta del fatto né consulenza legale.',
     },
   ],
 };

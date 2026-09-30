@@ -142,7 +142,7 @@ export const lussemburgo: SchedaPaese = {
       },
       risposta: 'no',
       dettaglio: {
-        it: "La vecchia autorizzazione preventiva della CNPD e stata abolita col GDPR (legge del 2 agosto 2002 abrogata dalla legge del 1° agosto 2018, art. 72) ed è sostituita dall'informazione preventiva del personale e, nei casi previsti, dalla codecisione; resta l'obbligo di tenere il registro dei trattamenti.",
+        it: "La vecchia autorizzazione preventiva della CNPD è stata abolita col GDPR (legge del 2 agosto 2002 abrogata dalla legge del 1° agosto 2018, art. 72) ed è sostituita dall'informazione preventiva del personale e, nei casi previsti, dalla codecisione; resta l'obbligo di tenere il registro dei trattamenti.",
         en: 'The old prior authorisation from the CNPD was abolished with the GDPR (the law of 2 August 2002 was repealed by the law of 1 August 2018, art. 72) and replaced by prior information of staff representatives and, in the cases provided for, codecision; the obligation to keep the record of processing activities remains.',
         de: 'Die frühere vorherige Genehmigung der CNPD wurde mit der DSGVO abgeschafft (das Gesetz vom 2. August 2002 wurde durch das Gesetz vom 1. August 2018, Art. 72, aufgehoben) und durch die vorherige Information der Personalvertretung und, in den vorgesehenen Fällen, die Mitentscheidung ersetzt; die Pflicht, das Verzeichnis der Verarbeitungstätigkeiten zu führen, bleibt bestehen.',
         fr: "L'ancienne autorisation préalable de la CNPD a été abolie avec le RGPD (la loi du 2 août 2002 a été abrogée par la loi du 1er août 2018, art. 72) et remplacée par l'information préalable de la représentation du personnel et, dans les cas prévus, la codécision ; l'obligation de tenir le registre des traitements subsiste.",
@@ -153,7 +153,7 @@ export const lussemburgo: SchedaPaese = {
     },
     {
       voce: {
-        it: "Base = una condizione dell'art. 6 GDPR e informazione individuale; niente tracciamento permanente se e ammesso l'uso privato, disattivabile dal lavoratore",
+        it: "Base = una condizione dell'art. 6 GDPR e informazione individuale; niente tracciamento permanente se è ammesso l'uso privato, disattivabile dal lavoratore",
         en: 'Basis = a condition of GDPR art. 6 and individual information; no permanent tracking if private use is allowed, deactivatable by the worker',
         de: 'Grundlage = eine Bedingung von Art. 6 DSGVO und individuelle Information; keine dauerhafte Ortung, wenn die private Nutzung erlaubt ist, durch den Arbeitnehmer deaktivierbar',
         fr: "Base = une condition de l'art. 6 RGPD et information individuelle; pas de traçage permanent si l'usage prive est autorisé, désactivable par le travailleur",
@@ -162,7 +162,7 @@ export const lussemburgo: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "Serve una base dell'art. 6 GDPR e l'informazione individuale (art. 13); il datore non può sorvegliare fuori dall'orario, e se e ammesso l'uso privato del veicolo il sistema non può restare permanente e il lavoratore deve poterlo disattivare.",
+        it: "Serve una base dell'art. 6 GDPR e l'informazione individuale (art. 13); il datore non può sorvegliare fuori dall'orario, e se è ammesso l'uso privato del veicolo il sistema non può restare permanente e il lavoratore deve poterlo disattivare.",
         en: 'A basis under GDPR art. 6 and individual information (art. 13) are required; the employer cannot monitor outside working hours, and if private use of the vehicle is allowed the system cannot remain permanent and the worker must be able to deactivate it.',
         de: 'Erforderlich sind eine Grundlage nach Art. 6 DSGVO und die individuelle Information (Art. 13); der Arbeitgeber darf nicht außerhalb der Arbeitszeit überwachen, und wenn die private Nutzung des Fahrzeugs erlaubt ist, darf das System nicht dauerhaft bleiben und der Arbeitnehmer muss es deaktivieren können.',
         fr: "Une base au titre de l'art. 6 RGPD et l'information individuelle (art. 13) sont nécessaires; l'employeur ne peut pas surveiller en dehors des heures de travail, et si l'usage prive du véhicule est autorisé, le système ne peut pas rester permanent et le travailleur doit pouvoir le désactiver.",
@@ -241,7 +241,7 @@ export const lussemburgo: SchedaPaese = {
     {
       passo: 5,
       descrizione: {
-        it: "Configura il sistema: niente tracciamento permanente se e ammesso l'uso privato, disattivabile dal lavoratore.",
+        it: "Configura il sistema: niente tracciamento permanente se è ammesso l'uso privato, disattivabile dal lavoratore.",
         en: 'Configure the system: no permanent tracking if private use is allowed, deactivatable by the worker.',
         de: 'Konfigurieren Sie das System: keine dauerhafte Ortung, wenn die private Nutzung erlaubt ist, durch den Arbeitnehmer deaktivierbar.',
         fr: "Configurez le système: pas de traçage permanent si l'usage prive est autorisé, désactivable par le travailleur.",

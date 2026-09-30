@@ -7,9 +7,9 @@ const content: SettoreContent = {
   },
   hero: {
     badge: 'App per imprese edili e cantieri',
-    h1_line1: 'Il tuo cantiere sotto controllo,',
+    h1_line1: 'Il tuo cantiere documentato,',
     h1_line2: 'ad ogni timbratura.',
-    subtitle: 'Timbrature GPS sigillate, gestione squadre e report automatici. Zero carte, meno contestazioni. GeoTapp unisce Flow + TimeTracker per chi gestisce cantieri edili, subappaltatori e direzione lavori.',
+    subtitle: 'Timbrature con posizione, gestione squadre e report sigillati automatici. Zero carte, e quando qualcuno contesta hai una prova da mostrare. GeoTapp unisce Flow + TimeTracker per chi gestisce cantieri edili, subappaltatori e direzione lavori.',
     cta_primary: 'Provalo su un cantiere vero',
     cta_note: '14 giorni, fino a 50 operatori sul campo, nessuna carta di credito.',
   },
@@ -18,11 +18,11 @@ const content: SettoreContent = {
     items: [
       {
         title: 'Chi era in cantiere e quando?',
-        desc: 'Ogni timbratura GPS è timestampata e sigillata. GeoTapp registra coordinate reali al momento della timbratura, non inserite a mano. Il dato è verificabile dalla direzione lavori.',
+        desc: 'Ogni timbratura registra ora e posizione rilevate dal telefono in quel momento, non inserite a mano, e finisce nel report sigillato che la direzione lavori può verificare.',
       },
       {
         title: 'Come gestisci i subappaltatori?',
-        desc: 'Traccia accessi e presenze di tutte le squadre, inclusi i subappaltatori, da un\'unica dashboard aggiornata a ogni timbratura.',
+        desc: 'Registra le presenze di tutte le squadre, inclusi i subappaltatori, da un\'unica dashboard aggiornata a ogni timbratura.',
       },
       {
         title: 'I report di cantiere richiedono ore?',
@@ -32,15 +32,15 @@ const content: SettoreContent = {
   },
   workflow: {
     title: 'Come funziona',
-    subtitle: 'Tre step semplici. Zero carta. Zero chiamate.',
+    subtitle: 'Tre passi semplici. Zero carta. Zero chiamate.',
     steps: [
       {
         title: 'L\'operatore timbra all\'ingresso cantiere',
-        desc: 'Apre il turno dallo smartphone. GeoTapp registra coordinate GPS reali, timestamp e, se necessario, foto. Tutto automatico, ogni modifica è rilevabile.',
+        desc: 'Apre il turno dallo smartphone. GeoTapp registra ora e posizione in quel momento e, se serve, le foto di prova. Fra una timbratura e l\'altra non registra nulla in automatico.',
       },
       {
         title: 'Il capo cantiere vede le timbrature appena arrivano',
-        desc: 'Dashboard unica per tutte le squadre e tutti i cantieri. Chi è presente, dove e da quando, senza inseguire nessuno al telefono.',
+        desc: 'Dashboard unica per tutte le squadre e tutti i cantieri. Chi ha timbrato, dove e a che ora, senza inseguire nessuno al telefono.',
       },
       {
         title: 'Il report è pronto per SAL e DL',
@@ -55,7 +55,7 @@ const content: SettoreContent = {
       {
         label: 'Cosa registra',
         competitor: 'Orario di entrata/uscita',
-        geotapp: 'Orario + GPS verificato + foto + attività svolta',
+        geotapp: 'Orario + posizione alla timbratura + foto + attività svolta',
       },
       {
         label: 'Chi può verificare',
@@ -64,7 +64,7 @@ const content: SettoreContent = {
       },
       {
         label: 'In caso di contestazione',
-        competitor: 'Dato non difendibile',
+        competitor: 'Solo la tua parola',
         geotapp: 'Report sigillato, ogni modifica rilevabile',
       },
       {
@@ -88,8 +88,8 @@ const content: SettoreContent = {
       'Prepari il SAL a mano, ricostruendo i dati dai messaggi WhatsApp.',
     ],
     dopo: [
-      'La DL chiede chi era in cantiere martedì. Apri la dashboard: tutto lì.',
-      'Le presenze si registrano automaticamente, con GPS e timestamp.',
+      'La DL chiede chi era in cantiere martedì. Apri le timbrature di quel giorno: c\'è tutto.',
+      'Le presenze si registrano a ogni timbratura, con ora e posizione.',
       'Il subappaltatore contesta? Mostri il report sigillato.',
       'Il SAL è già pronto: ore, presenze e GPS aggregati automaticamente.',
     ],
@@ -99,11 +99,11 @@ const content: SettoreContent = {
     items: [
       {
         title: 'Presenze GPS sigillate',
-        desc: 'Ogni ingresso e uscita dal cantiere è registrato con posizione GPS reale e timestamp. Difendibile davanti a DL, committente e ispettorato.',
+        desc: 'Ogni entrata, pausa e uscita dal cantiere è registrata con posizione e ora. Da mostrare a direzione lavori, committente e ispettorato quando serve.',
       },
       {
         title: 'Dashboard multi-cantiere',
-        desc: 'Monitora più cantieri da un\'unica schermata. Vedi chi è presente, dove e da quando, appena timbra, per ogni cantiere attivo.',
+        desc: 'Segui più cantieri da un\'unica schermata: per ogni cantiere vedi chi ha timbrato, dove e a che ora, appena la timbratura arriva.',
       },
       {
         title: 'Report automatici per SAL',
@@ -118,8 +118,8 @@ const content: SettoreContent = {
         desc: 'Gli operatori scattano foto dall\'app. Ogni immagine è collegata al cantiere con GPS e timestamp: ogni modifica successiva è rilevabile.',
       },
       {
-        title: 'Conformità GDPR integrata',
-        desc: 'Geolocalizzazione costruita per stare dentro i paletti del GDPR e le linee guida del Garante Privacy. Modulistica per l\'informativa ai dipendenti inclusa.',
+        title: 'Posizione solo quando si timbra',
+        desc: 'Geolocalizzazione costruita per stare dentro i paletti del GDPR: posizione solo quando si timbra, mai in continuo, e informativa ai dipendenti firmata nell\'app prima di timbrare.',
       },
     ],
   },
@@ -134,11 +134,11 @@ const content: SettoreContent = {
     items: [
       {
         q: 'Chi era in cantiere e quando?',
-        a: 'Ogni timbratura GPS è timestampata e sigillata. GeoTapp registra coordinate reali al momento della timbratura, non inserite a mano. Il dato è verificabile dalla direzione lavori.',
+        a: 'Ogni timbratura registra ora e posizione rilevate dal telefono in quel momento, non inserite a mano, e finisce nel report sigillato che la direzione lavori può verificare.',
       },
       {
         q: 'Come gestisci i subappaltatori in cantiere?',
-        a: 'GeoTapp traccia accessi e presenze di tutte le squadre, inclusi subappaltatori. Ogni operatore timbra dal proprio smartphone e il capo cantiere vede le timbrature appena arrivano da una dashboard unica.',
+        a: 'GeoTapp registra le presenze di tutte le squadre, inclusi subappaltatori. Ogni operatore timbra dal proprio smartphone e il capo cantiere vede le timbrature appena arrivano da una dashboard unica.',
       },
       {
         q: 'I report di cantiere richiedono ore di lavoro manuale?',
@@ -148,24 +148,24 @@ const content: SettoreContent = {
   },
   cta: {
     title: 'Prova GeoTapp gratis per 14 giorni',
-    subtitle: 'Nessun vincolo. Nessuna carta di credito richiesta. Risposta entro 12 ore lavorative.',
-    primary: 'Inizia subito gratuitamente',
+    subtitle: 'La prova non ti vincola a niente. Nessuna carta di credito richiesta.',
+    primary: 'Prova gratis per 14 giorni',
     secondary: 'Vedi i Prezzi',
   },
   pricing_hint: {
-    label: 'A partire da',
-    per: 'operatore/mese',
+    label: 'Postazioni TimeTracker da',
+    per: 'operatore al mese, più il piano Flow da 39 €/mese',
     note: 'Prova gratuita 14 giorni',
   },
   schema_sector_name: 'Edilizia',
   schema_faq: [
     {
       question: 'Chi era in cantiere e quando?',
-      answer: 'Ogni timbratura GPS è timestampata e sigillata. GeoTapp registra coordinate reali al momento della timbratura, non inserite a mano. Il dato è verificabile dalla direzione lavori.',
+      answer: 'Ogni timbratura registra ora e posizione rilevate dal telefono in quel momento, non inserite a mano, e finisce nel report sigillato che la direzione lavori può verificare.',
     },
     {
       question: 'Come gestisci i subappaltatori in cantiere?',
-      answer: 'GeoTapp traccia accessi e presenze di tutte le squadre, inclusi subappaltatori. Ogni operatore timbra dal proprio smartphone e il capo cantiere vede le timbrature appena arrivano da una dashboard unica.',
+      answer: 'GeoTapp registra le presenze di tutte le squadre, inclusi subappaltatori. Ogni operatore timbra dal proprio smartphone e il capo cantiere vede le timbrature appena arrivano da una dashboard unica.',
     },
     {
       question: 'I report di cantiere richiedono ore di lavoro manuale?',

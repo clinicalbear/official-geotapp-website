@@ -57,7 +57,7 @@
       },
       "conservazione": {
         "title": "Politica di conservazione dati",
-        "desc": "Genera la tabella di conservazione dei dati RH per Paese: durate consigliate, nota legale ed export. Gratis, nel tuo browser."
+        "desc": "Genera la tabella di conservazione dei dati del personale per Paese: durate consigliate, nota legale ed export. Gratis, nel tuo browser."
       },
       "sanzioni": {
         "title": "Calcolatore sanzioni GPS",
@@ -65,7 +65,7 @@
       },
       "osservatorio": {
         "title": "Osservatorio europeo",
-        "desc": "I provvedimenti delle autorita' europee su geolocalizzazione, videosorveglianza e presenze dei lavoratori, ognuno col link al documento ufficiale."
+        "desc": "I provvedimenti delle autorità europee su geolocalizzazione, videosorveglianza e presenze dei lavoratori, ognuno col link al documento ufficiale."
       },
       "indice": {
         "title": "Indice della sorveglianza in Europa",
@@ -101,7 +101,7 @@
         },
         {
           "q": "Servono solo se uso GeoTapp?",
-          "a": "No, funzionano da sole. Le abbiamo sviluppate perché chi manda persone sul campo capisca cosa serve per essere a norma, GeoTapp o meno. Se poi cerchi un sistema già impostato per registrare la posizione solo alla timbratura e non in continuo, lo trovi, ma le risorse restano utili comunque."
+          "a": "No, funzionano da sole. Le abbiamo sviluppate perché chi manda persone sul campo capisca cosa serve per essere a norma, che usi GeoTapp o no. Se poi cerchi un sistema che registri la posizione solo alla timbratura e mai in continuo, GeoTapp è fatto così; le risorse restano utili comunque."
         },
         {
           "q": "Per chi sono pensate?",
@@ -782,7 +782,7 @@
     "form_response_time": "Riceverai l'email di benvenuto entro pochi istanti",
     "form_submitting": "Attivazione in corso...",
     "form_privacy": "I tuoi dati sono trattati secondo la nostra",
-    "form_privacy_link": "Privacy Policy",
+    "form_privacy_link": "informativa privacy",
     "form_usage_note": "Durante il periodo di prova raccogliamo dati sull'uso dell'app (schermate visitate, funzioni utilizzate) per aiutarti a partire e migliorare il servizio. Vengono cancellati al termine della prova; ne conserviamo solo statistiche aggregate e anonime.",
     "form_email_hint": "Email aziendale consigliata. Va bene anche personale (Gmail, Outlook, ecc.).",
     "success_title": "Controlla la tua email!",
@@ -805,7 +805,7 @@
     "benefits": [
       {
         "title": "Il piano più grande, non una demo",
-        "desc": "Provi GeoTapp Flow al massimo: tutti i moduli sono compresi, nessuno costa a parte, con utenti ufficio illimitati e 50 postazioni TimeTracker attive da subito. A parte si pagano solo le postazioni di timbratura, sul campo con TimeTracker e in ufficio dentro Flow."
+        "desc": "Provi GeoTapp Flow al massimo: tutti i moduli, utenti ufficio illimitati e 50 postazioni TimeTracker attive da subito. Con l'abbonamento i moduli di Flow sono compresi nel piano; a parte si pagano solo le postazioni di timbratura, sul campo con TimeTracker e in ufficio dentro Flow."
       },
       {
         "title": "Nessuna carta richiesta",
@@ -839,7 +839,9 @@
     "trust_gdpr": "Niente tracciamento continuo",
     "trust_offline": "Verificatore offline",
     "form_field_employees": "Quante persone lavorano sul campo?",
-    "form_field_employees_hint": "Facoltativo. Ci serve per scriverti del tuo caso, non di uno generico."
+    "form_field_employees_hint": "Facoltativo. Ci serve per scriverti del tuo caso, non di uno generico.",
+    "trust_gps": "Posizione solo alla timbratura",
+    "trust_no_card": "Nessuna carta di credito"
   },
   "demo": {
     "page_title": "Prenota la tua Demo Personalizzata",
@@ -1058,7 +1060,7 @@
     "contact_office": "Ufficio stampa GeoTapp",
     "contact_email": "press@geotapp.com",
     "releases_label": "Comunicati stampa",
-    "coverage_label": "Ci hanno citato"
+    "coverage_label": "Ci hanno citato (titoli nella lingua originale)"
   },
   "blog": {
     "hero_title": "Guide su prova del lavoro, GDPR e squadre sul campo.",
@@ -1088,8 +1090,8 @@
     "hero_tagline": "Pensieri e Scintille."
   },
   "roi": {
-    "meta_title": "Calcolatore ROI GeoTapp - Scopri il tuo risparmio reale",
-    "meta_desc": "Calcola in 2 minuti quanto risparmieresti con GeoTapp: meno burocrazia, meno contestazioni, operatori più produttivi. Senza email e senza account.",
+    "meta_title": "Calcolatore ROI GeoTapp: stima quanto risparmi in un anno",
+    "meta_desc": "Stima in un minuto quanto risparmieresti con GeoTapp: meno ore di burocrazia, meno contestazioni, meno coordinamento a voce. Senza email e senza account.",
     "hero_title": "Calcola il tuo ROI con GeoTapp",
     "hero_subtitle": "Inserisci i dati della tua azienda e scopri quanto puoi risparmiare ogni anno.",
     "step1_title": "La tua azienda",
@@ -1136,13 +1138,13 @@
     "per_anno": "/ anno",
     "label_operators": "operatori",
     "embed_title": "Calcolatore ROI GeoTapp",
-    "intro": "Il calcolatore stima quanto la tua impresa può risparmiare ogni anno automatizzando presenze, rapportini e prove del lavoro sul campo. Inserisci pochi dati e ottieni in 30 secondi il risparmio annuo, il tempo di rientro e il ROI, senza registrazione.",
+    "intro": "Il calcolatore stima quanto la tua impresa può risparmiare ogni anno automatizzando presenze, rapportini e prove del lavoro sul campo. Inserisci pochi dati e in un minuto vedi il risparmio annuo stimato, il tempo di rientro e il ROI, senza registrazione.",
     "faq_title": "Domande frequenti sul calcolo del ROI",
     "pricing_link": "Scopri quanto puoi risparmiare con il calcolatore ROI",
     "faq": [
       {
         "q": "Come si calcola il ROI di un'app di rilevazione presenze GPS?",
-        "a": "La stima parte da tre voci concrete: le ore di lavoro amministrativo risparmiate ogni mese, le contestazioni e gli straordinari non dovuti evitati grazie alle prove geolocalizzate, e il tempo di coordinamento recuperato. Il totale annuo viene confrontato con il costo dell'abbonamento per ottenere ROI e tempo di rientro."
+        "a": "La stima parte da tre voci concrete: le ore di lavoro amministrativo risparmiate ogni mese, le contestazioni e gli straordinari non dovuti che le prove del lavoro aiutano a evitare, e il tempo di coordinamento recuperato. Il totale annuo viene confrontato con il costo dell'abbonamento per ottenere ROI e tempo di rientro."
       },
       {
         "q": "Devo registrarmi o lasciare l'email per vedere il risultato?",
@@ -1173,7 +1175,7 @@
     "classic_app": "Gestionale / App classica",
     "roi_badge": "Calcola il tuo ROI",
     "roi_title": "Quanto risparmieresti con GeoTapp?",
-    "roi_desc": "Inserisci la dimensione del tuo team e ottieni una stima del ROI in 30 secondi. Senza registrazione, senza email.",
+    "roi_desc": "Inserisci la dimensione del tuo team e in un minuto vedi una stima del ROI. Senza registrazione, senza email.",
     "roi_cta": "Calcola il tuo ROI",
     "mockup_title": "Intervento aperto",
     "mockup_gps": "GPS verificato",
@@ -1230,10 +1232,10 @@
   },
   "risorseGps": {
     "metaTitleSelettore": "GPS e monitoraggio dei lavoratori in Europa: cosa serve per essere a norma, paese per paese",
-    "metaDescSelettore": "Scegli il paese e scopri cosa serve per mettere a norma GPS e monitoraggio dei lavoratori: adempimenti, procedura, autorità e modello da scaricare.",
+    "metaDescSelettore": "Scegli il Paese e scopri cosa serve per mettere a norma GPS e monitoraggio dei lavoratori: adempimenti, procedura, autorità e modello da scaricare.",
     "h1Selettore": "GPS e monitoraggio dei lavoratori, paese per paese",
     "introSelettore": "Stessa Europa, regole diverse. Mandi una squadra a montare, pulire o sorvegliare in un altro Paese e dai per scontato che le regole su GPS e controllo dei lavoratori siano quelle di casa. Non lo sono. Ogni Stato ha le sue, e valgono dove si lavora: la tua azienda italiana con un cantiere in Germania segue quelle tedesche, anche se gli operai sono li solo in trasferta. Scegli la destinazione e ti diciamo cosa serve per essere a norma: gli adempimenti, la procedura, a chi rivolgerti e il modello da scaricare.",
-    "scegliPaese": "Scegli il paese",
+    "scegliPaese": "Scegli il Paese",
     "inArrivo": "In arrivo",
     "inArrivoNota": "Stiamo preparando la scheda di questo paese.",
     "metaTitleScheda": "{paese}: geolocalizzazione dei dipendenti, cosa è lecito",
@@ -1244,10 +1246,10 @@
     "sezioneModello": "Il modello da scaricare",
     "sezioneSanzione": "Quanto si rischia",
     "sezioneFonti": "Fonti",
-    "rispostaSi": "Si",
+    "rispostaSi": "Sì",
     "rispostaNo": "No",
     "rispostaDipende": "Dipende",
-    "cosaServeLegenda": "Per ogni adempimento ti diciamo se serve in questo Paese: Si significa obbligatorio, Dipende solo in certi casi, No non richiesto.",
+    "cosaServeLegenda": "Per ogni adempimento ti diciamo se serve in questo Paese: Sì significa obbligatorio, Dipende solo in certi casi, No non richiesto.",
     "serveObbligatorio": "obbligatorio",
     "serveDipende": "solo in certi casi",
     "serveNonRichiesto": "non richiesto",
@@ -1255,9 +1257,9 @@
     "aggiornatoIl": "Aggiornato il",
     "scaricaModello": "Scarica il modello",
     "autoritaCompetente": "Autorità competente",
-    "disclaimer": "Questa e una risorsa informativa, non una consulenza legale. Prima di attivare un sistema di monitoraggio fai verificare la tua situazione da un professionista.",
+    "disclaimer": "Questa è una risorsa informativa, non una consulenza legale. Prima di attivare un sistema di monitoraggio fai verificare la tua situazione da un professionista.",
     "ctaTitolo": "Vuoi uno strumento pensato per il GDPR?",
-    "ctaTesto": "GeoTapp registra la posizione solo alla timbratura, non in continuo, e genera l'informativa da far firmare. Provalo gratis.",
+    "ctaTesto": "GeoTapp registra la posizione solo quando si timbra, mai in continuo, e fa firmare l'informativa nell'app prima della prima timbratura. Provalo gratis.",
     "ctaBottone": "Prova GeoTapp gratis",
     "faq": {
       "title": "Domande frequenti",
@@ -1335,7 +1337,7 @@
     "metaTitle": "Calcolatore sanzioni GPS: quanto rischi a tracciare i lavoratori, Paese per Paese",
     "metaDesc": "Scegli il Paese e scopri la sanzione massima reale per il monitoraggio GPS dei lavoratori e quali adempimenti ti espongono. Dati verificati, 39 Paesi europei.",
     "h1": "Quanto rischi a tracciare i lavoratori?",
-    "intro": "Scegli il Paese, guarda la sanzione massima realmente comminata e spunta cosa hai già in regola: ti diciamo a quanto sei esposto. Dati verificati alla fonte, 39 Paesi.",
+    "intro": "Scegli il Paese, guarda la sanzione più alta (quella davvero inflitta, dove c'è un caso pubblico, altrimenti il massimo previsto dalla legge: la scheda dice quale) e spunta cosa hai già in regola: ti diciamo a quanto sei esposto. Dati verificati alla fonte, 39 Paesi.",
     "sanzioneMax": "Sanzione massima",
     "casoCitato": "Caso reale",
     "fonte": "Vedi la fonte",
@@ -1352,7 +1354,7 @@
       "items": [
         {
           "q": "Quanto si rischia davvero se il GPS non è a norma?",
-          "a": "Dipende dal Paese e da cosa hai sbagliato, ma le sanzioni del GDPR non sono simboliche: arrivano a percentuali del fatturato che mettono in ginocchio un'azienda piccola, e in diversi Stati si aggiungono conseguenze sul piano del diritto del lavoro. Scegli la destinazione qui sopra e vedi la cifra massima reale, con il caso da cui è tratta."
+          "a": "Dipende dal Paese e da cosa hai sbagliato, ma le sanzioni del GDPR non sono simboliche: possono arrivare a una percentuale del fatturato, e in diversi Stati si aggiungono conseguenze sul piano del diritto del lavoro. Scegli il Paese qui sopra e vedi la cifra più alta, con l'indicazione se è una multa davvero inflitta o il massimo di legge."
         },
         {
           "q": "Le multe del GDPR colpiscono davvero le piccole imprese?",
@@ -1421,7 +1423,7 @@
   },
   "attribuzione": {
     "datiVerificati": "Dati raccolti e verificati da GeoTapp.",
-    "liberoCitare": "Puoi citarli liberamente, a patto di indicare la fonte con un link a questa pagina.",
+    "liberoCitare": "Puoi citarla liberamente, a patto di indicare la fonte con un link a questa pagina.",
     "ripubblicazione": "Per la ripubblicazione integrale del dataset o per usi commerciali,",
     "contattaci": "contattaci",
     "titoloCita": "Cita questa pagina",
@@ -1464,7 +1466,7 @@
       "transcriptTitle": "Quello che dice il video",
       "transcriptNote": "Le stesse parole della voce, da leggere.",
       "honestyTitle": "Cos'è questo video, e cosa non è",
-      "honesty": "I dati del turno sono di prova, e le due fotografie del quadro elettrico sono sostituite in montaggio, perché le prove sono state scattate con l'obiettivo coperto. Il comportamento del software è quello vero, ripreso senza ritocchi. La posizione si scrive all'atto della timbratura e mai nel mezzo, e un pacchetto sigillato aiuta a mostrare che quello che è stato consegnato non è stato toccato, ma da solo non è prova assoluta del fatto materiale e non è consulenza legale.",
+      "honesty": "I dati del turno sono di prova, e le due fotografie del quadro elettrico sono sostituite in montaggio, perché le prove sono state scattate con l'obiettivo coperto. Il comportamento del software è quello vero, ripreso senza ritocchi. La posizione si scrive all'atto della timbratura, e fra una timbratura e l'altra non si registra nulla in automatico, e un pacchetto sigillato aiuta a mostrare che quello che è stato consegnato non è stato toccato, ma da solo non è prova assoluta del fatto materiale e non è consulenza legale.",
       "ctaTitle": "Quattordici giorni, sui tuoi turni",
       "ctaText": "Lo stesso giro gira sulle tue commesse, col tuo telefono, per quattordici giorni e senza carta.",
       "youtubeNote": "Sta anche su YouTube, in undici lingue."

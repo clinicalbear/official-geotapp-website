@@ -32,7 +32,7 @@ interface Copy {
 const COPY: Record<InfLocale, Copy> = {
   it: {
     title: 'Scarica il fac-simile dell’informativa GPS per {paese}',
-    desc: 'Modello di informativa privacy per la geolocalizzazione dei dipendenti, conforme all’art. 13 GDPR, con la base giuridica e l’autorità di controllo del Paese. Compila i campi in bianco e fallo verificare dal tuo consulente.',
+    desc: 'Modello di informativa privacy per la geolocalizzazione dei dipendenti, costruito sui contenuti dell’art. 13 GDPR, con la base giuridica e l’autorità di controllo del Paese. Compila i campi in bianco e fallo verificare dal tuo consulente.',
     download: 'Scarica il fac-simile (PDF)',
     prompt: 'Vuoi anche le prossime guide pratiche su GPS e gestione del campo? Lascia l’email (facoltativo).',
     placeholder: 'La tua email',

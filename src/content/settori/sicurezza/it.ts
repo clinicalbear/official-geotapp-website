@@ -3,30 +3,30 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'Software Vigilanza Privata | GeoTapp - Turni GPS',
-    description: 'GeoTapp è il software per aziende di sicurezza e vigilanza privata: turni GPS, ronde documentate e prove fotografiche. Pensato per il GDPR. Prova gratis.',
+    description: 'GeoTapp è il software per aziende di sicurezza e vigilanza privata: turni con posizione alle timbrature, controlli documentati e foto di prova. Pensato per il GDPR. Prova gratis.',
   },
   hero: {
     badge: 'Software per Vigilanza Privata, Guardie Giurate e Steward',
     h1_line1: 'Presenze e turni verificabili',
     h1_line2: 'per vigilanza e sicurezza privata',
-    subtitle: 'GeoTapp Flow e TimeTracker documentano la presenza delle guardie giurate ai posti assegnati con GPS verificato e timestamp sigillati. Tracciabilità secondo il CCNL Vigilanza Privata GPG, passaggio di consegne digitale e tracciamento qualifiche: tutto in un\'unica piattaforma. L\'app per vigilanza privata che sigilla ogni turno, ogni ronda, ogni presenza.',
-    cta_primary: 'Inizia subito gratuitamente!',
-    cta_note: 'Nessun vincolo. Risposta entro 12 ore lavorative.',
+    subtitle: 'GeoTapp Flow e TimeTracker documentano la presenza delle guardie giurate ai posti assegnati: posizione e ora a ogni timbratura, foto di prova, report sigillati. Turni, richieste di cambio turno e comunicazioni in un\'unica piattaforma. L\'app per vigilanza privata che sigilla ogni turno, ogni ronda, ogni presenza.',
+    cta_primary: 'Prova gratis per 14 giorni',
+    cta_note: 'La prova non ti vincola a niente. Nessuna carta di credito.',
   },
   pain: {
     title: 'I problemi che conosci già',
     items: [
       {
         title: 'Dimostrare la presenza ai posti assegnati',
-        desc: 'Il cliente contesta la presenza della guardia in un orario preciso. Senza prove GPS e timestamp verificabili, la disputa è aperta e rischi di perdere il contratto.',
+        desc: 'Il cliente contesta la presenza della guardia in un orario preciso. Senza posizione e orari registrati resta la tua parola contro la sua, e rischi il contratto.',
       },
       {
         title: 'Report incidenti senza prova di posizione',
-        desc: 'Un rapporto di incidente scritto a mano non ha valore se non è collegato a una posizione GPS sigillata e a un orario sigillato. I verbali cartacei sono troppo facili da contestare.',
+        desc: 'Un rapporto di incidente scritto a mano, senza posizione né orario registrati, è facile da contestare.',
       },
       {
         title: 'Passaggio di consegne ancora su carta',
-        desc: 'Il cambio turno tra guardie avviene con foglietti o telefonate. Informazioni critiche si perdono, le responsabilità non sono chiare e l\'audit è impossibile.',
+        desc: 'Il cambio turno tra guardie avviene con foglietti o telefonate. Informazioni critiche si perdono, le responsabilità non sono chiare e ricostruire dopo è difficile.',
       },
     ],
   },
@@ -36,7 +36,7 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'La guardia timbra al posto assegnato',
-        desc: 'GeoTapp TimeTracker registra ingresso, uscita, posizione GPS e foto con timestamp sigillati. Ogni ronda è documentata automaticamente dallo smartphone.',
+        desc: 'GeoTapp TimeTracker registra entrata, pause e uscita con posizione e ora, e le foto di prova ai punti di controllo. Ogni controllo lo documenta la guardia con un gesto: fra una timbratura e l\'altra non si registra nulla in automatico.',
       },
       {
         title: 'Il responsabile vede i turni appena arrivano',
@@ -44,18 +44,18 @@ const content: SettoreContent = {
       },
       {
         title: 'Il report è la tua prova, difendibile in audit',
-        desc: 'A fine turno il registro presenze è generato con dati GPS reali: ogni modifica è rilevabile. Il cliente o la Prefettura possono verificarne l\'integrità in autonomia, l\'audit diventa una formalità.',
+        desc: 'A fine turno il registro presenze è generato con le posizioni registrate alle timbrature, e ogni modifica è rilevabile. Il cliente o la Prefettura possono verificarne l\'integrità da soli.',
       },
     ],
   },
   differenza: {
     title: 'Software per aziende di sicurezza: registro presenze o prove verificabili?',
-    subtitle: 'La maggior parte dei software registra i turni. GeoTapp sigilla ogni presenza con prove difendibili.',
+    subtitle: 'La maggior parte dei software registra i turni. GeoTapp sigilla ogni presenza in un report verificabile.',
     rows: [
       {
         label: 'Cosa registra',
         competitor: 'Orario di inizio/fine turno',
-        geotapp: 'Orario + GPS verificato + foto + posizione al posto assegnato',
+        geotapp: 'Orario + posizione alla timbratura + foto + posizione al posto assegnato',
       },
       {
         label: 'Chi può verificare',
@@ -64,13 +64,13 @@ const content: SettoreContent = {
       },
       {
         label: 'In caso di contestazione',
-        competitor: 'Dato non difendibile',
+        competitor: 'Solo la tua parola',
         geotapp: 'Report sigillato, verificabile da terzi',
       },
       {
         label: 'Prova di ronda',
         competitor: 'Assente o su carta',
-        geotapp: 'GPS + timestamp + foto al checkpoint',
+        geotapp: 'Posizione, ora e foto al punto di controllo',
       },
       {
         label: 'Conformità GDPR',
@@ -90,36 +90,36 @@ const content: SettoreContent = {
     ],
     dopo: [
       'Il cliente contesta la presenza della guardia in un orario specifico.',
-      'Apri il report: GPS al posto assegnato, timestamp, foto del sito.',
-      'Glielo mandi. La contestazione si chiude in trenta secondi.',
-      'Il contratto è al sicuro.',
+      'Apri il report: posizione al posto assegnato, orari, foto del sito.',
+      'Glielo mandi, e lui lo verifica da solo.',
+      'Hai una prova da mostrare.',
     ],
   },
 
   scenario: {
-    title: 'Caso reale',
-    body: 'Il committente afferma che la guardia non era al suo posto in un orario critico. Con GeoTapp apri il report di turno: GPS verificato al checkpoint, timestamp sigillato, foto del sito, tutto generato automaticamente dallo smartphone della guardia durante il servizio.',
-    resolution: 'La contestazione cade. Il contratto rimane.',
+    title: 'Un caso tipico',
+    body: 'Il committente afferma che la guardia non era al suo posto in un orario critico. Con GeoTapp apri il report di turno: posizione registrata al checkpoint, timestamp sigillato, foto del sito, tutto registrato dallo smartphone della guardia quando ha timbrato e scattato le foto.',
+    resolution: 'Invece di una parola contro l\'altra, c\'è un documento che il committente controlla da solo.',
   },
 
   features: {
-    title: 'Software per aziende di sicurezza: turni sigillati, ronde documentate.',
+    title: 'Software per aziende di sicurezza: turni sigillati, controlli documentati.',
     items: [
       {
         title: 'Timbratura GPS verificabile per ogni guardia',
-        desc: 'Ogni presenza è collegata a posizione, timestamp e posto assegnato. Difendibile davanti al cliente, all\'ispettorato del lavoro e in sede di audit contrattuale.',
+        desc: 'Ogni presenza è collegata a posizione, ora e posto assegnato. Da mostrare al cliente, all\'ispettorato del lavoro o in un audit contrattuale quando serve.',
       },
       {
         title: 'Tracciamento qualifiche e scadenze licenze',
-        desc: 'Tieni traccia delle qualifiche guardia giurata, dei rinnovi e delle date di scadenza per ogni operatore. Nessun lavoratore non qualificato in servizio per errore.',
+        desc: 'Tieni nell\'anagrafica di ogni guardia ruolo, contatti e posti assegnati, e decidi chi vede cosa nell\'app.',
       },
       {
         title: 'Export compatibile con Zucchetti e TeamSystem',
-        desc: 'Esporta le presenze mensili nel formato richiesto dai principali software paghe. L\'elaborazione paghe diventa un\'operazione rapida e senza errori di ricopiatura.',
+        desc: 'Esporta le presenze del mese in Excel o CSV, pronte per il consulente del lavoro. L\'elaborazione paghe diventa un\'operazione rapida e senza errori di ricopiatura.',
       },
       {
         title: 'Passaggio di consegne digitale',
-        desc: 'Il cambio turno viene registrato digitalmente: note operative, stato dei posti e responsabilità. Informazioni critiche non si perdono più tra un turno e l\'altro.',
+        desc: 'Le richieste di cambio turno passano dall\'app e le comunicazioni restano nel canale della commessa: meno foglietti e telefonate fra un turno e l\'altro.',
       },
       {
         title: 'Dashboard multi-sito aggiornata a ogni timbratura',
@@ -127,24 +127,24 @@ const content: SettoreContent = {
       },
       {
         title: 'Report difendibili in audit e in Prefettura',
-        desc: 'Ogni turno genera un report sigillato con GPS, timestamp e prove fotografiche. Difendibile davanti al cliente, alla Prefettura e in qualsiasi sede di verifica contrattuale.',
+        desc: 'Ogni turno genera un report sigillato con posizioni, orari e foto di prova, che cliente e Prefettura possono verificare da soli.',
       },
     ],
   },
 
   cta_mid: {
     title: 'Vuoi vedere come funziona su un caso reale di contestazione?',
-    body: 'Ti mostriamo il flusso completo: dalla guardia che timbra al posto assegnato al report che riceve il committente. In 20 minuti capisci se fa per te, senza impegno.',
-    cta: 'Inizia subito gratuitamente!',
+    body: 'Provalo sul servizio vero, dalla guardia che timbra al posto assegnato al report che riceve il committente: 14 giorni gratis, senza carta di credito.',
+    cta: 'Prova gratis per 14 giorni',
   },
 
   trust: {
-    title: 'Ogni modifica ai nostri report si vede. Non da te. Non da noi.',
-    body: 'I report GeoTapp sono generati dal sistema nel momento del turno. Non esiste un pannello dove "correggere" un orario o spostare una foto. Il dato è quello, firmato digitalmente, con GPS reale. Quando lo mostri al committente o alla Prefettura, regge.',
+    title: 'Ogni modifica ai nostri report si vede, anche se la fai tu o la facciamo noi.',
+    body: 'I report GeoTapp sono generati dal sistema nel momento del turno. Una volta sigillato il report, correggere un orario o spostare una foto rompe il sigillo, e la verifica lo segnala. Chi lo riceve, committente o Prefettura, può controllarlo da solo.',
     badge: 'Verificabile da chiunque, senza accesso al tuo account',
   },
   testimonial: {
-    quote: 'Con GeoTapp abbiamo eliminato le contestazioni sui turni. I clienti ricevono il registro presenze firmato digitalmente con coordinate GPS. Non c\'è niente da discutere.',
+    quote: 'Ai clienti mandiamo il registro presenze sigillato, con le posizioni delle timbrature: quando contestano, controllano da soli.',
     author: 'Luca M.',
     role: 'Direttore Operativo, agenzia di vigilanza privata',
   },
@@ -154,27 +154,27 @@ const content: SettoreContent = {
     items: [
       {
         q: 'GeoTapp è adatto alla vigilanza privata e alle guardie giurate?',
-        a: 'Sì. GeoTapp è usato da agenzie di vigilanza privata per documentare le presenze ai posti assegnati con GPS verificato, gestire i cambi turno e tracciare le qualifiche del personale in conformità al CCNL Vigilanza Privata GPG.',
+        a: 'Sì. GeoTapp è usato da agenzie di vigilanza privata per documentare le presenze ai posti assegnati con la posizione, gestire turni e cambi turno e raccogliere le foto di prova ai punti di controllo.',
       },
       {
         q: 'Come aiuta GeoTapp nella gestione dei report incidenti?',
-        a: 'TimeTracker collega ogni evento a posizione GPS sigillata e timestamp sigillato. Il report di incidente generato da GeoTapp include coordinate, ora e foto, e il committente può verificare da solo che il documento non sia stato modificato.',
+        a: 'TimeTracker collega ogni evento a posizione e ora, sigillate nel report. Il report di incidente generato da GeoTapp include coordinate, ora e foto, e il committente può verificare da solo che il documento non sia stato modificato.',
       },
       {
-        q: 'GeoTapp supporta il passaggio di consegne digitale tra guardie?',
-        a: 'Sì. Il cambio turno viene registrato digitalmente con firma, note operative e stato dei posti. Il responsabile ha visibilità completa sulla continuità del servizio senza dipendere da comunicazioni verbali.',
+        q: 'GeoTapp aiuta nel cambio turno tra guardie?',
+        a: 'Sì. Le richieste di cambio turno passano dall\'app, i turni sono nel calendario di Flow e le comunicazioni restano nel canale della commessa. Il responsabile vede chi copre cosa senza dipendere da telefonate.',
       },
     ],
   },
   cta: {
     title: 'Il turno c\'è stato. Ora dimostralo.',
-    subtitle: 'GeoTapp genera prove verificabili di ogni presidiamento, report sigillati che il cliente e la Prefettura possono controllare da soli.',
-    primary: 'Inizia subito gratuitamente!',
+    subtitle: 'GeoTapp genera prove verificabili di ogni presidio, report sigillati che il cliente e la Prefettura possono controllare da soli.',
+    primary: 'Prova gratis per 14 giorni',
     secondary: 'Vedi i Prezzi',
   },
   pricing_hint: {
-    label: 'A partire da',
-    per: 'operatore/mese',
+    label: 'Postazioni TimeTracker da',
+    per: 'operatore al mese, più il piano Flow da 39 €/mese',
     note: 'Prova gratuita 14 giorni',
   },
 
@@ -182,23 +182,23 @@ const content: SettoreContent = {
   schema_faq: [
     {
       question: 'GeoTapp funziona per la gestione di guardie giurate e ronde di sicurezza?',
-      answer: 'Sì. GeoTapp permette alle aziende di sicurezza di sigillare ogni turno e ogni ronda: le guardie timbrano con GPS verificato dallo smartphone, producendo prove documentabili del servizio svolto.',
+      answer: 'Sì. GeoTapp permette alle aziende di sicurezza di sigillare ogni turno e ogni ronda: le guardie timbrano dallo smartphone con la posizione, e ne escono prove documentate del servizio svolto.',
     },
     {
       question: 'Come documento le ronde e i controlli periodici?',
-      answer: 'Ogni controllo viene registrato con GeoTapp TimeTracker: orario, posizione GPS verificata, foto del sito e note. Il report sigillato è disponibile per il committente appena generato, o al termine del turno.',
+      answer: 'Ogni controllo viene registrato con GeoTapp TimeTracker: orario, posizione, foto del sito e note. Il report sigillato è disponibile per il committente appena generato, o al termine del turno.',
     },
     {
       question: 'Posso dimostrare al cliente che le ronde sono state effettuate regolarmente?',
-      answer: 'Sì. I report GeoTapp sono sigillati digitalmente e includono GPS, timestamp e prove fotografiche. Il committente può verificare autonomamente che ogni ronda sia stata eseguita nell\'orario e nel luogo previsti.',
+      answer: 'Sì. I report GeoTapp sono sigillati e includono posizioni, orari e foto di prova dei punti di controllo. Il committente può verificare da solo che il report non sia stato modificato e vedere a che ora e dove la guardia ha timbrato.',
     },
     {
-      question: 'Il sistema è conforme alle normative sul lavoro notturno e ai CCNL della vigilanza?',
-      answer: 'GeoTapp traccia orari, straordinari e presenze secondo le voci dei principali CCNL del settore vigilanza e sicurezza, ed è costruito per stare dentro i paletti del GDPR per la geolocalizzazione dei dipendenti.',
+      question: 'GeoTapp aiuta con il lavoro notturno e i CCNL della vigilanza?',
+      answer: 'GeoTapp registra orari, straordinari e maggiorazioni notturne e festive, e li esporta per il consulente del lavoro, che li applica secondo il CCNL. È costruito per stare dentro i paletti del GDPR: posizione solo quando la guardia timbra.',
     },
     {
       question: 'Funziona anche per coordinare più squadre su siti diversi?',
-      answer: 'Sì. Con GeoTapp Flow, il responsabile vede l\'ultima posizione timbrata di tutte le guardie, assegna i turni, gestisce le sostituzioni urgenti e raccoglie i report da tutti i siti in un\'unica dashboard.',
+      answer: 'Sì. Con GeoTapp Flow, il responsabile vede l\'ultima posizione timbrata di tutte le guardie, assegna i turni, gestisce le sostituzioni urgenti e raccoglie i report da tutti i siti in un\'unica schermata.',
     },
   ],
 };

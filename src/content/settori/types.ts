@@ -26,10 +26,16 @@ export interface SettoreContent {
     title: string;
     items: Array<{ title: string; desc: string }>;
   };
+  /**
+   * Testimonianza. Si mostra SOLO con `fonte` (dove si puo' controllare che la persona
+   * esiste e ha detto quelle parole). Dal 30/09/2026 le testimonianze senza fonte non
+   * vanno in pagina: una recensione che non si puo' provare non si pubblica.
+   */
   testimonial: {
     quote: string;
     author: string;
     role: string;
+    fonte?: string;
   };
   faq: {
     title: string;

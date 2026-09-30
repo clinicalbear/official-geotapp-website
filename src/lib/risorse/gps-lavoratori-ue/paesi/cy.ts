@@ -135,7 +135,7 @@ export const cipro: SchedaPaese = {
       },
       risposta: 'no',
       dettaglio: {
-        it: "non serve un'autorizzazione preventiva del Garante; con il GDPR il vecchio regime di notifica e stato abolito.",
+        it: "non serve un'autorizzazione preventiva del Garante; con il GDPR il vecchio regime di notifica è stato abolito.",
         en: 'no prior authorisation from the Commissioner is needed; with the GDPR the old notification regime has been abolished.',
         de: 'eine vorherige Genehmigung des Commissioner ist nicht erforderlich; mit der DSGVO wurde das alte Meldesystem abgeschafft.',
         fr: "aucune autorisation préalable du Commissioner n'est requise; avec le RGPD l'ancien régime de notification a été aboli.",
@@ -155,7 +155,7 @@ export const cipro: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "nel rapporto di lavoro il consenso non e liberamente prestato; la base usuale e l'interesse legittimo, con un test di bilanciamento documentato che non prevalga sui diritti dei lavoratori.",
+        it: "nel rapporto di lavoro il consenso non è liberamente prestato; la base usuale è l'interesse legittimo, con un test di bilanciamento documentato che non prevalga sui diritti dei lavoratori.",
         en: 'in the employment relationship consent is not freely given; the usual basis is legitimate interest, with a documented balancing test that does not override the workers rights.',
         de: 'im Arbeitsverhältnis wird die Einwilligung nicht freiwillig erteilt; die übliche Grundlage ist das berechtigte Interesse, mit einer dokumentierten Abwägung, die die Rechte der Beschäftigten nicht überwiegt.',
         fr: "dans la relation de travail le consentement n'est pas librement donne; la base habituelle est l'intérêt légitime, avec un test de mise en balance documente qui ne prévaut pas sur les droits des travailleurs.",
@@ -175,7 +175,7 @@ export const cipro: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: 'il tracciamento GPS continuo e sempre attivo viola la minimizzazione; va limitato a quanto necessario (orario di lavoro, rischio effettivo).',
+        it: 'il tracciamento GPS continuo è sempre attivo viola la minimizzazione; va limitato a quanto necessario (orario di lavoro, rischio effettivo).',
         en: 'continuous, always-on GPS tracking breaches data minimisation; it must be limited to what is necessary (working hours, actual risk).',
         de: 'kontinuierliche, dauerhaft aktive GPS-Ortung verstößt gegen die Datenminimierung; sie ist auf das Notwendige zu beschränken (Arbeitszeit, tatsächliches Risiko).',
         fr: "le suivi GPS continu et toujours actif viole la minimisation; il doit être limite a ce qui est nécessaire (temps de travail, risque effectif).",
@@ -195,7 +195,7 @@ export const cipro: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: 'una DPIA e necessaria quando il monitoraggio dei dipendenti e sistematico; il Garante valuta caso per caso la proporzionalità.',
+        it: 'una DPIA è necessaria quando il monitoraggio dei dipendenti e sistematico; il Garante valuta caso per caso la proporzionalità.',
         en: 'a DPIA is required when employee monitoring is systematic; the Commissioner assesses proportionality case by case.',
         de: 'eine DSFA ist erforderlich, wenn die Überwachung der Beschäftigten systematisch ist; der Commissioner prüft die Verhältnismäßigkeit im Einzelfall.',
         fr: "une AIPD est nécessaire lorsque la surveillance des salaries est systématique; le Commissioner apprécie la proportionnalité au cas par cas.",

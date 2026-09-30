@@ -125,7 +125,7 @@ export const francia: SchedaPaese = {
       },
       risposta: 'no',
       dettaglio: {
-        it: "La Francia non prevede un'autorizzazione preventiva di un'autorità del lavoro, ne più dichiarazioni preventive alla CNIL (abolite dal 25 maggio 2018 col GDPR). Il modello e basato sulla responsabilizzazione: registro dei trattamenti e AIPD quando il rischio e elevato.",
+        it: "La Francia non prevede un'autorizzazione preventiva di un'autorità del lavoro, ne più dichiarazioni preventive alla CNIL (abolite dal 25 maggio 2018 col GDPR). Il modello è basato sulla responsabilizzazione: registro dei trattamenti e AIPD quando il rischio e elevato.",
         en: 'France does not require prior authorisation from a labour authority, nor any further prior declarations to the CNIL (abolished on 25 May 2018 with the GDPR). The model is based on accountability: a record of processing activities and a DPIA where the risk is high.',
         de: 'Frankreich sieht keine vorherige Genehmigung einer Arbeitsbehörde vor und auch keine vorherigen Meldungen an die CNIL mehr (seit dem 25. Mai 2018 mit der DSGVO abgeschafft). Das Modell beruht auf Rechenschaftspflicht: Verzeichnis der Verarbeitungstätigkeiten und DSFA, wenn das Risiko hoch ist.',
         fr: "La France ne prévoit pas d autorisation préalable d une autorité du travail, ni de déclarations préalables a la CNIL (supprimées depuis le 25 mai 2018 avec le RGPD). Le modèle repose sur la responsabilisation: registre des traitements et AIPD lorsque le risque est eleve.",
@@ -242,7 +242,7 @@ export const francia: SchedaPaese = {
     {
       passo: 3,
       descrizione: {
-        it: 'Verifica la sussidiarieta: la geolocalizzazione non e ammessa se esiste già un mezzo meno intrusivo per la stessa finalità.',
+        it: 'Verifica la sussidiarieta: la geolocalizzazione non è ammessa se esiste già un mezzo meno intrusivo per la stessa finalità.',
         en: 'Check subsidiarity: geolocation is not allowed if a less intrusive means already exists for the same purpose.',
         de: 'Prüfen Sie die Subsidiarität: Geolokalisierung ist nicht zulässig, wenn für denselben Zweck bereits ein weniger eingriffsintensives Mittel besteht.',
         fr: "Vérifiez la subsidiarité: la géolocalisation n est pas admise s il existe déjà un moyen moins intrusif pour la même finalité.",

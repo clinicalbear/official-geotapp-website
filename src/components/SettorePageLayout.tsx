@@ -193,7 +193,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
     nb: 'Andre sektorer', ru: 'Другие отрасли',
   };
   const otherNames = OTHER_SETTORI[locale] ?? OTHER_SETTORI.en;
-  const otherSettori = (['pulizie', 'installatori', 'sicurezza', 'elettricisti', 'idraulici', 'termoidraulici', 'edilizia', 'impianti', 'manutenzione', 'impresa-di-pulizie'] as SettoreSlug[]).filter((s) => s !== settore);
+  const otherSettori = (['pulizie', 'installatori', 'sicurezza', 'elettricisti', 'idraulici', 'termoidraulici', 'edilizia', 'impianti', 'manutenzione'] as SettoreSlug[]).filter((s) => s !== settore);
 
   // Risorse normative (audit internal linking 2026-05-23): stessa mappa di prima.
   const NORM_TITLE: Record<string, string> = {
@@ -215,8 +215,8 @@ export default function SettorePageLayout({ content, locale, settore, children }
         label: 'Geolocalizzazione dipendenti e GDPR: cosa è permesso e cosa no' },
       { href: '/blog/2026/04/22/fac-simile-informativa-gps-dipendenti-2026/',
         label: 'Fac-simile informativa GPS dipendenti 2026' },
-      { href: '/blog/2025/11/20/geolocalizzazione-dipendenti-gdpr-guida-legale/',
-        label: 'Garante Privacy e geolocalizzazione: linee guida 2026' },
+      { href: '/blog/2026/09/18/accordo-sindacale-art-4-statuto-lavoratori/',
+        label: 'Accordo sindacale art. 4: cosa scrivere davvero' },
     ],
     en: [
       { href: '/blog/en/2026/04/13/ico-employee-gps-tracking-uk-gdpr-2026/',
@@ -517,7 +517,8 @@ export default function SettorePageLayout({ content, locale, settore, children }
         </section>
       )}
 
-      {/* ── TESTIMONIAL ── */}
+      {/* ── TESTIMONIAL: solo se ha una fonte verificabile ── */}
+      {content.testimonial.fonte && (
       <section className="sec ink">
         <div className="w">
           <div className="qt r-s" style={{ margin: '0 auto', maxWidth: '64ch' }}>
@@ -529,6 +530,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
           </div>
         </div>
       </section>
+      )}
 
       {/* ── PROVA VISIVA ── */}
       {content.prova_visiva && (

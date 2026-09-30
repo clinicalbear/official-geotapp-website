@@ -99,7 +99,7 @@ export function buildRighe(
 
 const CONTENUTI: Record<CdLocale, CdContenuto> = {
   it: {
-    heading: 'Genera la politica di conservazione dei dati RH',
+    heading: 'Genera la politica di conservazione dei dati del personale',
     intro: 'Scegli il Paese e i tipi di dato che gestisci sul personale: ottieni una tabella di conservazione con durate consigliate, una nota per ciascuna e l\'export in PDF. Le durate sono indicative — per i documenti contabili usiamo la legge del Paese scelto. Tutto avviene nel tuo browser.',
     azienda: 'Ragione sociale / nome azienda (facoltativo)',
     aziendaPlaceholder: 'Es. Rossi Pulizie S.r.l.',
@@ -114,7 +114,7 @@ const CONTENUTI: Record<CdLocale, CdContenuto> = {
     colDurata: 'Durata consigliata',
     colNota: 'Nota',
     notaLegale: 'Durate indicative, da adattare al tuo caso e alla normativa nazionale. Questa è una risorsa informativa, non una consulenza legale.',
-    docTitolo: 'Politica di conservazione dei dati RH',
+    docTitolo: 'Politica di conservazione dei dati del personale',
     docFooter: 'Bozza generata gratuitamente con GeoTapp',
     unitAnni: 'anni',
     perPaeseNota: 'Fissato dalla legge contabile/fiscale nazionale',
@@ -129,7 +129,7 @@ const CONTENUTI: Record<CdLocale, CdContenuto> = {
     faq: { title: 'Domande frequenti', items: [
       { q: 'Le durate sono vincolanti?', a: 'No, sono indicative: un punto di partenza ragionevole. Per i documenti contabili usiamo la legge del Paese che scegli; per il resto vale il principio di tenere i dati il minimo necessario. Verifica sempre la tua situazione specifica.' },
       { q: 'I miei dati restano privati?', a: 'Sì. La tabella si genera interamente nel tuo browser: niente azienda, niente logo viene inviato a un server.' },
-      { q: 'Perché conservare meno è meglio?', a: 'Più a lungo tieni i dati, più grande è il rischio in caso di violazione e più difficile è giustificarne la necessità. Cancellare a scadenza è parte della conformità, non un optional.' },
+      { q: 'Perché conservare meno è meglio?', a: 'Più a lungo tieni i dati, più grande è il rischio in caso di violazione e più difficile è giustificarne la necessità. Cancellare a scadenza è parte della conformità, non una scelta facoltativa.' },
     ] },
   },
   en: {

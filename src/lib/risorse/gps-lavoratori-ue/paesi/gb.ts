@@ -138,7 +138,7 @@ export const regnoUnito: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "Il consenso di norma non e valido per lo squilibrio di potere; la base usuale e l'interesse legittimo con valutazione documentata (LIA). I lavoratori vanno informati in modo chiaro; la sorveglianza occulta solo in casi eccezionali.",
+        it: "Il consenso di norma non è valido per lo squilibrio di potere; la base usuale è l'interesse legittimo con valutazione documentata (LIA). I lavoratori vanno informati in modo chiaro; la sorveglianza occulta solo in casi eccezionali.",
         en: 'Consent is usually not valid because of the imbalance of power; the usual basis is legitimate interests with a documented assessment (LIA). Workers must be informed clearly; covert surveillance is allowed only in exceptional cases.',
         de: 'Die Einwilligung ist wegen des Machtungleichgewichts in der Regel nicht gültig; üblich ist das berechtigte Interesse mit einer dokumentierten Bewertung (LIA). Die Beschäftigten müssen klar informiert werden; verdeckte Überwachung ist nur in Ausnahmefällen zulässig.',
         fr: "Le consentement n'est en général pas valable en raison du déséquilibre de pouvoir ; la base habituelle est l'intérêt légitime avec une évaluation documentée (LIA). Les travailleurs doivent être informés clairement ; la surveillance cachée n'est admise que dans des cas exceptionnels.",

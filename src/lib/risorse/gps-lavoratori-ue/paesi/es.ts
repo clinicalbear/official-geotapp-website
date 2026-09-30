@@ -81,7 +81,7 @@ export const spagna: SchedaPaese = {
     urlFonte: FONTE_AEPD.url,
     verificatoIl: '2026-06-15',
     note: {
-      it: "Per le aziende private l'autorità competente e sempre l'AEPD nazionale. Alcune comunità autonome (Catalogna APDCAT, Paesi Baschi AVPD) hanno un'autorità propria, ma riguarda soprattutto il settore pubblico della regione.",
+      it: "Per le aziende private l'autorità competente è sempre l'AEPD nazionale. Alcune comunità autonome (Catalogna APDCAT, Paesi Baschi AVPD) hanno un'autorità propria, ma riguarda soprattutto il settore pubblico della regione.",
       en: "For private companies the competent authority is always the national AEPD. Some autonomous communities (Catalonia APDCAT, Basque Country AVPD) have their own authority, but it concerns mainly the region's public sector.",
       de: "Bei privaten Unternehmen ist die zuständige Behörde stets die nationale AEPD. Einige autonome Gemeinschaften (Katalonien APDCAT, Baskenland AVPD) verfügen über eine eigene Behörde, doch betrifft dies vor allem den öffentlichen Sektor der jeweiligen Region.",
       fr: "Pour les entreprises privées, l'autorité compétente est toujours l'AEPD nationale. Certaines communautés autonomes (Catalogne APDCAT, Pays basque AVPD) disposent de leur propre autorité, mais cela concerne surtout le secteur public de la région.",
@@ -202,7 +202,7 @@ export const spagna: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "Il trattamento si fonda sul potere di controllo del datore (art. 20.3 Statuto) e sull'esecuzione del rapporto di lavoro, nei limiti del GDPR; non e ammessa una finalità più ampia che consenta l'osservazione continua dei lavoratori.",
+        it: "Il trattamento si fonda sul potere di controllo del datore (art. 20.3 Statuto) e sull'esecuzione del rapporto di lavoro, nei limiti del GDPR; non è ammessa una finalità più ampia che consenta l'osservazione continua dei lavoratori.",
         en: "The processing is based on the employer's power of control (art. 20.3 Statute) and on the performance of the employment relationship, within the limits of the GDPR; a broader purpose that would allow the continuous observation of workers is not permitted.",
         de: "Die Verarbeitung stützt sich auf die Kontrollbefugnis des Arbeitgebers (Art. 20.3 Statut) und auf die Erfüllung des Arbeitsverhältnisses, innerhalb der Grenzen der DSGVO; ein weiter gehender Zweck, der eine fortlaufende Beobachtung der Beschäftigten erlauben würde, ist nicht zulässig.",
         fr: "Le traitement repose sur le pouvoir de contrôle de l'employeur (art. 20.3 Statut) et sur l'exécution de la relation de travail, dans les limites du RGPD ; une finalité plus large qui permettrait l'observation continue des salaries n'est pas admise.",

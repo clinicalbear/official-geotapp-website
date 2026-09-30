@@ -838,7 +838,9 @@
     "trust_gdpr": "No continuous tracking",
     "trust_offline": "Offline verifier",
     "form_field_employees": "How many people work in the field?",
-    "form_field_employees_hint": "Optional. It helps us write to you about your case, not a generic one."
+    "form_field_employees_hint": "Optional. It helps us write to you about your case, not a generic one.",
+    "trust_gps": "Location only at clock-in",
+    "trust_no_card": "No credit card required"
   },
   "demo": {
     "page_title": "Book your Personalised Demo",
