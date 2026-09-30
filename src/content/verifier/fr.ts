@@ -171,7 +171,7 @@ const fr: VerifierCopy = {
     'Idéal pour les audits, les juristes, les conseils',
     'La version HTML ne demande aucune installation ; celle en ligne de commande nécessite Node.js',
   ],
-  compare_online_title: 'Online (this site)',
+  compare_online_title: 'En ligne (ce site)',
   compare_online_items: [
     'Aucun outil à installer',
     'Résultat immédiat dans le navigateur',
