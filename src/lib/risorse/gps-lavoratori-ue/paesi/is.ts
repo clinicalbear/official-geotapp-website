@@ -23,7 +23,7 @@ const FONTE_REGOLE_50_2023 = {
 const FONTE_PERSUVERND_GPS = {
   titolo:
     'Persónuvernd (Garante islandese), FAQ sul GPS e i dispositivi di localizzazione',
-  url: 'https://www.personuvernd.is/einstaklingar/spurt-og-svarad/allar-spurningar-og-svor/hvada-reglur-gilda-um-okurita-og-annan-rafraenan-stadsetningarbunad',
+  url: 'https://island.is/s/personuvernd/okuritar',
 };
 const FONTE_PERSUVERND_DPIA = {
   titolo:
@@ -37,7 +37,7 @@ const FONTE_PERSUVERND_RECLAMO = {
 const FONTE_PERSUVERND_ISLANDSPOSTUR = {
   titolo:
     'Persónuvernd, decisione Islandspostur (uso illecito del GPS su un dipendente)',
-  url: 'https://www.personuvernd.is/urlausnir/rafraen-voktun-af-halfu-islandsposts',
+  url: 'https://island.is/s/personuvernd/urskurdir-akvardanir-og-alit/rafraen-voktun-af-halfu-islandsposts',
 };
 const FONTE_GDPR = {
   titolo: 'Regolamento UE 2016/679 (GDPR)',
@@ -85,7 +85,7 @@ export const islanda: SchedaPaese = {
       ru: 'Persónuvernd (Исландский орган по защите данных)',
     },
     portale: FONTE_PERSUVERND_RECLAMO.url,
-    urlFonte: 'https://www.personuvernd.is/',
+    urlFonte: 'https://island.is/s/personuvernd',
     verificatoIl: '2026-06-15',
     note: {
       it: "L'Islanda (SEE) ha un'unica autorità nazionale, il Persónuvernd; nessuna ripartizione regionale.",
@@ -310,5 +310,5 @@ export const islanda: SchedaPaese = {
     FONTE_GDPR,
   ],
 
-  aggiornatoIl: '2026-06-15',
+  aggiornatoIl: '2026-09-30',
 };

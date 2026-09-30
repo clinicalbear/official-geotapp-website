@@ -32,6 +32,11 @@ const FONTE_UOOU_RECLAMO = {
     'UOOU SR, presentare una proposta di avvio del procedimento (reclamo)',
   url: 'https://www.dataprotection.gov.sk/sk/ine/vyhladavanie-sluzby-formulara-elektronicku-komunikaciu/podavanie-navrhu-zacatie-konania/',
 };
+const FONTE_UOOU_RELAZIONE_2025 = {
+  titolo:
+    'UOOU SR, relazione sullo stato della protezione dei dati 2025 (par. 9.2.1, trattamento di dati di geolocalizzazione)',
+  url: 'https://dataprotection.gov.sk/files/annual-reports/uoou_sprava-stave-ochrany-osobnych-udajov_2025.pdf',
+};
 const FONTE_GDPR = {
   titolo: 'Regolamento UE 2016/679 (GDPR)',
   url: 'https://eur-lex.europa.eu/eli/reg/2016/679/oj',
@@ -272,14 +277,14 @@ export const slovacchia: SchedaPaese = {
       nl: '20 miljoen EUR of 4% van de wereldwijde jaaromzet',
     },
     casoCitato: {
-      it: 'Massimale di legge, non una multa inflitta. Vale l art. 83 GDPR, applicabile in Slovacchia. Non risulta pubblicata dall UOOU SR una sanzione specifica sul GPS applicato ai dipendenti, e la relazione annuale 2024 dell autorita non ne riporta.',
-      en: 'Statutory ceiling, not a fine that was imposed. Article 83 GDPR applies in Slovakia. No specific UOOU SR fine on GPS applied to employees is published, and the authority annual report for 2024 does not record one.',
-      de: 'Gesetzlicher Höchstbetrag, keine verhängte Geldbuße. Es gilt Art. 83 DSGVO, der in der Slowakei anwendbar ist. Eine spezifische Geldbuße der UOOU SR zu GPS bei Beschäftigten ist nicht veröffentlicht, und der Jahresbericht 2024 der Behörde nennt keine.',
-      fr: 'Plafond legal, et non une amende infligee. L article 83 du RGPD s applique en Slovaquie. Aucune amende specifique de l UOOU SR sur le GPS applique aux salaries n est publiee, et le rapport annuel 2024 de l autorite n en mentionne aucune.',
-      es: 'Tope legal, no una multa impuesta. Se aplica el art. 83 del RGPD en Eslovaquia. No consta publicada una sanción especifica de la UOOU SR sobre el GPS aplicado a los empleados, y la memoria anual de 2024 de la autoridad no recoge ninguna.',
-      nl: 'Wettelijk maximum, geen opgelegde boete. Artikel 83 AVG geldt in Slowakije. Een specifieke boete van de UOOU SR over GPS bij werknemers is niet gepubliceerd, en het jaarverslag 2024 van de autoriteit vermeldt er geen.',
+      it: "Massimale di legge, non una multa inflitta: vale l'art. 83 GDPR. Nella relazione annuale 2025 (par. 9.2.1) l'UOOU SR riporta un caso di geolocalizzazione dei dipendenti: un datore registrava e conservava la posizione di chi lavorava da casa nel momento in cui timbrava l'inizio e la fine del lavoro su un terminale virtuale. Mancava una base giuridica, perché il Codice del lavoro impone di registrare l'orario e non la posizione, e l'informativa era incompleta. L'autorità ha inflitto una multa e misure correttive, ma l'importo non è pubblicato.",
+      en: 'Statutory ceiling, not a fine that was imposed: Article 83 GDPR applies. In its 2025 annual report (section 9.2.1) the UOOU SR describes a case of employee geolocation: an employer recorded and kept the location of people working from home at the moment they clocked in and out on a virtual terminal. There was no legal basis, because the Labour Code requires working time to be recorded, not location, and the privacy notice was incomplete. The authority imposed a fine and corrective measures, but the amount is not published.',
+      de: 'Gesetzlicher Höchstbetrag, keine verhängte Geldbuße: Es gilt Art. 83 DSGVO. In ihrem Jahresbericht 2025 (Abschnitt 9.2.1) schildert die UOOU SR einen Fall der Ortung von Beschäftigten: Ein Arbeitgeber erfasste und speicherte den Standort der im Homeoffice Arbeitenden in dem Moment, in dem sie Beginn und Ende der Arbeit an einem virtuellen Terminal stempelten. Es fehlte eine Rechtsgrundlage, weil das Arbeitsgesetzbuch die Erfassung der Arbeitszeit vorschreibt, nicht des Standorts, und die Datenschutzhinweise waren unvollständig. Die Behörde verhängte eine Geldbuße und Abhilfemaßnahmen, der Betrag ist jedoch nicht veröffentlicht.',
+      fr: "Plafond légal, et non une amende infligée : l'article 83 du RGPD s'applique. Dans son rapport annuel 2025 (section 9.2.1), l'UOOU SR décrit un cas de géolocalisation des salariés : un employeur enregistrait et conservait la position des personnes en télétravail au moment où elles pointaient le début et la fin du travail sur un terminal virtuel. Il n'y avait pas de base juridique, car le Code du travail impose d'enregistrer le temps de travail et non la position, et l'information des personnes était incomplète. L'autorité a infligé une amende et des mesures correctrices, mais le montant n'est pas publié.",
+      es: 'Tope legal, no una multa impuesta: se aplica el art. 83 del RGPD. En su memoria anual de 2025 (apartado 9.2.1) la UOOU SR describe un caso de geolocalización de empleados: un empleador registraba y conservaba la ubicación de quienes teletrabajaban en el momento en que fichaban el inicio y el fin del trabajo en un terminal virtual. No había base jurídica, porque el Código del trabajo obliga a registrar el tiempo de trabajo y no la ubicación, y la información a los afectados era incompleta. La autoridad impuso una multa y medidas correctoras, pero el importe no se ha publicado.',
+      nl: 'Wettelijk maximum, geen opgelegde boete: artikel 83 AVG geldt. In haar jaarverslag 2025 (paragraaf 9.2.1) beschrijft de UOOU SR een geval van geolocatie van werknemers: een werkgever registreerde en bewaarde de locatie van thuiswerkers op het moment dat zij begin en einde van het werk op een virtuele terminal registreerden. Er was geen rechtsgrondslag, omdat het Arbeidswetboek voorschrijft de arbeidstijd te registreren en niet de locatie, en de informatie aan de betrokkenen was onvolledig. De autoriteit legde een boete en corrigerende maatregelen op, maar het bedrag is niet gepubliceerd.',
     },
-    urlFonte: 'https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679',
+    urlFonte: FONTE_UOOU_RELAZIONE_2025.url,
     tipoImporto: 'massimale',
   },
 
@@ -288,8 +293,9 @@ export const slovacchia: SchedaPaese = {
     FONTE_UOOU_PROCEDURA,
     FONTE_PODNIKAJTE,
     FONTE_UOOU_RECLAMO,
+    FONTE_UOOU_RELAZIONE_2025,
     FONTE_GDPR,
   ],
 
-  aggiornatoIl: '2026-06-15',
+  aggiornatoIl: '2026-09-30',
 };

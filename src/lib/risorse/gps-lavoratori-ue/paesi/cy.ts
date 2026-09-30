@@ -14,10 +14,19 @@
 import type { SchedaPaese } from '../types';
 
 // URL delle fonti primarie citate.
-const FONTE_EUROFOUND = {
+const FONTE_CY_ARCHIVIO = {
   titolo:
-    'Eurofound, monitoraggio dei lavoratori a Cipro (Legge 125(I)/2018)',
-  url: 'https://apps.eurofound.europa.eu/legislationdb/employee-monitoring-and-surveillance/cyprus',
+    'Commissario cipriota, registro delle attività: abolito l\'obbligo di notifica al Commissario (art. 30 GDPR)',
+  url: 'https://www.gov.cy/dataprotection/plirofories-gia-organismoys/archeio-drastiriotiton/',
+};
+const FONTE_CY_DPIA = {
+  titolo:
+    "Commissario cipriota, valutazione d'impatto (elenco indicativo: monitoraggio sistematico dei dipendenti, GPS)",
+  url: 'https://www.gov.cy/dataprotection/plirofories-gia-organismoys/ektimisi-antiktypoy/',
+};
+const FONTE_CY_LEGGE_125 = {
+  titolo: 'Legge 125(I)/2018 sulla protezione dei dati (art. 36: abrogazione delle leggi 2001-2012)',
+  url: 'https://www.cylaw.org/nomoi/enop/non-ind/2018_1_125/full.html',
 };
 const FONTE_GDPR_13 = {
   titolo: 'GDPR, art. 13 (informazione), testo ufficiale EUR-Lex',
@@ -25,7 +34,7 @@ const FONTE_GDPR_13 = {
 };
 const FONTE_GARANTE_CY = {
   titolo: 'Garante cipriota, pagina ufficiale',
-  url: 'http://www.dataprotection.gov.cy/',
+  url: 'https://www.gov.cy/dataprotection/',
 };
 const FONTE_LOUIS = {
   titolo:
@@ -129,7 +138,7 @@ export const cipro: SchedaPaese = {
         es: 'no se necesita una autorización previa del Commissioner; con el RGPD se ha abolido el antiguo régimen de notificación.',
         nl: 'er is geen voorafgaande toestemming van de Commissioner nodig; met de AVG is het oude meldingsregime afgeschaft.',
       },
-      fonte: FONTE_EUROFOUND,
+      fonte: FONTE_CY_ARCHIVIO,
     },
     {
       voce: {
@@ -189,7 +198,7 @@ export const cipro: SchedaPaese = {
         es: 'una EIPD es necesaria cuando la monitorización de los empleados es sistemática; el Commissioner evalúa la proporcionalidad caso por caso.',
         nl: 'een DPIA is vereist wanneer de monitoring van werknemers systematisch is; de Commissioner beoordeelt de evenredigheid per geval.',
       },
-      fonte: FONTE_EUROFOUND,
+      fonte: FONTE_CY_DPIA,
     },
   ],
 
@@ -294,7 +303,7 @@ export const cipro: SchedaPaese = {
     tipoImporto: 'caso-affine',
   },
 
-  fonti: [FONTE_EUROFOUND, FONTE_GDPR_13, FONTE_GARANTE_CY, FONTE_LOUIS, FONTE_GDPR],
+  fonti: [FONTE_CY_LEGGE_125, FONTE_CY_ARCHIVIO, FONTE_CY_DPIA, FONTE_GDPR_13, FONTE_GARANTE_CY, FONTE_LOUIS, FONTE_GDPR],
 
-  aggiornatoIl: '2026-08-03',
+  aggiornatoIl: '2026-09-30',
 };

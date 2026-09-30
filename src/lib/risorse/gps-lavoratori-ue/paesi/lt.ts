@@ -2,8 +2,8 @@
  * Scheda-paese Lituania per la risorsa "GPS sui lavoratori in UE".
  *
  * Contenuti basati su fonti primarie verificate e citate nella sezione "Fonti":
- * art. 27 del Codice del lavoro lituano (regole interne e informazione sul
- * monitoraggio), lista VDAI dei trattamenti che richiedono una DPIA, decisione
+ * parere WP249 del Gruppo art. 29 (informazione, interesse legittimo, veicoli),
+ * lista VDAI dei trattamenti che richiedono una DPIA, decisione
  * VDAI del 2022 sulla corrispondenza personale di un dipendente, servizi e
  * reclami del VDAI e GDPR.
  *
@@ -14,10 +14,10 @@
 import type { SchedaPaese } from '../types';
 
 // URL delle fonti primarie citate.
-const FONTE_EUROFOUND_ART27 = {
+const FONTE_WP249 = {
   titolo:
-    'Eurofound, monitoraggio dei lavoratori in Lituania (Codice del lavoro art. 27)',
-  url: 'https://apps.eurofound.europa.eu/legislationdb/employee-monitoring-and-surveillance/lithuania',
+    'Gruppo art. 29, parere 2/2017 sul trattamento dei dati sul posto di lavoro (WP249), par. 5.7 veicoli',
+  url: 'https://ec.europa.eu/newsroom/article29/redirection/document/45631',
 };
 const FONTE_VDAI_DPIA = {
   titolo:
@@ -94,23 +94,23 @@ export const lituania: SchedaPaese = {
   checklist: [
     {
       voce: {
-        it: 'Regole interne e informazione preventiva dei lavoratori sul monitoraggio (Codice del lavoro art. 27)',
-        en: 'Internal rules and prior information of workers about monitoring (Labour Code art. 27)',
-        de: 'Interne Regeln und vorherige Information der Arbeitnehmer über die Überwachung (Arbeitsgesetzbuch Art. 27)',
-        fr: 'Règles internes et information préalable des travailleurs sur la surveillance (Code du travail art. 27)',
-        es: 'Normas internas e información previa de los trabajadores sobre la vigilancia (Código del trabajo art. 27)',
-        nl: 'Interne regels en voorafgaande informatie van werknemers over monitoring (Arbeidswetboek art. 27)',
+        it: 'Informazione preventiva e chiara ai lavoratori sul tracciamento (GDPR art. 13)',
+        en: 'Clear prior information to workers about tracking (GDPR art. 13)',
+        de: 'Klare vorherige Information der Arbeitnehmer über die Ortung (DSGVO Art. 13)',
+        fr: 'Information préalable et claire des travailleurs sur le suivi (RGPD art. 13)',
+        es: 'Información previa y clara a los trabajadores sobre el seguimiento (RGPD art. 13)',
+        nl: 'Duidelijke voorafgaande informatie aan werknemers over het volgen (AVG art. 13)',
       },
       risposta: 'si',
       dettaglio: {
-        it: "L'art. 27 del Codice del lavoro obbliga il datore a predisporre regole interne e a informare i lavoratori sull'uso delle tecnologie e sul monitoraggio sul luogo di lavoro, anche su sorveglianza video/audio e tracciamento di comportamento, posizione o movimento.",
-        en: 'Article 27 of the Labour Code requires the employer to set up internal rules and to inform workers about the use of technologies and about monitoring in the workplace, including video/audio surveillance and tracking of behaviour, location or movement.',
-        de: 'Artikel 27 des Arbeitsgesetzbuchs verpflichtet den Arbeitgeber, interne Regeln aufzustellen und die Arbeitnehmer über den Einsatz von Technologien und über die Überwachung am Arbeitsplatz zu informieren, auch über Video-/Audioüberwachung und die Verfolgung von Verhalten, Standort oder Bewegung.',
-        fr: "L article 27 du Code du travail oblige l employeur a établir des règles internes et a informer les travailleurs sur l usage des technologies et sur la surveillance sur le lieu de travail, y compris la vidéosurveillance/audiosurveillance et le suivi du comportement, de la position ou du mouvement.",
-        es: 'El articulo 27 del Código del trabajo obliga al empleador a establecer normas internas y a informar a los trabajadores sobre el uso de las tecnologías y sobre la vigilancia en el lugar de trabajo, incluida la videovigilancia/audiovigilancia y el seguimiento del comportamiento, la posición o el movimiento.',
-        nl: 'Artikel 27 van het Arbeidswetboek verplicht de werkgever interne regels op te stellen en de werknemers te informeren over het gebruik van technologieen en over de monitoring op de werkplek, ook over video-/audiobewaking en het volgen van gedrag, locatie of beweging.',
+        it: "Il datore deve dire chiaramente ai lavoratori che sul veicolo aziendale c'è un dispositivo di localizzazione e che i loro spostamenti vengono registrati, prima di cominciare (GDPR art. 13; parere WP249 del Gruppo art. 29, ripreso dall'EDPB). L'art. 27 del Codice del lavoro lituano tutela la vita privata e i dati dei lavoratori e la segretezza della loro corrispondenza personale, ma non contiene una regola specifica sul tracciamento.",
+        en: "The employer must clearly tell workers that a tracking device is installed in the company vehicle and that their movements are recorded, before it starts (GDPR art. 13; Article 29 Working Party opinion WP249, endorsed by the EDPB). Article 27 of the Lithuanian Labour Code protects workers' private life and data and the secrecy of their personal correspondence, but contains no specific rule on tracking.",
+        de: 'Der Arbeitgeber muss den Arbeitnehmern vor Beginn klar mitteilen, dass im Dienstfahrzeug ein Ortungsgerät eingebaut ist und ihre Bewegungen aufgezeichnet werden (DSGVO Art. 13; Stellungnahme WP249 der Artikel-29-Gruppe, vom EDSA übernommen). Artikel 27 des litauischen Arbeitsgesetzbuchs schützt Privatleben und Daten der Arbeitnehmer und das Geheimnis ihrer persönlichen Korrespondenz, enthält aber keine eigene Regel zur Ortung.',
+        fr: "L'employeur doit indiquer clairement aux travailleurs, avant le début, qu'un dispositif de localisation est installé dans le véhicule de l'entreprise et que leurs déplacements sont enregistrés (RGPD art. 13 ; avis WP249 du groupe de l'article 29, repris par le CEPD). L'article 27 du Code du travail lituanien protège la vie privée et les données des travailleurs et le secret de leur correspondance personnelle, mais ne contient pas de règle spécifique sur le suivi.",
+        es: 'El empleador debe informar claramente a los trabajadores, antes de empezar, de que en el vehículo de la empresa hay un dispositivo de localización y de que sus desplazamientos se registran (RGPD art. 13; dictamen WP249 del Grupo del artículo 29, asumido por el CEPD). El artículo 27 del Código del trabajo lituano protege la vida privada y los datos de los trabajadores y el secreto de su correspondencia personal, pero no contiene una regla específica sobre el seguimiento.',
+        nl: 'De werkgever moet de werknemers vóór de start duidelijk laten weten dat in het bedrijfsvoertuig een volgsysteem zit en dat hun bewegingen worden vastgelegd (AVG art. 13; advies WP249 van de Groep artikel 29, overgenomen door het EDPB). Artikel 27 van het Litouwse Arbeidswetboek beschermt het privéleven en de gegevens van werknemers en het geheim van hun persoonlijke correspondentie, maar bevat geen specifieke regel over het volgen.',
       },
-      fonte: FONTE_EUROFOUND_ART27,
+      fonte: FONTE_WP249,
     },
     {
       voce: {
@@ -130,7 +130,7 @@ export const lituania: SchedaPaese = {
         es: 'Con el RGPD ya no es necesaria ninguna notificación ni autorización previa; el responsable se autoevalua y conserva la documentación.',
         nl: 'Met de AVG is geen voorafgaande melding of toestemming meer nodig; de verwerkingsverantwoordelijke beoordeelt dit zelf en bewaart de documentatie.',
       },
-      fonte: FONTE_EUROFOUND_ART27,
+      fonte: FONTE_GDPR,
     },
     {
       voce: {
@@ -150,7 +150,7 @@ export const lituania: SchedaPaese = {
         es: 'La vigilancia solo se admite con una finalidad real y justificada; la base es el interés legítimo, no el consentimiento, que en la relación laboral no se presta libremente.',
         nl: 'Monitoring is alleen toegestaan voor een reeel en gerechtvaardigd doel; de grondslag is het gerechtvaardigd belang, niet de toestemming, die in de arbeidsverhouding niet vrijelijk wordt gegeven.',
       },
-      fonte: FONTE_EUROFOUND_ART27,
+      fonte: FONTE_WP249,
     },
     {
       voce: {
@@ -170,7 +170,7 @@ export const lituania: SchedaPaese = {
         es: 'El seguimiento del vehículo debe suspenderse fuera del horario de trabajo o el trabajador debe poder desactivarlo; el seguimiento GPS continuo se ha considerado desproporcionado y debe preferirse un medio menos invasivo.',
         nl: 'Het volgen van het voertuig moet buiten werktijd worden opgeschort of de werknemer moet het kunnen uitschakelen; continue GPS-tracking is als onevenredig beoordeeld en een minder ingrijpend middel verdient de voorkeur.',
       },
-      fonte: FONTE_EUROFOUND_ART27,
+      fonte: FONTE_WP249,
     },
     {
       voce: {
@@ -198,12 +198,12 @@ export const lituania: SchedaPaese = {
     {
       passo: 1,
       descrizione: {
-        it: 'Predisponi regole interne sul monitoraggio e informa i lavoratori (art. 27 + art. 13 GDPR).',
-        en: 'Set up internal rules on monitoring and inform workers (art. 27 + art. 13 GDPR).',
-        de: 'Stellen Sie interne Regeln zur Überwachung auf und informieren Sie die Arbeitnehmer (Art. 27 + Art. 13 DSGVO).',
-        fr: 'Établissez des règles internes sur la surveillance et informez les travailleurs (art. 27 + art. 13 RGPD).',
-        es: 'Establezca normas internas sobre la vigilancia e informe a los trabajadores (art. 27 + art. 13 RGPD).',
-        nl: 'Stel interne regels over monitoring op en informeer de werknemers (art. 27 + art. 13 AVG).',
+        it: 'Scrivi le regole sul tracciamento e informa i lavoratori prima di attivarlo (art. 13 GDPR).',
+        en: 'Write down the tracking rules and inform workers before switching it on (art. 13 GDPR).',
+        de: 'Legen Sie die Regeln zur Ortung schriftlich fest und informieren Sie die Arbeitnehmer, bevor Sie sie einschalten (Art. 13 DSGVO).',
+        fr: "Mettez par écrit les règles de suivi et informez les travailleurs avant de l'activer (art. 13 RGPD).",
+        es: 'Ponga por escrito las reglas del seguimiento e informe a los trabajadores antes de activarlo (art. 13 RGPD).',
+        nl: 'Leg de regels voor het volgen schriftelijk vast en informeer de werknemers voordat u het inschakelt (art. 13 AVG).',
       },
     },
     {
@@ -296,12 +296,12 @@ export const lituania: SchedaPaese = {
   },
 
   fonti: [
-    FONTE_EUROFOUND_ART27,
+    FONTE_WP249,
     FONTE_VDAI_DPIA,
     FONTE_VDAI_CORRISPONDENZA,
     FONTE_VDAI_SERVIZI,
     FONTE_GDPR,
   ],
 
-  aggiornatoIl: '2026-08-03',
+  aggiornatoIl: '2026-09-30',
 };

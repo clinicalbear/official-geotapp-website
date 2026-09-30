@@ -20,8 +20,8 @@ const FONTE_DPC_VEICOLI = {
   url: 'https://www.dataprotection.ie/sites/default/files/uploads/2020-09/Employer%20Vehicle%20Tracking_May2020.pdf',
 };
 const FONTE_DPC_LAVORO = {
-  titolo: 'DPC, protezione dei dati sul luogo di lavoro',
-  url: 'https://www.dataprotection.ie/en/dpc-guidance/data-protection-in-the-workplace-employer-guidance',
+  titolo: 'DPC, pagina sul tracciamento dei veicoli dei dipendenti (aggiornata a maggio 2026)',
+  url: 'https://www.dataprotection.ie/en/dpc-guidance/employer-vehicle-tracking',
 };
 const FONTE_DPC_DPIA = {
   titolo: 'DPC, lista dei trattamenti che richiedono una DPIA',
@@ -38,7 +38,7 @@ const FONTE_DPC_RECLAMI = {
 const FONTE_DPC_LIMERICK = {
   titolo:
     'DPC, decisione Limerick City and County Council (dicembre 2021)',
-  url: 'https://www.dataprotection.ie/en/dpc-guidance/law/decisions/inquiry-into-limerick-city-and-county-council-december-2021',
+  url: 'https://www.dataprotection.ie/en/dpc-guidance/decisions/inquiry-limerick-city-and-county-council',
 };
 const FONTE_GDPR = {
   titolo: 'Regolamento UE 2016/679 (GDPR)',
@@ -309,5 +309,5 @@ export const irlanda: SchedaPaese = {
     FONTE_GDPR,
   ],
 
-  aggiornatoIl: '2026-06-15',
+  aggiornatoIl: '2026-09-30',
 };

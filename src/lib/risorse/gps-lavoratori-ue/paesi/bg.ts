@@ -2,7 +2,7 @@
  * Scheda-paese Bulgaria per la risorsa "GPS sui lavoratori in UE".
  *
  * Contenuti basati su fonti primarie verificate e citate nella sezione "Fonti":
- * Legge bulgara sulla protezione dei dati (ZZLD), art. 25ж e 25и, guida del CPDP
+ * Legge bulgara sulla protezione dei dati (ZZLD), art. 25и e 25д, guida del CPDP
  * sulla privacy sul luogo di lavoro, lista CPDP dei trattamenti che richiedono una
  * DPIA, parere CPDP sul caso LUKOIL e GDPR.
  *
@@ -13,10 +13,10 @@
 import type { SchedaPaese } from '../types';
 
 // URL delle fonti primarie citate.
-const FONTE_ZZLD_25ZH = {
+const FONTE_ZZLD = {
   titolo:
-    'Legge sulla protezione dei dati (ZZLD), testo consolidato',
-  url: 'https://rta.government.bg/upload/5773/zzld.pdf',
+    'Legge sulla protezione dei dati (ZZLD), testo consolidato 2026 (art. 25д e 25и)',
+  url: 'https://aksu.government.bg/wp-content/uploads/2026/01/zakon_za_zashtita_na_lichnite_danni-2-1.pdf',
 };
 const FONTE_CPDP_GUIDA = {
   titolo: 'CPDP (Garante bulgaro), guida sulla privacy sul luogo di lavoro (GPS)',
@@ -84,12 +84,12 @@ export const bulgaria: SchedaPaese = {
   checklist: [
     {
       voce: {
-        it: "Regole interne e informazione ai lavoratori sui sistemi di controllo dell'accesso, dell'orario e della disciplina (ZZLD art. 25ж)",
-        en: 'Internal rules and worker information on systems for access, time and discipline control (ZZLD art. 25zh)',
-        de: 'Interne Regeln und Information der Beschäftigten über Systeme zur Zugangs-, Zeit- und Disziplinkontrolle (ZZLD Art. 25zh)',
-        fr: "Règles internes et information des travailleurs sur les systèmes de contrôle de l'accès, du temps et de la discipline (ZZLD art. 25zh)",
-        es: 'Reglas internas e información a los trabajadores sobre los sistemas de control de acceso, de la jornada y de la disciplina (ZZLD art. 25zh)',
-        nl: 'Interne regels en informatie aan werknemers over systemen voor toegangs-, tijd- en disciplinecontrole (ZZLD art. 25zh)',
+        it: "Regole interne e informazione ai lavoratori sui sistemi di controllo dell'accesso, dell'orario e della disciplina (ZZLD art. 25и)",
+        en: 'Internal rules and worker information on systems for access, time and discipline control (ZZLD art. 25i)',
+        de: 'Interne Regeln und Information der Beschäftigten über Systeme zur Zugangs-, Zeit- und Disziplinkontrolle (ZZLD Art. 25i)',
+        fr: "Règles internes et information des travailleurs sur les systèmes de contrôle de l'accès, du temps et de la discipline (ZZLD art. 25i)",
+        es: 'Reglas internas e información a los trabajadores sobre los sistemas de control de acceso, de la jornada y de la disciplina (ZZLD art. 25i)',
+        nl: 'Interne regels en informatie aan werknemers over systemen voor toegangs-, tijd- en disciplinecontrole (ZZLD art. 25i)',
       },
       risposta: 'si',
       dettaglio: {
@@ -100,16 +100,16 @@ export const bulgaria: SchedaPaese = {
         es: 'El empleador debe adoptar reglas y procedimientos internos cuando introduce sistemas de control del acceso, del horario y de la disciplina laboral, indicando su alcance, obligaciones y métodos, y darlos a conocer a los trabajadores.',
         nl: 'De werkgever moet interne regels en procedures vaststellen wanneer hij systemen voor toegangs-, arbeidstijd- en disciplinecontrole invoert, met vermelding van de reikwijdte, verplichtingen en methoden, en deze ter kennis van de werknemers brengen.',
       },
-      fonte: FONTE_ZZLD_25ZH,
+      fonte: FONTE_ZZLD,
     },
     {
       voce: {
-        it: 'Regole speciali per il monitoraggio sistematico su larga scala, inclusa la videosorveglianza (art. 25и)',
-        en: 'Special rules for large-scale systematic monitoring, including video surveillance (art. 25i)',
-        de: 'Sonderregeln für die systematische Überwachung in großem Umfang, einschließlich Videoüberwachung (Art. 25i)',
-        fr: 'Règles spéciales pour la surveillance systématique a grande échelle, y compris la vidéosurveillance (art. 25i)',
-        es: 'Reglas especiales para la vigilancia sistemática a gran escala, incluida la videovigilancia (art. 25i)',
-        nl: 'Bijzondere regels voor grootschalige systematische monitoring, met inbegrip van cameratoezicht (art. 25i)',
+        it: 'Regole speciali per il monitoraggio sistematico su larga scala, inclusa la videosorveglianza (art. 25д)',
+        en: 'Special rules for large-scale systematic monitoring, including video surveillance (art. 25d)',
+        de: 'Sonderregeln für die systematische Überwachung in großem Umfang, einschließlich Videoüberwachung (Art. 25d)',
+        fr: 'Règles spéciales pour la surveillance systématique a grande échelle, y compris la vidéosurveillance (art. 25d)',
+        es: 'Reglas especiales para la vigilancia sistemática a gran escala, incluida la videovigilancia (art. 25d)',
+        nl: 'Bijzondere regels voor grootschalige systematische monitoring, met inbegrip van cameratoezicht (art. 25d)',
       },
       risposta: 'dipende',
       dettaglio: {
@@ -120,7 +120,7 @@ export const bulgaria: SchedaPaese = {
         es: 'Para la vigilancia sistemática a gran escala de zonas accesibles al publico, incluida la videovigilancia, se necesitan reglas especiales sobre bases jurídicas, finalidades, alcance, conservación e información.',
         nl: 'Voor grootschalige systematische monitoring van openbaar toegankelijke ruimten, met inbegrip van cameratoezicht, zijn bijzondere regels vereist over rechtsgronden, doeleinden, reikwijdte, bewaring en informatie.',
       },
-      fonte: FONTE_ZZLD_25ZH,
+      fonte: FONTE_ZZLD,
     },
     {
       voce: {
@@ -188,12 +188,12 @@ export const bulgaria: SchedaPaese = {
     {
       passo: 1,
       descrizione: {
-        it: 'Adotta regole interne sui sistemi di controllo e portale a conoscenza dei lavoratori (art. 25ж).',
-        en: 'Adopt internal rules on the control systems and bring them to the workers attention (art. 25zh).',
-        de: 'Erlassen Sie interne Regeln zu den Kontrollsystemen und bringen Sie sie den Beschäftigten zur Kenntnis (Art. 25zh).',
-        fr: 'Adoptez des règles internes sur les systèmes de contrôle et portez-les a la connaissance des travailleurs (art. 25zh).',
-        es: 'Adopte reglas internas sobre los sistemas de control y deles a conocer a los trabajadores (art. 25zh).',
-        nl: 'Stel interne regels over de controlesystemen vast en breng deze ter kennis van de werknemers (art. 25zh).',
+        it: 'Adotta regole interne sui sistemi di controllo e portale a conoscenza dei lavoratori (art. 25и).',
+        en: 'Adopt internal rules on the control systems and bring them to the workers attention (art. 25i).',
+        de: 'Erlassen Sie interne Regeln zu den Kontrollsystemen und bringen Sie sie den Beschäftigten zur Kenntnis (Art. 25i).',
+        fr: 'Adoptez des règles internes sur les systèmes de contrôle et portez-les a la connaissance des travailleurs (art. 25i).',
+        es: 'Adopte reglas internas sobre los sistemas de control y deles a conocer a los trabajadores (art. 25i).',
+        nl: 'Stel interne regels over de controlesystemen vast en breng deze ter kennis van de werknemers (art. 25i).',
       },
     },
     {
@@ -286,7 +286,7 @@ export const bulgaria: SchedaPaese = {
   },
 
   fonti: [
-    FONTE_ZZLD_25ZH,
+    FONTE_ZZLD,
     FONTE_CPDP_GUIDA,
     FONTE_CPDP_DPIA,
     FONTE_CPDP_LUKOIL,
@@ -294,5 +294,5 @@ export const bulgaria: SchedaPaese = {
     FONTE_GDPR,
   ],
 
-  aggiornatoIl: '2026-06-15',
+  aggiornatoIl: '2026-09-30',
 };

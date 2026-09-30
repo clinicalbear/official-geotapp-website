@@ -18,6 +18,11 @@ const FONTE_KP_22_2 = {
   titolo: 'Kodeks pracy, art. 22(2) (monitoraggio), testo consolidato ISAP (Sejm)',
   url: 'https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20250000277',
 };
+const FONTE_DU_2026_25 = {
+  titolo:
+    'Legge del 4 dicembre 2025 di modifica del Codice del lavoro, Dz.U. 2026 poz. 25 (art. 22(2) par. 8: "su carta o in forma elettronica", in vigore dal 27 gennaio 2026)',
+  url: 'https://eli.gov.pl/api/acts/DU/2026/25/text.pdf',
+};
 const FONTE_KP_22_3 = {
   titolo: 'Kodeks pracy, art. 22(3) (altre forme di monitoraggio, incl. GPS), testo consolidato ISAP (Sejm)',
   url: 'https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20250000277',
@@ -109,23 +114,23 @@ export const polonia: SchedaPaese = {
     },
     {
       voce: {
-        it: 'Informazione preventiva ai lavoratori almeno 2 settimane prima, e per iscritto al neoassunto (art. 22(2) par. 7-8)',
-        en: 'Prior information to workers at least 2 weeks in advance, and in writing to the new hire (art. 22(2) par. 7-8)',
-        de: 'Vorherige Information der Beschäftigten mindestens 2 Wochen im Voraus und schriftlich an den neu Eingestellten (Art. 22(2) Abs. 7-8)',
-        fr: "Information préalable des salaries au moins 2 semaines a l'avance, et par écrit au nouvel embauche (art. 22(2) par. 7-8)",
-        es: 'Información previa a los trabajadores con al menos 2 semanas de antelación, y por escrito al nuevo contratado (art. 22(2) par. 7-8)',
-        nl: 'Voorafgaande informatie aan werknemers ten minste 2 weken van tevoren, en schriftelijk aan de nieuwe medewerker (art. 22(2) lid 7-8)',
+        it: 'Informazione preventiva ai lavoratori almeno 2 settimane prima, e su carta o in forma elettronica al neoassunto (art. 22(2) par. 7-8)',
+        en: 'Prior information to workers at least 2 weeks in advance, and on paper or electronically to the new hire (art. 22(2) par. 7-8)',
+        de: 'Vorherige Information der Beschäftigten mindestens 2 Wochen im Voraus und in Papier- oder elektronischer Form an den neu Eingestellten (Art. 22(2) Abs. 7-8)',
+        fr: "Information préalable des salaries au moins 2 semaines a l'avance, et sur papier ou sous forme électronique au nouvel embauché (art. 22(2) par. 7-8)",
+        es: 'Información previa a los trabajadores con al menos 2 semanas de antelación, y en papel o en formato electrónico al nuevo contratado (art. 22(2) par. 7-8)',
+        nl: 'Voorafgaande informatie aan werknemers ten minste 2 weken van tevoren, en op papier of elektronisch aan de nieuwe medewerker (art. 22(2) lid 7-8)',
       },
       risposta: 'si',
       dettaglio: {
-        it: "il datore informa i lavoratori dell'introduzione del monitoraggio almeno due settimane prima dell'avvio, e consegna l'informazione per iscritto al neoassunto prima di adibirlo al lavoro.",
-        en: 'the employer informs the workers of the introduction of monitoring at least two weeks before it starts, and gives the information in writing to the new hire before assigning them to work.',
-        de: 'der Arbeitgeber informiert die Beschäftigten über die Einführung der Überwachung mindestens zwei Wochen vor dem Beginn und übergibt dem neu Eingestellten die Information schriftlich, bevor er ihn zur Arbeit einsetzt.',
-        fr: "l'employeur informe les salaries de l'introduction de la surveillance au moins deux semaines avant son démarrage, et remet l'information par écrit au nouvel embauche avant de l'affecter au travail.",
-        es: 'el empleador informa a los trabajadores de la introducción del monitoreo al menos dos semanas antes de su inicio, y entrega la información por escrito al nuevo contratado antes de asignarle el trabajo.',
-        nl: 'de werkgever informeert de werknemers over de invoering van monitoring ten minste twee weken voor de start, en overhandigt de informatie schriftelijk aan de nieuwe medewerker voordat deze aan het werk wordt gezet.',
+        it: "il datore informa i lavoratori dell'introduzione del monitoraggio almeno due settimane prima dell'avvio, e consegna l'informazione su carta o in forma elettronica al neoassunto prima di adibirlo al lavoro.",
+        en: 'the employer informs the workers of the introduction of monitoring at least two weeks before it starts, and gives the information on paper or electronically to the new hire before assigning them to work.',
+        de: 'der Arbeitgeber informiert die Beschäftigten über die Einführung der Überwachung mindestens zwei Wochen vor dem Beginn und übergibt dem neu Eingestellten die Information in Papier- oder elektronischer Form, bevor er ihn zur Arbeit einsetzt.',
+        fr: "l'employeur informe les salaries de l'introduction de la surveillance au moins deux semaines avant son démarrage, et remet l'information sur papier ou sous forme électronique au nouvel embauché avant de l'affecter au travail.",
+        es: 'el empleador informa a los trabajadores de la introducción del monitoreo al menos dos semanas antes de su inicio, y entrega la información en papel o en formato electrónico al nuevo contratado antes de asignarle el trabajo.',
+        nl: 'de werkgever informeert de werknemers over de invoering van monitoring ten minste twee weken voor de start, en overhandigt de informatie op papier of elektronisch aan de nieuwe medewerker voordat deze aan het werk wordt gezet.',
       },
-      fonte: FONTE_KP_22_2,
+      fonte: FONTE_DU_2026_25,
     },
     {
       voce: {
@@ -204,12 +209,12 @@ export const polonia: SchedaPaese = {
     {
       passo: 2,
       descrizione: {
-        it: "Informa i lavoratori almeno due settimane prima dell'avvio; consegna l'informazione per iscritto al neoassunto prima del lavoro.",
-        en: 'Inform the workers at least two weeks before the start; give the information in writing to the new hire before work begins.',
-        de: 'Informieren Sie die Beschäftigten mindestens zwei Wochen vor dem Beginn; übergeben Sie dem neu Eingestellten die Information schriftlich vor der Arbeit.',
-        fr: "Informez les salaries au moins deux semaines avant le démarrage; remettez l'information par écrit au nouvel embauche avant le travail.",
-        es: 'Informe a los trabajadores al menos dos semanas antes del inicio; entregue la información por escrito al nuevo contratado antes del trabajo.',
-        nl: 'Informeer de werknemers ten minste twee weken voor de start; overhandig de informatie schriftelijk aan de nieuwe medewerker voor het werk.',
+        it: "Informa i lavoratori almeno due settimane prima dell'avvio; consegna l'informazione su carta o in forma elettronica al neoassunto prima del lavoro.",
+        en: 'Inform the workers at least two weeks before the start; give the information on paper or electronically to the new hire before work begins.',
+        de: 'Informieren Sie die Beschäftigten mindestens zwei Wochen vor dem Beginn; übergeben Sie dem neu Eingestellten die Information in Papier- oder elektronischer Form vor der Arbeit.',
+        fr: "Informez les salaries au moins deux semaines avant le démarrage; remettez l'information sur papier ou sous forme électronique au nouvel embauché avant le travail.",
+        es: 'Informe a los trabajadores al menos dos semanas antes del inicio; entregue la información en papel o en formato electrónico al nuevo contratado antes del trabajo.',
+        nl: 'Informeer de werknemers ten minste twee weken voor de start; overhandig de informatie op papier of elektronisch aan de nieuwe medewerker voor het werk.',
       },
     },
     {
@@ -292,6 +297,7 @@ export const polonia: SchedaPaese = {
 
   fonti: [
     FONTE_KP_22_2,
+    FONTE_DU_2026_25,
     FONTE_KP_22_3,
     FONTE_UODO_GUIDA,
     FONTE_UODO_DPIA,
@@ -300,5 +306,5 @@ export const polonia: SchedaPaese = {
     FONTE_GDPR,
   ],
 
-  aggiornatoIl: '2026-06-15',
+  aggiornatoIl: '2026-09-30',
 };
