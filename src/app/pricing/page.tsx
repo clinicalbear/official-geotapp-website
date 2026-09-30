@@ -283,7 +283,9 @@ export default function Pricing() {
       ? 'one-time (lifetime)'
       : hasMonthly
         ? (p.per_year ?? '/year')
-        : product.period;
+        : product.period === '/year'
+          ? (p.per_year ?? '/year') // TimeTracker: prima «/year» in inglese su ogni lingua
+          : product.period;
     const savings = (product as Product).savings;
 
     return (

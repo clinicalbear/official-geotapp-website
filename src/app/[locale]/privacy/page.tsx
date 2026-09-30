@@ -5,7 +5,7 @@ import { getPrivacyContent } from '@/content/legal/privacy-i18n';
 import type { AppLocale } from '@/lib/i18n/config';
 
 const META: Record<string, { title: string; description: string; pageTitle: string; subtitle: string }> = {
-  it: { title: 'Informativa Privacy | GeoTapp', description: 'Informativa sulla privacy di GeoTapp: come raccogliamo, utilizziamo e proteggiamo i tuoi dati personali nel rispetto del GDPR.', pageTitle: 'Informativa Privacy', subtitle: 'Versione 1.2 - 3 settembre 2026' },
+  it: { title: 'Informativa privacy | GeoTapp', description: 'Come GeoTapp raccoglie, usa e protegge i dati personali: cosa registra, per quanto tempo, dove stanno i dati e quali sono i tuoi diritti secondo il GDPR.', pageTitle: 'Informativa privacy', subtitle: 'Versione 1.3 - 30 settembre 2026' },
   en: { title: 'Privacy Policy | GeoTapp', description: "GeoTapp's privacy policy: how we collect, use and protect your personal data in compliance with GDPR.", pageTitle: 'Privacy Policy', subtitle: 'Version 1.2 - 3 September 2026' },
   de: { title: 'Datenschutzerklärung | GeoTapp', description: 'Datenschutzerklärung von GeoTapp: wie wir Ihre personenbezogenen Daten gemäß DSGVO erheben, verwenden und schützen.', pageTitle: 'Datenschutzerklärung', subtitle: 'Version 1.2 - 3. September 2026' },
   fr: { title: 'Politique de confidentialité | GeoTapp', description: 'Politique de confidentialité de GeoTapp : comment nous collectons, utilisons et protégeons vos données personnelles conformément au RGPD.', pageTitle: 'Politique de confidentialité', subtitle: 'Version 1.2 - 3 septembre 2026' },

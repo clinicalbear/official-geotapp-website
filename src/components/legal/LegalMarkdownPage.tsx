@@ -84,7 +84,11 @@ function markdownToHtml(md: string): { html: string; headings: { id: string; tex
     if (hMatch) {
       const level = hMatch[1].length;
       const text = hMatch[2];
-      if (level === 2) {
+      if (level === 1) {
+        // La pagina ha gia' il suo <h1>: il titolo scritto in testa al documento
+        // diventa un'intestazione visiva, cosi' non ci sono due h1 nella stessa pagina.
+        out.push(`<p class="doc-title"><strong>${inlineFormat(text)}</strong></p>`);
+      } else if (level === 2) {
         const id = slugifyHeading(text);
         headings.push({ id, text: text.replace(/\*\*/g, '') });
         out.push(`<h${level} id="${id}">${inlineFormat(text)}</h${level}>`);

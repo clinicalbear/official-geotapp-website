@@ -258,7 +258,7 @@ export default function ContactPage() {
                     <Newspaper size={13} style={{ display: 'inline', marginRight: 6, verticalAlign: -2 }} />
                     {press.hero_title}
                   </p>
-                  <b><a href={localizePath('/stampa/', currentLocale)}>{press.contact_email}</a></b>
+                  <b><a href={`mailto:${press.contact_email}`}>{press.contact_email}</a></b>
                 </li>
               </ul>
               <div className="gar">

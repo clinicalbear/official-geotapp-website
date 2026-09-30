@@ -8,7 +8,8 @@
  * documento, non da un indice inventato.
  */
 
-import { useState, useEffect, useMemo } from 'react';
+import { useMemo } from 'react';
+import { guidaPer } from '@/content/guida';
 import ReactMarkdown from 'react-markdown';
 import type { Components } from 'react-markdown';
 import { usePathname } from 'next/navigation';
@@ -16,6 +17,21 @@ import { getDictionary } from '@/lib/i18n/dictionaries';
 import { getLocaleFromPathname } from '@/lib/i18n/locale-routing';
 import VideoTutorial from '@/components/VideoTutorial';
 import './l-page.css';
+
+/** I riquadri del manuale (`:::nota` ... `:::`) diventano citazioni con l'etichetta in grassetto. */
+function riquadri(md: string, g: { box_note?: string; box_warning?: string; box_tip?: string }): string {
+  const etichetta: Record<string, string> = {
+    nota: g.box_note ?? 'Nota',
+    attenzione: g.box_warning ?? 'Attenzione',
+    suggerimento: g.box_tip ?? 'Suggerimento',
+  };
+  return md.replace(/^:::(\w+)\n([\s\S]*?)\n:::$/gm, (_m, tipo: string, corpo: string) =>
+    corpo
+      .split('\n')
+      .map((riga, i) => `> ${i === 0 ? `**${etichetta[tipo] ?? tipo}.** ` : ''}${riga}`)
+      .join('\n'),
+  );
+}
 
 function slugify(text: string): string {
   return text
@@ -31,13 +47,9 @@ export default function GuidePage() {
   const locale = getLocaleFromPathname(pathname);
   const g = getDictionary(locale).guida;
 
-  const [content, setContent] = useState('');
-
-  useEffect(() => {
-    fetch('/guida-utente.md')
-      .then((res) => res.text())
-      .then((text) => setContent(text));
-  }, []);
+  // La guida nella lingua della pagina, gia' nel bundle: niente fetch, e il testo c'e'
+  // anche per chi legge la pagina senza eseguire JavaScript.
+  const content = useMemo(() => riquadri(guidaPer(locale ?? 'it'), g), [locale, g]);
 
   const handleDownload = () => {
     window.print();

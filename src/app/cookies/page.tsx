@@ -8,7 +8,7 @@ export default function CookiesPage() {
     markdownContent,
     slug: 'cookies',
     locale: 'it',
-    title: 'Informativa Cookie',
-    subtitle: 'Versione 1.0 - Marzo 2026',
+    title: 'Informativa cookie',
+    subtitle: 'Versione 1.1 - 30 settembre 2026',
   });
 }

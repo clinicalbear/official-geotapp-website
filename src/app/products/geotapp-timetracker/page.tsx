@@ -29,12 +29,89 @@ const LA_PROVA: Record<string, string> = {
   pt: 'A prova', nl: 'Het bewijs', da: 'Beviset', sv: 'Beviset', nb: 'Beviset', ru: 'Доказательство',
 };
 
+/**
+ * Testi della pagina TimeTracker, una voce per lingua (prima: «isItalian ? ... : ...»,
+ * e ogni lingua diversa dall'italiano riceveva l'inglese). Le lingue senza voce
+ * propria ripiegano sull'inglese finché non vengono scritte.
+ */
+type TtCopy = {
+  statusLabel: string; releaseNote: string; mobileKicker: string; downloadTitle: string; downloadSub: string;
+  doesTitle: string; doesSub: string;
+  highlights: { title: string; description: string }[];
+  workflow: { title: string; description: string }[];
+  complianceTagline: string; complianceFootnote: string; trial: string; availableOn: string;
+};
+const TT_COPY: Record<string, TtCopy> = {
+  it: {
+    statusLabel: 'Dove si usa',
+    releaseNote: 'TimeTracker è un\'app nativa, disponibile su Google Play e App Store: serve Android 8.0 o successivo, oppure iOS 26.2 o successivo. Quello che l\'operatore registra arriva in Flow appena c\'è rete.',
+    mobileKicker: 'App per il telefono',
+    downloadTitle: 'Scarica GeoTapp TimeTracker',
+    downloadSub: 'Disponibile su Google Play e su App Store.',
+    doesTitle: 'Cosa fa GeoTapp TimeTracker',
+    doesSub: 'Non solo presenze: raccoglie sul campo le prove del lavoro, che l\'ufficio usa per il report e il cliente può verificare.',
+    highlights: [
+      { title: 'Timbrature con posizione e ora', description: 'Entrata, pause e uscita registrano posizione, indirizzo e orario nel momento in cui l\'operatore timbra. Fra una timbratura e l\'altra non si registra nulla in automatico.' },
+      { title: 'Prove che il cliente può controllare', description: 'Gli operatori scattano foto, aggiungono note e inviano le prove del lavoro collegate alla commessa. Finiscono nel report sigillato che il cliente verifica da solo.' },
+      { title: 'Uno storico che l\'ufficio può usare', description: 'Quello che si raccoglie sul campo arriva in Flow e serve subito per il report al cliente, la cronologia della commessa e il consuntivo.' },
+      { title: 'Uso dell\'auto, ricevute e rimborsi', description: 'L\'operatore dichiara l\'uso dell\'auto nel turno, registra rifornimenti e spese con la foto della ricevuta, e l\'ufficio li approva.' },
+    ],
+    workflow: [
+      { title: 'Molto più di una semplice timbratura', description: 'TimeTracker comprende dettaglio della commessa, report, comunicazioni, richieste di ferie e permessi, sessioni di lavoro: non solo presenze.' },
+      { title: 'Campo, ufficio e cliente sugli stessi dati', description: 'Il lavoro sul campo non resta isolato: l\'ufficio segue l\'avanzamento, guarda le prove e risponde al cliente con i fatti.' },
+    ],
+    complianceTagline: 'Prima si firma l\'informativa, poi si timbra.*',
+    complianceFootnote: '* Per legge ogni dipendente va informato prima di essere geolocalizzato. GeoTapp prepara l\'informativa, la fa firmare per presa visione nell\'app e non lascia timbrare finché non è firmata.',
+    trial: 'Inizia la prova gratuita di 14 giorni',
+    availableOn: 'Disponibile su',
+  },
+  de: {
+    statusLabel: 'Platform Status',
+    releaseNote: 'Native Android and iOS apps are available on the stores and keep field data connected to Flow in real time.',
+    mobileKicker: 'Mobile App',
+    downloadTitle: 'GeoTapp TimeTracker herunterladen',
+    downloadSub: 'Verfügbar auf Google Play und im App Store.',
+    doesTitle: 'What GeoTapp TimeTracker really does today',
+    doesSub: 'Not just attendance: it captures verifiable field work, reliable customer proof and the operational history the office can trust.',
+    highlights: [],
+    workflow: [],
+    complianceTagline: 'Compliant from day one, or you don\'t clock in.*',
+    complianceFootnote: '* By law, every employee must sign a privacy notice before being geolocated. GeoTapp is the only system that generates it automatically, gets it signed and blocks GPS access until it is.',
+    trial: '14 Tage kostenlos testen',
+    availableOn: 'Verfügbar auf',
+  },
+  en: {
+    statusLabel: 'Platform Status',
+    releaseNote: 'Native Android and iOS apps are available on the stores and keep field data connected to Flow in real time.',
+    mobileKicker: 'Mobile App',
+    downloadTitle: 'Download GeoTapp TimeTracker',
+    downloadSub: 'Available on Google Play and on the App Store.',
+    doesTitle: 'What GeoTapp TimeTracker really does today',
+    doesSub: 'Not just attendance: it captures verifiable field work, reliable customer proof and the operational history the office can trust.',
+    highlights: [
+      { title: 'Verifiable field work', description: 'Clock-in and clock-out are tied to coordinates, address and timestamps, so every session becomes a verifiable field event.' },
+      { title: 'Proof the client can trust', description: 'Teams can capture photos, notes and structured evidence linked to each project to give the client a clearer guarantee of what was really done.' },
+      { title: 'Feeds Flow with defensible history', description: 'What is captured on the field becomes usable by the office for reports, evidence packs, project timelines and fewer disputes.' },
+      { title: 'Vehicle use, documents and reimbursement flows', description: 'Car usage can be declared, confirmed and documented with receipts and approvals across field and admin teams.' },
+    ],
+    workflow: [
+      { title: 'More than attendance tracking', description: 'TimeTracker covers project detail, reports, communications, requests, work sessions and operational accountability, not just attendance.' },
+      { title: 'Fewer disputes between field, office and client', description: 'Field activity is never isolated: the office can review proofs, track progress and answer the client with facts before a dispute grows.' },
+    ],
+    complianceTagline: 'Compliant from day one, or you don\'t clock in.*',
+    complianceFootnote: '* By law, every employee must sign a privacy notice before being geolocated. GeoTapp is the only system that generates it automatically, gets it signed and blocks GPS access until it is.',
+    trial: 'Start 14-day free trial',
+    availableOn: 'Available on',
+  },
+};
+TT_COPY.de.highlights = TT_COPY.en.highlights;
+TT_COPY.de.workflow = TT_COPY.en.workflow;
+
 export default function GeoTappApp() {
   const [selectedSystem, setSelectedSystem] = useState<SystemDetail | null>(null);
   const pathname = usePathname();
   const currentLocale = getLocaleFromPathname(pathname) ?? DEFAULT_LOCALE;
   const dict = getDictionary(currentLocale);
-  const isItalian = currentLocale === 'it';
   const appDict = dict.product_pages.app;
 
   const splitHeroTitle = (title: string) => {
@@ -58,33 +135,9 @@ export default function GeoTappApp() {
   const getLink = (path: string) => localizePath(path, currentLocale);
   const vg = dict.videoGiro;
 
-  const releaseNote = isItalian
-    ? 'Le app native Android e iOS sono disponibili sugli store e tengono i dati del campo collegati a Flow in tempo reale.'
-    : 'Native Android and iOS apps are available on the stores and keep field data connected to Flow in real time.';
-
-  const trackerHighlights = isItalian
-    ? [
-        { title: 'Lavoro verificabile sul campo', description: 'Ingresso e uscita sono collegati a coordinate, indirizzo e orario, così ogni sessione diventa un evento operativo verificabile.' },
-        { title: 'Prove che il cliente può controllare', description: 'Gli operatori scattano foto, aggiungono note e inviano prove strutturate del lavoro svolto, con una garanzia di veridicita più forte verso il cliente.' },
-        { title: 'Alimenta Flow con uno storico difendibile', description: 'Quello che viene raccolto sul campo diventa subito utile per report cliente, timeline commessa, prove servizio e meno contestazioni.' },
-        { title: 'Uso auto, documenti e rimborsi', description: 'La piattaforma supporta dichiarazione uso auto, conferme, caricamento ricevute e approvazioni amministrative.' },
-      ]
-    : [
-        { title: 'Verifiable field work', description: 'Clock-in and clock-out are tied to coordinates, address and timestamps, so every session becomes a verifiable field event.' },
-        { title: 'Proof the client can trust', description: 'Teams can capture photos, notes and structured evidence linked to each project to give the client a clearer guarantee of what was really done.' },
-        { title: 'Feeds Flow with defensible history', description: 'What is captured on the field becomes usable by the office for reports, evidence packs, project timelines and fewer disputes.' },
-        { title: 'Vehicle use, documents and reimbursement flows', description: 'Car usage can be declared, confirmed and documented with receipts and approvals across field and admin teams.' },
-      ];
-
-  const trackerWorkflow = isItalian
-    ? [
-        { title: 'Molto più di una semplice timbratura', description: 'TimeTracker copre dettaglio commessa, report, comunicazioni, richieste, sessioni lavoro e responsabilità operativa, non solo presenze.' },
-        { title: 'Meno contestazioni tra campo, ufficio e cliente', description: 'L’operatività del campo non resta isolata: l’ufficio segue avanzamento, controlla prove e risponde al cliente con fatti prima che nascano discussioni.' },
-      ]
-    : [
-        { title: 'More than attendance tracking', description: 'TimeTracker covers project detail, reports, communications, requests, work sessions and operational accountability, not just attendance.' },
-        { title: 'Fewer disputes between field, office and client', description: 'Field activity is never isolated: the office can review proofs, track progress and answer the client with facts before a dispute grows.' },
-      ];
+  const tc = TT_COPY[currentLocale] ?? TT_COPY[currentLocale.split('-')[0]] ?? TT_COPY.en;
+  const trackerHighlights = tc.highlights;
+  const trackerWorkflow = tc.workflow;
 
   const sectorGroups: Array<{ key: '1' | '2' | '3'; systems: SystemDetail[] }> = [
     { key: '1', systems: [getSystem('timelock-alpha'), getSystem('event-horizon'), getSystem('unit-matrix')] },
@@ -92,15 +145,10 @@ export default function GeoTappApp() {
     { key: '3', systems: [getSystem('payroll-bridge'), getSystem('data-core'), getSystem('identity-forge')] },
   ];
 
-  const complianceTagline = isItalian
-    ? 'Timbri in regola dal primo giorno, o non timbri.*'
-    : 'Compliant from day one, or you don\'t clock in.*';
-  const complianceFootnote = isItalian
-    ? '* Per legge, ogni dipendente deve firmare un\'informativa privacy prima di essere geolocalizzato. GeoTapp è l\'unico sistema che la genera in automatico, la fa firmare e blocca l\'accesso GPS finché non è firmata.'
-    : '* By law, every employee must sign a privacy notice before being geolocated. GeoTapp is the only system that generates it automatically, gets it signed and blocks GPS access until it is.';
-
-  const trialLabel = isItalian ? 'Inizia trial gratuito di 14 giorni' : currentLocale === 'de' ? '14 Tage kostenlos testen' : 'Start 14-day free trial';
-  const availableOn = isItalian ? 'Disponibile su' : currentLocale === 'de' ? 'Verfügbar auf' : 'Available on';
+  const complianceTagline = tc.complianceTagline;
+  const complianceFootnote = tc.complianceFootnote;
+  const trialLabel = tc.trial;
+  const availableOn = tc.availableOn;
 
   return (
     <div className="lp-l lp-prodotto-timetracker">
@@ -211,19 +259,19 @@ export default function GeoTappApp() {
       {/* STATO PIATTAFORMA */}
       <section className="sec l-note" style={{ paddingBottom: 0 }}>
         <div className="wn">
-          <p className="kk k" style={{ color: 'var(--seal-testo)', justifyContent: 'center' }}>{isItalian ? 'Stato piattaforma' : 'Platform Status'}</p>
-          <p>{releaseNote}</p>
+          <p className="kk k" style={{ color: 'var(--seal-testo)', justifyContent: 'center' }}>{tc.statusLabel}</p>
+          <p>{tc.releaseNote}</p>
         </div>
       </section>
 
       {/* SCARICA */}
       <section className="sec"><div className="wn" style={{ textAlign: 'center' }}>
-        <p className="kk k" style={{ color: 'var(--seal-testo)', justifyContent: 'center' }}>{isItalian ? 'App Mobile' : 'Mobile App'}</p>
+        <p className="kk k" style={{ color: 'var(--seal-testo)', justifyContent: 'center' }}>{tc.mobileKicker}</p>
         <h2 className="r" style={{ marginTop: 14 }}>
-          {isItalian ? 'Scarica GeoTapp TimeTracker' : currentLocale === 'de' ? 'GeoTapp TimeTracker herunterladen' : 'Download GeoTapp TimeTracker'}
+          {tc.downloadTitle}
         </h2>
         <p style={{ marginTop: 16, color: '#475467' }}>
-          {isItalian ? 'Disponibile su Google Play e su App Store.' : currentLocale === 'de' ? 'Verfügbar auf Google Play und im App Store.' : 'Available on Google Play and on the App Store.'}
+          {tc.downloadSub}
         </p>
         <div className="l-stores" style={{ justifyContent: 'center' }}>
           <a href="https://play.google.com/store/apps/details?id=com.geotapp.timetrackerandroid" target="_blank" rel="noopener noreferrer nofollow" className="l-store">
@@ -247,10 +295,8 @@ export default function GeoTappApp() {
       {/* COSA FA DAVVERO TIMETRACKER: griglia funzionalita' */}
       <section className="sec warm"><div className="w">
         <div className="hd">
-          <h2 className="r">{isItalian ? 'App timbrature geolocalizzate: cosa fa davvero GeoTapp TimeTracker' : 'What GeoTapp TimeTracker really does today'}</h2>
-          <p className="r d1">{isItalian
-            ? 'Non solo presenze: raccoglie lavoro verificabile sul campo, prove affidabili per il cliente e uno storico operativo che l’ufficio può davvero usare.'
-            : 'Not just attendance: it captures verifiable field work, reliable customer proof and the operational history the office can trust.'}</p>
+          <h2 className="r">{tc.doesTitle}</h2>
+          <p className="r d1">{tc.doesSub}</p>
         </div>
       </div>
         <div className="mods">
@@ -314,11 +360,11 @@ export default function GeoTappApp() {
             <div className="mods">
               {group.map((sys, i) => (
                 <article key={sys.id} className={`l-mod-click r d${i + 1}`} onClick={() => setSelectedSystem(sys)}>
-                  <span className="nn">{String(i + 1).padStart(2, '0')} · {sys.codeName}</span>
+                  <span className="nn">{String(i + 1).padStart(2, '0')}</span>
                   <h3>{sys.systemName}</h3>
                   <p>{sys.shortDescription}</p>
                   <span className="k" style={{ display: 'inline-block', marginTop: 12, fontSize: 11, color: '#15803D' }}>
-                    [ {(sys as any).label_open || 'APRI DOSSIER'} ] &rarr;
+                    {(appDict as { label_open?: string }).label_open ?? 'Learn more'} &rarr;
                   </span>
                 </article>
               ))}

@@ -62,6 +62,63 @@ const CAROUSEL_SLIDES = [
 
 // Screenshot vero dentro la cornice .browser: stessa carosella di sempre
 // (3 schermate, autoplay solo desktop), solo vestita di nuovo.
+/**
+ * Testi della pagina Flow, una voce per lingua. Prima erano scritti nel codice con
+ * «isItalian ? ... : ...»: tutte le lingue diverse dall'italiano ricevevano l'inglese.
+ * Le lingue senza voce propria ripiegano sull'inglese finché non vengono scritte.
+ */
+type FlowCopy = {
+  statusLabel: string; releaseNote: string; doesTitle: string; doesSub: string;
+  cards: { title: string; description: string }[];
+  blocks: { title: string; description: string }[];
+  complianceKicker: string; complianceTagline: string; complianceFootnote: string;
+  legalKicker: string; trial: string;
+};
+const FLOW_COPY: Record<string, FlowCopy> = {
+  it: {
+    statusLabel: 'Dove si usa',
+    releaseNote: 'Flow è una web app: si usa dal browser, su computer e tablet, senza installare niente. Chi lavora sul campo usa GeoTapp TimeTracker, l\'app disponibile su Google Play e App Store, e quello che timbra arriva in Flow.',
+    doesTitle: 'Cosa fa GeoTapp Flow',
+    doesSub: 'È il gestionale dell\'ufficio, e in più tiene insieme la prova di quello che la squadra ha fatto: pianificazione, lavoro sul campo, consuntivo e report per il cliente.',
+    cards: [
+      { title: 'Centro operativo e gestionale', description: 'Flow dà all\'ufficio un unico ambiente per clienti, commesse, calendario, documenti, ferie e permessi, amministrazione e coordinamento delle squadre.' },
+      { title: 'Prove da mostrare al cliente', description: 'Foto, note e timbrature raccolte sul campo restano legate alla commessa, così l\'ufficio risponde con i fatti e non con le supposizioni.' },
+      { title: 'Storico della commessa ed export', description: 'Per ogni commessa puoi scaricare il pacchetto con la cronologia degli eventi, le timbrature con le posizioni e le foto, e mandare al cliente il report sigillato.' },
+      { title: 'Fatturazione più rapida', description: 'Preventivi, fatture e il collegamento con Fatture in Cloud lavorano sui dati veri della commessa: il consuntivo si fa prima e si discute meno.' },
+    ],
+    blocks: [
+      { title: 'Pensato per ufficio, amministrazione e coordinamento', description: 'Flow serve a titolari, amministrazione e responsabili che vogliono meno discussioni interne, ruoli più chiari e una visione chiara del lavoro fatto.' },
+      { title: 'Collegato a TimeTracker', description: 'Timbrature, foto di prova e avanzamento della commessa arrivano in Flow appena l\'operatore li registra, pronti per il report e per il consuntivo.' },
+    ],
+    complianceKicker: 'Informativa GPS',
+    complianceTagline: 'Prima si firma l\'informativa, poi si timbra.*',
+    complianceFootnote: '* Per legge (art. 13 GDPR e, in Italia, art. 4 dello Statuto dei Lavoratori) ogni dipendente va informato prima di essere geolocalizzato. Se il software lascia questo passaggio al titolare, il rischio resta a lui. GeoTapp prepara l\'informativa personalizzata, la fa firmare per presa visione nell\'app e non lascia timbrare finché non è firmata.',
+    legalKicker: 'Normativa locale',
+    trial: 'Prova Flow gratis per 14 giorni',
+  },
+  en: {
+    statusLabel: 'Platform Status',
+    releaseNote: 'Native Android and iOS apps are being released on the stores and stay connected to live operational data from TimeTracker.',
+    doesTitle: 'What GeoTapp Flow really does today',
+    doesSub: 'More than a dashboard: it connects planning, execution, billing and defensible proof of what the team actually delivered.',
+    cards: [
+      { title: 'Management and operational hub', description: 'Flow gives office teams one control layer for clients, projects, shifts, documents, permissions, administration and operational follow-up.' },
+      { title: 'Defensible proof for clients', description: 'Photos, notes, timestamps, clock-ins and field evidence stay attached to each project so the office can answer clients with facts, not assumptions.' },
+      { title: 'Project timeline, ZIP export and audit trail', description: 'Generate a complete history with timeline, maps, photo proofs and session data to reduce internal disputes and support audits or customer claims.' },
+      { title: 'Faster billing with fewer internal disputes', description: 'Quotes, invoices and optional Fatture in Cloud sync work on what was actually done on the field, so billing is faster and easier to defend.' },
+    ],
+    blocks: [
+      { title: 'Built for office teams that need clarity', description: 'Owners, administration and coordinators use Flow when they need fewer internal disputes, clearer responsibilities and a reliable operational cockpit.' },
+      { title: 'Connected to TimeTracker in real time', description: 'Clock-ins, field activity, photo proofs and project execution data return into Flow in real time for governance, reporting and customer-facing proof.' },
+    ],
+    complianceKicker: 'Automatic compliance',
+    complianceTagline: 'Compliant from day one, or you don\'t clock in.*',
+    complianceFootnote: '* By law (GDPR Art. 13), every employee must sign a privacy notice before being geolocated. Most GPS software does not handle this: the legal risk stays with the employer. GeoTapp automatically generates the personalised notice, gets it digitally signed and blocks GPS access until it is signed. No other software on the market does this.',
+    legalKicker: 'Local regulation',
+    trial: 'Try Flow free for 14 days',
+  },
+};
+
 function ScreenCarousel({ isItalian }: { isItalian: boolean }) {
   const [current, setCurrent] = useState(0);
   const [isDesktop, setIsDesktop] = useState(false);
@@ -142,11 +199,11 @@ const GPS_PRIVACY_CONTENT: Record<string, {
   tags: string[];
 }> = {
   it: {
-    title: 'Liberatoria GPS automatica per ogni dipendente',
-    p1: 'Quando inviti un nuovo dipendente, Flow genera automaticamente l\'informativa privacy GPS conforme al GDPR e gliela invia per la firma digitale. Il lavoratore compila i propri dati, legge il documento e firma con un click, tutto via web, senza carta.',
-    p2: 'Il PDF firmato viene archiviato automaticamente e tu vedi in tempo reale chi ha firmato e chi no. Niente più fogli volanti, niente rischio di sanzioni: ogni consenso è tracciato con data, ora e firma digitale.',
-    legal: 'Conforme all\'Art. 4 dello Statuto dei Lavoratori e alle linee guida del Garante Privacy. Flow genera anche il modello per l\'accordo sindacale o l\'autorizzazione dell\'Ispettorato del Lavoro (ITL), obbligatori prima di attivare la geolocalizzazione.',
-    tags: ['Art. 4 Statuto Lavoratori', 'GDPR art. 13', 'Accordo sindacale / ITL', 'Firma digitale tracciata', 'PDF archiviato', 'Zero carta'],
+    title: 'L\'informativa GPS, per ogni dipendente',
+    p1: 'Quando inviti un nuovo dipendente, Flow prepara l\'informativa sulla geolocalizzazione con i dati della tua azienda e gliela manda. Il lavoratore compila i suoi dati, legge il documento e lo firma per presa visione, tutto dal telefono, senza carta. Finché non l\'ha firmata, l\'app non lo lascia timbrare.',
+    p2: 'Il documento firmato resta archiviato, e in Flow vedi chi ha firmato e chi no. Niente più fogli volanti: ogni firma è registrata con data e ora. La firma prova che l\'informativa è stata consegnata; non è un consenso, e non serve che lo sia.',
+    legal: 'In Italia l\'art. 4 dello Statuto dei Lavoratori chiede, oltre all\'informativa, l\'accordo sindacale o l\'autorizzazione dell\'Ispettorato del Lavoro prima di usare strumenti che possono controllare a distanza: quel passaggio resta al datore di lavoro. GeoTapp è costruito per starci dentro: posizione solo quando si timbra, mai in continuo.',
+    tags: ['Art. 4 Statuto dei Lavoratori', 'Art. 13 GDPR', 'Firma per presa visione', 'Documento archiviato', 'Niente timbratura prima della firma', 'Zero carta'],
   },
   en: {
     title: 'Automatic GPS privacy consent for every employee',
@@ -250,51 +307,15 @@ export default function GeoTappApp() {
   const getSystem = (id: string) => systems.find((s) => s.id === id)!;
   const getLink = (path: string) => localizePath(path, currentLocale);
 
-  const releaseNote = isItalian
-    ? 'Le app native Android e iOS sono in fase di rilascio sugli store e restano collegate ai dati operativi live di TimeTracker.'
-    : 'Native Android and iOS apps are being released on the stores and stay connected to live operational data from TimeTracker.';
-
-  const capabilityCards = isItalian
-    ? [
-        { icon: Database, title: 'Centro operativo e gestionale', description: 'Flow da all’ufficio un unico ambiente per clienti, commesse, calendario, documenti, permessi, amministrazione e coordinamento operativo.' },
-        { icon: Camera, title: 'Prove difendibili verso il cliente', description: 'Foto, note, timbrature e prove raccolte sul campo restano legate alla commessa, così l’ufficio risponde con fatti e non con supposizioni.' },
-        { icon: FileArchive, title: 'Timeline commessa, export ZIP e storico verificabile', description: 'Per ogni commessa puoi produrre uno storico con timeline, mappe, timbrature e prove fotografiche che riduce discussioni interne e contestazioni esterne.' },
-        { icon: CreditCard, title: 'Fatturazione più rapida, con meno attriti interni', description: 'Preventivi, fatture e integrazioni come Fatture in Cloud lavorano su dati reali di commessa, per una consuntivazione più rapida e difendibile.' },
-      ]
-    : [
-        { icon: Database, title: 'Management and operational hub', description: 'Flow gives office teams one control layer for clients, projects, shifts, documents, permissions, administration and operational follow-up.' },
-        { icon: Camera, title: 'Defensible proof for clients', description: 'Photos, notes, timestamps, clock-ins and field evidence stay attached to each project so the office can answer clients with facts, not assumptions.' },
-        { icon: FileArchive, title: 'Project timeline, ZIP export and audit trail', description: 'Generate a complete history with timeline, maps, photo proofs and session data to reduce internal disputes and support audits or customer claims.' },
-        { icon: CreditCard, title: 'Faster billing with fewer internal disputes', description: 'Quotes, invoices and optional Fatture in Cloud sync work on what was actually done on the field, so billing is faster and easier to defend.' },
-      ];
-
-  const flowTrackerBlocks = isItalian
-    ? [
-        { title: 'Pensato per ufficio, amministrazione e coordinamento', description: 'Flow serve a titolari, amministrazione e responsabili che vogliono meno discussioni interne, ruoli più chiari e controllo vero del lavoro.' },
-        { title: 'Integrato a TimeTracker in tempo reale', description: 'Timbrature, operatività sul campo, prove foto e avanzamento commessa tornano in Flow in tempo reale per controllo, report e prove difendibili.' },
-      ]
-    : [
-        { title: 'Built for office teams that need clarity', description: 'Owners, administration and coordinators use Flow when they need fewer internal disputes, clearer responsibilities and a reliable operational cockpit.' },
-        { title: 'Connected to TimeTracker in real time', description: 'Clock-ins, field activity, photo proofs and project execution data return into Flow in real time for governance, reporting and customer-facing proof.' },
-      ];
-
+  const fc = FLOW_COPY[currentLocale] ?? FLOW_COPY[currentLocale.split('-')[0]] ?? FLOW_COPY.en;
+  const CARD_ICONS = [Database, Camera, FileArchive, CreditCard];
+  const capabilityCards = fc.cards.map((card, i) => ({ icon: CARD_ICONS[i], ...card }));
+  const flowTrackerBlocks = fc.blocks;
   const c = GPS_PRIVACY_CONTENT[currentLocale] ?? GPS_PRIVACY_CONTENT['en']!;
   const vg = dict.videoGiro;
-  const complianceKicker = isItalian ? 'Compliance automatica' : 'Automatic compliance';
-  const complianceTagline = isItalian
-    ? 'Timbri in regola dal primo giorno, o non timbri.*'
-    : currentLocale === 'de'
-      ? 'Ab Tag eins konform, oder gar nicht stempeln.*'
-      : currentLocale === 'fr'
-        ? 'Conforme dès le premier jour, ou pas de pointage.*'
-        : 'Compliant from day one, or you don\'t clock in.*';
-  const complianceFootnote = isItalian
-    ? '* Per legge (GDPR Art. 13 e, in Italia, Art. 4 Statuto dei Lavoratori), ogni dipendente deve firmare un\'informativa privacy prima di essere geolocalizzato. La maggior parte dei software GPS non lo gestisce: il rischio legale resta al titolare. GeoTapp genera automaticamente l\'informativa personalizzata, la fa firmare digitalmente al dipendente e blocca l\'accesso GPS finché non è firmata. Nessun altro software sul mercato lo fa.'
-    : currentLocale === 'de'
-      ? '* Nach geltendem Recht (DSGVO Art. 13, in Deutschland auch BDSG und BetrVG) muss jeder Mitarbeiter vor der GPS-Ortung eine Datenschutzerklärung unterschreiben. Die meisten GPS-Systeme kümmern sich nicht darum, das rechtliche Risiko bleibt beim Arbeitgeber. GeoTapp erstellt die Erklärung automatisch, lässt sie digital unterschreiben und sperrt den GPS-Zugang, bis sie unterzeichnet ist. Kein anderes System am Markt bietet das.'
-      : currentLocale === 'fr'
-        ? '* La loi (RGPD Art. 13, en France aussi le Code du travail et les recommandations CNIL) exige que chaque salarié signe un avis de confidentialité avant d\'être géolocalisé. La plupart des logiciels GPS ne gèrent pas cela : le risque juridique reste à l\'employeur. GeoTapp génère automatiquement l\'avis, le fait signer numériquement et bloque l\'accès GPS tant qu\'il n\'est pas signé. Aucun autre logiciel sur le marché ne le fait.'
-        : '* By law (GDPR Art. 13), every employee must sign a privacy notice before being geolocated. Most GPS software does not handle this: the legal risk stays with the employer. GeoTapp automatically generates the personalised notice, gets it digitally signed and blocks GPS access until it is signed. No other software on the market does this.';
+  const complianceKicker = fc.complianceKicker;
+  const complianceTagline = fc.complianceTagline;
+  const complianceFootnote = fc.complianceFootnote;
 
   const sectorGroups: Array<{ key: '1' | '2' | '3'; systems: SystemDetail[] }> = [
     { key: '1', systems: [getSystem('nexus-core'), getSystem('titan-flow'), getSystem('ledger-prime')] },
@@ -302,7 +323,7 @@ export default function GeoTappApp() {
     { key: '3', systems: [getSystem('the-auditor'), getSystem('the-uplink'), getSystem('the-oracle')] },
   ];
 
-  const trialLabel = isItalian ? 'Prova Flow gratis per 14 giorni' : 'Try Flow free for 14 days';
+  const trialLabel = fc.trial;
 
   return (
     <div className="lp-l lp-prodotto-flow">
@@ -410,18 +431,16 @@ export default function GeoTappApp() {
       {/* STATO PIATTAFORMA */}
       <section className="sec l-note" style={{ paddingBottom: 0 }}>
         <div className="wn">
-          <p className="kk k" style={{ color: 'var(--seal-testo)', justifyContent: 'center' }}>{isItalian ? 'Stato piattaforma' : 'Platform Status'}</p>
-          <p>{releaseNote}</p>
+          <p className="kk k" style={{ color: 'var(--seal-testo)', justifyContent: 'center' }}>{fc.statusLabel}</p>
+          <p>{fc.releaseNote}</p>
         </div>
       </section>
 
       {/* COSA FA DAVVERO FLOW: griglia funzionalita' */}
       <section className="sec"><div className="w">
         <div className="hd">
-          <h2 className="r">{isItalian ? 'Cosa fa davvero GeoTapp Flow oggi' : 'What GeoTapp Flow really does today'}</h2>
-          <p className="r d1">{isItalian
-            ? 'Non solo dashboard gestionale: collega pianificazione, operatività, consuntivazione e prove difendibili di ciò che il team ha svolto davvero.'
-            : 'More than a dashboard: it connects planning, execution, billing and defensible proof of what the team actually delivered.'}</p>
+          <h2 className="r">{fc.doesTitle}</h2>
+          <p className="r d1">{fc.doesSub}</p>
         </div>
       </div>
         <div className="mods" style={{ gridTemplateColumns: 'repeat(2,1fr)' }}>
@@ -451,7 +470,7 @@ export default function GeoTappApp() {
             </div>
           </div>
           <div className="r-s d2 l-legal-box">
-            <p className="kk k" style={{ color: 'var(--sky)' }}>{isItalian ? 'Normativa locale' : currentLocale === 'de' ? 'Lokales Recht' : currentLocale === 'fr' ? 'Législation locale' : 'Local regulation'}</p>
+            <p className="kk k" style={{ color: 'var(--sky)' }}>{fc.legalKicker}</p>
             <p style={{ marginTop: 14 }}>{c.legal}</p>
             <ul className="rows" style={{ marginTop: 24 }}>
               {c.tags.map((tag) => <li key={tag}>{tag}</li>)}
@@ -529,11 +548,11 @@ export default function GeoTappApp() {
                     setSelectedSystem(sys);
                   }}
                 >
-                  <span className="nn">{String(i + 1).padStart(2, '0')} · {sys.codeName}</span>
+                  <span className="nn">{String(i + 1).padStart(2, '0')}</span>
                   <h3>{sys.systemName}</h3>
                   <p>{sys.shortDescription}</p>
                   <span className="k" style={{ display: 'inline-block', marginTop: 12, fontSize: 11, color: '#15803D' }}>
-                    [ {(sys as any).label_open || 'APRI DOSSIER'} ] &rarr;
+                    {(flowDict as { label_open?: string }).label_open ?? 'Learn more'} &rarr;
                   </span>
                 </article>
               ))}

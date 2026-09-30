@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 import { buildLocaleAlternates, buildCanonicalUrl } from '@/lib/i18n/locale-metadata';
 
 const GUIDA_META: Record<string, { title: string; description: string }> = {
-  it: { title: 'Guida utente GeoTapp - Come iniziare | GeoTapp', description: 'Guida completa a GeoTapp: come configurare il team, avviare le timbrature GPS, generare report verificabili e usare il Verifier. Per amministratori e operatori.' },
+  it: { title: 'Guida utente GeoTapp - Come iniziare | GeoTapp', description: 'Come iniziare con GeoTapp: attivare l\'azienda, invitare i dipendenti, timbrare, raccogliere le prove di lavoro e mandare al cliente un report che verifica da solo.' },
   en: { title: 'GeoTapp User Guide - Getting Started | GeoTapp', description: 'Complete GeoTapp guide: how to set up your team, start GPS time tracking, generate verifiable reports and use the Verifier. For admins and operators.' },
   de: { title: 'GeoTapp Benutzerhandbuch - Erste Schritte | GeoTapp', description: 'Vollständiger GeoTapp-Leitfaden: Team einrichten, GPS-Zeiterfassung starten, verifizierbare Berichte erstellen und den Verifier nutzen.' },
   fr: { title: 'Guide utilisateur GeoTapp - Démarrage | GeoTapp', description: 'Guide complet GeoTapp : configurer votre équipe, démarrer le pointage GPS, générer des rapports vérifiables et utiliser le Verifier.' },

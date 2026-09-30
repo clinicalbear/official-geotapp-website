@@ -15,7 +15,7 @@ import {
 } from '@/lib/pricing';
 
 const appMeta: Record<string, { title: string; description: string }> = {
-  it: { title: 'GeoTapp TimeTracker - App Timbratura GPS per Tecnici sul Campo', description: 'GeoTapp TimeTracker è l\'app mobile per tecnici che registra presenze, attività e prove fotografiche dal campo. Timbratura GPS, report settimanali e sincronizzazione in tempo reale con Flow.' },
+  it: { title: 'GeoTapp TimeTracker - App Timbratura GPS per Tecnici sul Campo', description: 'GeoTapp TimeTracker è l\'app per i tecnici sul campo: timbrature con posizione e ora, foto di prova, note, report settimanali. Su Android e iOS, collegata a Flow.' },
   en: { title: 'GeoTapp TimeTracker: GPS clock-in app for field crews', description: 'Location is recorded when your crew clocks in, takes a break or clocks out, and nothing automatically in between. Photos attach to the job. 14 days free.' },
   de: { title: 'GeoTapp TimeTracker - GPS-Zeiterfassungs-App für Außendienstmitarbeiter', description: 'GeoTapp TimeTracker ist die mobile App für Außendiensttechniker. GPS-Zeiterfassung, Fotobeweise, Wochenberichte und Echtzeitsynchronisation mit Flow.' },
   fr: { title: 'GeoTapp TimeTracker - App de Pointage GPS pour Techniciens Terrain', description: 'GeoTapp TimeTracker est l\'application mobile pour les techniciens terrain. Pointage GPS, preuves photographiques, rapports hebdomadaires et synchronisation en temps réel avec Flow.' },
@@ -57,11 +57,11 @@ const APP_FAQ: Record<string, object> = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: [
-      { '@type': 'Question', name: 'Cos\'è GeoTapp TimeTracker?', acceptedAnswer: { '@type': 'Answer', text: 'GeoTapp TimeTracker è l\'app mobile per tecnici che registra presenze, attività e prove fotografiche direttamente dal campo. La timbratura GPS è verificabile da chiunque tramite GeoTapp Verifier.' } },
-      { '@type': 'Question', name: 'GeoTapp TimeTracker funziona senza internet?', acceptedAnswer: { '@type': 'Answer', text: 'Sì. L\'app funziona offline e salva tutte le timbrature GPS, le foto e le note localmente. I dati vengono sincronizzati con GeoTapp Flow non appena torna la connessione.' } },
-      { '@type': 'Question', name: 'Come si differenzia GeoTapp TimeTracker da una semplice app di timbratura?', acceptedAnswer: { '@type': 'Answer', text: 'GeoTapp TimeTracker non è solo una timbratura: ogni timbro è sigillato con GPS reale, hash crittografico e prove fotografiche. Il report è verificabile indipendentemente: qualsiasi modifica, anche da parte dell\'amministratore, è rilevabile.' } },
-      { '@type': 'Question', name: 'GeoTapp TimeTracker funziona su Android e iOS?', acceptedAnswer: { '@type': 'Answer', text: 'Sì. L\'app è disponibile su Google Play Store e Apple App Store. Funziona su tutti i dispositivi Android (6.0+) e iOS (14+).' } },
-      { '@type': 'Question', name: 'GeoTapp TimeTracker è conforme al GDPR?', acceptedAnswer: { '@type': 'Answer', text: 'Sì. GeoTapp registra la posizione GPS solo al momento della timbratura, non in modo continuo. Il dipendente può vedere tutti i propri dati registrati in qualsiasi momento.' } },
+      { '@type': 'Question', name: 'Cos\'è GeoTapp TimeTracker?', acceptedAnswer: { '@type': 'Answer', text: 'GeoTapp TimeTracker è l\'app mobile per tecnici che registra presenze, attività e prove fotografiche direttamente dal campo. Tutto finisce nel report sigillato, che il cliente verifica da solo con GeoTapp Verifier.' } },
+      { '@type': 'Question', name: 'Cosa succede se manca la rete?', acceptedAnswer: { '@type': 'Answer', text: 'La timbratura resta salvata sul telefono e parte da sola quando torna il segnale, con l\'ora in cui è stata fatta. Finché non arriva, in Flow non si vede.' } },
+      { '@type': 'Question', name: 'Come si differenzia GeoTapp TimeTracker da una semplice app di timbratura?', acceptedAnswer: { '@type': 'Answer', text: 'GeoTapp TimeTracker non è solo una timbratura: ogni turno, con le sue posizioni, le foto di prova e le note, finisce in un report sigillato con impronte crittografiche. Il cliente lo verifica da solo: qualsiasi modifica successiva, anche da parte dell\'amministratore, è rilevabile.' } },
+      { '@type': 'Question', name: 'GeoTapp TimeTracker funziona su Android e iOS?', acceptedAnswer: { '@type': 'Answer', text: 'Sì. L\'app è su Google Play e App Store. Serve Android 8.0 o successivo, oppure iOS 26.2 o successivo.' } },
+      { '@type': 'Question', name: 'GeoTapp TimeTracker rispetta il GDPR?', acceptedAnswer: { '@type': 'Answer', text: 'È costruito per starci dentro: registra la posizione solo quando il lavoratore timbra (entrata, pause, uscita) o scatta una foto di prova, mai in modo continuo, e non chiede nemmeno il permesso di leggere la posizione in background. Il dipendente vede le sue timbrature e i suoi report nell\'app. Informativa e, dove serve, accordo sindacale restano a carico del datore di lavoro.' } },
     ],
   },
   en: {

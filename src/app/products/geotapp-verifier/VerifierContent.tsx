@@ -170,7 +170,7 @@ export default function VerifierContent({ copy, locale }: VerifierContentProps) 
             <a className="b1" href="#download">
               <Download size={18} style={{ display: 'inline', verticalAlign: '-3px', marginRight: 8 }} />{copy.hero_cta_download}
             </a>
-            <Link className="b2" href={getLink('/contact')}>{copy.hero_cta_primary}</Link>
+            <Link className="b2" href={getLink('/trial')}>{copy.hero_cta_primary}</Link>
             <a className="b2" href="#how-it-works">{copy.hero_cta_secondary}</a>
           </div>
         </div>
@@ -402,7 +402,7 @@ console.log(result.integrityLevel);`}</pre>
             <a className="b1" href="#download">
               <Download size={18} style={{ display: 'inline', verticalAlign: '-3px', marginRight: 8 }} />{copy.cta_download}
             </a>
-            <Link className="b2" href={getLink('/contact')}>{copy.cta_primary}</Link>
+            <Link className="b2" href={getLink('/trial')}>{copy.cta_primary}</Link>
             <Link className="b2" href={getLink('/products/geotapp-flow')}>
               <Database size={16} style={{ display: 'inline', verticalAlign: '-2px', marginRight: 6 }} />{copy.cta_flow}
             </Link>

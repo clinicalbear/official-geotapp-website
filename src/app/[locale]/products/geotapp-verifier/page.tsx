@@ -9,7 +9,7 @@ import { type AppLocale } from '@/lib/i18n/config';
 import { getCurrencyForLocale } from '@/lib/pricing';
 
 const verifierMeta: Record<string, { title: string; description: string }> = {
-  it: { title: "GeoTapp Verifier: verifica indipendente dei report", description: "Verifier rende verificabile ogni intervento con GPS sigillato, foto con orario e report con ogni modifica rilevabile. Il committente controlla da solo, senza account." },
+  it: { title: "GeoTapp Verifier: verifica indipendente dei report", description: "Verifier controlla che un report GeoTapp non sia stato modificato dopo il sigillo e che venga da GeoTapp. Gratuito, senza account, anche offline." },
   en: { title: "GeoTapp Verifier: independent work report verification", description: "Verifier makes every job verifiable with sealed GPS, timestamped photos and tamper-evident reports. Your client checks the work alone, with no account." },
   de: { title: "GeoTapp Verifier: unabhängige Prüfung von Arbeitsberichten", description: "Verifier macht jeden Einsatz überprüfbar mit versiegelten GPS-Daten, Fotos mit Zeitstempel und Berichten mit Manipulationsnachweis. Ihr Kunde prüft selbst." },
   fr: { title: "GeoTapp Verifier: vérification indépendante des rapports", description: "Verifier rend chaque intervention vérifiable avec un GPS scellé, des photos horodatées et des rapports aux modifications traçables. Votre client vérifie seul, sans compte." },
@@ -50,11 +50,11 @@ const VERIFIER_FAQ: Record<string, object> = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: [
-      { '@type': 'Question', name: 'Come funziona la verifica di un report GeoTapp?', acceptedAnswer: { '@type': 'Answer', text: 'Ogni report GeoTapp è sigillato con un hash crittografico al momento della chiusura. Il cliente riceve un link univoco e può verificare indipendentemente su geotapp.com/products/geotapp-verifier che i dati GPS, le foto e i timestamp non siano stati modificati dopo la creazione.' } },
-      { '@type': 'Question', name: 'Chi può verificare un report GeoTapp Verifier?', acceptedAnswer: { '@type': 'Answer', text: 'Chiunque abbia il link può verificare il report senza accedere all\'account aziendale. Il sistema confronta il sigillo digitale e conferma l\'integrità dei dati in modo completamente indipendente.' } },
-      { '@type': 'Question', name: 'Cosa succede se un cliente contesta il lavoro svolto?', acceptedAnswer: { '@type': 'Answer', text: 'Con GeoTapp Verifier puoi mostrare al cliente il link di verifica. Il report contiene GPS sigillato, prove fotografiche con timestamp e firma digitale con ogni alterazione rilevabile, prove che il committente può verificare da solo.' } },
-      { '@type': 'Question', name: 'GeoTapp Verifier è conforme al GDPR?', acceptedAnswer: { '@type': 'Answer', text: 'Sì. I dati registrati vengono trattati in conformità al GDPR. GeoTapp non raccoglie dati di posizione in modo continuo, solo al momento dell\'apertura e chiusura del turno o intervento.' } },
-      { '@type': 'Question', name: 'GeoTapp Verifier funziona con Flow e TimeTracker?', acceptedAnswer: { '@type': 'Answer', text: 'Sì. Verifier è il componente di prova verificabile che si integra nativamente con GeoTapp Flow (per la gestione operativa) e GeoTapp TimeTracker (per la timbratura GPS dei tecnici sul campo).' } },
+      { '@type': 'Question', name: 'Come funziona la verifica di un report GeoTapp?', acceptedAnswer: { '@type': 'Answer', text: 'Ogni report GeoTapp viene sigillato quando è generato: una catena di impronte SHA-256 lega eventi e foto, e la radice è firmata con la chiave di GeoTapp. Il cliente riceve il report in PDF e un link fisso al pacchetto sigillato; lo verifica online o con il verificatore offline, che ricalcola le impronte e controlla la firma.' } },
+      { '@type': 'Question', name: 'Chi può verificare un report GeoTapp?', acceptedAnswer: { '@type': 'Answer', text: 'Chiunque abbia il pacchetto, senza accedere all\'account dell\'azienda. Il verificatore offline porta dentro la chiave pubblica: funziona anche senza internet e anche senza GeoTapp.' } },
+      { '@type': 'Question', name: 'Cosa succede se un cliente contesta il lavoro svolto?', acceptedAnswer: { '@type': 'Answer', text: 'Puoi mostrargli il report: contiene orari, posizioni registrate alle timbrature e foto di prova, e lui stesso può verificare che nessuno l\'abbia modificato dopo il sigillo. La verifica dimostra che il documento è integro; da sola non è prova assoluta del fatto materiale né consulenza legale.' } },
+      { '@type': 'Question', name: 'GeoTapp Verifier rispetta il GDPR?', acceptedAnswer: { '@type': 'Answer', text: 'Il verificatore offline non manda niente a nessuno: gira sul tuo computer. La verifica online passa il file dal nostro server, che non lo salva. Quanto ai dati nel report, GeoTapp registra la posizione solo quando il lavoratore timbra (entrata, pause, uscita) o scatta una foto di prova, mai in modo continuo.' } },
+      { '@type': 'Question', name: 'GeoTapp Verifier funziona con Flow e TimeTracker?', acceptedAnswer: { '@type': 'Answer', text: 'Sì. I dati nascono su GeoTapp TimeTracker, sul campo, e il report si genera in GeoTapp Flow, in ufficio. Verifier è lo strumento gratuito con cui chiunque controlla quel report.' } },
     ],
   },
   en: {
@@ -82,7 +82,7 @@ const VERIFIER_FAQ: Record<string, object> = {
 };
 
 const VERIFIER_DESCRIPTION: Record<string, string> = {
-  it: 'GeoTapp Verifier rende verificabile ogni intervento con dati GPS sigillati, prove fotografiche con timestamp e report con ogni modifica rilevabile. Verifica indipendente per aziende che devono difendere il lavoro svolto.',
+  it: 'GeoTapp Verifier controlla che un report GeoTapp non sia stato modificato dopo il sigillo e che venga davvero da GeoTapp. È gratuito, senza account, anche offline: per le aziende che devono dimostrare il lavoro svolto e per i loro clienti.',
   en: 'GeoTapp Verifier makes every job verifiable with sealed GPS data, timestamped photo evidence and tamper-evident reports. Independent verification for companies that need to defend completed work.',
   de: 'GeoTapp Verifier macht jeden Einsatz überprüfbar mit versiegelten GPS-Daten, zeitgestempelten Fotobeweisen und Berichten mit Manipulationsnachweis, unabhängig verifizierbar.',
   fr: "GeoTapp Verifier rend chaque intervention vérifiable avec des données GPS scellées, des preuves photographiques horodatées et des rapports aux modifications traçables, vérifiables indépendamment.",

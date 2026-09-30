@@ -10,7 +10,7 @@ export default function TermsPage() {
     markdownContent,
     slug: 'terms',
     locale: 'it',
-    title: 'Condizioni Generali di Servizio',
-    subtitle: 'Aggiornato al 3 settembre 2026',
+    title: 'Termini di servizio',
+    subtitle: 'Versione 1.6 - 30 settembre 2026',
   });
 }

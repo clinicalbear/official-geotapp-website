@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { buildLocaleAlternates, buildCanonicalUrl } from '@/lib/i18n/locale-metadata';
 
 const CONTACT_META: Record<string, { title: string; description: string }> = {
-  it: { title: 'Contatta GeoTapp - Supporto clienti | GeoTapp', description: 'Hai domande su GeoTapp? Scrivici. Il team risponde in italiano e inglese per supporto, partnership e informazioni commerciali.' },
+  it: { title: 'Contatta GeoTapp - Supporto clienti | GeoTapp', description: 'Hai domande su GeoTapp? Scrivici. Rispondiamo su supporto, collaborazioni e informazioni commerciali.' },
   en: { title: 'Contact GeoTapp - Customer support | GeoTapp', description: 'Have questions about GeoTapp? Write to us. Our team responds in English and Italian for support, partnerships and sales enquiries.' },
   de: { title: 'GeoTapp kontaktieren - Kundensupport | GeoTapp', description: 'Haben Sie Fragen zu GeoTapp? Schreiben Sie uns. Unser Team antwortet auf Deutsch und Englisch.' },
   fr: { title: 'Contacter GeoTapp - Support client | GeoTapp', description: 'Des questions sur GeoTapp ? Écrivez-nous. Notre équipe répond en français et en anglais.' },

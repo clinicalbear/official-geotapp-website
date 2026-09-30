@@ -17,9 +17,9 @@ const META: Record<string, { title: string; description: string }> = {
       'Clock-in with GPS and geofence check, anti-spoofing, an offline mode that syncs when signal returns, AES-256 encryption and live updates for the office.',
   },
   it: {
-    title: 'Funzionalità GeoTapp: timbratura GPS, offline e cifratura',
+    title: 'Funzionalità GeoTapp: timbratura con posizione e report sigillati',
     description:
-      'Timbratura GPS con controllo geofence e anti-spoofing, lavoro offline che si sincronizza al ritorno del segnale, cifratura AES-256 e dati in tempo reale.',
+      'Posizione solo quando si timbra, posizioni false rifiutate, timbrature salvate anche senza rete, report sigillati che il cliente verifica da solo, dati in Europa.',
   },
   de: {
     title: 'GeoTapp-Funktionen: GPS-Zeiterfassung, offline, verschlüsselt',

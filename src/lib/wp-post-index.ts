@@ -377,6 +377,26 @@ export async function localizeCategoryId(baseCategoryId: number, locale: string)
 }
 
 /** Post di quelle categorie, nella lingua richiesta, dal piu' recente. */
+/**
+ * Articoli che restano nel blog ma non si mostrano nelle vetrine delle pagine del sito
+ * (schede «Dal blog», risorse di settore, pagina dei link). Titolo o anteprima promettono
+ * esiti o controllo che la scheda claim vieta («Controllo Totale», «Zero Contestazioni»,
+ * «prova legale», «certificare ogni timbratura»), o hanno un refuso in anteprima
+ * («decompte»). Deciso il 30/09/2026 nel giro di correzioni del sito; si toglie uno slug
+ * da qui quando l'articolo e' stato corretto sul blog.
+ */
+export const NON_IN_VETRINA = new Set<string>([
+  'geotapp-ecosystem-2026-la-tua-tutela-totale-immaginala-ora-e-rendila-reale',
+  'app-per-imprese-di-pulizie-timbratura-geolocalizzata-gdpr',
+  'timbrature-gps-2026-solo-geotapp-combina-crittografia-anti-spoofing-completo',
+  'gps-time-tracking-contro-buddy-punching',
+  'software-gestione-presenze-cantiere-edilizia',
+  'lavoro-notturno-festivo-ore',
+  'elettricista-da-excel-a-timbrature-gps-margine',
+  'tempo-sprecato-in-azienda-come-geotapp-timetracker-rivela-inefficienze-nascoste-da-migliaia-di-euro-al-mese',
+  'impresa-di-pulizie-quanto-cambierebbe-la-tua-vita-se-ogni-intervento-fosse-finalmente-sotto-controllo',
+]);
+
 export function filterPosts<T extends WpIndexEntry>(
   posts: T[],
   categoryIds: number[],
@@ -388,6 +408,7 @@ export function filterPosts<T extends WpIndexEntry>(
   const out = posts.filter(
     (p) =>
       detectPostLocale(p) === lang &&
+      !NON_IN_VETRINA.has(p.slug) &&
       (wanted.size === 0 || (p.categories ?? []).some((id) => wanted.has(id))),
   );
   return typeof limit === 'number' ? out.slice(0, limit) : out;

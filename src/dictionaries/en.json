@@ -650,7 +650,8 @@
           "short": "Real-time operational dashboard. Always know how many interventions are open, in progress or completed today.",
           "full": "### Operational Data, Not Assumptions.\n\nDeciding without reliable data is dangerous.\n**Operational Visibility** turns field data into concrete information.\n\n#### Operational Dashboard\n\nSee at a glance:\n- Open and in-progress interventions\n- Active technicians\n- Interventions completed today and this week\n\n#### Periodic Reports\n\nReceive automated activity summaries.\nCompare periods, identify bottlenecks and optimise operations."
         }
-      }
+      },
+      "label_open": "Learn more"
     },
     "app": {
       "hero_badge": "GeoTapp TimeTracker - Field Technician App",
@@ -718,7 +719,8 @@
           "short": "Upload your logo and choose your company colours. Your operators use an app that reflects your brand identity.",
           "full": "### Your Company, Your App.\n\nDo not use a generic app.\nMake your employees feel part of YOUR company with a consistent visual experience.\n\n#### Company Logo\n\nYour logo prominently displayed on the login screen and main dashboard.\n\n#### Company Colours\n\nChoose the colour theme that fits your corporate image.\nProfessional, consistent, recognisable."
         }
-      }
+      },
+      "label_open": "Learn more"
     }
   },
   "cart": {
@@ -749,7 +751,10 @@
   },
   "guida": {
     "page_title": "User Guide",
-    "download_pdf": "Download / Print PDF"
+    "download_pdf": "Download / Print PDF",
+    "box_note": "Note",
+    "box_warning": "Warning",
+    "box_tip": "Tip"
   },
   "trial": {
     "page_title": "14 days free. No credit card.",

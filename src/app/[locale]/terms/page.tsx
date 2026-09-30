@@ -5,7 +5,7 @@ import { getTermsContent } from '@/content/legal/terms-i18n';
 import type { AppLocale } from '@/lib/i18n/config';
 
 const TERMS_META: Record<string, { title: string; description: string; pageTitle: string; subtitle: string }> = {
-  it: { title: 'Termini e Condizioni | GeoTapp', description: 'Condizioni generali di servizio GeoTapp: utilizzo della piattaforma, abbonamenti, responsabilità e diritti degli utenti.', pageTitle: 'Termini di Servizio', subtitle: 'Versione 1.5 - Settembre 2026' },
+  it: { title: 'Termini di servizio | GeoTapp', description: 'Condizioni generali di servizio di GeoTapp: prezzi, durata minima di 12 mesi, uso consentito, cifratura, responsabilità e diritti.', pageTitle: 'Termini di servizio', subtitle: 'Versione 1.6 - 30 settembre 2026' },
   en: { title: 'Terms & Conditions | GeoTapp', description: 'GeoTapp general terms of service: platform usage, subscriptions, liability and user rights.', pageTitle: 'Terms of Use', subtitle: 'Version 1.5 - September 2026' },
   de: { title: 'Allgemeine Geschäftsbedingungen | GeoTapp', description: 'Allgemeine Geschäftsbedingungen von GeoTapp: Plattformnutzung, Abonnements, Haftung und Benutzerrechte.', pageTitle: 'Nutzungsbedingungen', subtitle: 'Version 1.5 - September 2026' },
   fr: { title: 'Conditions Générales | GeoTapp', description: 'Conditions générales de service GeoTapp : utilisation de la plateforme, abonnements, responsabilité et droits des utilisateurs.', pageTitle: "Conditions d'utilisation", subtitle: 'Version 1.5 - septembre 2026' },
