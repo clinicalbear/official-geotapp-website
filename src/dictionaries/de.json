@@ -1048,7 +1048,8 @@
     "contact_office": "GeoTapp Pressestelle",
     "contact_email": "press@geotapp.com",
     "releases_label": "Pressemitteilungen",
-    "coverage_label": "In den Medien"
+    "coverage_label": "In den Medien",
+    "coverage_note": "Titel in der Originalsprache"
   },
   "blog": {
     "hero_title": "Ratgeber zu Arbeitsnachweis, DSGVO und Teams im Außendienst.",

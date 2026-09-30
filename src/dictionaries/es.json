@@ -964,7 +964,8 @@
     "contact_office": "Oficina de prensa GeoTapp",
     "contact_email": "press@geotapp.com",
     "releases_label": "Notas de prensa",
-    "coverage_label": "Apariciones en medios"
+    "coverage_label": "Apariciones en medios",
+    "coverage_note": "Titulares en el idioma original"
   },
   "blog": {
     "hero_title": "Guías sobre prueba del trabajo, RGPD y equipos de campo.",

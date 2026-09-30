@@ -1062,7 +1062,8 @@
     "contact_office": "GeoTapp Press Office",
     "contact_email": "press@geotapp.com",
     "releases_label": "Press releases",
-    "coverage_label": "As featured in"
+    "coverage_label": "As featured in",
+    "coverage_note": "Headlines in the original language"
   },
   "blog": {
     "hero_title": "Guides on proof of work, GDPR and field teams.",

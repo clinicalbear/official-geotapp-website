@@ -1048,7 +1048,8 @@
     "contact_office": "GeoTapp Persafdeling",
     "contact_email": "press@geotapp.com",
     "releases_label": "Persberichten",
-    "coverage_label": "In de media"
+    "coverage_label": "In de media",
+    "coverage_note": "Koppen in de oorspronkelijke taal"
   },
   "blog": {
     "hero_title": "Gidsen over werkbewijs, AVG en teams op locatie.",

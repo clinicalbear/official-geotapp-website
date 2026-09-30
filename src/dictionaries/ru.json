@@ -964,7 +964,8 @@
     "contact_office": "Пресс-служба GeoTapp",
     "contact_email": "press@geotapp.com",
     "releases_label": "Пресс-релизы",
-    "coverage_label": "Упоминания в СМИ"
+    "coverage_label": "Упоминания в СМИ",
+    "coverage_note": "Заголовки на языке оригинала"
   },
   "blog": {
     "hero_title": "Гайды о подтверждении работы, GDPR и выездных командах.",

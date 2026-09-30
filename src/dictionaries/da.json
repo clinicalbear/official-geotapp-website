@@ -964,7 +964,8 @@
     "contact_office": "GeoTapp Pressekontor",
     "contact_email": "press@geotapp.com",
     "releases_label": "Pressemeddelelser",
-    "coverage_label": "Omtale i medierne"
+    "coverage_label": "Omtale i medierne",
+    "coverage_note": "Overskrifter på originalsproget"
   },
   "blog": {
     "hero_title": "Guides om arbejdsdokumentation, GDPR og teams i marken.",

@@ -1063,7 +1063,8 @@
     "contact_office": "Ufficio stampa GeoTapp",
     "contact_email": "press@geotapp.com",
     "releases_label": "Comunicati stampa",
-    "coverage_label": "Ci hanno citato (titoli nella lingua originale)"
+    "coverage_label": "Ci hanno citato",
+    "coverage_note": "Titoli nella lingua originale"
   },
   "blog": {
     "hero_title": "Guide su prova del lavoro, GDPR e squadre sul campo.",

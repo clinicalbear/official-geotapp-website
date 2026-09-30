@@ -289,7 +289,17 @@ export default function StampaView({
       {/* ── pubblicazioni: chi ha scritto di noi ── */}
       {hasPress(PRESS_COVERAGE) && (
         <section className="sec warm"><div className="w">
-          <div className="hd"><h2 className="r">{d.coverage_label}</h2></div>
+          <div className="hd">
+            <h2 className="r">
+              {d.coverage_label}
+              {/* Nota a capo, meno della metà del titolo (richiesta di Mike del 30/09/2026) */}
+              {d.coverage_note && (
+                <span style={{ display: 'block', fontSize: '0.4em', fontWeight: 400, letterSpacing: 0, marginTop: '0.6em', color: '#475467' }}>
+                  {d.coverage_note}
+                </span>
+              )}
+            </h2>
+          </div>
           <ul className="rows covg">
             {[...PRESS_COVERAGE].sort((a, b) => b.date.localeCompare(a.date)).map((item, i) => {
               const riga = (

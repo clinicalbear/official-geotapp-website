@@ -964,7 +964,8 @@
     "contact_office": "Service de presse GeoTapp",
     "contact_email": "press@geotapp.com",
     "releases_label": "Communiqués de presse",
-    "coverage_label": "Ils parlent de nous"
+    "coverage_label": "Ils parlent de nous",
+    "coverage_note": "Titres dans la langue d’origine"
   },
   "blog": {
     "hero_title": "Guides sur la preuve du travail, le RGPD et les équipes terrain.",

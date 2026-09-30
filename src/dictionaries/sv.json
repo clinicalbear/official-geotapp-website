@@ -964,7 +964,8 @@
     "contact_office": "GeoTapp Pressavdelning",
     "contact_email": "press@geotapp.com",
     "releases_label": "Pressmeddelanden",
-    "coverage_label": "Omnämnanden i media"
+    "coverage_label": "Omnämnanden i media",
+    "coverage_note": "Rubriker på originalspråket"
   },
   "blog": {
     "hero_title": "Guider om arbetsbevis, GDPR och team i fält.",
