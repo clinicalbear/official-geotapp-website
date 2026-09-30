@@ -275,7 +275,7 @@ export const slovenia: SchedaPaese = {
     {
       passo: 6,
       descrizione: {
-        it: 'In caso di cambio di sistema: se cambi sistema o software di monitoraggio, aggiorna e riconsegna l’informativa, e verifica se devi di nuovo informare o consultare i rappresentanti dei lavoratori, dove la legge lo prevede. Spesso cambiano fornitore (responsabile del trattamento), dati raccolti e modalità: quella consegnata prima non basta.',
+        it: 'Se cambi sistema o software di monitoraggio, aggiorna e riconsegna l’informativa, e verifica se devi di nuovo informare o consultare i rappresentanti dei lavoratori, dove la legge lo prevede. Spesso cambiano fornitore (responsabile del trattamento), dati raccolti e modalità: l’informativa consegnata prima non basta.',
         en: 'If you switch systems: when you change your monitoring system or software, update and re-issue the privacy notice, and check whether you must inform or consult the workers\' representatives again, where the law requires it. The provider (data processor), the data collected and the methods often change: the one provided earlier is not enough.',
         de: 'Bei Systemwechsel: Wenn Sie Ihr Überwachungssystem oder Ihre Software wechseln, aktualisieren Sie die Datenschutzinformation und händigen Sie sie erneut aus, und prüfen Sie, ob Sie die Arbeitnehmervertretung erneut informieren oder beteiligen müssen, wo das Gesetz es vorsieht. Anbieter (Auftragsverarbeiter), erhobene Daten und Modalitäten ändern sich oft: die zuvor ausgehändigte genügt nicht.',
         fr: 'En cas de changement de système : si vous changez de système ou de logiciel de surveillance, mettez à jour et remettez l’information, et vérifiez si vous devez de nouveau informer ou consulter les représentants du personnel, lorsque la loi le prévoit. Le fournisseur (sous-traitant), les données collectées et les modalités changent souvent : celle remise auparavant ne suffit pas.',
@@ -298,23 +298,23 @@ export const slovenia: SchedaPaese = {
 
   sanzioneMax: {
     importo: {
-      it: 'fino a 20 milioni di euro o 4% del fatturato (GDPR)',
-      en: 'up to 20 million euros or 4% of turnover (GDPR)',
-      de: 'bis zu 20 Millionen Euro oder 4% des Umsatzes (DSGVO)',
-      fr: "jusqu'à 20 millions d'euros ou 4% du chiffre d'affaires (RGPD)",
-      es: 'hasta 20 millones de euros o el 4% de la facturación (RGPD)',
-      nl: 'tot 20 miljoen euro of 4% van de omzet (AVG)',
+      it: '6.000 euro all\'azienda e 600 alla persona responsabile (IP-RS, 2026)',
+      en: '6,000 euros on the company and 600 on the responsible person (IP-RS, 2026)',
+      de: '6.000 Euro gegen das Unternehmen und 600 gegen die verantwortliche Person (IP-RS, 2026)',
+      fr: "6 000 euros pour l'entreprise et 600 pour le responsable (IP-RS, 2026)",
+      es: '6.000 euros a la empresa y 600 al responsable (IP-RS, 2026)',
+      nl: '6.000 euro voor het bedrijf en 600 voor de verantwoordelijke persoon (IP-RS, 2026)',
     },
     casoCitato: {
-      it: "Il 15 aprile 2026 l'IP-RS ha comunicato una multa di 6.000 euro (600 euro alla persona responsabile) a un'azienda pubblica di servizi che raccoglieva in modo continuo e indiscriminato i dati di posizione dei dipendenti dai GPS dei veicoli aziendali, senza una base giuridica valida, senza valutare mezzi meno invasivi e senza informare adeguatamente i lavoratori. Le multe seguono i limiti del GDPR (art. 83; ZVOP-2 art. 95).",
-      en: "On 15 April 2026 the IP-RS announced a fine of 6,000 euros (600 euros on the responsible person) against a public utility that continuously and indiscriminately collected employees' location data from company-vehicle GPS units, without a valid legal basis, without assessing less intrusive means and without properly informing the workers. Fines follow the GDPR limits (art. 83; ZVOP-2 art. 95).",
-      de: "Am 15. April 2026 gab die IP-RS ein Bußgeld von 6.000 Euro (600 Euro gegen die verantwortliche Person) gegen ein öffentliches Versorgungsunternehmen bekannt, das die Standortdaten der Beschäftigten aus den GPS-Geräten der Firmenfahrzeuge dauerhaft und wahllos erhob, ohne gültige Rechtsgrundlage, ohne mildere Mittel zu prüfen und ohne die Beschäftigten angemessen zu informieren. Die Bußgelder folgen den Grenzen der DSGVO (Art. 83; ZVOP-2 Art. 95).",
-      fr: "Le 15 avril 2026, l'IP-RS a annoncé une amende de 6 000 euros (600 euros pour le responsable) à une entreprise publique de services qui collectait de façon continue et indiscriminée les données de localisation des salariés à partir des GPS des véhicules de l'entreprise, sans base juridique valable, sans évaluer de moyens moins intrusifs et sans informer correctement les salariés. Les amendes suivent les plafonds du RGPD (art. 83; ZVOP-2 art. 95).",
-      es: "El 15 de abril de 2026 la IP-RS comunicó una multa de 6.000 euros (600 euros al responsable) a una empresa pública de servicios que recogía de forma continua e indiscriminada los datos de ubicación de los empleados desde los GPS de los vehículos de la empresa, sin base jurídica válida, sin evaluar medios menos intrusivos y sin informar adecuadamente a los trabajadores. Las multas siguen los límites del RGPD (art. 83; ZVOP-2 art. 95).",
-      nl: "Op 15 april 2026 maakte de IP-RS een boete van 6.000 euro bekend (600 euro voor de verantwoordelijke persoon) voor een openbaar nutsbedrijf dat de locatiegegevens van werknemers via de GPS-units van bedrijfsvoertuigen continu en ongedifferentieerd verzamelde, zonder geldige rechtsgrondslag, zonder mildere middelen te onderzoeken en zonder de werknemers voldoende te informeren. De boetes volgen de grenzen van de AVG (art. 83; ZVOP-2 art. 95).",
+      it: "Il 15 aprile 2026 l'IP-RS ha comunicato una multa di 6.000 euro (600 euro alla persona responsabile) a un'azienda pubblica di servizi che raccoglieva in modo continuo e indiscriminato i dati di posizione dei dipendenti dai GPS dei veicoli aziendali, senza una base giuridica valida, senza valutare mezzi meno invasivi e senza informare adeguatamente i lavoratori. Il massimo di legge resta quello del GDPR, fino a 20 milioni di euro o il 4% del fatturato (art. 83; ZVOP-2 art. 95).",
+      en: "On 15 April 2026 the IP-RS announced a fine of 6,000 euros (600 euros on the responsible person) against a public utility that continuously and indiscriminately collected employees' location data from company-vehicle GPS units, without a valid legal basis, without assessing less intrusive means and without properly informing the workers. The legal maximum remains the GDPR one, up to 20 million euros or 4% of turnover (art. 83; ZVOP-2 art. 95).",
+      de: "Am 15. April 2026 gab die IP-RS ein Bußgeld von 6.000 Euro (600 Euro gegen die verantwortliche Person) gegen ein öffentliches Versorgungsunternehmen bekannt, das die Standortdaten der Beschäftigten aus den GPS-Geräten der Firmenfahrzeuge dauerhaft und wahllos erhob, ohne gültige Rechtsgrundlage, ohne mildere Mittel zu prüfen und ohne die Beschäftigten angemessen zu informieren. Das gesetzliche Höchstmaß bleibt das der DSGVO, bis zu 20 Millionen Euro oder 4% des Umsatzes (Art. 83; ZVOP-2 Art. 95).",
+      fr: "Le 15 avril 2026, l'IP-RS a annoncé une amende de 6 000 euros (600 euros pour le responsable) à une entreprise publique de services qui collectait de façon continue et indiscriminée les données de localisation des salariés à partir des GPS des véhicules de l'entreprise, sans base juridique valable, sans évaluer de moyens moins intrusifs et sans informer correctement les salariés. Le plafond légal reste celui du RGPD, jusqu'à 20 millions d'euros ou 4% du chiffre d'affaires (art. 83; ZVOP-2 art. 95).",
+      es: "El 15 de abril de 2026 la IP-RS comunicó una multa de 6.000 euros (600 euros al responsable) a una empresa pública de servicios que recogía de forma continua e indiscriminada los datos de ubicación de los empleados desde los GPS de los vehículos de la empresa, sin base jurídica válida, sin evaluar medios menos intrusivos y sin informar adecuadamente a los trabajadores. El máximo legal sigue siendo el del RGPD, hasta 20 millones de euros o el 4% de la facturación (art. 83; ZVOP-2 art. 95).",
+      nl: "Op 15 april 2026 maakte de IP-RS een boete van 6.000 euro bekend (600 euro voor de verantwoordelijke persoon) voor een openbaar nutsbedrijf dat de locatiegegevens van werknemers via de GPS-units van bedrijfsvoertuigen continu en ongedifferentieerd verzamelde, zonder geldige rechtsgrondslag, zonder mildere middelen te onderzoeken en zonder de werknemers voldoende te informeren. Het wettelijke maximum blijft dat van de AVG, tot 20 miljoen euro of 4% van de omzet (art. 83; ZVOP-2 art. 95).",
     },
     urlFonte: FONTE_IPRS_MULTA_2026.url,
-    tipoImporto: 'massimale',
+    tipoImporto: 'caso-gps',
   },
 
   fonti: [

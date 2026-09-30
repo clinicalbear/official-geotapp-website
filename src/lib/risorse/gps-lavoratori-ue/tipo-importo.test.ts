@@ -55,7 +55,14 @@ describe('tipoImporto', () => {
     // fonte non ufficiale e NON risultano nelle relazioni annuali delle
     // rispettive autorita, controllate una per una. Meglio il massimale di
     // legge, che e documentato, di una cifra che non sappiamo provare.
-    expect(conta).toEqual({ 'caso-gps': 10, 'caso-affine': 9, massimale: 20 });
+    // Aggiornato di proposito il 30/09/2026: la Slovenia passa da 'massimale'
+    // a 'caso-gps'. L'IP-RS ha multato il 15/04/2026 un'azienda pubblica per il
+    // GPS continuo sui veicoli aziendali (6.000 euro), comunicato ufficiale.
+    // Aggiornato di proposito il 30/09/2026: l'Italia passa da 'caso-gps' a
+    // 'caso-affine'. Il caso citato (Pioneer Hi-Bred, 120.000 euro) e' telematica
+    // sullo stile di guida, e il Garante ha accertato che non erano trattati
+    // dati di geolocalizzazione: la scheda lo dice da sola.
+    expect(conta).toEqual({ 'caso-gps': 10, 'caso-affine': 10, massimale: 19 });
   });
 
   it('la maggioranza delle schede NON poggia su un caso GPS: e il motivo per cui la qualifica esiste', () => {

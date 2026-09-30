@@ -20,6 +20,11 @@ const FONTE_REGOLE_50_2023 = {
     'Regole n. 50/2023 sulla sorveglianza elettronica (Gazzetta ufficiale)',
   url: 'https://island.is/stjornartidindi/nr/00ede50f-ff8e-4a44-9bb1-019e440b32e1',
 };
+const FONTE_REGOLE_1329_2025 = {
+  titolo:
+    'Regole 1329/2025 di Persónuvernd (modifica delle Regole 50/2023, art. 3: 90 giorni)',
+  url: 'https://adverts.stjornartidindi.is/B_nr_1329_2025.pdf',
+};
 const FONTE_PERSUVERND_GPS = {
   titolo:
     'Persónuvernd (Garante islandese), FAQ sul GPS e i dispositivi di localizzazione',
@@ -129,7 +134,7 @@ export const islanda: SchedaPaese = {
       },
       risposta: 'no',
       dettaglio: {
-        it: "Non serve un'autorizzazione preventiva del Persónuvernd; il titolare valuta da se e documenta la liceità, con DPIA quando richiesta.",
+        it: "Non serve un'autorizzazione preventiva del Persónuvernd; il titolare valuta da sé e documenta la liceità, con DPIA quando richiesta.",
         en: 'No prior authorisation from the Persónuvernd is required; the controller assesses on its own and documents lawfulness, with a DPIA where required.',
         de: 'Eine vorherige Genehmigung der Persónuvernd ist nicht erforderlich; der Verantwortliche beurteilt selbst und dokumentiert die Rechtmassigkeit, mit einer DSFA, sofern erforderlich.',
         fr: "Aucune autorisation préalable du Persónuvernd n'est requise; le responsable évalue lui-même et documente la licéité, avec une AIPD lorsque cela est requis.",
@@ -149,7 +154,7 @@ export const islanda: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "La base più pertinente e l'interesse legittimo del datore; il datore deve svolgere una valutazione documentata di prevalenza rispetto ai diritti dei lavoratori. Il consenso di norma non e valido nel rapporto di lavoro.",
+        it: "La base più pertinente è l'interesse legittimo del datore; il datore deve svolgere una valutazione documentata di prevalenza rispetto ai diritti dei lavoratori. Il consenso di norma non è valido nel rapporto di lavoro.",
         en: 'The most relevant basis is the employer legitimate interest; the employer must carry out a documented balancing assessment against workers rights. Consent is generally not valid in the employment relationship.',
         de: 'Die einschlagigste Grundlage ist das berechtigte Interesse des Arbeitgebers; der Arbeitgeber muss eine dokumentierte Abwägung gegenüber den Rechten der Beschäftigten vornehmen. Die Einwilligung ist im Arbeitsverhältnis in der Regel nicht gültig.',
         fr: "La base la plus pertinente est l'intérêt légitime de l'employeur; l'employeur doit réaliser une évaluation documentée de prévalence par rapport aux droits des travailleurs. Le consentement n'est en règle generale pas valable dans la relation de travail.",
@@ -160,7 +165,7 @@ export const islanda: SchedaPaese = {
     },
     {
       voce: {
-        it: "GPS solo se c'e un bisogno particolare; evitare la sorveglianza continua; disattivabile se il veicolo è ammesso anche per uso privato",
+        it: "GPS solo se c'è un bisogno particolare; evitare la sorveglianza continua; disattivabile se il veicolo è ammesso anche per uso privato",
         en: 'GPS only if there is a particular need; avoid continuous monitoring; switchable off if the vehicle may also be used privately',
         de: 'GPS nur bei besonderem Bedarf; ständige Überwachung vermeiden; abschaltbar, wenn das Fahrzeug auch privat genutzt werden darf',
         fr: "GPS uniquement en cas de besoin particulier; éviter la surveillance continue; désactivable si le véhicule peut aussi servir à titre privé",
@@ -177,6 +182,26 @@ export const islanda: SchedaPaese = {
         nl: 'Het gebruik van tachografen of locatieapparatuur vereist een bijzondere behoefte; eerst moet worden nagegaan of minder ingrijpende middelen volstaan, zonder verder te gaan dan strikt noodzakelijk (art. 4); mag het voertuig ook privé worden gebruikt, dan moet het apparaat kunnen worden uitgeschakeld en moet de werknemer aantoonbaar worden geïnformeerd (art. 13 lid 2).',
       },
       fonte: FONTE_PERSUVERND_GPS,
+    },
+    {
+      voce: {
+        it: 'Conservazione dei dati della sorveglianza elettronica: non oltre il necessario e comunque non oltre 90 giorni, salvo eccezioni',
+        en: 'Retention of electronic monitoring data: no longer than necessary and in any case no longer than 90 days, save for exceptions',
+        de: 'Speicherung der Daten der elektronischen Überwachung: nicht länger als nötig und jedenfalls nicht länger als 90 Tage, außer in Ausnahmefällen',
+        fr: "Conservation des données de la surveillance électronique : pas plus longtemps que nécessaire et en tout cas pas plus de 90 jours, sauf exceptions",
+        es: 'Conservación de los datos de la vigilancia electrónica: no más de lo necesario y en todo caso no más de 90 días, salvo excepciones',
+        nl: 'Bewaring van gegevens van elektronisch toezicht: niet langer dan nodig en in elk geval niet langer dan 90 dagen, behoudens uitzonderingen',
+      },
+      risposta: 'si',
+      dettaglio: {
+        it: "I dati della sorveglianza elettronica non si conservano oltre il necessario per la finalità e comunque non oltre 90 giorni (Regole 50/2023, art. 11 c. 2; il termine è stato portato da 30 a 90 giorni dalle Regole 1329/2025, art. 3). Eccezioni: consenso della persona a un periodo più lungo; registri delle operazioni o copie di sicurezza; necessità di accertare, esercitare o difendere un diritto in giudizio; autorizzazione del Persónuvernd; sicurezza dello Stato.",
+        en: 'Electronic monitoring data must not be kept longer than necessary for the purpose and in any case not longer than 90 days (Rules 50/2023, art. 11(2); the limit was raised from 30 to 90 days by Rules 1329/2025, art. 3). Exceptions: consent of the person to a longer period; logs of operations or security copies; the need to establish, exercise or defend a legal claim; authorisation from the Persónuvernd; state security.',
+        de: 'Daten der elektronischen Überwachung dürfen nicht länger als für den Zweck nötig und jedenfalls nicht länger als 90 Tage gespeichert werden (Regeln 50/2023, Art. 11 Abs. 2; die Frist wurde durch die Regeln 1329/2025, Art. 3, von 30 auf 90 Tage angehoben). Ausnahmen: Einwilligung der Person in einen längeren Zeitraum; Protokolle von Vorgängen oder Sicherungskopien; Notwendigkeit, Rechtsansprüche festzustellen, auszuüben oder zu verteidigen; Genehmigung der Persónuvernd; Staatssicherheit.',
+        fr: "Les données de la surveillance électronique ne doivent pas être conservées plus longtemps que nécessaire pour la finalité et en tout cas pas plus de 90 jours (Règles 50/2023, art. 11 al. 2 ; le délai a été porté de 30 à 90 jours par les Règles 1329/2025, art. 3). Exceptions : consentement de la personne à une durée plus longue ; journaux des opérations ou copies de sécurité ; nécessité de constater, exercer ou défendre un droit en justice ; autorisation du Persónuvernd ; sûreté de l'État.",
+        es: 'Los datos de la vigilancia electrónica no se conservan más allá de lo necesario para la finalidad y en todo caso no más de 90 días (Reglas 50/2023, art. 11.2; el plazo se elevó de 30 a 90 días por las Reglas 1329/2025, art. 3). Excepciones: consentimiento de la persona a un período más largo; registros de operaciones o copias de seguridad; necesidad de constatar, ejercer o defender un derecho en juicio; autorización del Persónuvernd; seguridad del Estado.',
+        nl: 'Gegevens van elektronisch toezicht worden niet langer bewaard dan nodig voor het doel en in elk geval niet langer dan 90 dagen (Regels 50/2023, art. 11 lid 2; de termijn is door Regels 1329/2025, art. 3, van 30 naar 90 dagen gebracht). Uitzonderingen: toestemming van de persoon voor een langere periode; logboeken van handelingen of back-ups; noodzaak om een rechtsvordering vast te stellen, uit te oefenen of te verdedigen; toestemming van de Persónuvernd; staatsveiligheid.',
+      },
+      fonte: FONTE_REGOLE_1329_2025,
     },
     {
       voce: {
@@ -259,7 +284,7 @@ export const islanda: SchedaPaese = {
     {
       passo: 6,
       descrizione: {
-        it: 'In caso di cambio di sistema: se cambi sistema o software di monitoraggio, aggiorna e riconsegna l’informativa, e verifica se devi di nuovo informare o consultare i rappresentanti dei lavoratori, dove la legge lo prevede. Spesso cambiano fornitore (responsabile del trattamento), dati raccolti e modalità: quella consegnata prima non basta.',
+        it: 'Se cambi sistema o software di monitoraggio, aggiorna e riconsegna l’informativa, e verifica se devi di nuovo informare o consultare i rappresentanti dei lavoratori, dove la legge lo prevede. Spesso cambiano fornitore (responsabile del trattamento), dati raccolti e modalità: l’informativa consegnata prima non basta.',
         en: 'If you switch systems: when you change your monitoring system or software, update and re-issue the privacy notice, and check whether you must inform or consult the workers\' representatives again, where the law requires it. The provider (data processor), the data collected and the methods often change: the one provided earlier is not enough.',
         de: 'Bei Systemwechsel: Wenn Sie Ihr Überwachungssystem oder Ihre Software wechseln, aktualisieren Sie die Datenschutzinformation und händigen Sie sie erneut aus, und prüfen Sie, ob Sie die Arbeitnehmervertretung erneut informieren oder beteiligen müssen, wo das Gesetz es vorsieht. Anbieter (Auftragsverarbeiter), erhobene Daten und Modalitäten ändern sich oft: die zuvor ausgehändigte genügt nicht.',
         fr: 'En cas de changement de système : si vous changez de système ou de logiciel de surveillance, mettez à jour et remettez l’information, et vérifiez si vous devez de nouveau informer ou consulter les représentants du personnel, lorsque la loi le prévoit. Le fournisseur (sous-traitant), les données collectées et les modalités changent souvent : celle remise auparavant ne suffit pas.',
@@ -282,7 +307,7 @@ export const islanda: SchedaPaese = {
 
   sanzioneMax: {
     importo: {
-      it: 'illiceità dichiarata, senza multa',
+      it: 'Illiceità dichiarata, senza multa',
       en: 'unlawfulness declared, with no fine',
       de: 'Rechtswidrigkeit festgestellt, ohne Geldbuße',
       fr: 'illicéité declaree, sans amende',
@@ -303,6 +328,7 @@ export const islanda: SchedaPaese = {
 
   fonti: [
     FONTE_REGOLE_50_2023,
+    FONTE_REGOLE_1329_2025,
     FONTE_PERSUVERND_GPS,
     FONTE_PERSUVERND_DPIA,
     FONTE_PERSUVERND_RECLAMO,
