@@ -1064,7 +1064,7 @@
   },
   "blog": {
     "hero_title": "Guide su prova del lavoro, GDPR e squadre sul campo.",
-    "hero_desc": "Non scriviamo per riempire pagine. Scriviamo per condividere ciò che impariamo costruendo il futuro del lavoro verificabile.",
+    "hero_desc": "Guide pratiche per chi manda squadre sul campo: come dimostrare il lavoro fatto, cosa dice la legge sul GPS dei dipendenti, come tenere in ordine ore e presenze.",
     "no_posts": "Nessun articolo disponibile al momento.",
     "read_article": "Leggi l'articolo →",
     "cta_title": "Prova GeoTapp gratis per 14 giorni",
@@ -1087,7 +1087,7 @@
     "next_step_text": "Scopri come GeoTapp risolve questo problema per le aziende di {sector}",
     "next_step_fallback": "Scopri come funziona GeoTapp per la tua azienda",
     "next_step_cta": "Scopri di più",
-    "hero_tagline": "Pensieri e Scintille."
+    "hero_tagline": "Guide e novità."
   },
   "roi": {
     "meta_title": "Calcolatore ROI GeoTapp: stima quanto risparmi in un anno",

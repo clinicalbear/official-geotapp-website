@@ -22,29 +22,58 @@ export type Post = {
   readingTime: number;
 };
 
+/** Nome della categoria come si mostra sul sito (le categorie vere stanno su WordPress). */
+const ALIAS_CATEGORIE: Record<string, Record<string, string>> = {
+  it: {
+    'dimostrazione certificata lavoro svolto': 'Prova del lavoro svolto',
+    'guide': 'Guide pratiche',
+    'guide pratiche': 'Guide pratiche',
+    'geotapp-flow': 'GeoTapp Flow',
+    'field service': 'Lavoro sul campo',
+  },
+};
+function nomeCategoria(nome: string, locale: string): string {
+  const pulito = nome.replace(/&amp;/g, '&').trim();
+  const alias = ALIAS_CATEGORIE[locale]?.[pulito.toLowerCase()];
+  return alias ?? pulito;
+}
+
 export default function BlogClient({ locale, posts }: { locale: AppLocale; posts: Post[] }) {
   const dict = getDictionary(locale);
   const b = dict.blog;
   const [page, setPage] = useState(0);
   const [activeCat, setActiveCat] = useState<string>('all');
 
+  // Le categorie arrivano da WordPress, con doppioni («GeoTapp» due volte, «guide» e
+  // «Guide Pratiche») e nomi che promettono troppo («certificata»). Qui si mostrano con
+  // il nome ripulito, si uniscono quelle che hanno lo stesso nome e si tengono solo quelle
+  // con almeno due articoli: il filtro deve aiutare a scegliere, non elencare tutto.
   const categories = useMemo(() => {
-    const freq = new Map<string, { name: string; count: number }>();
+    const byName = new Map<string, { name: string; slugs: Set<string>; count: number }>();
     for (const p of posts) {
+      const seen = new Set<string>();
       for (const c of p.categories ?? []) {
-        const prev = freq.get(c.slug);
-        freq.set(c.slug, { name: c.name, count: (prev?.count ?? 0) + 1 });
+        const name = nomeCategoria(c.name, locale);
+        const key = name.toLocaleLowerCase(locale);
+        const prev = byName.get(key) ?? { name, slugs: new Set<string>(), count: 0 };
+        prev.slugs.add(c.slug);
+        if (!seen.has(key)) prev.count += 1;
+        seen.add(key);
+        byName.set(key, prev);
       }
     }
-    return Array.from(freq.entries())
-      .map(([slug, { name, count }]) => ({ slug, name, count }))
+    return Array.from(byName.entries())
+      .map(([key, v]) => ({ slug: key, name: v.name, slugs: v.slugs, count: v.count }))
+      .filter((c) => c.count >= 2)
       .sort((a, c) => c.count - a.count);
-  }, [posts]);
+  }, [posts, locale]);
 
   const filtered = useMemo(() => {
     if (activeCat === 'all') return posts;
-    return posts.filter((p) => (p.categories ?? []).some((c) => c.slug === activeCat));
-  }, [posts, activeCat]);
+    const scelta = categories.find((c) => c.slug === activeCat);
+    if (!scelta) return posts;
+    return posts.filter((p) => (p.categories ?? []).some((c) => scelta.slugs.has(c.slug)));
+  }, [posts, activeCat, categories]);
 
   const totalPages = Math.ceil(filtered.length / POSTS_PER_PAGE);
   const visible = filtered.slice(page * POSTS_PER_PAGE, (page + 1) * POSTS_PER_PAGE);
@@ -98,7 +127,7 @@ export default function BlogClient({ locale, posts }: { locale: AppLocale; posts
                   )}
                   <div className="tx">
                     <p className="m">
-                      {featured.categories[0] && <span>{featured.categories[0].name}</span>}
+                      {featured.categories[0] && <span>{nomeCategoria(featured.categories[0].name, locale)}</span>}
                       <span>{formatDate(featured.date, locale)}</span>
                       {featured.readingTime > 0 && <span>{featured.readingTime} min</span>}
                     </p>
@@ -136,7 +165,7 @@ export default function BlogClient({ locale, posts }: { locale: AppLocale; posts
                         </div>
                       )}
                       <p className="m">
-                        {post.categories[0] && <span>{post.categories[0].name}</span>}
+                        {post.categories[0] && <span>{nomeCategoria(post.categories[0].name, locale)}</span>}
                         <span>{formatDate(post.date, locale)}</span>
                         {post.readingTime > 0 && <span>{post.readingTime} min</span>}
                       </p>
