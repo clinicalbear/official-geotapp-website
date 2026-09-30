@@ -66,6 +66,26 @@ const T: Record<string, Testi> = {
     confirm: "Inviando il modulo confermi di essere il titolare dell'account. Tempo di gestione: fino a 30 giorni.",
     error: 'Qualcosa non ha funzionato. Riprova o scrivi a info@geotapp.com.',
   },
+  de: {
+    h1: 'Kontolöschung beantragen',
+    intro: 'Mit diesem Formular bitten Sie uns, Ihr GeoTapp-Konto und die damit verbundenen personenbezogenen Daten zu löschen.',
+    b2bT: 'Ihre Daten verwaltet Ihr Arbeitgeber',
+    b2b: 'GeoTapp ist eine Plattform für Unternehmen. Ihr Konto und Ihre Arbeitssitzungen gehören dem Unternehmen, das Ihre Lizenz aktiviert hat. Wenn wir Ihren Antrag erhalten, informieren wir den Administrator dieses Unternehmens und führen die Löschung durch, wie es das Gesetz vorsieht.',
+    keepT: 'Daten, die wir von Gesetzes wegen aufbewahren müssen',
+    keep: 'Manche Unterlagen (Anwesenheitsnachweise, Rechnungen, Steuerunterlagen) müssen unter Umständen für den Zeitraum aufbewahrt werden, den das italienische und das europäische Recht verlangen, in der Regel 10 Jahre für Buchhaltungsunterlagen. Nach Ablauf dieser Frist werden sie anonymisiert oder gelöscht.',
+    rightsT: 'Ihre Rechte nach der DSGVO',
+    rights1: 'Die DSGVO (Verordnung (EU) 2016/679) gibt Ihnen das Recht auf Löschung, auf Berichtigung und auf Datenübertragbarkeit. Bei Fragen zum Datenschutz können Sie auch schreiben an',
+    rights2: '.',
+    doneT: 'Antrag eingegangen',
+    done1: 'Ihr Löschantrag wurde gesendet. Wir bearbeiten ihn innerhalb von',
+    done30: '30 Tagen',
+    done2: 'und schicken eine Bestätigung an Ihre E-Mail-Adresse.',
+    name: 'Vor- und Nachname', email: 'E-Mail-Adresse, mit der Sie sich registriert haben', company: 'Name des Unternehmens', notes: 'Anmerkungen', optional: '(optional)',
+    notesPh: 'Sonstiges, das wir zu Ihrem Antrag wissen sollten', companyPh: 'Muster GmbH', namePh: 'Erika Mustermann', emailPh: 'erika@firma.de',
+    sending: 'Wird gesendet …', submit: 'Löschantrag senden',
+    confirm: 'Mit dem Absenden des Formulars bestätigen Sie, dass Sie der Kontoinhaber sind. Bearbeitungszeit: bis zu 30 Tage.',
+    error: 'Etwas ist schiefgelaufen. Versuchen Sie es erneut oder schreiben Sie an info@geotapp.com.',
+  },
 };
 
 async function submitDeletionRequest(data: {

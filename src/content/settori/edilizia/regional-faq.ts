@@ -7,7 +7,7 @@ export interface RegionalFaqItem {
 
 export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   it: 'Conformità normativa in Italia',
-  de: 'Compliance in Deutschland',
+  de: 'Vorschriften und Nachweise in Deutschland',
   fr: 'Conformité en France',
   es: 'Cumplimiento normativo en España',
   pt: 'Conformidade em Portugal',
@@ -36,16 +36,16 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   ],
   de: [
     {
-      q: 'Zeiterfassung für SOKA-BAU und Baumindestlohn?',
-      a: 'Stunden je Baustelle und Beschäftigtem, abgestimmt auf die SOKA-BAU-Meldung und den allgemeinverbindlichen Bau-Mindestlohn, prüffähig nach §16 ArbZG.',
+      q: 'Zeiterfassung auf der Baustelle: SOKA-BAU und Baumindestlohn?',
+      a: 'GeoTapp ist nicht mit SOKA-BAU verbunden und berechnet weder Meldungen noch den Baumindestlohn. Es erfasst Stunden und Anwesenheit je Beschäftigtem und Baustelle, die sich als Excel- oder CSV-Datei exportieren lassen und als Grundlage für die Meldung dienen. Meldung und Lohnabrechnung bleiben Aufgabe des Unternehmens und seiner Lohnbuchhaltung oder Steuerberatung.',
     },
     {
-      q: 'DSGVO und Betriebsrat bei GPS-Ortung auf der Baustelle?',
-      a: 'Ortung nur während der Arbeitszeit, mit Interessenabwägung nach Art. 6 DSGVO und Mitbestimmung des Betriebsrats nach §87 BetrVG.',
+      q: 'GPS-Ortung auf der Baustelle: DSGVO und Betriebsrat?',
+      a: 'Die Position wird nur beim Stempeln und bei Nachweisfotos erfasst, nie durchgehend, und die Mitarbeiterinformation wird vor dem Stempeln in der App unterschrieben. Ob eine Interessenabwägung nach Art. 6 DSGVO und die Mitbestimmung des Betriebsrats nach §87 Abs. 1 Nr. 6 BetrVG erforderlich sind, klärt der Arbeitgeber.',
     },
     {
-      q: 'Nachweis bei Generalunternehmer-Haftung (AEntG)?',
-      a: 'Lückenloser Stunden- und Lohnnachweis je Subunternehmer für die Mindestlohn-Generalunternehmerhaftung nach dem AEntG.',
+      q: 'Nachweise bei Subunternehmern und Generalunternehmerhaftung (AEntG)?',
+      a: 'GeoTapp prüft weder Löhne noch die Mindestlohnhaftung nach dem AEntG. Es erfasst, wer wann und wo gestempelt hat, auch für die Teams von Subunternehmern, und diese Historie lässt sich dem Auftraggeber zeigen. Die Dokumentationspflichten bleiben beim Unternehmen.',
     },
   ],
   fr: [

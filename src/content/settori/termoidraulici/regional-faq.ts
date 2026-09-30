@@ -7,7 +7,7 @@ export interface RegionalFaqItem {
 
 export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   it: 'Conformità normativa in Italia',
-  de: 'Compliance in Deutschland',
+  de: 'Vorschriften und Nachweise in Deutschland',
   fr: 'Conformité en France',
   es: 'Cumplimiento normativo en España',
   pt: 'Conformidade em Portugal',
@@ -36,16 +36,16 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   ],
   de: [
     {
-      q: 'Zeiterfassung nach dem Tarifvertrag SHK-Handwerk?',
-      a: 'Stunden je Techniker und Auftrag, Bereitschafts- und Fahrtzeiten und Aufbewahrung nach §16 ArbZG, bei jedem Heizungseinsatz erfasst.',
+      q: 'Arbeitszeiten und Einsätze im Heizungsbau?',
+      a: 'GeoTapp erfasst bei jeder Stempelung Beginn, Pausen und Ende mit Position und Uhrzeit, je Techniker und Auftrag, und exportiert sie als Excel- oder CSV-Datei für die Lohnbuchhaltung oder Steuerberatung. Die Anwendung des Tarifvertrags (Zuschläge, Zulagen) und die Lohnabrechnung bleiben bei ihr und beim Unternehmen.',
     },
     {
-      q: 'DSGVO und Betriebsrat bei GPS-Ortung der Heizungsmonteure?',
-      a: 'Ortung nur während der Arbeitszeit, mit Interessenabwägung nach Art. 6 DSGVO und Mitbestimmung des Betriebsrats nach §87 BetrVG.',
+      q: 'GPS-Ortung der Heizungsmonteure: DSGVO und Betriebsrat?',
+      a: 'Die Position wird nur beim Stempeln und bei Nachweisfotos erfasst, nie durchgehend, und die Mitarbeiterinformation wird vor dem Stempeln in der App unterschrieben. Ob eine Interessenabwägung nach Art. 6 DSGVO und die Mitbestimmung des Betriebsrats nach §87 Abs. 1 Nr. 6 BetrVG erforderlich sind, klärt der Arbeitgeber.',
     },
     {
-      q: 'F-Gase-Verordnung (EU 517/2014) und Sachkundenachweis?',
-      a: 'Zuordnung der Arbeiten an Kälte- und Klimaanlagen zum sachkundigen Personal nach der F-Gas-Verordnung, mit Nachweis je Einsatz.',
+      q: 'F-Gase-Verordnung und Sachkundenachweis?',
+      a: 'GeoTapp verwaltet keine Sachkundenachweise nach der F-Gase-Verordnung und führt keine Anlagenbücher. Es erfasst Uhrzeit, Position, Fotos und Notizen jedes Einsatzes an Heizkesseln und Heizungsanlagen, die der Anlagendokumentation beigefügt werden können.',
     },
   ],
   fr: [

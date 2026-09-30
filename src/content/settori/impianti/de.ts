@@ -2,31 +2,31 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App für Installateure & Anlagenbauer: GPS-Einsatzverfolgung | GeoTapp',
-    description: 'Verfolgen Sie Einsätze, Stunden und Materialien für HLK-, Elektro- und Sanitärinstallateure mit GPS. Automatische Servicenachweise, keine Kundenstreitigkeiten. GeoTapp kostenlos testen.',
+    title: 'App für Installateure und Anlagenbauer: Einsätze mit GPS | GeoTapp',
+    description: 'Dokumentieren Sie Einsätze, Stunden und Material für Installateure und Anlagenbauer, mit Position bei den Stempelungen. Automatische Leistungsnachweise zum Vorzeigen, wenn jemand etwas bestreitet. GeoTapp kostenlos testen.',
   },
   hero: {
-    badge: 'App für Installateure, Techniker und Serviceteams',
+    badge: 'App für Installateure, Anlagenbauer und Techniker',
     h1_line1: 'Jeder Einsatz dokumentiert,',
     h1_line2: 'jede Stunde erfasst.',
-    subtitle: 'Für Elektro-, Sanitär-, HLK- und Anlageninstallateure. GeoTapp verbindet Flow + TimeTracker, um GPS, Stunden und Fotos für jeden Auftrag zu erfassen, vom Transporter ins Büro ohne Telefonate.',
+    subtitle: 'Für Elektro-, Sanitär-, Heizungs- und Anlagenbetriebe. GeoTapp verbindet Flow + TimeTracker und erfasst GPS, Stunden und Fotos für jeden Auftrag, vom Transporter ins Büro, ohne Anrufe.',
     cta_primary: 'GeoTapp 14 Tage kostenlos testen',
-    cta_note: 'Keine Verpflichtung. Keine Kreditkarte erforderlich.',
+    cta_note: 'Die Testphase verpflichtet Sie zu nichts. Keine Kreditkarte erforderlich.',
   },
   pain: {
     title: 'Probleme, die wir täglich lösen',
     items: [
       {
-        title: 'Kunden bestreiten die geleisteten Stunden',
-        desc: 'GPS-Stempelungen mit Zeitstempel als überprüfbarer Nachweis. Die Daten werden zum Zeitpunkt des Einsatzes versiegelt, jede nachträgliche Änderung ist nachweisbar.',
+        title: 'Kunden bestreiten die Einsatzstunden',
+        desc: 'Stempelungen mit GPS und Zeitstempel als überprüfbarer Nachweis. Die Daten werden im Moment des Einsatzes versiegelt: Jede spätere Änderung ist erkennbar.',
       },
       {
-        title: 'Techniker hinterhertelefonieren',
-        desc: 'Karte mit dem Status jedes Einsatzes, aktualisiert bei jeder Stempelung. Sie sehen, wo Ihre Techniker zuletzt eingestempelt haben, ohne einen einzigen Anruf zu tätigen.',
+        title: 'Sie laufen den Technikern hinterher, um zu wissen, wo sie sind',
+        desc: 'Jede Stempelung des Technikers erscheint sofort im Dashboard, mit Uhrzeit und Position. Sie wissen, wo sie waren, ohne anzurufen.',
       },
       {
-        title: 'Unvollständige oder fehlende Arbeitsberichte',
-        desc: 'Daten kommen zu spät, unvollständig oder gar nicht. Stunden und Einsätze am Monatsende zu rekonstruieren ist eine eigene Aufgabe, die Zeit und Geld kostet.',
+        title: 'Unvollständige oder nie abgegebene Einsatzberichte',
+        desc: 'Die Daten kommen zu spät, unvollständig oder gar nicht. Stunden und Einsätze am Monatsende nachzuerfassen, ist eine Arbeit für sich, die Zeit und Geld kostet.',
       },
     ],
   },
@@ -35,96 +35,96 @@ const content: SettoreContent = {
     subtitle: 'Drei einfache Schritte. Kein Papier. Keine Anrufe.',
     steps: [
       {
-        title: 'Der Techniker stempelt per GPS beim Start',
-        desc: 'Öffnet den Auftrag vom Smartphone. GeoTapp erfasst reale GPS-Koordinaten, Zeitstempel und Fotos, vollautomatisch; jede Änderung ist nachweisbar.',
+        title: 'Der Techniker stempelt mit GPS zu Einsatzbeginn',
+        desc: 'Er öffnet den Auftrag am Smartphone. GeoTapp hält die Position in diesem Moment fest, dazu Zeitstempel und Fotos. Jede Änderung ist erkennbar.',
       },
       {
-        title: 'Stunden werden automatisch pro Auftrag erfasst',
-        desc: 'Jede gearbeitete Minute wird dem richtigen Auftrag zugeordnet. Der Verantwortliche sieht bei jeder Stempelung, wer wo arbeitet.',
+        title: 'Die Stunden werden automatisch dem Auftrag zugeordnet',
+        desc: 'Jede gearbeitete Minute wird dem richtigen Auftrag zugeordnet. Die Leitung sieht, Stempelung für Stempelung, wer wo arbeitet.',
       },
       {
-        title: 'Der Kundenbericht wird automatisch generiert',
-        desc: 'Am Ende des Einsatzes generiert das System einen Bericht mit GPS, Stunden und digitaler Signatur. Der Kunde erhält ihn und überprüft ihn selbstständig.',
+        title: 'Der Kundenbericht entsteht, ohne etwas einzutippen',
+        desc: 'Nach dem Einsatz erstellt das System einen Bericht mit GPS, Stunden und Siegel. Der Kunde erhält ihn und prüft ihn eigenständig.',
       },
     ],
   },
   differenza: {
-    title: 'Anlagenbau-App: Zeiterfassung oder überprüfbarer Nachweis?',
+    title: 'App für Anlagenbauer: Stempelung oder überprüfbarer Nachweis?',
     subtitle: 'Die meisten Apps erfassen nur die Uhrzeit. GeoTapp liefert überprüfbare Nachweise.',
     rows: [
       {
         label: 'Was wird erfasst',
         competitor: 'Ein- und Ausstempelzeit',
-        geotapp: 'Uhrzeit + verifiziertes GPS + Fotos + erledigte Arbeit',
+        geotapp: 'Uhrzeit + Position bei der Stempelung + Fotos + erledigte Arbeit',
       },
       {
         label: 'Wer kann prüfen',
         competitor: 'Nur Ihr Büro',
-        geotapp: 'Sie, der Auftraggeber, ein Dritter, unabhängig',
+        geotapp: 'Sie, der Auftraggeber, ein Dritter, eigenständig',
       },
       {
         label: 'Bei Streitigkeiten',
-        competitor: 'Daten nicht belastbar',
-        geotapp: 'Versiegelter Bericht, jede Änderung ist nachweisbar',
+        competitor: 'Nur Ihr Wort',
+        geotapp: 'Versiegelter Bericht, jede Änderung ist erkennbar',
       },
       {
         label: 'Einsatzbericht',
         competitor: 'Manuell oder fehlend',
-        geotapp: 'Automatisch generiert mit GPS und Fotos',
+        geotapp: 'Automatisch erstellt, mit GPS und Fotos',
       },
       {
-        label: 'DSGVO-Konformität',
+        label: 'DSGVO',
         competitor: 'Oft fraglich',
-        geotapp: 'Für die Grenzen der DSGVO gebaut, Formulare enthalten',
+        geotapp: 'Gebaut, um die Vorgaben der DSGVO einzuhalten, Vorlagen inklusive',
       },
     ],
   },
   prima_dopo: {
     title: 'Was jetzt passiert. Was mit GeoTapp passiert.',
     prima: [
-      'Der Kunde bestreitet die Endzeit und verlangt einen Rabatt.',
-      'Der Techniker sagt „4 Stunden gearbeitet". Der Kunde sagt „es sind nur 2".',
-      'Sie haben keine Beweise. Die Diskussion dauert Tage und die Zahlung ist gefährdet.',
+      'Der Kunde bestreitet das Einsatzende und verlangt einen Nachlass.',
+      'Der Techniker sagt „Ich habe 4 Stunden gearbeitet“. Der Kunde sagt „Es waren 2“.',
+      'Sie haben keinen Nachweis. Der Streit dauert Tage, und die Zahlung ist gefährdet.',
       'Am Monatsende rekonstruieren Sie Stunden und Aufträge aus WhatsApp-Nachrichten.',
     ],
     dopo: [
-      'Der Kunde bestreitet? Öffnen Sie den Bericht: Fotos, GPS, Zeitstempel, digitale Signatur.',
-      'Sie senden ihn. Die Diskussion ist in einer Minute beendet.',
-      'Die Zahlung ist sicher. Der Techniker ist geschützt.',
-      'Am Monatsende ist der Export fertig - Stunden und Aufträge automatisch zusammengefasst.',
+      'Der Kunde bestreitet etwas? Sie öffnen den Bericht: Fotos, Position, Uhrzeiten, Siegel.',
+      'Sie schicken ihm den Bericht. Die Diskussion ist in einer Minute vorbei.',
+      'Sie haben einen Nachweis zur Hand. Auch der Techniker hat etwas in der Hand.',
+      'Am Monatsende ist der Export schon fertig, Stunden und Aufträge automatisch zusammengefasst.',
     ],
   },
   features: {
-    title: 'Funktionen für Installateure und Serviceteams',
+    title: 'Funktionen für Installateure und Anlagenbauer',
     items: [
       {
         title: 'Überprüfbare GPS-Stempelung',
-        desc: 'Jeder Ein- und Austritt ist mit Standort, Zeitstempel und Auftrag verknüpft. Belastbar vor Kunden und Behörden.',
+        desc: 'Jeder Beginn, jede Pause und jedes Ende ist mit Position, Uhrzeit und Auftrag verknüpft. Zum Vorzeigen beim Kunden oder bei der Behörde, wenn es darauf ankommt.',
       },
       {
         title: 'Versiegelte Fotonachweise',
-        desc: 'Der Techniker fotografiert direkt aus der App. Jedes Bild ist mit GPS und Zeitstempel an den Einsatz gekoppelt; jede Änderung nach der Erstellung ist nachweisbar.',
+        desc: 'Der Techniker fotografiert direkt in der App. Jedes Bild ist mit GPS und Zeitstempel dem Einsatz zugeordnet: Jede Änderung nach der Erstellung ist erkennbar.',
       },
       {
-        title: 'Multi-Standort-Auftragsverwaltung',
-        desc: 'Weisen Sie Aufträge zu, verfolgen Sie den Fortschritt an allen Standorten und erhalten Sie automatische Warnungen, wenn ein Auftrag nicht rechtzeitig geöffnet oder geschlossen wird.',
+        title: 'Aufträge über mehrere Baustellen verwalten',
+        desc: 'Weisen Sie Aufträge zu, verfolgen Sie den Fortschritt jedes Einsatzes und erhalten Sie eine Meldung, wenn eine Schicht offen bleibt.',
       },
       {
-        title: 'Automatische digitale Arbeitsberichte',
-        desc: 'Am Ende des Einsatzes ist der Bericht fertig: Stunden, Fotos, Notizen und Unterschrift. Kein Papier, keine Anrufe. Der Techniker sendet ihn dem Kunden direkt aus der App.',
+        title: 'Automatische digitale Einsatzberichte',
+        desc: 'Nach dem Einsatz ist der Bericht schon fertig: Stunden, Fotos und Notizen. Kein Papier, keine Anrufe. Das Büro schickt ihn mit einem Klick aus Flow an den Kunden.',
       },
       {
-        title: 'Export für Lohnabrechnung und Fakturierung',
-        desc: 'Exportieren Sie monatliche Anwesenheiten und Stunden pro Auftrag. Lohnabrechnung und Fakturierung werden zur Sache von Minuten.',
+        title: 'Export für Lohn und Rechnungsstellung',
+        desc: 'Exportieren Sie die Monatsanwesenheit und die Stunden je Auftrag. Lohnabrechnung und Rechnungsstellung starten mit fertigen Daten, ohne etwas abzutippen.',
       },
       {
-        title: 'Für die DSGVO-Grenzen gebaut',
-        desc: 'Geolokalisierung für die Grenzen der DSGVO gebaut. Vorlage für die Mitarbeiterinformation enthalten.',
+        title: 'Position nur beim Stempeln',
+        desc: 'Ortung, gebaut für die Vorgaben der DSGVO: nie durchgehend, und die Mitarbeiterinformation wird vor dem Stempeln in der App unterschrieben.',
       },
     ],
   },
   testimonial: {
-    quote: 'Kunden bestreiten die Stunden nicht mehr. Wir öffnen den Bericht mit GPS und Fotos und die Diskussion ist beendet.',
+    quote: 'Wenn ein Kunde die Stunden bestreitet, öffnen wir den Bericht mit Position und Fotos, und er prüft ihn selbst.',
     author: 'Robert F.',
     role: 'Inhaber, Anlagenbauunternehmen, 20 Techniker',
   },
@@ -133,43 +133,43 @@ const content: SettoreContent = {
     subtitle: 'Was uns am häufigsten gefragt wird, bevor es losgeht.',
     items: [
       {
-        q: 'Bestreiten Kunden die geleisteten Einsatzstunden?',
-        a: 'Mit GeoTapp werden GPS-Stempelungen zum Zeitpunkt des Einsatzes erfasst, und jede Änderung ist nachweisbar. Sie sind ein überprüfbarer Nachweis der geleisteten Stunden, wenn jemand sie anzweifelt.',
+        q: 'Kunden bestreiten die Einsatzstunden?',
+        a: 'Mit GeoTapp erhalten die Stempelungen mit GPS im Moment des Einsatzes einen Zeitstempel, und jede Änderung ist erkennbar. Sie sind ein überprüfbarer Nachweis der geleisteten Stunden, wenn jemand sie anzweifelt.',
       },
       {
-        q: 'Wie überwache ich mehrere Teams auf verschiedenen Aufträgen?',
-        a: 'GeoTapp bietet eine Karte mit dem Status jedes Einsatzes, aktualisiert bei jeder Stempelung. Sie sehen, wo Ihre Techniker zuletzt eingestempelt haben und an welchem Auftrag sie arbeiten, ohne zu telefonieren.',
+        q: 'Wie behalte ich mehrere Teams auf verschiedenen Aufträgen im Blick?',
+        a: 'GeoTapp zeigt die heutigen Stempelungen auf der Karte, aktualisiert bei jedem begonnenen oder beendeten Einsatz. Sie wissen, an welchem Auftrag Ihre Techniker arbeiten, ohne anzurufen.',
       },
       {
-        q: 'Wie beschleunige ich die Fakturierung abgeschlossener Einsätze?',
-        a: 'GeoTapp generiert automatisch den Export von Stunden und Aufträgen, bereit für Ihre Buchhaltungssoftware. Keine manuelle Eingabe, kein Fehlerrisiko, die Fakturierung wird zum Klick.',
+        q: 'Wie beschleunige ich die Rechnungsstellung für Einsätze?',
+        a: 'GeoTapp erstellt automatisch den Export von Stunden und Aufträgen für Ihre Verwaltung. Nichts von Hand abzutippen: weniger Fehler, und die Rechnungsstellung startet mit fertigen Daten.',
       },
     ],
   },
   cta: {
     title: 'GeoTapp 14 Tage kostenlos testen',
-    subtitle: 'Keine Verpflichtung. Keine Kreditkarte erforderlich. Antwort innerhalb von 12 Geschäftsstunden.',
-    primary: 'Jetzt kostenlos starten',
+    subtitle: 'Die Testphase verpflichtet Sie zu nichts. Keine Kreditkarte erforderlich.',
+    primary: '14 Tage kostenlos testen',
     secondary: 'Preise ansehen',
   },
   pricing_hint: {
-    label: 'Ab',
-    per: 'Techniker/Monat',
+    label: 'TimeTracker-Plätze ab',
+    per: 'pro Mitarbeiter und Monat, zzgl. Flow-Tarif ab 39 € im Monat',
     note: '14 Tage kostenlos testen',
   },
   schema_sector_name: 'Anlagenbau',
   schema_faq: [
     {
-      question: 'Bestreiten Kunden die geleisteten Einsatzstunden?',
-      answer: 'Mit GeoTapp werden GPS-Stempelungen zum Zeitpunkt des Einsatzes erfasst, und jede Änderung ist nachweisbar. Sie sind ein überprüfbarer Nachweis der geleisteten Stunden, wenn jemand sie anzweifelt.',
+      question: 'Kunden bestreiten die Einsatzstunden?',
+      answer: 'Mit GeoTapp erhalten die Stempelungen mit GPS im Moment des Einsatzes einen Zeitstempel, und jede Änderung ist erkennbar. Sie sind ein überprüfbarer Nachweis der geleisteten Stunden, wenn jemand sie anzweifelt.',
     },
     {
-      question: 'Wie überwache ich mehrere Teams auf verschiedenen Aufträgen?',
-      answer: 'GeoTapp bietet eine Karte mit dem Status jedes Einsatzes, aktualisiert bei jeder Stempelung. Sie sehen, wo Ihre Techniker zuletzt eingestempelt haben und an welchem Auftrag sie arbeiten, ohne zu telefonieren.',
+      question: 'Wie behalte ich mehrere Teams auf verschiedenen Aufträgen im Blick?',
+      answer: 'GeoTapp zeigt die heutigen Stempelungen auf der Karte, aktualisiert bei jedem begonnenen oder beendeten Einsatz. Sie wissen, an welchem Auftrag Ihre Techniker arbeiten, ohne anzurufen.',
     },
     {
-      question: 'Wie beschleunige ich die Fakturierung abgeschlossener Einsätze?',
-      answer: 'GeoTapp generiert automatisch den Export von Stunden und Aufträgen, bereit für Ihre Buchhaltungssoftware. Keine manuelle Eingabe, kein Fehlerrisiko, die Fakturierung wird zum Klick.',
+      question: 'Wie beschleunige ich die Rechnungsstellung für Einsätze?',
+      answer: 'GeoTapp erstellt automatisch den Export von Stunden und Aufträgen für Ihre Verwaltung. Nichts von Hand abzutippen: weniger Fehler, und die Rechnungsstellung startet mit fertigen Daten.',
     },
   ],
 };

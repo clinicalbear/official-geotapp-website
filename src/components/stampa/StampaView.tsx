@@ -54,6 +54,19 @@ const ABOUT_LABEL: Record<string, string> = {
   pt: 'Sobre nós', nl: 'Over ons', da: 'Om os', sv: 'Om oss', nb: 'Om oss', ru: 'О нас',
 };
 
+/** Testi alternativi delle foto e etichetta del pulsante "copia" (de/it/en, le altre lingue ricadono sull'inglese). */
+const FOUNDER_ALT: Record<string, string> = {
+  it: 'Michele Angelo Petraroli, fondatore di GeoTapp',
+  en: 'Michele Angelo Petraroli, founder of GeoTapp',
+  de: 'Michele Angelo Petraroli, Gründer von GeoTapp',
+};
+const FOUNDER_ALT_STAGE: Record<string, string> = {
+  it: 'Michele Angelo Petraroli, fondatore di GeoTapp, sul palco',
+  en: 'Michele Angelo Petraroli, founder of GeoTapp, on stage',
+  de: 'Michele Angelo Petraroli, Gründer von GeoTapp, auf der Bühne',
+};
+const COPY_LABEL: Record<string, string> = { it: 'Copia', en: 'Copy', de: 'Kopieren' };
+
 /** "Presenti su": stessa etichetta gia' pubblicata in HomeClient.tsx. */
 // Data ISO 'YYYY-MM-DD' → visualizzazione 'dd-MM-YYYY'. L'ISO resta nei dati (ordinamento).
 function fmtPressDate(iso: string): string {
@@ -113,7 +126,7 @@ export default function StampaView({
               {d.boilerplate_short}
               <button
                 type="button"
-                aria-label="Copy"
+                aria-label={COPY_LABEL[locale] ?? COPY_LABEL.en}
                 onClick={() => copy('short', d.boilerplate_short)}
                 style={{ position: 'absolute', right: 0, top: 0, background: 'none', border: 0, cursor: 'pointer', color: copied === 'short' ? 'var(--seal)' : '#475467' }}
               >
@@ -124,7 +137,7 @@ export default function StampaView({
               {d.boilerplate_long}
               <button
                 type="button"
-                aria-label="Copy"
+                aria-label={COPY_LABEL[locale] ?? COPY_LABEL.en}
                 onClick={() => copy('long', d.boilerplate_long)}
                 style={{ position: 'absolute', right: 0, top: 0, background: 'none', border: 0, cursor: 'pointer', color: copied === 'long' ? 'var(--seal)' : '#475467' }}
               >
@@ -151,7 +164,7 @@ export default function StampaView({
         <div className="r-s" style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
           <Image
             src="/michele-petraroli-3.webp"
-            alt="Michele Angelo Petraroli, fondatore di GeoTapp"
+            alt={FOUNDER_ALT[locale] ?? FOUNDER_ALT.en}
             width={640}
             height={640}
           />
@@ -160,7 +173,7 @@ export default function StampaView({
           </a>
           <Image
             src="/michele-petraroli-wide.webp"
-            alt="Michele Angelo Petraroli, fondatore di GeoTapp"
+            alt={FOUNDER_ALT[locale] ?? FOUNDER_ALT.en}
             width={1535}
             height={1024}
           />
@@ -169,7 +182,7 @@ export default function StampaView({
           </a>
           <Image
             src="/michele-petraroli-2.webp"
-            alt="Michele Angelo Petraroli, fondatore di GeoTapp, sul palco"
+            alt={FOUNDER_ALT_STAGE[locale] ?? FOUNDER_ALT_STAGE.en}
             width={640}
             height={640}
           />

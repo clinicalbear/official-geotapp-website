@@ -2,18 +2,18 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App für Reinigungsunternehmen: GPS-Teamverwaltung & Servicenachweis | GeoTapp',
+    title: 'App für Reinigungsunternehmen: Teamverwaltung mit GPS | GeoTapp',
     description:
-      'Reinigungsteams, Schichten und Anwesenheit mit versiegelten GPS-Stempelungen verwalten. Servicenachweis automatisch, weniger Kundenstreit. Für die DSGVO gebaut.',
+      'Teams, Schichten und Anwesenheit mit GPS-Stempelungen verwalten. Automatische Leistungsnachweise, weniger Streit. Für die DSGVO gebaut, für die Gebäudereinigung.',
   },
 
   hero: {
-    badge: 'App für Reinigungsunternehmen und Gebäudeservice',
+    badge: 'App für Reinigungsunternehmen und Facility Services',
     h1_line1: 'Ihr Reinigungsunternehmen,',
-    h1_line2: 'auf einen Blick verwaltet.',
+    h1_line2: 'geführt, Stempelung für Stempelung.',
     subtitle:
-      'GPS-Stempelung, automatische Servicenachweise und Schichtverwaltung in einer App. Keine Tabellen, weniger Streit. Der Kunde beschwert sich? Senden Sie den Bericht und die Diskussion ist beendet.',
-    cta_primary: 'Auf einem echten Auftrag testen',
+      'GPS-Stempelungen, automatische Leistungsnachweise und Schichtverwaltung in einer App. Kein Excel, weniger Streit. Der Kunde beschwert sich? Sie schicken den Bericht, und die Diskussion ist beendet.',
+    cta_primary: 'An einem echten Objekt testen',
     cta_note: '14 Tage, bis zu 50 Mitarbeiter im Außendienst, ohne Kreditkarte.',
   },
 
@@ -22,15 +22,15 @@ const content: SettoreContent = {
     items: [
       {
         title: 'Kunden bestreiten die geleisteten Stunden?',
-        desc: 'Jede Stempelung ist GPS-verifiziert und mit Zeitstempel versehen. Senden Sie den Bericht und die Diskussion endet in dreißig Sekunden.',
+        desc: 'Jede Stempelung hält Position und Uhrzeit fest. Sie schicken den Bericht, und der Kunde kann ihn selbst prüfen.',
       },
       {
-        title: 'Papier-Stundenzettel sind unzuverlässig?',
-        desc: 'Automatische Erfassung vom Smartphone, keine manuellen Einträge. Die Daten sind wie sie sind, und können nicht geändert werden.',
+        title: 'Die Stundenzettel sind unzuverlässig?',
+        desc: 'Stempeln per Smartphone, keine manuellen Eingaben. Die Daten bleiben so, wie sie erfasst wurden: Jede Änderung ist erkennbar.',
       },
       {
-        title: 'Schwierig, mehrere Teams zu koordinieren?',
-        desc: 'Sehen Sie, sobald gestempelt wird, wer wo aktiv ist, über alle Standorte hinweg, in einem Dashboard. Keine Anrufe.',
+        title: 'Mehrere Teams schwer zu koordinieren?',
+        desc: 'Sie sehen, wer gestempelt hat und wo, über alle Objekte hinweg, auf einem Bildschirm. Keine Anrufe.',
       },
     ],
   },
@@ -38,16 +38,16 @@ const content: SettoreContent = {
   prima_dopo: {
     title: 'Was jetzt passiert. Was mit GeoTapp passiert.',
     prima: [
-      'Der Kunde ruft an und sagt, das Bad wurde nicht geputzt.',
-      'Die Reinigungskraft sagt "Hab ich gemacht". Der Kunde sagt "Haben Sie nicht".',
-      'Sie haben nichts in der Hand, um irgendetwas zu beweisen.',
-      'Der Streit zieht sich tagelang hin. Manchmal verlieren Sie den Vertrag.',
+      'Der Kunde ruft an und sagt, die Toilette sei nicht geputzt worden.',
+      'Die Reinigungskraft sagt „Habe ich gemacht“. Der Kunde sagt „Hat sie nicht“.',
+      'Sie haben nichts in der Hand, um irgendetwas zu belegen.',
+      'Die Diskussion zieht sich tagelang hin. Manchmal verlieren Sie den Vertrag.',
     ],
     dopo: [
-      'Der Kunde ruft an und sagt, das Bad wurde nicht geputzt.',
-      'Sie öffnen den Einsatzbericht: Foto des sauberen Bads, Uhrzeit, GPS.',
-      'Sie senden ihn. Die Diskussion endet in dreißig Sekunden.',
-      'Der Vertrag ist sicher. Die Reinigungskraft ist geschützt.',
+      'Der Kunde ruft an und sagt, die Toilette sei nicht geputzt worden.',
+      'Sie öffnen den Einsatzbericht: Foto der sauberen Toilette, Uhrzeit, Position.',
+      'Sie schicken ihn, und der Kunde kann ihn selbst prüfen.',
+      'Sie haben einen Nachweis zur Hand. Auch die Reinigungskraft hat etwas in der Hand.',
     ],
   },
 
@@ -56,124 +56,120 @@ const content: SettoreContent = {
     subtitle: 'Drei einfache Schritte. Kein Papier. Keine Anrufe.',
     steps: [
       {
-        title: 'Reinigungskraft stempelt mit GPS',
-        desc: 'Öffnet und schließt die Schicht vom Smartphone. GeoTapp erfasst echte GPS-Koordinaten, Fotos und Zeitstempel, vollautomatisch und versiegelt.',
+        title: 'Die Reinigungskraft stempelt vor Ort',
+        desc: 'Sie startet und beendet die Schicht am Smartphone. GeoTapp hält Position und Uhrzeit in diesem Moment fest und bei Bedarf Nachweisfotos. Zwischen den Stempelungen wird nichts automatisch erfasst.',
       },
       {
-        title: 'Der Verantwortliche sieht jede Stempelung sofort',
-        desc: 'Ein Dashboard für alle Standorte. Sie wissen genau, wer vor Ort ist, wo und seit wann, ohne jemandem hinterherzulaufen.',
+        title: 'Die Leitung sieht jede Stempelung, sobald sie ankommt',
+        desc: 'Ein Bildschirm für alle Objekte. Sie sehen, wer gestempelt hat, wo und um welche Uhrzeit, ohne jemandem nachzulaufen.',
       },
       {
         title: 'Der Bericht ist automatisch fertig',
-        desc: 'Am Ende der Schicht erstellt das System einen versiegelten Bericht mit GPS, Fotos und digitaler Signatur. Senden Sie ihn an den Kunden, eigenständig prüfbar.',
+        desc: 'Am Ende der Schicht erstellt das System einen versiegelten Bericht mit GPS, Fotos und Siegel. Schicken Sie ihn dem Kunden, der ihn eigenständig prüfen kann.',
       },
     ],
   },
 
   differenza: {
-    title: 'Stempelung vs Servicenachweis.',
-    subtitle: 'Die meisten Apps erfassen Zeiten. GeoTapp erstellt Beweise für Ihren Kunden.',
+    title: 'Stempelung oder Leistungsnachweis.',
+    subtitle: 'Die meisten Apps erfassen Uhrzeiten. GeoTapp liefert Nachweise für Ihren Kunden.',
     rows: [
       {
-        label: 'Was erfasst wird',
+        label: 'Was wird erfasst',
         competitor: 'Ein- und Ausstempelzeit',
-        geotapp: 'Zeit + verifiziertes GPS + Fotos + erledigte Aufgaben',
+        geotapp: 'Uhrzeit + Position bei der Stempelung + Fotos + erledigte Aufgaben',
       },
       {
-        label: 'Wer prüfen kann',
+        label: 'Wer kann prüfen',
         competitor: 'Nur Ihr Büro',
-        geotapp: 'Sie, der Auftraggeber, ein Dritter, eigenständig',
+        geotapp: 'Sie, der Kunde, ein Dritter, eigenständig',
       },
       {
-        label: 'Im Streitfall',
-        competitor: 'Daten nicht verteidigbar',
+        label: 'Bei Streitigkeiten',
+        competitor: 'Nur Ihr Wort',
         geotapp: 'Versiegelter Bericht, jede Änderung erkennbar',
       },
       {
         label: 'Fotonachweis',
-        competitor: 'Fehlend oder getrennt',
-        geotapp: 'Im Bericht mit Zeitstempel und GPS',
+        competitor: 'Fehlt oder ist nicht verknüpft',
+        geotapp: 'Dem Bericht mit Zeitstempel und GPS beigefügt',
       },
       {
-        label: 'DSGVO-Konformität',
-        competitor: 'Oft zu prüfen',
-        geotapp: 'Für die DSGVO-Grenzen gebaut, Formulare inklusive',
+        label: 'DSGVO',
+        competitor: 'Muss oft erst geprüft werden',
+        geotapp: 'Gebaut, um die Vorgaben der DSGVO einzuhalten, Vorlagen inklusive',
       },
     ],
   },
 
   features: {
-    title: 'App für Reinigungsunternehmen: Servicenachweise, nicht nur Stempelungen.',
+    title: 'App für Reinigungsunternehmen: Leistungsnachweise, nicht nur Stempelungen.',
     items: [
       {
-        title: 'Automatische Servicenachweise',
-        desc: 'Jeder abgeschlossene Einsatz generiert einen Bericht mit GPS, Fotos und Zeitstempel. Der Kunde erhält ihn und prüft eigenständig.',
+        title: 'Automatische Leistungsnachweise',
+        desc: 'Jeder abgeschlossene Einsatz erzeugt einen Bericht mit GPS, Fotos und Zeitstempel. Der Kunde erhält ihn und prüft ihn selbst, ohne Zugang zu Ihrem System.',
       },
       {
-        title: 'Echte Kontrolle über alle Standorte',
-        desc: 'Sehen Sie, sobald gestempelt wird, wer wo aktiv ist, über alle Gebäude gleichzeitig. Keine Anrufe, keine E-Mails.',
+        title: 'Den Überblick über alle Objekte',
+        desc: 'Sie sehen, wer gestempelt hat und wo, in allen Gebäuden, sobald die Stempelung ankommt. Keine Anrufe, keine E-Mails. Zwischen den Stempelungen wird nichts automatisch erfasst.',
       },
       {
-        title: 'Verteidigbare Berichte überall',
-        desc: 'Jeder Bericht ist digital signiert und jede Änderung ist erkennbar. Kunden, Prüfer und Anwälte können ihn selbst prüfen.',
+        title: 'Berichte, die jeder prüfen kann',
+        desc: 'Jeder Bericht ist versiegelt, und jede Änderung ist erkennbar. Ein Kunde, eine Prüfstelle oder ein Berater kann ihn eigenständig prüfen.',
       },
       {
         title: 'Schicht- und Teamverwaltung',
-        desc: 'Schichten zuweisen, Aufträge verwalten und automatische Benachrichtigungen erhalten, wenn ein Einsatz nicht rechtzeitig geöffnet oder geschlossen wird.',
+        desc: 'Weisen Sie Schichten zu, verwalten Sie Objekte und erhalten Sie eine Meldung, wenn eine Schicht offen bleibt.',
       },
       {
         title: 'Fotodokumentation',
-        desc: 'Reinigungskräfte fotografieren direkt aus der App. Jedes Bild ist mit GPS und Zeitstempel georeferenziert, visueller Beweis der geleisteten Arbeit.',
+        desc: 'Die Reinigungskräfte fotografieren direkt in der App. Jedes Bild trägt Uhrzeit und Position, ein sichtbarer Beleg für die geleistete Arbeit.',
       },
       {
         title: 'Ihr Personal ist geschützt',
-        desc: 'Ein verifizierbarer Bericht schützt auch die Reinigungskraft vor unbegründeten Vorwürfen. Gute Arbeit wird durch Daten bewiesen.',
+        desc: 'Ein überprüfbarer Bericht gibt auch der Reinigungskraft etwas in die Hand gegen unbegründete Vorwürfe. Gute Arbeit belegen die Daten.',
       },
     ],
   },
 
   testimonial: {
     quote:
-      'Seit wir GeoTapp nutzen, werden Kundenstreitigkeiten in einer Minute gelöst. Wir senden den Bericht mit Fotos und GPS, und die Diskussion ist beendet. Wir haben in einem Jahr keinen einzigen Vertrag verloren.',
+      'Wenn ein Kunde einen Einsatz bestreitet, schicken wir den Bericht mit Fotos und Position, und er prüft ihn selbst.',
     author: 'Sabine M.',
     role: 'Inhaberin, Gebäudereinigungsunternehmen - Deutschland',
   },
 
   faq: {
     title: 'Häufig gestellte Fragen',
-    subtitle: 'Was uns am häufigsten vor dem Start gefragt wird.',
+    subtitle: 'Was uns am häufigsten gefragt wird, bevor es losgeht.',
     items: [
       {
-        q: 'Welche Zeiterfassung ist in der Gebäudereinigung Pflicht?',
-        a: 'Das Gebäudereinigungsgewerbe steht in § 2a des Schwarzarbeitsbekämpfungsgesetzes, dort unter Nummer 6. Deshalb gilt § 17 Absatz 1 Mindestlohngesetz: Beginn, Ende und Dauer der täglichen Arbeitszeit jedes Beschäftigten müssen spätestens bis zum Ablauf des siebten auf den Tag der Arbeitsleistung folgenden Kalendertages aufgezeichnet und mindestens zwei Jahre aufbewahrt werden. Die Unterlagen sind im Inland und in deutscher Sprache bereitzuhalten. Geprüft wird von der Finanzkontrolle Schwarzarbeit des Zolls, unangekündigt. Die Pflicht trifft den Arbeitgeber, nicht die Software: GeoTapp führt die Aufzeichnung, damit sie die Frist einhält und bei einer Prüfung noch da ist.',
-      },
-      {
-        q: 'Darf ich Umkleide- und Waschzeiten pauschal eintragen?',
-        a: 'Nein. Der Zoll weist ausdrücklich darauf hin, dass eine pauschale Erfassung von Rüst-, Umkleide- oder Waschzeiten nicht zulässig ist und ein Bußgeld nach sich ziehen kann. Aufgezeichnet gehört die tatsächliche Zeit, Objekt für Objekt. Genau daran scheitert der Stundenzettel, der freitags aus dem Gedächtnis nachgetragen wird: Er rundet, weil er sich erinnern muss. Eine Stempelung am Objekt schreibt die Zeit auf, die wirklich gelaufen ist.',
-      },
-      {
         q: 'Wie funktioniert die GPS-Stempelung für Reinigungsunternehmen?',
-        a: 'Die Reinigungskraft stempelt Ein- und Ausgang vom Smartphone. GeoTapp erfasst die GPS-Koordinaten in diesem Moment, nicht manuell eingegeben. Jede Stempelung ist mit Zeitstempel und Position vom Auftraggeber prüfbar.',
+        a: 'Die Reinigungskraft stempelt am Smartphone ein und aus. GeoTapp erfasst die GPS-Position in diesem Moment, nicht von Hand eingetragen. Jede Stempelung landet mit Zeitstempel und Position im versiegelten Bericht, den der Kunde prüfen kann.',
       },
       {
-        q: 'Kann ich dem Kunden beweisen, dass der Service erbracht wurde?',
-        a: 'Ja. GeoTapp erstellt automatisch einen versiegelten Bericht mit GPS, Fotos und Zeitstempel nach jedem Einsatz. Der Kunde erhält ihn und prüft eigenständig.',
+        q: 'Kann ich dem Kunden belegen, dass die Leistung erbracht wurde?',
+        a: 'Ja. GeoTapp erstellt nach jedem Einsatz automatisch einen versiegelten Bericht mit GPS, Fotos und Zeitstempel. Der Kunde erhält ihn und prüft ihn selbst, ohne Zugang zu Ihrem System.',
       },
       {
-        q: 'Ist GeoTapp DSGVO-konform für die GPS-Erfassung von Mitarbeitern?',
-        a: 'Ja. GeoTapp erfasst den Standort nur während der aktiven Arbeitszeit, enthält Vorlagen für die Mitarbeiterinformation und erhebt keine unnötigen Daten.',
+        q: 'Hält GeoTapp bei der GPS-Erfassung der Mitarbeiter die Vorgaben der DSGVO ein?',
+        a: 'GeoTapp ist gebaut, um die Vorgaben der DSGVO einzuhalten: Es erfasst die Position nur, wenn die Reinigungskraft stempelt (Beginn, Pause, Ende) oder ein Nachweisfoto aufnimmt, lässt die Mitarbeiterinformation vor dem Stempeln in der App unterschreiben und erhebt keine unnötigen Daten. Zwischen den Stempelungen wird nichts automatisch erfasst.',
       },
       {
-        q: 'Wie verwalte ich Teams auf mehreren Standorten gleichzeitig?',
-        a: 'Mit GeoTapp Flow haben Sie ein Dashboard für alle Standorte. Sehen Sie, sobald gestempelt wird, wer wo aktiv ist, weisen Sie Aufträge zu und erhalten Sie automatische Benachrichtigungen.',
+        q: 'Wie steuere ich Teams, die auf mehrere Objekte verteilt sind?',
+        a: 'Mit GeoTapp Flow haben Sie einen Bildschirm für alle Objekte. Sie sehen, wer gestempelt hat und wo, weisen Aufträge zu und erhalten eine Meldung, wenn eine Schicht offen bleibt.',
       },
       {
-        q: 'Braucht man noch Papier-Stundenzettel?',
-        a: 'Nein. GeoTapp ersetzt Papier-Stundenzettel vollständig durch automatische GPS-Erfassung vom Smartphone. Die Daten sind für die Gehaltsabrechnung exportierbar.',
+        q: 'Brauche ich noch Stundenzettel aus Papier?',
+        a: 'Nein. GeoTapp ersetzt die Papierzettel durch Stempelungen am Smartphone. Die Daten lassen sich für die Lohnabrechnung als Excel- oder CSV-Datei exportieren.',
       },
       {
         q: 'Was kostet GeoTapp für ein Reinigungsunternehmen?',
-        a: 'Die Pläne starten ab wenigen Euro pro Mitarbeiter/Monat. 14 Tage kostenlos testen, ohne Bindung.',
+        a: 'GeoTapp Flow beginnt bei 39 € im Monat; jede Reinigungskraft mit der TimeTracker-App kostet 3 € im Monat zusätzlich (ab dem 26. Platz 2,50 €). Der Abonnementvertrag läuft mindestens 12 Monate. Preise zzgl. MwSt. Sie können es 14 Tage kostenlos und ohne Karte testen.',
+      },
+      {
+        q: 'Verfolgt GeoTapp Reinigungskräfte per GPS?',
+        a: 'Nicht durchgehend. Die Reinigungskraft stempelt am Smartphone ein und aus, und jede Stempelung ist mit einer GPS-Position und einem Zeitstempel verknüpft, erfasst in diesem Moment (Beginn, Pause, Ende) und wenn ein Nachweisfoto aufgenommen wird. Es ist eine Position als Anwesenheitsnachweis, keine Überwachung: Zwischen den Stempelungen wird nichts automatisch erfasst, und die App fragt nicht nach der Berechtigung, die Position im Hintergrund zu lesen.',
       },
     ],
   },
@@ -181,14 +177,14 @@ const content: SettoreContent = {
   cta: {
     title: 'Ihre Reinigungskräfte arbeiten gut. Sorgen Sie dafür, dass der Kunde es sieht.',
     subtitle:
-      'Jeder Einsatz wird zum verifizierbaren Servicenachweis. Weniger Streit, weniger verlorene Verträge.',
-    primary: 'Jetzt kostenlos starten!',
+      'Jeder Einsatz wird zu einem Bericht, den Sie vorzeigen können, und der Kunde kann ihn selbst prüfen.',
+    primary: '14 Tage kostenlos testen',
     secondary: 'Preise ansehen',
   },
 
   pricing_hint: {
-    label: 'Ab',
-    per: 'Mitarbeiter/Monat',
+    label: 'TimeTracker-Plätze ab',
+    per: 'pro Mitarbeiter und Monat, zzgl. Flow-Tarif ab 39 € im Monat',
     note: '14 Tage kostenlos testen',
   },
 
@@ -196,27 +192,24 @@ const content: SettoreContent = {
 
   schema_faq: [
     {
-      question: 'Welche Zeiterfassung ist in der Gebäudereinigung Pflicht?',
-      answer: 'Das Gebäudereinigungsgewerbe steht in § 2a des Schwarzarbeitsbekämpfungsgesetzes unter Nummer 6. Deshalb gilt § 17 Absatz 1 Mindestlohngesetz: Beginn, Ende und Dauer der täglichen Arbeitszeit müssen spätestens bis zum Ablauf des siebten auf den Tag der Arbeitsleistung folgenden Kalendertages aufgezeichnet und mindestens zwei Jahre aufbewahrt werden, im Inland und in deutscher Sprache. Geprüft wird von der Finanzkontrolle Schwarzarbeit des Zolls, unangekündigt.',
-    },
-    {
-      question: 'Darf ich Umkleide- und Waschzeiten pauschal eintragen?',
-      answer: 'Nein. Der Zoll weist ausdrücklich darauf hin, dass eine pauschale Erfassung von Rüst-, Umkleide- oder Waschzeiten nicht zulässig ist und ein Bußgeld nach sich ziehen kann. Aufgezeichnet gehört die tatsächliche Zeit, Objekt für Objekt.',
-    },
-    {
       question: 'Wie funktioniert die GPS-Stempelung für Reinigungsunternehmen?',
       answer:
-        'Die Reinigungskraft stempelt vom Smartphone. GeoTapp erfasst GPS-Koordinaten, nicht manuell eingegeben. Jede Stempelung ist mit Zeitstempel und Position vom Auftraggeber prüfbar.',
+        'Die Reinigungskraft stempelt am Smartphone ein und aus. GeoTapp erfasst die GPS-Position in diesem Moment, nicht von Hand eingetragen. Jede Stempelung landet mit Zeitstempel und Position im versiegelten Bericht, den der Kunde prüfen kann.',
     },
     {
-      question: 'Kann ich dem Kunden beweisen, dass der Service erbracht wurde?',
+      question: 'Kann ich dem Kunden belegen, dass die Leistung erbracht wurde?',
       answer:
-        'Ja. GeoTapp erstellt automatisch einen versiegelten Bericht mit GPS, Fotos und Zeitstempel. Der Kunde erhält ihn und prüft eigenständig.',
+        'Ja. GeoTapp erstellt nach jedem Einsatz automatisch einen versiegelten Bericht mit GPS, Fotos und Zeitstempel. Der Kunde erhält ihn und prüft ihn selbst.',
     },
     {
-      question: 'Ist GeoTapp DSGVO-konform für die GPS-Erfassung von Mitarbeitern?',
+      question: 'Hält GeoTapp bei der GPS-Erfassung der Mitarbeiter die Vorgaben der DSGVO ein?',
       answer:
-        'Ja. GeoTapp erfasst den Standort nur während der aktiven Arbeitszeit, enthält Vorlagen für die Mitarbeiterinformation und erhebt keine unnötigen Daten.',
+        'GeoTapp ist gebaut, um die Vorgaben der DSGVO einzuhalten: Es erfasst die Position nur, wenn die Reinigungskraft stempelt (Beginn, Pause, Ende) oder ein Nachweisfoto aufnimmt, lässt die Mitarbeiterinformation vor dem Stempeln in der App unterschreiben und erhebt keine unnötigen Daten. Zwischen den Stempelungen wird nichts automatisch erfasst.',
+    },
+    {
+      question: 'Verfolgt GeoTapp Reinigungskräfte per GPS?',
+      answer:
+        'Nicht durchgehend. Die Reinigungskraft stempelt am Smartphone ein und aus, und jede Stempelung ist mit einer GPS-Position und einem Zeitstempel verknüpft, erfasst in diesem Moment (Beginn, Pause, Ende) und wenn ein Nachweisfoto aufgenommen wird. Zwischen den Stempelungen wird nichts automatisch erfasst.',
     },
   ],
 };

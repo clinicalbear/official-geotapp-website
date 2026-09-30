@@ -67,19 +67,27 @@ const TT_COPY: Record<string, TtCopy> = {
     availableOn: 'Disponibile su',
   },
   de: {
-    statusLabel: 'Platform Status',
-    releaseNote: 'Native Android and iOS apps are available on the stores and keep field data connected to Flow in real time.',
-    mobileKicker: 'Mobile App',
+    statusLabel: 'Wo es eingesetzt wird',
+    releaseNote: 'TimeTracker ist eine native App bei Google Play und im App Store: Sie braucht Android 8.0 oder neuer, oder iOS 26.2 oder neuer. Was die Mitarbeitenden erfassen, kommt in Flow an, sobald Netz da ist.',
+    mobileKicker: 'App fürs Telefon',
     downloadTitle: 'GeoTapp TimeTracker herunterladen',
-    downloadSub: 'Verfügbar auf Google Play und im App Store.',
-    doesTitle: 'What GeoTapp TimeTracker really does today',
-    doesSub: 'Not just attendance: it captures verifiable field work, reliable customer proof and the operational history the office can trust.',
-    highlights: [],
-    workflow: [],
-    complianceTagline: 'Compliant from day one, or you don\'t clock in.*',
-    complianceFootnote: '* By law, every employee must sign a privacy notice before being geolocated. GeoTapp is the only system that generates it automatically, gets it signed and blocks GPS access until it is.',
-    trial: '14 Tage kostenlos testen',
-    availableOn: 'Verfügbar auf',
+    downloadSub: 'Verfügbar bei Google Play und im App Store.',
+    doesTitle: 'Was GeoTapp TimeTracker macht',
+    doesSub: 'Nicht nur Anwesenheit: Es sammelt vor Ort die Nachweise der Arbeit, die das Büro für den Bericht nutzt und die der Kunde prüfen kann.',
+    highlights: [
+      { title: 'Buchungen mit Standort und Uhrzeit', description: 'Beginn, Pausen und Ende erfassen Standort, Adresse und Uhrzeit in dem Moment, in dem die Person stempelt. Zwischen zwei Buchungen wird automatisch nichts aufgezeichnet.' },
+      { title: 'Nachweise, die der Kunde prüfen kann', description: 'Die Mitarbeitenden machen Fotos, fügen Notizen hinzu und schicken Arbeitsnachweise, die dem Auftrag zugeordnet sind. Sie landen im versiegelten Bericht, den der Kunde selbst prüft.' },
+      { title: 'Eine Historie, die das Büro nutzen kann', description: 'Was vor Ort erfasst wird, kommt in Flow an und ist sofort nützlich für den Bericht an den Kunden, den Auftragsverlauf und die Abrechnung.' },
+      { title: 'Fahrzeugnutzung, Belege und Erstattungen', description: 'Die Mitarbeitenden geben die Fahrzeugnutzung in der Schicht an, erfassen Tankstopps und Ausgaben mit einem Foto des Belegs, und das Büro genehmigt sie.' },
+    ],
+    workflow: [
+      { title: 'Viel mehr als eine einfache Stempeluhr', description: 'TimeTracker umfasst Auftragsdetails, Berichte, Mitteilungen, Urlaubs- und Abwesenheitsanträge und Arbeitssitzungen: nicht nur Anwesenheit.' },
+      { title: 'Außendienst, Büro und Kunde auf denselben Daten', description: 'Die Arbeit vor Ort bleibt nicht isoliert: Das Büro verfolgt den Fortschritt, sieht sich die Nachweise an und antwortet dem Kunden mit Fakten.' },
+    ],
+    complianceTagline: 'Erst wird die Information bestätigt, dann wird gestempelt.*',
+    complianceFootnote: '* Gesetzlich müssen alle Beschäftigten informiert werden, bevor ihr Standort erfasst wird. GeoTapp bereitet die Information vor, lässt sie in der App als zur Kenntnis genommen bestätigen und lässt erst stempeln, wenn sie bestätigt ist.',
+    trial: 'Die 14-tägige kostenlose Testphase starten',
+    availableOn: 'Verfügbar bei',
   },
   en: {
     statusLabel: 'Where it is used',
@@ -340,7 +348,7 @@ export default function GeoTappApp() {
         <div className="r-s d1" style={{ display: 'flex', justifyContent: 'center' }}>
           <div className="sheet">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/verifier-report.webp" alt="Report sigillato GeoTapp" loading="lazy" />
+            <img src="/verifier-report.webp" alt={currentLocale === 'it' ? 'Report sigillato GeoTapp' : currentLocale === 'de' ? 'Versiegelter GeoTapp-Bericht' : 'GeoTapp sealed report'} loading="lazy" />
           </div>
         </div>
       </div></div></section>

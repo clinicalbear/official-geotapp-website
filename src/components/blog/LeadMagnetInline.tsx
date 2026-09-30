@@ -71,8 +71,8 @@ export const LEAD_MAGNETS: Record<string, LeadMagnetAsset> = {
         error: 'Something went wrong. Try again.',
       },
       de: {
-        title: 'Kostenlose DSGVO-Vorlage zur GPS-Datenschutzerklärung für Deutschland herunterladen',
-        desc: 'Muster einer Datenschutzerklärung zur Standortverfolgung von Mitarbeitern, konform mit Art. 13 DSGVO, mit Rechtsgrundlage und Aufsichtsbehörde des Landes. Leere Felder ausfüllen und von Ihrem Berater prüfen lassen.',
+        title: 'Kostenlose Vorlage zur GPS-Datenschutzinformation für Deutschland herunterladen',
+        desc: 'Muster einer Datenschutzerklärung zur Standortverfolgung von Mitarbeitern, aufgebaut auf den Inhalten nach Art. 13 DSGVO, mit Rechtsgrundlage und Aufsichtsbehörde des Landes. Leere Felder ausfüllen und von Ihrem Berater prüfen lassen.',
         download: 'Vorlage herunterladen (PDF)',
         newsletterPrompt: 'Möchten Sie auch die nächsten Praxis-Leitfäden zu GPS und Außendienst? E-Mail hinterlassen (optional).',
         placeholder: 'Ihre E-Mail',

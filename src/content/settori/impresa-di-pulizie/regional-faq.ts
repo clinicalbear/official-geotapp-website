@@ -7,7 +7,7 @@ export interface RegionalFaqItem {
 
 export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   it: 'Conformità normativa in Italia',
-  de: 'Compliance in Deutschland',
+  de: 'Vorschriften und Nachweise in Deutschland',
   fr: 'Conformité en France',
   es: 'Cumplimiento normativo en España',
   pt: 'Conformidade em Portugal',
@@ -36,16 +36,16 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   ],
   de: [
     {
-      q: 'Welche Nachweise verlangt der Tarifvertrag Gebäudereinigung pro Mitarbeiter?',
-      a: 'Stunden je Objekt, Nacht- und Feiertagszuschläge und die Aufbewahrung nach §16 ArbZG, jederzeit prüffähig für den Zoll (Mindestlohnkontrolle).',
+      q: 'Welche Arbeitszeitnachweise braucht ein Gebäudereinigungsbetrieb?',
+      a: 'GeoTapp erfasst Stunden, Pausen und Ende je Mitarbeiter und Objekt mit Position und Uhrzeit und exportiert sie als Excel- oder CSV-Datei für die Lohnbuchhaltung oder Steuerberatung. Zuschläge für Nacht- und Feiertagsarbeit, Branchenmindestlohn und Prüfungen bleiben bei ihr und beim Unternehmen, das damit ein Zeitprotokoll als Ausgangspunkt hat.',
     },
     {
-      q: 'Wie wird die Mitbestimmung bei GPS-Ortung gewahrt?',
-      a: 'Ortung nur während der Arbeitszeit, mit Interessenabwägung nach Art. 6 DSGVO und der Zustimmung des Betriebsrats nach §87 Abs. 1 Nr. 6 BetrVG vor Einführung.',
+      q: 'GPS-Ortung von Reinigungskräften: DSGVO und Betriebsrat?',
+      a: 'Die Position wird nur beim Stempeln und bei Nachweisfotos erfasst, nie durchgehend, und die Mitarbeiterinformation wird vor dem Stempeln in der App unterschrieben. Ob eine Interessenabwägung nach Art. 6 DSGVO und die Mitbestimmung des Betriebsrats nach §87 Abs. 1 Nr. 6 BetrVG erforderlich sind, klärt der Arbeitgeber.',
     },
     {
-      q: 'Wie wird der Branchenmindestlohn nachgewiesen?',
-      a: 'Automatischer Stunden-zu-Lohn-Abgleich gegen den allgemeinverbindlichen Mindestlohn der Gebäudereinigung und das MiLoG, je Mitarbeiter dokumentiert.',
+      q: 'Aufzeichnungspflicht nach §17 MiLoG in der Gebäudereinigung?',
+      a: 'Das Gebäudereinigungsgewerbe steht in §2a SchwarzArbG, dort gilt §17 MiLoG: Beginn, Ende und Dauer der täglichen Arbeitszeit sind aufzuzeichnen und zwei Jahre aufzubewahren. GeoTapp erfasst Beginn, Pausen und Ende beim Stempeln und bewahrt den Verlauf je Mitarbeiter auf, exportierbar als Excel- oder CSV-Datei. Ob die Aufzeichnung den Vorgaben genügt, bleibt Sache des Unternehmens. GeoTapp ist keine Rechtsberatung.',
     },
   ],
   fr: [

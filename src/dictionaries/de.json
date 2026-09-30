@@ -27,7 +27,10 @@
     "product_flow_desc": "Operative Einsatzverwaltung und Teamplanung",
     "product_app_desc": "Mobile App für Außendiensttechniker",
     "product_verifier_desc": "Integritätsprüfung von Arbeitsberichten",
-    "compare": "Vergleich"
+    "compare": "Vergleich",
+    "aria_cart": "Warenkorb",
+    "aria_menu": "Menü öffnen",
+    "aria_close": "Menü schließen"
   },
   "risorseHub": {
     "metaTitle": "Ressourcen - GeoTapp",
@@ -61,7 +64,7 @@
       },
       "sanzioni": {
         "title": "GPS-Bußgeldrechner",
-        "desc": "Land wählen und sehen, wie viel Sie bei Mitarbeiterüberwachung riskieren: reales Höchstbußgeld und exponierende Pflichten."
+        "desc": "Wählen Sie ein Land und sehen Sie, was Mitarbeiterüberwachung Sie kosten kann: das höchste tatsächlich verhängte Bußgeld oder das gesetzliche Maximum, und die Pflichten, die Sie angreifbar machen."
       },
       "osservatorio": {
         "title": "Europäische Beobachtungsstelle",
@@ -69,7 +72,7 @@
       },
       "indice": {
         "title": "Index der Arbeitnehmerüberwachung in Europa",
-        "desc": "Das Ranking von 39 europäischen Ländern nach Strenge des Mitarbeiterüberwachungs-Rahmens."
+        "desc": "Was die von europäischen Behörden veröffentlichten Entscheidungen zur Mitarbeiterüberwachung in Zahlen sagen: wie viele, zu welchen Themen, die höchsten Bußgelder."
       },
       "roi": {
         "title": "ROI-Rechner",
@@ -101,7 +104,7 @@
         },
         {
           "q": "Sind sie nur dann nützlich, wenn ich GeoTapp verwende?",
-          "a": "Nein, sie stehen für sich. Wir haben sie gebaut, damit jede und jeder, der Menschen ins Feld schickt, versteht, was Rechtskonformität verlangt, mit oder ohne GeoTapp. Wenn Sie danach ein System wollen, das bereits darauf ausgelegt ist, den Standort nur beim Einstempeln und nicht durchgehend zu erfassen, finden Sie es hier, aber die Ressourcen sind so oder so nützlich."
+          "a": "Nein, sie stehen für sich. Wir haben sie entwickelt, damit jeder, der Menschen in den Außendienst schickt, versteht, was Rechtskonformität verlangt, mit oder ohne GeoTapp. Wenn Sie danach ein System suchen, das den Standort nur beim Stempeln und nie durchgehend erfasst: GeoTapp ist genau so gebaut. Die Ressourcen sind so oder so nützlich."
         },
         {
           "q": "Für wen sind sie gedacht?",
@@ -116,36 +119,36 @@
     "terms": "Nutzungsbedingungen",
     "rights": "Alle Rechte vorbehalten.",
     "newsletter_title": "Bleiben Sie auf dem Laufenden",
-    "newsletter_desc": "Kein Spam, nur wertvolle Updates zu Betriebsführung, HR und Technologie für KMU.",
+    "newsletter_desc": "Kein Spam, nur nützliche Updates zu Einsatzplanung, Personalführung und digitalen Werkzeugen für kleine Unternehmen.",
     "sectors": "Branchen",
     "contact": "Kontakt"
   },
   "landing": {
-    "us_badge": "🇺🇸 Serving US teams, chat support 9am-6pm ET. USD invoicing available on request.",
+    "us_badge": "🇺🇸 Für Teams in den USA: Chat-Support 9–18 Uhr ET, Rechnung in USD auf Anfrage.",
     "hero_badge": "Die Arbeit war da. Jetzt machen Sie sie beweisbar.",
     "hero_title": "Wenn Sie es nicht beweisen können, sagt der Kunde: Es ist nie passiert.",
-    "hero_subtitle": "GeoTapp verwandelt jeden Außendiensteinsatz in objektive Beweise: versiegelte Berichte mit echten GPS-Daten, zeitgestempelte Fotonachweise und Dokumentation, die jeder unabhängig prüfen kann, ohne Vertrauen, ohne Streit.",
+    "hero_subtitle": "GeoTapp macht aus jedem Einsatz einen Nachweis: versiegelte Berichte mit Standort, Fotos und Zeiten, die Ihr Kunde selbst prüfen kann, ohne sich auf Ihr Wort verlassen zu müssen.",
     "hero_cta_primary": "Kostenlos testen",
     "hero_cta_secondary": "Branchen entdecken",
     "hero_cta_report": "Einen versiegelten Nachweis ansehen",
     "trust_gdpr": "Keine dauerhafte Ortung",
-    "trust_gdpr_desc": "Zeitstempel nur bei An- und Abmeldung",
+    "trust_gdpr_desc": "Standort nur beim Stempeln: Beginn, Pausen, Ende",
     "trust_gps": "GPS-Nachweis",
     "trust_gps_desc": "Jeder Einsatz mit Standort und Zeitstempel versiegelt",
     "trust_offline": "Offline-Prüfer",
     "trust_offline_desc": "Eine Datei, ohne Konto und ohne Netz",
     "trust_eu_data": "Daten in Europa",
     "features_title": "Vom Einsatz zum verifizierbaren Nachweis",
-    "features_subtitle": "Drei integrierte Werkzeuge: Das Feld erfasst, das Büro kontrolliert, der Kunde verifiziert.",
+    "features_subtitle": "Drei integrierte Werkzeuge: Der Außendienst erfasst, das Büro organisiert, der Kunde prüft.",
     "cta_title": "Die Arbeit war da. Jetzt beweisen Sie es.",
     "cta_subtitle": "Kein Einsatz bleibt ohne Dokumentation, und jede Stunde, die aus dem Feld kommt, ist schon nachprüfbar.",
     "cta_button": "Kostenlos testen",
-    "problem_title": "Das Problem, das du schon kennst",
+    "problem_title": "Das Problem, das Sie schon kennen",
     "problem_subtitle": "Wer den Beweis hat, muss nichts erklären, und wer erklären muss, hat keinen Beweis.",
     "problem_items": [
       {
-        "title": "Der Kunde bestreitet es. Du hast keine Beweise.",
-        "desc": "Die Arbeit hat stattgefunden. Ohne verifizierbaren Nachweis steht dein Wort gegen seines. Und meistens gewinnt er."
+        "title": "Der Kunde bestreitet es. Sie haben keine Belege.",
+        "desc": "Der Einsatz hat stattgefunden. Aber ohne nachprüfbare Dokumentation steht Ihr Wort gegen seines. Und oft gewinnt er."
       },
       {
         "title": "Der Bericht kommt unvollständig, zu spät oder gar nicht.",
@@ -156,14 +159,14 @@
         "desc": "Jede nicht erfasste Stunde ist eine unbezahlte Stunde. Jeder Einsatz ohne Nachweis ist ein Einsatz, den der Kunde anfechten kann."
       }
     ],
-    "report_section_title": "Der Bericht. Nicht eine Zusammenfassung. Ein Beweis.",
-    "report_section_subtitle": "Jeder GeoTapp-Bericht wird automatisch aus echten Felddaten generiert.",
-    "report_section_body": "GPS-Stempelungen, Fotos mit Uhrzeit, Einsatznotizen. Die Daten schließen sich bei der Erstellung, und danach rührt sie niemand mehr an. Wenn der Zweifel kommt, erklären Sie nicht, Sie zeigen, und was Sie zeigen, ist kein Dokument für den Kunden, es ist das Ende der Diskussion.",
+    "report_section_title": "Der Bericht ist keine Zusammenfassung: Er ist ein Nachweis.",
+    "report_section_subtitle": "Jeder GeoTapp-Bericht wird automatisch aus den tatsächlichen Felddaten erstellt.",
+    "report_section_body": "Stempelungen mit Standort, Fotos mit Uhrzeit, Einsatznotizen. Die Daten werden beim Erstellen des Berichts versiegelt, und danach ist jede Änderung erkennbar. Wenn Zweifel aufkommen, müssen Sie nichts erklären: Sie zeigen den Bericht, und der Kunde prüft ihn selbst.",
     "report_feature_1": "Versiegelt nach Erstellung, jede Änderung ist erkennbar",
     "report_feature_2": "Prüfbar ohne Konto, von jedem, unabhängig",
     "report_feature_3": "GPS- und Fotodaten integriert und nicht trennbar",
     "report_feature_4": "Automatisch generiert, keine manuelle Erfassung",
-    "report_cta": "So verifiziert Ihr Kunde selbst",
+    "report_cta": "So prüft Ihr Kunde den Bericht selbst",
     "hero_sectors_prefix": "Ideal für",
     "hero_sectors_pulizie": "Reinigungsunternehmen",
     "hero_sectors_installatori": "Installateure",
@@ -171,110 +174,112 @@
     "hero_sectors_and": "und",
     "clockin_demo": {
       "step_clock": "Stempeln",
-      "step_gps": "GPS geprüft",
+      "step_gps": "Standort erfasst",
       "step_photo": "Foto vor Ort",
       "step_sealed": "Versiegelt",
-      "caption": "Eine Stempelung. GPS, Foto und Uhrzeit, versiegelt. Nicht wiederholbar, nicht diskutierbar.",
+      "caption": "Eine Stempelung: Standort, Foto und Uhrzeit, im Bericht versiegelt. Jede spätere Änderung ist sichtbar.",
       "replay": "Nochmal ansehen"
     },
     "roi_mini": {
-      "title": "Was kostet es dich, wenn du es nicht beweisen kannst?",
-      "subtitle": "Drei Zahlen, eine ehrliche Schätzung. In zwei Sekunden, ohne E-Mail.",
+      "title": "Was kostet es Sie, wenn Sie es nicht belegen können?",
+      "subtitle": "Drei Zahlen, eine ehrliche Schätzung. Sofort, ohne E-Mail.",
       "field_operatori": "Mitarbeiter",
       "field_costo": "Stundensatz (€)",
       "field_contestazioni": "Reklamationen pro Monat",
-      "result_prefix": "Du lässt jedes Jahr ungefähr",
+      "result_prefix": "Sie lassen jedes Jahr ungefähr",
       "result_suffix": "liegen",
-      "disclaimer": "Mindestschätzung (Streitfälle + Koordination). Die vollständige Rechnung, Posten für Posten, steht im Report.",
-      "email_label": "Willst du den ausführlichen Report und den Vergleich mit deiner Branche?",
-      "email_placeholder": "Deine geschäftliche E-Mail",
-      "email_cta": "Report schicken + Trial starten",
-      "email_ok": "Erledigt. Schau gleich in dein Postfach.",
-      "email_err": "Etwas hat nicht geklappt. Versuch es nochmal.",
+      "disclaimer": "Mindestschätzung (Beanstandungen + Koordination). Die vollständige Rechnung, Posten für Posten, steht im ROI-Rechner.",
+      "email_label": "Möchten Sie den ausführlichen Report und den Vergleich mit Ihrer Branche?",
+      "email_placeholder": "Ihre geschäftliche E-Mail",
+      "email_cta": "Report senden + Test starten",
+      "email_ok": "Erledigt. Schauen Sie gleich in Ihr Postfach.",
+      "email_err": "Etwas hat nicht geklappt. Bitte versuchen Sie es noch einmal.",
       "pitch_kicker": "ROI-Rechner",
-      "pitch_title": "Die Zahlen, die du nicht ansiehst, sind die, die dich kosten.",
+      "pitch_title": "Die Zahlen, die Sie nicht ansehen, sind die, die Sie kosten.",
       "pitch_body": "Stunden in Bürokratie, Streitfälle, die Sie bezahlen, Koordination auf Zuruf. Man spürt nicht, wie sie vom Konto gehen, aber sie gehen. Geben Sie drei Zahlen ein und sehen Sie, was ein Jahr ergibt. Meist überrascht es, und nicht positiv.",
       "pitch_points": [
         "Jede nicht bezahlte Beanstandung wiegt, zwölf Monate im Jahr",
-        "Stunden im Büro sind Stunden, die du nicht abrechnest",
-        "Zwei Sekunden und keine E-Mail, um die Zahl zu sehen"
+        "Stunden im Büro sind Stunden, die Sie nicht abrechnen",
+        "Drei Zahlen und keine E-Mail, um das Ergebnis zu sehen"
       ]
     },
-    "proof_note": "Nachweise ausschließlich per Kamera erfasst, keine dauerhafte Ortung.",
-    "proof_claim": "Zwischen Kommen und Gehen wird nichts aufgezeichnet.",
-    "sticky_cta_subtitle": "14 Tage gratis, keine Kreditkarte"
+    "proof_note": "Nachweisfotos werden in der App aufgenommen, keine durchgehende Ortung.",
+    "proof_claim": "Zwischen zwei Stempelungen wird nichts automatisch aufgezeichnet.",
+    "sticky_cta_subtitle": "14 Tage gratis, keine Kreditkarte",
+    "trial_cta_headline": "14 Tage kostenlos testen",
+    "trial_cta_subtitle": "Keine Kreditkarte erforderlich"
   },
   "home_sections": {
     "flow": {
       "badge": "GeoTapp Flow",
-      "title": "Außendienst aus einer Zentrale koordinieren.",
-      "subtitle": "Flow ist das System, das das Büro nutzt, um Aufträge zu verwalten, Tätigkeiten zuzuweisen, Fortschritte zu überwachen und strukturierte Arbeitsberichte zu erstellen. <strong class=\"text-slate-900\">Weniger interne Reibung, mehr echte Kontrolle.</strong><br/><br/><em>Ihr Unternehmen ist ein lebendiger Organismus. Jeder Auftrag, jede Aufgabe, jeder Mitarbeiter ist ein Herzschlag. GeoTapp Flow hält sie alle synchron.</em>",
+      "title": "Das Büro sieht jede Stempelung, sobald sie eintrifft.",
+      "subtitle": "Flow ist die Schaltzentrale des Büros: Aufträge, Aufgaben, Fortschritt und strukturierte Berichte. <strong class=\"text-slate-900\">Der Außendienst arbeitet. Das Büro weiß Bescheid.</strong>",
       "features": {
         "crm": "<strong>Auftragsverwaltung:</strong> Einsätze erstellen, Techniker zuweisen und den Fortschritt laufend im Blick behalten.",
-        "pipeline": "<strong>Strukturierte Berichte:</strong> Jeder abgeschlossene Auftrag erzeugt rückverfolgbare Dokumentation für den Kunden."
+        "pipeline": "<strong>Automatische Dokumentation:</strong> Jeder abgeschlossene Einsatz erzeugt einen fertigen Bericht, ohne manuelles Ausfüllen."
       },
       "link": "GeoTapp Flow entdecken"
     },
     "app": {
       "badge": "GeoTapp TimeTracker",
       "title": "Der Techniker erfasst. Das Büro kontrolliert.",
-      "subtitle": "TimeTracker ist die mobile App, die den Beweis aus dem Feld einsammelt, Kommen, Gehen, Fotos mit Uhrzeit, Notizen. Alles am Einsatz hängend, alles versiegelt. <strong>Verfügbar für Android und iOS.</strong>",
+      "subtitle": "TimeTracker ist die mobile App, die den Nachweis aus dem Außendienst einsammelt: Beginn, Pausen, Ende, Fotos mit Uhrzeit, Notizen. Alles am Einsatz hängend und im Bericht versiegelt. <strong>Verfügbar für Android und iOS.</strong>",
       "card_gps": {
         "title": "GPS-Zeiterfassung",
-        "desc": "Verifizierter Standort"
+        "desc": "Standort und Uhrzeit bei jeder Stempelung erfasst"
       },
       "card_gdpr": {
         "title": "Keine dauerhafte Ortung",
-        "desc": "Kein kontinuierliches Tracking"
+        "desc": "Zwischen zwei Stempelungen wird nichts automatisch aufgezeichnet"
       },
       "link": "GeoTapp TimeTracker entdecken"
     },
     "verifier": {
       "badge": "GeoTapp Verifier",
       "title": "Sie brauchen kein Vertrauen.",
-      "subtitle": "Ihr Wort kommt gar nicht erst ins Spiel. Der Kunde öffnet den Bericht und prüft ihn selbst, ohne Zugang zu GeoTapp. Stimmen die Daten mit der tatsächlichen Arbeit überein, hält der Bericht. Hat jemand das Dokument verändert, hält er nicht mehr. Ohne Berufung.",
+      "subtitle": "Ihr Wort kommt gar nicht erst ins Spiel. Der Kunde öffnet den Bericht und prüft ihn selbst, ohne sich bei GeoTapp anzumelden. Hat niemand das Dokument angefasst, bestätigt die Prüfung das. Wurde es verändert, meldet die Prüfung es.",
       "features": {
-        "integrity": "<strong>Versiegelte Daten:</strong> Der Bericht wird auf echten Felddaten generiert und gesperrt. Jede Änderung macht ihn ungültig, ohne Ausnahme.",
-        "independent": "<strong>Autonome Prüfung:</strong> Jeder mit dem Bericht kann die Echtheit überprüfen, kein Konto, kein Plattformzugang."
+        "integrity": "<strong>Versiegelte Daten:</strong> Der Bericht wird beim Erstellen versiegelt. Jede spätere Änderung meldet die Prüfung.",
+        "independent": "<strong>Eigenständige Prüfung:</strong> Jeder, der den Bericht hat, kann seine Integrität prüfen, ohne Konto und ohne Zugang zur Plattform."
       },
       "link": "GeoTapp Verifier entdecken"
     },
     "core": {
       "badge": "GeoTapp Plattform",
-      "title": "Ein System, drei Sicherheitsstufen",
-      "subtitle": "TimeTracker erfasst im Außendienst. Flow organisiert im Büro. Verifier bestätigt, dass alles übereinstimmt.",
+      "title": "Ein System, drei Werkzeuge",
+      "subtitle": "TimeTracker erfasst im Außendienst. Flow organisiert im Büro. Verifier lässt den Kunden prüfen, ob der Bericht unverändert ist. Ein Kreislauf, vom Einsatzort bis zum Kunden.",
       "features": [
         {
-          "title": "Echte mobile Einsatzfähigkeit",
-          "desc": "TimeTracker erfasst Kommen, Pausen und Gehen mit GPS. Jeder aus dem Feld gesendete Datenpunkt ist authentisch, mit Standort und Zeitstempel."
+          "title": "Die Daten entstehen im Außendienst",
+          "desc": "TimeTracker erfasst Beginn, Pausen und Ende mit Standort und Uhrzeit, dazu die Nachweisfotos der Arbeit."
         },
         {
-          "title": "Datenschutz by Design",
-          "desc": "Der Standort wird <strong>nur</strong> beim Ein- und Ausstempeln erfasst. Kein kontinuierliches Tracking."
+          "title": "Standort nur beim Stempeln",
+          "desc": "Der Standort wird <strong>nur</strong> erfasst, wenn die Mitarbeiterin oder der Mitarbeiter stempelt (Beginn, Pausen, Ende) oder ein Nachweisfoto aufnimmt. Zwischen zwei Stempelungen wird nichts automatisch aufgezeichnet."
         },
         {
           "title": "Sofortige Betriebstransparenz",
-          "desc": "Felddaten kommen sofort in Flow an. Das Büro hat sofortige Transparenz, ohne jemanden anzurufen."
+          "desc": "Die Felddaten kommen in Flow an, sobald sie erfasst sind. Die Leitung sieht die Stempelungen, ohne jemanden anrufen zu müssen."
         },
         {
-          "title": "Verteidigbarer Nachweis über Zeit",
-          "desc": "Jeder Bericht ist auf echten Felddaten versiegelt. Streit? Die Daten sind da. Von jedem verifizierbar. Immer."
+          "title": "Ein Nachweis, der prüfbar bleibt",
+          "desc": "Jeder Bericht ist auf den im Außendienst erfassten Daten versiegelt. Kommt es zu einer Beanstandung, sind die Daten da, und jeder kann prüfen, dass der Bericht nicht verändert wurde. Auch in Jahren, auch ohne uns."
         }
       ]
     },
     "footer_cta": {
       "title": "Die Arbeit ist bewiesen. Jetzt gehen Sie nach Hause.",
-      "subtitle": "Ein Tipp vor Ort versiegelt den Nachweis, und der Bericht schreibt sich von selbst, fertig für den Kunden. Schluss mit Freitagabenden, an denen Sie die Woche aus dem Gedächtnis rekonstruieren. Wenn Sie ausstempeln, sind Sie wirklich fertig, und der Abend gehört wieder Ihnen.",
+      "subtitle": "Sie stempeln auf der Baustelle, und der Bericht entsteht aus den Schichtdaten von selbst, fertig für den Kunden. Schluss mit Freitagabenden, an denen Sie die Woche aus dem Gedächtnis rekonstruieren. Wenn Sie ausstempeln, sind Sie wirklich fertig, und der Abend gehört wieder Ihnen.",
       "button": "Kontakt aufnehmen",
       "pricing_link": "Pläne und Preise ansehen →"
     },
     "settori": {
-      "title": "Nachweisbare Dokumentation für jeden Sektor - GeoTapp-Lösungen",
+      "title": "Nachprüfbare Dokumentation für jede Branche",
       "subtitle": "Wählen Sie Ihren Sektor und sehen Sie, wie GeoTapp Arbeitsnachweise erstellt, zum Vorzeigen beim Kunden bei Konflikten.",
       "see_all": "Alle unterstützten Sektoren anzeigen",
       "installatori": {
         "name": "Installateure",
-        "desc": "Elektriker, Installateure, Anlagentechniker. Jeder Einsatz mit GPS und Fotos dokumentiert, Daten bei denen jede Änderung nachweisbar ist, vom Kunden prüfbar.",
+        "desc": "Elektriker, Installateure, Anlagenbauer. Jeder Einsatz mit Standort und Fotos dokumentiert, versiegelte Daten, vom Kunden prüfbar.",
         "cta": "Jeden Einsatz nachweisen"
       },
       "sicurezza": {
@@ -284,12 +289,12 @@
       },
       "pulizie": {
         "name": "Reinigung",
-        "desc": "Reinigungsunternehmen, Facility, Multiservice. Jeder Durchgang dokumentiert und vom Auftraggeber prüfbar, weniger Beschwerden.",
-        "cta": "Beschwerden vermeiden"
+        "desc": "Reinigungsunternehmen, Facility, Multiservice. Jeder Durchgang dokumentiert und vom Auftraggeber prüfbar, weniger Beanstandungen.",
+        "cta": "Jeden Durchgang dokumentieren"
       },
       "elettricisti": {
         "name": "Elektriker",
-        "desc": "Elektroinstallationen, Schaltanlagen, Verkabelung. Jeder Einsatz mit GPS und Fotos dokumentiert, Beweise bei denen jede Manipulation erkennbar ist, für jeden Streitfall.",
+        "desc": "Elektroinstallationen, Schaltschränke, Verkabelung. Jeder Einsatz mit Standort und Fotos dokumentiert, in einem versiegelten Bericht, den Sie bei Beanstandungen vorlegen können.",
         "cta": "Jeden Einsatz dokumentieren"
       },
       "idraulici": {
@@ -299,19 +304,19 @@
       },
       "termoidraulici": {
         "name": "Heizung & Sanitär",
-        "desc": "GeoTapp erfasst jeden Heizungs- und Sanitäreinsatz mit GPS, Fotos und verifizierbaren Zeitstempeln. Der Kunde bestreitet ausgetauschte Teile?",
+        "desc": "GeoTapp erfasst jeden Einsatz an Heizungen und Anlagen mit Standort, Fotos und nachprüfbaren Zeiten. Der Kunde bestreitet die getauschten Teile?",
         "cta": "Ersetzte Teile nachweisen"
       },
       "edilizia": {
-        "desc": "Hochbau, Sanierung, Nachunternehmer. Stunden und Anwesenheit auf der Baustelle dokumentiert, Aufmaße die einer Beanstandung standhalten.",
-        "cta": "Baufortschritt belegen"
+        "desc": "Hochbau, Sanierung, Nachunternehmer. Stunden und Anwesenheit auf der Baustelle dokumentiert, Baufortschrittsberichte für den Auftraggeber mit beigefügten Belegen.",
+        "cta": "Baufortschritt dokumentieren"
       },
       "manutenzione": {
-        "desc": "Anlagen, Aufzüge, Facility. Jeder Einsatz und jede Begehung mit GPS und Fotos: der Servicebericht wird nicht mehr bestritten.",
-        "cta": "Streitfälle beenden"
+        "desc": "Anlagen, Aufzüge, Facility. Jeder Einsatz und jede Begehung mit Standort und Fotos, in einem Servicebericht, den Sie vorlegen können, wenn es darauf ankommt.",
+        "cta": "Jeden Besuch dokumentieren"
       },
       "impianti": {
-        "desc": "Mechanik, Elektro, Brandschutz. Prüfungen und Inbetriebnahme mit Zeit und Ort belegt, Nachweis fertig für den Auftraggeber.",
+        "desc": "Mechanische, elektrische und Brandschutzanlagen. Abnahmen und Inbetriebnahmen mit Uhrzeit und Standort versiegelt, Nachweis fertig für den Auftraggeber.",
         "cta": "Inbetriebnahme belegen"
       }
     },
@@ -328,7 +333,7 @@
       "field_intervention": "Einsatz",
       "field_intervention_value": "Austausch des Schaltschranks",
       "btn_download": "Bericht herunterladen (.zip)",
-      "btn_verify": "Authentizität prüfen →"
+      "btn_verify": "So wird geprüft →"
     },
     "flow_mockup": {
       "pipeline_title": "Verkaufspipeline",
@@ -341,7 +346,7 @@
     "badge": "GeoTapp Lösungen",
     "title": "Das richtige Produkt wählen.",
     "subtitle": "Praxisnahe Lösungen für Unternehmen mit Technikern und Außendienstmitarbeitern.",
-    "vat_note": "Alle Preise zzgl. MwSt. Abrechnung gemäß Nutzungsbedingungen.",
+    "vat_note": "Alle Preise zzgl. MwSt. Das Abonnement hat eine Mindestlaufzeit von 12 Monaten, zahlbar jährlich in einer Summe oder in Monatsraten. GeoTapp Verifier, das Werkzeug, mit dem Ihre Kunden die Berichte prüfen, ist kostenlos.",
     "categories": {
       "app": {
         "title": "GeoTapp TimeTracker",
@@ -352,8 +357,9 @@
             "tagline": "Ab",
             "desc": "Anwesenheit, Außendiensttätigkeit und Nachweis der geleisteten Arbeit an einem Ort. Preis pro Nutzer und Jahr.",
             "features": [
-              "Android/iOS App",
-              "GPS-Stempeluhr",
+              "Native App für Android und iOS",
+              "Stempeln mit Standort",
+              "Nachweisfotos",
               "Wochenberichte"
             ],
             "button": "Kalkulator ansehen"
@@ -380,7 +386,7 @@
           {
             "name": "GeoTapp Flow Team",
             "tagline": "Für kleine operative Teams.",
-            "desc": "Koordinieren und verwalten Sie Ihr operatives Team auf einen Blick.",
+            "desc": "Koordinieren und steuern Sie Ihr Einsatzteam, bei jeder Stempelung auf dem neuesten Stand.",
             "features": [
               "5 Flow-Nutzer inklusive",
               "Auftragsverwaltung",
@@ -412,14 +418,14 @@
       "discount_threshold": "Rabattschwelle",
       "cost_per_user": "Durchschnittliche Kosten pro Benutzer",
       "per_month": "/Monat",
-      "standard_rate": "Standardtarif (1–25 @ {price})",
+      "standard_rate": "Standardtarif (1–25 à {price})",
       "mixed_rate": "Mischtarif (Mengenrabatt angewendet)",
-      "annual_total": "Jahresgesamt (+MwSt.)",
+      "annual_total": "Jahresbetrag (zzgl. MwSt.)",
       "annual_billing_note": "Einmalige Jahresabrechnung",
-      "enterprise_plan": "Enterprise-Plan",
-      "enterprise_desc": "Für Teams über 150 Benutzer bieten wir individuelle SLAs und dedizierten Account-Management.",
+      "enterprise_plan": "Über 150 Plätze",
+      "enterprise_desc": "Ab 150 Plätzen wird der Preis individuell vereinbart: Schreiben Sie uns, wir senden Ihnen ein Angebot.",
       "request_quote": "Angebot anfordern",
-      "add_to_cart": "App-Lizenz in den Warenkorb",
+      "add_to_cart": "Plätze in den Warenkorb legen",
       "secure_payment": "Sichere Zahlung über Stripe. MwSt. wird beim Checkout berechnet."
     },
     "simulator": {
@@ -428,11 +434,11 @@
       "one_employee": "1 Mitarbeiter",
       "many_employees": "150+ Mitarbeiter",
       "price_per_user": "Preis pro Benutzer",
-      "annual_total": "Jahresgesamt",
+      "annual_total": "Jahresbetrag",
       "per_month": "/Monat",
       "per_user_annual": "pro Benutzer, Jahresabrechnung",
       "selected_badge": "Ausgewählt",
-      "enterprise_plan": "Enterprise-Plan",
+      "enterprise_plan": "Über 150 Plätze",
       "enterprise_desc": "Für große Organisationen bieten wir maßgeschneiderte Lösungen.",
       "enterprise_cta": "Kontaktieren Sie uns für ein Angebot",
       "company_placeholder": "Firmenname",
@@ -440,10 +446,10 @@
       "email_error_format": "Bitte geben Sie eine gültige E-Mail-Adresse ein (z.B. name@firma.de)",
       "email_error_placeholder": "Bitte geben Sie eine echte Geschäfts-E-Mail ein.",
       "terms_alert": "Um fortzufahren müssen Sie die Nutzungsbedingungen akzeptieren und bestätigen, dass Sie die Datenschutzrichtlinie gelesen haben.",
-      "processing": "Verarbeitung...",
+      "processing": "Wird verarbeitet…",
       "request_info": "Informationen anfordern",
       "buy_now": "Jetzt kaufen",
-      "payment_note": "Sichere Zahlung über Stripe. Jederzeit kündbar.",
+      "payment_note": "Sichere Zahlung über Stripe. Abonnement mit einer Mindestlaufzeit von 12 Monaten.",
       "success_sent": "Anfrage erfolgreich gesendet! Wir werden Sie in Kürze kontaktieren.",
       "error_request": "Fehler beim Senden der Anfrage",
       "plus_vat": "+ MwSt."
@@ -472,7 +478,7 @@
       "notes": "Hinweis: Rabatt gilt für die ersten 12 Monate",
       "employees_unit": "Mitarbeiter",
       "first_year_savings": "im ersten Jahr!",
-      "loading": "Laden...",
+      "loading": "Laden…",
       "modal_title": "E-Mail eingeben",
       "modal_desc": "Wir benötigen Ihre E-Mail, um die Checkout-Sitzung zu erstellen und Ihnen die Quittung zu senden.",
       "email_placeholder": "ihre@email.com",
@@ -483,7 +489,7 @@
     },
     "intro_label": "Einführungspreis 2026",
     "per_year": "/Jahr",
-    "title_gradient": "Nutzer im Büro, plus ein Platz pro Mitarbeiter im Einsatz.",
+    "title_gradient": "Nutzer im Büro, plus ein Platz für jede Person im Einsatz.",
     "or_monthly": "oder",
     "per_month_short": "/Monat",
     "annual_savings": "Jährliche Ersparnis:",
@@ -493,10 +499,10 @@
     "recommended": "Empfohlen"
   },
   "contact": {
-    "title": "Sprechen wir über <span class=\"text-primary\">Ihr Geschäft</span>.",
-    "subtitle": "Sie möchten wissen, ob GeoTapp zu Ihrem Unternehmen passt. Wir antworten konkret.",
-    "guarantee_title": "Antwortgarantie",
-    "guarantee_text": "Durchschnittliche Erstantwort innerhalb von 12 Geschäftsstunden. Keine verlorenen Anfragen.",
+    "title": "Sprechen wir über <span class=\"text-primary\">Ihre Arbeit</span>.",
+    "subtitle": "Möchten Sie wissen, ob GeoTapp zu Ihrem Unternehmen passt? Schreiben Sie uns: Wir antworten konkret.",
+    "guarantee_title": "Antwortzeiten",
+    "guarantee_text": "Erste Antwort im Schnitt innerhalb von 12 Geschäftsstunden. Es antwortet ein Mensch.",
     "form": {
       "name": "Name",
       "first_name": "Vorname",
@@ -504,7 +510,7 @@
       "first_name_placeholder": "Max",
       "last_name_placeholder": "Müller",
       "sector": "Branche",
-      "sector_placeholder": "Wähle deine Branche",
+      "sector_placeholder": "Wählen Sie Ihre Branche",
       "sector_options": [
         {
           "value": "installatori",
@@ -543,11 +549,11 @@
         "Sonstiges"
       ],
       "name_placeholder": "Ihr Name",
-      "email_placeholder": "sie@email.com",
+      "email_placeholder": "name@firma.de",
       "company_placeholder": "Firmenname",
-      "message_placeholder": "Ihre Nachricht...",
+      "message_placeholder": "Ihre Nachricht…",
       "submit": "Nachricht senden",
-      "submitting": "Wird gesendet...",
+      "submitting": "Wird gesendet…",
       "all_required": "* Alle Felder sind erforderlich",
       "reason_placeholder": "Grund auswählen"
     },
@@ -559,25 +565,27 @@
     "hq_label": "Wo wir arbeiten",
     "hq_city": "100% online, Kunden in Italien und der EU",
     "hq_note": "Kein öffentliches Büro: Support und Onboarding aus der Ferne.",
-    "privacy_note": "Mit dem Absenden dieses Formulars stimmen Sie unserer Datenschutzerklärung zu.",
+    "privacy_note": "Mit dem Absenden des Formulars bestätigen Sie, unsere Datenschutzerklärung gelesen zu haben.",
     "map_title": "Wo wir sind - Trenzano (BS), Italien",
     "success": "Nachricht erfolgreich gesendet. Wir melden uns so schnell wie möglich.",
     "error": "Fehler beim Senden. Bitte versuchen Sie es später erneut.",
-    "sending": "Wird gesendet...",
+    "sending": "Wird gesendet…",
     "map_unavailable": "Karte nicht verfügbar",
     "open_maps": "In Google Maps öffnen ↗"
   },
   "login_hub": {
-    "title": "Zugang zu Ihrem <span class=\"text-primary\">Konto</span>.",
-    "subtitle": "Wählen Sie das Produkt, mit dem Sie sich verbinden möchten.",
+    "title": "Anmelden bei <span class=\"text-primary\">GeoTapp</span>.",
+    "subtitle": "Wählen Sie das Produkt: Flow für das Büro, TimeTracker für alle im Außendienst.",
     "flow": {
       "desc": "Einsatzmanagement, Aufträge, Koordination und Berichte.",
       "btn": "In Flow einloggen"
     },
     "timetracker": {
-      "desc": "Anwesenheit, Außendiensttätigkeit und Arbeitsnachweise.",
-      "btn": "In TimeTracker einloggen"
-    }
+      "desc": "Für Mitarbeitende im Außendienst: Die Anmeldung erfolgt in der App, unter Android und iOS.",
+      "btn": "TimeTracker-App herunterladen"
+    },
+    "meta_title": "Anmelden | GeoTapp",
+    "meta_description": "Melden Sie sich im Browser bei GeoTapp Flow an oder laden Sie die TimeTracker-App herunter, um im Außendienst zu stempeln."
   },
   "product_pages": {
     "flow": {
@@ -586,13 +594,13 @@
       "hero_subtitle": "Die operative Zentrale für Kunden, Aufträge, Teams und Verwaltung in einer Umgebung. Flow ist die Plattform, auf der auch TimeTracker basiert.",
       "visual_placeholder": "BEDIENFELD",
       "grid_title": "Operative Funktionen",
-      "grid_subtitle": "Jedes Modul ist auf echte Außendienstkontrolle ausgelegt. Klicken Sie zum Erkunden.",
+      "grid_subtitle": "Jedes Modul hilft, die Arbeit im Außendienst zu organisieren und zu dokumentieren. Klicken Sie für mehr.",
       "sectors": {
         "1": "Aufträge und Kunden",
         "2": "Planung und Ressourcen",
         "3": "Kontrolle und Sichtbarkeit"
       },
-      "cta_title": "Echte Kontrolle über Ihren Außendienst.",
+      "cta_title": "Bringen Sie Ordnung in Ihre Außendienstarbeit.",
       "cta_button": "Preise ansehen",
       "modal": {
         "status": "SYSTEMSTATUS: <span class=\"text-green-600\">BETRIEBSBEREIT</span>",
@@ -604,7 +612,7 @@
         "nexus-core": {
           "name": "Auftragsverwaltung",
           "short": "Technische Einsätze erstellen und verwalten. Aufgaben zuweisen, Fortschritte überwachen und alles auftragsbezogen verfolgen.",
-          "full": "### Zentrale Auftragskontrolle.\n\nJeder Einsatz beginnt als strukturierter Auftrag.\n**Auftragsverwaltung** gibt Ihnen einen klaren Überblick über alle laufenden Arbeiten.\n\n#### Einsatzverwaltung\n\nAuftrag anlegen, Techniker zuweisen, Standort und Datum festlegen.\nStatus überwachen: Offen, In Bearbeitung, Abgeschlossen.\n\n#### Betriebshistorie\n\nJeder Auftrag hat ein vollständiges Archiv mit Tätigkeiten, Fotobeweisen, Notizen und Zeitstempeln.\nDer Kunde fragt, was gemacht wurde? Die Daten sind da. Immer."
+          "full": "### Alle Aufträge an einem Ort.\n\nJeder Einsatz beginnt als strukturierter Auftrag.\n**Auftragsverwaltung** gibt Ihnen einen klaren Überblick über die gesamte laufende Arbeit.\n\n#### Einsatzverwaltung\n\nEinen Einsatz anlegen, den Techniker zuweisen, Ort und Datum festlegen.\nDen Status verfolgen: Offen, In Bearbeitung, Abgeschlossen.\n\n#### Betriebshistorie\n\nJeder Auftrag hat ein vollständiges Archiv mit Tätigkeiten, Nachweisfotos, Notizen und Stempelungen.\nDer Kunde fragt, was gemacht wurde? Sie haben die Daten."
         },
         "titan-flow": {
           "name": "Aufgabenzuweisung",
@@ -623,38 +631,39 @@
         },
         "supply-command": {
           "name": "Ressourcenverwaltung",
-          "short": "Materialien, Ausrüstung und operative Ressourcen für jeden Außeneinsatz kontrollieren. Keine Überraschungen.",
-          "full": "### Kein Einsatz ohne Ressourcen.\n\nEinen Techniker ohne das richtige Material ins Feld zu schicken ist ein kostspieliger Fehler.\n**Ressourcenverwaltung** verhindert operative Überraschungen.\n\n#### Materialien pro Auftrag\n\nBenötigte Ressourcen mit jedem Auftrag verknüpfen.\nDer Manager sieht im Voraus, was wann benötigt wird.\n\n#### Lieferanten und Beschaffung\n\nKontaktdaten und Konditionen Ihrer Stammlieferanten speichern.\nBeschaffungszeit reduzieren und Kosten kontrollieren."
+          "short": "Halten Sie Katalog, Lieferanten und Materialien mit Ihren Aufträgen verknüpft, damit der Techniker mit dem losfährt, was gebraucht wird.",
+          "full": "### Kein Einsatz ohne die nötigen Ressourcen.\n\nEinen Techniker ohne das richtige Material loszuschicken ist ein teurer Fehler.\n**Ressourcenverwaltung** vermeidet Überraschungen im Betrieb.\n\n#### Katalog und Aufträge\n\nFühren Sie den Produktkatalog in Flow und verknüpfen Sie ihn mit Angeboten und Aufträgen.\nDie Leitung sieht im Voraus, was wann gebraucht wird.\n\n#### Lieferanten\n\nSpeichern Sie Kontakte und Konditionen Ihrer Stammlieferanten.\nVerkürzen Sie die Beschaffungszeiten und behalten Sie die Kosten im Griff."
         },
         "the-architect": {
           "name": "Arbeitsplanung",
           "short": "Arbeit in Phasen, Aufgaben und Fristen strukturieren. Projekte ohne Tabellen oder Messenger-Nachrichten unter Kontrolle halten.",
-          "full": "### Arbeit strukturieren. Fortschritt kontrollieren.\n\nKomplexe Aufträge erfordern Struktur.\n**Arbeitsplanung** schafft operative Ordnung.\n\n#### Phasen und Fristen\n\nKomplexe Einsätze in operative Phasen mit klaren Fristen strukturieren.\nVerantwortlichkeiten jedem Teammitglied zuweisen.\n\n#### Fortschrittsübersicht\n\nFortschritt auf einen Blick sehen.\nImmer wissen, was erledigt wurde und was noch offen ist.\nHandeln, bevor eine Verzögerung zum Kundenproblem wird."
+          "full": "### Arbeit strukturieren. Fortschritt im Blick.\n\nKomplexe Arbeiten brauchen Struktur.\n**Arbeitsplanung** bringt Ordnung in den Ablauf.\n\n#### Phasen und Fristen\n\nGliedern Sie jeden komplexen Einsatz in Arbeitsphasen mit klaren Fristen.\nWeisen Sie jedem Teammitglied Verantwortung zu.\n\n#### Fortschrittskontrolle\n\nSehen Sie den Fortschritt, Schritt für Schritt aktualisiert.\nSie wissen immer, was erledigt ist und was offen bleibt.\nGreifen Sie ein, bevor aus einer Verzögerung ein Kundenproblem wird."
         },
         "the-auditor": {
           "name": "Einsatzdokumentation",
-          "short": "Fotodokumentation, operative Notizen und unterschriebene Dokumente für jeden Einsatz sammeln. Geleistete Arbeit bleibt prüfbar.",
-          "full": "### Echter Nachweis für jeden Einsatz.\n\nOhne Dokumentation ist geleistete Arbeit anfechtbar.\n**Einsatzdokumentation** macht jeden Auftrag prüfbar.\n\n#### Fotodokumentation\n\nTechniker machen Fotos direkt über GeoTapp TimeTracker im Außendienst.\nBilder werden automatisch mit Zeitstempel und Standort mit dem Auftrag verknüpft.\n\n#### Digitale Kundenunterschrift\n\nDer Kunde kann den Arbeitsbericht direkt auf dem Bildschirm des Technikers unterschreiben.\nDie digitale Unterschrift ist im Bericht enthalten und gilt als Beweis der erbrachten Leistung."
+          "short": "Sammeln Sie Nachweisfotos, Einsatznotizen und Dokumente zu jedem Einsatz. Die geleistete Arbeit bleibt nachprüfbar.",
+          "full": "### Nachweise für jeden Einsatz.\n\nOhne Dokumentation ist die geleistete Arbeit anfechtbar.\n**Einsatzdokumentation** macht jeden Einsatz nachprüfbar.\n\n#### Nachweisfotos\n\nDie Techniker machen ihre Fotos direkt im Außendienst mit GeoTapp TimeTracker.\nDie Bilder werden automatisch mit Uhrzeit und Standort dem Auftrag zugeordnet.\n\n#### Versiegelter Bericht\n\nAm Ende des Einsatzes erzeugt das System einen digital versiegelten Bericht: Jede spätere Änderung bleibt erkennbar.\nDer Kunde kann ihn selbst prüfen, ohne sich bei GeoTapp anzumelden."
         },
         "the-uplink": {
           "name": "Außendienst-Büro-Verbindung",
-          "short": "Von TimeTracker erfasste Daten gelangen in Echtzeit in Flow. Außendienst und Büro arbeiten mit denselben operativen Daten.",
-          "full": "### Büro und Außendienst, endlich verbunden.\n\nDie Trennung zwischen Außendienst und Büro erzeugt vermeidbare Fehler, Verzögerungen und Streitigkeiten.\n**Außendienst-Büro-Verbindung** schließt die Lücke.\n\n#### Echtzeitsynchronisation\n\nJedes Ein-/Ausstempeln, jedes Foto und jede Notiz in TimeTracker gelangt sofort in Flow.\nDer Manager sieht es sofort, ohne den Techniker anrufen zu müssen.\n\n#### Zuverlässige Historie\n\nAlles, was der Techniker im Außendienst erfasst, wird archiviert und mit dem Auftrag verknüpft.\nKeine Daten gehen verloren. Keine Information fehlt, wenn es Zeit ist, Bericht zu erstatten."
+          "short": "Die von TimeTracker erfassten Daten kommen in Flow an, sobald sie aufgezeichnet sind. Außendienst und Büro arbeiten mit denselben Betriebsdaten.",
+          "full": "### Büro und Außendienst, endlich verbunden.\n\nDie Distanz zwischen Außendienst und Büro verursacht vermeidbare Fehler, Verzögerungen und Beanstandungen.\n**Verbindung Außendienst-Büro** verkürzt sie.\n\n#### Sofortige Übermittlung\n\nJede Stempelung, jedes Foto und jede Notiz, die in TimeTracker erfasst wird, kommt in Flow an, sobald sie gesendet wird.\nDie Leitung sieht die Daten, ohne den Techniker anrufen zu müssen.\n\n#### Verlässliche Historie\n\nAlles, was der Techniker im Außendienst erfasst, bleibt archiviert und mit dem Auftrag verknüpft.\nWenn es ans Berichten geht, sind die Daten schon da."
         },
         "the-oracle": {
           "name": "Operative Sichtbarkeit",
-          "short": "Betriebsdashboard ohne Verzögerung. Immer wissen, wie viele Einsätze heute offen, in Bearbeitung oder abgeschlossen sind.",
-          "full": "### Operative Daten, keine Annahmen.\n\nEntscheidungen ohne verlässliche Daten zu treffen ist gefährlich.\n**Operative Sichtbarkeit** wandelt Außendienstdaten in konkrete Informationen um.\n\n#### Betriebsdashboard\n\nAuf einen Blick sehen:\n- Offene und laufende Einsätze\n- Aktive Techniker\n- Heute und diese Woche abgeschlossene Einsätze\n\n#### Periodische Berichte\n\nAutomatisierte Aktivitätszusammenfassungen erhalten.\nZeiträume vergleichen, Engpässe erkennen und Abläufe optimieren."
+          "short": "Betriebsdashboard, bei jedem Einsatz aktualisiert. Sie wissen immer, wie viele Einsätze offen, in Bearbeitung oder heute abgeschlossen sind.",
+          "full": "### Betriebsdaten statt Vermutungen.\n\nOhne verlässliche Daten zu entscheiden ist gefährlich.\n**Betriebliche Übersicht** macht aus den Daten des Außendienstes konkrete Informationen.\n\n#### Betriebsdashboard\n\nSie sehen, bei jedem Einsatz aktualisiert:\n- Offene und laufende Einsätze\n- Aktive Techniker\n- Heute und diese Woche abgeschlossene Einsätze\n\n#### Periodische Berichte\n\nSie erhalten automatisch eine Zusammenfassung der Tätigkeiten.\nVergleichen Sie Zeiträume, erkennen Sie Engpässe und optimieren Sie die Abläufe."
         }
-      }
+      },
+      "label_open": "Mehr erfahren"
     },
     "app": {
       "hero_badge": "GeoTapp TimeTracker - Außendienst-App",
-      "hero_title": "GeoTapp TimeTracker.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-slate-900\">Der Außendienst in Ihrer Tasche.</span>",
-      "hero_subtitle": "Die mobile App für Techniker zur Erfassung von Tätigkeiten, Sammlung von Nachweisen und Aufrechterhaltung des operativen Fadens direkt aus dem Außendienst. Verfügbar für Android und iOS.",
+      "hero_title": "GeoTapp TimeTracker.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-slate-900\">Die App für alle im Außendienst.</span>",
+      "hero_subtitle": "Die App, mit der Techniker stempeln, Nachweisfotos aufnehmen und direkt im Außendienst mit dem Büro verbunden bleiben. Verfügbar für Android und iOS.",
       "visual_placeholder": "AUSSENDIENST-INTERFACE",
       "grid_title": "Werkzeuge für die Außenarbeit",
-      "grid_subtitle": "Jede Funktion ist für Menschen konzipiert, die außerhalb des Büros arbeiten und keine Zeit zu verlieren haben. Klicken Sie zum Erkunden.",
+      "grid_subtitle": "Jede Funktion ist für Menschen gemacht, die außerhalb des Büros arbeiten und keine Zeit zu verlieren haben. Klicken Sie für mehr.",
       "sectors": {
         "1": "Kernfunktionen",
         "2": "Logistik und Kommunikation",
@@ -671,18 +680,18 @@
       "systems": {
         "timelock-alpha": {
           "name": "GPS-Zeiterfassung",
-          "short": "Ein- und Ausstempeln verknüpft mit GPS-Position und präzisem Zeitstempel. Jede Arbeitssitzung wird zu einem prüfbaren operativen Ereignis.",
-          "full": "### Zeit ist prüfbar.\n\nZeitstempel ohne Verifikation erzeugen Streitigkeiten.\n**GPS-Zeiterfassung** macht jede Arbeitssitzung zu einem zuverlässigen, verteidigbaren Datensatz.\n\n#### Geolokaliertes Ein- und Ausstempeln\n\nDer Techniker erfasst Beginn und Ende des Außeneinsatzes.\nStandort, Adresse und Zeit werden automatisch registriert.\n\n#### Versiegelte Historie\n\nJede Sitzung ist ein prüfbarer Datensatz: Startzeit, Endzeit, Position, Dauer und zugehöriger Auftrag.\nDer Kunde fragt, wann Sie ankamen? Die Daten sind da, immer."
+          "short": "Beginn, Pausen und Ende erfassen Standort und genaue Uhrzeit im Moment des Stempelns. Jede Schicht wird zu einem Datensatz, den der Kunde prüfen kann.",
+          "full": "### Die richtige Zeit am richtigen Ort.\n\nStempelungen ohne Gegenprüfung führen zu Beanstandungen.\n**Stempeln mit Standort** macht jede Schicht zu einem verlässlichen Datensatz.\n\n#### Beginn, Pausen und Ende\n\nDer Techniker stempelt vom Telefon aus.\nStandort, Adresse und Uhrzeit werden in diesem Moment erfasst, und nur dann: Zwischen zwei Stempelungen wird nichts automatisch aufgezeichnet.\n\n#### Versiegelte Historie\n\nJede Schicht ist ein Datensatz: Beginn, Ende, Pausen, Standort, Dauer und Auftrag.\nIm Bericht, den der Kunde erhält, ist sie versiegelt: Jede spätere Änderung ist erkennbar."
         },
         "event-horizon": {
           "name": "Schichtplanung",
           "short": "Schichten und Personalverfügbarkeit verwalten. Wochen- und Monatsansichten für Koordination ohne Verwirrung oder Überschneidungen.",
-          "full": "### Keine Schichtkonflikte.\n\nMobiles Personal zu organisieren erfordert Klarheit.\n**Schichtplanung** gibt dem Manager eine präzise, aktuelle Übersicht.\n\n#### Kalenderansicht\n\nSehen, wer wann arbeitet.\nFehlzeiten, Urlaub und Überschneidungen erkennen, bevor sie zu operativen Problemen werden.\n\n#### Aktuelle Verfügbarkeit\n\nMitarbeiter bestätigen Anwesenheit oder melden Abwesenheiten direkt aus der App.\nDer Manager sieht Lücken im Dienstplan, bevor neue Aufträge vergeben werden."
+          "full": "### Keine Schichtkonflikte.\n\nMobiles Personal zu organisieren verlangt Klarheit.\n**Schichtplanung** gibt der Leitung einen genauen, aktuellen Überblick.\n\n#### Kalenderansicht\n\nSehen Sie, wer wann arbeitet.\nErkennen Sie Abwesenheiten, Feiertage und Überschneidungen, bevor sie zu Problemen im Ablauf werden.\n\n#### Immer aktuelle Verfügbarkeit\n\nDie Mitarbeitenden bestätigen ihre Anwesenheit oder melden Abwesenheiten direkt in der App.\nDie Leitung sieht die Lücken im Plan, bevor sie neue Aufträge vergibt."
         },
         "unit-matrix": {
           "name": "Mitarbeiterregister",
-          "short": "Ein vollständiges Register Ihrer Mitarbeiter führen: Rollen, Kontakte, Zertifizierungen und Plattformzugang.",
-          "full": "### Ihr Team kennen.\n\nJeder Mitarbeiter ist eine wichtige operative Ressource.\n**Mitarbeiterregister** zentralisiert alle wichtigen Informationen.\n\n#### Zertifizierungsverwaltung\n\nAuf einen Blick sehen, wer die erforderlichen Qualifikationen für einen bestimmten Einsatz oder Standort besitzt.\n\n#### Schnelles Onboarding\n\nEinen neuen Techniker hinzufügen ist einfach.\nEinladungslink senden: innerhalb von Minuten ist er auf GeoTapp TimeTracker einsatzbereit."
+          "short": "Halten Sie Ihre Mitarbeitenden im Griff: Rollen, Kontakte und Plattformzugänge, und wer neu dazukommt, ist in wenigen Minuten startklar.",
+          "full": "### Kennen Sie Ihr Team.\n\nJede Mitarbeiterin und jeder Mitarbeiter ist eine wichtige Ressource.\n**Mitarbeiterverzeichnis** hält die nötigen Informationen zusammen.\n\n#### Rollen und Zugänge\n\nLegen Sie fest, wer was sieht: Administrator, Leitung, Mitarbeiter.\nJede Person greift nur auf das zu, was ihre Rolle vorsieht.\n\n#### Schneller Einstieg\n\nEinen neuen Techniker hinzuzufügen ist einfach.\nSie schicken ihm einen Einladungscode: Er unterschreibt die GPS-Information und stempelt nach wenigen Minuten mit GeoTapp TimeTracker."
         },
         "sector-grid": {
           "name": "Standorte und Baustellen",
@@ -691,8 +700,8 @@
         },
         "energy-logistics": {
           "name": "Fahrzeug- und Spesenmanagement",
-          "short": "Firmenfahrzeugnutzung, Kraftstoffverbrauch und Reisespesen für Außendienstmitarbeiter nachverfolgen.",
-          "full": "### Jede Fahrt dokumentiert.\n\nReisespesen sind ein kritischer Posten für jedes Unternehmen mit mobilem Personal.\n**Fahrzeugverwaltung** überwacht jeden anfallenden Kostenpunkt.\n\n#### Fahrzeugnutzung\n\nEinem Mitarbeiter vorübergehend ein Fahrzeug für einen Einsatz zuweisen.\nImmer wissen, wer welches Fahrzeug für welchen Auftrag verwendet.\n\n#### Kraftstoffkosten\n\nMitarbeiter erfassen Tankvorgänge direkt aus der App mit Quittungsfoto und Betrag.\nAlles archiviert, alles mit dem Auftrag verknüpft."
+          "short": "Erfassen Sie die Nutzung des Firmenwagens während der Schicht, Tankvorgänge und Reisekosten, mit Foto des Belegs.",
+          "full": "### Jede Ausgabe dokumentiert.\n\nReisekosten sind für jedes Unternehmen mit mobilem Personal ein heikles Kapitel.\n**Fahrzeug- und Spesenverwaltung** bringt sie in Ordnung.\n\n#### Fahrzeugnutzung\n\nSie weisen einem Mitarbeiter für einen Einsatz ein Fahrzeug zu, und der Mitarbeiter gibt in der App an, ob er in der Schicht den Wagen nutzt.\nSie wissen, wer welches Fahrzeug für welchen Auftrag genutzt hat.\n\n#### Kraftstoffkosten\n\nDer Mitarbeiter erfasst den Tankvorgang in der App, mit Foto des Belegs und Betrag.\nDas Büro genehmigt die Erstattung, und alles bleibt mit dem Auftrag verknüpft."
         },
         "neural-link": {
           "name": "Operative Kommunikation",
@@ -701,20 +710,21 @@
         },
         "payroll-bridge": {
           "name": "Anwesenheitsexport",
-          "short": "Monatliche Anwesenheiten in Formaten exportieren, die mit führenden Lohnbuchhaltungssystemen kompatibel sind. Weniger manuelle Arbeit, weniger Fehler.",
-          "full": "### Lohnbuchhaltung ohne Kopfschmerzen.\n\nMonatsende muss kein administrativer Albtraum sein.\n**Anwesenheitsexport** verbindet Außendienstbetrieb mit der Personalverwaltung.\n\n#### Multi-Format\n\nAnwesenheitsdateien für den Import in führende Lohnbuchhaltungssysteme erstellen (DATEV, Lexware, Personio, LODAS).\n\n#### Steuerberaterzugang\n\nIhrem Lohnbüro eingeschränkten Zugang gewähren.\nEs lädt die benötigten Daten selbständig herunter, ohne Sie jeden Monatsabschluss anrufen zu müssen."
+          "short": "Exportieren Sie die Anwesenheiten des Monats als Excel oder CSV, bereit für Ihre Lohnbuchhaltung. Weniger Handarbeit, weniger Fehler.",
+          "full": "### Lohnabrechnung ohne Kopfschmerzen.\n\nDer Monatsabschluss muss kein Albtraum der Verwaltung sein.\n**Anwesenheitsexport** verbindet die Arbeit im Außendienst mit der Personalverwaltung.\n\n#### Excel und CSV\n\nStunden, Überstunden, Zuschläge und Abwesenheiten kommen als Excel- oder CSV-Datei, fertig zur Weitergabe an Ihre Lohnbuchhaltung.\n\n#### Zugang für den Berater\n\nGeben Sie Ihrem Lohnbüro einen eigenen Zugang, das Steuerberaterportal.\nEs lädt die Daten, die es braucht, selbstständig herunter, ohne dass Sie jeden Monatsabschluss anrufen müssen."
         },
         "data-core": {
           "name": "Wochenberichte",
           "short": "Detaillierte Berichte über geleistete Stunden pro Auftrag und Mitarbeiter. Zuverlässige Daten für interne Kontrolle und Abrechnung.",
-          "full": "### Daten lügen nicht.\n\nEntscheidungen auf Fakten statt auf Gefühl basieren.\n**Wochenberichte** extrahiert Wert aus dem täglichen Betrieb.\n\n#### Detaillierte Berichte\n\nJede Woche ein vollständiges Bild: Wer hat wo, an welchem Auftrag und wie lange gearbeitet.\n\n#### Vollständige Transparenz\n\nMitarbeiter und Manager konsultieren denselben Monatsbericht.\nGezählte Stunden sind für alle identisch.\nWeniger Streit am Monatsende."
+          "full": "### Entscheiden Sie auf Basis von Fakten.\n\nEntscheiden Sie auf Grundlage von Daten, nicht von Eindrücken.\n**Wochenberichte** ordnen die Arbeit jedes Tages.\n\n#### Detaillierte Berichte\n\nJede Woche ein vollständiges Bild: wer gearbeitet hat, wo, für welchen Auftrag und wie viele Stunden.\n\n#### Dieselben Zahlen für alle\n\nMitarbeitende und Leitung sehen denselben Bericht.\nDie gezählten Stunden sind für alle gleich, und am Monatsende gibt es deutlich weniger zu diskutieren."
         },
         "identity-forge": {
           "name": "Marken-App",
           "short": "Ihr Logo hochladen und Unternehmensfarben wählen. Ihre Mitarbeiter nutzen eine App, die Ihre Markenidentität widerspiegelt.",
           "full": "### Ihr Unternehmen, Ihre App.\n\nKeine generische App verwenden.\nLassen Sie Ihre Mitarbeiter Teil IHRES Unternehmens fühlen, mit einem konsistenten Markenerlebnis.\n\n#### Firmenlogo\n\nIhr Logo prominent auf dem Login-Bildschirm und dem Hauptdashboard.\n\n#### Unternehmensfarben\n\nDas Farbthema wählen, das zu Ihrem Unternehmensauftritt passt.\nProfessionell, konsistent, wiedererkennbar."
         }
-      }
+      },
+      "label_open": "Mehr erfahren"
     }
   },
   "cart": {
@@ -733,7 +743,7 @@
     "email_error_empty": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
     "email_error_invalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein (z.B. name@unternehmen.com).",
     "terms_alert": "Um fortzufahren müssen Sie die Nutzungsbedingungen akzeptieren und bestätigen, dass Sie die Datenschutzerklärung gelesen haben.",
-    "checkout_loading": "Verarbeitung...",
+    "checkout_loading": "Wird verarbeitet…",
     "checkout_button": "Zur Kasse",
     "checkout_error": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.",
     "policy_terms_prefix": "Ich habe die",
@@ -745,7 +755,10 @@
   },
   "guida": {
     "page_title": "Benutzerhandbuch",
-    "download_pdf": "Herunterladen / Als PDF drucken"
+    "download_pdf": "Herunterladen / Als PDF drucken",
+    "box_note": "Hinweis",
+    "box_warning": "Achtung",
+    "box_tip": "Tipp"
   },
   "trial": {
     "page_title": "14 Tage kostenlos. Keine Kreditkarte.",
@@ -761,24 +774,24 @@
     "form_fullname": "Vollständiger Name",
     "form_fullname_placeholder": "Z.B. Mario Rossi",
     "form_plan": "GeoTapp Flow-Tarif",
-    "form_plan_note": "Die Nutzeranzahl des Tarifs bezieht sich auf GeoTapp Flow (Büroverwaltung / CRM). GeoTapp Timetracker-Lizenzen für Außendienstmitarbeiter sind ein separates Abonnement, mit einer im gewählten Tarif enthaltenen Höchstanzahl.",
+    "form_plan_note": "Die Nutzerzahl des Tarifs bezieht sich auf GeoTapp Flow (Büroverwaltung / CRM). Die Lizenzen für GeoTapp TimeTracker für Mitarbeitende im Außendienst sind ein separates Abonnement, mit einer je nach Tarif enthaltenen Höchstzahl.",
     "plan_solo": "Solo, 1 Flow-Nutzer",
     "plan_team": "Team, bis 5 Flow-Nutzer",
     "plan_business": "Business, unbegrenzte Flow-Nutzer",
-    "form_seats": "Timetracker-Lizenzen (optional)",
+    "form_seats": "TimeTracker-Lizenzen (optional)",
     "form_seats_hint": "Separates Abonnement für Außendienstmitarbeiter (mobile App). Im Tarif enthaltenes Limit: Solo max. 2, Team max. 5, Business unbegrenzt. Lizenzen können nach der Aktivierung angepasst werden.",
     "form_submit": "Kostenlos testen",
     "form_submit_simple": "Kostenlos starten",
     "form_response_time": "Sie erhalten die Willkommens-E-Mail in wenigen Augenblicken",
-    "form_submitting": "Wird eingerichtet...",
+    "form_submitting": "Wird eingerichtet…",
     "form_privacy": "Ihre Daten werden gemäß unserer",
     "form_privacy_link": "Datenschutzerklärung",
-    "form_usage_note": "Während der Testphase erfassen wir Nutzungsdaten der App (aufgerufene Bildschirme, genutzte Funktionen), um dir den Start zu erleichtern und den Dienst zu verbessern. Sie werden am Ende der Testphase gelöscht; wir behalten nur aggregierte, anonyme Statistiken.",
+    "form_usage_note": "Während der Testphase erfassen wir Nutzungsdaten der App (aufgerufene Bildschirme, genutzte Funktionen), um Ihnen den Start zu erleichtern und den Dienst zu verbessern. Sie werden am Ende der Testphase gelöscht; wir behalten nur aggregierte, anonyme Statistiken.",
     "form_email_hint": "Geschäfts-E-Mail empfohlen. Persönliche (Gmail, Outlook usw.) geht auch.",
     "success_title": "E-Mail prüfen!",
     "success_desc": "Wir haben die Zugangsdaten geschickt an ",
-    "success_desc2": "Darin steht ein temporäres Passwort: beim ersten Login wählst du dein eigenes.",
-    "success_spam": "Nicht im Posteingang? Sieh im Spam- oder Werbeordner nach.",
+    "success_desc2": "Darin steht ein temporäres Passwort: Beim ersten Login wählen Sie Ihr eigenes.",
+    "success_spam": "Nicht im Posteingang? Sehen Sie im Spam- oder Werbeordner nach.",
     "error_message": "Aktivierungsfehler. Bitte erneut versuchen oder an info@geotapp.com schreiben.",
     "error_captcha": "Die Bot-Prüfung ist nicht durchgelaufen. Bitte versuchen Sie es erneut, sie erneuert sich von selbst. Wenn es weiterhin nicht klappt, schreiben Sie an support@geotapp.com und wir richten Ihren Zugang ein.",
     "error_captcha_pending": "Es fehlt nur noch die Prüfung darüber: Bitte das Kästchen „Ich bin kein Roboter“ anklicken und erneut senden.",
@@ -794,8 +807,8 @@
     "benefits_title": "Was enthalten ist",
     "benefits": [
       {
-        "title": "Der größte Plan, keine Demo",
-        "desc": "Sie testen GeoTapp Flow in vollem Umfang: alle Module sind enthalten, keines kostet extra, dazu unbegrenzte Büro-Nutzer und 50 TimeTracker-Plätze, sofort aktiv. Separat bezahlt werden nur die Stempel-Plätze, draußen mit TimeTracker und im Büro in Flow."
+        "title": "Der größte Tarif, keine abgespeckte Version",
+        "desc": "Sie testen GeoTapp Flow in vollem Umfang: alle Module, unbegrenzt viele Büronutzer und 50 TimeTracker-Plätze, sofort aktiv. Mit dem Abonnement sind die Flow-Module im Tarif enthalten; separat bezahlt werden nur die Stempelplätze, im Außendienst mit TimeTracker und im Büro in Flow."
       },
       {
         "title": "Keine Kreditkarte nötig",
@@ -817,7 +830,7 @@
       },
       {
         "q": "Kann ich mein Team einladen?",
-        "a": "Ja: Während des Trials können Sie bis zu 50 Außendienst-Mitarbeiter über das Lizenz-Panel aktivieren. Brauchen Sie mehr? Schreiben Sie an support@geotapp.com, wir erhöhen das Limit."
+        "a": "Ja: Während der Testphase können Sie im Lizenzbereich bis zu 50 Mitarbeitende im Außendienst aktivieren. Brauchen Sie mehr? Schreiben Sie an support@geotapp.com, wir erhöhen das Limit."
       },
       {
         "q": "Wie lange dauert der Einstieg?",
@@ -829,7 +842,9 @@
     "trust_gdpr": "Keine dauerhafte Ortung",
     "trust_offline": "Offline-Prüfer",
     "form_field_employees": "Wie viele Personen arbeiten im Außendienst?",
-    "form_field_employees_hint": "Freiwillig. So schreiben wir Ihnen zu Ihrem Fall, nicht zu einem allgemeinen."
+    "form_field_employees_hint": "Freiwillig. So schreiben wir Ihnen zu Ihrem Fall, nicht zu einem allgemeinen.",
+    "trust_gps": "Standort nur beim Stempeln",
+    "trust_no_card": "Keine Kreditkarte erforderlich"
   },
   "demo": {
     "page_title": "Buchen Sie Ihre persönliche Demo",
@@ -844,11 +859,11 @@
     "cosa_vedrai": [
       {
         "title": "GPS-Zeiterfassung in Aktion",
-        "desc": "Wie der Techniker sich über die mobile App einbucht und wie das Büro den verifizierten Standort sieht, ohne Dauerüberwachung."
+        "desc": "Wie der Techniker in der mobilen App stempelt und wie das Büro den beim Stempeln erfassten Standort sieht, ohne durchgehende Ortung."
       },
       {
         "title": "Verifizierbare Berichte",
-        "desc": "Wie jeder Einsatz einen Bericht mit Fotobeweis, digitaler Signatur und versiegeltem Hash erzeugt, den Sie dem Kunden zeigen können."
+        "desc": "Wie jeder Einsatz einen Bericht mit Nachweisfotos, kryptografischem Siegel und SHA-256-Fingerabdrücken erzeugt, den Sie dem Kunden zeigen können."
       },
       {
         "title": "Teamverwaltung über Flow",
@@ -883,16 +898,16 @@
     "form_phone": "Telefon (optional)",
     "form_phone_placeholder": "+49 151 12345678",
     "form_submit": "Kostenlose Demo buchen",
-    "form_submitting": "Wird gesendet...",
+    "form_submitting": "Wird gesendet…",
     "success_title": "Anfrage erhalten!",
     "success_desc": "Wir werden Sie innerhalb von 1 Werktag kontaktieren, um die Demo zu vereinbaren.",
     "error_message": "Fehler beim Senden. Bitte versuchen Sie es später erneut.",
     "badge": "Demo GeoTapp, 30 Minuten",
-    "page_subtitle": "Wir zeigen Ihnen, wie GeoTapp Streitigkeiten über Arbeitsstunden eliminiert und jeden Einsatz dokumentiert und überprüfbar macht.",
+    "page_subtitle": "Wir zeigen Ihnen, wie GeoTapp jeden Einsatz dokumentiert und nachprüfbar macht, damit es weniger Streit über Stunden gibt.",
     "form_title": "Ihre Daten",
     "urgent_contact": "Dringende Fragen? Schreiben Sie an",
     "no_spam": "Kein Spam. Ihre Daten werden gemäß unserer Datenschutzerklärung behandelt.",
-    "trust_gps": "GPS-verifizierte Zeiterfassung",
+    "trust_gps": "Stempeln mit Standort",
     "trust_offline": "Offline-Prüfer",
     "trust_response": "Antwort innerhalb von 1 Tag",
     "what_youll_see": "Was Sie in der Demo sehen werden",
@@ -904,15 +919,15 @@
     "subtitle": "Wählen Sie die Version, die Ihren Anforderungen entspricht.",
     "demo_report_badge": "Echtes Beispiel",
     "demo_report_title": "Versiegelter Einsatzbericht",
-    "demo_report_desc": "Laden Sie einen echten von GeoTapp generierten Bericht herunter. Er enthält verifizierten GPS, Fotobeweise, Operator-Hash-Kette und kryptografische Siegelung.",
+    "demo_report_desc": "Laden Sie einen echten, von GeoTapp erzeugten Bericht herunter. Er enthält den beim Stempeln erfassten Standort, die Nachweisfotos und das kryptografische Siegel. Direkt auf geotapp.com können Sie prüfen, dass er nicht verändert wurde.",
     "demo_report_btn_download": "Beispielbericht herunterladen (.zip)",
-    "demo_report_btn_verify": "Authentizität prüfen",
+    "demo_report_btn_verify": "So wird geprüft",
     "demo_report_field_operator": "Techniker",
     "demo_report_field_type": "Einsatztyp",
     "windows_title": "GeoTapp für Windows",
     "windows_desc": "Die vollständige Desktop-Anwendung für die Betriebsverwaltung. Ideal für Administration und vollständige Kontrolle.",
     "windows_features": [
-      "Vollständige Flottenverw altung",
+      "Vollständige Flottenverwaltung",
       "Schichtplanung",
       "Gehaltsexport",
       "Desktop-Benachrichtigungen"
@@ -935,27 +950,27 @@
     "hero_desc": "Das Produkt entstand aus einem Blatt Papier mit den Stunden eines Monats darauf und aus Summen, die nie aufgingen.",
     "story": [
       "Es gibt eine Arbeit, für die noch nie jemand bezahlt wurde, und das ist das Aufschreiben der eigenen Arbeitsstunden. Datum, Beginn, Ende, Summe. Jeden Tag, und am Monatsende geht die Aufstellung an den Chef.",
-      "<strong>Michele Angelo Petraroli</strong> arbeitete im Veranstaltungsschutz, als Angestellter, und er füllte dieses Blatt so aus, wie es alle ausfüllen, nämlich schlecht. Die Summen stimmten fast nie, zum Teil auch durch eigene Schuld, denn es ist menschlich, langweilige Dinge aufzuschieben und sie eine Woche später aus dem Gedächtnis zu rekonstruieren. Die Kollegen, die ihre Stunden gar nicht erst schickten, arbeiteten offensichtlich, weil sie reich waren und es aus Leidenschaft taten.",
-      "Er suchte eine App, die ihm diese Plage abnimmt. Sie waren alle gleich, und jede verlangte genau das, was er ohnehin von Hand machte, Datum, Beginn, Ende, Summe. Gleicher Aufwand, hübschere Knöpfe.",
-      "Also entwickelte er sie im Urlaub selbst. Eine Webseite und zwei Handgriffe, drücken beim Anfangen und drücken beim Aufhören, und der Rest landete geordnet in einem Archiv, fertig zum Verschicken am Monatsende.",
-      "Dann kam der Gedanke, der alles veränderte, wenn es mir hilft, hilft es auch den Kollegen. Und wenn es dem Chef hilft, muss der Ablauf umgedreht werden, denn nicht er sollte den Leuten hinterherlaufen, sondern die Stunden sollten jeden Tag von allein bei ihm ankommen.",
-      "Von dort wuchs das Werkzeug in nur eine Richtung. Zuerst die Ortung innerhalb der gesetzlichen Grenzen, ausgelesen beim Beginn und beim Ende der Schicht und nie durchgehend. Dann die automatische Bestätigung der geleisteten Arbeit, denn das eigentliche Problem war nie das Zählen der Stunden, sondern der Nachweis, wenn jemand sie anzweifelte.",
+      "<strong>Michele Angelo Petraroli</strong> arbeitete als Angestellter im Sicherheitsdienst bei Veranstaltungen, und dieses Blatt füllte er aus, wie es alle ausfüllen, nämlich schlecht. Die Summen stimmten fast nie, zum Teil auch durch eigene Schuld, denn es ist menschlich, langweilige Dinge aufzuschieben und sie eine Woche später aus dem Gedächtnis zu rekonstruieren.",
+      "Er suchte eine App, die ihm diese Plage abnimmt. Sie waren alle gleich, und jede verlangte genau das, was er ohnehin von Hand tat: Datum, Beginn, Ende, Summe. Gleicher Aufwand, hübschere Knöpfe.",
+      "Also baute er sie sich im Urlaub selbst. Eine Webseite und zwei Handgriffe: drücken, wenn man anfängt, und drücken, wenn man aufhört, und der Rest landete geordnet in einer Datei, fertig zum Verschicken am Monatsende.",
+      "Dann kam der Gedanke, der alles veränderte: Wenn es mir hilft, hilft es auch den Kollegen. Und wenn es dem Chef hilft, muss der Ablauf umgedreht werden, denn nicht er soll den Leuten hinterherlaufen, um die Stunden zu bekommen: Die Stunden sollen jeden Tag von allein bei ihm ankommen.",
+      "Von da an wuchs das Werkzeug in nur eine Richtung. Zuerst die Ortung, so gebaut, dass sie innerhalb der gesetzlichen Grenzen bleibt: Der Standort wird nur erfasst, wenn die Mitarbeiterin oder der Mitarbeiter stempelt (Beginn, Pausen, Ende), und nie durchgehend. Dann der nachprüfbare Nachweis der geleisteten Arbeit, denn das eigentliche Problem war nie das Zählen der Stunden, sondern sie zu belegen, wenn jemand sie anzweifelte.",
       "Ach, und es schreibt sich GeoTapp, mit zwei P. Wenn Ihnen irgendwo eines mit nur einem P begegnet, das sind nicht wir, aber wir nehmen es niemandem übel.",
-      "Der Name hat im Übrigen alles schon drin. Die Ortung, ein Tap, eine App."
+      "Der Name enthält im Übrigen alles: die Ortung, ein Tap, eine App."
     ],
     "values_title": "Unsere Werte",
     "values": [
       {
-        "title": "Klare Mission",
+        "title": "Eine klare Mission",
         "desc": "Jeden Einsatz messbar und nachweisbar machen. Außendienstarbeit verdient dieselben Transparenzwerkzeuge wie ein Büro."
       },
       {
-        "title": "Engagiertes Team",
+        "title": "Ein kleines Team",
         "desc": "Wir sind ein kleines Team, das von dem Problem besessen ist, das wir lösen. Jede Funktion entsteht aus echtem Feedback, nicht aus Marketing-Roadmaps."
       },
       {
-        "title": "Privacy by Design",
-        "desc": "Die Daten werden nicht verkauft, und die Position wird zweimal pro Schicht gelesen, beim Öffnen und beim Schließen. Dazwischen weiß das Werkzeug nicht, wo Sie sind."
+        "title": "Datenschutz von Anfang an",
+        "desc": "Die Daten werden nicht verkauft, und der Standort wird nur erfasst, wenn Sie stempeln: bei Beginn, bei den Pausen, am Ende, dazu das Nachweisfoto, falls Sie eines aufnehmen. Zwischen zwei Stempelungen wird nichts automatisch aufgezeichnet."
       },
       {
         "title": "Made in Italy",
@@ -964,7 +979,7 @@
     ],
     "cta_title": "Auf der anderen Seite sitzt ein Mensch",
     "cta_desc": "Ein kleines Unternehmen, das ein Werkzeug für Firmen mit Teams im Außendienst entwickelt. Wer schreibt, bekommt Antwort von jemandem, der dieses Problem selbst hatte.",
-    "cta_btn": "Schreib uns",
+    "cta_btn": "Schreiben Sie uns",
     "stats": [
       {
         "number": "2024",
@@ -983,18 +998,18 @@
     "founder": {
       "section_label": "Der Gründer",
       "name": "Michele Angelo Petraroli",
-      "role": "Founder & CEO",
-      "bio": "Michele Angelo Petraroli ist Gründer und CEO von GeoTapp, einem italienischen SaaS-Unternehmen, das Außendienst-Management-Software für europäische KMU entwickelt. Aus operativer Erfahrung wusste er, wie Reinigungsunternehmen, Installateure und Sicherheitsdienste Geld verlieren, wenn der Arbeitsnachweis fehlt. 2024 gründete er GeoTapp, um das Problem an der Wurzel zu lösen. Heute unterstützt GeoTapp europäische KMU mit GPS-Erfassung innerhalb der Grenzen der DSGVO, Foto-Nachweisen und digitalen Unterschriften, die jeden Einsatz überprüfbar machen.",
+      "role": "Gründer",
+      "bio": "Michele Angelo Petraroli ist Gründer und Inhaber von GeoTapp, der italienischen Software, die die Arbeit von Außendienstteams in europäischen KMU dokumentiert. Aus eigener Erfahrung in Dienstleistungs-KMU (Reinigung, Installation, Sicherheit) weiß er, wie viel Geld verloren geht, wenn der Nachweis der geleisteten Arbeit fehlt. 2024 gründete er GeoTapp, um das Problem an der Wurzel zu lösen. Heute hilft GeoTapp europäischen KMU, ihre Arbeit zu belegen: Der Standort wird nur beim Stempeln erfasst, dazu Nachweisfotos und versiegelte Berichte, die der Kunde selbst prüft.",
       "expertise_label": "Kompetenzbereiche",
       "expertise": [
-        "Field Service Management",
-        "DSGVO & Mitarbeiter-Geolokalisierung",
-        "Workforce Management",
-        "B2B SaaS",
+        "Führung von Außendienstteams",
+        "DSGVO und Standortdaten von Mitarbeitenden",
+        "Arbeitsorganisation",
+        "Unternehmenssoftware",
         "Europäische KMU"
       ],
       "cta_linkedin": "LinkedIn",
-      "cta_email": "Kontakt aufnehmen"
+      "cta_email": "Schreiben Sie mir"
     }
   },
   "stampa": {
@@ -1053,7 +1068,7 @@
   },
   "blog": {
     "hero_title": "Ratgeber zu Arbeitsnachweis, DSGVO und Teams im Außendienst.",
-    "hero_desc": "Wir schreiben nicht um Seiten zu füllen. Wir schreiben, um zu teilen, was wir beim Aufbau der Zukunft der verifizierbaren Arbeit lernen.",
+    "hero_desc": "Praxisleitfäden für alle, die Teams in den Außendienst schicken: wie Sie geleistete Arbeit belegen, was das Gesetz zum GPS bei Mitarbeitenden sagt, wie Sie Stunden und Anwesenheiten in Ordnung halten.",
     "no_posts": "Derzeit keine Artikel verfügbar.",
     "read_article": "Artikel lesen →",
     "cta_title": "GeoTapp 14 Tage kostenlos testen",
@@ -1076,11 +1091,11 @@
     "next_step_text": "Erfahren Sie, wie GeoTapp dieses Problem für {sector}-Unternehmen löst",
     "next_step_fallback": "Erfahren Sie, wie GeoTapp für Ihr Unternehmen funktioniert",
     "next_step_cta": "Mehr erfahren",
-    "hero_tagline": "Gedanken & Funken."
+    "hero_tagline": "Ratgeber und Neuigkeiten."
   },
   "roi": {
-    "meta_title": "GeoTapp ROI-Rechner - Entdecken Sie Ihre echten Einsparungen",
-    "meta_desc": "Berechnen Sie in 2 Minuten, wie viel Sie mit GeoTapp sparen: weniger Verwaltung, weniger Streit, produktivere Mitarbeiter. Ohne E-Mail und ohne Konto.",
+    "meta_title": "GeoTapp ROI-Rechner: So viel sparen Sie im Jahr",
+    "meta_desc": "Schätzen Sie in einer Minute, wie viel Sie mit GeoTapp sparen: weniger Verwaltungsstunden, weniger Beanstandungen, weniger mündliche Abstimmung. Ohne E-Mail und ohne Konto.",
     "hero_title": "Berechnen Sie Ihren ROI mit GeoTapp",
     "hero_subtitle": "Geben Sie Ihre Unternehmensdaten ein und entdecken Sie, wie viel Sie jährlich sparen können.",
     "step1_title": "Ihr Unternehmen",
@@ -1109,7 +1124,7 @@
     "field_email": "Geschäftliche E-Mail",
     "field_telefono": "Telefon (optional)",
     "cta_calcola": "Meinen ROI berechnen",
-    "consent_text": "Mit dem Klick auf 'Meinen ROI berechnen' stimmen Sie zu, kommerzielle Mitteilungen von GeoTapp zu erhalten. Sie können sich jederzeit abmelden.",
+    "consent_text": "Mit dem Klick auf „Meinen ROI berechnen“ stimmen Sie zu, kommerzielle Mitteilungen von GeoTapp zu erhalten. Sie können sich jederzeit abmelden.",
     "newsletter_opt_in": "Senden Sie mir auch den monatlichen Newsletter mit praktischen Tipps, um den berechneten ROI tatsächlich zu erreichen (GPS, DSGVO, Außendienst). Abmeldung mit einem Klick.",
     "next": "Weiter",
     "back": "Zurück",
@@ -1127,21 +1142,21 @@
     "per_anno": "/ Jahr",
     "label_operators": "Mitarbeiter",
     "embed_title": "GeoTapp ROI-Rechner",
-    "intro": "Der Rechner schätzt, wie viel dein Betrieb jährlich sparen kann, wenn Anwesenheiten, Einsatzberichte und Arbeitsnachweise automatisiert werden. Gib wenige Werte ein und erhalte in 30 Sekunden die jährliche Ersparnis, die Amortisationszeit und den ROI, ohne Registrierung.",
+    "intro": "Der Rechner schätzt, wie viel Ihr Betrieb jährlich sparen kann, wenn Anwesenheiten, Einsatzberichte und Arbeitsnachweise automatisiert werden. Geben Sie wenige Werte ein, und in einer Minute sehen Sie die geschätzte jährliche Ersparnis, die Amortisationszeit und den ROI, ohne Registrierung.",
     "faq_title": "Häufige Fragen zur ROI-Berechnung",
-    "pricing_link": "Sieh mit dem ROI-Rechner, wie viel du sparen kannst",
+    "pricing_link": "Berechnen Sie mit dem ROI-Rechner, wie viel Sie sparen können",
     "faq": [
       {
         "q": "Wie wird der ROI einer GPS-Zeiterfassungs-App berechnet?",
-        "a": "Die Schätzung beruht auf drei konkreten Posten: den monatlich eingesparten Verwaltungsstunden, den dank geolokalisierter Nachweise vermiedenen Streitfällen und unnötigen Überstunden sowie der zurückgewonnenen Koordinationszeit. Die Jahressumme wird mit den Abokosten verglichen, woraus sich ROI und Amortisationszeit ergeben."
+        "a": "Die Schätzung beruht auf drei konkreten Posten: den monatlich eingesparten Verwaltungsstunden, den Beanstandungen und nicht gerechtfertigten Überstunden, die Arbeitsnachweise vermeiden helfen, und der zurückgewonnenen Koordinationszeit. Die Jahressumme wird mit den Abokosten verglichen, woraus sich ROI und Amortisationszeit ergeben."
       },
       {
         "q": "Muss ich mich registrieren oder eine E-Mail hinterlassen, um das Ergebnis zu sehen?",
-        "a": "Nein. Die Berechnung ist sofort und kostenlos: Werte eingeben und die Schätzung sofort sehen. Die E-Mail ist optional und wird nur genutzt, wenn du die detaillierte Aufschlüsselung und Praxisleitfäden möchtest."
+        "a": "Nein. Die Berechnung ist sofort und kostenlos: Werte eingeben und die Schätzung sofort sehen. Die E-Mail ist optional und wird nur genutzt, wenn Sie die detaillierte Aufschlüsselung und Praxisleitfäden möchten."
       },
       {
         "q": "Auf welchen Daten beruht die geschätzte Ersparnis?",
-        "a": "Nur auf den Werten, die du eingibst: Anzahl der Mitarbeiter, betreute Standorte oder Baustellen, Verwaltungsstunden, Stundenkosten und die für deine Branche typischen Streitfälle. Je realistischer die Eingaben, desto näher ist die Schätzung an deinem Fall."
+        "a": "Nur auf den Werten, die Sie eingeben: Anzahl der Mitarbeiter, betreute Standorte oder Baustellen, Verwaltungsstunden, Stundenkosten und die für Ihre Branche typischen Streitfälle. Je realistischer die Eingaben, desto näher ist die Schätzung an Ihrem Fall."
       },
       {
         "q": "Sind die Abokosten in der geschätzten Ersparnis schon berücksichtigt?",
@@ -1164,55 +1179,55 @@
     "classic_app": "Standard-App / Tabellenkalkulation",
     "roi_badge": "ROI berechnen",
     "roi_title": "Wie viel würden Sie mit GeoTapp sparen?",
-    "roi_desc": "Geben Sie die Teamgröße ein und erhalten Sie eine ROI-Schätzung in 30 Sekunden. Ohne Registrierung, ohne E-Mail.",
+    "roi_desc": "Geben Sie die Teamgröße ein und sehen Sie in einer Minute eine ROI-Schätzung. Ohne Registrierung, ohne E-Mail.",
     "roi_cta": "Meinen ROI berechnen",
     "mockup_title": "Einsatz offen",
-    "mockup_gps": "GPS verifiziert",
+    "mockup_gps": "Standort beim Stempeln",
     "mockup_photos": "Fotos angehängt",
     "mockup_photos_count": "3 georeferenzierte Fotos",
-    "mockup_sealed": "Versiegelt nach Abschluss",
+    "mockup_sealed": "Versiegelt nach Abschluss: Jede Änderung ist sichtbar",
     "mockup_status_active": "Aktiv",
     "mockup_status_completed": "Abgeschlossen",
     "mockup_status_summary": "4 Mitarbeiter aktiv auf 6 Standorten",
     "see_real_report": "Echten Bericht ansehen",
-    "cta_note": "Keine Bindung. Kein Vertrag. Wir konfigurieren auf Ihren realen Fall."
+    "cta_note": "14 Tage kostenlos testen, ohne Kreditkarte."
   },
   "features": {
-    "title": "Kraft unter der Haube.",
-    "subtitle": "Wir bauen kein Spielzeug. GeoTapp ist eine Enterprise-Plattform, die für Skalierung gebaut wurde. Hier sind die Technologien, die die Magie möglich machen.",
-    "gps_title": "GPS beim Stempeln, nicht den ganzen Tag",
-    "gps_desc": "Der Standort wird zweimal erfasst: wenn die Schicht beginnt und wenn sie endet. Dazwischen wird nichts automatisch aufgezeichnet. Die heutigen Stempelungen erscheinen jeweils mit GPS-Koordinaten, Geofence-Prüfung und Anti-Spoofing-Schutz: Das Büro weiß ohne Anruf, wer wo angefangen hat, und das Team weiß genau, was erfasst wird und wann.",
-    "offline_title": "Stempeln mit einem Klick",
-    "offline_desc": "Ein Klick genügt, um mit GPS einzustempeln, Pausen zu markieren und den Tag abzuschließen. Jedem Einsatz kann ein Foto als Arbeitsnachweis beigefügt werden, alles landet direkt in Flow.",
-    "encryption_title": "Military-Grade Encryption",
-    "encryption_desc": "Schlafen Sie ruhig. Wir verwenden AES-256-Verschlüsselung im Ruhezustand und TLS 1.3 bei der Übertragung. Selbst wenn ein Angreifer Ihre Daten abfangen würde, sähe er nur weißes Rauschen. Datenschutz ist kein rechtliches Pflichtfeld, er ist Mathematik.",
-    "realtime_title": "Real-Time WebSocket",
-    "realtime_desc": "Kein F5 mehr drücken. Dank WebSockets reisen Informationen sofort. Wenn ein Techniker in Rom ein Ticket schließt, sieht der Manager in München den Punkt in derselben Millisekunde grün werden. Es ist, als wäre man überall gleichzeitig.",
-    "cms_title": "Headless CMS Integration",
-    "cms_desc": "Inhalte sind fließend. Unsere Headless-Architektur entkoppelt Daten von der Darstellung. Das bedeutet: Sie veröffentlichen einen Blogbeitrag, pushen ihn in die Mobile App und versenden ihn per Newsletter, mit einem einzigen Klick.",
-    "datalake_title": "Scalable Data Lake",
-    "datalake_desc": "Von 100 auf 100 Millionen Datensätze ohne ins Schwitzen zu geraten. Wir verwenden partitioniertes PostgreSQL, um massive Datenmengen ohne Geschwindigkeitsverlust zu verarbeiten. Ihre Historie ist wertvoll, wir bewahren sie für immer, in einem Augenblick abrufbar.",
-    "cdn_title": "Global CDN Edge",
-    "cdn_desc": "Geschwindigkeit ist geografisch. Unsere statischen Assets werden auf 300+ Rechenzentren weltweit repliziert. Ob Ihr Kunde in New York oder Tokio ist - Ihre Seite lädt, als befände sich der Server im Nebenzimmer."
+    "title": "Was GeoTapp kann, Funktion für Funktion.",
+    "subtitle": "Vom Stempeln im Außendienst bis zum Bericht, den der Kunde selbst prüft. Das steckt drin, beschrieben nach dem, was es tut.",
+    "gps_title": "Standort nur beim Stempeln",
+    "gps_desc": "Der Standort wird erfasst, wenn die Mitarbeiterin oder der Mitarbeiter stempelt (Beginn, Pausen, Ende) und wenn ein Nachweisfoto aufgenommen wird. Zwischen zwei Stempelungen wird nichts automatisch aufgezeichnet. In Flow zeigt die Ansicht „Heutige Stempelungen“ jede Stempelung mit ihrem Standort und der Prüfung gegen den Arbeitsort: Das Büro weiß ohne Anruf, wer wo angefangen hat, und das Team weiß genau, was erfasst wird und wann.",
+    "offline_title": "Stempeln mit einem Tipp, auch ohne Netz",
+    "offline_desc": "Ein Tipp, um die Schicht zu beginnen, Pausen zu markieren und sie zu beenden. Jeder Einsatz kann seine Nachweisfotos haben. Fehlt das Netz, bleibt die Stempelung auf dem Telefon gespeichert und wird von selbst gesendet, sobald wieder Empfang da ist, mit der Uhrzeit, zu der sie erfolgt ist.",
+    "encryption_title": "Gefälschte Standorte werden abgelehnt",
+    "encryption_desc": "Beim Stempeln lehnt die App Standorte ab, die von Fake-GPS-Apps simuliert werden, zu ungenaue Standorte und unmögliche Ortssprünge. Bei Fotos wird nichts abgelehnt: Sie werden markiert, indem Uhrzeit und Standort der Aufnahme mit denen der Stempelung verglichen werden.",
+    "realtime_title": "Der Bericht versiegelt sich selbst",
+    "realtime_desc": "Am Ende des Einsatzes entsteht der Bericht aus Stempelungen, Fotos und Notizen und wird versiegelt: Eine Kette von SHA-256-Fingerabdrücken verbindet jedes Ereignis und jedes Foto, und die Wurzel wird mit dem Schlüssel von GeoTapp signiert. Jede spätere Änderung ist erkennbar.",
+    "cms_title": "Prüfung ohne uns",
+    "cms_desc": "Der Auftraggeber erhält einen Link und prüft den Bericht selbst, online oder mit dem Offline-Verifier: eine einzelne Datei, die keine Verbindung zum Internet aufbaut und den öffentlichen Schlüssel enthält. Das funktioniert auch in Jahren, auch ohne GeoTapp.",
+    "datalake_title": "Daten in Europa, so lange wie nötig aufbewahrt",
+    "datalake_desc": "Die Dienstdaten liegen auf Servern in der Europäischen Union und werden verschlüsselt übertragen. Im Register werden Standorte nach zwölf Monaten gelöscht, ein Zeitraum, den das Unternehmen bis auf dreißig Tage verkürzen kann; in bereits übergebenen Berichten bleiben sie, weil es versiegelte Dokumente sind, und nach fünf Jahren wird das Paket gelöscht.",
+    "cdn_title": "Büro und Außendienst verbunden",
+    "cdn_desc": "In Flow sieht das Büro jede Stempelung, sobald sie eintrifft, verwaltet Aufträge, Teams, Schichten und Urlaub und exportiert die Stunden für die Lohnabrechnung. Die Mitarbeitenden erhalten Aufträge und Mitteilungen direkt in der App."
   },
   "kairos": {
     "subtitle": "Ihr GeoTapp-Assistent",
     "welcome": "Hallo! Ich bin Kairos, der GeoTapp-Assistent. Wie kann ich helfen?",
-    "placeholder": "Stellen Sie Ihre Frage...",
+    "placeholder": "Stellen Sie Ihre Frage…",
     "send": "Senden",
     "quick_pricing": "Preise",
     "quick_how": "So funktioniert's",
     "quick_trial": "Kostenlos testen",
     "quick_contact": "Kontakt",
-    "fallback": "Ich konnte keine Antwort finden. Sie konnen umformulieren oder uns direkt kontaktieren.",
-    "low_confidence": "Ich bin nicht sicher, ob ich richtig verstanden habe. Mochten Sie das Team kontaktieren?",
+    "fallback": "Ich konnte keine Antwort finden. Sie können umformulieren oder uns direkt kontaktieren.",
+    "low_confidence": "Ich bin nicht sicher, ob ich richtig verstanden habe. Möchten Sie das Team kontaktieren?",
     "contact_btn": "Kontaktieren",
     "powered_by": "Powered by GeoTapp"
   },
   "author_page": {
-    "job_title": "CEO & Gründer",
+    "job_title": "Gründer",
     "verified_label": "Verifizierter Experte",
-    "bio": "Michele Angelo Petraroli, CEO und Gründer von GeoTapp. Verifiziertes Experten-Profil auf <a href=\"https://featured.com/p/michele-petraroli\" rel=\"me noopener\" target=\"_blank\">Featured.com</a>.",
+    "bio": "Michele Angelo Petraroli, Gründer von GeoTapp. Verifiziertes Expertenprofil auf <a href=\"https://featured.com/p/michele-petraroli\" rel=\"me noopener\" target=\"_blank\">Featured.com</a>.",
     "articles_heading": "Artikel von",
     "view_profile": "Verifiziertes Profil ansehen",
     "follow_linkedin": "Auf LinkedIn vernetzen",
@@ -1248,14 +1263,14 @@
     "autoritaCompetente": "Zuständige Behörde",
     "disclaimer": "Dies ist eine informative Ressource, keine Rechtsberatung. Bevor Sie ein Überwachungssystem aktivieren, lassen Sie Ihre Situation von einer Fachkraft prüfen.",
     "ctaTitolo": "Möchten Sie ein System, das dafür gebaut ist?",
-    "ctaTesto": "GeoTapp erfasst den Standort nur bei der Zeiterfassung, nicht durchgehend, und erstellt die zu unterzeichnende Datenschutzerklärung. Testen Sie es kostenlos.",
+    "ctaTesto": "GeoTapp erfasst den Standort nur beim Stempeln oder bei einem Nachweisfoto, nie durchgehend, und lässt die Information in der App vor der ersten Stempelung unterschreiben. Testen Sie es kostenlos.",
     "ctaBottone": "GeoTapp kostenlos testen",
     "faq": {
       "title": "Häufige Fragen",
       "items": [
         {
           "q": "Darf ich GPS nutzen, um mein Team bei der Arbeit im Blick zu behalten?",
-          "a": "GPS am Arbeitsplatz ist in fast ganz Europa zulässig, allerdings unter einer Bedingung: Es muss die Arbeit organisieren und belegen, nicht die Person überwachen. Entscheidend ist das Wie. Den Standort beim Einstempeln zu erfassen, also wenn jemand einen Auftrag beginnt und abschließt, ist etwas ganz anderes, als die Person den ganzen Tag in Echtzeit zu verfolgen. Das Erste lässt sich rechtskonform gestalten, das Zweite fast nie. Wobei \"rechtskonform\" in Deutschland mehr verlangt als saubere Unterlagen: Besteht ein Betriebsrat, ist auch die Standorterfassung beim Ein- und Ausstempeln mitbestimmungspflichtig (§ 87 Abs. 1 Nr. 6 BetrVG), und ohne Betriebsvereinbarung darf das System nicht aktiviert werden. Wo kein Betriebsrat besteht, entfällt dieser Schritt; die DSGVO gilt weiterhin."
+          "a": "GPS bei der Arbeit ist in fast ganz Europa zulässig, allerdings unter einer Bedingung: Es muss die Arbeit organisieren und belegen, nicht die Person überwachen. Entscheidend ist das Wie. Den Standort beim Stempeln zu erfassen, wenn jemand beginnt, Pause macht und aufhört, ist etwas ganz anderes, als die Person den ganzen Tag zu verfolgen. Das Erste lässt sich fast immer rechtskonform gestalten, das Zweite fast nie. Was „rechtskonform“ bedeutet, ändert sich von Land zu Land, und es geht nicht nur um Unterlagen: Manchmal braucht es eine Vereinbarung mit der Arbeitnehmervertretung oder eine bestimmte Rechtsgrundlage. In Deutschland gilt: Besteht ein Betriebsrat, ist auch die Standorterfassung beim Ein- und Ausstempeln mitbestimmungspflichtig (§ 87 Abs. 1 Nr. 6 BetrVG), und ohne Betriebsvereinbarung darf das System nicht aktiviert werden. Wo kein Betriebsrat besteht, entfällt dieser Schritt; die DSGVO gilt weiterhin. Die Länderseite oben sagt, was wirklich nötig ist."
         },
         {
           "q": "Gelten die Regeln meines eigenen Landes oder die des Landes, in das ich das Team schicke?",
@@ -1266,16 +1281,16 @@
           "a": "Die Einwilligung ist selten der richtige Weg, und das überrascht viele. Im Arbeitsverhältnis gilt eine Einwilligung als nicht freiwillig erteilt, weil wer sie verweigert, Nachteile fürchtet. Deshalb bevorzugen die Aufsichtsbehörden andere Grundlagen: das berechtigte Interesse des Unternehmens oder eine vertragliche Pflicht, gepaart mit einer klaren Datenschutzinformation. In mehreren Ländern braucht es zudem einen Schritt mit der Gewerkschaft oder eine Betriebsvereinbarung, bevor Sie irgendetwas einschalten."
         },
         {
-          "q": "Darf ich den Standort in Echtzeit und den ganzen Tag verfolgen?",
+          "q": "Darf ich den Standort den ganzen Tag über verfolgen?",
           "a": "Genau das löst die Bußgelder aus. Eine durchgehende Ortung gilt fast überall als unverhältnismäßig: Sie erfassen weit mehr, als Sie brauchen, um Stunden abzurechnen oder einen Auftrag zu belegen. Die praktische Regel lautet, das Minimum zu erheben, also den Standort genau im entscheidenden Moment, und keine Spur, die der Person von morgens bis abends folgt."
         },
         {
           "q": "Welches Risiko habe ich, wenn ich ein System ohne Rechtskonformität einschalte?",
-          "a": "Das hängt vom Land ab, doch DSGVO-Bußgelder erreichen Größenordnungen, die kein kleines Unternehmen sehen möchte, und in einigen Staaten kommen arbeitsrechtliche Folgen hinzu. Das eigentliche Problem ist oft jedoch nicht das Bußgeld: Daten, die auf die falsche Weise erhoben wurden, werden genau dann nutzlos, wenn Sie sie brauchen, in einem Streitfall oder vor einem Kunden, der die Rechnung anficht. Jedes Länderblatt zeigt die tatsächliche Höchststrafe und die belegten Fälle."
+          "a": "Das hängt vom Land ab, doch DSGVO-Bußgelder erreichen Größenordnungen, die kein kleines Unternehmen sehen möchte, und in einigen Staaten kommen arbeitsrechtliche Folgen hinzu. Das eigentliche Problem ist oft jedoch nicht das Bußgeld: Falsch erhobene Daten werden genau dann unbrauchbar, wenn Sie sie brauchen, in einem Rechtsstreit oder vor einem Kunden, der die Rechnung anficht. Jede Länderseite zeigt das gesetzliche Maximum und, wo es ihn gibt, das tatsächlich verhängte Bußgeld aus einem realen Fall."
         },
         {
           "q": "Ist GeoTapp ein Überwachungssystem?",
-          "a": "Nein, und es wurde gezielt so gebaut, dass es keines ist. Das Werkzeug erfasst den Standort nur beim Einstempeln, wenn jemand einen Auftrag beginnt oder abschließt, niemals durchgehend, und es erstellt die Datenschutzinformation zur Unterschrift. Es dient dazu, zu belegen, was wo getan wurde, nicht dazu, Menschen zu beobachten. Das ist der Unterschied zwischen einem Arbeitsnachweis und einer Leine."
+          "a": "Nein, es ist nicht zur Überwachung gedacht. Es erfasst den Standort bei jeder Stempelung (Beginn, Pause, Ende) und wenn ein Nachweisfoto aufgenommen wird; zwischen zwei Stempelungen erfasst es nichts. Und es erstellt die Information, die zu unterschreiben ist. Es dient dazu, zu belegen, was wo getan wurde, nicht dazu, Menschen zu beobachten. Das ist der Unterschied zwischen einem Arbeitsnachweis und einer Leine."
         }
       ]
     },
@@ -1287,11 +1302,11 @@
       "regole": [
         {
           "titolo": "Ein legitimer, vorab benannter Zweck",
-          "testo": "Arbeit organisieren, Sicherheit schützen, Leistung dokumentieren. Niemals 'die Person kontrollieren': das ist kein zulaessiger Zweck (Art. 5 und 6 DSGVO)."
+          "testo": "Arbeit organisieren, Sicherheit schützen, Leistung dokumentieren. Niemals „die Person kontrollieren“: Das ist kein zulässiger Zweck (Art. 5 und 6 DSGVO)."
         },
         {
           "titolo": "Nur die nötigen Daten, und nur wenn sie nötig sind",
-          "testo": "Das ist die Datenminimierung (Art. 5 Abs. 1 lit. c). Die Position zu Beginn und Ende des Einsatzes zu erfassen dokumentiert; sie im Minutentakt zu erfassen überwacht, und das ist der häufigste Bussgeldgrund in Europa."
+          "testo": "Das ist der Grundsatz der Datenminimierung (Art. 5 Abs. 1 lit. c). Den Standort zu Beginn und am Ende der Arbeit zu erfassen dokumentiert; ihn jede Minute zu erfassen überwacht die Person."
         },
         {
           "titolo": "Transparenz vorher, nicht hinterher",
@@ -1299,24 +1314,24 @@
         },
         {
           "titolo": "Speicherung für eine festgelegte Dauer",
-          "testo": "Daten werden für den zweckgebundenen Zeitraum aufbewahrt, vorab festgelegt und dokumentiert, nicht 'solange sie nützlich sind' (Art. 5 Abs. 1 lit. e)."
+          "testo": "Daten werden für den zweckgebundenen Zeitraum aufbewahrt, vorab festgelegt und dokumentiert, nicht „solange sie nützlich sind“ (Art. 5 Abs. 1 lit. e)."
         },
         {
           "titolo": "Folgenabschätzung bei hohem Risiko",
-          "testo": "Die systematische Überwachung von Beschäftigten fällt typischerweise unter die Fälle mit DSFA-Pflicht (Art. 35), durchzufuehren vor der Inbetriebnahme, nicht danach."
+          "testo": "Die systematische Überwachung von Beschäftigten fällt typischerweise unter die Fälle mit DSFA-Pflicht (Art. 35), durchzuführen vor der Inbetriebnahme, nicht danach."
         },
         {
           "titolo": "Für einen Zweck erhobene Daten werden nicht für einen anderen genutzt",
           "testo": "Das ist die Zweckbindung (Art. 5 Abs. 1 lit. b). Zur Dokumentation der Arbeit erhobene Positionen werden nicht automatisch zu Beweisen in einem Disziplinarverfahren."
         }
       ],
-      "nota": "Dazu kommt Art. 88 DSGVO, der jedem Staat erlaubt, eigene Regeln für die Datenverarbeitung im Beschaeftigungsverhaeltnis zu ergaenzen. Deshalb gibt es die Laenderkarten unten: es ändert sich, wer zustimmen muss, nicht der Grundsatz."
+      "nota": "Dazu kommt Art. 88 DSGVO, der jedem Staat erlaubt, eigene Regeln für die Datenverarbeitung im Beschäftigungsverhältnis zu ergänzen. Deshalb gibt es die Länderseiten unten: Es ändert sich, wer zustimmen muss, nicht der Grundsatz."
     },
     "sanzioneTipoCasoGps": "aus einem echten GPS-Fall",
-    "sanzioneTipoCasoAffine": "verwandter Fall, nicht GPS",
-    "sanzioneTipoMassimale": "gesetzlicher Höchstbetrag, kein verhängtes Bußgeld",
+    "sanzioneTipoCasoAffine": "verwandter Fall, nicht zum GPS von Mitarbeitenden",
+    "sanzioneTipoMassimale": "gesetzliches Maximum",
     "fonteNonUfficialeEtichetta": "keine amtliche Quelle",
-    "fonteNonUfficialeAvviso": "Diese Angabe stammt nicht aus einer amtlichen Quelle. Unten steht der direkte Link zu der Quelle, die wir verwendet haben. Da sie bei der zustandigen Behorde nicht uberpruft werden kann, konnen wir Richtigkeit und Stimmigkeit nicht garantieren.",
+    "fonteNonUfficialeAvviso": "Diese Angabe stammt nicht aus einer amtlichen Quelle. Unten steht der direkte Link zu der Quelle, die wir verwendet haben. Da sie bei der zuständigen Behörde nicht überprüft werden kann, können wir Richtigkeit und Stimmigkeit nicht garantieren.",
     "fonteNonUfficialeTipo_studio_legale": "Anwaltskanzlei",
     "fonteNonUfficialeTipo_stampa": "Presse",
     "fonteNonUfficialeTipo_banca_dati": "private Rechtsdatenbank",
@@ -1324,9 +1339,9 @@
   },
   "sanzioniGps": {
     "metaTitle": "GPS-Bußgeldrechner: wie viel Sie bei Mitarbeiterüberwachung riskieren, Land für Land",
-    "metaDesc": "Land wählen und das reale Höchstbußgeld für GPS-Mitarbeiterüberwachung sehen, plus welche Pflichten Sie exponieren. Geprüfte Daten, 39 europäische Länder.",
+    "metaDesc": "Wählen Sie ein Land und sehen Sie das höchste tatsächlich verhängte Bußgeld oder das gesetzliche Maximum für die GPS-Überwachung von Mitarbeitenden und welche Pflichten Sie angreifbar machen. An der Quelle geprüfte Daten, 39 europäische Länder.",
     "h1": "Wie viel riskieren Sie bei der Überwachung Ihrer Mitarbeiter?",
-    "intro": "Land wählen, das tatsächlich verhängte Höchstbußgeld sehen und ankreuzen, was Sie schon haben: wir sagen Ihnen, wie hoch Ihr Risiko ist. Quellengeprüfte Daten, 39 Länder.",
+    "intro": "Wählen Sie das Land, sehen Sie das höchste Bußgeld (das tatsächlich verhängte, wo es einen öffentlichen Fall gibt, sonst das gesetzliche Maximum: Die Länderseite sagt, welches) und haken Sie ab, was Sie schon geregelt haben: Wir sagen Ihnen, wie hoch Ihr Risiko ist. An der Quelle geprüfte Daten, 39 Länder.",
     "sanzioneMax": "Höchstbußgeld",
     "casoCitato": "Realer Fall",
     "fonte": "Quelle ansehen",
@@ -1343,7 +1358,7 @@
       "items": [
         {
           "q": "Welches Risiko besteht wirklich, wenn GPS nicht rechtskonform ist?",
-          "a": "Das hängt vom Land ab und davon, was schiefgelaufen ist, doch DSGVO-Bußgelder sind nicht symbolisch: Sie erreichen einen Prozentsatz des Umsatzes, der ein kleines Unternehmen umwerfen kann, und in mehreren Staaten kommen arbeitsrechtliche Folgen hinzu. Wählen Sie oben das Zielland aus, dann sehen Sie die tatsächliche Höchstsumme samt dem Fall, aus dem sie stammt."
+          "a": "Das hängt vom Land ab und davon, was schiefgelaufen ist, doch DSGVO-Bußgelder sind nicht symbolisch: Sie können einen Prozentsatz des Umsatzes erreichen, und in mehreren Staaten kommen arbeitsrechtliche Folgen hinzu. Wählen Sie oben das Land, dann sehen Sie die höchste Summe, mit dem Hinweis, ob es ein tatsächlich verhängtes Bußgeld oder das gesetzliche Maximum ist."
         },
         {
           "q": "Treffen DSGVO-Bußgelder wirklich kleine Unternehmen?",
@@ -1379,7 +1394,7 @@
     "colSanzione": "Höchstbußgeld",
     "scheda": "Seite",
     "metodologiaTitolo": "Wie der Index berechnet wird",
-    "metodologia": "Der Index (0-100) misst, wie viele Pflichten zur Mitarbeiterüberwachung in dem Land verbindlich sind: Punktzahl = Pflichten + Hälfte der bedingten, geteilt durch das Gesamt. Höher = strengerer Rahmen für alle, die tracken wollen. Daten aus den quellengeprüften Länderseiten; gemessen wird der Compliance-Aufwand, nicht 'Freiheit'.",
+    "metodologia": "Der Index (0-100) misst, wie viele Pflichten zur Überwachung von Mitarbeitenden in dem Land verbindlich sind: Punktzahl = verbindliche Pflichten + die Hälfte der bedingten, im Verhältnis zur Gesamtzahl. Höher = strengerer Rahmen für alle, die Ortung einsetzen wollen. Die Daten stammen aus den an der Quelle geprüften Länderseiten; gemessen wird der Aufwand an Pflichten, nicht die „Freiheit“.",
     "faq": {
       "title": "Häufige Fragen",
       "items": [
@@ -1431,17 +1446,17 @@
   },
   "videoTutorial": {
     "title": "Von der ersten Anmeldung bis zum ersten Stempeln",
-    "note": "Zwei Minuten, ohne Umschweife: Sie richten Flow ein, laden den ersten Mitarbeiter ein und sehen die erste Stempelung auf der Karte erscheinen.",
+    "note": "Zwei Minuten, ohne Umschweife: Sie richten Flow ein, laden den ersten Mitarbeiter ein und sehen, wie seine erste Stempelung mit Uhrzeit und Standort im Büro ankommt.",
     "cta": "Video ansehen, 2 Minuten"
   },
   "videoGiro": {
-    "kicker": "Sieh es arbeiten",
+    "kicker": "Sehen Sie es arbeiten",
     "title": "Eine Schicht, achtzig Sekunden, nichts nachgestellt",
-    "note": "Ein echtes Telefon auf der Baustelle und ein echter Bildschirm im Büro, im selben Moment aufgenommen. Der Ton startet aus, und die Untertitel tragen die Worte, bis du ihn aufdrehst.",
+    "note": "Ein echtes Telefon auf der Baustelle und ein echter Bildschirm im Büro, im selben Moment aufgenommen. Der Ton startet aus, und die Untertitel tragen die Worte, bis Sie ihn aufdrehen.",
     "audioOn": "Ton einschalten",
     "audioOff": "Ton ausschalten",
     "play": "Video ansehen, 80 Sekunden",
-    "chapters": "Springe zu",
+    "chapters": "Springen Sie zu",
     "pageLink": "Die ganze Runde, Akt für Akt",
     "youtube": "Auf YouTube ansehen",
     "posterAlt": "Eine Schicht mit GeoTapp, vom Stempeln bis zum versiegelten Report, in achtzig Sekunden",
@@ -1450,14 +1465,14 @@
       "metaDescription": "Ein Monteur stempelt ein, fotografiert einen Schaden, sendet den Nachweis, stempelt aus. Der Auftrag wird geschlossen, der Kunde prüft den versiegelten Report allein, offline.",
       "h1": "Eine ganze Schicht, vom ersten Tippen bis zum Report, den der Kunde allein prüft",
       "intro": "Hier ist nichts gestellt. Das Telefon wurde auf der Baustelle gefilmt, während im selben Moment der Bildschirm im Büro lief, und beide Aufnahmen wurden über die Uhr auf dieselbe Zeitlinie gelegt, so dass fünf Sekunden auf dem Schirm auch fünf Sekunden gedauert haben.",
-      "intro2": "Der Ton startet aus, weil niemand eine Seite will, die von selbst zu reden anfängt. Die Worte tragen die Untertitel, bis du entscheidest, lauter zu stellen.",
+      "intro2": "Der Ton startet aus, weil niemand eine Seite will, die von selbst zu reden anfängt. Die Worte tragen die Untertitel, bis Sie entscheiden, lauter zu stellen.",
       "actsTitle": "Die sieben Akte",
       "transcriptTitle": "Was das Video sagt",
       "transcriptNote": "Dieselben Worte wie die Stimme, zum Lesen.",
       "honestyTitle": "Was dieses Video ist, und was nicht",
-      "honesty": "Die Schichtdaten sind Testdaten, und die beiden Fotos des Verteilers sind im Schnitt ersetzt, weil die Nachweise mit abgedecktem Objektiv entstanden sind. Das Verhalten der Software ist das echte, ohne Retusche aufgenommen. Der Standort wird beim Stempeln geschrieben und nie dazwischen, und ein versiegeltes Paket hilft zu zeigen, dass am Übergebenen nichts verändert wurde, ist für sich genommen aber kein absoluter Beweis des zugrunde liegenden Sachverhalts und keine Rechtsberatung.",
-      "ctaTitle": "Vierzehn Tage, auf deinen eigenen Schichten",
-      "ctaText": "Dieselbe Runde läuft auf deinen Aufträgen, mit deinem Telefon, vierzehn Tage lang und ohne Karte.",
+      "honesty": "Die Schichtdaten sind Testdaten, und die beiden Fotos des Schaltschranks sind im Schnitt ersetzt, weil die Nachweise mit abgedecktem Objektiv entstanden sind. Das Verhalten der Software ist das echte, ohne Retusche aufgenommen. Der Standort wird im Moment des Stempelns geschrieben, und zwischen zwei Stempelungen wird nichts automatisch aufgezeichnet. Ein versiegeltes Paket hilft zu zeigen, dass das Übergebene nicht verändert wurde, ist für sich genommen aber kein absoluter Beweis des zugrunde liegenden Sachverhalts und keine Rechtsberatung.",
+      "ctaTitle": "Vierzehn Tage, auf Ihren eigenen Schichten",
+      "ctaText": "Dieselbe Runde läuft auf Ihren Aufträgen, mit Ihrem Telefon, vierzehn Tage lang und ohne Karte.",
       "youtubeNote": "Es liegt auch auf YouTube, in elf Sprachen."
     },
     "captions": "Untertitel"
@@ -1476,7 +1491,9 @@
     "segnala_t": "Ein Problem melden",
     "segnala": "Wenn Sie auf dieser Website auf eine Barriere stoßen, schreiben Sie an info@geotapp.com und nennen Sie die Seite und was nicht möglich war. Wir antworten innerhalb von dreißig Tagen. Ist die Antwort nicht zufriedenstellend, können Sie sich an die zuständige Durchsetzungsbehörde in Ihrem Land wenden.",
     "data_t": "Datum",
-    "data": "Erklärung erstellt am 23. September 2026 auf Grundlage der Bewertung vom selben Tag."
+    "data": "Erklärung erstellt am 23. September 2026 auf Grundlage der Bewertung vom selben Tag.",
+    "meta_title": "Erklärung zur Barrierefreiheit | GeoTapp",
+    "meta_description": "Wie barrierefrei geotapp.com ist: was geprüft wurde, mit welcher Methode, die bekannten Einschränkungen und wie Sie ein Problem melden."
   },
   "contentDates": {
     "updatedOn": "Aktualisiert am"

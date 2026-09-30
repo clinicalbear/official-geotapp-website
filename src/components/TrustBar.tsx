@@ -23,10 +23,10 @@ const COPY: Record<string, {
     { title: 'Independent verification', sub: 'The client checks, no account needed' },
   ], sectors: 'Cleaning · Construction · Security · Installers · Maintenance · Mechanical & electrical' },
   de: { headline: 'Nachweis der Außendienstarbeit, von jedem überprüfbar', claims: [
-    { title: 'Jede Manipulation ist erkennbar', sub: 'Kryptografisches Siegel auf jedem Einsatz' },
-    { title: 'Echte GPS-Erfassung', sub: 'Ort und Zeit vor Ort erfasst' },
+    { title: 'Jede spätere Änderung ist sichtbar', sub: 'Kryptografisches Siegel auf jedem Bericht' },
+    { title: 'Stempeln mit Standort', sub: 'Ort und Zeit vor Ort erfasst' },
     { title: 'Unabhängige Überprüfung', sub: 'Der Kunde prüft, ganz ohne Konto' },
-  ], sectors: 'Reinigung · Bau · Sicherheit · Installateure · Wartung · Haustechnik' },
+  ], sectors: 'Reinigung · Bau · Sicherheit · Installateure · Wartung · Anlagentechnik' },
   fr: { headline: 'La preuve du travail sur le terrain, vérifiable par tous', claims: [
     { title: 'Toute altération est détectable', sub: 'Sceau cryptographique sur chaque intervention' },
     { title: 'Pointage GPS réel', sub: 'Lieu et heure enregistrés sur place' },

@@ -184,7 +184,7 @@ const TESTI: Record<string, Testi> = {
       'Dieses Dokument gab es, aber der Aussteller hat den Link widerrufen. Für eine Kopie wenden Sie sich an die Firma, die die Arbeit ausgeführt hat.',
     expiredTitle: 'Dokument nicht mehr verfügbar',
     expiredBody:
-      'Dieses Dokument gab es, und seine Aufbewahrungsfrist ist abgelaufen: fünf Jahre nach dem Arbeitsdatum wird das Paket gelöscht, wie es der Datenschutz verlangt. Es gibt keine Kopie mehr, nach der man fragen könnte.',
+      'Dieses Dokument gab es, und seine Aufbewahrungsfrist ist abgelaufen: fünf Jahre nach dem Arbeitsdatum wird das Paket gelöscht, wie es das Datenschutzrecht verlangt. Es gibt keine Kopie mehr, nach der man fragen könnte.',
     unknownTitle: 'Code nicht gefunden',
     unknownBody:
       'Der Code passt zu keinem Dokument. Prüfen Sie die acht Zeichen: S und 5, Z und 2 werden leicht verwechselt.',

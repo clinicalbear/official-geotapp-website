@@ -36,7 +36,7 @@ export const FEATURE_LABELS: Record<FeatureKey, LocalizedString> = {
   gps_verified_at_site: {
     it: 'Posizione controllata a ogni timbratura',
     en: 'Position checked at every clock-in',
-    de: 'GPS am Einsatzort verifiziert',
+    de: 'Standort bei jeder Stempelung geprüft',
     fr: 'GPS vérifié sur le chantier',
     es: 'GPS verificado en el sitio de trabajo',
     nl: 'GPS geverifieerd op de werkplek',
@@ -62,7 +62,7 @@ export const FEATURE_LABELS: Record<FeatureKey, LocalizedString> = {
   geo_timestamped_photos: {
     it: 'Foto di prova con posizione e ora',
     en: 'Proof photos with location and time',
-    de: 'Fotos mit GPS und Zeitstempel',
+    de: 'Nachweisfotos mit Standort und Uhrzeit',
     fr: 'Photos avec GPS et horodatage',
     es: 'Fotos con GPS y marca de tiempo',
     nl: 'Foto\'s met GPS en tijdstempel',
@@ -88,7 +88,7 @@ export const FEATURE_LABELS: Record<FeatureKey, LocalizedString> = {
   time_tracking: {
     it: 'Registrazione delle ore',
     en: 'Hours recording',
-    de: 'Zeiterfassung',
+    de: 'Erfassung der Arbeitszeit',
     fr: 'Suivi du temps',
     es: 'Seguimiento del tiempo',
     nl: 'Urenregistratie',
@@ -166,7 +166,7 @@ export const FEATURE_LABELS: Record<FeatureKey, LocalizedString> = {
   gdpr_geo_compliance: {
     it: 'Posizione solo alla timbratura, mai in continuo',
     en: 'Location only at clock-in, never continuous',
-    de: 'DSGVO-konforme Geolokalisierung',
+    de: 'Standort nur beim Stempeln, nie durchgehend',
     fr: 'Géolocalisation conforme RGPD',
     es: 'Geolocalización conforme al RGPD',
     nl: 'AVG-conforme geolocatie',
@@ -179,7 +179,7 @@ export const FEATURE_LABELS: Record<FeatureKey, LocalizedString> = {
   auto_gps_notice_signed: {
     it: 'Informativa GPS firmata nell\'app prima di timbrare',
     en: 'GPS notice signed in the app before clocking in',
-    de: 'Auto GPS-Datenschutzhinweis mit Unterschrift',
+    de: 'GPS-Datenschutzinformation vor dem Stempeln in der App unterschrieben',
     fr: 'Notice GPS automatique avec signature',
     es: 'Aviso GPS automático firmado',
     nl: 'Automatische GPS-mededeling met handtekening',
@@ -232,7 +232,7 @@ export const COMPETITORS: Competitor[] = [
     tagline: {
       it: 'Comunicazione, gestione del personale e timbrature in un\'unica app per chi lavora fuori ufficio. Molto diffusa negli Stati Uniti.',
       en: 'Communication, HR and time tracking in one app for people who work away from a desk. Widely used in the United States.',
-      de: 'Kommunikation + HR + Zeiterfassung für Außendienst-Teams. Starke US-Präsenz.',
+      de: 'Kommunikation, Personalverwaltung und Zeiterfassung in einer App für alle, die nicht am Schreibtisch arbeiten. In den USA weit verbreitet.',
     },
     features: {
       gps_verified_at_site: false,
@@ -257,7 +257,7 @@ export const COMPETITORS: Competitor[] = [
     tagline: {
       it: 'Registrazione del tempo con screenshot e monitoraggio dell\'attività. Pensato per team remoti al computer, non per chi lavora sul campo.',
       en: 'Time tracking with screenshots and activity monitoring. Built for remote teams at a computer, not for field work.',
-      de: 'Zeiterfassung mit Screenshots und Aktivitätsüberwachung. Für Remote-Teams, nicht Außendienst.',
+      de: 'Zeiterfassung mit Screenshots und Aktivitätsüberwachung. Gedacht für Remote-Teams am Computer, nicht für die Arbeit vor Ort.',
     },
     features: {
       gps_verified_at_site: false,
@@ -282,7 +282,7 @@ export const COMPETITORS: Competitor[] = [
     tagline: {
       it: 'Registrazione del tempo gratuita e senza limiti. Ottimo per freelance e uffici, poco adatto al lavoro sul campo.',
       en: 'Free, unlimited time tracking. Great for freelancers and offices, a poor fit for field work.',
-      de: 'Kostenlose unbegrenzte Zeiterfassung. Gut für Freelancer und Büroteams, schwach im Außendienst.',
+      de: 'Kostenlose Zeiterfassung ohne Begrenzung. Sehr gut für Freelancer und Büros, wenig geeignet für die Arbeit vor Ort.',
     },
     features: {
       gps_verified_at_site: false,
@@ -307,7 +307,7 @@ export const COMPETITORS: Competitor[] = [
     tagline: {
       it: 'Presenze con riconoscimento facciale e GPS di base. Piano gratuito generoso, ma niente prova del lavoro svolto.',
       en: 'Attendance with face recognition and basic GPS. Generous free plan, but no proof of the work done.',
-      de: 'Zeiterfassung mit Gesichtserkennung und GPS-Basics. Großzügiger Free Plan, kein Arbeitsnachweis.',
+      de: 'Anwesenheitserfassung mit Gesichtserkennung und einfachem GPS. Großzügiger Gratistarif, aber kein Nachweis der geleisteten Arbeit.',
     },
     features: {
       gps_verified_at_site: false,
@@ -382,7 +382,7 @@ export const COMPETITORS: Competitor[] = [
     tagline: {
       it: 'App italiana di rilevazione presenze molto diffusa: GPS, QR, NFC e geofence. Niente report sigillato per il committente.',
       en: 'Widely used Italian attendance app: GPS, QR, NFC and geofence. No sealed report for the client.',
-      de: 'Italienische Software für Reinigung und Facility. Stark in Verwaltung, schwach beim Arbeitsnachweis.',
+      de: 'In Italien weit verbreitete App zur Anwesenheitserfassung: GPS, QR, NFC und Geofence. Kein versiegelter Bericht für den Auftraggeber.',
     },
     features: {
       gps_verified_at_site: true, // ha GPS ma non sealed/timestamped come GeoTapp
@@ -407,7 +407,7 @@ export const COMPETITORS: Competitor[] = [
     tagline: {
       it: 'Software tedesco per le imprese di pulizia: timbratura, attività e comunicazione del team. Niente report sigillato per il committente.',
       en: 'German software for cleaning companies: clock-in, tasks and team communication. No sealed report for the client.',
-      de: 'Kommunikations-App für Außendienst, Fokus auf Engagement. Kein Arbeitsnachweis.',
+      de: 'Deutsche Software für Reinigungsbetriebe: Stempeln, Aufgaben und Teamkommunikation. Kein versiegelter Bericht für den Auftraggeber.',
     },
     features: {
       gps_verified_at_site: false,
@@ -432,7 +432,7 @@ export const COMPETITORS: Competitor[] = [
     tagline: {
       it: 'Timbrature digitali italiane con GPS e QR code. Semplice e leggero, ma niente foto di prova né sigillo.',
       en: 'Italian digital clock-in with GPS and QR code. Simple and lightweight, but no proof photos or seal.',
-      de: 'Italienische digitale Stempelung via QR/NFC. Einfach und schlank, kein Foto-Nachweis.',
+      de: 'Italienische digitale Stempelung mit GPS und QR-Code. Einfach und schlank, aber keine Nachweisfotos und kein Siegel.',
     },
     features: {
       gps_verified_at_site: true,
@@ -457,7 +457,7 @@ export const COMPETITORS: Competitor[] = [
     tagline: {
       it: 'La suite HR italiana per eccellenza, dalle presenze al cedolino. Timbratura con geofence e badge NFC, niente prova per il committente.',
       en: 'A widely used Italian HR suite, from attendance to payslip. Geofenced clock-in and NFC badges, no proof for the client.',
-      de: 'Die italienische HR-Suite schlechthin, von der Zeiterfassung bis zum Lohnzettel. Stempelung mit Geofence, kein Nachweis für den Auftraggeber.',
+      de: 'Eine in Italien weit verbreitete HR-Suite, von der Zeiterfassung bis zur Lohnabrechnung. Stempeln mit Geofence und NFC-Badges, kein Nachweis für den Auftraggeber.',
     },
     features: {
       gps_verified_at_site: true,
@@ -482,7 +482,7 @@ export const COMPETITORS: Competitor[] = [
     tagline: {
       it: 'Piattaforma HR spagnola per le PMI, con ferie e assenze in ordine. Geolocalizzazione facoltativa sulla timbratura, senza controllo delle posizioni simulate.',
       en: 'Spanish HR platform for SMEs, keeping leave and absences in order. Optional geolocation on clock-in, with no check for spoofed locations.',
-      de: 'Spanische HR-Plattform für KMU, Urlaub und Abwesenheiten im Griff. Ortung bei der Stempelung optional, ohne Prüfung des Signals.',
+      de: 'Spanische HR-Plattform für KMU, mit geordneten Urlaubs- und Abwesenheitsdaten. Ortung beim Stempeln optional, ohne Prüfung auf gefälschte Standorte.',
     },
     features: {
       gps_verified_at_site: true,

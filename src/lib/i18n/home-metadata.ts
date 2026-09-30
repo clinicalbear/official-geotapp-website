@@ -54,7 +54,7 @@ export const HOME_META: Record<string, { title: string; description: string }> =
   },
   de: {
     title: 'GPS-Software Außendienst: Einsätze belegen | GeoTapp',
-    description: 'Kunde bestreitet den Einsatz? GeoTapp erfasst GPS, Uhrzeit, Fotos und Berichte mit Manipulationsnachweis. Arbeit belegen und ohne Diskussion bezahlt werden.',
+    description: 'Software für Teams im Außendienst: GeoTapp erfasst bei jeder Buchung Standort, Zeiten und Fotos und versiegelt sie in einem Bericht, den der Kunde selbst prüft.',
   },
   fr: {
     title: 'Logiciel GPS terrain : prouvez vos interventions | GeoTapp',

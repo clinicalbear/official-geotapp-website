@@ -403,6 +403,14 @@ export const NON_IN_VETRINA = new Set<string>([
   'cleaning-company-how-much-would-your-life-change-if-every-intervention-were-finally-under-control',
   'time-wasted-in-the-company-how-geotapp-timetracker-reveals-hidden-inefficiencies-of-thousands-of-euros-per-month',
   'from-excel-to-gps-how-an-electrician-saves-e12000-a-year',
+  // Versioni tedesche degli stessi articoli (titoli: «Nur GeoTapp bietet vollständigen Schutz»,
+  // «Buddy Punching wirklich stoppen», «Ihr Außendienst vollständig transparent», ecc.). Aggiunte il 30/09/2026.
+  'geotapp-ecosystem-2026-ihr-umfassender-schutz-stellen-sie-ihn-sich-jetzt-vor-und-setzen-sie-ihn-um',
+  'gps-stamping-2026-nur-geotapp-kombiniert-verschlusselung-und-vollstandiges-anti-spoofing',
+  'gps-zeiterfassung-gegen-buddy-punching-wie-man-es-wirklich-stoppt',
+  'reinigungsfirma-wie-sehr-wurde-sich-ihr-leben-verandern-wenn-alle-eingriffe-endlich-unter-kontrolle-waren',
+  'zeitverschwendung-im-unternehmen-wie-geotapp-timetracker-versteckte-ineffizienzen-von-tausenden-von-euro-pro-monat-aufdeckt',
+  'von-excel-zum-gps-wie-ein-elektriker-12-000-e-pro-jahr-einsparen-kann',
 ]);
 
 export function filterPosts<T extends WpIndexEntry>(

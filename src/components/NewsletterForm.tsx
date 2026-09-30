@@ -64,7 +64,7 @@ const T: Record<string, {
   },
   de: {
     title: 'Bleiben Sie informiert',
-    subtitle: 'Die besten Inhalte zu Außendienst, HR und Technologie für KMU.',
+    subtitle: 'Die besten Inhalte zu Einsatzplanung, Personalführung und digitalen Werkzeugen für kleine Unternehmen.',
     email_placeholder: 'Ihre E-Mail',
     sector_label: 'Ihre Branche',
     sector_placeholder: 'Branche auswählen',
@@ -74,7 +74,7 @@ const T: Record<string, {
       { value: 'idraulici',       label: 'Klempner' },
       { value: 'termoidraulici',  label: 'Heizungsinstallateure' },
       { value: 'pulizie',         label: 'Reinigung & Facility' },
-      { value: 'sicurezza',       label: 'Sicherheit & Überwachung' },
+      { value: 'sicurezza',       label: 'Sicherheit & Bewachung' },
       { value: 'edilizia',        label: 'Bauwesen' },
       { value: 'impianti',        label: 'Anlagenbau' },
       { value: 'manutenzione',    label: 'Wartung' },

@@ -50,11 +50,11 @@ export const NEWSLETTER: Record<NewsletterLocale, NewsletterContent> = {
     title: 'Der GeoTapp-Newsletter',
     intro: 'Einmal die Woche, wie sich geleistete Arbeit belegen lässt, ohne jemanden zu überwachen, und was Gesetz und Gerichte sagen, wenn die Sache schiefgeht.',
     promise: 'Keine Werbung im Ratgeberkostüm. In Wochen, in denen es nichts zu sagen gibt, kommt nichts.',
-    placeholder: 'Deine E-Mail',
+    placeholder: 'Ihre E-Mail',
     submit: 'Abonnieren',
     sending: 'Einen Moment…',
     success: 'Erledigt. Die nächste landet hier.',
-    error: 'Das hat nicht geklappt. Versuch es gleich noch einmal.',
+    error: 'Das hat nicht geklappt. Versuchen Sie es gleich noch einmal.',
     privacy: 'Mehr als die Adresse braucht es nicht. Abmelden geht aus jeder E-Mail mit einem Klick, dann ist sie weg.',
   },
   nl: {

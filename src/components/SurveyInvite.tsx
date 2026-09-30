@@ -23,7 +23,7 @@ type Copy = { title: string; body: string; cta: string };
 const COPY: Record<string, Copy> = {
   it: { title: 'Una domanda veloce', body: '2 minuti per dirci la tua sul lavoro sul campo. Anonimo, niente email.', cta: 'Partecipa al sondaggio' },
   en: { title: 'Quick question', body: '2 minutes to share your take on field work. Anonymous, no email.', cta: 'Take the survey' },
-  de: { title: 'Kurze Frage', body: '2 Minuten für deine Meinung zur Arbeit vor Ort. Anonym, keine E-Mail.', cta: 'Zur Umfrage' },
+  de: { title: 'Kurze Frage', body: '2 Minuten für Ihre Meinung zur Arbeit vor Ort. Anonym, keine E-Mail.', cta: 'Zur Umfrage' },
   fr: { title: 'Une question rapide', body: '2 minutes pour ton avis sur le travail terrain. Anonyme, sans e-mail.', cta: 'Participer' },
   nl: { title: 'Korte vraag', body: '2 minuten om je mening over werk op locatie te delen. Anoniem, geen e-mail.', cta: 'Doe mee' },
   es: { title: 'Una pregunta rápida', body: '2 minutos para tu opinión sobre el trabajo de campo. Anónimo, sin correo.', cta: 'Participar' },

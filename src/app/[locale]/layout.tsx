@@ -75,18 +75,17 @@ const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
   },
   de: {
     description:
-      'GeoTapp erzeugt verifizierbare Nachweise für geleistete Außendienstarbeit: versiegelte Berichte mit echten GPS-Daten, zeitgestempelte Fotobelege und Dokumentation mit Manipulationsnachweis, die jeder unabhängig prüfen kann.',
+      'GeoTapp ist eine Software, die Arbeit im Außendienst nachweist: Bei jeder Buchung erfasst sie Standort und Uhrzeit, sammelt Nachweisfotos und schließt alles in einem versiegelten Bericht ab, den der Kunde selbst prüfen kann. Der Standort wird nur beim Stempeln erfasst, nie fortlaufend.',
     featureList: [
-      'Arbeitsberichte mit Manipulationsnachweis, unabhängig verifizierbar',
-      'Fotobelege verknüpft mit GPS-Zeitstempel und Auftrag',
-      'Auftragsdokumentation: jede Änderung ist erkennbar',
-      'Arbeitsnachweis: objektive Beweise für jeden Außendiensteinsatz',
-      'GPS-basierte verifizierbare Zeiterfassung',
-      'Auftrags- und Einsatzverwaltung',
-      'DSGVO-konform, keine kontinuierliche Verfolgung',
-      'Mobile App für Android und iOS (Flutter)',
+      'Versiegelte Berichte: Jede spätere Änderung ist erkennbar, und jeder kann sie ohne Konto prüfen',
+      'Nachweisfotos, verknüpft mit Uhrzeit, Standort und Auftrag',
+      'Stempeln mit Standort bei Beginn, Pausen und Ende der Schicht',
+      'Keine fortlaufende Ortung: Zwischen zwei Buchungen wird automatisch nichts aufgezeichnet',
+      'Verwaltung von Aufträgen, Teams und Einsätzen im Büro (GeoTapp Flow, Web)',
+      'Native App für Mitarbeitende im Außendienst auf Android und iOS (GeoTapp TimeTracker)',
+      'Kostenloses Prüfprogramm, auch offline (GeoTapp Verifier)',
     ],
-    offersDescription: '14-tägige kostenlose Testphase, kostenpflichtige Pläne ab {price}/Nutzer/Monat via Stripe',
+    offersDescription: '14 Tage kostenlos testen, ohne Karte. Danach ein GeoTapp-Flow-Abonnement plus TimeTracker-Plätze ab {price} pro Mitarbeiter und Monat, Mindestlaufzeit 12 Monate',
   },
   fr: {
     description:

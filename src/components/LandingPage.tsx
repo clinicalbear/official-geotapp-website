@@ -113,7 +113,7 @@ export default function LandingPage({ data }: { data: HomepageData }) {
         <div className="absolute inset-0 z-0">
           <Image
             src="/hero-bg.webp"
-            alt="Background"
+            alt=""
             fill
             className="object-cover opacity-60 mix-blend-multiply"
             priority

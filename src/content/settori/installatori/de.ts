@@ -2,109 +2,205 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    // 2026-09-24: "arbeitszeiterfassung für installateure" sta fra pos 2 e 5 ogni giorno
-    // dal 25/08 (74 imp in 28gg, 104 su 105 imp della pagina coperte da query visibili)
-    // e fa ZERO click, dove a pos 4 se ne aspettano ~4. Il title apriva gia' con la
-    // query; non la diceva l'H1 ("Außendienst im Griff"), che e' cio' che Google usa
-    // quando riscrive il title. H1 allineato alla query; description che non ripete
-    // piu' il title e dice cosa si ottiene (GPS solo a entrata e uscita). Title invariato.
-    title: 'Arbeitszeiterfassung für Installateure und Elektriker | GeoTapp',
-    description: 'Stunden, Einsätze und Fotobeweise vom Monteur, GPS nur beim Ein- und Ausstempeln. Digitale Stundenzettel, für die DSGVO-Grenzen gebaut, §17 MiLoG-tauglich.',
+    title: 'App für Installateure und Heizungsbauer | GeoTapp Einsatzberichte mit GPS',
+    description: 'GeoTapp ist die App für Installateure, Klempner und Heizungsbauer: Einsatzberichte mit Position und Fotos, Fotonachweise und Berichte, in denen jede Änderung erkennbar ist. Kostenlos testen.',
   },
   hero: {
-    badge: 'Arbeitszeiterfassung und Einsatzverwaltung für Elektriker und Heizungsinstallateure',
-    h1_line1: 'Arbeitszeiterfassung für Installateure:',
-    h1_line2: 'Einsätze, Stunden und Nachweise klar dokumentiert',
-    subtitle: 'GeoTapp verbindet Flow + TimeTracker für Handwerksbetriebe, die zwischen Baustellen, Fahrzeugen und Endkunden arbeiten. Die Android- und iOS-Apps unterstützen den Techniker im Außendienst; das Büro sieht Auftrag, Zeiten, Fotobeweise und Notizen ohne Nachfragen. Die Arbeitszeiterfassung läuft dabei mit, für die Grenzen der DSGVO gebaut und §17 MiLoG-tauglich.',
-    cta_primary: 'Demo anfragen',
-    cta_note: 'Keine Bindung. Antwort innerhalb von 12 Geschäftsstunden.',
+    badge: 'App für Installateure, Klempner und Heizungsbauer',
+    h1_line1: 'Der Kunde bestreitet die Stunden?',
+    h1_line2: 'Zeigen Sie ihm den Einsatzbericht mit GPS.',
+    subtitle: 'Ihre Techniker stempeln mit einem Tipp am Smartphone. Das System erstellt einen Einsatzbericht mit erfasster Position und Fotos: Jede Änderung ist erkennbar. Wenn der Kunde fragt „Wie lange haben Sie gebraucht?“, haben Sie die Antwort parat.',
+    cta_primary: '14 Tage kostenlos testen',
+    cta_note: 'Keine Kreditkarte. Vom ersten Tag an einsatzbereit.',
   },
   pain: {
-    title: 'Das Problem, das Sie kennen',
+    title: 'Das Problem, das Sie schon kennen',
     items: [
       {
-        title: 'Streitigkeiten über Stunden und Einsätze',
-        desc: 'Der Kunde bestreitet die Anwesenheitszeit. Der Techniker hat keine Beweise. Der Streit zieht sich Wochen hin und kostet mehr als der Einsatz selbst.',
+        title: 'Streit über Stunden und Einsätze',
+        desc: 'Der Kunde bestreitet die Uhrzeit. Der Techniker hat keinen Nachweis. Der Streit zieht sich über Wochen und kostet mehr als der Einsatz selbst.',
       },
       {
-        title: 'Büro jagt dem Außendienst nach',
-        desc: 'Der Teamleiter ruft Techniker an, um zu wissen wo sie sind, was sie getan haben, wann sie fertig sind. Jeder Anruf unterbricht beide Seiten.',
+        title: 'Das Büro läuft dem Außendienst hinterher',
+        desc: 'Die Leitung ruft die Techniker an, um zu wissen, wo sie sind, was sie gemacht haben und wann sie fertig werden. Jeder Anruf unterbricht beide Seiten.',
       },
       {
-        title: 'Unvollständige oder verlorene Stundenzettel',
-        desc: 'Zettel, WhatsApp, E-Mails: die Daten kommen unvollständig, verspätet oder gar nicht. Die Nachkalkulation ist wieder eine eigene Arbeit.',
+        title: 'Unvollständige oder verlorene Einsatzberichte',
+        desc: 'Zettel, WhatsApp, E-Mails: Die Daten kommen unvollständig, zu spät oder gar nicht. Die Abrechnung nachträglich zu rekonstruieren, ist eine Arbeit für sich.',
       },
     ],
   },
   workflow: {
     title: 'So funktioniert es in drei Schritten',
-    subtitle: 'Vom Fahrzeug ins Büro, ohne Telefonate.',
+    subtitle: 'Vom Transporter ins Büro, ohne Anrufe.',
     steps: [
       {
-        title: 'Techniker stempelt im Außendienst',
-        desc: 'Mit GeoTapp TimeTracker erfasst er Beginn, Ende, Fotos und Notizen direkt vom Smartphone. GPS-verifiziert, für die Grenzen der DSGVO gebaut, §17 MiLoG-geeignet.',
+        title: 'Der Techniker stempelt vor Ort',
+        desc: 'Mit GeoTapp TimeTracker erfasst er Beginn, Pausen, Ende, Fotos und Notizen direkt am Smartphone. Die Position wird nur beim Stempeln erfasst, nie durchgehend.',
       },
       {
-        title: 'Büro sieht jede Stempelung sofort',
-        desc: 'Flow empfängt die Daten sofort. Der Teamleiter sieht Auftrag, Fortschritt, zugewiesenen Techniker und Fotobeweise ohne anzurufen.',
+        title: 'Das Büro sieht alles, sobald es ankommt',
+        desc: 'Flow erhält die Daten, sobald das Telefon Netz hat. Die Leitung sieht Auftrag, Fortschritt, zugewiesenen Techniker und Fotonachweise, ohne anzurufen.',
       },
       {
-        title: 'Bericht ist bereits fertig',
-        desc: 'Am Ende des Einsatzes ist der Stundenzettel bereits strukturiert mit echten Daten. Keine manuelle Nacharbeit. Für jeden Streit liegt eine Antwort bereit.',
+        title: 'Der Bericht ist Ihr Nachweis, zum Vorzeigen beim Kunden',
+        desc: 'Nach dem Einsatz wird der Bericht mit den erfassten GPS-Daten und Fotonachweisen erstellt. Jede Änderung ist erkennbar. Der Kunde kann ihn selbst prüfen. Wenn ein Zweifel aufkommt, müssen Sie nichts erklären. Sie müssen nur zeigen.',
       },
     ],
   },
+  differenza: {
+    title: 'App für Installateure: Stempelung oder überprüfbarer Nachweis?',
+    subtitle: 'Die meisten Apps erfassen nur die Uhrzeit. GeoTapp liefert überprüfbare Nachweise.',
+    rows: [
+      {
+        label: 'Was wird erfasst',
+        competitor: 'Ein- und Ausstempelzeit',
+        geotapp: 'Uhrzeit + Position bei der Stempelung + Fotos + erledigte Arbeit',
+      },
+      {
+        label: 'Wer kann prüfen',
+        competitor: 'Nur Ihr Büro',
+        geotapp: 'Sie, der Auftraggeber, ein Dritter, eigenständig',
+      },
+      {
+        label: 'Bei Streitigkeiten',
+        competitor: 'Nur Ihr Wort',
+        geotapp: 'Versiegelter Bericht, jede Änderung erkennbar',
+      },
+      {
+        label: 'Einsatzbericht',
+        competitor: 'Manuell oder fehlend',
+        geotapp: 'Automatisch erstellt, mit GPS und Fotos',
+      },
+      {
+        label: 'DSGVO',
+        competitor: 'Oft fraglich',
+        geotapp: 'Gebaut, um die Vorgaben der DSGVO einzuhalten, Vorlagen inklusive',
+      },
+    ],
+  },
+
+  prima_dopo: {
+    title: 'Was jetzt passiert. Was mit GeoTapp passiert.',
+    prima: [
+      'Der Kunde bestreitet die Uhrzeit oder den ausgeführten Einsatz.',
+      'Der Techniker sagt „Habe ich gemacht“. Der Kunde sagt „Davon ist nichts zu sehen“.',
+      'Sie haben nichts in der Hand. Die Diskussion dauert Tage.',
+      'Manchmal verlieren Sie die Zahlung. Immer verlieren Sie Zeit.',
+    ],
+    dopo: [
+      'Der Kunde bestreitet die Uhrzeit oder den ausgeführten Einsatz.',
+      'Sie öffnen den Bericht: Fotos, GPS, Uhrzeit, Siegel.',
+      'Sie schicken ihn, und die Diskussion ist in einer Minute vorbei.',
+      'Sie haben einen Nachweis zur Hand. Auch der Techniker hat etwas in der Hand.',
+    ],
+  },
+
+  scenario: {
+    title: 'Ein typischer Fall',
+    body: 'Der Kunde bestreitet das Arbeitsende und verlangt einen Nachlass auf die Rechnung. Mit GeoTapp öffnen Sie den Einsatzbericht: Foto der fertigen Anlage, Uhrzeiten und Positionen der Stempelungen, automatisch berechnete Dauer, alles vom Smartphone des Technikers im Moment der Arbeit erstellt.',
+    resolution: 'Statt Aussage gegen Aussage gibt es ein Dokument, das der Kunde selbst prüfen kann.',
+  },
+
   features: {
-    title: 'Was Sie erhalten',
+    title: 'App für Installateure und Heizungsbauer: Einsatzberichte mit GPS und Fotonachweise.',
     items: [
       {
-        title: 'Arbeitszeiterfassung per GPS, nach §17 MiLoG',
-        desc: 'Jeder Einsatzbeginn und -abschluss ist mit Position, Zeitstempel und Auftrag verknüpft. Verteidigbar gegenüber Kunden und Behörden.',
+        title: 'Überprüfbare GPS-Stempelung',
+        desc: 'Jeder Beginn, jede Pause und jedes Ende ist mit Position, Uhrzeit und Auftrag verknüpft. Zum Vorzeigen beim Kunden oder bei der Behörde, wenn es darauf ankommt.',
       },
       {
-        title: 'Fotobeweise im Außendienst',
-        desc: 'Der Techniker fotografiert direkt aus der App. Bilder mit Datum und Uhrzeit verknüpft mit dem Einsatz. Keine Möglichkeit zur Anfechtung.',
+        title: 'Versiegelte Fotonachweise',
+        desc: 'Der Techniker fotografiert direkt in der App. Jedes Bild ist mit GPS und Zeitstempel dem Einsatz zugeordnet und steht danach im Bericht. Niemand kann es ändern, ohne dass das System es erkennt.',
       },
       {
-        title: 'Export für die Lohnbuchhaltung',
-        desc: 'Monatliche Anwesenheitsdaten für DATEV, Lexware, Personio und LODAS exportieren. Die Lohnabrechnung wird zur 10-Minuten-Aufgabe.',
+        title: 'Export für die Lohnabrechnung',
+        desc: 'Exportieren Sie die Anwesenheiten des Monats als Excel- oder CSV-Datei, bereit für Ihre Lohnbuchhaltung oder Steuerberatung.',
+      },
+      {
+        title: 'Aufträge über mehrere Baustellen verwalten',
+        desc: 'Weisen Sie Aufträge zu, verfolgen Sie den Fortschritt jeder Baustelle und erhalten Sie eine Meldung, wenn eine Schicht offen bleibt.',
+      },
+      {
+        title: 'Automatische digitale Einsatzberichte',
+        desc: 'Nach dem Einsatz ist der Bericht schon fertig: Stunden, Fotos und Notizen. Kein Papier, keine Anrufe. Das Büro schickt ihn mit einem Klick aus Flow an den Kunden.',
+      },
+      {
+        title: 'Auch Ihre Techniker haben einen Nachweis',
+        desc: 'Ein überprüfbarer Bericht gibt dem Techniker etwas in die Hand gegen unbegründete Vorwürfe. Wer gut arbeitet, belegt es mit Daten. Keine Grauzone zwischen Außendienst und Büro.',
       },
     ],
   },
+
+  cta_mid: {
+    title: 'Sie möchten sehen, wie es bei einem echten Einsatz funktioniert?',
+    body: 'Testen Sie es an einem echten Einsatz, vom Anlegen des Auftrags bis zum Bericht, den der Kunde erhält: 14 Tage kostenlos, ohne Kreditkarte.',
+    cta: '14 Tage kostenlos testen',
+  },
+
+  trust: {
+    title: 'Unsere Berichte: Jede Änderung ist erkennbar. Ob von Ihnen oder von uns.',
+    body: 'GeoTapp-Berichte erstellt das System im Moment des Einsatzes. Sobald ein Bericht versiegelt ist, bricht jede Korrektur einer Uhrzeit oder jedes Verschieben eines Fotos das Siegel, und die Prüfung meldet es. Wer den Bericht erhält, Kunde oder Berater, kann ihn selbst prüfen.',
+    badge: 'Von jedem prüfbar, ohne Zugang zu Ihrem Konto',
+  },
   testimonial: {
-    quote: 'Früher haben wir Stunden damit verbracht, Stundenzettel vom Außendienst einzusammeln. Jetzt ist der Bericht fertig, wenn der Techniker zum Fahrzeug zurückkommt.',
+    quote: 'Früher haben wir Stunden damit verbracht, die Zettel aus dem Außendienst einzusammeln. Jetzt ist der Einsatzbericht schon fertig, wenn der Techniker zum Transporter zurückkommt.',
     author: 'Klaus M.',
     role: 'Betriebsleiter, Elektroinstallationsbetrieb',
   },
   faq: {
-    title: 'Häufige Fragen',
-    subtitle: 'Was uns am häufigsten vor dem Start gefragt wird.',
+    title: 'Häufig gestellte Fragen',
+    subtitle: 'Was uns am häufigsten gefragt wird, bevor es losgeht.',
     items: [
       {
-        q: 'Wie funktioniert die Arbeitszeiterfassung für Installateure im Außendienst?',
-        a: 'Der Techniker stempelt direkt beim Kunden über das Smartphone, mit GPS-Prüfung und Zeitstempel. Beginn, Ende und Pausen landen unveränderlich im Protokoll, verknüpft mit Auftrag und Fotos. Das Büro trägt nichts nach und ruft niemanden an.',
+        q: 'Eignet sich GeoTapp als Software für Installateure und Wartungsbetriebe?',
+        a: 'Ja. GeoTapp hilft Installateuren, Elektrikern, Klempnern und Wartungsbetrieben, Einsätze, Einsatzberichte, Stunden, Fahrten und Nachweise der geleisteten Arbeit zwischen Außendienst und Büro zu verwalten.',
       },
       {
-        q: 'Ist GeoTapp für Elektriker und Heizungsinstallateure geeignet?',
-        a: 'Ja. GeoTapp hilft Elektrikern, Heizungsinstallateuren und Handwerksbetrieben bei der Einsatzverwaltung, Stundenzetteln, einer für das ArbZG ausgelegten Arbeitszeiterfassung und Außendienst-Koordination.',
+        q: 'Kann ich GeoTapp für Einsatzberichte und Fotonachweise nutzen?',
+        a: 'Ja. TimeTracker sammelt Fotos, Notizen und Stempelungen im Außendienst, während Flow alles dem Auftrag und der Einsatzhistorie zuordnet.',
       },
       {
-        q: 'Unterstützt GeoTapp die Anforderungen nach §17 MiLoG?',
-        a: 'Ja. §17 MiLoG gilt für die in §2a SchwarzArbG genannten Wirtschaftsbereiche, dazu zählt das Baugewerbe einschließlich des SHK-Handwerks: Beginn, Ende und Dauer der täglichen Arbeitszeit sind spätestens am siebten Kalendertag nach dem Arbeitstag aufzuzeichnen und zwei Jahre aufzubewahren. Die GPS-gestützte Arbeitszeiterfassung von GeoTapp erzeugt dieses Protokoll unveränderlich und exportierbar und unterstützt zugleich die Vorgaben des ArbZG.',
-      },
-      {
-        q: 'Kann ich die Daten direkt in DATEV oder Lexware importieren?',
-        a: 'GeoTapp exportiert Anwesenheitsdaten in Standardformaten, die mit DATEV, Lexware, Personio und LODAS kompatibel sind. Ihr Lohnbüro oder Steuerberater kann die Daten direkt einlesen.',
+        q: 'Hilft GeoTapp, Streit über Stunden und ausgeführte Arbeiten zu verringern?',
+        a: 'Das ist einer der wichtigsten Anwendungsfälle: Zeiten, Position, Notizen und Fotonachweise machen den Einsatz klarer nachvollziehbar und leichter vorzeigbar.',
       },
     ],
   },
   cta: {
-    title: 'Schluss mit dem Nachlaufen.',
-    subtitle: 'GeoTapp Flow und TimeTracker geben Ihrem Betrieb die operative Kontrolle, die Sie wirklich brauchen.',
-    primary: 'Demo anfragen',
+    title: 'Die Arbeit wurde gemacht. Jetzt belegen Sie es.',
+    subtitle: 'GeoTapp erstellt überprüfbare Nachweise für jeden Einsatz, versiegelte Berichte, die der Kunde selbst prüfen kann.',
+    primary: '14 Tage kostenlos testen',
     secondary: 'Preise ansehen',
   },
+  pricing_hint: {
+    label: 'TimeTracker-Plätze ab',
+    per: 'pro Mitarbeiter und Monat, zzgl. Flow-Tarif ab 39 € im Monat',
+    note: '14 Tage kostenlos testen',
+  },
+
   schema_sector_name: 'Elektriker und Heizungsinstallateure',
+  schema_faq: [
+    {
+      question: 'Funktioniert GeoTapp für Klempner und Heizungsbauer im Außendienst?',
+      answer: 'Ja. GeoTapp ist die App für Installateure und Heizungsbauer, gemacht für alle, die auf Baustellen und in Privathaushalten arbeiten. Mit der integrierten Einsatzberichtsfunktion erfassen die Techniker Einsätze, Fotos und Stunden direkt am Smartphone, ohne ins Büro zurückzukehren.',
+    },
+    {
+      question: 'Wie dokumentiere ich einen Wartungs- oder Installationseinsatz?',
+      answer: 'Nach jedem Einsatz erfasst der Techniker in GeoTapp Beginn und Ende mit Position, Fotos der ausgeführten Arbeit und technische Notizen. Das System erstellt einen versiegelten Bericht, den der Kunde eigenständig prüfen kann.',
+    },
+    {
+      question: 'Kann ich mit GeoTapp mehrere Installationsteams auf verschiedenen Baustellen steuern?',
+      answer: 'Ja. Mit GeoTapp Flow koordiniert der Inhaber mehrere Teams, weist Aufträge zu, verfolgt den Stand der Einsätze und sammelt Fotonachweise von allen aktiven Baustellen, sobald sie ankommen.',
+    },
+    {
+      question: 'Helfen die Berichte bei Streit mit dem Kunden?',
+      answer: 'GeoTapp-Berichte sind mit Position, Zeitstempel und Fotonachweisen versiegelt. Der Kunde prüft sie selbst. Sie helfen zu zeigen, dass das Dokument nicht verändert wurde; allein sind sie weder ein absoluter Nachweis des Sachverhalts noch eine Rechtsberatung.',
+    },
+    {
+      question: 'Hält GeoTapp bei der Ortung der Techniker die Vorgaben der DSGVO ein?',
+      answer: 'Es ist dafür gebaut: Die Position wird nur erfasst, wenn der Techniker stempelt oder ein Nachweisfoto aufnimmt, nie durchgehend, und die Mitarbeiterinformation wird vor der ersten Stempelung in der App unterschrieben. Alles Weitere, etwa die Beteiligung des Betriebsrats, wo sie nötig ist, liegt beim Arbeitgeber.',
+    },
+  ],
 };
 
 export default content;

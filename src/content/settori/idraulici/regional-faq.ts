@@ -7,7 +7,7 @@ export interface RegionalFaqItem {
 
 export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   it: 'Conformità normativa in Italia',
-  de: 'Compliance in Deutschland',
+  de: 'Vorschriften und Nachweise in Deutschland',
   fr: 'Conformité en France',
   es: 'Cumplimiento normativo en España',
   pt: 'Conformidade em Portugal',
@@ -36,16 +36,16 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   ],
   de: [
     {
-      q: 'Zeiterfassung nach dem Tarifvertrag SHK-Handwerk?',
-      a: 'Stunden je Installateur und Auftrag, Bereitschafts- und Fahrtzeiten und Aufbewahrung nach §16 ArbZG, bei jedem Einsatz erfasst.',
+      q: 'Arbeitszeiten und Einsätze im SHK-Handwerk?',
+      a: 'GeoTapp erfasst bei jeder Stempelung Beginn, Pausen und Ende mit Position und Uhrzeit, je Installateur und Auftrag, und exportiert sie als Excel- oder CSV-Datei für die Lohnbuchhaltung oder Steuerberatung. Die Anwendung des Tarifvertrags (Zuschläge, Zulagen) und die Lohnabrechnung bleiben bei ihr und beim Unternehmen.',
     },
     {
-      q: 'DSGVO und Betriebsrat bei GPS-Ortung der Installateure?',
-      a: 'Ortung nur während der Arbeitszeit, mit Interessenabwägung nach Art. 6 DSGVO und Mitbestimmung des Betriebsrats nach §87 BetrVG.',
+      q: 'GPS-Ortung der Installateure: DSGVO und Betriebsrat?',
+      a: 'Die Position wird nur beim Stempeln und bei Nachweisfotos erfasst, nie durchgehend, und die Mitarbeiterinformation wird vor dem Stempeln in der App unterschrieben. Ob eine Interessenabwägung nach Art. 6 DSGVO und die Mitbestimmung des Betriebsrats nach §87 Abs. 1 Nr. 6 BetrVG erforderlich sind, klärt der Arbeitgeber.',
     },
     {
-      q: 'Gasinstallation nach TRGI (DVGW G 600)?',
-      a: 'Zuordnung der Gasarbeiten zum eingetragenen Installateur und Nachweis nach TRGI (DVGW-Arbeitsblatt G 600) je Einsatz.',
+      q: 'Gas- und Wasserinstallation: Zulassung und TRGI (DVGW G 600)?',
+      a: 'GeoTapp prüft keine Zulassungen, auch nicht für Gasarbeiten, und erstellt keine Nachweise nach TRGI (DVGW-Arbeitsblatt G 600). Es erfasst Uhrzeit, Position und Fotos jedes Einsatzes an Sanitär- und Gasanlagen, die sich der Anlagendokumentation beifügen lassen.',
     },
   ],
   fr: [

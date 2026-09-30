@@ -19,7 +19,7 @@ export const CONTENT_DATES: Record<string, string> = {
   "products/geotapp-verifier": "2026-09-30",
   "cos-e-geotapp": "2026-09-30",
   "pricing": "2026-09-30",
-  "roi-calculator": "2026-09-25"
+  "roi-calculator": "2026-09-30"
 };
 
 /** Data ISO (YYYY-MM-DD) dell'ultimo aggiornamento reale del contenuto di una pagina.

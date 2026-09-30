@@ -32,6 +32,11 @@ interface Props {
   initialId?: string;
 }
 
+// Etichette accessibili del segno di spunta e della croce, per lingua (le altre ricadono sull'inglese).
+const YES_NO: Record<string, [string, string]> = {
+  de: ['Ja', 'Nein'],
+};
+
 export function DynamicComparison({ locale, copy, initialId }: Props) {
   const initial = COMPETITORS.find((c) => c.id === initialId) ?? COMPETITORS[0];
   const [selected, setSelected] = useState<Competitor>(initial);
@@ -136,13 +141,13 @@ export function DynamicComparison({ locale, copy, initialId }: Props) {
                       <Check
                         size={20}
                         className="inline-block text-[#15803d]"
-                        aria-label="yes"
+                        aria-label={YES_NO[locale]?.[0] ?? 'yes'}
                       />
                     ) : (
                       <X
                         size={20}
                         className="inline-block text-slate-300"
-                        aria-label="no"
+                        aria-label={YES_NO[locale]?.[1] ?? 'no'}
                       />
                     )}
                   </td>
@@ -151,13 +156,13 @@ export function DynamicComparison({ locale, copy, initialId }: Props) {
                       <Check
                         size={20}
                         className="inline-block text-slate-500"
-                        aria-label="yes"
+                        aria-label={YES_NO[locale]?.[0] ?? 'yes'}
                       />
                     ) : (
                       <X
                         size={20}
                         className="inline-block text-slate-300"
-                        aria-label="no"
+                        aria-label={YES_NO[locale]?.[1] ?? 'no'}
                       />
                     )}
                   </td>

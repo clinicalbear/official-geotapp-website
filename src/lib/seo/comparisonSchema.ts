@@ -36,7 +36,7 @@ export const BREADCRUMB_LABEL: Record<string, string> = {
 export const HOME_LABEL: Record<string, string> = {
   it: 'Home',
   en: 'Home',
-  de: 'Home',
+  de: 'Startseite',
   fr: 'Accueil',
   es: 'Inicio',
   pt: 'Início',

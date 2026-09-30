@@ -160,6 +160,16 @@ function buildPricingFAQ(locale: AppLocale): Record<string, object> {
         { '@type': 'Question', name: 'Are there any hidden fees?', acceptedAnswer: { '@type': 'Answer', text: 'No. Support and updates are included, and GeoTapp Verifier, which your clients use to check reports, is free.' } },
       ],
     },
+    de: {
+      '@context': 'https://schema.org', '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: 'Bietet GeoTapp eine kostenlose Testphase?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Die Testphase dauert 14 Tage und verlangt keine Kreditkarte.' } },
+        { '@type': 'Question', name: 'Wie viel kostet GeoTapp?', acceptedAnswer: { '@type': 'Answer', text: `GeoTapp Flow, das Web-Panel, kostet 39 € im Monat mit dem Tarif Solo, 99 € mit Team und 199 € mit Business (390, 990 und 1.990 €, wenn Sie das Jahr auf einmal zahlen). Die Plätze der TimeTracker-App kommen separat dazu: ${monthlyRate} pro Mitarbeiter und Monat bis zum 25. Platz, 2,50 € ab dem 26. Preise zzgl. USt.` } },
+        { '@type': 'Question', name: 'Was kostet es für ein Team mit 5 Mitarbeitenden?', acceptedAnswer: { '@type': 'Answer', text: `Zum gewählten Flow-Tarif kommen 5 TimeTracker-Plätze: ${fiveOpsMonthly} im Monat, ${fiveOpsAnnual} im Jahr, wenn Sie das ganze Jahr zahlen. Es fallen keine Aktivierungsgebühren an.` } },
+        { '@type': 'Question', name: 'Gibt es eine Mindestlaufzeit?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Das Abonnement läuft mindestens 12 Monate, zahlbar auf einmal oder in Monatsraten. In einen höheren Tarif wechseln Sie jederzeit im Verwaltungsbereich.' } },
+        { '@type': 'Question', name: 'Gibt es versteckte Kosten?', acceptedAnswer: { '@type': 'Answer', text: 'Nein. Support und Updates sind enthalten, und GeoTapp Verifier, mit dem Ihre Kunden die Berichte prüfen, ist kostenlos.' } },
+      ],
+    },
   };
 }
 
@@ -180,7 +190,7 @@ const PRICING_BREADCRUMB: Record<string, object> = {
 const PRICING_META: Record<string, { title: string; description: string }> = {
   it: { title: 'Prezzi GeoTapp - Piani e abbonamenti | GeoTapp', description: 'Scopri i piani GeoTapp: prova gratuita 14 giorni, abbonamenti per team con timbratura GPS, gestione turni e verifica report. Nessun costo nascosto.' },
   en: { title: 'GeoTapp pricing: plans for field teams, 14-day free trial', description: 'Office plans for Flow, a seat for every worker on TimeTracker, 14 days free without a card. See what each plan includes before you start.' },
-  de: { title: 'GeoTapp Preise - Pläne & Abonnements | GeoTapp', description: 'Entdecken Sie GeoTapp-Pläne: 14 Tage kostenlos testen, monatliche Abonnements für Teams mit GPS-Zeiterfassung, Schichtverwaltung und Berichtsprüfung.' },
+  de: { title: 'GeoTapp Preise: Tarife für Teams im Außendienst, 14 Tage kostenlos', description: 'Büro-Tarife für Flow, ein Platz pro Mitarbeiter im TimeTracker, 14 Tage kostenlos ohne Karte. Sehen Sie vor dem Start, was jeder Tarif enthält.' },
   fr: { title: 'Tarifs GeoTapp - Plans et abonnements | GeoTapp', description: 'Découvrez les plans GeoTapp : plan de base gratuit, abonnements mensuels pour équipes avec pointage GPS, gestion des horaires et vérification des rapports.' },
   es: { title: 'Precios GeoTapp - Planes y suscripciones | GeoTapp', description: 'Conoce los planes GeoTapp: prueba gratuita 14 días, suscripciones mensuales para equipos con fichaje GPS, gestión de turnos y verificación de informes.' },
   pt: { title: 'Preços GeoTapp - Planos e subscrições | GeoTapp', description: 'Planos GeoTapp: avaliação 14 dias grátis, subscrições mensais para equipas com ponto GPS, turnos e relatórios verificáveis.' },

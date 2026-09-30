@@ -308,7 +308,7 @@ async function getArticles(locale: string): Promise<Article[]> {
 const META_TEXTS: Record<string, { title: string; description: string }> = {
   it: { title: 'GeoTapp - Link ufficiali', description: 'Prove GPS, foto e report verificabili. Prova gratis per 14 giorni, senza carta di credito.' },
   en: { title: 'GeoTapp - Official Links', description: 'GPS proof, photos and verifiable reports. Try it free for 14 days, no credit card required.' },
-  de: { title: 'GeoTapp - Offizielle Links', description: 'GPS-Nachweis, Fotos und überprüfbare Berichte. Kostenlose Testversion, keine Kreditkarte erforderlich.' },
+  de: { title: 'GeoTapp - Offizielle Links', description: 'Standortnachweis, Fotos und prüfbare Berichte. 14 Tage kostenlos testen, ohne Kreditkarte.' },
   fr: { title: 'GeoTapp - Liens officiels', description: 'Preuves GPS, photos et rapports vérifiables. Essai gratuit, sans carte de crédit.' },
   es: { title: 'GeoTapp - Enlaces oficiales', description: 'Pruebas GPS, fotos e informes verificables. Prueba gratuita, sin tarjeta de crédito.' },
   pt: { title: 'GeoTapp - Links oficiais', description: 'Prova GPS, fotos e relatórios verificáveis. Teste grátis, sem cartão de crédito.' },

@@ -12,7 +12,7 @@
 const LICENSE: Record<string, string> = {
   it: '© 2026 GeoTapp — contenuto originale. Puoi citarlo e riprenderne parti con un link a questa pagina. Ripubblicazione integrale o uso commerciale solo con nostro permesso.',
   en: '© 2026 GeoTapp — original content. You may quote it and reuse parts with a link to this page. Full republication or commercial use only with our permission.',
-  de: '© 2026 GeoTapp — Originalinhalt. Du darfst ihn zitieren und Teile mit einem Link zu dieser Seite übernehmen. Vollständige Weiterveröffentlichung oder kommerzielle Nutzung nur mit unserer Erlaubnis.',
+  de: '© 2026 GeoTapp — Originalinhalt. Sie dürfen ihn zitieren und Teile mit einem Link zu dieser Seite übernehmen. Vollständige Weiterveröffentlichung oder kommerzielle Nutzung nur mit unserer Erlaubnis.',
   fr: '© 2026 GeoTapp — contenu original. Vous pouvez le citer et en reprendre des extraits avec un lien vers cette page. Republication intégrale ou usage commercial uniquement avec notre autorisation.',
   nl: '© 2026 GeoTapp — originele content. Je mag ernaar citeren en delen overnemen met een link naar deze pagina. Volledige herpublicatie of commercieel gebruik alleen met onze toestemming.',
   es: '© 2026 GeoTapp — contenido original. Puedes citarlo y reutilizar partes con un enlace a esta página. Republicación íntegra o uso comercial solo con nuestro permiso.',

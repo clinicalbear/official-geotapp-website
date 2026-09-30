@@ -44,6 +44,8 @@ const CAROUSEL_SLIDES = [
     alt_en: 'GeoTapp Flow - Dashboard with KPIs and operational modules',
     label_it: 'Dashboard KPI e moduli operativi',
     label_en: 'KPI Dashboard & Operational Modules',
+    alt_de: 'GeoTapp Flow - Dashboard mit Kennzahlen und Einsatzmodulen',
+    label_de: 'Dashboard mit Kennzahlen und Einsatzmodulen',
   },
   {
     src: '/screen_live_map.webp',
@@ -51,6 +53,8 @@ const CAROUSEL_SLIDES = [
     alt_en: 'GeoTapp Flow - Map with the positions recorded at clock-in',
     label_it: 'Mappa delle posizioni registrate alle timbrature',
     label_en: 'Map of the positions recorded at clock-in',
+    alt_de: 'GeoTapp Flow - Karte mit den bei den Buchungen erfassten Standorten',
+    label_de: 'Karte der bei den Buchungen erfassten Standorte',
   },
   {
     src: '/schermataFlow.webp',
@@ -58,6 +62,8 @@ const CAROUSEL_SLIDES = [
     alt_en: 'GeoTapp Flow - Operational dashboard',
     label_it: 'Dashboard operativa',
     label_en: 'Operational Dashboard',
+    alt_de: 'GeoTapp Flow - Einsatzübersicht',
+    label_de: 'Einsatzübersicht',
   },
 ];
 
@@ -118,9 +124,30 @@ const FLOW_COPY: Record<string, FlowCopy> = {
     legalKicker: 'Local regulation',
     trial: 'Try Flow free for 14 days',
   },
+  de: {
+    statusLabel: 'Wo es eingesetzt wird',
+    releaseNote: 'Flow ist eine Web-App: Sie nutzen sie im Browser, auf Computer und Tablet, ohne etwas zu installieren. Die Mitarbeitenden im Außendienst nutzen GeoTapp TimeTracker, die App bei Google Play und im App Store, und was sie stempeln, kommt in Flow an.',
+    doesTitle: 'Was GeoTapp Flow macht',
+    doesSub: 'Es ist die Verwaltung fürs Büro und hält zugleich den Nachweis dessen zusammen, was das Team getan hat: Planung, Arbeit vor Ort, Abrechnung und Berichte für den Kunden.',
+    cards: [
+      { title: 'Verwaltung und Einsatzzentrale', description: 'Flow gibt dem Büro eine einzige Umgebung für Kunden, Aufträge, Kalender, Dokumente, Urlaub und Abwesenheiten, Verwaltung und die Koordination der Teams.' },
+      { title: 'Nachweise, die Sie dem Kunden zeigen können', description: 'Fotos, Notizen und Buchungen, die vor Ort erfasst werden, bleiben dem Auftrag zugeordnet, sodass das Büro mit Fakten antwortet und nicht mit Vermutungen.' },
+      { title: 'Auftragshistorie und Export', description: 'Für jeden Auftrag können Sie das Paket mit dem Ereignisverlauf, den Buchungen samt Standorten und den Fotos herunterladen und dem Kunden den versiegelten Bericht schicken.' },
+      { title: 'Schnellere Abrechnung', description: 'Angebote, Rechnungen und die Anbindung an Fatture in Cloud arbeiten mit den echten Auftragsdaten: Die Abrechnung ist schneller fertig, und es gibt weniger zu diskutieren.' },
+    ],
+    blocks: [
+      { title: 'Gemacht für Büro, Verwaltung und Koordination', description: 'Inhaber, Verwaltung und Führungskräfte nutzen Flow, wenn sie weniger interne Streitigkeiten, klarere Rollen und einen klaren Überblick über die geleistete Arbeit wollen.' },
+      { title: 'Mit TimeTracker verbunden', description: 'Buchungen, Nachweisfotos und Auftragsfortschritt kommen in Flow an, sobald die Mitarbeitenden sie erfassen, bereit für den Bericht und die Abrechnung.' },
+    ],
+    complianceKicker: 'GPS-Information',
+    complianceTagline: 'Erst wird die Information bestätigt, dann wird gestempelt.*',
+    complianceFootnote: '* Gesetzlich (Art. 13 DSGVO und, in Italien, Art. 4 des Arbeitnehmerstatuts) müssen alle Beschäftigten informiert werden, bevor ihr Standort erfasst wird. Überlässt die Software diesen Schritt dem Inhaber, bleibt das Risiko bei ihm. GeoTapp bereitet die persönliche Information vor, lässt sie in der App als zur Kenntnis genommen bestätigen und lässt erst stempeln, wenn sie bestätigt ist.',
+    legalKicker: 'Regeln vor Ort',
+    trial: 'Flow 14 Tage kostenlos testen',
+  },
 };
 
-function ScreenCarousel({ isItalian }: { isItalian: boolean }) {
+function ScreenCarousel({ isItalian, isGerman = false }: { isItalian: boolean; isGerman?: boolean }) {
   const [current, setCurrent] = useState(0);
   const [isDesktop, setIsDesktop] = useState(false);
   const total = CAROUSEL_SLIDES.length;
@@ -147,7 +174,7 @@ function ScreenCarousel({ isItalian }: { isItalian: boolean }) {
   return (
     <>
       <div className="bar">
-        <i /><i /><i /><b>{isItalian ? slide.label_it : slide.label_en}</b>
+        <i /><i /><i /><b>{isItalian ? slide.label_it : isGerman ? slide.label_de : slide.label_en}</b>
       </div>
       {isDesktop ? (
         <AnimatePresence mode="wait">
@@ -155,7 +182,7 @@ function ScreenCarousel({ isItalian }: { isItalian: boolean }) {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={slide.src}
-              alt={isItalian ? slide.alt_it : slide.alt_en}
+              alt={isItalian ? slide.alt_it : isGerman ? slide.alt_de : slide.alt_en}
               loading={current === 0 ? 'eager' : 'lazy'}
               fetchPriority={current === 0 ? 'high' : 'auto'}
             />
@@ -165,15 +192,15 @@ function ScreenCarousel({ isItalian }: { isItalian: boolean }) {
         // eslint-disable-next-line @next/next/no-img-element
         <img
           src={CAROUSEL_SLIDES[0].src}
-          alt={isItalian ? CAROUSEL_SLIDES[0].alt_it : CAROUSEL_SLIDES[0].alt_en}
+          alt={isItalian ? CAROUSEL_SLIDES[0].alt_it : isGerman ? CAROUSEL_SLIDES[0].alt_de : CAROUSEL_SLIDES[0].alt_en}
           loading="eager"
           fetchPriority="high"
         />
       )}
-      <button type="button" onClick={prev} className="l-shot-nav l-shot-prev" aria-label="Previous">
+      <button type="button" onClick={prev} className="l-shot-nav l-shot-prev" aria-label={isItalian ? 'Precedente' : isGerman ? 'Zurück' : 'Previous'}>
         <ArrowRight size={18} style={{ transform: 'rotate(180deg)' }} />
       </button>
-      <button type="button" onClick={next} className="l-shot-nav l-shot-next" aria-label="Next">
+      <button type="button" onClick={next} className="l-shot-nav l-shot-next" aria-label={isItalian ? 'Successiva' : isGerman ? 'Weiter' : 'Next'}>
         <ArrowRight size={18} />
       </button>
       <div className="l-shot-dots">
@@ -183,7 +210,7 @@ function ScreenCarousel({ isItalian }: { isItalian: boolean }) {
             type="button"
             onClick={() => setCurrent(i)}
             className={i === current ? 'on' : ''}
-            aria-label={`Slide ${i + 1}`}
+            aria-label={`${isItalian ? 'Schermata' : isGerman ? 'Ansicht' : 'Slide'} ${i + 1}`}
           />
         ))}
       </div>
@@ -214,11 +241,11 @@ const GPS_PRIVACY_CONTENT: Record<string, {
     tags: ['Art. 4 Workers\' Statute', 'GDPR Art. 13', 'Signed as acknowledged', 'Archived document', 'No clock-in before signing', 'Zero paper'],
   },
   de: {
-    title: 'Automatische GPS-Datenschutzerklärung für jeden Mitarbeiter',
-    p1: 'Wenn Sie einen neuen Mitarbeiter einladen, erstellt Flow automatisch einen DSGVO-konformen GPS-Datenschutzhinweis und sendet ihn zur digitalen Unterschrift. Der Mitarbeiter trägt seine Daten ein, liest das Dokument und unterschreibt mit einem Klick, alles online, ohne Papier.',
-    p2: 'Das unterschriebene PDF wird automatisch archiviert und Sie sehen in Echtzeit, wer unterschrieben hat und wer nicht. Keine losen Zettel, kein Bußgeldrisiko: jede Zustimmung ist mit Datum, Uhrzeit und digitaler Unterschrift protokolliert.',
-    legal: 'Konform mit DSGVO und BDSG (Bundesdatenschutzgesetz). Flow berücksichtigt die Mitbestimmungsrechte des Betriebsrats gemäß BetrVG § 87 Abs. 1 Nr. 6 bei der Einführung technischer Überwachungseinrichtungen.',
-    tags: ['DSGVO-konform', 'BDSG', 'Betriebsrat (BetrVG § 87)', 'Digitale Unterschrift', 'PDF archiviert', 'Kein Papier'],
+    title: 'Die GPS-Information für jeden Mitarbeitenden',
+    p1: 'Wenn Sie eine neue Mitarbeiterin oder einen neuen Mitarbeiter einladen, bereitet Flow die Information zur Standorterfassung mit den Daten Ihres Unternehmens vor und schickt sie zu. Die Person trägt ihre Daten ein, liest das Dokument und bestätigt es als zur Kenntnis genommen, alles vom Telefon aus, ohne Papier. Solange die Bestätigung fehlt, lässt die App das Stempeln nicht zu.',
+    p2: 'Das bestätigte Dokument bleibt archiviert, und in Flow sehen Sie, wer bestätigt hat und wer nicht. Keine losen Zettel mehr: Jede Bestätigung wird mit Datum und Uhrzeit protokolliert. Die Bestätigung belegt, dass die Information ausgehändigt wurde; sie ist keine Einwilligung und muss es auch nicht sein.',
+    legal: 'In Deutschland hat der Betriebsrat bei technischen Einrichtungen, die zur Überwachung von Verhalten oder Leistung geeignet sind, ein Mitbestimmungsrecht (BetrVG § 87 Abs. 1 Nr. 6): Dieser Schritt bleibt Sache des Arbeitgebers. GeoTapp ist so gebaut, dass es innerhalb der Grenzen bleibt: Standort nur beim Stempeln, nie fortlaufend.',
+    tags: ['DSGVO Art. 13', 'Betriebsrat (BetrVG § 87)', 'Als zur Kenntnis genommen bestätigt', 'Dokument archiviert', 'Kein Stempeln vor der Bestätigung', 'Kein Papier'],
   },
   fr: {
     title: 'Autorisation GPS automatique pour chaque salarié',
@@ -415,7 +442,7 @@ export default function GeoTappApp() {
 
       {/* SCHERMATA VERA */}
       <section className="shot"><div className="wn"><div className="frame r-s">
-        <div className="browser"><ScreenCarousel isItalian={isItalian} /></div>
+        <div className="browser"><ScreenCarousel isItalian={isItalian} isGerman={currentLocale === 'de'} /></div>
       </div></div></section>
 
       {/* IL GIRO COMPLETO — entra dall'atto in cui la prova arriva in ufficio da
@@ -510,7 +537,7 @@ export default function GeoTappApp() {
         <div className="r-s d1" style={{ display: 'flex', justifyContent: 'center' }}>
           <div className="sheet">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/verifier-report.webp" alt="Report sigillato GeoTapp" loading="lazy" />
+            <img src="/verifier-report.webp" alt={currentLocale === 'it' ? 'Report sigillato GeoTapp' : currentLocale === 'de' ? 'Versiegelter GeoTapp-Bericht' : 'GeoTapp sealed report'} loading="lazy" />
           </div>
         </div>
       </div></div></section>

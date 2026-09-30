@@ -66,7 +66,7 @@ export const COMPARISON_BLOG_LINKS: Record<string, Record<string, string>> = {
 const ANCHOR: Record<string, string> = {
   it: 'Approfondisci il confronto sul blog',
   en: 'Read the in-depth comparison on the blog',
-  de: 'Den ausfuhrlichen Vergleich im Blog lesen',
+  de: 'Den ausführlichen Vergleich im Blog lesen',
   fr: 'Lire la comparaison detaillee sur le blog',
   es: 'Leer la comparativa detallada en el blog',
   pt: 'Ler a comparacao detalhada no blog',

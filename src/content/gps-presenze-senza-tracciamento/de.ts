@@ -3,7 +3,7 @@ import type { PresenzeCopy } from './types';
 const de: PresenzeCopy = {
   metaTitle: 'GPS-Zeiterfassung ohne durchgehende Überwachung: geht das? - GeoTapp',
   metaDesc:
-    'Ja, wenn der Standort nur beim Ein- und Ausstempeln erfasst wird. Was ein italienisches Gericht 2026 entschieden hat, was Aufsichtsbehörden wirklich sanktionieren, und was eine DSGVO-konforme GPS-Zeiterfassung tatsächlich speichert.',
+    'Ja, wenn der Standort nur beim Ein- und Ausstempeln erfasst wird. Was ein italienisches Gericht 2026 entschieden hat, was Aufsichtsbehörden wirklich sanktionieren, und was ein GPS-Zeiterfassungssystem tatsächlich speichert.',
   h1: 'GPS-Zeiterfassung ohne durchgehende Überwachung: geht das?',
   lede:
     'Ja. Ein System, das den Standort nur in dem Moment erfasst, in dem eine Mitarbeiterin oder ein Mitarbeiter ein- oder ausstempelt oder eine Pause beginnt, überwacht die Person nicht dauerhaft: Es dokumentiert einen Zeitpunkt. Genau diese Unterscheidung hat 2026 ein italienisches Gericht bestätigt, und sie deckt sich damit, was Datenschutzaufsichtsbehörden tatsächlich sanktionieren: durchgehendes Tracking, nicht die punktuelle Standorterfassung.',

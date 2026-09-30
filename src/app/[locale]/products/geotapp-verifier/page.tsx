@@ -11,7 +11,7 @@ import { getCurrencyForLocale } from '@/lib/pricing';
 const verifierMeta: Record<string, { title: string; description: string }> = {
   it: { title: "GeoTapp Verifier: verifica indipendente dei report", description: "Verifier controlla che un report GeoTapp non sia stato modificato dopo il sigillo e che venga da GeoTapp. Gratuito, senza account, anche offline." },
   en: { title: "GeoTapp Verifier: independent work report verification", description: "Verifier checks that a GeoTapp report has not been modified after it was sealed and that it comes from GeoTapp. Free, no account, offline too." },
-  de: { title: "GeoTapp Verifier: unabhängige Prüfung von Arbeitsberichten", description: "Verifier macht jeden Einsatz überprüfbar mit versiegelten GPS-Daten, Fotos mit Zeitstempel und Berichten mit Manipulationsnachweis. Ihr Kunde prüft selbst." },
+  de: { title: "GeoTapp Verifier: unabhängige Prüfung von Arbeitsberichten", description: "Verifier prüft, ob ein GeoTapp-Bericht nach der Versiegelung verändert wurde und ob er von GeoTapp stammt. Kostenlos, ohne Konto, auch offline." },
   fr: { title: "GeoTapp Verifier: vérification indépendante des rapports", description: "Verifier rend chaque intervention vérifiable avec un GPS scellé, des photos horodatées et des rapports aux modifications traçables. Votre client vérifie seul, sans compte." },
   es: { title: "GeoTapp Verifier: verificación independiente de informes", description: "Verifier hace verificable cada intervención con GPS sellado, fotos con marca de tiempo e informes con alteraciones detectables. Tu cliente lo comprueba solo, sin cuenta." },
   nl: { title: "GeoTapp Verifier: onafhankelijke verificatie van rapporten", description: "Verifier maakt elke interventie verifieerbaar met verzegelde GPS, foto's met tijdstempel en rapporten met detecteerbare wijzigingen. Uw klant controleert het zelf." },
@@ -72,11 +72,11 @@ const VERIFIER_FAQ: Record<string, object> = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: [
-      { '@type': 'Question', name: 'Wie funktioniert die Berichtsverifizierung mit GeoTapp Verifier?', acceptedAnswer: { '@type': 'Answer', text: 'Jeder GeoTapp-Bericht wird beim Abschluss mit einem kryptographischen Hash versiegelt. Der Kunde erhält einen eindeutigen Link und kann auf geotapp.com/products/geotapp-verifier unabhängig prüfen, ob GPS-Daten, Fotos und Zeitstempel nach der Erstellung unverändert geblieben sind.' } },
-      { '@type': 'Question', name: 'Wer kann einen GeoTapp Verifier-Bericht prüfen?', acceptedAnswer: { '@type': 'Answer', text: 'Jeder mit dem Link kann den Bericht prüfen, ohne auf Ihr Unternehmenskonto zugreifen zu müssen.' } },
-      { '@type': 'Question', name: 'Was passiert, wenn ein Kunde die geleistete Arbeit bestreitet?', acceptedAnswer: { '@type': 'Answer', text: 'Mit GeoTapp Verifier können Sie dem Kunden den Verifikationslink zeigen, mit versiegeltem GPS, Fotobeweisen mit Zeitstempel und einer digitalen Signatur, bei der jede Änderung nachweisbar ist.' } },
-      { '@type': 'Question', name: 'Ist GeoTapp Verifier DSGVO-konform?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. GeoTapp erfasst den Standort nur beim Ein- und Ausstempeln, nicht kontinuierlich. Die Daten werden DSGVO-konform verarbeitet.' } },
-      { '@type': 'Question', name: 'Funktioniert GeoTapp Verifier mit Flow und TimeTracker?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Verifier ist das Modul für versiegelte Nachweise, das sich nativ in GeoTapp Flow und GeoTapp TimeTracker integriert.' } },
+      { '@type': 'Question', name: 'Wie funktioniert die Prüfung eines GeoTapp-Berichts?', acceptedAnswer: { '@type': 'Answer', text: 'Jeder GeoTapp-Bericht wird bei der Erstellung versiegelt: Eine Kette von SHA-256-Fingerabdrücken verbindet Ereignisse und Fotos, und die Wurzel wird mit dem Schlüssel von GeoTapp signiert. Der Kunde erhält den Bericht als PDF und einen festen Link zum versiegelten Paket; er prüft ihn online oder mit dem Offline-Prüfprogramm, das die Fingerabdrücke neu berechnet und die Signatur kontrolliert.' } },
+      { '@type': 'Question', name: 'Wer kann einen GeoTapp-Bericht prüfen?', acceptedAnswer: { '@type': 'Answer', text: 'Jeder, der das Paket hat, ohne Zugriff auf das Konto des Unternehmens. Das Offline-Prüfprogramm trägt den öffentlichen Schlüssel in sich: Es funktioniert auch ohne Internet und auch ohne GeoTapp.' } },
+      { '@type': 'Question', name: 'Was passiert, wenn ein Kunde die geleistete Arbeit bestreitet?', acceptedAnswer: { '@type': 'Answer', text: 'Sie können ihm den Bericht zeigen: Er enthält Zeiten, die bei den Buchungen erfassten Standorte und Nachweisfotos, und er kann selbst prüfen, dass ihn seit der Versiegelung niemand verändert hat. Die Prüfung zeigt, dass das Dokument unversehrt ist; für sich allein ist sie weder ein absoluter Beweis des zugrunde liegenden Sachverhalts noch Rechtsberatung.' } },
+      { '@type': 'Question', name: 'Hält GeoTapp Verifier die DSGVO ein?', acceptedAnswer: { '@type': 'Answer', text: 'Das Offline-Prüfprogramm schickt nichts an irgendjemanden: Es läuft auf Ihrem Computer. Bei der Online-Prüfung läuft die Datei über unseren Server, der sie nicht speichert. Zu den Daten im Bericht: GeoTapp erfasst den Standort nur, wenn die Person stempelt (Beginn, Pausen, Ende) oder ein Nachweisfoto aufnimmt, nie fortlaufend.' } },
+      { '@type': 'Question', name: 'Funktioniert GeoTapp Verifier mit Flow und TimeTracker?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Die Daten entstehen in GeoTapp TimeTracker, vor Ort, und der Bericht wird in GeoTapp Flow im Büro erstellt. Verifier ist das kostenlose Werkzeug, mit dem jeder diesen Bericht prüft.' } },
     ],
   },
 };
@@ -84,7 +84,7 @@ const VERIFIER_FAQ: Record<string, object> = {
 const VERIFIER_DESCRIPTION: Record<string, string> = {
   it: 'GeoTapp Verifier controlla che un report GeoTapp non sia stato modificato dopo il sigillo e che venga davvero da GeoTapp. È gratuito, senza account, anche offline: per le aziende che devono dimostrare il lavoro svolto e per i loro clienti.',
   en: 'GeoTapp Verifier checks that a GeoTapp report has not been modified after it was sealed and that it really comes from GeoTapp. It is free, needs no account and works offline too: for companies that need to prove the work done and for their clients.',
-  de: 'GeoTapp Verifier macht jeden Einsatz überprüfbar mit versiegelten GPS-Daten, zeitgestempelten Fotobeweisen und Berichten mit Manipulationsnachweis, unabhängig verifizierbar.',
+  de: 'GeoTapp Verifier prüft, ob ein GeoTapp-Bericht nach der Versiegelung verändert wurde und ob er wirklich von GeoTapp stammt. Er ist kostenlos, braucht kein Konto und funktioniert auch offline: für Unternehmen, die die geleistete Arbeit nachweisen müssen, und für ihre Kunden.',
   fr: "GeoTapp Verifier rend chaque intervention vérifiable avec des données GPS scellées, des preuves photographiques horodatées et des rapports aux modifications traçables, vérifiables indépendamment.",
   es: 'GeoTapp Verifier hace verificable cada intervención con datos GPS sellados, pruebas fotográficas con marca de tiempo e informes con alteraciones detectables, verificables de forma independiente.',
   nl: 'GeoTapp Verifier maakt elke interventie verifieerbaar met verzegelde GPS-gegevens, getimestampt fotobewijs en rapporten met detecteerbare wijzigingen, onafhankelijk te verifiëren.',
@@ -113,12 +113,12 @@ const VERIFIER_FEATURES: Record<string, string[]> = {
     'Works with the reports generated by Flow and TimeTracker',
   ],
   de: [
-    'Kryptographischer Hash beim Abschluss jedes Berichts',
-    'Unabhängige Verifizierung - Kunde benötigt keinen Kontozugang',
-    'Hash-Kette über Fotos, GPS und Zeitstempel',
-    'Eindeutiger teilbarer Verifikationslink',
-    'Native Integration mit Flow und TimeTracker',
-    'DSGVO-konform',
+    'Bericht bei der Erstellung versiegelt: SHA-256-Kette, mit dem Schlüssel von GeoTapp signiert',
+    'Unabhängige Prüfung: Kunden haben keinen Zugriff auf Ihr Konto',
+    'Kette über Ereignisse, Fotos und Zeiten',
+    'Fester Link zum versiegelten Paket (geotapp.com/r/ plus Code)',
+    'Kostenloses Offline-Prüfprogramm, eine einzelne Datei mit dem öffentlichen Schlüssel darin',
+    'Funktioniert mit den Berichten aus Flow und TimeTracker',
   ],
 };
 

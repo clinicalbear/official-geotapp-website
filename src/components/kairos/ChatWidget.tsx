@@ -14,6 +14,8 @@ interface Message {
   suggestions?: string[];
 }
 
+const ARIA_CLOSE: Record<string, string> = { de: 'Chat schließen', it: 'Chiudi la chat' };
+
 export default function ChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
@@ -123,7 +125,7 @@ export default function ChatWidget() {
           <button
             onClick={() => setIsOpen(false)}
             className="flex h-8 w-8 items-center justify-center rounded-lg text-slate-400 transition-colors hover:bg-slate-800 hover:text-white"
-            aria-label="Close chat"
+            aria-label={ARIA_CLOSE[locale] ?? 'Close chat'}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

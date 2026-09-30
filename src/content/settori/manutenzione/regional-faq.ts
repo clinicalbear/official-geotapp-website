@@ -7,7 +7,7 @@ export interface RegionalFaqItem {
 
 export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   it: 'Conformità normativa in Italia',
-  de: 'Compliance in Deutschland',
+  de: 'Vorschriften und Nachweise in Deutschland',
   fr: 'Conformité en France',
   es: 'Cumplimiento normativo en España',
   pt: 'Conformidade em Portugal',
@@ -36,16 +36,16 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   ],
   de: [
     {
-      q: 'Zeiterfassung für standortübergreifende Wartung?',
-      a: 'Stunden je Techniker und Standort, Bereitschafts- und Fahrtzeiten und Aufbewahrung nach §16 ArbZG, bei jedem Wartungseinsatz erfasst.',
+      q: 'Arbeitszeiten bei Wartung an mehreren Standorten?',
+      a: 'GeoTapp erfasst bei jeder Stempelung Beginn, Pausen und Ende mit Position und Uhrzeit, je Techniker und Standort, und exportiert sie als Excel- oder CSV-Datei für die Lohnbuchhaltung oder Steuerberatung. Die Anwendung des Tarifvertrags (Zuschläge, Zulagen) und die Lohnabrechnung bleiben bei ihr und beim Unternehmen.',
     },
     {
-      q: 'DSGVO und Betriebsrat bei GPS-Ortung der Techniker?',
-      a: 'Ortung nur während der Arbeitszeit, mit Interessenabwägung nach Art. 6 DSGVO und Mitbestimmung des Betriebsrats nach §87 BetrVG.',
+      q: 'GPS-Ortung der Wartungstechniker: DSGVO und Betriebsrat?',
+      a: 'Die Position wird nur beim Stempeln und bei Nachweisfotos erfasst, nie durchgehend, und die Mitarbeiterinformation wird vor dem Stempeln in der App unterschrieben. Ob eine Interessenabwägung nach Art. 6 DSGVO und die Mitbestimmung des Betriebsrats nach §87 Abs. 1 Nr. 6 BetrVG erforderlich sind, klärt der Arbeitgeber.',
     },
     {
       q: 'Arbeitssicherheit und wiederkehrende Prüfungen (BetrSichV)?',
-      a: 'Zuordnung von Gefährdungsbeurteilung und Prüfeinsätzen zur befähigten Person nach BetrSichV, mit Nachweis je Standort.',
+      a: 'GeoTapp verwaltet weder die Eignung des Personals noch die Gefährdungsbeurteilung. Es erfasst jeden Besuch mit Uhrzeit, Position und Foto und bewahrt den Verlauf je Standort und Techniker auf, den Sie dem Kunden zeigen können.',
     },
   ],
   fr: [

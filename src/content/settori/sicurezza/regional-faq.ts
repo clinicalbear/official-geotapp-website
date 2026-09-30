@@ -7,7 +7,7 @@ export interface RegionalFaqItem {
 
 export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   it: 'Conformità normativa in Italia',
-  de: 'Compliance in Deutschland',
+  de: 'Vorschriften und Nachweise in Deutschland',
   fr: 'Conformité en France',
   es: 'Cumplimiento normativo en España',
   pt: 'Conformidade em Portugal',
@@ -36,16 +36,16 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   ],
   de: [
     {
-      q: 'Dienste und Stunden nach dem Tarifvertrag Sicherheitsdienstleistungen?',
-      a: 'Stunden je Mitarbeiter und Objekt, Nacht- und Feiertagszuschläge und Aufbewahrung nach §16 ArbZG, mit Schichtabdeckung, die bei jeder Stempelung aktualisiert wird.',
+      q: 'Dienste und Stunden im Bewachungsgewerbe?',
+      a: 'GeoTapp erfasst bei jeder Stempelung Beginn, Pausen und Ende je Sicherheitskraft und Dienst, mit Position und Uhrzeit, und exportiert sie als Excel- oder CSV-Datei für die Lohnbuchhaltung oder Steuerberatung. Zuschläge für Nacht- und Feiertagsarbeit und die Anwendung des Tarifvertrags bleiben bei ihr und beim Unternehmen.',
     },
     {
-      q: 'DSGVO und Betriebsrat bei GPS-Ortung der Sicherheitskräfte?',
-      a: 'Ortung nur während der Arbeitszeit, mit Interessenabwägung nach Art. 6 DSGVO und Mitbestimmung des Betriebsrats nach §87 BetrVG.',
+      q: 'GPS-Ortung der Sicherheitskräfte: DSGVO und Betriebsrat?',
+      a: 'Die Position wird nur beim Stempeln und bei Nachweisfotos erfasst, nie durchgehend, und die Mitarbeiterinformation wird vor dem Stempeln in der App unterschrieben. Ob eine Interessenabwägung nach Art. 6 DSGVO und die Mitbestimmung des Betriebsrats nach §87 Abs. 1 Nr. 6 BetrVG erforderlich sind, klärt der Arbeitgeber.',
     },
     {
-      q: 'Bewachungserlaubnis §34a GewO und Bewacherregister?',
-      a: 'Zuordnung der Einsätze zu Personal mit Sachkundeprüfung §34a GewO und gültiger Eintragung im Bewacherregister, je Schicht nachweisbar.',
+      q: 'Bewachungserlaubnis nach §34a GewO und Bewacherregister?',
+      a: 'GeoTapp verwaltet weder Erlaubnisse noch Sachkundeprüfungen nach §34a GewO noch die Eintragung im Bewacherregister und übernimmt keine Meldungen an Behörden. Es erfasst, wer wann und wo für jeden Dienst gestempelt hat, und diesen Verlauf können Sie dem Kunden zeigen.',
     },
   ],
   fr: [

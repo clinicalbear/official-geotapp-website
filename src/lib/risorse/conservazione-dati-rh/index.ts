@@ -169,7 +169,7 @@ const CONTENUTI: Record<CdLocale, CdContenuto> = {
     ] },
   },
   de: {
-    heading: 'Erstellen Sie Ihre Aufbewahrungsrichtlinie für HR-Daten',
+    heading: 'Erstellen Sie Ihre Aufbewahrungsrichtlinie für Personaldaten',
     intro: 'Wählen Sie das Land und die Arten von Personaldaten, die Sie verarbeiten: Sie erhalten eine Aufbewahrungstabelle mit empfohlenen Fristen, einer Notiz je Zeile und einem PDF-Export. Die Fristen sind Richtwerte — für Buchhaltungsunterlagen verwenden wir das Recht des gewählten Landes. Alles geschieht in Ihrem Browser.',
     azienda: 'Firmenbezeichnung / Firmenname (optional)',
     aziendaPlaceholder: 'Z. B. Muster Reinigung GmbH',
@@ -184,7 +184,7 @@ const CONTENUTI: Record<CdLocale, CdContenuto> = {
     colDurata: 'Empfohlene Frist',
     colNota: 'Hinweis',
     notaLegale: 'Richtwerte, an Ihren Fall und das nationale Recht anzupassen. Dies ist eine informative Ressource, keine Rechtsberatung.',
-    docTitolo: 'Aufbewahrungsrichtlinie für HR-Daten',
+    docTitolo: 'Aufbewahrungsrichtlinie für Personaldaten',
     docFooter: 'Entwurf kostenlos erstellt mit GeoTapp',
     unitAnni: 'Jahre',
     perPaeseNota: 'Durch das nationale Buchhaltungs-/Steuerrecht festgelegt',

@@ -10,6 +10,7 @@
 import type { AppLocale } from '@/lib/i18n/config';
 import type { TestoLoc } from './types';
 import { TESTI_EN } from './traduzioni-en';
+import { TESTI_DE } from './traduzioni-de';
 import { britishToVariant } from '@/lib/i18n/en-spelling';
 
 export function loc(testo: TestoLoc, locale: AppLocale): string {
@@ -19,8 +20,9 @@ export function loc(testo: TestoLoc, locale: AppLocale): string {
 
 function locFallback(testo: TestoLoc, locale: AppLocale): string {
   if (typeof testo === 'string') {
-    // Stringa semplice = italiano. Per le lingue inglesi i titoli delle fonti e i
-    // nomi dei contatti hanno la resa in ./traduzioni-en.ts.
+    // Stringa semplice = italiano. Per le lingue inglesi e per il tedesco i titoli delle
+    // fonti e i nomi dei contatti hanno la resa in ./traduzioni-en.ts e ./traduzioni-de.ts.
+    if (locale === 'de') return TESTI_DE[testo] ?? testo;
     return locale === 'en' || locale.startsWith('en-') ? (TESTI_EN[testo] ?? testo) : testo;
   }
   return testo[locale] ?? testo.en ?? testo.it;

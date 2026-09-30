@@ -22,9 +22,9 @@ const META: Record<string, { title: string; description: string }> = {
       'Posizione solo quando si timbra, posizioni false rifiutate, timbrature salvate anche senza rete, report sigillati che il cliente verifica da solo, dati in Europa.',
   },
   de: {
-    title: 'GeoTapp-Funktionen: GPS-Zeiterfassung, offline, verschlüsselt',
+    title: 'GeoTapp-Funktionen: Stempeln mit Standort und versiegelte Berichte',
     description:
-      'Stempeln mit GPS, Geofence-Prüfung und Anti-Spoofing, Offline-Modus mit Synchronisierung bei Empfang, AES-256-Verschlüsselung und Live-Daten fürs Büro.',
+      'Standort nur beim Stempeln, falsche Standorte werden abgewiesen, Buchungen auch ohne Netz gespeichert, versiegelte Berichte, die der Kunde selbst prüft, Daten in Europa.',
   },
   es: {
     title: 'Funciones de GeoTapp: fichaje GPS, modo offline y cifrado',

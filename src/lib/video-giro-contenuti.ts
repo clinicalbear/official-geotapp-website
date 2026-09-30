@@ -135,7 +135,7 @@ export const GIRO_CONTENUTI: Record<LinguaGiro, ContenutoGiro> = {
       { da: 10.356, testo: "Niemand hat etwas eingetippt." },
       { da: 13.3, testo: "Der Nachweis beginnt mit einem Foto." },
       { da: 15.489, testo: "Die Kamera öffnet sich in der App: keine Galerie, das Bild entsteht nur jetzt." },
-      { da: 20.3, testo: "Zwei Sicherungen gefallen, Kabel aus dem Kanal." },
+      { da: 20.3, testo: "Zwei Sicherungen raus, Kabel aus dem Kanal." },
       { da: 23.286, testo: "Er schreibt, was er vorfindet, und schickt es ab." },
       { da: 28.3, testo: "Und da ist es, im Büro." },
       { da: 29.874, testo: "Diese Seite hat niemand angefasst." },

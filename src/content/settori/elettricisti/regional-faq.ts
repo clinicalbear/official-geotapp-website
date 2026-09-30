@@ -7,7 +7,7 @@ export interface RegionalFaqItem {
 
 export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   it: 'Conformità normativa in Italia',
-  de: 'Compliance in Deutschland',
+  de: 'Vorschriften und Nachweise in Deutschland',
   fr: 'Conformité en France',
   es: 'Cumplimiento normativo en España',
   pt: 'Conformidade em Portugal',
@@ -36,16 +36,16 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   ],
   de: [
     {
-      q: 'Zeiterfassung nach dem Tarifvertrag Elektrohandwerk?',
-      a: 'Stunden je Elektriker und Auftrag, Bereitschafts- und Fahrtzeiten und Aufbewahrung nach §16 ArbZG, bei jedem Einsatz erfasst.',
+      q: 'Arbeitszeiten, Bereitschaft und Fahrten im Elektrohandwerk?',
+      a: 'GeoTapp erfasst bei jeder Stempelung Beginn, Pausen und Ende mit Position und Uhrzeit, je Elektriker und Baustelle, und exportiert sie als Excel- oder CSV-Datei für die Lohnbuchhaltung oder Steuerberatung. Die Anwendung des Tarifvertrags (Zuschläge, Zulagen) und die Lohnabrechnung bleiben bei ihr und beim Unternehmen.',
     },
     {
-      q: 'DSGVO und Betriebsrat bei GPS-Ortung der Elektriker?',
-      a: 'Ortung nur während der Arbeitszeit, mit Interessenabwägung nach Art. 6 DSGVO und Mitbestimmung des Betriebsrats nach §87 BetrVG.',
+      q: 'GPS-Ortung der Elektriker: DSGVO und Betriebsrat?',
+      a: 'Die Position wird nur beim Stempeln und bei Nachweisfotos erfasst, nie durchgehend, und die Mitarbeiterinformation wird vor dem Stempeln in der App unterschrieben. Ob eine Interessenabwägung nach Art. 6 DSGVO und die Mitbestimmung des Betriebsrats nach §87 Abs. 1 Nr. 6 BetrVG erforderlich sind, klärt der Arbeitgeber.',
     },
     {
-      q: 'DGUV Vorschrift 3 und VDE 0105-100?',
-      a: 'Zuordnung der Arbeiten zur Elektrofachkraft und Nachweis der wiederkehrenden Prüfungen nach DGUV V3 und VDE 0105-100 je Einsatz.',
+      q: 'DGUV Vorschrift 3 und Elektrofachkraft?',
+      a: 'GeoTapp prüft weder die Qualifikation als Elektrofachkraft noch die Prüfungen nach DGUV Vorschrift 3 und erstellt keine Prüfprotokolle. Es erfasst Uhrzeit, Position und Fotos jedes Einsatzes, die der Techniker seiner eigenen Dokumentation beifügen kann.',
     },
   ],
   fr: [

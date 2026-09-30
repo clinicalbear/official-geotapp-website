@@ -10,7 +10,7 @@ const STORAGE_KEY = 'gtapp_nl_modal_seen';
 const HEADLINES: Record<string, string> = {
   it: 'Rimani nel loop sul futuro del lavoro',
   en: 'Stay ahead in field operations',
-  de: 'Bleib auf dem neuesten Stand',
+  de: 'Bleiben Sie auf dem neuesten Stand',
   fr: "Gardez une longueur d'avance",
   es: 'Mantente a la vanguardia',
   pt: 'Fique à frente no setor',

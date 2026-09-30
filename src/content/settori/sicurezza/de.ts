@@ -2,103 +2,205 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'Software für Bewachungsgewerbe & Veranstaltungsschutz | Nachweisbare Anwesenheit | GeoTapp',
-    description: 'Workforce-Management für Sicherheitsunternehmen, Wachpersonal und Veranstaltungsschutz: GPS-verifizierte Anwesenheit, geolokalisierte Störungsberichte und Qualifikationsverfolgung gem. §34a GewO.',
+    title: 'Software für Sicherheitsdienste | GeoTapp - Schichten mit GPS',
+    description: 'GeoTapp ist die Software für Sicherheits- und Bewachungsunternehmen: Schichten mit Position bei den Stempelungen, dokumentierte Kontrollgänge und Nachweisfotos. Für die DSGVO gebaut. Kostenlos testen.',
   },
   hero: {
-    badge: 'Software für Bewachungsgewerbe, Wachpersonal und Veranstaltungsschutz',
-    h1_line1: 'Nachweisbare Anwesenheit und Schichtdokumentation',
-    h1_line2: 'für Sicherheitsdienste und Wachpersonal',
-    subtitle: 'GeoTapp Flow und TimeTracker dokumentieren die Anwesenheit von Wachpersonal an zugewiesenen Posten mit verifizierten GPS-Daten und versiegelten Zeitstempeln. Qualifikationsverfolgung ausgelegt auf die Vorgaben des §34a GewO, digitale Schichtübergabe und geolokalisierte Störungsberichte, alles in einer Plattform.',
-    cta_primary: 'Demo anfordern',
-    cta_note: 'Unverbindlich. Antwort innerhalb von 12 Arbeitsstunden.',
+    badge: 'Software für Bewachung, Sicherheitskräfte und Ordnungsdienste',
+    h1_line1: 'Anwesenheit und Schichten überprüfbar',
+    h1_line2: 'für Bewachung und private Sicherheit',
+    subtitle: 'GeoTapp Flow und TimeTracker dokumentieren die Anwesenheit der Sicherheitskräfte an den zugewiesenen Posten: Position und Uhrzeit bei jeder Stempelung, Nachweisfotos, versiegelte Berichte. Schichten, Schichttauschanfragen und Mitteilungen in einer Plattform. Die App für Sicherheitsdienste, die jede Schicht, jeden Rundgang und jede Anwesenheit versiegelt.',
+    cta_primary: '14 Tage kostenlos testen',
+    cta_note: 'Die Testphase verpflichtet Sie zu nichts. Keine Kreditkarte.',
   },
   pain: {
-    title: 'Die Probleme, die Sie kennen',
+    title: 'Die Probleme, die Sie schon kennen',
     items: [
       {
-        title: 'Nachweis der Postenbesetzung zum vertraglich vereinbarten Zeitpunkt',
-        desc: 'Ein Auftraggeber bestreitet die Anwesenheit einer Wachperson zu einem bestimmten Zeitpunkt. Ohne verifizierte GPS-Daten und versiegelte Zeitstempel bleibt der Vertragsverstoß unbeweisbar, in beide Richtungen.',
+        title: 'Die Anwesenheit an den zugewiesenen Posten belegen',
+        desc: 'Der Kunde bestreitet die Anwesenheit der Sicherheitskraft zu einer bestimmten Uhrzeit. Ohne erfasste Position und Uhrzeit steht Ihr Wort gegen seines, und Sie riskieren den Vertrag.',
       },
       {
-        title: 'Störungsberichte ohne Positionsnachweis',
-        desc: 'Ein handschriftlicher Störungsbericht hat wenig Beweiskraft, wenn kein versiegelter GPS-Ort und kein manipulationserkennbarer Zeitstempel vorliegen. Papierprotokolle sind zu leicht anfechtbar.',
+        title: 'Vorfallberichte ohne Standortnachweis',
+        desc: 'Ein handschriftlicher Vorfallbericht ohne erfasste Position und Uhrzeit lässt sich leicht anfechten.',
       },
       {
         title: 'Schichtübergabe noch auf Papier',
-        desc: 'Revierübergaben laufen über mündliche Absprachen oder handschriftliche Notizen. Kritische Informationen gehen verloren, Verantwortlichkeiten bleiben unklar und ein Audit ist nicht möglich.',
+        desc: 'Der Schichtwechsel zwischen den Sicherheitskräften läuft über Zettel oder Anrufe. Wichtige Informationen gehen verloren, die Zuständigkeiten sind unklar, und das Nachvollziehen danach ist schwer.',
       },
     ],
   },
   workflow: {
     title: 'So funktioniert es in drei Schritten',
-    subtitle: 'Vom Wachposten in die Leitstelle, ohne Papierkram.',
+    subtitle: 'Vom Wachposten ins Büro, ohne Papier.',
     steps: [
       {
-        title: 'Die Wachperson stempelt am zugewiesenen Posten ein',
-        desc: 'GeoTapp TimeTracker erfasst Ein- und Ausstempelung, GPS-Position und Fotos mit versiegelten Zeitstempeln. Jeder Streifengang wird automatisch vom Smartphone der Wachperson protokolliert.',
+        title: 'Die Sicherheitskraft stempelt am zugewiesenen Posten',
+        desc: 'GeoTapp TimeTracker erfasst Beginn, Pausen und Ende mit Position und Uhrzeit und an den Kontrollpunkten Nachweisfotos. Jede Kontrolle dokumentiert die Sicherheitskraft mit einem Tipp: Zwischen zwei Stempelungen wird nichts automatisch erfasst.',
       },
       {
-        title: 'Der Einsatzleiter sieht jede Postenstempelung sofort',
-        desc: 'Flow empfängt Daten sofort. Der Einsatzleiter überprüft die vollständige Posten­besetzung, Schichtwechsel und Abweichungen, ohne das Feld anzurufen.',
+        title: 'Die Einsatzleitung sieht die Schichten, sobald sie ankommen',
+        desc: 'Flow erhält die Daten, sobald das Telefon Netz hat. Die Einsatzleitung prüft die Besetzung aller Posten, die Schichtwechsel und etwaige Abweichungen, ohne das Einsatzteam anzurufen.',
       },
       {
-        title: 'Der Anwesenheitsnachweis ist sofort bereit',
-        desc: 'Am Schichtende liegt das Anwesenheitsprotokoll mit echten GPS-Daten strukturiert vor, bereit für Auftraggeber-Audits oder Kontrollen der Behörden gem. §34a GewO.',
+        title: 'Der Bericht ist Ihr Nachweis, belastbar beim Audit',
+        desc: 'Am Ende der Schicht wird das Anwesenheitsprotokoll mit den bei den Stempelungen erfassten Positionen erstellt, und jede Änderung ist erkennbar. Der Kunde oder die Behörde können die Integrität selbst prüfen.',
       },
     ],
   },
+  differenza: {
+    title: 'Software für Sicherheitsdienste: Anwesenheitsliste oder überprüfbare Nachweise?',
+    subtitle: 'Die meiste Software erfasst Schichten. GeoTapp versiegelt jede Anwesenheit in einem überprüfbaren Bericht.',
+    rows: [
+      {
+        label: 'Was wird erfasst',
+        competitor: 'Schichtbeginn und -ende',
+        geotapp: 'Uhrzeit + Position bei der Stempelung + Fotos + Position am zugewiesenen Posten',
+      },
+      {
+        label: 'Wer kann prüfen',
+        competitor: 'Nur Ihr Büro',
+        geotapp: 'Sie, der Auftraggeber, die Behörde, eigenständig',
+      },
+      {
+        label: 'Bei Streitigkeiten',
+        competitor: 'Nur Ihr Wort',
+        geotapp: 'Versiegelter Bericht, von Dritten prüfbar',
+      },
+      {
+        label: 'Rundgangsnachweis',
+        competitor: 'Fehlt oder auf Papier',
+        geotapp: 'Position, Uhrzeit und Foto am Kontrollpunkt',
+      },
+      {
+        label: 'DSGVO',
+        competitor: 'Oft fraglich',
+        geotapp: 'Gebaut, um die Vorgaben der DSGVO einzuhalten, Vorlagen inklusive',
+      },
+    ],
+  },
+
+  prima_dopo: {
+    title: 'Was jetzt passiert. Was mit GeoTapp passiert.',
+    prima: [
+      'Der Kunde bestreitet die Anwesenheit der Sicherheitskraft zu einer bestimmten Uhrzeit.',
+      'Die Sicherheitskraft sagt „Ich war da“. Der Kunde sagt „Davon ist nichts zu sehen“.',
+      'Sie haben nichts, um es zu belegen. Der Streit zieht sich hin.',
+      'Sie riskieren, den Vertrag zu verlieren.',
+    ],
+    dopo: [
+      'Der Kunde bestreitet die Anwesenheit der Sicherheitskraft zu einer bestimmten Uhrzeit.',
+      'Sie öffnen den Bericht: Position am zugewiesenen Posten, Uhrzeiten, Foto des Objekts.',
+      'Sie schicken ihn, und der Kunde prüft ihn selbst.',
+      'Sie haben einen Nachweis zur Hand.',
+    ],
+  },
+
+  scenario: {
+    title: 'Ein typischer Fall',
+    body: 'Der Auftraggeber behauptet, die Sicherheitskraft sei zu einer kritischen Uhrzeit nicht an ihrem Posten gewesen. Mit GeoTapp öffnen Sie den Schichtbericht: am Kontrollpunkt erfasste Position, versiegelter Zeitstempel, Foto des Objekts, alles vom Smartphone der Sicherheitskraft erfasst, als sie gestempelt und die Fotos gemacht hat.',
+    resolution: 'Statt Aussage gegen Aussage gibt es ein Dokument, das der Auftraggeber selbst prüfen kann.',
+  },
+
   features: {
-    title: 'Was Sie erhalten',
+    title: 'Software für Sicherheitsdienste: versiegelte Schichten, dokumentierte Kontrollen.',
     items: [
       {
-        title: 'GPS-verifizierte Anwesenheit je Wachperson',
-        desc: 'Jede Einstempelung ist mit Position, Zeitstempel und zugewiesenem Posten verknüpft. Verteidigbar gegenüber dem Auftraggeber, dem Gewerbeaufsichtsamt und in vertragsrechtlichen Auseinandersetzungen.',
+        title: 'Überprüfbare GPS-Stempelung für jede Sicherheitskraft',
+        desc: 'Jede Anwesenheit ist mit Position, Uhrzeit und zugewiesenem Posten verknüpft. Zum Vorzeigen beim Kunden, bei der Behörde oder in einem vertraglichen Audit, wenn es darauf ankommt.',
       },
       {
-        title: 'Qualifikations- und Lizenztracking (§34a GewO, DGUV Vorschrift 23)',
-        desc: 'Verwalten Sie §34a-Sachkundenachweise, DGUV-Unterweisungen und Ablaufdaten für jede Wachperson. Kein unqualifiziertes Personal im Einsatz durch Versehen.',
+        title: 'Stammdaten der Sicherheitskräfte',
+        desc: 'Pflegen Sie in den Stammdaten jeder Sicherheitskraft Funktion, Kontaktdaten und zugewiesene Posten, und legen Sie fest, wer in der App was sieht.',
       },
       {
-        title: 'Export kompatibel mit DATEV und Lexware',
-        desc: 'Exportieren Sie monatliche Anwesenheitsdaten in den von DATEV und Lexware akzeptierten Formaten. Die Lohnabrechnung wird zu einem schnellen, fehlerfreien Vorgang.',
+        title: 'Export als Excel oder CSV für die Lohnabrechnung',
+        desc: 'Exportieren Sie die Anwesenheiten des Monats als Excel- oder CSV-Datei, bereit für Ihre Lohnbuchhaltung oder Steuerberatung. Die Lohnabrechnung geht schnell von der Hand, ohne Abtippfehler.',
+      },
+      {
+        title: 'Digitale Schichtübergabe',
+        desc: 'Schichttauschanfragen laufen über die App, und die Mitteilungen bleiben im Kanal des Auftrags: weniger Zettel und Anrufe zwischen einer Schicht und der nächsten.',
+      },
+      {
+        title: 'Dashboard für mehrere Objekte, bei jeder Stempelung aktualisiert',
+        desc: 'Die Einsatzleitung sieht die zuletzt gestempelte Position jeder Sicherheitskraft, den Stand jedes Postens und die aktiven Schichtwechsel, von jedem Gerät aus, ohne Anrufe.',
+      },
+      {
+        title: 'Berichte, die im Audit und bei der Behörde belastbar sind',
+        desc: 'Jede Schicht erzeugt einen versiegelten Bericht mit Positionen, Uhrzeiten und Nachweisfotos, den Kunde und Behörde selbst prüfen können.',
       },
     ],
   },
+
+  cta_mid: {
+    title: 'Sie möchten sehen, wie es in einem echten Streitfall funktioniert?',
+    body: 'Testen Sie es an einem echten Einsatz, von der Sicherheitskraft, die am zugewiesenen Posten stempelt, bis zum Bericht, den der Auftraggeber erhält: 14 Tage kostenlos, ohne Kreditkarte.',
+    cta: '14 Tage kostenlos testen',
+  },
+
+  trust: {
+    title: 'Jede Änderung an unseren Berichten ist sichtbar, auch wenn Sie sie vornehmen oder wir.',
+    body: 'GeoTapp-Berichte erstellt das System im Moment der Schicht. Sobald ein Bericht versiegelt ist, bricht jede Korrektur einer Uhrzeit oder jedes Verschieben eines Fotos das Siegel, und die Prüfung meldet es. Wer ihn erhält, Auftraggeber oder Behörde, kann ihn selbst prüfen.',
+    badge: 'Von jedem prüfbar, ohne Zugang zu Ihrem Konto',
+  },
   testimonial: {
-    quote: 'Mit GeoTapp haben Streitigkeiten über Postenstärken stark abgenommen. Auftraggeber erhalten ein GPS-gestempeltes Anwesenheitsprotokoll, das lässt wenig Raum für Diskussionen.',
+    quote: 'Unseren Kunden schicken wir das versiegelte Anwesenheitsprotokoll mit den Positionen der Stempelungen: Wenn sie etwas bestreiten, prüfen sie selbst.',
     author: 'Stefan K.',
     role: 'Betriebsleiter, Sicherheitsdienstleister',
   },
   faq: {
     title: 'Häufig gestellte Fragen',
-    subtitle: 'Was Teams uns am häufigsten vor dem Start fragen.',
+    subtitle: 'Was uns am häufigsten gefragt wird, bevor es losgeht.',
     items: [
       {
-        q: 'Ist GeoTapp für nach §34a GewO zugelassene Sicherheitsunternehmen geeignet?',
-        a: 'Ja. GeoTapp wird von Sicherheitsunternehmen eingesetzt, um die Anwesenheit von Wachpersonal mit GPS-Nachweis zu dokumentieren, Schichtwechsel zu verwalten und §34a-Qualifikationsabläufe zu verfolgen.',
+        q: 'Eignet sich GeoTapp für Bewachungsunternehmen und Sicherheitskräfte?',
+        a: 'Ja. GeoTapp wird von Bewachungsunternehmen genutzt, um die Anwesenheit an den zugewiesenen Posten mit Position zu dokumentieren, Schichten und Schichtwechsel zu verwalten und Nachweisfotos an den Kontrollpunkten zu sammeln.',
       },
       {
-        q: 'Wie unterstützt GeoTapp die Dokumentation von Störungsberichten?',
-        a: 'TimeTracker verknüpft jeden Vorfall mit einem versiegelten GPS-Standort und einem versiegelten Zeitstempel. Der generierte Störungsbericht enthält Koordinaten, Uhrzeit und Fotos, gerichtsverwertbar und auftraggebersicher.',
+        q: 'Wie hilft GeoTapp bei der Verwaltung von Vorfallberichten?',
+        a: 'TimeTracker verknüpft jedes Ereignis mit Position und Uhrzeit, im Bericht versiegelt. Der von GeoTapp erstellte Vorfallbericht enthält Koordinaten, Uhrzeit und Fotos, und der Auftraggeber kann selbst prüfen, dass das Dokument nicht verändert wurde.',
       },
       {
-        q: 'Gilt die Aufzeichnungspflicht nach §17 MiLoG auch für Sicherheitsunternehmen?',
-        a: 'Ja, und zwar unabhängig von der Betriebsgröße. Das Wach- und Sicherheitsgewerbe ist in §2a SchwarzArbG aufgeführt, damit greift §17 MiLoG: Beginn, Ende und Dauer der täglichen Arbeitszeit jeder Wachperson müssen spätestens am siebten Kalendertag nach dem Arbeitstag aufgezeichnet und zwei Jahre aufbewahrt werden. Verstöße gegen diese Pflicht ahndet §21 MiLoG mit einer Geldbuße bis zu 50.000 €. Mit GeoTapp entsteht die Aufzeichnung im Moment der Stempelung am Posten, GPS-geprüft und mit versiegeltem Zeitstempel, und lässt sich für die Finanzkontrolle Schwarzarbeit (FKS) als signiertes PDF exportieren.',
-      },
-      {
-        q: 'Unterstützt GeoTapp die digitale Schichtübergabe zwischen Wachpersonen?',
-        a: 'Ja. Schichtwechsel werden digital mit Quittierung, Betriebshinweisen und Postenstatus erfasst. Der Einsatzleiter hat vollständige Transparenz über die Dienstkontinuität ohne Abhängigkeit von mündlichen Übergaben.',
+        q: 'Hilft GeoTapp beim Schichtwechsel zwischen Sicherheitskräften?',
+        a: 'Ja. Schichttauschanfragen laufen über die App, die Schichten stehen im Kalender von Flow, und die Mitteilungen bleiben im Kanal des Auftrags. Die Einsatzleitung sieht, wer was abdeckt, ohne von Anrufen abhängig zu sein.',
       },
     ],
   },
   cta: {
-    title: 'Schluss mit Streitigkeiten über Postenstärken.',
-    subtitle: 'GeoTapp Flow und TimeTracker geben Ihrem Sicherheitsunternehmen die nachweisbaren Belege, die Auftraggeber und Behörden fordern.',
-    primary: 'Demo anfordern',
+    title: 'Die Schicht hat stattgefunden. Jetzt belegen Sie es.',
+    subtitle: 'GeoTapp erstellt überprüfbare Nachweise für jeden Einsatz, versiegelte Berichte, die Kunde und Behörde selbst prüfen können.',
+    primary: '14 Tage kostenlos testen',
     secondary: 'Preise ansehen',
   },
+  pricing_hint: {
+    label: 'TimeTracker-Plätze ab',
+    per: 'pro Mitarbeiter und Monat, zzgl. Flow-Tarif ab 39 € im Monat',
+    note: '14 Tage kostenlos testen',
+  },
+
   schema_sector_name: 'Bewachungsgewerbe',
+  schema_faq: [
+    {
+      question: 'Funktioniert GeoTapp für die Verwaltung von Sicherheitskräften und Rundgängen?',
+      answer: 'Ja. GeoTapp ermöglicht es Sicherheitsunternehmen, jede Schicht und jeden Rundgang zu versiegeln: Die Sicherheitskräfte stempeln am Smartphone mit Position, und daraus entstehen dokumentierte Nachweise der geleisteten Arbeit.',
+    },
+    {
+      question: 'Wie dokumentiere ich Rundgänge und regelmäßige Kontrollen?',
+      answer: 'Jede Kontrolle wird mit GeoTapp TimeTracker erfasst: Uhrzeit, Position, Foto des Objekts und Notizen. Der versiegelte Bericht steht dem Auftraggeber zur Verfügung, sobald er erstellt ist, oder nach Schichtende.',
+    },
+    {
+      question: 'Kann ich dem Kunden belegen, dass die Rundgänge regelmäßig stattgefunden haben?',
+      answer: 'Ja. GeoTapp-Berichte sind versiegelt und enthalten Positionen, Uhrzeiten und Nachweisfotos der Kontrollpunkte. Der Auftraggeber kann selbst prüfen, dass der Bericht nicht verändert wurde, und sehen, wann und wo die Sicherheitskraft gestempelt hat.',
+    },
+    {
+      question: 'Hilft GeoTapp bei Nachtarbeit und Zuschlägen im Bewachungsgewerbe?',
+      answer: 'GeoTapp erfasst Arbeitszeiten, Überstunden sowie Nacht- und Feiertagsarbeit und exportiert sie für Ihre Lohnbuchhaltung oder Steuerberatung, die sie nach dem geltenden Tarifvertrag anwendet. Es ist gebaut, um die Vorgaben der DSGVO einzuhalten: Position nur, wenn die Sicherheitskraft stempelt.',
+    },
+    {
+      question: 'Funktioniert es auch, um mehrere Teams an verschiedenen Objekten zu koordinieren?',
+      answer: 'Ja. Mit GeoTapp Flow sieht die Einsatzleitung die zuletzt gestempelte Position aller Sicherheitskräfte, weist Schichten zu, regelt dringende Vertretungen und sammelt die Berichte aller Objekte auf einem Bildschirm.',
+    },
+  ],
 };
 
 export default content;

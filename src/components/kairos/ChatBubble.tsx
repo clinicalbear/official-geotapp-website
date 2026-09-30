@@ -1,14 +1,20 @@
 'use client';
 
+import { usePathname } from 'next/navigation';
+import { getLocaleFromPathname } from '@/lib/i18n/locale-routing';
+
+const ARIA_OPEN: Record<string, string> = { de: 'Chat mit Kairos', it: 'Chat con Kairos' };
+
 interface ChatBubbleProps {
   onClick: () => void;
 }
 
 export default function ChatBubble({ onClick }: ChatBubbleProps) {
+  const locale = getLocaleFromPathname(usePathname()) ?? 'it';
   return (
     <button
       onClick={onClick}
-      aria-label="Chat with Kairos"
+      aria-label={ARIA_OPEN[locale] ?? 'Chat with Kairos'}
       className="fixed bottom-28 right-4 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-primary shadow-lg transition-transform hover:scale-110 md:bottom-6 md:right-6"
     >
       {/* Hourglass icon - Kairos = god of time */}

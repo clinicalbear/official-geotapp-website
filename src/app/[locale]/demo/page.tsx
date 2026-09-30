@@ -4,7 +4,7 @@ import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
 const DEMO_META: Record<string, { title: string; description: string }> = {
   it: { title: 'Prenota una Demo Gratuita di GeoTapp, 30 Minuti | GeoTapp', description: 'Scopri come GeoTapp elimina le contestazioni sulle ore e rende ogni intervento documentato. Demo gratuita di 30 minuti con il nostro team.' },
   en: { title: 'Book a Free GeoTapp Demo, 30 Minutes | GeoTapp', description: 'See how GeoTapp stops hour disputes and makes every field job verifiable. Free 30-minute demo with our team.' },
-  de: { title: 'Kostenlose GeoTapp-Demo buchen, 30 Minuten | GeoTapp', description: 'Entdecken Sie, wie GeoTapp Stundenkonflikte beendet und jeden Außendiensteinsatz dokumentierbar macht. Kostenlose 30-Minuten-Demo.' },
+  de: { title: 'Kostenlose GeoTapp-Demo buchen, 30 Minuten | GeoTapp', description: 'Sehen Sie, wie GeoTapp Streit um Arbeitsstunden beendet und jeden Einsatz im Außendienst prüfbar macht. Kostenlose 30-Minuten-Demo mit unserem Team.' },
   fr: { title: 'Réserver une Démo Gratuite GeoTapp, 30 Minutes | GeoTapp', description: 'Découvrez comment GeoTapp élimine les litiges d\'heures et rend chaque intervention vérifiable. Démo gratuite de 30 minutes.' },
   es: { title: 'Reservar una Demo Gratuita de GeoTapp, 30 Minutos | GeoTapp', description: 'Descubre cómo GeoTapp elimina las disputas de horas y hace verificable cada intervención. Demo gratuita de 30 minutos.' },
   pt: { title: 'Agendar Demo Gratuita do GeoTapp, 30 Minutos | GeoTapp', description: 'Veja como o GeoTapp elimina conflitos de horas e torna cada intervenção verificável. Demo gratuita de 30 minutos.' },

@@ -69,7 +69,7 @@ const TEXTS: Record<string, Texts> = {
     modalTitle: 'Cookie-Einstellungen',
     modalIntro: 'Wählen Sie, welche Kategorien Sie aktivieren möchten. Sie können jederzeit Ihre Meinung ändern.',
     catNecessary: 'Notwendig',
-    catNecessaryDesc: 'Login, Sprache, Sicherheit. Ohne diese funktioniert die Seite nicht.',
+    catNecessaryDesc: 'Sprache, Land, Sicherheit. Ohne diese funktioniert die Seite nicht.',
     alwaysOn: 'immer an',
     catAnalytics: 'Analytisch',
     catAnalyticsDesc: 'Google Analytics: verstehen, welche Seiten funktionieren. Anonyme Daten. Keine Werbung.',

@@ -7,7 +7,7 @@ export interface RegionalFaqItem {
 
 export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   it: 'Conformità normativa in Italia',
-  de: 'Compliance in Deutschland',
+  de: 'Vorschriften und Nachweise in Deutschland',
   fr: 'Conformité en France',
   es: 'Cumplimiento normativo en España',
   pt: 'Conformidade em Portugal',
@@ -36,16 +36,16 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   ],
   de: [
     {
-      q: 'Zeiterfassung nach dem Tarifvertrag Metall und Elektro?',
-      a: 'Stunden je Techniker und Auftrag, Fahrt- und Bereitschaftszeiten und Aufbewahrung nach §16 ArbZG, bei jedem Einsatz erfasst.',
+      q: 'Arbeitszeiten und Fahrten im Installationsbetrieb?',
+      a: 'GeoTapp erfasst bei jeder Stempelung Beginn, Pausen und Ende mit Position und Uhrzeit, je Techniker und Auftrag, und exportiert sie als Excel- oder CSV-Datei für die Lohnbuchhaltung oder Steuerberatung. Die Anwendung des Tarifvertrags (Zuschläge, Zulagen) und die Lohnabrechnung bleiben bei ihr und beim Unternehmen.',
     },
     {
-      q: 'DSGVO und Betriebsrat bei GPS-Ortung der Monteure?',
-      a: 'Ortung nur während der Arbeitszeit, mit Interessenabwägung nach Art. 6 DSGVO und Mitbestimmung des Betriebsrats nach §87 BetrVG.',
+      q: 'GPS-Ortung der Monteure: DSGVO und Betriebsrat?',
+      a: 'Die Position wird nur beim Stempeln und bei Nachweisfotos erfasst, nie durchgehend, und die Mitarbeiterinformation wird vor dem Stempeln in der App unterschrieben. Ob eine Interessenabwägung nach Art. 6 DSGVO und die Mitbestimmung des Betriebsrats nach §87 Abs. 1 Nr. 6 BetrVG erforderlich sind, klärt der Arbeitgeber.',
     },
     {
       q: 'Handwerksordnung und Qualifikationsnachweis?',
-      a: 'Zuordnung der Einsätze zur qualifizierten Fachkraft bzw. zum Meisterbetrieb nach Handwerksordnung, mit Nachweis je Auftrag.',
+      a: 'GeoTapp prüft keine Qualifikationen und führt keine Nachweise zur Handwerksordnung oder zum Meisterbetrieb. Es erfasst Uhrzeit, Position, Fotos und Notizen jedes Einsatzes, die der Dokumentation der Anlage beigefügt werden können.',
     },
   ],
   fr: [

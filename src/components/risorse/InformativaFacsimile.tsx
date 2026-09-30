@@ -55,8 +55,8 @@ const COPY: Record<InfLocale, Copy> = {
     footer: 'Draft generated for free with GeoTapp',
   },
   de: {
-    title: 'Kostenlose DSGVO-Vorlage zur GPS-Datenschutzerklärung für {paese} herunterladen',
-    desc: 'Muster einer Datenschutzerklärung zur Standortverfolgung von Mitarbeitern, konform mit Art. 13 DSGVO, mit Rechtsgrundlage und Aufsichtsbehörde des Landes. Leere Felder ausfüllen und von Ihrem Berater prüfen lassen.',
+    title: 'Kostenlose Vorlage zur GPS-Datenschutzinformation für {paese} herunterladen',
+    desc: 'Muster einer Datenschutzerklärung zur Standortverfolgung von Mitarbeitern, aufgebaut auf den Inhalten nach Art. 13 DSGVO, mit Rechtsgrundlage und Aufsichtsbehörde des Landes. Leere Felder ausfüllen und von Ihrem Berater prüfen lassen.',
     download: 'Vorlage herunterladen (PDF)',
     prompt: 'Möchten Sie auch die nächsten Praxis-Leitfäden zu GPS und Außendienst? E-Mail hinterlassen (optional).',
     placeholder: 'Ihre E-Mail',
