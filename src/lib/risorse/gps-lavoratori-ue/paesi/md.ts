@@ -16,11 +16,6 @@
 import type { SchedaPaese } from '../types';
 
 // URL delle fonti primarie citate.
-const FONTE_CNPDCP_VIDEO = {
-  titolo:
-    "CNPDCP, guida sull'installazione e gestione della videosorveglianza",
-  url: 'https://datepersonale.md/en/data-controller/ncpdp-guidelines/',
-};
 const FONTE_CNPDCP_RECLAMI = {
   titolo: 'CNPDCP, presentare un reclamo',
   url: 'https://datepersonale.md/about/plingeri-si-petitii/',
@@ -29,6 +24,11 @@ const FONTE_DLA_PIPER = {
   titolo:
     'Legge 195/2024 sulla protezione dei dati personali, in vigore dal 23 agosto 2026 (art. 35 DPIA, art. 88 sanzioni), testo inglese pubblicato dal CNPDCP',
   url: 'https://datepersonale.md/wp-content/uploads/2024/09/Law-no.-195-2024-on-personal-data-protection-1.pdf',
+};
+const FONTE_LISTA_DPIA = {
+  titolo:
+    'CNPDCP, ordine 27/2022: lista dei trattamenti soggetti a valutazione d\'impatto (modificata dall\'ordine 39/2026)',
+  url: 'https://www.legis.md/cautare/getResults?doc_id=155870&lang=ro',
 };
 const FONTE_GDPR = {
   titolo: 'Regolamento UE 2016/679 (GDPR) - riferimento comparativo',
@@ -100,12 +100,12 @@ export const moldova: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "Il monitoraggio dei lavoratori (video, internet e per estensione GPS) è disciplinato dalla Legge 195/2024 (che dal 23 agosto 2026 ha sostituito la 133/2011) e dal Codice del lavoro (artt. 91-94); i lavoratori vanno informati su chi accede ai dati e su quali dati si raccolgono.",
-        en: 'The monitoring of workers (video, internet and, by extension, GPS) is governed by Law 195/2024 (which replaced Law 133/2011 on 23 August 2026) and the Labour Code (art. 91-94); workers must be informed about who accesses the data and what data is collected.',
-        de: 'Die Überwachung der Arbeitnehmer (Video, Internet und im weiteren Sinne GPS) ist durch das Gesetz 195/2024 (das am 23. August 2026 das Gesetz 133/2011 ersetzt hat) und das Arbeitsgesetzbuch (Art. 91-94) geregelt; die Arbeitnehmer müssen darüber informiert werden, wer auf die Daten zugreift und welche Daten erhoben werden.',
-        fr: "La surveillance des travailleurs (vidéo, internet et, par extension, GPS) est régie par la loi 195/2024 (qui a remplacé la loi 133/2011 le 23 août 2026) et le Code du travail (art. 91-94); les travailleurs doivent être informes de qui accède aux données et de quelles données sont collectées.",
-        es: 'La supervisión de los trabajadores (video, internet y, por extensión, GPS) se rige por la Ley 195/2024 (que sustituyó a la ley 133/2011 el 23 de agosto de 2026) y el Código del trabajo (art. 91-94); se debe informar a los trabajadores sobre quien accede a los datos y que datos se recogen.',
-        nl: 'De monitoring van werknemers (video, internet en bij uitbreiding GPS) wordt geregeld door wet 195/2024 (die op 23 augustus 2026 wet 133/2011 heeft vervangen) en het Arbeidswetboek (art. 91-94); werknemers moeten worden geinformeerd over wie toegang heeft tot de gegevens en welke gegevens worden verzameld.',
+        it: "I dati dei lavoratori raccolti con il GPS sono dati personali: valgono la Legge 195/2024 (che dal 23 agosto 2026 ha sostituito la 133/2011; art. 13, informazione all'interessato) e il Codice del lavoro (artt. 91-94: il datore deve far conoscere ai lavoratori, sotto firma, i documenti sul trattamento dei loro dati e i loro diritti e obblighi). Né la legge né il Codice contengono una norma specifica sul GPS.",
+        en: 'Worker data collected through GPS is personal data: Law 195/2024 (which replaced Law 133/2011 on 23 August 2026; art. 13, information to the data subject) and the Labour Code (art. 91-94: the employer must make workers acquainted, against signature, with the documents on how their data is processed and with their rights and duties) apply. Neither the law nor the Code contains a specific GPS rule.',
+        de: 'Per GPS erhobene Arbeitnehmerdaten sind personenbezogene Daten: Es gelten das Gesetz 195/2024 (das am 23. August 2026 das Gesetz 133/2011 ersetzt hat; Art. 13, Information der betroffenen Person) und das Arbeitsgesetzbuch (Art. 91-94: der Arbeitgeber muss die Arbeitnehmer gegen Unterschrift mit den Unterlagen zur Verarbeitung ihrer Daten sowie mit ihren Rechten und Pflichten vertraut machen). Weder das Gesetz noch das Gesetzbuch enthalten eine eigene GPS-Regel.',
+        fr: "Les données des travailleurs collectées par GPS sont des données personnelles : s'appliquent la loi 195/2024 (qui a remplacé la loi 133/2011 le 23 août 2026; art. 13, information de la personne concernée) et le Code du travail (art. 91-94 : l'employeur doit faire prendre connaissance aux travailleurs, contre signature, des documents sur le traitement de leurs données et de leurs droits et obligations). Ni la loi ni le Code ne contiennent de règle spécifique sur le GPS.",
+        es: 'Los datos de los trabajadores recogidos por GPS son datos personales: se aplican la Ley 195/2024 (que sustituyó a la ley 133/2011 el 23 de agosto de 2026; art. 13, información al interesado) y el Código del trabajo (art. 91-94: el empleador debe dar a conocer a los trabajadores, bajo firma, los documentos sobre el tratamiento de sus datos y sus derechos y obligaciones). Ni la ley ni el Código contienen una norma específica sobre el GPS.',
+        nl: 'Via gps verzamelde werknemersgegevens zijn persoonsgegevens: wet 195/2024 (die op 23 augustus 2026 wet 133/2011 heeft vervangen; art. 13, informatie aan de betrokkene) en het Arbeidswetboek (art. 91-94: de werkgever moet werknemers tegen handtekening kennis laten nemen van de documenten over de verwerking van hun gegevens en van hun rechten en plichten) zijn van toepassing. Noch de wet noch het wetboek bevat een specifieke gps-regel.',
       },
       fonte: FONTE_DLA_PIPER,
     },
@@ -160,14 +160,14 @@ export const moldova: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "Valgono i principi di minimizzazione e limitazione della finalità; un tracciamento GPS continuo o fuori dall'orario di lavoro è sproporzionato.",
-        en: 'The principles of data minimisation and purpose limitation apply; continuous GPS tracking or tracking outside working hours is disproportionate.',
-        de: 'Es gelten die Grundsätze der Datenminimierung und der Zweckbindung; eine kontinuierliche GPS-Ortung oder eine Ortung außerhalb der Arbeitszeit ist unverhältnismäßig.',
-        fr: "Les principes de minimisation des données et de limitation des finalités s'appliquent; un suivi GPS continu ou en dehors des heures de travail est disproportionné.",
-        es: 'Se aplican los principios de minimización de datos y limitación de la finalidad; un seguimiento GPS continuo o fuera del horario laboral es desproporcionado.',
-        nl: 'De beginselen van dataminimalisatie en doelbinding zijn van toepassing; continue GPS-tracking of tracking buiten werktijd is onevenredig.',
+        it: "Valgono i principi di limitazione della finalità e di minimizzazione (art. 5(1)(b)-(c) della Legge 195/2024): i dati devono essere limitati a quanto necessario per la finalità dichiarata. Un tracciamento GPS continuo o fuori dall'orario di lavoro difficilmente resta entro questo limite.",
+        en: 'The principles of purpose limitation and data minimisation apply (art. 5(1)(b)-(c) of Law 195/2024): data must be limited to what is necessary for the stated purpose. Continuous GPS tracking or tracking outside working hours is unlikely to stay within that limit.',
+        de: 'Es gelten die Grundsätze der Zweckbindung und der Datenminimierung (Art. 5(1)(b)-(c) des Gesetzes 195/2024): Die Daten müssen auf das für den festgelegten Zweck Notwendige beschränkt sein. Eine kontinuierliche GPS-Ortung oder eine Ortung außerhalb der Arbeitszeit bleibt kaum innerhalb dieser Grenze.',
+        fr: "Les principes de limitation des finalités et de minimisation des données s'appliquent (art. 5(1)(b)-(c) de la loi 195/2024) : les données doivent être limitées à ce qui est nécessaire pour la finalité déclarée. Un suivi GPS continu ou en dehors des heures de travail reste difficilement dans cette limite.",
+        es: 'Se aplican los principios de limitación de la finalidad y minimización de datos (art. 5(1)(b)-(c) de la ley 195/2024): los datos deben limitarse a lo necesario para la finalidad declarada. Un seguimiento GPS continuo o fuera del horario laboral difícilmente se mantiene dentro de ese límite.',
+        nl: 'De beginselen van doelbinding en dataminimalisatie zijn van toepassing (art. 5(1)(b)-(c) van wet 195/2024): gegevens moeten beperkt blijven tot wat nodig is voor het vermelde doel. Continue gps-tracking of tracking buiten werktijd blijft moeilijk binnen die grens.',
       },
-      fonte: FONTE_CNPDCP_VIDEO,
+      fonte: FONTE_DLA_PIPER,
     },
     {
       voce: {
@@ -180,14 +180,14 @@ export const moldova: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "Dal 2022 il titolare deve svolgere una valutazione d'impatto (che ha sostituito la registrazione), descrivendo i trattamenti previsti, la finalità e l'interesse legittimo.",
-        en: 'Since 2022 the controller must carry out an impact assessment (which has replaced registration), describing the intended processing, the purpose and the legitimate interest.',
-        de: 'Seit 2022 muss der Verantwortliche eine Folgenabschätzung durchführen (die die Registrierung ersetzt hat) und darin die geplanten Verarbeitungen, den Zweck und das berechtigte Interesse beschreiben.',
-        fr: "Depuis 2022, le responsable du traitement doit réaliser une analyse d'impact (qui a remplace l'enregistrement), décrivant les traitements prévus, la finalité et l'intérêt légitime.",
-        es: 'Desde 2022 el responsable del tratamiento debe realizar una evaluación de impacto (que ha sustituido al registro), describiendo los tratamientos previstos, la finalidad y el interés legítimo.',
-        nl: 'Sinds 2022 moet de verwerkingsverantwoordelijke een effectbeoordeling uitvoeren (die de registratie heeft vervangen), waarin de voorgenomen verwerkingen, het doel en het gerechtvaardigd belang worden beschreven.',
+        it: "Prima di iniziare il titolare deve svolgere una valutazione d'impatto (art. 35 della Legge 195/2024; dal 2022 ha sostituito la registrazione). La lista del CNPDCP (ordine 27/2022, modificato dal 23 agosto 2026) la richiede quando ricorrono almeno due criteri: il GPS sui lavoratori ne integra due (monitoraggio sistematico; dipendenti nei confronti del datore). Va descritto il trattamento, la finalità e l'eventuale interesse legittimo.",
+        en: 'Before starting, the controller must carry out an impact assessment (art. 35 of Law 195/2024; since 2022 it has replaced registration). The CNPDCP list (order 27/2022, amended from 23 August 2026) requires it when at least two criteria apply: GPS on workers meets two (systematic monitoring; employees in relation to the employer). It must describe the processing, the purpose and any legitimate interest.',
+        de: 'Vor Beginn muss der Verantwortliche eine Folgenabschätzung durchführen (Art. 35 des Gesetzes 195/2024; seit 2022 ersetzt sie die Registrierung). Die Liste des CNPDCP (Anordnung 27/2022, ab 23. August 2026 geändert) verlangt sie, wenn mindestens zwei Kriterien zutreffen: GPS bei Arbeitnehmern erfüllt zwei (systematische Überwachung; Beschäftigte gegenüber dem Arbeitgeber). Zu beschreiben sind Verarbeitung, Zweck und ggf. das berechtigte Interesse.',
+        fr: "Avant de commencer, le responsable du traitement doit réaliser une analyse d'impact (art. 35 de la loi 195/2024; depuis 2022 elle a remplacé l'enregistrement). La liste du CNPDCP (ordre 27/2022, modifié à partir du 23 août 2026) l'exige lorsqu'au moins deux critères s'appliquent : le GPS sur les travailleurs en réunit deux (surveillance systématique; salariés face à l'employeur). Elle décrit le traitement, la finalité et l'éventuel intérêt légitime.",
+        es: 'Antes de empezar, el responsable del tratamiento debe realizar una evaluación de impacto (art. 35 de la ley 195/2024; desde 2022 ha sustituido al registro). La lista del CNPDCP (orden 27/2022, modificada desde el 23 de agosto de 2026) la exige cuando concurren al menos dos criterios: el GPS sobre los trabajadores reúne dos (supervisión sistemática; empleados frente al empleador). Debe describir el tratamiento, la finalidad y, en su caso, el interés legítimo.',
+        nl: 'Voor aanvang moet de verwerkingsverantwoordelijke een effectbeoordeling uitvoeren (art. 35 van wet 195/2024; sinds 2022 vervangt zij de registratie). De lijst van het CNPDCP (bevel 27/2022, gewijzigd vanaf 23 augustus 2026) eist haar als minstens twee criteria gelden: gps bij werknemers voldoet aan twee (systematische monitoring; werknemers tegenover de werkgever). Beschrijf de verwerking, het doel en zo nodig het gerechtvaardigd belang.',
       },
-      fonte: FONTE_DLA_PIPER,
+      fonte: FONTE_LISTA_DPIA,
     },
   ],
 
@@ -250,12 +250,12 @@ export const moldova: SchedaPaese = {
     {
       passo: 6,
       descrizione: {
-        it: 'In caso di cambio sistema: se cambi sistema o software di monitoraggio, aggiorna e ri-consegna l’informativa, e verifica se va rinnovato l’accordo o l’autorizzazione nazionale per il controllo a distanza. Spesso cambiano fornitore (responsabile del trattamento), dati raccolti e modalità: quella consegnata prima non basta.',
-        en: 'If you switch systems: when you change your monitoring system or software, update and re-issue the privacy notice, and check whether the national agreement or authorisation for remote monitoring needs renewing. The provider (data processor), the data collected and the methods often change: the one provided earlier is not enough.',
-        de: 'Bei Systemwechsel: Wenn Sie Ihr Überwachungssystem oder Ihre Software wechseln, aktualisieren Sie die Datenschutzinformation und händigen Sie sie erneut aus und prüfen Sie, ob die nationale Vereinbarung oder Genehmigung zur Fernüberwachung erneuert werden muss. Anbieter (Auftragsverarbeiter), erhobene Daten und Modalitäten ändern sich oft: die zuvor ausgehändigte genügt nicht.',
-        fr: 'En cas de changement de système : si vous changez de système ou de logiciel de surveillance, mettez à jour et remettez l’information, et vérifiez si l’accord ou l’autorisation nationale de contrôle à distance doit être renouvelé. Le fournisseur (sous-traitant), les données collectées et les modalités changent souvent : celle remise auparavant ne suffit pas.',
-        es: 'En caso de cambio de sistema: si cambias de sistema o software de monitorización, actualiza y vuelve a entregar la información, y comprueba si debe renovarse el acuerdo o la autorización nacional para el control a distancia. A menudo cambian el proveedor (encargado del tratamiento), los datos recogidos y las modalidades: la entregada antes no basta.',
-        nl: 'Bij een systeemwissel: als je van monitoringsysteem of -software verandert, werk de privacyverklaring bij en verstrek deze opnieuw, en controleer of de nationale overeenkomst of toestemming voor controle op afstand moet worden vernieuwd. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
+        it: 'In caso di cambio di sistema: se cambi sistema o software di monitoraggio, aggiorna e riconsegna l’informativa, e verifica se devi di nuovo informare o consultare i rappresentanti dei lavoratori, dove la legge lo prevede. Spesso cambiano fornitore (responsabile del trattamento), dati raccolti e modalità: quella consegnata prima non basta.',
+        en: 'If you switch systems: when you change your monitoring system or software, update and re-issue the privacy notice, and check whether you must inform or consult the workers\' representatives again, where the law requires it. The provider (data processor), the data collected and the methods often change: the one provided earlier is not enough.',
+        de: 'Bei Systemwechsel: Wenn Sie Ihr Überwachungssystem oder Ihre Software wechseln, aktualisieren Sie die Datenschutzinformation und händigen Sie sie erneut aus, und prüfen Sie, ob Sie die Arbeitnehmervertretung erneut informieren oder beteiligen müssen, wo das Gesetz es vorsieht. Anbieter (Auftragsverarbeiter), erhobene Daten und Modalitäten ändern sich oft: die zuvor ausgehändigte genügt nicht.',
+        fr: 'En cas de changement de système : si vous changez de système ou de logiciel de surveillance, mettez à jour et remettez l’information, et vérifiez si vous devez de nouveau informer ou consulter les représentants du personnel, lorsque la loi le prévoit. Le fournisseur (sous-traitant), les données collectées et les modalités changent souvent : celle remise auparavant ne suffit pas.',
+        es: 'En caso de cambio de sistema: si cambias de sistema o software de monitorización, actualiza y vuelve a entregar la información, y comprueba si debes volver a informar o consultar a los representantes de los trabajadores, cuando la ley lo prevé. A menudo cambian el proveedor (encargado del tratamiento), los datos recogidos y las modalidades: la entregada antes no basta.',
+        nl: 'Bij een systeemwissel: als je van monitoringsysteem of -software verandert, werk de privacyverklaring bij en verstrek deze opnieuw, en controleer of je de werknemersvertegenwoordiging opnieuw moet informeren of raadplegen, waar de wet dat voorschrijft. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
       },
     },
   ],
@@ -293,9 +293,9 @@ export const moldova: SchedaPaese = {
   },
 
   fonti: [
-    FONTE_CNPDCP_VIDEO,
     FONTE_CNPDCP_RECLAMI,
     FONTE_DLA_PIPER,
+    FONTE_LISTA_DPIA,
     FONTE_GDPR,
   ],
 

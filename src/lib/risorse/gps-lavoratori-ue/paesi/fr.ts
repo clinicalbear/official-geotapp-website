@@ -5,7 +5,7 @@
  * art. L2312-38 e art. L1222-4 del Code du travail, guida CNIL sulla
  * geolocalizzazione dei veicoli dei dipendenti, lista CNIL dei trattamenti che
  * richiedono un'AIPD, abolizione delle dichiarazioni preventive alla CNIL dal
- * 25 maggio 2018, sanzioni CNIL 2025 in procedura semplificata, sanzione CNIL
+ * 25 maggio 2018, sanzioni CNIL del novembre 2023 in procedura semplificata, sanzione CNIL
  * UBEEQO (175.000 €) e GDPR.
  *
  * La Francia non e' uno Stato federale: c'e' un'unica autorita' nazionale, la
@@ -37,12 +37,12 @@ const FONTE_CNIL_ABOLIZIONE_FORMALITA = {
   url: 'https://www.cnil.fr/fr/cnil-direct/question/reglement-europeen-faut-il-encore-effectuer-des-declarations-la-cnil',
 };
 const FONTE_CNIL_SANZIONI_2025 = {
-  titolo: 'CNIL, dieci nuove sanzioni (procedura semplificata, 2025)',
+  titolo: 'CNIL, dieci nuove sanzioni (procedura semplificata, 7 novembre 2023)',
   url: 'https://www.cnil.fr/fr/la-cnil-prononce-dix-nouvelles-sanctions-dans-le-cadre-de-sa-procedure-simplifiee',
 };
 const FONTE_EDPB_UBEEQO = {
-  titolo: 'EDPB, la CNIL sanziona UBEEQO International (175.000 €, 7 luglio 2022)',
-  url: 'https://edpb.europa.eu/news/national-news/2022/geolocalisation-data-french-sa-fines-ubeeqo-international-eu175-000_en',
+  titolo: 'CNIL, deliberazione SAN-2022-015 del 7 luglio 2022 (UBEEQO International, 175.000 €), su Légifrance',
+  url: 'https://www.legifrance.gouv.fr/cnil/id/CNILTEXT000046070924',
 };
 const FONTE_CNIL_RECLAMO = {
   titolo: 'CNIL, presentare un reclamo',
@@ -99,7 +99,7 @@ export const francia: SchedaPaese = {
         it: 'Consultazione del CSE prima di installare il sistema di controllo (art. L2312-38)',
         en: 'Consultation of the CSE before installing the monitoring system (art. L2312-38)',
         de: 'Anhörung des CSE vor der Installation des Kontrollsystems (Art. L2312-38)',
-        fr: 'Consultation du CSE avant l installation du système de contrôle (art. L2312-38)',
+        fr: 'Consultation du CSE avant l\'installation du système de contrôle (art. L2312-38)',
         es: 'Consulta al CSE antes de instalar el sistema de control (art. L2312-38)',
         nl: 'Raadpleging van de CSE voor de installatie van het controlesysteem (art. L2312-38)',
       },
@@ -108,7 +108,7 @@ export const francia: SchedaPaese = {
         it: "Prima di decidere di installare un mezzo di controllo dell'attività dei dipendenti, il datore deve informare e consultare il CSE (Comitato Sociale ed Economico). La consultazione prevista dall'art. L2312-38 vale nelle imprese con almeno 50 dipendenti: il Codice del lavoro la colloca fra le attribuzioni del CSE in quelle imprese. Sotto i 50 dipendenti resta comunque l'obbligo di informare individualmente ogni dipendente prima di raccogliere i suoi dati (art. L1222-4).",
         en: "Before deciding to install a means of monitoring employees' activity, the employer must inform and consult the CSE (Social and Economic Committee). The consultation under art. L2312-38 applies in companies with at least 50 employees: the Labour Code places it among the powers of the CSE in those companies. Below 50 employees the obligation to inform each employee individually before collecting their data still applies (art. L1222-4).",
         de: 'Bevor der Arbeitgeber beschließt, ein Mittel zur Kontrolle der Tätigkeit der Beschäftigten zu installieren, muss er den CSE (Sozial- und Wirtschaftsausschuss) informieren und anhören. Die Anhörung nach Art. L2312-38 gilt in Unternehmen mit mindestens 50 Beschäftigten: Das Arbeitsgesetzbuch ordnet sie den Befugnissen des CSE in diesen Unternehmen zu. Unter 50 Beschäftigten bleibt die Pflicht, jeden Beschäftigten vor der Erhebung seiner Daten einzeln zu informieren (Art. L1222-4).',
-        fr: "Avant de décider d installer un moyen de contrôle de l activité des salaries, l employeur doit informer et consulter le CSE (Comite Social et Économique). La consultation prévue par l'art. L2312-38 vaut dans les entreprises d'au moins 50 salariés : le Code du travail la range parmi les attributions du CSE dans ces entreprises. En dessous de 50 salariés, l'obligation d'informer individuellement chaque salarié avant de collecter ses données demeure (art. L1222-4).",
+        fr: "Avant de décider d'installer un moyen de contrôle de l'activité des salariés, l'employeur doit informer et consulter le CSE (Comité Social et Économique). La consultation prévue par l'art. L2312-38 vaut dans les entreprises d'au moins 50 salariés : le Code du travail la range parmi les attributions du CSE dans ces entreprises. En dessous de 50 salariés, l'obligation d'informer individuellement chaque salarié avant de collecter ses données demeure (art. L1222-4).",
         es: "Antes de decidir instalar un medio de control de la actividad de los empleados, el empleador debe informar y consultar al CSE (Comité Social y Económico). La consulta prevista por el art. L2312-38 rige en las empresas de al menos 50 empleados: el Código del trabajo la sitúa entre las atribuciones del CSE en esas empresas. Por debajo de 50 empleados se mantiene la obligación de informar individualmente a cada empleado antes de recoger sus datos (art. L1222-4).",
         nl: 'Voordat de werkgever besluit een middel voor de controle van de activiteit van de werknemers te installeren, moet hij de CSE (Sociaal en Economisch Comite) informeren en raadplegen. De raadpleging volgens art. L2312-38 geldt in ondernemingen met ten minste 50 werknemers: het Arbeidswetboek plaatst haar bij de bevoegdheden van de CSE in die ondernemingen. Onder de 50 werknemers blijft de verplichting om elke werknemer individueel te informeren voordat zijn gegevens worden verzameld (art. L1222-4).',
       },
@@ -119,7 +119,7 @@ export const francia: SchedaPaese = {
         it: "Autorizzazione di un'autorità del lavoro prima di installare",
         en: 'Authorisation from a labour authority before installing',
         de: 'Genehmigung einer Arbeitsbehörde vor der Installation',
-        fr: 'Autorisation d une autorité du travail avant l installation',
+        fr: 'Autorisation d\'une autorité du travail avant l\'installation',
         es: 'Autorización de una autoridad laboral antes de instalar',
         nl: 'Toestemming van een arbeidsautoriteit voor de installatie',
       },
@@ -183,14 +183,14 @@ export const francia: SchedaPaese = {
         es: 'Evaluación de impacto (EIPD) para la vigilancia constante de la actividad de los empleados',
         nl: 'Gegevensbeschermingseffectbeoordeling (DPIA) voor de voortdurende controle van de activiteit van werknemers',
       },
-      risposta: 'si',
+      risposta: 'dipende',
       dettaglio: {
-        it: "La lista CNIL include tra i trattamenti che richiedono un'AIPD quelli che sorvegliano in modo costante l'attività dei dipendenti e i trattamenti di dati di localizzazione su larga scala.",
-        en: "The CNIL list includes, among the processing operations requiring a DPIA, those that constantly monitor employees' activity and large-scale processing of location data.",
-        de: 'Die CNIL-Liste zählt zu den Verarbeitungen, die eine DSFA erfordern, jene, die die Tätigkeit der Beschäftigten ständig überwachen, sowie die Verarbeitung von Standortdaten in großem Umfang.',
-        fr: "La liste de la CNIL inclut parmi les traitements requierant une AIPD ceux qui surveillent de manière constante l activité des salaries et les traitements de données de localisation a grande échelle.",
-        es: 'La lista de la CNIL incluye, entre los tratamientos que requieren una EIPD, los que vigilan de forma constante la actividad de los empleados y los tratamientos de datos de localización a gran escala.',
-        nl: 'De CNIL-lijst rekent tot de verwerkingen die een DPIA vereisen die welke de activiteit van werknemers voortdurend bewaken en de grootschalige verwerking van locatiegegevens.',
+        it: "La lista CNIL include tra i trattamenti che richiedono un'AIPD quelli che sorvegliano in modo costante l'attività dei dipendenti e i trattamenti di dati di localizzazione su larga scala. Un sistema che rileva la posizione solo in momenti puntuali (per esempio al timbro), in una piccola azienda, può non rientrare in nessuna delle due categorie: in quel caso il rischio va valutato caso per caso (art. 35 GDPR).",
+        en: "The CNIL list includes, among the processing operations requiring a DPIA, those that constantly monitor employees' activity and large-scale processing of location data. A system that records the position only at specific moments (for example at clock-in), in a small company, may fall under neither category: in that case the risk must be assessed case by case (Article 35 GDPR).",
+        de: 'Die CNIL-Liste zählt zu den Verarbeitungen, die eine DSFA erfordern, jene, die die Tätigkeit der Beschäftigten ständig überwachen, sowie die Verarbeitung von Standortdaten in großem Umfang. Ein System, das den Standort nur punktuell erfasst (etwa beim Stempeln), kann in einem kleinen Unternehmen unter keine der beiden Kategorien fallen: dann ist das Risiko im Einzelfall zu bewerten (Artikel 35 DSGVO).',
+        fr: "La liste de la CNIL inclut parmi les traitements requierant une AIPD ceux qui surveillent de manière constante l activité des salaries et les traitements de données de localisation à grande échelle. Un système qui relève la position seulement à des moments ponctuels (par exemple au pointage), dans une petite entreprise, peut ne relever d'aucune de ces deux catégories : le risque doit alors être apprécié au cas par cas (article 35 RGPD).",
+        es: 'La lista de la CNIL incluye, entre los tratamientos que requieren una EIPD, los que vigilan de forma constante la actividad de los empleados y los tratamientos de datos de localización a gran escala. Un sistema que registra la posición solo en momentos puntuales (por ejemplo al fichar), en una empresa pequeña, puede no entrar en ninguna de las dos categorías: en ese caso el riesgo debe valorarse caso por caso (artículo 35 RGPD).',
+        nl: 'De CNIL-lijst rekent tot de verwerkingen die een DPIA vereisen die welke de activiteit van werknemers voortdurend bewaken en de grootschalige verwerking van locatiegegevens. Een systeem dat de positie alleen op bepaalde momenten vastlegt (bijvoorbeeld bij het klokken), in een klein bedrijf, valt mogelijk onder geen van beide categorieën: dan moet het risico per geval worden beoordeeld (artikel 35 AVG).',
       },
       fonte: FONTE_CNIL_AIPD,
     },
@@ -286,12 +286,12 @@ export const francia: SchedaPaese = {
     {
       passo: 7,
       descrizione: {
-        it: 'In caso di cambio sistema: se cambi sistema o software di monitoraggio, aggiorna e ri-consegna l’informativa, e verifica se va rinnovato l’accordo o l’autorizzazione nazionale per il controllo a distanza. Spesso cambiano fornitore (responsabile del trattamento), dati raccolti e modalità: quella consegnata prima non basta.',
-        en: 'If you switch systems: when you change your monitoring system or software, update and re-issue the privacy notice, and check whether the national agreement or authorisation for remote monitoring needs renewing. The provider (data processor), the data collected and the methods often change: the one provided earlier is not enough.',
-        de: 'Bei Systemwechsel: Wenn Sie Ihr Überwachungssystem oder Ihre Software wechseln, aktualisieren Sie die Datenschutzinformation und händigen Sie sie erneut aus und prüfen Sie, ob die nationale Vereinbarung oder Genehmigung zur Fernüberwachung erneuert werden muss. Anbieter (Auftragsverarbeiter), erhobene Daten und Modalitäten ändern sich oft: die zuvor ausgehändigte genügt nicht.',
-        fr: 'En cas de changement de système : si vous changez de système ou de logiciel de surveillance, mettez à jour et remettez l’information, et vérifiez si l’accord ou l’autorisation nationale de contrôle à distance doit être renouvelé. Le fournisseur (sous-traitant), les données collectées et les modalités changent souvent : celle remise auparavant ne suffit pas.',
-        es: 'En caso de cambio de sistema: si cambias de sistema o software de monitorización, actualiza y vuelve a entregar la información, y comprueba si debe renovarse el acuerdo o la autorización nacional para el control a distancia. A menudo cambian el proveedor (encargado del tratamiento), los datos recogidos y las modalidades: la entregada antes no basta.',
-        nl: 'Bij een systeemwissel: als je van monitoringsysteem of -software verandert, werk de privacyverklaring bij en verstrek deze opnieuw, en controleer of de nationale overeenkomst of toestemming voor controle op afstand moet worden vernieuwd. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
+        it: 'In caso di cambio di sistema: se cambi sistema o software di monitoraggio, aggiorna e riconsegna l’informativa, e verifica se devi di nuovo informare o consultare i rappresentanti dei lavoratori, dove la legge lo prevede. Spesso cambiano fornitore (responsabile del trattamento), dati raccolti e modalità: quella consegnata prima non basta.',
+        en: 'If you switch systems: when you change your monitoring system or software, update and re-issue the privacy notice, and check whether you must inform or consult the workers\' representatives again, where the law requires it. The provider (data processor), the data collected and the methods often change: the one provided earlier is not enough.',
+        de: 'Bei Systemwechsel: Wenn Sie Ihr Überwachungssystem oder Ihre Software wechseln, aktualisieren Sie die Datenschutzinformation und händigen Sie sie erneut aus, und prüfen Sie, ob Sie die Arbeitnehmervertretung erneut informieren oder beteiligen müssen, wo das Gesetz es vorsieht. Anbieter (Auftragsverarbeiter), erhobene Daten und Modalitäten ändern sich oft: die zuvor ausgehändigte genügt nicht.',
+        fr: 'En cas de changement de système : si vous changez de système ou de logiciel de surveillance, mettez à jour et remettez l’information, et vérifiez si vous devez de nouveau informer ou consulter les représentants du personnel, lorsque la loi le prévoit. Le fournisseur (sous-traitant), les données collectées et les modalités changent souvent : celle remise auparavant ne suffit pas.',
+        es: 'En caso de cambio de sistema: si cambias de sistema o software de monitorización, actualiza y vuelve a entregar la información, y comprueba si debes volver a informar o consultar a los representantes de los trabajadores, cuando la ley lo prevé. A menudo cambian el proveedor (encargado del tratamiento), los datos recogidos y las modalidades: la entregada antes no basta.',
+        nl: 'Bij een systeemwissel: als je van monitoringsysteem of -software verandert, werk de privacyverklaring bij en verstrek deze opnieuw, en controleer of je de werknemersvertegenwoordiging opnieuw moet informeren of raadplegen, waar de wet dat voorschrijft. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
       },
     },
   ],
@@ -317,12 +317,12 @@ export const francia: SchedaPaese = {
       nl: '175.000 EUR',
     },
     casoCitato: {
-      it: "CNIL contro UBEEQO International, 7 luglio 2022: geolocalizzazione quasi permanente in violazione della minimizzazione, della durata di conservazione e dell'obbligo di informazione. Riguardava i veicoli a noleggio (clienti), non i dipendenti in senso stretto, ma e la sanzione faro francese sulla geolocalizzazione continua eccessiva. Nel 2025 la CNIL ha inoltre sanzionato più datori per la geolocalizzazione continua dei veicoli dei dipendenti senza possibilità di sospensione durante le pause.",
-      en: 'CNIL v. UBEEQO International, 7 July 2022: near-permanent geolocation in breach of data minimisation, the retention period and the information obligation. It concerned rental vehicles (customers), not employees in the strict sense, but it is the French landmark fine on excessive continuous geolocation. In 2025 the CNIL also fined several employers for the continuous geolocation of employees vehicles without the possibility of suspension during breaks.',
-      de: 'CNIL gegen UBEEQO International, 7. Juli 2022: nahezu permanente Geolokalisierung unter Verstoß gegen die Datenminimierung, die Speicherdauer und die Informationspflicht. Es ging um Mietfahrzeuge (Kunden), nicht um Beschäftigte im engeren Sinne, doch es ist das französische Leiturteil zur übermäßigen kontinuierlichen Geolokalisierung. 2025 verhängte die CNIL zudem gegen mehrere Arbeitgeber Bußgelder wegen der kontinuierlichen Geolokalisierung der Fahrzeuge der Beschäftigten ohne Möglichkeit der Aussetzung während der Pausen.',
-      fr: "CNIL contre UBEEQO International, 7 juillet 2022: géolocalisation quasi permanente en violation de la minimisation, de la durée de conservation et de l obligation d information. Cela concernait des véhicules de location (clients), non les salaries au sens strict, mais c est la sanction phare française sur la géolocalisation continue excessive. En 2025, la CNIL a en outre sanctionne plusieurs employeurs pour la géolocalisation continue des véhicules des salaries sans possibilité de suspension pendant les pauses.",
-      es: 'CNIL contra UBEEQO International, 7 de julio de 2022: geolocalizacion casi permanente en infracción de la minimización, el plazo de conservación y la obligación de información. Afectaba a vehículos de alquiler (clientes), no a los empleados en sentido estricto, pero es la sanción de referencia francesa sobre la geolocalizacion continua excesiva. En 2025 la CNIL sanciono ademas a varios empleadores por la geolocalizacion continua de los vehículos de los empleados sin posibilidad de suspensión durante las pausas.',
-      nl: 'CNIL tegen UBEEQO International, 7 juli 2022: bijna permanente geolocatie in strijd met de minimalisering, de bewaartermijn en de informatieplicht. Het betrof huurvoertuigen (klanten), niet de werknemers in strikte zin, maar het is de Franse toonaangevende boete inzake buitensporige continue geolocatie. In 2025 beboette de CNIL bovendien meerdere werkgevers voor de continue geolocatie van de voertuigen van werknemers zonder mogelijkheid tot opschorting tijdens de pauzes.',
+      it: "CNIL contro UBEEQO International, 7 luglio 2022: geolocalizzazione quasi permanente in violazione della minimizzazione, della durata di conservazione e dell'obbligo di informazione. Riguardava i veicoli a noleggio (clienti), non i dipendenti in senso stretto, ma è la sanzione faro francese sulla geolocalizzazione continua eccessiva. Nel novembre 2023 la CNIL ha inoltre sanzionato più datori per la geolocalizzazione continua dei veicoli dei dipendenti senza possibilità di sospensione durante le pause.",
+      en: 'CNIL v. UBEEQO International, 7 July 2022: near-permanent geolocation in breach of data minimisation, the retention period and the information obligation. It concerned rental vehicles (customers), not employees in the strict sense, but it is the French landmark fine on excessive continuous geolocation. In November 2023 the CNIL also fined several employers for the continuous geolocation of employees\' vehicles without the possibility of suspension during breaks.',
+      de: 'CNIL gegen UBEEQO International, 7. Juli 2022: nahezu permanente Geolokalisierung unter Verstoß gegen die Datenminimierung, die Speicherdauer und die Informationspflicht. Es ging um Mietfahrzeuge (Kunden), nicht um Beschäftigte im engeren Sinne, doch es ist das französische Leiturteil zur übermäßigen kontinuierlichen Geolokalisierung. Im November 2023 verhängte die CNIL zudem gegen mehrere Arbeitgeber Bußgelder wegen der kontinuierlichen Geolokalisierung der Fahrzeuge der Beschäftigten ohne Möglichkeit der Aussetzung während der Pausen.',
+      fr: "CNIL contre UBEEQO International, 7 juillet 2022: géolocalisation quasi permanente en violation de la minimisation, de la durée de conservation et de l'obligation d'information. Cela concernait des véhicules de location (clients), non les salariés au sens strict, mais c'est la sanction phare française sur la géolocalisation continue excessive. En novembre 2023, la CNIL a en outre sanctionné plusieurs employeurs pour la géolocalisation continue des véhicules des salariés sans possibilité de suspension pendant les pauses.",
+      es: 'CNIL contra UBEEQO International, 7 de julio de 2022: geolocalizacion casi permanente en infracción de la minimización, el plazo de conservación y la obligación de información. Afectaba a vehículos de alquiler (clientes), no a los empleados en sentido estricto, pero es la sanción de referencia francesa sobre la geolocalizacion continua excesiva. En noviembre de 2023 la CNIL sancionó además a varios empleadores por la geolocalizacion continua de los vehículos de los empleados sin posibilidad de suspensión durante las pausas.',
+      nl: 'CNIL tegen UBEEQO International, 7 juli 2022: bijna permanente geolocatie in strijd met de minimalisering, de bewaartermijn en de informatieplicht. Het betrof huurvoertuigen (klanten), niet de werknemers in strikte zin, maar het is de Franse toonaangevende boete inzake buitensporige continue geolocatie. In november 2023 beboette de CNIL bovendien meerdere werkgevers voor de continue geolocatie van de voertuigen van werknemers zonder mogelijkheid tot opschorting tijdens de pauzes.',
     },
     urlFonte: FONTE_EDPB_UBEEQO.url,
     tipoImporto: 'caso-affine',

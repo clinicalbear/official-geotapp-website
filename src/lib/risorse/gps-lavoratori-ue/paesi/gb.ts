@@ -35,6 +35,11 @@ const FONTE_ICO_SEGNALAZIONI = {
   titolo: 'ICO, presentare una segnalazione',
   url: 'https://ico.org.uk/concerns/',
 };
+const FONTE_INFORMATION_COMMISSION = {
+  titolo:
+    'Data (Use and Access) Act 2025 (Commencement No. 9) Regulations 2026, SI 2026/1015 (Information Commission dal 30/09/2026)',
+  url: 'https://www.legislation.gov.uk/uksi/2026/1015/made',
+};
 const FONTE_GDPR = {
   titolo: 'Regolamento UE 2016/679 (GDPR) come UK GDPR',
   url: 'https://eur-lex.europa.eu/eli/reg/2016/679/oj',
@@ -67,17 +72,17 @@ export const regnoUnito: SchedaPaese = {
   stato: 'scheda-senza-pdf',
 
   autoritaCompetente: {
-    ente: "ICO (Information Commissioner's Office)",
+    ente: "Information Commission (ICO)",
     portale: FONTE_ICO_SEGNALAZIONI.url,
     urlFonte: FONTE_ICO_SEGNALAZIONI.url,
-    verificatoIl: '2026-06-15',
+    verificatoIl: '2026-09-30',
     note: {
-      it: "Il Regno Unito ha un'unica autorità nazionale, l'ICO, per Inghilterra, Scozia, Galles e Irlanda del Nord: nessuna ripartizione regionale.",
-      en: 'The United Kingdom has a single national authority, the ICO, for England, Scotland, Wales and Northern Ireland: no regional split.',
-      de: 'Das Vereinigte Königreich hat eine einzige nationale Behörde, das ICO, für England, Schottland, Wales und Nordirland: keine regionale Aufteilung.',
-      fr: "Le Royaume-Uni dispose d'une seule autorité nationale, l'ICO, pour l'Angleterre, l'Écosse, le pays de Galles et l'Irlande du Nord : aucune répartition régionale.",
-      es: 'El Reino Unido tiene una única autoridad nacional, la ICO, para Inglaterra, Escocia, Gales e Irlanda del Norte: sin reparto regional.',
-      nl: 'Het Verenigd Koninkrijk heeft één nationale autoriteit, de ICO, voor Engeland, Schotland, Wales en Noord-Ierland: geen regionale verdeling.',
+      it: "Il Regno Unito ha un'unica autorità nazionale, l'ICO, per Inghilterra, Scozia, Galles e Irlanda del Nord: nessuna ripartizione regionale. Dal 30 settembre 2026 l'Information Commissioner è sostituito dalla Information Commission (Data (Use and Access) Act 2025, artt. 118-119); l'ufficio continua a chiamarsi ICO.",
+      en: 'The United Kingdom has a single national authority, the ICO, for England, Scotland, Wales and Northern Ireland: no regional split. From 30 September 2026 the Information Commissioner is replaced by the Information Commission (Data (Use and Access) Act 2025, ss. 118-119); the office continues to be known as the ICO.',
+      de: 'Das Vereinigte Königreich hat eine einzige nationale Behörde, das ICO, für England, Schottland, Wales und Nordirland: keine regionale Aufteilung. Ab dem 30. September 2026 wird der Information Commissioner durch die Information Commission ersetzt (Data (Use and Access) Act 2025, Abschn. 118-119); die Behörde bleibt als ICO bekannt.',
+      fr: "Le Royaume-Uni dispose d'une seule autorité nationale, l'ICO, pour l'Angleterre, l'Écosse, le pays de Galles et l'Irlande du Nord : aucune répartition régionale. Depuis le 30 septembre 2026, l'Information Commissioner est remplacé par l'Information Commission (Data (Use and Access) Act 2025, art. 118-119); l'office reste connu sous le nom d'ICO.",
+      es: 'El Reino Unido tiene una única autoridad nacional, la ICO, para Inglaterra, Escocia, Gales e Irlanda del Norte: sin reparto regional. Desde el 30 de septiembre de 2026 el Information Commissioner es sustituido por la Information Commission (Data (Use and Access) Act 2025, arts. 118-119); la oficina sigue conociéndose como ICO.',
+      nl: 'Het Verenigd Koninkrijk heeft één nationale autoriteit, de ICO, voor Engeland, Schotland, Wales en Noord-Ierland: geen regionale verdeling. Vanaf 30 september 2026 wordt de Information Commissioner vervangen door de Information Commission (Data (Use and Access) Act 2025, art. 118-119); het bureau blijft bekend als ICO.',
     },
   },
 
@@ -153,12 +158,12 @@ export const regnoUnito: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "Per l'ICO la registrazione continua mentre il veicolo e usato a fini privati fuori orario e probabilmente eccessiva; il conducente deve poter disattivare la registrazione in quei casi.",
-        en: 'According to the ICO, continuous recording while the vehicle is used for private purposes outside working hours is likely to be excessive; the driver must be able to switch off the recording in those cases.',
-        de: 'Nach Auffassung des ICO ist die kontinuierliche Aufzeichnung, während das Fahrzeug außerhalb der Arbeitszeit privat genutzt wird, wahrscheinlich unverhältnismäßig; der Fahrer muss die Aufzeichnung in diesen Fällen deaktivieren können.',
-        fr: "Pour l'ICO, l'enregistrement continu pendant que le véhicule est utilisé à des fins privées en dehors des heures de travail est probablement excessif ; le conducteur doit pouvoir désactiver l'enregistrement dans ces cas.",
-        es: 'Para la ICO, la grabación continua mientras el vehículo se utiliza con fines privados fuera del horario laboral es probablemente excesiva; el conductor debe poder desactivar la grabación en esos casos.',
-        nl: 'Volgens de ICO is continue registratie terwijl het voertuig buiten werktijd voor privédoeleinden wordt gebruikt waarschijnlijk buitensporig; de bestuurder moet de registratie in die gevallen kunnen uitschakelen.',
+        it: "L'ICO non ha una regola specifica sul GPS. Nella sua guida sulla sorveglianza a bordo dei veicoli (registrazione video) giudica probabilmente eccessiva la registrazione continua mentre il veicolo è usato a fini privati fuori orario, e dice che il conducente dovrebbe poter disattivarla; nell'esempio sulla DPIA (auto aziendali con localizzazione, usate anche in privato) il monitoraggio dei movimenti in ogni momento richiede una DPIA. Il ragionamento va applicato per analogia al GPS.",
+        en: 'The ICO has no GPS-specific rule. In its guidance on surveillance in vehicles (video recording) it considers continuous recording while the vehicle is used privately outside working hours likely to be excessive, and says drivers should have the option to deactivate it; in its DPIA example (company cars with location tracking, also used privately) monitoring movements at all times requires a DPIA. The reasoning applies to GPS by analogy.',
+        de: 'Das ICO hat keine GPS-spezifische Regel. In seinem Leitfaden zur Überwachung in Fahrzeugen (Videoaufzeichnung) hält es die kontinuierliche Aufzeichnung, während das Fahrzeug außerhalb der Arbeitszeit privat genutzt wird, für wahrscheinlich unverhältnismäßig und sagt, Fahrer sollten sie deaktivieren können; im DPIA-Beispiel (Firmenwagen mit Ortung, auch privat genutzt) erfordert die Überwachung der Bewegungen zu jeder Zeit eine DPIA. Die Überlegung gilt sinngemäß für GPS.',
+        fr: "L'ICO n'a pas de règle propre au GPS. Dans son guide sur la surveillance dans les véhicules (enregistrement vidéo), il juge probablement excessif l'enregistrement continu pendant que le véhicule est utilisé à titre privé hors des heures de travail et dit que le conducteur devrait pouvoir le désactiver ; dans son exemple d'AIPD (voitures de société géolocalisées, aussi utilisées à titre privé), le suivi des déplacements à tout moment impose une AIPD. Le raisonnement s'applique par analogie au GPS.",
+        es: 'La ICO no tiene una regla específica sobre el GPS. En su guía sobre la vigilancia en vehículos (grabación de vídeo) considera probablemente excesiva la grabación continua mientras el vehículo se usa con fines privados fuera del horario laboral y dice que el conductor debería poder desactivarla; en su ejemplo de DPIA (coches de empresa con localización, usados también en privado) el seguimiento de los movimientos en todo momento exige una DPIA. El razonamiento se aplica por analogía al GPS.',
+        nl: 'De ICO heeft geen specifieke gps-regel. In zijn gids over bewaking in voertuigen (videoregistratie) acht hij continue registratie terwijl het voertuig buiten werktijd privé wordt gebruikt waarschijnlijk buitensporig en zegt hij dat de bestuurder de registratie moet kunnen uitschakelen; in zijn DPIA-voorbeeld (bedrijfsauto\'s met locatietracking, ook privé gebruikt) vereist het te allen tijde volgen van bewegingen een DPIA. De redenering geldt naar analogie voor gps.',
       },
       fonte: FONTE_ICO_VEICOLI,
     },
@@ -173,12 +178,12 @@ export const regnoUnito: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "La lista ICO include espressamente il tracciamento della geolocalizzazione o del comportamento di una persona; per il GPS sui dipendenti la DPIA e richiesta.",
-        en: "The ICO's list expressly includes tracking a person's geolocation or behaviour; for GPS on employees a DPIA is required.",
-        de: 'Die Liste des ICO umfasst ausdrücklich die Verfolgung des Standorts oder des Verhaltens einer Person; für GPS bei Beschäftigten ist eine DPIA erforderlich.',
-        fr: "La liste de l'ICO inclut expressément le suivi de la géolocalisation ou du comportement d'une personne ; pour le GPS sur les salariés, une DPIA est requise.",
-        es: 'La lista de la ICO incluye expresamente el rastreo de la geolocalización o del comportamiento de una persona; para el GPS sobre los empleados se exige una DPIA.',
-        nl: 'De lijst van de ICO omvat uitdrukkelijk het volgen van de geolocatie of het gedrag van een persoon; voor GPS bij werknemers is een DPIA vereist.',
+        it: "La lista ICO include il tracciamento della geolocalizzazione o del comportamento di una persona, e richiede la DPIA quando si combina con un altro criterio delle linee guida europee. I lavoratori possono essere soggetti vulnerabili per lo squilibrio di potere, e l'ICO porta l'esempio di auto aziendali con localizzazione: la DPIA è richiesta.",
+        en: "The ICO's list includes tracking a person's geolocation or behaviour, and requires a DPIA where it is combined with another criterion from the European guidelines. Employees can be vulnerable data subjects because of the power imbalance, and the ICO gives the example of company cars with location tracking: a DPIA is required.",
+        de: 'Die Liste des ICO umfasst die Verfolgung des Standorts oder des Verhaltens einer Person und verlangt eine DPIA, wenn dies mit einem weiteren Kriterium der europäischen Leitlinien zusammentrifft. Beschäftigte können wegen des Machtungleichgewichts schutzbedürftig sein; das ICO nennt das Beispiel von Firmenwagen mit Ortung: Eine DPIA ist erforderlich.',
+        fr: "La liste de l'ICO inclut le suivi de la géolocalisation ou du comportement d'une personne et exige une DPIA lorsqu'il se combine avec un autre critère des lignes directrices européennes. Les salariés peuvent être des personnes vulnérables en raison du déséquilibre de pouvoir, et l'ICO donne l'exemple de voitures de société géolocalisées : une DPIA est requise.",
+        es: 'La lista de la ICO incluye el rastreo de la geolocalización o del comportamiento de una persona y exige una DPIA cuando se combina con otro criterio de las directrices europeas. Los empleados pueden ser sujetos vulnerables por el desequilibrio de poder, y la ICO pone el ejemplo de coches de empresa con localización: se exige una DPIA.',
+        nl: 'De lijst van de ICO omvat het volgen van de geolocatie of het gedrag van een persoon en vereist een DPIA wanneer dit samenvalt met een ander criterium uit de Europese richtsnoeren. Werknemers kunnen kwetsbaar zijn door de machtsongelijkheid, en de ICO geeft het voorbeeld van bedrijfsauto\'s met locatietracking: een DPIA is vereist.',
       },
       fonte: FONTE_ICO_DPIA,
     },
@@ -243,12 +248,12 @@ export const regnoUnito: SchedaPaese = {
     {
       passo: 6,
       descrizione: {
-        it: 'In caso di cambio sistema: se cambi sistema o software di monitoraggio, aggiorna e ri-consegna l’informativa, e verifica se va rinnovato l’accordo o l’autorizzazione nazionale per il controllo a distanza. Spesso cambiano fornitore (responsabile del trattamento), dati raccolti e modalità: quella consegnata prima non basta.',
-        en: 'If you switch systems: when you change your monitoring system or software, update and re-issue the privacy notice, and check whether the national agreement or authorisation for remote monitoring needs renewing. The provider (data processor), the data collected and the methods often change: the one provided earlier is not enough.',
-        de: 'Bei Systemwechsel: Wenn Sie Ihr Überwachungssystem oder Ihre Software wechseln, aktualisieren Sie die Datenschutzinformation und händigen Sie sie erneut aus und prüfen Sie, ob die nationale Vereinbarung oder Genehmigung zur Fernüberwachung erneuert werden muss. Anbieter (Auftragsverarbeiter), erhobene Daten und Modalitäten ändern sich oft: die zuvor ausgehändigte genügt nicht.',
-        fr: 'En cas de changement de système : si vous changez de système ou de logiciel de surveillance, mettez à jour et remettez l’information, et vérifiez si l’accord ou l’autorisation nationale de contrôle à distance doit être renouvelé. Le fournisseur (sous-traitant), les données collectées et les modalités changent souvent : celle remise auparavant ne suffit pas.',
-        es: 'En caso de cambio de sistema: si cambias de sistema o software de monitorización, actualiza y vuelve a entregar la información, y comprueba si debe renovarse el acuerdo o la autorización nacional para el control a distancia. A menudo cambian el proveedor (encargado del tratamiento), los datos recogidos y las modalidades: la entregada antes no basta.',
-        nl: 'Bij een systeemwissel: als je van monitoringsysteem of -software verandert, werk de privacyverklaring bij en verstrek deze opnieuw, en controleer of de nationale overeenkomst of toestemming voor controle op afstand moet worden vernieuwd. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
+        it: 'In caso di cambio di sistema: se cambi sistema o software di monitoraggio, aggiorna e riconsegna l’informativa, e verifica se devi di nuovo informare o consultare i rappresentanti dei lavoratori, dove la legge lo prevede. Spesso cambiano fornitore (responsabile del trattamento), dati raccolti e modalità: quella consegnata prima non basta.',
+        en: 'If you switch systems: when you change your monitoring system or software, update and re-issue the privacy notice, and check whether you must inform or consult the workers\' representatives again, where the law requires it. The provider (data processor), the data collected and the methods often change: the one provided earlier is not enough.',
+        de: 'Bei Systemwechsel: Wenn Sie Ihr Überwachungssystem oder Ihre Software wechseln, aktualisieren Sie die Datenschutzinformation und händigen Sie sie erneut aus, und prüfen Sie, ob Sie die Arbeitnehmervertretung erneut informieren oder beteiligen müssen, wo das Gesetz es vorsieht. Anbieter (Auftragsverarbeiter), erhobene Daten und Modalitäten ändern sich oft: die zuvor ausgehändigte genügt nicht.',
+        fr: 'En cas de changement de système : si vous changez de système ou de logiciel de surveillance, mettez à jour et remettez l’information, et vérifiez si vous devez de nouveau informer ou consulter les représentants du personnel, lorsque la loi le prévoit. Le fournisseur (sous-traitant), les données collectées et les modalités changent souvent : celle remise auparavant ne suffit pas.',
+        es: 'En caso de cambio de sistema: si cambias de sistema o software de monitorización, actualiza y vuelve a entregar la información, y comprueba si debes volver a informar o consultar a los representantes de los trabajadores, cuando la ley lo prevé. A menudo cambian el proveedor (encargado del tratamiento), los datos recogidos y las modalidades: la entregada antes no basta.',
+        nl: 'Bij een systeemwissel: als je van monitoringsysteem of -software verandert, werk de privacyverklaring bij en verstrek deze opnieuw, en controleer of je de werknemersvertegenwoordiging opnieuw moet informeren of raadplegen, waar de wet dat voorschrijft. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
       },
     },
   ],
@@ -258,7 +263,7 @@ export const regnoUnito: SchedaPaese = {
       ente: 'ICO, segnalazioni',
       portale: FONTE_ICO_SEGNALAZIONI.url,
       urlFonte: FONTE_ICO_SEGNALAZIONI.url,
-      verificatoIl: '2026-06-15',
+      verificatoIl: '2026-09-30',
     },
   ],
 
@@ -266,15 +271,15 @@ export const regnoUnito: SchedaPaese = {
 
   sanzioneMax: {
     importo: {
-      it: 'provvedimento di enforcement + diffida (nessuna multa); rischio UK GDPR fino a 17,5 milioni di sterline o 4% del fatturato',
-      en: 'enforcement notice + warning (no fine); UK GDPR risk of up to 17.5 million pounds or 4% of turnover',
-      de: 'Anordnung zur Durchsetzung + Verwarnung (kein Bußgeld); UK-GDPR-Risiko von bis zu 17,5 Millionen Pfund oder 4 % des Umsatzes',
-      fr: "mise en demeure d'exécution + avertissement (pas d'amende) ; risque UK GDPR pouvant atteindre 17,5 millions de livres sterling ou 4 % du chiffre d'affaires",
-      es: 'requerimiento de cumplimiento + apercibimiento (sin multa); riesgo UK GDPR de hasta 17,5 millones de libras esterlinas o el 4 % de la facturación',
-      nl: 'handhavingsbevel + waarschuwing (geen boete); UK GDPR-risico tot 17,5 miljoen pond of 4% van de omzet',
+      it: 'provvedimento di enforcement + diffida (nessuna multa); rischio UK GDPR fino a 17,5 milioni di sterline o 4% del fatturato, se maggiore',
+      en: 'enforcement notice + warning (no fine); UK GDPR risk of up to 17.5 million pounds or 4% of turnover, whichever is higher',
+      de: 'Anordnung zur Durchsetzung + Verwarnung (kein Bußgeld); UK-GDPR-Risiko von bis zu 17,5 Millionen Pfund oder 4 % des Umsatzes, je nachdem, welcher Betrag höher ist',
+      fr: "mise en demeure d'exécution + avertissement (pas d'amende) ; risque UK GDPR pouvant atteindre 17,5 millions de livres sterling ou 4 % du chiffre d'affaires, le montant le plus élevé étant retenu",
+      es: 'requerimiento de cumplimiento + apercibimiento (sin multa); riesgo UK GDPR de hasta 17,5 millones de libras esterlinas o el 4 % de la facturación, el importe que sea mayor',
+      nl: 'handhavingsbevel + waarschuwing (geen boete); UK GDPR-risico tot 17,5 miljoen pond of 4% van de omzet, het hoogste bedrag',
     },
     casoCitato: {
-      it: "ICO contro l'Home Office (1 marzo 2024): provvedimento di enforcement e diffida per non aver valutato a sufficienza l'intrusivita del tracciamento GPS continuo (cavigliera su persone in regime di immigrazione), DPIA inadeguata, niente prova di necessità e proporzionalità. Non e un caso di dipendenti, ma il ragionamento dell'ICO sul tracciamento GPS continuo e direttamente trasferibile.",
+      it: "ICO contro l'Home Office (1 marzo 2024): provvedimento di enforcement e diffida per non aver valutato a sufficienza l'intrusivita del tracciamento GPS continuo (cavigliera su persone in regime di immigrazione), DPIA inadeguata, niente prova di necessità e proporzionalità. Non è un caso di dipendenti, ma il ragionamento dell'ICO sul tracciamento GPS continuo e direttamente trasferibile.",
       en: "ICO against the Home Office (1 March 2024): enforcement notice and warning for failing to adequately assess the intrusiveness of continuous GPS tracking (ankle tag on people under immigration powers), inadequate DPIA, no evidence of necessity and proportionality. It is not an employee case, but the ICO's reasoning on continuous GPS tracking is directly transferable.",
       de: "ICO gegen das Home Office (1. März 2024): Anordnung zur Durchsetzung und Verwarnung, weil die Eingriffsintensität der kontinuierlichen GPS-Ortung (Fußfessel bei Personen im Rahmen der Einwanderungsbehörde) nicht ausreichend bewertet wurde, unzureichende DPIA, kein Nachweis von Erforderlichkeit und Verhältnismäßigkeit. Es handelt sich nicht um einen Fall von Beschäftigten, aber die Argumentation des ICO zur kontinuierlichen GPS-Ortung ist direkt übertragbar.",
       fr: "ICO contre le Home Office (1er mars 2024) : mise en demeure d'exécution et avertissement pour ne pas avoir suffisamment évalué le caractère intrusif du suivi GPS continu (bracelet à la cheville sur des personnes relevant du régime d'immigration), DPIA inadéquate, aucune preuve de nécessité et de proportionnalité. Il ne s'agit pas d'un cas de salariés, mais le raisonnement de l'ICO sur le suivi GPS continu est directement transposable.",
@@ -291,8 +296,9 @@ export const regnoUnito: SchedaPaese = {
     FONTE_ICO_DPIA,
     FONTE_ICO_HOME_OFFICE,
     FONTE_ICO_SEGNALAZIONI,
+    FONTE_INFORMATION_COMMISSION,
     FONTE_GDPR,
   ],
 
-  aggiornatoIl: '2026-06-15',
+  aggiornatoIl: '2026-09-30',
 };

@@ -18,8 +18,8 @@ import type { SchedaPaese } from '../types';
 // URL delle fonti primarie citate.
 const FONTE_LEGGE_759 = {
   titolo:
-    'Legge sulla protezione della privacy nella vita lavorativa (759/2004) - traduzione ufficiale',
-  url: 'https://www.finlex.fi/en/legislation/translations/2004/eng/759',
+    'Legge sulla protezione della privacy nella vita lavorativa (759/2004) - testo consolidato in finlandese (Finlex)',
+  url: 'https://www.finlex.fi/fi/lainsaadanto/2004/759',
 };
 const FONTE_GARANTE_FAQ = {
   titolo:
@@ -170,12 +170,12 @@ export const finlandia: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "Per il Garante i dati di posizione non vanno usati di norma per monitorare l'orario di lavoro, salvo casi limitati (es. lavoro da remoto senza alternative meno invasive), e solo con una base e una necessità adeguate.",
-        en: 'According to the Ombudsman, location data should not as a rule be used to monitor working time, except in limited cases (e.g. remote work with no less intrusive alternatives), and only with an adequate legal basis and necessity.',
-        de: 'Nach Auffassung des Datenschutzbeauftragten sollten Standortdaten in der Regel nicht zur Überwachung der Arbeitszeit verwendet werden, außer in begrenzten Fällen (z. B. Telearbeit ohne weniger eingriffsintensive Alternativen) und nur mit einer angemessenen Rechtsgrundlage und Erforderlichkeit.',
-        fr: "Selon le Médiateur, les données de localisation ne doivent en principe pas servir a surveiller le temps de travail, sauf cas limites (par exemple le travail a distance sans alternatives moins intrusives), et uniquement avec une base et une nécessite adéquates.",
-        es: 'Según el Defensor, los datos de localización no deben usarse por regla general para controlar el horario de trabajo, salvo en casos limitados (p. ej. trabajo a distancia sin alternativas menos intrusivas), y solo con una base y una necesidad adecuadas.',
-        nl: 'Volgens de Ombudsman mogen locatiegegevens in de regel niet worden gebruikt om de arbeidstijd te monitoren, behoudens beperkte gevallen (bijvoorbeeld telewerk zonder minder ingrijpende alternatieven), en alleen met een passende grondslag en noodzaak.',
+        it: "Per il Garante i dati di posizione non vanno usati di norma per monitorare l'orario di lavoro, salvo casi limitati (es. il dipendente lavora da casa o per lo più fuori dai locali del datore e non ci sono mezzi di controllo meno invasivi), e solo con una base e una necessità adeguate; la finalità va indicata in anticipo e trattata nella procedura di cooperazione, altrimenti i dati non si possono usare per controllare il rispetto del rapporto di lavoro.",
+        en: "According to the Ombudsman, location data should not as a rule be used to monitor working time, except in limited cases (e.g. the employee works at home or mostly away from the employer's premises and no less intrusive means of monitoring are available), and only with an adequate legal basis and necessity; the purpose must be specified in advance and dealt with in the cooperation procedure, otherwise the data may not be used to monitor compliance with the terms of employment.",
+        de: 'Nach Auffassung des Datenschutzbeauftragten sollten Standortdaten in der Regel nicht zur Überwachung der Arbeitszeit verwendet werden, außer in begrenzten Fällen (z. B. wenn der Beschäftigte zu Hause oder überwiegend außerhalb der Betriebsräume des Arbeitgebers arbeitet und keine weniger eingriffsintensiven Kontrollmittel zur Verfügung stehen) und nur mit einer angemessenen Rechtsgrundlage und Erforderlichkeit; der Zweck muss vorab festgelegt und im Kooperationsverfahren behandelt werden, sonst dürfen die Daten nicht zur Kontrolle der Einhaltung des Arbeitsverhältnisses verwendet werden.',
+        fr: "Selon le Médiateur, les données de localisation ne doivent en principe pas servir a surveiller le temps de travail, sauf cas limites (par exemple lorsque le salarié travaille chez lui ou surtout hors des locaux de l'employeur et qu'aucun moyen de contrôle moins intrusif n'existe), et uniquement avec une base et une nécessité adéquates ; la finalité doit être précisée à l'avance et traitée dans la procédure de coopération, faute de quoi les données ne peuvent pas servir à contrôler le respect des conditions d'emploi.",
+        es: 'Según el Defensor, los datos de localización no deben usarse por regla general para controlar el horario de trabajo, salvo en casos limitados (p. ej. el trabajador trabaja desde casa o sobre todo fuera de los locales del empleador y no hay medios de control menos intrusivos), y solo con una base y una necesidad adecuadas; la finalidad debe especificarse de antemano y tratarse en el procedimiento de cooperación, de lo contrario los datos no pueden usarse para controlar el cumplimiento de las condiciones de empleo.',
+        nl: 'Volgens de Ombudsman mogen locatiegegevens in de regel niet worden gebruikt om de arbeidstijd te monitoren, behoudens beperkte gevallen (bijvoorbeeld wanneer de werknemer thuis of grotendeels buiten de bedrijfsruimten van de werkgever werkt en er geen minder ingrijpende controlemiddelen zijn), en alleen met een passende grondslag en noodzaak; het doel moet vooraf worden vastgelegd en in de overlegprocedure worden behandeld, anders mogen de gegevens niet worden gebruikt om de naleving van de arbeidsvoorwaarden te controleren.',
       },
       fonte: FONTE_GARANTE_FAQ,
     },
@@ -190,12 +190,12 @@ export const finlandia: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "La lista del Garante richiede una valutazione d'impatto quando i dati di localizzazione sono usati per il monitoraggio sistematico delle persone o trattati su larga scala.",
-        en: 'The Ombudsman list requires an impact assessment where location data is used for the systematic monitoring of individuals or processed on a large scale.',
-        de: 'Die Liste des Datenschutzbeauftragten verlangt eine Folgenabschätzung, wenn Standortdaten zur systematischen Überwachung von Personen verwendet oder in großem Umfang verarbeitet werden.',
-        fr: "La liste du Médiateur exige une analyse d'impact lorsque les données de localisation sont utilisées pour la surveillance systématique des personnes ou traitées a grande échelle.",
-        es: 'La lista del Defensor exige una evaluación de impacto cuando los datos de localización se utilizan para la supervisión sistemática de las personas o se tratan a gran escala.',
-        nl: 'De lijst van de Ombudsman vereist een effectbeoordeling wanneer locatiegegevens worden gebruikt voor systematische monitoring van personen of op grote schaal worden verwerkt.',
+        it: "La lista del Garante richiede una valutazione d'impatto quando i dati di localizzazione sono trattati insieme ad almeno un altro criterio, tra cui il monitoraggio sistematico delle persone o il trattamento su larga scala.",
+        en: 'The Ombudsman list requires an impact assessment where location data is processed together with at least one other criterion, including the systematic monitoring of individuals or processing on a large scale.',
+        de: 'Die Liste des Datenschutzbeauftragten verlangt eine Folgenabschätzung, wenn Standortdaten zusammen mit mindestens einem weiteren Kriterium verarbeitet werden, darunter die systematische Überwachung von Personen oder die Verarbeitung in großem Umfang.',
+        fr: "La liste du Médiateur exige une analyse d'impact lorsque les données de localisation sont traitées avec au moins un autre critère, dont la surveillance systématique des personnes ou le traitement à grande échelle.",
+        es: 'La lista del Defensor exige una evaluación de impacto cuando los datos de localización se tratan junto con al menos otro criterio, entre ellos la supervisión sistemática de las personas o el tratamiento a gran escala.',
+        nl: 'De lijst van de Ombudsman vereist een effectbeoordeling wanneer locatiegegevens samen met minstens één ander criterium worden verwerkt, waaronder systematische monitoring van personen of verwerking op grote schaal.',
       },
       fonte: FONTE_GARANTE_DPIA,
     },
@@ -260,12 +260,12 @@ export const finlandia: SchedaPaese = {
     {
       passo: 6,
       descrizione: {
-        it: 'In caso di cambio sistema: se cambi sistema o software di monitoraggio, aggiorna e ri-consegna l’informativa, e verifica se va rinnovato l’accordo o l’autorizzazione nazionale per il controllo a distanza. Spesso cambiano fornitore (responsabile del trattamento), dati raccolti e modalità: quella consegnata prima non basta.',
-        en: 'If you switch systems: when you change your monitoring system or software, update and re-issue the privacy notice, and check whether the national agreement or authorisation for remote monitoring needs renewing. The provider (data processor), the data collected and the methods often change: the one provided earlier is not enough.',
-        de: 'Bei Systemwechsel: Wenn Sie Ihr Überwachungssystem oder Ihre Software wechseln, aktualisieren Sie die Datenschutzinformation und händigen Sie sie erneut aus und prüfen Sie, ob die nationale Vereinbarung oder Genehmigung zur Fernüberwachung erneuert werden muss. Anbieter (Auftragsverarbeiter), erhobene Daten und Modalitäten ändern sich oft: die zuvor ausgehändigte genügt nicht.',
-        fr: 'En cas de changement de système : si vous changez de système ou de logiciel de surveillance, mettez à jour et remettez l’information, et vérifiez si l’accord ou l’autorisation nationale de contrôle à distance doit être renouvelé. Le fournisseur (sous-traitant), les données collectées et les modalités changent souvent : celle remise auparavant ne suffit pas.',
-        es: 'En caso de cambio de sistema: si cambias de sistema o software de monitorización, actualiza y vuelve a entregar la información, y comprueba si debe renovarse el acuerdo o la autorización nacional para el control a distancia. A menudo cambian el proveedor (encargado del tratamiento), los datos recogidos y las modalidades: la entregada antes no basta.',
-        nl: 'Bij een systeemwissel: als je van monitoringsysteem of -software verandert, werk de privacyverklaring bij en verstrek deze opnieuw, en controleer of de nationale overeenkomst of toestemming voor controle op afstand moet worden vernieuwd. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
+        it: 'In caso di cambio di sistema: se cambi sistema o software di monitoraggio, aggiorna e riconsegna l’informativa, e verifica se devi di nuovo informare o consultare i rappresentanti dei lavoratori, dove la legge lo prevede. Spesso cambiano fornitore (responsabile del trattamento), dati raccolti e modalità: quella consegnata prima non basta.',
+        en: 'If you switch systems: when you change your monitoring system or software, update and re-issue the privacy notice, and check whether you must inform or consult the workers\' representatives again, where the law requires it. The provider (data processor), the data collected and the methods often change: the one provided earlier is not enough.',
+        de: 'Bei Systemwechsel: Wenn Sie Ihr Überwachungssystem oder Ihre Software wechseln, aktualisieren Sie die Datenschutzinformation und händigen Sie sie erneut aus, und prüfen Sie, ob Sie die Arbeitnehmervertretung erneut informieren oder beteiligen müssen, wo das Gesetz es vorsieht. Anbieter (Auftragsverarbeiter), erhobene Daten und Modalitäten ändern sich oft: die zuvor ausgehändigte genügt nicht.',
+        fr: 'En cas de changement de système : si vous changez de système ou de logiciel de surveillance, mettez à jour et remettez l’information, et vérifiez si vous devez de nouveau informer ou consulter les représentants du personnel, lorsque la loi le prévoit. Le fournisseur (sous-traitant), les données collectées et les modalités changent souvent : celle remise auparavant ne suffit pas.',
+        es: 'En caso de cambio de sistema: si cambias de sistema o software de monitorización, actualiza y vuelve a entregar la información, y comprueba si debes volver a informar o consultar a los representantes de los trabajadores, cuando la ley lo prevé. A menudo cambian el proveedor (encargado del tratamiento), los datos recogidos y las modalidades: la entregada antes no basta.',
+        nl: 'Bij een systeemwissel: als je van monitoringsysteem of -software verandert, werk de privacyverklaring bij en verstrek deze opnieuw, en controleer of je de werknemersvertegenwoordiging opnieuw moet informeren of raadplegen, waar de wet dat voorschrijft. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
       },
     },
   ],
@@ -311,5 +311,5 @@ export const finlandia: SchedaPaese = {
     FONTE_GDPR,
   ],
 
-  aggiornatoIl: '2026-06-15',
+  aggiornatoIl: '2026-09-30',
 };

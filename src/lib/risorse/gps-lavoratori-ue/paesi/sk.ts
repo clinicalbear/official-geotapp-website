@@ -3,9 +3,9 @@
  *
  * Contenuti basati su fonti primarie verificate e citate nella sezione "Fonti":
  * Zakonnik prace (Codice del lavoro slovacco) art. 13 par. 4 sul monitoraggio
- * dei dipendenti, procedura di tutela dell'UOOU SR (Garante slovacco), guida
- * podnikajte.sk sul monitoraggio dei veicoli aziendali e GDPR, GDPR e rassegna
- * sanzioni UOOU SR di Havel & Partners.
+ * dei dipendenti, procedura di tutela dell'UOOU SR (Garante slovacco), parere
+ * WP249 pubblicato dall'UOOU SR, lista slovacca DPIA, relazione annuale UOOU SR
+ * 2025 e GDPR.
  *
  * La Slovacchia non e' uno Stato federale: la vigilanza spetta a un'unica
  * autorita' nazionale, l'UOOU SR. Nessun numero, URL o autorita' e' inventato qui.
@@ -23,9 +23,20 @@ const FONTE_UOOU_PROCEDURA = {
   titolo: 'UOOU SR (Garante slovacco), procedura di tutela',
   url: 'https://www.dataprotection.gov.sk/sk/urad/konanie-ochrane-osobnych-udajov/',
 };
-const FONTE_PODNIKAJTE = {
-  titolo: 'UOOU SR, modello di informativa al dipendente',
-  url: 'https://dataprotection.gov.sk/sk/ine/vzory-formulare-stiahnutie/vzor-informacnej-povinnosti-zamestnanca/',
+const FONTE_UOOU_WP249 = {
+  titolo:
+    'Parere 2/2017 sul trattamento dei dati sul posto di lavoro (WP249), par. 5.7 veicoli, versione slovacca pubblicata dall UOOU SR',
+  url: 'https://dataprotection.gov.sk/files/metod-edpb/23_stanovisko_k_spracuvaniu_udajov_v_praci.pdf',
+};
+const FONTE_UOOU_DPIA = {
+  titolo:
+    'Lista slovacca dei trattamenti soggetti a DPIA (punti 3 e 9), pubblicata dall EDPB',
+  url: 'https://www.edpb.europa.eu/sites/default/files/decisions/list_of_processing_operations_which_are_subject_to_the_requirement_for_d.pdf',
+};
+const FONTE_UOOU_LICEITA = {
+  titolo:
+    'UOOU SR, guida sulla liceita del trattamento (versione aggiornata 22/01/2019), esempio del par. 13 c. 4 del Codice del lavoro',
+  url: 'https://dataprotection.gov.sk/files/metod-urad/6/zakonnost_aktualizovana_verzia_22-01-2019.pdf',
 };
 const FONTE_UOOU_RECLAMO = {
   titolo:
@@ -73,7 +84,7 @@ export const slovacchia: SchedaPaese = {
     portale:
       'https://www.dataprotection.gov.sk/sk/ine/vyhladavanie-sluzby-formulara-elektronicku-komunikaciu/podavanie-navrhu-zacatie-konania/',
     urlFonte: FONTE_UOOU_PROCEDURA.url,
-    verificatoIl: '2026-06-15',
+    verificatoIl: '2026-09-30',
     note: {
       it: "La Slovacchia ha un'unica autorità nazionale, l'UOOU SR; nessuna ripartizione regionale.",
       en: 'Slovakia has a single national authority, the UOOU SR; there is no regional split.',
@@ -116,12 +127,12 @@ export const slovacchia: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "Il datore non può, senza motivi seri inerenti alla particolare natura della sua attività, ledere la privacy del lavoratore monitorandolo senza averlo avvisato prima.",
-        en: 'The employer may not, without serious reasons inherent in the particular nature of its business, infringe the privacy of the worker by monitoring them without having given prior notice.',
-        de: 'Der Arbeitgeber darf ohne ernsthafte, in der besonderen Natur seiner Tätigkeit liegende Gründe die Privatsphäre des Arbeitnehmers nicht verletzen, indem er ihn ohne vorherige Ankündigung überwacht.',
-        fr: "L'employeur ne peut, sans motifs sérieux inhérents a la nature particulière de son activité, porter atteinte a la vie privée du travailleur en le surveillant sans l'avoir prévenu au préalable.",
-        es: 'El empleador no puede, sin motivos serios inherentes a la naturaleza particular de su actividad, vulnerar la privacidad del trabajador vigilandolo sin haberle avisado previamente.',
-        nl: 'De werkgever mag, zonder ernstige redenen die inherent zijn aan de bijzondere aard van zijn activiteit, de privacy van de werknemer niet schenden door hem te controleren zonder hem vooraf te hebben gewaarschuwd.',
+        it: "Il datore non può, senza motivi seri inerenti alla particolare natura della sua attività, ledere la privacy del lavoratore sul luogo di lavoro e negli spazi comuni del datore monitorandolo senza averlo avvisato prima.",
+        en: 'The employer may not, without serious reasons inherent in the particular nature of its business, infringe the privacy of the worker at the workplace and in the employer\'s common areas by monitoring them without having given prior notice.',
+        de: 'Der Arbeitgeber darf ohne ernsthafte, in der besonderen Natur seiner Tätigkeit liegende Gründe die Privatsphäre des Arbeitnehmers am Arbeitsplatz und in den gemeinsamen Räumen des Arbeitgebers nicht verletzen, indem er ihn ohne vorherige Ankündigung überwacht.',
+        fr: "L'employeur ne peut, sans motifs sérieux inhérents a la nature particulière de son activité, porter atteinte a la vie privée du travailleur sur le lieu de travail et dans les espaces communs de l'employeur en le surveillant sans l'avoir prévenu au préalable.",
+        es: 'El empleador no puede, sin motivos serios inherentes a la naturaleza particular de su actividad, vulnerar la privacidad del trabajador en el lugar de trabajo y en los espacios comunes del empleador vigilandolo sin haberle avisado previamente.',
+        nl: 'De werkgever mag, zonder ernstige redenen die inherent zijn aan de bijzondere aard van zijn activiteit, de privacy van de werknemer op de werkplek en in de gemeenschappelijke ruimten van de werkgever niet schenden door hem te controleren zonder hem vooraf te hebben gewaarschuwd.',
       },
       fonte: FONTE_ZP_13,
     },
@@ -143,7 +154,7 @@ export const slovacchia: SchedaPaese = {
         es: 'No se necesita una autorización previa de la UOOU SR; el responsable del tratamiento actúa bajo su propia responsabilidad, con una EIPD cuando se requiera, y la autoridad interviene a posteriori.',
         nl: 'Er is geen voorafgaande toestemming van de UOOU SR nodig; de verwerkingsverantwoordelijke handelt onder eigen verantwoordelijkheid, met een DPIA waar vereist, en de autoriteit grijpt achteraf in.',
       },
-      fonte: FONTE_UOOU_PROCEDURA,
+      fonte: FONTE_GDPR,
     },
     {
       voce: {
@@ -156,14 +167,14 @@ export const slovacchia: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "Il datore può trattare i dati del lavoratore senza consenso sulla base del proprio interesse legittimo; il monitoraggio deve essere proporzionato nella durata e non avvenire durante l'uso privato del veicolo.",
-        en: 'The employer may process the worker data without consent on the basis of its own legitimate interest; the monitoring must be proportionate in duration and must not take place during the private use of the vehicle.',
-        de: 'Der Arbeitgeber darf die Daten des Arbeitnehmers ohne Einwilligung auf der Grundlage seines berechtigten Interesses verarbeiten; die Überwachung muss in ihrer Dauer verhältnismäßig sein und darf nicht während der privaten Nutzung des Fahrzeugs erfolgen.',
-        fr: "L'employeur peut traiter les données du travailleur sans consentement sur la base de son propre intérêt légitime ; la surveillance doit être proportionnée dans sa durée et ne pas avoir lieu pendant l'usage prive du véhicule.",
-        es: 'El empleador puede tratar los datos del trabajador sin consentimiento sobre la base de su propio interés legítimo; el monitoreo debe ser proporcionado en su duración y no producirse durante el uso privado del vehículo.',
-        nl: 'De werkgever mag de gegevens van de werknemer zonder toestemming verwerken op basis van zijn eigen gerechtvaardigd belang; de controle moet qua duur proportioneel zijn en mag niet plaatsvinden tijdens het privegebruik van het voertuig.',
+        it: "Introdurre un controllo e' una facolta' del datore, non un obbligo di legge: la base e' di norma l'interesse legittimo (art. 6.1.f GDPR), previo test di proporzionalita'. Per il GPS sul veicolo il parere WP249, pubblicato dall'UOOU SR, chiede di valutare necessita' e proporzionalita', di dare al lavoratore la possibilita' di spegnere il tracciamento quando il veicolo e' usato anche privatamente, e osserva che e' improbabile una base giuridica per localizzarlo fuori dall'orario di lavoro concordato.",
+        en: 'Introducing a control is an entitlement of the employer, not a legal duty: the basis is normally legitimate interest (art. 6(1)(f) GDPR), after a proportionality test. For GPS on a vehicle, opinion WP249, published by the UOOU SR, asks for necessity and proportionality to be assessed, for the worker to be able to switch tracking off when the vehicle is also used privately, and notes that a legal basis for locating it outside agreed working hours is unlikely.',
+        de: 'Die Einführung einer Kontrolle ist eine Befugnis des Arbeitgebers, keine gesetzliche Pflicht: Grundlage ist in der Regel das berechtigte Interesse (Art. 6 Abs. 1 Buchst. f DSGVO) nach einer Verhältnismäßigkeitsprüfung. Für GPS im Fahrzeug verlangt die von der UOOU SR veröffentlichte Stellungnahme WP249, Erforderlichkeit und Verhältnismäßigkeit zu prüfen, dem Beschäftigten die Möglichkeit zu geben, die Ortung auszuschalten, wenn das Fahrzeug auch privat genutzt wird, und hält eine Rechtsgrundlage für die Ortung außerhalb der vereinbarten Arbeitszeit für unwahrscheinlich.',
+        fr: "Introduire un contrôle est une faculté de l'employeur, non une obligation légale : la base est en général l'intérêt légitime (art. 6, par. 1, point f RGPD), après un test de proportionnalité. Pour le GPS d'un véhicule, l'avis WP249, publié par l'UOOU SR, demande d'évaluer la nécessité et la proportionnalité, de laisser au travailleur la possibilité de couper le suivi lorsque le véhicule est aussi utilisé à titre privé, et relève qu'une base juridique pour le localiser en dehors des heures de travail convenues est peu probable.",
+        es: 'Introducir un control es una facultad del empleador, no una obligación legal: la base es normalmente el interés legítimo (art. 6.1.f RGPD), tras una prueba de proporcionalidad. Para el GPS de un vehículo, el dictamen WP249, publicado por la UOOU SR, pide evaluar la necesidad y la proporcionalidad, dar al trabajador la posibilidad de apagar el rastreo cuando el vehículo se usa también de forma privada, y señala que es improbable una base jurídica para localizarlo fuera del horario de trabajo acordado.',
+        nl: 'Een controle invoeren is een bevoegdheid van de werkgever, geen wettelijke plicht: de grondslag is doorgaans het gerechtvaardigd belang (art. 6 lid 1 onder f AVG), na een evenredigheidstoets. Voor GPS in een voertuig vraagt het door de UOOU SR gepubliceerde advies WP249 om noodzaak en evenredigheid te toetsen, de werknemer de mogelijkheid te geven het volgen uit te schakelen wanneer het voertuig ook privé wordt gebruikt, en merkt op dat een rechtsgrond om het buiten de afgesproken werktijd te lokaliseren onwaarschijnlijk is.',
       },
-      fonte: FONTE_PODNIKAJTE,
+      fonte: FONTE_UOOU_WP249,
     },
     {
       voce: {
@@ -176,14 +187,14 @@ export const slovacchia: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "La lista UOOU SR dei trattamenti che richiedono una valutazione d'impatto include il monitoraggio sistematico dei dipendenti, incluso il GPS.",
-        en: 'The UOOU SR list of processing operations that require an impact assessment includes the systematic monitoring of employees, including GPS.',
-        de: 'Die UOOU-SR-Liste der Verarbeitungen, die eine Folgenabschätzung erfordern, umfasst die systematische Überwachung von Beschäftigten, einschließlich GPS.',
-        fr: "La liste de l'UOOU SR des traitements qui requièrent une analyse d'impact inclut la surveillance systématique des salaries, y compris le GPS.",
-        es: 'La lista de la UOOU SR de los tratamientos que requieren una evaluación de impacto incluye el monitoreo sistemático de los empleados, incluido el GPS.',
-        nl: 'De UOOU SR-lijst van verwerkingen die een effectbeoordeling vereisen, omvat de systematische controle van werknemers, inclusief GPS.',
+        it: "La lista slovacca elenca tra i trattamenti che richiedono sempre una DPIA il monitoraggio del lavoro dei dipendenti (punto 9: interessati vulnerabili e monitoraggio sistematico) e il trattamento di dati di localizzazione insieme a un altro criterio del WP248 (punto 3). Il GPS non e' nominato, ma di norma rientra in entrambi.",
+        en: 'The Slovak list names among the operations that always require a DPIA the monitoring of employees\' work (item 9: vulnerable data subjects and systematic monitoring) and the processing of location data together with another WP248 criterion (item 3). GPS is not named, but it normally falls under both.',
+        de: 'Die slowakische Liste nennt unter den Verarbeitungen, die stets eine DSFA erfordern, die Überwachung der Arbeit von Beschäftigten (Nr. 9: schutzbedürftige Betroffene und systematische Überwachung) und die Verarbeitung von Standortdaten zusammen mit einem weiteren WP248-Kriterium (Nr. 3). GPS wird nicht genannt, fällt aber in der Regel unter beides.',
+        fr: "La liste slovaque range parmi les traitements exigeant toujours une AIPD la surveillance du travail des salariés (point 9 : personnes vulnérables et surveillance systématique) et le traitement de données de localisation avec un autre critère du WP248 (point 3). Le GPS n'est pas nommé, mais relève en général des deux.",
+        es: 'La lista eslovaca incluye entre los tratamientos que siempre requieren una EIPD el monitoreo del trabajo de los empleados (punto 9: interesados vulnerables y monitoreo sistemático) y el tratamiento de datos de localización junto con otro criterio del WP248 (punto 3). El GPS no se nombra, pero normalmente entra en ambos.',
+        nl: 'De Slowaakse lijst noemt onder de verwerkingen waarvoor altijd een DPIA nodig is het monitoren van het werk van werknemers (punt 9: kwetsbare betrokkenen en systematische monitoring) en de verwerking van locatiegegevens samen met een ander WP248-criterium (punt 3). GPS wordt niet genoemd, maar valt doorgaans onder beide.',
       },
-      fonte: FONTE_UOOU_PROCEDURA,
+      fonte: FONTE_UOOU_DPIA,
     },
   ],
 
@@ -246,12 +257,12 @@ export const slovacchia: SchedaPaese = {
     {
       passo: 6,
       descrizione: {
-        it: 'In caso di cambio sistema: se cambi sistema o software di monitoraggio, aggiorna e ri-consegna l’informativa, e verifica se va rinnovato l’accordo o l’autorizzazione nazionale per il controllo a distanza. Spesso cambiano fornitore (responsabile del trattamento), dati raccolti e modalità: quella consegnata prima non basta.',
-        en: 'If you switch systems: when you change your monitoring system or software, update and re-issue the privacy notice, and check whether the national agreement or authorisation for remote monitoring needs renewing. The provider (data processor), the data collected and the methods often change: the one provided earlier is not enough.',
-        de: 'Bei Systemwechsel: Wenn Sie Ihr Überwachungssystem oder Ihre Software wechseln, aktualisieren Sie die Datenschutzinformation und händigen Sie sie erneut aus und prüfen Sie, ob die nationale Vereinbarung oder Genehmigung zur Fernüberwachung erneuert werden muss. Anbieter (Auftragsverarbeiter), erhobene Daten und Modalitäten ändern sich oft: die zuvor ausgehändigte genügt nicht.',
-        fr: 'En cas de changement de système : si vous changez de système ou de logiciel de surveillance, mettez à jour et remettez l’information, et vérifiez si l’accord ou l’autorisation nationale de contrôle à distance doit être renouvelé. Le fournisseur (sous-traitant), les données collectées et les modalités changent souvent : celle remise auparavant ne suffit pas.',
-        es: 'En caso de cambio de sistema: si cambias de sistema o software de monitorización, actualiza y vuelve a entregar la información, y comprueba si debe renovarse el acuerdo o la autorización nacional para el control a distancia. A menudo cambian el proveedor (encargado del tratamiento), los datos recogidos y las modalidades: la entregada antes no basta.',
-        nl: 'Bij een systeemwissel: als je van monitoringsysteem of -software verandert, werk de privacyverklaring bij en verstrek deze opnieuw, en controleer of de nationale overeenkomst of toestemming voor controle op afstand moet worden vernieuwd. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
+        it: 'In caso di cambio di sistema: se cambi sistema o software di monitoraggio, aggiorna e riconsegna l’informativa, e verifica se devi di nuovo informare o consultare i rappresentanti dei lavoratori, dove la legge lo prevede. Spesso cambiano fornitore (responsabile del trattamento), dati raccolti e modalità: quella consegnata prima non basta.',
+        en: 'If you switch systems: when you change your monitoring system or software, update and re-issue the privacy notice, and check whether you must inform or consult the workers\' representatives again, where the law requires it. The provider (data processor), the data collected and the methods often change: the one provided earlier is not enough.',
+        de: 'Bei Systemwechsel: Wenn Sie Ihr Überwachungssystem oder Ihre Software wechseln, aktualisieren Sie die Datenschutzinformation und händigen Sie sie erneut aus, und prüfen Sie, ob Sie die Arbeitnehmervertretung erneut informieren oder beteiligen müssen, wo das Gesetz es vorsieht. Anbieter (Auftragsverarbeiter), erhobene Daten und Modalitäten ändern sich oft: die zuvor ausgehändigte genügt nicht.',
+        fr: 'En cas de changement de système : si vous changez de système ou de logiciel de surveillance, mettez à jour et remettez l’information, et vérifiez si vous devez de nouveau informer ou consulter les représentants du personnel, lorsque la loi le prévoit. Le fournisseur (sous-traitant), les données collectées et les modalités changent souvent : celle remise auparavant ne suffit pas.',
+        es: 'En caso de cambio de sistema: si cambias de sistema o software de monitorización, actualiza y vuelve a entregar la información, y comprueba si debes volver a informar o consultar a los representantes de los trabajadores, cuando la ley lo prevé. A menudo cambian el proveedor (encargado del tratamiento), los datos recogidos y las modalidades: la entregada antes no basta.',
+        nl: 'Bij een systeemwissel: als je van monitoringsysteem of -software verandert, werk de privacyverklaring bij en verstrek deze opnieuw, en controleer of je de werknemersvertegenwoordiging opnieuw moet informeren of raadplegen, waar de wet dat voorschrijft. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
       },
     },
   ],
@@ -261,7 +272,7 @@ export const slovacchia: SchedaPaese = {
       ente: 'UOOU SR, avvio del procedimento',
       portale: FONTE_UOOU_RECLAMO.url,
       urlFonte: FONTE_UOOU_RECLAMO.url,
-      verificatoIl: '2026-06-15',
+      verificatoIl: '2026-09-30',
     },
   ],
 
@@ -291,7 +302,9 @@ export const slovacchia: SchedaPaese = {
   fonti: [
     FONTE_ZP_13,
     FONTE_UOOU_PROCEDURA,
-    FONTE_PODNIKAJTE,
+    FONTE_UOOU_WP249,
+    FONTE_UOOU_DPIA,
+    FONTE_UOOU_LICEITA,
     FONTE_UOOU_RECLAMO,
     FONTE_UOOU_RELAZIONE_2025,
     FONTE_GDPR,

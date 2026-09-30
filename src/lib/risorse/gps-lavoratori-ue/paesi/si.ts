@@ -7,9 +7,10 @@
  * IP-RS sulla valutazione d'impatto, modulo IP-RS per le segnalazioni e GDPR.
  *
  * La Slovenia ha un'unica autorità' nazionale, l'IP-RS, senza ripartizione
- * regionale. La legge nazionale ZVOP-2 e' recente (2023), quindi le sanzioni
- * pubblicate specifiche per il GPS sono ancora poche. Nessun numero, URL o
- * autorita' e' inventato qui.
+ * regionale. La legge nazionale ZVOP-2 (2023) non contiene norme specifiche sul
+ * GPS (solo su videosorveglianza e biometria): valgono GDPR, ZDR-1 art. 48 e le
+ * linee guida IP-RS. Multa GPS nota: 6.000 euro, comunicato IP-RS del 15.04.2026.
+ * Nessun numero, URL o autorita' e' inventato qui.
  */
 
 import type { SchedaPaese } from '../types';
@@ -29,8 +30,19 @@ const FONTE_ZDR1_48 = {
   url: 'https://pisrs.si/Pis.web/pregledPredpisa?id=ZAKO5944',
 };
 const FONTE_IPRS_DPIA = {
-  titolo: "IP-RS, valutazione d'impatto sulla protezione dei dati",
-  url: 'https://www.ip-rs.si/publikacije/priro%C4%8Dniki-in-smernice/smernice-po-splo%C5%A1ni-uredbi-o-varstvu-podatkov-gdpr/smernice-ocene-u%C4%8Dinkov-na-varstvo-osebnih-podatkov',
+  titolo:
+    "IP-RS, elenco dei trattamenti per cui e' obbligatoria la valutazione d'impatto (art. 35.4 GDPR)",
+  url: 'https://www.ip-rs.si/fileadmin/user_upload/Pdf/Ocene_ucinkov/Seznam_dejanj_obdelav_osebnih_podatkov__za_katere_velja_zahteva_po_izvedbi_ocene_ucinka_v_zvezi_z_varstvom_osebnih_podatkov.pdf',
+};
+const FONTE_ZSDU = {
+  titolo:
+    'Zakon o sodelovanju delavcev pri upravljanju (ZSDU), art. 89-90 (informazione del consiglio dei lavoratori)',
+  url: 'https://pisrs.si/pregledPredpisa?id=ZAKO282',
+};
+const FONTE_IPRS_MULTA_2026 = {
+  titolo:
+    'IP-RS, comunicato del 15.04.2026: multa di 6.000 euro a un\'azienda pubblica per GPS sui dipendenti',
+  url: 'https://www.ip-rs.si/novice/nezakonito-gps-sledenje-zaposlenim-informacijski-poobla%C5%A1%C4%8Denec-javnemu-komunalnemu-podjetju-izrekel-globo-v-vi%C5%A1ini-6000-eur-1776238559',
 };
 const FONTE_IPRS_SEGNALAZIONE = {
   titolo: 'IP-RS, presentare una segnalazione',
@@ -70,7 +82,7 @@ export const slovenia: SchedaPaese = {
   autoritaCompetente: {
     ente: 'Informacijski pooblaščenec (IP-RS)',
     urlFonte: FONTE_IPRS_SEGNALAZIONE.url,
-    verificatoIl: '2026-06-15',
+    verificatoIl: '2026-09-30',
     note: {
       it: "La Slovenia ha un'unica autorità nazionale, l'IP-RS; nessuna ripartizione regionale. La legge nazionale ZVOP-2 è recente (2023), quindi le sanzioni pubblicate sono ancora poche.",
       en: 'Slovenia has a single national authority, the IP-RS; there is no regional breakdown. The national law ZVOP-2 is recent (2023), so the published fines are still few.',
@@ -164,23 +176,23 @@ export const slovenia: SchedaPaese = {
     },
     {
       voce: {
-        it: 'Informazione ai lavoratori e atto interno; informazione del consiglio dei lavoratori se esiste (ZDR-1)',
-        en: 'Information to workers and internal act; information of the works council if one exists (ZDR-1)',
-        de: 'Information der Beschäftigten und interner Akt; Information des Betriebsrats, sofern vorhanden (ZDR-1)',
-        fr: "Information des salaries et acte interne; information du conseil des travailleurs s'il existe (ZDR-1)",
-        es: 'Información a los trabajadores y acto interno; información al consejo de trabajadores si existe (ZDR-1)',
-        nl: 'Informatie aan werknemers en intern besluit; informatie van de ondernemingsraad indien aanwezig (ZDR-1)',
+        it: 'Informazione ai lavoratori e atto interno; informazione del consiglio dei lavoratori se esiste (ZSDU)',
+        en: 'Information to workers and internal act; information of the works council if one exists (ZSDU)',
+        de: 'Information der Beschäftigten und interner Akt; Information des Betriebsrats, sofern vorhanden (ZSDU)',
+        fr: "Information des salaries et acte interne; information du conseil des travailleurs s'il existe (ZSDU)",
+        es: 'Información a los trabajadores y acto interno; información al consejo de trabajadores si existe (ZSDU)',
+        nl: 'Informatie aan werknemers en intern besluit; informatie van de ondernemingsraad indien aanwezig (ZSDU)',
       },
       risposta: 'dipende',
       dettaglio: {
-        it: "Il datore deve informare i lavoratori (art. 13 GDPR) e adottare un atto interno; dove esiste un consiglio dei lavoratori va informato prima di adottare l'atto generale.",
-        en: "The employer must inform the workers (art. 13 GDPR) and adopt an internal act; where a works council exists, it must be informed before adopting the general act.",
-        de: "Der Arbeitgeber muss die Beschäftigten informieren (Art. 13 DSGVO) und einen internen Akt erlassen; sofern ein Betriebsrat besteht, ist er vor dem Erlass des allgemeinen Aktes zu informieren.",
-        fr: "L'employeur doit informer les salaries (art. 13 RGPD) et adopter un acte interne; lorsqu'un conseil des travailleurs existe, il doit être informe avant l'adoption de l'acte général.",
-        es: "El empleador debe informar a los trabajadores (art. 13 RGPD) y adoptar un acto interno; cuando existe un consejo de trabajadores, debe ser informado antes de adoptar el acto general.",
-        nl: "De werkgever moet de werknemers informeren (art. 13 AVG) en een intern besluit vaststellen; waar een ondernemingsraad bestaat, moet deze worden geinformeerd voordat het algemene besluit wordt vastgesteld.",
+        it: "Il datore deve informare i lavoratori (art. 13 GDPR) e, secondo l'IP-RS, adottare prima di introdurre il sistema un atto interno (regolamento) che descriva funzionamento, dati raccolti, finalità e tempi di conservazione. Dove esiste un consiglio dei lavoratori, la legge sulla partecipazione dei lavoratori (ZSDU, art. 89-90) impone in generale di informarlo prima di decidere cambiamenti di tecnologia; per il GPS non c'è una regola specifica (la consultazione dei rappresentanti prevista dalla ZVOP-2 riguarda la videosorveglianza).",
+        en: "The employer must inform the workers (art. 13 GDPR) and, according to the IP-RS, adopt before introducing the system an internal act (rules) describing how it works, the data collected, the purposes and the retention periods. Where a works council exists, the Workers' Participation in Management Act (ZSDU, arts. 89-90) generally requires informing it before decisions on changes of technology; there is no GPS-specific rule (the consultation of representatives required by the ZVOP-2 concerns video surveillance).",
+        de: "Der Arbeitgeber muss die Beschäftigten informieren (Art. 13 DSGVO) und nach Auffassung der IP-RS vor Einführung des Systems einen internen Akt (Regelwerk) erlassen, der Funktionsweise, erhobene Daten, Zwecke und Speicherfristen beschreibt. Wo ein Betriebsrat besteht, verlangt das Gesetz über die Mitwirkung der Arbeitnehmer an der Unternehmensleitung (ZSDU, Art. 89-90) allgemein, ihn vor Entscheidungen über technologische Änderungen zu informieren; eine GPS-spezifische Regel gibt es nicht (die im ZVOP-2 vorgesehene Anhörung der Vertreter betrifft die Videoüberwachung).",
+        fr: "L'employeur doit informer les salaries (art. 13 RGPD) et, selon l'IP-RS, adopter avant la mise en place du système un acte interne (règlement) décrivant le fonctionnement, les données collectées, les finalités et les durées de conservation. Lorsqu'un conseil des travailleurs existe, la loi sur la participation des travailleurs à la gestion (ZSDU, art. 89-90) impose en général de l'informer avant toute décision sur un changement de technologie; il n'existe pas de règle propre au GPS (la consultation des représentants prévue par la ZVOP-2 concerne la vidéosurveillance).",
+        es: "El empleador debe informar a los trabajadores (art. 13 RGPD) y, según la IP-RS, adoptar antes de introducir el sistema un acto interno (reglamento) que describa el funcionamiento, los datos recogidos, las finalidades y los plazos de conservación. Cuando existe un consejo de trabajadores, la ley de participación de los trabajadores en la gestión (ZSDU, arts. 89-90) obliga en general a informarlo antes de decidir cambios de tecnología; no hay una regla específica para el GPS (la consulta de los representantes prevista por la ZVOP-2 se refiere a la videovigilancia).",
+        nl: "De werkgever moet de werknemers informeren (art. 13 AVG) en volgens de IP-RS vóór de invoering van het systeem een intern besluit (reglement) vaststellen dat de werking, de verzamelde gegevens, de doeleinden en de bewaartermijnen beschrijft. Waar een ondernemingsraad bestaat, verplicht de wet over de medezeggenschap van werknemers (ZSDU, art. 89-90) in het algemeen om deze vóór besluiten over technologische wijzigingen te informeren; voor GPS bestaat geen specifieke regel (de raadpleging van vertegenwoordigers in de ZVOP-2 betreft camerabewaking).",
       },
-      fonte: FONTE_ZDR1_48,
+      fonte: FONTE_IPRS_SLEDENJE,
     },
     {
       voce: {
@@ -263,12 +275,12 @@ export const slovenia: SchedaPaese = {
     {
       passo: 6,
       descrizione: {
-        it: 'In caso di cambio sistema: se cambi sistema o software di monitoraggio, aggiorna e ri-consegna l’informativa, e verifica se va rinnovato l’accordo o l’autorizzazione nazionale per il controllo a distanza. Spesso cambiano fornitore (responsabile del trattamento), dati raccolti e modalità: quella consegnata prima non basta.',
-        en: 'If you switch systems: when you change your monitoring system or software, update and re-issue the privacy notice, and check whether the national agreement or authorisation for remote monitoring needs renewing. The provider (data processor), the data collected and the methods often change: the one provided earlier is not enough.',
-        de: 'Bei Systemwechsel: Wenn Sie Ihr Überwachungssystem oder Ihre Software wechseln, aktualisieren Sie die Datenschutzinformation und händigen Sie sie erneut aus und prüfen Sie, ob die nationale Vereinbarung oder Genehmigung zur Fernüberwachung erneuert werden muss. Anbieter (Auftragsverarbeiter), erhobene Daten und Modalitäten ändern sich oft: die zuvor ausgehändigte genügt nicht.',
-        fr: 'En cas de changement de système : si vous changez de système ou de logiciel de surveillance, mettez à jour et remettez l’information, et vérifiez si l’accord ou l’autorisation nationale de contrôle à distance doit être renouvelé. Le fournisseur (sous-traitant), les données collectées et les modalités changent souvent : celle remise auparavant ne suffit pas.',
-        es: 'En caso de cambio de sistema: si cambias de sistema o software de monitorización, actualiza y vuelve a entregar la información, y comprueba si debe renovarse el acuerdo o la autorización nacional para el control a distancia. A menudo cambian el proveedor (encargado del tratamiento), los datos recogidos y las modalidades: la entregada antes no basta.',
-        nl: 'Bij een systeemwissel: als je van monitoringsysteem of -software verandert, werk de privacyverklaring bij en verstrek deze opnieuw, en controleer of de nationale overeenkomst of toestemming voor controle op afstand moet worden vernieuwd. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
+        it: 'In caso di cambio di sistema: se cambi sistema o software di monitoraggio, aggiorna e riconsegna l’informativa, e verifica se devi di nuovo informare o consultare i rappresentanti dei lavoratori, dove la legge lo prevede. Spesso cambiano fornitore (responsabile del trattamento), dati raccolti e modalità: quella consegnata prima non basta.',
+        en: 'If you switch systems: when you change your monitoring system or software, update and re-issue the privacy notice, and check whether you must inform or consult the workers\' representatives again, where the law requires it. The provider (data processor), the data collected and the methods often change: the one provided earlier is not enough.',
+        de: 'Bei Systemwechsel: Wenn Sie Ihr Überwachungssystem oder Ihre Software wechseln, aktualisieren Sie die Datenschutzinformation und händigen Sie sie erneut aus, und prüfen Sie, ob Sie die Arbeitnehmervertretung erneut informieren oder beteiligen müssen, wo das Gesetz es vorsieht. Anbieter (Auftragsverarbeiter), erhobene Daten und Modalitäten ändern sich oft: die zuvor ausgehändigte genügt nicht.',
+        fr: 'En cas de changement de système : si vous changez de système ou de logiciel de surveillance, mettez à jour et remettez l’information, et vérifiez si vous devez de nouveau informer ou consulter les représentants du personnel, lorsque la loi le prévoit. Le fournisseur (sous-traitant), les données collectées et les modalités changent souvent : celle remise auparavant ne suffit pas.',
+        es: 'En caso de cambio de sistema: si cambias de sistema o software de monitorización, actualiza y vuelve a entregar la información, y comprueba si debes volver a informar o consultar a los representantes de los trabajadores, cuando la ley lo prevé. A menudo cambian el proveedor (encargado del tratamiento), los datos recogidos y las modalidades: la entregada antes no basta.',
+        nl: 'Bij een systeemwissel: als je van monitoringsysteem of -software verandert, werk de privacyverklaring bij en verstrek deze opnieuw, en controleer of je de werknemersvertegenwoordiging opnieuw moet informeren of raadplegen, waar de wet dat voorschrijft. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
       },
     },
   ],
@@ -278,7 +290,7 @@ export const slovenia: SchedaPaese = {
       ente: 'IP-RS, segnalazioni',
       portale: FONTE_IPRS_SEGNALAZIONE.url,
       urlFonte: FONTE_IPRS_SEGNALAZIONE.url,
-      verificatoIl: '2026-06-15',
+      verificatoIl: '2026-09-30',
     },
   ],
 
@@ -294,25 +306,27 @@ export const slovenia: SchedaPaese = {
       nl: 'tot 20 miljoen euro of 4% van de omzet (AVG)',
     },
     casoCitato: {
-      it: "La legge nazionale ZVOP-2 è entrata in vigore nel 2023, quindi non risulta ancora una multa pubblicata specifica per il GPS sui dipendenti. Il Garante (IP-RS) ha però già stabilito in più pareri che il tracciamento indiscriminato dei lavoratori è privo di base giuridica. Il rischio sanzionatorio resta quello generale del GDPR (art. 83).",
-      en: "The national law ZVOP-2 entered into force in 2023, so no published fine specific to GPS on employees is yet on record. The authority (IP-RS) has however already established in several opinions that indiscriminate tracking of workers lacks a legal basis. The risk of sanctions remains the general one under the GDPR (art. 83).",
-      de: "Das nationale Gesetz ZVOP-2 ist 2023 in Kraft getreten, daher ist noch kein veröffentlichtes Bußgeld speziell zu GPS bei Beschäftigten verzeichnet. Die Behörde (IP-RS) hat jedoch bereits in mehreren Stellungnahmen festgestellt, dass die wahllose Ortung von Arbeitnehmern keine Rechtsgrundlage hat. Das Sanktionsrisiko bleibt das allgemeine der DSGVO (Art. 83).",
-      fr: "La loi nationale ZVOP-2 est entrée en vigueur en 2023, de sorte qu'aucune amende publiée spécifique au GPS sur les salaries n'est encore recensée. L'autorité (IP-RS) a toutefois déjà établi dans plusieurs avis que le suivi indiscriminé des salaries est dépourvu de base juridique. Le risque de sanction reste celui, général, du RGPD (art. 83).",
-      es: "La ley nacional ZVOP-2 entro en vigor en 2023, por lo que aun no consta ninguna multa publicada especifica para el GPS sobre los empleados. La autoridad (IP-RS) ya ha establecido, sin embargo, en varios dictámenes que el seguimiento indiscriminado de los trabajadores carece de base jurídica. El riesgo sancionador sigue siendo el general del RGPD (art. 83).",
-      nl: "De nationale wet ZVOP-2 is in 2023 in werking getreden, dus er is nog geen gepubliceerde boete specifiek voor GPS bij werknemers bekend. De autoriteit (IP-RS) heeft echter in meerdere adviezen al vastgesteld dat het ongedifferentieerd volgen van werknemers geen rechtsgrondslag heeft. Het sanctierisico blijft het algemene risico op grond van de AVG (art. 83).",
+      it: "Il 15 aprile 2026 l'IP-RS ha comunicato una multa di 6.000 euro (600 euro alla persona responsabile) a un'azienda pubblica di servizi che raccoglieva in modo continuo e indiscriminato i dati di posizione dei dipendenti dai GPS dei veicoli aziendali, senza una base giuridica valida, senza valutare mezzi meno invasivi e senza informare adeguatamente i lavoratori. Le multe seguono i limiti del GDPR (art. 83; ZVOP-2 art. 95).",
+      en: "On 15 April 2026 the IP-RS announced a fine of 6,000 euros (600 euros on the responsible person) against a public utility that continuously and indiscriminately collected employees' location data from company-vehicle GPS units, without a valid legal basis, without assessing less intrusive means and without properly informing the workers. Fines follow the GDPR limits (art. 83; ZVOP-2 art. 95).",
+      de: "Am 15. April 2026 gab die IP-RS ein Bußgeld von 6.000 Euro (600 Euro gegen die verantwortliche Person) gegen ein öffentliches Versorgungsunternehmen bekannt, das die Standortdaten der Beschäftigten aus den GPS-Geräten der Firmenfahrzeuge dauerhaft und wahllos erhob, ohne gültige Rechtsgrundlage, ohne mildere Mittel zu prüfen und ohne die Beschäftigten angemessen zu informieren. Die Bußgelder folgen den Grenzen der DSGVO (Art. 83; ZVOP-2 Art. 95).",
+      fr: "Le 15 avril 2026, l'IP-RS a annoncé une amende de 6 000 euros (600 euros pour le responsable) à une entreprise publique de services qui collectait de façon continue et indiscriminée les données de localisation des salariés à partir des GPS des véhicules de l'entreprise, sans base juridique valable, sans évaluer de moyens moins intrusifs et sans informer correctement les salariés. Les amendes suivent les plafonds du RGPD (art. 83; ZVOP-2 art. 95).",
+      es: "El 15 de abril de 2026 la IP-RS comunicó una multa de 6.000 euros (600 euros al responsable) a una empresa pública de servicios que recogía de forma continua e indiscriminada los datos de ubicación de los empleados desde los GPS de los vehículos de la empresa, sin base jurídica válida, sin evaluar medios menos intrusivos y sin informar adecuadamente a los trabajadores. Las multas siguen los límites del RGPD (art. 83; ZVOP-2 art. 95).",
+      nl: "Op 15 april 2026 maakte de IP-RS een boete van 6.000 euro bekend (600 euro voor de verantwoordelijke persoon) voor een openbaar nutsbedrijf dat de locatiegegevens van werknemers via de GPS-units van bedrijfsvoertuigen continu en ongedifferentieerd verzamelde, zonder geldige rechtsgrondslag, zonder mildere middelen te onderzoeken en zonder de werknemers voldoende te informeren. De boetes volgen de grenzen van de AVG (art. 83; ZVOP-2 art. 95).",
     },
-    urlFonte: FONTE_IPRS_SLEDENJE.url,
+    urlFonte: FONTE_IPRS_MULTA_2026.url,
     tipoImporto: 'massimale',
   },
 
   fonti: [
     FONTE_IPRS_GPS,
     FONTE_IPRS_SLEDENJE,
+    FONTE_IPRS_MULTA_2026,
     FONTE_ZDR1_48,
+    FONTE_ZSDU,
     FONTE_IPRS_DPIA,
     FONTE_IPRS_SEGNALAZIONE,
     FONTE_GDPR,
   ],
 
-  aggiornatoIl: '2026-06-15',
+  aggiornatoIl: '2026-09-30',
 };

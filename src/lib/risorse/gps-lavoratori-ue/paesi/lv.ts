@@ -32,6 +32,10 @@ const FONTE_DVI_DPIA = {
   titolo: 'DVI, lista dei trattamenti che richiedono una DPIA (art. 35.4)',
   url: 'https://www.edpb.europa.eu/sites/default/files/decisions/lv_sa_dpia_final_list_20181212.pdf',
 };
+const FONTE_LEGGE_LV = {
+  titolo: 'Legge lettone sul trattamento dei dati delle persone fisiche (Fizisko personu datu apstrādes likums) - Likumi.lv',
+  url: 'https://likumi.lv/ta/id/300099-fizisko-personu-datu-apstrades-likums',
+};
 const FONTE_DVI_RECLAMO = {
   titolo: 'DVI, presentare un reclamo',
   url: 'https://www.dvi.gov.lv/en/services/complaint-concerning-processing-personal-data',
@@ -126,14 +130,14 @@ export const lettonia: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: 'La base e l\'interesse legittimo del datore; il consenso del lavoratore non e ottenibile come base valida nel rapporto di lavoro.',
-        en: "The basis is the employer's legitimate interest; the worker's consent cannot be obtained as a valid basis within the employment relationship.",
-        de: 'Die Grundlage ist das berechtigte Interesse des Arbeitgebers; die Einwilligung des Beschäftigten kann im Arbeitsverhältnis nicht als gültige Grundlage eingeholt werden.',
-        fr: "La base est l'intérêt légitime de l'employeur; le consentement du salarie ne peut pas être obtenu comme base valable dans la relation de travail.",
-        es: 'La base es el interés legítimo del empleador; el consentimiento del trabajador no puede obtenerse como base valida en la relación laboral.',
-        nl: 'De grondslag is het gerechtvaardigd belang van de werkgever; de toestemming van de werknemer kan binnen de arbeidsverhouding niet als geldige grondslag worden verkregen.',
+        it: 'Di regola la base e l\'interesse legittimo del datore (in alcuni casi un obbligo di legge, come per i tachigrafi); il consenso del lavoratore si puo usare solo in casi eccezionali, per lo squilibrio di potere tra datore e lavoratore.',
+        en: "As a rule the basis is the employer's legitimate interest (in some cases a legal obligation, as with tachographs); the worker's consent can be used only in exceptional cases, because of the power imbalance between employer and worker.",
+        de: 'In der Regel ist die Grundlage das berechtigte Interesse des Arbeitgebers (in manchen Fällen eine rechtliche Verpflichtung, etwa bei Fahrtschreibern); die Einwilligung des Beschäftigten kommt wegen des Machtungleichgewichts zwischen Arbeitgeber und Beschäftigtem nur in Ausnahmefällen in Betracht.',
+        fr: "En règle générale, la base est l'intérêt légitime de l'employeur (dans certains cas une obligation légale, comme pour les tachygraphes) ; le consentement du salarié ne peut être utilisé que dans des cas exceptionnels, en raison du déséquilibre de pouvoir entre employeur et salarié.",
+        es: 'Por regla general la base es el interés legítimo del empleador (en algunos casos una obligación legal, como con los tacógrafos); el consentimiento del trabajador solo puede usarse en casos excepcionales, por el desequilibrio de poder entre empleador y trabajador.',
+        nl: 'In de regel is de grondslag het gerechtvaardigd belang van de werkgever (in sommige gevallen een wettelijke verplichting, zoals bij tachografen); de toestemming van de werknemer kan alleen in uitzonderlijke gevallen worden gebruikt, vanwege de machtsongelijkheid tussen werkgever en werknemer.',
       },
-      fonte: FONTE_DVI_VIDEO,
+      fonte: FONTE_DVI_GPS,
     },
     {
       voce: {
@@ -153,25 +157,25 @@ export const lettonia: SchedaPaese = {
         es: 'La ley letona sobre el tratamiento de datos no prevé una autorización previa del DVI; el responsable evalúa por si mismo la licitud.',
         nl: 'De Letse wet inzake gegevensverwerking voorziet niet in een voorafgaande toestemming van de DVI; de verwerkingsverantwoordelijke beoordeelt de rechtmatigheid zelf.',
       },
-      fonte: FONTE_DVI_GPS,
+      fonte: FONTE_LEGGE_LV,
     },
     {
       voce: {
-        it: "Niente trattamento durante l'uso privato del veicolo; niente sorveglianza continua",
-        en: 'No processing during private use of the vehicle; no continuous surveillance',
-        de: 'Keine Verarbeitung während der privaten Nutzung des Fahrzeugs; keine kontinuierliche Überwachung',
-        fr: "Pas de traitement pendant l'usage prive du véhicule; pas de surveillance continue",
-        es: 'Ningún tratamiento durante el uso privado del vehículo; ninguna vigilancia continua',
-        nl: 'Geen verwerking tijdens privegebruik van het voertuig; geen continue bewaking',
+        it: "Niente trattamento durante l'uso privato del veicolo; scopo limitato e mezzi meno invasivi",
+        en: 'No processing during private use of the vehicle; limited purpose and less intrusive means',
+        de: 'Keine Verarbeitung während der privaten Nutzung des Fahrzeugs; begrenzter Zweck und mildere Mittel',
+        fr: "Pas de traitement pendant l'usage privé du véhicule ; finalité limitée et moyens moins intrusifs",
+        es: 'Ningún tratamiento durante el uso privado del vehículo; finalidad limitada y medios menos intrusivos',
+        nl: 'Geen verwerking tijdens privégebruik van het voertuig; beperkt doel en minder ingrijpende middelen',
       },
       risposta: 'si',
       dettaglio: {
-        it: 'Il datore non ha base ne diritto di trattare i dati per il periodo in cui il lavoratore usa il veicolo per scopi privati; la sorveglianza continua e priva di giustificazione adeguata.',
-        en: 'The employer has neither a basis nor a right to process data for the period in which the worker uses the vehicle for private purposes; continuous surveillance lacks adequate justification.',
-        de: 'Der Arbeitgeber hat weder eine Grundlage noch ein Recht, Daten für den Zeitraum zu verarbeiten, in dem der Beschäftigte das Fahrzeug für private Zwecke nutzt; die kontinuierliche Überwachung entbehrt einer angemessenen Rechtfertigung.',
-        fr: "L'employeur n'a ni base ni droit de traiter les données pour la période pendant laquelle le salarie utilise le véhicule a des fins privées; la surveillance continue est dépourvue de justification adéquate.",
-        es: 'El empleador no tiene base ni derecho a tratar los datos durante el periodo en que el trabajador usa el vehículo con fines privados; la vigilancia continua carece de justificación adecuada.',
-        nl: 'De werkgever heeft noch een grondslag noch een recht om gegevens te verwerken gedurende de periode waarin de werknemer het voertuig voor prive-doeleinden gebruikt; continue bewaking mist een adequate rechtvaardiging.',
+        it: 'Il datore non ha base ne diritto di trattare i dati per il periodo in cui il lavoratore usa il veicolo per scopi privati. Deve inoltre chiedersi se lo scopo si raggiunga con mezzi meno invasivi (per contare i chilometri non serve registrare la posizione) e non puo usare per un altro scopo i dati raccolti per uno (per esempio, i dati di un antifurto per controllare l\'efficienza dell\'autista).',
+        en: "The employer has neither a basis nor a right to process data for the period in which the worker uses the vehicle for private purposes. It must also ask whether the purpose can be reached by less intrusive means (to count kilometres there is no need to record location) and may not use data collected for one purpose for another (for example, anti-theft data to check the driver's efficiency).",
+        de: 'Der Arbeitgeber hat weder eine Grundlage noch ein Recht, Daten für den Zeitraum zu verarbeiten, in dem der Beschäftigte das Fahrzeug für private Zwecke nutzt. Er muss außerdem prüfen, ob der Zweck mit milderen Mitteln erreichbar ist (zum Zählen der Kilometer muss der Standort nicht erfasst werden), und darf für einen Zweck erhobene Daten nicht für einen anderen verwenden (zum Beispiel Diebstahlschutz-Daten, um die Effizienz des Fahrers zu kontrollieren).',
+        fr: "L'employeur n'a ni base ni droit de traiter les données pour la période pendant laquelle le salarié utilise le véhicule à des fins privées. Il doit aussi se demander si la finalité peut être atteinte par des moyens moins intrusifs (pour compter les kilomètres, il n'est pas nécessaire d'enregistrer la position) et ne peut pas utiliser pour une finalité les données collectées pour une autre (par exemple, les données d'un antivol pour contrôler l'efficacité du conducteur).",
+        es: 'El empleador no tiene base ni derecho a tratar los datos durante el periodo en que el trabajador usa el vehículo con fines privados. Debe además preguntarse si la finalidad puede alcanzarse con medios menos intrusivos (para contar los kilómetros no hace falta registrar la posición) y no puede usar para una finalidad los datos recogidos para otra (por ejemplo, los datos de un antirrobo para controlar la eficiencia del conductor).',
+        nl: 'De werkgever heeft noch een grondslag noch een recht om gegevens te verwerken gedurende de periode waarin de werknemer het voertuig voor privédoeleinden gebruikt. Hij moet zich ook afvragen of het doel met minder ingrijpende middelen kan worden bereikt (om kilometers te tellen hoeft de locatie niet te worden vastgelegd) en mag gegevens die voor het ene doel zijn verzameld niet voor een ander doel gebruiken (bijvoorbeeld diefstalbeveiligingsgegevens om de efficiëntie van de bestuurder te controleren).',
       },
       fonte: FONTE_DVI_GPS,
     },
@@ -245,23 +249,23 @@ export const lettonia: SchedaPaese = {
     {
       passo: 5,
       descrizione: {
-        it: 'Configura il sistema: niente trattamento durante l\'uso privato, niente sorveglianza continua.',
-        en: 'Configure the system: no processing during private use, no continuous surveillance.',
-        de: 'Konfigurieren Sie das System: keine Verarbeitung während der privaten Nutzung, keine kontinuierliche Überwachung.',
-        fr: "Configurez le système: pas de traitement pendant l'usage prive, pas de surveillance continue.",
-        es: 'Configure el sistema: ningún tratamiento durante el uso privado, ninguna vigilancia continua.',
-        nl: 'Configureer het systeem: geen verwerking tijdens privegebruik, geen continue bewaking.',
+        it: 'Configura il sistema: niente trattamento durante l\'uso privato, scopo limitato e mezzi meno invasivi.',
+        en: 'Configure the system: no processing during private use, limited purpose and less intrusive means.',
+        de: 'Konfigurieren Sie das System: keine Verarbeitung während der privaten Nutzung, begrenzter Zweck und mildere Mittel.',
+        fr: "Configurez le système : pas de traitement pendant l'usage privé, finalité limitée et moyens moins intrusifs.",
+        es: 'Configure el sistema: ningún tratamiento durante el uso privado, finalidad limitada y medios menos intrusivos.',
+        nl: 'Configureer het systeem: geen verwerking tijdens privégebruik, beperkt doel en minder ingrijpende middelen.',
       },
     },
     {
       passo: 6,
       descrizione: {
-        it: 'In caso di cambio sistema: se cambi sistema o software di monitoraggio, aggiorna e ri-consegna l’informativa, e verifica se va rinnovato l’accordo o l’autorizzazione nazionale per il controllo a distanza. Spesso cambiano fornitore (responsabile del trattamento), dati raccolti e modalità: quella consegnata prima non basta.',
-        en: 'If you switch systems: when you change your monitoring system or software, update and re-issue the privacy notice, and check whether the national agreement or authorisation for remote monitoring needs renewing. The provider (data processor), the data collected and the methods often change: the one provided earlier is not enough.',
-        de: 'Bei Systemwechsel: Wenn Sie Ihr Überwachungssystem oder Ihre Software wechseln, aktualisieren Sie die Datenschutzinformation und händigen Sie sie erneut aus und prüfen Sie, ob die nationale Vereinbarung oder Genehmigung zur Fernüberwachung erneuert werden muss. Anbieter (Auftragsverarbeiter), erhobene Daten und Modalitäten ändern sich oft: die zuvor ausgehändigte genügt nicht.',
-        fr: 'En cas de changement de système : si vous changez de système ou de logiciel de surveillance, mettez à jour et remettez l’information, et vérifiez si l’accord ou l’autorisation nationale de contrôle à distance doit être renouvelé. Le fournisseur (sous-traitant), les données collectées et les modalités changent souvent : celle remise auparavant ne suffit pas.',
-        es: 'En caso de cambio de sistema: si cambias de sistema o software de monitorización, actualiza y vuelve a entregar la información, y comprueba si debe renovarse el acuerdo o la autorización nacional para el control a distancia. A menudo cambian el proveedor (encargado del tratamiento), los datos recogidos y las modalidades: la entregada antes no basta.',
-        nl: 'Bij een systeemwissel: als je van monitoringsysteem of -software verandert, werk de privacyverklaring bij en verstrek deze opnieuw, en controleer of de nationale overeenkomst of toestemming voor controle op afstand moet worden vernieuwd. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
+        it: 'In caso di cambio di sistema: se cambi sistema o software di monitoraggio, aggiorna e riconsegna l’informativa, e verifica se devi di nuovo informare o consultare i rappresentanti dei lavoratori, dove la legge lo prevede. Spesso cambiano fornitore (responsabile del trattamento), dati raccolti e modalità: quella consegnata prima non basta.',
+        en: 'If you switch systems: when you change your monitoring system or software, update and re-issue the privacy notice, and check whether you must inform or consult the workers\' representatives again, where the law requires it. The provider (data processor), the data collected and the methods often change: the one provided earlier is not enough.',
+        de: 'Bei Systemwechsel: Wenn Sie Ihr Überwachungssystem oder Ihre Software wechseln, aktualisieren Sie die Datenschutzinformation und händigen Sie sie erneut aus, und prüfen Sie, ob Sie die Arbeitnehmervertretung erneut informieren oder beteiligen müssen, wo das Gesetz es vorsieht. Anbieter (Auftragsverarbeiter), erhobene Daten und Modalitäten ändern sich oft: die zuvor ausgehändigte genügt nicht.',
+        fr: 'En cas de changement de système : si vous changez de système ou de logiciel de surveillance, mettez à jour et remettez l’information, et vérifiez si vous devez de nouveau informer ou consulter les représentants du personnel, lorsque la loi le prévoit. Le fournisseur (sous-traitant), les données collectées et les modalités changent souvent : celle remise auparavant ne suffit pas.',
+        es: 'En caso de cambio de sistema: si cambias de sistema o software de monitorización, actualiza y vuelve a entregar la información, y comprueba si debes volver a informar o consultar a los representantes de los trabajadores, cuando la ley lo prevé. A menudo cambian el proveedor (encargado del tratamiento), los datos recogidos y las modalidades: la entregada antes no basta.',
+        nl: 'Bij een systeemwissel: als je van monitoringsysteem of -software verandert, werk de privacyverklaring bij en verstrek deze opnieuw, en controleer of je de werknemersvertegenwoordiging opnieuw moet informeren of raadplegen, waar de wet dat voorschrijft. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
       },
     },
   ],
@@ -300,6 +304,7 @@ export const lettonia: SchedaPaese = {
 
   fonti: [
     FONTE_DVI_GPS,
+    FONTE_LEGGE_LV,
     FONTE_DVI_VIDEO,
     FONTE_DVI_VIDEO_REMOTO,
     FONTE_DVI_DPIA,
@@ -307,5 +312,5 @@ export const lettonia: SchedaPaese = {
     FONTE_GDPR,
   ],
 
-  aggiornatoIl: '2026-08-03',
+  aggiornatoIl: '2026-09-30',
 };

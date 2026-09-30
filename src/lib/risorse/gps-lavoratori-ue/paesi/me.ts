@@ -3,29 +3,33 @@
  *
  * Il Montenegro NON e' uno Stato membro dell'UE: e' un paese candidato. La legge
  * sulla protezione dei dati personali (ZZPL, 79/08 e successive modifiche fino a
- * 77/24) e' solo PARZIALMENTE allineata al GDPR; una nuova legge pienamente
- * allineata e' ancora una bozza nel 2026.
+ * 77/24) e' solo PARZIALMENTE allineata al GDPR. Una nuova legge, allineata al GDPR,
+ * e' stata pubblicata in Sl. list CG 133/2026 (11.9.2026), in vigore dal 19.9.2026
+ * e applicabile dal 19.3.2027: fino ad allora vale la ZZPL attuale.
  *
- * Particolarita' unica rispetto al GDPR: il Montenegro mantiene un'autorizzazione
- * preventiva. L'art. 27 ZZPL richiede il consenso dell'autorita' garante (AZLP)
- * prima di costituire un archivio di dati.
+ * Particolarita' rispetto al GDPR: il Montenegro mantiene un regime ex ante. L'art.
+ * 27 ZZPL (testo consolidato) impone la notifica all'autorita' garante (AZLP) prima
+ * di costituire un archivio automatico; l'art. 28 richiede il suo consenso solo per
+ * i trattamenti a rischio speciale.
  *
  * Contenuti basati su fonti primarie verificate e citate nella sezione "Fonti":
- * testo ufficiale inglese della ZZPL, posizione del Consiglio dell'AZLP sull'uso
+ * testo consolidato della ZZPL pubblicato dall'AZLP, posizione del Consiglio dell'AZLP sull'uso
  * del GPS nei veicoli di servizio (29.04.2025), contatti e moduli dell'AZLP, GDPR
  * come riferimento comparativo. Nessun numero, URL o autorita' e' inventato qui.
  */
 
-import type { SchedaPaese } from '../types';
+import type { SchedaPaese, Fonte } from '../types';
 
 // URL delle fonti primarie citate.
-const FONTE_ZZPL = {
-  titolo: 'Legge sulla protezione dei dati (ZZPL), testo ufficiale inglese',
-  url: 'https://www.azlp.me/docs/zajednicka/zakoni/personaldataprotectionlaweng.pdf',
+const FONTE_ZZPL_NUOVA: Fonte = {
+  titolo:
+    'Nuova legge sulla protezione dei dati personali, Sl. list CG 133/2026 (in vigore dal 19.9.2026, si applica dal 19.3.2027), indice del Gazzettino su propisi.net',
+  url: 'https://me.propisi.net/sluzbeni-list-crne-gore-br-133-2026-od-11-9-2026-godine-na-sajtu-sl-lista-cg-objavljen-14-9-2026/',
+  nonUfficiale: 'banca-dati',
 };
 const FONTE_ZZPL_2024 = {
   titolo:
-    'Legge sulla protezione dei dati personali, testo consolidato pubblicato dall\'AZLP (sanzioni, art. 74)',
+    'Legge sulla protezione dei dati personali, testo consolidato pubblicato dall\'AZLP (artt. 26-28 e sanzioni, art. 74)',
   url: 'https://www.azlp.me/storage/docs/zajednicka/zakoni/Zakon%20o%20zastiti%20podataka%20o%20licnosti%20-2024.pdf',
 };
 const FONTE_AZLP_GPS = {
@@ -90,24 +94,24 @@ export const montenegro: SchedaPaese = {
     urlFonte: FONTE_AZLP_CONTATTI.url,
     verificatoIl: '2026-06-15',
     note: {
-      it: "Il Montenegro è un paese candidato, fuori dall'UE, con una legge solo parzialmente allineata al GDPR. Unica autorità nazionale, l'AZLP. Particolarità: serve il consenso preventivo dell'autorità prima di costituire l'archivio dati (art. 27).",
-      en: 'Montenegro is a candidate country, outside the EU, with a law only partially aligned with the GDPR. There is a single national authority, the AZLP. Distinctive feature: prior authorisation from the authority is required before setting up the data filing system (art. 27).',
-      de: 'Montenegro ist ein Beitrittskandidat außerhalb der EU mit einem Gesetz, das nur teilweise an die DSGVO angeglichen ist. Es gibt eine einzige nationale Behörde, die AZLP. Besonderheit: Bevor Sie das Datenarchiv anlegen, benötigen Sie die vorherige Zustimmung der Behörde (Art. 27).',
-      fr: "Le Monténégro est un pays candidat, hors de l'UE, doté d'une loi seulement partiellement alignée sur le RGPD. Il existe une seule autorité nationale, l'AZLP. Particularité : avant de constituer le fichier de données, vous devez obtenir l'autorisation préalable de l'autorité (art. 27).",
-      es: 'Montenegro es un país candidato, fuera de la UE, con una ley solo parcialmente alineada con el RGPD. Existe una única autoridad nacional, la AZLP. Particularidad: antes de constituir el archivo de datos se necesita la autorización previa de la autoridad (art. 27).',
-      nl: 'Montenegro is een kandidaat-lidstaat buiten de EU, met een wet die slechts gedeeltelijk is afgestemd op de AVG. Er is één nationale autoriteit, de AZLP. Bijzonderheid: voordat u het gegevensbestand aanlegt, is voorafgaande toestemming van de autoriteit vereist (art. 27).',
+      it: "Il Montenegro è un paese candidato, fuori dall'UE, con una legge solo parzialmente allineata al GDPR. Unica autorità nazionale, l'AZLP. Particolarità: prima di costituire l'archivio dati serve una notifica all'AZLP (art. 27) e, nei casi di rischio speciale, il suo consenso (art. 28). Una nuova legge (Sl. list CG 133/2026) è in vigore dal 19.9.2026 e si applica dal 19.3.2027.",
+      en: 'Montenegro is a candidate country, outside the EU, with a law only partially aligned with the GDPR. There is a single national authority, the AZLP. Distinctive feature: a notification to the AZLP is required before setting up the data filing system (art. 27) and, in special-risk cases, its consent (art. 28). A new law (Sl. list CG 133/2026) has been in force since 19.9.2026 and applies from 19.3.2027.',
+      de: 'Montenegro ist ein Beitrittskandidat außerhalb der EU mit einem Gesetz, das nur teilweise an die DSGVO angeglichen ist. Es gibt eine einzige nationale Behörde, die AZLP. Besonderheit: Bevor Sie das Datenarchiv anlegen, ist eine Meldung an die AZLP (Art. 27) und in Fällen besonderen Risikos deren Zustimmung (Art. 28) nötig. Ein neues Gesetz (Sl. list CG 133/2026) ist seit dem 19.9.2026 in Kraft und gilt ab dem 19.3.2027.',
+      fr: "Le Monténégro est un pays candidat, hors de l'UE, doté d'une loi seulement partiellement alignée sur le RGPD. Il existe une seule autorité nationale, l'AZLP. Particularité : avant de constituer le fichier de données, une notification à l'AZLP (art. 27) et, dans les cas de risque particulier, son accord (art. 28) sont nécessaires. Une nouvelle loi (Sl. list CG 133/2026) est en vigueur depuis le 19.9.2026 et s'applique à partir du 19.3.2027.",
+      es: 'Montenegro es un país candidato, fuera de la UE, con una ley solo parcialmente alineada con el RGPD. Existe una única autoridad nacional, la AZLP. Particularidad: antes de constituir el archivo de datos se necesita una notificación a la AZLP (art. 27) y, en los casos de riesgo especial, su consentimiento (art. 28). Una nueva ley (Sl. list CG 133/2026) está en vigor desde el 19.9.2026 y se aplica a partir del 19.3.2027.',
+      nl: 'Montenegro is een kandidaat-lidstaat buiten de EU, met een wet die slechts gedeeltelijk is afgestemd op de AVG. Er is één nationale autoriteit, de AZLP. Bijzonderheid: voordat u het gegevensbestand aanlegt, is een melding aan de AZLP (art. 27) en in gevallen van bijzonder risico haar toestemming (art. 28) vereist. Een nieuwe wet (Sl. list CG 133/2026) is sinds 19.9.2026 van kracht en geldt vanaf 19.3.2027.',
     },
   },
 
   checklist: [
     {
       voce: {
-        it: 'Informazione scritta e preventiva ai lavoratori e regole interne sul GPS (ZZPL art. 20; posizione AZLP)',
-        en: 'Prior written information to workers and internal GPS rules (ZZPL art. 20; AZLP position)',
-        de: 'Vorherige schriftliche Information der Beschäftigten und interne GPS-Regeln (ZZPL Art. 20; AZLP-Position)',
-        fr: 'Information écrite et préalable des travailleurs et règles internes sur le GPS (ZZPL art. 20 ; position de l\'AZLP)',
-        es: 'Información escrita y previa a los trabajadores y normas internas sobre el GPS (ZZPL art. 20; posición de la AZLP)',
-        nl: 'Voorafgaande schriftelijke informatie aan werknemers en interne GPS-regels (ZZPL art. 20; standpunt AZLP)',
+        it: 'Informazione preventiva ai lavoratori e regole interne sul GPS (ZZPL art. 20; posizione AZLP)',
+        en: 'Prior information to workers and internal GPS rules (ZZPL art. 20; AZLP position)',
+        de: 'Vorherige Information der Beschäftigten und interne GPS-Regeln (ZZPL Art. 20; AZLP-Position)',
+        fr: 'Information préalable des travailleurs et règles internes sur le GPS (ZZPL art. 20 ; position de l\'AZLP)',
+        es: 'Información previa a los trabajadores y normas internas sobre el GPS (ZZPL art. 20; posición de la AZLP)',
+        nl: 'Voorafgaande informatie aan werknemers en interne GPS-regels (ZZPL art. 20; standpunt AZLP)',
       },
       risposta: 'si',
       dettaglio: {
@@ -122,23 +126,23 @@ export const montenegro: SchedaPaese = {
     },
     {
       voce: {
-        it: 'Consenso preventivo dell\'autorità garante prima di costituire l\'archivio dati (ZZPL art. 27)',
-        en: 'Prior authorisation from the supervisory authority before setting up the data filing system (ZZPL art. 27)',
-        de: 'Vorherige Zustimmung der Aufsichtsbehörde vor dem Anlegen des Datenarchivs (ZZPL Art. 27)',
-        fr: 'Autorisation préalable de l\'autorité de contrôle avant de constituer le fichier de données (ZZPL art. 27)',
-        es: 'Autorización previa de la autoridad de control antes de constituir el archivo de datos (ZZPL art. 27)',
-        nl: 'Voorafgaande toestemming van de toezichthoudende autoriteit voordat het gegevensbestand wordt aangelegd (ZZPL art. 27)',
+        it: "Notifica preventiva all'AZLP (ZZPL art. 27) e, in certi casi, suo consenso (art. 28)",
+        en: "Prior notification to the AZLP (ZZPL art. 27) and, in some cases, its consent (art. 28)",
+        de: "Vorherige Meldung an die AZLP (ZZPL Art. 27) und in bestimmten Fällen deren Zustimmung (Art. 28)",
+        fr: "Notification préalable à l'AZLP (ZZPL art. 27) et, dans certains cas, son accord (art. 28)",
+        es: "Notificación previa a la AZLP (ZZPL art. 27) y, en ciertos casos, su consentimiento (art. 28)",
+        nl: "Voorafgaande melding aan de AZLP (ZZPL art. 27) en in bepaalde gevallen haar toestemming (art. 28)",
       },
       risposta: 'si',
       dettaglio: {
-        it: "A differenza del GDPR, il Montenegro mantiene un'autorizzazione ex ante: prima di costituire un archivio di dati il titolare deve ottenere il consenso dell'autorità garante (se non risponde in 30 giorni, il consenso si intende dato).",
-        en: 'Unlike the GDPR, Montenegro retains an ex ante authorisation: before setting up a data filing system the controller must obtain the consent of the supervisory authority (if it does not reply within 30 days, consent is deemed granted).',
-        de: 'Anders als die DSGVO behält Montenegro eine vorgelagerte Genehmigung bei: Bevor der Verantwortliche ein Datenarchiv anlegt, muss er die Zustimmung der Aufsichtsbehörde einholen (antwortet sie nicht innerhalb von 30 Tagen, gilt die Zustimmung als erteilt).',
-        fr: "À la différence du RGPD, le Monténégro maintient une autorisation ex ante : avant de constituer un fichier de données, le responsable du traitement doit obtenir l'accord de l'autorité de contrôle (si elle ne répond pas dans les 30 jours, l'accord est réputé donné).",
-        es: 'A diferencia del RGPD, Montenegro mantiene una autorización ex ante: antes de constituir un archivo de datos, el responsable debe obtener el consentimiento de la autoridad de control (si no responde en 30 días, el consentimiento se considera otorgado).',
-        nl: 'Anders dan de AVG behoudt Montenegro een voorafgaande machtiging: voordat de verwerkingsverantwoordelijke een gegevensbestand aanlegt, moet hij de toestemming van de toezichthoudende autoriteit verkrijgen (antwoordt zij niet binnen 30 dagen, dan wordt de toestemming geacht te zijn verleend).',
+        it: "Prima di costituire una raccolta automatica di dati personali (di norma lo è un sistema GPS che registra le posizioni per persona) il titolare deve inviare una notifica all'AZLP con i dati dell'art. 26 c. 2 (art. 27 c. 1); l'omessa notifica è sanzionata dall'art. 74. Il consenso preventivo dell'AZLP (art. 28) serve in più solo se il trattamento presenta un rischio speciale per i diritti (categorie particolari di dati, valutazione di personalità, capacità o comportamento, videosorveglianza di aree pubbliche, biometria) e non si applica se il trattamento si fonda sulla legge, sul consenso della persona o su un contratto. Il testo inglese pubblicato dall'AZLP (79/08 e 70/09) è superato: prevedeva ancora il consenso per ogni archivio, con silenzio-assenso a 30 giorni.",
+        en: "Before setting up an automated collection of personal data (a GPS system that records positions per person normally is one), the controller must send a notification to the AZLP with the data listed in art. 26(2) (art. 27(1)); failure to notify is sanctioned under art. 74. The AZLP's prior consent (art. 28) is needed in addition only where the processing poses a special risk to rights (special categories of data, assessment of personality, ability or behaviour, video surveillance of public areas, biometrics), and it does not apply where the processing rests on a law, on the person's consent or on a contract. The English text published by the AZLP (79/08 and 70/09) is out of date: it still required consent for every filing system, with tacit approval after 30 days.",
+        de: "Bevor eine automatisierte Sammlung personenbezogener Daten angelegt wird (ein GPS-System, das Positionen je Person speichert, ist in der Regel eine solche), muss der Verantwortliche der AZLP eine Meldung mit den Angaben nach Art. 26 Abs. 2 übermitteln (Art. 27 Abs. 1); die unterlassene Meldung wird nach Art. 74 geahndet. Die vorherige Zustimmung der AZLP (Art. 28) ist zusätzlich nur erforderlich, wenn die Verarbeitung ein besonderes Risiko für die Rechte birgt (besondere Datenkategorien, Bewertung von Persönlichkeit, Fähigkeit oder Verhalten, Videoüberwachung öffentlicher Flächen, Biometrie), und sie entfällt, wenn die Verarbeitung auf einem Gesetz, der Einwilligung der Person oder einem Vertrag beruht. Der von der AZLP veröffentlichte englische Text (79/08 und 70/09) ist überholt: Er verlangte noch für jedes Datenarchiv die Zustimmung, mit stillschweigender Genehmigung nach 30 Tagen.",
+        fr: "Avant de constituer un recueil automatisé de données personnelles (un système GPS qui enregistre les positions par personne en est en principe un), le responsable doit adresser à l'AZLP une notification contenant les données de l'art. 26, al. 2 (art. 27, al. 1) ; l'absence de notification est sanctionnée par l'art. 74. L'accord préalable de l'AZLP (art. 28) n'est requis en plus que si le traitement présente un risque particulier pour les droits (catégories particulières de données, évaluation de la personnalité, de la capacité ou du comportement, vidéosurveillance d'espaces publics, biométrie), et il ne s'applique pas si le traitement repose sur la loi, sur le consentement de la personne ou sur un contrat. Le texte anglais publié par l'AZLP (79/08 et 70/09) est dépassé : il exigeait encore l'accord pour chaque fichier, avec approbation tacite après 30 jours.",
+        es: "Antes de constituir una recopilación automatizada de datos personales (un sistema GPS que registra posiciones por persona normalmente lo es), el responsable debe enviar a la AZLP una notificación con los datos del art. 26, ap. 2 (art. 27, ap. 1); la falta de notificación se sanciona conforme al art. 74. El consentimiento previo de la AZLP (art. 28) solo hace falta además cuando el tratamiento presenta un riesgo especial para los derechos (categorías especiales de datos, evaluación de la personalidad, la capacidad o el comportamiento, videovigilancia de zonas públicas, biometría), y no se aplica si el tratamiento se basa en una ley, en el consentimiento de la persona o en un contrato. El texto inglés publicado por la AZLP (79/08 y 70/09) está superado: aún exigía el consentimiento para cada archivo, con aprobación tácita a los 30 días.",
+        nl: "Voordat een geautomatiseerd bestand met persoonsgegevens wordt aangelegd (een GPS-systeem dat posities per persoon vastlegt is dat in de regel), moet de verwerkingsverantwoordelijke de AZLP een melding sturen met de gegevens van art. 26, lid 2 (art. 27, lid 1); het niet melden wordt gesanctioneerd op grond van art. 74. De voorafgaande toestemming van de AZLP (art. 28) is alleen aanvullend nodig als de verwerking een bijzonder risico voor de rechten inhoudt (bijzondere categorieën gegevens, beoordeling van persoonlijkheid, bekwaamheid of gedrag, camerabewaking van openbare ruimten, biometrie), en geldt niet als de verwerking berust op een wet, op de toestemming van de persoon of op een overeenkomst. De door de AZLP gepubliceerde Engelse tekst (79/08 en 70/09) is achterhaald: die eiste nog toestemming voor elk bestand, met stilzwijgende goedkeuring na 30 dagen.",
       },
-      fonte: FONTE_ZZPL,
+      fonte: FONTE_ZZPL_2024,
     },
     {
       voce: {
@@ -171,34 +175,34 @@ export const montenegro: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "Le decisioni su risultati, affidabilità o comportamento dei dipendenti non possono basarsi unicamente su un trattamento automatizzato; il lavoratore deve poter esprimere la propria posizione.",
-        en: 'Decisions about employees\' performance, reliability or conduct cannot be based solely on automated processing; the worker must be able to express their own position.',
-        de: 'Entscheidungen über Leistung, Zuverlässigkeit oder Verhalten der Beschäftigten dürfen nicht allein auf automatisierter Verarbeitung beruhen; der Beschäftigte muss seinen Standpunkt darlegen können.',
-        fr: "Les décisions sur les résultats, la fiabilité ou le comportement des salariés ne peuvent reposer uniquement sur un traitement automatisé ; le travailleur doit pouvoir exprimer sa propre position.",
-        es: 'Las decisiones sobre el rendimiento, la fiabilidad o el comportamiento de los empleados no pueden basarse únicamente en un tratamiento automatizado; el trabajador debe poder expresar su propia posición.',
-        nl: 'Besluiten over de prestaties, betrouwbaarheid of het gedrag van werknemers mogen niet uitsluitend op geautomatiseerde verwerking worden gebaseerd; de werknemer moet zijn eigen standpunt kunnen geven.',
+        it: "Le decisioni su risultati, affidabilità o comportamento dei dipendenti non possono basarsi unicamente su un trattamento automatizzato; l'eccezione (contratto o legge) richiede misure di tutela, come la possibilità per la persona di esprimere la propria opinione.",
+        en: 'Decisions about employees\' performance, reliability or conduct cannot be based solely on automated processing; the exception (contract or law) requires safeguards, such as the chance for the person to express an opinion.',
+        de: 'Entscheidungen über Leistung, Zuverlässigkeit oder Verhalten der Beschäftigten dürfen nicht allein auf automatisierter Verarbeitung beruhen; die Ausnahme (Vertrag oder Gesetz) verlangt Schutzmaßnahmen, etwa die Möglichkeit der Person, ihre Meinung zu äußern.',
+        fr: "Les décisions sur les résultats, la fiabilité ou le comportement des salariés ne peuvent reposer uniquement sur un traitement automatisé ; l'exception (contrat ou loi) exige des garanties, comme la possibilité pour la personne d'exprimer son opinion.",
+        es: 'Las decisiones sobre el rendimiento, la fiabilidad o el comportamiento de los empleados no pueden basarse únicamente en un tratamiento automatizado; la excepción (contrato o ley) exige garantías, como la posibilidad de que la persona exprese su opinión.',
+        nl: 'Besluiten over de prestaties, betrouwbaarheid of het gedrag van werknemers mogen niet uitsluitend op geautomatiseerde verwerking worden gebaseerd; de uitzondering (overeenkomst of wet) vereist waarborgen, zoals de mogelijkheid voor de persoon om zijn mening te geven.',
       },
       fonte: FONTE_AZLP_GPS,
     },
     {
       voce: {
-        it: 'Valutazione d\'impatto (DPIA) formale',
-        en: 'Formal data protection impact assessment (DPIA)',
-        de: 'Förmliche Datenschutz-Folgenabschätzung (DSFA)',
-        fr: 'Analyse d\'impact relative à la protection des données (AIPD) formelle',
-        es: 'Evaluación de impacto (EIPD) formål',
-        nl: 'Formele gegevensbeschermingseffectbeoordeling (DPIA)',
+        it: "Valutazione d'impatto (DPIA) formale",
+        en: "Formal data protection impact assessment (DPIA)",
+        de: "Förmliche Datenschutz-Folgenabschätzung (DSFA)",
+        fr: "Analyse d'impact relative à la protection des données (AIPD) formelle",
+        es: "Evaluación de impacto (EIPD) formal",
+        nl: "Formele gegevensbeschermingseffectbeoordeling (DPIA)",
       },
       risposta: 'dipende',
       dettaglio: {
-        it: "La legge attuale non prevede una DPIA formale in stile GDPR; il sostituto è l'autorizzazione preventiva dell'art. 27 più le misure di sicurezza e la valutazione preliminare di adeguatezza (artt. 24 e 26).",
-        en: 'The current law does not provide for a formal GDPR-style DPIA; the substitute is the prior authorisation under art. 27 plus the security measures and the preliminary adequacy assessment (arts. 24 and 26).',
-        de: 'Das geltende Gesetz sieht keine förmliche DSFA nach Vorbild der DSGVO vor; an ihre Stelle treten die vorherige Genehmigung nach Art. 27 sowie die Sicherheitsmaßnahmen und die vorläufige Angemessenheitsbewertung (Art. 24 und 26).',
-        fr: "La loi actuelle ne prévoit pas d'AIPD formelle de type RGPD ; elle est remplacée par l'autorisation préalable de l'art. 27 ainsi que par les mesures de sécurité et l'évaluation préalable d'adéquation (art. 24 et 26).",
-        es: 'La ley actual no contempla una EIPD formål al estilo del RGPD; el sustituto es la autorización previa del art. 27 más las medidas de seguridad y la evaluación preliminar de adecuación (arts. 24 y 26).',
-        nl: 'De huidige wet voorziet niet in een formele DPIA naar AVG-model; in de plaats daarvan komen de voorafgaande machtiging op grond van art. 27 plus de beveiligingsmaatregelen en de voorafgaande toereikendheidsbeoordeling (art. 24 en 26).',
+        it: "La legge attuale non prevede una DPIA formale in stile GDPR; il sostituto è la notifica preventiva dell'art. 27 (e, nei casi di rischio speciale, il consenso dell'art. 28) più le misure di sicurezza e le regole interne con analisi preliminare di adeguatezza (artt. 24 e 26). Una nuova legge (Sl. list CG 133/2026) è in vigore dal 19 settembre 2026 e si applica dal 19 marzo 2027: fino ad allora vale la legge attuale.",
+        en: "The current law does not provide for a formal GDPR-style DPIA; the substitute is the prior notification under art. 27 (and, in special-risk cases, the consent under art. 28) plus the security measures and the internal rules with a preliminary adequacy analysis (arts. 24 and 26). A new law (Sl. list CG 133/2026) has been in force since 19 September 2026 and applies from 19 March 2027: until then the current law governs.",
+        de: "Das geltende Gesetz sieht keine förmliche DSFA nach Vorbild der DSGVO vor; an ihre Stelle treten die vorherige Meldung nach Art. 27 (und in Fällen besonderen Risikos die Zustimmung nach Art. 28) sowie die Sicherheitsmaßnahmen und die internen Regeln mit vorheriger Angemessenheitsanalyse (Art. 24 und 26). Ein neues Gesetz (Sl. list CG 133/2026) ist seit dem 19. September 2026 in Kraft und gilt ab dem 19. März 2027: bis dahin gilt das geltende Gesetz.",
+        fr: "La loi actuelle ne prévoit pas d'AIPD formelle de type RGPD ; elle est remplacée par la notification préalable de l'art. 27 (et, dans les cas de risque particulier, l'accord de l'art. 28) ainsi que par les mesures de sécurité et les règles internes avec analyse préalable d'adéquation (art. 24 et 26). Une nouvelle loi (Sl. list CG 133/2026) est en vigueur depuis le 19 septembre 2026 et s'applique à partir du 19 mars 2027 : d'ici là, la loi actuelle s'applique.",
+        es: "La ley actual no contempla una EIPD formal al estilo del RGPD; el sustituto es la notificación previa del art. 27 (y, en los casos de riesgo especial, el consentimiento del art. 28) más las medidas de seguridad y las normas internas con análisis preliminar de adecuación (arts. 24 y 26). Una nueva ley (Sl. list CG 133/2026) está en vigor desde el 19 de septiembre de 2026 y se aplica a partir del 19 de marzo de 2027: hasta entonces rige la ley actual.",
+        nl: "De huidige wet voorziet niet in een formele DPIA naar AVG-model; in de plaats daarvan komen de voorafgaande melding op grond van art. 27 (en in gevallen van bijzonder risico de toestemming van art. 28) plus de beveiligingsmaatregelen en de interne regels met een voorafgaande toereikendheidsanalyse (art. 24 en 26). Een nieuwe wet (Sl. list CG 133/2026) is sinds 19 september 2026 van kracht en geldt vanaf 19 maart 2027: tot dan geldt de huidige wet.",
       },
-      fonte: FONTE_ZZPL,
+      fonte: FONTE_ZZPL_2024,
     },
   ],
 
@@ -217,12 +221,12 @@ export const montenegro: SchedaPaese = {
     {
       passo: 2,
       descrizione: {
-        it: "Ottieni il consenso preventivo dell'autorità garante prima di costituire l'archivio dati (art. 27).",
-        en: 'Obtain the prior authorisation of the supervisory authority before setting up the data filing system (art. 27).',
-        de: 'Holen Sie vor dem Anlegen des Datenarchivs die vorherige Zustimmung der Aufsichtsbehörde ein (Art. 27).',
-        fr: "Obtenez l'autorisation préalable de l'autorité de contrôle avant de constituer le fichier de données (art. 27).",
-        es: 'Obtenga la autorización previa de la autoridad de control antes de constituir el archivo de datos (art. 27).',
-        nl: 'Verkrijg de voorafgaande toestemming van de toezichthoudende autoriteit voordat u het gegevensbestand aanlegt (art. 27).',
+        it: "Invia la notifica all'AZLP prima di costituire l'archivio dati (art. 27); chiedi il suo consenso (art. 28) solo se il trattamento presenta un rischio speciale.",
+        en: 'Send the notification to the AZLP before setting up the data filing system (art. 27); ask for its consent (art. 28) only if the processing poses a special risk.',
+        de: 'Übermitteln Sie der AZLP die Meldung, bevor Sie das Datenarchiv anlegen (Art. 27); holen Sie deren Zustimmung (Art. 28) nur ein, wenn die Verarbeitung ein besonderes Risiko birgt.',
+        fr: "Adressez la notification à l'AZLP avant de constituer le fichier de données (art. 27) ; demandez son accord (art. 28) seulement si le traitement présente un risque particulier.",
+        es: 'Envíe la notificación a la AZLP antes de constituir el archivo de datos (art. 27); pida su consentimiento (art. 28) solo si el tratamiento presenta un riesgo especial.',
+        nl: 'Stuur de melding naar de AZLP voordat u het gegevensbestand aanlegt (art. 27); vraag haar toestemming (art. 28) alleen als de verwerking een bijzonder risico inhoudt.',
       },
     },
     {
@@ -261,12 +265,12 @@ export const montenegro: SchedaPaese = {
     {
       passo: 6,
       descrizione: {
-        it: 'In caso di cambio sistema: se cambi sistema o software di monitoraggio, aggiorna e ri-consegna l’informativa, e verifica se va rinnovato l’accordo o l’autorizzazione nazionale per il controllo a distanza. Spesso cambiano fornitore (responsabile del trattamento), dati raccolti e modalità: quella consegnata prima non basta.',
-        en: 'If you switch systems: when you change your monitoring system or software, update and re-issue the privacy notice, and check whether the national agreement or authorisation for remote monitoring needs renewing. The provider (data processor), the data collected and the methods often change: the one provided earlier is not enough.',
-        de: 'Bei Systemwechsel: Wenn Sie Ihr Überwachungssystem oder Ihre Software wechseln, aktualisieren Sie die Datenschutzinformation und händigen Sie sie erneut aus und prüfen Sie, ob die nationale Vereinbarung oder Genehmigung zur Fernüberwachung erneuert werden muss. Anbieter (Auftragsverarbeiter), erhobene Daten und Modalitäten ändern sich oft: die zuvor ausgehändigte genügt nicht.',
-        fr: 'En cas de changement de système : si vous changez de système ou de logiciel de surveillance, mettez à jour et remettez l’information, et vérifiez si l’accord ou l’autorisation nationale de contrôle à distance doit être renouvelé. Le fournisseur (sous-traitant), les données collectées et les modalités changent souvent : celle remise auparavant ne suffit pas.',
-        es: 'En caso de cambio de sistema: si cambias de sistema o software de monitorización, actualiza y vuelve a entregar la información, y comprueba si debe renovarse el acuerdo o la autorización nacional para el control a distancia. A menudo cambian el proveedor (encargado del tratamiento), los datos recogidos y las modalidades: la entregada antes no basta.',
-        nl: 'Bij een systeemwissel: als je van monitoringsysteem of -software verandert, werk de privacyverklaring bij en verstrek deze opnieuw, en controleer of de nationale overeenkomst of toestemming voor controle op afstand moet worden vernieuwd. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
+        it: 'In caso di cambio di sistema: se cambi sistema o software di monitoraggio, aggiorna e riconsegna l’informativa, e verifica se devi di nuovo informare o consultare i rappresentanti dei lavoratori, dove la legge lo prevede. In Montenegro, se il trattamento cambia in modo significativo, va inviata una nuova notifica all\'AZLP (art. 27, c. 1). Spesso cambiano fornitore (responsabile del trattamento), dati raccolti e modalità: quella consegnata prima non basta.',
+        en: 'If you switch systems: when you change your monitoring system or software, update and re-issue the privacy notice, and check whether you must inform or consult the workers\' representatives again, where the law requires it. In Montenegro, if the processing changes significantly, a new notification must be sent to the AZLP (Art. 27(1)). The provider (data processor), the data collected and the methods often change: the one provided earlier is not enough.',
+        de: 'Bei Systemwechsel: Wenn Sie Ihr Überwachungssystem oder Ihre Software wechseln, aktualisieren Sie die Datenschutzinformation und händigen Sie sie erneut aus, und prüfen Sie, ob Sie die Arbeitnehmervertretung erneut informieren oder beteiligen müssen, wo das Gesetz es vorsieht. In Montenegro ist bei einer wesentlichen Änderung der Verarbeitung eine neue Meldung an die AZLP zu senden (Art. 27 Abs. 1). Anbieter (Auftragsverarbeiter), erhobene Daten und Modalitäten ändern sich oft: die zuvor ausgehändigte genügt nicht.',
+        fr: 'En cas de changement de système : si vous changez de système ou de logiciel de surveillance, mettez à jour et remettez l’information, et vérifiez si vous devez de nouveau informer ou consulter les représentants du personnel, lorsque la loi le prévoit. Au Monténégro, si le traitement change de manière significative, une nouvelle notification doit être adressée à l\'AZLP (art. 27, al. 1). Le fournisseur (sous-traitant), les données collectées et les modalités changent souvent : celle remise auparavant ne suffit pas.',
+        es: 'En caso de cambio de sistema: si cambias de sistema o software de monitorización, actualiza y vuelve a entregar la información, y comprueba si debes volver a informar o consultar a los representantes de los trabajadores, cuando la ley lo prevé. En Montenegro, si el tratamiento cambia de forma significativa, hay que enviar una nueva notificación a la AZLP (art. 27, ap. 1). A menudo cambian el proveedor (encargado del tratamiento), los datos recogidos y las modalidades: la entregada antes no basta.',
+        nl: 'Bij een systeemwissel: als je van monitoringsysteem of -software verandert, werk de privacyverklaring bij en verstrek deze opnieuw, en controleer of je de werknemersvertegenwoordiging opnieuw moet informeren of raadplegen, waar de wet dat voorschrijft. In Montenegro moet bij een wezenlijke wijziging van de verwerking een nieuwe melding aan de AZLP worden gedaan (art. 27, lid 1). Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
       },
     },
   ],
@@ -292,12 +296,12 @@ export const montenegro: SchedaPaese = {
       nl: 'van 500 tot 20.000 euro voor een rechtspersoon',
     },
     casoCitato: {
-      it: "Non risulta una multa dell'AZLP specifica e pubblicata per il GPS sui dipendenti. La posizione di riferimento è quella del Consiglio dell'AZLP del 2025: il GPS sui veicoli di servizio è un controllo legittimo, ma serve definirne finalità e metodi, informare i lavoratori, adottare regole interne e ottenere il consenso preventivo dell'autorità per l'archivio dati. Il massimale mostrato è quello della legge sulla protezione dei dati oggi in vigore (art. 74 del testo consolidato pubblicato dall'AZLP): da 500 a 20.000 euro per la persona giuridica, da 150 a 6.000 euro per l'imprenditore individuale. Non sono cifre in stile GDPR: il Montenegro non è nell'UE.",
-      en: 'There is no specific, published AZLP fine for GPS tracking of employees. The reference position is that of the AZLP Council of 2025: GPS on service vehicles is legitimate monitoring, but its purposes and methods must be defined, workers must be informed, internal rules must be adopted and the prior authorisation of the authority for the data filing system must be obtained. The ceiling shown is the one in the data protection law in force today (art. 74 of the consolidated text published by the AZLP): 500 to 20,000 euros for a legal person, 150 to 6,000 euros for a sole trader. These are not GDPR-style figures: Montenegro is not in the EU.',
-      de: 'Eine spezifische, veröffentlichte Geldbuße der AZLP für die GPS-Überwachung von Beschäftigten ist nicht bekannt. Maßgeblich ist die Position des AZLP-Rates von 2025: GPS in Dienstfahrzeugen ist eine legitime Kontrolle, doch müssen Zwecke und Methoden festgelegt, die Beschäftigten informiert, interne Regeln erlassen und die vorherige Zustimmung der Behörde für das Datenarchiv eingeholt werden. Der angezeigte Höchstbetrag ist der des heute geltenden Datenschutzgesetzes (Art. 74 der von der AZLP veröffentlichten konsolidierten Fassung): 500 bis 20.000 Euro für eine juristische Person, 150 bis 6.000 Euro für Einzelunternehmer. Das sind keine DSGVO-Beträge: Montenegro gehört nicht zur EU.',
-      fr: "Il n'existe pas d'amende spécifique et publiée de l'AZLP pour le suivi GPS des salariés. La position de référence est celle du Conseil de l'AZLP de 2025 : le GPS sur les véhicules de service est un contrôle légitime, mais il faut en définir les finalités et les méthodes, informer les travailleurs, adopter des règles internes et obtenir l'autorisation préalable de l'autorité pour le fichier de données. Le plafond indiqué est celui de la loi sur la protection des données en vigueur aujourd'hui (art. 74 du texte consolidé publié par l'AZLP) : de 500 à 20 000 euros pour une personne morale, de 150 à 6 000 euros pour un entrepreneur individuel. Ce ne sont pas des montants de type RGPD : le Monténégro n'est pas dans l'UE.",
-      es: 'No consta una multa específica y publicada de la AZLP por el GPS en los empleados. La posición de referencia es la del Consejo de la AZLP de 2025: el GPS en los vehículos de servicio es un control legítimo, pero hay que definir sus finalidades y métodos, informar a los trabajadores, adoptar normas internas y obtener la autorización previa de la autoridad para el archivo de datos. El máximo indicado es el de la ley de protección de datos hoy vigente (art. 74 del texto consolidado publicado por la AZLP): de 500 a 20.000 euros para la persona jurídica, de 150 a 6.000 euros para el empresario individual. No son cifras al estilo del RGPD: Montenegro no está en la UE.',
-      nl: 'Er is geen specifieke, gepubliceerde boete van de AZLP voor GPS-tracking van werknemers. De maatgevende positie is die van de AZLP-Raad uit 2025: GPS in dienstvoertuigen is een legitieme controle, maar de doeleinden en methoden moeten worden vastgelegd, de werknemers moeten worden geïnformeerd, er moeten interne regels worden vastgesteld en de voorafgaande toestemming van de autoriteit voor het gegevensbestand moet worden verkregen. Het getoonde maximum is dat van de vandaag geldende wet op de gegevensbescherming (art. 74 van de door de AZLP gepubliceerde geconsolideerde tekst): 500 tot 20.000 euro voor een rechtspersoon, 150 tot 6.000 euro voor een eenmanszaak. Dit zijn geen AVG-bedragen: Montenegro is geen lid van de EU.',
+      it: "Non risulta una multa dell'AZLP specifica e pubblicata per il GPS sui dipendenti. La posizione di riferimento è quella del Consiglio dell'AZLP del 2025: il GPS sui veicoli di servizio è un controllo legittimo, ma serve definirne finalità e metodi, informare i lavoratori e adottare regole interne (la notifica all'AZLP per l'archivio dati è un obbligo distinto, art. 27). Il massimale mostrato è quello della legge sulla protezione dei dati oggi in vigore (art. 74 del testo consolidato pubblicato dall'AZLP): da 500 a 20.000 euro per la persona giuridica, da 150 a 6.000 euro per l'imprenditore individuale. Non sono cifre in stile GDPR: il Montenegro non è nell'UE. Dal 19 marzo 2027 si applica una nuova legge (Sl. list CG 133/2026, in vigore dal 19 settembre 2026) con sanzioni molto più alte.",
+      en: 'There is no specific, published AZLP fine for GPS tracking of employees. The reference position is that of the AZLP Council of 2025: GPS on service vehicles is legitimate monitoring, but its purposes and methods must be defined, workers must be informed and internal rules must be adopted (notifying the AZLP of the data filing system is a separate duty, art. 27). The ceiling shown is the one in the data protection law in force today (art. 74 of the consolidated text published by the AZLP): 500 to 20,000 euros for a legal person, 150 to 6,000 euros for a sole trader. These are not GDPR-style figures: Montenegro is not in the EU. From 19 March 2027 a new law applies (Sl. list CG 133/2026, in force since 19 September 2026) with much higher penalties.',
+      de: 'Eine spezifische, veröffentlichte Geldbuße der AZLP für die GPS-Überwachung von Beschäftigten ist nicht bekannt. Maßgeblich ist die Position des AZLP-Rates von 2025: GPS in Dienstfahrzeugen ist eine legitime Kontrolle, doch müssen Zwecke und Methoden festgelegt, die Beschäftigten informiert und interne Regeln erlassen werden (die Meldung des Datenarchivs an die AZLP ist eine gesonderte Pflicht, Art. 27). Der angezeigte Höchstbetrag ist der des heute geltenden Datenschutzgesetzes (Art. 74 der von der AZLP veröffentlichten konsolidierten Fassung): 500 bis 20.000 Euro für eine juristische Person, 150 bis 6.000 Euro für Einzelunternehmer. Das sind keine DSGVO-Beträge: Montenegro gehört nicht zur EU. Ab dem 19. März 2027 gilt ein neues Gesetz (Sl. list CG 133/2026, seit dem 19. September 2026 in Kraft) mit deutlich höheren Sanktionen.',
+      fr: "Il n'existe pas d'amende spécifique et publiée de l'AZLP pour le suivi GPS des salariés. La position de référence est celle du Conseil de l'AZLP de 2025 : le GPS sur les véhicules de service est un contrôle légitime, mais il faut en définir les finalités et les méthodes, informer les travailleurs et adopter des règles internes (la notification du fichier de données à l'AZLP est une obligation distincte, art. 27). Le plafond indiqué est celui de la loi sur la protection des données en vigueur aujourd'hui (art. 74 du texte consolidé publié par l'AZLP) : de 500 à 20 000 euros pour une personne morale, de 150 à 6 000 euros pour un entrepreneur individuel. Ce ne sont pas des montants de type RGPD : le Monténégro n'est pas dans l'UE. À partir du 19 mars 2027 s'applique une nouvelle loi (Sl. list CG 133/2026, en vigueur depuis le 19 septembre 2026) aux sanctions bien plus élevées.",
+      es: 'No consta una multa específica y publicada de la AZLP por el GPS en los empleados. La posición de referencia es la del Consejo de la AZLP de 2025: el GPS en los vehículos de servicio es un control legítimo, pero hay que definir sus finalidades y métodos, informar a los trabajadores y adoptar normas internas (la notificación del archivo de datos a la AZLP es una obligación distinta, art. 27). El máximo indicado es el de la ley de protección de datos hoy vigente (art. 74 del texto consolidado publicado por la AZLP): de 500 a 20.000 euros para la persona jurídica, de 150 a 6.000 euros para el empresario individual. No son cifras al estilo del RGPD: Montenegro no está en la UE. A partir del 19 de marzo de 2027 se aplica una nueva ley (Sl. list CG 133/2026, en vigor desde el 19 de septiembre de 2026) con sanciones mucho más altas.',
+      nl: 'Er is geen specifieke, gepubliceerde boete van de AZLP voor GPS-tracking van werknemers. De maatgevende positie is die van de AZLP-Raad uit 2025: GPS in dienstvoertuigen is een legitieme controle, maar de doeleinden en methoden moeten worden vastgelegd, de werknemers moeten worden geïnformeerd en er moeten interne regels worden vastgesteld (de melding van het gegevensbestand aan de AZLP is een aparte plicht, art. 27). Het getoonde maximum is dat van de vandaag geldende wet op de gegevensbescherming (art. 74 van de door de AZLP gepubliceerde geconsolideerde tekst): 500 tot 20.000 euro voor een rechtspersoon, 150 tot 6.000 euro voor een eenmanszaak. Dit zijn geen AVG-bedragen: Montenegro is geen lid van de EU. Vanaf 19 maart 2027 geldt een nieuwe wet (Sl. list CG 133/2026, sinds 19 september 2026 van kracht) met veel hogere sancties.',
     },
     urlFonte: FONTE_ZZPL_2024.url,
     tipoImporto: 'massimale',
@@ -305,7 +309,7 @@ export const montenegro: SchedaPaese = {
 
   fonti: [
     FONTE_ZZPL_2024,
-    FONTE_ZZPL,
+    FONTE_ZZPL_NUOVA,
     FONTE_AZLP_GPS,
     FONTE_AZLP_CONTATTI,
     FONTE_AZLP_MODULI,

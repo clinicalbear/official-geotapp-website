@@ -15,8 +15,8 @@ import type { SchedaPaese } from '../types';
 
 // URL delle fonti primarie citate.
 const FONTE_KP_22_2 = {
-  titolo: 'Kodeks pracy, art. 22(2) (monitoraggio), testo consolidato ISAP (Sejm)',
-  url: 'https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20250000277',
+  titolo: 'Kodeks pracy, art. 22(2) (monitoraggio), testo consolidato Dz.U. 2026 poz. 1245 (in vigore dal 24 settembre 2026)',
+  url: 'https://eli.gov.pl/api/acts/DU/2026/1245/text.pdf',
 };
 const FONTE_DU_2026_25 = {
   titolo:
@@ -24,8 +24,8 @@ const FONTE_DU_2026_25 = {
   url: 'https://eli.gov.pl/api/acts/DU/2026/25/text.pdf',
 };
 const FONTE_KP_22_3 = {
-  titolo: 'Kodeks pracy, art. 22(3) (altre forme di monitoraggio, incl. GPS), testo consolidato ISAP (Sejm)',
-  url: 'https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20250000277',
+  titolo: 'Kodeks pracy, art. 22(3) par. 3-4 (altre forme di monitoraggio, tra cui il GPS), testo consolidato Dz.U. 2026 poz. 1245',
+  url: 'https://eli.gov.pl/api/acts/DU/2026/1245/text.pdf',
 };
 const FONTE_UODO_GUIDA = {
   titolo: 'UODO, guida alla protezione dei dati sul luogo di lavoro',
@@ -80,7 +80,7 @@ export const polonia: SchedaPaese = {
     ente: 'UODO (Urzad Ochrony Danych Osobowych)',
     portale: FONTE_UODO_RECLAMO.url,
     urlFonte: FONTE_UODO_RECLAMO.url,
-    verificatoIl: '2026-06-15',
+    verificatoIl: '2026-09-30',
     note: {
       it: "La Polonia ha un'unica autorità nazionale, l'UODO; nessuna ripartizione regionale.",
       en: "Poland has a single national authority, the UODO; no regional breakdown.",
@@ -103,12 +103,12 @@ export const polonia: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "il Codice del lavoro polacco disciplina espressamente il monitoraggio: finalità, portata e modalità vanno stabilite nel contratto collettivo, nel regolamento del lavoro o in un avviso, e le regole sul monitoraggio video si applicano anche alle altre forme (GPS incluso).",
-        en: 'the Polish Labour Code expressly governs monitoring: purpose, scope and methods must be set out in the collective agreement, the work regulations or a notice, and the rules on video monitoring also apply to other forms (GPS included).',
-        de: 'das polnische Arbeitsgesetzbuch regelt die Überwachung ausdrücklich: Zweck, Umfang und Art müssen im Tarifvertrag, in der Arbeitsordnung oder in einer Bekanntmachung festgelegt werden, und die Regeln zur Videoüberwachung gelten auch für andere Formen (GPS eingeschlossen).',
-        fr: "le Code du travail polonais régit expressément la surveillance: la finalité, la portée et les modalités doivent être fixées dans la convention collective, le règlement du travail ou un avis, et les règles sur la vidéosurveillance s'appliquent aussi aux autres formes (GPS compris).",
-        es: 'el Código de trabajo polaco regula expresamente el monitoreo: la finalidad, el alcance y las modalidades deben establecerse en el convenio colectivo, el reglamento de trabajo o un aviso, y las reglas sobre videovigilancia se aplican también a las demás formas (GPS incluido).',
-        nl: 'het Poolse arbeidswetboek regelt monitoring uitdrukkelijk: doel, omvang en wijze moeten worden vastgelegd in de collectieve overeenkomst, het arbeidsreglement of een kennisgeving, en de regels voor cameratoezicht gelden ook voor andere vormen (GPS inbegrepen).',
+        it: "il Codice del lavoro polacco disciplina espressamente il monitoraggio: finalità, portata e modalità vanno stabilite nel contratto collettivo, nel regolamento del lavoro o in un avviso, e queste stesse regole valgono anche per le altre forme di monitoraggio (GPS incluso) quando sono necessarie all'organizzazione del lavoro e al corretto uso degli strumenti di lavoro.",
+        en: 'the Polish Labour Code expressly governs monitoring: purpose, scope and methods must be set out in the collective agreement, the work regulations or a notice, and these same rules also apply to other forms of monitoring (GPS included) where necessary for organising work and the proper use of work tools.',
+        de: 'das polnische Arbeitsgesetzbuch regelt die Überwachung ausdrücklich: Zweck, Umfang und Art müssen im Tarifvertrag, in der Arbeitsordnung oder in einer Bekanntmachung festgelegt werden, und dieselben Regeln gelten auch für andere Überwachungsformen (GPS eingeschlossen), wenn sie für die Arbeitsorganisation und die ordnungsgemäße Nutzung der Arbeitsmittel erforderlich sind.',
+        fr: "le Code du travail polonais régit expressément la surveillance: la finalité, la portée et les modalités doivent être fixées dans la convention collective, le règlement du travail ou un avis, et ces mêmes règles s'appliquent aussi aux autres formes de surveillance (GPS compris) lorsqu'elles sont nécessaires à l'organisation du travail et à l'usage correct des outils de travail.",
+        es: 'el Código de trabajo polaco regula expresamente el monitoreo: la finalidad, el alcance y las modalidades deben establecerse en el convenio colectivo, el reglamento de trabajo o un aviso, y esas mismas reglas se aplican también a las demás formas de monitoreo (GPS incluido) cuando son necesarias para la organización del trabajo y el uso adecuado de las herramientas de trabajo.',
+        nl: 'het Poolse arbeidswetboek regelt monitoring uitdrukkelijk: doel, omvang en wijze moeten worden vastgelegd in de collectieve overeenkomst, het arbeidsreglement of een kennisgeving, en diezelfde regels gelden ook voor andere vormen van monitoring (GPS inbegrepen) wanneer die nodig zijn voor de organisatie van het werk en het juiste gebruik van de werkmiddelen.',
       },
       fonte: FONTE_KP_22_3,
     },
@@ -163,12 +163,12 @@ export const polonia: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "per l'UODO il datore non e legittimato a raccogliere dati sugli spostamenti privati del lavoratore (salvo casi eccezionali come furto del veicolo); se il veicolo e usato anche privatamente vanno previste regole e la disattivazione fuori servizio. Il rischio per i diritti deve essere proporzionato allo scopo.",
-        en: 'for the UODO the employer is not entitled to collect data on the worker\'s private movements (save for exceptional cases such as theft of the vehicle); if the vehicle is also used privately, rules and deactivation outside service must be provided. The risk to rights must be proportionate to the purpose.',
-        de: 'für die UODO ist der Arbeitgeber nicht berechtigt, Daten über die privaten Bewegungen des Beschäftigten zu erheben (außer in Ausnahmefällen wie dem Diebstahl des Fahrzeugs); wird das Fahrzeug auch privat genutzt, sind Regeln und die Deaktivierung außerhalb des Dienstes vorzusehen. Das Risiko für die Rechte muss im Verhältnis zum Zweck stehen.',
-        fr: "pour l'UODO, l'employeur n'est pas autorisé a collecter des données sur les déplacements prives du salarie (sauf cas exceptionnels comme le vol du véhicule); si le véhicule est également utilise a titre prive, des règles et la désactivation hors service doivent être prévues. Le risque pour les droits doit être proportionné a la finalité.",
-        es: 'para la UODO el empleador no esta legitimado para recopilar datos sobre los desplazamientos privados del trabajador (salvo casos excepcionales como el robo del vehículo); si el vehículo se usa también de forma privada, deben preverse reglas y la desactivación fuera de servicio. El riesgo para los derechos debe ser proporcionado a la finalidad.',
-        nl: 'voor de UODO is de werkgever niet gerechtigd gegevens te verzamelen over de prive-verplaatsingen van de werknemer (behoudens uitzonderlijke gevallen zoals diefstal van het voertuig); wordt het voertuig ook prive gebruikt, dan moeten regels en uitschakeling buiten dienst worden voorzien. Het risico voor de rechten moet evenredig zijn aan het doel.',
+        it: "per l'UODO il datore non e legittimato a raccogliere dati sugli spostamenti privati del lavoratore (salvo casi eccezionali come furto del veicolo); se il veicolo e usato anche privatamente la guida indica di stabilire che e solo di servizio oppure di adeguare il regolamento d'uso, ottenere il consenso del lavoratore per quei dati e dargli l'informativa. Il rischio per i diritti deve essere proporzionato allo scopo.",
+        en: 'for the UODO the employer is not entitled to collect data on the worker\'s private movements (save for exceptional cases such as theft of the vehicle); if the vehicle is also used privately, the guide says to either provide that it is for work use only or to adapt the vehicle-use rules, obtain the worker\'s consent for that data and give the information notice. The risk to rights must be proportionate to the purpose.',
+        de: 'für die UODO ist der Arbeitgeber nicht berechtigt, Daten über die privaten Bewegungen des Beschäftigten zu erheben (außer in Ausnahmefällen wie dem Diebstahl des Fahrzeugs); wird das Fahrzeug auch privat genutzt, empfiehlt der Leitfaden, entweder die ausschließlich dienstliche Nutzung festzulegen oder die Nutzungsregeln anzupassen, die Einwilligung des Beschäftigten für diese Daten einzuholen und die Information zu erteilen. Das Risiko für die Rechte muss im Verhältnis zum Zweck stehen.',
+        fr: "pour l'UODO, l'employeur n'est pas autorisé a collecter des données sur les déplacements prives du salarie (sauf cas exceptionnels comme le vol du véhicule); si le véhicule est également utilise a titre prive, le guide indique de prévoir un usage exclusivement professionnel ou d'adapter le règlement d'usage, d'obtenir le consentement du salarie pour ces données et de lui remettre l'information. Le risque pour les droits doit être proportionné a la finalité.",
+        es: 'para la UODO el empleador no esta legitimado para recopilar datos sobre los desplazamientos privados del trabajador (salvo casos excepcionales como el robo del vehículo); si el vehículo se usa también de forma privada, la guía indica establecer que es solo de servicio o bien adaptar el reglamento de uso, obtener el consentimiento del trabajador para esos datos y darle la información. El riesgo para los derechos debe ser proporcionado a la finalidad.',
+        nl: 'voor de UODO is de werkgever niet gerechtigd gegevens te verzamelen over de prive-verplaatsingen van de werknemer (behoudens uitzonderlijke gevallen zoals diefstal van het voertuig); wordt het voertuig ook prive gebruikt, dan schrijft de gids voor het uitsluitend voor het werk te bestemmen of het gebruiksreglement aan te passen, de toestemming van de werknemer voor die gegevens te verkrijgen en hem te informeren. Het risico voor de rechten moet evenredig zijn aan het doel.',
       },
       fonte: FONTE_UODO_GUIDA,
     },
@@ -183,12 +183,12 @@ export const polonia: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "la lista UODO dei trattamenti che richiedono una valutazione d'impatto include espressamente il trattamento dei dati di localizzazione dei lavoratori e il monitoraggio sistematico nel contesto del lavoro.",
-        en: 'the UODO list of processing operations that require an impact assessment expressly includes the processing of workers\' location data and systematic monitoring in the work context.',
-        de: 'die UODO-Liste der Verarbeitungen, die eine Folgenabschätzung erfordern, umfasst ausdrücklich die Verarbeitung der Standortdaten der Beschäftigten und die systematische Überwachung im Arbeitskontext.',
-        fr: "la liste UODO des traitements qui requièrent une analyse d'impact inclut expressément le traitement des données de localisation des salaries et la surveillance systématique dans le contexte du travail.",
-        es: 'la lista UODO de los tratamientos que requieren una evaluación de impacto incluye expresamente el tratamiento de los datos de localización de los trabajadores y el monitoreo sistemático en el contexto laboral.',
-        nl: 'de UODO-lijst van verwerkingen die een effectbeoordeling vereisen, omvat uitdrukkelijk de verwerking van de locatiegegevens van werknemers en systematische monitoring in de werkcontext.',
+        it: "la lista UODO funziona per criteri: di norma la DPIA serve quando ne ricorrono almeno due. Tra gli esempi ci sono il monitoraggio sistematico dei lavoratori e il trattamento regolare di dati che permettono di osservare gli spostamenti sul territorio (per esempio i dati di geolocalizzazione). Il GPS sui lavoratori ne integra di norma piu di uno.",
+        en: 'the UODO list works by criteria: as a rule an impact assessment is needed when at least two apply. Its examples include systematic monitoring of workers and regular processing of data that lets movements across the territory be observed (for example geolocation data). GPS on workers normally meets more than one.',
+        de: 'die UODO-Liste arbeitet mit Kriterien: in der Regel ist eine Folgenabschätzung nötig, wenn mindestens zwei zutreffen. Zu den Beispielen gehören die systematische Überwachung von Beschäftigten und die regelmäßige Verarbeitung von Daten, die die Beobachtung von Bewegungen im Gelände erlauben (etwa Geolokalisierungsdaten). GPS bei Beschäftigten erfüllt in der Regel mehr als ein Kriterium.',
+        fr: "la liste UODO fonctionne par critères : en règle générale, une analyse d'impact est requise lorsqu'au moins deux critères sont réunis. Parmi les exemples figurent la surveillance systématique des salaries et le traitement régulier de données permettant d'observer les déplacements sur le terrain (par exemple les données de géolocalisation). Le GPS sur les salaries remplit en général plus d'un critère.",
+        es: 'la lista UODO funciona por criterios: por regla general la evaluación de impacto es necesaria cuando concurren al menos dos. Entre los ejemplos figuran el monitoreo sistemático de los trabajadores y el tratamiento regular de datos que permiten observar los desplazamientos en el terreno (por ejemplo, los datos de geolocalización). El GPS sobre los trabajadores cumple normalmente más de un criterio.',
+        nl: 'de UODO-lijst werkt met criteria: in de regel is een effectbeoordeling nodig wanneer er minstens twee gelden. Tot de voorbeelden behoren systematische monitoring van werknemers en de regelmatige verwerking van gegevens waarmee verplaatsingen in het terrein kunnen worden waargenomen (bijvoorbeeld geolocatiegegevens). GPS bij werknemers voldoet doorgaans aan meer dan een criterium.',
       },
       fonte: FONTE_UODO_DPIA,
     },
@@ -253,12 +253,12 @@ export const polonia: SchedaPaese = {
     {
       passo: 6,
       descrizione: {
-        it: 'In caso di cambio sistema: se cambi sistema o software di monitoraggio, aggiorna e ri-consegna l’informativa, e verifica se va rinnovato l’accordo o l’autorizzazione nazionale per il controllo a distanza. Spesso cambiano fornitore (responsabile del trattamento), dati raccolti e modalità: quella consegnata prima non basta.',
-        en: 'If you switch systems: when you change your monitoring system or software, update and re-issue the privacy notice, and check whether the national agreement or authorisation for remote monitoring needs renewing. The provider (data processor), the data collected and the methods often change: the one provided earlier is not enough.',
-        de: 'Bei Systemwechsel: Wenn Sie Ihr Überwachungssystem oder Ihre Software wechseln, aktualisieren Sie die Datenschutzinformation und händigen Sie sie erneut aus und prüfen Sie, ob die nationale Vereinbarung oder Genehmigung zur Fernüberwachung erneuert werden muss. Anbieter (Auftragsverarbeiter), erhobene Daten und Modalitäten ändern sich oft: die zuvor ausgehändigte genügt nicht.',
-        fr: 'En cas de changement de système : si vous changez de système ou de logiciel de surveillance, mettez à jour et remettez l’information, et vérifiez si l’accord ou l’autorisation nationale de contrôle à distance doit être renouvelé. Le fournisseur (sous-traitant), les données collectées et les modalités changent souvent : celle remise auparavant ne suffit pas.',
-        es: 'En caso de cambio de sistema: si cambias de sistema o software de monitorización, actualiza y vuelve a entregar la información, y comprueba si debe renovarse el acuerdo o la autorización nacional para el control a distancia. A menudo cambian el proveedor (encargado del tratamiento), los datos recogidos y las modalidades: la entregada antes no basta.',
-        nl: 'Bij een systeemwissel: als je van monitoringsysteem of -software verandert, werk de privacyverklaring bij en verstrek deze opnieuw, en controleer of de nationale overeenkomst of toestemming voor controle op afstand moet worden vernieuwd. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
+        it: 'In caso di cambio di sistema: se cambi sistema o software di monitoraggio, aggiorna e riconsegna l’informativa, e verifica se devi di nuovo informare o consultare i rappresentanti dei lavoratori, dove la legge lo prevede. Spesso cambiano fornitore (responsabile del trattamento), dati raccolti e modalità: quella consegnata prima non basta.',
+        en: 'If you switch systems: when you change your monitoring system or software, update and re-issue the privacy notice, and check whether you must inform or consult the workers\' representatives again, where the law requires it. The provider (data processor), the data collected and the methods often change: the one provided earlier is not enough.',
+        de: 'Bei Systemwechsel: Wenn Sie Ihr Überwachungssystem oder Ihre Software wechseln, aktualisieren Sie die Datenschutzinformation und händigen Sie sie erneut aus, und prüfen Sie, ob Sie die Arbeitnehmervertretung erneut informieren oder beteiligen müssen, wo das Gesetz es vorsieht. Anbieter (Auftragsverarbeiter), erhobene Daten und Modalitäten ändern sich oft: die zuvor ausgehändigte genügt nicht.',
+        fr: 'En cas de changement de système : si vous changez de système ou de logiciel de surveillance, mettez à jour et remettez l’information, et vérifiez si vous devez de nouveau informer ou consulter les représentants du personnel, lorsque la loi le prévoit. Le fournisseur (sous-traitant), les données collectées et les modalités changent souvent : celle remise auparavant ne suffit pas.',
+        es: 'En caso de cambio de sistema: si cambias de sistema o software de monitorización, actualiza y vuelve a entregar la información, y comprueba si debes volver a informar o consultar a los representantes de los trabajadores, cuando la ley lo prevé. A menudo cambian el proveedor (encargado del tratamiento), los datos recogidos y las modalidades: la entregada antes no basta.',
+        nl: 'Bij een systeemwissel: als je van monitoringsysteem of -software verandert, werk de privacyverklaring bij en verstrek deze opnieuw, en controleer of je de werknemersvertegenwoordiging opnieuw moet informeren of raadplegen, waar de wet dat voorschrijft. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
       },
     },
   ],
@@ -268,7 +268,7 @@ export const polonia: SchedaPaese = {
       ente: 'UODO, reclami',
       portale: FONTE_UODO_RECLAMO.url,
       urlFonte: FONTE_UODO_RECLAMO.url,
-      verificatoIl: '2026-06-15',
+      verificatoIl: '2026-09-30',
     },
   ],
 
@@ -284,7 +284,7 @@ export const polonia: SchedaPaese = {
       nl: 'ongeveer 266.000 € (1.145.891 PLN)',
     },
     casoCitato: {
-      it: 'UODO contro Centrum Medyczne Ujastek (Cracovia, decisione DKN.5131.4.2024): videosorveglianza installata in due stanze di neonatologia senza che ne fossero informati pazienti ne dipendenti, più sicurezza inadeguata delle registrazioni. Multa complessiva 1.145.891 PLN (circa 266.000 euro). Non e un caso di GPS, ma riguarda il monitoraggio dei dipendenti non comunicato.',
+      it: 'UODO contro Centrum Medyczne Ujastek (Cracovia, decisione DKN.5131.4.2024): videosorveglianza installata in due stanze di neonatologia senza che ne fossero informati pazienti ne dipendenti, più sicurezza inadeguata delle registrazioni. Multa complessiva 1.145.891 PLN (circa 266.000 euro). Non è un caso di GPS, ma riguarda il monitoraggio dei dipendenti non comunicato.',
       en: 'UODO against Centrum Medyczne Ujastek (Krakow, decision DKN.5131.4.2024): video surveillance installed in two neonatology rooms without informing either patients or employees, plus inadequate security of the recordings. Total fine 1,145,891 PLN (about 266,000 euro). It is not a GPS case, but it concerns undisclosed monitoring of employees.',
       de: 'UODO gegen Centrum Medyczne Ujastek (Krakau, Entscheidung DKN.5131.4.2024): Videoüberwachung in zwei Räumen der Neonatologie installiert, ohne dass Patienten oder Beschäftigte darüber informiert wurden, dazu unzureichende Sicherheit der Aufzeichnungen. Gesamtgeldbuße 1.145.891 PLN (rund 266.000 Euro). Es ist kein GPS-Fall, betrifft aber die nicht mitgeteilte Überwachung der Beschäftigten.',
       fr: "UODO contre Centrum Medyczne Ujastek (Cracovie, décision DKN.5131.4.2024): vidéosurveillance installée dans deux salles de néonatologie sans que les patients ni les employés en soient informes, ainsi qu'une securite inadéquate des enregistrements. Amende totale de 1 145 891 PLN (environ 266 000 euros). Ce n'est pas un cas de GPS, mais il concerne la surveillance non communiquée des employés.",

@@ -31,8 +31,8 @@ const FONTE_ANSPDCP_TEHNOPLUS = {
 };
 const FONTE_ANSPDCP_DPIA = {
   titolo:
-    'ANSPDCP, Decizia 174/2018 (lista trattamenti che richiedono DPIA), sito ufficiale',
-  url: 'https://www.dataprotection.ro/index.jsp?page=decizia_174_2018&lang=ro',
+    'ANSPDCP, Decizia 174/2018 (lista trattamenti che richiedono DPIA), Monitorul Oficial 919/31.10.2018, art. 1 lett. d e g',
+  url: 'https://legislatie.just.ro/Public/DetaliiDocument/206331',
 };
 const FONTE_ANSPDCP_RECLAMI = {
   titolo: 'ANSPDCP, presentazione dei reclami',
@@ -73,7 +73,7 @@ export const romania: SchedaPaese = {
     ente: 'ANSPDCP (Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal)',
     portale: FONTE_ANSPDCP_RECLAMI.url,
     urlFonte: FONTE_ANSPDCP_RECLAMI.url,
-    verificatoIl: '2026-06-15',
+    verificatoIl: '2026-09-30',
     note: {
       it: "La Romania ha un'unica autorità nazionale, l'ANSPDCP; nessuna ripartizione regionale.",
       en: 'Romania has a single national authority, the ANSPDCP; there is no regional division.',
@@ -96,12 +96,12 @@ export const romania: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "il monitoraggio dei dipendenti tramite mezzi elettronici/geolocalizzazione e ammesso solo dopo un'informazione preventiva obbligatoria, completa ed esplicita dei lavoratori.",
-        en: 'monitoring of employees through electronic means/geolocation is permitted only after mandatory, complete and explicit prior information of the workers.',
-        de: 'die Überwachung der Beschäftigten durch elektronische Mittel/Geolokalisierung ist nur nach einer verpflichtenden, vollständigen und ausdrücklichen vorherigen Information der Arbeitnehmer zulässig.',
-        fr: "la surveillance des salariés par des moyens électroniques/géolocalisation n'est admise qu'après une information préalable obligatoire, complète et explicite des travailleurs.",
-        es: 'la monitorización de los empleados mediante medios electrónicos/geolocalización solo se admite tras una información previa obligatoria, completa y explícita de los trabajadores.',
-        nl: 'het monitoren van werknemers via elektronische middelen/geolokalisatie is alleen toegestaan na een verplichte, volledige en uitdrukkelijke voorafgaande informatie aan de werknemers.',
+        it: "quando si usano sistemi di monitoraggio tramite mezzi di comunicazione elettronica (l'ANSPDCP applica l'art. 5 anche al GPS, caso Tehnoplus) e i dati dei dipendenti sono trattati per l'interesse legittimo del datore, il trattamento è ammesso solo se il datore ha dato ai lavoratori un'informazione preventiva obbligatoria, completa ed esplicita.",
+        en: "where monitoring systems using electronic communication means are used (the ANSPDCP applies art. 5 to GPS as well, Tehnoplus case) and employee data are processed for the employer's legitimate interest, the processing is permitted only if the employer has given the workers mandatory, complete and explicit prior information.",
+        de: 'werden Überwachungssysteme mit elektronischen Kommunikationsmitteln eingesetzt (die ANSPDCP wendet Art. 5 auch auf GPS an, Fall Tehnoplus) und werden Beschäftigtendaten zur Wahrung des berechtigten Interesses des Arbeitgebers verarbeitet, ist die Verarbeitung nur zulässig, wenn der Arbeitgeber die Arbeitnehmer zuvor verpflichtend, vollständig und ausdrücklich informiert hat.',
+        fr: "lorsque des systèmes de surveillance par moyens de communication électronique sont utilisés (l'ANSPDCP applique l'art. 5 aussi au GPS, affaire Tehnoplus) et que les données des salariés sont traitées pour l'intérêt légitime de l'employeur, le traitement n'est admis que si l'employeur a donné aux travailleurs une information préalable obligatoire, complète et explicite.",
+        es: 'cuando se usan sistemas de monitorización por medios de comunicación electrónica (la ANSPDCP aplica el art. 5 también al GPS, caso Tehnoplus) y los datos de los empleados se tratan por el interés legítimo del empleador, el tratamiento solo se admite si el empleador ha dado a los trabajadores una información previa obligatoria, completa y explícita.',
+        nl: 'wanneer monitoringsystemen via elektronische communicatiemiddelen worden gebruikt (de ANSPDCP past art. 5 ook toe op GPS, zaak Tehnoplus) en werknemersgegevens worden verwerkt voor het gerechtvaardigd belang van de werkgever, is de verwerking alleen toegestaan als de werkgever de werknemers vooraf verplicht, volledig en uitdrukkelijk heeft geïnformeerd.',
       },
       fonte: FONTE_LEGGE_190_ART5,
     },
@@ -266,12 +266,12 @@ export const romania: SchedaPaese = {
     {
       passo: 6,
       descrizione: {
-        it: 'In caso di cambio sistema: se cambi sistema o software di monitoraggio, aggiorna e ri-consegna l’informativa, e verifica se va rinnovato l’accordo o l’autorizzazione nazionale per il controllo a distanza. Spesso cambiano fornitore (responsabile del trattamento), dati raccolti e modalità: quella consegnata prima non basta.',
-        en: 'If you switch systems: when you change your monitoring system or software, update and re-issue the privacy notice, and check whether the national agreement or authorisation for remote monitoring needs renewing. The provider (data processor), the data collected and the methods often change: the one provided earlier is not enough.',
-        de: 'Bei Systemwechsel: Wenn Sie Ihr Überwachungssystem oder Ihre Software wechseln, aktualisieren Sie die Datenschutzinformation und händigen Sie sie erneut aus und prüfen Sie, ob die nationale Vereinbarung oder Genehmigung zur Fernüberwachung erneuert werden muss. Anbieter (Auftragsverarbeiter), erhobene Daten und Modalitäten ändern sich oft: die zuvor ausgehändigte genügt nicht.',
-        fr: 'En cas de changement de système : si vous changez de système ou de logiciel de surveillance, mettez à jour et remettez l’information, et vérifiez si l’accord ou l’autorisation nationale de contrôle à distance doit être renouvelé. Le fournisseur (sous-traitant), les données collectées et les modalités changent souvent : celle remise auparavant ne suffit pas.',
-        es: 'En caso de cambio de sistema: si cambias de sistema o software de monitorización, actualiza y vuelve a entregar la información, y comprueba si debe renovarse el acuerdo o la autorización nacional para el control a distancia. A menudo cambian el proveedor (encargado del tratamiento), los datos recogidos y las modalidades: la entregada antes no basta.',
-        nl: 'Bij een systeemwissel: als je van monitoringsysteem of -software verandert, werk de privacyverklaring bij en verstrek deze opnieuw, en controleer of de nationale overeenkomst of toestemming voor controle op afstand moet worden vernieuwd. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
+        it: 'In caso di cambio di sistema: se cambi sistema o software di monitoraggio, aggiorna e riconsegna l’informativa, e verifica se devi di nuovo informare o consultare i rappresentanti dei lavoratori, dove la legge lo prevede. Spesso cambiano fornitore (responsabile del trattamento), dati raccolti e modalità: quella consegnata prima non basta.',
+        en: 'If you switch systems: when you change your monitoring system or software, update and re-issue the privacy notice, and check whether you must inform or consult the workers\' representatives again, where the law requires it. The provider (data processor), the data collected and the methods often change: the one provided earlier is not enough.',
+        de: 'Bei Systemwechsel: Wenn Sie Ihr Überwachungssystem oder Ihre Software wechseln, aktualisieren Sie die Datenschutzinformation und händigen Sie sie erneut aus, und prüfen Sie, ob Sie die Arbeitnehmervertretung erneut informieren oder beteiligen müssen, wo das Gesetz es vorsieht. Anbieter (Auftragsverarbeiter), erhobene Daten und Modalitäten ändern sich oft: die zuvor ausgehändigte genügt nicht.',
+        fr: 'En cas de changement de système : si vous changez de système ou de logiciel de surveillance, mettez à jour et remettez l’information, et vérifiez si vous devez de nouveau informer ou consulter les représentants du personnel, lorsque la loi le prévoit. Le fournisseur (sous-traitant), les données collectées et les modalités changent souvent : celle remise auparavant ne suffit pas.',
+        es: 'En caso de cambio de sistema: si cambias de sistema o software de monitorización, actualiza y vuelve a entregar la información, y comprueba si debes volver a informar o consultar a los representantes de los trabajadores, cuando la ley lo prevé. A menudo cambian el proveedor (encargado del tratamiento), los datos recogidos y las modalidades: la entregada antes no basta.',
+        nl: 'Bij een systeemwissel: als je van monitoringsysteem of -software verandert, werk de privacyverklaring bij en verstrek deze opnieuw, en controleer of je de werknemersvertegenwoordiging opnieuw moet informeren of raadplegen, waar de wet dat voorschrijft. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
       },
     },
   ],
@@ -281,7 +281,7 @@ export const romania: SchedaPaese = {
       ente: 'ANSPDCP, reclami',
       portale: FONTE_ANSPDCP_RECLAMI.url,
       urlFonte: FONTE_ANSPDCP_RECLAMI.url,
-      verificatoIl: '2026-06-15',
+      verificatoIl: '2026-09-30',
     },
   ],
 
@@ -317,5 +317,5 @@ export const romania: SchedaPaese = {
     FONTE_GDPR,
   ],
 
-  aggiornatoIl: '2026-06-15',
+  aggiornatoIl: '2026-09-30',
 };

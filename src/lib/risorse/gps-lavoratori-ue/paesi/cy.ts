@@ -32,14 +32,18 @@ const FONTE_GDPR_13 = {
   titolo: 'GDPR, art. 13 (informazione), testo ufficiale EUR-Lex',
   url: 'https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679',
 };
+const FONTE_GDPR_6 = {
+  titolo: 'GDPR, art. 6(1)(f) e considerando 43 (base giuridica e squilibrio fra le parti), testo ufficiale EUR-Lex',
+  url: 'https://eur-lex.europa.eu/eli/reg/2016/679/oj',
+};
 const FONTE_GARANTE_CY = {
   titolo: 'Garante cipriota, pagina ufficiale',
   url: 'https://www.gov.cy/dataprotection/',
 };
 const FONTE_LOUIS = {
   titolo:
-    'EDPB, sanzione del Garante cipriota al Gruppo Louis (strumento Bradford Factor)',
-  url: 'https://www.edpb.europa.eu/news/national-news/2020/cypriot-supervisory-authority-banned-processing-automated-tool-used-scoring_en',
+    'Commissario cipriota, decisione del 25.10.2019 sul Gruppo Louis (strumento Bradford Factor)',
+  url: 'https://www.gov.cy/dataprotection/documents/chrimatiki-poini-stis-etaireies-louis-anaforika-me-vathmologisi-adeion-astheneias-ton-ergodotoymenon-chrisimopoiontas-ton-syntelesti-bradford-12-10-2019/',
 };
 const FONTE_GDPR = {
   titolo: 'Regolamento UE 2016/679 (GDPR)',
@@ -158,7 +162,7 @@ export const cipro: SchedaPaese = {
         es: 'en la relación laboral el consentimiento no se presta libremente; la base habitual es el interés legítimo, con una prueba de ponderación documentada que no prevalezca sobre los derechos de los trabajadores.',
         nl: 'in de arbeidsverhouding wordt toestemming niet vrijelijk gegeven; de gebruikelijke grondslag is het gerechtvaardigd belang, met een gedocumenteerde belangenafweging die niet zwaarder weegt dan de rechten van de werknemers.',
       },
-      fonte: FONTE_GDPR_13,
+      fonte: FONTE_GDPR_6,
     },
     {
       voce: {
@@ -261,12 +265,12 @@ export const cipro: SchedaPaese = {
     {
       passo: 6,
       descrizione: {
-        it: 'In caso di cambio sistema: se cambi sistema o software di monitoraggio, aggiorna e ri-consegna l’informativa, e verifica se va rinnovato l’accordo o l’autorizzazione nazionale per il controllo a distanza. Spesso cambiano fornitore (responsabile del trattamento), dati raccolti e modalità: quella consegnata prima non basta.',
-        en: 'If you switch systems: when you change your monitoring system or software, update and re-issue the privacy notice, and check whether the national agreement or authorisation for remote monitoring needs renewing. The provider (data processor), the data collected and the methods often change: the one provided earlier is not enough.',
-        de: 'Bei Systemwechsel: Wenn Sie Ihr Überwachungssystem oder Ihre Software wechseln, aktualisieren Sie die Datenschutzinformation und händigen Sie sie erneut aus und prüfen Sie, ob die nationale Vereinbarung oder Genehmigung zur Fernüberwachung erneuert werden muss. Anbieter (Auftragsverarbeiter), erhobene Daten und Modalitäten ändern sich oft: die zuvor ausgehändigte genügt nicht.',
-        fr: 'En cas de changement de système : si vous changez de système ou de logiciel de surveillance, mettez à jour et remettez l’information, et vérifiez si l’accord ou l’autorisation nationale de contrôle à distance doit être renouvelé. Le fournisseur (sous-traitant), les données collectées et les modalités changent souvent : celle remise auparavant ne suffit pas.',
-        es: 'En caso de cambio de sistema: si cambias de sistema o software de monitorización, actualiza y vuelve a entregar la información, y comprueba si debe renovarse el acuerdo o la autorización nacional para el control a distancia. A menudo cambian el proveedor (encargado del tratamiento), los datos recogidos y las modalidades: la entregada antes no basta.',
-        nl: 'Bij een systeemwissel: als je van monitoringsysteem of -software verandert, werk de privacyverklaring bij en verstrek deze opnieuw, en controleer of de nationale overeenkomst of toestemming voor controle op afstand moet worden vernieuwd. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
+        it: 'In caso di cambio di sistema: se cambi sistema o software di monitoraggio, aggiorna e riconsegna l’informativa, e verifica se devi di nuovo informare o consultare i rappresentanti dei lavoratori, dove la legge lo prevede. Spesso cambiano fornitore (responsabile del trattamento), dati raccolti e modalità: quella consegnata prima non basta.',
+        en: 'If you switch systems: when you change your monitoring system or software, update and re-issue the privacy notice, and check whether you must inform or consult the workers\' representatives again, where the law requires it. The provider (data processor), the data collected and the methods often change: the one provided earlier is not enough.',
+        de: 'Bei Systemwechsel: Wenn Sie Ihr Überwachungssystem oder Ihre Software wechseln, aktualisieren Sie die Datenschutzinformation und händigen Sie sie erneut aus, und prüfen Sie, ob Sie die Arbeitnehmervertretung erneut informieren oder beteiligen müssen, wo das Gesetz es vorsieht. Anbieter (Auftragsverarbeiter), erhobene Daten und Modalitäten ändern sich oft: die zuvor ausgehändigte genügt nicht.',
+        fr: 'En cas de changement de système : si vous changez de système ou de logiciel de surveillance, mettez à jour et remettez l’information, et vérifiez si vous devez de nouveau informer ou consulter les représentants du personnel, lorsque la loi le prévoit. Le fournisseur (sous-traitant), les données collectées et les modalités changent souvent : celle remise auparavant ne suffit pas.',
+        es: 'En caso de cambio de sistema: si cambias de sistema o software de monitorización, actualiza y vuelve a entregar la información, y comprueba si debes volver a informar o consultar a los representantes de los trabajadores, cuando la ley lo prevé. A menudo cambian el proveedor (encargado del tratamiento), los datos recogidos y las modalidades: la entregada antes no basta.',
+        nl: 'Bij een systeemwissel: als je van monitoringsysteem of -software verandert, werk de privacyverklaring bij en verstrek deze opnieuw, en controleer of je de werknemersvertegenwoordiging opnieuw moet informeren of raadplegen, waar de wet dat voorschrijft. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
       },
     },
   ],
@@ -292,18 +296,18 @@ export const cipro: SchedaPaese = {
       nl: '82.000 EUR',
     },
     casoCitato: {
-      it: "Garante cipriota contro il Gruppo Louis (decisione del 25 ottobre 2019, resa nota nel gennaio 2020): uso di uno strumento automatico (Bradford Factor) per profilare le assenze per malattia di 818 dipendenti, senza base giuridica valida e su dati sanitari (artt. 6 e 9 GDPR); il bilanciamento dell'interesse legittimo e fallito. Multa complessiva 82.000 euro (70.000 + 10.000 + 2.000 a tre società del gruppo). Non e un caso di GPS, ma e la sanzione faro cipriota sul monitoraggio dei dipendenti.",
-      en: "Cypriot Commissioner against the Louis Group (decision of 25 October 2019, made public in January 2020): use of an automated tool (Bradford Factor) to profile the sick-leave absences of 818 employees, without a valid legal basis and over health data (arts. 6 and 9 GDPR); the legitimate-interest balancing failed. Total fine 82,000 euros (70,000 + 10,000 + 2,000 against three companies of the group). It is not a GPS case, but it is the landmark Cypriot penalty on employee monitoring.",
-      de: "Zypriotischer Commissioner gegen die Louis-Gruppe (Entscheidung vom 25. Oktober 2019, im Januar 2020 bekannt gemacht): Einsatz eines automatisierten Instruments (Bradford Factor) zur Profilbildung der krankheitsbedingten Fehlzeiten von 818 Beschäftigten, ohne gültige Rechtsgrundlage und über Gesundheitsdaten (Art. 6 und 9 DSGVO); die Abwägung des berechtigten Interesses ist gescheitert. Gesamtbußgeld 82.000 Euro (70.000 + 10.000 + 2.000 gegen drei Gesellschaften der Gruppe). Es ist kein GPS-Fall, aber die zypriotische Leitsanktion zur Überwachung von Beschäftigten.",
-      fr: "Commissioner chypriote contre le Groupe Louis (décision du 25 octobre 2019, rendue publique en janvier 2020): utilisation d'un outil automatise (Bradford Factor) pour profiler les absences pour maladie de 818 salaries, sans base juridique valable et sur des données de santé (art. 6 et 9 RGPD); la mise en balance de l'intérêt légitime a échoue. Amende totale de 82 000 euros (70 000 + 10 000 + 2 000 contre trois sociétés du groupe). Ce n'est pas un cas de GPS, mais c'est la sanction phare chypriote sur la surveillance des salaries.",
-      es: "Commissioner chipriota contra el Grupo Louis (decisión del 25 de octubre de 2019, dada a conocer en enero de 2020): uso de una herramienta automatizada (Bradford Factor) para perfilar las ausencias por enfermedad de 818 empleados, sin una base jurídica valida y sobre datos de salud (arts. 6 y 9 RGPD); la ponderación del interés legítimo fracaso. Multa total de 82.000 euros (70.000 + 10.000 + 2.000 a tres sociedades del grupo). No es un caso de GPS, pero es la sanción de referencia chipriota sobre la monitorización de los empleados.",
-      nl: "Cypriotische Commissioner tegen de Louis-groep (besluit van 25 oktober 2019, in januari 2020 bekendgemaakt): gebruik van een geautomatiseerd instrument (Bradford Factor) om de ziekteverzuim-afwezigheden van 818 werknemers te profileren, zonder geldige rechtsgrond en over gezondheidsgegevens (art. 6 en 9 AVG); de afweging van het gerechtvaardigd belang is mislukt. Totale boete 82.000 euro (70.000 + 10.000 + 2.000 tegen drie vennootschappen van de groep). Het is geen GPS-zaak, maar het is de toonaangevende Cypriotische sanctie inzake de monitoring van werknemers.",
+      it: "Garante cipriota contro il Gruppo Louis (decisione del 25 ottobre 2019): uso di uno strumento automatico (Bradford Factor) per profilare le assenze per malattia di 818 dipendenti, senza base giuridica valida e su dati sanitari (artt. 6 e 9 GDPR); il bilanciamento dell'interesse legittimo è fallito. Multa complessiva 82.000 euro (70.000 + 10.000 + 2.000 a tre società del gruppo). Non è un caso di GPS, ma è la sanzione faro cipriota sul monitoraggio dei dipendenti.",
+      en: "Cypriot Commissioner against the Louis Group (decision of 25 October 2019): use of an automated tool (Bradford Factor) to profile the sick-leave absences of 818 employees, without a valid legal basis and over health data (arts. 6 and 9 GDPR); the legitimate-interest balancing failed. Total fine 82,000 euros (70,000 + 10,000 + 2,000 against three companies of the group). It is not a GPS case, but it is the landmark Cypriot penalty on employee monitoring.",
+      de: "Zypriotischer Commissioner gegen die Louis-Gruppe (Entscheidung vom 25. Oktober 2019): Einsatz eines automatisierten Instruments (Bradford Factor) zur Profilbildung der krankheitsbedingten Fehlzeiten von 818 Beschäftigten, ohne gültige Rechtsgrundlage und über Gesundheitsdaten (Art. 6 und 9 DSGVO); die Abwägung des berechtigten Interesses ist gescheitert. Gesamtbußgeld 82.000 Euro (70.000 + 10.000 + 2.000 gegen drei Gesellschaften der Gruppe). Es ist kein GPS-Fall, aber die zypriotische Leitsanktion zur Überwachung von Beschäftigten.",
+      fr: "Commissioner chypriote contre le Groupe Louis (décision du 25 octobre 2019): utilisation d'un outil automatise (Bradford Factor) pour profiler les absences pour maladie de 818 salaries, sans base juridique valable et sur des données de santé (art. 6 et 9 RGPD); la mise en balance de l'intérêt légitime a échoue. Amende totale de 82 000 euros (70 000 + 10 000 + 2 000 contre trois sociétés du groupe). Ce n'est pas un cas de GPS, mais c'est la sanction phare chypriote sur la surveillance des salaries.",
+      es: "Commissioner chipriota contra el Grupo Louis (decisión del 25 de octubre de 2019): uso de una herramienta automatizada (Bradford Factor) para perfilar las ausencias por enfermedad de 818 empleados, sin una base jurídica valida y sobre datos de salud (arts. 6 y 9 RGPD); la ponderación del interés legítimo fracaso. Multa total de 82.000 euros (70.000 + 10.000 + 2.000 a tres sociedades del grupo). No es un caso de GPS, pero es la sanción de referencia chipriota sobre la monitorización de los empleados.",
+      nl: "Cypriotische Commissioner tegen de Louis-groep (besluit van 25 oktober 2019): gebruik van een geautomatiseerd instrument (Bradford Factor) om de ziekteverzuim-afwezigheden van 818 werknemers te profileren, zonder geldige rechtsgrond en over gezondheidsgegevens (art. 6 en 9 AVG); de afweging van het gerechtvaardigd belang is mislukt. Totale boete 82.000 euro (70.000 + 10.000 + 2.000 tegen drie vennootschappen van de groep). Het is geen GPS-zaak, maar het is de toonaangevende Cypriotische sanctie inzake de monitoring van werknemers.",
     },
     urlFonte: FONTE_LOUIS.url,
     tipoImporto: 'caso-affine',
   },
 
-  fonti: [FONTE_CY_LEGGE_125, FONTE_CY_ARCHIVIO, FONTE_CY_DPIA, FONTE_GDPR_13, FONTE_GARANTE_CY, FONTE_LOUIS, FONTE_GDPR],
+  fonti: [FONTE_CY_LEGGE_125, FONTE_CY_ARCHIVIO, FONTE_CY_DPIA, FONTE_GDPR_13, FONTE_GDPR_6, FONTE_GARANTE_CY, FONTE_LOUIS, FONTE_GDPR],
 
   aggiornatoIl: '2026-09-30',
 };

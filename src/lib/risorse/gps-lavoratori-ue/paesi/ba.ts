@@ -7,8 +7,8 @@
  * ottobre 2025. Non e' più' il vecchio regime del 2006.
  *
  * Contenuti basati su fonti verificate e citate nella sezione "Fonti": nuova legge
- * 12/25, lista AZLP dei trattamenti che richiedono una DPIA (novembre 2025, include
- * il monitoraggio dei dipendenti e il GPS), pagina ufficiale dell'AZLP, analisi DLA
+ * 12/25, decisione AZLP del 10.11.2025 sui trattamenti che richiedono una DPIA (include
+ * il monitoraggio dei dipendenti con sistemi di controllo di lavoro e spostamenti), pagina ufficiale dell'AZLP, analisi DLA
  * Piper sul quadro bosniaco e GDPR come riferimento comparativo. L'autorità' garante
  * e' unica e nazionale (AZLP); non c'e' ripartizione per entità'. Nessun numero, URL
  * o autorita' e' inventato qui.
@@ -24,8 +24,8 @@ const FONTE_LEGGE_12_25 = {
 };
 const FONTE_AZLP_DPIA: Fonte = {
   titolo:
-    'AZLP, lista dei trattamenti che richiedono una DPIA (novembre 2025, include il monitoraggio dei dipendenti e il GPS)',
-  url: 'https://bdkadvokati.com/bosnian-data-protection-agency-issues-a-list-of-processing-operations-requiring-a-dpia/', nonUfficiale: 'studio-legale',
+    'AZLP, decisione del 10.11.2025 sulla lista dei trattamenti che richiedono una DPIA (punto 8: dati dei dipendenti, controllo di lavoro e spostamenti)',
+  url: 'https://azlp.ba/Provodenje_ZZLP/default.aspx?id=4896&langTag=bs-BA',
 };
 const FONTE_AZLP = {
   titolo: 'AZLP (Garante bosniaco), pagina ufficiale',
@@ -156,41 +156,41 @@ export const bosnia: SchedaPaese = {
     },
     {
       voce: {
-        it: 'Proporzionalità e minimizzazione del trattamento',
-        en: 'Proportionality and data minimisation of the processing',
-        de: 'Verhältnismäßigkeit und Datenminimierung der Verarbeitung',
-        fr: 'Proportionnalité et minimisation des données du traitement',
-        es: 'Proporcionalidad y minimización de datos del tratamiento',
-        nl: 'Evenredigheid en minimale gegevensverwerking',
+        it: "Finalità determinata, minimizzazione e conservazione limitata (art. 7)",
+        en: "Specified purpose, data minimisation and limited retention (art. 7)",
+        de: "Festgelegter Zweck, Datenminimierung und begrenzte Speicherung (Art. 7)",
+        fr: "Finalité déterminée, minimisation des données et conservation limitée (art. 7)",
+        es: "Finalidad determinada, minimización de datos y conservación limitada (art. 7)",
+        nl: "Bepaald doel, minimale gegevensverwerking en beperkte bewaring (art. 7)",
       },
       risposta: 'si',
       dettaglio: {
-        it: "Il trattamento deve rispettare la minimizzazione e la proporzionalità, in linea con l'allineamento al GDPR.",
-        en: 'The processing must respect minimisation and proportionality, in line with the alignment to the GDPR.',
-        de: 'Die Verarbeitung muss die Datenminimierung und die Verhältnismäßigkeit beachten, im Einklang mit der Angleichung an die DSGVO.',
-        fr: "Le traitement doit respecter la minimisation et la proportionnalité, conformément a l'alignement sur le RGPD.",
-        es: 'El tratamiento debe respetar la minimización y la proporcionalidad, en línea con la alineación al RGPD.',
-        nl: 'De verwerking moet de minimalisatie en de evenredigheid eerbiedigen, in lijn met de afstemming op de AVG.',
+        it: "L'art. 7 esige dati raccolti per finalità determinate, esplicite e legittime, limitati a quanto necessario e conservati non oltre il tempo necessario; il titolare deve poter dimostrare la conformità.",
+        en: "Art. 7 requires data collected for specified, explicit and legitimate purposes, limited to what is necessary and kept no longer than necessary; the controller must be able to demonstrate compliance.",
+        de: "Art. 7 verlangt Daten, die für festgelegte, eindeutige und legitime Zwecke erhoben, auf das Notwendige beschränkt und nicht länger als nötig gespeichert werden; der Verantwortliche muss die Einhaltung nachweisen können.",
+        fr: "L'art. 7 exige des données collectées pour des finalités déterminées, explicites et légitimes, limitées à ce qui est nécessaire et conservées pas plus longtemps que nécessaire ; le responsable doit pouvoir démontrer la conformité.",
+        es: "El art. 7 exige datos recogidos con fines determinados, explícitos y legítimos, limitados a lo necesario y conservados no más tiempo del necesario; el responsable debe poder demostrar el cumplimiento.",
+        nl: "Art. 7 eist gegevens die voor bepaalde, uitdrukkelijke en legitieme doeleinden zijn verzameld, beperkt zijn tot wat nodig is en niet langer worden bewaard dan nodig; de verwerkingsverantwoordelijke moet de naleving kunnen aantonen.",
       },
       fonte: FONTE_LEGGE_12_25,
     },
     {
       voce: {
-        it: "Valutazione d'impatto (DPIA) per il monitoraggio dei dipendenti, incluso il GPS (lista AZLP, novembre 2025)",
-        en: 'Impact assessment (DPIA) for monitoring employees, including GPS (AZLP list, November 2025)',
-        de: 'Datenschutz-Folgenabschätzung (DSFA) für die Überwachung von Beschäftigten, einschließlich GPS (AZLP-Liste, November 2025)',
-        fr: "Analyse d'impact (AIPD) pour la surveillance des employés, y compris le GPS (liste AZLP, novembre 2025)",
-        es: 'Evaluación de impacto (EIPD) para la monitorización de los empleados, incluido el GPS (lista AZLP, noviembre de 2025)',
-        nl: 'Effectbeoordeling (DPIA) voor het monitoren van werknemers, inclusief GPS (AZLP-lijst, november 2025)',
+        it: "Valutazione d'impatto (DPIA) per il monitoraggio dei dipendenti con app o sistemi di tracciamento (decisione AZLP del 10.11.2025)",
+        en: "Impact assessment (DPIA) for monitoring employees with apps or tracking systems (AZLP decision of 10.11.2025)",
+        de: "Datenschutz-Folgenabschätzung (DSFA) für die Überwachung von Beschäftigten mit Apps oder Tracking-Systemen (AZLP-Beschluss vom 10.11.2025)",
+        fr: "Analyse d'impact (AIPD) pour la surveillance des employés par des applications ou systèmes de suivi (décision AZLP du 10.11.2025)",
+        es: "Evaluación de impacto (EIPD) para la monitorización de los empleados con aplicaciones o sistemas de seguimiento (decisión de la AZLP del 10.11.2025)",
+        nl: "Effectbeoordeling (DPIA) voor het monitoren van werknemers met apps of trackingsystemen (AZLP-besluit van 10.11.2025)",
       },
       risposta: 'si',
       dettaglio: {
-        it: "La lista AZLP include espressamente il trattamento dei dati dei dipendenti tramite app o sistemi di monitoraggio, inclusi i sistemi GPS sui veicoli, tra i casi che richiedono una valutazione d'impatto.",
-        en: 'The AZLP list expressly includes the processing of employee data through apps or monitoring systems, including GPS systems on vehicles, among the cases that require an impact assessment.',
-        de: 'Die AZLP-Liste führt die Verarbeitung von Beschäftigtendaten durch Apps oder Überwachungssysteme, einschließlich GPS-Systemen in Fahrzeugen, ausdrücklich unter den Fällen auf, die eine Folgenabschätzung erfordern.',
-        fr: "La liste de l'AZLP inclut expressément le traitement des données des employés via des applications ou des systèmes de surveillance, y compris les systèmes GPS sur les véhicules, parmi les cas qui exigent une analyse d'impact.",
-        es: 'La lista de la AZLP incluye expresamente el tratamiento de los datos de los empleados mediante aplicaciones o sistemas de monitorización, incluidos los sistemas GPS en los vehículos, entre los casos que requieren una evaluación de impacto.',
-        nl: 'De AZLP-lijst noemt uitdrukkelijk de verwerking van werknemersgegevens via apps of monitoringsystemen, inclusief GPS-systemen in voertuigen, onder de gevallen die een effectbeoordeling vereisen.',
+        it: "La decisione AZLP del 10 novembre 2025 (n. 03-02-2-1676-1/25, punto 8) rende obbligatoria la valutazione d'impatto quando il datore di lavoro tratta i dati dei dipendenti con applicazioni o sistemi per seguirne il lavoro, gli spostamenti o le comunicazioni. Il GPS non è nominato, ma il tracciamento degli spostamenti in pratica vi rientra. La valutazione va fatta prima del trattamento; la consultazione preventiva dell'AZLP serve solo se resta un rischio elevato.",
+        en: "The AZLP decision of 10 November 2025 (no. 03-02-2-1676-1/25, point 8) makes an impact assessment mandatory where an employer processes employee data with applications or systems to follow their work, movements or communications. GPS is not named, but tracking movements in practice falls within it. The assessment must be done before the processing; prior consultation of the AZLP is needed only if a high risk remains.",
+        de: "Der AZLP-Beschluss vom 10. November 2025 (Nr. 03-02-2-1676-1/25, Punkt 8) macht die Folgenabschätzung verpflichtend, wenn ein Arbeitgeber Beschäftigtendaten mit Anwendungen oder Systemen verarbeitet, um Arbeit, Bewegungen oder Kommunikation zu verfolgen. GPS wird nicht genannt, doch die Ortung von Bewegungen fällt in der Praxis darunter. Die Folgenabschätzung ist vor der Verarbeitung durchzuführen; eine vorherige Konsultation der AZLP ist nur nötig, wenn ein hohes Risiko bleibt.",
+        fr: "La décision de l'AZLP du 10 novembre 2025 (n° 03-02-2-1676-1/25, point 8) rend l'analyse d'impact obligatoire lorsque l'employeur traite les données des employés au moyen d'applications ou de systèmes servant à suivre leur travail, leurs déplacements ou leurs communications. Le GPS n'est pas nommé, mais le suivi des déplacements y entre en pratique. L'analyse doit être faite avant le traitement ; la consultation préalable de l'AZLP n'est nécessaire que si un risque élevé subsiste.",
+        es: "La decisión de la AZLP del 10 de noviembre de 2025 (n.º 03-02-2-1676-1/25, punto 8) hace obligatoria la evaluación de impacto cuando el empleador trata los datos de los empleados con aplicaciones o sistemas para seguir su trabajo, sus desplazamientos o sus comunicaciones. El GPS no se nombra, pero el seguimiento de los desplazamientos entra en la práctica. La evaluación debe hacerse antes del tratamiento; la consulta previa a la AZLP solo hace falta si persiste un riesgo elevado.",
+        nl: "Het AZLP-besluit van 10 november 2025 (nr. 03-02-2-1676-1/25, punt 8) maakt een effectbeoordeling verplicht wanneer een werkgever werknemersgegevens verwerkt met toepassingen of systemen om hun werk, verplaatsingen of communicatie te volgen. GPS wordt niet genoemd, maar het volgen van verplaatsingen valt in de praktijk eronder. De beoordeling moet vóór de verwerking plaatsvinden; voorafgaande raadpleging van de AZLP is alleen nodig als een hoog risico overblijft.",
       },
       fonte: FONTE_AZLP_DPIA,
     },
@@ -255,12 +255,12 @@ export const bosnia: SchedaPaese = {
     {
       passo: 6,
       descrizione: {
-        it: 'In caso di cambio sistema: se cambi sistema o software di monitoraggio, aggiorna e ri-consegna l’informativa, e verifica se va rinnovato l’accordo o l’autorizzazione nazionale per il controllo a distanza. Spesso cambiano fornitore (responsabile del trattamento), dati raccolti e modalità: quella consegnata prima non basta.',
-        en: 'If you switch systems: when you change your monitoring system or software, update and re-issue the privacy notice, and check whether the national agreement or authorisation for remote monitoring needs renewing. The provider (data processor), the data collected and the methods often change: the one provided earlier is not enough.',
-        de: 'Bei Systemwechsel: Wenn Sie Ihr Überwachungssystem oder Ihre Software wechseln, aktualisieren Sie die Datenschutzinformation und händigen Sie sie erneut aus und prüfen Sie, ob die nationale Vereinbarung oder Genehmigung zur Fernüberwachung erneuert werden muss. Anbieter (Auftragsverarbeiter), erhobene Daten und Modalitäten ändern sich oft: die zuvor ausgehändigte genügt nicht.',
-        fr: 'En cas de changement de système : si vous changez de système ou de logiciel de surveillance, mettez à jour et remettez l’information, et vérifiez si l’accord ou l’autorisation nationale de contrôle à distance doit être renouvelé. Le fournisseur (sous-traitant), les données collectées et les modalités changent souvent : celle remise auparavant ne suffit pas.',
-        es: 'En caso de cambio de sistema: si cambias de sistema o software de monitorización, actualiza y vuelve a entregar la información, y comprueba si debe renovarse el acuerdo o la autorización nacional para el control a distancia. A menudo cambian el proveedor (encargado del tratamiento), los datos recogidos y las modalidades: la entregada antes no basta.',
-        nl: 'Bij een systeemwissel: als je van monitoringsysteem of -software verandert, werk de privacyverklaring bij en verstrek deze opnieuw, en controleer of de nationale overeenkomst of toestemming voor controle op afstand moet worden vernieuwd. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
+        it: 'In caso di cambio di sistema: se cambi sistema o software di monitoraggio, aggiorna e riconsegna l’informativa, e verifica se devi di nuovo informare o consultare i rappresentanti dei lavoratori, dove la legge lo prevede. Spesso cambiano fornitore (responsabile del trattamento), dati raccolti e modalità: quella consegnata prima non basta.',
+        en: 'If you switch systems: when you change your monitoring system or software, update and re-issue the privacy notice, and check whether you must inform or consult the workers\' representatives again, where the law requires it. The provider (data processor), the data collected and the methods often change: the one provided earlier is not enough.',
+        de: 'Bei Systemwechsel: Wenn Sie Ihr Überwachungssystem oder Ihre Software wechseln, aktualisieren Sie die Datenschutzinformation und händigen Sie sie erneut aus, und prüfen Sie, ob Sie die Arbeitnehmervertretung erneut informieren oder beteiligen müssen, wo das Gesetz es vorsieht. Anbieter (Auftragsverarbeiter), erhobene Daten und Modalitäten ändern sich oft: die zuvor ausgehändigte genügt nicht.',
+        fr: 'En cas de changement de système : si vous changez de système ou de logiciel de surveillance, mettez à jour et remettez l’information, et vérifiez si vous devez de nouveau informer ou consulter les représentants du personnel, lorsque la loi le prévoit. Le fournisseur (sous-traitant), les données collectées et les modalités changent souvent : celle remise auparavant ne suffit pas.',
+        es: 'En caso de cambio de sistema: si cambias de sistema o software de monitorización, actualiza y vuelve a entregar la información, y comprueba si debes volver a informar o consultar a los representantes de los trabajadores, cuando la ley lo prevé. A menudo cambian el proveedor (encargado del tratamiento), los datos recogidos y las modalidades: la entregada antes no basta.',
+        nl: 'Bij een systeemwissel: als je van monitoringsysteem of -software verandert, werk de privacyverklaring bij en verstrek deze opnieuw, en controleer of je de werknemersvertegenwoordiging opnieuw moet informeren of raadplegen, waar de wet dat voorschrijft. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
       },
     },
   ],
@@ -286,15 +286,14 @@ export const bosnia: SchedaPaese = {
       nl: 'tot 40 miljoen BAM of 4% van de omzet (nieuwe wet in AVG-stijl)',
     },
     casoCitato: {
-      it: "Non risulta una multa dell'AZLP specifica e pubblicata per il GPS sui dipendenti. Con la nuova legge, in vigore da marzo 2025 e applicabile dal 4 ottobre 2025, le sanzioni sono in stile GDPR: fino a 40 milioni di BAM o il 4% del fatturato annuo mondiale. L'AZLP ha classificato il monitoraggio dei dipendenti tramite GPS come trattamento ad alto rischio che richiede una valutazione d'impatto.",
-      en: "There is no specific, published AZLP fine for GPS tracking of employees. Under the new 2025 law, penalties are GDPR-style: up to 40 million BAM or 4% of annual worldwide turnover. The AZLP has classified the monitoring of employees via GPS as a high-risk processing that requires an impact assessment.",
-      de: "Eine spezifische, veröffentlichte Geldbuße der AZLP für die GPS-Ortung von Beschäftigten ist nicht bekannt. Mit dem neuen Gesetz von 2025 sind die Sanktionen im DSGVO-Stil: bis zu 40 Millionen BAM oder 4 % des weltweiten Jahresumsatzes. Die AZLP hat die Überwachung von Beschäftigten per GPS als Verarbeitung mit hohem Risiko eingestuft, die eine Folgenabschätzung erfordert.",
-      fr: "Il n'existe pas d'amende spécifique et publiée de l'AZLP pour le suivi GPS des employés. Avec la nouvelle loi de 2025, les sanctions sont de type RGPD : jusqu'à 40 millions de BAM ou 4 % du chiffre d'affaires annuel mondial. L'AZLP a classé la surveillance des employés par GPS comme un traitement a haut risque qui exige une analyse d'impact.",
-      es: "No consta una multa especifica y publicada de la AZLP por el seguimiento por GPS de los empleados. Con la nueva ley de 2025 las sanciones son de estilo RGPD: hasta 40 millones de BAM o el 4 % del volumen de negocios anual mundial. La AZLP ha clasificado la monitorización de los empleados mediante GPS como un tratamiento de alto riesgo que requiere una evaluación de impacto.",
-      nl: "Er is geen specifieke, gepubliceerde boete van de AZLP voor GPS-tracking van werknemers bekend. Met de nieuwe wet van 2025 zijn de sancties in AVG-stijl: tot 40 miljoen BAM of 4% van de wereldwijde jaaromzet. De AZLP heeft het monitoren van werknemers via GPS aangemerkt als een verwerking met een hoog risico die een effectbeoordeling vereist.",
+      it: "Non risulta una multa dell'AZLP specifica e pubblicata per il GPS sui dipendenti. Con la nuova legge, in vigore da marzo 2025 e applicabile dal 4 ottobre 2025, le sanzioni sono in stile GDPR: fino a 40 milioni di BAM o il 4% del fatturato annuo mondiale. Con la decisione del 10 novembre 2025 l'AZLP ha reso obbligatoria la valutazione d'impatto per il monitoraggio dei dipendenti con sistemi di controllo di lavoro e spostamenti (art. 113, c. 5 della legge per l'importo).",
+      en: "There is no specific, published AZLP fine for GPS tracking of employees. Under the new 2025 law, penalties are GDPR-style: up to 40 million BAM or 4% of annual worldwide turnover. By its decision of 10 November 2025 the AZLP made an impact assessment mandatory for monitoring employees with systems that follow their work and movements (art. 113(5) of the law for the amount).",
+      de: "Eine spezifische, veröffentlichte Geldbuße der AZLP für die GPS-Ortung von Beschäftigten ist nicht bekannt. Mit dem neuen Gesetz von 2025 sind die Sanktionen im DSGVO-Stil: bis zu 40 Millionen BAM oder 4 % des weltweiten Jahresumsatzes. Mit ihrem Beschluss vom 10. November 2025 hat die AZLP die Folgenabschätzung für die Überwachung von Beschäftigten mit Systemen zur Verfolgung von Arbeit und Bewegungen verpflichtend gemacht (Art. 113 Abs. 5 des Gesetzes für den Betrag).",
+      fr: "Il n'existe pas d'amende spécifique et publiée de l'AZLP pour le suivi GPS des employés. Avec la nouvelle loi de 2025, les sanctions sont de type RGPD : jusqu'à 40 millions de BAM ou 4 % du chiffre d'affaires annuel mondial. Par sa décision du 10 novembre 2025, l'AZLP a rendu obligatoire l'analyse d'impact pour la surveillance des employés par des systèmes de suivi du travail et des déplacements (art. 113, al. 5 de la loi pour le montant).",
+      es: "No consta una multa especifica y publicada de la AZLP por el seguimiento por GPS de los empleados. Con la nueva ley de 2025 las sanciones son de estilo RGPD: hasta 40 millones de BAM o el 4 % del volumen de negocios anual mundial. Con su decisión del 10 de noviembre de 2025, la AZLP hizo obligatoria la evaluación de impacto para la monitorización de los empleados con sistemas de seguimiento del trabajo y de los desplazamientos (art. 113, ap. 5 de la ley para el importe).",
+      nl: "Er is geen specifieke, gepubliceerde boete van de AZLP voor GPS-tracking van werknemers bekend. Met de nieuwe wet van 2025 zijn de sancties in AVG-stijl: tot 40 miljoen BAM of 4% van de wereldwijde jaaromzet. Met haar besluit van 10 november 2025 heeft de AZLP een effectbeoordeling verplicht gesteld voor het monitoren van werknemers met systemen die hun werk en verplaatsingen volgen (art. 113, lid 5 van de wet voor het bedrag).",
     },
-    urlFonte:
-      'https://parser.hr/en/new-law-on-personal-data-protection-in-bosnia-and-herzegovina/',
+    urlFonte: 'https://www.sluzbenilist.ba/page/akt/aCRNh0ohz4nh78h77P7BE=',
     tipoImporto: 'massimale',
   },
 
@@ -306,5 +305,5 @@ export const bosnia: SchedaPaese = {
     FONTE_GDPR,
   ],
 
-  aggiornatoIl: '2026-08-03',
+  aggiornatoIl: '2026-09-30',
 };

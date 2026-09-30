@@ -22,18 +22,22 @@ import type { SchedaPaese } from '../types';
 
 // URL delle fonti primarie citate.
 const FONTE_FDPIC_SORVEGLIANZA = {
-  titolo: 'PFPDT/FDPIC, mezzi tecnici di sorveglianza sul luogo di lavoro',
+  titolo: 'IFPDT/FDPIC, mezzi tecnici di sorveglianza sul luogo di lavoro',
   url: 'https://www.edoeb.admin.ch/fr/moyens-techniques-de-surveillance-sur-le-lieu-de-travail',
 };
 const FONTE_FDPIC_DATORE = {
   titolo:
-    'PFPDT/FDPIC, trattamento dei dati da parte del datore di lavoro (CO art. 328b)',
+    'IFPDT/FDPIC, trattamento dei dati da parte del datore di lavoro (CO art. 328b)',
   url: 'https://www.edoeb.admin.ch/fr/traitement-des-donnees-par-lemployeur',
 };
 const FONTE_FDPIC_VALUTAZIONE = {
   titolo:
-    "PFPDT/FDPIC, valutazione d'impatto sulla protezione dei dati (nLPD art. 22)",
+    "IFPDT/FDPIC, valutazione d'impatto sulla protezione dei dati (nLPD art. 22)",
   url: 'https://www.edoeb.admin.ch/fr/analyse-dimpact-relative-a-la-protection-des-donnees-personnelles',
+};
+const FONTE_NLPD = {
+  titolo: 'Legge federale sulla protezione dei dati (nLPD), art. 22, 23 e 60-65 (Fedlex)',
+  url: 'https://www.fedlex.admin.ch/eli/cc/2022/491/it',
 };
 const FONTE_GDPR = {
   titolo: 'Regolamento UE 2016/679 (GDPR) - riferimento comparativo',
@@ -68,9 +72,9 @@ export const svizzera: SchedaPaese = {
 
   autoritaCompetente: {
     ente: {
-      it: 'PFPDT / FDPIC (Preposto federale alla protezione dei dati e alla trasparenza)',
+      it: 'IFPDT / FDPIC (Incaricato federale della protezione dei dati e della trasparenza)',
       en: 'PFPDT / FDPIC (Federal Data Protection and Information Commissioner)',
-      de: 'PFPDT / FDPIC (Eidgenössischer Beauftragter für Datenschutz und Öffentlichkeit)',
+      de: 'EDÖB / FDPIC (Eidgenössischer Datenschutz- und Öffentlichkeitsbeauftragter)',
       fr: 'PFPDT / FDPIC (Préposé fédéral à la protection des données et à la transparence)',
       es: 'PFPDT / FDPIC (Comisionado Federal de Protección de Datos y Transparencia)',
       nl: 'PFPDT / FDPIC (Federale functionaris voor gegevensbescherming en transparantie)',
@@ -84,7 +88,7 @@ export const svizzera: SchedaPaese = {
     urlFonte: FONTE_FDPIC_SORVEGLIANZA.url,
     verificatoIl: '2026-06-15',
     note: {
-      it: "La Svizzera è fuori dall'UE. Per i datori privati è competente l'autorità federale (PFPDT/FDPIC); le autorità cantonali coprono gli enti pubblici cantonali.",
+      it: "La Svizzera è fuori dall'UE. Per i datori privati è competente l'autorità federale (IFPDT/FDPIC); le autorità cantonali coprono gli enti pubblici cantonali.",
       en: 'Switzerland is outside the EU. For private employers the competent body is the federal authority (PFPDT/FDPIC); the cantonal authorities cover cantonal public bodies.',
       de: 'Die Schweiz liegt außerhalb der EU. Für private Arbeitgeber ist die Bundesbehörde (EDOEB/FDPIC) zuständig; die kantonalen Behörden decken die kantonalen öffentlichen Stellen ab.',
       fr: "La Suisse est en dehors de l'UE. Pour les employeurs prives, l'autorité compétente est l'autorité federale (PFPDT/FDPIC); les autorités cantonales couvrent les organismes publics cantonaux.",
@@ -145,7 +149,7 @@ export const svizzera: SchedaPaese = {
       },
       risposta: 'no',
       dettaglio: {
-        it: "Non serve un'autorizzazione preventiva del PFPDT; il datore valuta da sé liceità e proporzionalità.",
+        it: "Non serve un'autorizzazione preventiva dell'IFPDT; il datore valuta da sé liceità e proporzionalità.",
         en: 'No prior authorisation from the PFPDT/FDPIC is needed; the employer assesses lawfulness and proportionality on its own.',
         de: 'Eine vorgängige Bewilligung des EDOEB/FDPIC ist nicht erforderlich; der Arbeitgeber beurteilt Rechtmäßigkeit und Verhältnismäßigkeit selbst.',
         fr: "Aucune autorisation préalable du PFPDT/FDPIC n'est requise; l'employeur évalue lui-même la licéité et la proportionnalité.",
@@ -156,12 +160,12 @@ export const svizzera: SchedaPaese = {
     },
     {
       voce: {
-        it: 'Informazione e consultazione preventiva dei lavoratori; niente sorveglianza permanente del comportamento',
-        en: 'Prior information and consultation of workers; no permanent monitoring of behaviour',
-        de: 'Vorgängige Information und Anhörung der Arbeitnehmenden; keine dauerhafte Verhaltensüberwachung',
-        fr: 'Information et consultation préalables des travailleurs; aucune surveillance permanente du comportement',
-        es: 'Información y consulta previas de los trabajadores; ninguna vigilancia permanente del comportamiento',
-        nl: 'Voorafgaande informatie en raadpleging van de werknemers; geen permanente bewaking van het gedrag',
+        it: 'Informazione preventiva dei lavoratori; niente sorveglianza permanente del comportamento',
+        en: 'Prior information of workers; no permanent monitoring of behaviour',
+        de: 'Vorgängige Information der Arbeitnehmenden; keine dauerhafte Verhaltensüberwachung',
+        fr: 'Information préalable des travailleurs; aucune surveillance permanente du comportement',
+        es: 'Información previa de los trabajadores; ninguna vigilancia permanente del comportamiento',
+        nl: 'Voorafgaande informatie van de werknemers; geen permanente bewaking van het gedrag',
       },
       risposta: 'si',
       dettaglio: {
@@ -183,16 +187,16 @@ export const svizzera: SchedaPaese = {
         es: 'Evaluación de impacto (EIPD, nLPD/revFADP art. 22) si el tratamiento conlleva un riesgo elevado',
         nl: 'Effectbeoordeling (DPIA, nLPD/revFADP art. 22) als de verwerking een hoog risico met zich meebrengt',
       },
-      risposta: 'si',
+      risposta: 'dipende',
       dettaglio: {
-        it: "La nLPD impone una valutazione d'impatto quando il trattamento è suscettibile di comportare un rischio elevato per la personalità o i diritti fondamentali, come la sorveglianza sistematica.",
-        en: 'The nLPD/revFADP requires an impact assessment when the processing is likely to entail a high risk to personality or fundamental rights, such as systematic surveillance.',
-        de: 'Das nDSG/revFADP verlangt eine Folgenabschätzung, wenn die Bearbeitung voraussichtlich ein hohes Risiko für die Persönlichkeit oder die Grundrechte mit sich bringt, etwa eine systematische Überwachung.',
-        fr: "La nLPD/revFADP impose une analyse d'impact lorsque le traitement est susceptible d'entrainer un risque élevé pour la personnalité ou les droits fondamentaux, comme une surveillance systématique.",
-        es: 'La nLPD/revFADP exige una evaluación de impacto cuando el tratamiento puede conllevar un riesgo elevado para la personalidad o los derechos fundamentales, como la vigilancia sistemática.',
-        nl: 'De nLPD/revFADP vereist een effectbeoordeling wanneer de verwerking waarschijnlijk een hoog risico inhoudt voor de persoonlijkheid of de grondrechten, zoals systematische bewaking.',
+        it: "La nLPD impone una valutazione d'impatto solo quando il trattamento può comportare un rischio elevato per la personalità o i diritti fondamentali (art. 22 c. 1). La legge cita come esempi il trattamento su larga scala di dati sensibili e la sorveglianza sistematica di ampie aree pubbliche (c. 2): il GPS sui lavoratori non è citato, quindi va valutato caso per caso. Se il rischio elevato resta anche dopo le misure, va sentito l'IFPDT (art. 23).",
+        en: 'The nLPD/revFADP requires an impact assessment only when the processing may entail a high risk to personality or fundamental rights (art. 22(1)). The law gives as examples large-scale processing of sensitive data and systematic monitoring of large public areas (para. 2): GPS on workers is not named, so it must be assessed case by case. If a high risk remains after mitigation, the FDPIC must be consulted (art. 23).',
+        de: 'Das nDSG/revFADP verlangt eine Folgenabschätzung nur, wenn die Bearbeitung ein hohes Risiko für die Persönlichkeit oder die Grundrechte mit sich bringen kann (Art. 22 Abs. 1). Als Beispiele nennt das Gesetz die umfangreiche Bearbeitung besonders schützenswerter Personendaten und die systematische Überwachung umfangreicher öffentlicher Bereiche (Abs. 2); die GPS-Ortung von Arbeitnehmenden wird nicht genannt und ist im Einzelfall zu beurteilen. Bleibt ein hohes Risiko trotz Massnahmen, ist der EDÖB anzuhören (Art. 23).',
+        fr: "La nLPD/revFADP n'impose une analyse d'impact que lorsque le traitement peut entraîner un risque élevé pour la personnalité ou les droits fondamentaux (art. 22, al. 1). La loi cite en exemple le traitement à grande échelle de données sensibles et la surveillance systématique de grandes parties du domaine public (al. 2) : le GPS sur les travailleurs n'est pas cité et doit être apprécié au cas par cas. Si un risque élevé subsiste malgré les mesures, le PFPDT doit être consulté (art. 23).",
+        es: 'La nLPD/revFADP exige una evaluación de impacto solo cuando el tratamiento puede conllevar un riesgo elevado para la personalidad o los derechos fundamentales (art. 22, apdo. 1). La ley cita como ejemplos el tratamiento a gran escala de datos sensibles y la vigilancia sistemática de grandes zonas públicas (apdo. 2): el GPS sobre los trabajadores no se menciona y debe valorarse caso por caso. Si persiste un riesgo elevado tras las medidas, debe consultarse al PFPDT (art. 23).',
+        nl: 'De nLPD/revFADP vereist alleen een effectbeoordeling wanneer de verwerking een hoog risico kan inhouden voor de persoonlijkheid of de grondrechten (art. 22, lid 1). De wet noemt als voorbeelden grootschalige verwerking van gevoelige gegevens en systematische bewaking van grote openbare gebieden (lid 2): gps bij werknemers wordt niet genoemd en moet per geval worden beoordeeld. Blijft er na maatregelen een hoog risico, dan moet de FDPIC worden geraadpleegd (art. 23).',
       },
-      fonte: FONTE_FDPIC_VALUTAZIONE,
+      fonte: FONTE_NLPD,
     },
   ],
 
@@ -222,12 +226,12 @@ export const svizzera: SchedaPaese = {
     {
       passo: 3,
       descrizione: {
-        it: 'Informa e consulta in anticipo i lavoratori.',
-        en: 'Inform and consult workers in advance.',
-        de: 'Informieren und konsultieren Sie die Arbeitnehmenden im Voraus.',
-        fr: "Informez et consultez les travailleurs au préalable.",
-        es: 'Informe y consulte a los trabajadores con antelación.',
-        nl: 'Informeer en raadpleeg de werknemers vooraf.',
+        it: 'Informa in anticipo i lavoratori (dove la sorveglianza incide sulla salute, consultali: OLT 3 art. 6).',
+        en: 'Inform workers in advance (where the monitoring affects health, also consult them: OLT 3 art. 6).',
+        de: 'Informieren Sie die Arbeitnehmenden im Voraus (betrifft die Überwachung die Gesundheit, hören Sie sie auch an: ArGV 3 Art. 6).',
+        fr: "Informez les travailleurs au préalable (si la surveillance touche à la santé, consultez-les aussi : OLT 3 art. 6).",
+        es: 'Informe a los trabajadores con antelación (si la vigilancia afecta a la salud, consúlteles también: OLT 3 art. 6).',
+        nl: 'Informeer de werknemers vooraf (raakt de controle de gezondheid, raadpleeg hen dan ook: OLT 3 art. 6).',
       },
     },
     {
@@ -244,30 +248,35 @@ export const svizzera: SchedaPaese = {
     {
       passo: 5,
       descrizione: {
-        it: 'Configura il sistema in modo proporzionato e differito (non un tracciamento in tempo reale della persona).',
-        en: 'Configure the system in a proportionate and deferred way (not real-time tracking of the person).',
-        de: 'Konfigurieren Sie das System verhältnismäßig und zeitversetzt (keine Echtzeitverfolgung der Person).',
-        fr: "Configurez le système de manière proportionnée et différée (pas un suivi en temps réel de la personne).",
-        es: 'Configure el sistema de forma proporcionada y diferida (no un seguimiento en tiempo real de la persona).',
-        nl: 'Configureer het systeem op een evenredige en uitgestelde manier (geen realtime tracking van de persoon).',
+        it: 'Configura il sistema in modo proporzionato allo scopo dichiarato (es. pianificazione dei percorsi), senza analisi dettagliate e continue del comportamento.',
+        en: 'Configure the system proportionately to the stated purpose (e.g. route planning), without detailed, continuous analysis of behaviour.',
+        de: 'Konfigurieren Sie das System verhältnismäßig zum angegebenen Zweck (z. B. Routenplanung), ohne detaillierte, laufende Verhaltensanalysen.',
+        fr: "Configurez le système de manière proportionnée à la finalité déclarée (p. ex. planification des trajets), sans analyses détaillées et continues du comportement.",
+        es: 'Configure el sistema de forma proporcionada a la finalidad declarada (p. ej. planificación de rutas), sin análisis detallados y continuos del comportamiento.',
+        nl: 'Configureer het systeem evenredig aan het opgegeven doel (bijv. routeplanning), zonder gedetailleerde, doorlopende analyse van het gedrag.',
       },
     },
     {
       passo: 6,
       descrizione: {
-        it: 'In caso di cambio sistema: se cambi sistema o software di monitoraggio, aggiorna e ri-consegna l’informativa, e verifica se va rinnovato l’accordo o l’autorizzazione nazionale per il controllo a distanza. Spesso cambiano fornitore (responsabile del trattamento), dati raccolti e modalità: quella consegnata prima non basta.',
-        en: 'If you switch systems: when you change your monitoring system or software, update and re-issue the privacy notice, and check whether the national agreement or authorisation for remote monitoring needs renewing. The provider (data processor), the data collected and the methods often change: the one provided earlier is not enough.',
-        de: 'Bei Systemwechsel: Wenn Sie Ihr Überwachungssystem oder Ihre Software wechseln, aktualisieren Sie die Datenschutzinformation und händigen Sie sie erneut aus und prüfen Sie, ob die nationale Vereinbarung oder Genehmigung zur Fernüberwachung erneuert werden muss. Anbieter (Auftragsverarbeiter), erhobene Daten und Modalitäten ändern sich oft: die zuvor ausgehändigte genügt nicht.',
-        fr: 'En cas de changement de système : si vous changez de système ou de logiciel de surveillance, mettez à jour et remettez l’information, et vérifiez si l’accord ou l’autorisation nationale de contrôle à distance doit être renouvelé. Le fournisseur (sous-traitant), les données collectées et les modalités changent souvent : celle remise auparavant ne suffit pas.',
-        es: 'En caso de cambio de sistema: si cambias de sistema o software de monitorización, actualiza y vuelve a entregar la información, y comprueba si debe renovarse el acuerdo o la autorización nacional para el control a distancia. A menudo cambian el proveedor (encargado del tratamiento), los datos recogidos y las modalidades: la entregada antes no basta.',
-        nl: 'Bij een systeemwissel: als je van monitoringsysteem of -software verandert, werk de privacyverklaring bij en verstrek deze opnieuw, en controleer of de nationale overeenkomst of toestemming voor controle op afstand moet worden vernieuwd. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
+        it: 'In caso di cambio di sistema: se cambi sistema o software di monitoraggio, aggiorna e riconsegna l’informativa, e verifica se devi di nuovo informare o consultare i rappresentanti dei lavoratori, dove la legge lo prevede. Spesso cambiano fornitore (responsabile del trattamento), dati raccolti e modalità: quella consegnata prima non basta.',
+        en: 'If you switch systems: when you change your monitoring system or software, update and re-issue the privacy notice, and check whether you must inform or consult the workers\' representatives again, where the law requires it. The provider (data processor), the data collected and the methods often change: the one provided earlier is not enough.',
+        de: 'Bei Systemwechsel: Wenn Sie Ihr Überwachungssystem oder Ihre Software wechseln, aktualisieren Sie die Datenschutzinformation und händigen Sie sie erneut aus, und prüfen Sie, ob Sie die Arbeitnehmervertretung erneut informieren oder beteiligen müssen, wo das Gesetz es vorsieht. Anbieter (Auftragsverarbeiter), erhobene Daten und Modalitäten ändern sich oft: die zuvor ausgehändigte genügt nicht.',
+        fr: 'En cas de changement de système : si vous changez de système ou de logiciel de surveillance, mettez à jour et remettez l’information, et vérifiez si vous devez de nouveau informer ou consulter les représentants du personnel, lorsque la loi le prévoit. Le fournisseur (sous-traitant), les données collectées et les modalités changent souvent : celle remise auparavant ne suffit pas.',
+        es: 'En caso de cambio de sistema: si cambias de sistema o software de monitorización, actualiza y vuelve a entregar la información, y comprueba si debes volver a informar o consultar a los representantes de los trabajadores, cuando la ley lo prevé. A menudo cambian el proveedor (encargado del tratamiento), los datos recogidos y las modalidades: la entregada antes no basta.',
+        nl: 'Bij een systeemwissel: als je van monitoringsysteem of -software verandert, werk de privacyverklaring bij en verstrek deze opnieuw, en controleer of je de werknemersvertegenwoordiging opnieuw moet informeren of raadplegen, waar de wet dat voorschrijft. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
       },
     },
   ],
 
   contatti: [
     {
-      ente: 'PFPDT/FDPIC',
+      ente: {
+        it: 'IFPDT/FDPIC',
+        en: 'FDPIC',
+        de: 'EDÖB/FDPIC',
+        fr: 'PFPDT/FDPIC',
+      },
       portale: FONTE_FDPIC_DATORE.url,
       urlFonte: FONTE_FDPIC_DATORE.url,
       verificatoIl: '2026-06-15',
@@ -278,22 +287,22 @@ export const svizzera: SchedaPaese = {
 
   sanzioneMax: {
     importo: {
-      it: "fino a 250.000 CHF, a carico della persona fisica responsabile (non l'azienda), inflitte dai tribunali cantonali",
-      en: 'up to 250,000 CHF, borne by the responsible natural person (not the company), imposed by the cantonal courts',
-      de: 'bis zu 250.000 CHF, zulasten der verantwortlichen natürlichen Person (nicht des Unternehmens), verhängt durch die kantonalen Gerichte',
-      fr: 'jusqu a 250 000 CHF, a la charge de la personne physique responsable (et non de l entreprise), prononcée par les tribunaux cantonaux',
-      es: 'hasta 250.000 CHF, a cargo de la persona física responsable (no de la empresa), impuestas por los tribunales cantonales',
-      nl: 'tot 250.000 CHF, ten laste van de verantwoordelijke natuurlijke persoon (niet het bedrijf), opgelegd door de kantonale rechtbanken',
+      it: "fino a 250.000 CHF, di regola a carico della persona fisica responsabile (l'azienda risponde solo fino a 50.000 CHF, se individuare il responsabile è sproporzionato), inflitte dalle autorità penali cantonali",
+      en: 'up to 250,000 CHF, as a rule borne by the responsible natural person (the company is liable only up to 50,000 CHF, where identifying the responsible person would be disproportionate), imposed by the cantonal criminal authorities',
+      de: 'bis zu 250.000 CHF, in der Regel zulasten der verantwortlichen natürlichen Person (das Unternehmen haftet nur bis 50.000 CHF, wenn die Ermittlung der verantwortlichen Person unverhältnismässig wäre), verhängt durch die kantonalen Strafbehörden',
+      fr: "jusqu'à 250 000 CHF, en principe à la charge de la personne physique responsable (l'entreprise ne répond que jusqu'à 50 000 CHF, si identifier le responsable serait disproportionné), prononcée par les autorités pénales cantonales",
+      es: 'hasta 250.000 CHF, en principio a cargo de la persona física responsable (la empresa responde solo hasta 50.000 CHF si identificar al responsable fuera desproporcionado), impuestas por las autoridades penales cantonales',
+      nl: 'tot 250.000 CHF, in de regel ten laste van de verantwoordelijke natuurlijke persoon (het bedrijf is slechts aansprakelijk tot 50.000 CHF als het identificeren van de verantwoordelijke onevenredig zou zijn), opgelegd door de kantonale strafautoriteiten',
     },
     casoCitato: {
-      it: "Tribunale federale, ATF 130 II 425: il GPS sui veicoli aziendali è ammesso solo se proporzionato, per ragioni legittime e con informazione preventiva, ed è vietato se mira unicamente o essenzialmente a sorvegliare il comportamento del lavoratore (OLT 3 art. 26, più severo del GDPR). In Svizzera le multe della nLPD arrivano a 250.000 CHF e colpiscono la persona fisica responsabile, non l'impresa.",
-      en: 'Federal Supreme Court, ATF 130 II 425: GPS on company vehicles is allowed only if proportionate, for legitimate reasons and with prior information, and it is forbidden if it aims solely or essentially at monitoring the worker behaviour (OLT 3 art. 26, stricter than the GDPR). In Switzerland the nLPD/revFADP fines reach 250,000 CHF and target the responsible natural person, not the company.',
-      de: 'Bundesgericht, BGE 130 II 425: GPS an Firmenfahrzeugen ist nur zulässig, wenn es verhältnismäßig ist, aus legitimen Gründen erfolgt und vorab informiert wird, und es ist verboten, wenn es ausschließlich oder im Wesentlichen darauf abzielt, das Verhalten der Arbeitnehmenden zu überwachen (ArGV 3 Art. 26, strenger als die DSGVO). In der Schweiz erreichen die Bussen nach nDSG/revFADP 250.000 CHF und treffen die verantwortliche natürliche Person, nicht das Unternehmen.',
-      fr: "Tribunal fédéral, ATF 130 II 425: le GPS sur les véhicules de l entreprise n est admis que s il est proportionné, pour des raisons légitimes et avec information préalable, et il est interdit s il vise uniquement ou essentiellement a surveiller le comportement du travailleur (OLT 3 art. 26, plus strict que le RGPD). En Suisse, les amendes de la nLPD/revFADP atteignent 250 000 CHF et frappent la personne physique responsable, et non l entreprise.",
-      es: 'Tribunal Federal, ATF 130 II 425: el GPS en los vehículos de empresa solo se admite si es proporcionado, por razones legitimas y con información previa, y esta prohibido si tiene como único o esencial fin vigilar el comportamiento del trabajador (OLT 3 art. 26, mas estricto que el RGPD). En Suiza, las multas de la nLPD/revFADP alcanzan los 250.000 CHF y recaen sobre la persona física responsable, no sobre la empresa.',
-      nl: 'Federaal Hooggerechtshof, ATF 130 II 425: gps op bedrijfsvoertuigen is alleen toegestaan als het evenredig is, om legitieme redenen en met voorafgaande informatie, en het is verboden als het uitsluitend of in wezen gericht is op het bewaken van het gedrag van de werknemer (OLT 3 art. 26, strenger dan de AVG). In Zwitserland reiken de boetes van de nLPD/revFADP tot 250.000 CHF en treffen ze de verantwoordelijke natuurlijke persoon, niet het bedrijf.',
+      it: "Tribunale federale, ATF 130 II 425: il GPS sui veicoli aziendali è ammesso solo se proporzionato, per ragioni legittime e con informazione preventiva, ed è vietato se mira unicamente o essenzialmente a sorvegliare il comportamento del lavoratore (OLT 3 art. 26, più severo del GDPR). In Svizzera le multe della nLPD (art. 60-65) arrivano a 250.000 CHF e colpiscono di regola la persona fisica responsabile; l'impresa risponde solo fino a 50.000 CHF, se individuare il responsabile è sproporzionato. Le multe riguardano violazioni dolose di obblighi precisi (per esempio non informare le persone interessate), non ogni violazione dell'OLT 3.",
+      en: 'Federal Supreme Court, ATF 130 II 425: GPS on company vehicles is allowed only if proportionate, for legitimate reasons and with prior information, and it is forbidden if it aims solely or essentially at monitoring the worker behaviour (OLT 3 art. 26, stricter than the GDPR). In Switzerland the nLPD/revFADP fines (art. 60-65) reach 250,000 CHF and as a rule target the responsible natural person; the company is liable only up to 50,000 CHF, where identifying the responsible person would be disproportionate. The fines cover intentional breaches of specific duties (for example failing to inform the persons concerned), not every breach of OLT 3.',
+      de: 'Bundesgericht, BGE 130 II 425: GPS an Firmenfahrzeugen ist nur zulässig, wenn es verhältnismäßig ist, aus legitimen Gründen erfolgt und vorab informiert wird, und es ist verboten, wenn es ausschließlich oder im Wesentlichen darauf abzielt, das Verhalten der Arbeitnehmenden zu überwachen (ArGV 3 Art. 26, strenger als die DSGVO). In der Schweiz erreichen die Bussen nach nDSG/revFADP (Art. 60-65) 250.000 CHF und treffen in der Regel die verantwortliche natürliche Person; das Unternehmen haftet nur bis 50.000 CHF, wenn die Ermittlung der verantwortlichen Person unverhältnismässig wäre. Die Bussen betreffen vorsätzliche Verstösse gegen bestimmte Pflichten (etwa die Informationspflicht), nicht jeden Verstoss gegen die ArGV 3.',
+      fr: "Tribunal fédéral, ATF 130 II 425: le GPS sur les véhicules de l entreprise n est admis que s il est proportionné, pour des raisons légitimes et avec information préalable, et il est interdit s il vise uniquement ou essentiellement a surveiller le comportement du travailleur (OLT 3 art. 26, plus strict que le RGPD). En Suisse, les amendes de la nLPD/revFADP (art. 60 à 65) atteignent 250 000 CHF et frappent en principe la personne physique responsable ; l'entreprise ne répond que jusqu'à 50 000 CHF, si identifier le responsable serait disproportionné. Ces amendes visent des violations intentionnelles d'obligations précises (par exemple ne pas informer les personnes concernées), et non toute violation de l'OLT 3.",
+      es: 'Tribunal Federal, ATF 130 II 425: el GPS en los vehículos de empresa solo se admite si es proporcionado, por razones legitimas y con información previa, y esta prohibido si tiene como único o esencial fin vigilar el comportamiento del trabajador (OLT 3 art. 26, mas estricto que el RGPD). En Suiza, las multas de la nLPD/revFADP (art. 60 a 65) alcanzan los 250.000 CHF y recaen en principio sobre la persona física responsable; la empresa responde solo hasta 50.000 CHF si identificar al responsable fuera desproporcionado. Las multas cubren infracciones dolosas de obligaciones concretas (por ejemplo, no informar a los afectados), no toda infracción de la OLT 3.',
+      nl: 'Federaal Hooggerechtshof, ATF 130 II 425: gps op bedrijfsvoertuigen is alleen toegestaan als het evenredig is, om legitieme redenen en met voorafgaande informatie, en het is verboden als het uitsluitend of in wezen gericht is op het bewaken van het gedrag van de werknemer (OLT 3 art. 26, strenger dan de AVG). In Zwitserland reiken de boetes van de nLPD/revFADP (art. 60-65) tot 250.000 CHF en treffen ze in de regel de verantwoordelijke natuurlijke persoon; het bedrijf is slechts aansprakelijk tot 50.000 CHF als het identificeren van de verantwoordelijke onevenredig zou zijn. De boetes betreffen opzettelijke schendingen van bepaalde plichten (bijv. het niet informeren van betrokkenen), niet elke schending van de OLT 3.',
     },
-    urlFonte: FONTE_FDPIC_SORVEGLIANZA.url,
+    urlFonte: FONTE_NLPD.url,
     tipoImporto: 'massimale',
   },
 
@@ -301,6 +310,7 @@ export const svizzera: SchedaPaese = {
     FONTE_FDPIC_SORVEGLIANZA,
     FONTE_FDPIC_DATORE,
     FONTE_FDPIC_VALUTAZIONE,
+    FONTE_NLPD,
     FONTE_GDPR,
   ],
 

@@ -15,11 +15,11 @@ import type { SchedaPaese } from '../types';
 
 // URL delle fonti primarie citate.
 const FONTE_MT_11A = {
-  titolo: 'Codice del lavoro (Mt.), art. 11/A (controllo dei lavoratori)',
+  titolo: 'Codice del lavoro (Mt.), art. 9 (diritti della persona) e art. 11/A (controllo dei lavoratori)',
   url: 'https://net.jogtar.hu/jogszabaly?docid=a1200001.tv',
 };
 const FONTE_NAIH_GUIDA = {
-  titolo: 'NAIH, guida sui trattamenti sul luogo di lavoro (GPS)',
+  titolo: 'NAIH, guida sui trattamenti sul luogo di lavoro (novembre 2016, precedente al GDPR), par. 5 sul GPS',
   url: 'https://www.naih.hu/files/2016_11_15_Tajekoztato_munkahelyi_adatkezelesek.pdf',
 };
 const FONTE_NAIH_DPIA = {
@@ -82,7 +82,7 @@ export const ungheria: SchedaPaese = {
     },
     portale: FONTE_NAIH.url,
     urlFonte: FONTE_NAIH.url,
-    verificatoIl: '2026-06-15',
+    verificatoIl: '2026-09-30',
     note: {
       it: "L'Ungheria ha un'unica autorità nazionale, il NAIH; nessuna ripartizione regionale.",
       en: 'Hungary has a single national authority, the NAIH; there is no regional breakdown.',
@@ -116,21 +116,21 @@ export const ungheria: SchedaPaese = {
     },
     {
       voce: {
-        it: 'Il monitoraggio riguarda solo condotte connesse al rapporto di lavoro, non la vita privata (art. 11/A)',
-        en: 'The monitoring concerns only conduct connected with the employment relationship, not private life (art. 11/A)',
-        de: 'Die Überwachung betrifft nur Verhaltensweisen, die mit dem Arbeitsverhältnis zusammenhängen, nicht das Privatleben (Art. 11/A)',
-        fr: 'La surveillance ne porte que sur des comportements liés à la relation de travail, et non sur la vie privée (art. 11/A)',
-        es: 'La vigilancia se refiere solo a conductas relacionadas con la relación laboral, no a la vida privada (art. 11/A)',
-        nl: 'De monitoring betreft alleen gedragingen die verband houden met de arbeidsrelatie, niet het privéleven (art. 11/A)',
+        it: 'Il monitoraggio riguarda solo condotte connesse al rapporto di lavoro; le restrizioni ai diritti della persona solo se strettamente necessarie e proporzionate (art. 11/A e art. 9)',
+        en: 'The monitoring concerns only conduct connected with the employment relationship; restrictions on personality rights only where strictly necessary and proportionate (art. 11/A and art. 9)',
+        de: 'Die Überwachung betrifft nur Verhaltensweisen, die mit dem Arbeitsverhältnis zusammenhängen; Einschränkungen der Persönlichkeitsrechte nur, wenn unbedingt erforderlich und verhältnismäßig (Art. 11/A und Art. 9)',
+        fr: 'La surveillance ne porte que sur des comportements liés à la relation de travail; les restrictions aux droits de la personnalité ne sont admises que si elles sont strictement nécessaires et proportionnées (art. 11/A et art. 9)',
+        es: 'La vigilancia se refiere solo a conductas relacionadas con la relación laboral; las restricciones a los derechos de la personalidad solo si son estrictamente necesarias y proporcionadas (art. 11/A y art. 9)',
+        nl: 'De monitoring betreft alleen gedragingen die verband houden met de arbeidsrelatie; beperkingen van persoonlijkheidsrechten alleen als ze strikt noodzakelijk en evenredig zijn (art. 11/A en art. 9)',
       },
       risposta: 'si',
       dettaglio: {
-        it: 'Il controllo non può ledere la dignita ne riguardare la vita privata del lavoratore; sui dispositivi aziendali il datore può accedere solo ai dati connessi al lavoro.',
-        en: 'The monitoring may not impair the dignity nor concern the private life of the worker; on company devices the employer may access only work-related data.',
-        de: 'Die Kontrolle darf weder die Würde verletzen noch das Privatleben des Arbeitnehmers betreffen; auf Firmengeräten darf der Arbeitgeber nur auf arbeitsbezogene Daten zugreifen.',
-        fr: "Le contrôle ne peut porter atteinte à la dignité ni concerner la vie privée du travailleur; sur les appareils de l'entreprise, l'employeur ne peut accéder qu'aux données liées au travail.",
-        es: 'El control no puede lesionar la dignidad ni referirse a la vida privada del trabajador; en los dispositivos de la empresa el empleador solo puede acceder a los datos relacionados con el trabajo.',
-        nl: 'De controle mag de waardigheid niet aantasten en mag geen betrekking hebben op het privéleven van de werknemer; op bedrijfsapparaten mag de werkgever alleen toegang krijgen tot werkgerelateerde gegevens.',
+        it: "Il lavoratore e' controllabile solo nell'ambito della condotta connessa al rapporto di lavoro (art. 11/A c. 1). Una restrizione dei suoi diritti della persona e' ammessa solo se strettamente necessaria per un motivo direttamente legato alla finalita' del rapporto e proporzionata; il datore deve informarlo prima e per iscritto su modalita', condizioni e durata prevista e sulle circostanze che provano necessita' e proporzionalita' (art. 9 c. 2). Sui dispositivi informatici forniti dal datore puo' guardare solo i dati connessi al lavoro (art. 11/A c. 3).",
+        en: 'The worker may be monitored only within conduct connected with the employment relationship (art. 11/A par. 1). A restriction of personality rights is allowed only if strictly necessary for a reason directly connected with the purpose of the employment relationship and proportionate; the employer must inform the worker beforehand and in writing of the manner, conditions and expected duration and of the circumstances showing necessity and proportionality (art. 9 par. 2). On IT devices provided by the employer it may look only at work-related data (art. 11/A par. 3).',
+        de: 'Der Arbeitnehmer darf nur im Rahmen seines mit dem Arbeitsverhältnis zusammenhängenden Verhaltens kontrolliert werden (Art. 11/A Abs. 1). Eine Einschränkung seiner Persönlichkeitsrechte ist nur zulässig, wenn sie aus einem unmittelbar mit dem Zweck des Arbeitsverhältnisses zusammenhängenden Grund unbedingt erforderlich und verhältnismäßig ist; der Arbeitgeber muss ihn vorab schriftlich über Art, Bedingungen und voraussichtliche Dauer sowie über die Umstände informieren, die Erforderlichkeit und Verhältnismäßigkeit belegen (Art. 9 Abs. 2). Auf vom Arbeitgeber bereitgestellten IT-Geräten darf er nur arbeitsbezogene Daten einsehen (Art. 11/A Abs. 3).',
+        fr: "Le travailleur ne peut être contrôlé que dans le cadre de son comportement lié à la relation de travail (art. 11/A par. 1). Une restriction de ses droits de la personnalité n'est admise que si elle est strictement nécessaire pour un motif directement lié à la finalité de la relation de travail et proportionnée; l'employeur doit l'informer au préalable et par écrit des modalités, des conditions et de la durée prévue ainsi que des circonstances établissant la nécessité et la proportionnalité (art. 9 par. 2). Sur les appareils informatiques fournis par l'employeur, il ne peut consulter que les données liées au travail (art. 11/A par. 3).",
+        es: 'El trabajador solo puede ser controlado dentro de su conducta relacionada con la relación laboral (art. 11/A apdo. 1). Una restricción de sus derechos de la personalidad solo es admisible si es estrictamente necesaria por un motivo directamente ligado a la finalidad de la relación laboral y proporcionada; el empleador debe informarle antes y por escrito de la forma, las condiciones y la duración prevista y de las circunstancias que demuestran la necesidad y la proporcionalidad (art. 9 apdo. 2). En los dispositivos informáticos facilitados por el empleador solo puede consultar los datos relacionados con el trabajo (art. 11/A apdo. 3).',
+        nl: 'De werknemer mag alleen worden gecontroleerd binnen zijn gedrag dat verband houdt met de arbeidsrelatie (art. 11/A lid 1). Een beperking van zijn persoonlijkheidsrechten is alleen toegestaan als ze strikt noodzakelijk is om een reden die rechtstreeks met het doel van de arbeidsrelatie samenhangt en evenredig is; de werkgever moet hem vooraf schriftelijk informeren over de wijze, de voorwaarden en de verwachte duur en over de omstandigheden die noodzaak en evenredigheid aantonen (art. 9 lid 2). Op door de werkgever verstrekte IT-apparatuur mag hij alleen werkgerelateerde gegevens inzien (art. 11/A lid 3).',
       },
       fonte: FONTE_MT_11A,
     },
@@ -152,7 +152,7 @@ export const ungheria: SchedaPaese = {
         es: 'No se necesita una autorización previa del NAIH; el empleador evalúa por sí mismo la base jurídica y la proporcionalidad antes de la introducción.',
         nl: 'Er is geen voorafgaande toestemming van de NAIH vereist; de werkgever beoordeelt zelf de rechtsgrondslag en de evenredigheid vóór de invoering.',
       },
-      fonte: FONTE_NAIH_GUIDA,
+      fonte: FONTE_GDPR,
     },
     {
       voce: {
@@ -255,12 +255,12 @@ export const ungheria: SchedaPaese = {
     {
       passo: 6,
       descrizione: {
-        it: 'In caso di cambio sistema: se cambi sistema o software di monitoraggio, aggiorna e ri-consegna l’informativa, e verifica se va rinnovato l’accordo o l’autorizzazione nazionale per il controllo a distanza. Spesso cambiano fornitore (responsabile del trattamento), dati raccolti e modalità: quella consegnata prima non basta.',
-        en: 'If you switch systems: when you change your monitoring system or software, update and re-issue the privacy notice, and check whether the national agreement or authorisation for remote monitoring needs renewing. The provider (data processor), the data collected and the methods often change: the one provided earlier is not enough.',
-        de: 'Bei Systemwechsel: Wenn Sie Ihr Überwachungssystem oder Ihre Software wechseln, aktualisieren Sie die Datenschutzinformation und händigen Sie sie erneut aus und prüfen Sie, ob die nationale Vereinbarung oder Genehmigung zur Fernüberwachung erneuert werden muss. Anbieter (Auftragsverarbeiter), erhobene Daten und Modalitäten ändern sich oft: die zuvor ausgehändigte genügt nicht.',
-        fr: 'En cas de changement de système : si vous changez de système ou de logiciel de surveillance, mettez à jour et remettez l’information, et vérifiez si l’accord ou l’autorisation nationale de contrôle à distance doit être renouvelé. Le fournisseur (sous-traitant), les données collectées et les modalités changent souvent : celle remise auparavant ne suffit pas.',
-        es: 'En caso de cambio de sistema: si cambias de sistema o software de monitorización, actualiza y vuelve a entregar la información, y comprueba si debe renovarse el acuerdo o la autorización nacional para el control a distancia. A menudo cambian el proveedor (encargado del tratamiento), los datos recogidos y las modalidades: la entregada antes no basta.',
-        nl: 'Bij een systeemwissel: als je van monitoringsysteem of -software verandert, werk de privacyverklaring bij en verstrek deze opnieuw, en controleer of de nationale overeenkomst of toestemming voor controle op afstand moet worden vernieuwd. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
+        it: 'In caso di cambio di sistema: se cambi sistema o software di monitoraggio, aggiorna e riconsegna l’informativa, e verifica se devi di nuovo informare o consultare i rappresentanti dei lavoratori, dove la legge lo prevede. Spesso cambiano fornitore (responsabile del trattamento), dati raccolti e modalità: quella consegnata prima non basta.',
+        en: 'If you switch systems: when you change your monitoring system or software, update and re-issue the privacy notice, and check whether you must inform or consult the workers\' representatives again, where the law requires it. The provider (data processor), the data collected and the methods often change: the one provided earlier is not enough.',
+        de: 'Bei Systemwechsel: Wenn Sie Ihr Überwachungssystem oder Ihre Software wechseln, aktualisieren Sie die Datenschutzinformation und händigen Sie sie erneut aus, und prüfen Sie, ob Sie die Arbeitnehmervertretung erneut informieren oder beteiligen müssen, wo das Gesetz es vorsieht. Anbieter (Auftragsverarbeiter), erhobene Daten und Modalitäten ändern sich oft: die zuvor ausgehändigte genügt nicht.',
+        fr: 'En cas de changement de système : si vous changez de système ou de logiciel de surveillance, mettez à jour et remettez l’information, et vérifiez si vous devez de nouveau informer ou consulter les représentants du personnel, lorsque la loi le prévoit. Le fournisseur (sous-traitant), les données collectées et les modalités changent souvent : celle remise auparavant ne suffit pas.',
+        es: 'En caso de cambio de sistema: si cambias de sistema o software de monitorización, actualiza y vuelve a entregar la información, y comprueba si debes volver a informar o consultar a los representantes de los trabajadores, cuando la ley lo prevé. A menudo cambian el proveedor (encargado del tratamiento), los datos recogidos y las modalidades: la entregada antes no basta.',
+        nl: 'Bij een systeemwissel: als je van monitoringsysteem of -software verandert, werk de privacyverklaring bij en verstrek deze opnieuw, en controleer of je de werknemersvertegenwoordiging opnieuw moet informeren of raadplegen, waar de wet dat voorschrijft. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
       },
     },
   ],
@@ -270,7 +270,7 @@ export const ungheria: SchedaPaese = {
       ente: 'NAIH',
       portale: FONTE_NAIH.url,
       urlFonte: FONTE_NAIH.url,
-      verificatoIl: '2026-06-15',
+      verificatoIl: '2026-09-30',
     },
   ],
 
@@ -286,7 +286,7 @@ export const ungheria: SchedaPaese = {
       nl: '15.000.000 HUF (ongeveer 37.500 euro)',
     },
     casoCitato: {
-      it: "NAIH contro Auchan Magyarorszag (gennaio 2018, caso NAIH/2018/412/2/H): videosorveglianza sul luogo di lavoro senza una base giuridica adeguata, informazione carente ai lavoratori e violazione della limitazione della finalità. Multa 15.000.000 HUF. Non e un caso di GPS, ma e la sanzione di riferimento del NAIH sul monitoraggio dei dipendenti.",
+      it: "NAIH contro Auchan Magyarorszag (gennaio 2018, caso NAIH/2018/412/2/H): videosorveglianza sul luogo di lavoro senza una base giuridica adeguata, informazione carente ai lavoratori e violazione della limitazione della finalità. Multa 15.000.000 HUF. Non è un caso di GPS, ma e la sanzione di riferimento del NAIH sul monitoraggio dei dipendenti.",
       en: 'NAIH versus Auchan Magyarorszag (January 2018, case NAIH/2018/412/2/H): video surveillance in the workplace without an adequate legal basis, inadequate information to workers and breach of the purpose limitation principle. Fine 15,000,000 HUF. It is not a GPS case, but it is the NAIH reference penalty on employee monitoring.',
       de: 'NAIH gegen Auchan Magyarorszag (Januar 2018, Fall NAIH/2018/412/2/H): Videoüberwachung am Arbeitsplatz ohne angemessene Rechtsgrundlage, unzureichende Information der Arbeitnehmer und Verstoß gegen die Zweckbindung. Geldbuße 15.000.000 HUF. Es handelt sich nicht um einen GPS-Fall, aber es ist die maßgebliche Sanktion der NAIH zur Überwachung von Beschäftigten.',
       fr: "NAIH contre Auchan Magyarorszag (janvier 2018, affaire NAIH/2018/412/2/H): vidéosurveillance sur le lieu de travail sans base juridique adéquate, information insuffisante des travailleurs et violation de la limitation des finalités. Amende de 15 000 000 HUF. Ce n'est pas une affaire de GPS, mais c'est la sanction de référence de la NAIH en matière de surveillance des salariés.",
@@ -306,5 +306,5 @@ export const ungheria: SchedaPaese = {
     FONTE_GDPR,
   ],
 
-  aggiornatoIl: '2026-06-15',
+  aggiornatoIl: '2026-09-30',
 };
