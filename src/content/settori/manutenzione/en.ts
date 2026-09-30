@@ -2,19 +2,19 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'Maintenance Team Management App | GeoTapp - GPS Tracking & Proof of Service',
+    title: 'Maintenance Team Management App | GeoTapp - GPS Clock-ins & Proof of Service',
     description:
-      'Manage maintenance crews with GPS: jobs, shifts, proof of service. Full history per asset or client site. Try GeoTapp free.',
+      'Manage maintenance crews: jobs, shifts and proof of service, with position at each clock-in. Full history per asset or client site. Try GeoTapp free.',
   },
 
   hero: {
     badge: 'App for maintenance teams',
     h1_line1: 'Your maintenance crew,',
-    h1_line2: 'always under control.',
+    h1_line2: 'every visit documented.',
     subtitle:
-      'Track jobs, schedule shifts and document every visit with real GPS and photo evidence. Full history per asset and client, no manual data entry.',
+      'Record jobs, schedule shifts and document every visit with the position at clock-in and proof photos. Full history per asset and client, no manual data entry.',
     cta_primary: 'Try GeoTapp free for 14 days',
-    cta_note: 'No commitment. No credit card required.',
+    cta_note: 'The trial commits you to nothing. No credit card required.',
   },
 
   pain: {
@@ -26,7 +26,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Do technicians actually arrive on time?',
-        desc: 'Verify arrival without phone calls. GPS and arrival time land in your dashboard the moment they clock in, for every site.',
+        desc: 'You see it as soon as the technician clocks in, without phone calls: arrival time and position are already in Flow, for every site.',
       },
       {
         title: 'How do you prove the service was delivered?',
@@ -40,26 +40,26 @@ const content: SettoreContent = {
     subtitle: 'Three simple steps. Zero paperwork. Zero phone calls.',
     steps: [
       {
-        title: 'Technician clocks in with GPS on arrival',
-        desc: 'Opens the job from their smartphone. GeoTapp records real GPS coordinates, timestamp and photos, fully automatic, sealed.',
+        title: 'Technician clocks in on arrival',
+        desc: 'Opens the job from their smartphone. GeoTapp records the position and time at that moment, and the proof photos. Nothing is recorded automatically between clock-ins.',
       },
       {
-        title: 'Hours and job details are logged automatically',
-        desc: 'Every minute worked is linked to the site and job type. The manager sees the status of every visit as it happens.',
+        title: 'Hours and job details are logged at each clock-in',
+        desc: 'Hours worked are linked to the site and job type. The manager sees the status of every visit at each clock-in.',
       },
       {
-        title: 'Client receives a digitally signed report',
-        desc: 'At the end of the job, the system generates a report with GPS, hours and digital signature. The client verifies it independently, no access to your system needed.',
+        title: 'Client receives a sealed report',
+        desc: 'At the end of the job, the system generates a report with GPS, hours and a seal. The client verifies it independently, no access to your system needed.',
       },
     ],
   },
 
   features: {
-    title: 'Maintenance app: total control over every job.',
+    title: 'Maintenance app: every job documented.',
     items: [
       {
-        title: 'GPS-verified attendance',
-        desc: 'Every arrival and departure is sealed with real GPS, timestamp and assigned site. Defensible with the client and with inspectors.',
+        title: 'Attendance with position and time',
+        desc: 'Every arrival, break and departure is recorded with position, time and assigned site, and goes into the sealed report. Something to show the client or inspectors when it matters.',
       },
       {
         title: 'Maintenance history per asset',
@@ -67,26 +67,26 @@ const content: SettoreContent = {
       },
       {
         title: 'Automated sealed reports',
-        desc: 'At the end of each job, the system generates a sealed report: hours, GPS, photos and digital signature. The client can verify it independently.',
+        desc: 'At the end of each job, the system generates a sealed report: hours, positions, photos and a seal. The client can verify it independently.',
       },
       {
         title: 'Team scheduling',
-        desc: 'Assign jobs, manage shifts and receive automatic alerts if a task is not opened or closed on time.',
+        desc: 'Assign jobs, manage shifts and get an alert if a shift is left open.',
       },
       {
         title: 'Photo documentation',
-        desc: 'Technicians take photos directly from the app: before, during and after the job. Every image is geo-tagged with a timestamp.',
+        desc: 'Technicians take photos directly from the app: before, during and after the job. Every image is tagged with time and position.',
       },
       {
         title: 'One-tap clock-in',
-        desc: 'The technician clocks in with GPS, marks breaks and closes the job with one tap. Every photo taken stays linked to the job and its timestamps.',
+        desc: 'The technician clocks in with their position recorded, marks breaks and closes the job with one tap. Every photo taken stays linked to the job and its timestamps.',
       },
     ],
   },
 
   testimonial: {
     quote:
-      'With GeoTapp every maintenance visit is tracked. Clients see the full history per asset and there are no more arguments about hours or work done.',
+      'With GeoTapp every maintenance visit is documented, and we send clients the report of each visit.',
     author: 'Andrea L.',
     role: 'Maintenance Manager, facility management company',
   },
@@ -101,23 +101,23 @@ const content: SettoreContent = {
       },
       {
         q: 'Do technicians actually arrive on time?',
-        a: 'With GeoTapp you can see arrival time and GPS position for every technician as they clock in. No phone call needed, the data is already in your dashboard.',
+        a: 'With GeoTapp you see the arrival time and position of every technician the moment they clock in. No phone call needed: the data is already in Flow.',
       },
       {
         q: 'How do I prove the maintenance service was delivered?',
-        a: 'GeoTapp keeps a full downloadable history per client site: dates, hours, GPS and photos of every visit. The client can verify the service independently without accessing your system.',
+        a: 'GeoTapp keeps a full downloadable history per client site: dates, hours, GPS and photos of every visit. You send the client the sealed report, which they verify alone without accessing your system.',
       },
       {
         q: 'Does GeoTapp work for facility maintenance and equipment servicing?',
-        a: 'Yes. GeoTapp is used by maintenance companies, facility management firms and businesses with distributed teams. The platform scales from 3 to 300 technicians.',
+        a: 'Yes. GeoTapp is used by maintenance companies, facility management firms and businesses with distributed teams. It suits anything from a small team to a company with hundreds of technicians.',
       },
       {
-        q: 'Is GeoTapp GDPR compliant for GPS tracking?',
-        a: 'GeoTapp is built to help you stay within GDPR for GPS tracking: it tracks location only during active working hours, includes employee privacy notice templates and collects no unnecessary data.',
+        q: 'Is GeoTapp built to stay within GDPR for GPS?',
+        a: 'GeoTapp is built to help you stay within GDPR: it records the position only when the technician clocks in (start, break, finish) or takes a proof photo, has the employee sign the privacy notice in the app before clocking in, and collects no unnecessary data.',
       },
       {
         q: 'How much does GeoTapp cost for a maintenance company?',
-        a: 'Plans start from a few euros per worker per month. Try free for 14 days, no commitment.',
+        a: 'GeoTapp Flow starts at €39 a month; TimeTracker seats for the technicians cost €3 a month each up to 25 (€2.50 from the 26th). The subscription runs for a minimum of 12 months. Prices exclude VAT. You can try it free for 14 days, no card.',
       },
     ],
   },
@@ -125,14 +125,14 @@ const content: SettoreContent = {
   cta: {
     title: 'Every maintenance job deserves proof. GeoTapp creates it.',
     subtitle:
-      'Verifiable reports, real GPS, full history per asset. Your work becomes defensible.',
-    primary: 'Start free now!',
+      'Verifiable reports, position at clock-in, full history per asset.',
+    primary: 'Try it free for 14 days',
     secondary: 'See Pricing',
   },
 
   pricing_hint: {
-    label: 'Starting from',
-    per: 'worker/month',
+    label: 'TimeTracker seats from',
+    per: 'per worker per month, plus a Flow plan',
     note: '14-day free trial',
   },
 
@@ -147,12 +147,12 @@ const content: SettoreContent = {
     {
       question: 'Do technicians actually arrive on time?',
       answer:
-        'With GeoTapp you can see arrival time and GPS position for every technician as they clock in. The data is already in your dashboard, no calls needed.',
+        'With GeoTapp you see the arrival time and position of every technician the moment they clock in. The data is already in Flow, no calls needed.',
     },
     {
       question: 'How do I prove the maintenance service was delivered?',
       answer:
-        'GeoTapp keeps a full downloadable history per client site: dates, hours, GPS and photos. The client verifies independently.',
+        'GeoTapp keeps a full downloadable history per client site: dates, hours, GPS and photos. You send the client the sealed report, which they verify alone.',
     },
   ],
 };

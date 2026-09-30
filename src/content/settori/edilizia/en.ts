@@ -7,9 +7,9 @@ const content: SettoreContent = {
   },
   hero: {
     badge: 'App for construction companies and building sites',
-    h1_line1: 'Your construction site under control,',
+    h1_line1: 'Your construction site documented,',
     h1_line2: 'clock-in by clock-in.',
-    subtitle: 'GPS-sealed clock-ins, crew management and automated reports. Zero paperwork, fewer disputes. GeoTapp connects Flow + TimeTracker for construction site managers, subcontractors and project directors.',
+    subtitle: 'Clock-ins with location, crew management and automated sealed reports. Zero paperwork, and when someone disputes the hours you have proof to show. GeoTapp connects Flow + TimeTracker for construction site managers, subcontractors and project directors.',
     cta_primary: 'Try it on a real site',
     cta_note: '14 days, up to 50 field workers, no credit card.',
   },
@@ -18,15 +18,15 @@ const content: SettoreContent = {
     items: [
       {
         title: 'Who was on site and when?',
-        desc: 'Every GPS clock-in is timestamped and sealed. GeoTapp records real coordinates at the moment of clocking, not entered manually. The data is verifiable by project management at any time.',
+        desc: 'Every clock-in records the time and position taken from the phone at that moment, not entered by hand, and goes into the sealed report that project management can verify.',
       },
       {
         title: 'How do you manage subcontractors?',
-        desc: 'Track access and attendance for all crews, including subcontractors, from a single dashboard updated as each crew clocks in.',
+        desc: 'Record attendance for all crews, including subcontractors, from a single dashboard updated as each crew clocks in.',
       },
       {
         title: 'Do site reports take hours?',
-        desc: 'Generated automatically with GPS, hours and attendance. Ready for project management and progress certificates without any manual entry.',
+        desc: 'Generated automatically with GPS, hours and attendance. Ready for project management and for progress reports (SAL) without any manual entry.',
       },
     ],
   },
@@ -36,14 +36,14 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'The worker clocks in at the site entrance',
-        desc: 'Opens the shift from their smartphone. GeoTapp records real GPS coordinates, timestamp and, if needed, photos. Fully automatic, tamper-evident.',
+        desc: 'Opens the shift from their smartphone. GeoTapp records the time and position at that moment and, if needed, proof photos. Nothing is recorded automatically between one clock-in and the next.',
       },
       {
-        title: 'The site manager sees every clock-in as it happens',
-        desc: 'Single dashboard for all crews and all sites. Who is present, where and since when, without chasing anyone by phone.',
+        title: 'The site manager sees every clock-in as it arrives',
+        desc: 'Single dashboard for all crews and all sites. Who has clocked in, where and at what time, without chasing anyone by phone.',
       },
       {
-        title: 'The report is ready for progress certificates',
+        title: 'The report is ready for progress reports and site management',
         desc: 'At the end of the day or the end of the job, the system generates a sealed report with attendance, GPS and hours. Ready for project management without a minute of manual work.',
       },
     ],
@@ -55,7 +55,7 @@ const content: SettoreContent = {
       {
         label: 'What it records',
         competitor: 'Clock-in and clock-out time',
-        geotapp: 'Time + verified GPS + photos + work completed',
+        geotapp: 'Time + position at clock-in + photos + work completed',
       },
       {
         label: 'Who can verify',
@@ -64,8 +64,8 @@ const content: SettoreContent = {
       },
       {
         label: 'In case of dispute',
-        competitor: 'Data not defensible',
-        geotapp: 'Sealed report, tamper-evident',
+        competitor: 'Just your word',
+        geotapp: 'Sealed report, any change is detectable',
       },
       {
         label: 'Site report',
@@ -85,46 +85,46 @@ const content: SettoreContent = {
       'The project director asks who was on site Tuesday. Nobody knows for sure.',
       'Attendance sheets arrive incomplete, late or illegible.',
       'The subcontractor disputes the hours. You have no proof.',
-      'You prepare the progress certificate manually, piecing data together from WhatsApp messages.',
+      'You prepare the progress report (SAL) by hand, piecing data together from WhatsApp messages.',
     ],
     dopo: [
-      'The project director asks who was on site Tuesday. Open the dashboard: it\'s all there.',
-      'Attendance is recorded automatically, with GPS and timestamp.',
+      'The project director asks who was on site Tuesday. Open that day\'s clock-ins: it\'s all there.',
+      'Attendance is recorded at every clock-in, with time and position.',
       'The subcontractor disputes? Show the sealed report.',
-      'The progress certificate is already done: hours, attendance and GPS aggregated automatically.',
+      'The progress report is already done: hours, attendance and GPS aggregated automatically.',
     ],
   },
   features: {
     title: 'Features built for construction sites',
     items: [
       {
-        title: 'GPS-sealed attendance',
-        desc: 'Every entry and exit from the site is recorded with real GPS position and timestamp. Defensible before project directors, clients and inspectors.',
+        title: 'Sealed attendance with position',
+        desc: 'Every entry, break and exit from the site is recorded with position and time. Something to show project directors, clients and inspectors when it matters.',
       },
       {
         title: 'Multi-site dashboard',
-        desc: 'Follow multiple construction sites from a single screen. See who\'s clocked in, where and since when, for every active site.',
+        desc: 'Follow multiple construction sites from a single screen. For every active site you see who has clocked in, where and at what time, as soon as each clock-in arrives.',
       },
       {
-        title: 'Automated progress reports',
-        desc: 'The system generates reports with aggregated attendance, hours and GPS. Ready for progress certificates and project management, no manual entry needed.',
+        title: 'Automated reports for progress reports',
+        desc: 'The system generates reports with aggregated attendance, hours and GPS. Ready for progress reports and project management, no manual entry needed.',
       },
       {
-        title: 'Subcontractor tracking',
+        title: 'Subcontractor attendance',
         desc: 'Every crew, internal or external, clocks in from their smartphone. The site manager sees everyone from a single dashboard without chasing anyone.',
       },
       {
         title: 'Sealed photo evidence',
-        desc: 'Workers take photos from the app. Every image is linked to the site with GPS and timestamp, tamper-evident after generation.',
+        desc: 'Workers take photos from the app. Every image is linked to the site with GPS and timestamp, and any later change is detectable.',
       },
       {
-        title: 'Built-in GDPR compliance',
-        desc: 'Geolocation built to stay within GDPR and privacy guidelines. Employee privacy notice templates included.',
+        title: 'Position only when you clock in',
+        desc: 'Geolocation built to stay within GDPR: position only when someone clocks in, never continuously, and the employee privacy notice is signed in the app before the first clock-in.',
       },
     ],
   },
   testimonial: {
-    quote: 'Since we started using GeoTapp, the project director no longer asks for attendance sheets. We open the report and the progress certificate is ready.',
+    quote: 'Since we started using GeoTapp, the project director no longer asks for attendance sheets. We open the report and the progress report is ready.',
     author: 'Joseph M.',
     role: 'Owner, construction company, 35 employees',
   },
@@ -134,42 +134,42 @@ const content: SettoreContent = {
     items: [
       {
         q: 'Who was on site and when?',
-        a: 'Every GPS clock-in is timestamped and sealed. GeoTapp records real coordinates at the moment of clocking, not entered manually. The data is verifiable by project management at any time.',
+        a: 'Every clock-in records the time and position taken from the phone at that moment, not entered by hand, and goes into the sealed report that project management can verify.',
       },
       {
         q: 'How do you manage subcontractors on site?',
-        a: 'GeoTapp tracks access and attendance of all crews, including subcontractors. Each worker clocks in from their smartphone, and the site manager sees each clock-in as soon as it happens, from a single dashboard.',
+        a: 'GeoTapp records the attendance of all crews, including subcontractors. Each worker clocks in from their smartphone, and the site manager sees each clock-in as soon as it arrives, from a single dashboard.',
       },
       {
         q: 'Do site reports require hours of manual work?',
-        a: 'No. GeoTapp generates reports automatically with GPS, hours and attendance. They are ready for project management and progress certificates without any manual entry.',
+        a: 'No. GeoTapp generates reports automatically with GPS, hours and attendance. They are ready for project management and for progress reports without any manual entry.',
       },
     ],
   },
   cta: {
     title: 'Try GeoTapp free for 14 days',
-    subtitle: 'No commitment. No credit card required. Response within 12 business hours.',
-    primary: 'Get started for free',
+    subtitle: 'The trial commits you to nothing. No credit card required.',
+    primary: 'Try it free for 14 days',
     secondary: 'View Pricing',
   },
   pricing_hint: {
-    label: 'Starting from',
-    per: 'worker/month',
+    label: 'TimeTracker seats from',
+    per: 'per worker per month, plus a Flow plan',
     note: '14-day free trial',
   },
   schema_sector_name: 'Construction',
   schema_faq: [
     {
       question: 'Who was on site and when?',
-      answer: 'Every GPS clock-in is timestamped and sealed. GeoTapp records real coordinates at the moment of clocking, not entered manually. The data is verifiable by project management at any time.',
+      answer: 'Every clock-in records the time and position taken from the phone at that moment, not entered by hand, and goes into the sealed report that project management can verify.',
     },
     {
       question: 'How do you manage subcontractors on site?',
-      answer: 'GeoTapp tracks access and attendance of all crews, including subcontractors. Each worker clocks in from their smartphone, and the site manager sees each clock-in as soon as it happens, from a single dashboard.',
+      answer: 'GeoTapp records the attendance of all crews, including subcontractors. Each worker clocks in from their smartphone, and the site manager sees each clock-in as soon as it arrives, from a single dashboard.',
     },
     {
       question: 'Do site reports require hours of manual work?',
-      answer: 'No. GeoTapp generates reports automatically with GPS, hours and attendance. They are ready for project management and progress certificates without any manual entry.',
+      answer: 'No. GeoTapp generates reports automatically with GPS, hours and attendance. They are ready for project management and for progress reports without any manual entry.',
     },
   ],
 };

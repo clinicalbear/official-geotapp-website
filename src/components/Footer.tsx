@@ -151,7 +151,7 @@ export default function Footer() {
 
         <div className="bt">
           <span>&copy; 2026 GeoTapp. {dict.rights}</span>
-          <span className="fiscal">GeoTapp di Michele Angelo Petraroli · P.IVA IT04183990987</span>
+          <span className="fiscal">GeoTapp di Michele Angelo Petraroli · {currentLocale.split('-')[0] === 'en' ? 'VAT no.' : 'P.IVA'} IT04183990987</span>
         </div>
       </div>
     </footer>

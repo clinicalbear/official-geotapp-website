@@ -12,11 +12,11 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   es: 'Cumplimiento normativo en España',
   pt: 'Conformidade em Portugal',
   nl: 'Compliance in Nederland',
-  'en-us': 'Regional compliance',
-  'en-gb': 'Regional compliance',
-  'en-au': 'Regional compliance',
-  'en-ca': 'Regional compliance',
-  'en-ie': 'Regional compliance',
+  'en-us': 'Regional rules and records',
+  'en-gb': 'Regional rules and records',
+  'en-au': 'Regional rules and records',
+  'en-ca': 'Regional rules and records',
+  'en-ie': 'Regional rules and records',
 };
 
 export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
@@ -106,72 +106,72 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   ],
   'en-us': [
     {
-      q: 'UL/ETL listing trail per installation?',
-      a: 'Per-installation listing-authority record, with worker\'s installation-method training tied to the manufacturer\'s authorised-installer programme.',
+      q: 'UL and ETL listing records per installation?',
+      a: 'GeoTapp does not verify or track UL or ETL listings or manufacturer-authorised installer programmes, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
     {
-      q: 'State home-improvement contractor licensing tracker?',
-      a: 'Per-worker state HIC licence number, bond and insurance evidence, with the annual renewal workflow tied to the platform clock-in.',
+      q: 'State home-improvement contractor licensing?',
+      a: 'GeoTapp does not verify or track state contractor licences, bonds, insurance or renewals, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
     {
-      q: 'ADA accessibility on-site verification per project?',
-      a: 'Per-site ADA-compliance checklist completion record, with the installer signature and date for downstream audit.',
+      q: 'ADA accessibility checks on site?',
+      a: 'GeoTapp does not verify or track ADA compliance checklists, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
   ],
   'en-gb': [
     {
-      q: 'MCS (Microgeneration Certification Scheme) installer trail?',
-      a: 'Per-worker MCS technology category, certification expiry, MCS installation reference and annual ongoing-assessment record.',
+      q: 'MCS installer certification?',
+      a: 'GeoTapp does not verify or track MCS certification, technology categories or installation references, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
     {
       q: 'Building Regulations Part P notification?',
-      a: 'For domestic electrical installations, the Part P competent-person scheme registration and the notification record per installation.',
+      a: 'GeoTapp does not verify or track Part P competent-person registration or notifications, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
     {
-      q: 'Trustmark scheme audit support?',
-      a: 'Workforce qualifications, customer-feedback log and dispute-resolution record per installation, satisfying Trustmark\'s annual review.',
+      q: 'TrustMark scheme audits?',
+      a: 'GeoTapp does not verify or track TrustMark requirements, customer-feedback logs or dispute-resolution records, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
   ],
   'en-au': [
     {
-      q: 'AS/NZS installation-standard records per category?',
-      a: 'Per-category (electrical AS/NZS 3000, plumbing AS/NZS 3500, solar AS/NZS 5033) installation record with installer licence and supervising-licence chain.',
+      q: 'AS/NZS installation-standard records?',
+      a: 'GeoTapp does not verify or track AS/NZS 3000, 3500 or 5033 compliance or licence chains, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
     {
-      q: 'Clean Energy Council Approved Installer tracking?',
-      a: 'For renewable-energy installs, CEC Accreditation ID, installation-class endorsement and annual recertification record.',
+      q: 'Clean Energy Council installer accreditation?',
+      a: 'GeoTapp does not verify or track CEC accreditation or installation-class endorsements, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
     {
-      q: 'State home-builder licensing per jurisdiction?',
-      a: 'Per-state (HBCF NSW, VBA, QBCC, BSA) installer registration with the contractor-licensing audit pack on request.',
+      q: 'State building-licence registrations?',
+      a: 'GeoTapp does not verify or track state contractor licences or registrations, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
   ],
   'en-ca': [
     {
-      q: 'CSA-listed product installation trail?',
-      a: 'Per-installation CSA listing record, with the worker\'s manufacturer-authorised-installer training tied to the platform profile.',
+      q: 'CSA-listed product installation records?',
+      a: 'GeoTapp does not verify or track CSA listings or manufacturer-authorised installer training, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
     {
-      q: 'Provincial trade-qualification ticket per worker?',
-      a: 'Per-province trade-qualification certificate (Red Seal where applicable), with continuing-education credits and supervision chain captured per shift.',
+      q: 'Provincial trade qualifications?',
+      a: 'GeoTapp does not verify or track provincial trade certificates, Red Seal endorsements or continuing-education credits, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
     {
-      q: 'Indigenous-community engagement for on-reserve installations?',
-      a: 'Where applicable, free-prior-informed-consent record, IBA data-clause compliance and OCAP-aligned data governance.',
+      q: 'Consent for on-reserve installations?',
+      a: 'GeoTapp does not manage consent records or impact-benefit agreements. It records who clocked in, where and at what time on each site; agreements and consent records stay with the company and the communities concerned.',
     },
   ],
   'en-ie': [
     {
-      q: 'RECI/Safe Electric installer registration tracking?',
-      a: 'Per-worker Safe Electric registration, periodic-inspection schedule and CER-compliant Cert of Compliance issuance per installation.',
+      q: 'Safe Electric and RECI registration?',
+      a: 'GeoTapp does not verify or track Safe Electric or RECI registration, periodic inspections or Certs of Compliance, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
     {
-      q: 'Sustainable Energy Authority (SEAI) installer trail?',
-      a: 'For SEAI-grant-eligible installations, SEAI registration number and installation-method evidence per grant claim.',
+      q: 'SEAI installer requirements?',
+      a: 'GeoTapp does not verify or track SEAI registration numbers or installation evidence for grant claims, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
     {
-      q: 'WRC and HSA inspection audit pack?',
-      a: 'Combined OWTA 1997 hours, Construction SEO rates where applicable, and HSA notifiable-incident logs in the inspector\'s preferred format.',
+      q: 'WRC and HSA inspection records?',
+      a: 'GeoTapp does not manage OWTA hours reconciliation, Construction SEO rates or HSA notifiable-incident logs. It records who clocked in, where and at what time on each site, and that history can be shown to an inspector, alongside the hours and attendance you can export to Excel or CSV. The documents the rules require stay with the company.',
     },
   ],
 };

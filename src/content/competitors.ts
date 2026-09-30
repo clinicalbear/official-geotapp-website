@@ -35,7 +35,7 @@ export type FeatureKey = typeof FEATURE_KEYS[number];
 export const FEATURE_LABELS: Record<FeatureKey, LocalizedString> = {
   gps_verified_at_site: {
     it: 'Posizione controllata a ogni timbratura',
-    en: 'GPS verified at job site',
+    en: 'Position checked at every clock-in',
     de: 'GPS am Einsatzort verifiziert',
     fr: 'GPS vérifié sur le chantier',
     es: 'GPS verificado en el sitio de trabajo',
@@ -61,7 +61,7 @@ export const FEATURE_LABELS: Record<FeatureKey, LocalizedString> = {
   },
   geo_timestamped_photos: {
     it: 'Foto di prova con posizione e ora',
-    en: 'Photo evidence linked to GPS and timestamp',
+    en: 'Proof photos with location and time',
     de: 'Fotos mit GPS und Zeitstempel',
     fr: 'Photos avec GPS et horodatage',
     es: 'Fotos con GPS y marca de tiempo',
@@ -87,7 +87,7 @@ export const FEATURE_LABELS: Record<FeatureKey, LocalizedString> = {
   },
   time_tracking: {
     it: 'Registrazione delle ore',
-    en: 'Time tracking',
+    en: 'Hours recording',
     de: 'Zeiterfassung',
     fr: 'Suivi du temps',
     es: 'Seguimiento del tiempo',
@@ -165,7 +165,7 @@ export const FEATURE_LABELS: Record<FeatureKey, LocalizedString> = {
   },
   gdpr_geo_compliance: {
     it: 'Posizione solo alla timbratura, mai in continuo',
-    en: 'GDPR-compliant geolocation',
+    en: 'Location only at clock-in, never continuous',
     de: 'DSGVO-konforme Geolokalisierung',
     fr: 'Géolocalisation conforme RGPD',
     es: 'Geolocalización conforme al RGPD',
@@ -178,7 +178,7 @@ export const FEATURE_LABELS: Record<FeatureKey, LocalizedString> = {
   },
   auto_gps_notice_signed: {
     it: 'Informativa GPS firmata nell\'app prima di timbrare',
-    en: 'Auto GPS notice with digital signature',
+    en: 'GPS notice signed in the app before clocking in',
     de: 'Auto GPS-Datenschutzhinweis mit Unterschrift',
     fr: 'Notice GPS automatique avec signature',
     es: 'Aviso GPS automático firmado',
@@ -231,7 +231,7 @@ export const COMPETITORS: Competitor[] = [
     pricingFromEur: 29,
     tagline: {
       it: 'Comunicazione, gestione del personale e timbrature in un\'unica app per chi lavora fuori ufficio. Molto diffusa negli Stati Uniti.',
-      en: 'All-in-one communication + HR + time tracking for the deskless workforce. Strong in the US.',
+      en: 'Communication, HR and time tracking in one app for people who work away from a desk. Widely used in the United States.',
       de: 'Kommunikation + HR + Zeiterfassung für Außendienst-Teams. Starke US-Präsenz.',
     },
     features: {
@@ -256,7 +256,7 @@ export const COMPETITORS: Competitor[] = [
     pricingFromEur: 7,
     tagline: {
       it: 'Registrazione del tempo con screenshot e monitoraggio dell\'attività. Pensato per team remoti al computer, non per chi lavora sul campo.',
-      en: 'Time tracking with screenshots and activity monitoring. Made for remote teams, not field service.',
+      en: 'Time tracking with screenshots and activity monitoring. Built for remote teams at a computer, not for field work.',
       de: 'Zeiterfassung mit Screenshots und Aktivitätsüberwachung. Für Remote-Teams, nicht Außendienst.',
     },
     features: {
@@ -281,7 +281,7 @@ export const COMPETITORS: Competitor[] = [
     pricingFromEur: 4,
     tagline: {
       it: 'Registrazione del tempo gratuita e senza limiti. Ottimo per freelance e uffici, poco adatto al lavoro sul campo.',
-      en: 'Free unlimited time tracking. Great for freelancers and office teams, weak for field service.',
+      en: 'Free, unlimited time tracking. Great for freelancers and offices, a poor fit for field work.',
       de: 'Kostenlose unbegrenzte Zeiterfassung. Gut für Freelancer und Büroteams, schwach im Außendienst.',
     },
     features: {
@@ -306,7 +306,7 @@ export const COMPETITORS: Competitor[] = [
     pricingFromEur: 3,
     tagline: {
       it: 'Presenze con riconoscimento facciale e GPS di base. Piano gratuito generoso, ma niente prova del lavoro svolto.',
-      en: 'Time tracking with facial recognition and basic GPS. Generous free plan but no work proof.',
+      en: 'Attendance with face recognition and basic GPS. Generous free plan, but no proof of the work done.',
       de: 'Zeiterfassung mit Gesichtserkennung und GPS-Basics. Großzügiger Free Plan, kein Arbeitsnachweis.',
     },
     features: {
@@ -381,7 +381,7 @@ export const COMPETITORS: Competitor[] = [
     pricingFromEur: 12,
     tagline: {
       it: 'App italiana di rilevazione presenze molto diffusa: GPS, QR, NFC e geofence. Niente report sigillato per il committente.',
-      en: 'Italian software for cleaning and facility companies. Strong on management, weak on work proof.',
+      en: 'Widely used Italian attendance app: GPS, QR, NFC and geofence. No sealed report for the client.',
       de: 'Italienische Software für Reinigung und Facility. Stark in Verwaltung, schwach beim Arbeitsnachweis.',
     },
     features: {
@@ -406,7 +406,7 @@ export const COMPETITORS: Competitor[] = [
     pricingFromEur: null,
     tagline: {
       it: 'Software tedesco per le imprese di pulizia: timbratura, attività e comunicazione del team. Niente report sigillato per il committente.',
-      en: 'Communication app for deskless workers, focus on engagement. No work proof.',
+      en: 'German software for cleaning companies: clock-in, tasks and team communication. No sealed report for the client.',
       de: 'Kommunikations-App für Außendienst, Fokus auf Engagement. Kein Arbeitsnachweis.',
     },
     features: {
@@ -431,7 +431,7 @@ export const COMPETITORS: Competitor[] = [
     pricingFromEur: 5,
     tagline: {
       it: 'Timbrature digitali italiane con GPS e QR code. Semplice e leggero, ma niente foto di prova né sigillo.',
-      en: 'Italian digital clock-in via QR/NFC. Simple and lightweight, no photo proof or seal.',
+      en: 'Italian digital clock-in with GPS and QR code. Simple and lightweight, but no proof photos or seal.',
       de: 'Italienische digitale Stempelung via QR/NFC. Einfach und schlank, kein Foto-Nachweis.',
     },
     features: {
@@ -456,7 +456,7 @@ export const COMPETITORS: Competitor[] = [
     pricingFromEur: null,
     tagline: {
       it: 'La suite HR italiana per eccellenza, dalle presenze al cedolino. Timbratura con geofence e badge NFC, niente prova per il committente.',
-      en: 'The Italian HR suite by definition, from attendance to payslip. Geofenced clock-in and NFC badges, no evidence for the client.',
+      en: 'A widely used Italian HR suite, from attendance to payslip. Geofenced clock-in and NFC badges, no proof for the client.',
       de: 'Die italienische HR-Suite schlechthin, von der Zeiterfassung bis zum Lohnzettel. Stempelung mit Geofence, kein Nachweis für den Auftraggeber.',
     },
     features: {
@@ -481,7 +481,7 @@ export const COMPETITORS: Competitor[] = [
     pricingFromEur: 6,
     tagline: {
       it: 'Piattaforma HR spagnola per le PMI, con ferie e assenze in ordine. Geolocalizzazione facoltativa sulla timbratura, senza controllo delle posizioni simulate.',
-      en: 'Spanish HR platform for SMEs, leave and absences kept in order. Optional geolocation on clock-in, with no check on the signal.',
+      en: 'Spanish HR platform for SMEs, keeping leave and absences in order. Optional geolocation on clock-in, with no check for spoofed locations.',
       de: 'Spanische HR-Plattform für KMU, Urlaub und Abwesenheiten im Griff. Ortung bei der Stempelung optional, ohne Prüfung des Signals.',
     },
     features: {

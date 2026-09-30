@@ -38,7 +38,7 @@ const SETTORE_CONFIG: Record<string, {
     categoryId: 9,
     labels: {
       it: { title: 'Gestione presenze imprese di pulizie: guida e risorse - GeoTapp', description: 'Come gestire presenze, turni e interventi nelle imprese di pulizie con timbratura GPS. Guide pratiche per responsabili operativi.', heading: 'Gestione presenze nelle imprese di pulizie' },
-      en: { title: 'GPS attendance tracking for cleaning companies: guides - GeoTapp', description: 'How to manage attendance, shifts and jobs in cleaning companies with GPS tracking. Practical guides for operations managers.', heading: 'Attendance tracking for cleaning companies' },
+      en: { title: 'GPS clock-ins for cleaning companies: guides - GeoTapp', description: 'How to manage attendance, shifts and jobs in cleaning companies with GPS clock-ins. Practical guides for operations managers.', heading: 'Attendance tracking for cleaning companies' },
       de: { title: 'Zeiterfassung für Reinigungsunternehmen: Leitfäden - GeoTapp', description: 'GPS-Zeiterfassung und Einsatzverwaltung für Reinigungsunternehmen. Praxisnahe Leitfäden für Betriebsleiter.', heading: 'Zeiterfassung in Reinigungsunternehmen' },
       fr: { title: 'Gestion des présences en entreprise de nettoyage : guide - GeoTapp', description: 'Comment gérer les présences, les équipes et les interventions dans les entreprises de nettoyage avec le pointage GPS.', heading: 'Gestion des présences en entreprise de nettoyage' },
       es: { title: 'Control de presencia en empresas de limpieza: guía - GeoTapp', description: 'Cómo gestionar presencias, turnos e intervenciones en empresas de limpieza con fichaje GPS. Guías prácticas.', heading: 'Control de presencia en empresas de limpieza' },
@@ -92,7 +92,7 @@ const SETTORE_CONFIG: Record<string, {
         },
         {
           h2: 'How GPS time tracking works for cleaning companies',
-          body: 'GPS time tracking lets staff clock in and out directly from their smartphone, with verified location. No fixed hardware needed, it works on any site. Managers see attendance in real time from a dashboard and can export client reports at month end. GeoTapp TimeTracker adds the ability to send photos of completed work and communicate with the coordinator from the same device.',
+          body: 'GPS time tracking lets staff clock in and out directly from their smartphone, with the position recorded at that moment, and only at that moment. No fixed hardware needed, it works on any site. Managers see clock-ins as they arrive and can export client reports at month end. GeoTapp TimeTracker adds proof photos of completed work and communication with the coordinator from the same phone.',
           productLink: true,
         },
         {
@@ -100,7 +100,7 @@ const SETTORE_CONFIG: Record<string, {
           body: 'Not all attendance software is built for distributed site work. Before choosing, check that it supports:',
           listItems: [
             'Smartphone clock-in, no additional hardware required',
-            'GPS location verification at clock-in time',
+            'Position recorded and checked at clock-in, never continuously',
             'Photo attachments to completed jobs',
             'Exportable reports for end clients',
             'Built-in communication between staff and office',
@@ -131,7 +131,7 @@ const SETTORE_CONFIG: Record<string, {
     },
     intro: {
       it: 'Coordinare tecnici sul campo significa sapere quale intervento è stato appena chiuso e cosa è rimasto in sospeso, senza rincorrere nessuno al telefono. Con telefonate e messaggi WhatsApp il quadro è sempre incompleto: gli aggiornamenti arrivano in ritardo, le priorità cambiano senza che l\'ufficio lo sappia e la documentazione per il cliente è sempre un problema. Questi articoli raccolgono le pratiche operative più efficaci per aziende con tecnici sul campo.',
-      en: 'Coordinating field technicians means knowing at any moment who is where, which jobs have just been closed, and what\'s still pending. With phone calls and WhatsApp the picture is always incomplete: updates arrive late, priorities shift without the office knowing, and client documentation is always a last-minute scramble. These guides cover effective operational practices for field service companies.',
+      en: 'Coordinating field technicians means knowing which jobs have just been closed and what is still pending, without chasing anyone by phone. With phone calls and WhatsApp the picture is always incomplete: updates arrive late, priorities shift without the office knowing, and client documentation is always a last-minute scramble. These guides cover effective operational practices for field service companies.',
       de: 'Außendiensttechniker zu koordinieren bedeutet, jederzeit zu wissen, wer wo ist, welche Aufträge gerade abgeschlossen wurden und was noch aussteht. Mit Anrufen und WhatsApp-Nachrichten ist das Bild immer unvollständig. Diese Leitfäden decken bewährte Betriebspraktiken für Außendienstunternehmen ab.',
       fr: 'Coordonner des techniciens terrain signifie savoir à tout moment qui se trouve où, quelles interventions viennent d\'être clôturées et ce qui reste en suspens. Avec les appels et WhatsApp, le tableau est toujours incomplet. Ces guides couvrent les meilleures pratiques pour les entreprises avec techniciens terrain.',
       es: 'Coordinar técnicos de campo significa saber en todo momento quién está dónde, qué intervenciones acaban de cerrarse y qué sigue pendiente. Con llamadas y WhatsApp el panorama siempre es incompleto. Estas guías recogen las mejores prácticas para empresas con técnicos de campo.',
@@ -168,20 +168,20 @@ const SETTORE_CONFIG: Record<string, {
       en: [
         {
           h2: 'The coordination problem for field service companies',
-          body: 'When a technician closes a job and the system doesn\'t update in real time, the office doesn\'t know whether to send backup or close the ticket. When documentation is on paper or via text messages, reconstructing a client\'s history takes hours. Companies with 5–50 field technicians lose on average 2–3 hours a day in phone coordination that could be eliminated entirely.',
+          body: 'When a technician closes a job and the office only finds out at the end of the day, it does not know whether to send backup or close the file. When documentation is on paper or via text messages, reconstructing a client\'s history takes hours, and phone coordination eats into a part of the day that could be recovered.',
         },
         {
-          h2: 'How to manage work orders and field jobs in real time',
-          body: 'A digital job management system lets you assign work orders directly to the technician\'s smartphone, complete with priority, instructions, and client history. The technician closes the job from the app, collects the client\'s signature, and the report is generated automatically, no office visit needed. GeoTapp Flow is built for exactly this: job assignment, real-time tracking, signature collection, and automatic reporting.',
+          h2: 'How to manage work orders and field jobs without phone calls',
+          body: 'A digital job management system lets you assign work orders directly to the technician\'s smartphone, complete with priority, instructions, and client history. The technician works with the GeoTapp TimeTracker app: clocks in, takes proof photos and writes notes, and the report builds itself. From the office, GeoTapp Flow assigns jobs, receives the clock-ins as they arrive and sends the client the sealed report.',
           productLink: true,
         },
         {
           h2: 'What field service management software must support',
           body: 'Before choosing a management tool for your field team, check that it supports:',
           listItems: [
-            'Remote job assignment and real-time modification',
-            'Real-time technician location visibility',
-            'Client signature capture at job completion',
+            'Remote job assignment and changes',
+            'Position recorded only at clock-in, never continuously',
+            'Proof photos linked to the job',
             'Automatic report generation per closed job',
             'Complete job history per client',
           ],
@@ -198,7 +198,7 @@ const SETTORE_CONFIG: Record<string, {
     categoryId: 9,
     labels: {
       it: { title: 'Gestione presenze e documentazione per servizi di sicurezza - GeoTapp', description: 'Come documentare presenze, controlli e anomalie nei servizi di sicurezza, con la posizione solo alle timbrature.', heading: 'Gestione presenze e documentazione nei servizi di sicurezza' },
-      en: { title: 'Attendance tracking and traceability for security services - GeoTapp', description: 'How to manage agents, patrols and documentation in security services with real-time GPS.', heading: 'Attendance tracking for security services' },
+      en: { title: 'Attendance and documentation for security services - GeoTapp', description: 'How to document attendance, checks and incidents in security services, with position recorded only at clock-in.', heading: 'Attendance and documentation in security services' },
       de: { title: 'Anwesenheitsverfolgung für Sicherheitsdienste - GeoTapp', description: 'GPS-Nachverfolgung von Agenten, Runden und Dokumentation für Sicherheitsunternehmen.', heading: 'Anwesenheit und Nachverfolgbarkeit bei Sicherheitsdiensten' },
       fr: { title: 'Gestion des présences et traçabilité pour la sécurité - GeoTapp', description: 'Comment gérer agents, rondes et documentation dans les services de sécurité avec GPS en temps réel.', heading: 'Gestion des présences dans les services de sécurité' },
       es: { title: 'Control de presencia y trazabilidad en servicios de seguridad - GeoTapp', description: 'Cómo gestionar agentes, rondas y documentación en servicios de seguridad con GPS en tiempo real.', heading: 'Control de presencia en servicios de seguridad' },
@@ -211,7 +211,7 @@ const SETTORE_CONFIG: Record<string, {
     },
     intro: {
       it: 'Nelle aziende di sicurezza ogni turno e ogni controllo vanno documentati, e ogni anomalia va segnalata subito. Con telefonate e report cartacei, la centrale operativa ha sempre un quadro parziale e in ritardo. Questi articoli affrontano i temi operativi più rilevanti per responsabili di servizi di sicurezza.',
-      en: 'In security companies every patrol must be documented, every agent must be locatable, and every incident must be reported immediately. With phone-based or paper systems, the control center always has a partial and delayed picture. These guides cover the most relevant operational topics for security service managers.',
+      en: 'In security companies every shift and every check must be documented, and every incident must be reported straight away. With phone calls and paper reports, the control room always has a partial and delayed picture. These guides cover the most relevant operational topics for security service managers.',
       de: 'In Sicherheitsunternehmen muss jede Runde dokumentiert, jeder Agent ortbar sein und jede Anomalie sofort gemeldet werden. Mit telefon- oder papiergestützten Systemen hat die Einsatzzentrale immer ein unvollständiges Bild. Diese Leitfäden behandeln die wichtigsten operativen Themen für Sicherheitsdienstleiter.',
       fr: 'Dans les entreprises de sécurité, chaque ronde doit être documentée, chaque agent doit être localisable et chaque anomalie doit être signalée immédiatement. Avec des systèmes basés sur les appels ou le papier, la centrale a toujours une vision partielle. Ces guides couvrent les thèmes opérationnels essentiels pour les responsables de sécurité.',
       es: 'En las empresas de seguridad cada ronda debe documentarse, cada agente debe ser localizable y cada incidencia debe reportarse de inmediato. Con sistemas basados en llamadas o papel, la central siempre tiene un panorama parcial. Estas guías abordan los temas operativos más relevantes para responsables de seguridad.',
@@ -248,22 +248,22 @@ const SETTORE_CONFIG: Record<string, {
       en: [
         {
           h2: 'The operational challenges of security and surveillance services',
-          body: 'Without a digital system, the control center has no real-time view of whether agents are in the right place, whether a patrol has been completed, or whether an incident has occurred. The end client has no concrete proof of service delivered, and in case of dispute, there is nothing to show. Traceability is not an optional feature: it is the actual product security companies sell to their clients.',
+          body: 'Without a digital system, the control room does not know whether a guard has started the shift at the right post, whether a check has been done or whether an incident has occurred, until someone phones in. The end client has no concrete proof of service, and in case of dispute there is nothing to show. For a security company, being able to document the service is part of the service itself.',
         },
         {
-          h2: 'How agent tracking works in security services',
-          body: 'A GPS tracking system lets the control center see the real-time position of every agent, completed patrols, and reported incidents. Agents log attendance, events, and notes directly from their smartphone, with photos, timestamps, and verified location. GeoTapp TimeTracker is built for this: GPS attendance logging, patrol documentation, and instant communication with the control center.',
+          h2: 'How to document the service without watching the guards',
+          body: 'Guards clock in and out of their post from their smartphone and, at the checkpoints, take a proof photo: each action records the time and position, and nothing is recorded automatically between one action and the next. The control room sees clock-ins as they arrive and receives reports with photos. GeoTapp TimeTracker is built for this: attendance with the position at clock-in, photos at the checkpoints and messages with the control room.',
           productLink: true,
         },
         {
           h2: 'What security service management software must guarantee',
           body: 'When choosing an operational management tool for security services, check that it supports:',
           listItems: [
-            'Real-time GPS location of all agents',
-            'Timestamped logging of every completed patrol',
-            'Incident reporting with photos and geolocation',
-            'Exportable, tamper-evident reports for end clients',
-            'Automatic alerts for non-response or inactivity events',
+            'Clock-in and clock-out with position and time recorded',
+            'Proof photos with time and position at the checkpoints',
+            'Incident reporting with photos and the position at that moment',
+            'Exportable sealed reports for end clients',
+            'An alert if a shift is left open',
           ],
         },
       ],
@@ -277,7 +277,16 @@ const SETTORE_CONFIG: Record<string, {
 };
 
 function stripHtml(html: string): string {
-  return html.replace(/<[^>]*>/g, '').replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#8217;/g, '\u2019').replace(/&#8220;/g, '\u201C').replace(/&#8221;/g, '\u201D').replace(/&nbsp;/g, ' ').trim();
+  return html.replace(/<[^>]*>/g, '').replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#8217;/g, '\u2019').replace(/&#8220;/g, '\u201C').replace(/&#8221;/g, '\u201D').replace(/&nbsp;/g, ' ').replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(Number(n))).replace(/&#x([0-9a-f]+);/gi, (_, n) => String.fromCodePoint(parseInt(n, 16))).trim();
+}
+
+/** Taglia all'ultima parola intera entro `max` caratteri e chiude con i puntini. */
+function cutAtWord(text: string, max: number): string {
+  const clean = text.replace(/\s+/g, ' ').trim();
+  if (clean.length <= max) return clean;
+  const cut = clean.slice(0, max);
+  const lastSpace = cut.lastIndexOf(' ');
+  return `${(lastSpace > max * 0.6 ? cut.slice(0, lastSpace) : cut).trimEnd().replace(/[,;:.\-–]$/, '')}…`;
 }
 
 // ?categories= sul blog risponde sempre vuoto e la categoria qui e' quella ITALIANA:
@@ -287,7 +296,7 @@ async function fetchAllPostsForCategory(locale: string, categoryId: number) {
   return posts.map((p) => ({
     id: p.id,
     title: stripHtml(p.title?.rendered ?? ''),
-    excerpt: stripHtml(p.excerpt?.rendered ?? '').slice(0, 180),
+    excerpt: cutAtWord(stripHtml(p.excerpt?.rendered ?? ''), 180),
     url: blogPostPath(p.link, p.slug),
     date: p.date,
   }));

@@ -94,7 +94,7 @@ export const malta: SchedaPaese = {
       risposta: 'si',
       dettaglio: {
         it: "Ogni misura di monitoraggio deve essere strettamente necessaria e proporzionata, scegliendo il mezzo meno invasivo, e i lavoratori vanno informati in modo chiaro prima dell'inizio del monitoraggio, mai dopo.",
-        en: 'every monitoring measure must be strictly necessary and proportionate, choosing the least intrusive means, and workers must be clearly informed before the monitoring begins, never afterwards.',
+        en: 'Every monitoring measure must be strictly necessary and proportionate, choosing the least intrusive means, and workers must be clearly informed before the monitoring begins, never afterwards.',
         de: 'Jede Überwachungsmaßnahme muss streng erforderlich und verhältnismäßig sein, wobei das am wenigsten eingreifende Mittel zu wählen ist, und die Beschäftigten sind vor Beginn der Überwachung klar zu informieren, niemals danach.',
         fr: "toute mesure de surveillance doit être strictement nécessaire et proportionnée, en choisissant le moyen le moins intrusif, et les travailleurs doivent être clairement informes avant le début de la surveillance, jamais après.",
         es: 'toda medida de monitorización debe ser estrictamente necesaria y proporcionada, eligiendo el medio menos invasivo, y los trabajadores deben ser informados con claridad antes del inicio de la monitorización, nunca después.',
@@ -114,7 +114,7 @@ export const malta: SchedaPaese = {
       risposta: 'no',
       dettaglio: {
         it: "Non serve un'autorizzazione preventiva dell'IDPC; il titolare si autovaluta e consulta l'IDPC solo se una DPIA evidenzia un rischio residuo elevato.",
-        en: 'no prior authorisation from the IDPC is required; the controller self-assesses and consults the IDPC only if a DPIA reveals a high residual risk.',
+        en: 'No prior authorisation from the IDPC is required; the controller self-assesses and consults the IDPC only if a DPIA reveals a high residual risk.',
         de: 'Es ist keine vorherige Genehmigung des IDPC erforderlich; der Verantwortliche nimmt eine Selbstbewertung vor und konsultiert den IDPC nur, wenn eine DSFA ein hohes Restrisiko ergibt.',
         fr: "aucune autorisation préalable de l'IDPC n'est requise ; le responsable du traitement procède a une auto-évaluation et ne consulte l'IDPC que si une AIPD révèle un risque résiduel eleve.",
         es: 'no se requiere autorización previa del IDPC; el responsable se autoevalua y consulta al IDPC solo si una EIPD revela un riesgo residual elevado.',
@@ -134,7 +134,7 @@ export const malta: SchedaPaese = {
       risposta: 'si',
       dettaglio: {
         it: "Il consenso non è di norma valido nel rapporto di lavoro per lo squilibrio di potere, quindi serve un'altra base giuridica dell'art. 6 GDPR: l'IDPC cita l'interesse legittimo, che richiede un test in tre parti (interesse legittimo, stretta necessità, bilanciamento) e ha una soglia alta.",
-        en: 'consent is not normally valid in the employment relationship because of the imbalance of power, so another legal basis under Article 6 GDPR is needed: the IDPC points to legitimate interest, which requires a three-part test (legitimate interest, strict necessity, balancing) and has a high threshold.',
+        en: 'Consent is not normally valid in the employment relationship because of the imbalance of power, so another legal basis under Article 6 GDPR is needed: the IDPC points to legitimate interest, which requires a three-part test (legitimate interest, strict necessity, balancing) and has a high threshold.',
         de: 'Die Einwilligung ist im Arbeitsverhältnis wegen des Machtungleichgewichts in der Regel nicht gültig, es braucht also eine andere Rechtsgrundlage nach Artikel 6 DSGVO: der IDPC nennt das berechtigte Interesse, das einen dreistufigen Test (berechtigtes Interesse, strikte Erforderlichkeit, Abwägung) verlangt und eine hohe Schwelle hat.',
         fr: "le consentement n'est généralement pas valable dans la relation de travail en raison du déséquilibre de pouvoir, il faut donc une autre base juridique de l'article 6 RGPD : l'IDPC cite l'intérêt légitime, qui exige un test en trois étapes (intérêt légitime, stricte nécessité, mise en balance) et présente un seuil élevé.",
         es: 'el consentimiento no suele ser válido en la relación laboral debido al desequilibrio de poder, por lo que hace falta otra base jurídica del artículo 6 RGPD: la IDPC cita el interés legítimo, que exige una prueba en tres pasos (interés legítimo, estricta necesidad, ponderación) y tiene un umbral alto.',
@@ -154,7 +154,7 @@ export const malta: SchedaPaese = {
       risposta: 'si',
       dettaglio: {
         it: 'Va raccolto solo il minimo dei dati necessari, con la misura meno invasiva. L\'IDPC lo afferma per la sorveglianza continua con webcam (molto invasiva, di norma non giustificabile come necessaria e proporzionata) e nella decisione CDP/COMP/579/2025 per la ripresa continua di un\'area di riposo; sul GPS non ha una guida specifica, quindi per il tracciamento continuo il principio si applica per analogia.',
-        en: 'only the minimum of necessary data may be collected, using the least invasive measure. The IDPC says so for continuous webcam surveillance (highly invasive, in most cases not justifiable as necessary and proportionate) and, in decision CDP/COMP/579/2025, for continuous recording of a rest area; it has no specific guidance on GPS, so for continuous tracking the principle applies by analogy.',
+        en: 'Only the minimum of necessary data may be collected, using the least invasive measure. The IDPC says so for continuous webcam surveillance (highly invasive, in most cases not justifiable as necessary and proportionate) and, in decision CDP/COMP/579/2025, for continuous recording of a rest area; it has no specific guidance on GPS, so for continuous tracking the principle applies by analogy.',
         de: 'Es darf nur das Minimum der erforderlichen Daten erhoben werden, mit der am wenigsten eingreifenden Maßnahme. Der IDPC sagt dies für die kontinuierliche Webcam-Überwachung (stark eingreifend, meist nicht als erforderlich und verhältnismäßig zu rechtfertigen) und in der Entscheidung CDP/COMP/579/2025 für die dauerhafte Aufzeichnung eines Ruhebereichs; zu GPS gibt es keine spezifische Leitlinie, für die kontinuierliche Ortung gilt der Grundsatz daher entsprechend.',
         fr: 'seul le minimum de données nécessaires peut être collecté, avec la mesure la moins intrusive. L\'IDPC le dit pour la surveillance continue par webcam (très intrusive, le plus souvent non justifiable comme nécessaire et proportionnée) et, dans la décision CDP/COMP/579/2025, pour l\'enregistrement continu d\'une zone de repos ; il n\'a pas de guide spécifique sur le GPS, le principe s\'applique donc par analogie au suivi continu.',
         es: 'solo puede recogerse el mínimo de datos necesarios, con la medida menos invasiva. La IDPC lo afirma para la vigilancia continua con webcam (muy invasiva, en la mayoría de los casos no justificable como necesaria y proporcionada) y, en la decisión CDP/COMP/579/2025, para la grabación continua de una zona de descanso; no tiene una guía específica sobre GPS, por lo que el principio se aplica por analogía al seguimiento continuo.',
@@ -174,7 +174,7 @@ export const malta: SchedaPaese = {
       risposta: 'si',
       dettaglio: {
         it: "La lista IDPC include i trattamenti che comportano l'uso di dati di geolocalizzazione e la valutazione del rendimento dei dipendenti tra quelli che richiedono una valutazione d'impatto.",
-        en: 'the IDPC list includes processing involving the use of geolocation data and the evaluation of employee performance among those requiring an impact assessment.',
+        en: 'The IDPC list includes processing involving the use of geolocation data and the evaluation of employee performance among those requiring an impact assessment.',
         de: 'Die IDPC-Liste zählt Verarbeitungen, die die Nutzung von Standortdaten und die Bewertung der Arbeitsleistung der Beschäftigten umfassen, zu denjenigen, die eine Folgenabschätzung erfordern.',
         fr: "la liste de l'IDPC inclut, parmi les traitements nécessitant une analyse d'impact, ceux qui impliquent l'utilisation de données de géolocalisation et l'évaluation du rendement des employés.",
         es: 'la lista del IDPC incluye, entre los tratamientos que requieren una evaluación de impacto, los que implican el uso de datos de geolocalizacion y la evaluación del rendimiento de los empleados.',

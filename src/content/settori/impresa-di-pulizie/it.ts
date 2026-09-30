@@ -65,7 +65,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Il report è pronto automaticamente',
-        desc: 'A fine turno il sistema genera un report sigillato con GPS, foto e firma digitale. Invialo al cliente, è verificabile in autonomia.',
+        desc: 'A fine turno il sistema genera un report sigillato con posizione, foto e sigillo crittografico. Invialo al cliente, è verificabile in autonomia.',
       },
     ],
   },

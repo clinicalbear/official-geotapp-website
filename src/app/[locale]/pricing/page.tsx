@@ -153,9 +153,11 @@ function buildPricingFAQ(locale: AppLocale): Record<string, object> {
     en: {
       '@context': 'https://schema.org', '@type': 'FAQPage',
       mainEntity: [
-        { '@type': 'Question', name: 'Does GeoTapp have a free trial?', acceptedAnswer: { '@type': 'Answer', text: `Yes. GeoTapp offers a 14-day free trial with no credit card required. Paid plans start from ${monthlyRate} per operator per month (TimeTracker) and include sealed reports, multi-site management and Flow sync.` } },
-        { '@type': 'Question', name: 'Can I change plans at any time?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. You can switch plans at any time from the management panel. There are no penalties for changing or cancelling.' } },
-        { '@type': 'Question', name: 'Are there any hidden fees?', acceptedAnswer: { '@type': 'Answer', text: 'No. The listed price includes all features of the chosen plan. There are no additional costs for support, updates or your clients using GeoTapp Verifier.' } },
+        { '@type': 'Question', name: 'Does GeoTapp have a free trial?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. The trial lasts 14 days and does not ask for a credit card.' } },
+        { '@type': 'Question', name: 'How much does GeoTapp cost?', acceptedAnswer: { '@type': 'Answer', text: `GeoTapp Flow, the web panel, costs €39 a month on the Solo plan, €99 on Team and €199 on Business (€390, €990 and €1,990 if you pay for the year in one go). TimeTracker app seats are added separately: ${monthlyRate} per operator per month up to 25, €2.50 from the 26th. Prices exclude VAT.` } },
+        { '@type': 'Question', name: 'How much for a crew of 5 operators?', acceptedAnswer: { '@type': 'Answer', text: `On top of the Flow plan you choose, 5 TimeTracker seats come to ${fiveOpsMonthly} a month, or ${fiveOpsAnnual} a year if you pay for the whole year. There are no activation fees.` } },
+        { '@type': 'Question', name: 'Is there a minimum term?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. The subscription lasts at least 12 months, payable in one annual payment or in monthly instalments. You can move up to a higher plan whenever you like from the management panel.' } },
+        { '@type': 'Question', name: 'Are there any hidden fees?', acceptedAnswer: { '@type': 'Answer', text: 'No. Support and updates are included, and GeoTapp Verifier, which your clients use to check reports, is free.' } },
       ],
     },
   };

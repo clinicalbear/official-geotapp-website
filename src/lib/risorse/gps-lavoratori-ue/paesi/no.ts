@@ -190,7 +190,7 @@ export const norvegia: SchedaPaese = {
       risposta: 'si',
       dettaglio: {
         it: 'Il GPS sui veicoli è normalmente una misura di controllo: lo scopo va specificato, e i dati raccolti non possono essere riusati per valutare il rendimento dei dipendenti.',
-        en: 'GPS on vehicles is normally a control measure: the purpose must be specified, and the collected data cannot be reused to assess employees performance.',
+        en: 'GPS on vehicles is normally a control measure: the purpose must be specified, and the collected data cannot be reused to assess employees\' performance.',
         de: 'GPS in Fahrzeugen ist normalerweise eine Kontrollmaßnahme: Der Zweck muss angegeben werden, und die erhobenen Daten dürfen nicht zur Bewertung der Leistung der Arbeitnehmer weiterverwendet werden.',
         fr: 'Le GPS sur les véhicules est normalement une mesure de contrôle: la finalité doit être precisee, et les données collectées ne peuvent pas être reutilisees pour évaluer le rendement des salaries.',
         es: 'El GPS en los vehículos es normalmente una medida de control: la finalidad debe especificarse, y los datos recopilados no pueden reutilizarse para evaluar el rendimiento de los empleados.',

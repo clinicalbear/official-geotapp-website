@@ -9,8 +9,13 @@
 
 import type { AppLocale } from '@/lib/i18n/config';
 import type { TestoLoc } from './types';
+import { TESTI_EN } from './traduzioni-en';
 
 export function loc(testo: TestoLoc, locale: AppLocale): string {
-  if (typeof testo === 'string') return testo;
+  if (typeof testo === 'string') {
+    // Stringa semplice = italiano. Per le lingue inglesi i titoli delle fonti e i
+    // nomi dei contatti hanno la resa in ./traduzioni-en.ts.
+    return locale === 'en' || locale.startsWith('en-') ? (TESTI_EN[testo] ?? testo) : testo;
+  }
   return testo[locale] ?? testo.en ?? testo.it;
 }

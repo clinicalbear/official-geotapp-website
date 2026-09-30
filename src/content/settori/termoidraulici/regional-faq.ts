@@ -12,11 +12,11 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   es: 'Cumplimiento normativo en España',
   pt: 'Conformidade em Portugal',
   nl: 'Compliance in Nederland',
-  'en-us': 'Regional compliance',
-  'en-gb': 'Regional compliance',
-  'en-au': 'Regional compliance',
-  'en-ca': 'Regional compliance',
-  'en-ie': 'Regional compliance',
+  'en-us': 'Regional rules and records',
+  'en-gb': 'Regional rules and records',
+  'en-au': 'Regional rules and records',
+  'en-ca': 'Regional rules and records',
+  'en-ie': 'Regional rules and records',
 };
 
 export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
@@ -106,72 +106,72 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   ],
   'en-us': [
     {
-      q: 'EPA Section 608 + HVAC technician certification tracking?',
-      a: 'Per-worker EPA Type I/II/III/Universal certification, NATE certification and the manufacturer-authorised technician records per system.',
+      q: 'EPA Section 608 and HVAC technician certification?',
+      a: 'GeoTapp does not verify or track EPA, NATE or manufacturer certifications, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
     {
-      q: 'State HVAC contractor licensing per jurisdiction?',
-      a: 'Per-state HVAC licence number (CA C-20, TX TDLR, FL CMC, etc.), bond and insurance evidence, with the annual renewal workflow.',
+      q: 'State HVAC contractor licensing?',
+      a: 'GeoTapp does not verify or track state HVAC licences, bonds, insurance or renewals, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
     {
-      q: 'Energy Star/AHRI commissioning records?',
-      a: 'Per-system commissioning record aligned to Energy Star and AHRI standards, with the technician sign-off and customer acknowledgement.',
+      q: 'Energy Star and AHRI commissioning?',
+      a: 'GeoTapp does not prepare Energy Star or AHRI commissioning records. It records the time, position and photos of each job, which you can attach to your own commissioning documents.',
     },
   ],
   'en-gb': [
     {
-      q: 'Gas Safe Register and competence-of-engineer tracking?',
-      a: 'Per-worker Gas Safe ID, appliance categories, expiry dates and the ACS reassessment workflow at 60/30/14 days before expiry.',
+      q: 'Gas Safe registration?',
+      a: 'GeoTapp does not verify or track Gas Safe registration, appliance categories or ACS reassessments, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
     {
-      q: 'F-Gas Regulation Cat I-IV certification?',
-      a: 'Per-worker F-Gas category certification, refrigerant-recovery log per system and annual report to the Environment Agency.',
+      q: 'F-Gas Regulation certification?',
+      a: 'GeoTapp does not verify or track F-Gas certificates, refrigerant logs or annual reports, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
     {
-      q: 'MCS (Microgeneration Certification Scheme) heat-pump installer trail?',
-      a: 'Per-worker MCS heat-pump installer accreditation, annual ongoing assessment record and the MCS installation reference per job.',
+      q: 'MCS heat-pump installer accreditation?',
+      a: 'GeoTapp does not verify or track MCS accreditation, annual assessments or installation references, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
   ],
   'en-au': [
     {
-      q: 'ARC Refrigerant Handling Licence per technician?',
-      a: 'Per-worker ARC RHL number, scope endorsement and refresher dates, with the per-system refrigerant-recovery log.',
+      q: 'ARC refrigerant-handling licences?',
+      a: 'GeoTapp does not verify or track ARC licences or refrigerant-recovery records, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
     {
-      q: 'AS 5601 gas installation compliance?',
-      a: 'Per-job Type A / Type B gas installation record with the gas-fitter licence number and AS 5601 compliance certificate per worker.',
+      q: 'AS 5601 gas installation records?',
+      a: 'GeoTapp does not verify or track gas-fitter licences or AS 5601 compliance certificates, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
     {
-      q: 'AS/NZS 3500 plumbing-overlap compliance?',
-      a: 'Where work overlaps plumbing scope, per-installation AS/NZS 3500 record and the supervising-plumber chain captured per shift.',
+      q: 'AS/NZS 3500 plumbing overlap?',
+      a: 'GeoTapp does not verify or track AS/NZS 3500 records or supervising-plumber chains, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
   ],
   'en-ca': [
     {
-      q: 'Provincial gas-fitter ticket and renewal tracking?',
-      a: 'Per-worker provincial gas-fitter classification (Class A/B), the apprenticeship/journeyperson chain and the annual renewal workflow.',
+      q: 'Provincial gas-fitter tickets?',
+      a: 'GeoTapp does not verify or track gas-fitter classifications, apprenticeship chains or renewals, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
     {
-      q: 'TSSA Ontario fuels safety record per system?',
-      a: 'Per-system TSSA inspection record, with the technician qualification and the customer acknowledgement archive.',
+      q: 'TSSA Ontario fuels safety records?',
+      a: 'GeoTapp does not verify or track TSSA inspection records or technician qualifications, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
     {
-      q: 'CSA B149 natural-gas / propane code compliance?',
-      a: 'Per-installation CSA B149.1/.2 compliance record, with the worker\'s authorisation and refresher dates.',
+      q: 'CSA B149 gas code?',
+      a: 'GeoTapp does not verify or track CSA B149.1 or B149.2 compliance, worker authorisations or refresher dates, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
   ],
   'en-ie': [
     {
-      q: 'RGII Domestic and Non-Domestic Gas Installer compliance?',
-      a: 'Per-worker RGII registration, scope of work (Domestic, Non-Domestic, Commercial) and the annual ongoing-assessment record.',
+      q: 'RGII gas installer registration?',
+      a: 'GeoTapp does not verify or track RGII registration, scope of work or annual assessments, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
     {
-      q: 'F-Gas SI 656/2011 record-keeping?',
-      a: 'Per-worker F-Gas category, per-system refrigerant log and annual report to EPA Ireland, with the per-installation seven-year retention.',
+      q: 'F-Gas record-keeping?',
+      a: 'GeoTapp does not verify or track F-Gas categories, refrigerant logs or annual reports, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
     {
-      q: 'Construction SEO heat-and-plumbing rate compliance?',
-      a: 'Where applicable, per-worker SEO craft-category rate, travel-time payment and CWPS contribution evidence per shift.',
+      q: 'Construction SEO rates for heating and plumbing?',
+      a: 'GeoTapp does not apply the Construction Sectoral Employment Order rates, travel-time payments or pension contributions and does not calculate entitlements under it. It records start, breaks and finish with position and time, per worker and per job, and exports them to Excel or CSV for your payroll provider or adviser, who apply the rules.',
     },
   ],
 };

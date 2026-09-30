@@ -19,10 +19,10 @@ export const TRUST_COPY: Record<string, TrustCopy> = {
     { title: 'Verifica indipendente', sub: 'Il cliente controlla, senza account' },
   ], sectors: 'Pulizie · Edilizia · Sicurezza · Installatori · Manutenzione · Impianti' },
   en: { headline: 'Proof of field work, verifiable by anyone', claims: [
-    { title: 'Tamper-evident reports', sub: 'Cryptographic seal on every job' },
+    { title: 'Every later change shows', sub: 'Cryptographic seal on every report' },
     { title: 'Real GPS clock-in', sub: 'Location and time logged on site' },
     { title: 'Independent verification', sub: 'The client checks, no account needed' },
-  ], sectors: 'Cleaning · Construction · Security · Installers · Maintenance · HVAC' },
+  ], sectors: 'Cleaning · Construction · Security · Installers · Maintenance · Mechanical & electrical' },
   de: { headline: 'Nachweis der Außendienstarbeit, von jedem überprüfbar', claims: [
     { title: 'Jede Manipulation ist erkennbar', sub: 'Kryptografisches Siegel auf jedem Einsatz' },
     { title: 'Echte GPS-Erfassung', sub: 'Ort und Zeit vor Ort erfasst' },

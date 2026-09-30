@@ -276,7 +276,7 @@ export const lussemburgo: SchedaPaese = {
   sanzioneMax: {
     importo: {
       it: '2.800 €',
-      en: '2,800 €',
+      en: 'EUR 2,800',
       de: '2.800 €',
       fr: '2 800 €',
       es: '2.800 €',

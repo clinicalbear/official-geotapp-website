@@ -7,7 +7,7 @@ import SettoriPage from '../../settori/page';
 
 const SETTORI_META: Record<string, { title: string; description: string }> = {
   it: { title: 'Settori - Documentazione verificabile | GeoTapp', description: 'Da pulizie a sicurezza: ogni intervento diventa prova verificabile con GPS e foto. Report sigillati da mostrare quando qualcuno contesta.' },
-  en: { title: 'Sectors - Verifiable proof of work | GeoTapp', description: 'From cleaning to security: every field job becomes verifiable proof with GPS and photos. Sealed reports, zero disputes.' },
+  en: { title: 'Sectors - Verifiable proof of work | GeoTapp', description: 'From cleaning to security: every field job becomes verifiable proof with GPS and photos. Sealed reports to show when someone disputes the work.' },
   de: { title: 'Branchen - Verifizierbare Nachweise | GeoTapp', description: 'Von Reinigung bis Sicherheit: jeder Außendiensteinsatz wird mit GPS und Fotos verifizierbar. Versiegelte Berichte.' },
   fr: { title: 'Secteurs - Preuves vérifiables | GeoTapp', description: 'Du nettoyage à la sécurité : chaque intervention devient preuve vérifiable avec GPS et photos. Rapports scellés, zéro litige.' },
   es: { title: 'Sectores - Pruebas verificables | GeoTapp', description: 'De limpieza a seguridad: cada intervención se vuelve prueba verificable con GPS y fotos. Informes sellados, cero disputas.' },

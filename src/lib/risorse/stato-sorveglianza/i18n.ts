@@ -69,7 +69,7 @@ const it: StatoStrings = {
 const en: StatoStrings = {
   kicker: 'Resources',
   nomeBreve: 'Worker monitoring by the numbers',
-  h1: 'European enforcement on worker monitoring, by the numbers',
+  h1: 'Worker monitoring in Europe, by the numbers',
   lede: 'What the data protection authorities’ rulings on location tracking, camera surveillance and attendance say when you line them up. Every number is computed from the register, and every row of that register links to the official document.',
   avvertenza: 'A warning before the numbers. This counts the rulings authorities PUBLISH, not the ones they issue: Spain puts every resolution online, Germany almost none. So it is not a ranking of where workers are watched most, and that is why there is no per-country chart here. It is a picture of what is public and verifiable, nothing more.',
   tProvvedimenti: 'rulings',
@@ -78,7 +78,7 @@ const en: StatoStrings = {
   tArco: 'time span',
   tSanzioniNota: (n) => `across ${n} rulings with the amount written out`,
   gAnniTitolo: 'Rulings per year',
-  gAnniNota: 'Published rulings on worker monitoring have grown year on year since 2020.',
+  gAnniNota: 'Published rulings on worker monitoring have increased since 2020, with a single dip in 2023.',
   inCorso: 'year in progress',
   gTemiTitolo: 'What they are about',
   gTemiNota: 'A ruling can touch several topics, so the total is higher than the count.',

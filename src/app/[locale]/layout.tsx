@@ -61,18 +61,17 @@ const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
   },
   en: {
     description:
-      'GeoTapp generates verifiable proof of field work: sealed reports with real GPS data, timestamped photo evidence and tamper-evident documentation anyone can verify independently. GDPR-compliant SaaS for companies with mobile operators.',
+      'GeoTapp is software for proving field work: at every clock-in it records location and time, collects photo proof and closes everything in a sealed report that the client can verify on their own. Location is taken only when the worker clocks in, never continuously.',
     featureList: [
-      'Tamper-evident work reports, independently verifiable by anyone',
-      'Photo evidence linked to GPS timestamp and job',
-      'Job documentation: any modification is detectable',
-      'Work proof: objective evidence for every field intervention',
-      'GPS-based verifiable time tracking',
-      'Job and technical intervention management',
-      'GDPR compliant, no continuous tracking',
-      'Mobile app for Android and iOS (Flutter)',
+      'Sealed reports: any later change is detectable, and anyone can verify them without an account',
+      'Photo proof linked to time, location and job',
+      'Clock-in with location at start, breaks and end of shift',
+      'No continuous tracking: nothing is recorded automatically between one clock-in and the next',
+      'Management of jobs, teams and interventions from the office (GeoTapp Flow, web)',
+      'Native app for field operators on Android and iOS (GeoTapp TimeTracker)',
+      'Free verifier, also offline (GeoTapp Verifier)',
     ],
-    offersDescription: '14-day free trial, paid plans from {price}/operator/month via Stripe',
+    offersDescription: '14-day free trial, no card. Then a GeoTapp Flow subscription plus TimeTracker seats from {price} per operator per month, 12-month minimum term',
   },
   de: {
     description:

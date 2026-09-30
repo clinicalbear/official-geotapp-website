@@ -3,7 +3,7 @@ import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
 
 const TRIAL_META: Record<string, { title: string; description: string }> = {
   it: { title: 'Prova GeoTapp gratis per 14 giorni | GeoTapp', description: 'Prova GeoTapp gratis per 14 giorni, senza carta di credito: timbrature con posizione, foto di prova e report che il cliente verifica da solo, dal primo giorno.' },
-  en: { title: 'Start Your Free 14-Day Trial - GeoTapp', description: 'Try GeoTapp free for 14 days, no credit card required. Manage attendance, field jobs and clients from day one.' },
+  en: { title: 'Try GeoTapp free for 14 days | GeoTapp', description: 'Try GeoTapp free for 14 days, no credit card required: clock-ins with location, proof photos and reports the client verifies alone, from day one.' },
   de: { title: 'Kostenlosen 14-Tage-Test starten - GeoTapp', description: 'Testen Sie GeoTapp 14 Tage lang kostenlos, ohne Kreditkarte. Verwalten Sie Anwesenheit, Einsätze und Kunden ab dem ersten Tag.' },
   nl: { title: 'Start uw gratis proefperiode van 14 dagen - GeoTapp', description: 'Probeer GeoTapp 14 dagen gratis, geen creditcard vereist. Beheer aanwezigheid, opdrachten en klanten vanaf dag één.' },
   fr: { title: 'Commencez votre essai gratuit de 14 jours - GeoTapp', description: 'Essayez GeoTapp gratuitement pendant 14 jours, sans carte de crédit. Gérez présences, interventions et clients dès le premier jour.' },

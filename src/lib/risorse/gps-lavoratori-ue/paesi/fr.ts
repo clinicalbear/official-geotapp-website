@@ -146,7 +146,7 @@ export const francia: SchedaPaese = {
       risposta: 'si',
       dettaglio: {
         it: 'Nessun dato può essere raccolto da un dispositivo non portato preventivamente a conoscenza del lavoratore; ognuno va informato su titolare, finalità, destinatari e diritti.',
-        en: 'No data may be collected from a device not brought to the worker s knowledge in advance; each worker must be informed of the controller, the purposes, the recipients and their rights.',
+        en: 'No data may be collected from a device not brought to the worker\'s knowledge in advance; each worker must be informed of the controller, the purposes, the recipients and their rights.',
         de: 'Es dürfen keine Daten von einem Gerät erhoben werden, das dem Beschäftigten nicht vorab zur Kenntnis gebracht wurde; jeder ist über den Verantwortlichen, die Zwecke, die Empfänger und seine Rechte zu informieren.',
         fr: "Aucune donnée ne peut être collectée par un dispositif non porte préalablement a la connaissance du salarie; chacun doit être informe du responsable, des finalités, des destinataires et de ses droits.",
         es: 'No se puede recoger ningún dato mediante un dispositivo que no se haya puesto previamente en conocimiento del trabajador; cada uno debe ser informado del responsable, las finalidades, los destinatarios y sus derechos.',

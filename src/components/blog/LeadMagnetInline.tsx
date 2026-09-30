@@ -61,7 +61,7 @@ export const LEAD_MAGNETS: Record<string, LeadMagnetAsset> = {
       },
       en: {
         title: 'Download the free GPS privacy notice template for the United Kingdom',
-        desc: 'Employee geolocation privacy notice template, compliant with GDPR Art. 13, including the country’s legal basis and supervisory authority. Fill in the blank fields and have it checked by your advisor.',
+        desc: 'Employee geolocation privacy notice template, built on the content of GDPR Art. 13, including the country’s legal basis and supervisory authority. Fill in the blank fields and have it checked by your advisor.',
         download: 'Download the template (PDF)',
         newsletterPrompt: 'Want the next practical guides on GPS and field-team management too? Leave your email (optional).',
         placeholder: 'Your email',

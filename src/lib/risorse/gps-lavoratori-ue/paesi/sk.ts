@@ -99,7 +99,7 @@ export const slovacchia: SchedaPaese = {
     {
       voce: {
         it: 'Discussione coi rappresentanti dei lavoratori su portata, modalità e durata del controllo, e informazione preventiva (Zákonník práce art. 13 par. 4)',
-        en: 'Discussion with the workers representatives on the scope, manner and duration of the monitoring, and prior information (Zakonnik prace art. 13 par. 4)',
+        en: 'Discussion with the workers\' representatives on the scope, manner and duration of the monitoring, and prior information (Zakonnik prace art. 13 par. 4)',
         de: 'Erörterung mit den Arbeitnehmervertretern über Umfang, Art und Dauer der Kontrolle sowie vorherige Information (Zakonnik prace Art. 13 Abs. 4)',
         fr: "Discussion avec les représentants des travailleurs sur la portée, les modalités et la durée du contrôle, et information préalable (Zakonnik prace art. 13 par. 4)",
         es: 'Discusión con los representantes de los trabajadores sobre el alcance, la forma y la duración del control, e información previa (Zakonnik prace art. 13 par. 4)',
@@ -108,7 +108,7 @@ export const slovacchia: SchedaPaese = {
       risposta: 'dipende',
       dettaglio: {
         it: "Se introduce un meccanismo di controllo, il datore deve discutere con i rappresentanti dei lavoratori portata, modalità e durata del controllo e informarne i lavoratori. La discussione coi rappresentanti vale dove esistono; l'informazione ai lavoratori vale sempre.",
-        en: 'If the employer introduces a monitoring mechanism, it must discuss with the workers representatives the scope, manner and duration of the monitoring and inform the workers about it. The discussion with the representatives applies where they exist; the information to the workers always applies.',
+        en: 'If the employer introduces a monitoring mechanism, it must discuss with the workers\' representatives the scope, manner and duration of the monitoring and inform the workers about it. The discussion with the representatives applies where they exist; the information to the workers always applies.',
         de: 'Führt der Arbeitgeber einen Kontrollmechanismus ein, muss er Umfang, Art und Dauer der Kontrolle mit den Arbeitnehmervertretern erörtern und die Arbeitnehmer darüber informieren. Die Erörterung mit den Vertretern gilt dort, wo solche vorhanden sind; die Information der Arbeitnehmer gilt immer.',
         fr: "Si l'employeur introduit un mécanisme de contrôle, il doit discuter avec les représentants des travailleurs de la portée, des modalités et de la durée du contrôle et en informer les travailleurs. La discussion avec les représentants vaut la ou ils existent ; l'information des travailleurs vaut toujours.",
         es: 'Si el empleador introduce un mecanismo de control, debe discutir con los representantes de los trabajadores el alcance, la forma y la duración del control e informar de ello a los trabajadores. La discusión con los representantes vale donde existen; la información a los trabajadores vale siempre.',
@@ -214,7 +214,7 @@ export const slovacchia: SchedaPaese = {
       passo: 2,
       descrizione: {
         it: 'Discuti con i rappresentanti dei lavoratori portata, modalità e durata del controllo, e informa i lavoratori in anticipo.',
-        en: 'Discuss with the workers representatives the scope, manner and duration of the monitoring, and inform the workers in advance.',
+        en: 'Discuss with the workers\' representatives the scope, manner and duration of the monitoring, and inform the workers in advance.',
         de: 'Erörtere mit den Arbeitnehmervertretern Umfang, Art und Dauer der Kontrolle und informiere die Arbeitnehmer im Voraus.',
         fr: "Discutez avec les représentants des travailleurs de la portée, des modalités et de la durée du contrôle, et informez les travailleurs a l'avance.",
         es: 'Discute con los representantes de los trabajadores el alcance, la forma y la duración del control, e informa a los trabajadores con antelación.',

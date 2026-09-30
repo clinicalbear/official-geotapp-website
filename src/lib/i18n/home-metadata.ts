@@ -50,7 +50,7 @@ export const HOME_META: Record<string, { title: string; description: string }> =
   },
   en: {
     title: 'GPS field service software: prove every visit | GeoTapp',
-    description: 'Client claims the job was not done? GeoTapp logs GPS, timestamps, photos and tamper-evident reports. Prove every visit and get paid without argument.',
+    description: 'Software for field crews: at every clock-in GeoTapp records location, times and photos and seals them in a report the client verifies alone.',
   },
   de: {
     title: 'GPS-Software Außendienst: Einsätze belegen | GeoTapp',

@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     template: '%s | GeoTapp',
   },
   description:
-    'GeoTapp: sealed field work reports with GPS-tagged timestamps and live-camera photo evidence. Sessions are locked after closing, and the seal can be verified independently by anyone. GDPR compliant.',
+    'GeoTapp: software for proving field work. Location and time recorded at each clock-in, proof photos, and sealed reports that the client verifies alone. Location is recorded only when the worker clocks in, never continuously.',
   // No global canonical, each page sets its own via generateMetadata.
   // A hardcoded canonical:'/' here would poison every locale page as a
   // duplicate of the homepage and prevent Google from indexing them.
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     'app presenze GPS',
     'GPS Zeiterfassung',
     'suivi GPS terrain',
-    'GDPR compliant',
+    'proof of work',
     'field work verification',
   ],
   openGraph: {
@@ -42,14 +42,14 @@ export const metadata: Metadata = {
     siteName: 'GeoTapp',
     title: 'GeoTapp - Field Work Verification Platform',
     description:
-      'GPS-tagged attendance, sealed reports and live-camera photo evidence for field service companies. GDPR compliant. Fewer disputes.',
+      'Clock-in with location, proof photos and sealed reports for field service companies. Fewer disputes.',
     images: [{ url: '/og-default.png', width: 1200, height: 630, alt: 'GeoTapp - GPS Field Work Verification Platform' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'GeoTapp - Field Work Verification Platform',
     description:
-      'GPS-tagged attendance, sealed reports and live-camera photo evidence for field service companies. GDPR compliant. Fewer disputes.',
+      'Clock-in with location, proof photos and sealed reports for field service companies. Fewer disputes.',
     images: ['/logoFlow.webp'],
   },
   icons: {

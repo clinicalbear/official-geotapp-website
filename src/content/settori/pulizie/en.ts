@@ -6,13 +6,13 @@ const content: SettoreContent = {
     // sola: cercano "gps tracking cleaners" e la pagina parlava solo di
     // "cleaning company". 70 impressioni a posizione 68.
     title: 'GPS Tracking for Cleaners: Proof of Every Job Done',
-    description: 'GPS tracking for cleaners and cleaning companies: your operatives clock in on site, the office sees the hours straight away, with photo proof of the work.',
+    description: 'GPS clock-ins for cleaners and cleaning companies: your operatives clock in on site, the office sees each clock-in as it arrives, with photo proof of the work.',
   },
   hero: {
     badge: 'GPS tracking for cleaners, cleaning companies and FM contractors',
     h1_line1: 'Cleaning company software:',
-    h1_line2: 'shift records, photo proof and verified hours, every site',
-    subtitle: 'GeoTapp connects Flow + TimeTracker for teams spread across multiple buildings and floors. Operatives clock in with GPS-verified smartphones; the office sees who cleaned what, where and when, with photo evidence attached. Data ready to answer any dispute, full NMW and Agency Workers Regulations compliance.',
+    h1_line2: 'shift records, photo proof and recorded hours, every site',
+    subtitle: 'GeoTapp connects Flow + TimeTracker for teams spread across multiple buildings and floors. Operatives clock in from their smartphones with the position recorded at that moment; the office sees who clocked in where and when, with photo evidence attached. Data ready to answer a dispute, and hours and breaks recorded for payroll.',
     cta_primary: 'Try it on a real contract',
     cta_note: '14 days, up to 50 field workers, no credit card.',
   },
@@ -21,15 +21,15 @@ const content: SettoreContent = {
     items: [
       {
         title: 'Client disputes over whether areas were cleaned',
-        desc: 'The client claims a floor was skipped or the time was wrong. Your operatives have no proof. The dispute drags on and you risk losing the contract.',
+        desc: 'The client claims a floor was skipped or the time was wrong. You have a written time, they have their version. Without verifiable proof, you risk the contract.',
       },
       {
         title: 'Supervising distributed teams across multiple sites',
-        desc: 'You have staff across buildings, floors and shift patterns. Working out who is where, and whether they have finished their round, becomes a chain of calls and messages.',
+        desc: 'You have staff across buildings, floors and shift patterns. Working out who has clocked in where, and whether they have finished their round, becomes a chain of calls and messages.',
       },
       {
-        title: 'Shift handover gaps and NMW record failures',
-        desc: 'The morning shift does not know what the evening crew did. Paper logs go missing, WhatsApp gets ignored, and Agency Workers Regulations require auditable break and overtime records.',
+        title: 'Shift handover gaps and missing time records',
+        desc: 'The morning shift does not know what the evening crew did. Paper logs go missing, WhatsApp gets ignored, and whoever checks wants times that were recorded, not reconstructed from memory.',
       },
     ],
   },
@@ -39,15 +39,15 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'Operative clocks in on site',
-        desc: 'With GeoTapp TimeTracker they log start, finish, photos of the area and notes directly from their smartphone. GPS-verified, built to stay within GDPR, NMW-ready.',
+        desc: 'With GeoTapp TimeTracker they log start, breaks, finish, photos of the area and notes directly from their smartphone. The position is recorded at that moment only, and nothing is recorded automatically between clock-ins.',
       },
       {
-        title: 'Office sees each update as it happens',
-        desc: 'Flow receives data instantly. The manager sees which site has been serviced, by whom, at what time and with what photographic evidence, without making a single call.',
+        title: 'Office sees each update as it arrives',
+        desc: 'Flow receives the data as soon as the phone has signal. The manager sees which site has been serviced, by whom, at what time and with what photographic evidence, without making a single call.',
       },
       {
         title: 'The handover report is already done',
-        desc: 'At the end of the shift, the service record is structured with real data: hours worked, breaks, areas covered and photos. No manual reconstruction, no unanswered dispute.',
+        desc: 'At the end of the shift, the service record is generated from the recorded data: hours worked, breaks, positions and photos. No manual reconstruction, and an answer ready when a client asks.',
       },
     ],
   },
@@ -55,21 +55,21 @@ const content: SettoreContent = {
     title: 'What you get',
     items: [
       {
-        title: 'GPS-verified clock-in by site',
-        desc: 'Every start and finish is linked to location, timestamp and assigned building. Defensible with the client, the contract manager and a labour inspector.',
+        title: 'Clock-in with position, by site',
+        desc: 'Every start, break and finish is linked to position, timestamp and assigned building. Something to show the client, the contract manager or an inspector when it matters.',
       },
       {
         title: 'Before-and-after photo evidence',
-        desc: 'Operatives take photos directly from the app. Images timestamped with date, time and GPS: verifiable proof that the service was delivered.',
+        desc: 'Operatives take photos directly from the app. Images carry date, time and position, and go into the sealed report: any later change is detectable.',
       },
       {
-        title: 'Payroll export for Sage and BrightHR',
-        desc: 'Export monthly attendance data compatible with Sage, BrightHR and other UK payroll systems, with automatic separation of standard hours, overtime and NMW uplifts.',
+        title: 'Excel or CSV export for payroll',
+        desc: 'Export the month\'s attendance to Excel or CSV, with standard hours, breaks and overtime recorded shift by shift, ready for your payroll provider or accountant.',
       },
     ],
   },
   testimonial: {
-    quote: 'Since we started using GeoTapp we have not received a single written complaint from a client. The photos speak for themselves.',
+    quote: 'When a client disputes a job, we send the report with photos and position and they check it themselves.',
     author: 'Rachel T.',
     role: 'Operations Manager, commercial cleaning contractor',
   },
@@ -79,23 +79,32 @@ const content: SettoreContent = {
     items: [
       {
         q: 'Is GeoTapp suitable for cleaning companies and facility management contractors?',
-        a: 'Yes. GeoTapp helps cleaning companies, FM contractors and facility services providers manage multi-site shifts, document service delivery with GPS clock-ins and photo evidence, and meet Agency Workers Regulations and NMW record-keeping requirements.',
+        a: 'Yes. GeoTapp helps cleaning companies, FM contractors and facility services providers manage multi-site shifts, document service delivery with clock-ins and photo evidence, and keep the shift, break and overtime records payroll needs.',
       },
       {
         q: 'How do I manage teams spread across multiple buildings at the same time?',
-        a: 'Flow shows each operative\'s clock-in status and location by building, updated as it happens. You can assign shifts, check coverage and receive automatic alerts for absences or late arrivals.',
+        a: 'Flow shows who has clocked in and where, by building, as each clock-in arrives. You can assign shifts, check coverage and get an alert if a shift is left open.',
       },
       {
-        q: 'Does GeoTapp help with NMW compliance and break-time records?',
-        a: 'Yes. The system automatically logs break times, overtime and shift patterns. The monthly export is compatible with Sage and BrightHR, to support payroll processing under NMW and Agency Workers Regulations.',
+        q: 'Does GeoTapp record break times and overtime for payroll?',
+        a: 'Yes. Break times, overtime and shift patterns are recorded shift by shift. The monthly export to Excel or CSV goes to your payroll provider or accountant, who apply the rules that govern your contracts, such as NMW and the Agency Workers Regulations.',
+      },
+      {
+        q: 'Does GeoTapp track cleaners\' location during the day?',
+        a: 'No. The position is recorded only when the operative clocks in (start, break, finish) or takes a proof photo. Nothing is recorded automatically between clock-ins: the app does not even ask for permission to read the location in the background.',
       },
     ],
   },
   cta: {
-    title: 'Answer every dispute with proof. Start now.',
-    subtitle: 'GeoTapp Flow and TimeTracker give your cleaning company the operational control and evidence you actually need.',
-    primary: 'Request a Demo',
+    title: 'Answer a dispute with a report. Start now.',
+    subtitle: 'GeoTapp Flow and TimeTracker give your cleaning company the clock-ins, photos and sealed reports to show when a client disputes a job.',
+    primary: 'Try it free for 14 days',
     secondary: 'See Pricing',
+  },
+  pricing_hint: {
+    label: 'TimeTracker seats from',
+    per: 'per operative per month, plus a Flow plan',
+    note: '14-day free trial',
   },
   schema_sector_name: 'Cleaning Companies',
 };

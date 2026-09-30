@@ -12,9 +12,9 @@ import type { AppLocale } from '@/lib/i18n/config';
 
 const META: Record<string, { title: string; description: string }> = {
   en: {
-    title: 'GeoTapp features: GPS clock-in, geofence, offline, encryption',
+    title: 'GeoTapp features: clock-in with location and sealed reports',
     description:
-      'Clock-in with GPS and geofence check, anti-spoofing, an offline mode that syncs when signal returns, AES-256 encryption and live updates for the office.',
+      'Location only when you clock in, false locations rejected, clock-ins saved even without a signal, sealed reports the client verifies alone, data in Europe.',
   },
   it: {
     title: 'Funzionalità GeoTapp: timbratura con posizione e report sigillati',

@@ -41,7 +41,7 @@ const T: Record<string, {
   },
   en: {
     title: 'Stay updated',
-    subtitle: 'Get the best content on field operations, HR and technology for SMBs.',
+    subtitle: 'Get the best content on organising field work, managing staff and digital tools for small businesses.',
     email_placeholder: 'Your email',
     sector_label: 'Your sector',
     sector_placeholder: 'Select your sector',

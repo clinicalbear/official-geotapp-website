@@ -97,7 +97,7 @@ export const romania: SchedaPaese = {
       risposta: 'si',
       dettaglio: {
         it: "Quando si usano sistemi di monitoraggio tramite mezzi di comunicazione elettronica (l'ANSPDCP applica l'art. 5 anche al GPS, caso Tehnoplus) e i dati dei dipendenti sono trattati per l'interesse legittimo del datore, il trattamento è ammesso solo se il datore ha dato ai lavoratori un'informazione preventiva obbligatoria, completa ed esplicita.",
-        en: "where monitoring systems using electronic communication means are used (the ANSPDCP applies art. 5 to GPS as well, Tehnoplus case) and employee data are processed for the employer's legitimate interest, the processing is permitted only if the employer has given the workers mandatory, complete and explicit prior information.",
+        en: "Where monitoring systems using electronic communication means are used (the ANSPDCP applies art. 5 to GPS as well, Tehnoplus case) and employee data are processed for the employer's legitimate interest, the processing is permitted only if the employer has given the workers mandatory, complete and explicit prior information.",
         de: 'werden Überwachungssysteme mit elektronischen Kommunikationsmitteln eingesetzt (die ANSPDCP wendet Art. 5 auch auf GPS an, Fall Tehnoplus) und werden Beschäftigtendaten zur Wahrung des berechtigten Interesses des Arbeitgebers verarbeitet, ist die Verarbeitung nur zulässig, wenn der Arbeitgeber die Arbeitnehmer zuvor verpflichtend, vollständig und ausdrücklich informiert hat.',
         fr: "lorsque des systèmes de surveillance par moyens de communication électronique sont utilisés (l'ANSPDCP applique l'art. 5 aussi au GPS, affaire Tehnoplus) et que les données des salariés sont traitées pour l'intérêt légitime de l'employeur, le traitement n'est admis que si l'employeur a donné aux travailleurs une information préalable obligatoire, complète et explicite.",
         es: 'cuando se usan sistemas de monitorización por medios de comunicación electrónica (la ANSPDCP aplica el art. 5 también al GPS, caso Tehnoplus) y los datos de los empleados se tratan por el interés legítimo del empleador, el tratamiento solo se admite si el empleador ha dado a los trabajadores una información previa obligatoria, completa y explícita.',
@@ -108,7 +108,7 @@ export const romania: SchedaPaese = {
     {
       voce: {
         it: 'Consultazione preventiva del sindacato o dei rappresentanti dei dipendenti (art. 5 lett. c)',
-        en: 'Prior consultation of the trade union or of the employees representatives (art. 5 lett. c)',
+        en: 'Prior consultation of the trade union or of the employees\' representatives (art. 5 lett. c)',
         de: 'Vorherige Anhörung der Gewerkschaft oder der Arbeitnehmervertreter (Art. 5 Buchst. c)',
         fr: 'Consultation préalable du syndicat ou des représentants des salariés (art. 5 lett. c)',
         es: 'Consulta previa al sindicato o a los representantes de los empleados (art. 5 lett. c)',
@@ -117,7 +117,7 @@ export const romania: SchedaPaese = {
       risposta: 'dipende',
       dettaglio: {
         it: 'Prima di introdurre i sistemi di monitoraggio il datore deve consultare il sindacato o, se del caso, i rappresentanti dei dipendenti. Vale dove esistono.',
-        en: 'before introducing the monitoring systems the employer must consult the trade union or, where applicable, the employees representatives. It applies where they exist.',
+        en: 'Before introducing the monitoring systems the employer must consult the trade union or, where applicable, the employees\' representatives. It applies where they exist.',
         de: 'vor der Einführung der Überwachungssysteme muss der Arbeitgeber die Gewerkschaft oder gegebenenfalls die Arbeitnehmervertreter anhören. Dies gilt, wo solche vorhanden sind.',
         fr: "avant d'introduire les systèmes de surveillance, l'employeur doit consulter le syndicat ou, le cas échéant, les représentants des salariés. Cela s'appliqué là où ils existent.",
         es: 'antes de introducir los sistemas de monitorización el empleador debe consultar al sindicato o, en su caso, a los representantes de los empleados. Se aplica donde existan.',
@@ -137,7 +137,7 @@ export const romania: SchedaPaese = {
       risposta: 'no',
       dettaglio: {
         it: "La legge subordina il monitoraggio alle condizioni dell'art. 5, ma non a un'autorizzazione preventiva dell'ANSPDCP.",
-        en: "the law makes monitoring subject to the conditions of art. 5, but not to a prior authorisation from the ANSPDCP.",
+        en: "The law makes monitoring subject to the conditions of art. 5, but not to a prior authorisation from the ANSPDCP.",
         de: 'das Gesetz unterwirft die Überwachung den Bedingungen des Art. 5, jedoch keiner vorherigen Genehmigung durch die ANSPDCP.',
         fr: "la loi subordonne la surveillance aux conditions de l'art. 5, mais non à une autorisation préalable de l'ANSPDCP.",
         es: 'la ley subordina la monitorización a las condiciones del art. 5, pero no a una autorización previa de la ANSPDCP.',
@@ -157,7 +157,7 @@ export const romania: SchedaPaese = {
       risposta: 'si',
       dettaglio: {
         it: "Il monitoraggio è ammesso solo se altre forme meno intrusive non si sono già rivelate efficaci e se l'interesse legittimo del datore prevale sui diritti dei lavoratori.",
-        en: "monitoring is permitted only if other less intrusive forms have not already proven effective and if the legitimate interest of the employer prevails over the rights of the workers.",
+        en: "Monitoring is permitted only if other less intrusive forms have not already proven effective and if the legitimate interest of the employer prevails over the rights of the workers.",
         de: 'die Überwachung ist nur zulässig, wenn andere weniger eingreifende Formen sich nicht bereits als wirksam erwiesen haben und wenn das berechtigte Interesse des Arbeitgebers gegenüber den Rechten der Arbeitnehmer überwiegt.',
         fr: "la surveillance n'est admise que si d'autres formes moins intrusives ne se sont pas déjà révélées efficaces et si l'intérêt légitime de l'employeur prévaut sur les droits des travailleurs.",
         es: 'la monitorización solo se admite si otras formas menos intrusivas no se han revelado ya eficaces y si el interés legítimo del empleador prevalece sobre los derechos de los trabajadores.',
@@ -177,7 +177,7 @@ export const romania: SchedaPaese = {
       risposta: 'si',
       dettaglio: {
         it: 'La durata di conservazione deve essere proporzionata allo scopo e non superiore a 30 giorni, salvo casi previsti dalla legge o debitamente giustificati.',
-        en: 'the retention period must be proportionate to the purpose and no longer than 30 days, save for cases provided for by law or duly justified.',
+        en: 'The retention period must be proportionate to the purpose and no longer than 30 days, save for cases provided for by law or duly justified.',
         de: 'die Speicherdauer muss dem Zweck angemessen sein und 30 Tage nicht überschreiten, außer in gesetzlich vorgesehenen oder ordnungsgemäß begründeten Fällen.',
         fr: 'la durée de conservation doit être proportionnée à la finalité et ne pas dépasser 30 jours, sauf dans les cas prévus par la loi ou dûment justifiés.',
         es: 'la duración de conservación debe ser proporcionada a la finalidad y no superior a 30 días, salvo en los casos previstos por la ley o debidamente justificados.',
@@ -197,7 +197,7 @@ export const romania: SchedaPaese = {
       risposta: 'si',
       dettaglio: {
         it: "La lista nazionale rende obbligatoria la valutazione d'impatto per il monitoraggio sistematico su larga scala di persone vulnerabili (inclusi i dipendenti) e per il trattamento sistematico di dati di localizzazione.",
-        en: 'the national list makes the impact assessment mandatory for the large-scale systematic monitoring of vulnerable persons (including employees) and for the systematic processing of location data.',
+        en: 'The national list makes the impact assessment mandatory for the large-scale systematic monitoring of vulnerable persons (including employees) and for the systematic processing of location data.',
         de: 'die nationale Liste macht die Folgenabschätzung verpflichtend für die systematische groß angelegte Überwachung schutzbedürftiger Personen (einschließlich der Beschäftigten) und für die systematische Verarbeitung von Standortdaten.',
         fr: "la liste nationale rend l'analyse d'impact obligatoire pour la surveillance systématique à grande échelle de personnes vulnérables (y compris les salariés) et pour le traitement systématique de données de localisation.",
         es: 'la lista nacional hace obligatoria la evaluación de impacto para la monitorización sistemática a gran escala de personas vulnerables (incluidos los empleados) y para el tratamiento sistemático de datos de localización.',
@@ -223,7 +223,7 @@ export const romania: SchedaPaese = {
       passo: 2,
       descrizione: {
         it: 'Consulta il sindacato o i rappresentanti dei dipendenti prima di introdurre il sistema (art. 5 lett. c).',
-        en: 'Consult the trade union or the employees representatives before introducing the system (art. 5 lett. c).',
+        en: 'Consult the trade union or the employees\' representatives before introducing the system (art. 5 lett. c).',
         de: 'Hören Sie die Gewerkschaft oder die Arbeitnehmervertreter an, bevor Sie das System einführen (Art. 5 Buchst. c).',
         fr: "Consultez le syndicat ou les représentants des salariés avant d'introduire le système (art. 5 lett. c).",
         es: 'Consulte al sindicato o a los representantes de los empleados antes de introducir el sistema (art. 5 lett. c).',
@@ -290,7 +290,7 @@ export const romania: SchedaPaese = {
   sanzioneMax: {
     importo: {
       it: '5.000 €',
-      en: '5,000 €',
+      en: 'EUR 5,000',
       de: '5.000 €',
       fr: '5 000 €',
       es: '5.000 €',

@@ -31,10 +31,23 @@ const ALIAS_CATEGORIE: Record<string, Record<string, string>> = {
     'geotapp-flow': 'GeoTapp Flow',
     'field service': 'Lavoro sul campo',
   },
+  en: {
+    'digitalizzazione aziendale': 'Business digitalisation',
+    'gestione presenze': 'Attendance management',
+    'normativa gdpr': 'GDPR rules',
+    'controllo costi': 'Cost control',
+    'controllo di gestione': 'Management accounting',
+    'gestione team': 'Team management',
+    'amministrazione': 'Administration',
+    'organizzazione aziendale': 'Business organisation',
+    'geotapp-flow': 'GeoTapp Flow',
+    'field service': 'Field service',
+    'app': 'Apps',
+  },
 };
 function nomeCategoria(nome: string, locale: string): string {
   const pulito = nome.replace(/&amp;/g, '&').trim();
-  const alias = ALIAS_CATEGORIE[locale]?.[pulito.toLowerCase()];
+  const alias = (ALIAS_CATEGORIE[locale] ?? ALIAS_CATEGORIE[locale.split('-')[0]])?.[pulito.toLowerCase()];
   return alias ?? pulito;
 }
 

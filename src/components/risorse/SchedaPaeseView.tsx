@@ -40,11 +40,13 @@ type RisorseGpsDict = SiteDictionary['risorseGps'];
 function FonteConAvviso({
   fonte,
   dict,
+  locale,
 }: {
   fonte: Fonte;
   dict: RisorseGpsDict;
+  locale: AppLocale;
 }) {
-  const link = <ExternalLink href={fonte.url}>{fonte.titolo}</ExternalLink>;
+  const link = <ExternalLink href={fonte.url}>{loc(fonte.titolo, locale)}</ExternalLink>;
   if (!fonte.nonUfficiale) return link;
   const d = dict as unknown as Record<string, string>;
   const tipo = d['fonteNonUfficialeTipo_' + fonte.nonUfficiale.replace(/-/g, '_')] ?? '';
@@ -258,7 +260,7 @@ export default function SchedaPaeseView({
                 </div>
                 <p style={{ marginBottom: 8 }}>{loc(item.dettaglio, locale)}</p>
                 <p style={{ fontSize: 14 }}>
-                  <FonteConAvviso fonte={item.fonte} dict={dict} />
+                  <FonteConAvviso fonte={item.fonte} dict={dict} locale={locale} />
                 </p>
               </li>
             ))}
@@ -340,7 +342,7 @@ export default function SchedaPaeseView({
           <ul className="rows r d1">
             {scheda.fonti.map((fonte, i) => (
               <li key={i}>
-                <FonteConAvviso fonte={fonte} dict={dict} />
+                <FonteConAvviso fonte={fonte} dict={dict} locale={locale} />
               </li>
             ))}
           </ul>

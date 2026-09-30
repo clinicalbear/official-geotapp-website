@@ -7,15 +7,15 @@ const content: SettoreContent = {
     // il problema non e' il ranking, e' che lo snippet sembra generato da una macchina).
     // La vecchia description era 170c: Google tagliava la promessa a meta' frase.
     title: 'GPS App for Plumbers: Prove Every Job You Did | GeoTapp',
-    description: 'Your engineer says the job is done. The client says nobody showed up. GPS check-ins and photo reports settle it in seconds, not in an argument.',
+    description: 'Your engineer says the job is done. The client says nobody showed up. A clock-in with position and a photo report give you something to show.',
   },
   hero: {
     badge: 'App for Plumbers, HVAC Technicians and Heating Engineers',
     h1_line1: 'App for plumbers and HVAC technicians:',
     h1_line2: 'GPS job reports, photo evidence and fewer disputes.',
-    subtitle: 'GeoTapp records every plumbing and heating job with GPS, photos and verifiable timestamps. Client disputes the work? Show them the report, no argument needed. Your engineers are protected, your invoices too.',
-    cta_primary: 'Start free today',
-    cta_note: 'No commitment. Response within 12 business hours.',
+    subtitle: 'GeoTapp records every plumbing and heating job with GPS, photos and recorded times. Client disputes the work? Show them the report instead of arguing it out.',
+    cta_primary: 'Try it free for 14 days',
+    cta_note: 'The trial commits you to nothing. No credit card.',
   },
   pain: {
     title: 'The problem every plumbing business knows',
@@ -40,15 +40,15 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'Engineer records the job on site',
-        desc: 'With GeoTapp TimeTracker they clock in and out with GPS, photograph the plumbing or heating system and add technical notes from their smartphone.',
+        desc: 'With GeoTapp TimeTracker they clock in, take breaks and clock out with their position recorded, photograph the plumbing or heating system and add technical notes from their smartphone.',
       },
       {
-        title: 'Office sees each update as it happens',
-        desc: 'GeoTapp Flow receives the data instantly. The manager sees job status, assigned engineer, progress and photo evidence without calling.',
+        title: 'Office sees each update as it arrives',
+        desc: 'GeoTapp Flow receives the data as soon as the phone has signal. The manager sees job status, assigned engineer, progress and photo evidence without calling.',
       },
       {
         title: 'The job report is your proof',
-        desc: 'At the end of the job the system generates a sealed report: GPS timestamp, system photos, materials used, technical notes. Tamper-evident. The client can verify it independently.',
+        desc: 'At the end of the job the system generates a sealed report: position and time, system photos, materials used, technical notes. Any change is detectable, and the client can verify it independently.',
       },
     ],
   },
@@ -59,12 +59,12 @@ const content: SettoreContent = {
       {
         label: 'What it records',
         competitor: 'Clock-in and clock-out time',
-        geotapp: 'Time + verified GPS + system photos + materials and notes',
+        geotapp: 'Time + position at clock-in + system photos + materials and notes',
       },
       {
         label: 'In case of dispute',
-        competitor: 'Data not defensible',
-        geotapp: 'Sealed report, tamper-evident',
+        competitor: 'Just your word',
+        geotapp: 'Sealed report, any change is detectable',
       },
       {
         label: 'Job documentation',
@@ -93,57 +93,57 @@ const content: SettoreContent = {
     ],
     dopo: [
       'Client disputes that the repair was completed.',
-      'You open the report: GPS photos of the system, sealed timestamp, technical notes.',
-      'You send it. The dispute ends in a minute.',
-      'The invoice is safe. The engineer is protected.',
+      'You open the report: photos of the system, time, position, technical notes.',
+      'You send it, and the client can verify it alone.',
+      'You have proof to show. The engineer has something in hand too.',
     ],
   },
   scenario: {
-    title: 'Real case',
-    body: 'A client disputes an emergency heating repair and refuses to pay, claiming the work was not completed. With GeoTapp you open the job report: before and after photos of the system, GPS arrival and departure times, technical notes on parts replaced, all generated automatically from the engineer\'s smartphone on site.',
-    resolution: 'The dispute drops. The invoice is paid in full.',
+    title: 'A typical case',
+    body: 'A client disputes an emergency heating repair and refuses to pay, claiming the work was not completed. With GeoTapp you open the job report: before and after photos of the system, arrival and departure times with position, technical notes on parts replaced, all generated automatically from the engineer\'s smartphone on site.',
+    resolution: 'Instead of one word against another, there is a document the client can check alone.',
   },
   features: {
     title: 'App for plumbers and HVAC technicians: what you get with GeoTapp.',
     items: [
       {
-        title: 'Verifiable GPS time tracking',
-        desc: 'Every site arrival and departure is recorded with location, timestamp and job reference. Defensible to clients and inspectors alike.',
+        title: 'GPS time tracking at each clock-in',
+        desc: 'Every arrival, break and departure is recorded with position, timestamp and job reference. Something to show clients when it matters.',
       },
       {
         title: 'Sealed plumbing and heating system photos',
-        desc: 'The engineer photographs before and after the job. Every image is linked to GPS and timestamp, tamper-evident after generation.',
+        desc: 'The engineer photographs before and after the job. Every image is linked to GPS and timestamp, and any later change is detectable.',
       },
       {
         title: 'Automatic digital job reports',
-        desc: 'At the end of the job the report is ready: hours, photos, technical notes, parts and signature. The engineer sends it to the client from the app.',
+        desc: 'At the end of the job the report is ready: hours, photos, technical notes and parts. The office sends it to the client from Flow with one click.',
       },
       {
         title: 'Emergency and scheduled maintenance management',
-        desc: 'Manage both emergency call-outs and planned maintenance from the same dashboard. Every job has its own record and history.',
+        desc: 'Manage both emergency call-outs and planned maintenance from the same screen. Every job has its own record and history.',
       },
       {
         title: 'Payroll export',
-        desc: 'Export monthly attendance in formats compatible with Sage, Xero and BrightHR. Payroll processing becomes a quick task.',
+        desc: 'Export the month\'s attendance to Excel or CSV, ready for your payroll provider or accountant. Payroll processing becomes a quick task.',
       },
       {
         title: 'Your plumbers are protected',
-        desc: 'A verifiable report protects the engineer from unfounded claims about work not done or materials not used.',
+        desc: 'A verifiable report gives the engineer something in hand against unfounded claims about work not done or materials not used.',
       },
     ],
   },
   cta_mid: {
     title: 'Want to see how it works on a real plumbing job?',
-    body: 'We show you the complete flow: from opening a job to the report the client receives. In 20 minutes you\'ll know if it\'s right for you.',
-    cta: 'Start free today',
+    body: 'Try it on a real job, from opening the job to the report the client receives: 14 days free, no credit card.',
+    cta: 'Try it free for 14 days',
   },
   trust: {
-    title: 'If one of our reports is changed, it shows. Even if we are the ones changing it.',
-    body: 'GeoTapp reports are generated by the system at the moment of the job. There is no panel to "correct" a time or move a photo. The data is what it is, digitally signed, with real GPS.',
+    title: 'If a report is changed, it shows. Even if you or we are the ones changing it.',
+    body: 'GeoTapp reports are generated by the system at the moment of the job. Once a report is sealed, correcting a time or moving a photo breaks the seal, and the verification flags it.',
     badge: 'Verifiable by anyone, without access to your account',
   },
   testimonial: {
-    quote: 'I used to spend hours explaining jobs to clients. Now I send the report and the argument stops there.',
+    quote: 'I used to spend hours explaining jobs to clients. Now I send the report instead of arguing it out.',
     author: 'Robert C.',
     role: 'Owner, plumbing and heating services',
   },
@@ -153,7 +153,7 @@ const content: SettoreContent = {
     items: [
       {
         q: 'Does GeoTapp do GPS time tracking for plumbers?',
-        a: 'Yes. Plumbers and heating engineers clock in and out from the field with a single tap, and each entry is stamped with verified GPS and time. The office gets exact hours per job and per site without chasing anyone for a timesheet, and the same data feeds straight into the sealed job report.',
+        a: 'Yes. Plumbers and heating engineers clock in and out from the field with a single tap, and each entry is stamped with a GPS position and the time. The office gets exact hours per job and per site without chasing anyone for a timesheet, and the same data feeds straight into the sealed job report.',
       },
       {
         q: 'Is GeoTapp suitable as an app for plumbers and HVAC technicians?',
@@ -161,46 +161,54 @@ const content: SettoreContent = {
       },
       {
         q: 'Can I use GeoTapp to document plumbing and heating jobs?',
-        a: 'Yes. The engineer photographs before and after the job. Every image is linked to GPS, timestamp and job reference, included in the tamper-evident report.',
+        a: 'Yes. The engineer photographs before and after the job. Every image is linked to GPS, timestamp and job reference, and is included in the sealed report.',
       },
       {
         q: 'Does GeoTapp handle emergency call-outs and scheduled maintenance?',
         a: 'Yes. Every job type, emergency, maintenance, commissioning, has its own job record in GeoTapp. The full history of every system is always available with all photo evidence.',
       },
+      {
+        q: 'Does GeoTapp track the engineers\' location during the day?',
+        a: 'No. The position is recorded only when the engineer clocks in (start, break, finish) or takes a proof photo. Nothing is recorded automatically between one clock-in and the next: the app does not even ask for permission to read the location in the background.',
+      },
     ],
   },
   cta: {
     title: 'Every job done right deserves proof. GeoTapp generates it.',
-    subtitle: 'Verifiable reports, real GPS, sealed photos. Your work is defensible.',
-    primary: 'Start free today',
+    subtitle: 'Verifiable reports, position at clock-in, photos sealed into the report.',
+    primary: 'Try it free for 14 days',
     secondary: 'View Pricing',
   },
   pricing_hint: {
-    label: 'Starting from',
-    per: 'operator/month',
+    label: 'TimeTracker seats from',
+    per: 'per operator per month, plus a Flow plan',
     note: '14-day free trial',
   },
   schema_sector_name: 'Plumbers and HVAC Technicians',
   schema_faq: [
     {
       question: 'Does GeoTapp offer GPS time tracking for plumbers and heating engineers?',
-      answer: 'Yes. GeoTapp provides GPS time tracking built for plumbers: the engineer taps to start and stop on site, every entry carries a verified location and timestamp, and the office sees exact hours per job without manual timesheets.',
+      answer: 'Yes. GeoTapp provides GPS time tracking built for plumbers: the engineer taps to start and stop on site, every clock-in carries a GPS position and a timestamp, and the office sees exact hours per job without manual timesheets.',
     },
     {
       question: 'Does GeoTapp work as an app for plumbers and HVAC technicians?',
-      answer: 'Yes. GeoTapp is the app for plumbers and HVAC technicians that records every job with GPS, photos and verifiable timestamps. The engineer clocks in from the field, the office sees each clock-in as it happens, and the client receives a sealed job report.',
+      answer: 'Yes. GeoTapp is the app for plumbers and HVAC technicians that records every job with GPS, photos and recorded times. The engineer clocks in from the field, the office sees each clock-in as it arrives, and the client receives a sealed job report.',
     },
     {
       question: 'How do I seal a plumbing or heating job with GeoTapp?',
-      answer: 'The engineer records start and finish time with verified GPS, photographs the system before and after, and adds technical notes on materials used. The system generates a sealed report the client can verify independently.',
+      answer: 'The engineer records start and finish time with their position, photographs the system before and after, and adds technical notes on materials used. The system generates a sealed report the client can verify independently.',
     },
     {
       question: 'Does GeoTapp handle emergency plumbing call-outs and scheduled maintenance?',
-      answer: 'Yes. Both emergency jobs and planned maintenance are managed from the same app. Every job generates a history with photo evidence and verifiable GPS timestamps.',
+      answer: 'Yes. Both emergency jobs and planned maintenance are managed from the same app. Every job generates a history with photo evidence and recorded times and positions.',
     },
     {
       question: 'Are GeoTapp job reports accepted in disputes?',
-      answer: 'GeoTapp reports are sealed with GPS, timestamps and photo evidence. They have been used successfully to resolve disputes over jobs denied or materials contested by clients.',
+      answer: 'GeoTapp reports are sealed with GPS, timestamps and photo evidence, and the client verifies them alone. They help show that the document has not been changed; on their own they are not absolute proof of the facts, nor legal advice.',
+    },
+    {
+      question: 'Does GeoTapp track the engineers\' location during the day?',
+      answer: 'No. The position is recorded only when the engineer clocks in (start, break, finish) or takes a proof photo. Nothing is recorded automatically between one clock-in and the next: the app does not even ask for permission to read the location in the background.',
     },
   ],
 };

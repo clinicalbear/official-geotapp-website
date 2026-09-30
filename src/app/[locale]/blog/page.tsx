@@ -44,6 +44,7 @@ function stripHtml(html: string): string {
     .replace(/&quot;/g, '"').replace(/&#8216;/g, '\u2018')
     .replace(/&#8217;/g, '\u2019').replace(/&#8220;/g, '\u201C')
     .replace(/&#8221;/g, '\u201D').replace(/&nbsp;/g, ' ')
+    .replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(Number(n))).replace(/&#x([0-9a-f]+);/gi, (_, n) => String.fromCodePoint(parseInt(n, 16)))
     .trim();
 }
 

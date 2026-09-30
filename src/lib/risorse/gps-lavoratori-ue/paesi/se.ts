@@ -153,7 +153,7 @@ export const svezia: SchedaPaese = {
       risposta: 'si',
       dettaglio: {
         it: 'La base giuridica è di norma il bilanciamento di interessi, non il consenso del dipendente (rapporto di dipendenza); i lavoratori vanno informati in modo chiaro, al più tardi quando i dati sono raccolti.',
-        en: 'The legal basis is normally the balancing of interests, not the employee consent (relationship of dependence); workers must be informed clearly, at the latest when the data is collected.',
+        en: 'The legal basis is normally the balancing of interests, not the employee\'s consent (relationship of dependence); workers must be informed clearly, at the latest when the data is collected.',
         de: 'Rechtsgrundlage ist in der Regel die Interessenabwägung, nicht die Einwilligung des Beschäftigten (Abhangigkeitsverhaltnis); die Beschäftigten sind klar zu informieren, spätestens bei der Erhebung der Daten.',
         fr: "La base juridique est en principe la mise en balance des intérêts, non le consentement du salarie (lien de subordination); les salaries doivent être informes clairement, au plus tard lors de la collecte des données.",
         es: 'La base jurídica es por lo general la ponderación de intereses, no el consentimiento del empleado (relación de dependencia); los trabajadores deben ser informados con claridad, a mas tardar cuando se recogen los datos.',

@@ -13,7 +13,7 @@ const ARTICLE_DATE_MODIFIED = '2026-07-02';
 
 const META: Record<string, { title: string; description: string }> = {
   it: { title: 'GeoTapp vs Sage - Confronto 2026 | GeoTapp', description: 'GeoTapp vs Sage: due strumenti diversi. Sage gestisce contabilità, paghe e HR; GeoTapp prova il lavoro sul campo con posizione, ora, foto e report sigillati. Spesso complementari.' },
-  en: { title: 'GeoTapp vs Sage - Comparison 2026 | GeoTapp', description: 'GeoTapp vs Sage: two different tools. Sage runs accounting, payroll and HR; GeoTapp proves field work with verified GPS, photos and tamper-evident reports. Often complementary.' },
+  en: { title: 'GeoTapp vs Sage - Comparison 2026 | GeoTapp', description: 'GeoTapp vs Sage: two different tools. Sage runs accounting, payroll and HR; GeoTapp proves field work with location, time, photos and sealed reports. Often complementary.' },
   de: { title: 'GeoTapp vs Sage - Vergleich 2026 | GeoTapp', description: 'GeoTapp vs Sage: zwei verschiedene Werkzeuge. Sage verwaltet Buchhaltung, Lohn und HR; GeoTapp belegt Außendienst-Arbeit mit verifiziertem GPS, Fotos und versiegelten Berichten. Oft komplementär.' },
   fr: { title: 'GeoTapp vs Sage - Comparaison 2026 | GeoTapp', description: 'GeoTapp vs Sage : deux outils différents. Sage gère comptabilité, paie et RH ; GeoTapp prouve le travail sur le terrain avec GPS vérifié, photos et rapports scellés. Souvent complémentaires.' },
   es: { title: 'GeoTapp vs Sage - Comparación 2026 | GeoTapp', description: 'GeoTapp vs Sage: dos herramientas distintas. Sage gestiona contabilidad, nóminas y RRHH; GeoTapp prueba el trabajo de campo con GPS verificado, fotos e informes sellados. A menudo complementarios.' },
@@ -35,8 +35,8 @@ const FAQ: Record<string, FaqItem[]> = {
     { q: 'Sage ha un piano gratuito?', a: 'Sage è a pagamento, senza un piano gratuito pubblico per la parte gestionale. GeoTapp ha una prova gratuita e piani trasparenti, ed è modulare: accendi solo le funzioni che ti servono per il campo.' },
   ],
   en: [
-    { q: 'What is the main difference between GeoTapp and Sage?', a: 'Sage is a business suite: accounting, invoicing, payroll and, with Sage HR, people management. GeoTapp is a field proof-of-work system: it generates sealed reports with verified GPS, photos and digital signature, proof clients can check. Sage keeps the books and payroll; GeoTapp proves what the operator does off-site.' },
-    { q: 'Does Sage have attendance tracking?', a: 'With the Sage HR module it handles timesheets, leave and attendance, oriented to administration. But it does not produce proof of the field job: no GPS verified at the site, sealed reports or client verification. GeoTapp covers that part.' },
+    { q: 'What is the main difference between GeoTapp and Sage?', a: 'Sage is a business suite: accounting, invoicing, payroll and, with Sage HR, people management. GeoTapp is a field proof-of-work system: it generates sealed reports with location, time and photos, proof that the client can check. Sage keeps the books and payroll; GeoTapp proves what the operator does off-site.' },
+    { q: 'Does Sage have attendance tracking?', a: 'With the Sage HR module it handles timesheets, leave and attendance, oriented to administration. But it does not produce proof of the field job: no position recorded at the site, sealed reports or client verification. GeoTapp covers that part.' },
     { q: 'Does GeoTapp replace Sage?', a: 'No, they are complementary. Sage stays accounting and payroll; GeoTapp adds verifiable proof of completed work and exports hours ready for the payslip. Many companies keep Sage for administration and GeoTapp for field operators.' },
     { q: 'Does Sage have a free plan?', a: 'Sage is paid, with no public free plan for the business suite. GeoTapp has a free trial and transparent plans, and is modular: switch on only the features you need for the field.' },
   ],
@@ -98,7 +98,7 @@ const FAQ: Record<string, FaqItem[]> = {
 
 const ROWS_LABELS: Record<string, string[]> = {
   it: ['Posizione registrata e controllata a ogni timbratura','Report sigillato crittograficamente','Prove fotografiche collegate a GPS e timestamp','Verifica indipendente da parte del cliente','Tracciamento ore','App mobile Android/iOS','Messaggistica interna proprietaria','Export presenze/paghe','Piano gratuito','Gestione commesse multi-sito','Posizione rilevata solo quando si timbra, mai in continuo','Informativa GPS firmata nell\'app prima di timbrare*'],
-  en: ['GPS verified at job site','Cryptographically sealed report','Photo evidence linked to GPS and timestamp','Independent verification by client','Time tracking','Mobile app Android/iOS','Built-in messaging','Payroll/attendance export','Free plan','Multi-site job management','GDPR-compliant geolocation','Automatic GPS privacy notice with digital signature*'],
+  en: ['Position recorded and checked at every clock-in','Cryptographically sealed report','Photo evidence linked to GPS and timestamp','Independent verification by the client','Time tracking','Mobile app Android/iOS','Built-in messaging','Payroll/attendance export','Free plan','Multi-site job management','Position recorded only at clock-in, never continuously','GPS notice signed in the app before clocking in*'],
   de: ['GPS verifiziert am Einsatzort','Kryptographisch versiegelter Bericht','Fotobeweise verknüpft mit GPS und Zeitstempel','Unabhängige Prüfung durch den Kunden','Zeiterfassung','Mobile App Android/iOS','Integrierte Nachrichten','Lohn-/Anwesenheitsexport','Kostenloser Plan','Standortübergreifende Auftragsverwaltung','DSGVO-konforme Geolokalisierung','Automatische GPS-Datenschutzerklärung mit digitaler Signatur*'],
   fr: ['GPS vérifié sur le lieu d\'intervention','Rapport scellé cryptographiquement','Preuves photographiques liées au GPS et à l\'horodatage','Vérification indépendante par le client','Suivi des heures','Application mobile Android/iOS','Messagerie interne intégrée','Export paie/présences','Plan gratuit','Gestion de chantiers multi-sites','Géolocalisation conforme au RGPD','Avis de confidentialité GPS automatique avec signature numérique*'],
   es: ['GPS verificado en el lugar de la intervención','Informe sellado criptográficamente','Pruebas fotográficas vinculadas a GPS y marca de tiempo','Verificación independiente por el cliente','Seguimiento de horas','App móvil Android/iOS','Mensajería interna propia','Exportación de nóminas/presencia','Plan gratuito','Gestión de obras multisede','Geolocalización conforme al RGPD','Aviso de privacidad GPS automático con firma digital*'],
@@ -117,7 +117,7 @@ const ROWS_COMP =  [false, false, false, false, true, true, false, true, false, 
 // dai motori AI senza doverla ricostruire dalla tabella. Neutro per scelta.
 const TABLE_TAKEAWAY: Record<string, string> = {
   it: 'In breve: Sage gestisce contabilità, fatturazione e paghe; GeoTapp prova il lavoro svolto sul campo con posizione alla timbratura, report sigillato e verifica del cliente. Spesso si affiancano.',
-  en: 'In short: Sage runs accounting, invoicing and payroll; GeoTapp proves field work with verified GPS, sealed reports and client verification. They often work side by side.',
+  en: 'In short: Sage runs accounting, invoicing and payroll; GeoTapp proves field work with the position at clock-in, a sealed report and client verification. They often work side by side.',
   de: 'Kurz gesagt: Sage verwaltet Buchhaltung, Rechnungen und Lohn; GeoTapp belegt die Außenarbeit mit verifiziertem GPS, versiegelten Berichten und Kundenprüfung. Oft ergänzen sie sich.',
   fr: 'En bref : Sage gère comptabilité, facturation et paie ; GeoTapp prouve le travail terrain avec GPS vérifié, rapports scellés et vérification client. Ils fonctionnent souvent ensemble.',
   es: 'En resumen: Sage gestiona contabilidad, facturación y nóminas; GeoTapp prueba el trabajo de campo con GPS verificado, informes sellados y verificación del cliente. A menudo se complementan.',
@@ -140,7 +140,7 @@ type Copy = {
 
 const FOOTNOTE: Record<string, string> = {
   it: '* Per legge (art. 13 GDPR e, in Italia, art. 4 dello Statuto dei Lavoratori) ogni dipendente va informato prima di essere geolocalizzato. Se il software lascia questo passaggio al titolare, il rischio resta a lui. GeoTapp prepara l\'informativa personalizzata, la fa firmare per presa visione nell\'app e non lascia timbrare finché non è firmata.',
-  en: '* By law (GDPR Art. 13, and in Italy Art. 4 of the Workers\' Statute), every employee must sign a privacy notice before being geolocated. Most software does not handle this: the legal risk stays with the employer. GeoTapp automatically generates the personalized notice, has the employee sign it digitally, and blocks GPS access until it is signed.',
+  en: '* By law (Art. 13 GDPR and, in Italy, Art. 4 of the Workers\' Statute), every employee must be informed before being geolocated. If the software leaves this step to the employer, the risk stays with them. GeoTapp prepares the personalised notice, has it signed for acknowledgement in the app and does not let staff clock in until it is signed.',
   de: '* Gesetzlich (DSGVO Art. 13, in Italien Art. 4 Arbeitnehmerstatut) muss jeder Mitarbeiter vor der Geolokalisierung eine Datenschutzerklärung unterschreiben. Die meiste Software regelt das nicht: das rechtliche Risiko bleibt beim Arbeitgeber. GeoTapp erstellt die personalisierte Erklärung automatisch, lässt sie digital unterschreiben und sperrt den GPS-Zugriff, bis sie signiert ist.',
   fr: '* Par la loi (RGPD Art. 13, et en Italie Art. 4 du Statut des travailleurs), chaque employé doit signer un avis de confidentialité avant d\'être géolocalisé. La plupart des logiciels ne le gèrent pas : le risque juridique reste à l\'employeur. GeoTapp génère automatiquement l\'avis personnalisé, le fait signer numériquement et bloque l\'accès GPS tant qu\'il n\'est pas signé.',
   es: '* Por ley (RGPD Art. 13, y en Italia Art. 4 del Estatuto de los Trabajadores), cada empleado debe firmar un aviso de privacidad antes de ser geolocalizado. La mayoría del software no lo gestiona: el riesgo legal queda con el empleador. GeoTapp genera automáticamente el aviso personalizado, lo hace firmar digitalmente y bloquea el acceso GPS hasta que esté firmado.',
@@ -171,19 +171,19 @@ const T: Record<string, Copy> = {
   },
   en: {
     badge: 'Software Comparison', h1sub: 'business suite and payroll or proof of field work?',
-    desc: 'Sage runs accounting, payroll and HR. GeoTapp proves what the operator does off-site, with verified GPS and photos. Two different tools, often complementary.',
+    desc: 'Sage runs accounting, payroll and HR. GeoTapp proves what the operator does off-site, with location, time and photos. Two different tools, often complementary.',
     summary: 'In short:',
-    summaryText: 'Sage is strong on accounting, invoicing and payroll, with Sage HR for staff. It is not built to prove field jobs: no verified GPS, sealed reports or client verification. For off-site operators, GeoTapp covers that part, and hours come out ready for payroll.',
+    summaryText: 'Sage is strong on accounting, invoicing and payroll, with Sage HR for staff. It is not built to prove field jobs: no position at clock-in, sealed reports or client verification. For off-site operators, GeoTapp covers that part, and hours come out ready for payroll.',
     footnote: FOOTNOTE.en,
     features: 'Key feature comparison', feat: 'Feature',
-    diff: 'Business suite/payroll vs proof of field work',
-    geo: ['GPS verified automatically, not typed in by hand','Reports sealed with a cryptographic hash at job close','Photo evidence built in with GPS and timestamp','The client verifies authenticity independently','Built for field operators, not administration'],
-    comp: ['Solid accounting, invoicing and payroll','Sage HR for timesheets, leave and attendance','Mobile app for staff administration','No sealed proof of the field job','No verified GPS, photo proof or client verification'],
+    diff: 'Business suite and payroll or proof of field work',
+    geo: ['Position taken from the phone at every clock-in, not typed in by hand','Reports sealed with a cryptographic hash when the job is closed','Photo evidence built in with GPS and timestamp','The client checks alone that the report has not been modified','Built for field operators, not administration'],
+    comp: ['Solid accounting, invoicing and payroll','Sage HR for timesheets, leave and attendance','Mobile app for staff administration','No sealed proof of the field job','No position at clock-in, proof photos or client verification'],
     useCasesTitle: 'Who should pair GeoTapp with a business suite like Sage',
-    useCases: ['Cleaning and facility management companies with demanding clients','Maintenance crews and installers who must defend billed hours','Companies running accounting/payroll in Sage but with field crews','Anyone who has faced disputes over unrecognized jobs','Companies with several crews across different sites'],
+    useCases: ['Cleaning and facility management companies with demanding clients','Maintenance crews and installers who must defend billed hours','Companies running accounting/payroll in Sage but with field crews','Anyone who has already faced disputes over jobs the client did not recognise','Companies with several crews across different sites'],
     cta: 'Want to see the difference in practice?',
-    ctaDesc: 'We show you how a job becomes verifiable proof, in 20 minutes, no commitment.',
-    ctaBtn: 'Start free now!',
+    ctaDesc: 'Try it on a real job: 14 days free, no credit card.',
+    ctaBtn: 'Start the free trial',
   },
   de: {
     badge: 'Software-Vergleich', h1sub: 'Business-Suite und Lohn oder Nachweis der Außenarbeit?',

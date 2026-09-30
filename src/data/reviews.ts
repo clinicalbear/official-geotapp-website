@@ -73,6 +73,7 @@ export const REVIEWS: Review[] = [
     },
     reviewerLocalized: {
       it: { meta: 'Informatore scientifico · Dispositivi medici · Lavoratrice autonoma' },
+      en: { meta: 'Medical sales representative · Medical devices · Self-employed' },
     },
     original: {
       title: 'GeoTapp Flow è il top',
@@ -146,6 +147,7 @@ export const REVIEWS: Review[] = [
     },
     reviewerLocalized: {
       it: { name: 'Recensore verificato da Capterra', meta: 'Servizi per eventi · 51-200 dipendenti' },
+      en: { meta: 'Events services · 51-200 employees' },
     },
     original: {
       title: 'A good app for a good work',

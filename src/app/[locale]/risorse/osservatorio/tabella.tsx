@@ -75,9 +75,17 @@ export default function TabellaOsservatorio({
   );
   // useGrouping esplicito: in automatico Intl omette il separatore sotto le cinque
   // cifre, e in colonna "6600" accanto a "460.000" sembrava un refuso.
+  // In inglese il simbolo va davanti (EUR 2,000 si scrive €2,000): lo mette Intl.
+  const valutaDavanti = intl.startsWith('en');
   const importo = useMemo(
-    () => new Intl.NumberFormat(intl, { maximumFractionDigits: 0, useGrouping: true }),
-    [intl],
+    () =>
+      new Intl.NumberFormat(
+        intl,
+        valutaDavanti
+          ? { style: 'currency', currency: 'EUR', maximumFractionDigits: 0, useGrouping: true }
+          : { maximumFractionDigits: 0, useGrouping: true },
+      ),
+    [intl, valutaDavanti],
   );
 
   // I paesi si ordinano per nome tradotto, non per sigla: in tedesco la Danimarca
@@ -178,7 +186,7 @@ export default function TabellaOsservatorio({
                   </span>
                 </td>
                 <td className="oss-imp" data-col={s.thSanzione}>
-                  {v.amount_eur ? `${importo.format(v.amount_eur)} €` : ''}
+                  {v.amount_eur ? (valutaDavanti ? importo.format(v.amount_eur) : `${importo.format(v.amount_eur)} €`) : ''}
                 </td>
               </tr>
             ))}

@@ -12,11 +12,11 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   es: 'Cumplimiento normativo en España',
   pt: 'Conformidade em Portugal',
   nl: 'Compliance in Nederland',
-  'en-us': 'Regional compliance',
-  'en-gb': 'Regional compliance',
-  'en-au': 'Regional compliance',
-  'en-ca': 'Regional compliance',
-  'en-ie': 'Regional compliance',
+  'en-us': 'Regional rules and records',
+  'en-gb': 'Regional rules and records',
+  'en-au': 'Regional rules and records',
+  'en-ca': 'Regional rules and records',
+  'en-ie': 'Regional rules and records',
 };
 
 export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
@@ -106,72 +106,72 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   ],
   'en-us': [
     {
-      q: 'State security-officer licensing tracker per worker?',
-      a: 'Per-worker state licence (BSIS California, NY DCJS, FL Class D, TX DPS) number, training-hours record, firearms-endorsement where applicable, and the annual renewal workflow.',
+      q: 'State security-officer licensing?',
+      a: 'GeoTapp does not verify or track state security licences (BSIS, DCJS, Florida Class D, TX DPS), training hours or firearms endorsements, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
     {
-      q: 'Pre-employment background-check evidence?',
-      a: 'FCRA-compliant background check archive per worker, with the worker\'s adverse-action notice acknowledgement record where applicable.',
+      q: 'Pre-employment background checks?',
+      a: 'GeoTapp does not verify or track background checks or adverse-action notices, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
     {
-      q: 'State-mandated training-hours records (CA AB 1207, NY DCJS)?',
-      a: 'Per-worker training-hours log, refresher dates and topic coverage, satisfying state regulator audit on patrol-officer training.',
+      q: 'State-mandated training hours?',
+      a: 'GeoTapp does not verify or track state training-hours requirements or refresher dates, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
   ],
   'en-gb': [
     {
-      q: 'SIA Approved Contractor Scheme compliance?',
-      a: 'Per-worker SIA licence number, scope (security guarding, door supervision, CCTV operation), training-hours log and the ACS annual-review audit pack.',
+      q: 'SIA Approved Contractor Scheme?',
+      a: 'GeoTapp does not verify or track SIA licences, licence scopes, training hours or ACS audits, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
     {
-      q: 'BS 7858 vetting and screening records?',
-      a: 'Per-worker BS 7858 screening evidence, with the five-year employment-history verification and reference-check archive.',
+      q: 'BS 7858 vetting and screening?',
+      a: 'GeoTapp does not verify or track BS 7858 screening, employment-history checks or references, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
     {
-      q: 'Bribery Act 2010 anti-bribery and screening trail?',
-      a: 'Risk-assessment record per contract, with the worker\'s anti-bribery training acknowledgement under Section 7 corporate liability defence.',
+      q: 'Bribery Act 2010 anti-bribery training?',
+      a: 'GeoTapp does not verify or track anti-bribery training or risk assessments, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
   ],
   'en-au': [
     {
-      q: 'State Security Industry Act compliance per jurisdiction?',
-      a: 'Per-worker state licence (NSW Security Licensing Enforcement Directorate, VIC LRD, QLD OFT, etc.) number, class endorsement and renewal-workflow.',
+      q: 'State security-industry licensing?',
+      a: 'GeoTapp does not verify or track state security licences, class endorsements or renewals, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
     {
-      q: 'Security Industry Award MA000016 compliance?',
-      a: 'Per-worker classification, overnight allowance, broken-shift allowance and weekend penalty rates per shift, with the seven-year audit record.',
+      q: 'Security Industry Award (MA000016)?',
+      a: 'GeoTapp does not apply the Security Industry Award, its overnight or broken-shift allowances or weekend penalty rates and does not calculate entitlements under it. It records start, breaks and finish with position and time, per worker and per job, and exports them to Excel or CSV for your payroll provider or adviser, who apply the rules.',
     },
     {
-      q: 'WHS night-work and lone-worker records?',
-      a: 'Per-worker check-in cadence, panic-button readiness and lone-worker risk-assessment acknowledgement per shift, satisfying Safe Work Australia model regulations.',
+      q: 'Night work and lone-worker safety?',
+      a: 'GeoTapp is not a lone-worker safety tool. It records position and time only when the guard clocks in or takes a proof photo, and nothing in between. Lone-worker procedures stay with the company.',
     },
   ],
   'en-ca': [
     {
-      q: 'Provincial Security Services Act compliance per province?',
-      a: 'Per-worker provincial licence (Ontario MOL Private Security and Investigative Services Branch, BC SISB, AB Solicitor General, etc.) number and renewal log.',
+      q: 'Provincial private-security licensing?',
+      a: 'GeoTapp does not verify or track provincial security licences or renewals, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
     {
-      q: 'PIPEDA/provincial PIPA-compliant CCTV-operator records?',
-      a: 'Per-worker CCTV-operator training and access-log audit trail under PIPEDA and provincial PIPA, with the OPC/OIPC complaint-response pack.',
+      q: 'Records for CCTV operators under PIPEDA and provincial PIPA?',
+      a: 'GeoTapp does not verify or track CCTV-operator training or access logs, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
     {
-      q: 'Worker safety: lone-worker check-in per shift?',
-      a: 'Per-shift check-in cadence, missed-check-in escalation log and panic-button readiness, satisfying provincial OHS regulator audits.',
+      q: 'Lone-worker safety on shift?',
+      a: 'GeoTapp is not a lone-worker safety tool. It records position and time only when the guard clocks in or takes a proof photo, and nothing in between. Lone-worker procedures stay with the company.',
     },
   ],
   'en-ie': [
     {
-      q: 'PSA security-industry licensing per worker?',
-      a: 'Per-worker PSA licence (door-supervisor, security-guard, event-security) number, training-hours record and renewal workflow.',
+      q: 'PSA security licensing?',
+      a: 'GeoTapp does not verify or track PSA licences, training hours or renewals, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
     {
-      q: 'Static and Mobile Guarding ERO compliance?',
-      a: 'Per-worker hourly rate against the Security ERO, weekend and public-holiday premiums, and the on-call allowance record per shift.',
+      q: 'Static and Mobile Guarding Employment Regulation Order?',
+      a: 'GeoTapp does not apply the Security ERO, its premiums or on-call allowances and does not calculate entitlements under it. It records start, breaks and finish with position and time, per worker and per job, and exports them to Excel or CSV for your payroll provider or adviser, who apply the rules.',
     },
     {
-      q: 'GDPR + DPA 2018 CCTV-operator records?',
-      a: 'Per-worker CCTV-operator training, footage-access log and subject-access workflow under DPC 2024 guidance, with annual DPIA review.',
+      q: 'GDPR and CCTV-operator records?',
+      a: 'GeoTapp does not verify or track CCTV-operator training, footage-access logs or subject-access requests, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
   ],
 };

@@ -18,7 +18,17 @@ function stripHtml(html: string): string {
     .replace(/&quot;/g, '"').replace(/&#8216;/g, '\u2018')
     .replace(/&#8217;/g, '\u2019').replace(/&#8220;/g, '\u201C')
     .replace(/&#8221;/g, '\u201D').replace(/&nbsp;/g, ' ')
+    .replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(Number(n))).replace(/&#x([0-9a-f]+);/gi, (_, n) => String.fromCodePoint(parseInt(n, 16)))
     .trim();
+}
+
+/** Taglia all'ultima parola intera entro `max` caratteri e chiude con i puntini. */
+function cutAtWord(text: string, max: number): string {
+  const clean = text.replace(/\s+/g, ' ').trim();
+  if (clean.length <= max) return clean;
+  const cut = clean.slice(0, max);
+  const lastSpace = cut.lastIndexOf(' ');
+  return `${(lastSpace > max * 0.6 ? cut.slice(0, lastSpace) : cut).trimEnd().replace(/[,;:.\-–]$/, '')}…`;
 }
 
 // La categoria arriva come id ITALIANO dalle pagine: getPostsInCategory la traduce
@@ -40,7 +50,7 @@ async function loadBlogPosts(locale: AppLocale, categoryId: number, limit: numbe
   return posts.map((p) => ({
     id: p.id,
     title: stripHtml(p.title?.rendered ?? ''),
-    excerpt: stripHtml(p.excerpt?.rendered ?? '').slice(0, 140),
+    excerpt: cutAtWord(stripHtml(p.excerpt?.rendered ?? ''), 140),
     url: blogPostPath(p.link, p.slug),
     date: p.date,
   }));

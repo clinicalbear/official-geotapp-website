@@ -181,7 +181,7 @@ export const danimarca: SchedaPaese = {
     {
       voce: {
         it: 'GPS solo per finalità legittima, senza riuso per sorvegliare comportamento o posizione del conducente; disattivabile in uso privato',
-        en: 'GPS only for a legitimate purpose, with no reuse to monitor the driver behaviour or location; switchable off for private use',
+        en: 'GPS only for a legitimate purpose, with no reuse to monitor the driver\'s behaviour or location; switchable off for private use',
         de: 'GPS nur für einen berechtigten Zweck, ohne Weiterverwendung zur Überwachung von Verhalten oder Standort des Fahrers; bei privater Nutzung abschaltbar',
         fr: 'GPS uniquement à une fin légitime, sans réutilisation pour surveiller le comportement ou la position du conducteur ; désactivable en usage privé',
         es: 'GPS solo para una finalidad legítima, sin reutilización para vigilar el comportamiento o la posición del conductor; desactivable en uso privado',
@@ -190,7 +190,7 @@ export const danimarca: SchedaPaese = {
       risposta: 'si',
       dettaglio: {
         it: "Il GPS sui veicoli è ammesso per pianificare i percorsi, monitorare il trasporto o per la sicurezza dei dipendenti, ma i dati non possono essere riusati per sorvegliare comportamento o posizione del conducente; se l'uso privato è consentito, il dipendente deve poter spegnere il GPS.",
-        en: 'GPS on vehicles is allowed to plan routes, monitor transport or for the safety of employees, but the data cannot be reused to monitor the driver behaviour or location; if private use is permitted, the employee must be able to switch the GPS off.',
+        en: 'GPS on vehicles is allowed to plan routes, monitor transport or for the safety of employees, but the data cannot be reused to monitor the driver\'s behaviour or location; if private use is permitted, the employee must be able to switch the GPS off.',
         de: 'GPS in Fahrzeugen ist zur Routenplanung, zur Überwachung des Transports oder zur Sicherheit der Beschäftigten zulässig, die Daten dürfen jedoch nicht zur Überwachung von Verhalten oder Standort des Fahrers weiterverwendet werden; ist die private Nutzung erlaubt, muss der Beschäftigte das GPS abschalten können.',
         fr: "Le GPS sur les véhicules est admis pour planifier les itinéraires, surveiller le transport ou pour la sécurité des employés, mais les données ne peuvent pas être réutilisées pour surveiller le comportement ou la position du conducteur ; si l'usage privé est autorisé, le salarié doit pouvoir éteindre le GPS.",
         es: 'El GPS en los vehículos se admite para planificar las rutas, supervisar el transporte o para la seguridad de los empleados, pero los datos no pueden reutilizarse para vigilar el comportamiento o la posición del conductor; si se permite el uso privado, el empleado debe poder apagar el GPS.',
@@ -303,7 +303,7 @@ export const danimarca: SchedaPaese = {
   sanzioneMax: {
     importo: {
       it: 'decisa dai tribunali (fino a 20 milioni di euro o 4% del fatturato, art. 83 GDPR)',
-      en: 'set by the courts (up to 20 million euros or 4% of turnover, art. 83 GDPR)',
+      en: 'set by the courts (up to 20 million euro or 4% of turnover, art. 83 GDPR)',
       de: 'von den Gerichten festgelegt (bis zu 20 Millionen Euro oder 4 % des Umsatzes, Art. 83 DSGVO)',
       fr: "fixée par les tribunaux (jusqu'à 20 millions d'euros ou 4 % du chiffre d'affaires, art. 83 RGPD)",
       es: 'fijada por los tribunales (hasta 20 millones de euros o el 4 % del volumen de negocio, art. 83 RGPD)',

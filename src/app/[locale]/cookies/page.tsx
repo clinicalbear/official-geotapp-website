@@ -6,7 +6,7 @@ import type { AppLocale } from '@/lib/i18n/config';
 
 const META: Record<string, { title: string; description: string; pageTitle: string; subtitle: string }> = {
   it: { title: 'Informativa cookie | GeoTapp', description: 'Quali cookie usa geotapp.com, a cosa servono, quanto durano e come cambiare la tua scelta in qualsiasi momento.', pageTitle: 'Informativa cookie', subtitle: 'Versione 1.1 - 30 settembre 2026' },
-  en: { title: 'Cookie Policy | GeoTapp', description: 'GeoTapp cookie policy: types of cookies used, purposes and how to manage them.', pageTitle: 'Cookie Policy', subtitle: 'Version 1.0 - March 2026' },
+  en: { title: 'Cookie Policy | GeoTapp', description: 'Which cookies geotapp.com uses, what they are for, how long they last and how to change your choice at any time.', pageTitle: 'Cookie Policy', subtitle: 'Version 1.1 - 30 September 2026' },
   de: { title: 'Cookie-Richtlinie | GeoTapp', description: 'GeoTapp Cookie-Richtlinie: verwendete Cookie-Typen, Zwecke und Verwaltung.', pageTitle: 'Cookie-Richtlinie', subtitle: 'Version 1.0 - März 2026' },
   fr: { title: 'Politique de Cookies | GeoTapp', description: 'Politique de cookies GeoTapp : types de cookies utilisés, finalités et comment les gérer.', pageTitle: 'Politique de cookies', subtitle: 'Version 1.0 - mars 2026' },
   es: { title: 'Política de Cookies | GeoTapp', description: 'Política de cookies de GeoTapp: tipos de cookies utilizados, finalidades y cómo gestionarlos.', pageTitle: 'Política de cookies', subtitle: 'Versión 1.0 - marzo de 2026' },

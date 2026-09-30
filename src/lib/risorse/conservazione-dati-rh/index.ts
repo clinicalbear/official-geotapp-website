@@ -133,7 +133,7 @@ const CONTENUTI: Record<CdLocale, CdContenuto> = {
     ] },
   },
   en: {
-    heading: 'Generate your HR data retention policy',
+    heading: 'Generate your personnel data retention policy',
     intro: 'Pick the country and the types of staff data you handle: you get a retention table with recommended periods, a note for each and a PDF export. The periods are indicative — for accounting documents we use the law of the country you choose. Everything happens in your browser.',
     azienda: 'Legal name / company name (optional)',
     aziendaPlaceholder: 'E.g. Acme Cleaning Ltd',
@@ -148,7 +148,7 @@ const CONTENUTI: Record<CdLocale, CdContenuto> = {
     colDurata: 'Recommended period',
     colNota: 'Note',
     notaLegale: 'Indicative periods, to be adapted to your case and national law. This is an informative resource, not legal advice.',
-    docTitolo: 'HR data retention policy',
+    docTitolo: 'Personnel data retention policy',
     docFooter: 'Draft generated for free with GeoTapp',
     unitAnni: 'years',
     perPaeseNota: 'Set by national accounting/tax law',

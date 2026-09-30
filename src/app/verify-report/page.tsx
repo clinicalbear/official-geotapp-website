@@ -25,8 +25,122 @@
  */
 
 import { Suspense, useState } from 'react';
-import { useSearchParams } from 'next/navigation';
+import { usePathname, useSearchParams } from 'next/navigation';
+import { DEFAULT_LOCALE, getLocaleFromPathname, localizePath } from '@/lib/i18n/locale-routing';
+import type { AppLocale } from '@/lib/i18n/config';
 import './l-page.css';
+
+/**
+ * Testi della pagina, una voce per lingua. Fino al 30/09/2026 la pagina era scritta
+ * solo in italiano e la mostrava identica sotto /en/, /de/ ecc. Chi non ha una voce
+ * propria cade sull'inglese (l'indirizzo senza lingua, quello stampato sui report,
+ * resta in italiano).
+ */
+interface Testi {
+  h1: string;
+  lede: string;
+  codePre: string;
+  codeMid: string;
+  codePost: string;
+  codeAfter: string;
+  fileLabel: string;
+  verifying: string;
+  verify: string;
+  hint: string;
+  notSentB: string;
+  notSent: string;
+  keepH: string;
+  keep1: string;
+  keepArchive: string;
+  keepWarnB: string;
+  keepWarn: string;
+  download: string;
+  failed: string;
+  failedNoMsg: string;
+  valid: string;
+  degraded: string;
+  invalid: string;
+  signature: string;
+  seal: string;
+  issuedBy: string;
+  eventsPhotos: string;
+  mismatchPre: string;
+  mismatchPost: string;
+  surveyH: string;
+  surveyP: string;
+  surveyA: string;
+}
+
+const TESTI: Record<string, Testi> = {
+  it: {
+    h1: 'Verifica un report GeoTapp',
+    lede: 'Carica il pacchetto firmato e questa pagina ricalcola le impronte di ogni evento e di ogni foto e controlla la firma elettronica. Il controllo gira nel tuo browser: il file non ci viene inviato.',
+    codePre: 'Il codice',
+    codeMid: 'identifica un documento, ma per verificarlo serve il file: l\u2019identificativo da solo non dimostra niente. Carica il pacchetto ZIP che hai ricevuto, oppure aprilo dal codice a otto cifre stampato sul documento (',
+    codePost: 'geotapp.com/r/\u2026',
+    codeAfter: ').',
+    fileLabel: 'Pacchetto firmato (.zip)',
+    verifying: 'Verifica in corso\u2026',
+    verify: 'Verifica il documento',
+    hint: 'Il file non lascia questo computer: la verifica avviene nel tuo browser.',
+    notSentB: 'Il pacchetto non ci viene inviato.',
+    notSent: ' Il controllo qui sopra gira dentro il tuo browser: le impronte e la firma elettronica le ricalcola questo computer, non i nostri server. Non ci arriva il file, non ci arrivano le foto.',
+    keepH: 'Il verificatore da tenere',
+    keep1: '\u00c8 lo stesso controllo qui sopra, in un file solo che ti porti via: ',
+    keepArchive: '. Lo scarichi una volta e resta tuo: si apre con un doppio clic come una pagina qualsiasi, ci trascini dentro il pacchetto ricevuto e ti dice se \u00e8 integro. Dentro l\u2019archivio c\u2019\u00e8 anche la versione da riga di comando per Node.js, le istruzioni e le impronte SHA-256 per controllare di aver ricevuto proprio i nostri file.',
+    keepWarnB: '\u00c8 un file, non un programma da installare.',
+    keepWarn: ' Non \u00e8 un eseguibile e non chiede permessi di amministratore: \u00e8 una pagina HTML che gira sul tuo computer, dentro il tuo browser, senza bisogno di internet una volta scaricata. Non manda niente a noi. Serve a questo: anche fra dieci anni, se questa pagina non ci fosse pi\u00f9, il documento resta verificabile.',
+    download: 'Scarica il verificatore offline (.zip)',
+    failed: 'Verifica non riuscita: ',
+    failedNoMsg: 'Verifica non riuscita: controlla che il file sia il pacchetto .zip ricevuto.',
+    valid: 'Documento integro',
+    degraded: 'Documento integro, con riserve',
+    invalid: 'Documento non integro',
+    signature: 'Firma',
+    seal: 'Sigillo',
+    issuedBy: 'Emesso da',
+    eventsPhotos: 'Eventi e foto',
+    mismatchPre: 'Impronte che non tornano: ',
+    mismatchPost: '. Il contenuto non \u00e8 quello firmato.',
+    surveyH: 'Una domanda a chi il lavoro lo commissiona',
+    surveyP: 'Stiamo raccogliendo, in tutta Europa, quanto spesso un lavoro pagato viene messo in dubbio e cosa succede dopo. Due minuti, anonimo, nessun dato obbligatorio.',
+    surveyA: 'Rispondi al sondaggio',
+  },
+  en: {
+    h1: 'Verify a GeoTapp report',
+    lede: 'Upload the signed package and this page recalculates the fingerprint of every event and every photo and checks the electronic signature. The check runs in your browser: the file is never sent to us.',
+    codePre: 'The code',
+    codeMid: 'identifies a document, but to verify it you need the file: the identifier alone proves nothing. Upload the ZIP package you received, or open it from the eight-character code printed on the document (',
+    codePost: 'geotapp.com/r/\u2026',
+    codeAfter: ').',
+    fileLabel: 'Signed package (.zip)',
+    verifying: 'Verifying\u2026',
+    verify: 'Verify the document',
+    hint: 'The file does not leave this computer: the check happens in your browser.',
+    notSentB: 'The package is not sent to us.',
+    notSent: ' The check above runs inside your browser: the fingerprints and the electronic signature are recalculated by this computer, not by our servers. The file does not reach us, and neither do the photos.',
+    keepH: 'The verifier to keep',
+    keep1: 'It is the same check as above, in a single file you take away with you: ',
+    keepArchive: '. You download it once and it stays yours: it opens with a double click like any web page, you drag the package you received into it and it tells you whether it is intact. The archive also contains the command-line version for Node.js, the instructions and the SHA-256 fingerprints, so you can check you received our files exactly as they are.',
+    keepWarnB: 'It is a file, not a program to install.',
+    keepWarn: ' It is not an executable and does not ask for administrator permissions: it is an HTML page that runs on your computer, inside your browser, with no internet connection needed once downloaded. It sends nothing to us. That is the point: even in ten years, if this page no longer existed, the document would still be verifiable.',
+    download: 'Download the offline verifier (.zip)',
+    failed: 'Verification failed: ',
+    failedNoMsg: 'Verification failed: check that the file is the .zip package you received.',
+    valid: 'Document intact',
+    degraded: 'Document intact, with reservations',
+    invalid: 'Document not intact',
+    signature: 'Signature',
+    seal: 'Seal',
+    issuedBy: 'Issued by',
+    eventsPhotos: 'Events and photos',
+    mismatchPre: 'Fingerprints that do not match: ',
+    mismatchPost: '. The content is not what was signed.',
+    surveyH: 'A question for whoever commissions the work',
+    surveyP: 'We are collecting, across Europe, how often paid work is called into question and what happens next. Two minutes, anonymous, no mandatory data.',
+    surveyA: 'Take the survey',
+  },
+};
 
 interface Esito {
   status?: 'valid' | 'degraded' | 'invalid';
@@ -102,6 +216,8 @@ function caricaVerificatore(): Promise<Verificatore> {
 
 function VerificaReport() {
   const parametri = useSearchParams();
+  const locale: AppLocale | null = getLocaleFromPathname(usePathname());
+  const t = TESTI[locale ?? DEFAULT_LOCALE] ?? TESTI[(locale ?? DEFAULT_LOCALE).split('-')[0]] ?? TESTI.en;
   const idStampato = parametri.get('id');
   const [file, setFile] = useState<File | null>(null);
   const [inCorso, setInCorso] = useState(false);
@@ -132,9 +248,7 @@ function VerificaReport() {
     } catch (err) {
       const messaggio = err instanceof Error ? err.message : '';
       setEsito({
-        error: messaggio
-          ? `Verifica non riuscita: ${messaggio}`
-          : 'Verifica non riuscita: controlla che il file sia il pacchetto .zip ricevuto.',
+        error: messaggio ? `${t.failed}${messaggio}` : t.failedNoMsg,
       });
     } finally {
       setInCorso(false);
@@ -148,12 +262,8 @@ function VerificaReport() {
     <div className="lp-l lp-verifica">
       <section className="ph">
         <div className="w">
-          <h1>Verifica un report GeoTapp</h1>
-          <p className="lede">
-            Carica il pacchetto firmato e questa pagina ricalcola le impronte di
-            ogni evento e di ogni foto e controlla la firma elettronica. Il
-            controllo gira nel tuo browser: il file non ci viene inviato.
-          </p>
+          <h1>{t.h1}</h1>
+          <p className="lede">{t.lede}</p>
         </div>
       </section>
 
@@ -163,17 +273,14 @@ function VerificaReport() {
             una pagina che sembra sbagliata. */}
         {idStampato ? (
           <div className="vnotice">
-            Il codice <span className="mono">{idStampato}</span> identifica
-            un documento, ma per verificarlo serve il file: l&rsquo;identificativo da
-            solo non dimostra niente. Carica il pacchetto ZIP che hai ricevuto,
-            oppure aprilo dal codice a otto cifre stampato sul documento
-            (<span className="mono">geotapp.com/r/&hellip;</span>).
+            {t.codePre} <span className="mono">{idStampato}</span> {t.codeMid}
+            <span className="mono">{t.codePost}</span>{t.codeAfter}
           </div>
         ) : null}
 
         <div className="form">
           <div className="fld">
-            <label>Pacchetto firmato (.zip)</label>
+            <label>{t.fileLabel}</label>
             <input
               type="file"
               accept=".zip,application/zip"
@@ -191,21 +298,15 @@ function VerificaReport() {
             className="b1"
             style={{ border: 0, cursor: !file || inCorso ? 'default' : 'pointer' }}
           >
-            {inCorso ? 'Verifica in corso…' : 'Verifica il documento'}
+            {inCorso ? t.verifying : t.verify}
           </button>
-          <p className="hint">
-            Il file non lascia questo computer: la verifica avviene nel tuo
-            browser.
-          </p>
+          <p className="hint">{t.hint}</p>
         </div>
 
         {/* Chi deve fidarsi di una prova non puo' dipendere da chi l'ha
             prodotta. Per questo il controllo gira nel browser di chi legge. */}
         <div className="vnotice" style={{ marginTop: 22 }}>
-          <b>Il pacchetto non ci viene inviato.</b> Il controllo qui sopra gira
-          dentro il tuo browser: le impronte e la firma elettronica le
-          ricalcola questo computer, non i nostri server. Non ci arriva il
-          file, non ci arrivano le foto.
+          <b>{t.notSentB}</b>{t.notSent}
         </div>
 
         {/* Bottone vero, non un link infilato in un paragrafo: nel vecchio
@@ -214,30 +315,22 @@ function VerificaReport() {
             scaricarlo, non dopo: spiegazione, poi l'avviso che è un file
             locale, poi il bottone. */}
         <div className="voffline">
-          <h2>Il verificatore da tenere</h2>
+          <h2>{t.keepH}</h2>
           <p>
-            È lo stesso controllo qui sopra, in un file solo che ti porti via:{' '}
-            <span className="mono">verificatore-geotapp.html</span>. Lo scarichi
-            una volta e resta tuo: si apre con un doppio clic come una pagina
-            qualsiasi, ci trascini dentro il pacchetto ricevuto e ti dice se è
-            integro. Dentro l&rsquo;archivio c&rsquo;è anche la versione da riga
-            di comando per Node.js, le istruzioni e le impronte SHA-256 per
-            controllare di aver ricevuto proprio i nostri file.
+            {t.keep1}
+            <span className="mono">verificatore-geotapp.html</span>
+            {t.keepArchive}
           </p>
           <p className="voffline-warn">
-            <b>È un file, non un programma da installare.</b> Non è un
-            eseguibile e non chiede permessi di amministratore: è una pagina
-            HTML che gira sul tuo computer, dentro il tuo browser, senza
-            bisogno di internet una volta scaricata. Non manda niente a noi.
-            Serve a questo: anche fra dieci anni, se questa pagina non ci fosse
-            più, il documento resta verificabile.
+            <b>{t.keepWarnB}</b>
+            {t.keepWarn}
           </p>
           <a
             href="/geotapp-report-verifier-offline.zip"
             download
             className="b1 voffline-btn"
           >
-            Scarica il verificatore offline (.zip)
+            {t.download}
           </a>
         </div>
 
@@ -253,25 +346,21 @@ function VerificaReport() {
             style={{ background: colore.fondo, color: colore.testo, borderLeft: `6px solid ${colore.bordo}` }}
           >
             <b>
-              {stato === 'valid'
-                ? 'Documento integro'
-                : stato === 'degraded'
-                  ? 'Documento integro, con riserve'
-                  : 'Documento non integro'}
+              {stato === 'valid' ? t.valid : stato === 'degraded' ? t.degraded : t.invalid}
             </b>
           </div>
 
           <div className="vres">
             <div>
-              <p className="lb k">Firma</p>
+              <p className="lb k">{t.signature}</p>
               <b>{esito?.signatureStatus ?? '—'}</b>
             </div>
             <div>
-              <p className="lb k">Sigillo</p>
+              <p className="lb k">{t.seal}</p>
               <b>{esito?.sealStatus ?? '—'}</b>
             </div>
             <div>
-              <p className="lb k">Emesso da</p>
+              <p className="lb k">{t.issuedBy}</p>
               <b>
                 {esito?.issuerDisplayName ??
                   esito?.companyIdentity?.companyName ??
@@ -279,7 +368,7 @@ function VerificaReport() {
               </b>
             </div>
             <div>
-              <p className="lb k">Eventi e foto</p>
+              <p className="lb k">{t.eventsPhotos}</p>
               <b>
                 {esito?.summary
                   ? `${esito.summary.eventsCount} · ${esito.summary.photosCount}`
@@ -290,8 +379,7 @@ function VerificaReport() {
 
           {esito?.summary && esito.summary.hashMismatches > 0 ? (
             <p style={{ marginTop: 22, color: COLORI.invalid.testo }}>
-              Impronte che non tornano: {esito.summary.hashMismatches}. Il
-              contenuto non è quello firmato.
+              {t.mismatchPre}{esito.summary.hashMismatches}{t.mismatchPost}
             </p>
           ) : null}
 
@@ -319,13 +407,9 @@ function VerificaReport() {
       {esito ? (
         <section className="vsurvey">
           <div className="w">
-            <h2>Una domanda a chi il lavoro lo commissiona</h2>
-            <p>
-              Stiamo raccogliendo, in tutta Europa, quanto spesso un lavoro pagato
-              viene messo in dubbio e cosa succede dopo. Due minuti, anonimo,
-              nessun dato obbligatorio.
-            </p>
-            <a href="/it/survey/">Rispondi al sondaggio</a>
+            <h2>{t.surveyH}</h2>
+            <p>{t.surveyP}</p>
+            <a href={localizePath('/survey/', locale ?? DEFAULT_LOCALE)}>{t.surveyA}</a>
           </div>
         </section>
       ) : null}

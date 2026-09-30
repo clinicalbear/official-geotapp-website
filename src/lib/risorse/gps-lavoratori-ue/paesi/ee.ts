@@ -189,7 +189,7 @@ export const estonia: SchedaPaese = {
     {
       voce: {
         it: "Valutazione d'impatto (DPIA) per il monitoraggio sistematico delle attività dei dipendenti e il tracciamento della posizione in tempo reale (lista AKI)",
-        en: 'Impact assessment (DPIA) for systematic monitoring of employees activities and real-time location tracking (AKI list)',
+        en: 'Impact assessment (DPIA) for systematic monitoring of employees\' activities and real-time location tracking (AKI list)',
         de: 'Datenschutz-Folgenabschätzung (DSFA) für die systematische Überwachung der Tätigkeiten der Beschäftigten und die Echtzeit-Standortverfolgung (AKI-Liste)',
         fr: "Analyse d'impact (AIPD) pour la surveillance systématique des activités des salaries et le suivi de la position en temps réel (liste AKI)",
         es: 'Evaluación de impacto (EIPD) para la supervisión sistemática de las actividades de los empleados y el seguimiento de la ubicación en tiempo real (lista AKI)',

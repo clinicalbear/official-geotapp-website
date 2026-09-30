@@ -116,7 +116,7 @@ export const cipro: SchedaPaese = {
       risposta: 'si',
       dettaglio: {
         it: "Il lavoratore va informato prima dell'inizio del monitoraggio su titolare, finalità e base giuridica; non esiste una legge cipriota specifica sul GPS, vale il quadro GDPR e la Legge 125(I)/2018.",
-        en: 'the worker must be informed before monitoring begins about the controller, purposes and legal basis; there is no specific Cypriot law on GPS, the GDPR framework and Law 125(I)/2018 apply.',
+        en: 'The worker must be informed before monitoring begins about the controller, purposes and legal basis; there is no specific Cypriot law on GPS, the GDPR framework and Law 125(I)/2018 apply.',
         de: 'die beschäftigte Person ist vor Beginn der Überwachung über den Verantwortlichen, die Zwecke und die Rechtsgrundlage zu informieren; es gibt kein spezifisches zypriotisches GPS-Gesetz, es gelten der DSGVO-Rahmen und das Gesetz 125(I)/2018.',
         fr: "le travailleur doit être informe avant le début de la surveillance sur le responsable, les finalités et la base juridique; il n'existe pas de loi chypriote spécifique sur le GPS, le cadre du RGPD et la Loi 125(I)/2018 s'appliquent.",
         es: 'el trabajador debe ser informado antes del inicio de la monitorización sobre el responsable, las finalidades y la base jurídica; no existe una ley chipriota especifica sobre el GPS, se aplican el marco del RGPD y la Ley 125(I)/2018.',
@@ -136,7 +136,7 @@ export const cipro: SchedaPaese = {
       risposta: 'no',
       dettaglio: {
         it: "Non serve un'autorizzazione preventiva del Garante; con il GDPR il vecchio regime di notifica è stato abolito.",
-        en: 'no prior authorisation from the Commissioner is needed; with the GDPR the old notification regime has been abolished.',
+        en: 'No prior authorisation from the Commissioner is needed; with the GDPR the old notification regime has been abolished.',
         de: 'eine vorherige Genehmigung des Commissioner ist nicht erforderlich; mit der DSGVO wurde das alte Meldesystem abgeschafft.',
         fr: "aucune autorisation préalable du Commissioner n'est requise; avec le RGPD l'ancien régime de notification a été aboli.",
         es: 'no se necesita una autorización previa del Commissioner; con el RGPD se ha abolido el antiguo régimen de notificación.',
@@ -156,7 +156,7 @@ export const cipro: SchedaPaese = {
       risposta: 'si',
       dettaglio: {
         it: "Nel rapporto di lavoro il consenso non è liberamente prestato; la base usuale è l'interesse legittimo, con un test di bilanciamento documentato che non prevalga sui diritti dei lavoratori.",
-        en: 'in the employment relationship consent is not freely given; the usual basis is legitimate interest, with a documented balancing test that does not override the workers rights.',
+        en: 'In the employment relationship consent is not freely given; the usual basis is legitimate interest, with a documented balancing test that does not override the workers\' rights.',
         de: 'im Arbeitsverhältnis wird die Einwilligung nicht freiwillig erteilt; die übliche Grundlage ist das berechtigte Interesse, mit einer dokumentierten Abwägung, die die Rechte der Beschäftigten nicht überwiegt.',
         fr: "dans la relation de travail le consentement n'est pas librement donne; la base habituelle est l'intérêt légitime, avec un test de mise en balance documente qui ne prévaut pas sur les droits des travailleurs.",
         es: 'en la relación laboral el consentimiento no se presta libremente; la base habitual es el interés legítimo, con una prueba de ponderación documentada que no prevalezca sobre los derechos de los trabajadores.',
@@ -176,7 +176,7 @@ export const cipro: SchedaPaese = {
       risposta: 'si',
       dettaglio: {
         it: 'Il tracciamento GPS continuo è sempre attivo viola la minimizzazione; va limitato a quanto necessario (orario di lavoro, rischio effettivo).',
-        en: 'continuous, always-on GPS tracking breaches data minimisation; it must be limited to what is necessary (working hours, actual risk).',
+        en: 'Continuous, always-on GPS tracking breaches data minimisation; it must be limited to what is necessary (working hours, actual risk).',
         de: 'kontinuierliche, dauerhaft aktive GPS-Ortung verstößt gegen die Datenminimierung; sie ist auf das Notwendige zu beschränken (Arbeitszeit, tatsächliches Risiko).',
         fr: "le suivi GPS continu et toujours actif viole la minimisation; il doit être limite a ce qui est nécessaire (temps de travail, risque effectif).",
         es: 'el seguimiento GPS continuo y siempre activo vulnera la minimización; debe limitarse a lo necesario (jornada laboral, riesgo efectivo).',
@@ -196,7 +196,7 @@ export const cipro: SchedaPaese = {
       risposta: 'si',
       dettaglio: {
         it: 'Una DPIA è necessaria quando il monitoraggio dei dipendenti è sistematico; il Garante valuta caso per caso la proporzionalità.',
-        en: 'a DPIA is required when employee monitoring is systematic; the Commissioner assesses proportionality case by case.',
+        en: 'A DPIA is required when employee monitoring is systematic; the Commissioner assesses proportionality case by case.',
         de: 'eine DSFA ist erforderlich, wenn die Überwachung der Beschäftigten systematisch ist; der Commissioner prüft die Verhältnismäßigkeit im Einzelfall.',
         fr: "une AIPD est nécessaire lorsque la surveillance des salaries est systématique; le Commissioner apprécie la proportionnalité au cas par cas.",
         es: 'una EIPD es necesaria cuando la monitorización de los empleados es sistemática; el Commissioner evalúa la proporcionalidad caso por caso.',
@@ -255,7 +255,7 @@ export const cipro: SchedaPaese = {
       passo: 5,
       descrizione: {
         it: "Configura il sistema in modo proporzionato e verifica la prevalenza dell'interesse sui diritti dei lavoratori.",
-        en: 'Configure the system proportionately and check that the interest does not override the workers rights.',
+        en: 'Configure the system proportionately and check that the interest does not override the workers\' rights.',
         de: 'Konfigurieren Sie das System verhältnismäßig und prüfen Sie, dass das Interesse die Rechte der Beschäftigten nicht überwiegt.',
         fr: "Configurez le système de manière proportionnée et vérifiez que l'intérêt ne prévaut pas sur les droits des travailleurs.",
         es: 'Configure el sistema de forma proporcionada y verifique que el interés no prevalece sobre los derechos de los trabajadores.',
@@ -289,7 +289,7 @@ export const cipro: SchedaPaese = {
   sanzioneMax: {
     importo: {
       it: '82.000 €',
-      en: '82,000 EUR',
+      en: 'EUR 82,000',
       de: '82.000 EUR',
       fr: '82 000 EUR',
       es: '82.000 EUR',

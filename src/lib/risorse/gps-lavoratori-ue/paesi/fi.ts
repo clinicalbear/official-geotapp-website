@@ -131,7 +131,7 @@ export const finlandia: SchedaPaese = {
       risposta: 'si',
       dettaglio: {
         it: "Il datore può trattare solo i dati direttamente necessari al rapporto di lavoro; nemmeno il consenso del lavoratore autorizza il trattamento di dati che non soddisfano questo requisito.",
-        en: 'The employer may process only data directly necessary for the employment relationship; not even the employee consent authorises the processing of data that does not meet this requirement.',
+        en: 'The employer may process only data directly necessary for the employment relationship; not even the employee\'s consent authorises the processing of data that does not meet this requirement.',
         de: 'Der Arbeitgeber darf nur Daten verarbeiten, die für das Arbeitsverhältnis unmittelbar erforderlich sind; auch die Einwilligung des Arbeitnehmers berechtigt nicht zur Verarbeitung von Daten, die diese Anforderung nicht erfüllen.',
         fr: "L'employeur ne peut traiter que les données directement nécessaires a la relation de travail; même le consentement du salarie n'autorisé pas le traitement de données qui ne remplissent pas cette exigence.",
         es: 'El empleador solo puede tratar datos directamente necesarios para la relación laboral; ni siquiera el consentimiento del trabajador autoriza el tratamiento de datos que no cumplan este requisito.',
@@ -292,7 +292,7 @@ export const finlandia: SchedaPaese = {
     },
     casoCitato: {
       it: "Garante finlandese (collegio sanzioni), 2021: a un istituto di istruzione superiore è stata inflitta una multa di 25.000 euro per aver trattato i dati di localizzazione dei dipendenti senza necessità e senza base giuridica, tramite un'app destinata alla registrazione dell'orario di lavoro; ordinata anche la cessazione del trattamento.",
-      en: 'Finnish Data Protection Ombudsman (sanctions board), 2021: a higher education institution was fined 25,000 euro for processing employees location data without necessity and without a legal basis, through an app intended for recording working time; the processing was also ordered to cease.',
+      en: 'Finnish Data Protection Ombudsman (sanctions board), 2021: a higher education institution was fined 25,000 euro for processing employees\' location data without necessity and without a legal basis, through an app intended for recording working time; the processing was also ordered to cease.',
       de: 'Finnischer Datenschutzbeauftragter (Sanktionskollegium), 2021: Gegen eine Hochschule wurde ein Bußgeld von 25.000 Euro verhängt, weil sie die Standortdaten der Beschäftigten ohne Erforderlichkeit und ohne Rechtsgrundlage über eine zur Arbeitszeiterfassung bestimmte App verarbeitet hatte; zudem wurde die Einstellung der Verarbeitung angeordnet.',
       fr: "Médiateur finlandais a la protection des données (collège des sanctions), 2021: un établissement d'enseignement supérieur s'est vu infliger une amende de 25 000 euros pour avoir traite les données de localisation de ses salaries sans nécessite et sans base juridique, au moyen d'une application destinée a l'enregistrement du temps de travail; la cessation du traitement a également été ordonnée.",
       es: 'Defensor finlandés de la protección de datos (colegio de sanciones), 2021: a un centro de enseñanza superior se le impuso una multa de 25 000 euros por tratar los datos de localización de los empleados sin necesidad y sin base jurídica, mediante una app destinada al registro del horario de trabajo; se ordeno asimismo el cese del tratamiento.',

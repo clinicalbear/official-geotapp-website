@@ -254,11 +254,9 @@ export default function VerifierContent({ copy, locale }: VerifierContentProps) 
         <div className="l-code-wrap">
           <div className="l-code">
             <div className="hd"><i /><i /><i /><span>{copy.download_cli_title}</span></div>
-            <pre>{`# Verifica un report ZIP
-npx geotapp-report-verify report.zip
-
-# Output JSON per integrazione
-npx geotapp-report-verify report.zip --json`}</pre>
+            <pre>{locale.split('-')[0] === 'it'
+              ? `# Verifica un report ZIP\nnpx geotapp-report-verify report.zip\n\n# Output JSON per integrazione\nnpx geotapp-report-verify report.zip --json`
+              : `# Verify a report ZIP\nnpx geotapp-report-verify report.zip\n\n# JSON output for integration\nnpx geotapp-report-verify report.zip --json`}</pre>
           </div>
           <div className="l-code">
             <div className="hd"><i /><i /><i /><span>{copy.download_api_title}</span></div>

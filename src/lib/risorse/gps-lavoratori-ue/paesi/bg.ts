@@ -25,12 +25,12 @@ const FONTE_CPDP_GUIDA = {
 };
 const FONTE_CPDP_DPIA = {
   titolo: 'CPDP, lista dei trattamenti che richiedono una DPIA (art. 35.4)',
-  url: 'https://cpdp.bg/кзлд-прие-списък-на-видовете-операции/',
+  url: 'https://cpdp.bg/%D0%BA%D0%B7%D0%BB%D0%B4-%D0%BF%D1%80%D0%B8%D0%B5-%D1%81%D0%BF%D0%B8%D1%81%D1%8A%D0%BA-%D0%BD%D0%B0-%D0%B2%D0%B8%D0%B4%D0%BE%D0%B2%D0%B5%D1%82%D0%B5-%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%86%D0%B8%D0%B8/',
 };
 const FONTE_CPDP_LUKOIL = {
   titolo:
     'CPDP, parere su LUKOIL (riuso della videosorveglianza per valutare i dipendenti)',
-  url: 'https://cpdp.bg/становище-на-кзлд-относно-законосъоб-5/',
+  url: 'https://cpdp.bg/%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%89%D0%B5-%D0%BD%D0%B0-%D0%BA%D0%B7%D0%BB%D0%B4-%D0%BE%D1%82%D0%BD%D0%BE%D1%81%D0%BD%D0%BE-%D0%B7%D0%B0%D0%BA%D0%BE%D0%BD%D0%BE%D1%81%D1%8A%D0%BE%D0%B1-5/',
 };
 const FONTE_CPDP_SITO = {
   titolo: 'CPDP (Garante bulgaro), pagina ufficiale',
@@ -95,7 +95,7 @@ export const bulgaria: SchedaPaese = {
       risposta: 'si',
       dettaglio: {
         it: "Il datore deve adottare regole e procedure interne quando introduce sistemi di controllo dell'accesso, dell'orario e della disciplina del lavoro, indicandone ambito, obblighi e metodi, e portarle a conoscenza dei lavoratori.",
-        en: 'The employer must adopt internal rules and procedures when introducing systems for controlling access, working time and labour discipline, setting out their scope, obligations and methods, and bring them to the workers attention.',
+        en: 'The employer must adopt internal rules and procedures when introducing systems for controlling access, working time and labour discipline, setting out their scope, obligations and methods, and bring them to the workers\' attention.',
         de: 'Der Arbeitgeber muss interne Regeln und Verfahren erlassen, wenn er Systeme zur Kontrolle des Zugangs, der Arbeitszeit und der Arbeitsdisziplin einführt, deren Umfang, Pflichten und Methoden festlegen und sie den Beschäftigten zur Kenntnis bringen.',
         fr: "L'employeur doit adopter des règles et des procédures internes lorsqu'il introduit des systèmes de contrôle de l'accès, du temps de travail et de la discipline, en précisant leur portée, les obligations et les méthodes, et les porter a la connaissance des travailleurs.",
         es: 'El empleador debe adoptar reglas y procedimientos internos cuando introduce sistemas de control del acceso, del horario y de la disciplina laboral, indicando su alcance, obligaciones y métodos, y darlos a conocer a los trabajadores.',
@@ -190,7 +190,7 @@ export const bulgaria: SchedaPaese = {
       passo: 1,
       descrizione: {
         it: 'Adotta regole interne sui sistemi di controllo e portale a conoscenza dei lavoratori (art. 25и).',
-        en: 'Adopt internal rules on the control systems and bring them to the workers attention (art. 25i).',
+        en: 'Adopt internal rules on the control systems and bring them to the workers\' attention (art. 25i).',
         de: 'Erlassen Sie interne Regeln zu den Kontrollsystemen und bringen Sie sie den Beschäftigten zur Kenntnis (Art. 25i).',
         fr: 'Adoptez des règles internes sur les systèmes de contrôle et portez-les a la connaissance des travailleurs (art. 25i).',
         es: 'Adopte reglas internas sobre los sistemas de control y deles a conocer a los trabajadores (art. 25i).',
@@ -268,7 +268,7 @@ export const bulgaria: SchedaPaese = {
   sanzioneMax: {
     importo: {
       it: 'fino a 20 milioni di euro o 4% del fatturato (GDPR)',
-      en: 'up to 20 million euros or 4% of turnover (GDPR)',
+      en: 'up to 20 million euro or 4% of turnover (GDPR)',
       de: 'bis zu 20 Millionen Euro oder 4% des Umsatzes (DSGVO)',
       fr: "jusqu'à 20 millions d'euros ou 4% du chiffre d'affaires (RGPD)",
       es: 'hasta 20 millones de euros o el 4% del volumen de negocio (RGPD)',

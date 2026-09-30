@@ -12,11 +12,11 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   es: 'Cumplimiento normativo en España',
   pt: 'Conformidade em Portugal',
   nl: 'Compliance in Nederland',
-  'en-us': 'Regional compliance',
-  'en-gb': 'Regional compliance',
-  'en-au': 'Regional compliance',
-  'en-ca': 'Regional compliance',
-  'en-ie': 'Regional compliance',
+  'en-us': 'Regional rules and records',
+  'en-gb': 'Regional rules and records',
+  'en-au': 'Regional rules and records',
+  'en-ca': 'Regional rules and records',
+  'en-ie': 'Regional rules and records',
 };
 
 export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
@@ -106,72 +106,72 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   ],
   'en-us': [
     {
-      q: 'FLSA and state-specific cleaning-services records?',
-      a: 'Per-worker hours per week, overtime computation, meal-break/rest-break compliance (CA §512, NY §162, IL §140) and the seven-year retention window required by IRS and DOL.',
+      q: 'FLSA and state records for cleaning services?',
+      a: 'GeoTapp records hours, breaks and overtime shift by shift, with position and time at each clock-in, and exports them to Excel or CSV. Applying the FLSA, meal and rest-break rules or record-retention periods stays with your payroll provider or adviser.',
     },
     {
-      q: 'OSHA 1910 hazard-communication (bloodborne pathogens) training?',
-      a: 'Per-worker HazCom and BBP-29 CFR 1910.1030 training records, with refresher dates and PPE-issuance log tied to the site assignment.',
+      q: 'OSHA hazard-communication and bloodborne-pathogen training?',
+      a: 'GeoTapp does not verify or track HazCom or bloodborne-pathogen training, refresher dates or PPE issuance, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
     {
-      q: 'Service Contract Act prevailing-wage records?',
-      a: 'For federal-building cleaning, WD-rate per classification per worker, WH-347 weekly certified payroll, and the SCA wage determination archive per contract.',
+      q: 'Service Contract Act wage records?',
+      a: 'GeoTapp does not apply Service Contract Act wage determinations or prepare certified payroll (WH-347) and does not calculate entitlements under it. It records start, breaks and finish with position and time, per worker and per job, and exports them to Excel or CSV for your payroll provider or adviser, who apply the rules.',
     },
   ],
   'en-gb': [
     {
-      q: 'Cleaning sector NMW/LW compliance per shift?',
-      a: 'Per-shift travel-time, briefing-time and on-site time, with the NMW Reg 2015 SI 2015/621 reg.59 record-keeping window, the rounding-policy log and the unpaid-pre-shift evidence.',
+      q: 'National Minimum Wage and Living Wage in cleaning?',
+      a: 'GeoTapp records hours, breaks and overtime shift by shift, with position and time at each clock-in, and exports them to Excel or CSV. Applying the National Minimum Wage and Living Wage rules (travel time, briefing time, rounding) stays with your payroll provider or adviser.',
     },
     {
-      q: 'ICO Employment Practices Code GPS workforce compliance?',
-      a: 'Privacy notice, LIA and DPIA per site, with worker consent log and access-request workflow under UK GDPR Articles 13/15 and DPA 2018.',
+      q: 'UK GDPR and the ICO Employment Practices Code?',
+      a: 'The position is recorded only when the worker clocks in (start, break, finish) or takes a proof photo, and the worker signs the privacy notice in the app before clocking in. The lawful basis, the legitimate-interests and DPIA assessment and any consultation with workers or their representatives remain the employer\'s responsibility.',
     },
     {
-      q: 'BICSc training and equipment-certification tracking?',
-      a: 'Per-worker BICSc Cleaning Operators Proficiency Certificate, COSHH training and equipment-use authorisation per site.',
+      q: 'BICSc training and equipment authorisations?',
+      a: 'GeoTapp does not verify or track BICSc certificates, COSHH training or equipment-use authorisations, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
   ],
   'en-au': [
     {
-      q: 'Cleaning Services Award MA000022 penalty-rate compliance?',
-      a: 'Per-worker classification, weekend and public-holiday penalty rates with state-calendar specifics, and the casual-loading interaction with award rates per shift.',
+      q: 'Cleaning Services Award (MA000022) penalty rates?',
+      a: 'GeoTapp does not apply the Cleaning Services Award, penalty rates or casual loadings and does not calculate entitlements under it. It records start, breaks and finish with position and time, per worker and per job, and exports them to Excel or CSV for your payroll provider or adviser, who apply the rules.',
     },
     {
-      q: 'WHS site safety for contract-cleaning sites?',
-      a: 'Entry, exit, supervisor sign-on and SWMS acknowledgement per site, satisfying the Model WHS Regulations cleaning-services audit.',
+      q: 'WHS site safety on contract-cleaning sites?',
+      a: 'GeoTapp does not manage SWMS or supervisor sign-on. It records who clocked in, where and at what time on each site, and that history can be shown to the client or whoever asks. The documents the rules require stay with the company.',
     },
     {
-      q: 'Modern Slavery Act 2018 (Cth) supply-chain evidence?',
-      a: 'For contractors above the AUD 100m threshold, the workforce reporting feeding the annual statement to the Modern Slavery Register.',
+      q: 'Modern Slavery Act 2018 (Cth) reporting?',
+      a: 'GeoTapp does not prepare Modern Slavery statements or supply-chain reporting. It keeps the hours and attendance of each worker, which you export to Excel or CSV.',
     },
   ],
   'en-ca': [
     {
-      q: 'Provincial ESA cleaning-services compliance per province?',
-      a: 'Per-province (Ontario, BC, Alberta, QC) ESA records: hours, breaks, public-holiday pay, vacation, and the four-to-seven-year retention window depending on province.',
+      q: 'Provincial employment standards for cleaning?',
+      a: 'GeoTapp records hours, breaks and overtime shift by shift, with position and time at each clock-in, and exports them to Excel or CSV. Applying provincial employment standards (hours, breaks, public-holiday pay, vacation, retention periods) stays with your payroll provider or adviser.',
     },
     {
-      q: 'PIPEDA/provincial PIPA workforce-monitoring notice?',
-      a: 'Privacy notice, lawful-basis analysis and access workflow per province, with the OPC/OIPC complaint-response readiness.',
+      q: 'PIPEDA and provincial PIPA notices?',
+      a: 'The position is recorded only when the worker clocks in (start, break, finish) or takes a proof photo, and the worker signs the privacy notice in the app before clocking in. The lawful-basis assessment and any consultation with workers or their representatives remain the employer\'s responsibility.',
     },
     {
-      q: 'Federal Modern Slavery Act 2024 (Bill S-211) reporting?',
-      a: 'Workforce supply-chain evidence and forced-labour-risk assessment feeding the annual report to Public Safety Canada.',
+      q: 'Bill S-211 forced-labour reporting?',
+      a: 'GeoTapp does not prepare Bill S-211 reports or supply-chain assessments. It keeps the hours and attendance of each worker, which you export to Excel or CSV.',
     },
   ],
   'en-ie': [
     {
-      q: 'Cleaning sector ERO and JLC compliance?',
-      a: 'Where an Employment Regulation Order applies, per-worker hourly rate and shift pattern reconciled to ERO terms, exportable for WRC and Labour Court enquiry.',
+      q: 'Employment Regulation Orders in cleaning?',
+      a: 'GeoTapp does not apply an Employment Regulation Order, its rates or its premiums and does not calculate entitlements under it. It records start, breaks and finish with position and time, per worker and per job, and exports them to Excel or CSV for your payroll provider or adviser, who apply the rules.',
     },
     {
-      q: 'Sectoral GDPR DPIA for contract-cleaning workforce?',
-      a: 'Privacy notice, DPIA and Article 6(1)(f) LIA per site, with the Data Protection Commission audit support pack.',
+      q: 'GDPR and the DPIA for a contract-cleaning workforce?',
+      a: 'The position is recorded only when the worker clocks in (start, break, finish) or takes a proof photo, and the worker signs the privacy notice in the app before clocking in. The lawful basis, the DPIA and legitimate-interests assessment and any consultation with workers or their representatives remain the employer\'s responsibility.',
     },
     {
-      q: 'EMPA 2018 banded-hours request handling?',
-      a: 'Per-worker 12-month average against the OWTA s.18C band, with the request-and-response audit log evidencing compliance.',
+      q: 'EMPA 2018 banded-hours requests?',
+      a: 'GeoTapp records hours, breaks and overtime shift by shift, with position and time at each clock-in, and exports them to Excel or CSV. Applying the banded-hours provisions or the 12-month averaging stays with your payroll provider or adviser.',
     },
   ],
 };

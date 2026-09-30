@@ -12,11 +12,11 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   es: 'Cumplimiento normativo en España',
   pt: 'Conformidade em Portugal',
   nl: 'Compliance in Nederland',
-  'en-us': 'Regional compliance',
-  'en-gb': 'Regional compliance',
-  'en-au': 'Regional compliance',
-  'en-ca': 'Regional compliance',
-  'en-ie': 'Regional compliance',
+  'en-us': 'Regional rules and records',
+  'en-gb': 'Regional rules and records',
+  'en-au': 'Regional rules and records',
+  'en-ca': 'Regional rules and records',
+  'en-ie': 'Regional rules and records',
 };
 
 export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
@@ -106,72 +106,72 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   ],
   'en-us': [
     {
-      q: 'EPA Section 608 refrigerant handling per technician?',
-      a: 'Per-worker EPA Type I/II/III/Universal certification, refrigerant-recovery log per system and annual report submission record.',
+      q: 'EPA Section 608 refrigerant handling?',
+      a: 'GeoTapp does not verify or track EPA certifications, refrigerant-recovery logs or annual reports, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
     {
-      q: 'OSHA 29 CFR 1910 LOTO compliance per maintenance task?',
-      a: 'Per-task lockout/tagout assignment, energy-control procedure acknowledgement and authorised-employee certification record.',
+      q: 'OSHA lockout/tagout on maintenance tasks?',
+      a: 'GeoTapp does not verify or track lockout/tagout procedures, energy-control acknowledgements or authorised-employee certification, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
     {
-      q: 'DOT regulated-maintenance records for transportation assets?',
-      a: 'Per-asset maintenance log aligned to FMCSA Part 396, with the technician\'s CDL evidence where applicable.',
+      q: 'FMCSA Part 396 maintenance records?',
+      a: 'GeoTapp does not verify or track FMCSA Part 396 maintenance logs or CDL evidence, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
   ],
   'en-gb': [
     {
-      q: 'PUWER 1998 maintenance-record evidence?',
-      a: 'Per-asset inspection and maintenance log aligned to Provision and Use of Work Equipment Regulations 1998, with technician competence per task.',
+      q: 'PUWER 1998 maintenance records?',
+      a: 'GeoTapp does not verify or track PUWER inspection and maintenance logs or technician competence, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
     {
-      q: 'LOLER 1998 lifting-equipment inspection records?',
-      a: 'Per-equipment six-monthly/twelve-monthly thorough examination record, with the competent-person ID and report archive.',
+      q: 'LOLER 1998 lifting-equipment examinations?',
+      a: 'GeoTapp does not verify or track LOLER thorough-examination records, competent-person IDs or reports, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
     {
-      q: 'PAT testing records and IET Code of Practice alignment?',
-      a: 'Per-asset PAT test schedule, results log and remedial-action trail, satisfying the Electricity at Work Regulations 1989 audit.',
+      q: 'PAT testing records?',
+      a: 'GeoTapp does not verify or track PAT test schedules, results or remedial actions, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
   ],
   'en-au': [
     {
-      q: 'PCBU asset-maintenance evidence under WHS?',
-      a: 'Per-asset maintenance log aligned to WHS Act 2011 §27 officer-duty due diligence, with technician competence per task captured.',
+      q: 'PCBU asset-maintenance duties under WHS?',
+      a: 'GeoTapp does not verify or track asset-maintenance logs under the WHS Act or officer due-diligence duties, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
     {
-      q: 'AS/NZS 3760 in-service safety inspection records?',
-      a: 'Per-equipment test schedule, results and tag log aligned to AS/NZS 3760, with the competent-person record per shift.',
+      q: 'AS/NZS 3760 in-service safety inspections?',
+      a: 'GeoTapp does not verify or track AS/NZS 3760 test schedules, results or tags, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
     {
-      q: 'Heavy Vehicle National Law (HVNL) maintenance records?',
-      a: 'Per-asset maintenance log aligned to HVNL chain-of-responsibility, with technician\'s maintenance-management acknowledgement per task.',
+      q: 'Heavy Vehicle National Law maintenance records?',
+      a: 'GeoTapp does not verify or track HVNL maintenance logs or chain-of-responsibility records, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
   ],
   'en-ca': [
     {
-      q: 'CSA Z460 hazardous-energy control records?',
-      a: 'Per-task lockout/tagout record aligned to CSA Z460, with authorised-employee certification and provincial OHS regulator audit support.',
+      q: 'CSA Z460 hazardous-energy control?',
+      a: 'GeoTapp does not verify or track CSA Z460 lockout/tagout records or authorised-employee certification, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
     {
-      q: 'TSSA Ontario boiler/pressure-system maintenance records?',
-      a: 'Per-system inspection and maintenance log feeding the TSSA audit, with the certified worker\'s qualification chain captured per shift.',
+      q: 'TSSA Ontario boiler and pressure-system maintenance?',
+      a: 'GeoTapp does not verify or track TSSA inspection and maintenance logs or certified-worker qualifications, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
     {
-      q: 'Federally regulated transport maintenance under CLC Part II?',
-      a: 'Per-asset maintenance log aligned to Canada Transportation Act and CLC Part II, with technician\'s competence and refresher dates.',
+      q: 'Federally regulated transport maintenance?',
+      a: 'GeoTapp does not verify or track Canada Transportation Act or CLC Part II maintenance logs, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
   ],
   'en-ie': [
     {
       q: 'Safety, Health and Welfare at Work Act 2005 maintenance records?',
-      a: 'Per-asset inspection and maintenance log aligned to General Application Regulations 2007 Part 2 (Workplace Equipment), with HSA audit support.',
+      a: 'GeoTapp does not verify or track workplace-equipment inspection logs or HSA audit files, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
     {
-      q: 'Lifting equipment thorough-examination per LOLER-equivalent?',
-      a: 'Per-equipment six-monthly/twelve-monthly examination record, with competent-person ID and report archive, satisfying HSA inspection.',
+      q: 'Lifting-equipment thorough examinations?',
+      a: 'GeoTapp does not verify or track thorough-examination records or competent-person IDs, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
     {
-      q: 'Construction SEO maintenance-package rate compliance?',
-      a: 'Where applicable, per-worker SEO craft-category rate and CWPS contribution evidence per maintenance shift.',
+      q: 'Construction SEO rates for maintenance packages?',
+      a: 'GeoTapp does not apply the Construction Sectoral Employment Order rates or pension contributions and does not calculate entitlements under it. It records start, breaks and finish with position and time, per worker and per job, and exports them to Excel or CSV for your payroll provider or adviser, who apply the rules.',
     },
   ],
 };

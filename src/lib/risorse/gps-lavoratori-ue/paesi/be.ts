@@ -282,7 +282,7 @@ export const belgio: SchedaPaese = {
   sanzioneMax: {
     importo: {
       it: '45.000 euro',
-      en: '45,000 euros',
+      en: 'EUR 45,000',
       de: '45.000 Euro',
       fr: '45 000 euros',
       es: '45.000 euros',

@@ -104,7 +104,7 @@ export const polonia: SchedaPaese = {
       risposta: 'si',
       dettaglio: {
         it: "Il Codice del lavoro polacco disciplina espressamente il monitoraggio: finalità, portata e modalità vanno stabilite nel contratto collettivo, nel regolamento del lavoro o in un avviso, e queste stesse regole valgono anche per le altre forme di monitoraggio (GPS incluso) quando sono necessarie all'organizzazione del lavoro e al corretto uso degli strumenti di lavoro.",
-        en: 'the Polish Labour Code expressly governs monitoring: purpose, scope and methods must be set out in the collective agreement, the work regulations or a notice, and these same rules also apply to other forms of monitoring (GPS included) where necessary for organising work and the proper use of work tools.',
+        en: 'The Polish Labour Code expressly governs monitoring: purpose, scope and methods must be set out in the collective agreement, the work regulations or a notice, and these same rules also apply to other forms of monitoring (GPS included) where necessary for organising work and the proper use of work tools.',
         de: 'das polnische Arbeitsgesetzbuch regelt die Überwachung ausdrücklich: Zweck, Umfang und Art müssen im Tarifvertrag, in der Arbeitsordnung oder in einer Bekanntmachung festgelegt werden, und dieselben Regeln gelten auch für andere Überwachungsformen (GPS eingeschlossen), wenn sie für die Arbeitsorganisation und die ordnungsgemäße Nutzung der Arbeitsmittel erforderlich sind.',
         fr: "le Code du travail polonais régit expressément la surveillance: la finalité, la portée et les modalités doivent être fixées dans la convention collective, le règlement du travail ou un avis, et ces mêmes règles s'appliquent aussi aux autres formes de surveillance (GPS compris) lorsqu'elles sont nécessaires à l'organisation du travail et à l'usage correct des outils de travail.",
         es: 'el Código de trabajo polaco regula expresamente el monitoreo: la finalidad, el alcance y las modalidades deben establecerse en el convenio colectivo, el reglamento de trabajo o un aviso, y esas mismas reglas se aplican también a las demás formas de monitoreo (GPS incluido) cuando son necesarias para la organización del trabajo y el uso adecuado de las herramientas de trabajo.',
@@ -124,7 +124,7 @@ export const polonia: SchedaPaese = {
       risposta: 'si',
       dettaglio: {
         it: "Il datore informa i lavoratori dell'introduzione del monitoraggio almeno due settimane prima dell'avvio, e consegna l'informazione su carta o in forma elettronica al neoassunto prima di adibirlo al lavoro.",
-        en: 'the employer informs the workers of the introduction of monitoring at least two weeks before it starts, and gives the information on paper or electronically to the new hire before assigning them to work.',
+        en: 'The employer informs the workers of the introduction of monitoring at least two weeks before it starts, and gives the information on paper or electronically to the new hire before assigning them to work.',
         de: 'der Arbeitgeber informiert die Beschäftigten über die Einführung der Überwachung mindestens zwei Wochen vor dem Beginn und übergibt dem neu Eingestellten die Information in Papier- oder elektronischer Form, bevor er ihn zur Arbeit einsetzt.',
         fr: "l'employeur informe les salaries de l'introduction de la surveillance au moins deux semaines avant son démarrage, et remet l'information sur papier ou sous forme électronique au nouvel embauché avant de l'affecter au travail.",
         es: 'el empleador informa a los trabajadores de la introducción del monitoreo al menos dos semanas antes de su inicio, y entrega la información en papel o en formato electrónico al nuevo contratado antes de asignarle el trabajo.',
@@ -144,7 +144,7 @@ export const polonia: SchedaPaese = {
       risposta: 'no',
       dettaglio: {
         it: "Non serve un'autorizzazione preventiva dell'UODO; la procedura è interna (regole nel regolamento/avviso, informazione, segnalazione delle aree) più il rispetto del GDPR.",
-        en: 'no prior authorisation from the UODO is required; the procedure is internal (rules in the regulations/notice, information, marking of areas) plus compliance with the GDPR.',
+        en: 'No prior authorisation from the UODO is required; the procedure is internal (rules in the regulations/notice, information, marking of areas) plus compliance with the GDPR.',
         de: 'eine vorherige Genehmigung der UODO ist nicht erforderlich; das Verfahren ist intern (Regeln in der Ordnung/Bekanntmachung, Information, Kennzeichnung der Bereiche) zuzüglich der Einhaltung der DSGVO.',
         fr: "aucune autorisation préalable de l'UODO n'est requise; la procédure est interne (règles dans le règlement/avis, information, signalisation des zones) plus le respect du RGPD.",
         es: 'no se requiere una autorización previa de la UODO; el procedimiento es interno (reglas en el reglamento/aviso, información, señalización de las áreas) mas el cumplimiento del RGPD.',
@@ -164,7 +164,7 @@ export const polonia: SchedaPaese = {
       risposta: 'si',
       dettaglio: {
         it: "Per l'UODO il datore non è legittimato a raccogliere dati sugli spostamenti privati del lavoratore (salvo casi eccezionali come furto del veicolo); se il veicolo è usato anche privatamente la guida indica di stabilire che è solo di servizio oppure di adeguare il regolamento d'uso, ottenere il consenso del lavoratore per quei dati e dargli l'informativa. Il rischio per i diritti deve essere proporzionato allo scopo.",
-        en: 'for the UODO the employer is not entitled to collect data on the worker\'s private movements (save for exceptional cases such as theft of the vehicle); if the vehicle is also used privately, the guide says to either provide that it is for work use only or to adapt the vehicle-use rules, obtain the worker\'s consent for that data and give the information notice. The risk to rights must be proportionate to the purpose.',
+        en: 'For the UODO the employer is not entitled to collect data on the worker\'s private movements (save for exceptional cases such as theft of the vehicle); if the vehicle is also used privately, the guide says to either provide that it is for work use only or to adapt the vehicle-use rules, obtain the worker\'s consent for that data and give the information notice. The risk to rights must be proportionate to the purpose.',
         de: 'für die UODO ist der Arbeitgeber nicht berechtigt, Daten über die privaten Bewegungen des Beschäftigten zu erheben (außer in Ausnahmefällen wie dem Diebstahl des Fahrzeugs); wird das Fahrzeug auch privat genutzt, empfiehlt der Leitfaden, entweder die ausschließlich dienstliche Nutzung festzulegen oder die Nutzungsregeln anzupassen, die Einwilligung des Beschäftigten für diese Daten einzuholen und die Information zu erteilen. Das Risiko für die Rechte muss im Verhältnis zum Zweck stehen.',
         fr: "pour l'UODO, l'employeur n'est pas autorisé a collecter des données sur les déplacements prives du salarie (sauf cas exceptionnels comme le vol du véhicule); si le véhicule est également utilise a titre prive, le guide indique de prévoir un usage exclusivement professionnel ou d'adapter le règlement d'usage, d'obtenir le consentement du salarie pour ces données et de lui remettre l'information. Le risque pour les droits doit être proportionné a la finalité.",
         es: 'para la UODO el empleador no esta legitimado para recopilar datos sobre los desplazamientos privados del trabajador (salvo casos excepcionales como el robo del vehículo); si el vehículo se usa también de forma privada, la guía indica establecer que es solo de servicio o bien adaptar el reglamento de uso, obtener el consentimiento del trabajador para esos datos y darle la información. El riesgo para los derechos debe ser proporcionado a la finalidad.',
@@ -184,7 +184,7 @@ export const polonia: SchedaPaese = {
       risposta: 'si',
       dettaglio: {
         it: "La lista UODO funziona per criteri: di norma la DPIA serve quando ne ricorrono almeno due. Tra gli esempi ci sono il monitoraggio sistematico dei lavoratori e il trattamento regolare di dati che permettono di osservare gli spostamenti sul territorio (per esempio i dati di geolocalizzazione). Il GPS sui lavoratori ne integra di norma più di uno.",
-        en: 'the UODO list works by criteria: as a rule an impact assessment is needed when at least two apply. Its examples include systematic monitoring of workers and regular processing of data that lets movements across the territory be observed (for example geolocation data). GPS on workers normally meets more than one.',
+        en: 'The UODO list works by criteria: as a rule an impact assessment is needed when at least two apply. Its examples include systematic monitoring of workers and regular processing of data that lets movements across the territory be observed (for example geolocation data). GPS on workers normally meets more than one.',
         de: 'die UODO-Liste arbeitet mit Kriterien: in der Regel ist eine Folgenabschätzung nötig, wenn mindestens zwei zutreffen. Zu den Beispielen gehören die systematische Überwachung von Beschäftigten und die regelmäßige Verarbeitung von Daten, die die Beobachtung von Bewegungen im Gelände erlauben (etwa Geolokalisierungsdaten). GPS bei Beschäftigten erfüllt in der Regel mehr als ein Kriterium.',
         fr: "la liste UODO fonctionne par critères : en règle générale, une analyse d'impact est requise lorsqu'au moins deux critères sont réunis. Parmi les exemples figurent la surveillance systématique des salaries et le traitement régulier de données permettant d'observer les déplacements sur le terrain (par exemple les données de géolocalisation). Le GPS sur les salaries remplit en général plus d'un critère.",
         es: 'la lista UODO funciona por criterios: por regla general la evaluación de impacto es necesaria cuando concurren al menos dos. Entre los ejemplos figuran el monitoreo sistemático de los trabajadores y el tratamiento regular de datos que permiten observar los desplazamientos en el terreno (por ejemplo, los datos de geolocalización). El GPS sobre los trabajadores cumple normalmente más de un criterio.',
@@ -277,7 +277,7 @@ export const polonia: SchedaPaese = {
   sanzioneMax: {
     importo: {
       it: 'circa 266.000 € (1.145.891 PLN)',
-      en: 'about 266,000 € (1,145,891 PLN)',
+      en: 'about EUR 266,000 (1,145,891 PLN)',
       de: 'rund 266.000 € (1.145.891 PLN)',
       fr: 'environ 266 000 € (1 145 891 PLN)',
       es: 'unos 266.000 € (1.145.891 PLN)',

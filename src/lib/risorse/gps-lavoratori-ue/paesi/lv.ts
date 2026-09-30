@@ -284,7 +284,7 @@ export const lettonia: SchedaPaese = {
   sanzioneMax: {
     importo: {
       it: 'fino a 20 milioni di euro o 4% del fatturato (GDPR)',
-      en: 'up to 20 million euros or 4% of turnover (GDPR)',
+      en: 'up to 20 million euro or 4% of turnover (GDPR)',
       de: 'bis zu 20 Millionen Euro oder 4% des Umsatzes (DSGVO)',
       fr: "jusqu'à 20 millions d'euros ou 4% du chiffre d'affaires (RGPD)",
       es: 'hasta 20 millones de euros o el 4% de la facturación (RGPD)',

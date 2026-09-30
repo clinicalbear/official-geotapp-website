@@ -296,7 +296,7 @@ export const spagna: SchedaPaese = {
   sanzioneMax: {
     importo: {
       it: '200.000 €',
-      en: '200,000 €',
+      en: 'EUR 200,000',
       de: '200.000 €',
       fr: '200 000 €',
       es: '200.000 €',

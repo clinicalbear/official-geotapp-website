@@ -7,9 +7,10 @@
  * la scheda claim, che rimanda a quel manuale.
  */
 import it from './it';
+import en from './en';
 
-const GUIDE: Record<string, string> = { it };
+const GUIDE: Record<string, string> = { it, en };
 
 export function guidaPer(locale: string): string {
-  return GUIDE[locale] ?? GUIDE[locale.split('-')[0]] ?? GUIDE.it;
+  return GUIDE[locale] ?? GUIDE[locale.split('-')[0]] ?? GUIDE.en;
 }

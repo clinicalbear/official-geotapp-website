@@ -3,15 +3,15 @@ import type { SettoreContent } from '../types';
 const content: SettoreContent = {
   meta: {
     title: 'App for Heating Engineers | GeoTapp - GPS, Job Reports & Proof',
-    description: 'GeoTapp is the app for plumbers and heating installers: GPS-verified job reports, boiler photos and sealed records. Close disputes with real evidence. Try free.',
+    description: 'GeoTapp is the app for plumbers and heating installers: job reports with position at clock-in, boiler photos and sealed records. Show them when a client disputes. Try free for 14 days.',
   },
   hero: {
     badge: 'App for Plumbers and Heating Installers',
     h1_line1: 'App for heating engineers:',
     h1_line2: 'GPS job reports, photo evidence and fewer disputes.',
-    subtitle: 'GeoTapp records every boiler and heating job with GPS, photos and verifiable timestamps. Client disputes parts replaced? Show them the report, no argument needed. Your engineers are protected, your invoices too.',
-    cta_primary: 'Start free today',
-    cta_note: 'No commitment. Response within 12 business hours.',
+    subtitle: 'GeoTapp records every boiler and heating job with GPS, photos and recorded times. Client disputes parts replaced? Show them the report instead of arguing it out.',
+    cta_primary: 'Try it free for 14 days',
+    cta_note: 'The trial commits you to nothing. No credit card.',
   },
   pain: {
     title: 'The problem every heating and plumbing company knows',
@@ -36,15 +36,15 @@ const content: SettoreContent = {
     steps: [
       {
         title: 'Engineer records the job on site',
-        desc: 'With GeoTapp TimeTracker they clock in and out with GPS, photograph the boiler and system, add notes on parts replaced, all from their smartphone.',
+        desc: 'With GeoTapp TimeTracker they clock in, take breaks and clock out with their position recorded, photograph the boiler and system, and add notes on parts replaced, all from their smartphone.',
       },
       {
-        title: 'Office sees each update as it happens',
-        desc: 'GeoTapp Flow receives data instantly. The manager sees job reference, assigned engineer, progress and photo evidence without calling.',
+        title: 'Office sees each update as it arrives',
+        desc: 'GeoTapp Flow receives the data as soon as the phone has signal. The manager sees job reference, assigned engineer, progress and photo evidence without calling.',
       },
       {
         title: 'The job report is your proof',
-        desc: 'At the end of the job the system generates a sealed report: GPS timestamp, system photos and parts, technical notes. Tamper-evident. The client can verify it independently.',
+        desc: 'At the end of the job the system generates a sealed report: position and time, system photos and parts, technical notes. Any change is detectable, and the client can verify it independently.',
       },
     ],
   },
@@ -55,12 +55,12 @@ const content: SettoreContent = {
       {
         label: 'What it records',
         competitor: 'Clock-in and clock-out time',
-        geotapp: 'Time + verified GPS + system photos + parts replaced',
+        geotapp: 'Time + position at clock-in + system photos + parts replaced',
       },
       {
         label: 'In case of dispute',
-        competitor: 'Data not defensible',
-        geotapp: 'Sealed report, tamper-evident',
+        competitor: 'Just your word',
+        geotapp: 'Sealed report, any change is detectable',
       },
       {
         label: 'Job documentation',
@@ -89,57 +89,57 @@ const content: SettoreContent = {
     ],
     dopo: [
       'Client disputes that the valve was replaced.',
-      'You open the report: photo of the old part removed, the new one fitted, GPS timestamp, technical notes.',
-      'You send it. The dispute ends in a minute.',
-      'The invoice is safe. The engineer is protected.',
+      'You open the report: photo of the old part removed, the new one fitted, time, position, technical notes.',
+      'You send it, and the client can verify it alone.',
+      'You have proof to show. The engineer has something in hand too.',
     ],
   },
   scenario: {
-    title: 'Real case',
-    body: 'A client disputes the replacement of a boiler burner and refuses to pay the invoice. With GeoTapp you open the job report: photo of the faulty part removed, the new one installed, GPS timestamp of the job and technical notes from the engineer, all generated automatically from their smartphone on site.',
-    resolution: 'The dispute drops. The invoice is paid in full.',
+    title: 'A typical case',
+    body: 'A client disputes the replacement of a boiler burner and refuses to pay the invoice. With GeoTapp you open the job report: photo of the faulty part removed, the new one installed, time and position of the job and technical notes from the engineer, all generated automatically from their smartphone on site.',
+    resolution: 'Instead of one word against another, there is a document the client can check alone.',
   },
   features: {
     title: 'App for heating engineers: what you get with GeoTapp.',
     items: [
       {
-        title: 'Verifiable GPS time tracking',
-        desc: 'Every site arrival and departure is recorded with location, timestamp and job reference. Defensible to clients and insurers alike.',
+        title: 'GPS time tracking at each clock-in',
+        desc: 'Every arrival, break and departure is recorded with position, timestamp and job reference. Something to show clients and insurers when it matters.',
       },
       {
         title: 'Sealed system photos',
-        desc: 'The engineer photographs from the app during and after the job. Every image is linked to GPS and timestamp, sealed after generation.',
+        desc: 'The engineer photographs from the app during and after the job. Every image is linked to GPS and timestamp, and goes into the sealed report: any later change is detectable.',
       },
       {
         title: 'Automatic digital job reports',
-        desc: 'At the end of the job the report is ready: hours, photos, parts replaced and signature. The engineer sends it to the client directly from the app.',
+        desc: 'At the end of the job the report is ready: hours, photos and parts replaced. The office sends it to the client from Flow with one click.',
       },
       {
         title: 'Job and emergency management',
-        desc: 'Assign urgent call-outs, track progress and receive alerts if a job is not completed on time.',
+        desc: 'Assign urgent call-outs and follow progress job by job.',
       },
       {
         title: 'Payroll export',
-        desc: 'Export monthly attendance in formats compatible with Sage, Xero and BrightHR. Payroll processing becomes a quick task.',
+        desc: 'Export the month\'s attendance to Excel or CSV, ready for your payroll provider or accountant. Payroll processing becomes a quick task.',
       },
       {
         title: 'Your engineers are protected',
-        desc: 'A verifiable report protects the engineer from unfounded accusations about parts or hours. Good work is proven by the data.',
+        desc: 'A verifiable report gives the engineer something in hand against unfounded accusations about parts or hours. Good work is shown by the data.',
       },
     ],
   },
   cta_mid: {
     title: 'Want to see how it works on a real heating job?',
-    body: 'We show you the complete flow: from opening a job to the report the client receives. In 20 minutes you\'ll know if it\'s right for you.',
-    cta: 'Start free today',
+    body: 'Try it on a real job, from opening the job to the report the client receives: 14 days free, no credit card.',
+    cta: 'Try it free for 14 days',
   },
   trust: {
-    title: 'If one of our reports is changed, it shows. Even if we are the ones changing it.',
-    body: 'GeoTapp reports are generated by the system at the moment of the job. There is no panel to "correct" a time or move a photo. The data is what it is, digitally signed, with real GPS.',
+    title: 'If a report is changed, it shows. Even if you or we are the ones changing it.',
+    body: 'GeoTapp reports are generated by the system at the moment of the job. Once a report is sealed, correcting a time or moving a photo breaks the seal, and the verification flags it.',
     badge: 'Verifiable by anyone, without access to your account',
   },
   testimonial: {
-    quote: 'With GeoTapp my engineers photograph the system before and after every job. Disputes about parts have disappeared. Invoices get paid.',
+    quote: 'With GeoTapp my engineers photograph the system before and after every job. When a client disputes the parts, we have the photos to show.',
     author: 'Mark S.',
     role: 'Owner, residential and commercial heating installations',
   },
@@ -149,7 +149,7 @@ const content: SettoreContent = {
     items: [
       {
         q: 'Is GeoTapp suitable as an app for heating engineers?',
-        a: 'Yes. GeoTapp is used by plumbers and heating installers to manage boiler and heating jobs with GPS job reports, photos and verifiable hours.',
+        a: 'Yes. GeoTapp is used by plumbers and heating installers to manage boiler and heating jobs with job reports with position, photos and recorded hours.',
       },
       {
         q: 'Can I use GeoTapp to document parts replaced on boilers?',
@@ -157,38 +157,38 @@ const content: SettoreContent = {
       },
       {
         q: 'Does GeoTapp help resolve client disputes about heating jobs?',
-        a: 'That is exactly the primary use case: GPS timestamp, photo evidence of parts and a sealed report make any unfounded dispute resolvable in minutes.',
+        a: 'That is exactly the primary use case: recorded time and position, photo evidence of parts and a sealed report give you a document to show when a dispute is unfounded.',
       },
     ],
   },
   cta: {
     title: 'Every heating job done right deserves proof. GeoTapp generates it.',
-    subtitle: 'Verifiable reports, real GPS, sealed photos. Your work is defensible.',
-    primary: 'Start free today',
+    subtitle: 'Verifiable reports, position at clock-in, photos sealed into the report.',
+    primary: 'Try it free for 14 days',
     secondary: 'View Pricing',
   },
   pricing_hint: {
-    label: 'Starting from',
-    per: 'operator/month',
+    label: 'TimeTracker seats from',
+    per: 'per operator per month, plus a Flow plan',
     note: '14-day free trial',
   },
   schema_sector_name: 'Heating Engineers',
   schema_faq: [
     {
       question: 'Does GeoTapp work as an app for heating engineers?',
-      answer: 'Yes. GeoTapp is the app for plumbers and heating installers that records every boiler and heating job with GPS, photos and verifiable timestamps. The engineer clocks in from the field, the office sees each clock-in as it happens, and the client receives a sealed job report.',
+      answer: 'Yes. GeoTapp is the app for plumbers and heating installers that records every boiler and heating job with GPS, photos and recorded times. The engineer clocks in from the field, the office sees each clock-in as it arrives, and the client receives a sealed job report.',
     },
     {
       question: 'How do I seal a boiler job with GeoTapp?',
-      answer: 'The engineer records start and finish time with verified GPS, photographs the parts replaced and adds technical notes. The system generates a sealed report the client can verify independently.',
+      answer: 'The engineer records start and finish time with their position, photographs the parts replaced and adds technical notes. The system generates a sealed report the client can verify independently.',
     },
     {
       question: 'Does GeoTapp handle multiple teams of heating engineers on different jobs?',
-      answer: 'Yes. GeoTapp Flow lets the owner coordinate multiple teams, assign urgent call-outs, track job status and collect photo evidence from all active sites as it comes in.',
+      answer: 'Yes. GeoTapp Flow lets the owner coordinate multiple teams, assign urgent call-outs, follow job status and collect photo evidence from all active sites as it comes in.',
     },
     {
       question: 'Are GeoTapp job reports accepted in heating disputes?',
-      answer: 'GeoTapp reports are sealed with GPS, timestamps and photo evidence. They have been used successfully to resolve disputes over parts and work denied by the client.',
+      answer: 'GeoTapp reports are sealed with GPS, timestamps and photo evidence, and the client verifies them alone. They help show that the document has not been changed; on their own they are not absolute proof of the facts, nor legal advice.',
     },
   ],
 };

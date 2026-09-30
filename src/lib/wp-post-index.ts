@@ -395,6 +395,14 @@ export const NON_IN_VETRINA = new Set<string>([
   'elettricista-da-excel-a-timbrature-gps-margine',
   'tempo-sprecato-in-azienda-come-geotapp-timetracker-rivela-inefficienze-nascoste-da-migliaia-di-euro-al-mese',
   'impresa-di-pulizie-quanto-cambierebbe-la-tua-vita-se-ogni-intervento-fosse-finalmente-sotto-controllo',
+  // Versioni inglesi degli stessi articoli (titoli: «Total Protection», «Anti-Spoofing», «Stop Buddy
+  // Punching: End €20K...», «Control Every Cleaning Job», «Time Wasted...»). Aggiunte il 30/09/2026.
+  'geotapp-ecosystem-2026-your-total-protection-imagine-it-now-and-make-it-real',
+  'gps-stamping-2026-only-geotapp-combines-encryption-full-anti-spoofing',
+  'gps-time-tracking-against-buddy-punching-how-to-really-stop-it',
+  'cleaning-company-how-much-would-your-life-change-if-every-intervention-were-finally-under-control',
+  'time-wasted-in-the-company-how-geotapp-timetracker-reveals-hidden-inefficiencies-of-thousands-of-euros-per-month',
+  'from-excel-to-gps-how-an-electrician-saves-e12000-a-year',
 ]);
 
 export function filterPosts<T extends WpIndexEntry>(

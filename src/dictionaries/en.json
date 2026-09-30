@@ -60,11 +60,11 @@
       },
       "conservazione": {
         "title": "Data retention policy",
-        "desc": "Generate the HR data retention table by country: recommended periods, legal note and export. Free, in your browser."
+        "desc": "Generate the personnel data retention table by country: recommended periods, legal note and export. Free, in your browser."
       },
       "sanzioni": {
         "title": "GPS penalty calculator",
-        "desc": "Pick a country and find out how much you risk monitoring workers: real maximum fine and the obligations that expose you."
+        "desc": "Pick a country and find out how much you risk monitoring workers: the highest fine actually imposed, or the legal maximum, and the obligations that expose you."
       },
       "osservatorio": {
         "title": "European observatory",
@@ -72,7 +72,7 @@
       },
       "indice": {
         "title": "Worker surveillance index in Europe",
-        "desc": "The ranking of 39 European countries by how strict their worker-monitoring framework is."
+        "desc": "What the decisions published by European authorities say, in numbers, about monitoring workers: how many, on which topics, the biggest fines."
       },
       "roi": {
         "title": "ROI calculator",
@@ -104,7 +104,7 @@
         },
         {
           "q": "Are they only useful if I use GeoTapp?",
-          "a": "No, they stand on their own. We built them so that anyone sending people into the field understands what compliance takes, GeoTapp or not. If you then want a system already set up to record location only at clock-in and not continuously, it's here, but the resources are useful either way."
+          "a": "No, they stand on their own. We built them so that anyone sending people into the field understands what compliance takes, whether you use GeoTapp or not. If you then want a system that records location only at clock-in and never continuously, GeoTapp is built that way; the resources are useful either way."
         },
         {
           "q": "Who are they for?",
@@ -119,7 +119,7 @@
     "terms": "Terms of Service",
     "rights": "All rights reserved.",
     "newsletter_title": "Stay updated on the industry",
-    "newsletter_desc": "No spam, just valuable updates on operations management, HR and technology for SMEs.",
+    "newsletter_desc": "No spam, just valuable updates on organising field work, managing staff and digital tools for small businesses.",
     "sectors": "Sectors",
     "contact": "Contact"
   },
@@ -128,26 +128,26 @@
     "hero_badge": "The work happened. Now make it provable.",
     "clockin_demo": {
       "step_clock": "Clock in",
-      "step_gps": "GPS verified",
+      "step_gps": "Location checked",
       "step_photo": "Photo on site",
       "step_sealed": "Sealed",
-      "caption": "One clock-in. GPS, photo and time, sealed. You can't redo it, you can't argue with it.",
+      "caption": "One clock-in: location, photo and time, sealed in the report. Any later change shows.",
       "replay": "Replay"
     },
     "hero_title": "If you can't prove it, the client says it never happened.",
-    "hero_subtitle": "GeoTapp turns every field job into objective evidence: sealed reports with real GPS data, timestamped photo proof and documentation anyone can verify, without trusting you, without disputes.",
+    "hero_subtitle": "GeoTapp turns every field job into proof: sealed reports with location, photos and times, which the client can check alone, without having to take your word for it.",
     "hero_cta_primary": "Start free trial",
     "hero_cta_secondary": "Explore Sectors",
     "hero_cta_report": "See a sealed report",
     "trust_gdpr": "No continuous tracking",
-    "trust_gdpr_desc": "Timestamps only at clock-in/out",
+    "trust_gdpr_desc": "Location only when clocking in: start, breaks, finish",
     "trust_gps": "GPS Proof",
     "trust_gps_desc": "Every job sealed with location and timestamp",
     "trust_offline": "Offline verifier",
     "trust_offline_desc": "One file, no account and no network",
     "trust_eu_data": "Data hosted in the EU",
     "features_title": "From job to verifiable proof",
-    "features_subtitle": "Three integrated tools: the field records, the office controls, the client verifies.",
+    "features_subtitle": "Three integrated tools: the field records, the office organises, the client verifies.",
     "cta_title": "The work happened. Now prove it.",
     "cta_subtitle": "No job is left without documentation, and every hour that comes off the field arrives already verifiable.",
     "cta_button": "Start free trial",
@@ -167,9 +167,9 @@
         "desc": "Every undocumented hour is an unpaid hour. Every job without proof is a job the client can dispute."
       }
     ],
-    "report_section_title": "The report. Not a summary. A proof.",
+    "report_section_title": "The report is not a summary: it is proof.",
     "report_section_subtitle": "Every GeoTapp report is generated automatically from real field data.",
-    "report_section_body": "GPS clock-ins, photos with the time on them, field notes. The data closes when the report is generated and from there nobody touches it again. When the doubt arrives you do not explain, you show, and what you show is not a document sent to the client, it is the end of the argument.",
+    "report_section_body": "Clock-ins with location, photos with the time on them, field notes. The data is sealed when the report is generated, and from then on any change is detectable. When doubt arrives you do not have to explain: you show the report, and the client checks it alone.",
     "report_feature_1": "Sealed at generation, any modification is detectable",
     "report_feature_2": "Verifiable without an account, by anyone, independently",
     "report_feature_3": "GPS and photo data integrated and inseparable",
@@ -182,13 +182,13 @@
     "hero_sectors_and": "and",
     "roi_mini": {
       "title": "What does it cost you to not be able to prove it?",
-      "subtitle": "Three numbers, one honest estimate. Two seconds, no email.",
+      "subtitle": "Three numbers, one honest estimate. Right away, no email.",
       "field_operatori": "Field workers",
       "field_costo": "Hourly cost (€)",
       "field_contestazioni": "Disputes per month",
       "result_prefix": "You're leaving roughly",
       "result_suffix": "on the table every year",
-      "disclaimer": "Conservative estimate (disputes + coordination). The full breakdown, line by line, is in the report.",
+      "disclaimer": "Conservative estimate (disputes + coordination). The full breakdown, line by line, is in the ROI calculator.",
       "email_label": "Want the detailed report and a benchmark for your sector?",
       "email_placeholder": "Your work email",
       "email_cta": "Send me the report + start the trial",
@@ -200,11 +200,11 @@
       "pitch_points": [
         "Every unpaid dispute weighs on you, twelve months out of twelve",
         "Hours spent in the office are hours you don't bill",
-        "Two seconds and no email to see the number"
+        "Three numbers and no email to see the result"
       ]
     },
-    "proof_note": "Evidence captured by camera only, no continuous tracking.",
-    "proof_claim": "Nothing automatically recorded between clock-in and clock-out.",
+    "proof_note": "Proof photos taken in the app, no continuous tracking.",
+    "proof_claim": "Nothing is automatically recorded between one clock-in and the next.",
     "sticky_cta_subtitle": "14 days free, no credit card",
     "trial_cta_headline": "Try it free for 14 days",
     "trial_cta_subtitle": "No credit card required"
@@ -212,89 +212,89 @@
   "home_sections": {
     "flow": {
       "badge": "GeoTapp Flow",
-      "title": "The office sees every update. As it happens.",
-      "subtitle": "Flow is the operational hub: jobs, tasks, progress and structured reports. <strong class=\"text-slate-900\">The field works. The office knows.</strong><br/><br/><em>Your company is a living organism. Every job, every task, every worker is a heartbeat. GeoTapp Flow keeps them all in sync.</em>",
+      "title": "The office sees every clock-in as it arrives.",
+      "subtitle": "Flow is the operational hub: jobs, tasks, progress and structured reports. <strong class=\"text-slate-900\">The field works. The office knows.</strong>",
       "features": {
         "crm": "<strong>Job Management:</strong> Every intervention is structured from the start, with assigned technician, location and live status.",
-        "pipeline": "<strong>Automatic documentation:</strong> Every completed job generates a ready report, no manual entry, no errors."
+        "pipeline": "<strong>Automatic documentation:</strong> Every completed job generates a ready report, no manual entry."
       },
       "link": "Explore GeoTapp Flow"
     },
     "app": {
       "badge": "GeoTapp TimeTracker",
       "title": "The technician records. The proof forms.",
-      "subtitle": "TimeTracker is the mobile app that collects the proof from the field, clock in, clock out, photos with the time on them, notes. All tied to the job, all sealed. <strong>Available on Android and iOS.</strong>",
+      "subtitle": "TimeTracker is the mobile app that collects the proof from the field: clock-in, breaks, clock-out, photos with the time on them, notes. All tied to the job and sealed in the report. <strong>Available on Android and iOS.</strong>",
       "card_gps": {
         "title": "GPS Proof",
-        "desc": "Verified location and timestamp"
+        "desc": "Location and time recorded at every clock-in"
       },
       "card_gdpr": {
         "title": "No continuous tracking",
-        "desc": "No continuous tracking"
+        "desc": "Nothing is automatically recorded between clock-ins"
       },
       "link": "Explore GeoTapp TimeTracker"
     },
     "verifier": {
       "badge": "GeoTapp Verifier",
       "title": "You don't need them to trust you.",
-      "subtitle": "Your word never enters the conversation. The client opens the report and checks it alone, without logging into GeoTapp. If the data matches the real work, the report holds. If someone altered the document, it stops holding. No appeal.",
+      "subtitle": "Your word never enters the conversation. The client opens the report and checks it alone, without logging into GeoTapp. If nobody has touched the document, the check confirms it. If someone has changed it, the check flags it.",
       "features": {
-        "integrity": "<strong>Sealed data:</strong> The report is generated from real field data and locked. Any modification makes it invalid, no appeal.",
-        "independent": "<strong>Autonomous verification:</strong> Anyone with the report can verify its authenticity, no account, no platform access needed."
+        "integrity": "<strong>Sealed data:</strong> The report is sealed when it is generated. Any later modification is flagged by the check.",
+        "independent": "<strong>Autonomous verification:</strong> Anyone with the report can verify its integrity, with no account and no platform access."
       },
       "link": "Explore GeoTapp Verifier"
     },
     "core": {
       "badge": "GeoTapp Platform",
-      "title": "One system, three levels of certainty",
-      "subtitle": "TimeTracker records on the field. Flow organises in the office. Verifier checks everything matches. A closed loop, no gaps.",
+      "title": "One system, three tools",
+      "subtitle": "TimeTracker records on the field. Flow organises in the office. Verifier lets the client check that the report has not been touched. One loop, from the field to the client.",
       "features": [
         {
-          "title": "Real input from the field",
-          "desc": "TimeTracker records clock-in, breaks and clock-out with GPS. Every data point sent from the field is authentic, with location and timestamp."
+          "title": "The data is born in the field",
+          "desc": "TimeTracker records clock-in, breaks and clock-out with location and time, plus the photos that prove the work."
         },
         {
-          "title": "Privacy by design",
-          "desc": "Location is recorded <strong>only</strong> when the worker clocks in, takes a break or clocks out. No continuous tracking."
+          "title": "Location only at clock-in",
+          "desc": "Location is recorded <strong>only</strong> when the worker clocks in (start, breaks, finish) or takes a proof photo. Nothing is automatically recorded between one clock-in and the next."
         },
         {
           "title": "Operational control, updated as it happens",
-          "desc": "Field data arrives in Flow immediately. The office sees it without calling anyone."
+          "desc": "Field data arrives in Flow as soon as it is recorded. The office sees the clock-ins without calling anyone."
         },
         {
-          "title": "Defensible proof over time",
-          "desc": "Every report is sealed on real field data. Dispute? The data is there. Verifiable by anyone. Always."
+          "title": "Proof that stays verifiable",
+          "desc": "Every report is sealed on the data collected in the field. If a dispute arrives, the data is there, and anyone can check that the report has not been changed. Even years from now, even without us."
         }
       ]
     },
     "footer_cta": {
       "title": "The work is proven. Now go home.",
-      "subtitle": "One tap on site seals the proof, and the report writes itself, ready for the client. No more Friday nights rebuilding the week from memory. When you clock out, you are actually done, and the evening is yours again.",
-      "button": "Talk to Us",
+      "subtitle": "You clock in on site and the report builds itself from the shift data, ready for the client. No more Friday nights rebuilding the week from memory. When you clock out, you are actually done, and the evening is yours again.",
+      "button": "Contact us",
       "pricing_link": "See plans and pricing →"
     },
     "settori": {
-      "title": "Verifiable documentation for every sector - GeoTapp Solutions",
+      "title": "Verifiable documentation for every sector",
       "subtitle": "Choose your sector to see how GeoTapp generates work proof, to show your client when disputes arise.",
       "see_all": "See all supported sectors",
       "installatori": {
         "name": "Installers",
-        "desc": "Electricians, Plumbers, System Installers. Every job documented with GPS and photos, tamper-evident data, verifiable by the client.",
+        "desc": "Electricians, plumbers, system installers. Every job documented with GPS and photos, sealed data, verifiable by the client.",
         "cta": "Prove every job"
       },
       "sicurezza": {
         "name": "Security",
-        "desc": "Guards, Stewards, Trust Services. Verifiable attendance, documented shifts with objective proof.",
+        "desc": "Guards, stewards, trust services. Verifiable attendance, documented shifts with objective proof.",
         "cta": "Prove attendance to clients"
       },
       "pulizie": {
         "name": "Cleaning",
-        "desc": "Cleaning companies, Facility, Multiservice. Every round documented and verifiable by the client, fewer disputes.",
-        "cta": "Avoid disputes"
+        "desc": "Cleaning companies, facility, multiservice. Every round documented and verifiable by the client, fewer disputes.",
+        "cta": "Document every round"
       },
       "elettricisti": {
         "name": "Electricians",
-        "desc": "Electrical installations, panels, cabling. Every job documented with GPS and photos, tamper-evident evidence to close any dispute.",
+        "desc": "Electrical installations, panels, cabling. Every job documented with GPS and photos, in a sealed report to show when someone disputes it.",
         "cta": "Document every job"
       },
       "idraulici": {
@@ -304,19 +304,19 @@
       },
       "termoidraulici": {
         "name": "Heating & Plumbing",
-        "desc": "GeoTapp records every boiler and heating job with GPS, photos and verifiable timestamps. Client disputes parts replaced?",
+        "desc": "GeoTapp records every boiler and heating job with location, photos and verifiable times. Client disputes parts replaced?",
         "cta": "Prove replaced parts"
       },
       "edilizia": {
-        "desc": "Building, Renovation, Subcontracting. Hours and site attendance documented, progress reports that hold up when challenged.",
-        "cta": "Defend your progress reports"
+        "desc": "Building, renovation, subcontracting. Hours and site attendance documented, progress statements to show the client with the proof attached.",
+        "cta": "Document your progress statements"
       },
       "manutenzione": {
-        "desc": "Plant, Lifts, Facility. Every call-out and site visit with GPS and photos: the service report stops being disputed.",
-        "cta": "Close the disputes"
+        "desc": "Plant, lifts, facility. Every call-out and site visit with GPS and photos, in a service report to show when needed.",
+        "cta": "Document every visit"
       },
       "impianti": {
-        "desc": "Mechanical, Electrical, Fire safety. Testing and commissioning sealed with time and location, proof ready for the client.",
+        "desc": "Mechanical, electrical and fire safety systems. Testing and commissioning sealed with time and location, proof ready for the client.",
         "cta": "Seal your commissioning"
       }
     },
@@ -333,7 +333,7 @@
       "field_intervention": "Job",
       "field_intervention_value": "Electrical panel replacement",
       "btn_download": "Download report (.zip)",
-      "btn_verify": "Verify authenticity →"
+      "btn_verify": "How to verify →"
     },
     "flow_mockup": {
       "pipeline_title": "Sales Pipeline",
@@ -346,7 +346,7 @@
     "badge": "GeoTapp Solutions",
     "title": "Choose the right product.",
     "subtitle": "Practical solutions for companies with technicians and field operators.",
-    "vat_note": "All prices exclude VAT. Billing according to terms of service.",
+    "vat_note": "All prices exclude VAT. The subscription has a minimum term of 12 months, payable in one annual payment or in monthly instalments. GeoTapp Verifier, the tool your clients use to check reports, is free.",
     "categories": {
       "app": {
         "title": "GeoTapp TimeTracker",
@@ -357,8 +357,9 @@
             "tagline": "Starting at",
             "desc": "Attendance, field activity and proof of the work done, in one place. Price per user per year.",
             "features": [
-              "Android/iOS App",
-              "GPS Clock-in",
+              "Native Android and iOS app",
+              "Clock-in with location",
+              "Proof photos",
               "Weekly Reports"
             ],
             "button": "View Calculator"
@@ -385,7 +386,7 @@
           {
             "name": "GeoTapp Flow Team",
             "tagline": "For small operational teams.",
-            "desc": "Coordinate and manage your operational team as work happens.",
+            "desc": "Coordinate and manage your operational team, up to date at every clock-in.",
             "features": [
               "5 Flow users included",
               "Job management",
@@ -413,42 +414,42 @@
     "calculator": {
       "title": "TimeTracker License Calculator",
       "subtitle": "Estimate your annual workforce investment.",
-      "active_users": "Active Users",
-      "discount_threshold": "Discount Threshold",
-      "cost_per_user": "Average Cost per User",
+      "active_users": "Active users",
+      "discount_threshold": "Discount threshold",
+      "cost_per_user": "Average cost per user",
       "per_month": "/month",
-      "standard_rate": "Standard Rate (1–25 @ {price})",
-      "mixed_rate": "Mixed Rate (Volume Discount Applied)",
-      "annual_total": "Annual Total (+VAT)",
-      "annual_billing_note": "Single annual billing",
-      "enterprise_plan": "Enterprise Plan",
-      "enterprise_desc": "For teams over 150 users we offer custom SLAs and dedicated account management.",
-      "request_quote": "Request Quote",
-      "add_to_cart": "Add App License to Cart",
+      "standard_rate": "Standard rate (1–25 at {price})",
+      "mixed_rate": "Mixed rate (volume discount applied)",
+      "annual_total": "Annual total (+VAT)",
+      "annual_billing_note": "Billed once a year",
+      "enterprise_plan": "Over 150 seats",
+      "enterprise_desc": "Above 150 seats the price is agreed: write to us and we will send you a quote.",
+      "request_quote": "Request a quote",
+      "add_to_cart": "Add the seats to the cart",
       "secure_payment": "Secure payment via Stripe. VAT calculated at checkout."
     },
     "simulator": {
       "section_title": "Calculate your quote",
-      "employees_label": "Number of Employees:",
-      "one_employee": "1 Employee",
-      "many_employees": "150+ Employees",
+      "employees_label": "Number of employees:",
+      "one_employee": "1 employee",
+      "many_employees": "150+ employees",
       "price_per_user": "Price per user",
-      "annual_total": "Annual Total",
+      "annual_total": "Annual total",
       "per_month": "/month",
       "per_user_annual": "per user, annual billing",
       "selected_badge": "Selected",
-      "enterprise_plan": "Enterprise Plan",
+      "enterprise_plan": "Over 150 seats",
       "enterprise_desc": "For large organisations we offer tailored solutions.",
       "enterprise_cta": "Contact us for a quote",
-      "company_placeholder": "Company Name",
-      "email_placeholder": "Admin Email",
+      "company_placeholder": "Company name",
+      "email_placeholder": "Admin email",
       "email_error_format": "Please enter a valid email address (e.g. name@company.com)",
       "email_error_placeholder": "Please enter a real business email.",
       "terms_alert": "To continue you must accept the Terms and confirm you have read the Privacy Policy.",
-      "processing": "Processing...",
-      "request_info": "Request Information",
-      "buy_now": "Buy Now",
-      "payment_note": "Secure payment via Stripe. Cancel anytime.",
+      "processing": "Processing…",
+      "request_info": "Request information",
+      "buy_now": "Buy now",
+      "payment_note": "Secure payment via Stripe. Subscription with a minimum term of 12 months.",
       "success_sent": "Request sent successfully! We will contact you shortly.",
       "error_request": "Error sending request",
       "plus_vat": "+ VAT"
@@ -486,7 +487,7 @@
       "error_checkout": "Error while creating the checkout session. Please try again.",
       "error_connection": "Connection error. Please try again."
     },
-    "intro_label": "2026 Introductory Price",
+    "intro_label": "2026 launch price",
     "per_year": "/year",
     "title_gradient": "Office users, plus a seat for every worker.",
     "or_monthly": "or",
@@ -498,10 +499,10 @@
     "recommended": "Recommended"
   },
   "contact": {
-    "title": "Let's Talk <span class=\"text-primary\">Business</span>.",
-    "subtitle": "You need to understand whether GeoTapp fits your company. We are here to answer concretely.",
-    "guarantee_title": "Response Guarantee",
-    "guarantee_text": "Average first response within 12 business hours. No tickets lost in the void.",
+    "title": "Let's talk about your <span class=\"text-primary\">work</span>.",
+    "subtitle": "Want to know whether GeoTapp fits your company? Write to us: we answer concretely.",
+    "guarantee_title": "Response times",
+    "guarantee_text": "Average first response within 12 business hours. A real person answers you.",
     "form": {
       "name": "Name",
       "first_name": "First name",
@@ -537,38 +538,38 @@
         }
       ],
       "company": "Company",
-      "email": "Work Email",
-      "reason": "Reason for Contact",
+      "email": "Work email",
+      "reason": "Reason for contact",
       "message": "Message",
       "send": "Send",
       "reason_options": [
-        "I want a GeoTapp Demo",
-        "General Information Request",
-        "Partnership",
+        "I would like a GeoTapp demo",
+        "General information",
+        "Partnerships",
         "Other"
       ],
       "name_placeholder": "Your name",
       "email_placeholder": "you@email.com",
       "company_placeholder": "Company name",
-      "message_placeholder": "Your message...",
-      "submit": "Send Message",
-      "submitting": "Sending...",
+      "message_placeholder": "Your message…",
+      "submit": "Send message",
+      "submitting": "Sending…",
       "all_required": "* All fields are required",
       "reason_placeholder": "Select a reason"
     },
     "hours": "Mon-Fri 9:00 - 18:00",
     "location_city": "Italy",
-    "channels_title": "Direct Channels",
-    "email_label": "General Email",
+    "channels_title": "Direct channels",
+    "email_label": "Email",
     "email_desc": "For information, quotes and support.",
     "hq_label": "Where we work",
     "hq_city": "100% online, customers across Italy and the EU",
     "hq_note": "No public office: remote support and onboarding.",
-    "privacy_note": "By submitting this form you agree to our Privacy Policy.",
+    "privacy_note": "By submitting this form you confirm you have read our privacy notice.",
     "map_title": "Where we are - Trenzano (BS), Italy",
     "success": "Message sent successfully. We will get back to you shortly.",
     "error": "Error while sending. Please try again later.",
-    "sending": "Sending...",
+    "sending": "Sending…",
     "map_unavailable": "Map unavailable",
     "open_maps": "Open in Google Maps ↗"
   },
@@ -593,13 +594,13 @@
       "hero_subtitle": "The operational hub for managing clients, projects, teams and administration in one place. Flow is the platform that also powers TimeTracker.",
       "visual_placeholder": "OPERATIONS PANEL",
       "grid_title": "Operational capabilities",
-      "grid_subtitle": "Every module is designed for real control of field work. Click to explore.",
+      "grid_subtitle": "Every module helps you organise and document field work. Click to learn more.",
       "sectors": {
         "1": "Jobs and Clients",
         "2": "Planning and Resources",
         "3": "Control and Visibility"
       },
-      "cta_title": "Take real control of your field.",
+      "cta_title": "Bring order to your field work.",
       "cta_button": "View Pricing",
       "modal": {
         "status": "SYSTEM STATUS: <span class=\"text-green-600\">OPERATIONAL</span>",
@@ -611,7 +612,7 @@
         "nexus-core": {
           "name": "Job Management",
           "short": "Create and manage technical interventions. Assign tasks to technicians, monitor progress and keep everything tracked per job.",
-          "full": "### Central Job Control.\n\nEvery intervention starts as a structured job.\n**Job Management** gives you a clear view of all work in progress.\n\n#### Intervention Management\n\nCreate a job, assign the technician, define the site and date.\nMonitor status: Open, In Progress, Completed.\n\n#### Operational History\n\nEvery job has a complete archive of activities, photo proofs, notes and timestamps.\nThe client asks what was done? You have the data. Always."
+          "full": "### Every Job in One Place.\n\nEvery intervention starts as a structured job.\n**Job Management** gives you a clear view of all work in progress.\n\n#### Intervention Management\n\nCreate a job, assign the technician, define the site and date.\nFollow the status: Open, In Progress, Completed.\n\n#### Operational History\n\nEvery job has a complete archive of activities, photo proofs, notes and clock-ins.\nThe client asks what was done? You have the data."
         },
         "titan-flow": {
           "name": "Task Assignment",
@@ -630,39 +631,39 @@
         },
         "supply-command": {
           "name": "Resource Management",
-          "short": "Control materials, equipment and operational resources needed for each field intervention. No surprises.",
-          "full": "### No Intervention Short of Resources.\n\nSending a technician to the field without the right materials is a costly mistake.\n**Resource Management** prevents operational surprises.\n\n#### Materials per Job\n\nLink required resources to each job.\nThe manager sees in advance what is needed and when.\n\n#### Suppliers and Procurement\n\nStore contact details and terms for your regular suppliers.\nReduce procurement time and keep costs under control."
+          "short": "Keep the catalogue, suppliers and materials linked to your jobs, so the technician leaves with what is needed.",
+          "full": "### No Intervention Short of Resources.\n\nSending a technician to the field without the right materials is a costly mistake.\n**Resource Management** prevents operational surprises.\n\n#### Catalogue and Jobs\n\nKeep your product catalogue in Flow and link it to quotes and jobs.\nThe manager sees in advance what is needed and when.\n\n#### Suppliers\n\nStore contact details and terms for your regular suppliers.\nReduce procurement time and keep costs under control."
         },
         "the-architect": {
           "name": "Work Planning",
           "short": "Organise work into phases, tasks and deadlines. Keep the project under control without spreadsheets or WhatsApp messages.",
-          "full": "### Structure the Work. Control the Progress.\n\nComplex jobs require structure.\n**Work Planning** brings operational order.\n\n#### Phases and Deadlines\n\nStructure complex interventions into operational phases with clear deadlines.\nAssign responsibilities to each team member.\n\n#### Progress Monitoring\n\nVisualize progress in real time.\nAlways know what has been done and what remains open.\nAct before a delay becomes a client problem."
+          "full": "### Structure the Work. Control the Progress.\n\nComplex jobs require structure.\n**Work Planning** brings operational order.\n\n#### Phases and Deadlines\n\nStructure complex interventions into operational phases with clear deadlines.\nAssign responsibilities to each team member.\n\n#### Progress Monitoring\n\nFollow progress, updated step by step.\nAlways know what has been done and what remains open.\nAct before a delay becomes a client problem."
         },
         "the-auditor": {
           "name": "Intervention Documentation",
-          "short": "Collect photo evidence, operational notes and signed documents for every intervention. Work performed stays verifiable.",
-          "full": "### Real Proof for Every Intervention.\n\nWithout documentation, completed work is contestable.\n**Intervention Documentation** makes every job verifiable.\n\n#### Photo Evidence\n\nTechnicians take photos directly from GeoTapp TimeTracker on the field.\nImages are automatically linked to the job with timestamp and location.\n\n#### Digital Client Signature\n\nThe client can sign the work report directly on the technician's screen.\nThe digital signature is included in the report and constitutes proof of service delivered."
+          "short": "Collect photo evidence, operational notes and documents for every intervention. Work performed stays verifiable.",
+          "full": "### Real Proof for Every Intervention.\n\nWithout documentation, completed work is contestable.\n**Intervention Documentation** makes every job verifiable.\n\n#### Photo Evidence\n\nTechnicians take photos directly from GeoTapp TimeTracker on the field.\nImages are automatically linked to the job with time and location.\n\n#### Sealed Report\n\nAt the end of the job the system generates a digitally sealed report: any later change stays detectable.\nThe client can check it alone, without needing to log in to GeoTapp."
         },
         "the-uplink": {
           "name": "Field-to-Office Link",
-          "short": "Data collected by TimeTracker arrives in Flow in real time. Field and office work on the same operational data.",
-          "full": "### Office and Field, Finally Connected.\n\nThe disconnect between field and office generates avoidable errors, delays and disputes.\n**Field-to-Office Link** closes the gap.\n\n#### Real-time Synchronisation\n\nEvery clock-in, photo and note recorded on TimeTracker arrives in Flow immediately.\nThe manager has a live view without having to call the technician.\n\n#### Reliable History\n\nEverything the technician records on the field is archived and linked to the job.\nNo data is lost. No information is missing when it is time to report."
+          "short": "Data collected by TimeTracker arrives in Flow as soon as it is recorded. Field and office work on the same operational data.",
+          "full": "### Office and Field, Finally Connected.\n\nThe distance between field and office generates avoidable errors, delays and disputes.\n**Field-to-Office Link** shortens it.\n\n#### Immediate Arrival\n\nEvery clock-in, photo and note recorded on TimeTracker arrives in Flow as soon as it is sent.\nThe manager sees the data without having to call the technician.\n\n#### Reliable History\n\nEverything the technician records on the field stays archived and linked to the job.\nWhen it is time to report, the data is already there."
         },
         "the-oracle": {
           "name": "Operational Visibility",
-          "short": "Real-time operational dashboard. Always know how many interventions are open, in progress or completed today.",
-          "full": "### Operational Data, Not Assumptions.\n\nDeciding without reliable data is dangerous.\n**Operational Visibility** turns field data into concrete information.\n\n#### Operational Dashboard\n\nSee at a glance:\n- Open and in-progress interventions\n- Active technicians\n- Interventions completed today and this week\n\n#### Periodic Reports\n\nReceive automated activity summaries.\nCompare periods, identify bottlenecks and optimise operations."
+          "short": "Operational dashboard updated with every intervention. Always know how many interventions are open, in progress or completed today.",
+          "full": "### Operational Data, Not Assumptions.\n\nDeciding without reliable data is dangerous.\n**Operational Visibility** turns field data into concrete information.\n\n#### Operational Dashboard\n\nSee, updated with every intervention:\n- Open and in-progress interventions\n- Active technicians\n- Interventions completed today and this week\n\n#### Periodic Reports\n\nReceive automated activity summaries.\nCompare periods, identify bottlenecks and optimise operations."
         }
       },
       "label_open": "Learn more"
     },
     "app": {
       "hero_badge": "GeoTapp TimeTracker - Field Technician App",
-      "hero_title": "GeoTapp TimeTracker.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-slate-900\">The Field in Your Pocket.</span>",
-      "hero_subtitle": "The mobile app used by technicians to record activity, collect proof and maintain the operational thread directly from the field. Available on Android and iOS.",
+      "hero_title": "GeoTapp TimeTracker.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-slate-900\">The app for people who work in the field.</span>",
+      "hero_subtitle": "The app technicians use to clock in, take proof photos and stay connected to the office directly from the field. Available on Android and iOS.",
       "visual_placeholder": "FIELD INTERFACE",
       "grid_title": "Tools for field work",
-      "grid_subtitle": "Every feature is designed for those who work outside the office and have no time to waste. Click to explore.",
+      "grid_subtitle": "Every feature is designed for those who work outside the office and have no time to waste. Click to learn more.",
       "sectors": {
         "1": "Core Operations",
         "2": "Logistics and Communications",
@@ -679,18 +680,18 @@
       "systems": {
         "timelock-alpha": {
           "name": "GPS Time Tracking",
-          "short": "Clock-in and clock-out linked to GPS position and precise timestamp. Every work session becomes a verifiable operational event.",
-          "full": "### Time is Verifiable.\n\nTimestamps without verification generate disputes.\n**GPS Time Tracking** makes every work session a reliable, defensible record.\n\n#### Geolocated Clock-in and Clock-out\n\nThe technician records entry and exit from the field.\nLocation, address and time are registered automatically.\n\n#### Sealed History\n\nEvery session is a verifiable record: start time, end time, position, duration and associated job.\nThe client asks when you arrived? The data is there, always."
+          "short": "Start, breaks and finish record location and the exact time at the moment of clocking in. Every shift becomes data the client can verify.",
+          "full": "### The Right Time, in the Right Place.\n\nClock-ins without a check generate disputes.\n**GPS Time Tracking** makes every shift reliable data.\n\n#### Start, Breaks and Finish\n\nThe technician clocks in from the phone.\nLocation, address and time are recorded at that moment, and only then: nothing is automatically recorded between one clock-in and the next.\n\n#### Sealed History\n\nEvery shift is a record: start time, end time, breaks, position, duration and job.\nIn the report handed to the client it is sealed: any later change is detectable."
         },
         "event-horizon": {
           "name": "Shift Planning",
           "short": "Manage shifts and staff availability. Weekly and monthly views for coordination without confusion or overlaps.",
-          "full": "### No Shift Conflicts.\n\nOrganising mobile personnel requires clarity.\n**Shift Planning** gives the manager a precise, up-to-date view.\n\n#### Calendar View\n\nSee who works when.\nIdentify absences, holidays and overlaps before they become operational problems.\n\n#### Real-time Availability\n\nEmployees confirm attendance or report absences directly from the app.\nThe manager sees gaps in the schedule before assigning new jobs."
+          "full": "### No Shift Conflicts.\n\nOrganising mobile personnel requires clarity.\n**Shift Planning** gives the manager a precise, up-to-date view.\n\n#### Calendar View\n\nSee who works when.\nIdentify absences, holidays and overlaps before they become operational problems.\n\n#### Always Up-to-date Availability\n\nEmployees confirm attendance or report absences directly from the app.\nThe manager sees gaps in the schedule before assigning new jobs."
         },
         "unit-matrix": {
           "name": "Operator Registry",
-          "short": "Manage a complete record of your operators: roles, contacts, certifications and platform access.",
-          "full": "### Know Your Team.\n\nEvery operator is a key operational resource.\n**Operator Registry** centralises all vital information.\n\n#### Certification Management\n\nSee at a glance who holds the required qualifications for a specific intervention or site.\n\n#### Rapid Onboarding\n\nAdding a new technician is simple.\nSend an invite link: within minutes they are operational on GeoTapp TimeTracker."
+          "short": "Keep your operators in order: roles, contacts and platform access, with new people up and running in minutes.",
+          "full": "### Know Your Team.\n\nEvery operator is a key operational resource.\n**Operator Registry** keeps together the information you need.\n\n#### Roles and Access\n\nDecide who sees what: administrator, manager, operator.\nEach person accesses only what their role allows.\n\n#### Quick Onboarding\n\nAdding a new technician is simple.\nSend an invite code: they sign the GPS notice and within minutes they are clocking in on GeoTapp TimeTracker."
         },
         "sector-grid": {
           "name": "Sites and Worksites",
@@ -699,8 +700,8 @@
         },
         "energy-logistics": {
           "name": "Vehicle and Expense Management",
-          "short": "Track company vehicle usage, fuel consumed and travel expenses for field staff.",
-          "full": "### Every Trip Documented.\n\nTravel expenses are a critical item for any company with mobile staff.\n**Vehicle Management** monitors every outgoing cost.\n\n#### Vehicle Usage\n\nTemporarily assign a vehicle to an employee for an intervention.\nAlways know who is using which vehicle and for which job.\n\n#### Fuel Expenses\n\nThe employee records refuelling directly from the app with a receipt photo and amount.\nEverything archived, everything linked to the job."
+          "short": "Record company car use during the shift, refuelling and travel expenses, with a photo of the receipt.",
+          "full": "### Every Expense Documented.\n\nTravel expenses are a delicate item for any company with staff on the move.\n**Vehicle and Expense Management** puts them in order.\n\n#### Vehicle Use\n\nAssign a vehicle to an employee for an intervention, and the operator declares in the app whether they use the car during the shift.\nYou know who used which vehicle and for which job.\n\n#### Fuel Expenses\n\nThe employee records refuelling from the app, with a receipt photo and amount.\nThe office approves the reimbursement, and everything stays linked to the job."
         },
         "neural-link": {
           "name": "Operational Communications",
@@ -709,13 +710,13 @@
         },
         "payroll-bridge": {
           "name": "Attendance Export",
-          "short": "Export monthly attendance in formats compatible with the main payroll software. Less manual work, fewer errors.",
-          "full": "### Payroll Without Headaches.\n\nMonth end does not have to be an administrative nightmare.\n**Attendance Export** connects field operations to HR administration.\n\n#### Multi-Format\n\nGenerate attendance files ready for import into the main payroll software (Zucchetti, INAZ, TeamSystem).\n\n#### Consultant Access\n\nGive limited access to your payroll firm.\nThey download the data they need independently, without calling you every month end."
+          "short": "Export the month's attendance to Excel or CSV, ready for your payroll consultant. Less manual work, fewer errors.",
+          "full": "### Payroll Without Headaches.\n\nMonth end does not have to be an administrative nightmare.\n**Attendance Export** connects field work to personnel administration.\n\n#### Excel and CSV\n\nHours, overtime, surcharges and absences come out in an Excel or CSV file ready to hand to your payroll consultant.\n\n#### Consultant Access\n\nGive your payroll firm a separate access, the Accountant portal.\nThey download the data they need independently, without calling you every month end."
         },
         "data-core": {
           "name": "Weekly Reports",
           "short": "Detailed reports on hours worked per job and per operator. Reliable data for internal control and billing.",
-          "full": "### Data Does Not Lie.\n\nMake decisions based on facts, not impressions.\n**Weekly Reports** extracts value from daily operations.\n\n#### Detailed Reports\n\nEvery week, a complete picture: who worked, where, on which job and for how long.\n\n#### Full Transparency\n\nEmployees and managers consult the same monthly report.\nHours counted are identical for everyone.\nFewer disputes at month end."
+          "full": "### Decide on Facts.\n\nMake decisions based on data, not impressions.\n**Weekly Reports** lines up each day's work.\n\n#### Detailed Reports\n\nEvery week, a complete picture: who worked, where, on which job and for how many hours.\n\n#### The Same Numbers for Everyone\n\nEmployees and managers look at the same report.\nHours counted are identical for everyone, and there is much less to argue about at month end."
         },
         "identity-forge": {
           "name": "Branded App",
@@ -773,11 +774,11 @@
     "form_fullname": "Full name",
     "form_fullname_placeholder": "E.g. Mario Rossi",
     "form_plan": "GeoTapp Flow plan",
-    "form_plan_note": "The plan's user count refers to GeoTapp Flow (office management / CRM). GeoTapp Timetracker licences for field operators are a separate subscription, with a maximum number included depending on the chosen plan.",
+    "form_plan_note": "The plan's user count refers to GeoTapp Flow (office management / CRM). GeoTapp TimeTracker licences for field operators are a separate subscription, with a maximum number included depending on the chosen plan.",
     "plan_solo": "Solo, 1 Flow user",
     "plan_team": "Team, up to 5 Flow users",
     "plan_business": "Business, unlimited Flow users",
-    "form_seats": "Timetracker licences (optional)",
+    "form_seats": "TimeTracker licences (optional)",
     "form_seats_hint": "Separate subscription for field operators (mobile app). Limit included in plan: Solo max 2, Team max 5, Business unlimited. You can adjust licences after activation.",
     "form_submit": "Start free trial",
     "form_submit_simple": "Start free",
@@ -806,8 +807,8 @@
     "benefits_title": "What's included",
     "benefits": [
       {
-        "title": "The biggest plan, not a demo",
-        "desc": "You try GeoTapp Flow at full power: every module is included, none of them costs extra, with unlimited office users and 50 TimeTracker seats active from day one. The only things paid separately are the clock-in seats, out in the field with TimeTracker and in the office inside Flow."
+        "title": "The biggest plan, not a cut-down version",
+        "desc": "You try GeoTapp Flow at full power: every module, unlimited office users and 50 TimeTracker seats active from day one. With a subscription, Flow's modules are included in the plan; the only things paid separately are the clock-in seats, out in the field with TimeTracker and in the office inside Flow."
       },
       {
         "title": "No credit card required",
@@ -858,11 +859,11 @@
     "cosa_vedrai": [
       {
         "title": "GPS clock-in in action",
-        "desc": "How the technician clocks in from the mobile app and how the office sees the verified location, without continuous tracking."
+        "desc": "How the technician clocks in from the mobile app and how the office sees the location recorded at clock-in, without continuous tracking."
       },
       {
         "title": "Verifiable reports",
-        "desc": "How every job generates a report with photo evidence, digital signature and a sealed hash you can show to the client."
+        "desc": "How every job generates a report with photo evidence and a sealed hash chain you can show to the client."
       },
       {
         "title": "Team management from Flow",
@@ -902,11 +903,11 @@
     "success_desc": "We will contact you within 1 business day to schedule the demo.",
     "error_message": "Error sending. Please try again later.",
     "badge": "Demo GeoTapp, 30 Minutes",
-    "page_subtitle": "We show you how GeoTapp eliminates hour disputes and makes every job documented and verifiable.",
+    "page_subtitle": "We show you how GeoTapp documents every job and makes it verifiable, so there is less to dispute about hours.",
     "form_title": "Your details",
     "urgent_contact": "Urgent questions? Write to",
     "no_spam": "No spam. Your data is handled according to our",
-    "trust_gps": "GPS-verified clock-in",
+    "trust_gps": "Clock-in with location",
     "trust_offline": "Offline verifier",
     "trust_response": "Response within 1 day",
     "what_youll_see": "What you'll see in the demo",
@@ -918,9 +919,9 @@
     "subtitle": "Choose the version that fits your needs.",
     "demo_report_badge": "Real example",
     "demo_report_title": "Sealed job report",
-    "demo_report_desc": "Download a real report generated by GeoTapp. It contains verified GPS, photo evidence, operator hash chain and cryptographic seal. You can verify its authenticity directly on geotapp.com.",
+    "demo_report_desc": "Download a real report generated by GeoTapp. It contains the location recorded at clock-in, the proof photos and the cryptographic seal. You can check that it has not been modified directly on geotapp.com.",
     "demo_report_btn_download": "Download sample report (.zip)",
-    "demo_report_btn_verify": "Verify Authenticity",
+    "demo_report_btn_verify": "How to verify",
     "demo_report_field_operator": "Operator",
     "demo_report_field_type": "Job type",
     "windows_title": "GeoTapp for Windows",
@@ -943,33 +944,33 @@
     "wp_btn": "Download Plugin"
   },
   "chi_siamo": {
-    "badge": "Our Story",
-    "hero_title_line1": "Born in the Field,",
-    "hero_title_line2": "Not in an Office.",
+    "badge": "Our story",
+    "hero_title_line1": "Born in the field,",
+    "hero_title_line2": "not in an office.",
     "hero_desc": "The product started from a sheet of paper with a month of hours on it, and totals that never added up.",
     "story": [
       "There is one job nobody has ever been paid to do, and it is writing down the hours you worked. Date, start, end, total. Every day, and at the end of the month the tally goes to the boss.",
-      "<strong>Michele Angelo Petraroli</strong> worked event security, as an employee, and he filled in that sheet the way everybody fills it in, which is badly. The totals almost never matched, partly his own fault, because it is human to put off the boring things and rebuild them from memory a week later. The colleagues who never sent their hours at all were evidently rich and doing the job for the love of it.",
-      "He went looking for an app to take the chore away. They were all the same, and every one of them asked for exactly what he was already doing by hand, date, start, end, total. Same effort, nicer buttons.",
-      "So he built one himself, on holiday. A web page and two gestures, press when you start and press when you stop, and the rest landed tidy in a file already fit to send at the end of the month.",
-      "Then came the thought that changed everything, if it helps me it helps the crew. And if it helps the boss, the flow has to be turned around, because it should not be him chasing people for their hours, it should be the hours reaching him every day on their own.",
-      "From there the tool grew in one direction only. First lawful geolocation, read when the shift opens and when it closes, never continuously. Then automatic verifiable proof of the work done, because the real problem was never counting the hours, it was proving them when somebody questioned them.",
+      "<strong>Michele Angelo Petraroli</strong> worked event security, as an employee, and he filled in that sheet the way everybody fills it in, which is badly. The totals almost never matched, partly his own fault, because it is human to put off the boring things and rebuild them from memory a week later.",
+      "He went looking for an app to take the chore away. They were all the same, and every one of them asked for exactly what he was already doing by hand: date, start, end, total. Same effort, nicer buttons.",
+      "So he built one himself, on holiday. A web page and two gestures: press when you start and press when you stop, and the rest landed tidy in a file already fit to send at the end of the month.",
+      "Then came the thought that changed everything: if it helps me, it helps the crew. And if it helps the boss, the flow has to be turned around, because it should not be him chasing people for their hours: it should be the hours reaching him every day, on their own.",
+      "From there the tool grew in one direction only. First geolocation designed to stay within the law: the position is read only when the worker clocks in (start, breaks, finish) and never continuously. Then verifiable proof of the work done, because the real problem was never counting the hours, it was proving them when somebody questioned them.",
       "Oh, and it is spelled GeoTapp, with two P's. If you find one with a single P out there, that is not us, though we hold no grudge.",
-      "The name has it all in it, really. Geolocation, a tap, an app."
+      "The name has it all in it, really: geolocation, a tap, an app."
     ],
-    "values_title": "Our Values",
+    "values_title": "Our values",
     "values": [
       {
-        "title": "Clear Mission",
+        "title": "A clear mission",
         "desc": "Make every job measurable and verifiable. Field work deserves the same transparency tools as an office."
       },
       {
-        "title": "Dedicated Team",
+        "title": "A small team",
         "desc": "We are a small team obsessed with the problem we solve. Every feature comes from real feedback, not marketing roadmaps."
       },
       {
         "title": "Privacy by Design",
-        "desc": "The data is never sold, and the position is read twice in a shift, when you open it and when you close it. In between, the tool has no idea where you are."
+        "desc": "The data is never sold, and the position is read only when you clock in: at start, at breaks, at the end, plus the proof photo if you take one. Nothing is automatically recorded between one clock-in and the next."
       },
       {
         "title": "Made in Italy",
@@ -978,7 +979,7 @@
     ],
     "cta_title": "There is a person on the other end",
     "cta_desc": "A small company building a tool for firms whose crews work off site. Write to us and the answer comes from someone who has had the problem.",
-    "cta_btn": "Send Us a Message",
+    "cta_btn": "Write to us",
     "stats": [
       {
         "number": "2024",
@@ -997,18 +998,18 @@
     "founder": {
       "section_label": "The Founder",
       "name": "Michele Angelo Petraroli",
-      "role": "Founder & CEO",
-      "bio": "Michele Angelo Petraroli is the founder and CEO of GeoTapp, an Italian SaaS company building field workforce management software for European SMEs. Coming from an operational background where he saw firsthand how cleaning crews, installers and security teams lose money to missing proofs of work, he founded GeoTapp in 2024 to solve it at the source. Today GeoTapp helps European SMEs with GPS tracking built to stay within GDPR, photographic evidence and digital signatures that make every field job verifiable.",
+      "role": "Founder",
+      "bio": "Michele Angelo Petraroli is the founder and owner of GeoTapp, the Italian software that documents the work of field crews in European SMEs. From direct experience in service SMEs (cleaning, installers, security) he saw how much money is lost when there is no proof of the work done. He founded GeoTapp in 2024 to solve the problem at the source. Today GeoTapp helps European SMEs prove the work they have done: location recorded only when someone clocks in, proof photos and sealed reports the client can verify alone.",
       "expertise_label": "Areas of expertise",
       "expertise": [
-        "Field Service Management",
-        "GDPR & Employee Geolocation",
-        "Workforce Management",
-        "B2B SaaS",
+        "Managing field crews",
+        "GDPR and employee geolocation",
+        "Organising work",
+        "Business software",
         "European SMEs"
       ],
       "cta_linkedin": "LinkedIn",
-      "cta_email": "Get in touch"
+      "cta_email": "Write to me"
     }
   },
   "stampa": {
@@ -1019,7 +1020,7 @@
     "hero_desc": "Everything you need to write about GeoTapp: who we are, what we do, and why proof of work is not surveillance. Materials, facts and contacts for journalists and newsrooms.",
     "boilerplate_label": "In short",
     "boilerplate_short": "GeoTapp is a time-tracking and proof-of-work tool for companies with field teams. It records where and when a clock-in happens only at the moment the worker clocks in, never continuously, and produces a document the client can verify independently.",
-    "boilerplate_long": "GeoTapp started from a concrete problem: proving that a job was done, where and when, without turning people into dots on a map to be watched all day. The tool records location only at the moment the worker clocks in, takes a break or clocks out, adds photos and notes from the field, and seals every session so that any change is detectable. The result is proof the client can verify independently, one that protects the employer facing a dispute as much as the worker wrongly accused of not showing up. It is built for anyone sending teams off-site, cleaning firms, installers, security, maintenance, construction, and designed to stay within the limits of worker-monitoring law and the GDPR.",
+    "boilerplate_long": "GeoTapp started from a concrete problem: proving that a job was done, where and when, without turning people into dots on a map to be watched all day. The tool records location only at the moment the worker clocks in, takes a break or clocks out, and nothing automatically in between; it adds proof photos and notes from the field, and seals every session so that any change is detectable. The result is proof the client can verify independently, one that protects the employer facing a dispute as much as the worker wrongly accused of not showing up. It is built for anyone sending teams off-site, cleaning firms, installers, security, maintenance, construction, and designed to stay within the limits of worker-monitoring law and the GDPR.",
     "facts_label": "Key facts",
     "facts": [
       {
@@ -1067,7 +1068,7 @@
   },
   "blog": {
     "hero_title": "Guides on proof of work, GDPR and field teams.",
-    "hero_desc": "We don't write to fill pages. We write to share what we learn building the future of verifiable work.",
+    "hero_desc": "Practical guides for anyone sending crews into the field: how to prove the work done, what the law says about employee GPS, how to keep hours and attendance in order.",
     "no_posts": "No articles available at the moment.",
     "read_article": "Read article →",
     "cta_title": "Try GeoTapp free for 14 days",
@@ -1090,11 +1091,11 @@
     "next_step_text": "See how GeoTapp solves this for {sector} companies",
     "next_step_fallback": "See how GeoTapp works for your business",
     "next_step_cta": "Learn more",
-    "hero_tagline": "Thoughts & Sparks."
+    "hero_tagline": "Guides and news."
   },
   "roi": {
-    "meta_title": "GeoTapp ROI Calculator - Discover Your Real Savings",
-    "meta_desc": "Calculate in 2 minutes how much you'd save with GeoTapp: less paperwork, fewer disputes, more productive operators. No email, no account.",
+    "meta_title": "GeoTapp ROI Calculator: estimate your yearly savings",
+    "meta_desc": "Estimate in a minute how much you would save with GeoTapp: fewer hours of paperwork, fewer disputes, less coordination by phone. No email, no account.",
     "hero_title": "Calculate Your ROI with GeoTapp",
     "hero_subtitle": "Enter your company data and discover how much you can save every year.",
     "step1_title": "Your Company",
@@ -1141,13 +1142,13 @@
     "per_anno": "/ year",
     "label_operators": "operators",
     "embed_title": "GeoTapp ROI Calculator",
-    "intro": "This calculator estimates how much your business can save each year by automating attendance, field reports and proof of work. Enter a few figures and get your annual saving, payback time and ROI in 30 seconds, with no sign-up.",
+    "intro": "This calculator estimates how much your business can save each year by automating attendance, field reports and proof of work. Enter a few figures and in a minute you see your estimated annual saving, payback time and ROI, with no sign-up.",
     "faq_title": "Frequently asked questions about the ROI calculation",
     "pricing_link": "See how much you can save with the ROI calculator",
     "faq": [
       {
         "q": "How is the ROI of a GPS time-tracking app calculated?",
-        "a": "The estimate is built from three concrete items: the admin hours saved every month, the disputes and unwarranted overtime avoided thanks to geolocated proof, and the coordination time recovered. The yearly total is compared with the subscription cost to produce ROI and payback time."
+        "a": "The estimate is built from three concrete items: the admin hours saved every month, the disputes and unwarranted overtime that proof of work helps avoid, and the coordination time recovered. The yearly total is compared with the subscription cost to produce ROI and payback time."
       },
       {
         "q": "Do I need to register or leave an email to see the result?",
@@ -1178,10 +1179,10 @@
     "classic_app": "Generic app / Spreadsheet",
     "roi_badge": "Calculate your ROI",
     "roi_title": "How much would you save with GeoTapp?",
-    "roi_desc": "Enter your team size and get an estimated ROI in 30 seconds. No registration, no email.",
+    "roi_desc": "Enter your team size and see an estimated ROI in a minute. No registration, no email.",
     "roi_cta": "Calculate my ROI",
     "mockup_title": "Job open",
-    "mockup_gps": "GPS verified",
+    "mockup_gps": "Location at clock-in",
     "mockup_photos": "Photos attached",
     "mockup_photos_count": "3 geotagged photos",
     "mockup_sealed": "Sealed at closure: every change is visible",
@@ -1189,25 +1190,25 @@
     "mockup_status_completed": "Completed",
     "mockup_status_summary": "4 operators active on 6 sites",
     "see_real_report": "See a real report",
-    "cta_note": "No lock-in. No contract. We set up on your real case."
+    "cta_note": "14-day free trial, no credit card."
   },
   "features": {
-    "title": "Power Under the Hood.",
-    "subtitle": "We don't build toys. GeoTapp is an enterprise platform built to scale. Here are the technologies that make the magic happen.",
-    "gps_title": "GPS at Clock-In, Not All Day",
-    "gps_desc": "The position is taken at two moments: when the shift opens and when it closes. Nothing is automatically recorded in between. Today's clock-ins show each one with its GPS coordinates, geofence check and anti-spoofing protection, so the office knows who started where without calling anyone, and the team knows exactly what is recorded, and when.",
-    "offline_title": "One-tap clock-in",
-    "offline_desc": "One tap to clock in with GPS, mark breaks and clock out. Every job can have a photo attached as proof of work, and it all lands straight in Flow.",
-    "encryption_title": "Military-Grade Encryption",
-    "encryption_desc": "Sleep soundly. We use AES-256 encryption at rest and TLS 1.3 in transit. Even if an attacker intercepted your data, they would see nothing but white noise. Privacy isn't just a legal checkbox, it's mathematics.",
-    "realtime_title": "Real-Time WebSocket",
-    "realtime_desc": "No more hitting F5. Thanks to WebSockets, information travels instantly. When a technician closes a ticket in Rome, the manager in Milan sees the dot turn green in the same millisecond. It's like being everywhere at once.",
-    "cms_title": "Headless CMS Integration",
-    "cms_desc": "Content is fluid. Our headless architecture decouples data from presentation. This means you can publish a blog post, push it to the mobile app, and send it via newsletter with a single click.",
-    "datalake_title": "Scalable Data Lake",
-    "datalake_desc": "From 100 to 100 million records without breaking a sweat. We use partitioned PostgreSQL to handle massive data volumes without slowdowns. Your history is precious, we keep it forever, accessible in an instant.",
-    "cdn_title": "Global CDN Edge",
-    "cdn_desc": "Speed is geographic. Our static assets are replicated across 300+ data centres worldwide. Whether your client is in New York or Tokyo, your site loads as if the server were in the next room."
+    "title": "What GeoTapp does, feature by feature.",
+    "subtitle": "From the clock-in in the field to the report the client checks alone. Here is what is inside, described for what it does.",
+    "gps_title": "Location only when you clock in",
+    "gps_desc": "Location is recorded when the worker clocks in (start, breaks, finish) and when they take a proof photo. Nothing is automatically recorded between one clock-in and the next. In Flow, the Today's clock-ins screen shows each clock-in with its location and the check against the place of work: the office knows who started where without calling anyone, and the team knows exactly what is recorded, and when.",
+    "offline_title": "One-tap clock-in, even without a signal",
+    "offline_desc": "One tap to start the shift, mark breaks and close it. Every job can have its proof photos. If there is no signal, the clock-in stays saved on the phone and is sent on its own when the signal returns, with the time at which it was made.",
+    "encryption_title": "False locations rejected",
+    "encryption_desc": "At clock-in the app rejects locations simulated by fake-location apps, ones that are too imprecise and impossible jumps. On photos nothing is rejected: they are flagged, by comparing the time and location of the shot with those of the clock-in.",
+    "realtime_title": "The report seals itself",
+    "realtime_desc": "At the end of the job the report is built from clock-ins, photos and notes, and sealed: a chain of SHA-256 fingerprints links every event and every photo, and the root is signed with GeoTapp's key. Any later change is detectable.",
+    "cms_title": "Verification without us",
+    "cms_desc": "The client receives a link and checks the report alone, online or with the offline verifier: a single file that does not connect to the internet and carries the public key inside. It works even years from now, even without GeoTapp.",
+    "datalake_title": "Data in Europe, kept for the right time",
+    "datalake_desc": "The service data sits on servers in the European Union and travels encrypted. In the register, locations are deleted after twelve months, a period the company can shorten down to thirty days; in reports already delivered they remain, because they are sealed documents, and after five years the package is deleted.",
+    "cdn_title": "Office and field connected",
+    "cdn_desc": "In Flow the office sees every clock-in as it arrives, manages jobs, teams, shifts and leave, and exports hours for payroll. Operators receive jobs and communications directly in the app."
   },
   "kairos": {
     "subtitle": "Your GeoTapp assistant",
@@ -1224,9 +1225,9 @@
     "powered_by": "Powered by GeoTapp"
   },
   "author_page": {
-    "job_title": "CEO & Founder",
+    "job_title": "Founder",
     "verified_label": "Verified expert",
-    "bio": "Michele Angelo Petraroli, CEO and founder of GeoTapp. Verified expert profile on <a href=\"https://featured.com/p/michele-petraroli\" rel=\"me noopener\" target=\"_blank\">Featured.com</a>.",
+    "bio": "Michele Angelo Petraroli, founder of GeoTapp. Verified expert profile on <a href=\"https://featured.com/p/michele-petraroli\" rel=\"me noopener\" target=\"_blank\">Featured.com</a>.",
     "articles_heading": "Articles by",
     "view_profile": "View verified profile",
     "follow_linkedin": "Connect on LinkedIn",
@@ -1262,14 +1263,14 @@
     "autoritaCompetente": "Competent authority",
     "disclaimer": "This is an informational resource, not legal advice. Before activating a monitoring system, have your situation checked by a professional.",
     "ctaTitolo": "Want a system built to stay within the rules?",
-    "ctaTesto": "GeoTapp records the location only at clock-in, not continuously, and generates the notice for workers to sign. Try it for free.",
+    "ctaTesto": "GeoTapp records the location only when someone clocks in or takes a proof photo, never continuously, and has the notice signed in the app before the first clock-in. Try it for free.",
     "ctaBottone": "Try GeoTapp for free",
     "faq": {
       "title": "Frequently asked questions",
       "items": [
         {
           "q": "Can I use GPS to keep an eye on my crew while they work?",
-          "a": "GPS at work is legal almost everywhere in Europe, on one condition: it has to organise and prove the work, not watch the person. The how is what counts. Recording location at clock-in, when someone opens and closes a job, is a very different thing from following them in real time all day. The first can almost always be done properly, the second almost never. What \"properly\" means changes from country to country, though, and it is not only about documents: sometimes an agreement with the workers' representatives or a specific legal basis is needed. The page for your country, above, says what it really takes."
+          "a": "GPS at work is legal almost everywhere in Europe, on one condition: it has to organise and prove the work, not watch the person. The how is what counts. Recording location at clock-in, when someone starts, takes a break and finishes, is a very different thing from following them in real time all day. The first can almost always be done properly, the second almost never. What \"properly\" means changes from country to country, though, and it is not only about documents: sometimes an agreement with the workers' representatives or a specific legal basis is needed. The page for your country, above, says what it really takes."
         },
         {
           "q": "Do my own country's rules apply, or the country where I send the team?",
@@ -1285,11 +1286,11 @@
         },
         {
           "q": "What's the risk if I switch a system on without being compliant?",
-          "a": "It depends on the country, but GDPR fines climb to numbers no small business wants to see, and in some states there are labour-law consequences on top. The real problem, though, often isn't the fine: it's that data collected the wrong way becomes useless exactly when you need it, in a dispute or in front of a client who's contesting the bill. Each country sheet shows the real maximum penalty and the cases on record."
+          "a": "It depends on the country, but GDPR fines climb to numbers no small business wants to see, and in some states there are labour-law consequences on top. The real problem, though, often isn't the fine: it's that data collected the wrong way becomes useless exactly when you need it, in a dispute or in front of a client who's contesting the bill. Each country sheet shows the legal maximum and, where one exists, the fine actually issued in a real case."
         },
         {
           "q": "Is GeoTapp a surveillance system?",
-          "a": "No, and it was built specifically not to be. The tool records location only at clock-in, when someone opens or closes a job, never continuously, and it produces the privacy notice for them to sign. It's there to prove what was done and where, not to watch people. That's the difference between proof of work and a leash."
+          "a": "No, it is not designed to watch people. It records location at every clock-in (start, break, finish) and when a proof photo is taken; between one clock-in and the next it records nothing automatically. And it produces the privacy notice for workers to sign. It is there to prove what was done and where, not to watch people. That is the difference between proof of work and a leash."
         }
       ]
     },
@@ -1305,7 +1306,7 @@
         },
         {
           "titolo": "Only the data you need, only when you need it",
-          "testo": "This is data minimisation (Article 5(1)(c)). Recording position at the start and end of a job documents it; recording every minute monitors the person, and it is the most frequent reason for fines in Europe."
+          "testo": "This is data minimisation (Article 5(1)(c)). Recording position at the start and end of a job documents it; recording every minute monitors the person."
         },
         {
           "titolo": "Transparency before, not after",
@@ -1327,8 +1328,8 @@
       "nota": "Then there is Article 88 GDPR, which lets each state add its own rules on data processing in the employment relationship. That is why the country cards below exist: what changes is who has to authorise you, not the principle."
     },
     "sanzioneTipoCasoGps": "from a real GPS case",
-    "sanzioneTipoCasoAffine": "related case, not GPS",
-    "sanzioneTipoMassimale": "statutory maximum, not a fine issued",
+    "sanzioneTipoCasoAffine": "related case, not about employee GPS",
+    "sanzioneTipoMassimale": "maximum set by law",
     "fonteNonUfficialeEtichetta": "unofficial source",
     "fonteNonUfficialeAvviso": "This entry does not come from an official source. The link below goes straight to the source we used. Since it cannot be checked against the competent authority, we cannot guarantee that it is correct or consistent.",
     "fonteNonUfficialeTipo_studio_legale": "law firm",
@@ -1338,9 +1339,9 @@
   },
   "sanzioniGps": {
     "metaTitle": "GPS penalty calculator: how much you risk monitoring workers, country by country",
-    "metaDesc": "Pick a country and see the real maximum fine for GPS worker monitoring and which obligations expose you. Verified data, 39 European countries.",
+    "metaDesc": "Pick a country and see the highest fine actually issued, or the legal maximum, for GPS worker monitoring and which obligations expose you. Verified data, 39 European countries.",
     "h1": "How much do you risk tracking your workers?",
-    "intro": "Pick a country, see the highest fine actually issued and tick what you already have in place: we tell you how exposed you are. Source-verified data, 39 countries.",
+    "intro": "Pick a country, see the highest fine (the one actually issued where there is a public case, otherwise the maximum set by law: the sheet says which) and tick what you already have in place: we tell you how exposed you are. Source-verified data, 39 countries.",
     "sanzioneMax": "Maximum fine",
     "casoCitato": "Real case",
     "fonte": "See the source",
@@ -1357,7 +1358,7 @@
       "items": [
         {
           "q": "What's the real risk if GPS isn't compliant?",
-          "a": "It depends on the country and on what went wrong, but GDPR fines aren't symbolic: they reach a percentage of turnover that can floor a small business, and in several states there are labour-law consequences on top. Pick the destination above and you'll see the real maximum figure, with the case it's drawn from."
+          "a": "It depends on the country and on what went wrong, but GDPR fines aren't symbolic: they can reach a percentage of turnover, and in several states there are labour-law consequences on top. Pick the country above and you will see the highest figure, and whether it is a fine actually issued or the legal maximum."
         },
         {
           "q": "Do GDPR fines really hit small businesses?",
@@ -1377,7 +1378,7 @@
         },
         {
           "q": "How do I lower the risk of a fine?",
-          "a": "By collecting the bare minimum you actually need: location at clock-in, not continuous tracking, with a signed privacy notice and a basis other than consent. That's exactly how GeoTapp was built, and the privacy-notice generator here in the resources prepares the document for them to sign."
+          "a": "By collecting the bare minimum you actually need: location at clock-in, not continuous tracking, with a signed privacy notice and a basis other than consent. That is exactly how GeoTapp was developed, and the privacy-notice generator here in the resources prepares the document for them to sign."
         }
       ]
     }
@@ -1445,7 +1446,7 @@
   },
   "videoTutorial": {
     "title": "From first sign-in to first clock-in",
-    "note": "Two minutes, no jargon: you set up Flow, invite your first employee, and watch the first clock-in appear on the map.",
+    "note": "Two minutes, no jargon: you set up Flow, invite your first employee, and watch their first clock-in arrive at the office, with time and location.",
     "cta": "Watch the video, 2 minutes"
   },
   "videoGiro": {
@@ -1469,7 +1470,7 @@
       "transcriptTitle": "What the video says",
       "transcriptNote": "The same words as the voice, for reading.",
       "honestyTitle": "What this video is, and what it is not",
-      "honesty": "The shift is test data, and the two photographs of the electrical board are replaced in the edit, because the proofs were shot with the lens covered. The behaviour of the software is the real one, recorded without retouching. Position is written at the moment of clocking and never in between, and a sealed package helps to show that what was delivered has not been altered, though on its own it is not absolute proof of the underlying fact, and it is not legal advice.",
+      "honesty": "The shift is test data, and the two photographs of the electrical board are replaced in the edit, because the proofs were shot with the lens covered. The behaviour of the software is the real one, recorded without retouching. Location is written at the moment of clocking in, and between one clock-in and the next nothing is automatically recorded, and a sealed package helps to show that what was delivered has not been altered, though on its own it is not absolute proof of the underlying fact, and it is not legal advice.",
       "ctaTitle": "Fourteen days, on your own shifts",
       "ctaText": "The same round runs on your jobs, with your phone, for fourteen days and without a card.",
       "youtubeNote": "It is on YouTube too, in eleven languages."

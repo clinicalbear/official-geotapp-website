@@ -12,11 +12,11 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   es: 'Cumplimiento normativo en España',
   pt: 'Conformidade em Portugal',
   nl: 'Compliance in Nederland',
-  'en-us': 'Regional compliance',
-  'en-gb': 'Regional compliance',
-  'en-au': 'Regional compliance',
-  'en-ca': 'Regional compliance',
-  'en-ie': 'Regional compliance',
+  'en-us': 'Regional rules and records',
+  'en-gb': 'Regional rules and records',
+  'en-au': 'Regional rules and records',
+  'en-ca': 'Regional rules and records',
+  'en-ie': 'Regional rules and records',
 };
 
 export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
@@ -106,72 +106,72 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   ],
   'en-us': [
     {
-      q: 'UPC/IPC-compliant inspection records per job?',
-      a: 'GeoTapp logs jurisdiction (UPC or IPC), inspector name, inspection date and pass/fail per fixture. The trail supports municipal permit reconciliation.',
+      q: 'UPC and IPC inspection records?',
+      a: 'GeoTapp does not verify or track UPC or IPC inspections, inspector names or fixture pass/fail results, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
     {
-      q: 'Backflow-prevention tester certification expiry?',
-      a: 'The worker profile holds the ASSE/IAPMO tester ID and the annual recertification date. Clock-in is blocked on expiry until evidence is uploaded.',
+      q: 'Backflow-prevention tester certification?',
+      a: 'GeoTapp does not verify or track ASSE or IAPMO tester certification or recertification dates, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
     {
-      q: 'Lead and Copper Rule compliance for water-service work?',
-      a: 'Material-batch traceability per job site, alongside the worker\'s lead-safe-work-practice certification under EPA\'s RRP rule where applicable.',
+      q: 'Lead and Copper Rule and EPA RRP work?',
+      a: 'GeoTapp does not verify or track material-batch traceability or lead-safe work certification, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
   ],
   'en-gb': [
     {
-      q: 'WRAS Approval and Approved Plumber scheme tracking?',
-      a: 'Per-worker WRAS Approved Plumber registration and CIPHE membership records, exportable on local-authority Water Fittings Regulation audit.',
+      q: 'WRAS and Approved Plumber scheme membership?',
+      a: 'GeoTapp does not verify or track WRAS Approved Plumber registration, CIPHE membership or Water Fittings Regulations audits, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
     {
-      q: 'Gas Safe registration for combined plumbing/gas work?',
-      a: 'Where plumbing crosses into gas, Gas Safe ID and appliance categories are tracked per worker, with the renewal workflow at 60/30/14 days.',
+      q: 'Gas Safe registration for combined plumbing and gas work?',
+      a: 'GeoTapp does not verify or track Gas Safe registration or appliance categories, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
     {
-      q: 'Legionella risk-assessment evidence?',
-      a: 'L8 ACOP-compatible risk assessment template, with workforce training (City and Guilds 6035 etc.) tied to the worker profile, satisfying HSG274 audit expectations.',
+      q: 'Legionella risk assessments?',
+      a: 'GeoTapp does not verify or track L8 ACOP risk assessments, HSG274 audits or Legionella training, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
   ],
   'en-au': [
     {
-      q: 'Plumbing Code of Australia AS/NZS 3500 compliance trail?',
-      a: 'Per-job site inspection record aligned to AS/NZS 3500 series, with the licensed plumber\'s number and the supervising-licence chain captured per shift.',
+      q: 'AS/NZS 3500 plumbing records?',
+      a: 'GeoTapp does not verify or track AS/NZS 3500 compliance or licensed-plumber supervision chains, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
     {
-      q: 'State plumbing-licence renewal tracking?',
-      a: 'State (PIC NSW, VBA, QBCC, BSA) plumbing licence number, scope of work and expiry date, with 30-day renewal workflow.',
+      q: 'State plumbing licence renewals?',
+      a: 'GeoTapp does not verify or track state plumbing licences, scopes of work or expiry dates, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
     {
       q: 'WHS site-visit logs for plumbing on construction sites?',
-      a: 'Entry, exit, SWMS acknowledgement and confined-space-entry permit per worker, satisfying Safe Work Australia model WHS Regulations audit.',
+      a: 'GeoTapp does not manage SWMS or confined-space entry permits. It records who clocked in, where and at what time on each site, and that history can be shown to the client or whoever asks. The documents the rules require stay with the company.',
     },
   ],
   'en-ca': [
     {
-      q: 'National Plumbing Code of Canada compliance per job?',
-      a: 'Job-level inspection records aligned to NPCC and the provincial adoption (Ontario Building Code Plumbing, BC Plumbing Code, etc.). Workforce qualifications stored per worker.',
+      q: 'National Plumbing Code of Canada records?',
+      a: 'GeoTapp does not verify or track compliance with the National Plumbing Code or provincial plumbing codes, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
     {
-      q: 'Trade certification (Red Seal Plumber 306A) tracking?',
-      a: 'Worker profile holds the province of certification, Red Seal endorsement and continuing-education credits, with expiry-driven workflow.',
+      q: 'Red Seal plumber certification?',
+      a: 'GeoTapp does not verify or track Red Seal or provincial trade certification or continuing-education credits, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
     {
-      q: 'Cross-connection control: backflow-tester certification?',
-      a: 'Annual recertification dates per worker, with the municipal water-utility audit pack produced on request.',
+      q: 'Cross-connection control and backflow testers?',
+      a: 'GeoTapp does not verify or track backflow-tester certification or municipal water-utility audits, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
   ],
   'en-ie': [
     {
-      q: 'RGI plumbing/gas dual-qualification tracking?',
-      a: 'Where work overlaps RGI scope, the gas-safety Register ID is tracked alongside the plumber qualification, with appliance categories per worker.',
+      q: 'RGI plumbing and gas qualifications?',
+      a: 'GeoTapp does not verify or track RGI registration or appliance categories, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
     {
-      q: 'WRC and Health and Safety Authority audit support?',
-      a: 'Combined records from OWTA 1997 hours, Construction SEO rates (SI 234/2019) where applicable, and HSA notifiable-incident logs.',
+      q: 'WRC and HSA audits?',
+      a: 'GeoTapp does not manage OWTA hours reconciliation, Construction SEO rates or HSA notifiable-incident logs. It records who clocked in, where and at what time on each site, and that history can be shown to an inspector, alongside the hours and attendance you can export to Excel or CSV. The documents the rules require stay with the company.',
     },
     {
-      q: 'Water Services Act 2007 compliance evidence?',
-      a: 'Per-job-site water-service work record, with the worker qualification trail and the supervising-plumber chain captured per shift.',
+      q: 'Water Services Act 2007 records?',
+      a: 'GeoTapp does not verify or track Water Services Act work records or supervising-plumber chains, and does not produce the related certificates. It records the time, position and photos of each job, which you can attach to your own documentation. The records themselves stay with the company.',
     },
   ],
 };

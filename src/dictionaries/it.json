@@ -863,7 +863,7 @@
       },
       {
         "title": "Report verificabili",
-        "desc": "Come ogni intervento genera un report con prove fotografiche, firma digitale e hash sigillato che puoi mostrare al cliente."
+        "desc": "Come ogni intervento genera un report con prove fotografiche, sigillo crittografico e impronte SHA-256 che puoi mostrare al cliente."
       },
       {
         "title": "Gestione squadre da Flow",
@@ -907,7 +907,7 @@
     "form_title": "I tuoi dati",
     "urgent_contact": "Hai domande urgenti? Scrivi a",
     "no_spam": "Nessuno spam. I tuoi dati sono trattati secondo la nostra",
-    "trust_gps": "Timbratura GPS verificata",
+    "trust_gps": "Posizione controllata alla timbratura",
     "trust_offline": "Verificatore offline",
     "trust_response": "Risposta entro 1 giorno",
     "what_youll_see": "Cosa vedrai nella demo",

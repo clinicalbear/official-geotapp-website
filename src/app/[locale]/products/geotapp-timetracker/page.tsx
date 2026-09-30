@@ -68,11 +68,11 @@ const APP_FAQ: Record<string, object> = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: [
-      { '@type': 'Question', name: 'What is GeoTapp TimeTracker?', acceptedAnswer: { '@type': 'Answer', text: 'GeoTapp TimeTracker is the mobile app for field technicians that records attendance, activities and photo evidence directly from the field. GPS clock-ins are verifiable by anyone via GeoTapp Verifier.' } },
-      { '@type': 'Question', name: 'Does GeoTapp TimeTracker work without internet?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. The app works offline and saves all GPS clock-ins, photos and notes locally. Data syncs with GeoTapp Flow as soon as connectivity is restored.' } },
-      { '@type': 'Question', name: 'How does GeoTapp TimeTracker differ from a simple time-tracking app?', acceptedAnswer: { '@type': 'Answer', text: 'GeoTapp TimeTracker is not just time tracking, every clock-in is sealed with real GPS, a cryptographic hash and photo evidence. The report is independently verifiable, and any modification, even by the administrator, is detectable.' } },
-      { '@type': 'Question', name: 'Does GeoTapp TimeTracker work on Android and iOS?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. The app is available on Google Play Store and Apple App Store. Works on all Android (6.0+) and iOS (14+) devices.' } },
-      { '@type': 'Question', name: 'Is GeoTapp TimeTracker GDPR compliant?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. GeoTapp records GPS location only at clock-in time, not continuously. Employees can view all their recorded data at any time.' } },
+      { '@type': 'Question', name: 'What is GeoTapp TimeTracker?', acceptedAnswer: { '@type': 'Answer', text: 'GeoTapp TimeTracker is the mobile app for field technicians that records attendance, activities and photo evidence directly from the field. It all ends up in the sealed report, which the client verifies alone with GeoTapp Verifier.' } },
+      { '@type': 'Question', name: 'What happens if there is no signal?', acceptedAnswer: { '@type': 'Answer', text: 'The clock-in stays saved on the phone and is sent on its own when the signal returns, with the time at which it was made. Until it arrives, it does not show in Flow.' } },
+      { '@type': 'Question', name: 'How does GeoTapp TimeTracker differ from a simple time-tracking app?', acceptedAnswer: { '@type': 'Answer', text: 'GeoTapp TimeTracker is not just a clock-in: every shift, with its locations, proof photos and notes, ends up in a report sealed with cryptographic fingerprints. The client verifies it alone: any later modification, even by the administrator, is detectable.' } },
+      { '@type': 'Question', name: 'Does GeoTapp TimeTracker work on Android and iOS?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. The app is on Google Play and the App Store. It needs Android 8.0 or later, or iOS 26.2 or later.' } },
+      { '@type': 'Question', name: 'Does GeoTapp TimeTracker respect the GDPR?', acceptedAnswer: { '@type': 'Answer', text: 'It is built to stay within it: it records location only when the worker clocks in (start, breaks, finish) or takes a proof photo, never continuously, and it does not even ask for permission to read location in the background. Employees see their clock-ins and their reports in the app. The notice and, where needed, a union agreement remain the employer\'s responsibility.' } },
     ],
   },
   de: {
@@ -100,8 +100,8 @@ const APP_FAQ: Record<string, object> = {
 };
 
 const APP_DESCRIPTION: Record<string, string> = {
-  it: "GeoTapp TimeTracker è l'app mobile per tecnici sul campo: timbratura GPS verificata, prove fotografiche, report settimanali e sincronizzazione in tempo reale con GeoTapp Flow. Funziona offline.",
-  en: 'GeoTapp TimeTracker is the mobile app for field technicians: verified GPS clock-in, photo evidence, weekly reports and real-time sync with GeoTapp Flow. Works offline.',
+  it: "GeoTapp TimeTracker è l'app mobile per tecnici sul campo: timbratura con posizione controllata, prove fotografiche, report settimanali e sincronizzazione in tempo reale con GeoTapp Flow. Funziona offline.",
+  en: 'GeoTapp TimeTracker is the native Android and iOS app for field technicians: clock-in with location, proof photos, notes and weekly reports, connected to GeoTapp Flow. If there is no signal, clock-ins are saved on the phone and sent when it returns.',
   de: 'GeoTapp TimeTracker ist die mobile App für Außendiensttechniker: verifizierte GPS-Zeiterfassung, Fotobeweise, Wochenberichte und Echtzeitsynchronisation mit GeoTapp Flow. Funktioniert offline.',
   fr: "GeoTapp TimeTracker est l'application mobile pour techniciens terrain : pointage GPS vérifié, preuves photo, rapports hebdomadaires et synchronisation temps réel avec GeoTapp Flow. Fonctionne hors ligne.",
   es: 'GeoTapp TimeTracker es la app móvil para técnicos de campo: fichaje GPS verificado, pruebas fotográficas, informes semanales y sincronización en tiempo real con GeoTapp Flow. Funciona sin conexión.',
@@ -115,24 +115,24 @@ const APP_DESCRIPTION: Record<string, string> = {
 
 const APP_FEATURES: Record<string, string[]> = {
   it: [
-    'Timbratura GPS verificata (anti-spoofing)',
+    'Posizione controllata alla timbratura, posizioni simulate rifiutate',
     'Prove fotografiche con timestamp e GPS',
     'Funziona offline e sincronizza automaticamente',
     'Report sigillati crittograficamente',
-    'Modulo informativa GPS con firma digitale',
+    'Informativa GPS firmata nell\'app prima di timbrare',
     'Integrazione nativa con GeoTapp Flow',
     'Disponibile su Google Play e App Store',
-    'Conforme GDPR, geolocalizzazione solo a timbratura',
+    'Pensata per il GDPR: posizione solo alla timbratura',
   ],
   en: [
-    'Verified GPS clock-in (anti-spoofing)',
-    'Photo evidence with timestamp and GPS',
-    'Works offline, syncs automatically',
+    'Clock-in with location at start, breaks and finish; simulated locations rejected',
+    'Photo evidence with time and location',
+    'Clock-ins saved on the phone when there is no signal, sent when it returns',
     'Cryptographically sealed reports',
-    'GPS privacy notice module with digital signature',
+    'GPS notice signed as acknowledged in the app before the first clock-in',
     'Native integration with GeoTapp Flow',
     'Available on Google Play and App Store',
-    'GDPR compliant, geolocation only at clock-in/out',
+    'Location only when the worker clocks in or takes a proof photo, never continuously',
   ],
   de: [
     'Verifizierte GPS-Zeiterfassung (Anti-Spoofing)',

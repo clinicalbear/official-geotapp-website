@@ -101,7 +101,7 @@ export const portogallo: SchedaPaese = {
     {
       voce: {
         it: "Informazione ai lavoratori sull'esistenza e finalità della sorveglianza (art. 20 Código do Trabalho)",
-        en: 'Informing workers of the existence and purpose of the surveillance (art. 20 Codigo do Trabalho)',
+        en: 'Informing workers of the existence and purpose of the surveillance (art. 20 Código do Trabalho)',
         de: 'Unterrichtung der Arbeitnehmer über Bestehen und Zweck der Überwachung (Art. 20 Código do Trabalho)',
         fr: 'Information des travailleurs sur l\'existence et la finalité de la surveillance (art. 20 Codigo do Trabalho)',
         es: 'Información a los trabajadores sobre la existencia y la finalidad de la vigilancia (art. 20 Código do Trabalho)',
