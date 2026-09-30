@@ -285,6 +285,41 @@ const TESTI: Record<string, Testi> = {
     unknownBody:
       'El código no corresponde a ningún documento. Conviene revisar los ocho caracteres: la S y el 5, la Z y el 2 se confunden con facilidad.',
   },
+  pt: {
+    sealedTitle: 'Documento selado',
+    sealedBody:
+      'Este documento está assinado eletronicamente e é verificável. Cada evento está encadeado ao anterior: se uma linha, uma hora ou uma fotografia mudar, a verificação falha.',
+    draftTitle: 'Documento não selado',
+    draftBody:
+      'Este documento não leva a assinatura eletrónica: não faz fé e não é verificável.',
+    issuedBy: 'Emitido por',
+    job: 'Obra',
+    sealedOn: 'Selado em',
+    downloadPackage: 'Descarregar o pacote assinado',
+    downloadPackageHint:
+      'É o original: contém o documento, o histórico, as fotografias e o selo.',
+    downloadPdf: 'Descarregar o PDF legível',
+    fingerprint: 'Impressão do pacote',
+    linkLife:
+      'A ligação ao ficheiro dura dez minutos. O código do documento não caduca: basta voltar a abrir esta página.',
+    verifyTitle: 'Verificar sem confiar em nós',
+    verifyBody:
+      'O pacote verifica-se mesmo sem o GeoTapp, com o verificador aberto: volta a calcular as impressões e confirma a assinatura.',
+    verifyCta: 'Ir para a verificação',
+    surveyTitle: 'Uma pergunta a quem encomenda o trabalho',
+    surveyBody:
+      'Estamos a recolher, em toda a Europa, com que frequência um trabalho pago é posto em dúvida e o que acontece depois. Dois minutos, anónimo, nenhum dado obrigatório.',
+    surveyCta: 'Responder ao inquérito',
+    revokedTitle: 'Código revogado',
+    revokedBody:
+      'Este documento existia, mas quem o emitiu revogou a ligação. Para obter uma cópia é preciso pedi-la à empresa que fez o trabalho.',
+    expiredTitle: 'Documento já não disponível',
+    expiredBody:
+      'Este documento existia e esgotou o seu período de conservação: cinco anos após a data do trabalho, o pacote é eliminado, como exige a legislação de proteção de dados. Já não há nenhuma cópia a pedir.',
+    unknownTitle: 'Código não encontrado',
+    unknownBody:
+      'O código não corresponde a nenhum documento. Convém reconferir os oito caracteres: o S e o 5, o Z e o 2 confundem-se com facilidade.',
+  },
 };
 
 function testiPer(locale: AppLocale): Testi {

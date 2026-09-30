@@ -117,18 +117,17 @@ const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
   },
   pt: {
     description:
-      'GeoTapp gera provas verificáveis do trabalho realizado em campo: relatórios selados com dados GPS reais, provas fotográficas com marca de tempo e documentação com alterações detetáveis que qualquer pessoa pode verificar.',
+      'O GeoTapp é o software para comprovar o trabalho em campo: a cada picagem regista localização e hora, recolhe as fotos de prova e fecha tudo num relatório selado que o cliente verifica sozinho. A localização é registada apenas quando o trabalhador pica o ponto, nunca de forma contínua.',
     featureList: [
-      'Relatórios de trabalho com alterações detetáveis, verificáveis independentemente por qualquer pessoa',
-      'Provas fotográficas ligadas a timestamp GPS e intervenção',
-      'Documentação de intervenções: qualquer alteração é detectável',
-      'Prova do trabalho: evidência objectiva para cada intervenção em campo',
-      'Marcação de ponto verificável por GPS',
-      'Gestão de ordens de trabalho e intervenções',
-      'Conforme RGPD, sem rastreamento contínuo',
-      'App móvel para Android e iOS (Flutter)',
+      'Relatórios selados: qualquer alteração posterior é detetável, e qualquer pessoa os pode verificar sem conta',
+      'Fotos de prova ligadas à hora, à localização e à obra',
+      'Picagem com localização na entrada, nas pausas e na saída',
+      'Sem seguimento contínuo: entre uma picagem e a seguinte não se regista nada de forma automática',
+      'Gestão de obras, equipas e intervenções a partir do escritório (GeoTapp Flow, web)',
+      'Aplicação nativa para os operadores em campo em Android e iOS (GeoTapp TimeTracker)',
+      'Verificador gratuito, também offline (GeoTapp Verifier)',
     ],
-    offersDescription: 'Avaliação gratuita 14 dias, planos pagos a partir de {price}/operador/mês via Stripe',
+    offersDescription: 'Teste gratuito de 14 dias sem cartão. Depois, GeoTapp Flow a partir de 39 € por mês e os postos do TimeTracker a partir de {price} por operador por mês, subscrição mínima de 12 meses',
   },
   nl: {
     description:

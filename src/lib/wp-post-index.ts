@@ -455,6 +455,19 @@ export const NON_IN_VETRINA = new Set<string>([
   'registro-jornada-temporeros-verano',
   'agosto-obra-presencia-seguridad',
   'sanciones-control-laboral-europa-lecciones',
+  // Versoes em portugues: titulo ou extrato que prometem conformidade («conforme o RGPD e a CNPD», «conforme a Lei 58/2019»,
+  // «App GPS conforme o Codigo do Trabalho»), «alertas em tempo real» ou funcoes que o GeoTapp nao tem (dispatching, geocercas)
+  // e que a scheda claim veta. Aggiunte il 01/10/2026.
+  'novidades-geotapp-verao-2026',
+  'modelo-informacao-gps-trabalhadores',
+  'geolocalizacao-trabalhadores-informacao-rgpd-2026',
+  'app-fichagem-construcao-portugal-2026',
+  'software-gestao-equipas-terreno-portugal-2026',
+  'agosto-obra-presenca-seguranca',
+  // Altri due in portoghese verificati sul corpo: «RGPD-conforme ... geocercas ... cumpre a CNPD», «evitam coimas»
+  // (funzioni e promesse di conformita' che GeoTapp non ha) e «DPIA template», «log de acessos imutavel». Aggiunte il 01/10/2026.
+  'app-geolocalizacao-empregados-limpeza-portugal-2026',
+  'geolocalizacao-funcionarios-rgpd-portugal-2026',
 ]);
 
 export function filterPosts<T extends WpIndexEntry>(

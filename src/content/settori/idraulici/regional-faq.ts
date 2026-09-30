@@ -10,7 +10,7 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   de: 'Vorschriften und Nachweise in Deutschland',
   fr: 'Règles et justificatifs en France',
   es: 'Normativa y documentación en España',
-  pt: 'Conformidade em Portugal',
+  pt: 'Regras e documentação em Portugal',
   nl: 'Regels en documentatie in Nederland',
   'en-us': 'Regional rules and records',
   'en-gb': 'Regional rules and records',
@@ -78,16 +78,16 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   ],
   pt: [
     {
-      q: 'Horas e deslocações segundo a CCT da metalurgia?',
-      a: 'Horas por canalizador e por obra, ajudas de custo e disponibilidade e conservação dos dados, registados em cada intervenção.',
+      q: 'Horas e intervenções dos canalizadores?',
+      a: 'GeoTapp regista em cada picagem entrada, pausas e saída com posição e hora, por canalizador e por obra, e exporta-as para Excel ou CSV para o seu contabilista ou gabinete de processamento salarial. A aplicação do contrato coletivo (subsídios, ajudas de custo) e o processamento dos salários continuam a cargo do contabilista e da empresa.',
     },
     {
-      q: 'RGPD e CNPD na geolocalização dos canalizadores?',
-      a: 'Geolocalização apenas durante o tempo de trabalho, com informação prévia, interesse legítimo e direito de acesso, dentro dos critérios da CNPD.',
+      q: 'Geolocalização dos canalizadores: RGPD e CNPD?',
+      a: 'A posição só é registada ao picar o ponto e com as fotos de prova, nunca de forma contínua, e a informação aos trabalhadores é assinada na app antes de picar. Cabe à empresa verificar o que exigem, no seu caso, o RGPD (interesse legítimo), os artigos 20.º e 21.º do Código do Trabalho e a CNPD.',
     },
     {
-      q: 'Certificação de instalador de gás (DGEG)?',
-      a: 'Associação de cada intervenção de gás à certificação de instalador habilitado pela DGEG, com o histórico de suporte ao termo de responsabilidade.',
+      q: 'Intervenções de gás e instalador habilitado (DGEG)?',
+      a: 'GeoTapp não verifica nenhuma habilitação, nem a de gás, e não gera certificados de instalação. Regista a hora, a posição e as fotos de cada intervenção em instalações de água e gás, que pode anexar ao processo da instalação.',
     },
   ],
   nl: [

@@ -54,9 +54,9 @@ const COPY: Record<string, Copy> = {
   },
   pt: {
     kicker: 'Observatório da prova do trabalho',
-    title: 'Já te contestaram um trabalho que tinhas feito?',
+    title: 'Alguma vez lhe contestaram um trabalho que tinha feito?',
     body: 'Estamos a reunir o que acontece mesmo no terreno, em toda a Europa. Dois minutos, anónimo, nada obrigatório.',
-    cta: 'Diz o que pensas',
+    cta: 'Dê a sua opinião',
   },
   da: {
     kicker: 'Observatorium for arbejdsbevis',

@@ -53,7 +53,7 @@ const SETTORE_BG: Record<SettoreSlug, { img: string; pos: string }> = {
 
 const RISORSE_LABELS: Record<string, string> = {
   it: 'Guide e articoli →', en: 'Guides & articles →', de: 'Leitfäden & Artikel →',
-  fr: 'Guides et articles →', es: 'Guías y artículos →', pt: 'Guias & artigos →',
+  fr: 'Guides et articles →', es: 'Guías y artículos →', pt: 'Guias e artigos →',
   nl: 'Gidsen en artikelen →', da: 'Vejledninger & artikler →',
   sv: 'Guider & artiklar →', nb: 'Guider & artikler →', ru: 'Руководства & статьи →',
 };
@@ -94,6 +94,7 @@ const CLASSIC_CLOCKIN: Record<string, string> = {
   de: 'Klassische Stempel-App',
   fr: 'Application de pointage classique',
   es: 'App de fichaje clásica',
+  pt: 'App clássica de picagem',
   nl: 'Klassieke registratie-app',
 };
 
@@ -255,6 +256,9 @@ export default function SettorePageLayout({ content, locale, settore, children }
     // Spagnolo: nessun articolo sulle norme in produzione (i due sul RGPD/LOPDGDD sono fuori vetrina).
     // Lista vuota = il blocco non esce, invece di linkare l'articolo inglese sull'ICO.
     es: [],
+    // Portoghese: i due articoli sulle norme (RGPD/CNPD) sono fuori vetrina. Lista vuota = il blocco non esce,
+    // invece di linkare l'articolo inglese sull'ICO.
+    pt: [],
   };
   // Le 6 locale che NON hanno articoli normative tradotti ricadono su EN.
   const normLinks = NORM_LINKS[locale]

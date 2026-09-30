@@ -7,7 +7,7 @@ const CONTACT_META: Record<string, { title: string; description: string }> = {
   de: { title: 'GeoTapp kontaktieren - Kundensupport | GeoTapp', description: 'Haben Sie Fragen zu GeoTapp? Schreiben Sie uns. Wir antworten bei Support, Kooperationen und Anfragen zum Vertrieb.' },
   fr: { title: 'Contacter GeoTapp - Support client | GeoTapp', description: 'Des questions sur GeoTapp ? Écrivez-nous. Nous répondons pour le support, les partenariats et les demandes commerciales.' },
   es: { title: 'Contactar con GeoTapp - Atención al cliente | GeoTapp', description: '¿Tienes preguntas sobre GeoTapp? Escríbenos. Respondemos sobre soporte, colaboraciones e información comercial.' },
-  pt: { title: 'Contactar GeoTapp - Suporte ao cliente | GeoTapp', description: 'Tem perguntas sobre o GeoTapp? Escreva-nos. A nossa equipa responde em português e inglês.' },
+  pt: { title: 'Contactar o GeoTapp - Suporte ao cliente | GeoTapp', description: 'Tem perguntas sobre o GeoTapp? Escreva-nos. Respondemos sobre suporte, colaborações e informações comerciais.' },
   nl: { title: 'Neem contact op met GeoTapp - Klantenservice | GeoTapp', description: 'Hebt u vragen over GeoTapp? Schrijf ons. We antwoorden over ondersteuning, samenwerkingen en commerciële informatie.' },
   ru: { title: 'Связаться с GeoTapp, Поддержка клиентов | GeoTapp', description: 'Есть вопросы о GeoTapp? Напишите нам. Наша команда отвечает на русском и английском языках.' },
   da: { title: 'Kontakt GeoTapp - Kundesupport | GeoTapp', description: 'Har du spørgsmål om GeoTapp? Skriv til os. Vores team svarer på dansk og engelsk.' },

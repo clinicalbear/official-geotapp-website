@@ -15,7 +15,7 @@ const TEXTS: Record<string, T> = {
   de: { lead: 'Diese Seite existiert nicht.', desc: 'Entweder ist sie umgezogen, oder es gab sie nie. Der Rest der Website funktioniert.', home: 'Zur Startseite', pricing: 'Preise', cta: 'Kostenlos testen' },
   fr: { lead: 'Cette page n\'existe pas.', desc: 'Soit elle a changé d\'adresse, soit elle n\'a jamais existé. Le reste du site fonctionne.', home: 'Aller à l\'accueil', pricing: 'Tarifs', cta: 'Essai gratuit' },
   es: { lead: 'Esta página no existe.', desc: 'O cambió de dirección, o nunca estuvo aquí. El resto del sitio funciona.', home: 'Ir al inicio', pricing: 'Precios', cta: 'Prueba gratis' },
-  pt: { lead: 'Esta página não existe.', desc: 'Ou mudou de endereço, ou nunca esteve aqui. O resto do site funciona.', home: 'Ir para a página inicial', pricing: 'Preços', cta: 'Teste grátis' },
+  pt: { lead: 'Esta página não existe.', desc: 'Ou mudou de endereço, ou nunca esteve aqui. O resto do sítio funciona.', home: 'Ir para a página inicial', pricing: 'Preços', cta: 'Teste grátis' },
   nl: { lead: 'Deze pagina bestaat niet.', desc: 'Of ze is van adres veranderd, of ze is er nooit geweest. De rest van de site werkt gewoon.', home: 'Naar de home', pricing: 'Tarieven', cta: 'Probeer gratis' },
   da: { lead: 'Denne side findes ikke.', desc: 'Enten er den flyttet, eller også har den aldrig været her. Resten af sitet virker.', home: 'Gå til forsiden', pricing: 'Priser', cta: 'Prøv gratis' },
   sv: { lead: 'Den här sidan finns inte.', desc: 'Antingen har den flyttat, eller så har den aldrig funnits. Resten av sajten fungerar.', home: 'Gå till startsidan', pricing: 'Priser', cta: 'Prova gratis' },

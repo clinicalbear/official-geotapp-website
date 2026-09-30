@@ -40,7 +40,7 @@ export const FEATURE_LABELS: Record<FeatureKey, LocalizedString> = {
     fr: 'Position contrôlée à chaque pointage',
     es: 'Posición controlada en cada fichaje',
     nl: 'Locatie gecontroleerd bij elke registratie',
-    pt: 'GPS verificado no local de trabalho',
+    pt: 'Posição controlada em cada picagem',
     da: 'GPS verificeret på arbejdsstedet',
     sv: 'GPS-verifierad på arbetsplatsen',
     nb: 'GPS-verifisert på arbeidsstedet',
@@ -66,7 +66,7 @@ export const FEATURE_LABELS: Record<FeatureKey, LocalizedString> = {
     fr: 'Photos de preuve avec position et heure',
     es: 'Fotos de prueba con posición y hora',
     nl: 'Bewijsfoto\'s met locatie en tijd',
-    pt: 'Fotos com GPS e marca temporal',
+    pt: 'Fotografias de prova com posição e hora',
     da: 'Billeder med GPS og tidsstempel',
     sv: 'Foton med GPS och tidsstämpel',
     nb: 'Bilder med GPS og tidsstempel',
@@ -92,7 +92,7 @@ export const FEATURE_LABELS: Record<FeatureKey, LocalizedString> = {
     fr: 'Enregistrement des heures',
     es: 'Registro de las horas',
     nl: 'Registratie van de uren',
-    pt: 'Controlo de horas',
+    pt: 'Registo das horas',
     da: 'Tidsregistrering',
     sv: 'Tidsregistrering',
     nb: 'Tidsregistrering',
@@ -131,7 +131,7 @@ export const FEATURE_LABELS: Record<FeatureKey, LocalizedString> = {
     fr: 'Export présences/paie',
     es: 'Exportación de asistencia/nómina',
     nl: 'Export van aanwezigheid/salarissen',
-    pt: 'Exportação de presenças/folha',
+    pt: 'Exportação de presenças/salários',
     da: 'Eksport af tilstedeværelse/løn',
     sv: 'Export av närvaro/lön',
     nb: 'Eksport av oppmøte/lønn',
@@ -157,7 +157,7 @@ export const FEATURE_LABELS: Record<FeatureKey, LocalizedString> = {
     fr: 'Gestion de chantiers multi-sites',
     es: 'Gestión de obras en varios sitios',
     nl: 'Opdrachtenbeheer voor meerdere locaties',
-    pt: 'Gestão de obras multi-local',
+    pt: 'Gestão de obras em vários locais',
     da: 'Multi-site jobstyring',
     sv: 'Multi-site jobbhantering',
     nb: 'Multi-site jobbstyring',
@@ -170,7 +170,7 @@ export const FEATURE_LABELS: Record<FeatureKey, LocalizedString> = {
     fr: 'Position uniquement au pointage, jamais en continu',
     es: 'Posición solo al fichar, nunca de forma continua',
     nl: 'Locatie alleen bij de registratie, nooit doorlopend',
-    pt: 'Geolocalização em conformidade com RGPD',
+    pt: 'Posição só ao picar o ponto, nunca em contínuo',
     da: 'GDPR-kompatibel geolokation',
     sv: 'GDPR-kompatibel geolokalisering',
     nb: 'GDPR-kompatibel geolokasjon',
@@ -183,7 +183,7 @@ export const FEATURE_LABELS: Record<FeatureKey, LocalizedString> = {
     fr: 'Information GPS signée dans l’application avant de pointer',
     es: 'Aviso GPS firmado en la app antes de fichar',
     nl: 'GPS-verklaring ondertekend in de app vóór het registreren',
-    pt: 'Aviso GPS automático assinado',
+    pt: 'Aviso sobre o GPS assinado na app antes de picar o ponto',
     da: 'Automatisk GPS-meddelelse med signatur',
     sv: 'Auto GPS-information med signatur',
     nb: 'Automatisk GPS-melding med signatur',
@@ -236,6 +236,7 @@ export const COMPETITORS: Competitor[] = [
       nl: 'Communicatie, personeelsbeheer en registraties in één app voor wie buiten kantoor werkt. Veel gebruikt in de Verenigde Staten.',
       fr: 'Communication, gestion du personnel et pointage dans une seule application pour celles et ceux qui travaillent hors du bureau. Très répandue aux États-Unis.',
       es: 'Comunicación, gestión del personal y fichajes en una sola app para quien trabaja fuera de la oficina. Muy extendida en Estados Unidos.',
+      pt: 'Comunicação, gestão de pessoal e picagens numa única app para quem trabalha fora do escritório. Muito difundida nos Estados Unidos.',
     },
     features: {
       gps_verified_at_site: false,
@@ -264,6 +265,7 @@ export const COMPETITORS: Competitor[] = [
       nl: 'Tijdregistratie met schermafbeeldingen en monitoring van de activiteit. Bedoeld voor teams op afstand achter de computer, niet voor wie in het veld werkt.',
       fr: 'Suivi du temps avec captures d’écran et surveillance de l’activité. Conçu pour des équipes à distance devant un ordinateur, pas pour le travail sur le terrain.',
       es: 'Registro del tiempo con capturas de pantalla y monitorización de la actividad. Pensado para equipos remotos frente al ordenador, no para quien trabaja en campo.',
+      pt: 'Registo do tempo com capturas de ecrã e monitorização da atividade. Pensado para equipas remotas ao computador, não para quem trabalha no terreno.',
     },
     features: {
       gps_verified_at_site: false,
@@ -292,6 +294,7 @@ export const COMPETITORS: Competitor[] = [
       nl: 'Gratis tijdregistratie zonder beperkingen. Uitstekend voor zelfstandigen en kantoren, weinig geschikt voor werk in het veld.',
       fr: 'Suivi du temps gratuit et sans limite. Très bien pour les indépendants et les bureaux, peu adapté au travail sur le terrain.',
       es: 'Registro del tiempo gratuito y sin límites. Muy bueno para autónomos y oficinas, poco adecuado para el trabajo en campo.',
+      pt: 'Registo do tempo gratuito e sem limites. Ótimo para freelancers e escritórios, pouco adequado ao trabalho no terreno.',
     },
     features: {
       gps_verified_at_site: false,
@@ -320,6 +323,7 @@ export const COMPETITORS: Competitor[] = [
       nl: 'Aanwezigheid met gezichtsherkenning en eenvoudige gps. Ruim gratis abonnement, maar geen bewijs van het uitgevoerde werk.',
       fr: 'Présences avec reconnaissance faciale et GPS basique. Formule gratuite généreuse, mais pas de preuve du travail effectué.',
       es: 'Asistencia con reconocimiento facial y GPS básico. Plan gratuito generoso, pero sin prueba del trabajo realizado.',
+      pt: 'Presenças com reconhecimento facial e GPS básico. Plano gratuito generoso, mas sem prova do trabalho realizado.',
     },
     features: {
       gps_verified_at_site: false,
@@ -348,6 +352,7 @@ export const COMPETITORS: Competitor[] = [
       nl: 'Complete HR-suite: personeelsdossiers, afwezigheid, onboarding en salaris. Niet bedoeld voor bewijs van werk in het veld.',
       fr: 'Suite RH complète : dossiers du personnel, absences, intégration et paie. Non conçue pour la preuve du travail sur le terrain.',
       es: 'Suite de RR. HH. completa: ficha de empleados, ausencias, onboarding y nóminas. No pensada para la prueba del trabajo en campo.',
+      pt: 'Suite de RH completa: fichas de pessoal, ausências, integração e processamento salarial. Não pensada para a prova do trabalho no terreno.',
     },
     features: {
       gps_verified_at_site: false,
@@ -376,6 +381,7 @@ export const COMPETITORS: Competitor[] = [
       nl: 'Bedrijfssoftware: boekhouding, facturering, salaris en HR (Sage HR). Niet bedoeld voor bewijs van werk in het veld.',
       fr: 'Logiciel de gestion : comptabilité, facturation, paie et RH (Sage HR). Non conçu pour la preuve du travail sur le terrain.',
       es: 'Software de gestión: contabilidad, facturación, nóminas y RR. HH. (Sage HR). No pensado para la prueba del trabajo en campo.',
+      pt: 'Software de gestão: contabilidade, faturação, processamento salarial e RH (Sage HR). Não pensado para a prova do trabalho no terreno.',
     },
     features: {
       gps_verified_at_site: false,
@@ -404,6 +410,7 @@ export const COMPETITORS: Competitor[] = [
       nl: 'In Italië veel gebruikte app voor aanwezigheidsregistratie: gps, QR, NFC en geofence. Geen verzegeld rapport voor de opdrachtgever.',
       fr: 'Application italienne de suivi des présences très répandue : GPS, QR, NFC et geofence. Pas de rapport scellé pour le donneur d’ordre.',
       es: 'App italiana de control de presencia muy extendida: GPS, QR, NFC y geofence. Sin informe sellado para el cliente.',
+      pt: 'App italiana de controlo de presenças muito difundida: GPS, QR, NFC e geofence. Sem relatório selado para o cliente.',
     },
     features: {
       gps_verified_at_site: true, // ha GPS ma non sealed/timestamped come GeoTapp
@@ -432,6 +439,7 @@ export const COMPETITORS: Competitor[] = [
       nl: 'Duitse software voor schoonmaakbedrijven: registratie, taken en teamcommunicatie. Geen verzegeld rapport voor de opdrachtgever.',
       fr: 'Logiciel allemand pour les entreprises de nettoyage : pointage, tâches et communication d’équipe. Pas de rapport scellé pour le donneur d’ordre.',
       es: 'Software alemán para empresas de limpieza: fichaje, tareas y comunicación del equipo. Sin informe sellado para el cliente.',
+      pt: 'Software alemão para empresas de limpeza: picagem, tarefas e comunicação da equipa. Sem relatório selado para o cliente.',
     },
     features: {
       gps_verified_at_site: false,
@@ -460,6 +468,7 @@ export const COMPETITORS: Competitor[] = [
       nl: 'Italiaanse digitale registratie met gps en QR-code. Eenvoudig en licht, maar geen bewijsfoto\'s en geen verzegeling.',
       fr: 'Pointage numérique italien avec GPS et QR code. Simple et léger, mais sans photos de preuve ni scellé.',
       es: 'Fichajes digitales italianos con GPS y código QR. Sencillo y ligero, pero sin fotos de prueba ni sello.',
+      pt: 'Picagem digital italiana com GPS e código QR. Simples e leve, mas sem fotografias de prova nem selo.',
     },
     features: {
       gps_verified_at_site: true,
@@ -488,6 +497,7 @@ export const COMPETITORS: Competitor[] = [
       nl: 'De Italiaanse HR-suite bij uitstek, van aanwezigheid tot loonstrook. Registratie met geofence en NFC-badges, geen bewijs voor de opdrachtgever.',
       fr: 'La suite RH italienne par excellence, des présences au bulletin de paie. Pointage avec geofence et badges NFC, pas de preuve pour le donneur d’ordre.',
       es: 'La suite de RR. HH. italiana por excelencia, de la asistencia a la nómina. Fichaje con geofence y tarjetas NFC, sin prueba para el cliente.',
+      pt: 'A suite de RH italiana por excelência, da assiduidade ao recibo de vencimento. Picagem com geofence e crachás NFC, sem prova para o cliente.',
     },
     features: {
       gps_verified_at_site: true,
@@ -516,6 +526,7 @@ export const COMPETITORS: Competitor[] = [
       nl: 'Spaans HR-platform voor het MKB, met verlof en afwezigheid op orde. Geolocatie bij de registratie is optioneel, zonder controle op gesimuleerde locaties.',
       fr: 'Plateforme RH espagnole pour les PME, avec congés et absences bien tenus. Géolocalisation facultative au pointage, sans contrôle des positions simulées.',
       es: 'Plataforma de RR. HH. española para pymes, con vacaciones y ausencias en orden. Geolocalización opcional en el fichaje, sin control de las posiciones simuladas.',
+      pt: 'Plataforma de RH espanhola para PME, com férias e ausências em ordem. Geolocalização facultativa na picagem, sem controlo das posições simuladas.',
     },
     features: {
       gps_verified_at_site: true,

@@ -10,7 +10,7 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   de: 'Vorschriften und Nachweise in Deutschland',
   fr: 'Règles et justificatifs en France',
   es: 'Normativa y documentación en España',
-  pt: 'Conformidade em Portugal',
+  pt: 'Regras e documentação em Portugal',
   nl: 'Regels en documentatie in Nederland',
   'en-us': 'Regional rules and records',
   'en-gb': 'Regional rules and records',
@@ -78,16 +78,16 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   ],
   pt: [
     {
-      q: 'Registo de tempos na obra e CCT da construção civil?',
-      a: 'Horas por trabalhador e por obra, acréscimos aplicáveis e histórico de antiguidade, conforme a CCT da construção civil, registados no estaleiro.',
+      q: 'Picagem na obra, horas e CCT da construção civil?',
+      a: 'GeoTapp não aplica a CCT da construção civil, não calcula acréscimos e não produz declarações. Regista horas e presenças por trabalhador e por obra, exportáveis para Excel ou CSV, que servem de base aos seus próprios registos: o registo do tempo de trabalho e a restante documentação continuam a ser da responsabilidade da empresa e do seu contabilista.',
     },
     {
-      q: 'RGPD e CNPD na geolocalização em obra?',
-      a: 'Geolocalização apenas durante o tempo de trabalho e na obra, com informação prévia, interesse legítimo e direito de acesso, dentro dos critérios da CNPD.',
+      q: 'Geolocalização em obra: RGPD e CNPD?',
+      a: 'A posição só é registada ao picar o ponto e com as fotos de prova, nunca de forma contínua, e a informação aos trabalhadores é assinada na app antes de picar. Cabe à empresa verificar o que exigem, no seu caso, o RGPD (interesse legítimo), os artigos 20.º e 21.º do Código do Trabalho e a CNPD.',
     },
     {
-      q: 'Comprovação na subcontratação e alvará IMPIC?',
-      a: 'Histórico de horas e retribuição por subcontratado, articulável com o alvará IMPIC e a responsabilidade solidária na subcontratação.',
+      q: 'Comprovativos na subcontratação e alvará do IMPIC?',
+      a: 'GeoTapp não controla salários nem gere o alvará do IMPIC ou a responsabilidade solidária na subcontratação. Regista quem picou o ponto, onde e a que horas em cada obra, também para as equipas dos subempreiteiros, e esse histórico pode ser mostrado ao dono de obra. As obrigações documentais continuam a ser da empresa.',
     },
   ],
   nl: [

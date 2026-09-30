@@ -37,9 +37,9 @@ const META: Record<string, { title: string; description: string }> = {
       'Position relevée uniquement au pointage, fausses positions refusées, pointages conservés même sans réseau, rapports scellés que le client vérifie seul, données en Europe.',
   },
   pt: {
-    title: 'Funcionalidades GeoTapp: ponto GPS, modo offline e encriptação',
+    title: 'GeoTapp: picagem com localização e relatórios selados',
     description:
-      'Registo de ponto com GPS e verificação de geofence, anti-spoofing, modo offline com sincronização automática, encriptação AES-256 e dados em tempo real.',
+      'Localização só quando se pica o ponto, localizações falsas recusadas, picagens guardadas sem rede, relatórios selados que o cliente verifica sozinho, dados na Europa.',
   },
   nl: {
     title: 'GeoTapp-functies: registreren met locatie en verzegelde rapporten',

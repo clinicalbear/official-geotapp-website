@@ -4,6 +4,8 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { ArrowRight, MapPin, Camera, FileCheck, Zap, Sparkles, Wrench, Shield, Brush, ClipboardList, Award } from 'lucide-react';
 import { trackEvent } from '@/lib/analytics';
+import { translatePath } from '@/lib/i18n/slug-map';
+import type { AppLocale } from '@/lib/i18n/config';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -161,27 +163,27 @@ const UI: Record<string, UIStrings> = {
     followUs: 'Síguenos', privacy: 'Privacidad', terms: 'Condiciones',
   },
   pt: {
-    badge: 'Verifique o trabalho de campo',
-    h1a: 'Provas GPS, fotos e relatórios', h1b: 'verificáveis. No campo.',
-    sub: 'Sele cada intervenção em tempo real. Sem cartão, sem dúvidas, zero disputas.',
+    badge: 'Verifique o trabalho no terreno',
+    h1a: 'Provas GPS, fotografias e relatórios', h1b: 'verificáveis. No terreno.',
+    sub: 'Cada intervenção transforma-se num relatório selado que o cliente verifica sozinho. Sem papel, sem dúvidas.',
     ctaPrimary: 'Experimente o GeoTapp grátis',
-    ctaPrimaryNote: 'Só email · Sem cartão · Pronto em 30 segundos',
-    ctaSecondary: 'Agendar uma demo',
-    trust1: 'GPS verificado', trust2: 'Fotos em tempo real', trust3: 'Relatórios assinados',
+    ctaPrimaryNote: 'Só e-mail · Sem cartão · Pronto em 2 minutos',
+    ctaSecondary: 'Escreva-nos',
+    trust1: 'Localização ao picar o ponto', trust2: 'Fotografias com hora', trust3: 'Relatórios selados',
     sectorEyebrow: 'Para o seu setor', sectorTitle: 'Soluções dedicadas',
-    sectorPulizie: 'Empresas de limpeza', sectorPulizieDesc: 'Rastreio de intervenções e turnos',
+    sectorPulizie: 'Empresas de limpeza', sectorPulizieDesc: 'Intervenções e turnos documentados',
     sectorInstallatori: 'Instaladores e técnicos', sectorInstallatoriDesc: 'Relatórios verificáveis para cada trabalho',
-    sectorSicurezza: 'Segurança e vigilância', sectorSicurezzaDesc: 'Rondas, postos e prova operacional',
-    sectorFallback: 'Outro setor? Experimente grátis →',
-    sectorBadgePulizie: 'Limpeza', sectorBadgeInstallatori: 'Campo', sectorBadgeSicurezza: 'Segurança',
+    sectorSicurezza: 'Segurança e vigilância', sectorSicurezzaDesc: 'Rondas, postos e provas do serviço',
+    sectorFallback: 'Não é o seu setor? Experimente grátis →',
+    sectorBadgePulizie: 'Limpeza', sectorBadgeInstallatori: 'Terreno', sectorBadgeSicurezza: 'Segurança',
     blogLabel: 'Do blog', blogTitle: 'Recursos e artigos', blogAll: 'Todos →', blogEmpty: 'Artigos em breve.',
     bottomEyebrow: 'Pronto para começar?',
-    bottomTitle: 'Experimente hoje no campo',
-    bottomSub: 'Crie a conta em 30 segundos · Sem cartão de crédito',
-    bottomCta: 'Começar grátis',
-    quickLabel: 'Links úteis',
-    pricing: 'Preços e planos', contact: 'Fale connosco', mainSite: 'Ir para o site principal',
-    followUs: 'Siga-nos', privacy: 'Privacidade', terms: 'Termos',
+    bottomTitle: 'Experimente hoje mesmo no terreno',
+    bottomSub: 'Crie a sua conta em 2 minutos · Sem cartão de crédito',
+    bottomCta: 'Começar o teste gratuito',
+    quickLabel: 'Ligações úteis',
+    pricing: 'Preços e planos', contact: 'Peça informações', mainSite: 'Ir para o sítio principal',
+    followUs: 'Siga-nos', privacy: 'Privacidade', terms: 'Condições',
   },
   nl: {
     badge: 'Controle van werk in het veld',
@@ -446,7 +448,7 @@ const FEATURED: Record<string, { label: string; sub: string }> = {
   de: { label: 'Zitiert bei AZ Big Media', sub: 'Michele Angelo Petraroli über Workflow-Automatisierung, Nachweis statt Überwachung' },
   fr: { label: 'Cités dans AZ Big Media', sub: 'Michele Angelo Petraroli sur l\'automatisation des flux : la preuve plutôt que la surveillance' },
   es: { label: 'Nos citan en AZ Big Media', sub: 'Michele Angelo Petraroli sobre automatización de flujos: la prueba antes que la vigilancia' },
-  pt: { label: 'Citados na AZ Big Media', sub: 'Michele sobre automação de fluxos' },
+  pt: { label: 'Citados na AZ Big Media', sub: 'Michele Angelo Petraroli sobre automatização de fluxos: a prova antes da vigilância' },
   nl: { label: 'Ze hebben ons geciteerd in AZ Big Media', sub: 'Michele over automatisering en bewijs van werk' },
   da: { label: 'Omtalt i AZ Big Media', sub: 'Michele om workflow-automatisering' },
   sv: { label: 'Omnämnda i AZ Big Media', sub: 'Michele om workflow-automatisering' },
@@ -462,8 +464,8 @@ export default function LinksClient({ articles, locale = 'it', variant = 'legacy
   const langPath = locale === 'it' ? 'it' : locale;
   const isL = variant === 'l';
 
-  const trialHref = `https://geotapp.com/${langPath}/trial/`;
-  const demoHref = `https://geotapp.com/${langPath}/contact/`;
+  const trialHref = `https://geotapp.com/${langPath}${translatePath('/trial/', locale as AppLocale)}`;
+  const demoHref = `https://geotapp.com/${langPath}${translatePath('/contact/', locale as AppLocale)}`;
 
   const sectorBadgeMap: Record<Sector, string> = {
     pulizie: t.sectorBadgePulizie,
@@ -497,7 +499,7 @@ export default function LinksClient({ articles, locale = 'it', variant = 'legacy
         transition={{ duration: 0.4, ease: 'easeOut', delay: 0.05 }}
         className="px-6 pt-1 pb-5 max-w-md mx-auto">
         <Link
-          href={withUtm(`https://geotapp.com/${langPath}/survey/`, 'ig_links_survey', 'survey_top')}
+          href={withUtm(`https://geotapp.com/${langPath}${translatePath('/survey/', locale as AppLocale)}`, 'ig_links_survey', 'survey_top')}
           target="_blank" rel="noopener noreferrer"
           onClick={() => trackEvent('survey_click', { cta_source: 'links_top', cta_locale: locale })}
           className="group flex items-center gap-3.5 p-4 rounded-2xl border border-[#19B5D8]/25 bg-gradient-to-r from-[#19B5D8]/8 to-primary/8 hover:border-[#19B5D8]/45 transition-all duration-200 active:scale-[0.98]">
@@ -638,19 +640,19 @@ export default function LinksClient({ articles, locale = 'it', variant = 'legacy
           <SectorCard
             icon={Brush}
             label={t.sectorPulizie} desc={t.sectorPulizieDesc}
-            href={withUtm(`https://geotapp.com/${langPath}/settori/pulizie/`, 'ig_links_sector', 'pulizie')}
+            href={withUtm(`https://geotapp.com/${langPath}${translatePath('/settori/pulizie/', locale as AppLocale)}`, 'ig_links_sector', 'pulizie')}
             index={0}
           />
           <SectorCard
             icon={Wrench}
             label={t.sectorInstallatori} desc={t.sectorInstallatoriDesc}
-            href={withUtm(`https://geotapp.com/${langPath}/settori/installatori/`, 'ig_links_sector', 'installatori')}
+            href={withUtm(`https://geotapp.com/${langPath}${translatePath('/settori/installatori/', locale as AppLocale)}`, 'ig_links_sector', 'installatori')}
             index={1}
           />
           <SectorCard
             icon={Shield}
             label={t.sectorSicurezza} desc={t.sectorSicurezzaDesc}
-            href={withUtm(`https://geotapp.com/${langPath}/settori/sicurezza/`, 'ig_links_sector', 'sicurezza')}
+            href={withUtm(`https://geotapp.com/${langPath}${translatePath('/settori/sicurezza/', locale as AppLocale)}`, 'ig_links_sector', 'sicurezza')}
             index={2}
           />
         </motion.div>
@@ -696,8 +698,8 @@ export default function LinksClient({ articles, locale = 'it', variant = 'legacy
         </motion.div>
         <motion.ul initial="hidden" whileInView="show" viewport={{ once: true, margin: '-20px' }}
           variants={stagger} className={isL ? 'rows' : 'space-y-2'}>
-          <QuickLink rowStyle={isL} label={t.pricing} href={withUtm(`https://geotapp.com/${langPath}/pricing/`, 'ig_links_nav', 'quick_pricing')} />
-          <QuickLink rowStyle={isL} label={t.contact} href={withUtm(`https://geotapp.com/${langPath}/contact/`, 'ig_links_nav', 'quick_contact')} />
+          <QuickLink rowStyle={isL} label={t.pricing} href={withUtm(`https://geotapp.com/${langPath}${translatePath('/pricing/', locale as AppLocale)}`, 'ig_links_nav', 'quick_pricing')} />
+          <QuickLink rowStyle={isL} label={t.contact} href={withUtm(`https://geotapp.com/${langPath}${translatePath('/contact/', locale as AppLocale)}`, 'ig_links_nav', 'quick_contact')} />
           <QuickLink rowStyle={isL} label={t.mainSite} href={withUtm('https://geotapp.com', 'ig_links_nav', 'quick_main')} />
         </motion.ul>
       </section>
@@ -745,9 +747,9 @@ export default function LinksClient({ articles, locale = 'it', variant = 'legacy
         <p className="text-[11px] text-slate-400 space-x-2">
           <span>© {new Date().getFullYear()} GeoTapp</span>
           <span className="text-slate-200">·</span>
-          <Link href={`https://geotapp.com/${langPath}/privacy/`} className="hover:text-slate-600 transition-colors">{t.privacy}</Link>
+          <Link href={`https://geotapp.com/${langPath}${translatePath('/privacy/', locale as AppLocale)}`} className="hover:text-slate-600 transition-colors">{t.privacy}</Link>
           <span className="text-slate-200">·</span>
-          <Link href={`https://geotapp.com/${langPath}/terms/`} className="hover:text-slate-600 transition-colors">{t.terms}</Link>
+          <Link href={`https://geotapp.com/${langPath}${translatePath('/terms/', locale as AppLocale)}`} className="hover:text-slate-600 transition-colors">{t.terms}</Link>
         </p>
       </motion.footer>
     </div>

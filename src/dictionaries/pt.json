@@ -6,8 +6,8 @@
     "blog": "Blog",
     "contact": "Contacto",
     "login": "Entrar",
-    "cta": "Pedir demo",
-    "cta_trial": "Teste grátis",
+    "cta": "Começar teste gratuito",
+    "cta_trial": "Teste gratuito",
     "cta_how": "Veja como funciona",
     "cta_start": "Iniciar teste",
     "cta_signin": "Entrar",
@@ -27,7 +27,10 @@
     "product_flow_desc": "Gestão operacional de intervenções e equipas",
     "product_app_desc": "App móvel para técnicos de campo",
     "product_verifier_desc": "Verificação de integridade de relatórios de trabalho",
-    "compare": "Comparação"
+    "compare": "Comparação",
+    "aria_cart": "Carrinho",
+    "aria_menu": "Abrir o menu",
+    "aria_close": "Fechar o menu"
   },
   "risorseHub": {
     "metaTitle": "Recursos - GeoTapp",
@@ -41,11 +44,11 @@
       },
       "dossier": {
         "title": "Dossiê de conformidade",
-        "desc": "O que a GeoTapp faz e não faz, com o RGPD, o Código do Trabalho e os limites ditos com clareza."
+        "desc": "O que a GeoTapp faz e não faz, com o RGPD, a lei sobre o controlo dos trabalhadores e os limites ditos com clareza."
       },
       "gpsPresenze": {
         "title": "GPS no ponto, sem vigiar",
-        "desc": "Pode registar-se a posição só no ponto sem vigiar os colaboradores? Sim: o que decidiu um tribunal italiano e o que a GeoTapp realmente regista."
+        "desc": "Pode registar-se a posição só ao picar o ponto, sem vigiar os colaboradores? Sim: o que diz o Tribunal de Cosenza e o que a GeoTapp realmente regista."
       },
       "autovalutazione": {
         "title": "Está em conformidade com os dados?",
@@ -61,7 +64,7 @@
       },
       "sanzioni": {
         "title": "Calculadora de sanções GPS",
-        "desc": "Escolhe o país e descobre quanto arriscas ao monitorizar trabalhadores: sanção máxima real e obrigações que te expõem."
+        "desc": "Escolha o país e descubra quanto arrisca ao monitorizar trabalhadores: a multa mais alta realmente aplicada, ou o máximo legal, e as obrigações que o expõem."
       },
       "osservatorio": {
         "title": "Observatório europeu",
@@ -69,15 +72,15 @@
       },
       "indice": {
         "title": "Índice de vigilância laboral na Europa",
-        "desc": "A classificação dos 39 países europeus pela rigidez do quadro sobre monitorização de trabalhadores."
+        "desc": "O que dizem, em números, as decisões publicadas pelas autoridades europeias sobre o controlo dos trabalhadores: quantas, sobre que temas, as multas mais altas."
       },
       "roi": {
         "title": "Calculadora de ROI",
-        "desc": "Estima quanto tempo e dinheiro recuperas ao usar a GeoTapp nas tuas atividades no terreno."
+        "desc": "Estime quanto tempo e dinheiro recupera ao usar a GeoTapp nas suas atividades no terreno."
       },
       "survey": {
         "title": "Inquérito: a prova do trabalho",
-        "desc": "Dois minutos, anónimo: confias na palavra ou precisas de uma prova? Ajuda-nos a perceber um problema real."
+        "desc": "Dois minutos, anónimo: confia na palavra ou precisa de uma prova? Ajude-nos a perceber um problema real."
       }
     },
     "faq": {
@@ -89,14 +92,14 @@
         },
         {
           "q": "Tenho de me registar ou deixar o meu email para os usar?",
-          "a": "Não. Abre a ferramenta e usa-a. O gerador de informação de privacidade funciona dentro do seu navegador e não envia os seus dados para lado nenhum; as outras ferramentas não pedem conta. Se quiser manter-se a par, pode deixar-nos o seu email, mas isso é uma escolha sua, não um pedágio."
+          "a": "Não. Abra a ferramenta e use-a. O gerador de informação de privacidade funciona dentro do seu navegador e não envia os seus dados para lado nenhum; as outras ferramentas não pedem conta. Se quiser manter-se a par, pode deixar-nos o seu e-mail, mas isso é uma escolha sua, não uma portagem."
         },
         {
           "q": "Posso confiar na informação jurídica aqui presente?",
           "a": "Baseia-se na legislação nacional e em decisões reais das autoridades, com a fonte indicada e uma data de verificação. Dito isto, continua a ser um recurso informativo, não aconselhamento jurídico: antes de ligar um sistema de monitorização, peça a um profissional que avalie a sua situação."
         },
         {
-          "q": "Posso usar estas ferramentas no meu próprio site?",
+          "q": "Posso usar estas ferramentas no meu próprio sítio?",
           "a": "Sim. O mapa do GPS de trabalhadores pode ser incorporado com o código que está na sua página, e os recursos podem ser citados ligando à fonte. Se gere um blogue do setor ou aconselha empresas, também foram pensados para isso."
         },
         {
@@ -111,7 +114,7 @@
     }
   },
   "footer": {
-    "tagline": "Actividade de campo registada. Operações organizadas. Relatórios verificáveis.",
+    "tagline": "Trabalho de campo registado. Operações organizadas. Relatórios verificáveis.",
     "privacy": "Política de privacidade",
     "terms": "Termos de serviço",
     "rights": "Todos os direitos reservados.",
@@ -124,12 +127,12 @@
     "us_badge": "🇺🇸 Serving US teams, chat support 9am-6pm ET. USD invoicing available on request.",
     "hero_badge": "O trabalho aconteceu. Agora torne-o demonstrável.",
     "hero_title": "Se não puder provar, o cliente diz que nunca aconteceu.",
-    "hero_subtitle": "GeoTapp transforma cada intervenção em campo em evidência objectiva: relatórios selados com dados GPS reais, provas fotográficas com marca de tempo e documentação verificável por qualquer pessoa, sem confiar, sem contestações.",
+    "hero_subtitle": "A GeoTapp transforma cada intervenção numa prova: relatórios selados com posição, fotos e horas, que o cliente pode verificar por si, sem ter de confiar na sua palavra.",
     "hero_cta_primary": "Iniciar teste grátis",
     "hero_cta_secondary": "Explorar setores",
     "hero_cta_report": "Ver um relatório selado",
     "trust_gdpr": "Sem rastreio contínuo",
-    "trust_gdpr_desc": "Só registo de entrada e saída",
+    "trust_gdpr_desc": "Posição só quando se pica o ponto: entrada, pausas, saída",
     "trust_gps": "Prova GPS",
     "trust_gps_desc": "Cada intervenção selada com localização e marca de tempo",
     "trust_offline": "Verificador offline",
@@ -139,28 +142,28 @@
     "features_subtitle": "Três ferramentas integradas: o campo regista, o escritório controla, o cliente verifica.",
     "cta_title": "O trabalho aconteceu. Agora prove-o.",
     "cta_subtitle": "Nenhuma intervenção fica sem documentação, e cada hora que chega do terreno chega já verificável.",
-    "cta_button": "Agendar demo de 30 minutos",
-    "problem_title": "O problema que você já conhece",
+    "cta_button": "Começar teste gratuito",
+    "problem_title": "O problema que já conhece",
     "problem_subtitle": "Quem tem a prova não explica, quem explica não tem a prova.",
     "problem_items": [
       {
-        "title": "O cliente nega. Você não tem provas.",
+        "title": "O cliente nega. Não tem provas.",
         "desc": "A intervenção aconteceu. Mas sem documentação verificável, é a sua palavra contra a dele. E muitas vezes ele ganha."
       },
       {
         "title": "O relatório chega incompleto, atrasado ou não chega.",
-        "desc": "Formulários em papel, WhatsApp, e-mails. Os dados se perdem, alteram-se, são esquecidos. A reconstrução a posteriori é cara e pouco confiável."
+        "desc": "Folhas de papel, WhatsApp, e-mails. Os dados perdem-se, alteram-se, esquecem-se. A reconstrução a posteriori é cara e pouco fiável."
       },
       {
-        "title": "O trabalho não documentado não existe.",
-        "desc": "Cada hora não registrada é uma hora não paga. Cada intervenção sem prova é uma intervenção que o cliente pode contestar."
+        "title": "O trabalho não faturado não existe.",
+        "desc": "Cada hora não documentada é uma hora não paga. Cada intervenção sem prova é uma intervenção que o cliente pode contestar."
       }
     ],
-    "report_section_title": "O relatório. Não um resumo. Uma prova.",
+    "report_section_title": "O relatório não é um resumo: é uma prova.",
     "report_section_subtitle": "Cada relatório GeoTapp é gerado automaticamente a partir de dados reais do campo.",
-    "report_section_body": "Picagens GPS, fotografias com a hora, notas de terreno. Os dados fecham-se na geração e a partir daí ninguém lhes toca. Quando chega a dúvida não explica, mostra, e o que mostra não é um documento enviado ao cliente, é o fim da discussão.",
+    "report_section_body": "Picagens com posição, fotos com a hora, notas de trabalho. Os dados são selados quando o relatório é gerado e, a partir daí, qualquer alteração é detetável. Quando surge a dúvida, não precisa de explicar: mostra o relatório e o cliente verifica-o por si.",
     "report_feature_1": "Selado após geração, qualquer alteração é detetável",
-    "report_feature_2": "Verificável sem conta, por qualquer pessoa, de forma autônoma",
+    "report_feature_2": "Verificável sem conta, por qualquer pessoa, de forma autónoma",
     "report_feature_3": "Dados GPS e fotográficos integrados e inseparáveis",
     "report_feature_4": "Gerado automaticamente, sem preenchimento manual",
     "report_cta": "Ver como o cliente verifica por conta própria",
@@ -171,147 +174,149 @@
     "hero_sectors_and": "e",
     "clockin_demo": {
       "step_clock": "Picar o ponto",
-      "step_gps": "GPS verificado",
+      "step_gps": "Posição controlada",
       "step_photo": "Foto no local",
       "step_sealed": "Selado",
-      "caption": "Uma picagem. GPS, foto e hora, selados. Não se refaz, não se discute.",
+      "caption": "Uma picagem: posição, foto e hora, seladas no relatório. Qualquer alteração posterior fica à vista.",
       "replay": "Rever"
     },
     "roi_mini": {
-      "title": "Quanto te custa não conseguires prová-lo?",
-      "subtitle": "Três números, uma estimativa honesta. Em dois segundos, sem e-mail.",
+      "title": "Quanto lhe custa não o poder provar?",
+      "subtitle": "Três números, uma estimativa honesta. De imediato, sem e-mail.",
       "field_operatori": "Operadores",
       "field_costo": "Custo por hora (€)",
       "field_contestazioni": "Contestações por mês",
-      "result_prefix": "Estás a deixar em cima da mesa cerca de",
+      "result_prefix": "Está a deixar em cima da mesa cerca de ",
       "result_suffix": "por ano",
-      "disclaimer": "Estimativa mínima (disputas + coordenação). A conta completa, item a item, está no relatório.",
-      "email_label": "Queres o relatório detalhado e a comparação com o teu setor?",
-      "email_placeholder": "O teu e-mail de trabalho",
-      "email_cta": "Envia-me o relatório + começa o teste",
-      "email_ok": "Feito. Verifica o e-mail daqui a pouco.",
-      "email_err": "Algo não funcionou. Tenta de novo.",
+      "disclaimer": "Estimativa mínima (contestações + coordenação). A conta completa, item a item, está na calculadora de ROI.",
+      "email_label": "Quer o relatório detalhado e a comparação com o seu setor?",
+      "email_placeholder": "O seu e-mail de trabalho",
+      "email_cta": "Enviar-me o relatório + iniciar o teste",
+      "email_ok": "Feito. Verifique o e-mail daqui a pouco.",
+      "email_err": "Algo não funcionou. Tente de novo.",
       "pitch_kicker": "Calculadora de ROI",
-      "pitch_title": "Os números que não olhas são os que te custam.",
+      "pitch_title": "Os números que não olha são os que lhe custam.",
       "pitch_body": "As horas de burocracia, as contestações que paga, a coordenação feita de viva voz. Não os sente a sair da conta, mas saem. Ponha três números e veja quanto dá num ano. Costuma surpreender, e não pela positiva.",
       "pitch_points": [
-        "Cada contestação que não cobras pesa, doze meses por ano",
-        "As horas que passas no escritório são horas que não faturas",
-        "Dois segundos e nenhum email para ver o número"
+        "Cada contestação não paga pesa, doze meses em doze",
+        "As horas passadas no escritório são horas que não fatura",
+        "Três números e nenhum e-mail para ver o resultado"
       ]
     },
-    "proof_note": "Provas recolhidas apenas pela câmara, sem rastreio contínuo.",
-    "proof_claim": "Entre a entrada e a saída não se regista nada automaticamente.",
-    "sticky_cta_subtitle": "14 dias grátis, sem cartão de crédito"
+    "proof_note": "Fotos de prova tiradas pela aplicação, sem rastreio contínuo.",
+    "proof_claim": "Entre uma picagem e a seguinte, não registamos nada automaticamente.",
+    "sticky_cta_subtitle": "14 dias grátis, sem cartão de crédito",
+    "trial_cta_headline": "Experimente gratuitamente durante 14 dias",
+    "trial_cta_subtitle": "Não é preciso cartão de crédito"
   },
   "home_sections": {
     "flow": {
       "badge": "GeoTapp Flow",
-      "title": "Coordene o campo a partir de um hub operacional único.",
-      "subtitle": "O Flow é o sistema utilizado pelo escritório para gerir trabalhos, atribuir actividades, acompanhar o progresso e gerar relatórios de trabalho estruturados. <strong class=\"text-slate-900\">Menos fricção interna, mais controlo real.</strong><br/><br/><em>A sua empresa é um organismo vivo. Cada intervenção, cada tarefa, cada operador é um batimento. GeoTapp Flow mantém todos sincronizados.</em>",
+      "title": "O escritório vê cada picagem assim que chega.",
+      "subtitle": "O Flow é o centro operacional do escritório: trabalhos, atividades, progresso e relatórios estruturados. <strong class=\"text-slate-900\">O terreno trabalha. O escritório sabe.</strong>",
       "features": {
-        "crm": "<strong>Gestão de trabalhos:</strong> Crie intervenções, atribua técnicos e acompanhe o progresso com o estado sempre atualizado.",
-        "pipeline": "<strong>Relatórios estruturados:</strong> Cada trabalho concluído gera documentação rastreável pronta para o cliente."
+        "crm": "<strong>Gestão de trabalhos:</strong> Cada intervenção nasce estruturada, com técnico atribuído, local e estado atualizado de imediato.",
+        "pipeline": "<strong>Documentação automática:</strong> Cada intervenção concluída gera um relatório pronto, sem preenchimento manual."
       },
       "link": "Explorar GeoTapp Flow"
     },
     "app": {
       "badge": "GeoTapp TimeTracker",
-      "title": "O técnico regista. O escritório controla.",
-      "subtitle": "O TimeTracker é a aplicação móvel que recolhe a prova no terreno, entrada, saída, fotografias com a hora, notas. Tudo ligado à intervenção, tudo selado. <strong>Disponível para Android e iOS.</strong>",
+      "title": "O técnico regista. A prova forma-se.",
+      "subtitle": "O TimeTracker é a aplicação móvel que recolhe a prova no terreno: entrada, pausas, saída, fotografias com a hora, notas. Tudo ligado à intervenção e selado no relatório. <strong>Disponível para Android e iOS.</strong>",
       "card_gps": {
-        "title": "Registo de presença GPS",
-        "desc": "Localização verificada"
+        "title": "Prova GPS",
+        "desc": "Posição e hora registadas em cada picagem"
       },
       "card_gdpr": {
         "title": "Sem rastreio contínuo",
-        "desc": "Sem rastreio contínuo"
+        "desc": "Entre uma picagem e a seguinte, não se regista nada automaticamente"
       },
       "link": "Explorar GeoTapp TimeTracker"
     },
     "verifier": {
       "badge": "GeoTapp Verifier",
       "title": "Não precisa que confiem em si.",
-      "subtitle": "A sua palavra não entra na discussão. O cliente abre o relatório e verifica sozinho, sem aceder ao GeoTapp. Se os dados correspondem ao trabalho real, o relatório aguenta. Se alguém alterou o documento, deixa de aguentar. Sem recurso.",
+      "subtitle": "A sua palavra não entra na discussão. O cliente abre o relatório e verifica-o sozinho, sem aceder à GeoTapp. Se ninguém tocou no documento, a verificação confirma-o. Se alguém o modificou, a verificação assinala-o.",
       "features": {
-        "integrity": "<strong>Dados selados:</strong> O relatório é gerado sobre os dados reais de campo e bloqueado. Qualquer modificação torna-o inválido, sem recurso.",
-        "independent": "<strong>Verificação autónoma:</strong> Qualquer pessoa com o relatório pode verificar a sua autenticidade, sem conta, sem acesso à plataforma."
+        "integrity": "<strong>Dados selados:</strong> O relatório é selado quando é gerado. Qualquer modificação posterior é assinalada pela verificação.",
+        "independent": "<strong>Verificação autónoma:</strong> Qualquer pessoa com o relatório pode verificar a sua integridade, sem conta e sem acesso à plataforma."
       },
       "link": "Explorar GeoTapp Verifier"
     },
     "core": {
       "badge": "Plataforma GeoTapp",
-      "title": "Um sistema, três níveis de certeza",
-      "subtitle": "TimeTracker regista no campo. Flow organiza no escritório. Verifier verifica que tudo corresponde.",
+      "title": "Um sistema, três ferramentas",
+      "subtitle": "O TimeTracker regista no terreno. O Flow organiza no escritório. O Verifier permite ao cliente controlar que o relatório não foi tocado. Um único ciclo, do terreno ao cliente.",
       "features": [
         {
-          "title": "Operabilidade móvel real",
-          "desc": "O TimeTracker regista a entrada, as pausas e a saída com GPS. Cada dado enviado a partir do terreno é autêntico, com localização e carimbo temporal."
+          "title": "Os dados nascem no terreno",
+          "desc": "O TimeTracker regista entrada, pausas e saída com posição e hora, mais as fotos de prova do trabalho."
         },
         {
-          "title": "Privacidade por concepção",
-          "desc": "A localização é registada <strong>apenas</strong> no registo de entrada e saída. Sem rastreio contínuo."
+          "title": "Posição só quando se pica o ponto",
+          "desc": "A posição é registada <strong>apenas</strong> quando o trabalhador pica o ponto (entrada, pausas, saída) ou tira uma foto de prova. Entre uma picagem e a seguinte, não se regista nada automaticamente."
         },
         {
-          "title": "Controlo operacional atualizado a cada registo",
-          "desc": "Os dados de campo chegam ao Flow assim que são registados. O escritório tem visibilidade sempre atualizada sem ligar para ninguém."
+          "title": "Controlo operacional atualizado a cada picagem",
+          "desc": "Os dados do terreno chegam ao Flow assim que são registados. O responsável vê as picagens sem ter de ligar a ninguém."
         },
         {
-          "title": "Prova defensável ao longo do tempo",
-          "desc": "Cada relatório fica selado sobre dados reais de campo. Contestação? O dado está lá. Verificável por qualquer pessoa. Sempre."
+          "title": "Uma prova que continua verificável",
+          "desc": "Cada relatório é selado sobre os dados recolhidos no terreno. Se chegar uma contestação, o dado lá está, e qualquer pessoa pode verificar que o relatório não foi modificado. Mesmo daqui a anos, mesmo sem nós."
         }
       ]
     },
     "footer_cta": {
-      "title": "O trabalho está provado. Agora vai para casa.",
-      "subtitle": "Um toque na obra sela a prova, e o relatório escreve-se sozinho, pronto para o cliente. Acabaram as sextas à noite a reconstruir a semana de memória. Quando picas a saída, acabaste mesmo, e a noite volta a ser tua.",
-      "button": "Prove o seu trabalho",
+      "title": "O trabalho está demonstrado. Agora vá para casa.",
+      "subtitle": "Basta picar o ponto na obra e o relatório compõe-se sozinho com os dados do turno, pronto para o cliente. Acabaram as noites de sexta a reconstruir a semana de memória. Quando desliga, acabou mesmo, e a noite volta a ser sua.",
+      "button": "Escreva-nos",
       "pricing_link": "Ver planos e preços →"
     },
     "settori": {
-      "title": "Documentação verificável para cada setor - Soluções GeoTapp",
-      "subtitle": "Escolha o seu setor para ver como o GeoTapp gera provas do trabalho realizado, para mostrar ao cliente em caso de disputa.",
+      "title": "Documentação verificável para cada setor",
+      "subtitle": "Escolha o seu setor para ver como a GeoTapp gera provas do trabalho realizado, a mostrar ao cliente em caso de contestação.",
       "see_all": "Ver todos os setores suportados",
       "installatori": {
         "name": "Instaladores",
-        "desc": "Eletricistas, Canalizadores, Técnicos. Cada intervenção documentada com GPS e fotos, dados selados, verificáveis pelo cliente.",
-        "cta": "Comprovar cada intervenção"
+        "desc": "Eletricistas, canalizadores, técnicos de instalações. Cada intervenção documentada com GPS e fotos, dados selados, verificáveis pelo cliente.",
+        "cta": "Comprove cada intervenção"
       },
       "sicurezza": {
         "name": "Segurança",
-        "desc": "Vigilância, Seguranças, Serviços Fiduciários. Presenças verificáveis, turnos documentados com prova objetiva.",
-        "cta": "Provar presenças ao cliente"
+        "desc": "Vigilância, seguranças, serviços fiduciários. Presenças verificáveis, turnos documentados com prova objetiva.",
+        "cta": "Prove as presenças ao cliente"
       },
       "pulizie": {
         "name": "Limpeza",
-        "desc": "Empresas de limpeza, Facility, Multisserviços. Cada ronda documentada e verificável pelo cliente, menos disputas.",
-        "cta": "Evitar disputas"
+        "desc": "Empresas de limpeza, facility, multisserviços. Cada passagem documentada e verificável pelo cliente, menos contestações.",
+        "cta": "Documente cada passagem"
       },
       "elettricisti": {
         "name": "Eletricistas",
-        "desc": "Instalações elétricas, quadros, cablagem. Cada intervenção documentada com GPS e fotos, provas seladas para encerrar qualquer disputa.",
+        "desc": "Instalações elétricas, quadros, cablagens. Cada intervenção documentada com GPS e fotos, num relatório selado a mostrar quando alguém contesta.",
         "cta": "Documente cada intervenção"
       },
       "idraulici": {
         "name": "Canalizadores",
-        "desc": "Canalização, aquecimento, caldeiras. Relatórios GPS com fotos antes e depois, menos disputas sobre trabalhos realizados.",
-        "cta": "Prove cada trabalho"
+        "desc": "Instalações de canalização, aquecimento, caldeiras. Relatórios com GPS e fotos antes e depois, menos contestações sobre os trabalhos realizados.",
+        "cta": "Prove cada trabalho realizado"
       },
       "termoidraulici": {
         "name": "Aquecimento e Canalização",
-        "desc": "GeoTapp regista cada intervenção em caldeiras e instalações com GPS, fotos e carimbos de tempo verificáveis. O cliente nega os materiais substituídos?",
+        "desc": "A GeoTapp regista cada intervenção em caldeiras e instalações com posição, fotos e horas verificáveis. O cliente nega os materiais substituídos?",
         "cta": "Prove os materiais substituídos"
       },
       "edilizia": {
-        "desc": "Obra, Renovação, Subcontratação. Horas e presenças em obra documentadas, autos de medição que resistem à contestação.",
-        "cta": "Defenda os seus autos"
+        "desc": "Construção, remodelações, subempreitadas. Horas e presenças em obra documentadas, autos de medição a mostrar ao dono da obra com as provas anexadas.",
+        "cta": "Documente os seus autos"
       },
       "manutenzione": {
-        "desc": "Instalações, Elevadores, Facility. Cada chamada e cada visita com GPS e fotos: o relatório deixa de ser contestado.",
-        "cta": "Feche as contestações"
+        "desc": "Instalações, elevadores, facility. Cada chamada e cada visita com GPS e fotos, num relatório a mostrar quando for preciso.",
+        "cta": "Documente cada visita"
       },
       "impianti": {
-        "desc": "Mecânicas, Elétricas, Incêndio. Ensaios e colocação em serviço selados com hora e posição, prova pronta para o dono da obra.",
+        "desc": "Instalações mecânicas, elétricas e de incêndio. Ensaios e entrada em serviço selados com hora e posição, prova pronta para o dono da obra.",
         "cta": "Sele os ensaios"
       }
     },
@@ -323,12 +328,12 @@
     },
     "demo_banner": {
       "badge": "Exemplo real",
-      "title": "Relatório selado, descarregar e verificar",
+      "title": "Relatório selado para descarregar e verificar",
       "field_operator": "Operador",
       "field_intervention": "Intervenção",
       "field_intervention_value": "Substituição do quadro elétrico",
       "btn_download": "Descarregar relatório (.zip)",
-      "btn_verify": "Verificar autenticidade →"
+      "btn_verify": "Como se verifica →"
     },
     "flow_mockup": {
       "pipeline_title": "Pipeline Vendas",
@@ -341,7 +346,7 @@
     "badge": "Soluções GeoTapp",
     "title": "Escolha o produto certo.",
     "subtitle": "Soluções práticas para empresas com técnicos e operadores de campo.",
-    "vat_note": "Todos os preços excluem IVA. Facturação de acordo com os termos de serviço.",
+    "vat_note": "Todos os preços são apresentados com IVA não incluído. A subscrição tem a duração mínima de 12 meses, paga de uma só vez por ano ou em prestações mensais. O GeoTapp Verifier, a ferramenta com que os seus clientes verificam os relatórios, é gratuito.",
     "categories": {
       "app": {
         "title": "GeoTapp TimeTracker",
@@ -350,10 +355,11 @@
           {
             "name": "GeoTapp TimeTracker",
             "tagline": "A partir de",
-            "desc": "Presenças, actividade de campo e prova do trabalho realizado, num só sítio. Preço por utilizador por ano.",
+            "desc": "Presenças, atividade no terreno e prova do trabalho realizado, num só sítio. Preço por utilizador por ano.",
             "features": [
-              "App Android/iOS",
-              "Registo de presença GPS",
+              "Aplicação nativa Android e iOS",
+              "Picagem com localização",
+              "Fotos de prova",
               "Relatórios semanais"
             ],
             "button": "Ver calculadora"
@@ -380,11 +386,11 @@
           {
             "name": "GeoTapp Flow Team",
             "tagline": "Para pequenas equipas operacionais.",
-            "desc": "Coordene e gira a sua equipa operacional, atualizada a cada registo.",
+            "desc": "Coordene e gira a sua equipa operacional, atualizada a cada picagem.",
             "features": [
               "5 utilizadores Flow incluídos",
               "Gestão de trabalhos",
-              "Registos em campo",
+              "Picagens em campo",
               "Relatórios operacionais",
               "Integrações",
               "Postos TimeTracker ativáveis: 5 (não incluídos na subscrição)*"
@@ -408,7 +414,7 @@
     "calculator": {
       "title": "Calculadora de licenças TimeTracker",
       "subtitle": "Estime o seu investimento anual em força de trabalho.",
-      "active_users": "Utilizadores ativos",
+      "active_users": "Colaboradores ativos",
       "discount_threshold": "Limiar de desconto",
       "cost_per_user": "Custo médio por utilizador",
       "per_month": "/mês",
@@ -416,10 +422,10 @@
       "mixed_rate": "Tarifa mista (desconto por volume aplicado)",
       "annual_total": "Total anual (+IVA)",
       "annual_billing_note": "Faturação anual única",
-      "enterprise_plan": "Plano Enterprise",
-      "enterprise_desc": "Para equipas com mais de 150 utilizadores oferecemos SLAs personalizados e gestão de conta dedicada.",
+      "enterprise_plan": "Mais de 150 postos",
+      "enterprise_desc": "Acima de 150 postos o preço é combinado: escreva-nos e enviamos um orçamento.",
       "request_quote": "Solicitar orçamento",
-      "add_to_cart": "Adicionar licença App ao carrinho",
+      "add_to_cart": "Adicionar os postos ao carrinho",
       "secure_payment": "Pagamento seguro via Stripe. IVA calculado no checkout."
     },
     "simulator": {
@@ -432,7 +438,7 @@
       "per_month": "/mês",
       "per_user_annual": "por utilizador, faturação anual",
       "selected_badge": "Selecionado",
-      "enterprise_plan": "Plano Enterprise",
+      "enterprise_plan": "Mais de 150 postos",
       "enterprise_desc": "Para grandes organizações oferecemos soluções personalizadas.",
       "enterprise_cta": "Contacte-nos para um orçamento",
       "company_placeholder": "Nome da empresa",
@@ -443,7 +449,7 @@
       "processing": "A processar...",
       "request_info": "Solicitar informações",
       "buy_now": "Comprar agora",
-      "payment_note": "Pagamento seguro via Stripe. Cancele quando quiser.",
+      "payment_note": "Pagamento seguro via Stripe. Subscrição com duração mínima de 12 meses.",
       "success_sent": "Pedido enviado com sucesso! Entraremos em contacto em breve.",
       "error_request": "Erro ao enviar pedido",
       "plus_vat": "+ IVA"
@@ -465,26 +471,26 @@
       "subtotal": "Subtotal",
       "bundleDiscount": "Desconto Bundle (15% primeiro ano)",
       "totalPrice": "Preço total",
-      "savings": "Poupa",
+      "savings": "Poupança",
       "perMonth": "/mês",
       "perYear": "/ano",
       "cta": "Obter o Bundle",
       "notes": "Nota: O desconto aplica-se nos primeiros 12 meses",
-      "employees_unit": "funcionários",
+      "employees_unit": "colaboradores",
       "first_year_savings": "no primeiro ano!",
-      "loading": "Carregando...",
-      "modal_title": "Insira seu email",
-      "modal_desc": "Precisamos do seu email para criar sua sessão de checkout e enviar o recibo.",
-      "email_placeholder": "seu@email.com",
+      "loading": "A carregar...",
+      "modal_title": "Introduza o seu e-mail",
+      "modal_desc": "Precisamos do seu e-mail para criar a sessão de checkout e enviar o recibo.",
+      "email_placeholder": "nome@email.com",
       "btn_cancel": "Cancelar",
       "btn_continue": "Continuar",
       "error_checkout": "Erro ao criar a sessão. Por favor, tente novamente.",
-      "error_connection": "Erro de conexão. Por favor, tente novamente."
+      "error_connection": "Erro de ligação. Por favor, tente novamente."
     },
     "intro_label": "Tarifa de lançamento 2026",
-    "tracker_footnote": "* Os postos TimeTracker são adquiridos à parte. O plano Flow define quantos podem estar ativos ao mesmo tempo, não quantos estão incluídos. Ao remover o acesso de um funcionário, a vaga fica livre de imediato.",
+    "tracker_footnote": "* Os postos TimeTracker são adquiridos à parte. O plano Flow define quantos podem estar ativos ao mesmo tempo, não quantos estão incluídos. Ao remover o acesso de um trabalhador, o posto fica livre de imediato.",
     "per_year": "/ano",
-    "title_gradient": "Utilizadores no escritório e um lugar por cada trabalhador.",
+    "title_gradient": "Utilizadores de escritório e um posto por cada operador.",
     "or_monthly": "ou",
     "per_month_short": "/mês",
     "annual_savings": "Poupança anual:",
@@ -493,10 +499,10 @@
     "recommended": "Recomendado"
   },
   "contact": {
-    "title": "Vamos falar de <span class=\"text-primary\">Negócio</span>.",
-    "subtitle": "Precisa de perceber se o GeoTapp se adequa à sua empresa. Estamos aqui para responder de forma concreta.",
-    "guarantee_title": "Garantia de resposta",
-    "guarantee_text": "Primeira resposta média em 12 horas úteis. Nenhuma questão perdida no vazio.",
+    "title": "Vamos falar do seu <span class=\"text-primary\">trabalho</span>.",
+    "subtitle": "Quer perceber se a GeoTapp serve para a sua empresa? Escreva-nos: respondemos de forma concreta.",
+    "guarantee_title": "Tempo de resposta",
+    "guarantee_text": "Resposta média em 12 horas úteis. Responde-lhe uma pessoa.",
     "form": {
       "name": "Nome",
       "first_name": "Nome",
@@ -537,13 +543,13 @@
       "message": "Mensagem",
       "send": "Enviar",
       "reason_options": [
-        "Quero uma Demo do GeoTapp",
+        "Quero começar o teste gratuito da GeoTapp",
         "Pedido de Informação Geral",
         "Parceria",
         "Outro"
       ],
       "name_placeholder": "O seu nome",
-      "email_placeholder": "voce@email.com",
+      "email_placeholder": "nome@email.com",
       "company_placeholder": "Nome da empresa",
       "message_placeholder": "A sua mensagem...",
       "submit": "Enviar mensagem",
@@ -559,7 +565,7 @@
     "hq_label": "Onde operamos",
     "hq_city": "100% online, clientes em Itália e na UE",
     "hq_note": "Sem escritório aberto ao público: suporte e onboarding remotos.",
-    "privacy_note": "Ao enviar este formulário aceita a nossa Política de Privacidade.",
+    "privacy_note": "Ao enviar este formulário, declara ter lido a nossa Política de Privacidade.",
     "map_title": "Onde estamos - Trenzano (BS), Itália",
     "success": "Mensagem enviada com sucesso. Responderemos o mais brevemente possível.",
     "error": "Erro ao enviar. Tente novamente mais tarde.",
@@ -568,31 +574,33 @@
     "open_maps": "Abrir no Google Maps ↗"
   },
   "login_hub": {
-    "title": "Aceda à sua <span class=\"text-primary\">Conta</span>.",
-    "subtitle": "Seleccione o produto ao qual pretende ligar-se.",
+    "title": "Aceda à <span class=\"text-primary\">GeoTapp</span>.",
+    "subtitle": "Escolha o produto: o Flow para o escritório, o TimeTracker para quem trabalha no terreno.",
     "flow": {
       "desc": "Gestão operacional, trabalhos, coordenação e relatórios.",
       "btn": "Entrar no Flow"
     },
     "timetracker": {
-      "desc": "Presenças, actividade de campo e comprovativos de trabalho.",
-      "btn": "Entrar no TimeTracker"
-    }
+      "desc": "Para os operadores no terreno: o acesso faz-se a partir da aplicação, em Android e iOS.",
+      "btn": "Descarregar a aplicação TimeTracker"
+    },
+    "meta_title": "Entrar | GeoTapp",
+    "meta_description": "Entre no GeoTapp Flow a partir do navegador ou descarregue a aplicação TimeTracker para picar o ponto no terreno."
   },
   "product_pages": {
     "flow": {
-      "hero_badge": "GeoTapp Flow - Gestão de operações de campo",
-      "hero_title": "GeoTapp Flow.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-slate-900\">Gestão Operacional.</span>",
+      "hero_badge": "GeoTapp Flow - Gestão operacional",
+      "hero_title": "GeoTapp Flow.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-slate-900\">Gestão de intervenções e equipas.</span>",
       "hero_subtitle": "O centro operacional para gerir clientes, projetos, equipas e administração num único ambiente. Flow é a plataforma que também alimenta o TimeTracker.",
       "visual_placeholder": "PAINEL DE OPERAÇÕES",
       "grid_title": "Capacidades operacionais",
-      "grid_subtitle": "Cada módulo foi concebido para o controlo real do trabalho de campo. Clique para explorar.",
+      "grid_subtitle": "Cada módulo serve para organizar e documentar o trabalho no terreno. Clique para saber mais.",
       "sectors": {
         "1": "Trabalhos e Clientes",
         "2": "Planeamento e Recursos",
         "3": "Controlo e Visibilidade"
       },
-      "cta_title": "Tome o controlo real do seu campo.",
+      "cta_title": "Ponha ordem no trabalho no terreno.",
       "cta_button": "Ver preços",
       "modal": {
         "status": "ESTADO DO SISTEMA: <span class=\"text-green-600\">OPERACIONAL</span>",
@@ -604,7 +612,7 @@
         "nexus-core": {
           "name": "Gestão de trabalhos",
           "short": "Crie e gira intervenções técnicas. Atribua tarefas aos técnicos, monitorize o progresso e mantenha tudo registado por trabalho.",
-          "full": "### Controlo central dos trabalhos.\n\nCada intervenção começa como um trabalho estruturado.\nA **Gestão de trabalhos** dá-lhe uma visão clara de todo o trabalho em curso.\n\n#### Gestão de intervenções\n\nCrie um trabalho, atribua o técnico, defina o local e a data.\nMonitorize o estado: Aberto, Em curso, Concluído.\n\n#### Histórico operacional\n\nCada trabalho tem um arquivo completo de actividades, comprovativos fotográficos, notas e marcas de tempo.\nO cliente pergunta o que foi feito? Tem os dados. Sempre."
+          "full": "### Todos os trabalhos num só sítio.\n\nCada intervenção nasce como um trabalho estruturado.\nA **Gestão de trabalhos** dá-lhe uma visão clara de todo o trabalho em curso.\n\n#### Gestão de intervenções\n\nCrie uma intervenção, atribua o técnico, defina o local e a data.\nAcompanhe o estado: Aberto, Em curso, Concluído.\n\n#### Histórico operacional\n\nCada trabalho tem um arquivo completo de atividades, provas fotográficas, notas e picagens.\nO cliente pergunta o que foi feito? Tem os dados."
         },
         "titan-flow": {
           "name": "Atribuição de tarefas",
@@ -612,53 +620,54 @@
           "full": "### O trabalho certo para o técnico certo.\n\nUma atribuição confusa gera atrasos e disputas.\nA **Atribuição de tarefas** traz clareza operacional.\n\n#### Distribuição precisa\n\nAssim que um trabalho é aberto, atribua um ou mais técnicos.\nCada técnico vê o seu trabalho no GeoTapp TimeTracker.\n\n#### Comunicação operacional\n\nInstruções, notas, anexos técnicos: tudo chega ao técnico antes de partir para o campo.\nMenos chamadas, menos mal-entendidos, menos atrasos."
         },
         "ledger-prime": {
-          "name": "Relatórios e facturação",
-          "short": "Gere relatórios estruturados a partir de cada trabalho. Exporte documentação e apoie a facturação com dados reais de campo.",
-          "full": "### Do trabalho ao relatório, de forma ordenada.\n\nA facturação manual é lenta e muitas vezes incompleta.\nOs **Relatórios e a facturação** fecham o ciclo operacional.\n\n#### Relatórios estruturados\n\nCada intervenção concluída gera documentação recolhendo marcas de tempo, fotos e notas do campo.\nSem dados a introduzir manualmente, tudo provém do TimeTracker.\n\n#### Apoio à facturação\n\nOs dados reais dos trabalhos facilitam orçamentos e facturas mais precisos.\nMenos erros, menos disputas, ciclo administrativo mais ágil."
+          "name": "Relatórios e apuramento",
+          "short": "Gere relatórios estruturados de cada trabalho. Exporte documentação e apoie a faturação com dados reais do terreno.",
+          "full": "### Do trabalho ao relatório, de forma ordenada.\n\nO apuramento manual é lento e muitas vezes incompleto.\nOs **Relatórios e apuramento** fecham o ciclo operacional.\n\n#### Relatórios estruturados\n\nCada intervenção concluída gera documentação reunindo picagens, fotos e notas do terreno.\nSem dados a introduzir manualmente: chega tudo do TimeTracker.\n\n#### Apoio à faturação\n\nOs dados reais do trabalho apoiam orçamentos e faturas mais rigorosos.\nMenos erros, menos contestações, ciclo administrativo mais rápido."
         },
         "quantum-logistics": {
           "name": "Calendário de intervenções",
-          "short": "Planeie intervenções, visualize o calendário operacional e gira a disponibilidade da equipa sem sobreposições.",
-          "full": "### Visão completa do trabalho planeado.\n\nSem um calendário partilhado, o planeamento torna-se caótico.\nO **Calendário de intervenções** dá-lhe visibilidade operacional clara.\n\n#### Planeamento avançado\n\nVisualize todas as intervenções em vistas de calendário diário, semanal e mensal.\nIdentifique sobreposições e optimize a distribuição da carga de trabalho.\n\n#### Disponibilidade da equipa\n\nVeja quem está disponível, quem está de férias e quem já está sobrecarregado.\nAtribua novas intervenções sem criar conflitos operacionais."
+          "short": "Planeie intervenções, veja o calendário operacional e gira a disponibilidade da equipa sem sobreposições.",
+          "full": "### Visão completa do trabalho planeado.\n\nSem um calendário partilhado, o planeamento torna-se caótico.\nO **Calendário de intervenções** dá-lhe uma visão operacional clara.\n\n#### Planeamento avançado\n\nVeja todas as intervenções no calendário diário, semanal e mensal.\nIdentifique sobreposições e otimize a distribuição do trabalho.\n\n#### Disponibilidade da equipa\n\nVeja quem está disponível, quem está de férias e quem já tem demasiada carga.\nAtribua novas intervenções sem criar conflitos operacionais."
         },
         "supply-command": {
           "name": "Gestão de recursos",
-          "short": "Controle materiais, equipamentos e recursos operacionais necessários para cada intervenção de campo. Sem surpresas.",
-          "full": "### Nenhuma intervenção sem os recursos necessários.\n\nEnviar um técnico para o campo sem os materiais adequados é um erro dispendioso.\nA **Gestão de recursos** previne surpresas operacionais.\n\n#### Materiais por trabalho\n\nAssocie os recursos necessários a cada trabalho.\nO responsável vê antecipadamente o que é necessário e quando.\n\n#### Fornecedores e aprovisionamento\n\nGuarde os contactos e condições dos seus fornecedores habituais.\nReduz os tempos de aprovisionamento e mantenha os custos sob controlo."
+          "short": "Mantenha catálogo, fornecedores e materiais ligados aos trabalhos, para que o técnico parta com o que é preciso.",
+          "full": "### Nenhuma intervenção sem recursos.\n\nEnviar um técnico para o terreno sem os materiais certos é um erro caro.\nA **Gestão de recursos** evita surpresas operacionais.\n\n#### Catálogo e trabalhos\n\nMantenha no Flow o catálogo de produtos e ligue-o a orçamentos e trabalhos.\nO responsável vê antecipadamente o que é preciso e quando.\n\n#### Fornecedores\n\nGuarde os contactos e as condições dos fornecedores habituais.\nReduza os tempos de aprovisionamento e mantenha os custos sob controlo."
         },
         "the-architect": {
           "name": "Planeamento do trabalho",
-          "short": "Organize o trabalho em fases, tarefas e prazos. Mantenha o projecto sob controlo sem folhas de cálculo ou mensagens de WhatsApp.",
-          "full": "### Estruture o trabalho. Controle o progresso.\n\nOs trabalhos complexos requerem estrutura.\nO **Planeamento do trabalho** traz ordem operacional.\n\n#### Fases e prazos\n\nEstruture intervenções complexas em fases operacionais com prazos claros.\nAtribua responsabilidades a cada membro da equipa.\n\n#### Acompanhamento do progresso\n\nVisualize o progresso, atualizado passo a passo.\nSaiba sempre o que foi feito e o que está em aberto.\nAja antes que um atraso se torne um problema para o cliente."
+          "short": "Organize o trabalho em fases, tarefas e prazos. Mantenha o projeto sob controlo sem folhas de cálculo nem mensagens de WhatsApp.",
+          "full": "### Estruture o trabalho. Controle o progresso.\n\nOs trabalhos complexos exigem estrutura.\nO **Planeamento do trabalho** traz ordem operacional.\n\n#### Fases e prazos\n\nEstruture cada intervenção complexa em fases operacionais com prazos claros.\nAtribua responsabilidades a cada membro da equipa.\n\n#### Acompanhamento do progresso\n\nVeja o progresso, atualizado passo a passo.\nSaiba sempre o que foi feito e o que continua em aberto.\nIntervenha antes que um atraso se torne um problema com o cliente."
         },
         "the-auditor": {
           "name": "Documentação de intervenções",
-          "short": "Recolha evidências fotográficas, notas operacionais e documentos assinados para cada intervenção. O trabalho realizado mantém-se verificável.",
-          "full": "### Prova real para cada intervenção.\n\nSem documentação, o trabalho realizado é contestável.\nA **Documentação de intervenções** torna cada trabalho verificável.\n\n#### Evidência fotográfica\n\nOs técnicos tiram fotos directamente do GeoTapp TimeTracker no campo.\nAs imagens são automaticamente ligadas ao trabalho com marca de tempo e localização.\n\n#### Assinatura digital do cliente\n\nO cliente pode assinar o relatório de trabalho directamente no ecrã do técnico.\nA assinatura digital fica incluída no relatório e constitui prova do serviço prestado."
+          "short": "Recolha provas fotográficas, notas operacionais e documentos de cada intervenção. O trabalho realizado permanece verificável.",
+          "full": "### Provas reais de cada intervenção.\n\nSem documentação, o trabalho realizado é contestável.\nA **Documentação de intervenções** torna cada intervenção verificável.\n\n#### Provas fotográficas\n\nOs técnicos tiram fotos diretamente no GeoTapp TimeTracker, no terreno.\nAs imagens ficam ligadas automaticamente ao trabalho, com hora e posição.\n\n#### Relatório selado\n\nNo fim da intervenção, o sistema gera um relatório selado digitalmente: qualquer alteração posterior permanece detetável.\nO cliente pode verificá-lo por conta própria, sem precisar de aceder ao GeoTapp."
         },
         "the-uplink": {
           "name": "Ligação campo-escritório",
-          "short": "Os dados recolhidos pelo TimeTracker chegam ao Flow assim que são registados. O campo e o escritório trabalham com os mesmos dados operacionais.",
-          "full": "### Escritório e campo, finalmente ligados.\n\nA desconexão entre campo e escritório gera erros evitáveis, atrasos e disputas.\nA **Ligação campo-escritório** fecha a lacuna.\n\n#### Sincronização imediata\n\nCada registo de presença, foto e nota registada no TimeTracker chega ao Flow assim que é enviada.\nO responsável tem uma visão sempre atualizada sem ter de ligar ao técnico.\n\n#### Histórico fiável\n\nTudo o que o técnico regista no campo é arquivado e ligado ao trabalho.\nNenhum dado se perde. Nenhuma informação falta quando chega o momento de elaborar o relatório."
+          "short": "Os dados recolhidos pelo TimeTracker chegam ao Flow assim que são registados. Terreno e escritório trabalham sobre os mesmos dados operacionais.",
+          "full": "### Escritório e terreno, finalmente ligados.\n\nA distância entre terreno e escritório gera erros, atrasos e contestações evitáveis.\nA **Ligação campo-escritório** encurta-a.\n\n#### Chegada imediata\n\nCada picagem, foto e nota registada no TimeTracker chega ao Flow assim que é enviada.\nO responsável vê os dados sem ter de ligar ao técnico.\n\n#### Histórico fiável\n\nTudo o que o técnico regista no terreno fica arquivado e ligado ao trabalho.\nNo momento de prestar contas, os dados já lá estão."
         },
         "the-oracle": {
           "name": "Visibilidade operacional",
           "short": "Painel operacional atualizado a cada intervenção. Saiba sempre quantas intervenções estão abertas, em curso ou concluídas hoje.",
-          "full": "### Dados operacionais, não suposições.\n\nDecidir sem dados fiáveis é perigoso.\nA **Visibilidade operacional** converte os dados de campo em informação concreta.\n\n#### Painel operacional\n\nVeja, atualizado a cada intervenção:\n- Intervenções abertas e em curso\n- Técnicos activos\n- Intervenções concluídas hoje e esta semana\n\n#### Relatórios periódicos\n\nReceba resumos de actividade automatizados.\nCompare períodos, identifique estrangulamentos e optimize as operações."
+          "full": "### Dados operacionais, não suposições.\n\nDecidir sem dados fiáveis é perigoso.\nA **Visibilidade operacional** transforma os dados do terreno em informação concreta.\n\n#### Painel operacional\n\nVeja, atualizado a cada intervenção:\n- Intervenções abertas e em curso\n- Técnicos ativos\n- Intervenções concluídas hoje e esta semana\n\n#### Relatórios periódicos\n\nReceba automaticamente um resumo das atividades.\nCompare períodos, identifique estrangulamentos e otimize as operações."
         }
-      }
+      },
+      "label_open": "Saber mais"
     },
     "app": {
-      "hero_badge": "GeoTapp TimeTracker - App para técnicos de campo",
-      "hero_title": "GeoTapp TimeTracker.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-slate-900\">O campo no seu bolso.</span>",
-      "hero_subtitle": "A aplicação móvel utilizada pelos técnicos para registar a actividade, recolher comprovativos e manter o fio operacional directamente do campo. Disponível em Android e iOS.",
+      "hero_badge": "GeoTapp TimeTracker - App para técnicos",
+      "hero_title": "GeoTapp TimeTracker.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-slate-900\">A app para quem trabalha no terreno.</span>",
+      "hero_subtitle": "A app com que os técnicos picam o ponto, tiram as fotos de prova e ficam ligados ao escritório diretamente do terreno. Disponível em Android e iOS.",
       "visual_placeholder": "INTERFACE DE CAMPO",
       "grid_title": "Ferramentas para o trabalho de campo",
-      "grid_subtitle": "Cada funcionalidade foi concebida para quem trabalha fora do escritório e não tem tempo a perder. Clique para explorar.",
+      "grid_subtitle": "Cada função foi pensada para quem trabalha fora do escritório e não tem tempo a perder. Clique para explorar.",
       "sectors": {
-        "1": "Operações essenciais",
-        "2": "Logística e Comunicações",
-        "3": "Dados e Administração"
+        "1": "Operação essencial",
+        "2": "Logística e comunicações",
+        "3": "Dados e administração"
       },
       "cta_title": "Dê aos seus técnicos a ferramenta certa.",
       "cta_button": "Ver preços",
@@ -670,51 +679,52 @@
       },
       "systems": {
         "timelock-alpha": {
-          "name": "Registo de presença GPS",
-          "short": "Registo de entrada e saída ligado à posição GPS e a uma marca de tempo precisa. Cada sessão de trabalho torna-se um evento operacional verificável.",
-          "full": "### O tempo é verificável.\n\nAs marcas de tempo sem verificação geram disputas.\nO **Registo de presença GPS** torna cada sessão de trabalho num registo fiável e verificável.\n\n#### Registo geolocalizado de entrada e saída\n\nO técnico regista a entrada e saída do campo.\nLocalização, endereço e hora são registados automaticamente.\n\n#### Histórico selado\n\nCada sessão é um registo verificável: hora de entrada, hora de saída, posição, duração e trabalho associado.\nO cliente pergunta quando chegou? Os dados estão lá, sempre."
+          "name": "Picagem com GPS",
+          "short": "A entrada, as pausas e a saída registam a posição e a hora exata no momento da picagem. Cada turno passa a ser um dado que o cliente pode verificar.",
+          "full": "### A hora certa, no sítio certo.\n\nPicagens sem confirmação geram contestações.\nA **Picagem com GPS** faz de cada turno um dado fiável.\n\n#### Entrada, pausas e saída\n\nO técnico pica o ponto a partir do telemóvel.\nA posição, a morada e a hora registam-se nesse momento, e só nesse momento: entre uma picagem e a seguinte não se regista nada automaticamente.\n\n#### Histórico selado\n\nCada turno é um registo: hora de início, hora de fim, pausas, posição, duração e trabalho.\nNo relatório entregue ao cliente fica selado: qualquer alteração posterior é detetável."
         },
         "event-horizon": {
           "name": "Planeamento de turnos",
-          "short": "Gira turnos e disponibilidade do pessoal. Vistas semanais e mensais para coordenação sem confusão ou sobreposições.",
-          "full": "### Sem conflitos de turnos.\n\nOrganizar pessoal móvel requer clareza.\nO **Planeamento de turnos** dá ao responsável uma visão precisa e actualizada.\n\n#### Vista de calendário\n\nVeja quem trabalha quando.\nIdentifique ausências, férias e sobreposições antes de se tornarem problemas operacionais.\n\n#### Disponibilidade sempre actualizada\n\nOs colaboradores confirmam a presença ou reportam ausências directamente da aplicação.\nO responsável vê as lacunas no horário antes de atribuir novos trabalhos."
+          "short": "Gira turnos e disponibilidade do pessoal. Vista semanal e mensal para uma coordenação sem confusão nem sobreposições.",
+          "full": "### Sem conflitos de turnos.\n\nOrganizar pessoal móvel exige clareza.\nO **Planeamento de turnos** dá ao responsável uma visão precisa e atualizada.\n\n#### Vista de calendário\n\nVeja quem trabalha quando.\nIdentifique ausências, feriados e sobreposições antes de se tornarem problemas operacionais.\n\n#### Disponibilidade sempre atualizada\n\nOs colaboradores confirmam a presença ou comunicam ausências diretamente na app.\nO responsável vê as lacunas no horário antes de atribuir novas tarefas."
         },
         "unit-matrix": {
           "name": "Registo de operadores",
-          "short": "Gira um registo completo dos seus operadores: funções, contactos, certificações e acesso à plataforma.",
-          "full": "### Conheça a sua equipa.\n\nCada operador é um recurso operacional chave.\nO **Registo de operadores** centraliza toda a informação vital.\n\n#### Gestão de certificações\n\nVeja de relance quem possui as qualificações necessárias para uma intervenção ou local específico.\n\n#### Integração rápida\n\nAdicionar um novo técnico é simples.\nEnvie um link de convite: em minutos está operacional no GeoTapp TimeTracker."
+          "short": "Mantenha os seus operadores em ordem: funções, contactos e acessos à plataforma, com a entrada de quem chega em poucos minutos.",
+          "full": "### Conheça a sua equipa.\n\nCada operador é um recurso fundamental.\nO **Registo de operadores** reúne a informação de que precisa.\n\n#### Funções e acessos\n\nDecida quem vê o quê: administrador, responsável, operador.\nCada pessoa acede apenas ao que a sua função prevê.\n\n#### Entrada rápida\n\nAdicionar um novo técnico é simples.\nEnvia-se-lhe um código de convite: assina a informação sobre o GPS e, em poucos minutos, pica o ponto no GeoTapp TimeTracker."
         },
         "sector-grid": {
-          "name": "Locais e estaleiros",
-          "short": "Crie uma base de dados de locais operacionais e estaleiros. Ligue cada intervenção à localização correcta e organize as equipas por zona.",
-          "full": "### Cada intervenção no lugar certo.\n\nTrabalhar sem referência geográfica gera confusão.\nOs **Locais e estaleiros** trazem clareza operacional.\n\n#### Base de dados de locais\n\nCrie um catálogo de locais de clientes, estaleiros e localizações operacionais.\nO sistema liga automaticamente a actividade do técnico ao local da intervenção.\n\n#### Equipas por zona\n\nOrganize os técnicos em equipas por local ou área geográfica.\nAtribua intervenções à equipa certa, não apenas ao indivíduo."
+          "name": "Gestão de locais e obras",
+          "short": "Crie uma base de dados dos locais operacionais e das obras. Ligue cada intervenção ao local certo e organize as equipas por zona.",
+          "full": "### Cada intervenção no sítio certo.\n\nTrabalhar sem referência geográfica gera confusão.\nA **Gestão de locais** traz ordem operacional.\n\n#### Locais e obras\n\nCrie um catálogo de locais de clientes, obras e locais operacionais.\nO sistema liga automaticamente a atividade do técnico ao local da intervenção.\n\n#### Equipas por zona\n\nOrganize os técnicos em equipas por local ou área geográfica.\nAtribua intervenções à equipa certa, não apenas ao operador individual."
         },
         "energy-logistics": {
-          "name": "Gestão de viaturas e despesas",
-          "short": "Registe a utilização de viaturas da empresa, o combustível consumido e as despesas de deslocação do pessoal de campo.",
-          "full": "### Cada deslocação documentada.\n\nAs despesas de deslocação são um item crítico para qualquer empresa com pessoal móvel.\nA **Gestão de viaturas** monitoriza cada custo.\n\n#### Utilização de viaturas\n\nAtribua temporariamente uma viatura a um colaborador para uma intervenção.\nSaiba sempre quem usa que viatura e para que trabalho.\n\n#### Despesas de combustível\n\nO colaborador regista o abastecimento directamente da aplicação com foto do recibo e valor.\nTudo arquivado, tudo ligado ao trabalho."
+          "name": "Gestão de viaturas e reembolsos",
+          "short": "Registe a utilização do carro da empresa no turno, os abastecimentos e as despesas de deslocação, com a foto do recibo.",
+          "full": "### Cada despesa documentada.\n\nAs despesas de deslocação são um capítulo delicado para qualquer empresa com pessoal em movimento.\nA **Gestão de viaturas e reembolsos** põe-nas em ordem.\n\n#### Utilização de viaturas\n\nAtribua uma viatura a um colaborador para uma intervenção, e o operador declara na app se no turno usa o carro.\nSaiba quem usou que viatura e para que trabalho.\n\n#### Despesas de combustível\n\nO colaborador regista o abastecimento na app, com foto do recibo e o valor.\nO escritório aprova o reembolso, e tudo fica ligado ao trabalho."
         },
         "neural-link": {
           "name": "Comunicações operacionais",
-          "short": "Canal interno para comunicações da empresa. Mensagens dirigidas a grupos específicos com confirmações de leitura.",
+          "short": "Canal interno para comunicações da empresa. Mensagens dirigidas a grupos específicos, com confirmações de leitura.",
           "full": "### Comunicações claras. Sem ruído de fundo.\n\nO WhatsApp mistura vida privada e profissional e não oferece controlo sobre o estado de leitura.\nAs **Comunicações operacionais** são o canal oficial da empresa.\n\n#### Mensagens dirigidas\n\nNotifique apenas a equipa que precisa de saber.\nMudança de turno no estaleiro do Porto? Apenas os técnicos atribuídos recebem a mensagem.\n\n#### Confirmações de leitura\n\nSaiba sempre quem leu a comunicação e quem não leu.\nResponsabilidade clara e transparente para todos."
         },
         "payroll-bridge": {
           "name": "Exportação de presenças",
-          "short": "Exporte as presenças mensais em formatos compatíveis com os principais softwares de processamento salarial. Menos trabalho manual, menos erros.",
-          "full": "### O processamento salarial sem dores de cabeça.\n\nO fecho do mês não tem de ser um pesadelo administrativo.\nA **Exportação de presenças** liga as operações de campo à administração de RH.\n\n#### Multi-formato\n\nGere ficheiros de presenças prontos a importar nos principais softwares de processamento salarial portugueses (Primavera, PHC, TOConline).\n\n#### Acesso para o contabilista\n\nAtribua acesso limitado ao seu gabinete de contabilidade.\nDescarrega os dados de que necessita de forma autónoma, sem ligar ao fecho de cada mês."
+          "short": "Exporte as presenças do mês em Excel ou CSV, prontas para o consultor de salários. Menos trabalho manual, menos erros.",
+          "full": "### Processamento salarial sem dores de cabeça.\n\nO fim do mês não tem de ser um pesadelo administrativo.\nA **Exportação de presenças** liga o trabalho no terreno à administração do pessoal.\n\n#### Excel e CSV\n\nHoras, horas extra, majorações e ausências saem num ficheiro Excel ou CSV pronto a entregar ao consultor de salários.\n\n#### Acesso para o contabilista\n\nDê ao seu gabinete de processamento salarial um acesso separado, o Portal do contabilista.\nDescarrega os dados de que precisa de forma autónoma, sem ter de lhe telefonar no fim de cada mês."
         },
         "data-core": {
           "name": "Relatórios semanais",
-          "short": "Relatórios detalhados sobre as horas trabalhadas por trabalho e por operador. Dados fiáveis para controlo interno e facturação.",
-          "full": "### Os dados não mentem.\n\nTome decisões com base em factos, não em impressões.\nOs **Relatórios semanais** extraem valor das operações diárias.\n\n#### Relatórios detalhados\n\nCada semana, uma imagem completa: quem trabalhou, onde, em que trabalho e durante quanto tempo.\n\n#### Transparência total\n\nColaboradores e responsáveis consultam o mesmo relatório mensal.\nAs horas contabilizadas são idênticas para todos.\nSem disputas no fecho do mês."
+          "short": "Relatórios detalhados das horas trabalhadas por trabalho e por operador. Dados fiáveis para controlo interno e prestação de contas.",
+          "full": "### Decida com base nos factos.\n\nDecida com base em dados, não em impressões.\nOs **Relatórios semanais** põem em fila o trabalho de cada dia.\n\n#### Relatórios detalhados\n\nTodas as semanas, um quadro completo: quem trabalhou, onde, em que trabalho e durante quantas horas.\n\n#### Os mesmos números para todos\n\nColaboradores e responsáveis veem o mesmo relatório.\nAs horas contadas são as mesmas para todos, e no fim do mês discute-se muito menos."
         },
         "identity-forge": {
           "name": "App com a sua marca",
-          "short": "Carregue o seu logótipo e escolha as cores da sua empresa. Os seus operadores usam uma aplicação que reflecte a sua identidade de marca.",
+          "short": "Carregue o seu logótipo e escolha as cores da empresa. Os seus operadores usam uma aplicação que reflete a identidade da sua empresa.",
           "full": "### A sua empresa, a sua aplicação.\n\nNão use uma aplicação genérica.\nFaça com que os seus colaboradores se sintam parte da SUA empresa com uma experiência visual coerente.\n\n#### Logótipo da empresa\n\nO seu logótipo em destaque no ecrã de início de sessão e no painel principal.\n\n#### Cores da empresa\n\nEscolha o tema de cores que se adequa à sua imagem corporativa.\nProfissional, coerente, reconhecível."
         }
-      }
+      },
+      "label_open": "Saber mais"
     }
   },
   "cart": {
@@ -745,7 +755,10 @@
   },
   "guida": {
     "page_title": "Guia do utilizador",
-    "download_pdf": "Descarregar / Imprimir PDF"
+    "download_pdf": "Imprimir ou guardar em PDF",
+    "box_note": "Nota",
+    "box_warning": "Atenção",
+    "box_tip": "Sugestão"
   },
   "demo": {
     "page_title": "Reserve a sua demo personalizada",
@@ -759,12 +772,12 @@
     ],
     "cosa_vedrai": [
       {
-        "title": "Marcação GPS em ação",
-        "desc": "Como o técnico marca ponto na app móvel e como o escritório vê a localização verificada, sem rastreamento contínuo."
+        "title": "Picagem GPS em ação",
+        "desc": "Como o técnico pica o ponto na aplicação móvel e como o escritório vê a posição controlada, sem rastreio contínuo."
       },
       {
         "title": "Relatórios verificáveis",
-        "desc": "Como cada intervenção gera um relatório com provas fotográficas, assinatura digital e hash selado que pode mostrar ao cliente."
+        "desc": "Como cada intervenção gera um relatório com provas fotográficas, selo criptográfico e impressões SHA-256 que pode mostrar ao cliente."
       },
       {
         "title": "Gestão de equipas pelo Flow",
@@ -782,11 +795,11 @@
       },
       {
         "q": "A demo é gratuita?",
-        "a": "Sim, completamente gratuita e sem compromisso. No final pode iniciar um período de teste diretamente."
+        "a": "Sim, completamente gratuita. No final pode iniciar diretamente um período de teste."
       },
       {
         "q": "Posso convidar um colega?",
-        "a": "Absolutamente. Muitas vezes participam juntos o responsável operacional e o administrador ou RH."
+        "a": "Com certeza. Muitas vezes participam juntos o responsável operacional e o administrador ou os RH."
       }
     ],
     "form_name": "Nome completo",
@@ -808,7 +821,7 @@
     "form_title": "Os seus dados",
     "urgent_contact": "Perguntas urgentes? Escreva para",
     "no_spam": "Sem spam. Os seus dados são tratados de acordo com a nossa",
-    "trust_gps": "Registo GPS verificado",
+    "trust_gps": "Posição controlada na picagem",
     "trust_offline": "Verificador offline",
     "trust_response": "Resposta em 1 dia",
     "what_youll_see": "O que verá na demo",
@@ -820,7 +833,7 @@
     "subtitle": "Escolha a versão adequada às suas necessidades.",
     "demo_report_badge": "Exemplo real",
     "demo_report_title": "Relatório de intervenção selado",
-    "demo_report_desc": "Descarregue um relatório real gerado pelo GeoTapp. Contém GPS verificado, provas fotográficas, cadeia hash de operadores e selagem criptográfica.",
+    "demo_report_desc": "Descarregue um relatório real gerado pela GeoTapp. Contém a posição registada nas picagens, as fotos de prova e o selo criptográfico. Pode verificar que não foi modificado diretamente em geotapp.com.",
     "demo_report_btn_download": "Descarregar relatório de exemplo (.zip)",
     "demo_report_btn_verify": "Verificar autenticidade",
     "demo_report_field_operator": "Operador",
@@ -835,7 +848,7 @@
     ],
     "windows_btn": "Descarregar para Windows",
     "wp_title": "Plugin WordPress",
-    "wp_desc": "Integre o GeoTapp no seu site empresarial. Permita que os colaboradores acedam diretamente da sua intranet.",
+    "wp_desc": "Integre a GeoTapp no seu sítio empresarial. Permita que os colaboradores acedam diretamente a partir da sua intranet.",
     "wp_features": [
       "Integração Iframe segura",
       "Shortcode [geotap_app]",
@@ -851,11 +864,11 @@
     "hero_desc": "O produto nasceu de uma folha de papel com as horas de um mês e de contas que nunca batiam certo.",
     "story": [
       "Há um trabalho pelo qual nunca ninguém foi pago, e é apontar as horas que se trabalhou. Data, hora de entrada, hora de saída, total. Todos os dias, e ao fim do mês a conta segue para o patrão.",
-      "<strong>Michele Angelo Petraroli</strong> fazia segurança em eventos, por conta de outrem, e preenchia aquela folha como toda a gente a preenche, ou seja mal. Os totais quase nunca batiam certo, em parte também por culpa dele, porque é humano adiar as coisas aborrecidas e depois reconstruí-las de memória uma semana mais tarde. Já os colegas que nem sequer mandavam as horas, trabalhavam evidentemente porque eram ricos e faziam-no por gosto.",
+      "<strong>Michele Angelo Petraroli</strong> fazia segurança em eventos, como trabalhador por conta de outrem, e preenchia aquela folha como toda a gente a preenche, ou seja, mal. Os totais quase nunca batiam certo, em parte também por culpa dele, porque é humano adiar as coisas aborrecidas e depois reconstruí-las de memória uma semana mais tarde.",
       "Procurou uma aplicação que lhe tirasse aquela maçada. Encontrou-as todas iguais, e todas lhe pediam exatamente o que já fazia à mão, data, entrada, saída, total. O mesmo esforço, com botões mais bonitos.",
       "Por isso, de férias, desenvolveu-a sozinho. Uma página web e dois gestos, carrega quando começa e carrega quando acaba, e o resto ficava arrumado num ficheiro já pronto a enviar ao fim do mês.",
       "Depois veio o pensamento que mudou tudo, se me serve a mim serve também aos colegas. E se serve ao patrão, então o fluxo tem de ser virado, porque não é ele que deve andar atrás das pessoas para ter as horas, são as horas que chegam sozinhas até ele, todos os dias.",
-      "A partir daí a ferramenta cresceu numa só direção. Primeiro a geolocalização pensada para respeitar a lei, lida na abertura e no fecho do turno e nunca em contínuo. Depois a prova verificável automática do trabalho realizado, porque o problema verdadeiro nunca foi contar as horas, foi prová-las quando alguém as punha em causa.",
+      "A partir daí a ferramenta cresceu numa só direção. Primeiro a geolocalização pensada para respeitar a lei: a posição só é lida quando o trabalhador pica o ponto (entrada, pausas, saída) e nunca em contínuo. Depois a prova verificável do trabalho realizado, porque o problema verdadeiro nunca foi contar as horas, foi prová-las quando alguém as punha em dúvida.",
       "Ah, e escreve-se GeoTapp, com dois P. Se encontrar por aí algum com um só, não somos nós, mas não lhe levamos a mal.",
       "O nome, aliás, já tem tudo lá dentro. A geolocalização, um tap, uma app."
     ],
@@ -866,25 +879,25 @@
         "desc": "Tornar cada intervenção mensurável e verificável. O trabalho de campo merece as mesmas ferramentas de transparência que um escritório."
       },
       {
-        "title": "Equipa dedicada",
-        "desc": "Somos uma equipa pequena obcecada com o problema que resolvemos. Cada funcionalidade vem de feedback real, não de roteiros de marketing."
+        "title": "Uma equipa pequena",
+        "desc": "Somos uma equipa pequena, mas obcecada com o problema que resolvemos. Cada funcionalidade nasce de feedback real, não de roadmaps de marketing."
       },
       {
-        "title": "Privacy by Design",
-        "desc": "Os dados não se vendem, e a posição é lida duas vezes por turno, quando o abre e quando o fecha. Pelo meio, a ferramenta não sabe onde está."
+        "title": "Privacidade desde a conceção",
+        "desc": "Os dados não se vendem, e a posição só é lida quando o trabalhador pica o ponto: à entrada, nas pausas, à saída, mais a foto de prova se a tirar. Entre uma picagem e a seguinte, não se regista nada automaticamente."
       },
       {
         "title": "Feito em Itália",
-        "desc": "Desenvolvido em Itália para o mercado italiano e europeu. As regras RGPD, a cultura do trabalho e os regulamentos locais estão no DNA do produto."
+        "desc": "Desenvolvido em Itália, para o mercado italiano e europeu. As normas do RGPD, a cultura do trabalho e as normativas locais estão no ADN do produto."
       }
     ],
     "cta_title": "Do outro lado está uma pessoa",
     "cta_desc": "Uma empresa pequena que desenvolve uma ferramenta para empresas com equipas fora das instalações. Se escrever, responde-lhe alguém que já teve esse problema.",
-    "cta_btn": "Envie-nos uma Mensagem",
+    "cta_btn": "Escreva-nos",
     "stats": [
       {
         "number": "2024",
-        "label": "Fundada"
+        "label": "Ano de fundação"
       },
       {
         "number": "11",
@@ -899,38 +912,38 @@
     "founder": {
       "section_label": "O fundador",
       "name": "Michele Angelo Petraroli",
-      "role": "Founder & CEO",
-      "bio": "Michele Angelo Petraroli é founder e CEO da GeoTapp, SaaS italiano para a gestão de equipas em campo das PME europeias. A partir da experiência operacional, viu como empresas de limpeza, instaladores e serviços de segurança perdem dinheiro quando falta a prova do trabalho. Fundou a GeoTapp em 2024 para resolver o problema na raiz. Hoje a GeoTapp ajuda as PME europeias com rastreio GPS pensado para o RGPD, provas fotográficas e assinaturas digitais que tornam cada intervenção verificável.",
+      "role": "Fundador",
+      "bio": "Michele Angelo Petraroli é o fundador e titular da GeoTapp, o software italiano que documenta o trabalho das equipas no terreno nas PME europeias. A partir da experiência direta em PME de serviços (limpeza, instaladores, segurança), viu quanto dinheiro se perde quando falta a prova do trabalho realizado. Fundou a GeoTapp em 2024 para resolver o problema na raiz. Hoje a GeoTapp ajuda as PME europeias a demonstrar o trabalho feito: posição registada só quando se pica o ponto, fotos de prova e relatórios selados que o cliente verifica por si.",
       "expertise_label": "Áreas de competência",
       "expertise": [
-        "Gestão de serviço em campo",
-        "RGPD & Geolocalização trabalhadores",
-        "Workforce Management",
-        "B2B SaaS",
+        "Gestão de equipas no terreno",
+        "RGPD e geolocalização de trabalhadores",
+        "Organização do trabalho",
+        "Software para empresas",
         "PME europeias"
       ],
       "cta_linkedin": "LinkedIn",
-      "cta_email": "Contactar"
+      "cta_email": "Escreva-me"
     }
   },
   "stampa": {
     "metaTitle": "Sala de imprensa GeoTapp",
-    "metaDesc": "Materiais de imprensa para GeoTapp: quem somos, o fundador, factos verificáveis e recursos para download. Contacto: press@geotapp.com.",
+    "metaDesc": "Materiais de imprensa sobre a GeoTapp: quem somos, o fundador, dados verificáveis e recursos para descarregar. Contacto: press@geotapp.com.",
     "badge": "IMPRENSA",
     "hero_title": "Sala de imprensa",
-    "hero_desc": "Tudo o que precisa para escrever sobre GeoTapp: quem somos, o que fazemos e por que a prova de trabalho não é vigilância. Materiais, factos e contactos para jornalistas e redações.",
+    "hero_desc": "Tudo o que é preciso para falar da GeoTapp: quem somos, o que fazemos e porque é que a prova do trabalho não é vigilância. Materiais, dados e contactos para jornalistas e redações.",
     "boilerplate_label": "Em resumo",
-    "boilerplate_short": "GeoTapp é uma ferramenta de controlo de horas e prova de trabalho para empresas com equipas no terreno. Regista o local e o momento de uma marcação de ponto apenas quando é o trabalhador a marcar, nunca de forma contínua, e produz um documento que o cliente pode verificar por si próprio.",
-    "boilerplate_long": "GeoTapp nasceu de um problema concreto: provar que um trabalho foi realizado, onde e quando, sem transformar as pessoas em pontos num mapa a vigiar durante todo o dia. A ferramenta regista a localização apenas no momento das marcações, pausas incluídas, acrescenta fotos e notas do terreno e sela cada sessão de modo a que qualquer alteração seja detetável. O resultado é uma prova que o cliente pode verificar de forma independente, que protege o empregador numa disputa tanto quanto o trabalhador injustamente acusado de não ter comparecido. Foi concebida para qualquer empresa que envie equipas para fora do escritório, empresas de limpeza, instaladores, segurança, manutenção, construção, e desenhada para se manter dentro dos limites das regras de monitorização de trabalhadores e do RGPD.",
+    "boilerplate_short": "A GeoTapp é uma ferramenta de registo de presenças e prova do trabalho realizado para empresas com equipas no terreno. Regista onde e quando ocorre uma picagem apenas no momento em que o trabalhador pica o ponto, nunca de forma contínua, e produz um documento que o cliente pode verificar por si.",
+    "boilerplate_long": "A GeoTapp nasceu de um problema concreto: provar que um trabalho foi realizado, onde e quando, sem transformar as pessoas em pontos num mapa a vigiar durante todo o dia. A ferramenta regista a posição apenas no momento da picagem, pausas incluídas, acrescenta fotos e notas do terreno e sela cada sessão de modo a que qualquer alteração seja detetável. O resultado é uma prova que o cliente pode verificar de forma independente, que protege o empregador numa contestação tanto quanto o trabalhador injustamente acusado. Foi pensada para quem envia equipas para fora do escritório, empresas de limpeza, instaladores, segurança, manutenção, construção, e foi construída dentro dos limites do artigo 4.º do Estatuto dos Trabalhadores italiano e do RGPD.",
     "facts_label": "Factos-chave",
     "facts": [
       {
         "k": "O quê",
-        "v": "Controlo de horas e prova de trabalho para equipas no terreno"
+        "v": "Registo de presenças e prova do trabalho realizado para equipas no terreno"
       },
       {
         "k": "Qualquer um pode verificar",
-        "v": "A aplicação nunca pede permissão de localização em segundo plano: verifica-se no manifesto do APK ou na etiqueta de privacidade da loja. Não conseguiríamos seguir em contínuo nem que quiséssemos."
+        "v": "A aplicação não pede a permissão de localização em segundo plano: qualquer pessoa o pode verificar no manifesto do APK ou na etiqueta de privacidade da loja. Não podemos seguir em contínuo nem que quiséssemos."
       },
       {
         "k": "Para quem",
@@ -950,7 +963,7 @@
       }
     ],
     "founder_label": "O fundador",
-    "founder_bio": "Michele Angelo Petraroli trabalhava na segurança de eventos e odiava todos os dias a mesma tarefa: registar as horas à mão. As aplicações que experimentou faziam o mesmo trabalho com botões mais bonitos, por isso nas férias construiu a sua própria versão: carregar em iniciar, carregar em parar, um total mensal arrumado pronto no final do mês. Foi daí que surgiu GeoTapp, primeiro para os seus colegas, depois como sistema para documentar o trabalho feito sem vigiar as pessoas que o fazem.",
+    "founder_bio": "Michele Angelo Petraroli trabalhava na segurança de eventos e detestava todos os dias a mesma tarefa: apontar as horas à mão. As aplicações que experimentou faziam o mesmo trabalho com botões mais bonitos, por isso, nas férias, desenvolveu a sua própria versão: carregar para começar, carregar para acabar, o total arrumado e pronto no fim do mês. Foi daí que nasceu a GeoTapp, primeiro para os colegas, depois como sistema para demonstrar o trabalho feito sem vigiar quem o faz.",
     "resources_label": "Recursos de imprensa",
     "resources_intro": "Logótipo, foto e materiais prontos a usar, mais as ferramentas gratuitas que disponibilizamos a todos.",
     "logo_download": "Descarregar o logótipo",
@@ -964,39 +977,39 @@
     "contact_office": "Gabinete de imprensa GeoTapp",
     "contact_email": "press@geotapp.com",
     "releases_label": "Comunicados de imprensa",
-    "coverage_label": "Cobertura mediática",
+    "coverage_label": "Citaram-nos",
     "coverage_note": "Títulos no idioma original"
   },
   "blog": {
     "hero_title": "Guias sobre prova do trabalho, RGPD e equipas no terreno.",
-    "hero_desc": "Não escrevemos para preencher páginas. Escrevemos para partilhar o que aprendemos construindo o futuro do trabalho verificável.",
+    "hero_desc": "Guias práticos para quem envia equipas para o terreno: como demonstrar o trabalho feito, o que diz a lei sobre o GPS dos trabalhadores, como manter em ordem horas e presenças.",
     "no_posts": "Nenhum artigo disponível de momento.",
     "read_article": "Ler artigo →",
-    "cta_title": "Fique a par",
-    "cta_desc": "Sem spam, apenas atualizações de valor sobre o produto e o sector.",
-    "cta_btn": "Contacte-nos",
-    "schema_desc": "Guias e análises sobre prova verificável do trabalho em campo, gestão de equipas, RGPD e geolocalização.",
-    "meta_title": "Blog | GeoTapp - Verificação do trabalho em campo",
+    "cta_title": "Experimente a GeoTapp grátis durante 14 dias",
+    "cta_desc": "Acesso completo a todos os módulos. Sem cartão de crédito.",
+    "cta_btn": "Começar teste gratuito",
+    "schema_desc": "Guias e análises sobre prova verificável do trabalho no terreno, gestão de equipas, RGPD e geolocalização.",
+    "meta_title": "Blog | GeoTapp - Prova verificável do trabalho no terreno",
     "meta_desc": "Guias, análises e recursos sobre gestão de equipas, prova verificável de intervenções, RGPD e geolocalização. Da equipa GeoTapp.",
     "cat_all": "Todos",
-    "toc_title": "Indice",
+    "toc_title": "Índice",
     "reading_time_suffix": "min de leitura",
-    "cta_sidebar_title": "Experimente GeoTapp gratis",
-    "cta_sidebar_desc": "14 dias, sem cartao de credito",
-    "cta_sidebar_btn": "Comecar agora",
+    "cta_sidebar_title": "Experimente a GeoTapp grátis",
+    "cta_sidebar_desc": "14 dias, sem cartão de crédito",
+    "cta_sidebar_btn": "Começar agora",
     "related_title": "Artigos relacionados",
-    "cta_final_title": "Experimente GeoTapp gratis por 14 dias",
-    "cta_final_desc": "Sem cartao de credito. Comece em 2 minutos.",
-    "cta_final_btn": "Comecar agora",
+    "cta_final_title": "Experimente a GeoTapp grátis durante 14 dias",
+    "cta_final_desc": "Sem cartão de crédito. Comece em 2 minutos.",
+    "cta_final_btn": "Começar agora",
     "read_post": "Ler",
     "next_step_text": "Descubra como o GeoTapp resolve este problema para empresas de {sector}",
     "next_step_fallback": "Descubra como o GeoTapp funciona para a sua empresa",
     "next_step_cta": "Saber mais",
-    "hero_tagline": "Pensamentos e Centelhas."
+    "hero_tagline": "Guias e novidades."
   },
   "trial": {
     "page_title": "14 dias grátis. Sem cartão.",
-    "page_subtitle": "O plano Business completo durante 14 dias: utilizadores de escritório ilimitados e até 50 operadores no terreno. Sem cartão, sem compromisso, e os dias começam no teu primeiro acesso, não no registo.",
+    "page_subtitle": "O plano Business completo durante 14 dias: utilizadores de escritório ilimitados e até 50 operadores no terreno. Sem cartão e sem obrigação de continuar, e os dias começam no primeiro acesso, não no registo.",
     "badge": "Teste gratuito, 14 dias",
     "form_title": "Crie a sua conta",
     "form_company": "Nome da empresa",
@@ -1008,49 +1021,49 @@
     "form_fullname": "Nome completo",
     "form_fullname_placeholder": "Ex. João Silva",
     "form_plan": "Plano GeoTapp Flow",
-    "form_plan_note": "O número de utilizadores do plano refere-se ao GeoTapp Flow (gestão de escritório/CRM). As licenças GeoTapp Timetracker para operadores de campo são uma subscrição separada, com um número máximo incluído conforme o plano escolhido.",
+    "form_plan_note": "O número de utilizadores do plano refere-se ao GeoTapp Flow (gestão de escritório/CRM). As licenças GeoTapp TimeTracker para os operadores de campo são uma subscrição separada, com um número máximo incluído conforme o plano escolhido.",
     "plan_solo": "Solo, 1 utilizador Flow",
     "plan_team": "Team, até 5 utilizadores Flow",
     "plan_business": "Business, utilizadores Flow ilimitados",
-    "form_seats": "Licenças Timetracker (opcional)",
-    "form_seats_hint": "Subscrição separada para operadores de campo (aplicação móvel). Limite incluído no plano: Solo máx. 2, Team máx. 5, Business ilimitadas. Pode ajustar as licenças após a ativação.",
+    "form_seats": "Licenças TimeTracker (opcional)",
+    "form_seats_hint": "Subscrição separada para os operadores de campo (aplicação móvel). Limite incluído no plano: Solo máx. 2, Team máx. 5, Business ilimitadas. Pode alterar as licenças após a ativação.",
     "form_submit": "Iniciar teste gratuito",
     "form_submit_simple": "Começar grátis",
     "form_response_time": "Receberá o email de boas-vindas em poucos instantes",
     "form_submitting": "A ativar...",
     "form_privacy": "Os seus dados são tratados de acordo com a nossa",
     "form_privacy_link": "Política de Privacidade",
-    "form_usage_note": "Durante o período de teste recolhemos dados de utilização da aplicação (ecrãs visitados, funções utilizadas) para te ajudar a começar e melhorar o serviço. São eliminados no fim do teste; guardamos apenas estatísticas agregadas e anónimas.",
-    "form_email_hint": "Email empresarial recomendado. Pessoal (Gmail, Outlook, etc.) também serve.",
+    "form_usage_note": "Durante o período de teste recolhemos dados sobre a utilização da aplicação (ecrãs visitados, funções utilizadas) para o ajudar a começar e melhorar o serviço. São eliminados no fim do teste; guardamos apenas estatísticas agregadas e anónimas.",
+    "form_email_hint": "Recomendamos o email da empresa. Um email pessoal (Gmail, Outlook, etc.) também serve.",
     "success_title": "Verifique o seu email!",
     "success_desc": "Enviámos os dados de acesso para ",
-    "success_desc2": "Lá dentro há uma palavra-passe temporária: no primeiro acesso escolhes a tua.",
+    "success_desc2": "Lá dentro encontra uma palavra-passe temporária: no primeiro acesso escolhe a sua.",
     "success_spam": "Não encontra na caixa de entrada? Verifique as pastas de spam ou promoções.",
     "error_message": "Erro durante a ativação. Tente novamente ou escreva para info@geotapp.com.",
-    "error_captcha": "A verificação anti-robô não foi concluída. Tente novamente, ela renova-se sozinha. Se continuar a falhar, escreva para support@geotapp.com e abrimos-lhe o acesso.",
-    "error_captcha_pending": "Falta apenas a verificação acima: marque a caixa \"Não sou um robô\" e carregue outra vez.",
+    "error_captcha": "A verificação anti-robô não foi concluída. Tente novamente, renova-se sozinha. Se continuar a falhar, escreva para support@geotapp.com e abrimos-lhe o acesso.",
+    "error_captcha_pending": "Falta apenas a verificação acima: marque a caixa «Não sou um robô» e carregue outra vez.",
     "error_email_required": "Falta o endereço de email.",
     "error_invalid_email": "Este endereço de email não está correto. Verifique-o e tente de novo.",
-    "error_disposable_email": "Não são aceites endereços descartáveis. Use o seu endereço real.",
+    "error_disposable_email": "Não são aceites endereços de email descartáveis. Use o seu endereço real.",
     "error_domain_not_allowed": "Este domínio de email não é aceite. Use o endereço da sua empresa.",
-    "error_trial_already_active": "Já existe um teste ativo para este email. Entre em flow.geotapp.com ou escreva para support@geotapp.com.",
+    "error_trial_already_active": "Já existe um teste ativo para este email. Inicie sessão em flow.geotapp.com ou escreva para support@geotapp.com.",
     "error_trial_already_used": "Este email já usou um teste GeoTapp. Escreva para support@geotapp.com e vemos juntos.",
-    "error_email_already_registered": "Este email já está registado. Entre em flow.geotapp.com.",
+    "error_email_already_registered": "Este email já está registado. Inicie sessão em flow.geotapp.com.",
     "error_too_many_attempts": "Demasiadas tentativas a partir desta ligação. Aguarde alguns minutos e tente de novo, ou escreva para support@geotapp.com.",
     "error_bot_speed": "O formulário foi enviado demasiado depressa. Tente de novo.",
     "benefits_title": "O que inclui o teste",
     "benefits": [
       {
-        "title": "O maior plano, não uma demo",
-        "desc": "Experimentas o GeoTapp Flow no máximo: todos os módulos estão incluídos, nenhum custa à parte, com utilizadores de escritório ilimitados e 50 postos TimeTracker ativos desde o primeiro dia. À parte pagam-se apenas os postos de picagem, no terreno com o TimeTracker e no escritório dentro do Flow."
+        "title": "O plano maior, não uma versão reduzida",
+        "desc": "Experimente o GeoTapp Flow no máximo: todos os módulos, utilizadores de escritório ilimitados e 50 postos TimeTracker ativos desde o primeiro dia. Com a subscrição, os módulos do Flow estão incluídos no plano; à parte pagam-se apenas os postos de picagem, no terreno com o TimeTracker e no escritório dentro do Flow."
       },
       {
         "title": "Sem cartão de crédito",
-        "desc": "Basta o teu email: conta pronta em 2 minutos. O cartão só entra em jogo se decidires ficar."
+        "desc": "Basta o seu email: conta pronta em 2 minutos. O cartão só entra em jogo se decidir ficar."
       },
       {
         "title": "Dados seguros, RGPD desde o primeiro dia",
-        "desc": "Dados na Europa, prova do trabalho e nunca vigilância. Continuam teus: exportas quando quiseres."
+        "desc": "Dados na Europa, prova do trabalho e nunca vigilância. Continuam seus: exporta-os quando quiser."
       }
     ],
     "faq": [
@@ -1064,7 +1077,7 @@
       },
       {
         "q": "Posso convidar a minha equipa?",
-        "a": "Sim: durante o teste podes ativar até 50 operadores de terreno no painel de licenças. Precisas de mais? Escreve para support@geotapp.com e aumentamos o limite."
+        "a": "Sim: durante o teste pode ativar até 50 operadores de terreno no painel de licenças. Precisa de mais? Escreva para support@geotapp.com e aumentamos o limite."
       },
       {
         "q": "Quanto tempo demora a começar?",
@@ -1072,15 +1085,17 @@
       }
     ],
     "success_sender": "O email chegará de:",
-    "form_seats_required_note": "* Obrigatório: indica 0 se não precisas de licenças TimeTracker.",
+    "form_seats_required_note": "* Campo obrigatório: indique 0 se não precisar de licenças TimeTracker.",
     "trust_gdpr": "Sem rastreio contínuo",
     "trust_offline": "Verificador offline",
     "form_field_employees": "Quantas pessoas trabalham no terreno?",
-    "form_field_employees_hint": "Facultativo. Serve para lhe escrevermos sobre o seu caso, não sobre um genérico."
+    "form_field_employees_hint": "Facultativo. Serve para lhe escrevermos sobre o seu caso, não sobre um genérico.",
+    "trust_gps": "Posição só na picagem",
+    "trust_no_card": "Sem cartão de crédito"
   },
   "roi": {
-    "meta_title": "Calculadora ROI GeoTapp - Descubra as suas poupanças reais",
-    "meta_desc": "Calcule em 2 minutos quanto pouparia com o GeoTapp: menos burocracia, menos disputas, operadores mais produtivos. Sem email e sem conta.",
+    "meta_title": "Calculadora ROI GeoTapp: estime quanto poupa num ano",
+    "meta_desc": "Estime num minuto quanto pouparia com o GeoTapp: menos horas de burocracia, menos contestações, menos coordenação por telefone. Sem email e sem conta.",
     "hero_title": "Calcule o seu ROI com o GeoTapp",
     "hero_subtitle": "Introduza os dados da sua empresa e descubra quanto pode poupar por ano.",
     "step1_title": "A sua empresa",
@@ -1127,25 +1142,25 @@
     "per_anno": "/ ano",
     "label_operators": "operadores",
     "embed_title": "Calculadora ROI GeoTapp",
-    "intro": "Esta calculadora estima quanto a tua empresa pode poupar por ano ao automatizar presenças, relatórios de trabalho e provas do trabalho realizado. Introduz alguns dados e obtém em 30 segundos a poupança anual, o tempo de retorno e o ROI, sem registo.",
+    "intro": "A calculadora estima quanto a sua empresa pode poupar por ano ao automatizar presenças, relatórios de trabalho e provas do trabalho no terreno. Introduza alguns dados e em um minuto vê a poupança anual estimada, o tempo de retorno e o ROI, sem registo.",
     "faq_title": "Perguntas frequentes sobre o cálculo do ROI",
-    "pricing_link": "Descobre quanto podes poupar com a calculadora de ROI",
+    "pricing_link": "Descubra quanto pode poupar com a calculadora de ROI",
     "faq": [
       {
         "q": "Como se calcula o ROI de uma app de registo de presenças por GPS?",
-        "a": "A estimativa assenta em três rubricas concretas: as horas administrativas poupadas todos os meses, as contestações e horas extra indevidas evitadas graças às provas geolocalizadas, e o tempo de coordenação recuperado. O total anual é comparado com o custo da subscrição para obter o ROI e o tempo de retorno."
+        "a": "A estimativa parte de três rubricas concretas: as horas de trabalho administrativo poupadas todos os meses, as contestações e horas extra indevidas que as provas do trabalho ajudam a evitar, e o tempo de coordenação recuperado. O total anual é comparado com o custo da subscrição para obter o ROI e o tempo de retorno."
       },
       {
-        "q": "Tenho de me registar ou deixar um e-mail para ver o resultado?",
-        "a": "Não. O cálculo é imediato e gratuito: introduz os teus dados e vês logo a estimativa. O e-mail é facultativo e só é usado se quiseres o detalhe e os guias práticos."
+        "q": "Tenho de me registar ou deixar o email para ver o resultado?",
+        "a": "Não. O cálculo é imediato e gratuito: introduza os seus dados e veja logo a estimativa. O email é facultativo e só serve se quiser receber o detalhe e os guias práticos."
       },
       {
         "q": "Em que dados se baseia a poupança estimada?",
-        "a": "Apenas nos valores que introduzes: número de operadores, locais ou obras geridas, horas dedicadas à administração, custo horário e as contestações típicas do teu setor. Quanto mais realistas forem os dados, mais próxima a estimativa fica do teu caso."
+        "a": "Apenas nos valores que introduzir: número de operadores, locais ou obras acompanhados, horas dedicadas à administração, custo horário e as contestações típicas do seu setor. Quanto mais realistas forem os dados, mais próxima do seu caso fica a estimativa."
       },
       {
         "q": "A poupança estimada já desconta o custo da subscrição?",
-        "a": "O total que vê é a poupança bruta. O tempo de retorno e a percentagem de ROI, esses sim, comparam-na com o custo anual da ferramenta, calculado sobre o número de operacionais que introduziu. A percentagem já é líquida, o total não."
+        "a": "O total que vê é a poupança bruta. O tempo de retorno e a percentagem de ROI, esses sim, comparam-na com o custo anual da ferramenta, calculado sobre o número de operadores que introduziu. A percentagem já é líquida, o total não."
       },
       {
         "q": "O que significa o tempo de retorno em meses?",
@@ -1158,54 +1173,57 @@
     ]
   },
   "settore_layout": {
-    "pain_subtitle": "As apps de registo de ponto registam. Não selam. A diferença é enorme, e no momento da disputa sente-a toda.",
+    "pain_subtitle": "As apps de picagem registam. Não selam. A diferença é enorme, e no momento de uma contestação sente-se por inteiro.",
     "before": "Antes",
     "after": "Com GeoTapp",
-    "classic_app": "App genérica / Folha de cálculo",
+    "classic_app": "Gestão genérica / App clássica",
     "roi_badge": "Calcule o seu ROI",
     "roi_title": "Quanto pouparia com o GeoTapp?",
-    "roi_desc": "Insira o tamanho da sua equipa e obtenha uma estimativa do ROI em 30 segundos. Sem registo, sem email.",
+    "roi_desc": "Indique a dimensão da sua equipa e veja uma estimativa do ROI num minuto. Sem registo, sem email.",
     "roi_cta": "Calcular o meu ROI",
     "mockup_title": "Intervenção aberta",
-    "mockup_gps": "GPS verificado",
+    "mockup_gps": "Posição na picagem",
     "mockup_photos": "Fotos anexadas",
     "mockup_photos_count": "3 fotos geolocalizadas",
-    "mockup_sealed": "Selado após fecho",
+    "mockup_sealed": "Selado ao fecho: qualquer alteração é visível",
     "mockup_status_active": "Ativo",
     "mockup_status_completed": "Concluído",
     "mockup_status_summary": "4 operadores ativos em 6 locais",
     "see_real_report": "Ver um relatório real",
-    "cta_note": "Sem compromisso. Sem contrato. Configuramos para o seu caso real."
+    "cta_note": "Teste gratuito de 14 dias, sem cartão de crédito.",
+    "mockup_operator": "Operador",
+    "mockup_opening": "Abertura",
+    "mockup_closing": "Fecho"
   },
   "features": {
-    "title": "Potência sob o capô.",
-    "subtitle": "Não construímos brinquedos. GeoTapp é uma plataforma empresarial construída para escalar. Aqui estão as tecnologias que fazem a magia acontecer.",
-    "gps_title": "GPS no registo de ponto, não o dia todo",
-    "gps_desc": "A localização é registada em dois momentos: quando o turno começa e quando termina. Entre a entrada e a saída não se regista nada automaticamente. Os registos de ponto do dia aparecem cada um com coordenadas GPS, verificação de geofence e proteção anti-spoofing: o escritório sabe quem começou onde sem telefonar, e a equipa sabe exatamente o que é registado, e quando.",
-    "offline_title": "Picar o ponto num toque",
-    "offline_desc": "Um toque para picar a entrada com GPS, marcar as pausas e fechar o dia. Cada intervenção pode ter uma foto anexada como prova do trabalho realizado, e tudo chega diretamente ao Flow.",
-    "encryption_title": "Military-Grade Encryption",
-    "encryption_desc": "Durma descansado. Usamos encriptação AES-256 em repouso e TLS 1.3 em trânsito. Mesmo que um atacante interceptasse os seus dados, só veria ruído branco. A privacidade não é apenas uma formalidade legal, é matemática.",
-    "realtime_title": "Real-Time WebSocket",
-    "realtime_desc": "Sem precisar de carregar em F5. Graças aos WebSockets, a informação viaja instantaneamente. Quando um técnico fecha um ticket no Porto, o gestor em Lisboa vê o ponto ficar verde no mesmo milissegundo. É como estar em todo o lado ao mesmo tempo.",
-    "cms_title": "Headless CMS Integration",
-    "cms_desc": "O conteúdo é fluido. A nossa arquitetura headless desacopla os dados da apresentação. Isso significa que pode publicar um artigo no blog, enviá-lo para a app móvel e distribuí-lo por newsletter com um único clique.",
-    "datalake_title": "Scalable Data Lake",
-    "datalake_desc": "De 100 a 100 milhões de registos sem esforço. Usamos PostgreSQL particionado para gerir volumes massivos de dados sem abrandamentos. O seu histórico é precioso, guardamo-lo para sempre, acessível num instante.",
-    "cdn_title": "Global CDN Edge",
-    "cdn_desc": "A velocidade é geográfica. Os nossos recursos estáticos são replicados em mais de 300 centros de dados em todo o mundo. Quer o seu cliente esteja em Nova Iorque ou Tóquio, o seu site carrega como se o servidor estivesse na sala ao lado."
+    "title": "O que o GeoTapp faz, função a função.",
+    "subtitle": "Da picagem no terreno ao relatório que o cliente verifica sozinho. Eis o que está lá dentro, descrito pelo que faz.",
+    "gps_title": "A posição só quando se pica o ponto",
+    "gps_desc": "A posição é registada quando o trabalhador pica o ponto (entrada, pausas, saída) e quando tira uma foto de prova. Entre uma picagem e a seguinte não se regista nada automaticamente. No Flow, o ecrã Picagens de hoje mostra cada picagem com a sua posição e a verificação do local de trabalho: o escritório sabe quem começou onde sem telefonar, e a equipa sabe exatamente o que é registado, e quando.",
+    "offline_title": "Picagem com um toque, mesmo sem rede",
+    "offline_desc": "Um toque para iniciar o turno, marcar as pausas e fechá-lo. Cada intervenção pode ter as suas fotos de prova. Se não houver rede, a picagem fica guardada no telemóvel e segue sozinha quando o sinal volta, com a hora em que foi feita.",
+    "encryption_title": "Posições falsas rejeitadas",
+    "encryption_desc": "Na picagem, a app rejeita as posições simuladas por apps de localização falsa, as demasiado imprecisas e as deslocações impossíveis. Nas fotos não se rejeita nada: assinala-se, comparando a hora e a posição da foto com as da picagem.",
+    "realtime_title": "O relatório sela-se sozinho",
+    "realtime_desc": "No fim da intervenção, o relatório compõe-se com picagens, fotos e notas e é selado: uma cadeia de impressões SHA-256 liga cada evento e cada foto, e a raiz é assinada com a chave da GeoTapp. Qualquer alteração posterior é detetável.",
+    "cms_title": "Verificação sem nós",
+    "cms_desc": "O cliente recebe uma ligação e verifica o relatório sozinho, online ou com o verificador offline: um ficheiro único que não se liga à internet e traz lá dentro a chave pública. Funciona mesmo daqui a anos, mesmo sem a GeoTapp.",
+    "datalake_title": "Dados na Europa, guardados o tempo certo",
+    "datalake_desc": "Os dados do serviço ficam em servidores na União Europeia e viajam cifrados. No registo, as posições são apagadas ao fim de doze meses, num prazo que a empresa pode encurtar até trinta dias; nos relatórios já entregues mantêm-se, porque são documentos selados, e ao fim de cinco anos o pacote é apagado.",
+    "cdn_title": "Escritório e terreno ligados",
+    "cdn_desc": "No Flow, o escritório vê cada picagem assim que chega, gere trabalhos, equipas, turnos e férias, e exporta as horas para o processamento salarial. Os operadores recebem trabalhos e comunicações diretamente na app."
   },
   "kairos": {
     "subtitle": "O seu assistente GeoTapp",
-    "welcome": "Ola! Sou o Kairos, o assistente GeoTapp. Como posso ajudar?",
+    "welcome": "Olá! Sou o Kairos, o assistente GeoTapp. Como posso ajudar?",
     "placeholder": "Escreva a sua pergunta...",
     "send": "Enviar",
-    "quick_pricing": "Precos",
+    "quick_pricing": "Preços",
     "quick_how": "Como funciona",
-    "quick_trial": "Teste gratis",
+    "quick_trial": "Teste grátis",
     "quick_contact": "Fale connosco",
-    "fallback": "Nao encontrei uma resposta. Pode reformular ou contactar-nos diretamente.",
-    "low_confidence": "Nao tenho a certeza de ter compreendido. Deseja contactar a equipa?",
+    "fallback": "Não encontrei uma resposta. Pode reformular ou contactar-nos diretamente.",
+    "low_confidence": "Não tenho a certeza de ter compreendido. Deseja contactar a equipa?",
     "contact_btn": "Contactar",
     "powered_by": "Powered by GeoTapp"
   },
@@ -1220,47 +1238,47 @@
     "no_articles": "Ainda sem artigos."
   },
   "sanzioniGps": {
-    "metaTitle": "Calculadora de sanções GPS: quanto arriscas ao monitorizar trabalhadores, país a país",
-    "metaDesc": "Escolhe o país e vê a sanção máxima real pela monitorização GPS de trabalhadores e que obrigações te expõem. Dados verificados, 39 países europeus.",
-    "h1": "Quanto arriscas ao monitorizar os trabalhadores?",
-    "intro": "Escolhe o país, vê a sanção mais alta realmente aplicada e assinala o que já tens em ordem: dizemos-te a quanto estás exposto. Dados verificados na fonte, 39 países.",
+    "metaTitle": "Calculadora de sanções GPS: quanto arrisca, país a país",
+    "metaDesc": "Escolha o país e veja a coima mais alta realmente aplicada, ou o máximo legal, na monitorização GPS de trabalhadores. Dados verificados, 39 países europeus.",
+    "h1": "Quanto arrisca ao monitorizar os trabalhadores?",
+    "intro": "Escolha o país, veja a sanção mais alta (a realmente aplicada, quando há um caso público; caso contrário, o máximo previsto na lei: a ficha indica qual) e assinale o que já tem em ordem: dizemos-lhe a quanto está exposto. Dados verificados na fonte, 39 países.",
     "sanzioneMax": "Sanção máxima",
     "casoCitato": "Caso real",
     "fonte": "Ver a fonte",
-    "adempimentiTitolo": "O que precisas de ter em ordem (assinala o que já tens)",
+    "adempimentiTitolo": "O que tem de ter em ordem (assinale o que já tem)",
     "obbligatorio": "Obrigatório",
     "condizionale": "Depende",
-    "ceLHai": "Tens isto?",
-    "espostoUno": "Falta-te {n} obrigação obrigatória de {tot}: estás exposto até",
-    "espostoMulti": "Faltam-te {n} obrigações obrigatórias de {tot}: estás exposto até",
-    "inRegola": "Nenhuma obrigação obrigatória em falta: estás no bom caminho.",
-    "vediScheda": "Abrir a ficha completa: {paese}",
+    "ceLHai": "Já tem?",
+    "espostoUno": "Falta-lhe {n} obrigação obrigatória em {tot}: está exposto até",
+    "espostoMulti": "Faltam-lhe {n} obrigações obrigatórias em {tot}: está exposto até",
+    "inRegola": "Nenhuma obrigação obrigatória em falta: está no bom caminho.",
+    "vediScheda": "Abrir a ficha completa do país: {paese}",
     "faq": {
       "title": "Perguntas frequentes",
       "items": [
         {
           "q": "Qual é o risco real se o GPS não estiver em conformidade?",
-          "a": "Depende do país e do que correu mal, mas as coimas do RGPD não são simbólicas: chegam a uma percentagem do volume de negócios capaz de deitar abaixo uma pequena empresa, e em vários Estados há ainda consequências em sede de direito do trabalho. Escolha o destino acima e verá o valor máximo real, com o caso de que foi retirado."
+          "a": "Depende do país e do que correu mal, mas as coimas do RGPD não são simbólicas: podem chegar a uma percentagem do volume de negócios, e em vários Estados há ainda consequências no plano do direito do trabalho. Escolha o país acima e veja o valor mais alto, com a indicação de se é uma coima realmente aplicada ou o máximo legal."
         },
         {
           "q": "As coimas do RGPD atingem mesmo as pequenas empresas?",
-          "a": "Sim, e a ideia de que as autoridades só vão atrás dos grandes é uma das crenças que mais caro custa. Os casos listados em cada ficha de país incluem negócios de meia dúzia de pessoas, multados precisamente por monitorizarem o pessoal sem a documentação em ordem. A dimensão influencia o montante, não o facto de estar na linha de fogo."
+          "a": "Sim, e a ideia de que as autoridades só vão atrás dos grandes é uma das crenças que mais caro custa. Os casos citados na ficha de cada país incluem negócios de meia dúzia de pessoas, multados precisamente por monitorizarem o pessoal sem a documentação em ordem. A dimensão influencia o montante, não o facto de estar ou não na linha de fogo."
         },
         {
           "q": "A coima é o único risco?",
-          "a": "Não, e muitas vezes nem sequer é o pior. Os dados recolhidos da forma errada tornam-se inúteis precisamente quando deles precisa, num litígio com um trabalhador ou perante um cliente que contesta uma fatura. Acaba com a coima para pagar e sem a prova que julgava ter."
+          "a": "Não, e muitas vezes nem sequer é o pior. Os dados recolhidos da forma errada tornam-se inúteis precisamente quando mais são precisos, num litígio com um trabalhador ou perante um cliente que contesta uma fatura. Fica com a coima para pagar e sem a prova que julgava ter."
         },
         {
           "q": "Posso ser multado mesmo que os trabalhadores tenham concordado?",
-          "a": "Sim, porque numa relação de trabalho o consentimento conta pouco: presume-se que quem o dá não é verdadeiramente livre de recusar. As autoridades olham para se o tratamento foi proporcionado e se tinha um fundamento sólido e uma informação de privacidade clara, não para se alguém assinou um papel. O acordo dos trabalhadores, por si só, não o protege."
+          "a": "Sim, porque numa relação de trabalho o consentimento conta pouco: presume-se que quem o dá não é verdadeiramente livre de recusar. As autoridades olham para se o tratamento foi proporcionado e se havia um fundamento sólido e um aviso de privacidade claro, não para se alguém assinou um papel. O acordo dos trabalhadores, por si só, não o protege."
         },
         {
           "q": "De onde vêm estes números?",
-          "a": "De decisões reais das autoridades de proteção de dados e da legislação nacional, não de estimativas. Cada ficha indica a fonte e o caso, para que possa remontar ao documento. Este é um recurso informativo, não aconselhamento jurídico: antes de ligar um sistema, peça a um profissional que avalie a sua situação."
+          "a": "De decisões reais das autoridades de proteção de dados e da legislação nacional, não de estimativas. Cada ficha indica a fonte e o caso, para que possa remontar ao documento. É um recurso informativo, não aconselhamento jurídico: antes de ativar um sistema, peça a um profissional que verifique a sua situação."
         },
         {
           "q": "Como reduzo o risco de uma coima?",
-          "a": "Recolhendo apenas o mínimo de que realmente precisa: localização na picagem, não localização contínua, com uma informação de privacidade assinada e um fundamento que não seja o consentimento. Foi exatamente assim que o GeoTapp foi construído, e o gerador de informação de privacidade aqui nos recursos prepara o documento para ser assinado."
+          "a": "Recolhendo apenas o mínimo de que realmente precisa: a localização no momento da picagem, não um rastreio contínuo, com um aviso de privacidade assinado e um fundamento diferente do consentimento. É exatamente assim que a GeoTapp foi desenvolvida, e o gerador de aviso de privacidade aqui nos recursos prepara o documento para os trabalhadores assinarem."
         }
       ]
     }
@@ -1269,20 +1287,20 @@
     "metaTitle": "Índice de vigilância laboral na Europa: a classificação dos 39 países",
     "metaDesc": "Que países europeus têm as regras mais rígidas sobre monitorização de trabalhadores? Classificação por índice de severidade, com sanção máxima e fonte. 39 países.",
     "h1": "Índice de vigilância laboral na Europa",
-    "intro": "A Europa não trata a vigilância dos trabalhadores da mesma forma em todo o lado. Classificámos 39 países pela rigidez do quadro: mais obrigações, mais alto o índice. Clica nas colunas para reordenar.",
+    "intro": "A Europa não trata a vigilância dos trabalhadores da mesma forma em todo o lado. Classificámos 39 países pela rigidez do quadro: mais obrigações obrigatórias, mais alto o índice. Clique nas colunas para reordenar.",
     "colPaese": "País",
     "colIndice": "Índice de severidade",
-    "colObblighi": "Obrigações",
+    "colObblighi": "Obrigações obrigatórias",
     "colSanzione": "Sanção máxima",
     "scheda": "Ficha",
     "metodologiaTitolo": "Como é calculado o índice",
-    "metodologia": "O índice (0-100) mede quantas obrigações de monitorização de trabalhadores são obrigatórias nesse país: pontuação = obrigações + metade das condicionais, sobre o total. Mais alto = quadro mais rígido para quem quer rastrear. Dados derivados das fichas-país verificadas na fonte; mede a carga de conformidade, não a 'liberdade'.",
+    "metodologia": "O índice (0-100) mede quantas obrigações sobre a monitorização de trabalhadores são obrigatórias nesse país: pontuação = obrigações obrigatórias + metade das condicionais, sobre o total. Mais alto = quadro mais rígido para quem quer rastrear. Dados derivados das fichas de país verificadas na fonte; mede a carga de obrigações, não a «liberdade».",
     "faq": {
       "title": "Perguntas frequentes",
       "items": [
         {
           "q": "O que mede o índice de vigilância no trabalho?",
-          "a": "O grau de exigência do quadro de cada país sobre a monitorização de trabalhadores: o número de obrigações obrigatórias, os passos necessários antes de ligar um sistema e o peso das sanções. Quanto mais alta a pontuação, mais coisas tem de pôr em ordem antes de usar GPS ou qualquer monitorização de pessoal nesse país."
+          "a": "O grau de exigência do quadro de cada país sobre a monitorização de trabalhadores: o número de obrigações obrigatórias, os passos necessários antes de ligar um sistema e o peso das sanções. Quanto mais alta a pontuação, mais coisas tem de pôr em ordem antes de usar GPS ou qualquer controlo dos trabalhadores nesse país."
         },
         {
           "q": "Uma pontuação alta significa que o GPS é proibido ali?",
@@ -1290,7 +1308,7 @@
         },
         {
           "q": "De onde vêm os dados da classificação?",
-          "a": "Dos 39 dossiês de país do site, construídos com base na legislação nacional e em decisões reais das autoridades. A classificação resume-os numa pontuação comparável; clique num país e chega à ficha com as obrigações, a autoridade competente e as fontes."
+          "a": "Dos 39 dossiês por país que encontra no sítio, construídos com base na legislação nacional e em decisões reais das autoridades. A classificação resume-os numa pontuação comparável; clique num país e chega à ficha com as obrigações, a autoridade competente e as fontes."
         },
         {
           "q": "Porque é que países vizinhos têm pontuações tão diferentes?",
@@ -1302,16 +1320,16 @@
         },
         {
           "q": "Como uso a classificação se envio equipas para o estrangeiro?",
-          "a": "Comece pelo país onde vão trabalhar, não pelo seu: são as regras de lá que se aplicam. Olhe para a pontuação para perceber quanto trabalho tem pela frente, depois abra a ficha para as obrigações exatas e prepare a informação de privacidade para ser assinada antes da deslocação."
+          "a": "Comece pelo país onde vão trabalhar, não pelo seu: são as regras de lá que se aplicam. Olhe para a pontuação para perceber quanto trabalho tem pela frente, depois abra a ficha para as obrigações exatas e prepare o aviso de privacidade para ser assinado antes da deslocação."
         }
       ]
     }
   },
   "attribuzione": {
     "datiVerificati": "Dados recolhidos e verificados pela GeoTapp.",
-    "liberoCitare": "Podes citá-los livremente, desde que indiques a fonte com um link para esta página.",
+    "liberoCitare": "Pode citá-los livremente, desde que indique a fonte com uma ligação para esta página.",
     "ripubblicazione": "Para a republicação integral do conjunto de dados ou usos comerciais,",
-    "contattaci": "contacta-nos",
+    "contattaci": "contacte-nos",
     "titoloCita": "Citar esta página",
     "formatoTesto": "Texto",
     "formatoHtml": "HTML",
@@ -1320,8 +1338,8 @@
     "fonte": "Fonte:"
   },
   "embedStrumento": {
-    "titolo": "Incorpora esta ferramenta",
-    "desc": "Publica o mapa interativo no teu site ou blog: copia o código. Inclui um link para a fonte.",
+    "titolo": "Incorpore esta ferramenta",
+    "desc": "Publique o mapa interativo no seu sítio ou blogue: copie o código. Inclui uma ligação para a fonte.",
     "copia": "Copiar o código",
     "copiato": "Copiado!",
     "fonte": "Fonte:"
@@ -1330,7 +1348,7 @@
     "metaTitleSelettore": "GPS e monitorização de trabalhadores na Europa: o que precisa para estar em conformidade, país a país",
     "metaDescSelettore": "Escolha o país e descubra o que precisa para pôr em conformidade o GPS e a monitorização de trabalhadores: obrigações, procedimento, autoridade e modelo para descarregar.",
     "h1Selettore": "GPS e monitorização de trabalhadores, país a país",
-    "introSelettore": "A mesma Europa, regras diferentes. Envia uma equipa para instalar, limpar ou vigiar noutro país e parte do princípio de que as regras sobre GPS e controlo de trabalhadores são as de casa. Não são. Cada Estado tem as suas, e valem onde se trabalha: uma empresa com uma obra no estrangeiro segue as regras locais, mesmo que a equipa esteja lá apenas em deslocação. Escolha o destino e dizemos-lhe o que precisa para estar em conformidade: as obrigações, o procedimento, a quem se dirigir e o modelo para descarregar.",
+    "introSelettore": "A mesma Europa, regras diferentes. Quando se envia uma equipa para montar, limpar ou vigiar noutro país, é fácil partir do princípio de que as regras sobre GPS e controlo dos trabalhadores são as de casa. Não são. Cada Estado tem as suas, e valem onde se trabalha: uma empresa portuguesa com uma obra na Alemanha segue as regras alemãs, mesmo que os operadores estejam lá apenas em deslocação. Escolha o destino e dizemos-lhe o que é preciso para estar em conformidade: as obrigações, o procedimento, a quem se dirigir e o modelo para descarregar.",
     "scegliPaese": "Escolha o país",
     "inArrivo": "Em breve",
     "inArrivoNota": "Estamos a preparar a página deste país.",
@@ -1349,24 +1367,24 @@
     "serveObbligatorio": "obrigatório",
     "serveDipende": "apenas em certos casos",
     "serveNonRichiesto": "não exigido",
-    "verificatoIl": "Verificado a",
-    "aggiornatoIl": "Atualizado a",
+    "verificatoIl": "Verificado em",
+    "aggiornatoIl": "Atualizado em",
     "scaricaModello": "Descarregar o modelo",
     "autoritaCompetente": "Autoridade competente",
     "disclaimer": "Este é um recurso informativo, não um aconselhamento jurídico. Antes de ativar um sistema de monitorização, peça a um profissional que verifique a sua situação.",
     "ctaTitolo": "Quer um sistema pensado para o RGPD?",
-    "ctaTesto": "A GeoTapp regista a localização apenas no momento da picagem, nunca em contínuo, e gera o aviso para os trabalhadores assinarem. Experimente gratuitamente.",
+    "ctaTesto": "A GeoTapp regista a localização apenas quando se pica o ponto ou se tira uma fotografia de prova, nunca em contínuo, e faz assinar o aviso de privacidade na app antes da primeira picagem. Experimente gratuitamente.",
     "ctaBottone": "Experimente a GeoTapp gratuitamente",
     "faq": {
       "title": "Perguntas frequentes",
       "items": [
         {
           "q": "Posso usar o GPS para vigiar a minha equipa enquanto trabalha?",
-          "a": "O GPS no trabalho é legal em quase toda a Europa, com uma condição: tem de servir para organizar e provar o trabalho, não para vigiar a pessoa. O que conta é o como. Registar a localização na picagem, quando alguém abre e fecha uma intervenção, é coisa bem diferente de a seguir em tempo real durante todo o dia. A primeira quase sempre se pode fazer da forma correta, a segunda quase nunca. Mas o que significa \"da forma correta\" muda de país para país, e não é só questão de papéis: às vezes é preciso um acordo com os representantes dos trabalhadores ou uma base jurídica específica. A ficha do teu país, acima, diz o que é mesmo preciso."
+          "a": "O GPS no trabalho é legal em quase toda a Europa, com uma condição: tem de servir para organizar e provar o trabalho, não para vigiar a pessoa. O que conta é o como. Registar a localização na picagem, quando o operador entra, faz uma pausa e sai, é coisa bem diferente de o seguir em tempo real durante todo o dia. A primeira quase sempre se pode fazer da forma correta, a segunda quase nunca. Mas o que significa «da forma correta» muda de país para país, e não é só questão de papéis: às vezes é preciso um acordo com os representantes dos trabalhadores ou uma base jurídica específica. A ficha do seu país, acima, diz o que é mesmo preciso."
         },
         {
           "q": "Aplicam-se as regras do meu país ou as do país para onde envio a equipa?",
-          "a": "As do país onde se trabalha. Se a sua empresa tem sede na Irlanda mas a obra é em França, segue as regras francesas, mesmo que a equipa esteja lá apenas por uma deslocação de duas semanas. É por isso que esta página lhe pede para escolher primeiro o destino: as obrigações mudam de um Estado para o outro, e o que basta em casa pode ficar aquém do outro lado da fronteira."
+          "a": "As do país onde se trabalha. Se a sua empresa é portuguesa mas a obra é na Alemanha, segue as regras alemãs, mesmo que os operadores estejam lá apenas numa deslocação de duas semanas. É por isso que esta página lhe pede para escolher primeiro o destino: as obrigações mudam de um Estado para o outro, e o que basta em casa pode ficar aquém do outro lado da fronteira."
         },
         {
           "q": "Preciso do consentimento do trabalhador?",
@@ -1374,15 +1392,15 @@
         },
         {
           "q": "Posso seguir a localização em tempo real, o dia todo?",
-          "a": "É precisamente isto que faz disparar as multas. O rastreio contínuo é considerado desproporcionado em quase todo o lado: regista muito mais do que precisa para pagar as horas ou provar uma intervenção. A regra prática é recolher o mínimo, a localização no momento que importa, não um fio que segue a pessoa de manhã à noite."
+          "a": "É precisamente isto que faz disparar as multas. O rastreio contínuo é considerado desproporcionado em quase todo o lado: regista-se muito mais do que o necessário para pagar as horas ou provar uma intervenção. A regra prática é recolher o mínimo, a localização no momento que importa, não um fio que segue a pessoa de manhã à noite."
         },
         {
           "q": "O que arrisco se ligar um sistema sem estar em conformidade?",
-          "a": "Depende do país, mas as coimas do RGPD chegam a valores que nenhuma pequena empresa quer ver, e em alguns Estados há ainda consequências no plano do direito do trabalho. O verdadeiro problema, porém, muitas vezes não é a multa: é que os dados recolhidos da forma errada tornam-se inutilizáveis exatamente quando precisaria deles, num processo ou diante de um cliente que contesta a fatura. Na ficha de cada país encontra a sanção máxima real e os casos registados."
+          "a": "Depende do país, mas as coimas do RGPD chegam a valores que nenhuma pequena empresa quer ver, e em alguns Estados há ainda consequências no plano do direito do trabalho. O verdadeiro problema, porém, muitas vezes não é a multa: é que os dados recolhidos da forma errada tornam-se inutilizáveis exatamente quando mais são precisos, num processo ou diante de um cliente que contesta. Na ficha de cada país encontra o máximo previsto na lei e, onde existe, a coima realmente aplicada num caso real."
         },
         {
           "q": "A GeoTapp é um sistema de vigilância?",
-          "a": "Não, e foi feita propositadamente para não o ser. A ferramenta regista a localização apenas no momento da picagem, quando alguém abre ou fecha um trabalho, nunca em contínuo, e produz o aviso de privacidade para assinarem. Serve para provar o que foi feito e onde, não para vigiar as pessoas. É a diferença entre uma prova do trabalho e uma trela."
+          "a": "Não, não foi pensada para vigiar. Regista a localização em cada picagem (entrada, pausa, saída) e quando se tira uma fotografia de prova; entre uma picagem e outra não regista nada. E produz o aviso de privacidade para assinar. Serve para provar o que foi feito e onde, não para vigiar as pessoas. É a diferença entre uma prova do trabalho e uma trela."
         }
       ]
     },
@@ -1390,54 +1408,60 @@
     "mappaDi": "por",
     "regoleComuni": {
       "titolo": "As regras que valem em toda a Europa",
-      "intro": "Antes de olhar para um pais em concreto convem saber o que nunca muda. O RGPD aplica-se de forma igual em todos os Estados-Membros, e estes seis principios valem em qualquer lado. Por cima acrescenta-se o direito do trabalho nacional, e e esse que muda em cada fronteira.",
+      "intro": "Antes de olhar para um país em concreto, convém saber o que nunca muda. O RGPD aplica-se de forma igual em todos os Estados-Membros, e estes seis princípios valem em qualquer lado: por cima acrescenta-se o direito do trabalho nacional, e é esse que muda de fronteira para fronteira.",
       "regole": [
         {
-          "titolo": "Uma finalidade legitima, declarada antes",
-          "testo": "Organizar o trabalho, proteger a seguranca, documentar a prestacao. Nunca 'controlar a pessoa': essa nao e uma finalidade admissivel (artigos 5 e 6 do RGPD)."
+          "titolo": "Uma finalidade legítima, declarada antes",
+          "testo": "Organizar o trabalho, proteger a segurança, documentar a prestação. Nunca «controlar a pessoa»: essa não é uma finalidade admitida (artigos 5.º e 6.º do RGPD).",
+          "titulo": "Uma finalidade legítima, declarada antes"
         },
         {
-          "titolo": "Apenas os dados necessarios, e so quando sao precisos",
-          "testo": "E a minimizacao (artigo 5.1.c). Registar a posicao no inicio e no fim do servico documenta; registar a cada minuto vigia, e e o motivo de coima mais frequente na Europa."
+          "titolo": "Apenas os dados necessários, e só quando são precisos",
+          "testo": "É o princípio da minimização (artigo 5.º, n.º 1, alínea c). Registar a localização no início e no fim do trabalho documenta; registá-la a cada minuto vigia a pessoa.",
+          "titulo": "Apenas os dados necessários, e só quando são precisos"
         },
         {
-          "titolo": "Transparencia antes, nao depois",
-          "testo": "O trabalhador tem de saber com antecedencia o que e registado, quando, porque e por quanto tempo (artigos 12 e 13). Uma informacao generica, ou desalinhada do sistema real, equivale a nao existir."
+          "titolo": "Transparência antes, não depois",
+          "testo": "O trabalhador tem de saber com antecedência o que é registado, quando, porquê e durante quanto tempo (artigos 12.º e 13.º). Um aviso genérico, ou desalinhado do sistema real, equivale a não existir.",
+          "titulo": "Transparência antes, não depois"
         },
         {
-          "titolo": "Conservacao por um prazo definido",
-          "testo": "Os dados guardam-se pelo tempo necessario a finalidade, decidido e escrito antes, e nao 'enquanto forem uteis' (artigo 5.1.e)."
+          "titolo": "Conservação por um prazo definido",
+          "testo": "Os dados guardam-se pelo período necessário à finalidade, decidido e escrito de antemão, e não «enquanto forem necessários» (artigo 5.º, n.º 1, alínea e).",
+          "titulo": "Conservação por um prazo definido"
         },
         {
-          "titolo": "Avaliacao de impacto quando o risco e elevado",
-          "testo": "A monitorizacao sistematica dos trabalhadores cai tipicamente nos casos que exigem uma AIPD (artigo 35), a fazer antes de ligar o sistema, nao depois."
+          "titolo": "Avaliação de impacto quando o risco é elevado",
+          "testo": "A monitorização sistemática dos trabalhadores cai tipicamente nos casos que exigem uma AIPD (artigo 35.º), a fazer antes de ligar o sistema, não depois.",
+          "titulo": "Avaliação de impacto quando o risco é elevado"
         },
         {
-          "titolo": "Dados recolhidos para um fim nao se reutilizam para outro",
-          "testo": "E a limitacao da finalidade (artigo 5.1.b). Posicoes recolhidas para documentar o trabalho nao se tornam automaticamente prova num procedimento disciplinar."
+          "titolo": "Os dados recolhidos para um fim não se reutilizam para outro",
+          "testo": "É a limitação da finalidade (artigo 5.º, n.º 1, alínea b). As localizações recolhidas para documentar o trabalho não se tornam automaticamente prova num procedimento disciplinar.",
+          "titulo": "Os dados recolhidos para um fim não se reutilizam para outro"
         }
       ],
-      "nota": "Depois ha o artigo 88 do RGPD, que permite a cada Estado acrescentar regras proprias sobre o tratamento de dados na relacao de trabalho. E por isso que existem as fichas por pais aqui em baixo: muda quem tem de autorizar, nao o principio."
+      "nota": "Depois há o artigo 88.º do RGPD, que permite a cada Estado acrescentar regras próprias sobre o tratamento de dados na relação de trabalho. É por isso que existem as fichas por país aqui em baixo: muda quem tem de autorizar, não o princípio."
     },
     "sanzioneTipoCasoGps": "de um caso real de GPS",
-    "sanzioneTipoCasoAffine": "caso afim, não GPS",
-    "sanzioneTipoMassimale": "máximo legal, não uma coima aplicada",
-    "fonteNonUfficialeEtichetta": "fonte nao oficial",
-    "fonteNonUfficialeAvviso": "Este dado nao provem de uma fonte oficial. Abaixo esta a ligacao direta para a fonte que utilizamos. Nao a podendo confirmar junto da autoridade competente, nao garantimos que seja correta nem coerente.",
+    "sanzioneTipoCasoAffine": "caso afim, não sobre o GPS dos trabalhadores",
+    "sanzioneTipoMassimale": "máximo previsto na lei",
+    "fonteNonUfficialeEtichetta": "fonte não oficial",
+    "fonteNonUfficialeAvviso": "Este dado não provém de uma fonte oficial. Abaixo encontra a ligação direta para a fonte que utilizámos. Por não a podermos confirmar junto da autoridade competente, não podemos garantir que esteja correta e coerente.",
     "fonteNonUfficialeTipo_studio_legale": "sociedade de advogados",
-    "fonteNonUfficialeTipo_stampa": "orgao de imprensa",
-    "fonteNonUfficialeTipo_banca_dati": "base de dados juridica privada",
-    "fonteNonUfficialeTipo_compilazione": "compilacao privada"
+    "fonteNonUfficialeTipo_stampa": "órgão de imprensa",
+    "fonteNonUfficialeTipo_banca_dati": "base de dados jurídica privada",
+    "fonteNonUfficialeTipo_compilazione": "compilação privada"
   },
   "videoTutorial": {
     "title": "Do primeiro acesso à primeira picagem",
-    "note": "Dois minutos, sem rodeios: configuras o Flow, convidas o primeiro funcionário e vês a primeira picagem a aparecer no mapa.",
+    "note": "Dois minutos, sem rodeios: configura-se o Flow, convida-se o primeiro colaborador e vê-se a sua primeira picagem chegar ao escritório, com hora e localização.",
     "cta": "Ver o vídeo, 2 minutos"
   },
   "videoGiro": {
-    "kicker": "Vê-o a funcionar",
+    "kicker": "Veja-o a funcionar",
     "title": "Um turno, oitenta segundos, nada recriado",
-    "note": "Um telefone real na obra e um ecrã real no escritório, gravados no mesmo momento. O som começa desligado, e as legendas levam as palavras até o subires.",
+    "note": "Um telemóvel real na obra e um ecrã real no escritório, gravados no mesmo momento. O som começa desligado, e as legendas levam as palavras até decidir ligar o som.",
     "audioOn": "Ligar o som",
     "audioOff": "Desligar o som",
     "play": "Ver o vídeo, 80 segundos",
@@ -1447,17 +1471,17 @@
     "posterAlt": "Um turno com o GeoTapp, da picagem ao relatório selado, em oitenta segundos",
     "page": {
       "metaTitle": "GeoTapp a trabalhar: um turno inteiro em 80 segundos",
-      "metaDescription": "Um técnico pica, fotografa uma avaria, envia a prova, pica a saída. A obra fecha e o cliente verifica sozinho o relatório selado, offline.",
+      "metaDescription": "Um operador pica, fotografa uma avaria, envia a prova e pica a saída. A obra fecha e o cliente verifica sozinho o relatório selado, offline. Oitenta segundos.",
       "h1": "Um turno inteiro, do primeiro toque ao relatório que o cliente verifica sozinho",
-      "intro": "Aqui não há nada encenado. O telefone foi filmado na obra enquanto o ecrã do escritório corria no mesmo momento, e as duas gravações foram postas na mesma linha de tempo pelo relógio, de modo que o que vês acontecer em cinco segundos demorou cinco segundos.",
-      "intro2": "O som começa desligado, porque ninguém quer uma página que se põe a falar sozinha. As palavras vêm das legendas, até decidires subir o volume.",
+      "intro": "Aqui dentro não há nada encenado. O telemóvel foi filmado na obra enquanto o ecrã do escritório era filmado no mesmo momento, e as duas gravações foram postas na mesma linha de tempo pelo relógio, de modo que o que se vê acontecer em cinco segundos demorou cinco segundos.",
+      "intro2": "O som começa desligado, porque ninguém quer uma página que se põe a falar sozinha. As palavras vêm das legendas, até decidir ligar o som.",
       "actsTitle": "Os sete atos",
       "transcriptTitle": "O que o vídeo diz",
       "transcriptNote": "As mesmas palavras da voz, para ler.",
       "honestyTitle": "O que este vídeo é, e o que não é",
-      "honesty": "Os dados do turno são de teste, e as duas fotografias do quadro elétrico estão substituídas na montagem, porque as provas foram tiradas com a objetiva tapada. O comportamento do software é o real, gravado sem retoques. A localização é escrita no momento da picagem e nunca pelo meio, e um pacote selado ajuda a mostrar que o que foi entregue não foi mexido, embora por si só não seja prova absoluta do facto material nem aconselhamento jurídico.",
-      "ctaTitle": "Catorze dias, nos teus próprios turnos",
-      "ctaText": "O mesmo turno corre nas tuas obras, com o teu telefone, durante catorze dias e sem cartão.",
+      "honesty": "Os dados do turno são de teste, e as duas fotografias do quadro elétrico estão substituídas na montagem, porque as provas foram tiradas com a objetiva tapada. O comportamento do software é o real, gravado sem retoques. A localização é escrita no momento da picagem e, entre uma picagem e outra, nada é registado automaticamente; um pacote selado ajuda a mostrar que o que foi entregue não foi mexido, embora por si só não seja prova absoluta do facto material nem aconselhamento jurídico.",
+      "ctaTitle": "Catorze dias, nos seus próprios turnos",
+      "ctaText": "O mesmo turno corre nas suas obras, com o seu telemóvel, durante catorze dias e sem cartão.",
       "youtubeNote": "Está também no YouTube, em onze línguas."
     },
     "captions": "Legendas"
@@ -1476,7 +1500,9 @@
     "segnala_t": "Comunicar um problema",
     "segnala": "Se encontrar uma barreira neste sítio, escreva para info@geotapp.com indicando a página e o que não conseguiu fazer. Respondemos em trinta dias. Se a resposta não for satisfatória, pode dirigir-se à autoridade de fiscalização competente do seu país.",
     "data_t": "Data",
-    "data": "Declaração redigida em 23 de setembro de 2026, com base na avaliação da mesma data."
+    "data": "Declaração redigida em 23 de setembro de 2026, com base na avaliação da mesma data.",
+    "meta_title": "Declaração de acessibilidade | GeoTapp",
+    "meta_description": "Até que ponto o geotapp.com é acessível: o que foi verificado, com que método, as limitações conhecidas e como comunicar um problema."
   },
   "contentDates": {
     "updatedOn": "Atualizado em"

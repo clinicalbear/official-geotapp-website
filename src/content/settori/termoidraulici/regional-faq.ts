@@ -10,7 +10,7 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   de: 'Vorschriften und Nachweise in Deutschland',
   fr: 'Règles et documents',
   es: 'Normativa y documentación en España',
-  pt: 'Conformidade em Portugal',
+  pt: 'Normas e registos em Portugal',
   nl: 'Regels en documentatie in Nederland',
   'en-us': 'Regional rules and records',
   'en-gb': 'Regional rules and records',
@@ -78,16 +78,16 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   ],
   pt: [
     {
-      q: 'Horas e disponibilidade segundo a CCT da metalurgia?',
-      a: 'Horas por técnico e por obra, disponibilidade e ajudas de custo e conservação dos dados, registados em cada intervenção em caldeiras.',
+      q: 'Horas e intervenções em aquecimento?',
+      a: 'O GeoTapp regista em cada picagem entrada, pausas e saída com localização e hora, por técnico e por obra, e exporta-as em Excel ou CSV para o seu contabilista ou consultor laboral. A aplicação da convenção coletiva (acréscimos, ajudas de custo) e o processamento dos salários continuam a cargo do contabilista ou consultor e da empresa.',
     },
     {
-      q: 'RGPD e CNPD na geolocalização dos técnicos de aquecimento?',
-      a: 'Geolocalização apenas durante o tempo de trabalho, com informação prévia, interesse legítimo e direito de acesso, dentro dos critérios da CNPD.',
+      q: 'Geolocalização de técnicos de aquecimento: RGPD e proteção de dados?',
+      a: 'A localização só é registada ao picar o ponto e com as fotos de prova, nunca de forma contínua, e a informação aos trabalhadores assina-se na app antes de picar. Cabe à empresa verificar o que exigem, no seu caso, o RGPD (interesse legítimo), o Código do Trabalho (meios de vigilância à distância) e a informação às estruturas de representação dos trabalhadores.',
     },
     {
-      q: 'Certificação de gases fluorados?',
-      a: 'Associação de cada intervenção com gases fluorados à certificação do técnico habilitado, com o histórico de suporte e os relatórios de inspeção.',
+      q: 'Gases fluorados e certificação do técnico?',
+      a: 'O GeoTapp não gere as certificações de manuseamento de gases fluorados nem os registos de manutenção das instalações. Regista a hora, a localização, as fotos e as notas de cada intervenção em caldeiras e instalações de aquecimento, para juntar à documentação da instalação.',
     },
   ],
   nl: [

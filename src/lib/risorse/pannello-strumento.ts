@@ -168,7 +168,7 @@ const PANNELLI: Record<PannelloToolKey, Record<string, PannelloCopy>> = {
     },
     pt: {
       title: 'Porquê fazer-se estas perguntas',
-      p1: 'Presenças, localização, fotos de obra: são dados pessoais dos seus trabalhadores, e a conformidade não é um selo que se compra uma vez, é um conjunto de hábitos que se têm ou não se têm. As nove perguntas tocam nos pontos onde as empresas com equipas no terreno mais tropeçam.',
+      p1: 'Picagens, localização, fotografias de obra: são dados pessoais dos seus trabalhadores, e a conformidade não é um selo que se compra uma vez, é um conjunto de hábitos que se têm ou não se têm. As nove perguntas tocam nos pontos onde as empresas com equipas no terreno mais tropeçam.',
       p2: 'Responda com sinceridade: no fim tem uma pontuação, as áreas onde intervir e os recursos ligados para as resolver. Nenhuma resposta sai do seu navegador, o teste trabalha para si, não para nós.',
     },
     da: {

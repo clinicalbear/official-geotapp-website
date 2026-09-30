@@ -52,6 +52,8 @@ const CAROUSEL_SLIDES = [
     label_fr: 'Tableau de bord et modules opérationnels',
     alt_es: 'GeoTapp Flow - Panel con indicadores y módulos operativos',
         label_es: 'Panel con indicadores y módulos operativos',
+    alt_pt: 'GeoTapp Flow - Painel com indicadores e módulos operacionais',
+    label_pt: 'Painel com indicadores e módulos operacionais',
   },
   {
     src: '/screen_live_map.webp',
@@ -67,6 +69,8 @@ const CAROUSEL_SLIDES = [
     label_fr: 'Carte des positions enregistrées lors des pointages',
     alt_es: 'GeoTapp Flow - Mapa con las ubicaciones registradas al fichar',
         label_es: 'Mapa de las ubicaciones registradas al fichar',
+    alt_pt: 'GeoTapp Flow - Mapa com as localizações registadas nas picagens',
+    label_pt: 'Mapa das localizações registadas nas picagens',
   },
   {
     src: '/schermataFlow.webp',
@@ -82,6 +86,8 @@ const CAROUSEL_SLIDES = [
     label_fr: 'Tableau de bord opérationnel',
     alt_es: 'GeoTapp Flow - Panel operativo',
         label_es: 'Panel operativo',
+    alt_pt: 'GeoTapp Flow - Painel operacional',
+    label_pt: 'Painel operacional',
   },
 ];
 
@@ -205,6 +211,27 @@ const FLOW_COPY: Record<string, FlowCopy> = {
     legalKicker: 'Normativa local',
     trial: 'Prueba Flow gratis durante 14 días',
   },
+  pt: {
+    statusLabel: 'Onde se utiliza',
+    releaseNote: 'O Flow é uma aplicação web: utiliza-se no navegador, em computador e tablet, sem instalar nada. Quem trabalha no terreno usa o GeoTapp TimeTracker, a aplicação disponível na Google Play e na App Store, e as picagens chegam ao Flow.',
+    doesTitle: 'O que faz o GeoTapp Flow',
+    doesSub: 'É a ferramenta de gestão do escritório e, além disso, reúne a prova do que a equipa fez: planeamento, trabalho no terreno, apuramento final e relatórios para o cliente.',
+    cards: [
+      { title: 'Centro operacional e de gestão', description: 'O Flow dá ao escritório um único ambiente para clientes, obras, calendário, documentos, férias e ausências, administração e coordenação das equipas.' },
+      { title: 'Provas para mostrar ao cliente', description: 'As fotografias, as notas e as picagens recolhidas no terreno ficam ligadas à obra, para que o escritório responda com factos e não com suposições.' },
+      { title: 'Histórico da obra e exportação', description: 'De cada obra pode descarregar o pacote com a cronologia dos eventos, as picagens com as posições e as fotografias, e enviar ao cliente o relatório selado.' },
+      { title: 'Faturação mais rápida', description: 'Orçamentos, faturas e a ligação ao Fatture in Cloud trabalham sobre os dados reais da obra: o apuramento final faz-se mais cedo e discute-se menos.' },
+    ],
+    blocks: [
+      { title: 'Pensado para escritório, administração e coordenação', description: 'O Flow destina-se a proprietários, administração e responsáveis que querem menos discussões internas, funções mais claras e uma visão nítida do trabalho feito.' },
+      { title: 'Ligado ao TimeTracker', description: 'As picagens, as fotografias de prova e o avanço da obra chegam ao Flow assim que o operador as regista, prontas para o relatório e para o apuramento final.' },
+    ],
+    complianceKicker: 'Informação sobre o GPS',
+    complianceTagline: 'Primeiro assina-se a informação, depois pica-se o ponto.*',
+    complianceFootnote: '* Por lei (art. 13.º do RGPD e, em Portugal, os arts. 20.º e 21.º do Código do Trabalho) cada trabalhador deve ser informado antes de ser geolocalizado. Se o software deixa esse passo ao empregador, o risco continua a ser dele. O GeoTapp prepara a informação personalizada, faz com que seja assinada como tomada de conhecimento na aplicação e não deixa picar o ponto enquanto não estiver assinada.',
+    legalKicker: 'Legislação local',
+    trial: 'Experimente o Flow gratuitamente durante 14 dias',
+  },
   nl: {
     statusLabel: 'Waar u het gebruikt',
     releaseNote: 'Flow is een webapp: u gebruikt hem in de browser, op computer en tablet, zonder iets te installeren. Wie in het veld werkt, gebruikt GeoTapp TimeTracker, de app die beschikbaar is op Google Play en de App Store, en wat daar wordt geregistreerd, komt in Flow aan.',
@@ -228,7 +255,7 @@ const FLOW_COPY: Record<string, FlowCopy> = {
   },
 };
 
-function ScreenCarousel({ isItalian, isGerman = false, isDutch = false, isFrench = false, isSpanish = false }: { isItalian: boolean; isGerman?: boolean; isDutch?: boolean; isFrench?: boolean; isSpanish?: boolean }) {
+function ScreenCarousel({ isItalian, isGerman = false, isDutch = false, isFrench = false, isSpanish = false, isPortuguese = false }: { isItalian: boolean; isGerman?: boolean; isDutch?: boolean; isFrench?: boolean; isSpanish?: boolean; isPortuguese?: boolean }) {
   const [current, setCurrent] = useState(0);
   const [isDesktop, setIsDesktop] = useState(false);
   const total = CAROUSEL_SLIDES.length;
@@ -255,7 +282,7 @@ function ScreenCarousel({ isItalian, isGerman = false, isDutch = false, isFrench
   return (
     <>
       <div className="bar">
-        <i /><i /><i /><b>{isItalian ? slide.label_it : isGerman ? slide.label_de : isDutch ? slide.label_nl : isFrench ? slide.label_fr : isSpanish ? slide.label_es : slide.label_en}</b>
+        <i /><i /><i /><b>{isItalian ? slide.label_it : isGerman ? slide.label_de : isDutch ? slide.label_nl : isFrench ? slide.label_fr : isSpanish ? slide.label_es : isPortuguese ? slide.label_pt : slide.label_en}</b>
       </div>
       {isDesktop ? (
         <AnimatePresence mode="wait">
@@ -263,7 +290,7 @@ function ScreenCarousel({ isItalian, isGerman = false, isDutch = false, isFrench
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={slide.src}
-              alt={isItalian ? slide.alt_it : isGerman ? slide.alt_de : isDutch ? slide.alt_nl : isFrench ? slide.alt_fr : isSpanish ? slide.alt_es : slide.alt_en}
+              alt={isItalian ? slide.alt_it : isGerman ? slide.alt_de : isDutch ? slide.alt_nl : isFrench ? slide.alt_fr : isSpanish ? slide.alt_es : isPortuguese ? slide.alt_pt : slide.alt_en}
               loading={current === 0 ? 'eager' : 'lazy'}
               fetchPriority={current === 0 ? 'high' : 'auto'}
             />
@@ -273,15 +300,15 @@ function ScreenCarousel({ isItalian, isGerman = false, isDutch = false, isFrench
         // eslint-disable-next-line @next/next/no-img-element
         <img
           src={CAROUSEL_SLIDES[0].src}
-          alt={isItalian ? CAROUSEL_SLIDES[0].alt_it : isGerman ? CAROUSEL_SLIDES[0].alt_de : isDutch ? CAROUSEL_SLIDES[0].alt_nl : isFrench ? CAROUSEL_SLIDES[0].alt_fr : isSpanish ? CAROUSEL_SLIDES[0].alt_es : CAROUSEL_SLIDES[0].alt_en}
+          alt={isItalian ? CAROUSEL_SLIDES[0].alt_it : isGerman ? CAROUSEL_SLIDES[0].alt_de : isDutch ? CAROUSEL_SLIDES[0].alt_nl : isFrench ? CAROUSEL_SLIDES[0].alt_fr : isSpanish ? CAROUSEL_SLIDES[0].alt_es : isPortuguese ? CAROUSEL_SLIDES[0].alt_pt : CAROUSEL_SLIDES[0].alt_en}
           loading="eager"
           fetchPriority="high"
         />
       )}
-      <button type="button" onClick={prev} className="l-shot-nav l-shot-prev" aria-label={isItalian ? 'Precedente' : isGerman ? 'Zurück' : isDutch ? 'Vorige' : isFrench ? 'Précédent' : isSpanish ? 'Anterior' : 'Previous'}>
+      <button type="button" onClick={prev} className="l-shot-nav l-shot-prev" aria-label={isItalian ? 'Precedente' : isGerman ? 'Zurück' : isDutch ? 'Vorige' : isFrench ? 'Précédent' : isSpanish ? 'Anterior' : isPortuguese ? 'Anterior' : 'Previous'}>
         <ArrowRight size={18} style={{ transform: 'rotate(180deg)' }} />
       </button>
-      <button type="button" onClick={next} className="l-shot-nav l-shot-next" aria-label={isItalian ? 'Successiva' : isGerman ? 'Weiter' : isDutch ? 'Volgende' : isFrench ? 'Suivant' : isSpanish ? 'Siguiente' : 'Next'}>
+      <button type="button" onClick={next} className="l-shot-nav l-shot-next" aria-label={isItalian ? 'Successiva' : isGerman ? 'Weiter' : isDutch ? 'Volgende' : isFrench ? 'Suivant' : isSpanish ? 'Siguiente' : isPortuguese ? 'Seguinte' : 'Next'}>
         <ArrowRight size={18} />
       </button>
       <div className="l-shot-dots">
@@ -291,7 +318,7 @@ function ScreenCarousel({ isItalian, isGerman = false, isDutch = false, isFrench
             type="button"
             onClick={() => setCurrent(i)}
             className={i === current ? 'on' : ''}
-            aria-label={`${isItalian ? 'Schermata' : isGerman ? 'Ansicht' : isDutch ? 'Weergave' : isFrench ? 'Vue' : isSpanish ? 'Vista' : 'Slide'} ${i + 1}`}
+            aria-label={`${isItalian ? 'Schermata' : isGerman ? 'Ansicht' : isDutch ? 'Weergave' : isFrench ? 'Vue' : isSpanish ? 'Vista' : isPortuguese ? 'Ecrã' : 'Slide'} ${i + 1}`}
           />
         ))}
       </div>
@@ -350,11 +377,11 @@ const GPS_PRIVACY_CONTENT: Record<string, {
     tags: ['RGPD art. 13', 'LOPDGDD art. 90', 'Firma como enterado', 'Documento archivado', 'Sin fichar antes de firmar', 'Cero papel'],
   },
   pt: {
-    title: 'Autorização GPS automática para cada colaborador',
-    p1: 'Quando convida um novo colaborador, o Flow gera automaticamente o aviso de privacidade GPS conforme ao RGPD e envia-o para assinatura digital. O colaborador preenche os seus dados, lê o documento e assina com um clique, tudo online, sem papel.',
-    p2: 'O PDF assinado é arquivado automaticamente e você vê em tempo real quem assinou e quem não assinou. Sem papéis soltos, sem risco de sanções: cada consentimento fica registado com data, hora e assinatura digital.',
-    legal: 'Conforme ao RGPD e às orientações da CNPD (Comissão Nacional de Proteção de Dados). O Código do Trabalho (art. 20.º) exige proporcionalidade e informação prévia ao trabalhador.',
-    tags: ['RGPD conforme', 'CNPD', 'Código do Trabalho', 'Assinatura digital', 'PDF arquivado', 'Zero papel'],
+    title: 'A informação sobre o GPS, para cada colaborador',
+    p1: 'Quando convida um novo colaborador, o Flow prepara a informação sobre a geolocalização com os dados da sua empresa e envia-a. O colaborador preenche os seus dados, lê o documento e assina-o como tomada de conhecimento, tudo a partir do telemóvel, sem papel. Enquanto não a tiver assinado, a aplicação não o deixa picar o ponto.',
+    p2: 'O documento assinado fica arquivado e, no Flow, vê quem assinou e quem não assinou. Acabaram-se os papéis soltos: cada assinatura fica registada com data e hora. A assinatura prova que a informação foi entregue; não é um consentimento, e não precisa de o ser.',
+    legal: 'Em Portugal, o Código do Trabalho (arts. 20.º e 21.º) limita o uso de meios de vigilância à distância, exige informar previamente o trabalhador e pode exigir autorização da CNPD: esses passos continuam a ser do empregador. O GeoTapp foi concebido para se manter dentro desse quadro: localização apenas ao picar o ponto, nunca de forma contínua.',
+    tags: ['RGPD art. 13.º', 'Código do Trabalho arts. 20.º e 21.º', 'Assinatura como tomada de conhecimento', 'Documento arquivado', 'Sem picar o ponto antes de assinar', 'Zero papel'],
   },
   da: {
     title: 'Automatisk GPS-samtykkeerklaring for hver medarbejder',
@@ -523,7 +550,7 @@ export default function GeoTappApp() {
 
       {/* SCHERMATA VERA */}
       <section className="shot"><div className="wn"><div className="frame r-s">
-        <div className="browser"><ScreenCarousel isItalian={isItalian} isGerman={currentLocale === 'de'} isDutch={currentLocale === 'nl'} isFrench={currentLocale === 'fr'} isSpanish={currentLocale === 'es'} /></div>
+        <div className="browser"><ScreenCarousel isItalian={isItalian} isGerman={currentLocale === 'de'} isDutch={currentLocale === 'nl'} isFrench={currentLocale === 'fr'} isSpanish={currentLocale === 'es'} isPortuguese={currentLocale === 'pt'} /></div>
       </div></div></section>
 
       {/* IL GIRO COMPLETO — entra dall'atto in cui la prova arriva in ufficio da
@@ -618,7 +645,7 @@ export default function GeoTappApp() {
         <div className="r-s d1" style={{ display: 'flex', justifyContent: 'center' }}>
           <div className="sheet">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/verifier-report.webp" alt={currentLocale === 'it' ? 'Report sigillato GeoTapp' : currentLocale === 'de' ? 'Versiegelter GeoTapp-Bericht' : currentLocale === 'fr' ? 'Rapport scellé GeoTapp' : currentLocale === 'nl' ? 'Verzegeld GeoTapp-rapport' : currentLocale === 'es' ? 'Informe sellado de GeoTapp' : 'GeoTapp sealed report'} loading="lazy" />
+            <img src="/verifier-report.webp" alt={currentLocale === 'it' ? 'Report sigillato GeoTapp' : currentLocale === 'de' ? 'Versiegelter GeoTapp-Bericht' : currentLocale === 'fr' ? 'Rapport scellé GeoTapp' : currentLocale === 'nl' ? 'Verzegeld GeoTapp-rapport' : currentLocale === 'es' ? 'Informe sellado de GeoTapp' : currentLocale === 'pt' ? 'Relatório selado GeoTapp' : 'GeoTapp sealed report'} loading="lazy" />
           </div>
         </div>
       </div></div></section>

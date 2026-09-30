@@ -25,7 +25,7 @@ const SIDEBAR_LABELS: Record<string, {
   fr: { toc: 'Dans cet article', cta_title: 'Essayez GeoTapp', cta_desc: '14 jours gratuits. Sans carte bancaire. Prêt en 2 minutes.', cta_btn: 'Commencer', share: 'Partager', copied: 'Copié !', product_desc: 'Découvrez comment GeoTapp résout ce problème', product_btn: 'En savoir plus' },
   nl: { toc: 'In dit artikel', cta_title: 'Probeer GeoTapp gratis', cta_desc: '14 dagen gratis proberen. Geen creditcard. Klaar in 2 minuten.', cta_btn: 'Nu starten', share: 'Delen', copied: 'Gekopieerd!', product_desc: 'Ontdek hoe GeoTapp dit probleem oplost', product_btn: 'Meer informatie' },
   es: { toc: 'En este artículo', cta_title: 'Prueba GeoTapp gratis', cta_desc: '14 días gratis. Sin tarjeta de crédito. Listo en 2 minutos.', cta_btn: 'Empieza ahora', share: 'Compartir', copied: '¡Copiado!', product_desc: 'Descubre cómo GeoTapp resuelve esto', product_btn: 'Saber más' },
-  pt: { toc: 'Neste artigo', cta_title: 'Experimenta o GeoTapp grátis', cta_desc: '14 dias grátis. Sem cartão de crédito. Pronto em 2 minutos.', cta_btn: 'Começar agora', share: 'Partilhar', copied: 'Copiado!', product_desc: 'Descobre como o GeoTapp resolve isto', product_btn: 'Saber mais' },
+  pt: { toc: 'Neste artigo', cta_title: 'Experimente o GeoTapp grátis', cta_desc: '14 dias de teste gratuito. Sem cartão de crédito. Pronto em 2 minutos.', cta_btn: 'Começar agora', share: 'Partilhar', copied: 'Copiado!', product_desc: 'Descubra como o GeoTapp resolve este problema', product_btn: 'Saber mais' },
   da: { toc: 'I denne artikel', cta_title: 'Prøv GeoTapp gratis', cta_desc: '14 dages gratis prøve. Intet kreditkort. Klar på 2 minutter.', cta_btn: 'Start nu', share: 'Del', copied: 'Kopieret!', product_desc: 'Se hvordan GeoTapp løser dette', product_btn: 'Læs mere' },
   sv: { toc: 'I den här artikeln', cta_title: 'Prova GeoTapp gratis', cta_desc: '14 dagars gratis provperiod. Inget kreditkort. Klart på 2 minuter.', cta_btn: 'Börja nu', share: 'Dela', copied: 'Kopierat!', product_desc: 'Se hur GeoTapp löser det här', product_btn: 'Läs mer' },
   nb: { toc: 'I denne artikkelen', cta_title: 'Prøv GeoTapp gratis', cta_desc: '14 dagers gratis prøve. Ingen kredittkort. Klar på 2 minutter.', cta_btn: 'Start nå', share: 'Del', copied: 'Kopiert!', product_desc: 'Se hvordan GeoTapp løser dette', product_btn: 'Les mer' },
@@ -40,7 +40,7 @@ const EU_BADGE: Record<string, { title: string; desc: string }> = {
   nl: { title: 'Uw gegevens blijven in Europa', desc: 'Registraties, foto\'s en gegevens op servers in de EU.' },
   fr: { title: 'Vos données restent en Europe', desc: 'Pointages, photos et données sur des serveurs dans l’UE.' },
   es: { title: 'Tus datos se quedan en Europa', desc: 'Fichajes, fotos y datos en servidores de la UE.' },
-  pt: { title: 'Os teus dados ficam na Europa', desc: 'Registos, fotos e dados em servidores da UE.' },
+  pt: { title: 'Os seus dados ficam na Europa', desc: 'Picagens, fotos e dados pessoais em servidores da UE.' },
   da: { title: 'Dine data bliver i Europa', desc: 'Registreringer, fotos og data på EU-servere.' },
   sv: { title: 'Dina data stannar i Europa', desc: 'Stämplingar, foton och data på EU-servrar.' },
   nb: { title: 'Dataene dine blir i Europa', desc: 'Registreringer, bilder og data på EU-servere.' },
@@ -115,7 +115,7 @@ function ShareButtons({ title, copiedLabel, locale }: { title: string; copiedLab
       ))}
       <button
         onClick={handleCopy}
-        aria-label={locale === 'nl' ? 'Link kopiëren' : locale === 'fr' ? 'Copier le lien' : locale === 'es' ? 'Copiar enlace' : 'Copy link'}
+        aria-label={locale === 'nl' ? 'Link kopiëren' : locale === 'fr' ? 'Copier le lien' : locale === 'es' ? 'Copiar enlace' : locale === 'pt' ? 'Copiar ligação' : 'Copy link'}
         className={`p-2 rounded-lg transition-all duration-200 ${copied ? 'text-green-500 bg-green-50' : 'text-slate-400 hover:bg-slate-50'}`}
         onMouseEnter={(e) => { if (!copied) e.currentTarget.style.color = '#22B573'; }}
         onMouseLeave={(e) => { if (!copied) e.currentTarget.style.color = ''; }}

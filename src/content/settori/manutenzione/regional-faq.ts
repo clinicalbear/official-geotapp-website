@@ -10,7 +10,7 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   de: 'Vorschriften und Nachweise in Deutschland',
   fr: 'Règles et documents',
   es: 'Normativa y documentación en España',
-  pt: 'Conformidade em Portugal',
+  pt: 'Normas e registos em Portugal',
   nl: 'Regels en documentatie in Nederland',
   'en-us': 'Regional rules and records',
   'en-gb': 'Regional rules and records',
@@ -78,16 +78,16 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   ],
   pt: [
     {
-      q: 'Horas e intervenções multissítio segundo a CCT aplicável?',
-      a: 'Horas por técnico e por local, disponibilidade e ajudas de custo e conservação dos dados, registados em cada intervenção de manutenção.',
+      q: 'Horas das intervenções de manutenção em vários locais?',
+      a: 'O GeoTapp regista em cada picagem entrada, pausas e saída com localização e hora, por técnico e por local, e exporta-as em Excel ou CSV para o seu contabilista ou consultor laboral. A aplicação da convenção coletiva (acréscimos, ajudas de custo) e o processamento dos salários continuam a cargo do contabilista ou consultor e da empresa.',
     },
     {
-      q: 'RGPD e CNPD na geolocalização dos técnicos?',
-      a: 'Geolocalização apenas durante o tempo de trabalho, com informação prévia, interesse legítimo e direito de acesso, dentro dos critérios da CNPD.',
+      q: 'Geolocalização de técnicos de manutenção: RGPD e proteção de dados?',
+      a: 'A localização só é registada ao picar o ponto e com as fotos de prova, nunca de forma contínua, e a informação aos trabalhadores assina-se na app antes de picar. Cabe à empresa verificar o que exigem, no seu caso, o RGPD (interesse legítimo), o Código do Trabalho (meios de vigilância à distância) e a informação às estruturas de representação dos trabalhadores.',
     },
     {
       q: 'Segurança no trabalho e inspeções periódicas?',
-      a: 'Associação da avaliação de riscos e das inspeções regulamentares à qualificação do técnico, com histórico por local.',
+      a: 'O GeoTapp não gere a aptidão do pessoal nem a avaliação de riscos. Regista cada visita com hora, localização e foto e conserva o histórico por local e por técnico, que pode mostrar ao cliente.',
     },
   ],
   nl: [

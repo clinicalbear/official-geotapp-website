@@ -243,13 +243,13 @@ export default function SurveyForm({ locale }: { locale: string }) {
 
       {side && !complete && (
         <p className="mt-3 text-center text-sm text-slate-400">
-          {key === 'it' ? 'Rispondi a tutte le domande per inviare.' : 'Please answer all questions to submit.'}
+          {key === 'it' ? 'Rispondi a tutte le domande per inviare.' : key === 'pt' ? 'Responda a todas as perguntas para enviar.' : 'Please answer all questions to submit.'}
         </p>
       )}
 
       {status === 'error' && (
         <p className="mt-3 text-center text-sm text-red-500">
-          {key === 'it' ? 'Qualcosa non ha funzionato. Riprova.' : 'Something went wrong. Please try again.'}
+          {key === 'it' ? 'Qualcosa non ha funzionato. Riprova.' : key === 'pt' ? 'Algo correu mal. Tente novamente.' : 'Something went wrong. Please try again.'}
         </p>
       )}
     </form>

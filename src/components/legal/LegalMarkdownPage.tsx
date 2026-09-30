@@ -33,7 +33,7 @@ const LEGAL_NAV_LABELS: Record<LegalSlug, Record<string, string>> = {
   },
   terms: {
     it: 'Termini di Servizio', en: 'Terms of Use', de: 'Nutzungsbedingungen',
-    fr: "Conditions d'utilisation", es: 'Condiciones de uso', pt: 'Termos de utilização',
+    fr: "Conditions d'utilisation", es: 'Condiciones de uso', pt: 'Termos de serviço',
     nl: 'Gebruiksvoorwaarden', da: 'Brugsvilkår', nb: 'Bruksvilkår',
     sv: 'Användarvillkor', ru: 'Условия использования',
   },

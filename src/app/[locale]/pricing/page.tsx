@@ -200,6 +200,16 @@ function buildPricingFAQ(locale: AppLocale): Record<string, object> {
         { '@type': 'Question', name: 'Zijn er verborgen kosten?', acceptedAnswer: { '@type': 'Answer', text: 'Nee. Ondersteuning en updates zijn inbegrepen, en GeoTapp Verifier, waarmee uw klanten de rapporten controleren, is gratis.' } },
       ],
     },
+    pt: {
+      '@context': 'https://schema.org', '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: 'O GeoTapp tem um período de teste gratuito?', acceptedAnswer: { '@type': 'Answer', text: 'Sim. O teste dura 14 dias e não pede cartão de crédito.' } },
+        { '@type': 'Question', name: 'Quanto custa o GeoTapp?', acceptedAnswer: { '@type': 'Answer', text: `O GeoTapp Flow, o painel web, custa 39 € por mês com o plano Solo, 99 € com o Team e 199 € com o Business (390, 990 e 1.990 € se pagar o ano de uma só vez). Os postos da aplicação TimeTracker somam-se à parte: ${monthlyRate} por operador por mês até ao posto 25, 2,50 € a partir do 26.º. Preços sem IVA.` } },
+        { '@type': 'Question', name: 'Quanto custa para uma equipa de 5 operadores?', acceptedAnswer: { '@type': 'Answer', text: `Ao plano Flow escolhido somam-se 5 postos do TimeTracker: ${fiveOpsMonthly} por mês, ${fiveOpsAnnual} por ano se pagar o ano inteiro. Não há custos de ativação.` } },
+        { '@type': 'Question', name: 'Existe uma duração mínima?', acceptedAnswer: { '@type': 'Answer', text: 'Sim. A subscrição dura pelo menos 12 meses, que podem ser pagos de uma só vez ou em prestações mensais. Pode passar para um plano superior quando quiser, a partir do painel.' } },
+        { '@type': 'Question', name: 'Há custos escondidos?', acceptedAnswer: { '@type': 'Answer', text: 'Não. O suporte e as atualizações estão incluídos, e o GeoTapp Verifier, com o qual os seus clientes verificam os relatórios, é gratuito.' } },
+      ],
+    },
   };
 }
 
@@ -223,7 +233,7 @@ const PRICING_META: Record<string, { title: string; description: string }> = {
   de: { title: 'GeoTapp Preise: Tarife für Teams im Außendienst, 14 Tage kostenlos', description: 'Büro-Tarife für Flow, ein Platz pro Mitarbeiter im TimeTracker, 14 Tage kostenlos ohne Karte. Sehen Sie vor dem Start, was jeder Tarif enthält.' },
   fr: { title: 'Tarifs GeoTapp : formules pour équipes, essai de 14 jours', description: 'Formules bureau pour Flow, un poste par opérateur sur TimeTracker, 14 jours gratuits sans carte. Voyez ce que comprend chaque formule avant de commencer.' },
   es: { title: 'Precios GeoTapp: planes para equipos, prueba de 14 días', description: 'Planes de oficina para Flow, un puesto por operario en TimeTracker, 14 días gratis sin tarjeta. Mira qué incluye cada plan antes de empezar.' },
-  pt: { title: 'Preços GeoTapp - Planos e subscrições | GeoTapp', description: 'Planos GeoTapp: avaliação 14 dias grátis, subscrições mensais para equipas com ponto GPS, turnos e relatórios verificáveis.' },
+  pt: { title: 'Preços GeoTapp: planos para equipas, teste de 14 dias', description: 'Planos de escritório para o Flow, um posto por operador no TimeTracker, 14 dias grátis sem cartão. Veja o que inclui cada plano antes de começar.' },
   nl: { title: 'GeoTapp-prijzen - Abonnementen | GeoTapp', description: 'Ontdek de GeoTapp-abonnementen: 14 dagen gratis proberen, abonnementen voor teams met registratie met locatie, dienstbeheer en controle van rapporten. Geen verborgen kosten.' },
   ru: { title: 'Цены GeoTapp, Тарифы и подписки | GeoTapp', description: 'Изучите планы GeoTapp: бесплатный базовый план, ежемесячные подписки для команд с GPS-учётом времени, управлением сменами и проверкой отчётов.' },
   da: { title: 'GeoTapp Priser - Planer og abonnementer | GeoTapp', description: 'Udforsk GeoTapp-planer: 14 dages gratis prøveperiode, månedlige abonnementer for teams med GPS-tidsregistrering, vagtplanlægning og rapportverificering.' },

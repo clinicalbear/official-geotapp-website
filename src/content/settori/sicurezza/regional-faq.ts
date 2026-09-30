@@ -10,7 +10,7 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   de: 'Vorschriften und Nachweise in Deutschland',
   fr: 'Règles et documents',
   es: 'Normativa y documentación en España',
-  pt: 'Conformidade em Portugal',
+  pt: 'Normas e registos em Portugal',
   nl: 'Regels en documentatie in Nederland',
   'en-us': 'Regional rules and records',
   'en-gb': 'Regional rules and records',
@@ -78,16 +78,16 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   ],
   pt: [
     {
-      q: 'Turnos e horas segundo a CCT da segurança privada?',
-      a: 'Horas por vigilante e por serviço, acréscimos noturnos e de feriado e conservação dos dados, com cobertura de turnos atualizada a cada registo de ponto.',
+      q: 'Turnos e horas dos vigilantes?',
+      a: 'O GeoTapp regista em cada picagem entrada, pausas e saída com localização e hora, por vigilante e por serviço, e exporta-as em Excel ou CSV para o seu contabilista ou consultor laboral. Os acréscimos noturnos e de feriados e a aplicação da convenção coletiva continuam a cargo do contabilista ou consultor e da empresa.',
     },
     {
-      q: 'RGPD e CNPD na geolocalização dos vigilantes?',
-      a: 'Geolocalização apenas durante o tempo de trabalho, com informação prévia, interesse legítimo e direito de acesso, dentro dos critérios da CNPD.',
+      q: 'Geolocalização de vigilantes: RGPD e proteção de dados?',
+      a: 'A localização só é registada ao picar o ponto e com as fotos de prova, nunca de forma contínua, e a informação aos trabalhadores assina-se na app antes de picar. Cabe à empresa verificar o que exigem, no seu caso, o RGPD (interesse legítimo), o Código do Trabalho (meios de vigilância à distância) e a informação às estruturas de representação dos trabalhadores.',
     },
     {
-      q: 'Lei 34/2013 e cartão profissional do vigilante?',
-      a: 'Associação de cada serviço a vigilantes com cartão profissional válido, conforme a Lei 34/2013 da segurança privada, com histórico de validade.',
+      q: 'Licenças, cartão profissional e autorizações?',
+      a: 'O GeoTapp não gere licenças, cartões profissionais de vigilante nem os procedimentos junto das autoridades competentes. Regista quem picou o ponto, onde e quando em cada serviço, e esse histórico pode ser mostrado ao cliente.',
     },
   ],
   nl: [

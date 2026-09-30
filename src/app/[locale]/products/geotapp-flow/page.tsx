@@ -22,7 +22,7 @@ const flowMeta: Record<string, { title: string; description: string }> = {
   fr: { title: 'GeoTapp Flow - Gestion des interventions et des équipes', description: 'L\'application web du bureau pour les entreprises avec techniciens sur le terrain : chantiers, équipes, factures et rapports scellés que le client vérifie seul.' },
   es: { title: 'GeoTapp Flow - Gestión de intervenciones y equipos', description: 'La aplicación web de la oficina para empresas con técnicos sobre el terreno: obras, equipos, facturas e informes sellados que el cliente verifica por sí mismo.' },
   nl: { title: 'GeoTapp Flow - Operationeel beheer van klussen en teams', description: 'De webapp van het kantoor voor bedrijven met monteurs in het veld: klanten, opdrachten, teams, diensten, facturen en verzegelde rapporten die de klant zelf controleert.' },
-  pt: { title: 'GeoTapp Flow - Gestão Operacional de Intervenções', description: 'GeoTapp Flow é o sistema operacional para empresas com técnicos de campo. Gerencie ordens de serviço, atribua tarefas e produza relatórios verificáveis.' },
+  pt: { title: 'GeoTapp Flow - Gestão de intervenções e equipas', description: 'A aplicação web do escritório para empresas com técnicos no terreno: obras, equipas, faturas e relatórios selados que o cliente verifica sozinho.' },
   sv: { title: 'GeoTapp Flow - Operativ Hantering av Interventioner', description: 'GeoTapp Flow är det operativa systemet för företag med fälttekniker. Hantera uppdrag, tilldela uppgifter och skapa verifierbara rapporter.' },
   da: { title: 'GeoTapp Flow - Operationel Håndtering af Interventioner', description: 'GeoTapp Flow er det operative system for virksomheder med serviceteknikere. Administrer opgaver, tildel arbejde og generer verificerbare rapporter.' },
   nb: { title: 'GeoTapp Flow - Operativ Håndtering av Intervensjoner', description: 'GeoTapp Flow er det operative systemet for bedrifter med serviceteknikere. Administrer oppdrag, tildel oppgaver og generer verifiserbare rapporter.' },
@@ -124,6 +124,20 @@ const FLOW_FAQ: Record<string, object> = {
       { '@type': 'Question', name: '¿Cómo asigno las obras a los equipos con GeoTapp Flow?', acceptedAnswer: { '@type': 'Answer', text: 'Creas la obra desde la oficina, asignas al técnico o al equipo, y el operario la encuentra en la aplicación TimeTracker. Cuando se cierra la intervención, el informe vuelve a Flow, ya verificable, sin tener que perseguir a nadie para saber cómo ha ido.' } },
     ],
   },
+  pt: {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: 'O que é o GeoTapp Flow?', acceptedAnswer: { '@type': 'Answer', text: 'O GeoTapp Flow é a aplicação web do escritório para empresas com técnicos no terreno. Permite criar obras, atribuir tarefas, acompanhar o avanço e enviar ao cliente relatórios selados que este pode verificar sozinho.' } },
+      { '@type': 'Question', name: 'O que acontece se não houver rede?', acceptedAnswer: { '@type': 'Answer', text: 'O Flow, o painel do escritório, utiliza-se no navegador e precisa de ligação. No TimeTracker, a aplicação dos técnicos, se não houver rede a picagem fica guardada no telemóvel e segue sozinha quando o sinal volta, com a hora a que foi feita.' } },
+      { '@type': 'Question', name: 'O GeoTapp Flow integra-se com outros programas de gestão?', acceptedAnswer: { '@type': 'Answer', text: 'Sim: o Flow exporta os dados para a faturação e para o processamento salarial (Excel/CSV) e liga-se ao Fatture in Cloud. Para outros programas de gestão, a integração avalia-se a pedido.' } },
+      { '@type': 'Question', name: 'Quantos técnicos pode gerir o GeoTapp Flow?', acceptedAnswer: { '@type': 'Answer', text: 'Desde o plano Solo, com um utilizador no escritório, até ao plano Business, com equipas ilimitadas em vários locais. Os postos do TimeTracker para os operadores acrescem à parte, consoante o plano.' } },
+      { '@type': 'Question', name: 'O cliente pode fiar-se dos relatórios gerados pelo Flow?', acceptedAnswer: { '@type': 'Answer', text: 'Não precisa de se fiar: pode verificar. Os relatórios do GeoTapp são selados criptograficamente e o cliente verifica a sua integridade sozinho com o GeoTapp Verifier, sem acesso à sua conta. A verificação diz se o documento foi alterado; por si só, não é prova absoluta do facto material nem aconselhamento jurídico.' } },
+      { '@type': 'Question', name: 'O GeoTapp Flow mostra onde estão os técnicos?', acceptedAnswer: { '@type': 'Answer', text: 'Não, e não é um esquecimento. A localização só é registada quando o técnico pica o ponto (entrada, pausas, saída) ou tira uma fotografia de prova, nunca de forma contínua: o Flow diz-lhe que o trabalho começou no local certo e a que horas, não o faz seguir um ponto no mapa o dia todo. É a diferença entre prova do trabalho e vigilância.' } },
+      { '@type': 'Question', name: 'Para que empresas foi pensado o GeoTapp Flow?', acceptedAnswer: { '@type': 'Answer', text: 'Para quem tem equipas que trabalham fora da sede: empresas de limpeza, vigilância, manutenção, instaladores, eletricistas, canalizadores e multisserviços. Se os seus operadores passam o dia no terreno e não no escritório, o Flow nasceu para isso.' } },
+      { '@type': 'Question', name: 'Como atribuo obras às equipas com o GeoTapp Flow?', acceptedAnswer: { '@type': 'Answer', text: 'Cria a obra no escritório, atribui o técnico ou a equipa, e o operador encontra-a na aplicação TimeTracker. Quando a intervenção termina, o relatório volta ao Flow, já verificável, sem ter de andar atrás de ninguém para saber como correu.' } },
+    ],
+  },
   nl: {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -147,7 +161,7 @@ const FLOW_DESCRIPTION: Record<string, string> = {
   fr: "GeoTapp Flow est l'application web du bureau pour les entreprises avec des techniciens sur le terrain : créer des chantiers, assigner des tâches, suivre l'avancement et envoyer au client des rapports scellés qu'il vérifie lui-même.",
   es: 'GeoTapp Flow es la aplicación web de la oficina para empresas con técnicos sobre el terreno: crea obras, asigna tareas, sigue el avance y envía al cliente informes sellados que verifica por sí mismo.',
   nl: 'GeoTapp Flow is het operationele systeem voor bedrijven met monteurs in het veld: maak opdrachten aan, wijs taken toe, volg de voortgang en maak verzegelde, controleerbare rapporten.',
-  pt: 'GeoTapp Flow é a plataforma de gestão operacional para empresas com técnicos de campo: crie ordens, atribua tarefas, monitorize o progresso e produza relatórios selados verificáveis em tempo real.',
+  pt: 'O GeoTapp Flow é a aplicação web do escritório para empresas com técnicos no terreno: crie obras, atribua tarefas, acompanhe o avanço e envie ao cliente relatórios selados que este verifica sozinho.',
   da: 'GeoTapp Flow er den operationelle administrationsplatform til virksomheder med serviceteknikere: opret opgaver, tildel arbejde, overvåg fremskridt og generér forseglede, verificerbare rapporter i realtid.',
   sv: 'GeoTapp Flow är den operativa hanteringsplattformen för företag med fälttekniker: skapa uppdrag, tilldela uppgifter, övervaka framsteg och generera förseglade, verifierbara rapporter i realtid.',
   nb: 'GeoTapp Flow er den operative administrasjonsplattformen for bedrifter med serviceteknikere: opprett oppdrag, tildel oppgaver, overvåk fremdrift og generer forseglede, verifiserbare rapporter i sanntid.',
@@ -204,6 +218,16 @@ const FLOW_FEATURES: Record<string, string[]> = {
     'Integración nativa con GeoTapp TimeTracker y Verifier',
     'Exportación de datos para la facturación y las nóminas',
     'Información sobre el GPS firmada como enterado en la aplicación antes del primer fichaje',
+  ],
+  pt: [
+    'Gestão de obras e intervenções em vários locais',
+    'Atribuição de tarefas aos técnicos no terreno',
+    'Avanço das obras acompanhado passo a passo',
+    'Relatórios selados criptograficamente e verificáveis de forma independente',
+    'Fotografias de prova com hora e localização',
+    'Integração nativa com o GeoTapp TimeTracker e o Verifier',
+    'Exportação de dados para a faturação e o processamento salarial',
+    'Informação sobre o GPS assinada como tomada de conhecimento na aplicação antes da primeira picagem',
   ],
   nl: [
     'Beheer van opdrachten en klussen op meerdere locaties',
@@ -263,6 +287,8 @@ function buildFlowSoftware(locale: AppLocale) {
         ? `Essai gratuit de 14 jours. Formules payantes à partir de ${soloMonthly.formatted} par mois (Flow Solo), hors TVA.`
         : locale === 'es'
         ? `Prueba gratuita de 14 días. Planes de pago desde ${soloMonthly.formatted} al mes (Flow Solo), IVA no incluido.`
+        : locale === 'pt'
+        ? `Teste gratuito de 14 dias. Planos pagos a partir de ${soloMonthly.formatted} por mês (Flow Solo), IVA não incluído.`
         : `14-day free trial. Paid plans from ${soloMonthly.formatted} per month (Flow Solo).`,
     },
     publisher: { '@id': 'https://geotapp.com/#organization' },

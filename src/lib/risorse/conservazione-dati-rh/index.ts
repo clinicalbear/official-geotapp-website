@@ -325,9 +325,9 @@ const CONTENUTI: Record<CdLocale, CdContenuto> = {
     unitAnni: 'anos',
     perPaeseNota: 'Fixado pela lei contabilística/fiscal nacional',
     tipi: [
-      { id: 'presenze', nome: 'Presenças e marcações de ponto', durata: 'Duração da relação + prazos de prescrição salarial (muitas vezes até 5 anos)', nota: 'Provam horas trabalhadas e salários devidos: o prazo segue as regras de prescrição do seu país.' },
-      { id: 'geolocalizzazione', nome: 'Dados de geolocalização', durata: 'O mais curto possível (indicativo: 12 meses); de preferência só o ponto da marcação, não o rasto contínuo', nota: 'É o dado mais sensível: conserve o mínimo indispensável e elimine assim que deixar de servir a finalidade.' },
-      { id: 'foto', nome: 'Fotos de intervenção / prova do trabalho', durata: 'O tempo necessário a litígios ou garantia (indicativo: 12-24 meses ou duração do contrato com o cliente)', nota: 'Guarde-as enquanto servirem de prova do trabalho realizado, depois elimine-as ou anonimize-as.' },
+      { id: 'presenze', nome: 'Picagens e registos de assiduidade', durata: 'Duração da relação + prazos de prescrição salarial (muitas vezes até 5 anos)', nota: 'Provam horas trabalhadas e salários devidos: o prazo segue as regras de prescrição do seu país.' },
+      { id: 'geolocalizzazione', nome: 'Dados de geolocalização', durata: 'O mais curto possível (indicativo: 12 meses); de preferência só o ponto da picagem, não o rasto contínuo', nota: 'É o dado mais sensível: conserve o mínimo indispensável e elimine assim que deixar de servir a finalidade.' },
+      { id: 'foto', nome: 'Fotografias de intervenção / prova do trabalho', durata: 'O tempo necessário a litígios ou garantia (indicativo: 12-24 meses ou duração do contrato com o cliente)', nota: 'Guarde-as enquanto servirem de prova do trabalho realizado, depois elimine-as ou anonimize-as.' },
       { id: 'comunicazioni', nome: 'Comunicações de serviço (chat, mensagens)', durata: 'Indicativo: 6-12 meses', nota: 'Evite conservar conversas além do tempo útil à organização do trabalho.' },
       { id: 'valutazioni', nome: 'Avaliações e notas disciplinares', durata: 'Duração da relação + prazos de impugnação', nota: 'Conserve-as só se ligadas a procedimentos ou obrigações; elimine as que já não sejam relevantes.' },
       { id: 'documenti', nome: 'Documentos contratuais e recibos de vencimento', durata: 'Conforme as obrigações contabilísticas e fiscais (indicativo: 5-10 anos)', nota: 'O prazo é fixado pela lei contabilística/fiscal do seu país.', perPaese: true },

@@ -10,7 +10,7 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   de: 'Vorschriften und Nachweise in Deutschland',
   fr: 'Règles et justificatifs en France',
   es: 'Normativa y documentación en España',
-  pt: 'Conformidade em Portugal',
+  pt: 'Regras e documentação em Portugal',
   nl: 'Regels en documentatie in Nederland',
   'en-us': 'Regional rules and records',
   'en-gb': 'Regional rules and records',
@@ -78,16 +78,16 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   ],
   pt: [
     {
-      q: 'Horas e instalações segundo a CCT da metalurgia?',
-      a: 'Horas por técnico e por instalação, disponibilidade e ajudas de custo e conservação dos dados, registados em cada intervenção.',
+      q: 'Horas e instalações dos técnicos?',
+      a: 'GeoTapp regista em cada picagem entrada, pausas e saída com posição e hora, por técnico e por instalação, e exporta-as para Excel ou CSV para o seu contabilista ou gabinete de processamento salarial. A aplicação do contrato coletivo (subsídios, ajudas de custo) e o processamento dos salários continuam a cargo do contabilista e da empresa.',
     },
     {
-      q: 'RGPD e CNPD na geolocalização dos técnicos?',
-      a: 'Geolocalização apenas durante o tempo de trabalho, com informação prévia, interesse legítimo e direito de acesso, dentro dos critérios da CNPD.',
+      q: 'Geolocalização dos técnicos: RGPD e CNPD?',
+      a: 'A posição só é registada ao picar o ponto e com as fotos de prova, nunca de forma contínua, e a informação aos trabalhadores é assinada na app antes de picar. Cabe à empresa verificar o que exigem, no seu caso, o RGPD (interesse legítimo), os artigos 20.º e 21.º do Código do Trabalho e a CNPD.',
     },
     {
-      q: 'Inspeções periódicas e certificação DGEG?',
-      a: 'Associação de cada manutenção e inspeção regulamentar à certificação DGEG do técnico, com o histórico de suporte ao termo de responsabilidade.',
+      q: 'Inspeções periódicas regulamentares?',
+      a: 'GeoTapp não gere as habilitações dos técnicos nem as inspeções periódicas regulamentares. Regista a hora, a posição, as fotos e as notas de cada intervenção e de cada revisão, que pode anexar ao processo da inspeção.',
     },
   ],
   nl: [

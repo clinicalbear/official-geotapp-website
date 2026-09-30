@@ -103,9 +103,9 @@ const COPY: Record<InfLocale, Copy> = {
     footer: 'Concept gratis gegenereerd met GeoTapp',
   },
   pt: {
-    title: 'Baixe o modelo gratuito de aviso de privacidade GPS para {paese}',
-    desc: 'Modelo de aviso de privacidade para a geolocalização de funcionários, conforme o art. 13 do RGPD, com a base jurídica e a autoridade de controlo do país. Preencha os campos em branco e mande verificar pelo seu consultor.',
-    download: 'Baixar o modelo (PDF)',
+    title: 'Descarregue o modelo gratuito do aviso de privacidade sobre GPS para {paese}',
+    desc: 'Modelo de aviso de privacidade para a geolocalização de trabalhadores, construído sobre o conteúdo do art. 13 do RGPD, com a base jurídica e a autoridade de controlo do país. Preencha os campos em branco e mande revê-lo pelo seu consultor.',
+    download: 'Descarregar o modelo (PDF)',
     prompt: 'Também quer os próximos guias práticos sobre GPS e gestão de equipas no terreno? Deixe o seu e-mail (opcional).',
     placeholder: 'O seu e-mail',
     btn: 'Subscrever',

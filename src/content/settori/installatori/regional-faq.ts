@@ -10,7 +10,7 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   de: 'Vorschriften und Nachweise in Deutschland',
   fr: 'Règles et documents',
   es: 'Normativa y documentación en España',
-  pt: 'Conformidade em Portugal',
+  pt: 'Normas e registos em Portugal',
   nl: 'Regels en documentatie in Nederland',
   'en-us': 'Regional rules and records',
   'en-gb': 'Regional rules and records',
@@ -78,16 +78,16 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   ],
   pt: [
     {
-      q: 'Tempo e deslocações segundo a CCT da metalurgia?',
-      a: 'Horas por técnico e por obra, ajudas de custo e disponibilidade e conservação dos dados, registados em cada intervenção.',
+      q: 'Horas e deslocações dos instaladores?',
+      a: 'O GeoTapp regista em cada picagem entrada, pausas e saída com localização e hora, por técnico e por obra, e exporta-as em Excel ou CSV para o seu contabilista ou consultor laboral. A aplicação da convenção coletiva (acréscimos, ajudas de custo) e o processamento dos salários continuam a cargo do contabilista ou consultor e da empresa.',
     },
     {
-      q: 'RGPD e CNPD na geolocalização dos instaladores?',
-      a: 'Geolocalização apenas durante o tempo de trabalho, com informação prévia, interesse legítimo e direito de acesso, dentro dos critérios da CNPD.',
+      q: 'Geolocalização de instaladores: RGPD e proteção de dados?',
+      a: 'A localização só é registada ao picar o ponto e com as fotos de prova, nunca de forma contínua, e a informação aos trabalhadores assina-se na app antes de picar. Cabe à empresa verificar o que exigem, no seu caso, o RGPD (interesse legítimo), o Código do Trabalho (meios de vigilância à distância) e a informação às estruturas de representação dos trabalhadores.',
     },
     {
-      q: 'Certificação DGEG/IMPIC do instalador?',
-      a: 'Associação de cada intervenção à certificação do instalador (DGEG/IMPIC), com o histórico de suporte ao termo de responsabilidade.',
+      q: 'Habilitação do instalador e certificados?',
+      a: 'O GeoTapp não verifica habilitações nem certificações de instalador e não gera termos de responsabilidade nem certificados de instalação. Regista a hora, a localização, as fotos e as notas de cada intervenção, para juntar à documentação da instalação.',
     },
   ],
   nl: [

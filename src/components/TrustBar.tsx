@@ -38,10 +38,10 @@ const COPY: Record<string, {
     { title: 'Verificación independiente', sub: 'El cliente comprueba, sin cuenta' },
   ], sectors: 'Limpieza · Construcción · Seguridad · Instaladores · Mantenimiento · Instalaciones' },
   pt: { headline: 'A prova do trabalho no terreno, verificável por qualquer um', claims: [
-    { title: 'Qualquer adulteração é detetável', sub: 'Selo criptográfico em cada intervenção' },
-    { title: 'Registo GPS real', sub: 'Local e hora registados no local' },
+    { title: 'Qualquer alteração posterior fica visível', sub: 'Selo criptográfico em cada relatório' },
+    { title: 'Picagem com localização GPS', sub: 'Local e hora registados no local' },
     { title: 'Verificação independente', sub: 'O cliente verifica, sem conta' },
-  ], sectors: 'Limpeza · Construção · Segurança · Instaladores · Manutenção · AVAC' },
+  ], sectors: 'Limpeza · Construção · Segurança · Instaladores · Manutenção · Instalações' },
   nl: { headline: 'Het bewijs van werk in het veld, door iedereen te controleren', claims: [
     { title: 'Elke latere wijziging is zichtbaar', sub: 'Cryptografische verzegeling op elk rapport' },
     { title: 'Echte registratie met gps', sub: 'Locatie en tijd ter plaatse vastgelegd' },
@@ -80,7 +80,7 @@ export default function TrustBar({ locale }: { locale: string }) {
   return (
     <section
       ref={ref}
-      aria-label={locale === 'nl' ? 'Vertrouwenssignalen' : locale === 'fr' ? 'Points de confiance' : locale === 'es' ? 'Puntos de confianza' : 'Trust signals'}
+      aria-label={locale === 'nl' ? 'Vertrouwenssignalen' : locale === 'fr' ? 'Points de confiance' : locale === 'es' ? 'Puntos de confianza' : locale === 'pt' ? 'Pontos de confiança' : 'Trust signals'}
       className="r relative overflow-hidden"
       style={{
         background: 'linear-gradient(135deg, #f7f9fc 0%, #f2f4f7 50%, #f7f9fc 100%)',

@@ -10,7 +10,7 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   de: 'Vorschriften und Nachweise in Deutschland',
   fr: 'Règles et documents',
   es: 'Normativa y documentación en España',
-  pt: 'Conformidade em Portugal',
+  pt: 'Normas e registos em Portugal',
   nl: 'Regels en documentatie in Nederland',
   'en-us': 'Regional rules and records',
   'en-gb': 'Regional rules and records',
@@ -78,16 +78,16 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   ],
   pt: [
     {
-      q: 'Que registo de tempos exige a CCT da limpeza industrial?',
-      a: 'Horas por trabalhador e por local, acréscimos de trabalho noturno e em dia feriado e a transmissão de estabelecimento na mudança de prestador, registados a cada turno.',
+      q: 'Que registo de horários convém numa empresa de limpeza?',
+      a: 'O GeoTapp regista em cada picagem entrada, pausas e saída com localização e hora, por trabalhador e por local, e exporta-as em Excel ou CSV para o seu contabilista ou consultor laboral. Os acréscimos de trabalho noturno e de feriados, as tabelas salariais da convenção e a aplicação da convenção coletiva continuam a cargo do contabilista ou consultor e da empresa.',
     },
     {
-      q: 'RGPD e CNPD na geolocalização de trabalhadores da limpeza?',
-      a: 'Informação prévia, interesse legítimo e o entendimento da CNPD sobre monitorização laboral: geolocalização apenas durante o tempo de trabalho, com direito de acesso do trabalhador.',
+      q: 'Geolocalização de trabalhadores da limpeza: RGPD e proteção de dados?',
+      a: 'A localização só é registada ao picar o ponto e com as fotos de prova, nunca de forma contínua, e a informação aos trabalhadores assina-se na app antes de picar. Cabe à empresa verificar o que exigem, no seu caso, o RGPD (interesse legítimo), o Código do Trabalho (meios de vigilância à distância) e a informação às estruturas de representação dos trabalhadores.',
     },
     {
-      q: 'RMMG e tabelas da contratação coletiva por trabalhador?',
-      a: 'Reconciliação horas-retribuição face à RMMG e às tabelas da CCT da limpeza, com histórico de diuturnidades e subsídios por trabalhador.',
+      q: 'Mudança de prestador e tabelas salariais?',
+      a: 'O GeoTapp não gere a transmissão de pessoal na mudança de prestador nem as tabelas salariais. Conserva o histórico de horas e presenças de cada trabalhador, exportável em Excel ou CSV: a aplicação da convenção coletiva continua a cargo do contabilista ou consultor.',
     },
   ],
   nl: [

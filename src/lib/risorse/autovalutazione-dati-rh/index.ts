@@ -282,8 +282,8 @@ const CONTENUTI: Record<AvLocale, AvContenuto> = {
     ] },
   },
   pt: {
-    heading: 'Está em conformidade com os dados dos seus colaboradores?',
-    intro: 'Nove perguntas rápidas para ver em que ponto está na proteção dos dados do pessoal: presenças, localização, fotos de obra. Responda com sinceridade — nada sai do seu navegador, esta página não regista nada. No fim obtém uma pontuação e as áreas a trabalhar.',
+    heading: 'Está em regra com os dados dos seus colaboradores?',
+    intro: 'Nove perguntas rápidas para ver em que ponto está na proteção dos dados do pessoal: picagens, localização, fotografias de obra. Responda com sinceridade — nada sai do seu navegador, esta página não regista nada. No fim obtém uma pontuação e as áreas a trabalhar.',
     opt: { si: 'Sim', parziale: 'Em parte', no: 'Não' },
     vediRisultato: 'Ver o resultado',
     ricomincia: 'Recomeçar',
@@ -292,8 +292,8 @@ const CONTENUTI: Record<AvLocale, AvContenuto> = {
     tuttoOk: 'Respondeu «sim» a tudo: uma excelente base. Mantenha ao longo do tempo o que declara alinhado com o que faz realmente.',
     privacyNote: 'Tudo funciona no seu navegador: nenhuma resposta é enviada ou guardada em lado nenhum. É o mesmo princípio de minimização sobre o qual as perguntas incidem.',
     domande: [
-      { id: 'finalita', testo: 'Pôs por escrito uma finalidade concreta para a qual recolhe os dados dos colaboradores (presenças, localização, fotos)?', feedback: 'Deixe por escrito porque recolhe cada dado. Sem uma finalidade clara e concreta não consegue demonstrar a licitude do tratamento, e é o primeiro ponto que uma fiscalização verifica.' },
-      { id: 'minimizzazione', testo: 'Recolhe apenas os dados estritamente necessários a essa finalidade (ex. a localização só na marcação, não em contínuo)?', feedback: 'Fique apenas com o que realmente precisa. Seguir a localização o dia todo quando bastam as horas de entrada e saída é o excesso clássico que desencadeia as coimas.' },
+      { id: 'finalita', testo: 'Pôs por escrito uma finalidade concreta para a qual recolhe os dados dos colaboradores (picagens, localização, fotografias)?', feedback: 'Deixe por escrito porque recolhe cada dado. Sem uma finalidade clara e concreta não consegue demonstrar a licitude do tratamento, e é o primeiro ponto que uma fiscalização verifica.' },
+      { id: 'minimizzazione', testo: 'Recolhe apenas os dados estritamente necessários a essa finalidade (ex. a localização só na picagem, não em contínuo)?', feedback: 'Fique apenas com o que realmente precisa. Seguir a localização o dia todo quando bastam as horas de entrada e saída é o excesso clássico que desencadeia as coimas.' },
       { id: 'base-giuridica', testo: 'Identificou uma base jurídica diferente do consentimento (ex. obrigação contratual ou interesse legítimo)?', feedback: 'Na relação de trabalho o consentimento quase nunca se sustenta, porque o trabalhador não é livre de recusar. Apoie-se no contrato, numa obrigação legal ou no interesse legítimo, e deixe-o por escrito.' },
       { id: 'informativa', testo: 'Entregou aos colaboradores uma informação que explica o que recolhe, porquê e por quanto tempo (art. 13 RGPD)?', feedback: 'Os trabalhadores têm o direito de saber o que trata e porquê. Se não tem uma informação, parta do gerador aqui nos recursos e entregue-a antes de ativar o sistema.' },
       { id: 'conservazione', testo: 'Estabeleceu quanto tempo conserva cada tipo de dado e elimina-os no fim do prazo?', feedback: 'Os dados não se guardam «para sempre, nunca se sabe». Fixe um prazo para cada tipo e elimine no fim: o gerador de política de conservação ao lado dá-lhe prazos indicativos.' },
@@ -312,7 +312,7 @@ const CONTENUTI: Record<AvLocale, AvContenuto> = {
     faq: { title: 'Perguntas frequentes', items: [
       { q: 'Este teste tem valor legal?', a: 'Não: é uma ferramenta de autodiagnóstico para ver em que ponto está, não uma certificação. Ajuda a detetar lacunas e a saber em que trabalhar. Uma verificação formal exige um profissional.' },
       { q: 'As minhas respostas são guardadas?', a: 'Não. Tudo funciona no seu navegador e nunca é enviado ou guardado em lado nenhum. É o mesmo princípio de minimização de dados sobre o qual as perguntas incidem.' },
-      { q: 'Serve só para quem usa GPS?', a: 'Não. As perguntas cobrem todos os dados do pessoal — presenças, fotos, comunicações, avaliações — não só a localização. Servem para qualquer empresa com colaboradores.' },
+      { q: 'Serve só para quem usa GPS?', a: 'Não. As perguntas cobrem todos os dados do pessoal — picagens, fotografias, comunicações, avaliações — não só a localização. Servem para qualquer empresa com colaboradores.' },
     ] },
   },
   da: {

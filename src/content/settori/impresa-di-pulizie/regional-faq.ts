@@ -10,7 +10,7 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   de: 'Vorschriften und Nachweise in Deutschland',
   fr: 'Règles et justificatifs en France',
   es: 'Normativa y documentación en España',
-  pt: 'Conformidade em Portugal',
+  pt: 'Regras e documentação em Portugal',
   nl: 'Regels en documentatie in Nederland',
   'en-us': 'Regional rules and records',
   'en-gb': 'Regional rules and records',
@@ -78,16 +78,16 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   ],
   pt: [
     {
-      q: 'Que comprovativos exige a CCT da limpeza por trabalhador?',
-      a: 'Horas por local, acréscimos noturnos e de feriado e histórico de diuturnidades, além da transmissão de estabelecimento na mudança de prestador.',
+      q: 'Que comprovativos de horas precisa uma empresa de limpeza?',
+      a: 'GeoTapp regista horas, pausas e saídas por trabalhador e por local, com posição e hora, e exporta-as para Excel ou CSV para o seu contabilista ou gabinete de processamento salarial. Os acréscimos noturnos e de feriado, o processamento dos salários e as inspeções continuam a cargo do contabilista e da empresa, que fica com um registo de horários de onde partir.',
     },
     {
-      q: 'Como se cumpre o RGPD e a CNPD na geolocalização?',
-      a: 'Geolocalização apenas durante o tempo de trabalho, com informação prévia, interesse legítimo e direito de acesso do trabalhador, dentro dos critérios da CNPD.',
+      q: 'Geolocalização dos trabalhadores de limpeza: RGPD e CNPD?',
+      a: 'A posição só é registada ao picar o ponto e com as fotos de prova, nunca de forma contínua, e a informação aos trabalhadores é assinada na app antes de picar. Cabe à empresa verificar o que exigem, no seu caso, o RGPD (interesse legítimo), os artigos 20.º e 21.º do Código do Trabalho e a CNPD.',
     },
     {
-      q: 'Como se demonstra a RMMG e as tabelas da CCT?',
-      a: 'Reconciliação horas-retribuição face à RMMG e às tabelas da CCT da limpeza, com histórico de subsídios por trabalhador.',
+      q: 'Como se gere a transmissão ao mudar de prestador?',
+      a: 'GeoTapp não gere a transmissão de estabelecimento nem a aplicação da CCT na mudança de prestador. Conserva o histórico de horas e presenças de cada trabalhador, exportável para Excel ou CSV: a aplicação da CCT continua a cargo do contabilista.',
     },
   ],
   nl: [

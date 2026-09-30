@@ -21,7 +21,7 @@ const appMeta: Record<string, { title: string; description: string }> = {
   fr: { title: 'GeoTapp TimeTracker : pointage GPS pour équipes terrain', description: 'La position est enregistrée à l\'arrivée, à la pause et au départ, rien d\'automatique entre les deux. Les photos sont liées au chantier. 14 jours gratuits.' },
   es: { title: 'GeoTapp TimeTracker: fichaje con GPS para equipos de campo', description: 'La ubicación se registra a la entrada, en la pausa y a la salida, nada automático entre medias. Las fotos van ligadas a la obra. 14 días gratis.' },
   nl: { title: 'GeoTapp TimeTracker - App voor registratie met locatie', description: 'GeoTapp TimeTracker is de app voor monteurs in het veld: registraties met locatie en tijd, bewijsfoto\'s, notities, weekrapporten. Op Android en iOS, gekoppeld aan Flow.' },
-  pt: { title: 'GeoTapp TimeTracker - App de Ponto GPS para Técnicos de Campo', description: 'GeoTapp TimeTracker é o app móvel para técnicos de campo. Registo de presença GPS, provas fotográficas, relatórios semanais e sincronização em tempo real com o Flow.' },
+  pt: { title: 'GeoTapp TimeTracker: picagem com GPS para equipas no terreno', description: 'A localização é registada à entrada, na pausa e à saída, nada de automático pelo meio. As fotografias ficam ligadas à obra. 14 dias grátis.' },
   sv: { title: 'GeoTapp TimeTracker - GPS Tidsrapporterings-App för Fälttekniker', description: 'GeoTapp TimeTracker är appen för GPS-tidsrapportering för fälttekniker. In- och utcheckning, fotodokumentation, veckorapporter och realtidssynkronisering med Flow.' },
   da: { title: 'GeoTapp TimeTracker - GPS Tidsregistrerings-App til Serviceteknikere', description: 'GeoTapp TimeTracker er mobilappen til serviceteknikere. GPS ind- og udtjekning, fotodokumentation, ugentlige rapporter og realtidssynkronisering med Flow.' },
   nb: { title: 'GeoTapp TimeTracker - GPS Tidsregistrerings-App for Serviceteknikere', description: 'GeoTapp TimeTracker er mobilappen for serviceteknikere. GPS inn- og utsjekking, fotodokumentasjon, ukentlige rapporter og sanntidssynkronisering med Flow.' },
@@ -108,6 +108,17 @@ const APP_FAQ: Record<string, object> = {
       { '@type': 'Question', name: '¿GeoTapp TimeTracker cumple el RGPD?', acceptedAnswer: { '@type': 'Answer', text: 'Está diseñado para moverse dentro de ese marco: registra la ubicación solo cuando el trabajador ficha (entrada, pausas, salida) o hace una foto de prueba, nunca de forma continua, y ni siquiera pide el permiso para leer la ubicación en segundo plano. El empleado ve sus fichajes y sus informes en la aplicación. La información y, cuando hace falta, la consulta a la representación de los trabajadores siguen siendo responsabilidad del empresario.' } },
     ],
   },
+  pt: {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: 'O que é o GeoTapp TimeTracker?', acceptedAnswer: { '@type': 'Answer', text: 'O GeoTapp TimeTracker é a aplicação móvel para técnicos que regista assiduidade, atividades e fotografias de prova diretamente no terreno. Tudo acaba no relatório selado, que o cliente verifica sozinho com o GeoTapp Verifier.' } },
+      { '@type': 'Question', name: 'O que acontece se não houver rede?', acceptedAnswer: { '@type': 'Answer', text: 'A picagem fica guardada no telemóvel e segue sozinha quando o sinal volta, com a hora a que foi feita. Até chegar, não se vê no Flow.' } },
+      { '@type': 'Question', name: 'Em que se distingue o GeoTapp TimeTracker de uma simples aplicação de picagem?', acceptedAnswer: { '@type': 'Answer', text: 'O GeoTapp TimeTracker não é só uma picagem: cada turno, com as suas localizações, as fotografias de prova e as notas, acaba num relatório selado com impressões criptográficas. O cliente verifica-o sozinho: qualquer alteração posterior, mesmo por parte do administrador, é detetável.' } },
+      { '@type': 'Question', name: 'O GeoTapp TimeTracker funciona em Android e iOS?', acceptedAnswer: { '@type': 'Answer', text: 'Sim. A aplicação está na Google Play e na App Store. Requer Android 8.0 ou posterior, ou iOS 26.2 ou posterior.' } },
+      { '@type': 'Question', name: 'O GeoTapp TimeTracker cumpre o RGPD?', acceptedAnswer: { '@type': 'Answer', text: 'Foi concebido para se manter dentro desse quadro: regista a localização só quando o trabalhador pica o ponto (entrada, pausas, saída) ou tira uma fotografia de prova, nunca de forma contínua, e nem sequer pede a permissão para ler a localização em segundo plano. O colaborador vê as suas picagens e os seus relatórios na aplicação. A informação e, quando necessário, a consulta aos representantes dos trabalhadores continuam a ser da responsabilidade do empregador.' } },
+    ],
+  },
   nl: {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -139,7 +150,7 @@ const APP_DESCRIPTION: Record<string, string> = {
   fr: "GeoTapp TimeTracker est l'application native Android et iOS pour les techniciens sur le terrain : pointage avec position, photos de preuve, notes et rapports hebdomadaires, reliée à GeoTapp Flow. S'il n'y a pas de réseau, les pointages sont enregistrés sur le téléphone et envoyés dès que le signal revient.",
   es: 'GeoTapp TimeTracker es la aplicación nativa Android e iOS para técnicos sobre el terreno: fichaje con ubicación, fotos de prueba, notas e informes semanales, conectada con GeoTapp Flow. Si no hay cobertura, los fichajes se guardan en el teléfono y se envían en cuanto vuelve la señal.',
   nl: 'GeoTapp TimeTracker is de mobiele app voor monteurs in het veld: registratie met gecontroleerde locatie, fotobewijzen, weekrapporten en synchronisatie met GeoTapp Flow. Werkt offline.',
-  pt: 'GeoTapp TimeTracker é o app móvel para técnicos de campo: ponto GPS verificado, provas fotográficas, relatórios semanais e sincronização em tempo real com o GeoTapp Flow. Funciona offline.',
+  pt: 'O GeoTapp TimeTracker é a aplicação nativa Android e iOS para técnicos no terreno: picagem com localização, fotografias de prova, notas e relatórios semanais, ligada ao GeoTapp Flow. Se não houver rede, as picagens ficam guardadas no telemóvel e seguem assim que o sinal volta.',
   sv: 'GeoTapp TimeTracker är appen för GPS-tidsrapportering för fälttekniker: verifierad incheckning, fotobevis, veckorapporter och realtidssynkronisering med GeoTapp Flow. Fungerar offline.',
   da: 'GeoTapp TimeTracker er mobilappen til serviceteknikere: verificeret GPS-ind- og udtjekning, fotobeviser, ugentlige rapporter og realtidssynkronisering med GeoTapp Flow. Fungerer offline.',
   nb: 'GeoTapp TimeTracker er mobilappen for serviceteknikere: verifisert GPS-innsjekking, fotobevis, ukentlige rapporter og sanntidssynkronisering med GeoTapp Flow. Fungerer offline.',
@@ -197,6 +208,16 @@ const APP_FEATURES: Record<string, string[]> = {
     'Disponible en Google Play y App Store',
     'Posición solo cuando el trabajador ficha o hace una foto de prueba, nunca de forma continua',
   ],
+  pt: [
+    'Picagem com localização à entrada, nas pausas e à saída; localizações simuladas recusadas',
+    'Fotografias de prova com hora e localização',
+    'Sem rede, as picagens ficam no telemóvel e seguem assim que o sinal volta',
+    'Relatórios selados criptograficamente',
+    'Informação sobre o GPS assinada como tomada de conhecimento na aplicação antes da primeira picagem',
+    'Integração nativa com o GeoTapp Flow',
+    'Disponível na Google Play e na App Store',
+    'Posição só quando o trabalhador pica o ponto ou tira uma fotografia de prova, nunca de forma contínua',
+  ],
   nl: [
     'Locatie gecontroleerd bij de registratie, gesimuleerde locaties geweigerd',
     'Bewijsfoto\'s met tijdstempel en gps',
@@ -239,6 +260,8 @@ function buildAppSoftware(locale: AppLocale) {
         ? `Essai gratuit de 14 jours. Formules payantes à partir de ${rate.formatted} par poste et par mois, hors TVA.`
         : locale === 'es'
         ? `Prueba gratuita de 14 días. Planes de pago desde ${rate.formatted} por puesto y mes, IVA no incluido.`
+        : locale === 'pt'
+        ? `Teste gratuito de 14 dias. Planos pagos a partir de ${rate.formatted} por posto e por mês, IVA não incluído.`
         : `14-day free trial. Paid plans from ${rate.formatted} per seat per month.`,
     },
     publisher: { '@id': 'https://geotapp.com/#organization' },

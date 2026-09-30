@@ -39,10 +39,10 @@ export const TRUST_COPY: Record<string, TrustCopy> = {
     { title: 'Verificación independiente', sub: 'El cliente comprueba, sin cuenta' },
   ], sectors: 'Limpieza · Construcción · Seguridad · Instaladores · Mantenimiento · Instalaciones' },
   pt: { headline: 'A prova do trabalho no terreno, verificável por qualquer um', claims: [
-    { title: 'Qualquer adulteração é detetável', sub: 'Selo criptográfico em cada intervenção' },
-    { title: 'Registo GPS real', sub: 'Local e hora registados no local' },
+    { title: 'Qualquer alteração posterior vê-se', sub: 'Selo criptográfico em cada relatório' },
+    { title: 'Picagem com localização GPS', sub: 'Localização e hora registadas no local' },
     { title: 'Verificação independente', sub: 'O cliente verifica, sem conta' },
-  ], sectors: 'Limpeza · Construção · Segurança · Instaladores · Manutenção · AVAC' },
+  ], sectors: 'Limpeza · Construção · Segurança · Instaladores · Manutenção · Instalações' },
   nl: { headline: 'Het bewijs van werk in het veld, door iedereen te controleren', claims: [
     { title: 'Elke latere wijziging is zichtbaar', sub: 'Cryptografische verzegeling op elk rapport' },
     { title: 'Echte registratie met gps', sub: 'Locatie en tijd ter plaatse vastgelegd' },

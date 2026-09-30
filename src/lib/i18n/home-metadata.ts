@@ -66,7 +66,7 @@ export const HOME_META: Record<string, { title: string; description: string }> =
   },
   pt: {
     title: 'Software GPS campo: prove cada serviço | GeoTapp',
-    description: 'Cliente contesta? GeoTapp registra GPS, hora, fotos e relatório com alterações detetáveis. Prove o serviço feito e receba sem discussões.',
+    description: 'Software para equipas no terreno: a cada picagem, o GeoTapp regista localização, horas e fotos e sela-os num relatório que o cliente verifica sozinho.',
   },
   nl: {
     title: 'GPS-software voor aanwezigheid: bewijs elke klus | GeoTapp',

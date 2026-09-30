@@ -10,7 +10,7 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   de: 'Vorschriften und Nachweise in Deutschland',
   fr: 'Règles et justificatifs en France',
   es: 'Normativa y documentación en España',
-  pt: 'Conformidade em Portugal',
+  pt: 'Regras e documentação em Portugal',
   nl: 'Regels en documentatie in Nederland',
   'en-us': 'Regional rules and records',
   'en-gb': 'Regional rules and records',
@@ -78,16 +78,16 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   ],
   pt: [
     {
-      q: 'Horas e disponibilidade segundo a CCT da metalurgia?',
-      a: 'Horas por eletricista e por obra, disponibilidade e ajudas de custo e conservação dos dados, registados em cada intervenção.',
+      q: 'Horas e disponibilidade dos eletricistas?',
+      a: 'GeoTapp regista em cada picagem entrada, pausas e saída com posição e hora, por eletricista e por obra, e exporta-as para Excel ou CSV para o seu contabilista ou gabinete de processamento salarial. A aplicação do contrato coletivo (subsídios, ajudas de custo) e o processamento dos salários continuam a cargo do contabilista e da empresa.',
     },
     {
-      q: 'RGPD e CNPD na geolocalização dos eletricistas?',
-      a: 'Geolocalização apenas durante o tempo de trabalho, com informação prévia, interesse legítimo e direito de acesso, dentro dos critérios da CNPD.',
+      q: 'Geolocalização dos eletricistas: RGPD e CNPD?',
+      a: 'A posição só é registada ao picar o ponto e com as fotos de prova, nunca de forma contínua, e a informação aos trabalhadores é assinada na app antes de picar. Cabe à empresa verificar o que exigem, no seu caso, o RGPD (interesse legítimo), os artigos 20.º e 21.º do Código do Trabalho e a CNPD.',
     },
     {
       q: 'Certificação DGEG de instalações elétricas?',
-      a: 'Associação de cada intervenção à certificação DGEG do técnico, com o histórico de suporte ao termo de responsabilidade da instalação.',
+      a: 'GeoTapp não verifica certificações nem habilitações, incluindo as da DGEG, e não gera o termo de responsabilidade da instalação. Regista a hora, a posição e as fotos de cada intervenção, que o técnico pode anexar à sua própria documentação.',
     },
   ],
   nl: [

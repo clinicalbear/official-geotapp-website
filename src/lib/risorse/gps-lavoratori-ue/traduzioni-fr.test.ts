@@ -35,7 +35,7 @@ describe('traduzioni francesi delle schede-paese', () => {
   });
 
   it('le altre lingue continuano a leggere il testo della scheda', () => {
-    expect(loc('CNIL, presentare un reclamo', 'pt')).toBe('CNIL, presentare un reclamo');
+    expect(loc('CNIL, presentare un reclamo', 'da')).toBe('CNIL, presentare un reclamo');
     expect(loc('CNIL, presentare un reclamo', 'fr')).toBe('CNIL, déposer une réclamation');
   });
 });

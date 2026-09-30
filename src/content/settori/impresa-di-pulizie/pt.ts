@@ -2,17 +2,17 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App para Empresa de Limpeza: Gestão GPS de Equipas & Prova de Serviço | GeoTapp',
+    title: 'App para Empresas de Limpeza: Equipas com GPS | GeoTapp',
     description:
-      'Gerencie equipas de limpeza, turnos e presenças com registos GPS a cada picagem. Provas automáticas de serviço, menos disputas, app pensada para o RGPD.',
+      'Gira equipas, turnos e presenças com picagens GPS. Provas de serviço automáticas para quando um cliente contesta. App pensada para o RGPD.',
   },
 
   hero: {
-    badge: 'App para empresas de limpeza e multiservicos',
+    badge: 'App para empresas de limpeza e multisserviços',
     h1_line1: 'A sua empresa de limpeza,',
-    h1_line2: 'gerida, registo após registo.',
+    h1_line2: 'gerida, picagem após picagem.',
     subtitle:
-      'Registos GPS, provas de serviço automáticas e gestão de turnos numa só app. Sem folhas de cálculo, sem disputas. O cliente contesta? Envie o relatório e a discussão acaba.',
+      'Picagens GPS, provas de serviço automáticas e gestão de turnos numa só app. Zero Excel, menos contestações. O cliente contesta? Envie o relatório em vez de discutir de viva voz.',
     cta_primary: 'Experimente num contrato real',
     cta_note: '14 dias, até 50 operacionais no terreno, sem cartão de crédito.',
   },
@@ -22,15 +22,15 @@ const content: SettoreContent = {
     items: [
       {
         title: 'Os clientes contestam as horas trabalhadas?',
-        desc: 'Cada registo é verificado por GPS e com carimbo temporal. Envie o relatório e a discussão termina em trinta segundos.',
+        desc: 'Cada picagem regista a posição e a hora. Envie o relatório e o cliente pode verificá-lo por si.',
       },
       {
-        title: 'As folhas de presença em papel são pouco fiáveis?',
-        desc: 'Registo automático a partir do smartphone, sem introduções manuais. O dado é o que é: qualquer alteração é detetável.',
+        title: 'As folhas de presença em papel não são fiáveis?',
+        desc: 'Picagens a partir do smartphone, sem inserir nada à mão. O dado fica tal como foi registado: qualquer alteração é detetável.',
       },
       {
-        title: 'Difícil coordenar várias equipas?',
-        desc: 'Veja onde estiveram, assim que picam o ponto, em todas as sedes, a partir de um único painel. Sem telefonemas.',
+        title: 'É difícil coordenar várias equipas?',
+        desc: 'Vê quem picou o ponto, e onde, em todos os locais, a partir de um único painel. Sem telefonemas.',
       },
     ],
   },
@@ -39,15 +39,15 @@ const content: SettoreContent = {
     title: 'O que acontece agora. O que acontece com GeoTapp.',
     prima: [
       'O cliente liga e diz que a casa de banho não foi limpa.',
-      'O operador diz "Fiz isso". O cliente diz "Não fez".',
+      'O operador diz «fiz». O cliente diz «não fez».',
       'Não tem nada em mãos para provar coisa alguma.',
-      'A discussão arrasta-se durante dias. Às vezes perde o contrato.',
+      'A discussão dura dias. Às vezes perde o contrato.',
     ],
     dopo: [
       'O cliente liga e diz que a casa de banho não foi limpa.',
-      'Abre o relatório da intervenção: foto da casa de banho limpa, hora, GPS.',
-      'Envia-o. A discussão termina em trinta segundos.',
-      'O contrato está seguro. O operador está protegido.',
+      'Abra o relatório do serviço: foto da casa de banho limpa, hora, posição.',
+      'Envia-lho, e ele verifica por si.',
+      'Tem algo para mostrar. O operador também.',
     ],
   },
 
@@ -56,151 +56,160 @@ const content: SettoreContent = {
     subtitle: 'Três passos simples. Zero papel. Zero chamadas.',
     steps: [
       {
-        title: 'O operador regista com GPS',
-        desc: 'Abre e fecha o turno a partir do smartphone. GeoTapp regista coordenadas GPS reais, fotos e carimbo temporal, tudo automático e selado.',
+        title: 'O operador pica o ponto no local',
+        desc: 'Abra e fecha o turno a partir do smartphone. GeoTapp regista a posição e a hora nesse momento e, se for preciso, fotos de prova. Entre uma picagem e outra não regista nada automaticamente.',
       },
       {
-        title: 'O responsável vê tudo assim que chega',
-        desc: 'Um painel para todas as sedes. Sabe exatamente quem está em cada local, onde e desde quando, sem andar atrás de ninguém.',
+        title: 'O responsável vê cada picagem assim que chega',
+        desc: 'Um único painel para todos os locais. Vê quem picou, onde e a que horas, sem andar atrás de ninguém.',
       },
       {
-        title: 'O relatório está pronto automaticamente',
-        desc: 'No final do turno, o sistema gera um relatório selado com GPS, fotos e assinatura digital. Envie ao cliente, verificável de forma autónoma.',
+        title: 'O relatório fica pronto automaticamente',
+        desc: 'No fim do turno, o sistema gera um relatório selado com GPS, fotos e selo criptográfico. Envie-o ao cliente, que pode verificá-lo de forma autónoma.',
       },
     ],
   },
 
   differenza: {
-    title: 'Registo de ponto vs Prova de serviço.',
+    title: 'Picagem ou prova de serviço.',
     subtitle: 'A maioria das apps regista horários. GeoTapp produz provas para o seu cliente.',
     rows: [
       {
         label: 'O que regista',
-        competitor: 'Hora de entrada/saída',
-        geotapp: 'Hora + GPS verificado + fotos + tarefas realizadas',
+        competitor: 'Hora de entrada e saída',
+        geotapp: 'Hora + posição na picagem + fotos + tarefas realizadas',
       },
       {
         label: 'Quem pode verificar',
         competitor: 'Apenas o seu escritório',
-        geotapp: 'Você, o cliente, um terceiro, de forma independente',
+        geotapp: 'A própria empresa, o cliente ou um terceiro, de forma autónoma',
       },
       {
-        label: 'Em caso de disputa',
-        competitor: 'Dados não defensáveis',
+        label: 'Em caso de contestação',
+        competitor: 'Apenas a sua palavra',
         geotapp: 'Relatório selado, qualquer alteração é detetável',
       },
       {
         label: 'Prova fotográfica',
         competitor: 'Ausente ou desligada',
-        geotapp: 'Anexada ao relatório com carimbo temporal e GPS',
+        geotapp: 'Anexada ao relatório com marca temporal e GPS',
       },
       {
         label: 'Conformidade RGPD',
-        competitor: 'Frequentemente por verificar',
-        geotapp: 'Pensado para ficar dentro do RGPD, formulários incluídos',
+        competitor: 'Muitas vezes por verificar',
+        geotapp: 'Construído para ficar dentro dos limites do RGPD, com modelos de documentação incluídos',
       },
     ],
   },
 
   features: {
-    title: 'App para empresa de limpeza: provas de serviço, não apenas registos de ponto.',
+    title: 'App para empresas de limpeza: provas de serviço, não só picagens.',
     items: [
       {
         title: 'Provas de serviço automáticas',
-        desc: 'Cada intervenção concluída gera um relatório com GPS, fotos e carimbo temporal. O cliente recebe-o e verifica de forma autónoma.',
+        desc: 'Cada serviço encerrado gera um relatório com GPS, fotos e marca temporal. O cliente recebe-o e verifica-o por si, sem acesso ao seu sistema.',
       },
       {
-        title: 'Controlo real em todas as sedes',
-        desc: 'Veja quem está ativo onde, assim que pica o ponto, em todos os edifícios simultaneamente. Sem telefonemas, sem emails.',
+        title: 'Visão clara de todos os locais',
+        desc: 'Vê quem picou o ponto, e onde, em todos os edifícios, à medida que cada picagem chega. Sem telefonemas, sem emails. Entre uma picagem e outra não se regista nada automaticamente.',
       },
       {
-        title: 'Relatórios defensáveis em qualquer âmbito',
-        desc: 'Cada relatório é assinado digitalmente qualquer alteração é detetável. Um cliente, um inspetor ou um advogado podem verificá-lo sozinhos.',
+        title: 'Relatórios que qualquer pessoa pode verificar',
+        desc: 'Cada relatório está selado e qualquer alteração é detetável. Um cliente, um inspetor ou um advogado pode verificá-lo de forma autónoma.',
       },
       {
         title: 'Gestão de turnos e equipas',
-        desc: 'Atribua turnos, gerencie encomendas e receba alertas automáticos se uma intervenção não for aberta ou encerrada a tempo.',
+        desc: 'Atribua turnos, gira contratos e receba um aviso se um turno ficar aberto.',
       },
       {
         title: 'Documentação fotográfica',
-        desc: 'Os operadores tiram fotos diretamente da app. Cada imagem é georreferenciada com carimbo temporal, prova visual do trabalho realizado.',
+        desc: 'Os operadores tiram fotos diretamente a partir da app. Cada imagem leva a hora e a posição: uma prova visual do trabalho realizado.',
       },
       {
-        title: 'O seu pessoal está protegido',
-        desc: 'Um relatório verificável protege também o operador contra acusações infundadas. O bom trabalho é provado pelos dados.',
+        title: 'O seu pessoal fica protegido',
+        desc: 'Um relatório verificável dá também ao operador com que responder a acusações infundadas. Quem trabalha bem demonstra-o com dados.',
       },
     ],
   },
 
   testimonial: {
     quote:
-      'Desde que usamos GeoTapp, as disputas com clientes resolvem-se em um minuto. Enviamos o relatório com fotos e GPS, e a discussão termina aí. Não perdemos nenhum contrato em um ano.',
+      'Quando um cliente contesta um serviço, enviamos o relatório com fotos e posição e ele verifica-o por si.',
     author: 'Rosa M.',
-    role: 'Proprietária, empresa de limpeza industrial - Portugal',
+    role: 'Proprietária, empresa de limpeza',
   },
 
   faq: {
     title: 'Perguntas frequentes',
-    subtitle: 'O que nos perguntam mais frequentemente antes de começar.',
+    subtitle: 'O que nos perguntam com mais frequência antes de começar.',
     items: [
       {
-        q: 'Como funciona o registo GPS para empresas de limpeza?',
-        a: 'O operador regista entrada e saída a partir do smartphone. GeoTapp regista as coordenadas GPS nesse momento, não introduzidas manualmente. Cada registo é selado com carimbo temporal e posição verificável pelo cliente.',
+        q: 'Como funciona a picagem GPS para empresas de limpeza?',
+        a: 'O operador pica a entrada e a saída a partir do smartphone. GeoTapp regista a posição GPS nesse momento, sem ser inserida à mão. Cada picagem consta do relatório selado com marca temporal e posição, que o cliente pode verificar.',
       },
       {
         q: 'Posso provar ao cliente que o serviço foi realizado?',
-        a: 'Sim. GeoTapp gera automaticamente um relatório selado com GPS, fotos e carimbo temporal no final de cada intervenção. O cliente recebe-o e verifica de forma autónoma.',
+        a: 'Sim. GeoTapp gera automaticamente um relatório selado com GPS, fotos e marca temporal no fim de cada serviço. O cliente recebe-o e verifica-o por si, sem acesso ao seu sistema.',
       },
       {
-        q: 'GeoTapp é compatível com o RGPD para geolocalização de colaboradores?',
-        a: 'Sim. GeoTapp só geolocaliza durante o horário de trabalho ativo, inclui formulários de informação ao colaborador e não recolhe dados desnecessários.',
+        q: 'GeoTapp está pensado para ficar dentro do RGPD na geolocalização dos trabalhadores?',
+        a: 'GeoTapp foi construído para ficar dentro dos limites das regras de proteção de dados: regista a posição só quando o operador pica o ponto (início, pausa, fim) ou tira uma foto de prova, faz assinar aos trabalhadores a informação na app antes da primeira picagem e não recolhe dados desnecessários. Entre uma picagem e outra não se regista nada automaticamente.',
       },
       {
-        q: 'Como gerir equipas em várias sedes ao mesmo tempo?',
-        a: 'Com GeoTapp Flow tem um painel único para todas as sedes. Veja quem está ativo onde assim que pica o ponto, atribua encomendas e receba alertas automáticos.',
+        q: 'Como giro equipas distribuídas por vários locais ao mesmo tempo?',
+        a: 'Com GeoTapp Flow tem um único painel para todos os locais. Vê quem picou o ponto e onde, pode atribuir contratos e receber um aviso se um turno ficar aberto.',
       },
       {
         q: 'As folhas de presença em papel ainda são necessárias?',
-        a: 'Não. GeoTapp substitui completamente as folhas de presença por registo GPS automático a partir de smartphones. Os dados são exportáveis para processamento de salários.',
+        a: 'Não. GeoTapp substitui as folhas de presença em papel por picagens a partir do smartphone. Os dados são exportáveis em Excel ou CSV para o processamento salarial.',
       },
       {
         q: 'Quanto custa GeoTapp para uma empresa de limpeza?',
-        a: 'Os planos começam a partir de poucos euros por operador por mês. Experimente grátis durante 14 dias, sem compromisso.',
+        a: 'GeoTapp Flow começa em 39 € por mês; cada operador com a app TimeTracker custa mais 3 € por mês (2,50 € a partir do 26.º posto). A subscrição tem a duração mínima de 12 meses. Os preços não incluem IVA. Pode experimentar grátis durante 14 dias, sem cartão de crédito.',
+      },
+      {
+        q: 'GeoTapp faz seguimento GPS dos operadores?',
+        a: 'Não há seguimento contínuo. O operador pica a entrada e a saída a partir do smartphone e cada picagem fica ligada a uma posição GPS e a uma marca temporal, registadas nesse momento (início, pausa, fim) e quando se tira uma foto de prova. É uma posição para demonstrar a presença, não vigilância: entre uma picagem e outra não se regista nada automaticamente, e a app não pede permissão de localização em segundo plano.',
       },
     ],
   },
 
   cta: {
-    title: 'Os seus operadores trabalham bem. Faça com que o cliente veja.',
+    title: 'Os seus operadores trabalham bem. Faça com que o cliente o veja.',
     subtitle:
-      'Cada intervenção torna-se prova de serviço verificável. Menos disputas, menos contratos perdidos.',
-    primary: 'Comece grátis agora!',
-    secondary: 'Ver Preços',
+      'Cada serviço torna-se um relatório que pode mostrar e que o cliente pode verificar por si.',
+    primary: 'Começar teste gratuito de 14 dias',
+    secondary: 'Ver preços',
   },
 
   pricing_hint: {
-    label: 'A partir de',
-    per: 'operador/mês',
-    note: 'Teste grátis de 14 dias',
+    label: 'Postos TimeTracker desde',
+    per: 'por operador e por mês, mais o plano Flow desde 39 € por mês (IVA não incluído)',
+    note: 'Teste gratuito de 14 dias',
   },
 
-  schema_sector_name: 'Empresa de Limpeza',
+  schema_sector_name: 'Empresa de limpeza',
 
   schema_faq: [
     {
-      question: 'Como funciona o registo GPS para empresas de limpeza?',
+      question: 'Como funciona a picagem GPS para empresas de limpeza?',
       answer:
-        'O operador regista a partir do smartphone. GeoTapp regista coordenadas GPS, não introduzidas manualmente. Cada registo é selado com carimbo temporal e posição verificável pelo cliente.',
+        'O operador pica a entrada e a saída a partir do smartphone. GeoTapp regista a posição GPS nesse momento, sem ser inserida à mão. Cada picagem consta do relatório selado com marca temporal e posição, que o cliente pode verificar.',
     },
     {
       question: 'Posso provar ao cliente que o serviço foi realizado?',
       answer:
-        'Sim. GeoTapp gera automaticamente um relatório selado com GPS, fotos e carimbo temporal. O cliente recebe-o e verifica de forma autónoma.',
+        'Sim. GeoTapp gera automaticamente um relatório selado com GPS, fotos e marca temporal. O cliente recebe-o e verifica-o por si.',
     },
     {
-      question: 'GeoTapp é compatível com o RGPD para geolocalização de colaboradores?',
+      question: 'GeoTapp está pensado para ficar dentro do RGPD na geolocalização dos trabalhadores?',
       answer:
-        'Sim. GeoTapp só geolocaliza durante o horário de trabalho ativo, inclui formulários de informação ao colaborador e não recolhe dados desnecessários.',
+        'GeoTapp foi construído para ficar dentro dos limites das regras de proteção de dados: regista a posição só quando o operador pica o ponto (início, pausa, fim) ou tira uma foto de prova, faz assinar aos trabalhadores a informação na app antes da primeira picagem e não recolhe dados desnecessários. Entre uma picagem e outra não se regista nada automaticamente.',
+    },
+    {
+      question: 'GeoTapp faz seguimento GPS dos operadores?',
+      answer:
+        'Não há seguimento contínuo. O operador pica a entrada e a saída a partir do smartphone e cada picagem fica ligada a uma posição GPS e a uma marca temporal, registadas nesse momento (início, pausa, fim) e quando se tira uma foto de prova. Entre uma picagem e outra não se regista nada automaticamente.',
     },
   ],
 };
