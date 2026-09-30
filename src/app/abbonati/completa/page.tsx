@@ -64,10 +64,8 @@ const PLAN_NAMES: Record<PlanCode, string> = {
   BUSINESS: 'Business',
 };
 
-// La clausola vincolante (durata minima, art. 1341 c.c.) e' resa sempre in
-// italiano, testo approvato dal legale. Solo la cornice di UI e' localizzata.
-const CLAUSE_MIN_TERM =
-  'Approvo specificamente la clausola di durata minima di 12 (dodici) mesi e l’obbligo di corrispondere i canoni per l’intero periodo anche in caso di disdetta anticipata; in caso di pagamento mensile, verserò le rate fino al termine dei 12 mesi, con facoltà di saldare in un’unica soluzione l’importo residuo, scontato del 10%.';
+// La clausola vincolante (durata minima, art. 1341 c.c.) e' resa nella lingua del cliente,
+// in traduzione fedele (vedi strings.ts), con il link al testo legale italiano dei Termini.
 
 type Reason = { code: 'ttSeats' | 'officeSeats' | 'flowUsers' | 'noUsage'; count: number };
 
@@ -251,6 +249,8 @@ function CompletaInner() {
           vatNumber: vat.trim(),
           minTermAccepted: true,
           minTermAcceptedAt: now,
+          minTermAcceptedLanguage: locale,
+          minTermAcceptedPathLocale: getLocaleFromPathname(pathname || '') || 'en',
           ...policy,
         }),
       });
@@ -480,8 +480,13 @@ function CompletaInner() {
               checked={minTerm}
               onChange={(e) => setMinTerm(e.target.checked)}
             />
-            <span>{CLAUSE_MIN_TERM}</span>
+            <span>{t.minTermClause}</span>
           </label>
+          <p style={{ margin: '4px 0 14px 28px', fontSize: 13 }}>
+            <a href={localizePath('/terms/', 'it')} target="_blank" rel="noopener noreferrer">
+              {t.minTermLinkLabel}
+            </a>
+          </p>
 
           <div className="agree">
             <label>

@@ -6,8 +6,9 @@
  * passare in mezzo ai conti. Fino all'08/09/2026 esistevano solo it/en/de e
  * un cliente olandese o danese pagava leggendo l'inglese.
  *
- * La clausola di durata minima NON e' qui: resta in italiano nel componente,
- * testo approvato dal legale.
+ * La clausola di durata minima (art. 1341 c.c.) e' qui, tradotta fedelmente in ogni
+ * lingua: il cliente approva il testo che legge. Il testo legale italiano resta
+ * raggiungibile dal link. Le traduzioni vanno approvate dal legale prima di andare online.
  */
 
 export type UiLocale = 'it' | 'en' | 'de' | 'fr' | 'es' | 'nl' | 'pt' | 'da' | 'nb' | 'sv' | 'ru';
@@ -66,6 +67,8 @@ export type Strings = {
   missingTenant: string;
   vatRequired: string;
   minTermRequired: string;
+  minTermClause: string;
+  minTermLinkLabel: string;
   generic: string;
   alreadySubscribed: string;
 };
@@ -95,7 +98,7 @@ export const UI: Record<UiLocale, Strings> = {
     bumpUp: (plan, n) => `Per ${n} postazioni serve Flow ${plan}: l'abbiamo selezionato per te.`,
     bumpDownHint: (plan) => `Con queste postazioni ti basterebbe Flow ${plan}.`,
     bumpDownAction: (plan) => `Passa a ${plan}`,
-    seatsTrimmed: (plan, n) => `Flow ${plan} regge ${n} postazioni: abbiamo portato la quantita' a ${n}.`,
+    seatsTrimmed: (plan, n) => `Flow ${plan} regge ${n} postazioni: abbiamo portato la quantità a ${n}.`,
     officeTitle: 'Postazioni per timbrare dal computer',
     officeHelp: 'Per chi timbra dal computer, senza telefono aziendale.',
     officeAnnualOnly: 'Disponibili solo con pagamento annuale.',
@@ -118,8 +121,10 @@ export const UI: Record<UiLocale, Strings> = {
     missingTenant: 'Link non valido: manca il riferimento all\'account.',
     vatRequired: 'Inserisci la partita IVA.',
     minTermRequired: 'Devi approvare specificamente la clausola di durata minima.',
-    generic: 'Qualcosa e\' andato storto. Riprova.',
-    alreadySubscribed: 'Questo account ha gia\' un abbonamento attivo.',
+    minTermClause: "Approvo specificamente la clausola di durata minima di 12 (dodici) mesi e l’obbligo di corrispondere i canoni per l’intero periodo anche in caso di disdetta anticipata; in caso di pagamento mensile, verserò le rate fino al termine dei 12 mesi, con facoltà di saldare in un’unica soluzione l’importo residuo, scontato del 10%.",
+    minTermLinkLabel: "Testo legale dei Termini in italiano (sezione 10.1)",
+    generic: 'Qualcosa è andato storto. Riprova.',
+    alreadySubscribed: 'Questo account ha già un abbonamento attivo.',
   },
   en: {
     title: 'Activate your subscription',
@@ -168,6 +173,8 @@ export const UI: Record<UiLocale, Strings> = {
     missingTenant: 'Invalid link: the account reference is missing.',
     vatRequired: 'Please enter your VAT number.',
     minTermRequired: 'You must specifically approve the minimum-term clause.',
+    minTermClause: "I specifically approve the minimum term clause of 12 (twelve) months and the obligation to pay the fees for the entire period even in the event of early termination; in the case of monthly payment, I will pay the instalments until the end of the 12 months, with the option to settle the remaining amount in a single payment, discounted by 10%.",
+    minTermLinkLabel: "Legal text of the Terms in Italian (section 10.1)",
     generic: 'Something went wrong. Please try again.',
     alreadySubscribed: 'This account already has an active subscription.',
   },
@@ -218,6 +225,8 @@ export const UI: Record<UiLocale, Strings> = {
     missingTenant: 'Ungültiger Link: Der Kontobezug fehlt.',
     vatRequired: 'Bitte geben Sie Ihre USt-IdNr. ein.',
     minTermRequired: 'Sie müssen die Mindestlaufzeit-Klausel ausdrücklich annehmen.',
+    minTermClause: "Ich genehmige ausdrücklich die Klausel über die Mindestlaufzeit von 12 (zwölf) Monaten und die Pflicht, die Entgelte für den gesamten Zeitraum auch bei vorzeitiger Kündigung zu zahlen; bei monatlicher Zahlung werde ich die Raten bis zum Ende der 12 Monate entrichten, mit der Möglichkeit, den Restbetrag in einer einmaligen Zahlung mit einem Nachlass von 10 % zu begleichen.",
+    minTermLinkLabel: "Rechtstext der Nutzungsbedingungen auf Italienisch (Abschnitt 10.1)",
     generic: 'Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.',
     alreadySubscribed: 'Für dieses Konto besteht bereits ein aktives Abonnement.',
   },
@@ -268,6 +277,8 @@ export const UI: Record<UiLocale, Strings> = {
     missingTenant: 'Lien non valide : la référence au compte est absente.',
     vatRequired: 'Veuillez saisir votre numéro de TVA.',
     minTermRequired: 'Vous devez approuver expressément la clause de durée minimale.',
+    minTermClause: "J’approuve expressément la clause de durée minimale de 12 (douze) mois et l’obligation de payer les redevances pour toute la période, même en cas de résiliation anticipée ; en cas de paiement mensuel, je verserai les mensualités jusqu’à la fin des 12 mois, avec la faculté de régler le solde en une seule fois, avec une remise de 10 %.",
+    minTermLinkLabel: "Texte juridique des Conditions en italien (section 10.1)",
     generic: 'Une erreur est survenue. Réessayez.',
     alreadySubscribed: 'Ce compte a déjà un abonnement actif.',
   },
@@ -318,6 +329,8 @@ export const UI: Record<UiLocale, Strings> = {
     missingTenant: 'Enlace no válido: falta la referencia a la cuenta.',
     vatRequired: 'Introduce tu NIF/CIF.',
     minTermRequired: 'Debes aprobar expresamente la cláusula de duración mínima.',
+    minTermClause: "Apruebo específicamente la cláusula de duración mínima de 12 (doce) meses y la obligación de pagar las cuotas durante todo el período, incluso en caso de baja anticipada; en caso de pago mensual, abonaré las cuotas hasta el final de los 12 meses, con la facultad de liquidar el importe restante en un solo pago, con un descuento del 10 %.",
+    minTermLinkLabel: "Texto legal de los Términos en italiano (sección 10.1)",
     generic: 'Algo ha salido mal. Inténtalo de nuevo.',
     alreadySubscribed: 'Esta cuenta ya tiene una suscripción activa.',
   },
@@ -368,6 +381,8 @@ export const UI: Record<UiLocale, Strings> = {
     missingTenant: 'Ongeldige link: de accountverwijzing ontbreekt.',
     vatRequired: 'Vul je btw-nummer in.',
     minTermRequired: 'Je moet de clausule over de minimumduur uitdrukkelijk goedkeuren.',
+    minTermClause: "Ik keur uitdrukkelijk het beding over de minimale looptijd van 12 (twaalf) maanden goed, en de verplichting om de vergoedingen voor de volledige periode te betalen, ook bij vroegtijdige opzegging; bij maandelijkse betaling betaal ik de termijnen tot het einde van de 12 maanden, met de mogelijkheid om het resterende bedrag in één keer te voldoen, met een korting van 10 %.",
+    minTermLinkLabel: "Juridische tekst van de Voorwaarden in het Italiaans (sectie 10.1)",
     generic: 'Er is iets misgegaan. Probeer het opnieuw.',
     alreadySubscribed: 'Dit account heeft al een actief abonnement.',
   },
@@ -418,6 +433,8 @@ export const UI: Record<UiLocale, Strings> = {
     missingTenant: 'Ligação inválida: falta a referência à conta.',
     vatRequired: 'Introduza o seu NIF.',
     minTermRequired: 'Tem de aprovar expressamente a cláusula de duração mínima.',
+    minTermClause: "Aprovo especificamente a cláusula de duração mínima de 12 (doze) meses e a obrigação de pagar as mensalidades durante todo o período, mesmo em caso de rescisão antecipada; em caso de pagamento mensal, pagarei as prestações até ao fim dos 12 meses, com a faculdade de liquidar o valor restante num único pagamento, com um desconto de 10 %.",
+    minTermLinkLabel: "Texto legal dos Termos em italiano (secção 10.1)",
     generic: 'Algo correu mal. Tente novamente.',
     alreadySubscribed: 'Esta conta já tem uma subscrição ativa.',
   },
@@ -468,6 +485,8 @@ export const UI: Record<UiLocale, Strings> = {
     missingTenant: 'Ugyldigt link: kontoreferencen mangler.',
     vatRequired: 'Indtast dit CVR-nummer.',
     minTermRequired: 'Du skal udtrykkeligt godkende klausulen om minimumsperiode.',
+    minTermClause: "Jeg godkender specifikt klausulen om en mindste varighed på 12 (tolv) måneder og forpligtelsen til at betale vederlaget for hele perioden, også ved tidlig opsigelse; ved månedlig betaling betaler jeg ydelserne indtil udløbet af de 12 måneder, med mulighed for at indfri restbeløbet ved én samlet betaling med 10 % rabat.",
+    minTermLinkLabel: "Den juridiske tekst i vilkårene på italiensk (afsnit 10.1)",
     generic: 'Noget gik galt. Prøv igen.',
     alreadySubscribed: 'Denne konto har allerede et aktivt abonnement.',
   },
@@ -518,6 +537,8 @@ export const UI: Record<UiLocale, Strings> = {
     missingTenant: 'Ugyldig lenke: kontoreferansen mangler.',
     vatRequired: 'Skriv inn organisasjonsnummeret.',
     minTermRequired: 'Du må uttrykkelig godkjenne klausulen om minstetid.',
+    minTermClause: "Jeg godkjenner uttrykkelig klausulen om en minste varighet på 12 (tolv) måneder og plikten til å betale vederlaget for hele perioden, også ved tidlig oppsigelse; ved månedlig betaling betaler jeg terminene frem til utløpet av de 12 månedene, med mulighet til å gjøre opp restbeløpet i én samlet betaling med 10 % rabatt.",
+    minTermLinkLabel: "Juridisk tekst i vilkårene på italiensk (punkt 10.1)",
     generic: 'Noe gikk galt. Prøv igjen.',
     alreadySubscribed: 'Denne kontoen har allerede et aktivt abonnement.',
   },
@@ -568,6 +589,8 @@ export const UI: Record<UiLocale, Strings> = {
     missingTenant: 'Ogiltig länk: kontoreferensen saknas.',
     vatRequired: 'Ange ditt momsregistreringsnummer.',
     minTermRequired: 'Du måste uttryckligen godkänna klausulen om minsta bindningstid.',
+    minTermClause: "Jag godkänner uttryckligen klausulen om en minsta löptid på 12 (tolv) månader och skyldigheten att betala avgifterna för hela perioden, även vid förtida uppsägning; vid månadsbetalning betalar jag delbetalningarna till och med slutet av de 12 månaderna, med möjlighet att reglera restbeloppet i en enda betalning med 10 % rabatt.",
+    minTermLinkLabel: "Juridisk text i villkoren på italienska (avsnitt 10.1)",
     generic: 'Något gick fel. Försök igen.',
     alreadySubscribed: 'Det här kontot har redan en aktiv prenumeration.',
   },
@@ -618,6 +641,8 @@ export const UI: Record<UiLocale, Strings> = {
     missingTenant: 'Неверная ссылка: отсутствует привязка к аккаунту.',
     vatRequired: 'Укажите ИНН / номер НДС.',
     minTermRequired: 'Необходимо отдельно принять условие о минимальном сроке.',
+    minTermClause: "Я специально одобряю условие о минимальном сроке в 12 (двенадцать) месяцев и обязанность оплачивать платежи за весь период, в том числе при досрочном расторжении; при ежемесячной оплате я буду вносить платежи до окончания 12 месяцев с правом погасить остаток единовременным платежом со скидкой 10 %.",
+    minTermLinkLabel: "Юридический текст Условий на итальянском языке (раздел 10.1)",
     generic: 'Что-то пошло не так. Попробуйте ещё раз.',
     alreadySubscribed: 'У этого аккаунта уже есть активная подписка.',
   },
