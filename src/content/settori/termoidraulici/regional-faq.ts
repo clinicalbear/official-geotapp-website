@@ -23,7 +23,7 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   it: [
     {
       q: 'Ore e interventi secondo il CCNL Metalmeccanici/installazione impianti?',
-      a: 'Ore per tecnico e per commessa, reperibilità e trasferta e conservazione sul Libro Unico del Lavoro, registrate a ogni intervento su caldaie e impianti termici.',
+      a: "GeoTapp registra a ogni timbratura entrata, pause e uscita con posizione e ora, per tecnico e per commessa, e le esporta in Excel o CSV per il consulente del lavoro. L'applicazione del CCNL (maggiorazioni, indennità) e la tenuta del Libro Unico del Lavoro restano al consulente e all'azienda.",
     },
     {
       q: 'Geolocalizzazione e art. 4 dello Statuto dei Lavoratori?',
@@ -31,7 +31,7 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
     },
     {
       q: 'Gas fluorurati (Reg. UE 517/2014, DPR 146/2018) e libretto impianto?',
-      a: 'Tracciabilità degli interventi per patentino frigoristi (certificazione F-gas) e aggiornamento del libretto di impianto e dei rapporti di controllo.',
+      a: "GeoTapp non gestisce i patentini F-gas né il libretto d'impianto. Registra ora, posizione, foto e note di ogni intervento su caldaie e impianti termici, da allegare alla documentazione dell'impianto.",
     },
   ],
   de: [

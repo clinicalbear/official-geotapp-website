@@ -23,7 +23,7 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   it: [
     {
       q: 'Ore, reperibilità e trasferte secondo il CCNL Metalmeccanici?',
-      a: 'Ore per elettricista e per cantiere, indennità di reperibilità e trasferta e conservazione sul Libro Unico del Lavoro, registrate a ogni intervento.',
+      a: "GeoTapp registra a ogni timbratura entrata, pause e uscita con posizione e ora, per elettricista e per cantiere, e le esporta in Excel o CSV per il consulente del lavoro. L'applicazione del CCNL (maggiorazioni, indennità) e la tenuta del Libro Unico del Lavoro restano al consulente e all'azienda.",
     },
     {
       q: 'Geolocalizzazione e art. 4 dello Statuto dei Lavoratori?',
@@ -31,7 +31,7 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
     },
     {
       q: 'Lavori elettrici CEI 11-27 (PES/PAV/PEI) e DM 37/2008?',
-      a: 'Tracciabilità degli interventi per profilo di idoneità (PES/PAV/PEI) e per lettera A del DM 37/2008, a supporto della dichiarazione di conformità.',
+      a: "GeoTapp non verifica le abilitazioni né i profili di idoneità (PES/PAV/PEI) e non produce la dichiarazione di conformità del DM 37/2008. Registra ora, posizione e foto di ogni intervento, che il tecnico può allegare alla propria documentazione.",
     },
   ],
   de: [

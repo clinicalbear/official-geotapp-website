@@ -1,15 +1,18 @@
 {
   "navbar": {
+    "aria_cart": "Carrello",
+    "aria_menu": "Apri il menu",
+    "aria_close": "Chiudi il menu",
     "resources": "Risorse",
     "products": "Prodotti",
     "pricing": "Prezzi",
     "blog": "Blog",
     "contact": "Contatti",
     "login": "Accedi",
-    "cta": "Inizia trial gratuito",
+    "cta": "Inizia la prova gratuita",
     "cta_trial": "Prova gratis",
     "cta_how": "Vedi come funziona",
-    "cta_start": "Inizia il trial",
+    "cta_start": "Inizia la prova",
     "cta_signin": "Accedi",
     "sectors": {
       "installatori": "Installatori",
@@ -69,7 +72,7 @@
       },
       "indice": {
         "title": "Indice della sorveglianza in Europa",
-        "desc": "La classifica dei 39 Paesi europei per quanto è stringente il quadro sul monitoraggio dei lavoratori."
+        "desc": "Cosa dicono in numeri i provvedimenti pubblicati dalle autorità europee sul controllo dei lavoratori: quanti, su quali temi, le multe più alte."
       },
       "roi": {
         "title": "Calcolatore del ROI",
@@ -116,7 +119,7 @@
     "terms": "Termini di Servizio",
     "rights": "Tutti i diritti riservati.",
     "newsletter_title": "Resta aggiornato sul settore",
-    "newsletter_desc": "Niente spam, solo aggiornamenti di valore su gestione operativa, HR e tecnologia per le PMI.",
+    "newsletter_desc": "Niente spam, solo aggiornamenti di valore su organizzazione del lavoro, gestione del personale e strumenti digitali per le piccole imprese.",
     "sectors": "Settori",
     "contact": "Contatti"
   },
@@ -133,7 +136,7 @@
     },
     "hero_title": "Se non puoi dimostrarlo, per il cliente non è mai successo.",
     "hero_subtitle": "GeoTapp trasforma ogni intervento in una prova: report sigillati con posizione, foto e orari, che il cliente può verificare da solo, senza doversi fidare della tua parola.",
-    "hero_cta_primary": "Inizia trial gratuito",
+    "hero_cta_primary": "Inizia la prova gratuita",
     "hero_cta_secondary": "Scopri i Settori",
     "hero_cta_report": "Guarda un rapportino sigillato",
     "trust_gdpr": "Niente tracciamento continuo",
@@ -147,7 +150,7 @@
     "features_subtitle": "Tre strumenti integrati: il campo registra, l'ufficio organizza, il cliente verifica.",
     "cta_title": "Il lavoro c'è stato. Ora dimostralo.",
     "cta_subtitle": "Nessun intervento resta senza documentazione, e ogni ora che passa dal campo arriva già verificabile.",
-    "cta_button": "Inizia trial gratuito",
+    "cta_button": "Inizia la prova gratuita",
     "problem_title": "Il problema che conosci già",
     "problem_subtitle": "Chi ha la prova non deve spiegare, chi deve spiegare non ha la prova.",
     "problem_items": [
@@ -201,7 +204,7 @@
       ]
     },
     "proof_note": "Foto di prova scattate dall'app, nessun tracciamento continuo.",
-    "proof_claim": "Fra l'entrata e l'uscita non registriamo niente in automatico.",
+    "proof_claim": "Fra una timbratura e l'altra non registriamo niente in automatico.",
     "sticky_cta_subtitle": "14 giorni gratis, nessuna carta di credito",
     "trial_cta_headline": "Provalo gratis per 14 giorni",
     "trial_cta_subtitle": "Nessuna carta di credito richiesta"
@@ -271,22 +274,22 @@
       "pricing_link": "Vedi i piani e prezzi →"
     },
     "settori": {
-      "title": "Documentazione verificabile per ogni settore - Soluzioni GeoTapp",
+      "title": "Documentazione verificabile per ogni settore",
       "subtitle": "Scegli il tuo settore per vedere come GeoTapp genera prove del lavoro svolto, da mostrare al cliente in caso di contestazione.",
       "see_all": "Vedi tutti i settori supportati",
       "installatori": {
         "name": "Installatori",
-        "desc": "Elettricisti, Idraulici, Impiantisti. Ogni intervento documentato con GPS e foto, dati sigillati, verificabili dal cliente.",
+        "desc": "Elettricisti, idraulici, impiantisti. Ogni intervento documentato con GPS e foto, dati sigillati, verificabili dal cliente.",
         "cta": "Dimostra ogni intervento"
       },
       "sicurezza": {
         "name": "Sicurezza",
-        "desc": "Vigilanza, Steward, Servizi Fiduciari. Presenze verificabili, turni documentati con prova oggettiva.",
+        "desc": "Vigilanza, steward, servizi fiduciari. Presenze verificabili, turni documentati con prova oggettiva.",
         "cta": "Prova presenze al cliente"
       },
       "pulizie": {
         "name": "Pulizie",
-        "desc": "Imprese di pulizia, Facility, Multiservizi. Ogni passaggio documentato e verificabile dal committente, meno contestazioni.",
+        "desc": "Imprese di pulizia, facility, multiservizi. Ogni passaggio documentato e verificabile dal committente, meno contestazioni.",
         "cta": "Documenta ogni passaggio"
       },
       "elettricisti": {
@@ -301,7 +304,7 @@
       },
       "termoidraulici": {
         "name": "Termoidraulici",
-        "desc": "GeoTapp registra ogni intervento su caldaie e impianti con GPS, foto e timestamp verificabili. Il cliente nega i materiali sostituiti?",
+        "desc": "GeoTapp registra ogni intervento su caldaie e impianti con posizione, foto e orari verificabili. Il cliente nega i materiali sostituiti?",
         "cta": "Prova i materiali sostituiti"
       },
       "edilizia": {
@@ -313,7 +316,7 @@
         "cta": "Documenta ogni visita"
       },
       "impianti": {
-        "desc": "Meccanici, Elettrici, Antincendio. Collaudi e messa in servizio sigillati con ora e posizione, prova pronta per il committente.",
+        "desc": "Impianti meccanici, elettrici e antincendio. Collaudi e messa in servizio sigillati con ora e posizione, prova pronta per il committente.",
         "cta": "Sigilla i collaudi"
       }
     },
@@ -484,7 +487,7 @@
       "error_checkout": "Errore durante la creazione della sessione. Riprova.",
       "error_connection": "Errore di connessione. Riprova."
     },
-    "intro_label": "Tariffa introduttiva 2026",
+    "intro_label": "Prezzo di lancio 2026",
     "per_year": "/anno",
     "title_gradient": "Utenti d'ufficio e una postazione per ogni operatore.",
     "or_monthly": "oppure",
@@ -499,7 +502,7 @@
     "title": "Parliamo del tuo <span class=\"text-primary\">lavoro</span>.",
     "subtitle": "Vuoi capire se GeoTapp fa per la tua azienda? Scrivici: ti rispondiamo in modo concreto.",
     "guarantee_title": "Tempi di risposta",
-    "guarantee_text": "Risposta media entro 12 ore lavorative. Nessun ticket nel vuoto.",
+    "guarantee_text": "Risposta media entro 12 ore lavorative. Ti risponde una persona.",
     "form": {
       "name": "Nome",
       "first_name": "Nome",
@@ -760,7 +763,7 @@
   "trial": {
     "page_title": "14 giorni gratis. Nessuna carta.",
     "page_subtitle": "Il piano Business completo per 14 giorni: utenti ufficio illimitati e fino a 50 operatori sul campo. Nessuna carta, nessun impegno, e i giorni partono dal tuo primo accesso, non dall'iscrizione.",
-    "badge": "Trial gratuito, 14 giorni",
+    "badge": "Prova gratuita, 14 giorni",
     "form_title": "Crea il tuo account",
     "form_company": "Nome azienda",
     "form_company_placeholder": "Es. Impianti Rossi Srl",
@@ -777,7 +780,7 @@
     "plan_business": "Business, utenti Flow illimitati",
     "form_seats": "Licenze Timetracker (opzionale)",
     "form_seats_hint": "Abbonamento separato per gli operatori sul campo (app mobile). Limite incluso nel piano: Solo max 2, Team max 5, Business illimitate. Puoi modificare le licenze dopo l'attivazione.",
-    "form_submit": "Inizia trial gratuito",
+    "form_submit": "Inizia la prova gratuita",
     "form_submit_simple": "Inizia gratis",
     "form_response_time": "Riceverai l'email di benvenuto entro pochi istanti",
     "form_submitting": "Attivazione in corso...",
@@ -804,7 +807,7 @@
     "benefits_title": "Cosa include il trial",
     "benefits": [
       {
-        "title": "Il piano più grande, non una demo",
+        "title": "Il piano più grande, non una versione ridotta",
         "desc": "Provi GeoTapp Flow al massimo: tutti i moduli, utenti ufficio illimitati e 50 postazioni TimeTracker attive da subito. Con l'abbonamento i moduli di Flow sono compresi nel piano; a parte si pagano solo le postazioni di timbratura, sul campo con TimeTracker e in ufficio dentro Flow."
       },
       {
@@ -827,7 +830,7 @@
       },
       {
         "q": "Posso invitare il mio team?",
-        "a": "Sì: durante il trial puoi attivare fino a 50 operatori sul campo dal pannello licenze. Te ne servono di più? Scrivi a support@geotapp.com e li alziamo."
+        "a": "Sì: durante la prova puoi attivare fino a 50 operatori sul campo dal pannello licenze. Te ne servono di più? Scrivi a support@geotapp.com e li alziamo."
       },
       {
         "q": "Quanto tempo ci vuole per iniziare?",
@@ -916,7 +919,7 @@
     "subtitle": "Scegli la versione adatta alle tue esigenze.",
     "demo_report_badge": "Esempio reale",
     "demo_report_title": "Report di intervento sigillato",
-    "demo_report_desc": "Scarica un report reale generato da GeoTapp. Contiene GPS verificato, prove fotografiche, catena hash degli operatori e sigillatura crittografica. Puoi verificarne l'autenticità direttamente su geotapp.com.",
+    "demo_report_desc": "Scarica un report reale generato da GeoTapp. Contiene la posizione registrata alle timbrature, le foto di prova e il sigillo crittografico. Puoi controllare che non sia stato modificato direttamente su geotapp.com.",
     "demo_report_btn_download": "Scarica Report di esempio (.zip)",
     "demo_report_btn_verify": "Verifica Autenticità",
     "demo_report_field_operator": "Operatore",
@@ -1069,7 +1072,7 @@
     "read_article": "Leggi l'articolo →",
     "cta_title": "Prova GeoTapp gratis per 14 giorni",
     "cta_desc": "Accesso completo a tutti i moduli. Nessuna carta di credito, nessun impegno.",
-    "cta_btn": "Inizia trial gratuito",
+    "cta_btn": "Inizia la prova gratuita",
     "schema_desc": "Guide e approfondimenti su prova verificabile del lavoro sul campo, gestione squadre, GDPR e geolocalizzazione.",
     "meta_title": "Blog | GeoTapp - Prova verificabile del lavoro sul campo",
     "meta_desc": "Guide, approfondimenti e risorse su gestione squadre, prova verificabile interventi, GDPR e geolocalizzazione. Dal team GeoTapp.",
@@ -1133,7 +1136,7 @@
     "results_payback": "Payback stimato",
     "results_payback_unit": "mesi",
     "results_roi": "ROI stimato",
-    "results_cta": "Inizia il trial gratuito di 14 giorni",
+    "results_cta": "Inizia la prova gratuita di 14 giorni",
     "results_disclaimer": "Stima indicativa basata su medie di settore. I risultati reali possono variare.",
     "per_anno": "/ anno",
     "label_operators": "operatori",
@@ -1178,7 +1181,7 @@
     "roi_desc": "Inserisci la dimensione del tuo team e in un minuto vedi una stima del ROI. Senza registrazione, senza email.",
     "roi_cta": "Calcola il tuo ROI",
     "mockup_title": "Intervento aperto",
-    "mockup_gps": "GPS verificato",
+    "mockup_gps": "Posizione alla timbratura",
     "mockup_photos": "Foto allegate",
     "mockup_photos_count": "3 foto georeferenziate",
     "mockup_sealed": "Sigillato alla chiusura: ogni modifica si vede",
@@ -1186,7 +1189,7 @@
     "mockup_status_completed": "Completato",
     "mockup_status_summary": "4 operatori attivi su 6 siti",
     "see_real_report": "Guarda un report reale",
-    "cta_note": "Nessun vincolo. Nessun contratto. Configuriamo sul tuo caso reale."
+    "cta_note": "Prova gratuita di 14 giorni, senza carta di credito."
   },
   "features": {
     "title": "Cosa fa GeoTapp, funzione per funzione.",
@@ -1390,7 +1393,7 @@
     "colSanzione": "Sanzione massima",
     "scheda": "Scheda",
     "metodologiaTitolo": "Come è calcolato l'indice",
-    "metodologia": "L'indice (0-100) misura quanti adempimenti sul monitoraggio dei lavoratori sono obbligatori in quel Paese: punteggio = adempimenti obbligatori + metà di quelli condizionali, sul totale. Più alto = quadro più stringente per chi vuole tracciare. Dati derivati dalle schede-paese verificate alla fonte; misura l'onere di compliance, non la 'libertà'.",
+    "metodologia": "L'indice (0-100) misura quanti adempimenti sul monitoraggio dei lavoratori sono obbligatori in quel Paese: punteggio = adempimenti obbligatori + metà di quelli condizionali, sul totale. Più alto = quadro più stringente per chi vuole tracciare. Dati derivati dalle schede-paese verificate alla fonte; misura l'onere di adempimenti, non la «libertà».",
     "faq": {
       "title": "Domande frequenti",
       "items": [

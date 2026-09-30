@@ -118,7 +118,7 @@ const T: Record<string, Copy> = {
     ctaDesc: 'Provalo su un intervento vero: 14 giorni gratis, senza carta di credito.',
     ctaBtn: 'Inizia la prova gratuita',
     geo: ['Report sigillato: si vede anche una modifica dell\'amministratore','Alla timbratura rifiuta le posizioni simulate','Foto con impronta SHA-256 dentro il report','Il committente verifica da solo, senza account','Progettato per pulizie, manutenzione, sicurezza, installatori'],
-    comp: ['Prezzo pubblico bassissimo (0,75-1,25 euro per persona)','App, QR, orologio fisico, biometria, riconoscimento facciale','Pensato per il registro presenze che la legge portoghese impone (art. 202 del Código do Trabalho)','Report interni per amministrazione e buste paga','Fornitore portoghese attivo dal 1988'],
+    comp: ['Prezzo pubblico bassissimo (0,75-1,25 euro per persona)','App, QR, orologio fisico, biometria, riconoscimento facciale','Pensato per il registro presenze che la legge portoghese impone (art. 202 del Codice del lavoro portoghese)','Report interni per amministrazione e buste paga','Fornitore portoghese attivo dal 1988'],
     footnote: '* Per legge (art. 13 GDPR e, in Italia, art. 4 dello Statuto dei Lavoratori) ogni dipendente va informato prima di essere geolocalizzato. Se il software lascia questo passaggio al titolare, il rischio resta a lui. GeoTapp prepara l\'informativa personalizzata, la fa firmare per presa visione nell\'app e non lascia timbrare finché non è firmata.',
   },
   en: {

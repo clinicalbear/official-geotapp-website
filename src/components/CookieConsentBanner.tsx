@@ -41,7 +41,7 @@ const TEXTS: Record<string, Texts> = {
     close: 'Chiudi',
     closeRefuse: 'Chiudi e rifiuta',
     dismissHint: 'Chiudendo con la X continui a navigare rifiutando i cookie non necessari.',
-    policyLabel: 'Cookie policy',
+    policyLabel: 'Informativa cookie',
   },
   en: {
     body: 'We use cookies to understand what works on the site. No advertising.',

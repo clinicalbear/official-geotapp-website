@@ -112,7 +112,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Rapportini digitali automatici',
-        desc: 'A fine lavori il rapportino è già pronto: ore, foto, componenti sostituiti . L\'ufficio lo manda al cliente da Flow con un clic.',
+        desc: 'A fine lavori il rapportino è già pronto: ore, foto, componenti sostituiti. L\'ufficio lo manda al cliente da Flow con un clic.',
       },
       {
         title: 'Gestione commesse e urgenze',
@@ -169,7 +169,7 @@ const content: SettoreContent = {
   },
   pricing_hint: {
     label: 'Postazioni TimeTracker da',
-    per: 'operatore al mese, più il piano Flow da 39 €/mese',
+    per: 'per operatore al mese, più il piano Flow da 39 € al mese',
     note: 'Prova gratuita 14 giorni',
   },
   schema_sector_name: 'Termoidraulici',

@@ -23,7 +23,7 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   it: [
     {
       q: 'Cosa serve per dimostrare ore e presenze ai sensi del CCNL Multiservizi?',
-      a: 'Per ogni operatore: ore per cantiere, maggiorazioni festivo/notturno e registrazione sul Libro Unico del Lavoro, con la tracciabilità richiesta in caso di verifica ispettiva.',
+      a: "GeoTapp registra ore, pause e uscite per operatore e per cantiere, con posizione e ora, e le esporta in Excel o CSV per il consulente del lavoro. Maggiorazioni festive e notturne, Libro Unico del Lavoro e verifiche ispettive restano al consulente e all'azienda, che hanno così un registro degli orari da cui partire.",
     },
     {
       q: 'Come si rispetta l\'art. 4 dello Statuto dei Lavoratori sulla geolocalizzazione?',
@@ -31,7 +31,7 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
     },
     {
       q: 'Come si gestisce il cambio appalto (clausola sociale)?',
-      a: 'Storico completo di ore, anzianità e indennità per ogni operatore, pronto per il subentro nell\'appalto previsto dall\'art. 4 del CCNL Multiservizi.',
+      a: "GeoTapp non gestisce la clausola sociale né il passaggio di personale nel cambio appalto. Conserva lo storico di ore e presenze di ogni operatore, che si esporta in Excel o CSV: l'applicazione del CCNL resta al consulente.",
     },
   ],
   de: [

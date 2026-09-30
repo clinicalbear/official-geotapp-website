@@ -32,7 +32,7 @@ const FAQ: Record<string, FaqItem[]> = {
     { q: 'Qual è la differenza principale tra GeoTapp e Clockify?', a: 'Clockify è un time tracker: registra le ore lavorate manualmente o con timer. GeoTapp è un sistema di prova verificabile degli interventi: genera automaticamente report sigillati con posizione, ora e foto, prove che il cliente può controllare in autonomia.' },
     { q: 'Clockify ha il tracciamento GPS per i lavoratori sul campo?', a: 'Clockify nasce per registrare il tempo, e la posizione non entra in un report sigillato. GeoTapp registra la posizione quando l\'operatore timbra (entrata, pause, uscita) e la chiude nel report dell\'intervento, dove ogni modifica successiva è rilevabile.' },
     { q: 'GeoTapp o Clockify per chi fa interventi su commessa?', a: 'Clockify è adatto a team remoti che fatturano a ore. GeoTapp è progettato per chi deve dimostrare dove e quando ha lavorato: imprese di pulizie, manutentori, installatori. Se hai clienti che contestano, GeoTapp ti dà un report sigillato da mostrare.' },
-    { q: 'Clockify è gratuito. Vale la pena pagare GeoTapp?', a: 'Clockify free ha senso per freelance e team di ufficio. Per aziende con operatori sul campo, il valore di GeoTapp sta nella prova: quando un cliente contesta, hai un report sigillato da mostrare invece di una parola contro l\'altra.' },
+    { q: 'Clockify è gratuito. Vale la pena pagare GeoTapp?', a: 'Il piano gratuito di Clockify ha senso per freelance e team di ufficio. Per aziende con operatori sul campo, il valore di GeoTapp sta nella prova: quando un cliente contesta, hai un report sigillato da mostrare invece di una parola contro l\'altra.' },
   ],
   en: [
     { q: 'What is the main difference between GeoTapp and Clockify?', a: 'Clockify is a time tracker: records hours worked manually or with a timer. GeoTapp is a verifiable proof of work system: automatically generates sealed reports with verified GPS, photos and digital signature, proof clients can verify independently.' },
@@ -134,7 +134,7 @@ const T: Record<string, Copy> = {
     geo: ['Posizione rilevata dal telefono a ogni timbratura, non inserita a mano','Report sigillati con hash crittografico al momento della chiusura','Prove fotografiche integrate con GPS e timestamp','Il committente verifica da solo che il report non sia stato modificato','Progettato per operatori sul campo, non per l\'ufficio'],
     comp: ['Ottimo per registrare il tempo e fatturare a ore','Nessuna posizione sigillata nel report','Nessuna prova fotografica collegata all\'intervento','I dati non sono verificabili da terzi','Piano gratuito disponibile (ideale per freelance)'],
     useCasesTitle: 'Chi dovrebbe scegliere GeoTapp invece di Clockify',
-    useCases: ['Imprese di pulizie e facility management con clienti esigenti','Manutentori e installatori che devono documentare le ore fatturate','Aziende soggette a ispezioni CCNL o audit del committente','Chi ha già avuto contestazioni su interventi non riconosciuti','Aziende con più squadre distribuite su cantieri diversi'],
+    useCases: ['Imprese di pulizie e facility management con clienti esigenti','Manutentori e installatori che devono documentare le ore fatturate','Aziende soggette a ispezioni del lavoro o a verifiche del committente','Chi ha già avuto contestazioni su interventi non riconosciuti','Aziende con più squadre distribuite su cantieri diversi'],
     cta: 'Vuoi vedere la differenza in pratica?',
     ctaDesc: 'Provalo su un intervento vero: 14 giorni gratis, senza carta di credito.',
     ctaBtn: 'Inizia la prova gratuita',

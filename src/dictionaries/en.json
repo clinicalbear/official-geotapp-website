@@ -1,5 +1,8 @@
 {
   "navbar": {
+    "aria_cart": "Cart",
+    "aria_menu": "Open menu",
+    "aria_close": "Close menu",
     "resources": "Resources",
     "products": "Products",
     "pricing": "Pricing",

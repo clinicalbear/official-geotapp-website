@@ -169,7 +169,7 @@ const content: SettoreContent = {
   },
   pricing_hint: {
     label: 'Postazioni TimeTracker da',
-    per: 'operatore al mese, più il piano Flow da 39 €/mese',
+    per: 'per operatore al mese, più il piano Flow da 39 € al mese',
     note: 'Prova gratuita 14 giorni',
   },
   schema_sector_name: 'Idraulici',

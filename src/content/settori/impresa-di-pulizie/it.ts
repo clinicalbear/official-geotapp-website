@@ -77,7 +77,7 @@ const content: SettoreContent = {
       {
         label: 'Cosa registra',
         competitor: 'Orario di entrata/uscita',
-        geotapp: 'Orario + GPS verificato + foto + attività svolta',
+        geotapp: 'Orario + posizione alla timbratura + foto + attività svolta',
       },
       {
         label: 'Chi può verificare',
@@ -190,7 +190,7 @@ const content: SettoreContent = {
     {
       question: "Quanto costa un'app per impresa di pulizie con GPS?",
       answer:
-        "Per una squadra di 5 addetti il costo parte da circa 5 euro per dipendente al mese, senza vincoli. GeoTapp Flow include presenze GPS, foto interventi e report cliente nel trial gratuito di 14 giorni.",
+        "GeoTapp Flow parte da 39 € al mese; ogni addetto con l'app TimeTracker costa 3 € al mese in più. L'abbonamento dura almeno 12 mesi. Presenze, foto degli interventi e report per il cliente si provano gratis per 14 giorni.",
     },
     {
       question: "L'app GPS rispetta lo Statuto dei lavoratori (articolo 4)?",

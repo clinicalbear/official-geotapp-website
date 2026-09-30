@@ -63,7 +63,7 @@ const UI: Record<string, UIStrings> = {
     bottomEyebrow: 'Pronto a iniziare?',
     bottomTitle: 'Provalo sul campo oggi stesso',
     bottomSub: 'Crea l\'account in 2 minuti · Senza carta di credito',
-    bottomCta: 'Inizia il trial gratis',
+    bottomCta: 'Inizia la prova gratis',
     quickLabel: 'Link utili',
     pricing: 'Prezzi e piani', contact: 'Richiedi informazioni', mainSite: 'Vai al sito principale',
     followUs: 'Seguici', privacy: 'Privacy', terms: 'Termini',

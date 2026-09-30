@@ -31,7 +31,7 @@ const FAQ: Record<string, FaqItem[]> = {
   it: [
     { q: 'Qual è la differenza principale tra GeoTapp e Personio?', a: 'Personio è una suite HR: anagrafica dipendenti, assenze e ferie, onboarding, paghe. GeoTapp è un sistema di prova del lavoro sul campo: genera report sigillati con posizione, ora e foto, prove che il cliente può controllare. Personio gestisce le persone dell\'organizzazione; GeoTapp dimostra cosa fa l\'operatore fuori sede.' },
     { q: 'Personio ha la rilevazione presenze?', a: 'Sì, Personio gestisce presenze e ore, pensate per l\'ufficio e l\'HR. Non produce però la prova dell\'intervento sul campo: niente posizione registrata al cantiere, report sigillati o verifica del cliente. Per chi ha squadre fuori sede, quel pezzo lo copre GeoTapp.' },
-    { q: 'GeoTapp sostituisce Personio?', a: 'No, spesso sono complementari. Personio resta il gestionale HR dell\'organico; GeoTapp aggiunge la prova verificabile del lavoro svolto sul campo, con export delle ore pronto per le paghe. Molte aziende usano un HR suite per l\'ufficio e GeoTapp per gli operatori.' },
+    { q: 'GeoTapp sostituisce Personio?', a: 'No, spesso sono complementari. Personio resta il gestionale HR dell\'organico; GeoTapp aggiunge la prova verificabile del lavoro svolto sul campo, con export delle ore pronto per le paghe. Molte aziende usano una suite per il personale per l\'ufficio e GeoTapp per gli operatori.' },
     { q: 'Personio ha un piano gratuito?', a: 'Personio è a preventivo, senza un piano gratuito pubblico. GeoTapp ha una prova gratuita e piani trasparenti, ed è modulare: accendi solo le funzioni che ti servono per il campo.' },
   ],
   en: [
@@ -160,7 +160,7 @@ const T: Record<string, Copy> = {
     summaryText: 'Personio è un\'ottima suite HR per anagrafica, assenze e paghe. Non è pensata per dimostrare l\'intervento sul campo: niente posizione alla timbratura, report sigillati o verifica del cliente. Per chi ha operatori fuori sede, GeoTapp copre proprio quel pezzo, e le ore escono pronte per le paghe.',
     footnote: FOOTNOTE.it,
     features: 'Confronto funzionalità chiave', feat: 'Funzionalità',
-    diff: 'Gestione HR vs prova del lavoro sul campo',
+    diff: 'Gestione del personale o prova del lavoro sul campo',
     geo: ['Posizione rilevata dal telefono a ogni timbratura, non inserita a mano','Report sigillati con hash crittografico alla chiusura dell\'intervento','Prove fotografiche integrate con GPS e timestamp','Il committente verifica da solo che il report non sia stato modificato','Progettato per operatori sul campo, non per l\'ufficio HR'],
     comp: ['Suite HR completa: anagrafica, assenze, onboarding','Gestione paghe e presenze d\'ufficio','App mobile self-service per i dipendenti','Nessuna prova sigillata dell\'intervento sul campo','Nessuna posizione alla timbratura, foto di prova o verifica del cliente'],
     useCasesTitle: 'Chi dovrebbe affiancare GeoTapp a un HR come Personio',

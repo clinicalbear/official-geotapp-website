@@ -116,7 +116,7 @@ export default async function DossierConformitaPage({
         <div className="wt">
           <RisorsaAttribuzione
             pageUrl={`https://geotapp.com${localizePath('/risorse/dossier-conformita/', resolvedLocale)}`}
-            pageTitle={`${copy.h1} - GeoTapp`}
+            pageTitle={copy.h1}
             contactHref={localizePath('/contact', resolvedLocale)}
             labels={d.attribuzione}
             anno={2026}

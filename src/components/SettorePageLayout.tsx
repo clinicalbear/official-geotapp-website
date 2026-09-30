@@ -543,14 +543,13 @@ export default function SettorePageLayout({ content, locale, settore, children }
             <div className="grid3">
               <div className="mock r-s d1">
                 <div className="row"><span><Clock size={13} style={{ display: 'inline', marginRight: 6, verticalAlign: -2, opacity: .7 }} />{sl.mockup_title ?? 'Job open'}</span><span>08:47</span></div>
-                <div className="row"><span><MapPin size={13} style={{ display: 'inline', marginRight: 6, verticalAlign: -2, opacity: .7 }} />{sl.mockup_gps ?? 'GPS verified'}</span><span>45.4642°N</span></div>
+                <div className="row"><span><MapPin size={13} style={{ display: 'inline', marginRight: 6, verticalAlign: -2, opacity: .7 }} />{sl.mockup_gps ?? 'Position at clock-in'}</span><span>45.4642°N</span></div>
                 <div className="row"><span><Camera size={13} style={{ display: 'inline', marginRight: 6, verticalAlign: -2, opacity: .7 }} />{sl.mockup_photos ?? 'Photos'}</span><span>{sl.mockup_photos_count ?? '3 photos'}</span></div>
               </div>
               <div className="mock r-s d2">
                 <div className="row"><span>Operatore</span><span>Mario R.</span></div>
                 <div className="row"><span>Apertura</span><span>08:47:03</span></div>
                 <div className="row"><span>Chiusura</span><span>11:22:41</span></div>
-                <div className="row"><span>GPS</span><span>✓ verificato</span></div>
                 <p style={{ marginTop: 16, fontSize: 13, color: 'var(--lime)', fontWeight: 600 }}>
                   <ShieldCheck size={14} style={{ display: 'inline', marginRight: 6, verticalAlign: -2 }} />
                   {sl.mockup_sealed ?? 'Sealed after closure'}

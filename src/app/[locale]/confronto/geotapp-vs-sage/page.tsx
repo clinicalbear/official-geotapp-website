@@ -160,7 +160,7 @@ const T: Record<string, Copy> = {
     summaryText: 'Sage è forte su contabilità, fatturazione e paghe, con Sage HR per il personale. Non è pensato per dimostrare l\'intervento sul campo: niente posizione alla timbratura, report sigillati o verifica del cliente. Per operatori fuori sede, GeoTapp copre quel pezzo, e le ore escono pronte per le paghe.',
     footnote: FOOTNOTE.it,
     features: 'Confronto funzionalità chiave', feat: 'Funzionalità',
-    diff: 'Gestionale/paghe vs prova del lavoro sul campo',
+    diff: 'Gestionale e paghe o prova del lavoro sul campo',
     geo: ['Posizione rilevata dal telefono a ogni timbratura, non inserita a mano','Report sigillati con hash crittografico alla chiusura dell\'intervento','Prove fotografiche integrate con GPS e timestamp','Il committente verifica da solo che il report non sia stato modificato','Progettato per operatori sul campo, non per l\'amministrazione'],
     comp: ['Contabilità, fatturazione e paghe robuste','Sage HR per timesheet, ferie e presenze','App mobile per l\'amministrazione del personale','Nessuna prova sigillata dell\'intervento sul campo','Nessuna posizione alla timbratura, foto di prova o verifica del cliente'],
     useCasesTitle: 'Chi dovrebbe affiancare GeoTapp a un gestionale come Sage',

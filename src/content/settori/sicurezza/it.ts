@@ -110,11 +110,11 @@ const content: SettoreContent = {
         desc: 'Ogni presenza è collegata a posizione, ora e posto assegnato. Da mostrare al cliente, all\'ispettorato del lavoro o in un audit contrattuale quando serve.',
       },
       {
-        title: 'Tracciamento qualifiche e scadenze licenze',
+        title: 'Anagrafica delle guardie',
         desc: 'Tieni nell\'anagrafica di ogni guardia ruolo, contatti e posti assegnati, e decidi chi vede cosa nell\'app.',
       },
       {
-        title: 'Export compatibile con Zucchetti e TeamSystem',
+        title: 'Export in Excel o CSV per le paghe',
         desc: 'Esporta le presenze del mese in Excel o CSV, pronte per il consulente del lavoro. L\'elaborazione paghe diventa un\'operazione rapida e senza errori di ricopiatura.',
       },
       {
@@ -174,7 +174,7 @@ const content: SettoreContent = {
   },
   pricing_hint: {
     label: 'Postazioni TimeTracker da',
-    per: 'operatore al mese, più il piano Flow da 39 €/mese',
+    per: 'per operatore al mese, più il piano Flow da 39 € al mese',
     note: 'Prova gratuita 14 giorni',
   },
 

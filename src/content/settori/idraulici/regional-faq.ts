@@ -23,7 +23,7 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   it: [
     {
       q: 'Ore e interventi secondo il CCNL Metalmeccanici/installazione impianti?',
-      a: 'Ore per idraulico e per commessa, reperibilità e trasferta e conservazione sul Libro Unico del Lavoro, registrate a ogni intervento.',
+      a: "GeoTapp registra a ogni timbratura entrata, pause e uscita con posizione e ora, per idraulico e per commessa, e le esporta in Excel o CSV per il consulente del lavoro. L'applicazione del CCNL (maggiorazioni, indennità) e la tenuta del Libro Unico del Lavoro restano al consulente e all'azienda.",
     },
     {
       q: 'Geolocalizzazione e art. 4 dello Statuto dei Lavoratori?',
@@ -31,7 +31,7 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
     },
     {
       q: 'Impianti idrico e gas: DM 37/2008 (lettere C/E) e abilitazione gas?',
-      a: 'Tracciabilità degli interventi su impianti idrosanitari e gas per lettera di abilitazione, a supporto della dichiarazione di conformità.',
+      a: "GeoTapp non verifica le abilitazioni (gas incluse) e non produce la dichiarazione di conformità del DM 37/2008. Registra ora, posizione e foto di ogni intervento su impianti idrosanitari e gas, che si possono allegare alla documentazione dell'impianto.",
     },
   ],
   de: [

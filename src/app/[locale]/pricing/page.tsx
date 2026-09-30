@@ -143,11 +143,11 @@ function buildPricingFAQ(locale: AppLocale): Record<string, object> {
     it: {
       '@context': 'https://schema.org', '@type': 'FAQPage',
       mainEntity: [
-        { '@type': 'Question', name: 'GeoTapp ha una prova gratuita?', acceptedAnswer: { '@type': 'Answer', text: `Sì. GeoTapp offre una prova gratuita di 14 giorni senza carta di credito. I piani a pagamento partono da ${monthlyRate} per operatore al mese (TimeTracker) e includono report sigillati, gestione multi-sito e sincronizzazione con Flow.` } },
-        { '@type': 'Question', name: 'Quanto costa GeoTapp per una piccola impresa di pulizie?', acceptedAnswer: { '@type': 'Answer', text: `Il piano TimeTracker parte da ${monthlyRate} per operatore al mese (${annualRate}/anno per utente). Per un'impresa con 5 operatori il costo annuale è di ${fiveOpsAnnual}, ${fiveOpsMonthly} al mese. Non ci sono costi di attivazione né vincoli contrattuali minimi.` } },
-        { '@type': 'Question', name: 'Posso cambiare piano in qualsiasi momento?', acceptedAnswer: { '@type': 'Answer', text: 'Sì. Puoi passare da un piano all\'altro in qualsiasi momento dal pannello di gestione. Non ci sono penali per il cambio o la cancellazione.' } },
-        { '@type': 'Question', name: 'Il piano include GeoTapp Flow e TimeTracker?', acceptedAnswer: { '@type': 'Answer', text: 'I piani Team e Business includono sia GeoTapp Flow (pannello web per la gestione) sia GeoTapp TimeTracker (app mobile per i tecnici). Il piano base TimeTracker include solo l\'app mobile.' } },
-        { '@type': 'Question', name: 'Sono previsti costi nascosti?', acceptedAnswer: { '@type': 'Answer', text: 'No. Il prezzo indicato è comprensivo di tutte le funzionalità del piano scelto. Non ci sono costi per supporto, aggiornamenti o utilizzo di GeoTapp Verifier da parte dei tuoi clienti.' } },
+        { '@type': 'Question', name: 'GeoTapp ha una prova gratuita?', acceptedAnswer: { '@type': 'Answer', text: 'Sì. La prova dura 14 giorni e non chiede la carta di credito.' } },
+        { '@type': 'Question', name: 'Quanto costa GeoTapp?', acceptedAnswer: { '@type': 'Answer', text: `GeoTapp Flow, il pannello web, costa 39 € al mese con il piano Solo, 99 € con Team e 199 € con Business (390, 990 e 1.990 € se paghi l'anno in un'unica soluzione). Le postazioni dell'app TimeTracker si aggiungono a parte: ${monthlyRate} per operatore al mese fino a 25, 2,50 € dalla ventiseiesima. Prezzi IVA esclusa.` } },
+        { '@type': 'Question', name: 'Quanto costa per una squadra di 5 operatori?', acceptedAnswer: { '@type': 'Answer', text: `Al piano Flow scelto si aggiungono 5 postazioni TimeTracker: ${fiveOpsMonthly} al mese, ${fiveOpsAnnual} l'anno se paghi l'anno intero. Non ci sono costi di attivazione.` } },
+        { '@type': 'Question', name: "C'è una durata minima?", acceptedAnswer: { '@type': 'Answer', text: "Sì. L'abbonamento dura almeno 12 mesi, pagabili in un'unica soluzione o in rate mensili. Puoi passare a un piano superiore quando vuoi dal pannello." } },
+        { '@type': 'Question', name: 'Sono previsti costi nascosti?', acceptedAnswer: { '@type': 'Answer', text: 'No. Supporto e aggiornamenti sono compresi, e GeoTapp Verifier, con cui i tuoi clienti verificano i report, è gratuito.' } },
       ],
     },
     en: {

@@ -23,7 +23,7 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   it: [
     {
       q: 'Presenze in cantiere ai fini DURC e Cassa Edile?',
-      a: 'Ore per operaio e per cantiere, riconciliate con la denuncia mensile alla Cassa Edile e utili a mantenere il DURC regolare, registrate dal dispositivo in cantiere.',
+      a: "GeoTapp non si collega alla Cassa Edile e non produce il DURC. Registra ore e presenze per operaio e per cantiere, che si esportano in Excel o CSV e servono da base per la denuncia mensile: la denuncia e il DURC restano compito dell'azienda e del suo consulente.",
     },
     {
       q: 'Geolocalizzazione e art. 4 dello Statuto dei Lavoratori in cantiere?',
@@ -31,7 +31,7 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
     },
     {
       q: 'Sicurezza cantieri (Titolo IV D.Lgs 81/2008) e subappalto?',
-      a: 'Tracciamento di presenze per POS/PSC, idoneità del personale e catena di subappalto, con storico per ogni impresa e lavoratore.',
+      a: "GeoTapp non gestisce POS, PSC né l'idoneità del personale. Registra chi ha timbrato, dove e a che ora in ogni cantiere, anche per le squadre dei subappaltatori, e questo storico si può mostrare al coordinatore. Gli obblighi documentali sulla sicurezza restano all'impresa.",
     },
   ],
   de: [

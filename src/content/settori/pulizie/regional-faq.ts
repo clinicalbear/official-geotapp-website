@@ -23,7 +23,7 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   it: [
     {
       q: 'Quale registrazione orari richiede il CCNL Multiservizi/Pulizie?',
-      a: 'Ore per operatore e per cantiere, maggiorazioni per festivo e notturno e conservazione sul Libro Unico del Lavoro, registrate a ogni turno secondo i minimi del CCNL.',
+      a: "GeoTapp registra ore, pause e uscite per operatore e per cantiere, con posizione e ora, e le esporta in Excel o CSV per il consulente del lavoro. Maggiorazioni festive e notturne, minimi del CCNL e Libro Unico del Lavoro restano al consulente e all'azienda.",
     },
     {
       q: 'GDPR e Garante Privacy per la geolocalizzazione degli addetti?',
@@ -31,7 +31,7 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
     },
     {
       q: 'Tracciabilità del cambio appalto e dei minimi tabellari?',
-      a: 'Riconciliazione ore-paga sui minimi del CCNL Multiservizi, con storico di scatti, indennità e clausola sociale di cambio appalto (art. 4) per ogni operatore.',
+      a: "GeoTapp non gestisce la clausola sociale né i minimi tabellari. Conserva lo storico di ore e presenze di ogni operatore, che si esporta in Excel o CSV: l'applicazione del CCNL Multiservizi resta al consulente.",
     },
   ],
   de: [

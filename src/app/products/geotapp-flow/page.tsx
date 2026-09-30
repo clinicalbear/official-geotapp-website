@@ -46,10 +46,10 @@ const CAROUSEL_SLIDES = [
   },
   {
     src: '/screen_live_map.webp',
-    alt_it: 'GeoTapp Flow - Mappa GPS live con timbrature geolocalizzate',
-    alt_en: 'GeoTapp Flow - Live GPS map with geolocated clock-ins',
-    label_it: 'Mappa GPS live - Geolocalizzazione in tempo reale',
-    label_en: 'Live GPS Map - Real-time Geolocation',
+    alt_it: 'GeoTapp Flow - Mappa con le posizioni registrate alle timbrature',
+    alt_en: 'GeoTapp Flow - Map with the positions recorded at clock-in',
+    label_it: 'Mappa delle posizioni registrate alle timbrature',
+    label_en: 'Map of the positions recorded at clock-in',
   },
   {
     src: '/schermataFlow.webp',

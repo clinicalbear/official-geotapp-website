@@ -115,7 +115,7 @@ const content: SettoreContent = {
       },
       {
         title: 'Export per la paga',
-        desc: 'Esporta le presenze del mese in Excel o CSV, pronte per il consulente del lavoro. L\'elaborazione paghe diventa un\'operazione di 10 minuti.',
+        desc: 'Esporta le presenze del mese in Excel o CSV, pronte per il consulente del lavoro.',
       },
       {
         title: 'Gestione commesse multi-cantiere',
@@ -134,7 +134,7 @@ const content: SettoreContent = {
 
   cta_mid: {
     title: 'Vuoi vedere come funziona su un intervento reale?',
-    body: 'Ti mostriamo il flusso completo: dall\'apertura commessa al rapportino che riceve il cliente. In 20 minuti capisci se fa per te, senza impegno.',
+    body: 'Ti mostriamo il flusso completo: dall\'apertura commessa al rapportino che riceve il cliente.',
     cta: 'Prova gratis per 14 giorni',
   },
 
@@ -174,7 +174,7 @@ const content: SettoreContent = {
   },
   pricing_hint: {
     label: 'Postazioni TimeTracker da',
-    per: 'operatore al mese, più il piano Flow da 39 €/mese',
+    per: 'per operatore al mese, più il piano Flow da 39 € al mese',
     note: 'Prova gratuita 14 giorni',
   },
 

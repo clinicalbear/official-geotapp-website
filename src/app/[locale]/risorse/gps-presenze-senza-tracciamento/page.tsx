@@ -198,7 +198,7 @@ export default async function GpsPresenzeSenzaTracciamentoPage({
         <div className="wt">
           <RisorsaAttribuzione
             pageUrl={pageUrl}
-            pageTitle={`${copy.h1} - GeoTapp`}
+            pageTitle={copy.h1}
             contactHref={localizePath('/contact', resolvedLocale)}
             labels={d.attribuzione}
             anno={2026}

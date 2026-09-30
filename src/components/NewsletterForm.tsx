@@ -18,7 +18,7 @@ const T: Record<string, {
 }> = {
   it: {
     title: 'Resta aggiornato',
-    subtitle: 'Ricevi i migliori contenuti su gestione operativa, HR e tecnologia per le PMI.',
+    subtitle: 'Ricevi i migliori contenuti su organizzazione del lavoro, gestione del personale e strumenti digitali per le piccole imprese.',
     email_placeholder: 'La tua email',
     sector_label: 'Il tuo settore',
     sector_placeholder: 'Seleziona il tuo settore',

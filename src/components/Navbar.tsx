@@ -15,14 +15,14 @@ import {
 } from '@/lib/i18n/locale-routing';
 import { trackEvent } from '@/lib/analytics';
 
-function CartButton() {
+function CartButton({ label }: { label: string }) {
   const { items, toggleCart } = useCart();
   // Il carrello e' persistito in localStorage: il server non lo conosce.
   // Il numeretto compare solo dopo il mount, mai in SSR, o l'idratazione salta.
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
   return (
-    <button onClick={toggleCart} className="nv-cart" aria-label="Cart">
+    <button onClick={toggleCart} className="nv-cart" aria-label={label}>
       <ShoppingCart size={20} />
       {mounted && items.length > 0 && <span>{items.length}</span>}
     </button>
@@ -116,7 +116,7 @@ export default function Navbar() {
   };
 
   const mnLink = (href: string, label: string) => (
-    <Link href={href} onMouseEnter={scheduleClose}><span>{label}</span><span>{label}</span></Link>
+    <Link href={href} onMouseEnter={scheduleClose}><span>{label}</span><span aria-hidden="true">{label}</span></Link>
   );
 
   return (
@@ -157,8 +157,8 @@ export default function Navbar() {
           </nav>
           <div className="ne">
             <Link className="lk" href={getLink('/login')}>{dict.login}</Link>
-            <CartButton />
-            <button className="nvh" aria-label="Menu" onClick={() => setMobile(true)}>
+            <CartButton label={dict.aria_cart} />
+            <button className="nvh" aria-label={dict.aria_menu} onClick={() => setMobile(true)}>
               <Menu size={26} />
             </button>
           </div>
@@ -223,7 +223,7 @@ export default function Navbar() {
         <div className="top">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/LogoGeoTapp.webp" alt={dict.logo_alt} />
-          <button className="x" aria-label="Chiudi" onClick={() => setMobile(false)}><X size={30} /></button>
+          <button className="x" aria-label={dict.aria_close} onClick={() => setMobile(false)}><X size={30} /></button>
         </div>
         <a className="big" href={getLink('/pricing')}>{dict.pricing}</a>
         <a className="big" href={getLink('/confronto')}>{dict.compare}</a>

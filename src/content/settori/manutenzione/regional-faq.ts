@@ -23,7 +23,7 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   it: [
     {
       q: 'Ore e interventi multisito secondo il CCNL (Multiservizi/Metalmeccanici)?',
-      a: 'Ore per tecnico e per sito, reperibilità e trasferta e conservazione sul Libro Unico del Lavoro, con ogni intervento di manutenzione registrato dall\'app.',
+      a: "GeoTapp registra a ogni timbratura entrata, pause e uscita con posizione e ora, per tecnico e per sito, e le esporta in Excel o CSV per il consulente del lavoro. L'applicazione del CCNL (maggiorazioni, indennità) e la tenuta del Libro Unico del Lavoro restano al consulente e all'azienda.",
     },
     {
       q: 'Geolocalizzazione e art. 4 dello Statuto dei Lavoratori?',
@@ -31,7 +31,7 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
     },
     {
       q: 'Sicurezza (D.Lgs 81/2008) e verifiche periodiche?',
-      a: 'Tracciabilità di idoneità, DUVRI per appalti e controlli periodici, con storico per ogni sito e tecnico.',
+      a: "GeoTapp non gestisce l'idoneità del personale né il DUVRI. Registra ogni visita con ora, posizione e foto e conserva lo storico per sede e per tecnico, che si può mostrare al cliente.",
     },
   ],
   de: [

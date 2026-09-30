@@ -23,7 +23,7 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   it: [
     {
       q: 'Turni e ore secondo il CCNL Vigilanza Privata?',
-      a: 'Ore per guardia e per servizio, maggiorazioni notturne e festive e conservazione sul Libro Unico del Lavoro, con la copertura dei turni aggiornata a ogni timbratura.',
+      a: "GeoTapp registra a ogni timbratura entrata, pause e uscita per guardia e per servizio, con posizione e ora, e le esporta in Excel o CSV per il consulente del lavoro. Maggiorazioni notturne e festive e Libro Unico del Lavoro restano al consulente e all'azienda.",
     },
     {
       q: 'Geolocalizzazione delle guardie e art. 4 dello Statuto dei Lavoratori?',
@@ -31,7 +31,7 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
     },
     {
       q: 'Licenza prefettizia (TULPS art. 134) e GPG?',
-      a: 'Tracciabilità dell\'impiego di guardie particolari giurate con decreto valido, a supporto degli adempimenti verso la Prefettura e la Questura.',
+      a: "GeoTapp non gestisce le licenze, i decreti delle guardie particolari giurate né gli adempimenti verso Prefettura e Questura. Registra chi ha timbrato, dove e quando per ogni servizio, e questo storico si può mostrare al cliente.",
     },
   ],
   de: [

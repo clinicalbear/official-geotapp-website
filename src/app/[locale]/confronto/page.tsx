@@ -17,7 +17,7 @@ const PATHNAME = '/confronto/';
 
 const META: Record<string, { title: string; description: string }> = {
   it: {
-    title: 'GeoTapp vs Competitor - Confronti Completi | GeoTapp',
+    title: 'GeoTapp a confronto con le alternative | GeoTapp',
     description: 'Confronta GeoTapp con Connecteam, Clockify, Hubstaff, Zucchetti e altri: cosa registra ciascuno, e chi produce una prova del lavoro che il committente verifica da solo.',
   },
   en: {
@@ -191,7 +191,7 @@ const COMPARISONS: Record<string, { tagline: string; highlight: string }>[] = [
   } as any,
   {
     slug: 'geotapp-vs-picaponto', competitor: 'PicaPonto',
-    it: { tagline: 'Registrare vs dimostrare', highlight: 'PicaPonto registra le presenze a basso costo con molti metodi di timbratura. GeoTapp produce un report sigillato che il committente verifica da solo.' },
+    it: { tagline: 'Registrare o dimostrare', highlight: 'PicaPonto registra le presenze a basso costo con molti metodi di timbratura. GeoTapp produce un report sigillato che il committente verifica da solo.' },
     en: { tagline: 'Recording vs proving', highlight: 'PicaPonto records attendance cheaply with many clock-in methods. GeoTapp produces a tamper-evident report the client verifies independently.' },
     de: { tagline: 'Erfassen vs beweisen', highlight: 'PicaPonto erfasst Anwesenheiten gunstig mit vielen Methoden. GeoTapp erstellt einen versiegelten Bericht, den der Auftraggeber selbst verifiziert.' },
     fr: { tagline: 'Enregistrer vs prouver', highlight: 'PicaPonto enregistre les presences a bas cout avec de nombreuses methodes. GeoTapp produit un rapport scellé que le client verifie lui-meme.' },
@@ -219,7 +219,7 @@ const COMPARISONS: Record<string, { tagline: string; highlight: string }>[] = [
   } as any,
   {
     slug: 'geotapp-vs-zucchetti', competitor: 'Zucchetti',
-    it: { tagline: 'Gestionale HR vs prova del lavoro', highlight: 'Zucchetti copre tutto il personale, dalle presenze al cedolino. GeoTapp produce la prova che il committente verifica da solo.' },
+    it: { tagline: 'Gestionale del personale o prova del lavoro', highlight: 'Zucchetti copre tutto il personale, dalle presenze al cedolino. GeoTapp produce la prova che il committente verifica da solo.' },
     en: { tagline: 'HR suite vs proof of work', highlight: 'Zucchetti covers the whole workforce, from attendance to payslip. GeoTapp produces the evidence the client verifies alone.' },
     de: { tagline: 'HR-Suite vs Arbeitsnachweis', highlight: 'Zucchetti deckt die gesamte Personalverwaltung ab. GeoTapp liefert den Nachweis, den der Auftraggeber selbst prüft.' },
     fr: { tagline: 'Suite RH vs preuve du travail', highlight: 'Zucchetti couvre tout le personnel, du pointage au bulletin. GeoTapp produit la preuve que le client vérifie seul.' },
@@ -233,7 +233,7 @@ const COMPARISONS: Record<string, { tagline: string; highlight: string }>[] = [
   } as any,
   {
     slug: 'geotapp-vs-factorial', competitor: 'Factorial',
-    it: { tagline: 'Piattaforma HR vs prova verificabile sul campo', highlight: 'Factorial tiene in ordine ferie, assenze e cedolini. GeoTapp documenta l\'intervento quando il committente contesta il servizio.' },
+    it: { tagline: 'Gestione del personale o prova verificabile sul campo', highlight: 'Factorial tiene in ordine ferie, assenze e cedolini. GeoTapp documenta l\'intervento quando il committente contesta il servizio.' },
     en: { tagline: 'HR platform vs sealed field proof', highlight: 'Factorial keeps leave, absences and payslips in order. GeoTapp defends the invoice when a client disputes the service.' },
     de: { tagline: 'HR-Plattform vs Feldzertifizierung', highlight: 'Factorial hält Urlaub, Abwesenheiten und Lohnzettel in Ordnung. GeoTapp verteidigt die Rechnung, wenn der Auftraggeber die Leistung bestreitet.' },
     fr: { tagline: 'Plateforme RH vs preuve vérifiable terrain', highlight: 'Factorial tient congés, absences et bulletins en ordre. GeoTapp défend la facture quand le client conteste la prestation.' },

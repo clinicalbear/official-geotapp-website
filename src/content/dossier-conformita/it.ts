@@ -68,7 +68,7 @@ const it: DossierCopy = {
     {
       heading: 'Attestazione',
       paragraphs: [
-        'Le affermazioni tecniche di questo documento sono rese e sottoscritte da Michele Angelo Petraroli, fondatore di GeoTapp, che se ne assume la responsabilità e si rende disponibile a verifica e contraddittorio. L’endorsement di un avvocato giuslavorista e di un DPO sarà aggiunto nella versione successiva del documento.',
+        'Le affermazioni tecniche di questo documento sono rese e sottoscritte da Michele Angelo Petraroli, fondatore di GeoTapp, che se ne assume la responsabilità e si rende disponibile a verifica e contraddittorio.',
       ],
     },
   ],
@@ -84,7 +84,7 @@ const it: DossierCopy = {
     title: 'Domande frequenti',
     items: [
       { q: 'Cos’è il dossier di conformità?', a: 'È il documento che spiega, fonti alla mano, perché GeoTapp è uno strumento di prova del lavoro e non di sorveglianza, e come questo si regge sul GDPR e sulle regole del lavoro. Serve a chi vuole capire davvero come tratta i dati, non a chi si accontenta di uno slogan.' },
-      { q: 'GeoTapp è un sistema di sorveglianza?', a: 'No, ed è stato sviluppato apposta per non esserlo. Lo strumento registra la posizione solo quando l’operatore timbra (entrata, pause, uscita) o scatta una foto di prova, mai in continuo, e prepara l’informativa che il lavoratore firma nell’app prima di timbrare. Prova cosa è stato fatto e dove, non guarda le persone.' },
+      { q: 'GeoTapp è un sistema di sorveglianza?', a: 'No, non è pensato per sorvegliare. Registra la posizione solo quando l’operatore timbra (entrata, pause, uscita) o scatta una foto di prova, mai in continuo, e prepara l’informativa che il lavoratore firma nell’app prima di timbrare. Prova cosa è stato fatto e dove, non guarda le persone.' },
       { q: 'A cosa mi serve questo dossier?', a: 'A rispondere quando un dipendente, un cliente o un consulente ti chiede se quello che usi è a norma. Invece di improvvisare hai un testo che mette in fila il ragionamento e le fonti, e che puoi girare così com’è.' },
       { q: 'Le fonti sono verificate?', a: 'Sì, il dossier rimanda a norme e provvedimenti reali, elencati in fondo con la data di aggiornamento. Resta comunque una risorsa informativa e non una consulenza legale: per la tua situazione specifica fai verificare tutto da un professionista.' },
       { q: 'Posso mostrarlo a un cliente o in una causa?', a: 'Puoi usarlo per spiegare l’impostazione di GeoTapp e mostrare che la conformità non è un’affermazione buttata lì. In un contenzioso però quello che conta sono i tuoi dati reali e la tua informativa: il dossier è il contesto, la prova è la sessione di lavoro registrata.' },

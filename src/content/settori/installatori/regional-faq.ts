@@ -23,7 +23,7 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   it: [
     {
       q: 'Ore e trasferte secondo il CCNL Metalmeccanici?',
-      a: 'Ore per tecnico e per commessa, indennità di trasferta e reperibilità e conservazione sul Libro Unico del Lavoro, registrate dall\'app a ogni intervento.',
+      a: "GeoTapp registra a ogni timbratura entrata, pause e uscita con posizione e ora, per tecnico e per commessa, e le esporta in Excel o CSV per il consulente del lavoro. L'applicazione del CCNL (maggiorazioni, indennità) e la tenuta del Libro Unico del Lavoro restano al consulente e all'azienda.",
     },
     {
       q: 'Geolocalizzazione dei tecnici e art. 4 dello Statuto dei Lavoratori?',
@@ -31,7 +31,7 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
     },
     {
       q: 'Abilitazione DM 37/2008 e dichiarazione di conformità?',
-      a: 'Tracciamento degli interventi per lettera di abilitazione (a–g) con i dati a supporto della dichiarazione di conformità dell\'impianto.',
+      a: "GeoTapp non gestisce le abilitazioni del DM 37/2008 e non produce la dichiarazione di conformità. Registra ora, posizione, foto e note di ogni intervento, da allegare alla documentazione dell'impianto.",
     },
   ],
   de: [
