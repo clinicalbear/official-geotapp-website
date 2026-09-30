@@ -289,7 +289,7 @@ export const lettonia: SchedaPaese = {
     casoCitato: {
       it: 'Non risulta una multa del DVI specifica e pubblicata per il GPS sui dipendenti. Il rischio sanzionatorio resta quello generale del GDPR (art. 83).',
       en: 'There is no specific, published DVI fine for GPS tracking of employees. The penalty risk remains the general one under the GDPR (Art. 83).',
-      de: 'Es ist keine spezifische, veröffentlichte Geldbusse der DVI für GPS-Tracking von Beschäftigten bekannt. Das Sanktionsrisiko bleibt das allgemeine der DSGVO (Art. 83).',
+      de: 'Es ist keine spezifische, veröffentlichte Geldbuße der DVI für GPS-Tracking von Beschäftigten bekannt. Das Sanktionsrisiko bleibt das allgemeine der DSGVO (Art. 83).',
       fr: "Il n'existe pas d'amende de la DVI spécifique et publiée pour le suivi GPS des salaries. Le risque de sanction reste celui, général, du RGPD (art. 83).",
       es: "No consta una multa del DVI especifica y publicada por el GPS de los empleados. El riesgo sancionador sigue siendo el general del RGPD (art. 83).",
       nl: 'Er is geen specifieke, gepubliceerde boete van de DVI voor GPS-tracking van werknemers. Het sanctierisico blijft het algemene risico van de AVG (art. 83).',

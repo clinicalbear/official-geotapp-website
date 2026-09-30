@@ -32,7 +32,7 @@ const FONTE_HDPA_DPIA = {
 const FONTE_HDPA_SANZIONE = {
   titolo:
     'HDPA, sanzione a un datore per geolocalizzazione (16 febbraio 2024)',
-  url: 'https://www.dpa.gr/el/enimerwtiko/prakseisArxis/prostimo-kai-epiplixi-se-ergodoti-già-epexergasia-prosopikon-dedomenon',
+  url: 'https://www.dpa.gr/el/enimerwtiko/prakseisArxis/prostimo-kai-epiplixi-se-ergodoti-gia-epexergasia-prosopikon-dedomenon',
 };
 const FONTE_HDPA = {
   titolo: 'HDPA (Garante greco), pagina ufficiale',

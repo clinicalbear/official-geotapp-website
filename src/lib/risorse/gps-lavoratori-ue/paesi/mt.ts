@@ -95,7 +95,7 @@ export const malta: SchedaPaese = {
       dettaglio: {
         it: "ogni misura di monitoraggio deve essere strettamente necessaria e proporzionata, scegliendo il mezzo meno invasivo, e i lavoratori vanno informati in modo chiaro prima dell'inizio del monitoraggio, mai dopo.",
         en: 'every monitoring measure must be strictly necessary and proportionate, choosing the least intrusive means, and workers must be clearly informed before the monitoring begins, never afterwards.',
-        de: 'Jede Ueberwachungsmassnahme muss streng erforderlich und verhältnismäßig sein, wobei das am wenigsten eingreifende Mittel zu wählen ist, und die Beschäftigten sind vor Beginn der Überwachung klar zu informieren, niemals danach.',
+        de: 'Jede Überwachungsmaßnahme muss streng erforderlich und verhältnismäßig sein, wobei das am wenigsten eingreifende Mittel zu wählen ist, und die Beschäftigten sind vor Beginn der Überwachung klar zu informieren, niemals danach.',
         fr: "toute mesure de surveillance doit être strictement nécessaire et proportionnée, en choisissant le moyen le moins intrusif, et les travailleurs doivent être clairement informes avant le début de la surveillance, jamais après.",
         es: 'toda medida de monitorización debe ser estrictamente necesaria y proporcionada, eligiendo el medio menos invasivo, y los trabajadores deben ser informados con claridad antes del inicio de la monitorización, nunca después.',
         nl: 'elke monitoringmaatregel moet strikt noodzakelijk en evenredig zijn, waarbij het minst ingrijpende middel wordt gekozen, en de werknemers moeten duidelijk worden geinformeerd voordat de monitoring begint, nooit erna.',

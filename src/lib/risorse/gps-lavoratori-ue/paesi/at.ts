@@ -38,7 +38,7 @@ const FONTE_DSB_DECISIONE = {
 };
 const FONTE_DSB_RECLAMO = {
   titolo: 'Datenschutzbehörde (DSB), procedura di reclamo',
-  url: 'https://dsb.gv.at/über-die-datenschutzbehoerde/beschwerdeverfahren',
+  url: 'https://dsb.gv.at/ueber-die-datenschutzbehoerde/beschwerdeverfahren',
 };
 const FONTE_GDPR = {
   titolo: 'Regolamento UE 2016/679 (GDPR)',

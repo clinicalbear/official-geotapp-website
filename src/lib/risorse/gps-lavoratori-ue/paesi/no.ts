@@ -111,7 +111,7 @@ export const norvegia: SchedaPaese = {
       dettaglio: {
         it: "Una misura di controllo (incluso il GPS) e ammessa solo se ha un motivo oggettivo nelle esigenze dell'impresa e non comporta un onere sproporzionato per il lavoratore.",
         en: "A control measure (including GPS) is permitted only if it has an objective reason rooted in the business's needs and does not impose a disproportionate burden on the worker.",
-        de: 'Eine Kontrollmassnahme (einschließlich GPS) ist nur zulässig, wenn sie einen sachlichen Grund in den Bedürfnissen des Unternehmens hat und keine unverhältnismäßige Belastung für den Arbeitnehmer darstellt.',
+        de: 'Eine Kontrollmaßnahme (einschließlich GPS) ist nur zulässig, wenn sie einen sachlichen Grund in den Bedürfnissen des Unternehmens hat und keine unverhältnismäßige Belastung für den Arbeitnehmer darstellt.',
         fr: "Une mesure de contrôle (y compris le GPS) n'est admise que si elle repose sur un motif objectif lie aux besoins de l'entreprise et n'impose pas une charge disproportionnée au travailleur.",
         es: 'Una medida de control (incluido el GPS) solo se admite si tiene un motivo objetivo basado en las necesidades de la empresa y no supone una carga desproporcionada para el trabajador.',
         nl: 'Een controlemaatregel (waaronder GPS) is alleen toegestaan als deze een objectieve reden heeft in de behoeften van de onderneming en geen onevenredige last voor de werknemer oplevert.',
@@ -191,7 +191,7 @@ export const norvegia: SchedaPaese = {
       dettaglio: {
         it: 'Il GPS sui veicoli e normalmente una misura di controllo: lo scopo va specificato, e i dati raccolti non possono essere riusati per valutare il rendimento dei dipendenti.',
         en: 'GPS on vehicles is normally a control measure: the purpose must be specified, and the collected data cannot be reused to assess employees performance.',
-        de: 'GPS in Fahrzeugen ist normalerweise eine Kontrollmassnahme: Der Zweck muss angegeben werden, und die erhobenen Daten dürfen nicht zur Bewertung der Leistung der Arbeitnehmer weiterverwendet werden.',
+        de: 'GPS in Fahrzeugen ist normalerweise eine Kontrollmaßnahme: Der Zweck muss angegeben werden, und die erhobenen Daten dürfen nicht zur Bewertung der Leistung der Arbeitnehmer weiterverwendet werden.',
         fr: 'Le GPS sur les véhicules est normalement une mesure de contrôle: la finalité doit être precisee, et les données collectées ne peuvent pas être reutilisees pour évaluer le rendement des salaries.',
         es: 'El GPS en los vehículos es normalmente una medida de control: la finalidad debe especificarse, y los datos recopilados no pueden reutilizarse para evaluar el rendimiento de los empleados.',
         nl: 'GPS op voertuigen is normaal gesproken een controlemaatregel: het doel moet worden gespecificeerd en de verzamelde gegevens mogen niet worden hergebruikt om de prestaties van werknemers te beoordelen.',

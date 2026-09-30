@@ -284,7 +284,7 @@ export const islanda: SchedaPaese = {
     importo: {
       it: 'illiceità dichiarata, senza multa',
       en: 'unlawfulness declared, with no fine',
-      de: 'Rechtswidrigkeit festgestellt, ohne Geldbusse',
+      de: 'Rechtswidrigkeit festgestellt, ohne Geldbuße',
       fr: 'illicéité declaree, sans amende',
       es: 'ilicitud declarada, sin multa',
       nl: 'onrechtmatigheid vastgesteld, zonder boete',
@@ -292,7 +292,7 @@ export const islanda: SchedaPaese = {
     casoCitato: {
       it: "Persónuvernd, decisione 2022050836 dell'8 dicembre 2023: Islandspostur (Poste islandesi) aveva usato i dati del cronotachigrafo/GPS di un veicolo aziendale per valutare il rendimento di un dipendente e giustificarne il licenziamento, cambiando la finalità (il dispositivo era stato presentato per sicurezza e qualità del servizio) senza preavviso. Trattamento dichiarato illecito, senza multa.",
       en: 'Persónuvernd, decision 2022050836 of 8 December 2023: Islandspostur (Iceland Post) had used the tachograph/GPS data of a company vehicle to assess an employee performance and justify dismissal, changing the purpose (the device had been presented for safety and service quality) without prior notice. Processing declared unlawful, with no fine.',
-      de: 'Persónuvernd, Entscheidung 2022050836 vom 8. Dezember 2023: Islandspostur (Isländische Post) hatte die Fahrtenschreiber-/GPS-Daten eines Firmenfahrzeugs genutzt, um die Leistung eines Beschäftigten zu bewerten und dessen Kündigung zu rechtfertigen, wobei der Zweck (das Gerät war für Sicherheit und Servicequalität vorgestellt worden) ohne vorherige Ankündigung geändert wurde. Die Verarbeitung wurde für rechtswidrig erklärt, ohne Geldbusse.',
+      de: 'Persónuvernd, Entscheidung 2022050836 vom 8. Dezember 2023: Islandspostur (Isländische Post) hatte die Fahrtenschreiber-/GPS-Daten eines Firmenfahrzeugs genutzt, um die Leistung eines Beschäftigten zu bewerten und dessen Kündigung zu rechtfertigen, wobei der Zweck (das Gerät war für Sicherheit und Servicequalität vorgestellt worden) ohne vorherige Ankündigung geändert wurde. Die Verarbeitung wurde für rechtswidrig erklärt, ohne Geldbuße.',
       fr: "Persónuvernd, décision 2022050836 du 8 décembre 2023: Islandspostur (Poste islandaise) avait utilise les données du chronotachygraphe/GPS d'un véhicule de société pour évaluer le rendement d'un salarie et justifier son licenciement, en changeant la finalité (le dispositif avait été présenté pour la securite et la qualité du service) sans préavis. Traitement déclare illicite, sans amende.",
       es: 'Persónuvernd, decisión 2022050836 de 8 de diciembre de 2023: Islandspostur (Correos de Islandia) había usado los datos del tacografo/GPS de un vehículo de empresa para evaluar el rendimiento de un empleado y justificar su despido, cambiando la finalidad (el dispositivo se había presentado para la seguridad y la calidad del servicio) sin previo aviso. Tratamiento declarado ilícito, sin multa.',
       nl: 'Persónuvernd, beslissing 2022050836 van 8 december 2023: Islandspostur (IJslandse Post) had de tachograaf-/GPS-gegevens van een bedrijfsvoertuig gebruikt om de prestaties van een werknemer te beoordelen en zijn ontslag te rechtvaardigen, waarbij het doel (het apparaat was gepresenteerd voor veiligheid en servicekwaliteit) zonder voorafgaande kennisgeving werd gewijzigd. De verwerking werd onrechtmatig verklaard, zonder boete.',
